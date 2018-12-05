@@ -9,11 +9,11 @@ ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4b9b5f08be695d803e9254e5801ac63b2889e1c9
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465422"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8707265"
 ---
 # <a name="package-a-desktop-application-manually"></a>데스크톱 응용 프로그램을 수동으로 패키징
 
@@ -21,12 +21,12 @@ ms.locfileid: "8465422"
 
 앱을 수동으로 패키징하려면 패키지 매니페스트 파일을 만들고 명령줄 도구를 실행하여 Windows 앱 패키지를 생성합니다.
 
-프로세스를 더 세부적으로 제어 하 고 xcopy 명령을 사용 하 여 응용 프로그램을 설치 하거나 앱의 설치 관리자가 시스템에 익숙한 경우 수동 패키징을 고려 하십시오.
+프로세스를 보다 세부적으로 제어 하 고 xcopy 명령을 사용 하 여 응용 프로그램을 설치 하거나 앱의 설치 관리자가 시스템에 익숙한 경우 수동 패키징을 고려 하십시오.
 
 설치 관리자가 시스템을 어떻게 변경했는지 확실히 모르는 경우나 패키지 매니페스트를 생성하기 위해 자동화된 도구를 사용한 경우에는 [이러한](desktop-to-uwp-root.md#convert) 옵션을 고려하십시오.
 
 >[!IMPORTANT]
->데스크톱 응용 프로그램 (데스크톱 브리지 라고도 함)에 대 한 Windows 앱 패키지를 생성 하는 기능은 Windows 10, 버전 1607에에서 도입 되었으며 Windows 10 1 주년 업데이트 (10.0;를 대상으로 하는 프로젝트 에서만 사용할 수 있습니다. 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
+>데스크톱 응용 프로그램 (데스크톱 브리지 라고도 함)에 대 한 Windows 앱 패키지를 생성 하는 기능은 Windows 10 버전 1607에에서 도입 되었으며 Windows 10 1 주년 업데이트 (10.0; 대상으로 하는 프로젝트 에서만 사용할 수 있습니다. 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
 
 ## <a name="first-prepare-your-application"></a>첫 번째, 응용 프로그램 준비
 
@@ -84,11 +84,11 @@ ms.locfileid: "8465422"
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Microsoft Store에서 응용 프로그램 이름, 예약한 경우 [파트너 센터](https://partner.microsoft.com/dashboard)를 사용 하 여 이름과 게시자를 얻을 수 있습니다. 다른 시스템 응용 프로그램을 사이드 로드 계획이, 앱 서명 하기 위해 사용할 인증서의 이름과 일치를 선택 하는 게시자 이름이 아니라에 한 해 고유한 이름을 제공할 수 있습니다.
+> Microsoft Store에 응용 프로그램 이름, 예약한 경우 [파트너 센터](https://partner.microsoft.com/dashboard)를 사용 하 여 이름과 게시자를 얻을 수 있습니다. 다른 시스템 응용 프로그램을 사이드 로드 계획이, 선택 인증서의 이름과 일치 하는 게시자 이름이 앱 로그인에 사용으로 한 해 고유한 이름을 제공할 수 있습니다.
 
 ### <a name="properties"></a>특성
 
-[특성](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) 요소는 세 개의 필수 자식 요소를 가지고 있습니다. 여기에는 요소에 대한 자리 표시자 텍스트가 포함된 **특성** 요소가 예로 나와 있습니다. **DisplayName** 에 스토어에 업로드 된 앱에 대해 스토어에서 예약한 응용 프로그램의 이름입니다.
+[특성](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) 요소는 세 개의 필수 자식 요소를 가지고 있습니다. 여기에는 요소에 대한 자리 표시자 텍스트가 포함된 **특성** 요소가 예로 나와 있습니다. **표시 이름** 에 스토어에 업로드 된 앱에 대 한 저장소에 예약 하는 응용 프로그램의 이름입니다.
 
 ```XML
 <Properties>
@@ -131,7 +131,7 @@ ms.locfileid: "8465422"
 
 ### <a name="application-element"></a>응용 프로그램 요소
 
-데스크톱 앱에 대 한 패키지를 만들기에 대 한는 ``EntryPoint`` 응용 프로그램 요소의 특성은 항상 ``Windows.FullTrustApplication``.
+패키지를 생성 하는 데스크톱 앱에는 ``EntryPoint`` 응용 프로그램 요소의 특성은 항상 ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -174,7 +174,7 @@ ms.locfileid: "8465422"
 
 ### <a name="generate-a-package-resource-index-pri-file"></a>PRI(Package Resource Index) 파일 생성
 
-수정 응용 프로그램의 시각적 자산 패키지를 만든 후, 위 섹션에 설명 된 대로 대상 기반 자산을 만들 경우 새 PRI 파일을 생성 해야 합니다.
+위의 섹션에 설명 된 대로 대상 기반 자산을 만들 경우 패키지를 만든 후 수정 응용 프로그램의 시각적 자산, 새 PRI 파일을 생성 해야 합니다.
 
 1.  **VS 2017용 개발자 명령 프롬프트**를 엽니다.
 

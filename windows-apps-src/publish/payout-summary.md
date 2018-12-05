@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 지급액 요약, 내역서, 결제, 수익, 지급액, 결제, 수익
 ms.localizationpriority: medium
 ms.openlocfilehash: fa35ac4961b64379ee8a50ec192f5cebad5720d6
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460083"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706292"
 ---
 # <a name="payout-summary"></a>지급 요약
 
@@ -27,7 +27,7 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 >
 > 해당 결제 임계값이 충족되는 경우 결제는 월 단위로 이루어집니다. 일반적으로 해당 월의 15일에 지정된 월에 대한 결제 대금을 보냅니다. 결제는 일반적으로 영업일 3~10일 내에 지급 계좌로 입금됩니다. 자세한 내용은 [지급 임계값, 방법 및 기간](payment-thresholds-methods-and-timeframes.md)을 참조하세요.
 
-**지급 요약**을 보려면 파트너 센터의 오른쪽 위 모서리에 표시 되는 **지급** 아이콘을 클릭 한 다음 **지급 요약**을 선택 합니다.
+**지급 요약**을 보려면 파트너 센터의 오른쪽 위 모서리에 나타나는 **지급** 아이콘을 클릭 한 다음 **지급 요약**을 선택 합니다.
 
 ## <a name="current-proceeds-and-payments"></a>현재 수익 및 지급
 

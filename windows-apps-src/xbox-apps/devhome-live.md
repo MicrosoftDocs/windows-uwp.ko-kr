@@ -1,18 +1,18 @@
 ---
 ms.assetid: 4c03e06b-c12c-f64f-c53f-b38716101822
 title: Xbox Live 페이지 (개발자 홈)
-description: Xbox One 용 개발자 홈 앱의 Xbox Live 페이지에 대 한 정보를 제공합니다.
+description: Xbox one 개발자 홈 앱의 Xbox Live 페이지에 대 한 정보를 제공합니다.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-live.html
 ms.localizationpriority: medium
 ms.openlocfilehash: c72137b8419526b65dc3c6cb75a511a7a6f50a82
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464133"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8711851"
 ---
 # <a name="xbox-live-page-dev-home"></a>Xbox Live 페이지 (개발자 홈)
    

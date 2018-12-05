@@ -1,18 +1,18 @@
 ---
 ms.assetid: 94bb7ad9-cf50-61a8-ad42-48b9bdb9ed36
 title: 홈 페이지 (개발자 홈)
-description: Xbox One 용 개발자 홈 앱의 홈 페이지에 대 한 정보를 제공합니다.
+description: Xbox one 개발자 홈 앱의 홈 페이지에 대 한 정보를 제공합니다.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 2be7bdfc04fdd09636251000347499e2f2a37ce4
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461179"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706761"
 ---
 # <a name="home-page-dev-home"></a>홈 페이지 (개발자 홈)
    
@@ -20,7 +20,7 @@ ms.locfileid: "8461179"
 개발자 홈의 **홈** 페이지 개발 콘솔에서 정기적으로 수행 되는 작업에 대 한 빠른 액세스를 제공 합니다.   
  ![개발자 홈의 홈 페이지](images/devhome_home.png)   
   
-**홈** 페이지에 다음과 같은 창을 포함 되어 있습니다.   
+**홈** 페이지에는 다음 창이:   
  
    *  [바로 가기](#ID4EEB)  
    *  [게임 및 앱](#ID4EPC)  
@@ -35,9 +35,9 @@ ms.locfileid: "8461179"
 ## <a name="quick-actions"></a>바로 가기  
    
   
-**바로 가기** 창 자주 수행 하는 작업에 대 한 빠른 액세스를 제공 하는 다음 단추를 포함 합니다.   
+**바로 가기** 창 자주 수행 작업에 대 한 빠른 액세스를 제공 하는 다음 단추를 포함 합니다.   
  
-   *  **Visual Studio 표시 핀:** 컴퓨터에 Visual Studio 설치를 사용 하 여 개발 콘솔 페어링 하는 데 사용할 수 있는 코드를 표시 합니다.   
+   *  **Visual Studio 표시 핀:** 컴퓨터에 Visual Studio 설치를 사용 하 여 개발 콘솔과 사용할 수 있는 코드를 표시 합니다.   
    *  **변경 샌드박스:** 콘솔에는 샌드박스를 변경할 수 있습니다.   
    *  **다시 시작 콘솔:** 개발 콘솔을 다시 시작합니다.   
    *  **개발자 모드 나가기:** 정품 모드로 콘솔을 반환 하 고 콘솔을 다시 부팅 합니다.   
@@ -83,7 +83,7 @@ ms.locfileid: "8461179"
 ## <a name="connect-with-your-browser"></a>브라우저를 사용 하 여 연결  
    
   
-IP 주소와 포트 콘솔 웹 브라우저에서 관리 하는 데 사용할 수 있는 **브라우저를 사용 하 여 연결** 창에 표시 됩니다.   
+IP 주소와 포트 콘솔의 웹 브라우저에서 관리 하는 데 사용할 수 있는 **브라우저를 사용 하 여 연결** 창에 표시 됩니다.   
   
 <a id="ID4EPE"></a>
 

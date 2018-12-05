@@ -7,20 +7,20 @@ ms.topic: article
 keywords: windows 10, uwp, 패키지, 업로드, 패키지 업로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a77cb67891b3cfcb814e66fd14db9e79a0bff1c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460618"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706453"
 ---
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 
-**패키지** 페이지에서는 제출 중인 앱에 대 한 패키지 파일 (.msix,.msixupload,.msixbundle,.appx,.appxupload 및/또는.appxbundle)의 모든 업로드입니다. 이 페이지에서 동일한 앱에 대 한 모든 패키지를 업로드할 수 및 고객이 앱을 다운로드 하는 경우 스토어에서는 자동으로 장치에 대해 가장 잘 작동 하는 패키지를 사용 하 여 각 고객을 제공 합니다. 패키지를 업로드하면 [특정 Windows 10 장치 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지](#device-family-availability)를 등급순으로 나타내는 표가 표시됩니다.
+**패키지** 페이지에서는 제출 중인 앱에 대 한 패키지 파일 (.msix,.msixupload,.msixbundle,.appx,.appxupload 및/또는.appxbundle)의 모든 업로드입니다. 이 페이지에서 동일한 앱에 대 한 모든 패키지를 업로드할 수 및 고객이 앱을 다운로드 하는 경우 스토어에서는 자동으로 장치에 가장 잘 작동 하는 패키지를 사용 하 여 각 고객을 제공 합니다. 패키지를 업로드하면 [특정 Windows 10 장치 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지](#device-family-availability)를 등급순으로 나타내는 표가 표시됩니다.
 
 > [!IMPORTANT]
-> 2018 년 10 월 31 일 기준 제품 새로 만든 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
+> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
 
-패키지 내용 및 패키지 구성 방법에 대한 자세한 내용은 [앱 패키지 요구 사항](app-package-requirements.md)을 참조하세요. 또한 [특정 고객에 게 제공 되는 버전 번호는 패키지에 미치는 영향](package-version-numbering.md) 및 [다양 한 시나리오에 대 한 패키지를 관리 하는 방법](guidance-for-app-package-management.md)에 대 한 자세한 합니다.
+패키지 내용 및 패키지 구성 방법에 대한 자세한 내용은 [앱 패키지 요구 사항](app-package-requirements.md)을 참조하세요. [특정 고객에 게 제공 되는 버전 번호는 패키지에 미치는 영향](package-version-numbering.md) 및 [다양 한 시나리오에 대 한 패키지를 관리 하는 방법](guidance-for-app-package-management.md)에 대 한 자세한 원하는 메시지가 표시 됩니다.
 
 
 ## <a name="uploading-packages-to-your-submission"></a>제출에 패키지 업로드
@@ -28,11 +28,11 @@ ms.locfileid: "8460618"
 패키지를 업로드하려면 패키지를 업로드 필드로 끌거나 파일을 클릭하여 찾아봅니다. **패키지** 페이지.msix,.msixupload,.msixbundle,.appx,.appxupload 및/또는.appxbundle 파일을 업로드할 수 있습니다.
 
 > [!IMPORTANT]
-> Windows10에 대 한.msixupload 또는.appxupload 파일에 다음 대신.msix,.appx,.msixbundle, 또는.appxbundle를 업로드 하는 것이 좋습니다.  스토어에서의 UWP 앱 패키징에 대한 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](../packaging/packaging-uwp-apps.md)을 참조하세요.
+> Windows10,.msixupload 또는.appxupload 파일에 다음 대신.msix,.appx,.msixbundle, 또는.appxbundle 업로드는 것이 좋습니다.  스토어에서의 UWP 앱 패키징에 대한 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](../packaging/packaging-uwp-apps.md)을 참조하세요.
 
 앱에 대한 [패키지 플라이트](package-flights.md)를 만든 경우 패키지 플라이트 중 하나에서 패키지를 복사하는 옵션이 포함된 드롭다운이 표시됩니다. 끌어오려는 패키지가 있는 패키지 플라이트를 선택합니다. 그런 다음 해당 패키지를 일부 또는 전부 선택하여 이 제출에 포함할 수 있습니다.
 
-유효성을 검사 하는 동안 패키지를 사용 하 여 오류를 감지 하는 경우 잘못 된 란 소식을 알려 드립니다 메시지를 표시 하겠습니다. 해야 하는 패키지를 제거, 문제를 해결 한 후 다시 업로드 해야 합니다. 문제를 일으킬 수 있지만 제출을 계속하지 못하게 차단하지는 않는 정보를 알리는 경고가 표시될 수도 있습니다.
+유효성을 검사 하는 동안 패키지를 사용 하 여 오류를 감지 하는 경우 잘못 된 것을 알 수 있도록 메시지를 표시 했습니다. 해야 하는 패키지를 제거, 문제를 해결 한 후 다시 업로드 해야 합니다. 문제를 일으킬 수 있지만 제출을 계속하지 못하게 차단하지는 않는 정보를 알리는 경고가 표시될 수도 있습니다.
 
 
 ## <a name="device-family-availability"></a>장치 패밀리 가용성

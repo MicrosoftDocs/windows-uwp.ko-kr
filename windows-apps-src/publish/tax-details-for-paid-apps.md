@@ -6,12 +6,12 @@ ms.date: 11/20/2018
 ms.topic: article
 keywords: Windows 10, uwp, 세금, 앱 세금, 세금 요구 사항, 상거래 확장, 세율
 ms.localizationpriority: medium
-ms.openlocfilehash: 60bf36e8e5e07c73e8c59088be167e9dfb584c60
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: 2065fb2a1cfeb2a895757e1aedc86cd421ff826c
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8480035"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709871"
 ---
 # <a name="tax-details-for-paid-apps"></a>유료 앱의 세금 세부 정보
 
@@ -19,7 +19,7 @@ ms.locfileid: "8480035"
 선택한 가격의 세금 고려 사항, 지급 관련 정보 및 납세 책임을 이해하려면 아래 표에서 해당 배포 국가/지역을 참조하세요.
 
 > [!NOTE]
-> 상거래 확장 조정에는 제한된 국가/지역 집합에 지급 관련 정보가 있을 수 있습니다. 상거래 확장 조정 및 이것이 적용되는 지역/국가에 대한 자세한 내용은 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)과 [해당 국가/지역](define-pricing-and-market-selection.md#price-considerations-for-specific-markets) 목록을 참조하세요.
+> 상거래 확장 조정에는 제한된 국가/지역 집합에 지급 관련 정보가 있을 수 있습니다. 상거래 확장 조정 및 이것이 적용되는 지역/국가에 대한 자세한 내용은 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)과 [해당 국가/지역](define-market-selection.md#price-considerations-for-specific-markets) 목록을 참조하세요.
 
 > [!IMPORTANT]
 > 세율은 언제든지 변경될 수 있습니다. Microsoft에서는 아래 표의 세율이 항상 정확하다고 보증할 수 없습니다.

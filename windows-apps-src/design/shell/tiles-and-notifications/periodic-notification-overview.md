@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f7a5054fde1a1a24945b193f578b8389519dc2d5
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461299"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706199"
 ---
 # <a name="periodic-notification-overview"></a>정기 알림 개요
  
@@ -25,7 +25,7 @@ ms.locfileid: "8461299"
 
 정기 알림을 사용하면 최소한의 클라우드 서비스와 클라이언트 투자로 앱에서 라이브 타일 업데이트를 받을 수 있습니다. 정기 알림은 동일한 콘텐츠를 다양한 대상에게 배포하는 데 좋은 전달 방법입니다.
 
-**참고**  Windows8.1에 대 한는 [푸시 및 정기 알림 샘플을](http://go.microsoft.com/fwlink/p/?linkid=231476) 다운로드 하 고 Windows10 앱에서 해당 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
+**참고**  Windows8.1에는 [푸시 및 정기 알림 샘플을](http://go.microsoft.com/fwlink/p/?linkid=231476) 다운로드 하 고 Windows10 앱에서 해당 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
 
  
 

@@ -4,14 +4,14 @@ title: 모바일용 디바이스 포털
 description: Windows Device Portal에서 모바일 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, 디바이스 포털
+keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 879f4b9fd8806565eedeabda95f0c24c5b7931d7
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463697"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8710490"
 ---
 # <a name="device-portal-for-mobile"></a>모바일용 디바이스 포털
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 대상 그룹, 고객, 플라이트 그룹, 사용자 그룹, 알려진 사용자
 ms.localizationpriority: medium
 ms.openlocfilehash: 1fcb111121511553bba22cef55f94125d47e9f21
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459332"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709418"
 ---
 # <a name="create-known-user-groups"></a>알려진 사용자 그룹 만들기
 
@@ -36,7 +36,7 @@ ms.locfileid: "8459332"
 
 ## <a name="to-edit-a-known-user-group"></a>알려진 사용자 그룹을 편집하려면
 
-파트너 센터에서 알려진된 사용자 그룹을 제거 (하거나 변경할 수는 이름) 작성 된 후 언제 든 지 구성원을 편집할 수 있습니다.
+파트너 센터에서 알려진된 사용자 그룹을 제거 (하거나 변경할 수는 이름) 만든 된 후 언제 든 지 구성원을 편집할 수 있습니다.
 
 알려진 사용자 그룹을 검토 및 편집하려면 왼쪽 탐색 메뉴에서 **참여**를 확장하고 **고객 그룹**을 선택합니다. **내 고객 그룹**에서 편집하려는 그룹의 이름을 선택합니다. 새 플라이트를 만들 때 **기존 그룹 보기 및 관리**를 선택하거나 패키지 플라이트의 개요 페이지에서 그룹 이름을 선택하여 패키지 플라이트 생성 페이지에서 알려진 사용자 그룹을 편집할 수도 있습니다. 
 

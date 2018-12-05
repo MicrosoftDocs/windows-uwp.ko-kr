@@ -7,11 +7,11 @@ keywords: 시작, uwp, windows 10, 학습 트랙, 레이아웃, 양식
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 0cb42552139fd706dd9e87d61c24f8fe2c2d51f7
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463184"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713066"
 ---
 # <a name="create-and-customize-a-form"></a>양식 만들기 및 사용자 지정
 
@@ -45,9 +45,9 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 
 ## <a name="what-goes-in-a-form"></a>양식에 무엇이 들어가나요?
 
-다양한 [XAML 컨트롤](../design/controls-and-patterns/controls-and-events-intro.md)로 양식을 작성해야 합니다. 이러한 컨트롤에 익숙할 수도 있지만 언제든지 필요한 경우 세부 정보를 읽을 수 있습니다. 특히, 사용자가 텍스트를 입력하거나 값 목록에서 선택할 수 있는 컨트롤이 필요할 수 있습니다. 이것이 추가할 수 있는 옵션의 기본 목록을 – 읽을,에 대 한 모든 충분히 어떤 모습와 그 작동 방식을 이해 필요가 없습니다.
+다양한 [XAML 컨트롤](../design/controls-and-patterns/controls-and-events-intro.md)로 양식을 작성해야 합니다. 이러한 컨트롤에 익숙할 수도 있지만 언제든지 필요한 경우 세부 정보를 읽을 수 있습니다. 특히, 사용자가 텍스트를 입력하거나 값 목록에서 선택할 수 있는 컨트롤이 필요할 수 있습니다. 이 기본 목록을 추가할 수 있는 옵션-읽을,에 대 한 모든 충분히 어떤 모습와 그 작동 방식을 이해 필요가 없습니다.
 
-* [TextBox](../design/controls-and-patterns/text-box.md) 에 앱에 사용자 입력된 텍스트를 수 있습니다.
+* [TextBox](../design/controls-and-patterns/text-box.md) 를 앱에 사용자 입력된 텍스트를 수 있습니다.
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md)는 사용자가 두 가지 옵션 중에서 선택할 수 있도록 합니다.
 * [DatePicker](../design/controls-and-patterns/date-picker.md)는 날짜 값을 선택할 수 있도록 합니다.
 * [TimePicker](../design/controls-and-patterns/time-picker.md)는 시간 값을 선택할 수 있도록 합니다.
@@ -133,7 +133,7 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 
 ## <a name="going-further"></a>더 나아가기
 
-여기에서 양식을 만들었지만 레이아웃과 컨트롤의 개념은 생성할 수 있는 모든 XAML UI 전반에서 적용됩니다. 자유롭게 새로운 UI 기능을 추가 하 고 사용자 환경을 구체화 있는 양식을 시험해를 연결한 문서를 통해 다시 이동할 수 있습니다. 더 자세한 레이아웃 기능을 통해 단계별 지침을 원한다 면 우리의 [적응형 레이아웃 자습서](../design/basics/xaml-basics-adaptive-layout.md) 를 참조 하십시오.
+여기에서 양식을 만들었지만 레이아웃과 컨트롤의 개념은 생성할 수 있는 모든 XAML UI 전반에서 적용됩니다. 언제 새로운 UI 기능을 추가 하 고 사용자 환경을 구체화 하세요 있는 양식을 시험해를 연결한 문서를 다시 진행 합니다. 더 자세한 레이아웃 기능을 통해 단계별 지침을 원한다 면 우리의 [적응형 레이아웃 자습서](../design/basics/xaml-basics-adaptive-layout.md) 를 참조 하십시오.
 
 양식은 비워둘 필요도 없습니다. 한 발자국 나아가 [마스터/세부 정보 패턴](../design/controls-and-patterns/master-details.md) 또는 [피벗 컨트롤](../design/controls-and-patterns/tabs-pivot.md) 내에 자신의 양식을 채울 수 있습니다. 또는 양식의 코드 뒤에서 작업하려는 경우 우리의 [이벤트 개요](../xaml-platform/events-and-routed-events-overview.md)로 시작할 수 있습니다.
 

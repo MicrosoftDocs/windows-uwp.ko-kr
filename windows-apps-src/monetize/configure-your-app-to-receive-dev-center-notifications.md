@@ -7,17 +7,17 @@ keywords: windows 10, uwp, Microsoft Store Services SDK, 대상 푸시 알림, �
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
 ms.openlocfilehash: f60780186256e7f78a9596c979c79bfc704ae4c2
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459829"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8708885"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>대상 푸시 알림에 대해 앱 구성
 
 파트너 센터에서 직접 유니버설 Windows 플랫폼 (UWP) 앱이 설치 된 장치에 대상된 푸시 알림을 전송 하 여 고객과 소통을 **푸시 알림** 페이지를 사용할 수 있습니다. 예를 들어 대상 푸시 알림을 사용하면 앱 평가, 새 기능 확인 등 고객의 참여를 유도할 수 있습니다. 알림 메시지, 타일 알림, 원시 XML 알림과 같이 여러 가지 유형의 푸시 알림을 보낼 수 있습니다. 푸시 알림을 통해 앱 실행 속도 결과를 추적할 수도 있습니다. 이 기능에 대한 자세한 내용은 [앱의 고객에 게 푸시 알림 보내기](../publish/send-push-notifications-to-your-apps-customers.md)를 참조하세요.
 
-파트너 센터에서 고객에 게 대상된 푸시 알림을 보내려면, 먼저 알림을 받도록 앱을 등록 하려면 Microsoft Store Services SDK의 [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) 클래스의 메서드를 사용 해야 합니다. 이 클래스의 추가 메서드를 사용 하 여 (알림을에서 발생 하는 앱 실행 속도 추적 하 고 싶은) 하는 경우 대상된 푸시 알림에 대 한 응답으로 앱이 시작 되었음을 파트너 센터에 알리고 알림 수신을 중지할 수 있습니다.
+파트너 센터에서 고객에 게 대상된 푸시 알림을 보내려면 수, 알림을 받도록 앱을 등록 하려면 Microsoft Store Services SDK의 [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) 클래스의 메서드를 사용 해야 합니다. 이 클래스의 추가 메서드를 사용 하 여 (에서 발생 하는 앱 실행 속도 추적 하 고 싶은) 하는 경우 대상된 푸시 알림에 대 한 응답으로 앱이 시작 되었음을 파트너 센터에 알리고 알림 수신을 중지할 수 있습니다.
 
 ## <a name="configure-your-project"></a>프로젝트 구성
 
@@ -40,13 +40,13 @@ ms.locfileid: "8459829"
 
 3. [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) 개체를 가져와 이전에 식별한 시작 코드에서 [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 오버로드 중 하나를 호출합니다. 앱이 시작 될 때마다 이 메서드를 호출해야 합니다.
 
-  * 알림에 대 한 고유한 채널 URI를 만들게 하려면 파트너 센터를 원하는 경우 [registernotificationchannelasync ()](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 오버 로드를 호출 합니다.
+  * 파트너 센터에서 알림에 대 한 고유한 채널 URI 만들게 하려면 [registernotificationchannelasync ()](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 오버 로드를 호출 합니다.
 
       [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync1)]
       > [!IMPORTANT]
       > 앱에서 [CreatePushNotificationChannelForApplicationAsync](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync)를 호출하여 WNS에 대한 알림 채널도 만드는 경우 코드에서 [CreatePushNotificationChannelForApplicationAsync](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync) 및 [RegisterNotificationChannelAsync()](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 오버로드를 동시에 호출하지 않도록 하세요. 이 두 메서드를 모두 호출해야 하는 경우 순차적으로 호출하고 다른 메서드를 호출하기 전에 한 메서드가 반환될 때까지 기다려야 합니다.
 
-  * 채널 파트너 센터에서 대상된 푸시 알림을 사용 하는 URI를 지정 하려는 경우 [registernotificationchannelasync (storeservicesnotificationchannelparameters)](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 오버 로드를 호출 합니다. 예를 들어 앱에서 이미 WNS(Windows 푸시 알림 서비스)를 사용하는 데 동일한 채널 URI를 사용하려는 경우 이 작업이 필요할 수도 있습니다. 먼저 [StoreServicesNotificationChannelParameters](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters) 개체를 만들고 채널 URI에 [CustomNotificationChannelUri](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri) 속성을 할당해야 합니다.
+  * URI를 사용 하 여 파트너 센터에서 대상된 푸시 알림 채널을 지정 하려면 [registernotificationchannelasync (storeservicesnotificationchannelparameters)](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 오버 로드를 호출 합니다. 예를 들어 앱에서 이미 WNS(Windows 푸시 알림 서비스)를 사용하는 데 동일한 채널 URI를 사용하려는 경우 이 작업이 필요할 수도 있습니다. 먼저 [StoreServicesNotificationChannelParameters](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters) 개체를 만들고 채널 URI에 [CustomNotificationChannelUri](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri) 속성을 할당해야 합니다.
 
       [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync2)]
 
@@ -63,7 +63,7 @@ ms.locfileid: "8459829"
 
 ### <a name="how-your-app-responds-when-the-user-launches-your-app"></a>사용자가 앱을 시작할 때 앱의 응답 방식
 
-사용자가 앱에 푸시에 대 한 응답에서을 시작할 때 앱에서 다음 진입점 중 하나을 호출할 수 알림 및 [파트너 센터에서 앱의 고객에 게 푸시 알림을 보내고](../publish/send-push-notifications-to-your-apps-customers.md)받으려는 앱 등록 되 면 알림입니다. 사용자가 앱을 시작할 때 실행할 코드 중 일부가 있는 경우에는 앱에서 이러한 진입점 중 하나에 코드를 추가할 수 있습니다.
+사용자가 앱에 푸시에 대 한 응답에서을 시작할 때 앱에서 다음 진입점 중 하나가 호출할 수 앱 알림 및 [파트너 센터에서 앱의 고객에 게 푸시 알림을 보내고](../publish/send-push-notifications-to-your-apps-customers.md)받도록 등록 되 면 알림입니다. 사용자가 앱을 시작할 때 실행할 코드 중 일부가 있는 경우에는 앱에서 이러한 진입점 중 하나에 코드를 추가할 수 있습니다.
 
   * 푸시 알림이 포그라운드 활성화 유형인 경우 프로젝트에서 **App** 클래스의 [OnActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) 메서드를 재정의하고 이 메서드에 코드를 추가합니다.
 
@@ -75,7 +75,7 @@ ms.locfileid: "8459829"
 
 파트너 센터에서 대상된 푸시 알림에 대해 **앱 시작 속도 추적** 옵션을 선택 하면 앱이 파트너 센터에 알리고 앱의 적절 한 진입점에서 [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) 메서드를 호출 푸시 알림에 대 한 응답으로 시작 합니다.
 
-이 메서드는 앱의 원래 시작 인수도 반환합니다. 푸시 알림에 대해 앱 시작 속도 추적 하도록 선택 하면 앱을 추적 하기 위해 시작 인수는 불투명 추적 ID에 추가 됩니다 파트너 센터에서 시작 합니다. 앱에 대 한 시작 인수 [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) 메서드에 전달 해야 하 고이 메서드는 파트너 센터에 추적 ID를 전송 하며, 시작 인수에서 추적 ID를 제거 하 고에 원래 실행 인수도 반환 합니다 코드입니다.
+이 메서드는 앱의 원래 시작 인수도 반환합니다. 푸시 알림에 대해 앱 시작 속도 추적 하도록 선택 하면 앱을 시작 인수는 불투명 추적 ID가 추가 파트너 센터에서 시작 합니다. 앱에 대 한 시작 인수 [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) 메서드에 전달 해야 하 고이 메서드 파트너 센터에 추적 ID를 보내고, 시작 인수에서 추적 ID를 제거 하 고 원래 실행 인수를 반환 합니다 코드입니다.
 
 이 메서드를 호출하는 방법은 푸시 알림의 활성화 유형에 따라 다릅니다.
 
@@ -91,11 +91,11 @@ ms.locfileid: "8459829"
 
 ## <a name="unregister-for-push-notifications"></a>푸시 알림 등록 취소
 
-파트너 센터에서 대상된 푸시 알림 수신을 중지 하려면 앱을 원하는 경우 [UnregisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) 메서드를 호출 합니다.
+파트너 센터에서 대상된 푸시 알림 수신을 중지 하려면 앱을 원한다 면 [UnregisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) 메서드를 호출 합니다.
 
 [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#UnregisterNotificationChannelAsync)]
 
-이 메서드는 앱에서 *모든* 서비스의 푸시 알림을 받지 않도록 알림에 사용되고 있는 채널을 무효화합니다. 종료 된 채널 파트너 센터에서 대상된 푸시 알림 및 WNS를 사용 하 여 다른 알림을 포함 하는 모든 서비스를 다시 사용할 수 없습니다. 이 앱에 푸시 알림 보내기를 다시 시작하려면 앱에서 새 채널을 요청해야 합니다.
+이 메서드는 앱에서 *모든* 서비스의 푸시 알림을 받지 않도록 알림에 사용되고 있는 채널을 무효화합니다. 이미 종료 된 후 채널 파트너 센터의 대상된 푸시 알림 및 WNS를 사용 하는 다른 알림을 포함 한 모든 서비스를 다시 사용할 수 없습니다. 이 앱에 푸시 알림 보내기를 다시 시작하려면 앱에서 새 채널을 요청해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

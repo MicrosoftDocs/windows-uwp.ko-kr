@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, 세그먼트, 세그먼트들, 대상 그룹, 고객
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
 ms.openlocfilehash: d0df23f0da4efe01877c45e5b2b6b5f4e2142a92
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464103"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8708865"
 ---
 # <a name="create-customer-segments"></a>고객층 만들기
 
@@ -41,7 +41,7 @@ ms.locfileid: "8464103"
 4.  **이 앱의 고객 포함** 목록에서 대상으로 지정할 앱 중 하나를 선택합니다.
 5.  **포함 조건 정의** 섹션에서 세그먼트에 대한 필터 조건을 지정합니다.
 
-    다양 한 **구입**, **취득 소스**, **인구 통계**, **등급**, **변동 예측**, **스토어 구매**, **스토어 구입**및 스토어 **를 비롯 한 필터 조건에서에서 선택할 수 있습니다. 지출**합니다.
+    다양 한 **구입**, **취득 소스**, **인구 통계**, **등급**, **변동 예측**, **스토어 구매**, **스토어 구입**및 저장소 **포함 하 여 필터 조건에서에서 선택할 수 있습니다. 지출**합니다.
 
     예를 들어 18-24세 앱 고객만 포함된 세그먼트를 만들려는 경우 드롭다운 목록에서 필터 조건을 [**인구 통계**] [**연령 그룹**] [**is**] **[18 to 24]** 로 선택합니다.
 

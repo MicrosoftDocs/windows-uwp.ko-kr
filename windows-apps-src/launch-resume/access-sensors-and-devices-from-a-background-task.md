@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 13bc8f2558b3e3f15d7329697a41b177777b6e7a
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464498"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8712759"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>백그라운드 작업에서 센서 및 장치에 액세스
 
@@ -29,7 +29,7 @@ ms.locfileid: "8464498"
 
 앱이 사용자에게 더 이상 보이지 않을 때 Windows는 메모리 및 CPU 리소스를 회수하기 위해 앱을 일시 중단하거나 종료합니다. 그러면 다른 앱이 포그라운드로 실행될 수 있으므로 배터리 소모가 줄어듭니다. 이 경우 백그라운드 작업을 사용하지 않고는 지속적인 데이터 이벤트가 손실됩니다. Windows는 백그라운드 작업 트리거인 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 제공하므로, 앱이 일시 중단된 경우에도 앱이 장치와 센서에서 백그라운드로 안전하게 장기 실행 동기화와 모니터링 작업을 수행할 수 있습니다. 앱 수명 주기에 대한 자세한 내용은 [실행, 다시 시작 및 백그라운드 작업](index.md)을 참조하세요. 백그라운드 작업에 대한 자세한 내용은 [백그라운드 작업을 통해 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
-**참고**사용자가 앱의 백그라운드 동기화를 승인 유니버설 Windows 앱에서 백그라운드로 장치를 동기화 해야 합니다. 또한 장치가 PC에 연결되거나 쌍을 이루고 활성 I/O가 있어야 하며, 최대 10분 동안 백그라운드 작업을 실행할 수 있습니다. 정책 적용에 대한 자세한 내용은 이 항목의 뒷부분에서 설명합니다.
+**참고**유니버설 Windows 앱에서 백그라운드로 장치 동기화 사용자가 앱의 백그라운드 동기화를 승인 하려면 해야 합니다. 또한 장치가 PC에 연결되거나 쌍을 이루고 활성 I/O가 있어야 하며, 최대 10분 동안 백그라운드 작업을 실행할 수 있습니다. 정책 적용에 대한 자세한 내용은 이 항목의 뒷부분에서 설명합니다.
 
 ### <a name="limitation-critical-device-operations"></a>제한 사항: 중요한 장치 작업
 

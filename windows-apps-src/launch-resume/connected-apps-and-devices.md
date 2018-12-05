@@ -3,15 +3,15 @@ title: 연결된 앱 및 장치(프로젝트 로마)
 description: 이 섹션에서는 원격 시스템 플랫폼을 사용하여 원격 디바이스를 검색하고, 원격 디바이스에서 앱을 실행하고, 원격 디바이스의 앱 서비스와 통신하는 방법을 설명합니다.
 ms.date: 06/08/2018
 ms.topic: article
-keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, "로마" 프로젝트 "로마"
+keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
 ms.openlocfilehash: 79decdcb420e7d1b5cb732a354ccddb1ce5b7404
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8471901"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8705903"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>연결된 앱 및 장치(프로젝트 로마)
 
