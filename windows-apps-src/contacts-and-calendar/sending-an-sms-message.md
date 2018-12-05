@@ -7,17 +7,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 427eb1b895269727d82e42d5abc3ae1f1da1a35d
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8487275"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8693093"
 ---
 # <a name="send-an-sms-message"></a>SMS 메시지 보내기
 
 이 항목에서는 사용자가 SMS 메시지를 보낼 수 있도록 SMS 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 SMS 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다.
 
-이 코드를 호출 하려면 패키지 매니페스트에서 **채팅**, **smsSend**및 **chatSystem** 기능을 선언 합니다. [제한 된 접근 권한 값](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) 이지만 앱에서 사용할 수 있습니다. 스토어에 앱을 게시 하려는 경우에 승인을 해야 합니다. [계정 유형, 위치 및 수수료를](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees)참조 하세요.
+이 코드를 호출 하려면 패키지 매니페스트에서 **채팅**, **smsSend**및 **chatSystem** 기능을 선언 합니다. [제한 된 기능](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) 이지만 앱에서 사용할 수 있습니다. 스토어에 앱을 게시 하려는 경우에 승인을 해야 합니다. [계정 유형, 위치 및 수수료를](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees)참조 하세요.
 
 ## <a name="launch-the-compose-sms-dialog"></a>SMS 작성 대화 상자 시작
 

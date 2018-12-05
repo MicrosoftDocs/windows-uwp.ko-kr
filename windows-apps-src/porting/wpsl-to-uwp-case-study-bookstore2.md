@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b75da7d50135ee8d40f8ed44f0239edb54dcf65
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465974"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8688837"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore2"></a>WindowsPhone Silverlight를 UWP로 이동 사례 연구: Bookstore2
 
 
-이 사례 연구, [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)에 제공 된 정보에 기반 하는-데이터는 **LongListSelector**에서 그룹화 된 표시 하는 WindowsPhone Silverlight 앱으로 시작 합니다. 보기 모델에서 **Author** 클래스의 각 인스턴스는 해당 저자가 쓴 책의 그룹을 나타내며, **LongListSelector**에서 저자가 그룹화한 책 목록을 보거나 저자의 점프 목록을 축소할 수 있습니다. 점프 목록은 책 목록을 스크롤할 때보다 훨씬 더 빠른 탐색이 가능케 합니다. 앱은 Windows10Universal Windows 플랫폼 (UWP) 앱을 포팅하는 단계를 안내 합니다.
+이 사례 연구, [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)에 제공 된 정보에 기반 하는 등 데이터는 **LongListSelector**에서 그룹화 된 표시 하는 WindowsPhone Silverlight 앱으로 시작 합니다. 보기 모델에서 **Author** 클래스의 각 인스턴스는 해당 저자가 쓴 책의 그룹을 나타내며, **LongListSelector**에서 저자가 그룹화한 책 목록을 보거나 저자의 점프 목록을 축소할 수 있습니다. 점프 목록은 책 목록을 스크롤할 때보다 훨씬 더 빠른 탐색이 가능케 합니다. 앱은 Windows10Universal Windows 플랫폼 (UWP) 앱을 포팅하는 단계를 안내 합니다.
 
 **참고**  때 [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md)에서 대상 플랫폼 버전 설정 단계에 따라 다음 "Visual Studio 업데이트 필요" 메시지가 표시 되 면 Bookstore2Universal\_10 Visual Studio에서 열기.
 
 ## <a name="downloads"></a>다운로드
 
-[다운로드 Bookstore2WPSL8 합니다 WindowsPhone Silverlight 앱](http://go.microsoft.com/fwlink/p/?linkid=522601).
+[WindowsPhone Silverlight 앱을 다운로드 Bookstore2WPSL8 합니다](http://go.microsoft.com/fwlink/p/?linkid=522601).
 
 [Bookstore2Universal\_10 Windows10 앱을 다운로드](http://go.microsoft.com/fwlink/?linkid=532952)합니다.
 
@@ -40,7 +40,7 @@ Visual Studio에서 새 프로젝트를 만들고 Bookstore2WPSL8의 파일을 �
 -   보기 모델 소스 파일이 포함된 폴더(\\ViewModel)를 복사합니다.
 -   MainPage.xaml을 복사한 후 대상의 파일을 바꿉니다.
 
-App.xaml 및 App.xaml.cs Windows10 프로젝트에서 Visual Studio에서 생성 우리는 하 게 유지할 수 있습니다.
+App.xaml 및 App.xaml.cs를 Windows10 프로젝트에서 Visual Studio에서 생성 한 하 게 유지할 수 있습니다.
 
 방금 복사한 소스 코드 및 태그 파일을 편집하고 Bookstore2WPSL8 네임스페이스에 대한 참조를 Bookstore2Universal\_10으로 변경합니다. **파일에서 바꾸기** 기능을 사용하면 이 작업을 빠르게 수행할 수 있습니다. 보기 모델 소스 파일의 명령적 코드에서 다음과 같은 포팅 변경이 필요합니다.
 
@@ -301,4 +301,4 @@ UWP를 사용하도록 앱을 이동함으로써 사용 가능해진 기능의 �
 
 ## <a name="conclusion"></a>결론
 
-이 사례 연구는 이전보다 더욱 복잡한 사용자 인터페이스를 포함합니다. 모든 기능, WindowsPhone Silverlight **LongListSelector**개념-등에- **SemanticZoom**, **ListView**, **GridView**및 **CollectionViewSource**의 형태로 UWP 앱을 사용할 수 없습니다. 가장 좁고 가장 넓은 Windows 디바이스 폼 팩터 및 중간의 모든 크기에 맞게 조정된 기능, UI 및 조작 방식을 구현하기 위해 UWP 앱에서 명령적 코드와 태그를 둘 다 다시 사용하거나 복사 및 편집하는 방법을 살펴보았습니다.
+이 사례 연구는 이전보다 더욱 복잡한 사용자 인터페이스를 포함합니다. 모든 기능, WindowsPhone Silverlight **LongListSelector**개념-등에-될 **SemanticZoom**, **ListView**, **GridView**및 **CollectionViewSource**의 형태로 UWP 앱에서 사용할 수 있습니다. 가장 좁고 가장 넓은 Windows 디바이스 폼 팩터 및 중간의 모든 크기에 맞게 조정된 기능, UI 및 조작 방식을 구현하기 위해 UWP 앱에서 명령적 코드와 태그를 둘 다 다시 사용하거나 복사 및 편집하는 방법을 살펴보았습니다.

@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 30be8d13c7e549f8ed75060f614de5bbcdb6284f
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8486995"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8692799"
 ---
 # <a name="tools-for-profiling-and-performance"></a>프로파일링 및 성능 도구
 
 
 Microsoft에서는 UWP(유니버설 Windows 플랫폼) 앱의 성능을 향상시킬 수 있는 여러 가지 도구를 제공합니다. 다음 링크를 사용하여 이러한 도구를 사용하는 방법을 알아보세요.
 
-**Visual Studio의 XAML UI 응답성 도구**입니다. 앱 내에서 성능에 미치는 영향을 측정 하는 데 사용 하는 최상의 도구 중 하나에 XAML UI 응답성 도구입니다. 이 훨씬 더 많은 시나리오를 지원 하도록 [업데이트](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) 되었습니다.
+**Visual Studio의 XAML UI 응답성 도구**입니다. 앱 내에서 성능에 미치는 영향을 측정 하는 데 사용 하는 최상의 도구 중 하나는 XAML UI 응답성 도구입니다. 이 훨씬 더 많은 시나리오를 지원 하도록 [업데이트](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) 되었습니다.
 
 참고 항목:
 
