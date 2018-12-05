@@ -1,24 +1,24 @@
 ---
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
-title: 만들기 Hello World 앱 C + + CX (Windows10)
-description: Microsoft Visual Studio2017를 사용 하 여 사용할 수 C + + /CX Windows10를 실행 하는 휴대폰 포함 Windows10에서 실행 되는 앱을 개발 합니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다.
+title: 만들기는 Hello World 앱 C + + CX (Windows10)
+description: Microsoft Visual Studio2017를 사용 하 여 사용할 수 있는 C + + /CX Windows10를 실행 하는 휴대폰에 포함 하 여 Windows10에서 실행 되는 앱을 개발 합니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다.
 ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6954f935440f75a728c3f3601ade884bbee7b6bc
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462822"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8690382"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>C + "Hello world" 앱 만들기 + CX
 
 > [!IMPORTANT]
 > 이 자습서에서는 C + + CX 합니다. Microsoft에서 릴리스 하는 C + + WinRT:는 최신 표준 C + + 17 언어 프로젝션으로 Windows 런타임 (WinRT) Api에 대 한 합니다. 이 언어에 대 한 자세한 내용은 참조 [C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/). 
 
-Microsoft Visual Studio2017를 사용 하 여 사용할 수 C + + /CX에서 응용 프로그램 언어 XAML (Extensible Markup)에 정의 된 UI 사용 하 여 Windows10에서 실행 되는 앱을 개발할 합니다.
+Microsoft Visual Studio2017를 사용 하 여 사용할 수 있는 C + +에서 응용 프로그램 언어 XAML (Extensible Markup) 정의 된 UI 사용 하 여 Windows10에서 실행 되는 앱을 개발 하는 CX 합니다.
 
 > [!NOTE]
 > 이 자습서에서는 Visual Studio Community 2017을 사용 합니다. 다른 버전의 Visual Studio를 사용하는 경우 약간 다르게 보일 수 있습니다.
@@ -61,7 +61,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 ## <a name="hello-world-store-app-in-ccx"></a>Hello World 스토어 앱에서 C + + CX
 
-첫 번째로 작성할 앱은 대화형 작업, 레이아웃 및 스타일의 일부 기본 기능을 보여 주는 "Hello World"입니다. Windows 유니버설 앱 프로젝트 템플릿에서 앱을 만듭니다. Windows8.1 및 Windows Phone 8.1 용 앱을 개발한, Windows 앱에 대 한 개, 공유 코드용 및 휴대폰 앱에 대 한 Visual Studio에서 세 개의 프로젝트를 사용 해야 했던 기억 수 있습니다. Windows10 유니버설 Windows 플랫폼 (UWP)을 사용 하면 등 Windows10, 태블릿, 휴대폰, VR 디바이스는 디바이스를 실행 하는 데스크톱 및 노트북 컴퓨터를 비롯 한 모든 장치에서 실행 되는 단 하나의 프로젝트를 사용할 수 있습니다.
+첫 번째로 작성할 앱은 대화형 작업, 레이아웃 및 스타일의 일부 기본 기능을 보여 주는 "Hello World"입니다. Windows 유니버설 앱 프로젝트 템플릿에서 앱을 만듭니다. Windows8.1 및 Windows Phone 8.1 용 앱을 개발한, Visual studio에서는 Windows 앱에 대 한 개, 공유 코드용 및 휴대폰 앱에 대해 하나씩 세 개의 프로젝트를 사용 해야 했던 기억 될 수 있습니다. Windows10 유니버설 Windows 플랫폼 (UWP)을 사용 하면 등 Windows10, 태블릿, 휴대폰, VR 디바이스를 실행 하는 데스크톱 및 노트북 컴퓨터를 비롯 한 모든 장치에서 실행 되는 단 하나의 프로젝트를 사용할 수 있습니다.
 
 다음과 같은 기본 사항부터 시작하겠습니다.
 
@@ -101,7 +101,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 ### <a name="about-the-project-files"></a>프로젝트 파일 정보
 
-프로젝트 폴더의 모든 .xaml 파일은 동일 폴더에 해당 .xaml.h 파일과 .xaml.cpp 파일이 있으며 생성된 파일 폴더(디스크에 있지만 프로젝트의 일부가 아님)에 .g 파일과 .g.hpp 파일이 있습니다. XAML 파일을 수정하여 UI 요소를 만든 다음 이들 요소를 데이터 원본에 연결합니다(DataBinding). .h 및 .cpp 파일을 수정하여 이벤트 처리기에 대한 사용자 지정 논리를 추가합니다. 자동 생성 된 파일 나타내는 XAML 태그의 변환에 C + + CX 합니다. 코드 숨김 작동 방식을 더 잘 이해할 수 있도록 이러한 파일을 살펴보세요. 단, 수정하지는 마세요. 기본적으로 생성된 파일에는 XAML 루트 요소용 partial 클래스 정의가 포함되어 있으며, 이 클래스는 \*.xaml.h 및 .cpp 파일에서 수정하는 클래스와 동일합니다. 생성된 파일은 XAML UI 자식 요소를 작성하는 코드에서 참조할 수 있도록 클래스 멤버로 선언합니다. 빌드 시, 생성된 코드와 개발자가 작성한 코드가 전체 클래스 정의에 병합되어 컴파일됩니다.
+프로젝트 폴더의 모든 .xaml 파일은 동일 폴더에 해당 .xaml.h 파일과 .xaml.cpp 파일이 있으며 생성된 파일 폴더(디스크에 있지만 프로젝트의 일부가 아님)에 .g 파일과 .g.hpp 파일이 있습니다. XAML 파일을 수정하여 UI 요소를 만든 다음 이들 요소를 데이터 원본에 연결합니다(DataBinding). .h 및 .cpp 파일을 수정하여 이벤트 처리기에 대한 사용자 지정 논리를 추가합니다. 자동 생성 된 파일은 XAML 태그가 C +로 변환 되었음을 나타냅니다. + CX 합니다. 코드 숨김 작동 방식을 더 잘 이해할 수 있도록 이러한 파일을 살펴보세요. 단, 수정하지는 마세요. 기본적으로 생성된 파일에는 XAML 루트 요소용 partial 클래스 정의가 포함되어 있으며, 이 클래스는 \*.xaml.h 및 .cpp 파일에서 수정하는 클래스와 동일합니다. 생성된 파일은 XAML UI 자식 요소를 작성하는 코드에서 참조할 수 있도록 클래스 멤버로 선언합니다. 빌드 시, 생성된 코드와 개발자가 작성한 코드가 전체 클래스 정의에 병합되어 컴파일됩니다.
 
 먼저 프로젝트 파일을 살펴보겠습니다.
 
@@ -307,7 +307,7 @@ MainPage::MainPage()
 
 어떤 테마를 사용해야 할까요? 어느 것이든 원하는 것을 사용하면 됩니다. 주로 이미지 또는 동영상을 표시하는 앱에는 어두운 테마를 사용하는 것이 좋고, 텍스트가 많이 들어 있는 앱에는 밝은 테마를 사용하는 것이 좋습니다. 사용자 지정 색 구성표를 사용하려는 경우 앱의 모양과 느낌에 가장 잘 맞는 테마를 사용하세요. 이 자습서의 나머지 부분에서는 스크린샷에 밝은 테마를 사용합니다.
 
-**참고**테마는 앱 시작 되 고 앱이 실행 중인 동안에 변경할 수 없습니다 될 때 적용 됩니다.
+**참고**테마는 앱 시작 되 고 앱이 실행 되는 경우 적용 됩니다.
 
 ### <a name="using-system-styles"></a>시스템 스타일 사용
 
@@ -334,7 +334,7 @@ MainPage::MainPage()
 
 7.  프로세스를 반복하여 글꼴 크기를 설정하고 `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) 요소에 **BaseTextBlockStyle**을 할당합니다.
 
-    **팁**파란색 윤곽선 텍스트가이 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)에서 XAML 디자인 화면 위로 포인터를 이동 하면, 하지만 선택할 수 있도록 경우 보여 줍니다.  
+    **팁**파란색 윤곽선을 선택할 수 있도록 경우 표시 하지만 텍스트가이 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)에서 XAML 디자인 화면 위로 포인터를 이동 합니다.  
 
     이제 XAML은 다음과 같습니다.
 
@@ -404,7 +404,7 @@ MainPage::MainPage()
 
 ## <a name="next-steps"></a>다음 단계
 
-Windows8.1 및/또는 Windows Phone 8.1을 대상으로 하는 Windows 유니버설 앱 프로젝트를 있으면 Windows10를 포팅할 수 있습니다. 이 포팅 작업을 위한 자동 프로세스가 없지만 수동으로 수행하면 됩니다. 새 Windows 유니버설 프로젝트로 시작하여 이 항목의 지침에 따라 최신 프로젝트 시스템 구조 및 매니페스트 파일을 다운로드하고, 프로젝트의 디렉터리 구조에 코드 파일을 복사하며, 프로젝트에 항목을 추가하고, [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)를 사용하여 XAML을 다시 작성하세요. 자세한 내용은 [Windows 런타임 8 프로젝트를 UWP(유니버설 Windows 플랫폼) 프로젝트로 포팅](https://msdn.microsoft.com/library/windows/apps/Mt188203) 및 [유니버설 Windows 플랫폼으로 포팅(C++)](http://go.microsoft.com/fwlink/p/?LinkId=619525)을 참조하세요.
+Windows8.1 및/또는 Windows Phone 8.1을 대상으로 하는 Windows 유니버설 앱 프로젝트에 있는 경우 Windows10을 포팅할 수 있습니다. 이 포팅 작업을 위한 자동 프로세스가 없지만 수동으로 수행하면 됩니다. 새 Windows 유니버설 프로젝트로 시작하여 이 항목의 지침에 따라 최신 프로젝트 시스템 구조 및 매니페스트 파일을 다운로드하고, 프로젝트의 디렉터리 구조에 코드 파일을 복사하며, 프로젝트에 항목을 추가하고, [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)를 사용하여 XAML을 다시 작성하세요. 자세한 내용은 [Windows 런타임 8 프로젝트를 UWP(유니버설 Windows 플랫폼) 프로젝트로 포팅](https://msdn.microsoft.com/library/windows/apps/Mt188203) 및 [유니버설 Windows 플랫폼으로 포팅(C++)](http://go.microsoft.com/fwlink/p/?LinkId=619525)을 참조하세요.
 
 기존 응용 프로그램의 새 UWP UI를 만드는 등의 목적으로 UWP 앱과 통합하려는 기존 C++ 코드가 있는 경우 [방법: 유니버설 Windows 프로젝트에서 C++ 코드 사용](http://go.microsoft.com/fwlink/p/?LinkId=619623)을 참조하세요.
 

@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 1adb221f-6f70-4255-9329-2046a486ca45
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ac49d80f1d99a56eff565a0daa8f2f3e9289636
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8477325"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8691674"
 ---
 # <a name="how-to-draw-ui-to-the-edge-of-the-screen"></a>화면 가장자리까지 UI를 그리는 방법   
 기본적으로 응용 프로그램에는 TV 안전 영역에 맞게 뷰포트 가장자리에 배치된 테두리가 있습니다. 자세한 내용은 [Xbox 및 TV용 디자인](../design/devices/designing-for-tv.md#tv-safe-area)을 참조하세요. 

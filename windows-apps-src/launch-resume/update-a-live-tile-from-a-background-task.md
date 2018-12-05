@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d5d9e1b93c9f769a748a6a44d0ed77f5bd3a9da
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8486975"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8691177"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>백그라운드 작업에서 라이브 타일 업데이트
 
@@ -161,7 +161,7 @@ namespace BackgroundTasks
 
 작업을 등록할 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)를 만듭니다.
 
-> **참고**Windows8.1부터 백그라운드 작업 등록 매개 변수 유효성을 검사 등록 시 합니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱에서 시나리오를 처리할 수 있어야 합니다. 예를 들어 조건문을 사용하여 등록 오류를 확인한 다음 다른 매개 변수 값을 사용하여 실패한 등록을 다시 시도해야 합니다.
+> **참고**Windows8.1부터 백그라운드 작업 등록 매개 변수는 시 유효성이 검사 등록 합니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱에서 시나리오를 처리할 수 있어야 합니다. 예를 들어 조건문을 사용하여 등록 오류를 확인한 다음 다른 매개 변수 값을 사용하여 실패한 등록을 다시 시도해야 합니다.
  
 
 앱의 기본 페이지에 **RegisterBackgroundTask** 메서드를 추가하고 **OnNavigatedTo** 이벤트 처리기에서 호출합니다.

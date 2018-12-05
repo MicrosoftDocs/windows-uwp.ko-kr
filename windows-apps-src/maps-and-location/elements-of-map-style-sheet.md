@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 지도, 지도 스타일 시트
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ecf83b25a8f448cb0ac22bbad0aa2d4f687c721
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8482175"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8690402"
 ---
 # <a name="map-style-sheet-reference"></a>지도 스타일 시트 참조
 

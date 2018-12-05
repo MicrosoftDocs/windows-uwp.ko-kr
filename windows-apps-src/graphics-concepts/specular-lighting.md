@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f28f1f46cfd34ee1aab614c57dc99019dbd6111
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458059"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8691787"
 ---
 # <a name="specular-lighting"></a>반사 조명
 
@@ -55,7 +55,7 @@ Cₐ의 값은 다음 중 하나입니다.
 -   반사 재질 소스가 반사 꼭짓점 색이고, 꼭지점 선언에 두 번째 꼭짓점 색이 제공된 경우, 꼭짓점 색 2.
 -   재질 반사 색
 
-**참고**  두 반사 재질 소스 옵션을 사용 하 고 꼭 짓 점 색을 제공 하지 않을 경우 재질 반사 색이 사용 합니다.
+**참고**  반사 재질 소스 옵션은 사용 하 고 꼭 짓 점 색을 제공 하지 않을 경우 재질 반사 색이 사용 됩니다.
 
  
 

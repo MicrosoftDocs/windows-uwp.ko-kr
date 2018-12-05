@@ -3,11 +3,11 @@ title: 장치 포털 HTTP 모니터 API 참조
 description: Xbox의 중심 앱에서 HTTP 트래픽에 액세스하는 방법을 알아보세요.
 ms.localizationpriority: medium
 ms.openlocfilehash: 81de2a2a3194384e9c5de1c5c45a827e4d965c91
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8476164"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8690697"
 ---
 # <a name="http-monitor-api-reference"></a>HTTP 모니터 API 참조   
 개발자 홈에 있는 상자를 체크하여 HTTP 모니터를 Xbox 콘솔에서 사용할 수 있는 경우 이 API를 사용하여 중심 앱에 대한 실시간 HTTP 트래픽에 액세스할 수 있습니다.

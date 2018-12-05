@@ -7,11 +7,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: dc18577015db5384c2a1f13e8a48758634a053a5
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8473843"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8714073"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>빌드 17763 개발자를 위한 Windows 10의 새로운 란
 
@@ -49,7 +49,7 @@ DirectX 그래픽 Infastructure (DXGI) | 새 Windows 10에서 표시 하는 경�
 지도 스타일 시트 편집기 | 대화형 응용 프로그램에 추가 하는 지도의 모양을 사용자 지정 하려면 새 [지도 스타일 시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft?rtc=1#activetab=pivot:overviewtab) 응용 프로그램을 사용 합니다.
 Microsoft 알아봅니다. | [Microsoft 학습 사이트](https://www.microsoft.com/learning/default.aspx) 는 새 Microsoft 개발자에 게 새로운 실습 학습 및 교육 기회를 제공합니다. 현재 Microsoft 학습 교육 및 Microsoft 365, Microsoft Azure, Office 365 및 Windows Server에 대 한 인증을 제공합니다.
 메모장 | [메모장 업데이트 된](http://aka.ms/ant-man)확대/축소 추가, 찾기/바꾸기, 랩어라운드 및 Unix/Linux (LF) 및 Mac (CR) 줄의 끝에 대 한 지원 합니다.
-프로젝트 로마 | [프로젝트 "로마"은](https://docs.microsoft.com/windows/project-rome/) 이제 지원 되는 플랫폼 및 Sdk에서 일관 된 프로그래밍 환경을 제공합니다. </br>  새 [Microsoft Graph 알림](https://developer.microsoft.com/graph/docs/concepts/notifications-concept-overview) 프로젝트 "로마"를 사용 하 여 앱에 대 한 사람 중심, 플랫폼 간 알림 플랫폼을 제공 합니다.
+Project Rome | [프로젝트 "로마"은](https://docs.microsoft.com/windows/project-rome/) 이제 지원 되는 플랫폼 및 Sdk에서 일관 된 프로그래밍 환경을 제공합니다. </br>  새 [Microsoft Graph 알림](https://developer.microsoft.com/graph/docs/concepts/notifications-concept-overview) 프로젝트 "로마"를 사용 하 여 앱에 대 한 사람 중심, 플랫폼 간 알림 플랫폼을 제공 합니다.
 화면 캡처 | 새 [URI 체계](../launch-resume/launch-screen-snipping.md) 사용 앱을 프로그래밍 방식으로 열고, 새 캡처 또는 주석에 대 한 특정 이미지를 사용 하 여 캡처 및 스케치 앱을 실행할 수 있습니다.
 데스크톱 응용 프로그램의 UWP 컨트롤 | 이제 Windows 10을 사용 하면 WPF, Windows Forms, 및 c + + Win32 데스크톱 응용 프로그램의 UWP 컨트롤을 사용할 수 있습니다. 즉, 모양, 느낌 및 Windows Ink Fluent 디자인 시스템을 지 원하는 컨트롤 등 UWP 컨트롤을 통해만 사용할 수 있는 최신 Windows 10 UI 기능을 사용 하 여 기존 데스크톱 응용 프로그램의 기능을 개선할 수 있습니다. 이 기능은 *XAML 제도*이라고 합니다. </br> XAML 제도 사용 하는 응용 프로그램 플랫폼에 따라 응용 프로그램에서 사용 하 여 여러 가지 방법을 제공 합니다. WPF 및 Windows Forms 응용 프로그램에서 [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/uwpcommunitytoolkit/) 디자이너 지향 개발 환경을 제공 하는 컨트롤 집합을 사용할 수 있습니다. C + + Win32 응용 프로그램 [Windows.UI.Xaml.Hosting](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting) 네임 스페이스에 *UWP XAML 호스팅 API를* 사용 해야 합니다. 자세한 내용은 [데스크톱 응용 프로그램의 UWP 컨트롤](../xaml-platform/xaml-host-controls.md)을 참조 하세요. </br> **참고:** Api 및 XAML 제도 사용할 수 있는 컨트롤은 현재 개발자 미리 보기를 사용할 수 있습니다. 하지만 체험 프로토타입 작성 하는 코드에서 이제 새, 사용 하는 이러한 프로덕션 코드에서 현재 하지 않는 것이 좋습니다.
 Windows 기계 학습 | [Windows 컴퓨터 학습](https://docs.microsoft.com/windows/ai/) 가 이제 공식적으로 시작, 최첨단 기계 학습 모델에 대 한 빠른 평가 지원 등의 기능을 제공 합니다. 응용 프로그램에 통합 하려는 개발자를 지원 하려면 몇 가지 새로운 기능과 업데이트 된 리소스를 사용 하 여 새 설명서 사이트를 만들었습니다. </br> * [자습서: Windows 컴퓨터 학습 데스크톱 응용 프로그램 (c + +)을 만들고](https://docs.microsoft.com/windows/ai/get-started-desktop):이 자습서에서는 데스크톱에 대 한 간단한 Windows ML 응용 프로그램을 빌드하는 방법을 보여 줍니다. </br> * [자습서: Windows 컴퓨터 학습 UWP 응용 프로그램 (C#)을 만들고](https://docs.microsoft.com/windows/ai/get-started-uwp):이 단계별 자습서에서는 Windows ML을 사용 하 여 첫 번째 UWP 응용 프로그램을 만듭니다. </br> * [Windows.AI.MachineLearning Namespace](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning): Windows 10 SDK의 최신 버전에 대 한 업데이트 되었습니다 API 참조 및 Win32와 UWP 응용 프로그램 개발자가이 API를 이제 사용할 수 있습니다.

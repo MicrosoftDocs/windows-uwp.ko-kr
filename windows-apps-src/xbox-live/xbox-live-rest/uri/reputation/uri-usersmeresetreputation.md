@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f43244e39d825e75d6c6cd71fd9633ca158a7a16
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8457401"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713659"
 ---
 # <a name="usersmeresetreputation"></a>/users/me/resetreputation
 적용 팀을 현재 사용자의 평판 점수에 액세스할 수 있습니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`.
@@ -24,7 +24,7 @@ ms.locfileid: "8457401"
 
 [POST (/users/me/resetreputation)](uri-usersmeresetreputationpost.md)
 
-&nbsp;&nbsp;있습니다 적용 하는 계정 하이재킹 (예) 후 현재 사용자의 평판 점수 일부 임의의 값으로 설정 됩니다.
+&nbsp;&nbsp;있습니다 적용 하는 계정 하이재킹 (예) 후 현재 사용자의 평판 점수 일부 중간 값으로 설정 됩니다.
  
 <a id="ID4E6"></a>
 

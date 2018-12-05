@@ -4,11 +4,11 @@ title: 개체로서의 콘텐츠
 template: detail.hbs
 ms.localizationpriority: medium
 ms.openlocfilehash: 37ba5093f2d7cfe268be40413b889801daf00967
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8483988"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8689033"
 ---
 # <a name="content-as-objects"></a>개체로서의 콘텐츠
 

@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
 ms.openlocfilehash: 036c3c1832bbb3e27a93671f399a9a97c7afaba3
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458484"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8689718"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -61,7 +61,7 @@ Xbox는 이제 x86 앱 개발이나 x86 Microsoft Store로의 앱 전송을 지�
 
 Xbox one에 대 한 액세스 이상 있는 경우 Windows 파트너 센터에서 비활성화할 수 없습니다. 자세한 내용은 [Xbox One 개발자 모드 비활성화](devkit-deactivation.md#deactivate-your-console-using-partner-center) 항목의 **파트너 센터를 사용 하 여 콘솔 비활성화** 섹션을 참조 하세요. 
 
-### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>파트너 센터를 사용 하 여 개발자 프로그램 퇴사 이지만 개발자 모드에 계속 합니다. 어떻게 해야 하나요?
+### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>파트너 센터를 사용 하 여 개발자 프로그램 퇴사 하지만 개발자 모드에 계속 있음. 어떻게 해야 하나요?
 
 개발자 홈을 시작하고 **Leave developer mode(개발자 모드 나가기)** 단추를 선택합니다. 이렇게 하면 정품 모드로 콘솔이 다시 시작됩니다. 
 

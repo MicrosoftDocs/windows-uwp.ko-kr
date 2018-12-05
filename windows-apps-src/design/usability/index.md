@@ -9,11 +9,11 @@ ms.topic: landing-page
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
 ms.openlocfilehash: f218df3b4118508049023218b64e6c7321fbbda9
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8470671"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8690617"
 ---
 # <a name="usability-for-uwp-apps"></a>UWP 앱의 유용성
 
@@ -232,7 +232,7 @@ Windows는 전 세계에서 언어, 지역, 문화가 다양한 사용자가 사
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../in-app-help/instructional-ui.md">UI 사용 안내</a></b><br/>경우에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. In these cases, you need to present instructions to the user through the UI so they can discover and use features they might have missed.</p>
+<p><b><a href="../in-app-help/instructional-ui.md">UI 사용 안내</a></b><br/>경우에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. 이러한 경우 보지 못했을 수 있는 기능을 검색하고 사용할 수 있도록 UI를 통해 사용자에게 지침을 제공해야 합니다.</p>
                     </div>
                 </div>
             </div>

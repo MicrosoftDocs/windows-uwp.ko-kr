@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a8f75fae686763f3d79cea2f02c3208993cb723
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461382"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8689293"
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
@@ -25,7 +25,7 @@ ms.locfileid: "8461382"
 
 ## <a name="xbox-live"></a>Xbox Live
 
-게임을 게시 하는 경우이 페이지에서 [Xbox Live 크리에이터 스 프로그램](http://xbox.com/developers/creators-program) 을 사용할 수 있습니다. 이렇게 하면 구성 및 테스트 Xbox Live 기능을 시작 하 고 Xbox Live 크리에이터 스 프로그램 게임을 게시할 수 있습니다.
+게임을 게시 하는 경우이 페이지에서 [Xbox Live 크리에이터 스 프로그램](http://xbox.com/developers/creators-program) 을 사용할 수 있습니다. 이렇게 하면 구성 및 테스트 Xbox Live 기능을 시작 하 고 결국 Xbox Live 크리에이터 스 프로그램 게임을 게시할 수 있습니다.
 
 자세한 내용은 [Xbox Live 크리에이터 스 프로그램 시작](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 하 고 [새 Xbox Live 크리에이터 스 프로그램 타이틀 만들기 및 테스트 환경에 게시](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md)를 참조 하세요.
 
@@ -39,7 +39,7 @@ ms.locfileid: "8461382"
 
 Windows10 또는 Windows8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. Bing 지도 개발자 센터에서 지도 인증 키를 요청 하 고 앱에 추가 하는 방법에 대 한 정보를 [지도 인증 키 요청](../maps-and-location/authentication-key.md) 에 대 한 자세한 내용은 참조 하세요. 
 
-Windows Phone 8.1 이하의 이전에 게시 된 앱에 대 한 **지도** 페이지를 사용 합니다. 이러한 앱에서 지도 서비스를 사용 하려면 앱의 코드에 포함 하는 지도 서비스 응용 프로그램 ID와 토큰을 요청 해야 합니다. **토큰을 가져올**을 클릭할 때 지도 서비스 응용 프로그램 ID (**응용 프로그램 Id**)를 생성 하 고 앱에 대 한 인증 토큰 (**AuthenticationToken**) 서비스를 매핑합니다. 하면 패키지 하기 전에 코드에 이러한 값을 추가 하 고 앱을 제출 해야 합니다. 자세한 내용은 [지도 컨트롤을 페이지에 추가하는 방법(Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882)을 참조하세요.
+Windows Phone 8.1 이하의 이전에 게시 된 앱에만 **지도** 페이지를 사용 합니다. 이러한 앱에서 지도 서비스를 사용 하려면 앱의 코드에 포함 하려면 지도 서비스 응용 프로그램 ID와 토큰을 요청 해야 합니다. **토큰을 가져올**을 클릭할 때 지도 서비스 응용 프로그램 ID (**응용 프로그램 Id**)를 생성 하 고 앱에 대 한 인증 토큰 (**AuthenticationToken**) 서비스를 매핑합니다. 하면 패키지 하기 전에 코드에 이러한 값을 추가 하 고 앱을 제출 해야 합니다. 자세한 내용은 [지도 컨트롤을 페이지에 추가하는 방법(Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882)을 참조하세요.
 
 ## <a name="product-collections-and-purchases"></a>제품 컬렉션 및 구입
 
@@ -49,7 +49,7 @@ Windows Phone 8.1 이하의 이전에 게시 된 앱에 대 한 **지도** 페�
 
 ## <a name="administrator-consent"></a>관리자 동의
 
-f 제품 Azure AD와 통합 되 고 관리자 동의 해야 하는 [응용 프로그램 사용 권한이 나 위임 된 사용 권한을](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) 요청 하는 Api를 호출 하면 Azure AD 클라이언트 ID를 입력 합니다. 이렇게 하면 해당 조직 부여 동의 테 넌 트의 모든 사용자를 대신해 제품에 대 한 앱을 구입 하는 관리자가 있습니다.
+f 제품 Azure AD와 통합 되 고 관리자 동의 해야 하는 [응용 프로그램 사용 권한이 나 위임 된 사용 권한을](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) 요청 하는 Api를 호출 하면 Azure AD 클라이언트 ID를 입력 합니다. 이렇게 하면 관리자에 게 테 넌 트의 모든 사용자를 대신 하 여 제품의 조직 부여 동의 대 한 앱을 구입 하는 수 있습니다.
 
 자세한 정보는 [전체 테 넌 트에 대 한 동의 요청](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant)을 참조 하세요.
 
@@ -82,7 +82,7 @@ OEM 권한이 있는 개발자는 **현재 패키지** 페이지에서 [사전 �
 
 ## <a name="wnsmpns"></a>WNS/MPNS
 
-**WNS/MPNS** 섹션을 만들고 앱의 고객에 게 알림을 보낼 수 있도록 하는 옵션을 제공 합니다. 
+**WNS/MPNS** 섹션을 만들고 앱의 고객에 게 알림을 보낼 수 있도록 옵션을 제공 합니다. 
 
 > [!TIP]
 > UWP 앱에 대 한 파트너 센터에서 **알림** 기능을 사용 하는 것이 좋습니다. [고객 세그먼트](create-customer-segments.md)에서 정의한 기준을 충족 하는 Windows 10 고객의 대상 일부 또는이 기능은 모든 앱의 고객에 게 알림을 보낼 수 있습니다. 자세한 내용은 [앱의 고객에게 알림 보내기](send-push-notifications-to-your-apps-customers.md)를 참조하세요.
