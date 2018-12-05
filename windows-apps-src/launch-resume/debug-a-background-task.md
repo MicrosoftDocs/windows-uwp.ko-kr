@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: e0ae12bbb2bad1fbcd663f5be8f26656d640afc8
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8463871"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8687005"
 ---
 # <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 
@@ -79,7 +79,7 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 
     1.  시작 화면으로 이동하고 eventvwr.exe를 검색하여 이벤트 뷰어를 엽니다.
     2.  **응용 프로그램 및 서비스 로그로** 이동 - &gt; **Microsoft**  - &gt; **Windows**  - &gt; 이벤트 뷰어에서 **BackgroundTaskInfrastructure** 합니다.
-    3.  작업 창에서 **보기** 선택 - &gt; **분석 및 디버그 로그 표시** 진단 로깅을 사용 하도록 설정 합니다.
+    3.  작업 창에서 **보기** 를 선택 - &gt; **분석 및 디버그 로그 표시** 진단 로깅을 사용 하도록 설정 합니다.
     4.  **진단 로그**를 선택하고 **로그 사용**을 클릭합니다.
     5.  이제 앱을 사용하여 다시 백그라운드 작업을 등록하고 활성화합니다.
     6.  진단 로그에서 자세한 오류 정보를 봅니다. 여기에는 백그라운드 작업에 대해 등록된 진입점이 포함됩니다.

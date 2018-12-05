@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: de3f0b1377d4f4209dc012ff56adb2de9c68625f
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8486089"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8687900"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>입력 삽입을 통해 사용자 입력 시뮬레이트
 

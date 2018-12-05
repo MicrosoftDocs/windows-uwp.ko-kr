@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b1dd9859775821b067f6db7299ccbcfb6d121b6
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8473630"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696756"
 ---
 # <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱에 InkToolbar 추가
 

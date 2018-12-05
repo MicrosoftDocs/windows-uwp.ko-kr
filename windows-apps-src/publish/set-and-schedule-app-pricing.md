@@ -5,19 +5,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 가격 책정, 앱 가격 책정, 앱 가격, 앱 판매, 가격 변경, 가격 사용자 지정, 가격, 비용, 기본 가격 재정의, 자유 형식 가격, 자유 형식
 ms.localizationpriority: medium
-ms.openlocfilehash: d901ec630c680adfaa637d5555fc2182749bec89
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: ea873d2c1f78762741d6272fafe1496d6b3a71ea
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462223"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696779"
 ---
 # <a name="set-and-schedule-app-pricing"></a>앱 가격 설정 및 예약
 
 [가격 책정 및 가용성](set-app-pricing-and-availability.md) 페이지의 **가격 책정** 섹션에서 앱의 기본 가격을 선택할 수 있습니다. 또 [가격 변경 예약](#schedule-price-changes)으로 앱 가격이 변경되는 날짜와 시간을 지정할 수 있습니다. 또한 새 기준 가격을 선택하거나 시장의 현지 통화로 자유 형식 가격을 입력하여 [특정 시장에 대한 기본 가격을 재정의](#override-base-price-for-specific-markets)할 수 있는 옵션이 있습니다.
 
 > [!NOTE]
-> 이 항목은 앱을 가리키지만, 추가 기능 제출을 위한 가격 선택은 동일한 프로세스를 사용합니다. Note는 [구독 추가 기능](../monetize/enable-subscription-add-ons-for-your-app.md)대 한 기본 가격 선택 하는 어느 향상 될 수 없습니다 (여부를 변경 하 여 기본 가격 또는 가격 변경 예약 하 여), 있지만 저하 될 수 있습니다.
+> 이 항목은 앱을 가리키지만, 추가 기능 제출을 위한 가격 선택은 동일한 프로세스를 사용합니다. Note는 [구독 추가 기능](../monetize/enable-subscription-add-ons-for-your-app.md)대 한 선택 하는 기본 가격 적이 향상 될 수 없습니다 (여부를 변경 하 여 기본 가격 또는 가격 변경 예약 하 여), 하지만 저하 될 수 있습니다.
 
 ## <a name="base-price"></a>기본 가격
 
@@ -32,10 +32,10 @@ ms.locfileid: "8462223"
 
 **가격 책정** 섹션에서 **변환표 보기**를 클릭하면 모든 통화로 가격을 확인할 수 있습니다. 이는 각 기준 가격과 연결된 ID 번호를 표시합니다. [Microsoft Store 제출 API](../monetize/manage-app-submissions.md#price-tiers)를 사용하여 가격을 입력할 때 필요한 번호입니다. **다운로드**를 클릭하면 기준 가격표 사본을 .csv 파일로 다운로드 받을 수 있습니다.
 
-선택한 기준 가격에는 고객이 지불해야 하는 판매세 또는 부가가치세가 포함될 수 있습니다. 선택한 지역/국가에서 앱의 세금 관련 정보에 대해 자세히 알아보려면 [유료 앱의 세금 세부 정보](tax-details-for-paid-apps.md)를 참조하세요. 또한 [특정 지역/국가의 가격 고려 사항](define-pricing-and-market-selection.md#price-considerations-for-specific-markets)을 검토하세요.
+선택한 기준 가격에는 고객이 지불해야 하는 판매세 또는 부가가치세가 포함될 수 있습니다. 선택한 지역/국가에서 앱의 세금 관련 정보에 대해 자세히 알아보려면 [유료 앱의 세금 세부 정보](tax-details-for-paid-apps.md)를 참조하세요. 또한 [특정 지역/국가의 가격 고려 사항](define-market-selection.md#price-considerations-for-specific-markets)을 검토하세요.
 
 > [!NOTE]
-> 하는 경우는 **취득 중지** 옵션을 선택 하면 **사용할 수 있지만 스토어에서 검색 되지 않는이 제품으로 설정** 에서 [표시 여부](choose-visibility-options.md#discoverability) 섹션에서) (취득이 불가능 누구도 앱을 다운로드 하 여 제출에 대 한 가격을 설정할 수 없습니다 사용 하지 않는 경우 홍보 코드가 앱을 무료로 얻을 수).
+> 하는 경우는 **취득 중지** 옵션을 선택 하면 **사용할 수 있지만 스토어에서 검색 되지 않는이 제품으로 설정** 에서 [표시 여부](choose-visibility-options.md#discoverability) 섹션에서) (취득이 누구도 앱을 다운로드 하 여 제출에 대 한 가격을 설정할 수 없습니다 사용 하지 않는 경우 홍보 코드가 앱을 무료로).
 
 ## <a name="schedule-price-changes"></a>가격 변경 예약
 
@@ -59,7 +59,7 @@ ms.locfileid: "8462223"
 위에서 선택한 옵션이 앱을 제공하는 모든 지역/국가에 적용되는 것이 기본값입니다. 원하는 경우 다른 기준 가격을 선택하거나 특정 지역/국가의 현지 통화로 자유 형식 가격을 입력하여 하나 또는 둘 이상의 시장에 대한 가격을 변경할 수 있습니다.
 
 > [!IMPORTANT]
-> 이전에 게시 된 앱에서 Windows 8을 지 원하는 경우 해당 지역/국가 대 한 다른 가격을 선택 하는 경우에 해당 고객의 **기본 가격**, 앱을 표시 항상 됩니다.
+> 이전에 게시 된 앱이 Windows 8을 지 원하는 경우 해당 지역/국가 대 한 다른 가격을 선택 하는 경우에 해당 고객의 **기본 가격**, 앱을 표시 항상 됩니다.
 
 특정 지역/국가의 가격을 변경하려면 **특정 지역/국가에 대해 기준 가격 재지정**을 선택합니다. **지역/국가 선택** 팝업 창이 앱을 사용할 수 있도록 설정한 모든 지역/국가 목록을 표시합니다. (**지역/국가** 섹션에서 제외한 지역/국가는 표시되지 않습니다.) 
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 터치, 컨트롤, directx, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: e8892219b485d320bb77f90ac0d172e8e2403392
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8478600"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8685523"
 ---
 # <a name="touch-controls-for-games"></a>게임용 터치 컨트롤
 

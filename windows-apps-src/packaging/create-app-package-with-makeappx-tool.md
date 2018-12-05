@@ -8,11 +8,11 @@ ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: dc109fe2e684dd3bc1fef62cece5cac3ab50d246
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8487315"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696975"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>MakeAppx.exe 도구를 사용하여 앱 패키지 만들기
 
@@ -24,10 +24,10 @@ ms.locfileid: "8487315"
 
 **MakeAppx.exe**는 .appxupload 파일을 만들지 않습니다. .Appxupload 파일은 Visual Studio 패키징 프로세스의 일부로 생성 하 고 다른 두 개의 파일이 포함:.msix 또는.appx 및.appxsym 이라는 합니다. .Appxsym 파일은 파트너 센터에서 [크래시 분석](../publish/health-report.md) 사용 되는 앱의 공용 기호를 포함 하는 압축된.pdb 파일입니다. 일반적인 .appx 파일도 제출할 수 있지만 충돌 분석이나 디버깅 정보를 사용할 수 없습니다. Microsoft Store에 패키지를 제출하는 방법에 대한 자세한 내용은 [앱 패키지 업로드](../publish/upload-app-packages.md)를 참조하세요. 
 
- 가장 최신 버전의 Windows 10에서이 도구에 대 한 업데이트.appx 패키지 사용 영향을 주지 않습니다. 이 도구를 사용 하 여.appx 패키지를 사용 하 여 계속 하거나 아래 설명 된 대로.msix 패키지에 대 한 도구를 지 원하는 사용할 수 있습니다.
+ 최신 버전의 Windows 10에서이 도구에 대 한 업데이트.appx 패키지 사용 영향을 주지 않습니다. 이 도구를 사용 하 여.appx 패키지를 사용 하 여 계속 하거나 아래 설명 된 대로.msix 패키지에 대 한 도구를 지 원하는 사용할 수 있습니다.
 
 .appxupload 파일을 수동으로 만들려면
-- .msix 및.appxsym은 폴더에 배치
+- 폴더에는.msix 및.appxsym 이라는 배치
 - 폴더를 압축합니다.
 - 압축 폴더 확장명을 .zip에서 .appxupload로 변경합니다.
 

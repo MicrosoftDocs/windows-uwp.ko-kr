@@ -1,5 +1,5 @@
 ---
-description: XBind 태그 확장은 고성능 바인딩 대신 하 여입니다. xBind-새 Windows 10-실행 짧은 시간 내에 바인딩 및 디버깅 하는 더 나은 지원 보다 적은 메모리로 됩니다.
+description: XBind 태그 확장은 고성능 바인딩 대신 하 여입니다. xBind-새 Windows 10-실행 짧은 시간에와 바인딩 및 디버깅 더 나은 지원 보다 적은 메모리로 됩니다.
 title: xBind 태그 확장
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.date: 02/08/2017
@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c0eb1eb798cceb5c7a534c3aed1b8988bd1a42b
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461921"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8687801"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
-**참고**바인딩 **{x: Bind}** 를 사용 하 여 (및는 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
+**참고**바인딩 **{x: Bind}** 를 사용 하 여 (그리고는 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
 
-**{X: Bind}** 태그 확장-Windows10에 대 한 새- **{Binding}** 하지 않아도 됩니다. **{x: Bind}** **{Binding}** 및 향상 된 디버깅을 지원 보다 적은 메모리로 및 짧은 시간에 실행 됩니다.
+**{X: Bind}** 태그 확장-Windows10에 대 한 새- **{Binding}** 하지 않아도 됩니다. **{x: Bind}** **{Binding}** 및 향상 된 디버깅을 지원 보다 적은 메모리로 하 고 짧은 시간에 실행 됩니다.
 
 XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에서 값을 가져오는 코드로 변환되고 태그에 지정된 속성에서 이를 설정합니다. 필요한 경우 데이터 원본 속성의 값 변경을 관찰하고 해당 변경 내용에 따라 자체적으로 새로 고치도록 바인딩 개체를 구성할 수 있습니다(`Mode="OneWay"`). 또한 필요한 경우 고유한 값 변경을 소스 속성에 다시 적용하도록 구성할 수도 있습니다(`Mode="TwoWay"`).
 
@@ -111,7 +111,7 @@ _참고: C# 스타일 캐스트 구문은 연결된 속성 구문보다 더 유�
 
 ## <a name="functions-in-binding-paths"></a>바인딩 경로의 함수
 
-Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이것은 태그에서 몇 가지 시나리오를 활성화 하는 데이터 바인딩에 대 한 강력한 기능입니다. 자세한 내용 [은 함수 바인딩](../data-binding/function-bindings.md) 을 참조 하세요.
+Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이것이 태그에서 몇 가지 시나리오를 활성화 하는 데이터 바인딩에 대 한 강력한 기능입니다. 자세한 내용 [은 함수 바인딩](../data-binding/function-bindings.md) 을 참조 하세요.
 
 ## <a name="event-binding"></a>이벤트 바인딩
 
@@ -143,7 +143,7 @@ Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리�
 | **모드** | “OneTime”, “OneWay” 또는 “TwoWay” 문자열 중 하나로 바인딩 모드를 지정합니다. 기본값은 "OneTime"입니다. 이 값은 **{Binding}** 에 대한 기본값(대부분의 경우 "OneWay"임)과 다릅니다. |
 | **TargetNullValue** | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
 | **BindBack** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. |
-| **UpdateSourceTrigger** | TwoWay 바인딩에서 컨트롤에서 모델로 변경을 다시 적용하는 시기를 지정합니다. TextBox.Text 제외한 모든 속성에 대 한 기본값은 PropertyChanged; TextBox.Text는 LostFocus입니다.|
+| **UpdateSourceTrigger** | TwoWay 바인딩에서 컨트롤에서 모델로 변경을 다시 적용하는 시기를 지정합니다. TextBox.Text 제외한 모든 속성의 기본값은 PropertyChanged; TextBox.Text는 LostFocus입니다.|
 
 > [!NOTE]
 > **{Binding}** 에서 **{x:Bind}** 로 태그를 변환하는 경우 **모드** 속성에 대한 기본값의 차이에 주의하세요.

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출 커밋, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: efab4412486566ae817eb66e78f5407533a30d5b
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458271"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8687963"
 ---
 # <a name="commit-an-add-on-submission"></a>추가 기능 제출 커밋
 
@@ -48,7 +48,7 @@ Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | inAppProductId | string | 필수. 커밋하려는 제출이 포함된 추가 기능의 스토어 ID입니다. 파트너 센터에서 스토어 ID는 사용할 수 있으며 요청 [모든 추가 기능 가져오기](get-all-add-ons.md) 및 [추가 기능 만들기](create-an-add-on.md)에 대 한 응답 데이터에 포함 되어 있습니다. |
-| submissionId | string | 필수. 커밋하려는 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대해이 ID는 또한 파트너 센터에서 제출 페이지의 URL에 사용할 수 있습니다.  |
+| submissionId | string | 필수. 커밋하려는 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대해이 ID는 또한 파트너 센터에서 제출 페이지의 URL을 사용할 수 있습니다.  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -89,7 +89,7 @@ Authorization: Bearer <your access token>
 |--------|------------------|
 | 400  | 요청 매개 변수가 잘못되었습니다. |
 | 404  | 지정된 제출을 찾을 수 없습니다. |
-| 409  | 지정 된 제출을 찾았지만 현재 상태로 커밋할 수 없거나 있는 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)파트너 센터 기능을 사용 합니다. |
+| 409  | 지정 된 제출을 찾았지만 현재 상태로 커밋할 수 없거나 추가 기능이 있는 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)파트너 센터 기능을 사용 합니다. |
 
 
 ## <a name="related-topics"></a>관련 항목

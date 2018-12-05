@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 42229212a0f54e307eaa841849c1a279c4354d2a
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465725"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713893"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Windows 10용 데스크톱 응용 프로그램 개선
 
@@ -203,7 +203,7 @@ void UWP::ShowToast()
 
 실행 중인 Windows 버전에 관계없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 응용 프로그램에서는 Windows 런타임 Api는 사용자가 실행 하는 경우에 응용 프로그램 패키지 된 응용 프로그램으로 Windows 10
 
-이 Nuget 패키지를 설치 하는 런타임 검사 코드를 추가 하는 가장 쉬운 방법은: [데스크톱 브리지 도우미](https://www.nuget.org/packages/DesktopBridge.Helpers/) 와 사용 하 여는 ``IsRunningAsUWP()`` 게이트 Windows 런타임 Api를 호출 하는 모든 코드 해제 메서드. 자세한 내용은 [Desktop Bridge - Identify the application's context](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/)라는 블로그를 참조하세요.
+런타임 검사 코드를 추가 하는 가장 쉬운 방법은 Nuget 패키지를 설치 하는 것: [데스크톱 브리지 도우미](https://www.nuget.org/packages/DesktopBridge.Helpers/) 한 다음 합니다 ``IsRunningAsUWP()`` 메서드를 Windows 런타임 Api를 호출 하는 모든 코드 해제 것입니다. 자세한 내용은 [Desktop Bridge - Identify the application's context](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/)라는 블로그를 참조하세요.
 
 ## <a name="related-video"></a>관련 비디오
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 게임 허브
 ms.localizationpriority: medium
 ms.openlocfilehash: 09c2a2c69e32d151c393c5a0652c1d9de7b4360e
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8467238"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8685473"
 ---
 # <a name="get-xbox-live-game-hub-data"></a>Xbox Live 게임 허브 데이터 가져오기
 

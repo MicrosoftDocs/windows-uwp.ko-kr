@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 앱 설치 관리자, AppInstaller, 사이드 로드, 관련 설정, 선택적 패키지를 IIS 서버
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a4512229a29a7adc59d6b61edd596eaeb56a5a8
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8469373"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8704622"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>IIS 서버에서 UWP 앱 설치
 

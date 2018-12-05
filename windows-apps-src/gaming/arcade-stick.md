@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 아케이드 스틱, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f9e3ff29dfb17b6e2a07df52153013b5266206e
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8486148"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8687491"
 ---
 # <a name="arcade-stick"></a>아케이드 스틱
 

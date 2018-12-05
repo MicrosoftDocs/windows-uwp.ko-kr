@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5cb51ea751ca843dfc2a08cda2e79f79409d97b5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8342668"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713633"
 ---
 # <a name="get-serviceconfigsscidsessiontemplates"></a>GET (/serviceconfigs/{scid}/sessiontemplates)
 MPSD 세션 템플릿 집합을 검색합니다.
@@ -33,7 +33,7 @@ MPSD 세션 템플릿 집합을 검색합니다.
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- |
 | 서비스 안내| GUID| 서비스 구성 식별자 (서비스 안내)입니다. 파트 1 세션의 id.|
-| sessionTemplateName| string| 현재 인스턴스 세션 서식 파일의 이름입니다. 파트 2 세션의 id. |
+| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션의 id. |
 
 <a id="ID4E5"></a>
 
@@ -45,7 +45,7 @@ MPSD 세션 템플릿 집합을 검색합니다.
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4EQB"></a>
 

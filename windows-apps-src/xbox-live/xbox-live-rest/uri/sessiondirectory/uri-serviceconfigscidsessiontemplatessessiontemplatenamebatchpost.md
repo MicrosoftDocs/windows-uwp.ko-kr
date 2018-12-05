@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 833b3c6b532dd65856342678d646798c5f24a6c1
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8350925"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713682"
 ---
 # <a name="post-serviceconfigsscidsessiontemplatessessiontemplatenamebatch"></a>POST (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/batch)
 여러 Xbox 사용자 Id에서 일괄 처리 쿼리를 만듭니다.
@@ -32,11 +32,11 @@ ms.locfileid: "8350925"
 
 ## <a name="remarks"></a>설명
 
-이 HTTP/REST 메서드는 여러 Xbox 사용자 Id 세션 템플릿 수준에서 일괄 처리 쿼리를 만듭니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetSessionsForUsersFilterAsync**하 여 줄 바꿈할 수 있습니다.
+이 HTTP/REST 메서드에 여러 Xbox 사용자 Id 세션 템플릿 수준에서 일괄 처리 쿼리를 만듭니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetSessionsForUsersFilterAsync**하 여 줄 바꿈할 수 있습니다.
 
 2015 멀티 플레이어를 결합할 수 있습니다 많은 쿼리를 한 번 호출 경우 모든 쿼리는 동일 하지만 *xuid* 쿼리 문자열 매개 변수에서 표시 된 대로 다른 Xbox 사용자 Id (XUIDs)를 처리 합니다. 쿼리 문자열 매개 변수 및 응답을 동일한 지 일반 쿼리와 일괄 처리에 대 한 참고 합니다.
 
-일괄 처리 쿼리를 위해 *xuid* 매개 변수는 요청에 표시 된 대로 각 XUID에 속하는 세션은 동일한 순서로 응답에 기록 됩니다. 각 *xuid* 일치 하는 한 번에 대 한 응답으로 여러 번 표시 동일한 세션에 대 한 것 같습니다.
+일괄 처리 쿼리를 위해 각 XUID에 속하는 세션 *xuid* 매개 변수는 요청에 제공 된 대로 동일한 순서로 응답에 기록 됩니다. 일치 하는 각 *xuid* 한 번에 대 한 응답으로 여러 번 표시 동일한 세션에 대 한 것 같습니다.
 
 <a id="ID4EKB"></a>
 
@@ -46,7 +46,7 @@ ms.locfileid: "8350925"
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- |
 | 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 1 부 세션 식별자입니다.|
-| sessionTemplateName| string| 현재 인스턴스 세션 서식 파일의 이름입니다. 2 부 세션 식별자입니다.|
+| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션 식별자입니다.|
 
 <a id="ID4EVB"></a>
 
@@ -59,15 +59,15 @@ ms.locfileid: "8350925"
 | --- | --- | --- | --- | --- | --- | --- |
 | 키워드| string| 예를 들어 "foo"가, 키워드는는에 있어야 세션이 나 템플릿 검색 하려는 경우. |
 | xuid| 64 비트 부호 없는 정수| 예를 들어 "123", 세션 쿼리에서 포함 하도록 하는 Xbox 사용자 ID입니다. 기본적으로 사용자를 포함 하는 세션에서 활성 상태 여야 합니다. |
-| 예약| 부울| 세션을 포함 하려면 사용자 예약 된 플레이어로 설정 되어 있지만 되는 활성 플레이어에 가입 되지 않은 했습니다. 이 매개 변수는 자신의 세션 쿼리할 때 또는 특정 사용자의 세션-서버를 쿼리 하는 경우에 사용 됩니다. |
-| 비활성| 부울| 사용자는 수락 하지만 적극적으로 재생 되지 세션을 포함 하는 경우 사용자가 "준비" 하지만 "비활성" 세션 비활성으로 계산 됩니다. |
+| 예약| 부울| 세션을 포함 하려면 사용자 예약 된 플레이어로 설정 되어 있지만 활성 플레이어를 연결 하지 않습니다. 이 매개 변수는 자신의 세션 쿼리할 때 또는 특정 사용자의 세션-서버를 쿼리 하는 경우에 사용 됩니다. |
+| 비활성| 부울| 사용자가 수락 하지만 적극적으로 재생 되지 세션을 포함 하는 경우 사용자가 "준비" 하지만 "비활성" 세션 비활성으로 계산 됩니다. |
 | 개인| 부울| 개인 세션을 포함 하는 경우 이 매개 변수는 자신의 세션 쿼리할 때 또는 특정 사용자의 세션-서버를 쿼리 하는 경우에 사용 됩니다. |
-| visibility| 문자열| 세션에 대 한 상태를 표시 합니다. 가능한 값은 <b>MultiplayerSessionVisibility에</b>의해 정의 됩니다. 이 매개 변수는 "열기"로 설정 되 면 쿼리만 열려 있는 세션을 포함 해야 합니다. <i>개인</i> 매개 변수를 설정 해야 "개인"으로 설정 되 면 true로 합니다. |
-| 버전| 32 비트 부호 있는 정수| 포함 되어야 하는 최대 세션 버전입니다. 예를 들어 2의 주요 세션 버전을 사용 하 여 해당 유일한 세션을 지정 하는 값 2 또는 덜 포함 되어야 합니다. 버전 번호는 요청의 계약 버전 mod 100 보다 작거나 이어야 합니다. |
+| visibility| 문자열| 세션에 대 한 상태를 표시 합니다. 가능한 값은 <b>MultiplayerSessionVisibility</b>으로 정의 됩니다. 이 매개 변수는 "열기"로 설정 되 면 쿼리만 열려 있는 세션을 포함 해야 합니다. <i>전용</i> 매개 변수를 설정 해야 "개인"으로 설정 되 면 true입니다. |
+| 버전| 32 비트 부호 있는 정수| 포함 되어야 하는 최대 세션 버전입니다. 예를 들어 주요 세션 버전 2만 해당 세션을 지정 하는 값 2 또는 덜 포함 되어야 합니다. 버전 번호는 요청의 계약 버전 mod 100 보다 작거나 이어야 합니다. |
 | 시험| 32 비트 부호 있는 정수| 검색할 세션의 최대 수입니다. 이 숫자는 0과 100 사이 여야 합니다. |
 
 
-*개인* 또는 *예약* 을 true로 설정 하면 세션에 대 한 서버 수준 액세스가 필요 합니다. 또는 이러한 설정을 호출자의 XUID URI의 XUID 필터와 일치 하도록 요청 해야 합니다. 그렇지 않은 경우 HTTP/403 상태 코드는 반환 그러한 세션은 실제로 존재 여부.
+*개인* 또는 *예약* 을 true로 설정 하면 세션에 대 한 서버 수준 액세스에 필요 합니다. 또는 이러한 설정을 호출자의 XUID URI의 XUID 필터와 일치 하도록 요청 해야 합니다. 그렇지 않은 경우 HTTP/403 상태 코드는 반환 그러한 세션은 실제로 존재 하는지 여부.
 
 <a id="ID4EGF"></a>
 
@@ -91,7 +91,7 @@ ms.locfileid: "8350925"
 
 ## <a name="response-body"></a>응답 본문
 
-이 메서드에서 반환 일부 세션 포함 데이터 인라인 세션 참조의 JSON 배열입니다.
+이 메서드에서 반환의 세션 참조, 일부 세션 포함 데이터 인라인 JSON 배열입니다.
 
 
 ```cpp

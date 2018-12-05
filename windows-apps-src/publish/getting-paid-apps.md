@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, uwp, 결제, 앱 판매, 앱 수익, 지급액, Microsoft Store 요금, 지급 보류, 백분율
 ms.localizationpriority: medium
 ms.openlocfilehash: 91289948f2f4745456b9cebe587cf75366a4877b
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465253"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8714063"
 ---
 # <a name="getting-paid"></a>지급 받기
-앱, 추가 기능 및 광고 수익에 대 한 지급을 받는 방법에 대 한 중요 한 정보는 다음과 같습니다.
+앱, 추가 기능 및 광고 수익에 대 한 지급을 수신 하는 방법에 대 한 중요 한 정보는 다음과 같습니다.
 
 > [!IMPORTANT]
-> Microsoft 스토어의 앱 판매에서 번 돈을 받으려면, 먼저 [지급 계좌를 설정](setting-up-your-payout-account-and-tax-forms.md)하 고 필요한 세금 양식을 입력 해야 합니다.
+> Microsoft Store의 앱 판매에서 번 돈을 받으려면, 먼저 [지급 계좌를 설정 하 고 필요한 세금 양식을 입력](setting-up-your-payout-account-and-tax-forms.md)해야 합니다.
 
 ## <a name="store-fee"></a>Microsoft Store 수수료
 
@@ -46,7 +46,7 @@ Microsoft Store 수수료는 추가 기능을 포함하여 Microsoft Store가 �
 
 ## <a name="payout-reporting"></a>지급 보고
 
-결제 정보에 대 한 세부 정보에 액세스할 수 있으며 [파트너 센터](https://partner.microsoft.com/dashboard)의 **지급 요약** 에 보고서 다운로드 수 있습니다. 여기에 표시된 정보와 Microsoft에서 개발자가 번 돈을 분류하는 방법에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요.
+결제 정보에 대 한 세부 정보에 액세스할 수 있으며 [파트너 센터](https://partner.microsoft.com/dashboard)의 **지급 요약** 에 보고서를 다운로드할 수 있습니다. 여기에 표시된 정보와 Microsoft에서 개발자가 번 돈을 분류하는 방법에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요.
 
 
 ## <a name="payout-timeframe"></a>지급 기간
@@ -63,7 +63,7 @@ Microsoft Store 수수료는 추가 기능을 포함하여 Microsoft Store가 �
 지급 보류 상태를 **켜짐**으로 설정한 후에는 슬라이더를 다시 **꺼짐**으로 전환할 때까지 모든 지급이 보류됩니다. 다시 전환하면 다음 월별 지급 주기 중에 포함됩니다(해당 지급 임계값이 충족된 경우). 예를 들어 지급을 보류했지만 6월에 지급이 생성되게 하려는 경우 5월 말 전에 지급 보류 상태를 **꺼짐**으로 전환해야 합니다.
 
 > [!NOTE]
-> **지급 보류 상태** 선택에는 파트너 센터 (Microsoft Store, 광고, Azure Marketplace 등)에서 Windows 개발자 프로그램을 통해 지급 되는 **모든** 수입원에 적용 됩니다. 각 수입원에 대해 다른 보류 상태를 선택할 수 없습니다.
+> **지급 보류 상태** 선택에 파트너 센터 (Microsoft Store, 광고, Azure Marketplace 등)에서 Windows 개발자 프로그램을 통해 지급 되는 **모든** 수입원에 적용 됩니다. 각 수입원에 대해 다른 보류 상태를 선택할 수 없습니다.
 
 
  

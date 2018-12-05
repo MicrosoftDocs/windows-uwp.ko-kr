@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: aea2a339c450f50ca3ae6f6250d056b4a1e70aa1
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8479983"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8685309"
 ---
 # <a name="camera-barcode-scanner-system-requirements"></a>카메라 바코드 스캐너 시스템 요구 사항
 Windows 10, 버전 1803부터는 유니버설 Windows 응용 프로그램에서 기준 카메라 렌즈를 통해 바코드를 읽을 수 있습니다.

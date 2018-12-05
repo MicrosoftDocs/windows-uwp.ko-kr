@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9466ec598fad090e31768d680b64ffea52688844
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464750"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8688363"
 ---
 # <a name="themeresource-markup-extension"></a>{ThemeResource} 태그 확장
 
@@ -67,7 +67,7 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 **ThemeResource** 사용은 일련의 종속 값에서 확인할 수 있습니다. 예를 들어 키가 지정된 리소스이기도 한 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)에서 사용되는 [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) 값이 **ThemeResource** 참조를 사용할 수 있습니다. 하지만 키가 지정된 **SolidColorBrush** 리소스를 사용하는 UI 속성도 **ThemeResource** 참조를 사용하므로, 특히 각 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 유형 속성이 테마 변경 시 동적 값 변경을 사용합니다.
 
-**참고** `{ThemeResource}` 및 런타임 리소스 평가가 테마 전환 시 Windows8.1 XAML에서 지원 되지만,는 Windows8를 대상으로 하는 앱에 대 한 XAML에서 지원 되지 않습니다.
+**참고** `{ThemeResource}` 및 런타임 리소스 평가가 테마 전환 시 Windows8.1 xaml 이지만 Windows8를 대상으로 하는 앱에 대 한 XAML에서 지원 되지 않습니다.
 
 ### <a name="system-resources"></a>시스템 리소스
 

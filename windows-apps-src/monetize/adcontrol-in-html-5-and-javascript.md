@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 광고 관리, javascript, HTML
 ms.localizationpriority: medium
 ms.openlocfilehash: 08b834343aafb91fee1e75f9df7ed2a752992fa2
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459441"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8688827"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a>HTML 5 및 JavaScript의 AdControl
 
@@ -24,7 +24,7 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 * Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 설치합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조하세요.
 
 > [!NOTE]
-> Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트) 또는 이후 버전의 Windows SDK를 설치한 경우 [WinJS](https://github.com/winjs/winjs) 라이브러리도 설치 해야 합니다. 이전 Windows 10용 Windows SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다. 
+> Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트) 또는 최신 버전의 Windows SDK를 설치한 경우 [WinJS](https://github.com/winjs/winjs) 라이브러리도 설치 해야 합니다. 이전 Windows 10용 Windows SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다. 
 
 ## <a name="integrate-a-banner-ad-into-your-app"></a>앱에 배너 광고를 통합
 
@@ -107,7 +107,7 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 이 코드를 사용해도 광고가 표시되지 않으면 **AdControl**을 포함하는 **div**에 **position:relative**의 특성을 삽입할 수 있습니다. 이렇게 하면 **IFrame**의 기본 설정이 재정의됩니다. 광고는 이 특성의 값으로 인해 표시되지 않는 경우가 아니면 올바르게 표시됩니다. 최대 30분 동안 새 광고 단위를 사용하지 못할 수 있습니다.
 
 > [!NOTE]
-> 이 예제에 표시된 *applicationId* 및 *adUnitId* 값은 [테스트 모드 값](set-up-ad-units-in-your-app.md#test-ad-units)입니다. 제출에 대 한 앱을 제출 하기 전에 파트너 센터에서 [이러한 값을 라이브 값을 대체](set-up-ad-units-in-your-app.md#live-ad-units) 을 해야 합니다.
+> 이 예제에 표시된 *applicationId* 및 *adUnitId* 값은 [테스트 모드 값](set-up-ad-units-in-your-app.md#test-ad-units)입니다. 앱을 제출 하기 전에 파트너 센터에서 [이러한 값을 라이브 값을 대체](set-up-ad-units-in-your-app.md#live-ad-units) 을 해야 합니다.
 
 <span id="release" />
 
@@ -115,15 +115,15 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 
 1. 앱에 사용할 배너 광고는 [배너 광고에 대한 지침](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads)을 따라야 합니다.
 
-1.  파트너 센터에서 이동 [인 앱 광고](../publish/in-app-ads.md) 페이지 및 [광고 단위를 생성](set-up-ad-units-in-your-app.md#live-ad-units)합니다. 광고 단위 유형으로 **배너**를 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
+1.  파트너 센터에서 이동 [인 앱 광고](../publish/in-app-ads.md) 페이지와 [광고 단위를 생성](set-up-ad-units-in-your-app.md#live-ad-units)합니다. 광고 단위 유형으로 **배너**를 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
     > [!NOTE]
-    > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. 파트너 센터에서 라이브 UWP 광고 단위를 만들 때 광고 단위에 대 한 응용 프로그램 ID 값에 항상 (예: Store ID 값은 9NBLGGH4R315와) 앱에 대 한 스토어 ID와 일치 합니다.
+    > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. 파트너 센터에서 라이브 UWP 광고 단위를 만들 때 광고 단위에 대 한 응용 프로그램 ID 값에 항상 (예: Store ID 값은 9NBLGGH4R315와) 앱의 스토어 ID와 일치 합니다.
 
 2. [인앱 광고](../publish/in-app-ads.md) 페이지의 [조정 설정](../publish/in-app-ads.md#mediation) 섹션에서 설정을 구성하여, **AdControl**의 광고 조정을 사용하는 방법도 있습니다. 광고 조정을 통해 Taboola 및 Smaato 같은 기타 유료 광고 네트워크와 Microsoft 앱 프로모션 캠페인에 대한 광고를 포함하여 여러 광고 네트워크의 광고를 표시하여 광고 수익과 앱 프로모션 기능을 최대화할 수 있습니다.
 
 3.  코드에서 테스트 광고 단위 값을 (**응용 프로그램 Id** 및 **adUnitId**) 파트너 센터에서 생성 한 라이브 값으로 바꿉니다.
 
-4.  파트너 센터를 사용 하 여 스토어에 [제출 앱을](../publish/app-submissions.md) 합니다.
+4.  파트너 센터를 사용 하 여 스토어에 [앱을 제출](../publish/app-submissions.md) 합니다.
 
 5.  파트너 센터에서 [광고 성과 보고서](../publish/advertising-performance-report.md) 를 검토 합니다.             
 

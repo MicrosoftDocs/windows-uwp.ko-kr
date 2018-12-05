@@ -4,14 +4,14 @@ description: 원격 세션에서 여러 장치를 연결하여 공유되는 환�
 ms.assetid: 1c8dba9f-c933-4e85-829e-13ad784dd3e2
 ms.date: 06/28/2017
 ms.topic: article
-keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, "로마" 프로젝트 "로마"
+keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.localizationpriority: medium
 ms.openlocfilehash: 3dd23603df1f1c3fac151da2aea2f8435b3ee423
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465537"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8684571"
 ---
 # <a name="connect-devices-through-remote-sessions"></a>원격 세션을 통해 디바이스 연결
 
