@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 컨트롤, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 01c0d1361dcc0858a54792adc0d17408ed281c99
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460073"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8702501"
 ---
 # <a name="add-controls"></a>컨트롤 추가
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-좋은 UWP(유니버설 Windows 플랫폼) 게임은 다양한 인터페이스를 지원합니다. 플레이어는 Xbox 컨트롤러가 연결 된 PC는 실제 단추가 없는 태블릿에 Windows10 있을 또는 고성능 마우스 및 게임용 키보드가 있는 최신 데스크톱 게임 리그 합니다. 게임에서 컨트롤은 [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp) 클래스에 구현되어 있습니다. 이 클래스는 세 가지 유형의 입력(마우스 및 키보드, 터치, 게임 패드) 모두를 단일 컨트롤러에 집계합니다. 그 결과로 1인칭 슈팅 게임에서 여러 디바이스에서 작동하는 장르 표준 이동 - 보기 컨트롤러를 사용할 수 있게 되었습니다.
+좋은 UWP(유니버설 Windows 플랫폼) 게임은 다양한 인터페이스를 지원합니다. 플레이어는 Xbox 컨트롤러가 연결 된 PC는 실제 단추가 없는 태블릿에 Windows10 있을 또는 고성능 마우스 및 게임 키보드가 있는 최신 데스크톱 게임 리그 합니다. 게임에서 컨트롤은 [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp) 클래스에 구현되어 있습니다. 이 클래스는 세 가지 유형의 입력(마우스 및 키보드, 터치, 게임 패드) 모두를 단일 컨트롤러에 집계합니다. 그 결과로 1인칭 슈팅 게임에서 여러 디바이스에서 작동하는 장르 표준 이동 - 보기 컨트롤러를 사용할 수 있게 되었습니다.
 
 > [!NOTE]
 > 컨트롤에 대한 자세한 내용은 [게임용 이동 - 보기 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md) 및 [게임용 터치 컨트롤](tutorial--adding-touch-controls-to-your-directx-game.md)을 참조하세요.
@@ -95,7 +95,7 @@ void MoveLookController::InitWindow(_In_ CoreWindow^ window)
 일시 중지되면 게임은 **WaitForInput** 상태가 됩니다. 플레이어가 게임의 주 창 밖에서 포인터를 이동시키거나 일시 중지 단추(P 키나 게임 패드의 **시작** 단추)를 누를 때 이러한 일시 중지가 발생합니다. **MoveLookController**는 이러한 단추 누름을 등록하고 [**IsPauseRequested**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L107-L127) 메서드가 호출될 때 게임 루프에 알립니다. 이때 **IsPauseRequested**에서 **true**를 반환하면 게임 루프에서 **MoveLookController**의 **WaitForPress**를 호출하여 컨트롤러를 **WaitForInput** 상태로 전환합니다. 
 
 
-**WaitForInput** 상태가 되면 **활성** 상태로 되돌아갈 때까지 게임에서 거의 모든 게임 플레이 입력 이벤트의 처리가 중지됩니다. 예외는 일시 중지 단추인데, 이 단추를 누르면 게임이 활성 상태로 되돌아갈 수 있습니다. 일시 중지 단추 이외의 **활성** 상태 돌아가려면 게임 플레이어가 컴파일하려면 메뉴 항목을 선택 합니다. 
+**WaitForInput** 상태가 되면 **활성** 상태로 되돌아갈 때까지 게임에서 거의 모든 게임 플레이 입력 이벤트의 처리가 중지됩니다. 예외는 일시 중지 단추인데, 이 단추를 누르면 게임이 활성 상태로 되돌아갈 수 있습니다. 일시 중지 단추 외 **활성** 상태 돌아가려면 게임 플레이어가 컴파일하려면 메뉴 항목을 선택 합니다. 
 
 
 
@@ -575,7 +575,7 @@ window->KeyUp +=
 
 
 
-[**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103) 메서드에서 게임 패드가 [추가](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) 상태인지 [제거](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114) 상태인지 판단하기 위해 2개의 이벤트가 새로 추가되었습니다. 이러한 이벤트는 **m_gamepadsChanged** 속성을 업데이트합니다. 이 경우에 알려진된 게임 패드의 목록이 변경 되었는지 확인 하려면 **UpdatePollingDevices** 메서드에서 사용 됩니다. 
+[**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103) 메서드에서 게임 패드가 [추가](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) 상태인지 [제거](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114) 상태인지 판단하기 위해 2개의 이벤트가 새로 추가되었습니다. 이러한 이벤트는 **m_gamepadsChanged** 속성을 업데이트합니다. 알려진된 게임 패드의 목록이 변경 되었는지 여부를 확인 하려면 **UpdatePollingDevices** 메서드에서 사용 됩니다. 
 
 ```cpp
     // Detect gamepad connection and disconnection events.

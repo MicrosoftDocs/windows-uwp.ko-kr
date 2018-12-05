@@ -6,11 +6,11 @@ ms.date: 5/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 20bb514a15963befb5b96a1b01a6c057e8f27482
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8485020"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8701125"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>2018 년 5 월 Windows 개발자 문서의 새로운
 
@@ -89,7 +89,7 @@ Msix 패키징 도구 및 솔루션을 사용 하 여 MSIX 에코 시스템을 �
 
 [페이지 전환](../design/motion/page-transitions.md) 은 앱 페이지 사이 사용자를 탐색 합니다. 탐색 계층 구조에 속해 이해 하 고 페이지 간의 관계에 대 한 피드백을 제공 하는 사용자가 도움이 됩니다.
 
-### <a name="project-rome"></a>프로젝트 로마
+### <a name="project-rome"></a>Project Rome
 
 자신의 iOS 및 Android Sdk에 사용자 활동의 새로운 기능을 추가 하 고 다른 Sdk에서 일관 된 프로그래밍 환경을 제공 하기 위해 해당 코드를 리팩터링 프로젝트 "로마" 팀에 전체적으로 개선 합니다. [모든 새 API 참조 및 사용 방법 문서](https://docs.microsoft.com/windows/project-rome/) 빌드 2018 개발자 회의 중 라이브 갈 합니다.
 

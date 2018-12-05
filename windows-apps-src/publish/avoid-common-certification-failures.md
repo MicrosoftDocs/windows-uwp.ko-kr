@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b8ef16d9fe789c2c386b27ffe221aa797a3b5ef
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: 62c99c159ff68201919fa15baded999e3b6a2477
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8472430"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8700131"
 ---
 # <a name="avoid-common-certification-failures"></a>일반적인 인증 실패 방지
 
@@ -37,7 +37,7 @@ ms.locfileid: "8472430"
 
 -   [연령별 등급](age-ratings.md) 섹션의 모든 질문에 대해 완전하고 정확한 답변을 제시해야 합니다.
 
--   앱을 특별히 엔지니어링하고 접근성 시나리오를 테스트하지 않은 경우 [앱을 접근성 있음으로 선언](app-declarations.md#this-app-has-been-tested-to-meet-accessibility-guidelines)하지 마세요.
+-   앱을 특별히 엔지니어링하고 접근성 시나리오를 테스트하지 않은 경우 [앱을 접근성 있음으로 선언](product-declarations.md#this-app-has-been-tested-to-meet-accessibility-guidelines)하지 마세요.
 
 -   앱이 [**Windows.ApplicationModel.Store**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) 네임스페이스의 상거래 API를 사용하는 경우 앱을 테스트하고 일반적인 예외가 처리되는지 확인합니다. 또한 앱이 테스트용으로만 사용되는 [**CurrentAppSimulator**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) 클래스가 아니라 [**CurrentApp**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 클래스를 사용하는지 확인합니다. 앱이 Windows10 버전 1607 이상을 대상으로 하는 경우 Windows.ApplicationModel.Store 네임스페이스 대신 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 멤버를 사용하는 것이 좋습니다.
 
