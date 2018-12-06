@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e90692753924572a932767b9c188ed6d24f94593
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8701865"
+ms.locfileid: "8757943"
 ---
 # <a name="track-file-system-changes-in-the-background"></a>백그라운드에서 파일 시스템 변경 내용을 추적합니다
 
