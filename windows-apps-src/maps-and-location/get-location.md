@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 위치 기능
 ms.localizationpriority: medium
 ms.openlocfilehash: fae533e0ce42e14e3c53f5083b746a9aae221adf
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461009"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8752157"
 ---
 # <a name="get-the-users-location"></a>사용자 위치 가져오기
 
@@ -44,7 +44,7 @@ ms.locfileid: "8461009"
 
 ### <a name="step-1-request-access-to-the-users-location"></a>1단계: 사용자의 위치에 대한 액세스 요청
 
-앱에 거친 위치 접근 권한 값 (참고 참조)을 위치 액세스를 시도 하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드를 사용 하 여 사용자의 위치에 대 한 액세스를 요청 해야 합니다. UI 스레드에서 **RequestAccessAsync** 메서드를 호출해야 하며 앱이 포그라운드에 있어야 합니다. 사용자가 앱에 권한을 부여할 때까지는 앱에서 사용자의 위치 정보에 액세스할 수 없습니다.\*
+앱에 거친 위치 접근 권한 값 (참고 참조) 위치에 액세스를 시도 하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드를 사용 하 여 사용자의 위치에 대 한 액세스를 요청 해야 합니다. UI 스레드에서 **RequestAccessAsync** 메서드를 호출해야 하며 앱이 포그라운드에 있어야 합니다. 사용자가 앱에 권한을 부여할 때까지는 앱에서 사용자의 위치 정보에 액세스할 수 없습니다.\*
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -56,7 +56,7 @@ var accessStatus = await Geolocator.RequestAccessAsync();
 
 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드는 사용자에게 위치 액세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
 
->하지만 참고: 거친 위치 기능을 사용 하면 앱 (시스템 수준 위치 스위치 여전히 있어야 **에서**)는 사용자의 명시적 권한을 하지 않고도 의도적으로 조작 된 (부정확 한) 위치를 얻을 수 있습니다. 앱에서 거친 위치를 활용 하는 방법을 알아보려면 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx) 클래스의 [**AllowFallbackToConsentlessPositions**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) 메서드를 참조 하세요.
+>그러나 참고: 거친 위치 기능 앱이 사용자의 명시적 권한을 (시스템 수준 위치 스위치 여전히 있어야 **에**,) 하지 않고도 의도적으로 조작 된 (부정확 한) 위치를 가져올 수 있도록 합니다. 앱의 거친 위치를 활용 하는 방법을 알아보려면 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx) 클래스에서 [**AllowFallbackToConsentlessPositions**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) 메서드를 참조 하세요.
 
 ### <a name="step-2-get-the-users-location-and-register-for-changes-in-location-permissions"></a>2단계: 사용자의 위치를 가져오고 위치 사용 권한 변경에 대해 등록
 

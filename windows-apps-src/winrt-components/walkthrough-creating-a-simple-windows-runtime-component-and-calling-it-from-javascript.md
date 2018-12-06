@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b177a7741cae0fe786d095c26a6be08ec598bcbb
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458863"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8750804"
 ---
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출
 
@@ -20,7 +20,7 @@ ms.locfileid: "8458863"
 
 이 연습에서는 Visual Basic 또는 C#과 함께 .NET Framework를 사용하여 Windows 런타임 구성 요소로 패키지된 고유한 Windows 런타임 형식을 만드는 방법 및 JavaScript를 사용하여 Windows용으로 빌드된 유니버설 Windows 앱에서 구성 요소를 호출하는 방법을 보여 줍니다.
 
-Visual Studio에서는 쉽게 C# 또는 Visual Basic으로 작성된 Windows 런타임 구성 요소를 앱에 추가하고 JavaScript에서 호출할 수 있는 Windows 런타임 형식을 만들 수 있습니다. 내부적으로, Windows 런타임 형식에서는 유니버설 Windows 앱에 허용되는 .NET Framework 기능을 사용할 수 있습니다. (자세한 내용은 참조 [Windows 런타임 구성 요소 만들기에서 C# 및 Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) 및 [.NET UWP 앱 개요에 대 한](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)). 외부적으로 형식의 멤버의 매개 변수에 대 한 Windows 런타임 형식만 표시할 하 고 값을 반환할 수 있습니다. 솔루션을 빌드할 때 Visual Studio는 .NET Framework Windows 런타임 구성 요소 프로젝트를 빌드한 다음 Windows 메타데이터(.winmd) 파일을 만드는 빌드 단계를 실행합니다. 이는 Visual Studio가 앱에 포함하는 Windows 런타임 구성 요소입니다.
+Visual Studio에서는 쉽게 C# 또는 Visual Basic으로 작성된 Windows 런타임 구성 요소를 앱에 추가하고 JavaScript에서 호출할 수 있는 Windows 런타임 형식을 만들 수 있습니다. 내부적으로, Windows 런타임 형식에서는 유니버설 Windows 앱에 허용되는 .NET Framework 기능을 사용할 수 있습니다. (자세한 내용은 참조 [Windows 런타임 구성 요소 만들기 C# 및 Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) 및 [.NET UWP 앱 개요에 대 한](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)). 외부적으로 형식의 멤버는 해당 매개 변수에 대 한 Windows 런타임 형식만 표시할 하 고 반환 값 수 있습니다. 솔루션을 빌드할 때 Visual Studio는 .NET Framework Windows 런타임 구성 요소 프로젝트를 빌드한 다음 Windows 메타데이터(.winmd) 파일을 만드는 빌드 단계를 실행합니다. 이는 Visual Studio가 앱에 포함하는 Windows 런타임 구성 요소입니다.
 
 > **참고**.NET Framework Windows 런타임 이와 동일한에 기본 데이터 형식 및 컬렉션 형식과 같은 자주 사용 되는 일부.NET Framework 형식의 자동으로 매핑됩니다. 이러한 .NET Framework 형식은 Windows 런타임 구성 요소의 공용 인터페이스에서 사용할 수 있으며 구성 요소 사용자에게 해당 Windows 런타임 형식으로 표시됩니다. [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)를 참조하세요.
 
@@ -97,7 +97,7 @@ function basics2() {
 
 각 멤버 이름의 첫 글자가 대문자에서 소문자로 변경됩니다. 이 변환은 Windows 런타임을 자연스럽게 사용할 수 있도록 하기 위해 JavaScript에서 제공하는 지원의 일부입니다. 네임스페이스 및 클래스 이름은 Pascal Case됩니다. 멤버 이름은 모두 소문자인 이벤트 이름을 제외하고 Camel Case됩니다. [JavaScript에서 Windows 런타임 사용](https://msdn.microsoft.com/library/hh710230.aspx)을 참조하세요. Camel Casing 규칙은 혼동될 수 있습니다. 일련의 초기 대문자는 일반적으로 소문자로 표시되지만 대문자 3자 뒤에 소문자 하나가 오는 경우 처음 두 문자만 소문자로 표시됩니다. 예를 들어 IDStringKind라는 멤버는 idStringKind로 표시됩니다. Visual Studio에서 Windows 런타임 구성 요소 프로젝트를 빌드한 다음 JavaScript 프로젝트에 IntelliSense를 사용하여 올바른 대/소문자를 확인할 수 있습니다.
 
-유사한 방식으로, .NET Framework는 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 지원합니다. 이 [Windows 런타임 구성 요소 만들기에서 C# 및 Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) 및 [UWP 앱 및 Windows 런타임에 대 한.NET Framework 지원](https://msdn.microsoft.com/library/hh694558.aspx)문서와이 문서의 다음 섹션에서 설명 합니다.
+유사한 방식으로, .NET Framework는 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 지원합니다. 이 문서는 [Windows 런타임 구성 요소 만들기 C# 및 Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) 및 [UWP 앱 및 Windows 런타임에 대 한.NET Framework 지원](https://msdn.microsoft.com/library/hh694558.aspx)및이 문서의 다음 섹션에서 설명 합니다.
 
 ## <a name="create-a-simple-user-interface"></a>간단한 사용자 인터페이스 만들기
 
@@ -192,7 +192,7 @@ Basics 2 단추를 선택하여 SampleProperty 속성 값을 증분하고 출력
 
 JavaScript 또는 관리 코드에서 Windows 런타임을 호출할 수 있습니다. 둘 간에 Windows 런타임 개체를 전달할 수 있으며, 어느 한 쪽에서 이벤트를 처리할 수 있습니다. 그러나 JavaScript 및 .NET Framework는 Windows 런타임을 다르게 지원하므로 두 환경에서 Windows 런타임 형식을 사용하는 방법이 일부 세부 정보에서 서로 다릅니다. 다음 예제에서는 [Windows.Foundation.Collections.PropertySet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.propertyset.aspx) 클래스를 사용하여 이러한 차이를 보여 줍니다. 이 예제에서는 관리 코드에서 PropertySet 컬렉션의 인스턴스를 만들고 이벤트 처리기를 등록하여 컬렉션의 변경 내용을 추적합니다. 그런 다음 컬렉션을 가져오고 자체 이벤트 처리기를 등록한 다음 컬렉션을 사용하는 JavaScript 코드를 추가합니다. 마지막으로, 관리 코드에서 컬렉션을 변경하고 관리되는 예외를 처리하는 JavaScript를 표시하는 메서드를 추가합니다.
 
-> **중요 한**이 예제에서는 이벤트 UI 스레드에서 발생 되는 합니다. 백그라운드 스레드(예: 비동기 호출)에서 이벤트가 발생하는 경우 JavaScript에서 이벤트를 처리하려면 몇 가지 추가 작업을 수행해야 합니다. 자세한 내용은 [Windows 런타임 구성 요소에서 이벤트 발생](raising-events-in-windows-runtime-components.md)을 참조하세요.
+> **중요 한**이 예제는 이벤트가 발생 하는 UI 스레드에서 합니다. 백그라운드 스레드(예: 비동기 호출)에서 이벤트가 발생하는 경우 JavaScript에서 이벤트를 처리하려면 몇 가지 추가 작업을 수행해야 합니다. 자세한 내용은 [Windows 런타임 구성 요소에서 이벤트 발생](raising-events-in-windows-runtime-components.md)을 참조하세요.
 
  
 
@@ -268,7 +268,7 @@ SampleComponent 프로젝트에서 PropertySetStats라는 새 **public sealed** 
 > End Class
 > ```
 
-이벤트 처리기 (이 경우 PropertySet 개체)에서 이벤트를 보낸 사람은 IObservableMap로 캐스팅 되는 점을 제외 하 고 친숙 한.NET Framework 이벤트 패턴을 따릅니다&lt;문자열, 개체&gt; (IObservableMap (의 문자열, 개체)의 인터페이스 Visual Basic의 경우)는 Windows 런타임 인터페이스의 인스턴스 [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx)합니다. (캐스팅할 수 발신자의 형식에 필요한 경우.) 또한 이벤트 인수가 개체가 아닌 인터페이스로 표시 됩니다.
+이벤트 처리기 (이 경우 PropertySet 개체)에서 이벤트를 보낸 사람은 IObservableMap로 캐스팅 되는 친숙 한.NET Framework 이벤트 패턴을 따르는&lt;문자열, 개체&gt; (IObservableMap (문자열, 개체)의 인터페이스 Visual Basic의 경우)는 Windows 런타임 인터페이스의 인스턴스화 [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx)합니다. (캐스팅할 수 발신자의 형식에 필요한 경우.) 또한 이벤트 인수가 개체가 아닌 인터페이스로 표시 됩니다.
 
 default.js 파일에서 Runtime1 함수를 표시된 대로 추가합니다. 이 코드는 PropertySetStats 개체를 만들고, 해당 PropertySet 컬렉션을 가져오고, 자체 이벤트 처리기인 onMapChanged 함수를 추가하여 MapChanged 이벤트를 처리합니다. 컬렉션을 변경한 후 runtime1은 DisplayStats 메서드를 호출하여 변경 유형에 대한 요약을 표시합니다.
 
@@ -411,7 +411,7 @@ runtimeButton2.addEventListener("click", runtime2, false);
 
 사전은 [Dictionary&lt;TKey, TValue&gt;](https://msdn.microsoft.com/library/xfhwa508.aspx)에 의해 구현되고 Windows 런타임 인터페이스에 매핑되는 인터페이스로 반환되어야 합니다. 이 경우 인터페이스는 IDictionary&lt;int, string&gt;(Visual Basic의 경우 IDictionary(Of Integer, String))입니다. Windows 런타임 형식 IMap&lt;int, string&gt;은 관리 코드에 전달될 때 IDictionary&lt;int, string&gt;으로 표시되며 관리 형식이 JavaScript에 전달될 때는 그 반대가 됩니다.
 
-**중요 한**관리 되는 형식이 여러 인터페이스를 구현 하는 경우 JavaScript는 목록에서 처음 나타나는 인터페이스를 사용 합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
+**중요 한**는 관리 되는 형식이 여러 인터페이스를 구현 하는 경우 JavaScript는 목록에서 처음 나타나는 인터페이스를 사용 합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
  
 

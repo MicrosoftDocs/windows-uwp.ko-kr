@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b6e85c47c569f1a4a0a39a8ce12bc7c091316c10
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8690757"
+ms.locfileid: "8746269"
 ---
 # <a name="use-app-services-and-extensions"></a>앱 서비스 및 확장 사용
 
