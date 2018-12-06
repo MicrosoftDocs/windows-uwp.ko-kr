@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 그래픽
 ms.localizationpriority: medium
 ms.openlocfilehash: 60dd12c3e18b82118053d72d0983e13008dd8a0e
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8694072"
+ms.locfileid: "8755069"
 ---
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Marble Maze 샘플에 시각적 콘텐츠 추가
 
