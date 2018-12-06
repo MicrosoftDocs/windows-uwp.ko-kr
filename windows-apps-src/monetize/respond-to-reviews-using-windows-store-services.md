@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 리뷰 API, 리뷰에 응답
 ms.localizationpriority: medium
 ms.openlocfilehash: 95de2cc1de1b71a435fc8d4388f599c417132814
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8707816"
+ms.locfileid: "8751955"
 ---
 # <a name="respond-to-reviews-using-store-services"></a>스토어 서비스를 사용하여 리뷰에 응답
 

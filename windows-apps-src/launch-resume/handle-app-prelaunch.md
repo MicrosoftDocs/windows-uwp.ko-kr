@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462889"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8745770"
 ---
 # <a name="handle-app-prelaunch"></a>앱 사전 실행 처리
 
@@ -110,9 +110,9 @@ private void TryEnablePrelaunch()
 }
 ```
 
-참고는 `TryEnablePrelaunch()` 위에 작동 합니다. 호출 하는 이유를 `CoreApplication.EnablePrelaunch()` 는 포함이 기능으로 JIT (컴파일)에 전체 메서드 컴파일 하려고 메서드를 호출할 때 하기 때문입니다. 앱이 지원 하지 않는 Windows 10 버전에서 실행 하는 경우 `CoreApplication.EnablePrelaunch()`, JIT 실패 합니다. 예상 되는 앱 플랫폼에서 지 결정 하는 경우에 라고 하는 메서드를 호출 하 여 `CoreApplication.EnablePrelaunch()`,이 문제를 방지 하는 것입니다.
+참고는 `TryEnablePrelaunch()` 위에 작동 합니다. 호출 하는 이유를 `CoreApplication.EnablePrelaunch()` 는 포함이 기능으로 JIT (컴파일)에 전체 메서드를 컴파일할 하려고 메서드를 호출할 때 하기 때문입니다. 앱이 지원 하지 않는 Windows 10 버전에서 실행 하는 경우 `CoreApplication.EnablePrelaunch()`, JIT 실패 합니다. 예상 되는 앱 플랫폼에서 지를 결정 하는 경우에 라고 하는 메서드를 호출 하 여 `CoreApplication.EnablePrelaunch()`,이 문제를 방지 하는 것입니다.
 
-위 예제에서 코드도 앱 옵트아웃 사전 실행의 Windows 10, 버전 1511에서 실행 해야 하는 경우 주석 수 있습니다. 자동으로 옵트인 된 모든 UWP 앱 버전 1511에서는으로 사전 실행 하지 않을 앱에 적합 합니다.
+위 예제에서 코드도 앱 옵트아웃 사전 실행의 Windows 10 버전 1511에서 실행 해야 하는 경우 주석 수는 있습니다. 자동으로 옵트인 된 모든 UWP 앱 버전 1511에서는에 사전 실행 하지 않을 앱에 적합 합니다.
 
 ## <a name="use-the-visibilitychanged-event"></a>VisibilityChanged 이벤트 사용
 

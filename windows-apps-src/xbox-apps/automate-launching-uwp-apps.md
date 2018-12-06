@@ -3,11 +3,11 @@ title: Windows 10 UWP(유니버설 Windows 플랫폼) 앱 시작 자동화
 description: 개발자는 프로토콜 활성화 및 시작 활성화를 사용하여 자동화 테스트를 위해 해당 UWP 앱 또는 게임을 자동으로 시작할 수 있습니다.
 ms.localizationpriority: medium
 ms.openlocfilehash: 123e2dfff909265673a711f480f5fe636590afa4
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8473733"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8751837"
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Windows 10 UWP 앱 시작 자동화
 

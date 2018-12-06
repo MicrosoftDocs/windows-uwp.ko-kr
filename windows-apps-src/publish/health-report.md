@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 상태, 충돌, 응답하지 않는 이벤트, 앱 상태, 상태 데이터, 스택 추적, cab 파일, 실패, 오류, pdb, 기호
 ms.localizationpriority: medium
 ms.openlocfilehash: c547cc933247e69fd208e8d3c297572815a5f2ea
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8692695"
+ms.locfileid: "8747103"
 ---
 # <a name="health-report"></a>상태 보고서
 
