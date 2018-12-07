@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: bedbad9e4de22ee098863d013a1e4ad16d86543e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736833"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8799556"
 ---
 # <a name="resource-management-system"></a>리소스 관리 시스템
 리소스 관리 시스템에는 빌드 시 및 런타임 시 기능이 모두 있습니다. 빌드 시 시스템은 앱과 함께 패키지되는 모든 여러 변형의 리소스의 인덱스를 만듭니다. 이 인덱스는 패키지 리소스 색인, 즉 PRI이며 앱 패키지에 포함되어 있습니다. 실행 시 시스템은 적용 중인 사용자와 시스템 설정을 감지하고 PRI의 정보를 확인하고 자동으로 이러한 설정에 대한 최적의 일치인 리소스를 로드합니다.

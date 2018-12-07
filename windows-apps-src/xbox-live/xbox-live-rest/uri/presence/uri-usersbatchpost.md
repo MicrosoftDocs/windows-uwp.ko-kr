@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 47376338a1c515aa00a7e0247df4cc16ee0db8d2
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8746598"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8800290"
 ---
 # <a name="post-usersbatch"></a>POST (/users/batch)
 여러 사용자의 현재 상태를 가져옵니다.
