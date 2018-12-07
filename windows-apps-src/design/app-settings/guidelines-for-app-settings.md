@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e7fa5b4c432cec3d0f628de3b52e814f9c211f79
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734105"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8798160"
 ---
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
 

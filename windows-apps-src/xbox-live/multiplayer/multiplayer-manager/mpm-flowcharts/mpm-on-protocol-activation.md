@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: dcce4de4c8b0ff79d65223cbca7a48635d0ce0f0
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8745389"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8795867"
 ---
 # <a name="flowchart---handle-protocol-activation"></a>순서도-핸들 프로토콜 활성화
 

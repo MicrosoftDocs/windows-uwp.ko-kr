@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ffcbc3d1c11c8f756b6307b15b87c14b09f65c4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: a8e68242647204dfbf8ba23c45d881066c88900b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8751107"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793334"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>날짜 및 시간 형식 지정 템플릿 및 패턴 사용
 
@@ -98,7 +98,7 @@ Ja-JP: 1月1 (inappropriate for Japan; the day symbol 日 is missing)
 June 25 | 1:38 PM
 ```
 
-날짜 부분은 "월 일" 형식 템플릿에 해당하고, 시간 부분은 "시간 분" 형식 템플릿에 해당합니다. 따라서 관련 날짜 및 시간 형식 템플릿에 대한 포맷터를 생성한 후 지역화 가능한 형식 문자열을 사용하여 출력을 연결할 수 있습니다.
+날짜 부분은 "월 일" 형식 템플릿에 해당하고, 시간 부분은 "시간 분" 형식 템플릿에 해당합니다. 따라서 관련 날짜 및 시간 형식 템플릿에 대 한 포맷터를 생성 하 고 지역화 가능한 형식 문자열을 사용 하 여 출력을 연결할 수 있습니다.
 
 ```csharp
 var dateToFormat = System.DateTime.Now;

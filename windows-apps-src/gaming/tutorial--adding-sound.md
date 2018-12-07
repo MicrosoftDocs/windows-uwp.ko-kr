@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 사운드
 ms.localizationpriority: medium
 ms.openlocfilehash: 94044e3d10df15cb1cb256d86ced798395e6af6f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734320"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793490"
 ---
 # <a name="add-sound"></a>소리 추가
 

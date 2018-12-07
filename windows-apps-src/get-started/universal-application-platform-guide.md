@@ -6,12 +6,12 @@ ms.date: 5/7/2018
 ms.topic: article
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: c174bb81deb84d3638a948555e045168c89f02a7
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: b54c33ab3807c26faba6a8cadd5318b4365f9ded
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8737667"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8796938"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
@@ -145,7 +145,7 @@ Microsoft의 디자인 시스템을 Fluent라고 합니다. 흐름 디자인 시
 - UWP 앱에 사용할 수 있는 Win32 API의 전체 목록은 [UWP 앱의 API 집합](https://msdn.microsoft.com/library/windows/desktop/mt186421) 및 [UWP 앱의 DII](https://msdn.microsoft.com/library/windows/desktop/mt186422)를 참조하세요.
 - .NET UWP 앱에 대한 개요는 [.NET의 유니버설 Windows 앱](https://blogs.msdn.microsoft.com/dotnet/2015/07/30/universal-windows-apps-in-net)을 참조하세요.
 - UWP 앱에서 사용할 수 있는 .NET 종류의 목록을 보려면 [UWP 앱을 위한 .NET](https://msdn.microsoft.com/library/mt185501.aspx)을 참조하세요.
-- [.NET 네이티브 - UWP(유니버설 Windows 플랫폼) 개발자를 위한 의미](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
+- [.NET 네이티브를 사용 하 여 앱을 컴파일](https://docs.microsoft.com/dotnet/framework/net-native/)
 - Windows 10 사용자를 위한 최신 환경을 기존 데스크톱 앱에 추가하고 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하여 이를 Microsoft Store에 배포하는 방법을 알아보세요.
 
 ## <a name="how-the-universal-windows-platform-relates-to-windows-runtime-apis"></a>Windows 런타임 Api에 유니버설 Windows 플랫폼의 관계

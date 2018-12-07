@@ -1,17 +1,19 @@
 ---
 title: UWP 프로젝트에 대 한 인증
+author: aablackm
 description: 유니버설 Windows 플랫폼 (UWP) 타이틀에 Xbox Live 사용자가 로그인 하는 방법을 알아봅니다.
 ms.assetid: e54c98ce-e049-4189-a50d-bb1cb319697c
+ms.author: aablackm
 ms.date: 03/14/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 인증에 로그인
 ms.localizationpriority: medium
-ms.openlocfilehash: d9872ab1fef773cb3f3dadfaea20a55dbe43f0de
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: adea0d0e964c994c74ccb14b55907a152858f35e
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8748855"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8795379"
 ---
 # <a name="authentication-for-uwp-projects"></a>UWP 프로젝트에 대 한 인증
 
@@ -19,7 +21,7 @@ ms.locfileid: "8748855"
 
 사용자를 특정 장치에서 특정 게임에 Xbox Live 서비스에 액세스 하려는 경우 사용자는 먼저 인증 해야 합니다.  게임에서 인증 프로세스를 시작할 Xbox Live Api를 호출할 수 있습니다.  경우에 따라 사용자가 나타납니다 사용자 이름과 암호를 사용 하려면 Microsoft 계정을 입력 하는 등 추가 정보를 제공 하는 인터페이스를 사용 하 여 게임을 권한에 동의 제공, 계정 문제를 해결 하는 방법, 새로운 서비스 계약을 수락 등입니다.
 
-인증 되 면 사용자가 명시적으로 로그 아웃 Xbox Live Xbox 앱에서 될 때까지 해당 장치에서 연관 됩니다.  모든 Xbox Live 게임); (한 번에 장치에 인증 하려면 하나의 플레이어 허용  장치에 인증 하는 새 플레이어에 대 한 기존 인증 된 플레이어가 아웃 서명 해야 합니다.
+인증 되 면 사용자가 명시적으로 로그 아웃 Xbox Live Xbox 앱에서 될 때까지 장치에 연결 됩니다.  모든 Xbox Live 게임); (한 번에 비 콘솔 장치에 인증 하려면 하나의 플레이어 허용  비 콘솔 장치에서 인증 하는 새 플레이어에 대 한 기존 인증 된 플레이어가 아웃 서명 해야 합니다.
 
 ## <a name="steps-to-sign-in"></a>로그인 하는 단계
 
@@ -34,7 +36,7 @@ ms.locfileid: "8748855"
 
 ### <a name="creating-an-xboxliveuser-object"></a>XboxLiveUser 개체 만들기
 
-대부분의 Xbox Live 작업 Xbox Live 사용자와 관련이 있습니다.  게임 개발자, 로컬 사용자를 나타내는 XboxLiveUser 개체를 만들려면 먼저 필요 합니다.
+대부분의 Xbox Live 작업은 Xbox Live 사용자에 게 관련 되어 합니다.  게임 개발자, 로컬 사용자를 나타내는 XboxLiveUser 개체를 만들려면 먼저 필요 합니다.
 
 C++:
 
@@ -84,7 +86,7 @@ Microsoft.Xbox.Services.System.SignInResult XboxLiveUser.SignInSilentlyAsync(Win
 
 * **coreDispatcher**
 
-  스레드 디스패처는 스레드 간 통신에 사용 됩니다. 자동 로그인 API UI를 표시 하는 것은, XSAPI에도 여전히 UI 스레드 디스패처 appx의 로캘에 대 한 정보를 가져오는 데 필요한 해야 합니다. 정적을 가져올 수 Windows::UI::Core::CoreWindow::GetForCurrentThread()를 호출 하 여 UI 스레드 디스패처 UI 스레드에서 디스패처를-> 합니다. 또는 (예: JS UWA)에서 nullptr에 전달할 수 인 경우이 API는 UI 스레드에서 호출 되는 특정.
+  스레드 디스패처는 스레드 간 통신에 사용 됩니다. 자동 로그인 API UI를 표시 하는 것은, 하지만 XSAPI appx의 로캘에 대 한 정보를 가져오는 데 필요한 UI 스레드 디스패처를 여전히 필요 합니다. 정적을 가져올 수 Windows::UI::Core::CoreWindow::GetForCurrentThread()를 호출 하 여 UI 스레드 디스패처 UI 스레드에서 디스패처를-> 합니다. 또는 (예: JS UWA)에서 nullptr에 전달할 수 인 경우이 API는 UI 스레드에서 호출 되는 특정.
 
 
 자동 로그인 시도에서 가능한 결과 3 가지
@@ -353,11 +355,13 @@ public void OnSignOut(object sender, SignOutCompletedEventArgs e)
 
 ## <a name="determining-if-the-device-is-offline"></a>오프 라인는 하는지 확인
 
-사용자가 한 번 로그인 하 고 계정에 로그인 하는 마지막 반환 됩니다 Api 로그인 성공 오프 라인 상태를 수 있습니다.
+Api 로그인은 계속 성공 때 오프 라인으로 사용자가 한 번 로그인 하 고 계정에 로그인 하는 마지막 반환 됩니다.  
 
-제목 오프 라인 재생할 수 (캠페인 모드, 등) 관계 없이 장치가 온라인 또는 오프 라인으로 제목 사용자가 재생 하도록 허용할 수 있고 WriteInGameEvent API와 연결 된 저장소 API를 통해 게임 진행 상황 기록, 둘 다 제대로 작동 장치는 오프 라인 합니다.
+오프 라인 로그인 됩니다 달성 하기 전에 사용자가 없는 경우 서명 되었습니다.
 
-제목 오프 라인 재생할 수 없는 경우 (멀티 플레이어 게임 또는 서버 기반 게임 등.) 제목은 오프 라인으로 하는지 알아보려면 GetNetworkConnectivityLevel API를 호출 하며 상태 및 가능한 해결 방법에 대 한 사용자에 게 알립니다 (예를 들어 ' 필요한 계속 하려면 인터넷에 연결할')
+제목 오프 라인 재생할 수 (캠페인 모드, 등) 제목 사용자가 재생 하도록 허용할 수 있고 WriteInGameEvent API와 연결 된 저장소 API를 통해 게임 진행 상황 기록, 둘 다 제대로 작동 장치는 오프 라인 합니다.
+
+제목 오프 라인 재생할 수 없는 경우 제목 장치 오프 라인 상태 및 상태 및 가능한 해결 방법에 대 한 사용자에 게 알리는 경우 알아보려면 GetNetworkConnectivityLevel API를 호출 해야 (멀티 플레이어 게임 또는 서버 기반 게임 등) (예를 들어 ' 해야 계속 하려면 인터넷에 연결 ').
 
 ## <a name="online-status-code-samples"></a>온라인 상태 코드 샘플
 

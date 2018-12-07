@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 포팅, 게임 루프, direct3d 9, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b0cf6352d400371b54a54d71176c4d8e1dc457d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 2087959bc29d2b2b02cdc9a2f373a8b62ea8c25a
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732978"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793804"
 ---
 # <a name="port-the-game-loop"></a>게임 루프 포팅
 
@@ -131,7 +131,7 @@ while (true)
 
 DirectX UWP 템플릿에는 UWP 게임에 사용할 수 있는 강력한 Direct3D 장치 인프라가 포함되어 있습니다. 올바른 템플릿 선택에 대한 지침은 [템플릿에서 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
 
-다음과 같이 심층적인 Microsoft Store 게임 개발 문서를 참조하세요.
+다음 같이 심층적인 Microsoft Store 게임 개발 문서를 참조 하세요.
 
 -   [연습: DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-uwp-directx-game.md)
 -   [게임용 오디오](working-with-audio-in-your-directx-game.md)
