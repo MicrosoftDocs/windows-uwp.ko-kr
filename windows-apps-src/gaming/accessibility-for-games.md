@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 접근성, 게임
 ms.localizationpriority: medium
 ms.openlocfilehash: 489804c4645c8e6d1c4926e362f81926c8b2f3c8
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8751409"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8808648"
 ---
 #  <a name="making-games-accessible"></a>접근성 높은 게임 만들기
 

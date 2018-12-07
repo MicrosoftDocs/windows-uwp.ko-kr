@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 분석 API, CAB 다운로드
 ms.localizationpriority: medium
 ms.openlocfilehash: a4643f94236e62c46c12fd656ab5ddba5e1e0632
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8735823"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787851"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-app"></a>앱의 오류에 대한 CAB 파일 다운로드
 
