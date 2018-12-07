@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b6bc75d2747a750c324aa979cd132774cf091f5
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8758463"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8788188"
 ---
 # <a name="download-analytics-reports"></a>분석 보고서 다운로드
 

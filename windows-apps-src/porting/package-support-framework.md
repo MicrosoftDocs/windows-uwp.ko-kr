@@ -6,12 +6,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 674f5977a69855ff51cbc579ca66085aa133eb5b
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 11f9912abb954592cd2a467008cc427cac833f35
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734211"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783460"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>패키지 지원 프레임 워크를 사용 하 여 MSIX 패키지로 런타임 수정 적용
 
@@ -86,10 +86,10 @@ Windows SDK 및 다음 단계를 수행 하 여 몇 가지 간단한 도구를 �
 
 ### <a name="create-the-package-layout-folder"></a>패키지 레이아웃 폴더 만들기
 
-.Msix (또는.appx) 파일을 이미 있는 경우 패키지에 대 한 준비 영역으로 지원할 수 있는 레이아웃 폴더에 콘텐츠 압축을 푸는 수 있습니다. Sdk 설치 경로에 따라 makemsix 도구를 사용 하 여 명령 프롬프트에서 이렇게 하려면,이 여기서 있습니다 makemsix.exe 도구를 Windows 10 PC에서: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makemsix.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makemsix.exe
+.Msix (또는.appx) 파일을 이미 있는 경우 패키지에 대 한 준비 영역으로 지원할 수 있는 레이아웃 폴더에 콘텐츠 압축을 푸는 수 있습니다. Sdk 설치 경로에 따라 makemsix 도구를 사용 하 여 명령 프롬프트에서 이렇게 하려면,이 여기서 있습니다 makeappx.exe 도구를 Windows 10 PC에서: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makeappx.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makeappx.exe
 
 ```ps
-makemsix unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
+makeappx unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
 
 ```
 
@@ -219,7 +219,7 @@ PowerShell을 사용 하 여 패키지를 설치 합니다.
 > 먼저 패키지를 제거 해야 합니다.
 
 ```ps
-powershell Add-MSIXPackage .\PSFSamplePackageFixup.msix
+powershell Add-AppPackage .\PSFSamplePackageFixup.msix
 ```
 
 응용 프로그램을 실행 하 고 런타임 수정 적용 된 동작을 확인 합니다.  진단 및 필요에 따라 패키징 단계를 반복 합니다.

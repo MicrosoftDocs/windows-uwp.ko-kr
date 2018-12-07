@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 31c1893f09e6d56682b4e718ee8b905ce72c7ad8
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8753039"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8800794"
 ---
 # <a name="connected-storage-loading-on-demand"></a>필요에 따라 저장소 로드를 연결합니다.
 

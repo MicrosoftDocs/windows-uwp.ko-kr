@@ -4,17 +4,17 @@ description: .NET Framework 4.5부터 관리 코드를 사용하여 Windows 런�
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
 ms.date: 12/04/2018
 ms.topic: article
-keywords: windows 10, uwp
-ms.localizationpriority: medium
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 7dde2fb0411686294ebb8abc17192b2e45c61d7a
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+keywords: windows 10, uwp
+ms.localizationpriority: medium
+ms.openlocfilehash: b4f5a2de5c3fa5564b4e4389cfc0806fd5d2844f
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736498"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8807085"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
 .NET Framework 4.5부터 관리 코드 Windows 런타임 형식을 직접 만들고 Windows 런타임 구성 요소에서 패키지를 사용할 수 있습니다. C + +, JavaScript, Visual Basic 또는 C#으로 작성 된 유니버설 Windows 플랫폼 (UWP) 앱의 구성 요소를 사용할 수 있습니다. 이 항목에서는 구성 요소를 만들기 위한 규칙을 간략히 설명 하 고 Windows 런타임에 대 한.NET Framework 지원의 일부 측면을 설명 합니다. 일반적으로 이 지원은 .NET Framework 프로그래머에게 투명하게 디자인되었습니다. 그러나 JavaScript 또는 C++를 사용하는 구성 요소를 만들 때는 이러한 언어와 Windows 런타임을 지원하는 방식의 차이점을 알아야 합니다.

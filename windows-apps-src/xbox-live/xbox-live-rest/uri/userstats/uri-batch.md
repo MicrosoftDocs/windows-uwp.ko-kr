@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e8ea66b8d59ad7bd415626f218e0b7f49093f00
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8728907"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8807100"
 ---
 # <a name="batch"></a>/batch
 여러 제목에서 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 액세스합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.
