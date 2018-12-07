@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b81838393d7b2692e6fd04b7ce535f58dc773780
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8743281"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784951"
 ---
 # <a name="monochrome-light-maps"></a>단색 조명 맵
 

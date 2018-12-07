@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 869f0ac2b255c0dee231828f6d9064a917668821
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8757129"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783224"
 ---
 # <a name="line-strips"></a>선 스트립
 

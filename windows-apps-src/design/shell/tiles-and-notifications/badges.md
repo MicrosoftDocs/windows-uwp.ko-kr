@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b41069f1ca964f978ba0cff73f5c34a9db133a10
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8745691"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783956"
 ---
 # <a name="badge-notifications-for-uwp-apps"></a>UWP 앱에 대한 배지 알림
 

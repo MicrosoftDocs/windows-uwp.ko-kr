@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 12a0c59942eefd2ab9625b1b442043a1868230a1
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 87eb6562c6ee66ca1d409d3748e688861d5f3920
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755902"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783511"
 ---
 # <a name="stream-output-so-stage"></a>SO(스트림 출력) 단계
 
@@ -41,7 +41,7 @@ SO(스트림 출력) 단계에서는 이전의 활성 단계에서 하나 이상
 ## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
 
 
-SO(스트림 출력) 단계에서는 이전 활성 단계(예: GS(기하 도형 셰이더) 단계)의 꼭짓점 데이터를 하나 이상의 메모리 내 버퍼로 연속적으로 출력(또는 스트리밍)합니다. GS(기하 도형 셰이더) 단계가 비활성 상태인 경우 SO(스트림 출력) 단계는 DS(도메인 셰이더) 단계(또는 DS 단계도 비활성 상태일 경우 VS(꼭짓점 셰이더) 단계)의 꼭짓점 데이터를 메모리 내 버퍼로 연속적으로 출력합니다.
+SO(스트림 출력) 단계에서는 이전 활성 단계(예: GS(기하 도형 셰이더) 단계)의 꼭짓점 데이터를 하나 이상의 메모리 내 버퍼로 연속적으로 출력(또는 스트리밍)합니다. 기 하 도형 셰이더 (GS) 단계 활성화 되지 않은 경우 SO (스트림 출력) 단계 메모리 (또는 DS 비활성 상태일 경우도, 꼭 짓 점 셰이더 (VS) 단계에서)의 버퍼 DS (도메인 셰이더) 단계에서 꼭 짓 점 데이터를 연속적으로 출력 합니다.
 
 삼각형 또는 선 스트립이 IA (입력 어셈블러) 단계에 바인딩된 경우 각 스트립 스트리밍된는 전에 목록으로 변환 됩니다. 꼭 짓 점은 전체 기본 요소 (예를 들어 3 개의 꼭 짓 점 삼각형에 대 한 번); 작성 항상 불완전 한 원형은 스트림 출력 되지 않습니다. 인접 기본 형식 데이터 아웃 하기 전에 인접 데이터를 삭제 기 합니다.
 

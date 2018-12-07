@@ -9,11 +9,11 @@ ms.date: 08/4/2017
 keywords: windows uwp, 유니버설 windows 플랫폼, Windows 런타임 API, windows api, windows api 참조, winrt api, windows api 참조, uwp api, uwp api 참조, uwp 개발, uwp 설계, uwp 게시
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b31e29d0967c8514de0566647c657574f6e5930
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749059"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8779480"
 ---
 # <a name="universal-windows-platform-documentation"></a>유니버설 Windows 플랫폼 설명서
 UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, HoloLens 등 모든 Windows 장치용 앱을 빌드하고 Microsoft Store에 게시할 수 있습니다.

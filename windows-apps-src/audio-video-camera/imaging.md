@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c7959231596829e20dc8afea654b2d51977abe4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 287079bf7195ebcadc3543d9369a0567f197b10c
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736961"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787919"
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>비트맵 이미지 만들기, 편집 및 저장
 
@@ -45,7 +45,7 @@ ms.locfileid: "8736961"
 
 파일에 **SoftwareBitmap**을 저장하려면 이미지를 저장할 **StorageFile** 인스턴스를 가져옵니다. 이 예제에서는 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하여 사용자가 출력 파일을 선택할 수 있게 합니다.
 
-[!code-cs[PickOuputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickOuputFile)]
+[!code-cs[PickOutputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickOutputFile)]
 
 **StorageFile** 개체의 [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116) 메서드를 호출하여 이미지를 기록할 임의 액세스 스트림을 가져옵니다. 정적 메서드 [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211)를 호출하여 지정된 스트림에 대한 [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) 클래스 인스턴스를 가져옵니다. **CreateAsync**의 첫 번째 매개 변수는 이미지를 인코드하는 데 사용할 코덱을 나타내는 GUID입니다. **BitmapEncoder** 클래스는 인코더에서 지원하는 각 코덱에 대한 ID(예: [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226))가 포함된 속성을 노출합니다.
 

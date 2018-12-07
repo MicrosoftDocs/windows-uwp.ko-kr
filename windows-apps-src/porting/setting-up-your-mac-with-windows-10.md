@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 61918f8f81137dad4db9bf627b7c87e0c05ace8d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8754376"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786917"
 ---
 # <a name="setting-up-your-mac-with-windows-10"></a>Windows 10에서 Mac 설정
 

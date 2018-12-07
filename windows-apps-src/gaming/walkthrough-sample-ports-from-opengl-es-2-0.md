@@ -3,12 +3,14 @@ title: OpenGL ES 2.0에서의 연습 샘플 포팅
 description: 이 항목에서는 각각 복잡한 정도가 다른 다양한 OpenGL ES 2.0 그래픽 파이프라인 포팅 시나리오를 살펴봅니다.
 ms.assetid: 07390da1-83f3-7fbb-5696-d1da3a2bc870
 ms.localizationpriority: medium
-ms.openlocfilehash: 7aefd725c1a73bac3212bf80036462c9bcb7dcc9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.topic: article
+ms.date: 02/08/2017
+ms.openlocfilehash: 6f9b424428753529e753c9fd15bbab4321fa05b4
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8746618"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8785941"
 ---
 # <a name="walkthrough-sample-ports-from-opengl-es-20"></a>OpenGL ES 2.0에서의 연습 샘플 포팅
 

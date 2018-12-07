@@ -6,12 +6,12 @@ ms.date: 03/14/2018
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지도 컨트롤, 지도 보기
 ms.localizationpriority: medium
-ms.openlocfilehash: 7242bdcedd4380c5593dba2788706ed0fbbc94a4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 7713c1664018a1875d80f70fb75da2afe6104c3c
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750794"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780117"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>2D, 3D, Streetside 뷰로 지도 표시
 
@@ -421,7 +421,7 @@ private async void display3DLocation()
 
 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 다음 메서드를 호출하여 지도의 위치에 대한 정보를 가져옵니다.
 
--   [**GetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016) 메서드 - 지도 컨트롤의 뷰포트에서 지정된 지점에 해당하는 지리적 위치를 가져옵니다.
+-   [**TryGetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016) 메서드-지도 컨트롤의 뷰포트에 지정 된 지점에 해당 하는 지리적 위치를 가져옵니다.
 -   [**GetOffsetFromLocation**](https://msdn.microsoft.com/library/windows/apps/dn637018) 메서드 - 지도 컨트롤의 뷰포트에서 지정된 지리적 위치에 해당하는 지점을 가져옵니다.
 -   [**IsLocationInView**](https://msdn.microsoft.com/library/windows/apps/dn637022) 메서드 - 지정된 지리적 위치가 현재 지도 컨트롤의 뷰포트에 표시되는지 여부를 확인합니다.
 -   [**FindMapElementsAtOffset**](https://msdn.microsoft.com/library/windows/apps/dn637014) 메서드 - 지도 컨트롤의 뷰포트에서 지정된 지점에 있는 지도 요소를 가져옵니다.
