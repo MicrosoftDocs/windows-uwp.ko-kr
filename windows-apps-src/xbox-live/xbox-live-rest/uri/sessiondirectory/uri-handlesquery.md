@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: eaa148972ce1e65056470a6c4082cb4e50de3f09
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8752463"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8788689"
 ---
 # <a name="handlesquery"></a>/handles/query
 세션 핸들에 대 한 쿼리를 만드는 게시 작업을 지원 합니다. 

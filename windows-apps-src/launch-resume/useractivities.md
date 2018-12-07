@@ -5,12 +5,12 @@ keywords: 사용자 활동, 사용자 활동, 타임라인, cortana 사용자의
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 98a7697715b456498db3ee5642e2743ae228b3cb
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: f35882af5ed7f66f59eb4e7fc4410223c4424e92
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749978"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790832"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>장치 간 사용자 활동 계속 수행
 
@@ -99,7 +99,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-이 코드는 앱이 프로토콜을 통해 활성화되었는지 여부를 검색합니다. 앱이 프로토콜을 통해 활성화된 경우 활성화되는 작업을 다시 시작하기 위해 앱이 수행해야 하는 작업을 확인합니다. 간단한 앱이기 때문에 이 앱이 다시 시작하는 유일한 활동은 앱이 표시될 때 보조 페이지에서 시작하게 하는 것입니다.
+이 코드는 앱이 프로토콜을 통해 활성화되었는지 여부를 검색합니다. 앱이 프로토콜을 통해 활성화된 경우 활성화되는 작업을 다시 시작하기 위해 앱이 수행해야 하는 작업을 확인합니다. 간단한 앱이 앱이 다시 시작 하는 유일한 활동은 이기 때문에 보조 페이지에 표시 될 때 앱.
 
 ## <a name="use-adaptive-cards-to-improve-the-timeline-experience"></a>적응형 카드를 사용하여 타임라인 환경 개선
 
