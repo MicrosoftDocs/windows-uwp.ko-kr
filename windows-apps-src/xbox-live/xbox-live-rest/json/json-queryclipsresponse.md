@@ -8,30 +8,30 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 23955d311d57fa3454bdb84df67ddae07a0c8548
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8326101"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8738034"
 ---
 # <a name="queryclipsresponse-json"></a>QueryClipsResponse(JSON)
-목록에 대 한 페이징 정보와 함께 반환 게임 클립의 목록을 래핑합니다. 
+목록에 대 한 페이징 정보와 함께 반환 게임 클립 목록을 래핑합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="queryclipsresponse"></a>QueryClipsResponse
  
-QueryClipsResponse 개체에는 다음 사양을 있습니다.
+QueryClipsResponse 개체에 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| <b>gameClips</b>| GameClip의 배열| 요청 제한이 (<b>maxItems</b>) 쿼리를 충족 하는 게임 클립의 배열입니다.| 
+| <b>gameClips</b>| 게임 클립의 배열| 요청 제한이 (<b>maxItems</b>) 쿼리를 충족 하는 게임 클립의 배열입니다.| 
 | <b>pagingInfo</b>| PagingInfo| 필요한 연속 작업 및 목록에 대 한 후속 호출에 대 한 페이징 하는 요청 제한을 초과 (<b>maxItems</b>) 정보를 포함 합니다.| 
   
 <a id="ID4E2B"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

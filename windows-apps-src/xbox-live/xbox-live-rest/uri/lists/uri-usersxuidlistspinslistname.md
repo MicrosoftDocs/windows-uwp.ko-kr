@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f9610b400e9530f86e264cea30bfdfdd1b09c8d
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8322748"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8752421"
 ---
 # <a name="usersxuidxuidlistspinslistname"></a>/users/xuid(xuid)/lists/PINS/{listname}
 항목을 목록에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
@@ -27,7 +27,7 @@ ms.locfileid: "8322748"
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | xuid| string| Xbox 사용자 ID (XUID)입니다.| 
-| listtype| string| 유형 (사용 하는 방법 및 작동 방식을) 목록입니다. 항상 이러한 "고정" 관련 메서드.| 
+| listtype| string| 유형 (사용 하는 방법 및 작동 방식을) 목록입니다. 항상 "핀"이에 대 한 관련 메서드.| 
 | listname| string| 목록 이름 (의 지정 된 listtype 어떤 목록). 항상 "XBLPins"에 대 한 Pin 항목입니다.| 
   
 <a id="ID4EGC"></a>
@@ -45,11 +45,11 @@ ms.locfileid: "8322748"
 
 [POST](uri-usersxuidlistspinslistnamepost.md)
 
-&nbsp;&nbsp;쿼리 문자열 매개 변수 **insertIndex**에 따라 인덱스 목록에 항목을 삽입 합니다.
+&nbsp;&nbsp;쿼리 문자열 매개 변수 **insertIndex**에 따라 인덱스에 있는 목록에 항목을 삽입 합니다.
 
 [PUT](uri-usersxuidlistspinslistnameput.md)
 
-&nbsp;&nbsp;요청 본문에서 각 항목에 대해 지정한 인덱스에 따라 목록에서 항목을 업데이트 합니다.
+&nbsp;&nbsp;요청 본문에서 각 항목에 대해 지정 된 인덱스에 따라 목록에서 항목을 업데이트 합니다.
  
 <a id="ID4EZC"></a>
 

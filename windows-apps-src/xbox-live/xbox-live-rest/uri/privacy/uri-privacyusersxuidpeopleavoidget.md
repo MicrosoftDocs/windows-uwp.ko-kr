@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 745893b4b975b5fbf64fe76591ec15d18af59d73
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8324247"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8740632"
 ---
 # <a name="get-usersowneridpeopleavoid"></a>GET (/users/{ownerId}/people/avoid)
 사용자에 대 한 문제 방지 목록을 가져옵니다.
@@ -30,7 +30,7 @@ ms.locfileid: "8324247"
 
 ## <a name="remarks"></a>설명
 
-대상 지정 하는 경우 되기 차단 목록에 그렇지 않으면 빈 경우 되지 않을 경우 해당 사용자를 반환만 합니다.
+대상 지정 하는 경우 되기 차단 목록에 그렇지 않으면 비어 있는 경우 되지 않을 경우 해당 사용자를 반환만 합니다.
 
 <a id="ID4EZ"></a>
 
@@ -39,14 +39,14 @@ ms.locfileid: "8324247"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| ownerId| string| 필수. 해당 리소스를 액세스 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code>. 인증된 된 사용자를 이어야 합니다. 예제 값: <code>xuid(2603643534573581)</code>. 최대 크기: 없음. |
+| ownerId| string| 필수. 해당 리소스를 액세스 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code>. 인증된 된 사용자 여야 합니다. 예제 값: <code>xuid(2603643534573581)</code>. 최대 크기: 없음. |
 
 <a id="ID4EEB"></a>
 
 
 ## <a name="authorization"></a>권한 부여
 
-권한 부여 클레임 사용 | 클레임| 유형| 필수 여부| 예제 값|
+사용 권한 부여 클레임 | 클레임| 유형| 필수 여부| 예제 값|
 | --- | --- | --- | --- | --- | --- | --- |
 | Xuid| 64 비트의 부호 있는 정수| 예| 1234567890|
 
@@ -58,14 +58,14 @@ ms.locfileid: "8324247"
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 권한 부여 | 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: <code>Xauth=&lt;authtoken></code>. 최대 크기: 없음.|
-| 수락| string| 사용할 수 있는 콘텐츠-형식입니다. 예제 값: <code>application/json</code>. 최대 크기: 없음.|
+| 수락| string| 허용 되는 콘텐츠-형식입니다. 예제 값: <code>application/json</code>. 최대 크기: 없음.|
 
 <a id="ID4EYD"></a>
 
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
 
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
 
 | Code| 이유 구문| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

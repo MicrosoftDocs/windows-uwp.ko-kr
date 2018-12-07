@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: dab59fefb389cf550a1bc4fc6429f6b0970f50ab
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8337664"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8740517"
 ---
 # <a name="initialuploadresponse-json"></a>InitialUploadResponse(JSON)
  
@@ -21,19 +21,19 @@ ms.locfileid: "8337664"
  
 ## <a name="initialuploadresponse"></a>InitialUploadResponse
  
-InitialUploadResponse 개체에는 다음 사양을 있습니다.
+InitialUploadResponse 개체에 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| <b>gameClipId</b>| string| 할당 업로드 데이터 요청에 대 한 ID입니다.| 
-| <b>uploadUri</b>| URI| 위치 게임 클립 업로드할 수 있습니다.| 
-| <b>largeThumbnailUri</b>| URI| 선택 사항입니다. 위치 큰 미리 보기 업로드할 수 있습니다. <b>InitialUploadRequest</b> (업로드가 지정 되었을 때 존재 하 게 됩니다)의 [ThumbnailSource 열거형](../enums/gvr-enum-thumbnailsource.md) 값이 필드의 존재 여부를 결정 됩니다.| 
-| <b>smallThumbnailUri</b>| URI| 선택 사항입니다. 위치 작은 미리 보기 업로드할 수 있습니다. <b>InitialUploadRequest</b> (업로드가 지정 되었을 때 존재 하 게 됩니다)의 [ThumbnailSource 열거형](../enums/gvr-enum-thumbnailsource.md) 값이 필드의 존재 여부를 결정 됩니다.| 
+| <b>gameClipId</b>| string| 업로드 데이터 요청에 대 한 할당 ID입니다.| 
+| <b>uploadUri</b>| URI| 위치는 게임 클립을 업로드 해야 합니다.| 
+| <b>largeThumbnailUri</b>| URI| 선택 사항입니다. 위치 큰 미리 보기 업로드할 수 있습니다. 이 필드의 현재 상태 (업로드가 지정 되었을 때 존재 하 게 됩니다) <b>InitialUploadRequest</b> [ThumbnailSource 열거형](../enums/gvr-enum-thumbnailsource.md) 값으로 결정 됩니다.| 
+| <b>smallThumbnailUri</b>| URI| 선택 사항입니다. 위치 작은 미리 보기 업로드할 수 있습니다. 이 필드의 현재 상태 (업로드가 지정 되었을 때 존재 하 게 됩니다) <b>InitialUploadRequest</b> [ThumbnailSource 열거형](../enums/gvr-enum-thumbnailsource.md) 값으로 결정 됩니다.| 
   
 <a id="ID4EYC"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

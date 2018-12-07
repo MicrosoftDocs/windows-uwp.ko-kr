@@ -6,22 +6,22 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅 2, 게임 채팅, 음성 통신
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b638fce06aeb439af9fca1642507fb781c912af
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8348698"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8741455"
 ---
-# <a name="migration-from-game-chat-to-game-chat-2"></a>게임 채팅 2에 게임 채팅에서 마이그레이션
+# <a name="migration-from-game-chat-to-game-chat-2"></a>게임 채팅 2 게임 채팅에서 마이그레이션
 
-이 문서에는 게임 채팅 및 게임 채팅 2와 게임 채팅 2로 게임 채팅에서 마이그레이션하는 방법 사이의 유사성 자세히 설명 합니다. 따라서 게임 채팅 2로 마이그레이션할 하고자 하는 기존 게임 채팅 구현에서 제목입니다. 게임 채팅 구현 없는 경우 제안 된 시작점 [Game Chat 2를 사용 하 여](using-game-chat-2.md)됩니다. 이 문서에는 다음 항목을 포함합니다.
+이 문서에는 게임 채팅 및 게임 채팅 2와 게임 채팅 2로 게임 채팅에서 마이그레이션하는 방법 사이의 유사성 자세히 설명 합니다. 따라서 게임 채팅 2로 마이그레이션 하고자 하는 기존 게임 채팅 구현에서 제목입니다. 게임 채팅 구현 없는 경우 제안 된 시작점 [Game Chat 2를 사용 하 여](using-game-chat-2.md)됩니다. 이 문서에는 다음 항목을 포함합니다.
 
 1. [앞](#preface)
 2. [사전 요구 사항](#prerequisites)
 3. [초기화](#initialization)
 4. [사용자 구성](#configuring-users)
 5. [데이터 처리](#processing-data)
-6. [이벤트를 처리합니다.](#processing-events)
+6. [이벤트 처리](#processing-events)
 7. [텍스트 채팅](#text-chat)
 8. [접근성](#accessibility)
 9. [UI](#UI)
@@ -35,22 +35,22 @@ ms.locfileid: "8348698"
 
 ## <a name="preface"></a>앞
 
-원래 게임 채팅 API는 Xbox Live 게임에서 음성 채팅 시나리오의 구현에 도움이 되도록 채팅 사용자 및 음성 채널의 개념을 노출 하는 WinRT API입니다. 게임 채팅 API는 기본 오디오 장치의 하위 수준 관리를 요구 하는 동안 채팅 사용자 및 음성 채널의 개념을 노출 하는 WinRT API는 그 자체가 채팅 API를 기반으로 합니다. 게임 채팅 2 원래 게임 채팅 및 채팅 Api에 대 한 후속-동시 방송 스타일 같은 고급 채팅 시나리오에 대 한 더 많은 유연성을 제공 하는 동안 팀 통신 등의 기본 채팅 시나리오에 대 한 간단한 API 되도록 설계 되었습니다. 통신 및 실시간 오디오 조작 합니다. 게임 채팅 및 게임 채팅 2 모두 동일한 틈새 fill: Xbox Live 통합 사용, 게임에서 음성 채팅 제목 게임 채팅 또는 게임의 원격 인스턴스 데이터 패킷을 전송에 전송 계층을 제공 하는 동안 각 Api에는 편리한 방법을 제공 채팅 2입니다.
+원래 게임 채팅 API는 Xbox Live 게임에서 음성 채팅 시나리오의 구현에 도움이 되도록 채팅 사용자 및 음성 채널의 개념을 노출 하는 WinRT API입니다. 게임 채팅 API는 기본 오디오 장치의 하위 수준 관리를 요구 하는 동안 채팅 사용자 및 음성 채널의 개념을 노출 하는 WinRT API는 그 자체가 채팅 API를 기반으로 합니다. 게임 채팅 2 원래 게임 채팅 및 채팅 Api에 대 한 후속-동시 방송 스타일 같은 고급 채팅 시나리오에 대 한 더 많은 유연성을 제공 하는 동안 팀 통신 같은 기본 채팅 시나리오에 대 한 간단한 API 되도록 설계 되었습니다. 통신 및 실시간 오디오 조작 합니다. 게임 채팅 및 게임 채팅 2 모두 동일한 틈새 fill: Xbox Live 통합 사용, 게임에서 음성 채팅 제목 게임 채팅 또는 게임의 원격 인스턴스 데이터 패킷을 전송 하는 데 전송 계층을 제공 하는 동안 각 Api에는 편리한 방법을 제공 채팅 2입니다.
 
-게임 채팅 2 API에는 원래 게임 채팅 및 채팅 Api 많은 이점이 있습니다. 몇 가지 주요 기능은 다음과 같습니다.
-* 유연한 사용자 기반 API는 "채널" 모델에 제한 되지 않습니다.
-* 데이터 원본과 데이터 수신기로 필터링 하는 패킷 대역폭 개선 합니다.
+게임 채팅 2 API에는 원래 게임 채팅 및 채팅 Api를 통해 많은 이점이 있습니다. 몇 가지 주요 기능은 다음과 같습니다.
+* 유연한 사용자 기반 "채널" 모델에 제한 되지 않는 API입니다.
+* 패킷 데이터 원본과 데이터 수신기로 필터링으로 인해 대역폭 향상 되었습니다.
 * 앱을 구성할 수 있는 선호도 사용 하 여 2 수명이 긴 스레드를 내부 제한 합니다.
 * C + + 및 WinRT 형식에서 사용할 수 있는 API입니다.
 * 간소화 된 소비 모델 "작업" 패턴을 사용 하 여 맞춥니다.
 * 사용자 지정 할당을 통해 게임 채팅 2 할당 리디렉션할 수 있으며 메모리 후크 합니다.
 * 동일한 UWP + 보다 편리 간 같은 개발 환경에 대 한 단독 리소스 응용 프로그램 (시대) 헤더.
 
-이 문서에는 게임 채팅 및 게임 채팅 2 하는 방법과 게임 채팅 2 c + + API로 게임 채팅에서 마이그레이션 유사점이 자세히 설명 합니다. 게임 채팅 2로 게임 채팅 개념을 매핑하는 방법을 이해 하려면이 문서 읽고 WinR 특정 패턴에 대 한 [사용 하 여 게임 채팅 2 WinRT 프로젝션](using-game-chat-2-winrt.md) 그러면 추천 게임 채팅 2 WinRT API를 게임 채팅에서 마이그레이션 관심 있는 경우 화 이 문서의 원래 게임 채팅에 대 한 샘플 코드를 사용 하 여 C + + CX 합니다.
+이 문서에는 게임 채팅 및 게임 채팅 2와 게임 채팅 2 c + + API로 게임 채팅에서 마이그레이션하는 방법 사이의 유사성 자세히 설명 합니다. 게임 채팅 2로 게임 채팅 개념을 매핑하는 방법을 이해 하려면이 문서 읽고 다음 [사용 하 여 게임 채팅 2 WinRT 프로젝션](using-game-chat-2-winrt.md) WinR 특정 패턴에 대 한 참조 추천 게임 채팅 2 WinRT API를 게임 채팅에서 마이그레이션 관심 있는 경우 화 이 문서의 원래 게임 채팅에 대 한 샘플 코드를 사용 하 여 C + + CX 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-게임 채팅 2를 사용 하 여 코딩을 시작 하기 전에 "마이크" 장치 기능을 선언 하는 앱의 AppXManifest 구성 했지만 해야 합니다. AppXManifest 기능 플랫폼 문서의 각 섹션에서 자세히 설명 합니다. 다음 코드 조각은 패키지/기능 노드 아래에 있어야 하는 "마이크" 장치 접근 권한 값은 노드를 보여 줍니다. 그렇지 않으면 채팅 차단 됩니다.
+게임 채팅 2를 사용 하 여 코딩을 시작 하기 전에 "마이크" 장치 기능을 선언 하는 앱의 AppXManifest 구성 했지만 해야 합니다. AppXManifest 기능 플랫폼 설명서;의 각 섹션에서 자세히 설명 되어 있습니다. 다음 코드 조각은 패키지/기능 노드 아래에 있어야 하는 "마이크" 장치 접근 권한 값은 노드를 보여 줍니다. 그렇지 않으면 채팅 차단 됩니다.
 
 ```xml
  <?xml version="1.0" encoding="utf-8"?>
@@ -63,15 +63,15 @@ ms.locfileid: "8348698"
  </Package>
 ```
 
-게임 채팅 2 컴파일 기본 GameChat2.h 헤더를 포함 해야 합니다. 제대로 연결 하려면 프로젝트 (일반적인 미리 컴파일된 헤더는 컴파일러에서 "inline"으로 생성에 대 한 작은 쉽고 이러한 스텁 함수 구현 때문에 권장 됨) 하나 이상 컴파일 단위에서 GameChat2Impl.h도 포함 해야 합니다.
+게임 채팅 2 컴파일 기본 GameChat2.h 헤더를 포함 해야 합니다. 제대로 연결을 위해 프로젝트 (일반적인 미리 컴파일된 헤더는 이러한 스텁 함수 구현은 컴파일러 "inline"으로 생성 하는 작은 쉽고 때문에 권장 됨) 하나 이상 컴파일 단위에서 GameChat2Impl.h도 포함 해야 합니다.
 
-게임 채팅 2 인터페이스 C +를 사용 하 여 컴파일할 중에서 선택 하는 프로젝트를 컴파일할 필요가 + CX 기존 c + +; 비교 와 함께 사용할 수 있습니다. 또한 구현 치명적이 지 않은 오류 수 사용 하기 쉽게 예외 즈 프리 프로젝트에서 원하는 경우 하므로 보고 하는 수단으로 예외를 throw 하지 않습니다. 하지만 구현 체, 치명적인 오류 보고 ( [오류 모델](#failure) 에 대 한 자세한 내용은 참조) 하는 수단으로 예외를 throw 합니다.
+게임 채팅 2 인터페이스 C + 컴파일 중에서 선택 하는 프로젝트를 컴파일할 필요가 + CX 기존 c + +; 비교 함께 사용할 수 있습니다. 또한 구현 치명적이 지 않은 오류 수 사용 하기 쉽게 예외 없이 프로젝트에서 원하는 경우 하므로 보고 하는 수단으로 예외를 throw 하지 않습니다. 하지만 구현, 치명적인 오류 보고 (세부 정보에 대 한 [오류 모델](#failure) 참조) 하는 수단으로 예외를 throw 합니다.
 
 ## <a name="initialization"></a>초기화
 
 ### <a name="game-chat"></a>게임 채팅
 
-통해 수행 원래 게임 채팅 상호 작용 합니다 `ChatManager` 클래스. 다음 예제에서는 생성 하는 `ChatManager` 기본 매개 변수를 사용 하 여 인스턴스:
+통해 수행 원래 게임 채팅 상호 작용은 `ChatManager` 클래스. 다음 예제에서는 생성 하는 `ChatManager` 기본 매개 변수를 사용 하 여 인스턴스:
 
 ```cpp
 auto chatManager = ref new ChatManager();
@@ -79,7 +79,7 @@ auto chatManager = ref new ChatManager();
 
 ### <a name="game-chat-2"></a>게임 채팅 2
 
-게임 채팅 2와 모든 상호 작용 게임 채팅 2의를 통해 수행 됩니다 `chat_manager` 의도 하지 않은 단일 합니다. 라이브러리과 의미 있는 상호 작용이 발생 하기 전에 singleton은 초기화 해야 합니다. Singleton은 초기화 시; 최대 동시 로컬 및 원격 채팅 사용자 지정 해야 사용자의 예상된 수에 비례 하는 메모리를 미리 할당 하는 게임 채팅 2 때문입니다. 다음 예제에서는 로컬 및 원격 채팅 동시 사용자 수 최대 4 될 때 의도 하지 않은 단일 인스턴스를 초기화 하는 방법을 보여 줍니다.
+게임 채팅 2를 사용 하 여 모든 상호 작용 게임 채팅 2의를 통해 수행 됩니다 `chat_manager` 의도 하지 않은 단일 합니다. 라이브러리과 의미 있는 상호 작용이 발생 하기 전에 singleton은 초기화 되어야 합니다. Singleton은 초기화 시; 최대 동시 로컬 및 원격 채팅 사용자 지정 해야 사용자의 예상된 수에 비례하여 메모리를 미리 할당 하는 게임 채팅 2 때문입니다. 다음 예제에서는 로컬 및 원격 채팅 동시 사용자 수 최대 4 될 때 의도 하지 않은 단일 인스턴스를 초기화 하는 방법을 보여 줍니다.
 
 ```cpp
 chat_manager::singleton_instance().initialize(4);
@@ -97,7 +97,7 @@ chat_manager::singleton_instance().initialize(4);
 auto asyncOperation = chatManager->AddLocalUserToChatChannelAsync(0, L"myXuid");
 ```
 
-원격 사용자 인스턴스를 직접 추가 되지 않습니다. 제목 통해 새 디바이스의 게임 채팅 알립니다를 원격 장치를 나타내는 개체를 만드는 타이틀의 네트워크에 원격 장치 나타나면 `ChatManager::HandleNewRemoteConsole()`. 제목 게임 채팅을 구현 하 여 원격 장치를 나타내는 개체를 비교 하는 방법을 제공 해야 합니다 `CompareUniqueConsoleIdentifiersHandler`. 다음 예제에서는 게임 채팅에이 대리자를 제공 하는 방법을 보여 줍니다. 가정 `Platform::String` 개체는 원격 디바이스와 문자열을 나타내는 새 장치를 나타내는 데 `L"1"` 타이틀의 네트워크에 연결 합니다.
+원격 사용자가 인스턴스를 직접 추가 되지 않습니다. 제목을 통해 새 디바이스의 게임 채팅 알립니다를 원격 장치를 나타내는 개체를 만드는 원격 장치 타이틀의 네트워크에 표시 되 면 `ChatManager::HandleNewRemoteConsole()`. 제목 게임 채팅을 구현 하 여 원격 장치를 나타내는 개체를 비교 하는 방법을 제공 해야 합니다 `CompareUniqueConsoleIdentifiersHandler`. 다음 예제에서는 게임 채팅에이 대리자를 제공 하는 방법을 보여 줍니다 가정 `Platform::String` 개체는 원격 장치 및 문자열을 나타내는 새 장치를 나타내는 데 `L"1"` 제목의 네트워크에 연결 합니다.
 
 ```cpp
 auto token = chatManager->OnCompareUniqueConsoleIdentifiers +=
@@ -113,45 +113,45 @@ Platform::String^ newDeviceIdentifier = ref new Platform::String(L"1");
 chatManager->HandleNewRemoteConsole(newDeviceIdentifier);
 ```
 
-이 디바이스의 게임 채팅에 게 되어, 되 면 모든 로컬 사용자에 대 한 정보가 포함 된 패킷을 생성 되며 제목에 이러한 패킷을 전송 원격 디바이스에서 게임 채팅 인스턴스를 제공 합니다. 마찬가지로, 원격 디바이스에서 게임 채팅 인스턴스 제목은 게임 채팅의 로컬 인스턴스에 전송 하는 해당 원격 장치에서 사용자에 대 한 정보가 포함 된 패킷을 생성 됩니다. 새 원격 사용자는 사용자를 통해 사용할 수 있는 로컬 인스턴스를 목록에 추가 로컬 인스턴스에 원격 새 사용자에 대 한 정보가 포함 된 패킷을 받으면 `ChatManager::GetUsers()`.
+이 디바이스의 게임 채팅에 게 되어, 되 면 모든 로컬 사용자에 대 한 정보가 포함 된 패킷을 생성 하 고 제목에 이러한 패킷을 전송 원격 디바이스에서 게임 채팅 인스턴스를 제공 합니다. 마찬가지로, 원격 디바이스에서 게임 채팅 인스턴스 타이틀은 게임 채팅의 로컬 인스턴스에 전송 하는 해당 원격 장치에서 사용자에 대 한 정보가 포함 된 패킷을 생성 됩니다. 새 원격 사용자는 사용자를 통해 사용할 수 있는 로컬 인스턴스를 목록에 추가 로컬 인스턴스에 새 원격 사용자에 대 한 정보가 포함 된 패킷을 받으면 `ChatManager::GetUsers()`.
 
-유사한 호출을 통해 수행 되는 사용자 게임 채팅 인스턴스에서 제거 `ChatManager::RemoveLocalUserFromChatChannelAsync()` 및 `ChatManager::RemoveRemoteConsoleAsync()`
+게임 채팅 인스턴스에서 사용자 제거는 유사한 호출을 통해 수행 `ChatManager::RemoveLocalUserFromChatChannelAsync()` 및 `ChatManager::RemoveRemoteConsoleAsync()`
 
 ### <a name="game-chat-2"></a>게임 채팅 2
 
-동기적으로 통해 이루어집니다 Game Chat 2에 로컬 사용자 추가 `chat_manager::add_local_user()`. 이 예제에서는 사용자 A Xbox 사용자 Id를 사용 하 여 로컬 사용자를 나타내는 됩니다 `L"myLocalXboxUserId"`:
+동기적으로 통해 이루어집니다 Game Chat 2에 로컬 사용자 추가 `chat_manager::add_local_user()`. 이 예제에서는 사용자 A Xbox 사용자 Id를 사용 하 여 로컬 사용자를 나타내는 `L"myLocalXboxUserId"`:
 
 ```cpp
 chat_user* chatUserA = chat_manager::singleton_instance().add_local_user(L"myLocalXboxUserId");
 ```
 
-사용자가 알림 Game Chat 2를 사용 하 여 "통신 관계"의 개념 채널 하는 대신 사용자에 게 문의 하 고 서로 통신할 수 있는지를 관리할 특정 채널-에 추가 합니다. 이 섹션의 통신 관계를 구성 하는 방법은 나중 주소가 지정 됩니다.
+사용자가 없는 특정 채널-추가 Game Chat 2를 사용 하 여 "통신 관계"의 개념을 채널 하는 대신 사용자에 게 문의 하 고 서로 통신할 수 있는지를 관리 합니다. 이 섹션의 통신 관계를 구성 하는 방법은 나중 주소가 지정 됩니다.
 
-로컬 비슷합니다, 원격 사용자가 추가 된 사용자가 동기적으로 로컬 게임 채팅 2 인스턴스. 원격 사용자가 동시에 원격 디바이스를 나타내는 데 사용할 식별자와 연결 이어야 합니다. 게임 채팅 2 "끝점" 원격 장치에서 실행 되는 앱의 인스턴스를 나타냅니다. 이 예제에서는 사용자 B Xbox 사용자 Id를 사용 하 여 사용자 수 `L"remoteXboxUserId"` 정수 표현 하는 끝점에서 `1`.
+로컬 비슷합니다, 원격 사용자가 추가 된 사용자가 동기적으로 로컬 게임 채팅 2 인스턴스. 원격 사용자가 동시에 원격 장치를 나타내는 데 사용할 수 있는 식별자를 사용 하 여 연결 되어야 합니다. 게임 채팅 2 "끝점" 원격 장치에서 실행 되는 앱의 인스턴스를 나타냅니다. 이 예제에서는 사용자 B Xbox 사용자 Id를 사용 하 여 사용자 수 `L"remoteXboxUserId"` 정수 표현 하는 끝점에서 `1`.
 
 ```cpp
 chat_user* chatUserB = chat_manager::singleton_instance().add_remote_user(L"remoteXboxUserId", 1);
 ```
 
-사용자가 인스턴스로 추가 되 면 각 원격 사용자와 각 로컬 사용자 간의 "통신 관계"을 구성 해야 합니다. 이 예제에서는 A 사용자와 사용자 B가 같은 팀 및 양방향 통신을 허용을 가정 합니다. `c_communicationRelationshiSendAndReceiveAll` 상수를 양방향 통신을 나타내는 GameChat2.h에서 정의 됩니다. 관계를 사용 하 여 구성할 수 있습니다.
+사용자가 인스턴스에 추가 되 면 각 원격 사용자와 각 로컬 사용자 간의 "통신 관계"을 구성 해야 합니다. 이 예제에서는 사용자 A와 B 사용자가 같은 팀에 및 양방향 통신을 허용을 가정 합니다. `c_communicationRelationshiSendAndReceiveAll` 상수를 양방향 통신을 나타내는 GameChat2.h에서 정의 됩니다. 관계를 사용 하 여 구성할 수 있습니다.
 
 ```cpp
 chatUserA->local()->set_communication_relationship(chatUserB, c_communicationRelationshipSendAndReceiveAll);
 ```
 
-마지막으로, 사용자 B가 떠났음을 게임 및 게임 채팅 인스턴스를에서 제거 해야 가정 합니다. 호출으로 동기적으로 수행 됩니다.
+마지막으로, 사용자 B는 게임 및 게임 채팅 인스턴스를에서 제거 가정 합니다. 호출으로 동기적으로 수행 됩니다.
 
 ```cpp
 chat_manager::singleton_instance().remove_user(chatUserD);
 ```
 
-더 자세한 예시 또는 자세한 정보에 대 한 개별 API 메서드에 대 한 참조를 [사용 하 여 게임 채팅 2-사용자가 구성](using-game-chat-2.md#configuring-users) 를 참조 하세요.
+더 자세한 예시 또는 방법은 개별 API 메서드에 대 한 참조를 [사용 하 여 게임 채팅 2-사용자가 구성](using-game-chat-2.md#configuring-users) 를 참조 하세요.
 
 ## <a name="processing-data"></a>데이터 처리
 
 ### <a name="game-chat"></a>게임 채팅
 
-게임 채팅에는 고유한 전송 계층입니다. 이 앱에서 제공 되어야 합니다. 구독 하 여 나가는 패킷을 처리 되는 `OnOutgoingChatPacketReady` 이벤트 및 패킷 대상 및 전송 요구 사항을 결정에 대 한 인수를 검사 합니다. 이벤트를 구독 하 고 인수를 전달 하는 방법을 보여 주는 다음 예제는 `HandleOutgoingPacket()` 제목에 의해 구현 하는 방법:
+게임 채팅에는 고유한 전송 계층입니다. 이 앱에서 제공 되어야 합니다. 구독 하 여 나가는 패킷을 처리 되는 `OnOutgoingChatPacketReady` 이벤트 및 패킷 대상 및 전송 요구 사항을 결정 하는 인수를 검사 합니다. 다음 예제에서는 이벤트를 구독 하 고 인수를 전달 하는 `HandleOutgoingPacket()` 제목에 의해 구현 하는 방법:
 
 ```cpp
 auto token = chatManager->OnOutgoingChatPacketReady +=
@@ -162,7 +162,7 @@ auto token = chatManager->OnOutgoingChatPacketReady +=
     });
 ```
 
-들어오는 패킷을 통해 게임 채팅에 제출 된 `ChatManager::ProcessingIncomingChatMessage()`. 원시 패킷 버퍼 및 원격 디바이스 식별자를 제공 해야 합니다. 다음 예제에는 로컬에 저장 된 패킷을 전송 하는 방법을 보여 줍니다 `packetBuffer` 원격 디바이스 식별자는 로컬 변수에 저장 하 고 `remoteIdentifier`.
+들어오는 패킷을 통해 게임 채팅에 제출 된 `ChatManager::ProcessingIncomingChatMessage()`. 원시 패킷 버퍼 및 원격 장치 식별자를 제공 해야 합니다. 다음 예제에서는 로컬에 저장 된 패킷을 전송 하는 방법을 보여 줍니다 `packetBuffer` 원격 디바이스 식별자는 로컬 변수에 저장 하 고 `remoteIdentifier`.
 
 ```cpp
 Platform::String^ remoteIdentifier = /* The identifier associated with the device that generated this packet */
@@ -175,7 +175,7 @@ chatManager->ProcessIncomingChatMessage(packetBuffer, remoteIdentifier);
 
 마찬가지로, Game Chat 2 없는 자체 전송 계층입니다. 이 앱에서 제공 되어야 합니다. 앱의 일반, 자주 호출을 통해 나가는 패킷을 처리 되는 `chat_manager::start_processing_data_frames()` 및 `chat_manager::finish_processing_data_frames()` 메서드 쌍. 이러한 메서드는 게임 채팅 2 앱에 보내는 데이터를 제공 하는 방법입니다. 이러한 전용 네트워킹 스레드에서 자주 폴링할 수 있도록 신속 하 게 작동 하도록 설계 되었습니다. 이 네트워크 타이밍 또는 다중 스레드 콜백 복잡성 예측 불가능성 상관 없이 모든 대기 중인된 데이터를 검색할 수 있는 편리한 위치를 제공 합니다.
 
-때 `chat_manager::start_processing_data_frames()` 가 호출 모든 배열에서 대기 중인된 데이터를 보고 하는 `game_chat_data_frame` 포인터를 구성 합니다. 앱 배열에 대해 반복 하 고 대상 "끝점"를 검사 하 고 앱의 네트워킹 계층을 사용 하 여 데이터를 적절 한 원격 앱 인스턴스를 제공 해야 합니다. 한 번 모두 완료 합니다 `game_chat_data_frame` 구조를 다시 호출 하 여 리소스를 해제 하 여 게임 채팅 2에 배열 전달 해야 할 `chat_manager:finish_processing_data_frames()`. 예를 들면 다음과 같습니다.
+때 `chat_manager::start_processing_data_frames()` 가 호출 모두의 배열에 대기 중인된 데이터를 보고 하는 `game_chat_data_frame` 포인터를 구성 합니다. 앱 배열에 대해 반복 하 고 대상 "끝점"를 검사 하 고 앱의 네트워킹 계층을 사용 하 여 적절 한 원격 앱 인스턴스에 데이터를 제공 해야 합니다. 모든 완료 한 번의 `game_chat_data_frame` 구조를 다시 호출 하 여 리소스를 해제할 Game Chat 2에 배열 전달 해야 할 `chat_manager:finish_processing_data_frames()`. 예를 들면 다음과 같습니다.
 
 ```cpp
 uint32_t dataFrameCount;
@@ -195,9 +195,9 @@ for (uint32_t dataFrameIndex = 0; dataFrameIndex < dataFrameCount; ++dataFrameIn
 chat_manager::singleton_instance().finish_processing_data_frames(dataFrames);
 ```
 
-데이터 프레임 처리 되는 더 자주, 낮을수록 오디오 대기 시간 최종 사용자에 게 표시 됩니다. 오디오는 40 ms 데이터 프레임;으로 결합 됩니다. 제안 된 폴링 간격입니다.
+데이터 프레임 처리 되는 더 자주, 낮을수록 오디오 대기 시간이 최종 사용자에 게 표시 됩니다. 오디오는 40 ms 데이터 프레임;에 결합 됩니다. 제안 된 폴링 기간입니다.
 
-게임 채팅 2를 통해 들어오는 데이터가 전송 `chat_manager::processing_incoming_data()`. 데이터 버퍼와 원격 끝점 식별자를 제공 해야 합니다. 다음 예제에서는 로컬 변수에 저장 된 데이터 패킷을 전송 하는 방법 `dataFrame` 로컬 변수에 저장 된 원격 끝점 식별자 및 `remoteEndpointIdentifier`:
+게임 채팅 2를 통해 들어오는 데이터가 전송 `chat_manager::processing_incoming_data()`. 데이터 버퍼와 원격 끝점 식별자를 제공 해야 합니다. 다음 예제에서는 로컬 변수에 저장 된 데이터 패킷을 전송 하는 방법을 보여 줍니다 `dataFrame` 로컬 변수에 저장 된 원격 끝점 식별자 `remoteEndpointIdentifier`.
 
 ```cpp
 uin64_t remoteEndpointIdentier = /* The identifier associated with the endpoint that generated this packet */
@@ -207,11 +207,11 @@ uint8_t* dataFrame = /* A pointer to the buffer containing the incoming data */
 chatManager::singleton_instance().process_incoming_data(remoteEndpointIdentifier, dataFrameSize, dataFrame);
 ```
 
-## <a name="processing-events"></a>이벤트를 처리합니다.
+## <a name="processing-events"></a>이벤트 처리
 
 ### <a name="game-chat"></a>게임 채팅
 
-게임 채팅 텍스트 메시지를 받으면 사용자의 접근성 기본 설정의 변경 등과 같은-관심가 발생할 때 앱을 알리기 위해 이벤트 모델을 사용 합니다. 응용 프로그램에 가입 하 고 관심 각 이벤트에 대 한 처리기를 구현 해야 합니다. 에 가입 하는 방법을 보여 주는이 예제는 `OnTextMessageReceived` 이벤트에 대 한 인수를 전달 합니다 `OnTextChatReceived()` 또는 `OnTranscribedChatReceived()` 앱에 의해 구현 하는 방법:
+게임 채팅 텍스트 메시지를 받으면 사용자의 접근성 기본 설정 변경 등과 같은-관심가 발생할 때 앱을 알리기 위해 이벤트 모델을 사용 합니다. 응용 프로그램에 가입 하 고 관심 각 이벤트에 대 한 처리기를 구현 해야 합니다. 에 가입 하는 방법을 보여 주는이 예제는 `OnTextMessageReceived` 이벤트에 대 한 인수를 전달 하 고는 `OnTextChatReceived()` 또는 `OnTranscribedChatReceived()` 앱에 의해 구현 하는 방법:
 
 ```cpp
 auto token = chatManager->OnTextMessageReceived +=
@@ -231,9 +231,9 @@ auto token = chatManager->OnTextMessageReceived +=
 
 ### <a name="game-chat-2"></a>게임 채팅 2
 
-앱의 일반, 자주 호출을 통해 받은 문자 메시지 등의 앱에 대 한 업데이트를 제공 하는 게임 채팅 2는 `chat_manager::start_processing_state_changes()` 및 `chat_manager::finish_processing_state_changes()` 메서드 쌍. 이러한 UI 렌더링 루프에서 매 프레임 마다 그래픽 호출할 수 있습니다 되도록 신속 하 게 작동 하도록 설계 되었습니다. 이 네트워크 타이밍 또는 다중 스레드 콜백 복잡성 예측 불가능성 상관 없이 대기 중인된 모든 변경 내용을 검색 하는 편리한 위치를 제공 합니다.
+게임 채팅 2는 앱의 일반, 자주 호출을 통해 받은 텍스트 메시지 등의 앱에 대 한 업데이트를 제공 합니다 `chat_manager::start_processing_state_changes()` 및 `chat_manager::finish_processing_state_changes()` 메서드 쌍. UI 렌더링 루프에서 매 프레임 마다 그래픽 호출할 수 있습니다 되도록 신속 하 게 작동 하도록 설계 되었습니다. 이 네트워크 타이밍 또는 다중 스레드 콜백 복잡성 예측 불가능성 상관 없이 대기 중인된 모든 변경 내용을 검색 하는 편리한 위치를 제공 합니다.
 
-때 `chat_manager::start_processing_state_changes()` 는 호출 대기 중인된 모든 업데이트의 배열에 보고 `game_chat_state_change` 포인터를 구성 합니다. 앱 배열에 대해 반복, 더욱 구체적인 해당 형식에 대 한 기본 구조를 검사, 기본 구조를 입력 하 고 적절 하 게 해당 업데이트를 처리 합니다. 자세한 내용은 해당를 캐스팅 해야 합니다. 모든 완료 한 번 `game_chat_state_change` 현재 사용할 수 있는 개체를 호출 하 여 리소스를 해제 하 여 게임 채팅 2에 다시 해당 배열 전달 해야 `chat_manager::finish_processing_state_changes()`. 예를 들면 다음과 같습니다.
+때 `chat_manager::start_processing_state_changes()` 는 호출 대기 중인된 모든 업데이트의 배열에 보고 됩니다 `game_chat_state_change` 포인터를 구성 합니다. 앱 배열 반복, 더욱 구체적인 해당 형식에 대 한 기본 구조를 검사, 기본 구조를 입력 하 고 적절 하 게 해당 업데이트를 처리 합니다. 자세한 내용은 해당를 캐스팅 해야 합니다. 모든 완료 한 번 `game_chat_state_change` 현재 사용할 수 있는 개체를 호출 하 여 리소스를 해제할 게임 채팅 2로 다시 해당 배열 전달 해야 할 `chat_manager::finish_processing_state_changes()`. 예를 들면 다음과 같습니다.
 
 ```cpp
 uint32_t stateChangeCount;
@@ -262,39 +262,39 @@ for (uint32_t stateChangeIndex = 0; stateChangeIndex < stateChangeCount; ++state
 chat_manager::singleton_instance().finish_processing_state_changes(gameChatStateChanges);
 ```
 
-때문에 `chat_manager::remove_user()` 는 사용자 개체와 관련 된 메모리를 무효화 하는 즉시 상태 변경 사용자 개체에 대 한 포인터를 포함할 수 있습니다 `chat_manager::remove_user()` 상태 변경을 처리 하는 동안 호출 되지 않아야 합니다.
+때문에 `chat_manager::remove_user()` 는 사용자 개체와 관련 된 메모리를 무효화 하는 즉시 사용자 개체에 대 한 포인터를 포함 하는 상태 변경 될 수 있습니다 `chat_manager::remove_user()` 상태 변경을 처리 하는 동안 호출 되지 않아야 합니다.
 
 ## <a name="text-chat"></a>텍스트 채팅
 
 ### <a name="game-chat"></a>게임 채팅
 
-게임 채팅을 사용 하 여 텍스트 채팅을 보내려면 `GameChatUser::GenerateTextMessage()` 사용할 수 있습니다. 다음 예제에서는 개체로 로컬 채팅 사용자와 채팅 텍스트 메시지를 보내는 방법의 `chatUser` 변수:
+게임 채팅을 사용 하 여 텍스트 채팅을 보내려면 `GameChatUser::GenerateTextMessage()` 사용할 수 있습니다. 다음 예제에서는 표현 되는 로컬 채팅 사용자와 채팅 텍스트 메시지를 보내는 방법의 `chatUser` 변수:
 
 ```cpp
 chatUser->GenerateTextMessage(L"Hello", false);
 ```
 
-두 번째 부울 매개 변수는 텍스트-음성 변환을 제어합니다. 자세한 내용은 참조 [접근성] (#accessibilityGame 채팅에서는이 메시지를 포함 하는 채팅 패킷을 다음 오류가 발생 합니다. 게임 채팅의 원격 인스턴스를 통해 텍스트 메시지의 알려주지 합니다 `OnTextMessageReceived` 이벤트입니다.
+두 번째 부울 매개 변수는 텍스트-음성 변환을 제어합니다. 자세한 내용은 참조 [접근성] (#accessibilityGame 채팅에서는이 메시지를 포함 하는 채팅 패킷을 다음 오류가 발생 합니다. 게임 채팅의 원격 인스턴스를 통해 텍스트 메시지의 알려주지는 `OnTextMessageReceived` 이벤트입니다.
 
 ### <a name="game-chat-2"></a>게임 채팅 2
 
-사용 하 여 게임 채팅 2를 사용 하 여 텍스트 채팅을 보내려면 `chat_user::chat_user_local::send_chat_text()`. 개체로 로컬 채팅 사용자와 채팅 텍스트 메시지를 전송 하는 방법을 보여 주는 다음 예제는 `chatUser` 변수:
+게임 채팅 2를 사용 하 여 텍스트 채팅을 보내려면 사용 하 여 `chat_user::chat_user_local::send_chat_text()`. 채팅 텍스트 메시지를 표시 하는 로컬 채팅 사용자를 사용 하 여 전송 하는 방법을 보여 주는 다음 예제는 `chatUser` 변수:
 
 ```cpp
 chatUser->local()->send_chat_text(L"Hello");
 ```
 
-게임 채팅 2에서이 메시지를 포함 하는 데이터 프레임을 생성 데이터 프레임에 대 한 대상 끝점 사용자가 로컬에서 텍스트를 수신 하도록 구성 된 사용자와 연결 됩니다. 원격 끝점에서 데이터를 처리할 때 메시지를 통해 노출 되는 `game_chat_text_chat_received_state_change`. 음성 채팅와 마찬가지로 텍스트 채팅에 대 한 권한 및 개인 정보 보호 제한은 유지 됩니다. 한 쌍의 사용자가 텍스트 채팅을 허용 하도록 구성 된 경우, 권한 또는 개인 정보 보호 제한 통신을 허용 하지 않습니다 문자 메시지 자동으로 삭제 됩니다.
+게임 채팅 2에서이 메시지를 포함 하는 데이터 프레임을 생성 대상 끝점 데이터 프레임에 대 한 로컬 사용자의 텍스트를 수신 하도록 구성 된 사용자와 연결 됩니다. 메시지를 통해 노출 될 원격 끝점으로 데이터를 처리 하는 경우는 `game_chat_text_chat_received_state_change`. 음성 채팅와 마찬가지로 텍스트 채팅에 대 한 권한 및 개인 정보 보호 제한은 유지 됩니다. 한 쌍의 사용자가 텍스트 채팅을 허용 하도록 구성 된 경우 권한 또는 개인 정보 보호 제한 통신을 허용 하지 않습니다, 문자 메시지 자동으로 삭제 됩니다.
 
 입력 텍스트 채팅 및 디스플레이 지 원하는 접근성 필요 ( [접근성](#accessibility) 에 대 한 자세한 내용은 참조).
 
 ## <a name="accessibility"></a>접근성
 
-입력 텍스트 채팅 및 디스플레이 지 원하는 게임 채팅 및 게임 채팅 2 모두 필요 합니다. 텍스트 입력을 사용자 수 텍스트 음성 변환 보조 기술을 사용 하 여 시스템을 구성 하는 데 플랫폼을 사용 하 여 광범위 한 실제 키보드 적 지금까지 게임 장르에 대해서도 때문에 필요 합니다. 마찬가지로, 텍스트 표시는 사용자가 음성-텍스트를 사용 하 여 시스템을 구성할 수 있으므로 필요 합니다. 게임 채팅 및 게임 채팅 2 감지 하 고 사용자의 접근성 기본; 존중 하는 메서드를 제공 조건에 따라 이러한 설정에 따라 텍스트 메커니즘을 사용 하고자 할 수도 있습니다.
+입력 텍스트 채팅 및 디스플레이 지 원하는 게임 채팅 및 게임 채팅 2 모두 필요 합니다. 텍스트 입력이 플랫폼 또는 사용 하 여 광범위 한 실제 키보드 적 지금까지 게임 장르에 대해서도 사용자가 텍스트 음성 변환 보조 기술을 사용 하 여 시스템 구성할 수 있기 때문에 필요 합니다. 마찬가지로, 텍스트 표시는 사용자가 음성-텍스트를 사용 하 여 시스템을 구성할 수 있으므로 필요 합니다. 게임 채팅 및 게임 채팅 2 감지 하 고 사용자의 접근성 기본; 존중 메서드를 제공 조건에 따라 이러한 설정에 따라 텍스트 메커니즘을 사용 하고자 할 수도 있습니다.
 
-### <a name="text-to-speech---game-chat"></a>게임 채팅-텍스트 음성 변환
+### <a name="text-to-speech---game-chat"></a>텍스트 음성 변환-게임 채팅
 
-사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `GameChatUser::HasRequestedSynthesizedAudio()` 가 true를 반환 합니다. 이 상태 감지 되 면 `GameChatUser::GenerateTextMessage()` 로컬 사용자와 연결 된 오디오 스트림을에 삽입 되는 텍스트-음성 오디오를 또한 생성 됩니다. 다음 예제에서는 로컬 사용자가 나타내는 채팅 텍스트 메시지를 전송 하는 방법을 `chatUser` 변수:
+사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `GameChatUser::HasRequestedSynthesizedAudio()` 가 true를 반환 합니다. 이 상태 감지 되 면 `GameChatUser::GenerateTextMessage()` 에서 또한 로컬 사용자와 관련 된 오디오 스트림을에 삽입 되는 텍스트-음성 오디오를 생성 합니다. 다음 예제에서는 개체로 로컬 사용자를 사용 하 여 채팅 텍스트 메시지를 보내는 방법의 `chatUser` 변수:
 
 ```cpp
 chatUser->GenerateTextMessage(L"Hello", true);
@@ -304,7 +304,7 @@ chatUser->GenerateTextMessage(L"Hello", true);
 
 ### <a name="text-to-speech---game-chat-2"></a>게임 채팅 2-텍스트 음성 변환
 
-사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `chat_user::chat_user_local::text_to_speech_conversion_preference_enabled()` '참' 반환 됩니다. 이 상태 감지 되 면 앱에는 텍스트 입력 방법을 제공 해야 합니다. 실제 또는 가상 키보드에서 제공 하는 텍스트 입력을 구성한 후에 문자열을 전달 합니다 `chat_user::chat_user_local::synthesize_text_to_speech()` 메서드. 게임 채팅 2은 검색 하 고 문자열 및 사용자의 음성 액세스할 수 있는 기본 설정에 따라 오디오 데이터를 합성 합니다. 예를 들면 다음과 같습니다.
+사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `chat_user::chat_user_local::text_to_speech_conversion_preference_enabled()` '참' 반환 됩니다. 이 상태 감지 되 면 앱의 텍스트 입력 방법을 제공 해야 합니다. 실제 또는 가상 키보드에서 제공 하는 텍스트 입력을 구성한 후에 문자열을 전달 합니다 `chat_user::chat_user_local::synthesize_text_to_speech()` 메서드. 게임 채팅 2은 검색 하 고 문자열 및 사용자의 음성 액세스할 수 있는 기본 설정에 따라 오디오 데이터를 합성 합니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 chat_userA->local()->synthesize_text_to_speech(L"Hello");
@@ -314,19 +314,19 @@ chat_userA->local()->synthesize_text_to_speech(L"Hello");
 
 ### <a name="speech-to-text---game-chat"></a>음성-텍스트-게임 채팅
 
-사용자가 음성-텍스트를 사용 하는 경우 `GameChatUser::HasRequestSynthesizedAudio()` '참' 반환 됩니다. 이 상태 감지 되 면 게임 채팅 자동으로 각 원격 사용자의 오디오의 오디오 번역기 변환 하 고 통해 노출 합니다 `OnTextMessageReceived` 이벤트입니다. 때 합니다 `OnTextMessageReceived` 기록과 메시지 수신 인해 이벤트가 발생 합니다 `TextMessageReceivedEventArgs` 메시지 유형으로 표시 합니다 `ChatTextMessageType::TranscribedSpeechMessage`합니다.
+사용자가 음성-텍스트를 사용 하는 경우 `GameChatUser::HasRequestSynthesizedAudio()` '참' 반환 됩니다. 이 상태 감지 되 면 게임 채팅 자동으로 각 원격 사용자의 오디오의 오디오 번역기 변환 하 고 통해 노출 합니다 `OnTextMessageReceived` 이벤트입니다. 때의 `OnTextMessageReceived` 기록과 메시지 수신으로 인해 이벤트가 발생 합니다 `TextMessageReceivedEventArgs` 메시지 유형으로 표시 합니다 `ChatTextMessageType::TranscribedSpeechMessage`합니다.
 
 ### <a name="speech-to-text---game-chat-2"></a>음성-텍스트-게임 채팅 2
 
-사용자가 음성-텍스트를 사용 하는 경우 `chat_user::chat_user_local::speech_to_text_conversion_preference_enabled()` 가 true를 반환 합니다. 이 상태 감지 되 면 변환 된 채팅 메시지와 관련 된 UI를 제공 하기 위해 앱을 준비 합니다. 게임 채팅 2는 자동으로 각 원격 사용자의 오디오 번역기 변환 하 고 통해 노출는 `game_chat_transcribed_chat_received_state_change`.
+사용자가 음성-텍스트를 사용 하는 경우 `chat_user::chat_user_local::speech_to_text_conversion_preference_enabled()` 가 true를 반환 합니다. 이 상태 감지 되 면 앱 변환 된 채팅 메시지와 관련 된 UI를 제공 하기 위해 준비 해야 합니다. 게임 채팅 2는 자동으로 각 원격 사용자의 오디오 번역기 변환 하 고 통해 노출는 `game_chat_transcribed_chat_received_state_change`.
 
-> `Windows::Xbox::UI::Accessibility` Xbox One 클래스는 하도록 설계 된 음성-텍스트 보조 기술에 초점을 사용 하 여 게임에서 텍스트 채팅의 간단한 렌더링을 제공 합니다.
+> `Windows::Xbox::UI::Accessibility` Xbox One 클래스 하도록 설계 된 음성-텍스트 보조 기술에 초점을 사용 하 여 게임에서 텍스트 채팅의 간단한 렌더링을 제공 합니다.
 
 음성-텍스트 성능 고려 사항에 대 한 자세한 내용은 [사용 하 여 게임 채팅 2-음성-텍스트 성능 고려 사항](using-game-chat-2.md#speech-to-text-performance-considerations) 참조 하세요.
 
 ## <a name="ui"></a>UI
 
-아무 곳 이나 플레이어에에서 표시 되어 있는지, 특히 게이머 점수 판, 같은 태그 목록을 사용자에 대 한 피드백으로 음소거/말하기 아이콘도 표시 하는 것이 좋습니다. 게임 채팅 2 표시 하려면 적절 한 UI 요소를 결정 하는 간단한 수단을 제공 하는 결합 된 표시기를 소개 합니다.
+아무 곳 이나 플레이어에에서 표시 되어 있는지, 특히 게이머 태그는 스코어 보드 같은 목록을 사용자에 대 한 피드백으로 아이콘 음소거/말하기를 표시할 수도 것이 좋습니다. 게임 채팅 2 표시 하려면 적절 한 UI 요소를 결정 하는 간단한 수단을 제공 하는 결합 된 표시기를 소개 합니다.
 
 ### <a name="game-chat"></a>게임 채팅
 
@@ -359,7 +359,7 @@ else
 
 ### <a name="game-chat-2"></a>게임 채팅 2
 
-게임 채팅 2에는 결합 된 `game_chat_user_chat_indicator` 는 플레이어에 대 한 채팅 순간, 현재 상태를 나타내는 데 사용 합니다. 이 값을 검색 하는 `chat_user::chat_indicator()`. 다음 예제에 대 한 표시기 값을 검색 하는 `chat_user` 변수 'chatUser' 'iconToShow' 변수에 할당 하는 특정 아이콘 상수 값을 가리키는 개체.
+게임 채팅 2에는 결합 된 `game_chat_user_chat_indicator` 는 플레이어에 대 한 채팅 순간, 현재 상태를 나타내는 데 사용 합니다. 이 값을 검색 하는 `chat_user::chat_indicator()`. 다음 예제에서는 표시기에 대 한 값을 검색 하는 `chat_user` 'chatUser'를 'iconToShow' 변수에 할당 하는 특정 아이콘 상수 값을 결정 하는 변수 가리키는 개체.
 
 ```cpp
 switch (chatUser->chat_indicator())
@@ -393,41 +393,41 @@ switch (chatUser->chat_indicator())
 
 ## <a name="game-chat-2"></a>게임 채팅 2
 
-`chat_user::chat_user_local::set_microphone_muted()` 로컬 사용자의 마이크의 음소거 상태를 전환 하 메서드를 사용할 수 있습니다. 마이크가 음소거 되어 해당 마이크에서 오디오 없음 캡처됩니다. 사용자가 Kinect 등의 공유 장치에 있는 경우 음소거 상태 모든 사용자에 게 적용 됩니다.
+`chat_user::chat_user_local::set_microphone_muted()` 메서드는 로컬 사용자의 마이크의 음소거 상태를 전환에 사용할 수 있습니다. 마이크가 음소거 해당 마이크에서 오디오 없음 캡처됩니다. 사용자가 Kinect 등의 공유 장치에 있는 모든 사용자에 게 음소거 상태 적용 됩니다.
 
-`chat_user::chat_user_local::microphone_muted()` 메서드는 로컬 사용자의 마이크의 음소거 상태를 검색 데 사용할 수 있습니다. 이 메서드 호출을 통해 소프트웨어에서 로컬 사용자의 마이크를 음소거 되었는지 여부를 반영만 `chat_user::chat_user_local::set_microphone_muted()`. 이 메서드는 하드웨어 음소거 제어, 예를 들어, 사용자의 헤드셋에서 단추를 통해 반영 하지 않습니다. 게임 채팅 2를 통해 사용자의 오디오 장치의 하드웨어 음소거 상태를 검색할 수 있는 방법은 없습니다.
+`chat_user::chat_user_local::microphone_muted()` 메서드는 로컬 사용자의 마이크의 음소거 상태를 검색을 사용할 수 있습니다. 이 메서드는 로컬 사용자의 마이크에 대 한 호출을 통해 소프트웨어에서 음소거 된가 있는지 여부를 반영 `chat_user::chat_user_local::set_microphone_muted()`. 이 메서드는 하드웨어 음소거 제어, 예를 들어, 사용자의 헤드셋에서 단추를 통해 반영 하지 않습니다. 게임 채팅 2를 통해 사용자의 오디오 장치의 하드웨어 음소거 상태를 검색할 수 있는 방법은 없습니다.
 
-`chat_user::chat_user_local::set_remote_user_muted()` 특정 로컬 사용자와 관련 하 여 원격 사용자의 음소거 상태를 전환 하 메서드를 사용할 수 있습니다. 원격 사용자 음이 소거 로컬 사용자 모든 오디오를 들 되지 않거나 원격 사용자 로부터 텍스트 메시지를 수신 합니다.
+`chat_user::chat_user_local::set_remote_user_muted()` 특정 로컬 사용자와 관련 하 여 원격 사용자의 음소거 상태를 전환 하 메서드를 사용할 수 있습니다. 원격 사용자 음이 소거 로컬 사용자가 모든 오디오를 들 되지 않거나 원격 사용자 로부터 텍스트 메시지를 수신 합니다.
 
 ## <a name="bad-reputation-auto-mute"></a>나쁜 평판 자동 음소거
 
-일반적으로 원격 사용자가 시작 unmuted 합니다. 게임 채팅 및 게임 채팅 2에는 "나쁜 평판 자동 음소거" 기능이 있습니다. 이 사용자가 면 시작 됩니다 음소거 상태에서 (1) 원격 사용자가 로컬 사용자를 사용 하 여 친구 (2) 원격 사용자가 나쁜 평판 플래그 것을 의미 합니다. 게임 채팅 2는이 기능으로 인해 사용자 음소거 하는 경우 피드백을 제공 합니다. 자세한 정보를 [사용 하 여 게임 채팅 2-자동 음소거 나쁜 평판을](using-game-chat-2.md#bad-reputation-auto-mute) 참조 하십시오.
+일반적으로 원격 사용자가 시작 unmuted 합니다. 게임 채팅 및 게임 채팅 2에는 "나쁜 평판 자동 음소거" 기능이 있습니다. 이 사용자가 음소거 상태로 시작 (1) 원격 사용자가 로컬 사용자를 사용 하 여 친구 및 (2) 원격 사용자가 잘못 된 평판 플래그 것을 의미 합니다. 게임 채팅 2는이 기능으로 인해 사용자 음소거 하는 경우 피드백을 제공 합니다. 자세한 정보를 [사용 하 여 게임 채팅 2-잘못 된 평판 자동 음소거를](using-game-chat-2.md#bad-reputation-auto-mute) 참조 하십시오.
 
 ## <a name="privilege-and-privacy"></a>권한 및 개인 정보 보호
 
-게임 채팅 및 게임 채팅 2 제한을 Xbox Live 권한 및 개인 정보 보호 앱에서 관리 되는 통신 채널 또는 관계를 기반으로 합니다. 또한 게임 채팅 2 정확히 어떻게 제한은 영향을 주지 오디오 (예: 오디오는 오디오 제한 인지 uni 또는 양방향)의 방향을 확인 하는 진단 정보를 제공 합니다.
+게임 채팅 및 게임 채팅 2 Xbox Live 권한 및 개인 정보 보호 제한 실시 앱에서 관리 되는 통신 채널 또는 관계를 기반으로 합니다. 또한 게임 채팅 2 정확 하 게 어떻게 제한은 영향을 주지 오디오 (예: 오디오 오디오 제한 인지 uni 또는 양방향)의 방향을 결정 하는 진단 정보를 제공 합니다.
 
 ### <a name="game-chat"></a>게임 채팅
 
-게임 채팅을 통해 권한 및 개인 정보를 노출 합니다 `RestrictionMode` 속성입니다. 검사 하 여 검색할 수 있습니다 `GameChatUser::RestrictionMode`.
+게임 채팅 권한 및 개인 정보 보호를 통해 노출 되는 `RestrictionMode` 속성입니다. 검사 하 여 검색할 수 있습니다 `GameChatUser::RestrictionMode`.
 
 ### <a name="game-chat-2"></a>게임 채팅 2
 
 게임 채팅 2 권한 및 개인 정보 보호 제한 조회 수행 하는 사용자가 새로 추가 되었습니다. 사용자의 `chat_user::chat_indicator()` 는 항상 반환 `game_chat_user_chat_indicator::silent` 해당 작업이 완료 될 때까지 합니다. 사용자와의 통신 제한에 의해는 권한 또는 개인 정보, 사용자의 영향을 받는 경우 `chat_user::chat_indicator()` 돌아올 `game_chat_user_chat_indicator::platform_restricted`. 음성 및 텍스트를 둘 다 채팅; 플랫폼 통신 제한이 적용 여기서 텍스트 채팅 플랫폼 제한에 의해 차단 하지 않으면이 음성 채팅, 또는 그 반대로 인스턴스 안 됩니다.
 
-`chat_user::chat_user_local::get_effective_communication_relationship()` 불완전 한 권한 및 개인 정보 보호 작업으로 인해 통신 하지 못하는 사용자를 구별 하는 데 사용할 수 있습니다. 통신 관계의 형태로 Game Chat 2에 의해 적용 반환 `game_chat_communication_relationship_flags` 이유 관계 같지 않을 구성 된 관계의 형태로 및 `game_chat_communication_relationship_adjuster`. 예를 들어 조회 작업 진행 되는 `game_chat_communication_relationship_adjuster` 는 `game_chat_communication_relationship_adjuster::intializing`. 이 메서드는 개발 및 디버깅 시나리오; 사용할 것으로 예상 UI에 영향을 사용 해야 ( [UI](#UI)참조).
+`chat_user::chat_user_local::get_effective_communication_relationship()` 불완전 한 권한 및 개인 정보 보호 작업으로 인해 통신 하지 못하는 사용자를 구별 하는 데 사용할 수 있습니다. 반환 형식으로 게임 채팅 2에 의해 적용 된 통신 관계 `game_chat_communication_relationship_flags` 을 이유에 관계 되지 않을 구성 된 관계의 형태로 같지 `game_chat_communication_relationship_adjuster`. 예를 들어 조회 작업이 진행 되는 `game_chat_communication_relationship_adjuster` 는 `game_chat_communication_relationship_adjuster::intializing`. 이 메서드는 개발 및 디버깅 시나리오; 사용할 것으로 예상 UI에 영향을 사용 해야 ( [UI](#UI)참조).
 
 ## <a name="cleanup"></a>정리
 
-원래 게임 채팅의 `ChatManager` -WinRT 런타임 클래스에 대 한 참조 인터페이스를 계산 합니다. 마지막 참조 개수를 0으로 떨어질 때 메모리 리소스 메모리가 회수 따라서를 정리 하 고 있습니다. 게임 채팅 2의 c + + API와 상호 작용 여 의도 하지 않은 단일 인스턴스를 통해 수행 됩니다. 호출 해야 앱에서 더 이상 Game Chat 2를 통해 통신을 필요로 경우 `chat_manager::cleanup()`. 이렇게 하면 게임 채팅 2 즉시 통신 관리에 할당 된 모든 리소스를 해제 합니다. 게임 채팅 2의 WinRT API 및 리소스 관리에 대 한 세부 정보를 [사용 하 여 게임 채팅 2 WinRT 프로젝션](using-game-chat-2-winrt.md#cleanup)를 참조 하세요.
+원래 게임 채팅의 `ChatManager` WinRT 런타임 클래스에 대 한 참조 인터페이스를 계산 합니다. 마지막 참조 개수를 0으로 떨어질 때 메모리 리소스는 회수 하는 이와 같이를 정리 하 고 있습니다. 게임 채팅 2의 c + + API와 상호 작용 여 의도 하지 않은 단일 인스턴스를 통해 수행 됩니다. 호출 해야 앱 더 이상 필요 없는 게임 채팅 2를 통해 통신을 하는 경우 `chat_manager::cleanup()`. 이렇게 하면 게임 채팅 2 즉시 통신 관리에 할당 된 모든 리소스를 해제 합니다. 게임 채팅 2의 WinRT API 및 리소스 관리에 대 한 세부 정보를 [사용 하 여 게임 채팅 2 WinRT 프로젝션](using-game-chat-2-winrt.md#cleanup)를 참조 하세요.
 
 ## <a name="failure-model-and-debugging"></a>오류 모델 및 디버깅
 
-WinRT API;는 원래 게임 채팅 따라서 예외를 통해 오류를 보고 합니다. 치명적이 지 않은 오류 또는 경고 선택적 디버그 콜백을 통해 보고 됩니다. 게임 채팅 2의 c + + API는 치명적이 지 않은 오류 수 사용 하기 쉽게 예외 즈 프리 프로젝트에서 원하는 경우 하므로 보고 하는 수단으로 예외를 throw 하지 않습니다. 그러나 게임 채팅 2, 심각한 오류를 알리는 예외를 throw 하 고 있습니다. 이러한 오류는 API 오용 인스턴스를 초기화 하거나 게임 채팅 인스턴스에서 제거 된 후 사용자 개체에 액세스 하기 전에 사용자 게임 채팅 인스턴스를 추가 하는 등의 결과입니다. 이러한 오류를 개발 초기에 발견할 수 많으며 Game Chat 2와 상호 작용 하는 데 사용 패턴을 수정 하 여 해결할 수 있습니다. 이러한 오류가 발생 하는 경우 예외가 발생 하기 전에 오류 원인을 하는지에 대 한 힌트 디버거에 인쇄 됩니다. 게임 채팅 2의 WinRT API를 통해 예외 오류를 보고 WinRT 패턴을 따릅니다.
+원래 게임 채팅는 WinRT API입니다. 따라서 예외를 통해 오류를 보고 합니다. 치명적이 지 않은 오류 또는 경고 선택적 디버그 콜백을 통해 보고 됩니다. 게임 채팅 2의 c + + API 치명적이 지 않은 오류 수 사용 하기 쉽게 예외 없이 프로젝트에서 원하는 경우 하므로 보고 하는 수단으로 예외를 throw 하지 않습니다. 그러나 게임 채팅 2, 심각한 오류를 알리는 예외를 throw 하 고 있습니다. 이러한 오류는 API 오용 인스턴스를 초기화 하거나 게임 채팅 인스턴스에서 제거 된 후 사용자 개체에 액세스 하기 전에 사용자가 게임 채팅 인스턴스를 추가 하는 등의 결과입니다. 이러한 오류 개발 초기에 발견 될 것으로 예상 되 고 Game Chat 2와 상호 작용 하는 데 사용 패턴을 수정 하 여 수정할 수 있습니다. 이러한 오류가 발생 하면 예외가 발생 하기 전에 오류 원인을 하는지에 대 한 힌트 디버거에 인쇄 됩니다. 게임 채팅 2의 WinRT API는 예외를 통해 오류를 보고 WinRT 패턴을 따릅니다.
 
 ## <a name="how-to-configure-popular-scenarios"></a>인기 있는 시나리오를 구성 하는 방법
 
-참조 [사용 하 여 게임 채팅 2-인기 있는 시나리오를 구성 하는 방법](using-game-chat-2.md#how-to-configure-popular-scenarios) 푸시 작용, 팀 및 브로드캐스트 스타일 통신 시나리오와 같은 인기 있는 시나리오를 구성 하는 방법에 대 한 예입니다.
+참조 [를 사용 하 여 게임 채팅 2-인기 있는 시나리오를 구성 하는 방법](using-game-chat-2.md#how-to-configure-popular-scenarios) 푸시 작용, 팀 및 브로드캐스트 스타일 통신 시나리오와 같은 인기 있는 시나리오를 구성 하는 방법에 대 한 예입니다.
 
 ## <a name="pre-encode-and-post-decode-audio-manipulation"></a>미리 인코딩 및 사후 오디오 조작 디코드
 

@@ -8,20 +8,20 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: da3d682a1b66d25a12f21a93e9596d13afae7f90
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8337552"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8751274"
 ---
 # <a name="serviceerror-json"></a>ServiceError(JSON)
-서비스에 대 한 호출에 실패 한 경우 반환 된 오류에 대 한 정보를 포함 합니다. 
+서비스에 대 한 호출에 실패 한 경우 반환 된 오류에 대 한 정보가 포함 되어 있습니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="serviceerror"></a>ServiceError
  
-ServiceError 개체에는 다음 사양을 있습니다.
+ServiceError 개체에 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
@@ -41,12 +41,12 @@ ServiceError 개체에는 다음 사양을 있습니다.
 | 4100| 사용자는 하지 존재 The XUID 요청 URI에에서 포함 된 XBOX Live에 유효한 사용자를 표시 하지 않습니다.| 
 | 4500| 권한 부여 오류 호출자는 요청 된 작업을 수행 하도록 권한이 없습니다.| 
 | 5000| 서비스 오류는 내부 오류가 서비스| 
-| 5300| 서비스 사용할 수 없는 서비스 제공 되지 않습니다.| 
+| 5300| 서비스 사용할 수 없는 서비스는 수 없습니다.| 
    
 <a id="ID4EQE"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

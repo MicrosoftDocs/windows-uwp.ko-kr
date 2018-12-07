@@ -8,17 +8,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9fd8112c6e16b3e9d9fb70c34381e88ba5aa6273
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8330550"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8741017"
 ---
 # <a name="marketplace-uris"></a>마켓플레이스 URI
 
-이 섹션에서는 *marketplace* 서비스, 라고도 엔터테인먼트 검색 서비스 (EDS)에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *마켓플레이스* 서비스, 라고도 엔터테인먼트 검색 서비스 (EDS)에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
 
-Xbox 360, Windows Phone 디바이스 또는 Xbox.com 실행 된 게임에만이 서비스를 사용할 수 있습니다.
+Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 된 게임에만이 서비스를 사용할 수 있습니다.
 
 이러한 Uri에 대 한 도메인은 eds.xboxlive.com 및 inventory.xboxlive.com입니다.
 
@@ -69,7 +69,7 @@ Xbox 360, Windows Phone 디바이스 또는 Xbox.com 실행 된 게임에만이 
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaItemType}/fields](uri-medialocalemetadatamediaitemtypefields.md)
 
-&nbsp;&nbsp;지정 된 mediaitemtype 및 EDS의 특정된 버전에 대 한 데이터를 예상할 수 있는 하나 액세스 필드.
+&nbsp;&nbsp;데이터를 특정된 mediaitemtype 보고 EDS의 특정된 버전을 기대할 수 하나 액세스 필드.
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners](uri-medialocalemetadatamediaitemtypequeryrefiners.md)
 
@@ -89,7 +89,7 @@ Xbox 360, Windows Phone 디바이스 또는 Xbox.com 실행 된 게임에만이 
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/sortorders](uri-medialocalemetadatamediaitemtypesortorders.md)
 
-&nbsp;&nbsp;사용 가능한 액세스 주문 주어진된 mediaitem 형식과 EDS의 특정된 버전에 대 한 정렬합니다.
+&nbsp;&nbsp;사용할 수 있는 액세스 정렬 순서는 지정 된 mediaitem 형식과 EDS의 지정 된 버전에 대 한 합니다.
 
 [/media/{marketplaceId}/singleMediaGroupSearch](uri-medialocalesinglemediagroupsearch.md)
 

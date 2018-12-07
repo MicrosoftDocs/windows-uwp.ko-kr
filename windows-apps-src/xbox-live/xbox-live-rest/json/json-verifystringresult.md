@@ -8,30 +8,30 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b01793222be80efccdca1f24f5226a2e9ff78064
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8341718"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8732533"
 ---
 # <a name="verifystringresult-json"></a>VerifyStringResult(JSON)
-[/System/strings/validate](../uri/stringserver/uri-systemstringsvalidate.md)에 제출 하는 각 문자열에 해당 되는 결과 코드.
+[/System/strings/validate](../uri/stringserver/uri-systemstringsvalidate.md)에 제출 된 각 문자열에 해당 되는 결과 코드.
 <a id="ID4ER"></a>
 
 
 ## <a name="verifystringresult"></a>VerifyStringResult
 
-VerifyStringResult 개체에는 다음 사양을 있습니다.
+VerifyStringResult 개체에 다음과 같이 지정 합니다.
 
 | 멤버| 유형| 설명|
 | --- | --- | --- |
 | resultCode| 32 비트 부호 없는 정수| 필수. HResult 코드에 해당 하 문자열을 전송 합니다.|
-| offendingString| string| 필수. 거부 하는 문자열을 발생 하는 문자열 값입니다.|
+| offendingString| string| 필수. 문자열을 거부 하는 문자열 값입니다.|
 
 <a id="ID4EXB"></a>
 
 
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
 
 
 ```json

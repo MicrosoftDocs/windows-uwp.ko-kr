@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 21a583e7556f98b827a63de3948f43d76f25c907
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8339608"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8746696"
 ---
 # <a name="titleassociation-json"></a>TitleAssociation(JSON)
 도전 과제와 연결 된 제목입니다. 
@@ -21,18 +21,18 @@ ms.locfileid: "8339608"
  
 ## <a name="titleassociation"></a>TitleAssociation
  
-TitleAssociation 개체에는 다음 사양을 있습니다.
+TitleAssociation 개체에 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | name| 문자열| 콘텐츠 지역화 된 이름입니다.| 
-| id| string| TitleId (32 비트 부호 없는 정수, 10 진수에서 반환).| 
+| id| string| TitleId (32 비트 부호 없는 정수를 10 진수에서 반환).| 
 | 버전| 문자열| 연결 된 제목 (필요한 경우)의 특정 버전입니다.| 
   
 <a id="ID4E4B"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

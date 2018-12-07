@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 크리에이터 스
 ms.localizationpriority: medium
 ms.openlocfilehash: caeedd11d18474721f291e14f5db1697cf650db7
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8336430"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8745151"
 ---
 # <a name="get-started-developing-an-xbox-live-creators-program-title-with-the-unity-game-engine"></a>Unity 게임 엔진을 사용하여 Xbox Live 크리에이터스 프로그램 타이틀 개발 시작
 
@@ -21,7 +21,7 @@ ms.locfileid: "8336430"
 
 [만들기 및 테스트는 Xbox Live 크리에이터 스 프로그램 타이틀 게시](create-and-test-a-new-creators-title.md)
 
-[구성 Xbox Live Unity에서](configure-xbox-live-in-unity.md)
+[구성 Xbox Live Unity의](configure-xbox-live-in-unity.md)
 
 [Xbox Live 계정에 권한을 부여합니다](authorize-xbox-live-accounts.md)
 
@@ -29,11 +29,11 @@ ms.locfileid: "8336430"
 
 [PlayerAuthentication 프리 팹 로그인](playerauthentication-prefab-sign-in.md)  Post 1804 Unity 플러그 인 릴리스
 
-[SignInManager는 로그인](sign-in-manager.md)
+[로그인 하 고 SignInManager](sign-in-manager.md)
 
 [플레이어 통계 및 순위표 Unity 프로젝트에 추가](add-stats-and-leaderboards-in-unity.md)
 
-[점수 판 예제 씬 장면](setup-leaderboard-example-scene.md)
+[점수 판 예제 장면](setup-leaderboard-example-scene.md)
 
 [순위표 스크립트](unity-leaderboard-from-scratch.md)
 

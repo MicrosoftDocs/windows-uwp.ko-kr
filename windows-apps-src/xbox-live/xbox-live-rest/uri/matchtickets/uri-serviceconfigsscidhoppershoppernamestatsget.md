@@ -8,18 +8,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 95de95b35de496331dd3fe0a4c69f18e047c1020
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8322658"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8732675"
 ---
 # <a name="get-serviceconfigsscidhoppersnamestats"></a>GET (/serviceconfigs/{scid}/hoppers/{name}/stats)
 
 hopper에 대 한 통계를 가져옵니다.
 
 > [!IMPORTANT]
-> 이 메서드는 계약 103 이상을 사용 하 여 사용 하기 위한 하며 X Xbl-계약 버전의 헤더 요소: 103 또는 나중에 모든 요청.
+> 이 메서드를 계약 103 이상을 사용 하 여 사용 하기 위한 있으며 X Xbl-계약 버전의 헤더 요소: 103 또는 나중에 모든 요청.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4E5)
@@ -50,9 +50,9 @@ hopper에 대 한 통계를 가져옵니다.
 
 | 형식| 필수| 설명| 누락 된 경우 응답|
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| XUID (사용자 ID)| 예| 요청을 만드는 사용자 티켓에서 참조 하는 티켓 세션의 구성원 이어야 합니다. | 403|
-| 남용 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 된 경우 해당 클레임의 멀티 플레이 권한 있는 사용자만은 다른 서비스를 호출 하도록 허용 됩니다. | 403|
-| 제목 ID/증명 구매/장치 유형| 예| 제목에 일치 하는 지정 된 제목 클레임, 장치 유형 조합에 대 한 연결을 허용 해야 합니다. | 403|
+| XUID (사용자 ID)| 예| 요청 사용자 티켓이 참조 하는 티켓 세션의 구성원 이어야 합니다. | 403|
+| 남용 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 된 경우 해당 클레임의 멀티 플레이 권한 있는 사용자만는 매치 메이 킹 서비스 호출을 할 수 있습니다. | 403|
+| 제목 ID/증명 구매/장치 유형| 예| 제목에 일치 하 되는 지정 된 제목 클레임, 장치 유형 조합에 대 한 연결을 허용 해야 합니다. | 403|
 
 <a id="ID4E3C"></a>
 
@@ -64,7 +64,7 @@ hopper에 대 한 통계를 가져옵니다.
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4EQD"></a>
 
@@ -75,7 +75,7 @@ hopper에 대 한 통계를 가져옵니다.
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | hopperName| string| 선택한 hopper의 이름입니다.|
 | waitTime| 32 비트 부호 있는 정수| 평균 시간 hopper (정수로 초)에 대 한 일치 합니다. |
-| 채우기| 32 비트 부호 있는 정수| 사람들은 hopper 이후의 일치 항목을 기다리는의 수입니다.|
+| 채우기| 32 비트 부호 있는 정수| 사용자는 hopper 이후의 일치 항목을 기다리는 수입니다.|
 
 <a id="ID4E1D"></a>
 

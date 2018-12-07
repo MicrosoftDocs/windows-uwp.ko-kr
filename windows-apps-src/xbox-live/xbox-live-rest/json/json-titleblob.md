@@ -8,20 +8,20 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 51a0b17a46d1c71ffdf9098d4637ca59d840c90a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8344920"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8752833"
 ---
 # <a name="titleblob-json"></a>TitleBlob(JSON)
-저장소에서 제목에 대 한 정보를 포함합니다. 
+저장소의 제목에 대 한 정보가 포함 되어 있습니다. 
 <a id="ID4EP"></a>
 
  
 ## <a name="titleblob"></a>TitleBlob
  
-TitleBlob 개체에는 다음 사양을 있습니다.
+TitleBlob 개체에 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
@@ -35,7 +35,7 @@ TitleBlob 개체에는 다음 사양을 있습니다.
 <a id="ID4E6C"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

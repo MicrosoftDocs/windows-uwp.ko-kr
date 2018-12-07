@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트
 ms.localizationpriority: medium
 ms.openlocfilehash: a9256bfce05c14a0bfa63c7ec656dd899648d844
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8345703"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8741673"
 ---
 # <a name="whats-new-for-the-xbox-live-apis---april-2017"></a>새로운 기능에 대 한 Xbox Live Api-2017 년 4 월
 
@@ -25,12 +25,12 @@ Xbox Live Api 유니버설 Windows 플랫폼 (UWP) 및 Xbox One 모두 제목에
 
 ### <a name="tournaments"></a>토너먼트
 
-새 Api가 토너먼트 지원 하기 위해 추가 되었습니다. 이제 사용할 수는 `xbox::services::tournaments::tournament_service` 타이틀에서 토너먼트 서비스에 액세스 하는 클래스.
+새로운 Api가 토너먼트 지원 하기 위해 추가 되었습니다. 이제 사용할 수는 `xbox::services::tournaments::tournament_service` 타이틀에서 토너먼트 서비스에 액세스 하는 클래스입니다.
 
 이러한 새 토너먼트 Api는 다음과 같은 시나리오를 사용 합니다.
 
-* 현재 타이틀에 대 한 모든 기존 토너먼트 찾으려면 서비스를 쿼리 합니다.
+* 현재 제목에 대 한 모든 기존 토너먼트 찾으려면 서비스를 쿼리 합니다.
 * 서비스에서는 토너먼트에 대 한 세부 정보를 검색 합니다.
-* 토너먼트에 대 한 팀의 목록을 검색 서비스를 쿼리 합니다.
+* 팀은 토너먼트에 대 한 목록을 검색 서비스를 쿼리 합니다.
 * 서비스에서는 토너먼트에 대 한 팀에 대 한 세부 정보를 검색 합니다.
 * 실시간으로 활동 (RTA) 구독을 사용 하 여 토너먼트 및 팀에 변경 내용을 추적 합니다.

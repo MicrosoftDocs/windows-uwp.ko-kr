@@ -7,21 +7,21 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 문제 해결, 오류, 로그
 ms.localizationpriority: medium
 ms.openlocfilehash: 67735d83e5ff301ee4434a6917fce814cabe8309
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8341295"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8735248"
 ---
 # <a name="troubleshooting-the-xbox-live-apis"></a>Xbox Live Api 문제 해결
 
 ## <a name="code"></a>Code
 
-Xbox Live 서비스 API 계층에서 오류만을 사용 하 여 오류를 진단 하기가 어렵습니다. 추가 오류 정보-모든 RESTful 호출의 로깅 같은-서버를 사용할 수 있습니다. 이 데이터를 수신 하도록 응답으로 거 연결 하 고 디버그 추적을 활성화 합니다. 응답 로깅을 사용 하면 유용한 Fiddler 추적 이기도 HTTP 트래픽 및 웹 서비스 응답 코드를 볼 수 있습니다.
+Xbox Live 서비스 API 계층에서 오류만을 사용 하 여 오류를 진단 하기가 어렵습니다. 추가 오류 정보-모든 RESTful 호출의 로깅 같은-서버를 사용할 수 있습니다. 이 데이터를 수신할 수 응답으로 거 연결 하 고 디버그 추적을 활성화 합니다. 응답 로깅을 사용 하면 유용한 Fiddler 추적 이기도 HTTP 트래픽 및 웹 서비스 응답 코드를 볼 수 있습니다.
 
 ### <a name="c"></a>C++
 
-다음 코드 예제에서는 응답 로깅을 사용 및 디버그 오류 수준을 Verbose (설정할 수도 있습니다 디버그 오류 수준을 추적 호출이 실패만 표시 하려면 오류 또는 추적을 사용 하지 않도록 설정 꺼짐)으로 설정 합니다. Visual Studio에서 프로젝트를 실행할 때 결과 디버그 출력 출력 창에 전송 됩니다.  
+다음 코드 예제에서는 응답 로깅을 사용 하 고 디버그 오류 수준을 Verbose (설정할 수도 있습니다 디버그 오류 수준을 추적 호출이 실패만 표시 하려면 오류 또는 추적을 사용 하지 않도록 꺼짐)로 설정 합니다. Visual Studio에서 프로젝트를 실행 하는 경우 결과 디버그 출력 출력 창에 전송 됩니다.  
 
 ```cpp
 
@@ -31,7 +31,7 @@ Xbox Live 서비스 API 계층에서 오류만을 사용 하 여 오류를 진�
                 );
 ```
 
-디버그 출력 고유한 로그 파일을 리디렉션할 수도 같이:
+디버그 출력 고유한 로그 파일을 리디렉션할 수도 되도록 합니다.
 
 ```cpp
 

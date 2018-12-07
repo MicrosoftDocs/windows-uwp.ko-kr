@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d531352c4336e00c93a91e7c945602ab69695f2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8348518"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8737501"
 ---
 # <a name="presencerecord-json"></a>PresenceRecord(JSON)
 단일 사용자의 온라인 상태에 대 한 데이터를 제공 합니다.
@@ -21,19 +21,19 @@ ms.locfileid: "8348518"
 
 ## <a name="presencerecord"></a>PresenceRecord
 
-PresenceRecord 개체에는 다음 사양을 있습니다.
+PresenceRecord 개체에 다음과 같이 지정 합니다.
 
 | 멤버| 유형| 설명|
 | --- | --- | --- |
 | xuid| string| Xbox 사용자 ID (XUID)는 대상 사용자의 합니다. 이 사용자에 대 한 현재 상태 데이터를 제공 됩니다.|
 | 장치| [DeviceRecord](json-devicerecord.md) 의 배열| 사용자의 장치 레코드의 목록입니다.|
-| 상태| string| Xbox LIVE에서 사용자의 활동입니다. 가능한 값: <ul><li>온라인: 사용자가 하나 이상의 장치 레코드.</li><li>떨어져: 사용자가 Xbox LIVE에 서명 된 있지만 제목에서 활성화 되지 않습니다.</li><li>오프 라인: 사용자가 모든 장치에 존재 합니다.</li></ul> | 
-| lastSeen| [LastSeenRecord](json-lastseenrecord.md)| 마지막 확인 한 정보는 사용자가 없는 유효한 DeviceRecords 때에 사용할 수 있습니다. 개체가 캐시에서 제거 된 경우 해당 데이터 수 반환 되지, 없는 영구 저장소에 있기 때문에 있습니다.|
+| 상태| string| Xbox LIVE에서 사용자의 작업 합니다. 가능한 값: <ul><li>온라인: 사용자가 하나 이상의 장치 레코드.</li><li>바로: 사용자가 Xbox LIVE에 서명 된 있지만 모든 제목에 활성화 되지 않습니다.</li><li>오프 라인: 사용자가 모든 장치에 존재 합니다.</li></ul> | 
+| lastSeen| [LastSeenRecord](json-lastseenrecord.md)| 마지막 확인 한 정보는 사용자가 없는 유효한 DeviceRecords 때에 사용할 수 있습니다. 개체가 캐시에서 제거 된 데이터 하지 반환 될 수 있습니다, 없는 영구 저장소 때문입니다.|
 
 <a id="ID4E2C"></a>
 
 
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
 
 
 ```json

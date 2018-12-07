@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9c31ac069e86cbd0408ba6660a641907d4bc7f06
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8346343"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8753091"
 ---
 # <a name="mediarecord-json"></a>MediaRecord(JSON)
  
@@ -21,12 +21,12 @@ ms.locfileid: "8346343"
  
 ## <a name="mediarecord"></a>MediaRecord
  
-MediaRecord 개체에는 다음 사양을 있습니다.
+MediaRecord 개체에 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | id| string| Bing 카탈로그 또는 공급자 카탈로그에서 사용 되는 미디어의 식별자입니다.| 
-| idType| string| 미디어 식별자를 해석 하는 방법입니다. 가능한 값 "bing" 및 "공급자"를 포함 합니다.| 
+| idType| string| 미디어 식별자를 해석 하는 방법입니다. 가능한 값 "bing" 및 "공급자" 포함 됩니다.| 
 | name| 문자열| 미디어 콘텐츠에의 지역화 된 이름입니다.| 
   
 <a id="ID4ECC"></a>

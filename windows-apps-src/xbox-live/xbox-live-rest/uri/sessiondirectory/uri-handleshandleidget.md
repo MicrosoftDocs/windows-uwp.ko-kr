@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 501d36f4d1ac079af15d6bb7f35a90d5328fc8db
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8340084"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8749508"
 ---
 # <a name="get-handleshandle-id"></a>GET (/handles/{handle-id})
 핸들 id 지정 핸들을 검색 합니다.
@@ -31,9 +31,9 @@ ms.locfileid: "8340084"
 
 ## <a name="remarks"></a>설명
 
-이 HTTP/REST 메서드는 지정 된 핸들에 대 한 세션에 대 한 사용자의 현재 동작을 가져옵니다. 세션 개체의 모든 특성을 사용 하 여이 반환이 됩니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetCurrentSessionByHandleAsync**하 여 줄 바꿈할 수 있습니다.
+이 HTTP/REST 메서드는 지정 된 핸들에 대 한 세션에 대 한 사용자의 현재 동작을 가져옵니다. 세션 개체의 모든 속성을 사용 하 여이 반환이 됩니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetCurrentSessionByHandleAsync**하 여 줄 바꿈할 수 있습니다.
 
-이 메서드의 호출자에서 플레이어의 **MultiplayerActivityDetails** 개체 핸들 ID를 가져옵니다. 또는 호출자는 사용자 게임 초대를 수락한 후에 Id에서를 프로토콜 활성화를 가져옵니다.
+이 메서드의 호출자는 플레이어의 **MultiplayerActivityDetails** 개체에서 핸들 ID를 가져옵니다. 또는 호출자 사용자 게임 초대를 수락한 후에 Id에서를 프로토콜 활성화를 가져옵니다.
 
 <a id="ID4EDB"></a>
 
@@ -54,13 +54,13 @@ ms.locfileid: "8340084"
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4E5B"></a>
 
 
 ## <a name="response-body"></a>응답 본문
-[MultiplayerSession (JSON)](../../json/json-multiplayersession.md)에서 응답 구조를 참조 하세요.  
+[MultiplayerSession (JSON)](../../json/json-multiplayersession.md)에 대 한 응답 구조를 참조 하세요.  
 <a id="ID4EKC"></a>
 
 

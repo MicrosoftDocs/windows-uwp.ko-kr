@@ -4,14 +4,14 @@ description: Xbox Live 멤버의 온라인 상태 상태 설정에 코드 예제
 ms.assetid: 7e6e7b69-d7c3-42fa-bcc4-6d68947f6fdb
 ms.date: 04/04/2017
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 풍부한 상태, xbox
+keywords: xbox live, xbox, 게임, uwp, windows 10, 다양 한 상태, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a113dc140500c982ddf22e25308eaafeaed66d6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8327172"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8732031"
 ---
 # <a name="programming-rich-presence"></a>다양 한 상태 프로그래밍
 

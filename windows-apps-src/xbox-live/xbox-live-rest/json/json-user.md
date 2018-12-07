@@ -8,24 +8,24 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c1b3a34ef329696d51e615dd79d57783a132d05
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8347655"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8744934"
 ---
 # <a name="user-json"></a>User(JSON)
-사용자 순위표 데이터를 포함합니다. 
+사용자 순위표 데이터가 들어 있습니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="user"></a>사용자
  
-사용자 개체에는 다음 사양을 있습니다.
+사용자 개체에 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| 게이머 태그| string| 게이머의 플레이어 (최대 15 자). 플레이어를 식별할 때 클라이언트 UI에서이 값을 사용 해야 합니다.| 
+| 게이머 태그| string| (최대 15 자) 플레이어의 게이머 태그입니다. 플레이어를 식별할 때 클라이언트 UI에서이 값을 사용 해야 합니다.| 
 | 순위| 32 비트 부호 있는 정수| 순위표 데이터를 요청 하는 사용자를 기준으로 사용자의 순위를 지정 합니다.| 
 | rating| string| 사용자의 평점입니다.| 
 | xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 사용자의 합니다.| 
@@ -33,7 +33,7 @@ ms.locfileid: "8347655"
 <a id="ID4EMC"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

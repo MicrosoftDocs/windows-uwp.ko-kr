@@ -8,15 +8,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e0296eff0937ea5075630db0e049c86e2ea2c8ce
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8332430"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8752798"
 ---
 # <a name="title-storage-uris"></a>타이틀 저장소 URI
  
-이 섹션에서는 *타이틀 저장소*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *타이틀 저장소*에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
 모든 플랫폼에서 실행 되는 게임이이 서비스를 사용할 수 있습니다.
  
@@ -29,7 +29,7 @@ ms.locfileid: "8332430"
 
 [/global/scids/{scid}](uri-globalscidsscid.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다.
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다.
 
 [/global/scids/{scid}/data/{path}](uri-globalscidssciddatapath.md)
 
@@ -41,11 +41,11 @@ ms.locfileid: "8332430"
 
 [/json/users/batch/scids/{scid}/data/{pathAndFileName},json](uri-jsonusersbatchscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;여러 사용자가 동일한 파일 이름으로에서 여러 파일을 다운로드합니다.
+&nbsp;&nbsp;동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다.
 
 [/json/users/xuid({xuid})/scids/{scid}](uri-jsonusersxuidscidsscid.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다.
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다.
 
 [/json/users/xuid({xuid})/scids/{scid}/data/{path}](uri-jsonusersxuidscidssciddatapath.md)
 
@@ -57,7 +57,7 @@ ms.locfileid: "8332430"
 
 [/sessions/{sessionId}/scids/{scid}](uri-sessionssessionidscidsscid.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다.
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다.
 
 [/sessions/{sessionId}/scids/{scid}/data/{path}](uri-sessionssessionidscidssciddatapath.md)
 
@@ -69,11 +69,11 @@ ms.locfileid: "8332430"
 
 [/trustedplatform/users/batch/scids/{scid}/data/{pathAndFileName},{type}](uri-trustedplatformusersbatchscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;여러 사용자가 동일한 파일 이름으로에서 여러 파일을 다운로드합니다.
+&nbsp;&nbsp;동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다.
 
 [/trustedplatform/users/xuid({xuid})/scids/{scid}](uri-trustedplatformusersxuidscidsscid.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다.
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다.
 
 [/trustedplatform/users/xuid({xuid})/scids/{scid}/data/{path}](uri-trustedplatformusersxuidscidssciddatapath.md)
 
@@ -85,11 +85,11 @@ ms.locfileid: "8332430"
 
 [/untrustedplatform/users/batch/scids/{scid}/data/{pathAndFileName},{type}](uri-untrustedplatformusersbatchscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;여러 사용자가 동일한 파일 이름으로에서 여러 파일을 다운로드합니다.
+&nbsp;&nbsp;동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다.
 
 [/untrustedplatform/users/xuid({xuid})/scids/{scid}](uri-untrustedplatformusersxuidscidsscid.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다.
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다.
 
 [/untrustedplatform/users/xuid({xuid})/scids/{scid}/data/{path}](uri-untrustedplatformusersxuidscidssciddatapath.md)
 

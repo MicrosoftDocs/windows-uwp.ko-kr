@@ -8,15 +8,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 48bac0cedfb47c2ff1efcdc9c07ffce8330466e2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8329488"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8739482"
 ---
 # <a name="authorization-types"></a>권한 부여 유형
  
-Xbox Live 서비스 요청을 사용 하 여 다양 한 권한 부여 유형 사용합니다. 이 항목에서는 표준 권한 부여 유형 설명 합니다.
+Xbox Live 서비스 요청을 사용 하 여 다양 한 권한 부여 유형 사용합니다. 표준 인증 유형에 대해 설명합니다.
  
 | 유형| 설명| 
 | --- | --- | 
@@ -39,6 +39,6 @@ Xbox Live 서비스 요청을 사용 하 여 다양 한 권한 부여 유형 사
 <a id="ID4EUC"></a>
 
  
-##### <a name="reference--universal-resource-identifier-uri-referenceuriatoc-xboxlivews-reference-urismd"></a>참조 [Universal Resource Identifier (URI) 참조](../uri/atoc-xboxlivews-reference-uris.md)
+##### <a name="reference--universal-resource-identifier-uri-referenceuriatoc-xboxlivews-reference-urismd"></a>참조 [유니버설 리소스 URI (Identifier) 참조](../uri/atoc-xboxlivews-reference-uris.md)
 
    

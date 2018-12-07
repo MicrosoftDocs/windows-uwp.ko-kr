@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f9e51910e921c7efaa92dfd063e9d37975fda18f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8349386"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8741050"
 ---
 # <a name="usersxuidxuidlistspinslistnamecontainsitems"></a>/users/xuid(xuid)/lists/PINS/{listname}/ContainsItems
 전체 목록을 검색 하지 않고 일련의 항목 (itemId 지정한) 목록에 포함 되어 있는지 여부를 결정 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
@@ -27,7 +27,7 @@ ms.locfileid: "8349386"
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | XUID| string| 사용자의 XUID 합니다.| 
-| listname| string| 조작 목록 이름입니다.| 
+| listname| string| 조작 목록의 이름입니다.| 
   
 <a id="ID4E5B"></a>
 
@@ -36,7 +36,7 @@ ms.locfileid: "8349386"
 
 [POST](uri-usersxuidlistspinslistnamecontainsitemspost.md)
 
-&nbsp;&nbsp;전체 목록을 검색 하지 않고 목록에 항목 (itemId 지정한) 집합이 포함 되어 있는지 여부를 결정 합니다.
+&nbsp;&nbsp;목록 전체 목록을 검색 하지 않고 (itemId 지정한) 항목 집합이 포함 되어 있는지 여부를 결정 합니다.
  
 <a id="ID4EIC"></a>
 

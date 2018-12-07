@@ -7,27 +7,27 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f2e5496c9aab2629591a121850685e7f5a1b2fe
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8341000"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8732117"
 ---
 # <a name="xbox-live-sandboxes-introduction"></a>Xbox Live 샌드박스 소개
 
-[Xbox Live 서비스 구성](xbox-live-service-configuration-creators.md) 문서의 [파트너 센터](https://partner.microsoft.com/dashboard)에서 타이틀에 대 한 정보를 구성 해야 설명 된 것입니다. 이 정보는 통계, 순위표, 지역화, 등의 등이 포함 됩니다. 필요한 Xbox Live 서비스 구성 변경 게시 파트너 센터에서 개발 샌드박스에 변경 내용을 Xbox Live의 나머지 부분에서 획득 및 타이틀에 액세스할 수 있습니다.
+[Xbox Live 서비스 구성](xbox-live-service-configuration-creators.md) 문서의 [파트너 센터](https://partner.microsoft.com/dashboard)에서 타이틀에 대 한 정보를 구성 해야 설명 된 것입니다. 이 정보는 통계, 순위표, 지역화, 등과 같은 작업이 포함 됩니다. 필요한 Xbox Live 서비스 구성 변경 게시 파트너 센터에서 개발 샌드박스에 변경 내용을 Xbox Live의 나머지 부분에서 획득 및 타이틀에 액세스할 수 있습니다.
 
-개발 샌드박스를 사용 하면 격리 된 환경에서 타이틀에 대 한 변경 내용에 작업할 수 있습니다. 샌드박스 여러 가지 이점을 제공합니다.
+개발 샌드박스를 사용 하면 격리 된 환경에서 타이틀에 대 한 변경 내용에 작업할 수 있습니다. 샌드박스 여러 혜택을 제공합니다.
 
 1. 프로덕션 환경에서 유지 되는 버전 영향을 주지 않고 타이틀에 대 한 업데이트에 대 한 변경 내용에 반복할 수 있습니다.
-2. 보안상의 이유로 일부 도구 에서만 개발 샌드박스에서 작동합니다.
+2. 보안상의 이유로 일부 도구에서 개발 샌드박스 에서만 작동합니다.
 3. 다른 게시자에 샌드박스에 대 한 액세스를 부여 하지 않고 작업할 무엇을 볼 수 없습니다.
 
-기본적으로 Windows 10 Pc 및 Xbox One 본체 소매 샌드박스에 속합니다. Xbox Live 서비스 구성의 해당 버전에 액세스할 수 개발 샌드박스를 사용자 PC 및/또는 Xbox One을 전환 해야 합니다. 것 소매점에서 무언가 테스트 하거나 취하도록 재생 즐겨 찾는 Xbox Live 게임을 하는 경우 장치를 다시 정품 샌드박스 변경 해야 하는 것이 중요 합니다.
+기본적으로 Windows 10 Pc 및 Xbox One 본체 소매 샌드박스에서 됩니다. Xbox Live 서비스 구성의 해당 버전에 액세스할 수 개발 샌드박스에 PC 및/또는 Xbox One 전환 해야 합니다. 것를 취하도록 재생 즐겨 찾는 Xbox Live 게임 또는 소매점에서 무언가 테스트 하는 경우 장치를 다시 정품 샌드박스 변경 해야 하는 것이 중요 합니다.
 
 ## <a name="finding-out-about-your-sandbox"></a>샌드박스에 대해 알아보기
 
-타이틀 만들기 샌드박스를 만들어집니다. **파트너 센터** 에서 제품을 열고 **서비스**를 탐색 하 여 샌드박스 ID를 찾을 수 > **Xbox Live**. 페이지 맨 위에 있는 **샌드박스 ID** 를 나열 됩니다.
+타이틀 만들기 샌드박스에 만들어집니다. **파트너 센터** 에서 제품을 열고 **서비스**를 탐색 하 여 샌드박스 ID를 찾을 수 > **Xbox Live**합니다. 페이지 맨 위에 있는 **샌드박스 ID** 를 나열 됩니다.
 
 ![](../images/getting_started/devcenter_sandbox_id.png)
 
@@ -37,15 +37,15 @@ Unity, Windows 장치 포털 (WPD)를 사용 하 여 또는 명령줄을 통해 
 ### <a name="unity"></a>Unity
 
 #### <a name="prerequisites"></a>사전 요구 사항
-Unity에서 개발 샌드박스 내부 및 외부로 전환할 수 하기 전에 다음 요구 사항:
+Unity에서 개발 샌드박스 아웃 하기 전에 수행 해야 하는 다음 전환할 수 있습니다.
 
-1. [구성 Xbox Live Unity에서](configure-xbox-live-in-unity.md)
+1. [구성 Xbox Live Unity의](configure-xbox-live-in-unity.md)
 
 #### <a name="switch-sandboxes"></a>샌드박스를 전환 합니다.
 기본 제공에 Xbox Live 구성과 창 사용 하면 개발 및 소매 샌드박스 간에 쉽게 전환 합니다. 시작 하려면 **Xbox Live**로 이동 > 메뉴에서**구성** 합니다. **개발자 모드 구성** 섹션에 있는 현재 샌드박스를 볼 수 있습니다.
 
-1. **개발자 모드** **활성화**라는 경우 다음는 현재 연결 된 게임 개발 샌드박스입니다. 으로 전환 **정품 모드로 다시 전환** 단추를 클릭할 수 있습니다.
-2. **개발자 모드** **비활성화**라는 경우 다음는 현재 소매 샌드박스입니다. 전환할 수 **개발자 모드로 전환 하려면** 단추를 클릭할 수 있습니다.
+1. **개발자 모드** **활성화**으로 표시 한 다음는 현재 연결 된 게임 개발 샌드박스입니다. 아웃 전환 **정품 모드로 다시 전환** 단추를 클릭할 수 있습니다.
+2. **개발자 모드** **사용 하지 않도록 설정**으로 표시 한 다음는 현재 정품 샌드박스입니다. 전환할 수 **개발자 모드로 전환 하려면** 단추를 클릭할 수 있습니다.
 
 ![XBL 사용](../images/unity/unity-xbl-dev-mode.PNG)
 
@@ -58,31 +58,31 @@ Windows 장치 포털 (WPD)에 샌드박스를 전환 하기 전에 다음 요�
 
 #### <a name="switch-sandboxes"></a>샌드박스를 전환 합니다.
 
-1. [Windows 바탕 화면에서 디바이스 포털 설정](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-desktop) 문서에 설명 된 대로 웹 브라우저에서 연결 하 여 **Windows 개발자 포털** 을 엽니다.
+1. [Windows 바탕 화면에서 디바이스 포털 설정](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-desktop) 문서에 설명 된 대로 웹 브라우저에 연결 하 여 **Windows 개발자 포털** 을 엽니다.
 2. **Xbox Live**를 클릭 합니다.
 3. 텍스트 필드에서 개발 샌드박스를 입력 하 고 **변경**을 클릭 합니다.
 
 ![](../images/getting_started/wdp_switch_sandbox.png)
 
-일반 정품으로 다시 전환 하려면 여기 소매를 입력할 수 있습니다.
+일반 정품으로 다시 전환 하려면 다음 소매를 입력할 수 있습니다.
 
 ### <a name="command-line"></a>명령줄
 
 #### <a name="prerequisites"></a>사전 요구 사항
-명령줄을 통해 개발 샌드박스 내부 및 외부로 전환할 수 하기 전에 다음 요구 사항:
+명령줄을 통해 개발 샌드박스 아웃 하기 전에 수행 해야 하는 다음 전환할 수 있습니다.
 
 1. Xbox Live 도구에 있는 패키지를 다운로드 [https://aka.ms/xboxliveuwptools](https://aka.ms/xboxliveuwptools) 의 압축을 풉니다.
 
 #### <a name="switch-sandboxes"></a>샌드박스를 전환 합니다.
 1. **관리자**모드로 SwitchSandbox.cmd 배치 파일을 실행 합니다.
 
-관리자 모드 전환에 샌드박스를이 호출을 실행 합니다. 첫 번째 인수는 샌드박스를입니다. 예를 들어 MJJSQH.58 샌드박스도 전환 하려는 경우이 명령을 사용 합니다.
+관리자 모드에 샌드박스를 전환 하려면이 호출을 실행 합니다. 첫 번째 인수는 샌드박스를입니다. 예를 들어 MJJSQH.58 샌드박스도 전환 하려는 경우이 명령을 사용 합니다.
 
 ```cmd
 SwitchSandbox.cmd MJJSQH.58
 ```
 
-일반 정품으로 다시 전환 하려면 간단 하 게 제공 하는 두 번째 인수인으로 합니다.
+일반 정품으로 다시 전환 하려면 간단 하 게 제공 하는 두 번째 인수로 합니다.
 
 ```cmd
 SwitchSandbox.cmd RETAIL
@@ -95,17 +95,17 @@ SwitchSandbox.cmd RETAIL
 콘솔에 샌드박스를 변경 하는 Xbox 개발자 포털을 사용할 수 있습니다. 이렇게 하려면 콘솔 및 [디바이스 포털을 사용 하도록 설정](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-xbox)에서 [개발자 홈](https://docs.microsoft.com/windows/uwp/xbox-apps/dev-home) 으로 이동 합니다. Xbox 개발자 포털 열기 있는 경우:
 
 2. **Xbox Live**를 클릭 합니다.
-3. 텍스트 필드와 병아리 **변경**에서 개발 샌드박스를 입력 합니다.
+3. 텍스트 필드와 병아리 **변경**개발 샌드박스를 입력 합니다.
 
 ![](../images/getting_started/xdp_switch_sandbox.png)
 
 ### <a name="using-xbox-one-console-ui"></a>Xbox One 콘솔 UI를 사용 하 여
 
-[개발자 홈](https://docs.microsoft.com/windows/uwp/xbox-apps/dev-home) 을 사용 하 여 콘솔에서 직접 샌드박스를 변경할 수 있습니다.
+콘솔에서 직접 샌드박스를 변경 하려면 [개발자 홈](https://docs.microsoft.com/windows/uwp/xbox-apps/dev-home) 을 사용할 수 있습니다.
 
 1. **변경 샌드박스**, **바로 가기**아래를 클릭 합니다.
 2. 샌드박스 ID를 입력 하 고 **저장 하 고 다시 시작**을 클릭 합니다.
 
 ### <a name="sign-in-with-the-xbox-app"></a>Xbox 앱으로 로그인
 
-개발 PC 타이틀에 대 한 적절 한 샌드박스를 사용 하 여 전환 적합 한 테스트 계정을 사용 하 여 Xbox live에 로그인 하 확인 합니다. [Xbox Live 앱](https://www.xbox.com/en-US/xbox-app)에 로그인 하 여이 수행할 수 있습니다. 개발 환경에 원하는 샌드박스 Xbox 앱을 사용 하 여 시작 되 면는 로그인 사용자 모든 다른 Xbox Live로 동일한 제약 조건을 사용 하 여 서비스 샌드박스를 실행 합니다. 이렇게 하면 샌드박스에 대 한 유효한 계정을 사용 하 고 있는지 확인 하는 데 유용 합니다.
+개발 PC 타이틀에 대 한 적절 한 샌드박스를 사용 하 여 전환 적합 한 테스트 계정을 사용 하 여 Xbox live 로그인는 확인 합니다. [Xbox Live 앱](https://www.xbox.com/en-US/xbox-app)에 로그인 하 여이 수행할 수 있습니다. 개발 환경을 원하는 샌드박스 Xbox 앱을 사용 하 여 시작 되 면는 로그인 사용자 모든 다른 Xbox Live와 같은 제약을 사용 하 여 서비스 샌드박스를 실행 합니다. 이렇게 하면 샌드박스에 대 한 유효한 계정을 사용 하 고 있는지 확인 하는 데 유용 합니다.

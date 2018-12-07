@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 035f30279321b7b386f59e014fa6d185e6b71b57
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8327959"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8740449"
 ---
 # <a name="trustedplatformusersxuidxuidscidssciddatapathandfilenametype"></a>/trustedplatform/users/xuid({xuid})/scids/{scid}/data/{pathAndFileName},{type}
 다운로드, 업로드, 또는 파일을 삭제 합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
@@ -26,10 +26,10 @@ ms.locfileid: "8327959"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| 64 비트의 부호 없는 정수| Xbox 사용자 ID (XUID) 플레이어의 요청 하 게 합니다.| 
+| xuid| 64 비트의 부호 없는 정수| Xbox 사용자 ID (XUID) 플레이어의 요청을 하 게 합니다.| 
 | 서비스 안내| guid| 조회 서비스 구성의 ID입니다.| 
-| pathAndFileName| string| 항목에 액세스할 수에 대 한 경로 파일 이름입니다. 사용할 수 있는 문자를 포함 하 여 최종 슬래시 경로 부분에 대 한 (A Z) 대문자, 소문자 (a-z), 숫자 (0-9), 밑줄 (_)를 포함 하 고 슬래시 (/). 경로 부분 비어 있을 수 있습니다. 사용할 수 있는 문자 (A-z) 대문자, 소문자 (a-z), 숫자 (0-9) (최종 슬래시 다음의 모든) 파일 이름 부분 포함 밑줄 (_), 마침표 (.) 및 하이픈 (-). 파일 이름 수 비워 둘 수, 마침표 없거나 두 개의 연속 마침표를 포함 합니다.| 
-| 유형| 문자열| 데이터의 형식입니다. 가능한 값은 이진 파일 또는 json 합니다.| 
+| pathAndFileName| string| 액세스 항목에 대 한 경로 파일 이름입니다. 까지 포함 하 여 최종 슬래시 경로 부분에 대해 사용할 수 있는 문자는 대문자 (A-z), 소문자 (a-z), 숫자 (0-9), 밑줄 (_) 및 슬래시 (/). 경로 부분 비어 있을 수 있습니다. 사용할 수 있는 문자 (A-z) 대문자, 소문자 (a-z), 숫자 (0-9) (최종 슬래시 다음의 모든) 파일 이름 부분을 포함 한 밑줄 (_), 마침표 (.) 및 하이픈 (-). 파일 이름 수 비워 둘 수, 마침표 없거나 두 개의 연속 된 마침표를 포함 합니다.| 
+| 유형| 문자열| 데이터의 형식입니다. 가능한 값은 이진 또는 json 합니다.| 
   
 <a id="ID4EOC"></a>
 
@@ -38,7 +38,7 @@ ms.locfileid: "8327959"
 
 [DELETE](uri-trustedplatformusersxuidscidssciddatapathandfilenametype-delete.md)
 
-&nbsp;&nbsp;파일을 삭제 합니다. 
+&nbsp;&nbsp;파일을 삭제합니다. 
 
 [GET](uri-trustedplatformusersxuidscidssciddatapathandfilenametype-get.md)
 
@@ -46,7 +46,7 @@ ms.locfileid: "8327959"
 
 [PUT](uri-trustedplatformusersxuidscidssciddatapathandfilenametype-put.md)
 
-&nbsp;&nbsp;파일을 업로드 합니다. 데이터는 데이터 및 메타 데이터 전송 되는 단일 메시지 또는 일련의 작은 블록에 데이터 및 메타 데이터를 전송 하는 여러 블록 업로드로 전체 업로드를 업로드할 수 있습니다. 4 개의 메가바이트 보다 작은 파일만 단일 메시지로 보낼 수 있습니다. 다중 블록 업로드 json 종류의 데이터에 대 한 지원 되지 않습니다. 
+&nbsp;&nbsp;파일을 업로드합니다. 데이터는 데이터 및 메타 데이터 전송 되는 단일 메시지 또는 일련의 작은 블록에 데이터 및 메타 데이터를 전송 하는 다중 블록 업로드로 전체 업로드를 업로드할 수 있습니다. 4 개의 메가바이트 보다 작은 파일만 단일 메시지로 보낼 수 있습니다. 다중 블록 업로드 형식 json의 데이터에 대 한 지원 되지 않습니다. 
  
 <a id="ID4E5C"></a>
 

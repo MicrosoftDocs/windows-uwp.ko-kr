@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 21d534d7b55934d7174c925838ed88980acff609
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8322645"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8746854"
 ---
 # <a name="get-serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionname"></a>GET (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName})
 세션 개체를 가져옵니다.
@@ -31,7 +31,7 @@ ms.locfileid: "8322645"
 
 ## <a name="remarks"></a>설명
 
-이 HTTP/REST 메서드에 지정 된 이름에 대 한 세션 문서 읽고 세션을 검색 합니다. 성공 시 서버에서 가져온 모든 특성을 사용 하 여 세션 개체를 반환 합니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetCurrentSessionAsync**하 여 줄 바꿈할 수 있습니다. 직접 GET 메서드 매개 변수 **GetCurrentSessionAsync** *sessionReference* 매개 변수에 전달 된 세션에 대 한 **MultiplayerSessionReference** 개체에 지정 된와 유사 합니다.
+이 HTTP/REST 메서드에 지정 된 이름에 대 한 세션 문서 읽고 세션을 검색 합니다. 성공 시 서버에서 가져온 모든 속성을 사용 하 여 세션 개체를 반환 합니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetCurrentSessionAsync**하 여 줄 바꿈할 수 있습니다. 직접 GET 메서드 매개 변수 **GetCurrentSessionAsync** *sessionReference* 매개 변수에 전달 된 세션에 대 한 **MultiplayerSessionReference** 개체에 지정 된와 유사 합니다.
 
 GET 메서드를 와이어 형식은 다음과 같습니다.
 
@@ -51,7 +51,7 @@ GET /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- |
 | 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 1 부 세션 식별자입니다.|
-| sessionTemplateName| string| 현재 인스턴스 세션 서식 파일의 이름입니다. 2 부 세션 식별자입니다.|
+| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션 식별자입니다.|
 | 세션 이름| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.|
 
 <a id="ID4EZB"></a>
@@ -64,13 +64,13 @@ GET /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4EKC"></a>
 
 
 ## <a name="response-body"></a>응답 본문
-[MultiplayerSession (JSON)](../../json/json-multiplayersession.md)에서 응답 구조를 참조 하세요.  
+[MultiplayerSession (JSON)](../../json/json-multiplayersession.md)에 대 한 응답 구조를 참조 하세요.  
 <a id="ID4ETC"></a>
 
 

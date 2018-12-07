@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: aa66b81d1e363488a6969ab31d7091b695f09ae4
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8347396"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8732272"
 ---
 # <a name="titlestitleidsessionssessionidallocationstatus"></a>/titles/{titleId}/sessions/{sessionId}/allocationStatus
 지정 된 제목 id와 세션 id가에 대 한 티켓 요청 상태를 가져옵니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
@@ -28,7 +28,7 @@ ms.locfileid: "8347396"
  
 | 매개 변수| 설명| 
 | --- | --- | 
-| titleId| 요청에서 작동 해야 하는 타이틀의 ID입니다.| 
+| titleId| ID 요청을 실행 해야 하는 제목입니다.| 
 | sessionId| 조회 세션의 ID입니다.| 
   
 <a id="ID4EPB"></a>

@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 80ec2a462648177cc6bfc846b9c84278821b0e5e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8346964"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8757925"
 ---
 # <a name="delete-usersxuidxuidinboxmessageid"></a>DELETE (/users/xuid({xuid})/inbox/{messageId})
-사용자의 받은 편지함에서 사용자 메시지를 삭제합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
+사용자의 받은 편지함에서 사용자가 메시지를 삭제합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4ECB)
@@ -30,7 +30,7 @@ ms.locfileid: "8346964"
  
 ## <a name="remarks"></a>설명 
  
-Delete 작업이 idempotent입니다.
+삭제 작업 idempotent입니다.
  
 이 API는 지원만 콘텐츠 형식은 "application/json", 각 호출의 HTTP 헤더에 필요한 합니다. 
   
@@ -56,14 +56,14 @@ Delete 작업이 idempotent입니다.
  
 ## <a name="request-body"></a>요청 본문 
  
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
   
 <a id="ID4EHC"></a>
 
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드 
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | 코드| 설명| 
 | --- | --- | --- | --- | --- | 
@@ -81,16 +81,16 @@ Delete 작업이 idempotent입니다.
  
 | 속성| 형식| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | 
-| errorSource| string| 오류가 발생 한 나타냅니다.| 
+| errorSource| string| 지침에 오류가 발생 합니다.| 
 | 오류 코드| int| (Null 일 수) 오류와 관련 된 숫자 코드입니다.| 
-| errorMessage| string| 오류 세부 정보를 표시 하도록 구성 된 경우에 자세히 설명 합니다.| 
+| errorMessage| string| 오류 세부 정보를 표시 하도록 구성 된 경우 자세히 설명 합니다.| 
   
 <a id="ID4EYF"></a>
 
  
 ## <a name="effect-of-privacy-settings-on-resource"></a>리소스의 개인 정보 설정의 효과 
  
-만 사용자 메시지를 직접 삭제할 수 있습니다. 
+만 사용자가 메시지를 직접 삭제할 수 있습니다. 
   
 <a id="ID4EDG"></a>
 

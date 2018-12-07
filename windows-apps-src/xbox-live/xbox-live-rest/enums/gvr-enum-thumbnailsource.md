@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1fa68fcffbca4326ccdb5a65404260f81458c8d7
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8329651"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8753003"
 ---
 # <a name="thumbnailsource-enumeration"></a>ThumbnailSource 열거형
 ThumbnailSource 열거형에 자세히 설명합니다. 
@@ -23,7 +23,7 @@ ThumbnailSource 열거형에 자세히 설명합니다.
  
 | <b>열거자</b>| <b>설명</b>| 
 | --- | --- | 
-| Default| 큰 타일 및 작은 크기의 미리 보기 클립의 두 번째 3 지점에서 생성 됩니다.| 
-| 오프셋| 큰 타일 및 작은 크기의 미리 보기 고 클립에 대해 InitialUploadRequest에 지정 된 값에서 생성 됩니다.| 
+| Default| 큰 타일 및 작은 크기의 미리 보기는 클립의 두 번째 3 지점에서 생성 됩니다.| 
+| 오프셋| 큰 타일 및 작은 크기의 미리 보기 클립에 대 한 InitialUploadRequest에 지정 된 값에서 생성 됩니다.| 
 | Upload| 미리 보기가 생성 되며 GameClips 서비스의 독립 업로드 됩니다.| 
   

@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 354f3563c48139edc5d5cc041e8304998af55620
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8351745"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8746566"
 ---
 # <a name="delete-handleshandleid"></a>DELETE (/handles/{handleId})
-핸들 id 지정 처리를 삭제 합니다.
+핸들 id 지정 핸들을 삭제 합니다.
 
 > [!IMPORTANT]
 > 이 메서드는 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 하 고 X Xbl-계약 버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
@@ -30,7 +30,7 @@ ms.locfileid: "8351745"
 
 
 ## <a name="remarks"></a>설명
-이 HTTP/REST 메서드는 지정 된 ID에 대 한 핸들을 삭제 하 고 세션에 대 한 사용자의 현재 동작을 지웁니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.ClearActivityAsync**하 여 줄 바꿈할 수 있습니다.  
+이 HTTP/REST 메서드에 지정 된 ID에 대 한 핸들을 삭제 하 고 세션에 대 한 사용자의 현재 동작을 지웁니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.ClearActivityAsync**하 여 줄 바꿈할 수 있습니다.  
 <a id="ID4EAB"></a>
 
 
@@ -50,7 +50,7 @@ ms.locfileid: "8351745"
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4E4B"></a>
 

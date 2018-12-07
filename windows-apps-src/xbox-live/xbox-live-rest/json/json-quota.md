@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f3499fdba972d6e953813fc490d080910921698e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8344512"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8746623"
 ---
 # <a name="quotainfo-json"></a>quotaInfo(JSON)
 제목 그룹에 대 한 할당량 정보를 포함합니다. 
@@ -33,7 +33,7 @@ QuotaInfo 개체에는 다음 사양에 있습니다.
 <a id="ID4EXB"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 다음 예제에서는 글로벌 저장소에 대 한 응답을 보여 줍니다.
  

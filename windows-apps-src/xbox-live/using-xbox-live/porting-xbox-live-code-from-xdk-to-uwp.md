@@ -1,5 +1,5 @@
 ---
-title: Xbox Live 코드 XDK에서 UWP로 포팅
+title: XDK에서 UWP로 Xbox Live 코드 포팅
 description: Xbox Live 코드 Xbox 개발 키트 (XDK) 플랫폼에서 유니버설 Windows 플랫폼 (UWP)에 포트 하는 방법을 알아봅니다.
 ms.assetid: 69939f95-44ad-4ffd-851f-59b0745907c8
 ms.date: 04/04/2017
@@ -7,29 +7,29 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox xdk, 포팅
 ms.localizationpriority: medium
 ms.openlocfilehash: c6e8a6ebe716f1e062940066184e9f734441371b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8328826"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8742934"
 ---
 # <a name="porting-xbox-live-code-from-the-xbox-developer-kit-xdk-to-universal-windows-platform-uwp"></a>Xbox Live 코드 Xbox 개발자 키트 (XDK)에서 유니버설 Windows 플랫폼 (UWP)로 포팅
 
 ## <a name="introduction"></a>소개
 
-이 문서는 Xbox One XDK Xbox Live 코드를 Windows 10 유니버설 Windows 플랫폼 (UWP) 마이그레이션을 시작를 사용 하는 개발자가 작성 됩니다.
+이 문서는 Xbox One XDK Xbox Live 코드를 Windows 10 유니버설 Windows 플랫폼 (UWP) 마이그레이션을 시작을 사용 하는 개발자가 작성 됩니다.
 
-이 마이그레이션 기능도 포함 됩니다 XSAPI 1.0 (Xbox Live 서비스 API를 통해 2015 년 8 월 Xbox One XDK에 포함)에서 전환 XSAPI 2.0 (2015 년 11 월부터 Xbox One XDK에 포함 하 고 또한 Xbox Live SDK에서 사용할 수 있습니다. 이러한 Api의 기능 거의 동일 하지만 몇 가지 중요 한 구현 차이점이 있습니다.
+이 마이그레이션 기능도 포함 됩니다 XSAPI 1.0 (Xbox Live 서비스 API, Xbox One XDK 통해 2015 년 8 월에에서 포함)에서 전환 XSAPI 2.0 (2015 년 11 월부터 Xbox One XDK에 포함 하 고 또한 Xbox Live SDK에서 사용할 수 있습니다. 이러한 Api의 기능 거의 동일 하지만 몇 가지 중요 한 구현 차이가 있습니다.
 
-이 문서에서 다루는 다른 항목 포함 Windows 개발 컴퓨터를 준비 하 고 클라우드 기반 관리에 대 한 연결 된 저장소 API 뿐만 아니라 보안 소켓 API 등의 Xbox Live 서비스를 사용 하는 경우 필요 일반적으로 다른 Api를 설치 하 고 있습니다. 게임 저장합니다.
+이 문서에서 다루는 다른 항목 포함 Windows 개발 컴퓨터를 준비 하 고 클라우드 기반 관리에 대 한 연결 된 저장소 API 뿐만 아니라 보안 소켓 API 등의 Xbox Live 서비스를 사용 하는 경우 필요에 따라 다른 Api를 일반적으로 설치 게임 저장합니다.
 
 <a name="_Setting_up_and"></a>
 
 ## <a name="setting-up-and-configuring-your-project-in-partner-center-and-xdp"></a>설정 및 파트너 센터 및 XDP 프로젝트 구성
 
-Xbox Live 서비스를 사용 하는 UWP 제목 [파트너 센터](https://partner.microsoft.com/dashboard)에서 구성 해야 합니다. 최신 정보에 대 한 Xbox Live 프로그래밍 가이드에서 [Xbox Live SDK](https://developer.xboxlive.com/en-us/live/development/Pages/Downloads.aspx)에 포함 된 [새로운 또는 기존 UWP 프로젝트에 Xbox Live 추가](../get-started-with-partner/get-started-with-visual-studio-and-uwp.md) 참조 하세요.
+Xbox Live 서비스를 사용 하는 UWP 타이틀을 [파트너 센터](https://partner.microsoft.com/dashboard)에서 구성 해야 합니다. 최신 정보에 대 한 Xbox Live 프로그래밍 가이드에서 [Xbox Live SDK](https://developer.xboxlive.com/en-us/live/development/Pages/Downloads.aspx)에 포함 된 [새로운 또는 기존 UWP 프로젝트에 Xbox Live 추가](../get-started-with-partner/get-started-with-visual-studio-and-uwp.md) 참조 하세요.
 
-타이틀에 Xbox Live 서비스를 사용 하 여 이러한 단계를 포함 하는 해당 페이지에 대 한 항목:
+해당 페이지에서 항목 타이틀에 Xbox Live 서비스를 사용 하기 위한 다음이 단계를 다룹니다.
 
 -   파트너 센터에서 UWP 앱 프로젝트를 만듭니다.
 
@@ -37,9 +37,9 @@ Xbox Live 서비스를 사용 하는 UWP 제목 [파트너 센터](https://partn
 
 -   파트너 센터 제품 XDP 제품을 연결 합니다.
 
--   XDP (샌드박스에 Xbox Live 타이틀을 실행 하는 경우 필요)에서 개발자 계정을 만듭니다.
+-   XDP (샌드박스에 Xbox Live 타이틀을 실행 하는 경우 필요 함)에서 개발자 계정을 만듭니다.
 
-제목 멀티 플레이 지원 하는 경우 몇 가지 추가 설정에서 멀티 플레이 세션 템플릿 필요할 수 있습니다. Xbox Live 멀티 플레이 사용 하는 MPSD (멀티 플레이 세션 문서)를 작성 하는 모든 Windows 10 타이틀이 세션 템플릿에 "기능" 목록에 새 필드가 필요: ```userAuthorizationStyle: true```.
+제목에 멀티 플레이 지원 하는 경우 몇 가지 추가 설정 멀티 플레이 세션 템플릿에 필요할 수 있습니다. Xbox Live 멀티 플레이어를 사용 하 고는 MPSD (멀티 플레이 세션 문서)를 작성 하는 모든 Windows 10 타이틀이 세션 템플릿에 "기능" 목록에 새 필드가 필요 합니다. ```userAuthorizationStyle: true```.
 
 ### <a name="enabling-cross-play"></a>크로스 플레이 사용 하도록 설정
 
@@ -57,7 +57,7 @@ Xbox Live 서비스를 사용 하는 UWP 제목 [파트너 센터](https://partn
 
 3.  Xbox Live 지원 Visual Studio에서 유니버설 Windows 앱 프로젝트에 추가 합니다. 전체 소스를 추가 하거나 Visual Studio 프로젝트에 NuGet 패키지를 설치 하 여 이진 파일을 참조할 수 있습니다. 패키지는 c + + 및 WinRT 모두 사용할 수 있습니다. 자세한 내용은 참조 [새로운 또는 기존 UWP 프로젝트에 Xbox Live 추가](../get-started-with-partner/get-started-with-visual-studio-and-uwp.md)
 
-4.  에 샌드박스를 사용 하 여 개발 컴퓨터를 구성 합니다. 관리자 권한 명령 프롬프트에서 사용할 수 있는 Xbox Live SDK의 도구 디렉터리에 명령줄 스크립트 (예: SwitchSandbox.cmd XDKS.1).
+4.  에 샌드박스를 사용 하 여 개발 컴퓨터를 구성 합니다. 관리자 권한 명령 프롬프트에서 사용할 수 있는 Xbox Live sdk 도구 디렉터리에 명령줄 스크립트 (예: SwitchSandbox.cmd XDKS.1).
 
   **참고** 소매 샌드박스도 다시 전환 하려면 레지스트리 키를 수정 하는 스크립트 또는 소매 라는 샌드박스를 전환할 수 있습니다 하거나 삭제할 수 있습니다.
 
@@ -73,11 +73,11 @@ Xbox Live 서비스를 사용 하는 UWP 제목 [파트너 센터](https://partn
 
 ### <a name="appxmanifest-changes"></a>AppxManifest 변경
 
-Appxmanifest.xml 파일의 Xbox 및 UWP 버전 간의 가장 일반적인 변경이합니다.
+Xbox 및 UWP 버전 appxmanifest.xml 파일의 가장 일반적인 변경 됩니다.
 
-1. 패키지 Id UWP에서 개발 하는 동안에 중요합니다. Id 이름 및 게시자 모두 *일치 해야* UWP 앱에 대 한 파트너 센터에 정의 된 것입니다.
+1. 패키지 Id에 UWP를 개발 하는 동안에 중요합니다. Id 이름 및 게시자 모두 *일치 해야* UWP 앱에 대 한 파트너 센터에 정의 된 것입니다.
 
-1. 패키지 종속성 섹션에는 필요 합니다. 예를 들면 다음과 같습니다.
+1. 패키지 종속성 섹션은 필요 합니다. 예를 들면 다음과 같습니다.
 
 ```xml
   <Dependencies>
@@ -85,7 +85,7 @@ Appxmanifest.xml 파일의 Xbox 및 UWP 버전 간의 가장 일반적인 변경
   </Dependencies>
 ```
 
-1.  예제 UWP 응용 프로그램 매니페스트 (예를 들어 Xbox Live SDK에 포함 된 UWP 샘플 또는 Visual Studio에서 만든 기본 유니버설 Windows 앱 프로젝트 중 하나)에 대 한 특정 요구 사항이 응용 프로그램 매니페스트의 다른 섹션에 대 한 참조 UWP, 같은 ```<VisualElements>```.
+1.  예제 UWP 응용 프로그램 매니페스트 (예를 들어, Xbox Live SDK에 포함 된 UWP 샘플 또는 Visual Studio에서 만든 기본 유니버설 Windows 앱 프로젝트 중 하나)에 대 한 특정 요구 사항이 응용 프로그램 매니페스트의 다른 섹션에 대 한 참조 UWP, 예: ```<VisualElements>```.
 
 1.  제목 및 서비스 안내 xboxservices.config 파일에 정의 된 ( [다음 섹션](#_Define_your_title)참조) 대신 "xbox.live" 확장 범주에 있습니다.
 
@@ -93,7 +93,7 @@ Appxmanifest.xml 파일의 Xbox 및 UWP 버전 간의 가장 일반적인 변경
 
 1.  보안 소켓 networkmanifest.xml 파일에 정의 된 ( [Secure sockets](#_Secure_sockets)참조) 대신 "windows.xbox.networking" 범주에 있습니다.
 
-1.  UWP 타이틀에 Xbox Live 초대를 받으려면 "windows.protocol" 확장 범주를 정의 해야 합니다 ( [보내기 및 받기 초대](#_Sending_and_receiving)참조).
+1.  UWP 타이틀에 Xbox Live 초대를 받기 위해 "windows.protocol" 확장 범주를 정의 해야 합니다 ( [보내기 및 받기 초대](#_Sending_and_receiving)참조).
 
 1.  내 마이크 장치 기능을 추가 하려는 GameChat API를 사용 하는 경우는 ```<Capabilities>``` 요소입니다. 예를 들면 다음과 같습니다.
 
@@ -113,11 +113,11 @@ Xbox Live SDK는 더 이상 UWP 제목에 대 한 appxmanifest.xml에 포함 된
 ```
 
 > [!NOTE]
-> Xboxservices.config 내 모든 값은 대/소문자 구분 합니다.
+> Xboxservices.config 내의 모든 값은 대/소문자 구분 합니다.
 
-빌드 출력에서 사용할 수 있도록 프로젝트의 콘텐츠로이 구성 파일을 포함 합니다.
+빌드 출력에서 사용할 수 있도록 프로젝트의 내용으로이 구성 파일을 포함 합니다.
 
-**참고** 이러한 값은 다음 API를 사용 하 여 타이틀 내에서 프로그래밍 방식으로 사용할 수 있습니다.
+**참고** 이러한 값은 다음 API를 사용 하 여 타이틀 내에서 프로그래밍 방식으로 제공 됩니다.
 
 ```cpp
 Microsoft::Xbox::Services::XboxLiveAppConfiguration^ xblConfig = xblContext->AppConfig;
@@ -166,7 +166,7 @@ Xbox Live SDK (이진 NuGet 사용 하는 경우) </td>
 
 ### <a name="multiplayer-subscriptions-and-event-handling"></a>멀티 플레이 구독 및 이벤트 처리
 
-가장 멀티 플레이 제목을 포함 되어 XSAPI 2.0 XSAPI 1.0의 주요 변경 하나가 **RealTimeActivityService** **MultiplayerService**몇 가지 메서드 및 이벤트의 이동 합니다.
+대부분의 멀티 플레이 제목을 포함 되어 있는 XSAPI 2.0 XSAPI 1.0의 주요 변경 하나가 **RealTimeActivityService** **MultiplayerService**몇 가지 메서드 및 이벤트의 이동 합니다.
 
 예를 들면 다음과 같습니다.
 
@@ -180,19 +180,19 @@ Xbox Live SDK (이진 NuGet 사용 하는 경우) </td>
 
 -   **MultiplayerSubscriptionsEnabled** 속성
 
-**중요 한 구현 참고** 사용할 수 있는 하지 명시적으로 **RealTimeActivityService** 의 다른 항목과 **MultiplayerService**를 통해 이러한 메서드와 이벤트를 이동한 후, 경우에 여전히 호출 해야 **xblContext-&gt;RealTimeActivityService&gt;Activate()** 멀티 플레이 구독 RTA 서비스 해야 하기 때문에 **EnableMultiplayerSubscriptions()** 를 호출 하기 전에 합니다.
+**중요 한 구현 참고** 사용할 수 있는 하지 명시적으로 **RealTimeActivityService** 의 다른 항목과 **MultiplayerService**를 통해 이러한 메서드와 이벤트를 이동한 후에 여전히 호출 해야 **xblContext-&gt;RealTimeActivityService&gt;Activate()** 멀티 플레이 구독 RTA 서비스 해야 하기 때문에 **EnableMultiplayerSubscriptions()** 를 호출 하기 전에 합니다.
 
 ## <a name="whats-handled-differently-in-uwp"></a>UWP에서 다르게 처리 하는 기능
 
-다음은 (XDK와 UWP 버전 포함)는 새 [NetRumble 샘플](https://developer.xboxlive.com/en-us/platform/development/education/Pages/Samples.aspx) 에서 발견 될 가능성이 XDK 및 UWP, 간의 차이점 있는 코드의 섹션의 매우 높은 수준의 목록.
+다음은 새 [NetRumble 샘플](https://developer.xboxlive.com/en-us/platform/development/education/Pages/Samples.aspx) (있음 XDK와 UWP 버전 포함)에서 발생 하는 대로 XDK 및 UWP, 간의 차이점 있을 코드 섹션의 매우 높은 수준의 목록.
 
 -   제목 ID 및 서비스 안내 정보에 액세스
 
--   사전 실행 활성화 (새 UWP 용)
+-   사전 실행 활성화 (UWP에 대 한 새 항목)
 
 -   일시 중단/다시 시작 PLM 처리
 
--   확장된 실행 (새 UWP 용)
+-   확장된 실행 (UWP에 대 한 새 항목)
 
 -   Xbox **사용자** 개체 및 사용자 처리 차이
 
@@ -202,7 +202,7 @@ Xbox Live SDK (이진 NuGet 사용 하는 경우) </td>
 
     -   게임 패드 처리
 
--   멀티 플레이 권한을 확인합니다.
+-   멀티 플레이 권한 확인
 
 -   Xbox One 및 PC 간에 크로스 플레이 멀티 플레이어를 지원합니다.
 
@@ -212,7 +212,7 @@ Xbox Live SDK (이진 NuGet 사용 하는 경우) </td>
 
     -   게임-UWP에서 해당 없음에서에서 타사 구성원을 열거 하는 기능
 
--   게이머 프로필을 보여 주는
+-   게이머 프로필 표시
 
 -   보안 소켓 API 표면 변경
 
@@ -228,7 +228,7 @@ Xbox Live SDK (이진 NuGet 사용 하는 경우) </td>
 
 -   일부 렌더링 차이점
 
-다음 섹션에서는 이러한 차이점은 대부분에 자세히로 이동 합니다.
+다음 섹션에서는 이러한 차이점은 대부분의 추가 세부 정보로 이동합니다.
 
 ### <a name="accessing-title-id-and-scid-info"></a>제목 ID 및 서비스 안내 정보에 액세스
 
@@ -252,21 +252,21 @@ Platform::String^ scid = xblConfig->ServiceConfigurationId;
 
 -   PC에서 **제한** 상태가 없습니다-는 Xbox One 단독 개념입니다.
 
--   제목; 최소화 하는 경우에 즉시 시작 일시 중단 이 방법으로 [확장 실행](#_Extended_execution)섹션을 참조 하세요.
+-   제목, 최소화 하는 경우에 즉시 시작 일시 중단 이 방법으로 [확장 된 실행](#_Extended_execution)섹션을 참조 하세요.
 
--   타이밍은 다른: 콘솔에 1 초 대신 PC에서 일시 중단 하는 데 5 초 해야 합니다.
+-   타이밍은 다른: 콘솔에서 1 초 대신 PC에서 일시 중단 하는 데 5 초 해야 합니다.
 
-또 다른 중요 한 고려 사항은 연결 된 저장소를 사용 하는 경우이 API의 UWP 버전에서 새 **ContainersChangedSinceLastSync** 속성입니다. 다시 시작 이벤트를 처리할 때이 속성 타이틀 일시 중단 된 동안 클라우드에서 컨테이너 변경 여부를 확인할 수 있습니다. 이 플레이어가 한 대의 PC에서 게임을 일시 중단, 다른 위치에 재생 및 첫 번째 PC에 반환 하는 경우 발생할 수 있습니다. 일시 중단 적 전에 데이터 이러한 컨테이너에서 메모리로 읽어온 적, 경우 참조 하 고 변경에 따라 변경 처리를 다시 읽어 하려고 하는 것입니다.
+또 다른 중요 한 고려 사항은 연결 된 저장소를 사용 하는 경우이 API의 UWP 버전에서 새 **ContainersChangedSinceLastSync** 속성입니다. 다시 시작 이벤트를 처리할 때 타이틀 일시 중단 된 동안 클라우드에서 컨테이너로 변경 하는 경우이 속성을 확인할 수 있습니다. 이 플레이어 한 대의 PC에서 게임을 일시 중단 곳을 재생 하 고 첫 번째 PC에 반환 하는 경우 발생할 수 있습니다. 일시 중단 해야 하기 전에 데이터 이러한 컨테이너에서 메모리로 읽어온 적, 하는 경우 변경 및 그에 따라 변경 내용을 처리 참조를 다시 읽을 하려고 하는 것입니다.
 
-Windows 10에서 UWP 앱의 PLM을 처리 하는 방법에 대 한 자세한 내용은 MSDN 문서를 참조 하세요. [실행, 다시 시작 및 백그라운드 작업](https://msdn.microsoft.com/library/windows/apps/xaml/mt227652.aspx)합니다.
+Windows 10에서 UWP 앱의 PLM을 처리 하는 방법에 대 한 자세한 내용은 MSDN 문서를 참조 하세요 [실행, 다시 시작 및 백그라운드 작업](https://msdn.microsoft.com/library/windows/apps/xaml/mt227652.aspx)합니다.
 
-유용할 수 있습니다 또한 [Xbox One 용 PLM](https://developer.xboxlive.com/en-us/platform/development/education/Documents/PLM%20for%20Xbox%20One.aspx) 백서 GDN에을 게임으로 작성 된 있어 앱 수명 주기를 처리 하기 위한 개념의 대부분은 PC에서 계속 적용 합니다.
+유용할 수 있습니다 또한 [Xbox One 용 PLM](https://developer.xboxlive.com/en-us/platform/development/education/Documents/PLM%20for%20Xbox%20One.aspx) 백서 GDN에서 고려 하는 게임으로 작성 된 있어 앱 수명 주기를 처리 하기 위한 개념의 대부분은 PC에도 적용 합니다.
 
 <a name="_Extended_execution"></a>
 
 ### <a name="extended-execution"></a>확장된 실행
 
-UWP를 최소화 PC에서 앱 일반적으로 발생에 즉시 일시 중단을 시작 합니다. 확장된 실행을 사용 하 여이 프로세스를 연기할 수가 있습니다. 예제 구현을:
+UWP를 최소화 PC에서 앱 일반적으로 게 즉시 일시 중단 터 합니다. 확장된 실행을 사용 하 여이 프로세스를 연기할 수가 있습니다. 예제 구현을:
 
 ```cpp
 using namespace Windows::ApplicationModel::ExtendedExecution;
@@ -297,13 +297,13 @@ RequestExtension();
 
 ```
 
-**ExtensionRevokedHandler** 호출 된 후에 새로운 확장 향후 잠재적인 보류에 대 한 요청 해야 합니다. **ExtensionRevokedHandler** 메모리 압력 시스템에서는 10 분이 지난 또는 게임 최소화 사용자가 게임을 다시 전환할 때 호출 됩니다. 따라서 해당이 시간에 될 가능성이 **RequestExtension()** 를 호출 해야 합니다.
+**ExtensionRevokedHandler** 호출 된 후 새 확장 향후 잠재적인 보류에 대 한 요청 해야 합니다. **ExtensionRevokedHandler** 메모리 압력 시스템에서는 10 분이 지난 또는 게임 최소화 사용자가 게임을 다시 전환할 때 호출 됩니다. 따라서 해당이 시간에 될 가능성이 **RequestExtension()** 를 호출 해야 합니다.
 
 -   동안 시작 합니다.
 
--   **ExtensionRevokedHandler** 에서 때 인수-&gt;이유 재개 (10 분 타이머가 만료 되기 전에 게임 최소화 하는 동안 탭 사용자) = = 합니다.
+-   **ExtensionRevokedHandler** 에서 때 인수-&gt;이유 재개 (10 분 타이머가 만료 되기 전에 게임 최소화 하는 동안에 다시 탭 사용자) = = 합니다.
 
--   **OnResuming** 처리기 (제목 메모리 압력 또는 10 분 타이머 일시 중단 된) 경우.
+-   **OnResuming** 처리기 (제목 메모리 압력 또는 10 분 타이머 인해 일시 중단 된) 경우.
 
 ### <a name="handling-users-and-controllers"></a>사용자 및 컨트롤러를 처리합니다.
 
@@ -316,7 +316,7 @@ Windows에서는 한 번에 하나의 로그인 사용자를 사용 하 여 작�
   ```
   ref new Microsoft::Xbox::Services::XboxLiveContext( Windows::Xbox::System::User^ user )
   ```
-1.  **아웃** 이벤트를 처리 합니다.
+1.  **아웃 로그** 이벤트를 처리 합니다.
   ```
   Windows::Xbox::System::User::SignOutStarted
   ```
@@ -328,25 +328,25 @@ Windows에서는 한 번에 하나의 로그인 사용자를 사용 하 여 작�
 
 이제 UWP/Xbox Live SDK에 대 한:
 
-1.  **XboxLiveUser**를 만듭니다.
+1.  **XboxLiveUser**을 만듭니다.
 
   ```
   auto xblUser = ref new Microsoft::Xbox::Services::System::XboxLiveUser();
   ```
 
-1.  UI를 사용 하 여 이러한 귀찮게 하지 않고 사용 마지막 Microsoft 계정을 사용 하 여 로그인 하려고 합니다.
+1.  UI를 사용 하 여 해당 귀찮게 하지 않고 사용 마지막 Microsoft 계정을 사용 하 여 로그인 하려고 합니다.
 
   ```
   xblUser->SignInSilentlyAsync();
   ```
 
-1.  이 비동기 작업에서 **SignInResult::Success** 결과에서 얻게 **XboxLiveContext**만들고 지역 / 합니다.
+1.  이 비동기 작업의 결과에 **SignInResult::Success** 를 얻은 경우 **XboxLiveContext**만들고 / 합니다.
 
   ```
   auto xblContext = ref new Microsoft::Xbox::Services::XboxLiveContext( xblUser );
   ```
 
-1.  대신 **SignInResult::UserInteractionRequired**얻게, 대화형 로그인 메서드를 호출 하면 시스템 UI 해야:
+1.  **SignInResult::UserInteractionRequired**를 가져오려면 대신 메서드를 호출 하 여 대화형 로그인 시스템 UI 표시 하는 해야 합니다.
 
   ```
   xblUser->SignInAsync();
@@ -354,13 +354,13 @@ Windows에서는 한 번에 하나의 로그인 사용자를 사용 하 여 작�
 
 1.  여기에서 발생할 수 있습니다 **SignInResult::UserCancel**사용자 로그인 하지 않은 경우 하 고 다시 로그인 하도록 메뉴 옵션을 제공 하는 것이 좋습니다.
 
-  **참고** 메뉴 옵션을 제공할 때 다른 Microsoft 계정으로 전환할 수 있는 옵션을 제공 하는 것이 좋습니다.
+  **참고** 메뉴 옵션을 제공 때 다른 Microsoft 계정으로 전환할 수 있는 옵션을 제공 하는 것이 좋습니다.
 
   ```
   xblUser->SwitchAccountAsync( nullptr );
   ```
 
-1.  로그인 한 사용자를 클릭 한 후 로그 아웃 사용자에 게 반응할 수 있도록 **XboxLiveUser::SignOutCompleted** 이벤트를 연결 하는 것이 좋습니다.
+1.  로그인 사용자를 클릭 한 후 로그 아웃 사용자에 게 반응할 수 있도록 **XboxLiveUser::SignOutCompleted** 이벤트를 연결 하는 것이 좋습니다.
 
   ```
   xblUser->SignOutCompleted += ref new Windows::Foundation::EventHandler<Microsoft::Xbox::Services::System::SignOutCompletedEventArgs^>( &OnSignOutCompleted );
@@ -368,35 +368,35 @@ Windows에서는 한 번에 하나의 로그인 사용자를 사용 하 여 작�
 
 1.  Windows 10에서 처리할 페어링할 컨트롤러인 있습니다.
 
-다음은 c + +에 대 한 간단한 예제 / WinRT 합니다. 자세한 예제에서는 Xbox Live 프로그래밍 가이드의 "Windows 10에서에서 라이브 인증 Xbox"를 참조 하세요. 광범위 한 예제에서 "새 UWP 프로젝트에 Xbox Live 추가" 찾을 수도 있습니다 유용 합니다.
+다음은 c + +에 대 한 간단한 예제 / WinRT 합니다. 자세한 예제에서는 Xbox Live 프로그래밍 가이드의 "Windows 10에서에서 라이브 인증 Xbox"를 참조 하세요. "새 UWP 프로젝트에 Xbox Live 추가"에서 더 광범위 하 게 예제 찾을 수도 있습니다 유용 합니다.
 
-### <a name="checking-multiplayer-privileges"></a>멀티 플레이 권한을 확인합니다.
+### <a name="checking-multiplayer-privileges"></a>멀티 플레이 권한 확인
 
-**CheckPrivilegeAsync()** 에 해당 하는 아직 Xbox Live SDK에서 사용할 수 있습니다. 지금은 **XboxLiveUser**프로그램 대 한 **권한** 을 속성에 의해 반환 되는 문자열 목록에서 필요한 사용 권한을 검색 해야 합니다. 예를 들어 멀티 플레이 권한을 확인 하려면 권한 "254"에 대 한 확인 XDK 설명서를 사용 하 여 **Windows::Xbox::ApplicationModel::Store::KnownPrivileges** 열거형의 모든 Xbox Live 권한 목록을 찾을 수 있습니다.
+**CheckPrivilegeAsync()** 에 해당 하는 아직 Xbox Live SDK에서 사용할 수 있습니다. 지금은는 **XboxLiveUser**에 대 한 **권한** 을 속성에 의해 반환 되는 문자열 목록에서 필요한 사용 권한을 검색 해야 합니다. 예를 들어 멀티 플레이 권한을 확인 하려면 권한 "254"에 대 한 확인 XDK 설명서를 사용 하 여 **Windows::Xbox::ApplicationModel::Store::KnownPrivileges** 열거형의 모든 Xbox Live 권한 목록을 찾을 수 있습니다.
 
-이 항목에서 논의 [xsapi 및 사용자 권한](https://forums.xboxlive.com/questions/48513/xsapi-user-privileges.html)을 게시 포럼을 참조 하세요.
+이 주제에 대해 논의 [xsapi 및 사용자 권한](https://forums.xboxlive.com/questions/48513/xsapi-user-privileges.html)을 게시 포럼을 참조 하세요.
 
 <a name="_Supporting_multiplayer_cross-play"></a>
 
 ### <a name="supporting-multiplayer-cross-play-between-xbox-one-and-pc-uwp"></a>Xbox One 및 PC UWP 멀티 플레이 크로스 플레이 지원합니다.
 
-XDP에서 새 세션 템플릿 요구 사항 외에도 ( [파트너 센터 및 XDP 프로젝트 구성 및 설정](#_Setting_up_and)참조), 크로스 플레이 세션 가입 기능에 대 한 새 제한이 함께 제공 됩니다. "None" 세션 가입 제한 더 이상 사용할 수 없습니다. "열어" 또는 "로컬" (기본이 "로컬") 중 하나를 사용 해야 합니다.
+XDP에서 새 세션 템플릿 요구 사항 외에도 ( [설정 및 파트너 센터 및 XDP 프로젝트 구성](#_Setting_up_and)참조), 크로스 플레이 세션에 가입 하는 기능에 대 한 새 제한이 함께 제공 됩니다. "None" 세션 가입 제한으로 더 이상 사용할 수 없습니다. "열어" 또는 "로컬" (기본이 "로컬") 중 하나를 사용 해야 합니다.
 
 또한 가입 및 읽기 제한 기본값 "로컬" 필수 **userAuthorizationStyle** 기능으로 인해 Windows 10 멀티 플레이어 합니다.
 
 [공용 멀티 플레이 세션을 만들 수는](https://forums.xboxlive.com/questions/46781/is-it-possible-to-create-public-multiplayer-sessio.html),이 포럼 문서 유용한 추가 정보를 포함합니다.
 
-자세한 내용 및 예제는 교차 플레이 활성화 멀티 플레이 샘플 NetRumble, 업데이트 된 멀티 플레이 개발자 순서도 또는 개발자 계정 관리자 (댐을)에서 찾을 수 있습니다.
+자세한 내용 및 예제는 업데이트 된 멀티 플레이 개발자 순서도, 크로스 플레이 사용 멀티 플레이 샘플 NetRumble, 또는 사용자 개발자 계정 관리자 (댐을)에서 찾을 수 있습니다.
 
 <a name="_Sending_and_receiving"></a>
 
 ### <a name="sending-and-receiving-invites"></a>초대를 주고받기
 
-초대 보내기에 대 한 UI를 불러오는 데 API **Microsoft:: Xbox::Services::System::TitleCallableUI::ShowGameInviteUIAsync()** 되었습니다. 세션-전달&gt; 활동 세션 (일반적으로 경우 로비)에서 **SessionReference** 개체입니다. 필요에 따라 참조 사용자 지정 초대 XDP에서 서비스 구성에 정의 된 문자열의 ID는 두 번째 매개 변수로 전달할 수 있습니다. 여기에 정의 된 문자열 초대 받은 플레이어에 게 알림 메시지에 표시 됩니다. Note는 어떤에서 전달 하는이 메서드에 대 한 매개 변수는 ID 번호와 서비스에 대 한 제대로 포맷 되어야 합니다. 예를 들어, 문자열 ID "1"로 전달 되어야 합니다에서 "/ / / 1".
+초대 보내기에 대 한 UI를 표시 하는 API **Microsoft:: Xbox::Services::System::TitleCallableUI::ShowGameInviteUIAsync()** 되었습니다. 세션-전달&gt; 활동 세션 (일반적으로 경우 로비)에서 **SessionReference** 개체입니다. 필요에 따라 참조 사용자 지정 초대 XDP에서 서비스 구성에 정의 된 된 문자열의 ID는 두 번째 매개 변수로 전달할 수 있습니다. 여기에 정의 된 문자열 초대 받은 플레이어에 게 알림 메시지에 표시 됩니다. Note는 어떻게에서 전달 하는이 메서드에 대 한 매개 변수는 ID 번호와 서비스에 대 한 제대로 포맷 되어야 합니다. 예를 들어, 문자열 ID "1"로 전달 되어야 합니다에서 "/ / / 1" 입니다.
 
-멀티 플레이 서비스를 사용 하 여 직접 초대 보내기 하려는 경우 (즉, 하지 않고 모든 UI)를 표시 다른 초대 메서드는 사용자의 **Microsoft:: Xbox::Services::Multiplayer::MultiplayerService::SendInvitesAsync()** 계속 사용할 수 있습니다 **XboxLiveContext**합니다.
+멀티 플레이 서비스를 사용 하 여 직접 초대 보내기 하려는 경우 (즉, 없이 표시 한 UI), 다른 초대 메서드는 사용자의 **Microsoft:: Xbox::Services::Multiplayer::MultiplayerService::SendInvitesAsync()** 계속 사용할 수 있습니다 **XboxLiveContext**합니다.
 
-프로토콜 활성화 타이틀을 Windows에 초대를 허용 하려면이 확장을 추가 해야 합니다 ** &lt;응용 프로그램&gt; ** appxmanifest에서 요소:
+프로토콜 활성화 타이틀 Windows에 들어오는 초대를 허용 하려면이 확장을 추가 해야 합니다 ** &lt;응용 프로그램&gt; ** appxmanifest에서 요소:
 
 ```xml
 <Extensions>
@@ -406,9 +406,9 @@ XDP에서 새 세션 템플릿 요구 사항 외에도 ( [파트너 센터 및 X
 </Extensions>
 ```
 
-그런 다음 하기 전에 Xbox One에서 때 처럼에 **CoreApplication** **활성화** 이벤트를 가져오고 활성화 종류는 **ActivationKind::Protocol**는 초대를 처리할 수 있습니다.
+그런 다음 하기 전에 Xbox One에서 때 처럼에 **CoreApplication** **활성화** 이벤트를 가져오고 활성화 종류는는 **ActivationKind::Protocol**초대를 처리할 수 있습니다.
 
-### <a name="showing-the-gamer-profile-card"></a>게이머 프로필 카드를 표시합니다.
+### <a name="showing-the-gamer-profile-card"></a>게이머 프로필 카드가 표시
 
 UWP에서 게이머 프로필 카드를 팝업 **Microsoft:: Xbox::Services::System::TitleCallableUI::ShowProfileCardUIAsync()**, 대상 사용자의 XUID 전달 하 여 사용 합니다.
 
@@ -420,9 +420,9 @@ UWP에서 게이머 프로필 카드를 팝업 **Microsoft:: Xbox::Services::Sys
 
 이 포럼 게시물 API 사용에 대 한 참조: [플랫폼 간 SecureDeviceAssociation에 대 한 설정](https://forums.xboxlive.com/answers/45722/view.html)합니다.
 
-**참고** UWP, **SocketDescriptions** 섹션은 appxmanifest를 자체 [networkmanifest.xml](https://forums.xboxlive.com/storage/attachments/410-networkmanifestxml.txt)이동 됩니다. 내부의 형식을 합니다 &lt;SocketDescriptions&gt; 요소는 에서도 거의 동일 합니다 **mx:** 접두사입니다.
+**참고** UWP, **SocketDescriptions** 섹션은 appxmanifest를 자체 [networkmanifest.xml](https://forums.xboxlive.com/storage/attachments/410-networkmanifestxml.txt)이동 됩니다. 내부 형식은 &lt;SocketDescriptions&gt; 요소는 거의 동일 하지 않고 바로 합니다 **mx:** 접두사입니다.
 
-Xbox 및 Windows 10 간의 크로스 플레이, *있는지* 모든 정의 된 *동일한* 두 개의 다른 종류의 매니페스트 (Package.appxmanifest Xbox One 용) 및 Windows 10 용 networkmanifest.xml 간에 수 있습니다. 소켓 이름, 프로토콜 등 *정확히*일치 해야 합니다.
+크로스 플레이 Xbox 및 Windows 10 사이 *있는지* 모든는 정의 된 *동일한* 두 개의 서로 다른 종류의 매니페스트 (Package.appxmanifest Xbox One 용) 및 Windows 10 용 networkmanifest.xml 간에 수 있습니다. 소켓 이름, 프로토콜 등 *정확히*일치 해야 합니다.
 
 또한 크로스 플레이 해야 내에서 다음과 같은 네 가지 SDA 사용법을 정의 하는 ```<AllowedUsages>``` 요소 *모두* Xbox One Package.appxmanifest에 및 Windows 10 networkmanifest.xml:
 
@@ -435,7 +435,7 @@ Xbox 및 Windows 10 간의 크로스 플레이, *있는지* 모든 정의 된 *�
 
 ### <a name="multiplayer-qos-measurements"></a>멀티 플레이어 QoS 측정
 
-보안 소켓 API 네임 스페이스 변화 하는 것 외에도 일부 개체 이름 및 값의 변경 너무 합니다. 다음 표에서에 측정 일반적으로 사용 되는 상태에 대 한 매핑이 있습니다.
+보안 소켓 API 네임 스페이스 변화 하는 것 외에도 일부 개체 이름 및 값 변경, 너무 합니다. 다음 표에서에서 일반적으로 사용 되는 측정 상태에 대 한 매핑을 발견 됩니다.
 
 표 2. 측정 상태 매핑 주로 사용 됩니다.
 
@@ -446,11 +446,11 @@ Xbox 및 Windows 10 간의 크로스 플레이, *있는지* 모든 정의 된 *�
 | PartialResults                     | InProgressWithProvisionalResults           |
 | 성공                            | 성공                                  |
 
-QoS (서비스 품질) *측정* 단계 및 *결과 처리* 는 원칙적에서 동일 API의 UWP 및 XDK 버전 비교 하는 경우. 그러나 이름 변경 하 고 몇 가지 변경 사항으로 인해 결과 코드는 다르게 일부 위치에서.
+QoS (서비스 품질) *측정* 단계 및 *결과 처리* 는 원칙에서 동일 API의 XDK 및 UWP 버전 비교 하는 경우. 그러나 이름 변경 하 고 몇 가지 변경 사항으로 인해 결과 코드에서에서 다르게 일부 위치 합니다.
 
-**XDK**에 대 한 QoS는 측정, 보안 장치 주소의 컬렉션과 메트릭 컬렉션이 생성 및 이러한 **MeasureQualityOfServiceAsync()** 메서드로 전달 합니다.
+**XDK**용는 QoS를 측정 하려면 컬렉션의 보안 장치 주소 및 메트릭 컬렉션이 생성 및 이러한 **MeasureQualityOfServiceAsync()** 메서드로 전달 합니다.
 
-**UWP**에 대 한 QoS는를 측정 하려면 새 **XboxLiveQualityOfServiceMeasurement()** 개체를 만들고를 호출할 때 **Append()** 은 **메트릭** 및 **DeviceAddresses** 속성에 개체의 **MeasureAsync()** 호출 방법입니다.
+**UWP**에 QoS를 측정 하려면 새 **XboxLiveQualityOfServiceMeasurement()** 개체를 만들고를 호출할 때 **Append()** 은 **메트릭** 및 **DeviceAddresses** 속성에 개체의 **MeasureAsync()** 호출 방법입니다.
 
 예를 들면 다음과 같습니다.
 
@@ -487,7 +487,7 @@ if (qosMeasurement->DeviceAddresses->Size > 0)
 
 ### <a name="writing-game-events"></a>게임 이벤트 작성
 
-UWP의 다른 API가 타이틀의 서비스 구성에 구성 된 게임 이벤트를 전송 합니다. Xbox Live SDK **EventsService** 및 속성 모음 모델을 사용합니다.
+UWP의 다른 API는 타이틀의 서비스 구성에 구성 된 게임 이벤트를 전송 합니다. Xbox Live SDK **EventsService** 및 속성 모음 모델을 사용합니다.
 
 예를 들면 다음과 같습니다.
 
@@ -508,13 +508,13 @@ xblContext->EventsService->WriteInGameEvent("MultiplayerRoundStart", properties,
 
 자세한 내용은 Xbox Live SDK 설명서를 참조 하세요.
 
-**팁** .H 헤더 파일에 XDP에서 다운로드 한 events.man 파일을 변환 (도구 디렉터리에 있는) Xbox Live SDK와 함께 제공 되는 **xcetool.exe** 를 사용할 수 있습니다. 사용 하는 '-x' 새 v2 속성 모음 스키마를 사용 하 여이 c + + 헤더를 생성 하는 옵션입니다. 이 헤더에 구성 된 이벤트의 모든 호출할 수 있는 c + + 함수를 포함 되어 있습니다. 예를 들어, **EventWriteMultiplayerRoundStart()** 합니다. WinRT 인터페이스를 사용 하려는 경우 각 이벤트에 대 한 속성 및 측정을 구성 하는 방법을 보려면이 헤더 파일을 참조할 수 있습니다.
+**팁** .H 헤더 파일에 XDP에서 다운로드 한 events.man 파일을 변환 (도구 디렉터리에 있는) Xbox Live SDK와 함께 제공 되는 **xcetool.exe** 사용할 수 있습니다. 사용 하는 '-x' 새 v2 속성 모음 스키마를 사용 하 여이 c + + 헤더를 생성 하는 옵션입니다. 이 헤더에 구성 된 이벤트의 모든 호출할 수 있는 c + + 함수를 포함 되어 있습니다. 예를 들어, **EventWriteMultiplayerRoundStart()** 합니다. WinRT 인터페이스를 사용 하려는 경우 각 이벤트에 대 한 속성 및 측정을 구성 하는 방법을 보려면이 헤더 파일을 참조할 수 있습니다.
 
 ### <a name="game-chat"></a>게임 채팅
 
-UWP의 GameChat 이진 NuGet 패키지로 Xbox Live SDK와 함께 포함 됩니다. 프로젝트에이 NuGet 패키지를 추가 하는 방법에 대 한 Xbox Live 프로그래밍 가이드의 지침을 참조 하세요.
+UWP의 GameChat 이진 NuGet 패키지로 Xbox Live SDK와 함께 포함 됩니다. NuGet 패키지 프로젝트에 추가 하는 방법에 대 한 Xbox Live 프로그래밍 가이드의 지침을 참조 하세요.
 
-기본 사용법의 XDK 및 UWP 버전 간에 거의 동일합니다. API의 몇 가지 차이점은 다음과 같습니다.
+기본 사용법의 XDK와 UWP 버전 거의 동일합니다. API의 몇 가지 차이점은 다음과 같습니다.
 
 1.  **User::AudioDeviceAdded** 이벤트는 UWP의 제목 듣지 필요가 없습니다. 기본 채팅 라이브러리 핸들 장치 추가 및 제거 합니다.
 
@@ -522,29 +522,29 @@ UWP의 GameChat 이진 NuGet 패키지로 Xbox Live SDK와 함께 포함 됩니�
 
 3.  **Microsoft::Xbox::GameChat** 네임 스페이스는 동일 하 게 유지 하지만 **Windows::Xbox::Chat** 네임 스페이스 **Microsoft::Xbox::ChatAudio**되었습니다.
 
-4.  XUID a 또는 a **AddLocalUserToChatChannelAsync()** 걸리는 **ChatAudio::IChatUser ^** **XboxUser**하는 대신 합니다.
+4.  XUID a 나 a **AddLocalUserToChatChannelAsync()** 걸리는 **ChatAudio::IChatUser ^** 는 **XboxUser**대신 합니다.
 
-5.  **RemoveLocalUserFromChatChannelAsync()** 필요는 **ChatAudio::IChatUser ^** **XboxUser**하는 대신 합니다. **IChatUser** **GameChatUser**에서 가져올 수 있습니다-&gt;**사용자**합니다.
+5.  **RemoveLocalUserFromChatChannelAsync()** 필요는 **ChatAudio::IChatUser ^** 는 **XboxUser**대신 합니다. **IChatUser** **GameChatUser**에서 가져올 수 있습니다-&gt;**사용자**입니다.
 
 ### <a name="connected-storage"></a>연결 된 저장소
 
 연결 된 저장소 API는 별도 [Xbox Live 플랫폼 확장 SDK](https://developer.xboxlive.com/en-us/live/development/Pages/Downloads.aspx)에서 제공 됩니다. 설명서는 Xbox Live SDK 문서에 포함 됩니다.
 
-전체 흐름이 같습니다 Xbox One에서 UWP 버전에서 **ContainersChangedSinceLastSync** 속성을 추가 합니다. 타이틀 변경 내용을 확인 컨테이너 클라우드에서 타이틀 일시 중단 된 동안 **GetForUserAsync()** 다시를 호출한 후 다시 시작 이벤트를 처리 하는 경우이 속성을 검사 해야 합니다. 데이터를 변경 하는 컨테이너 중 하나에서 메모리에 로드 되어 있는 경우 다시 참조 하 고 변경에 따라 변경 처리에 데이터를 읽고 하려고 하는 것입니다.
+전체 흐름 UWP 버전에서 **ContainersChangedSinceLastSync** 속성의는 Xbox One에서 동일 합니다. 타이틀 변경 내용을 확인 컨테이너 클라우드에서 타이틀 일시 중단 된 동안 다시 **GetForUserAsync()** 를 호출한 후에 다시 시작 이벤트를 처리 하는 경우이 속성을 검사 해야 합니다. 변경 된 컨테이너 중 하나에서 메모리에 로드 된 데이터가 있는 경우 참조 하 고 변경 적절 하 게 변경 내용을 처리를 다시 데이터를 읽고 하려고 하는 것입니다.
 
-UWP 버전의 다른 주요 차이점은 다음과 같습니다.
+다른 UWP 버전의 차이점은 다음과 같습니다.
 
 1.  Namespace 변경은 **Windows::Xbox::Storage** **Windows::Gaming::XboxLive::Storage**수 있습니다.
 
-2.  **ConnectedStorageSpace** 이름이 **GameSaveProvider**합니다.
+2.  **ConnectedStorageSpace** 이름이 변경 되었습니다. **GameSaveProvider**합니다.
 
 3.  **Windows::System::User** **XboxUser**대신 **GetForUserAsync()** 사용 되 고 서비스는 안내는 이제 필요 합니다.
 
 4.  로컬 없음 "컴퓨터" 저장소 (즉, **GetForMachineAsync()** 제거 되었습니다). 에 비 로밍, 로컬 데이터 저장에 대 한 **Windows::Storage::ApplicationData** 를 대신 사용 하는 것이 좋습니다.
 
-5.  예외 즈 프리 \*Result-type 개체 (예를 들어 **GameSaveProviderGetResult**); 비동기 결과가 반환 됩니다. 여기에서 **Status** 속성을 확인할 수 있으며 오류가 없는 경우 **Value** 속성에서 반환 된 개체를 읽을 수 있습니다.
+5.  예외 없이 \*Result-type 개체 (예를 들어 **GameSaveProviderGetResult**); 비동기 결과가 반환 됩니다. 여기에서 **Status** 속성을 확인할 수 있으며 오류가 없는 경우 **Value** 속성에서 반환 된 개체를 읽을 수 있습니다.
 
-6.  **ConnectedStorageErrorStatus 열거형** 은 **GameSaveErrorStatus** 바뀌고 결과의 **Status** 속성에서 반환 됩니다. 모든 이전 값이 존재 하 고 몇 가지 새로 추가 되었습니다.
+6.  **ConnectedStorageErrorStatus 열거형** 은 **GameSaveErrorStatus** 바뀌고 결과의 **Status** 속성에서 반환 됩니다. 이전 값을 모두 존재 하 고 몇 가지 새로 추가 되었습니다.
 
 -   중단
 
@@ -556,15 +556,15 @@ UWP 버전의 다른 주요 차이점은 다음과 같습니다.
 
 참조 GameSave 샘플 또는 NetRumble 샘플 예를 사용 합니다.
 
-**참고** Gamesaveutil.exe는 xbstorage.exe (명령줄 개발자는 XDK에 포함 된 유틸리티)을 같습니다. Xbox Live 플랫폼 확장 SDK를 설치한 후이 유틸리티를 볼 수 있습니다: C:\\Program Files (x86) \\Windows Kits\\10\\Extension SDKs\\XboxLive\\1.0\\Bin\\x64
+**참고** Gamesaveutil.exe는 xbstorage.exe (명령줄 개발자는 XDK에 포함 된 유틸리티)을과 같습니다. Xbox Live 플랫폼 확장 SDK를 설치한 후이 유틸리티를 볼 수 있습니다: C:\\Program Files (x86) \\Windows Kits\\10\\Extension SDKs\\XboxLive\\1.0\\Bin\\x64
 
 ## <a name="summary"></a>요약
 
-API 변경 내용 및이 백서에 설명 된 새로운 요구 하는 것을 새 UWP Xbox One XDK에서 기존 게임 코드를 포팅할 때 발생할 수 있습니다. 특정 강조 응용 프로그램 및 환경 설정 뿐만 아니라 멀티 플레이어와 연결 된 저장소 등의 Xbox Live 서비스와 관련 된 기능 영역을가지고 있습니다. 자세한 내용은 다음 참조와이 문서에서 제공 된 링크를 따라 및 더 많은 도움말, 응답 및 뉴스에 대 한 [개발자 포럼](https://forums.xboxlive.com) 의 "Windows 10" 섹션을 참조 하세요.
+API 변경 내용 및이 백서에 설명 된 새로운 요구 하는 것을 새 UWP Xbox One XDK에서 기존 게임 코드를 포팅할 때 발생할 수 있습니다. 특정 강조 응용 프로그램 및 환경 설정 뿐만 아니라 멀티 플레이어와 연결 된 저장소 등의 Xbox Live 서비스와 관련 된 기능 영역을가지고 있습니다. 자세한 내용은 다음을 참조를이 문서에서 제공 된 링크를 따라 및 더 많은 도움말, 응답 및 뉴스에 대 한 [개발자 포럼](https://forums.xboxlive.com) 의 "Windows 10" 섹션을 참조 하세요.
 
 ## <a name="references"></a>참조
 
--   [Xbox One에서에서 Windows 10로 포팅](https://developer.xboxlive.com/en-us/platform/development/education/Documents/Porting%20from%20Xbox%20One%20to%20Windows%2010.aspx)
+-   [Xbox One에서에서 Windows 10으로 포팅](https://developer.xboxlive.com/en-us/platform/development/education/Documents/Porting%20from%20Xbox%20One%20to%20Windows%2010.aspx)
 
 -   [Xbox One 백서](https://developer.xboxlive.com/en-us/platform/development/education/Pages/WhitePapers.aspx)
 

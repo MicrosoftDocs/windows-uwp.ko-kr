@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ae3ade71d4b7847d671fe7f01cdc31b0014f766
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8332492"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8743861"
 ---
 # <a name="sessionssessionidscidsscid"></a>/sessions/{sessionId}/scids/{scid}
-이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
+이 저장소 형식에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -36,7 +36,7 @@ ms.locfileid: "8332492"
 
 [GET](uri-sessionssessionidscidsscid-get.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다. 
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다. 
  
 <a id="ID4EGC"></a>
 

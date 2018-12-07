@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b154191e58b1c419947afea988cacc8638b73d0f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8343425"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8737918"
 ---
 # <a name="gameclipsource-enumeration"></a>GameClipSource 열거형
 GameClipSource 열거형에 자세히 설명합니다. 
@@ -27,5 +27,5 @@ GameClipSource 열거형에 자세히 설명합니다.
 | 콘솔| 게임 클립 Xbox 콘솔 플랫폼에서 발생 합니다.| 
 | TitleDirect| 게임 클립의 제목 시작 합니다.| 
 | 중간 | 게임 클립 도전 과제 형식입니다.| 
-| UserInitiated | 게임 클립 편집기 같은 중간 앱에서 시작 됩니다.| 
+| UserInitiated | 게임 클립 편집기와 같은 중간 앱에서 시작 됩니다.| 
   

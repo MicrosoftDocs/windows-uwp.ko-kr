@@ -1,27 +1,27 @@
 ---
-title: 연결 된 저장소를 사용 하 여 데이터를 로드 합니다.
+title: 연결 된 저장소를 사용 하 여 데이터 로드
 description: 연결 된 저장소를 사용 하 여 데이터를 로드 하는 방법을 알아봅니다.
 ms.assetid: c660a456-fe7d-453a-ae7b-9ecaa2ba0a15
 ms.date: 02/27/2018
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
+keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: a2f7498e8063e290dc506de72b34d2c77d29b26e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8350567"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8737096"
 ---
-# <a name="use-connected-storage-to-load-data"></a>연결 된 저장소를 사용 하 여 데이터를 로드 합니다.
+# <a name="use-connected-storage-to-load-data"></a>연결 된 저장소를 사용 하 여 데이터 로드
 
 데이터를 비동기적으로 사용 하 여 읽기는 `ReadAsync` 또는 `GetAsync` 저장소 메서드를 연결 합니다.
 
-### <a name="to-load-data-from-connected-storage"></a>연결 된 저장소에서 데이터를 로드
+### <a name="to-load-data-from-connected-storage"></a>연결 된 저장소에서 데이터를 로드 하려면
 
 1.  검색은 `ConnectedStorageSpace` 를 호출 하 여 사용자에 대 한 `GetForUserAsync`.
 
-    반환 된 XDK 예제에서 `ConnectedStorageSpace` 쉽게 관리할 수 있도록 지도에 추가 되는 `ConnectedStorageSpace` 여러 사용자에 대 한 개체입니다.
+    반환 된 XDK 예제에서 `ConnectedStorageSpace` 쉽게 관리할 수 있도록 지도에 추가 되는 `ConnectedStorageSpace` 다 수의 사용자에 대 한 개체입니다.
 
 2.  만들기는 `ConnectedStorageContainer` 를 호출 하 여 `CreateContainer` 에 `ConnectedStorageSpace`합니다.
 3.  호출 하 여 데이터를 검색할 `ReadAsync` 또는 `GetAsync` 에 `ConnectedStorageContainer`합니다. `ReadAsync` 해야 하는 동안 버퍼에 전달할 수 있으며 `GetAsync` 읽을 수 있는 데이터를 저장 하는 새 버퍼를 할당 합니다.
@@ -106,7 +106,7 @@ Windows.Xbox.Storage에는 Xbox One 콘솔에 대 한 연결 된 저장소 네�
 
 ## <a name="c-uwp-sample"></a>C# UWP 샘플
 
-XDK 게임 및 UWP 앱에 다른 Api를 사용할 수, XDK API 후 UWP API는 매우 밀접 하 게 모델링 됩니다. 데이터를 로드 하는 일부 네임 스페이스 및 클래스 이름 변경을 메모 하는 동안 같은 기본 단계를 수행 하려면 여전히 해야 합니다. 네임 스페이스를 사용 하는 대신 `Windows::Xbox::Storage` 사용 `Windows.Gaming.XboxLive.Storage`. 클래스 `ConnectedStorageSpace`을 하는 것 `GameSaveProvider`. 클래스 `ConnectedStorageContainer` 에 해당 하는 `GameSaveContainer`. 이러한 변경 내용은 [포팅 Xbox Live 코드에서 XDK에서 UWP로](../../using-xbox-live/porting-xbox-live-code-from-xdk-to-uwp.md)의 연결 된 저장소 섹션에서 자세히 설명 됩니다.
+XDK 게임 및 UWP 앱 Api를 사용할 수, UWP API는 매우 밀접 하 게 XDK API 후 모델링 됩니다. 데이터를 로드 하는 네임 스페이스 및 클래스 이름 변경을 메모 하는 동안 같은 기본 단계를 수행 하려면 여전히 해야 합니다. 네임 스페이스를 사용 하는 대신 `Windows::Xbox::Storage` 사용 `Windows.Gaming.XboxLive.Storage`. 클래스 `ConnectedStorageSpace`에 `GameSaveProvider`. 클래스 `ConnectedStorageContainer` 는 `GameSaveContainer`. 이러한 변경 내용은 [포팅 Xbox Live 코드에서 XDK에서 UWP로](../../using-xbox-live/porting-xbox-live-code-from-xdk-to-uwp.md)의 연결 된 저장소 섹션에 자세히 설명 됩니다.
 
 ```csharp
 //Namespace Required
@@ -172,5 +172,5 @@ if(result.Status == GameSaveErrorStatus.Ok)
 }
 ```
 
-UWP 앱에 대 한 연결 된 저장소 Api는 [Xbox Live API 참조](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.xboxlive.storage)에 설명 되어 있습니다.
+UWP 앱에 대 한 연결 된 저장소 Api는 [Xbox Live API 참조](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.xboxlive.storage)에 기록 됩니다.
 [Xbox Live API 샘플 게임 프로젝트 저장](https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK/GameSave)체크아웃 연결 된 저장소를 사용 하는 다른 샘플을 확인 합니다.

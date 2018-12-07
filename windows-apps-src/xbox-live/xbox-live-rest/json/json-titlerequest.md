@@ -8,32 +8,32 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a90f42c2f830ba6f04f77a1acaba067a2746a062
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8486758"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8733162"
 ---
 # <a name="titlerequest-json"></a>TitleRequest(JSON)
-타이틀에 대 한 정보에 대 한 요청 합니다. 
+타이틀에 대 한 정보를 요청 합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="titlerequest"></a>TitleRequest
  
-TitleRequest 개체에는 다음 사양을 있습니다.
+TitleRequest 개체에 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | id| 32 비트 부호 없는 정수| 제목의 식별자입니다.| 
 | activity| [ActivityRequest](json-activityrequest.md)| 제목 정보를 사용할 수 있는 경우 다양 한 상태 및 미디어 정보를 포함 합니다.| 
 | 상태| string| 여부는 사용자가 활성 인지 여부. 이 필드는 사용자가 비활성으로 표시 해야 합니다. 기본값은 "활성".| 
-| 배치| string| 배치 모드 제목입니다. 가능한 값 "전체", "fill", ", 사이드 상태가" 또는 "background"를 포함 합니다. 기본값은 "전체".| 
+| 배치| string| 배치 모드 제목입니다. 가능한 값 "전체", "채우기", "스냅" 또는 "background" 포함 됩니다. 기본값은 "전체".| 
   
 <a id="ID4EJC"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

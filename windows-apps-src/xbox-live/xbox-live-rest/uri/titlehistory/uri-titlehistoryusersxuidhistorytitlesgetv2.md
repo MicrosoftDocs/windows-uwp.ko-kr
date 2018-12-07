@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: cadbf38385bbc321ef5bf23eb93c3fbc5c1a2417
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8345215"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8753989"
 ---
 # <a name="get-usersxuidxuidhistorytitles"></a>GET (/users/xuid({xuid})/history/titles)
-타이틀을 사용자가 잠금 해제 하거나 해당 도전 과제에서 진행 될의 목록을 가져옵니다. 이 API는 사용자의 전체 기록 재생 또는 시작 타이틀을 반환 하지 않습니다. 이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`.
+사용자가 잠금 해제 하거나 진행률에서 수행의 도전 과제 타이틀의 목록을 가져옵니다. 이 API는 사용자의 전체 기록 제목 재생 또는 실행을 반환 하지 않습니다. 이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EY)
   * [쿼리 문자열 매개 변수](#ID4EDB)
@@ -30,7 +30,7 @@ ms.locfileid: "8345215"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 해당 타이틀 기록에 액세스 하는 사용자의 합니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID)의 제목 기록에 액세스 하는 사용자의 합니다.| 
   
 <a id="ID4EDB"></a>
 
@@ -39,7 +39,7 @@ ms.locfileid: "8345215"
  
 | 매개 변수| 필수| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | 
-| skipItems| 아니요| 32 비트 부호 있는 정수| 항목의 지정 된 시간 후 시작 하는 항목을 반환 합니다. 예를 들어 <b>skipItems = "3"</b> 항목을 검색 하는 시작 네 번째 항목으로 검색 합니다. | 
+| skipItems| 아니요| 32 비트 부호 있는 정수| 항목 수가 지정 된 후 시작 하는 항목을 반환 합니다. 예를 들어 <b>skipItems = "3"</b> 항목을 검색 하는 시작 네 번째 항목으로 검색 합니다. | 
 | continuationToken| 아니요| string| 지정 된 연속 토큰에서 시작 하는 항목을 반환 합니다. | 
 | maxItems| 아니요| 32 비트 부호 있는 정수| 최대 <b>skipItems</b> <b>continuationToken</b> 항목의 범위를 반환할 수와 결합할 수 있는 컬렉션에서 반환할 항목 수입니다. 서비스 수 기본값을 제공 <b>maxItems</b> 존재 하지 <b>maxItems</b>보다 적은 반환 될 수 있는 경우 결과의 마지막 페이지 아직 반환 되지 않은 경우에 합니다. | 
   
@@ -59,15 +59,15 @@ ms.locfileid: "8345215"
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| <b>X RequestedServiceVersion</b>| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트됩니다 됩니다.| 
-| <b>xbl 계약 버전 x</b>| 32 비트 부호 없는 정수| 있는 경우를 2로 설정 하면이 API의 V2 버전 사용 됩니다. 그렇지 않으면 V1 합니다.| 
+| <b>X RequestedServiceVersion</b>| string| 이 요청은 전송 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다.| 
+| <b>xbl 계약 버전 x</b>| 32 비트 부호 없는 정수| 있는 경우에 2로 설정 V2 버전이이 API의 사용 됩니다. 그렇지 않으면 V1 합니다.| 
   
 <a id="ID4ERF"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
   
 <a id="ID4EDG"></a>
 

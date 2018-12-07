@@ -8,15 +8,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a6f1e743542e70ee96ad93ee1cf2a7f2c3ed7158
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8326393"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8752927"
 ---
 # <a name="lists-uris"></a>목록 URI
  
-이 섹션에서는 *핀*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *핀*에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
 게임 및 Xbox 360에서, Windows Phone 디바이스, SmartGlass, 또는 Xbox.com에서 실행 중인 응용 프로그램에이 서비스를 사용할 수 있습니다.
  

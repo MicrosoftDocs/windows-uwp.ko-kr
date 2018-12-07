@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 01db596d7cb866d568000eff85254c3f5d668398
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8457492"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8750809"
 ---
 # <a name="gameclipsserviceerrorresponse-json"></a>GameClipsServiceErrorResponse(JSON)
 /Users/ {ownerId} {서비스 안내} /scids/ /clips/ {gameClipId}에 대 한 응답의 선택적 부분/uri/형식 / {gameClipUriType} API입니다. 
@@ -21,13 +21,13 @@ ms.locfileid: "8457492"
  
 ## <a name="gameclipsserviceerrorresponse"></a>GameClipsServiceErrorResponse
  
-GameClipsServiceErrorResponse 개체에는 다음 사양을 있습니다.
+GameClipsServiceErrorResponse 개체에 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | <b>errorSource</b>| string| 오류가 발생 합니다.| 
 | <b>errorResponseCode</b>| 32 비트 부호 있는 정수| (Null 일 수) 오류와 관련 된 코드입니다.| 
-| <b>errorMessage</b>| string| 오류에 대 한 추가 세부 정보| 
+| <b>errorMessage</b>| string| 오류에 대 한 추가 세부 정보입니다.| 
   
 <a id="ID4ECC"></a>
 

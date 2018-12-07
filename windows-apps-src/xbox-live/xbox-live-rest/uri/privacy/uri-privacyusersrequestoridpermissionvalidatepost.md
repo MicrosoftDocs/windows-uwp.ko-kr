@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: edd91560ffb5d81b30da4b1453612cc5853a456f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8332079"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8748814"
 ---
 # <a name="post-usersrequestoridpermissionvalidate"></a>POST (/users/{requestorId}/permission/validate)
-사용자가 대상 사용자의 집합을 사용 하 여 지정 된 작업을 수행할 수 있는지 여부에 대 한 예 또는 아니요 답변의 집합을 가져옵니다.
+대상 사용자의 집합을 사용 하 여 지정 된 작업을 수행 하는 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 답변의 집합을 가져옵니다.
 
   * [설명](#ID4EQ)
   * [URI 매개 변수](#ID4ECB)
@@ -31,9 +31,9 @@ ms.locfileid: "8332079"
 
 ## <a name="remarks"></a>설명
 
-요청 본문에는 사용자 목록 및 설정의 목록 및 결과 각 사용자/설정을 쌍에 대 한 허용/차단 결과입니다.
+요청 본문에는 사용자 목록 및 설정의 목록 및 결과 각 사용자/설정 쌍에 대 한 허용/차단 결과입니다.
 
-네트워크를 통한 멀티 플레이어 시나리오 (여기서 개인 정보 보호 통신 검사 수행 해야 Xbox 사용자 ID (XUID)에 있는 사용자와 하지 않는 네트워크 외부 사용자 간의)에서는 사용자가 입력할 [PermissionCheckBatchRequest (JSON)을](../../json/json-permissioncheckbatchrequest.md) 참조 하십시오.
+네트워크를 통한 멀티 플레이어 시나리오 (여기서 개인 정보 보호 통신 검사를 수행 해야 합니다 Xbox 사용자 ID (XUID)이 있는 사용자와 하지 않는 네트워크 외부 사용자 간의)에서는 사용자가 입력할 [PermissionCheckBatchRequest (JSON)를](../../json/json-permissioncheckbatchrequest.md) 참조 하세요.
 
 <a id="ID4ECB"></a>
 
@@ -49,7 +49,7 @@ ms.locfileid: "8332079"
 
 ## <a name="authorization"></a>권한 부여
 
-권한 부여 클레임 사용 | 클레임| 유형| 필수 여부| 예제 값|
+사용 권한 부여 클레임 | 클레임| 유형| 필수 여부| 예제 값|
 | --- | --- | --- | --- | --- | --- | --- |
 | Xuid| 64 비트의 부호 있는 정수| 예| 1234567890|
 
@@ -61,7 +61,7 @@ ms.locfileid: "8332079"
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: <code>XBL3.0 x=&lt;userhash>;&lt;token></code>|
-| X RequestedServiceVersion| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트됩니다 됩니다. 예제 값: 1입니다.|
+| X RequestedServiceVersion| string| 이 요청은 전송 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다. 예제 값: 1입니다.|
 
 <a id="ID4E4D"></a>
 
@@ -98,12 +98,12 @@ ms.locfileid: "8332079"
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
 
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
 
 | Code| 이유 구문| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 200| 확인| 세션을 검색 했습니다.|
-| 400| 요청이 잘못되었습니다.| 예: 잘못 된 설정 Id, 잘못 된 Uri 등.|
+| 400| 요청이 잘못되었습니다.| 예: 잘못 된 설정 Id, 잘못 된 Uri, 등.|
 | 404| URI에 지정 된 사용자가 존재 하지 않습니다.| 지정된 된 리소스를 찾을 수 없습니다.|
 
 <a id="ID4EIG"></a>

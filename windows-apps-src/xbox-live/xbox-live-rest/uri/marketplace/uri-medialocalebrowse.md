@@ -8,16 +8,16 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f692fb66580e20ffeefb3595b8cf9d795f504311
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8327447"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8739561"
 ---
 # <a name="mediamarketplaceidbrowse"></a>/media/{marketplaceId}/browse
-단일 미디어 그룹 내에서 항목을 검색할 수 있습니다. 찾아보기 API를 통해 클라이언트 단일 미디어 그룹 내에서 항목을 찾습니다. 무작위로 skipItems 매개 변수를 사용 하 여 연속 토큰을 사용 하는 대신 데이터 페이지에 액세스할 수 있습니다.
+단일 미디어 그룹 내에서 항목을 검색할 수 있습니다. 찾아보기 API를 통해 클라이언트 단일 미디어 그룹 내에서 항목을 찾습니다. 데이터의 페이지가 아닌 순차적으로 skipItems 매개 변수를 사용 하 여 연속 토큰을 사용 하 여 액세스할 수 있습니다.
  
-이 API를 사용 하면 지정 된 항목의 자식 내에서 검색 합니다. 예를 들어 전달 하 여 ID 및 MediaItemType 매개 변수는 Xbox 360 게임에 대 한, 따라서 검색 및 diltering DLC 게임에 대 한 아바타 항목 등의 해당 항목의 자식에 있습니다.
+이 API를 사용 하면 지정 된 항목의 내에서 검색 합니다. 예를 들어 전달 하 여 ID 및 MediaItemType 매개 변수는 Xbox 360 게임에 대 한, 따라서 검색 및 diltering 아바타 항목 등 DLC 게임에 대 한 해당 항목의 자식에 있습니다.
  
 이 API는 쿼리 구체화를 수락합니다.
  
@@ -28,7 +28,7 @@ ms.locfileid: "8327447"
    * 에피소드를 계절
    * 음악 비디오를 추적 합니다.
    * 앨범이 아티스트
-   * 게임 추가 기능 (DLC, 아바타, 테마 등)에 게임
+   * 게임을 게임 추가 기능 (DLC, 아바타, 테마 등)
   
 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
  

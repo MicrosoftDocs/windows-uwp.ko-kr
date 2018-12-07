@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 17974ddf7dec26abac18ccee9fda5249bc9d656f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8348797"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8742361"
 ---
 # <a name="post-titlestitleidvariants"></a>POST (/titles/{titleId}/variants)
 URI의 id입니다. 지정 된 제목에 대 한 게임 변형의 목록을 검색 하는 클라이언트에 의해 호출 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
@@ -33,7 +33,7 @@ URI의 id입니다. 지정 된 제목에 대 한 게임 변형의 목록을 검�
  
 | 매개 변수| 설명| 
 | --- | --- | 
-| titleid| 요청에서 작동 해야 하는 타이틀의 ID입니다.| 
+| titleid| ID 요청을 실행 해야 하는 제목입니다.| 
   
 <a id="ID5EG"></a>
 
@@ -51,7 +51,7 @@ gameserverds.xboxlive.com
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 제출 되는 데이터의 유형입니다.| 
+| 콘텐츠 유형| application/json| 제출 되는 데이터 형식입니다.| 
 | 호스트| gameserverds.xboxlive.com|  | 
 | Content-Length|  | 요청 개체의 길이입니다.| 
 | xbl 계약 버전 x| 1| API 계약 버전입니다.| 
@@ -84,7 +84,7 @@ gameserverds.xboxlive.com
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| locale| 반환 변형의의 로컬 합니다.| 
+| locale| 반환할 변형의의 로컬 합니다.| 
 | maxVariants| 반환할 변형의의 최대 수입니다.| 
 | publisherOnly|  | 
 | 제한|  | 
@@ -111,11 +111,11 @@ gameserverds.xboxlive.com
  
 ## <a name="required-response-headers"></a>필요한 응답 헤더
  
-응답에는 다음 표에 표시 된 헤더 항상 포함 됩니다.
+응답은 다음 표와 헤더 항상 포함 됩니다.
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 응답 본문에는 데이터의 유형입니다.| 
+| 콘텐츠 유형| application/json| 응답 본문에는 데이터 형식입니다.| 
 | Content-Length|  | 응답 본문의 길이입니다.| 
   
 <a id="ID4EMG"></a>
@@ -152,9 +152,9 @@ gameserverds.xboxlive.com
 | minRequiredPlayers| 변형에 대 한 플레이어의 최소 수입니다.| 
 | maxAllowedPlayers| 변형에 대 한 플레이어의 최대 수입니다.| 
 | gsiSetId| GSI 집합의 Id입니다.| 
-| gsiSetName| GSI 집합의 이름입니다.| 
+| gsiSetName| GSI 세트의 이름입니다.| 
 | selectionOrder|  | 
-| variantSchemaId| 집합은 GSI에 사용 되는 varaint 스키마의 id입니다.| 
+| variantSchemaId| Id는 GSI에 사용 되는 varaint 스키마 설정 합니다.| 
  
 <a id="ID4EYBAC"></a>
 

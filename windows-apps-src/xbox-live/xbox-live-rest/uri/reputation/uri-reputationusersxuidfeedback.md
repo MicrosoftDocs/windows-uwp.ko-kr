@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7bf186091eacfcdb39c41bf256000990613d3685
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8327103"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8751707"
 ---
 # <a name="usersxuidxuidfeedback"></a>/users/xuid({xuid})/feedback
  
@@ -25,7 +25,7 @@ ms.locfileid: "8327103"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| ulong| Xbox 사용자 ID (XUID) 보고 되 고 있는 사용자의 합니다.| 
+| xuid| ulong| Xbox 사용자 ID (XUID) 보고 중인 사용자입니다.| 
   
 <a id="ID4EZB"></a>
 

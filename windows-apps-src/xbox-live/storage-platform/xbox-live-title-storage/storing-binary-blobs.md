@@ -1,17 +1,17 @@
 ---
 title: 이진 blob 저장
-description: Xbox Live 타이틀 저장소의 이진 blob 저장 하는 방법을 알아봅니다.
+description: 이진 blob Xbox Live 타이틀 저장소에 저장 하는 방법을 알아봅니다.
 ms.assetid: a0da36ef-5a5a-466d-80a8-e055ba7e4cdc
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 타이틀 저장소
 ms.localizationpriority: medium
 ms.openlocfilehash: 70e620f2e992dfdd240f71b5c73165f13d4ef5cb
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8330589"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8755917"
 ---
 # <a name="storing-a-binary-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소의 이진 blob 저장
 
@@ -25,11 +25,11 @@ ms.locfileid: "8330589"
         Connection: Keep-Alive
 
 
--   사용자는 업데이트를 세션에 있어야 합니다.
+-   사용자가 업데이트를 세션에 있어야 합니다.
 
 -   STSTokenString 편의 위해 자리 표시자 이며 인증 요청으로 반환 하는 토큰으로 대체 되어야 합니다.
 
-2.  이진 데이터를 보냅니다. HTTP를 통해 데이터를 전송 하는 이후 데이터 허용 문자 집합으로 제약 되어야 합니다. 이미지, 오디오 데이터 등의 정보로 인코딩되어야 합니다. HTTP 호환 문자를 생성 하는 모든 인코딩 방법을 선택할 수 있습니다.
+2.  이진 데이터를 보냅니다. HTTP를 통해 데이터를 전송 하므로 데이터 허용 가능한 문자 집합으로 제약 되어야 합니다. 이미지, 오디오 데이터 등의 정보로 인코딩되어야 합니다. HTTP 호환 문자를 생성 하는 모든 인코딩 방법을 선택할 수 있습니다.
 d
 ```
   01EAEFBAD05903A4

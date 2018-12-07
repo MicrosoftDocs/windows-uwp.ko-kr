@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d535dec8a95eba4d486bfc6946e187e2da66ae49
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8331695"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8751999"
 ---
 # <a name="eds-reverse-lookup-for-video"></a>비디오에 대한 EDS 역방향 조회
  
@@ -32,7 +32,7 @@ ms.locfileid: "8331695"
    * `ScopeId=` 공급자 제목 ID
  
  
-일반적으로 역방향 조회 2 단계에 필요합니다. 
+일반적으로 역방향 조회 2 단계가 필요합니다. 
    * 사용할 수 없는 경우 (예: 세부 정보 호출)에서 공급자 미디어 id를 검색 합니다. 
 
 ```cpp

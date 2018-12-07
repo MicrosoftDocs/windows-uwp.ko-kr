@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 70e86567f449674c7a046e072437d9ee715dc6d6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8340228"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8736819"
 ---
 # <a name="post-systemstringsvalidate"></a>POST (/system/strings/validate)
-유효성 검사에 대 한 문자열의 배열 받아들이고 같은 크기의 결과 배열을 반환 합니다. 이러한 Uri에 대 한 도메인은 `client-strings.xboxlive.com`.
+유효성 검사에 대 한 문자열의 배열 받아들이고 일련의 같은 크기의 결과 반환 합니다. 이러한 Uri에 대 한 도메인은 `client-strings.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [필요한 요청 헤더](#ID4EIB)
@@ -28,14 +28,14 @@ ms.locfileid: "8340228"
  
 ## <a name="remarks"></a>설명
  
-각 결과 해당 문자열 Xbox LIVE에 허용 되는 해당 하는 경우 잘못 된 문자열을 포함 하는지 여부를 나타냅니다.
+각 결과 해당 문자열 Xbox LIVE에 허용 되 고 해당 하는 경우 문제가 되는 문자열을 포함 하는지 여부를 나타냅니다.
  
-동일한 문자열은 항상 동일한 결과 제공 됩니다. 실패 결과 받을 경우 결과 분석 하 고 그에 따라 문자열을 수정 합니다.
+동일한 문자열 동일한 결과 항상 제공 됩니다. 실패 결과 수신 하는 경우 결과 분석 하 고 그에 따라 문자열을 수정 합니다.
  
  
 
 > [!NOTE] 
-> <b>VerifyStringResult</b> 결과만 문자열에서 잘못 된 첫 번째 단어를 보고 합니다. 문자열에서 단어를 잘못 된 추가 수 있습니다. 문자열을 사용할 수 있도록 잘못 된 단어를 교체 하려는 경우에 잘못 된 단어 또는 하위 문자열을 대체 하 고 잘못 된 문자열을 추가 하는 문자열을 다시 확인 해야 합니다.  
+> 결과 <b>VerifyStringResult</b> 는 문자열에 있는 첫 번째 단어를 보고 합니다. 문자열에서 단어를 잘못 된 추가 수 있습니다. 문자열을 사용할 수 있는 단어를 교체 하려는 경우에 잘못 된 단어 또는 하위 문자열을 대체 하 고 있는 하위 문자열을 추가 하는 문자열을 다시 확인 해야 합니다.  
 
  
   
@@ -54,7 +54,7 @@ ms.locfileid: "8340228"
  
 ## <a name="request-body"></a>요청 본문
  
-요청 본문은 문자열 배열 크기에 제한이 없는와 512 자 문자열의 배열입니다.
+요청 본문은 문자열 배열 크기에 제한이 없는 및 512 자 문자열의 배열입니다.
  
 <a id="ID4ETC"></a>
 
@@ -81,14 +81,14 @@ ms.locfileid: "8340228"
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | 
 | 200| 확인| 모든 문자열 성공적으로 처리 합니다. 이 반드시 모든 문자열 양수 Hresult 했습니다.| 
 | 401| 권한 없음| 필요한 사용자 인증을 요청 합니다.| 
 | 403| 금지| 사용자 또는 서비스에 대 한 요청을 허용 되지 않습니다.| 
-| 406| 허용할 수 없음| 누락 <b>콘텐츠 형식: 응용 프로그램/j</b> 헤더.| 
+| 406| 허용할 수 없음| 없음 <b>콘텐츠 형식: 응용 프로그램/j</b> 헤더.| 
 | 408| 요청 시간 제한| 서비스 잘못 된 요청을 이해 하지 못했습니다. 일반적으로 잘못 된 매개 변수입니다.| 
   
 <a id="ID4ETF"></a>

@@ -1,19 +1,19 @@
 ---
-title: 새로운 기능-2015 년 6 월에 대 한 Xbox Live SDK
-description: 새로운 기능-2015 년 6 월에 대 한 Xbox Live SDK
+title: 새로운 기능-2015 년 6 월 Xbox Live SDK에 대 한
+description: 새로운 기능-2015 년 6 월 Xbox Live SDK에 대 한
 ms.assetid: 354bcd47-2564-4dd5-89e3-242bca462b35
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a42d0fb0a3cb457a60a0542bfc5966893d00f18b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8340068"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8736539"
 ---
-# <a name="whats-new-for-the-xbox-live-sdk---june-2015"></a>새로운 기능-2015 년 6 월에 대 한 Xbox Live SDK
+# <a name="whats-new-for-the-xbox-live-sdk---june-2015"></a>새로운 기능-2015 년 6 월 Xbox Live SDK에 대 한
 
 Xbox Live SDK의 6 월 릴리스는 다음과 같은 업데이트가 포함 됩니다.
 
@@ -26,11 +26,11 @@ Xbox Live SDK는 이제 Windows 10 및 Visual Studio 2015 RC의 최신 참가자
 |------|
 | 이 섹션에서는 UWP 제목에만 적용 됩니다, 그리고 XDK 타이틀 TCUI에 대 한 Windows.Xbox.UI.SystemUI 클래스를 참조 해야  |
 
-이제 Xbox Live SDK를 지 원하는 Windows 10 PC/모바일 장치에서 주식 UI를 표시 하기 위한 제목 호출할 UI (TCUI) Api에 래퍼를 포함 되어 있습니다.
+Xbox Live SDK에는 이제 래퍼를 제목 호출할 UI (TCUI) 지 원하는 Windows 10 PC/모바일 장치에서 주식 UI를 표시 하기 위한 Api에 포함 되어 있습니다.
 
 이러한 Api는 UWP 앱에 사용할 수만 있습니다.
 
-TitleCallableUI (WinRT) 및 title_callable_ui (c + +) 클래스에서 TCUI 래퍼를 호출할 수 있습니다.
+TitleCallableUI (WinRT)와 title_callable_ui (c + +) 클래스 TCUI 래퍼를 호출할 수 있습니다.
 
 재고 Ui 다음과 같습니다.
 * 플레이어 선택기 UI
@@ -42,17 +42,17 @@ TitleCallableUI (WinRT) 및 title_callable_ui (c + +) 클래스에서 TCUI 래�
 새로운 Api의 사용 예를 들어 새 *TCUI* 샘플을 참조 하세요. {*SDK 소스 루트*} \Samples\TCUI에서 샘플을 찾을 수 있습니다.
 
 ## <a name="new-authentication-model-for-uwp-apps"></a>UWP 앱에 대 한 새로운 인증 모델
-Xbox Live SDK는 이제 Microsoft 계정 (MSA)을 사용 하 여 Windows 10 PC/모바일 장치에서 Xbox Live 플레이어를 식별 하는 것에 대 한 지원 합니다.
+Xbox Live SDK는 이제 Microsoft 계정 (MSA)을 사용 하 여 Windows 10 PC/모바일 장치에서 Xbox Live 플레이어를 식별을 지원 합니다.
 
 이제 XboxLiveUser (WinRT) 및 xbox_live_user (c + +) 클래스를 사용 하 여 사용자에 서명할 수 있습니다.
 
-## <a name="new-api-for-writing-events-in-uwp-apps"></a>UWP 앱에서 이벤트를 작성 하기 위한 새로운 API
+## <a name="new-api-for-writing-events-in-uwp-apps"></a>UWP 앱의 이벤트 작성 하기 위한 새로운 API
 
 | 참고 |
 |------|
-| 이 섹션은 UWP 제목에만 적용 됩니다.  XDK 개발자 XDK 특정 정보에 대 한 [게임 이벤트](https://developer.microsoft.com/en-us/games/xbox/docs/xboxlive/xbox-live-partners/event-driven-data-platform/game-events) 문서를 참조 해야  |
+| 이 섹션에서는 UWP 제목에만 적용 됩니다.  XDK 개발자 XDK 특정 정보에 대 한 [게임 이벤트](https://developer.microsoft.com/en-us/games/xbox/docs/xboxlive/xbox-live-partners/event-driven-data-platform/game-events) 문서를 참조 해야  |
 
-새 EventsService (WinRT) 및 events_service (c + +) 클래스를 사용 하면 사용자 통계, 도전 과제, 순위표 등을 업데이트할 수 있는 게임에서 이벤트를 작성할 수 있습니다. 이러한 새로운 클래스는 UWP 앱에만 해당 합니다.
+새 EventsService (WinRT) 및 events_service (c + +) 클래스 사용자 통계, 도전 과제, 순위표 등을 업데이트할 수 있는 게임에서 이벤트를 작성할 수 있습니다. 이러한 새로운 클래스는 UWP 앱에만 해당 합니다.
 
 ## <a name="breaking-change-to-event-handlers"></a>이벤트 처리기에 주요 변경 ##
 C + + SDK의 모든 이벤트 처리기에서 단일 변경 된 `void set_*_handler()` 메서드를 한 쌍의 `function_context add_*_handler()` 및 `void remove_*_handler(function_context context)` 메서드.

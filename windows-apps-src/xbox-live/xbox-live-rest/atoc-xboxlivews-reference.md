@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2076cf7b909083072904128a8f53c200a681ee8e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8334590"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8757456"
 ---
 # <a name="xbox-live-services-restful-reference"></a>Xbox Live Services RESTful 참조
 
@@ -25,7 +25,7 @@ Xbox Live 서비스는 게임 및 플레이어 정보를 관리 하기 위한 �
 
 [URI(Universal Resource Identifier) 참조](uri/atoc-xboxlivews-reference-uris.md)
 
-&nbsp;&nbsp;리소스 및 Xbox Live 서비스와 함께 사용할 수 있는 방법에 대 한 참조 자료를 제공 합니다.
+&nbsp;&nbsp;리소스 및 Xbox Live 서비스를 사용 하 여 사용할 수 있는 방법에 대 한 참조 자료를 제공 합니다.
 
 [JSON(JavaScript Object Notation) 개체 참조](json/atoc-xboxlivews-reference-json.md)
 

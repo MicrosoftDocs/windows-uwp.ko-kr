@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e773d73499e79fe23f736a536027932ca1a07b4
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8341398"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8752760"
 ---
 # <a name="paginginfo-json"></a>PagingInfo(JSON)
-데이터 페이지에서 반환 되는 결과 페이징 정보가 들어 있습니다. 
+데이터 페이지에서 반환 하는 결과 위해 페이징 정보가 들어 있습니다. 
 <a id="ID4EN"></a>
 
  
@@ -23,13 +23,13 @@ ms.locfileid: "8341398"
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| continuationToken| 문자열| 결과의 다음 페이지에 액세스 하는 데는 불투명 연속 토큰입니다. 최대 32 자입니다. 호출자는 다음 집합 컬렉션의 항목을 검색 하기 위해 <b>continuationToken</b> 쿼리 매개 변수에서이 값을 제공할 수 있습니다. 이 속성이 <b>null</b>이면 다음 항목이 없는 추가 컬렉션 에서입니다. 이 속성은 필수 이며 컬렉션 <b>skipItems</b>를 사용 하 여 페이징 될 경우에 제공 됩니다.| 
+| continuationToken| 문자열| 결과의 다음 페이지에 액세스 하는 데는 불투명 연속 토큰입니다. 최대 32 자입니다. 호출자는 다음 일련의 컬렉션에 항목을 검색 하기 위해 <b>continuationToken</b> 쿼리 매개 변수에서이 값을 제공할 수 있습니다. 이 속성이 <b>null</b>이면 다음 항목이 없는 추가 컬렉션에 있습니다. 이 속성은 필수 이며 컬렉션 <b>skipItems</b>를 사용 하 여 페이징 될 경우에 제공 됩니다.| 
 | totalItems| 32 비트 부호 있는 정수| 컬렉션의 항목의 총 수입니다. 서비스 컬렉션의 크기에 대 한 실시간 뷰 제공할 수 없는 경우에 제공 되지 않습니다.| 
   
 <a id="ID4E4B"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

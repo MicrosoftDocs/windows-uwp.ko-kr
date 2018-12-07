@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a91e13c33c02a34f844773e7a54ac55bf8e98338
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8350630"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8752405"
 ---
 # <a name="get-globalscidsscid"></a>GET (/global/scids/{scid})
-이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
+이 저장소 형식에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EX)
   * [권한 부여](#ID4ECB)
@@ -38,7 +38,7 @@ ms.locfileid: "8350630"
  
 ## <a name="authorization"></a>권한 부여
  
-요청이 유효한 Xbox LIVE 권한 부여 헤더를 포함 해야 합니다. 호출자가이 리소스에 액세스 하는 허용 되지 않으면, 서비스는 403 사용할 수 없음 응답을 반환 합니다. 헤더 잘못 되었거나 누락 된 경우 서비스는 401 무단된 응답을 반환 합니다. 
+요청이 유효한 Xbox LIVE 권한 부여 헤더를 포함 해야 합니다. 호출자에이 리소스에 액세스를 허용 되지 않습니다 서비스는 403 사용할 수 없음 응답을 반환 합니다. 헤더 잘못 되었거나 누락 된 경우 서비스는 401 무단된 응답을 반환 합니다. 
   
 <a id="ID4ENB"></a>
 
@@ -55,14 +55,14 @@ ms.locfileid: "8350630"
  
 ## <a name="request-body"></a>요청 본문
  
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
   
 <a id="ID4EBD"></a>
 
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드 
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
@@ -75,7 +75,7 @@ ms.locfileid: "8350630"
 | 406| 허용할 수 없음 | 리소스 버전은 지원 되지 않습니다.| 
 | 408| 요청 시간 제한 | 요청을 완료 하는 데 너무 오래 걸렸습니다.| 
 | 500| 내부 서버 오류 | 서버에서 요청을 수행할 수 있는 예상치 못한 상황이 발생 했습니다.| 
-| 503| 사용할 수 없는 서비스 | 요청을 제한, 초 (예: 5 초) 클라이언트를 다시 시도 값 후 다시 시도 합니다.| 
+| 503| 사용할 수 없는 서비스 | 요청을 제한, 클라이언트 재시도 값 초 (예: 5 초) 한 후 다시 시도 합니다.| 
   
 <a id="ID4EUAAC"></a>
 

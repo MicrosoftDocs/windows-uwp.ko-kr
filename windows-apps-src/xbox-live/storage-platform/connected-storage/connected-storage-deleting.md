@@ -4,22 +4,22 @@ description: 연결 된 저장소를 사용 하 여 데이터 blob 및 컨테이
 ms.assetid: ccf7488c-5d55-480e-b3aa-412220d03104
 ms.date: 02/27/2018
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
+keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 756de46d05cdbf64d85491b4e8c6f783122f2356
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8457520"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8744618"
 ---
 # <a name="use-connected-storage-to-delete-data"></a>연결 된 저장소를 사용 하 여 데이터를 삭제 합니다.
 
-데이터 blob을 만들어 비동기적으로 삭제 됩니다는 `ConnectedStorageContainer` 에 `ConnectedStorageSpace` 사용자와 호출의 `SubmitUpdatesAsync` blobsToDelete 매개 변수에 대 한 삭제할 명명 된 blob을 나타내는 문자열의 목록을 제공 하는 컨테이너에서 메서드.
+데이터 blob을 만들어 비동기적으로 삭제 됩니다는 `ConnectedStorageContainer` 에 `ConnectedStorageSpace` 사용자와 호출의 `SubmitUpdatesAsync` blobsToDelete 매개 변수에 대 한 삭제할 명명 된 blob을 나타내는 문자열의 목록을 제공 하는 컨테이너의 메서드.
 
 데이터 컨테이너를 만들어 삭제 비동기적으로 `ConnectedStorageContainer` 호출의 `DeleteContainerAsync` 메서드.
 
-## <a name="to-delete-blob-data-from-connected-storage"></a>연결 된 저장소에서 데이터 blob을 삭제 하려면
+## <a name="to-delete-blob-data-from-connected-storage"></a>연결 된 저장소에서 blob 데이터를 삭제 하려면
 
 1.  검색은 `ConnectedStorageSpace` 를 호출 하 여 사용자에 대 한 개체 `GetForUserAsync`.
 
@@ -132,7 +132,7 @@ Windows.Xbox.Storage에는 Xbox One 콘솔에 대 한 연결 된 저장소 네�
 
 ## <a name="c-uwp-sample"></a>C# UWP 샘플
 
-XDK 게임 및 UWP 앱에 다른 Api를 사용할 수, XDK API 후 UWP API는 매우 밀접 하 게 모델링 됩니다. 데이터를 삭제 하는 일부 네임 스페이스 및 클래스 이름 변경을 메모 하는 동안 같은 기본 단계를 수행 하려면 여전히 해야 합니다. 네임 스페이스를 사용 하는 대신 `Windows::Xbox::Storage` 사용 `Windows.Gaming.XboxLive.Storage`. 클래스 `ConnectedStorageSpace`을 하는 것 `GameSaveProvider`. 클래스 `ConnectedStorageContainer` 에 해당 하는 `GameSaveContainer`. 이러한 변경 내용은 [포팅 Xbox Live 코드에서 XDK에서 UWP로](../../using-xbox-live/porting-xbox-live-code-from-xdk-to-uwp.md)의 연결 된 저장소 섹션에서 자세히 설명 됩니다.
+XDK 게임 및 UWP 앱 Api를 사용할 수, UWP API는 매우 밀접 하 게 XDK API 후 모델링 됩니다. 데이터를 삭제 하는 네임 스페이스 및 클래스 이름 변경을 메모 하는 동안 같은 기본 단계를 수행 하려면 여전히 해야 합니다. 네임 스페이스를 사용 하는 대신 `Windows::Xbox::Storage` 사용 `Windows.Gaming.XboxLive.Storage`. 클래스 `ConnectedStorageSpace`에 `GameSaveProvider`. 클래스 `ConnectedStorageContainer` 는 `GameSaveContainer`. 이러한 변경 내용은 [포팅 Xbox Live 코드에서 XDK에서 UWP로](../../using-xbox-live/porting-xbox-live-code-from-xdk-to-uwp.md)의 연결 된 저장소 섹션에 자세히 설명 됩니다.
 
 ```csharp
 //Namespace Required
@@ -206,5 +206,5 @@ else
 }
 ```
 
-UWP 앱에 대 한 연결 된 저장소 Api는 [Xbox Live API 참조](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.xboxlive.storage)에 설명 되어 있습니다.
+UWP 앱에 대 한 연결 된 저장소 Api는 [Xbox Live API 참조](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.xboxlive.storage)에 기록 됩니다.
 [Xbox Live API 샘플 게임 프로젝트 저장](https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK/GameSave)체크아웃 연결 된 저장소를 사용 하는 다른 샘플을 확인 합니다.

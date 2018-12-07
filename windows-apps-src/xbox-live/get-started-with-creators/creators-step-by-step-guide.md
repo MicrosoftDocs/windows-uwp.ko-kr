@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 크리에이터 스
 ms.localizationpriority: medium
 ms.openlocfilehash: ae02fe412e6300ac74b3f1106cdf6a5bb304d36b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8322693"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8742273"
 ---
 # <a name="step-by-step-guide-to-integrate-xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램을 통합하는 방법에 대한 단계별 가이드
 
@@ -21,11 +21,11 @@ ms.locfileid: "8322693"
 모든 Xbox Live 타이틀 전에 로그인 및 Xbox Live 서비스를 호출 하는 수 있게 됩니다 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 정의 되어야 합니다.  [새 크리에이터스 타이틀 만들기](create-and-test-a-new-creators-title.md)에서 이 작업을 수행하는 방법을 설명합니다.
 
 ## <a name="2-follow-the-appropriate-guide-to-setup-your-ide-or-game-engine"></a>2. IDE 또는 게임 엔진 설정 적절 한 가이드를 따라
-플랫폼 및 엔진에 대 한 적절 한 시작 가이드를 수행 하 고 진행 하면서 Xbox Live의 기본 사항을 알아볼 수 있습니다.
+플랫폼 및 엔진에 대 한 적절 한 시작 가이드를 따라 하 고 진행 하면서 Xbox Live의 기본 사항을 알아볼 수 있습니다.
 
 * [Visual Studio로 크리에이터 스 타이틀 개발](develop-creators-title-with-visual-studio.md) 에서는 Visual Studio 프로젝트를 파트너 센터에서 Xbox Live 구성과 연결 하는 방법을 보여 줍니다.
 
-* [Unity로 크리에이터 스 타이틀 개발](develop-creators-title-with-unity.md) 하면 새 Xbox Live를 만들려면 Unity 제목을 사용 하는 방법 제목, 순위표 등의 기능을 추가 하 고 기본 Visual Studio 프로젝트를 생성 표시 됩니다.
+* [Unity로 크리에이터 스 타이틀 개발](develop-creators-title-with-unity.md) 표시 하면 새 Xbox Live를 만들려면 Unity 제목, 사용 방법 제목, 순위표 등의 기능을 추가 하 고 기본 Visual Studio 프로젝트를 생성 합니다.
 
 ## <a name="3-xbox-live-concepts"></a>3. Xbox Live 개념
 타이틀을 만들었으면 타이틀 개발 경험에 영향을 주는 Xbox Live 개념에 대해 알아 두어야 합니다.
@@ -43,4 +43,4 @@ ms.locfileid: "8322693"
 
 ## <a name="5-release-your-title"></a>5. 타이틀을 해제 합니다.
 
-Xbox Live 크리에이터 스 프로그램을 사용 하는 경우이 프로세스는 다른 UWP 해제 차이가 없습니다.  프로세스에 대 한 자세한 내용은 [Windows 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 볼 수 있습니다.
+Xbox Live 크리에이터 스 프로그램을 사용 하는 경우이 프로세스는 다른 UWP를 해제 하면 차이가 없습니다.  프로세스에 대 한 자세한 내용은 [Windows 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 볼 수 있습니다.

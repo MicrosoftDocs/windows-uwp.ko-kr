@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 791a566d278b92aeb34ab36d38719b44e9cc6c8f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8345411"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8729299"
 ---
 # <a name="activityrequest-json"></a>ActivityRequest(JSON)
 하나 이상의 사용자의 다양 한 상태에 대 한 정보에 대 한 요청 합니다. 
@@ -21,17 +21,17 @@ ms.locfileid: "8345411"
  
 ## <a name="activityrequest"></a>ActivityRequest
  
-ActivityRequest 개체에는 다음 사양을 있습니다.
+ActivityRequest 개체에 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | richPresence| [RichPresenceRequest](json-richpresencerequest.md)| 사용 해야 하는 다양 한 상태 문자열의 식별 이름입니다.| 
-| 미디어| MediaRequest| 사용자에 대 한 미디어 정보를 시청 하거나 듣기 합니다.| 
+| 미디어| MediaRequest| 사용자에 대 한 미디어 정보 시청를 수신 합니다.| 
   
 <a id="ID4EVB"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

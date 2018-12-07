@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ded70b32dfd291d17a43a1741b26710f681a397
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8329862"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8742542"
 ---
 # <a name="usersxuidxuidinbox"></a>/users/xuid({xuid})/inbox
-Xbox LIVE 서비스에 대 한 사용자에 대 한 액세스 받은 편지함 메시징 제공 합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
+사용자에 대 한 액세스 메시징 받은 편지함 Xbox LIVE 서비스를 제공 합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -40,7 +40,7 @@ Xbox LIVE 서비스에 대 한 사용자에 대 한 액세스 받은 편지함 �
 
 [DELETE (/users/xuid({xuid})/inbox/{messageId})](uri-usersxuidinboxmessageiddelete.md)
 
-&nbsp;&nbsp;사용자의 받은 편지함에서 사용자 메시지를 삭제합니다.
+&nbsp;&nbsp;사용자의 받은 편지함에서 사용자가 메시지를 삭제합니다.
 
 [GET (/users/xuid({xuid})/inbox/{messageId})](uri-usersxuidinboxmessageidget.md)
 

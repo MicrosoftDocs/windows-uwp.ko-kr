@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a8973390ccbf5dd9980410f60f03a7edd78c134
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8330894"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8732226"
 ---
 # <a name="post-usersmescidsscidclips"></a>POST (/users/me/scids/{scid}/clips)
 초기 업로드 요청을 확인 합니다. 이러한 Uri에 대 한 도메인은 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.
@@ -33,9 +33,9 @@ ms.locfileid: "8330894"
  
 ## <a name="remarks"></a>설명
  
-이것이 GameClip 업로드 프로세스의 첫 번째 부분입니다. 비디오 캡처를 시을 것이 좋습니다 업로드 바로 시작 되도록 예약 되지 않은 경우에 비트, 업로드 ID 및 URI를 가져와야 하는 즉시 GameClips 서비스를 호출 합니다. 이 호출은 사용자 할당량 검사 및 콘텐츠 격리, 개인 정보 등 클라이언트에 의해 업로드에 대 한 비디오 경우도 예약 해야 참조를 통해 다른 검사를 수행 합니다. 이 호출을 통해 긍정적인 응답을 업로드할 비디오 클립을 감수할 서비스를 나타냅니다. 시스템에서 사용할 모든 클립 업로드 (서비스 안내)를 통해 특정 제목 연결 되어야 합니다.
+GameClip 업로드 프로세스의 첫 번째 부분입니다. 비디오 캡처를 시을 것이 좋습니다 업로드 바로 시작 되도록 예약 되지 않은 경우에 즉시 얻으려고 ID와 URI는 비트 업로드 GameClips 서비스를 호출 합니다. 이 호출은 사용자 할당량 검사 및 콘텐츠 격리, 참조 클라이언트에 의해 업로드에 대 한 비디오 하는 경우에 예약 해야 하는 등 개인 정보 보호를 통해 다른 검사를 수행 합니다. 이 호출을 통해 긍정적인 응답을 업로드할 비디오 클립을 감수할 서비스를 나타냅니다. 업로드 하는 모든 클립을 시스템에서 허용 되지 (서비스 안내)를 통해 특정 제목을 연결 해야 합니다.
  
-이 호출은 idempotent; 하지 않습니다. 다른 Id 및 Uri 발급 하는 후속 호출 하면 됩니다. 실패 한 경우 다시 시도 동작 백오프 표준 클라이언트 쪽 따라야 합니다.
+이 호출은 idempotent; 하지 않습니다. 다른 Id 및 Uri 발급 하는 후속 호출 하면 됩니다. 실패 시 재시도 표준 클라이언트 쪽 백오프 동작을 따라야 합니다.
   
 <a id="ID4EFB"></a>
 
@@ -67,7 +67,7 @@ ms.locfileid: "8330894"
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | 
 | 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: <b>Xauth =&lt;authtoken ></b>| 
-| X RequestedServiceVersion| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트됩니다 됩니다. 예: 1, vnext 합니다.| 
+| X RequestedServiceVersion| string| 이 요청은 전송 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다. 예: 1, vnext 합니다.| 
 | Content-Type| 문자열| 응답 본문의 MIME 형식입니다. 예: <b>응용 프로그램/j</b>합니다.| 
 | 수락| string| 콘텐츠 형식의 허용 되는 값입니다. 예: <b>응용 프로그램/j</b>합니다.| 
   
@@ -78,7 +78,7 @@ ms.locfileid: "8330894"
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| Accept-Encoding| string| Encodings 허용 압축 합니다. 예제 값: gzip만 줄이기, identity 합니다.| 
+| Accept-Encoding| string| 허용 가능한 압축 인코딩 합니다. 예제 값: gzip만 줄이기, identity 합니다.| 
   
 <a id="ID4ENF"></a>
 
@@ -120,7 +120,7 @@ ms.locfileid: "8330894"
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 

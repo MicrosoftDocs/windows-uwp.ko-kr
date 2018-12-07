@@ -8,19 +8,19 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9492ff3272af830404a546c9b01d62178adbac96
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8339778"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8729917"
 ---
 # <a name="session-directory-uris"></a>세션 디렉터리 URI
 
-이 섹션에서는 Xbox Live 서비스에 대 한 멀티 플레이어 세션 디렉터리 (MPSD)에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 Xbox Live 서비스에 대 한 멀티 플레이어 세션 디렉터리 (MPSD)에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
 
 
 > [!NOTE] 
-> Xbox 360, Windows Phone 디바이스 또는 Xbox.com 실행 되는 게임에 대 한 제목만 세션 디렉터리 Uri를 사용할 수 있습니다.  
+> Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 되는 게임에 대 한 제목만 세션 디렉터리 Uri를 사용할 수 있습니다.  
 
 
   * [도메인](#ID4EUB)
@@ -38,14 +38,14 @@ sessiondirectory.xboxlive.com
 
 ## <a name="service-version"></a>서비스 버전
 
-이러한 REST Uri의 호출자에 게 전달 해야 값 104/105 이상 X-Xbl-계약-버전, 서비스 버전의 엔터테인먼트 검색 서비스 (EDS)을 지정 하는 HTTP 헤더에 대 한 합니다.
+이러한 나머지 Uri의 호출자에 게 전달 해야 값 104/105 이상 X-Xbl-계약-버전, 서비스 버전의 엔터테인먼트 검색 서비스 (EDS)을 지정 하는 HTTP 헤더에 대 한 합니다.
 
 <a id="ID4EAC"></a>
 
 
 ## <a name="system-objects-and-properties"></a>시스템 개체 및 속성
 
-해당 세션 및 템플릿 구성에 대 한는 MPSD 디렉터리에서 적용 하 고 해석 하는 고정된 스키마를 사용 하 여 준수 하는 세션 JSON 개체의 수를 사용 합니다. 다양 한 세션 디렉터리 Uri에서 지 원하는 메서드를 호출 하는 동안 이러한 개체는 유효성을 검사 하 고 병합, 지원 되는 스키마에 따라 합니다. 멀티 플레이 구성과 관련 된 기본 JSON 개체입니다.
+해당 세션 및 템플릿 구성에 대 한 고 MPSD 디렉터리에서 적용 하 고 해석 하는 고정 된 스키마를 사용 하 여 준수 세션 JSON 개체의 수를 사용 합니다. 다양 한 세션 디렉터리 Uri에서 지 원하는 메서드를 호출 하는 동안 이러한 개체는 유효성을 검사 하 고 병합, 지원 되는 스키마에 따라 합니다. 멀티 플레이 구성과 관련 된 기본 JSON 개체입니다.
 
    *  [MultiplayerActivityDetails(JSON)](../../json/json-multiplayeractivitydetails.md)
    *  [MultiplayerSession(JSON)](../../json/json-multiplayersession.md)
@@ -78,11 +78,11 @@ sessiondirectory.xboxlive.com
 
 [/handles/{handleId}](uri-handleshandleid.md)
 
-&nbsp;&nbsp;세션 핸들 식별자로 지정 하 고 삭제 작업을 지원 합니다.
+&nbsp;&nbsp;세션 핸들 식별자에서 지정 하 고 삭제 작업을 지원 합니다.
 
 [/handles/{handleId}/session](uri-handleshandleidsession.md)
 
-&nbsp;&nbsp;GET 및 PUT 작업 세션에 대 한 핸들을 해제를 사용 하 여 지원 합니다.
+&nbsp;&nbsp;GET 및 PUT 작업 세션에 대 한 핸들 해제를 사용 하 여 지원 합니다.
 
 [/handles/query](uri-handlesquery.md)
 
@@ -102,7 +102,7 @@ sessiondirectory.xboxlive.com
 
 [/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}](uri-serviceconfigsscidsessiontemplatessessiontemplatename.md)
 
-&nbsp;&nbsp;세션 템플릿 이름으로 이루어진 집합을 검색할 GET 작업을 지원 합니다.
+&nbsp;&nbsp;세션 템플릿 이름 집합을 검색 하는 가져오기 작업을 지원 합니다.
 
 [/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/batch](uri-serviceconfigscidsessiontemplatessessiontemplatenamebatch.md)
 
@@ -126,7 +126,7 @@ sessiondirectory.xboxlive.com
 
 [/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName}/servers/{server-name}](uri-serviceconfigsscidsessiontemplatessessiontemplatenamesessionnamemembersservername.md)
 
-&nbsp;&nbsp;세션의 지정 된 서버를 제거 하려면 삭제 작업을 지원 합니다.
+&nbsp;&nbsp;세션의 지정된 된 서버를 제거 하려면 삭제 작업을 지원 합니다.
 
 <a id="ID4ESF"></a>
 

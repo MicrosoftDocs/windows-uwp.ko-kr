@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 709461e75a947cef283e8d35f3b977de39a1ec4f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8325591"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8742611"
 ---
 # <a name="trustedplatformusersxuidxuidscidsscid"></a>/trustedplatform/users/xuid({xuid})/scids/{scid}
-이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
+이 저장소 형식에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -26,7 +26,7 @@ ms.locfileid: "8325591"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| 64 비트의 부호 없는 정수| Xbox 사용자 ID (XUID) 플레이어의 요청 하 게 합니다.| 
+| xuid| 64 비트의 부호 없는 정수| Xbox 사용자 ID (XUID) 플레이어의 요청을 하 게 합니다.| 
 | 서비스 안내| guid| 조회 서비스 구성의 ID입니다.| 
   
 <a id="ID4E3B"></a>
@@ -36,7 +36,7 @@ ms.locfileid: "8325591"
 
 [GET](uri-trustedplatformusersxuidscidsscid-get.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다. 
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다. 
  
 <a id="ID4EGC"></a>
 

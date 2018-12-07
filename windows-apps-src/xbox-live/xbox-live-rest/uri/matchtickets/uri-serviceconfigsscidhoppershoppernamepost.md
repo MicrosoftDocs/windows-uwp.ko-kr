@@ -8,18 +8,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2696e03389e21210216f038b7d5871d24729c6b7
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8323299"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8746860"
 ---
 # <a name="post-serviceconfigsscidhoppershoppername"></a>POST (/serviceconfigs/{scid}/hoppers/{hoppername})
 
 지정 된 일치 티켓을 만듭니다.
 
 > [!IMPORTANT]
-> 이 메서드는 계약 103 이상을 사용 하 여 사용 하기 위한 하며 X Xbl-계약 버전의 헤더 요소: 103 또는 나중에 모든 요청.
+> 이 메서드를 계약 103 이상을 사용 하 여 사용 하기 위한 있으며 X Xbl-계약 버전의 헤더 요소: 103 또는 나중에 모든 요청.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4E5)
@@ -51,9 +51,9 @@ ms.locfileid: "8323299"
 
 | 형식| 필수| 설명| 누락 된 경우 응답|
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 남용 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 된 경우 해당 클레임의 멀티 플레이 권한 있는 사용자만은 다른 서비스를 호출 하도록 허용 됩니다. | 403|
-| 장치 유형| 예| 때 사용자의 deviceType 없거나 또는 비-콘솔에 제목에 일치 하는 설정 콘솔 전용 제목 되지 않아야 합니다. | 403|
-| 제목 ID/증명 구매/장치 유형| 예| 제목에 일치 하는 지정 된 제목 클레임, 장치 유형 조합에 대 한 연결을 허용 해야 합니다. | 403|
+| 남용 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 된 경우 해당 클레임의 멀티 플레이 권한 있는 사용자만는 매치 메이 킹 서비스 호출을 할 수 있습니다. | 403|
+| 장치 유형| 예| 이 사용자의 deviceType 또는 때 비-콘솔에 일치 하는 제목으로 설정 하 고 콘솔 전용 제목 수 없습니다. | 403|
+| 제목 ID/증명 구매/장치 유형| 예| 제목에 일치 하 되는 지정 된 제목 클레임, 장치 유형 조합에 대 한 연결을 허용 해야 합니다. | 403|
 
 <a id="ID4E3C"></a>
 
@@ -72,10 +72,10 @@ ms.locfileid: "8323299"
 
 | 멤버| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| serviceConfig| GUID| 세션에 대 한 서비스를 안내 합니다.|
+| serviceConfig| GUID| 세션에 대 한 서비스 안내 합니다.|
 | hopperName| string| hopper의 이름입니다.|
 | giveUpDuration| 32 비트 부호 있는 정수| 최대 대기 시간 (초 정수 수)입니다.|
-| preserveSession| 열거형| 일치 하는 세션 세션 다시 사용 하는 경우를 나타내는 값입니다. 가능한 값은 "항상" 및 "없음"입니다. |
+| preserveSession| 열거형| 일치 하는 세션 세션에 다시 사용 하는 경우를 나타내는 값입니다. 가능한 값은 "항상" 및 "없음"입니다. |
 | ticketSessionRef| MultiplayerSessionReference| 플레이어 또는 그룹은 현재 재생 세션에 대 한 MultiplayerSessionReference 개체입니다. |
 | ticketAttributes| 개체의 컬렉션| 특성 및 플레이어의 그룹에 대 한 사용자가 제공 된 값입니다.|
 
@@ -91,9 +91,9 @@ ms.locfileid: "8323299"
 
 ### <a name="sample-request"></a>샘플 요청
 
-일치 티켓을 만들 수 있습니다 세션 플레이어의 특정 플레이어 특성과 함께 일치할 수 있어야 합니다. 전에 **ticketSessionRef** 개체에서 참조 하 여 세션을 만들어야 합니다. 각 플레이어 만들거나 세션에 관련 된 일치 특성을 추가 하 고 MPSD 으로부터 세션에 참가 해야 합니다. 일치 특성은 각 플레이어에 matchAttrs 라는 사용자 지정 속성 필드에 배치 됩니다.
+일치 티켓을 만들 수 있습니다 하 고 세션의 플레이어 관련 특성과 함께 일치 시킬 플레이어 있어야 합니다. **ticketSessionRef** 개체에서 참조 하 여 세션을 만들어야 합니다. 각 플레이어 만들거나 세션에 관련 된 일치 특성을 추가 하 고 MPSD에 대 한 세션에 참가 해야 합니다. 일치 특성은 각 플레이어에 matchAttrs 라는 사용자 지정 속성 필드에 저장 됩니다.
 
-만들기 또는 가입 요청을 제출 **http://sessiondirectory.xboxlive.com/serviceconfigs/{scid}/sessiontemplates/{templatename}/sessions/{sessionname}** 와 같이 표시 될 수 있습니다.
+만들기 또는 연결 요청을 제출 **http://sessiondirectory.xboxlive.com/serviceconfigs/{scid}/sessiontemplates/{templatename}/sessions/{sessionname}** 와 같이 표시 될 수 있습니다.
 
 
 ```cpp

@@ -4,20 +4,20 @@ description: 새로운 기능에 Xbox Live Api-2017 년 7 월
 ms.assetid: ''
 ms.date: 07/16/2017
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 2017 년 7 월 1 새로운 기능, xbox
+keywords: xbox live, xbox, 게임, uwp, windows 10, 2017 년 7 월 한 새로운 기능, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 47db721a98b71fd6f4b5175a88ddccd00048d8d9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8348318"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8739397"
 ---
 # <a name="whats-new-for-the-xbox-live-apis---july-2017"></a>새로운 기능에 대 한 Xbox Live Api-2017 년 7 월
 
 추가 된 항목에 대 한 [새로운-2017 년 6 월자](1706-whats-new.md) 문서를 참조 하십시오 2017 년 6 월 릴리스에서 합니다.
 
-또한 모든 Xbox Live Api에 최근 코드 변경 내용을 보려면 [Xbox Live API GitHub 커밋 기록](https://github.com/Microsoft/xbox-live-api/commits/master) 을 확인할 수 있습니다.
+또한 모든 Xbox Live Api 최근 코드 변경 내용을 보려면 [Xbox Live API GitHub 커밋 기록](https://github.com/Microsoft/xbox-live-api/commits/master) 을 확인할 수 있습니다.
 
 ## <a name="xbox-live-features"></a>Xbox Live 기능
 
@@ -27,10 +27,10 @@ ms.locfileid: "8348318"
 
 ### <a name="tournaments"></a>토너먼트
 
-새 Api가 토너먼트 지원 하기 위해 추가 되었습니다. 이제 xbox::services::tournaments::tournament_service 클래스를 사용 하 여 타이틀에서 토너먼트 서비스에 액세스할 수 있습니다.
+새로운 Api가 토너먼트 지원 하기 위해 추가 되었습니다. 이제 xbox::services::tournaments::tournament_service 클래스를 사용 하 여 타이틀에서 토너먼트 서비스에 액세스 합니다.
 이러한 새 토너먼트 Api는 다음과 같은 시나리오를 사용 합니다.
-* 현재 타이틀에 대 한 모든 기존 토너먼트 찾으려면 서비스를 쿼리 합니다.
+* 현재 제목에 대 한 모든 기존 토너먼트 찾으려면 서비스를 쿼리 합니다.
 * 서비스에서는 토너먼트에 대 한 세부 정보를 검색 합니다.
-* 토너먼트에 대 한 팀의 목록을 검색 서비스를 쿼리 합니다.
+* 팀은 토너먼트에 대 한 목록을 검색 서비스를 쿼리 합니다.
 * 서비스에서는 토너먼트에 대 한 팀에 대 한 세부 정보를 검색 합니다.
 * 실시간으로 활동 (RTA) 구독을 사용 하 여 토너먼트 및 팀에 변경 내용을 추적 합니다.

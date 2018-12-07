@@ -1,17 +1,17 @@
 ---
 title: Xbox Live Api를 사용 하 여 XDK에 기본 제공
-description: Xbox 개발자 키트 (XDK) 프로젝트에서 기본 제공 Xbox Live Api를 사용 하는 방법을 알아봅니다.
+description: Xbox 개발자 키트 (XDK) 프로젝트의 기본 제공 Xbox Live Api를 사용 하는 방법을 알아봅니다.
 ms.assetid: 539caca3-58bc-49d9-8432-ca8e57755be2
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c762dd8abbbc80948d232610e4123b6e4893936d
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8324158"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8729091"
 ---
 # <a name="using-xbox-live-apis-built-into-the-xdk"></a>Xbox Live Api를 사용 하 여 XDK에 기본 제공
 
@@ -19,7 +19,7 @@ ms.locfileid: "8324158"
 1. "새 참조 추가"를 선택 합니다.
 1. "Durango 클릭. <build number>" 왼쪽된 창에서 "확장" 및
 1. 중간에 중 하나를 선택 합니다.
-- XSAPI WinRT API를 사용 하려는 경우 "Xbox 서비스 API"을 선택 합니다.
+- WinRT XSAPI API를 사용 하려는 경우 "Xbox 서비스 API"을 선택 합니다.
 - C + + XSAPI API를 사용 하려는 경우 "Xbox 서비스 API Cpp"을 선택 합니다.
 1. 확인을 클릭 합니다.
 

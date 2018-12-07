@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 오류, 서비스 호출
 ms.localizationpriority: medium
 ms.openlocfilehash: 637b9da84ef3ae50ea6235ca86e6318ae62acd11
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8337938"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8736536"
 ---
 # <a name="error-handling"></a>오류 처리
 
@@ -22,7 +22,7 @@ ms.locfileid: "8337938"
 * 요청이 유효 하지 400 HTTP 상태 코드를 반환 합니다.
 * 사용자가 없는 적절 한 권한이 403 HTTP 상태 코드를 반환 합니다.
 * 사용자가 차단 된, 401 HTTP 상태 코드를 반환 합니다.
-IXMLHTTPRequest2 WinRT 서비스 Api가 호출 하는 (예: ERROR_TIMEOUT, RPC_S_CALL_FAILED_DNE) 요청을 보낼 수 없는
+IXMLHTTPRequest2 WinRT 서비스 Api에서 호출 되는 (예: ERROR_TIMEOUT, RPC_S_CALL_FAILED_DNE) 요청을 보낼 수 없는
 * 위의 목록이 아니며 하지 않습니다. 대부분의 이러한 문제는 서비스 API 계층에서 예외가 발생 됩니다. 타이틀 이러한 예외 캡처하고 적절히 처리 해야 합니다.
 
 여기의 오류 처리에서 Xbox 서비스 API (XSAPI) API에 따라 두 가지 스타일 사용 하는:

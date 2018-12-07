@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c2da31f0f9c4673c818df216a3438cdcfd504894
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8322524"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8744621"
 ---
 # <a name="usersmegroupsmoniker"></a>/users/me/groups/{moniker}
-PresenceRecord 내 그룹에 대 한 액세스합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
+PresenceRecord 그룹에 액세스합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  

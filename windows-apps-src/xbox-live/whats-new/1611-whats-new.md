@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: de716ea88e5225789f93a7ff770d7b8dd2f8bd94
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8326659"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8757433"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---november-2016"></a>새로운 기능에 대 한 Xbox Live SDK-2016 년 11 월
 
@@ -21,15 +21,15 @@ ms.locfileid: "8326659"
 
 ### <a name="simplified-achievements"></a>간소화 된 도전 과제
 
-* [도전 과제 간체](../achievements-2017/simplified-achievements.md) 는 새롭고 더 간단 하 게 구성 및 도전 과제를 사용 합니다.  더 이상 해야 이벤트를 보내고 Xbox Live 서비스에 도전 과제 잠금이 해제 인지 여부를 결정 합니다.  타이틀은 해당 의사를 담당 합니다.
-* 도전 과제 간체의 초기 파일럿의 일부로 포함 되어 있는 경우 오프 라인 지원을 추가 했습니다.
-* 사용 하 여이 얼마나 쉬운지 표시 되는 SimplifiedAchievements 라는 새 샘플이 있습니다.
+* [간체 도전 과제](../achievements-2017/simplified-achievements.md) 는 새롭고 더 간단 하 게 구성 및 도전 과제를 사용 합니다.  더 이상 이벤트를 Xbox Live 서비스에 도전 과제 잠금이 해제 인지 여부를 결정 했습니다.  타이틀은 해당 의사를 담당 합니다.
+* 간체 도전 과제의 초기 파일럿의 일부로 포함 되어 있는 경우 오프 라인 지원을 추가 했습니다.
+* 사용 하 여이 얼마나 쉬운지 해제를 보여 주는 SimplifiedAchievements 라는 새 샘플이 있습니다.
 
 ### <a name="multiplayer"></a>멀티 플레이
 
-* [세션 찾아보기](../multiplayer/session-browse.md) 없으며 사용자가 멀티 플레이어 게임을 찾을 수는 새로운 방법입니다.  세션 검색 플레이어를 지정 된 조건을 충족 하는 열린 멀티 플레이 게임 세션의 목록을 검색할 수 있습니다.
+* [세션 검색](../multiplayer/session-browse.md) 사용자가 멀티 플레이어 게임을 찾을 수는 새로운 방법입니다.  세션 검색 플레이어를 지정 된 조건을 충족 하는 열린 멀티 플레이 게임 세션의 목록을 검색할 수 있습니다.
 * [멀티 플레이어 관리자](../multiplayer/multiplayer-manager.md) 는 자동 채우기 기능 되었습니다.  사용 하도록 설정 하면 멀티 플레이어 관리자 연결을 통해 게임 플레이 하는 동안 열린 슬롯 채우기 구성원 찾을 있습니다.
-* [XIM (Xbox 통합 멀티 플레이어)](../multiplayer/xbox-integrated-multiplayer.md) 의 사전 프로덕션 버전 XDK 개발에 대 한 출시 되었습니다.  XIM는 쉽게 실시간 멀티 플레이어 네트워킹 및 채팅 통신 Xbox Live 서비스의 기능을 통해 게임에 추가 하기 위한 독립적인된 인터페이스입니다.
+* [XIM (Xbox 통합 멀티 플레이어)](../multiplayer/xbox-integrated-multiplayer.md) 의 사전 프로덕션 버전 XDK 개발에 대 한 출시 되었습니다.  XIM은 쉽게 실시간 멀티 플레이어 네트워킹 및 채팅 통신 Xbox Live 서비스의 기능을 통해 게임에 추가 하기 위한 독립적인된 인터페이스입니다.
 
 ### <a name="social-manager"></a>소셜 관리자
 
@@ -40,11 +40,11 @@ ms.locfileid: "8326659"
         * 6의 제한 된 사용자 지정 존재 기록 `social_manager_presence_title_record` 당 `social_manager_presence_record`
     * `social_event`
         * 반환은 `std::vector<xbox_user_id_container>` 대신 `std::vector<xbox_social_user>`
-        * 새로운 API에이 벡터를 전달할 수 있습니다. `xbox_social_user_group::get_users_from_xbox_user_ids()`
+        * 이 벡터 새로운 API에 전달할 수 있습니다. `xbox_social_user_group::get_users_from_xbox_user_ids()`
     * `xbox_social_user_group`
         * `users()` 이제 반환 API는 `std::vector<xbox_social_user*>`. 이러한 포인터 다음에 무효화 됩니다. `social_manager::do_work()`
-        * `get_copy_of_users` 반환는 `std::vector<xbox_social_user>` 호출자에 게 social_user_group에서 현재 사용자의 복사본으로 합니다. 이 함수에 영향을 미칠 수 호출 `do_work` 완료 시간.
-* 소셜 관리자 이제 실패할 초기화 합니다. 소셜 관리자 연결이 끊긴 상태에서 RTA 자동으로 다시 합니다. `error` 및 `rta_disconnect_error` 이벤트는 않으며 제거
+        * `get_copy_of_users` 반환는 `std::vector<xbox_social_user>` 호출자에 게 social_user_group에서 현재 사용자의 복사본으로 합니다. 이 함수에 영향을 줄 수 호출 `do_work` 완료 시간입니다.
+* 이제 소셜 관리자는 되지 초기화 된 후 실패 됩니다. 소셜 관리자 연결이 끊긴 상태에서 RTA를 자동으로 다시 됩니다. `error` 및 `rta_disconnect_error` 이벤트 사용 중단 되 고 제거
 * 제목은 사용자 지정 메모리 할당자 지정할 수 있습니다. 새 설명서를 참조 하세요: [소셜 관리자 메모리 및 성능](../social-platform/social-manager-memory-and-performance-overview.md)
 
 ### <a name="xbox-one-uwp"></a>Xbox One UWP
@@ -58,7 +58,7 @@ ms.locfileid: "8326659"
 
 ## <a name="documentation"></a>설명서
 * Xbox live [멀티 플레이어 관리자](../multiplayer/multiplayer-manager.md), [XIM](../multiplayer/xbox-integrated-multiplayer.md)및 [멀티 플레이 개념](../multiplayer/multiplayer-concepts.md) 에 대 한 새 설명서가 있습니다.
-* [Xbox Live 소개](../get-started-with-partner/get-started-with-xbox-live-partner.md) 섹션을 다시 작성 된 했습니다.  새 문서를 볼 수 새 Xbox Live가 지원 제목 만드는 게임에 Xbox Live 기능을 통합 궁금한 경우 [다음과 같습니다](../get-started-with-partner/get-started-with-xbox-live-partner.md).
+* [Xbox Live 소개](../get-started-with-partner/get-started-with-xbox-live-partner.md) 섹션을 다시 작성 되었습니다 했습니다.  새 문서를 볼 수 새 Xbox Live가 지원 타이틀을 만드는 다른 Xbox Live 기능 게임에 통합 궁금한 경우 [다음과 같습니다](../get-started-with-partner/get-started-with-xbox-live-partner.md).
 
 ## <a name="tools"></a>도구
 * Xbox Live 추적 분석기에서 찾을 수 있습니다 [http://aka.ms/XboxLiveTools](http://aka.ms/XboxLiveTools) 인증서 모드 되었습니다.  

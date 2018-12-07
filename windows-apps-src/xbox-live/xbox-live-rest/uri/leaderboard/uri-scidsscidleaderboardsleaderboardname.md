@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b73ffc2d6d6b80159651a90aabbf5595b146560d
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8337677"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8728868"
 ---
 # <a name="scidsscidleaderboardsleaderboardname"></a>/scids/{scid}/leaderboards/{leaderboardname}
 미리 정의 된 전역 순위표에 액세스합니다. 이러한 Uri에 대 한 도메인은 `leaderboards.xboxlive.com`.
@@ -41,7 +41,7 @@ ms.locfileid: "8337677"
 
 [메타 데이터 값을 사용 하 여 가져오기](uri-scidsscidleaderboardsleaderboardnamegetvaluemetadata.md)
 
-&nbsp;&nbsp;&nbsp; &nbsp;순위표 값와 관련 된 메타 데이터와 함께 미리 정의 된 전역 순위표 가져옵니다.
+&nbsp;&nbsp;&nbsp; &nbsp;는 순위표 값과 관련 된 메타 데이터와 함께 미리 정의 된 전역 순위표 가져옵니다.
 
  
 <a id="ID4EJC"></a>

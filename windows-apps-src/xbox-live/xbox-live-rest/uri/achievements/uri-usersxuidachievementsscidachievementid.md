@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 00c577f60b67f15f75c47b5e737ca12819695110
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8339663"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8733248"
 ---
 # <a name="usersxuidxuidachievementsscidachievementid"></a>/users/xuid({xuid})/achievements/{scid}/{achievementid}
 도전 과제, 구성 된 메타 데이터 및 사용자 관련 데이터에 대 한 세부 정보를 반환 합니다. 
@@ -32,9 +32,9 @@ ms.locfileid: "8339663"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | --- | 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 해당 리소스를 액세스 하는 사용자의 합니다. 인증된 된 사용자의 XUID 일치 해야 합니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID)의 리소스에 액세스 하 고 사용자의 합니다. 인증된 된 사용자의 XUID 일치 해야 합니다.| 
 | 서비스 안내| GUID| 해당 도전 과제를 액세스 하는 서비스 구성의 고유 식별자입니다.| 
-| achievementid| 32 비트 부호 없는 정수| 액세스 되는 도전 과제의 (지정 된 서비스 안내) 내에서 고유 식별자입니다.| 
+| achievementid| 32 비트 부호 없는 정수| 액세스 하는 도전 과제의 (내에서 지정 된 서비스 안내) 고유 식별자입니다.| 
   
 <a id="ID4EMC"></a>
 

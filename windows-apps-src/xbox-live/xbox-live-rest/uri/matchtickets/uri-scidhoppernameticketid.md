@@ -8,18 +8,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9722d06af64c5fd24f53485a1bcfe765f89b08cf
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "8333092"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8745248"
 ---
 # <a name="serviceconfigsscidhoppershoppernameticketsticketid"></a>/serviceconfigs/{scid}/hoppers/{hoppername}/tickets/{ticketid}
 
 일치 티켓 삭제 작업을 지원합니다.
 
 > [!IMPORTANT]
-> 이 URI 계약 103 이상을 사용 하 여 사용 하기 위한 및 X Xbl-계약 버전의 헤더 요소가: 103 또는 나중에 모든 요청.
+> 이 URI에 계약 103 이상을 사용 하 여 사용 하 고 X Xbl-계약 버전의 헤더 요소가: 103 또는 나중에 모든 요청.
 
 <a id="ID4ER"></a>
 
@@ -30,7 +30,7 @@ momatch.xboxlive.com
 
 
 ## <a name="remarks"></a>설명
-이 URI는 대상 사용자의 구성에서 소유자 식별자에 대 한 값 xuid, gt, 및 me를 지원합니다.  
+이 URI 값 xuid, gt, 및 me 대상 사용자의 구성에서 소유자 식별자에 대 한 지원합니다.  
 <a id="ID4E2"></a>
 
 
@@ -49,7 +49,7 @@ momatch.xboxlive.com
 
 [DELETE (/serviceconfigs/{scid}/hoppers/{hoppername}/tickets/{ticketid})](uri-scidhoppernameticketiddelete.md)
 
-&nbsp;&nbsp;일치 티켓을 제거합니다.
+&nbsp;&nbsp;일치 티켓을 제거 합니다.
 
 <a id="ID4ETC"></a>
 

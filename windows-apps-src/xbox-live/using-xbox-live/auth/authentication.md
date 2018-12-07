@@ -7,15 +7,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 인증에 로그인
 ms.localizationpriority: medium
 ms.openlocfilehash: 6fd94a8fbe759655b495feed8df4dad689936c4e
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8486937"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "8738882"
 ---
 # <a name="authentication"></a>인증
 
-이 섹션에서는 Xbox Live와 인증을 다룹니다.
+이 섹션에서는 Xbox live 인증
 
 ## <a name="in-this-section"></a>이 섹션의 내용
 
