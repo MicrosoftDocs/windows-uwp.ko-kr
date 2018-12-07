@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows 10, uwp, 알림 수신기, usernotificationlistener, 설명서, 액세스 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: ad17f4a6f568bcd10d03d7fa07c9dadd24f2f75f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: de1032eb3d0d364a62beff0a1af8f84240c11d87
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755279"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8807465"
 ---
 # <a name="notification-listener-access-all-notifications"></a>알림 수신기: 모든 알림에 액세스
 
@@ -91,7 +91,7 @@ switch (accessStatus)
 }
 ```
 
-사용자는 Windows 설정을 통해 언제든 액세스 권한을 취소할 수 있습니다. 따라서 앱은 알림 수신기를 사용하는 코드를 실행하기 전에 항상 [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) 메서드를 통해 액세스 상태를 확인해야 합니다. 사용자가 액세스 권한을 취소하면 예외가 throw되는 대신 API가 자동으로 실패합니다(예: API를 사용하여 모든 알림을 가져오려 하면 빈 목록이 반환됨).
+사용자는 Windows 설정을 통해 언제든 액세스 권한을 취소할 수 있습니다. 따라서 앱은 항상 알림 수신기를 사용 하는 코드를 실행 하기 전에, [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) 메서드를 통해 액세스 상태를 확인 합니다. 사용자가 액세스 권한을 취소하면 예외가 throw되는 대신 API가 자동으로 실패합니다(예: API를 사용하여 모든 알림을 가져오려 하면 빈 목록이 반환됨).
 
 
 ## <a name="access-the-users-notifications"></a>사용자의 알림에 액세스

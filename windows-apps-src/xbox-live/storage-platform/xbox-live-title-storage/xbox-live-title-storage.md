@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 472a2131c113cdde5d7383e169e4fbe638e4e555
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8736907"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8805491"
 ---
 # <a name="xbox-live-title-storage"></a>Xbox Live 타이틀 저장소
 
