@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bb37b1567349ef0684d1001da3f65b0a2b2694c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8734752"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8781483"
 ---
 # <a name="achievement-title-history-uris"></a>도전 과제 타이틀 기록 URI
  

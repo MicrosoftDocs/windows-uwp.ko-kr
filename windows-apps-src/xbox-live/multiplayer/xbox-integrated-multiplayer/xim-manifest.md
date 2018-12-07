@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xbox 통합된 멀티 플레이어, 매니페스트
 ms.localizationpriority: medium
 ms.openlocfilehash: 926cc4495236fc4762f9b3176a5d6a4a579e2e2e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8729027"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8779020"
 ---
 # <a name="xim-project-configuration"></a>XIM 프로젝트 구성
 

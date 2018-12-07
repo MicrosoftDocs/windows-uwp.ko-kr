@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f9ab412088707752d62cc20fd54da2639f26ddc
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8738951"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8781709"
 ---
 # <a name="peoplelist-json"></a>PeopleList(JSON)
 [사용자](json-person.md) 개체의 컬렉션입니다. 

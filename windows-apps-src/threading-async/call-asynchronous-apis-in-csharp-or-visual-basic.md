@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, C#, Visual Basic, 비동기
 ms.localizationpriority: medium
 ms.openlocfilehash: 899af2ffd26419d4c8906d703d6708d202f8c150
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749805"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790091"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>C# 또는 Visual Basic에서 비동기식 API 호출
 

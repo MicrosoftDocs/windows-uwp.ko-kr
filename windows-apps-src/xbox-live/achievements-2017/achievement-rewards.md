@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 도전 과제, 보상
 ms.localizationpriority: medium
 ms.openlocfilehash: 0fbbcb06a2aba927301cf982d09fdb55192ec84c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8732108"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789965"
 ---
 # <a name="achievement-rewards"></a>도전 과제 보상
 

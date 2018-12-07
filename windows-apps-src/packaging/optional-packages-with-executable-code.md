@@ -5,12 +5,12 @@ ms.date: 9/30/2018
 ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: 795155ab38be11987d978d8c3843a73b7d359277
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 465253be7ebf8cf7794004c0a6832a78cb0ced69
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755049"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8792632"
 ---
 # <a name="optional-packages-with-executable-code"></a>실행 가능한 코드가 있는 선택적 패키지
  
@@ -25,6 +25,9 @@ ms.locfileid: "8755049"
 
 > [!NOTE]
 > 선택적 패키지 및 관련 집합을 사용하는 앱을 Microsoft Store에 제출하려면 권한이 필요합니다. 선택적 패키지 및 관련된 집합을 스토어에 제출 되지 않은 경우 파트너 센터 권한 없이 줄의 lob (기간 업무) 나 엔터프라이즈 앱에 사용할 수 있습니다. 선택적 패키지 및 관련 집합을 사용한 앱을 제출할 권한을 얻는 방법은 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
+
+> [!NOTE]
+> 실행 코드를 포함 하는 선택적 패키지 [관련된 집합](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets)의 일부 여야 합니다. 관련된 집합의 일부가 아닌 경우 선택적 패키지에서 코드를 실행할 수 없습니다.
 
 ## <a name="c-optional-packages-with-executable-code"></a>실행 가능한 코드가 있는 C++ 선택적 패키지
 

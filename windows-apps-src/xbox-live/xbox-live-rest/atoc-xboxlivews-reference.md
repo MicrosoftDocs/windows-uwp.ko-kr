@@ -7,16 +7,16 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 2076cf7b909083072904128a8f53c200a681ee8e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 5e63e4ee6789e4ffb292608aa446138109e00e05
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8757456"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8785705"
 ---
 # <a name="xbox-live-services-restful-reference"></a>Xbox Live Services RESTful 참조
 
-Xbox Live 서비스는 게임 및 플레이어 정보를 관리 하기 위한 서비스의 집합입니다. 이러한 서비스 **Xbox.Services** 가능한 경우 사용 해야 하는 API 지원 합니다. 아직 **Xbox.Services** 에 추가 하지 않은 새로운 방법에 대해이 섹션에 설명 된 RESTful 인터페이스를 사용 합니다.
+Xbox Live 서비스는 게임 및 플레이어 정보를 관리 하기 위한 서비스의 집합입니다. 이러한 서비스 **Xbox.Services** 가능한 경우 사용 해야 하는 API 지원 합니다. 아직 **Xbox.Services** 에 추가 되지 않은 새로운 방법에 대해이 섹션에 설명 된 RESTful 인터페이스를 사용 합니다.
 
 <a id="ID4E5"></a>
 

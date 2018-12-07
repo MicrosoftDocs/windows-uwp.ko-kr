@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 6eddd11a370b8dcadc5108fe00539c2c6d1d9d1a
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8744816"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8788722"
 ---
 # <a name="connected-storage"></a>연결된 저장소
 

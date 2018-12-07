@@ -5,12 +5,12 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: f9ae7c75fb332e910aa1b63712cf0d230172afd3
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 22dff391e787e1763cb730272ba9cea029758c99
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750028"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791284"
 ---
 # <a name="get-error-reporting-data-for-your-xbox-one-game"></a>Xbox One에 대 한 데이터를 보고 하는 오류를 게임 가져오기
 
@@ -47,7 +47,7 @@ Xbox 개발자 포털 (XDP)을 통해 수집 된 상태로 XDP 분석 파트너 
 
 | 매개 변수        | 유형   |  설명      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | string | 오류 보고 데이터를 검색할 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 파트너 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
+| applicationId | string | 오류 보고 데이터를 검색할 Xbox One 게임의 **Store ID** 입니다. **스토어 ID** 는 파트너 센터의 앱 id 페이지에서 사용할 수 있습니다. 예를 들어 **스토어 ID** 는 9WZDNCRFJ3Q8입니다. |  예  |
 | startDate | date | 검색할 오류 보고 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜입니다. *aggregationLevel*이 **day**, **week** 또는 **month**인 경우 이 매개 변수는 ```mm/dd/yyyy``` 형식의 날짜를 지정해야 합니다. *aggregationLevel*이 **hour**인 경우 이 매개 변수는 ```mm/dd/yyyy``` 형식의 날짜를 지정하거나 ```yyyy-mm-dd hh:mm:ss``` 형식의 날짜 및 시간을 지정할 수 있습니다.  |  아니요  |
 | endDate | date | 검색할 오류 보고 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. *aggregationLevel*이 **day**, **week** 또는 **month**인 경우 이 매개 변수는 ```mm/dd/yyyy``` 형식의 날짜를 지정해야 합니다. *aggregationLevel*이 **hour**인 경우 이 매개 변수는 ```mm/dd/yyyy``` 형식의 날짜를 지정하거나 ```yyyy-mm-dd hh:mm:ss``` 형식의 날짜 및 시간을 지정할 수 있습니다. |  아니요  |
 | top | int | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니요  |
@@ -60,7 +60,7 @@ Xbox 개발자 포털 (XDP)을 통해 수집 된 상태로 XDP 분석 파트너 
 
 ### <a name="request-example"></a>요청 예제
 
-다음 예제에서는 Xbox One 게임 오류 보고 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. 게임에 대 한 제품 ID를 사용 하 여 *응용 프로그램 Id* 값을 바꿉니다.
+다음 예제에서는 Xbox One 게임 오류 보고 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. 게임에 대 한 **스토어 ID** 를 사용 하 여 *응용 프로그램 Id* 값을 바꿉니다.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/failurehits?applicationId=BRRT4NJ9B3D1&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -89,7 +89,7 @@ Authorization: Bearer <your access token>
 | 값           | 유형    | 설명        |
 |-----------------|---------|---------------------|
 | date            | 문자열  | 오류 데이터에 대한 날짜 범위의 시작 날짜입니다. 형식은 ```yyyy-mm-dd```입니다. 요청에서 하루를 지정하는 경우 이 값은 해당 날짜입니다. 요청에서 더 긴 날짜 범위를 지정하는 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. *AggregationLevel* **시간**값을 지정 하는 요청의 경우이 값 점이 시간 값 형식에서 ```hh:mm:ss``` 현지 표준 시간대 오류가 발생 했습니다.  |
-| applicationId   | string  | 오류 데이터를 검색 하려는 Xbox One 게임의 제품 ID입니다.   |
+| applicationId   | string  | 오류 데이터를 검색 하려는 Xbox One 게임의 **Store ID** 입니다.   |
 | applicationName | 문자열  | 게임의 표시 이름입니다.   |
 | failureName     | 문자열  | 오류 이름은 하나 이상의 문제 클래스, 예외/버그 확인 코드, 오류가 발생한 이미지의 이름 및 관련된 기능 이름 등 네 부분으로 구성됩니다.  |
 | failureHash     | string  | 오류의 고유 식별자입니다.   |

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e2a721886509c49c60d663d491f8d49bc3c95e9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8747987"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791876"
 ---
 # <a name="property-json"></a>Property(JSON)
 연결 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 들어 있습니다.
