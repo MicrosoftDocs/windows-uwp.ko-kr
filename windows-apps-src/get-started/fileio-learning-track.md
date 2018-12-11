@@ -7,11 +7,11 @@ keywords: 시작, uwp, windows 10, 학습 트랙, 파일, 파일 io, 파일, 파
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 9350228585ec8108c41bd15de6179de0294140dc
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8882295"
+ms.locfileid: "8921083"
 ---
 # <a name="work-with-files"></a>파일 작업
 

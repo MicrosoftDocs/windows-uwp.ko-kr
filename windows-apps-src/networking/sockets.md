@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7d75afd17d5aa7edf64fda36b3a35b3a101c1d89
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8895587"
+ms.locfileid: "8924826"
 ---
 # <a name="sockets"></a>소켓
 소켓은 많은 네트워킹 프로토콜이 구현되는 하위 수준 데이터 전송 기술입니다. UWP는 지속 시간이 긴 연결이든 설정된 연결이 필요하지 않든 클라이언트와 서버 간 또는 피어 투 피어 응용 프로그램에 대한 UDP 및 TCP 소켓 클래스를 제공합니다.
