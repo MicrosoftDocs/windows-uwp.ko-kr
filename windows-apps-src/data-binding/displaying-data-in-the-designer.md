@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e18be702c1b2bbd9ce1831b6991324896769192
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8783104"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8878974"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
 =============================================================================================

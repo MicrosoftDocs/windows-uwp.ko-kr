@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 658694e157a526f9090a5dbf387c80087ae1d4fc
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8805155"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8878384"
 ---
 # <a name="trademark-and-copyright-protection"></a>상표 및 저작권 보호
 

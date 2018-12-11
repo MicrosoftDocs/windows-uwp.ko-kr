@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1fa0f12779ad56d57c92f667443644851dc3d5e5
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8752082"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8878562"
 ---
 # <a name="xload-attribute"></a>x:Load 특성
 

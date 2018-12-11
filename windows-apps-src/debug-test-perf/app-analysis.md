@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f1d37446cb5f540cd77928cb8167d8d4319977d1
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8787716"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8878444"
 ---
 # <a name="app-analysis-overview"></a>앱 분석 개요
 

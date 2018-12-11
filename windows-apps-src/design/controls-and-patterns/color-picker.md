@@ -12,11 +12,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: ea3cfc10eb221ae0de8429cf299a4ca5b4d53716
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "8854704"
+ms.locfileid: "8877207"
 ---
 # <a name="color-picker"></a>색 선택
 

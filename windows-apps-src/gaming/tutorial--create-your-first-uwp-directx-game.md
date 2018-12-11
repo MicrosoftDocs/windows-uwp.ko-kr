@@ -7,11 +7,11 @@ ms.date: 12/01/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: dc602e2dd29231c1e6554d7ef55e9666a373fa31
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8792321"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8877522"
 ---
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>DirectX로 작성된 간단한 UWP(유니버설 Windows 플랫폼) 게임 만들기
 

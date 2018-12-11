@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 973091926ddff312b20002f7b535d34a3b7d2bc4
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8783317"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8877280"
 ---
 # <a name="fingerprint-biometrics"></a>지문 생체 인식
 

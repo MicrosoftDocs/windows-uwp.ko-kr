@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c5e1c294da2b4ef24ff8f62b686890cb8c69c06
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8807065"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8875820"
 ---
 # <a name="input-assembler-ia-stage"></a>IA(입력 어셈블러) 단계
 

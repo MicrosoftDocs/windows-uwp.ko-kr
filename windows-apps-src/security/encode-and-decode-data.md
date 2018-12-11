@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c4e694dca3c84c7e94e513d8bb10a3f405bbc86
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8709752"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8875462"
 ---
 # <a name="encode-and-decode-data"></a>데이터 인코드 및 디코드
 

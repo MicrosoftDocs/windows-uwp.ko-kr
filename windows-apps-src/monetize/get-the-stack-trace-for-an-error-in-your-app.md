@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류
 ms.localizationpriority: medium
 ms.openlocfilehash: ceffc7622f756eb17c8475208852e013df814554
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8787122"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8875327"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>앱에서 오류에 대한 스택 추적 가져오기
 

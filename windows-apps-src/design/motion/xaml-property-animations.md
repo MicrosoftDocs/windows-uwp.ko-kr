@@ -9,11 +9,11 @@ design-contact: jeffarn
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 81da1e769ab171e47a4f4046e8ec7e7c84ecf2d1
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734658"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8876374"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>컴퍼지션 애니메이션을 사용 하 여 애니메이션 효과 주는 XAML 요소
 

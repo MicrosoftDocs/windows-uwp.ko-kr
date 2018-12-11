@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: fe876b362f09eaca68d84516d413d3f458edf0a6
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8799972"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8875242"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>카메라 프로필을 사용하여 카메라 기능 검색 및 선택
 
