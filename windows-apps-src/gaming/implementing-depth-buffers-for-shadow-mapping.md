@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 섀도 볼륨, 깊이 버퍼, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 2feecb3080efefb2f9625fd8b66c5b722ad02a45
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8888371"
+ms.locfileid: "8918739"
 ---
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>연습: Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d5563a9909ba3d6cb3deaae43bcf9e55b4b2c880
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8892241"
+ms.locfileid: "8947835"
 ---
 # <a name="tile-access-limitations-with-duplicate-mappings"></a>중복 매핑을 사용하는 타일 액세스 제한
 

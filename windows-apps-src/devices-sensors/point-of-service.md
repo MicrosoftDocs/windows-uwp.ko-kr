@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a0c55f1b739ef88ec65b7fd44655406415bc0468
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8877250"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8919139"
 ---
 # <a name="point-of-service"></a>서비스 지점
 이 섹션에는 [Windows.Devices.PointOfService](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice)를 사용하여 유니버설 Windows 응용 프로그램에서 소매 및 병원 환경에서 찾아볼 수 있는 주변 장치와 상호 작용 방법에 대한 문서가 포함되어 있습니다.

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 33e5b6afbf0d60679bfce1789be2d965fd881f1c
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8887410"
+ms.locfileid: "8918272"
 ---
 # <a name="whats-new-for-xbox-live"></a>Xbox Live의 새로운 기능
 또한 모든 Xbox Live Api 최근 코드 변경 내용을 보려면 [Xbox Live API GitHub 커밋 기록](https://github.com/Microsoft/xbox-live-api/commits/master) 을 확인할 수 있습니다.

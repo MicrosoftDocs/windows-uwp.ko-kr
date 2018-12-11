@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xbox live 크리에이터 스, visual studio
 ms.localizationpriority: medium
 ms.openlocfilehash: e52555afd94edda3fc7cefe7a46e51be175b26d9
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8890162"
+ms.locfileid: "8918128"
 ---
 # <a name="get-started-developing-an-xbox-live-creators-program-title-with-visual-studio"></a>Visual Studio를 사용 하 여 Xbox Live 크리에이터 스 프로그램 타이틀 개발 시작
 

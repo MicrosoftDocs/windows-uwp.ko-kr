@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 고정핀
 ms.localizationpriority: medium
 ms.openlocfilehash: f67c93a6f56fd466d981bce10eb41c16ff8da1f3
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8880276"
+ms.locfileid: "8930253"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>지도에 관심 지점 표시
 

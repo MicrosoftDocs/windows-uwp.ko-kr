@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 레지스트리, 사용자 지정
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d30c19a7fd7641d76e810912d33a96dbbeb3132
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8876856"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8936978"
 ---
 # <a name="registry-data-for-game-controllers"></a>게임 컨트롤러의 레지스트리 데이터
 

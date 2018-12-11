@@ -7,11 +7,11 @@ keywords: windows 10, uwp, 앱 서비스
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
 ms.openlocfilehash: a976ac69d289a5582c2f3546227adba707ac5297
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8880583"
+ms.locfileid: "8927115"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환
 

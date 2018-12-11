@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 50c9e80296510d327e60f8c7dba5e38f19b95b7f
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8874479"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8919099"
 ---
 # <a name="walkthrough-creating-a-windows-runtime-component-in-ccx-and-calling-it-from-javascript-or-c"></a>연습: C++/CX로 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출
 > [!NOTE]

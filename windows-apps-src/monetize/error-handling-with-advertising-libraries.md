@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, javascript, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: a6c14ecf8e8909ab6cd95a54ca8144fbf8a8d912
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8888213"
+ms.locfileid: "8947680"
 ---
 # <a name="handle-ad-errors"></a>광고 오류 처리
 

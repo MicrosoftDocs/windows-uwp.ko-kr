@@ -5,11 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 8b8828b060e0401e7938517e497bae20e1234baf
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8883626"
+ms.locfileid: "8927489"
 ---
 # <a name="http-monitor-api-reference"></a>HTTP 모니터 API 참조   
 개발자 홈에 있는 상자를 체크하여 HTTP 모니터를 Xbox 콘솔에서 사용할 수 있는 경우 이 API를 사용하여 중심 앱에 대한 실시간 HTTP 트래픽에 액세스할 수 있습니다.

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: webvr, edge, 웹 개발, babylon, babylonjs, babylon.js, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e2081f0dbe163dcbcf35d83ea111caf573dacfb
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8874682"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8919073"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>3D Babylon.js 게임에 WebVR 지원 추가
 
@@ -37,7 +37,7 @@ VR에 대 한 하지만 평면에서 잘 작동 하는 3D 게임입니다.
 
 
 
-## <a name="getting-started"></a>시작
+## <a name="getting-started"></a>시작하기
 
 시작 하기 위한 가장 간단한 방법은 방문 [Windows 자습서 웹 GitHub 리포지토리](https://github.com/Microsoft/Windows-tutorials-web)눌러 녹색 **복제 또는 다운로드** 단추를 클릭 한 **Visual Studio에서 열기**를 선택 합니다.
 

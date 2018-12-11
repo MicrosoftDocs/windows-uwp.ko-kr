@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, 패키징, 패키지 레이아웃, 자산 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 9241ffeb6b232c5b5be3098b114f6c7bf00bcf0d
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8888444"
+ms.locfileid: "8947755"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>자산 패키지 및 패키지 접기를 사용하여 개발 
 
