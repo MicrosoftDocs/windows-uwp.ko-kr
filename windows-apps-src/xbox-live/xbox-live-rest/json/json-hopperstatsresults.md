@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 38e345fc20e92cdf6446c6ae1100e347fe634eff
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8787960"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8883294"
 ---
 # <a name="hopperstatsresults-json"></a>HopperStatsResults(JSON)
 hopper에 대 한 통계를 나타내는 JSON 개체입니다. 

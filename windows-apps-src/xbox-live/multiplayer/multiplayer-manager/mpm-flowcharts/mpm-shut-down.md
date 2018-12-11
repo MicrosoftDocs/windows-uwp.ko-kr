@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 78fb5e87e30f763354067e90039b805b17f0b594
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8751162"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8881557"
 ---
 # <a name="flowchart---shut-down-after-a-multiplayer-game-is-complete"></a>순서도-멀티 플레이어 게임을 완료 된 후 종료
 

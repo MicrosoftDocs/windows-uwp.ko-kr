@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e9295459c3eb715f1120d4287e69c596654d65fa
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8789691"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8872510"
 ---
 # <a name="get-mediamarketplaceidsinglemediagroupsearch"></a>GET (media/{marketplaceId}/singleMediaGroupSearch)
 단일 미디어 그룹 내의 항목에 대 한 검색을 허용 합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

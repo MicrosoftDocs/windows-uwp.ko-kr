@@ -6,11 +6,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
 ms.openlocfilehash: 03e1cec88b7e6528759501fdc8ab5af0a1753c81
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8784245"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8881593"
 ---
 # <a name="participant-user-scenarios"></a>참가자 사용자 시나리오
 

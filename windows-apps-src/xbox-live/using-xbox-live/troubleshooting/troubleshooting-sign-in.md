@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 로그인 한 xbox, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: c2a3ff76ab1ecb457085be777b53474cd5f8fe81
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8789043"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8872673"
 ---
 # <a name="troubleshooting-xbox-live-sign-in"></a>Xbox Live 로그인 문제 해결
 

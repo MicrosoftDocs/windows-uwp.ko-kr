@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 5afacc32739818c85ce2094c399fa1dd6e781822
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8791572"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8892706"
 ---
 # <a name="flowchart---handle-host-migration"></a>순서도-호스트 마이그레이션 처리
 

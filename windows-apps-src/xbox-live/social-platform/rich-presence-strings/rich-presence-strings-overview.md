@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 다양 한 상태, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ae0d0189954ed8fa9a0bc7651d6a90b9789c388
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8787670"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8881418"
 ---
 # <a name="rich-presence"></a>다양한 상태
 

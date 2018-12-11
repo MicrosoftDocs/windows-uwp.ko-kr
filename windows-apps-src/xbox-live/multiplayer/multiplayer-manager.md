@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 99159b5d126c671b07d37e20f1bcd61452c7d670
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8795435"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8888459"
 ---
 # <a name="multiplayer-manager"></a>멀티 플레이어 관리자
 

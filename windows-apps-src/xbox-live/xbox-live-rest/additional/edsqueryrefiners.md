@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c00ff971e05003ec88c47d3803e565f6e9406c47
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8784428"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8873713"
 ---
 # <a name="eds-query-refiners"></a>EDS 쿼리 구체화
  

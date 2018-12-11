@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 479be2401e0c54801645ad1c0d91b11b7ffb6869
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8796134"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8899749"
 ---
 # <a name="configure-your-xbox-development-console"></a>Xbox 개발 콘솔 구성
 

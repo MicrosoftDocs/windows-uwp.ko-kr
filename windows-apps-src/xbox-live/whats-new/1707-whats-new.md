@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 2017 년 7 월 한 새로운 기능, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 47db721a98b71fd6f4b5175a88ddccd00048d8d9
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8788814"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8880136"
 ---
 # <a name="whats-new-for-the-xbox-live-apis---july-2017"></a>새로운 기능에 대 한 Xbox Live Api-2017 년 7 월
 

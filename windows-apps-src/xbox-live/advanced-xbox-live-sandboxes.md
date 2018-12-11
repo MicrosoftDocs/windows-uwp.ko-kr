@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, 하나는 xbox, xdk, 관리 되는 파트너, 샌드박스, 콘텐츠 격리
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e95999fc132e5dcda556120e9cf42f9c302f654
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8784127"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8872595"
 ---
 # <a name="advanced-xbox-live-sandboxes"></a>고급 Xbox Live 샌드박스
 

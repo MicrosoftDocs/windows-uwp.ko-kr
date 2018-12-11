@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ea2baf4bc27e6d1cfd5beb9ef0386acda72a39d2
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8795903"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8896969"
 ---
 # <a name="configuring-featured-stats-or-leaderboards-in-partner-center-with-data-platform-2017"></a>데이터 플랫폼 2017 사용 하 여 파트너 센터의 주요 통계 또는 순위표 구성
 

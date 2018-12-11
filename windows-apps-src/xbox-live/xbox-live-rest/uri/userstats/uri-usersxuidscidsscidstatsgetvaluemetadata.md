@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 55ad44d4c29a2d7a43c76c4df2a78e08462fa65f
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8782444"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8890990"
 ---
 # <a name="get-usersxuidxuidscidsscidstatsincludevaluemetadata"></a>GET (/users/xuid({xuid})/scids/{scid}/stats?include=valuemetadata)
 사용자 지정 된 서비스 구성에 대 한 통계 값을와 관련 된 메타 데이터를 포함 하 여 지정 된 통계 목록을 가져옵니다.

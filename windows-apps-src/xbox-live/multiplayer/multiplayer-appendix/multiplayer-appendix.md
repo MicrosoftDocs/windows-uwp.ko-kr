@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 703e48c0f200c59fa6f9181905756ef834aabe4a
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8734614"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8898613"
 ---
 # <a name="multiplayer-appendix"></a>멀티 플레이 부록
 

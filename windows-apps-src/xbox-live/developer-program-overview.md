@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 개발자 프로그램, 크리에이터 스
 ms.localizationpriority: medium
 ms.openlocfilehash: 621e9adac30e67ea5e9a2e164f3d427e96bd51a3
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8788534"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8889371"
 ---
 # <a name="developer-program-overview"></a>개발자 프로그램 개요
 

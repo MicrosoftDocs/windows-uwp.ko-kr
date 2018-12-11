@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: aff463e2268af972536984a00e29348bf0a6859e
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8796729"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8877829"
 ---
 # <a name="permissionid-enumeration"></a>PermissionId 열거형
 PermissionId 열거형에 자세히 설명합니다.

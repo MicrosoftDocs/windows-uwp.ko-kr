@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a99bfaf11074092bd4c6aa1ed822f71f65a9d62
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8737540"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8886533"
 ---
 # <a name="usersme"></a>/users/me
 현재 사용자의 현재 상태에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b5c17f1791d69ca8a4c902b6c37736c4da28a31
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8824741"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8878632"
 ---
 # <a name="usersxuidxuiddevicescurrenttitlescurrent"></a>/users/xuid({xuid})/devices/current/titles/current
 제목이 나 제목의 사용자의 존재 여부에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 서비스 구성, xboxservices.config
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ff538d691627bf4bb12b3ef6f8b1360e59ac701
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8787843"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8894601"
 ---
 # <a name="xboxservicesconfig-file-description"></a>XboxServices.config 파일 설명
 

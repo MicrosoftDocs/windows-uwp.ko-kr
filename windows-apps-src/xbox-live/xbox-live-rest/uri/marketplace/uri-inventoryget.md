@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 31c787108fad84f06b02ded3958f9d2f99727cbe
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8783688"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8898402"
 ---
 # <a name="get-usersmeinventory"></a>GET (/users/me/inventory)
 현재 호출자에 게 제공 되는 사용자와 관련 된 인벤토리 집합을 제공 합니다.

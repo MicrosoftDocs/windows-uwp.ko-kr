@@ -6,11 +6,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, Xbox 통합 멀티 플레이어 하나 Unity xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: a600fd253efae1daca34241b105a69514561e01d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8745254"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8878694"
 ---
 # <a name="use-xim-unity-with-il2cpp"></a>XIM(IL2CPP 포함 Unity) 사용
 

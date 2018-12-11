@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 821b346958846b56a55c0ec5920d71f4b3cc13c4
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8790017"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8880512"
 ---
 # <a name="titlestitleidclusters"></a>/titles/{titleId}/clusters
 클라이언트는 제목에 대 한 Xbox Live 계산 서버 인스턴스를 만들 수 있는 URI입니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.

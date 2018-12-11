@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a39bc9c3302ba26949700774997355a216fe70d
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8825885"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8877816"
 ---
 # <a name="usersxuidxuidgroupsmonikerbroadcastingcount"></a>/users/xuid({xuid})/groups/{moniker}/broadcasting/count
 액세스 그룹 모니커 하 여 지정 된 브로드캐스트 사용자의 수는 URI에 표시 되는 XUID와 관련이 있습니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

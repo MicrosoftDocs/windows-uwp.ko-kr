@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ac79d3361e83993c372b1d651e97e900788d39f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8733366"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8880436"
 ---
 # <a name="permissioncheckbatchresponse-json"></a>PermissionCheckBatchResponse(JSON)
 다 수의 사용자에 대 한 권한 값 목록은 일괄 처리의 결과 확인합니다. 

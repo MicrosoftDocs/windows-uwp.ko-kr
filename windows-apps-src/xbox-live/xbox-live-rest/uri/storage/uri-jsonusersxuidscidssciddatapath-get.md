@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f292ca5d1d0968445d91a507384188af1db5cf5b
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8794095"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8875204"
 ---
 # <a name="get-jsonusersxuidxuidscidssciddatapath"></a>GET (/json/users/xuid({xuid})/scids/{scid}/data/{path})
 지정된 된 경로에 파일 정보를 나열합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

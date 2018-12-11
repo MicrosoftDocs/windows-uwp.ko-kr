@@ -6,11 +6,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 다양 한 상태 문자열을 파트너 센터
 ms.openlocfilehash: 5c2add99c6fc6ad1c7f085eb35dc4fdba9e0688d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8753313"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8885037"
 ---
 # <a name="configure-rich-presence-in-partner-center"></a>파트너 센터에서 다양 한 상태를 구성 합니다.
 

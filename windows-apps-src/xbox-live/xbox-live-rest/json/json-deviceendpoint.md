@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 48631f545846c53a50090b1bb369e92f3f65ed80
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8796815"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8880588"
 ---
 # <a name="deviceendpoint-json"></a>DeviceEndpoint(JSON)
  

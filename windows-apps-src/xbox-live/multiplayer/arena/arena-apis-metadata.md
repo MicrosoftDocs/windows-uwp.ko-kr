@@ -6,11 +6,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
 ms.openlocfilehash: 63151d2c584218090f98a3c5f8089bf24bdb9b22
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8794972"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8878623"
 ---
 # <a name="arena-apis-a-comprehensive-list-of-ui-metadata"></a>아레나 Api: UI 메타 데이터의 전체 목록
 

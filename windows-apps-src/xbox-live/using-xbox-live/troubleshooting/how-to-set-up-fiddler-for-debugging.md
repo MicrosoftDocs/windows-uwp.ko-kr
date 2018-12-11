@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, fiddler, 서비스 호출, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: d1dfc240e4545c7ab7002cedfba7621cfc397345
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8782408"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8890126"
 ---
 # <a name="troubleshooting-xbox-live-using-fiddler"></a>Xbox Live Fiddler를 사용 하 여 문제 해결
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 29b4c57468148a431a10e0d74f85d360ff0992b3
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8751829"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8893276"
 ---
 # <a name="get-usersxuidxuidinboxmessageid"></a>GET (/users/xuid({xuid})/inbox/{messageId})
 서비스에서 읽은 상태로 표시 하는 특정 사용자 메시지에 대 한 자세한 메시지 텍스트를 검색 합니다.

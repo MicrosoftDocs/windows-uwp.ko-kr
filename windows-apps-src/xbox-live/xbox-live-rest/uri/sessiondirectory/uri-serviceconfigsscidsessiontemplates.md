@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ca5fdc7f418895cb23ee0e3b03d4ca39c33756
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8780318"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8894663"
 ---
 # <a name="serviceconfigsscidsessiontemplates"></a>/serviceconfigs/{scid}/sessiontemplates
 MPSD 세션 템플릿 집합을 검색 하는 가져오기 작업을 지원 합니다. 

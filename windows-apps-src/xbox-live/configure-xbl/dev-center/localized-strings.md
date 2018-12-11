@@ -7,11 +7,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 지역화 된 문자열, 파트너 센터
 ms.openlocfilehash: 127f566dc5ae57b920d396623b6a84ff5d5eed96
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8783140"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8871130"
 ---
 # <a name="configuring-localized-strings-in-partner-center"></a>파트너 센터에서 지역화 된 문자열을 구성합니다.
 

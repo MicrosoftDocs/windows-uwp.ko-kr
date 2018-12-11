@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 862b956e29222bb9d28f98510f13d42fd1a51b6f
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8794747"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8883380"
 ---
 # <a name="put-uri"></a>PUT (/{uri})
 게임 클립 데이터를 업로드 합니다.

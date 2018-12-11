@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 크리에이터 스 하나, Unity, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 17af9afc8a9048e7222115d2afdc6108d25df1d7
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8790708"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8881314"
 ---
 # <a name="add-player-stats-and-leaderboards-to-your-unity-project"></a>플레이어 통계 및 순위표 Unity 프로젝트에 추가
 

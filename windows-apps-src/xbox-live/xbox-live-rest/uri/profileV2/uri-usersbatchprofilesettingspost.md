@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: aa029c0cffa369eeb802521b394a52b958b54557
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "8729128"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8879890"
 ---
 # <a name="post-usersbatchprofilesettings"></a>POST (/users/batch/profile/settings)
 사용자 또는 사용자에 대 한 프로필을 가져옵니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.

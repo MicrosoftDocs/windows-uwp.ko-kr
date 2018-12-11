@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a045faf4cd81c4a7e0f1c9ca51ba454bb972b9f3
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8786338"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8896270"
 ---
 # <a name="get-trustedplatformusersxuidxuidscidssciddatapath"></a>GET (/trustedplatform/users/xuid({xuid})/scids/{scid}/data/{path})
 지정된 된 경로에 파일 정보를 나열합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

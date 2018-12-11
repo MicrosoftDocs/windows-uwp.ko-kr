@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, unity, 컨트롤러 지원
 ms.localizationpriority: medium
 ms.openlocfilehash: 20defe8598b8360787454134eab3b2daaf244441
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8796911"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8888376"
 ---
 # <a name="add-controller-support-to-xbox-live-prefabs"></a>Xbox Live 프리 팹에 컨트롤러 지원 추가
 

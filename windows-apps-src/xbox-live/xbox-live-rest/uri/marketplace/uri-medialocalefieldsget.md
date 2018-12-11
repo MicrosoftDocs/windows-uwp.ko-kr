@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4358eef1ce025180e0da85683018b018a8f8db4d
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8792682"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8897164"
 ---
 # <a name="get-mediamarketplaceidfields"></a>GET (/media/{marketplaceId}/fields)
 필드 토큰을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

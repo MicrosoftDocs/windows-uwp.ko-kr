@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어, 연결, 스마트
 ms.localizationpriority: medium
 ms.openlocfilehash: 487ba1e2b6ab6bccbed4231034d09046a93292db
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8782963"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8900346"
 ---
 # <a name="smartmatch-matchmaking"></a>스마트 매치 매치 메이킹
 

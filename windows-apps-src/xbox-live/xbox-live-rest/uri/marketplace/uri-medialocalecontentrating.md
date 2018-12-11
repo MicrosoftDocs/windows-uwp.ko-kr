@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a7c269a85be16426a6c05860bda5bc72a51872bf
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8781839"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8877556"
 ---
 # <a name="mediamarketplaceidcontentrating"></a>/media/{marketplaceId}/contentRating
 콘텐츠 등급 토큰에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

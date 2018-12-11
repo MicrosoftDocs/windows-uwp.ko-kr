@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a787992507405a70185140e879be731d72806eff
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8799964"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8885621"
 ---
 # <a name="personsummary-json"></a>PersonSummary(JSON)
 [Person (JSON)](json-person.md) 개체의 컬렉션입니다. 
