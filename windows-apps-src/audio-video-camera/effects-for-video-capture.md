@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e9960e66c6bcdd7105e201d48e2317de4a39a19a
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8787357"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8887069"
 ---
 # <a name="effects-for-video-capture"></a>비디오 캡처 효과
 

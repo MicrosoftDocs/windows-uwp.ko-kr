@@ -6,11 +6,11 @@ ms.date: 08/23/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 33103ebfc7ee3e26a11de781af7981bce78b349c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744195"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8888081"
 ---
 # <a name="user-activities-best-practices"></a>사용자 활동 모범 사례
 

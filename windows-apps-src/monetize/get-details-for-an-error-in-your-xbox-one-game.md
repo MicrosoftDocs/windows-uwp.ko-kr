@@ -5,12 +5,12 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b713e3c6c2f7b82e5779e4785cc6b2e320b24f0
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: da3252c42a0c2e2bd02465985737125cc053a616
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8741168"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8880882"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>게임에서 Xbox One 오류에 대 한 세부 정보를 가져오기
 
@@ -48,7 +48,7 @@ ms.locfileid: "8741168"
 
 | 매개 변수        | 유형   |  설명      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | string | 오류 세부 정보를 검색할 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 파트너 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
+| applicationId | string | 오류 세부 정보를 검색할 Xbox One 게임의 **Store ID** 입니다. **스토어 ID** 는 파트너 센터의 앱 id 페이지에서 사용할 수 있습니다. 예를 들어 **스토어 ID** 는 9WZDNCRFJ3Q8입니다. |  예  |
 | failureHash | 문자열 | 자세한 정보를 가져오려는 오류의 고유 ID입니다. 관심 있는 오류의이 값을 얻기 위해 [게임에 Xbox One에 대 한 오류 보고 데이터를 가져오는](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 사용 하 고 해당 메서드의 응답 본문에 **failureHash** 값을 사용 합니다. |  예  |
 | startDate | date | 검색할 자세한 오류 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다. |  아니요  |
 | endDate | date | 검색할 자세한 오류 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
@@ -60,7 +60,7 @@ ms.locfileid: "8741168"
 
 ### <a name="request-example"></a>요청 예제
 
-다음 예제에서는 게임에서 Xbox One에 대 한 자세한 오류 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. 게임에 대 한 제품 ID를 사용 하 여 *응용 프로그램 Id* 값을 바꿉니다.
+다음 예제에서는 게임에서 Xbox One에 대 한 자세한 오류 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. 게임에 대 한 **스토어 ID** 를 사용 하 여 *응용 프로그램 Id* 값을 바꿉니다.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/failuredetails?applicationId=BRRT4NJ9B3D1&failureHash=012e33e3-dbc9-b12f-c124-9d9810f05d8b&startDate=2016-11-05&endDate=2016-11-06&top=10&skip=0 HTTP/1.1
@@ -90,7 +90,7 @@ Authorization: Bearer <your access token>
 
 | 값           | 유형    | 설명     |
 |-----------------|---------|----------------------------|
-| applicationId   | string  | 자세한 오류 데이터를 검색 하는 Xbox One 게임의 제품 ID입니다.      |
+| applicationId   | string  | 자세한 오류 데이터를 검색 하는 Xbox One 게임의 **Store ID** 입니다.      |
 | failureHash     | string  | 오류의 고유 식별자입니다.     |
 | failureName     | 문자열  | 오류 이름은 하나 이상의 문제 클래스, 예외/버그 확인 코드, 오류가 발생한 이미지의 이름 및 관련된 기능 이름 등 네 부분으로 구성됩니다.           |
 | date            | string  | 오류 데이터에 대한 날짜 범위의 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. |

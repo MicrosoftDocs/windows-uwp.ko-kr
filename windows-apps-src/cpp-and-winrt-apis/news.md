@@ -7,11 +7,11 @@ keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 뉴스, 항�
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 87ab438de08ed5d6165343e7b9c4a559f37b351e
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8827558"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8882553"
 ---
 # <a name="whats-new-in-cwinrt"></a>새로운 C + + WinRT
 

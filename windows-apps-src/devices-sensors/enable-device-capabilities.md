@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e1a2884cd3db458685ebdd393c31aed88ee36a35
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8782069"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8888226"
 ---
 # <a name="enable-device-capabilities"></a>디바이스 기능 사용
 

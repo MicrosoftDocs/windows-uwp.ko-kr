@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ecb511fad1aa4e1605d83090a5e4e8d98efff1be
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8751699"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8885863"
 ---
 # <a name="balancing-style-and-consistency"></a>스타일과 일관성 사이의 적절한 균형 유지
 
