@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보조 타일, 작업 표시줄에 고정 작업 표시줄에 보조 타일을 고정할 바로 가기
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ad322fe371b0e1f3605ffb4c29108a15bb28e0c
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8779510"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8886727"
 ---
 # <a name="pin-secondary-tiles-to-taskbar"></a>작업 표시줄에 보조 타일 고정
 
