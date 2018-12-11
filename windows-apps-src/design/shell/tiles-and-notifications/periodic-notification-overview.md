@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f7a5054fde1a1a24945b193f578b8389519dc2d5
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730050"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8871823"
 ---
 # <a name="periodic-notification-overview"></a>정기 알림 개요
  

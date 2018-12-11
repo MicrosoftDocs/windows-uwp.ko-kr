@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: 94d15fc7f2443475020aa7e134c076b833db46a8
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8797411"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8826318"
 ---
 # <a name="input-driven-animations"></a>입력 기반 애니메이션
 

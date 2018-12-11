@@ -7,11 +7,11 @@ keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 인 
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1847f22f52eb066115b5681e745e74ec74f77f7d
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8790431"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8854664"
 ---
 # <a name="get-insights-data"></a>정보 데이터 가져오기
 

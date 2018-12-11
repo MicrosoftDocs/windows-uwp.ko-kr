@@ -8,11 +8,11 @@ keywords: Windows 10, uwp, 제목 표시줄
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 88c613456525648883735850fe831cb3b67f145c
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8793814"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8829683"
 ---
 # <a name="title-bar-customization"></a>제목 표시줄 사용자 지정
 

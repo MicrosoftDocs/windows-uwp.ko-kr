@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0f881c470d92ea1eafb08f24e6cf1fd06f4fc75e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: fb97f69ccdffcec86dfdaf5fa6c5f817644ebd61
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8746964"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8873496"
 ---
 # <a name="icons-for-uwp-apps"></a>UWP 앱의 아이콘
 
@@ -81,7 +81,7 @@ ms.locfileid: "8746964"
 
 ## <a name="using-the-right-type-of-icon"></a>올바른 유형의 아이콘 사용
 
-여러 가지 방법으로 아이콘을 만들 수 있습니다. Segoe MDL2 자산 같은 기호 글꼴을 사용할 수 있습니다. 자신의 벡터 기반 이미지를 만들 수 있습니다. 비트맵 이미지를 사용할 수도 있지만 권장하지 않습니다. 앱에 아이콘을 추가할 수 있는 다양한 방법에 대한 요약은 다음과 같습니다. 
+여러 가지 방법으로 아이콘을 만들 수 있습니다. Segoe MDL2 자산 같은 기호 글꼴을 사용할 수 있습니다. 벡터 기반 이미지를 만들 수 있습니다. 비트맵 이미지를 사용할 수도 있지만 권장하지 않습니다. 앱에 아이콘을 추가할 수 있는 다양한 방법에 대한 요약은 다음과 같습니다. 
 
 ### <a name="use-a-predefined-icon"></a>미리 정의된 아이콘을 사용합니다.
 :::row:::

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 지침, 모범 사례, 가시성
 ms.localizationpriority: medium
 ms.openlocfilehash: 87e21f4e98c58f79f397c369891212eccb196c18
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8797822"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8872949"
 ---
 # <a name="optimize-the-viewability-of-your-ad-units"></a>광고 단위의 가시성 최적화
 

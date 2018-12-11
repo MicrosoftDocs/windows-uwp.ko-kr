@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API
 ms.localizationpriority: medium
 ms.openlocfilehash: 2122c259e78ce96c4553dd676c0c1ed78e4e7123
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8800189"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8900563"
 ---
 # <a name="create-and-manage-submissions"></a>제출 만들기 및 관리
 

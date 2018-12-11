@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 지도, 위치, 지도 서비스
 ms.localizationpriority: medium
 ms.openlocfilehash: aea553a46357a26028848db5ff0e9b5debbeae56
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8743223"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8874000"
 ---
 # <a name="maps-and-location-overview"></a>지도 및 위치 개요
 

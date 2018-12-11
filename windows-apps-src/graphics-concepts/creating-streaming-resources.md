@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ec96f6245969d32357563c44107f539fb9043aac
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8742732"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8830346"
 ---
 # <a name="creating-streaming-resources"></a>스트리밍 리소스 만들기
 

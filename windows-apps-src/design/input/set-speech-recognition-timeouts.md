@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 73c7e889b4633dae9e416cf7ccde13eb3f58e8ee
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8788922"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8873218"
 ---
 # <a name="set-speech-recognition-timeouts"></a>음성 인식 시간 제한 설정
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e2a96169f44802c62f341029b9bc1c5eb7e31de
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8781247"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8871909"
 ---
 # <a name="reposition-animations"></a>위치 변경 애니메이션
 

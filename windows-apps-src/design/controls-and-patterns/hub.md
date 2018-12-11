@@ -12,11 +12,11 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 779c9a875753ed54b61d73df8ba3a9401bc67cbf
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "8854924"
+ms.locfileid: "8900773"
 ---
 # <a name="hub-controlpattern"></a>허브 컨트롤/패턴
 
