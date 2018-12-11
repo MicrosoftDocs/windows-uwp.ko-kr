@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d983de8f9f58e5c9fe6b048b98ea00ebef7197c0
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8808498"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8883289"
 ---
 # <a name="adaptive-streaming"></a>적응 스트리밍
 

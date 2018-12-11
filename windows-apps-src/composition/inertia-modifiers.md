@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: f99ebc4b98c87a4bc6d77fd2c626f481563e50c5
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8782491"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8882527"
 ---
 # <a name="create-snap-points-with-inertia-modifiers"></a>관성 한정자로 끌기 지점 만들기
 

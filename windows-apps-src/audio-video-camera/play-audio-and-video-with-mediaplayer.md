@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d33a2bf1505618dca4e0e54c2bd9a534f58bcfc
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744942"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8887003"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>MediaPlayer를 사용하여 오디오 및 비디오 재생
 

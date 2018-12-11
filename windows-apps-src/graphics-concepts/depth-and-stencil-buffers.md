@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0336054b99e5aae6739e22afd29ee344aad3d42c
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8784636"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8883507"
 ---
 # <a name="depth-and-stencil-buffers"></a>깊이 및 스텐실 버퍼
 

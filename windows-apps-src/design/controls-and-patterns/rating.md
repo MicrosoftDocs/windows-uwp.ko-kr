@@ -11,11 +11,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: c1da476f55d1b57048eae8a0027a91c4e6ab8b57
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8800779"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8881611"
 ---
 # <a name="rating-control"></a>평점 컨트롤
 
