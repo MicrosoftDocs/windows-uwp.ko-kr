@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f4feff88507ae5f84bccf044aa9ab6711d6b8bb
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8740761"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8900239"
 ---
 # <a name="compile-resources-manually-with-makepriexe"></a>MakePri.exe를 사용하여 수동으로 리소스 컴파일
 
