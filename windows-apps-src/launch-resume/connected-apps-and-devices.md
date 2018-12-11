@@ -7,11 +7,11 @@ keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로�
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
 ms.openlocfilehash: 79decdcb420e7d1b5cb732a354ccddb1ce5b7404
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8787185"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8893533"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>연결된 앱 및 장치(프로젝트 로마)
 
