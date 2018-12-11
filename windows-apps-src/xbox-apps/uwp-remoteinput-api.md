@@ -5,11 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 882e84c5126e4f67e246dd479008133c979c06b1
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8793075"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8825306"
 ---
 # <a name="remote-input-api-reference"></a>원격 입력 API 참조   
 이 API를 통해 원격으로 실시간으로 컨트롤러, 키보드 및 마우스 입력을 보낼 수 있습니다.

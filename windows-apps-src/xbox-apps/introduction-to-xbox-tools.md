@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, xbox one, 도구
 ms.assetid: 6eaf376f-0d7c-49de-ad78-38e689b43658
 ms.localizationpriority: medium
 ms.openlocfilehash: ed106095d83ed0c6e055d22a1a0cf229380cff71
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8795010"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8828166"
 ---
 # <a name="introduction-to-xbox-one-tools"></a>Xbox One 도구 소개
 
