@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: fb286b591881d16ff08dae9fe12770644d886acf
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 2dcefdfd3438e0bf8de94f0b9fd2376cf5c23190
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8737584"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8885929"
 ---
 # <a name="combo-box"></a>콤보 상자
 
@@ -72,10 +72,10 @@ XAML에서 추가 된 간단한 콤보 상자는 다음과 같습니다.
 
 ```xaml
 <ComboBox Header="Colors" PlaceholderText="Pick a color" Width="200">
-    <x:String>Blue<x:String>
-    <x:String>Green<x:String>
-    <x:String>Red<x:String>
-    <x:String>Yellow<x:String>
+    <x:String>Blue</x:String>
+    <x:String>Green</x:String>
+    <x:String>Red</x:String>
+    <x:String>Yellow</x:String>
 </ComboBox>
 ```
 
