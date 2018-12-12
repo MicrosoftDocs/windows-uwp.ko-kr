@@ -5,11 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: ac30d8db830c51ee40653feb49b443ed44502617
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8883052"
+ms.locfileid: "8934688"
 ---
 # <a name="network-credentials-api-reference"></a>네트워크 자격 증명 API 참조
 추가, 제거 또는이 REST API를 사용 하 여 devkit에서 저장 된 네트워크 자격 증명을 업데이트할 수 있습니다.
