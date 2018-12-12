@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 제한, xbox, 속도 제한
 ms.localizationpriority: medium
 ms.openlocfilehash: b79a4f0a873ffaf5dd824a0c9832f61aa4a7d77f
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8881824"
+ms.locfileid: "8919055"
 ---
 # <a name="xbox-live-fine-grained-rate-limiting"></a>Xbox Live 세분화 된 속도 제한
 

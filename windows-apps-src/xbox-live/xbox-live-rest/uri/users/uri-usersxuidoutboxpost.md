@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b225e8441fee3d499f172e2e5701096cdbc161a
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8889144"
+ms.locfileid: "8920642"
 ---
 # <a name="post-usersxuidxuidoutbox"></a>POST (/users/xuid({xuid})/outbox)
 받는 사람 목록에 지정 된 메시지를 보냅니다.

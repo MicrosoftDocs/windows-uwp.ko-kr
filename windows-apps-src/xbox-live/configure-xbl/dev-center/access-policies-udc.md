@@ -7,11 +7,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
 ms.openlocfilehash: ae26c18abdac30ff988e90ee5c56f178bf14b74a
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8874448"
+ms.locfileid: "8918447"
 ---
 # <a name="configure-access-policies-in-partner-center"></a>파트너 센터에서 액세스 정책 구성
 

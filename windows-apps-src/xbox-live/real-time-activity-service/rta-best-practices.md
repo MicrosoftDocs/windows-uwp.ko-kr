@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 실시간으로 활동
 ms.localizationpriority: medium
 ms.openlocfilehash: 7733aab9330c316ad5938cf9a2ef763e06f19b9a
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8885432"
+ms.locfileid: "8926931"
 ---
 # <a name="real-time-activity-rta-best-practices"></a>실시간으로 활동 (RTA)에 대 한 유용한 정보
 이러한 모범 사례는 RTA 타이틀의 사용을 최대한 활용 하는 데 도움이 됩니다.

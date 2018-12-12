@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 샘플, 샘플
 ms.localizationpriority: medium
 ms.openlocfilehash: 4accccee453a0b2bed5ff351b52d5dbd3d0a251d
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8872471"
+ms.locfileid: "8938276"
 ---
 # <a name="xbox-live-samples"></a>Xbox Live 샘플
 

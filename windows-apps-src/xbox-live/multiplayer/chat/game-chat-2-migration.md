@@ -6,11 +6,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅 2, 게임 채팅, 음성 통신
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b638fce06aeb439af9fca1642507fb781c912af
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8871358"
+ms.locfileid: "8928542"
 ---
 # <a name="migration-from-game-chat-to-game-chat-2"></a>게임 채팅 2 게임 채팅에서 마이그레이션
 

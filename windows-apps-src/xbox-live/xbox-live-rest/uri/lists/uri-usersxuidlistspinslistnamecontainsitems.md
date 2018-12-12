@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f9e51910e921c7efaa92dfd063e9d37975fda18f
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8895100"
+ms.locfileid: "8919679"
 ---
 # <a name="usersxuidxuidlistspinslistnamecontainsitems"></a>/users/xuid(xuid)/lists/PINS/{listname}/ContainsItems
 전체 목록을 검색 하지 않고 일련의 항목 (itemId 지정한) 목록에 포함 되어 있는지 여부를 결정 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
