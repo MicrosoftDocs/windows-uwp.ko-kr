@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 설정, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 252d7ccb8e50e773a19282afaf19bb18d4c5d5a6
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8893433"
+ms.locfileid: "8944587"
 ---
 # <a name="set-up-the-game-project"></a>게임 프로젝트 설정
 
@@ -139,7 +139,7 @@ void App::Run()
 
 ## <a name="review-the-included-libraries-and-headers"></a>포함된 라이브러리 및 헤더를 검토합니다.
 
-There are a few files we haven't looked at yet. 이 파일은 Direct3D 게임 개발 시나리오에 공통적으로 적용되는 추가 도구 및 지원을 제공합니다. 기본 DirectX 게임 프로젝트와 함께 제공되는 전체 파일 목록은 [DirectX 게임 프로젝트 템플릿](user-interface.md#template-structure)을 참조하세요.
+아직 살펴보지 않은 몇 개의 파일이 있습니다. 이 파일은 Direct3D 게임 개발 시나리오에 공통적으로 적용되는 추가 도구 및 지원을 제공합니다. 기본 DirectX 게임 프로젝트와 함께 제공되는 전체 파일 목록은 [DirectX 게임 프로젝트 템플릿](user-interface.md#template-structure)을 참조하세요.
 
 | 템플릿 원본 파일         | 파일 폴더            | 설명 |
 |------------------------------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

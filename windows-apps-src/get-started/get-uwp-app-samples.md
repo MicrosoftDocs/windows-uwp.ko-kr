@@ -7,11 +7,11 @@ keywords: windows 10, uwp, 샘플 코드, 코드 샘플
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
 ms.openlocfilehash: 64eb0d13db1fbcf49d9da28e57eb85ff84823bf1
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8897525"
+ms.locfileid: "8946298"
 ---
 # <a name="get-uwp-app-samples"></a>UWP 앱 샘플 다운로드
 
