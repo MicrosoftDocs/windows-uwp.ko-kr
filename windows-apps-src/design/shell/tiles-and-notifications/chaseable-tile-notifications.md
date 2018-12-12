@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 추적형 타일, 라이브 타일, 추적형 타일 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: 90a43ad803ca4cfe4a7403117c268344d1192d74
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8871971"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8938003"
 ---
 # <a name="chaseable-tile-notifications"></a>추적형 타일 알림
 

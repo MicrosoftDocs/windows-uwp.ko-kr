@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 텍스처, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 437c861e6d3017d83b520732dd0e279d882835c5
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8900513"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8934738"
 ---
 # <a name="apply-textures-to-primitives"></a>기본 요소에 텍스처 적용
 

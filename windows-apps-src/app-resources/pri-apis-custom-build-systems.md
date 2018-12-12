@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 617812415d3dcd00ec24d5f55971ae311265b61d
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8874856"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8931754"
 ---
 # <a name="package-resource-indexing-pri-apis-and-custom-build-systems"></a>패키지 리소스 인덱싱(PRI) API 및 사용자 지정 빌드 시스템
 [패키지 리소스 인덱싱(PRI) API](https://msdn.microsoft.com/library/windows/desktop/mt845690)를 사용하여 UWP 앱 리소스에 대한 사용자 지정 빌드 시스템을 개발할 수 있습니다. 빌드 시스템은 UWP 앱에 필요한 복잡도 수준에 상관없이 PRI(패키지 리소스 인덱스) 파일을 만들고 버전화하고 덤프할 수 있습니다(XML로). 현재 MakePri.exe 명령줄 도구를 사용하는 사용자 지정 빌드 시스템이 있는 경우([MakePri.exe를 사용하여 수동으로 리소스 컴파일](makepri-exe-command-options.md)), 성능을 높이고 제어권을 강화하기 위해 MakePri.exe를 호출하는 대신 PRI API를 호출하는 것이 좋습니다.
