@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c909e707d25e4add534ce89319abe71c2557b59
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 267e1d4de3917ae332cdfe15309f3871ef7b6647
+ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919083"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8968567"
 ---
 # <a name="get-all-apps"></a>모든 앱 가져오기
 
 
-Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 모든 앱에 대 한 데이터를 검색 합니다.
+Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 데이터를 검색 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -31,7 +31,7 @@ Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications``` |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications` |
 
 
 ### <a name="request-header"></a>요청 헤더
@@ -43,7 +43,7 @@ Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-모든 요청 매개 변수는 이 메서드에 대한 옵션입니다. 매개 변수 없이 이 메서드를 호출하는 경우 응답에는 계정에 등록된 모든 앱에 대한 데이터가 포함됩니다.
+모든 요청 매개 변수는 이 메서드에 대한 옵션입니다. 매개 변수 없이이 메서드를 호출 하는 경우 응답 처음 10에 대 한 데이터를 포함 하는 계정에 등록 된 앱을 합니다.
 
 |  매개 변수  |  유형  |  설명  |  필수  |
 |------|------|------|------|
@@ -55,21 +55,46 @@ Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 
 
 이 메서드에 대한 요청 본문을 제공하지 않습니다.
 
-### <a name="request-examples"></a>요청 예제
+### <a name="request-examples"></a>요청 예시
 
-다음 예제에서는 계정에 등록된 모든 앱에 대한 정보를 검색하는 방법을 보여 줍니다.
+다음 예제에서는 앱 계정에 등록된 처음 10개의 앱을 검색하는 방법을 보여 줍니다.
 
-```
+```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-다음 예제에서는 앱 계정에 등록된 처음 10개의 앱을 검색하는 방법을 보여 줍니다.
+다음 예제에서는 계정에 등록된 모든 앱에 대한 정보를 검색하는 방법을 보여 줍니다. 10 앱을 가져옵니다.
 
-```
+```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
+
+재귀적으로 호출 `GET https://manage.devcenter.microsoft.com/v1.0/my/{@nextLink}` 까지 `{@nextlink}` null 또는 응답에 존재 하지 않습니다. 예를 들면 다음과 같습니다.
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+  
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=20&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=30&top=10 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
+계정에 있는 앱의 총 수를 알고 있는 경우 모든 앱에 대 한 정보를 가져오는 **top** 매개 변수에서 해당 번호를 간단 하 게 전달할 수 있습니다.
+
+```http
+GET https://manage.devcenter.microsoft.com/v1.0/my/applications?top=23 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
 
 ## <a name="response"></a>응답
 
@@ -114,7 +139,7 @@ Authorization: Bearer <your access token>
 | 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | value      | 배열  | 계정에 등록된 각 앱에 대한 정보가 포함된 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 [응용 프로그램 리소스](get-app-data.md#application_object)를 참조하세요.                                                                                                                           |
-| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 10으로 설정되어 있지만 계정에 등록된 앱이 20개인 경우 응답 본문에는 ```applications?skip=10&top=10```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10```을 호출하여 다음 10개의 앱을 호출할 수 있음을 나타냅니다. |
+| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 `https://manage.devcenter.microsoft.com/v1.0/my/` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 10으로 설정되어 있지만 계정에 등록된 앱이 20개인 경우 응답 본문에는 `applications?skip=10&top=10`의 @nextLink 값이 포함되며 이는 `https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10`을 호출하여 다음 10개의 앱을 호출할 수 있음을 나타냅니다. |
 | totalCount | int    | 쿼리에 대한 데이터 결과의 총 행 수(즉, 계정에 등록된 총 앱 수)입니다.                                                |
 
 

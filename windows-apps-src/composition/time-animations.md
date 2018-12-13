@@ -1,16 +1,16 @@
 ---
 title: 시간 애니메이션
 description: KeyFrame Animation 클래스를 사용하여 시간이 지남에 따라 UI를 변경합니다.
-ms.date: 10/10/2017
+ms.date: 12/12/2018
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a1fe8c1fcb641c3bc79f1f058befe6f4b44044a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 838a8c3a6dfe89de49fddefd28c53cea563408cf
+ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934372"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8968577"
 ---
 # <a name="time-based-animations"></a>시간 기반 애니메이션
 
@@ -62,22 +62,22 @@ KeyFrameAnimations로 명시적인 시간 기반 애니메이션을 만드는 �
 1. 애니메이션 템플릿을 사용하여 KeyFrames를 추가하고 애니메이션의 속성을 정의하기 시작합니다.
     - 하나 이상의 KeyFrame이 필요합니다(100% 또는 1f 키 프레임).
     - 기간도 정의하는 것이 좋습니다.
-1. 이 애니메이션을 실행할 준비가 되면 애니메이션을 적용할 속성을 대상으로 CompositionObject에서 StartAnimation(...)을 호출합니다. 특히 다음 사항에 주의하세요.
-    - `Visual.StartAnimation("targetProperty", CompositionAnimation animation);`
-    - `Visual.StartAnimationGroup(AnimationGroup animationGroup);`
-1. 실행 중인 애니메이션이 있는 경우, 다음 API를 사용 애니메이션 또는 애니메이션 그룹을 중지할 수 있습니다.
-    - `Visual.StopAnimation("targetProperty");`
-    - `Visual.StopAnimationGroup(AnimationGroup AnimationGroup);`
+1. 한 번이 애니메이션을 실행 하 고 애니메이션 효과를 줄 속성을 대상으로 CompositionObject에 적용할을 호출할 준비가 됩니다. 특히 다음 사항에 주의하세요.
+    - `visual.StartAnimation("targetProperty", CompositionAnimation animation);`
+    - `visual.StartAnimationGroup(AnimationGroup animationGroup);`
+1. 실행 중인 애니메이션이 있는 경우 애니메이션 또는 애니메이션 그룹을 중지 하려면 이러한 Api를 사용할 수 있습니다.
+    - `visual.StopAnimation("targetProperty");`
+    - `visual.StopAnimationGroup(AnimationGroup AnimationGroup);`
 
 이 공식을 실제로 사용하는 예를 살펴보겠습니다.
 
 ## <a name="example"></a>예
 
-이 예에서 <0,0,0>에서 <20,20,20>까지 시각 요소 오프셋에 1초 이상 애니메이션 효과를 주고자 합니다. 또한 이러한 위치 사이에서 시각적 애니메이션을 10회 보고 싶습니다.
+이 예제에서는 1 초 이상 0, < 0, 0 > < 200,0,0 >는 시각적 개체의 offset에 애니메이션 효과 하려는. 또한 이러한 위치 사이에서 시각적 애니메이션을 10회 보고 싶습니다.
 
 ![키 프레임 애니메이션](images/animation/animated-rectangle.gif)
 
-먼저 애니메이션을 적용할 CompositionObject 및 속성을 식별하는 것으로 시작합니다. 이 경우 빨간색 사각형은 `redSquare`라는 컴퍼지션 시각으로 표시됩니다. 이 개체에서 애니메이션을 시작합니다.
+먼저 애니메이션을 적용할 CompositionObject 및 속성을 식별하는 것으로 시작합니다. 이 경우 빨간색 사각형은 `redVisual`라는 컴퍼지션 시각으로 표시됩니다. 이 개체에서 애니메이션을 시작합니다.
 
 그런 다음 오프셋 속성에 애니메이션을 적용하려고 하므로 Vector3KeyFrameAnimation(오프셋은 Vector3 유형)을 만들어야 합니다. 또한 KeyFrameAnimation에 해당하는 KeyFrames를 정의합니다.
 
@@ -86,7 +86,7 @@ KeyFrameAnimations로 명시적인 시간 기반 애니메이션을 만드는 �
     animation.InsertKeyFrame(1f, new Vector3(200f, 0f, 0f));
 ```
 
-그런 다음 KeyFrameAnimation의 속성을 정의하여, 두 위치(현재 위치와 <200,0,0>) 사이에서 애니메이션을 10회 반복하는 동작과 함께 재생 시간을 설명합니다.
+다음을 설명 두 위치 (현재 및 < 200,0,0 >) 10 배 사이 애니메이션 하는 동작과 KeyFrameAnimation의 속성을 정의 합니다.
 
 ```csharp
     animation.Duration = TimeSpan.FromSeconds(2);
@@ -98,13 +98,13 @@ KeyFrameAnimations로 명시적인 시간 기반 애니메이션을 만드는 �
 마지막으로, 애니메이션을 실행하려면 CompositionObject의 속성을 기반으로 시작해야 합니다.
 
 ```csharp
-redVisual.StartAnimation("Offset.X", animation);
+redVisual.StartAnimation("Offset", animation);
 ```
 
 전체 코드는 다음과 같습니다.
 
 ```csharp
-private void AnimateSquare(Compositor compositor, SpriteVisual redSquare)
+private void AnimateSquare(Compositor compositor, SpriteVisual redVisual)
 { 
     Vector3KeyFrameAnimation animation = compositor.CreateVector3KeyFrameAnimation();
     animation.InsertKeyFrame(1f, new Vector3(200f, 0f, 0f));
@@ -112,6 +112,6 @@ private void AnimateSquare(Compositor compositor, SpriteVisual redSquare)
     animation.Direction = Windows.UI.Composition.AnimationDirection.Alternate;
     // Run animation for 10 times
     animation.IterationCount = 10;
-    visual.StartAnimation("Offset.X", animation);
+    redVisual.StartAnimation("Offset", animation);
 } 
 ```

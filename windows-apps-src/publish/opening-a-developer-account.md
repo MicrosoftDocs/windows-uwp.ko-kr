@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e1c2567393e6d6bfab75b2db068f0b61f7fb6893
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9b65dd07a89b1617f805c17bf43a3ce3f5f3282f
+ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946786"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8968597"
 ---
 # <a name="opening-a-developer-account"></a>개발자 계정 열기
 
@@ -61,7 +61,7 @@ ms.locfileid: "8946786"
 
 -   속해 있지 않는 나 다른 사람에 게 같은 전자 메일 주소를 사용 하 여 Microsoft 계정 만들기 MyCompany_PartnerCenter@outlook.com. 회사에 이미 Azure AD를 사용 하는 경우에 특히 회사의 도메인에 전자 메일 주소를 사용 하지 마세요. (회사의 Azure에서 별도 사용자를 추가할 수 위에서 언급 했 듯이 AD 나중.)
 -   이 Microsoft 계정에 대한 액세스 권한을 최소한의 사용자로 제한합니다.
--   모든 개발자 계정에 액세스 해야 하는 사람을 포함 하는 회사 전자 메일 배포 그룹을 설정 하 고이 메일 주소를 추가 하는 [Microsoft 계정과 연결 된 보안 정보 [(https://account.microsoft.com/security). 이렇게 하면이 별칭으로 전송 하는 보안 코드를 받을 목록에 있는 모든 직원이. 설정 하는 경우 메일 그룹 불가능, 보안 정보를 개인의 전자 메일 주소를 추가할 수 있지만 해당 메일 주소의 소유자에 액세스 하 고 메시지가 나타나면 (예: 새 보안 정보가 t에 추가 될 때 보안 코드를 공유할 수 있는 유일한 됩니다. 계정 그 또는 새 장치에서 액세스 하는 경우).
+-   모든 개발자 계정에 액세스 해야 하는 사람을 포함 하는 회사 전자 메일 배포 그룹을 설정 하 고이 전자 메일 주소로 [Microsoft 계정과 연결 된 보안 정보](https://account.microsoft.com/security)를 추가 합니다. 이렇게 하면이 별칭으로 전송 하는 보안 코드를 받을 목록에 있는 모든 직원이. 설정 하는 경우 메일 그룹 불가능, 보안 정보를 개인의 전자 메일 주소를 추가할 수 있지만 해당 메일 주소의 소유자에 액세스 하 고 메시지가 나타나면 (예: 새 보안 정보가 t에 추가 될 때 보안 코드를 공유할 수 있는 유일한 됩니다. 계정 그 또는 새 장치에서 액세스 하는 경우).
 -   Microsoft 계정 보안 정보를 회사 전화 번호를 추가 합니다. 확장 필요 하지 않으며 주요 팀 구성원이 액세스할 수는 번호를 사용 하려고 합니다.
 -   일반적으로는 개발자가 [신뢰할 수 있는 장치](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) 를 사용 하 여 회사의 개발자 계정으로 로그인 합니다. 모든 주요 팀 구성원은 신뢰할 수 있는 장치에 대한 액세스 권한이 있어야 합니다. 그러면 계정에 액세스할 때 보안 코드를 전송할 필요성이 줄어듭니다. 단, 계정마다 주당 생성할 수 있는 코드 수가 제한됩니다.
 -   신뢰할 수 없는 PC에서의 계정 액세스를 허용해야 하는 경우 그러한 액세스 권한을 최대 5명의 개발자로 제한합니다. 이러한 개발자는 동일한 지역 및 네트워크 위치를 공유하는 컴퓨터에서 계정에 액세스하는 것이 가장 좋습니다.
