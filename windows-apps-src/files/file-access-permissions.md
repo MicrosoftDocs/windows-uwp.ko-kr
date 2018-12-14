@@ -6,12 +6,12 @@ ms.date: 06/28/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d960235e73ea9172fb966f227af9440923f3553e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 05ff8dd78f58910512291b819d59d68f682cc93c
+ms.sourcegitcommit: 23748871459931fc838c5e259e4822bffcf3cdea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940024"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "8970938"
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 
@@ -22,7 +22,7 @@ ms.locfileid: "8940024"
 새 앱을 만들면 기본적으로 다음 파일 시스템 위치에 액세스할 수 있습니다.
 
 ### <a name="application-install-directory"></a>응용 프로그램 설치 디렉터리
-사용자의 시스템에서 앱을 설치 하는 폴더입니다.
+앱이 사용자의 시스템에 설치 되어 있는 폴더.
 
 두 가지 기본 액세스 파일 및 폴더에 앱의 설치 디렉터리:
 
@@ -254,8 +254,8 @@ createFolderTask.then([](StorageFolder^ newFolder)
 
 | 위치 | 접근 권한 값 | Windows.Storage API |
 |----------|------------|---------------------|
-| 사용자가 액세스 권한을 가지고 있는 모든 파일. 예: 문서, 그림, 사진, 다운로드, 데스크톱, OneDrive 등. | broadFileSystemAccess<br><br>이는 제한된 접근 권한 값입니다. 처음 사용할 때 시스템은 사용자에게 액세스를 허용할지를 묻는 메시지를 표시합니다. 액세스는 설정 > 개인 정보 > 파일 시스템에서 구성할 수 있습니다. 이 접근 권한 값을 선언하는 Microsoft Store에 앱을 제출하는 경우 앱에 이 접근 권한 값이 필요한 이유와 이를 사용할 방법에 대한 추가 설명을 제공해야 합니다.<br>이 접근 권한 값은 [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임스페이스의 API에 대해 작동합니다. | 해당 없음 |
-| 문서 | DocumentsLibrary <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. <br><br>앱에서 다음 작업을 하려는 경우 이 접근 권한 값을 사용합니다.<br>- 유효한 OneDrive URL 또는 리소스 ID를 사용하여 특정 OneDrive 콘텐츠에 대한 플랫폼 간 오프라인 액세스를 용이하게 합니다.<br>-열려 있는 동안 자동으로 사용자의 onedrive 파일 저장 오프 라인 | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
+| 사용자가 액세스 권한을 가지고 있는 모든 파일. 예: 문서, 그림, 사진, 다운로드, 데스크톱, OneDrive 등. | broadFileSystemAccess<br><br>이는 제한된 접근 권한 값입니다. 액세스는 **설정**에서 구성할 수 있는 > **개인 정보** > **파일 시스템**입니다. 사용자가 허용 또는 거부할 수 **설정**에서 든 지 권한을, 때문에 앱이 해당 변경 내용에 복원 해야 합니다. 앱 액세스할 수 없는 경우 [Windows 10 파일 시스템 액세스 및 개인 정보](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) 문서에 대 한 링크를 제공 하 여 설정을 변경 하 라는 메시지를 선택할 수 있습니다. 참고는 사용자가 앱, 설정을 전환 하 여, 닫았다가 다시 시작 해야 앱. 이러한 설정을 전환 하 여 앱이 실행 중인 동안에 경우 플랫폼은 앱을 일시 중단 상태를 저장 한 다음 강제로 새 설정을 적용 하기 위해 앱을 종료할 수 있도록 합니다. 2018 년 4 월 업데이트에서 권한에 대 한 기본 켜져 있습니다. 2018 년 10 월 업데이트에서 기본값은 Off입니다.<br /><br />이 접근 권한 값을 선언하는 Microsoft Store에 앱을 제출하는 경우 앱에 이 접근 권한 값이 필요한 이유와 이를 사용할 방법에 대한 추가 설명을 제공해야 합니다.<br>이 접근 권한이 값 [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임 스페이스의 Api에 대 한 작동합니다. 앱에서이 기능을 활성화 하는 방법에 대 한 예제는이 문서의 끝에 **예제** 섹션을 참조 하세요. | 해당 없음 |
+| 문서 | DocumentsLibrary <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. <br><br>앱에서 다음 작업을 하려는 경우 이 접근 권한 값을 사용합니다.<br>- 유효한 OneDrive URL 또는 리소스 ID를 사용하여 특정 OneDrive 콘텐츠에 대한 플랫폼 간 오프라인 액세스를 용이하게 합니다.<br>-열려 있는 동안 자동으로 사용자의 OneDrive에 파일 저장 오프 라인 | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | 음악     | MusicLibrary <br>[음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | 사진  | PicturesLibrary<br> [음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
 | 동영상    | VideosLibrary<br>[음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   

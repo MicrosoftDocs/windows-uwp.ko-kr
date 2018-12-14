@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c1df6a4b72b7c73cac41e66ef1074975db0d979
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a0865480cf65495465470e72fb4f14baa9619a9a
+ms.sourcegitcommit: 23748871459931fc838c5e259e4822bffcf3cdea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937057"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "8970928"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
 
@@ -31,7 +31,7 @@ ms.locfileid: "8937057"
 선택적으로 작업 항목의 우선 순위를 지정하고 다른 작업 항목과 동시에 실행할지 여부를 제어할 수 있도록 세 가지 버전의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)를 사용할 수 있습니다.
 
 >[!NOTE]
->[**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) 을 사용 하 여 UI 스레드에 액세스 하 고 작업 항목의 진행률을 표시 합니다.
+>[**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) 를 사용 하 여 UI 스레드에 액세스 하 여 작업 항목의 진행률을 표시 합니다.
 
 다음 예제에서는 작업 항목을 만들고 작업을 수행할 람다를 제공합니다.
 
@@ -199,7 +199,7 @@ std::shared_ptr<unsigned long> nthPrime = make_shared<unsigned long int>(0);
 
 // Simulates work by searching for the nth prime number. Uses a
 // naive algorithm and counts 2 as the first prime number.
-auto workItem = ref new WorkItemHandler(
+auto workItem = ref new Windows::System::Threading::WorkItemHandler(
     \[this, n, nthPrime](IAsyncAction^ workItem)
 {
     unsigned int progress = 0; // For progress reporting.
@@ -350,7 +350,7 @@ asyncAction.Completed = new AsyncActionCompletedHandler(
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-[항목 샘플 작업 만들기는 ThreadPool](http://go.microsoft.com/fwlink/p/?LinkID=328569) Windows8.1를 위해 작성의이 빠른 시작에서 코드를 다운로드 하 여 자세히 알아볼 수 있습니다 win\_unap Windows10 앱에서 소스 코드를 다시 사용 합니다.
+이 빠른 시작에 [항목 샘플 만들기는 ThreadPool 작업](http://go.microsoft.com/fwlink/p/?LinkID=328569) , windows 8.1 용으로 작성 된에서 코드를 다운로드 하 여 자세히 알아볼 수 있습니다 win\_unap windows 10 앱에서 소스 코드를 다시 사용 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
