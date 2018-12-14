@@ -7,12 +7,12 @@ ms.date: 12/7/2017
 ms.topic: article
 keywords: Windows 10, uwp, 알림, 진행률 표시줄, 알림 진행률 표시줄, 알림, 알림 데이터 바인딩
 ms.localizationpriority: medium
-ms.openlocfilehash: 853e9c1672f1933789c961838734a67b3e816b6a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f955f2a71fed6444c65f9550e1f4fa3baeabe092
+ms.sourcegitcommit: 88265a8c9f6a77a0508a0c9d89b6ab0a6238a1da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921318"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "8969060"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>알림 진행률 표시줄 및 데이터 바인딩
 
@@ -21,7 +21,7 @@ ms.locfileid: "8921318"
 > [!IMPORTANT]
 > **Creators Update 및 알림 라이브러리 1.4.0 필요**: 알림에서 진행률 표시줄을 사용하려면 SDK 15063을 대상으로 지정하고 빌드 15063 이상을 실행해야 합니다. 버전 1.4.0 이상의 [UWP 커뮤니티 도구 키트 알림 NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용해야만 알림의 콘텐츠에 대한 진행률 표시줄을 생성할 수 있습니다.
 
-알림 내부의 진행률 표시줄은 '미확정'(특정 값 없음, 움직이는 점이 작업이 일어나고 있음을 나타냄) 또는 '확정'(표시줄의 특정 비율이 60%와 같이 채워짐)일 수 있습니다.
+알림 메시지에서 진행률 표시줄 수 없습니다 '확정' (특정 값 없음, 움직이는 점이 나타내는 점이 작업이 일어나) 또는 '확정' (표시줄의 특정 비율이 채워지면 60% 등).
 
 > **중요 API**: [NotificationData 클래스](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata), [ToastNotifier.Update 메서드](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [ToastNotification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
 
