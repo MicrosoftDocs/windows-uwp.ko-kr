@@ -1,0 +1,21 @@
+items:
+- name: 새로운 기능
+  href: whats-new/toc.yml
+- name: 시작
+  href: get-started/toc.yml
+- name: 디자인 및 UI
+  href: design/toc.yml
+- name: 앱 개발
+  href: develop/toc.yml
+- name: 게임 개발
+  href: gaming/toc.yml
+- name: 게시
+  href: publish/toc.yml
+- name: API 참조
+  href: /uwp/
+ms.openlocfilehash: 694733290f7b44ed6b7c88eaf6bcb9a5e0e71309
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8962465"

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4960f6eb18fe4cffe34b8167a328521e9038c684
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4878ce99d449674243c8a3f7360a9e9b0dd6db19
+ms.sourcegitcommit: 1cf04b0b1bd7623cd7f6067b8392dce4372f2c69
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930734"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "8970996"
 ---
 # <a name="create-custom-transport-controls"></a>사용자 지정 전송 컨트롤 만들기
 
@@ -51,7 +51,7 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 
 ## <a name="template-structure"></a>템플릿 구조
 
-[**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.controltemplate.aspx)은 기본 스타일의 일부입니다. 전송 컨트롤의 기본 스타일은 [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 클래스 참조 페이지에 나와 있습니다. 이 기본 스타일을 프로젝트에 복사하여 수정할 수 있습니다. ControlTemplate은 다른 XAML 컨트롤 템플릿과 비슷하게 여러 섹션으로 구분됩니다.
+[**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.controltemplate.aspx)은 기본 스타일의 일부입니다. 이 기본 스타일을 프로젝트에 복사하여 수정할 수 있습니다. ControlTemplate은 다른 XAML 컨트롤 템플릿과 비슷하게 여러 섹션으로 구분됩니다.
 - 템플릿의 첫 번째 섹션에는 [**Style**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx)의 여러 구성 요소에 대한 MediaTransportControls 정의가 포함되어 있습니다.
 - 두 번째 섹션에서는 MediaTransportControls에서 사용하는 다양한 시각적 상태를 정의합니다.
 - 세 번째 섹션에는 다양한 MediaTransportControls 요소를 포함하고 구성 요소가 배치되는 방식을 정의하는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)가 있습니다.
