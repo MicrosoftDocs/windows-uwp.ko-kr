@@ -2,20 +2,18 @@
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: 파일 속성 가져오기
 description: StorageFile 개체로 표시되는 파일의 최상위, 기본 및 확장 속성을 가져옵니다.
-ms.date: 02/08/2017
+ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b0747dd3b8992ab456bdb00a4dc7157211eb8ba
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f69c86ac8f7d13970eca8d1bbb50d4859b95f6a6
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932985"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980361"
 ---
 # <a name="get-file-properties"></a>파일 속성 가져오기
-
-
 
 **중요 API**
 
@@ -26,10 +24,7 @@ ms.locfileid: "8932985"
 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체로 표시되는 파일의 최상위, 기본 및 확장 속성을 가져옵니다.
 
 > [!NOTE]
-> [파일 액세스 샘플](http://go.microsoft.com/fwlink/p/?linkid=619995)도 참조하세요.
-
- 
-
+> 전체 샘플 [파일 액세스 샘플](http://go.microsoft.com/fwlink/p/?linkid=619995)을 참조 하세요.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -45,9 +40,8 @@ ms.locfileid: "8932985"
 
 많은 최상위 파일 속성은 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 클래스의 구성원으로 액세스할 수 있습니다. 이러한 속성에는 파일 특성, 콘텐츠 형식, 만든 날짜, 표시 이름, 파일 형식 등이 포함됩니다.
 
-**참고** **picturesLibrary** 기능을 선언 해야 합니다.
-
- 
+> [!NOTE]
+> **picturesLibrary** 기능을 선언해야 합니다.
 
 다음 예제에서는 사진 라이브러리의 모든 파일을 열거하고 각 파일의 몇 가지 최상위 속성에 액세스합니다.
 

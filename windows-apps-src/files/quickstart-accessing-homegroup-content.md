@@ -2,16 +2,16 @@
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: 홈 그룹 콘텐츠 액세스
 description: 사진, 음악, 비디오 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다.
-ms.date: 02/08/2017
+ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 422d02b8797bef8ea4f793ba652e9e4e34421a9b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 06c42cff51852f7d0456d533af60455d7d1b9caf
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932230"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980301"
 ---
 # <a name="accessing-homegroup-content"></a>홈 그룹 콘텐츠 액세스
 
@@ -34,7 +34,7 @@ ms.locfileid: "8932230"
     홈 그룹 콘텐츠에 액세스하려면 사용자의 컴퓨터에 홈 그룹이 설정되어 있고 앱에는 **picturesLibrary**, **musicLibrary** 또는 **videosLibrary** 접근 권한 값 중 하나 이상이 있어야 합니다. 앱에서 홈 그룹 폴더에 액세스하면 앱의 매니페스트에 선언된 접근 권한 값에 해당하는 라이브러리만 표시됩니다. 자세한 내용은 [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
     > [!NOTE]
-    >  홈 그룹의 문서 라이브러리에 있는 콘텐츠는 앱의 매니페스트에 선언된 기능과 상관없이 그리고 사용자의 공유 설정과 상관없이 앱에서 보이지 않습니다.     
+    > 홈 그룹의 문서 라이브러리에 있는 콘텐츠는 앱의 매니페스트에 선언된 기능과 상관없이 그리고 사용자의 공유 설정과 상관없이 앱에서 보이지 않습니다.     
 
 -   **파일 선택기 사용 방법 이해**
 
@@ -193,7 +193,7 @@ ms.locfileid: "8932230"
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **읽기 액세스를 위해 사용자의 파일 선택 열고 파일 스트림을 원본으로 설정의** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)및 파일을 재생 합니다.
+3.  **읽기 액세스에 대 한 사용자의 파일 선택 열고 파일 스트림을 대 한 원본으로 설정 합니다** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)및 다음 파일을 재생 합니다.
     ```cs
     if (file != null)
     {

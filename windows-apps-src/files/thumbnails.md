@@ -3,22 +3,24 @@ Description: How to use thumbnail images to help users preview files in UWP apps
 title: UWP 앱의 미리 보기 이미지에 대한 지침
 label: Thumbnail images
 template: detail.hbs
-ms.date: 01/08/2018
+ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 92899333f0bc787fc6538e0bb22c148ac9f5c56f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 15984e00b036bf44d6e4a7f60cb6435ea1add291
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939401"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980351"
 ---
 # <a name="thumbnail-images"></a>미리 보기 이미지
 
 이러한 지침은 사용자가 UWP 앱에서 찾아볼 때 미리 보기 이미지를 사용하여 파일을 미리 볼 수 있는 방법에 대해 설명합니다. 
 
-> **중요 API**: [ThumbnailMode enum](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
+**중요 API**
+
+-   [**ThumbnailMode**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
 
 ## <a name="should-my-app-include-thumbnails"></a>내 앱에 미리 보기가 포함되어야 하나요?
 

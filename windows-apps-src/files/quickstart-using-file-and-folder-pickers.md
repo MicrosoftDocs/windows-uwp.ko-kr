@@ -2,16 +2,16 @@
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: 선택기를 사용하여 파일 및 폴더 열기
 description: 사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. FileOpenPicker 및 FileSavePicker 클래스를 사용하여 파일에 액세스하고 FolderPicker 클래스를 사용하여 폴더에 액세스할 수 있습니다.
-ms.date: 02/08/2017
+ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ed2c1715ebb682aed3da4b55ef94cc0c60f8391
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 04534316c3357dfecc4a94b91dcab42f8238dec6
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921166"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980331"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>선택기를 사용하여 파일 및 폴더 열기
 
@@ -115,39 +115,39 @@ else
 
     - **단일 파일을 선택하려면**
 
-    ```cs
-    Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
-    if (file != null)
-    {
-        // Application now has read/write access to the picked file
-        this.textBlock.Text = "Picked photo: " + file.Name;
-    }
-    else
-    {
-        this.textBlock.Text = "Operation cancelled.";
-    }
-    ```
+        ```cs
+        Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
+        if (file != null)
+        {
+            // Application now has read/write access to the picked file
+            this.textBlock.Text = "Picked photo: " + file.Name;
+        }
+        else
+        {
+            this.textBlock.Text = "Operation cancelled.";
+        }
+        ```
 
     - **여러 파일을 선택하려면**  
 
-    ```cs
-    var files = await picker.PickMultipleFilesAsync();
-    if (files.Count > 0)
-    {
-        StringBuilder output = new StringBuilder("Picked files:\n");
-
-        // Application now has read/write access to the picked file(s)
-        foreach (Windows.Storage.StorageFile file in files)
+        ```cs
+        var files = await picker.PickMultipleFilesAsync();
+        if (files.Count > 0)
         {
-            output.Append(file.Name + "\n");
+            StringBuilder output = new StringBuilder("Picked files:\n");
+    
+            // Application now has read/write access to the picked file(s)
+            foreach (Windows.Storage.StorageFile file in files)
+            {
+                output.Append(file.Name + "\n");
+            }
+            this.textBlock.Text = output.ToString();
         }
-        this.textBlock.Text = output.ToString();
-    }
-    else
-    {
-        this.textBlock.Text = "Operation cancelled.";
-    }
-    ```
+        else
+        {
+            this.textBlock.Text = "Operation cancelled.";
+        }
+        ```
 
 ## <a name="pick-a-folder-complete-code-listing"></a>폴더 선택: 전체 코드 목록
 

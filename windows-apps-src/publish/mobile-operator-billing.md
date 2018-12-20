@@ -2,16 +2,16 @@
 Description: The Microsoft Store offers Mobile Operator Billing as a payment method for mobile operators who support this capability.
 title: 통신사 청구
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
-ms.date: 10/02/2018
+ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, uwp, 통신사, 모바일 청구, 통신사 청구
 ms.localizationpriority: medium
-ms.openlocfilehash: ca3d362267aabc6120173a029db2b48c65b7d249
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f9f751735c2387ab5009e2e6f19f68db304916ec
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922836"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980391"
 ---
 # <a name="mobile-operator-billing"></a>통신사 청구
 
@@ -39,10 +39,10 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 | 헝가리         | Telenor                          |
 | 이탈리아           | Wind, Tre                        |
 | 말레이시아        | Digi                             |
-| 네덜란드     | KPN                              |
-| 노르웨이          | Telenor, Telia                   |
+| 네덜란드     | KPN / Telfort                    |
+| 노르웨이          | Telenor / Talkmore, Telia / OneCall   |
 | 폴란드          | Orange, 재생                     |
-| 싱가포르       | M1 Limited, StarHub              |
+| 싱가포르       | M1 Limited StarHub              |
 | 슬로바키아        | Slovak Telekom                   |
 | 스페인           | Orange                           |
 | 스웨덴          | Telenor, 3                       |

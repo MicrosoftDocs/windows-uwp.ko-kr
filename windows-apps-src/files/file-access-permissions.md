@@ -2,20 +2,25 @@
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: 파일 액세스 권한
 description: 앱은 기본적으로 특정 파일 시스템 위치에 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다.
-ms.date: 06/28/2018
+ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 05ff8dd78f58910512291b819d59d68f682cc93c
-ms.sourcegitcommit: 23748871459931fc838c5e259e4822bffcf3cdea
+dev_langs:
+- csharp
+- cppwinrt
+- cpp
+- javascript
+ms.openlocfilehash: 5c3732927c59cb768ef522a847f79f82994852b7
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "8970938"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980401"
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 
-유니버설 Windows 앱(앱)은 기본적으로 특정 파일 시스템 위치에 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다.
+UWP (유니버설 Windows 플랫폼) 앱은 기본적으로 특정 파일 시스템 위치를 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다.
 
 ## <a name="the-locations-that-all-apps-can-access"></a>모든 앱이 액세스할 수 있는 위치
 
@@ -28,62 +33,62 @@ ms.locfileid: "8970938"
 
 1. 아래와 같이 앱의 설치 디렉터리를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색할 수 있습니다.
 
-```csharp
-Windows.Storage.StorageFolder installedLocation = Windows.ApplicationModel.Package.Current.InstalledLocation;
-```
+    ```csharp
+    Windows.Storage.StorageFolder installedLocation = Windows.ApplicationModel.Package.Current.InstalledLocation;
+    ```
+    
+    ```javascript
+    var installDirectory = Windows.ApplicationModel.Package.current.installedLocation;
+    ```
+    
+    ```cppwinrt
+    #include <winrt/Windows.Storage.h>
+    ...
+    Windows::Storage::StorageFolder installedLocation{ Windows::ApplicationModel::Package::Current().InstalledLocation() };
+    ```
+    
+    ```cpp
+    Windows::Storage::StorageFolder^ installedLocation = Windows::ApplicationModel::Package::Current->InstalledLocation;
+    ```
 
-```javascript
-var installDirectory = Windows.ApplicationModel.Package.current.installedLocation;
-```
-
-```cppwinrt
-#include <winrt/Windows.Storage.h>
-...
-Windows::Storage::StorageFolder installedLocation{ Windows::ApplicationModel::Package::Current().InstalledLocation() };
-```
-
-```cpp
-Windows::Storage::StorageFolder^ installedLocation = Windows::ApplicationModel::Package::Current->InstalledLocation;
-```
-
-그런 다음 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 메서드를 사용하여 디렉터리의 파일 및 폴더에 액세스할 수 있습니다. 위 예제에서 이 **StorageFolder**는 `installDirectory` 변수에 저장됩니다. 앱 패키지로 작업하고 GitHub에 있는 [앱 패키지 정보 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Package)에서 디렉토리를 설치하는 방법에 대해 자세히 학습할 수 있습니다.
+    그런 다음 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 메서드를 사용하여 디렉터리의 파일 및 폴더에 액세스할 수 있습니다. 위 예제에서 이 **StorageFolder**는 `installDirectory` 변수에 저장됩니다. 앱 패키지로 작업하고 GitHub에 있는 [앱 패키지 정보 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Package)에서 디렉토리를 설치하는 방법에 대해 자세히 학습할 수 있습니다.
 
 2. 아래와 같이 앱 URI를 사용하여 앱의 설치 디렉터리에서 직접 파일을 검색할 수 있습니다.
 
-```cs
-using Windows.Storage;            
-StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///file.txt"));
-```
-
-```javascript
-Windows.Storage.StorageFile.getFileFromApplicationUriAsync("ms-appx:///file.txt").done(
-    function(file) {
+    ```csharp
+    using Windows.Storage;            
+    StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///file.txt"));
+    ```
+    
+    ```javascript
+    Windows.Storage.StorageFile.getFileFromApplicationUriAsync("ms-appx:///file.txt").done(
+        function(file) {
+            // Process file
+        }
+    );
+    ```
+    
+    ```cppwinrt
+    Windows::Foundation::IAsyncAction ExampleCoroutineAsync()
+    {
+        Windows::Storage::StorageFile file{
+            co_await Windows::Storage::StorageFile::GetFileFromApplicationUriAsync(Windows::Foundation::Uri{L"ms-appx:///file.txt"})
+        };
         // Process file
     }
-);
-```
+    ```
+    
+    ```cpp
+    auto getFileTask = create_task(StorageFile::GetFileFromApplicationUriAsync(ref new Uri("ms-appx:///file.txt")));
+    getFileTask.then([](StorageFile^ file) 
+    {
+        // Process file
+    });
+    ```
 
-```cppwinrt
-Windows::Foundation::IAsyncAction ExampleCoroutineAsync()
-{
-    Windows::Storage::StorageFile file{
-        co_await Windows::Storage::StorageFile::GetFileFromApplicationUriAsync(Windows::Foundation::Uri{L"ms-appx:///file.txt"})
-    };
-    // Process file
-}
-```
-
-```cpp
-auto getFileTask = create_task(StorageFile::GetFileFromApplicationUriAsync(ref new Uri("ms-appx:///file.txt")));
-getFileTask.then([](StorageFile^ file) 
-{
-    // Process file
-});
-```
-
-[**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱 설치 디렉터리에 있는 `file.txt` 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
-
-URI의 "ms-appx:///" 접두사는 앱의 설치 디렉터리를 나타냅니다. 앱 URI 사용에 대한 자세한 내용은 [URI를 사용하여 콘텐츠를 참조하는 방법](https://msdn.microsoft.com/library/windows/apps/hh781215)을 참조하세요.
+    [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱 설치 디렉터리에 있는 `file.txt` 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
+    
+    URI의 "ms-appx:///" 접두사는 앱의 설치 디렉터리를 나타냅니다. 앱 URI 사용에 대한 자세한 내용은 [URI를 사용하여 콘텐츠를 참조하는 방법](https://msdn.microsoft.com/library/windows/apps/hh781215)을 참조하세요.
 
 또한 다른 위치와는 달리 일부 [UWP(유니버설 Windows 플랫폼) 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205757) 및 [Microsoft Visual Studio의 C/C++ 표준 라이브러리 기능](http://msdn.microsoft.com/library/hh875057.aspx)을 사용하여 앱 설치 디렉터리에서 파일에 액세스할 수 있습니다.
 
@@ -96,66 +101,66 @@ URI의 "ms-appx:///" 접두사는 앱의 설치 디렉터리를 나타냅니다.
 
 1.  [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) 속성을 사용하여 앱 데이터 폴더를 검색합니다.
 
-예를 들어 [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587).[**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)를 사용하여 아래와 같이 앱의 로컬 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색할 수 있습니다.
+    예를 들어 [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587).[**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)를 사용하여 아래와 같이 앱의 로컬 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색할 수 있습니다.
+    
+    ```csharp
+    using Windows.Storage;
+    StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+    ```
+    
+    ```javascript
+    var localFolder = Windows.Storage.ApplicationData.current.localFolder;
+    ```
+    
+    ```cppwinrt
+    Windows::Storage::StorageFolder storageFolder{
+        Windows::Storage::ApplicationData::Current().LocalFolder()
+    };
+    ```
+    
+    ```cpp
+    using namespace Windows::Storage;
+    StorageFolder^ storageFolder = ApplicationData::Current->LocalFolder;
+    ```
+    
+    앱의 로밍 또는 임시 폴더에 액세스하려면 대신 [**RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623) 또는 [**TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629) 속성을 사용합니다.
+    
+    앱 데이터 위치를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색한 후 **StorageFolder** 메서드를 사용하여 해당 위치의 파일과 폴더에 액세스할 수 있습니다. 위 예제에서 이 **StorageFolder** 개체는 `localFolder` 변수에 저장됩니다. [ApplicationData 클래스](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata) 페이지의 지침에서, 그리고 GitHub에서 [응용 프로그램 데이터 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData)을 다운로드하여 앱 데이터 위치 사용에 대해 자세히 알아볼 수 있습니다.
 
-```cs
-using Windows.Storage;
-StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-```
-
-```javascript
-var localFolder = Windows.Storage.ApplicationData.current.localFolder;
-```
-
-```cppwinrt
-Windows::Storage::StorageFolder storageFolder{
-    Windows::Storage::ApplicationData::Current().LocalFolder()
-};
-```
-
-```cpp
-using namespace Windows::Storage;
-StorageFolder^ storageFolder = ApplicationData::Current->LocalFolder;
-```
-
-앱의 로밍 또는 임시 폴더에 액세스하려면 대신 [**RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623) 또는 [**TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629) 속성을 사용합니다.
-
-앱 데이터 위치를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색한 후 **StorageFolder** 메서드를 사용하여 해당 위치의 파일과 폴더에 액세스할 수 있습니다. 위 예제에서 이 **StorageFolder** 개체는 `localFolder` 변수에 저장됩니다. [ApplicationData 클래스](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata) 페이지의 지침에서, 그리고 GitHub에서 [응용 프로그램 데이터 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData)을 다운로드하여 앱 데이터 위치 사용에 대해 자세히 알아볼 수 있습니다.
-
-2. 예를 들어 아래와 같이 앱 URI를 사용하여 앱의 로컬 폴더에서 직접 파일을 검색할 수 있습니다.
-
-```cs
-using Windows.Storage;
-StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appdata:///local/file.txt"));
-```
-
-```javascript
-Windows.Storage.StorageFile.getFileFromApplicationUriAsync("ms-appdata:///local/file.txt").done(
-    function(file) {
-        // Process file
-    }
-);
-```
-
-```cppwinrt
-Windows::Storage::StorageFile file{
-    co_await Windows::Storage::StorageFile::GetFileFromApplicationUriAsync(Windows::Foundation::Uri{ L"ms-appdata:///local/file.txt" })
-};
-// Process file
-```
-
-```cpp
-using Windows::Storage;
-auto getFileTask = create_task(StorageFile::GetFileFromApplicationUriAsync(ref new Uri("ms-appdata:///local/file.txt")));
-getFileTask.then([](StorageFile^ file) 
-{
+2. 이와 같이 앱 URI를 사용 하 여 앱의 로컬 폴더에서 직접 파일을 검색할 수 있습니다.
+    
+    ```csharp
+    using Windows.Storage;
+    StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appdata:///local/file.txt"));
+    ```
+    
+    ```javascript
+    Windows.Storage.StorageFile.getFileFromApplicationUriAsync("ms-appdata:///local/file.txt").done(
+        function(file) {
+            // Process file
+        }
+    );
+    ```
+    
+    ```cppwinrt
+    Windows::Storage::StorageFile file{
+        co_await Windows::Storage::StorageFile::GetFileFromApplicationUriAsync(Windows::Foundation::Uri{ L"ms-appdata:///local/file.txt" })
+    };
     // Process file
-});
-```
-
-[**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱의 로컬 폴더에 있는 `file.txt` 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
-
-URI의 "ms-appdata:///local/" 접두사는 앱의 로컬 폴더를 나타냅니다. 앱의 로밍 또는 임시 폴더에 있는 파일에 액세스하려면 대신 "ms-appdata:///roaming/" 또는 "ms-appdata:///temporary/"를 사용합니다. 앱 URI 사용에 대한 자세한 내용은 [파일 리소스를 로드하는 방법](https://msdn.microsoft.com/library/windows/apps/hh781229)을 참조하세요.
+    ```
+    
+    ```cpp
+    using Windows::Storage;
+    auto getFileTask = create_task(StorageFile::GetFileFromApplicationUriAsync(ref new Uri("ms-appdata:///local/file.txt")));
+    getFileTask.then([](StorageFile^ file) 
+    {
+        // Process file
+    });
+    ```
+    
+    [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱의 로컬 폴더에 있는 `file.txt` 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
+    
+    URI의 "ms-appdata:///local/" 접두사는 앱의 로컬 폴더를 나타냅니다. 앱의 로밍 또는 임시 폴더에 있는 파일에 액세스하려면 대신 "ms-appdata:///roaming/" 또는 "ms-appdata:///temporary/"를 사용합니다. 앱 URI 사용에 대한 자세한 내용은 [파일 리소스를 로드하는 방법](https://msdn.microsoft.com/library/windows/apps/hh781229)을 참조하세요.
 
 또한 다른 위치와는 달리 일부 [UWP 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205757) 및 Visual Studio의 일부 C/C++ 표준 라이브러리 기능을 사용하여 앱 데이터 위치에서 파일에 액세스할 수 있습니다.
 
@@ -178,69 +183,69 @@ URI의 "ms-appdata:///local/" 접두사는 앱의 로컬 폴더를 나타냅니�
 
 - 아래와 같이 사용자 다운로드 폴더에 파일을 만들 수 있습니다.
 
-```cs
-using Windows.Storage;
-StorageFile newFile = await DownloadsFolder.CreateFileAsync("file.txt");
-```
-
-```javascript
-Windows.Storage.DownloadsFolder.createFileAsync("file.txt").done(
-    function(newFile) {
-        // Process file
-    }
-);
-```
-
-```cppwinrt
-Windows::Storage::StorageFile newFile{
-    co_await Windows::Storage::DownloadsFolder::CreateFileAsync(L"file.txt")
-};
-// Process file
-```
-
-```cpp
-using Windows::Storage;
-auto createFileTask = create_task(DownloadsFolder::CreateFileAsync(L"file.txt"));
-createFileTask.then([](StorageFile^ newFile)
-{
+    ```csharp
+    using Windows.Storage;
+    StorageFile newFile = await DownloadsFolder.CreateFileAsync("file.txt");
+    ```
+    
+    ```javascript
+    Windows.Storage.DownloadsFolder.createFileAsync("file.txt").done(
+        function(newFile) {
+            // Process file
+        }
+    );
+    ```
+    
+    ```cppwinrt
+    Windows::Storage::StorageFile newFile{
+        co_await Windows::Storage::DownloadsFolder::CreateFileAsync(L"file.txt")
+    };
     // Process file
-});
-```
+    ```
+    
+    ```cpp
+    using Windows::Storage;
+    auto createFileTask = create_task(DownloadsFolder::CreateFileAsync(L"file.txt"));
+    createFileTask.then([](StorageFile^ newFile)
+    {
+        // Process file
+    });
+    ```
 
-[**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 파일이 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다. 위 예제에서 이 파일은 `newFile`입니다.
+    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 파일이 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다. 위 예제에서 이 파일은 `newFile`입니다.
 
 - 아래와 같이 사용자 다운로드 폴더에 하위 폴더를 만들 수 있습니다.
 
-```cs
-using Windows.Storage;
-StorageFolder newFolder = await DownloadsFolder.CreateFolderAsync("New Folder");
-```
-
-```javascript
-Windows.Storage.DownloadsFolder.createFolderAsync("New Folder").done(
-    function(newFolder) {
-        // Process folder
-    }
-);
-```
-
-```cppwinrt
-Windows::Storage::StorageFolder newFolder{
-    co_await Windows::Storage::DownloadsFolder::CreateFolderAsync(L"New Folder")
-};
-// Process folder
-```
-
-```cpp
-using Windows::Storage;
-auto createFolderTask = create_task(DownloadsFolder::CreateFolderAsync(L"New Folder"));
-createFolderTask.then([](StorageFolder^ newFolder)
-{
+    ```csharp
+    using Windows.Storage;
+    StorageFolder newFolder = await DownloadsFolder.CreateFolderAsync("New Folder");
+    ```
+    
+    ```javascript
+    Windows.Storage.DownloadsFolder.createFolderAsync("New Folder").done(
+        function(newFolder) {
+            // Process folder
+        }
+    );
+    ```
+    
+    ```cppwinrt
+    Windows::Storage::StorageFolder newFolder{
+        co_await Windows::Storage::DownloadsFolder::CreateFolderAsync(L"New Folder")
+    };
     // Process folder
-});
-```
+    ```
+    
+    ```cpp
+    using Windows::Storage;
+    auto createFolderTask = create_task(DownloadsFolder::CreateFolderAsync(L"New Folder"));
+    createFolderTask.then([](StorageFolder^ newFolder)
+    {
+        // Process folder
+    });
+    ```
 
-[**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 하위 폴더가 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 하위 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 반환합니다. 위 예제에서 이 파일은 `newFolder`입니다.
+    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 하위 폴더가 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 하위 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 반환합니다. 위 예제에서 이 파일은 `newFolder`입니다.
 
 다운로드 폴더에 파일이나 폴더를 만드는 경우 해당 항목의 앱의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)에 추가하여 앱이 나중에 해당 항목에 쉽게 액세스할 수 있도록 하는 것이 좋습니다.
 

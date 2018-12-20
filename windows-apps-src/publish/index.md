@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows 10, uwp, 게시, 판매, 배포, Microsoft Store, 대시보드
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f18c7f20673b7875c60c8797bb1e92410cda8fe
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3b9d78014b2416cae7d387261ec1732b1f8932ad
+ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941563"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "8980311"
 ---
 # <a name="publish-windows-apps-and-games"></a>Windows 앱 및 게임 게시  
  
-[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하 여 Microsoft Store에 앱과 게임을 게시할 수 있습니다. <a href="//developer.microsoft.com/store/register">지금 등록하세요!</a>
+Microsoft Store에 앱 및 게임을 게시 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 를 사용할 수 있습니다. <a href="//developer.microsoft.com/store/register">지금 등록하세요!</a>
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>
@@ -213,7 +213,7 @@ ms.locfileid: "8941563"
 <div class="container">
     <ul class="cardsY panelContent featuredContent">
        <li>
-            <a href="dev-center-insider-program.md">
+            <a href="account-types-locations-and-fees.md">
                 <div class="cardSize">
                     <div class="cardPadding">
                         <div class="card">
@@ -223,7 +223,7 @@ ms.locfileid: "8941563"
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>개발자 센터 참가자 프로그램</h3>
+                                <h3>계정 유형, 위치 및 수수료</h3>
                             </div>
                         </div>
                     </div>
