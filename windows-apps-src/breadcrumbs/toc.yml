@@ -1,0 +1,185 @@
+items:
+- name: 문서
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Windows
+    tocHref: /windows/
+    topicHref: /windows/
+    items:
+    - name: UWP
+      tocHref: /windows/uwp/
+      topicHref: /windows/uwp/index
+      items:
+      - name: 새로운 기능
+        tocHref: /windows/uwp/whats-new/
+        topicHref: /windows/uwp/whats-new/windows-10-version-latest
+      - name: 시작
+        tocHref: /windows/uwp/get-started/
+        topicHref: /windows/uwp/get-started/
+      - name: 디자인 및 UI
+        tocHref: /windows/uwp/design/
+        topicHref: /windows/uwp/design/basics/index
+        items:
+        - name: 디자인 기본 사항
+          tocHref: /windows/uwp/design/basics/
+          topicHref: /windows/uwp/design/basics/index
+        - name: 디자인 기본 사항
+          tocHref: /windows/uwp/design/fluent-design-system/
+          topicHref: /windows/uwp/design/basics/index
+        - name: 레이아웃
+          tocHref: /windows/uwp/design/layout/
+          topicHref: /windows/uwp/design/layout/index
+        - name: 스타일
+          tocHref: /windows/uwp/design/style/
+          topicHref: /windows/uwp/design/style/index
+        - name: 동작
+          tocHref: /windows/uwp/design/motion/
+          topicHref: /windows/uwp/design/motion/index
+        - name: 컨트롤
+          tocHref: /windows/uwp/design/controls-and-patterns/
+          topicHref: /windows/uwp/design/controls-and-patterns/index
+        - name: 입력 및 조작
+          tocHref: /windows/uwp/design/input/
+          topicHref: /windows/uwp/design/input/index
+        - name: 기기
+          tocHref: /windows/uwp/design/devices/
+          topicHref: /windows/uwp/design/devices/index
+        - name: 사용 편의성
+          tocHref: /windows/uwp/design/usability/
+          topicHref: /windows/uwp/design/usability/index
+          items:
+          - name: 접근성
+            tocHref: /windows/uwp/design/accessibility/
+            topicHref: /windows/uwp/design/accessibility/accessibility
+          - name: 앱 설정 및 데이터
+            tocHref: /windows/uwp/design/app-settings/
+            topicHref: /windows/uwp/design/app-settings/app-settings-and-data
+          - name: 세계화 및 지역화
+            tocHref: /windows/uwp/design/globalizing/
+            topicHref: /windows/uwp/design/globalizing/globalizing-portal
+          - name: 앱 도움말에 대한 지침
+            tocHref: /windows/uwp/design/guidelines-for-app-help/
+            topicHref: /windows/uwp/design/guidelines-for-app-help/index
+        - name: 디자인 도구 키트
+          tocHref: /windows/uwp/design/downloads/
+          topicHref: /windows/uwp/design/downloads/index
+      - name: 개발
+        tocHref: /windows/uwp/develop/
+        topicHref: /windows/uwp/develop/index
+        items:
+        - name: 앱 리소스
+          tocHref: /windows/uwp/app-resources/
+          topicHref: /windows/uwp/app-resources/index
+        - name: 앱 간 통신
+          tocHref: /windows/uwp/app-to-app/
+          topicHref: /windows/uwp/app-to-app/index
+        - name: 오디오, 비디오 및 카메라
+          tocHref: /windows/uwp/audio-video-camera/
+          topicHref: /windows/uwp/audio-video-camera/index
+        - name: 연락처, 내 피플 및 일정
+          tocHref: /windows/uwp/contacts-and-calendar/
+          topicHref: /windows/uwp/contacts-and-calendar/index
+        - name: 데이터 액세스
+          tocHref: /windows/uwp/data-access/
+          topicHref: /windows/uwp/data-access/index
+        - name: 데이터 바인딩
+          tocHref: /windows/uwp/data-binding/
+          topicHref: /windows/uwp/data-binding/index
+        - name: 디버깅, 테스트 및 성능
+          tocHref: /windows/uwp/debug-test-perf/
+          topicHref: /windows/uwp/debug-test-perf/index
+        - name: 교육용 앱
+          tocHref: /windows/uwp/apps-for-education/
+          topicHref: /windows/uwp/apps-for-education/index
+        - name: 디바이스, 센서 및 전원
+          tocHref: /windows/uwp/devices-sensors/
+          topicHref: /windows/uwp/devices-sensors/index
+        - name: 엔터프라이즈
+          tocHref: /windows/uwp/enterprise/
+          topicHref: /windows/uwp/enterprise/index
+        - name: 파일, 폴더 및 라이브러리
+          tocHref: /windows/uwp/files/
+          topicHref: /windows/uwp/files/index
+        - name: 그래픽
+          tocHref: /windows/uwp/graphics/
+          topicHref: /windows/uwp/graphics/index
+        - name: 호스트된 웹앱
+          tocHref: /windows/uwp/bridges/
+          topicHref: /windows/uwphttps://developer.microsoft.com/en-us/windows/bridges/hosted-web-apps
+        - name: 실행, 다시 시작 및 백그라운드 작업
+          tocHref: /windows/uwp/launch-resume/
+          topicHref: /windows/uwp/launch-resume/index
+        - name: 기계 학습
+          tocHref: /windows/uwp/machine-learning/
+          topicHref: /windows/uwp/machine-learning/index
+        - name: 지도 및 위치
+          tocHref: /windows/uwp/maps-and-location/
+          topicHref: /windows/uwp/maps-and-location/index
+        - name: 수익 창출, 참여 및 Store 서비스
+          tocHref: /windows/uwp/monetize/
+          topicHref: /windows/uwp/monetize/index
+        - name: 네트워킹 및 웹 서비스
+          tocHref: /windows/uwp/networking/
+          topicHref: /windows/uwp/networking/index
+        - name: 앱 패키징
+          tocHref: /windows/uwp/packaging/
+          topicHref: /windows/uwp/packaging/index
+        - name: Windows 10으로 앱 포팅
+          tocHref: /windows/uwp/porting/
+          topicHref: /windows/uwp/porting/index
+        - name: 보안
+          tocHref: /windows/uwp/security/
+          topicHref: /windows/uwp/security/index
+        - name: 스레딩 및 비동기 프로그래밍
+          tocHref: /windows/uwp/threading-async/
+          topicHref: /windows/uwp/threading-async/index
+        - name: 시각적 계층
+          tocHref: /windows/uwp/visual-layer/
+          topicHref: /windows/uwp/visual-layer/index
+        - name: Windows 런타임 구성 요소
+          tocHref: /windows/uwp/winrt-components/
+          topicHref: /windows/uwp/winrt-components//index
+        - name: XAML 플랫폼
+          tocHref: /windows/uwp/xaml-platform/
+          topicHref: /windows/uwp/xaml-platform/index
+        - name: API 참조
+          tocHref: /windows/uwp/api/
+          topicHref: https://docs.microsoft.com/en-us/uwp/
+        - name: Windows as a Service
+          tocHref: /windows/uwp/application-development-for-windows-as-a-service/
+          topicHref: /windows/uwp/application-development-for-windows-as-a-service/index
+        - name: UWP 버전 선택
+          tocHref: /windows/uwp/choose-a-uwp-version/
+          topicHref: /windows/uwp/choose-a-uwp-version/index
+        - name: 서비스
+          tocHref: /windows/uwp/microsoft-services/
+          topicHref: /windows/uwp/microsoft-services/index
+      - name: 게임 개발
+        tocHref: /windows/uwp/gaming/
+        topicHref: /windows/uwp/gaming/e2e
+        items:
+        - name: Xbox One의 UWP
+          tocHref: /windows/uwp/xbox-apps/
+          topicHref: /windows/uwp/xbox-apps/index
+        - name: 게임 프로그래밍
+          tocHref: /windows/uwp/gaming/
+          topicHref: /windows/uwp/gaming/index
+        - name: DirectX 프로그래밍
+          tocHref: /windows/uwp/directx-programming/
+          topicHref: /windows/uwp/directx-programming/index
+        - name: Direct3D 그래픽 학습 가이드
+          tocHref: /windows/uwp/graphics-concepts/
+          topicHref: /windows/uwp/graphics-concepts/index
+        - name: Xbox Live
+          tocHref: /windows/uwp/xbox-live/
+          topicHref: /windows/uwp/xbox-live/index
+      - name: 게시
+        tocHref: /windows/uwp/publish/
+        topicHref: /windows/uwp/publish/index
+ms.openlocfilehash: 1d79038daa4f2a50dd287da879fa8153ca3fb118
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8962505"
