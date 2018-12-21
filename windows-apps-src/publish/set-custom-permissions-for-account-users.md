@@ -6,22 +6,22 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d1581757cb16cf2ed5d0082a6a0e4a4e09299361
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947985"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981507"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 
-[파트너 센터 계정에 사용자 추가](add-users-groups-and-azure-ad-applications.md), 합니다 필요한 경우 계정 내의 액세스 대상을 지정할 수 있습니다. 이를 위해 전체 계정에 적용되는 [표준 역할](#roles)을 할당하거나 [사용 권한 사용자 지정](#custom)을 통해 적정 수준의 액세스 권한을 제공할 수 있습니다. 사용자 지정 권한 중 일부는 전체 계정에 적용되며, 일부는 한 제품이나 특정 제품들로 제한될 수 있습니다(원할 경우 모든 제품에 권한 부여가 가능).
+[파트너 센터 계정에 사용자를 추가](add-users-groups-and-azure-ad-applications.md)해야 할 경우 합니다 계정 내의 액세스 대상을 지정 합니다. 이를 위해 전체 계정에 적용되는 [표준 역할](#roles)을 할당하거나 [사용 권한 사용자 지정](#custom)을 통해 적정 수준의 액세스 권한을 제공할 수 있습니다. 사용자 지정 권한 중 일부는 전체 계정에 적용되며, 일부는 한 제품이나 특정 제품들로 제한될 수 있습니다(원할 경우 모든 제품에 권한 부여가 가능).
 
 > [!NOTE] 
 > 사용자, 그룹, Azure AD 응용 프로그램 등 무엇을 추가하든 동일한 역할 및 권한을 적용할 수 있습니다.
 
 어떤 역할 또는 권한을 적용할지 결정할 때 다음을 명심해야 합니다. 
--   사용자 (그룹 및 Azure AD 응용 프로그램 포함)는 하지 않는 한 해당 할당 된 역할와 관련 된 권한으로 전체 파트너 센터 계정에 액세스할 수 있습니다 [사용 권한 사용자 지정](#custom) 및 할당 [제품 수준 사용 권한](#product-level-permissions) 특정 앱 및/또는 추가 기능만 사용할 수 있습니다.
+-   사용자 (그룹 및 Azure AD 응용 프로그램 포함) 하지 않는 한 해당 할당 된 역할와 관련 된 권한으로 전체 파트너 센터 계정에 액세스할 수 있습니다 [사용 권한 사용자 지정](#custom) 및 할당 [제품 수준 사용 권한](#product-level-permissions) 특정 앱 및/또는 추가 기능만 사용할 수 있습니다.
 -   여러 역할을 선택하거나, 원하는 액세스 권한을 부여하도록 사용자 지정 권한을 사용하여 사용자, 그룹 또는 Azure AD 응용 프로그램이 둘 이상의 역할 기능에 액세스하도록 할 수 있습니다.
 -   특정 역할이 있는 사용자(또는 사용자 지정 권한 집합)는 다른 역할(또는 권한 집합)이 있는 그룹의 일부가 될 수도 있습니다. 이런 경우 사용자는 그룹과 개별 계정 모두와 연결된 기능 모두에 액세스할 수 있습니다.
 
@@ -43,7 +43,7 @@ ms.locfileid: "8947985"
 
 | 역할                 | 설명              |
 |----------------------|--------------------------|
-| 관리자              | 세금 및 지급액 설정 변경을 제외하고 계정에 대한 모든 권한이 있습니다. 파트너 센터에서 사용자 관리이 포함 되지만 만들기 및 Azure AD 테 넌 트에 사용자를 삭제할 수는 Azure AD에서 계정의 사용 권한에 따라 다릅니다. 즉, 사용자가 관리자 역할이 할당 되었지만 조직의 전역 관리자 권한은 없는 경우 Azure AD 수 새 사용자를 만들거나 (경우에 사용자의 파트너 센터 역할을 변경할 수 있음) 디렉터리에서 사용자를 삭제할 수 없습니다. <p> 파트너 센터 계정이 둘 이상의 Azure AD 테 넌 트와 연결 된 경우 관리자는 수 없는 사용자에 대 한 전체 세부 정보 표시 (이름, 성, 암호 복구 메일을 포함 하 여 Azure AD 전역 관리자 인지 여부 및) 묶인 경우 제외 해당 테 넌 트에 대 한 전역 관리자 권한이 있는 계정 가진 사용자와 동일한 테 넌 트에 로그인 합니다. 그러나 추가 하 고 파트너 센터 계정과 연결 된 모든 테 넌 트에서 사용자를 제거할 수 있습니다. |
+| 관리자              | 세금 및 지급액 설정 변경을 제외하고 계정에 대한 모든 권한이 있습니다. 파트너 센터에서 사용자 관리이 포함 되지만를 만들고 Azure AD 테 넌 트에 사용자를 삭제할 수는 Azure AD에서 계정의 사용 권한에 따라 다릅니다. 즉, 사용자가 관리자 역할이 할당 되었지만 조직의 전역 관리자 권한은 없는 경우 Azure AD 하지 볼 수 있도록 새 사용자를 만들거나 사용자를 삭제할 디렉터리에서 (사용자의 파트너 센터 역할은 변경할 수 있음). <p> 파트너 센터 계정에 둘 이상의 Azure AD 테 넌 트와 연결 경우 관리자는 수 없는 사용자에 대 한 전체 세부 정보 표시 (이름, 성, 암호 복구 메일을 포함 하 여 Azure AD 전역 관리자 인지 여부 및) 묶인 경우 제외 해당 테 넌 트에 대 한 전역 관리자 권한이 있는 계정 가진 사용자와 동일한 테 넌 트에 로그인 합니다. 그러나 추가 하 고 파트너 센터 계정과 연결 된 모든 테 넌 트에서 사용자를 제거할 수 있습니다. |
 | 개발자            | 패키지를 업로드하고 앱 및 추가 기능을 제출할 수 있으며 원격 분석 세부 사항에 대한 [사용 보고서](usage-report.md)를 볼 수 있습니다. [장치 간 환경](https://go.microsoft.com/fwlink/?linkid=874042) 기능에 액세스할 수 있습니다. 재무 정보 또는 계정 설정을 볼 수 없습니다.   |
 | 비즈니스 기여자 | [상태](health-report.md) 및 [사용](usage-report.md) 보고서를 볼 수 있습니다. 제품을 만들거나 제출할 수 없고, 계정 설정을 변경하거나 재무 정보를 볼 수 없습니다.   |
 | 재무 기여자  | [지급 보고서](payout-summary.md), 재무 정보 및 구입 보고서를 볼 수 있습니다. 앱, 추가 기능 또는 계정 설정을 변경할 수 없습니다.    |
@@ -115,7 +115,7 @@ ms.locfileid: "8947985"
 <tr><td align="left">    <b>커뮤니티 광고</b>                       </td><td align="left">  계정의 모든 제품에 대한 무료 <a href="about-community-ads.md">커뮤니티 광고</a> 사용을 볼 수 있습니다.          </td><td align="left">  계정의 모든 제품에 대한 무료 <a href="about-community-ads.md">커뮤니티 광고</a> 사용을 만들고 관리하고 볼 수 있습니다.               </td></tr>
 <tr><td align="left">    <b>연락처 정보</b>                        </td><td align="left">  계정 설정 섹션에서 <a href="managing-your-profile.md">연락처 정보</a>를 볼 수 있습니다.        </td><td align="left">  계정 설정 섹션에서 <a href="managing-your-profile.md">연락처 정보</a>를 편집하고 볼 수 있습니다.            </td></tr>
 <tr><td align="left">    <b>COPPA 준수</b>                    </td><td align="left">  계정의 모든 제품에 대한 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a> 선택 사항을 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).                                            </td><td align="left">  계정의 모든 제품에 대한 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a> 선택 사항을 편집하고 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).         </td></tr>
-<tr><td align="left">    <b>고객 그룹</b>                     </td><td align="left">  <a href="create-customer-groups.md">고객 그룹</a> (고객층 및 알려진된 사용자 그룹)을 볼 수 있습니다.      </td><td align="left">  수 제작, 편집, 하 고 <a href="create-customer-groups.md">고객 그룹</a> (고객층 및 알려진된 사용자 그룹)을 확인 합니다.       </td></tr>
+<tr><td align="left">    <b>고객 그룹</b>                     </td><td align="left">  <a href="create-customer-groups.md">고객 그룹</a> (고객층 및 알려진된 사용자 그룹)을 볼 수 있습니다.      </td><td align="left">  수 제작, 편집, 하 고 보기 <a href="create-customer-groups.md">고객 그룹</a> (고객층 및 알려진된 사용자 그룹).       </td></tr>
 <tr><td align="left">    <b>제품 그룹 관리</b>&nbsp;*                            </td><td align="left">  제품 그룹 만들기 페이지를 볼 수는 있지만 계정에서 제품 그룹을 실제로 만들 수는 없습니다.    </td><td align="left">  제품 그룹을 만들고 편집할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>새 앱</b>                            </td><td align="left">  새 앱 만들기 페이지를 볼 수는 있지만 계정에서 새 앱을 실제로 만들 수는 없습니다.    </td><td align="left">  새 앱 이름을 예약하여 계정에서 <a href="create-your-app-by-reserving-a-name.md">새 앱을 만들</a> 수 있으며, 제출을 만들고 Microsoft Store에 앱을 제출할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>새 번들</b>&nbsp;*                       </td><td align="left">  새 번들 만들기 페이지를 볼 수 있지만 계정에서 실제로 새 번들을 만들 수는 없습니다.     </td><td align="left">  제품의 새 번들을 만들 수 있습니다.          </td></tr>
@@ -166,11 +166,11 @@ ms.locfileid: "8947985"
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    <b>구입</b>     </td><td>    제품에 대한 <a href="acquisitions-report.md">구입</a> 및 <a href="add-on-acquisitions-report.md">추가 기능 구입</a> 보고서를 볼 수 있습니다.        </td><td>    해당 없음    </td><td>    해당 없음 (상위 제품에 대 한 설정에 **추가 기능 구입** 보고서 포함)        </td><td>    해당 없음                         </td></tr>
+    <tr><td align="left">    <b>구입</b>     </td><td>    제품에 대한 <a href="acquisitions-report.md">구입</a> 및 <a href="add-on-acquisitions-report.md">추가 기능 구입</a> 보고서를 볼 수 있습니다.        </td><td>    해당 없음    </td><td>    해당 없음 (상위 제품에 대 한 설정을 **추가 기능 구입** 보고서 포함)        </td><td>    해당 없음                         </td></tr>
     <tr><td align="left">    <b>사용</b> </td><td>    제품에 대한 <a href="usage-report.md">사용 보고서</a>를 볼 수 있습니다.     </td><td>    해당 없음       </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
     <tr><td align="left">    <b>상태</b> </td><td>    제품에 대한 <a href="health-report.md">상태 보고서</a>를 볼 수 있습니다.    </td><td>    해당 없음     </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
     <tr><td align="left">    <b>고객 피드백</b>    </td><td>    제품에 대한 <a href="reviews-report.md">리뷰</a> 및 <a href="feedback-report.md">피드백</a> 보고서를 볼 수 있습니다.       </td><td>    해당 없음(피드백이나 리뷰에 응답하려면 <b>고객에게 문의</b> 권한을 부여받아야 함)   </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
-    <tr><td align="left">    <b>Xbox 분석</b> </td><td>    제품에 대 한 [Xbox 분석 보고서](xbox-analytics-report.md) 를 볼 수 있습니다.    </td><td>    해당 없음   </td><td>    해당 없음       </td><td>    해당 없음          </td></tr>
+    <tr><td align="left">    <b>Xbox 분석</b> </td><td>    제품에 대 한 <a href="xbox-analytics-report.md">Xbox 분석 보고서</a> 를 볼 수 있습니다.    </td><td>    해당 없음   </td><td>    해당 없음       </td><td>    해당 없음          </td></tr>
     </tbody>
     </table>
 

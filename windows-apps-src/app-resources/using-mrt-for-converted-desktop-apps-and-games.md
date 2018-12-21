@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. 리소스, 게임, centennial, Desktop App Converter, mui, 위성 어셈블리
 ms.localizationpriority: medium
-ms.openlocfilehash: 620efc73502c741e415d210170ea53deefd4e974
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 287c22cbd50f1b69f505bbddd445740fe9422c31
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927956"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981457"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>레거시 앱 또는 게임에서 Windows 10 리소스 관리 시스템 사용
 
@@ -158,7 +158,7 @@ AppX 기반 배포(예: Microsoft Store)와 함께 결합되어, MRT는 자동�
 
 마지막으로, Visual Studio로 새 프로젝트를 만들어 기존 코드를 마이그레이션하는 경우, [새 UWP 프로젝트 빌드를 위한 MSDN 문서](https://msdn.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)를 참조하세요. 기존 코드를 새 프로젝트에 포함시킬 수 있지만, "순수한" UWP로 실행하려면 상당한 코드 변경(특히 사용자 인터페이스)이 필요할 것입니다. 이러한 변경 내용은 이 문서의 범위를 벗어납니다.
 
-***
+---
 
 ## <a name="phase-1-localize-the-application-manifest"></a>1단계: 응용 프로그램 매니페스트 지역화
 
@@ -178,7 +178,7 @@ AppX 기반 배포(예: Microsoft Store)와 함께 결합되어, MRT는 자동�
  * 기본 언어가 미국 영어가 아닌 경우 해당 BCP-47 코드를 사용합니다. 
 0. XML 파일에 다음과 같은 내용을 추가합니다. <span style="background-color: yellow">강조 표시된 텍스트</span>는 기본 언어로 앱에 적절한 텍스트로 교체합니다.
 
-**참고** 이러한 문자열의 일부는 길이에 제한이 있습니다. 자세한 내용은 [VisualElements](/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements?branch=live)를 참조하세요.
+[!Note] 이러한 문자열의 일부는 길이에 제한이 있습니다. 자세한 내용은 [VisualElements](/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements?branch=live)를 참조하세요.
 
 <blockquote>
 <pre>
@@ -303,7 +303,7 @@ Visual Studio에서 빌드하는 경우 `Ctrl+Shift+B`를 눌러 프로젝트를
  * `/f` 사용할 매핑 파일(이전 단계에서 만든) 설정 
  * `/p` 출력 패키지 이름 설정
  * `/o` 출력 파일이 이미 있을 경우 덮어쓰도록 설정
-0. 패키지를 만들었으면 서명해야 합니다. 서명 인증서를 얻는 가장 쉬운 방법은 Visual Studio에서 빈 유니버설 Windows 프로젝트를 만들고 복사 하는 것은 `.pfx` 있지만 파일을 사용 하 여 수동으로 계정을 만들 수는 `MakeCert` 및 `Pvk2Pfx` 유틸리티에 설명 된 대로 [는 **만드는 방법 앱 패키지 서명 인증서를** msdn 항목] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
+0. 패키지를 만들었으면 서명해야 합니다. 서명 인증서를 얻는 가장 쉬운 방법은 Visual Studio에서 빈 유니버설 Windows 프로젝트를 만들고 복사 하는 것은 `.pfx` 수 있지만 파일을 사용 하 여 수동으로 계정을 만들 수는 `MakeCert` 및 `Pvk2Pfx` 유틸리티를 만드는 방법을 <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832.aspx">에 설명 된 대로 앱 패키지 서명 인증서</a>, MSDN의 항목에서 설명 합니다. 
  * **중요:** 서명 인증서를 수동으로 만들 경우, 소스 프로젝트나 패키지 소스와 다른 디렉터리에 저장하십시오. 그렇지 않으면 개인 키를 포함하여 패키지의 일부로 포함될 수 있습니다.
 0. 패키지에 서명하려면 다음 명령을 사용합니다. `AppxManifest.xml`의 `Identity` 요소에 지정된 `Publisher`는 인증서의 `Subject`와 일치해야 합니다. 이는 사용자에게 표시되는 지역화된 표시 이름인 `<PublisherDisplayName>` 요소가 **아닙니다**. 늘 그렇듯 `contoso_demo...` 파일 이름을 프로젝트에 적절한 이름으로 바꾸고(**매우 중요**) `.pfx` 파일이 현재 디렉터리에 있지 않도록 합니다. 그렇지 않으면 개인 서명 키를 포함하여 패키지의 일부로 생성됩니다.
 

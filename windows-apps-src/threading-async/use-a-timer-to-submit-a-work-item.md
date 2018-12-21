@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 타이머, 스레드
 ms.localizationpriority: medium
-ms.openlocfilehash: 2537bad82fc4a17b964f5871ab6ae1434c417f66
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9cad23f5f82ce70b3a9920726d054b59446925b8
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940089"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981527"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>타이머를 사용하여 작업 항목 제출
 
 
-** 중요 API **
+<b>중요 API</b>
 
 -   [**Windows.UI.Core 네임스페이스**](https://msdn.microsoft.com/library/windows/apps/BR208383)
 -   [**Windows.System.Threading 네임스페이스**](https://msdn.microsoft.com/library/windows/apps/BR229642)
@@ -221,7 +221,7 @@ ms.locfileid: "8940089"
 
 **Thread.Sleep**은 UI 스레드를 차단할 수 있으므로 UWP(유니버설 Windows 플랫폼) 앱에서 사용할 수 없습니다. 대신 [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587)를 사용하여 작업 항목을 만들 수 있습니다. 이 메서드는 UI 스레드를 차단하지 않고 작업 항목이 수행하는 작업을 지연합니다.
 
-작업 항목, 타이머 작업 항목 및 주기적 작업 항목을 보여 주는 전체 코드 샘플은 [스레드 풀 샘플](http://go.microsoft.com/fwlink/p/?linkid=255387)을 참조하세요. 코드 샘플은 원래 Windows8.1 용으로 작성 하지만 Windows10에서 코드를 다시 사용할 수 있습니다.
+작업 항목, 타이머 작업 항목 및 주기적 작업 항목을 보여 주는 전체 코드 샘플은 [스레드 풀 샘플](http://go.microsoft.com/fwlink/p/?linkid=255387)을 참조하세요. 코드 샘플은 원래 windows 8.1 용으로 작성 되었지만 windows 10의 코드 다시 사용할 수 있습니다.
 
 타이머 반복에 대한 자세한 내용은 [정기 작업 항목 만들기](create-a-periodic-work-item.md)를 참조하세요.
 

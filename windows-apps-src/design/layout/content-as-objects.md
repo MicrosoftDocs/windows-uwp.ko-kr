@@ -3,12 +3,12 @@ description: ''
 title: 개체로서의 콘텐츠
 template: detail.hbs
 ms.localizationpriority: medium
-ms.openlocfilehash: 37ba5093f2d7cfe268be40413b889801daf00967
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ed2ac8530d69929cc0e0e921cfb1cc5368058cd2
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942404"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981447"
 ---
 # <a name="content-as-objects"></a>개체로서의 콘텐츠
 
@@ -35,7 +35,7 @@ ms.locfileid: "8942404"
   <p>그렇다면, 명확한 시각적 계층을 만들려면 어떻게 해야 할까요? Windows 10의 초기 버전에서는 공백, 위치 및 입력 체계를 사용하여 시각적 계층을 정의할 수 있었습니다. </p>
   </div>
   <div class="side-by-side-content-right">
-    ![평면 레이아웃](images/content-as-objects/flat-layout.png)
+    <a href="images/content-as-objects/flat-layout.png">평면 레이아웃</a>
     
   </div>
 </div>
@@ -43,7 +43,7 @@ ms.locfileid: "8942404"
 
 Windows 10 RS2에서는 또 다른 차원인 깊이를 추가하였습니다. 
 
-![레이아웃의 깊이](images/content-as-objects/depth-in-layout2.png)
+<a href="images/content-as-objects/depth-in-layout2.png">레이아웃의 깊이</a>
 
 
 ## <a name="use-depth-to-establish-a-hierarchy"></a>깊이를 사용한 계층 구성 
@@ -59,7 +59,7 @@ Windows 10 RS2에서는 또 다른 차원인 깊이를 추가하였습니다.
     </p>
   </div>
   <div class="side-by-side-content-right">
-    ![레이아웃의 깊이](images/content-as-objects/elements-forward-backward.png) 
+    <a href="images/content-as-objects/elements-forward-backward.png">레이아웃의 깊이</a> 
     
   </div>
 </div>
@@ -76,13 +76,12 @@ Windows 10 RS2에서는 또 다른 차원인 깊이를 추가하였습니다.
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **뒤쪽 배경** <br/>
-이 계층은 앱에서 뒤쪽에 상주합니다.  요소가 이 계층으로 이동할 경우에는 비대화형 요소로 만드는 것이 좋습니다. 이 계층에 속하는 요소들은 시차가 가장 느리며 앱 창의 크기에 맞게 잘립니다. TODO: 이 계층의 크기가 조정됩니까? 
+<b>뒤쪽 배경</b> 앱에서 뒤쪽이 계층입니다.  요소가 이 계층으로 이동할 경우에는 비대화형 요소로 만드는 것이 좋습니다. 이 계층에 속하는 요소들은 시차가 가장 느리며 앱 창의 크기에 맞게 잘립니다. TODO: 이 계층의 크기가 조정됩니까? 
 
 <p>배경 요소의 예로는 콘텐츠 뒤의 이미지, TODO: 예, TODO: 예 등이 있습니다.</p>
   </div>
   <div class="side-by-side-content-right">
-    ![앱의 뒤쪽 배경 계층](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">앱의 뒤쪽 배경 계층</a>
     
   </div>
 </div>
@@ -93,13 +92,12 @@ Windows 10 RS2에서는 또 다른 차원인 깊이를 추가하였습니다.
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **수동적 계층** <br/>
-앱에서 UI 요소가 기본적으로 상주하는 계층입니다.  이 계층의 요소들은 실시간으로(시차 없음) 이동하고, 앱 창의 크기에 맞춰 잘리고, 100% 배율로 렌더링됩니다. 
+<b>수 동적 계층</b> 이 앱의 기본 계층 UI 요소가 기본적으로 상주 합니다.  이 계층의 요소들은 실시간으로(시차 없음) 이동하고, 앱 창의 크기에 맞춰 잘리고, 100% 배율로 렌더링됩니다. 
 
 <p>요소 예: 앱 배경, 텍스트, 보조 UI(앱 탐색 UI 등)</p>
   </div>
   <div class="side-by-side-content-right">
-    ![앱의 수동적 계층](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">앱의 수동적 계층</a>
     
   </div>
 </div>
@@ -110,13 +108,12 @@ Windows 10 RS2에서는 또 다른 차원인 깊이를 추가하였습니다.
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **동작 호출** <br/>
-이 계층에는 수동적 계층 요소에 앞서 우선 순위가 결정되는 대화형 항목이 속합니다. 이 계층에 속하는 요소들은 시차가 중간 정도이고, 앱 창의 크기에 맞게 잘립니다. TODO: 이 계층의 요소들은 크기가 조정되거나, 혹은 그림자가 있습니까?
+<b>동작 호출</b> 이 계층에는 수 동적 계층 요소 위에 우선 순위를 지정 하는 대화형 항목이 합니다. 이 계층에 속하는 요소들은 시차가 중간 정도이고, 앱 창의 크기에 맞게 잘립니다. TODO: 이 계층의 요소들은 크기가 조정되거나, 혹은 그림자가 있습니까?
 
 <p>요소 예: 목록, 그리드, 기본 명령(TODO: 예를 들어...)</p> 
   </div>
   <div class="side-by-side-content-right">
-    ![앱의 작업 호출 계층](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">앱의 작업 호출 계층</a>
     
   </div>
 </div>
@@ -126,13 +123,12 @@ Windows 10 RS2에서는 또 다른 차원인 깊이를 추가하였습니다.
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  **히어로 계층** <br/>
-이 계층에는 현재 시점에 화면에서 우선 순위가 가장 높은 요소가 속합니다.  이 계층의 요소는 앱 창의 경계를 무시하여 크기를 조정할 수 있으며, 자동으로 그림자를 가져옵니다.
+<b>히어로 계층</b> 이 계층 시점에 화면에 가장 높은 우선 순위 요소입니다.  이 계층의 요소는 앱 창의 경계를 무시하여 크기를 조정할 수 있으며, 자동으로 그림자를 가져옵니다.
 
 <p>요소 예: 사진 요소, 현재 선택된 항목</p>  
   </div>
   <div class="side-by-side-content-right">
-    ![앱의 히어로 계층](images/content-as-objects/elements-forward-backward.png)
+    <a href="images/content-as-objects/elements-forward-backward.png">앱의 히어로 계층</a>
     
   </div>
 </div>

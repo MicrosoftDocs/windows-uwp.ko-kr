@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d8ea08cd02314fb566680d8f5b249eaf735b977a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a86c3f2662c036dea5dcebf4726a0463d623a3ac
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938209"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981517"
 ---
 # <a name="lists"></a>목록
 
@@ -37,7 +37,7 @@ ms.locfileid: "8938209"
 > <strong>Windows 10 Fall Creators Update - 동작 변경 사항</strong>
 > </div>
 > 이제는 기본적으로 선택을 수행하는 대신 터치, 터치 패드, 패시브 펜 등의 활성 펜이 UWP 앱의 목록을 스크롤/이동합니다.
-> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 무시하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 [ScrollViewer 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) API 참조 항목을 참조 하세요.
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 무시하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer 클래스</a>에 대 한 API 참조 항목을 참조 하세요.
 
 ## <a name="list-views"></a>목록 보기
 

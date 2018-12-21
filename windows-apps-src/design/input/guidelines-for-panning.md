@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 340289c16cfd9c63f578c63827b1c0b35162cdfd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 363ea5728b94d6b42f29299e8d240bcfc6242b4c
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920833"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981567"
 ---
 # <a name="guidelines-for-panning"></a>이동에 대한 지침
 
@@ -32,7 +32,7 @@ ms.locfileid: "8920833"
 
 -   위치 및 크기 신호를 제공하려면 이동 표시기 및 스크롤 막대를 표시하고, 사용자 지정 탐색 기능을 제공하려면 이를 숨기세요.
 
-    **참고**달리 표준 스크롤 막대 이동 표시기는 단순히 정보를 제공 합니다. 입력 장치에 노출되지 않으며 어떤 방식으로도 조작할 수 없습니다.
+    **참고**달리 표준 스크롤 막대 이동 표시기는 목적 으로만 사용 정보를 제공 합니다. 입력 장치에 노출되지 않으며 어떤 방식으로도 조작할 수 없습니다.
 
      
 
@@ -76,13 +76,13 @@ ms.locfileid: "8920833"
 
 ## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
-터치를 사용하여 이동(하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처 사용)하는 것은 마우스를 사용하여 스크롤하는 것과 같습니다. 이동 조작 방식은 스크롤 막대를 클릭하는 것보다는 마우스 휠을 회전하거나 스크롤 상자를 미는 것과 가장 유사합니다. 구분 되거나 아니면 API에서 필요한 일부 장치별 WindowsUI, 조작을 모두 이동으로 지칭 했습니다.
+터치를 사용하여 이동(하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처 사용)하는 것은 마우스를 사용하여 스크롤하는 것과 같습니다. 이동 조작 방식은 스크롤 막대를 클릭하는 것보다는 마우스 휠을 회전하거나 스크롤 상자를 미는 것과 가장 유사합니다. 구분 되거나 아니면 API의 일부 디바이스 별 WindowsUI에 필요한, 조작을 모두 이동으로 지칭 했습니다.
 
 > <div id="main">
 > <strong>Windows 10 Fall Creators Update - 동작 변경 사항</strong>
 > </div>
 > 이제는 기본적으로 텍스트를 선택하는 대신 터치, 터치 패드, 패시브 펜 등의 활성 펜이 UWP 앱을 스크롤/이동합니다.  
-> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 무시하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 [ScrollViewer 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) API 참조 항목을 참조 하세요.
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 무시하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer 클래스</a>에 대 한 API 참조 항목을 참조 하세요.
 
 입력 장치에 따라 사용자는 다음 중 하나를 사용하여 이동 가능한 영역 내에서 이동합니다.
 

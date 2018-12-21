@@ -9,12 +9,12 @@ ms.date: 12/1/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 56586e3c26c2adc07bad58e3ee072b4dc57db2ba
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fc27a2c24128553b7c1449bd8e724e2097213b80
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946411"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981417"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>UWP 앱의 콘텐츠 디자인 기본 사항
 
@@ -106,7 +106,7 @@ ms.locfileid: "8946411"
 <td align="left"><p><a href="../controls-and-patterns/text-block.md">텍스트 블록</a>, <a href="../controls-and-patterns/text-box.md">텍스트 상자</a>, <a href="../controls-and-patterns/rich-edit-box.md">서식 있는 편집 상자</a></p>
 </td>
 <td align="left">텍스트를 표시합니다. 일부 요소를 통해 사용자는 텍스트를 편집할 수 있습니다. 자세한 내용은 <a href="../controls-and-patterns/text-controls.md">텍스트 컨트롤</a>을 참조하세요.
-<p>텍스트 표시 방법에 대한 지침은 [입력 체계](../style/typography.md)를 참조하세요.</p>
+<p>텍스트 표시 방법에 대한 지침은 <a href="../style/typography.md">입력 체계</a>를 참조하세요.</p>
 </td>
 </tr>
 <tr class="odd">

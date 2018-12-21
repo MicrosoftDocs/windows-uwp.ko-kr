@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: c6d13b848a9e5d2dfc145431f732187c35c46ab6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 37deaabe2586391b0f0c93359133f10830558539
+ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939163"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "8981497"
 ---
 # <a name="game-flow-management"></a>게임 흐름 관리
 
@@ -289,7 +289,7 @@ void GameMain::SetGameInfoOverlay(GameInfoOverlayState state)
 <td align="left">OnDpiChanged</td>
 <td align="left"><a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DpiChanged"><strong>Graphics::Display::DisplayInformation::DpiChanged</strong></a>를 처리합니다. 디스플레이의 DPI가 변경되었으며 게임이 해당 리소스를 적절하게 조정합니다.
 <div class="alert">
-<strong>참고</strong>[<strong>CoreWindow</strong>] (https://msdn.microsoft.com/library/windows/desktop/hh404559) 좌표는 [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)에 대 한 Dip (디바이스 독립적 픽셀). 따라서 2D 자산이나 원형을 올바르게 표시하려면 Direct2D에 DPI 변경을 알려야 합니다.
+<strong>참고</strong> <a href="https://msdn.microsoft.com/library/windows/desktop/hh404559"><strong>CoreWindow</strong></a> 좌표는 <a href="https://msdn.microsoft.com/library/windows/desktop/dd370987">Direct2D</a>에 대 한 Dip (디바이스 독립적 픽셀). 따라서 2D 자산이나 원형을 올바르게 표시하려면 Direct2D에 DPI 변경을 알려야 합니다.
 </div>
 <div>
 </div></td>
