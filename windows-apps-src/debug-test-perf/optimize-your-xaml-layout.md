@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ab894a9ba9c51b091e593503be2db57ba3b1a913
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c00b406f77758266c68a16b078192517caaa14bf
+ms.sourcegitcommit: 616adaaf15ae1b41e867181326c094f42ba6ec07
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936487"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "8990219"
 ---
 # <a name="optimize-your-xaml-layout"></a>XAML 레이아웃 최적화
 
@@ -75,7 +75,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)는 약간 복잡하지만, 단일 패널 요소만 사용합니다.
 
 ```xml
-  <Grid>
+<Grid>
   <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
@@ -134,7 +134,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 
 레이아웃에서 요소가 서로 겹칠 수 있어야 하는 것이 일반적인 UI 요구 사항입니다. 요소를 겹쳐서 배치하는 데 일반적으로 안쪽 여백, 여백, 맞춤 및 변형이 사용됩니다. XAML [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) 컨트롤은 겹치는 요소에 대한 레이아웃 성능을 향상하는 데 최적화되어 있습니다.
 
-**중요 한**향상을 보려면 단일 셀 [**그리드**](https://msdn.microsoft.com/library/windows/apps/BR242704)를 사용 합니다. [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) 또는 [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions)를 정의하지 마세요.
+**중요 한**향상을 보려면 단일 셀 [**그리드**](https://msdn.microsoft.com/library/windows/apps/BR242704)사용 합니다. [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) 또는 [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions)를 정의하지 마세요.
 
 ### <a name="examples"></a>예제
 

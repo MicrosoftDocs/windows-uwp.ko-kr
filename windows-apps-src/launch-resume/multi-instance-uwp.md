@@ -5,12 +5,12 @@ keywords: 다중 인스턴스 uwp
 ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cceac0cf4b9cc4c13c0e99ce5beffad70787256
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 89ffa2f3480664131af6664988bd9fb31687fe32
+ms.sourcegitcommit: 616adaaf15ae1b41e867181326c094f42ba6ec07
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940884"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "8990209"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>다중 인스턴스 유니버설 Windows 앱 만들기
 
@@ -25,7 +25,7 @@ Windows 10, 버전 1803 (10.0; 빌드 17134) 낮춘, UWP 앱에 여러 인스턴
 
 새로운 다중 인스턴스 응용 프로그램을 만드는 경우 [Visual Studio Marketplace](https://aka.ms/E2nzbv)에 있는 **Multi-Instance App Project Templates.VSIX**를 설치할 수 있습니다. 이 템플릿을 설치하면 **Visual C# > Windows 유니버설**(또는 **기타 언어 > Visual C++ > Windows 유니버설**)의 **새 프로젝트** 대화 상자에서 사용할 수 있게 됩니다.
 
-두 템플릿이 설치됩니다. **다중 인스턴스 UWP 앱**은 다중 인스턴스 앱을 만드는 템플릿을 제공하고 **다중 인스턴스 리디렉션 UWP 앱**은 새 인스턴스를 시작하거나 이미 시작된 인스턴스를 선택적으로 활성화하기 위해 빌드할 수 있는 추가 논리를 제공합니다. 예를 들어 동일한 문서를 편집할 때 한 번에 한 인스턴스에서만 편집되게 하려는 경우 새 인스턴스를 시작하지 않고 해당 파일이 열려 있는 인스턴스를 포그라운드로 가져옵니다.
+두 템플릿이 설치됩니다. **다중 인스턴스 UWP 앱**은 다중 인스턴스 앱을 만드는 템플릿을 제공하고 **다중 인스턴스 리디렉션 UWP 앱**은 새 인스턴스를 시작하거나 이미 시작된 인스턴스를 선택적으로 활성화하기 위해 빌드할 수 있는 추가 논리를 제공합니다. 예를 들어 아마도 동일한 문서를 편집 하는 한 번에 하나만 원하는, 인스턴스는 해당 파일이 열려 새 인스턴스를 시작 하는 것이 아니라 포그라운드를 가져옵니다.
 
 두 템플릿 추가 `SupportsMultipleInstances` 에 `package.appxmanifest` 파일입니다. 네임 스페이스 접두사를 참고 `desktop4` 및 `iot2`: 데스크톱을 대상으로 하는 유일한 프로젝트나 사물 인터넷 (IoT) 프로젝트 다중 인스턴스를 지원 합니다.
 
@@ -56,9 +56,9 @@ Windows 10, 버전 1803 (10.0; 빌드 17134) 낮춘, UWP 앱에 여러 인스턴
 
 > [!VIDEO https://www.youtube.com/embed/clnnf4cigd0]
 
-**다중 인스턴스 리디렉션 UWP 앱** 템플릿은 위에 표시된 대로 package.appxmanifest 파일에 `SupportsMultipleInstances`를 추가하고 `Main()` 함수가 포함된 프로젝트에 **Program.cs**(또는 C++ 버전의 템플릿을 사용하는 경우 **Program.cpp**)를 추가합니다. 활성화를 리디렉션하는 논리가 `Main` 함수로 들어 갑니다. **Program.cs** 템플릿은 다음과 같습니다.
+**다중 인스턴스 리디렉션 UWP 앱** 템플릿은 위에 표시된 대로 package.appxmanifest 파일에 `SupportsMultipleInstances`를 추가하고 `Main()` 함수가 포함된 프로젝트에 **Program.cs**(또는 C++ 버전의 템플릿을 사용하는 경우 **Program.cpp**)를 추가합니다. 활성화를 리디렉션하는 논리가 `Main` 함수로 들어 갑니다. **Program.cs** 에 대 한 템플릿은 다음과 같습니다.
 
-[**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) 속성이 있을 경우이 정품 인증 요청에 대 한 셸 제공 기본 인스턴스를 나타냅니다 (또는 `null` 경우 없는). 셸에서 기본 설정을 제공 하는 경우 해당 인스턴스를 활성화 한 다음 리디렉션할 수 있습니다 또는 선택 하는 경우 무시할 수 있습니다.
+[**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) 속성이 있을 경우이 정품 인증 요청에 대 한 셸 제공 선호 인스턴스를 나타냅니다 (또는 `null` 경우 없는). 셸을 기본 설정에서 제공 하는 경우 해당 인스턴스를 활성화 한 다음 리디렉션할 수 있습니다 또는 선택 하는 경우 무시할 수 있습니다.
 
 ``` csharp
 public static class Program
@@ -128,7 +128,7 @@ public static class Program
 - 경합 조건과 경합 문제가 발생하지 않도록 하려면 다중 인스턴스 앱이 여러 인스턴스 간에 공유할 수 있는 설정, 앱 로컬 저장소 및 기타 리소스(예: 사용자 파일, 데이터 저장소 등)에 대한 액세스를 파티션/동기화하는 단계를 수행해야 합니다. 뮤텍스, 세마포어, 이벤트 및 등에 등의 표준 동기화 메커니즘을 사용할 수 있습니다.
 - 앱의 Package.appxmanifest 파일에 `SupportsMultipleInstances`가 있는 경우 확장에서 `SupportsMultipleInstances`를 선언할 필요가 없습니다. 
 - 백그라운드 작업 또는 앱 서비스를 제외한 다른 확장에 `SupportsMultipleInstances`를 추가하고 확장을 호스트하는 앱이 Package.appxmanifest 파일에서 `SupportsMultipleInstances`를 선언하지 않는 경우 스키마 오류가 발생합니다.
-- 앱은 여러 백그라운드 작업을 동일한 호스트로 그룹화 할 매니페스트에 [**ResourceGroup**](https://docs.microsoft.com/windows/uwp/launch-resume/declare-background-tasks-in-the-application-manifest) 선언을 사용할 수 있습니다. 이는 각 활성화가 별도의 호스트로 들어가는 다중 인스턴스와 충돌합니다. 따라서 앱은 매니페스트에서 `SupportsMultipleInstances`와 `ResourceGroup`을 둘 다 선언할 수 없습니다.
+- 앱은 매니페스트의 [**ResourceGroup**](https://docs.microsoft.com/windows/uwp/launch-resume/declare-background-tasks-in-the-application-manifest) 선언 여러 백그라운드 작업을 동일한 호스트로 그룹화를 사용할 수 있습니다. 이는 각 활성화가 별도의 호스트로 들어가는 다중 인스턴스와 충돌합니다. 따라서 앱은 매니페스트에서 `SupportsMultipleInstances`와 `ResourceGroup`을 둘 다 선언할 수 없습니다.
 
 ## <a name="sample"></a>샘플
 
