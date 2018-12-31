@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: b0a052d08c6b0816d977d3e86881540194075818
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 14f5139f5fe2c3d5d1f97040ee3bec33ea48d6ac
+ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941281"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "8990331"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
@@ -74,6 +74,9 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 ![계정 설정 창](images/tb-1.png)
 
 시스템은 UI 셸만 제공하므로 창으 비어 있습니다. 프로그래밍 방식을 사용하여 ID 공급자로 창을 채우는 것은 개발자의 책임입니다. 
+
+> [!TIP]
+> 필요에 따라 **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** **[표시](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)**, **[IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)** 작업의 상태에 대 한 쿼리를 반환 하는 대신 사용할 수 있습니다. 
 
 ## <a name="register-for-accountcommandsrequested"></a>AccountCommandsRequested 등록
 
@@ -175,7 +178,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 * OneDrive 범위의 경우 [OneDrive 인증 및 로그인](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes)을 참조하세요. 
 
 > [!TIP]
-> 필요에 따라 앱 (기본 전자 메일 주소를 사용 하 여 사용자 필드를 채우는)에 로그인 힌트 또는 로그인 환경에 관련 된 기타 특수 속성을 사용 하는 경우 **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** 속성에 나열 됩니다. 이렇게 하면 시스템에 캐시의 계정 불일치를 방지 하는 웹 계정을 캐싱의 경우 속성을 무시 합니다.
+> 필요에 따라 앱 (기본 전자 메일 주소를 사용 하 여 사용자 필드를 채우는)에 로그인 힌트 또는 로그인 환경을 관련 된 기타 특수 속성을 사용 하는 경우 **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** 속성에 나열 됩니다. 이렇게 하면 시스템에 캐시에 계정 불일치를 방지 하는 웹 계정을 캐싱의 경우 속성을 무시 합니다.
 
 엔터프라이즈 앱을 개발하는 경우 AAD(Azure Active Directory) 인스턴스에 연결하고 일반 MSA 서비스 대신 Microsoft Graph API를 사용하려고 할 것입니다. 이 시나리오에서는 다음 코드를 대신 사용합니다. 
 
@@ -335,7 +338,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 
 ## <a name="remove-a-stored-account"></a>저장된 계정 제거
 
-웹 계정을 유지하는 경우 사용자가 자신의 계정을 앱과 분리하는 것을 허용하려고 할 수 있습니다. 이렇게이 하면 이러한 수 효과적으로 "로그 아웃" 응용 프로그램의: 시작 시 사용자 계정 정보가 자동으로 로드 더 이상 됩니다. 이렇게 하려면 먼저 스토리지에서 저장된 계정 및 공급자 정보를 제거합니다. 그런 후 **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** 를 호출하여 캐시를 지우고 앱에 있을 수 있는 기존 토큰을 무효화합니다. 
+웹 계정을 유지하는 경우 사용자가 자신의 계정을 앱과 분리하는 것을 허용하려고 할 수 있습니다. 이렇게이 하면 이러한 수 효과적으로 "로그 아웃" 앱의: 시작 시 사용자 계정 정보가 자동으로 로드 더 이상 됩니다. 이렇게 하려면 먼저 스토리지에서 저장된 계정 및 공급자 정보를 제거합니다. 그런 후 **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** 를 호출하여 캐시를 지우고 앱에 있을 수 있는 기존 토큰을 무효화합니다. 
 
 ```csharp
 private async Task SignOutAccountAsync(WebAccount account)

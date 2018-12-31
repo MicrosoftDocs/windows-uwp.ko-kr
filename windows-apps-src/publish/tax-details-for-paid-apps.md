@@ -2,16 +2,16 @@
 Description: To understand your tax considerations for price selection, payout implications, and tax responsibility, see your countries/regions of distribution in the tables below.
 title: 유료 앱의 세금 세부 정보
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
-ms.date: 11/20/2018
+ms.date: 01/02/2019
 ms.topic: article
 keywords: Windows 10, uwp, 세금, 앱 세금, 세금 요구 사항, 상거래 확장, 세율
 ms.localizationpriority: medium
-ms.openlocfilehash: 2065fb2a1cfeb2a895757e1aedc86cd421ff826c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 896a92e009b7d9c33554f77d8da56730625f1f85
+ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924123"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "8990341"
 ---
 # <a name="tax-details-for-paid-apps"></a>유료 앱의 세금 세부 정보
 
@@ -46,7 +46,7 @@ ms.locfileid: "8924123"
 | 오스트리아                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다. 지급 전에 가격에서 세금이 공제됩니다.       | (선택한 가격에서 20% 세금을 뺀 금액)의 70%     | Microsoft          |
 | 아제르바이잔                       | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 | 바하마                      | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
-| 바레인                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
+| 바레인                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | (선택한 가격에서 5% 세금을 뺀 금액)의 70%                 | Microsoft          |
 | 방글라데시                       | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 | 바베이도스                         | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 | 벨로루시                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                  | (선택한 가격에서 20% 세금을 뺀 금액)의 70%         | Microsoft          |
