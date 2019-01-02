@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bdfcdc0782515928740a9c01b409b5170540cb27
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 888de987d507f0a1a21458c299605ebcc7b1bc70
+ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934508"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "8990476"
 ---
 # <a name="accessible-text-requirements"></a>접근성 있는 텍스트 요구 사항  
 
@@ -114,25 +114,31 @@ HTML에서 내장 컨트롤을 사용하는 경우 UIA 구현이 이미 매핑�
 <span id="text_in_graphics"/>
 <span id="TEXT_IN_GRAPHICS"/>
 
-## <a name="text-in-graphics"></a>그래픽의 텍스트  
+## <a name="text-in-graphics"></a>그래픽의 텍스트
+
 가능하면 그래픽에 텍스트를 포함하지 마세요. 예를 들어 앱에서 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) 요소로 표시되는 이미지 원본 파일에 포함하는 텍스트는 보조 기술에서 자동으로 접근하거나 읽을 수 없습니다. 그래픽에 텍스트를 사용해야 하는 경우 "alt 텍스트"의 값으로 제공하는 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) 값에 해당 텍스트나 해당 텍스트의 의미에 대한 요약이 포함되도록 합니다. 텍스트 문자를 벡터에서 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)의 일부로 만들거나 [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921)를 사용하여 만드는 경우에도 유사한 고려 사항이 적용됩니다.
 
 <span id="Text_font_size"/>
 <span id="text_font_size"/>
 <span id="TEXT_FONT_SIZE"/>
 
-## <a name="text-font-size"></a>텍스트 글꼴 크기  
-다수의 읽기 프로그램은 너무 작아 읽을 수 없는 텍스트 글꼴 크기가 사용된 경우 앱에서 텍스트를 읽는 데 어려움이 있습니다. 앱 UI의 텍스트를 첫 번째 위치에서 적절히 크게 표시하면 이 문제를 방지할 수 있습니다. Windows에 포함된 보조 기술도 있으며, 이 기술을 통해 사용자는 앱의 보기 크기나 전체적인 디스플레이를 변경할 수 있습니다.
+## <a name="text-font-size-and-scale"></a>텍스트 글꼴 크기 및 배율
 
-* 일부 사용자는 기본 디스플레이의 dpi(인치당 도트 수) 값을 접근성 옵션으로 변경합니다. 이 옵션은 **접근성**의 **화면의 항목을 더 크게 표시**에서 사용할 수 있으며 **모양 및 개인 설정** / **디스플레이**를 위한 **제어판** UI로 리디렉션됩니다. 사용 가능한 크기 조정 옵션이 정확히 어느 것인지는 디스플레이 디바이스의 접근 권한 값에 달려 있기 때문에 달라질 수 있습니다.
-* 돋보기 도구는 UI의 선택된 영역을 확대할 수 있습니다. 그러나 돋보기 도구를 사용하여 텍스트를 읽기는 어렵습니다.
+사용자가 간단 하 게 하는 글꼴 사용 하는 경우 앱에서 텍스트를 읽는 데 어려움이 개뿐입니다 너무 작게 해야 하는지 응용 프로그램에서 모든 텍스트는 적절 한 크기의 트리거인 합니다.
 
-<span id="Text_scale_factor"/>
-<span id="text_scale_factor"/>
-<span id="TEXT_SCALE_FACTOR"/>
+분명 완료 하면, Windows에는 다양 한 접근성 도구 및 사용자가 이용 하 고 자신의 요구와 선호도 텍스트를 읽기를 조정할 수 있는 설정에 포함 됩니다. 다음이 포함됩니다.
 
-## <a name="text-scale-factor"></a>텍스트 배율 인수  
-다양한 텍스트 요소와 컨트롤에 [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.istextscalefactorenabled) 속성이 있습니다. 이 속성은 기본적으로 **true** 값으로 설정됩니다. 해당 값이 **true**인 경우, 휴대폰에서 **텍스트 크기 조정**(**설정 &gt; 접근성**)를 설정하면 해당 요소의 텍스트 크기가 확대됩니다. 크기 조정은 **FontSize**이(가) 큰 텍스트보다 **FontSize**이(가) 작은 텍스트에 더 많은 영향을 줍니다. 하지만 요소의 **IsTextScaleFactorEnabled**속성을 **false**(으)로 설정하여 해당 자동 확대 기능을 사용하지 않도록 설정할 수 있습니다. 이 태그를 사용해 보고, 휴대폰에서 **텍스트 크기** 설정을 조정하여 **TextBlock**에 어떠한 변화가 있는지 확인합니다.
+* 돋보기 도구를 UI의 선택된 영역을 확대 합니다. 앱에서 텍스트의 레이아웃 하지 어렵게 읽기용 돋보기를 사용 하 여 확인 해야 합니다.
+* 크기와 해상도 설정 글로벌 **설정-> 시스템 디스플레이-> 배율 및 레이아웃->** 합니다. 어떤 크기 조정 옵션을 더 정확 하 게으로 디스플레이 디바이스의 기능에 따라 달라질 수 있습니다.
+* 텍스트 크기 설정이 **설정 접근성-> 디스플레이->** 합니다. 모든 응용 프로그램 및 화면 (모든 UWP 텍스트 컨트롤을 모든 사용자 지정 또는 템플릿 없이도 환경을 배율 텍스트 지원) 컨트롤을 지원 하기 위한만 텍스트의 크기를 지정 하려면 **더 큰 텍스트** 설정을 조정 합니다. 
+> [!NOTE]
+> **모든 항목 크게** 설정에는 사용자를 기본 화면에 텍스트 및 앱에 대 한 기본 크기가 일반적 지정할 수 있습니다.
+
+다양한 텍스트 요소와 컨트롤에 [**IsTextScaleFactorEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled) 속성이 있습니다. 이 속성은 기본적으로 **true** 값으로 설정됩니다. 때 **true**이면 해당 요소의 텍스트의 크기 조정할 수 있습니다. 크기 보다 큰 **FontSize**가 텍스트에 영향을 작은 **FontSize** 가 텍스트를 영향을 줍니다. 요소의 **IsTextScaleFactorEnabled** 속성을 **false**로 설정 하 여 자동 크기 조정을 비활성화할 수 있습니다. 
+
+자세한 내용은 [텍스트 크기 조정](https://docs.microsoft.com/windows/uwp/design/input/text-scaling) 을 참조 하세요.
+
+앱에 다음 태그를 추가 하 고 실행 합니다. **텍스트 크기** 설정을 조정 하 고 각 **TextBlock**을 어떻게 되는지 확인 합니다.
 
 XAML
 ```xml
@@ -143,9 +149,9 @@ XAML
     Style="{StaticResource BodyTextBlockStyle}" IsTextScaleFactorEnabled="False"/>
 ```  
 
-평상시에는 자동 확대 기능을 사용하지 않도록 설정하지 마세요. 왜냐하면 모든 앱에서 보편적으로 UI 텍스트의 크기를 조정하는 일은 사용자에게 중요한 접근성 경험이며, 사용자는 이 경험이 앱에서도 작동하기를 기대합니다.
+모든 앱에서 보편적으로 배율 UI 텍스트는 사용자에 대 한 중요 한 접근성 환경을 텍스트 크기 조정 비활성화 하지 않는 것이 좋습니다.
 
-[**TextScaleFactorChanged**](https://msdn.microsoft.com/library/windows/apps/Dn633867) 이벤트와 [**TextScaleFactor**](https://msdn.microsoft.com/library/windows/apps/Dn633866) 속성을 사용하여 휴대폰의 **텍스트 크기** 설정에 대한 변경 사항을 확인할 수도 있습니다. 방법은 다음과 같습니다.
+[**TextScaleFactorChanged**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) 이벤트와 [**TextScaleFactor**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactor) 속성을 사용하여 휴대폰의 **텍스트 크기** 설정에 대한 변경 사항을 확인할 수도 있습니다. 방법은 다음과 같습니다.
 
 C#
 ```csharp
@@ -163,7 +169,7 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 }
 ```
 
-**TextScaleFactor**의 값은 범위 \[1,2\]의 double입니다. 가장 작은 텍스트는 이 값만큼 확대됩니다. 값을 사용하여 텍스트에 맞게 그래픽의 크기를 조정할 수 있습니다. 하지만 모든 텍스트가 같은 배율로 크기가 조정되지는 않습니다. 일반적으로 텍스트 크기가 클수록 크기 조정의 영향을 덜 받습니다.
+**TextScaleFactor** 의 값은 범위 \[1,2.25\의 double]. 가장 작은 텍스트는 이 값만큼 확대됩니다. 값을 사용하여 텍스트에 맞게 그래픽의 크기를 조정할 수 있습니다. 하지만 모든 텍스트가 같은 배율로 크기가 조정되지는 않습니다. 일반적으로 텍스트 크기가 클수록 크기 조정의 영향을 덜 받습니다.
 
 다음 형식에는 **IsTextScaleFactorEnabled** 속성이 있습니다.  
 * [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378)
@@ -176,6 +182,8 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>관련 항목  
+
+* [텍스트 크기 조정](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
 * [접근성](accessibility.md)
 * [기본적인 접근성 정보](basic-accessibility-information.md)
 * [XAML 텍스트 표시 샘플](http://go.microsoft.com/fwlink/p/?linkid=238579)

@@ -5,18 +5,18 @@ ms.date: 04/26/2018
 ms.topic: article
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: 371b64a6161911242acd5b9abf97cfa7d2f05358
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 90d9bf524cda8d3ceed921d3bc19b73648f7581e
+ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927258"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "8990496"
 ---
 # <a name="functions-in-xbind"></a>X:bind 함수
 
-**참고**바인딩 **{x: Bind}** 를 사용 하 여 (그리고는 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
+**참고**바인딩 **{x: Bind}** 를 사용 하 여 (및는 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
 
-Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 그러면 수 있습니다.
+Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이 통해:
 
 - 간단한 값 변환 방법
 - 둘 이상의 매개 변수를 사용하는 바인딩 방식
@@ -62,25 +62,23 @@ class ColorEntry
 
 함수 경로는 다른 속성 경로처럼 지정되며 점(.), 인덱서 또는 함수를 찾을 캐스트를 포함할 수 있습니다.
 
-정적 함수는 XMLNamespace:ClassName.MethodName 구문을 사용하여 지정할 수 있습니다. 예를 들어, 사용 하 여는 코드 숨김에 정적 함수에 대 한 바인딩 구문은 아래입니다.
+정적 함수는 XMLNamespace:ClassName.MethodName 구문을 사용하여 지정할 수 있습니다. 예를 들어, 사용 하 여는 코드 숨김에 정적 함수에 대 한 바인딩 구문은 아래 합니다.
 
 ```xaml
 <Page 
      xmlns:local="using:MyPage">
      ...
-     <Grid x:Name="myGrid" Background="Black" >
-        <TextBlock Foreground="{x:Bind local:GenerateAppropriateForeground(myGrid.Background)}" Text="Hello World!" />
-    </Grid>
+    <StackPanel>
+        <TextBlock x:Name="BigTextBlock" FontSize="20" Text="Big text" />
+        <TextBlock FontSize="{x:Bind local:MyHelpers.Half(BigTextBlock.FontSize)}" 
+                   Text="Small text" />
+    </StackPanel>
 </Page>
 ```
 ```csharp
-public class MyPage : Page
+static public class MyHelpers
 {
-    public static GenerateAppropriateForeground(SolidColorBrush background)
-    {
-        //Implement static function
-        ...
-    }
+    public static double Half(double value) => value / 2.0;
 }
 ```
 
@@ -104,7 +102,7 @@ public class MyPage : Page
 - 인수 형식은 전달 중인 데이터와 일치해야 합니다. 변환을 축소하지 않습니다.
 - 함수의 반환 형식은 바인딩을 사용 중인 속성의 형식과 일치해야 합니다.
 
-바인딩 엔진은 다음 주요 업데이트를 Windows 10부터 함수 이름으로 발생 하는 속성 변경 알림을에 반응 및 필요에 따라 바인딩이 다시 평가 합니다. 예를 들면 다음과 같습니다. 
+바인딩 엔진은 Windows 10의 다음 주요 업데이트부터 속성 변경 알림을 발생 하는 함수 이름에 반응 및 필요에 따라 바인딩이 다시 평가 합니다. 예를 들면 다음과 같습니다. 
 
 ```XAML
 <DataTemplate x:DataType="local:Person">
@@ -159,7 +157,7 @@ public class Person:INotifyPropertyChanged
 ```
 
 > [!TIP]
-> 변환기 및 다중 바인딩 wpf에서를 통해 지원 된 항목으로 동일한 시나리오를 달성 하기 위해 x:bind에서 함수를 사용할 수 있습니다.
+> WPF의 다중 바인딩 및 변환기를 통해 지원 된 항목으로 동일한 시나리오를 달성 하기 위해 x:bind에서 함수를 사용할 수 있습니다.
 
 ## <a name="function-arguments"></a>함수 인수
 
@@ -173,7 +171,7 @@ public class Person:INotifyPropertyChanged
 
 ### <a name="two-way-function-bindings"></a>양방향 함수 바인딩
 
-양방향 바인딩 시나리오에서는 두 번째 함수를 바인딩의 반대 방향으로 지정해야 합니다. 이렇게 **BindBack** 바인딩 속성을 사용 합니다. 에 함수 아래 예에서는 값 모델로 다시 푸시 해야 하는 인수 하나를 수행 해야 합니다.
+양방향 바인딩 시나리오에서는 두 번째 함수를 바인딩의 반대 방향으로 지정해야 합니다. 이 작업은 수행 **하지** 바인딩 속성을 사용 하 여 합니다. 에 함수 아래 예에서는 값 모델로 다시 푸시 해야 하는 인수 하나를 수행 해야 합니다.
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```
