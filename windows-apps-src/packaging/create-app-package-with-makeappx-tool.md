@@ -1,35 +1,29 @@
 ---
 title: MakeAppx.exe 도구를 사용하여 앱 패키지 만들기
 description: MakeAppx.exe는 앱 패키지와 번들을 만들고, 암호화 및 암호 해독하고, 파일을 추출합니다.
-ms.date: 06/21/2018
+ms.date: 01/02/2019
 ms.topic: article
 keywords: windows 10, uwp, 패키징
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: dc109fe2e684dd3bc1fef62cece5cac3ab50d246
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3c6958491092498451743085af38b2d0fa6bdf8a
+ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943014"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "8991609"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>MakeAppx.exe 도구를 사용하여 앱 패키지 만들기
 
 
-**MakeAppx.exe**는 앱 패키지와 앱 패키지 번들을 둘 다 만듭니다. 또한 **MakeAppx.exe**는 앱 패키지 또는 번들에서 파일을 추출하고 앱 패키지와 번들을 암호화 또는 암호 해독합니다. 이 도구는 Windows 10 SDK에 포함되어 있으며 명령 프롬프트 또는 스크립트 파일에서 사용할 수 있습니다.
+**MakeAppx.exe** 는 앱 패키지 (.appx 또는.msix)와 앱 패키지 번들 (.msixbundle 또는.appxbundle) 만듭니다. 또한 **MakeAppx.exe**는 앱 패키지 또는 번들에서 파일을 추출하고 앱 패키지와 번들을 암호화 또는 암호 해독합니다. 이 도구는 Windows 10 SDK에 포함되어 있으며 명령 프롬프트 또는 스크립트 파일에서 사용할 수 있습니다.
 
-> [!IMPORTANT] 
-> Visual Studio를 사용하여 앱을 개발하는 경우 Visual Studio 마법사를 사용하여 앱 패키지를 만드는 것이 좋습니다. 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)을 참조하세요.
+> [!IMPORTANT]
+> Visual Studio를 사용하여 앱을 개발하는 경우 Visual Studio 마법사를 사용하여 앱 패키지를 만드는 것이 좋습니다. 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](packaging-uwp-apps.md)을 참조하세요.
 
-**MakeAppx.exe**는 .appxupload 파일을 만들지 않습니다. .Appxupload 파일은 Visual Studio 패키징 프로세스의 일부로 생성 하 고 다른 두 개의 파일이 포함:.msix 또는.appx 및.appxsym 이라는 합니다. .Appxsym 파일은 파트너 센터에서 [크래시 분석](../publish/health-report.md) 사용 되는 앱의 공용 기호를 포함 하는 압축된.pdb 파일입니다. 일반적인 .appx 파일도 제출할 수 있지만 충돌 분석이나 디버깅 정보를 사용할 수 없습니다. Microsoft Store에 패키지를 제출하는 방법에 대한 자세한 내용은 [앱 패키지 업로드](../publish/upload-app-packages.md)를 참조하세요. 
-
- 최신 버전의 Windows 10에서이 도구에 대 한 업데이트.appx 패키지 사용 영향을 주지 않습니다. 이 도구를 사용 하 여.appx 패키지를 사용 하 여 계속 하거나 아래 설명 된 대로.msix 패키지에 대 한 도구를 지 원하는 사용할 수 있습니다.
-
-.appxupload 파일을 수동으로 만들려면
-- 폴더에는.msix 및.appxsym 이라는 배치
-- 폴더를 압축합니다.
-- 압축 폴더 확장명을 .zip에서 .appxupload로 변경합니다.
+> [!IMPORTANT]
+> Note **MakeAppx.exe** 는 [앱 패키지 업로드 파일 (.appxupload 또는.msixupload)](packaging-uwp-apps.md#types-of-app-packages), 즉 [파트너 센터로 제출](../publish/upload-app-packages.md)에 대 한 유효한 앱 패키지의 권장된 형식 만들기 되지 않습니다. 앱 패키지 업로드 파일은 일반적으로 [Visual Studio 패키징 프로세스의 일부로 생성](packaging-uwp-apps.md#create-an-app-package-upload-file)하지만 것도 수동으로 만들 수 있습니다.
 
 ## <a name="using-makeappxexe"></a>MakeAppx.exe 사용
 
@@ -96,7 +90,7 @@ MakeAppx <command> [options]
 
 ### <a name="create-an-app-package"></a>앱 패키지 만들기
 
-앱 패키지는.msix 또는.appx 패키지 파일에 패키징된 앱 파일의 전체 집합입니다. **pack** 명령을 사용하여 앱 패키지를 만들려면 패키지 위치에 대한 매핑 파일이나 콘텐츠 디렉터리를 제공해야 합니다. 패키지를 만드는 동안 암호화할 수도 있습니다. 패키지를 암호화하려는 경우 /ep를 사용하고 키 파일(/kf) 또는 전역 테스트 키(/kt)를 사용 중인지 지정해야 합니다. 암호화된 패키지를 만드는 방법에 대한 자세한 내용은 [패키지나 번들 암호화 또는 암호 해독](#encrypt-or-decrypt-a-package-or-bundle)을 참조하세요.
+앱 패키지는.msix 또는.appx 패키지 파일에 패키징된 앱의 파일의 전체 집합입니다. **pack** 명령을 사용하여 앱 패키지를 만들려면 패키지 위치에 대한 매핑 파일이나 콘텐츠 디렉터리를 제공해야 합니다. 패키지를 만드는 동안 암호화할 수도 있습니다. 패키지를 암호화하려는 경우 /ep를 사용하고 키 파일(/kf) 또는 전역 테스트 키(/kt)를 사용 중인지 지정해야 합니다. 암호화된 패키지를 만드는 방법에 대한 자세한 내용은 [패키지나 번들 암호화 또는 암호 해독](#encrypt-or-decrypt-a-package-or-bundle)을 참조하세요.
 
 **pack** 명령과 관련된 옵션은 다음과 같습니다.
 
@@ -111,7 +105,7 @@ MakeAppx <command> [options]
 
 다음 사용 예제에서는 **pack** 명령의 가능한 몇 가지 구문 옵션을 보여 줍니다.
 
-``` syntax 
+``` syntax
 MakeAppx pack [options] /d <content directory> /p <output package name>
 MakeAppx pack [options] /f <mapping file> /p <output package name>
 MakeAppx pack [options] /m <app package manifest> /f <mapping file> /p <output package name>
@@ -200,7 +194,7 @@ MakeAppx unbundle /v /ep MyBundle.emsixbundle /d "C:\My Files" /kt
 
 **MakeAppx.exe** 도구는 기존 패키지 또는 번들을 암호화하거나 암호를 해독할 수도 있습니다. 패키지 이름, 출력 패키지 이름, 암호화 또는 암호 해독 시 키 파일(/kf) 또는 전역 테스트 키(/kt)를 사용해야 하는지 여부를 제공해야 합니다.
 
-Visual Studio 패키징 마법사에서는 암호화 및 암호 해독을 사용할 수 없습니다. 
+Visual Studio 패키징 마법사에서는 암호화 및 암호 해독을 사용할 수 없습니다.
 
 **encrypt** 및 **decrypt** 명령과 관련된 옵션은 다음과 같습니다.
 
@@ -251,7 +245,7 @@ MakeAppx.exe decrypt p MyPackage.msix /ep MyEncryptedPackage.emsix /kf MyKeyFile
 "\\MyServer\path\icon.png"              "icon.png"
 "my app files\readme.txt"               "my app files\readme.txt"
 "CustomManifest.xml"                    "AppxManifest.xml"
-``` 
+```
 
 매핑 파일을 사용할 때 /m 옵션을 사용할지 여부를 선택할 수 있습니다. /m 옵션을 사용하면 사용자가 생성된 매니페스트에 포함할 매핑 파일의 리소스 메타데이터를 지정할 수 있습니다. /m 옵션을 사용하는 경우 매핑 파일에 "[ResourceMetadata]" 줄로 시작하고 "ResourceDimensions" 및 "ResourceId"를 지정하는 줄이 오는 섹션이 포함되어야 합니다. 앱 패키지에 여러 "ResourceDimensions"를 포함할 수 있지만 "ResourceId"는 하나만 포함할 수 있습니다.
 
@@ -269,11 +263,11 @@ MakeAppx.exe decrypt p MyPackage.msix /ep MyEncryptedPackage.emsix /kf MyKeyFile
 
 ## <a name="semantic-validation-performed-by-makeappxexe"></a>MakeAppx.exe에서 수행하는 의미 체계 유효성 검사
 
-**MakeAppx.exe**는 가장 일반적인 배포 오류를 catch하고 앱 패키지가 유효한지 확인할 수 있도록 설계된 제한된 의미 체계 유효성 검사를 수행합니다. **MakeAppx.exe**를 사용하는 동안 유효성 검사를 건너뛰려는 경우 /nv 옵션을 참조하세요. 
+**MakeAppx.exe**는 가장 일반적인 배포 오류를 catch하고 앱 패키지가 유효한지 확인할 수 있도록 설계된 제한된 의미 체계 유효성 검사를 수행합니다. **MakeAppx.exe**를 사용하는 동안 유효성 검사를 건너뛰려는 경우 /nv 옵션을 참조하세요.
 
 이 유효성 검사는 다음을 확인합니다.
 - 패키지 매니페스트에서 참조된 모든 파일이 앱 패키지에 포함되어 있습니다.
 - 응용 프로그램에 두 개의 동일한 키가 없습니다.
-- 응용 프로그램이 이 목록에서 금지된 프로토콜(SMB, FILE, MS-WWA-WEB, MS-WWA)에 등록하지 않습니다. 
+- 응용 프로그램이 이 목록에서 금지된 프로토콜(SMB, FILE, MS-WWA-WEB, MS-WWA)에 등록하지 않습니다.
 
 일반적인 오류만 catch하도록 설계되었기 때문에 전체 의미 체계 유효성 검사는 아닙니다. **MakeAppx.exe**에서 빌드된 패키지는 설치 가능한 패키지가 아닐 수도 있습니다.
