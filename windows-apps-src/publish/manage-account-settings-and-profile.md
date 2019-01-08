@@ -1,21 +1,21 @@
 ---
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: 계정 설정 및 프로필 정보 관리
-description: 확인 하 고 개발자 계정 설정 및 프로필 정보 파트너 센터의 계정 설정 섹션에서 업데이트 수입니다.
+description: 볼 수 있으며, 개발자 계정 설정 및 프로필 정보 파트너 센터의 계정 설정 섹션에서 업데이트할 수 있습니다.
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 개발자 센터, 계정 설정, 프로필, 계정 프로필, 개발자 계정, 개발자 계정 설정
 ms.localizationpriority: medium
-ms.openlocfilehash: b3a95e4e9eddbe47feb513f66856949baecdab8b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c4f7bd6d7aa085c3d5066d3b486583c5b3f37182
+ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931328"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "8992607"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>계정 설정 및 프로필 정보 관리
 
-확인 하 고 개발자 계정 설정 및 프로필 정보 [파트너 센터](https://partner.microsoft.com/dashboard)의 **계정 설정** 섹션에서 업데이트 수입니다. 
+볼 수 있으며, 개발자 계정 설정 및 프로필 정보 [파트너 센터](https://partner.microsoft.com/dashboard)의 **계정 설정** 섹션에서 업데이트할 수 있습니다. 
 
 > [!NOTE]
 > **메시지 센터** (파트너 센터의 위쪽에 메시지 아이콘을 선택 하 여 액세스할 수 있습니다)는 알림 기본 설정 (예: 유형을 알림 및 수신 방법)을 관리할 수 있습니다.
@@ -44,11 +44,10 @@ ms.locfileid: "8931328"
 
 다음은 **계정 설정** 섹션에서 확인할 수 있는 기타 항목들입니다.
 
-- **검증 상태**: 계정에 수행 하는 경우 (예를 들어 먼저 등록 시 또는 연락처 정보 업데이트 후에)을 처리 하는 확인, 여기에서 검증 상태를 검토할 수 있습니다.
-- **개발자 센터 참가자 프로그램**: 또는 기본에서 [개발자 센터 참가자 프로그램](dev-center-insider-program.md) 에서 선택할 수 **계정 설정** 페이지입니다.
+- **검증 상태**: 계정에 수행 하는 경우 (처음 등록할 때 예를 들어 또는 연락처 정보 업데이트 후에)을 처리 하는 확인, 여기에서 검증 상태를 검토할 수 있습니다.
 - **지급 계좌** 및 **세금 프로필**: 여기에서 [지급 계좌 및 세금 양식을 설정](setting-up-your-payout-account-and-tax-forms.md)합니다. 앱 또는 추가 기능에 대한 금액을 청구하려면 먼저 이 작업을 수행해야 합니다.
 - **엔터프라이즈 연결**: 독점적으로 사용하기 위해 앱을 게시하고 싶어하는 엔터프라이즈의 초대를 수락합니다. 자세한 내용은 [엔터프라이즈에 LOB 앱 배포](distribute-lob-apps-to-enterprises.md)를 참조하세요.
-- **사용자**: 계정에 사용자를 추가 하 고 역할 및 권한을 할당 합니다. 자세한 내용은 [계정 사용자 관리](manage-account-users.md)를 참조하세요.
+- **사용자**: 사용자 계정에 추가 하 고 역할 및 권한을 할당 합니다. 자세한 내용은 [계정 사용자 관리](manage-account-users.md)를 참조하세요.
 - **테 넌 트**:에 Azure AD 테 넌 트 연결 관리 합니다. 자세한 내용은 [파트너 센터 계정과 Azure AD 연결](associate-azure-ad-with-dev-center.md)을 참조 하세요.
 - **프로그램**: 참여 중인 프로그램에 대한 세부 정보를 확인하고 관심이 있는 다른 프로그램에 대해 알아봅니다.
 - **계약**: 계정을 수락한 계약을 확인합니다.

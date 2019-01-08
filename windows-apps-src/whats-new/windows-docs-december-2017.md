@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c9b4c834c646aed7953dc2b0f992dea579d8b9fd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 52a60189d7fba39709aa679dbff79551b151e5a4
+ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937222"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "8992617"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>2017년 12월 Windows 개발자 문서의 새로운 내용
 
@@ -58,7 +58,7 @@ Visual Studio 2017 버전 15.5에서는 **Windows 응용 프로그램 패키징 
 
 ### <a name="subscription-add-ons-are-now-available-to-developers-in-the-windows-dev-center-insider-program"></a>Windows 개발자 센터 참가자 프로그램의 개발자는 이제 구독 추가 기능을 사용할 수 있습니다.
 
-[개발자 센터 참가자 프로그램](../publish/dev-center-insider-program.md)에 가입한 모든 개발자는 이제 구독 추가 기능을 사용하여 그들의 앱 내에서 자동화된 반복 청구 기간으로 디지털 제품을 판매할 수 있습니다(예: 앱 기능 또는 디지털 콘텐츠). 자세한 내용은 [앱에 구독 추가 기능을 사용하도록 설정](../monetize/enable-subscription-add-ons-for-your-app.md)을 참조하세요.
+개발자 센터 참가자 프로그램에 가입한 모든 개발자는 이제 구독 추가 기능을 사용하여 그들의 앱 내에서 자동화된 반복 청구 기간으로 디지털 제품을 판매할 수 있습니다(예: 앱 기능 또는 디지털 콘텐츠). 자세한 내용은 [앱에 구독 추가 기능을 사용하도록 설정](../monetize/enable-subscription-add-ons-for-your-app.md)을 참조하세요.
 
 ## <a name="developer-guidance"></a>개발자 지침
 
