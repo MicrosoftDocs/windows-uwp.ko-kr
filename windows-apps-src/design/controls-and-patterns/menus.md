@@ -3,7 +3,7 @@ Description: Menus and context menus display a list of commands or options when 
 title: 메뉴 및 상황에 맞는 메뉴
 label: Menus and context menus
 template: detail.hbs
-ms.date: 10/02/2018
+ms.date: 01/08/2019
 ms.topic: article
 keywords: Windows 10, uwp
 ms.assetid: 0327d8c1-8329-4be2-84e3-66e1e9a0aa60
@@ -13,12 +13,12 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 038bb15029a3d9893c5b32558546ecf07066043b
-ms.sourcegitcommit: 43149cd43e8169edfbd241428ba49e56b64bfd0d
+ms.openlocfilehash: 3f585af5cff4b135760bf14b902b2783715392ed
+ms.sourcegitcommit: 404ec20d276adfd9e47f88a94efd4b9cf0725656
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/08/2019
-ms.locfileid: "8995054"
+ms.locfileid: "8995437"
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
@@ -216,7 +216,8 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-menu-bar"></a>메뉴 모음 만들기
 
-> **미리 보기**: 메뉴 모음에는 [최신 Windows 10 Insider Preview 빌드 및 SDK](https://insider.windows.com/for-developers/) 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)필요 합니다.
+> [!IMPORTANT]
+> 메뉴 모음에는 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 필요 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)입니다.
 
 동일한 요소를 사용 하 여 같이 메뉴 플라이 아웃 메뉴 모음에서 메뉴를 만들 수 있습니다. 그러나 MenuFlyoutItem 개체를 MenuFlyout에 그룹화 하는 대신 그룹화 있습니다 MenuBarItem 요소에서. 각 MenuBarItem 최상위 메뉴의 메뉴 모음에 추가 됩니다.
 
