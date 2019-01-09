@@ -6,18 +6,18 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a8f75fae686763f3d79cea2f02c3208993cb723
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cd6f6a6fb638069dba58c62eca91b74868816d2a
+ms.sourcegitcommit: 0373a2021c1b7144f28b08778d6a3b3dc64aa10c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937967"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "8997398"
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
-관리 하 고 각 앱과 관련 된 세부 정보를 볼 수 [파트너 센터, 알림, A와 같은 서비스를 구성 하 고 / B 테스트, 지도 합니다.
+관리 하 고 각 [파트너 센터](https://partner.microsoft.com/dashboard/)앱과 관련 된 세부 정보를 확인 하 고 알림, A와 같은 서비스를 구성 수 / B 테스트, 지도 합니다.
 
-파트너 센터에서 앱을 사용할 때는 **서비스** 및 **앱 관리**섹션의 왼쪽된 탐색 메뉴에 표시 됩니다. 이들 섹션을 확장하여 아래 설명된 기능에 액세스할 수 있습니다.
+파트너 센터에서 앱을 사용할 때는 **서비스** 및 **응용 프로그램 관리**에 대 한 섹션 왼쪽된 탐색 메뉴에 표시 됩니다. 이들 섹션을 확장하여 아래 설명된 기능에 액세스할 수 있습니다.
 
 ## <a name="services"></a>서비스
 
@@ -37,21 +37,21 @@ ms.locfileid: "8937967"
 
 ## <a name="maps"></a>지도
 
-Windows10 또는 Windows8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. Bing 지도 개발자 센터에서 지도 인증 키를 요청 하 고 앱에 추가 하는 방법에 대 한 정보를 [지도 인증 키 요청](../maps-and-location/authentication-key.md) 에 대 한 자세한 내용은 참조 하세요. 
+Windows10 또는 Windows8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. Bing 지도 개발자 센터에서 지도 인증 키를 요청 하 고 앱에 추가 하는 방법에 대 한 정보, [지도 인증 키 요청](../maps-and-location/authentication-key.md) 에 대 한 자세한 내용은 참조 하세요. 
 
 Windows Phone 8.1 이하의 이전에 게시 된 앱에만 **지도** 페이지를 사용 합니다. 이러한 앱에서 지도 서비스를 사용 하려면 앱의 코드에 포함 하려면 지도 서비스 응용 프로그램 ID와 토큰을 요청 해야 합니다. **토큰을 가져올**을 클릭할 때 지도 서비스 응용 프로그램 ID (**응용 프로그램 Id**)를 생성 하 고 앱에 대 한 인증 토큰 (**AuthenticationToken**) 서비스를 매핑합니다. 하면 패키지 하기 전에 코드에 이러한 값을 추가 하 고 앱을 제출 해야 합니다. 자세한 내용은 [지도 컨트롤을 페이지에 추가하는 방법(Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882)을 참조하세요.
 
 ## <a name="product-collections-and-purchases"></a>제품 컬렉션 및 구입
 
-연결 된 입력 해야 앱과 추가 기능에 대 한 소유권 정보에 액세스 하는 Microsoft Store 컬렉션 API 및 Microsoft Store 구매 API를 사용 하려면 Azure AD 클라이언트 Id 다음과 같습니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
+연결 된 입력 해야 앱과 추가 기능에 대 한 소유권 정보에 액세스 하려면 Microsoft Store 컬렉션 API 및 Microsoft Store 구매 API를 사용 하려면 Azure AD 클라이언트 Id 다음과 같습니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
 
 자세한 내용은 [서비스에서 제품 권리 유형 관리](../monetize/view-and-grant-products-from-a-service.md)를 참조하세요.
 
 ## <a name="administrator-consent"></a>관리자 동의
 
-f 제품 Azure AD와 통합 되 고 관리자 동의 해야 하는 [응용 프로그램 사용 권한이 나 위임 된 사용 권한을](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) 요청 하는 Api를 호출 하면 Azure AD 클라이언트 ID를 입력 합니다. 이렇게 하면 관리자에 게 테 넌 트의 모든 사용자를 대신 하 여 제품의 조직 부여 동의 대 한 앱을 구입 하는 수 있습니다.
+제품 Azure AD와 통합 되 고 관리자 동의 해야 하는 [응용 프로그램 사용 권한이 나 위임 된 사용 권한을](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) 요청 하는 Api 호출, 여기에 Azure AD 클라이언트 ID를 입력 합니다. 이렇게 하면 해당 조직 부여 동의 테 넌 트의 모든 사용자를 대신해 제품에 대 한 앱을 구입 하는 관리자가 있습니다.
 
-자세한 정보는 [전체 테 넌 트에 대 한 동의 요청](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant)을 참조 하세요.
+자세한 내용은 [전체 테 넌 트에 대 한 동의 요청](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant)을 참조 하세요.
 
 ## <a name="app-management"></a>앱 관리
 
@@ -93,7 +93,7 @@ OEM 권한이 있는 개발자는 **현재 패키지** 페이지에서 [사전 �
 
 -   **Microsoft Azure 모바일 앱**를 통해 푸시 알림을 보내고, 앱 사용자를 인증 및 관리하고, 앱 데이터를 클라우드에 저장할 수 있습니다. 자세한 내용은 [모바일 앱 설명서](http://go.microsoft.com/fwlink/p/?LinkId=221116)를 참조하세요.
 
--   Windows Phone 이전에 게시 된.xap 패키지를 사용 하 여 **Microsoft 푸시 알림 서비스 (MPNS)를** 사용할 수 있습니다. 여기에서 구성을 하지 않고 제한적으로 인증되지 않은 알림을 보낼 수 있지만 대역폭 제한을 방지하려면 인증된 알림을 사용하는 것이 좋습니다. MPNS를 사용 하는 경우에 **WNS/MPNS** 페이지에 제공 된 필드에 인증서를 업로드 해야 합니다. 자세한 내용은 [Windows Phone 8에서 인증된 웹 서비스가 푸시 알림을 보내도록 설정](http://go.microsoft.com/fwlink/p/?LinkId=528736)을 참조하세요.
+-   Windows Phone 대 한 **Microsoft 푸시 알림 서비스 (MPNS)** 이전에 게시 된.xap 패키지와 함께 사용할 수 있습니다. 여기에서 구성을 하지 않고 제한적으로 인증되지 않은 알림을 보낼 수 있지만 대역폭 제한을 방지하려면 인증된 알림을 사용하는 것이 좋습니다. MPNS를 사용 하는 경우에 **WNS/MPNS** 페이지에 제공 된 필드에 인증서를 업로드 해야 합니다. 자세한 내용은 [Windows Phone 8에서 인증된 웹 서비스가 푸시 알림을 보내도록 설정](http://go.microsoft.com/fwlink/p/?LinkId=528736)을 참조하세요.
  
 
  
