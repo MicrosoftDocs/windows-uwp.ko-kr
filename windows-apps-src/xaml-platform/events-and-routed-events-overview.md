@@ -1,25 +1,25 @@
 ---
-description: C#, Visual Basic 또는 VisualC + + 구성 요소 확장을 사용 하는 경우 Windows 런타임 앱의 이벤트 프로그래밍 개념에 설명 (C + + CX) 프로그래밍 언어와 XAML UI 정의 합니다.
+description: C#, Visual Basic 또는 VisualC + + 구성 요소 확장을 사용 하는 경우 Windows 런타임 앱의 이벤트 프로그래밍 개념에 설명 (C + + CX) 프로그래밍 언어와 XAML UI 정의 대 한 합니다.
 title: 이벤트 및 라우트된 이벤트 개요
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ms.date: 07/12/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f24543c1afcd9c154788cc4be03434384f00f0c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cf84846fc34a7b93f168abc1dfa31e9f743be209
+ms.sourcegitcommit: 444fd387c55618f9afdac115264c85b14fd8b826
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939802"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "8999926"
 ---
 # <a name="events-and-routed-events-overview"></a>이벤트 및 라우트된 이벤트 개요
 
 **중요 API**
--   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
--   [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)
+- [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
+- [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)
 
-C#, Visual Basic 또는 VisualC + + 구성 요소 확장을 사용 하는 경우 Windows 런타임 앱의 이벤트 프로그래밍 개념에 설명 (C + + CX) 프로그래밍 언어와 XAML UI 정의 합니다. 이벤트 처리기를 XAML에서 UI 요소 선언의 일부로 할당하거나 코드에서 처리기를 추가할 수 있습니다. Windows 런타임은 *라우트된 이벤트*를 지원합니다. 이 기능을 통해 특정 입력 이벤트와 데이터 이벤트가 이벤트를 발생시킨 개체가 아닌 다른 개체에 의해 처리될 수 있습니다. 라우트된 이벤트는 컨트롤 템플릿을 정의하거나 페이지 또는 레이아웃 컨테이너를 사용하는 경우 유용합니다.
+C#, Visual Basic 또는 VisualC + + 구성 요소 확장을 사용 하는 경우 Windows 런타임 앱의 이벤트 프로그래밍 개념에 설명 (C + + CX) 프로그래밍 언어와 XAML UI 정의 대 한 합니다. 이벤트 처리기를 XAML에서 UI 요소 선언의 일부로 할당하거나 코드에서 처리기를 추가할 수 있습니다. Windows 런타임은 *라우트된 이벤트*를 지원합니다. 이 기능을 통해 특정 입력 이벤트와 데이터 이벤트가 이벤트를 발생시킨 개체가 아닌 다른 개체에 의해 처리될 수 있습니다. 라우트된 이벤트는 컨트롤 템플릿을 정의하거나 페이지 또는 레이아웃 컨테이너를 사용하는 경우 유용합니다.
 
 ## <a name="events-as-a-programming-concept"></a>프로그래밍 개념으로서의 이벤트
 
@@ -147,13 +147,13 @@ Private Sub textBlock1_PointerEntered(ByVal sender As Object, ByVal e As Pointer
 End Sub
 ```
 
-**참고** **Handles** 키워드 대신 인스턴스 처리 방법을 홍보 일반적으로 Visual Studio와 XAML 디자인 화면입니다. 이는 XAML에서 이벤트 처리기 연결을 설정하는 것이 일반적인 디자이너-개발자 워크플로의 일부이고 **Handles** 키워드 방법이 XAML에서 이벤트 처리기를 연결하는 것과 호환되지 않기 때문입니다.
+**참고** **Handles** 키워드 대신 인스턴스 처리 방법을 홍보 일반적으로 Visual Studio와 XAML 디자인 화면. 이는 XAML에서 이벤트 처리기 연결을 설정하는 것이 일반적인 디자이너-개발자 워크플로의 일부이고 **Handles** 키워드 방법이 XAML에서 이벤트 처리기를 연결하는 것과 호환되지 않기 때문입니다.
 
-C + + /CX를 사용 하 여 있습니다는 **+=** 구문을 하지만 C# 기본 형식에서 차이가 있습니다.
+C + + /CX를 사용 하 여 있습니다 합니다 **+=** 구문을 하지만 C# 기본 형식에서 차이가 있습니다.
 
--   대리자 유추가 없으므로 대리자 인스턴스에 대해 **ref new**를 사용해야 합니다.
--   대리 생성자에 두 매개 변수가 있고 대상 개체가 첫 번째 매개 변수로 필요합니다. 일반적으로 **this**를 지정합니다.
--   대리 생성자에는 두 번째 매개 변수로 메서드 주소가 필요하므로 **&** 참조 연산자가 메서드 이름보다 우선합니다.
+- 대리자 유추가 없으므로 대리자 인스턴스에 대해 **ref new**를 사용해야 합니다.
+- 대리 생성자에 두 매개 변수가 있고 대상 개체가 첫 번째 매개 변수로 필요합니다. 일반적으로 **this**를 지정합니다.
+- 대리 생성자에는 두 번째 매개 변수로 메서드 주소가 필요하므로 **&** 참조 연산자가 메서드 이름보다 우선합니다.
 
 ```cppwinrt
 textBlock1().PointerEntered({this, &MainPage::TextBlock1_PointerEntered });
@@ -170,11 +170,11 @@ ref new PointerEventHandler(this, &BlankPage::textBlock1_PointerEntered);
 
 드물긴 하지만 명시적으로 이벤트 처리기를 제거하려는 몇 가지 경우가 있습니다. 다음이 포함됩니다.
 
--   정적 이벤트에 대해 추가되었으며 일반적인 방법으로 가비지 수집할 수 없는 처리기. Windows 런타임 API의 정적 이벤트 예로 [**CompositionTarget**](https://msdn.microsoft.com/library/windows/apps/br228126) 및 [**Clipboard**](https://msdn.microsoft.com/library/windows/apps/br205867) 클래스가 있습니다.
--   처리기를 즉시 제거하려는 테스트 코드 또는 런타임에 이벤트에 대한 이전/새 이벤트 처리기를 바꾸려는 코드
--   사용자 지정 **remove** 접근자 구현
--   사용자 지정 정적 이벤트
--   페이지 탐색 처리기
+- 정적 이벤트에 대해 추가되었으며 일반적인 방법으로 가비지 수집할 수 없는 처리기. Windows 런타임 API의 정적 이벤트 예로 [**CompositionTarget**](https://msdn.microsoft.com/library/windows/apps/br228126) 및 [**Clipboard**](https://msdn.microsoft.com/library/windows/apps/br205867) 클래스가 있습니다.
+- 처리기를 즉시 제거하려는 테스트 코드 또는 런타임에 이벤트에 대한 이전/새 이벤트 처리기를 바꾸려는 코드
+- 사용자 지정 **remove** 접근자 구현
+- 사용자 지정 정적 이벤트
+- 페이지 탐색 처리기
 
 [**FrameworkElement.Unloaded**](https://msdn.microsoft.com/library/windows/apps/br208748) 또는 [**Page.NavigatedFrom**](https://msdn.microsoft.com/library/windows/apps/br227507)은 다른 이벤트 처리기를 제거하는 데 사용할 수 있도록 상태 관리 및 개체 수명에서 적절한 위치에 있는 가능한 이벤트 트리거입니다.
 
@@ -196,31 +196,43 @@ C++/CX에서 이벤트 처리기를 제거해야 하는 경우 등록 토큰이 
 
 C#, Microsoft Visual Basic 또는 C++/CX를 사용하는 Windows 런타임은 대부분의 UI 요소에 있는 이벤트 집합에 대해 라우트된 이벤트의 개념을 지원합니다. 이러한 이벤트는 입력 및 사용자 조작 시나리오를 위한 것이며, [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 기본 클래스에서 구현됩니다. 다음은 라우트된 이벤트인 입력 이벤트의 목록입니다.
 
--   [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/br208922)
--   [**DragEnter**](https://msdn.microsoft.com/library/windows/apps/br208923)
--   [**DragLeave**](https://msdn.microsoft.com/library/windows/apps/br208924)
--   [**DragOver**](https://msdn.microsoft.com/library/windows/apps/br208925)
--   [**놓기**](https://msdn.microsoft.com/library/windows/apps/br208926)
--   [**Holding**](https://msdn.microsoft.com/library/windows/apps/br208928)
--   [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)
--   [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)
--   [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945)
--   [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946)
--   [**ManipulationInertiaStarting**](https://msdn.microsoft.com/library/windows/apps/br208947)
--   [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950)
--   [**ManipulationStarting**](https://msdn.microsoft.com/library/windows/apps/br208951)
--   [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964)
--   [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)
--   [**PointerEntered**](https://msdn.microsoft.com/library/windows/apps/br208968)
--   [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969)
--   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970)
--   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971)
--   [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972)
--   [**PointerWheelChanged**](https://msdn.microsoft.com/library/windows/apps/br208973)
--   [**RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984)
--   [**Tapped**](https://msdn.microsoft.com/library/windows/apps/br208985)
--   [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/br208927)
--   [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943)
+- [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
+- [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
+- [**ContextCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextcanceled)
+- [**ContextRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextrequested)
+- [**DoubleTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.doubletapped)
+- [**DragEnter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragenter)
+- [**DragLeave**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragleave)
+- [**DragOver**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
+- [**DragStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragstarting)
+- [**놓기**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
+- [**DropCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dropcompleted)
+- [**GettingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gettingfocus)
+- [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
+- [**Holding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
+- [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown)
+- [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup)
+- [**LosingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.losingfocus)
+- [**LostFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus)
+- [**ManipulationCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)
+- [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)
+- [**ManipulationInertiaStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastarting)
+- [**ManipulationStarted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)
+- [**ManipulationStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)
+- [**NoFocusCandidateFound**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.nofocuscandidatefoundeventargs)
+- [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled)
+- [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)
+- [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered)
+- [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited)
+- [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved)
+- [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)
+- [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)
+- [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
+- [**PreviewKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeydown.md)
+- [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup.md)
+- [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
+- [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
+- [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
 
 라우트된 이벤트는 자식 개체에서 개체 트리의 연속적인 부모 개체 각각으로 전달(*라우트*)될 수 있는 이벤트입니다. UI의 XAML 구조는 이 트리와 유사하며 트리의 루트는 XAML의 루트 요소입니다. 실제 개체 트리에는 속성 요소 태그와 같은 XAML 언어 기능이 포함되지 않기 때문에 실제 개체 트리는 XAML 요소 중첩과 다소 다를 수도 있습니다. 라우트된 이벤트는 이벤트를 발생시키는 XAML 개체 요소 자식 요소에서 이러한 자식을 포함하는 부모 개체 요소로의 *버블링*으로 간주될 수 있습니다. 이벤트 및 이벤트 데이터는 이벤트 경로를 따라 여러 개체에서 처리될 수 있습니다. 처리기를 가지고 있는 요소가 없는 경우 루트 요소에 도달할 때까지 경로를 따라 계속 이동할 수 있습니다.
 
@@ -234,7 +246,7 @@ DHTML(동적 HTML) 또는 HTML5와 같은 웹 기술을 알고 있는 경우 이
 
 경우에 따라 *sender*가 관심 대상이 아니고, 포인터 이벤트 발생 시 가능한 자식 개체 중 포인터가 가리키는 개체 또는 키보드 키를 눌렀을 때 포커스를 받는 더 큰 UI의 개체 등과 같은 정보에 관심이 있을 수 있습니다. 이런 경우, [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) 속성 값을 사용할 수 있습니다. 경로의 모든 지점에서 **OriginalSource**는 처리기가 연결된 개체 대신 이벤트를 발생시킨 원래 개체를 보고합니다. 그러나 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 입력 이벤트의 경우 원래 개체는 종종 페이지 수준 UI 정의 XAML에서 즉시 표시되지 않는 개체입니다. 대신 이 원본 개체는 컨트롤의 템플릿 기반 부분일 수 있습니다. 예를 들어 사용자가 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)의 가장자리에 포인터를 놓으면 대부분의 포인터 이벤트의 경우 **OriginalSource**는 **Button** 자체가 아니라 [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465)의 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) 템플릿 요소입니다.
 
-**팁**입력 이벤트 버블링이 템플릿 기반 컨트롤을 만드는 경우에 특히 유용 합니다. 템플릿이 있는 컨트롤에는 소비자가 적용한 새 템플릿이 있을 수 있습니다. 소비자는 작업 템플릿을 다시 만들려고 하다가 기본 템플릿에서 선언된 일부 이벤트 처리를 자신도 모르게 제거할 수 있습니다. 이 경우 클래스 정의에 있는 [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737) 재정의의 일부로서 처리기를 연결하여 여전히 컨트롤 수준의 이벤트 처리를 제공할 수 있습니다. 그런 다음 인스턴스화에서 컨트롤의 루트까지 버블링된 입력 이벤트를 catch할 수 있습니다.
+**팁**입력 이벤트 버블링는 템플릿 기반 컨트롤을 만드는 경우에 특히 유용 합니다. 템플릿이 있는 컨트롤에는 소비자가 적용한 새 템플릿이 있을 수 있습니다. 소비자는 작업 템플릿을 다시 만들려고 하다가 기본 템플릿에서 선언된 일부 이벤트 처리를 자신도 모르게 제거할 수 있습니다. 이 경우 클래스 정의에 있는 [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737) 재정의의 일부로서 처리기를 연결하여 여전히 컨트롤 수준의 이벤트 처리를 제공할 수 있습니다. 그런 다음 인스턴스화에서 컨트롤의 루트까지 버블링된 입력 이벤트를 catch할 수 있습니다.
 
 ### <a name="the-handled-property"></a>**Handled** 속성
 
@@ -262,13 +274,13 @@ DHTML(동적 HTML) 또는 HTML5와 같은 웹 기술을 알고 있는 경우 이
 
 UI에서 요소가 마우스, 터치 및 스타일러스 입력에 보이는지 여부와 그 위치를 결정하는 것을 *적중 테스트*라고 합니다. 터치 동작의 경우와 터치 동작의 결과인 조작 관련 또는 조작 이벤트의 경우에도 이벤트 원본이 되거나 터치 동작과 연관된 이벤트를 실행하려면 요소의 적중 횟수 테스트가 보여야 합니다. 그렇지 않으면 동작이 이 요소를 거쳐 해당 입력을 조작할 수 있는 시각적 트리의 기본 요소나 부모 요소에까지 적용됩니다. 적중 횟수 테스트에 영향을 미치는 요소에는 여러 가지가 있지만 [**IsHitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933) 속성을 확인하여 지정된 요소가 입력 이벤트를 발생시킬 수 있는지 여부를 확인할 수 있습니다. 이 속성은 요소가 다음 기준을 충족하는 경우에만 **true**를 반환합니다.
 
--   요소의 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) 속성 값이 [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006)입니다.
--   요소의 **Background** 또는 **Fill** 속성 값이 **null**이 아닙니다. [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 값이 **null**이면 투명성이 설정되고 적중 횟수 테스트가 표시되지 않습니다. 요소가 투명하나 적중 횟수를 테스트할 수 있게 하려면 **null** 대신 [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) 브러시를 사용하세요.
+- 요소의 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) 속성 값이 [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006)입니다.
+- 요소의 **Background** 또는 **Fill** 속성 값이 **null**이 아닙니다. [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 값이 **null**이면 투명성이 설정되고 적중 횟수 테스트가 표시되지 않습니다. 요소가 투명하나 적중 횟수를 테스트할 수 있게 하려면 **null** 대신 [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) 브러시를 사용하세요.
 
 **참고** **배경** 및 **채우기** [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)정의 되지 및 [**컨트롤**](https://msdn.microsoft.com/library/windows/apps/br209390) [**모양**](/uwp/api/Windows.UI.Xaml.Shapes.Shape)등의 다른 파생 클래스로 정의 됩니다. 그러나 전경 및 백그라운드 속성에 사용하는 브러시의 의미는 속성을 구현하는 서브클래스와 관계없이 적중 횟수 테스트 및 입력 이벤트의 경우와 동일합니다.
 
--   요소가 컨트롤인 경우 해당 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) 속성 값이 **true**여야 합니다.
--   요소의 레이아웃에는 실제 차원이 있어야 합니다. [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) 또는 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)가 0인 요소는 입력 이벤트를 발생시키지 않습니다.
+- 요소가 컨트롤인 경우 해당 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) 속성 값이 **true**여야 합니다.
+- 요소의 레이아웃에는 실제 차원이 있어야 합니다. [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) 또는 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)가 0인 요소는 입력 이벤트를 발생시키지 않습니다.
 
 일부 컨트롤에는 적중 횟수 테스트를 위한 특수한 규칙이 있습니다. 예를 들어 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)에는 **Background** 속성이 없으나 해당 차원의 전체 영역 내에서 여전히 적중 횟수 테스트가 가능합니다. [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 및 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) 컨트롤은 표시될 미디어 원본 파일의 알파 채널 같은 투명 콘텐츠와 관계없이 정의된 사각형 차원에 대해 적중 횟수 테스트가 가능합니다. 입력이 호스트된 HTML에 의해 처리될 수 있고 스크립트 이벤트를 발생시킬 수 있기 때문에 [**WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) 컨트롤에는 특수 적중 횟수 테스트 동작이 있습니다.
 
@@ -284,13 +296,13 @@ UI에서 요소가 마우스, 터치 및 스타일러스 입력에 보이는지 
 
 사용자 지정 이벤트 정의와 관련하여 이벤트 추가 방법 및 클래스 디자인에 미치는 영향은 사용하는 프로그래밍 언어에 따라 달라집니다.
 
--   C# 및 Visual Basic의 경우 CLR 이벤트를 정의합니다. 사용자 지정 접근자(**add**/**remove**)를 사용하지 않는다면 표준 .NET 이벤트 패턴을 사용할 수 있습니다. 추가 팁:
-    -   이벤트 처리기의 경우 Windows 런타임 일반 이벤트 대리자 [**EventHandler<T>**](https://msdn.microsoft.com/library/windows/apps/br206577)로의 변환이 기본 제공되는 [**System.EventHandler<TEventArgs>**](https://msdn.microsoft.com/library/windows/apps/xaml/db0etb8x.aspx)를 사용하는 것이 좋습니다.
-    -   Windows 런타임으로 변환되지 않는 [**System.EventArgs**](https://msdn.microsoft.com/library/windows/apps/xaml/system.eventargs.aspx)를 이벤트 데이터 클래스의 기초로 사용하지 마세요. 기존 이벤트 데이터 클래스를 사용하거나, 기본 클래스를 사용하지 마세요.
-    -   사용자 지정 접근자를 사용하는 경우 [Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자](https://msdn.microsoft.com/library/windows/apps/xaml/hh972883.aspx)를 참조하세요.
-    -   표준 .NET 이벤트 패턴이 무엇인지 잘 모르겠으면 [사용자 지정 Silverlight 클래스에 대한 이벤트 정의](http://msdn.microsoft.com/library/dd833067.aspx)를 참조하세요. 이 문서는 Microsoft Silverlight용으로 작성되었지만 표준 .NET 이벤트 패턴에 대한 코드와 개념이 잘 요약되어 있습니다.
--   C++/CX의 경우 [이벤트(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh755799.aspx)를 참조하세요.
-    -   사용자 지정 이벤트를 고유하게 사용하는 경우에도 명명된 참조를 사용합니다. 사용자 지정 이벤트에 람다를 사용하지 마세요. 람다는 순환 참조를 만들 수 있습니다.
+- C# 및 Visual Basic의 경우 CLR 이벤트를 정의합니다. 사용자 지정 접근자(**add**/**remove**)를 사용하지 않는다면 표준 .NET 이벤트 패턴을 사용할 수 있습니다. 추가 팁:
+    - 이벤트 처리기의 경우 Windows 런타임 일반 이벤트 대리자 [**EventHandler<T>**](https://msdn.microsoft.com/library/windows/apps/br206577)로의 변환이 기본 제공되는 [**System.EventHandler<TEventArgs>**](https://msdn.microsoft.com/library/windows/apps/xaml/db0etb8x.aspx)를 사용하는 것이 좋습니다.
+    - Windows 런타임으로 변환되지 않는 [**System.EventArgs**](https://msdn.microsoft.com/library/windows/apps/xaml/system.eventargs.aspx)를 이벤트 데이터 클래스의 기초로 사용하지 마세요. 기존 이벤트 데이터 클래스를 사용하거나, 기본 클래스를 사용하지 마세요.
+    - 사용자 지정 접근자를 사용하는 경우 [Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자](https://msdn.microsoft.com/library/windows/apps/xaml/hh972883.aspx)를 참조하세요.
+    - 표준 .NET 이벤트 패턴이 무엇인지 잘 모르겠으면 [사용자 지정 Silverlight 클래스에 대한 이벤트 정의](http://msdn.microsoft.com/library/dd833067.aspx)를 참조하세요. 이 문서는 Microsoft Silverlight용으로 작성되었지만 표준 .NET 이벤트 패턴에 대한 코드와 개념이 잘 요약되어 있습니다.
+- C++/CX의 경우 [이벤트(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh755799.aspx)를 참조하세요.
+    - 사용자 지정 이벤트를 고유하게 사용하는 경우에도 명명된 참조를 사용합니다. 사용자 지정 이벤트에 람다를 사용하지 마세요. 람다는 순환 참조를 만들 수 있습니다.
 
 Windows 런타임에 대한 사용자 지정 라우트된 이벤트를 선언할 수 없습니다. 라우트된 이벤트는 Windows 런타임에서 가져오는 집합으로 제한됩니다.
 
