@@ -1,24 +1,24 @@
 ---
 description: 이 가이드에서는 WPF 및 Windows Forms 응용 프로그램에서 직접 Fluent 기반 UWP UI를 만들 수 있습니다.
 title: 데스크톱 응용 프로그램의 UWP 컨트롤
-ms.date: 09/21/2018
+ms.date: 01/11/2019
 ms.topic: article
 keywords: Windows 10, uwp, windows 양식, wpf
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 43cdb19e791726732f564ffea1b03af53a4a1ffe
-ms.sourcegitcommit: 1294275b5044ef8878d54bf4fd7aa8e0203e6fac
+ms.openlocfilehash: bf25fea6ca6e8809c12324ae57a42cc712ded2a5
+ms.sourcegitcommit: 9df81996628359ad6af4227339a2ce01c2d804e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/11/2019
-ms.locfileid: "9001559"
+ms.locfileid: "9001787"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>데스크톱 응용 프로그램의 UWP 컨트롤
 
 > [!NOTE]
 > XAML 제도 개발자 미리 현재 사용할 수 있습니다. 하지만 직접 사용해 프로토타입 작성 하는 코드에서 이제 새, 사용 하는 이러한 프로덕션 코드에서이 시간에 하지 않는 것이 좋습니다. 이러한 Api 및 컨트롤 성숙 안정화 나중에 Windows 릴리스를 계속 합니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.
 >
-> XAML 제도 대 한 피드백을 있는 경우에 피드백을 보내 XamlIslandsFeedback@microsoft.com. 통찰력과 시나리오는 저희에 게 매우 중요 합니다.
+> 에 대 한 피드백이 있는 경우 XAML 제도, [WindowsCommunityToolkit 리포지토리](https://github.com/windows-toolkit/WindowsCommunityToolkit/issues) 에서 새로운 문제를 만들면 두고 여러분의 의견 있습니다. 개인적으로 피드백을 제출 하려는 경우를 보낼 수 있습니다 XamlIslandsFeedback@microsoft.com. 통찰력과 시나리오는 저희에 게 매우 중요 합니다.
 
 이제 Windows 10을 사용 하면 모양, 느낌 및만 UWP 컨트롤을 통해 사용할 수 있는 최신 Windows 10 UI 기능으로 기존 데스크톱 응용 프로그램의 기능을 향상 시킬 수 있도록 비 UWP 데스크톱 응용 프로그램의 UWP 컨트롤을 사용할 수 있습니다. 이 [Windows Ink](../design/input/pen-and-stylus-interactions.md) 기존 WPF, Windows Forms, 및 c + + Win32 응용 프로그램의 [흐름 디자인 시스템](../design/fluent-design-system/index.md) 을 지 원하는 컨트롤 등의 UWP 기능을 사용할 수 있는 것을 의미 합니다. 이 개발자 시나리오는 *XAML 제도*라고도 합니다.
 
