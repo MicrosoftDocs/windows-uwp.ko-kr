@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a86c3f2662c036dea5dcebf4726a0463d623a3ac
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: eb9c600e58be04d8ce967eb119777d6746507fbe
+ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981517"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "9004589"
 ---
 # <a name="lists"></a>목록
 
@@ -262,7 +262,6 @@ ms.locfileid: "8981517"
 
 ## <a name="related-articles"></a>관련 문서
 
-- [허브](hub.md)
 - [마스터/세부](master-details.md)
 - [탐색 창](navigationview.md)
 - [시맨틱 줌](semantic-zoom.md)

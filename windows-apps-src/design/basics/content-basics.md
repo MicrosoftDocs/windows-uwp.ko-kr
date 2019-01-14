@@ -9,12 +9,12 @@ ms.date: 12/1/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fc27a2c24128553b7c1449bd8e724e2097213b80
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: b2d85d97fa704b4fb79e93cf95fdd1bfcc41f8ca
+ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981417"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "9004609"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>UWP 앱의 콘텐츠 디자인 기본 사항
 
@@ -38,11 +38,6 @@ ms.locfileid: "8981417"
 
 컬렉션은 사용자가 콘텐츠나 데이터 그룹을 찾아볼 수 있도록 해줍니다. [그리드 보기](../controls-and-patterns/item-templates-gridview.md)는 사진이나 미디어 중심 콘텐츠에, [목록 보기](../controls-and-patterns/item-templates-listview.md)는 텍스트가 많은 콘텐츠나 데이터에 좋은 옵션이 될 수 있습니다.
 
-### <a name="hub"></a>허브
-
-![허브](images/content-basics/hub.png)
-
-[허브는](../controls-and-patterns/hub.md) 윈도우 쇼핑에 적합하게 디자인되어 있습니다. 사용자는 제공되는 콘텐츠를 살짝 살펴봅니다. 간결함을 유지하면서 콘텐츠를 아주 다양하게 표시하는 것이 정말 중요합니다. 예를 들어, 허브 섹션 1과 2에 각각 '히로 스크린'과 컬렉션을 포함 시키고, 허브 섹션 3에 또 다른 컬렉션을 포함시키는 식으로 구성할 수 있습니다.
 
 ### <a name="masterdetail"></a>마스터/세부 정보
 

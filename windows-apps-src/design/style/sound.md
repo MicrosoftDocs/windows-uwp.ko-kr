@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 74d1d5b04b13795a075e7111ed898243ed59e7b7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5060012c90ec9cfef093021f44b39321f452e01c
+ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935777"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "9004599"
 ---
 # <a name="sound"></a>소리
 
@@ -118,7 +118,7 @@ ElementSoundPlayer.Play(ElementSoundKind.Hide);
 ```
 ### <a name="navigation-within-a-page"></a>페이지 내의 탐색
 
-앱 페이지 내의 패널 또는 보기 간에 탐색하는 경우([허브](../controls-and-patterns/hub.md) 또는 [탭 및 피벗](../controls-and-patterns/tabs-pivot.md) 참조) 일반적으로 양방향 이동이 있습니다. 따라서 현재 앱 페이지를 나가지 않고도 다음 보기/패널 또는 이전 보기/패널로 이동할 수 있습니다.
+앱의 페이지 내의 패널 또는 보기 간에 탐색 하는 경우 (참조 [탭 및 피벗](../controls-and-patterns/tabs-pivot.md))은 일반적으로 양방향 이동 합니다. 따라서 현재 앱 페이지를 나가지 않고도 다음 보기/패널 또는 이전 보기/패널로 이동할 수 있습니다.
 
 이 탐색 개념을 중심으로 하는 오디오 환경은 **MovePrevious** 및 **MoveNext** 소리로 나타냅니다.
 
