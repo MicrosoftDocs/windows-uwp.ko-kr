@@ -8,12 +8,12 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a5e3a29a252b091b1e52dbea5fa7af5058488ed5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3c4f8de32be13f9de776a1c2d0ba0f6af2797329
+ms.sourcegitcommit: be52da74f0b3f24973286792afa4f5e80799161b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946599"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "9009520"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>설정 및 기타 앱 데이터 저장 및 검색
 
@@ -172,7 +172,7 @@ OS에서는 각 앱이 로밍할 수 있는 앱 데이터의 크기를 제한합
 
 ### <a name="roaming-pre-requisites"></a>로밍 필수 조건
 
-Microsoft 계정을 사용하여 장치에 로그온한 사용자는 누구나 로밍 앱 데이터를 활용할 수 있습니다. 그러나 사용자 및 그룹 정책 관리자는 언제든지 장치에서 로밍 앱 데이터를 전환할 수 있습니다. 사용자가 Microsoft 계정을 사용하지 않도록 선택하거나 데이터 로밍 접근 권한 값을 사용하지 않도록 설정하면 앱은 계속 사용할 수 있지만 앱 데이터는 각 장치에 대해 로컬이 됩니다.
+Microsoft 계정을 사용하여 장치에 로그온한 사용자는 누구나 로밍 앱 데이터를 활용할 수 있습니다. 그러나 사용자 및 그룹 정책 관리자는 언제든지 장치에서 로밍 앱 데이터를 전환할 수 있습니다. 사용자가 Microsoft 계정을 사용 하지 않도록 선택한 또는 로밍 데이터 기능을 사용 하지 않도록 설정 하는 경우 앱을 사용할 수 없게은 여전히 있지만 앱 데이터는 각 장치에 로컬이 됩니다.
 
 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081)에 저장된 데이터는 사용자가 장치를 "신뢰할 수 있는 장치"로 지정한 경우에만 전환됩니다. 장치를 신뢰할 수 없으면 이 자격 증명 모음에 보관된 데이터가 로밍되지 않습니다.
 
