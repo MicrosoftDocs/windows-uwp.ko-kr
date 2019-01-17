@@ -6,12 +6,12 @@ keywords: 앱 간 통신, 프로세스 간 통신, IPC, 백그라운드 메시�
 ms.date: 1/16/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9029c8ee3a930e66ebdbd0c4d0681d87486a8393
-ms.sourcegitcommit: 6e2027f8ebc1d891d27ea6b2e4676d592871bcc7
+ms.openlocfilehash: 5239bff53bb0e5383bce28b4d781a0ab6a41c3af
+ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "9011263"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9013962"
 ---
 # <a name="create-and-consume-an-app-service"></a>앱 서비스 만들기 및 사용
 
@@ -214,17 +214,9 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 ## <a name="deploy-the-service-app-and-get-the-package-family-name"></a>서비스 앱 배포 및 패키지 패밀리 이름 가져오기
 
-앱 서비스 공급자를 배포 해야 클라이언트에서 호출할 수 있습니다. 또한이 메서드를 호출 하기 위해 앱 서비스의 패키지 패밀리 이름을 해야 합니다.
+앱 서비스 공급자를 배포 해야 클라이언트에서 호출할 수 있습니다. Visual Studio에서 **빌드 gt_ 배포 솔루션을** 선택 하 여 배포할 수 있습니다.
 
-**AppServiceProvider** 프로젝트에서 [Windows.ApplicationModel.Package.Current.Id.FamilyName](https://msdn.microsoft.com/library/windows/apps/br224670) (예를 들어 **에서 **앱** 생성자에서에서 호출 하는 앱 서비스 응용 프로그램의 패키지 패밀리 이름을 가져오는 한 가지 방법은 App.xaml.cs**) 결과 기록해 둡니다. Visual Studio에서 **AppServiceProvider** 를 실행 하려면 **솔루션 탐색기** 창에서 시작 프로젝트로 설정 하 고 프로젝트를 실행 합니다.
-
-패키지 패밀리 이름을 가져오는 또 다른 방법은 솔루션을 배포 하는 (**빌드 &gt; 솔루션 배포**) 고 **출력** 창에 전체 패키지 이름을 기록 (**보기 &gt; 출력**). 패키지 이름을 파생 시키려면 **출력** 창의 문자열에서 플랫폼 정보를 제거 해야 합니다. 예를 들어 전체 패키지 이름이 **출력** 창에 보고 하는 경우는 다음과 같습니다.
-
-`Microsoft.SDKSamples.AppServicesProvider.CPP_1.0.0.0_x86__8wekyb3d8bbwe`
-
-추출 다음 `1.0.0.0\_x86\_\_`, 패키지 패밀리 이름으로 다음 종료 합니다.
-
-`Microsoft.SDKSamples.AppServicesProvider.CPP_8wekyb3d8bbwe`
+또한이 메서드를 호출 하기 위해 앱 서비스 공급자의 패키지 패밀리 이름을 해야 합니다. 디자이너 보기에서 **AppServiceProvider** 프로젝트의 **Package.appxmanifest** 파일을 열어 가져올 수 있습니다 (두 번 클릭 **솔루션 탐색기**에서). **패키지** 탭을 선택 하 고 **패키지 패밀리 이름**옆에 있는 값을 복사 스크랩 메모장과 같은 지금은 합니다.
 
 ## <a name="write-a-client-to-call-the-app-service"></a>앱 서비스를 호출하는 클라이언트 작성
 
