@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2451606ccb9dfb604dd9f8aaffe245016776c1e7
-ms.sourcegitcommit: 906b494aa190e6e5b46e7b73d4a900b2cc7d53ef
+ms.openlocfilehash: 0a548c7311042be52d90cad8594c3085614a8cda
+ms.sourcegitcommit: 575fb85387ade0e1ddfc50efdf613938f37f4037
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "9010997"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014552"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>UWP 앱의 펜 조작 및 Windows Ink
 
@@ -64,7 +64,8 @@ Windows Ink UX 지침은 [수동 입력 컨트롤](../controls-and-patterns/inki
 이 예제에서 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)는 배경 이미지를 오버레이합니다.
 
 > [!NOTE]
-> InkCanvas에 자동으로 해당 자식 요소가 [StackPanel](stackpanel.md) 또는 [그리드](grid.md) 컨트롤 등의 크기를 조정 하는 요소의 자식이 아닌 경우 0의 기본 [**높이**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) [**너비**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) 속성이 있습니다.
+> InkCanvas에 자동으로 해당 자식 요소가 [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel
+) 또는 [그리드](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) 컨트롤 등의 크기를 조정 하는 요소의 자식이 아닌 경우 0의 기본 [**높이**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) [**너비**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) 속성이 있습니다.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
