@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0211e451c3e700da34d24e39a5045f9e046020a8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0b360425755a7dc2249a284d9f68761ce3c783ef
+ms.sourcegitcommit: 92ce837841ae8f16d203e919dbf5c4436bee56e5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933616"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "9015258"
 ---
 # <a name="audio-graphs"></a>오디오 그래프
 
@@ -43,7 +43,7 @@ Windows 런타임 오디오 그래프 API:
 -   XAudio2보다 훨씬 더 쉽게 사용할 수 있습니다.
 -   C++에 대해 지원될 뿐 아니라 C#에서도 사용할 수 있습니다.
 -   압축된 파일 형식을 포함하여 오디오 파일을 직접 사용할 수 있습니다. XAudio2는 오디오 버퍼에만 작동하며 파일 I/O 기능을 제공하지 않습니다.
--   Windows10에 짧은 대기 시간 오디오 파이프라인을 사용할 수 있습니다.
+-   Windows 10의 짧은 대기 시간 오디오 파이프라인을 사용할 수 있습니다.
 -   기본 끝점 매개 변수를 사용할 때 자동 끝점 자동 전환을 지원합니다. 예를 들어 사용자가 디바이스의 스피커에서 헤드셋으로 전환하면 오디오는 새 입력으로 자동 리디렉션됩니다.
 
 ## <a name="audiograph-class"></a>AudioGraph 클래스
@@ -80,7 +80,7 @@ Windows 런타임 오디오 그래프 API:
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-디바이스 입력 노드에 대해 특정 오디오 캡처 디바이스를 지정하려는 경우 [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) 클래스를 통해 [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432)를 호출하고 [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817)에서 반환된 오디오 렌더 디바이스 선택기를 제공하여 시스템의 사용 가능한 오디오 캡처 디바이스 목록을 가져올 수 있습니다. 반환된 **DeviceInformation** 개체 중 하나를 프로그래밍 방식으로 선택하거나 사용자가 디바이스를 선택한 후 해당 디바이스를 [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)에 전달할 수 있도록 하는 UI를 표시할 수 있습니다.
+디바이스 입력된 노드에 대해 특정 오디오 캡처 장치를 지정 하려는 경우 [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) 를 호출 하 여 시스템의 사용 가능한 오디오 캡처 디바이스 목록을 가져올 [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) 클래스를 사용할 수 있습니다 및 [**Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector)에서 반환 되는 장치 선택기를 렌더링 하는 오디오를 전달 합니다. 반환된 **DeviceInformation** 개체 중 하나를 프로그래밍 방식으로 선택하거나 사용자가 디바이스를 선택한 후 해당 디바이스를 [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)에 전달할 수 있도록 하는 UI를 표시할 수 있습니다.
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
