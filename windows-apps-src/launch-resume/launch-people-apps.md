@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 46a297c3a611882724b18242d1c6272c3345ffc2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ab10acab42ab3f03121a7c5a462cb651b0f3f31b
+ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935618"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014708"
 ---
 # <a name="launch-the-people-app"></a>피플 앱 실행
 
@@ -58,7 +58,7 @@ ms.locfileid: "8935618"
 </div>
 <div> 
 </div></td>
-<td align="left">ms-people:viewcontact:?ContactId=&lt;contactid&gt;&amp;AggregatedId=&lt;aggid&gt;&amp;PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;&amp;Contact=&lt;contactobj&gt;</td>
+<td align="left">ms-사람: viewcontact?ContactId =&lt;contactid&gt;&amp;AggregatedId =&lt;aggid&gt;&amp;PhoneNumber = &lt;phonenum&gt;&amp;메일 =&lt;메일&gt;&amp;ContactName =&lt;이름&gt;&amp;연락처 =&lt;contactobj&gt;</td>
 </tr>
 <tr class="odd">
 <td align="left">피플 앱 내의 대화 상대 저장 페이지를 실행하여 제공된 전화 번호 또는 이메일 주소와 함께 지정된 연락처를 저장합니다.

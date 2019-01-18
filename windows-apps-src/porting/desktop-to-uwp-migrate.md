@@ -6,12 +6,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6727c22631a9536a0ed8d04e7c88602bba890284
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: abc2ba7287541d97208899b51e81110b464b6cdd
+ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932589"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014718"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>데스크톱 응용 프로그램 및 UWP 앱 간의 코드 공유
 
@@ -23,7 +23,7 @@ ms.locfileid: "8932589"
 
 이러한 방법에 대해 자세히 알려 주는 좋은 동영상이 있습니다.
 &nbsp;
-> [!VIDEO https://www.youtube.com/embed/YI4MurjfMn8]
+> [!VIDEO https://www.youtube-nocookie.com/embed/YI4MurjfMn8?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=1]
 
 ### <a name="add-net-standard-libraries"></a>.NET Standard 라이브러리에 추가
 
@@ -53,7 +53,7 @@ ms.locfileid: "8932589"
 
 동일한 도구를 사용하여 코드를 분석합니다. 해당 도구를 다운로드([dotnet apiport](https://github.com/Microsoft/dotnet-apiport/releases))한 다음 이 동영상을 보고 사용 방법을 알아봅니다.
 &nbsp;
-> [!VIDEO https://www.youtube.com/embed/rzs_FGPyAlY]
+> [!VIDEO https://www.youtube-nocookie.com/embed/rzs_FGPyAlY?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=2]
 
 코드가 표준과 호환되지 않는 경우 해당 코드를 구현할 수 있는 다른 방법을 고려합니다. [.NET API 브라우저](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0)를 여는 것으로 시작합니다. 해당 브라우저를 사용하여 .NET Standard 2.0에서 사용할 수 있는 API를 검토할 수 있습니다. .NET Standard 2.0으로 목록의 범위를 지정합니다.
 

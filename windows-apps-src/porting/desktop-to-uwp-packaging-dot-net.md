@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: e867377c5961277d140173ab0de86d9f89197086
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0e4d39690223d01a6ac553d33357c7714b2f0dca
+ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944153"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014728"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a>Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지
 
-Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습니다. 그런 다음 패키지 Microsoft 스토어 또는 테스트용으로 로드 하 고, 하나 이상의 Pc를 게시할 수 있습니다.
+Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습니다. 그런 다음 패키지를 Microsoft 스토어 또는 테스트용으로 로드, 하나 이상의 Pc를 게시할 수 있습니다.
 
 최신 버전의 Visual Studio는 앱을 패키징하는 데 필수적이었던 수동 단계를 모두 제거하는 패키징 프로젝트의 새 버전을 제공합니다. 패키징 프로젝트를 추가하고 데스크톱 프로젝트를 참조한 다음 F5 키를 눌러 앱을 디버깅하면 됩니다. 수동 조정이 필요하지 않습니다. 이 새로운 간소화된 환경은 이전 버전의 Visual Studio에서 사용할 수 있는 환경에 대해 상당히 향상되었습니다.
 
@@ -25,7 +25,7 @@ Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습
 
 ## <a name="first-prepare-your-application"></a>첫 번째, 응용 프로그램 준비
 
-이 가이드를 검토 하 여 응용 프로그램에 대 한 패키지 만들기를 시작 하기 전에: [데스크톱 응용 프로그램 패키지를 준비](desktop-to-uwp-prepare.md)합니다.
+응용 프로그램에 대 한 패키지 만들기를 시작 하기 전에이 가이드를 검토: [데스크톱 응용 프로그램을 패키징하는 준비](desktop-to-uwp-prepare.md)합니다.
 
 <a id="new-packaging-project"/>
 
@@ -69,7 +69,7 @@ Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습
 **비디오**
 
 &nbsp;
-> [!VIDEO https://www.youtube.com/embed/fJkbYPyd08w]
+> [!VIDEO https://www.youtube-nocookie.com/embed/fJkbYPyd08w]
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -81,7 +81,7 @@ Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습
 
 [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)를 참조하세요.
 
-**실행, 디버그 또는 데스크톱 응용 프로그램을 테스트 합니다.**
+**실행, 디버그 또는 데스크톱 응용 프로그램 테스트**
 
 [실행, 디버그 및 패키지 된 데스크톱 응용 프로그램 테스트](desktop-to-uwp-debug.md) 를 참조 하세요.
 

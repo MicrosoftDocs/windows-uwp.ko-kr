@@ -5,16 +5,19 @@ ms.date: 10/20/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅, 게임 채팅 2, 음성 통신
 ms.localizationpriority: medium
-ms.openlocfilehash: 80825e52e074e74b77891f34f29a3d443e3d0873
-ms.sourcegitcommit: 2e47a0d047e6ca8d3f473434a2b07b6216b55d17
+ms.openlocfilehash: 9f013f8b80cc7bca367c3ef5cd2c0d1da86cc98c
+ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004498"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9014697"
 ---
 # <a name="game-chat-2-overview"></a>게임 채팅 2 개요
 
 게임 채팅 2를 사용 하면 플레이어의 개인 정보 설정을 사용 하 고 Xbox One 게임 및 음성 및 텍스트 채팅에 관련 된 허브 앱에 대 한 Xbox 요구 사항을 처리 하는 동안 앱에 음성 및 문자 채팅 통신을 쉽게 추가할 수 있습니다. 플레이어는 접근성-게임 채팅 기록 설정을 통해 음성-텍스트 또는 텍스트-음성 변환을 사용 하도록 설정에 대 한 게임 채팅 2는 투명 하 게 수행 채팅 텍스트 메시지 수신 음성 오디오 및 플레이 나타내는 만드는 번역 송신 채팅 텍스트 메시지에 대 한 음성 오디오를 각각 합성 합니다.
+
+> [!NOTE]
+> API 특정 참조 찾고자 하는 경우 다운로드할 수 있는 Xbox Live API 컴파일된 HTML 도움말 (.chm) 파일에서 찾을 수 있습니다 [다음과 같습니다](https://aka.ms/xboxliveuwpdocs).
 
 - **통신 관계** -게임 채팅 2 플레이어와 서로 통신할 수는 어떻게 세부적으로 제어를 제공 합니다. 게임 채팅 2 팀 또는 채널을 지정 하는 대신 사용자의 각 쌍 간의 명시적 관계를 정의 하는 것에 필요 합니다. 게임 채팅 2 통신 관계 uni 및 플레이어의 모든 쌍 간의 양방향 통신을 지원합니다. 음성 및 텍스트 통신 관계는 서로 독립적으로 설정할 수 있습니다.
 
