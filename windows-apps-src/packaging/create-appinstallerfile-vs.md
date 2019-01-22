@@ -5,16 +5,16 @@ ms.date: 5/2/2018
 ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c7055748eb8905341d9f90c47e6141c9c9c599e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b547394657fc992474ac0ef9e79719e3ab8f31e1
+ms.sourcegitcommit: 58783d1ea22e632b9c50dcfbaa1cc57686bcdd8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929670"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024230"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Visual Studio를 사용하여 앱 설치 관리자 파일 만들기
 
-Windows 10 버전 1804, and Visual Studio 2017 업데이트 15.7부터 사이드로드된 앱을 구성하여 `.appinstaller` 파일을 사용하여 자동 업데이트를 받을 수 있습니다. Visual Studio는 이러한 업데이트를 사용할 수 있도록 지원합니다.
+Windows 10, 버전 1803 및 Visual Studio 2017 업데이트 15.7부터 사이드 로드 된 앱 구성할 수를 사용 하 여 자동 업데이트를 받을 수 있는 `.appinstaller` 파일. Visual Studio는 이러한 업데이트를 사용할 수 있도록 지원합니다.
 
 ## <a name="app-installer-file-location"></a>앱 설치 관리자 파일 위치
 `.appinstaller` 파일은 HTTP 끝점 또는 UNC 공유 폴더와 같은 공유 위치에 호스팅할 수 있으며 설치할 앱 패키지 찾기 위해 경로를 포함합니다. 사용자는 공유 위치에서 앱을 설치하고 새 업데이트에 대한 주기적 검사를 사용하도록 설정합니다. 
@@ -25,7 +25,7 @@ Windows 10 버전 1804, and Visual Studio 2017 업데이트 15.7부터 사이드
 프로젝트를 만들 때 `TargetPlatformMinVersion` 속성을 구성하거나 나중에 프로젝트 속성에서 이를 변경할 수 있습니다. 
 
 >[!IMPORTANT]
-> 앱 설치 관리자 파일은 `TargetPlatformMinVersion`이 Windows 10 버전 1804 이상일 때만 생성됩니다.
+> 앱 설치 관리자 파일은만 할 때 생성 되는 `TargetPlatformMinVersion` 은 Windows 10, 버전 1803 이상.
 
 
 ### <a name="create-packages"></a>패키지 만들기
