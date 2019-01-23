@@ -5,12 +5,12 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: cd26bfe2643b7130227e758083d820ce6be7d24e
-ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
+ms.openlocfilehash: 1bb0b5f0f30ff13815eece466b678df7cbfbd4a0
+ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9014748"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024542"
 ---
 # <a name="consume-apis-with-cwinrt"></a>C++/WinRT를 통한 API 사용
 
@@ -141,7 +141,7 @@ lookup.insert_or_assign(2, value);
 이번 섹션은 직접 구성 요소를 작성했든, 혹은 공급업체에서 제공했든 상관없이 적용됩니다.
 
 > [!NOTE]
-> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 설치 및 사용에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
+> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 설치 및 사용에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)를 참조하세요.
 
 응용 프로그램 프로젝트에서 Windows 런타임 구성 요소의 Windows 런타임 메타데이터(`.winmd`) 파일을 참조하여 빌드합니다. 빌드 도중 `cppwinrt.exe` 도구가 구성 요소의 API 표면을 완전하게 설명하거나 *프로젝션*하는 표준 C++ 라이브러리를 생성합니다. 다시 말해서 생성된 라이브러리에는 구성 요소에 프로젝션된 형식이 포함됩니다.
 

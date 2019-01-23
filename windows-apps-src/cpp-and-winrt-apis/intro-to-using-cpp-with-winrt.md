@@ -5,12 +5,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: b92d0def08267c36497f0afd24d23308bc4a2e85
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a79302b13b45bf2319c4db2e527d8ef2b293d5f2
+ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927568"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024622"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -18,10 +18,10 @@ ms.locfileid: "8927568"
 
 C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. C++/WinRT에서는 모든 표준과 호환되는 C++17 컴파일러를 통해 Windows 런타임 API를 작성하고 사용할 수 있습니다. Windows SDK는 C++/WinRT를 포함하며, 버전 10.0.17134.0(Windows 10, 버전 1803)에서 도입되었습니다.
 
-C + + /winrt는 Microsoft의 권장된 대체 합니다 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 언어 프로젝션 및 [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live). 전체 목록은 [항목에 대해 C + + WinRT](index.md#topics-about-cwinrt) 에서 포트, C +와 상호 운용 하는 방법에 대 한 정보를 포함 + CX 및 WRL 합니다.
+C + + /winrt는 Microsoft의 권장된 대체 합니다 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 언어 프로젝션 및 [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live). 전체 목록은 [항목 C + + WinRT](index.md#topics-about-cwinrt) 와 상호 작용 및에서 포트, C + 모두에 대 한 정보를 포함 + CX 및 WRL 합니다.
 
 > [!IMPORTANT]
-> C++/WinRT에서 가장 중요하여 반드시 알고 있어야 할 두 가지 정보는 섹션 [C++/WinRT에 대한 SDK 지원](#sdk-support-for-cwinrt)과 섹션 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](#visual-studio-support-for-cwinrt-and-the-vsix)에 설명되어 있습니다.
+> C++/WinRT에서 가장 중요하여 반드시 알고 있어야 할 두 가지 정보는 섹션 [C++/WinRT에 대한 SDK 지원](#sdk-support-for-cwinrt)과 섹션 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](#visual-studio-support-for-cwinrt-xaml-and-the-vsix)에 설명되어 있습니다.
 
 ## <a name="language-projections"></a>언어 프로젝션
 Windows 런타임은 구성 요소 개체 모델(COM)을 기반으로 하며, *언어 프로젝션*을 통해 액세스하도록 설계되었습니다. 프로젝션은 COM 세부 정보를 숨기며, 지정된 언어에 더욱 자연스러운 프로그래밍 환경을 제공합니다.
@@ -34,17 +34,17 @@ Windows 런타임은 구성 요소 개체 모델(COM)을 기반으로 하며, *�
 
 C++/WinRT로 COM 스타일 프로그래밍을 이용하지 않고도 자체 표준 C++를 사용하여 런타임 클래스를 구현할 수도 있습니다. 런타임 클래스의 경우 IDL 파일에 형식만 설명하면 `midl.exe` 및 `cppwinrt.exe`가 상용구 소스 코드 파일 구현을 생성합니다. 또는 C++/WinRT 기본 클래스에서 파생하여 인터페이스를 구현할 수도 있습니다. 자세한 정보는 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
-## <a name="visual-studio-support-for-cwinrt-and-the-vsix"></a>C++/WinRT에 대한 Visual Studio 지원 및 VSIX
+## <a name="visual-studio-support-for-cwinrt-xaml-and-the-vsix"></a>Visual Studio 지원 C + + /winrt, XAML와 VSIX
 Visual Studio의 C++/WinRT 프로젝트 템플릿과 C++/WinRT MSBuild 속성 및 대상의 경우에는 [C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix)을 [Visual Studio Marketplace](https://marketplace.visualstudio.com/)에서 다운로드하여 설치하세요.
 
 > [!NOTE]
-> 1.0.181002.2 버전을 사용 하 여 (이상)의 설치 된 하는 VSIX 만드는 새로운 C + + WinRT 프로젝트 해당 프로젝트에 대 한 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 를 자동으로 설치 합니다. Microsoft.Windows.CppWinRT NuGet 패키지를 제공 향상 된 C + + 프로젝트를 이식 하는 개발 컴퓨터 사이의 (NuGet 패키지 및 VSIX 하지이 설치 된) 빌드 에이전트 만들기 WinRT 프로젝트 빌드 지원 합니다.
+> 1.0.181002.2 버전을 사용 하 여 (이상)의 VSIX 설치 만드는 새로운 C + + WinRT 프로젝트 해당 프로젝트에 대 한 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 를 자동으로 설치 합니다. Microsoft.Windows.CppWinRT NuGet 패키지를 제공 향상 된 C + + 프로젝트 (NuGet 패키지 및 VSIX 하지가 설치 되어 있는) 빌드 에이전트는 개발 컴퓨터와 휴대용 만드는 WinRT 프로젝트 빌드 지원 합니다.
 >
-> 기존 프로젝트에 대 한&mdash;1.0.181002.2 버전을 설치한 후 (이상)의 VSIX&mdash;Visual Studio에서 프로젝트를 열고, **프로젝트**를 클릭 하는 것이 좋습니다 \> **NuGet 패키지 관리...**  \>  **찾아보기**, 입력 또는 **Microsoft.Windows.CppWinRT** 검색 상자에 붙여 넣을, 검색 결과에서 항목을 선택 및 해당 프로젝트에 대 한 패키지를 설치 하려면 **설치** 를 차례로 클릭 합니다.
+> 기존 프로젝트에 대 한&mdash;1.0.181002.2 버전을 설치한 후 (이상)의 VSIX&mdash;Visual Studio에서 프로젝트를 열고, **프로젝트**를 클릭 하는 것이 좋습니다 \> **NuGet 패키지 관리...**  \>  **찾아보기**입력 또는 **Microsoft.Windows.CppWinRT** 검색 상자에 붙여 넣을, 검색 결과에서 항목을 선택 하 고 다음 해당 프로젝트에 대 한 패키지를 설치 하려면 **설치** 를 클릭 합니다.
 
-Visual Studio 2017 해야 합니다 (최소 필요 이지만 버전 15.6 이상, 15.7 이상 권장), 및 Windows SDK 버전 10.0.17134.0 (Windows 10, 버전 1803). 설치 이미 하지 않은 경우 Visual Studio 설치 관리자 내에서 **c + + 유니버설 Windows 플랫폼 도구** 옵션을 설치 해야 합니다. Windows **설정**에서 > **업데이트 \ & 보안** > **개발자를 위한** **앱 테스트용 로드** 옵션 보다는 **개발자 모드** 옵션을 선택 합니다.
+Visual Studio 2017 해야 합니다 (최소 필요 이지만 버전 15.6 이상, 15.7 이상 권장), 및 Windows SDK 버전 10.0.17134.0 (Windows 10, 버전 1803). 설치 이미 하지 않은 경우 Visual Studio 설치 관리자 내에서 **c + + 유니버설 Windows 플랫폼 도구** 옵션을 설치 해야 합니다. Windows **설정**에서 > **\& 보안 업데이트** > **개발자를 위한** **앱 테스트용 로드** 옵션 보다는 **개발자 모드** 옵션을 선택 합니다.
 
-하면 다음 수 만들기 및 빌드, 또는 열을 C + + /winrt Visual Studio에서 프로젝트와 배포 합니다. 또는 추가 하 여 기존 프로젝트를 변환할 수는 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 해당 `.vcxproj` 파일입니다.
+하면 다음 수 만들기 및 빌드, 또는 열기, C + + /winrt Visual Studio에서 프로젝트와 배포 합니다. 또는 추가 하 여 기존 프로젝트를 변환할 수는 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 해당 `.vcxproj` 파일.
 
 ```xml
 <Project ...>
@@ -55,7 +55,7 @@ Visual Studio 2017 해야 합니다 (최소 필요 이지만 버전 15.6 이상,
 
 속성 추가를 마쳤으면 이제 `cppwinrt.exe` 도구 호출을 포함해 프로젝트에 대한 C++/WinRT MSBuild 지원을 가져옵니다.
 
-때문에 C + + /winrt가 C + + 17 표준의 기능을 사용, 필요한 프로젝트 속성 **C/c + +** > **언어** > **c + + 언어 표준** > **ISO C + + 17 표준 (/ /std: + + 17)**. 또한 **적합성 모드: 예(/permissive-)** 를 설정하여 코드가 표준을 더욱 따르도록 할 수도 있습니다.
+때문에 C + + 필요한 프로젝트 속성 **C/c + +**, C + + 17 표준의 기능을 사용 하 여 WinRT > **언어** > **c + + 언어 표준** > **ISO C + + 17 표준 (/ /std: + + 17)**. 또한 **적합성 모드: 예(/permissive-)** 를 설정하여 코드가 표준을 더욱 따르도록 할 수도 있습니다.
 
 알고 있어야 할 또 다른 프로젝트 속성은 **C/C++** > **일반** > **경고를 오류로 처리**입니다. 이 속성은 필요에 따라 **예(/WX)** 또는 **아니오(/WX-)** 로 설정하세요. 간혹 `cppwinrt.exe` 도구에서 생성된 소스 파일이 구현체가 추가될 때까지 경고를 생성하는 경우가 있습니다.
 
@@ -70,6 +70,8 @@ VSIX에서 제공되는 Visual Studio 프로젝트 템플릿은 다음과 같습
 XAML 사용자 인터페이스가 있는 유니버설 Windows 플랫폼(UWP) 앱용 프로젝트 템플릿입니다.
 
 Visual Studio는 각 XAML 태그 파일 다음에 있는 IDL(`.idl`) 파일에서 구현체와 헤더 스텁을 생성할 목적으로 XAML 컴파일러를 지원합니다. 먼저 IDL 파일에서 앱의 XAML 페이지에서 참조할 로컬 런타임 클래스를 모두 정의한 후 프로젝트를 1회 빌드하여 구현체 템플릿을 `Generated Files`에, 그리고 스텁 유형 정의를 `Generated Files\sources`에 생성합니다. 그런 다음 생성된 스텁 유형 정의를 참조에 사용하여 로컬 런타임 클래스를 구현합니다. 런타임 클래스는 클래스 고유의 IDL 파일에 선언하는 것이 좋습니다.
+
+Visual Studio의 XAML 디자인 화면 지원 C + + /winrt는 C#와 가까운 합니다. **속성** 창의 **이벤트** 탭은 예외가입니다. C# 프로젝트를 사용 하 여 이벤트 처리기를 추가 하려면 해당 탭을 사용할 수 있습니다. C + + WinRT 프로젝트에 해당 기능 나타나지 않습니다. 표시 [C +의 대리자를 사용 하 여 이벤트를 처리 + WinRT](handle-events.md) 이벤트 처리기 코드를 추가 하는 방법에 대 한 내용은 합니다.
 
 ### <a name="core-app-cwinrt"></a>주요 앱(C++/WinRT)
 XAML을 사용하지 않는 유니버설 Windows 플랫폼(UWP) 앱용 프로젝트 템플릿입니다.

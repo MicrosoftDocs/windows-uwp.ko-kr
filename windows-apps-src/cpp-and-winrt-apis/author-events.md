@@ -5,19 +5,19 @@ ms.date: 07/18/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: bbc9fcd2b29183352fd06a7d7403aad2d0f011d9
-ms.sourcegitcommit: 557257fb792f0b04b013d3507b3ebe5b0f6aa6c4
+ms.openlocfilehash: fc4047344daa19888912f3a93175b36cd0dfa96b
+ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "8992256"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "9024562"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
 이번 항목에서는 차변 발생 시 이벤트가 발생하는 은행 계좌 런타임 클래스를 포함해 Windows 런타임 구성 요소를 작성하는 방법에 대해서 설명합니다. 또한 은행 계좌 런타임 클래스를 사용하면서 함수를 호출하여 잔액을 조정하거나, 발생하는 이벤트를 처리하는 주요 앱에 대해서도 설명합니다.
 
 > [!NOTE]
-> 설치 및 사용에 대 한 정보는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio Extension (VSIX) (있는 제공 프로젝트 템플릿 지원과 C + + /winrt MSBuild 속성 및 대상) 참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)합니다.
+> 설치 및 사용에 대 한 정보는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio Extension (VSIX) (있는 제공 프로젝트 템플릿 지원과 C + + /winrt MSBuild 속성 및 대상) 참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)합니다.
 
 > [!IMPORTANT]
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
@@ -146,7 +146,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 
 ## <a name="parameterized-delegates-and-simple-signals-across-an-abi"></a>매개 변수가 있는 대리자와는 ABI에서 간단한 신호
 
-응용 프로그램 이진 인터페이스 (ABI)에서 이벤트에 액세스할 수 있어야 합니다&mdash;는 구성 요소와 그 사용 응용 프로그램 사이와 같이 이러한&mdash;이벤트는 Windows 런타임 대리자 형식을 사용 해야 합니다. 사용 하 여 위의 예는 [**Windows::Foundation::EventHandler\<T\ >**](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식입니다. [**TypedEventHandler\<TSender, TResult\ >**](/uwp/api/windows.foundation.eventhandler) 는 Windows 런타임 대리자 형식의 또 다른 예입니다.
+응용 프로그램 이진 인터페이스 (ABI)에서 이벤트에 액세스할 수 있어야 합니다&mdash;는 구성 요소와 그 사용 응용 프로그램 사이와 같이 이러한&mdash;이벤트는 Windows 런타임 대리자 형식을 사용 해야 합니다. 위 예제에서는 [**Windows::Foundation::EventHandler\<T\>**](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식을 사용 합니다. [**TypedEventHandler\<TSender, TResult\>은**](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식의 또 다른 예입니다.
 
 이러한 두 대리자 형식에 대 한 형식 매개 변수 형식 매개 변수가 Windows 런타임 형식 이어야 너무 하므로, ABI를 통과 해야 합니다. 숫자 및 문자열과 같은 기본 형식 뿐만 아니라 첫 번째 및 제 3 자 런타임 클래스를 포함 합니다. 컴파일러를 사용 하면 "*WinRT 형식 이어야 합니다.*" 오류와 제약 조건의 잊을 경우.
 
