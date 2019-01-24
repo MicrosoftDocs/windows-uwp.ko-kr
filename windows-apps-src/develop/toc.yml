@@ -1,1521 +1,1514 @@
-items:
 - name: 앱 유형
   items:
-  - name: 교육 앱
-    href: ../apps-for-education/index.md
-    items:
-    - name: 시험 응시 API
-      href: ../apps-for-education/take-a-test-api.md
-  - name: 기업 앱
-    href: ../enterprise/index.md
-    items:
-    - name: WIP(Windows Information Protection)
-      href: ../enterprise/wip-hub.md
+    - name: 교육 앱
+      href: ../apps-for-education/index.md
       items:
-      - name: WIP 개발자 가이드
-        href: ../enterprise/wip-dev-guide.md
-    - name: 엔터프라이즈 공유 저장소
-      href: ../enterprise/enterprise-shared-storage.md
-    - name: '자습서: 고객 데이터베이스 응용 프로그램 만들기'
-      href: ../enterprise/customer-database-tutorial.md
+        - name: 시험 응시 API
+          href: ../apps-for-education/take-a-test-api.md
+    - name: 기업 앱
+      href: ../enterprise/index.md
       items:
-      - name: 고객 데이터베이스 자습서 앱 구조
-        href: ../enterprise/customer-database-app-structure.md
-  - name: 점진적 웹앱
-    href: /microsoft-edge/progressive-web-apps
-- name: 오디오, 비디오 및 카메라
+        - name: WIP(Windows Information Protection)
+          href: ../enterprise/wip-hub.md
+          items:
+            - name: WIP 개발자 가이드
+              href: ../enterprise/wip-dev-guide.md
+        - name: 엔터프라이즈 공유 저장소
+          href: ../enterprise/enterprise-shared-storage.md
+        - name: '자습서: 고객 데이터베이스 응용 프로그램 만들기'
+          href: ../enterprise/customer-database-tutorial.md
+          items:
+            - name: 고객 데이터베이스 자습서 앱 구조
+              href: ../enterprise/customer-database-app-structure.md
+    - name: 점진적 웹앱
+      href: /microsoft-edge/progressive-web-apps
+- name: '오디오, 비디오 및 카메라'
   href: ../audio-video-camera/index.md
   items:
-  - name: 카메라
-    href: ../audio-video-camera/camera.md
-    items:
-    - name: Windows 기본 카메라 UI를 사용하여 사진 및 비디오 캡처
-      href: ../audio-video-camera/capture-photos-and-video-with-cameracaptureui.md
-    - name: 카메라 미리 보기 표시
-      href: ../audio-video-camera/simple-camera-preview-access.md
-    - name: MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처
-      href: ../audio-video-camera/basic-photo-video-and-audio-capture-with-MediaCapture.md
-    - name: 모바일 디바이스용 카메라 UI 기능
-      href: ../audio-video-camera/camera-ui-features-for-mobile-devices.md
-    - name: MediaCapture를 사용하여 디바이스 및 화면 방향 처리
-      href: ../audio-video-camera/handle-device-orientation-with-mediacapture.md
-    - name: 카메라 프로필을 사용하여 카메라 기능 검색 및 선택
-      href: ../audio-video-camera/camera-profiles.md
-    - name: MediaCapture용 형식, 해상도 및 프레임 속도 선택
-      href: ../audio-video-camera/set-media-encoding-properties.md
-    - name: HDR 및 저조도 사진 캡처
-      href: ../audio-video-camera/high-dynamic-range-hdr-photo-capture.md
-    - name: 사진 및 비디오 캡처를 위한 수동 카메라 컨트롤
-      href: ../audio-video-camera/capture-device-controls-for-photo-and-video-capture.md
-    - name: 비디오 캡처를 위한 수동 카메라 컨트롤
-      href: ../audio-video-camera/capture-device-controls-for-video-capture.md
-    - name: 비디오 캡처를 위한 동영상 손떨림 보정 효과
-      href: ../audio-video-camera/effects-for-video-capture.md
-    - name: 미디어 캡처의 장면 분석
-      href: ../audio-video-camera/scene-analysis-for-media-capture.md
-    - name: VariablePhotoSequence를 사용하여 사진 시퀀스 캡처
-      href: ../audio-video-camera/variable-photo-sequence.md
-    - name: MediaFrameReader를 사용하여 미디어 프레임 처리
-      href: ../audio-video-camera/process-media-frames-with-mediaframereader.md
+    - name: 카메라
+      href: ../audio-video-camera/camera.md
       items:
-      - name: MediaFrameReader를 사용하여 오디오 프레임 처리
-        href: ../audio-video-camera/use-opencv-with-mediaframereader.md
-      - name: MediaFrameReader와 함께 OpenCV 사용
-        href: ../audio-video-camera/use-opencv-with-mediaframereader.md
-    - name: MediaFrameSourceGroup을 사용하여 다양한 소스로부터 캡처
-      href: ../audio-video-camera/capture-from-multiple-sources-simultaneously.md
-    - name: 미리 보기 프레임 가져오기
-      href: ../audio-video-camera/get-a-preview-frame.md
-  - name: 미디어 재생
-    href: ../audio-video-camera/media-playback.md
-    items:
-    - name: MediaPlayer를 사용하여 오디오 및 비디오 재생
-      href: ../audio-video-camera/play-audio-and-video-with-mediaplayer.md
-    - name: 미디어 항목, 재생 목록 및 트랙
-      href: ../audio-video-camera/media-playback-with-mediasource.md
-    - name: 시스템 미디어 전송 컨트롤과 통합
-      href: ../audio-video-camera/integrate-with-systemmediatransportcontrols.md
+        - name: Windows 기본 카메라 UI를 사용하여 사진 및 비디오 캡처
+          href: ../audio-video-camera/capture-photos-and-video-with-cameracaptureui.md
+        - name: 카메라 미리 보기 표시
+          href: ../audio-video-camera/simple-camera-preview-access.md
+        - name: 'MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처'
+          href: ../audio-video-camera/basic-photo-video-and-audio-capture-with-MediaCapture.md
+        - name: 모바일 디바이스용 카메라 UI 기능
+          href: ../audio-video-camera/camera-ui-features-for-mobile-devices.md
+        - name: MediaCapture를 사용하여 디바이스 및 화면 방향 처리
+          href: ../audio-video-camera/handle-device-orientation-with-mediacapture.md
+        - name: 카메라 프로필을 사용하여 카메라 기능 검색 및 선택
+          href: ../audio-video-camera/camera-profiles.md
+        - name: 'MediaCapture용 형식, 해상도 및 프레임 속도 선택'
+          href: ../audio-video-camera/set-media-encoding-properties.md
+        - name: HDR 및 저조도 사진 캡처
+          href: ../audio-video-camera/high-dynamic-range-hdr-photo-capture.md
+        - name: 사진 및 비디오 캡처를 위한 수동 카메라 컨트롤
+          href: ../audio-video-camera/capture-device-controls-for-photo-and-video-capture.md
+        - name: 비디오 캡처를 위한 수동 카메라 컨트롤
+          href: ../audio-video-camera/capture-device-controls-for-video-capture.md
+        - name: 비디오 캡처를 위한 동영상 손떨림 보정 효과
+          href: ../audio-video-camera/effects-for-video-capture.md
+        - name: 미디어 캡처의 장면 분석
+          href: ../audio-video-camera/scene-analysis-for-media-capture.md
+        - name: VariablePhotoSequence를 사용하여 사진 시퀀스 캡처
+          href: ../audio-video-camera/variable-photo-sequence.md
+        - name: MediaFrameReader를 사용하여 미디어 프레임 처리
+          href: ../audio-video-camera/process-media-frames-with-mediaframereader.md
+          items:
+            - name: MediaFrameReader를 사용하여 오디오 프레임 처리
+              href: ../audio-video-camera/use-opencv-with-mediaframereader.md
+            - name: MediaFrameReader와 함께 OpenCV 사용
+              href: ../audio-video-camera/use-opencv-with-mediaframereader.md
+        - name: MediaFrameSourceGroup을 사용하여 다양한 소스로부터 캡처
+          href: ../audio-video-camera/capture-from-multiple-sources-simultaneously.md
+        - name: 미리 보기 프레임 가져오기
+          href: ../audio-video-camera/get-a-preview-frame.md
+    - name: 미디어 재생
+      href: ../audio-video-camera/media-playback.md
       items:
-      - name: 시스템 미디어 전송 컨트롤의 수동 컨트롤
-        href: ../audio-video-camera/system-media-transport-controls.md
-    - name: 시스템에서 지원하는 시간이 제한된 메타데이터 신호
-      href: ../audio-video-camera/system-supported-metadata-cues.md
-    - name: 미디어 중단 만들기, 예약 및 관리
-      href: ../audio-video-camera/create-schedule-and-manage-media-breaks.md
-    - name: 백그라운드에서 미디어 재생
-      href: ../audio-video-camera/background-audio.md
+        - name: MediaPlayer를 사용하여 오디오 및 비디오 재생
+          href: ../audio-video-camera/play-audio-and-video-with-mediaplayer.md
+        - name: '미디어 항목, 재생 목록 및 트랙'
+          href: ../audio-video-camera/media-playback-with-mediasource.md
+        - name: 시스템 미디어 전송 컨트롤과 통합
+          href: ../audio-video-camera/integrate-with-systemmediatransportcontrols.md
+          items:
+            - name: 시스템 미디어 전송 컨트롤의 수동 컨트롤
+              href: ../audio-video-camera/system-media-transport-controls.md
+        - name: 시스템에서 지원하는 시간이 제한된 메타데이터 신호
+          href: ../audio-video-camera/system-supported-metadata-cues.md
+        - name: '미디어 중단 만들기, 예약 및 관리'
+          href: ../audio-video-camera/create-schedule-and-manage-media-breaks.md
+        - name: 백그라운드에서 미디어 재생
+          href: ../audio-video-camera/background-audio.md
+          items:
+            - name: 레거시 백그라운드 미디어 재생
+              href: ../audio-video-camera/legacy-background-media-playback.md
+        - name: 적응 스트리밍
+          href: ../audio-video-camera/adaptive-streaming.md
+          items:
+            - name: HLS 태그 지원
+              href: ../audio-video-camera/hls-tag-support.md
+            - name: DASH 프로필 지원
+              href: ../audio-video-camera/dash-profile-support.md
+        - name: 미디어 캐스팅
+          href: ../audio-video-camera/media-casting.md
+        - name: PlayReady DRM
+          href: ../audio-video-camera/playready-client-sdk.md
+          items:
+            - name: 하드웨어 DRM
+              href: ../audio-video-camera/hardware-drm.md
+            - name: PlayReady를 사용한 적응 스트리밍
+              href: ../audio-video-camera/adaptive-streaming-with-playready.md
+        - name: PlayReady 암호화된 미디어 확장
+          href: ../audio-video-camera/playready-encrypted-media-extension.md
+    - name: 이미지 또는 동영상에서 얼굴 감지
+      href: ../audio-video-camera/detect-and-track-faces-in-an-image.md
+    - name: 사용자 지정 비디오 효과
+      href: ../audio-video-camera/custom-video-effects.md
+    - name: 사용자 지정 오디오 효과
+      href: ../audio-video-camera/custom-audio-effects.md
+    - name: 미디어 컴퍼지션 및 편집
+      href: ../audio-video-camera/media-compositions-and-editing.md
+    - name: 오디오 장치 정보 속성
+      href: ../audio-video-camera/audio-device-information-properties.md
+    - name: 오디오 상태 변경 사항 검색 및 대응
+      href: ../audio-video-camera/detect-and-respond-to-audio-state-changes.md
+    - name: '비트맵 이미지 만들기, 편집 및 저장'
+      href: ../audio-video-camera/imaging.md
       items:
-      - name: 레거시 백그라운드 미디어 재생
-        href: ../audio-video-camera/legacy-background-media-playback.md
-    - name: 적응 스트리밍
-      href: ../audio-video-camera/adaptive-streaming.md
-      items:
-      - name: HLS 태그 지원
-        href: ../audio-video-camera/hls-tag-support.md
-      - name: DASH 프로필 지원
-        href: ../audio-video-camera/dash-profile-support.md
-    - name: 미디어 캐스팅
-      href: ../audio-video-camera/media-casting.md
-    - name: PlayReady DRM
-      href: ../audio-video-camera/playready-client-sdk.md
-      items:
-      - name: 하드웨어 DRM
-        href: ../audio-video-camera/hardware-drm.md
-      - name: PlayReady를 사용한 적응 스트리밍
-        href: ../audio-video-camera/adaptive-streaming-with-playready.md
-    - name: PlayReady 암호화된 미디어 확장
-      href: ../audio-video-camera/playready-encrypted-media-extension.md
-  - name: 이미지 또는 동영상에서 얼굴 감지
-    href: ../audio-video-camera/detect-and-track-faces-in-an-image.md
-  - name: 사용자 지정 비디오 효과
-    href: ../audio-video-camera/custom-video-effects.md
-  - name: 사용자 지정 오디오 효과
-    href: ../audio-video-camera/custom-audio-effects.md
-  - name: 미디어 컴퍼지션 및 편집
-    href: ../audio-video-camera/media-compositions-and-editing.md
-  - name: 오디오 장치 정보 속성
-    href: ../audio-video-camera/audio-device-information-properties.md
-  - name: 오디오 상태 변경 사항 검색 및 대응
-    href: ../audio-video-camera/detect-and-respond-to-audio-state-changes.md
-  - name: 비트맵 이미지 만들기, 편집 및 저장
-    href: ../audio-video-camera/imaging.md
-    items:
-    - name: OpenCV로 비트맵 처리
-      href: ../audio-video-camera/process-software-bitmaps-with-opencv.md
-    - name: LowLightFusion API로 비트맵 처리
-      href: ../audio-video-camera/process-bitmaps-low-light-fusion.md
-    - name: BitmapEncoder 옵션 참조
-      href: ../audio-video-camera/bitmapencoder-options-reference.md
-    - name: 이미지 메타데이터
-      href: ../audio-video-camera/image-metadata.md
-  - name: 미디어 파일 코드 변환
-    href: ../audio-video-camera/transcode-media-files.md
-  - name: 백그라운드에서 미디어 파일 처리
-    href: ../audio-video-camera/process-media-files-in-the-background.md
-  - name: 오디오 그래프
-    href: ../audio-video-camera/audio-graphs.md
-  - name: MIDI
-    href: ../audio-video-camera/midi.md
-  - name: 디바이스에서 미디어 가져오기
-    href: ../audio-video-camera/import-media-from-a-device.md
-  - name: 카메라 독립적 플래시
-    href: ../audio-video-camera/camera-independent-flashlight.md
-  - name: 지원되는 코덱
-    href: ../audio-video-camera/supported-codecs.md
-  - name: 설치된 코덱에 대한 쿼리
-    href: ../audio-video-camera/codec-query.md
-  - name: 화면 캡처
-    href: ../audio-video-camera/screen-capture.md
+        - name: OpenCV로 비트맵 처리
+          href: ../audio-video-camera/process-software-bitmaps-with-opencv.md
+        - name: LowLightFusion API로 비트맵 처리
+          href: ../audio-video-camera/process-bitmaps-low-light-fusion.md
+        - name: BitmapEncoder 옵션 참조
+          href: ../audio-video-camera/bitmapencoder-options-reference.md
+        - name: 이미지 메타데이터
+          href: ../audio-video-camera/image-metadata.md
+    - name: 미디어 파일 코드 변환
+      href: ../audio-video-camera/transcode-media-files.md
+    - name: 백그라운드에서 미디어 파일 처리
+      href: ../audio-video-camera/process-media-files-in-the-background.md
+    - name: 오디오 그래프
+      href: ../audio-video-camera/audio-graphs.md
+    - name: MIDI
+      href: ../audio-video-camera/midi.md
+    - name: 디바이스에서 미디어 가져오기
+      href: ../audio-video-camera/import-media-from-a-device.md
+    - name: 카메라 독립적 플래시
+      href: ../audio-video-camera/camera-independent-flashlight.md
+    - name: 지원되는 코덱
+      href: ../audio-video-camera/supported-codecs.md
+    - name: 설치된 코덱에 대한 쿼리
+      href: ../audio-video-camera/codec-query.md
+    - name: 화면 캡처
+      href: ../audio-video-camera/screen-capture.md
 - name: 통신
   items:
-  - name: 앱 간 통신
-    href: ../app-to-app/index.md
-    items:
-    - name: 데이터 공유
-      href: ../app-to-app/share-data.md
-    - name: 데이터 수신
-      href: ../app-to-app/receive-data.md
-    - name: 복사 및 붙여넣기
-      href: ../app-to-app/copy-and-paste.md
-  - name: 네트워킹 및 웹 서비스
-    href: ../networking/index.md
-    items:
-    - name: 네트워킹 기본 사항
-      href: ../networking/networking-basics.md
-    - name: 네트워킹 기술 선택
-      href: ../networking/which-networking-technology.md
-    - name: 백그라운드 네트워크 통신
-      href: ../networking/network-communications-in-the-background.md
-    - name: 소켓
-      href: ../networking/sockets.md
-    - name: WebSocket
-      href: ../networking/websockets.md
-    - name: HttpClient
-      href: ../networking/httpclient.md
-    - name: RSS/Atom 피드
-      href: ../networking/web-feeds.md
-    - name: 백그라운드 전송
-      href: ../networking/background-transfers.md
+    - name: 앱 간 통신
+      href: ../app-to-app/index.md
+      items:
+        - name: 데이터 공유
+          href: ../app-to-app/share-data.md
+        - name: 데이터 수신
+          href: ../app-to-app/receive-data.md
+        - name: 복사 및 붙여넣기
+          href: ../app-to-app/copy-and-paste.md
+    - name: 네트워킹 및 웹 서비스
+      href: ../networking/index.md
+      items:
+        - name: 네트워킹 기본 사항
+          href: ../networking/networking-basics.md
+        - name: 네트워킹 기술 선택
+          href: ../networking/which-networking-technology.md
+        - name: 백그라운드 네트워크 통신
+          href: ../networking/network-communications-in-the-background.md
+        - name: 소켓
+          href: ../networking/sockets.md
+        - name: WebSocket
+          href: ../networking/websockets.md
+        - name: HttpClient
+          href: ../networking/httpclient.md
+        - name: RSS/Atom 피드
+          href: ../networking/web-feeds.md
+        - name: 백그라운드 전송
+          href: ../networking/background-transfers.md
 - name: 데이터 및 파일
   items:
-  - name: 앱 리소스
-    href: ../app-resources/index.md
-    items:
-    - name: 리소스 관리 시스템
-      href: ../app-resources/resource-management-system.md
-    - name: RMS가 리소스를 일치시키고 선택하는 방법
-      href: ../app-resources/how-rms-matches-and-chooses-resources.md
-    - name: RMS가 언어 태그를 일치하는 방법
-      href: ../app-resources/how-rms-matches-lang-tags.md
-    - name: 언어, 배율, 대비 등에 맞게 리소스 조정
-      href: ../app-resources/tailor-resources-lang-scale-contrast.md
-    - name: UI와 앱 패키지 매니페스트에 문자열 지역화
-      href: ../app-resources/localize-strings-ui-manifest.md
-    - name: 배율, 테마, 대비 등에 맞춘 이미지 및 자산 로드
-      href: ../app-resources/images-tailored-for-scale-theme-contrast.md
-    - name: URI 스키마
-      href: ../app-resources/uri-schemes.md
-    - name: 앱에서 사용하는 기본 리소스 지정
-      href: ../app-resources/specify-default-resources-installed.md
-    - name: 리소스 팩 대신 앱 패키지에 리소스 빌드
-      href: ../app-resources/build-resources-into-app-package.md
-    - name: PRI API 및 사용자 지정 빌드 시스템
-      href: ../app-resources/pri-apis-custom-build-systems.md
+    - name: 앱 리소스
+      href: ../app-resources/index.md
       items:
-      - name: 시나리오 1(PRI API)
-        href: ../app-resources/pri-apis-scenario-1.md
-    - name: MakePri.exe를 사용하여 수동으로 리소스 컴파일
-      href: ../app-resources/compile-resources-manually-with-makepri.md
-    - name: MakePri.exe 명령줄 옵션
-      href: ../app-resources/makepri-exe-command-options.md
-    - name: MakePri.exe 구성 파일
-      href: ../app-resources/makepri-exe-configuration.md
-    - name: MakePri.exe 형식별 인덱서
-      href: ../app-resources/makepri-exe-format-specific-indexers.md
-    - name: 레거시 리소스 마이그레이션
-      href: ../app-resources/using-mrt-for-converted-desktop-apps-and-games.md
-  - name: 데이터 액세스
-    href: ../data-access/index.md
-    items:
-    - name: SQLite 데이터베이스 사용
-      href: ../data-access/sqlite-databases.md
-    - name: SQL Server 데이터베이스 사용
-      href: ../data-access/sql-server-databases.md
-  - name: 데이터 바인딩
-    href: ../data-binding/index.md
-    items:
-    - name: 데이터 바인딩 개요
-      href: ../data-binding/data-binding-quickstart.md
-    - name: 데이터 바인딩 심층 분석
-      href: ../data-binding/data-binding-in-depth.md
-    - name: X:bind 함수
-      href: ../data-binding/function-bindings.md
-    - name: '자습서: 데이터 바인딩 만들기'
-      href: ../data-binding/xaml-basics-data-binding.md
-    - name: 디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
-      href: ../data-binding/displaying-data-in-the-designer.md
-    - name: 계층적 데이터를 바인딩하고 마스터/세부 정보 보기 만들기
-      href: ../data-binding/how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md
-    - name: 데이터 바인딩 및 MVVM
-      href: ../data-binding/data-binding-and-mvvm.md
-  - name: 파일, 폴더 및 라이브러리
-    href: ../files/index.md
-    items:
-    - name: 파일 및 폴더 열거 및 쿼리
-      href: ../files/quickstart-listing-files-and-folders.md
-    - name: 파일 만들기, 쓰기 및 읽기
-      href: ../files/quickstart-reading-and-writing-files.md
-    - name: 파일 속성 가져오기
-      href: ../files/quickstart-getting-file-properties.md
-    - name: 선택기를 사용하여 파일 및 폴더 열기
-      href: ../files/quickstart-using-file-and-folder-pickers.md
-    - name: 선택기를 사용하여 파일 저장
-      href: ../files/quickstart-save-a-file-with-a-picker.md
-    - name: 홈 그룹 콘텐츠 액세스
-      href: ../files/quickstart-accessing-homegroup-content.md
-    - name: Microsoft OneDrive 파일의 가용성 확인
-      href: ../files/quickstart-determining-availability-of-microsoft-onedrive-files.md
-    - name: 음악, 사진 및 비디오 라이브러리의 파일 및 폴더
-      href: ../files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md
-    - name: 미리 보기 이미지
-      href: ../files/thumbnails.md
-    - name: 최근에 사용한 파일 및 폴더 추적
-      href: ../files/how-to-track-recently-used-files-and-folders.md
-    - name: 배경에서 파일 시스템 변경 추적
-      href: ../files/change-tracking-filesystem.md
-    - name: SD 카드에 액세스
-      href: ../files/access-the-sd-card.md
-    - name: 파일 액세스 권한
-      href: ../files/file-access-permissions.md
-    - name: UWP의 파일 속성에 빠르게 액세스
-      href: ../files/fast-file-properties.md
-  - name: 기계 학습
-    href: https://docs.microsoft.com/windows/ai/
+        - name: 리소스 관리 시스템
+          href: ../app-resources/resource-management-system.md
+        - name: RMS가 리소스를 일치시키고 선택하는 방법
+          href: ../app-resources/how-rms-matches-and-chooses-resources.md
+        - name: RMS가 언어 태그를 일치하는 방법
+          href: ../app-resources/how-rms-matches-lang-tags.md
+        - name: '언어, 배율, 대비 등에 맞게 리소스 조정'
+          href: ../app-resources/tailor-resources-lang-scale-contrast.md
+        - name: UI와 앱 패키지 매니페스트에 문자열 지역화
+          href: ../app-resources/localize-strings-ui-manifest.md
+        - name: '배율, 테마, 대비 등에 맞춘 이미지 및 자산 로드'
+          href: ../app-resources/images-tailored-for-scale-theme-contrast.md
+        - name: URI 스키마
+          href: ../app-resources/uri-schemes.md
+        - name: 앱에서 사용하는 기본 리소스 지정
+          href: ../app-resources/specify-default-resources-installed.md
+        - name: 리소스 팩 대신 앱 패키지에 리소스 빌드
+          href: ../app-resources/build-resources-into-app-package.md
+        - name: PRI API 및 사용자 지정 빌드 시스템
+          href: ../app-resources/pri-apis-custom-build-systems.md
+          items:
+            - name: 시나리오 1(PRI API)
+              href: ../app-resources/pri-apis-scenario-1.md
+        - name: MakePri.exe를 사용하여 수동으로 리소스 컴파일
+          href: ../app-resources/compile-resources-manually-with-makepri.md
+        - name: MakePri.exe 명령줄 옵션
+          href: ../app-resources/makepri-exe-command-options.md
+        - name: MakePri.exe 구성 파일
+          href: ../app-resources/makepri-exe-configuration.md
+        - name: MakePri.exe 형식별 인덱서
+          href: ../app-resources/makepri-exe-format-specific-indexers.md
+        - name: 레거시 리소스 마이그레이션
+          href: ../app-resources/using-mrt-for-converted-desktop-apps-and-games.md
+    - name: 데이터 액세스
+      href: ../data-access/index.md
+      items:
+        - name: SQLite 데이터베이스 사용
+          href: ../data-access/sqlite-databases.md
+        - name: SQL Server 데이터베이스 사용
+          href: ../data-access/sql-server-databases.md
+    - name: 데이터 바인딩
+      href: ../data-binding/index.md
+      items:
+        - name: 데이터 바인딩 개요
+          href: ../data-binding/data-binding-quickstart.md
+        - name: 데이터 바인딩 심층 분석
+          href: ../data-binding/data-binding-in-depth.md
+        - name: 'X:bind 함수'
+          href: ../data-binding/function-bindings.md
+        - name: '자습서: 데이터 바인딩 만들기'
+          href: ../data-binding/xaml-basics-data-binding.md
+        - name: 디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
+          href: ../data-binding/displaying-data-in-the-designer.md
+        - name: 계층적 데이터를 바인딩하고 마스터/세부 정보 보기 만들기
+          href: ../data-binding/how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md
+        - name: 데이터 바인딩 및 MVVM
+          href: ../data-binding/data-binding-and-mvvm.md
+    - name: '파일, 폴더 및 라이브러리'
+      href: ../files/index.md
+      items:
+        - name: 파일 및 폴더 열거 및 쿼리
+          href: ../files/quickstart-listing-files-and-folders.md
+        - name: '파일 만들기, 쓰기 및 읽기'
+          href: ../files/quickstart-reading-and-writing-files.md
+        - name: 파일 속성 가져오기
+          href: ../files/quickstart-getting-file-properties.md
+        - name: 선택기를 사용하여 파일 및 폴더 열기
+          href: ../files/quickstart-using-file-and-folder-pickers.md
+        - name: 선택기를 사용하여 파일 저장
+          href: ../files/quickstart-save-a-file-with-a-picker.md
+        - name: 홈 그룹 콘텐츠 액세스
+          href: ../files/quickstart-accessing-homegroup-content.md
+        - name: Microsoft OneDrive 파일의 가용성 확인
+          href: ../files/quickstart-determining-availability-of-microsoft-onedrive-files.md
+        - name: '음악, 사진 및 비디오 라이브러리의 파일 및 폴더'
+          href: ../files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md
+        - name: 미리 보기 이미지
+          href: ../files/thumbnails.md
+        - name: 최근에 사용한 파일 및 폴더 추적
+          href: ../files/how-to-track-recently-used-files-and-folders.md
+        - name: 배경에서 파일 시스템 변경 추적
+          href: ../files/change-tracking-filesystem.md
+        - name: SD 카드에 액세스
+          href: ../files/access-the-sd-card.md
+        - name: 파일 액세스 권한
+          href: ../files/file-access-permissions.md
+        - name: UWP의 파일 속성에 빠르게 액세스
+          href: ../files/fast-file-properties.md
+    - name: 기계 학습
+      href: 'https://docs.microsoft.com/windows/ai/'
 - name: 배포
   items:
-  - name: UWP 버전 선택
-    href: ../updates-and-versions/choose-a-uwp-version.md
-  - name: 디버깅, 테스트 및 성능
-    href: ../debug-test-perf/index.md
-    items:
-    - name: UWP 앱 배포 및 디버그
-      href: ../debug-test-perf/deploying-and-debugging-uwp-apps.md
-    - name: PLM 테스트 및 디버깅 도구
-      href: ../debug-test-perf/testing-debugging-plm.md
-    - name: Windows 10용 Microsoft 에뮬레이터로 테스트
-      href: ../debug-test-perf/test-with-the-emulator.md
-    - name: Visual Studio를 사용하여 Surface Hub 앱 테스트
-      href: ../debug-test-perf/test-surface-hub-apps-using-visual-studio.md
-    - name: 느슨한 파일 등록을 통해 앱 배포
-      href: ../debug-test-perf/loose-file-registration.md
-    - name: 베타 테스트
-      href: ../debug-test-perf/beta-testing.md
-    - name: Windows Device Portal
-      href: ../debug-test-perf/device-portal.md
+    - name: UWP 버전 선택
+      href: ../updates-and-versions/choose-a-uwp-version.md
+    - name: '디버깅, 테스트 및 성능'
+      href: ../debug-test-perf/index.md
       items:
-      - name: 데스크톱 디바이스 포털
-        href: ../debug-test-perf/device-portal-desktop.md
-      - name: 모바일용 디바이스 포털
-        href: ../debug-test-perf/device-portal-mobile.md
-      - name: Xbox용 디바이스 포털
-        href: ../debug-test-perf/device-portal-xbox.md
-      - name: HoloLens용 디바이스 포털
-        href: ../debug-test-perf/device-portal-hololens.md
-      - name: 디바이스 포털 핵심 API
-        href: ../debug-test-perf/device-portal-api-core.md
-      - name: Device Portal에 대한 사용자 지정 플러그 인 작성
-        href: ../debug-test-perf/device-portal-plugin.md
-      - name: 사용자 지정 SSL 인증서로 Device Portal 프로비전
-        href: ../debug-test-perf/device-portal-ssl.md
-    - name: Windows 앱 인증 키트
-      href: ../debug-test-perf/windows-app-certification-kit.md
+        - name: UWP 앱 배포 및 디버그
+          href: ../debug-test-perf/deploying-and-debugging-uwp-apps.md
+        - name: PLM 테스트 및 디버깅 도구
+          href: ../debug-test-perf/testing-debugging-plm.md
+        - name: Windows 10용 Microsoft 에뮬레이터로 테스트
+          href: ../debug-test-perf/test-with-the-emulator.md
+        - name: Visual Studio를 사용하여 Surface Hub 앱 테스트
+          href: ../debug-test-perf/test-surface-hub-apps-using-visual-studio.md
+        - name: 느슨한 파일 등록을 통해 앱 배포
+          href: ../debug-test-perf/loose-file-registration.md
+        - name: 베타 테스트
+          href: ../debug-test-perf/beta-testing.md
+        - name: Windows Device Portal
+          href: ../debug-test-perf/device-portal.md
+          items:
+            - name: 데스크톱 디바이스 포털
+              href: ../debug-test-perf/device-portal-desktop.md
+            - name: 모바일용 디바이스 포털
+              href: ../debug-test-perf/device-portal-mobile.md
+            - name: Xbox용 디바이스 포털
+              href: ../debug-test-perf/device-portal-xbox.md
+            - name: HoloLens용 디바이스 포털
+              href: ../debug-test-perf/device-portal-hololens.md
+            - name: 디바이스 포털 핵심 API
+              href: ../debug-test-perf/device-portal-api-core.md
+            - name: Device Portal에 대한 사용자 지정 플러그 인 작성
+              href: ../debug-test-perf/device-portal-plugin.md
+            - name: 사용자 지정 SSL 인증서로 Device Portal 프로비전
+              href: ../debug-test-perf/device-portal-ssl.md
+        - name: Windows 앱 인증 키트
+          href: ../debug-test-perf/windows-app-certification-kit.md
+          items:
+            - name: Windows 앱 인증 키트 테스트
+              href: ../debug-test-perf/windows-app-certification-kit-tests.md
+              items:
+                - name: Windows 데스크톱 브리지 앱 테스트
+                  href: ../debug-test-perf/windows-desktop-bridge-app-tests.md
+        - name: 성능
+          href: ../debug-test-perf/performance-and-xaml-ui.md
+          items:
+            - name: 성능 계획
+              href: ../debug-test-perf/planning-and-measuring-performance.md
+            - name: 백그라운드 작업 최적화
+              href: ../debug-test-perf/optimize-background-activity.md
+            - name: ListView 및 GridView UI 최적화
+              href: ../debug-test-perf/optimize-gridview-and-listview.md
+            - name: ListView 및 GridView 데이터 가상화
+              href: ../debug-test-perf/listview-and-gridview-data-optimization.md
+            - name: 가비지 수집 성능 향상
+              href: ../debug-test-perf/improve-garbage-collection-performance.md
+            - name: UI 스레드 응답 유지
+              href: ../debug-test-perf/keep-the-ui-thread-responsive.md
+            - name: XAML 태그 최적화
+              href: ../debug-test-perf/optimize-xaml-loading.md
+            - name: XAML 레이아웃 최적화
+              href: ../debug-test-perf/optimize-your-xaml-layout.md
+            - name: MVVM 및 언어 성능 팁
+              href: ../debug-test-perf/mvvm-performance-tips.md
+            - name: 앱 시작 성능 모범 사례
+              href: ../debug-test-perf/best-practices-for-your-app-s-startup-performance.md
+            - name: '애니메이션, 미디어 및 이미지 최적화'
+              href: ../debug-test-perf/optimize-animations-and-media.md
+            - name: 일시 중단/다시 시작 최적화
+              href: ../debug-test-perf/optimize-suspend-resume.md
+            - name: 파일 액세스 최적화
+              href: ../debug-test-perf/optimize-file-access.md
+            - name: Windows 런타임 구성 요소 및 interop 최적화
+              href: ../debug-test-perf/windows-runtime-components-and-optimizing-interop.md
+            - name: 프로파일링 및 성능 도구
+              href: ../debug-test-perf/tools-for-profiling-and-performance.md
+        - name: 버전 적응 앱
+          href: ../debug-test-perf/version-adaptive-apps.md
+          items:
+            - name: 버전 적응 코드
+              href: ../debug-test-perf/version-adaptive-code.md
+            - name: 조건부 XAML
+              href: ../debug-test-perf/conditional-xaml.md
+    - name: '수익 창출, 참여 및 Microsoft Store 서비스'
+      href: ../monetize/index.md
       items:
-      - name: Windows 앱 인증 키트 테스트
-        href: ../debug-test-perf/windows-app-certification-kit-tests.md
-        items:
-        - name: Windows 데스크톱 브리지 앱 테스트
-          href: ../debug-test-perf/windows-desktop-bridge-app-tests.md
-    - name: 성능
-      href: ../debug-test-perf/performance-and-xaml-ui.md
+        - name: 앱에서 바로 구매 및 평가판
+          href: ../monetize/in-app-purchases-and-trials.md
+          items:
+            - name: 앱 및 추가 기능에 대한 제품 정보 가져오기
+              href: ../monetize/get-product-info-for-apps-and-add-ons.md
+            - name: 앱 및 추가 기능에 대한 라이선스 정보 가져오기
+              href: ../monetize/get-license-info-for-apps-and-add-ons.md
+            - name: 앱에서 바로 앱 및 추가 기능 구매 사용
+              href: ../monetize/enable-in-app-purchases-of-apps-and-add-ons.md
+            - name: 소모성 추가 기능 구매 사용
+              href: ../monetize/enable-consumable-add-on-purchases.md
+            - name: 앱에 구독 추가 기능을 사용하도록 설정
+              href: ../monetize/enable-subscription-add-ons-for-your-app.md
+            - name: 앱의 평가판 구현
+              href: ../monetize/implement-a-trial-version-of-your-app.md
+            - name: Store 제품용 데이터 스키마
+              href: ../monetize/data-schemas-for-store-products.md
+            - name: Store 작업에 대한 오류 코드
+              href: ../monetize/error-codes-for-store-operations.md
+            - name: Windows.ApplicationModel.Store 네임스페이스 사용
+              href: ../monetize/in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md
+              items:
+                - name: 평가판의 기능 제외 또는 제한
+                  href: ../monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.md
+                - name: 앱에서 바로 구매 제품 사용
+                  href: ../monetize/enable-in-app-product-purchases.md
+                - name: 앱에서 바로 소모성 제품 구매 사용
+                  href: ../monetize/enable-consumable-in-app-product-purchases.md
+                - name: 앱에서 바로 구매 제품의 큰 카탈로그 관리
+                  href: ../monetize/manage-a-large-catalog-of-in-app-products.md
+                - name: 영수증을 사용하여 제품 구매 확인
+                  href: ../monetize/use-receipts-to-verify-product-purchases.md
+        - name: Microsoft Advertising SDK를 사용하여 앱에 광고 표시
+          href: ../monetize/display-ads-in-your-app.md
+          items:
+            - name: Microsoft Advertising SDK 설치
+              href: ../monetize/install-the-microsoft-advertising-libraries.md
+              items:
+                - name: 배너 광고용 최신 라이브러리로 앱 업데이트
+                  href: ../monetize/update-your-app-to-the-latest-advertising-libraries.md
+            - name: 앱에 광고 구현
+              href: ../monetize/developer-walkthroughs.md
+              items:
+                - name: 배너 광고
+                  href: ../monetize/banner-ads.md
+                  items:
+                    - name: XAML 및 .NET의 AdControl
+                      href: ../monetize/adcontrol-in-xaml-and--net.md
+                    - name: HTML 5 및 Javascript의 AdControl
+                      href: ../monetize/adcontrol-in-html-5-and-javascript.md
+                    - name: 지원되는 배너 광고 크기
+                      href: ../monetize/supported-ad-sizes-for-banner-ads.md
+                - name: 중간 광고
+                  href: ../monetize/interstitial-ads.md
+                  items:
+                    - name: 'C#의 중간 광고 샘플 코드'
+                      href: ../monetize/interstitial-ad-sample-code-in-c.md
+                    - name: JavaScript의 중간 광고 샘플 코드
+                      href: ../monetize/interstitial-ad-sample-code-in-javascript.md
+                - name: 기본 광고
+                  href: ../monetize/native-ads.md
+                - name: 비디오 콘텐츠에 광고 표시
+                  href: ../monetize/add-advertisements-to-video-content.md
+            - name: 앱에서 광고 단위 설정
+              href: ../monetize/set-up-ad-units-in-your-app.md
+            - name: Microsoft 광고 조정 서비스
+              href: ../monetize/ad-mediation-service.md
+            - name: 모범 사례
+              href: ../monetize/best-practices-for-ads-in-apps.md
+              items:
+                - name: UI 및 사용자 환경 지침
+                  href: ../monetize/ui-and-user-experience-guidelines.md
+                - name: 광고 단위의 가시성 최적화
+                  href: ../monetize/optimize-ad-unit-viewability.md
+                - name: 광고 오류 처리
+                  href: ../monetize/error-handling-with-advertising-libraries.md
+                  items:
+                    - name: 'XAML/C#에서 오류 처리 연습'
+                      href: ../monetize/error-handling-in-xamlc-walkthrough.md
+                    - name: JavaScript에서 오류 처리 연습
+                      href: ../monetize/error-handling-in-javascript-walkthrough.md
+            - name: 알려진 문제점 및 문제 해결
+              href: ../monetize/known-issues-for-the-advertising-libraries.md
+              items:
+                - name: HTML 및 JavaScript 문제 해결 가이드
+                  href: ../monetize/html-and-javascript-troubleshooting-guide.md
+                - name: 'XAML과 C# 문제 해결 가이드'
+                  href: ../monetize/xaml-and-c-troubleshooting-guide.md
+            - name: 릴리스 정보
+              href: ../monetize/release-notes-for-the-advertising-libraries.md
+            - name: Windows 프리미엄 광고 게시자 프로그램
+              href: ../monetize/windows-premium-ads-publishers-program.md
+        - name: Microsoft Store Services SDK를 사용하여 고객과 소통
+          href: ../monetize/microsoft-store-services-sdk.md
+          items:
+            - name: A/B 테스트로 앱 실험 실행
+              href: ../monetize/run-app-experiments-with-a-b-testing.md
+              items:
+                - name: 파트너 센터에서 실험 프로젝트 만들기
+                  href: ../monetize/create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md
+                - name: 실험용 앱 코딩
+                  href: ../monetize/code-your-experiment-in-your-app.md
+                - name: 파트너 센터에서 실험 정의
+                  href: ../monetize/define-your-experiment-in-the-dev-center-dashboard.md
+                - name: 파트너 센터에서 실험 관리
+                  href: ../monetize/manage-your-experiment.md
+                - name: 첫 번째 실험 만들기 및 실행
+                  href: ../monetize/create-and-run-your-first-experiment-with-a-b-testing.md
+            - name: 앱에서 피드백 허브 시작
+              href: ../monetize/launch-feedback-hub-from-your-app.md
+            - name: 대상 푸시 알림에 대해 앱 구성
+              href: ../monetize/configure-your-app-to-receive-dev-center-notifications.md
+            - name: 파트너 센터에 대해 사용자 지정 이벤트 로깅
+              href: ../monetize/log-custom-events-for-dev-center.md
+        - name: 평점 및 리뷰 요청
+          href: ../monetize/request-ratings-and-reviews.md
+        - name: Microsoft Store 서비스
+          href: ../monetize/using-windows-store-services.md
+          items:
+            - name: 분석 데이터 액세스
+              href: ../monetize/access-analytics-data-using-windows-store-services.md
+              items:
+                - name: UWP 앱
+                  items:
+                    - name: 취득 가져오기 및 데이터 설치
+                      items:
+                        - name: 앱 취득 가져오기
+                          href: ../monetize/get-app-acquisitions.md
+                        - name: 앱 설치 가져오기
+                          href: ../monetize/get-app-installs.md
+                        - name: 앱 취득 깔때기 데이터 가져오기
+                          href: ../monetize/get-acquisition-funnel-data.md
+                        - name: 채널 별 앱 변환 가져오기
+                          href: ../monetize/get-app-conversions-by-channel.md
+                        - name: 추가 기능 취득 가져오기
+                          href: ../monetize/get-in-app-acquisitions.md
+                        - name: 구독 추가 기능 취득 가져오기
+                          href: ../monetize/get-subscription-acquisitions.md
+                        - name: 채널별 추가 기능 변환 가져오기
+                          href: ../monetize/get-add-on-conversions-by-channel.md
+                    - name: 앱에 대한 정보 데이터 가져오기
+                      href: ../monetize/get-insights-data-for-your-app.md
+                    - name: 앱 등급 가져오기
+                      href: ../monetize/get-app-ratings.md
+                    - name: 앱 리뷰 가져오기
+                      href: ../monetize/get-app-reviews.md
+                    - name: 일일 앱 사용 현황 가져오기
+                      href: ../monetize/get-app-usage-daily.md
+                    - name: 월별 앱 사용 현황 가져오기
+                      href: ../monetize/get-app-usage-monthly.md
+                    - name: 오류 보고 데이터 가져오기
+                      href: ../monetize/get-error-reporting-data.md
+                      items:
+                        - name: 앱에서 오류에 대한 세부 정보 가져오기
+                          href: ../monetize/get-details-for-an-error-in-your-app.md
+                        - name: 앱에서 오류에 대한 스택 추적 가져오기
+                          href: ../monetize/get-the-stack-trace-for-an-error-in-your-app.md
+                        - name: 앱의 오류에 대한 CAB 파일 다운로드
+                          href: ../monetize/download-the-cab-file-for-an-error-in-your-app.md
+                    - name: 광고 성과 데이터 가져오기
+                      href: ../monetize/get-ad-performance-data.md
+                    - name: 광고 캠페인 성과 데이터 가져오기
+                      href: ../monetize/get-ad-campaign-performance-data.md
+                - name: 데스크톱 앱
+                  items:
+                    - name: 데스크톱 응용 프로그램 설치 가져오기
+                      href: ../monetize/get-desktop-app-installs.md
+                    - name: 데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
+                      href: ../monetize/get-insights-data-for-your-desktop-app.md
+                    - name: 데스크톱 응용 프로그램에 대한 업그레이드 차단 가져오기
+                      href: ../monetize/get-desktop-block-data.md
+                    - name: 데스크톱 응용 프로그램에 대한 업그레이드 차단 세부 정보 가져오기
+                      href: ../monetize/get-desktop-block-data-details.md
+                    - name: 데스크톱 응용 프로그램에 대한 오류 보고 데이터 가져오기
+                      href: ../monetize/get-desktop-application-error-reporting-data.md
+                      items:
+                        - name: 데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기
+                          href: ../monetize/get-details-for-an-error-in-your-desktop-application.md
+                        - name: 데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기
+                          href: ../monetize/get-the-stack-trace-for-an-error-in-your-desktop-application.md
+                        - name: 데스크톱 응용 프로그램의 오류에 대한 CAB 파일 다운로드
+                          href: ../monetize/download-the-cab-file-for-an-error-in-your-desktop-application.md
+                - name: Xbox One 게임 및 Xbox Live
+                  items:
+                    - name: Xbox One 게임 취득 가져오기
+                      href: ../monetize/get-xbox-one-game-acquisitions.md
+                    - name: Xbox One 추가 기능 취득 가져오기
+                      href: ../monetize/get-xbox-one-add-on-acquisitions.md
+                    - name: Xbox One 게임에 대한 오류 보고 데이터 가져오기
+                      href: ../monetize/get-error-reporting-data-for-your-xbox-one-game.md
+                      items:
+                        - name: Xbox One 게임에서 오류에 대한 세부 정보 가져오기
+                          href: ../monetize/get-details-for-an-error-in-your-xbox-one-game.md
+                        - name: Xbox One 게임에서 오류에 대한 스택 추적 가져오기
+                          href: ../monetize/get-the-stack-trace-for-an-error-in-your-xbox-one-game.md
+                        - name: Xbox One 게임에서 오류에 대한 CAB 파일 다운로드
+                          href: ../monetize/download-the-cab-file-for-an-error-in-your-xbox-one-game.md
+                    - name: Xbox Live 분석 데이터 가져오기
+                      href: ../monetize/get-xbox-live-analytics.md
+                      items:
+                        - name: Xbox Live 도전 과제 데이터 가져오기
+                          href: ../monetize/get-xbox-live-achievements-data.md
+                        - name: Xbox Live 상태 데이터 가져오기
+                          href: ../monetize/get-xbox-live-health-data.md
+                        - name: Xbox Live 게임 허브 데이터 가져오기
+                          href: ../monetize/get-xbox-live-game-hub-data.md
+                        - name: Xbox Live 클럽 데이터 가져오기
+                          href: ../monetize/get-xbox-live-club-data.md
+                        - name: Xbox Live 멀티플레이 데이터 가져오기
+                          href: ../monetize/get-xbox-live-multiplayer-data.md
+                        - name: Xbox Live 동시 사용 데이터 가져오기
+                          href: ../monetize/get-xbox-live-concurrent-usage-data.md
+            - name: 리뷰에 응답
+              href: ../monetize/respond-to-reviews-using-windows-store-services.md
+              items:
+                - name: 리뷰에 대한 응답 정보 가져오기
+                  href: ../monetize/get-response-info-for-app-reviews.md
+                - name: 리뷰에 대한 응답 제출
+                  href: ../monetize/submit-responses-to-app-reviews.md
+            - name: 광고 캠페인 실행
+              href: ../monetize/run-ad-campaigns-using-windows-store-services.md
+              items:
+                - name: 광고 캠페인 관리
+                  href: ../monetize/manage-ad-campaigns.md
+                - name: 배달 라인 관리
+                  href: ../monetize/manage-delivery-lines-for-ad-campaigns.md
+                - name: 타기팅 프로필 관리
+                  href: ../monetize/manage-targeting-profiles-for-ad-campaigns.md
+                - name: 크리에이티브 관리
+                  href: ../monetize/manage-creatives-for-ad-campaigns.md
+            - name: 제출 만들기 및 관리
+              href: ../monetize/create-and-manage-submissions-using-windows-store-services.md
+              items:
+                - name: 앱 데이터 가져오기
+                  href: ../monetize/get-app-data.md
+                  items:
+                    - name: 모든 앱 가져오기
+                      href: ../monetize/get-all-apps.md
+                    - name: 앱 가져오기
+                      href: ../monetize/get-an-app.md
+                    - name: 앱에 대한 추가 기능 가져오기
+                      href: ../monetize/get-add-ons-for-an-app.md
+                    - name: 앱의 패키지 플라이트 가져오기
+                      href: ../monetize/get-flights-for-an-app.md
+                - name: 앱 제출 관리
+                  href: ../monetize/manage-app-submissions.md
+                  items:
+                    - name: 앱 제출 가져오기
+                      href: ../monetize/get-an-app-submission.md
+                    - name: 앱 제출의 상태를 가져오기
+                      href: ../monetize/get-status-for-an-app-submission.md
+                    - name: 앱 제출 만들기
+                      href: ../monetize/create-an-app-submission.md
+                    - name: 앱 제출 커밋
+                      href: ../monetize/commit-an-app-submission.md
+                    - name: 앱 제출 업데이트
+                      href: ../monetize/update-an-app-submission.md
+                    - name: 앱 제출 삭제
+                      href: ../monetize/delete-an-app-submission.md
+                    - name: 앱 제출에 대한 출시 정보 가져오기
+                      href: ../monetize/get-package-rollout-info-for-an-app-submission.md
+                    - name: 앱 제출에 대한 출시 백분율 업데이트
+                      href: ../monetize/update-the-package-rollout-percentage-for-an-app-submission.md
+                    - name: 앱 제출에 대한 출시 중지
+                      href: ../monetize/halt-the-package-rollout-for-an-app-submission.md
+                    - name: 앱 제출에 대한 출시 완료
+                      href: ../monetize/finalize-the-package-rollout-for-an-app-submission.md
+                - name: 추가 기능 관리
+                  href: ../monetize/manage-add-ons.md
+                  items:
+                    - name: 모든 추가 기능 가져오기
+                      href: ../monetize/get-all-add-ons.md
+                    - name: 추가 기능 가져오기
+                      href: ../monetize/get-an-add-on.md
+                    - name: 추가 기능 만들기
+                      href: ../monetize/create-an-add-on.md
+                    - name: 추가 기능 삭제
+                      href: ../monetize/delete-an-add-on.md
+                - name: 추가 기능 제출 관리
+                  href: ../monetize/manage-add-on-submissions.md
+                  items:
+                    - name: 추가 기능 제출 가져오기
+                      href: ../monetize/get-an-add-on-submission.md
+                    - name: 추가 기능 제출 상태 가져오기
+                      href: ../monetize/get-status-for-an-add-on-submission.md
+                    - name: 추가 기능 제출 만들기
+                      href: ../monetize/create-an-add-on-submission.md
+                    - name: 추가 기능 제출 커밋
+                      href: ../monetize/commit-an-add-on-submission.md
+                    - name: 추가 기능 제출 업데이트
+                      href: ../monetize/update-an-add-on-submission.md
+                    - name: 추가 기능 제출 삭제
+                      href: ../monetize/delete-an-add-on-submission.md
+                - name: 패키지 플라이트 관리
+                  href: ../monetize/manage-flights.md
+                  items:
+                    - name: 패키지 플라이트 가져오기
+                      href: ../monetize/get-a-flight.md
+                    - name: 패키지 플라이트 만들기
+                      href: ../monetize/create-a-flight.md
+                    - name: 패키지 플라이트 삭제
+                      href: ../monetize/delete-a-flight.md
+                - name: 패키지 플라이트 제출 관리
+                  href: ../monetize/manage-flight-submissions.md
+                  items:
+                    - name: 패키지 비행 제출 가져오기
+                      href: ../monetize/get-a-flight-submission.md
+                    - name: 패키지 비행 제출 상태 가져오기
+                      href: ../monetize/get-status-for-a-flight-submission.md
+                    - name: 패키지 플라이트 제출 만들기
+                      href: ../monetize/create-a-flight-submission.md
+                    - name: 패키지 플라이트 제출 커밋
+                      href: ../monetize/commit-a-flight-submission.md
+                    - name: 패키지 플라인트 제출 업데이트
+                      href: ../monetize/update-a-flight-submission.md
+                    - name: 패키지 플라이트 제출 삭제
+                      href: ../monetize/delete-a-flight-submission.md
+                    - name: 패키지 제출에 대한 출시 정보 가져오기
+                      href: ../monetize/get-package-rollout-info-for-a-flight-submission.md
+                    - name: 플라이트 제출에 대한 출시 백분율 업데이트
+                      href: ../monetize/update-the-package-rollout-percentage-for-a-flight-submission.md
+                    - name: 플라이트 제출에 대한 출시 중지
+                      href: ../monetize/halt-the-package-rollout-for-a-flight-submission.md
+                    - name: 플라이트 제출에 대한 출시 마무리
+                      href: ../monetize/finalize-the-package-rollout-for-a-flight-submission.md
+                - name: 제출 API에 대한 코드 예제
+                  href: ../monetize/code-examples-for-the-windows-store-submission-api.md
+                  items:
+                    - name: 'C# 샘플: 앱, 추가 기능, 플라이트 제출'
+                      href: ../monetize/csharp-code-examples-for-the-windows-store-submission-api.md
+                    - name: 'C# 샘플: 앱의 게임 옵션과 예고편 제출'
+                      href: ../monetize/csharp-code-examples-for-submissions-game-options-and-trailers.md
+                    - name: 'Java 샘플: 앱, 추가 기능, 플라이트 제출'
+                      href: ../monetize/java-code-examples-for-the-windows-store-submission-api.md
+                    - name: 'Java 샘플: 앱의 게임 옵션과 예고편 제출'
+                      href: ../monetize/java-code-examples-for-submissions-game-options-and-trailers.md
+                    - name: 'Python 샘플: 앱, 추가 기능, 플라이트 제출'
+                      href: ../monetize/python-code-examples-for-the-windows-store-submission-api.md
+                    - name: 'Python 샘플: 앱의 게임 옵션과 예고편 제출'
+                      href: ../monetize/python-code-examples-for-submissions-game-options-and-trailers.md
+            - name: 대상 제품 관리
+              href: ../monetize/manage-targeted-offers-using-windows-store-services.md
+              items:
+                - name: 대상 제품 가져오기
+                  href: ../monetize/get-targeted-offers.md
+            - name: 서비스에서 제품 권한 관리
+              href: ../monetize/view-and-grant-products-from-a-service.md
+              items:
+                - name: 제품에 대한 쿼리
+                  href: ../monetize/query-for-products.md
+                - name: 소모성 제품을 처리됨으로 보고
+                  href: ../monetize/report-consumable-products-as-fulfilled.md
+                - name: 무료 제품에 대한 권한 부여
+                  href: ../monetize/grant-free-products.md
+                - name: 사용자의 구독 가져오기
+                  href: ../monetize/get-subscriptions-for-a-user.md
+                - name: 사용자의 구독 청구 상태 변경
+                  href: ../monetize/change-the-billing-state-of-a-subscription-for-a-user.md
+                - name: Microsoft Store ID 키 갱신
+                  href: ../monetize/renew-a-windows-store-id-key.md
+            - name: 광고 네트워크용 앱 메타데이터 API
+              href: ../monetize/app-metadata-api-for-advertising-networks.md
+        - name: Microsoft Store에 요청 보내기
+          href: ../monetize/send-requests-to-the-store.md
+        - name: 소매 데모 (RDX) 기능 추가
+          href: ../monetize/retail-demo-experience.md
+        - name: 결제 요청 API로 결제를 간단하게
+          href: ../monetize/payment-request.md
+    - name: 앱 패키징
+      href: ../packaging/index.md
       items:
-      - name: 성능 계획
-        href: ../debug-test-perf/planning-and-measuring-performance.md
-      - name: 백그라운드 작업 최적화
-        href: ../debug-test-perf/optimize-background-activity.md
-      - name: ListView 및 GridView UI 최적화
-        href: ../debug-test-perf/optimize-gridview-and-listview.md
-      - name: ListView 및 GridView 데이터 가상화
-        href: ../debug-test-perf/listview-and-gridview-data-optimization.md
-      - name: 가비지 수집 성능 향상
-        href: ../debug-test-perf/improve-garbage-collection-performance.md
-      - name: UI 스레드 응답 유지
-        href: ../debug-test-perf/keep-the-ui-thread-responsive.md
-      - name: XAML 태그 최적화
-        href: ../debug-test-perf/optimize-xaml-loading.md
-      - name: XAML 레이아웃 최적화
-        href: ../debug-test-perf/optimize-your-xaml-layout.md
-      - name: MVVM 및 언어 성능 팁
-        href: ../debug-test-perf/mvvm-performance-tips.md
-      - name: 앱 시작 성능 모범 사례
-        href: ../debug-test-perf/best-practices-for-your-app-s-startup-performance.md
-      - name: 애니메이션, 미디어 및 이미지 최적화
-        href: ../debug-test-perf/optimize-animations-and-media.md
-      - name: 일시 중단/다시 시작 최적화
-        href: ../debug-test-perf/optimize-suspend-resume.md
-      - name: 파일 액세스 최적화
-        href: ../debug-test-perf/optimize-file-access.md
-      - name: Windows 런타임 구성 요소 및 interop 최적화
-        href: ../debug-test-perf/windows-runtime-components-and-optimizing-interop.md
-      - name: 프로파일링 및 성능 도구
-        href: ../debug-test-perf/tools-for-profiling-and-performance.md
-    - name: 버전 적응 앱
-      href: ../debug-test-perf/version-adaptive-apps.md
-      items:
-      - name: 버전 적응 코드
-        href: ../debug-test-perf/version-adaptive-code.md
-      - name: 조건부 XAML
-        href: ../debug-test-perf/conditional-xaml.md
-  - name: 수익 창출, 참여 및 Microsoft Store 서비스
-    href: ../monetize/index.md
-    items:
-    - name: 앱에서 바로 구매 및 평가판
-      href: ../monetize/in-app-purchases-and-trials.md
-      items:
-      - name: 앱 및 추가 기능에 대한 제품 정보 가져오기
-        href: ../monetize/get-product-info-for-apps-and-add-ons.md
-      - name: 앱 및 추가 기능에 대한 라이선스 정보 가져오기
-        href: ../monetize/get-license-info-for-apps-and-add-ons.md
-      - name: 앱에서 바로 앱 및 추가 기능 구매 사용
-        href: ../monetize/enable-in-app-purchases-of-apps-and-add-ons.md
-      - name: 소모성 추가 기능 구매 사용
-        href: ../monetize/enable-consumable-add-on-purchases.md
-      - name: 앱에 구독 추가 기능을 사용하도록 설정
-        href: ../monetize/enable-subscription-add-ons-for-your-app.md
-      - name: 앱의 평가판 구현
-        href: ../monetize/implement-a-trial-version-of-your-app.md
-      - name: Store 제품용 데이터 스키마
-        href: ../monetize/data-schemas-for-store-products.md
-      - name: Store 작업에 대한 오류 코드
-        href: ../monetize/error-codes-for-store-operations.md
-      - name: Windows.ApplicationModel.Store 네임스페이스 사용
-        href: ../monetize/in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md
-        items:
-        - name: 평가판의 기능 제외 또는 제한
-          href: ../monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.md
-        - name: 앱에서 바로 구매 제품 사용
-          href: ../monetize/enable-in-app-product-purchases.md
-        - name: 앱에서 바로 소모성 제품 구매 사용
-          href: ../monetize/enable-consumable-in-app-product-purchases.md
-        - name: 앱에서 바로 구매 제품의 큰 카탈로그 관리
-          href: ../monetize/manage-a-large-catalog-of-in-app-products.md
-        - name: 영수증을 사용하여 제품 구매 확인
-          href: ../monetize/use-receipts-to-verify-product-purchases.md
-    - name: Microsoft Advertising SDK를 사용하여 앱에 광고 표시
-      href: ../monetize/display-ads-in-your-app.md
-      items:
-      - name: Microsoft Advertising SDK 설치
-        href: ../monetize/install-the-microsoft-advertising-libraries.md
-        items:
-        - name: 배너 광고용 최신 라이브러리로 앱 업데이트
-          href: ../monetize/update-your-app-to-the-latest-advertising-libraries.md
-      - name: 앱에 광고 구현
-        href: ../monetize/developer-walkthroughs.md
-        items:
-        - name: 배너 광고
-          href: ../monetize/banner-ads.md
+        - name: Visual Studio를 사용하여 UWP 앱 패키징
+          href: ../packaging/packaging-uwp-apps.md
+        - name: 수동 앱 패키징
+          href: ../packaging/manual-packaging-root.md
           items:
-          - name: XAML 및 .NET의 AdControl
-            href: ../monetize/adcontrol-in-xaml-and--net.md
-          - name: HTML 5 및 Javascript의 AdControl
-            href: ../monetize/adcontrol-in-html-5-and-javascript.md
-          - name: 지원되는 배너 광고 크기
-            href: ../monetize/supported-ad-sizes-for-banner-ads.md
-        - name: 중간 광고
-          href: ../monetize/interstitial-ads.md
+            - name: MakeAppx.exe 도구를 사용하여 앱 패키지 만들기
+              href: ../packaging/create-app-package-with-makeappx-tool.md
+            - name: 패키지 서명용 인증서 만들기
+              href: ../packaging/create-certificate-package-signing.md
+            - name: SignTool을 사용하여 앱 패키지에 서명
+              href: ../packaging/sign-app-package-using-signtool.md
+            - name: 자산 패키지 및 패키지 접기를 사용하여 개발
+              href: ../packaging/package-folding.md
+            - name: 플랫 번들 앱 패키지
+              href: ../packaging/flat-bundles.md
+            - name: 자산 패키지 소개
+              href: ../packaging/asset-packages.md
+            - name: 패키징 레이아웃으로 패키지 만들기
+              href: ../packaging/packaging-layout.md
+        - name: 앱 패키지 아키텍처
+          href: ../packaging/device-architecture.md
+        - name: UWP 앱 스트리밍 설치
+          href: ../packaging/streaming-install.md
           items:
-          - name: C#의 중간 광고 샘플 코드
-            href: ../monetize/interstitial-ad-sample-code-in-c.md
-          - name: JavaScript의 중간 광고 샘플 코드
-            href: ../monetize/interstitial-ad-sample-code-in-javascript.md
-        - name: 기본 광고
-          href: ../monetize/native-ads.md
-        - name: 비디오 콘텐츠에 광고 표시
-          href: ../monetize/add-advertisements-to-video-content.md
-      - name: 앱에서 광고 단위 설정
-        href: ../monetize/set-up-ad-units-in-your-app.md
-      - name: Microsoft 광고 조정 서비스
-        href: ../monetize/ad-mediation-service.md
-      - name: 모범 사례
-        href: ../monetize/best-practices-for-ads-in-apps.md
-        items:
-        - name: UI 및 사용자 환경 지침
-          href: ../monetize/ui-and-user-experience-guidelines.md
-        - name: 광고 단위의 가시성 최적화
-          href: ../monetize/optimize-ad-unit-viewability.md
-        - name: 광고 오류 처리
-          href: ../monetize/error-handling-with-advertising-libraries.md
+            - name: 소스 콘텐츠 그룹 맵 생성 및 변환
+              href: ../packaging/create-cgm.md
+        - name: 선택형 패키지 및 관련 집합 제작
+          href: ../packaging/optional-packages.md
           items:
-          - name: XAML/C#에서 오류 처리 연습
-            href: ../monetize/error-handling-in-xamlc-walkthrough.md
-          - name: JavaScript에서 오류 처리 연습
-            href: ../monetize/error-handling-in-javascript-walkthrough.md
-      - name: 알려진 문제점 및 문제 해결
-        href: ../monetize/known-issues-for-the-advertising-libraries.md
-        items:
-        - name: HTML 및 JavaScript 문제 해결 가이드
-          href: ../monetize/html-and-javascript-troubleshooting-guide.md
-        - name: XAML과 C# 문제 해결 가이드
-          href: ../monetize/xaml-and-c-troubleshooting-guide.md
-      - name: 릴리스 정보
-        href: ../monetize/release-notes-for-the-advertising-libraries.md
-      - name: Windows 프리미엄 광고 게시자 프로그램
-        href: ../monetize/windows-premium-ads-publishers-program.md
-    - name: Microsoft Store Services SDK를 사용하여 고객과 소통
-      href: ../monetize/microsoft-store-services-sdk.md
-      items:
-      - name: A/B 테스트로 앱 실험 실행
-        href: ../monetize/run-app-experiments-with-a-b-testing.md
-        items:
-        - name: 파트너 센터에서 실험 프로젝트 만들기
-          href: ../monetize/create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md
-        - name: 실험용 앱 코딩
-          href: ../monetize/code-your-experiment-in-your-app.md
-        - name: 파트너 센터에서 실험 정의
-          href: ../monetize/define-your-experiment-in-the-dev-center-dashboard.md
-        - name: 파트너 센터에서 실험 관리
-          href: ../monetize/manage-your-experiment.md
-        - name: 첫 번째 실험 만들기 및 실행
-          href: ../monetize/create-and-run-your-first-experiment-with-a-b-testing.md
-      - name: 앱에서 피드백 허브 시작
-        href: ../monetize/launch-feedback-hub-from-your-app.md
-      - name: 대상 푸시 알림에 대해 앱 구성
-        href: ../monetize/configure-your-app-to-receive-dev-center-notifications.md
-      - name: 파트너 센터에 대해 사용자 지정 이벤트 로깅
-        href: ../monetize/log-custom-events-for-dev-center.md
-    - name: 평점 및 리뷰 요청
-      href: ../monetize/request-ratings-and-reviews.md
-    - name: Microsoft Store 서비스
-      href: ../monetize/using-windows-store-services.md
-      items:
-      - name: 분석 데이터 액세스
-        href: ../monetize/access-analytics-data-using-windows-store-services.md
-        items:
-        - name: UWP 앱
+            - name: 실행 가능한 코드가 있는 옵션 패키지
+              href: ../packaging/optional-packages-with-executable-code.md
+        - name: 앱 설치 관리자를 사용하여 UWP 앱 설치
+          href: ../packaging/appinstaller-root.md
           items:
-          - name: 취득 가져오기 및 데이터 설치
-            items:
-            - name: 앱 취득 가져오기
-              href: ../monetize/get-app-acquisitions.md
-            - name: 앱 설치 가져오기
-              href: ../monetize/get-app-installs.md
-            - name: 앱 취득 깔때기 데이터 가져오기
-              href: ../monetize/get-acquisition-funnel-data.md
-            - name: 채널 별 앱 변환 가져오기
-              href: ../monetize/get-app-conversions-by-channel.md
-            - name: 추가 기능 취득 가져오기
-              href: ../monetize/get-in-app-acquisitions.md
-            - name: 구독 추가 기능 취득 가져오기
-              href: ../monetize/get-subscription-acquisitions.md
-            - name: 채널별 추가 기능 변환 가져오기
-              href: ../monetize/get-add-on-conversions-by-channel.md
-          - name: 앱에 대한 정보 데이터 가져오기
-            href: ../monetize/get-insights-data-for-your-app.md
-          - name: 앱 등급 가져오기
-            href: ../monetize/get-app-ratings.md
-          - name: 앱 리뷰 가져오기
-            href: ../monetize/get-app-reviews.md
-          - name: 일일 앱 사용 현황 가져오기
-            href: ../monetize/get-app-usage-daily.md
-          - name: 월별 앱 사용 현황 가져오기
-            href: ../monetize/get-app-usage-monthly.md
-          - name: 오류 보고 데이터 가져오기
-            href: ../monetize/get-error-reporting-data.md
-            items:
-            - name: 앱에서 오류에 대한 세부 정보 가져오기
-              href: ../monetize/get-details-for-an-error-in-your-app.md
-            - name: 앱에서 오류에 대한 스택 추적 가져오기
-              href: ../monetize/get-the-stack-trace-for-an-error-in-your-app.md
-            - name: 앱의 오류에 대한 CAB 파일 다운로드
-              href: ../monetize/download-the-cab-file-for-an-error-in-your-app.md
-          - name: 광고 성과 데이터 가져오기
-            href: ../monetize/get-ad-performance-data.md
-          - name: 광고 캠페인 성과 데이터 가져오기
-            href: ../monetize/get-ad-campaign-performance-data.md
-        - name: 데스크톱 앱
-          items:
-          - name: 데스크톱 응용 프로그램 설치 가져오기
-            href: ../monetize/get-desktop-app-installs.md
-          - name: 데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
-            href: ../monetize/get-insights-data-for-your-desktop-app.md
-          - name: 데스크톱 응용 프로그램에 대한 업그레이드 차단 가져오기
-            href: ../monetize/get-desktop-block-data.md
-          - name: 데스크톱 응용 프로그램에 대한 업그레이드 차단 세부 정보 가져오기
-            href: ../monetize/get-desktop-block-data-details.md
-          - name: 데스크톱 응용 프로그램에 대한 오류 보고 데이터 가져오기
-            href: ../monetize/get-desktop-application-error-reporting-data.md
-            items:
-            - name: 데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기
-              href: ../monetize/get-details-for-an-error-in-your-desktop-application.md
-            - name: 데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기
-              href: ../monetize/get-the-stack-trace-for-an-error-in-your-desktop-application.md
-            - name: 데스크톱 응용 프로그램의 오류에 대한 CAB 파일 다운로드
-              href: ../monetize/download-the-cab-file-for-an-error-in-your-desktop-application.md
-        - name: Xbox One 게임 및 Xbox Live
-          items:
-          - name: Xbox One 게임 취득 가져오기
-            href: ../monetize/get-xbox-one-game-acquisitions.md
-          - name: Xbox One 추가 기능 취득 가져오기
-            href: ../monetize/get-xbox-one-add-on-acquisitions.md
-          - name: Xbox One 게임에 대한 오류 보고 데이터 가져오기
-            href: ../monetize/get-error-reporting-data-for-your-xbox-one-game.md
-            items:
-            - name: Xbox One 게임에서 오류에 대한 세부 정보 가져오기
-              href: ../monetize/get-details-for-an-error-in-your-xbox-one-game.md
-            - name: Xbox One 게임에서 오류에 대한 스택 추적 가져오기
-              href: ../monetize/get-the-stack-trace-for-an-error-in-your-xbox-one-game.md
-            - name: Xbox One 게임에서 오류에 대한 CAB 파일 다운로드
-              href: ../monetize/download-the-cab-file-for-an-error-in-your-xbox-one-game.md
-          - name: Xbox Live 분석 데이터 가져오기
-            href: ../monetize/get-xbox-live-analytics.md
-            items:
-            - name: Xbox Live 도전 과제 데이터 가져오기
-              href: ../monetize/get-xbox-live-achievements-data.md
-            - name: Xbox Live 상태 데이터 가져오기
-              href: ../monetize/get-xbox-live-health-data.md
-            - name: Xbox Live 게임 허브 데이터 가져오기
-              href: ../monetize/get-xbox-live-game-hub-data.md
-            - name: Xbox Live 클럽 데이터 가져오기
-              href: ../monetize/get-xbox-live-club-data.md
-            - name: Xbox Live 멀티플레이 데이터 가져오기
-              href: ../monetize/get-xbox-live-multiplayer-data.md
-            - name: Xbox Live 동시 사용 데이터 가져오기
-              href: ../monetize/get-xbox-live-concurrent-usage-data.md
-      - name: 리뷰에 응답
-        href: ../monetize/respond-to-reviews-using-windows-store-services.md
-        items:
-        - name: 리뷰에 대한 응답 정보 가져오기
-          href: ../monetize/get-response-info-for-app-reviews.md
-        - name: 리뷰에 대한 응답 제출
-          href: ../monetize/submit-responses-to-app-reviews.md
-      - name: 광고 캠페인 실행
-        href: ../monetize/run-ad-campaigns-using-windows-store-services.md
-        items:
-        - name: 광고 캠페인 관리
-          href: ../monetize/manage-ad-campaigns.md
-        - name: 배달 라인 관리
-          href: ../monetize/manage-delivery-lines-for-ad-campaigns.md
-        - name: 타기팅 프로필 관리
-          href: ../monetize/manage-targeting-profiles-for-ad-campaigns.md
-        - name: 크리에이티브 관리
-          href: ../monetize/manage-creatives-for-ad-campaigns.md
-      - name: 제출 만들기 및 관리
-        href: ../monetize/create-and-manage-submissions-using-windows-store-services.md
-        items:
-        - name: 앱 데이터 가져오기
-          href: ../monetize/get-app-data.md
-          items:
-          - name: 모든 앱 가져오기
-            href: ../monetize/get-all-apps.md
-          - name: 앱 가져오기
-            href: ../monetize/get-an-app.md
-          - name: 앱에 대한 추가 기능 가져오기
-            href: ../monetize/get-add-ons-for-an-app.md
-          - name: 앱의 패키지 플라이트 가져오기
-            href: ../monetize/get-flights-for-an-app.md
-        - name: 앱 제출 관리
-          href: ../monetize/manage-app-submissions.md
-          items:
-          - name: 앱 제출 가져오기
-            href: ../monetize/get-an-app-submission.md
-          - name: 앱 제출의 상태를 가져오기
-            href: ../monetize/get-status-for-an-app-submission.md
-          - name: 앱 제출 만들기
-            href: ../monetize/create-an-app-submission.md
-          - name: 앱 제출 커밋
-            href: ../monetize/commit-an-app-submission.md
-          - name: 앱 제출 업데이트
-            href: ../monetize/update-an-app-submission.md
-          - name: 앱 제출 삭제
-            href: ../monetize/delete-an-app-submission.md
-          - name: 앱 제출에 대한 출시 정보 가져오기
-            href: ../monetize/get-package-rollout-info-for-an-app-submission.md
-          - name: 앱 제출에 대한 출시 백분율 업데이트
-            href: ../monetize/update-the-package-rollout-percentage-for-an-app-submission.md
-          - name: 앱 제출에 대한 출시 중지
-            href: ../monetize/halt-the-package-rollout-for-an-app-submission.md
-          - name: 앱 제출에 대한 출시 완료
-            href: ../monetize/finalize-the-package-rollout-for-an-app-submission.md
-        - name: 추가 기능 관리
-          href: ../monetize/manage-add-ons.md
-          items:
-          - name: 모든 추가 기능 가져오기
-            href: ../monetize/get-all-add-ons.md
-          - name: 추가 기능 가져오기
-            href: ../monetize/get-an-add-on.md
-          - name: 추가 기능 만들기
-            href: ../monetize/create-an-add-on.md
-          - name: 추가 기능 삭제
-            href: ../monetize/delete-an-add-on.md
-        - name: 추가 기능 제출 관리
-          href: ../monetize/manage-add-on-submissions.md
-          items:
-          - name: 추가 기능 제출 가져오기
-            href: ../monetize/get-an-add-on-submission.md
-          - name: 추가 기능 제출 상태 가져오기
-            href: ../monetize/get-status-for-an-add-on-submission.md
-          - name: 추가 기능 제출 만들기
-            href: ../monetize/create-an-add-on-submission.md
-          - name: 추가 기능 제출 커밋
-            href: ../monetize/commit-an-add-on-submission.md
-          - name: 추가 기능 제출 업데이트
-            href: ../monetize/update-an-add-on-submission.md
-          - name: 추가 기능 제출 삭제
-            href: ../monetize/delete-an-add-on-submission.md
-        - name: 패키지 플라이트 관리
-          href: ../monetize/manage-flights.md
-          items:
-          - name: 패키지 플라이트 가져오기
-            href: ../monetize/get-a-flight.md
-          - name: 패키지 플라이트 만들기
-            href: ../monetize/create-a-flight.md
-          - name: 패키지 플라이트 삭제
-            href: ../monetize/delete-a-flight.md
-        - name: 패키지 플라이트 제출 관리
-          href: ../monetize/manage-flight-submissions.md
-          items:
-          - name: 패키지 비행 제출 가져오기
-            href: ../monetize/get-a-flight-submission.md
-          - name: 패키지 비행 제출 상태 가져오기
-            href: ../monetize/get-status-for-a-flight-submission.md
-          - name: 패키지 플라이트 제출 만들기
-            href: ../monetize/create-a-flight-submission.md
-          - name: 패키지 플라이트 제출 커밋
-            href: ../monetize/commit-a-flight-submission.md
-          - name: 패키지 플라인트 제출 업데이트
-            href: ../monetize/update-a-flight-submission.md
-          - name: 패키지 플라이트 제출 삭제
-            href: ../monetize/delete-a-flight-submission.md
-          - name: 패키지 제출에 대한 출시 정보 가져오기
-            href: ../monetize/get-package-rollout-info-for-a-flight-submission.md
-          - name: 플라이트 제출에 대한 출시 백분율 업데이트
-            href: ../monetize/update-the-package-rollout-percentage-for-a-flight-submission.md
-          - name: 플라이트 제출에 대한 출시 중지
-            href: ../monetize/halt-the-package-rollout-for-a-flight-submission.md
-          - name: 플라이트 제출에 대한 출시 마무리
-            href: ../monetize/finalize-the-package-rollout-for-a-flight-submission.md
-        - name: 제출 API에 대한 코드 예제
-          href: ../monetize/code-examples-for-the-windows-store-submission-api.md
-          items:
-          - name: 'C# 샘플: 앱, 추가 기능, 플라이트 제출'
-            href: ../monetize/csharp-code-examples-for-the-windows-store-submission-api.md
-          - name: 'C# 샘플: 앱의 게임 옵션과 예고편 제출'
-            href: ../monetize/csharp-code-examples-for-submissions-game-options-and-trailers.md
-          - name: 'Java 샘플: 앱, 추가 기능, 플라이트 제출'
-            href: ../monetize/java-code-examples-for-the-windows-store-submission-api.md
-          - name: 'Java 샘플: 앱의 게임 옵션과 예고편 제출'
-            href: ../monetize/java-code-examples-for-submissions-game-options-and-trailers.md
-          - name: 'Python 샘플: 앱, 추가 기능, 플라이트 제출'
-            href: ../monetize/python-code-examples-for-the-windows-store-submission-api.md
-          - name: 'Python 샘플: 앱의 게임 옵션과 예고편 제출'
-            href: ../monetize/python-code-examples-for-submissions-game-options-and-trailers.md
-      - name: 대상 제품 관리
-        href: ../monetize/manage-targeted-offers-using-windows-store-services.md
-        items:
-        - name: 대상 제품 가져오기
-          href: ../monetize/get-targeted-offers.md
-      - name: 서비스에서 제품 권한 관리
-        href: ../monetize/view-and-grant-products-from-a-service.md
-        items:
-        - name: 제품에 대한 쿼리
-          href: ../monetize/query-for-products.md
-        - name: 소모성 제품을 처리됨으로 보고
-          href: ../monetize/report-consumable-products-as-fulfilled.md
-        - name: 무료 제품에 대한 권한 부여
-          href: ../monetize/grant-free-products.md
-        - name: 사용자의 구독 가져오기
-          href: ../monetize/get-subscriptions-for-a-user.md
-        - name: 사용자의 구독 청구 상태 변경
-          href: ../monetize/change-the-billing-state-of-a-subscription-for-a-user.md
-        - name: Microsoft Store ID 키 갱신
-          href: ../monetize/renew-a-windows-store-id-key.md
-      - name: 광고 네트워크용 앱 메타데이터 API
-        href: ../monetize/app-metadata-api-for-advertising-networks.md
-    - name: Microsoft Store에 요청 보내기
-      href: ../monetize/send-requests-to-the-store.md
-    - name: 소매 데모 (RDX) 기능 추가
-      href: ../monetize/retail-demo-experience.md
-    - name: 결제 요청 API로 결제를 간단하게
-      href: ../monetize/payment-request.md
-  - name: 앱 패키징
-    href: ../packaging/index.md
-    items:
-    - name: Visual Studio를 사용하여 UWP 앱 패키징
-      href: ../packaging/packaging-uwp-apps.md
-    - name: 수동 앱 패키징
-      href: ../packaging/manual-packaging-root.md
-      items:
-      - name: MakeAppx.exe 도구를 사용하여 앱 패키지 만들기
-        href: ../packaging/create-app-package-with-makeappx-tool.md
-      - name: 패키지 서명용 인증서 만들기
-        href: ../packaging/create-certificate-package-signing.md
-      - name: SignTool을 사용하여 앱 패키지에 서명
-        href: ../packaging/sign-app-package-using-signtool.md
-      - name: 자산 패키지 및 패키지 접기를 사용하여 개발
-        href: ../packaging/package-folding.md
-      - name: 플랫 번들 앱 패키지
-        href: ../packaging/flat-bundles.md
-      - name: 자산 패키지 소개
-        href: ../packaging/asset-packages.md
-      - name: 패키징 레이아웃으로 패키지 만들기
-        href: ../packaging/packaging-layout.md
-    - name: 앱 패키지 아키텍처
-      href: ../packaging/device-architecture.md
-    - name: UWP 앱 스트리밍 설치
-      href: ../packaging/streaming-install.md
-      items:
-      - name: 소스 콘텐츠 그룹 맵 생성 및 변환
-        href: ../packaging/create-cgm.md
-    - name: 선택형 패키지 및 관련 집합 제작
-      href: ../packaging/optional-packages.md
-      items:
-      - name: 실행 가능한 코드가 있는 옵션 패키지
-        href: ../packaging/optional-packages-with-executable-code.md
-    - name: 앱 설치 관리자를 사용하여 UWP 앱 설치
-      href: ../packaging/appinstaller-root.md
-      items:
-      - name: Visual Studio를 사용하여 앱 설치 관리자 파일 만들기
-        href: ../packaging/create-appinstallerfile-vs.md
-      - name: 웹 페이지에서 UWP 앱 설치
-        href: ../packaging/installing-UWP-apps-web.md
-      - name: 앱 설치 관리자 파일을 사용하여 관련 집합 설치
-        href: ../packaging/install-related-set.md
-      - name: 앱 설치 관리자 파일 관련 설치 문제 해결
-        href: ../packaging/troubleshoot-appinstaller-issues.md
-      - name: Azure 웹앱에서 UWP 앱 설치
-        href: ../packaging/web-install-azure.md
-      - name: IIS 서버에서 UWP 앱 설치
-        href: ../packaging/web-install-iis.md
-      - name: 웹 설치에 대해 AWS에서 UWP 앱 패키지 호스트
-        href: ../packaging/web-install-aws.md
-    - name: WinAppDeployCmd.exe 도구를 사용하여 앱 설치
-      href: ../packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md
-    - name: 앱 접근 권한 값 선언
-      href: ../packaging/app-capability-declarations.md
-    - name: UWP 앱에 대한 자동화된 빌드 설정
-      href: ../packaging/auto-build-package-uwp-apps.md
-    - name: Microsoft Store에서 패키지 업데이트 다운로드 및 설치
-      href: ../packaging/self-install-package-updates.md
+            - name: Visual Studio를 사용하여 앱 설치 관리자 파일 만들기
+              href: ../packaging/create-appinstallerfile-vs.md
+            - name: 웹 페이지에서 UWP 앱 설치
+              href: ../packaging/installing-UWP-apps-web.md
+            - name: 앱 설치 관리자 파일을 사용하여 관련 집합 설치
+              href: ../packaging/install-related-set.md
+            - name: 앱 설치 관리자 파일 관련 설치 문제 해결
+              href: ../packaging/troubleshoot-appinstaller-issues.md
+            - name: Azure 웹앱에서 UWP 앱 설치
+              href: ../packaging/web-install-azure.md
+            - name: IIS 서버에서 UWP 앱 설치
+              href: ../packaging/web-install-iis.md
+            - name: 웹 설치에 대해 AWS에서 UWP 앱 패키지 호스트
+              href: ../packaging/web-install-aws.md
+        - name: WinAppDeployCmd.exe 도구를 사용하여 앱 설치
+          href: ../packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md
+        - name: 앱 접근 권한 값 선언
+          href: ../packaging/app-capability-declarations.md
+        - name: UWP 앱에 대한 자동화된 빌드 설정
+          href: ../packaging/auto-build-package-uwp-apps.md
+        - name: Microsoft Store에서 패키지 업데이트 다운로드 및 설치
+          href: ../packaging/self-install-package-updates.md
 - name: 플랫폼
   items:
-  - name: C++/WinRT
-    href: ../cpp-and-winrt-apis/index.md
-    items:
-    - name: 소개
-      href: ../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md
-    - name: 시작
-      href: ../cpp-and-winrt-apis/get-started.md
-    - name: 새로운 기능
-      href: ../cpp-and-winrt-apis/news.md
-    - name: 질문과 대답
-      href: ../cpp-and-winrt-apis/faq.md
-    - name: 문제 해결
-      href: ../cpp-and-winrt-apis/troubleshooting.md
-    - name: 사진 편집기 샘플 응용 프로그램
-      href: ../cpp-and-winrt-apis/photo-editor-sample.md
-    - name: 문자열 처리
-      href: ../cpp-and-winrt-apis/strings.md
-    - name: 표준 C++ 데이터 형식
-      href: ../cpp-and-winrt-apis/std-cpp-data-types.md
-    - name: 스칼라 값을 IInspectable로 boxing 및 unboxing
-      href: ../cpp-and-winrt-apis/boxing.md
-    - name: API 사용
-      href: ../cpp-and-winrt-apis/consume-apis.md
-    - name: API 작성
-      href: ../cpp-and-winrt-apis/author-apis.md
-    - name: 오류 처리
-      href: ../cpp-and-winrt-apis/error-handling.md
-    - name: 대리자를 사용한 이벤트 처리
-      href: ../cpp-and-winrt-apis/handle-events.md
-    - name: 이벤트 작성
-      href: ../cpp-and-winrt-apis/author-events.md
-    - name: 컬렉션
-      href: ../cpp-and-winrt-apis/collections.md
-    - name: 동시성 및 비동기 작업
-      href: ../cpp-and-winrt-apis/concurrency.md
-    - name: XAML 컨트롤; 속성에 바인딩
-      href: ../cpp-and-winrt-apis/binding-property.md
-    - name: XAML 항목 컨트롤; 컬렉션에 바인딩
-      href: ../cpp-and-winrt-apis/binding-collection.md
-    - name: XAML 사용자 지정 (템플릿) 컨트롤
-      href: ../cpp-and-winrt-apis/xaml-cust-ctrl.md
-    - name: COM 구성 요소 사용
-      href: ../cpp-and-winrt-apis/consume-com.md
-    - name: COM 구성 요소 작성
-      href: ../cpp-and-winrt-apis/author-coclasses.md
-    - name: C++/CX에서 C++/WinRT로 이동
-      href: ../cpp-and-winrt-apis/move-to-winrt-from-cx.md
-    - name: C++/CX와 상호 운용
-      href: ../cpp-and-winrt-apis/interop-winrt-cx.md
-    - name: WRL에서 C++/WinRT로 이동
-      href: ../cpp-and-winrt-apis/move-to-winrt-from-wrl.md
-    - name: ABI와 상호 운용
-      href: ../cpp-and-winrt-apis/interop-winrt-abi.md
-    - name: 강력한 참조 및 약한 참조
-      href: ../cpp-and-winrt-apis/weak-references.md
-    - name: Agile 개체
-      href: ../cpp-and-winrt-apis/agile-objects.md
-    - name: C++ 언어
+    - name: C++/WinRT
+      href: ../cpp-and-winrt-apis/index.md
       items:
-      - name: 값 범주 및 참조
-        href: ../cpp-and-winrt-apis/cpp-value-categories.md
-  - name: 보안
-    href: ../security/index.md
-    items:
-    - name: 보안 Windows 앱 개발 소개
-      href: ../security/intro-to-secure-windows-app-development.md
-    - name: 인증 및 사용자 ID
-      href: ../security/authentication-and-user-identity.md
-      items:
-      - name: 자격 증명 보관
-        href: ../security/credential-locker.md
-      - name: 지문 생체 인식
-        href: ../security/fingerprint-biometrics.md
-      - name: Windows Hello
-        href: ../security/microsoft-passport.md
-        items:
-        - name: Windows Hello 로그인 앱 만들기
-          href: ../security/microsoft-passport-login.md
-        - name: Windows Hello 로그인 서비스 만들기
-          href: ../security/microsoft-passport-login-auth-service.md
-      - name: 스마트 카드
-        href: ../security/smart-cards.md
-      - name: 공유 인증서
-        href: ../security/share-certificates.md
-      - name: 웹 계정 관리자
-        href: ../security/web-account-manager.md
-      - name: 도우미 IoT 디바이스 잠금 해제
-        href: ../security/companion-device-unlock.md
-      - name: 웹 인증 브로커
-        href: ../security/web-authentication-broker.md
-    - name: 암호화
-      href: ../security/cryptography.md
-      items:
-      - name: 인증서
-        href: ../security/certificates.md
-      - name: 암호화 키
-        href: ../security/cryptographic-keys.md
-      - name: 데이터 보호
-        href: ../security/data-protection.md
-      - name: MAC, 해시, 서명
-        href: ../security/macs-hashes-and-signatures.md
-      - name: 암호화에 대한 내보내기 제한
-        href: ../security/export-restrictions-on-cryptography.md
-      - name: 일반적인 암호화 작업
-        href: ../security/common-cryptography-tasks.md
-        items:
-        - name: 난수 만들기
-          href: ../security/create-random-numbers.md
-        - name: 버퍼 비교
-          href: ../security/compare-buffers.md
-        - name: 문자열과 이진 데이터 간 변환
-          href: ../security/convert-between-strings-and-binary-data.md
-        - name: 바이트 배열에 및 바이트 배열에서 복사
-          href: ../security/copy-to-and-from-byte-arrays.md
-        - name: 데이터 인코드 및 디코드
-          href: ../security/encode-and-decode-data.md
-  - name: 시각적 계층
-    href: ../composition/visual-layer.md
-    items:
-    - name: 컴퍼지션 시각
-      href: ../composition/composition-visual-tree.md
-    - name: 컴퍼지션 애니메이션
-      href: ../composition/composition-animation.md
-      items:
-      - name: 시간 애니메이션
-        href: ../composition/time-animations.md
-      - name: 관계 애니메이션
-        href: ../composition/relation-animations.md
-      - name: 자연스러운 애니메이션
-        href: ../composition/natural-animations.md
-        items:
-        - name: 스프링 애니메이션
-          href: ../composition/spring-animations.md
-      - name: 입력 기반 애니메이션
-        href: ../composition/input-driven-animations.md
-        items:
-        - name: 스크롤 기반 애니메이션
-          href: ../composition/scroll-input-animations.md
-        - name: 포인터 기반 애니메이션
-          href: ../composition/pointer-input-animations.md
-        - name: 사용자 지정 조작
-          href: ../composition/interaction-tracker-manipulations.md
+        - name: 소개
+          href: ../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md
+        - name: 시작
+          href: ../cpp-and-winrt-apis/get-started.md
+        - name: 새로운 기능
+          href: ../cpp-and-winrt-apis/news.md
+        - name: 질문과 대답
+          href: ../cpp-and-winrt-apis/faq.md
+        - name: 문제 해결
+          href: ../cpp-and-winrt-apis/troubleshooting.md
+        - name: 사진 편집기 샘플 응용 프로그램
+          href: ../cpp-and-winrt-apis/photo-editor-sample.md
+        - name: 문자열 처리
+          href: ../cpp-and-winrt-apis/strings.md
+        - name: 표준 C++ 데이터 형식
+          href: ../cpp-and-winrt-apis/std-cpp-data-types.md
+        - name: 스칼라 값을 IInspectable로 boxing 및 unboxing
+          href: ../cpp-and-winrt-apis/boxing.md
+        - name: API 사용
+          href: ../cpp-and-winrt-apis/consume-apis.md
+        - name: API 작성
+          href: ../cpp-and-winrt-apis/author-apis.md
+        - name: 오류 처리
+          href: ../cpp-and-winrt-apis/error-handling.md
+        - name: 대리자를 사용한 이벤트 처리
+          href: ../cpp-and-winrt-apis/handle-events.md
+        - name: 이벤트 작성
+          href: ../cpp-and-winrt-apis/author-events.md
+        - name: 컬렉션
+          href: ../cpp-and-winrt-apis/collections.md
+        - name: 동시성 및 비동기 작업
+          href: ../cpp-and-winrt-apis/concurrency.md
+        - name: XAML 컨트롤; 속성에 바인딩
+          href: ../cpp-and-winrt-apis/binding-property.md
+        - name: XAML 항목 컨트롤; 컬렉션에 바인딩
+          href: ../cpp-and-winrt-apis/binding-collection.md
+        - name: XAML 사용자 지정 (템플릿) 컨트롤
+          href: ../cpp-and-winrt-apis/xaml-cust-ctrl.md
+        - name: COM 구성 요소 사용
+          href: ../cpp-and-winrt-apis/consume-com.md
+        - name: COM 구성 요소 작성
+          href: ../cpp-and-winrt-apis/author-coclasses.md
+        - name: C++/CX에서 C++/WinRT로 이동
+          href: ../cpp-and-winrt-apis/move-to-winrt-from-cx.md
+        - name: C++/CX와 상호 운용
+          href: ../cpp-and-winrt-apis/interop-winrt-cx.md
+        - name: WRL에서 C++/WinRT로 이동
+          href: ../cpp-and-winrt-apis/move-to-winrt-from-wrl.md
+        - name: ABI와 상호 운용
+          href: ../cpp-and-winrt-apis/interop-winrt-abi.md
+        - name: 강력한 참조 및 약한 참조
+          href: ../cpp-and-winrt-apis/weak-references.md
+        - name: Agile 개체
+          href: ../cpp-and-winrt-apis/agile-objects.md
+        - name: C++ 언어
           items:
-          - name: 끌기 지점
-            href: ../composition/inertia-modifiers.md
-          - name: 당겨서 새로 고침
-            href: ../composition/source-modifiers.md
-    - name: 컴퍼지션 효과
-      href: ../composition/composition-effects.md
+            - name: 값 범주 및 참조
+              href: ../cpp-and-winrt-apis/cpp-value-categories.md
+    - name: 보안
+      href: ../security/index.md
       items:
-      - name: 컴퍼지션 그림자
-        href: ../composition/composition-shadows.md
-      - name: 컴퍼지션 조명
-        href: ../composition/composition-lighting.md
-    - name: 컴퍼지션 브러시
-      href: ../composition/composition-brushes.md
-    - name: 컴퍼지션 네이티브 상호 운용
-      href: ../composition/composition-native-interop.md
-    - name: UI 조정
-      href: ../composition/composition-tailoring.md
-    - name: XAML 사용
-      href: ../composition/using-the-visual-layer-with-xaml.md
+        - name: 보안 Windows 앱 개발 소개
+          href: ../security/intro-to-secure-windows-app-development.md
+        - name: 인증 및 사용자 ID
+          href: ../security/authentication-and-user-identity.md
+          items:
+            - name: 자격 증명 보관
+              href: ../security/credential-locker.md
+            - name: 지문 생체 인식
+              href: ../security/fingerprint-biometrics.md
+            - name: Windows Hello
+              href: ../security/microsoft-passport.md
+              items:
+                - name: Windows Hello 로그인 앱 만들기
+                  href: ../security/microsoft-passport-login.md
+                - name: Windows Hello 로그인 서비스 만들기
+                  href: ../security/microsoft-passport-login-auth-service.md
+            - name: 스마트 카드
+              href: ../security/smart-cards.md
+            - name: 공유 인증서
+              href: ../security/share-certificates.md
+            - name: 웹 계정 관리자
+              href: ../security/web-account-manager.md
+            - name: 도우미 IoT 디바이스 잠금 해제
+              href: ../security/companion-device-unlock.md
+            - name: 웹 인증 브로커
+              href: ../security/web-authentication-broker.md
+        - name: 암호화
+          href: ../security/cryptography.md
+          items:
+            - name: 인증서
+              href: ../security/certificates.md
+            - name: 암호화 키
+              href: ../security/cryptographic-keys.md
+            - name: 데이터 보호
+              href: ../security/data-protection.md
+            - name: 'MAC, 해시, 서명'
+              href: ../security/macs-hashes-and-signatures.md
+            - name: 암호화에 대한 내보내기 제한
+              href: ../security/export-restrictions-on-cryptography.md
+            - name: 일반적인 암호화 작업
+              href: ../security/common-cryptography-tasks.md
+              items:
+                - name: 난수 만들기
+                  href: ../security/create-random-numbers.md
+                - name: 버퍼 비교
+                  href: ../security/compare-buffers.md
+                - name: 문자열과 이진 데이터 간 변환
+                  href: ../security/convert-between-strings-and-binary-data.md
+                - name: 바이트 배열에 및 바이트 배열에서 복사
+                  href: ../security/copy-to-and-from-byte-arrays.md
+                - name: 데이터 인코드 및 디코드
+                  href: ../security/encode-and-decode-data.md
+    - name: 시각적 계층
+      href: ../composition/visual-layer.md
       items:
-      - name: XAML 조명
-        href: ../composition/xaml-lighting.md
-  - name: Windows as a Service
-    href: ../updates-and-versions/application-development-for-windows-as-a-service.md
-  - name: Windows 런타임 구성 요소
-    href: ../winrt-components/index.md
-    items:
-    - name: C++/CX로 Windows 런타임 구성 요소 만들기
-      href: ../winrt-components/creating-windows-runtime-components-in-cpp.md
-    - name: '연습: C++/CX로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출'
-      href: ../winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md
-    - name: C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
-      href: ../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md
+        - name: 컴퍼지션 시각
+          href: ../composition/composition-visual-tree.md
+        - name: 컴퍼지션 애니메이션
+          href: ../composition/composition-animation.md
+          items:
+            - name: 시간 애니메이션
+              href: ../composition/time-animations.md
+            - name: 관계 애니메이션
+              href: ../composition/relation-animations.md
+            - name: 자연스러운 애니메이션
+              href: ../composition/natural-animations.md
+              items:
+                - name: 스프링 애니메이션
+                  href: ../composition/spring-animations.md
+            - name: 입력 기반 애니메이션
+              href: ../composition/input-driven-animations.md
+              items:
+                - name: 스크롤 기반 애니메이션
+                  href: ../composition/scroll-input-animations.md
+                - name: 포인터 기반 애니메이션
+                  href: ../composition/pointer-input-animations.md
+                - name: 사용자 지정 조작
+                  href: ../composition/interaction-tracker-manipulations.md
+                  items:
+                    - name: 끌기 지점
+                      href: ../composition/inertia-modifiers.md
+                    - name: 당겨서 새로 고침
+                      href: ../composition/source-modifiers.md
+        - name: 컴퍼지션 효과
+          href: ../composition/composition-effects.md
+          items:
+            - name: 컴퍼지션 그림자
+              href: ../composition/composition-shadows.md
+            - name: 컴퍼지션 조명
+              href: ../composition/composition-lighting.md
+        - name: 컴퍼지션 브러시
+          href: ../composition/composition-brushes.md
+        - name: 컴퍼지션 네이티브 상호 운용
+          href: ../composition/composition-native-interop.md
+        - name: UI 조정
+          href: ../composition/composition-tailoring.md
+        - name: XAML 사용
+          href: ../composition/using-the-visual-layer-with-xaml.md
+          items:
+            - name: XAML 조명
+              href: ../composition/xaml-lighting.md
+    - name: Windows as a Service
+      href: ../updates-and-versions/application-development-for-windows-as-a-service.md
+    - name: Windows 런타임 구성 요소
+      href: ../winrt-components/index.md
       items:
-      - name: Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
-        href: ../winrt-components/custom-events-and-event-accessors-in-windows-runtime-components.md
-      - name: Windows 런타임 구성 요소에 배열 전달
-        href: ../winrt-components/passing-arrays-to-a-windows-runtime-component.md
-      - name: Windows 런타임 구성 요소 오류 조건 진단
-        href: ../winrt-components/diagnosing-windows-runtime-component-error-conditions.md
-      - name: 관리되는 Windows 런타임 구성 요소 배포
-        href: ../winrt-components/distributing-a-managed-windows-runtime-component.md
-      - name: Windows 런타임 형식의 .NET Framework 매핑
-        href: ../winrt-components/net-framework-mappings-of-windows-runtime-types.md
-    - name: '연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출'
-      href: ../winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md
-    - name: Windows 런타임 구성 요소에서 이벤트 발생
-      href: ../winrt-components/raising-events-in-windows-runtime-components.md
-    - name: 테스트용으로 로드하는 UWP 앱의 조정된 Windows 런타임 구성 요소
-      href: ../winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md
-  - name: XAML 플랫폼
-    href: ../xaml-platform/index.md
-    items:
-    - name: XAML 개요
-      href: ../xaml-platform/xaml-overview.md
+        - name: C++/CX로 Windows 런타임 구성 요소 만들기
+          href: ../winrt-components/creating-windows-runtime-components-in-cpp.md
+        - name: '연습: C++/CX로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출'
+          href: ../winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md
+        - name: 'C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기'
+          href: ../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md
+          items:
+            - name: Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
+              href: ../winrt-components/custom-events-and-event-accessors-in-windows-runtime-components.md
+            - name: Windows 런타임 구성 요소에 배열 전달
+              href: ../winrt-components/passing-arrays-to-a-windows-runtime-component.md
+            - name: Windows 런타임 구성 요소 오류 조건 진단
+              href: ../winrt-components/diagnosing-windows-runtime-component-error-conditions.md
+            - name: 관리되는 Windows 런타임 구성 요소 배포
+              href: ../winrt-components/distributing-a-managed-windows-runtime-component.md
+            - name: Windows 런타임 형식의 .NET Framework 매핑
+              href: ../winrt-components/net-framework-mappings-of-windows-runtime-types.md
+        - name: '연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출'
+          href: ../winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md
+        - name: Windows 런타임 구성 요소에서 이벤트 발생
+          href: ../winrt-components/raising-events-in-windows-runtime-components.md
+        - name: 테스트용으로 로드하는 UWP 앱의 조정된 Windows 런타임 구성 요소
+          href: ../winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md
+    - name: XAML 플랫폼
+      href: ../xaml-platform/index.md
       items:
-      - name: XAML 구문 가이드
-        href: ../xaml-platform/xaml-syntax-guide.md
-        items:
-        - name: 속성 경로 구문
-          href: ../xaml-platform/property-path-syntax.md
-        - name: 이동 및 그리기 명령 구문
-          href: ../xaml-platform/move-draw-commands-syntax.md
-      - name: XAML 및 공백
-        href: ../xaml-platform/xaml-and-whitespace.md
-      - name: XAML 이름 범위
-        href: ../xaml-platform/xaml-namescopes.md
-      - name: XAML 네임스페이스 및 네임스페이스 매핑
-        href: ../xaml-platform/xaml-namespaces-and-namespace-mapping.md
-      - name: Template settings 클래스
-        href: ../xaml-platform/template-settings-classes.md
-      - name: x:Class 특성
-        href: ../xaml-platform/x-class-attribute.md
-      - name: x:DefaultBindMode 특성
-        href: ../xaml-platform/x-defaultbindmode-attribute.md
-      - name: x:DeferLoadStrategy 특성
-        href: ../xaml-platform/x-deferloadstrategy-attribute.md
-      - name: x:FieldModifier 특성
-        href: ../xaml-platform/x-fieldmodifier-attribute.md
-      - name: x:Key 특성
-        href: ../xaml-platform/x-key-attribute.md
-      - name: x:Load 특성
-        href: ../xaml-platform/x-load-attribute.md
-      - name: x:Name 특성
-        href: ../xaml-platform/x-name-attribute.md
-      - name: x:Phase 특성
-        href: ../xaml-platform/x-phase-attribute.md
-      - name: x:Uid 지시문
-        href: ../xaml-platform/x-uid-directive.md
-      - name: '{x:Bind} 태그 확장'
-        href: ../xaml-platform/x-bind-markup-extension.md
-      - name: '{Binding} 태그 확장'
-        href: ../xaml-platform/binding-markup-extension.md
-      - name: '{x:Null} 태그 확장'
-        href: ../xaml-platform/x-null-markup-extension.md
-      - name: XAML 인트린직 데이터 형식
-        href: ../xaml-platform/xaml-intrinsic-data-types.md
-      - name: '{CustomResource} 태그 확장'
-        href: ../xaml-platform/customresource-markup-extension.md
-      - name: '{RelativeSource} 태그 확장'
-        href: ../xaml-platform/relativesource-markup-extension.md
-      - name: '{StaticResource} 태그 확장'
-        href: ../xaml-platform/staticresource-markup-extension.md
-      - name: '{TemplateBinding} 태그 확장'
-        href: ../xaml-platform/templatebinding-markup-extension.md
-      - name: '{ThemeResource} 태그 확장'
-        href: ../xaml-platform/themeresource-markup-extension.md
-    - name: 종속성 속성 개요
-      href: ../xaml-platform/dependency-properties-overview.md
-    - name: 사용자 지정 종속성 속성
-      href: ../xaml-platform/custom-dependency-properties.md
-    - name: 연결된 속성 개요
-      href: ../xaml-platform/attached-properties-overview.md
-    - name: 사용자 지정 연결된 속성
-      href: ../xaml-platform/custom-attached-properties.md
-    - name: 이벤트 및 라우트된 이벤트 개요
-      href: ../xaml-platform/events-and-routed-events-overview.md
-    - name: 데스크톱 응용 프로그램의 UWP 컨트롤
-      href: ../xaml-platform/xaml-host-controls.md
-      items:
-      - name: UWP XAML 호스팅 API 사용
-        href: ../xaml-platform/using-the-xaml-hosting-api.md
+        - name: XAML 개요
+          href: ../xaml-platform/xaml-overview.md
+          items:
+            - name: XAML 구문 가이드
+              href: ../xaml-platform/xaml-syntax-guide.md
+              items:
+                - name: 속성 경로 구문
+                  href: ../xaml-platform/property-path-syntax.md
+                - name: 이동 및 그리기 명령 구문
+                  href: ../xaml-platform/move-draw-commands-syntax.md
+            - name: XAML 및 공백
+              href: ../xaml-platform/xaml-and-whitespace.md
+            - name: XAML 이름 범위
+              href: ../xaml-platform/xaml-namescopes.md
+            - name: XAML 네임스페이스 및 네임스페이스 매핑
+              href: ../xaml-platform/xaml-namespaces-and-namespace-mapping.md
+            - name: Template settings 클래스
+              href: ../xaml-platform/template-settings-classes.md
+            - name: 'x:Class 특성'
+              href: ../xaml-platform/x-class-attribute.md
+            - name: 'x:DefaultBindMode 특성'
+              href: ../xaml-platform/x-defaultbindmode-attribute.md
+            - name: 'x:DeferLoadStrategy 특성'
+              href: ../xaml-platform/x-deferloadstrategy-attribute.md
+            - name: 'x:FieldModifier 특성'
+              href: ../xaml-platform/x-fieldmodifier-attribute.md
+            - name: 'x:Key 특성'
+              href: ../xaml-platform/x-key-attribute.md
+            - name: 'x:Load 특성'
+              href: ../xaml-platform/x-load-attribute.md
+            - name: 'x:Name 특성'
+              href: ../xaml-platform/x-name-attribute.md
+            - name: 'x:Phase 특성'
+              href: ../xaml-platform/x-phase-attribute.md
+            - name: 'x:Uid 지시문'
+              href: ../xaml-platform/x-uid-directive.md
+            - name: '{x:Bind} 태그 확장'
+              href: ../xaml-platform/x-bind-markup-extension.md
+            - name: '{Binding} 태그 확장'
+              href: ../xaml-platform/binding-markup-extension.md
+            - name: '{x:Null} 태그 확장'
+              href: ../xaml-platform/x-null-markup-extension.md
+            - name: XAML 인트린직 데이터 형식
+              href: ../xaml-platform/xaml-intrinsic-data-types.md
+            - name: '{CustomResource} 태그 확장'
+              href: ../xaml-platform/customresource-markup-extension.md
+            - name: '{RelativeSource} 태그 확장'
+              href: ../xaml-platform/relativesource-markup-extension.md
+            - name: '{StaticResource} 태그 확장'
+              href: ../xaml-platform/staticresource-markup-extension.md
+            - name: '{TemplateBinding} 태그 확장'
+              href: ../xaml-platform/templatebinding-markup-extension.md
+            - name: '{ThemeResource} 태그 확장'
+              href: ../xaml-platform/themeresource-markup-extension.md
+        - name: 종속성 속성 개요
+          href: ../xaml-platform/dependency-properties-overview.md
+        - name: 사용자 지정 종속성 속성
+          href: ../xaml-platform/custom-dependency-properties.md
+        - name: 연결된 속성 개요
+          href: ../xaml-platform/attached-properties-overview.md
+        - name: 사용자 지정 연결된 속성
+          href: ../xaml-platform/custom-attached-properties.md
+        - name: 이벤트 및 라우트된 이벤트 개요
+          href: ../xaml-platform/events-and-routed-events-overview.md
+        - name: 데스크톱 응용 프로그램의 UWP 컨트롤
+          href: ../xaml-platform/xaml-host-controls.md
+          items:
+            - name: UWP XAML 호스팅 API 사용
+              href: ../xaml-platform/using-the-xaml-hosting-api.md
 - name: 사람 및 장소
   items:
-  - name: 연락처, 내 피플 및 일정
-    href: ../contacts-and-calendar/index.md
-    items:
-    - name: 내 피플
-      href: ../contacts-and-calendar/my-people-support.md
+    - name: '연락처, 내 피플 및 일정'
+      href: ../contacts-and-calendar/index.md
       items:
-      - name: 내 피플 공유
-        href: ../contacts-and-calendar/my-people-sharing.md
-      - name: 내 피플 알림
-        href: ../contacts-and-calendar/my-people-notifications.md
-    - name: 연락처 선택
-      href: ../contacts-and-calendar/selecting-contacts.md
-    - name: 메일 보내기
-      href: ../contacts-and-calendar/sending-email.md
-    - name: SMS 메시지 보내기
-      href: ../contacts-and-calendar/sending-an-sms-message.md
-    - name: 약속 관리
-      href: ../contacts-and-calendar/managing-appointments.md
-    - name: 연락처 카드의 작업에 앱 연결
-      href: ../contacts-and-calendar/integrating-with-contacts.md
-  - name: 지도 및 위치
-    href: ../maps-and-location/index.md
-    items:
-    - name: 인증 키 요청
-      href: ../maps-and-location/authentication-key.md
-    - name: 지도 표시
-      href: ../maps-and-location/display-maps.md
-    - name: 관심 지점 표시
-      href: ../maps-and-location/display-poi.md
-    - name: 경로 및 길 찾기 표시
-      href: ../maps-and-location/routes-and-directions.md
-    - name: 바둑판식 이미지 오버레이
-      href: ../maps-and-location/overlay-tiled-images.md
-    - name: 지오코딩 수행
-      href: ../maps-and-location/geocoding.md
-    - name: 현재 위치 가져오기
-      href: ../maps-and-location/get-location.md
-    - name: 위치 인식 앱에 대한 디자인 지침
-      href: ../maps-and-location/guidelines-and-checklist-for-detecting-location.md
-    - name: 방문 추적 사용에 대한 지침
-      href: ../maps-and-location/guidelines-for-visits.md
-    - name: 지오펜스 설정
-      href: ../maps-and-location/set-up-a-geofence.md
-    - name: 지오펜싱에 대한 디자인 지침
-      href: ../maps-and-location/guidelines-for-geofencing.md
-    - name: 지도 스타일 시트 참조
-      href: ../maps-and-location/elements-of-map-style-sheet.md
-- name: 주변 장치, 센서 및 전원
+        - name: 내 피플
+          href: ../contacts-and-calendar/my-people-support.md
+          items:
+            - name: 내 피플 공유
+              href: ../contacts-and-calendar/my-people-sharing.md
+            - name: 내 피플 알림
+              href: ../contacts-and-calendar/my-people-notifications.md
+        - name: 연락처 선택
+          href: ../contacts-and-calendar/selecting-contacts.md
+        - name: 메일 보내기
+          href: ../contacts-and-calendar/sending-email.md
+        - name: SMS 메시지 보내기
+          href: ../contacts-and-calendar/sending-an-sms-message.md
+        - name: 약속 관리
+          href: ../contacts-and-calendar/managing-appointments.md
+        - name: 연락처 카드의 작업에 앱 연결
+          href: ../contacts-and-calendar/integrating-with-contacts.md
+    - name: 지도 및 위치
+      href: ../maps-and-location/index.md
+      items:
+        - name: 인증 키 요청
+          href: ../maps-and-location/authentication-key.md
+        - name: 지도 표시
+          href: ../maps-and-location/display-maps.md
+        - name: 관심 지점 표시
+          href: ../maps-and-location/display-poi.md
+        - name: 경로 및 길 찾기 표시
+          href: ../maps-and-location/routes-and-directions.md
+        - name: 바둑판식 이미지 오버레이
+          href: ../maps-and-location/overlay-tiled-images.md
+        - name: 지오코딩 수행
+          href: ../maps-and-location/geocoding.md
+        - name: 현재 위치 가져오기
+          href: ../maps-and-location/get-location.md
+        - name: 위치 인식 앱에 대한 디자인 지침
+          href: ../maps-and-location/guidelines-and-checklist-for-detecting-location.md
+        - name: 방문 추적 사용에 대한 지침
+          href: ../maps-and-location/guidelines-for-visits.md
+        - name: 지오펜스 설정
+          href: ../maps-and-location/set-up-a-geofence.md
+        - name: 지오펜싱에 대한 디자인 지침
+          href: ../maps-and-location/guidelines-for-geofencing.md
+        - name: 지도 스타일 시트 참조
+          href: ../maps-and-location/elements-of-map-style-sheet.md
+- name: '주변 장치, 센서 및 전원'
   href: ../devices-sensors/index.md
   items:
-  - name: 장치 기능 사용
-    href: ../devices-sensors/enable-device-capabilities.md
-  - name: 사용자 모드 액세스를 사용하도록 설정
-    href: ../devices-sensors/enable-usermode-access.md
-  - name: 디바이스 열거
-    href: ../devices-sensors/enumerate-devices.md
-    items:
-    - name: 디바이스 선택기 빌드
-      href: ../devices-sensors/build-a-device-selector.md
-    - name: 네트워크를 통해 디바이스 열거
-      href: ../devices-sensors/enumerate-devices-over-a-network.md
-    - name: 디바이스 정보 속성
-      href: ../devices-sensors/device-information-properties.md
-    - name: AEP 서비스 클래스 ID
-      href: ../devices-sensors/aep-service-class-ids.md
-  - name: 장치 페어링
-    href: ../devices-sensors/pair-devices.md
-  - name: 서비스 지점
-    href: ../devices-sensors/point-of-service.md
-    items:
-    - name: 기본 사항
-      href: ../devices-sensors/pos-basics.md
+    - name: 장치 기능 사용
+      href: ../devices-sensors/enable-device-capabilities.md
+    - name: 사용자 모드 액세스를 사용하도록 설정
+      href: ../devices-sensors/enable-usermode-access.md
+    - name: 디바이스 열거
+      href: ../devices-sensors/enumerate-devices.md
       items:
-      - name: 접근 권한 값 선언
-        href: ../devices-sensors/pos-basics-capability.md
-      - name: 장치 열거
-        href: ../devices-sensors/pos-basics-enumerating.md
-      - name: 장치 개체 만들기
-        href: ../devices-sensors/pos-basics-deviceobject.md
-      - name: 클레임 및 사용
-        href: ../devices-sensors/pos-basics-claim.md
-      - name: 주변 장치를 다른 사용자와 공유
-        href: ../devices-sensors/pos-basics-sharing.md
-      - name: 시작
-        href: ../devices-sensors/pos-get-started.md
-    - name: 하드웨어 지원
-      href: ../devices-sensors/pos-device-support.md
-    - name: 바코드 스캐너
-      href: ../devices-sensors/pos-barcodescanner.md
+        - name: 디바이스 선택기 빌드
+          href: ../devices-sensors/build-a-device-selector.md
+        - name: 네트워크를 통해 디바이스 열거
+          href: ../devices-sensors/enumerate-devices-over-a-network.md
+        - name: 디바이스 정보 속성
+          href: ../devices-sensors/device-information-properties.md
+        - name: AEP 서비스 클래스 ID
+          href: ../devices-sensors/aep-service-class-ids.md
+    - name: 장치 페어링
+      href: ../devices-sensors/pair-devices.md
+    - name: 서비스 지점
+      href: ../devices-sensors/point-of-service.md
       items:
-      - name: 바코드 스캐너 구성
-        href: ../devices-sensors/pos-barcodescanner-configure.md
-      - name: 소프트웨어 트리거 사용
-        href: ../devices-sensors/pos-barcodescanner-software-trigger.md
-      - name: 기호 처리
-        href: ../devices-sensors/pos-barcodescanner-symbologies.md
-      - name: 바코드 데이터 받기 및 인식하기
-        href: ../devices-sensors/pos-barcodescanner-scan-data.md
-      - name: 카메라 바코드 스캐너
-        href: ../devices-sensors/pos-camerabarcode.md
-        items:
-        - name: 시스템 요구 사항
-          href: ../devices-sensors/pos-camerabarcode-system-requirements.md
-        - name: 시작
-          href: ../devices-sensors/pos-camerabarcode-get-started.md
-        - name: 카메라 미리 보기 호스팅
-          href: ../devices-sensors/pos-camerabarcode-hosting-preview.md
-        - name: 카메라 바코드 스캐너 활성화/비활성화
-          href: ../devices-sensors/pos-camerabarcode-enable-disable.md
-        - name: 지원되는 기호
-          href: ../devices-sensors/pos-camerabarcode-symbologies.md
-    - name: 자기 띠 판독기
-      href: ../devices-sensors/pos-magnetic-stripe-reader.md
+        - name: 기본 사항
+          href: ../devices-sensors/pos-basics.md
+          items:
+            - name: 접근 권한 값 선언
+              href: ../devices-sensors/pos-basics-capability.md
+            - name: 장치 열거
+              href: ../devices-sensors/pos-basics-enumerating.md
+            - name: 장치 개체 만들기
+              href: ../devices-sensors/pos-basics-deviceobject.md
+            - name: 클레임 및 사용
+              href: ../devices-sensors/pos-basics-claim.md
+            - name: 주변 장치를 다른 사용자와 공유
+              href: ../devices-sensors/pos-basics-sharing.md
+            - name: 시작
+              href: ../devices-sensors/pos-get-started.md
+        - name: 하드웨어 지원
+          href: ../devices-sensors/pos-device-support.md
+        - name: 바코드 스캐너
+          href: ../devices-sensors/pos-barcodescanner.md
+          items:
+            - name: 바코드 스캐너 구성
+              href: ../devices-sensors/pos-barcodescanner-configure.md
+            - name: 소프트웨어 트리거 사용
+              href: ../devices-sensors/pos-barcodescanner-software-trigger.md
+            - name: 기호 처리
+              href: ../devices-sensors/pos-barcodescanner-symbologies.md
+            - name: 바코드 데이터 받기 및 인식하기
+              href: ../devices-sensors/pos-barcodescanner-scan-data.md
+            - name: 카메라 바코드 스캐너
+              href: ../devices-sensors/pos-camerabarcode.md
+              items:
+                - name: 시스템 요구 사항
+                  href: ../devices-sensors/pos-camerabarcode-system-requirements.md
+                - name: 시작
+                  href: ../devices-sensors/pos-camerabarcode-get-started.md
+                - name: 카메라 미리 보기 호스팅
+                  href: ../devices-sensors/pos-camerabarcode-hosting-preview.md
+                - name: 카메라 바코드 스캐너 활성화/비활성화
+                  href: ../devices-sensors/pos-camerabarcode-enable-disable.md
+                - name: 지원되는 기호
+                  href: ../devices-sensors/pos-camerabarcode-symbologies.md
+        - name: 자기 띠 판독기
+          href: ../devices-sensors/pos-magnetic-stripe-reader.md
+          items:
+            - name: 자기 띠 데이터 가져오기 및 이해
+              href: ../devices-sensors/pos-magnetic-stripe-reader-data.md
+        - name: POSPrinter
+          href: ../devices-sensors/pos-printer.md
+          items:
+            - name: 서식 지정을 사용하는 Epson ESC/POS
+              href: ../devices-sensors/epson-esc-pos-with-formatting.md
+    - name: 센서
+      href: ../devices-sensors/sensors.md
       items:
-      - name: 자기 띠 데이터 가져오기 및 이해
-        href: ../devices-sensors/pos-magnetic-stripe-reader-data.md
-    - name: POSPrinter
-      href: ../devices-sensors/pos-printer.md
+        - name: 센서 보정
+          href: ../devices-sensors/calibrate-sensors.md
+        - name: 센서 방향
+          href: ../devices-sensors/sensor-orientation.md
+        - name: 가속도계 사용
+          href: ../devices-sensors/use-the-accelerometer.md
+        - name: 나침반 사용
+          href: ../devices-sensors/use-the-compass.md
+        - name: 회전계 사용
+          href: ../devices-sensors/use-the-gyrometer.md
+        - name: 경사계 사용
+          href: ../devices-sensors/use-the-inclinometer.md
+        - name: 광원 센서 사용
+          href: ../devices-sensors/use-the-light-sensor.md
+        - name: 방향 센서 사용
+          href: ../devices-sensors/use-the-orientation-sensor.md
+    - name: Bluetooth
+      href: ../devices-sensors/bluetooth.md
       items:
-      - name: 서식 지정을 사용하는 Epson ESC/POS
-        href: ../devices-sensors/epson-esc-pos-with-formatting.md
-  - name: 센서
-    href: ../devices-sensors/sensors.md
-    items:
-    - name: 센서 보정
-      href: ../devices-sensors/calibrate-sensors.md
-    - name: 센서 방향
-      href: ../devices-sensors/sensor-orientation.md
-    - name: 가속도계 사용
-      href: ../devices-sensors/use-the-accelerometer.md
-    - name: 나침반 사용
-      href: ../devices-sensors/use-the-compass.md
-    - name: 회전계 사용
-      href: ../devices-sensors/use-the-gyrometer.md
-    - name: 경사계 사용
-      href: ../devices-sensors/use-the-inclinometer.md
-    - name: 광원 센서 사용
-      href: ../devices-sensors/use-the-light-sensor.md
-    - name: 방향 센서 사용
-      href: ../devices-sensors/use-the-orientation-sensor.md
-  - name: Bluetooth
-    href: ../devices-sensors/bluetooth.md
-    items:
-    - name: RFCOMM
-      href: ../devices-sensors/send-or-receive-files-with-rfcomm.md
-    - name: Bluetooth 저 에너지
-      href: ../devices-sensors/bluetooth-low-energy-overview.md
+        - name: RFCOMM
+          href: ../devices-sensors/send-or-receive-files-with-rfcomm.md
+        - name: Bluetooth 저 에너지
+          href: ../devices-sensors/bluetooth-low-energy-overview.md
+          items:
+            - name: GATT 클라이언트
+              href: ../devices-sensors/gatt-client.md
+            - name: GATT 서버
+              href: ../devices-sensors//gatt-server.md
+            - name: 광고
+              href: ../devices-sensors/ble-beacon.md
+        - name: Bluetooth 개발자 FAQ
+          href: ../devices-sensors/bluetooth-dev-faq.md
+    - name: 인쇄 및 스캔
+      href: ../devices-sensors/printing-and-scanning.md
       items:
-      - name: GATT 클라이언트
-        href: ../devices-sensors/gatt-client.md
-      - name: GATT 서버
-        href: ../devices-sensors//gatt-server.md
-      - name: 광고
-        href: ../devices-sensors/ble-beacon.md
-    - name: Bluetooth 개발자 FAQ
-      href: ../devices-sensors/bluetooth-dev-faq.md
-  - name: 인쇄 및 스캔
-    href: ../devices-sensors/printing-and-scanning.md
-    items:
-    - name: 앱에서 인쇄하기
-      href: ../devices-sensors/print-from-your-app.md
-    - name: 인쇄 미리 보기 UI 사용자 지정
-      href: ../devices-sensors/customize-the-print-preview-ui.md
-    - name: 인쇄 워크플로 사용자 지정
-      href: ../devices-sensors/print-workflow-customize.md
-    - name: 앱에서 스캔
-      href: ../devices-sensors/scan-from-your-app.md
-  - name: 3D 인쇄
-    href: ../devices-sensors/3d-printing.md
-    items:
-    - name: 앱에서 3D 인쇄
-      href: ../devices-sensors/3d-print-from-app.md
-    - name: 3MF 패키지 생성
-      href: ../devices-sensors/generate-3mf.md
-  - name: NFC
-    href: ../devices-sensors/nfc.md
-    items:
-    - name: NFC 스마트 카드 앱 만들기
-      href: ../devices-sensors/host-card-emulation.md
-  - name: 배터리 정보 가져오기
-    href: ../devices-sensors/get-battery-info.md
+        - name: 앱에서 인쇄하기
+          href: ../devices-sensors/print-from-your-app.md
+        - name: 인쇄 미리 보기 UI 사용자 지정
+          href: ../devices-sensors/customize-the-print-preview-ui.md
+        - name: 인쇄 워크플로 사용자 지정
+          href: ../devices-sensors/print-workflow-customize.md
+        - name: 앱에서 스캔
+          href: ../devices-sensors/scan-from-your-app.md
+    - name: 3D 인쇄
+      href: ../devices-sensors/3d-printing.md
+      items:
+        - name: 앱에서 3D 인쇄
+          href: ../devices-sensors/3d-print-from-app.md
+        - name: 3MF 패키지 생성
+          href: ../devices-sensors/generate-3mf.md
+    - name: NFC
+      href: ../devices-sensors/nfc.md
+      items:
+        - name: NFC 스마트 카드 앱 만들기
+          href: ../devices-sensors/host-card-emulation.md
+    - name: 배터리 정보 가져오기
+      href: ../devices-sensors/get-battery-info.md
 - name: 앱 포팅
   items:
-  - name: 개요
-    href: ../porting/index.md
-  - name: Windows Phone Silverlight에서 UWP로 이동
-    href: ../porting/wpsl-to-uwp-root.md
-    items:
-    - name: 네임스페이스 및 클래스 매핑
-      href: ../porting/wpsl-to-uwp-namespace-and-class-mappings.md
-    - name: 프로젝트 포팅
-      href: ../porting/wpsl-to-uwp-porting-to-a-uwp-project.md
-    - name: 문제 해결
-      href: ../porting/wpsl-to-uwp-troubleshooting.md
-    - name: XAML 및 UI 포팅
-      href: ../porting/wpsl-to-uwp-porting-xaml-and-ui.md
-    - name: I/O, 디바이스 및 앱 모델에 대한 포팅
-      href: ../porting/wpsl-to-uwp-input-and-sensors.md
-    - name: 비즈니스 및 데이터 계층 포팅
-      href: ../porting/wpsl-to-uwp-business-and-data.md
-    - name: 폼 팩터 및 UX에 대한 포팅
-      href: ../porting/wpsl-to-uwp-form-factors-and-ux.md
-    - name: '사례 연구: Bookstore1'
-      href: ../porting/wpsl-to-uwp-case-study-bookstore1.md
-    - name: '사례 연구: Bookstore2'
-      href: ../porting/wpsl-to-uwp-case-study-bookstore2.md
-  - name: Windows 런타임 8.x에서 UWP로 이동
-    href: ../porting/w8x-to-uwp-root.md
-    items:
-    - name: 프로젝트 포팅
-      href: ../porting/w8x-to-uwp-porting-to-a-uwp-project.md
-    - name: 문제 해결
-      href: ../porting/w8x-to-uwp-troubleshooting.md
-    - name: XAML 및 UI 포팅
-      href: ../porting/w8x-to-uwp-porting-xaml-and-ui.md
-    - name: I/O, 디바이스 및 앱 모델에 대한 포팅
-      href: ../porting/w8x-to-uwp-input-and-sensors.md
-    - name: '사례 연구: Bookstore1'
-      href: ../porting/w8x-to-uwp-case-study-bookstore1.md
-    - name: '사례 연구: Bookstore2'
-      href: ../porting/w8x-to-uwp-case-study-bookstore2.md
-    - name: '사례 연구: QuizGame'
-      href: ../porting/w8x-to-uwp-case-study-quizgame.md
-  - name: 데스크톱 응용 프로그램 패키지
-    href: ../porting/desktop-to-uwp-root.md
-    items:
-    - name: 패키징 준비
-      href: ../porting/desktop-to-uwp-prepare.md
-    - name: Desktop App Converter를 사용하여 패키징
-      href: ../porting/desktop-to-uwp-run-desktop-app-converter.md
-    - name: Visual Studio를 사용하여 패키징
-      href: ../porting/desktop-to-uwp-packaging-dot-net.md
-    - name: 수동 패키징
-      href: ../porting/desktop-to-uwp-manual-conversion.md
-    - name: Windows 10과 통합
-      href: ../porting/desktop-to-uwp-extensions.md
-    - name: Windows 10용으로 개선
-      href: ../porting/desktop-to-uwp-enhance.md
+    - name: 개요
+      href: ../porting/index.md
+    - name: Windows Phone Silverlight에서 UWP로 이동
+      href: ../porting/wpsl-to-uwp-root.md
       items:
-      - name: 사용 가능한 UWP API
-        href: ../porting/desktop-to-uwp-supported-api.md
-      - name: 기본 이미지가 포함된 앱 바이너리 최적화
-        href: ../porting/desktop-to-uwp-r2r.md
-    - name: UWP로 확장
-      href: ../porting/desktop-to-uwp-extend.md
-    - name: 실행, 디버그 및 테스트
-      href: ../porting/desktop-to-uwp-debug.md
+        - name: 네임스페이스 및 클래스 매핑
+          href: ../porting/wpsl-to-uwp-namespace-and-class-mappings.md
+        - name: 프로젝트 포팅
+          href: ../porting/wpsl-to-uwp-porting-to-a-uwp-project.md
+        - name: 문제 해결
+          href: ../porting/wpsl-to-uwp-troubleshooting.md
+        - name: XAML 및 UI 포팅
+          href: ../porting/wpsl-to-uwp-porting-xaml-and-ui.md
+        - name: 'I/O, 디바이스 및 앱 모델에 대한 포팅'
+          href: ../porting/wpsl-to-uwp-input-and-sensors.md
+        - name: 비즈니스 및 데이터 계층 포팅
+          href: ../porting/wpsl-to-uwp-business-and-data.md
+        - name: 폼 팩터 및 UX에 대한 포팅
+          href: ../porting/wpsl-to-uwp-form-factors-and-ux.md
+        - name: '사례 연구: Bookstore1'
+          href: ../porting/wpsl-to-uwp-case-study-bookstore1.md
+        - name: '사례 연구: Bookstore2'
+          href: ../porting/wpsl-to-uwp-case-study-bookstore2.md
+    - name: Windows 런타임 8.x에서 UWP로 이동
+      href: ../porting/w8x-to-uwp-root.md
       items:
-      - name: Windows 10 S 모드 테스트
-        href: ../porting/desktop-to-uwp-test-windows-s.md
-    - name: 런타임 수정 적용
-      href: ../porting/package-support-framework.md
-    - name: 배포
-      href: ../porting/desktop-to-uwp-distribute.md
-    - name: 백그라운드 작업
-      href: ../porting/desktop-to-uwp-behind-the-scenes.md
-    - name: 알려진 문제
-      href: ../porting/desktop-to-uwp-known-issues.md
-  - name: 데스크톱과 UWP 간의 코드 공유
-    href: ../porting/desktop-to-uwp-migrate.md
-  - name: Android 및 iOS 개발자용 Windows 앱 개념 매핑
-    href: ../porting/android-ios-uwp-map.md
-  - name: iOS에서 UWP로 이동
-    href: ../porting/ios-to-uwp-root.md
-    items:
-    - name: iOS 및 UWP 앱 개발 방법 선택
-      href: ../porting/selecting-an-approach-to-ios-and-uwp-app-development.md
-    - name: iOS 개발자용 UWP 시작
-      href: ../porting/getting-started-with-uwp-for-ios-developers.md
+        - name: 프로젝트 포팅
+          href: ../porting/w8x-to-uwp-porting-to-a-uwp-project.md
+        - name: 문제 해결
+          href: ../porting/w8x-to-uwp-troubleshooting.md
+        - name: XAML 및 UI 포팅
+          href: ../porting/w8x-to-uwp-porting-xaml-and-ui.md
+        - name: 'I/O, 디바이스 및 앱 모델에 대한 포팅'
+          href: ../porting/w8x-to-uwp-input-and-sensors.md
+        - name: '사례 연구: Bookstore1'
+          href: ../porting/w8x-to-uwp-case-study-bookstore1.md
+        - name: '사례 연구: Bookstore2'
+          href: ../porting/w8x-to-uwp-case-study-bookstore2.md
+        - name: '사례 연구: QuizGame'
+          href: ../porting/w8x-to-uwp-case-study-quizgame.md
+    - name: 데스크톱 응용 프로그램 패키지
+      href: ../porting/desktop-to-uwp-root.md
       items:
-      - name: '시작: 프로젝트 만들기'
-        href: ../porting/getting-started-creating-a-project.md
-      - name: '시작: 프로그래밍 언어 선택'
-        href: ../porting/getting-started-choosing-a-programming-language.md
-      - name: '시작: Visual Studio 둘러보기'
-        href: ../porting/getting-started-getting-around-in-visual-studio.md
-      - name: '시작: 공용 컨트롤'
-        href: ../porting/getting-started-common-controls.md
-      - name: '시작: 탐색'
-        href: ../porting/getting-started-navigation.md
-      - name: '시작: 애니메이션'
-        href: ../porting/getting-started-animation.md
-      - name: '시작: 다음에 할 일'
-        href: ../porting/getting-started-what-next.md
-    - name: Windows 10에서 Mac 설정
-      href: ../porting/setting-up-your-mac-with-windows-10.md
-  - name: Windows 10에서 웹 앱을 PWA로 변환
-    href: https://docs.microsoft.com/microsoft-edge/progressive-web-apps
-    items:
-    - name: Windows 7 앱을 PWA로 패키지
-      href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-windows7.html
-    - name: iOS 앱을 PWA로 패키지
-      href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-ios.html
-    - name: Android 앱을 PWA로 패키지
-      href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-android.html
-    - name: MacOS 앱을 PWA로 패키지
-      href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-mac.html
-  - name: ARM 기반 Windows 10
-    href: ../porting/apps-on-arm.md
-    items:
-    - name: ARM에서 x86 에뮬레이션이 작동하는 방식
-      href: ../porting/apps-on-arm-x86-emulation.md
-    - name: x86 데스크톱 앱의 문제 해결
-      href: ../porting/apps-on-arm-troubleshooting-x86.md
-    - name: UWP ARM32 앱 문제 해결
-      href: ../porting/apps-on-arm-troubleshooting-arm32.md
-    - name: ARM의 프로그램 호환성 문제 해결사
-      href: ../porting/apps-on-arm-program-compat-troubleshooter.md
+        - name: 패키징 준비
+          href: ../porting/desktop-to-uwp-prepare.md
+        - name: Desktop App Converter를 사용하여 패키징
+          href: ../porting/desktop-to-uwp-run-desktop-app-converter.md
+        - name: Visual Studio를 사용하여 패키징
+          href: ../porting/desktop-to-uwp-packaging-dot-net.md
+        - name: 수동 패키징
+          href: ../porting/desktop-to-uwp-manual-conversion.md
+        - name: Windows 10과 통합
+          href: ../porting/desktop-to-uwp-extensions.md
+        - name: Windows 10용으로 개선
+          href: ../porting/desktop-to-uwp-enhance.md
+          items:
+            - name: 사용 가능한 UWP API
+              href: ../porting/desktop-to-uwp-supported-api.md
+            - name: 기본 이미지가 포함된 앱 바이너리 최적화
+              href: ../porting/desktop-to-uwp-r2r.md
+        - name: UWP로 확장
+          href: ../porting/desktop-to-uwp-extend.md
+        - name: '실행, 디버그 및 테스트'
+          href: ../porting/desktop-to-uwp-debug.md
+          items:
+            - name: Windows 10 S 모드 테스트
+              href: ../porting/desktop-to-uwp-test-windows-s.md
+        - name: 런타임 수정 적용
+          href: ../porting/package-support-framework.md
+        - name: 배포
+          href: ../porting/desktop-to-uwp-distribute.md
+        - name: 백그라운드 작업
+          href: ../porting/desktop-to-uwp-behind-the-scenes.md
+        - name: 알려진 문제
+          href: ../porting/desktop-to-uwp-known-issues.md
+    - name: 데스크톱과 UWP 간의 코드 공유
+      href: ../porting/desktop-to-uwp-migrate.md
+    - name: Android 및 iOS 개발자용 Windows 앱 개념 매핑
+      href: ../porting/android-ios-uwp-map.md
+    - name: iOS에서 UWP로 이동
+      href: ../porting/ios-to-uwp-root.md
+      items:
+        - name: iOS 및 UWP 앱 개발 방법 선택
+          href: ../porting/selecting-an-approach-to-ios-and-uwp-app-development.md
+        - name: iOS 개발자용 UWP 시작
+          href: ../porting/getting-started-with-uwp-for-ios-developers.md
+          items:
+            - name: '시작: 프로젝트 만들기'
+              href: ../porting/getting-started-creating-a-project.md
+            - name: '시작: 프로그래밍 언어 선택'
+              href: ../porting/getting-started-choosing-a-programming-language.md
+            - name: '시작: Visual Studio 둘러보기'
+              href: ../porting/getting-started-getting-around-in-visual-studio.md
+            - name: '시작: 공용 컨트롤'
+              href: ../porting/getting-started-common-controls.md
+            - name: '시작: 탐색'
+              href: ../porting/getting-started-navigation.md
+            - name: '시작: 애니메이션'
+              href: ../porting/getting-started-animation.md
+            - name: '시작: 다음에 할 일'
+              href: ../porting/getting-started-what-next.md
+        - name: Windows 10에서 Mac 설정
+          href: ../porting/setting-up-your-mac-with-windows-10.md
+    - name: Windows 10에서 웹 앱을 PWA로 변환
+      href: 'https://docs.microsoft.com/microsoft-edge/progressive-web-apps'
+      items:
+        - name: Windows 7 앱을 PWA로 패키지
+          href: 'https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-windows7.html'
+        - name: iOS 앱을 PWA로 패키지
+          href: 'https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-ios.html'
+        - name: Android 앱을 PWA로 패키지
+          href: 'https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-android.html'
+        - name: MacOS 앱을 PWA로 패키지
+          href: 'https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-mac.html'
+    - name: ARM 기반 Windows 10
+      href: ../porting/apps-on-arm.md
+      items:
+        - name: ARM에서 x86 에뮬레이션이 작동하는 방식
+          href: ../porting/apps-on-arm-x86-emulation.md
+        - name: 데스크톱 x86 앱 문제 해결
+          href: ../porting/apps-on-arm-troubleshooting-x86.md
+        - name: UWP ARM 앱 문제 해결
+          href: ../porting/apps-on-arm-troubleshooting-arm32.md
+        - name: ARM의 프로그램 호환성 문제 해결사
+          href: ../porting/apps-on-arm-program-compat-troubleshooter.md
 - name: 프로세스 및 스레딩
   items:
-  - name: 실행, 다시 시작 및 백그라운드 작업
-    href: ../launch-resume/index.md
-    items:
-    - name: 유니버설 Windows 플랫폼 콘솔 앱 만들기
-      href: ../launch-resume/console-uwp.md
-    - name: 다중 인스턴스 UWP 앱 만들기
-      href: ../launch-resume/multi-instance-uwp.md
-    - name: 앱 수명 주기
-      href: ../launch-resume/app-lifecycle.md
+    - name: '실행, 다시 시작 및 백그라운드 작업'
+      href: ../launch-resume/index.md
       items:
-      - name: 앱 사전 실행 처리
-        href: ../launch-resume/handle-app-prelaunch.md
-      - name: 앱 활성화 처리
-        href: ../launch-resume/activate-an-app.md
-      - name: 앱 일시 중단 처리
-        href: ../launch-resume/suspend-an-app.md
-      - name: 앱 다시 시작 처리
-        href: ../launch-resume/resume-an-app.md
-      - name: 앱이 백그라운드로 이동할 때 메모리 회수
-        href: ../launch-resume/reduce-memory-usage.md
-      - name: 확장 실행을 사용하여 앱 일시 중단 연기
-        href: ../launch-resume/run-minimized-with-extended-execution.md
-    - name: URI를 사용하여 앱 실행
-      href: ../launch-resume/launch-app-with-uri.md
+        - name: 유니버설 Windows 플랫폼 콘솔 앱 만들기
+          href: ../launch-resume/console-uwp.md
+        - name: 다중 인스턴스 UWP 앱 만들기
+          href: ../launch-resume/multi-instance-uwp.md
+        - name: 앱 수명 주기
+          href: ../launch-resume/app-lifecycle.md
+          items:
+            - name: 앱 사전 실행 처리
+              href: ../launch-resume/handle-app-prelaunch.md
+            - name: 앱 활성화 처리
+              href: ../launch-resume/activate-an-app.md
+            - name: 앱 일시 중단 처리
+              href: ../launch-resume/suspend-an-app.md
+            - name: 앱 다시 시작 처리
+              href: ../launch-resume/resume-an-app.md
+            - name: 앱이 백그라운드로 이동할 때 메모리 회수
+              href: ../launch-resume/reduce-memory-usage.md
+            - name: 확장 실행을 사용하여 앱 일시 중단 연기
+              href: ../launch-resume/run-minimized-with-extended-execution.md
+        - name: URI를 사용하여 앱 실행
+          href: ../launch-resume/launch-app-with-uri.md
+          items:
+            - name: URI에 대한 기본 앱 실행
+              href: ../launch-resume/launch-default-app.md
+            - name: URI 활성화 처리
+              href: ../launch-resume/handle-uri-activation.md
+            - name: 결과를 위한 앱 실행
+              href: ../launch-resume/how-to-launch-an-app-for-results.md
+            - name: ms-tonepicker URI 체계를 사용하여 톤 선택 및 저장
+              href: ../launch-resume/launch-ringtone-picker.md
+            - name: Windows 설정 앱 실행
+              href: ../launch-resume/launch-settings-app.md
+            - name: Microsoft Store 앱 열기
+              href: ../launch-resume/launch-store-app.md
+            - name: Windows 지도 앱 실행
+              href: ../launch-resume/launch-maps-app.md
+            - name: 피플 앱 시작
+              href: ../launch-resume/launch-people-apps.md
+            - name: 화면 캡처 시작
+              href: ../launch-resume/launch-screen-snipping.md
+            - name: 앱 URI 처리기로 웹과 앱 연결 지원
+              href: ../launch-resume/web-to-app-linking.md
+        - name: 파일 활성화를 통해 앱 실행
+          href: ../launch-resume/launch-app-from-file.md
+          items:
+            - name: 파일에 대한 기본 앱 실행
+              href: ../launch-resume/launch-the-default-app-for-a-file.md
+            - name: 파일 활성화 처리
+              href: ../launch-resume/handle-file-activation.md
+        - name: 자동 실행을 사용한 자동 시작
+          href: ../launch-resume/auto-launching-with-autoplay.md
+        - name: 예약된 파일 및 URI 스키마 이름
+          href: ../launch-resume/reserved-uri-scheme-names.md
+        - name: 앱 서비스 및 확장 사용
+          href: ../launch-resume/app-services.md
+          items:
+            - name: 앱 서비스 만들기 및 사용
+              href: ../launch-resume/how-to-create-and-consume-an-app-service.md
+            - name: 앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환
+              href: ../launch-resume/convert-app-service-in-process.md
+            - name: '서비스, 확장 및 패키지로 앱 확장'
+              href: ../launch-resume/extend-your-app-with-services-extensions-packages.md
+            - name: 앱 확장 만들기 및 사용
+              href: ../launch-resume/how-to-create-an-extension.md
+        - name: 백그라운드 작업을 사용하여 앱 지원
+          href: ../launch-resume/support-your-app-with-background-tasks.md
+          items:
+            - name: 백그라운드 작업 지침
+              href: ../launch-resume/guidelines-for-background-tasks.md
+            - name: 백그라운드 작업에서 센서 및 장치에 액세스
+              href: ../launch-resume/access-sensors-and-devices-from-a-background-task.md
+            - name: In-process 백그라운드 작업 만들기 및 등록
+              href: ../launch-resume/create-and-register-an-inproc-background-task.md
+            - name: Out-of-process 백그라운드 작업 만들기 및 등록
+              href: ../launch-resume/create-and-register-a-background-task.md
+            - name: out of process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅
+              href: ../launch-resume/convert-out-of-process-background-task.md
+            - name: 백그라운드 작업 디버그
+              href: ../launch-resume/debug-a-background-task.md
+            - name: 응용 프로그램 매니페스트에서 백그라운드 작업 선언
+              href: ../launch-resume/declare-background-tasks-in-the-application-manifest.md
+            - name: 백그라운드 작업 등록 그룹화
+              href: ../launch-resume/group-background-tasks.md
+            - name: 취소된 백그라운드 작업 처리
+              href: ../launch-resume/handle-a-cancelled-background-task.md
+            - name: 백그라운드 작업 진행 및 완료 모니터링
+              href: ../launch-resume/monitor-background-task-progress-and-completion.md
+            - name: 백그라운드 작업 등록
+              href: ../launch-resume/register-a-background-task.md
+            - name: 백그라운드 작업으로 시스템 이벤트에 응답
+              href: ../launch-resume/respond-to-system-events-with-background-tasks.md
+            - name: 타이머에 따라 백그라운드 작업 실행
+              href: ../launch-resume/run-a-background-task-on-a-timer-.md
+            - name: UWP 앱 업데이트 시 백그라운드 작업을 실행합니다.
+              href: ../launch-resume/run-a-background-task-during-updatetask.md
+            - name: 백그라운드에서 무기한 실행
+              href: ../launch-resume/run-in-the-background-indefinetly.md
+            - name: 백그라운드 작업 실행 조건 설정
+              href: ../launch-resume/set-conditions-for-running-a-background-task.md
+            - name: 앱에서 백그라운드 작업 트리거
+              href: ../launch-resume/trigger-background-task-from-app.md
+            - name: 백그라운드 작업에서 라이브 타일 업데이트
+              href: ../launch-resume/update-a-live-tile-from-a-background-task.md
+            - name: 유지 관리 트리거 사용
+              href: ../launch-resume/use-a-maintenance-trigger.md
+        - name: 연결된 앱 및 디바이스(프로젝트 로마)
+          href: ../launch-resume/connected-apps-and-devices.md
+          items:
+            - name: 원격 디바이스 검색
+              href: ../launch-resume/discover-remote-devices.md
+            - name: 원격 디바이스에서 앱 시작
+              href: ../launch-resume/launch-a-remote-app.md
+            - name: 원격 앱 서비스와 통신
+              href: ../launch-resume/communicate-with-a-remote-app-service.md
+            - name: 원격 세션을 통해 장치 연결
+              href: ../launch-resume/remote-sessions.md
+            - name: 장치 간 사용자 활동 계속 수행
+              href: ../launch-resume/useractivities.md
+            - name: 사용자 활동 모범 사례
+              href: ../launch-resume/useractivities-best-practices.md
+        - name: 시작 화면
+          href: ../launch-resume/splash-screens.md
+          items:
+            - name: 시작 화면 추가
+              href: ../launch-resume/add-a-splash-screen.md
+            - name: 시작 화면을 더 오래 표시
+              href: ../launch-resume/create-a-customized-splash-screen.md
+    - name: 스레딩 및 비동기 프로그래밍
+      href: ../threading-async/index.md
       items:
-      - name: URI에 대한 기본 앱 실행
-        href: ../launch-resume/launch-default-app.md
-      - name: URI 활성화 처리
-        href: ../launch-resume/handle-uri-activation.md
-      - name: 결과를 위한 앱 실행
-        href: ../launch-resume/how-to-launch-an-app-for-results.md
-      - name: ms-tonepicker URI 체계를 사용하여 톤 선택 및 저장
-        href: ../launch-resume/launch-ringtone-picker.md
-      - name: Windows 설정 앱 실행
-        href: ../launch-resume/launch-settings-app.md
-      - name: Microsoft Store 앱 열기
-        href: ../launch-resume/launch-store-app.md
-      - name: Windows 지도 앱 실행
-        href: ../launch-resume/launch-maps-app.md
-      - name: 피플 앱 시작
-        href: ../launch-resume/launch-people-apps.md
-      - name: 화면 캡처 시작
-        href: ../launch-resume/launch-screen-snipping.md
-      - name: 앱 URI 처리기로 웹과 앱 연결 지원
-        href: ../launch-resume/web-to-app-linking.md
-    - name: 파일 활성화를 통해 앱 실행
-      href: ../launch-resume/launch-app-from-file.md
-      items:
-      - name: 파일에 대한 기본 앱 실행
-        href: ../launch-resume/launch-the-default-app-for-a-file.md
-      - name: 파일 활성화 처리
-        href: ../launch-resume/handle-file-activation.md
-    - name: 자동 실행을 사용한 자동 시작
-      href: ../launch-resume/auto-launching-with-autoplay.md
-    - name: 예약된 파일 및 URI 스키마 이름
-      href: ../launch-resume/reserved-uri-scheme-names.md
-    - name: 앱 서비스 및 확장 사용
-      href: ../launch-resume/app-services.md
-      items:
-      - name: 앱 서비스 만들기 및 사용
-        href: ../launch-resume/how-to-create-and-consume-an-app-service.md
-      - name: 앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환
-        href: ../launch-resume/convert-app-service-in-process.md
-      - name: 서비스, 확장 및 패키지로 앱 확장
-        href: ../launch-resume/extend-your-app-with-services-extensions-packages.md
-      - name: 앱 확장 만들기 및 사용
-        href: ../launch-resume/how-to-create-an-extension.md
-    - name: 백그라운드 작업을 사용하여 앱 지원
-      href: ../launch-resume/support-your-app-with-background-tasks.md
-      items:
-      - name: 백그라운드 작업 지침
-        href: ../launch-resume/guidelines-for-background-tasks.md
-      - name: 백그라운드 작업에서 센서 및 장치에 액세스
-        href: ../launch-resume/access-sensors-and-devices-from-a-background-task.md
-      - name: In-process 백그라운드 작업 만들기 및 등록
-        href: ../launch-resume/create-and-register-an-inproc-background-task.md
-      - name: Out-of-process 백그라운드 작업 만들기 및 등록
-        href: ../launch-resume/create-and-register-a-background-task.md
-      - name: out of process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅
-        href: ../launch-resume/convert-out-of-process-background-task.md
-      - name: 백그라운드 작업 디버그
-        href: ../launch-resume/debug-a-background-task.md
-      - name: 응용 프로그램 매니페스트에서 백그라운드 작업 선언
-        href: ../launch-resume/declare-background-tasks-in-the-application-manifest.md
-      - name: 백그라운드 작업 등록 그룹화
-        href: ../launch-resume/group-background-tasks.md
-      - name: 취소된 백그라운드 작업 처리
-        href: ../launch-resume/handle-a-cancelled-background-task.md
-      - name: 백그라운드 작업 진행 및 완료 모니터링
-        href: ../launch-resume/monitor-background-task-progress-and-completion.md
-      - name: 백그라운드 작업 등록
-        href: ../launch-resume/register-a-background-task.md
-      - name: 백그라운드 작업으로 시스템 이벤트에 응답
-        href: ../launch-resume/respond-to-system-events-with-background-tasks.md
-      - name: 타이머에 따라 백그라운드 작업 실행
-        href: ../launch-resume/run-a-background-task-on-a-timer-.md
-      - name: UWP 앱 업데이트 시 백그라운드 작업을 실행합니다.
-        href: ../launch-resume/run-a-background-task-during-updatetask.md
-      - name: 백그라운드에서 무기한 실행
-        href: ../launch-resume/run-in-the-background-indefinetly.md
-      - name: 백그라운드 작업 실행 조건 설정
-        href: ../launch-resume/set-conditions-for-running-a-background-task.md
-      - name: 앱에서 백그라운드 작업 트리거
-        href: ../launch-resume/trigger-background-task-from-app.md
-      - name: 백그라운드 작업에서 라이브 타일 업데이트
-        href: ../launch-resume/update-a-live-tile-from-a-background-task.md
-      - name: 유지 관리 트리거 사용
-        href: ../launch-resume/use-a-maintenance-trigger.md
-    - name: 연결된 앱 및 디바이스(프로젝트 로마)
-      href: ../launch-resume/connected-apps-and-devices.md
-      items:
-      - name: 원격 디바이스 검색
-        href: ../launch-resume/discover-remote-devices.md
-      - name: 원격 디바이스에서 앱 시작
-        href: ../launch-resume/launch-a-remote-app.md
-      - name: 원격 앱 서비스와 통신
-        href: ../launch-resume/communicate-with-a-remote-app-service.md
-      - name: 원격 세션을 통해 장치 연결
-        href: ../launch-resume/remote-sessions.md
-      - name: 장치 간 사용자 활동 계속 수행
-        href: ../launch-resume/useractivities.md
-      - name: 사용자 활동 모범 사례
-        href: ../launch-resume/useractivities-best-practices.md
-    - name: 시작 화면
-      href: ../launch-resume/splash-screens.md
-      items:
-      - name: 시작 화면 추가
-        href: ../launch-resume/add-a-splash-screen.md
-      - name: 시작 화면을 더 오래 표시
-        href: ../launch-resume/create-a-customized-splash-screen.md
-  - name: 스레딩 및 비동기 프로그래밍
-    href: ../threading-async/index.md
-    items:
-    - name: 비동기 프로그래밍(UWP 앱)
-      href: ../threading-async/asynchronous-programming-universal-windows-platform-apps.md
-    - name: C++/CX의 비동기 프로그래밍(UWP 앱)
-      href: ../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md
-    - name: 스레드 풀을 사용하기 위한 모범 사례
-      href: ../threading-async/best-practices-for-using-the-thread-pool.md
-    - name: C# 또는 Visual Basic에서 비동기식 API 호출
-      href: ../threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md
-    - name: 정기 작업 항목 만들기
-      href: ../threading-async/create-a-periodic-work-item.md
-    - name: 스레드 풀에 작업 항목 제출
-      href: ../threading-async/submit-a-work-item-to-the-thread-pool.md
-    - name: 타이머를 사용하여 작업 항목 제출
-      href: ../threading-async/use-a-timer-to-submit-a-work-item.md
-    - name: 다중 스레드 환경에서 Windows 런타임 개체 사용
-      href: ../threading-async/using-windows-runtime-objects-in-a-multithreaded-environment.md
-ms.openlocfilehash: bfed0b442b408bd3ebded5b22993b9f1e19353ce
-ms.sourcegitcommit: 2ef3d22a30afe853de891280e11d96e5e1ab62d1
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "8981862"
+        - name: 비동기 프로그래밍(UWP 앱)
+          href: ../threading-async/asynchronous-programming-universal-windows-platform-apps.md
+        - name: C++/CX의 비동기 프로그래밍(UWP 앱)
+          href: ../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md
+        - name: 스레드 풀을 사용하기 위한 모범 사례
+          href: ../threading-async/best-practices-for-using-the-thread-pool.md
+        - name: 'C# 또는 Visual Basic에서 비동기식 API 호출'
+          href: ../threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md
+        - name: 정기 작업 항목 만들기
+          href: ../threading-async/create-a-periodic-work-item.md
+        - name: 스레드 풀에 작업 항목 제출
+          href: ../threading-async/submit-a-work-item-to-the-thread-pool.md
+        - name: 타이머를 사용하여 작업 항목 제출
+          href: ../threading-async/use-a-timer-to-submit-a-work-item.md
+        - name: 다중 스레드 환경에서 Windows 런타임 개체 사용
+          href: ../threading-async/using-windows-runtime-objects-in-a-multithreaded-environment.md
