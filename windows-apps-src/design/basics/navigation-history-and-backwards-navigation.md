@@ -7,12 +7,12 @@ ms.date: 06/21/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 192c5f4be7496b3fe47238c4965d6854f06d21b4
-ms.sourcegitcommit: 2e47a0d047e6ca8d3f473434a2b07b6216b55d17
+ms.openlocfilehash: c74d4ebd08dfeddfb4a0149cffcd7bb845ceff11
+ms.sourcegitcommit: 4ee300bfa6a238d3ce7674036ec1c574bb025210
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004506"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "9029946"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>UWP 앱에 대한 탐색 기록 및 뒤로 탐색
 
@@ -296,8 +296,6 @@ bool App::On_BackRequested()
 시스템 뒤로 표시줄은 탭 밴드와 앱의 콘텐츠 영역 사이 삽입 되는 "밴드"입니다. 밴드는 앱의 가로를 따라 흐르며 왼쪽 가장자리에 뒤로 단추가 표시됩니다. 밴드는 뒤로 단추에 대 한 적절 한 터치 대상 크기 32 픽셀의 세로 높이입니다.
 
 시스템 뒤로 표시줄은 뒤로 단추 표시 여부에 따라 동적으로 나타납니다. 뒤로 단추에 표시 된 경우, 시스템 뒤로 표시줄이 삽입 되 면 앱 콘텐츠를 탭 밴드 32 픽셀 이동 합니다. 뒤로 단추 숨겨진 경우, 시스템 뒤로 표시줄이 동적으로 제거 되 면 32 픽셀 탭 밴드를 충족 하도록 하 여 앱 콘텐츠 이동 합니다. 위나 앱의 UI를 사용 하지 않으려면 [앱 내 뒤로 단추](#back-button)를 사용 하는 것이 좋습니다.
-
-[제목 표시줄 사용자 지정](../shell/title-bar.md) 은 적용할 수 모두 앱 탭 및 시스템 뒤로 표시줄. [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar)사용 하 여 배경색 및 전경색 속성을 지정 하는 앱 경우 색을 적용할 탭 및 시스템 뒤로 표시줄.
 
 [제목 표시줄 사용자 지정](../shell/title-bar.md) 은 적용할 수 모두 앱 탭 및 시스템 뒤로 표시줄. [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar)사용 하 여 배경색 및 전경색 속성을 지정 하는 앱 경우 색을 적용할 탭 및 시스템 뒤로 표시줄.
 
