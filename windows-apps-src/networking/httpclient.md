@@ -6,15 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-dev_langs:
-- csharp
-- cppwinrt
-ms.openlocfilehash: 9cd5d9d275241ab107a3b1b06044ba0109d4bb3d
-ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
+ms.openlocfilehash: fd921782571082ee696c26480f1c55c96c30d7c2
+ms.sourcegitcommit: 7bea35c5a35c78e65f822313962c4b1579b163b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035394"
+ms.locfileid: "9035447"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -105,14 +102,12 @@ catch (Exception ex)
 ```cppwinrt
 // pch.h
 #pragma once
-
-#include "winrt/Windows.Foundation.h"
+#include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Web.Http.Headers.h>
 
 // main.cpp : Defines the entry point for the console application.
 #include "pch.h"
 #include <iostream>
-
 using namespace winrt;
 using namespace Windows::Foundation;
 
@@ -160,6 +155,66 @@ int main()
     std::wcout << httpResponseBody;
 }
 ```
+
+## <a name="post-binary-data-over-http"></a>HTTP 통해 포스트 이진 데이터
+
+[C + + WinRT](/windows/uwp/cpp-and-winrt-apis) 아래의 코드 예제는 적은 양의 [HttpBufferContent](/uwp/api/windows.web.http.httpbuffercontent) 클래스를 사용 하 여 POST 요청을 사용 하 여 이진 데이터를 전송 하는 방법을 보여 줍니다.
+
+```cppwinrt
+// pch.h
+#pragma once
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Storage.Streams.h>
+#include <winrt/Windows.Web.Http.Headers.h>
+
+// main.cpp : Defines the entry point for the console application.
+#include "pch.h"
+#include <iostream>
+#include <sstream>
+#include <winrt/Windows.Security.Cryptography.h>
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::Storage::Streams;
+
+int main()
+{
+    init_apartment();
+
+    // Create an HttpClient object.
+    Windows::Web::Http::HttpClient httpClient;
+
+    Uri requestUri{ L"http://www.contoso.com/post" };
+
+    auto buffer{
+    Windows::Security::Cryptography::CryptographicBuffer::ConvertStringToBinary(
+        L"A sentence of text by way of sample data",
+        Windows::Security::Cryptography::BinaryStringEncoding::Utf8)
+    };
+    Windows::Web::Http::HttpBufferContent postContent{ buffer };
+    postContent.Headers().Append(L"Content-Type", L"image/jpeg");
+
+    // Send the POST request asynchronously, and retrieve the response as a string.
+    Windows::Web::Http::HttpResponseMessage httpResponseMessage;
+    std::wstring httpResponseBody;
+
+    try
+    {
+        // Send the POST request.
+        httpResponseMessage = httpClient.PostAsync(requestUri, postContent).get();
+        httpResponseMessage.EnsureSuccessStatusCode();
+        httpResponseBody = httpResponseMessage.Content().ReadAsStringAsync().get();
+    }
+    catch (winrt::hresult_error const& ex)
+    {
+        httpResponseBody = ex.message();
+    }
+    std::wcout << httpResponseBody;
+}
+```
+
+이진 파일의 콘텐츠를 게시 하려면 찾을 수 것 보다 쉽게 [HttpStreamContent](/uwp/api/windows.web.http.httpstreamcontent) 개체를 사용할 수 있습니다. 하나를 생성 하 고 해당 생성자에 인수로 [StorageFile.OpenReadAsync](/uwp/api/windows.storage.storagefile.openreadasync)에 대 한 호출에서 반환 된 값을 전달 합니다. 해당 메서드 이진 파일 내에서 데이터에 대 한 스트림을 반환합니다.
+
+또한 (약 10MB 보다 큰)는 큰 파일을 업로드 하는 경우 다음 권장 Windows 런타임 [백그라운드 전송](/uwp/api/windows.networking.backgroundtransfer) Api를 사용 하는 합니다.
 
 ## <a name="exceptions-in-windowswebhttp"></a>Windows.Web.Http의 예외
 
