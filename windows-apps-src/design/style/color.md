@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7e6547267a1d0b478fdda8698bd1dcf89523442b
-ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
+ms.openlocfilehash: cbe2a62d52d546e06d3da3250dcd0f7394ba39c5
+ms.sourcegitcommit: 1391190e27907f0c7cd40e4bb56cdead387a53cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "8976900"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035543"
 ---
 # <a name="color"></a>색상
 
@@ -255,7 +255,7 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 
 ## <a name="scoping-system-colors"></a>시스템 색 범위 지정
 
-앱에서 자체 색을 정의 하는 것 외에도 **ColorSchemeResources** 태그를 사용 하 여 앱 전체에서 우리 systematized 색상을 원하는 영역을도 범위 수 있습니다. 이 API 뿐만 아니라 색을 지정 하 고 테마 많은 컨트롤 그룹을 한 번에 몇 가지 속성, 뿐만 아니라 제공 하면 다른 많은 시스템 혜택을 설정 하 여 사용자 지정 색을 수동으로 정의 게 일반적으로 허용 합니다.
+앱을 자체 색을 정의 하는 것 외에도 **ColorSchemeResources** 태그를 사용 하 여 앱 전체에서 원하는 영역에이 systematized 색을 또한 범위 수 있습니다. 이 API 뿐만 아니라 색을 지정 하 고 테마 많은 컨트롤 그룹을 한 번에 몇 가지 속성, 뿐만 아니라 제공 하면 다른 많은 시스템 혜택을 설정 하 여 사용자 지정 색을 수동으로 정의 게 일반적으로 허용 합니다.
 
 - **ColorSchemeResources** 를 사용 하 여 설정 된 모든 색 고대비 영향을 주지 않습니다.
   * 앱을 의미 추가 디자인 이나 개발자 비용 없이도 더 많은 사용자가 액세스할 수 있습니다.
@@ -266,19 +266,19 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 
 ### <a name="how-to-use-colorschemeresources"></a>ColorSchemeResources를 사용 하는 방법
 
-ColorSchemeResources는 시스템 리소스 되는 범위 위치를 알려 주는 API입니다. ColorSchemeResources는 [X:key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute)를 세 가지 중 하나가 될 수 있는 수행 해야 합니다.
+ColorSchemeResources는 시스템 리소스 되는 범위 위치를 알려 주는 API입니다. ColorSchemeResources는 [X:key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute)를 세 가지 중 하나일 수 있는 수행 해야 합니다.
 - Default
   * [밝게](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) 및 [어둡게](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) 둘 다 테마 색 변경 내용을 표시 됩니다.
 - Light
-  * 색 변경을 [밝은 테마](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) 에 표시 됩니다. 
+  * 색 변경 내용을 [밝은 테마](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) 에 표시 됩니다. 
 - 어둡게
-  * 색 변경을 [어두운 테마](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) 에 표시 됩니다.
+  * 색 변경 내용을 [어두운 테마](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) 에 표시 됩니다.
 
 X:key 설정 하면 시스템 또는 앱 테마 색 적절 하 게 변경 두 테마에서 다른 사용자 지정 모양을 원하는 해야 합니다.
 
 ### <a name="how-to-apply-scoped-colors"></a>범위가 지정 된 색을 적용 하는 방법
 
-범위는 **ColorSchemeResources** API xaml에서을 통해 리소스 시스템 색상 또는 [테마 리소스](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) 라이브러리에 있고 페이지 또는 컨테이너의 범위 내에서 재정의 하는 브러시를 수행할 수 있습니다.
+범위는 **ColorSchemeResources** API xaml에서을 통해 리소스 시스템 색상 또는 [테마 리소스](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) 라이브러리에 있고 페이지 또는 컨테이너의 범위 내에서를 재정의 하는 브러시를 수행할 수 있습니다.
 
 예를 들어, 두 개의 시스템 색- **SystemBaseLowColor** 및 grid에서 내부 **SystemBaseMediumLowColor** 정의 하 고 다음 페이지에 두 개의 단추를 배치 하는 경우: 해당 그리드 내 1과 하나의 외부:
 
@@ -299,8 +299,8 @@ X:key 설정 하면 시스템 또는 앱 테마 색 적절 하 게 변경 두 �
 
 ![범위가 지정 된 시스템 색 단추](images/color/scopedcolors_cyan_button.png)
 
-그러나이 모든 시스템 색 연속 변경 다른 컨트롤 너무, 이후 **SystemBaseLowColor** 및 **SystemBaseMediumLowColor** 설정 이상의 단추 적용 됩니다. 이 경우 제어 **ToggleButton**, **라디오 단추** 및 **슬라이더** 는 또한 영향을 받을 이러한 시스템 색 변경 처럼 해당 컨트롤에 저장 되어야 exampl 그리드 범위 위에 합니다.
-시스템 색 변경에 *하는 단일 컨트롤에만* 범위를 지정 하려는 경우 **ColorSchemeResources** 해당 컨트롤의 리소스 내에서 정의 하 여이 수행할 수 있습니다.
+그러나 우리의 모든 시스템 색도 다른 컨트롤 나타날 때까지 아래로 계단식, 이후 **SystemBaseLowColor** 및 **SystemBaseMediumLowColor** 설정 이상의 단추 적용 됩니다. 이 경우 제어 **ToggleButton**, **라디오 단추** 및 **슬라이더** 는 또한 영향을 받을 이러한 시스템 색 변경 처럼 해당 컨트롤에 저장 되어야 exampl 그리드 범위 위에 합니다.
+시스템 색 변경에 *하는 단일 컨트롤에만* 범위를 지정 하려는 경우 해당 컨트롤의 리소스 내에서 **ColorSchemeResources** 를 정의 하 여이 수행할 수 있습니다.
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -314,11 +314,11 @@ X:key 설정 하면 시스템 또는 앱 테마 색 적절 하 게 변경 두 �
 </Grid>
 <Button Content="Button_B"/>
 ```
-기본적으로, 앞으로 정확히 동일한 기능 했지만 이제 grid에 추가 된 다른 컨트롤 색 변경을 반영 되지 않습니다. 이러한 시스템 색 **Button_A** 로 범위가 때문입니다.
+기본적으로, 앞으로 정확히 동일한 기능 했지만 이제 눈금 목록에 추가 하는 다른 모든 컨트롤 색 변경을 반영 되지 않습니다. 이러한 시스템 색 **Button_A** 로 범위가 때문입니다.
 
 ### <a name="nesting-scoped-resources"></a>범위가 지정 된 중첩 리소스
 
-시스템 색을 중첩 수도 및 **ColorSchemeResources** 앱 레이아웃의 태그 내에 중첩 된 요소의 리소스에 배치 하 여 수행 됩니다.
+시스템 색 중첩 가능한 이기도 하 고 **ColorSchemeResources** 앱 레이아웃의 태그 내에 중첩 된 요소의 리소스에 배치 하 여 수행 됩니다.
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -341,17 +341,17 @@ X:key 설정 하면 시스템 또는 앱 테마 색 적절 하 게 변경 두 �
 </Grid>
 ```
 
-이 예제에서는 **Button_A** 상속 하는 색 **Grid_A**의 리소스에서 정의 하 고 **중첩 된 단추** 는 색 **Grid_B**의 리소스에서 상속 합니다. 에 정의 된 마지막 항목이 없는 경우이 기본 색을 적용 하 고 더 나아가이 따라서 **Grid_B** 내 다른 컨트롤에 배치 하는 확인 하거나 확인 하거나 **Grid_A**의 리소스를 적용 하기 전에 먼저 **Grid_B**의 리소스를 적용 합니다 페이지 또는 앱 수준입니다.
+이 예제에서는 **Button_A** 상속 하는 색 **Grid_A**의 리소스에서 정의 하 고 **중첩 된 단추** 는 **Grid_B**의 리소스에서 색을 상속 합니다. 에 정의 된 마지막 항목이 없는 경우이 기본 색을 적용 하 고 더 나아가이 따라서 **Grid_B** 내 다른 컨트롤에 배치 하는 확인 하거나 확인 하거나 **Grid_A**의 리소스를 적용 하기 전에 먼저 **Grid_B**의 리소스를 적용 합니다 페이지 또는 앱 수준입니다.
 
-임의 개수의 색상 정의 리소스가 중첩 된 요소에 대해 작동 합니다.
+이 임의 개수의 색상 정의 리소스가 중첩 된 요소에 대해 합니다.
 
 ### <a name="scoping-with-a-resourcedictionary"></a>ResourceDictionary를 사용 하 여 범위 지정
 
-컨테이너 또는 페이지의 리소스에 제한 되지 않습니다 및 ResourceDictionary 다음 병합할 수 있는 모든 범위에서 일반적으로 사전 병합는 방식으로 이러한 시스템 색을 정의할 수 있습니다.
+컨테이너 또는 페이지의 리소스에 국한 되지는 않습니다 하 고 병합 될 수 있는 모든 범위에서 일반적으로 사전 병합는 방식으로 ResourceDictionary도 이러한 시스템 색을 정의할 수 있습니다.
 
 #### <a name="mycustomthemexaml"></a>MyCustomTheme.xaml
 
-먼저, ResourceDictionary 만듭니다. 다음은 ThemeDictionaries 내 **ColorSchemeResources** 배치 하 고 원하는 시스템 색을 재정의:
+첫째, ResourceDictionary 만듭니다. 다음은 ThemeDictionaries 내 **ColorPaletteResources** 배치 하 고 원하는 시스템 색을 재정의:
 
 ```xaml
 <ResourceDictionary
@@ -360,11 +360,16 @@ X:key 설정 하면 시스템 또는 앱 테마 색 적절 하 게 변경 두 �
     xmlns:local="using:TestApp">
 
     <ResourceDictionary.ThemeDictionaries>
-
-        <ColorSchemeResources x:Key="Default"
-            SystemBaseLowColor="LightGreen"
-            SystemBaseMediumLowColor="DarkCyan"/>
-        
+        <ResourceDictionary x:Key="Default">
+            <ResourceDictionary.MergedDictionaries>
+            
+                <ColorPaletteResources x:Key="Default"
+                    Accent="#FF0073CF" 
+                    AltHigh="#FF000000" 
+                    AltLow="#FF000000"/>
+                    
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>        
     </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>
 ```
@@ -387,11 +392,11 @@ X:key 설정 하면 시스템 또는 앱 테마 색 적절 하 게 변경 두 �
 </Grid>
 ```
 
-이제 모든 리소스, 테마, 및 색상을 사용자 지정 단일 **MyCustomTheme** 리소스 사전에 배치 되어 레이아웃 태그에 추가 하지 않게에 걱정할 필요 없이 필요한 경우 범위.
+이제 모든 리소스, 테마, 및 색상을 사용자 지정 단일 **MyCustomTheme** 리소스 사전에 배치 되어 레이아웃 태그에서 추가 혼란에 걱정할 필요 없이 필요한 경우 범위.
 
 ### <a name="other-ways-to-define-color-resources"></a>색 리소스를 정의 하는 다른 방법
 
-ColorSchemeResources에 배치할 시스템 색 및 줄에서가 아니라 래퍼를으로 그 안의 직접 정의 대 한 수도 있습니다.
+ColorSchemeResources에 배치할 시스템 색 및 줄에 있는 것이 아니라 한 래퍼에 직접 정의 대 한 수도 있습니다.
 
 ``` xaml
 <ColorSchemeResources x:Key="Dark">
