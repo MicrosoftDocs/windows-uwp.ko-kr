@@ -5,12 +5,12 @@ ms.date: 10/26/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 3be87431d421b2307bc298934adc991d6e71c6ab
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: e02622452aa99cd262221cd0c448ceca8271b00d
+ms.sourcegitcommit: a71122082947b4cc3d157465e402746760d1d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024512"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035728"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT 질문과 대답
 작성 하 고 사용 하 여 Windows 런타임 Api를 사용 하는 방법에 대 한 될 수 있는 질문에 대답 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -27,7 +27,7 @@ ms.locfileid: "9024512"
 Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0 (Windows 10, 버전 1803) 한 다음 새로 생성 된 C + + WinRT 프로젝트 컴파일 오류와 하지 못할 수도 있습니다 "C3861*오류: 'from_abi': 식별자 하지 발견*"를 다른 오류 *base.h*에서 발생 합니다. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 설정 프로젝트 속성 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** 프로젝트 속성 **에에서 표시 됩니다 C/C++** >  **추가 옵션****명령줄** 삭제).
 
 ## <a name="what-are-the-requirements-for-the-cwinrt-visual-studio-extension-vsixhttpsakamscppwinrtvsix"></a>[C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix)의 요구 사항은 무엇입니까?
-[VSIX](https://aka.ms/cppwinrt/vsix)는 최소 Windows SDK 대상 버전인 10.0.17134.0(Windows 10, 버전 1803)이 적용됩니다. Visual Studio 2017(버전 15.6 이상. 15.7 이상 권장) 또한 필요합니다. `.vcxproj` 파일에서 `<PropertyGroup Label="Globals">`이 `<CppWinRTEnabled>true</CppWinRTEnabled>`로 설정되어 있는지 확인하여 VSIX를 사용하는 프로젝트를 식별할 수 있습니다. 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)를 참조하세요.
+[VSIX 확장](https://aka.ms/cppwinrt/vsix) 에 최소 Windows SDK 대상 버전인 10.0.17134.0 (Windows 10, 버전 1803) 필요합니다. 또한 Visual Studio 2017 필요 (최소 버전 15.6 이상, 15.7 이상 권장), 또는 Visual Studio 2019 합니다. `.vcxproj` 파일에서 `<PropertyGroup Label="Globals">`이 `<CppWinRTEnabled>true</CppWinRTEnabled>`로 설정되어 있는지 확인하여 VSIX를 사용하는 프로젝트를 식별할 수 있습니다. 프로젝트 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 설치 필요한 지 여부에 대 한 정보를 포함 하 여 자세한 정보를 참조 하세요. [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)합니다.
 
 ## <a name="whats-a-runtime-class"></a>*런타임 클래스*가 무엇입니까?
 런타임 클래스란 일반적으로 실행 가능한 경계에서 최신 COM 인터페이스를 통해 활성화 및 사용되는 형식을 말합니다. 하지만 이 형식을 구현하는 컴파일 단위 내에서도 런타임 클래스를 사용할 수 있습니다. 런타임 클래스는 IDL로 선언하며, C++/WinRT를 사용하여 표준 C++에서 구현할 수 있습니다.

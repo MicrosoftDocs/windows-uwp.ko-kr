@@ -1,17 +1,17 @@
 ---
 description: 뉴스와 변경 C + + WinRT 합니다.
 title: 새로운 C + + WinRT
-ms.date: 10/03/2018
+ms.date: 01/29/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 뉴스, 어떤의 새
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 986b0e896ca00e1fc15a6ed265ea1e98103524f3
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: b46aaf9948587ef79a9c5bf73064b1a70c0e9c3a
+ms.sourcegitcommit: a71122082947b4cc3d157465e402746760d1d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024582"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035708"
 ---
 # <a name="whats-new-in-cwinrt"></a>새로운 C + + WinRT
 
@@ -44,10 +44,7 @@ ms.locfileid: "9024582"
 - 스마트 포인터를 강화 합니다. 이전 버전에서는 이벤트 revokers 경우 해지 하지 못했습니다 이동-할당 된 새 값입니다. 이 도움이 스마트 포인터 클래스 자체 할당; 미치지 안정적으로 처리 하는 위치는 문제를 다루지 않습니다. [**winrt:: com_ptr 구조체 템플릿**](/uwp/cpp-ref-for-winrt/com-ptr)루트가 지정 됩니다. **winrt:: com_ptr** 는 문제가 수정 하 고 처리에 고정 이벤트 revokers 이동 의미 체계 올바르게 할당 시 취소할 수 있도록 합니다.
 
 > [!NOTE]
-> 1.0.181002.2 버전을 사용 하 여 (이상)의 합니다 [C + + WinRT Visual Studio Extension (VSIX)](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix) 설치를 만드는 새로운 C + + WinRT 프로젝트 해당 프로젝트에 대 한 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 를 자동으로 설치 합니다. Microsoft.Windows.CppWinRT NuGet 패키지를 제공 향상 된 C + + 프로젝트 (NuGet 패키지 및 VSIX 하지가 설치 되어 있는) 빌드 에이전트는 개발 컴퓨터와 휴대용 만드는 WinRT 프로젝트 빌드 지원 합니다.
->
-> 기존 프로젝트에 대 한&mdash;1.0.181002.2 버전을 설치한 후 (이상)의 VSIX&mdash;Visual Studio에서 프로젝트를 열고, **프로젝트**를 클릭 하는 것이 좋습니다 \> **NuGet 패키지 관리...**  \>  **찾아보기**입력 또는 **Microsoft.Windows.CppWinRT** 검색 상자에 붙여 넣을, 검색 결과에서 항목을 선택 하 고 다음 해당 프로젝트에 대 한 패키지를 설치 하려면 **설치** 를 클릭 합니다.
-
+> 중요 한 변경 내용 합니다 [C + + WinRT Visual Studio Extension (VSIX)](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix), 모두 버전 1.0.181002.2, 그리고 1.0.190128.4 버전입니다. 이러한 변경 및 프로젝트에 미치는 영향 수의 내용은 참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)합니다.
 
 ## <a name="isolation-from-windows-sdk-header-files"></a>Windows SDK 헤더 파일에서 격리
 
