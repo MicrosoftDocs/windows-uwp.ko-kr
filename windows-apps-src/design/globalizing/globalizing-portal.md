@@ -9,12 +9,12 @@ ms.date: 12/7/2018
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: b7b4452bb242bb7679d37036ccda5e27912a2505
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6e9e0f6305a99b6e3ab83cb3b560754f2e4d310f
+ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944344"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035424"
 ---
 # <a name="globalization-and-localization"></a>세계화 및 지역화
 
@@ -36,6 +36,10 @@ Windows는 전 세계에서 언어, 지역, 문화가 다양한 사용자가 사
 - 날짜 및 시간 형식
 - 숫자, 통화, 무게, 측정 규칙
 - 정렬 규칙
+
+>[!NOTE]
+> Microsoft에서 사용 되는 표준 국가/지역 코드의 목록이 [공식 국가/지역 목록](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion)을 참조 하세요.
+
 
 **지역화**는 세계화된 앱을 현지화하기 위해 준비하고 앱이 현지화되기 위한 준비가 되었는지 확인하는 과정입니다. 앱이 올바르게 현지화되도록 하면 나중에 현지화 과정에서 앱의 작동 문제를 다루지 않아도 됩니다. 지역화할 앱의 가장 중요한 속성은 실행 코드가 앱의 지역화 리소스와 깔끔하게 분리된 것입니다.
 
@@ -65,4 +69,4 @@ Windows는 전 세계에서 언어, 지역, 문화가 다양한 사용자가 사
 | [양방향 텍스트를 위한 앱 디자인](design-for-bidi-text.md) | 왼쪽에서 오른쪽 및 오른쪽에서 왼쪽 쓰기 시스템으로 구성된 스크립트를 결합할 수 있도록 양방향 텍스트 지원을 제공하도록 앱을 디자인합니다. |
 | [다국어 앱 도구 키트 4.0 사용](use-mat.md) | MAT(다국어 앱 도구 키트) 4.0은 UWP 앱에 번역 지원, 번역 파일 관리 및 편집기 도구를 제공하도록 Microsoft Visual Studio 2017과 통합되어 있습니다. |
 | [다국어 앱 도구 키트 4.0 FAQ 및 문제 해결](mat-faq-troubleshooting.md) | 이 항목에는 자주 묻는 질문과 대답, 다국어 앱 도구 키트(MAT) 4.0과 관련된 문제가 나와 있습니다. |
-| [일본어 연대 변경에 대 한 응용 프로그램 준비](japanese-era-change.md) | 월 2019 일본어 연대 변경 및 응용 프로그램을 준비 하는 방법을 알아봅니다. |
+| [일본의 시대 변경을 대비한 응용 프로그램 준비](japanese-era-change.md) | 5 월 2019 일본어 종말 변경 및 응용 프로그램을 준비 하는 방법을 알아봅니다. |

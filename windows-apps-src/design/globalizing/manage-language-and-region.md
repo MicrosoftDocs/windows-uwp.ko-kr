@@ -7,12 +7,12 @@ ms.date: 11/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 43aeccecee5b4b2d7a2d5fa1082fb619e87e7268
-ms.sourcegitcommit: 51ea7eae59684400e7813a9dd3376d5e7bfb3635
+ms.openlocfilehash: d70dbc0dffc3763855924b8f7faca61ca2fb18f2
+ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "8972047"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "9035404"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>사용자 프로필 언어와 앱 매니페스트 언어 이해
 Windows 사용자는 **설정** > **시간 및 언어** > **지역 및 언어**를 사용하여 기본 설정 표시 언어의 정렬된 목록 또는 기본 설정 표시 언어 하나를 구성할 수 있습니다. 언어에는 지역별 변수가 포함될 수 있습니다. 예를 들어 스페인에서 사용하는 스페인어, 멕시코에서 사용하는 스페인어, 미국에서 사용하는 스페인어 및 기타 스페인어를 선택할 수 있습니다.
@@ -95,11 +95,11 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
 ## <a name="qualify-resource-files-with-their-language"></a>해당 언어와 관련하여 리소스 파일을 인증합니다.
 언어 리소스 한정자를 사용하여 리소스 파일 또는 폴더의 이름을 지정합니다. 리소스 한정자에 대한 자세한 내용은 [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)을 참조하세요. 리소스 파일 이미지 (또는 기타 자산) 이거나 같은 텍스트 문자열을 포함 하는 *.resw* 리소스 컨테이너 파일 일 수 있습니다.
 
-**참고** 앱의 기본 언어 리소스도 언어 한정자를 지정 해야 합니다. 예를 들어 앱의 기본 언어가 영어 (미국) 이면 다음 인정으로 자산 `\Assets\Images\en-US\logo.png`.
+**참고** 앱의 기본 언어 리소스도 언어 한정자를 지정 해야 합니다. 예를 들어 앱의 기본 언어가 영어 (미국) 이면 자격이으로 자산 `\Assets\Images\en-US\logo.png`.
 
-- Windows는 복합 일치, EN-US 및 EN-GB와 같은 지역 변수 포함 하 여 수행 합니다. 따라서 적절 하 게 지역 하위 태그를 포함 합니다. [리소스 관리 시스템이 언어 태그를 일치하는 방법](../../app-resources/how-rms-matches-lang-tags.md)을 참조하세요.
-- 언어에 대해 정의 된 억제 스크립트 값이 없을 때 한정자에 언어 스크립트 하위 태그를 지정 합니다. 예를 들어, ZH-CN 또는 ZH-TW 대신 사용 하 여 Zh-hant, Hant-ZH-TW, 또는 Zh-hans (자세한 정보를 얻기 위해 [IANA 언어 하위 태그 레지스트리](http://go.microsoft.com/fwlink/p/?linkid=227303)참조).
-- 단일 표준 사투리 하나 있는 언어에 대 한 필요는 없습니다 지역 한정자를 포함 하도록 합니다. 예를 들어, JA-JP 대신 ja를 사용 합니다.
+- Windows는 복합 일치, EN-US 및 EN-GB와 같은 지역 변수 포함 하 여 수행 합니다. 따라서 적절 하 게 하는 지역 하위 태그를 포함 합니다. [리소스 관리 시스템이 언어 태그를 일치하는 방법](../../app-resources/how-rms-matches-lang-tags.md)을 참조하세요.
+- 언어에 대해 정의 된 억제 스크립트 값이 없는 경우에 한정자에 언어 스크립트 하위 태그를 지정 합니다. 예를 들어, ZH-CN 또는 ZH-TW 대신 Zh-hant, Hant-ZH-TW, 또는 Zh-hans을 사용 하 여 (자세한 정보를 얻기 위해 [IANA 언어 하위 태그 레지스트리](http://go.microsoft.com/fwlink/p/?linkid=227303)참조).
+- 표준 사투리 하나 있는 언어, 지역 한정자를 포함 하지 않아도가 있습니다. 예를 들어, JA-JP 대신 ja를 사용 합니다.
 - 일부 도구와 기계 번역기와 같은 다른 구성 요소가 데이터 이해에 도움이 되는 사투리 정보와 같은 특정 언어 태그를 찾을 수도 있습니다.
 
 ### <a name="not-all-resources-need-to-be-localized"></a>모든 리소스를 지역화 해야 합니다.
@@ -109,7 +109,7 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
 - 최소한 기본 언어에 있는 모든 리소스를 확인 합니다.
 - 일부 리소스의 하위 집합 (부분적인 지역화) 밀접 한 관련이 언어에 대해 충분히 사용할 수 있습니다. 예를 들어 앱에 스페인어로 된 전체 리소스 집합이 있을 경우 앱의 일부 UI는 카탈로니아어로 지역화되지 않을 수 있습니다. 카탈로니아어 및 스페인어를 사용 하는 사용자의 경우 카탈로니아어로 사용할 수 없는 리소스 나타납니다.
 - 일부 리소스는 대부분의 다른 리소스는 공통 리소스에 매핑되는 동안 특정 언어에 대 한 예외를 요구할 수 있습니다. 이 경우 미확인된 언어 태그 'u n d'로 모든 언어에 사용 하기 위한 리소스를 표시 합니다. Windows는 '\*'와 유사하게 와일드카드로 'und' 언어 태그를 해석합니다. 즉, 일치하는 특정 다른 언어를 찾은 후 일치하는 최상위 앱 언어를 찾습니다. 예를 들어 몇 개의 리소스가 핀란드어에 대해 서로 다르지만 나머지 리소스가 모든 언어에 대해 동일할 경우 핀란드어 리소스는 핀란드어 태그로 표시하고 나머지는 'und'로 표시해야 합니다.
-- 글꼴이 나 텍스트 높이 같은 언어 스크립트를 기반으로 하는 리소스는 미확인된 언어 태그를 사용 하 여 지정 된 스크립트를 사용 하 여: ' und-&lt;스크립트&gt;'. 예를 들어, 라틴 글꼴은 `und-Latn\\fonts.css`를 사용하고 키릴 글꼴은 `und-Cryl\\fonts.css`를 사용합니다.
+- 글꼴이 나 텍스트 높이 같은 언어 스크립트를 기반으로 하는 리소스는 미확인된 언어 태그를 사용 하 여 지정된 된 스크립트를 사용 하 여: ' und-&lt;스크립트&gt;'. 예를 들어, 라틴 글꼴은 `und-Latn\\fonts.css`를 사용하고 키릴 글꼴은 `und-Cryl\\fonts.css`를 사용합니다.
 
 ## <a name="set-the-http-accept-language-request-header"></a>HTTP Accept Language 요청 헤더 설정
 호출하는 웹 서비스의 지역화 정도가 앱에서 호출하는 것과 동일한지 고려합니다. 일반 웹 요청 및 XHR(XMLHttpRequest)에서 UWP 앱 및 데스크톱 앱의 HTTP 요청에서는 표준 HTTP Accept-Language 요청 헤더를 사용합니다. 기본적으로 HTTP 헤더는 사용자 프로필 언어 목록으로 설정됩니다. 목록의 각 언어는 언어 중립과 가중치(q)를 포함하도록 확장됩니다. 예를 들어 fr-FR 및 en-US로 구성된 사용자의 언어 목록은 HTTP Accept-Language 요청 헤더가 fr-FR, fr, en-US, en("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3")으로 나타납니다. 그러나 예를 들어 날씨 앱의 UI가 프랑스어(프랑스)로 표시되지만 사용자의 기본 설정 목록에 독일어가 최상위 언어로 표시되는 경우 해당 앱에서 일관되게 표시되도록 서비스에서 프랑스어(프랑스)를 명시적으로 요청해야 합니다.
@@ -191,6 +191,9 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
 </tr>
 </tbody>
 </table>
+
+>[!NOTE]
+> Microsoft에서 사용 되는 표준 국가/지역 코드의 목록이 [공식 국가/지역 목록](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion)을 참조 하세요.
 
 ## <a name="important-apis"></a>중요 API
 * [GlobalizationPreferences.Languages](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages)
