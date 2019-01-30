@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7089f4b6e28056f44a6ad5d37aa90f6cf84784df
-ms.sourcegitcommit: 05335f65dfe497ef4027b7249c0119fc59e355e2
+ms.openlocfilehash: 09fa50319defd90479ca93e4ba1b920948fbb9d3
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "8964676"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9036925"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱에 대한 디자인 도구 키트 및 샘플
  
@@ -40,7 +40,7 @@ ms.locfileid: "8964676"
     :::column:::
         ![hero image](images/adobe-xd.png)
         <b>Adobe XD toolkit</b><br>
-        v1806, June 2018<br>
+        v1901, January 2019<br>
         <a href="https://aka.ms/adobexdtoolkit">Download</a>
     :::column-end:::
 :::row-end:::
@@ -112,12 +112,12 @@ Fluent XAML 테마 편집기는 Fluent 디자인 시스템의 유연성을 설�
 
 ![VanArsdel 이미지](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-승 합 차 Arsdel, Ltd. 종단 간 UWP 샘플 응용 프로그램 차세대 Microsoft Fluent 디자인 시스템을 보여 주기 위해 고안 되었습니다. 향상 된 밀도 및 새 컨트롤의 광범위 한 사용 ux 프레임 워크 및 컴퍼지션의 강력한 기본 기능 뿐만 아니라 <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows UI 라이브러리</a> 는. 관리 및 IoT 장치 (이 경우 램프)에서 구매에 대 한 풍부한, 생산성 환경을 구축 하는 방법을 보여 줍니다.<br>
+승 합 차 Arsdel, Ltd. 종단 간 UWP 샘플 응용 프로그램은 Microsoft Fluent 디자인 시스템 차세대 보여 주기 위해 고안 되었습니다. Ux 프레임 워크 및 컴퍼지션의 강력한 기본 기능 뿐만 아니라 <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows UI 라이브러리</a> 에서 향상 된 밀도 및 새 컨트롤의 광범위 한 사용을 쉽습니다. 관리 및 IoT 장치 (이 경우 램프)에서 구매에 대 한 풍부한, 생산성 환경을 구축 하는 방법을 보여 줍니다.<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">VanArsdel 샘플 다운로드</a> <br><a href="https://github.com/microsoft/vanarsdel">GitHub에서 VanArsdel 샘플 확인</a>
 
 ![캐스트 이미지 빌드](images/buildcast.png)
 **BuildCast**<br>
-BuildCast는 Fluent 디자인 시스템을 UWP 소개 하기 위해 제작 된 종단 간 샘플입니다. 이 샘플에서는 Channel 9 및 일부 Windows 기술 매니아 피드에서 가장 인기 있는 샘플을 비롯한 비디오 팟캐스트를 검색하고 다운로드하고 재생할 수 있습니다. 또한 잉크 메모, 책갈피 및 원격 재생을 제공합니다. 이 샘플은 <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Fluent 디자인으로 멋진 앱 만들기</a> 동안 2017 빌드 회의에서 처음 제공되었습니다. <br>
+BuildCast는 Fluent 디자인 시스템을 UWP 소개를 기반으로 하는 종단 간 샘플입니다. 이 샘플에서는 Channel 9 및 일부 Windows 기술 매니아 피드에서 가장 인기 있는 샘플을 비롯한 비디오 팟캐스트를 검색하고 다운로드하고 재생할 수 있습니다. 또한 잉크 메모, 책갈피 및 원격 재생을 제공합니다. 이 샘플은 <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Fluent 디자인으로 멋진 앱 만들기</a> 동안 2017 빌드 회의에서 처음 제공되었습니다. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">BuildCast 샘플 다운로드</a> <br><a href="https://github.com/Microsoft/BuildCast">GitHub에서 BuildCast 샘플 확인</a>
 
 ![스케줄러 점심](images/lunchscheduler.png)
@@ -126,7 +126,7 @@ BuildCast는 Fluent 디자인 시스템을 UWP 소개 하기 위해 제작 된 �
 
 ![Xaml 컨트롤 갤러리](images/xaml-controls-gallery.png)
 **XAML 컨트롤 갤러리**<br>
-이 샘플은 모든 XAML 컨트롤의 대화형 데모를 제공합니다. 기본에서 적응형까지 다양한 레이아웃을 보여주며 자신의 프로젝트에 복사할 수 있는 태그를 표시합니다. 참고: 다운로드 파일 및 GitHub 저장소는 현재 이 샘플 앱을 "UI 기본(XAML)"으로 참조합니다. <br/><a href="https://github.com/Microsoft/Windows-universal-samples/archive/master.zip">XAML 컨트롤 갤러리 샘플 다운로드</a><br/><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">GitHub에서 XAML 컨트롤 갤러리 샘플 확인</a> <br/><a href="https://www.microsoft.com/store/apps/9msvh128x2zt">Store에서 XAML 컨트롤 갤러리 앱 다운로드</a></p>
+이 샘플은 모든 XAML 컨트롤의 대화형 데모를 제공합니다. 기본에서 적응형까지 다양한 레이아웃을 보여주며 자신의 프로젝트에 복사할 수 있는 태그를 표시합니다. 참고: 다운로드 파일 및 GitHub 저장소는 현재 이 샘플 앱을 "UI 기본(XAML)"으로 참조합니다. <br/><a href="https://github.com/Microsoft/Windows-universal-samples/archive/master.zip">XAML 컨트롤 갤러리 샘플 다운로드</a><br/><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">GitHub에서 XAML 컨트롤 갤러리 샘플 확인</a> <br/><a href="https://www.microsoft.com/store/apps/9msvh128x2zt">Store에서 XAML 컨트롤 갤러리 앱 다운로드</a></p>
 
 ## <a name="want-more-code"></a>더 많은 코드가 필요하세요?
 

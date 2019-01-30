@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8278b126ed209148a2e44ea464e04073dcefc829
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e5647d60cc043e167f8e2962680a88c750cc2eb1
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942607"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037265"
 ---
 # <a name="reveal-highlight"></a>강조
 
@@ -26,7 +26,7 @@ ms.locfileid: "8942607"
 > **중요 API**: [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>작동 방식
-표시는 포인터가이 그림에서와 같이 근처에 있을 때 요소의 컨테이너를 표시 하 여 대화형 요소를 강조 나타난:
+표시는 포인터가이 그림에 나와 있는 것 처럼 근처에 있을 때 요소의 컨테이너를 표시 하 여 대화형 요소를 강조 나타난:
 
 ![Visual 표시](images/Nav_Reveal_Animation.gif)
 
@@ -42,7 +42,7 @@ ms.locfileid: "8942607"
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Reveal">앱을 열고 작동 중인 표시를 확인</a>합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -65,7 +65,7 @@ ms.locfileid: "8942607"
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-이 그림은 여러 가지 컨트롤에서 강조 표시을 보여줍니다.
+이 그림은 여러 가지 컨트롤에서 강조 표시 보여줍니다.
 
 ![표시 예제](images/RevealExamples_Collage.png)
 
@@ -131,7 +131,7 @@ ms.locfileid: "8942607"
 
 이러한 효과는 두 가지 브러시로 정의됩니다. 
 * **RevealBorderBrush** 에 의해 정의 테두리 표시
-* 가리켜서 표시 **RevealBackgroundBrush** 에 의해 정의
+* 가리켜서 표시 **RevealBackgroundBrush** 에 의해 정의 됩니다.
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
@@ -255,7 +255,7 @@ ms.locfileid: "8942607"
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>사용자 지정 컨트롤에 표시 효과 미세 조정 
 
-사용자 지정 또는 다시 템플릿 컨트롤 또는 사용자 지정 명령 화면에 표시를 사용 하는 경우 효과 최적화 이러한 팁 수 있습니다.
+사용자 지정 또는 다시 템플릿 컨트롤 또는 사용자 지정 명령 화면에 표시를 사용 하면 최적화 이러한 팁 수 있습니다.
  
 * 근처에 있는 높이나 너비(특히 목록에서)가 맞지 않는 크기의 항목에서: 테두리 접근 동작을 제거하고 테두리가 가리켜서 표시 시에만 표시되도록 합니다.
 * 빈번하게 사용할 수 없는 상태로 전환되는 명령 항목의 경우: 요소 백플레이트의 테두리 접근 브러시뿐만 아니라 상태를 강조하는 테두리 또한 배치합니다.
@@ -278,7 +278,7 @@ ms.locfileid: "8942607"
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="reveal-and-the-fluent-design-system"></a>표시 및 Fluent 디자인 시스템
 

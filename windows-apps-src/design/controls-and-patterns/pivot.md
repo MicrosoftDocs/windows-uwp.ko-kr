@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 48aff6bd0b5f6ce955168bdc5faef67b7f43925e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 56079bc51d3efa8f7ecaaee21379a6e9caf7d440
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932434"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9036895"
 ---
 # <a name="pivot"></a>피벗
 
@@ -33,7 +33,7 @@ ms.locfileid: "8932434"
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치 된 경우 여기를 클릭 하 <a href="xamlcontrolsgallery:/item/Pivot">여 앱을 열고 작동 중인 피벗 컨트롤을 참조 하세요</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -45,16 +45,16 @@ ms.locfileid: "8932434"
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-일반적인 상단 탐색 및 탭 패턴을 위해 [NavigationView](navigationview.md)를 자동으로 다양 한 화면 크기를 조정할 수 있도록 하는 사용자 지정에 대 한를 사용 하는 것이 좋습니다.
+일반적인 상단 탐색 및 탭 패턴을 구현 하려면 [NavigationView](navigationview.md)를 자동으로 다른 화면 크기에 맞게 조정할 수 있도록 하는 사용자 지정에 대 한를 사용 하는 것이 좋습니다.
 
-그러나 탐색을 위해 터치 살짝 밀기, 피벗을 사용 하 여 것이 좋습니다.
+그러나 탐색을 위해 터치 살짝 밀기, 경우 피벗을 사용 하는 것이 좋습니다.
 
-NavigationView 및 피벗 컨트롤 간의 주요 차이점에 기본 오버플로 동작을 탐색 API:
+NavigationView 및 피벗 컨트롤 간의 주요 차이점 기본 오버플로 동작 및 탐색 API는:
 
 - 피벗 항목을 NavigationView의 드롭다운 메뉴를 사용 하는 동안 사용자가 모든 항목을 볼 수 있도록 오버플로 컨베이어 벨트 오버플로.
-- 피벗 NavigationView를 사용 하면 탐색 동작을 보다 잘 제어 하는 동안 콘텐츠 섹션 간 탐색을 처리 합니다.
+- 피벗 콘텐츠 섹션을 더 많이 제어할 탐색 동작을 사용 하면 NavigationView 간의 탐색을 처리 합니다.
 
-## <a name="use-navigationview-instead-of-pivot"></a>피벗 대신 NavigationView를 사용 합니다.
+## <a name="use-navigationview-instead-of-pivot"></a>NavigationView를 사용 하 여 피벗 대신
 
 앱의 UI가 피벗 컨트롤을 사용 하는 경우 다음을 변환할 수 있습니다 피벗 NavigationView 아래 코드를 사용 하 여 합니다.
 
@@ -83,7 +83,7 @@ NavigationView 및 피벗 컨트롤 간의 주요 차이점에 기본 오버플�
 </Page>
 ```
 
-NavigationView 더 많은 탐색 사용자 지정 컨트롤을 제공 하 고 해당 코드 숨김에 필요 합니다. 위의 XAML 권의 다음 코드 숨김을 사용:
+NavigationView는 더 많은 탐색 사용자 지정 컨트롤을 제공 하 고 해당 코드 숨김 필요 합니다. 위의 XAML 권의 다음 코드 숨김을 사용:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -191,7 +191,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-topics"></a>관련 항목
 

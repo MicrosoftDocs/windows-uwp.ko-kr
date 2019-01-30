@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 651914cfb2abd4326c6ac6295f10ad359925d465
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 80591abb1e3130540ea94bc1f8d2602b90edc590
+ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939815"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "9037065"
 ---
 # <a name="tooltips"></a>도구 설명
 
@@ -64,7 +64,7 @@ ms.locfileid: "8939815"
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ToolTip">앱을 열고 작동 중인 ToolTip을 확인</a>합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -112,7 +112,7 @@ ToolTipService.SetToolTip(submitButton, toolTip);
 
 기본적으로 ToolTip은 포인터 위 중간에 표시됩니다. 배치는 앱 창에 의해 제한되지 않으므로 ToolTip은 부분적으로 또는 완전히 앱 창의 범위 밖에 표시될 수 있습니다.
 
-광범위 하 게 조정에 대 한 위, 아래, 왼쪽, 또는 포인터의 오른쪽 ToolTip을 그려야 하는지 여부를 지정 하려면 [배치](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성 또는 **ToolTipService.Placement** 연결 된 속성을 사용 합니다. 포인터와 ToolTip 간 거리를 변경 하려면 [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) 또는 [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) 속성을 설정할 수 있습니다. 두 오프셋된 값 중 하나만 최종 위치에 배치 그대로 사용 하는 경우 위쪽 또는 아래쪽, HorizontalOffset 배치 되 면 VerticalOffset 또는 오른쪽에 영향을 미칩니다.
+광범위 하 게 조정에 대 한 위, 아래, 왼쪽, 또는 포인터의 오른쪽 ToolTip을 그려야 하는지 여부를 지정 하려면 [배치](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성 또는 **ToolTipService.Placement** 연결 된 속성을 사용 합니다. 포인터와 ToolTip 간 거리를 변경 하려면 [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) 또는 [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) 속성을 설정할 수 있습니다. 두 오프셋된 값 중 하나에만 최종 위치-VerticalOffset 배치 연결이 위쪽 또는 아래쪽, HorizontalOffset 배치는 왼쪽 또는 오른쪽에 영향을 미칩니다.
 
 ```xaml
 <!-- An Image with an offset ToolTip. -->
@@ -125,7 +125,7 @@ ToolTipService.SetToolTip(submitButton, toolTip);
 </Image>
 ```
 
-ToolTip이 참조 콘텐츠를 가리는 정확 하 게 새 **PlacementRect** 속성을 사용 하 여 위치를 조정할 수 있습니다. PlacementRect 도구 설명의 위치를 고정 하 고이 영역 밖 ToolTip을 그리는 데 충분 한 화면 공간이 제공 도구 설명, 채워집니다 하지는 영역으로도 사용 합니다. 도구 설명의 소유자와의 높이 기준으로 사각형의 원점 및 제외 영역 너비를 지정할 수 있습니다. 위, 아래, 왼쪽, 또는 PlacementRect 오른쪽에 도구 설명을 그려야 하는 경우 [배치](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성 정의 합니다. 
+ToolTip이 참조 콘텐츠를 가리는 정확 하 게 새 **PlacementRect** 속성을 사용 하 여 위치를 조정할 수 있습니다. PlacementRect 도구 설명의 위치를 고정 하 고이 영역 밖 ToolTip을 그리는 데 충분 한 화면 공간이 제공 도구 설명, 채워집니다 하지는 영역으로도 사용 합니다. 도구 설명의 소유자와의 높이 기준으로 사각형의 원점 및 제외 영역 너비를 지정할 수 있습니다. 도구 설명의 위, 아래, 왼쪽, 또는 오른쪽은 PlacementRect 끌어야 경우 [배치](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성 정의 합니다. 
 
 ```xaml
 <!-- An Image with a non-occluding ToolTip. -->
@@ -149,7 +149,7 @@ ToolTip이 참조 콘텐츠를 가리는 정확 하 게 새 **PlacementRect** �
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 
