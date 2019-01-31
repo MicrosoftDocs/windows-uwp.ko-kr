@@ -1,33 +1,26 @@
 ---
-Description: TODO
-title: 게임 패드 및 리모컨 조작
-ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
-label: Gamepad and remote interactions
-template: detail.hbs
-isNew: true
-ms.date: 02/08/2017
-ms.topic: article
-keywords: windows 10, uwp
-ms.localizationpriority: medium
-ms.openlocfilehash: daf0452a30d494b3835ea043eee7d596921b0a75
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946258"
+<<<<<<< 머리 작성자: Karl 브리지 Microsoft 설명: Xbox 게임 패드 및 리모컨 입력에 대 한 앱을 최적화 합니다.
+=== 설명: TODO
+>>>>>>> 마스터 제목: 게임 패드 및 리모컨 조작 ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47 레이블: 게임 패드 및 원격 상호 작용 템플릿: detail.hbs isNew: true <<<<<<< 머리 ms.author: kbridge =======
+마스터 ms.date: 2017 08/02/ms.topic: 키워드 문서: windows 10, uwp ms.localizationpriority: 중간
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>게임 패드 및 리모컨 조작
 
-![원격 및 D 패드](images/dpad-remote/dpad-remote.png)
+![키보드 및 게임 패드 이미지](images/keyboard/keyboard-gamepad.jpg)
 
-유니버설 Windows 플랫폼(UWP) 앱은 이제 Xbox 및 TV 경험에 대한 기본 입력 디바이스인 게임 패드 및 원격 제어 입력을 지원합니다.
+***일반적인 조작 패턴은 게임 패드, 원격 제어 및 키보드 간에 공유***
 
-UWP 앱은 PC의 키보드 및 마우스 입력과 휴대폰 또는 태블릿의 터치식 입력과 같은 이러한 입력 디바이스 유형에 최적화되어야 합니다.
+앱이 게임 패드와 리모컨으로 잘 작동하도록 하는 것이 3m 환경에 최적화하는 작업의 가장 중요한 단계입니다. 동작이 다소 제한된 디바이스에서 사용자 조작 환경을 최적화하기 위한 게임 패드 및 리모컨 관련 개선 사항이 여러 개 있습니다.
 
-앱이 이러한 입력 디바이스와 잘 작동하는지 확인하는 작업은 Xbox 및 TV에 최적화할 때 중요한 단계입니다.
+이제 UWP(유니버설 Windows 플랫폼) 앱에서 게임 패드 및 원격 제어 입력을 지원합니다. 
 
-> [!NOTE] 
-> 이제 작업 유효성을 쉽게 검사하는 PC의 UWP 앱으로 게임 패드를 연결하여 사용할 수 있습니다.
+게임 패드 및 원격 제어는 Xbox 및 TV 환경에 대한 기본 입력 디바이스입니다. 
+
+UWP 앱은 PC의 키보드 및 마우스 입력과 휴대폰 또는 태블릿의 터치식 입력과 같은 이러한 입력 디바이스 유형에 최적화되어야 합니다. 
+
+앱이 이러한 입력 디바이스와 잘 작동하는지 확인하는 작업은 Xbox 및 TV에 최적화할 때 가장 중요한 단계입니다.
+
+이제 작업 유효성을 쉽게 검사하는 PC의 UWP 앱으로 게임 패드를 연결하여 사용할 수 있습니다.
 
 게임 패드 또는 원격 제어를 사용할 때 UWP 앱의 사용자 환경을 성공적이고 재미있게 하려면 다음을 고려해야 합니다.
 
