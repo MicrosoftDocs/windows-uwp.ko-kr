@@ -6,12 +6,12 @@ ms.date: 06/22/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 87f4e03c8f6a9fc17fe524cf60ce4bf33cecfaf8
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: f4f68481078d7265ee11ba2b7147d28990081e80
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024592"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042415"
 ---
 # <a name="composition-native-interoperation-with-directx-and-direct2d"></a>DirectX 및 Direct2D를 사용하여 컴퍼지션 네이티브 상호 운용
 
@@ -43,7 +43,7 @@ Windows.UI.Composition API는 콘텐츠를 작성자로 직접 이동할 수 있
 
 아래 코드 예제 두 가지 있습니다. 첫 번째는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 예제입니다 (완료) 하 여 다음 C + + (이 예제에서는 DirectWrite 및 Direct2D 부분을 생략)는 CX 코드 예제입니다.
 
-사용 하 여 C + + WinRT 아래 코드 예제에서는 먼저 새 만듭니다 **Core App (C + + WinRT)** Visual Studio에서 프로젝트 (요구 사항에 대 한 참조 [Visual Studio 지원 C + + /winrt 및 VSIX](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-and-the-vsix)). 프로젝트를 만들 때 대상 버전 **Windows 10, 버전 1803 (10.0;으로 선택 빌드 17134)**. 이 코드는 빌드 및 테스트 버전입니다. 내용을 `App.cpp` , 아래 코드 목록을 사용 하 여 소스 코드 파일을 빌드하고 실행 합니다. 응용 프로그램이 렌더링 문자열 "Hello, World!" 투명 배경에서 검은색 텍스트입니다.
+사용 하 여 C + + WinRT 아래 코드 예제에서는 먼저 새 만듭니다 **Core App (C + + WinRT)** Visual Studio에서 프로젝트 (요구 사항에 대 한 참조 [Visual Studio 지원 C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). 프로젝트를 만들 때 대상 버전 **Windows 10, 버전 1803 (10.0;으로 선택 빌드 17134)**. 이 코드는 빌드 및 테스트 버전입니다. 내용을 `App.cpp` , 아래 코드 목록을 사용 하 여 소스 코드 파일을 빌드하고 실행 합니다. 응용 프로그램이 렌더링 문자열 "Hello, World!" 투명 배경에서 검은색 텍스트입니다.
 
 ```cppwinrt
 // App.cpp

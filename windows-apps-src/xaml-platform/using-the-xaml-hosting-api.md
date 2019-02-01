@@ -5,12 +5,12 @@ ms.date: 01/11/2019
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, win32
 ms.localizationpriority: medium
-ms.openlocfilehash: 999a990dbbc98f4f1224ce55f48d99889afbb89a
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: efd7dc687b9aba2e3c07b0afefa2e4fa49b882b1
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024632"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042315"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>UWP XAML 호스팅 API는 데스크톱 응용 프로그램에서 사용 하 여
 
@@ -57,7 +57,7 @@ UWP XAML 호스팅 API에 이러한 필수 조건이 있습니다.
 
 * UWP XAML 호스팅 데스크톱 응용 프로그램에서 API를 사용 하려면 프로젝트를 UWP Api를 호출할 수 있도록 구성 해야 합니다.
 
-    * **C + + Win32:** 사용 하도록 프로젝트를 구성 하는 것이 좋습니다 [C + + WinRT](../cpp-and-winrt-apis/index.md). 다운로드 및 설치 합니다 [C + + WinRT Visual Studio Extension (VSIX)](https://aka.ms/cppwinrt/vsix) Visual Studio Marketplace에서 다음을 추가 합니다 ```<CppWinRTEnabled>true</CppWinRTEnabled>``` 속성으로 설명 [여기](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix).vcxproj 파일을 합니다.
+    * **C + + Win32:** 사용 하도록 프로젝트를 구성 하는 것이 좋습니다 [C + + WinRT](../cpp-and-winrt-apis/index.md). 자세한 내용은 [수정 Windows 데스크톱 응용 프로그램 프로젝트를 추가 하는 C + + WinRT 지원](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support)합니다.
 
     * **Windows Forms 및 WPF:** [이러한 지침](../porting/desktop-to-uwp-enhance.md)을 따릅니다.
 
@@ -313,6 +313,6 @@ XAML 호스팅 API는 Windows 10에 대 한 다른 모든 유형의 XAML 호스�
 |-------|------------|
 | 앱에서 다음과 같은 메시지가 **COMException** : "AttachToWindow 메서드 동일한 스레드에서 AttachToWindow에 이전에 전달 된 HWND 보다 다른 최상위 창에서 지정된 된 HWND 상속 때문에 실패 합니다." | 이 오류는 응용 프로그램이 **IDesktopWindowXamlSourceNative.AttachToWindow** 메서드를 호출 하 고이 메서드에 대 한 이전 호출에 지정 된 창 보다 다른 최상위 창에서 상속 된 창의 HWND를 전달 나타냅니다. 동일한 스레드에서 합니다.</p></p>응용 프로그램 **IDesktopWindowXamlSourceNative.AttachToWindow** 는 특정 스레드를 호출 후 동일한 스레드에서 다른 모든 [**DesktopWindowXamlSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 개체 같은 최상위 창에 아래에 있는 windows에만 연결할 수 있습니다. **IDesktopWindowXamlSourceNative.AttachToWindow**첫 번째 호출에서 전달 된 합니다. 특정 스레드에 대 한 모든 **DesktopWindowXamlSource** 개체 닫히면 다음 **DesktopWindowXamlSource** 창에 다시 연결할 무료 됩니다.</p></p>이 문제를 해결 하려면 중 하나는 **DesktopWindowXamlSource**이 대 한 새 스레드를 만들거나이 스레드에서 다른 최상위 창에 바인딩된 **DesktopWindowXamlSource** 개체를 모두 닫습니다. |
 
-## <a name="related-topics"></a>관련 주제
+## <a name="related-topics"></a>관련 항목
 
 * [데스크톱 응용 프로그램의 UWP 컨트롤](xaml-host-controls.md)

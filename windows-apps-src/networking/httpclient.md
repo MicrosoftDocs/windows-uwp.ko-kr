@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fd921782571082ee696c26480f1c55c96c30d7c2
-ms.sourcegitcommit: 7bea35c5a35c78e65f822313962c4b1579b163b2
+ms.openlocfilehash: b753b9e93a0cd2abae089f9d53915e0c109f6b63
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035447"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042425"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -158,7 +158,7 @@ int main()
 
 ## <a name="post-binary-data-over-http"></a>HTTP 통해 포스트 이진 데이터
 
-[C + + WinRT](/windows/uwp/cpp-and-winrt-apis) 아래의 코드 예제는 적은 양의 [HttpBufferContent](/uwp/api/windows.web.http.httpbuffercontent) 클래스를 사용 하 여 POST 요청을 사용 하 여 이진 데이터를 전송 하는 방법을 보여 줍니다.
+[C + + WinRT](/windows/uwp/cpp-and-winrt-apis) 아래의 코드 예제는 적은 양의 [HttpBufferContent](/uwp/api/windows.web.http.httpbuffercontent) 클래스를 사용 하 여 POST 요청을 사용 하 여 이진 데이터를 전송 하는 방법을 보여 줍니다. **Get** (아래 코드 예제에 표시) 된 것을 호출 UI 스레드에 대 한 적절 하지 않습니다. 이 경우 사용 하는 올바른 기법을 참조 하세요 [동시성 및 비동기 작업을 사용 하 여 C + + WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
 
 ```cppwinrt
 // pch.h

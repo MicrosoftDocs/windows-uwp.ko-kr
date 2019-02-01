@@ -5,12 +5,12 @@ ms.date: 10/19/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 얻기, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: 069212fd9a6e0bcf3fb024d7f28738dd3049f5e1
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: c0d11a8718f61666d6285d8a1c91b48992044b22
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024482"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042355"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 
@@ -22,7 +22,7 @@ ms.locfileid: "9024482"
 ## <a name="a-cwinrt-quick-start"></a>C++/WinRT 빠른 시작
 
 > [!NOTE]
-> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 설치 및 사용에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)를 참조하세요.
+> 설치 및 사용 하 여 C +에 대 한 정보에 대 한 + WinRT Visual Studio Extension (VSIX) (제공 하는 프로젝트 템플릿 지원과) 참조 [Visual Studio 지원 C + + WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 새 **Windows 콘솔 응용 프로그램(C++/WinRT)** 프로젝트를 만듭니다.
 
@@ -120,6 +120,8 @@ HRESULT 반환 코드를 처리할 필요도 없습니다. C++/WinRT가 [**winrt
 
 이 섹션 표시 추가 하는 방법을 C + + /winrt 지원을 포함 될 수 있는 Windows 데스크톱 응용 프로그램 프로젝트를 합니다. 하지 않는 경우 기존 Windows 데스크톱 응용 프로그램 프로젝트에 다음 만드는 첫 번째 하 여 이러한 단계를 실행할 수 있습니다. 예를 들어 Visual Studio를 열고 **Visual c + +** 만들기 \> **Windows 데스크톱** \> **Windows 데스크톱 응용 프로그램** 프로젝트.
 
+선택적으로 설치할 수는 [C + + WinRT Visual Studio Extension (VSIX)](https://aka.ms/cppwinrt/vsix). 자세한 내용은 참조 [Visual Studio 지원 C + + WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+
 ### <a name="set-project-properties"></a>프로젝트 속성 설정
 
 프로젝트 속성 **일반**로 이동 \> **Windows SDK 버전**선택 **모든 구성** 및 **모든 플랫폼**입니다. **Windows SDK 버전** 10.0.17134.0 (Windows 10, 버전 1803)로 설정 되어 있는지 확인 이상.
@@ -146,11 +148,9 @@ HRESULT 반환 코드를 처리할 필요도 없습니다. C++/WinRT가 [**winrt
 
 C + + [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 상위 라이브러리에 연결 해야 하는 /winrt 언어 프로젝션에 특정 Windows 런타임 무료 (비 구성원) 함수 및 진입점에 따라 달라 합니다. 이 섹션에서는 링커 만족 하는 방법을 설명 합니다.
 
-Visual Studio 사용자를 추가 하는 첫 번째 옵션은 프로젝트 모든 C + + /winrt MSBuild 속성 및 대상입니다. 편집 프로그램 `.vcxproj` 파일을 찾고 `<PropertyGroup Label="Globals">` 해당 속성 그룹 내에서 속성을 설정 및 `<CppWinRTEnabled>true</CppWinRTEnabled>`합니다.
+Visual Studio 사용자를 추가 하는 첫 번째 옵션은 프로젝트 모든 C + + /winrt MSBuild 속성 및 대상입니다. 이렇게 하려면 프로젝트에 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 를 설치 합니다. Visual Studio에서 프로젝트 클릭 **프로젝트**열기 \> **NuGet 패키지 관리...**  \>  **찾아보기**입력 또는 **Microsoft.Windows.CppWinRT** 검색 상자에 붙여 넣을, 검색 결과에서 항목을 선택 하 고 다음 해당 프로젝트에 대 한 패키지를 설치 하려면 **설치** 를 클릭 합니다.
 
-프로젝트 연결 설정을 사용 하 여 명시적으로 연결할 수 또는 `WindowsApp.lib`.
-
-또는 소스 코드에서 수행할 수 있습니다 (에서 `pch.h`예를 들어,)이 있습니다.
+또한 프로젝트 연결 설정을 사용 하 여 명시적으로 연결할 수 있습니다 `WindowsApp.lib`. 또는 소스 코드에서 수행할 수 있습니다 (에서 `pch.h`예를 들어,)이 있습니다.
 
 ```cppwinrt
 #pragma comment(lib, "windowsapp")

@@ -5,12 +5,12 @@ ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: e1e4570320e9d48351ccb01052fc77d35ae03642
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: 558f3fa75e7dd599927a9d2ace256bf1feb98e77
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024572"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042305"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 사이의 상호 운용성
 
@@ -47,7 +47,7 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 
 ## <a name="example-project-showing-the-two-helper-functions-in-use"></a>사용 중인 두 가지 도우미 함수를 보여 주는 예제 프로젝트
 
-간단한 방식으로 점진적으로 C +의 코드를 포팅하는 시나리오를 재현 하려면 + CX 프로젝트를 C + + /winrt는 C + 중 하나를 사용 하 여 Visual Studio에서 새 프로젝트를 만들어서 시작할 수 있습니다 + /winrt 프로젝트 템플릿과 (C +에 대 한 Visual Studio 지원 [참조 + WinRT 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)).
+간단한 방식으로 점진적으로 C +의 코드를 포팅하는 시나리오를 재현 하려면 + CX 프로젝트를 C + + /winrt는 C + 중 하나를 사용 하 여 Visual Studio에서 새 프로젝트를 만들어서 시작할 수 있습니다 + /winrt 프로젝트 템플릿과 (참조 [Visual Studio 지원 C + + WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)).
 
 이 예제에서는 프로젝트 C + 간의 잠재적인 네임 스페이스 충돌을 처리 하기 위해 코드의 다른 제도 대 한 네임 스페이스 별칭을 사용 하는 방법을 보여 + WinRT 프로젝션 및 C + + /CX 프로젝션 합니다.
 

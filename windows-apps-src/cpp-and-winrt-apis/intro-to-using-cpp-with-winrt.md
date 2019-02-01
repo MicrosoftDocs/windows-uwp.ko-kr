@@ -1,16 +1,16 @@
 ---
 description: C++/WinRT 소개&mdash;Windows 런타임 API용 표준 C++ 언어 프로젝션
 title: C++/WinRT 소개
-ms.date: 01/29/2019
+ms.date: 01/31/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: 34505416e46a04a577a83eac5310ba0769c4741b
-ms.sourcegitcommit: a71122082947b4cc3d157465e402746760d1d5c2
+ms.openlocfilehash: 2c7334711debf87d8834213af39ba384166404e1
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035718"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042376"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -21,7 +21,7 @@ C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로�
 C + + /winrt는 Microsoft의 권장된 대체 합니다 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 언어 프로젝션 및 [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live). 전체 목록은 [항목 C + + WinRT](index.md#topics-about-cwinrt) 와 상호 작용 및에서 포트, C + 모두에 대 한 정보를 포함 + CX 및 WRL 합니다.
 
 > [!IMPORTANT]
-> C++/WinRT에서 가장 중요하여 반드시 알고 있어야 할 두 가지 정보는 섹션 [C++/WinRT에 대한 SDK 지원](#sdk-support-for-cwinrt)과 섹션 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](#visual-studio-support-for-cwinrt-xaml-and-the-vsix)에 설명되어 있습니다.
+> C +의 가장 중요 한 부분 중 두 가지 + 고려해 야 할 WinRT 섹션에 설명 되어 [SDK 지원 C + + WinRT](#sdk-support-for-cwinrt) 및 [Visual Studio 지원 C + + WinRT, XAML, VSIX 확장과 NuGet 패키지](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
 
 ## <a name="language-projections"></a>언어 프로젝션
 Windows 런타임은 구성 요소 개체 모델(COM)을 기반으로 하며, *언어 프로젝션*을 통해 액세스하도록 설계되었습니다. 프로젝션은 COM 세부 정보를 숨기며, 지정된 언어에 더욱 자연스러운 프로그래밍 환경을 제공합니다.
@@ -34,34 +34,30 @@ Windows 런타임은 구성 요소 개체 모델(COM)을 기반으로 하며, *�
 
 C++/WinRT로 COM 스타일 프로그래밍을 이용하지 않고도 자체 표준 C++를 사용하여 런타임 클래스를 구현할 수도 있습니다. 런타임 클래스의 경우 IDL 파일에 형식만 설명하면 `midl.exe` 및 `cppwinrt.exe`가 상용구 소스 코드 파일 구현을 생성합니다. 또는 C++/WinRT 기본 클래스에서 파생하여 인터페이스를 구현할 수도 있습니다. 자세한 정보는 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
-## <a name="visual-studio-support-for-cwinrt-xaml-and-the-vsix"></a>Visual Studio 지원 C + + /winrt, XAML와 VSIX
-Visual Studio의 C++/WinRT 프로젝트 템플릿과 C++/WinRT MSBuild 속성 및 대상의 경우에는 [C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix)을 [Visual Studio Marketplace](https://marketplace.visualstudio.com/)에서 다운로드하여 설치하세요.
+## <a name="visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package"></a>Visual Studio 지원 C + + WinRT, XAML, VSIX 확장과 NuGet 패키지
+Visual Studio 지원에 대 한는 최소 Windows SDK 대상 버전인 10.0.17134.0 (Windows 10, 버전 1803) 외에도 필요 Visual Studio 2017 (최소 버전 15.6 이상, 15.7 이상 권장), 또는 Visual Studio 2019 합니다. 설치 이미 하지 않은 경우 Visual Studio 설치 관리자 내에서 **c + + 유니버설 Windows 플랫폼 도구** 옵션을 설치 해야 합니다. Windows **설정**에서 > **\& 보안 업데이트** > **개발자를 위한** **앱 테스트용 로드** 옵션 보다는 **개발자 모드** 옵션을 선택 합니다.
 
-> [!NOTE]
-> 1.0.181002.2 버전을 사용 하 여 (이상) [VSIX 확장](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix) 설치를 만드는 새로운 C + + WinRT 프로젝트 해당 프로젝트에 대 한 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 를 자동으로 설치 합니다. Microsoft.Windows.CppWinRT NuGet 패키지를 제공 향상 된 C + + 프로젝트 (NuGet 패키지 및 VSIX 확장명이 아닌가 설치 되어 있는) 빌드 에이전트는 개발 컴퓨터와 휴대용 만드는 WinRT 프로젝트 빌드 지원 합니다.
->
-> 기존 프로젝트에 대 한&mdash;1.0.181002.2 버전을 설치한 후 (이상) VSIX 확장의&mdash;Visual Studio에서 프로젝트를 열고, **프로젝트**를 클릭 하는 것이 좋습니다 \> **NuGet 패키지 관리...**  \>  **찾아보기**입력 또는 **Microsoft.Windows.CppWinRT** 검색 상자에 붙여 넣을, 검색 결과에서 항목을 선택 하 고 다음 해당 프로젝트에 대 한 패키지를 설치 하려면 **설치** 를 클릭 합니다. 이 단계는 1.0.190128.4 버전을 설치한 후에 필수 (또는 그 이상) VSIX 확장 합니다.
+다운로드 하 고 최신 버전을 설치 해야 합니다 [C + + WinRT Visual Studio Extension (VSIX)](https://aka.ms/cppwinrt/vsix) [Visual Studio Marketplace](https://marketplace.visualstudio.com/)에서.
 
-Visual Studio 2017 해야 합니다 (최소 필요 이지만 버전 15.6 이상, 15.7 이상 권장) 또는 Visual Studio 2019 및 Windows SDK 버전 10.0.17134.0 (Windows 10, 버전 1803). 설치 이미 하지 않은 경우 Visual Studio 설치 관리자 내에서 **c + + 유니버설 Windows 플랫폼 도구** 옵션을 설치 해야 합니다. Windows **설정**에서 > **\& 보안 업데이트** > **개발자를 위한** **앱 테스트용 로드** 옵션 보다는 **개발자 모드** 옵션을 선택 합니다.
+- VSIX 확장을 사용 하면 C + + /winrt 프로젝트 템플릿과 항목 템플릿과 Visual Studio에서 C + 차별화할 수 있도록 + WinRT 개발 합니다.
+- 또한 하면 Visual Studio 기본 디버그 시각화 (natvis) C + + /winrt 프로젝션 된 형식의; C# 디버깅과 유사한 경험을 제공 합니다. Natvis는 디버그 빌드에 대해 자동으로 이루어집니다. WINRT_NATVIS 기호를 정의하여 빌드를 릴리스할 수도 있습니다.
 
-하면 다음 수 만들기 및 빌드, 또는 열기, C + + /winrt Visual Studio에서 프로젝트와 배포 합니다. 또는 추가 하 여 기존 프로젝트를 변환할 수는 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 해당 `.vcxproj` 파일.
+Visual Studio 프로젝트 템플릿은 C + + WinRT는 다음과 같습니다. 만들 때 새 C + + WinRT 프로젝트 최신 버전의 설치 된 VSIX 확장 새로운 C + + WinRT 프로젝트 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 자동으로 설치 합니다. **Microsoft.Windows.CppWinRT** NuGet 패키지를 제공 C + + WinRT 빌드 (MSBuild 속성 및 대상)를 지원 프로젝트 빌드 에이전트는 개발 컴퓨터와 휴대용 만들기 (기반이 NuGet 패키지 및 VSIX 확장 설치 됨).
 
-```xml
-<Project ...>
-    <PropertyGroup Label="Globals">
-        <CppWinRTEnabled>true</CppWinRTEnabled>
-...
-```
-
-속성 추가를 마쳤으면 이제 `cppwinrt.exe` 도구 호출을 포함해 프로젝트에 대한 C++/WinRT MSBuild 지원을 가져옵니다.
+> [!IMPORTANT]
+> 사용 하 여 만든 (또는 작업할 업그레이드)는 프로젝트에 있는 경우 이전 VSIX 확장의 버전 보다 1.0.190128.4, 그러면 [VSIX 확장의 이전 버전](#earlier-versions-of-the-vsix-extension)입니다. 해당 섹션 VSIX 확장의 최신 버전을 사용 하 여 업그레이드 하기 전에 알아야 할 해야 하는 프로젝트의 구성에 대 한 중요 한 정보를 포함 합니다.
 
 때문에 C + + 필요한 프로젝트 속성 **C/c + +**, C + + 17 표준의 기능을 사용 하 여 WinRT > **언어** > **c + + 언어 표준** > **ISO C + + 17 표준 (/ /std: + + 17)**. 또한 **적합성 모드: 예(/permissive-)** 를 설정하여 코드가 표준을 더욱 따르도록 할 수도 있습니다.
 
 알고 있어야 할 또 다른 프로젝트 속성은 **C/C++** > **일반** > **경고를 오류로 처리**입니다. 이 속성은 필요에 따라 **예(/WX)** 또는 **아니오(/WX-)** 로 설정하세요. 간혹 `cppwinrt.exe` 도구에서 생성된 소스 파일이 구현체가 추가될 때까지 경고를 생성하는 경우가 있습니다.
 
-VSIX는 C++/WinRT 프로젝션된 형식의 Visual Studio 기본 디버그 시각화(natvis)도 제공하여 C# 디버깅과 유사한 경험을 제공합니다. Natvis는 디버그 빌드에 대해 자동으로 이루어집니다. WINRT_NATVIS 기호를 정의하여 빌드를 릴리스할 수도 있습니다.
+위에서 설명한 대로 최대 설정 시스템을 사용 하 여 수 및 빌드, 만들거나 열 수, C + + /winrt Visual Studio에서 프로젝트와 배포 합니다.
 
-VSIX에서 제공되는 Visual Studio 프로젝트 템플릿은 다음과 같습니다.
+또는 수동으로 **Microsoft.Windows.CppWinRT** NuGet 패키지를 설치 하 여 기존 프로젝트를 변환할 수 있습니다. 후 설치 (또는 업데이트) 최신 버전의 VSIX 확장을 Visual Studio에서 기존 프로젝트를 열고, **프로젝트**를 클릭 \> **NuGet 패키지 관리...**  \>  **찾아보기**입력 또는 **Microsoft.Windows.CppWinRT** 검색 상자에 붙여 넣을, 검색 결과에서 항목을 선택 하 고 다음 해당 프로젝트에 대 한 패키지를 설치 하려면 **설치** 를 클릭 합니다. 패키지를 추가 하 고 나면 받게 C + + /winrt MSBuild 지원을 호출을 포함 해 프로젝트에 대 한는 `cppwinrt.exe` 도구입니다.
+
+C +를 사용 하는 프로젝트를 식별할 수 + /winrt MSBuild 지원을 프로젝트 내에 설치 된 **Microsoft.Windows.CppWinRT** NuGet 패키지의 존재 여부에 따라 합니다.
+
+VSIX 확장에서 제공 하는 Visual Studio 프로젝트 템플릿은 다음과 같습니다.
 
 ### <a name="windows-console-application-cwinrt"></a>Windows 콘솔 응용 프로그램(C++/WinRT)
 콘솔 사용자 인터페이스가 포함된 Windows 데스크톱의 C++/WinRT 클라이언트 응용 프로그램용 프로젝트 템플릿입니다.
@@ -86,6 +82,31 @@ XAML을 사용하지 않는 유니버설 Windows 플랫폼(UWP) 앱용 프로젝
 IDL 파일에서 구성 요소의 런타임 클래스와 기본 인터페이스, 그리고 그 밖에 구현되는 인터페이스를 정의합니다. 프로젝트를 1회 빌드하여 `module.g.cpp`, `module.h.cpp`, 구현체 템플릿을 `Generated Files`에, 그리고 스텁 유형 정의를 `Generated Files\sources`에 생성합니다. 그런 다음 생성된 스텁 유형 정의를 참조에 사용하여 구성 요소의 런타임 클래스를 구현합니다. 런타임 클래스는 클래스 고유의 IDL 파일에 선언하는 것이 좋습니다.
 
 빌드된 Windows 런타임 구성 요소 이진 파일과 이진 파일의 `.winmd`를 UWP 앱에 번들로 추가합니다.
+
+## <a name="earlier-versions-of-the-vsix-extension"></a>VSIX 확장의 이전 버전
+설치 하는 것이 좋습니다 (또는 업데이트) [VSIX 확장](https://aka.ms/cppwinrt/vsix)의 최신 버전입니다. 기본적으로 자체적으로 업데이트 하도록 구성 되어 있습니다. 이렇게 하면 VSIX 확장 이전의 1.0.190128.4, 다음이 섹션의 버전을 사용 하 여 만든 프로젝트에 있는 경우 새 버전으로 작동 하도록 해당 프로젝트를 업그레이드 하는 방법에 대 한 중요 한 정보를 포함 합니다. 업데이트 하지 않으면 다음 여전히 찾을 수 정보가이 섹션에 유용 합니다.
+
+측면에서 Windows SDK와 Visual Studio 버전 및 Visual Studio 구성 정보를 지원 합니다 [Visual Studio 지원 C + + WinRT, XAML, VSIX 확장과 NuGet 패키지](#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 위 섹션 VSIX의 이전 버전에 적용 됩니다. 확장 합니다. 아래의 정보 동작에 대 한 중요 한 차이점을 설명 하 고의 구성을 사용 하 여 만든 (또는 작업할 업그레이드 된) 프로젝트 이전 버전입니다.
+
+### <a name="created-earlier-than-101810022"></a>1.0.181002.2 보다 앞에서 만든
+이전의 1.0.181002.2를 다음 C + VSIX 확장의 버전을 사용 하 여 프로젝트를 만든 경우 + WinRT 빌드 지원이 VSIX 확장의 해당 버전에 기본 제공 되었습니다. 프로젝트에는 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성는 `.vcxproj` 파일.
+
+```xml
+<Project ...>
+    <PropertyGroup Label="Globals">
+        <CppWinRTEnabled>true</CppWinRTEnabled>
+...
+```
+
+수동으로 **Microsoft.Windows.CppWinRT** NuGet 패키지를 설치 하 여 프로젝트를 업그레이드할 수 있습니다. 후 설치 (또는 업그레이드를) 최신 버전의 VSIX 확장을 Visual Studio에서 프로젝트를 열고, **프로젝트**를 클릭 \> **NuGet 패키지 관리...**  \>  **찾아보기**, 입력 또는 **Microsoft.Windows.CppWinRT** 검색 상자에 붙여 넣을, 검색 결과에서 항목을 선택 및 프로젝트에 대 한 패키지를 설치 하려면 **설치** 를 차례로 클릭 합니다. 그런 다음 편집에 `.vcxproj` , 파일을 제거 합니다 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성입니다.
+
+### <a name="created-with-or-upgraded-to-between-101810022-and-101901283"></a>사용 하 여 만든 (또는 업그레이드) 1.0.181002.2 사이의 1.0.190128.3
+1.0.181002.2 사이의 1.0.190128.3 VSIX 확장의 버전을 사용 하 여 프로젝트를 만든 경우 포함 한 다음 **Microsoft.Windows.CppWinRT** NuGet 패키지가 설치 된 프로젝트에 자동으로 프로젝트 템플릿에 합니다. 이 범위에 대 한 VSIX 확장의 버전을 사용 하기 위해 이전 프로젝트를 업그레이드할 수도 있습니다. 만약 다음&mdash;빌드 지원이이 범위에 대 한 VSIX 확장의 버전에 여전히 존재도 이후에&mdash;업그레이드 된 프로젝트 수도 **Microsoft.Windows.CppWinRT** NuGet 패키지를 설치 하지 않은 합니다.
+
+프로젝트를 업그레이드 하려면 이전 섹션의 지침에 따라 하 고 프로젝트 **Microsoft.Windows.CppWinRT** NuGet 패키지를 설치 않았는지 확인 합니다. 그런 다음도 제거는 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성입니다.
+
+### <a name="invalid-upgrade-configurations"></a>잘못 된 업그레이드 구성
+VSIX 확장의 최신 버전을 사용 하 여 유효 하지 않은 할 프로젝트는 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성 또한 **Microsoft.Windows.CppWinRT** NuGet 패키지를 설치 되어 있지 않을 경우. 이 구성 사용 하 여 프로젝트 빌드 오류 메시지를 생성 "C + + /winrt VSIX는 더 이상 프로젝트 빌드 지원을 제공 합니다.  Microsoft.Windows.CppWinRT Nuget 패키지에 대 한 프로젝트 참조를 추가 하세요. "
 
 ## <a name="custom-types-in-the-cwinrt-projection"></a>C++/WinRT 프로젝션의 사용자 지정 형식
 C + + /winrt 프로그래밍에서는 표준 c + + 언어 기능을 사용할 수 및 [표준 c + + 데이터 형식 및 C + + WinRT](std-cpp-data-types.md)&mdash;일부 c + + 표준 라이브러리 데이터 형식이 포함 됩니다. 그 밖에도 프로젝션에서 일부 사용자 지정 데이터 형식에 대해서도 알아둘 필요가 있으며, 실제로 사용자 지정 데이터 형식을 사용할 수도 있습니다. 예를 들어 [C++/WinRT 시작](get-started.md)의 빠른 시작 코드 예제에서 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)을 사용합니다.

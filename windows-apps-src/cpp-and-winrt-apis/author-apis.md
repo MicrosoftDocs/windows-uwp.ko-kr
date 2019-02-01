@@ -5,12 +5,12 @@ ms.date: 01/10/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c79c51c355a2d3ccf1d7f3604a5f89c7a4f8fa2
-ms.sourcegitcommit: 4a359aecafb73d73b5a8e78f7907e565a2a43c41
+ms.openlocfilehash: e4ca6946df327dbe6697a71d1050e6401ed531fe
+ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024602"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042406"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 통한 API 작성
 
@@ -28,7 +28,7 @@ ms.locfileid: "9024602"
 가장 간단한 시나리오는 로컬 사용을 목적으로 Windows 런타임 인터페이스를 구현하는 경우입니다. 이때는 런타임 클래스는 필요 없고 일반적인 C++ 클래스만 있으면 됩니다. 예를 들어, [**CoreApplication**](/uwp/api/windows.applicationmodel.core.coreapplication)을 기반으로 앱을 개발할 수도 있습니다.
 
 > [!NOTE]
-> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 설치 및 사용에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-and-the-vsix)를 참조하세요.
+> 설치 및 사용 하 여 C +에 대 한 정보에 대 한 + WinRT Visual Studio Extension (VSIX) (제공 하는 프로젝트 템플릿 지원과) 참조 [Visual Studio 지원 C + + WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 Visual Studio, **Visual c + +** 에서 > **Windows 유니버설** > **Core App (C + + WinRT)** 프로젝트 템플릿을 **CoreApplication** 패턴을 보여 줍니다. 이 패턴은 [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) 구현체를 [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run)으로 전달하는 것부터 시작됩니다.
 
