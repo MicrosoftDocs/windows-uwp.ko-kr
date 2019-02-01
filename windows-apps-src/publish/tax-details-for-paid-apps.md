@@ -1,30 +1,31 @@
 ---
 Description: To understand your tax considerations for price selection, payout implications, and tax responsibility, see your countries/regions of distribution in the tables below.
-title: 유료 앱의 세금 세부 정보
+title: 세금 세부 정보
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
-ms.date: 01/02/2019
+ms.date: 01/31/2019
 ms.topic: article
 keywords: Windows 10, uwp, 세금, 앱 세금, 세금 요구 사항, 상거래 확장, 세율
 ms.localizationpriority: medium
-ms.openlocfilehash: 896a92e009b7d9c33554f77d8da56730625f1f85
-ms.sourcegitcommit: ffad7cfb5d5c099f9f559e966fd93b705b47d2bd
+ms.openlocfilehash: cf57fa923297b8e4a57d7c5ca4668868bfae7038
+ms.sourcegitcommit: b9ee49402db7a8999cade1c5cf7f7b6ac4d783db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "8990341"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "9042493"
 ---
-# <a name="tax-details-for-paid-apps"></a>유료 앱의 세금 세부 정보
+# <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Windows 응용 프로그램/게임 개발자와 Azure 마켓플레이스 게시자의 세금 세부 정보
 
 
-선택한 가격의 세금 고려 사항, 지급 관련 정보 및 납세 책임을 이해하려면 아래 표에서 해당 배포 국가/지역을 참조하세요.
+선택한 가격에 대 한 세금 고려 사항을 이해 하 고 납세 책임 앱 개발자 계약 또는 최신 게시자 계약에서 아래 표에서 해당 배포 국가/지역을 참조 하세요.
 
 > [!NOTE]
 > 상거래 확장 조정에는 제한된 국가/지역 집합에 지급 관련 정보가 있을 수 있습니다. 상거래 확장 조정 및 이것이 적용되는 지역/국가에 대한 자세한 내용은 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)과 [해당 국가/지역](define-market-selection.md#price-considerations-for-specific-markets) 목록을 참조하세요.
 
 > [!IMPORTANT]
-> 세율은 언제든지 변경될 수 있습니다. Microsoft에서는 아래 표의 세율이 항상 정확하다고 보증할 수 없습니다.
-> 
-> 재판매인 국가/지역 및 상황에 대한 납세 책임([아래](#reseller-countriesregions)에 설명된 대로)은 아래 표의 정보에도 불구하고 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)의 별첨 C에 포함됩니다.
+> 세금의 책임 재판매인 국가/지역 및 상황에 대 한 (설명 [아래](#reseller-countriesregions))는 [앱 개발자 계약](https://docs.microsoft.com/en-us/legal/windows/agreements/app-developer-agreement), 아래 테이블의 정보에도 불구 하 고의 별첨 C에 적용 됩니다.
+> Note **지급 관련 정보** 열 Windows 응용 프로그램/게임 개발자에만 적용 되도록 합니다. 이 열에 명시 된 세율은 언제 든 지 변경 될 수 및 Microsoft 아래 표의 세율이 항상 된다는 정확 하 게 보장할 수 없습니다.
+
+
 
  
 
@@ -262,9 +263,16 @@ ms.locfileid: "8990341"
 | 잠비아                           | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 | 짐바브웨                         | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 
- 
+다음에 적용 됩니다도 불구 Azure 마켓플레이스 게시자를 반대로 위에: 
 
-## <a name="mixed-remittance-countriesregions"></a>혼합 송금 국가/지역
+| 국가/지역                   | 선택한 가격의 세금 고려 사항                                                                                                             | 세금 관리                    | 
+|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| 오스트레일리아 (예: 기업 계약을 제외 하 고 모든 고객 구매 시나리오를 통해 수행한 구매) | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다. | Microsoft |
+| 오스트레일리아 (기업 계약 고객 구매 시나리오를 통해 수행한 구매)에 | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다. | 게시자 |
+| 브라질 | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다. | 게시자 **(참조 재판매인 국가/지역)** |
+| 멕시코 | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다. | 게시자 **(참조 재판매인 국가/지역)** |
+
+## <a name="mixed-remittance-countriesregions-for-windows-appgame-developers"></a>Windows 응용 프로그램/게임 개발자를 위한 혼합된 송금 국가/지역
 
 
 특정 Microsoft 대금 청구 파트너는 고객이 아래 나열된 국가/지역에서 스토어를 통해 앱 또는 앱에서 바로 구매 제품을 구매할 때 판매, 사용, 물품용역, 부가가치 또는 유사한 세금이 있는 경우 해당 세금을 징수하여 송금할 수 있습니다. Microsoft가 귀하에게 제공하는 [보고서](payout-summary.md#downloading-payment-transactions)는 고객이 스토어를 통해 앱 또는 앱에서 바로 구매 제품을 구매할 때 적용되는 판매, 사용, 물품용역, 부가 가치 또는 유사한 세금을 대금 청구 파트너가 징수한 거래를 식별합니다. 이러한 보고 내용에 설명된 거래를 제외하고, Microsoft 및 해당 대금 청구 서비스 공급자는 이러한 국가에서 고객의 앱 또는 앱에서 바로 구매 제품 구매와 관련된 판매, 사용, 물품용역, 부가가치 또는 유사한 세금을 송금하지 않습니다. 귀하에게 제공된 보고 내용을 검토하고 앱 또는 앱에서 바로 구매 제품이 포함된 거래와 관련하여 세금을 등록, 징수 및 송금할 의무가 있는 경우 이를 결정하고 준수하는 것은 귀하의 책임입니다.
@@ -274,20 +282,23 @@ ms.locfileid: "8990341"
 | 남아프리카 공화국                       |
 | 베트남                            |
 
- 
-
 ## <a name="reseller-countriesregions"></a>재판매인 국가/지역
 
-
 특정 국가/지역에서 Microsoft는 스토어에 앱과 앱에서 바로 구매 제품 제공과 관련해서 대리인이 아닌 재판매인 역할을 합니다. 재판매인 국가/지역에 대한 조건의 자세한 내용은 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요.
+
+다음 Windows 앱/게임 개발자에만 적용 합니다.   
 
 |                    재판매인 국가/지역                                                                          |
 |------------------------------------------------------------------------------------------------------------------------|
 | 중국(Windows Phone 7.x를 실행하는 모바일 통신 장치 및 Windows8.x를 실행하는 개인용 컴퓨터 제외) |
 | 브라질(Windows 10을 실행하는 디바이스를 통해 수행한 구매만 해당)     |
 
- 
+다음 Azure 마켓플레이스 게시자에만 적용 합니다. 
 
+|                    재판매인 국가/지역                                                                          |
+|------------------------------------------------------------------------------------------------------------------------|
+| 브라질 (해당 CSP 제외 하 고 모든 고객 구매 시나리오를 통해 수행한 구매) |
+| 멕시코 (기업 계약 고객 구매 시나리오를 통해 수행한 구매)에 |
 
 
  
