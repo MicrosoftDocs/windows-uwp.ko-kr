@@ -4,9 +4,11 @@ items:
   items:
   - name: Windows 10 빌드 17763의 API 추가
     href: ../whats-new/windows-10-build-17763-api-diff.md
-- name: 2018년 9월 Windows 문서의 새로운 내용
-  href: ../whats-new/windows-docs-september-2018.md
+- name: 2019년 1월 Windows 문서의 새로운 내용
+  href: ../whats-new/windows-docs-january-2019.md
   items:
+  - name: 2018년 9월 Windows 문서의 새로운 내용
+    href: ../whats-new/windows-docs-september-2018.md
   - name: 2018년 8월 Windows 문서의 새로운 내용
     href: ../whats-new/windows-docs-august-2018.md
   - name: 2018년 7월 Windows 문서의 새로운 내용
@@ -51,9 +53,9 @@ items:
     href: ../whats-new/windows-10-build-10240.md
 - name: 실험적 API
   href: ../whats-new/experimental-apis.md
-ms.openlocfilehash: 167336081b680deecb9781c36e51da1559d1f91f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 136c6bd34dd3358d3f089aa06a664029a446b368
+ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8962565"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "9013942"

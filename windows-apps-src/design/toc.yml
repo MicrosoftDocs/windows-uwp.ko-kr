@@ -148,8 +148,6 @@ items:
       href: controls-and-patterns/menus.md
   - name: 탐색
     items:
-    - name: 허브
-      href: controls-and-patterns/hub.md
     - name: 마스터/세부 정보
       href: controls-and-patterns/master-details.md
     - name: 탐색 보기
@@ -564,9 +562,9 @@ items:
       href: in-app-help/external-help.md
 - name: 디자인 도구 키트
   href: downloads/index.md
-ms.openlocfilehash: 410998c21e9351062118d63328c8e580a52b4c08
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: af1472f7650982783ac08da2c73ebb5046401f3c
+ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8962605"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "9004569"
