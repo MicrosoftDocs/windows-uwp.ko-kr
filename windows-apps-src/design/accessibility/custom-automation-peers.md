@@ -8,12 +8,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 18d3affe5f142c56314d132ba488d87c6f285723
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 13bf5d60b547f71d0cd83e5790236534d05d2544
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920137"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050536"
 ---
 # <a name="custom-automation-peers"></a>사용자 지정 자동화 피어  
 
@@ -318,7 +318,7 @@ UI 자동화 지원의 UWP 구현에서 사용할 수 있는 공급자 패턴 �
 
 피어는 둘 이상의 패턴을 지원한다고 보고할 수 있습니다. 그럴 경우 재정의는 지원되는 각 [**PatternInterface**](https://msdn.microsoft.com/library/windows/apps/BR242496) 값에 대한 반환 경로 논리를 포함해야 하며 일치하는 각 경우에 피어를 반환해야 합니다. 호출자는 한 번에 하나의 인터페이스만 요청해야 하며 예상 인터페이스로 캐스팅하는 것은 호출자가 결정합니다.
 
-다음은 사용자 지정 피어에 대한 [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 재정의의 예입니다. 이 예에서는 [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) 및 [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653)의 두 패턴에 대한 지원을 보고합니다. 다음 컨트롤은 전체 화면(토글 모드)으로 표시될 수 있는 미디어 표시 컨트롤이며 사용자가 위치(범위 컨트롤)를 선택할 수 있는 진행률 표시줄을 포함합니다. 이 코드는 [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)에서 제공됩니다.
+다음은 사용자 지정 피어에 대한 [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 재정의의 예입니다. 이 예에서는 [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) 및 [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653)의 두 패턴에 대한 지원을 보고합니다. 다음 컨트롤은 전체 화면(토글 모드)으로 표시될 수 있는 미디어 표시 컨트롤이며 사용자가 위치(범위 컨트롤)를 선택할 수 있는 진행률 표시줄을 포함합니다. 이 코드는 [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)에서 제공됩니다.
 
 
 ```csharp
@@ -538,7 +538,7 @@ UWP 앱 텍스트 컨트롤 중 하나에서 파생하고 텍스트 관련 피�
 
 ## <a name="related-topics"></a>관련 항목  
 * [접근성](accessibility.md)
-* [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472)
 * [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185)
 * [**OnCreateAutomationPeer**](https://msdn.microsoft.com/ibrary/windows/apps/windows.ui.xaml.uielement.oncreateautomationpeer)

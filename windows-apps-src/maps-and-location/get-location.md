@@ -6,12 +6,12 @@ ms.date: 11/28/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 위치 기능
 ms.localizationpriority: medium
-ms.openlocfilehash: fae533e0ce42e14e3c53f5083b746a9aae221adf
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b3582aa8ed406a25eb704f2f86f8ed272bea2c63
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941360"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050223"
 ---
 # <a name="get-the-users-location"></a>사용자 위치 가져오기
 
@@ -20,9 +20,9 @@ ms.locfileid: "8941360"
 
 사용자의 위치를 찾고 위치 변경에 대응합니다. 사용자 위치에 대한 액세스는 설정 앱의 개인 정보 설정에서 관리합니다. 또한 이 항목에서는 앱에 사용자 위치 액세스 권한이 있는지 확인하는 방법을 보여 줍니다.
 
-**팁** 앱에서 사용자의 위치에 액세스하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
+**팁** 앱에서 사용자의 위치에 액세스하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
 
--   [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>위치 접근 권한 값 사용
 
@@ -44,7 +44,7 @@ ms.locfileid: "8941360"
 
 ### <a name="step-1-request-access-to-the-users-location"></a>1단계: 사용자의 위치에 대한 액세스 요청
 
-앱에 거친 위치 접근 권한 값 (참고 참조) 위치에 액세스를 시도 하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드를 사용 하 여 사용자의 위치에 대 한 액세스를 요청 해야 합니다. UI 스레드에서 **RequestAccessAsync** 메서드를 호출해야 하며 앱이 포그라운드에 있어야 합니다. 사용자가 앱에 권한을 부여할 때까지는 앱에서 사용자의 위치 정보에 액세스할 수 없습니다.\*
+앱에 거친 위치 접근 권한 값 (참고 참조)을 위치 액세스를 시도 하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드를 사용 하 여 사용자의 위치에 대 한 액세스를 요청 해야 합니다. UI 스레드에서 **RequestAccessAsync** 메서드를 호출해야 하며 앱이 포그라운드에 있어야 합니다. 사용자가 앱에 권한을 부여할 때까지는 앱에서 사용자의 위치 정보에 액세스할 수 없습니다.\*
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -261,12 +261,12 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 앱이 사용자 위치에 액세스하려면 먼저 디바이스에서 **위치**를 사용하도록 설정해야 합니다. **설정** 앱에서 다음 **위치 개인정보 설정** 이 켜져 있는지 확인합니다.
 
--   **이 장치에 대 한 위치** 이 **켜져 (Windows10 Mobile에는 해당 되지 않음)**
+-   **이 장치에 대 한 위치** 이 **켜져 (windows 10 Mobile에는 적용 되지 않음)**
 -   위치 서비스 설정 **위치**가 **켜짐** 상태임
 -   **사용자의 위치를 사용할 수 있는 앱 선택**에서 앱이 **on** 상태임
 
 ## <a name="related-topics"></a>관련 항목
 
-* [UWP 지리적 위치 샘플](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [UWP 지리적 위치 샘플](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [지오펜스에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [위치 인식 앱에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ccff9d892fbedc62cf1b54e374a0071877805731
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6bb5c156dc29f8229db9e4cb215fe462b4be6af6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921004"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050436"
 ---
 # <a name="pair-devices"></a>장치 페어링
 
@@ -68,7 +68,7 @@ ms.locfileid: "8921004"
 ## <a name="sample"></a>샘플
 
 
-[**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](http://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
+[**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](https://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
 
  
 

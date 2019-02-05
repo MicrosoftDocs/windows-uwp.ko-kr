@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: e61c96a1b4deb7dd1beb0233814f86ce1b5fb42c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 39f915ad9cf200a5c2c762976ab3c39c2ef85410
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936030"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050090"
 ---
 # <a name="developing-marble-maze-a-uwp-game-in-c-and-directx"></a>C++ 및 DirectX로 UWP 게임 Marble Maze 개발
 
@@ -21,7 +21,7 @@ ms.locfileid: "8936030"
 이 항목에서는 DirectX 및 Visual C++를 사용하여 3D UWP(유니버설 Windows 플랫폼) 게임을 만드는 방법을 설명합니다. Marble Maze라는 게임은 태블릿뿐 아니라 전통적인 데스크톱과 노트북 PC 같은 여러 폼 팩터를 수용합니다.
 
 > [!NOTE]
-> Marble Maze 소스 코드를 다운로드하려면 [GitHub 샘플](http://go.microsoft.com/fwlink/?LinkId=624011)을 참조하세요.
+> Marble Maze 소스 코드를 다운로드하려면 [GitHub 샘플](https://go.microsoft.com/fwlink/?LinkId=624011)을 참조하세요.
 
 > [!IMPORTANT]
 > Marble Maze는 UWP 게임을 만드는 모범 사례인 디자인 패턴을 보여 줍니다. 개발 중인 게임의 고유한 요구 사항과 자신의 사례에 맞게 구현 정보를 대부분 조정할 수 있습니다. 요구에 더 적합한 경우 다른 기술이나 라이브러리를 사용해도 됩니다. (그러나 코드가 [Windows 앱 인증 키트](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)를 전달하는지 항상 확인해야 합니다.) 여기에 사용된 구현 방법이 성공적인 게임 개발에 필수적이라고 판단될 경우 이 설명서에서 강조해 두었습니다.
@@ -42,7 +42,7 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 ## <a name="prerequisites"></a>필수 조건
 
 
--   Windows10 크리에이터 스 업데이트
+-   Windows 10 크리에이터 스 업데이트
 -   [Microsoft Visual Studio2017](https://www.visualstudio.com/downloads/)
 -   C++ 프로그래밍 지식
 -   DirectX 및 DirectX 용어 숙지
@@ -51,7 +51,7 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 ## <a name="who-should-read-this"></a>대상 사용자
 
 
-3D 게임 또는 Windows10에 대 한 다른 그래픽 집약적인 응용 프로그램을 만들려는 경우이 적합 합니다. 이 설명서에서 제공하는 원칙과 사례를 사용하여 고유한 UWP 게임을 만들어 보세요. C++ 및 DirectX 프로그래밍에 대한 배경 지식이나 관심이 있으면 이 설명서를 활용하는 데 도움이 됩니다. DirectX 사용 경험이 없는 경우 유사한 3D 그래픽 프로그래밍 환경의 사용 경험이 있어도 도움이 될 수 있습니다.
+3D 게임 또는 windows 10에 대 한 다른 그래픽 집약적인 응용 프로그램을 만들려는 경우이 적합 합니다. 이 설명서에서 제공하는 원칙과 사례를 사용하여 고유한 UWP 게임을 만들어 보세요. C++ 및 DirectX 프로그래밍에 대한 배경 지식이나 관심이 있으면 이 설명서를 활용하는 데 도움이 됩니다. DirectX 사용 경험이 없는 경우 유사한 3D 그래픽 프로그래밍 환경의 사용 경험이 있어도 도움이 될 수 있습니다.
 
 [연습: DirectX를 사용하여 간단한 UWP 게임 만들기](tutorial--create-your-first-uwp-directx-game.md)에서는 DirectX 및 C++를 사용하여 기본적인 3D 슈팅 게임을 구현하는 다른 샘플에 대해 설명합니다.
 

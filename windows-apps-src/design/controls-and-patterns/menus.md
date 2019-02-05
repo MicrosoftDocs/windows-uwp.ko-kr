@@ -13,12 +13,12 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 93aee51ae558009827f755f759c4bb587564d1cd
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 194e8578244fee72d0f122ee96caaf22bf2b8807
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036885"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058694"
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
@@ -32,7 +32,7 @@ ms.locfileid: "9036885"
 
 | **플랫폼 Api** | **Windows UI 라이브러리 Api** |
 | - | - |
-| [MenuFlyout 클래스](/uwp/api/windows.ui.xaml.controls.menuflyout), [메뉴 모음 클래스](/uwp/api/windows.ui.xaml.controls.menubar) [ContextFlyout 속성](/uwp/api/windows.ui.xaml.uielement.contextflyout) [FlyoutBase.AttachedFlyout 속성](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [메뉴 모음 클래스](/uwp/api/microsoft.ui.xaml.controls.menubar) |
+| [MenuFlyout 클래스](/uwp/api/windows.ui.xaml.controls.menuflyout), [메뉴 모음 클래스](/uwp/api/windows.ui.xaml.controls.menubar) [ContextFlyout 속성](/uwp/api/windows.ui.xaml.uielement.contextflyout) [FlyoutBase.AttachedFlyout 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) | [메뉴 모음 클래스](/uwp/api/microsoft.ui.xaml.controls.menubar) |
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 

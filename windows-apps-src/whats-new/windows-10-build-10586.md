@@ -6,16 +6,16 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 0d6c65c5-2ad5-46c7-964e-a3a9833c94ce
 ms.localizationpriority: medium
-ms.openlocfilehash: 6557648e3998cedee2a6eb0bcc9e58ca2f4c27d9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ff5e131c0d6f5371d4ce9cf2b1b59ebba928c759
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928911"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050396"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-10586"></a>개발자용 Windows 10 빌드 10586의 새로운 기능
 
-Visual Studio 2017 및 업데이트된 SDK와 함께 Windows 10 빌드 10586(11월 업데이트 또는 버전 1511이라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2017 및 업데이트된 SDK와 함께 Windows 10 빌드 10586(11월 업데이트 또는 버전 1511이라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## <a name="windows-10-build-10586---november-2015"></a>Windows 10 빌드 10586 - 2015년 11월
 

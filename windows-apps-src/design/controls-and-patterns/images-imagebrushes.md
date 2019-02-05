@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fd6accd3082c141d9288dba5c6156132188c214b
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 5451e0dd94510873f87b981a817fb55ba2c4f985
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037245"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049780"
 ---
 # <a name="images-and-image-brushes"></a>이미지 및 이미지 브러시
 
@@ -155,7 +155,7 @@ Windows 10 버전 1607부터 **Image** 요소는 애니메이션 GIF 이미지�
 
 Image 및 ImageBrush 요소는 코드가 아닌 XAML을 사용하여 지정하는 것이 일반적입니다. 왜냐하면 이러한 요소는 XAML UI 정의의 일부로 디자인 도구에서 출력되는 경우가 자주 있기 때문입니다.
 
-코드를 사용하여 Image 또는 ImageBrush를 정의하는 경우 기본 생성자를 사용한 다음 관련 원본 속성([Image.Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) 또는 [ImageBrush.ImageSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx))을 설정합니다. 코드를 사용하여 설정할 때 원본 속성에는 [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx)(URI 아님)가 필요합니다. 원본이 스트림이면 [SetSourceAsync](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx) 메서드를 사용하여 값을 초기화합니다. 소스가 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [ImageOpened](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다. 예제 코드는 [XAML 이미지 샘플](http://go.microsoft.com/fwlink/p/?linkid=238575)을 참조하세요.
+코드를 사용하여 Image 또는 ImageBrush를 정의하는 경우 기본 생성자를 사용한 다음 관련 원본 속성([Image.Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) 또는 [ImageBrush.ImageSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx))을 설정합니다. 코드를 사용하여 설정할 때 원본 속성에는 [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx)(URI 아님)가 필요합니다. 원본이 스트림이면 [SetSourceAsync](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx) 메서드를 사용하여 값을 초기화합니다. 소스가 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [BitmapImage](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [ImageOpened](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다. 예제 코드는 [XAML 이미지 샘플](https://go.microsoft.com/fwlink/p/?linkid=238575)을 참조하세요.
 
 > [!NOTE]
 > 코드를 사용하여 이미지를 설정하면 현재 크기 및 문화권 한정자로 비정규화된 리소스에 액세스하는 데 자동 처리를 사용하거나 문화권 및 크기에 대한 한정자와 함께 [ResourceManager](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) 및 [ResourceMap](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx)을 사용하여 리소스를 직접 가져올 수 있습니다. 자세한 내용은 [리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx)을 참조하세요.

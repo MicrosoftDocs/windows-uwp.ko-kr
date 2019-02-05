@@ -7,12 +7,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: ca75261420449ac0b5af27ec34256ccef89fad2d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f8ad32fb2033c97a408ccb0f6cc6871b01caf5c5
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937407"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058490"
 ---
 # <a name="usersowneridsummary"></a>/users/{ownerId}/summary
 호출자의 관점에서 소유자에 대 한 요약 데이터에 액세스 합니다.
@@ -47,4 +47,4 @@ ms.locfileid: "8937407"
 
 ##### <a name="parent"></a>부모
 
-[/users/{ownerId}/summary]()
+[/users/{ownerId}/summary](uri-usersowneridsummaryget.md)

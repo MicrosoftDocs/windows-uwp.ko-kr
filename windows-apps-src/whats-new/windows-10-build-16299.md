@@ -5,22 +5,22 @@ keywords: 새로운 기능, 업데이트, 기능, 신규, Windows 10, 1709, 10�
 ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: bd333cecc5f9141b3fd34593ea10d17fe6face1e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e0749ba30dc4c4e8d2791aa2d6699581b48fb8e5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929924"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050416"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>개발자용 Windows 10 빌드 16299의 새로운 기능
 
-Visual Studio 2017 및 업데이트된 SDK와 함께 Windows 10 빌드 16299(Fall Creators Update 또는 버전 1709라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2017 및 업데이트된 SDK와 함께 Windows 10 빌드 16299(Fall Creators Update 또는 버전 1709라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
-다음은 이 릴리스에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. Windows SDK에 추가된 새 네임스페이스의 전체 목록은 [Windows10 빌드 16299 API 변경 내용](windows-10-build-16299-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](http://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
+다음은 이 릴리스에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. Windows SDK에 추가된 새 네임스페이스의 전체 목록은 [Windows10 빌드 16299 API 변경 내용](windows-10-build-16299-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
 
 ## <a name="design--ui"></a>디자인 및 UI
 
-특징 | 설명
+기능 | 설명
  :------ | :------
 조건부 XAML | 이제 [버전 적응 앱](../debug-test-perf/version-adaptive-apps.md)을 만들 수 있는 [조건부 XAML](../debug-test-perf/conditional-xaml.md)을 사용할 수 있습니다. 조건부 XAML을 통해 XAML 태그에서 **ApiInformation.IsApiContractPresent** 메서드를 사용할 수 있습니다. 이를 통해 코드 숨김을 사용하지 않고도 API의 존재 여부를 기반으로 태그에서 속성을 설정하고 개체를 인스턴스화할 수 있습니다.
 디자인 도구 키트 | Sketch 및 Adobe XD의 추가로 [UWP 앱에 대한 디자인 도구 키트 및 리소스](../design/downloads/index.md)가 확장되었습니다. 이전의 도구 키트도 업데이트되고 개선되어, UWP 앱을 위한 더 견고한 컨트롤과 레이아웃 템플릿을 제공합니다. 또한 예와 영감을 제공하기 위해 새로운 도구와 샘플이 추가되었습니다.
@@ -35,7 +35,7 @@ UI 컨트롤 | 이러한 새 컨트롤은 멋진 UI를 신속하고 손쉽게 �
 
 ## <a name="gaming"></a>게임
 
-특징 | 설명
+기능 | 설명
  :------ | :------
 게임 브로드캐스팅 | **[Windows.Media.AppBroadcasting](https://docs.microsoft.com/uwp/api/windows.media.appbroadcasting)** 네임스페이스의 신규 API를 통해 앱에서 시스템에서 제공한 게임 브로드캐스트 UI를 시작할 수 있습니다. </br>또한 브로드캐스팅을 시작하거나 중지하는 경우 앱에 알리는 이벤트를 등록할 수 있습니다. **[Windows.Media.AppRecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording)** 네임스페이스의 신규 API를 통해 오디오 및 비디오를 녹음/녹화하고 게임 플레이의 스크린샷을 캡처할 수 있습니다. </br>또한 시스템이 브로트캐스트에 포함되어 스트림을 캡처하는 메타데이터를 제공하여 앱이 게임 플레이 이벤트와 동기화되는 보기 환경을 제공할 수도 있습니다. 이러한 기능에 대한 자세한 내용은 [게임 브로드캐스트 및 캡처](../gaming/game-broadcast-and-capture.md)를 참조하세요.
 게임 채팅 오버레이 | [GameChatOverlay 클래스](https://docs.microsoft.com/uwp/api/windows.gaming.ui.gamechatoverlay)는 기본 게임 채팅 오버레이 인스턴스를 가져오고, 오버레이의 원하는 위치를 설정하고, 이에 메시지를 추가하는 메서드를 제공합니다.
@@ -58,7 +58,7 @@ Cortana | [Cortana 기술 키트](https://docs.microsoft.com/cortana/skills/over
 데스크톱 브리지 패키지 | Visual Studio에 전체 신뢰 데스크톱 응용 프로그램을 패키징하는 데 필수적이었던 수동 단계를 모두 제거하는 새 [패키지 프로젝트](../porting/desktop-to-uwp-packaging-dot-net.md)가 도입되었습니다. 패키징 프로젝트를 추가하고 데스크톱 프로젝트를 참조한 다음 F5 키를 눌러 앱을 디버깅하면 됩니다. 수동 조정이 필요하지 않습니다. 이 새로운 간소화된 환경은 이전 버전의 Visual Studio에서 사용할 수 있는 환경에 대해 상당히 향상되었습니다.
 진단 및 스레딩 | 새로운 진단 API는 실행 중인 앱에 대한 정보를 제공합니다. </br></br>* [AppMemoryReport](https://docs.microsoft.com/uwp/api/Windows.System.AppMemoryReport) 클래스는 앱에서 예상되는 총 커밋 제한, 개인 커밋 사용량 등에 대한 정보를 제공합니다. </br>* [AppDiagnosticInfo](https://docs.microsoft.com/uwp/api/windows.system.appdiagnosticinfo) 클래스는 이제 앱 또는 작업의 실행 상태를 모니터링하고 실행 상태가 변경되는 경우 알림을 제공합니다. </br>* [MemoryManager](https://docs.microsoft.com/uwp/api/windows.system.memorymanager) 클래스에 앱 메모리 사용량 제한을 설정하고 예상되는 앱 메모리 사용량 제한을 보고하는 새로운 방법을 제공합니다. </br></br>작업을 우선 순위대로 정렬하고 이를 [DispatcherQueue](https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueue) 클래스로 다른 스레드에서 실행되도록 할 수 있습니다. 이 기능은 [CreateDispatcherQueueController](https://msdn.microsoft.com/library/windows/desktop/mt826210.aspx) 기능을 통해 Win32에서도 사용할 수 있습니다.
 EdgeHTML 16 | Microsoft Edge 및 JS 기반 유니버설 Windows 플랫폼 앱을 지원하는 웹 플랫폼이 EdgeHTML 16으로 업데이트되었으며, 이제 F12 개발자 도구에 대한 주요 개선, CSS 그리드 레이아웃에 대한 지원, 그리고 기타 중요한 기능이 포함되었습니다. </br></br> * [CSS 그리드 레이아웃](https://docs.microsoft.com/microsoft-edge/dev-guide/css/grid-layout)이 이제 Microsoft Edge에서 지원됩니다. 그리드 레이아웃은 부동 또는 스크립트를 사용하여 위치 지정으로 가능한 것보다 많은 레이아웃 가변성을 가능하게 하는 2차원 그리드 기반 레이아웃 시스템을 정의합니다.</br></br> * [Microsoft Edge F12 개발자 도구 문서](https://docs.microsoft.com/microsoft-edge/f12-devtools-guide)가 향상된 안정성 및 성능에 대해 업데이트되었습니다. 또한 개발 환경을 최적화하기 위해 새로운 기능들이 추가되었습니다. </br></br>* Microsoft Edge 내에서만 [WebVR](https://docs.microsoft.com/microsoft-edge/webvr/)에 [동작 컨트롤러](https://docs.microsoft.com/microsoft-edge/webvr/input#controller-buttons) 및 다양한 [Windows Mixed Reality 헤드셋](https://docs.microsoft.com/microsoft-edge/webvr/hardware)에 대한 지원이 추가되었습니다. 초당 프레임 수 90까지 지원하기 위해 WebVR도 최적화되었습니다. </br></br> 변경 사항 및 새로 지원되는 API의 전체 목록은 [Microsoft Edge 개발자 가이드](https://docs.microsoft.com/microsoft-edge/dev-guide)를 참조하세요.
-지도 3D 요소 | 3D 개체를 지도에 추가할 수 있습니다. 새 [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d) 클래스를 사용하여[3D 제조 형식(3MF)](http://3mf.io/specification/) 파일에서 3D 개체를 가져올 수 있습니다.
+지도 3D 요소 | 3D 개체를 지도에 추가할 수 있습니다. 새 [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d) 클래스를 사용하여[3D 제조 형식(3MF)](https://3mf.io/specification/) 파일에서 3D 개체를 가져올 수 있습니다.
 지도 요소 스타일 | [MapStyleSheetEntry](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement.MapStyleSheetEntry), 및 [MapStyleSheetEntryState](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement.MapStyleSheetEntryState)의 두 가지 새로운 [MapElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement) 속성을 사용하여 지도 요소의 모양을 사용자 지정할 수 있습니다. </br></br>* [MapStyleSheetEntry](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement.MapStyleSheetEntry) 속성을 사용하여 지도 요소가 기본 지도의 일부처럼 보이도록 만들 수 있습니다(예: *물*과 같은 지도 스타일 시트의 기존 항목에 요소 스타일을 설정). </br></br>* [MapStyleSheetEntryState](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement.MapStyleSheetEntryState) 속성을 사용하여 지도 스타일 시트에서 *가리키기* 및 *선택함*과 같은 기본 상태를 활용하여 지도 요소의 모양을 수정하거나 이를 재정의하여 사용자 지정할 수 있습니다.
 지도 계층 | [지도 계층](../maps-and-location/display-poi.md#layers)에 관심 요소 포인트를 추가한 다음 해당 계층에 바로 XAML을 바인딩할 수 있습니다. 요소를 계층에 그룹화합니다. 그런 다음 각 계층을 서로 독립적으로 조작할 수 있습니다. 예를 들어 각 계층에 자신의 이벤트 세트가 있으므로 특정 계층에서 이벤트에 응답하고 해당 이벤트 관련 작업을 수행할 수 있습니다.
 지도 위치 정보 | UI 요소 또는 사용자가 터치하는 앱의 영역 위, 아래, 또는 측면에 [경량 팝업 창](../maps-and-location/display-maps.md#placecard) 내에서 지도를 표시할 수 있습니다.  사용자가 컨텍스트를 변경하면 이 창은 닫힙니다. 그러면 사용자가 위치에 대한 정보를 보기 위해 다른 앱 또는 브라우저 창으로 전환하지 않아도 됩니다.
@@ -78,7 +78,7 @@ EdgeHTML 16 | Microsoft Edge 및 JS 기반 유니버설 Windows 플랫폼 앱을
 
 특징 | 설명
  :------ | :------
-계정 관리 | 이제 더 많은 유연성을 제공 하면 여러 계정 사용자를 추가 하려면 [파트너 센터 계정과 Azure AD 테 넌 트를 연결](../publish/associate-azure-ad-with-dev-center.md) 합니다. 단일 파트너 센터 계정에 여러 Azure AD 테 넌 트를 연결 하거나 단일 연결 수를 둘 이상의 파트너 센터 계정과 Azure AD 테 넌 트입니다.
+계정 관리 | 이제 더 많은 유연성을 제공 하면 여러 계정 사용자를 추가 하려면 [파트너 센터 계정과 Azure AD 테 넌 트를 연결](../publish/associate-azure-ad-with-dev-center.md) 합니다. 단일 파트너 센터 계정에 여러 Azure AD 테 넌 트를 연결 하거나 단일 연결 수를 둘 이상의 파트너 센터 계정과 Azure AD 테 넌 트 합니다.
 광고 | Microsoft Advertising SDK를 사용하여 이제 앱에서 [기본 광고](../monetize/native-ads.md)를 표시할 수 있습니다. 기본 광고는 제목, 이미지, 설명, 행동 촉구 텍스트 등의 각 광고 크리에이티브 조각이 앱과 통합할 수 있는 개별 요소로 앱에 제공되는 구성 요소 기반 광고입니다. 현재 기본 광고는 파일럿 프로그램에 참여하고 있는 개발자만 사용할 수 있지만, 조만간 모든 개발자가 이 기능을 사용할 수 있도록 지원할 계획입니다.
 가격 책정 및 가용성 |  새 가격 책정 및 가용성 옵션을 사용하면 [가격 변경을 예약](../publish/set-and-schedule-app-pricing.md)하고 [정확한 출시 날짜를 설정](../publish/configure-precise-release-scheduling.md)할 수 있습니다.
 Store 분석 API | [Microsoft Store 분석 API](../monetize/access-analytics-data-using-windows-store-services.md)에서 이제 [앱 오류에 대한 CAB 파일을 다운로드](../monetize/download-the-cab-file-for-an-error-in-your-app.md)할 수 있는 방법을 제공합니다.

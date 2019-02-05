@@ -6,17 +6,17 @@ ms.topic: article
 keywords: Windows 10 s, 항상 연결, 제한, ARM 기반 Windows10
 ms.localizationpriority: medium
 redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
-ms.openlocfilehash: 5fa05e1dfd04208ba547a692473fc3df136e6e4f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 42a2866642d11d1d97cc7b0b663486723499a5cf
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919279"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058674"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>ARM의 앱 및 환경 제한
 ARM 기반 Windows10은 다음과 같은 필수 제한 사항이 있습니다.
 
-- **ARM64 드라이버만 지원됩니다**. 모든 아키텍처와 마찬가지로 커널 모드 드라이버, [사용자 모드 드라이버 프레임워크(UMDF)](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/overview-of-the-umdf) 드라이버 및 인쇄 드라이버가 운영 체제의 아키텍처와 일치하도록 컴파일되어야 합니다. ARM OS에는 x86 사용자 모드 앱을 에뮬레이션하기 위한 기능이 있지만 다른 아키텍처(예: x64 또는 x86)에 대해 구현된 드라이버는 현재 에뮬레이트되지 않으며 따라서 이 플랫폼에서 지원되지 않습니다. 사용자 지정 드라이버를 사용하는 모든 앱은 ARM64에 포트되어야 합니다. 제한된 시나리오에서 앱은 에뮬레이션 하에 x86으로 실행될 수 있지만 앱의 드라이버 부분을 ARM64에 포트해야 합니다. ARM64에 대한 드라이버를 컴파일하는 것에 대한 자세한 내용은 [WDK를 사용하여 ARM64 드라이버 빌드](https://review.docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers?branch=rs4-arm64)를 참조하세요.
+- **ARM64 드라이버만 지원됩니다**. 모든 아키텍처와 마찬가지로 커널 모드 드라이버, [사용자 모드 드라이버 프레임워크(UMDF)](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/overview-of-the-umdf) 드라이버 및 인쇄 드라이버가 운영 체제의 아키텍처와 일치하도록 컴파일되어야 합니다. ARM OS에는 x86 사용자 모드 앱을 에뮬레이션하기 위한 기능이 있지만 다른 아키텍처(예: x64 또는 x86)에 대해 구현된 드라이버는 현재 에뮬레이트되지 않으며 따라서 이 플랫폼에서 지원되지 않습니다. 사용자 지정 드라이버를 사용하는 모든 앱은 ARM64에 포트되어야 합니다. 제한된 시나리오에서 앱은 에뮬레이션 하에 x86으로 실행될 수 있지만 앱의 드라이버 부분을 ARM64에 포트해야 합니다. ARM64에 대한 드라이버를 컴파일하는 것에 대한 자세한 내용은 [WDK를 사용하여 ARM64 드라이버 빌드](/windows-hardware/drivers/develop/building-arm64-drivers)를 참조하세요.
 
 - **x64 앱은 지원되지 않습니다**. ARM 기반 Windows10은 x64 앱의 에뮬레이션을 지원하지 않습니다.
 

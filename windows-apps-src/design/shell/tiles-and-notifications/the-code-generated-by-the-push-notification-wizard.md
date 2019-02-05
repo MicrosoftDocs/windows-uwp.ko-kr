@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 957c4cf2e9e9fc4a32327ec29a96019609ebdfe5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1ac5ca785eab39612bb3a9c6ccd58779c6241059
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923248"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049920"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>푸시 알림 마법사에서 생성된 코드
  
@@ -174,9 +174,9 @@ void mymobileservice1234Push::HandleExceptionsComingFromTheServer()
 ## <a name="server-side-scripts-javascript-backend-only"></a>서버 쪽 스크립트(JavaScript 백 엔드에만 해당)
 
 
-JavaScript 백 엔드를 사용하는 모바일 서비스의 경우 삭제, 삽입, 읽기 또는 업데이트 작업을 수행하면 서버 쪽 스크립트가 실행됩니다. 스크립트에서 이러한 작업을 구현하지는 않지만 클라이언트의 Windows Mobile REST API 호출에서 이러한 이벤트를 트리거할 때 실행됩니다. 그런 다음 스크립트는 request.execute 또는 request.respond 호출을 통해 호출 컨텍스트에 대한 응답을 실행하여 직접 제어를 작업에 전달합니다. [Azure Mobile Services REST API 참조](http://go.microsoft.com/fwlink/p/?linkid=511139)를 참조하세요.
+JavaScript 백 엔드를 사용하는 모바일 서비스의 경우 삭제, 삽입, 읽기 또는 업데이트 작업을 수행하면 서버 쪽 스크립트가 실행됩니다. 스크립트에서 이러한 작업을 구현하지는 않지만 클라이언트의 Windows Mobile REST API 호출에서 이러한 이벤트를 트리거할 때 실행됩니다. 그런 다음 스크립트는 request.execute 또는 request.respond 호출을 통해 호출 컨텍스트에 대한 응답을 실행하여 직접 제어를 작업에 전달합니다. [Azure Mobile Services REST API 참조](https://go.microsoft.com/fwlink/p/?linkid=511139)를 참조하세요.
 
-서버 쪽 스크립트에서는 다양한 함수를 사용할 수 있습니다. [Azure 모바일 서비스 테이블 작업 등록](http://go.microsoft.com/fwlink/p/?linkid=511140)을 참조하세요. 사용 가능한 모든 함수에 대한 참조를 보려면 [Mobile Services 서버 스크립트 참조](http://go.microsoft.com/fwlink/p/?linkid=257676)를 참조하세요.
+서버 쪽 스크립트에서는 다양한 함수를 사용할 수 있습니다. [Azure 모바일 서비스 테이블 작업 등록](https://go.microsoft.com/fwlink/p/?linkid=511140)을 참조하세요. 사용 가능한 모든 함수에 대한 참조를 보려면 [Mobile Services 서버 스크립트 참조](https://go.microsoft.com/fwlink/p/?linkid=257676)를 참조하세요.
 
 Notifyallusers.js의 다음 사용자 지정 API 코드도 만들어집니다.
 
@@ -207,7 +207,7 @@ function sendNotifications(request) {
 
 SendNotifications 함수는 단일 알림을 알림 메시지로 보냅니다. 다른 형식의 푸시 알림을 사용할 수도 있습니다.
 
-**팁**스크립트를 편집 하는 동안 도움말을 가져오는 방법에 대 한 자세한 내용은 [서버 쪽 JavaScript에 IntelliSense 사용](http://go.microsoft.com/fwlink/p/?LinkId=309275)을 참조 하세요.
+**팁**스크립트를 편집 하는 동안 도움말을 보는 방법에 대 한 정보를 [서버 쪽 JavaScript에 IntelliSense 사용](https://go.microsoft.com/fwlink/p/?LinkId=309275)을 참조 하세요.
 
  
 
@@ -231,7 +231,7 @@ Windows는 푸시 알림에 응답하기 때문에 앱이 실행되지 않을 �
 
 모바일 서비스에서 충분한 유연성을 제공하지 않는 경우, C# 또는 Visual Basic으로 서버 코드를 작성하려는 경우 또는 클라우드 서비스가 이미 있으며 해당 서비스에서 푸시 알림을 보내려는 경우 WNS(Windows 푸시 알림 서비스)를 직접 호출할 수 있습니다. WNS를 직접 호출하면 데이터베이스 또는 다른 웹 서비스의 데이터를 모니터링하는 작업자 역할과 같은 고유한 클라우드 서비스에서 푸시 알림을 보낼 수 있습니다. 클라우드 서비스에서 푸시 알림을 앱에 보내려면 WNS에 인증해야 합니다. [Windows 푸시 알림 서비스에 인증하는 방법(JavaScript)](https://msdn.microsoft.com/library/windows/apps/hh465407) 또는 [(C#/C++/VB)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868206)을 참조하세요.
 
-모바일 서비스에서 예약된 작업을 실행하여 푸시 알림을 보낼 수도 있습니다. [모바일 서비스에서 되풀이 작업 예약](http://go.microsoft.com/fwlink/p/?linkid=301694)을 참조하세요.
+모바일 서비스에서 예약된 작업을 실행하여 푸시 알림을 보낼 수도 있습니다. [모바일 서비스에서 되풀이 작업 예약](https://go.microsoft.com/fwlink/p/?linkid=301694)을 참조하세요.
 
 **경고**푸시 알림 마법사를 한 번 실행 한 후 다시 실행 하지 마세요 마법사는 다른 모바일 서비스에 대 한 등록 코드를 추가 합니다. 프로젝트당 마법사를 두 번 이상 실행하면 [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync) 메서드에 대한 호출이 겹치게 되어 런타임 예외를 발생하는 코드가 생성됩니다. 두 개 이상의 모바일 서비스에 대해 푸시 알림을 등록하려면 마법사를 한 번 실행한 다음 **CreatePushNotificationChannelForApplicationAsync**에 대한 호출이 동시에 실행되지 않도록 등록 코드를 다시 작성합니다. 예를 들어 **CreatePushNotificationChannelForApplicationAsync**에 대한 호출을 포함하여 push.register.\*의 마법사 생성 코드를 OnLaunched 이벤트 외부로 이동하면 이 작업을 완료할 수 있지만 이 작업의 특징은 앱의 아키텍처에 따라 다릅니다.
 

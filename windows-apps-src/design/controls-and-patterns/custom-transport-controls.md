@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2101eba9c78c87339af5f1bd46e6afc81eacf6af
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: d4b9e82b0ab5e798bb0b29c4d5127cfe773db5f7
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047428"
+ms.locfileid: "9058654"
 ---
 # <a name="create-custom-transport-controls"></a>사용자 지정 전송 컨트롤 만들기
 
@@ -57,7 +57,7 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 - 세 번째 섹션에는 다양한 MediaTransportControls 요소를 포함하고 구성 요소가 배치되는 방식을 정의하는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)가 있습니다.
 
 > [!NOTE]
-> 템플릿을 수정하는 방법은 [컨트롤 템플릿]()을 참조하세요. 텍스트 편집기 또는 IDE의 유사한 편집기를 사용하여 \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic에 있는 XAML 파일을 열 수 있습니다. 각 컨트롤의 기본 스타일과 템플릿은 **generic.xaml** 파일에 정의되어 있습니다. "MediaTransportControls"를 검색하여 generic.xaml에서 MediaTransportControls 템플릿을 찾을 수 있습니다.
+> 템플릿을 수정하는 방법은 [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)을 참조하세요. 텍스트 편집기 또는 IDE의 유사한 편집기를 사용하여 \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic에 있는 XAML 파일을 열 수 있습니다. 각 컨트롤의 기본 스타일과 템플릿은 **generic.xaml** 파일에 정의되어 있습니다. "MediaTransportControls"를 검색하여 generic.xaml에서 MediaTransportControls 템플릿을 찾을 수 있습니다.
 
 다음 섹션에서는 전송 컨트롤의 기본 요소 중 몇 가지를 사용자 지정하는 방법에 대해 알아봅니다.
 - [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): 사용자는 이 요소를 통해 미디어를 삭제할 수 있으며, 이 요소는 진행률도 표시합니다.
@@ -91,7 +91,7 @@ MediaTransportControls의 모양만 수정하려는 경우 기본 컨트롤 스�
 </MediaPlayerElement>
 ```
 
-스타일 및 템플릿 수정에 대한 자세한 내용은 [스타일링 컨트롤]() 및 [컨트롤 템플릿]()을 참조하세요.
+스타일 및 템플릿 수정에 대한 자세한 내용은 [스타일링 컨트롤](/windows/uwp/design/controls-and-patterns/xaml-styles) 및 [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)을 참조하세요.
 
 ### <a name="create-a-derived-control"></a>파생된 컨트롤 만들기
 

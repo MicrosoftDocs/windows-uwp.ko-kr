@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f7a5054fde1a1a24945b193f578b8389519dc2d5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7a3bf2ce69105787b7ca9e83c7f7fe5db8ae1038
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918629"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050516"
 ---
 # <a name="periodic-notification-overview"></a>정기 알림 개요
  
@@ -25,7 +25,7 @@ ms.locfileid: "8918629"
 
 정기 알림을 사용하면 최소한의 클라우드 서비스와 클라이언트 투자로 앱에서 라이브 타일 업데이트를 받을 수 있습니다. 정기 알림은 동일한 콘텐츠를 다양한 대상에게 배포하는 데 좋은 전달 방법입니다.
 
-**참고**  Windows8.1에는 [푸시 및 정기 알림 샘플을](http://go.microsoft.com/fwlink/p/?linkid=231476) 다운로드 하 고 Windows10 앱에서 해당 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
+**참고**  windows 8.1에 대 한는 [푸시 및 정기 알림 샘플을](https://go.microsoft.com/fwlink/p/?linkid=231476) 다운로드 하 고 windows 10 앱에서 해당 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
 
  
 
@@ -77,7 +77,7 @@ URI는 장치가 온라인 상태인 경우에만 폴링됩니다. 네트워크�
 
 기본적으로 정기 타일 및 배지 알림은 다운로드한 시간으로부터 3일 내에 만료됩니다. 알림이 만료되면 콘텐츠가 배지, 타일 또는 큐에서 제거되고 더 이상 사용자에게 표시되지 않습니다. 앱 또는 알림에 적합한 시간을 사용하여 모든 정기 타일 및 배지 알림에 대한 명시적 만료 시간을 설정함으로써 콘텐츠를 관련이 있을 때까지만 유지하는 것이 좋습니다. 명시적 만료 시간은 수명이 정의되어 있는 콘텐츠에 필수적입니다. 또한 클라우드 서비스에 연결할 수 없게 되는 경우나 사용자의 네트워크 연결이 장기간 끊긴 경우에 부실 콘텐츠 제거도 수행합니다.
 
-클라우드 서비스는 응답 페이로드에 X-WNS-Expires HTTP 헤더를 포함하여 알림의 만료 날짜 및 시간을 설정합니다. X-WNS-Expires HTTP 헤더는 [HTTP 날짜 형식](http://go.microsoft.com/fwlink/p/?linkid=253706)에 맞아야 합니다. 자세한 내용은 [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) 또는 [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_)를 참조하세요.
+클라우드 서비스는 응답 페이로드에 X-WNS-Expires HTTP 헤더를 포함하여 알림의 만료 날짜 및 시간을 설정합니다. X-WNS-Expires HTTP 헤더는 [HTTP 날짜 형식](https://go.microsoft.com/fwlink/p/?linkid=253706)에 맞아야 합니다. 자세한 내용은 [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) 또는 [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_)를 참조하세요.
 
 예를 들어 주식 시장의 활황 거래일 동안 주가 업데이트에 대한 만료를 폴링 간격의 두 배(예: 30분마다 폴링할 경우 접수 1시간 후)로 설정할 수 있습니다. 다른 예로 뉴스 앱에서는 일간 뉴스 타일 업데이트에 적절한 만료 시간을 1일로 결정할 수 있습니다.
 

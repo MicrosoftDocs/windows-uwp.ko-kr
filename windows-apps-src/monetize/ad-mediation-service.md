@@ -5,16 +5,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: Windows 10 uwp, 광고, 광고, 광고 조정
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f4041c21665bd77856b15b7e94e45d613d6ea51
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9197dd4b62df26ff63e469063573789da948c767
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945755"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049820"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Microsoft 광고 조정 서비스
 
-[Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 사용하여 [앱에서 광고를 표시](display-ads-in-your-app.md)할 때, 필요에 따라 Microsoft 광고 조정 서비스를 사용하여 광고 수익을 최대화할 수 있습니다. 이 문서에서는 광고 조정 서비스와 그 목표에 대해 설명합니다.
+[Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 사용하여 [앱에서 광고를 표시](display-ads-in-your-app.md)할 때, 필요에 따라 Microsoft 광고 조정 서비스를 사용하여 광고 수익을 최대화할 수 있습니다. 이 문서에서는 광고 조정 서비스와 그 목표에 대해 설명합니다.
 
 광고 조정 서비스는 [Microsoft 광고 수익 창출 플랫폼](https://developer.microsoft.com/windows/ad-monetization-platform)의 일부입니다. 이 플랫폼은 다음 부분으로 구성됩니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "8945755"
 
 자동으로 새로운 광고 네트워크가 포함되며 학습 예산을 통해 성능이 평가됩니다. 짧은 시간 내에 일련의 광고에서 위치를 찾습니다. 이렇게 하면 광고 네트워크의 경쟁력이 놓아지며 개발자는 앱을 통해 가장 높은 수익을 창출할 수 있습니다.
 
-우리의 [권장 조정 설정](../publish/in-app-ads.md#mediation-settings)을 사용하여 앱의 광고에서 수익을 극대화하는 것이 좋습니다. 이를 사용하면 알고리즘이 앱을 위한 최상의 수익을 산출할 수 있습니다. 그러나 마음껏 제어를 강화 하 고 광고를 수행 하는 순서는 광고 네트워크에 파트너 센터에서 자체 조정 설정을 선택할 수도 있습니다.
+우리의 [권장 조정 설정](../publish/in-app-ads.md#mediation-settings)을 사용하여 앱의 광고에서 수익을 극대화하는 것이 좋습니다. 이를 사용하면 알고리즘이 앱을 위한 최상의 수익을 산출할 수 있습니다. 그러나 마음껏 제어를 강화 하 고 광고를 수행 하는 순서는 광고 네트워크를 파트너 센터에서 자체 조정 설정을 선택할 수도 있습니다.
 
 ## <a name="rich-data-and-signals"></a>풍부한 데이터와 신호
 
@@ -55,6 +55,6 @@ ms.locfileid: "8945755"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)
+* [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)
 * [조정 설정](../publish/in-app-ads.md#mediation-settings)
 * [광고 성과 보고서](../publish/advertising-performance-report.md)

@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b09e90ea71872421a0caf1edcc1a03ce25fef42
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f6868975f793bf504dac167bf4d57d2574ddc0e9
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930664"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058644"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Xbox 및 TV용 디자인
 
@@ -832,7 +832,7 @@ UWP에는 포커스 화면 효과를 [VisibleBounds](https://msdn.microsoft.com/
 > [!NOTE]
 > 이 코드 조각은 `ListView`용으로 특별히 작성되었습니다. `GridView` 스타일의 경우 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.targettype.aspx) 및 [Style](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) 둘 다의 [TargetType](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx) 특성을 `GridView`로 설정합니다.
 
-보다 세부적으로 제어 하는 방법에 대 한 항목 할지, 응용 프로그램이 대상 버전 1803 하거나 나중에 [UIElement.BringIntoViewRequested 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)를 사용할 수 있습니다. **ListView**에 대 한 [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 에 넣을 수/**GridView** 다음 코드 조각 에서처럼 내부 **ScrollViewer** 는 전에 catch 합니다.
+보다 세부적으로 제어 하는 방법에 대 한 항목 할지, 응용 프로그램이 대상 버전 1803 또는 나중에 [UIElement.BringIntoViewRequested 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)를 사용할 수 있습니다. **ListView**에 대 한 [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 에 넣을 수/**GridView** 다음 코드 조각 에서처럼 내부 **ScrollViewer** 는 전에 catch:
 
 ```xaml
 <GridView x:Name="gridView">
@@ -933,9 +933,9 @@ DirectX 11 또는 DirectX 12를 사용해 앱을 개발하면서 사용자 고�
 
 ![피벗 밑줄](images/designing-for-tv/pivot-underline.png)
 
-선택한 피벗 헤더가 항상 첫 번째 위치로 이동하도록 하는 대신 피벗이 항상 동일한 위치를 유지하도록 [Pivot.IsHeaderItemsCarouselEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabled.aspx) 속성을 `true`로 설정할 수 있습니다. TV와 같은 큰 화면 표시에서는 헤더 래핑이 사용자에게 방해가 될 수 있으므로 환경이 개선됩니다. 모든 피벗 헤더가 한 번에 화면에 들어가지 않는 경우 고객이 다른 헤더를 볼 수 있도록 스크롤 막대가 표시됩니다. 그러나 최상의 환경을 제공하려면 모두 화면에 들어가도록 해야 합니다. 자세한 내용은 [탭 및 피벗](../controls-and-patterns/tabs-pivot.md)을 참조하세요.
+선택한 피벗 헤더가 항상 첫 번째 위치로 이동하도록 하는 대신 피벗이 항상 동일한 위치를 유지하도록 [Pivot.IsHeaderItemsCarouselEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabled.aspx) 속성을 `true`로 설정할 수 있습니다. TV와 같은 큰 화면 표시에서는 헤더 래핑이 사용자에게 방해가 될 수 있으므로 환경이 개선됩니다. 모든 피벗 헤더가 한 번에 화면에 들어가지 않는 경우 고객이 다른 헤더를 볼 수 있도록 스크롤 막대가 표시됩니다. 그러나 최상의 환경을 제공하려면 모두 화면에 들어가도록 해야 합니다. 자세한 내용은 [탭 및 피벗](../controls-and-patterns/pivot.md)을 참조하세요.
 
-### <a name="navigation-pane-a-namenavigation-pane"></a>탐색 창 <a name="navigation-pane">
+### <a name="navigation-pane-a-namenavigation-pane-"></a>탐색 창 <a name="navigation-pane" />
 
 탐색 창(*햄버거 메뉴*라고도 함)은 UWP 앱에서 일반적으로 사용되는 탐색 컨트롤입니다. 주로 목록 스타일 메뉴에서 선택하며 사용자를 다른 페이지로 이동하는 여러 옵션이 있는 창입니다. 일반적으로 이 창은 공간을 절약하기 위해 축소된 형태로 시작되며 사용자가 단추를 클릭하여 열 수 있습니다.
 

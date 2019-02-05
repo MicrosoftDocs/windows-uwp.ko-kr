@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4517d3fc917cb306281e9050f8554119ff987007
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: a2d5db17be1367deea66ff2762d0350931e1861e
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044507"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058584"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -47,7 +47,7 @@ Windows Template Studio 마법사 기반 경험을 사용 하 여 새 유니버�
 
 우리는 기존의 데스크톱 응용 프로그램 UI와 UWP UI 간의 격차를 작성 하는 새 UWP XAML 컨트롤 배치한 합니다.
 
-예를 들어 새 [메뉴 모음](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [분할 단추](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)및 [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) 컨트롤 명령을, 노출 더 유연한 방법을 제공 하 고 [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) 보겠습니다 사용자 입력 나열 되지 않은 값 미리 정의 된 목록이 옵션입니다.
+예를 들어 새 [메뉴 모음](/windows/uwp/design/controls-and-patterns/menus), [DropDownButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [분할 단추](/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)및 [CommandBarFlyout](/windows/uwp/design/controls-and-patterns/command-bar-flyout) 컨트롤 명령을, 노출 더 유연한 방법을 제공 하 고 [EditableComboBox](/windows/uwp/design/controls-and-patterns/combo-box#make-a-combo-box-editable) 보겠습니다 사용자 입력 나열 되지 않은 값 미리 정의 된 목록이 옵션입니다.
 
 ![메뉴 모음](images/menu-bar.png)
 
@@ -68,7 +68,7 @@ Windows UI 라이브러리는 UWP 앱에 대 한 컨트롤 및 기타 사용자 
 
 ![Windows UI 라이브러리](images/win-ui.png)
 
-[Windows UI 라이브러리 (미리 보기 버전)를](https://docs.microsoft.com/en-us/uwp/toolkits/winui/)참조 하세요.
+[Windows UI 라이브러리 (미리 보기 버전)를](https://docs.microsoft.com/uwp/toolkits/winui/)참조 하세요.
 
 <a id="xaml-islands" />
 
@@ -161,7 +161,7 @@ LOB(기간 업무) 앱은 다양한 다른 시스템에 데이터를 저장하�
 |-------|-------------|
 | [UWP 앱 가이드](https://msdn.microsoft.com/library/windows/apps/dn894631) | 이 기초 가이드에서는 디바이스 패밀리 정의 및 대상 디바이스 패밀리를 결정하는 방법, 다양한 디바이스 폼 팩터에 맞게 UI를 조정할 수 있는 새 UI 컨트롤 및 패널, 앱에서 사용할 수 있는 API 화면을 이해하고 제어하는 방법을 포함하여 Windows 10 UWP 플랫폼에 대해 알아봅니다. |
 | [적응형 XAML UI 코드 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619992) | 이 코드 샘플 모든 레이아웃 옵션 및 장치 유형에 관계 없이 앱에 대 한 컨트롤 보여주며 원하는 원하는 레이아웃을 얻는 방법을 보여주는 패널과 상호 작용할 수 있습니다. 각 컨트롤이 다양한 폼 팩터에 어떻게 응답하는지를 보여 주는 것은 물론, 앱 자체도 이에 응답하여 적응형 UI를 얻기 위한 다양한 방법을 보여 줍니다. |
-| [Xamarin 항목]() | 전화를 대상으로 하는 것에 대 한 Xamarin |
+| [Xamarin 항목](/xamarin/) | 전화를 대상으로 하는 것에 대 한 Xamarin |
 
 ## <a name="deployment"></a>배포
 

@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 355c760e173bd101b2865c300824de44b6434ee4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6eafbfd965d2783c0f72e75c91a04e5ac1cb119f
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944278"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058564"
 ---
 # <a name="bringing-it-together"></a>통합
 
@@ -80,12 +80,12 @@ ms.locfileid: "8944278"
 
 ## <a name="implicit-animations"></a>암시적 애니메이션
 
-> 암시적 애니메이션 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))이 필요 이상.
+> 암시적 애니메이션에는 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 필요 이상.
 
 
 암시적 애니메이션은 자동으로 매개 변수를 변경 하는 동안 이전 및 새 값 사이의 보간에 따라 Fluent 움직임을 달성 하는 간단한 방법입니다.
 
-암시적으로 다음 속성이 변경 애니메이션을 적용할 수 있습니다.
+다음 속성 변경에 암시적으로 애니메이션할 수 있습니다.
 
 - [UIElement](/uwp/api/windows.ui.xaml.uielement)
   - **불투명도**
@@ -96,14 +96,14 @@ ms.locfileid: "8944278"
 - [테두리](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)또는 [패널](/uwp/api/windows.ui.xaml.controls.panel)
   - **Background**
 
-변경 내용을 암시적으로 애니메이션 효과 줄 수 있는 각 속성을 해당 _전환_ 속성이 있습니다. 속성에 애니메이션을 전환 유형을 해당 _전환_ 속성에 할당 합니다. 이 표에서 각각에 대해 사용할 전환 종류와 _전환_ 속성을 보여줍니다.
+변경 내용을 암시적으로 애니메이션 효과 줄 수 있는 각 속성을 해당 _전환_ 속성이 있습니다. 속성에 애니메이션을 전환 유형을 해당 _전환_ 속성에 할당 합니다. 이 표에서 _전환_ 속성 및 전환 형식이 각각에 대 한 사용을 보여 줍니다.
 
 | 애니메이션 효과 준된 속성 | 전환 속성 | 암시적 전환 유형 |
 | -- | -- | -- |
 | [UIElement.Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Rotation](/uwp/api/windows.ui.xaml.uielement.rotation) | [RotationTransition](/uwp/api/windows.ui.xaml.uielement.rotationtransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
-| [UIElement.Scale](/uwp/api/windows.ui.xaml.uielement.scale) | [ScaleTransition](/uwp/api/windows.ui.xaml.uielement.scaletransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.uielement.vector3transition) |
-| [UIElement.Translation](/uwp/api/windows.ui.xaml.uielement.scale) | [TranslationTransition](/uwp/api/windows.ui.xaml.uielement.translationtransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.uielement.vector3transition) |
+| [UIElement.Scale](/uwp/api/windows.ui.xaml.uielement.scale) | [ScaleTransition](/uwp/api/windows.ui.xaml.uielement.scaletransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.vector3transition) |
+| [UIElement.Translation](/uwp/api/windows.ui.xaml.uielement.scale) | [TranslationTransition](/uwp/api/windows.ui.xaml.uielement.translationtransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.vector3transition) |
 | [Border.Background](/uwp/api/windows.ui.xaml.controls.border.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.border.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 | [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 | [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |

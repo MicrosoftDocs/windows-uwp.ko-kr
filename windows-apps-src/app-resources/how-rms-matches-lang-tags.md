@@ -6,12 +6,12 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 4914a448432206e2418fe110c0b49517a7145e0b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ccbfa5f06d336604160f98dd44c27cc0cf1b0aed
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937980"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050586"
 ---
 # <a name="how-the-resource-management-system-matches-language-tags"></a>리소스 관리 시스템이 언어 태그를 일치하는 방법
 
@@ -21,7 +21,7 @@ ms.locfileid: "8937980"
 
 언어 태그 한정자가 있는 리소스는 앱 런타임 언어 목록을 기반으로 비교되고 점수가 매겨집니다. 다른 언어 목록의 정의에 대해서는 [사용자 프로필이 언어와 앱 매니페스트 언어 이해](../design/globalizing/manage-language-and-region.md)를 참조하세요. 목록의 첫 번째 언어에 대한 일치는 목록의 두 번째 언어에 대한 일치보다 앞에 나타나며, 이는 다른 국가별 변형에 대해서도 마찬가지입니다. 예를 들어 앱 런타임 언어가 en-US인 경우 en-GB에 대한 리소스가 fr-CA 리소스보다 우선적으로 선택되고, en 형식의 리소스가 없는 경우에만 fr-CA 리소스가 선택됩니다(이 경우 앱의 기본 언어는 en 형식으로 설정할 수 없음).
 
-점수 체계는 [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) 하위 태그 레지스트리 및 기타 데이터 소스에 포함된 데이터를 사용합니다. 이로 인해 점수가 일치하는 다른 품질과 그라데이션되고 여러 후보를 사용할 수 있는 경우 가장 일치하는 점수를 가진 후보를 선택합니다.
+점수 체계는 [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) 하위 태그 레지스트리 및 기타 데이터 소스에 포함된 데이터를 사용합니다. 이로 인해 점수가 일치하는 다른 품질과 그라데이션되고 여러 후보를 사용할 수 있는 경우 가장 일치하는 점수를 가진 후보를 선택합니다.
 
 따라서 일반 용어에 언어 콘텐츠를 태그로 지정할 수 있지만 필요에 따라 여전히 특정 콘텐츠를 지정할 수 있습니다. 예를 들어 귀하의 앱에는 미국, 영국 및 기타 영역에 공통된 여러 영어 문자열이 있을 수 있습니다. 이러한 문자열을 "en"(영어)로 지정하면 공간과 지역화 오버헤드가 저장됩니다. 차이를 구분해야 할 때, 예를 들면 "color/colour"라는 단어가 포함된 문자열에서 미국과 영국 버전은 모두 각각 "en-US" 및 "en-GB"라는 언어 및 지역 하위 태그를 사용하여 태그될 수 있습니다.
 
@@ -74,7 +74,7 @@ Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로�
 
 #### <a name="macro-region-match"></a>매크로 지역 일치
 
-태그는 언어 및 스크립트 하위 태그에 대해 일치합니다. 두 태그에는 지역 하위 태그가 있으며 이 중 하나는 다른 지역을 포함하는 매크로 지역을 나타냅니다. 매크로 지역 하위 태그는 항상 숫자이고 유엔통계처 M.49 국가 및 지역 코드에서 파생됩니다. 포함하는 관계에 대한 세부 정보는 [매크로 지리(대륙)적 지역, 지리적 하위 지역, 선택된 경제 및 기타 그룹의 구성](http://go.microsoft.com/fwlink/p/?LinkId=247929)을 참조하세요.
+태그는 언어 및 스크립트 하위 태그에 대해 일치합니다. 두 태그에는 지역 하위 태그가 있으며 이 중 하나는 다른 지역을 포함하는 매크로 지역을 나타냅니다. 매크로 지역 하위 태그는 항상 숫자이고 유엔통계처 M.49 국가 및 지역 코드에서 파생됩니다. 포함하는 관계에 대한 세부 정보는 [매크로 지리(대륙)적 지역, 지리적 하위 지역, 선택된 경제 및 기타 그룹의 구성](https://go.microsoft.com/fwlink/p/?LinkId=247929)을 참조하세요.
 
 **참고** "경제 그룹" 또는 "기타 그룹화"에 대한 UN 코드는 BCP-47에서는 지원되지 않습니다.
  
@@ -189,6 +189,6 @@ Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로�
 ## <a name="related-topics"></a>관련 항목
 
 * [리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법](how-rms-matches-and-chooses-resources.md)
-* [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [사용자 프로필 언어와 앱 매니페스트 언어 이해](../design/globalizing/manage-language-and-region.md)
-* [매크로 지리(대륙)적 지역, 지리적 하위 지역, 선택된 경제 및 기타 그룹의 구성](http://go.microsoft.com/fwlink/p/?LinkId=247929)
+* [매크로 지리(대륙)적 지역, 지리적 하위 지역, 선택된 경제 및 기타 그룹의 구성](https://go.microsoft.com/fwlink/p/?LinkId=247929)

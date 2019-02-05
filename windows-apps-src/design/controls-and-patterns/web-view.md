@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a29f58ff8dc842fd985a44f94ff44baea51dc2e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7af61b7d442fee7eff6399a7a5d143adb53fb560
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941005"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058554"
 ---
 # <a name="web-view"></a>웹 보기
  
@@ -73,7 +73,7 @@ webView1.Navigate("http://www.contoso.com");
 
 POST 요청과 HTTP 헤더가 포함된 URI로 이동하려면 [NavigateWithHttpRequestMessage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatewithhttprequestmessage.aspx) 메서드를 사용합니다. 이 메서드는 [HttpRequestMessage.Method](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.post.aspx) 속성 값에 대해 [HttpMethod.Post](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.get.aspx) 및 [HttpMethod.Get](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httprequestmessage.method.aspx)만 지원합니다. 
 
-앱의 [LocalFolder]() 또는 [TemporaryFolder]() 데이터 저장소에서 압축 및 암호화되지 않은 콘텐츠를 로드하려면 [ms-appdata 체계]()를 사용하는 **Uri**와 함께 **Navigate** 메서드를 사용합니다. 웹 보기에서 이 체계를 지원하려면 로컬 또는 임시 폴더 아래의 하위 폴더에 콘텐츠를 배치해야 합니다. 이렇게 하면 ms-appdata:///local/*folder*/*file*.html 및 ms-appdata:///temp/*folder*/*file*.html과 같은 URI로 이동할 수 있습니다. 압축 또는 암호화된 파일을 로드하려면 [NavigateToLocalStreamUri](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx)를 참조하세요. 
+앱의 [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) 또는 [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) 데이터 저장소에서 압축 및 암호화되지 않은 콘텐츠를 로드하려면 [ms-appdata 체계](/windows/uwp/app-resources/uri-schemes)를 사용하는 **Uri**와 함께 **Navigate** 메서드를 사용합니다. 웹 보기에서 이 체계를 지원하려면 로컬 또는 임시 폴더 아래의 하위 폴더에 콘텐츠를 배치해야 합니다. 이렇게 하면 ms-appdata:///local/*folder*/*file*.html 및 ms-appdata:///temp/*folder*/*file*.html과 같은 URI로 이동할 수 있습니다. 압축 또는 암호화된 파일을 로드하려면 [NavigateToLocalStreamUri](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx)를 참조하세요. 
 
 이러한 각 첫 번째 수준 하위 폴더는 다른 첫 번째 수준 하위 폴더의 콘텐츠와 분리됩니다. 예를 들어 ms-appdata:///temp/folder1/file.html로 이동할 수 있지만 이 파일에서 ms-appdata:///temp/folder2/file.html에 대한 링크를 사용할 수는 없습니다. 그러나 **ms-appx-web scheme**을 사용하여 앱 패키지의 HTML 콘텐츠에 연결하고, **http** 및 **https** URI 체계를 사용하여 웹 콘텐츠에 연결할 수 있습니다.
 

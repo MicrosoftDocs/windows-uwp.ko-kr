@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e7082c3e572493656e8b109da35861ec820d4ec9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: c78e16a50bdca09f474d5016fdc86b6d27702d5b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050836"
+ms.locfileid: "9058774"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 오디오 프레임 처리
 
@@ -49,7 +49,7 @@ ms.locfileid: "9050836"
 
 새로운 **MediaFrameReader** 인스턴스를 가져오려면 [**MediaCapture.CreateFrameReaderAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync#Windows_Media_Capture_MediaCapture_CreateFrameReaderAsync_Windows_Media_Capture_Frames_MediaFrameSource_)를 호출하여 이전 단계에서 선택한 **MediaFrameSource** 개체를 전달합니다. 기본적으로 오디오 프레임은 버퍼링된 모드에서 가져오므로 프레임이 삭제될 가능성이 적습니다. 그러나 오디오 프레임을 충분히 빠르게 처리하지 않고 시스템의 할당된 메모리 버퍼를 채우는 경우에도 여전히 발생할 수 있습니다.
 
-오디오 데이터의 새 프레임을 사용할 수 있을 때 발생하는 [**MediaFrameReader.FrameArrived**](*https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.framearrived) 이벤트에 대한 처리기를 등록합니다. [**StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.startasync)를 호출하여 오디오 프레임 획득을 시작합니다. 프레임 읽기 프로그램이 시작되지 않으면 [**Success**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus) 이외에 호출에서 반환된 상태 값은 값을 갖습니다.
+오디오 데이터의 새 프레임을 사용할 수 있을 때 발생하는 [**MediaFrameReader.FrameArrived**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.framearrived) 이벤트에 대한 처리기를 등록합니다. [**StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.startasync)를 호출하여 오디오 프레임 획득을 시작합니다. 프레임 읽기 프로그램이 시작되지 않으면 [**Success**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus) 이외에 호출에서 반환된 상태 값은 값을 갖습니다.
 
 [!code-cs[CreateAudioFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCreateAudioFrameReader)]
 

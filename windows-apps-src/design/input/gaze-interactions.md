@@ -11,12 +11,12 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5dc12e9b85b7274c9e1deb7d629917cbeaa981c0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 77e39b9c7440fab491b3d7ef85baa757d299fff8
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942374"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058544"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>UWP 앱의 응시 상호 작용 및 눈 추적
 
@@ -36,7 +36,7 @@ ms.locfileid: "8942374"
 또한 응시 입력은 게임(대상 획득 및 추적 등) 및 기존 입력 장치(키보드, 마우스, 터치)를 사용할 수 없거나 쇼핑 백을 들어야 한다든지 하는 다른 작업을 위해 사용자의 손을 자유롭게 하는 것이 좋은 기존 생산성 응용 프로그램, 키오스크 및 기타 대화형 시나리오에 똑같이 매력적인 기회를 제공합니다.
 
 > [!NOTE]
-> **Windows 10 Fall Creators Update**에서 눈을 사용하여 화면 포인터를 제어하고, 화상 키보드로 입력하고, 텍스트 음성 변환을 사용하여 다른 사람과 소통하는 기본 제공 기능인 [아이 컨트롤](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control)과 함께 추적 하드웨어에 대한 지원이 도입되었습니다. 눈 추적 하드웨어와 상호 작용할 수 있는 응용 프로그램을 빌드하는 [UWP API]([Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) 집합은 **Windows 10 2018년 4월 업데이트(버전 1803, 빌드 17134)** 이상에서 사용할 수 있습니다.
+> **Windows 10 Fall Creators Update**에서 눈을 사용하여 화면 포인터를 제어하고, 화상 키보드로 입력하고, 텍스트 음성 변환을 사용하여 다른 사람과 소통하는 기본 제공 기능인 [아이 컨트롤](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control)과 함께 추적 하드웨어에 대한 지원이 도입되었습니다. 눈 추적 하드웨어와 상호 작용할 수 있는 응용 프로그램을 구축 하기 위한 UWP Api ([Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview))의 집합을 사용할 수 **Windows 10 2018 년 4 월 업데이트 (버전 1803, 빌드 17134)** 이상.
 
 ## <a name="privacy"></a>개인 정보
 

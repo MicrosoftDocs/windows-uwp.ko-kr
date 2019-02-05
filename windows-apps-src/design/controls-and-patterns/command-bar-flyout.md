@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0760805128f8f11b4598a5c8b0d19d8e9f20d04d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 90c86e071b0e1d2a07d7755ba23cb6418ca0022a
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050956"
+ms.locfileid: "9058574"
 ---
 # <a name="command-bar-flyout"></a>명령 모음 플라이아웃
 
@@ -165,7 +165,7 @@ PrimaryCommands와 SecondaryCommands [AppBarButton](https://msdn.microsoft.com/l
 
 ### <a name="other-content"></a>기타 콘텐츠
 
-명령 모음 플라이 아웃을 AppBarElementContainer에 래핑하여 다른 컨트롤을 추가할 수 있습니다. 이렇게 하면 [DropDownButton]() 또는 [분할 단추]()같은 컨트롤을 추가 하거나 더 복잡 한 UI를 만들기 위해 [StackPanel]() 같은 컨테이너를 추가할 수 있습니다.
+명령 모음 플라이 아웃을 AppBarElementContainer에 래핑하여 다른 컨트롤을 추가할 수 있습니다. 이렇게 하면 [DropDownButton](buttons.md) 또는 [분할 단추](buttons.md)같은 컨트롤을 추가 하거나 더 복잡 한 UI를 만들기 위해 [StackPanel](buttons.md) 같은 컨테이너를 추가할 수 있습니다.
 
 명령 모음 플라이 아웃의 기본 또는 보조 명령 컬렉션에 추가 하기 위해 요소 [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) 인터페이스를 구현 해야 합니다. AppBarElementContainer 자체 인터페이스를 구현 하지 않을 경우에 요소 명령 모음에 추가할 수 있도록이 인터페이스를 구현 하는 래퍼를입니다.
 
@@ -174,7 +174,7 @@ PrimaryCommands와 SecondaryCommands [AppBarButton](https://msdn.microsoft.com/l
 > [!TIP]
 > 기본적으로 앱 캔버스에 대 한 디자인 요소 보이지 않을 수도 있습니다 올바른 명령 모음에 있습니다. AppBarElementContainer를 사용 하 여 요소를 추가할 때 가지 다른 명령 모음 요소와 일치 하는 요소를 확인 하기 위해 취해야 할 몇 가지 단계가 있습니다.
 >
-> - [경량 스타일](/design/controls-and-patterns/xaml-styles#lightweight-styling) 요소의 배경과 테두리 앱 바 단추와 일치 하도록 기본 브러시를 재정의 합니다.
+> - [경량 스타일](/windows/uwp/design/controls-and-patterns/xaml-styles#lightweight-styling) 요소의 배경과 테두리 앱 바 단추와 일치 하도록 기본 브러시를 재정의 합니다.
 > - 요소의 위치와 크기를 조정 합니다.
 > - 아이콘 너비와 높이 16px Viewbox에서 줄 바꿈 합니다.
 

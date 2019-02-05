@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ab8dde9984ed0e4f7d99e7809361d928bebb718
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 82dd3d20aa39ea471618e7707d066c67a6547f9f
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045429"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058754"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 
@@ -258,7 +258,7 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 
 ## <a name="theme"></a>테마
 
-`theme` 한정자는 기본 앱 모드 설정 또는 [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application?branch=master.RequestedTheme)를 사용하는 앱의 재정의 설정과 가장 잘 일치하는 리소스를 제공하는 데 사용됩니다.
+`theme` 한정자는 기본 앱 모드 설정 또는 [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme)를 사용하는 앱의 재정의 설정과 가장 잘 일치하는 리소스를 제공하는 데 사용됩니다.
 
 ## <a name="important-apis"></a>중요 API
 

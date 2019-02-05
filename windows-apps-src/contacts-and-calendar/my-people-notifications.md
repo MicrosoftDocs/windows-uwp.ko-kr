@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: db25954b7fc6541ac5f5900236e61cb8da488be6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e4657c9dfb651c1e7f6bb4e2cafdc49d0a11237b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922384"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058724"
 ---
 # <a name="my-people-notifications"></a>내 피플 알림
 
@@ -78,7 +78,7 @@ experienceType=”shoulderTap”
 > 앱에서 PC에 저장된 연락처를 원격으로 저장된 연락처와 연결하기 위해 [ContactStore Api](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) 및 [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) 속성을 사용하는 경우 RemoteId 속성의 값이 반드시 안정적이고 고유해야 합니다. 즉, 원격 ID는 단일 사용자 계정을 일관적으로 식별해야 하며, 다른 앱 소유의 연락처를 포함하여 PC에 있는 다른 연락처의 원격 ID와 충돌하지 않도록 보장하는 고유의 태그를 포함해야 합니다.
 > 앱에서 사용하는 원격 ID가 안정적이고 고유하다는 보장이 없는 경우 [RemoteIdHelper 클래스](https://msdn.microsoft.com/en-us/library/windows/apps/jj207024(v=vs.105).aspx#BKMK_UsingtheRemoteIdHelperclass)를 사용하여 모든 원격 ID를 시스템에 추가하기 전에 고유의 태그를 추가하면 됩니다. 또는 RemoteId 속성을 전혀 사용하지 않고, 그 대신 연락처의 원격 ID를 저장하는 사용자 지정 확장 속성을 만드는 방법을 선택할 수 있습니다.
 
-두 번째 바인딩 및 페이로드 외에도 첫 번째 바인딩에 대체 알림을 위한 또 다른 페이로드를 포함해야 합니다. 일반 알림으로 되돌려야 할 경우 알림에서 사용합니다([이 문서의 후반부](https://review.docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast)에서 자세하게 설명함).
+두 번째 바인딩 및 페이로드 외에도 첫 번째 바인딩에 대체 알림을 위한 또 다른 페이로드를 포함해야 합니다. 일반 알림으로 되돌려야 할 경우 알림에서 사용합니다([이 문서의 후반부](/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast)에서 자세하게 설명함).
 
 ## <a name="creating-the-notification"></a>알림 만들기
 [알림 메시지](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)와 마찬가지 방법으로 내 피플 알림 템플릿을 만들 수 있습니다.

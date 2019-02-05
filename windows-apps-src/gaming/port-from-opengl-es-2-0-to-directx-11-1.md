@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d 11, 포트, 그래픽
 ms.localizationpriority: medium
-ms.openlocfilehash: 9af5e42a27e21b8a4300edc4b8171f7abc64bac7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4ee100bbbe70595049ca7298839e7906e21c3e59
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929275"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050293"
 ---
 # <a name="port-from-opengl-es-20-to-direct3d-11"></a>OpenGL ES 2.0에서 Direct3D 11로 포팅
 
@@ -19,7 +19,7 @@ ms.locfileid: "8929275"
 
 OpenGL ES 2.0 그래픽 파이프라인을 Direct3D 11 및 Windows 런타임으로 포팅하는 방법에 대한 문서, 개요 및 연습이 포함되어 있습니다.
 
-> **참고**  OpenGL ES 2.0 프로젝트를 포팅하는 중간 단계는 Microsoft Store 용 ANGLE을 사용 합니다. ANGLE을 사용하면 OpenGL ES API 호출을 DirectX 11 API 호출로 변환하여 Windows에서 OpenGL ES 콘텐츠를 실행할 수 있습니다. ANGLE에 대한 자세한 내용은 [Microsoft Store용 ANGLE Wiki](http://go.microsoft.com/fwlink/p/?linkid=618387)를 참조하세요.
+> **참고**  OpenGL ES 2.0 프로젝트를 포팅하는 중간 단계는 Microsoft Store 용 ANGLE을 사용 합니다. ANGLE을 사용하면 OpenGL ES API 호출을 DirectX 11 API 호출로 변환하여 Windows에서 OpenGL ES 콘텐츠를 실행할 수 있습니다. ANGLE에 대한 자세한 내용은 [Microsoft Store용 ANGLE Wiki](https://go.microsoft.com/fwlink/p/?linkid=618387)를 참조하세요.
 
  
 

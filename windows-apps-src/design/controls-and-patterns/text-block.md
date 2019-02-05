@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b109dff2896d2db01892d2b62a511d392f8054b3
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 692b8837f3bd74dfc5f74bee02786213c9a898f2
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037165"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058524"
 ---
 # <a name="text-block"></a>텍스트 블록
 
@@ -80,7 +80,7 @@ TextBlock에 콘텐츠를 추가하는 데 사용할 수 있는 속성은 두 �
     <Italic>italic</Italic>, or a <Bold><Italic>combination</Italic></Bold>.</TextBlock>
 ```
 
-Bold, Italic, Run, Span 및 LineBreak와 같이 Inline 클래스에서 파생된 요소는 텍스트의 다른 부분에 대해 다른 서식을 적용할 수 있습니다. 자세한 내용은 [텍스트 서식 지정]() 섹션을 참조하세요. 인라인 Hyperlink 요소를 사용하면 텍스트에 하이퍼링크를 추가할 수 있습니다. 그러나 Inlines를 사용하면 다음 섹션에서 설명하는 빠른 경로 텍스트 렌더링을 사용할 수 없습니다.
+Bold, Italic, Run, Span 및 LineBreak와 같이 Inline 클래스에서 파생된 요소는 텍스트의 다른 부분에 대해 다른 서식을 적용할 수 있습니다. 자세한 내용은 [텍스트 서식 지정](#formatting-text) 섹션을 참조하세요. 인라인 Hyperlink 요소를 사용하면 텍스트에 하이퍼링크를 추가할 수 있습니다. 그러나 Inlines를 사용하면 다음 섹션에서 설명하는 빠른 경로 텍스트 렌더링을 사용할 수 없습니다.
 
 
 ## <a name="performance-considerations"></a>성능 고려 사항

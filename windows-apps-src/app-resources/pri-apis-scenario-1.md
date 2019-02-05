@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b14e413a5629dfb5447750e32c42c4efafef8fa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0ccb9447e9594f71907f0da5d0e15f9c6c65bb6b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931450"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058844"
 ---
 # <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>시나리오 1: 문자열 리소스와 자산 파일에서 PRI 파일 생성
 이 시나리오에서는 [패키지 리소스 인덱싱(PRI) API](https://msdn.microsoft.com/library/windows/desktop/mt845690)를 사용하여 사용자 지정 빌드 시스템을 나타내는 새로운 앱을 만듭니다. 이 사용자 지정 빌드 시스템의 용도는 대상 UWP 앱용 PRI 파일을 만드는 것입니다. 따라서, 이 연습의 일부로, 대상 UWP 앱의 리소스를 나타내는 몇 가지 샘플 리소스 파일(문자열 및 다른 종류의 리소스가 들어 있음)을 만들겠습니다.
@@ -119,7 +119,7 @@ std::wstring filePathPRIDumpBasic{ generatedPRIsFolder + L"\\resources-pri-dump-
 ::CreateDirectory(generatedPRIsFolder.c_str(), nullptr);
 ```
 
-COM을 초기화하는 호출 직후, 리소스 인덱서 핸들을 선언한 다음, [**MrmCreateResourceIndexer**]()를 호출하여 리소스 인덱서를 만듭니다.
+COM을 초기화하는 호출 직후, 리소스 인덱서 핸들을 선언한 다음, [**MrmCreateResourceIndexer**](/windows/desktop/menurc/mrmcreateresourceindexer)를 호출하여 리소스 인덱서를 만듭니다.
 
 ```cppwinrt
 MrmResourceIndexerHandle indexer;
@@ -139,7 +139,7 @@ MrmResourceIndexerHandle indexer;
 - 기본 리소스 한정자의 목록입니다.
 - 함수에서 리소스 인덱서 핸들을 설정할 수 있도록 해주는 리소스 인덱서 핸들에 대한 포인터입니다.
 
-다음 단계는 방금 만든 리소스 인덱서에 리소스를 추가하는 것입니다. `resources.resw` 대상 UWP 앱에 대한 중간 문자열을 포함하는 리소스 파일(.resw)입니다. 내용을 확인하려면 위로 스크롤합니다(이 항목에서). `de-DE\resources.resw` 독일어 문자열을 포함하며 `en-US\resources.resw`는 영어 문자열을 포함합니다. 리소스 파일 내의 문자열 리소스를 리소스 인덱서에 추가하려면 [**MrmIndexResourceContainerAutoQualifiers**]()를 호출합니다. 셋째, 리소스 인덱서에 대한 중간 이미지 리소스를 포함하는 파일에 대해 [**MrmIndexFile**]() 함수를 호출합니다.
+다음 단계는 방금 만든 리소스 인덱서에 리소스를 추가하는 것입니다. `resources.resw` 대상 UWP 앱에 대한 중간 문자열을 포함하는 리소스 파일(.resw)입니다. 내용을 확인하려면 위로 스크롤합니다(이 항목에서). `de-DE\resources.resw` 독일어 문자열을 포함하며 `en-US\resources.resw`는 영어 문자열을 포함합니다. 리소스 파일 내의 문자열 리소스를 리소스 인덱서에 추가하려면 [**MrmIndexResourceContainerAutoQualifiers**](/windows/desktop/menurc/mrmindexresourcecontainerautoqualifiers)를 호출합니다. 셋째, 리소스 인덱서에 대한 중간 이미지 리소스를 포함하는 파일에 대해 [**MrmIndexFile**](/windows/desktop/menurc/mrmindexfile) 함수를 호출합니다.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmIndexResourceContainerAutoQualifiers(indexer, L"resources.resw"));
@@ -150,19 +150,19 @@ MrmResourceIndexerHandle indexer;
 
 **MrmIndexFile** 호출에서, 값 L"ms-resource:///Files/sample-image.png"는 리소스 URI입니다. 첫 번째 경로 세그먼트는 "파일"이며, 나중에 이 리소스 인덱서로부터 PRI 파일을 생성할 때 리소스 맵 하위 트리 이름으로 사용됩니다.
 
-리소스 파일에 대한 리소스 인덱서를 간단히 살펴봤으므로, 이제 [**MrmCreateResourceFile**]() 함수를 호출하여 디스크에 PRI 파일을 생성할 차례입니다.
+리소스 파일에 대한 리소스 인덱서를 간단히 살펴봤으므로, 이제 [**MrmCreateResourceFile**](/windows/desktop/menurc/mrmcreateresourcefile) 함수를 호출하여 디스크에 PRI 파일을 생성할 차례입니다.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmCreateResourceFile(indexer, MrmPackagingModeStandaloneFile, MrmPackagingOptionsNone, generatedPRIsFolder.c_str()));
 ```
 
-이 시점에서는 `resources.pri`라는 PRI 파일이 `Generated PRIs`라는 폴더 내에 생성되어 있습니다. 이제 리소스 인덱서 사용을 마쳤으므로 [**MrmDestroyIndexerAndMessages**]()를 호출하여 핸들을 폐기하고 할당되어 있는 컴퓨터 리소스를 해제합니다.
+이 시점에서는 `resources.pri`라는 PRI 파일이 `Generated PRIs`라는 폴더 내에 생성되어 있습니다. 이제 리소스 인덱서 사용을 마쳤으므로 [**MrmDestroyIndexerAndMessages**](/windows/desktop/menurc/mrmdestroyindexerandmessages)를 호출하여 핸들을 폐기하고 할당되어 있는 컴퓨터 리소스를 해제합니다.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmDestroyIndexerAndMessages(indexer));
 ```
 
-PRI 파일은 이진 파일이므로 해당 XML 파일에 이진 PRI 파일을 덤프하면 방금 생성한 항목을 보다 쉽게 확인할 수 있습니다. 이를 위해서는 [**MrmDumpPriFile**]()만 호출하면 됩니다.
+PRI 파일은 이진 파일이므로 해당 XML 파일에 이진 PRI 파일을 덤프하면 방금 생성한 항목을 보다 쉽게 확인할 수 있습니다. [**MrmDumpPriFile**](/windows/desktop/menurc/mrmdumpprifile) 에 대 한 호출을 수행합니다.
 
 ```cppwinrt
 ::ThrowIfFailed(::MrmDumpPriFile(filePathPRI.c_str(), nullptr, MrmDumpType::MrmDumpType_Basic, filePathPRIDumpBasic.c_str()));

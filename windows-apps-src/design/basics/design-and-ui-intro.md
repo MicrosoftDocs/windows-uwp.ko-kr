@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0006d20c1db7da16b885e82fb3f066b081e27349
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 32838e2c3369535928c9e9311f62654eba54e4e0
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936186"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058784"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 
@@ -26,7 +26,7 @@ ms.locfileid: "8936186"
 
 ## <a name="effective-pixels-and-scaling"></a>유효 픽셀 및 크기 조정
 
-UWP 앱은 TV에서 태블릿 또는 PC에서 모든 [Windows 10 장치](../devices/index.md)에서 실행 합니다. 그렇다면 어떻게 다양 한 장치 및 화면 크기에서 UI를 디자인할?
+UWP 앱은 TV에서 태블릿 또는 PC에서 모든 [Windows 10 장치](../devices/index.md)에서 실행 합니다. 그렇다면 어떻게 다양 한 장치 및 화면 크기에서 멋지게 UI를 디자인할?
 
 ![다양한 디바이스에서 동일한 앱](images/universal-image-1.jpg)
 
@@ -64,7 +64,7 @@ UWP 앱은 모든 장치에 자동으로 조정되므로 모든 장치에 대한
 
 :::row:::
     :::column:::
-        When a UWP app is launched on any Windows 10 device, it launches in a [Window](/uwp/api/Windows.UI.Xaml.Controls.Window) with a [Frame](/uwp/api/Windows.UI.Xaml.Controls.Frame), which can navigate between [Page](/uwp/api/Windows.UI.Xaml.Controls.Page) instances.
+        When a UWP app is launched on any Windows 10 device, it launches in a [Window](/uwp/api/windows.ui.xaml.window) with a [Frame](/uwp/api/windows.ui.xaml.controls.frame), which can navigate between [Page](/uwp/api/windows.ui.xaml.controls.page) instances.
     :::column-end:::
     :::column:::
         ![Frame](images/frame.svg)

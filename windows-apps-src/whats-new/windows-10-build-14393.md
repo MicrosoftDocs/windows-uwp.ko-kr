@@ -6,18 +6,18 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: f95cd87b-f959-4148-a9bd-ba0b90d16e71
 ms.localizationpriority: medium
-ms.openlocfilehash: 7aff0812da6b7c3d8e55bc31ed196211f54252e3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3070bd4464432d944cea85ad970aa71cd727d63b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942657"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050233"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-14393"></a>개발자용 Windows 10 빌드 14393의 새로운 기능
 
-Visual Studio 2017 및 업데이트된 SDK와 함께 Windows 10 빌드 14939(1주년 업데이트 또는 버전 1607이라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2017 및 업데이트된 SDK와 함께 Windows 10 빌드 14939(1주년 업데이트 또는 버전 1607이라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
-다음은 개발자에게 흥미로운 새로운 기능 및 향상된 기능 목록입니다. Windows SDK에 추가된 새 네임스페이스의 원시 목록은 [Windows10 빌드 14393 API 변경 내용](windows-10-build-14393-api-diff.md)을 참조하세요. 이 업데이트의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](http://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요.
+다음은 개발자에게 흥미로운 새로운 기능 및 향상된 기능 목록입니다. Windows SDK에 추가된 새 네임스페이스의 원시 목록은 [Windows10 빌드 14393 API 변경 내용](windows-10-build-14393-api-diff.md)을 참조하세요. 이 업데이트의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요.
 
 ## <a name="windows-10-build-14393---july-2016"></a>Windows10 빌드 14393 - 2016년 7월
 
@@ -25,15 +25,15 @@ Visual Studio 2017 및 업데이트된 SDK와 함께 Windows 10 빌드 14939(1�
  :---- | :----
 XAML 요소에 대한 선택키 | 새로운 [**AccessKey**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) 속성 및 [**AccessKeyManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.aspx)를 사용하여 앱의 키보드 접근성을 향상시킬 수 있습니다.
 애니메이션 GIF 지원 | 이제 XAML [**Image**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx) 요소에서 애니메이션 GIF를 지원합니다. [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.aspx)에서 이러한 새 멤버를 사용하여 [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.autoplay.aspx), [**IsAnimatedBitmap**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.isanimatedbitmap.aspx), [**IsPlaying**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.isplaying.aspx), [**Play**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.play.aspx), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.stop.aspx) 등의 재생을 제어할 수 있습니다.
-앱 확장성 | UWP 앱에 대한 [확장](http://aka.ms/appextensibility)을 씁니다. UWP 앱을 사용하여 다른 UWP 앱에서 제공하는 콘텐츠를 호스트합니다.  해당 앱의 읽기 전용 콘텐츠를 검색, 열거 및 액세스합니다.
+앱 확장성 | UWP 앱에 대한 [확장](https://aka.ms/appextensibility)을 씁니다. UWP 앱을 사용하여 다른 UWP 앱에서 제공하는 콘텐츠를 호스트합니다.  해당 앱의 읽기 전용 콘텐츠를 검색, 열거 및 액세스합니다.
 평가 테스트 | [시험 응시](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10?f=255&MSPPError=-2147217396)는 고위험 테스트를 위해 잠긴 온라인 평가를 렌더링하는 브라우저 기반 앱입니다. [시험 응시 API](../apps-for-education/take-a-test-api.md)를 사용하여 학생들이 테스트 중 다른 컴퓨터나 인터넷 리소스를 사용할 수 없도록 합니다.
 BITS(Background Intelligent Transfer Service) | 이제 [BITS](https://msdn.microsoft.com/library/windows/desktop/bb968799.aspx) COM API 및 PowerShell cmdlet(사용 가능한 경우)을 PowerShell 원격 세션에서 사용할 수 있습니다. 특히 로컬 로그인 기능이 없는 WindowsServer Technical Preview 2016 버전을 관리할 때 유용합니다. PowerShell 원격 세션을 통해 시작된 BITS 작업은 세션의 사용자 계정 컨텍스트에서 실행되며 활성 로컬 로그온 세션이나 해당 사용자 계정에 연결된 PowerShell 원격 세션이 하나 이상 있는 경우에만 진행됩니다. 장기 실행 전송을 위해 세션을 관리하는 방법에 대한 자세한 내용은 [PowerShell 원격 세션을 관리하려면](https://msdn.microsoft.com/library/windows/desktop/ee663885.aspx#manage_ps_remote_sessions)을 참조하세요.<br/><br/>[BITS 도우미 토큰](https://msdn.microsoft.com/library/windows/desktop/dd904467.aspx)을 지원한 이전 버전의 Windows에서 작업 소유자는 도우미 토큰을 설정하기 위해 관리자 권한을 효과적으로 사용해야 했습니다. 이 릴리스에서는 도우미 토큰에 관리자 기능이 없는 한 BITS 작업 소유자가 관리자가 아니어도 도우미 토큰을 설정할 수 있습니다. 이렇게 하면 백그라운드 다운로드 또는 업데이트 도구를 관리 권한이 있는 계정이 아닌 권한이 낮은 NetworkService 계정으로 실행하도록 하여 해당 도구의 취약성 공간을 줄일 수 있습니다.
-향상된 컬러 글꼴 지원 | 이제 Direct2D에서 매우 다양한 컬러 글꼴 형식의 렌더링을 지원하여 개발자가 Direct2D 기반 앱에서 이전보다 더 많은 종류의 글꼴을 사용할 수 있습니다. 여기에는 다음에 대한 지원이 포함됩니다. <br/>&bull; 'sbix' OpenType 테이블 - 글꼴에서 컬러 비트맵 콘텐츠를 사용합니다.<br/>&bull;'SVG' OpenType 테이블 - 글꼴에서 SVG 콘텐츠를 사용합니다.<br/>&bull;'CBDT' OpenType 테이블 - 글꼴에서 컬러 비트맵 콘텐츠를 사용합니다. <br/><br/>Direct2D는 **D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT** 플래그가 사용되는 경우 이러한 컬러 글꼴 형식을 자동으로 지원합니다.  자세한 내용은 다음 항목을 참조하세요. <br>&bull;[**ID2D1DeviceContext4**](http://go.microsoft.com/fwlink/?LinkId=822793)<br>&bull;[**D2D1_DRAW_TEXT_OPTIONS**](http://go.microsoft.com/fwlink/?LinkId=822794)<br>&bull;[**ID2D1SvgGlyphStyle**](http://go.microsoft.com/fwlink/?LinkId=822795)     
+향상된 컬러 글꼴 지원 | 이제 Direct2D에서 매우 다양한 컬러 글꼴 형식의 렌더링을 지원하여 개발자가 Direct2D 기반 앱에서 이전보다 더 많은 종류의 글꼴을 사용할 수 있습니다. 여기에는 다음에 대한 지원이 포함됩니다. <br/>&bull; 'sbix' OpenType 테이블 - 글꼴에서 컬러 비트맵 콘텐츠를 사용합니다.<br/>&bull;'SVG' OpenType 테이블 - 글꼴에서 SVG 콘텐츠를 사용합니다.<br/>&bull;'CBDT' OpenType 테이블 - 글꼴에서 컬러 비트맵 콘텐츠를 사용합니다. <br/><br/>Direct2D는 **D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT** 플래그가 사용되는 경우 이러한 컬러 글꼴 형식을 자동으로 지원합니다.  자세한 내용은 다음 항목을 참조하세요. <br>&bull;[**ID2D1DeviceContext4**](https://go.microsoft.com/fwlink/?LinkId=822793)<br>&bull;[**D2D1_DRAW_TEXT_OPTIONS**](https://go.microsoft.com/fwlink/?LinkId=822794)<br>&bull;[**ID2D1SvgGlyphStyle**](https://go.microsoft.com/fwlink/?LinkId=822795)     
 CommandBar 동적 오버플로 | 공간이 부족하여 명령을 모두 표시할 수 없는 경우 [**Commandbar**](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/app-bars)의 주 명령이 오버플로 메뉴로 자동으로 이동합니다.
 컴퍼지션 상호 작용 API| 새로운 [**Windows.UI.Composition.Interactions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.interactions.aspx) 네임스페이스를 사용하여 드라이브 애니메이션 및 효과에 대한 입력에 액세스할 수 있습니다.  시각적 계층의 이 새로운 API 제품군은 UI 스레드가 교착 상태에 빠지고 사용 중인 경우에도 앱이 빠르고 매끄럽게 응답하는 것처럼 보이도록 합니다.  
 Windows.UI.Composition | [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.aspx) 네임스페이스에는 다음을 포함한 많은 기능에 대한 지원이 추가되었습니다. <br/><br/>&bull; 그림자 - 앱에 실제 깊이 환경을 제공할 수 있습니다. <br/>&bull; 장면 조명 - 컨트롤 및 UI에 광원을 비추고 응용 프로그램에 대한 다양한 효과를 제공하여 컨트롤 및 UI에 더 많은 원근감을 제공할 수 있습니다.<br/>&bull; 흐림 효과 - 적합한 정보에 포커스를 유지하고 다른 정보는 흐리게 할 수 있습니다. UI의 흐림 효과를 애니메이션하여 좀더 생생한 느낌을 줄 수 있습니다.  <br/>&bull; 암시적 애니메이션 - 암시적 애니메이션을 사용하면 시각적 개체에서 속성이 변경될 때 시각적 개체를 애니메이션할 수 있습니다. 암시적 애니메이션을 사용하여 레이아웃 애니메이션을 수행할 수 있습니다. 즉, 앱의 레이아웃이 변경되면 새 위치로 애니메이션할 수 있습니다. <br/>&bull; CompositionBackdropBrush - CompositionBackdropBrush는 현재 RenderTarget을 효과에 대한 입력으로 선택하는 데 사용할 수 있는 새로운 브러시 형식입니다.<br/>&bull; LayerVisual - 시각적 개체 컬렉션에 효과를 적용할 수 있습니다. 예를 들어 UI의 일부에 회색조를 적용하여 UI의 사용하지 않는 부분을 나타냅니다.<br/>&bull; CompositionMashBrush - 불투명 마스크를 지정할 수 있습니다.<br/>&bull; 클립 변형 - 클립 사각형에 변형을 적용할 수 있습니다.<br/>&bull; 표면 브러시 변형 - CompositionSurfaceBrush에 변형을 적용할 수 있습니다.<br/>&bull; CompositionNineGridBrush - 이미지에 9그리드 크기 조정 축소 창을 지정하거나 사각형 단색 테두리를 만들 수 있습니다.<br/>&bull; 식 문자열 추가 - 식 문자열에서 새로운 함수, 식 연산자 및 키워드를 지원합니다.
 연결된 애니메이션 | [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx)를 사용하면 사용자가 장면이나 페이지를 이동하는 동안 애니메이션을 실행할 수 있습니다. 자세한 내용은 이 [연결된 애니메이션](https://channel9.msdn.com/Events/Build/2016/P485) 비디오를 참조하세요.
-연결된 앱 | 클라우드 연결이나 근접한 디바이스를 검색하고 디바이스 간에 원활하게 전환할 수 있는 환경을 구축합니다. 자세한 내용은 [연결된 앱 및 디바이스](http://aka.ms/Bttm1d)를 참조하세요.
+연결된 앱 | 클라우드 연결이나 근접한 디바이스를 검색하고 디바이스 간에 원활하게 전환할 수 있는 환경을 구축합니다. 자세한 내용은 [연결된 앱 및 디바이스](https://aka.ms/Bttm1d)를 참조하세요.
 데스크톱 앱 변환기 | 데스크톱 앱 변환기는 .NET 4.6.1 또는 Win32용으로 작성된 기존 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져올 수 있는 도구입니다.
 접근성용 앱 개발 | 유용성 및 고객 만족도를 개선하기 위해 [앱 접근성 지침](https://developer.microsoft.com/windows/accessible-apps)을 사용하여 포괄적인 소프트웨어를 설계합니다. 접근성 있는 기술 제품 사례를 통해 영감을 얻어보세요. 이 새로운 개발자 허브에서 누구나 액세스할 수 있는 앱 만들기에 대한 정보를 찾아보세요.
 Direct3D | Direct 3D 설명서에 여러 가지 새로운 항목이 추가되었습니다. 이러한 업데이트에 대한 자세한 내용은 [Direct3D 12 새 릴리스 페이지](https://msdn.microsoft.com/library/windows/desktop/mt748631(v=vs.85).aspx)의 **Windows10 버전 1607**을 참조하세요.
@@ -56,7 +56,7 @@ StreamSocket | 새로운 **GetEndpointPairsAsync** 메서드가 [**StreamSocket*
 XAML ComboBox의 텍스트 검색 | 사용자가 콤보 상자에 입력하면 사용자의 문자열과 일치하는 후보가 보기에 표시됩니다.
 UI 자동화 | UI 자동화 공급자에서 [**UiaRaiseChangesEvent**](https://msdn.microsoft.com/library/windows/desktop/mt733044(v=vs.85).aspx) 함수를 호출하여 문서 변경 내용을 시스템에 알릴 수 있습니다.
 Xbox One의 UWP | 이 업데이트는 Xbox One에서 UWP(유니버설 Windows 플랫폼)의 첫 번째 전체 릴리스 기능을 제공합니다. 여기에는 새로운 기능, 기존 기능 업데이트 및 버그 수정이 포함됩니다. 자세한 내용은 [Xbox One의 UWP](https://msdn.microsoft.com/windows/uwp/xbox-apps/index) 항목을 참조하세요.
-웹과 앱 연결 | 앱을 웹 사이트에 연결합니다. 사용자가 웹 사이트에 대한 링크를 열면 앱이 대신 열립니다. 자세한 내용은 [Support web-to-app linking with app Uri handlers](http://aka.ms/Hxfg4m)(앱 URI 처리기로 웹과 앱 연결 지원)를 참조하세요.
+웹과 앱 연결 | 앱을 웹 사이트에 연결합니다. 사용자가 웹 사이트에 대한 링크를 열면 앱이 대신 열립니다. 자세한 내용은 [Support web-to-app linking with app Uri handlers](https://aka.ms/Hxfg4m)(앱 URI 처리기로 웹과 앱 연결 지원)를 참조하세요.
 WebSocket | [**MessageWebSockets**](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.messagewebsocket.aspx) 및 [**StreamWebSockets**](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamwebsocket.aspx)에 대한 지원이 추가되어 서버 인증서 보기, SSL 협상 중 서버에서 보낸 중간 인증서 보기, 사용자 지정 서버 유효성 검사 수행, 특정 서버 인증서 오류는 무시하도록 지정 등을 수행할 수 있습니다.
 WIP(Windows Information Protection) API | [**WIP**](https://msdn.microsoft.com/windows/uwp/enterprise/wip-hub)는 MDM(모바일 디바이스 관리)을 위한 데스크톱, 노트북, 태블릿 및 휴대폰의 기능 모음입니다. WIP를 통해 엔터프라이즈는 엔터프라이즈 관리 디바이스에서 데이터가 처리되는 방식을 더 적절히 제어할 수 있습니다. <br/><br/>WIP API를 사용하면 직원의 개인 데이터가 데이터 정책의 영향을 받지 않도록 분리하는 동시에 데이터 정책을 준수하는 앱을 빌드할 수 있습니다. 정책 관리자는 앱을 신뢰하여 조직의 데이터를 사용합니다. 또한 직원은 조직의 MDM(모바일 디바이스 관리)에서 등록을 취소하거나 조직에서 완전히 퇴사한 경우에도 자신의 개인 데이터가 디바이스에 그대로 유지되기를 바랍니다.
 Windows IOT Core | Windows IoT Core는 원격 디스플레이 환경뿐만 아니라 Raspberry Pi 3을 완벽하게 지원하므로 사용자가 IoT Core 디바이스에서 실행되는 UWP 응용 프로그램을 원격으로 보고 제어할 수 있습니다.

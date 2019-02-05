@@ -6,12 +6,12 @@ ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: a39d2b3133714ab784309e131a71219beae4e3c0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2e27256fbf19ed31a7b087e94dea9e5514db516f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926655"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050596"
 ---
 # <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>다국어 앱 도구 키트 4.0 FAQ 및 문제 해결
 
@@ -83,7 +83,7 @@ MAT를 효과적으로 사용하려면 먼저 앱을 지역화할 수 있어야 
 
 ## <a name="what-is-microsoft-translator"></a>Microsoft Translator란 무엇인가요?
 
-Microsoft Translator는 기계 번역을 제공하는 클라우드 기반 서비스입니다. 기계 번역은 합리적인 방식으로 사람의 번역을 얻지 못할 경우 번역을 제공받고자 할 때 이상적입니다. [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220)에서 더 자세히 알아볼 수 있습니다.
+Microsoft Translator는 기계 번역을 제공하는 클라우드 기반 서비스입니다. 기계 번역은 합리적인 방식으로 사람의 번역을 얻지 못할 경우 번역을 제공받고자 할 때 이상적입니다. [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)에서 더 자세히 알아볼 수 있습니다.
 
 도구 키트는 Microsoft Translator 서비스를 사용하여 사용자에게 번역 제안을 제공합니다. Microsoft Translator 아이콘이 번역 언어 대화 상자에 나타날 때 Microsoft Translator에서 지원하는 언어를 확인할 수 있습니다.
 
@@ -178,5 +178,5 @@ Microsoft Store 인증 과정을 시작하기 전에 프로젝트에서 `<projec
 ## <a name="related-topics"></a>관련 항목
 
 * [다국어 앱 도구 키트 4.0 사용](use-mat.md)
-* [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220)
+* [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)
 * [MakePri.exe 명령줄 옵션](../../app-resources/makepri-exe-command-options.md)

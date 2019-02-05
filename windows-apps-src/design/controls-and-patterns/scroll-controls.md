@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 88b35c4ebc7e3b3f5c047ed5e1cef9d46a011909
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 6578ddfd077e121e0eca5a5fcc8c06cdec26aa42
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037025"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058614"
 ---
 # <a name="scroll-viewer-controls"></a>스크롤 뷰어 컨트롤
 
@@ -143,7 +143,7 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 - 사용자가 화면에 맞게 크기 조정된 이미지가 아니라 전체 크기 이미지를 가로질러 이동 및 확대/축소할 수 있게 하려는 경우와 같이 사용자가 더 큰 영역에서 양방향으로 이동하고 확대/축소할 수도 있게 하려면 스크롤 뷰어 내부에 이미지를 배치합니다.
 - 사용자가 긴 텍스트 줄을 스크롤할 경우 세로로만 스크롤하도록 스크롤 뷰어를 구성합니다.
 - 스크롤 뷰어를 사용하여 개체를 하나만 포함합니다. 하나의 개체는 레이아웃 패널이 될 수 있고, 여기에는 고유한 개체가 제한 없이 포함됩니다.
-- 피벗의 스크롤 논리와 충돌하는 것을 방지하려면 스크롤 뷰어 내부에 [Pivot](tabs-pivot.md) 컨트롤을 배치하지 않습니다.
+- 피벗의 스크롤 논리와 충돌하는 것을 방지하려면 스크롤 뷰어 내부에 [Pivot](pivot.md) 컨트롤을 배치하지 않습니다.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 

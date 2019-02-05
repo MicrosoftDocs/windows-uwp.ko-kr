@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5689fd967756025872fd45bf242076e854e700aa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 210cca8a4b17b77e8c1f9cb490a79bcd1a53b6c7
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048100"
+ms.locfileid: "9058794"
 ---
 # <a name="semantic-zoom"></a>시맨틱 줌
 
@@ -80,7 +80,7 @@ ms.locfileid: "9048100"
 - 항목 수준의 데이터를 보여 주는 확대 보기
 - 그룹 수준의 데이터를 보여 주는 축소 보기
 
-시맨틱 줌을 사용하기 전에 그룹화된 데이터를 사용하여 목록 보기를 사용하는 방법을 이해해야 합니다. 자세한 내용은 [목록 보기 및 그리드 보기](listview-and-gridview.md) 및 [목록의 항목 그룹화]()를 참조하세요. 
+시맨틱 줌을 사용하기 전에 그룹화된 데이터를 사용하여 목록 보기를 사용하는 방법을 이해해야 합니다. 자세한 내용은 [목록 보기 및 그리드 보기를](listview-and-gridview.md)참조 하세요. 
 
 > **참고**&nbsp;&nbsp;SemanticZoom 컨트롤의 확대 보기와 축소 보기를 정의하려면 [ISemanticZoomInformation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.isemanticzoominformation.aspx) 인터페이스를 구현하는 두 개의 컨트롤을 사용할 수 있습니다. XAML 프레임워크는 이 인터페이스를 구현하는 세 가지 컨트롤(ListView, GridView 및 Hub)을 제공합니다.
  

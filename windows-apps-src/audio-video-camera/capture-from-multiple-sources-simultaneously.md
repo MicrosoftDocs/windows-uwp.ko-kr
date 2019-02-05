@@ -6,12 +6,12 @@ ms.date: 09/12/2017
 ms.topic: article
 keywords: windows 10, uwp, 캡처, 비디오
 ms.localizationpriority: medium
-ms.openlocfilehash: a654739490043b9f821e7906fa8cf9e3e7259fed
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c474221769bf3aec6e32c80f21386ac1ca2620ea
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919936"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058634"
 ---
 # <a name="capture-from-multiple-sources-using-mediaframesourcegroup"></a>MediaFrameSourceGroup을 사용하여 다양한 소스로부터 캡처
 
@@ -56,7 +56,7 @@ Windows 10부터, 버전 1803부터 오디오 및 비디오 외에도 시간이 
 
 [!code-cs[GetStreamDescriptor](./code/SimpleCameraPreview_Win10/cs/MainPage.MultiRecord.xaml.cs#SnippetGetStreamDescriptor)]
 
-[MediaEncodingProfile.SetTimedMetadataTracks](**https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks**)를 호출하여 메타데이터 스트림 설명자를 인코딩 프로필에 추가합니다. 다음 예제는 비디오 스트림 설명자 2개, 오디오 스트림 설명자 1개, 시간이 제한된 메타데이터 스트림 설명자 1개를 취하고 스트림을 인코딩하는 데 사용할 수 있는 **MediaEncodingProfile**를 반환하는 도우미를 나타냅니다.
+[**MediaEncodingProfile.SetTimedMetadataTracks**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks) 메타 데이터 스트림 설명자를 인코딩 프로필 추가를 호출 합니다. 다음 예제는 비디오 스트림 설명자 2개, 오디오 스트림 설명자 1개, 시간이 제한된 메타데이터 스트림 설명자 1개를 취하고 스트림을 인코딩하는 데 사용할 수 있는 **MediaEncodingProfile**를 반환하는 도우미를 나타냅니다.
 
 [!code-cs[GetMediaEncodingProfile](./code/SimpleCameraPreview_Win10/cs/MainPage.MultiRecord.xaml.cs#SnippetGetMediaEncodingProfile)]
 

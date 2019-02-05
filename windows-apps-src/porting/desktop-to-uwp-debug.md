@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
-ms.openlocfilehash: 2180551f48a728a9b426bc7e35b2dac388ff56ef
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 8b2350c8164548121baec231335e747166f1c082
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981577"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050050"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>실행, 디버그 및 패키지 된 데스크톱 응용 프로그램 테스트
 
@@ -22,7 +22,7 @@ ms.locfileid: "8981577"
 
 ## <a name="run-your-application"></a>응용 프로그램 실행
 
-인증서를 얻어서 로그인 할 필요 없이 로컬 테스트 응용 프로그램을 실행할 수 있습니다. 어떤 도구에 따라 달라 집니다 응용 프로그램을 실행 하는 방법을 패키지를 만드는 데 사용 합니다.
+인증서를 얻어서 로그인 할 필요 없이 로컬 테스트 응용 프로그램을 실행할 수 있습니다. 어떤 도구에 따라 응용 프로그램을 실행 하는 방법 패키지를 만드는 데 사용 합니다.
 
 ### <a name="you-created-the-package-by-using-visual-studio"></a>Visual Studio를 사용하여 패키지를 만든 경우
 
@@ -64,27 +64,27 @@ Visual Studio 2017 15.4 릴리스에서 사용할 수 있는 [새 패키징 프�
 
 #### <a name="modify-your-application-in-between-debug-sessions"></a>디버그 세션 간에 응용 프로그램을 수정합니다
 
-버그를 해결 하려면 응용 프로그램을 변경한 경우 MakeAppx 도구를 사용 하 여 다시 패키징 합니다. [MakeAppx 도구 실행](desktop-to-uwp-manual-conversion.md#make-appx)을 참조하세요.
+버그를 해결 하려면 응용 프로그램을 변경한 경우 MakeAppx 도구를 사용 하 여 다시 작성 합니다. [MakeAppx 도구 실행](desktop-to-uwp-manual-conversion.md#make-appx)을 참조하세요.
 
 ### <a name="debug-the-entire-application-lifecycle"></a>응용 프로그램 전체 수명 주기 디버깅
 
-경우에 따라 시작 되기 전에 응용 프로그램을 디버깅 하는 기능을 포함 하 여 디버깅 프로세스에서 세부적 컨트롤을 좋습니다.
+경우에 따라 시작 되기 전에 응용 프로그램을 디버깅 하는 기능을 포함 하 여 디버깅 프로세스를 세부적으로 제어할을 좋습니다.
 
-[PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) 를 사용 하 여 일시 중단, 다시 시작 및 종료를 비롯 한 응용 프로그램 수명 주기를 완전히 제어할 수 있습니다.
+[PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) 를 사용 하 여 일시 중단, 다시 시작 및 종료를 포함 하 여 응용 프로그램 수명 주기를 완전히 제어할 수 있습니다.
 
 [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx)는 Windows SDK에 포함되어 있습니다.
 
 ## <a name="test-your-app"></a>앱 테스트
 
-응용 프로그램을 테스트 현실적인 설정에서 배포를 준비 하는 대로, 응용 프로그램에 서명 하 고이 설치 하는 것이 좋습니다.
+응용 프로그램을 테스트 현실적인 설정에서 배포를 준비 하는 대로, 응용 프로그램에 서명 하 고 다음 설치 하는 것이 좋습니다.
 
-### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Visual Studio를 사용 하 여 패키지 된 응용 프로그램 테스트
+### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Visual Studio를 사용 하 여 패키징 하는 응용 프로그램 테스트
 
 Visual Studio는 테스트 인증서를 사용 하 여 응용 프로그램에 서명 합니다. **앱 패키지 만들기** 마법사가 생성하는 출력 폴더에서 해당 인증서를 찾을 수 있습니다. 인증서 파일의 *.cer* 확장명 및 **신뢰할 수 있는 루트 인증 기관** 저장소에서 응용 프로그램을 테스트 하려는 PC에 해당 인증서를 설치 해야 합니다. [패키지 사이드로드](../packaging/packaging-uwp-apps.md#sideload-your-app-package)를 참조하세요.
 
-### <a name="test-an-application-that-you-packaged-by-using-the-desktop-app-converter-dac"></a>Desktop App Converter (DAC)를 사용 하 여 패키지 된 응용 프로그램 테스트
+### <a name="test-an-application-that-you-packaged-by-using-the-desktop-app-converter-dac"></a>Desktop App Converter (DAC)를 사용 하 여 패키징 하는 응용 프로그램 테스트
 
-Desktop App Converter를 사용 하 여 응용 프로그램을 패키징 한 경우 사용할 수는 ``sign`` 매개 변수를 자동으로 생성 된 인증서를 사용 하 여 응용 프로그램에 서명 합니다. 해당 인증서를 설치한 다음 앱을 설치해야 합니다. [패키징된 앱 실행](desktop-to-uwp-run-desktop-app-converter.md#run-app)을 참조하세요.   
+Desktop App Converter를 사용 하 여 응용 프로그램을 패키지로 만들 경우 사용할 수는 ``sign`` 매개 변수를 자동으로 생성 된 인증서를 사용 하 여 응용 프로그램에 서명 합니다. 해당 인증서를 설치한 다음 앱을 설치해야 합니다. [패키징된 앱 실행](desktop-to-uwp-run-desktop-app-converter.md#run-app)을 참조하세요.   
 
 
 ### <a name="manually-sign-apps-optional"></a>수동으로 앱 서명(선택 사항)
@@ -95,7 +95,7 @@ Desktop App Converter를 사용 하 여 응용 프로그램을 패키징 한 경
 
 2. 해당 인증서를 시스템의 **신뢰할 수 있는 루트** 또는 **신뢰할 수 있는 사용자** 인증서 저장소에 설치합니다.
 
-3. 해당 인증서를 사용 하 여 응용 프로그램에 서명 하 고 [SignTool을 사용 하 여 앱 패키지 서명](../packaging/sign-app-package-using-signtool.md)참조 하십시오.
+3. 해당 인증서를 사용 하 여 응용 프로그램에 서명 하 고 [SignTool을 사용 하 여 앱 패키지 로그인을](../packaging/sign-app-package-using-signtool.md)참조 하십시오.
 
   > [!IMPORTANT]
   > 인증서의 게시자 이름이 앱 게시자 이름과 일치하는지 확인합니다.
@@ -124,7 +124,7 @@ Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [
 
 **질문에 대한 답변 찾기**
 
-질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
+질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 
 **피드백 제공 또는 기능 제안**
 

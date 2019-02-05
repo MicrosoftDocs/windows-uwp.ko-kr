@@ -5,12 +5,12 @@ ms.date: 05/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: b2e09bc5d65e9bf3029b4049049de52709e648b2
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.openlocfilehash: e81f82fe823ee0fdf81741c89576adf268940d91
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042345"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058814"
 ---
 # <a name="move-to-cwinrt-from-wrl"></a>WRL에서 C++/WinRT로 이동
 이 항목에 해당 하는 [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드를 포트 하는 방법을 보여 줍니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -116,7 +116,7 @@ winrt::check_hresult(
 );
 ```
 
-## <a name="porting-a-wrl-module-microsoftwrlmodule"></a>WRL 모듈 포팅([Microsoft: WRL::Module]())
+## <a name="porting-a-wrl-module-microsoftwrlmodule"></a>WRL 모듈 포팅(Microsoft: WRL::Module)
 C++/WinRT 코드를 구성 요소를 구현하기 위해 WRL을 사용하는 기존 프로젝트에 서서히 추가할 수 있으며 기존 WRL 클래스는 계속 지원됩니다. 이 섹션에서 이에 대한 방법을 보여 줍니다.
 
 Visual Studio에서 새 **Windows 런타임 구성 요소(C++/WinRT)** 프로젝트 형식을 만드는 경우 `Generated Files\module.g.cpp` 파일이 생성됩니다. 해당 파일은 프로젝트에 복사하고 추가할 수 있는 두 가지 유용한 C++/WinRT 함수(아래에 나열)의 정의를 포함합니다. 이러한 함수는 **WINRT_CanUnloadNow** 및 **WINRT_GetActivationFactory**이며, 보다시피 조건에 따라 사용자가 포팅하는 스테이지를 지원하기 위한 순서로 WRL을 호출합니다.

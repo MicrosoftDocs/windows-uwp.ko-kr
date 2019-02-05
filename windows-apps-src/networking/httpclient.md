@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b753b9e93a0cd2abae089f9d53915e0c109f6b63
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.openlocfilehash: f4e0b2a2370acd3571b48eecdf13e44cadc3879c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042425"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050476"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -39,7 +39,7 @@ ms.locfileid: "9042425"
 
 -   비동기 메서드에서 사용할 수 있는 HTTP 요청 진행 정보
 
-[**Windows.Web.Http.HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) 클래스는 [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)에서 전송된 HTTP 요청 메시지를 나타냅니다. [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 클래스는 HTTP 요청에서 받은 HTTP 응답 메시지를 나타냅니다. HTTP 메시지는 IETF에 의해 [RFC 2616](http://go.microsoft.com/fwlink/p/?linkid=241642)에서 정의됩니다.
+[**Windows.Web.Http.HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) 클래스는 [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)에서 전송된 HTTP 요청 메시지를 나타냅니다. [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 클래스는 HTTP 요청에서 받은 HTTP 응답 메시지를 나타냅니다. HTTP 메시지는 IETF에 의해 [RFC 2616](https://go.microsoft.com/fwlink/p/?linkid=241642)에서 정의됩니다.
 
 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스는 HTTP 콘텐츠를 쿠키가 포함된 HTTP 엔터티 본문 및 헤더로 나타냅니다. HTTP 콘텐츠를 HTTP 요청 또는 HTTP 응답에 연결할 수 있습니다. **Windows.Web.Http** 네임스페이스는 HTTP 컨텐츠를 나타내는 여러 클래스를 제공합니다.
 
@@ -228,9 +228,9 @@ C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 �
 
 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)에는 편의 기능이 부족합니다. 따라서 이 네임스페이스에서 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 및 다른 클래스를 사용하는 앱은 **HRESULT** 값을 사용해야 합니다.
 
-앱에서 사용 하 여 C#, VB.NET, [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) .NET Framework4.5 나타냅니다 오류가 앱 실행 중 예외가 발생 합니다. [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) 속성은 예외를 설명하는 메시지를 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+앱에서 사용 하 여 C#, VB.NET, [System.Exception](https://msdn.microsoft.com/library/system.exception.aspx) .NET Framework4.5 나타냅니다 오류가 앱 실행 중 예외가 발생 합니다. [System.Exception.HResult](https://msdn.microsoft.com/library/system.exception.hresult.aspx) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [System.Exception.Message](https://msdn.microsoft.com/library/system.exception.message.aspx) 속성은 예외를 설명하는 메시지를 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
-관리되는 C++을 사용하는 앱에서 [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx) 속성은 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+관리되는 C++을 사용하는 앱에서 [Platform::Exception](https://msdn.microsoft.com/library/windows/apps/hh755825.aspx)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [Platform::Exception::HResult](https://msdn.microsoft.com/library/windows/apps/hh763371.aspx) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [Platform::Exception::Message](https://msdn.microsoft.com/library/windows/apps/hh763375.aspx) 속성은 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다. 일부 잘못된 메서드 호출의 경우 반환되는 **HRESULT**는 **E\_ILLEGAL\_METHOD\_CALL**입니다.
 

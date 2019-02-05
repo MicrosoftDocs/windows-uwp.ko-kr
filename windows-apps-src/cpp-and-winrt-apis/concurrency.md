@@ -5,12 +5,12 @@ ms.date: 10/27/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기식, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: c0c9a0912b0287d45633aeec4dbb643e7959c215
-ms.sourcegitcommit: 4ee300bfa6a238d3ce7674036ec1c574bb025210
+ms.openlocfilehash: f3283ffa5fa047806befa2712301c25a7d07af8e
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "9029936"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058804"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT로 동시성 및 비동기 작업
 
@@ -289,7 +289,7 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 }
 ```
 
-**TextBlock**을 이를 만든 스레드, 즉 UI 스레드에서 업데이트해야 하기 때문에 위의 코드는 [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/hresult-wrong-thread) 예외를 throw합니다. 한 가지 방법은 원래 코루틴이 호출된 스레드 컨텍스트를 캡처하는 것입니다. 이렇게 하려면 [**winrt:: apartment_context**](/uwp/cpp-ref-for-winrt/apartment-context) 개체를 인스턴스화하고, 백그라운드 작업을 수행 하 고 다음 `co_await` 호출 컨텍스트에로 다시 전환 하려면 **apartment_context** 합니다.
+**TextBlock**을 이를 만든 스레드, 즉 UI 스레드에서 업데이트해야 하기 때문에 위의 코드는 [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/error-handling/hresult-wrong-thread) 예외를 throw합니다. 한 가지 방법은 원래 코루틴이 호출된 스레드 컨텍스트를 캡처하는 것입니다. 이렇게 하려면 [**winrt:: apartment_context**](/uwp/cpp-ref-for-winrt/apartment-context) 개체를 인스턴스화하고, 백그라운드 작업을 수행 하 고 다음 `co_await` 호출 컨텍스트에로 다시 전환 하려면 **apartment_context** 합니다.
 
 ```cppwinrt
 IAsyncAction DoWorkAsync(TextBlock textblock)

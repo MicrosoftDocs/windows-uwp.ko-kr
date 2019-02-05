@@ -6,12 +6,12 @@ ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 레이아웃, 양식
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1c316ac97211e85b782bdbf8f5642889a7726a95
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 45c4acda953808a85363d1cec7c623dd79cc08f1
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037055"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058534"
 ---
 # <a name="create-and-customize-a-form"></a>양식 만들기 및 사용자 지정
 
@@ -135,7 +135,7 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 
 여기에서 양식을 만들었지만 레이아웃과 컨트롤의 개념은 생성할 수 있는 모든 XAML UI 전반에서 적용됩니다. 자유롭게 새로운 UI 기능을 추가 하 고 사용자 환경을 구체화 하세요 있는 양식을 시험해를 연결한 문서를 통해 다시 이동할 수 있습니다. 더 자세한 레이아웃 기능을 통해 단계별 지침을 원한다 면 우리의 [적응형 레이아웃 자습서](../design/basics/xaml-basics-adaptive-layout.md) 를 참조 하십시오.
 
-양식은 비워둘 필요도 없습니다. 한 발자국 나아가 [마스터/세부 정보 패턴](../design/controls-and-patterns/master-details.md) 또는 [피벗 컨트롤](../design/controls-and-patterns/tabs-pivot.md) 내에 자신의 양식을 채울 수 있습니다. 또는 양식의 코드 뒤에서 작업하려는 경우 우리의 [이벤트 개요](../xaml-platform/events-and-routed-events-overview.md)로 시작할 수 있습니다.
+양식은 비워둘 필요도 없습니다. 한 발자국 나아가 [마스터/세부 정보 패턴](../design/controls-and-patterns/master-details.md) 또는 [피벗 컨트롤](../design/controls-and-patterns/pivot.md) 내에 자신의 양식을 채울 수 있습니다. 또는 양식의 코드 뒤에서 작업하려는 경우 우리의 [이벤트 개요](../xaml-platform/events-and-routed-events-overview.md)로 시작할 수 있습니다.
 
 ## <a name="useful-apis-and-docs"></a>유용한 API 및 문서
 
@@ -161,7 +161,7 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 | [양식](../design/controls-and-patterns/forms.md) | 양식 작성에 대한 전반적인 지침입니다. |
 | [레이아웃 패널](../design/layout/layout-panels.md) | 레이아웃 패널의 유형과 용도에 대한 개요를 제공합니다. |
 | [마스터/세부 정보 패턴](../design/controls-and-patterns/master-details.md) | 하나 또는 여러 개의 양식 주변에 구현할 수 있는 디자인 패턴입니다. |
-| [피벗 컨트롤](../design/controls-and-patterns/tabs-pivot.md) | 하나 또는 여러 개의 양식을 포함할 수 있는 컨트롤. |
+| [피벗 컨트롤](../design/controls-and-patterns/pivot.md) | 하나 또는 여러 개의 양식을 포함할 수 있는 컨트롤. |
 | [반응형 디자인](../design/layout/responsive-design.md) | 대규모 반응형 디자인 원칙에 대한 개요입니다. | 
 | [XAML을 사용한 반응형 레이아웃](../design/layout/layouts-with-xaml.md) | 반응형 디자인의 시각적 상태 및 기타 구현에 대한 정보입니다. |
 | [반응형 디자인의 화면 크기](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) | 반응형 레이아웃의 범위여야 하는 화면 크기에 대한 지침입니다. |

@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 13a22c33f3c975e5c1e797f52d7c4e81ea008b61
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 9aa5053d83518c61335807874cd0d31943a60695
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036985"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058604"
 ---
 # <a name="hyperlinks"></a>하이퍼링크
 
@@ -158,7 +158,7 @@ Hyperlink는 [UIElement](https://msdn.microsoft.com/library/windows/apps/windows
 
 **콘텐츠**
 
-Hyperlink는 해당 [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx) 컬렉션에 존재할 수 있는 콘텐츠를 제한합니다. 특히 Hyperlink는 다른 Hyperlink가 없는 [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) 및 기타 [Span]() 형식만 허용합니다. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx)는 Hyperlink의 Inlines 컬렉션에 있을 수 없습니다. 제한된 콘텐츠를 추가하려고 하면 잘못된 인수 예외 또는 XAML 구문 분석 예외가 발생합니다.
+Hyperlink는 해당 [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx) 컬렉션에 존재할 수 있는 콘텐츠를 제한합니다. 특히 Hyperlink는 다른 Hyperlink가 없는 [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) 및 기타 [Span](/uwp/api/windows.ui.xaml.documents.span) 형식만 허용합니다. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx)는 Hyperlink의 Inlines 컬렉션에 있을 수 없습니다. 제한된 콘텐츠를 추가하려고 하면 잘못된 인수 예외 또는 XAML 구문 분석 예외가 발생합니다.
 
 **하이퍼링크와 테마/스타일 동작**
 

@@ -11,16 +11,16 @@ dev_langs:
 - cppwinrt
 - cpp
 - javascript
-ms.openlocfilehash: 5c3732927c59cb768ef522a847f79f82994852b7
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 4845b20ed74642f6fb34ea40dd774c91ae378e7b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980401"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050283"
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 
-UWP (유니버설 Windows 플랫폼) 앱은 기본적으로 특정 파일 시스템 위치를 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다.
+유니버설 Windows 플랫폼 (UWP) 앱은 기본적으로 특정 파일 시스템 위치를 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다.
 
 ## <a name="the-locations-that-all-apps-can-access"></a>모든 앱이 액세스할 수 있는 위치
 
@@ -90,14 +90,14 @@ UWP (유니버설 Windows 플랫폼) 앱은 기본적으로 특정 파일 시스
     
     URI의 "ms-appx:///" 접두사는 앱의 설치 디렉터리를 나타냅니다. 앱 URI 사용에 대한 자세한 내용은 [URI를 사용하여 콘텐츠를 참조하는 방법](https://msdn.microsoft.com/library/windows/apps/hh781215)을 참조하세요.
 
-또한 다른 위치와는 달리 일부 [UWP(유니버설 Windows 플랫폼) 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205757) 및 [Microsoft Visual Studio의 C/C++ 표준 라이브러리 기능](http://msdn.microsoft.com/library/hh875057.aspx)을 사용하여 앱 설치 디렉터리에서 파일에 액세스할 수 있습니다.
+또한 다른 위치와는 달리 일부 [UWP(유니버설 Windows 플랫폼) 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205757) 및 [Microsoft Visual Studio의 C/C++ 표준 라이브러리 기능](https://msdn.microsoft.com/library/hh875057.aspx)을 사용하여 앱 설치 디렉터리에서 파일에 액세스할 수 있습니다.
 
 앱의 설치 디렉터리는 읽기 전용 위치입니다. 파일 선택기를 통해서는 설치 디렉터리에 액세스할 수 없습니다.
 
 ### <a name="application-data-locations"></a>응용 프로그램 데이터 위치
 앱이 데이터를 저장할 수 있는 폴더입니다. 이러한 폴더(로컬, 로밍 및 임시)는 앱이 설치될 때 만들어집니다.
 
-앱의 데이터 위치에서 파일 및 폴더에 액세스 하는 두 가지 가지 있습니다.
+앱의 데이터 위치에서 파일 및 폴더에 액세스 하는 두 가지 기본 방법으로 가지 있습니다.
 
 1.  [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) 속성을 사용하여 앱 데이터 폴더를 검색합니다.
 
@@ -259,7 +259,7 @@ UWP (유니버설 Windows 플랫폼) 앱은 기본적으로 특정 파일 시스
 
 | 위치 | 접근 권한 값 | Windows.Storage API |
 |----------|------------|---------------------|
-| 사용자가 액세스 권한을 가지고 있는 모든 파일. 예: 문서, 그림, 사진, 다운로드, 데스크톱, OneDrive 등. | broadFileSystemAccess<br><br>이는 제한된 접근 권한 값입니다. 액세스는 **설정**에서 구성할 수 있는 > **개인 정보** > **파일 시스템**입니다. 사용자가 허용 또는 거부할 수 **설정**에서 든 지 권한을, 때문에 앱이 해당 변경 내용에 복원 해야 합니다. 앱 액세스할 수 없는 경우 [Windows 10 파일 시스템 액세스 및 개인 정보](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) 문서에 대 한 링크를 제공 하 여 설정을 변경 하 라는 메시지를 선택할 수 있습니다. 참고는 사용자가 앱, 설정을 전환 하 여, 닫았다가 다시 시작 해야 앱. 이러한 설정을 전환 하 여 앱이 실행 중인 동안에 경우 플랫폼은 앱을 일시 중단 상태를 저장 한 다음 강제로 새 설정을 적용 하기 위해 앱을 종료할 수 있도록 합니다. 2018 년 4 월 업데이트에서 권한에 대 한 기본 켜져 있습니다. 2018 년 10 월 업데이트에서 기본값은 Off입니다.<br /><br />이 접근 권한 값을 선언하는 Microsoft Store에 앱을 제출하는 경우 앱에 이 접근 권한 값이 필요한 이유와 이를 사용할 방법에 대한 추가 설명을 제공해야 합니다.<br>이 접근 권한이 값 [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임 스페이스의 Api에 대 한 작동합니다. 앱에서이 기능을 활성화 하는 방법에 대 한 예제는이 문서의 끝에 **예제** 섹션을 참조 하세요. | 해당 없음 |
+| 사용자가 액세스 권한을 가지고 있는 모든 파일. 예: 문서, 그림, 사진, 다운로드, 데스크톱, OneDrive 등. | broadFileSystemAccess<br><br>이는 제한된 접근 권한 값입니다. 액세스는 **설정**에서 구성할 수 있는 > **개인 정보** > **파일 시스템**입니다. 사용자가 허용 또는 거부할 수 권한을 **설정**에서 언제 든 지, 때문에 앱이 해당 변경 내용에 복원 해야 합니다. 앱 액세스할 수 없는 경우 [Windows 10 파일 시스템 액세스 및 개인 정보](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) 문서에 대 한 링크를 제공 하 여 설정을 변경 하 라는 메시지를 선택할 수 있습니다. 참고는 사용자가 응용 프로그램, 설정을 전환 하 여, 닫았다가 다시 시작 해야 앱. 이러한 설정을 전환 하 여 앱이 실행 되는 동안, 하는 경우 플랫폼은 앱을 일시 중단 상태를 저장 한 다음 강제로 새 설정을 적용 하기 위해 앱을 종료할 수 있도록 합니다. 2018 년 4 월 업데이트에서 권한에 대 한 기본 켜져 있습니다. 2018 년 10 월 업데이트에서 기본값은 Off입니다.<br /><br />이 접근 권한 값을 선언하는 Microsoft Store에 앱을 제출하는 경우 앱에 이 접근 권한 값이 필요한 이유와 이를 사용할 방법에 대한 추가 설명을 제공해야 합니다.<br>이 접근 권한이 값 [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임 스페이스의 Api에 대 한 작동합니다. 앱에서이 기능을 사용 하는 방법에 대 한 예제는이 문서의 끝에 있는 **예제** 섹션을 참조 하세요. | 해당 없음 |
 | 문서 | DocumentsLibrary <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. <br><br>앱에서 다음 작업을 하려는 경우 이 접근 권한 값을 사용합니다.<br>- 유효한 OneDrive URL 또는 리소스 ID를 사용하여 특정 OneDrive 콘텐츠에 대한 플랫폼 간 오프라인 액세스를 용이하게 합니다.<br>-열려 있는 동안 자동으로 사용자의 OneDrive에 파일 저장 오프 라인 | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | 음악     | MusicLibrary <br>[음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | 사진  | PicturesLibrary<br> [음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  

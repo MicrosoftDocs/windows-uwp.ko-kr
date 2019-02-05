@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c0dcb40e4e70fc28dc0ccdbbf4aa329b00c71cf
-ms.sourcegitcommit: 7a1899358cd5ce9d2f9fa1bd174a123740f98e7a
+ms.openlocfilehash: 8e1f40d527d4bc7b5773b885f35ed87c3866449e
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042649"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058734"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Windows 10 패키지로 만든된 데스크톱 응용 프로그램 통합
 
@@ -1190,7 +1190,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
   </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://review.docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts)에서 찾으세요.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts)에서 찾으세요.
 
 |이름 |설명 |
 |-------|-------------|

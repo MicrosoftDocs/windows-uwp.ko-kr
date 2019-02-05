@@ -8,12 +8,12 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: windows 10, uwp, win32, 데스크톱, 알림 알림, 알림, a 보내기 로컬 알림 보내기, 데스크톱 브리지, C#, c#, 알림, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 3436433c8086c2801f1ee2174a51525e48c2f7c9
-ms.sourcegitcommit: fae67a53ab1468a31120293653ade9541085bdd7
+ms.openlocfilehash: 907ba19812c9a34a7a91f42fefac4c190bfd394b
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "8992314"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058704"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>데스크톱 C # 앱에서 로컬 알림 메시지 보내기
 
@@ -386,7 +386,7 @@ DesktopNotificationManagerCompat.History.Clear();
 
 ## <a name="step-10-deploying-and-debugging"></a>10단계: 배포 및 디버깅
 
-데스크톱 브리지 앱을 배포하고 디버깅하려면 [패키지로 만든 데스크톱 앱 실행, 디버깅, 테스트](/porting/desktop-to-uwp-debug.md)를 참조하세요.
+데스크톱 브리지 앱을 배포하고 디버깅하려면 [패키지로 만든 데스크톱 앱 실행, 디버깅, 테스트](/windows/uwp/porting/desktop-to-uwp-debug)를 참조하세요.
 
 클래식 Win32 앱을 배포하고 디버깅하려면, 정상적으로 디버깅하기 전에 한 번 설치 프로그램을 통해 앱을 설치해야 해야만 AUMID 및 CLSID로 시작 바로 가기가 표시됩니다. 시작 바로 가기가 나타나면 Visual Studio에서 F5를 사용하여 디버깅할 수 있습니다.
 

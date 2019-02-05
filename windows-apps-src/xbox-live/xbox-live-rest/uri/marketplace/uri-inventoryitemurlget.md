@@ -7,12 +7,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: d1620c5afe7b0d005840112d4eddd2ec50e134db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 446197eb20820304088ddac4a6379fa3b2510873
+ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919654"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9058484"
 ---
 # <a name="get-inventoryitemid"></a>GET (/inventory/{itemID})
 특정 인벤토리 항목에 대 한 세부 정보의 전체 집합을 제공합니다. 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`.
@@ -26,7 +26,7 @@ ms.locfileid: "8919654"
  
 ## <a name="remarks"></a>설명
  
-정책이 없는 검사를 적용 하거나이 호출의 일부로 필터링이 발생 합니다.
+정책이 없는 검사를 적용 하는 또는 필터링이 호출의 일환으로이 발생 합니다.
   
 <a id="ID4EAB"></a>
 
@@ -35,7 +35,7 @@ ms.locfileid: "8919654"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| itemID| string| 각 사용자에 단일 인벤토리 항목에 대 한 고유 ID| 
+| itemID| string| 각 사용자에 게 단일 인벤토리 항목에 대 한 고유 ID| 
   
 <a id="ID4ELB"></a>
 
@@ -47,7 +47,7 @@ ms.locfileid: "8919654"
  
 ### <a name="sample-response"></a>예제 응답
  
-인증을 통과 하 고 적절 한 권한 부여 컨텍스트를 할당 된 GET 요청에 응답 항목 속성의 전체 집합을 사용 하 여 단일 인벤토리 항목입니다.
+인증을 통과 하 고 적절 한 권한을 컨텍스트를 할당 된 것으로 가정 GET 요청에 대 한 응답 항목 속성의 전체 집합을 사용 하 여 단일 인벤토리 항목입니다.
  
 
 ```cpp
@@ -66,7 +66,7 @@ ms.locfileid: "8919654"
  
 ##### <a name="parent"></a>부모 
 
-[GET (/inventory/{itemID})]()
+[GET (/inventory/{itemID})](uri-inventoryget.md)
 
   
 <a id="ID4EJC"></a>

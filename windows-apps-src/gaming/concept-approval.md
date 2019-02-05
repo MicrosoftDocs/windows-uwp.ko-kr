@@ -6,12 +6,12 @@ ms.date: 06/23/2017
 ms.topic: article
 keywords: windows 10, uwp, 개념 승인
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e4ecdbb77e1e3df10963a59dff38d4ecf215126
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 289da691766e0f2f78bd40aff2ac294ac6852463
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927248"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050456"
 ---
 # <a name="concept-approval"></a>개념 승인
 
@@ -19,13 +19,13 @@ ms.locfileid: "8927248"
 
 ## <a name="who-needs-concept-approval"></a>개념 승인은 누구에게 필요한가요?
 
-이 과정은 [ID@Xbox](http://www.xbox.com/Developers/id)를 통해 또는 관리 파트너로서 Xbox에 게임을 게시하는 경우에만 필요합니다. [Xbox Live 크리에이터스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator)에 참여하여 UWP(유니버설 Windows 플랫폼) 게임을 만드는 경우에는 Xbox에 직접 게시할 수 있으므로 이 과정이 필요 없습니다. 그러나 이 프로그램을 통해 만든 게임은 스토어의 별도 섹션에 추천 게임으로 소개됩니다. 자신의 게임을 우수 AAA 게임과 함께 추천 게임으로 소개하고 싶거나 XDK(Xbox 개발 키트)를 사용하여 보다 집약적인 게임을 만들고 싶은 경우에는 개념 승인 과정을 통과해야 합니다.
+이 과정은 [ID@Xbox](https://www.xbox.com/Developers/id)를 통해 또는 관리 파트너로서 Xbox에 게임을 게시하는 경우에만 필요합니다. [Xbox Live 크리에이터스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator)에 참여하여 UWP(유니버설 Windows 플랫폼) 게임을 만드는 경우에는 Xbox에 직접 게시할 수 있으므로 이 과정이 필요 없습니다. 그러나 이 프로그램을 통해 만든 게임은 스토어의 별도 섹션에 추천 게임으로 소개됩니다. 자신의 게임을 우수 AAA 게임과 함께 추천 게임으로 소개하고 싶거나 XDK(Xbox 개발 키트)를 사용하여 보다 집약적인 게임을 만들고 싶은 경우에는 개념 승인 과정을 통과해야 합니다.
 
 Windows 데스크톱 또는 모바일 장치용 게임을 개발하는 경우(또는 모든 장치를 대상으로 하며 게임이 *아닌* UWP 앱을 게시하려는 경우)에도 개념 승인이 필요 없습니다. [개발자 계정](https://go.microsoft.com/fwlink/?LinkId=817223)에 필요한 모든 것은 하 고 자유롭게 구성 하 고 파트너 센터를 통해 스토어에 앱을 제출할 수 있습니다.
 
 ## <a name="submit-your-concept-for-approval"></a>승인을 위해 개념 제출
 
-독립 게임 개발자나 게시자인 경우 ID@Xbox 프로그램을 통해 개념을 제출하여 승인을 요청할 수 있습니다. ID@Xbox에 대해 자세히 알아보고 [여기](http://www.xbox.com/Developers/id)에서 신청하세요.
+독립 게임 개발자나 게시자인 경우 ID@Xbox 프로그램을 통해 개념을 제출하여 승인을 요청할 수 있습니다. ID@Xbox에 대해 자세히 알아보고 [여기](https://www.xbox.com/Developers/id)에서 신청하세요.
 
 이미 ID@Xbox 개발자인 경우 게임 개념을 제출할 수 있는 GIF(게임 정보 양식)에 대한 링크를 전송 받았어야 합니다. 질문이 있는 경우 [id@xbox.com](mailto:id@xbox.com)에 문의하세요.
 
