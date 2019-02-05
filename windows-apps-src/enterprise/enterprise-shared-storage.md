@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 006507d4665f5578310b8d3e31fb8f7fba4117a2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f9e1f285f53f2f4c9f160b573141666609560c00
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934748"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049760"
 ---
 # <a name="enterprise-shared-storage"></a>엔터프라이즈 공유 저장소
 
-공유 저장소는 두 개의 위치로 구성되며 여기서 제한된 접근 권한 값 **enterpriseDeviceLockdown** 및 엔터프라이즈 인증서가 있는 앱이 모든 읽기 및 쓰기 권한을 가집니다. **enterpriseDeviceLockdown** 접근 권한 값을 통해 앱은 디바이스 잠금 API를 사용하고 엔터프라이즈 공유 저장소 폴더에 액세스할 수 있습니다. API에 대한 자세한 내용은 [**Windows.Embedded.DeviceLockdown**](http://go.microsoft.com/fwlink/?LinkId=699331) 네임스페이스를 참조하세요.  
+공유 저장소는 두 개의 위치로 구성되며 여기서 제한된 접근 권한 값 **enterpriseDeviceLockdown** 및 엔터프라이즈 인증서가 있는 앱이 모든 읽기 및 쓰기 권한을 가집니다. **enterpriseDeviceLockdown** 접근 권한 값을 통해 앱은 디바이스 잠금 API를 사용하고 엔터프라이즈 공유 저장소 폴더에 액세스할 수 있습니다. API에 대한 자세한 내용은 [**Windows.Embedded.DeviceLockdown**](https://go.microsoft.com/fwlink/?LinkId=699331) 네임스페이스를 참조하세요.  
 
 이러한 위치는 로컬 드라이브에 설정됩니다.
 - \Data\SharedData\Enterprise\Persistent
@@ -27,7 +27,7 @@ ms.locfileid: "8934748"
 
 - 동일한 앱의 인스턴스 간에 앱의 인스턴스 내에서 데이터를 공유할 수 있습니다. 적절한 접근 권한 값 및 인증서가 있다고 가정하는 두 앱 간에도 마찬가지입니다.
 - 로컬 하드 드라이브에서 \Data\SharedData\Enterprise\Persistent 폴더에 데이터를 저장할 수 있으며 디바이스가 초기화된 후에도 지속됩니다.
-- MDM(모바일 디바이스 관리) 서비스를 통해 디바이스에서 파일의 읽기, 쓰기 및 삭제 등과 같이 파일을 조작합니다. MDM 서비스를 통해 엔터프라이즈 공유 저장소를 사용하는 방법에 대한 자세한 내용은 [EnterpriseExtFileSystem CSP](http://go.microsoft.com/fwlink/?LinkId=699333)를 참조하세요.
+- MDM(모바일 디바이스 관리) 서비스를 통해 디바이스에서 파일의 읽기, 쓰기 및 삭제 등과 같이 파일을 조작합니다. MDM 서비스를 통해 엔터프라이즈 공유 저장소를 사용하는 방법에 대한 자세한 내용은 [EnterpriseExtFileSystem CSP](https://go.microsoft.com/fwlink/?LinkId=699333)를 참조하세요.
 
 ## <a name="access-enterprise-shared-storage"></a>엔터프라이즈 공유 저장소 액세스
 

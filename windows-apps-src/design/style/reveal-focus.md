@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 88dc22a11f88bbf0945340729722ea434345b205
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 15c0ff77d511e531bcb8b20b21f3c52a8c753b7a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037355"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049118"
 ---
 # <a name="reveal-focus"></a>포커스 표시
 
@@ -163,7 +163,7 @@ Customzing 시작 하기 전에, 유용 포커스 표시를 구성 하는 구성
 
 ## <a name="use-your-own-focus-visuals"></a>차제 포커스 화면 효과 사용
 
-포커스 표시 사용자 지정 하는 다른 방법은 시각적 상태를 사용 하 여 고유한 그려 시스템 제공 포커스 화면 효과 옵트아웃 하는 것입니다. 자세히 알아보려면 [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)을 참조합니다.
+포커스 표시 사용자 지정 하는 다른 방법은 시각적 상태를 사용 하 여 고유한 그려 시스템 제공 포커스 화면 효과 옵트아웃 하는 것입니다. 자세히 알아보려면 [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)을 참조합니다.
 
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>포커스 표시 및 Fluent 디자인 시스템
@@ -175,7 +175,7 @@ Customzing 시작 하기 전에, 유용 포커스 표시를 구성 하는 구성
 - [강조](https://docs.microsoft.com/windows/uwp/design/style/reveal)
 - [Xbox 및 TV용 디자인](/windows/uwp/design/devices/designing-for-tv)
 - [게임 패드 및 리모컨 조작](https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions)
-- [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 - [컴퍼지션 효과](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
 - [시스템의 과학: Fluent 디자인 및 깊이](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [시스템의 과학: Fluent 디자인 및 빛](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

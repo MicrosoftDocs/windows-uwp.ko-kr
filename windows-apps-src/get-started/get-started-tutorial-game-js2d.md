@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: ae8daa6141eadaac699fc49b8ec4796f1dde5c91
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3527cae294f2268b2457b9fe9a6593cf1b539ee8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923817"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050150"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>JavaScript로 UWP 게임 만들기
 
@@ -24,13 +24,13 @@ ms.locfileid: "8923817"
 ## <a name="introduction"></a>소개
 
 
-Microsoft Store에 앱을 게시 공유할 (하거나 판매할!) 수백만 명의 사람들과 각종 디바이스.  
+Microsoft Store에 앱을 게시 공유 (하거나 판매할!) 수백만 명의 사람들과, 각종 디바이스.  
 
 Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 앱으로 작성 해야 합니다. 한편 UWP는 매우 유연하며 다양한 언어와 프레임워크를 지원합니다. 이를 입증하듯, 이 샘플은 JavaScript로 작성된 간단한 게임으로 여러 CreateJS 라이브러리를 사용하며, 스프라이트를 그리고 게임 루프를 만들고 키보드와 마우스를 지원하고 다양한 화면 크기에 맞게 조정하는 방법을 보여줍니다.
 
 이 프로젝트는 Visual Studio를 사용하여 JavaScript로 빌드되었습니다. 몇 가지 사소한 변경 작업을 수행하면 웹 사이트에 호스트하거나 다른 플랫폼에 맞게 조정할 수도 있습니다. 
 
-**참고:** 이 완전 한 (또는 뛰어난) 게임이 아니며, JavaScript 및 제 3 자 라이브러리를 사용 하 여 Microsoft Store에 게시 하는 앱을 만드는 방법을 보여주기 위해 설계 되었습니다.
+**참고:** 이 완전 한 (또는 뛰어난) 게임이 아니며, JavaScript 및 제 3 자 라이브러리를 사용 하 여 앱을 Microsoft Store에 게시할 수 있도록 하는 방법을 보여 주기 위해 설계 되었습니다.
 
 
 ## <a name="requirements"></a>요구 사항
@@ -38,9 +38,9 @@ Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 
 이 프로젝트를 플레이하려면 다음이 필요합니다.
 
 * Windows 10 최신 버전을 실행하는 Windows 컴퓨터(또는 가상 컴퓨터).
-* Visual Studio 복사본. 무료 Visual Studio Community Edition은 [Visual Studio 홈 페이지](http://visualstudio.com)에서 다운로드할 수 있습니다.
+* Visual Studio 복사본. 무료 Visual Studio Community Edition은 [Visual Studio 홈 페이지](https://visualstudio.com)에서 다운로드할 수 있습니다.
 
-이 프로젝트는 CreateJS JavaScript 프레임워크를 사용합니다. CreateJS는 MIT 라이선스를 기반으로 출시된 도구 모음으로 스프라이트 기반 게임을 간편하게 만들 수 있도록 설계되었습니다. CreateJS 라이브러리는 이미 프로젝트에 있습니다(솔루션 탐색기 보기에서 *js/easeljs-0.8.2.min.js* 및 *js/preloadjs-0.6.2.min.js* 검색). CreateJS에 대한 자세한 내용은 [CreateJS 홈 페이지](http://www.createjs.com)에서 확인할 수 있습니다.
+이 프로젝트는 CreateJS JavaScript 프레임워크를 사용합니다. CreateJS는 MIT 라이선스를 기반으로 출시된 도구 모음으로 스프라이트 기반 게임을 간편하게 만들 수 있도록 설계되었습니다. CreateJS 라이브러리는 이미 프로젝트에 있습니다(솔루션 탐색기 보기에서 *js/easeljs-0.8.2.min.js* 및 *js/preloadjs-0.6.2.min.js* 검색). CreateJS에 대한 자세한 내용은 [CreateJS 홈 페이지](https://www.createjs.com)에서 확인할 수 있습니다.
 
 
 ## <a name="getting-started"></a>시작
@@ -61,7 +61,7 @@ Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 
 
 이제 게임을 실행할 수 있습니다!
 
-**F5** 키를 눌러 앱을 실행합니다. 창이 열리고 목가적인 () 경우 가로에 낯익은 공룡이 서 보일 것입니다. 이제 계속 진행하면서 앱을 검사하고, 몇 가지 중요한 부분에 대해 설명하고, 나머지 기능의 잠금을 해제합니다.
+**F5** 키를 눌러 앱을 실행합니다. 창이 열리고 목가적인 () 경우 landscape 낯익은 공룡이 서 보일 것입니다. 이제 계속 진행하면서 앱을 검사하고, 몇 가지 중요한 부분에 대해 설명하고, 나머지 기능의 잠금을 해제합니다.
 
 ![닌자 고양이를 등에 업고 있는 평범한 공룡](images/JS2D_3.png)
 
@@ -69,7 +69,7 @@ Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 
 
 ## <a name="walkthough"></a>연습
 
-F5 키로 게임을 시작했으면 이제 어떻게 될지 궁금하실 것입니다. 및으로 많은 코드는 현재 주석 "별로 없습니다", 됩니다. 지금까지 공룡 그리고 스페이스바를 눌러야 글자만 무성의 모두 표시 됩니다. 
+F5 키로 게임을 시작했으면 이제 어떻게 될지 궁금하실 것입니다. 및 대답은 "별로 없습니다", 많은 코드는 현재 주석으로 합니다. 지금까지 공룡 그리고 스페이스바를 눌러야 글자만 무성의 모두 표시 됩니다. 
 
 ### <a name="1-setting-the-stage"></a>1 스테이지 설정
 
@@ -134,7 +134,7 @@ EaselJS는 여러 종류의 그래픽 개체를 제공합니다. 하늘에 사�
     ];
 ```
 
-JavaScript는 이미지 같은 리소스를 로드할 때 약간의 도움이 필요합니다. 따라서 이미지를 미리 로드할 수 있는 CreateJS 라이브러리의 기능인 [LoadQueue](http://www.createjs.com/docs/preloadjs/classes/LoadQueue.html)를 사용하겠습니다. 이미지가 로드될 때까지 시간이 얼마나 걸릴지 알 수 없기 때문에 LoadQueue를 사용하여 처리하겠습니다. 이미지를 사용할 수 있게 되면 큐가 그 사실을 알려줄 것입니다. 이렇게 만들기 위해 먼저 모든 이미지를 나열하는 새 개체를 만든 후 LoadQueue 개체를 만듭니다. 아래 코드를 보시면 모든 준비가 완료되면 **loadingComplete()** 함수를 호출하도록 설정하는 방법을 알 수 있습니다.
+JavaScript는 이미지 같은 리소스를 로드할 때 약간의 도움이 필요합니다. 따라서 이미지를 미리 로드할 수 있는 CreateJS 라이브러리의 기능인 [LoadQueue](https://www.createjs.com/docs/preloadjs/classes/LoadQueue.html)를 사용하겠습니다. 이미지가 로드될 때까지 시간이 얼마나 걸릴지 알 수 없기 때문에 LoadQueue를 사용하여 처리하겠습니다. 이미지를 사용할 수 있게 되면 큐가 그 사실을 알려줄 것입니다. 이렇게 만들기 위해 먼저 모든 이미지를 나열하는 새 개체를 만든 후 LoadQueue 개체를 만듭니다. 아래 코드를 보시면 모든 준비가 완료되면 **loadingComplete()** 함수를 호출하도록 설정하는 방법을 알 수 있습니다.
 
 ```
     // Now we create a special queue, and finally a handler that is
@@ -162,9 +162,9 @@ F5 키를 눌러 앱을 다시 실행하면 구름이 표시된 것을 볼 수 �
 
 ### <a name="3-moving-the-clouds"></a>3. 구름 이동
 
-이번에는 구름을 움직여 보겠습니다. 구름을 포함하여 어떤 물체를 움직이는 방법은 1초에 여러 차례 반복해서 호출되는 [ticker](http://www.createjs.com/docs/easeljs/classes/Ticker.html) 함수입니다. 이 함수는 호출될 때마다 약간 다른 위치에 그래픽을 다시 그립니다.
+이번에는 구름을 움직여 보겠습니다. 구름을 포함하여 어떤 물체를 움직이는 방법은 1초에 여러 차례 반복해서 호출되는 [ticker](https://www.createjs.com/docs/easeljs/classes/Ticker.html) 함수입니다. 이 함수는 호출될 때마다 약간 다른 위치에 그래픽을 다시 그립니다.
 
-<p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen"><a href="http://codepen.io">CodePen</a>에서 Pen <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS - Animating clouds</a> by Microsoft Edge Docs(<a href="http://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>)를 참조하세요.</p>
+<p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen"><a href="https://codepen.io">CodePen</a>에서 Pen <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS - Animating clouds</a> by Microsoft Edge Docs(<a href="https://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>)를 참조하세요.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
  
 이 작업을 수행하는 코드는 EaselJS이며 CreateJS 라이브러리에서 제공하는 **main.js** 파일에 이미 있습니다. 다음과 같이 표시됩니다.
@@ -217,7 +217,7 @@ function animate_clouds()
 
 이제 플레이어가 키를 누르거나 마우스를 클릭할 때마다 두 개의 함수가 호출됩니다. 두 이벤트 모두 **userDidSomething()** 함수를 호출합니다. 이 함수는 gamestate 변수를 살펴보고 현재 게임 상황을 파악한 다음 그 이후에 이어져야 하는 일을 결정하는 함수입니다.
 
-Gamestate는 게임에 일반적으로 사용되는 디자인 패턴입니다. 발생하는 모든 일은 티커 타이머가 호출하는 **gameLoop()** 함수에서 발생합니다. gameLoop() 함수는 게임이 진행 중인지, "game over state"인지, "ready-to-play state"인지 또는 작성자가 변수를 사용하여 정의한 그 밖의 상태인지를 추적합니다. 이 상태 변수는 switch 문에서 테스트되며, 테스트 결과에 따라 호출할 다른 함수가 정의됩니다. 상태가 "playing"으로 설정되면 공룡을 점프하게 하고 술통을 움직이는 함수가 호출됩니다. 공룡이 어떤 이유로 사망하면 gamestate 변수가 "game over state"로 설정되고 "Game over!" 메시지가 대신 표시됩니다. 게임 디자인 패턴에 관심이 있는 분들은 [게임 프로그래밍 패턴](http://gameprogrammingpatterns.com/)이라는 책을 읽어보시기 바랍니다. 유용한 내용이 아주 많습니다.
+Gamestate는 게임에 일반적으로 사용되는 디자인 패턴입니다. 발생하는 모든 일은 티커 타이머가 호출하는 **gameLoop()** 함수에서 발생합니다. gameLoop() 함수는 게임이 진행 중인지, "game over state"인지, "ready-to-play state"인지 또는 작성자가 변수를 사용하여 정의한 그 밖의 상태인지를 추적합니다. 이 상태 변수는 switch 문에서 테스트되며, 테스트 결과에 따라 호출할 다른 함수가 정의됩니다. 상태가 "playing"으로 설정되면 공룡을 점프하게 하고 술통을 움직이는 함수가 호출됩니다. 공룡이 어떤 이유로 사망하면 gamestate 변수가 "game over state"로 설정되고 "Game over!" 메시지가 대신 표시됩니다. 게임 디자인 패턴에 관심이 있는 분들은 [게임 프로그래밍 패턴](https://gameprogrammingpatterns.com/)이라는 책을 읽어보시기 바랍니다. 유용한 내용이 아주 많습니다.
 
 앱을 다시 실행하면 드디어 게임을 플레이할 수 있습니다. 스페이스바를 누르면(또는 마우스를 클릭하거나 화면을 탭하면) 게임이 시작됩니다. 
 
@@ -265,13 +265,13 @@ Gamestate는 게임에 일반적으로 사용되는 디자인 패턴입니다. �
 2. 앱 제출 [검사 목록](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
 3. 앱을 제출하여 [인증](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
-자세한 내용은 [게시 하는 UWP 앱을](https://developer.microsoft.com/en-us/store/publish-apps)참조 하세요.
+자세한 내용은 [UWP 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 참조 하세요.
 
 ## <a name="suggestions-for-other-features"></a>다른 기능에 대한 제안.
 
 그 다음에 무엇을 해야 합니까? 여러분의 앱에 다음과 같은 기능을 추가하면 더욱 좋을 것 같습니다.
 
-1. 사운드 효과. CreateJS 라이브러리는 [SoundJS](http://www.createjs.com/soundjs)라고 하는 라이브러리와 함께 사운드 지원을 포함하고 있습니다.
+1. 사운드 효과. CreateJS 라이브러리는 [SoundJS](https://www.createjs.com/soundjs)라고 하는 라이브러리와 함께 사운드 지원을 포함하고 있습니다.
 2. 게임 패드 지원. [API](https://gamedevelopment.tutsplus.com/tutorials/using-the-html5-gamepad-api-to-add-controller-support-to-browser-games--cms-21345)가 제공됩니다.
 3. 좀 더 멋진 게임을 만들어보세요! 이 부분은 개발자에게 달렸지만, 온라인에 수많은 리소스가 제공됩니다. 
 

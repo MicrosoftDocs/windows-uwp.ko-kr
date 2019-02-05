@@ -7,18 +7,18 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 703b0750dabfdad55d55534bbe7a66a69d988f53
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c46557e3fb837bebccbb1039fb416f3e9787af2a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921075"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049219"
 ---
 # <a name="javascript-object-notation-json-object-reference"></a>JSON(JavaScript Object Notation) 개체 참조
  
-JavaScript Object Notation (JSON)은 웹에서 데이터를 캡슐화 하는 데 경량, 표준을 기반으로 개체 지향 표기법을 제공 합니다.
+JavaScript Object Notation (JSON)은 웹에서 데이터를 캡슐화 하는 데 경량, 표준 기반, 개체 지향 표기법을 제공 합니다.
  
-Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체를 정의 합니다. 이 섹션에서는 Xbox Live 서비스와 함께 사용 되는 각 JSON 개체에 대 한 참조 정보를 제공 합니다.
+Xbox Live 서비스, 요청 및 응답, 서비스에서 사용 되는 JSON 개체를 정의 합니다. 이 섹션에서는 Xbox Live 서비스와 함께 사용 되는 각 JSON 개체에 대 한 참조 정보를 제공 합니다.
  
 <a id="ID4EHB"></a>
 
@@ -63,7 +63,7 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 
 [GameClipThumbnail(JSON)](json-gameclipthumbnail.md)
 
-&nbsp;&nbsp;개별는 미리 보기와 관련 된 정보를 포함 합니다. 클립 당 여러 크기 있을 수 있으며 사용자가 디스플레이 위해 적절 한 선택 클라이언트입니다.
+&nbsp;&nbsp;개별는 미리 보기와 관련 된 정보를 포함 합니다. 클립 당 여러 크기 있을 수 있으며 사용자가 디스플레이 위해 적절 한 선택 클라이언트 합니다.
 
 [GameClipUri(JSON)](json-gameclipuri.md)
 
@@ -73,7 +73,7 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 
 [GameResult(JSON)](json-gameresult.md)
 
-&nbsp;&nbsp;게임 세션의 결과 설명 하는 데이터를 나타내는 하는 JSON 개체입니다.
+&nbsp;&nbsp;게임 세션의 결과 설명 하는 데이터를 표시 하는 JSON 개체입니다.
 
 [GameSession(JSON)](json-gamesession.md)
 
@@ -135,7 +135,7 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 
 [PagingInfo(JSON)](json-paginginfo.md)
 
-&nbsp;&nbsp;데이터 페이지에서 반환 하는 결과 위해 페이징 정보가 들어 있습니다.
+&nbsp;&nbsp;데이터 페이지에서 반환 되는 결과 페이징 정보가 들어 있습니다.
 
 [PeopleList(JSON)](json-peoplelist.md)
 
@@ -147,7 +147,7 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 
 [PermissionCheckBatchResponse(JSON)](json-permissioncheckbatchresponse.md)
 
-&nbsp;&nbsp;다 수의 사용자에 대 한 권한 값 목록은 일괄 처리의 결과 확인합니다.
+&nbsp;&nbsp;여러 사용자에 대 한 권한 값의 목록에 대 한 일괄 처리의 결과 확인합니다.
 
 [PermissionCheckBatchUserResponse(JSON)](json-permissioncheckbatchuserresponse.md)
 
@@ -183,15 +183,15 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 
 [Progression(JSON)](json-progression.md)
 
-&nbsp;&nbsp;도전 과제를 잠금 해제 필요 하면 사용자의 진행 합니다.
+&nbsp;&nbsp;사용자의 도전 과제를 잠금 해제 방향으로 진행 합니다.
 
 [Property(JSON)](json-property.md)
 
-&nbsp;&nbsp;연결 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 들어 있습니다.
+&nbsp;&nbsp;매치 메이 킹 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 포함 되어 있습니다.
 
 [QueryClipsResponse(JSON)](json-queryclipsresponse.md)
 
-&nbsp;&nbsp;목록에 대 한 페이징 정보와 함께 반환 게임 클립 목록을 래핑합니다.
+&nbsp;&nbsp;목록에 대 한 페이징 정보와 함께 반환 게임 클립의 목록을 래핑합니다.
 
 [quotaInfo(JSON)](json-quota.md)
 
@@ -203,7 +203,7 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 
 [ResetReputation(JSON)](json-resetreputation.md)
 
-&nbsp;&nbsp;사용자의 기존 점수를 변경 해야 하는 새 기본 평판 점수를 포함 되어 있습니다.
+&nbsp;&nbsp;사용자의 기존 점수 변경할 수는 새 기본 평판 점수를 포함 되어 있습니다.
 
 [Reward(JSON)](json-reward.md)
 
@@ -211,7 +211,7 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 
 [RichPresenceRequest(JSON)](json-richpresencerequest.md)
 
-&nbsp;&nbsp;다양 한 상태 정보를 사용 해야 하는 방법에 대 한 정보를 요청 합니다.
+&nbsp;&nbsp;다양 한 상태 정보를 사용 해야 하는 방법에 대 한 정보에 대 한 요청 합니다.
 
 [ServiceError(JSON)](json-serviceerror.md)
 
@@ -231,7 +231,7 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 
 [TitleBlob(JSON)](json-titleblob.md)
 
-&nbsp;&nbsp;저장소의 제목에 대 한 정보가 포함 되어 있습니다.
+&nbsp;&nbsp;저장소에서 제목에 대 한 정보가 포함 되어 있습니다.
 
 [TitleRecord(JSON)](json-titlerecord.md)
 
@@ -239,7 +239,7 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 
 [TitleRequest(JSON)](json-titlerequest.md)
 
-&nbsp;&nbsp;타이틀에 대 한 정보를 요청 합니다.
+&nbsp;&nbsp;타이틀에 대 한 정보에 대 한 요청 합니다.
 
 [UpdateMetadataRequest(JSON)](json-updatemetadatarequest.md)
 
@@ -289,6 +289,6 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 <a id="ID4EZH"></a>
 
  
-##### <a name="external-links-ecma-international-standard-262-ecmascript-language-specificationhttpwwwecma-internationalorgpublicationsfilesecma-stecma-262pdf"></a>외부 링크 [ECMA 국제 표준 262: ECMAScript 언어 사양](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf)
+##### <a name="external-links-ecma-international-standard-262-ecmascript-language-specificationhttpswwwecma-internationalorgpublicationsfilesecma-stecma-262pdf"></a>외부 링크 [ECMA 국제 표준 262: ECMAScript 언어 사양](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf)
 
    

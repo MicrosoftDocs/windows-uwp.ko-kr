@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 82a528b3ec98f56e1079e11ec1123d86de15d50f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 691ce1cc0c49154142a52f329af6f2a1df4ae027
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919988"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049400"
 ---
 # <a name="responsive-layouts-with-xaml"></a>XAML을 사용한 반응형 레이아웃
 
@@ -95,7 +95,7 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 코드 또는 시각적 상태에서 요소의 Visibility 속성을 변경할 수 있습니다. 요소의 Visibility가 변경되는 경우 해당하는 모든 자식 요소도 변경됩니다. 한 패널을 표시하고 다른 패널은 축소하여 UI의 섹션을 바꿀 수 있습니다.
 
 > [!Tip]
-> 기본적으로 **축소** 된 요소가 UI에 있으면 표시 비록 개체는 여전히 시작 시 만들어집니다. **x:DeferLoadStrategy 특성**을 "Lazy"로 설정하면 이러한 요소가 표시될 때까지 로드하는 것을 연기할 수 있습니다. 그러면 시작 성능이 향상될 수 있습니다. 자세한 내용은 [x:DeferLoadStrategy 특성](../../xaml-platform/x-deferloadstrategy-attribute.md)을 참조하세요.
+> 기본적으로 **축소** 된 요소가 UI에 있으면 표시 비록 개체는 여전히 시작할 때 만들어집니다. **x:DeferLoadStrategy 특성**을 "Lazy"로 설정하면 이러한 요소가 표시될 때까지 로드하는 것을 연기할 수 있습니다. 그러면 시작 성능이 향상될 수 있습니다. 자세한 내용은 [x:DeferLoadStrategy 특성](../../xaml-platform/x-deferloadstrategy-attribute.md)을 참조하세요.
 
 ### <a name="style-resources"></a>스타일 리소스
 
@@ -117,7 +117,7 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) |<li>요소가 세로 또는 가로로 한 줄에 스택 형태로 쌓입니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 Orientation 속성의 반대 방향으로 유지됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 늘려서 사용 가능한 너비(또는 Orientation이 Horizontal인 경우에는 높이)를 채웁니다. Orientation 속성에서 지정된 방향으로 요소가 해당 콘텐츠에 맞게 크기가 조정됩니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 Orientation 속성에서 지정된 방향의 패널 범위에 의해 제한되지 않으므로 스크롤 가능한 콘텐츠가 패널 범위 이상으로 늘어나고 스크롤 막대는 표시하지 않습니다. 스크롤 막대를 표시하려면 자식 콘텐츠의 높이나 너비를 명시적으로 제한해야 합니다.</li>
 [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) |<li>요소가 행이나 열 형태로 배열되며 MaximumRowsOrColumns 값에 도달할 경우 새 행이나 열로 자동 줄 바꿈됩니다.</li><li>요소를 행으로 배치할지 열로 배치할지 여부는 Orientation 속성을 통해 지정됩니다.</li><li>연결 속성인 VariableSizedWrapGrid.RowSpan 및 VariableSizedWrapGrid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기는 ItemHeight 및 ItemWidth 속성에 지정된 대로 조정됩니다. 이러한 속성이 설정되지 않은 경우 첫 번째 셀의 항목이 해당 콘텐츠에 맞게 크기가 조정된 다음 다른 모든 셀은 이 크기를 상속합니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
 
-이러한 패널에 대한 자세한 정보 및 예제는 [레이아웃 패널](layout-panels.md)과 [반응형 기술 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620024)을 참조하세요.
+이러한 패널에 대한 자세한 정보 및 예제는 [레이아웃 패널](layout-panels.md)과 [반응형 기술 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620024)을 참조하세요.
 
 레이아웃 패널을 통해 UI를 논리적 컨트롤 그룹으로 구성할 수 있습니다. 적절한 속성 설정과 함께 레이아웃 패널을 사용하면 UI 요소의 자동 크기 조정, 위치 변경 및 재배치에 대한 일부 지원을 받을 수 있습니다. 그러나 창 크기가 크게 변경되는 경우 대부분의 UI 레이아웃을 추가로 수정해야 합니다. 이 경우 시각적 상태를 사용하면 됩니다.
 
@@ -254,13 +254,13 @@ VisualState에서, 일반적으로 컨트롤 속성 또는 컨트롤을 포함�
 
 ### <a name="custom-state-triggers"></a>상태 트리거 사용자 지정
 
-[**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) 클래스를 확장하여 광범위한 시나리오에 대해 사용자 지정 트리거를 만들 수 있습니다. 예를 들어 StateTrigger를 만들어 입력 형식에 따라 서로 다른 상태를 트리거한 다음 입력 형식을 터치할 때 컨트롤 주위의 여백을 늘릴 수 있습니다. 또는 StateTrigger를 만들어 앱이 실행되는 장치 패밀리에 따라 서로 다른 상태를 적용할 수 있습니다. 사용자 지정 트리거를 구성하고 이를 사용하여 단일 XAML 보기에서 최적화된 UI 환경을 만드는 방법에 대한 예제는 [상태 트리거 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620025)을 참조하세요.
+[**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) 클래스를 확장하여 광범위한 시나리오에 대해 사용자 지정 트리거를 만들 수 있습니다. 예를 들어 StateTrigger를 만들어 입력 형식에 따라 서로 다른 상태를 트리거한 다음 입력 형식을 터치할 때 컨트롤 주위의 여백을 늘릴 수 있습니다. 또는 StateTrigger를 만들어 앱이 실행되는 장치 패밀리에 따라 서로 다른 상태를 적용할 수 있습니다. 사용자 지정 트리거를 구성하고 이를 사용하여 단일 XAML 보기에서 최적화된 UI 환경을 만드는 방법에 대한 예제는 [상태 트리거 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620025)을 참조하세요.
 
 ### <a name="visual-states-and-styles"></a>시각적 상태 및 스타일
 
 시각적 상태에서 Style 리소스를 사용하면 속성 변경 집합을 여러 컨트롤에 적용할 수 있습니다. 스타일을 사용하는 방법에 대한 자세한 내용은 [컨트롤의 스타일 지정](../controls-and-patterns/xaml-styles.md)을 참조하세요.
 
-상태 트리거 샘플의 이 간소화된 XAML에서 마우스 또는 터치식 입력에 대한 크기 및 여백을 조정하기 위해 Style 리소스가 Button에 적용되었습니다. 사용자 지정 상태 트리거에 대한 전체 코드 및 정의는 [상태 트리거 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620025)을 참조하세요.
+상태 트리거 샘플의 이 간소화된 XAML에서 마우스 또는 터치식 입력에 대한 크기 및 여백을 조정하기 위해 Style 리소스가 Button에 적용되었습니다. 사용자 지정 상태 트리거에 대한 전체 코드 및 정의는 [상태 트리거 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620025)을 참조하세요.
 
 ```xaml
 <Page ... >
@@ -389,7 +389,7 @@ else
 }
 ```
 
-또한 다른 조건을 사용하여 이동할 페이지를 결정할 수도 있습니다. 더 많은 예제는 [**GetIntegratedDisplaySize**](https://msdn.microsoft.com/library/windows/apps/xaml/dn904185.aspx) 함수를 사용하여 통합된 디스플레이의 실제 크기를 확인하는 [맞춤형 여러 보기](http://go.microsoft.com/fwlink/p/?LinkId=620636) 샘플을 참조하세요.
+또한 다른 조건을 사용하여 이동할 페이지를 결정할 수도 있습니다. 더 많은 예제는 [**GetIntegratedDisplaySize**](https://msdn.microsoft.com/library/windows/apps/xaml/dn904185.aspx) 함수를 사용하여 통합된 디스플레이의 실제 크기를 확인하는 [맞춤형 여러 보기](https://go.microsoft.com/fwlink/p/?LinkId=620636) 샘플을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 - [자습서: 적응형 레이아웃 만들기](../basics/xaml-basics-adaptive-layout.md)

@@ -6,12 +6,12 @@ ms.date: 07/12/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cf84846fc34a7b93f168abc1dfa31e9f743be209
-ms.sourcegitcommit: 444fd387c55618f9afdac115264c85b14fd8b826
+ms.openlocfilehash: 33814efca80bd4ad6348f730242d2edab1edda97
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "8999926"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050200"
 ---
 # <a name="events-and-routed-events-overview"></a>이벤트 및 라우트된 이벤트 개요
 
@@ -300,7 +300,7 @@ UI에서 요소가 마우스, 터치 및 스타일러스 입력에 보이는지 
     - 이벤트 처리기의 경우 Windows 런타임 일반 이벤트 대리자 [**EventHandler<T>**](https://msdn.microsoft.com/library/windows/apps/br206577)로의 변환이 기본 제공되는 [**System.EventHandler<TEventArgs>**](https://msdn.microsoft.com/library/windows/apps/xaml/db0etb8x.aspx)를 사용하는 것이 좋습니다.
     - Windows 런타임으로 변환되지 않는 [**System.EventArgs**](https://msdn.microsoft.com/library/windows/apps/xaml/system.eventargs.aspx)를 이벤트 데이터 클래스의 기초로 사용하지 마세요. 기존 이벤트 데이터 클래스를 사용하거나, 기본 클래스를 사용하지 마세요.
     - 사용자 지정 접근자를 사용하는 경우 [Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자](https://msdn.microsoft.com/library/windows/apps/xaml/hh972883.aspx)를 참조하세요.
-    - 표준 .NET 이벤트 패턴이 무엇인지 잘 모르겠으면 [사용자 지정 Silverlight 클래스에 대한 이벤트 정의](http://msdn.microsoft.com/library/dd833067.aspx)를 참조하세요. 이 문서는 Microsoft Silverlight용으로 작성되었지만 표준 .NET 이벤트 패턴에 대한 코드와 개념이 잘 요약되어 있습니다.
+    - 표준 .NET 이벤트 패턴이 무엇인지 잘 모르겠으면 [사용자 지정 Silverlight 클래스에 대한 이벤트 정의](https://msdn.microsoft.com/library/dd833067.aspx)를 참조하세요. 이 문서는 Microsoft Silverlight용으로 작성되었지만 표준 .NET 이벤트 패턴에 대한 코드와 개념이 잘 요약되어 있습니다.
 - C++/CX의 경우 [이벤트(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh755799.aspx)를 참조하세요.
     - 사용자 지정 이벤트를 고유하게 사용하는 경우에도 명명된 참조를 사용합니다. 사용자 지정 이벤트에 람다를 사용하지 마세요. 람다는 순환 참조를 만들 수 있습니다.
 
@@ -313,6 +313,6 @@ Windows 런타임에 대한 사용자 지정 라우트된 이벤트를 선언할
 * [XAML 개요](xaml-overview.md)
 * [빠른 시작: 터치식 입력](https://msdn.microsoft.com/library/windows/apps/xaml/hh465387)
 * [키보드 조작](https://msdn.microsoft.com/library/windows/apps/mt185607)
-* [.NET 이벤트 및 대리자](http://go.microsoft.com/fwlink/p/?linkid=214364)
+* [.NET 이벤트 및 대리자](https://go.microsoft.com/fwlink/p/?linkid=214364)
 * [Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399)

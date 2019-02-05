@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 107c904dc4b89941c0f453efd830504d2d032534
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7ed69dc912e916f7964c125550621c22dfcd9555
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929126"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049065"
 ---
 # <a name="show-multiple-views-for-an-app"></a>앱에 대한 여러 보기 표시
 
@@ -75,7 +75,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 2.  새 보기의 [**Id**](https://msdn.microsoft.com/library/windows/apps/dn281120)를 추적합니다. 나중에 보기를 표시하는 데 사용합니다.
 
-    만든 보기의 추적에 도움이 되도록 앱에 일부 인프라를 빌드하는 것이 좋습니다. 예제는 [MultipleViews 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620574)의 `ViewLifetimeControl` 클래스를 참조하세요.
+    만든 보기의 추적에 도움이 되도록 앱에 일부 인프라를 빌드하는 것이 좋습니다. 예제는 [MultipleViews 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620574)의 `ViewLifetimeControl` 클래스를 참조하세요.
 
     ```csharp
     int newViewId = 0;
@@ -83,7 +83,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 3.  새 스레드에서 창을 채웁니다.
 
-    [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 사용하여 새 보기에 대한 UI 스레드에 작업을 예약합니다. [람다 식](http://go.microsoft.com/fwlink/p/?LinkId=389615)을 사용하여 함수를 **RunAsync** 메서드에 인수로 전달합니다. 람다 함수에서 수행하는 작업이 새 보기의 스레드에서 발생합니다.
+    [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 사용하여 새 보기에 대한 UI 스레드에 작업을 예약합니다. [람다 식](https://go.microsoft.com/fwlink/p/?LinkId=389615)을 사용하여 함수를 **RunAsync** 메서드에 인수로 전달합니다. 람다 함수에서 수행하는 작업이 새 보기의 스레드에서 발생합니다.
 
     XAML에서는 일반적으로 [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041)의 [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051) 속성에 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 추가한 다음 **Frame**에서 앱 콘텐츠를 정의한 XAML [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)로 이동합니다. 자세한 내용은 [두 페이지 간의 피어 투 피어 탐색:](../basics/navigate-between-two-pages.md)을 참조하세요.
 

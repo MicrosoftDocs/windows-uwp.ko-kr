@@ -6,12 +6,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 화면 캡처
 ms.localizationpriority: medium
-ms.openlocfilehash: db32db6b293dce4210bebee139e05447da996b42
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: dfed365e097b6f0d3816477513202b2693127ade
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946504"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049980"
 ---
 # <a name="screen-capture"></a>화면 캡처
 
@@ -20,11 +20,11 @@ Windows 10 버전 1803부터 [Windows.Graphics.Capture](https://docs.microsoft.c
 화면 캡처를 통해 개발자는 최종 사용자가 캡처할 디스플레이 또는 응용 프로그램 창을 선택하기 위해 보안 시스템 UI를 호출하고 적극적으로 캡처된 항목 주위에 있는 시스템을 통해 노란색 알림 테두리가 표시됩니다. 여러 개의 동시 캡처 세션의 경우 캡처 중인 각 항목 주위에 노란색 테두리가 그려집니다.
 
 > [!NOTE]
-> 화면 캡처 Api는 데스크톱 및 Windows Mixed Reality 몰입 형 헤드셋 에서만 지원 됩니다.
+> 화면 캡처 Api는 데스크톱 및 Windows Mixed Reality 몰입 형 헤드셋에만 지원 됩니다.
 
 ## <a name="add-the-screen-capture-capability"></a>화면 캡처 기능 추가
 
-**Windows.Graphics.Capture** 네임 스페이스에 Api는 응용 프로그램의 매니페스트에서 선언 하는 일반 기능이 필요 합니다.
+**Windows.Graphics.Capture** 네임 스페이스에 Api는 일반 기능이 응용 프로그램의 매니페스트에서 선언 필요 합니다.
     
 1. **솔루션 탐색기**에서 **Package.appxmanifest** 를 엽니다.
 2. **접근 권한 값** 탭을 선택합니다.
@@ -68,7 +68,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-UI 코드 이기 때문에 UI 스레드에서 호출 해야 합니다. 응용 프로그램 (예: **MainPage.xaml.cs**)의 페이지에 대 한 코드 숨김 파일에서 호출 하는 경우 이렇게 하면 자동으로 하는 경우, 실행할 수 있습니다 다음 코드를 사용 하 여 UI 스레드에서 실행 되도록 하지만:
+UI 코드 이기 때문에 UI 스레드에서 호출 해야 합니다. (예: **MainPage.xaml.cs**) 응용 프로그램의 페이지에 대 한 코드 숨김 파일에서 호출 하는 경우 이렇게 하면 자동으로, 찾도록 할 수 있습니다 다음 코드를 사용 하 여 UI 스레드에서 실행 되도록 하지만:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -163,10 +163,10 @@ _framePool.FrameArrived += (s, a) =>
 
 ## <a name="putting-it-all-together"></a>요약
 
-다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현 하는 방법의 종단 간 예로 나와 있습니다. 이 샘플에서는 프런트 엔드에 단추가 있는,를 클릭 하면 **Button_ClickAsync** 메서드를 호출 합니다.
+다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현 하는 방법의 종단 간 예로 나와 있습니다. 이 샘플에서는 정해 졌 단추 프런트 엔드를 클릭 하면 **Button_ClickAsync** 메서드를 호출 합니다.
 
 > [!NOTE]
-> 이 코드 조각에서는 [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), 2D 그래픽 렌더링 하기 위한 라이브러리를 사용 합니다. 프로젝트에 대해 설정 하는 방법에 대 한 정보는 설명서를 참조 하십시오.
+> 이 코드 조각에서는 [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm), 2D 그래픽 렌더링 하기 위한 라이브러리를 사용 합니다. 해당 프로젝트에 대해 설정 하는 방법에 대 한 정보에 대 한 설명서를 참조 하세요.
 
 ```cs
 using Microsoft.Graphics.Canvas;
@@ -386,7 +386,7 @@ namespace WindowsGraphicsCapture
 
 ## <a name="record-a-video"></a>비디오를 기록합니다
 
-응용 프로그램의 비디오를 기록 하려면 [Windows.Media.AppRecording 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.media.apprecording)를 사용 하 여 보다 쉽게 설정할 수 있습니다. 이것은 데스크톱 확장 SDK의 일부 바탕 화면에만 작동 하므로 및 프로젝트에 대 한 참조를 추가 해야 합니다. 자세한 내용은 [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 를 참조 하세요.
+응용 프로그램의 비디오 기록 하려는 경우 [Windows.Media.AppRecording 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.media.apprecording)를 사용 하 여 보다 쉽게 설정할 수 있습니다. 이것은 데스크톱 확장 SDK의 일부 바탕 화면에만 작동 하므로 및 프로젝트에 대 한 참조를 추가 해야 합니다. 자세한 내용은 [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

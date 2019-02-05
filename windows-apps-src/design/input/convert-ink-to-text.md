@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 07ed74af3ebe558c6a82cd799cb6aa1efa035e46
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 9bdd122f438cc9584b5e1eff2236c625adea9c2b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980381"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048986"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Windows Ink 스트로크를 텍스트 및 셰이프로 인식
 
@@ -371,7 +371,7 @@ private void DrawText(string recognizedText, Rect boundingRect)
 
     [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/br208446) [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) 개체의 집합을 검색 하 라고 합니다.
 
-    [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478)프로그램 검색 된 각 단어에 대 한 인식 결과가 생성 됩니다.
+    [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478)는 검색 된 각 단어에 대 한 인식 결과가 생성 됩니다.
 
     ```csharp
     // Recognize all ink strokes on the ink canvas.
@@ -381,9 +381,9 @@ private void DrawText(string recognizedText, Rect boundingRect)
                 InkRecognitionTarget.All);
     ```
 
-    각 [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) 개체 텍스트 후보 집합이 포함 되어 있습니다. 이 목록의 맨 위에 있는 항목의 신뢰도 줄이면 순서로 나머지 후보 뒤에 가장 일치 인식 엔진에서 간주 됩니다.
+    각 [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) 개체 텍스트 후보 집합이 포함 되어 있습니다. 이 목록의 맨 위에 있는 항목 뒤에 하위 신뢰도 나머지 후보를 가장 일치 인식 엔진을 통해 간주 됩니다.
 
-    각 [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) 반복 하 고 제안 목록이 컴파일합니다. 후보 다음 표시 되 고 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) (도 지웁니다 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535))는 지워집니다.
+    각 [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) 반복 하 고 제안 목록이 컴파일합니다. 후보 표시 됩니다 하 고 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) (도 지웁니다 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535))는 선택을 취소 합니다.
 
     ```csharp
     string str = "Recognition result\n";
@@ -475,7 +475,7 @@ Windows 잉크 플랫폼에 내장된 필기 인식은 Windows에서 지원되�
 
 앱이 설치된 필기 인식 엔진 집합을 쿼리하고 그 중 하나를 사용할 수도 있고, 사용자가 기본 언어를 선택할 수도 있습니다.
 
-**참고**  사용자가 이동 하 여 설치 된 언어 목록을 볼 수 **설정-&gt; 시간 및 언어**합니다. 설치된 언어는 **언어** 아래에 나열됩니다.
+**참고**  으로 이동 하 여 사용자가 설치 된 언어 목록을 볼 수 **설정-&gt; 시간 & 언어**합니다. 설치된 언어는 **언어** 아래에 나열됩니다.
 
 새 언어 팩을 설치하고 해당 언어에 대해 필기 인식을 사용하도록 설정하려면 다음과 같이 하세요.
 
@@ -862,9 +862,9 @@ string str = "Recognition result\n";
 * [잉크 필기 인식 샘플(C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
 
 **기타 샘플**
-* [간단한 잉크 샘플(C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [복잡한 잉크 샘플(C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [잉크 샘플(JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [간단한 잉크 샘플(C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [복잡한 잉크 샘플(C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [잉크 샘플(JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [시작 자습서: UWP 앱에서 잉크 지원](https://aka.ms/appsample-ink)
 * [색칠하기 책 샘플](https://aka.ms/cpubsample-coloringbook)
 * [가족 메모 샘플](https://aka.ms/cpubsample-familynotessample)

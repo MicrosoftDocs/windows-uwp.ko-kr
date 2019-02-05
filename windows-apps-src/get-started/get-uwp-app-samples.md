@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 샘플 코드, 코드 샘플
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
-ms.openlocfilehash: 64eb0d13db1fbcf49d9da28e57eb85ff84823bf1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4cdf38a4bd77c4f6affb813c9e1de68463c43100
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946298"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049720"
 ---
 # <a name="get-uwp-app-samples"></a>UWP 앱 샘플 다운로드
 
@@ -28,7 +28,7 @@ zip 파일은 항상 최신 샘플을 보관합니다. 다운로드하기 위해
 
 
 > [!NOTE]
-> UWP 샘플에서는 Visual Studio 2015 이상과 Windows SDK를 열어서 빌드 및 실행해야 합니다. UWP 앱 빌드를 지원하는 Visual Studio Community의 무료 복사본을 [여기](http://go.microsoft.com/fwlink/p/?LinkID=280676 "Windows 개발 도구 다운로드")에서 다운로드할 수 있습니다.  
+> UWP 샘플에서는 Visual Studio 2015 이상과 Windows SDK를 열어서 빌드 및 실행해야 합니다. UWP 앱 빌드를 지원하는 Visual Studio Community의 무료 복사본을 [여기](https://go.microsoft.com/fwlink/p/?LinkID=280676 "Windows 개발 도구 다운로드")에서 다운로드할 수 있습니다.  
 >
 > 또한 개별 샘플이 아니라 전체 보관 파일의 압축을 풀어야 합니다. 샘플은 모두 보관 파일의 SharedContent 폴더에 따라 달라집니다. UWP 기능 샘플에서는 Visual Studio에서 연결된 파일을 사용하여 샘플 템플릿 파일과 이미지 자산과 같은 공통 파일이 중복되지 않게 합니다. 이러한 공통 파일은 리포티토리의 루트에 있는 SharedContent 폴더에 저장되고 링크를 사용하여 프로젝트 파일에서 참조됩니다.
 

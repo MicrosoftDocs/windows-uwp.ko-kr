@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 알려진 문제, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 3df88af638886e6bbda9b2f2f2065809da319532
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 029d595c41301e62f74c9b08b633bb22bfb12786
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939381"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049181"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>앱 광고의 알려진 문제점 및 문제 해결
 
@@ -46,9 +46,9 @@ ms.locfileid: "8939381"
 
 * 30분 이내에 새 광고 단위 ID를 만든 경우 서버가 시스템을 통해 새 데이터를 전파할 때까지 광고가 표시되지 않을 수 있습니다. 이전에 광고를 표시했던 기존 ID는 광고를 즉시 표시합니다.
 
-앱에서 테스트 광고를 볼 수 있으면 코드가 작동하는 것이며 광고를 표시할 수 있습니다. 문제가 발생하면 [제품 지원](https://developer.microsoft.com/en-us/windows/support)에 문의하세요. 해당 페이지에서 **사용자 의견**을 선택 합니다.
+앱에서 테스트 광고를 볼 수 있으면 코드가 작동하는 것이며 광고를 표시할 수 있습니다. 문제가 발생하면 [제품 지원](https://developer.microsoft.com/en-us/windows/support)에 문의하세요. 해당 페이지에서 **연락처**를 선택 합니다.
 
-[포럼](http://go.microsoft.com/fwlink/p/?LinkId=401266)에서 질문을 게시할 수도 있습니다.
+[포럼](https://go.microsoft.com/fwlink/p/?LinkId=401266)에서 질문을 게시할 수도 있습니다.
 
 ## <a name="test-ads-are-showing-in-your-app-instead-of-live-ads"></a>라이브 광고가 아닌 테스트 광고가 앱에 표시됨
 
@@ -58,7 +58,7 @@ ms.locfileid: "8939381"
 
 * 테스트용으로 로드된 앱 또는 에뮬레이터에서 실행되는 앱에는 라이브 광고가 표시되지 않습니다.
 
-라이브 광고 단위 테스트 광고를 제공 하는 경우 광고 단위의 상태가 파트너 센터에서 **활성 및 테스트 광고 제공을** 표시 됩니다. 이러한 특성은 현재 휴대폰 앱에는 적용되지 않습니다.
+라이브 광고 단위가 테스트 광고를 제공 하는 경우 광고 단위의 상태가 파트너 센터에서 **활성 및 테스트 광고 제공을** 표시 됩니다. 이러한 특성은 현재 휴대폰 앱에는 적용되지 않습니다.
 
 
 <span id="reference_errors"/>
@@ -91,7 +91,7 @@ JavaScript/HTML 앱은 예약된 z-순서의 MAX-10 범위에 요소를 배치�
 
 ## <a name="more-information"></a>추가 정보
 
-Microsoft Advertising SDK와 관련된 최근의 알려진 문제를 알아보고 질문을 게시하려면 [포럼](http://go.microsoft.com/fwlink/p/?LinkId=401266)을 방문하세요.
+Microsoft Advertising SDK와 관련된 최근의 알려진 문제를 알아보고 질문을 게시하려면 [포럼](https://go.microsoft.com/fwlink/p/?LinkId=401266)을 방문하세요.
 
  
 

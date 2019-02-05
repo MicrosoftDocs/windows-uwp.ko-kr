@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ee38abfb28aad8d6a3ce073a947580b3df29593
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: df03c6f10f106868213fe812b2f303d7675c567b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942597"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050130"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -49,7 +49,7 @@ Windows 10 Mobile 용 Microsoft 에뮬레이터는 Visual Studio 2015 이상 필
 
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 버전의 Windows Phone OS를 대상으로 하는 앱을 로드할 수 없습니다.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거, 및 에뮬레이터 실행
+## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거 및 에뮬레이터 실행
 
 ### <a name="installing"></a>설치
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows 10 SDK의 일부로 제공됩니다. Windows 10 SDK 및 에뮬레이터는 Visual Studio 설치 과정에서 설치될 수 있습니다. [Visual Studio 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=534785)를 참조하세요.
@@ -64,7 +64,7 @@ Windows 10 Mobile K용 Microsoft 에뮬레이터를 제거할 때 에뮬레이�
 
 ### <a name="running"></a>Running
 
-에뮬레이터에서 앱을 실행 하려면 Visual Studio에서 **실행** 하는 드롭다운 메뉴에서 에뮬레이트된 장치를 선택 합니다.
+에뮬레이터에서 앱을 실행 하려면 Visual Studio에서 **실행** 드롭다운 메뉴에서 에뮬레이트된 장치를 선택 합니다.
 
 ![해상도, 크기 및 메모리와 사용 가능한 에뮬레이터](images/em-list.png)
 
@@ -237,7 +237,7 @@ HCE(호스트 카드 에뮬레이션) 모드에서 POS(Point of Sale) 터미널�
 -   스크립트 편집기 창 아래의 **MasterCard 수신기 사용** 확인란을 선택하고 MasterCard의 시뮬레이터를 시작합니다.
 -   도구를 사용하면 NFC 도구를 통해 에뮬레이터에서 실행 중인 응용 프로그램에 전달되는 명령을 생성할 수 있습니다.
 
-HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대한 자세한 내용을 알아보려면 [Microsoft NFC 팀 블로그](http://go.microsoft.com/fwlink/?LinkId=534749)를 참조하세요.
+HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대한 자세한 내용을 알아보려면 [Microsoft NFC 팀 블로그](https://go.microsoft.com/fwlink/?LinkId=534749)를 참조하세요.
 
 ### <a name="how-to-create-scripts-for-hce-testing"></a>HCE 테스트를 위한 스크립트를 작성하는 방법
 
@@ -621,7 +621,7 @@ Windows Phone 에뮬레이터의 프레임 속도 카운터를 사용하여 실�
 
 ### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>오류 메시지: "가상 이더넷 스위치를 제거하는 동안 오류가 발생했습니다."
 
-새 Windows10 플라이트로 업데이트 한 후를 포함 하 여 특정 상황에서 에뮬레이터와 관련 된 가상 네트워크 스위치가 사용자 인터페이스를 통해 삭제할 수 없는 상태로 가져올 수 있습니다.
+새 windows 10 플라이트로 업데이트 한 후를 포함 하 여 특정 상황에서 에뮬레이터와 관련 된 가상 네트워크 스위치가 사용자 인터페이스를 통해 삭제할 수 없는 상태로 가져올 수 있습니다.
 
 이 상황에서 복구하려면 관리자 명령 프롬프트에서 "netcfg -d"를 실행합니다. `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. 명령 실행이 완료되면 컴퓨터를 다시 부팅하여 복구 프로세스를 완료합니다.
 
@@ -656,7 +656,7 @@ Microsoft 에뮬레이터는 모든 VM, diff 디스크 및 에뮬레이터 특�
 
 ## <a name="support-resources"></a>지원 리소스
 
-Windows 10 도구를 사용하여 작업을 시작할 때 해답을 찾아 문제를 해결하려면 [Windows 10 도구 포럼](http://go.microsoft.com/fwlink/?LinkId=534765)을 방문하세요. Windows 10 개발을 위한 모든 포럼을 확인하려면 [이 링크](http://go.microsoft.com/fwlink/?LinkId=535000)를 방문하세요.
+Windows 10 도구를 사용하여 작업을 시작할 때 해답을 찾아 문제를 해결하려면 [Windows 10 도구 포럼](https://go.microsoft.com/fwlink/?LinkId=534765)을 방문하세요. Windows 10 개발을 위한 모든 포럼을 확인하려면 [이 링크](https://go.microsoft.com/fwlink/?LinkId=535000)를 방문하세요.
 
 ## <a name="related-topics"></a>관련 항목
 

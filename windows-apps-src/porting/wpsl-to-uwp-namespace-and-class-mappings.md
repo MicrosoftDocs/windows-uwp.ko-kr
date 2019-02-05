@@ -6,29 +6,29 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0072aa814e0bcb22806cad764b5f365770961ac3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9acd42f57117fb01eef4ba8f87d35664be21cf32
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926213"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048823"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight를 UWP API로 매핑
 
 
 이 항목에서는 이와 동일한 유니버설 Windows 플랫폼 (UWP)에 대 한 포괄적인 매핑을 WindowsPhone Silverlight api를 제공 합니다. 일반적으로는 기능이 일대일로 매핑되지는 않지만 각 플랫폼의 네임스페이스 또는 클래스에 비슷한 기능이 있을 수 있습니다.
 
-매핑 테이블 UWP 프로젝트에서 작업 하 고 다시 WindowsPhone Silverlight 프로젝트의 소스 코드를 사용 하는 경우에 도움이 됩니다. 두 플랫폼 간에는 네임스페이스와 클래스의 이름(UI 컨트롤 포함)이 다릅니다. 대부분의 경우 간단히 네임스페이스 이름을 변경하면 코드가 컴파일됩니다. 클래스 또는 API 이름이 네임스페이스 이름과 함께 변경된 경우도 있습니다. 드물기는 하지만, 매핑이 더 복잡하여 접근 방법을 변경해야 하는 경우도 있습니다.
+매핑 테이블 UWP 프로젝트에서 작업 하 고 다시 WindowsPhone Silverlight 프로젝트의에서 소스 코드를 사용 하는 경우에 도움이 됩니다. 두 플랫폼 간에는 네임스페이스와 클래스의 이름(UI 컨트롤 포함)이 다릅니다. 대부분의 경우 간단히 네임스페이스 이름을 변경하면 코드가 컴파일됩니다. 클래스 또는 API 이름이 네임스페이스 이름과 함께 변경된 경우도 있습니다. 드물기는 하지만, 매핑이 더 복잡하여 접근 방법을 변경해야 하는 경우도 있습니다.
 
 **테이블을 사용 하는 방법:** 먼저 사용 중인 클래스의 이름을 검색 합니다. 매핑이 네임스페이스 이름을 변경하는 것보다 더 복잡한 모든 경우에 클래스가 나열됩니다. 클래스가 나열되지 않는 경우 매핑 시 네임스페이스만 변경하면 됩니다. 따라서 클래스의 네임스페이스 이름을 찾고 해당하는 UWP 네임스페이스 이름을 찾습니다. 클래스가 해당 네임스페이스에 있습니다. 네임스페이스가 나열되지 않는 경우 이름이 변경되지 않은 것입니다.
 
-**참고**Windows10 보다 훨씬 더.NET Framework는 Windows Phone 스토어 앱을 지원 합니다. 예를 들어 Windows10 여러 System.ServiceModel.\* 네임 스페이스 뿐만 아니라 System.Net, System.Net.NetworkInformation 및 System.Net.Sockets에 있습니다.
-또한 Windows10 앱에서는 이점을 활용할 수에서.NET 네이티브는 MSIL을 기본적으로 실행 가능 컴퓨터 코드로 변환 하는 미리 컴파일 기술인 합니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
+**참고**보다 훨씬 더.NET Framework는 Windows Phone 스토어 앱은 windows 10을 지원 합니다. 예를 들어 windows 10에는 여러 가지 System.ServiceModel.\* 네임 스페이스 뿐만 아니라 System.Net, System.Net.NetworkInformation 및 System.Net.Sockets에 있습니다.
+또한 windows 10 앱에서는 이점을 활용할 수에서.NET 네이티브는 MSIL을 기본적으로 실행 가능 컴퓨터 코드로 변환 하는 미리 컴파일 기술인 합니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
 
 | WindowsPhone Silverlight | Windows 런타임 |
 | ------------------------- | --------------- |
 | 광고 | |
-| **Microsoft.Advertising.Mobile.UI.AdControl** 클래스 | [AdControl](http://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx) 클래스 |
+| **Microsoft.Advertising.Mobile.UI.AdControl** 클래스 | [AdControl](https://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx) 클래스 |
 | 알람, 미리 알림 및 백그라운드 에이전트 | |
 | **Microsoft.Phone.BackgroundAgent** 클래스 | [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스 |
 | **Microsoft.Phone.Scheduler** 네임스페이스 | [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847) 네임스페이스 |
@@ -52,11 +52,11 @@ ms.locfileid: "8926213"
 | (SWT = **System.Windows.Threading**) <br/> **SWT.DispatcherTimer** 클래스 | [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250) 클래스 |
 | Visual Studio용 Blend | |
 | (MEDC = **Microsoft.Expression.Drawing.Core**) <br/> **MEDC.GeometryHelper** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
-| **Microsoft.Expression.Interactivity** 네임스페이스 | [Microsoft.Xaml.Interactivity](http://go.microsoft.com/fwlink/p/?LinkId=328776) 네임스페이스 |
-| **Microsoft.Expression.Interactivity.Core** 네임스페이스 | [Microsoft.Xaml.Interactions.Core](http://go.microsoft.com/fwlink/p/?LinkId=328773) 네임스페이스 |
+| **Microsoft.Expression.Interactivity** 네임스페이스 | [Microsoft.Xaml.Interactivity](https://go.microsoft.com/fwlink/p/?LinkId=328776) 네임스페이스 |
+| **Microsoft.Expression.Interactivity.Core** 네임스페이스 | [Microsoft.Xaml.Interactions.Core](https://go.microsoft.com/fwlink/p/?LinkId=328773) 네임스페이스 |
 | (MEIC = **Microsoft.Expression.Interactivity.Core**) <br/> **MEIC.ExtendedVisualStateManager** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | **Microsoft.Expression.Interactivity.Input** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
-| **Microsoft.Expression.Interactivity.Media** 네임스페이스 | [Microsoft.Xaml.Interactions.Media](http://go.microsoft.com/fwlink/p/?LinkId=328775) 네임스페이스 |
+| **Microsoft.Expression.Interactivity.Media** 네임스페이스 | [Microsoft.Xaml.Interactions.Media](https://go.microsoft.com/fwlink/p/?LinkId=328775) 네임스페이스 |
 | **Microsoft.Expression.Shapes** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
 | (MI = **Microsoft.Internal**) <br/> **MI.IManagedFrameworkInternalHelper** 인터페이스 | 직접적으로 해당하는 항목이 없습니다. |
 | 연락처 및 일정 데이터 | |
@@ -109,7 +109,7 @@ ms.locfileid: "8926213"
 | **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera** 클래스 | [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스. 또한 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 클래스(Windows 전용). |
 | **Microsoft.Devices.CameraButtons** 클래스 | [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557) 클래스 |
 | **Microsoft.Devices.CameraVideoBrushExtensions** 클래스 | [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) 클래스 |
-| **Microsoft.Devices.Environment** 클래스 | 직접적으로 해당하는 항목이 없습니다. 조건부 컴파일을 사용하고 사용자 지정 기호를 정의하여 문제를 해결할 수 있습니다. 또는 [IsAttached](http://msdn.microsoft.com/library/e299w87h.aspx) 속성을 사용하여 문제를 해결할 수 있습니다. |
+| **Microsoft.Devices.Environment** 클래스 | 직접적으로 해당하는 항목이 없습니다. 조건부 컴파일을 사용하고 사용자 지정 기호를 정의하여 문제를 해결할 수 있습니다. 또는 [IsAttached](https://msdn.microsoft.com/library/e299w87h.aspx) 속성을 사용하여 문제를 해결할 수 있습니다. |
 | **Microsoft.Devices.MediaHistory** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | **Microsoft.Devices.VibrateController** 클래스 | [**VibrationDevice**](https://msdn.microsoft.com/library/windows/apps/jj207230) 클래스 |
 | **Microsoft.Devices.Radio.FMRadio** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
@@ -121,7 +121,7 @@ ms.locfileid: "8926213"
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentCulture** 속성 | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentCulture** 속성 |
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentUICulture** 속성 | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentUICulture** 속성 |
 | 그래픽 및 애니메이션 | |
-| **Microsoft.Xna.Framework.\*** 네임스페이스, [XNA Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/p/?LinkId=263769), [콘텐츠 파이프라인 클래스 라이브러리](http://go.microsoft.com/fwlink/p/?LinkId=263770) | 직접적으로 해당하는 항목이 없습니다. 일반적으로 C++로 작성한 [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)를 사용합니다. [게임 개발](https://msdn.microsoft.com/library/windows/apps/hh452744) 및 [DirectX 및 XAML interop](https://msdn.microsoft.com/library/windows/apps/hh825871)을 참조하세요. |
+| **Microsoft.Xna.Framework.\*** 네임스페이스, [XNA Framework 클래스 라이브러리](https://go.microsoft.com/fwlink/p/?LinkId=263769), [콘텐츠 파이프라인 클래스 라이브러리](https://go.microsoft.com/fwlink/p/?LinkId=263770) | 직접적으로 해당하는 항목이 없습니다. 일반적으로 C++로 작성한 [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)를 사용합니다. [게임 개발](https://msdn.microsoft.com/library/windows/apps/hh452744) 및 [DirectX 및 XAML interop](https://msdn.microsoft.com/library/windows/apps/hh825871)을 참조하세요. |
 | **Microsoft.Xna.Framework.Audio.Microphone** 클래스 | [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스 |
 | **Microsoft.Xna.Framework.Audio.SoundEffect** 클래스 | [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) 클래스 |
 | **Microsoft.Xna.Framework.GamerServices** 네임스페이스 | (WPS = **Windows.Phone.System**) <br/> [**WPS.UserProfile.GameServices.Core**](https://msdn.microsoft.com/library/windows/apps/jj207609) 네임스페이스 |

@@ -1,25 +1,25 @@
 ---
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Microsoft 스토어 또는 테스트용으로 로드 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.
+title: Microsoft 스토어 또는 테스트용으로 로드에 패키지 된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.
 ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fe216b70b7c10f254c0e3b7b18275a72d46215c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8968864a0ff4bcf9e27f75a44a0a500736bb54b8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928773"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049191"
 ---
-# <a name="distribute-a-packaged-desktop-application"></a>패키지로 만든된 데스크톱 응용 프로그램 배포
+# <a name="distribute-a-packaged-desktop-application"></a>패키지로 만든된 데스크톱 응용 프로그램을 배포
 
-Microsoft 스토어 또는 테스트용으로 로드 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.  
+Microsoft 스토어 또는 테스트용으로 로드에 패키지 된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.  
 
 > [!NOTE]
-> 패키지 된 응용 프로그램에 사용자를 전환할 수 있는 방법에 대 한 계획 있습니까? 앱을 배포하기 전에 몇 가지 아이디어를 얻고 싶다면 이 가이드의 [패키지된 앱으로 사용자 전환](#transition-users) 섹션을 참조하세요.
+> 패키지 된 응용 프로그램에 사용자를 전환할 수 있는 방법에 대 한 계획 있으십니까? 앱을 배포하기 전에 몇 가지 아이디어를 얻고 싶다면 이 가이드의 [패키지된 앱으로 사용자 전환](#transition-users) 섹션을 참조하세요.
 
 ## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Microsoft Store에 게시 하 여 응용 프로그램 배포
 
@@ -38,22 +38,22 @@ Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 �
 
 ## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Microsoft 스토어에 배치 하지 않고 응용 프로그램을 배포 합니다.
 
-스토어를 사용 하지 않고 응용 프로그램을 배포는 하는 경우 하나 이상의 장치에 앱을 수동으로 배포할 수 있습니다.
+스토어를 사용 하지 않고 응용 프로그램을 배포는, 경우 하나 이상의 장치에 앱을 수동으로 배포할 수 있습니다.
 
 배포 경험에 대한 강력한 제어를 원하거나 Microsoft Store 인증 프로세스에 참여하고 싶지 않은 경우에 적합한 방법입니다.
 
-를 저장소에 배치 하지 않고 다른 장치에 응용 프로그램을 배포 하려면 인증서 얻기, 있기 때문에 응용 프로그램이 한 다음 해당 인증서를 테스트용으로 로드를 사용 하 여 응용 프로그램에 서명 해야 합니다.
+를 저장소에 배치 하지 않고 다른 장치에 응용 프로그램을 배포 하려면 인증서를 얻으려면, 해당 장치에 응용 프로그램이 한 다음 해당 인증서를 테스트용으로 로드를 사용 하 여 응용 프로그램에 서명 해야 합니다.
 
 [인증서를 만들거나](../packaging/create-certificate-package-signing.md) [Verisign](https://www.verisign.com/) 같은 인기 공급자로부터 구입할 수 있습니다.
 
-Windows 10 S를 실행 하는 장치에 응용 프로그램을 배포 하려는 경우 응용 프로그램에 있기 때문에 응용 프로그램을 배포 하기 전에 저장소 제출 프로세스를 통과 해야 하므로 Microsoft Store에서 서명입니다.
+Windows 10 S를 실행 하는 장치에 응용 프로그램을 배포 하려는 경우 응용 프로그램에 있기 때문에 응용 프로그램을 배포할 수 스토어 제출 프로세스를 진행 해야 하므로 Microsoft Store에서 서명입니다.
 
 인증서를 만드는 경우에는 앱을 실행하는 각 장치의 **신뢰할 수 있는 루트** 또는 **신뢰할 수 있는 사용자** 인증서 저장소에 이를 설치해야 합니다. 인기 공급자로부터 인증서를 구입하는 경우에는 다른 시스템에 앱 이외에 어떤 것도 설치할 필요가 없습니다.  
 
 > [!IMPORTANT]
 > 인증서의 게시자 이름이 앱 게시자 이름과 일치하는지 확인합니다.
 
-인증서를 사용 하 여 응용 프로그램에 서명 하려면 [서명 된 응용 프로그램 패키지 SignTool을 사용 하 여](../packaging/sign-app-package-using-signtool.md)참조 하세요.
+인증서를 사용 하 여 응용 프로그램에 서명 하려면 [서명 응용 프로그램 패키지 SignTool을 사용 하 여](../packaging/sign-app-package-using-signtool.md)참조 하세요.
 
 테스트용으로 로드 다른 장치에 응용 프로그램이 [Windows 10에서 테스트용으로 로드 LOB 앱을](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)참조 하세요.
 
@@ -71,13 +71,13 @@ Windows 10 S를 실행 하는 장치에 응용 프로그램을 배포 하려는 
 
 * 기존의 시작 타일 및 작업 표시줄 단추가 패키지 앱을 가리키도록 지정합니다.
 * 파일 형식 집합을 사용 하 여 패키지 된 응용 프로그램을 연결 합니다.
-* 기본적으로 특정 형식의 파일을 열고 패키지 된 응용 프로그램을 확인 합니다.
+* 기본적으로 특정 형식의 파일 열기 패키지 된 응용 프로그램을 확인 합니다.
 
 전체 확장 목록과 사용 방법에 대한 지침은 [사용자를 앱으로 전환](desktop-to-uwp-extensions.md#transition-users-to-your-app)을 참조하세요.
 
 또한 이러한 작업을 수행 하는 패키지 된 응용 프로그램에 코드를 추가 하는 것이 좋습니다.
 
-* 사용자 데이터를 연결 된 데스크톱 응용 프로그램 패키지 된 앱의 해당 폴더 위치로 마이그레이션합니다.
+* 데스크톱 응용 프로그램 패키지 된 앱의 적절 한 폴더 위치와 관련 된 사용자 데이터를 마이그레이션합니다.
 * 사용자에게 데스크톱 버전의 앱을 제거하는 옵션을 제공합니다.
 
 이러한 작업들을 하나씩 살펴보겠습니다. 사용자 데이터 마이그레이션부터 시작하겠습니다.
@@ -175,7 +175,7 @@ private void RemoveDesktopApp()
 
 **질문에 대한 답변 찾기**
 
-질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
+질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 
 Microsoft Store에 응용 프로그램을 게시할 때 문제가 발생하는 경우 이 [블로그 게시물](https://blogs.msdn.microsoft.com/appconsult/2017/09/25/preparing-a-desktop-bridge-application-for-the-store-submission/)에는 몇 가지 유용한 팁을 제공합니다.
 

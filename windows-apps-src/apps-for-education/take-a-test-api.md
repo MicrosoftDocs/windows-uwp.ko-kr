@@ -6,16 +6,16 @@ ms.date: 08/08/2018
 ms.topic: article
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f308e42e1dbb1d3654d3fc557a9d5e29ef6f6b0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bee8a04e3b4d57caf7da3e21f2be3c789d83be90
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933131"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049370"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript API 시험 응시
 
-[시험 응시](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) 평가에 초점을 교육자 안전한 테스트 환경을 제공 하는 방법 대신 콘텐츠 허용 위험 테스트를 위해 잠긴 온라인 평가 렌더링 하는 브라우저 기반 UWP 앱입니다. 이를 위해 이 앱에서는 모든 웹 응용 프로그램이 활용할 수 있는 JavaScript API를 사용합니다. 시험 응시 API는 고강도 일반 코어 테스트를 위해 [SBAC 브라우저 API 표준](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)을 지원합니다.
+[시험 응시](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) 평가에 초점을 교육자 안전한 테스트 환경을 제공 하는 방법 대신 콘텐츠 허용 위험 테스트를 위해 잠긴 온라인 평가 렌더링 하는 브라우저 기반 UWP 앱입니다. 이를 위해 이 앱에서는 모든 웹 응용 프로그램이 활용할 수 있는 JavaScript API를 사용합니다. 시험 응시 API는 고강도 일반 코어 테스트를 위해 [SBAC 브라우저 API 표준](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)을 지원합니다.
 
 앱 자체에 대한 자세한 내용은 [시험 응시 앱 기술 참조](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)를 참조하세요. 문제 해결 도움말은 [이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결](troubleshooting.md)을 참조하세요.
 
@@ -28,7 +28,7 @@ ms.locfileid: "8933131"
 
 ### <a name="security-namespace"></a>보안 네임스페이스
 
-보안 네임 스페이스를 사용 하면 장치를 잠그고, 사용자 및 시스템 프로세스 목록을 확인 하, MAC 및 IP 주소를 받아야 및 캐시 된 웹 리소스를 지울 수 있습니다.
+보안 네임 스페이스를 사용 하면 장치를 잠그고, 사용자 및 시스템 프로세스 목록을 확인 하, MAC 및 IP 주소를 받아야 고 캐시 된 웹 리소스를 지울 수 있습니다.
 
 | 메서드 | 설명   |
 |--------|---------------|

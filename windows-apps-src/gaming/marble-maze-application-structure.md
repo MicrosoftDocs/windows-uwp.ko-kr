@@ -6,12 +6,12 @@ ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 구조
 ms.localizationpriority: medium
-ms.openlocfilehash: d19fe1a81a193baf7fe6b7b86865dfb7ea65c00b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 55b933db7f9b26de2caa3877bde445f96c08d561
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936176"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049880"
 ---
 # <a name="marble-maze-application-structure"></a>Marble Maze 응용 프로그램 구조
 
@@ -21,7 +21,7 @@ ms.locfileid: "8936176"
 DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스크톱 응용 프로그램 구조와 다릅니다. [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751)와 같은 핸들 형식과 [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)와 같은 함수로 작업하는 대신 Windows 런타임은 보다 현대적이고 개체 지향적인 방식으로 UWP 앱을 개발할 수 있도록 [Windows::UI::Core::ICoreWindow](https://msdn.microsoft.com/library/windows/apps/br208296)와 같은 인터페이스를 제공합니다. 이 설명서 섹션에서는 Marble Maze 앱 코드가 구성된 방식을 보여 줍니다.
 
 > [!NOTE]
-> 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](http://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
+> 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](https://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
 
  
 ## 

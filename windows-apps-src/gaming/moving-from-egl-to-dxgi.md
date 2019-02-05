@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, egl, dxgi, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 1279d5100aa00e1b94d7d56b472a0574d22c3416
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 19c857ae5274be70d19a14d5bbf47adb595b5676
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929828"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049700"
 ---
 # <a name="compare-egl-code-to-dxgi-and-direct3d"></a>EGL 코드와 DXGI 및 Direct3D 비교
 
@@ -28,7 +28,7 @@ DXGI(DirectX Graphics Interface) 및 여러 Direct3D API는 EGL과 동일한 역
 
 EGL과 마찬가지로, DXGI 및 Direct3D는 그래픽 리소스를 구성하고, 그리는 셰이더에 대한 렌더링 컨텍스트를 가져오고, 결과를 창에 표시할 수 있는 메서드를 제공합니다. 그러나 DXGI 및 Direct3D에는 좀 더 많은 옵션이 있으며 EGL에서 포팅할 경우 올바르게 설정하기 위해 수행해야 할 작업이 더 많습니다.
 
-> **참고**  이 지침은 Khronos Group의 EGL 1.4 용 개방형 사양을 기반: [Khronos 기본 플랫폼 그래픽 인터페이스 (EGL 버전 1.4-2011 년 4 월 6 일) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf)합니다. 다른 플랫폼 및 개발 언어 관련 구문 차이는 이 지침에서 다루지 않습니다.
+> **참고**  이 지침은 Khronos Group의 EGL 1.4 용 개방형 사양을 기반: [Khronos 기본 플랫폼 그래픽 인터페이스 (EGL 버전 1.4-2011 년 4 월 6 일) \[PDF\]](https://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf)합니다. 다른 플랫폼 및 개발 언어 관련 구문 차이는 이 지침에서 다루지 않습니다.
 
  
 

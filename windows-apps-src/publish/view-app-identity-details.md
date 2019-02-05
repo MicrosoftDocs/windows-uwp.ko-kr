@@ -6,17 +6,17 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 114524294a5b77165167601c1479b6c3894bb29b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7e108d603a623e3b9e41d7ced3c0fafc80f006b8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937824"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050010"
 ---
 # <a name="view-app-identity-details"></a>앱 ID 세부 정보 보기
 
 
-**앱 id** 페이지에서 Microsoft 스토어에서 앱에 할당 된 고유 id와 관련 된 세부 정보를 볼 수 있습니다. 또한이 페이지에 나열 하는 앱의 스토어에 대 한 링크가 얻을 수 있습니다.
+**앱 id** 페이지에서 Microsoft Store에서 앱에 할당 된 고유 id와 관련 된 세부 정보를 볼 수 있습니다. 또한이 페이지에 나열 하는 앱의 스토어에 대 한 링크를 얻을 수 있습니다.
 
 이 정보를 찾으려면 앱 중 하나로 이동하여 왼쪽 탐색 메뉴에서 **앱 관리**를 확장합니다. 그리고 **앱 ID**를 선택하여 이들 세부 정보를 확인합니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "8937824"
 
 앱 페이지에 대한 직접 링크를 공유하면 고객이 스토어에서 앱을 찾는 데 도움이 됩니다. 이 링크는 **`https://www.microsoft.com/store/apps/<your app's Store ID>`** 형식으로 되어 있습니다. 고객이 이 링크를 클릭하면 앱에 대한 웹 기반 목록 페이지가 열립니다. 또한 Windows 장치에서 스토어 앱이 시작되고 앱 목록을 표시합니다.
 
-앱의 **스토어 ID**도 이 섹션에 표시됩니다. 이 스토어 ID는 [스토어 배지를 생성](http://go.microsoft.com/fwlink/p/?LinkId=534236)하거나 그렇지 않으면 앱을 식별하는 데 사용할 수 있습니다.
+앱의 **스토어 ID**도 이 섹션에 표시됩니다. 이 스토어 ID는 [스토어 배지를 생성](https://go.microsoft.com/fwlink/p/?LinkId=534236)하거나 그렇지 않으면 앱을 식별하는 데 사용할 수 있습니다.
 
 **스토어 프로토콜 링크**는 앱 내에서 연결을 할 때처럼 브라우저를 열지 않고도 스토어에서 앱을 직접 연결하는 데 사용됩니다. 자세한 내용은 [앱에 대한 링크](link-to-your-app.md)를 참조하세요.
 

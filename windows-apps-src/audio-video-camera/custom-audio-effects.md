@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: 5278a845e56f1df76cc663bbb0c517b589a23524
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e04b3a764c170fa3e3e0ce1372e72b73795b5b12
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921966"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049330"
 ---
 # <a name="custom-audio-effects"></a>사용자 지정 오디오 효과
 
@@ -147,7 +147,7 @@ TimeIndependent[**TimeIndependent**](https://msdn.microsoft.com/library/windows/
 ## <a name="related-topics"></a>관련 항목
 * [간단한 카메라 미리 보기 액세스](simple-camera-preview-access.md)
 * [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)
-* [Win2D 설명서](http://go.microsoft.com/fwlink/p/?LinkId=519078)
+* [Win2D 설명서](https://go.microsoft.com/fwlink/p/?LinkId=519078)
 * [미디어 재생](media-playback.md)
 
  

@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 개발자 센터, 계정 설정, 프로필, 계정 프로필, 개발자 계정, 개발자 계정 설정
 ms.localizationpriority: medium
-ms.openlocfilehash: c4f7bd6d7aa085c3d5066d3b486583c5b3f37182
-ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
+ms.openlocfilehash: 25e18956900a873c22ec95858e72f02e74aa7370
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "8992607"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049340"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>계정 설정 및 프로필 정보 관리
 
@@ -51,6 +51,6 @@ ms.locfileid: "8992607"
 - **테 넌 트**:에 Azure AD 테 넌 트 연결 관리 합니다. 자세한 내용은 [파트너 센터 계정과 Azure AD 연결](associate-azure-ad-with-dev-center.md)을 참조 하세요.
 - **프로그램**: 참여 중인 프로그램에 대한 세부 정보를 확인하고 관심이 있는 다른 프로그램에 대해 알아봅니다.
 - **계약**: 계정을 수락한 계약을 확인합니다.
-- **개발자 장치**: 보기 [테스트를 위해 잠금을 Windows Phone 8.x 장치](http://go.microsoft.com/fwlink/p/?LinkId=533897) 및 [개발에 사용 하도록 설정 하는 Xbox One 본체](../xbox-apps/devkit-activation.md)관리 합니다. 
+- **개발자 장치**: 보기 [테스트를 위해 잠금을 Windows Phone 8.x 장치](https://go.microsoft.com/fwlink/p/?LinkId=533897) 및 [개발에 사용 하도록 설정 하는 Xbox One 본체](../xbox-apps/devkit-activation.md)관리 합니다. 
 
 

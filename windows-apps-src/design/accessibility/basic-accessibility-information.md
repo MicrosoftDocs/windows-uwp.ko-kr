@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e7526ec4f32f641f152709e6968f3dc442c2a06
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 8320b2b4abb5e49bbf589b360cc9cc2e0e033f79
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934558"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050333"
 ---
 # <a name="expose-basic-accessibility-information"></a>기본적인 접근성 정보 표시  
 
@@ -141,7 +141,7 @@ XAML
 <span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"/>
 
 ## <a name="accessible-names-from-dynamic-data"></a>동적 데이터의 접근성 있는 이름  
-Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 원본에서 제공되는 값을 표시하는 데 사용할 수 있는 많은 컨트롤을 지원합니다. 데이터 항목으로 목록을 채우는 경우 초기 목록이 채워지면 데이터 바인딩 목록 항목의 접근성 있는 이름을 설정하는 기술을 사용해야 할 수 있습니다. 자세한 내용은 [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)의 "시나리오 4"를 참조하세요.
+Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 원본에서 제공되는 값을 표시하는 데 사용할 수 있는 많은 컨트롤을 지원합니다. 데이터 항목으로 목록을 채우는 경우 초기 목록이 채워지면 데이터 바인딩 목록 항목의 접근성 있는 이름을 설정하는 기술을 사용해야 할 수 있습니다. 자세한 내용은 [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)의 "시나리오 4"를 참조하세요.
 
 <span id="Accessible_names_and_localization"/>
 <span id="accessible_names_and_localization"/>
@@ -157,5 +157,5 @@ Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 �
 ## <a name="related-topics"></a>관련 항목  
 * [접근성](accessibility.md)
 * [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)
-* [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [접근성 테스트](accessibility-testing.md)

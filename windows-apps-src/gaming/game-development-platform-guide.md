@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 기술, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: c6d2ebad640849cd81d6a2704f89ca1f05cc1b27
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 53616e572be6051d096c095f9587c498b769a6af
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942968"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048530"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>UWP 앱용 게임 기술
 
@@ -19,12 +19,12 @@ ms.locfileid: "8942968"
 
 이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 사용할 수 있는 기술에 대해 알아봅니다.
 
-##  <a name="benefits-of-windows10-for-game-development"></a>게임 개발을 위한 Windows10의 이점
+##  <a name="benefits-of-windows10-for-game-development"></a>게임 개발에 대 한 windows 10의 이점
 
 
-Windows10에 UWP 도입 되면서 Windows10 타이틀이 모든 Microsoft 플랫폼을 확장할 수 있습니다 됩니다. 이전 버전의 Windows에서 무료 마이그레이션 Windows10 클라이언트의 증가 마이그레이션할 수 있기 때문입니다. 이 두 가지의 조합은 Windows10 타이틀 아주 많은 고객이 Microsoft Store를 통해 연결할 수 있는 것을 의미 합니다.
+Windows 10의 UWP의 도입 되면서, windows 10 타이틀이 모든 Microsoft 플랫폼을 확장할 수 있습니다 됩니다. 이전 버전의 Windows에서 무료 마이그레이션 지속적으로 증가 하는 windows 10 클라이언트 수가 생깁니다. 이 두 가지의 조합은 windows 10 타이틀이 아주 많은 고객이 Microsoft Store를 통해 연결할 수 있는 것을 의미 합니다.
 
-또한 Windows10 게임에 특히 유용한 많은 새로운 기능을 제공 합니다.
+또한 windows 10 게임에 특히 유용한 많은 새로운 기능을 제공 합니다.
 
 -   메모리 페이징 및 전체 메모리 시스템 크기 감소
 -   향상된 그래픽 메모리 관리를 통해 포그라운드 게임에 대한 추가 메모리 할당 및 보호
@@ -212,7 +212,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <tr class="odd">
     <td align="left">Windows.UI.Core.CoreWindow</td>
     <td align="left"><p>Windows.UI.Core.CoreWindow 클래스는 포인터 누르기 및 이동을 추적하는 이벤트와 키 위 및 아래로 이동 이벤트를 제공합니다.</p>
-    <p><strong>사용 시기</strong></p>
+    <p><strong>사용해야 하는 경우</strong></p>
     <p>게임에서 마우스 또는 키 누르기를 추적해야 하는 경우 Windows.UI.Core.CoreWindows 이벤트를 사용합니다.</p>
     <p><strong>자세한 정보</strong></p>
     <p>게임에서 마우스 또는 키보드를 사용하는 방법에 대한 자세한 내용은 <a href="https://docs.microsoft.com/windows/uwp/gaming/tutorial--adding-move-look-controls-to-your-directx-game">게임용 이동-보기 컨트롤</a>을 참조하세요.</p></td>
@@ -239,7 +239,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <tr class="odd">
     <td align="left">DirectXMath</td>
     <td align="left"><p>DirectXMath API는 일반적인 선형 대수 및 게임에 일반적인 그래픽 수학 연산을 위한 SIMD 친화적인 C++ 형식과 함수를 제공합니다.</p>
-    <p><strong>사용 시기</strong></p>
+    <p><strong>사용해야 하는 경우</strong></p>
     <p>DirectXMath의 사용은 옵션이며, 일반적인 수학 연산을 간소화합니다.</p>
     <p><strong>자세한 정보</strong></p>
     <p><a href="https://msdn.microsoft.com/library/windows/desktop/hh437833">DirectXMath</a> 설명서를 참조하세요.</p></td>
@@ -321,9 +321,9 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
 
 ## <a name="xbox-live-services"></a>Xbox Live 서비스
 
-[Xbox Live 크리에이터 스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator) 개발자를 UWP 게임에 Xbox Live를 통합 하 고 Xbox One 및 Windows10을 게시할 수 있습니다. 최소한의 개발 시간을 투자하여 로그인, 상태, 순위표 등의 Xbox Live 소셜 환경을 타이틀과 통합하세요. Xbox Live 소셜 기능은 5500만이 넘는 활성 사용자에게 인지도를 확산시켜 고객을 조직적으로 유치할 수 있도록 설계되었습니다.
+[Xbox Live 크리에이터 스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator) 개발자를 UWP 게임에 Xbox Live를 통합 하 고 Xbox One 및 windows 10에 게시할 수 있습니다. 최소한의 개발 시간을 투자하여 로그인, 상태, 순위표 등의 Xbox Live 소셜 환경을 타이틀과 통합하세요. Xbox Live 소셜 기능은 5500만이 넘는 활성 사용자에게 인지도를 확산시켜 고객을 조직적으로 유치할 수 있도록 설계되었습니다.
 
-훨씬 다양한 Xbox Live 기능을 사용하고 전용 마케팅 및 개발 지원을 이용하고 메인 Xbox One 스토어에 추천 앱으로 등록되고 싶다면 [ID@Xbox](http://www.xbox.com/developers/id) 프로그램에 지원하세요. Xbox Live 크리에이터스 프로그램 및 ID@Xbox프로그램에 제공되는 기능을 살펴보려면 [기능표](../xbox-live/developer-program-overview.md#feature-table)를 참조하세요.
+훨씬 다양한 Xbox Live 기능을 사용하고 전용 마케팅 및 개발 지원을 이용하고 메인 Xbox One 스토어에 추천 앱으로 등록되고 싶다면 [ID@Xbox](https://www.xbox.com/developers/id) 프로그램에 지원하세요. Xbox Live 크리에이터스 프로그램 및 ID@Xbox프로그램에 제공되는 기능을 살펴보려면 [기능표](../xbox-live/developer-program-overview.md#feature-table)를 참조하세요.
 
 자세한 내용을 보려면 [게임에 Xbox Live 추가](e2e.md#adding-xbox-live-to-your-game)로 이동하세요.
 
@@ -332,7 +332,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
 
 ### <a name="uwp-games-without-directx"></a>DirectX를 사용하지 않는 UWP 게임
 
-카드 게임 또는 보드 게임과 같은 최소한의 성능이 필요한 간단한 게임은 DirectX 없이 작성할 수 있으며 C++로 작성하지 않아도 됩니다. 이러한 종류의 게임에는 C#, Visual Basic, C++, HTML/JavaScript 등 UWP에서 지원하는 언어를 사용할 수 있습니다. 게임에서 성능이 중요하지 않거나 그래픽이 많이 사용되지 않는 경우 [JavaScript 및 HTML5 터치 게임 샘플](http://code.msdn.microsoft.com/windowsapps/JavaScript-and-HTML5-touch-d96f6031)을 예제로 확인하세요.
+카드 게임 또는 보드 게임과 같은 최소한의 성능이 필요한 간단한 게임은 DirectX 없이 작성할 수 있으며 C++로 작성하지 않아도 됩니다. 이러한 종류의 게임에는 C#, Visual Basic, C++, HTML/JavaScript 등 UWP에서 지원하는 언어를 사용할 수 있습니다. 게임에서 성능이 중요하지 않거나 그래픽이 많이 사용되지 않는 경우 [JavaScript 및 HTML5 터치 게임 샘플](https://code.msdn.microsoft.com/windowsapps/JavaScript-and-HTML5-touch-d96f6031)을 예제로 확인하세요.
 
 ### <a name="game-engines"></a>게임 엔진
 
