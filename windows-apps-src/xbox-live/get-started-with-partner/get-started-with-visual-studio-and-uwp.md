@@ -1,24 +1,24 @@
 ---
 title: UWP 게임에 대 한 Visual Studio를 사용 하 여 시작
-description: Visual Studio 프로젝트를 UWP 게임에 Xbox Live를 사용 하도록 설정 하는 방법을 알아봅니다
+description: Visual Studio 프로젝트를 UWP 게임에 대 한 Xbox Live를 사용 하도록 설정 하는 방법을 알아봅니다
 ms.assetid: b53bc91f-79db-4d8f-8919-b9144e2d609b
 ms.date: 11/28/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: d27dcb1856456e7856306de7ddddc3450b98fec8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 314d5e937bb8680dc26b7dfdfa15ff90f8f26c81
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932357"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044848"
 ---
 # <a name="get-started-using-visual-studio-for-uwp-games"></a>Visual Studio를 사용 하 여 UWP 게임
 
 ## <a name="requirements"></a>요구 사항
 
 1. **[파트너 센터 개발자 프로그램](https://developer.microsoft.com/store/register)** 에 등록 합니다.
-2. **[Windows 10](https://microsoft.com/windows)** 입니다.
+2. **[Windows 10입니다](https://microsoft.com/windows)**.
 3. **유니버설 Windows 앱 개발 도구**를 사용 하 여 **[visual Studio](https://www.visualstudio.com/)** 지정 합니다. 최소 UWP 앱에 대 한 버전은 Visual Studio 2015 업데이트 3입니다. 개발자 및 보안 업데이트에 대 한 Visual Studio의 최신 버전을 사용 하는 것이 좋습니다. 
 4. ** [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) v10.0.10586.0** 이상.
 
@@ -27,15 +27,15 @@ ms.locfileid: "8932357"
 
 ## <a name="create-a-new-product-in-partner-center"></a>파트너 센터에서 새 제품 만들기
 
-모든 Xbox Live 타이틀 전에 로그인 및 Xbox Live 서비스를 호출 하는 수 있게 됩니다 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 만든 제품이 있어야 합니다. 자세한 내용은 [UDC 제목 만들기](create-a-new-title.md) 를 참조 하세요.
+모든 Xbox Live 타이틀에 제품을 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 작성 로그인 및 Xbox Live 서비스를 호출할 수 있어야 합니다. 자세한 내용은 [UDC 제목 만들기](create-a-new-title.md) 를 참조 하세요.
 
 ## <a name="configuring-your-development-device"></a>개발 장치 구성
 
-성공적으로 수 있도록 장치에서 필요한 다음 사전 설정 단계는 Xbox Live와 다양 한 Xbox Live 서비스 호출을 사용 하 여 로그인 합니다.
+성공적으로 수 있도록 사용자의 장치에 필요한 다음 사전 설정 단계는 Xbox Live와 다양 한 Xbox Live 서비스 호출을 사용 하 여 로그인 합니다.
 
 ### <a name="set-your-sandbox"></a>에 샌드박스를 설정 합니다.
 
-샌드박스 [Xbox Live 서비스 구성](../xbox-live-service-configuration.md) 타이틀을 해제할 준비가 될 때까지 정품에서 격리를 유지 하는 방법을 제공 합니다. 누적 될 수 있는 약간의 데이터는 샌드박스 관련이 있습니다. 예를 들어 타이틀 라는 *헤드샷*는 통계를 정의 하 고 타이틀을 테스트 하는 동안 사용자 계정에 헤드샷 개의 누적 가정해 봅니다. 이 값은 타이틀의 개발 샌드박스를 특정 되며는 헤드샷을 통해 수행 하지는 타이틀의 일반 정품 버전으로 전환 하는 경우.
+샌드박스 [Xbox Live 서비스 구성](../xbox-live-service-configuration.md) 타이틀을 릴리스할 준비가 될 때까지 소매에서 격리 됨 상태로 유지 하는 방법을 제공 합니다. 축적 일부 데이터는 샌드박스 관련이 있습니다. 예를 들어 타이틀 라는 *헤드샷*는 통계를 정의 하 고 타이틀을 테스트 하는 동안 몇 개의 헤드샷 사용자 계정에 축적 가정해 봅니다. 이 값은 타이틀의 개발 샌드박스를 특정 되며 타이틀의 일반 정품 버전으로 전환 하는 경우는 헤드샷 것까지 영향을 미치지 합니다.
 
 에 샌드박스를 설정 하는 방법을 확인 하 고 자세한 [Xbox Live 샌드박스](../xbox-live-sandboxes.md) 문서를 참조 하세요.
 
@@ -50,10 +50,10 @@ ms.locfileid: "8932357"
 ### <a name="1-open-a-uwp-project"></a>1. UWP 프로젝트를 엽니다.
 기존 UWP 프로젝트 아직 없는 경우 다음을 실행 하 여 만들 수 있습니다.
 
-1. Visual Studio, **파일**에서 > **새** > **프로젝트**입니다.
+1. Visual Studio, **파일**에서 > **새** > **프로젝트**.
 2. **새 프로젝트** 대화 상자를 선택 하는 **Visual C#** > **Windows** > **유니버설** 노드 왼쪽된 창에서 오른쪽 창에서 **빈 앱 (유니버설 Windows)를** 클릭 합니다.
-3. 대화 상자 아래쪽에는 프로젝트에 이름을 지정 하 고 프로젝트의 위치를 지정 합니다.
-4. Windows 10의 최소 버전과 대상 버전을 지정 SDK입니다. [UWP 버전 선택](https://docs.microsoft.com/windows/uwp/updates-and-versions/choose-a-uwp-version) 에 대 한 자세한 내용은 참조 하세요.
+3. 대화 상자 아래쪽에 프로젝트에 이름을 지정 하 고 프로젝트의 위치를 지정 합니다.
+4. Windows 10의 최소 버전과 대상 버전을 지정 SDK 합니다. [UWP 버전 선택](https://docs.microsoft.com/windows/uwp/updates-and-versions/choose-a-uwp-version) 에 대 한 자세한 내용은 참조 하세요.
 
 ![VS에서 프로젝트 만들기](../images/getting_started/vs-create-project.gif)
 
@@ -62,36 +62,36 @@ ms.locfileid: "8932357"
 
 ### <a name="2-add-references-to-the-xbox-live-api-xsapi-in-your-project"></a>2. 프로젝트에서 Xbox Live API (XSAPI)에 대 한 참조를 추가 합니다.
 
-Xbox 서비스 API c + + 및 WinRT 및 UWP 및 XDK, 모두에 대 한 특성은 있고 해당 네임 스페이스 **Microsoft.Xbox.Live.SDK.*로 구성 됩니다. UWP** 및 **Microsoft.Xbox.Live.SDK.* 합니다. XboxOneXDK**.
+Xbox 서비스 API c + + 및 WinRT 및 UWP 및 XDK, 모두에 대 한 특성 형태로 있고 해당 네임 스페이스 **Microsoft.Xbox.Live.SDK.*로 구성 됩니다. UWP** 및 **Microsoft.Xbox.Live.SDK.* 합니다. XboxOneXDK**.
 
 1. **UWP** 는 PC, Xbox One 또는 Windows Phone 실행할 수 있는 UWP 게임을 빌드하는 개발자를 위한.
-2. **XboxOneXDK** 는 ID@Xbox Xbox One XDK를 사용 하는 개발자를 관리 합니다.
+2. **XboxOneXDK** 용인지 ID@Xbox Xbox One XDK를 사용 하는 개발자를 관리 합니다.
 3. WinRT SDK로 작업 하는 경우 c + + 게임 엔진에 사용할 수는 c + + SDK c + +, C# 또는 JavaScript로 작성 된 게임 엔진입니다.
-4. C + + 엔진을 사용 하 여 WinRT을 사용할 때 사용 해야 C + + CX hat (^)을 사용 합니다. C + +는 c + + 게임 엔진에 사용 하도록 권장된 API입니다.  
+4. WinRT를 c + + 엔진을 사용할 때 사용 해야 C + + CX hat (^)을 사용 합니다. C + +는 c + + 게임 엔진에 사용 하도록 권장된 API입니다.  
 
 > [!TIP]
-> 자세한 내용은 [Xbox One에서 UWP 앱 개발 시작](https://docs.microsoft.com/windows/uwp/xbox-apps/getting-started)에서 Xbox One의 UWP를 실행 하는 방법에 대 한 합니다.
+> 자세한 내용은 [Xbox One에서 UWP 앱 개발 시작](https://docs.microsoft.com/windows/uwp/xbox-apps/getting-started)에서 Xbox One에서 UWP를 실행 하는 방법에 대 한 합니다.
 
-프로젝트에서 Xbox Live API를 사용 하려면 NuGet 패키지를 사용 하거나 API 소스 추가 하거나 이진 파일에 대 한 참조를 추가할 수 있습니다. NuGet 패키지를 추가하면 쉽게 컴파일하고 소스를 추가하면 쉽게 디버깅할 수 있습니다. 이 문서에서는 NuGet 패키지를 사용 하 여 안내 합니다. 소스를 사용 하려는 경우 다음 참조 [는 Xbox Live Api 소스 UWP 프로젝트의 컴파일](add-xbox-live-apis-source-to-a-uwp-project.md)합니다. 하 여 Xbox Live SDK NuGet 패키지를 추가할 수 있습니다.
+프로젝트에서 Xbox Live API를 사용 하려면 NuGet 패키지를 사용 하거나 API 소스 추가 하거나 바이너리에 대 한 참조를 추가할 수 있습니다. NuGet 패키지를 추가하면 쉽게 컴파일하고 소스를 추가하면 쉽게 디버깅할 수 있습니다. 이 문서에서는 NuGet 패키지를 사용 하 여 안내 합니다. 소스를 사용 하려는 경우 다음 하세요 [컴파일하는 Xbox Live Api 소스 UWP 프로젝트의](add-xbox-live-apis-source-to-a-uwp-project.md)합니다. 하 여 Xbox Live SDK NuGet 패키지를 추가할 수 있습니다.
 
 1. Visual Studio에서 **도구**를 이동 > **NuGet 패키지 관리자** > **... 솔루션용 NuGet 패키지 관리**합니다.
-2. NuGet 패키지 관리자에서 **찾아** 클릭 하 고 **Xbox.Live.SDK** 검색 상자에 입력 합니다.
-3. 왼쪽의 목록에서 사용할 수 있는 Xbox Live sdk 버전을 선택 합니다. 이 경우 Microsoft.Xbox.Live.SDK.WinRT.UWP 패키지를 사용 합니다.
+2. NuGet 패키지 관리자를 **찾아** 클릭 하 고 **Xbox.Live.SDK** 검색 상자에 입력 합니다.
+3. 왼쪽의 목록에서 사용 하려는 Xbox Live sdk 버전을 선택 합니다. 이 경우 Microsoft.Xbox.Live.SDK.WinRT.UWP 패키지를 사용 합니다.
 3. 창의 오른쪽에서 프로젝트 옆의 확인란을 선택 하 고 **설치**를 클릭 합니다.
 
 ![NuGet 통해 XBL 추가](../images/getting_started/vs-add-nuget-xbl.gif)
 
 
 > [!IMPORTANT]
-> 에 대 한 `Microsoft.Xbox.Live.SDK.Cpp.*` 를 기반으로 프로젝트를 헤더를 포함 해야 `#include <xsapi\services.h>` 에서 프로젝트의 소스입니다.
+> 에 대 한 `Microsoft.Xbox.Live.SDK.Cpp.*` 기반된 프로젝트의 경우 헤더를 포함 해야 `#include <xsapi\services.h>` 에서 프로젝트의 소스입니다.
 
 ### <a name="3-optional-using-connected-storage-andor-secure-sockets"></a>3. (선택 사항) 연결 된 저장소 및/또는 보안 소켓을 사용 하 여
 사용 중인 Windows sdk 버전에 따라 추가 콘텐츠를 설치 하거나 Xbox Live [연결 된 저장소](../storage-platform/connected-storage/connected-storage-technical-overview.md) 또는 보안 소켓을 사용 하려면 프로젝트에 대 한 참조를 수동으로 추가 해야 합니다. 액세스 해야 연결 된 저장소 기능을 사용 하려는 경우는 `Windows.Gaming.XboxLive.Storage` 네임 스페이스입니다. 액세스 해야 보안 소켓을 사용 하려는 경우 `Windows.Networking.XboxLive`.
 
 #### <a name="windows-10-sdk-version-10016299-or-higher"></a>Windows 10 SDK 버전 10.0.16299 이상
-Windows 10 SDK 10.0.16299를 대상으로 한 하거나 이상 다음 됩니다 추가 작업을 수행 하지 않고 연결 된 저장소 네임 스페이스에 액세스할 수 있습니다. 보안 소켓에 액세스 하려면 **UWP 용 Windows 데스크톱 확장**에 대 한 참조를 추가 해야 합니다. 하 여이 수행할 수 있습니다.
+Windows 10 SDK 10.0.16299 대상 한 또는 이상 다음 됩니다 추가 작업을 수행 하지 않고 연결 된 저장소 네임 스페이스에 액세스할 수 없습니다. 보안 소켓에 액세스 하려면 **UWP 용 Windows 데스크톱 확장**에 대 한 참조를 추가 해야 합니다. 하 여이 수행할 수 있습니다.
 
-1. **솔루션 탐색기**에서 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가...** 를 선택 합니다.
+1. **솔루션 탐색기**에서 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가...** 선택
 2. **참조 관리자** 대화 상자의 왼쪽에서 **유니버설 Windows**선택 > **확장**합니다.
 3. 표시 되는 목록에서 **UWP 용 Windows 데스크톱 확장** 에 대 한 검색 하 고 Windows 10 SDK와 일치 하는 버전 옆에 있는 확인란을 선택 합니다.
 4. **확인**을 클릭합니다.
@@ -99,24 +99,24 @@ Windows 10 SDK 10.0.16299를 대상으로 한 하거나 이상 다음 됩니다 
 ![VS에서 새 참조 추가](../images/getting_started/get-started-vs-add-ref.png)
 
 #### <a name="windows-10-sdk-version-10015063-or-lower"></a>Windows 10 SDK 버전 10.0.15063 또는 아래
-연결 된 저장소 또는 보안 소켓을 사용 하려면 프로젝트에 대 한 참조를 추가 하기 전에 Xbox Live 플랫폼 확장 SDK를 설치 해야 합니다. 하 여이 수행할 수 있습니다.
+연결 된 저장소 또는 보안 소켓을 사용 하려는 경우 프로젝트에 대 한 참조를 추가 하기 전에 Xbox Live 플랫폼 확장 SDK를 설치 해야 합니다. 하 여이 수행할 수 있습니다.
 
-1. 다운로드 하 고 [Xbox Live 플랫폼 확장 SDK](http://aka.ms/xblextsdk)를 추출 합니다.
+1. 다운로드 하 고 [Xbox Live 플랫폼 확장 SDK](https://aka.ms/xblextsdk)를 추출 합니다.
 2. 추출 되 면 Windows 10 SDK 버전을 사용 하는 일치 하는 포함 된 MSI 파일을 실행 합니다.
 
 Xbox Live 플랫폼 확장 SDK를 설치한 후 Visual Studio에서에 대 한 참조를 추가 해야 합니다. 하 여이 수행할 수 있습니다.
 
-1. **솔루션 탐색기**에서 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가...** 를 선택 합니다.
+1. **솔루션 탐색기**에서 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가...** 선택
 2. **참조 관리자** 대화 상자의 왼쪽에서 **유니버설 Windows**선택 > **확장**합니다.
 3. 표시 되는 목록에서 **UWP 용 Windows 데스크톱 확장** 에 대 한 검색 하 고 Windows 10 SDK와 일치 하는 버전 옆에 있는 확인란을 선택 합니다.
 4. **확인**을 클릭합니다.
 
-### <a name="4-associate-your-visual-studio-project-with-your-uwp-app"></a>4. UWP 앱을 사용 하 여 Visual Studio 프로젝트를 연결 합니다.
+### <a name="4-associate-your-visual-studio-project-with-your-uwp-app"></a>4. UWP 앱을 Visual Studio 프로젝트를 연결 합니다.
 
-게임 수에 대 한 로그인을 파트너 센터에서 만든 제품 연결 되어야 합니다. 스토어 연결 마법사를 사용 하 여 Visual Studio에서 게임을 연결할 수 있습니다. Visual Studio에서 다음을 수행 합니다.
+게임 수에 대 한 로그인, 파트너 센터에서 만든 제품 연결 되어야 합니다. 스토어 연결 마법사를 사용 하 여 Visual Studio에서 게임을 연결할 수 있습니다. Visual Studio에서 다음을 수행 합니다.
 
 1.  기본 프로젝트 (시작 프로젝트)를 마우스 오른쪽 단추로 클릭, **저장소**를 클릭 > **... 스토어에 앱 연결**
-2.  로그인 요청 하 고 지시에 따라 앱을 만드는 데 **Windows 개발자 계정** 으로 합니다.
+2.  로그인 요청 하 고 화면의 지시에 따라 앱을 만드는 데 **Windows 개발자 계정** 으로 합니다.
 
 > [!TIP]
 > [앱 패키징](https://docs.microsoft.com/windows/uwp/packaging/) 게임을 준비 하 고 Windows 스토어에 대 한 자세한 내용은 참조 하세요.
@@ -131,14 +131,14 @@ UWP 프로젝트를 인터넷 Xbox Live와 통신 하는 기능을 지정 해야
 
 ### <a name="6-associate-your-visual-studio-project-with-your-xbox-live-enabled-title"></a>6. Xbox Live가 지원 타이틀을 Visual Studio 프로젝트를 연결 합니다.
 
-Xbox Live 서비스에 게 서비스 구성 파일을 프로젝트에 추가 해야 합니다. 이렇게 하 여 쉽게 수행할 수 있습니다.
+Xbox Live 서비스에 게 서비스 구성 파일을 프로젝트에 추가 해야 합니다. 하 여 쉽게 수행할 수 있습니다.
 
 1. 시작 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**선택 > **새 항목**입니다.
 2. **텍스트 파일** 형식을 선택 하 고 **xboxservices.config**로 이름을 지정 합니다.
-3. 파일을 마우스 오른쪽 단추로 클릭 하 고 **속성** 선택 되었는지 확인 합니다.
+3. 파일을 마우스 오른쪽 단추로 클릭 하 고, **속성** 선택 되었는지 확인 합니다.
     1. **빌드 작업** 은 **콘텐츠**를 설정 하 고  
     2. **출력 디렉터리로 복사** **항상 복사로**설정 됩니다.
-5.  타이틀을 적용할 수 있는 값을 사용 하 여 **TitleId** 및 **PrimaryServiceConfigId** 대체 다음 템플릿 사용 하 여 구성 파일을 편집 합니다. 파트너 센터에서 루트 Xbox Live 페이지에서 올바른 값을 가져올 수 있습니다. **PrimaryServiceConfigId** **서비스 안내**으로 파트너 센터에 표시 됩니다.
+5.  **TitleId** 및 **PrimaryServiceConfigId** 타이틀에 적용할 수 있는 값으로 대체 다음 템플릿 사용 하 여 구성 파일을 편집 합니다. 파트너 센터에서 루트 Xbox Live 페이지에서 올바른 값을 가져올 수 있습니다. 파트너 센터에서 **서비스 안내**으로 **PrimaryServiceConfigId** 나타납니다.
 
 ```json
     {
@@ -157,12 +157,12 @@ Xbox Live 서비스에 게 서비스 구성 파일을 프로젝트에 추가 해
 ```
 
 > [!TIP]
-> Xboxservices.config 내의 모든 값은 대/소문자 구분 합니다. TitleID와 PrimaryServiceConfigId 얻기 대 한 자세한 내용은 [서비스 구성을](../xbox-live-service-configuration.md) 참조 하세요.
+> Xboxservices.config 내에서 모든 값은 대/소문자 구분 합니다. TitleID와 PrimaryServiceConfigId 얻기 대 한 자세한 내용은 [서비스 구성을](../xbox-live-service-configuration.md) 참조 하세요.
 
 ### <a name="7-optional-add-multiplayer-capabilities"></a>7. (선택 사항) 추가 멀티 플레이 기능
 
-추가 하려는 경우 멀티 플레이어, 타이틀을 지원 하 고 플레이어가 멀티 플레이어 게임에 대 한 다른 사용자를 초대 하는 기능을 구현 하려면 다음 AppXManifest 파일을 다른 필드를 추가 해야 합니다. 자세한 내용은 [구성에 대 한 멀티 AppXManifest를](../multiplayer/service-configuration/configure-your-appxmanifest-for-multiplayer.md) 참조 하세요.
+추가 하려는 경우 멀티 플레이어, 타이틀을 지원 하 고 멀티 플레이어 게임에 대 한 다른 사용자를 초대 하 여 플레이어에 대 한 기능을 구현 하려면 다음 AppXManifest 파일을 다른 필드를 추가 해야 합니다. 자세한 내용은 [구성에 대 한 멀티 AppXManifest를](../multiplayer/service-configuration/configure-your-appxmanifest-for-multiplayer.md) 참조 하세요.
 
 ## <a name="learn-more"></a>자세히 알아보기
 
-[Xbox Live SDK 샘플](https://github.com/Microsoft/xbox-live-samples) 은 Xbox Live Api를 사용 하는 방법 및의 개발자 들에 사용할 수 있는 Api를 소개 하는 좋은 방법의 ID@Xbox 프로그램. 샘플을 사용 하려면 XDKS.1 샌드박스에 변경 해야 합니다.
+[Xbox Live SDK 샘플](https://github.com/Microsoft/xbox-live-samples) 은 Xbox Live Api를 사용 하는 방법 및 개발자가 사용할 수 있는 Api를 소개 하는 좋은 방법의 ID@Xbox 프로그램. 샘플을 사용 하려면 XDKS.1 샌드박스에 변경 해야 합니다.

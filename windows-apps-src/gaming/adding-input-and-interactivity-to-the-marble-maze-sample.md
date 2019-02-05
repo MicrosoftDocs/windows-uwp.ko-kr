@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 샘플
 ms.localizationpriority: medium
-ms.openlocfilehash: aee239f76c3d4431426f0bc9fe519a59f8f48838
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d545f696a93bfa8416e1a772ecc015867a3615c2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923443"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045449"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Marble Maze 샘플에 입력 및 대화형 작업 추가
 
@@ -21,7 +21,7 @@ ms.locfileid: "8923443"
 유니버설 Windows 플랫폼(UWP)은 데스크톱 컴퓨터, 노트북, 태블릿 등 다양한 장치에서 실행됩니다. 한 장치에 너무 많은 입력 및 제어 메커니즘이 있을 수 있습니다. 이 문서에서는 입력 장치 작업을 할 때 고려할 몇 가지 주요 사항을 설명하고 Marble Maze가 이러한 사례를 적용하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](http://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
+> 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](https://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
 
  
 게임에서 입력 작업을 하는 경우에 대해 논의하는 주요 사항은 다음과 같습니다.

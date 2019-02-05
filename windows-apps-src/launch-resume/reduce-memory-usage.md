@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c9716483d7df51c2c02d2f9c88e5a4cec05437cc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 28c21b3d3b3e53def2181e96a58b53998ee0f04a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942988"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046606"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>앱이 백그라운드로 이동할 때 메모리 회수
 
@@ -103,5 +103,5 @@ Windows 10 버전 1607에는 두 개의 새 응용 프로그램 수명 주기 �
 
 ## <a name="related-topics"></a>관련 항목
 
-* [백그라운드 미디어 재생 샘플](http://go.microsoft.com/fwlink/p/?LinkId=800141) - 앱이 백그라운드 상태로 이동할 때 메모리를 해제하는 방법을 보여 줍니다.
+* [백그라운드 미디어 재생 샘플](https://go.microsoft.com/fwlink/p/?LinkId=800141) - 앱이 백그라운드 상태로 이동할 때 메모리를 해제하는 방법을 보여 줍니다.
 * [진단 도구](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015/) - 진단 도구를 사용하여 가비지 수집 이벤트를 관찰하고 앱이 올바른 방법으로 메모리를 해제하고 있는지 확인합니다.

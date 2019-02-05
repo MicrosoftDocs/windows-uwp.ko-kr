@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 디버그, 테스트, 성능
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f58485b6f6829b9eec0495cce088304b181a2b1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 606ab4489b86b1fbba7346b4a503339c4c19f7d4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940675"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048320"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>UWP 앱 배포 및 디버그
 
 
 이 문서에서는 다양한 배포를 대상으로 지정하고 대상을 디버깅하는 단계를 안내합니다.
 
-Microsoft Visual Studio를 사용 하면 배포 하 고 다양 한 Windows10 장치에 유니버설 Windows 플랫폼 (UWP) 앱을 디버그할 수 있습니다. Visual Studio는 대상 디바이스에 앱을 빌드하고 등록하는 프로세스를 처리합니다.
+Microsoft Visual Studio를 사용 하면 배포 하 고 다양 한 windows 10 장치에서 유니버설 Windows 플랫폼 (UWP) 앱을 디버그할 수 있습니다. Visual Studio는 대상 디바이스에 앱을 빌드하고 등록하는 프로세스를 처리합니다.
 
 ## <a name="picking-a-deployment-target"></a>배포 대상 선택
 
@@ -30,7 +30,7 @@ Microsoft Visual Studio를 사용 하면 배포 하 고 다양 한 Windows10 장
 -   **로컬 컴퓨터**가 현재 개발 컴퓨터에 앱을 배포합니다. 이 옵션은 앱의 **대상 플랫폼 최소 버전**이 개발 컴퓨터의 운영 체제보다 작거나 같을 경우에만 사용할 수 있습니다.
 -   **원격 컴퓨터**에서 원격 대상을 지정하여 앱을 배포할 수 있습니다. 원격 컴퓨터에 배포하는 방법에 대한 자세한 내용은 [원격 디바이스 지정](#specifying-a-remote-device)에서 볼 수 있습니다.
 -   **디바이스**가 USB 연결 디바이스에 앱을 배포합니다. 장치는 개발자가 잠금 해제해야 하며 화면이 잠금 해제되어 있어야 합니다.
--   **에뮬레이터** 대상이 부팅되고 해당 이름에 지정된 구성으로 에뮬레이터에 앱을 배포합니다. 에뮬레이터는 이상을 Hyper-v에서 사용할 수 있는 사용 Windows8.1 실행 되는 컴퓨터 에서만 합니다.
+-   **에뮬레이터** 대상이 부팅되고 해당 이름에 지정된 구성으로 에뮬레이터에 앱을 배포합니다. 에뮬레이터는 이상을 활성화 된 Hyper-v에서 사용할 수 있는 windows 8.1을 실행 하는 컴퓨터 에서만 합니다.
 
 
 ## <a name="debugging-deployed-apps"></a>배포된 앱 디버깅
@@ -45,7 +45,7 @@ Visual Studio는 **디버그**, **프로세스에 연결**을 차례로 선택�
 UWP 앱은 Windows 8.1 이상에서 개발하고 컴파일할 수 있지만 실행하려면 Windows 10이 필요합니다. Windows 8.1 PC에서 UWP 앱을 개발하는 경우 호스트 및 대상 컴퓨터가 모두 동일한 LAN에 있다면 다른 Windows 10 디바이스에서 실행되는 UWP 앱을 원격으로 디버그할 수 있습니다. 이렇게 하려면 두 컴퓨터에서 모두 [Visual Studio용 원격 도구](https://www.visualstudio.com/downloads/)를 다운로드하여 설치합니다. 설치된 버전이 설치한 Visual Studio의 기존 버전과 일치해야 하며 선택한 아키텍처(x86, x64)도 대상 앱의 아키텍처와 일치해야 합니다.   
 
 ## <a name="package-layout"></a>패키지 레이아웃
-Visual Studio 2015 업데이트 3 부터는 UWP 앱에 대 한 레이아웃 패스를 지정 하는 개발자 용 옵션이 추가 되었습니다. 이 옵션은 앱을 빌드할 때 패키지 레이아웃을 복사할 디스크의 위치를 결정합니다. 기본적으로 이 속성은 프로젝트의 루트 디렉터리를 기준으로 설정됩니다. 이 속성을 수정하지 않으면 이전 버전의 Visual Studio와 동일한 동작이 유지됩니다.
+Visual Studio 2015 업데이트 3 부터는 UWP 앱에 대 한 레이아웃 패스를 지정 하는 개발자 용 옵션이 추가 했습니다. 이 옵션은 앱을 빌드할 때 패키지 레이아웃을 복사할 디스크의 위치를 결정합니다. 기본적으로 이 속성은 프로젝트의 루트 디렉터리를 기준으로 설정됩니다. 이 속성을 수정하지 않으면 이전 버전의 Visual Studio와 동일한 동작이 유지됩니다.
 
 이 속성은 프로젝트의 **디버그** 속성에서 수정할 수 있습니다.
 
@@ -65,7 +65,7 @@ C# 또는 Microsoft Visual Basic 앱에 대한 원격 컴퓨터를 지정하려�
 
 ![원격 연결 대화 상자](images/debug-remote-connections.png)
 
-이 대화 상자로 돌아가려면 프로젝트 속성 열고 **디버그** 탭으로 이동 합니다. 여기에서 **찾을** 옆에 있는 선택 **원격 컴퓨터:**
+이 대화 상자로 돌아가려면 프로젝트 속성 열고 **디버그** 탭으로 이동 합니다. 여기에서 선택 **찾기** 옆에 **원격 컴퓨터:**
 
 ![디버그 탭](images/debug-remote-machine-config.png)
 
@@ -73,7 +73,7 @@ C# 또는 Microsoft Visual Basic 앱에 대한 원격 컴퓨터를 지정하려�
 
 ### <a name="c-and-javascript"></a>C++ 및 JavaScript
 
-C + + 또는 JavaScriptUWP 앱에 대 한 원격 컴퓨터 대상을 지정 합니다.
+C + + 또는 JavaScriptUWP 앱에 대 한 원격 컴퓨터 대상을 지정:
 
 1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.
 2. **디버깅** 설정으로 이동하여 **실행할 디버거**에서 **원격 컴퓨터**를 선택합니다.
@@ -123,7 +123,7 @@ C++ 및 JS UWP 프로젝트의 경우 **디버깅 속성**에 **명령줄 인수
 - **없음**: 이 인증 모드는 Visual Studio 원격 도구를 실행하는 원격 PC 배포(데스크톱 또는 노트북)에만 사용할 수 있습니다. 테스트 계정이 로그인되어 있는 환경에서 테스트 컴퓨터가 설정되어 있고 자격 증명을 입력할 수 없는 경우 이 인증 모드를 사용합니다. 원격 디버거 설정이 인증 없음을 허용하도록 설정되어 있는지 확인합니다.
 
 ## <a name="advanced-remote-deployment-options"></a>고급 원격 배포 옵션
-Visual Studio 2015 업데이트 3과 Windows 10 1 주년 업데이트 릴리스를 새로운 고급 원격 배포 옵션 특정 Windows 10 장치. 고급 원격 배포 옵션은 프로젝트 속성의 **디버그** 메뉴에 있습니다.
+Visual Studio 2015 업데이트 3과 Windows 10 1 주년 업데이트 릴리스를 많으면 새로운 고급 원격 배포 옵션 특정 Windows 10 장치. 고급 원격 배포 옵션은 프로젝트 속성의 **디버그** 메뉴에 있습니다.
 
 새 속성은 다음과 같습니다.
 * 배포 유형
@@ -182,9 +182,9 @@ C++ UWP 앱의 경우 속성 페이지는 다음과 같이 표시됩니다.
 
 ## <a name="debugging-options"></a>디버깅 옵션
 
-Windows10, 사전에 실행 하 고 앱 [사전 실행](https://msdn.microsoft.com/library/windows/apps/Mt593297)이라는 기술을 일시 중단 함으로써 UWP 앱의 시작 성능이 개선 되었습니다. 대부분의 앱은 이 모드에서 작동되기 위해 특별히 수행해야 할 작업은 없지만 일부 앱에서는 동작을 조정해야 할 수 있습니다. 코드 경로의 문제를 디버깅하기 위해 Visual Studio에서 앱 디버깅을 사전 실행 모드로 시작할 수 있습니다.
+Windows 10에서 사전에 실행 및 앱 [사전 실행](https://msdn.microsoft.com/library/windows/apps/Mt593297)이라는 기술을 일시 중단 함으로써 UWP 앱의 시작 성능을 향상 되었습니다. 대부분의 앱은 이 모드에서 작동되기 위해 특별히 수행해야 할 작업은 없지만 일부 앱에서는 동작을 조정해야 할 수 있습니다. 코드 경로의 문제를 디버깅하기 위해 Visual Studio에서 앱 디버깅을 사전 실행 모드로 시작할 수 있습니다.
 
-디버깅은 Visual Studio 프로젝트(**디버그** -&gt; **기타 디버그 대상** -&gt; **유니버설 Windows 앱 사전 실행 디버그**)와 컴퓨터에 이미 설치된 앱(**사전 실행으로 앱 활성화** 확인란 선택을 선택하여 **디버그** -&gt; **기타 디버그 대상** -&gt; **설치된 앱 패키지 디버그**) 둘 다에서 지원됩니다. 자세한 내용은 [UWP 사전 실행 디버그](http://go.microsoft.com/fwlink/p/?LinkId=717245)를 참조하세요.
+디버깅은 Visual Studio 프로젝트(**디버그** -&gt; **기타 디버그 대상** -&gt; **유니버설 Windows 앱 사전 실행 디버그**)와 컴퓨터에 이미 설치된 앱(**사전 실행으로 앱 활성화** 확인란 선택을 선택하여 **디버그** -&gt; **기타 디버그 대상** -&gt; **설치된 앱 패키지 디버그**) 둘 다에서 지원됩니다. 자세한 내용은 [UWP 사전 실행 디버그](https://go.microsoft.com/fwlink/p/?LinkId=717245)를 참조하세요.
 
 시작 프로젝트의 **디버그** 속성 페이지에서 다음 배포 옵션을 설정할 수 있습니다.
 
@@ -206,7 +206,7 @@ Windows10, 사전에 실행 하 고 앱 [사전 실행](https://msdn.microsoft.c
 
 ## <a name="symbols"></a>기호
 
-기호 파일에는 변수, 함수 이름, 진입점 주소 등 코드를 디버그할 때 유용한 여러 데이터가 포함되어 있으므로 예외 및 호출 스택 실행 순서를 이해하는 데 도움이 됩니다. 대부분의 Windows 변형에 대한 기호는 [Microsoft 기호 서버](http://msdl.microsoft.com/download/symbols)를 통해 사용할 수 있거나, 더 빨리 오프라인에서 조회하기 위해 [Windows 기호 패키지 다운로드](http://aka.ms/winsymbols)에서 다운로드할 수 있습니다.
+기호 파일에는 변수, 함수 이름, 진입점 주소 등 코드를 디버그할 때 유용한 여러 데이터가 포함되어 있으므로 예외 및 호출 스택 실행 순서를 이해하는 데 도움이 됩니다. 대부분의 Windows 변형에 대한 기호는 [Microsoft 기호 서버](https://msdl.microsoft.com/download/symbols)를 통해 사용할 수 있거나, 더 빨리 오프라인에서 조회하기 위해 [Windows 기호 패키지 다운로드](https://aka.ms/winsymbols)에서 다운로드할 수 있습니다.
 
 Visual Studio에 대한 기호 옵션을 설정하려면 **도구 &gt; 옵션**을 선택한 다음 대화 창에서 **디버깅 &gt; 기호**로 이동합니다.
 
@@ -223,7 +223,7 @@ Visual Studio에 대한 기호 옵션을 설정하려면 **도구 &gt; 옵션**�
 
 ## <a name="windbg"></a>WinDbg
 
-WinDbg는 [Windows SDK](http://go.microsoft.com/fwlink/p/?LinkID=271979)에 포함된 Windows용 디버깅 도구 제품군의 일부로 제공되는 강력한 디버거입니다. Windows SDK 설치를 사용하면 Windows용 디버깅 도구를 독립 실행형 제품으로 설치할 수 있습니다. 네이티브 코드 디버깅에 매우 유용하지만 관리 코드 또는 HTML5로 작성된 앱에는 WinDbg를 사용하지 않는 것이 좋습니다.
+WinDbg는 [Windows SDK](https://go.microsoft.com/fwlink/p/?LinkID=271979)에 포함된 Windows용 디버깅 도구 제품군의 일부로 제공되는 강력한 디버거입니다. Windows SDK 설치를 사용하면 Windows용 디버깅 도구를 독립 실행형 제품으로 설치할 수 있습니다. 네이티브 코드 디버깅에 매우 유용하지만 관리 코드 또는 HTML5로 작성된 앱에는 WinDbg를 사용하지 않는 것이 좋습니다.
 
 UWP 앱으로 WinDbg를 사용하려면 [PLM(프로세스 수명 관리) 테스트 및 디버깅 도구](testing-debugging-plm.md)에서 설명한 대로 먼저 PLMDebug를 사용하여 앱 패키지에 대해 PLM(프로세스 수명 관리)을 사용하지 않도록 설정해야 합니다.
 

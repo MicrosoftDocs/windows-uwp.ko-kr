@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6388158a7b1c4fd3fa3e0ab17dcc86b7ef2d7c0e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3bfe034ed697661c81b2f01b67fafeee1941832d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921567"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050766"
 ---
 # <a name="planning-for-performance"></a>성능 계획
 
@@ -104,7 +104,7 @@ ms.locfileid: "8921567"
 
 **앱 시작 및 다시 시작**
 
--   앱의 시작 화면을 지연시키고 필요한 경우에 아니면 앱의 시작 화면을 확장하지 않습니다. 자세한 내용은 [빠르고 유연한 앱 실행 환경 만들기](http://go.microsoft.com/fwlink/p/?LinkId=317595) 및 [오랫동안 시작 화면 표시](https://msdn.microsoft.com/library/windows/apps/Mt187309)를 참조하세요.
+-   앱의 시작 화면을 지연시키고 필요한 경우에 아니면 앱의 시작 화면을 확장하지 않습니다. 자세한 내용은 [빠르고 유연한 앱 실행 환경 만들기](https://go.microsoft.com/fwlink/p/?LinkId=317595) 및 [오랫동안 시작 화면 표시](https://msdn.microsoft.com/library/windows/apps/Mt187309)를 참조하세요.
 -   시작 화면이 해제된 직후에 발생하는 애니메이션은 앱 시작 시간이 지연되는 인상만 주기 때문에 사용하지 않도록 설정합니다.
 
 **적응 UI 및 방향**
@@ -152,7 +152,7 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 // ...
 ```
 
-[로깅 샘플](http://go.microsoft.com/fwlink/p/?LinkId=529576)도 참조하세요.
+[로깅 샘플](https://go.microsoft.com/fwlink/p/?LinkId=529576)도 참조하세요.
 
 앱을 계측한 후에는 앱의 성능을 테스트하고 측정할 수 있습니다.
 
@@ -171,7 +171,7 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
     -   앱을 여러 번 실행하여 임의 테스트 변수를 제거하고 일관된 측정을 보장합니다.
 -   절전 사용 여부 테스트 사용자의 디바이스는 개발 컴퓨터보다 전원이 훨씬 적을 수 있습니다. Windows는 모바일 디바이스와 같은 절전 디바이스를 염두에 두고 설계되었습니다. 플랫폼에서 실행되는 앱은 이러한 디바이스에서 제대로 작동해야 합니다. 경험적으로 절전 디바이스는 데스크톱 컴퓨터보다 4배 정도 더 느릴 것으로 예상되므로 이에 따라 목표를 설정하세요.
 -   Microsoft Visual Studio 및 Windows Performance Analyzer와 같은 도구를 함께 사용하여 앱 성능을 측정합니다. Visual Studio는 소스 코드 링크와 같은 앱 중심 분석을 제공하도록 설계되었습니다. Windows Performance Analyzer는 시스템 정보 제공, 터치 조작 이벤트에 대한 정보, 디스크 I/O(입출력) 및 GPU(그래픽 처리 디바이스) 비용에 대한 정보 등 시스템 중심 분석을 제공하도록 설계되었습니다. 두 도구 모두 추적 캡처 및 내보내기를 제공하며 공유된 추적 및 사후 추적을 다시 열 수 있습니다.
--   인증을 위해 스토어에 앱을 제출 하기 전에 통합 해야 테스트 계획에 성능 관련 테스트 사례 및 [Windows 앱 인증 키트 테스트](windows-app-certification-kit-tests.md) 의 "성능 테스트" 섹션에 설명 된 대로 "성능 및 [UWP 앱 테스트](https://msdn.microsoft.com/library/windows/apps/Dn275879)사례의 안정성"섹션입니다.
+-   인증을 위해 스토어에 앱을 제출 하기 전에 통합 해야 테스트 계획에 성능 관련 테스트 사례와 [Windows 앱 인증 키트 테스트](windows-app-certification-kit-tests.md) 의 "성능 테스트" 섹션에 설명 된 대로 "성능 및 [UWP 앱 테스트](https://msdn.microsoft.com/library/windows/apps/Dn275879)사례의 안정성"섹션입니다.
 
 자세한 내용은 다음과 같은 리소스 및 프로파일링 도구를 참조하세요.
 

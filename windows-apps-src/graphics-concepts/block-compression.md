@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b7726067055b92ae51c01d4d056a2a11624204db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3f6a1277dbb2d756f0d3a4ffc1fd545f892a2096
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934352"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047212"
 ---
 # <a name="block-compression"></a>블록 압축
 
@@ -346,13 +346,13 @@ FLOAT32 f = 1.0f;
 UINT32 u;
 ```
 
-'f'을 'u' 유형으로 재해석하려면 [memcpy](http://msdn.microsoft.com/library/dswaw1wk.aspx)를 사용합니다.
+'f'을 'u' 유형으로 재해석하려면 [memcpy](https://msdn.microsoft.com/library/dswaw1wk.aspx)를 사용합니다.
 
 ```cpp
 memcpy( &u, &f, sizeof( f ) ); // 'u' becomes equal to 0x3F800000.
 ```
 
-위의 재해석에서 데이터의 기본 값은 변경되지 않습니다. [memcpy](http://msdn.microsoft.com/library/dswaw1wk.aspx)는 부동 소수점을 부호 없는 정수로 재해석합니다.
+위의 재해석에서 데이터의 기본 값은 변경되지 않습니다. [memcpy](https://msdn.microsoft.com/library/dswaw1wk.aspx)는 부동 소수점을 부호 없는 정수로 재해석합니다.
 
 더 일반적인 유형의 변환을 수행하려면 할당을 사용합니다.
 

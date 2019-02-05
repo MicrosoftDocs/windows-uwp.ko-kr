@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: e9eafde0596ad3156f52a7a2f0a1566444a9836a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b1c8271c8066304dce355cf50afd4509173eed3e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918961"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046792"
 ---
 # <a name="bluetooth-le-advertisements"></a>Bluetooth LE 광고
 
@@ -29,7 +29,7 @@ ms.locfileid: "8918961"
 -   [광고 감시자](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): 근처의 신호를 수신하고 페이로드 또는 근접성을 기준으로 필터링합니다.  
 -   [광고 게시자](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): Windows에서 개발자 대신 광고를 수행하기 위한 페이로드를 정의합니다.  
 
-전체 샘플 코드는 [Bluetooth 광고 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619990)에서 찾을 수 있습니다.
+전체 샘플 코드는 [Bluetooth 광고 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619990)에서 찾을 수 있습니다.
 
 ## <a name="basic-setup"></a>기본 설정
 

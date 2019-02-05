@@ -1,18 +1,18 @@
 ---
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
-description: Microsoft Store 분석 API를 사용 하 여 프로그래밍 방식으로 사용자 또는 사용자 조직의 등록 된 앱에 대 한 분석 데이터를 검색할 ' Windows 파트너 센터 계정입니다.
+description: Microsoft Store 분석 API를 사용 하 여 프로그래밍 방식으로 사용자 또는 사용자 조직의 등록 된 앱에 대 한 분석 데이터를 검색할 ' Windows 파트너 센터 계정.
 title: 스토어 서비스를 사용하여 분석 데이터에 액세스
 ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0f0df87f8ed5339c977dbd468f8aa2a7877f0d9e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 72e0941bb42a2a507af652758432ce51212c1042
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939143"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046406"
 ---
 # <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 
@@ -30,9 +30,9 @@ ms.locfileid: "8939143"
 
 Microsoft Store 분석 API를 호출하는 코드를 작성하기 전에 다음과 같은 필수 조건을 완료했는지 확인합니다.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않으면 추가 요금 없이 [파트너 센터에서 Azure AD를 새로 만들](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
+* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](https://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않은 경우 추가 비용 없이 [파트너 센터에서 Azure AD를 새로 만들](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
 
-* 파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하 고, 트 ID 및 클라이언트 ID를 검색 하 고, 키를 생성 해야 합니다. Azure AD 응용 프로그램은 Microsoft Store 분석 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
+* 파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하 고, ID 및 클라이언트 ID 응용 프로그램에 대 한 테 넌 트를 검색 하 고, 키를 생성 해야 합니다. Azure AD 응용 프로그램은 Microsoft Store 분석 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
     > [!NOTE]
     > 이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
 
@@ -77,7 +77,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 ### <a name="methods-for-uwp-apps"></a>UWP 앱의 메서드
 
-다음과 같은 분석 메서드는 파트너 센터에서 UWP 앱에 사용할 수 있습니다.
+다음 분석 메서드 파트너 센터에서 UWP 앱에 사용할 수 있습니다.
 
 | 시나리오       | 메서드      |
 |---------------|--------------------|
@@ -114,8 +114,8 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 | 시나리오       | 메서드      |
 |---------------|--------------------|
-| 취득 |  <ul><li>[Xbox One 게임 취득 가져오기](get-xbox-one-game-acquisitions.md)</li><li>[Xbox One 추가 기능 획득 가져오기](get-xbox-one-add-on-acquisitions.md)</li></ul> |
-| 오류 |  <ul><li>[Xbox One에 대 한 데이터를 보고 하는 오류를 게임 가져오기](get-error-reporting-data-for-your-xbox-one-game.md)</li><li>[게임에서 Xbox One 오류에 대 한 세부 정보를 가져오기](get-details-for-an-error-in-your-xbox-one-game.md)</li><li>[Xbox One에서 오류에 대 한 스택 추적을 게임 가져오기](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)</li><li>[Xbox One 게임에서 오류에 대 한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-xbox-one-game.md)</li></ul> |
+| 취득 |  <ul><li>[Xbox One 게임 취득 가져오기](get-xbox-one-game-acquisitions.md)</li><li>[Xbox One 추가 기능 취득 가져오기](get-xbox-one-add-on-acquisitions.md)</li></ul> |
+| 오류 |  <ul><li>[Xbox One 게임에 대한 오류 보고 데이터 가져오기](get-error-reporting-data-for-your-xbox-one-game.md)</li><li>[Xbox One 게임에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-xbox-one-game.md)</li><li>[Xbox One 게임에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)</li><li>[Xbox One 게임에서 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-xbox-one-game.md)</li></ul> |
 
 ### <a name="methods-for-hardware-and-drivers"></a>하드웨어 및 드라이버의 메서드
 
@@ -123,7 +123,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 ## <a name="code-example"></a>코드 예제
 
-다음 코드 예제는 Azure AD 액세스 토큰을 얻고 C# 콘솔 앱에서 Microsoft Store 분석 API를 호출하는 방법을 보여 줍니다. 이 코드 예제를 사용하려면 시나리오에 맞는 적절한 값을 *tenantId*, *clientId*, *clientSecret* 및 *appID* 변수에 할당합니다. 이 예제에서 Microsoft Store 분석 API가 반환한 JSON 데이터를 역직렬화하려면 Newtonsoft의 [Json.NET 패키지](http://www.newtonsoft.com/json)가 필요합니다.
+다음 코드 예제는 Azure AD 액세스 토큰을 얻고 C# 콘솔 앱에서 Microsoft Store 분석 API를 호출하는 방법을 보여 줍니다. 이 코드 예제를 사용하려면 시나리오에 맞는 적절한 값을 *tenantId*, *clientId*, *clientSecret* 및 *appID* 변수에 할당합니다. 이 예제에서 Microsoft Store 분석 API가 반환한 JSON 데이터를 역직렬화하려면 Newtonsoft의 [Json.NET 패키지](https://www.newtonsoft.com/json)가 필요합니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[AnalyticsApi](./code/StoreServicesExamples_Analytics/cs/Program.cs#AnalyticsApiExample)]

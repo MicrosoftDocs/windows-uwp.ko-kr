@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 ms.localizationpriority: medium
-ms.openlocfilehash: 60642016e5924c554534775a6576b61e935eaf1e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 019db8c93b61f84dde400f7be9f98bf82b1466e8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932506"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048580"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Xbox의 UWP에 HTML 게임 가져오기
 Xbox One은 HTML 5 게임에 훌륭한 플랫폼입니다. HTML 5 게임은 [Edge](https://developer.microsoft.com/microsoft-edge/) 브라우저 엔진에서 실행됩니다. Edge는 속도가 빠르며 WebGL, 캔버스 등의 HTML 5 및 CSS 3 기능을 완전히 지원합니다.
@@ -20,7 +20,7 @@ Xbox One은 HTML 5 게임에 훌륭한 플랫폼입니다. HTML 5 게임은 [Edg
 
 HTML 게임은 다른 모든 유형의 게임과 비슷한 수준에 있습니다. 개발자는 컨트롤러 입력, Kinect 등의 기본 API에 완전히 액세스할 수 있습니다.
 
-Xbox One은 유니버설 Windows 플랫폼에서 실행됩니다. 즉, 다른 Microsoft 디바이스와 마찬가지로 완전히 서버에서 제공하는 응용 프로그램인 호스트된 웹앱을 지원합니다. 자세한 내용은 [호스트된 웹앱](http://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm)을 참조하세요.
+Xbox One은 유니버설 Windows 플랫폼에서 실행됩니다. 즉, 다른 Microsoft 디바이스와 마찬가지로 완전히 서버에서 제공하는 응용 프로그램인 호스트된 웹앱을 지원합니다. 자세한 내용은 [호스트된 웹앱](https://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm)을 참조하세요.
 
 
 이 동영상은 Xbox의 패키지된 웹앱 및 호스트된 웹앱에 대한 자세한 내용과 빌드 방법을 설명합니다.

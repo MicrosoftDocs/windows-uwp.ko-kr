@@ -6,12 +6,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 81aa15892bf39209c31238878e0ca19a996d0b3e
-ms.sourcegitcommit: 322e1ae259ba0480b816a004d7a52bb0d1618b90
+ms.openlocfilehash: 1dff4e3b37be14729abdc3262d484745a0245776
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "9000278"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048050"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
 
@@ -70,7 +70,7 @@ Microsoft Store의 앱 판매에서 번 돈을 받으려면 지급액 계좌를 
 
 PayPal을 결제 방법으로 사용하는 것에 대한 일반적인 질문:
 
--   **지급을 받기 위해 내가 해야 할 PayPal 설정은 무엇인가요?** PayPal 계정이 eCheck 결제를 차단하지 않도록 해야 합니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다. 자세한 내용은 [PayPal의 계정 설정 페이지](http://go.microsoft.com/fwlink/p/?linkid=513139)를 참조하세요.
+-   **지급을 받기 위해 내가 해야 할 PayPal 설정은 무엇인가요?** PayPal 계정이 eCheck 결제를 차단하지 않도록 해야 합니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다. 자세한 내용은 [PayPal의 계정 설정 페이지](https://go.microsoft.com/fwlink/p/?linkid=513139)를 참조하세요.
 -   **내 국가/지역이 지원되나요?** 결제 방법으로 PayPal이 지원되는 곳을 알려면 [계정 유형, 위치 및 수수료](account-types-locations-and-fees.md)를 참조하세요.
 -   **내 PayPal 계정을 내 파트너 센터 계정으로 동일한 국가/지역에 등록 해야 합니까?** 아니요. PayPal 계정을 설정할 때, 기본 구간을 수락하면 됩니다. 일부 통화의 지급을 차단하지 않는 한 다른 국가/지역 과 통화 문제는 발생하지 않을 것입니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다.
 -   **PayPal 결제를 수동으로 수락해야 하나요?** 아니요. PayPal 계정은 기본적으로 사용자가 지급을 수동으로 수락하도록 설정되어 있으며, 이것은 사용자가 30일 내에 지급을 수락하지 않는 경우 반송됨을 의미합니다. PayPal의 More Settings 페이지에서 “Ask Me”를 끄면 이 설정을 변경할 수 있습니다.

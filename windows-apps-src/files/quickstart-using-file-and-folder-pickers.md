@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 04534316c3357dfecc4a94b91dcab42f8238dec6
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 09ddb212cd84b9754c35adccdf6e60ad96a4f94f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980331"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050806"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>선택기를 사용하여 파일 및 폴더 열기
 
@@ -24,7 +24,7 @@ ms.locfileid: "8980331"
 사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 및 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) 클래스를 사용하여 파일에 액세스하고 [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881) 클래스를 사용하여 폴더에 액세스할 수 있습니다.
 
 > [!NOTE]
-> 전체 샘플에 대해서는 [파일 선택기 샘플](http://go.microsoft.com/fwlink/p/?linkid=619994)을 참조하세요.
+> 전체 샘플에 대해서는 [파일 선택기 샘플](https://go.microsoft.com/fwlink/p/?linkid=619994)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 조건
 

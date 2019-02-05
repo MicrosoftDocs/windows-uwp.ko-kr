@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
-ms.openlocfilehash: c89c3ace4b85852f93bb0d5edf4c520403f39b44
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c3131207c04b421a6d8ab6aeeb16aa3107bbf21d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928009"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048853"
 ---
 # <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>패키지 데스크톱 앱을 사용할 수 있는 UWP Api
 
@@ -26,7 +26,7 @@ ms.locfileid: "8928009"
 <tr><td>백그라운드 작업</td><td>패키지 앱에서 백그라운드 작업을 등록할 수는 있지만 완전한 UWP 앱만 백그라운드 작업<i>으로</i> 실행할 수 있습니다. 자세한 내용은 <a href="https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample">GitHub의 백그라운드 작업 샘플</a>을 참조하세요.</td></tr>
 <tr><td>Bluetooth</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>채팅 및 전화 통화</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
-<tr><td>계약 활성화</td><td>완전 한 UWP 앱만 계약 하 여 활성화할 수 있습니다.</td></tr>
+<tr><td>계약 활성화</td><td>완전 한 UWP 앱만 계약에 활성화할 수 있습니다.</td></tr>
 <tr><td>암호화</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>지리적 위치</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>파일 및 폴더 선택기</td><td>패키지로 만든 앱은 파일 시스템에 대한 모든 권한을 가지며 UWP 선택기가 필요하지 않습니다.</td></tr>
@@ -1050,7 +1050,7 @@ WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [데스크톱 브
 
 **질문에 대한 답변 찾기**
 
-질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
+질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 
 **피드백 제공 또는 기능 제안**
 

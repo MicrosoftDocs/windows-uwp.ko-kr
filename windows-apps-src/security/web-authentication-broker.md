@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 8781cbffcb8d5c433c58865fba38cd65369b5c49
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 473b7ef9f4efacbbe78e1fdb5563695f8211bca8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930078"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050906"
 ---
 # <a name="web-authentication-broker"></a>웹 인증 브로커
 
@@ -21,7 +21,7 @@ ms.locfileid: "8930078"
 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱을 OpenID 또는 OAuth 인증 프로토콜을 사용하는 온라인 ID 공급자(예: Facebook, Twitter, Flickr, Instagram 등)에 연결하는 방법을 설명합니다. [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 메서드는 온라인 ID 공급자로 요청을 보내고 앱이 액세스할 수 있는 공급자 리소스에 대해 설명하는 액세스 토큰을 다시 가져옵니다.
 
 >[!NOTE]
->완전한 코드 샘플을 사용하려면 [GitHub의 WebAuthenticationBroker 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=620622)를 복제하세요.
+>완전한 코드 샘플을 사용하려면 [GitHub의 WebAuthenticationBroker 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=620622)를 복제하세요.
 
  
 
@@ -87,7 +87,7 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->[**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 외에 [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) 네임스페이스는 [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425) 메서드를 포함합니다. 이 메서드를 호출하지 마세요. 만 Windows Phone 8.1을 대상으로 하는 앱에 대 한 설계 하 고 Windows10로 시작 하는 사용 되지 않습니다.
+>[**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 외에 [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) 네임스페이스는 [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425) 메서드를 포함합니다. 이 메서드를 호출하지 마세요. Windows Phone 8.1만 대상으로 앱 용으로 고안 하 고는 windows 10부터 사용 되지 않습니다.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>SSO(Single Sign-On)로 연결
 

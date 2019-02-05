@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b360425755a7dc2249a284d9f68761ce3c783ef
-ms.sourcegitcommit: 92ce837841ae8f16d203e919dbf5c4436bee56e5
+ms.openlocfilehash: da1dc2ab7444bf65074d9c7ccc615aaee07fdcff
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "9015258"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046356"
 ---
 # <a name="audio-graphs"></a>오디오 그래프
 
@@ -32,7 +32,7 @@ ms.locfileid: "9015258"
 오디오 그래프에 오디오 효과를 추가하면 추가 시나리오도 가능해집니다. 오디오 그래프의 모든 노드는 노드를 통해 지나가는 오디오를 처리하는 0개 이상의 오디오 효과로 채울 수 있습니다. 단지 몇 줄의 코드로 오디오 노드에 연결될 수 있는 에코, 이퀄라이저, 제한, 반향 등의 몇 가지 기본 제공 효과가 있습니다. 기본 제공 효과와 정확히 동일하게 작동하는 고유한 사용자 지정 오디오 효과를 만들 수도 있습니다.
 
 > [!NOTE]
-> [AudioGraph UWP 샘플](http://go.microsoft.com/fwlink/?LinkId=619481)은 이 개요에서 설명한 코드를 구현합니다. 샘플을 다운로드하여 상황에 따른 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 사용할 수 있습니다.
+> [AudioGraph UWP 샘플](https://go.microsoft.com/fwlink/?LinkId=619481)은 이 개요에서 설명한 코드를 구현합니다. 샘플을 다운로드하여 상황에 따른 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 사용할 수 있습니다.
 
 ## <a name="choosing-windows-runtime-audiograph-or-xaudio2"></a>Windows 런타임 AudioGraph 또는 XAudio2 선택
 

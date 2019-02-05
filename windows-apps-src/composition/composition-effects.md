@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 75af433d80364485b0c12a9540c0d7bb471c4e28
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ebf54e062ef2388562cc970a2f124f0ce1f978c7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947895"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045316"
 ---
 # <a name="composition-effects"></a>컴퍼지션 효과
 
 [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) API를 사용하면 애니메이션 효과를 줄 수 있는 효과 속성을 사용하여 이미지 및 UI에 실시간 효과를 적용할 수 있습니다. 이 개요에서는 컴퍼지션 시각적 개체에 효과를 적용할 수 있는 전체 기능을 실행할 것입니다.
 
-응용 프로그램에서 효과를 설명하는 개발자를 위해 [UWP(유니버설 Windows 플랫폼)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)를 일관적으로 지원하기 위해, 컴퍼지션 효과에서는 Win2D의 IGraphicsEffect 인터페이스를 활용하여 [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 통해 효과 설명을 사용합니다.
+응용 프로그램에서 효과를 설명하는 개발자를 위해 [UWP(유니버설 Windows 플랫폼)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)를 일관적으로 지원하기 위해, 컴퍼지션 효과에서는 Win2D의 IGraphicsEffect 인터페이스를 활용하여 [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 통해 효과 설명을 사용합니다.
 
 브러시 효과는 기존 이미지에 효과를 적용하여 응용 프로그램 영역을 그리는 데 사용됩니다. Windows 10 컴퍼지션 효과 API는 스트라이프 시각적 개체에 중점을 둡니다. SpriteVisual은 색, 이미지, 효과 생성에서 상호 작용하며 유연성을 제공합니다. SpriteVisual는 브러시를 사용하여 2D 사각형을 채울 수 있는 컴퍼지션 시각적 형식입니다. 시각적 개체는 사각형의 경계를 정의하고 브러시는 사각형을 그리는 데 사용되는 픽셀을 정의합니다.
 
@@ -39,11 +39,11 @@ ms.locfileid: "8947895"
 
 | 효과               | 설명                                                                                                                                                                                                                |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2D 아핀 변형  | 2D 아핀 변형 매트릭스를 이미지에 적용합니다. 효과 [샘플](http://go.microsoft.com/fwlink/?LinkId=785341)에서 이 효과를 사용하여 알파 마스크에 애니메이션 효과를 주었습니다.       |
-| 산술 합성 | 유연한 수식을 사용하여 두 개의 이미지를 결합합니다. [샘플](http://go.microsoft.com/fwlink/?LinkId=785341)에서 산술 합성을 사용하여 크로스페이드 효과를 만들었습니다. |
-| 혼합 효과         | 두 개의 이미지를 결합하는 혼합 효과를 만듭니다. 컴퍼지션은 Win2D에서 지원되는 26개의 [혼합 모드](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.htm) 중에서 21개를 제공합니다.        |
+| 2D 아핀 변형  | 2D 아핀 변형 매트릭스를 이미지에 적용합니다. 효과 [샘플](https://go.microsoft.com/fwlink/?LinkId=785341)에서 이 효과를 사용하여 알파 마스크에 애니메이션 효과를 주었습니다.       |
+| 산술 합성 | 유연한 수식을 사용하여 두 개의 이미지를 결합합니다. [샘플](https://go.microsoft.com/fwlink/?LinkId=785341)에서 산술 합성을 사용하여 크로스페이드 효과를 만들었습니다. |
+| 혼합 효과         | 두 개의 이미지를 결합하는 혼합 효과를 만듭니다. 컴퍼지션은 Win2D에서 지원되는 26개의 [혼합 모드](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.htm) 중에서 21개를 제공합니다.        |
 | 색 소싱         | 단색을 포함하는 이미지를 생성합니다.                                                                                                                                                                               |
-| 합성            | 두 개의 이미지를 결합합니다. 컴퍼지션은 Win2D에서 지원되는 13개의 [합성 모드](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.htm)를 모두 제공합니다.                                              |
+| 합성            | 두 개의 이미지를 결합합니다. 컴퍼지션은 Win2D에서 지원되는 13개의 [합성 모드](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.htm)를 모두 제공합니다.                                              |
 | 대비             | 이미지의 대비를 늘리거나 줄입니다.                                                                                                                                                                           |
 | 노출             | 이미지의 노출을 늘리거나 줄입니다.                                                                                                                                                                           |
 | 회색조            | 이미지를 단색형 회색으로 변환합니다.                                                                                                                                                                                   |
@@ -54,7 +54,7 @@ ms.locfileid: "8947895"
 | 세피아                | 이미지를 세피아 톤으로 변환합니다.                                                                                                                                                                                          |
 | 온도 및 색조 | 이미지의 온도 및/또는 색조를 조정합니다.                                                                                                                                                                           |
 
-자세한 내용은 Win2D의 [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 참조하세요. 컴퍼지션에서 지원되지 않는 효과는 \[NoComposition\]으로 표시됩니다.
+자세한 내용은 Win2D의 [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 참조하세요. 컴퍼지션에서 지원되지 않는 효과는 \[NoComposition\]으로 표시됩니다.
 
 ### <a name="chaining-effects"></a>효과 연결
 
@@ -123,11 +123,11 @@ ScalarKeyFrameAnimation effectAnimation = _compositor.CreateScalarKeyFrameAnimat
 catEffect.Properties.StartAnimation("saturationEffect.Saturation", effectAnimation);
 ```
 
-키 프레임으로 애니메이션 효과를 준 효과 속성에 대해서는 [채도 감소 - 애니메이션 샘플](http://go.microsoft.com/fwlink/?LinkId=785342)을 참조하고, 효과 및 식 사용에 대해서는 [AlphaMask 샘플](http://go.microsoft.com/fwlink/?LinkId=785343)을 참조하세요.
+키 프레임으로 애니메이션 효과를 준 효과 속성에 대해서는 [채도 감소 - 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkId=785342)을 참조하고, 효과 및 식 사용에 대해서는 [AlphaMask 샘플](https://go.microsoft.com/fwlink/?LinkId=785343)을 참조하세요.
 
 ### <a name="multiple-effect-instances-with-independent-properties"></a>독립 속성이 있는 여러 효과 인스턴스
 
-효과를 컴파일하는 동안 매개 변수가 동적이어야 한다고 지정하면 해당 매개 변수를 효과 인스턴스에서 개별적으로 변경할 수 있습니다. 그러면 두 시각적 개체가 동일한 효과를 사용하지만 다른 효과 속성으로 렌더링됩니다. 자세한 내용은 색 소싱 및 혼합 [샘플](http://go.microsoft.com/fwlink/?LinkId=785344)을 참조하세요.
+효과를 컴파일하는 동안 매개 변수가 동적이어야 한다고 지정하면 해당 매개 변수를 효과 인스턴스에서 개별적으로 변경할 수 있습니다. 그러면 두 시각적 개체가 동일한 효과를 사용하지만 다른 효과 속성으로 렌더링됩니다. 자세한 내용은 색 소싱 및 혼합 [샘플](https://go.microsoft.com/fwlink/?LinkId=785344)을 참조하세요.
 
 ## <a name="getting-started-with-composition-effects"></a>컴퍼지션 효과 시작하기
 
@@ -168,7 +168,7 @@ Win2D는 Nuget.org 패키지로 출시되며 Win2D가 설치되어야 효과를 
 ![원본 이미지](images/composition-cat-source.png)
 ### <a name="setting-your-composition-basics"></a>컴퍼지션 기본 사항 설정
 
-루트 ContainerVisual, Windows.UI.Composition 작성자를 설정하여 핵심 창에 연결하는 방법의 예를 보려면 GitHub의 [컴퍼지션 시각적 트리 샘플](http://go.microsoft.com/fwlink/?LinkId=785345)을 참조하세요.
+루트 ContainerVisual, Windows.UI.Composition 작성자를 설정하여 핵심 창에 연결하는 방법의 예를 보려면 GitHub의 [컴퍼지션 시각적 트리 샘플](https://go.microsoft.com/fwlink/?LinkId=785345)을 참조하세요.
 
 ```cs
 _compositor = new Compositor();

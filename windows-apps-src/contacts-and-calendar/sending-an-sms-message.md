@@ -6,18 +6,18 @@ keywords: 연락처, SMS, 보내기
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 427eb1b895269727d82e42d5abc3ae1f1da1a35d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: abc9ca7d6c3d6e7120cfc5ede4f10a4dfd5a7c1f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944994"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050696"
 ---
 # <a name="send-an-sms-message"></a>SMS 메시지 보내기
 
 이 항목에서는 사용자가 SMS 메시지를 보낼 수 있도록 SMS 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 SMS 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다.
 
-이 코드를 호출 하려면 패키지 매니페스트에서 **채팅**, **smsSend**및 **chatSystem** 기능을 선언 합니다. [제한 된 기능](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) 이지만 앱에서 사용할 수 있습니다. 스토어에 앱을 게시 하려는 경우에 승인을 해야 합니다. [계정 유형, 위치 및 수수료를](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees)참조 하세요.
+이 코드를 호출 하려면 패키지 매니페스트에서 **채팅**, **smsSend**및 **chatSystem** 기능을 선언 합니다. [제한 된 접근 권한 값](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) 이지만 앱에서 사용할 수 있습니다. 스토어에 앱을 게시 하려는 경우에 승인을 해야 합니다. [계정 유형, 위치 및 수수료를](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees)참조 하세요.
 
 ## <a name="launch-the-compose-sms-dialog"></a>SMS 작성 대화 상자 시작
 
@@ -63,7 +63,7 @@ if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Applicatio
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-이 항목에서는 SMS 작성 대화 상자를 시작하는 방법을 살펴보았습니다. SMS 메시지의 수신자로 사용할 연락처를 선택하는 방법에 대한 자세한 내용은 [연락처 선택](selecting-contacts.md)을 참조하세요. 백그라운드 작업을 사용하여 SMS 메시지를 보내고 받는 방법에 대한 더 많은 예제를 보려면 GitHub에서 [유니버설 Windows 앱 샘플](http://go.microsoft.com/fwlink/p/?linkid=619979)을 다운로드합니다.
+이 항목에서는 SMS 작성 대화 상자를 시작하는 방법을 살펴보았습니다. SMS 메시지의 수신자로 사용할 연락처를 선택하는 방법에 대한 자세한 내용은 [연락처 선택](selecting-contacts.md)을 참조하세요. 백그라운드 작업을 사용하여 SMS 메시지를 보내고 받는 방법에 대한 더 많은 예제를 보려면 GitHub에서 [유니버설 Windows 앱 샘플](https://go.microsoft.com/fwlink/p/?linkid=619979)을 다운로드합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 위치, 지도, 지리적 위치
 ms.localizationpriority: medium
-ms.openlocfilehash: e5150188c99bfc448bf85df6a6dabbbb4c60bd49
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d7004f579bb8bb60b1f9585e49319e278770700a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921106"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048160"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>위치 인식 앱에 대한 지침
 
@@ -75,7 +75,7 @@ ms.locfileid: "8921106"
 
         위치 데이터를 제공하는 장치는 서로 다른 앱에서 요청하는 보고서 간격을 추적하고, 최소 요청 간격으로 데이터 보고서를 제공합니다. 그러면 정확성에 대한 요구가 가장 큰 앱이 필요한 데이터를 받을 수 있습니다. 따라서 다른 앱이 업데이트를 더 자주 요청한 경우, 위치 제공자가 앱에서 요청한 것보다 더 높은 빈도로 업데이트를 생성할 수 있습니다.
 
-        **참고**위치 소스가 지정 된 보고서 간격에 대 한 요청을 처리할는 보장 되지 않습니다. 모든 위치 제공자 장치가 보고서 간격을 추적하는 것은 아니지만, 추적하는 장치를 위해 여전히 정보를 제공해야 합니다.
+        **참고**지정 된 보고서 간격에 대 한 요청 위치 소스가 됩니다 지킬 것인지는 보장 되지 않습니다. 모든 위치 제공자 장치가 보고서 간격을 추적하는 것은 아니지만, 추적하는 장치를 위해 여전히 정보를 제공해야 합니다.
 
     -   전기를 절약하려면 앱에 매우 정확한 데이터가 필요한지 여부를 위치 플랫폼에 알리기 위해 [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) 속성을 설정해야 합니다. 매우 정확한 데이터를 요구하는 앱이 없으면 GPS 공급자를 켜지 않음으로써 시스템에서 전기를 절약할 수 있습니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "8921106"
         예를 들면 다음과 같습니다.
 
         -   앱이 광고 튜닝, 날씨, 뉴스 등에 대한 위치를 얻고 있는 경우 일반적으로 5000미터 정확성이면 충분합니다.
-        -   앱 지역에서 거래 근처에 있는 표시 하는 경우 300 미터 정확성이 일반적으로 좋은 결과를 제공 합니다.
+        -   앱의 환경에서 거래 근처에 있는 표시 하는 경우 300 미터 정확성이 일반적으로 좋은 결과를 제공 합니다.
         -   사용자가 인근 음식점에 대한 추천을 찾고 있는 경우 블록 내에서 위치를 얻으려고 하므로 100미터 정확성이 충분합니다.
         -   사용자가 자신의 위치를 공유하려고 하는 경우 앱은 약 10미터 정확성을 요청해야 합니다.
     -   앱에 특정 정확성 요구 사항이 있는 경우 [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) 속성을 사용하세요. 예를 들어 내비게이션 앱은 사용 가능한 위치 데이터가 앱의 요구 사항을 충족하는지 확인하기 위해 **Geocoordinate.accuracy** 속성을 사용해야 합니다.
@@ -165,7 +165,7 @@ ms.locfileid: "8921106"
 * [현재 위치 가져오기](https://msdn.microsoft.com/library/windows/apps/mt219698)
 * [2D, 3D 및 Streetside 뷰가 있는 지도 표시](https://msdn.microsoft.com/library/windows/apps/mt219695)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
-* [UWP 위치 샘플(지리적 위치)](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [UWP 위치 샘플(지리적 위치)](https://go.microsoft.com/fwlink/p/?linkid=533278)
  
 
  

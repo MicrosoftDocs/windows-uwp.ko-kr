@@ -6,12 +6,12 @@ ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8555f9594ac3d2e7ea1b9f7006750c1084db3d9f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3f70d768ad6589e210826f94f73249ed1ea272e1
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944100"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045612"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Windows10 UWP(유니버설 Windows 플랫폼) 앱 수명 주기
 
@@ -64,7 +64,7 @@ Windows10 버전 1607에서는 **Running in foreground** 및 **Running in backgr
 
 앱이 실행되면 Windows에서 앱 시작 화면을 표시합니다. 시작 화면을 구성하려면 [시작 화면 추가](https://msdn.microsoft.com/library/windows/apps/xaml/hh465331)를 참조하세요.
 
-시작 화면이 표시되는 동안 앱이 이벤트 처리기를 등록하고 초기 페이지에 필요한 사용자 지정 UI를 설정해야 합니다. **OnLaunched()** 및 응용 프로그램의 생성자에서 실행 중인 이러한 작업이 몇 초 내에 완료되도록 합니다. 완료되지 않으면 시스템에서 앱이 응답하지 않는다고 생각하고 종료할 수도 있습니다. 앱이 네트워크에서 데이터를 요청해야 하거나 디스크에서 대량의 데이터를 검색해야 하는 경우 이러한 작업이 실행 외의 기간에 완료되어야 합니다. 앱은 오래 실행되는 작업이 완료될 때까지 고유한 사용자 지정 로드 UI나 확장된 시작 화면을 사용할 수 있습니다. 자세한 내용은 [시작 화면을 더 오래 표시](create-a-customized-splash-screen.md) 및 [시작 화면 샘플](http://go.microsoft.com/fwlink/p/?linkid=234889)을 참조하세요.
+시작 화면이 표시되는 동안 앱이 이벤트 처리기를 등록하고 초기 페이지에 필요한 사용자 지정 UI를 설정해야 합니다. **OnLaunched()** 및 응용 프로그램의 생성자에서 실행 중인 이러한 작업이 몇 초 내에 완료되도록 합니다. 완료되지 않으면 시스템에서 앱이 응답하지 않는다고 생각하고 종료할 수도 있습니다. 앱이 네트워크에서 데이터를 요청해야 하거나 디스크에서 대량의 데이터를 검색해야 하는 경우 이러한 작업이 실행 외의 기간에 완료되어야 합니다. 앱은 오래 실행되는 작업이 완료될 때까지 고유한 사용자 지정 로드 UI나 확장된 시작 화면을 사용할 수 있습니다. 자세한 내용은 [시작 화면을 더 오래 표시](create-a-customized-splash-screen.md) 및 [시작 화면 샘플](https://go.microsoft.com/fwlink/p/?linkid=234889)을 참조하세요.
 
 앱 실행이 완료되면 **Running** 상태가 되고 시작 화면이 사라지며 모든 시작 화면 리소스와 개체가 지워집니다.
 
@@ -129,7 +129,7 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 ### <a name="asynchronous-work-and-deferrals"></a>비동기 작업 및 지연
 
-처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](http://aka.ms/Ag2yh4) 개체의 [**GetDeferral**](http://aka.ms/Kt66iv) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) 개체에서 [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
+처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) 개체의 [**GetDeferral**](https://aka.ms/Kt66iv) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) 개체에서 [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
 
 지연을 사용해도 앱이 종료되기 전에 코드를 실행할 수 있는 시간이 증가하지는 않습니다. 단지 지연의 *Complete* 메서드 호출이나 기한 경과 중 *더 빠른 시간*까지 종료가 지연됩니다.
 
@@ -181,9 +181,9 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 일반적으로 사용자는 앱을 닫을 필요가 없으며 Windows에서 관리합니다. 그러나 사용자는 닫기 제스처를 사용하거나 Alt+F4를 누르거나 Windows Phone에서 작업 전환기를 사용하여 앱을 닫도록 선택할 수 있습니다.
 
-사용자가 앱을 닫았음을 나타내는 이벤트는 없습니다. 사용자가 앱을 닫으면 먼저 일시 중단되어 상태를 저장할 수 있는 기회를 제공합니다. Windows8.1 이상, 사용자가 앱이 닫힌 후 앱 화면에서 제거 되 고 않고 전환 목록 확실히 종료 되지.
+사용자가 앱을 닫았음을 나타내는 이벤트는 없습니다. 사용자가 앱을 닫으면 먼저 일시 중단되어 상태를 저장할 수 있는 기회를 제공합니다. Windows 8.1 이상, 사용자가 앱이 닫힌 후 앱 화면에서 제거 되 고 않고 전환 목록 확실히 종료 되지.
 
-**사용자가 종료 동작:** 앱을 Windows에서 닫을 때 보다 사용자가 닫을 때와 다른 작업을 수행 해야 하는 경우 Windows 또는 사용자가 앱을 종료 여부를 확인할 활성화 이벤트 처리기를 사용할 수 있습니다. [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 열거형에 대한 참조에서 **ClosedByUser** 및 **Terminated** 상태에 대한 설명을 참조하세요.
+**사용자가 종료 동작:** 앱을 Windows에서 닫을 때 보다 사용자가 닫을 때와 다른 작업을 수행 하는 경우 Windows 또는 사용자가 앱을 종료 했는지 여부를 결정 하 활성화 이벤트 처리기를 사용할 수 있습니다. [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 열거형에 대한 참조에서 **ClosedByUser** 및 **Terminated** 상태에 대한 설명을 참조하세요.
 
 반드시 필요한 경우가 아니면 앱이 자동으로 닫히지 않도록 하는 것이 좋습니다. 예를 들어 앱이 메모리 누수를 발견한 경우 사용자의 개인 데이터 보안을 위해 스스로 닫을 수 있습니다.
 
@@ -191,7 +191,7 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 시스템 크래시 환경은 사용자가 가능한 한 빨리 수행하던 작업으로 되돌아가도록 디자인되었습니다. 경고 대화 상자나 다른 알림은 사용자를 지체하게 하므로 제공하지 않아야 합니다.
 
-앱이 중지되거나, 응답하지 않거나, 예외를 생성하는 경우 사용자의 [피드백 및 진단 설정](http://go.microsoft.com/fwlink/p/?LinkID=614828)별로 Microsoft에 문제 보고서가 전송됩니다. Microsoft는 문제 보고서의 오류 데이터 중 일부를 앱을 개선하는 데 사용할 수 있도록 귀하에게 제공합니다. 이 데이터는 대시보드의 앱 품질 페이지에서 볼 수 있습니다.
+앱이 중지되거나, 응답하지 않거나, 예외를 생성하는 경우 사용자의 [피드백 및 진단 설정](https://go.microsoft.com/fwlink/p/?LinkID=614828)별로 Microsoft에 문제 보고서가 전송됩니다. Microsoft는 문제 보고서의 오류 데이터 중 일부를 앱을 개선하는 데 사용할 수 있도록 귀하에게 제공합니다. 이 데이터는 대시보드의 앱 품질 페이지에서 볼 수 있습니다.
 
 앱이 중지된 후 사용자가 앱을 활성화하면 앱의 활성화 이벤트 처리기는 **NotRunning**의 [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 값을 수신하고 앱의 초기 UI 및 데이터를 표시해야 합니다. 충돌 후에는 데이터가 손상되었을 수 있으므로 **Suspended**에서 **Resuming**에 대해 평소처럼 앱 데이터를 사용하지 마세요. [앱 일시 중단 및 다시 시작에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465088)을 참조하세요.
 

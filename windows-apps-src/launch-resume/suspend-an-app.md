@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: e765faeabc754581efc769804e2daf4bfe7f9671
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e440812861cf853810f9fee597c807b439dda426
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941334"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044148"
 ---
 # <a name="handle-app-suspend"></a>앱 일시 중단 처리
 
@@ -137,12 +137,12 @@ void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
 
 시스템은 앱 종료 시 앱에 알리지 않으므로, 앱은 일시 중단될 때 응용 프로그램 데이터를 저장하고 단독 리소스와 파일 핸들을 해제하며 앱이 종료 후 활성화될 때 이 리소스와 파일 핸들을 복원해야 합니다.
 
-처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](http://aka.ms/Ag2yh4) 개체의 [**GetDeferral**](http://aka.ms/Kt66iv) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) 개체에서 [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
+처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) 개체의 [**GetDeferral**](https://aka.ms/Kt66iv) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) 개체에서 [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
 
 지연을 사용해도 앱이 종료되기 전에 코드를 실행할 수 있는 시간이 증가하지는 않습니다. 단지 지연의 *Complete* 메서드 호출이나 기한 경과 중 *더 빠른 시간*까지 종료가 지연됩니다. 일시 중단 상태 사용 [ **ExtendedExecutionSession** 시간을 확장 하려면](run-minimized-with-extended-execution.md)
 
 > [!NOTE]
-> Windows8.1에서 시스템 응답을 향상 하려면 앱에 제공 됩니다 낮은 우선 순위 액세스 리소스 일시 중단 됩니다. 이 새 우선 순위를 지원하기 위해 일시 중단 작업 제한 시간이 확장되어 앱에 Windows의 일반 우선 순위에 대한 5초 제한 시간이나 Windows Phone의 1-10초 제한 시간에 해당하는 제한 시간이 부여됩니다. 이 제한 시간은 확장하거나 변경할 수 없습니다.
+> Windows 8.1에서 시스템 응답을 향상 하려면 앱에 제공 됩니다 낮은 우선 순위 액세스 리소스는 일시 중단 시 합니다. 이 새 우선 순위를 지원하기 위해 일시 중단 작업 제한 시간이 확장되어 앱에 Windows의 일반 우선 순위에 대한 5초 제한 시간이나 Windows Phone의 1-10초 제한 시간에 해당하는 제한 시간이 부여됩니다. 이 제한 시간은 확장하거나 변경할 수 없습니다.
 
 **Visual Studio를 사용하는 디버깅에 대한 참고 사항:** Visual Studio에서는 Windows가 디버거에 연결되어 있는 앱을 일시 중단하지 못하도록 합니다. 이렇게 하는 것은 앱이 실행되는 동안 Visual Studio 디버그 UI를 사용자가 볼 수 있도록 하기 위한 것입니다. 앱을 디버그할 때에는 Visual Studio를 사용하여 앱을 일시 중단 이벤트로 보낼 수 있습니다. **디버그 위치** 도구 모음이 표시되는지 확인한 다음 **일시 중단** 아이콘을 클릭합니다.
 

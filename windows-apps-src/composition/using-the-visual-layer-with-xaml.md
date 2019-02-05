@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ae9bc0f6d53181a88b02ecda19b3aed745febe40
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 66b61b9db88392c7ca7370f06fb2150deba7c8c3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921710"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047538"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>시각적 계층을 XAML과 함께 사용
 
@@ -283,7 +283,7 @@ void MainPage::InitializeDropShadow(Windows::UI::Xaml::UIElement^ shadowHost, Wi
 
 ### <a name="frosted-glass"></a>불투명한 유리
 
-백그라운드 콘텐츠에 색조를 부여하고 흐리게 하는 효과를 만듭니다. 효과를 사용하려면 개발자는 Win2D NuGet 패키지를 설치해야 합니다. 설치 지침은 [Win2D 홈페이지](http://microsoft.github.io/Win2D/html/Introduction.htm)를 참조하세요.
+백그라운드 콘텐츠에 색조를 부여하고 흐리게 하는 효과를 만듭니다. 효과를 사용하려면 개발자는 Win2D NuGet 패키지를 설치해야 합니다. 설치 지침은 [Win2D 홈페이지](https://microsoft.github.io/Win2D/html/Introduction.htm)를 참조하세요.
 
 #### <a name="implementation-overview"></a>구현 개요
 

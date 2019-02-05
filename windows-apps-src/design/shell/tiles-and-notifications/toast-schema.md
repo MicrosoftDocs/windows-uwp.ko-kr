@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 79b1889167f3c13aea78c31ec189cfeb7a6f17bc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bf89810f67e16bcfabfc80de48d2dee82c9e0f92
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925688"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048926"
 ---
 # <a name="toast-content-schema"></a>알림 콘텐츠 스키마
 
@@ -479,5 +479,5 @@ Creators Update의 새로운 기능: 알림 센터 내에 여러 알림을 함�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [빠른 시작: 로컬 알림 보내기 및 활성화 처리](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10.aspx)
+* [빠른 시작: 로컬 알림 보내기 및 활성화 처리](https://blogs.msdn.com/b/tiles_and_toasts/archive/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10.aspx)
 * [GitHub의 알림 라이브러리](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)

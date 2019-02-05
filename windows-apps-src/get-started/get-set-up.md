@@ -1,23 +1,23 @@
 ---
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: 설정 방법
-description: 생각보다 쉽게 설정할 수 있습니다. 다음이 지침에 따라 및 Windows10에 대 한 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 시작 합니다.
+description: 생각보다 쉽게 설정할 수 있습니다. 다음이 지침에 따라 하 고 windows 10 용 유니버설 Windows 플랫폼 (UWP) 앱을 만들기 시작 합니다.
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3d14467856aee733f2e11d057db0deb873269ff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a92b8d0f921bc747108b802d285b783e7f2bcaa8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920637"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047940"
 ---
 # <a name="get-set-up"></a>설정 방법
 
 ![Visual Studio 사용 준비](images/VisualStudio2017Hero_ImageXL-LG.png)
 
-생각보다 쉽게 시작할 수 있습니다. 다음이 지침에 따라 및 Windows10에 대 한 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 시작 합니다.
+생각보다 쉽게 시작할 수 있습니다. 다음이 지침에 따라 하 고 windows 10 용 유니버설 Windows 플랫폼 (UWP) 앱을 만들기 시작 합니다.
 
 ## <a name="1-download-or-update-visual-studio"></a>1. Visual Studio 다운로드 또는 업데이트
 
@@ -64,7 +64,7 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 
 ## <a name="want-more-tools-and-downloads"></a>더 많은 도구와 다운로드가 필요한 경우
 
-도구 및 다운로드의 전체 목록을 보려면 [다운로드](http://go.microsoft.com/fwlink/p/?linkid=285935)를 참조하세요.
+도구 및 다운로드의 전체 목록을 보려면 [다운로드](https://go.microsoft.com/fwlink/p/?linkid=285935)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

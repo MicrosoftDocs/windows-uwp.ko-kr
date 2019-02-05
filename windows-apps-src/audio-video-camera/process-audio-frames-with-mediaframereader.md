@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f85570d5c66db1641ec6352526d4db6213e199b4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e7082c3e572493656e8b109da35861ec820d4ec9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944898"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050836"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 오디오 프레임 처리
 
@@ -21,7 +21,7 @@ ms.locfileid: "8944898"
 > 이 문서에 설명된 기능은 Windows 10 버전 1803부터 사용할 수 있습니다.
 
 > [!NOTE] 
-> 유니버설 Windows 앱 샘플에서는 **MediaFrameReader**를 사용하여 색, 깊이, 적외선 카메라 등 다른 프레임 원본의 프레임을 표시하는 방법을 보여 줍니다. 자세한 내용은 [카메라 프레임 샘플](http://go.microsoft.com/fwlink/?LinkId=823230)을 참조하세요.
+> 유니버설 Windows 앱 샘플에서는 **MediaFrameReader**를 사용하여 색, 깊이, 적외선 카메라 등 다른 프레임 원본의 프레임을 표시하는 방법을 보여 줍니다. 자세한 내용은 [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)을 참조하세요.
 
 ## <a name="setting-up-your-project"></a>프로젝트 설정
 오디오 프레임을 획득하는 프로세스는 다른 유형의 미디어 프레임을 획득하는 것과 대체로 동일합니다. **MediaCapture**를 사용하는 앱의 경우 카메라 장치에 액세스하기 전에 앱에서 *웹캠* 기능을 사용하도록 선언해야 합니다. 앱이 오디오 장치에서 캡처하는 경우 *마이크* 장치 기능도 선언해야 합니다. 
@@ -79,7 +79,7 @@ ms.locfileid: "8944898"
 * [MediaFrameReader를 사용하여 미디어 프레임 처리](process-media-frames-with-mediaframereader.md)
 * [카메라](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [카메라 프레임 샘플](http://go.microsoft.com/fwlink/?LinkId=823230)
+* [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)
 * [오디오 그래프](audio-graphs.md)
  
 

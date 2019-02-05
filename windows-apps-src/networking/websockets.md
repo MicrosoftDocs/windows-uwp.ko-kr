@@ -6,17 +6,17 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows 10, uwp, 네트워킹, websocket, messagewebsocket, streamwebsocket
 ms.localizationpriority: medium
-ms.openlocfilehash: 05f56f07aed0c9f97daffe3842952ce142f8159a
-ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
+ms.openlocfilehash: 8af1f478bc466719eef3c5e19d055ac6073a0b11
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035414"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045409"
 ---
 # <a name="websockets"></a>WebSockets
 WebSockets는 HTTP(S)를 사용하고 UTF-8 및 이진 메시지를 둘 다 지원하여 웹을 통해 클라이언트와 서버 간의 신속하고 보안이 유지된 양방향 통신을 위한 메커니즘을 제공합니다.
 
-[WebSocket 프로토콜](http://tools.ietf.org/html/rfc6455)에서는 데이터가 전이중 단일 소켓 연결을 통해 즉시 전송되므로 두 끝점에서 실시간으로 메시지를 보내고 받을 수 있습니다. WebSockets는 멀티 플레이어 게임(실시간 및 턴 기반 모두), 즉각적인 소셜 네트워크 알림, 주식 또는 날씨 정보의 최신 표시, 보안 및 고속 데이터 전송이 필요한 기타 앱에 적합합니다.
+[WebSocket 프로토콜](https://tools.ietf.org/html/rfc6455)에서는 데이터가 전이중 단일 소켓 연결을 통해 즉시 전송되므로 두 끝점에서 실시간으로 메시지를 보내고 받을 수 있습니다. WebSockets는 멀티 플레이어 게임(실시간 및 턴 기반 모두), 즉각적인 소셜 네트워크 알림, 주식 또는 날씨 정보의 최신 표시, 보안 및 고속 데이터 전송이 필요한 기타 앱에 적합합니다.
 
 WebSocket 연결을 설정하려면 특정 HTTP 기반 핸드셰이크가 클라이언트와 서버 간에 교환됩니다. 성공하면 응용 프로그램 계층 프로토콜은 이전에 설정한 TCP 연결을 사용하여 HTTP에서 WebSockets로 "업그레이드"됩니다. 이렇게 되면 HTTP는 완전히 제외됩니다. 데이터는 WebSocket 연결을 종료할 때까지 양 끝점에 의해 WebSocket 프로토콜을 사용하여 송수신될 수 있습니다.
 
@@ -834,8 +834,8 @@ protected:
 * [Windows.Networking.Sockets](/uwp/api/Windows.Networking.Sockets)
 
 ## <a name="related-topics"></a>관련 항목
-* [WebSocket 프로토콜](http://tools.ietf.org/html/rfc6455)
+* [WebSocket 프로토콜](https://tools.ietf.org/html/rfc6455)
 * [소켓](sockets.md)
 
 ## <a name="samples"></a>샘플
-* [WebSocket 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620623)
+* [WebSocket 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620623)

@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 714da78a8860eec92bce9389185f52a58e45b44e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f49d70ceadad8309419846aa26cb9f97df1c82ff
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947126"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047438"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>자동 실행을 사용한 자동 시작
 
 **자동 실행**을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 장치나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 장치가 포함됩니다. 또한 **자동 실행**을 사용하면 사용자가 근접 연결(탭하기)을 사용하여 두 PC 간에 파일을 공유할 때 앱을 옵션으로 제공할 수 있습니다.
 
-> **참고**장치 제조업체 이며 [Microsoft Store 장치 앱](http://go.microsoft.com/fwlink/p/?LinkID=301381) 을 장치에 대 한 **자동 실행** 처리기로 연결 하려는 경우 장치 메타 데이터에서 앱을 식별할 수 있습니다. 자세한 내용은 [Microsoft Store 장치 앱의 자동 실행](http://go.microsoft.com/fwlink/p/?LinkId=306684)을 참조하세요.
+> **참고**장치 제조업체 이며 [Microsoft Store 장치 앱](https://go.microsoft.com/fwlink/p/?LinkID=301381) 을 장치에 대 한 **자동 실행** 처리기로 연결 하려는 경우 장치 메타 데이터에서 앱을 식별할 수 있습니다. 자세한 내용은 [Microsoft Store 장치 앱의 자동 실행](https://go.microsoft.com/fwlink/p/?LinkId=306684)을 참조하세요.
 
 ## <a name="register-for-autoplay-content"></a>자동 실행 콘텐츠 등록
 
@@ -227,7 +227,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 여기에서는 카메라가 PC에 연결될 때 앱을 **자동 실행** 옵션으로 식별하는 방법을 보여 줍니다. 앱은 **WPD\\ImageSourceAutoPlay** 이벤트에 대한 처리기로 등록됩니다. 이는 카메라 및 기타 이미징 장치가 MTP를 사용하는 ImageSource임을 알릴 경우 WPD(Windows 휴대용 장치)에서 발생하는 일반적인 이벤트입니다. 자세한 내용은 [Windows 휴대용 장치](https://msdn.microsoft.com/library/windows/hardware/ff597729)를 참조하세요.
 
-**중요 한** [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) Api는 [데스크톱 장치 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)입니다. 앱은 Pc와 같은 데스크톱 디바이스 패밀리의 Windows10 장치 에서만 이러한 Api를 사용할 수 있습니다.
+**중요 한** [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) Api는 [데스크톱 장치 제품군](https://msdn.microsoft.com/library/windows/apps/dn894631)의 일부입니다. 앱은 Pc와 같은 데스크톱 디바이스 패밀리의 windows 10 장치 에서만 이러한 Api를 사용할 수 있습니다.
 
  
 
@@ -407,7 +407,7 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 
 1.  F5 키를 눌러 앱을 빌드하고 배포합니다(디버그 모드).
 2.  앱을 실행하려면 컴퓨터에 카메라를 연결합니다. 그런 다음 옵션의 자동 실행 목록에서 앱을 선택합니다.
-    **참고** **WPD\\ImageSource** 자동 실행 장치 이벤트에 대 한 일부 카메라에서는 보급 합니다.
+    **참고** **WPD\\ImageSource** 자동 실행 장치 이벤트에 대 한 일부 카메라에서는 알립니다.
 
 ## <a name="configure-removable-storage"></a>이동식 저장소 구성
 

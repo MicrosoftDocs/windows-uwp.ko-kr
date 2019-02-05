@@ -8,12 +8,12 @@ keywords: 음성 명령, 음성, 음성 인식, 자연어, 받아쓰기, 입력,
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 839dc024204ec9b76ffe621a35cbbbaffc248d02
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0865b229faad646901ab76f46982e738b2830035
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939649"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046646"
 ---
 # <a name="continuous-dictation"></a>연속 받아쓰기
 
@@ -269,7 +269,7 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 * [음성 조작](speech-interactions.md)
 
 **샘플**
-* [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

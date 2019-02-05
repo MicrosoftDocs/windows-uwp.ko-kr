@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 027ad255feaffa25450b1c490d1697410e91f431
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 5689fd967756025872fd45bf242076e854e700aa
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037185"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048100"
 ---
 # <a name="semantic-zoom"></a>시맨틱 줌
 
@@ -98,7 +98,7 @@ ms.locfileid: "9037185"
 </SemanticZoom>
  ```
  
-다음 예는 [XAML UI 기본 사항 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619992)의 SemanticZoom 페이지에서 가져온 것입니다. 샘플을 다운로드하여 데이터 원본을 비롯한 전체 코드를 볼 수 있습니다. 이 시맨틱 줌은 GridView를 사용하여 확대 보기를 제공하고 ListView를 사용하여 축소 보기를 제공합니다.
+다음 예는 [XAML UI 기본 사항 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619992)의 SemanticZoom 페이지에서 가져온 것입니다. 샘플을 다운로드하여 데이터 원본을 비롯한 전체 코드를 볼 수 있습니다. 이 시맨틱 줌은 GridView를 사용하여 확대 보기를 제공하고 ListView를 사용하여 축소 보기를 제공합니다.
   
 **확대 보기 정의**
 

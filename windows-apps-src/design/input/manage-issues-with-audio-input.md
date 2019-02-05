@@ -8,12 +8,12 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c33e2890ce962f1321ef40ca0e0605e0f4e1f5f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5d2c80fd30d158f0890ed70311cdf83dce2058e5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944397"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046626"
 ---
 # <a name="manage-issues-with-audio-input"></a>오디오 입력 관련 문제 관리
 
@@ -108,7 +108,7 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 * [음성 조작](speech-interactions.md)
 
 **샘플**
-* [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

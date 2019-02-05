@@ -8,12 +8,12 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e2dc5186c028aa8f20c2cc1d697f1749b4f1765
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bdc7e5de3be941f2622c04d515e5e1211247b9a2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930684"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047245"
 ---
 # <a name="guidelines-for-globalization"></a>세계화 지침
 
@@ -29,7 +29,7 @@ ms.locfileid: "8930684"
 | 국제 용지 크기를 지원합니다. | 가장 일반적인 용지 크기는 국가마다 다르므로, 인쇄와 같이 용지 크기에 따라 달라지는 기능이 포함되어 있는 경우 일반적인 국가별 크기를 지원하는지 테스트하여 확인해야 합니다. |
 | 키보드 또는 IME의 언어를 기록합니다. | 앱에서 사용자에게 텍스트 입력을 묻는 경우 현재 활성화된 키보드 레이아웃 또는 IME(입력기)의 언어 태그를 기록합니다. 그러면 나중에 입력 내용을 사용자에게 표시할 때 적절한 서식으로 표시됩니다. [**Language.CurrentInputMethodLanguageTag**](/uwp/api/windows.globalization.language.CurrentInputMethodLanguageTag) 속성을 사용하여 현재 입력 언어를 가져옵니다. |
 | 언어로 사용자의 지역을 가정하거나 지역으로 사용자의 언어를 가정하지 마세요. | 언어 및 지역은 서로 다른 개념입니다. 사용자가 특정 지역의 변형된 언어(예: 영어[영국] en-GB)로 말하지만, 완전히 다른 국가 또는 지역에 있을 수 있습니다. 앱에 사용자의 언어(예: UI 텍스트용) 또는 지역(예: 라이선스 발급용) 정보가 필요한지 여부를 고려하세요. 자세한 내용은 [사용자 프로필 언어와 앱 매니페스트 언어 이해](manage-language-and-region.md)를 참조하세요. |
-| 언어 태그를 비교하는 규칙은 간단하지 않습니다. | [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)는 복잡합니다. 언어 태그를 비교할 경우 많은 문제(예: 스크립트 정보, 레거시 태그 및 여러 지역별 변형의 일치 문제)가 있습니다. Windows의 리소스 관리 시스템에서 일치 작업을 자동으로 처리합니다. 리소스 집합을 원하는 언어로 지정할 수 있습니다. 그러면 시스템에서 사용자와 앱에 적절한 언어를 자동으로 선택합니다. [앱 리소스 및 리소스 관리 시스템](../../app-resources/index.md) 및 [리소스 관리 시스템과 언어 태그를 일치하는 방법](../../app-resources/how-rms-matches-lang-tags.md)을 참조하세요. |
+| 언어 태그를 비교하는 규칙은 간단하지 않습니다. | [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)는 복잡합니다. 언어 태그를 비교할 경우 많은 문제(예: 스크립트 정보, 레거시 태그 및 여러 지역별 변형의 일치 문제)가 있습니다. Windows의 리소스 관리 시스템에서 일치 작업을 자동으로 처리합니다. 리소스 집합을 원하는 언어로 지정할 수 있습니다. 그러면 시스템에서 사용자와 앱에 적절한 언어를 자동으로 선택합니다. [앱 리소스 및 리소스 관리 시스템](../../app-resources/index.md) 및 [리소스 관리 시스템과 언어 태그를 일치하는 방법](../../app-resources/how-rms-matches-lang-tags.md)을 참조하세요. |
 | 레이블 및 텍스트 입력 컨트롤에 다른 텍스트 길이 및 글꼴 크기를 사용할 수 있도록 UI를 디자인합니다. | 다른 언어로 번역된 문자열은 길이가 상당히 다를 수 있으므로 UI 컨트롤을 콘텐츠에 맞게 동적으로 크기를 조정해야 합니다. 다른 언어의 공통 문자에는 영어에 일반적으로 사용되는 위 또는 아래 표시가 포함될 수 있습니다(예: Å 또는 Ņ). 표준 글꼴 크기와 선 높이를 사용하여 충분한 세로 공간을 제공합니다. 다른 언어의 글꼴은 가독성 유지를 위해 최소 글꼴 크기가 더 커야 할 수 있습니다. [Windows.Globalization.Fonts](/uwp/api/windows.globalization.fonts?branch=live) 네임스페이스의 클래스를 참조하세요. |
 | 읽는 순서 미러링을 지원합니다. | 텍스트 정렬 및 읽기 순서는 영어의 경우 왼쪽에서 오른쪽으로 아랍어 또는 히브리어의 경우 RTL(오른쪽에서 왼쪽으로) 방식이 사용됩니다. 제품을 다른 읽기 순서를 사용하는 언어로 지역화할 경우 UI 요소의 레이아웃이 미러링을 지원해야 합니다. 항목(예: 뒤로 단추), UI 전환 효과 및 이미지를 미러링해야 할 수도 있습니다. 자세한 내용은 [레이아웃 및 글꼴 조정, RTL 지원](adjust-layout-and-fonts--and-support-rtl.md)을 참조하세요. |
 | 텍스트와 글꼴을 올바르게 표시합니다. | 적합한 글꼴, 글꼴 크기 및 텍스트 방향은 시장마다 다릅니다. 자세한 내용은 [**레이아웃 및 글꼴 조정, RTL 지원**](adjust-layout-and-fonts--and-support-rtl.md) 및 [국가별 글꼴](loc-international-fonts.md)을 참조하세요. |
@@ -46,7 +46,7 @@ ms.locfileid: "8930684"
 * [문자열 사용에 대한 권장 사항](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage)
 * [날짜/시간 숫자 형식 세계화](use-global-ready-formats.md)
 * [사용자 프로필 언어와 앱 매니페스트 언어 이해](manage-language-and-region.md)
-* [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [앱 리소스 및 리소스 관리 시스템](../../app-resources/index.md)
 * [리소스 관리 시스템이 언어 태그를 일치하는 방법](../../app-resources/how-rms-matches-lang-tags.md)
 * [레이아웃 및 글꼴 조정, RTL 지원](adjust-layout-and-fonts--and-support-rtl.md)
@@ -55,4 +55,4 @@ ms.locfileid: "8930684"
 
 ## <a name="samples"></a>샘플
 
-* [세계화 기본 설정 샘플](http://go.microsoft.com/fwlink/p/?linkid=231608)
+* [세계화 기본 설정 샘플](https://go.microsoft.com/fwlink/p/?linkid=231608)

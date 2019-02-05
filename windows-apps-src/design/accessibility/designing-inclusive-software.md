@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 52504855a83b8fdf30de311028c39e30ddd2b026
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 88d2377f95efbe79853b1416213a25e22ed7d5f0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921146"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044750"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Windows 10용 포괄 소프트웨어 디자인  
 
@@ -115,7 +115,7 @@ ADA(미국 장애인 복지법)의 업데이트된 섹션 508 및 기타 입법�
   
 
 ## <a name="related-topics"></a>관련 항목  
-* [포괄 디자인](http://design.microsoft.com/inclusive)
+* [포괄 디자인](https://design.microsoft.com/inclusive)
 * [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft 접근성 개발자 허브](https://developer.microsoft.com/windows/accessible-apps)
 * [포괄 Windows 앱 개발](developing-inclusive-windows-apps.md) 

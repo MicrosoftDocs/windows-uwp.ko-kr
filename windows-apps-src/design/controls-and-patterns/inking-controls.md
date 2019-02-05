@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a969c0dfbfd08b5cc29651e2ad295c2bdd60ee0
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: fcbed8400b31616f92f20aa3a64a4dd8603dc7b0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037015"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047897"
 ---
 # <a name="inking-controls"></a>수동 입력 컨트롤
 
@@ -84,7 +84,7 @@ InkCanvas 및 InkToolbar는 **Windows Ink 작업 영역**의 **스케치북**과
 ```
 
 > [!NOTE]
-> InkPresenter를 사용하는 자세한 InkCanvas 사용자 지정은 ["UWP 앱에서 펜 및 스타일러스 조작"](http://windowsstyleguide/input/pen-and-stylus-interactions/) 문서를 참조하세요.
+> InkPresenter를 사용하는 자세한 InkCanvas 사용자 지정은 ["UWP 앱에서 펜 및 스타일러스 조작"](https://windowsstyleguide/input/pen-and-stylus-interactions/) 문서를 참조하세요.
 
 InkToolbar 컨트롤은 InkCanvas와 함께 사용해야 합니다. InkToolbar(모든 기본 제공 도구 포함)를 앱에 통합하려면 다음과 같은 한 줄의 태그가 추가로 필요합니다.
 
@@ -170,6 +170,6 @@ InkToolbar는 최상위 항목일 수 있지만 일반적으로 "수동 입력" 
 
 ## <a name="related-articles"></a>관련 문서
 
-- [UWP 앱에서 펜 및 스타일러스 조작](http://windowsstyleguide/input/pen-and-stylus-interactions/)
-- [잉크 스트로크 인식](http://windowsstyleguide/input/convert-ink-to-text/)
-- [잉크 스트로크 저장 및 검색](http://windowsstyleguide/input/save-and-load-ink/)
+- [UWP 앱에서 펜 및 스타일러스 조작](https://windowsstyleguide/input/pen-and-stylus-interactions/)
+- [잉크 스트로크 인식](https://windowsstyleguide/input/convert-ink-to-text/)
+- [잉크 스트로크 저장 및 검색](https://windowsstyleguide/input/save-and-load-ink/)

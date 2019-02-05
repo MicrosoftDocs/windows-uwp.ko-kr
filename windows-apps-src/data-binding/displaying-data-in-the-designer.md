@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e18be702c1b2bbd9ce1831b6991324896769192
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c72af86edd3d0a20ab8a0f062b5e0ccf8608e8a9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930744"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050796"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
 =============================================================================================
@@ -24,8 +24,8 @@ ms.locfileid: "8930744"
 
 **{Binding}을 보여 주는 샘플 앱**
 
--   [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950) 앱 다운로드
--   [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) 앱 다운로드
+-   [Bookstore1](https://go.microsoft.com/fwlink/?linkid=532950) 앱 다운로드
+-   [Bookstore2](https://go.microsoft.com/fwlink/?linkid=532952) 앱 다운로드
 
 <a name="setting-datacontext-in-markup"></a>태그에서 DataContext 설정
 -----------------------------
@@ -97,7 +97,7 @@ else
 
 다양한 xmlns 선언은 **d:** 접두사가 있는 특성이 디자인 타임에만 해석되고 런타임에는 무시됨을 의미합니다. 따라서 **d:DataContext** 특성은 디자인 타임에만 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) 속성 값에 영향을 주고 런타임에는 적용되지 않습니다. 원하는 경우 태그에서 **d:DataContext** 및 **DataContext**를 모두 설정할 수도 있습니다. **d:DataContext**는 디자인 타임에 재정의되고 **DataContext**는 런타임에 재정의됩니다. 이와 같이 동일한 재정의 규칙이 디자인 타임 및 런타임 특성 모두에 적용됩니다.
 
-**d:DataContext** 특성 및 다른 모든 디자인 타임 특성은 [디자인 타임 특성](http://go.microsoft.com/fwlink/p/?LinkId=272504) 항목에 설명되어 있으며, UWP(유니버설 Windows 플랫폼) 앱에 여전히 사용할 수 있습니다.
+**d:DataContext** 특성 및 다른 모든 디자인 타임 특성은 [디자인 타임 특성](https://go.microsoft.com/fwlink/p/?LinkId=272504) 항목에 설명되어 있으며, UWP(유니버설 Windows 플랫폼) 앱에 여전히 사용할 수 있습니다.
 
 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)에는 **DataContext** 속성이 없지만 **Source** 속성이 있습니다. 따라서 **CollectionViewSource**에 디자인 타임 전용 샘플 데이터를 설정하는 데 사용할 수 있는 **d:Source** 속성이 있습니다.
 

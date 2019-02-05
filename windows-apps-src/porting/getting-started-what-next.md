@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ab12f79670428fa2b6affa91240787f75bc51bc2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e5b273df8120d982f263c4411012baa715b2820c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921265"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044244"
 ---
 # <a name="getting-started-what-next"></a>시작: 다음에 할 일
 
@@ -24,12 +24,12 @@ ms.locfileid: "8921265"
 -   [타일, 배지 및 알림 메시지 작업](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259): 타일을 만들고 타일 및 타일 배지를 업데이트하고 알림 메시지를 보내고 잠금 화면에서 타일 및 배지 업데이트를 표시 및 업데이트하는 방법에 대해 설명합니다.
 -   [실행, 다시 시작 및 멀티태스킹](https://msdn.microsoft.com/library/windows/apps/hh770837): 앱을 자동 실행, 활성화, 일시 중단 및 다시 시작하는 방법과 백그라운드 작업 방법에 대해 설명합니다.
 -   [로밍 중인 응용 프로그램 데이터에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465094): 사용자가 회사에서는 PC, 집에서는 태블릿과 같이 두 개 이상의 장치를 사용하는 경우 앱에 뛰어난 최종 사용자 환경을 제공하는 방법에 대해 설명합니다.
--   [C# 또는 Visual Basic을 사용하여 첫 Windows 런타임 앱 만들기](http://go.microsoft.com/fwlink/p/?LinkID=394138): Windows Phone 개발에 초점을 두는 항목입니다.
+-   [C# 또는 Visual Basic을 사용하여 첫 Windows 런타임 앱 만들기](https://go.microsoft.com/fwlink/p/?LinkID=394138): Windows Phone 개발에 초점을 두는 항목입니다.
 -   [iOS 및 Android 개발용 동영상](https://msdn.microsoft.com/library/windows/apps/dn393982): 시각적 형식의 추가 도움말입니다.
 
 개발자 포럼, 블로그, 개발자 캠프 및 워크샵, 로컬 Microsoft 이벤트 및 계약을 통해 지원을 받고 상호 연결하는 방법은 [커뮤니티 리소스](https://developer.microsoft.com/en-us/windows/support)를 참조하세요.
 
-생각 Windows10 수에 대 한 새로운 앱 빌드 기회 열립니다. 개발자 여러분이 빌드하는 모든 유용한 앱을 만날 수 있기를 고대합니다.
+우리는 windows 10에 새로운 앱 빌드 기회 열립니다 생각 합니다. 개발자 여러분이 빌드하는 모든 유용한 앱을 만날 수 있기를 고대합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

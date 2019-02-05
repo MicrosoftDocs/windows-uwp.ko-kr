@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
-ms.openlocfilehash: bdde349c09b08efcbc18857f67444bb990b25421
-ms.sourcegitcommit: 0373a2021c1b7144f28b08778d6a3b3dc64aa10c
+ms.openlocfilehash: 59da5dd5866fe79f4420e1e895af74f976526f27
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "8997408"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046263"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Xbox One 개발자 모드 활성화
 
@@ -46,7 +46,7 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
 
     ![활성화 8단계](images/activation-step-8-rs2.png)    
     
-8.  **동의 및 활성화**를 클릭합니다. 페이지가 다시 로드되고 표에 디바이스가 표시됩니다. Xbox One 개발자 모드 정품 인증 프로그램 계약 조건은 [Xbox One 개발자 모드 정품 인증 프로그램](http://go.microsoft.com/fwlink/p/?LinkId=760399)에서 확인할 수 있습니다.
+8.  **동의 및 활성화**를 클릭합니다. 페이지가 다시 로드되고 표에 디바이스가 표시됩니다. Xbox One 개발자 모드 정품 인증 프로그램 계약 조건은 [Xbox One 개발자 모드 정품 인증 프로그램](https://go.microsoft.com/fwlink/p/?LinkId=760399)에서 확인할 수 있습니다.
 
 9.  활성화 코드를 입력한 후 활성화 절차에 대한 진행 화면이 콘솔에 표시됩니다.  
     

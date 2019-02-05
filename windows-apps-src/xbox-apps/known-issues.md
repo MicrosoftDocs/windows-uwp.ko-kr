@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
-ms.openlocfilehash: 55068ef3f0a0a0d01c61746bde02ddb7aa4ef885
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 01bc72051e9efa69adbbab574b932da829c83e72
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923569"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046536"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
 
 이 항목에서는 Xbox One 개발자 프로그램에서 UWP에 대해 알려진 문제를 설명합니다. 이 프로그램에 대한 자세한 내용은 [Xbox의 UWP](index.md)를 참조하세요. 
 
-\[API 참조 항목 링크를 통해 이 페이지를 방문했으며 유니버설 장치 패밀리 API 정보를 보려는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkID=760755)을 참조하세요.\]
+\[API 참조 항목 링크를 통해 이 페이지를 방문했으며 유니버설 장치 패밀리 API 정보를 보려는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](https://go.microsoft.com/fwlink/?LinkID=760755)을 참조하세요.\]
 
 다음 목록에는 발생할 수 있는 몇 가지 알려진 문제가 요약되어 있습니다. 
 
@@ -56,11 +56,11 @@ System.UnauthorizedAccessException: Access is denied. (Excep_FromHResult 0x80070
 
 ## <a name="blocked-networking-ports-on-xbox-one"></a>Xbox One에서 차단된 네트워킹 포트
 
-Xbox One 장치의 UWP(유니버설 Windows 플랫폼) 앱은 범위 [57344, 65535]의 모든 포트에 바인딩할 수 없습니다. 이러한 포트에 바인딩하면 런타임 시 성공하는 것처럼 보이지만 앱에 도달하기 전에 네트워크 트래픽이 자동으로 삭제될 수 있습니다. 가능할 때마다 앱을 포트 0에 바인딩해야 시스템이 로컬 포트를 선택할 수 있습니다. 특정 포트를 사용해야 할 경우 포트 번호는 범위 [1025 49151]에 있어야 하고 IANA 레지스트리를 사용하여 충돌을 확인하고 방지해야 합니다. 자세한 내용은 [서비스 이름 및 전송 프로토콜 포트 번호 레지스트리](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)를 참조하세요.
+Xbox One 장치의 UWP(유니버설 Windows 플랫폼) 앱은 범위 [57344, 65535]의 모든 포트에 바인딩할 수 없습니다. 이러한 포트에 바인딩하면 런타임 시 성공하는 것처럼 보이지만 앱에 도달하기 전에 네트워크 트래픽이 자동으로 삭제될 수 있습니다. 가능할 때마다 앱을 포트 0에 바인딩해야 시스템이 로컬 포트를 선택할 수 있습니다. 특정 포트를 사용해야 할 경우 포트 번호는 범위 [1025 49151]에 있어야 하고 IANA 레지스트리를 사용하여 충돌을 확인하고 방지해야 합니다. 자세한 내용은 [서비스 이름 및 전송 프로토콜 포트 번호 레지스트리](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)를 참조하세요.
 
 ## <a name="uwp-api-coverage"></a>UWP API 검사
 
-일부 UWP API는 Xbox에서 지원되지 않습니다. 작동하지 않는다고 알고 있는 API 목록은 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/p/?LinkId=760755)을 참조하세요. 다른 API에서 문제가 발견된 경우 포럼에서 신고하세요. 
+일부 UWP API는 Xbox에서 지원되지 않습니다. 작동하지 않는다고 알고 있는 API 목록은 [Xbox에서 아직 지원되지 않는 UWP 기능](https://go.microsoft.com/fwlink/p/?LinkId=760755)을 참조하세요. 다른 API에서 문제가 발견된 경우 포럼에서 신고하세요. 
 
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>WDP로 이동하면 인증서 경고가 표시됨

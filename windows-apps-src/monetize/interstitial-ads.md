@@ -6,16 +6,16 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 광고 관리, 중간 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: c1860fe51035699aaa55d014c2f76a95c7622061
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9abf761aa141ef3d0c19d6d5401b6815542d4172
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943270"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047734"
 ---
 # <a name="interstitial-ads"></a>중간 광고
 
-이 연습에서는 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱과 게임에 중간 광고를 포함하는 방법을 보여줍니다. C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
+이 연습에서는 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱과 게임에 중간 광고를 포함하는 방법을 보여줍니다. C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](https://aka.ms/githubads)을 참조하세요.
 
 <span id="whatareinterstitialads10"/>
 
@@ -36,7 +36,7 @@ ms.locfileid: "8943270"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-* Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 설치합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조하세요.
+* Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 설치합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조하세요.
 
 ## <a name="integrate-an-interstitial-ad-into-your-app"></a>앱에 중간 광고를 통합
 
@@ -215,7 +215,7 @@ ms.locfileid: "8943270"
 
 2.  파트너 센터에서 이동 [인 앱 광고](../publish/in-app-ads.md) 페이지와 [광고 단위를 생성](set-up-ad-units-in-your-app.md#live-ad-units)합니다. 광고 단위 유형에는 표시하려는 중간 광고의 유형에 따라 **동영상 중간 광고** 또는 **배너 중간 광고**를 선택합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
     > [!NOTE]
-    > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. 파트너 센터에서 라이브 UWP 광고 단위를 만들 때 광고 단위에 대 한 응용 프로그램 ID 값에 항상 (예: Store ID 값은 9NBLGGH4R315와) 앱의 스토어 ID와 일치 합니다.
+    > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. 파트너 센터에서 라이브 UWP 광고 단위를 만들 때 광고 단위에 대 한 응용 프로그램 ID 값에 항상 (예: Store ID 값은 9NBLGGH4R315와) 앱에 대 한 스토어 ID와 일치 합니다.
 
 3. [인앱 광고](../publish/in-app-ads.md) 페이지의 [조정 설정](../publish/in-app-ads.md#mediation) 섹션에서 설정을 구성하여, **InterstitialAd**의 광고 조정을 사용하는 방법도 있습니다. 광고 조정을 통해 Taboola 및 Smaato 같은 기타 유료 광고 네트워크와 Microsoft 앱 프로모션 캠페인에 대한 광고를 포함하여 여러 광고 네트워크의 광고를 표시하여 광고 수익과 앱 프로모션 기능을 최대화할 수 있습니다.
 
@@ -239,5 +239,5 @@ ms.locfileid: "8943270"
 * [중간 광고에 대한 지침](ui-and-user-experience-guidelines.md#interstitialbestpractices10)
 * [C#의 중간 광고 샘플 코드](interstitial-ad-sample-code-in-c.md)
 * [JavaScript의 중간 광고 샘플 코드](interstitial-ad-sample-code-in-javascript.md)
-* [GitHub의 광고 샘플](http://aka.ms/githubads)
+* [GitHub의 광고 샘플](https://aka.ms/githubads)
 * [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md)

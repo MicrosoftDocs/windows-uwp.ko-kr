@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e9d0fdee4ba9f44f15c461e5a53dad28700023a4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e50d3613e5f7058e99f2e71ba023fb4191e5c734
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947043"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051106"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>앱 시작 성능 모범 사례
 
@@ -103,7 +103,7 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 -   UserControls 및 컨트롤 템플릿은 확장되므로 이러한 템플릿들도 고려해야 합니다.
 -   화면에 표시되지 않는 XAML을 만드는 경우 이러한 XAML 부분이 시작 중 만들어져야 하는지 여부를 확인해야 합니다.
 
-[Visual Studio 실시간 시각적 트리](http://blogs.msdn.com/b/visualstudio/archive/2015/02/24/introducing-the-ui-debugging-tools-for-xaml.aspx) 창은 트리의 각 노드에 대해 자식 요소 수를 표시합니다.
+[Visual Studio 실시간 시각적 트리](https://blogs.msdn.com/b/visualstudio/archive/2015/02/24/introducing-the-ui-debugging-tools-for-xaml.aspx) 창은 트리의 각 노드에 대해 자식 요소 수를 표시합니다.
 
 ![실시간 시각적 트리.](images/live-visual-tree.png)
 
@@ -323,7 +323,7 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 > End Class
 > ```
 
-연장된 시작 화면 사용의 예를 보려면 [시작 화면 샘플](http://go.microsoft.com/fwlink/p/?linkid=234889)을 참조하세요.
+연장된 시작 화면 사용의 예를 보려면 [시작 화면 샘플](https://go.microsoft.com/fwlink/p/?linkid=234889)을 참조하세요.
 
 ### <a name="phase-3"></a>3단계
 
@@ -339,7 +339,7 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 
 재사용 가능 코드는 종종 프로젝트에 포함된 모듈(DLL) 형식으로 나타납니다. 이 모듈을 로드하려면 디스크에 액세스해야 하고 예상대로 작업을 수행하는 부담이 추가될 수 있습니다. 이 부담은 콜드 부팅에 가장 큰 영향을 미치지만 웜 부팅에도 영향을 미칠 수 있습니다. C# 및 Visual Basic의 경우 CLR이 요청 시 어셈블리를 로드하는 방식으로 해당 부담을 가능한 많이 지연시킵니다. 즉, 실행된 메서드가 가리킬 때까지 CLR이 모듈을 로드하지 않습니다. 따라서 CLR이 불필요한 모듈을 로드하지 않도록 시작 코드에서 앱 실행에 필요한 어셈블리만 가리키세요. 시작 경로에 불필요한 참조가 포함된 사용되지 않는 코드가 있을 경우 이 코드 경로를 다른 메서드로 이동하여 불필요한 로드를 방지할 수 있습니다.
 
-모듈 로드를 줄이는 다른 방법은 앱 모듈을 결합하는 것입니다. 큰 어셈블리 하나를 로드하는 것이 보통 작업 어셈블리 두 개를 로드하는 것보다 시간이 덜 걸립니다. 항상 가능하지는 않으며 개발자 생산성이나 코드 재사용 가능성에 실질적 차이를 만들지 않는 경우에만 모듈을 결합해야 합니다. [PerfView](http://go.microsoft.com/fwlink/p/?linkid=251609) 또는 [WPA(Windows 성능 분석기)](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx)와 같은 도구를 사용하여 시작 시 로드되는 모듈을 찾을 수 있습니다.
+모듈 로드를 줄이는 다른 방법은 앱 모듈을 결합하는 것입니다. 큰 어셈블리 하나를 로드하는 것이 보통 작업 어셈블리 두 개를 로드하는 것보다 시간이 덜 걸립니다. 항상 가능하지는 않으며 개발자 생산성이나 코드 재사용 가능성에 실질적 차이를 만들지 않는 경우에만 모듈을 결합해야 합니다. [PerfView](https://go.microsoft.com/fwlink/p/?linkid=251609) 또는 [WPA(Windows 성능 분석기)](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx)와 같은 도구를 사용하여 시작 시 로드되는 모듈을 찾을 수 있습니다.
 
 ### <a name="make-smart-web-requests"></a>효율적인 웹 요청
 

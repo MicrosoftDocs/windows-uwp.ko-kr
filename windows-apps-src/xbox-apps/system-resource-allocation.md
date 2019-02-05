@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
-ms.openlocfilehash: f2aad1b4d6abf9a05af9b9a938188c69d9cae7c8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0869f5cfc2499a00577f0196cd9f9f84987c0321
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941324"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048370"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스
 
@@ -44,7 +44,7 @@ Xbox One에서 실행되는 UWP 앱은 시스템 및 다른 앱과 리소스를 
 
 **응용 프로그램을 개발**을 위해 사용할 수 있는 리소스가 표준 PC에 비에 제한될 수 있고 시스템에서 실행 중인 앱과 게임의 수에 따라 다를 수 있습니다.
 
-**게임 개발**의 경우 다른 게임 콘솔과 마찬가지로 Xbox One은 전체 잠재 기능에 액세스하기 위해 특정 하드웨어 기반 개발 키트가 필요한 특수 하드웨어입니다. Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 개발하는 경우 Xbox One 개발 키트에 액세스하기 위해 [ID@Xbox](http://www.xbox.com/Developers/id) 프로그램에 등록할 수 있습니다.
+**게임 개발**의 경우 다른 게임 콘솔과 마찬가지로 Xbox One은 전체 잠재 기능에 액세스하기 위해 특정 하드웨어 기반 개발 키트가 필요한 특수 하드웨어입니다. Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 개발하는 경우 Xbox One 개발 키트에 액세스하기 위해 [ID@Xbox](https://www.xbox.com/Developers/id) 프로그램에 등록할 수 있습니다.
 
 
 Xbox One의 UWP 앱에 대한 시스템 리소스에 대해 자세한 내용은 이 동영상의 첫 번째 부분을 확인하세요.

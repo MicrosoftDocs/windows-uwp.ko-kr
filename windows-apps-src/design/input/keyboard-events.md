@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e7453d3973cef31ae8143f3ecff31fffeb763a3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9ff4e7d01d907112558993f52c8a214c91f7d499
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942554"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047072"
 ---
 # <a name="keyboard-events"></a>키보드 이벤트
 
@@ -391,16 +391,16 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 
 **샘플**
 * [터치 키보드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
-* [입력 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: 터치 키보드 샘플](http://go.microsoft.com/fwlink/p/?linkid=246019)
-* [화상 키보드의 모양에 응답 샘플](http://go.microsoft.com/fwlink/p/?linkid=231633)
-* [XAML 텍스트 편집 샘플](http://go.microsoft.com/fwlink/p/?LinkID=251417)
+* [입력 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 터치 키보드 샘플](https://go.microsoft.com/fwlink/p/?linkid=246019)
+* [화상 키보드의 모양에 응답 샘플](https://go.microsoft.com/fwlink/p/?linkid=231633)
+* [XAML 텍스트 편집 샘플](https://go.microsoft.com/fwlink/p/?LinkID=251417)
  
 
  

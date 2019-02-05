@@ -6,22 +6,22 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 결제, 앱 판매, 앱 수익, 지급액, Microsoft Store 요금, 지급 보류, 백분율
 ms.localizationpriority: medium
-ms.openlocfilehash: 91289948f2f4745456b9cebe587cf75366a4877b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0d59519e23955b53b32d2178e37e75f195fd54eb
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941160"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044364"
 ---
 # <a name="getting-paid"></a>지급 받기
-앱, 추가 기능 및 광고 수익에 대 한 지급을 수신 하는 방법에 대 한 중요 한 정보는 다음과 같습니다.
+앱, 추가 기능 및 광고 수익에 대 한 지급 받는 방법에 대 한 중요 한 정보는 다음과 같습니다.
 
 > [!IMPORTANT]
-> Microsoft Store의 앱 판매에서 번 돈을 받으려면, 먼저 [지급 계좌를 설정 하 고 필요한 세금 양식을 입력](setting-up-your-payout-account-and-tax-forms.md)해야 합니다.
+> Microsoft Store의 앱 판매에서 번 돈을 받으려면, 먼저 [지급 계좌를 설정](setting-up-your-payout-account-and-tax-forms.md)하 고 필요한 세금 양식을 입력 해야 합니다.
 
 ## <a name="store-fee"></a>Microsoft Store 수수료
 
-[개발자 계정에 등록](http://go.microsoft.com/fwlink/p/?LinkID=615100)할 때 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 동의합니다. 이 계약에서는 Microsoft에서 각 판매에 대해 청구하는 스토어 수수료를 포함하여 Microsoft Store에서 앱을 판매할 때 적용되는 개발자와 Microsoft 간의 관계에 대해 설명합니다.
+[개발자 계정에 등록](https://go.microsoft.com/fwlink/p/?LinkID=615100)할 때 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 동의합니다. 이 계약에서는 Microsoft에서 각 판매에 대해 청구하는 스토어 수수료를 포함하여 Microsoft Store에서 앱을 판매할 때 적용되는 개발자와 Microsoft 간의 관계에 대해 설명합니다.
 
 대부분의 경우 Microsoft Store 수수료는 30%입니다. 수수료는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 공식적으로 정의됩니다. 질문이 있으면 항상 해당 문서를 검토하세요.
 
@@ -46,7 +46,7 @@ Microsoft Store 수수료는 추가 기능을 포함하여 Microsoft Store가 �
 
 ## <a name="payout-reporting"></a>지급 보고
 
-결제 정보에 대 한 세부 정보에 액세스할 수 있으며 [파트너 센터](https://partner.microsoft.com/dashboard)의 **지급 요약** 에 보고서를 다운로드할 수 있습니다. 여기에 표시된 정보와 Microsoft에서 개발자가 번 돈을 분류하는 방법에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요.
+결제 정보에 대 한 세부 정보에 액세스할 수 있으며 [파트너 센터](https://partner.microsoft.com/dashboard)의 **지급 요약** 에 보고서 다운로드 수 있습니다. 여기에 표시된 정보와 Microsoft에서 개발자가 번 돈을 분류하는 방법에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요.
 
 
 ## <a name="payout-timeframe"></a>지급 기간

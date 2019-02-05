@@ -6,16 +6,16 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 지오코딩, 지도, 위치
 ms.localizationpriority: medium
-ms.openlocfilehash: e8b0efe39578974090844a4224055821c29f8ced
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a30ca89242b15866019fffc6972bdae7086f3f7e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920318"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046446"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>지오코딩 및 리버스 지오코딩 수행
 
-이 가이드에서 Windows.Services.Maps [** [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 메서드를 호출 하 여 거리 주소 (리버스 지 오 코딩) 지리적 위치를 변환 하 고 (지 오 코딩) 지리적 위치를 주소 변환 하는 방법을 보여 줍니다. **](https://msdn.microsoft.com/library/windows/apps/dn636979)네임 스페이스입니다.
+이 가이드에서 Windows.Services.Maps [** [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 메서드를 호출 하 여 주소 (리버스 지 오 코딩) 지리적 위치를 변환 하 고 (지 오 코딩) 지리적 위치를 주소 변환 하는 방법을 보여 줍니다. **](https://msdn.microsoft.com/library/windows/apps/dn636979)네임 스페이스입니다.
 
 > [!TIP]
 > 앱에서 지도 사용에 대 한 자세한 내용은 GitHub의 [Windows 유니버설 샘플 리포지토리](hhttps://github.com/Microsoft/Windows-universal-samples) 에서 [MapControl](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) 샘플을 다운로드 합니다.
@@ -23,7 +23,7 @@ ms.locfileid: "8920318"
 지 오 코딩 및 리버스 지 오 코딩에 관련 된 클래스는 다음과 같이 구성 됩니다.
 
 -   [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스는 지 오 코딩 ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925))를 처리 하 고 리버스 지 오 코딩 ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928))는 방법이 포함 되어 있습니다.
--   이러한 두 메서드 [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 인스턴스를 반환 합니다.
+-   이러한 두 메서드는 [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 인스턴스를 반환합니다.
 -   [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 의 [**위치**](https://msdn.microsoft.com/library/windows/apps/dn627552) 속성 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체의 컬렉션을 노출 합니다. 
 -   [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체 주소를 나타내는 [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) 개체를 노출 하는 [**주소**](https://msdn.microsoft.com/library/windows/apps/dn636929) 속성 및 지리적 위치를 나타내는 [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) 개체를 노출 하는 [**지점**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) 속성을 둘 다 있어야 합니다.
 
@@ -32,11 +32,11 @@ ms.locfileid: "8920318"
 
 ## <a name="get-a-location-geocode"></a>위치 가져오기(지오코드)
 
-이 섹션에는 거리 주소나 장소 이름을 지리적 위치 (지 오 코딩)으로 변환 하는 방법을 보여 줍니다.
+이 섹션에는 주소 또는 장소 이름을 지리적 위치 (지 오 코딩)으로 변환 하는 방법을 보여 줍니다.
 
 1.  장소 이름 또는 주소를 사용 하 여 [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) 메서드의 오버 로드 중 하나를 호출 합니다.
-2.  [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) 메서드는 [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 개체를 반환합니다.
-3.  [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 의 [**위치**](https://msdn.microsoft.com/library/windows/apps/dn627552) 속성을 사용 하 여 컬렉션 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체를 제공 하도록 합니다. 지정된 된 입력에 해당 하는 여러 위치를 찾을 수 있으므로 여러 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체 수 있습니다.
+2.  [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) 메서드 [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 개체를 반환합니다.
+3.  [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 의 [**위치**](https://msdn.microsoft.com/library/windows/apps/dn627552) 속성을 사용 하 여 컬렉션 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체를 노출 합니다. 시스템 지정된 된 입력에 해당 하는 여러 위치를 찾을 수 없기 때문에 여러 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체 수 있습니다.
 
 ```csharp
 using Windows.Services.Maps;
@@ -84,7 +84,7 @@ result = (47.6406099647284,-122.129339994863)
 
 1.  [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) 메서드를 호출합니다.
 2.  [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) 메서드는 일치하는 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체 컬렉션을 포함하는 [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 개체를 반환합니다.
-3.  [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 의 [**위치**](https://msdn.microsoft.com/library/windows/apps/dn627552) 속성을 사용 하 여 컬렉션 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체를 제공 하도록 합니다. 지정된 된 입력에 해당 하는 여러 위치를 찾을 수 있으므로 여러 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체 수 있습니다.
+3.  [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 의 [**위치**](https://msdn.microsoft.com/library/windows/apps/dn627552) 속성을 사용 하 여 컬렉션 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체를 노출 합니다. 시스템 지정된 된 입력에 해당 하는 여러 위치를 찾을 수 없기 때문에 여러 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체 수 있습니다.
 4.  각 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549)의 [**주소**](https://msdn.microsoft.com/library/windows/apps/dn636929) 속성을 통해 [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) 개체에 액세스 합니다.
 
 ```csharp
@@ -121,8 +121,8 @@ town = Redmond
 
 ## <a name="related-topics"></a>관련 항목
 
-* [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [전화, 태블릿 및 Windows 앱에서 PC 간에 지도 및 위치를 활용 하는 비디오:](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)

@@ -6,18 +6,18 @@ ms.topic: article
 keywords: Windows 10, uwp, 대상 알림, 푸시 알림, 알림, 타일
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
-ms.openlocfilehash: 902a8d84c2a0cfa1549c4c3926e838e9bb8ed9c4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9858665eaf36f5cd261dd1098b23aeecccf9179c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923140"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045782"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>앱의 고객에게 알림 보내기
 
 올바른 시간에 올바른 메시지로 고객의 참여를 유도하는 것이 앱 개발자로서 성공하기 위한 핵심입니다. 알림을 보내 앱 평가, 추가 기능 구매, 새 기능 체험, 다른 앱 다운로드 등 고객의 참여를 유도할 수 있습니다(제공하는 [홍보 코드](generate-promotional-codes.md)를 이용해 무료로).
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 에서 제공 하는 데이터 기반 고객 참여 플랫폼의 일부 [고객에서 정의한 기준을 충족 하는 앱의 Windows 10 고객 에게만 전송할 하거나 모든 앱의 고객에 게 알림을 보내도록 하는 데 사용할 수 있습니다 세그먼트](create-customer-segments.md)합니다. 둘 이상의 앱의 고객에 게 보낼 알림을 만들 수도 있습니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 제공 하는 데이터 기반 고객 참여 플랫폼 모든 앱의 고객에 게 알림을 보내도록 사용 하거나 [고객에서 정의한 기준을 충족 하는 앱의 Windows 10 고객의 하위 집합에만 대상 세그먼트](create-customer-segments.md)합니다. 둘 이상의 앱의 고객에 게 보낼 수에 대 한 알림을 만들 수도 있습니다.
 
 > [!IMPORTANT]
 > 이러한 알림은 UWP 앱에만 사용할 수 있습니다.
@@ -45,7 +45,7 @@ ms.locfileid: "8923140"
 파트너 센터에서 알림을 만들고 특정 고객층에 보냅니다 하려면 다음이 단계를 따릅니다.
 
 > [!NOTE]
-> 앱 파트너 센터에서 알림을 받으려면에 앱에서 알림을 받도록 앱을 등록 하기 위해 먼저 [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 메서드를 호출 해야 합니다. 이 메서드는 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)에서 사용할 수 있습니다. 코드 예제와 함께 이 메서드를 호출하는 방법은 [앱에서 대상 푸시 알림 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)을 참조하세요.
+> 앱 파트너 센터에서 알림을 받으려면에 앱에서 알림을 받도록 앱을 등록 하기 위해 먼저 [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 메서드를 호출 해야 합니다. 이 메서드는 [Microsoft Store Services SDK](https://aka.ms/store-em-sdk)에서 사용할 수 있습니다. 코드 예제와 함께 이 메서드를 호출하는 방법은 [앱에서 대상 푸시 알림 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)을 참조하세요.
 
 1. [파트너 센터](https://partner.microsoft.com/dashboard) **참여** 섹션을 확장 하 고 **알림을**선택 합니다.
 2. **알림** 페이지에서 **새 알림**을 선택합니다.
@@ -109,7 +109,7 @@ ms.locfileid: "8923140"
 ### <a name="to-measure-notification-performance"></a>알림 성과를 측정하려면
 
 1.  알림을 만들 때 **알림 콘텐츠** 섹션에서 **앱 시작 속도 추적** 확인란을 선택합니다.
-2.  앱에서 대상 지정된 알림에 대 한 응답으로 앱이 시작 되었음을 파트너 센터에 알리고 [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) 메서드를 호출 합니다. 이 메서드는 Microsoft Store Services SDK에서 제공됩니다. 이 메서드를 호출 하는 방법에 대 한 자세한 내용은 [구성을 파트너 센터 알림을 받도록 앱을](../monetize/configure-your-app-to-receive-dev-center-notifications.md)참조 하세요.
+2.  앱에서 대상 지정된 알림에 대 한 응답으로 앱이 시작 된 파트너 센터에 알리기 위해 [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) 메서드를 호출 합니다. 이 메서드는 Microsoft Store Services SDK에서 제공됩니다. 이 메서드를 호출 하는 방법에 대 한 자세한 내용은 [구성을 파트너 센터 알림을 받도록 앱을](../monetize/configure-your-app-to-receive-dev-center-notifications.md)참조 하세요.
 
 
 ### <a name="to-view-notification-performance"></a>알림 성과 보기
@@ -119,7 +119,7 @@ ms.locfileid: "8923140"
 각 알림에 대 한 자세한 데이터를 검토 합니다.
 
 1.  파트너 센터에서 **참여** 섹션을 확장 하 고 **알림**을 선택 합니다.
-2.  기존 알림의 테이블에 **진행 중에서** 또는 **완료**를 선택 하 고 보려면 각 알림의 높은 수준의 성능 **배달 속도** 및 **앱 시작 속도** 열을 봅니다.
+2.  기존 알림의 테이블에 **진행 중에서** 또는 **완료**를 선택 하 고 각 알림의 높은 수준의 성능 보려면 **배달 속도** **앱 시작 속도** 열을 봅니다.
 3.  좀 더 자세한 성과 세부 정보를 보려면 알림 이름을 선택합니다. **배달 통계** 섹션이 나타나고, 다음 알림**상태** 유형에 대한 **개수** 및 **백분율** 정보가 표시됩니다.
     * **실패**: 어떤 이유에서든 알림이 배달되지 않았습니다. 예를 들어 Windows 알림 서비스에서 문제가 발생하는 경우 이 오류가 발생할 수 있습니다.
     * **채널 만료 오류**: 응용 프로그램 및 파트너 센터 간 채널이 만료 되었으므로 알림을 제공할 수 없었다는 합니다. 예를 들어 고객이 오랫동안 앱을 열지 않은 경우 이 오류가 발생할 수 있습니다.
@@ -132,13 +132,13 @@ ms.locfileid: "8923140"
 
 1.  파트너 센터에서 **참여** 섹션을 확장 하 고 **알림**을 선택 합니다.
 2.  **알림** 페이지에서 **분석** 탭을 클릭 합니다. 이 탭에는 다음 데이터가 표시 됩니다.
-    * 그래프 보기 알림 및 알림 센터 알림에 대 한 다양 한 사용자 작업 상태입니다.
+    * 그래프의 알림 및 알림 센터 알림에 대 한 다양 한 사용자 작업 상태 보기.
     * 알림 센터 알림 및 작업에 대 한 속도---클릭의 세계 지도 보기
 3. 페이지 위쪽에서 데이터가 표시되는 기간을 선택할 수 있습니다. 기본 설정은 30D (30일)이지만, 3개월, 6개월 또는 12개월 동안 데이터를 표시하거나 사용자가 지정한 데이터 범위에서 데이터를 표시하도록 선택할 수 있습니다. 모든 앱 및 지역/국가에서 데이터를 필터링 하려면 **필터** 확장할 수 있습니다.
 
 ## <a name="translate-your-notifications"></a>알림 번역
 
-알림의 영향을 최대화하려면 고객이 기본적으로 사용하는 언어로 알림을 번역하는 것이 좋습니다. 파트너 센터에서 쉽게 [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) 서비스의 기능을 활용 하 여 알림을 자동으로 변환할 수 있습니다.
+알림의 영향을 최대화하려면 고객이 기본적으로 사용하는 언어로 알림을 번역하는 것이 좋습니다. 파트너 센터에서는 쉽게 [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) 서비스의 기능을 활용 하 여 알림을 자동으로 번역할 수 있습니다.
 
 1.  기본 언어로 알림을 작성한 후 **언어 추가**(**알림 콘텐츠** 섹션의 **언어** 메뉴 아래)를 선택합니다.
 2.  **언어 추가** 창에서 알림을 표시할 추가 언어를 선택한 다음 **업데이트**를 선택합니다.

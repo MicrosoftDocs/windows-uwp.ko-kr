@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, 조세, irs, 미국 국세청, 세금, 소득세, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a5e70278d655bce4ced48b33c4711762a7cce7f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fb25887d9bc40bd9c596cd437b7d2d6d06047020
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918544"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047315"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급하는 IRS 세금 양식 이해
 
@@ -23,11 +23,11 @@ ms.locfileid: "8918544"
 
 | IRS 세금 양식 | 설명 | 사용 가능한 시기 |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Microsoft 마켓플레이스 참여에 대한 지급금 및/또는 판매 활동과 관련된 세금 양식입니다. | 인쇄본 또는 **1 월 31**일 이전에 소인이 수는 및.pdf [파트너 센터](https://partner.microsoft.com/dashboard) 에서 사용할 수 있습니다 (에서 **계정 설정 > 세금 프로필**) 사본은 동일한 시기 |
-|1042-S | 미국 원천징수가 적용되는 지급금과 관련된 세금 양식입니다. | 인쇄본 또는 **3 월 15**일 이전에 소인이 수는 및.pdf 파트너 센터에서 사용할 수 있습니다 (에 **계정 설정 > 세금 프로필**) 사본은 동일한 시기 |
+|1099-MISC, 1099-K | Microsoft 마켓플레이스 참여에 대한 지급금 및/또는 판매 활동과 관련된 세금 양식입니다. | 인쇄본 또는 **1 월 31**일 이전에 소인이 수는 및.pdf 사본은 동일한 시기 ( **계정 설정 gt_ 세금 프로필**)에서 [파트너 센터](https://partner.microsoft.com/dashboard) 사용할 수 있습니다. |
+|1042-S | 미국 원천징수가 적용되는 지급금과 관련된 세금 양식입니다. | 인쇄본 또는 **3 월 15**일 이전에 소인이 수는 및.pdf 사용할 수 있습니다 ( **계정 설정 gt_ 세금 프로필**)에서 파트너 센터에서 동시에 |
 
 > [!NOTE]
-> IRS 세금 양식에서 사용 하 여 주소 [세금 프로필](setting-up-your-payout-account-and-tax-forms.md#tax-forms)에서 주소에서 제공 됩니다. 주소가 변경된 경우 **세금 프로필**에서 주소를 업데이트하세요.
+> IRS 세금 양식에서 사용 하 여 주소 [세금 프로필](setting-up-your-payout-account-and-tax-forms.md#tax-forms)에 주소에서 제공 됩니다. 주소가 변경된 경우 **세금 프로필**에서 주소를 업데이트하세요.
 
 다음 주소에서 세금 양식 전송 됩니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "8918544"
 **이외 시민:**
 <table>
 <tr><th>비즈니스 그룹</th><th>법인</th><th>주소</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft 아일랜드 작업 제한 (지불 Microsoft 아일랜드를 통해 Microsoft corporation 역할 Microsoft Corporation에 대 한 자격 갖춘된 중간을)</td><td>Microsoft 위<br>사우스&nbsp;군&nbsp;비즈니스&nbsp;Park<br>Leopardstown, 더블린 18 아일랜드</td></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft 아일랜드 작업 제한 (지불 Microsoft 아일랜드를 통해 Microsoft corporation 역할을 하며 Microsoft Corporation에 대 한 자격 갖춘된 중간)</td><td>Microsoft 위<br>사우스&nbsp;군&nbsp;비즈니스&nbsp;Park<br>Leopardstown, 더블린 18 아일랜드</td></tr>
 <tr><td>광고 *</td><td>Microsoft 아일랜드 작업 제한 (지불 Microsoft 아일랜드를 통해 Microsoft Online inc Microsoft Online inc.에 대 한 지급 에이전트 역할을)</td><td>Microsoft 위<br>사우스&nbsp;군&nbsp;비즈니스&nbsp;Park<br>Leopardstown, 더블린 18 아일랜드</td></tr>
 <tr><td>광고</td><td>Microsoft Online inc.</td><td>6100 김철수도로<br>89511 Reno, NV USA</td></tr>
 <tr><td colspan="3">* 다음 국가 수익 광고 수익의 주요 구성 Microsoft 아일랜드 작업 제한 통해 지급: 오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, 체코 공화국, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 그리스, 헝가리, 아일랜드, 맨 섬, 이탈리아, 라트비아, 리히텐슈타인, 리투아니아, 룩셈부르크, 몰타, 모나코, 네덜란드, 노르웨이, 폴란드, 포르투갈, 루마니아, 슬로바키아, 슬로베니아, 남아프리카 공화국, 스페인, 스웨덴, 스위스, 영국</td></tr>
@@ -127,4 +127,4 @@ ms.locfileid: "8918544"
 
 
 > [!NOTE]
-> **IRS 세금 양식**과 관련하여 추가적인 질문이나 우려 사항이 있는 경우 [지원 티켓](http://aka.ms/storesupport)을 만드세요. Microsoft는 특정 세금 상황과 관련된 질문에 답할 수 없습니다. 이러한 질문에 대해서는 세무 전문가에게 조언을 구하시기 바랍니다.
+> **IRS 세금 양식**과 관련하여 추가적인 질문이나 우려 사항이 있는 경우 [지원 티켓](https://aka.ms/storesupport)을 만드세요. Microsoft는 특정 세금 상황과 관련된 질문에 답할 수 없습니다. 이러한 질문에 대해서는 세무 전문가에게 조언을 구하시기 바랍니다.

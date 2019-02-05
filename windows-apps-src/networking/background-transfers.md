@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d67bb7c7fd2173e1406669367935efdb09967ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2535818d5362b1ffe4b7b35c7b4079bee73a511f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932526"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046057"
 ---
 # <a name="background-transfers"></a>백그라운드 전송
 백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 장치 배터리 상태에 따라 다운로드 작업이 조정됩니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
@@ -82,7 +82,7 @@ JavaScript Promise를 사용하여 정의된 비동기 메서드 호출에 유�
 promise = upload.startAsync().then(complete, error, progress);
 ```
 
-비동기 메서드 호출 뒤에 then 문이 오며, 비동기 메서드 호출에서 결과가 반환되면 호출되는, 앱에 의해 정의된 메서드를 나타냅니다. 이 프로그래밍 패턴에 대한 자세한 내용은 [Promises를 사용하는 JavaScript의 비동기 프로그래밍](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx)을 참조하세요.
+비동기 메서드 호출 뒤에 then 문이 오며, 비동기 메서드 호출에서 결과가 반환되면 호출되는, 앱에 의해 정의된 메서드를 나타냅니다. 이 프로그래밍 패턴에 대한 자세한 내용은 [Promises를 사용하는 JavaScript의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/hh464930.aspx)을 참조하세요.
 
 ### <a name="uploading-multiple-files"></a>여러 파일 업로드
 **파일 및 업로드 대상 식별**
@@ -178,7 +178,7 @@ JavaScript Promise를 사용하여 정의된 비동기 메서드 호출에 유�
 promise = download.startAsync().then(complete, error, progress);
 ```
 
-비동기 메서드 호출 뒤에 then 문이 오며, 비동기 메서드 호출에서 결과가 반환되면 호출되는, 앱에 의해 정의된 메서드를 나타냅니다. 이 프로그래밍 패턴에 대한 자세한 내용은 [Promises를 사용하는 JavaScript의 비동기 프로그래밍](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx)을 참조하세요.
+비동기 메서드 호출 뒤에 then 문이 오며, 비동기 메서드 호출에서 결과가 반환되면 호출되는, 앱에 의해 정의된 메서드를 나타냅니다. 이 프로그래밍 패턴에 대한 자세한 내용은 [Promises를 사용하는 JavaScript의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/hh464930.aspx)을 참조하세요.
 
 ### <a name="adding-additional-operation-control-methods"></a>작업 컨트롤 메서드 추가
 제어 수준은 추가 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) 메서드를 구현하여 높일 수 있습니다. 예를 들어 위의 예에 다음 코드를 추가하여 다운로드 취소 기능을 적용할 수 있습니다.
@@ -199,7 +199,7 @@ promise = download.startAsync().then(complete, error, progress);
 1.  이제 채워진 목록을 사용하여 보류 중인 작업을 다시 시작할 수 있습니다.
 
 ## <a name="post-processing"></a>사후 처리
-Windows10의 새로운 기능은 앱 실행 중이지 않을 때에 백그라운드 전송 완료 시 응용 프로그램 코드를 실행 하는 기능. 예를 들어 앱을 시작할 때마다 새 동영상을 검색하는 대신 영화 다운로드가 완료된 후 앱에서 사용 가능한 동영상 목록을 업데이트할 수 있습니다. 또는 앱에서 다른 서버나 포트를 다시 사용하여 실패한 파일 전송을 처리할 수 있습니다. 사후 처리는 성공한 전송과 실패한 전송 모두에 대해 호출되므로 이를 사용하여 사용자 지정 오류 처리 및 다시 시도 논리를 구현할 수 있습니다.
+Windows 10의 새로운 기능에는 앱 실행 중이지 않을 때에 백그라운드 전송 완료 시 응용 프로그램 코드를 실행 하는 기능입니다. 예를 들어 앱을 시작할 때마다 새 동영상을 검색하는 대신 영화 다운로드가 완료된 후 앱에서 사용 가능한 동영상 목록을 업데이트할 수 있습니다. 또는 앱에서 다른 서버나 포트를 다시 사용하여 실패한 파일 전송을 처리할 수 있습니다. 사후 처리는 성공한 전송과 실패한 전송 모두에 대해 호출되므로 이를 사용하여 사용자 지정 오류 처리 및 다시 시도 논리를 구현할 수 있습니다.
 
 사후 처리에서는 기존 백그라운드 작업 인프라를 사용합니다. 전송을 시작하기 전에 백그라운드 작업을 만들고 전송과 연결합니다. 그러면 백그라운드에서 전송이 실행되고, 완료되면 사후 처리를 수행하기 위해 백그라운드 작업이 호출됩니다.
 
@@ -260,7 +260,7 @@ public class BackgroundDownloadProcessingTask : IBackgroundTask
 
 -   연결이 설정되면 2분 이내에 응답을 받지 못한 모든 HTTP 요청 메시지가 중단됩니다.
 
-> **참고**두 시나리오에서 인터넷 연결 한다고 가정 백그라운드 전송을 다시 시도 합니다 요청을 최대 세 번까지 자동으로 합니다. 인터넷 연결이 검색되지 않는 경우 추가 요청은 인터넷에 연결될 때까지 대기합니다.
+> **참고**두 시나리오에서 인터넷 연결 있다고 가정 하 고 백그라운드 전송을 다시 시도 합니다 요청을 최대 세 번까지 자동으로 합니다. 인터넷 연결이 검색되지 않는 경우 추가 요청은 인터넷에 연결될 때까지 대기합니다.
 
 ## <a name="debugging-guidance"></a>디버깅 지침
 Microsoft Visual Studio에서 디버깅 세션을 중지하는 것은 앱을 닫는 것과 같습니다. PUT 업로드가 일시 중지되고 POST 업로드가 종료됩니다. 디버깅 중에도 앱이 지속형 업로드를 열거한 다음 다시 시작하거나 취소해야 합니다. 예를 들어 해당 디버그 세션의 이전 작업에 관심이 없는 경우 앱을 시작할 때 앱에서 열거된 지속형 업로드 작업을 취소하도록 할 수 있습니다.

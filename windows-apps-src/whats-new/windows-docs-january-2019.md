@@ -5,18 +5,18 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10 �
 ms.date: 1/17/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f224663506cbb60f6c1476caccb5ecffefeaf7b
-ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
+ms.openlocfilehash: cc5323ba12fa72fb5350e62f74206ea72fe96497
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9014403"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046133"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-january-2019"></a>1 월 2019의 새로운 Windows 개발자 문서의 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 다음과 같은 기능 개요, 개발자 지침 및 동영상 내용이 1 월에 사용할 수 있습니다.
 
-Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
@@ -70,7 +70,7 @@ WPF, Windows Forms, 및 WinUI UX 프레임 워크 GitHub의 오픈 소스 직원
 
 ### <a name="progressive-web-apps"></a>점진적 웹앱
 
-점진적 웹 앱은 여러 브라우저와 다양 한 Windows 10 장치에서 네이티브 앱 처럼 작동 하는 웹 사이트입니다. 더 자세한 [동영상을 시청](https://youtu.be/ugAewC3308Y) 한 다음 초보자를 위한 [문서를 확인](http://aka.ms/Windows-PWA) 합니다.
+점진적 웹 앱은 여러 브라우저와 다양 한 Windows 10 장치에서 네이티브 앱 처럼 작동 하는 웹 사이트입니다. 더 자세한 [동영상을 시청](https://youtu.be/ugAewC3308Y) 한 다음 초보자를 위한 [문서를 확인](https://aka.ms/Windows-PWA) 합니다.
 
 ### <a name="vs-code-series"></a>VS 코드 시리즈
 

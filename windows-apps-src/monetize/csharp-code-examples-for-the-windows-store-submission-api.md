@@ -6,12 +6,12 @@ ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 27325938ef159dfcb29de174064314ee21d3a3f5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 19cfec890d6a434a392ce08257cad6bbeee4cda1
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924239"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044986"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>C\# 샘플: 앱, 추가 기능, 플라이트 제출
 
@@ -29,14 +29,14 @@ ms.locfileid: "8924239"
 이러한 예제는 다음 라이브러리를 사용합니다.
 
 * Microsoft.WindowsAzure.Storage.dll. 이 라이브러리는 [.NET용 Azure SDK](https://azure.microsoft.com/downloads/)에서 사용할 수 있으며 또는 [WindowsAzure.Storage NuGet 패키지](https://www.nuget.org/packages/WindowsAzure.Storage)를 설치하여 가져올 수 있습니다.
-* Newtonsoft의 [Newtonsoft.Json](http://www.newtonsoft.com/json) NuGet 패키지.
+* Newtonsoft의 [Newtonsoft.Json](https://www.newtonsoft.com/json) NuGet 패키지.
 
 ## <a name="main-program"></a>기본 프로그램
 
 다음 예제에서는 Microsoft Store 제출 API를 사용하는 여러 가지 방법을 보여 주기 위해 이 문서의 다른 예제 메서드를 호출하는 명령줄 프로그램을 구현합니다. 이 프로그램을 필요에 따라 조정하려면,
 
 * 관리하려는 앱, 추가 기능, 패키지 플라이트의 ID에 ```ApplicationId```, ```InAppProductId``` 및 ```FlightId``` 속성을 할당합니다.
-* 앱의 클라이언트 ID 및 키에 ```ClientId``` 및 ```ClientSecret``` 속성을 할당하고 ```TokenEndpoint``` URL의 *tenantid* 문자열을 앱의 테넌트 ID로 바꿉니다. 자세한 내용은 [파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하는 방법을](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account) 참조 하세요.
+* 앱의 클라이언트 ID 및 키에 ```ClientId``` 및 ```ClientSecret``` 속성을 할당하고 ```TokenEndpoint``` URL의 *tenantid* 문자열을 앱의 테넌트 ID로 바꿉니다. 자세한 내용은 참조 [파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하는 방법](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/Program.cs#Main)]
@@ -76,7 +76,7 @@ ms.locfileid: "8924239"
 2. 다음으로 [추가 기능의 새 제출 만들기](create-an-add-on-submission.md) 작업을 수행합니다.
 3. 제출할 아이콘이 포함된 ZIP 보관 파일을 Azure Blob Storage에 업로드합니다.
 4. 그런 다음이 [파트너 센터에 새 제출을 커밋합니다](commit-an-add-on-submission.md).
-5. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태를 확인](get-status-for-an-add-on-submission.md)합니다.
+5. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태 확인](get-status-for-an-add-on-submission.md)합니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/InAppProductSubmissionCreateSample.cs#InAppProductSubmissionCreateSample)]

@@ -5,12 +5,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 배너 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: e8754790fac07e6e1babdb44888cfd1ff138c230
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5f8aea8f204127a0f783f9b751a9f4178667753e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938235"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9045881"
 ---
 # <a name="banner-ads"></a>배너 광고
 
@@ -31,5 +31,5 @@ ms.locfileid: "8938235"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [GitHub의 광고 샘플](http://aka.ms/githubads)
+* [GitHub의 광고 샘플](https://aka.ms/githubads)
 * [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md)

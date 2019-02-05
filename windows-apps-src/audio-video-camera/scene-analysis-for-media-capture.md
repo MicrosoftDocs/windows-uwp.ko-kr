@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9714488473bf4bdc118fd56129ea67e00019dcb1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3359c3e7d7841e68dd00dc318eb1de9f1418df06
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934768"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047345"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>카메라 프레임 분석 효과
 
@@ -97,7 +97,7 @@ ms.locfileid: "8934768"
 
 [!code-cs[RegisterFaceDetectionHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterFaceDetectionHandler)]
 
-이벤트에 대한 처리기에서 [**FaceDetectedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948774)의 [**FaceDetectionEffectFrame.DetectedFaces**](https://msdn.microsoft.com/library/windows/apps/dn948792) 속성에 액세스하여 프레임에서 감지된 모든 얼굴의 목록을 가져올 수 있습니다. [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126) 속성은 감지된 얼굴이 포함된 사각형을 미리 보기 스트림 크기에 대해 상대적인 단위로 설명하는 [**BitmapBounds**](https://msdn.microsoft.com/library/windows/apps/br226169) 구조입니다. 미리 보기 스트림 좌표를 화면 좌표로 변환하는 샘플 코드를 보려면 [얼굴 감지 UWP 샘플](http://go.microsoft.com/fwlink/?LinkId=619486)을 참조하세요.
+이벤트에 대한 처리기에서 [**FaceDetectedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948774)의 [**FaceDetectionEffectFrame.DetectedFaces**](https://msdn.microsoft.com/library/windows/apps/dn948792) 속성에 액세스하여 프레임에서 감지된 모든 얼굴의 목록을 가져올 수 있습니다. [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126) 속성은 감지된 얼굴이 포함된 사각형을 미리 보기 스트림 크기에 대해 상대적인 단위로 설명하는 [**BitmapBounds**](https://msdn.microsoft.com/library/windows/apps/br226169) 구조입니다. 미리 보기 스트림 좌표를 화면 좌표로 변환하는 샘플 코드를 보려면 [얼굴 감지 UWP 샘플](https://go.microsoft.com/fwlink/?LinkId=619486)을 참조하세요.
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 

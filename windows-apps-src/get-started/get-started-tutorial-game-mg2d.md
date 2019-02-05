@@ -1,17 +1,17 @@
 ---
 title: MonoGame 2D로 UWP 게임 만들기
-description: 간단한 UWP C# 및 MonoGame로 작성 된 Microsoft Store에 대 한 게임
+description: 간단한 UWP 게임에 대 한 Microsoft Store, C# 및 MonoGame로 작성
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: 95fa9e8ef9c508846443e04e23184c03e38ce9a2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e6d36c368672675f503359735de8717df1be8b57
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939328"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050656"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -43,7 +43,7 @@ Visual Studio 2017에서 프로젝트를 열고 샘플을 실행 하려면 **F5*
 **참고:** 이 샘플에서 만드는 게임은 완전한(또는 재미를 위한) 게임이 아닙니다 유일한 목적은 monogame으로 2d 게임을 개발 핵심 개념을 보여주는입니다. 이 코드를 자유롭게 사용하고 필요에 따라 개선하셔도 되고, 기본 사항을 익힌 후 처음부터 새로 시작하셔도 됩니다!
 
 ## <a name="set-up-monogame-project"></a>MonoGame 프로젝트 설정
-1. [MonoGame.net](http://www.monogame.net/)에서 Visual Studio용 **MonoGame 3.6**을 다운로드합니다.
+1. [MonoGame.net](https://www.monogame.net/)에서 Visual Studio용 **MonoGame 3.6**을 다운로드합니다.
 
 2. Visual Studio 2017을 시작 합니다.
 
@@ -482,9 +482,9 @@ broccoli.Draw(spriteBatch);
 dino.Draw(spriteBatch);
 ```
 
-MonoGame에서 새 **spriteBatch.Draw** 호출은 이전 호출 위에 그립니다. 이 브로콜리 및 공룡 스프라이트 그려집니다 기존의 풀밭 스프라이트 위에 수 숨길 수 없습니다 뒤 위치에 관계 없이 것을 의미 합니다.
+MonoGame에서 새 **spriteBatch.Draw** 호출은 이전 호출 위에 그립니다. 이 브로콜리 및 공룡 스프라이트 그려집니다 기존의 풀밭 스프라이트 위에 있습니다 수 숨길 수 없습니다 뒤 위치에 관계 없이 의미 합니다.
 
-이제 게임을 실행하고 화살표 키와 스페이스바로 공룡을 움직여 보세요. 위의 단계를 잘 따라 아바타를 움직일 게임 창 내에 있어야 하 고 브로콜리 빨라져 속도가 생성 해야 합니다.
+이제 게임을 실행하고 화살표 키와 스페이스바로 공룡을 움직여 보세요. 위의 단계를 잘 따라 게임 창 내에서 이동 아바타 있어야 및 브로콜리 빨라져 속도가 생성 해야 합니다.
 
 ![플레이어 아바타 및 장애물](images/monogame-tutorial-2.png)
 
@@ -692,4 +692,4 @@ Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/regist
 
 앱을 제출하여 [인증](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
-자세한 내용은 [게시 하는 UWP 앱을](https://developer.microsoft.com/en-us/store/publish-apps)참조 하세요.
+자세한 내용은 [UWP 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 참조 하세요.

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 145912f08075678c98dfb34ac491e123577c69e3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 696a3f0f065c209bec28f774224da6e4c8d93275
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946668"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046326"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>키 프레임 애니메이션 및 감속/가속 함수 애니메이션
 
@@ -75,7 +75,7 @@ ms.locfileid: "8946668"
 
 ### <a name="spline-key-frames"></a>스플라인 키 프레임
 
-스플라인 키 프레임은 **KeySpline** 속성의 값에 따라 값 사이의 가변 전환을 만듭니다. 이 속성은 베지어 곡선의 첫 번째 및 두 번째 제어 지점을 지정하며, 이는 애니메이션의 가속을 나타냅니다. 기본적으로 [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307)은 함수-시간 그래프가 해당 베지어 곡선의 모양이 되는 시간에 따른 함수 관계를 정의합니다. 일반적으로 **KeySpline** 값은 네 개의 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 값이 공백 또는 쉼표로 구분되는 XAML 속기 특성 문자열에 지정합니다. 이러한 값은 베지어 곡선의 두 제어점에 대한 "X,Y" 쌍입니다. "X"는 시간이고 "Y"는 값에 대한 함수 한정자입니다. 각 값은 항상 0에서 1(포함) 사이여야 합니다. **KeySpline**에 대한 제어점을 수정하지 않으면 0,0부터 1,1까지의 직선은 선형 보간의 시간에 따른 함수 표현입니다. 제어점은 해당 곡선의 모양을 변경하여 스플라인 애니메이션의 시간에 따른 함수 동작을 변경합니다. 이 동작은 그래프로 시각적으로 표시하는 것이 가장 좋을 수 있습니다. 브라우저에서 [Silverlight 키 스플라인 시각화 도우미 샘플](http://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample)을 실행하여 제어점이 곡선을 수정하는 방법 및 해당 곡선을 **KeySpline** 값으로 사용할 때 샘플 애니메이션이 실행되는 방법을 확인할 수 있습니다.
+스플라인 키 프레임은 **KeySpline** 속성의 값에 따라 값 사이의 가변 전환을 만듭니다. 이 속성은 베지어 곡선의 첫 번째 및 두 번째 제어 지점을 지정하며, 이는 애니메이션의 가속을 나타냅니다. 기본적으로 [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307)은 함수-시간 그래프가 해당 베지어 곡선의 모양이 되는 시간에 따른 함수 관계를 정의합니다. 일반적으로 **KeySpline** 값은 네 개의 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 값이 공백 또는 쉼표로 구분되는 XAML 속기 특성 문자열에 지정합니다. 이러한 값은 베지어 곡선의 두 제어점에 대한 "X,Y" 쌍입니다. "X"는 시간이고 "Y"는 값에 대한 함수 한정자입니다. 각 값은 항상 0에서 1(포함) 사이여야 합니다. **KeySpline**에 대한 제어점을 수정하지 않으면 0,0부터 1,1까지의 직선은 선형 보간의 시간에 따른 함수 표현입니다. 제어점은 해당 곡선의 모양을 변경하여 스플라인 애니메이션의 시간에 따른 함수 동작을 변경합니다. 이 동작은 그래프로 시각적으로 표시하는 것이 가장 좋을 수 있습니다. 브라우저에서 [Silverlight 키 스플라인 시각화 도우미 샘플](https://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample)을 실행하여 제어점이 곡선을 수정하는 방법 및 해당 곡선을 **KeySpline** 값으로 사용할 때 샘플 애니메이션이 실행되는 방법을 확인할 수 있습니다.
 
 다음 예제에서는 애니메이션에 적용된 세 가지 다른 키 프레임을 보여 주며, 마지막 키 프레임은 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 값([**SplineDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210446))에 대한 키 스플라인 애니메이션이 됩니다. **KeySpline**에 대해 적용된 "0.6,0.0 0.9,0.00" 문자열을 확인하세요. 이 예제에서는 애니메이션이 처음에는 느리게 실행되는 것처럼 보이지만 **KeyTime**에 도달하기 바로 전에는 해당 값에 빠르게 도달하는 곡선이 생성됩니다.
 

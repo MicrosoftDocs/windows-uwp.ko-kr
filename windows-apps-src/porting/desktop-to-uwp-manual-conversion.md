@@ -8,12 +8,12 @@ keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4b9b5f08be695d803e9254e5801ac63b2889e1c9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1dd159b7cd04a7641bf3f89605e054a00a0bad58
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945815"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051116"
 ---
 # <a name="package-a-desktop-application-manually"></a>데스크톱 응용 프로그램을 수동으로 패키징
 
@@ -30,7 +30,7 @@ ms.locfileid: "8945815"
 
 ## <a name="first-prepare-your-application"></a>첫 번째, 응용 프로그램 준비
 
-이 가이드를 검토 하 여 응용 프로그램에 대 한 패키지 만들기를 시작 하기 전에: [데스크톱 응용 프로그램 패키지를 준비](desktop-to-uwp-prepare.md)합니다.
+응용 프로그램에 대 한 패키지 만들기를 시작 하기 전에이 가이드를 검토: [데스크톱 응용 프로그램을 패키징하는 준비](desktop-to-uwp-prepare.md)합니다.
 
 ## <a name="create-a-package-manifest"></a>패키지 매니페스트 만들기
 
@@ -88,7 +88,7 @@ ms.locfileid: "8945815"
 
 ### <a name="properties"></a>특성
 
-[특성](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) 요소는 세 개의 필수 자식 요소를 가지고 있습니다. 여기에는 요소에 대한 자리 표시자 텍스트가 포함된 **특성** 요소가 예로 나와 있습니다. **표시 이름** 에 스토어에 업로드 된 앱에 대 한 저장소에 예약 하는 응용 프로그램의 이름입니다.
+[특성](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) 요소는 세 개의 필수 자식 요소를 가지고 있습니다. 여기에는 요소에 대한 자리 표시자 텍스트가 포함된 **특성** 요소가 예로 나와 있습니다. **DisplayName** 스토어에 업로드 된 앱에 대 한 저장소에 예약 하는 응용 프로그램의 이름입니다.
 
 ```XML
 <Properties>
@@ -131,7 +131,7 @@ ms.locfileid: "8945815"
 
 ### <a name="application-element"></a>응용 프로그램 요소
 
-패키지를 생성 하는 데스크톱 앱에는 ``EntryPoint`` 응용 프로그램 요소의 특성은 항상 ``Windows.FullTrustApplication``.
+데스크톱 앱의 패키지를 생성 하는 ``EntryPoint`` 응용 프로그램 요소의 특성은 항상 ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -174,7 +174,7 @@ ms.locfileid: "8945815"
 
 ### <a name="generate-a-package-resource-index-pri-file"></a>PRI(Package Resource Index) 파일 생성
 
-위의 섹션에 설명 된 대로 대상 기반 자산을 만들 경우 패키지를 만든 후 수정 응용 프로그램의 시각적 자산, 새 PRI 파일을 생성 해야 합니다.
+위 섹션에 설명 된 대로 대상 기반 자산을 만들 패키지를 만든 후 수정 응용 프로그램의 시각적 자산, 새 PRI 파일을 생성 해야 합니다.
 
 1.  **VS 2017용 개발자 명령 프롬프트**를 엽니다.
 
@@ -211,7 +211,7 @@ ms.locfileid: "8945815"
 
 **질문에 대한 답변 찾기**
 
-질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀이 이 [태그](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 문의할 수도 있습니다.
+질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀이 이 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 문의할 수도 있습니다.
 
 **피드백 제공 또는 기능 제안**
 

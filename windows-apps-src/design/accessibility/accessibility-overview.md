@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 50e6c68841440120b783713ef0a591e39a7c7eec
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d0c3bea228cae8d9482a8e0cb24c958e36992848
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942826"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046576"
 ---
 # <a name="accessibility-overview"></a>접근성 개요  
 
@@ -188,11 +188,11 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_APPS_THAT_SUPPORT_XAML___MICROSOFT_DIRECTX_INTEROP"/>
 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>XAML/Microsoft DirectX interop를 지원하는 앱의 보조 기술 지원  
-XAML UI([**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn252834) 또는 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/Hh702041) 사용)에서 호스트되는 Microsoft DirectX 콘텐츠에는 기본적으로 액세스할 수 없습니다. [XAML SwapChainPanel DirectX interop 샘플](http://go.microsoft.com/fwlink/p/?LinkID=309155)에서는 호스트된 DirectX 콘텐츠에 대한 UI 자동화 피어를 만드는 방법을 보여 줍니다. 이 방법을 사용하면 UI 자동화를 통해 호스트된 콘텐츠에 액세스할 수 있습니다.
+XAML UI([**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn252834) 또는 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/Hh702041) 사용)에서 호스트되는 Microsoft DirectX 콘텐츠에는 기본적으로 액세스할 수 없습니다. [XAML SwapChainPanel DirectX interop 샘플](https://go.microsoft.com/fwlink/p/?LinkID=309155)에서는 호스트된 DirectX 콘텐츠에 대한 UI 자동화 피어를 만드는 방법을 보여 줍니다. 이 방법을 사용하면 UI 자동화를 통해 호스트된 콘텐츠에 액세스할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 * [접근성을 위한 디자인](https://msdn.microsoft.com/library/windows/apps/Hh700407)
-* [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [접근성](accessibility.md)
 * [내레이터 시작](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

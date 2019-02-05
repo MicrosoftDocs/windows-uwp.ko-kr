@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9940367054ae8771355012492434e12aa97d43ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a1d5a15bd88b7adc23ccc835001c384a91e65a31
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921789"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050706"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 
@@ -23,7 +23,7 @@ ms.locfileid: "8921789"
 > 이 문서에 설명된 기능은 Windows 10 버전 1607부터 사용할 수 있습니다.
 
 > [!NOTE] 
-> 유니버설 Windows 앱 샘플에서는 **MediaFrameReader**를 사용하여 색, 깊이, 적외선 카메라 등 다른 프레임 원본의 프레임을 표시하는 방법을 보여 줍니다. 자세한 내용은 [카메라 프레임 샘플](http://go.microsoft.com/fwlink/?LinkId=823230)을 참조하세요.
+> 유니버설 Windows 앱 샘플에서는 **MediaFrameReader**를 사용하여 색, 깊이, 적외선 카메라 등 다른 프레임 원본의 프레임을 표시하는 방법을 보여 줍니다. 자세한 내용은 [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)을 참조하세요.
 
 > [!NOTE] 
 > 오디오 데이터가 포함된 **MediaFrameReader**를 사용하기 위한 새로운 API 세트가 Windows 10, 1803 버전에 도입되었습니다. 자세한 내용은 [MediaFrameReader를 사용하여 오디오 프레임 처리](process-audio-frames-with-mediaframereader.md)를 참조하세요.
@@ -48,7 +48,7 @@ ms.locfileid: "8921789"
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-장치에서 사용 가능한 프레임 소스 그룹 때 알림을 받도록 [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) 및 [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) 에서 반환 된 값을 사용 하 여 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) 를 만들 수도 있습니다. 외부 카메라 연결 되어 때와 같은 변경 됩니다. 자세한 내용은 [**장치 열거**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices)를 참조하세요.
+장치에서 사용 가능한 프레임 소스 그룹 때 알림을 받도록 [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) 및 [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) 에서 반환 된 값을 사용 하 여 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) 를 만들 수도 있습니다. 는 외부 카메라는 연결 되어 있을 때와 같은 변경 됩니다. 자세한 내용은 [**장치 열거**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices)를 참조하세요.
 
 [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup)에는 그룹에 포함된 프레임 원본을 설명하는 [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) 개체 컬렉션이 있습니다. 장치에서 사용할 수 있는 프레임 원본 그룹을 검색한 후에는 원하는 프레임 원본을 노출하는 그룹을 선택할 수 있습니다.
 
@@ -151,7 +151,7 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 응용 프로그램이 일시 중지될 때 미디어 캡처 개체 정리에 대한 자세한 내용은 [**카메라 미리 보기 표시**](simple-camera-preview-access.md)를 참조하세요.
 
 ## <a name="the-framerenderer-helper-class"></a>FrameRenderer 도우미 클래스
-유니버설 Windows [카메라 프레임 샘플](http://go.microsoft.com/fwlink/?LinkId=823230)은 앱의 색, 적외선 및 깊이 원본을 통해 프레임을 쉽게 표시할 수 있는 도우미 클래스를 제공합니다. 일반적으로 단순히 화면에 표시하는 대신 색과 적외선 데이터를 사용하여 더 많은 작업을 수행하려고 하지만 이 도우미 클래스를 사용하면 프레임 읽기 프로그램 기능을 보여 주고 프레임 읽기 프로그램 구현을 디버깅할 수 있습니다.
+유니버설 Windows [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)은 앱의 색, 적외선 및 깊이 원본을 통해 프레임을 쉽게 표시할 수 있는 도우미 클래스를 제공합니다. 일반적으로 단순히 화면에 표시하는 대신 색과 적외선 데이터를 사용하여 더 많은 작업을 수행하려고 하지만 이 도우미 클래스를 사용하면 프레임 읽기 프로그램 기능을 보여 주고 프레임 읽기 프로그램 구현을 디버깅할 수 있습니다.
 
 **FrameRenderer** 도우미 클래스는 다음 메서드를 구현합니다.
 
@@ -253,7 +253,7 @@ Windows 버전 1709부터 XAML 페이지의 **[MediaPlayerElement](https://docs.
 
 * [카메라](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [카메라 프레임 샘플](http://go.microsoft.com/fwlink/?LinkId=823230)
+* [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)
  
 
  

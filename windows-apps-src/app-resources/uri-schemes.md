@@ -6,12 +6,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 345a41a45e28843161e65ecb04f0083f1a71269a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b449179468d26c357e69ad1d8868004cadd6e2fa
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942849"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048350"
 ---
 # <a name="uri-schemes"></a>URI 스키마
 
@@ -19,9 +19,9 @@ ms.locfileid: "8942849"
 
 ## <a name="common-features-of-the-uri-schemes"></a>URI 스키마의 일반적인 기능
 
-이 항목에 설명된 모든 스키마는 표준화 및 리소스 검색에 대한 일반적인 URI 스키마 규칙을 따릅니다. URI의 일반적인 구문에 대해 [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444)을 참조하세요.
+이 항목에 설명된 모든 스키마는 표준화 및 리소스 검색에 대한 일반적인 URI 스키마 규칙을 따릅니다. URI의 일반적인 구문에 대해 [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444)을 참조하세요.
 
-모든 URI 스키마는 [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444)에 따라 계층 구조 부분을 기관과 URI의 경로 구성 요소로 정의합니다.
+모든 URI 스키마는 [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444)에 따라 계층 구조 부분을 기관과 URI의 경로 구성 요소로 정의합니다.
 
 ```syntax
 URI         = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
@@ -267,7 +267,7 @@ ms-resource:///Hello%23World/String1
 
 ## <a name="related-topics"></a>관련 항목
 
-* [URI(Uniform Resource Identifier): 일반 구문](http://go.microsoft.com/fwlink/p/?LinkId=263444)
+* [URI(Uniform Resource Identifier): 일반 구문](https://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [앱 패키징](../packaging/index.md)
 * [XAML 태그와 코드에서 이미지 또는 다른 자산 참조](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)

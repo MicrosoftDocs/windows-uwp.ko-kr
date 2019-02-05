@@ -6,18 +6,18 @@ ms.date: 08/11/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 고정핀
 ms.localizationpriority: medium
-ms.openlocfilehash: f67c93a6f56fd466d981bce10eb41c16ff8da1f3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bfb307093889c5a40a452d2d406f02224ab5eab1
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930253"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050646"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>지도에 관심 지점 표시
 
 고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(관심 지점)를 추가합니다. POI는 관심 있는 사항을 나타내는 지도의 특정 지점입니다. 비즈니스, 도시 또는 친구의 위치를 예로 들 수 있습니다.
 
-앱에서 POI를 표시하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [유니버설 Windows 플랫폼(UWP) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
+앱에서 POI를 표시하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [유니버설 Windows 플랫폼(UWP) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
 
 [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077), [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard),  [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) 및 [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) 개체를 [**MapElementsLayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelementslayer) 개체의 **MapElements** 컬렉션에 추가하여 고정핀, 이미지 및 셰이프를 표시합니다. 그런 다음 해당 계층 개체를 지도 컨트롤의 **계층** 컬렉션에 추가합니다.
 
@@ -92,7 +92,7 @@ public void AddSpaceNeedleIcon()
 
 ## <a name="add-a-3d-pushpin"></a>3D 고정핀 추가
 
-3D 개체를 지도에 추가할 수 있습니다. [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d) 클래스를 사용하여 [3D 제조 형식(3MF)](http://3mf.io/specification/) 파일에서 3D 개체를 가져옵니다.
+3D 개체를 지도에 추가할 수 있습니다. [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d) 클래스를 사용하여 [3D 제조 형식(3MF)](https://3mf.io/specification/) 파일에서 3D 개체를 가져옵니다.
 
 이 이미지는 3D 커피잔을 사용하여 근처에 있는 커피숍의 위치를 표시합니다.
 
@@ -186,7 +186,7 @@ public void AddLandmarkPhoto()
 
 ## <a name="add-a-shape"></a>셰이프 추가
 
-[**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) 클래스를 사용하여 지도에 다중 지점 셰이프를 표시할 수 있습니다. 다음 예제에서는 [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)에서 파란색 테두리가 있는 빨간색 상자를 지도에 표시합니다.
+[**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) 클래스를 사용하여 지도에 다중 지점 셰이프를 표시할 수 있습니다. 다음 예제에서는 [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)에서 파란색 테두리가 있는 빨간색 상자를 지도에 표시합니다.
 
 ```csharp
 public void HighlightArea()
@@ -229,7 +229,7 @@ public void HighlightArea()
 ## <a name="add-a-line"></a>선 추가
 
 
-[**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) 클래스를 사용하여 지도에 선을 표시합니다. 다음 예제에서는 [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)에서 파선을 지도에 표시합니다.
+[**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) 클래스를 사용하여 지도에 선을 표시합니다. 다음 예제에서는 [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)에서 파선을 지도에 표시합니다.
 
 ```csharp
 public void DrawLineOnMap()
@@ -474,10 +474,10 @@ XAML 페이지에서 계층을 반환하는 뷰 모델 클래스의 속성에 �
 ## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)
 * [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103)
 * [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114)

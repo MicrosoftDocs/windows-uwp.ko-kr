@@ -6,18 +6,18 @@ ms.date: 03/14/2018
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지도 컨트롤, 지도 보기
 ms.localizationpriority: medium
-ms.openlocfilehash: 7713c1664018a1875d80f70fb75da2afe6104c3c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 03c864a6e8bc6191f63a2b6fd55d8eb23ad965e4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924365"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046992"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>2D, 3D, Streetside 뷰로 지도 표시
 
 지도 *장소 카드*라는 빠른 해제 가능 창 또는 전체 기능을 갖춘 지도 컨트롤에서 지도를 표시할 수 있습니다.
 
-[지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하여 이 가이드에 설명된 몇 가지 기능을 시도해 보세요.
+[지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하여 이 가이드에 설명된 몇 가지 기능을 시도해 보세요.
 
 <a id="placecard" />
 
@@ -455,10 +455,10 @@ private async void display3DLocation()
 ## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [현재 위치 가져오기](get-location.md)
 * [위치 인식 앱에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)
 * [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)

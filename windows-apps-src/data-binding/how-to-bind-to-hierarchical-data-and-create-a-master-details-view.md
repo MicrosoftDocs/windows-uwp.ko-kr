@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 194bbeefbd3ca5f8237bb3449ec935211056aea3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1c2280fd7234fc41ee02dc17909bda8d7af0e1b9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923685"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049098"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>계층적 데이터에 바인딩하고 마스터/세부 정보 보기 만들기
 
 
 
-> **참고**도 [마스터/세부 정보 샘플](http://go.microsoft.com/fwlink/p/?linkid=619991)을 참조 하세요.
+> **참고**도 [마스터/세부 정보 샘플](https://go.microsoft.com/fwlink/p/?linkid=619991)을 참조 하세요.
 
 체인으로 함께 바인딩된 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) 인스턴스에 항목 컨트롤을 바인딩하여 계층적 데이터에 대한 여러 수준 마스터/세부 정보(목록-세부 정보라고도 함) 보기를 만들 수 있습니다. 이 항목에서는 가능한 경우 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)을 사용하며, 필요한 경우 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용합니다.
 

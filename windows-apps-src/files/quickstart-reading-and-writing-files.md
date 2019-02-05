@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: e3e18bc5ec683e6c7a8aab18321f4b98511faa62
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: d60dcb60d8628822d7597ad25268aae5e7a7ae6a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980341"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044580"
 ---
 # <a name="create-write-and-read-a-file"></a>파일 만들기, 쓰기 및 읽기
 
@@ -29,13 +29,13 @@ ms.locfileid: "8980341"
 [**StorageFile**](/uwp/api/windows.storage.storagefile) 개체를 사용하여 파일을 읽고 씁니다.
 
 > [!NOTE]
-> 전체 샘플 [파일 액세스 샘플](http://go.microsoft.com/fwlink/p/?linkid=619995)을 참조 하세요.
+> 전체 샘플 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)을 참조 하세요.
 
 ## <a name="prerequisites"></a>필수 조건
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
-    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C +에서 비동기 앱을 작성 하는 방법을 알아보려면 + WinRT, 참조 [동시성 및 비동기 작업을 사용 하 여 C + + WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)합니다. C +에서 비동기 앱을 작성 하는 방법을 알아보려면 + /CX를 참조 하세요 [C +의 비동기 프로그래밍 + CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)합니다.
+    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C +에서 비동기 앱을 작성 하는 방법을 알아보려면 + /winrt를 참조 하세요 [동시성 및 비동기 작업을 사용 하 여 C + + WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency). C +에서 비동기 앱을 작성 하는 방법을 알아보려면 + /CX 참조 [비동기 프로그래밍 C + + CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)합니다.
 
 -   **읽거나, 쓰거나, 일고 쓸 파일을 가져오는 방법에 대해 알아봅니다.**
 
@@ -191,7 +191,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
         Windows.Security.Cryptography.BinaryStringEncoding.Utf8)
     ```
 
-2.  그런 다음 바이트를 씁니다 버퍼의 파일에 [**FileIO.WriteBufferAsync**](/uwp/api/windows.storage.fileio.writebufferasync) 메서드를 호출 하 여 합니다.
+2.  그런 다음 바이트를 씁니다 버퍼의 파일에 [**FileIO.WriteBufferAsync**](/uwp/api/windows.storage.fileio.writebufferasync) 메서드를 호출 합니다.
 
     ```csharp
     await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer);
@@ -254,7 +254,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
     Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite)
     ```
 
-2.  다음으로 [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) 메서드를 호출 하 여 출력 스트림을 가져옵니다 합니다 `stream`. C#을 사용 하는 경우 다음이를 묶습니다 **using** 문을 출력 스트림의 수명을 관리 합니다. 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 다음 블록에 바깥쪽 설정 하 여 수명이 제어할 수 있습니다 `nullptr` 을 완료 했으면 합니다.
+2.  다음으로 [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) 메서드를 호출 하 여 출력 스트림을 가져옵니다는 `stream`. C#을 사용 하는 경우 다음이를 묶습니다 **using** 문을 출력 스트림의 수명을 관리 합니다. 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 다음 블록에 포함 하거나를 설정 하 여는 수명 주기를 제어할 수 있습니다 `nullptr` 을 완료 했으면 합니다.
 
     ```csharp
     using (var outputStream = stream.GetOutputStreamAt(0))
@@ -280,7 +280,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
     End Using
     ```
 
-3.  이제이 추가 새 [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) 개체를 만들고 [**DataWriter.WriteString**](/uwp/api/windows.storage.streams.datawriter.writestring) 메서드를 호출 하 여 출력 스트림에 쓸 (사용 중인 경우 C#을 **사용 하 여** 기존 문 내에서) 코드입니다.
+3.  이제이 추가 코드 새 [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) 개체를 만들고 [**DataWriter.WriteString**](/uwp/api/windows.storage.streams.datawriter.writestring) 메서드를 호출 하 여 출력 스트림에 쓸를 (사용 중인 경우 C#을 **사용 하 여** 기존 문 내에서).
 
     ```csharp
     using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
@@ -306,7 +306,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
     dataWriter.WriteString("DataWriter has methods to write to various types, such as DataTimeOffset.")
     ```
 
-4.  마지막으로,이 추가 코드 (사용 하는 C#을 **사용 하 여** 내부 문 내) [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) 를 사용 하 여 파일을 텍스트를 저장 하 고 [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync)로 스트림을 닫습니다.
+4.  마지막으로,이 추가 코드 (사용 하는 C#을 **사용 하 여** 내부 문 내) [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) 를 사용 하 여 파일에 텍스트를 저장 하 고 [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync)로 스트림을 닫습니다.
 
     ```csharp
     await dataWriter.StoreAsync();

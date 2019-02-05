@@ -6,12 +6,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 173164106e068e3fa081c8d7ddf7838d5b3d18db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ffc2f31b52e7913905c7d64ab797b2939cfb313d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927459"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045226"
 ---
 # <a name="networking-basics"></a>네트워킹 기본 사항
 네트워크 지원 앱에 대해 수행해야 하는 사항입니다.
@@ -36,7 +36,7 @@ ms.locfileid: "8927459"
 | **sharedUserCertificates** | 이 접근 권한 값은 앱이 소프트웨어 및 하드웨어 인증서(예: 스마트 카드 인증서)에 액세스할 수 있게 합니다. 런타임에 이 접근 권한 값을 호출하면 사용자는 카드를 삽입하거나 인증서를 선택하는 것과 같은 조치를 수행해야 합니다. <br/> 이 접근 권한 값을 사용할 경우 앱에서 식별하는 데 소프트웨어 및 하드웨어 인증서 또는 스마트 카드를 사용합니다. 회사, 은행 또는 정부 기관에서 식별의 용도로 이 접근 권한 값을 사용할 수 있습니다. |
 
 ## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>앱이 포그라운드에 없는 경우의 통신
-[백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/library/windows/apps/mt299103) 섹션에서는 앱이 포그라운드에 없을 때 작업을 위해 백그라운드 작업을 사용하는 방법에 대한 일반적인 정보를 제공합니다. 더 구체적으로 말하자면, 코드가 현재 포그라운드 앱용이 아니고 데이터가 네트워크를 통해 수신된 경우 알림을 받을 수 있도록 특별한 조치를 취해야 합니다. Windows8,에서는 이러한 목적 컨트롤 채널 트리거를 사용 하 고 Windows10에서 계속 지원 됩니다. 컨트롤 채널 트리거를 사용하는 방법에 대한 전체 정보는 [**here**](https://msdn.microsoft.com/library/windows/apps/hh701032)에서 확인할 수 있습니다. Windows10의 새로운 기술에서는 푸시 사용 스트림 소켓과 같은 일부 시나리오의 경우 낮은 오버 헤드를 사용 하 여 더 나은 기능을 제공: 소켓 브로커와 소켓 작업 트리거 합니다.
+[백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/library/windows/apps/mt299103) 섹션에서는 앱이 포그라운드에 없을 때 작업을 위해 백그라운드 작업을 사용하는 방법에 대한 일반적인 정보를 제공합니다. 더 구체적으로 말하자면, 코드가 현재 포그라운드 앱용이 아니고 데이터가 네트워크를 통해 수신된 경우 알림을 받을 수 있도록 특별한 조치를 취해야 합니다. Windows8,에서는 이러한 목적 컨트롤 채널 트리거를 사용 하 고 windows 10에서 계속 지원 됩니다. 컨트롤 채널 트리거를 사용하는 방법에 대한 전체 정보는 [**here**](https://msdn.microsoft.com/library/windows/apps/hh701032)에서 확인할 수 있습니다. Windows 10의 새로운 기술에서는 푸시 사용 스트림 소켓과 같은 일부 시나리오에 대 한 낮은 오버 헤드가 더 나은 기능을 제공: 소켓 브로커와 소켓 작업 트리거 합니다.
 
 앱에서 [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)를 사용하는 경우 시스템에서 제공된 소켓 브로커로 열린 소켓의 소유권을 전송하고 포그라운드에서 벗어나거나 종료할 수도 있습니다. 전송된 소켓에 대한 연결이 설정되거나, 해당 소켓에 트래픽이 도착하면 앱 또는 지정된 백그라운드 작업이 활성화됩니다. 앱이 실행되지 않는 경우 앱이 시작됩니다. 그런 다음 소켓 브로커가 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용하여 새 트래픽이 도착했음을 앱에 알립니다. 앱은 소켓 브로커에서 소켓을 회수하고 해당 소켓에서 트래픽을 처리합니다. 따라서 앱은 네트워크 트래픽을 적극적으로 처리하지 않을 때 보다 적은 시스템 리소스를 사용합니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "8927459"
 ### <a name="choosing-a-network-trigger"></a>네트워크 트리거 선택
 특정한 종류의 트리거가 적합한 몇 가지 시나리오가 있습니다. 앱에서 사용할 트리거 종류를 선택할 때 다음 사항을 고려합니다.
 
--   [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 또는 [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638)를 사용하는 경우 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)를 사용해야 합니다.
+-   [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 또는 [System.Net.Http.HttpClientHandler](https://go.microsoft.com/fwlink/p/?linkid=241638)를 사용하는 경우 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)를 사용해야 합니다.
 -   푸시 사용 **StreamSockets**를 사용하는 경우 컨트롤 채널 트리거를 사용할 수 있지만 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용하는 것이 더 좋습니다. 후자는 연결이 적극적으로 사용되지 않는 경우 시스템에서 메모리를 확보하고 전원 요구 사항을 줄일 수 있습니다.
 -   앱에서 네트워크 요청을 적극적으로 처리하지 않는 경우 앱의 메모리 공간을 최소화하려면 가능한 경우 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용하는 것이 좋습니다.
 -   시스템은 연결된 대기 상태 모드에 있는 동안 앱에서 데이터를 받을 수 있도록 하려면 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용하는 것이 좋습니다.
@@ -464,7 +464,7 @@ using Windows::Storage::Streams;
 네트워크를 통해 연결할 때 인증 자격 증명을 제공하는 방법입니다.
 
 ### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>StreamSocket 클래스를 사용하여 클라이언트 인증서 제공
-[**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows10, (해야 설정 TLS 핸드셰이크를 시작 하기 전에) [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체에서 클라이언트 인증서를 제공할 수 있습니다. 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
+[**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows 10의 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체 (이 설정 되어야 합니다 TLS 핸드셰이크를 시작 하기 전에)에서 클라이언트 인증서를 제공할 수 있습니다. 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
 
 다음은 이를 구현하는 방법을 보여 주는 코드 조각입니다.
 
@@ -507,4 +507,4 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 -   다른 API는 실제 **HRESULT** 값을 검색하는 메서드를 제공합니다.
 
 ## <a name="related-topics"></a>관련 항목
-* [Windows 10의 향상된 네트워킹 API 기능](http://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)
+* [Windows 10의 향상된 네트워킹 API 기능](https://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)

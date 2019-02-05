@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 26f47f3175802191a866bcd77e4cc7a95ffdbbe4
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 2101eba9c78c87339af5f1bd46e6afc81eacf6af
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981477"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047428"
 ---
 # <a name="create-custom-transport-controls"></a>사용자 지정 전송 컨트롤 만들기
 
@@ -26,7 +26,7 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 시작하기 전에 MediaPlayerElement 및 MediaTransportControls 클래스에 익숙해야 합니다. 자세한 내용은 MediaPlayerElement 컨트롤 가이드를 참조하세요.
 
 > [!TIP]
-> 이 항목의 예제는 [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023)에 기반을 두고 있습니다. 샘플을 다운로드하여 전체 코드를 보고 실행할 수 있습니다.
+> 이 항목의 예제는 [미디어 전송 컨트롤 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620023)에 기반을 두고 있습니다. 샘플을 다운로드하여 전체 코드를 보고 실행할 수 있습니다.
 
 > [!NOTE]
 > **MediaPlayerElement**는 Windows 10, 버전 1607 이상에서만 사용 가능합니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 대신 사용해야 합니다. 이 페이지의 모든 예제는 **MediaElement**에서도 작동합니다.
@@ -95,7 +95,7 @@ MediaTransportControls의 모양만 수정하려는 경우 기본 컨트롤 스�
 
 ### <a name="create-a-derived-control"></a>파생된 컨트롤 만들기
 
-전송 컨트롤의 기능을 추가하거나 수정하려면 MediaTransportControls에서 파생된 새 클래스를 만들어야 합니다. `CustomMediaTransportControls`라는 파생 클래스가 [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023) 및 이 페이지의 나머지 예제에 나와 있습니다.
+전송 컨트롤의 기능을 추가하거나 수정하려면 MediaTransportControls에서 파생된 새 클래스를 만들어야 합니다. `CustomMediaTransportControls`라는 파생 클래스가 [미디어 전송 컨트롤 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620023) 및 이 페이지의 나머지 예제에 나와 있습니다.
 
 **MediaTransportControls에서 파생된 새 클래스를 만들려면**
 1. 새 클래스 파일을 프로젝트에 추가합니다.
@@ -202,7 +202,7 @@ MediaTransportControls 템플릿에서 명령 단추는 [**CommandBar**](https:/
 
 ### <a name="adding-a-custom-button"></a>사용자 지정 단추 추가
 
-MediaTransportControls를 사용자 지정하려고 할 수 있는 한 가지 이유는 사용자 지정 명령을 컨트롤에 추가할 수 있기 때문입니다. 기본 명령으로 추가하든 아니면 보조 명령으로 추가하든 명령 단추를 만들고 해당 동작을 수정하기 위한 절차는 동일합니다. [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023)에서 "등급" 단추가 기본 명령에 추가됩니다.
+MediaTransportControls를 사용자 지정하려고 할 수 있는 한 가지 이유는 사용자 지정 명령을 컨트롤에 추가할 수 있기 때문입니다. 기본 명령으로 추가하든 아니면 보조 명령으로 추가하든 명령 단추를 만들고 해당 동작을 수정하기 위한 절차는 동일합니다. [미디어 전송 컨트롤 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620023)에서 "등급" 단추가 기본 명령에 추가됩니다.
 
 **사용자 지정 명령 단추를 추가하려면**
 1. AppBarButton 개체를 만들고 컨트롤 템플릿의 CommandBar에 추가합니다.
@@ -215,7 +215,7 @@ MediaTransportControls를 사용자 지정하려고 할 수 있는 한 가지 �
               VerticalAlignment="Center" />
 ```
 
-Commandbar 적절 한 위치에 추가 해야 합니다. (자세한 내용은 작업 오버플로 메뉴 섹션을 참조). 태그에서 단추는 어디에 UI에 배치 되는 방법을 결정 됩니다. 예를 들어이 단추가 기본 명령에서 마지막 요소로 표시 하려는 경우 기본 명령이 목록 맨 끝에 추가 합니다.
+Commandbar 적절 한 위치에 추가 해야 합니다. (자세한 내용은 작업 오버플로 메뉴 섹션을 참조). UI에 어떻게 배치 되는 태그에서 단추는 의해 결정 됩니다. 예를 들어, 기본 명령에서 마지막 요소로 표시 하려면이 단추를 원하는 경우 기본 명령이 목록 맨 끝에 추가 합니다.
 
 단추에 아이콘을 사용자 지정할 수 있습니다. 자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx"><b>AppBarButton</b></a> 참조를 참조 하세요.
     

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a59fe6056661289726fdaa6c2dd26e90d5e3fad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 50e818059436cf7653bf7ac7b2203b0761b93377
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920388"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045046"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>In-process 백그라운드 작업 만들기 및 등록
 
@@ -68,7 +68,7 @@ In-process 백그라운드 작업의 경우 `TaskEntryPoint.`를 설정하지 �
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>OnBackgroundActivated()에서 백그라운드 작업 코드 배치
 
-백그라운드 트리거가 발생할 때 응답을 [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 백그라운드 작업 코드를 넣습니다. **OnBackgroundActivated** [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396)처럼 처리할 수 있습니다. 메서드에 **Run** 메서드를 제공 하는 모든 항목이 포함 된 [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) 매개를 변수가 있습니다. 예 App.xaml.cs에서:
+백그라운드 트리거가 발생할 때 응답을 [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 백그라운드 작업 코드를 넣습니다. **OnBackgroundActivated** [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396)처럼 처리할 수 있습니다. 메서드에 **Run** 메서드가 제공 하는 모든 항목이 포함 된 [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) 매개를 변수가 있습니다. 예 App.xaml.cs에서:
 
 ``` cs
 using Windows.ApplicationModel.Background;
@@ -127,7 +127,7 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
 **백그라운드 작업 API 참조**
 

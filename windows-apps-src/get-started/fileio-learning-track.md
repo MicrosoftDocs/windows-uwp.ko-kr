@@ -6,12 +6,12 @@ ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 파일, 파일 io, 파일, 파일 읽기, 파일 쓰기, 파일 만들기, 텍스트 쓰기, 텍스트 읽기
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9350228585ec8108c41bd15de6179de0294140dc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e0abc146820ca27ee83662ba5f8b79a1daf90bab
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921083"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045532"
 ---
 # <a name="work-with-files"></a>파일 작업
 
@@ -61,7 +61,7 @@ await Windows.Storage.FileIO.AppendLinesAsync(file, listOfStrings); // each entr
 
 ## <a name="read-text-from-a-file"></a>파일에서 텍스트 읽기
 
-파일 쓰기와 마찬가지로 파일 읽기는 파일이 있는 위치를 지정하는 것으로 시작합니다. 위 예제와 같은 위치를 사용하겠습니다. 그런 다음 해당 콘텐츠를 읽을 **FileIO** 클래스를 사용 됩니다.
+파일 쓰기와 마찬가지로 파일 읽기는 파일이 있는 위치를 지정하는 것으로 시작합니다. 위 예제와 같은 위치를 사용하겠습니다. 그런 다음 해당 콘텐츠를 읽을 수 **FileIO** 클래스를 사용 됩니다.
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
@@ -130,7 +130,7 @@ UWP 앱은 매니페스트에 해당 접근 권한 값을 추가하여 특정 �
 | [파일 만들기, 쓰기 및 읽기](https://docs.microsoft.com/windows/uwp/files/quickstart-reading-and-writing-files) | 텍스트, 이진 데이터 및 스트림을 만들고 읽고 쓰는 것에 대해 설명합니다. |
 | [로컬로 앱 데이터 저장 시작](https://blogs.windows.com/buildingapps/2016/05/10/getting-started-storing-app-data-locally/#pCbJKGjcShh5DTV5.97) | 로컬 데이터를 저장하기 위한 모범 사례를 다룰 뿐 아니라 LocalSettings 및 LocalCache 폴더의 목적을 설명합니다. |
 | [앱 데이터 로밍 시작](https://blogs.windows.com/buildingapps/2016/05/03/getting-started-with-roaming-app-data/#RgjgLt5OkU9DbVV8.97) | 앱 데이터 로밍을 사용하는 방법에 대한 두 부분으로 구성된 시리즈입니다. |
-| [응용 프로그램 데이터를 로밍하는 지침](http://msdn.microsoft.com/library/windows/apps/hh465094) | 앱을 디자인할 때 이러한 데이터 로밍 지침을 따릅니다. |
+| [응용 프로그램 데이터를 로밍하는 지침](https://msdn.microsoft.com/library/windows/apps/hh465094) | 앱을 디자인할 때 이러한 데이터 로밍 지침을 따릅니다. |
 | [설정 및 기타 앱 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data) | 로컬, 로밍 및 임시 폴더와 같은 다양한 앱 데이터 저장에 대한 개요를 제공합니다. 디바이스 간에 로밍하는 데이터를 쓰는 지침 및 추가 정보는 [데이터 로밍](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#roaming-data) 섹션을 참조하세요. |
 | [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions) | 앱이 액세스할 수 있는 파일 시스템 위치에 대한 정보입니다. |
 | [선택기를 사용하여 파일 및 폴더 열기](https://docs.microsoft.com/windows/uwp/files/quickstart-using-file-and-folder-pickers) | 사용자가 선택기 UI를 통해 결정할 수 있도록 하여 파일 및 폴더에 액세스하는 방법을 보여 줍니다. |
@@ -143,6 +143,6 @@ UWP 앱은 매니페스트에 해당 접근 권한 값을 추가하여 특정 �
 |-----------------|---------------|
 | [응용 프로그램 데이터 샘플](https://code.msdn.microsoft.com/windowsapps/ApplicationData-sample-fb043eb2) | 응용 프로그램 데이터 API를 사용하여 각 사용자에게 관련된 데이터를 저장 및 검색하는 방법을 보여 줍니다. |
 | [파일 액세스 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | 파일을 만들고, 읽고, 쓰고, 복사하고 삭제하는 방법을 보여 줍니다. |
-| [파일 선택기 샘플](http://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | UI를 사용하여 사용자가 선택하도록 하여 파일 및 폴더에 액세스하는 방법과 사용자가 이름, 파일 형식 및 저장할 파일의 위치를 지정할 수 있도록 파일을 저장하는 방법을 보여 줍니다. |
+| [파일 선택기 샘플](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | UI를 사용하여 사용자가 선택하도록 하여 파일 및 폴더에 액세스하는 방법과 사용자가 이름, 파일 형식 및 저장할 파일의 위치를 지정할 수 있도록 파일을 저장하는 방법을 보여 줍니다. |
 | [JSON 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Json) | [Windows.Data.Json 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.Data.Json)를 사용하여 JavaScript Object Notation(JSON) 개체, 배열, 문자열, 숫자 및 부울을 인코딩 및 디코딩하는 방법을 보여 줍니다. |
 | [추가 코드 샘플](https://developer.microsoft.com//windows/samples) | 범주 드롭다운 목록에서 **파일, 폴더 및 라이브러리**를 선택합니다. |

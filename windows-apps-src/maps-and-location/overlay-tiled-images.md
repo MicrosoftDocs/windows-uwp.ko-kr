@@ -6,18 +6,18 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: Windows 10, uwp, 지도, 위치, 이미지, 오버레이
 ms.localizationpriority: medium
-ms.openlocfilehash: 47b9c4335a99e7b0f17da0fb9ddb520cc917e398
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c0c2f07a364980b67a34a519eb5dd8b4da1a18f0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942305"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046436"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>지도에서 바둑판식 이미지 오버레이
 
 타일 소스를 사용하여 지도에 타사 또는 사용자 지정 바둑판식 이미지를 오버레이합니다. 타일 소스를 사용하여 특수 정보(예제: 날씨 데이터, 인구 데이터, 지진 데이터 등)를 오버레이하거나 기본 지도를 전체적으로 바꿉니다.
 
-**팁** 앱에서 지도 사용에 대한 자세한 내용을 보려면 Github에서 [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
+**팁** 앱에서 지도 사용에 대한 자세한 내용을 보려면 Github에서 [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
 
 <a id="tileintro" />
 
@@ -25,7 +25,7 @@ ms.locfileid: "8942305"
 
 지도 서비스(예제: Nokia 지도 및 Bing 지도)에서는 빠른 검색과 표시를 위해 지도를 사각형 타일로 자릅니다. 이 타일은 256x256픽셀 크기이며 여러 수준의 정보에 미리 렌더링되어 있습니다. 또한 여러 타사 서비스에서 타일로 잘라낸 지도 기반 데이터를 제공합니다. 타일 소스를 사용하여 타사 타일을 검색하거나 사용자 지정 타일을 만든 다음 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)에 표시된 지도에서 타일을 오버레이합니다.
 
-**중요 한**  타일 소스를 사용 하는 경우를 요청 하거나 개별 타일을 배치 하는 코드를 작성할 필요가 없습니다. [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)이 필요한 타일을 요청합니다. 각 요청은 개별 타일의 X 및 Y 좌표와 확대/축소 수준을 지정합니다. 사용할 URI 또는 파일 이름의 형식만 지정하여 **UriFormatString** 속성에서 타일을 검색합니다. 즉, 기본 URI 또는 파일 이름에 대체 가능한 매개 변수를 삽입하여 각 타일에 대해 X 및 Y 좌표와 확대/축소 수준을 전달할 위치를 나타냅니다.
+**중요 한**  타일 소스를 사용 하면 요청 또는 개별 타일 위치를 지정 하려면 코드를 작성할 필요가 없습니다. [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)이 필요한 타일을 요청합니다. 각 요청은 개별 타일의 X 및 Y 좌표와 확대/축소 수준을 지정합니다. 사용할 URI 또는 파일 이름의 형식만 지정하여 **UriFormatString** 속성에서 타일을 검색합니다. 즉, 기본 URI 또는 파일 이름에 대체 가능한 매개 변수를 삽입하여 각 타일에 대해 X 및 Y 좌표와 확대/축소 수준을 전달할 위치를 나타냅니다.
 
 다음 예에서는 X 및 Y 좌표와 확대/축소 수준에 대한 대체 가능한 매개 변수를 표시하는 [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)의 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) 속성을 보여 줍니다.
 
@@ -35,7 +35,7 @@ http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
 
 X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타일 위치를 나타냅니다. 타일 번호 지정 시스템은 지도의 왼쪽 위 모서리를 기준으로 {0, 0}부터 시작합니다. 예를 들어 {1, 2}의 타일은 타일 그리드의 세 번째 행의 두 번째 열에 있습니다.
 
-매핑 서비스에서 사용되는 타일 시스템에 대한 자세한 내용은 [Bing 지도 타일 시스템](http://go.microsoft.com/fwlink/p/?LinkId=626692)을 참조하세요.
+매핑 서비스에서 사용되는 타일 시스템에 대한 자세한 내용은 [Bing 지도 타일 시스템](https://go.microsoft.com/fwlink/p/?LinkId=626692)을 참조하세요.
 
 ### <a name="overlay-tiles-from-a-tile-source"></a>타일 소스의 타일 오버레이
 
@@ -421,7 +421,7 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessStream::get()
 ## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)

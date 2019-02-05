@@ -7,12 +7,12 @@ ms.date: 09/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e4e8d5f49d10219a06a36fdfbe7ec3abe236109a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b58eb4b6e3f3f02bb1f72fcba9da3710f08a72da
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931460"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045997"
 ---
 # <a name="high-contrast-themes"></a>고대비 테마  
 
@@ -46,7 +46,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 시스템 기본값에서 색을 변경해야 하는 경우 앱에 대한 ThemeDictionaries 컬렉션을 만듭니다.
 
 1. 이 컬렉션이 없는 경우 적절한 연결을 만들어 시작합니다. App.xaml에서 최소한 **Default** 및 **HighContrast**를 포함하여 **ThemeDictionaries** 컬렉션을 만듭니다.
-2. **Default**에서 필요한 유형의 [Brush](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx)를 만듭니다. 일반적으로 **SolidColorBrush**입니다. 이 항목에 용도와 관련된 *x:Key* 이름을 지정합니다.
+2. **Default**에서 필요한 유형의 [Brush](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx)를 만듭니다. 일반적으로 **SolidColorBrush**입니다. 이 항목에 용도와 관련된 *x:Key* 이름을 지정합니다.
 3. 이 항목에 원하는 **Color**를 할당합니다.
 4. 이 **Brush**를 **HighContrast**에 복사합니다.
 
@@ -235,7 +235,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ## <a name="related-topics"></a>관련 항목  
 * [접근성](accessibility.md)
-* [UI 대비 및 설정 샘플](http://go.microsoft.com/fwlink/p/?linkid=231539)
-* [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
-* [XAML 고대비 샘플](http://go.microsoft.com/fwlink/p/?linkid=254993)
+* [UI 대비 및 설정 샘플](https://go.microsoft.com/fwlink/p/?linkid=231539)
+* [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML 고대비 샘플](https://go.microsoft.com/fwlink/p/?linkid=254993)
 * [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)

@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c75a6c487fe4a7f7cb56deff869b36309a4b9c7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a3133508a0cb8919994543845412ef71a8d463fe
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921766"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050846"
 ---
 # <a name="conditional-xaml"></a>조건부 XAML
 
@@ -59,7 +59,7 @@ IsPropertyPresent(ControlType, PropertyName) | IsPropertyNotPresent(ControlType,
 
 이 예에서는 앱이 Fall Creators Update 이상에서 실행될 경우 텍스트 블록의 콘텐츠로 "Hello, Conditional XAML"을 표시하며, 기본값은 이전 버전에 실행이 되는 경우에는 콘텐츠를 표시하지 않도록 지정되어 있습니다.
 
-먼저 'contract5Present'라는 접두사를 가진 사용자 지정 네임스페이스를 정의하고, 기본 XAML 네임스페이스(http://schemas.microsoft.com/winfx/2006/xaml/presentation) 를 [TextBlock.Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.Text) 속성이 포함된 스키마로 사용합니다. 이 조건부 네임스페이스를 만들려면 스키마 뒤에 '?' 구분 기호를 추가합니다.
+먼저 'contract5Present'라는 접두사를 가진 사용자 지정 네임스페이스를 정의하고, 기본 XAML 네임스페이스(https://schemas.microsoft.com/winfx/2006/xaml/presentation) 를 [TextBlock.Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.Text) 속성이 포함된 스키마로 사용합니다. 이 조건부 네임스페이스를 만들려면 스키마 뒤에 '?' 구분 기호를 추가합니다.
 
 그런 다음 Fall Creators Update 이상을 실행하는 장치에서 **true**를 반환하는 조건부를 정의합니다. ApiInformation 메서드 **IsApiContractPresent**를 사용하여 5번째 버전의 UniversalApiContract를 확인할 수 있습니다. UniversalApiContract 버전 5는 Fall Creators Update(SDK 16299)와 함께 출시되었습니다.
 

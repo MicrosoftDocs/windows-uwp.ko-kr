@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
-ms.openlocfilehash: 036c3c1832bbb3e27a93671f399a9a97c7afaba3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 38b5144d9b70e6e2825ef11a64be8873ec5b7d63
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922268"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046952"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -59,9 +59,9 @@ Xbox는 이제 x86 앱 개발이나 x86 Microsoft Store로의 앱 전송을 지�
 
 ### <a name="i-sold-my-xbox-one-and-left-it-in-developer-mode-how-do-i-deactivate-developer-mode"></a>Xbox One을 팔고 개발자 모드에서 종료했습니다. 개발자 모드를 비활성화하는 방법은 무엇인가요?
 
-Xbox one에 대 한 액세스 이상 있는 경우 Windows 파트너 센터에서 비활성화할 수 없습니다. 자세한 내용은 [Xbox One 개발자 모드 비활성화](devkit-deactivation.md#deactivate-your-console-using-partner-center) 항목의 **파트너 센터를 사용 하 여 콘솔 비활성화** 섹션을 참조 하세요. 
+Xbox one에 대 한 액세스 더 이상 있는 경우 Windows 파트너 센터에서 비활성화할 수 없습니다. 자세한 내용은 [Xbox One 개발자 모드 비활성화](devkit-deactivation.md#deactivate-your-console-using-partner-center) 항목의 **파트너 센터를 사용 하 여 콘솔 비활성화** 섹션을 참조 하세요. 
 
-### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>파트너 센터를 사용 하 여 개발자 프로그램 퇴사 하지만 개발자 모드에 계속 있음. 어떻게 해야 하나요?
+### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>파트너 센터를 사용 하 여 개발자 프로그램 퇴사 하지만 여전히 개발자 모드에서 있음. 어떻게 해야 하나요?
 
 개발자 홈을 시작하고 **Leave developer mode(개발자 모드 나가기)** 단추를 선택합니다. 이렇게 하면 정품 모드로 콘솔이 다시 시작됩니다. 
 
@@ -71,7 +71,7 @@ Xbox one에 대 한 액세스 이상 있는 경우 Windows 파트너 센터에�
 
 ### <a name="can-i-publish-my-game"></a>내 게임을 게시할 수 있나요?
 
-개발자 모드에서 UWP와 Xbox One을 사용하여 Xbox One에서 게임을 빌드하고 테스트할 수 있습니다. UWP 게임을 게시하려면 [ID@XBOX](http://www.xbox.com/Developers/id) 또는 [Xbox Live Creators 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator)의 일부로 등록해야 합니다. 자세한 내용은 [개발자 프로그램 개요](https://developer.microsoft.com/games/xbox/docs/xboxlive/get-started/developer-program-overview.html)를 참조하세요.
+개발자 모드에서 UWP와 Xbox One을 사용하여 Xbox One에서 게임을 빌드하고 테스트할 수 있습니다. UWP 게임을 게시하려면 [ID@XBOX](https://www.xbox.com/Developers/id) 또는 [Xbox Live Creators 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator)의 일부로 등록해야 합니다. 자세한 내용은 [개발자 프로그램 개요](https://developer.microsoft.com/games/xbox/docs/xboxlive/get-started/developer-program-overview.html)를 참조하세요.
 
 ### <a name="will-the-standard-game-engines-work"></a>표준 게임 엔진이 작동하나요?
 

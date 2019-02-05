@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 홍보, 앱, 캠페인, 보고서, 설치
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e44374d56796ea2151424a11df1652892f247b6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7b798abf88805ef3c693149149be958ba0cc1de9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947483"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046842"
 ---
 # <a name="ad-campaign-report"></a>광고 캠페인 보고서
 
@@ -65,7 +65,7 @@ ms.locfileid: "8947483"
 
 1.  고객이 타기팅을 거부하지 않았습니다.
 2.  고객이 Microsoft 계정에 로그인한 상태입니다.
-3.  고객이 [COPPA](http://go.microsoft.com/fwlink?LinkId=536558) 요구 사항을 충족합니다. COPPA 요구 사항을 충족하지 않는 고객은 추적할 수 없습니다.
+3.  고객이 [COPPA](https://go.microsoft.com/fwlink?LinkId=536558) 요구 사항을 충족합니다. COPPA 요구 사항을 충족하지 않는 고객은 추적할 수 없습니다.
 
 결과적으로, 앱 설치 추적은 광고 캠페인으로 생성된 실제 설치 수보다 적게 보고할 수 있습니다. 앱에 대 한 설치의 총 수를 확인할 수 있습니다 (캠페인을 통해 그렇지 않은 경우)에서 파트너 센터에서 [구입](acquisitions-report.md) 보고서 합니다.
 

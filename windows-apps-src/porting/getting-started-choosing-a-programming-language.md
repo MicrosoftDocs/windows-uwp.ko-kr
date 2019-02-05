@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a9544c1eecc4c1a86552d053694872743a17142c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 48cea8c1a3a3c35a53a3376c48e3192c94caf709
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926226"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049290"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>시작: 프로그래밍 언어 선택
 
@@ -31,7 +31,7 @@ C++, C#, Microsoft Visual Basic 및 JavaScript를 사용하여 개발할 수 있
 **참고**을 3D 그래픽을 사용 하는 앱에 대 한 OpenGL 및 OpenGL ES 표준을 기본적으로 UWP 앱에 사용할 수 있습니다. OpenGL ES 코드를 Microsoft DirectX에 다시 작성하지 않으려는 경우 **Angle**이 유용할 수 있습니다. Angle은 OpenGL API 호출을 DirectX API 호출로 변환하여 OpenGL을 DirectX로 변환하도록 디자인된 진행 중인 프로젝트입니다. 자세한 내용은 다음을 참조하세요.
 -   [Angle](https://code.google.com/p/angleproject/)
 -   [DirectX를 사용 하 여 첫 UWP 앱 만들기](https://msdn.microsoft.com/library/windows/apps/br229580)
--   [DirectX를 사용 하는 UWP 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=263603)
+-   [DirectX를 사용 하는 UWP 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=263603)
 -   [DirectX SDK 위치](https://msdn.microsoft.com/library/windows/desktop/ee663275)
 
 ## <a name="giving-c-a-go"></a>C#
@@ -39,8 +39,8 @@ C++, C#, Microsoft Visual Basic 및 JavaScript를 사용하여 개발할 수 있
 iOS 개발자는 Objective-C 및 Swift에 익숙합니다. 두 언어 모두에 가장 가까운 Microsoft 프로그래밍 언어는 C#입니다. 대부분의 개발자와 대부분의 앱의 경우 가장 쉽고 짧은 기간 안에 배워서 사용할 수 있는 언어는 C#이므로 이 문서의 정보와 연습에서는 이 언어를 중심으로 설명합니다. C#에 대한 자세한 내용은 다음을 참조하세요.
 
 -   [C# 또는 Visual Basic을 사용 하 여 첫 UWP 앱 만들기](../get-started/create-a-hello-world-app-xaml-universal.md)
--   [C#을 사용 하는 UWP 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=263453)
--   [Visual C#](http://go.microsoft.com/fwlink/p/?LinkId=263450)
+-   [C#을 사용 하는 UWP 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=263453)
+-   [Visual C#](https://go.microsoft.com/fwlink/p/?LinkId=263450)
 
 다음은 Objective-C와 C#으로 작성된 클래스입니다. Objective-C 버전이 먼저 표시되고 다음에 C# 버전이 표시됩니다.
 

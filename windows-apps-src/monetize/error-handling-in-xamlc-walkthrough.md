@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: d7b2ffd15a07dc6f1018bd28cf9799e1e5209c0b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fe01a01dc97b67c339d015a260288176a5ba57da
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946208"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047052"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>XAML/C#에서 오류 처리 연습
 
@@ -75,4 +75,4 @@ ms.locfileid: "8946208"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [GitHub의 광고 샘플](http://aka.ms/githubads)
+* [GitHub의 광고 샘플](https://aka.ms/githubads)

@@ -8,12 +8,12 @@ keywords: 터치, 포인터, 입력, 사용자 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b662a7689f0b0b24fc3f70a9fbc143d4268d2cb8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b889fede67c7e32ff48c0e48a516f389afda820a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940497"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048645"
 ---
 # <a name="touch-interactions"></a>터치 조작
 
@@ -80,7 +80,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 ## <a name="use-touch-feedback"></a>터치 피드백 사용
 
-앱과의 조작 중에 적절 한 시각적 피드백이 사용자 인식, 앱 및는 Windowsplatform에서 조작이 해석 되는 방식이를 조정할 수 있습니다. 시각적 피드백은 성공적인 조작을 알리고, 시스템 상태를 전달하고, 제어 기능을 향상시키고, 오류를 줄이고, 사용자가 시스템 및 입력 장치를 이해하는 데 도움을 주고, 조작을 권장할 수 있습니다.
+앱과의 조작 중에 적절 한 시각적 피드백이 사용자 익히고, 앱과는 Windowsplatform 모두에서 조작이 해석 되는 방식이에 적응할 수 있습니다. 시각적 피드백은 성공적인 조작을 알리고, 시스템 상태를 전달하고, 제어 기능을 향상시키고, 오류를 줄이고, 사용자가 시스템 및 입력 장치를 이해하는 데 도움을 주고, 조작을 권장할 수 있습니다.
 
 위치에 따라 정확도와 정밀도를 요구하는 활동에 터치식 입력을 사용할 경우 시각적 피드백이 중요합니다. 터치식 입력이 감지될 때마다 피드백을 표시하면 사용자가 앱 및 컨트롤이 정의하는 사용자 지정 대상 지정 규칙을 이해하는 데 도움이 됩니다.
 
@@ -591,17 +591,17 @@ End Sub
 
 **샘플**
 
-* [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
 
-* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: GestureRecognizer를 사용한 조작 및 제스처](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [입력: 디바이스 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: XAML 사용자 입력 이벤트 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [입력: GestureRecognizer를 사용한 조작 및 제스처](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
  

@@ -6,16 +6,16 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, uwp, 광고, 설치, SDK, 광고 라이브러리
 ms.localizationpriority: medium
-ms.openlocfilehash: 2066d055f7abf0e9a34e245d9c6a95e14596d362
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 121accdfc8996c609c616838f645f19e2377c7c5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939341"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047754"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK 설치
 
-Windows 10용 UWP 앱에 광고를 표시하려면 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 설치합니다. 이 SDK는 Visual Studio 2015 이상 버전의 확장입니다.
+Windows 10용 UWP 앱에 광고를 표시하려면 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 설치합니다. 이 SDK는 Visual Studio 2015 이상 버전의 확장입니다.
 
 > [!NOTE]
 > 개발 하는 경우 JavaScript/HTML UWP 앱을 설치한 Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트) 또는 나중에, [WinJS](https://github.com/winjs/winjs) 라이브러리도 설치 해야 합니다. 이전 Windows 10 SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다.
@@ -35,7 +35,7 @@ MSI 설치 관리자를 통해 Microsoft Advertising Services SDK를 설치:
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
     ```
 
-3.  [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 다운로드하여 설치합니다. 설치하는 데 몇 분 정도 걸릴 수 있습니다. 프로세스가 완료되었는지 확인하고 완료될 때까지 기다립니다.
+3.  [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 다운로드하여 설치합니다. 설치하는 데 몇 분 정도 걸릴 수 있습니다. 프로세스가 완료되었는지 확인하고 완료될 때까지 기다립니다.
 
 4.  Visual Studio를 다시 시작합니다.
 
@@ -66,7 +66,7 @@ NuGet을 통해 특정 UWP 프로젝트에서 Microsoft Advertising SDK 설치:
 
 5. 검색 상자에 **Microsoft.Advertising.XAML**(XAML 프로젝트) 또는 **Microsoft.Advertising.JS**(JavaScript/HTML 프로젝트)를 입력하고, 해당 패키지를 설치합니다. 패키지 설치가 완료되면 솔루션을 저장합니다.
     > [!NOTE]
-    > **출력** 창이 지정된 경로가 너무 길다는 것을 나타내는 *Install-Package* 오류를 보고하는 경우, 기본 위치보다 경로가 더 짧은 다른 위치로 패키지를 추출하도록 NuGet을 구성해야 할 수 있습니다. 이렇게 하려면 컴퓨터의 nuget.config 파일에 ```repositoryPath``` 값을 추가하고 NuGet 패키지를 추출할 수 있는 더 짧은 폴더에 할당합니다. 자세한 내용은 NuGet 설명서에서 [이 문서](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior)를 참조하세요. 또는 Visual Studio 프로젝트를 더 짧은 경로의 대체 폴더로 이동하려고 할 수 있습니다.
+    > **출력** 창이 지정된 경로가 너무 길다는 것을 나타내는 *Install-Package* 오류를 보고하는 경우, 기본 위치보다 경로가 더 짧은 다른 위치로 패키지를 추출하도록 NuGet을 구성해야 할 수 있습니다. 이렇게 하려면 컴퓨터의 nuget.config 파일에 ```repositoryPath``` 값을 추가하고 NuGet 패키지를 추출할 수 있는 더 짧은 폴더에 할당합니다. 자세한 내용은 NuGet 설명서에서 [이 문서](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior)를 참조하세요. 또는 Visual Studio 프로젝트를 더 짧은 경로의 대체 폴더로 이동하려고 할 수 있습니다.
 
 6. 솔루션을 닫았다가 다시 엽니다.
 
@@ -101,7 +101,7 @@ Microsoft Advertising SDK를 설치한 후에는 다음 지침에 따라 광고 
 
 ## <a name="understanding-framework-packages-in-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK의 프레임워크 패키지 이해
 
-UWP 앱용 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)의 Microsoft.Advertising.dll 라이브러리는 *프레임워크 패키지*로 구성됩니다. 이 라이브러리에는 [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising) 및 [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui) 네임스페이스의 광고 API가 포함되어 있습니다.
+UWP 앱용 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)의 Microsoft.Advertising.dll 라이브러리는 *프레임워크 패키지*로 구성됩니다. 이 라이브러리에는 [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising) 및 [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui) 네임스페이스의 광고 API가 포함되어 있습니다.
 
 이 라이브러리는 프레임워크 패키지입니다. 다시 말해서 사용자가 이 라이브러리를 사용하는 앱 버전을 설치하면 수정 및 성능 향상이 포함된 새 버전의 라이브러리가 게시될 때마다 Windows 업데이트를 통해 사용자 디바이스의 라이브러리가 자동으로 업데이트됩니다. 따라서 고객의 디바이스에 항상 사용 가능한 최신 버전의 라이브러리가 설치됩니다.
 

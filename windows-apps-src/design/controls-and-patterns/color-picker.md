@@ -11,12 +11,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1025af31a4827c2369a9555c3bd1a6c4404c5959
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 215a15e3a8e1b0264987adcf6228ec52a696f50c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037215"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047102"
 ---
 # <a name="color-picker"></a>색 선택
 
@@ -220,6 +220,6 @@ private void cancelColor_Click(object sender, RoutedEventArgs e)
 <div class=”microsoft-internal-note”>
 <p>
 <p>
-Note: For more info, see the [color picker redlines](http://uni/DesignDepot.FrontEnd/#/ProductNav/3666/15/dv/?t=Windows%7CControls&f=RS2) on UNI.
+Note: For more info, see the [color picker redlines](https://uni/DesignDepot.FrontEnd/#/ProductNav/3666/15/dv/?t=Windows%7CControls&f=RS2) on UNI.
 </div>
 -->

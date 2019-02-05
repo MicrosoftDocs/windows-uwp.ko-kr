@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지오펜스, 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: adcce5716a2982cf2c08e98ee337dbad20bddf28
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 7e00a3db8890183f50efad6caa31bd573707c6a6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924670"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9045692"
 ---
 # <a name="set-up-a-geofence"></a>지오펜스 설정
 
@@ -20,9 +20,9 @@ ms.locfileid: "8924670"
 
 앱에서 [**지오펜스**](https://msdn.microsoft.com/library/windows/apps/dn263587)를 설정하고 포그라운드 및 백그라운드에서 알림을 처리하는 방법을 알아봅니다.
 
-**팁** 앱에서 위치에 액세스하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
+**팁** 앱에서 위치에 액세스하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
 
--   [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>위치 접근 권한 값 사용
 
@@ -456,7 +456,7 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 1.  Visual Studio에서 앱을 빌드합니다.
 2.  Visual Studio 에뮬레이터에서 앱을 시작합니다.
-3.  이러한 도구를 사용하여 지오펜스 영역 내부와 외부의 다양한 위치를 시뮬레이트합니다. 이벤트를 트리거하기 전에 [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) 속성에 지정된 시간 동안 기다려야 합니다. 앱에서 위치를 사용할 수 있도록 할 것인지 묻는 메시지가 표시될 때 수락해야 합니다. 위치 시뮬레이트에 대한 자세한 내용은 [시뮬레이트된 디바이스의 지리적 위치 설정](http://go.microsoft.com/fwlink/p/?LinkID=325245)을 참조하세요.
+3.  이러한 도구를 사용하여 지오펜스 영역 내부와 외부의 다양한 위치를 시뮬레이트합니다. 이벤트를 트리거하기 전에 [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) 속성에 지정된 시간 동안 기다려야 합니다. 앱에서 위치를 사용할 수 있도록 할 것인지 묻는 메시지가 표시될 때 수락해야 합니다. 위치 시뮬레이트에 대한 자세한 내용은 [시뮬레이트된 디바이스의 지리적 위치 설정](https://go.microsoft.com/fwlink/p/?LinkID=325245)을 참조하세요.
 4.  에뮬레이터를 사용하여 펜스 크기와 다양한 속도에서 감지되어야 하는 대략적인 유지 시간을 예측할 수도 있습니다.
 
 ### <a name="test-and-debug-a-geofencing-app-that-is-running-in-the-background"></a>백그라운드에서 실행되는 지오펜싱 앱 테스트 및 디버깅
@@ -468,19 +468,19 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 3.  로컬에서 실행 중인 앱을 닫습니다.
 4.  Visual Studio 에뮬레이터에서 앱을 시작합니다. 백그라운드 지오펜싱 시뮬레이션은 에뮬레이터 내에서 한 번에 하나의 앱에서만 지원됩니다. 에뮬레이터 내에서 지오펜싱 앱을 여러 개 시작하지 마세요.
 5.  에뮬레이터에서 지오펜스 영역 내부와 외부의 다양한 위치를 시뮬레이트합니다. 이벤트를 트리거하기 전에 [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) 동안 기다려야 합니다. 앱에서 위치를 사용할 수 있도록 할 것인지 묻는 메시지가 표시될 때 수락해야 합니다.
-6.  Visual Studio를 사용하여 위치 백그라운드 작업을 트리거합니다. Visual Studio에서 백그라운드 작업을 트리거하는 방법에 대한 자세한 내용은 [백그라운드 작업을 트리거하는 방법](http://go.microsoft.com/fwlink/p/?LinkID=325378)을 참조하세요.
+6.  Visual Studio를 사용하여 위치 백그라운드 작업을 트리거합니다. Visual Studio에서 백그라운드 작업을 트리거하는 방법에 대한 자세한 내용은 [백그라운드 작업을 트리거하는 방법](https://go.microsoft.com/fwlink/p/?LinkID=325378)을 참조하세요.
 
 ## <a name="troubleshoot-your-app"></a>앱 문제 해결
 
 
 앱이 위치에 액세스하려면 먼저 디바이스에서 **위치**를 사용하도록 설정해야 합니다. **설정** 앱에서 다음 **위치 개인정보 설정**이 켜져 있는지 확인합니다.
 
--   **이 장치에 대 한 위치** 이 **켜져 (Windows10 Mobile에는 해당 되지 않음)**
+-   **이 장치에 대 한 위치** 이 **켜져 (windows 10 Mobile에는 적용 되지 않음)**
 -   위치 서비스 설정 **위치**가 **켜짐** 상태임
 -   **사용자의 위치를 사용할 수 있는 앱 선택**에서 앱이 **on** 상태임
 
 ## <a name="related-topics"></a>관련 항목
 
-* [UWP 지리적 위치 샘플](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [UWP 지리적 위치 샘플](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [지오펜스에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [위치 인식 앱에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)

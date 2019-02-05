@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 13bc8f2558b3e3f15d7329697a41b177777b6e7a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 26b665f68932f7a90127ee99414f984f5d9f2005
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918994"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046782"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>백그라운드 작업에서 센서 및 장치에 액세스
 
@@ -20,7 +20,7 @@ ms.locfileid: "8918994"
 
 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. 예를 들어 앱이 실행 중인 위치에 따라 백그라운드 작업을 사용하여 장치와 데이터를 동기화하거나 센서를 모니터링할 수 있습니다. 배터리 수명을 보존하고 적절한 사용자가 동의할 수 있도록 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)에는 이 항목에서 설명하는 정책이 적용됩니다.
 
-백그라운드에서 센서나 주변 장치에 액세스하려면 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 만듭니다. PC에서 이 작업을 만드는 방법을 보여 주는 예제는 [사용자 지정 USB 장치 샘플](http://go.microsoft.com/fwlink/p/?LinkId=301975 )을 참조하세요. 휴대전화에 대한 예제는 [백그라운드 센서 샘플](http://go.microsoft.com/fwlink/p/?LinkId=393307)을 참조하세요.
+백그라운드에서 센서나 주변 장치에 액세스하려면 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 만듭니다. PC에서 이 작업을 만드는 방법을 보여 주는 예제는 [사용자 지정 USB 장치 샘플](https://go.microsoft.com/fwlink/p/?LinkId=301975 )을 참조하세요. 휴대전화에 대한 예제는 [백그라운드 센서 샘플](https://go.microsoft.com/fwlink/p/?LinkId=393307)을 참조하세요.
 
 > [!Important]
 > **DeviceUseTrigger**는 프로세스 백그라운드 작업에서 사용할 수 없습니다. 이 항목의 내용은 Out-of-proces를 실행하는 백그라운드 작업에만 적용됩니다.
@@ -33,7 +33,7 @@ ms.locfileid: "8918994"
 
 ### <a name="limitation-critical-device-operations"></a>제한 사항: 중요한 장치 작업
 
-장기 실행 펌웨어 업데이트와 같은 일부 중요한 디바이스 작업은 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)로 수행할 수 없습니다. 이러한 작업은 PC에서만 수행할 수 있으며 [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315)를 사용하는 권한 있는 앱만 수행할 수 있습니다. *권한 있는 앱*은 제조업체가 이러한 작업을 수행할 권한을 부여한 앱입니다. 장치 메타데이터는 장치에 대한 권한 있는 앱(있는 경우)을 지정하는 데 사용합니다. 자세한 내용은 [Microsoft Store 장치 앱용 장치 동기화 및 업데이트](http://go.microsoft.com/fwlink/p/?LinkId=306619)를 참조하세요.
+장기 실행 펌웨어 업데이트와 같은 일부 중요한 디바이스 작업은 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)로 수행할 수 없습니다. 이러한 작업은 PC에서만 수행할 수 있으며 [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315)를 사용하는 권한 있는 앱만 수행할 수 있습니다. *권한 있는 앱*은 제조업체가 이러한 작업을 수행할 권한을 부여한 앱입니다. 장치 메타데이터는 장치에 대한 권한 있는 앱(있는 경우)을 지정하는 데 사용합니다. 자세한 내용은 [Microsoft Store 장치 앱용 장치 동기화 및 업데이트](https://go.microsoft.com/fwlink/p/?LinkId=306619)를 참조하세요.
 
 ## <a name="protocolsapis-supported-in-a-deviceusetrigger-background-task"></a>DeviceUseTrigger 백그라운드 작업에서 지원되는 프로토콜/API
 
@@ -83,7 +83,7 @@ ms.locfileid: "8918994"
 
 **중요 한**  [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용 하는 경우 같은 중요 한 점을 고려해 야 합니다.
 
--   프로그래밍 방식으로 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) 를 사용 하는 백그라운드 작업을 실행 하는 기능 Windows8.1 및 Windows Phone 8.1에서 처음 도입 되었습니다.
+-   프로그래밍 방식으로 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) 를 사용 하는 백그라운드 작업을 실행 하는 기능 windows 8.1 및 Windows Phone 8.1에서 처음 도입 되었습니다.
 
 -   PC에서 주변 장치를 업데이트할 때 사용자 동의를 확인하기 위해 Windows에서 특정 정책을 적용합니다.
 
@@ -91,7 +91,7 @@ ms.locfileid: "8918994"
 
 -   최대 백그라운드 시간(벽시계 시간)을 포함하여 특정 정책 요구 사항이 더 이상 충족되지 않을 경우 Windows에서 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 취소할 수 있습니다. 백그라운드 작업을 사용하여 주변 장치를 조작하는 경우 이러한 정책 요구 사항을 고려 하는 것이 중요합니다.
 
-**팁**에 백그라운드 작업의 작동 방식을 확인 하려면 샘플을 다운로드 합니다. PC에서 이 작업을 만드는 방법을 보여 주는 예제는 [사용자 지정 USB 장치 샘플](http://go.microsoft.com/fwlink/p/?LinkId=301975 )을 참조하세요. 휴대전화에 대한 예제는 [백그라운드 센서 샘플](http://go.microsoft.com/fwlink/p/?LinkId=393307)을 참조하세요.
+**팁**에 백그라운드 작업의 작동 방식을 확인 하려면 샘플을 다운로드 합니다. PC에서 이 작업을 만드는 방법을 보여 주는 예제는 [사용자 지정 USB 장치 샘플](https://go.microsoft.com/fwlink/p/?LinkId=301975 )을 참조하세요. 휴대전화에 대한 예제는 [백그라운드 센서 샘플](https://go.microsoft.com/fwlink/p/?LinkId=393307)을 참조하세요.
  
 ## <a name="frequency-and-foreground-restrictions"></a>빈도 및 포그라운드 제한
 

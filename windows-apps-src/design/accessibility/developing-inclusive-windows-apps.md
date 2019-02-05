@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e38b57deb7101dcf0476bd3d952fc01ffd605db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 58e9ab90115566059fb79220b7b8c0b9c5ce677e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942215"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047970"
 ---
 # <a name="developing-inclusive-windows-apps"></a>포괄 Windows 앱 개발  
 
@@ -83,7 +83,7 @@ XAML
 
 ## <a name="related-topics"></a>관련 항목  
 * [포괄 소프트웨어 디자인](designing-inclusive-software.md)  
-* [포괄 디자인](http://design.microsoft.com/inclusive)
+* [포괄 디자인](https://design.microsoft.com/inclusive)
 * [피해야 할 접근성 사례](practices-to-avoid.md)
 * [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft 접근성 개발자 허브](https://msdn.microsoft.com/enable)

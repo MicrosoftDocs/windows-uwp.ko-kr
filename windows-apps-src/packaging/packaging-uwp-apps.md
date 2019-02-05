@@ -9,12 +9,12 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: dc5f033737e36bd5a891543fbad6b3eba933f052
-ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
+ms.openlocfilehash: f2e89490a76c9174c1e938466bf1fbcc9cc13455
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991629"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045957"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
@@ -46,7 +46,7 @@ Windows 10에서 앱 패키지, 앱 번들 또는 [파트너 센터](https://par
 
 1.  **앱을 테스트합니다.** 파트너 센터 제출에 대 한 앱을 패키지 하기 전에 지원 하려는 모든 디바이스 패밀리에서 예상 대로 작동 하는지 확인 합니다. 이러한 장치 패밀리에는 데스크톱, 모바일, Surface Hub, Xbox, IoT 장치 등이 포함될 수 있습니다. 배포 및 Visual Studio를 사용 하 여 앱을 테스트 하는 방법에 대 한 자세한 내용은 [UWP 앱 배포 및 디버깅](../debug-test-perf/deploying-and-debugging-uwp-apps.md)을 참조 하세요.
 2.  **앱을 최적화합니다.** Visual Studio의 프로파일링 도구와 디버깅 도구를 사용하여 UWP 앱의 성능을 최적화할 수 있습니다. 예를 들어 UI 응답성을 위한 타임라인 도구, 메모리 사용 도구, CPU 사용 도구 등을 사용할 수 있습니다. 이러한 도구에 대한 자세한 내용은 [프로파일링 도구 살펴보기](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour)를 참조하세요.
-3.  **.NET 네이티브 호환성(VB 앱 및 C# 앱)을 확인합니다.** 유니버설 Windows 플랫폼에는 앱의 런타임 성능을 개선하는 기본 컴파일러가 있습니다. 이 변경으로 인해, 이 컴파일 환경에서 앱을 테스트해야 합니다. 기본적으로 **릴리스** 빌드 구성에서는 .NET 네이티브 도구 체인을 사용하므로, 이 **릴리스** 구성을 사용하여 앱을 테스트하고 앱이 예상대로 작동하는지 확인해야 합니다. .NET 네이티브에서 흔히 발생할 수 있는 디버깅 문제에 대해서는 [여기 Debugging .NET Native Windows Universal Apps](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)에서 자세히 설명합니다.
+3.  **.NET 네이티브 호환성(VB 앱 및 C# 앱)을 확인합니다.** 유니버설 Windows 플랫폼에는 앱의 런타임 성능을 개선하는 기본 컴파일러가 있습니다. 이 변경으로 인해, 이 컴파일 환경에서 앱을 테스트해야 합니다. 기본적으로 **릴리스** 빌드 구성에서는 .NET 네이티브 도구 체인을 사용하므로, 이 **릴리스** 구성을 사용하여 앱을 테스트하고 앱이 예상대로 작동하는지 확인해야 합니다. .NET 네이티브에서 흔히 발생할 수 있는 디버깅 문제에 대해서는 [여기 Debugging .NET Native Windows Universal Apps](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)에서 자세히 설명합니다.
 
 ## <a name="configure-an-app-package"></a>앱 패키지 구성
 
@@ -131,7 +131,7 @@ Microsoft Store를 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.ms
     >[!IMPORTANT]
     > Windows 10 용 원격 ARM 장치에서 앱 패키지를 확인할 수 없습니다.
 2.  Visual Studio용 원격 도구를 다운로드하여 설치합니다. 이러한 도구를 사용하여 Windows 앱 인증 키트를 원격으로 실행합니다. 이러한 도구를 다운로드할 위치를 포함하여 자세한 관련 내용은 [원격 컴퓨터에서 UWP 앱 실행](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor)을 참조하세요.
-3.  필요한 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666) 를 다운로드 하 고 원격 windows 10 장치에 설치 합니다.
+3.  필요한 [Windows 앱 인증 키트](https://go.microsoft.com/fwlink/p/?LinkID=309666) 를 다운로드 하 고 원격 windows 10 장치에 설치 합니다.
 4.  마법사 **패키지 만들기 완료** 페이지에서 **원격 컴퓨터** 옵션 단추를 선택하고 **연결 테스트** 버튼 옆에 있는 줄임표 단추를 선택합니다.
     >[!NOTE]
     > **원격 컴퓨터** 옵션 단추는 유효성 검사를 지 원하는 솔루션 구성을 하나 이상 선택한 경우에 사용할 수 있습니다. WACK로 앱을 테스트하는 방법에 대한 자세한 내용은 [Windows 앱 인증 키트](https://msdn.microsoft.com/library/windows/apps/Mt186449)를 참조하세요.

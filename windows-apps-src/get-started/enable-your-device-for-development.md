@@ -6,12 +6,12 @@ keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 �
 ms.date: 05/30/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 802555f6b1e6f928edf43806226ac497a437b4ff
-ms.sourcegitcommit: 67cc4153dac48a2633d93c954eaad61be8600fa8
+ms.openlocfilehash: 90ff8e8c0d11e58d251e9c2f5bfb00f3b8aedf1a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991761"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044946"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -68,7 +68,7 @@ ms.locfileid: "8991761"
 **앱 테스트용 로드**를 사용하면 신뢰할 수 있는 인증서가 없는 디바이스에 앱을 설치할 수 없으므로 개발자 모드보다 안전합니다.
 
 > [!NOTE]
-> 앱을 테스트용으로 로드하는 경우에도 여전히 신뢰할 수 있는 소스의 앱만을 설치해야 합니다. Microsoft Store에서 인증되지 않은 테스트용 로드 앱을 설치할 경우 이러한 앱을 테스트용으로 로드하는 데 필요한 모든 권한을 확보했으며 이러한 앱을 설치하고 실행하여 발생할 수 있는 피해에 대해 전적으로 책임을 진다는 점에 동의하는 것입니다. 이 [개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=521839)의 &gt; Microsoft Store 섹션을 참조하세요.
+> 앱을 테스트용으로 로드하는 경우에도 여전히 신뢰할 수 있는 소스의 앱만을 설치해야 합니다. Microsoft Store에서 인증되지 않은 테스트용 로드 앱을 설치할 경우 이러한 앱을 테스트용으로 로드하는 데 필요한 모든 권한을 확보했으며 이러한 앱을 설치하고 실행하여 발생할 수 있는 피해에 대해 전적으로 책임을 진다는 점에 동의하는 것입니다. 이 [개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=521839)의 &gt; Microsoft Store 섹션을 참조하세요.
 
 
 ### <a name="developer-mode"></a>개발자 모드
@@ -133,7 +133,7 @@ Windows 10 Mobile의 초기 버전에서 크래시 덤프 옵션은 개발자 �
 
 Windows 10 PC에서 Windows 10 디바이스로 앱을 배포할 수 있도록 해주는 몇 가지 도구가 있습니다. 두 디바이스는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다. 나열된 두 방법 모두 앱 패키지(.appx/.appxbundle)만 설치하고 인증서는 설치하지 않습니다.
 
--   Windows 10 응용 프로그램 배포(WinAppDeployCmd) 도구를 사용합니다. 자세한 내용은 [the WinAppDeployCmd 도구](http://msdn.microsoft.com/library/windows/apps/mt203806.aspx)를 참조하세요.
+-   Windows 10 응용 프로그램 배포(WinAppDeployCmd) 도구를 사용합니다. 자세한 내용은 [the WinAppDeployCmd 도구](https://msdn.microsoft.com/library/windows/apps/mt203806.aspx)를 참조하세요.
 -   [장치 포털](../debug-test-perf/device-portal.md)을 사용하면 브라우저에서 Windows 10, 버전 1511 이상을 실행하는 모바일 디바이스로 배포할 수 있습니다. Device Portal의 **[앱](../debug-test-perf/device-portal.md#apps-manager)** 페이지를 사용하여 앱 패키지(.appx)를 업로드하고 디바이스에 설치할 수 있습니다.
 
 ## <a name="failure-to-install-developer-mode-package"></a>개발자 모드 패키지 설치 실패

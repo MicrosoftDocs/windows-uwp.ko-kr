@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
-ms.openlocfilehash: 08608bc5715031f9ddf5b6bec05e7c86737f7e10
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: 423f0efa9118f581d6e768a815dd2550801aa87e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981377"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048620"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](https://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 <b>중요 API</b>
 
@@ -350,7 +350,7 @@ asyncAction.Completed = new AsyncActionCompletedHandler(
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-이 빠른 시작에 [항목 샘플 만들기는 ThreadPool 작업](http://go.microsoft.com/fwlink/p/?LinkID=328569) , windows 8.1 용으로 작성 된에서 코드를 다운로드 하 여 자세히 알아볼 수 있습니다 win\_unap windows 10 앱에서 소스 코드를 다시 사용 합니다.
+[항목 샘플 만들기는 ThreadPool 작업](https://go.microsoft.com/fwlink/p/?LinkID=328569) , windows 8.1 용으로 작성 된의이 빠른 시작에서 코드를 다운로드 하 여 자세히 알아볼 수 있습니다 win\_unap windows 10 앱에서 소스 코드를 다시 사용 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

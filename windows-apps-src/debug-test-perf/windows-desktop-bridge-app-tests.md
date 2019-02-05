@@ -6,16 +6,16 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: df80fda8cf8b8c2f33a8ed0155363141fc299655
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 42ec5c1e91fbeebcaad68f346f317893fdfb2e1c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932879"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046812"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 
-[데스크톱 브리지 앱](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) 은 Windows 데스크톱 응용 프로그램은 [데스크톱 브리지](https://developer.microsoft.com/en-us/windows/bridges/desktop)를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱으로 변환 합니다. 변환 후에는 Windows 데스크톱 응용 프로그램이 Windows 10 데스크톱을 대상으로 하는 UWP 앱 패키지(.appx 또는 .appxbundle)의 형태로 패키징되고, 서비스되고, 배포됩니다.
+[데스크톱 브리지 앱](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) 은 Windows 데스크톱 응용 프로그램 [데스크톱 브리지](https://developer.microsoft.com/en-us/windows/bridges/desktop)를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱으로 변환 합니다. 변환 후에는 Windows 데스크톱 응용 프로그램이 Windows 10 데스크톱을 대상으로 하는 UWP 앱 패키지(.appx 또는 .appxbundle)의 형태로 패키징되고, 서비스되고, 배포됩니다.
 
 ## <a name="required-versus-optional-tests"></a>필수 테스트와 선택 테스트
 Windows 데스크톱 브리지 앱에 대 한 선택적 테스트 하는 알림이 며 Microsoft 스토어 등록 하는 동안 앱을 평가 하는 사용 되지 않습니다. 조사 하는 것이 좋습니다 이러한 테스트 결과를 더 나은 품질의 앱을 생성 합니다. 스토어 온보딩에 대한 전반적인 성공/실패는 이러한 선택적 테스트가 아닌 필수 테스트에 의해 결정됩니다.
@@ -23,7 +23,7 @@ Windows 데스크톱 브리지 앱에 대 한 선택적 테스트 하는 알림�
 ## <a name="current-optional-tests"></a>현재 선택적 테스트
 
 ### <a name="1-digitally-signed-file-test"></a>1. 디지털 서명된 파일 테스트 
-**배경**  
+**Background**  
 이 테스트는 모든 PE(이식 가능한 실행 파일) 파일에 유효한 서명이 포함되어 있는지 확인합니다. 디지털 서명된 파일이 있으면 사용자가 해당 소프트웨어가 정품인지 알 수 있습니다.
 
 **테스트 정보**  
@@ -33,7 +33,7 @@ Windows 데스크톱 브리지 앱에 대 한 선택적 테스트 하는 알림�
 파일에 항상 디지털 서명이 권장됩니다. 자세한 내용은 [코드 서명 소개](https://msdn.microsoft.com/en-us/library/ms537361(v=vs.85).aspx)를 참조하세요.
 
 ### <a name="2-file-association-verbs"></a>2. 파일 연결 동사 
-**배경**  
+**Background**  
 이 테스트는 패키지 레지스트리를 검색하여 파일 연결 동사가 등록되어 있는지 검사합니다. 
 
 **테스트 정보**  
@@ -45,8 +45,8 @@ Windows 데스크톱 브리지 앱에 대 한 선택적 테스트 하는 알림�
 ### <a name="3-debug-configuration-test"></a>3. 디버그 구성 테스트
 이 테스트는 appx가 디버그 빌드가 아닌지 확인합니다.
  
-**배경**  
-Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디버그 하 고 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
+**Background**  
+Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디버그 및 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
  
 **테스트 정보**  
 앱을 테스트하여 디버그 빌드가 아니고 디버그 프레임워크에 링크되지 않았는지 확인합니다.
@@ -121,7 +121,7 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 이미지에서 TargetSize 한정자를 사용하지 않고 둘 이상의 변형을 정의해야 합니다. 이미지에서 Scale 한정자를 정의하거나 Scale 및 TargetSize를 지정하지 않은 상태로 유지하여 기본값 Scale-100으로 설정해야 합니다.  | 자세한 정보는 [반응형 디자인](https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx) 및 [앱 리소스](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data)에 대한 가이드를 참조하세요. 
 패키지에 "resources.pri" 파일이 없습니다.  | 앱 매니페스트에 지역화 가능한 콘텐츠가 있는 경우 앱 패키지에 유효한 resources.pri 파일이 있는지 확인하세요. 
 "resources.pri" 파일에는 패키지 이름 {package full name}과(와) 일치하는 이름을 사용하는 리소스 맵이 있어야 합니다.  | 매니페스트가 변경되어 resources.pri의 리소스 맵 이름이 매니페스트의 패키지 이름과 더 이상 일치하지 않는 경우 이 오류가 발생할 수 있습니다. 실제 메시지에서는 resources.pri에 포함되어야 하는 패키지 이름이 {package full name}에 포함됩니다. 이 오류를 해결하려면 resources.pri를 다시 빌드해야 하며 앱 패키지를 다시 빌드하면 이 작업을 가장 간단하게 수행할 수 있습니다. 
-"resources.pri" 파일에서 자동 병합을 사용할 수 있도록 설정해서는 안 됩니다.  | MakePRI.exe는 AutoMerge라는 옵션을 지원합니다. AutoMerge의 기본값은 off입니다. 이 옵션을 사용하면 AutoMerge에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. 이 Microsoft Store를 통해 배포 하려는 앱에 대 한 권장 하지 않습니다. Microsoft Store를 통해 배포 되는 앱의 resources.pri는 앱 패키지의 루트에 하 고 앱에서 지 원하는 모든 언어 참조를 포함 해야 합니다. 
+"resources.pri" 파일에서 자동 병합을 사용할 수 있도록 설정해서는 안 됩니다.  | MakePRI.exe는 AutoMerge라는 옵션을 지원합니다. AutoMerge의 기본값은 off입니다. 이 옵션을 사용하면 AutoMerge에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. 이 Microsoft Store를 통해 배포 하려는 앱에 대 한 권장 하지 않습니다. Microsoft Store를 통해 배포 되는 앱의 resources.pri는 앱의 패키지의 루트에 하 고 앱에서 지 원하는 모든 언어 참조를 포함 해야 합니다. 
 {string} 문자열에서 {number}자의 최대 길이 제한을 준수하지 못했습니다.  | [앱 패키지 요구 사항](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements)을 참조하세요. 실제 메시지에서는 {string}이(가) 오류가 있는 문자열로 대체되고 {number}에는 최대 길이가 포함됩니다. 
 {string} 문자열에는 선행/후행 공백이 없어야 합니다.  | 앱 매니페스트에 있는 요소에 대한 스키마에서는 선행 또는 후행 공백 문자를 허용하지 않습니다. 실제 메시지에서는 {string}이(가) 오류가 있는 문자열로 대체됩니다. resources.pri에 있는 매니페스트 필드의 지역화된 값에 선행 또는 후행 공백 문자가 없는지 확인하세요. 
 문자열은 비어 있으면 안 되며 길이가 0보다 커야 합니다.  | 자세한 내용은 [앱 패키지 요구 사항](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements)을 참조하세요. 
@@ -133,7 +133,7 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 
 
 #### <a name="22-branding-validation"></a>2.2 브랜딩 유효성 검사
-**배경**  
+**Background**  
 데스크톱 브리지 앱의 모든 기능이 완벽하게 제대로 작동해야 합니다. 템플릿 또는 SDK 샘플의 기본 이미지를 사용하는 앱은 부적절한 사용자 환경을 제공하며 스토어 카탈로그에서 쉽게 식별할 수 없습니다.
 
 **테스트 정보**  
@@ -165,7 +165,7 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 #### <a name="32-application-count"></a>3.2 응용 프로그램 개수
 이 테스트는 앱 패키지(.appx,, 앱 번들)에 응용 프로그램이 하나 포함되어 있는지 확인합니다. 
 
-**배경**  
+**Background**  
 이 테스트는 스토어 정책에 따라 구현됩니다. 
 
 **테스트 정보**  
@@ -176,7 +176,7 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 
 
 #### <a name="33-registry-checks"></a>3.3 레지스트리 검사
-**배경**  
+**Background**  
 이 테스트는 응용 프로그램에서 새 서비스나 드라이버를 설치하거나 업데이트하는지 검사합니다.
 
 **테스트 정보**  
@@ -205,7 +205,7 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 ### <a name="5-supported-api-test"></a>5. 지원되는 API 테스트
 앱에서 비규격 API를 사용하는지 검사합니다. 
 
-**배경**  
+**Background**  
 데스크톱 브리지 앱은 최신 API(UWP 구성 요소)와 함께 일부 레거시 Win32 API를 활용할 수 있습니다. 테스트는 지원되지 않는 API를 사용하여 관리되는 이진을 식별합니다.
  
 **테스트 정보**  
@@ -217,18 +217,18 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 앱이 디버그 빌드가 아닌 릴리스 빌드로 컴파일된 것을 확인하여 수정할 수 있습니다. 
 
 > [!NOTE]
-> [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)만 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다. UWP 앱에 대 한 API 허용된 되지 않은 있는 API를 식별 하기 위해 오류 메시지를 검토 합니다. 
+> [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)만 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다. UWP 앱에 대 한 API 허용된 되지 않는 존재 API를 식별 하기 위해 오류 메시지를 검토 합니다. 
 
 > [!NOTE]
 > UWP 앱 용 Windows SDK의 Api만 사용 하는 경우에 디버그 구성에서 빌드된 c + + 앱이이 테스트에 실패 합니다. 자세한 내용은 [UWP 앱의 Windows Api 대안](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) 을 참조 하세요.
 
 ### <a name="6-user-account-control-uac-test"></a>6. UAC(사용자 계정 컨트롤) 테스트  
 
-**배경**  
+**Background**  
 앱 실행 시 사용자 계정 컨트롤을 요청하지 않는지 확인합니다.
 
 **테스트 정보**  
-앱은 Microsoft 스토어 정책에 따라 관리자 상승 또는 UIAccess를 요청할 수 없습니다. 승격된 보안 권한이 지원되지 않습니다. 
+앱은 Microsoft Store 정책에 따라 관리자 상승 또는 UIAccess를 요청할 수 없습니다. 승격된 보안 권한이 지원되지 않습니다. 
 
 **수정 작업**  
 대화형 사용자로서 앱을 실행해야 합니다. 자세한 내용은 [UI 자동화 보안 개요](https://go.microsoft.com/fwlink/?linkid=839440)를 참조하세요.
@@ -269,7 +269,7 @@ Windows 앱 인증 키트에서 금지된 파일 검사는 현재 다음 파일�
 이 검사는 앱이 최신 공식 릴리스 대신 "Release Preview" 버전의 파일을 사용하는 경우 일반적으로 실패합니다. 
 
 **수정 작업**  
-이 해결 하려면 UWP 앱 용 [Bing 지도 SDK](http://go.microsoft.com/fwlink/p/?linkid=614880) 의 최신 버전을 사용 합니다.
+이 해결 하려면 UWP 앱 용 [Bing 지도 SDK](https://go.microsoft.com/fwlink/p/?linkid=614880) 의 최신 버전을 사용 합니다.
 
 #### <a name="82-private-code-signing"></a>8.2 전용 코드 서명
 앱 패키지 내에 전용 코드 서명 이진이 있는지 테스트합니다. 

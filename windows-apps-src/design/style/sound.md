@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5060012c90ec9cfef093021f44b39321f452e01c
-ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
+ms.openlocfilehash: 9dd47ce2acf78a76ad413d70ce8c3e7f39a793ea
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004599"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048200"
 ---
 # <a name="sound"></a>소리
 
@@ -53,7 +53,7 @@ ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off
 ### <a name="sound-for-tv-and-xbox"></a>TV 및 Xbox의 소리
 
 소리는 10피트 환경의 주요 부분이며, **ElementSoundPlayer**의 상태는 기본적으로 **자동**이므로 Xbox에서 앱을 실행하는 경우에만 소리가 재생됩니다.
-Xbox 및 TV용 디자인 방식에 대한 자세한 내용은 [Xbox 및 TV용 디자인](http://go.microsoft.com/fwlink/?LinkId=760736)을 참조하세요.
+Xbox 및 TV용 디자인 방식에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://go.microsoft.com/fwlink/?LinkId=760736)을 참조하세요.
 
 ## <a name="sound-volume-override"></a>소리 볼륨 재정의
 
@@ -166,5 +166,5 @@ ElementSoundPlayer.Play(ElementSoundKind.Focus);
 
 ## <a name="related-articles"></a>관련 문서
 
-* [Xbox 및 TV용 디자인](http://go.microsoft.com/fwlink/?LinkId=760736)
+* [Xbox 및 TV용 디자인](https://go.microsoft.com/fwlink/?LinkId=760736)
 * [ElementSoundPlayer 클래스 설명서](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer)

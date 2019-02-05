@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx 9, directx 11, 포팅
 ms.localizationpriority: medium
-ms.openlocfilehash: 56bb86706795e773d21e45263f640f9fc0aa596a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0cfaa071ea0182ef5fac264e85d919be5744d15d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936070"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050676"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>DirectX 11 API에 DirectX 9 기능 매핑
 
@@ -55,7 +55,7 @@ D3DX 및 DXUT는 더 이상 사용되지 않으며 UWP 게임에서 사용할 �
 
 -   [Direct3D 9에서 UWP로의 간단한 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습에서는 창을 설정하고, Direct3D를 초기화하고, 기본 3D 렌더링을 수행하는 방법을 보여 줍니다.
 -   [DirectX로 작성한 간단한 UWP 게임](tutorial--create-your-first-uwp-directx-game.md) 연습에서는 그래픽, 파일 로드, UI, 컨트롤 및 소리를 비롯한 일반적인 게임 프로그래밍 작업을 보여 줍니다.
--   [DirectX 도구 키트](http://go.microsoft.com/fwlink/p/?LinkID=248929) 커뮤니티 프로젝트는 Direct3D 11 및 UWP 앱에 사용할 수 있는 도우미 클래스를 제공합니다.
+-   [DirectX 도구 키트](https://go.microsoft.com/fwlink/p/?LinkID=248929) 커뮤니티 프로젝트는 Direct3D 11 및 UWP 앱에 사용할 수 있는 도우미 클래스를 제공합니다.
 
 ## <a name="move-shader-programs-from-fx-to-hlsl"></a>FX에서 HLSL로 셰이더 프로그램 이동
 

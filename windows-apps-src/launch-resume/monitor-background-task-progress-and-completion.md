@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 12772d81742815b8d739f61aee9461e64f970ef2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5417a2cded6dab98747569acc4e6e92356361482
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935713"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050826"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>백그라운드 작업 진행 및 완료 모니터링
 
@@ -64,7 +64,7 @@ auto completed = [this](BackgroundTaskRegistration^ task, BackgroundTaskComplete
 ### <a name="step-2"></a>2단계
 백그라운드 작업 완료를 처리하는 이벤트 처리기에 코드를 추가합니다.
 
-예를 들어 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)은 UI를 업데이트합니다.
+예를 들어 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)은 UI를 업데이트합니다.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
@@ -122,7 +122,7 @@ auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressE
 ### <a name="step-2"></a>2단계
 백그라운드 작업 완료를 처리하는 이벤트 처리기에 코드를 추가합니다.
 
-예를 들어 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 *args* 매개 변수를 통해 전달된 진행 상태로 UI를 업데이트합니다.
+예를 들어 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 *args* 매개 변수를 통해 전달된 진행 상태로 UI를 업데이트합니다.
 
 ```csharp
 private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)
@@ -158,7 +158,7 @@ auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressE
 ### <a name="step-1"></a>1단계
 앱에서는 백그라운드 작업을 처음으로 등록할 때 앱이 포그라운드에서 활성화된 상태에서 작업이 실행될 경우 작업에 대한 진행 및 완료 업데이트를 수신하도록 등록해야 합니다.
 
-예를 들어 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 등록된 각 백그라운드 작업에 대해 다음 함수를 호출합니다.
+예를 들어 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 등록된 각 백그라운드 작업에 대해 다음 함수를 호출합니다.
 
 ```csharp
 private void AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration task)
@@ -217,7 +217,7 @@ void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskReg
 ### <a name="step-2"></a>2단계
 앱은 시작되거나 백그라운드 작업 상태와 관련된 새 페이지로 이동할 때 현재 등록된 백그라운드 작업의 목록을 가져와서 진행 및 완료 이벤트 처리기 함수에 연결합니다. 응용 프로그램에 의해 현재 등록된 백그라운드 작업 목록은 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).[**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 속성에 보관됩니다.
 
-예를 들어 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 SampleBackgroundTask 페이지로 이동할 때 다음 코드를 사용하여 이벤트 처리기를 연결합니다.
+예를 들어 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 SampleBackgroundTask 페이지로 이동할 때 다음 코드를 사용하여 이벤트 처리기를 연결합니다.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -299,4 +299,4 @@ void SampleBackgroundTask::OnNavigatedTo(NavigationEventArgs^ e)
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](https://go.microsoft.com/fwlink/p/?linkid=254345)

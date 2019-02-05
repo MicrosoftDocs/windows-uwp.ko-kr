@@ -6,16 +6,16 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 중간, javascript, 샘플 코드
 ms.localizationpriority: medium
-ms.openlocfilehash: 98ba09b88c96b0f0afb4ba5a786d31442fd9da05
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 641a3bfc2c2869cab6f3bbf480aa599cadd955a2
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928122"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047112"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a>JavaScript의 중간 광고 샘플 코드
 
-이 항목에서는 중간 광고를 게재하는 기본 JavaScript 및 HTML UWP(유니버설 Windows 플랫폼) 앱의 전체 샘플 코드를 제공합니다. 이 코드를 사용하도록 프로젝트를 구성하는 방법을 보여 주는 단계별 지침은 [중간 광고](interstitial-ads.md)를 참조하세요. 전체 샘플 프로젝트는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
+이 항목에서는 중간 광고를 게재하는 기본 JavaScript 및 HTML UWP(유니버설 Windows 플랫폼) 앱의 전체 샘플 코드를 제공합니다. 이 코드를 사용하도록 프로젝트를 구성하는 방법을 보여 주는 단계별 지침은 [중간 광고](interstitial-ads.md)를 참조하세요. 전체 샘플 프로젝트는 [GitHub의 광고 샘플](https://aka.ms/githubads)을 참조하세요.
 
 ## <a name="code-example"></a>코드 예제
 
@@ -45,6 +45,6 @@ ms.locfileid: "8928122"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [GitHub의 광고 샘플](http://aka.ms/githubads)
+* [GitHub의 광고 샘플](https://aka.ms/githubads)
 
  

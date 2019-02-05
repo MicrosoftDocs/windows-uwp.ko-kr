@@ -6,16 +6,16 @@ ms.date: 06/14/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f206700360b6590a88b76f04531c9c6b1e94414f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 20a70263b0e97ce903d2db83f9e70152d8fe3a72
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932187"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046087"
 ---
 # <a name="network-communications-in-the-background"></a>백그라운드 네트워크 통신
 네트워크 통신을 포그라운드에 없을 때 계속 해 서 앱 백그라운드 작업 및 이러한 두 옵션 중 하나를 사용할 수 있습니다.
-- 소켓 브로커. 사용 하는 경우 앱 소켓 오랜 기간 연결에 대 한 다음, 포그라운드를 벗어날 때, 시스템 소켓 브로커에 소켓의 소유권을 위임할 수 것입니다. 그런 다음 브로커:; 소켓에 트래픽이 도착 하면 앱을 활성화 합니다. 소유권을 다시 앱입니다. 한 앱에는 다음 도착 하는 트래픽을 처리 합니다.
+- 소켓 브로커. 앱 사용 하는 경우 소켓 오랜 기간 연결에 대 한 다음, 포그라운드를 벗어날 때, 시스템 소켓 브로커에 소켓의 소유권을 위임할 수 것입니다. 그런 다음 브로커:; 소켓에 트래픽이 도착 하면 앱을 활성화 합니다. 소유권을 다시 앱입니다. 한 앱에는 다음 도착 하는 트래픽을 처리 합니다.
 - 컨트롤 채널 트리거 합니다. 
 
 ## <a name="performing-network-operations-in-background-tasks"></a>백그라운드 작업으로 네트워크 작업 수행
@@ -150,12 +150,12 @@ case SocketActivityTriggerReason.SocketClosed:
   deferral.Complete();
 ```
 
-[**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) 및 소켓 브로커 사용을 보여 주는 전체 샘플은 [SocketActivityStreamSocket 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620606)을 참조하세요. 소켓 초기화는 Scenario1\_Connect.xaml.cs에서 수행되며 백그라운드 작업 구현은 SocketActivityTask.cs에서 수행됩니다.
+[**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) 및 소켓 브로커 사용을 보여 주는 전체 샘플은 [SocketActivityStreamSocket 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620606)을 참조하세요. 소켓 초기화는 Scenario1\_Connect.xaml.cs에서 수행되며 백그라운드 작업 구현은 SocketActivityTask.cs에서 수행됩니다.
 
 이 항목에서 설명한 대로 작업을 수행하기 위해 샘플에서는 새 소켓을 만들거나 기존 소켓을 획득하자마자 **OnSuspending** 이벤트 처리기를 사용하는 대신 **TransferOwnership**을 호출합니다. 이는 샘플은 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 설명하는 데 중점을 두고 있으며 실행되는 동안 다른 활동에 대해 소켓을 사용하지 않기 때문입니다. 앱이 더 복잡해질 수 있으며 **OnSuspending**을 호출하는 시기를 결정할 때 **TransferOwnership**을 사용해야 합니다.
 
 ## <a name="control-channel-triggers"></a>컨트롤 채널 트리거
-먼저 CCT(컨트롤 채널 트리거)를 적절하게 사용하고 있는지 확인합니다. [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 연결을 사용 하는 경우 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용 하는 권장 합니다. **StreamSocket**에 대해 CCT를 사용할 수 있지만 이러한 CCT는 더 많은 리소스를 사용하고 연결된 대기 상태 모드에서 작동하지 않을 수 있습니다.
+먼저 CCT(컨트롤 채널 트리거)를 적절하게 사용하고 있는지 확인합니다. [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 연결을 사용 중인 경우 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용 하는 하도록 권장 합니다. **StreamSocket**에 대해 CCT를 사용할 수 있지만 이러한 CCT는 더 많은 리소스를 사용하고 연결된 대기 상태 모드에서 작동하지 않을 수 있습니다.
 
 WebSockets, [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)또는 [**Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient)를 사용 하는 경우 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)사용 해야 합니다.
 
@@ -425,21 +425,21 @@ async Task<bool> RegisterWithCCTHelper(string serverUri)
 }
 ```
 
-[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [ControlChannelTrigger StreamWebSocket 샘플](http://go.microsoft.com/fwlink/p/?linkid=251232)을 참조하세요.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [ControlChannelTrigger StreamWebSocket 샘플](https://go.microsoft.com/fwlink/p/?linkid=251232)을 참조하세요.
 
 ## <a name="controlchanneltrigger-with-httpclient"></a>ControlChannelTrigger와 HttpClient
-[HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)를 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. 또한 이러한 고려 사항은 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다.
+[HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. 또한 이러한 고려 사항은 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다.
 
-**참고** [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) SSL을 사용 하는 네트워크 트리거 기능 및 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)사용 하 여 현재 지원 되지 않습니다.
+**참고** [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) SSL을 사용 하는 네트워크 트리거 기능 및 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)사용 하 여 현재 지원 되지 않습니다.
  
-[HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 때는 다음과 같은 사용 패턴과 모범 사례를 따라야 합니다.
+[HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 때는 다음과 같은 사용 패턴과 모범 사례를 따라야 합니다.
 
--   앱은 특정 URI로 요청을 보내기 전에 [System.Net.Http](http://go.microsoft.com/fwlink/p/?linkid=227894) 네임스페이스에서 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) 또는 [HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638) 개체에 여러 속성 및 헤더를 설정해야 합니다.
--   앱은 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) 전송을 만들기 전에 초기 요청을 만들어 전송을 테스트하고 적절하게 설정해야 합니다. 앱에서 전송이 적절히 설정되었다고 판단하면 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) 개체는 **ControlChannelTrigger**와 함께 사용할 전송 개체로 구성될 수 있습니다. 이 프로세스는 일부 시나리오에서 전송을 통해 설정된 연결이 끊어지는 것을 방지하기 위해 설계되었습니다. SSL 인증서를 사용할 경우, 또는 선택할 수 있는 인증서가 여러 개인 경우 PIN 입력에 사용할 대화 상자가 앱에 필요할 수 있습니다. 또한 프록시 인증 및 서버 인증이 필요할 수 있습니다. 프록시 또는 서버 인증이 만료되면 연결이 닫힙니다. 앱에서 이러한 인증 만료 문제를 처리할 수 있는 방법은 타이머를 설정하는 것입니다. HTTP 리디렉션이 필요한 경우에는 두 번째 연결을 안정적으로 설정할 수 있는지 여부가 확실치 않습니다. 초기 테스트 요청은 **ControlChannelTrigger** 개체와 함께 전송으로서 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) 개체를 사용하기 전에 앱이 가장 최근에 리디렉션된 URL을 사용할 수 있음을 보장합니다.
+-   앱은 특정 URI로 요청을 보내기 전에 [System.Net.Http](https://go.microsoft.com/fwlink/p/?linkid=227894) 네임스페이스에서 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 또는 [HttpClientHandler](https://go.microsoft.com/fwlink/p/?linkid=241638) 개체에 여러 속성 및 헤더를 설정해야 합니다.
+-   앱은 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 전송을 만들기 전에 초기 요청을 만들어 전송을 테스트하고 적절하게 설정해야 합니다. 앱에서 전송이 적절히 설정되었다고 판단하면 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체는 **ControlChannelTrigger**와 함께 사용할 전송 개체로 구성될 수 있습니다. 이 프로세스는 일부 시나리오에서 전송을 통해 설정된 연결이 끊어지는 것을 방지하기 위해 설계되었습니다. SSL 인증서를 사용할 경우, 또는 선택할 수 있는 인증서가 여러 개인 경우 PIN 입력에 사용할 대화 상자가 앱에 필요할 수 있습니다. 또한 프록시 인증 및 서버 인증이 필요할 수 있습니다. 프록시 또는 서버 인증이 만료되면 연결이 닫힙니다. 앱에서 이러한 인증 만료 문제를 처리할 수 있는 방법은 타이머를 설정하는 것입니다. HTTP 리디렉션이 필요한 경우에는 두 번째 연결을 안정적으로 설정할 수 있는지 여부가 확실치 않습니다. 초기 테스트 요청은 **ControlChannelTrigger** 개체와 함께 전송으로서 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체를 사용하기 전에 앱이 가장 최근에 리디렉션된 URL을 사용할 수 있음을 보장합니다.
 
-다른 네트워크 전송과 달리 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) 개체는 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 개체의 [**UsingTransport**](https://msdn.microsoft.com/library/windows/apps/hh701175) 메서드로 직접 전달할 수 없습니다. 대신 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) 개체 및 **ControlChannelTrigger**와 함께 사용하기 위해 [HttpRequestMessage](http://go.microsoft.com/fwlink/p/?linkid=259153) 개체를 특별히 생성해야 합니다. [HttpRequestMessage](http://go.microsoft.com/fwlink/p/?linkid=259153) 개체는 [RtcRequestFactory.Create](http://go.microsoft.com/fwlink/p/?linkid=259154) 메서드를 사용하여 만듭니다. 그런 다음 만든 [HttpRequestMessage](http://go.microsoft.com/fwlink/p/?linkid=259153) 개체를 **UsingTransport** 메서드에 전달합니다.
+다른 네트워크 전송과 달리 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체는 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 개체의 [**UsingTransport**](https://msdn.microsoft.com/library/windows/apps/hh701175) 메서드로 직접 전달할 수 없습니다. 대신 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체 및 **ControlChannelTrigger**와 함께 사용하기 위해 [HttpRequestMessage](https://go.microsoft.com/fwlink/p/?linkid=259153) 개체를 특별히 생성해야 합니다. [HttpRequestMessage](https://go.microsoft.com/fwlink/p/?linkid=259153) 개체는 [RtcRequestFactory.Create](https://go.microsoft.com/fwlink/p/?linkid=259154) 메서드를 사용하여 만듭니다. 그런 다음 만든 [HttpRequestMessage](https://go.microsoft.com/fwlink/p/?linkid=259153) 개체를 **UsingTransport** 메서드에 전달합니다.
 
-다음 샘플에서는 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) 개체 및 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 [HttpRequestMessage](http://go.microsoft.com/fwlink/p/?linkid=259153) 개체를 생성하는 방법을 보여 줍니다.
+다음 샘플에서는 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체 및 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 [HttpRequestMessage](https://go.microsoft.com/fwlink/p/?linkid=259153) 개체를 생성하는 방법을 보여 줍니다.
 
 ```csharp
 using System;
@@ -481,13 +481,13 @@ private void SetupHttpRequestAndSendToHttpServer()
 }
 ```
 
-일부 특수 고려 사항은 응답 수신을 시작하는 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)의 HTTP 요청을 보내는 요청이 처리되는 방식에 영향을 줍니다. 특히 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 앱은 **await** 모델 대신 Task를 사용하여 보내기를 처리해야 합니다.
+일부 특수 고려 사항은 응답 수신을 시작하는 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)의 HTTP 요청을 보내는 요청이 처리되는 방식에 영향을 줍니다. 특히 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 앱은 **await** 모델 대신 Task를 사용하여 보내기를 처리해야 합니다.
 
-[HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)를 사용하면 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)에 대한 백그라운드 작업의 [**IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드를 수신 완료 콜백의 반환값과 동기화할 수 있습니다. 이 때문에 앱은 **Run** 메서드에서 차단 HttpResponseMessage 방법을 사용하고 전체 응답이 수신될 때까지 기다릴 수만 있습니다.
+[HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 사용하면 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)에 대한 백그라운드 작업의 [**IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드를 수신 완료 콜백의 반환값과 동기화할 수 있습니다. 이 때문에 앱은 **Run** 메서드에서 차단 HttpResponseMessage 방법을 사용하고 전체 응답이 수신될 때까지 기다릴 수만 있습니다.
 
-[HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하면 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882), [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 전송과 크게 다릅니다. [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) 수신 콜백은 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) 코드 이후 Task를 통해 앱에 배달됩니다. 따라서 **ControlChannelTrigger** 푸시 알림 작업은 데이터 또는 오류가 앱에 디스패치되는 즉시 발생합니다. 아래 샘플 코드에서는 [HttpClient.SendAsync](http://go.microsoft.com/fwlink/p/?linkid=241637) 메서드에서 반환된 responseTask를 푸시 알림 작업이 인라인으로 선택 및 처리하는 글로벌 저장소에 저장합니다.
+[HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하면 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882), [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 전송과 크게 다릅니다. [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 수신 콜백은 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 코드 이후 Task를 통해 앱에 배달됩니다. 따라서 **ControlChannelTrigger** 푸시 알림 작업은 데이터 또는 오류가 앱에 디스패치되는 즉시 발생합니다. 아래 샘플 코드에서는 [HttpClient.SendAsync](https://go.microsoft.com/fwlink/p/?linkid=241637) 메서드에서 반환된 responseTask를 푸시 알림 작업이 인라인으로 선택 및 처리하는 글로벌 저장소에 저장합니다.
 
-다음 샘플에서는 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)에서 보내기 요청을 처리하는 방법을 보여 줍니다.
+다음 샘플에서는 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)에서 보내기 요청을 처리하는 방법을 보여 줍니다.
 
 ```csharp
 using System;
@@ -532,7 +532,7 @@ private void SendHttpRequest()
 }
 ```
 
-다음 샘플에서는 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)를 사용할 경우 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)에서 받은 응답을 읽는 방법을 보여 줍니다.
+다음 샘플에서는 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)를 사용할 경우 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)에서 받은 응답을 읽는 방법을 보여 줍니다.
 
 ```csharp
 using System.Net;
@@ -573,7 +573,7 @@ public string ReadResponse(Task<HttpResponseMessage> httpResponseTask)
 }
 ```
 
-[HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [ControlChannelTrigger HttpClient 샘플](http://go.microsoft.com/fwlink/p/?linkid=258323)을 참조하세요.
+[HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [ControlChannelTrigger HttpClient 샘플](https://go.microsoft.com/fwlink/p/?linkid=258323)을 참조하세요.
 
 ## <a name="controlchanneltrigger-with-ixmlhttprequest2"></a>ControlChannelTrigger와 IXMLHttpRequest2
 [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. **IXMLHTTPRequest2**를 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. **ControlChannelTrigger**를 사용하면 **IXMLHTTPRequest2**에서 HTTP 요청을 보내거나 받는 요청이 처리되는 방식에 영향을 주지 않습니다.
@@ -584,7 +584,7 @@ public string ReadResponse(Task<HttpResponseMessage> httpResponseTask)
 -   앱은 [**Send**](https://msdn.microsoft.com/library/windows/desktop/hh831164) 메서드를 호출하기 전에 [**SetProperty**](https://msdn.microsoft.com/library/windows/desktop/hh831167) 및 [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/desktop/hh831168) 메서드를 호출하여 HTTP 전송을 설정해야 합니다.
 -   앱은 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 전송을 만들기 전에 초기 [**Send**](https://msdn.microsoft.com/library/windows/desktop/hh831164) 요청을 만들어 전송을 테스트하고 적절하게 설정해야 합니다. 앱에서 전송이 적절히 설정되었다고 판단하면 [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) 개체는 **ControlChannelTrigger**와 함께 사용할 전송 개체로 구성될 수 있습니다. 이 프로세스는 일부 시나리오에서 전송을 통해 설정된 연결이 끊어지는 것을 방지하기 위해 설계되었습니다. SSL 인증서를 사용할 경우, 또는 선택할 수 있는 인증서가 여러 개인 경우 PIN 입력에 사용할 대화 상자가 앱에 필요할 수 있습니다. 또한 프록시 인증 및 서버 인증이 필요할 수 있습니다. 프록시 또는 서버 인증이 만료되면 연결이 닫힙니다. 앱에서 이러한 인증 만료 문제를 처리할 수 있는 방법은 타이머를 설정하는 것입니다. HTTP 리디렉션이 필요한 경우에는 두 번째 연결을 안정적으로 설정할 수 있는지 여부가 확실치 않습니다. 초기 테스트 요청은 **ControlChannelTrigger** 개체와 함께 전송으로서 **IXMLHTTPRequest2** 개체를 사용하기 전에 앱이 가장 최근에 리디렉션된 URL을 사용할 수 있음을 보장합니다.
 
-[**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [IXMLHTTPRequest2와 함께 ControlChannelTrigger 사용 샘플](http://go.microsoft.com/fwlink/p/?linkid=258538)(영문)을 참조하세요.
+[**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [IXMLHTTPRequest2와 함께 ControlChannelTrigger 사용 샘플](https://go.microsoft.com/fwlink/p/?linkid=258538)(영문)을 참조하세요.
 
 ## <a name="important-apis"></a>중요 API
 * [SocketActivityTrigger](/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger)

@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9953afcdf595508d09f44262bcd92e104e0ce0c5
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.openlocfilehash: 4c61a34b983b0faaedc509b68fd4225ea0859a7d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980321"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044833"
 ---
 # <a name="save-a-file-with-a-picker"></a>선택기를 사용하여 파일 저장
 
@@ -23,7 +23,7 @@ ms.locfileid: "8980321"
 사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용합니다.
 
 > [!NOTE]
-> 전체 샘플에 대해서는 [파일 선택기 샘플](http://go.microsoft.com/fwlink/p/?linkid=619994)을 참조하세요.
+> 전체 샘플에 대해서는 [파일 선택기 샘플](https://go.microsoft.com/fwlink/p/?linkid=619994)을 참조하세요.
 
  
 

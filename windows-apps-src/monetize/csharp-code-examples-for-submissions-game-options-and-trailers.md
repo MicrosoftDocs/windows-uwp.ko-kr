@@ -5,12 +5,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, 게임 옵션, 예고편, 고급 목록, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 041f07fd6b24af3658bc9cfffe07117e4b353831
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 277d455fe3387452a4afe91fd74e5c2099f76ce4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939639"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044264"
 ---
 # <a name="c-sample-app-submission-with-game-options-and-trailers"></a>C\# 샘플: 앱 게임 옵션과 예고편 제출
 
@@ -29,7 +29,7 @@ ms.locfileid: "8939639"
 이러한 예제의 필수 조건은 다음과 같습니다.
 
 * 프로젝트에 System.Web 어셈블리 참조를 추가합니다.
-* 프로젝트에 Newtonsoft의 [Newtonsoft.Json](http://www.newtonsoft.com/json) NuGet 패키지를 설치합니다.
+* 프로젝트에 Newtonsoft의 [Newtonsoft.Json](https://www.newtonsoft.com/json) NuGet 패키지를 설치합니다.
 
 <span id="create-app-submission" />
 
@@ -37,7 +37,7 @@ ms.locfileid: "8939639"
 
 ```CreateAndSubmitSubmissionExample```클래스는 Microsoft Store 제출 API를 사용, 게임 옵션과 예고편이 포함된 앱 제출을 만들어 커밋하는 예제 메서드를 호출하는 공용 ```Execute``` 메서드를 정의합니다. 이 코드를 필요에 따라 조정하려면,
 
-* 앱 테넌트 ID에 ```tenantId```를, 앱의 클라이언트 ID 및 키에 ```clientId``` 및 ```clientSecret``` 변수를 할당합니다. 자세한 내용은 [파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하는 방법을](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account) 참조 하세요.
+* 앱 테넌트 ID에 ```tenantId```를, 앱의 클라이언트 ID 및 키에 ```clientId``` 및 ```clientSecret``` 변수를 할당합니다. 자세한 내용은 참조 [파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하는 방법](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 * ```applicationId``` 변수를 제출을 만들고 싶은 앱의 [Store ID](in-app-purchases-and-trials.md#store-ids)에 할당합니다.
 
 > [!div class="tabbedCodeSnippets"]

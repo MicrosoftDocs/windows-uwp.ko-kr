@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp, wip, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 인식 앱
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
 ms.localizationpriority: medium
-ms.openlocfilehash: 229d97c137344de26be0168be437825bea8e9700
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f022045787512f6baea679633d5327b6ba4caf8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932546"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048360"
 ---
 # <a name="windows-information-protection-wip-developer-guide"></a>WIP(Windows Information Protection) 개발자 가이드
 
@@ -21,7 +21,7 @@ ms.locfileid: "8932546"
 
 이 가이드에서는 앱을 빌드하는 방법을 살펴보겠습니다. 완료되면 정책 관리자는 앱을 신뢰하여 조직의 데이터를 사용할 수 있습니다. 또한 직원은 조직의 MDM(모바일 디바이스 관리)에서 등록을 취소하거나 조직에서 완전히 퇴사한 경우에도 자신의 개인 데이터가 디바이스에 그대로 유지되기를 바랍니다.
 
-__참고__ 이 가이드는 UWP 앱을 인식하는 데 도움이 됩니다. C++ Windows 데스크톱 앱을 인식하려는 경우 [WIP(Windows Information Protection) 개발자 가이드(C++)](http://go.microsoft.com/fwlink/?LinkId=822192)를 참조하세요.
+__참고__ 이 가이드는 UWP 앱을 인식하는 데 도움이 됩니다. C++ Windows 데스크톱 앱을 인식하려는 경우 [WIP(Windows Information Protection) 개발자 가이드(C++)](https://go.microsoft.com/fwlink/?LinkId=822192)를 참조하세요.
 
 WIP 및 인식 앱에 대한 자세한 내용은 [WIP(Windows Information Protection)](wip-hub.md)를 참조하세요.
 
@@ -1163,4 +1163,4 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 
 ## <a name="related-topics"></a>관련 항목
 
-[WIP(Windows Information Protection) 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
+[WIP(Windows Information Protection) 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)

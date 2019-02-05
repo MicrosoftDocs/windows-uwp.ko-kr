@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b8a859f27ff24dba15f7e4fde66a8d54a84a8bf4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3f5fe7cad12193b409c4923f876b47cae0852aa9
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925787"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045562"
 ---
 # <a name="play-media-in-the-background"></a>백그라운드에서 미디어 재생
 이 문서에서는 앱이 포그라운드에서 백그라운드로 이동될 때 미디어가 계속 재생되도록 앱을 구성하는 방법을 보여 줍니다. 즉, 사용자가 홈 화면에서 반환된 앱을 최소화했거나 다른 방법으로 앱에서 외부로 이동한 후에도 앱은 오디오를 계속 재생할 수 있습니다. 
@@ -25,7 +25,7 @@ ms.locfileid: "8925787"
 이 문서에 설명된 배경 오디오 구현을 사용하면 모바일, 데스크톱, Xbox 등의 모든 Windows 디바이스에서 앱을 실행할 수 있습니다.
 
 > [!NOTE]
-> 이 문서의 코드는 UWP [배경 오디오 샘플](http://go.microsoft.com/fwlink/p/?LinkId=800141)에서 조정되었습니다.
+> 이 문서의 코드는 UWP [배경 오디오 샘플](https://go.microsoft.com/fwlink/p/?LinkId=800141)에서 조정되었습니다.
 
 ## <a name="explanation-of-one-process-model"></a>단일 프로세스 모델에 대한 설명
 Windows10 버전 1607에서는 배경 오디오를 사용하도록 설정하는 프로세스를 훨씬 간소화하는 새로운 단일 프로세스 모델이 도입되었습니다. 이전에는 앱이 포그라운드 앱뿐 아니라 백그라운드 프로세스도 관리한 다음 두 프로세스 간에 상태 변경을 수동으로 통신해야 했습니다. 새 모델에서는 앱 매니페스트에 배경 오디오 접근 권한 값을 추가하기만 하면 앱이 백그라운드로 이동될 때 자동으로 오디오 재생을 계속합니다. 새로운 두 가지 응용 프로그램 수명 주기 이벤트인 [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) 및 [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground)를 사용하면 앱이 백그라운드로 이동하고 나가는 시기를 알 수 있습니다. 앱이 백그라운드로 이동하거나 나갈 때 시스템에서 적용하는 메모리 제약 조건이 변경될 수 있으므로 이러한 이벤트를 사용하여 현재 메모리 사용을 확인하고 제한 아래로 유지하기 위해 리소스를 해제할 수 있습니다.

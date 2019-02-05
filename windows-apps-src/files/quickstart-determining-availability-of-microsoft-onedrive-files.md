@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e431694f3f0effb6fd5e7688b146109dfc1f5dc7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 26eb371e767f0c1e7f3d5855cf68728958c0cda3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946025"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044996"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Microsoft OneDrive 파일의 가용성 확인
 
@@ -53,7 +53,7 @@ ms.locfileid: "8946025"
 
 1.  액세스하려는 라이브러리에 적절한 접근 권한 값을 선언합니다.
 2.  [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임스페이스를 포함합니다. 이 네임스페이스에는 파일, 폴더 및 응용 프로그램 설정을 관리하기 위한 형식이 포함되어 있습니다. 또한 필요한 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) 형식이 포함되어 있습니다.
-3.  원하는 파일의 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) 개체를 가져옵니다. 라이브러리를 열거하고 있는 경우 이 단계는 일반적으로 [**StorageFolder.CreateFileQuery**](https://msdn.microsoft.com/library/windows/apps/BR227252) 메서드를 호출한 다음 결과 [**StorageFileQueryResult**](https://msdn.microsoft.com/library/windows/apps/BR208046) 개체의 [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276.aspx) 메서드를 호출하여 수행됩니다. **GetFilesAsync** 메서드는 **StorageFile** 개체의 [IReadOnlyList](http://go.microsoft.com/fwlink/p/?LinkId=324970) 컬렉션을 반환합니다.
+3.  원하는 파일의 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) 개체를 가져옵니다. 라이브러리를 열거하고 있는 경우 이 단계는 일반적으로 [**StorageFolder.CreateFileQuery**](https://msdn.microsoft.com/library/windows/apps/BR227252) 메서드를 호출한 다음 결과 [**StorageFileQueryResult**](https://msdn.microsoft.com/library/windows/apps/BR208046) 개체의 [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276.aspx) 메서드를 호출하여 수행됩니다. **GetFilesAsync** 메서드는 **StorageFile** 개체의 [IReadOnlyList](https://go.microsoft.com/fwlink/p/?LinkId=324970) 컬렉션을 반환합니다.
 4.  원하는 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) 개체에 액세스할 수 있는 경우 [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) 속성의 값에는 파일의 사용 가능 여부가 반영됩니다.
 
 다음 제네릭 메서드는 모든 폴더를 열거하고 해당 폴더에 대한 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) 개체의 컬렉션을 반환하는 방법을 보여 줍니다. 그런 다음 호출한 메서드는 각 파일에 대한 [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) 속성을 참조하는 반환된 컬렉션에서 반복됩니다.

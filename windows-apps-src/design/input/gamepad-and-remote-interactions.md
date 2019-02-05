@@ -1,8 +1,22 @@
 ---
-<<<<<<< 머리 작성자: Karl 브리지 Microsoft 설명: Xbox 게임 패드 및 리모컨 입력에 대 한 앱을 최적화 합니다.
-=== 설명: TODO
->>>>>>> 마스터 제목: 게임 패드 및 리모컨 조작 ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47 레이블: 게임 패드 및 원격 상호 작용 템플릿: detail.hbs isNew: true <<<<<<< 머리 ms.author: kbridge =======
-마스터 ms.date: 2017 08/02/ms.topic: 키워드 문서: windows 10, uwp ms.localizationpriority: 중간
+author: Karl-Bridge-Microsoft
+Description: Optimize your app for input from Xbox gamepad and remote control.
+title: 게임 패드 및 리모컨 조작
+ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
+label: Gamepad and remote interactions
+template: detail.hbs
+isNew: true
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+keywords: windows 10, uwp
+ms.localizationpriority: medium
+ms.openlocfilehash: 022724064ad1e7f5551b6676bf256ca5cf6e4b8e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048560"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>게임 패드 및 리모컨 조작
 

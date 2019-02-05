@@ -1,17 +1,17 @@
 ---
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
 title: 첫 번째 앱 만들기
-description: 즐겨 쓰는 프로그래밍 언어를 사용 하 여 Windows10에 대 한 유니버설 Windows 플랫폼 (UWP) 앱을 만듭니다.
+description: 즐겨 쓰는 프로그래밍 언어를 사용 하 여 windows 10 용 유니버설 Windows 플랫폼 (UWP) 앱을 만듭니다.
 ms.date: 1/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, c#, c + +, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cd4d60e6eb3eee7253997938882e6fbdf9fba69
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ef6e364f8c6c88400d2d47a0591d4b7432c33215
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923744"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048020"
 ---
 # <a name="create-your-first-app"></a>첫 번째 앱 만들기
 
@@ -30,7 +30,7 @@ ms.locfileid: "8923744"
 * [완전 초보자용 C# 기본 사항](https://go.microsoft.com/fwlink/?linkid=850801)
 * [완전 초보자용 VB 기본 사항](https://go.microsoft.com/fwlink/?linkid=850802)
 * [Windows 10 개발자 가이드](https://go.microsoft.com/fwlink/?linkid=850804)
-* [Microsoft Virtual Academy](http://www.microsoftvirtualacademy.com/)
+* [Microsoft Virtual Academy](https://www.microsoftvirtualacademy.com/)
 
 "Hello, World!"보다 약간 더 재미있는 무언가를 시도할 준비가 되었다면, 다음 자습서를 시도해 보세요.
 
@@ -46,8 +46,8 @@ C + + 프로그래밍 전문 지식을 VisualC + + 구성 요소 확장을 사�
 
 여기에서 C++에 대한 자세한 정보를 볼 수 있습니다.
 
-* [C++: 범용 언어 및 라이브러리 빠른 시작](http://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
-* [Microsoft Virtual Academy](http://go.microsoft.com/fwlink/p/?LinkID=389916)
+* [C++: 범용 언어 및 라이브러리 빠른 시작](https://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
+* [Microsoft Virtual Academy](https://go.microsoft.com/fwlink/p/?LinkID=389916)
 
 "Hello, World!"보다 약간 더 재미있는 무언가를 시도할 준비가 되었다면, 다음 자습서를 시도해 보세요.
 
@@ -71,9 +71,9 @@ UWP 이상으로 JavaScript 및 HTML 기술을 확장하여 웹앱 만들기 또
 
 웹 기술 공부를 다시 해야 하나요?
 
-* [완전 초보자용 JavaScript 기본 사항](http://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
-* [완전 초보자용 HTML5 &amp; CSS3 기본 사항](http://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
-* [Microsoft Virtual Academy](http://go.microsoft.com/fwlink/p/?LinkID=389916)
+* [완전 초보자용 JavaScript 기본 사항](https://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
+* [완전 초보자용 HTML5 &amp; CSS3 기본 사항](https://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
+* [Microsoft Virtual Academy](https://go.microsoft.com/fwlink/p/?LinkID=389916)
 
 ## <a name="see-also"></a>참고 항목
 

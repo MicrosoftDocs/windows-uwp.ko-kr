@@ -1,17 +1,17 @@
 ---
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
 description: Windows10 버전 1607 이전 릴리스를 대상으로 하는 UWP 앱에서, 앱에서 바로 구매 및 평가판을 사용하는 방법을 알아봅니다.
-title: Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판
+title: Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판
 ms.date: 08/25/2017
 ms.topic: article
 keywords: uwp, 앱에서 바로 구매, IAP, 추가 기능, 평가판, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 72f5875721d17bda79842989c1ac22475a06e938
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 96260b0fb2aa0818dd6df52f88bd0c63d56c35b7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946128"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046982"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판
 
@@ -155,7 +155,7 @@ WindowsStoreProxy.xml 파일은 기본적으로 다음 위치에 생성됩니다
 5. Visual Studio에서 WindowsStoreProxy.xml 파일로 전환합니다.
 6. **XML** 메뉴에서 **스키마**를 클릭한 다음 목록에서 WindowsStoreProxy.xsd 파일의 행을 찾습니다. 파일 위치가 원하는 위치가 아닌 경우(예: 임시 파일이 여전히 표시되는 경우) **추가**를 클릭합니다. 올바른 파일을 찾은 다음 **확인**을 클릭합니다. 이제 해당 파일이 목록에 표시됩니다. 해당 스키마에 대한 **사용** 열에 확인 표시가 있는지 확인합니다.
 
-이 작업을 완료하면 WindowsStoreProxy.xml에서 편집하는 내용에 스키마가 적용됩니다. 자세한 내용은 [방법: 사용할 XML 스키마 선택](http://go.microsoft.com/fwlink/p/?LinkId=403014)을 참조하세요.
+이 작업을 완료하면 WindowsStoreProxy.xml에서 편집하는 내용에 스키마가 적용됩니다. 자세한 내용은 [방법: 사용할 XML 스키마 선택](https://go.microsoft.com/fwlink/p/?LinkId=403014)을 참조하세요.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml

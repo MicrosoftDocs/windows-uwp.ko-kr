@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 지급액 요약, 내역서, 결제, 수익, 지급액, 결제, 수익
 ms.localizationpriority: medium
-ms.openlocfilehash: fa35ac4961b64379ee8a50ec192f5cebad5720d6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e9ab2d2d096c6c0a639a831bb7d09f6d1d044a0c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919883"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046243"
 ---
 # <a name="payout-summary"></a>지급 요약
 
@@ -20,14 +20,14 @@ ms.locfileid: "8919883"
 
 광고를 사용하여 수익을 내고 있는 경우 **지급 요약**에서 광고 수익에 대한 지급 정보를 확인할 수 있습니다. 이러한 수익으로 돈을 벌었거나, 여러 앱에서 활용된 광고 단위에 대해 “매핑되지 않았거나”, 아니면 특정 앱에 매핑할 수 없는 앱에 대해 살펴보겠습니다. 
 
-Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공적인 지급에 대한 정보가 표시됩니다. Azure 마켓플레이스 지급에 대한 자세한 내용은 [Microsoft Azure 마켓플레이스 참가 정책](http://go.microsoft.com/fwlink/p/?LinkId=722436) 및 [Microsoft Azure 마켓플레이스 게시자 계약](http://go.microsoft.com/fwlink/p/?LinkID=699560 )을 참조하세요. Azure Marketplace 지급 보고에 대한 자세한 내용은 [여기](http://go.microsoft.com/fwlink/p/?LinkID=722439)를 참조하세요.
+Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공적인 지급에 대한 정보가 표시됩니다. Azure 마켓플레이스 지급에 대한 자세한 내용은 [Microsoft Azure 마켓플레이스 참가 정책](https://go.microsoft.com/fwlink/p/?LinkId=722436) 및 [Microsoft Azure 마켓플레이스 게시자 계약](https://go.microsoft.com/fwlink/p/?LinkID=699560 )을 참조하세요. Azure Marketplace 지급 보고에 대한 자세한 내용은 [여기](https://go.microsoft.com/fwlink/p/?LinkID=722439)를 참조하세요.
 
 > [!NOTE]
 > 지급을 받을 자격을 갖추려면 수익이 적절한 [지급 임계값](payment-thresholds-methods-and-timeframes.md)에 도달해야 합니다. 수익이 지급 임계값보다 작으면 이 임계값이 충족될 때까지 **보류** 범주로 남아 있습니다. 앱 수익의 지급 임계값에 대한 자세한 내용은 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 광고 수익의 지급 임계값은 미화 50달러(또는 현지 통화로 환산한 동일한 금액)입니다. 
 >
 > 해당 결제 임계값이 충족되는 경우 결제는 월 단위로 이루어집니다. 일반적으로 해당 월의 15일에 지정된 월에 대한 결제 대금을 보냅니다. 결제는 일반적으로 영업일 3~10일 내에 지급 계좌로 입금됩니다. 자세한 내용은 [지급 임계값, 방법 및 기간](payment-thresholds-methods-and-timeframes.md)을 참조하세요.
 
-**지급 요약**을 보려면 파트너 센터의 오른쪽 위 모서리에 나타나는 **지급** 아이콘을 클릭 한 다음 **지급 요약**을 선택 합니다.
+**지급 요약**을 보려면 파트너 센터의 오른쪽 위 모서리에 표시 되는 **지급** 아이콘을 클릭 한 다음 **지급 요약**을 선택 합니다.
 
 ## <a name="current-proceeds-and-payments"></a>현재 수익 및 지급
 

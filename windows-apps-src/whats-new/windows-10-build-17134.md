@@ -5,22 +5,22 @@ keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능
 ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 72319e7d97bfaaff4595c56a09fb7d3a874faa50
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 570e9c463175475db15bd15adbb6b9b88cb9ff39
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923218"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046283"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>개발자를 위한 Windows 10 빌드 17134의 새로운 기능
 
-Visual Studio 2017 및 업데이트된 SDK와 함께 사용되는 Windows 10 빌드 17134(4월 업데이트 또는 버전 1803이라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2017 및 업데이트된 SDK와 함께 사용되는 Windows 10 빌드 17134(4월 업데이트 또는 버전 1803이라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
-다음은 이 릴리스에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. Windows SDK에 추가된 새 네임스페이스의 전체 목록은 [Windows10 빌드 17134 API 변경 내용](windows-10-build-17134-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](http://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
+다음은 이 릴리스에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. Windows SDK에 추가된 새 네임스페이스의 전체 목록은 [Windows10 빌드 17134 API 변경 내용](windows-10-build-17134-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
 
 ## <a name="design--ui"></a>디자인 및 UI
 
-특징 | 설명
+기능 | 설명
  :------ | :------
 적응형 및 대화형 알림 메시지 | 적응형 및 대화형 알림으로 앱을 개선합니다. [업데이트된 알림 메시지에 대한 지침](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)으로 시작하고, 이미지 크기 제한, 진행률 표시줄, 그리고 입력 옵션 추가에 대한 새로운 정보를 살펴보세요.<br><br>[ExpirationTime](https://docs.microsoft.com/uwp/api/windows.ui.notifications.scheduledtoastnotification.expirationtime#Windows_UI_Notifications_ScheduledToastNotification_ExpirationTime)이 예정된 알림 메시지에서 지원됩니다.
 콘텐츠 링크 | 새 [링크 콘텐츠](../design/controls-and-patterns/content-links.md) 컨트롤은 텍스트 컨트롤에 다양한 데이터를 포함하는 방법을 제공하여 사용자가 앱을 종료하지 않고도 사람이나 장소에 대한 정보를 찾고 더욱 활용할 수 있도록 합니다.
@@ -34,12 +34,12 @@ Fluent 디자인 업데이트 | 새로운 정보 및 지침으로 많은 Fluent 
 탐색 보기 | [탐색 보기](../design/controls-and-patterns/navigationview.md) 컨트롤은 사용자 앱의 최상위 수준 탐색에 대한 축소 가능한 탐색 메뉴를 제공합니다. 이 컨트롤은 탐색 창(햄버거 메뉴) 패턴을 구현하며 여러 창 크기에 맞춰 창의 디스플레이 모드를 자동으로 조정합니다.
 포커스 표시 | 새 [포커스 표시](../design/style/reveal-focus.md) 효과는 Xbox One 및 텔레비전 화면 등의 환경에 조명을 제공합니다. 사용자가 게임 패드 또는 키보드 포커스를 이동하면 버튼과 같이 포커스 맞출 수 있는 요소의 테두리를 애니메이션화합니다.
 소리 | XAML은 이제 **SpatialAudioMode** 속성으로 3D 오디오를 지원합니다. 구성 방법에 대한 정보는 [소리](../design/style/sound.md)를 참조하세요.
-타일 | [추적형 타일 알림](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md)이 JavaScript 기반 UWP 앱에서 지원됩니다.<br><br>보조 타일 및 배지 알림을 [데스크톱 브리지 앱에서 지원](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications)됩니다.
+타일 | [추적형 타일 알림](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md)이 JavaScript 기반 UWP 앱에서 지원됩니다.<br><br>보조 타일 및 배지 알림은 [현재 데스크톱 브리지 앱에서 지원](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications)됩니다.
 트리 보기 | [TreeView](../design/controls-and-patterns/tree-view.md) 컨트롤은 중첩된 항목이 포함된 노드를 확장 및 축소하는 계층적 목록을 만듭니다. 트리 보기 컨트롤을 사용하여 UI에서 폴더 구조 또는 중첩된 관계를 설명할 수 있습니다.
 쓰기 스타일 | [쓰기 스타일 지침](../design/style/writing-style.md)에 음성 및 톤과 이를 변환하는 내용이 업그레이드 및 확장되었습니다. 이 새로운 정보는 앱에서 효과적인 텍스트를 만들기 위한 원칙을 제공하며 오류 메시지 또는 대화 상자 등의 컨트롤 쓰기에 대한 모범 사례를 제안합니다.
 
 ## <a name="gaming"></a>게임
-특징 | 설명
+기능 | 설명
  :------ | :------
 게임 개발 시작 | Windows10 게임 개발에 흥미가 있으신가요? 새로운 [게임 개발 시작](../gaming/getting-started.md) 페이지는 앱과 게임을 스스로 설정 및 등록하고 제출하기 위해 수행해야 할 작업에 대한 전체 개요를 제공 합니다.
 그래픽 어댑터 | 그래픽 어댑터 기본 설정 및 제거와 관련된 다음 DXGI API가 추가되었습니다. </br> * [IDXGIFactory6](https://msdn.microsoft.com/library/windows/desktop/mt814823) 인터페이스는 지정된 GPU 기본 설정에 따라 그래픽 어댑터를 열거하는 단일 메서드를 사용합니다. </br> * [DXGIDeclareAdapterRemovalSupport](https://msdn.microsoft.com/library/windows/desktop/mt814821) 함수는 프로세스에서 제거되는 모든 그래픽 디바이스를 복원할 수 있음을 나타냅니다. </br> * [DXGI_GPU_PREFERENCE](https://msdn.microsoft.com/library/windows/desktop/mt814822) 열거는 실행할 앱에 대한 GPU의 기본 설정을 설명합니다.
@@ -69,7 +69,7 @@ PlayReady | Microsoft PlayReady는 무단 사용으로부터 디지털 콘텐츠
 시스템 트리거 | [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger)를 사용하여 OS가 필요한 시스템 트리거를 제공하지 않는 경우 사용자가 시스템 트리거를 지정할 수 있습니다. 이러한 경우는 하드웨어 드라이버 및 UWP 앱이 둘 다 타사 제품인 경우, 하드웨어 드라이버가 앱이 처리하는 사용자 지정 이벤트를 발생하게 해야 할 때입니다. 예를 들어, 오디오 잭이 연결되어 있을 때 사용자에게 알려야 하는 오디오 카드가 있습니다.
 사용자 작업 | 새 [UserActivity 설명서](../launch-resume/useractivities.md)는 여러 장치에서 사용자가 앱에서 수행하고 있었던 작업을 재개하도록 돕는 방법에 대해 설명합니다.</br>**UserActivitySessionHistoryItem** 클래스에 사용자의 최근 활동을 검색하는 새로운 메서드가 있습니다. 자세한 내용은 [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync) 및 해당 오버 로드를 참조하세요.
 Windows Mixed Reality API | 확장 중인 Windows Mixed Reality 플랫폼을 지원하기 위해 신규 API가 [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) 및 [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial) 네임스페이스에 추가되었습니다.
-Windows Mixed Reality 문서 | Windows Mixed Reality 개발자 지침이 [docs.microsoft.com에서 호스팅됩니다.](https://docs.microsoft.com/windows/mixed-reality/) 마찬가지로 이러한 UWP 문서에서 이제 GitHub 문제가 포함 된 피드백 하거나 끌어오기 요청을 통해 직접 기여를 제출할 합니다.
+Windows Mixed Reality 문서 | Windows Mixed Reality 개발자 지침이 [docs.microsoft.com에서 호스팅됩니다.](https://docs.microsoft.com/windows/mixed-reality/) 마찬가지로 이러한 UWP 문서에서 이제 GitHub 문제가 포함 된 피드백 하거나 사용자의 기여 끌어오기 요청을 통해 제출 합니다.
 
 ## <a name="publish--monetize-windows-apps"></a>Windows 앱 게시 및 수익 창출
 

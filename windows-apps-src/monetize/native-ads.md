@@ -5,12 +5,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 광고 관리, 기본 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: c978a07ceb30aaf9c2d0df3d38ff7ee9abbb5b2a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 89e9df87cd214d3d03f25c674ec80a73fedf53d6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939547"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045246"
 ---
 # <a name="native-ads"></a>기본 광고
 
@@ -23,7 +23,7 @@ ms.locfileid: "8939547"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-* Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 설치합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조하세요.
+* Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 설치합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조하세요.
 
 ## <a name="integrate-a-native-ad-into-your-app"></a>앱에 기본 광고를 통합
 
@@ -111,7 +111,7 @@ ms.locfileid: "8939547"
 
 2.  파트너 센터에서 이동 [인 앱 광고](../publish/in-app-ads.md) 페이지와 [광고 단위를 생성](set-up-ad-units-in-your-app.md#live-ad-units)합니다. 광고 단위 유형으로 **기본**을 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
     > [!NOTE]
-    > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. 파트너 센터에서 라이브 UWP 광고 단위를 만들 때 광고 단위에 대 한 응용 프로그램 ID 값에 항상 (예: Store ID 값은 9NBLGGH4R315와) 앱의 스토어 ID와 일치 합니다.
+    > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. 파트너 센터에서 라이브 UWP 광고 단위를 만들 때 광고 단위에 대 한 응용 프로그램 ID 값에 항상 (예: Store ID 값은 9NBLGGH4R315와) 앱에 대 한 스토어 ID와 일치 합니다.
 
 3. [인앱 광고](../publish/in-app-ads.md) 페이지의 [조정 설정](../publish/in-app-ads.md#mediation) 섹션에서 설정을 구성하여, 기본 광고의 광고 조정을 사용하는 방법도 있습니다. 광고 조정으로 여러 광고 네트워크에서 광고를 표시해 광고 수익과 앱 홍보 기능을 극대화 할 수 있습니다.
 

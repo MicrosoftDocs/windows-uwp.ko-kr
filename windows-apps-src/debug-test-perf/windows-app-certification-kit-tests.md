@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 55c11232847e2e7aa4827da0e3816f0cc34e9bed
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ecb7cb68b57e3d9b30a25237a63410d3bfa319b3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923130"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047162"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
@@ -22,7 +22,7 @@ ms.locfileid: "8923130"
 
 인증 테스트 동안 앱을 모니터하여 크래시가 발생하거나 작동이 중단되는 경우를 기록합니다.
 
-### <a name="background"></a>배경
+### <a name="background"></a>Background
 
 앱이 응답하지 않거나 크래시가 발생하면 사용자 데이터가 손실되고 성능이 저하될 수 있습니다.
 
@@ -54,7 +54,7 @@ Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplic
 
 Windows 앱이 OS의 이후 버전에서 실행할 수 있는지 확인합니다. 이 테스트는 기존에 데스크톱 앱 워크플로에만 적용되었지만 이제는 스토어 및 유니버설 Windows 플랫폼(UWP) 워크플로에 사용할 수 있습니다.
 
-### <a name="background"></a>배경
+### <a name="background"></a>Background
 
 운영 체제 버전 정보는 Microsoft Store에 대 한 사용을 제한 했습니다. 이 정보는 종종 앱에서 앱 OS 버전과 관련된 기능을 사용자에게 제공할 수 있도록 OS 버전을 확인하는 데 잘못 사용되었습니다.
 
@@ -70,7 +70,7 @@ Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방
 
 선언된 백그라운드 작업에 대한 취소 처리기가 앱에 있는지 확인합니다. 작업이 취소될 때 호출되는 전용 함수가 있어야 합니다. 이 테스트는 배포된 앱에만 적용됩니다.
 
-### <a name="background"></a>배경
+### <a name="background"></a>Background
 
 스토어 앱은 백그라운드에서 실행하는 프로세스를 등록할 수 있습니다. 예를 들어 메일 앱에서 서버로 때때로 ping할 수 있습니다. 그러나 이러한 리소스가 OS에 필요한 경우 백그라운드 작업을 취소하고 앱에서 이 취소를 적절하게 처리해야 합니다. 취소 처리기가 없는 앱의 경우 크래시가 발생하거나 사용자가 앱을 닫으려고 할 때 닫히지 않을 수 있습니다.
 
@@ -86,7 +86,7 @@ Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방
 
 이 앱 패키지(APPX, 앱 번들)에 응용 프로그램이 하나 포함되어 있는지 확인합니다. 키트에서 독립 실행형 테스트가 되도록 이 검사가 변경되었습니다.
 
-### <a name="background"></a>배경
+### <a name="background"></a>Background
 
 이 테스트는 스토어 정책에 따라 구현되었습니다.
 
@@ -104,7 +104,7 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
 앱 매니페스트의 내용을 테스트하여 내용이 올바른지 확인합니다.
 
-### <a name="background"></a>배경
+### <a name="background"></a>Background
 
 앱의 매니페스트가 형식이 올발라야 합니다.
 
@@ -304,7 +304,7 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 ### <a name="background"></a>배경
 
-앱 (Windows 런타임 또는 지원 되는 Win32 Api) Microsoft Store 용으로 인증 받으려면 UWP 앱에 대 한 Api를 사용 해야 합니다. 이 테스트는 관리되는 이진 파일이 승인된 프로필 외부의 기능에 종속하는 경우도 식별합니다.
+응용 프로그램 (Windows 런타임 또는 지원 되는 Win32 Api) Microsoft Store 용으로 인증 받으려면 UWP 앱에 대 한 Api를 사용 해야 합니다. 이 테스트는 관리되는 이진 파일이 승인된 프로필 외부의 기능에 종속하는 경우도 식별합니다.
 
 ### <a name="test-details"></a>테스트 정보
 
@@ -319,7 +319,7 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 [UWP 앱에 대 한 API](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)되지 않은 앱은 API를 식별 하기 위해 오류 메시지를 검토 합니다.
 
-> **참고**UWP 앱 용 Windows SDK의 Api만 사용 하는 경우에 디버그 구성에서 빌드된 c + + 앱이이 테스트에 실패 합니다. 자세한 정보에 대 한 [UWP 앱의 Windows Api 대안](http://go.microsoft.com/fwlink/p/?LinkID=244022) 을 참조 하세요.
+> **참고**UWP 앱 용 Windows SDK의 Api만 사용 하는 경우에 디버그 구성에서 빌드된 c + + 앱이이 테스트에 실패 합니다. 자세한 정보에 대 한 [UWP 앱의 Windows Api 대안](https://go.microsoft.com/fwlink/p/?LinkID=244022) 을 참조 하세요.
 
 ## <a name="performance-tests"></a>성능 테스트
 
@@ -429,7 +429,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>"resources.pri" 파일에서 자동 병합을 사용할 수 있도록 설정해서는 안 됩니다.</p>
 </td><td>
-<p>MakePRI.exe는 <strong>AutoMerge</strong>라는 옵션을 지원합니다. <strong>AutoMerge</strong>의 기본값은 <strong>off</strong>입니다. 이 옵션을 사용하면 <strong>AutoMerge</strong>에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. 이 Microsoft Store를 통해 배포 하려는 앱에 대 한 권장 하지 않습니다. Microsoft Store를 통해 배포 되는 앱의 resources.pri는 앱 패키지의 루트에 하 고 앱에서 지 원하는 모든 언어 참조를 포함 해야 합니다.</p>
+<p>MakePRI.exe는 <strong>AutoMerge</strong>라는 옵션을 지원합니다. <strong>AutoMerge</strong>의 기본값은 <strong>off</strong>입니다. 이 옵션을 사용하면 <strong>AutoMerge</strong>에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. 이 Microsoft Store를 통해 배포 하려는 앱에 대 한 권장 하지 않습니다. Microsoft Store를 통해 배포 되는 앱의 resources.pri는 앱의 패키지의 루트에 하 고 앱에서 지 원하는 모든 언어 참조를 포함 해야 합니다.</p>
 </td></tr>
 <tr><td>
 <p>{string} 문자열에서 {number}자의 최대 길이 제한을 준수하지 못했습니다.</p>
@@ -495,9 +495,9 @@ UWP 앱은 완전 하 고 제대로 작동 해야 합니다. 템플릿 또는 SD
 
 앱을 테스트하여 디버그 빌드가 아닌지 확인합니다.
 
-### <a name="background"></a>배경
+### <a name="background"></a>Background
 
-Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디버그 하 고 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
+Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디버그 및 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
 
 ### <a name="test-details"></a>테스트 정보
 
@@ -513,7 +513,7 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 
 ### <a name="utf-8-file-encoding"></a>UTF-8 파일 인코딩
 
-### <a name="background"></a>배경
+### <a name="background"></a>Background
 
 바이트코드 캐싱의 장점을 이용하고 다른 런타임 오류 조건을 방지하려면 HTML, CSS 및 JavaScript 파일은 해당 BOM(바이트 순서 표시)을 사용하여 UTF-8 형식으로 인코딩해야 합니다.
 
@@ -531,7 +531,7 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 
 Microsoft Direct3D 앱을 테스트하여 이전 그래픽 하드웨어가 있는 디바이스에서 작동이 중단되지 않는지 확인합니다.
 
-### <a name="background"></a>배경
+### <a name="background"></a>Background
 
 Microsoft Store에서 제대로 렌더링 되거나 정상적으로 기능 수준 9 \-1 그래픽 카드 실패를 Direct3D를 사용 하 여 모든 응용 프로그램에 필요 합니다.
 
@@ -543,13 +543,13 @@ Microsoft Store에서 제대로 렌더링 되거나 정상적으로 기능 수�
 
 ### <a name="corrective-action"></a>수정 작업
 
-높은 기능 수준에서 앱을 실행하더라도 앱이 Direct3D 기능 수준 9\-1에서 올바르게 렌더링되는지 확인합니다. 자세한 내용은 [각 Direct3D 기능 수준에 대한 개발](http://go.microsoft.com/fwlink/p/?LinkID=253575)을 참조하세요.
+높은 기능 수준에서 앱을 실행하더라도 앱이 Direct3D 기능 수준 9\-1에서 올바르게 렌더링되는지 확인합니다. 자세한 내용은 [각 Direct3D 기능 수준에 대한 개발](https://go.microsoft.com/fwlink/p/?LinkID=253575)을 참조하세요.
 
 ### <a name="direct3d-trim-after-suspend"></a>일시 중단 후 Direct3D 자르기
 
-> **참고**이 테스트에 대 한 Windows8.1 이상용 UWP 앱에만 적용 됩니다.
+> **참고**이 테스트에 대 한 windows 8.1 이상용 UWP 앱에만 적용 됩니다.
 
-### <a name="background"></a>배경
+### <a name="background"></a>Background
 
 앱이 Direct3D 디바이스에서 [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346)을 호출하지 않는 경우 앱은 이전 3D 작업에 할당된 메모리를 해제하지 않습니다. 이 경우 시스템 메모리 부족으로 인해 앱이 종료될 가능성이 커집니다.
 
@@ -565,7 +565,7 @@ Microsoft Store에서 제대로 렌더링 되거나 정상적으로 기능 수�
 
 ### <a name="special-use-capabilities"></a>특수 사용 접근 권한 값
 
-### <a name="background"></a>배경
+### <a name="background"></a>Background
 
 특수 사용 접근 권한 값은 특정 시나리오를 위한 것입니다. 회사 계정만 이러한 접근 권한 값을 사용할 수 있습니다.
 
@@ -585,7 +585,7 @@ Microsoft Store에서 제대로 렌더링 되거나 정상적으로 기능 수�
 
 ## <a name="windows-runtime-metadata-validation"></a>Windows 런타임 메타데이터 유효성 검사
 
-### <a name="background"></a>배경
+### <a name="background"></a>Background
 
 앱에 포함된 구성 요소가 UWP 형식 시스템을 준수하는지 확인합니다.
 

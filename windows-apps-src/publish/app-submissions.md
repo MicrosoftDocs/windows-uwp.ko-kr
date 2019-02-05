@@ -6,12 +6,12 @@ keywords: 검사 목록, Windows, UWP, 제출, 제출하다, 게임, 앱, 제출
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 444243bdb1d50146ba54af4f1417103566f97f93
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b98ea7f1d28c4fcd63cd2d4706905578b240e126
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944374"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044916"
 ---
 # <a name="app-submissions"></a>앱 제출
 
@@ -21,15 +21,15 @@ ms.locfileid: "8944374"
 앱이 완성되고 게시할 준비가 되면 제출을 시작하거나 한 줄 코드를 작성하기 전이라도 정보 입력을 시작할 수 있습니다. 다시 하 고 되었고 필요할 때마다 작업을 업데이트 하면 제출에 저장 됩니다.
 
 > [!NOTE]
-> Microsoft Store에 앱을 제출 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 활성 [개발자 계정이](http://go.microsoft.com/fwlink/p/?LinkId=615100) 있어야 합니다.
+> Microsoft Store에 앱을 제출 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 활성 [개발자 계정이](https://go.microsoft.com/fwlink/p/?LinkId=615100) 있어야 합니다.
 
-앱이 게시 된 후에 파트너 센터에서 또 다른 제출을 만들어서 업데이트 된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 게시 된 앱에 대 한 새 제출을 만들려면 **개요** 페이지에 표시 된 최근 제출 옆에 있는 **업데이트** 를 클릭 합니다. 할 수도 있습니다 [스토어에서 앱을 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store) (사용 하 고 다음 사용할 수 있도록 나중에 다시 원할 경우) 하는 경우.
+앱이 게시 된 후에 파트너 센터에서 또 다른 제출을 만들어서 업데이트 된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 게시 된 앱에 대 한 새 제출을 만들려면 **개요** 페이지에 표시 된 최근 제출 옆에 있는 **업데이트** 를 클릭 합니다. 수도 있습니다 [스토어에서 앱 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store) (사용 하 고 다음 사용할 수 있도록 나중에 다시 원할 경우) 하는 경우.
 
 > [!NOTE]
 > 설명서의이 섹션에는 파트너 센터에서 앱 제출을 만드는 방법을 설명 합니다. 또는 [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
 
 > [!IMPORTANT]
-> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
+> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
 
 ## <a name="app-submission-checklist"></a>앱 제출 검사 목록
 
@@ -46,7 +46,7 @@ ms.locfileid: "8944374"
 | **일정**                  | 기본값: 최대한 빨리 게시        | [정확한 릴리스 일정 구성](configure-precise-release-scheduling.md) |
 | **기본 가격**                | 필수                                    | [앱 가격 설정 및 예약](set-and-schedule-app-pricing.md)              |
 | **무료 평가판**                | 기본값: 무료 평가판 없음                      | [무료 평가판](set-app-pricing-and-availability.md#free-trial)              |
-| **할인 판매 가격 책정**              | 옵션                                    | [앱 및 추가 기능 판매](put-apps-and-add-ons-on-sale.md)           |
+| **할인 판매 가격 책정**              | 선택 사항                                    | [앱 및 추가 기능 판매](put-apps-and-add-ons-on-sale.md)           |
 | **조직 라이선스**    | 기본값: 조직에서 대량 구입할 수 있음 | [조직 라이선스 옵션](organizational-licensing.md)        |
       |
 
@@ -91,7 +91,7 @@ ms.locfileid: "8944374"
 | 필드 이름                    | 참고                                       | 자세한 정보                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **설명**               | 필수                                    | [호소력 있는 앱 설명 작성](write-a-great-app-description.md) |
-| **이 버전의 새로운 기능**   | 선택 사항                                 | [릴리스 정보](create-app-store-listings.md#whats-new-in-this-version)       |
+| **이 버전의 새로운 기능**   | 옵션                                 | [릴리스 정보](create-app-store-listings.md#whats-new-in-this-version)       |
 | **앱 기능**              | 선택 사항                                    | [제품 기능](create-app-store-listings.md#product-features)         |
 | **스크린샷**               | 필수 사항(최소 하나의 스크린샷, 4개 이상을 권장)          | [스크린샷](app-screenshots-and-images.md#screenshots)          |
 | **Microsoft Store 로고**               | 권장 사항(일부 OS 버전에서는 필수 사항) | [Microsoft Store 로고](app-screenshots-and-images.md#store-logos)             |
@@ -102,7 +102,7 @@ ms.locfileid: "8944374"
 ] (앱-스크린샷을-및-images.md #xbox 이미지) |
 | **추가 필드**  | 선택 사항                                    | [추가 필드](create-app-store-listings.md#supplemental-fields) 
 | **검색어**              | 선택 사항                                    | [검색어](create-app-store-listings.md#search-terms)         |
-| **저작권 및 상표 정보** | 선택 사항                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |
+| **저작권 및 상표 정보** | 옵션                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |
 | **추가 사용 조건**  | 선택 사항                                    | [추가 사용 조건](create-app-store-listings.md#additional-license-terms) |
 | **개발자**              | 선택 사항                                    | [개발자](create-app-store-listings.md#developed-by)                   |
 

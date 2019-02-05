@@ -6,12 +6,12 @@ ms.date: 02/12/2017
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 0930e970af943329cac60d02a4bfe5986c21757a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 42077756beff4269cc91624502fb9958c580bbc0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932672"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047275"
 ---
 # <a name="device-portal-for-xbox"></a>Xbox용 디바이스 포털
 
@@ -43,7 +43,7 @@ ms.locfileid: "8932672"
 
 Xbox 장치 포털은 Winodws 장치 포털에서 사용할 수 있는 것과 유사한 표준 페이지 세트와 고유한 몇몇 페이지를 제공합니다. Windows 장치 포털에 대한 자세한 설명은 [Windows 장치 포털 개요](device-portal.md)를 참조하세요. 다음 섹션에서는 Xbox 장치 포털에 고유한 페이지들에 대해 설명합니다.
 
-### <a name="home"></a>홈
+### <a name="home"></a>Home
 
 **앱 관리자** 페이지의 Windows 장치 포털과 유사하게 Xbox 장치 포털 **홈** 페이지는 **내 게임 및 앱** 아래 설치된 게임과 앱의 목록을 표시합니다. 게임이나 앱의 이름을 클릭하면 **패키지 패밀리 이름** 같은 세부 정보를 확인할 수 있습니다. **작업** 드롭다운에서 **시작** 같이 게임이나 앱에 대해 작업을 할 수 있습니다.
 
@@ -165,7 +165,7 @@ Kinect 센서를 콘솔에 연결해야 이 설정을 변경할 수 있습니다
 
 * **유휴 상태일 때 화면이 꺼짐(몇 분 후)**: 장치가 이 시간 동안 유효 상태일 때 화면이 꺼짐.
 
-* **전원 모드**: 장치의 전원 모드. 더 자세한 정보는 [절전 및 대기 전원 모드](http://support.xbox.com/xbox-one/console/learn-about-power-modes)를 참조하세요.
+* **전원 모드**: 장치의 전원 모드. 더 자세한 정보는 [절전 및 대기 전원 모드](https://support.xbox.com/xbox-one/console/learn-about-power-modes)를 참조하세요.
 
 * **전원 연결 시 콘솔 자동 부팅**: 전원에 연결될 때 장치가 자동으로 켜짐.
 
@@ -195,7 +195,7 @@ Kinect 센서를 콘솔에 연결해야 이 설정을 변경할 수 있습니다
 
 ### <a name="game-event-data"></a>게임 이벤트 데이터
 
-**게임 이벤트 데이터** 페이지에서 Xbox One에서 현재 기록 된 이벤트에 대 한 Windows (ETW 추적) 게임 이벤트 수가 실시간 그래프에 해당 스트림 볼 수 있습니다. (이벤트 이름, 발생 한 이벤트 및 게임 타이틀) 세부 정보를 볼 수도 있습니다 시스템에 기록 된 게임 이벤트 인 경우 데이터 그래프 아래의 데이터 테이블에서 각 이벤트를 설명 합니다. 테이블은 이벤트가 기록 하는 경우에 사용할 수만 있습니다.
+**게임 이벤트 데이터** 페이지에서 Xbox One에서 현재 기록 된 이벤트 추적에 대 한 ETW (Windows) 게임 이벤트 수가 실시간 그래프에 해당 스트림 볼 수 있습니다. 시스템에 기록 된 게임 이벤트 인 경우 세부 정보 (이벤트 이름, 발생 한 이벤트 및 게임 타이틀)도 볼 수 있습니다 데이터 그래프 아래 데이터 테이블에서 각 이벤트를 설명 합니다. 테이블은 이벤트 기록 되는 경우에 사용할 수만 있습니다.
 
 ![게임 이벤트 데이터](images/device-portal-xbox-22.PNG)
 

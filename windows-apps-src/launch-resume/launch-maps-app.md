@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08fab2b312fa4ea79d03f350d62070e205d535f8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 021e3142a4e94f762cc48dbc86905dcf0b658772
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920733"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045702"
 ---
 # <a name="launch-the-windows-maps-app"></a>Windows 지도 앱 실행
 
@@ -20,7 +20,7 @@ ms.locfileid: "8920733"
 
 앱에서 Windows 지도 앱을 실행하는 방법을 알아봅니다. 이 항목에서는 **bingmaps:, *ms-drive-to:, ms-walk-to:** 및 **ms-settings:** URI(Uniform Resource Identifier) 체계에 대해 설명합니다. 이러한 URI 체계로 Windows 지도 앱을 실행하여 특정 지도, 길 찾기 및 검색 결과를 표시하거나 설정 앱에서 Windows 지도 오프라인 지도를 다운로드할 수 있습니다.
 
-**팁** 앱에서 Windows 지도 앱을 실행하는 방법을 알아보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
+**팁** 앱에서 Windows 지도 앱을 실행하는 방법을 알아보려면 GitHub의 [Windows-universal-samples repo](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
 
 ## <a name="introducing-uris"></a>URI 소개
 

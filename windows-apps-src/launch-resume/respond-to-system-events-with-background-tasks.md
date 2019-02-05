@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: c3773a486a1b7a29fc2a171c473edf38f6f3a7f1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: de8d585d7178a277d1df248858f69a5a5705fb1d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935787"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044537"
 ---
 # <a name="respond-to-system-events-with-background-tasks"></a>백그라운드 작업으로 시스템 이벤트에 응답
 
@@ -88,7 +88,7 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
  
 ## <a name="remarks"></a>설명
 
-적용 중인 백그라운드 작업 등록을 보려면 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)을 다운로드합니다.
+적용 중인 백그라운드 작업 등록을 보려면 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)을 다운로드합니다.
 
 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) 및 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) 이벤트에 대한 응답으로 백그라운드 작업을 실행할 수 있지만 [응용 프로그램 매니페스트에서 백그라운드 작업을 선언](declare-background-tasks-in-the-application-manifest.md)해야 합니다. 백그라운드 작업 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)도 호출해야 합니다.
 
@@ -108,4 +108,4 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](https://go.microsoft.com/fwlink/p/?linkid=254345)

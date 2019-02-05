@@ -6,12 +6,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f6a37af19c9e3e9beaebbadfcc71f3ad01e3087c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b2d402bca61fc271b6d1e2e972cca280693f9ce3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918514"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045196"
 ---
 # <a name="guidelines-for-cross-slide"></a>교차 방향으로 밀기에 대한 지침
 
@@ -56,7 +56,7 @@ ms.locfileid: "8918514"
 
 단일 방향으로 스크롤되는 목록이나 모음에는 교차 방향으로 밀기를 사용합니다. 자세한 내용은 [ListView 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/hh465382)를 참조하세요.
 
-**참고**콘텐츠 영역이 양방향으로 웹 브라우저나 전자 판독기와 같이 이동할 수 있는 경우에서 시간이 제한 된 길게와 상호 작용 이미지 및 하이퍼링크와 같은 개체에 대 한 상황에 맞는 메뉴를 호출 사용 해야 합니다.
+**참고**콘텐츠 영역 웹 브라우저나 전자 판독기와 같이 두 방향으로 이동할 수 있는 경우에서 시간이 제한 된 길게와 상호 작용 이미지 및 하이퍼링크와 같은 개체에 대 한 상황에 맞는 메뉴를 호출 사용 해야 합니다.
 
  
 
@@ -133,19 +133,19 @@ ms.locfileid: "8918514"
 
 
 **샘플**
-* [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 **보관 샘플**
-* [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: 터치 적중 횟수 테스트 샘플](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: 간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [입력: Windows 8 제스처 샘플](http://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처(C++) 샘플](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [DirectX 터치 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [입력: XAML 사용자 입력 이벤트 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [입력: 디바이스 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 터치 적중 횟수 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [입력: 간단한 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [입력: Windows 8 제스처 샘플](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [입력: 조작 및 제스처(C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [DirectX 터치 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

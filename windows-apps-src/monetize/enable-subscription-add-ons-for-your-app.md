@@ -5,12 +5,12 @@ keywords: windows 10, uwp, 구독, 추가 기능, 앱 내 구매, IAP, Windows.S
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f46c566712f7f0c2bca45db5a107738c4104e037
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 44553d2a772dcfe3b46ea196d6f6bb7c20fdfec0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930339"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046689"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>앱에 구독 추가 기능을 사용하도록 설정
 
@@ -27,7 +27,7 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 * 구독에 1주나 1개월 무료 평가판 사용 기간을 추가할 수 있습니다.
 * Windows SDK는 앱에서 사용할 수 있는 구독 추가 기능에 대한 정보를 얻고, 구독 추가 기능을 구현하기 위해 앱에서 사용할 수 있는 [API를 제공](#code-examples)합니다. 저희는 또한 [사용자 구독을 관리할](#manage-subscriptions) 서비스를 호출할 수 있는 REST API를 제공합니다.
 * 지정된 기간 동안 취득된 구독, 활성 구독자, 취소된 구독 수를 제공하는 분석 보고서도 확인할 수 있습니다.
-* 고객은 Microsoft 계정의 [http://account.microsoft.com/services](http://account.microsoft.com/services) 페이지에서 자신의 구독을 관리할 수 있습니다. 고객은 이 페이지를 사용해 취득한 구독을 확인하고, 구독을 취소하고, 구독과 연결된 결제 유형을 변경할 수 있습니다.
+* 고객은 Microsoft 계정의 [http://account.microsoft.com/services](https://account.microsoft.com/services) 페이지에서 자신의 구독을 관리할 수 있습니다. 고객은 이 페이지를 사용해 취득한 구독을 확인하고, 구독을 취소하고, 구독과 연결된 결제 유형을 변경할 수 있습니다.
 
 ## <a name="steps-to-enable-a-subscription-add-on-for-your-app"></a>앱에서 구독 추가 기능을 구현하는 단계
 
@@ -69,7 +69,7 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 이러한 예제의 필수 조건은 다음과 같습니다.
 * **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
 * [앱 제출을 만들지](https://docs.microsoft.com/windows/uwp/publish/app-submissions) 파트너 센터에서 드라이버와이 앱은 스토어에서 게시 합니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 가이드](in-app-purchases-and-trials.md#testing)를 참조하세요.
-* 파트너 센터에서 [앱에 대 한 구독 추가 기능을 생성](../publish/add-on-submissions.md) 을 했습니다.
+* 파트너 센터에서 [만든 앱에 대 한 구독 추가 기능을](../publish/add-on-submissions.md) 했습니다.
 
 이 예제의 코드는 다음과 같이 가정합니다.
 * 코드 파일에는 **Windows.Services.Store** 및 **System.Threading.Tasks** 네임스페이스에 대한 **using** 문이 있습니다.
@@ -109,7 +109,7 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 
 ## <a name="cancellations"></a>취소
 
-고객은 자신의 Microsoft 계정에 대한 [http://account.microsoft.com/services](http://account.microsoft.com/services) 페이지를 사용해 취득한 모든 구독을 확인하고, 구독을 취소하고, 구독과 연결된 결제 유형을 변경할 수 있습니다. 고객이 이 페이지를 사용해 구독을 취소하는 경우에도 현재 청구 기간 동안의 구독은 계속 액세스할 수 있습니다. 현재 청구 기간의 일부에 대해 환불을 받을 수 없습니다. 현재 청구 기간이 끝날 때 구독이 비활성화됩니다.
+고객은 자신의 Microsoft 계정에 대한 [http://account.microsoft.com/services](https://account.microsoft.com/services) 페이지를 사용해 취득한 모든 구독을 확인하고, 구독을 취소하고, 구독과 연결된 결제 유형을 변경할 수 있습니다. 고객이 이 페이지를 사용해 구독을 취소하는 경우에도 현재 청구 기간 동안의 구독은 계속 액세스할 수 있습니다. 현재 청구 기간의 일부에 대해 환불을 받을 수 없습니다. 현재 청구 기간이 끝날 때 구독이 비활성화됩니다.
 
 또한 [특정 사용자의 구독 청구 상태를 변경하는](change-the-billing-state-of-a-subscription-for-a-user.md) REST API를 사용, 사용자를 대신해 구독을 취소할 수 있습니다.
 
@@ -124,7 +124,7 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 다음 시나리오는 현재 구독 추가 기능에서 지원되지 않습니다.
 
 * 현재 스토어를 통해 직접 고객에게 구독을 판매하는 기능은 지원되지 않습니다. 구독은 디지털 제품의 앱에서 바로 구매에만 사용할 수 있습니다.
-* 고객은 Microsoft 계정의 [http://account.microsoft.com/services](http://account.microsoft.com/services) 페이지에서 구독을 전환할 수 없습니다. 다른 구독 기간으로 전환 하려면 고객이 현재 구독을 취소 하 고 한 앱에서 다른 구독 기간으로 구독을 구매 해야 합니다.
+* 고객은 Microsoft 계정의 [http://account.microsoft.com/services](https://account.microsoft.com/services) 페이지에서 구독을 전환할 수 없습니다. 다른 구독 기간으로 전환 하려면 고객이 현재 구독을 취소 하 고 한 앱에서 다른 구독 기간으로 구독을 구매 해야 합니다.
 * 현재 구독 추가 기능은 계층 전환을 지원하지 않습니다(예를 들어, 고객은 기본 구독에서 기능이 더 많은 프리미엄 구독으로 전환할 수 없음).
 * 현재 구독 추가 기능에서는 [영업](../publish/put-apps-and-add-ons-on-sale.md) 및 [홍보 코드](../publish/generate-promotional-codes.md)를 지원하지 않습니다.
 

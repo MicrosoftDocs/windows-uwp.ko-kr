@@ -1,30 +1,30 @@
 ---
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: Windows 앱 인증 키트
-description: 앱은 Microsoft Store에 게시 될 가능성을 제공 하거나 유효성을 검사 하 고 인증을 위해 제출 하기 전에 로컬로 테스트 되는 Windows 인증 합니다. 이 항목에서는 Windows 앱 인증 키트를 설치하고 실행하는 방법을 보여 줍니다.
+description: Microsoft Store에 게시 될 가능성은 앱을 제공 하거나 Windows 인증 되 고 유효성을 검사 하 고 인증을 위해 제출 하기 전에 로컬로 테스트 합니다. 이 항목에서는 Windows 앱 인증 키트를 설치하고 실행하는 방법을 보여 줍니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 614f59fe06528d7b5bac36290eae14f0d7d49653
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e3c8729a6d2ac828f3d7b257681d64f4c7834587
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930774"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048873"
 ---
 # <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 
 
 
-앱을 [Windows 인증](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 또는 [Microsoft Store에 게시](https://msdn.microsoft.com/library/windows/apps/Hh694062)에 대 한 준비를 할 해야 유효성을 검사 하 고 테스트 로컬로 먼저 합니다. 이 항목에서는 설치 하 고 안전 하 고 효율적으로 앱은 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666) 실행 하는 방법을 보여 줍니다.
+앱을 [Windows 인증](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 또는 [Microsoft Store에 게시](https://msdn.microsoft.com/library/windows/apps/Hh694062)에 대 한 준비를 할 해야 유효성을 검사 하 고 테스트 로컬로 먼저 합니다. 이 항목에서는 설치 하 고 안전 하 고 효율적으로 앱은 [Windows 앱 인증 키트](https://go.microsoft.com/fwlink/p/?LinkID=309666) 실행 하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
 유니버설 Windows 앱을 테스트하기 위한 필수 구성 요소:
 
--   설치 하 고 Windows10 실행 해야 합니다.
--   [Windows 앱 인증 키트 버전 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666)Windows10에 대 한 Windows 소프트웨어 개발 키트 (SDK)에 포함 된 설치 해야 합니다.
+-   설치 하 고 windows 10을 실행 해야 합니다.
+-   [Windows 앱 인증 키트 버전 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666), windows 10에 대 한 Windows 소프트웨어 개발 키트 (SDK)에 포함 된 설치 해야 합니다.
 -   [개발을 위해 디바이스를 사용](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)하도록 설정해야 합니다.
 -   테스트할 Windows 앱을 컴퓨터에 배포해야 합니다.
 
@@ -78,7 +78,7 @@ ms.locfileid: "8930774"
 
 3.  테스트가 완료되면 `[report file name]`이라는 보고서 파일을 열고 테스트 결과를 검토합니다.
 
-**참고**를 사용 하는 서비스에서 Windows 앱 인증 키트를 실행할 수 있지만 서비스는 활성 사용자 세션에서 키트 프로세스를 시작 해야 하며 Session0에서 실행 될 수 없습니다.
+**참고**Windows 앱 인증 키트는 서비스에서 실행할 수 있지만 서비스는 활성 사용자 세션에서 키트 프로세스를 시작 해야 하며 Session0에서 실행 될 수 없습니다.
 
 **참고**  Windows 앱 인증 키트 명령줄에 대 한 자세한 내용은 다음 명령을 입력 `appcert.exe /?`
 
@@ -88,7 +88,7 @@ Windows 앱 인증 키트의 성능 테스트 임계값은 절전 컴퓨터의 �
 
 테스트를 수행하는 컴퓨터의 특성이 테스트 결과에 영향을 줄 수 있습니다. 앱의 성능에는 [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)을 충족 하는 경우를 확인 하려면 Intel Atom 프로세서 기반 컴퓨터 화면 해상도 1366x768 (또는 더 높은) 및 회전을 사용 하 여 하드 절전 컴퓨터에서 앱을 테스트 하는 권장 드라이브 (반도체 하드 드라이브) 반대입니다.
 
-저성능 컴퓨터가 발전함에 따라 시간이 지나면 성능 특성이 변할 수도 있습니다. 최신 버전의 앱 최신 성능 요구 사항을 준수 하는지 확인 하려면 Windows 앱 인증 키트를 사용 하 여 앱 테스트 및 최신 [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944) 참조 하세요.
+저성능 컴퓨터가 발전함에 따라 시간이 지나면 성능 특성이 변할 수도 있습니다. 최신 버전의 앱 최신 성능 요구 사항을 준수 하는지 확인 Windows 앱 인증 키트를 사용 하 여 앱 테스트 및 최신 [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944) 참조 하세요.
 
 ## <a name="related-topics"></a>관련 항목
 

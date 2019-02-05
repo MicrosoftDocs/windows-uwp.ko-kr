@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: 45f76744070a7557939d1d7f2307113852737072
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ccc3f22d0485faa0df01828f1a6f807d2a1ce555
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938571"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046902"
 ---
 # <a name="process-bitmaps-with-opencv"></a>OpenCV로 비트맵 처리
 
@@ -20,7 +20,7 @@ ms.locfileid: "8938571"
 이 문서의 예제는 C#을 사용하여 생성된 앱을 포함하여 UWP 앱에서 사용할 수 있는 네이티브 코드 Windows 런타임 구성 요소를 만드는 과정을 안내합니다. 이 도우미 구성 요소는 OpenCV의 흐림 이미지 처리 기능을 사용할 단일 메서드 **Blur**를 노출합니다. 이 구성 요소는 OpenCV 라이브러리에서 직접 사용할 수 있는 기본 이미지 데이터 버퍼에 대한 포인터를 가져오는 private 메서드를 구현하므로 다른 OpenCV 처리 기능을 구현하기 위해 도우미 구성 요소를 쉽게 확장할 수 있습니다. 
 
 * **SoftwareBitmap** 사용에 대한 소개는 [비트맵 이미지 만들기, 편집 및 저장](imaging.md)을 참조하세요. 
-* OpenCV 라이브러리를 사용하는 방법을 알아보려면 [http://opencv.org](http://opencv.org)로 이동하세요.
+* OpenCV 라이브러리를 사용하는 방법을 알아보려면 [http://opencv.org](https://opencv.org)로 이동하세요.
 * 이 문서에서 설명한 OpenCV 도우미 구성 요소를 **[MediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader)** 와 함께 사용해 카메라에서 프레임의 실시간 이미지 처리를 구현하는 방법을 알아보려면 [MediaFrameReader와 함께 OpenCV 사용](use-opencv-with-mediaframereader.md)을 참조하세요.
 * 여러 가지 효과를 구현하는 전체 코드 예제를 보려면, Windows 유니버설 샘플 GitHub 리포의 [카메라 프레임 + OpenCV 샘플](https://go.microsoft.com/fwlink/?linkid=854003)을 참조하세요.
 

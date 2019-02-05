@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a4c5005885d150fdd4f6a41b3fb2586e2728bbd5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: dde7f966e47aa6c35e3bc4e508eddabf13e313ee
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921887"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045914"
 ---
 # <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a>HDR(High Dynamic Range) 및 어두운 조명 사진 캡처
 
@@ -39,7 +39,7 @@ HDR 캡처와 관련된 기타 문서는 다음과 같습니다.
 > [!NOTE] 
 > 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 보다 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본적인 미디어 캡처 패턴을 파악하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
 
-컨텍스트에서 또는 해당 앱의 시작점으로 사용된 API를 확인하는 데 사용할 수 있는 **AdvancedPhotoCapture** 클래스의 사용을 보여 주는 범용 Windows 샘플이 있습니다. 자세한 내용은 [카메라 고급 캡처 샘플](http://go.microsoft.com/fwlink/?LinkID=620517)을 참조하세요.
+컨텍스트에서 또는 해당 앱의 시작점으로 사용된 API를 확인하는 데 사용할 수 있는 **AdvancedPhotoCapture** 클래스의 사용을 보여 주는 범용 Windows 샘플이 있습니다. 자세한 내용은 [카메라 고급 캡처 샘플](https://go.microsoft.com/fwlink/?LinkID=620517)을 참조하세요.
 
 ## <a name="advanced-photo-capture-namespaces"></a>고급 사진 캡처 네임스페이스
 

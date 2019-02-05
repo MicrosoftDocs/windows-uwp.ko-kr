@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c812cea510865da68760788a723830fe0940c21
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2c1d8c6a33bd7d9249b5000767ece154ab7f8776
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920183"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046007"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Xbox 개발 환경에서의 UWP 설정
 
@@ -123,6 +123,6 @@ Xbox One에 앱을 배포하려면 먼저 사용자가 본체에 로그인되어
 ## <a name="see-also"></a>참고 항목
 - [Xbox One 개발자 모드 활성화](devkit-activation.md)  
 - [Windows 10용 다운로드 및 도구](https://dev.windows.com/downloads)  
-- [Windows 참가자 프로그램](http://go.microsoft.com/fwlink/?LinkId=780552)  
+- [Windows 참가자 프로그램](https://go.microsoft.com/fwlink/?LinkId=780552)  
 - [Xbox One 도구 소개](introduction-to-xbox-tools.md) 
 - [Xbox One의 UWP](index.md)

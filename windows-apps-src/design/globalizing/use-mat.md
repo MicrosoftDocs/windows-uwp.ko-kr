@@ -6,12 +6,12 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 84e3c74171c619fd59e272e539fd9a4e5428e258
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 74ad832d5516a4fa9bef849c5f691e2909c6c3d4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925582"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047618"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>다국어 앱 도구 키트 4.0 사용
 
@@ -63,13 +63,13 @@ Visual Studio 2017을 사용하는 경우 두 설치 프로그램을 차례로 �
 
 이에 대한 응답으로 도구 키트에서는 다음과 같은 작업을 수행합니다.
 
-- 추가한 각 언어에 대해 해당 언어의 [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302) 이름의 새로운 폴더가 생성됩니다. 해당 폴더 내에 기본 언어 문자열을 포함하는 파일과 일치하도록 새 리소스 파일(.resw)이 생성됩니다.
+- 추가한 각 언어에 대해 해당 언어의 [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302) 이름의 새로운 폴더가 생성됩니다. 해당 폴더 내에 기본 언어 문자열을 포함하는 파일과 일치하도록 새 리소스 파일(.resw)이 생성됩니다.
 - 언어를 처음 추가한 경우 `MultilingualResources`라는 이름의 새 폴더가 프로젝트에 추가됩니다. 해당 폴더 내에 각 언어마다 .xlf 파일이 추가됩니다. .Xlf 파일은 프로젝트의 각 리소스 파일(.resw)에 포함된 각 문자열의 번역 단위를 포함합니다.
 - 출력 창에서는 추가한 언어가 추가되었음을 확인할 수 있습니다.
 
 기본 언어 리소스 파일(.resw)을 추가/제거하거나 기본 언어 리소스 파일(.resw) 내에서 문자를 추가/제거할 때마다 .xlf 파일을 다시 동기화하도록 프로젝트를 다시 생성합니다. 이렇게 하면 .xlf 파일에 문자열 집합이 기본 언어로 포함됩니다.
 
-[Microsoft 언어 포털](http://go.microsoft.com/fwlink/p/?LinkId=330295) 및 [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220)와 같은 설치된 번역 제공자를 사용하여 앱 리소스를 번역할 수 있습니다. 공급자가 특정 언어를 지원하는 경우 공급장의 아이콘이 번역 언어 대화 상자의 언어 이름 옆에 표시됩니다.
+[Microsoft 언어 포털](https://go.microsoft.com/fwlink/p/?LinkId=330295) 및 [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)와 같은 설치된 번역 제공자를 사용하여 앱 리소스를 번역할 수 있습니다. 공급자가 특정 언어를 지원하는 경우 공급장의 아이콘이 번역 언어 대화 상자의 언어 이름 옆에 표시됩니다.
 
 번역 언어 대화 상자에서 도구 키트가 발견한 기존 .xlf 기반 언어는 프로젝트에 이미 포함되어 있음을 나타내도록 선택 상자가 미리 체크됩니다.
 
@@ -149,8 +149,8 @@ Visual Studio 내의 번역 서비스에 액세스하려면 솔루션 탐색기�
 
 2개의 공급자가 다국어 앱 도구 키트에 함께 제공됩니다.
 
-- [Microsoft 언어 포털](http://go.microsoft.com/fwlink/p/?LinkId=330295) 공급자를 통해 Microsoft 제품 및 서비스의 사용자 인터페이스 텍스트 번역을 기반으로 번역을 재사용하고 용어와 일치하는 지원을 받을 수 있습니다.
-- [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220) 공급자를 통해 주문형 기계 번역 서비스를 사용할 수 있습니다.
+- [Microsoft 언어 포털](https://go.microsoft.com/fwlink/p/?LinkId=330295) 공급자를 통해 Microsoft 제품 및 서비스의 사용자 인터페이스 텍스트 번역을 기반으로 번역을 재사용하고 용어와 일치하는 지원을 받을 수 있습니다.
+- [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220) 공급자를 통해 주문형 기계 번역 서비스를 사용할 수 있습니다.
 
 사용자 및 사용자의 번역자는 다국어 편집기에서 번역 상태를 관리하여 불확실한 번역을 나중에 검토할 수 있습니다. 각 문자열을 상태를 **속성** 탭에서 설정할 수 있습니다. 상태 값으로는 **새 문자열**, **검토 필요**, **번역됨**, **최종** 및 **로그오프됨**이 있습니다. 행 왼쪽의 표시기는 상태를 나타냅니다. 다국어 편집기에서 모든 행이 녹색으로 표시되면 번역 작업이 완료된 것입니다.
 
@@ -166,7 +166,7 @@ Microsoft Store 인증 과정을 시작하기 전에 프로젝트에서 `<projec
 * [세계화 및 지역화](globalizing-portal.md)
 * [세계화 지침](guidelines-and-checklist-for-globalizing-your-app.md)
 * [자신의 앱을 현지화 가능하도록 만들 수 있습니다.](prepare-your-app-for-localization.md)
-* [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
 
 ## <a name="downloads"></a>다운로드
 
@@ -175,5 +175,5 @@ Microsoft Store 인증 과정을 시작하기 전에 프로젝트에서 `<projec
 
 ## <a name="translation-services"></a>번역 서비스
 
-* [Microsoft 언어 포털](http://go.microsoft.com/fwlink/p/?LinkId=330295)
-* [Microsoft Translator](http://go.microsoft.com/fwlink/p/?LinkId=258220)
+* [Microsoft 언어 포털](https://go.microsoft.com/fwlink/p/?LinkId=330295)
+* [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)

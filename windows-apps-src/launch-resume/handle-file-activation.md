@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: abe77526a7ac12bc905839065913dd59d70fdf62
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: eaf6118720ab77931decf93113a13341ab4f51d0
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925900"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046516"
 ---
 # <a name="handle-file-activation"></a>파일 활성화 처리
 
@@ -121,21 +121,21 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 ```
 
 > [!NOTE]
-> 파일 계약을 통해 시작 하는 경우 해당 뒤로 단추는 사용자가 다시 앱의 이전 콘텐츠가 아닌 앱이 시작 된 화면에 있는지 확인 합니다.
+> 파일 계약을 통해 시작 하는 경우 다시 돌아가도록 해야 뒤로 단추는 사용자가 앱의 이전 콘텐츠가 아닌 앱이 시작 된 화면에 있습니다.
 
-새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML **프레임** 을 만드는 것이 좋습니다. 이런 식으로 새 XAML 프레임에 대 한 탐색 백 스택에 앱 일시 중단 될 때 현재 창에 포함 될 수 있는 이전 콘텐츠가 포함 되지 않습니다. 시작 및 파일 계약에 단일 XAML **프레임** 을 사용 하려는 경우 새 페이지를 탐색 하기 전에 **프레임**의 탐색 저널에서 페이지 취소 해야 합니다.
+새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML **프레임** 을 만들어야 하는 것이 좋습니다. 이런 식으로 새 XAML 프레임에 대 한 탐색 백 스택에 앱 일시 중단 될 때 현재 창에 포함 될 수 있는 이전 콘텐츠가 포함 되지 않습니다. 시작 및 파일 계약에 대 한 단일 XAML **프레임** 을 사용 하려는 경우 새 페이지를 탐색 하기 전에 **프레임**의 탐색 저널에서 페이지 취소 해야 합니다.
 
-파일 활성화를 통해 앱 시작 되 면 사용자는 앱의 최상위 페이지로 다시 이동할 수 있도록 UI를 포함 하는 것이 좋습니다.
+앱을 파일 활성화를 통해 시작 될 때 사용자가 앱의 최상위 페이지로 다시 이동할 수 있도록 UI를 포함 하는 것이 좋습니다.
 
 ## <a name="remarks"></a>설명
 
-받게 되는 파일은 신뢰할 수 없는 원본에서 올 수 있으므로 파일에 대한 작업을 수행하기 전에 파일 내용의 유효성을 검사하는 것이 좋습니다. 입력 유효성 검사에 대한 자세한 내용은 [안전한 코드 작성](http://go.microsoft.com/fwlink/p/?LinkID=142053)을 참조하세요.
+받게 되는 파일은 신뢰할 수 없는 원본에서 올 수 있으므로 파일에 대한 작업을 수행하기 전에 파일 내용의 유효성을 검사하는 것이 좋습니다. 입력 유효성 검사에 대한 자세한 내용은 [안전한 코드 작성](https://go.microsoft.com/fwlink/p/?LinkID=142053)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
 ### <a name="complete-example"></a>전체 예제
 
-* [연결 시작 예제](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+* [연결 시작 예제](https://go.microsoft.com/fwlink/p/?LinkID=231484)
 
 ### <a name="concepts"></a>개념
 

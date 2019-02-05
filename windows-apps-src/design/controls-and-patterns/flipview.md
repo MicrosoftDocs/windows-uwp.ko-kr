@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a34a53e5a332276c121324d9cf891a506aadb7f7
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: ac4e5bb7c761ad6661647cb88f831ffa652b6241
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037115"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048803"
 ---
 # <a name="flip-view"></a>대칭 이동 보기
 
@@ -204,7 +204,7 @@ stackPanel1.Children.Add(flipView1);
 
 ![상황 표시기 예제](images/controls_contextindicator.jpg)
 
-FlipView에 상황 표시기를 추가하는 방법을 보여 주는 예제 코드는 [XAML FlipView 샘플](http://go.microsoft.com/fwlink/p/?LinkID=311760)을 참조하세요.
+FlipView에 상황 표시기를 추가하는 방법을 보여 주는 예제 코드는 [XAML FlipView 샘플](https://go.microsoft.com/fwlink/p/?LinkID=311760)을 참조하세요.
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 

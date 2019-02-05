@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: ac61d57a965e3a35c6eb7cfaf17d0f4ef2a02501
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1ab8dde9984ed0e4f7d99e7809361d928bebb718
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943309"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045429"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 
@@ -191,11 +191,11 @@ public void SetLicenseLevel(BrandID brand)
 
 ## <a name="homeregion"></a>HomeRegion
 
-`homeregion` 한정자는 국가 또는 지역에 대한 사용자 설정에 해당합니다. 이는 사용자의 홈 위치를 나타냅니다. 값에는 유효한 [BCP 47 지역 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)가 포함되어 있습니다. 즉, **ISO 1 3166 alpha-2** 두 자리 문자 지역 코드와 구성된 지역에 대한 **ISO 1 3166 숫자** 세 자리 지리적 코드 집합입니다([United Nations Statistic Division M49 지역 코드의 구성](http://go.microsoft.com/fwlink/p/?linkid=247929) 참조). '선택된 경제 및 기타 그룹화"에 대한 코드는 유효하지 않습니다.
+`homeregion` 한정자는 국가 또는 지역에 대한 사용자 설정에 해당합니다. 이는 사용자의 홈 위치를 나타냅니다. 값에는 유효한 [BCP 47 지역 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)가 포함되어 있습니다. 즉, **ISO 1 3166 alpha-2** 두 자리 문자 지역 코드와 구성된 지역에 대한 **ISO 1 3166 숫자** 세 자리 지리적 코드 집합입니다([United Nations Statistic Division M49 지역 코드의 구성](https://go.microsoft.com/fwlink/p/?linkid=247929) 참조). '선택된 경제 및 기타 그룹화"에 대한 코드는 유효하지 않습니다.
 
 ## <a name="language"></a>언어
 
-`language` 한정자는 표시 언어 설정에 해당합니다. 값에는 유효한 [BCP 47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)가 포함되어 있습니다. 언어 목록은 [IANA 언어 하위 태그 레지스트리](http://go.microsoft.com/fwlink/p/?linkid=227303)를 참조하세요.
+`language` 한정자는 표시 언어 설정에 해당합니다. 값에는 유효한 [BCP 47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)가 포함되어 있습니다. 언어 목록은 [IANA 언어 하위 태그 레지스트리](https://go.microsoft.com/fwlink/p/?linkid=227303)를 참조하세요.
 
 앱에서 다른 표시 언어를 지원하길 원하고 코드 또는 XAML 태그에 문자열 리터럴이 있는 경우, 코드/태그에서 해당 문자열을 리소스 파일(`.resw`)로 이동합니다. 그런 다음 앱에서 지원하는 언어별로 해당 리소스 파일의 번역본을 만들 수 있습니다.
 
@@ -273,7 +273,7 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 * [앱이 실행되고 있는 플랫폼 검색](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
 * [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
 * [UI 문자열 지역화](localize-strings-ui-manifest.md)
-* [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
-* [United Nations Statistic Division M49 지역 코드의 구성](http://go.microsoft.com/fwlink/p/?linkid=247929)
-* [IANA 언어 하위 태그 레지스트리](http://go.microsoft.com/fwlink/p/?linkid=227303)
+* [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [United Nations Statistic Division M49 지역 코드의 구성](https://go.microsoft.com/fwlink/p/?linkid=247929)
+* [IANA 언어 하위 태그 레지스트리](https://go.microsoft.com/fwlink/p/?linkid=227303)
 * [레이아웃 및 글꼴 조정, RTL 지원](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

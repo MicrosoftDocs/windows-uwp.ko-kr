@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 970fbcef984f28e779ea7c133de95f7f7f99be8d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fdeb3f18e6500cc0a907e725f34c0eb96d33876e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923526"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045934"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>이미지 또는 동영상에서 얼굴 감지
 
@@ -23,7 +23,7 @@ ms.locfileid: "8923526"
 
 [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776)를 사용하여 얼굴을 추적하는 다른 방법은 [미디어 캡처의 장면 분석](scene-analysis-for-media-capture.md)을 참조하세요.
 
-이 문서의 코드는 [기본 얼굴 감지](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409) 및 [기본 얼굴 추적](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409) 샘플에서 가져왔습니다. 이러한 샘플을 다운로드하여 코드가 사용되는 컨텍스트를 확인하거나 직접 앱을 만들 때 샘플을 기준으로 삼을 수 있습니다.
+이 문서의 코드는 [기본 얼굴 감지](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409) 및 [기본 얼굴 추적](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409) 샘플에서 가져왔습니다. 이러한 샘플을 다운로드하여 코드가 사용되는 컨텍스트를 확인하거나 직접 앱을 만들 때 샘플을 기준으로 삼을 수 있습니다.
 
 ## <a name="detect-faces-in-a-single-image"></a>이미지 하나로 얼굴 감지
 
@@ -98,8 +98,8 @@ ms.locfileid: "8923526"
 ## <a name="related-topics"></a>관련 항목
 
 * [미디어 캡처의 장면 분석](scene-analysis-for-media-capture.md)
-* [기본 얼굴 감지 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
-* [기본 얼굴 추적 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
+* [기본 얼굴 감지 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
+* [기본 얼굴 추적 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
 * [Camera](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [미디어 재생](media-playback.md)

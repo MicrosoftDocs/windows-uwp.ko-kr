@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp. 앱에서 바로 구매, IAP, 영수증, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: b71d55d71a63060a66265051fafc8bdf7313e77b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9449a2dd265128a83f7840872ce4995df05a4e78
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923304"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047255"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>영수증을 사용하여 제품 구매 확인
 
@@ -108,7 +108,7 @@ ms.locfileid: "8923304"
 |-------------|------------|--------|--------|
 |  [AppReceipt](#appreceipt)  |    아니요        |  0 또는 1  |  현재 앱에 대한 구매 정보를 포함합니다.            |
 |  [ProductReceipt](#productreceipt)  |     아니요       |  0개 이상    |   현재 앱에 대한 앱에서 바로 구매 정보를 포함합니다.     |
-|  Signature  |      예      |  1   |   이 요소는 표준 [DSIG XML 구문](http://go.microsoft.com/fwlink/p/?linkid=251093)입니다. 영수증 유효성 검사에 사용할 수 있는 서명이 포함된 **SignatureValue** 요소와 **SignedInfo** 요소를 포함합니다.      |
+|  Signature  |      예      |  1   |   이 요소는 표준 [DSIG XML 구문](https://go.microsoft.com/fwlink/p/?linkid=251093)입니다. 영수증 유효성 검사에 사용할 수 있는 서명이 포함된 **SignatureValue** 요소와 **SignedInfo** 요소를 포함합니다.      |
 
 **Receipt**에는 다음 특성이 있습니다.
 

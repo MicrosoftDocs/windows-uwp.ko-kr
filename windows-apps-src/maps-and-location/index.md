@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 지도, 위치, 지도 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: aea553a46357a26028848db5ff0e9b5debbeae56
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3482370719a658f303964204661f1fb5d69ae5b4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930908"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044813"
 ---
 # <a name="maps-and-location-overview"></a>지도 및 위치 개요
 
@@ -21,9 +21,9 @@ ms.locfileid: "8930908"
 이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 집합으로 Windows 지도 앱을 시작하는 방법을 보여 줍니다.
 
 > [!TIP]
-> 앱에서 지도 및 위치를 사용 하는 방법에 대 한 자세한 내용은 GitHub의 [Windows 유니버설 샘플 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979) 에서 다음 샘플을 다운로드 합니다.
--   [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
--   [UWP 지리적 위치 샘플](http://go.microsoft.com/fwlink/p/?linkid=533278)
+> 앱에서 지도 및 위치를 사용 하는 방법에 대 한 자세한 내용은 GitHub의 [Windows 유니버설 샘플 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979) 에서 다음 샘플을 다운로드 합니다.
+-   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [UWP 지리적 위치 샘플](https://go.microsoft.com/fwlink/p/?linkid=533278)
 
  
 
@@ -51,7 +51,7 @@ ms.locfileid: "8930908"
 | [지도에 POI(관심 지점) 표시](display-poi.md) | 고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(관심 지점)를 추가하는 방법을 알아봅니다. |
 | [경로 및 길 찾기 표시](routes-and-directions.md) | 경로 및 길 찾기를 요청하고 앱에 표시합니다. |
 | [지오코딩 및 리버스 지오코딩 수행](geocoding.md) | [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에 있는 [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 메서드를 호출하여 주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩). |
-| [찾기 및 오프 라인 사용을 위해 맵 패키지 다운로드](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| 이전에 앱 사용자 설정 앱을 오프 라인 지도 다운로드를 연결 해야 했습니다. 이제 ( [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox)등 기반)는 지정 된 영역에 다운로드 한 패키지를 찾으려면 [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) 네임 스페이스의 클래스를 사용할 수 있습니다. <br> 도 확인 및 맵 패키지 다운로드 한 상태에 대 한 수신 대기 뿐 아니라 수 사용자가 앱을 종료 하지 않고 다운로드를 시작 합니다. <br> 참조 내용 및 [유니버설 Windows 플랫폼 (UWP) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)모두에서이 작업을 수행 하는 방법의 예제를 찾을 수 있습니다.
+| [찾기 및 오프 라인 사용을 위해 맵 패키지 다운로드](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| 이전에 앱 사용자 설정 앱을 오프 라인 지도 다운로드를 연결 해야 했습니다. 이제 ( [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox)등에 따라.)는 지정 된 영역에 다운로드 한 패키지를 찾으려면 [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) 네임 스페이스의 클래스를 사용할 수 있습니다. <br> 있습니다도 확인 및 맵 패키지 다운로드 한 상태에 대 한 수신 대기 뿐 아니라 수 없이 앱을 다운로드를 시작 합니다. <br> 모두 참조 내용 및 [유니버설 Windows 플랫폼 (UWP) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)에서이 작업을 수행 하는 방법의 예제를 찾을 수 있습니다.
 
 ## <a name="get-the-users-location"></a>사용자 위치 가져오기
 
@@ -74,12 +74,12 @@ ms.locfileid: "8930908"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [UWP 지리적 위치 샘플](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP 지리적 위치 샘플](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [현재 위치 가져오기](get-location.md)
 * [위치 인식 앱에 대한 디자인 지침](guidelines-and-checklist-for-detecting-location.md)
 * [지도에 대한 디자인 지침](controls-map.md)
 * [개인 정보 인식 앱에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh768223)
 * [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)

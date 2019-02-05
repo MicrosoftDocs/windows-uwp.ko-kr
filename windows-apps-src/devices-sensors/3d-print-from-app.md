@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 3dprinting, 3d 인쇄
 ms.localizationpriority: medium
-ms.openlocfilehash: a51312cc9be466c6847ec7f2d98b29da1c8e5c9f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4013341a3e4e44d6ac2df66d58d4114313573d2a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918782"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048270"
 ---
 # <a name="3d-printing-from-your-app"></a>앱에서 3D 인쇄
 
@@ -65,7 +65,7 @@ UI 피드백에 대한 **TextBlock**을 추가합니다.
 이 시점에서 3D 데이터 파일을 앱의 메모리에 로드할 수 있습니다. 그러나 3D 기하 도형 데이터의 형식은 다양할 수 있으므로 일부 형식은 3D 인쇄에 적합하지 않을 수 있습니다. Windows 10에서는 모든 3D 인쇄 작업에 3D 제조 형식(.3mf) 파일 형식을 사용합니다.
 
 > [!NOTE]  
-> .3mf 파일 형식은 이 자습서에 나와 있는 추가 기능을 제공합니다. 3MF 및 이 형식이 3D 제품 제작자와 소비자에게 제공하는 기능에 대한 자세한 내용은 [3MF 사양](http://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요. Windows 10 API를 사용하여 이러한 기능을 활용하는 방법을 알아보려면 [3MF 패키지 생성](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf) 자습서를 참조하세요.
+> .3mf 파일 형식은 이 자습서에 나와 있는 추가 기능을 제공합니다. 3MF 및 이 형식이 3D 제품 제작자와 소비자에게 제공하는 기능에 대한 자세한 내용은 [3MF 사양](https://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요. Windows 10 API를 사용하여 이러한 기능을 활용하는 방법을 알아보려면 [3MF 패키지 생성](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf) 자습서를 참조하세요.
 
 [3D Builder](https://www.microsoft.com/store/apps/3d-builder/9wzdncrfj3t6) 앱에서는 가장 많이 사용하는 3D 형식의 파일을 열고 이를 .3mf 파일로 저장할 수 있습니다. 이 예제에서 파일 형식은 달라질 수 있지만 가장 간단한 솔루션은 3D Builder 앱을 열고 사용자에게 가져온 데이터를 .3mf 파일로 저장한 다음 다시 로드하라는 메시지를 표시하는 것입니다.
 

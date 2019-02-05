@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ad00090fdfc3ce7be34ef6271d16e76541b584bb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 606cc68aafa4de110f034336cd5d18bd1426a0a7
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920680"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047355"
 ---
 # <a name="raw-notification-overview"></a>원시 알림 개요
 
@@ -113,7 +113,7 @@ ms.locfileid: "8920680"
 ## <a name="other-resources"></a>기타 리소스
 
 
-Windows8.1에 대 한 Windows8.1, 및는 [푸시 및 정기 알림 샘플에](http://go.microsoft.com/fwlink/p/?LinkId=231476) 대 한 [원시 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=241553) 을 다운로드 하 고 Windows10 앱에서 해당 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
+Windows 8.1에 대 한 windows 8.1, 및는 [푸시 및 정기 알림 샘플에](https://go.microsoft.com/fwlink/p/?LinkId=231476) 대 한 [원시 알림 샘플](https://go.microsoft.com/fwlink/p/?linkid=241553) 을 다운로드 하 고 windows 10 앱에서 해당 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 

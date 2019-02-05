@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
-ms.openlocfilehash: a9e796eee76025e7697c08669e6942e0d69206f7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1e48febb3fb49a35fe256e58cf7c80b4abe93267
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923493"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045572"
 ---
 # <a name="custom-video-effects"></a>사용자 지정 비디오 효과
 
@@ -162,7 +162,7 @@ ms.locfileid: "8923493"
 ## <a name="implement-the-ibasicvideoeffect-interface-using-hardware-processing"></a>하드웨어 처리를 사용하여 IBasicVideoEffect 인터페이스를 구현합니다.
 
 
-하드웨어(GPU)를 사용하여 사용자 지정 비디오 효과를 만드는 작업은 위에 설명된 소프트웨어 처리를 사용하는 방법과 거의 동일합니다. 이 섹션에서는 하드웨어 처리를 사용하는 효과의 몇 가지 차이점을 보여 줍니다. 이 예제에서는 Win2D Windows 런타임 API를 사용합니다. Win2D에 대한 자세한 내용은 [Win2D 설명서](http://go.microsoft.com/fwlink/?LinkId=519078)를 참조하세요.
+하드웨어(GPU)를 사용하여 사용자 지정 비디오 효과를 만드는 작업은 위에 설명된 소프트웨어 처리를 사용하는 방법과 거의 동일합니다. 이 섹션에서는 하드웨어 처리를 사용하는 효과의 몇 가지 차이점을 보여 줍니다. 이 예제에서는 Win2D Windows 런타임 API를 사용합니다. Win2D에 대한 자세한 내용은 [Win2D 설명서](https://go.microsoft.com/fwlink/?LinkId=519078)를 참조하세요.
 
 이 문서 맨 처음에 나오는 **앱에 사용자 지정 효과 추가** 섹션에 설명된 것처럼 다음 단계에 따라 생성된 프로젝트에 Win2D NuGet 패키지를 추가합니다.
 
@@ -241,5 +241,5 @@ Win2D API를 사용하면 입력 프레임의 [**Direct3DSurface**](https://msdn
 ## <a name="related-topics"></a>관련 항목
 * [간단한 카메라 미리 보기 액세스](simple-camera-preview-access.md)
 * [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)
-* [Win2D 설명서](http://go.microsoft.com/fwlink/p/?LinkId=519078)
+* [Win2D 설명서](https://go.microsoft.com/fwlink/p/?LinkId=519078)
 * [미디어 재생](media-playback.md)

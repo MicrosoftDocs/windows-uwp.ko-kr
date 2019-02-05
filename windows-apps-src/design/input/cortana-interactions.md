@@ -8,12 +8,12 @@ keywords: Cortana, Cortana 캔버스, Cortana 디자인, 사용자 인터페이�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cf8b8c095f96217375eb05d0128a31fc28ab47df
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 49290d0e0ba96a5dce562ca4148b0ebf53bf0ff5
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921116"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051126"
 ---
 # <a name="cortana-interactions-in-uwp-apps"></a>UWP 앱에서 Cortana 조작
 
@@ -36,7 +36,7 @@ Cortana 기능 및 서비스에 대한 모든 개발자 설명서는 이제 [Cor
 * [음성 명령에 대한 Cortana 디자인 지침](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
 
 **샘플**
-* [Cortana 음성 명령 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619899)
+* [Cortana 음성 명령 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619899)
  
 
  

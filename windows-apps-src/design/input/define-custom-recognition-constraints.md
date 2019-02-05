@@ -8,12 +8,12 @@ keywords: 음성 명령, 음성, 음성 인식, 자연어, 받아쓰기, 입력,
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 53539c73137b40d154db00fa9e340d81412764da
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 539acb242cfe6ee70d1311133a3f1a193860541a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942182"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047558"
 ---
 # <a name="define-custom-recognition-constraints"></a>사용자 지정 인식 제약 조건 정의
 
@@ -144,7 +144,7 @@ SRGS 문법은 앱에 대한 복잡한 음성 조작을 구성하는 데 도움�
 -   의미 체계를 사용하여 음성 인식이 앱에 어떤 의미인지를 정의합니다.
 -   문법 또는 lexicon 링크를 통해 인라인으로 발음을 지정합니다.
 
-SRGS 요소 및 특성에 대한 자세한 내용은 [SRGS 문법 XML 참고](http://go.microsoft.com/fwlink/p/?LinkID=269886)를 참조하세요. SRGS 문법 만들기를 시작하려면 [기본 XML 문법을 만드는 방법](http://go.microsoft.com/fwlink/p/?LinkID=269887)을 참조하세요.
+SRGS 요소 및 특성에 대한 자세한 내용은 [SRGS 문법 XML 참고](https://go.microsoft.com/fwlink/p/?LinkID=269886)를 참조하세요. SRGS 문법 만들기를 시작하려면 [기본 XML 문법을 만드는 방법](https://go.microsoft.com/fwlink/p/?LinkID=269887)을 참조하세요.
 
 다음 사항을 기억하세요.
 
@@ -178,7 +178,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-이 SRGS 파일(srgs.grxml)에는 의미 해석 태그도 포함되어 있습니다. 이러한 태그는 앱에 문법 일치 데이터를 반환하는 메커니즘을 제공합니다. 문법은 World Wide Web 컨소시엄 (W3C)[대 한 음성 인식 (sisr SEMANTIC Interpretation) 1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765) 사양 준수 해야 합니다.
+이 SRGS 파일(srgs.grxml)에는 의미 해석 태그도 포함되어 있습니다. 이러한 태그는 앱에 문법 일치 데이터를 반환하는 메커니즘을 제공합니다. 문법은 World Wide Web 컨소시엄 (W3C)[대 한 음성 인식 (sisr SEMANTIC Interpretation) 1.0](https://go.microsoft.com/fwlink/p/?LinkID=201765) 사양 준수 해야 합니다.
 
 여기서는 "yes" 및 "no"의 변형을 수신 대기합니다.
 
@@ -236,7 +236,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 * [음성 조작](speech-interactions.md)
 
 **샘플**
-* [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

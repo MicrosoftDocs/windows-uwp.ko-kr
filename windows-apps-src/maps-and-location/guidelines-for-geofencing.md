@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지오펜싱
 ms.localizationpriority: medium
-ms.openlocfilehash: e29bcdb8c36cc8cbbb5de11d669da1249e10d706
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e3fe7cb84d4ae265ed20a6a74b76e4f08dd4c1dd
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924836"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047408"
 ---
 # <a name="guidelines-for-geofencing-apps"></a>지오펜싱 앱에 대한 지침
 
@@ -129,7 +129,7 @@ GPS가 가장 정확한 위치 정보를 제공할 수 있지만, 지오펜싱�
 
 * [지오펜스 설정](https://msdn.microsoft.com/library/windows/apps/mt219702)
 * [현재 위치 가져오기](https://msdn.microsoft.com/library/windows/apps/mt219698)
-* [UWP 위치 샘플(지리적 위치)](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [UWP 위치 샘플(지리적 위치)](https://go.microsoft.com/fwlink/p/?linkid=533278)
  
 
  

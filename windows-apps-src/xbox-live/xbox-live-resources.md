@@ -5,20 +5,20 @@ ms.date: 09/12/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, xbox, xbox 실시간으로 리소스, API 참조
 ms.localizationpriority: medium
-ms.openlocfilehash: b12816166aa99311b9adffded176c4d808f2c677
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: c3ed5a76791bebfb1b82afaf12c699bfdd7c7437
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931139"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044081"
 ---
 # <a name="xbox-live-resources"></a>Xbox Live 리소스
 
-이 항목에서는 Xbox Live 게임 개발에 유용한 리소스에 대 한 링크가 포함 되어 있습니다.
+이 항목에서는 Xbox Live 게임 개발에 유용한 리소스에 대 한 링크를 포함 합니다.
 
 ## <a name="api-reference"></a>API 참조
 
-WinRT SDK API 참조가 있습니다 온라인 다음과 같습니다.
+WinRT SDK API 참조 수를 찾을 수 온라인 여기서:
 
 * [Xbox Live WinRT SDK](https://docs.microsoft.com/en-us/dotnet/api/?view=xboxlive-dotnet-2017.11.20171204.01)
 
@@ -41,18 +41,18 @@ Xbox Live API 소스 코드는 GitHub에서 공개적으로 사용할 수 있습
 
 ## <a name="xbox-live-unity-plug-in"></a>Xbox Live Unity 플러그 인
 
-Unity 게임을 개발 하는 사용 하는 Xbox Live 크리에이터 스 프로그램 개발자를 위한는 Xbox Live Unity 플러그 인은 GitHub에서 사용할 수 있습니다.
+Unity 게임을 개발 하는 데 사용 하는 Xbox Live 크리에이터 스 프로그램 개발자를 위한의 Xbox Live Unity 플러그 인은 GitHub에서 사용할 수 있습니다.
 
 * [Xbox Live Unity 플러그 인](https://github.com/Microsoft/xbox-live-unity-plugin)
 
 > [!WARNING]
-> Xbox Live 크리에이터 스 프로그램 도구 이기 때문에 Xbox Live Unity 플러그 인 전체 제품군의 Xbox Live 기능을 제공 하지 않습니다. 참조는 [개발자 프로그램 개요 기능 테이블을](developer-program-overview.md#feature-table) Xbox Live 서비스를 사용할 수 있습니다.
+> Xbox Live 크리에이터 스 프로그램 도구 이기 때문에 Xbox Live Unity 플러그 인 전체 제품군의 Xbox Live 기능을 제공 하지 않습니다. [개발자 프로그램 개요 기능 테이블](developer-program-overview.md#feature-table) 어떤 Xbox Live 서비스를 사용할 수를 참조 하세요.
 
 ## <a name="xbox-live-platform-extensions-sdk"></a>Xbox Live 플랫폼 확장 SDK
 
 연결 된 저장소 및 네트워킹 보안 관련 설명서 UWP 플랫폼에 대 한 기능을이 패키지 winmd 파일을 포함 합니다. 이 확장 Windows.Gaming.XboxLive.Storage 네임 스페이스를 사용 하 여 UWP 제목에 연결 된 저장소의 사용할을 수 있습니다.
 
-* [Xbox Live 플랫폼 확장 SDK](http://aka.ms/xblextsdk)
+* [Xbox Live 플랫폼 확장 SDK](https://aka.ms/xblextsdk)
 
 > [!NOTE]
 > - 개발 환경에서 Windows 10 Fall Creators Update SDK를 사용 하는 경우이 다운로드 필요 없는 이상.
@@ -66,7 +66,7 @@ Xbox live 개발 하는 데 사용 하는 몇 가지 유용한 도구가 있습�
 
 ## <a name="xbox-live-code-samples"></a>Xbox Live 코드 샘플
 
-공용 Xbox Live 코드 샘플은 GitHub에서 사용할 수 있습니다.
+Xbox Live 공개 코드 샘플은 GitHub에서 사용할 수 있습니다.
 
 * [Xbox Live 크리에이터스 프로그램 샘플](https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/CreatorsSDK)
 

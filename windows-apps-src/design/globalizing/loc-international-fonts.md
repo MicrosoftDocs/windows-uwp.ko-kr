@@ -6,18 +6,18 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c525c79287a81421c68fca5bed3393b4d230d8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6f1d618a111ee207eacfceb52680859c8272e0ed
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942687"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046656"
 ---
 # <a name="international-fonts"></a>국가별 글꼴
 
 이 항목에서는 미국 영어 이외의 언어로 지역화되어 UWP 앱에 사용할 수 있는 글꼴을 나열합니다.
 
-다음 표에서 "언어 태그" 열은 해당 언어의 [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302) 언어 태그 목록입니다. Microsoft Store에서 지원되는 언어 태그 목록을 구체적으로 보려면 [지원되는 언어](../../publish/supported-languages.md)를 참조하세요.
+다음 표에서 "언어 태그" 열은 해당 언어의 [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302) 언어 태그 목록입니다. Microsoft Store에서 지원되는 언어 태그 목록을 구체적으로 보려면 [지원되는 언어](../../publish/supported-languages.md)를 참조하세요.
 
 | 언어 | 언어 태그 | Windows에서 사용되는 글꼴 |
 | --------- | ----------- | -------------------- |
@@ -135,5 +135,5 @@ Meiryo UI 글꼴은 Windows에서 사용됩니다. Windows에는 Yu Gothic과 Yu
 
 ## <a name="related-topics"></a>관련 항목
 
-* [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [지원되는 언어](../../publish/supported-languages.md)

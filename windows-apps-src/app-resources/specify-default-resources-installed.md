@@ -6,12 +6,12 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: f18a1db19c3a8c6632a8cbc3104dc1328f97fdb4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b11f6dfec2941ae4eaa277f37de66965bd1ea4aa
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919739"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048906"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a>앱에서 사용하는 기본 리소스 지정
 
@@ -44,7 +44,7 @@ ms.locfileid: "8919739"
    </default>
    ```
    
-   **참고** 값 `LANGUAGE-TAG(S)`는 앱의 기본 언어와 동기화되어야 합니다. 단일 [BCP 47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)인 경우, 앱의 기본 언어가 이와 동일한 태그여야 합니다. 쉼표로 구분된 언어 태그 목록인 경우, 앱의 기본 언어가 목록의 첫 번째 태그여야 합니다. 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest`)의 **응용 프로그램** 탭에 있는 **기본 언어** 필드에서 앱의 기본 언어를 설정합니다.
+   **참고** 값 `LANGUAGE-TAG(S)`는 앱의 기본 언어와 동기화되어야 합니다. 단일 [BCP 47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)인 경우, 앱의 기본 언어가 이와 동일한 태그여야 합니다. 쉼표로 구분된 언어 태그 목록인 경우, 앱의 기본 언어가 목록의 첫 번째 태그여야 합니다. 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest`)의 **응용 프로그램** 탭에 있는 **기본 언어** 필드에서 앱의 기본 언어를 설정합니다.
 
 4. 각 `<qualifier>` 요소는 각 한정자 이름의 기본값으로 사용할 값을 Visual Studio에 알려줍니다. 지금까지의 파일 내용으로는, Visual Studio의 동작이 변경되지 않습니다. 다시 말하면, 이러한 내용은 기본값이므로 Visual Studio는 이 파일에 해당 내용이 있는 것처럼 *이미 동작하고 있습니다*. 따라서 자신만의 기본값으로 기본값을 덮어쓰려면 파일의 값을 변경해야 합니다. 다음은 처음 세 값을 편집했을 경우 파일의 모습을 보여주는 예입니다.
    ```xml
@@ -103,5 +103,5 @@ ms.locfileid: "8919739"
 ## <a name="related-topics"></a>관련 항목
 
 * [언어, 규모, 고대비 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)
-* [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)

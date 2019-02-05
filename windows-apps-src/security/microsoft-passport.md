@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: b317ba9280baef885bf6487d4bc0745112575dce
-ms.sourcegitcommit: 061de8e92935b5e438aa26ef63a6fac4acc4109d
+ms.openlocfilehash: aacce5710f8ed0066e5efdfb5e0344473f718f9b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "9009910"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049450"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
@@ -19,7 +19,7 @@ ms.locfileid: "9009910"
 
 이 문서는 앱 개발에 중점을 둡니다. Windows Hello의 아키텍처 및 구현에 대한 자세한 내용은 [TechNet의 Windows Hello 가이드](https://technet.microsoft.com/library/mt589441.aspx)를 참조하세요.
 
-전체 코드 샘플을 보려면 [GitHub의 Windows Hello 코드 샘플](http://go.microsoft.com/fwlink/?LinkID=717812)을 참조하세요.
+전체 코드 샘플을 보려면 [GitHub의 Windows Hello 코드 샘플](https://go.microsoft.com/fwlink/?LinkID=717812)을 참조하세요.
 
 Windows Hello 및 백업 인증 서비스를 사용하여 UWP 앱을 만드는 방법의 단계별 연습은 [Windows Hello 로그인 앱](microsoft-passport-login.md) 및 [Windows Hello 로그인 서비스](microsoft-passport-login-auth-service.md) 문서를 참조하세요.
 
@@ -275,7 +275,7 @@ API는 개인 키를 사용해 시도에 서명하도록 OS에 요청하며, 그
 
 ![Windows Hello 시도 응답](images/passport-challenge-response.png)
 
-다음으로 서버는 서명의 유효성을 검사해야 합니다. 공개 키를 요청 하 고 이후 유효성 검사에 사용 하도록 서버에 보낼 때 ASN.1 인코딩된 publicKeyInfo blob입니다. [GitHub의 Windows Hello 코드 샘플](http://go.microsoft.com/fwlink/?LinkID=717812)을 보면 Crypt32 함수를 더 많이 사용 되는 CNG blob으로 ASN.1 인코딩된 blob을 래핑하는 도우미 클래스는 표시 됩니다. 이 BLOB에는 공개 키 알고리즘(RSA 및 RSA 공개 키)이 포함됩니다.
+다음으로 서버는 서명의 유효성을 검사해야 합니다. 공개 키를 요청 하 고 이후 유효성 검사에 사용 하도록 서버에 보낼 때 ASN.1 인코딩된 publicKeyInfo blob입니다. [GitHub의 Windows Hello 코드 샘플](https://go.microsoft.com/fwlink/?LinkID=717812)을 보면 Crypt32 함수를 더 많이 사용 되는 CNG blob으로 ASN.1 인코딩된 blob을 래핑하는 도우미 클래스는 표시 됩니다. 이 BLOB에는 공개 키 알고리즘(RSA 및 RSA 공개 키)이 포함됩니다.
 
 샘플에서는 ASN.1 인코딩된 blob CNG blob으로 변환 하는 이유는 CNG 사용 (/ windows/데스크톱/SecCNG/cng-포털) 될 수 있도록 및 BCrypt API입니다. CNG blob을 조회 하는 경우 관련된 [BCRYPT_KEY_BLOB 구조](/windows/desktop/api/bcrypt/ns-bcrypt-_bcrypt_key_blob)를 안내 합니다 것입니다. 이 API 표면은 인증 및 Windows 응용 프로그램의 암호화에 사용할 수 있습니다. ASN.1 직렬화 할 수 있는 데이터 구조를 통신 하기 위한 문서화 된 표준 이며 공개 키 암호화와 인증서를 사용 하 여 자주 사용 됩니다. 따라서 공개 키 정보는이 방식으로 반환 됩니다. 공개 키가 RSA 키입니다. 및 Windows Hello 때 사용 하는 데이터에 서명 알고리즘입니다.
 
@@ -407,9 +407,9 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 
 ### <a name="61-articles-and-sample-code"></a>6.1 문서 및 샘플 코드
 
-- [Windows Hello 개요](http://windows.microsoft.com/windows-10/getstarted-what-is-hello)
+- [Windows Hello 개요](https://windows.microsoft.com/windows-10/getstarted-what-is-hello)
 - [Windows Hello 구현 세부 정보](https://msdn.microsoft.com/library/mt589441)
-- [GitHub의 Windows Hello 코드 샘플](http://go.microsoft.com/fwlink/?LinkID=717812)
+- [GitHub의 Windows Hello 코드 샘플](https://go.microsoft.com/fwlink/?LinkID=717812)
 
 ### <a name="62-terminology"></a>6.2 용어
 

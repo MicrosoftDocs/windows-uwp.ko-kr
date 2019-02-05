@@ -6,22 +6,22 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 90447f63cf28660eaffc0dff4e28524f8ef4372a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3d8b11815d7762179ad982edaf3985c06f9f54e4
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928062"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051086"
 ---
 # <a name="vat-info"></a>VAT 정보
 
 
-파트너 센터 등록 프로세스 중 VAT ID 번호를 제공 해야 하는 시작할 수 있는 몇 가지 정보를 같습니다.
+파트너 센터 등록 프로세스 중 VAT ID 번호를 제공 하도록 해야 하는 경우 몇 가지 정보를 시작 하는 다음과 같습니다.
 
 ## <a name="understanding-vat-numbers"></a>VAT 번호 이해
 
 
-VAT(부가가치세) 번호는 유럽 연합의 국가 또는 지역에 사용되는 식별자입니다. 자세한 내용은 유럽 연합의 공식 [VIES 사이트](http://go.microsoft.com/fwlink/p/?LinkId=258372)를 참조하세요.
+VAT(부가가치세) 번호는 유럽 연합의 국가 또는 지역에 사용되는 식별자입니다. 자세한 내용은 유럽 연합의 공식 [VIES 사이트](https://go.microsoft.com/fwlink/p/?LinkId=258372)를 참조하세요.
 
 ## <a name="accepted-formats-for-vat-numbers"></a>허용되는 VAT 번호 형식
 

@@ -6,16 +6,16 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 대상 제품 API, 대상 제품
 ms.localizationpriority: medium
-ms.openlocfilehash: 27d99d2008352ff291f0cb620afab8ccb8f6977c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bcf270bd56d17936ef404adbc3663034b58e7a2c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937541"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045026"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>스토어 서비스를 사용하여 대상 제품 관리
 
-*대상된 제품* 을 만드는 경우 합니다 **참여 > 대상 제품** 사용에 대 한 앱 내 환경을 구현 하는 *Microsoft Store 대상 제품 API* 앱 코드에 도움이 되는 정보를 검색 하는 파트너 센터에서 앱의 페이지는 대상된 제품입니다. 대상 제품 및 대시보드에서 대상 제품을 만드는 방법에 대한 자세한 내용은 [대상 제품을 사용하여 참여 및 변환 최대화](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)를 참조하세요.
+*대상 제품에* 대 한 앱 내 환경을 구현 하는 *Microsoft Store 대상 제품 API는* 데 도움이 되는 정보를 검색할 앱의 코드에서 사용 하 여 파트너 센터에서 앱에 대 한 **대상 지정을 제공 하는 끼웁니다 gt_** 페이지에서 만드는 경우 합니다 대상된 제품입니다. 대상 제품 및 대시보드에서 대상 제품을 만드는 방법에 대한 자세한 내용은 [대상 제품을 사용하여 참여 및 변환 최대화](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)를 참조하세요.
 
 대상 제품 API는 사용자가 대상 제품의 고객 세그먼트에 포함되는지 여부에 따라 현재 사용자에게 제공되는 대상 제품을 가져오는 데 사용할 수 있는 간단한 REST API입니다. 이 API를 앱 코드에 사용하려면 다음 단계를 따릅니다.
 
@@ -45,7 +45,7 @@ MSA 토큰을 가져오는 방법에 대한 자세한 내용은 [웹 계정 관�
 
 이 메서드는 현재 사용자에게 제공되는 대상 제품과 연결된 추가 기능의 제품 ID를 반환합니다. 이 정보를 사용하여 사용자에게 하나 이상의 대상 제품을 앱에서 바로 구매로 제공할 수 있습니다.
 
-다음 예제는 현재 사용자에게 대상 제품을 제시하는 방법을 보여 줍니다. 이 예제는 [완전한 예제](#code-example)에서 발췌했습니다. Newtonsoft의 [Json.NET](http://www.newtonsoft.com/json) 라이브러리와 추가 클래스, 완전한 예제에서 제공되는 **using** 문이 필요합니다.
+다음 예제는 현재 사용자에게 대상 제품을 제시하는 방법을 보여 줍니다. 이 예제는 [완전한 예제](#code-example)에서 발췌했습니다. Newtonsoft의 [Json.NET](https://www.newtonsoft.com/json) 라이브러리와 추가 클래스, 완전한 예제에서 제공되는 **using** 문이 필요합니다.
 
 [!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffers)]
 
@@ -59,7 +59,7 @@ MSA 토큰을 가져오는 방법에 대한 자세한 내용은 [웹 계정 관�
 * [Get targeted offers](get-targeted-offers.md) 메서드를 사용하여 현재 사용자에게 제공되는 대상 제품을 모두 가져옵니다.
 * 대상 제품과 연결된 추가 기능을 구매합니다.
 
-이 예제는 Newtonsoft의 [Json.NET](http://www.newtonsoft.com/json) 라이브러리가 필요합니다. 이 예에서는 이 라이브러리를 사용하여 JSON 형식의 데이터를 직렬화 및 역직렬화합니다.
+이 예제는 Newtonsoft의 [Json.NET](https://www.newtonsoft.com/json) 라이브러리가 필요합니다. 이 예에서는 이 라이브러리를 사용하여 JSON 형식의 데이터를 직렬화 및 역직렬화합니다.
 
 [!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffersSample)]
 

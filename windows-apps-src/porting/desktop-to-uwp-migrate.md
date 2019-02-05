@@ -6,12 +6,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: abc2ba7287541d97208899b51e81110b464b6cdd
-ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
+ms.openlocfilehash: 151584f15013c9d4ab7d9566e175b957a7a84149
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9014718"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9045742"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>데스크톱 응용 프로그램 및 UWP 앱 간의 코드 공유
 
@@ -270,7 +270,7 @@ Android, iOS 및 크로스 플랫폼 프로젝트를 시작하려면 [Xamarin �
 
 **질문에 대한 답변 찾기**
 
-질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
+질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 
 **피드백 제공 또는 기능 제안**
 

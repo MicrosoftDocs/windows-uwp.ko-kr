@@ -6,12 +6,12 @@ ms.date: 03/27/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 클라우드 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: 12f9125b4a128b754fc90c48e6a289cec40a7f54
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5781d8f8606f68360018cfa17d5cfe5719ed31a6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925317"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045592"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>UWP 게임에 클라우드 서비스 사용
 
@@ -81,7 +81,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
         </td>
     </tr>
     <tr>
-        <td><a href="http://web.ageofascent.com/">Illyriad Games</a></td>
+        <td><a href="https://web.ageofascent.com/">Illyriad Games</a></td>
         <td>Illyriad Games는 최신 브라우저가 있는 디바이스에서 플레이할 수 있는 서사적 MMO(다중 접속 온라인) 3D 우주 게임인 <b>Age of Ascent</b>를 만들었습니다. 따라서 이 게임은 PC, 노트북, 휴대폰 및 기타 모바일 디바이스에서 플러그 인 없이 재생할 수 있습니다. 해당 게임은 ASP.NET Core, HTML5, WebGL 및 Azure를 사용합니다.</td>
         <td>
             <ul>
@@ -96,7 +96,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
         </td>
     </tr>
     <tr>
-        <td><a href="http://www.nextgames.com/">Next Games</a></td>
+        <td><a href="https://www.nextgames.com/">Next Games</a></td>
         <td>Next Games는 AMC의 원작 시리즈를 기반으로 하는 <b>The Walking Dead: No Man's Land</b> 비디오 게임입니다. The Walking Dead 게임은 Azure를 백 엔드로 사용했습니다. 개봉 주말과 첫 주에 1,000,000건의 다운로드가 발생했으며, 미국 앱 스토어에서 iPhone 및 iPad 무료 앱 분야 1위, 12개 국가에서 무료 앱 1위, 13개 국가에서 무료 게임 1위를 차지했습니다.
         </td>
         <td>
@@ -111,7 +111,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
         </td>
     </tr>
     <tr>
-        <td><a href="http://www.crimecoast.com/">Pixel Squad</a></td>
+        <td><a href="https://www.crimecoast.com/">Pixel Squad</a></td>
         <td>Pixel Squad는 Unity 게임 엔진과 Azure를 사용하여 <b>Crime Coast</b>를 개발했습니다. <b>Crime Coast</b>는 Android, iOS 및 Windows 플랫폼에서 사용할 수 있는 소셜 전략 게임입니다. Azure Blob 저장소, Managed Azure Redis Cache, 부하 조정된 IIS VM 배열, Microsoft 알림 허브가 게임에 사용되었습니다. 확장을 관리하고 5000명의 동시 플레이어가 있는 플레이어 급증을 처리한 방법을 알아봅니다.
         </td>
         <td>
@@ -130,7 +130,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
 ### <a name="other-links"></a>기타 링크
 
 * [Hitman 및 Azure: 클라우드를 사용하는 경우에만 실현되는 Elusive Target 같은 게임 기능 생성](https://channel9.msdn.com/Series/Hitman)
-* [Hitcents, Game Troopers 및 InnoSpark의 비법인 Azure](http://news.microsoft.com/features/game-developers-use-microsoft-azure-as-secret-sauce-for-scale-and-growth-2/)
+* [Hitcents, Game Troopers 및 InnoSpark의 비법인 Azure](https://news.microsoft.com/features/game-developers-use-microsoft-azure-as-secret-sauce-for-scale-and-growth-2/)
 * [Azure를 사용하여 Bizspark 프로그램에서 게임 시작](https://blogs.technet.microsoft.com/bizspark_featured_startups/2015/09/25/azure-open-for-gaming-startups/)
 
 
@@ -194,7 +194,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
     
 * [개발자 프로그램](e2e.md#developer-programs)
 
-    Microsoft는 게임을 개발하고 게시하는 데 도움이 되도록 [ID@Xbox](http://www.xbox.com/Developers/id) and [Xbox Live 크리에이터스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator) 등의 여러 개발자 프로그램을 제공합니다.
+    Microsoft는 게임을 개발하고 게시하는 데 도움이 되도록 [ID@Xbox](https://www.xbox.com/Developers/id) and [Xbox Live 크리에이터스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator) 등의 여러 개발자 프로그램을 제공합니다.
 
 ## <a name="learning-resources"></a>학습 리소스
 
@@ -225,7 +225,7 @@ Microsoft는 꾸준한 혁신을 통해 새로운 기능을 추가하고 있습�
 * [게임용 Azure](https://azure.microsoft.com/solutions/gaming/)
 * [Playfab](https://playfab.com/)
 * [스타트업용 Microsoft](https://startups.microsoft.com)
-* [ID@Xbox](http://www.xbox.com/Developers/id)
+* [ID@Xbox](https://www.xbox.com/Developers/id)
 
 
  

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 938b5b3cdd2e23995a1031875a28f178e0c97a26
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5ad64c2a0d4d7569ec2c0c0a44f9236fc4b2819f
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931134"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045522"
 ---
 # <a name="keyboard-accessibility"></a>키보드 접근성  
 
@@ -148,7 +148,7 @@ XAML
 
 간단하게 하기 위해 위 예제에서는 "Ctrl+A" 같은 문자열에 대한 리소스 사용을 생략합니다. 그러나 지역화할 때도 바로 가기 키를 고려해야 합니다. 바로 가기 키로 사용할 키의 선택은 일반적으로 해당 요소에 대해 표시되는 텍스트 레이블에 따라 달라지므로 바로 가기 키 지역화가 관련이 있습니다.
 
-바로 가기 키 구현에 대한 자세한 내용은 Windows 사용자 환경 조작 지침에서 [바로 가기 키](http://go.microsoft.com/fwlink/p/?linkid=221825)(영문)를 참조하세요.
+바로 가기 키 구현에 대한 자세한 내용은 Windows 사용자 환경 조작 지침에서 [바로 가기 키](https://go.microsoft.com/fwlink/p/?linkid=221825)(영문)를 참조하세요.
 
 <span id="Implementing_a_key_event_handler"/>
 <span id="implementing_a_key_event_handler"/>
@@ -249,5 +249,5 @@ Windows Phone 장치에는 일반적으로 전용 하드웨어 키보드가 없�
 * [접근성](accessibility.md)
 * [키보드 조작](https://msdn.microsoft.com/library/windows/apps/Mt185607)
 * [터치 키보드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
 

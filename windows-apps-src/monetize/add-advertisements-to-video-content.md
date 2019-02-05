@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 비디오, 스케줄러, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 29e2c46636445adac496d0f2149e956c5703c20d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 69fef2bc5deb21be8685badb0cf18f38769170cb
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934788"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045076"
 ---
 # <a name="show-ads-in-video-content"></a>비디오 콘텐츠에 광고 표시
 
@@ -26,7 +26,7 @@ ms.locfileid: "8934788"
 
 ## <a name="prerequisites"></a>필수 조건
 
-* Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 설치합니다.
+* Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 설치합니다.
 
 * 프로젝트는 [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) 컨트롤을 사용하여 광고가 예약되는 비디오 콘텐츠를 제공해야 합니다. 이 컨트롤은 GitHub의 Microsoft에서 사용할 수 있는 라이브러리의 [TVHelpers](https://github.com/Microsoft/TVHelpers) 컬렉션에서 사용할 수 있습니다.
 

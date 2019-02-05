@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, 접근성, 게임
 ms.localizationpriority: medium
-ms.openlocfilehash: 489804c4645c8e6d1c4926e362f81926c8b2f3c8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0e1d9d25fc63dd2fbb8d258fdaee692ccdfdc911
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937601"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046336"
 ---
 #  <a name="making-games-accessible"></a>접근성 높은 게임 만들기
 
@@ -33,7 +33,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 게임을 플레이할 수 있는 사용자 수 x 게임의 우수성 = 게임 매출이기 때문입니다.
 
-뛰어난 게임을 만들었지만 너무 복잡하거나 난해해서 소수의 사람만 플레이할 수 있다면 매출이 제한됩니다. 마찬가지로, 신체, 감각 또는 인지 장애가 있는 사람이 플레이할 수 없는 게임을 만들면 그만큼 잠재적 매출 기회를 잃게 됩니다. 예를 들어 [미국 국민의 19%가 어떤 형태로든 신체 장애를 가지고 있고](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), [미국 성인의 14% 정도가 난독증을 가지고 있으며](https://nces.ed.gov/naal/estimates/overview.aspx) [남성의 10%는 색각 이상증을 앓고 있고 있다](https://www.aao.org/eye-health/diseases/color-blindness-risk)는 점을 고려해 볼 때, 접근성 높은 게임을 개발하면 매출이 크게 증가할 수 있습니다. 
+뛰어난 게임을 만들었지만 너무 복잡하거나 난해해서 소수의 사람만 플레이할 수 있다면 매출이 제한됩니다. 마찬가지로, 신체, 감각 또는 인지 장애가 있는 사람이 플레이할 수 없는 게임을 만들면 그만큼 잠재적 매출 기회를 잃게 됩니다. 예를 들어 [미국 국민의 19%가 어떤 형태로든 신체 장애를 가지고 있고](https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), [미국 성인의 14% 정도가 난독증을 가지고 있으며](https://nces.ed.gov/naal/estimates/overview.aspx) [남성의 10%는 색각 이상증을 앓고 있고 있다](https://www.aao.org/eye-health/diseases/color-blindness-risk)는 점을 고려해 볼 때, 접근성 높은 게임을 개발하면 매출이 크게 증가할 수 있습니다. 
 
 비즈니스 근거에 대한 자세한 내용은 [접근성 높은 비디오 게임 만들기](https://msdn.microsoft.com/library/windows/desktop/ee415219)를 참조하세요.
 
@@ -158,7 +158,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 ## <a name="game-accessibility-features"></a>게임 접근성 기능
 
-이 섹션에서는 접근성 높은 게임을 만들 수 있는 몇 가지 기능을 설명합니다. 이러한 기능은 스튜디오, 전문가 및 교육 기관으로 이루어진 공동 작업 그룹의 결과물을 나타내는 [게임 접근성 지침](http://gameaccessibilityguidelines.com/)의 지침에서 파생된 것입니다. 자세한 내용은 [게임 접근성 지침](http://gameaccessibilityguidelines.com/)을 참조하세요. 
+이 섹션에서는 접근성 높은 게임을 만들 수 있는 몇 가지 기능을 설명합니다. 이러한 기능은 스튜디오, 전문가 및 교육 기관으로 이루어진 공동 작업 그룹의 결과물을 나타내는 [게임 접근성 지침](https://gameaccessibilityguidelines.com/)의 지침에서 파생된 것입니다. 자세한 내용은 [게임 접근성 지침](https://gameaccessibilityguidelines.com/)을 참조하세요. 
 
 ### <a name="colorblind-friendly-graphics-and-user-interface"></a>색맹에게 편리한 그래픽 및 사용자 인터페이스
 
@@ -175,7 +175,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
     
   + 색에만 의존해서 게임 개체를 전달하거나 구분해서는 안 됩니다. 모양 및 패턴도 사용합니다.
   + 색에만 의존해야 하는 경우에는 자유롭게 선택할 수 있는 색과 미리 설정을 하나로 결합하여 이를 필요로 하는 플레이어는 완벽하게 사용자 지정이 가능하도록 하고, 필요하지 않은 플레이어는 추가적인 작업을 수행할 필요가 없도록 합니다.
-  + 색맹의 눈으로 디자인을 볼 수 있도록 색맹 시뮬레이터를 사용하여 디자인을 테스트합니다. 이렇게 하면 일반적인 대비 문제를 방지하는 데 도움이 됩니다. [Color Oracle](http://www.colororacle.org)은 녹색맹, 적색맹, 청황색맹 등 가장 일반적인 세 가지 유형의 색각 이상증을 시뮬레이션할 수 있는 무료 색맹 시뮬레이터입니다.
+  + 색맹의 눈으로 디자인을 볼 수 있도록 색맹 시뮬레이터를 사용하여 디자인을 테스트합니다. 이렇게 하면 일반적인 대비 문제를 방지하는 데 도움이 됩니다. [Color Oracle](https://www.colororacle.org)은 녹색맹, 적색맹, 청황색맹 등 가장 일반적인 세 가지 유형의 색각 이상증을 시뮬레이션할 수 있는 무료 색맹 시뮬레이터입니다.
   
 ### <a name="closed-captioning-and-subtitles"></a>선택 자막 및 자막
 
@@ -209,13 +209,13 @@ ID@Xbox 및 관리 파트너 프로그램의 개발자들을 위해 텍스트-�
 
 ### <a name="fully-mappable-controls"></a>완전히 매핑 가능한 컨트롤
 
-Windows, Xbox One 등의 다양한 게임 시스템에서 사용할 수 있는 사용자 지정 게임 컨트롤러를 디자인하는 [Special Effect](http://www.specialeffect.org.uk/) 같은 회사와 조직이 있습니다. 이러한 사용자 지정을 통해 다양한 형태의 장애를 가진 사용자가 플레이하지 못했을 수도 있는 게임을 플레이할 수 있습니다. 사용자 지정 컨트롤러로 인해 지금 게임을 독립적으로 플레이할 수 있는 사용자에 대한 자세한 내용은 [대상 사용자](http://www.specialeffect.org.uk/who-we-helped)를 참조하세요.
+Windows, Xbox One 등의 다양한 게임 시스템에서 사용할 수 있는 사용자 지정 게임 컨트롤러를 디자인하는 [Special Effect](https://www.specialeffect.org.uk/) 같은 회사와 조직이 있습니다. 이러한 사용자 지정을 통해 다양한 형태의 장애를 가진 사용자가 플레이하지 못했을 수도 있는 게임을 플레이할 수 있습니다. 사용자 지정 컨트롤러로 인해 지금 게임을 독립적으로 플레이할 수 있는 사용자에 대한 자세한 내용은 [대상 사용자](https://www.specialeffect.org.uk/who-we-helped)를 참조하세요.
 
 게임 개발자는 게이머가 사용자 지정 컨트롤러를 연결하고 요구에 따라 키를 다시 매핑할 수 있도록 완전히 매핑 가능한 컨트롤을 허용하여 게임의 접근성을 높일 수 있습니다.
 
 표준 컨트롤러를 사용하는 사람은 완전히 매핑 가능한 컨트롤을 사용하는 것이 좋습니다. 게이머는 자신의 고유한 요구 사항에 맞게 레이아웃을 디자인할 수 있습니다.
 
-표준 Xbox One 및 Xbox Elite 컨트롤러는 정밀도 게임을 위해 컨트롤러 사용자 지정을 제공합니다. 다시 매핑 기능을 완벽하게 활용하려면 __개발자가 게임에 직접 다시 매핑 기능을 포함시키는 것이 좋습니다__. 자세한 내용은 [Xbox One](http://support.xbox.com/xbox-one/accessories/customize-standard-controller-with-accessories-app) 및 [Xbox Elite](http://support.xbox.com/xbox-one/accessories/use-accessories-app-configure-elite-controller)를 참조하세요.
+표준 Xbox One 및 Xbox Elite 컨트롤러는 정밀도 게임을 위해 컨트롤러 사용자 지정을 제공합니다. 다시 매핑 기능을 완벽하게 활용하려면 __개발자가 게임에 직접 다시 매핑 기능을 포함시키는 것이 좋습니다__. 자세한 내용은 [Xbox One](https://support.xbox.com/xbox-one/accessories/customize-standard-controller-with-accessories-app) 및 [Xbox Elite](https://support.xbox.com/xbox-one/accessories/use-accessories-app-configure-elite-controller)를 참조하세요.
 
 ### <a name="wider-selection-of-difficulty-levels"></a>다양한 난이도
 
@@ -225,7 +225,7 @@ Windows, Xbox One 등의 다양한 게임 시스템에서 사용할 수 있는 �
 
 ### <a name="photosensitivity-epilepsy-testing"></a>감광성 간질 테스트
 
-감광성 간질(PSE)은 깜박이는 조명이나 움직이는 특정한 시각적 형태와 패턴에 노출되는 것과 같이 시각적 자극에 의해 발작이 시작되는 병입니다. 약 3%의 사용자에서 발생하며 어린이와 청소년에서 더 일반적으로 나타납니다. 숫자로 환산하면 [5 ~ 24세 인구 4000명 당 1명](http://www.epilepsy.com/information/professionals/about-epilepsy-seizures/reflex-seizures-and-related-epileptic-syndromes-3)꼴입니다.
+감광성 간질(PSE)은 깜박이는 조명이나 움직이는 특정한 시각적 형태와 패턴에 노출되는 것과 같이 시각적 자극에 의해 발작이 시작되는 병입니다. 약 3%의 사용자에서 발생하며 어린이와 청소년에서 더 일반적으로 나타납니다. 숫자로 환산하면 [5 ~ 24세 인구 4000명 당 1명](https://www.epilepsy.com/information/professionals/about-epilepsy-seizures/reflex-seizures-and-related-epileptic-syndromes-3)꼴입니다.
 
 게임 플레이 기간, 깜박임 빈도, 조명 강도, 배경과 조명 대비, 화면과 게이머 간의 거리, 조명의 파장 등 비디오 게임을 플레이할 때 감광성 반응을 초래할 수 있는 다양한 요인이 있습니다.
 
@@ -241,7 +241,7 @@ Windows, Xbox One 등의 다양한 게임 시스템에서 사용할 수 있는 �
 * 물방울 무늬 같이 크기가 작은 규칙적 요소로 구성된 행이나 열(그리드, 체스판 등)의 형태로 간격이 일정한 고대비 반복 줄무늬가 5개 이상 표시
 * 대문자로만 이루어진 5줄 이상의 문자(글자 간의 간격이 넓지 않고 줄 간격이 줄 자체 만큼 벌어져 있어 줄 바꿈이 일정한 고대비 열로 효과적으로 바꾸는 것이 가능)
 
-자동화된 시스템을 사용하여 게임 플레이에 감광성 간질을 유발할 수 있는 자극이 있는지 확인합니다. (예: Cambridge Research System Ltd와 Graham Harding 교수가 개발한 [Harding 테스트](http://www.hardingtest.com/index.php?page=test) 및 [Harding FPA(Flash and Pattern Analyzer) G2](http://www.hardingfpa.com/harding-fpa-for-games/)) 
+자동화된 시스템을 사용하여 게임 플레이에 감광성 간질을 유발할 수 있는 자극이 있는지 확인합니다. (예: Cambridge Research System Ltd와 Graham Harding 교수가 개발한 [Harding 테스트](https://www.hardingtest.com/index.php?page=test) 및 [Harding FPA(Flash and Pattern Analyzer) G2](https://www.hardingfpa.com/harding-fpa-for-games/)) 
 
 설정 옵션으로 **플래싱 켜기/끄기**를 포함시키고 **플래싱**을 **끄기**로 기본 설정합니다. 이를 통해 자신이 발작에 취약할 수 있다는 것을 아직 모르는 플레이어를 보호합니다.
 
@@ -252,21 +252,21 @@ Windows, Xbox One 등의 다양한 게임 시스템에서 사용할 수 있는 �
 다음은 게임 접근성에 대한 추가 정보를 제공하는 일부 외부 사이트입니다.
 
 ### <a name="game-accessibility-guidelines"></a>게임 접근성 지침
-* [게임 접근성 지침](http://gameaccessibilityguidelines.com/)
-* [AbleGamers Foundation 지침](http://www.includification.com/)
-* [UA(Universally Accessible) 게임 디자인](http://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
+* [게임 접근성 지침](https://gameaccessibilityguidelines.com/)
+* [AbleGamers Foundation 지침](https://www.includification.com/)
+* [UA(Universally Accessible) 게임 디자인](https://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
 
 ### <a name="custom-input-controllers"></a>사용자 지정 입력 컨트롤러
-* [특수 효과](http://www.specialeffect.org.uk/)
-* [참여한 전쟁 전사](http://www.warfighterengaged.org/)
+* [특수 효과](https://www.specialeffect.org.uk/)
+* [참여한 전쟁 전사](https://www.warfighterengaged.org/)
 
 ## <a name="references-used"></a>사용된 참조
-* [게임 접근성 지침](http://gameaccessibilityguidelines.com/)
-* [AbleGamers Foundation 지침](http://www.includification.com/)
-* [색맹 인식, 공동체 이익 회사(Community Interest Company)](http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
-* [자막을 제대로 처리하는 방법 - Ian Hamilton이 작성한 Gamasutra의 블로그 문서](http://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
-* [모든 프로그램에 대한 혁신](http://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
-* [간질에 대한 기초 상식](http://www.epilepsy.com/)
+* [게임 접근성 지침](https://gameaccessibilityguidelines.com/)
+* [AbleGamers Foundation 지침](https://www.includification.com/)
+* [색맹 인식, 공동체 이익 회사(Community Interest Company)](https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
+* [자막을 제대로 처리하는 방법 - Ian Hamilton이 작성한 Gamasutra의 블로그 문서](https://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
+* [모든 프로그램에 대한 혁신](https://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
+* [간질에 대한 기초 상식](https://www.epilepsy.com/)
 
 ## <a name="related-links"></a>관련 링크
 * [포괄 디자인](https://www.microsoft.com/design/inclusive)

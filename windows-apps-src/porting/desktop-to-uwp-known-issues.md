@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
-ms.openlocfilehash: d56482ee036eaadbd759de9af22fdd10c652aceb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9c437e30db7007a6889a822d7d2219f1647bb3d8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932639"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051036"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>패키지 데스크톱 응용 프로그램의 알려진된 문제
 
@@ -67,7 +67,7 @@ Authenticode 서명이 올바르려면 Authenticode 서명에 대해 다음 조�
 - **WIN_CERTIFICATE** 항목의 크기는 양수여야 합니다.
 - **WIN_CERTIFICATE** 항목이 32비트 실행 파일의 경우 **IMAGE_NT_HEADERS32** 구조체 뒤에서 시작해야 하고 64비트 실행 파일의 경우 IMAGE_NT_HEADERS64 구조체 뒤에서 시작해야 합니다.
 
-자세한 내용은 [Authenticode 포털 실행 파일 사양](http://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) 및 [PE 파일 형식 사양](https://msdn.microsoft.com/windows/hardware/gg463119.aspx)을 참조하세요.
+자세한 내용은 [Authenticode 포털 실행 파일 사양](https://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) 및 [PE 파일 형식 사양](https://msdn.microsoft.com/windows/hardware/gg463119.aspx)을 참조하세요.
 
 SignTool.exe는 Windows 앱 패키지에 서명하려고 할 때 손상되거나 잘못된 형식의 이진 파일 목록을 출력할 수 있습니다. 이렇게 하려면 APPXSIP_LOG 환경 변수를 1로 설정하여(예: ```set APPXSIP_LOG=1```) 자세한 정보 로깅을 사용하도록 설정하고 SignTool.exe를 다시 실행합니다.
 
@@ -129,23 +129,23 @@ certutil -dump <cert_file.pfx>
 
 ### <a name="bad-pe-certificate-0x800700c1"></a>잘못 된 PE 인증서 (0x800700C1)
 
-이 패키지에 손상 된 인증서가 있는 이진 파일을 포함 하는 경우 발생할 수 있습니다. 다음은 몇 가지 이유는이 발생할 수 있는 이유입니다.
+이 패키지에는 손상 된 인증서가 있는 이진 파일 포함 되어 있는 경우 발생할 수 있습니다. 다음은 일부의 이유는 이유이 발생할 수 있습니다.
 
 * 인증서의 시작 이미지의 끝에 되지 않습니다.  
 
 * 인증서의 크기는 양수 하지 않습니다.
 
-* 후 인증서 시작 하지는 `IMAGE_NT_HEADERS32` 후 또는 32 비트 실행 파일에 대 한 구조는 `IMAGE_NT_HEADERS64` 64 비트 실행 파일에 대 한 구조.
+* 후 인증서 시작 되지 합니다 `IMAGE_NT_HEADERS32` 후 또는 32 비트 실행 파일에 대 한 구조는 `IMAGE_NT_HEADERS64` 64 비트 실행 파일에 대 한 구조입니다.
 
-* 인증서 포인터 WIN_CERTIFICATE 구조에 대 한 제대로 정렬 되지 않습니다.
+* 인증서 포인터 제대로 WIN_CERTIFICATE 구조에 대 한 정렬 되지 않습니다.
 
-잘못 된 PE 인증서를 포함 하는 파일을 찾으려면 **명령 프롬프트**를 열고 라는 환경 변수를 설정 `APPXSIP_LOG` 1 값입니다.
+잘못 된 PE 인증서를 포함 하는 파일을 찾으려면 **명령 프롬프트**를 열고 라는 환경 변수를 설정 `APPXSIP_LOG` 을 1의 값입니다.
 
 ```
 set APPXSIP_LOG=1
 ```
 
-그런 다음 **명령 프롬프트**응용 프로그램을 다시 서명 합니다. 예를 들면 다음과 같습니다.
+그런 다음 **명령 프롬프트**에서 응용 프로그램을 다시 서명 합니다. 예를 들면 다음과 같습니다.
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
@@ -164,7 +164,7 @@ ERROR: [AppxSipCustomLoggerCallback] File has malformed certificate: uninstall.e
 
 **질문에 대한 답변 찾기**
 
-질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
+질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 
 **피드백 제공 또는 기능 제안**
 

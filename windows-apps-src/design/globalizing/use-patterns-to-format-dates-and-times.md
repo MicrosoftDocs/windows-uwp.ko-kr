@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: a8e68242647204dfbf8ba23c45d881066c88900b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3849ccf0f129b65dc44f549a37859fe38ac71562
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918898"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048690"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>날짜 및 시간 형식 지정 템플릿 및 패턴 사용
 
@@ -141,4 +141,4 @@ string output = patternFormatter.Format(System.DateTime.Now);
 
 ## <a name="related-topics"></a>관련 항목
 
-* [날짜 및 시간 형식 지정 샘플](http://go.microsoft.com/fwlink/p/?LinkId=231618)
+* [날짜 및 시간 형식 지정 샘플](https://go.microsoft.com/fwlink/p/?LinkId=231618)

@@ -6,19 +6,19 @@ ms.date: 10/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: e6938807a589337489f07f5865e02a580a72dae2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1a245c4ec0280f687cf34e85123960e64fe36a57
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925860"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044630"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>MakePri.exe 형식별 인덱서
 
 이 항목에서는 리소스 인덱스를 생성하기 위해 [MakePri.exe](compile-resources-manually-with-makepri.md) 도구에 의해 사용되는 형식별 인덱서에 대해 설명합니다.
 
 > [!NOTE]
-> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **Windows SDK UWP 앱의 관리** 옵션을 선택 하면 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 메모가 다른 아키텍처에 대 한 폴더에 따라 합니다. 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
+> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **Windows SDK UWP 관리 되는 앱에 대 한** 옵션을 선택 하면 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 메모가 다른 아키텍처에 대 한 폴더에 따라 합니다. 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
 
 MakePri.exe는 일반적으로 `new`, `versioned`, 또는 `resourcepack` 명령과 함께 사용됩니다. [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md)을 참조하세요. 이러한 경우 원본 파일을 인덱싱하여 리소스 인덱스를 생성합니다. MakePri.exe는 다른 소스 리소스 파일 또는 리소스 컨테이너를 읽기 위해 다양한 개별 인덱서를 사용합니다. 가장 단순한 인덱서는 폴더 인덱서이며 `.jpg`또는 `.png` 이미지 등의 폴더의 콘텐츠를 인덱싱합니다.
 
@@ -311,7 +311,7 @@ ResJSON 인덱서는 RESJSON의 `type` 특성에 의해 식별됩니다. 문자�
 </xs:schema>\
 ```
 
-`.resjson` 파일에는 JSON 텍스트가 포함됩니다([JSON(JavaScript Object Notation)에 대한 응용 프로그램/json 미디어 유형](http://www.ietf.org/rfc/rfc4627.txt) 참조). 파일에는 계층적 속성이 있는 JSON 개체가 있어야 합니다. 각 속성은 다른 JSON 개체 또는 문자열 값이어야 합니다.
+`.resjson` 파일에는 JSON 텍스트가 포함됩니다([JSON(JavaScript Object Notation)에 대한 응용 프로그램/json 미디어 유형](https://www.ietf.org/rfc/rfc4627.txt) 참조). 파일에는 계층적 속성이 있는 JSON 개체가 있어야 합니다. 각 속성은 다른 JSON 개체 또는 문자열 값이어야 합니다.
 
 밑줄("_")로 시작하는 이름을 가진 JSON 속성은 최종 PRI 파일로 컴파일되지는 않지만 로그 파일에서 유지됩니다.
 
@@ -400,4 +400,4 @@ ResW 인덱서는 RESW의 `type` 특성에 의해 식별됩니다. 문자열 리
 * [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
 * [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md)
 * [MakePri.exe 구성 파일](makepri-exe-configuration.md)
-* [JSON(JavaScript Object Notation)에 대한 응용 프로그램/json 미디어 유형](http://www.ietf.org/rfc/rfc4627.txt)
+* [JSON(JavaScript Object Notation)에 대한 응용 프로그램/json 미디어 유형](https://www.ietf.org/rfc/rfc4627.txt)

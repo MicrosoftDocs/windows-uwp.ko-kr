@@ -8,12 +8,12 @@ keywords: 펜, 마우스, 터치 패드, 터치, 포인터, 입력, 사용자 �
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c8f670a5139d4969489bede3b0b4bbf72de2d55
-ms.sourcegitcommit: 2ef3d22a30afe853de891280e11d96e5e1ab62d1
+ms.openlocfilehash: 596e9221fac686964b4faaa8a75f112dbb8ddf5a
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "8981872"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048400"
 ---
 # <a name="handle-pointer-input"></a>포인터 입력 처리
 
@@ -196,7 +196,7 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 
 대부분의 경우에는 이벤트 처리기의 [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs)를 통해 포인터 정보를 가져오는 것이 좋습니다.
 
-이벤트 인수가 필요한 포인터 정보를 표시 하지 않는 경우 [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) 및 [**GetIntermediatePoints**]를 통해 노출 확장된 [**PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) 정보에 액세스할 수 있습니다https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) [**의 메서드 PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs)합니다.
+이벤트 인수가 필요한 포인터 정보를 표시 하지 않는 경우 [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) 및 [**GetIntermediatePoints**]를 통해 노출 되는 확장된 [**PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) 정보에 액세스할 수 있습니다https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) 의 [**메서드 PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
 
 다음은 각 활성 포인터 추적용으로 전역 사전 개체를 설정하고 대상 개체용으로 다양한 포인터 이벤트 수신기를 식별하는 코드입니다.
 
@@ -954,15 +954,15 @@ MainPage.xaml은 다음과 같습니다.
 * [포인터 입력 샘플(애니메이션이 있는 UserControl)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)
 
 **기타 샘플**
-* [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
-* [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: 조작 및 제스처(C++) 샘플](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [입력: 터치 적중 횟수 테스트 샘플](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: 간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?linkid=246570)
+* [입력: XAML 사용자 입력 이벤트 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 조작 및 제스처(C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [입력: 터치 적중 횟수 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [입력: 간단한 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)

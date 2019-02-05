@@ -6,12 +6,12 @@ ms.date: 09/20/2017
 ms.topic: article
 keywords: windows 10, uwp, 경로, 지도, 위치, 길 찾기
 ms.localizationpriority: medium
-ms.openlocfilehash: dd93a092ee0db0821e9326d0f9ffa86890850b87
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 218ca052a3e525a1f7cfc2ce18542a5a30c61e5e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944627"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049260"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>지도에 경로 및 길 찾기 표시
 
@@ -20,7 +20,7 @@ ms.locfileid: "8944627"
 경로 및 길 찾기를 요청하고 앱에 표시합니다.
 
 >[!Note]
->앱에서 지도 사용에 대한 자세한 내용을 알아보려면 [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
+>앱에서 지도 사용에 대한 자세한 내용을 알아보려면 [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
 >지도가 앱의 핵심 기능이 아닌 경우 대신 Windows 지도 앱을 실행하는 것이 좋습니다. `bingmaps:`, `ms-drive-to:` 및 `ms-walk-to:` URI 스키마로 Windows 지도 앱을 실행하여 특정 지도 및 턴바이턴 길 찾기를 표시할 수 있습니다. 자세한 내용은 [Windows 지도 앱 실행](https://msdn.microsoft.com/library/windows/apps/mt228341)을 참조하세요.
 
  
@@ -242,7 +242,7 @@ private async void ShowRouteOnMap()
 ## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)

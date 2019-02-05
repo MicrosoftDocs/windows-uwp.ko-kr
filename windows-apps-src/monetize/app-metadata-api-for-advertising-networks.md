@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 광고 네트워크, 앱 메타데이터
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fd0381d9ec8917f381cfeb045d58bfa3436de74
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0122c2fbe1e0e9905a8509694c4a589e04e33247
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934422"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049430"
 ---
 # <a name="app-metadata-api-for-advertising-networks"></a>광고 네트워크용 앱 메타데이터 API
 
@@ -69,7 +69,7 @@ ms.locfileid: "8934422"
 
 | 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Ocp-Apim-Subscription-Key | 문자열 | 필수. [앱 메타데이터 API 포털에서 검색한](#get-key) 구독 키입니다.  |
+| Ocp-Apim-Subscription-Key | string | 필수. [앱 메타데이터 API 포털에서 검색한](#get-key) 구독 키입니다.  |
 
 <span/>
 
@@ -77,7 +77,7 @@ ms.locfileid: "8934422"
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------|
-| app_id | 문자열 | 필수. 메타데이터를 검색할 앱의 ID입니다. 다음 값 중 하나일 수 있습니다.<br/><br/><ul><li>앱의 스토어 ID입니다. 예를 들어 스토어 ID는 9NBLGGH29DM8입니다.</li><li>Windows8.x 또는 Windows Phone 8.x용으로 작성한 앱의 제품 ID(*앱 ID*라고도 함)입니다. 제품 ID는 GUID입니다.</li></ul> |
+| app_id | string | 필수. 메타데이터를 검색할 앱의 ID입니다. 다음 값 중 하나일 수 있습니다.<br/><br/><ul><li>앱의 스토어 ID입니다. 예를 들어 스토어 ID는 9NBLGGH29DM8입니다.</li><li>Windows8.x 또는 Windows Phone 8.x용으로 작성한 앱의 제품 ID(*앱 ID*라고도 함)입니다. 제품 ID는 GUID입니다.</li></ul> |
 
 <span/>
 
@@ -128,21 +128,21 @@ Ocp-Apim-Subscription-Key: <subscription key>
 
 | 값      | 유형   | 설명    |
 |------------|--------|--------------------|
-| storeId           | 문자열  | 앱의 스토어 ID입니다. 예를 들어 스토어 ID는 9NBLGGH29DM8입니다.     |  
+| storeId           | string  | 앱의 스토어 ID입니다. 예를 들어 스토어 ID는 9NBLGGH29DM8입니다.     |  
 | name           | 문자열  | 앱의 이름입니다.   |
-| 설명           | 문자열  | 앱의 스토어 목록에 대한 설명입니다.  |
-| phoneStoreGuid           | 문자열  | 앱의 제품 ID(Windows Phone 8.x)입니다. 이 ID는 GUID입니다.  |
-| windowsStoreGuid           | 문자열  | 앱의 제품 ID(Windows8.x)입니다. 이 ID는 GUID입니다. |
-| storeCategory           | 문자열  | 스토어에서 앱 범주입니다. 지원되는 값은 스토어에서 앱의 [범주 및 하위 범주 테이블](../publish/category-and-subcategory-table.md)을 참조하세요.  |
+| 설명           | string  | 앱의 스토어 목록에 대한 설명입니다.  |
+| phoneStoreGuid           | string  | 앱의 제품 ID(Windows Phone 8.x)입니다. 이 ID는 GUID입니다.  |
+| windowsStoreGuid           | string  | 앱의 제품 ID(Windows8.x)입니다. 이 ID는 GUID입니다. |
+| storeCategory           | string  | 스토어에서 앱 범주입니다. 지원되는 값은 스토어에서 앱의 [범주 및 하위 범주 테이블](../publish/category-and-subcategory-table.md)을 참조하세요.  |
 | iabCategory           | 문자열  | IAB(Interactive Advertising Bureau)에서 정의한 앱의 콘텐츠 범주입니다. 예를 들면 **뉴스** 또는 **스포츠**가 됩니다. 콘텐츠 범주 목록은 IAB 웹 사이트에서[IAB Tech Lab Content Taxonom](https://www.iab.com/guidelines/iab-quality-assurance-guidelines-qag-taxonomy)(IAB 기술 랩 콘텐츠 분류) 페이지를 참조하세요.   |
-| iabCategoryId           | 문자열  | 앱에 대한 콘텐츠 범주의 ID입니다. 예를 들어 **IAB12**는 뉴스 범주에 대한 ID, **IAB17**은 스포츠 범주에 대한 ID입니다. 콘텐츠 범주 ID 목록은 [OpenRTB API Specification](http://www.iab.com/wp-content/uploads/2015/05/OpenRTB_API_Specification_Version_2_3_1.pdf)(OpenRTB API 사양)의 섹션 5.1을 참조하세요. |
+| iabCategoryId           | 문자열  | 앱에 대한 콘텐츠 범주의 ID입니다. 예를 들어 **IAB12**는 뉴스 범주에 대한 ID, **IAB17**은 스포츠 범주에 대한 ID입니다. 콘텐츠 범주 ID 목록은 [OpenRTB API Specification](https://www.iab.com/wp-content/uploads/2015/05/OpenRTB_API_Specification_Version_2_3_1.pdf)(OpenRTB API 사양)의 섹션 5.1을 참조하세요. |
 | coppa           | 부울  | 앱이 13세 미만 아동을 대상으로 하여 COPPA(아동에 관한 온라인 개인 정보 보호법)에 따른 의무 조항이 있으면 True, 그렇지 않으면 False입니다.  |
 | downloadUrl           | 문자열  | 스토어에서 앱의 목록에 대한 링크입니다. 이 링크는 ```https://www.microsoft.com/store/apps/<Store ID>``` 형식입니다.  |
 | isLive           | 부울  | 앱이 현재 스토어에 제공되면 True이고, 그렇지 않으면 false입니다.  |
-| iconUrls           | 배열  |  앱과 연결된 아이콘 URL의 상대 경로를 포함하는 하나 이상의 문자열 배열입니다. 아이콘을 검색하려면 URL 앞에 *http* 또는 *https*를 추가합니다.  |
+| iconUrls           | array  |  앱과 연결된 아이콘 URL의 상대 경로를 포함하는 하나 이상의 문자열 배열입니다. 아이콘을 검색하려면 URL 앞에 *http* 또는 *https*를 추가합니다.  |
 | 유형           | 문자열  | **앱** 또는 **게임** 문자열 중 하나입니다.  |
-| devices           |  배열  | 앱에서 지원하는 디바이스 유형을 지정하는 **PC**, **휴대폰**, **Xbox**, **IoT**, **서버**, **홀로그램** 문자열 중 하나 이상으로 구성되는 배열입니다  |
-| platformVersions           | 배열  |  앱에서 지원하는 플랫폼을 지정하는 **Windows.Universal**, **Windows.Windows8x**, **Windows.WindowsPhone8x** 문자열 중 하나 이상으로 구성되는 배열입니다.  |
+| devices           |  array  | 앱에서 지원하는 디바이스 유형을 지정하는 **PC**, **휴대폰**, **Xbox**, **IoT**, **서버**, **홀로그램** 문자열 중 하나 이상으로 구성되는 배열입니다  |
+| platformVersions           | array  |  앱에서 지원하는 플랫폼을 지정하는 **Windows.Universal**, **Windows.Windows8x**, **Windows.WindowsPhone8x** 문자열 중 하나 이상으로 구성되는 배열입니다.  |
 | screenshotUrls           | 배열  | 이 앱의 스크린샷 URL에 대한 상대 경로를 포함하는 하나 이상의 문자열의 배열입니다. 스크린샷을 검색하려면 URL 앞에 *http* 또는 *https*를 추가합니다.  |
 
 <span/>

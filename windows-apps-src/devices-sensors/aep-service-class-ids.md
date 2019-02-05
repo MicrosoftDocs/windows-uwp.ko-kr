@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: faa9e3f8936e8650af905678ce7434c4b9967be0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 08a186e0a8e7293b139f756b69966cd8d4b49c92
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939841"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048300"
 ---
 # <a name="aep-service-class-ids"></a>AEP 서비스 클래스 ID
 
@@ -72,7 +72,7 @@ Bluetooth 프로토콜은 여러 서비스를 지원하며, 모두 동일한 기
 
  
 
-사용 가능한 Bluetooth 서비스의 전체 목록은 Bluetooth의 프로토콜 및 서비스 페이지([여기](http://go.microsoft.com/fwlink/p/?LinkID=619586) 및 [여기](http://go.microsoft.com/fwlink/p/?LinkID=619587))를 참조하세요. [**GattServiceUuids**](https://msdn.microsoft.com/library/windows/apps/Dn297571) API를 사용하여 몇 가지 일반적인 GATT 서비스를 가져올 수도 있습니다.
+사용 가능한 Bluetooth 서비스의 전체 목록은 Bluetooth의 프로토콜 및 서비스 페이지([여기](https://go.microsoft.com/fwlink/p/?LinkID=619586) 및 [여기](https://go.microsoft.com/fwlink/p/?LinkID=619587))를 참조하세요. [**GattServiceUuids**](https://msdn.microsoft.com/library/windows/apps/Dn297571) API를 사용하여 몇 가지 일반적인 GATT 서비스를 가져올 수도 있습니다.
 
 ## <a name="custom-bluetooth-le-services"></a>사용자 지정 Bluetooth LE 서비스
 

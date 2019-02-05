@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
-ms.openlocfilehash: 16fca2fc98450375ec2dcf7a0d10775b2bba1bf2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3783105c054e5d956ab64aabe9971bb952d6cae6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926266"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046386"
 ---
 # <a name="customize-the-print-preview-ui"></a>인쇄 미리 보기 UI 사용자 지정
 
@@ -25,7 +25,7 @@ ms.locfileid: "8926266"
 
 이 섹션에서는 인쇄 옵션 및 인쇄 미리 보기 UI의 설정을 사용자 지정하는 방법을 설명합니다. 인쇄에 대한 자세한 내용은 [앱에서 인쇄](print-from-your-app.md)를 참조하세요.
 
-**팁**는이 항목의 예제는 대부분 인쇄 샘플에 기반 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)을 다운로드하세요.
+**팁**는이 항목의 예제는 대부분 인쇄 샘플에 기반 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 인쇄 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619984)을 다운로드하세요.
 
  
 
@@ -187,4 +187,4 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 * [인쇄에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//빌드 2015 동영상: Windows 10에서 인쇄하는 앱 개발](https://channel9.msdn.com/Events/Build/2015/2-94)
-* [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)
+* [UWP 인쇄 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619984)

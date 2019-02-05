@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: e8a2b0125944a8a4db66b41d26fcd4a0aa35b5b2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d641bcff48b830c56a1d03ee861ec2a4c5f433b6
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933753"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048610"
 ---
 # <a name="globalize-your-datetimenumber-formats"></a>날짜/시간 숫자 형식 세계화
 
@@ -173,7 +173,7 @@ ms.locfileid: "8933753"
 
 ## <a name="samples"></a>샘플
 
-* [달력 세부 정보 및 수학 샘플](http://go.microsoft.com/fwlink/p/?linkid=231636)
-* [날짜 및 시간 형식 지정 샘플](http://go.microsoft.com/fwlink/p/?linkid=231618)
-* [세계화 기본 설정 샘플](http://go.microsoft.com/fwlink/p/?linkid=231608)
-* [숫자 형식 지정 및 구문 분석 샘플](http://go.microsoft.com/fwlink/p/?linkid=231620)
+* [달력 세부 정보 및 수학 샘플](https://go.microsoft.com/fwlink/p/?linkid=231636)
+* [날짜 및 시간 형식 지정 샘플](https://go.microsoft.com/fwlink/p/?linkid=231618)
+* [세계화 기본 설정 샘플](https://go.microsoft.com/fwlink/p/?linkid=231608)
+* [숫자 형식 지정 및 구문 분석 샘플](https://go.microsoft.com/fwlink/p/?linkid=231620)

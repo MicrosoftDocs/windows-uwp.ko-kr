@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0959c9bc09782538cdb15a68c46b0797d4b7d230
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fce2c9230add569c4494b01546f1b3ced81d488b
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925655"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048140"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>화면 크기 및 중단점
 
-UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치라면 어디에서든지 실행할 수 있습니다. 장치 및 각 장치에 대 한 UI를 최적화 하는 것이 아니라 Windows10 에코 시스템 화면 크기가 매우 많기, 몇 가지 주요 너비 카테고리 ("중단점"이 라고도 함)에 대 한 디자인을 것이 좋습니다. 
+UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치라면 어디에서든지 실행할 수 있습니다. 장치 및 각 장치에 대 한 UI를 최적화 하는 것이 아니라 windows 10 에코 시스템 화면 크기가 매우 많기, 몇 가지 주요 너비 카테고리 ("중단점"이 라고도 함)에 대 한 디자인을 것이 좋습니다. 
 - 소형(640px 이하)
 - 중간(641px ~ 1007px)
 - 대형(1008px 이상)
@@ -90,7 +90,7 @@ UWP 앱은 모든 Windows 10 장치에서 앱을 쉽게 알아볼 수 있도록 
 - 열/영역은 최대 2개까지 사용합니다.
 - 검색 상자를 표시합니다.
 - 좁은 아이콘 스트립이 항상 표시되도록 [탐색 창](../controls-and-patterns/navigationview.md)을 작은 모드로 전환합니다.
-- [TV 환경](http://go.microsoft.com/fwlink/?LinkId=760736)에 맞는 추가 조정을 고려합니다.
+- [TV 환경](https://go.microsoft.com/fwlink/?LinkId=760736)에 맞는 추가 조정을 고려합니다.
 
 ### <a name="large"></a>대형
 - 왼쪽 및 오른쪽 창 여백을 24px로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.
@@ -100,6 +100,6 @@ UWP 앱은 모든 Windows 10 장치에서 앱을 쉽게 알아볼 수 있도록 
 - 항상 표시되도록 [탐색 창](../controls-and-patterns/navigationview.md)을 도킹 모드로 전환합니다.
 
 >[!TIP] 
-> [**Continuum**](http://go.microsoft.com/fwlink/p/?LinkID=699431)사용 하 여 사용자가 노트북 처럼 작동 하는 휴대폰을 모니터, 마우스 및 키보드를 호환 되는 Windows10 모바일 장치를 연결할 수 있습니다. 특정 중단점에 대해 디자인할 때 이 새로운 기능에 유의하세요. 휴대폰이 항상 크기 클래스로 유지되지는 않습니다.
+> [**Continuum**](https://go.microsoft.com/fwlink/p/?LinkID=699431)사용 하 여 사용자가 노트북 처럼 작동 하는 휴대폰을 모니터, 마우스 및 키보드를 호환 되는 windows 10 모바일 장치를 연결할 수 있습니다. 특정 중단점에 대해 디자인할 때 이 새로운 기능에 유의하세요. 휴대폰이 항상 크기 클래스로 유지되지는 않습니다.
 
 

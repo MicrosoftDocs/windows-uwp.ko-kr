@@ -8,12 +8,12 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: dfd829881892eece08c30fcd665bdf21a1f43471
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 09787d5a83415b65b8946860edb5b7cad09a5846
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945064"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050816"
 ---
 # <a name="speech-interactions"></a>음성 조작
 
@@ -157,14 +157,14 @@ ms.locfileid: "8945064"
 직접 디자인하고 작성하는 사용자 지정 문법은 앱과 함께 설치됩니다. 사용자 지정 제약 조건을 사용하는 음성 인식은 장치에서 수행됩니다.
 
 -   프로그래밍 방식 목록 제약 조건은 단어 또는 구 목록을 사용하여 간단한 문법을 만드는 가벼운 방법을 제공합니다. 짧고 고유한 구를 인식하는 데는 목록 제약 조건이 유용합니다. 음성 인식 엔진이 일치를 확인하기 위해서만 음성을 처리해야 하므로 문법의 모든 단어를 명시적으로 지정하면 인식 정확도도 향상됩니다. 또한 목록은 프로그래밍 방식으로도 업데이트할 수 있습니다.
--   SRGS 문법은 프로그래밍 방식 목록 제약 조건과 달리 [SRGS 버전 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302)에서 정의한 XML 형식을 사용한 정적 문서입니다. SRGS 문법을 사용하면 단일 인식에서 여러 시맨틱 의미를 캡처할 수 있으므로 음성 인식 환경을 가장 잘 제어할 수 있습니다.
+-   SRGS 문법은 프로그래밍 방식 목록 제약 조건과 달리 [SRGS 버전 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302)에서 정의한 XML 형식을 사용한 정적 문서입니다. SRGS 문법을 사용하면 단일 인식에서 여러 시맨틱 의미를 캡처할 수 있으므로 음성 인식 환경을 가장 잘 제어할 수 있습니다.
 
     다음은 SRGS 문법 작성을 위한 몇 가지 팁입니다.
 
     -   각 문법을 작게 유지합니다. 더 적은 구가 포함된 문법은 많은 구가 포함된 더 큰 문법보다 더욱 정확한 인식을 제공하는 경향이 있습니다. 전체 앱용으로 하나의 문법을 사용하는 것보다 특정 시나리오용으로 더 작은 여러 문법을 사용하는 것이 더 좋습니다.
     -   사용자가 각 앱 컨텍스트에 대해 말할 내용을 알도록 하고 필요에 따라 문법을 사용하거나 사용하지 않도록 합니다.
     -   사용자가 다양한 방법으로 명령을 말할 수 있도록 각 문법을 설계합니다. 예를 들어 문법에서 정의하지 않는 음성 입력과 일치시키는 데 **GARBAGE** 규칙을 사용할 수 있습니다. 이 규칙을 통해 사용자가 앱에 의미가 없는 추가 단어를 말할 수 있습니다. 예를 들어 "주세요", "그리고", "어", "어쩌면" 등을 말할 수 있습니다.
-    -   음성 입력 일치에 도움이 되는 [sapi:subset](http://msdn.microsoft.com/library/windowsphone/design/jj572474.aspx) 요소를 사용합니다. 이 요소는 부분 구 일치에 도움이 되는 SRGS 사양의 Microsoft 확장입니다.
+    -   음성 입력 일치에 도움이 되는 [sapi:subset](https://msdn.microsoft.com/library/windowsphone/design/jj572474.aspx) 요소를 사용합니다. 이 요소는 부분 구 일치에 도움이 되는 SRGS 사양의 Microsoft 확장입니다.
     -   하나의 음절만 포함하는 구는 문법에 정의하지 않도록 합니다. 인식은 둘 이상의 음절을 포함하는 구에 대해 더욱 정확한 경향이 있습니다.
     -   비슷하게 소리 나는 구는 사용하지 마세요. 예를 들어 "hello", "bellow" 및 "fellow"와 같이 유사한 소리의 구는 인식 엔진에 혼동을 주므로 인식 정확도가 떨어질 수 있습니다.
 
@@ -175,9 +175,9 @@ ms.locfileid: "8945064"
 
 앱에 특이하거나 가상의 단어가 있는 전문 어휘 또는 발음이 일반적이지 않은 단어가 포함된 경우 사용자 지정 발음을 정의하여 해당 단어에 대한 인식 성능을 향상시킬 수 있습니다.
 
-단어와 구의 작은 목록 또는 드물게 사용하는 단어와 구 목록의 경우 SRGS 문법에서 사용자 지정 발음을 만들 수 있습니다. 자세한 내용은 [token 요소](http://msdn.microsoft.com/library/windowsphone/design/hh361600.aspx)를 참조하세요.
+단어와 구의 작은 목록 또는 드물게 사용하는 단어와 구 목록의 경우 SRGS 문법에서 사용자 지정 발음을 만들 수 있습니다. 자세한 내용은 [token 요소](https://msdn.microsoft.com/library/windowsphone/design/hh361600.aspx)를 참조하세요.
 
-단어와 구의 더욱 큰 목록 또는 자주 사용하는 단어와 구의 경우 별도의 발음 어휘집을 만들 수 있습니다. 자세한 내용은 [사전 및 음성 기호 정보](http://msdn.microsoft.com/library/windowsphone/design/hh361646.aspx)를 참조하세요.
+단어와 구의 더욱 큰 목록 또는 자주 사용하는 단어와 구의 경우 별도의 발음 어휘집을 만들 수 있습니다. 자세한 내용은 [사전 및 음성 기호 정보](https://msdn.microsoft.com/library/windowsphone/design/hh361646.aspx)를 참조하세요.
 
 ## <a name="testing"></a>테스트
 
@@ -200,7 +200,7 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 -   비정상적인 단어 순서로 연결하거나 문장 구성 숫자 또는 문장 부호를 발음하면 구를 이해할 수 없게 될 수 있습니다.
 -   원어민이 구를 말하는 방식과 음성 운율 또는 억양이 다른 경우 음성이 부자연스럽게 들릴 수 있습니다.
 
-두 문제 모두 일반 텍스트 대신 SSML을 음성 신시사이저에 입력하여 해결할 수 있습니다. SSML에 대한 자세한 내용은 [SSML을 사용하여 합성된 음성 제어](http://msdn.microsoft.com/library/windowsphone/design/hh378454.aspx) 및 [음성 합성 생성 언어 참조](http://msdn.microsoft.com/library/windowsphone/design/hh378377.aspx)를 참조하세요.
+두 문제 모두 일반 텍스트 대신 SSML을 음성 신시사이저에 입력하여 해결할 수 있습니다. SSML에 대한 자세한 내용은 [SSML을 사용하여 합성된 음성 제어](https://msdn.microsoft.com/library/windowsphone/design/hh378454.aspx) 및 [음성 합성 생성 언어 참조](https://msdn.microsoft.com/library/windowsphone/design/hh378377.aspx)를 참조하세요.
 
 ## <a name="other-articles-in-this-section"></a>이 섹션의 다른 문서 
 
@@ -211,7 +211,7 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 | [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md) | 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다. |
 | [연속 받아쓰기 사용](enable-continuous-dictation.md) |긴 형식의 연속 받아쓰기 음성 입력을 캡처 및 인식하는 방법을 알아봅니다. |
 | [오디오 입력 관련 문제 관리](manage-issues-with-audio-input.md) | 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다. |
-| [음성 인식 시간 제한 설정](set-speech-recognition-timeouts.md) | Set how long a speech recognizer ignores silence or unrecognizable sounds (babble) and continues listening for speech input. |
+| [음성 인식 시간 제한 설정](set-speech-recognition-timeouts.md) | 음성 인식기에서 무음 또는 인식할 수 없는 소리(왁자지껄)를 무시하고 계속해서 음성 입력에 대해 수신 대기하는 시간을 설정합니다. |
 
 ## <a name="related-articles"></a>관련 문서
 
@@ -220,7 +220,7 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 
  **샘플**
 
-* [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

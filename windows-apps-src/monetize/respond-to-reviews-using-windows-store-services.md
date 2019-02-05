@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 리뷰 API, 리뷰에 응답
 ms.localizationpriority: medium
-ms.openlocfilehash: 95de2cc1de1b71a435fc8d4388f599c417132814
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 677108e692bbc702778cad3c42a45b4f5408b8cd
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944459"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9044517"
 ---
 # <a name="respond-to-reviews-using-store-services"></a>스토어 서비스를 사용하여 리뷰에 응답
 
@@ -32,9 +32,9 @@ ms.locfileid: "8944459"
 
 Microsoft Store 리뷰 API를 호출하는 코드를 작성하기 전에 다음과 같은 필수 조건을 완료했는지 확인합니다.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않으면 추가 요금 없이 [파트너 센터에서 Azure AD를 새로 만들](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
+* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](https://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않은 경우 추가 비용 없이 [파트너 센터에서 Azure AD를 새로 만들](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
 
-* 파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하 고, 트 ID 및 클라이언트 ID를 검색 하 고, 키를 생성 해야 합니다. Azure AD 응용 프로그램은 Microsoft Store 리뷰 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
+* 파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하 고, ID 및 클라이언트 ID 응용 프로그램에 대 한 테 넌 트를 검색 하 고, 키를 생성 해야 합니다. Azure AD 응용 프로그램은 Microsoft Store 리뷰 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
     > [!NOTE]
     > 이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
 
@@ -42,7 +42,7 @@ Microsoft Store 리뷰 API를 호출하는 코드를 작성하기 전에 다음�
 
 1.  파트너 센터에서는 [조직의 파트너 센터 계정을 조직의 Azure AD 디렉터리와 연결](../publish/associate-azure-ad-with-partner-center.md)합니다.
 
-2.  그런 다음, 파트너 센터의 **계정 설정** 섹션에서 **사용자가** 페이지에서 [Azure AD 응용 프로그램을 추가](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) 앱 또는 서비스에 응답 하는 데 사용할를 나타내는 검토 합니다. 이 응용 프로그램에 **관리자** 역할을 할당하도록 합니다. 응용 프로그램이 아직 Azure AD 디렉터리에 수 있는 경우 [새 파트너 센터에서 Azure AD 응용 프로그램](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account)합니다. 
+2.  다음으로, 파트너 센터의 **계정 설정** 섹션에서 **사용자가** 페이지에서 [Azure AD 응용 프로그램을 추가](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) 앱 또는 서비스에 응답 하는 데 사용할를 나타내는 검토 합니다. 이 응용 프로그램에 **관리자** 역할을 할당하도록 합니다. 응용 프로그램이 아직 Azure AD 디렉터리에 수 있는 경우 [새 파트너 센터에서 Azure AD 응용 프로그램](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account)합니다. 
 
 3.  **사용자** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
 

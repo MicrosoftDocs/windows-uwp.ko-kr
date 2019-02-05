@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도 인증 키, 지도 컨트롤
 ms.localizationpriority: medium
-ms.openlocfilehash: e986880ccedfdb4648b1554c35c23a8a841fe820
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 620566036dc5aa9357d10e60ec92067ba0faf130
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945616"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046163"
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 
@@ -20,9 +20,9 @@ ms.locfileid: "8945616"
 
 [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스를 사용하려면 먼저 [유니버설 Windows 앱](https://msdn.microsoft.com/library/windows/apps/dn894631)을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 항목에서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하고 이를 앱에 추가하는 방법을 설명합니다.
 
-**팁** 앱에서 지도를 사용하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
+**팁** 앱에서 지도를 사용하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
 
--   [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="get-a-key"></a>키 가져오기
 
@@ -90,7 +90,7 @@ ms.locfileid: "8945616"
 ## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)

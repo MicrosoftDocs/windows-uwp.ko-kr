@@ -1,32 +1,32 @@
 ---
 Description: This topic defines the terms user profile language list, app manifest language list, and app runtime language list. We'll be using these terms in this topic and other topics in this feature area, so it's important to know what they mean.
-title: 사용자 프로필 언어와 앱 매니페스트 언어 이해
+title: 사용자 프로필 언어 및 앱 매니페스트 언어 이해
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 template: detail.hbs
 ms.date: 11/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: d70dbc0dffc3763855924b8f7faca61ca2fb18f2
-ms.sourcegitcommit: 1901a43b9e40a05c28c7799e0f9b08ce92f8c8a8
+ms.openlocfilehash: d782e8cd64cb976df964c72199964c1d349d527e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "9035404"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9045662"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>사용자 프로필 언어와 앱 매니페스트 언어 이해
 Windows 사용자는 **설정** > **시간 및 언어** > **지역 및 언어**를 사용하여 기본 설정 표시 언어의 정렬된 목록 또는 기본 설정 표시 언어 하나를 구성할 수 있습니다. 언어에는 지역별 변수가 포함될 수 있습니다. 예를 들어 스페인에서 사용하는 스페인어, 멕시코에서 사용하는 스페인어, 미국에서 사용하는 스페인어 및 기타 스페인어를 선택할 수 있습니다.
 
 또한 사용자는 **설정** > **시간 및 언어** > **지역 및 언어**에서 또는 언어에서 별도로 위치(또는 지역)를 지정할 수 있습니다. 표시 언어(및 지역 변수) 설정은 지역 설정의 결정자가 아니며, 반대의 경우도 마찬가지입니다. 예를 들어 사용자가 현재 프랑스에 거주하고 있지만 기본 설정 Windows 표시 언어로 스페인어(멕시코)를 선택할 수 있습니다.
 
-UWP 앱의 경우 언어는 [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)로 나타냅니다. 예를 들어, BCP-47 언어 태그 "en-US"는 **설정**에서 영어(미국)에 해당합니다. 적절한 UWP API는 BCP-47 언어 태그의 문자열 표현을 수락하고 반환합니다.
+UWP 앱의 경우 언어는 [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)로 나타냅니다. 예를 들어, BCP-47 언어 태그 "en-US"는 **설정**에서 영어(미국)에 해당합니다. 적절한 UWP API는 BCP-47 언어 태그의 문자열 표현을 수락하고 반환합니다.
 
-[IANA 언어 하위 태그 레지스트리](http://go.microsoft.com/fwlink/p/?linkid=227303)도 참조하세요.
+[IANA 언어 하위 태그 레지스트리](https://go.microsoft.com/fwlink/p/?linkid=227303)도 참조하세요.
 
 다음 3개 섹션에서는 "사용자 프로필 언어 목록", "앱 매니페스트 언어 목록" 및 "앱 런타임 언어 목록"이라는 용어를 정의합니다. 이 항목 및 이 기능 영역의 다른 항목에서 이러한 용어를 사용할 예정이므로 이 용어의 의미를 알아 두는 것이 중요합니다.
 
 ## <a name="user-profile-language-list"></a>사용자 프로필 언어 목록
-사용자 프로필 언어 목록은 사용자가 **설정** > **시간 및 언어** > **지역 및 언어** > **언어**에서 구성한 목록 이름입니다. 코드에서 [**GlobalizationPreferences.Languages**](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages) 속성을 사용하여 읽기 전용 문자열 목록으로 사용자 프로필 언어 목록에 액세스할 수 있습니다. 각 문자열은 "en-US" 또는 "ja-JP"와 같이 단일 [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)입니다.
+사용자 프로필 언어 목록은 사용자가 **설정** > **시간 및 언어** > **지역 및 언어** > **언어**에서 구성한 목록 이름입니다. 코드에서 [**GlobalizationPreferences.Languages**](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages) 속성을 사용하여 읽기 전용 문자열 목록으로 사용자 프로필 언어 목록에 액세스할 수 있습니다. 각 문자열은 "en-US" 또는 "ja-JP"와 같이 단일 [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)입니다.
 
 ```csharp
     IReadOnlyList<string> userLanguages = Windows.System.UserProfile.GlobalizationPreferences.Languages;
@@ -70,7 +70,7 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
 
 특히, 앱 런타임 언어 목록은 다음 항목으로 구성됩니다.
 
-1.  **(옵션) 기본 언어 재정의**. [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride)는 사용자에게 고유한 언어를 선택할 수 있는 앱 또는 기본 언어 선택을 재정의해야 하는 뚜렷한 이유가 있는 앱에 대한 간단한 재정의 설정입니다. 자세히 알아보려면 [응용 프로그램 리소스 및 지역화 샘플](http://go.microsoft.com/fwlink/p/?linkid=231501)을 참조하세요.
+1.  **(옵션) 기본 언어 재정의**. [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride)는 사용자에게 고유한 언어를 선택할 수 있는 앱 또는 기본 언어 선택을 재정의해야 하는 뚜렷한 이유가 있는 앱에 대한 간단한 재정의 설정입니다. 자세히 알아보려면 [응용 프로그램 리소스 및 지역화 샘플](https://go.microsoft.com/fwlink/p/?linkid=231501)을 참조하세요.
 2.  **앱에서 지원되는 사용자 언어**. 앱 매니페스트 언어 목록에서 필터링된 사용자 프로필 언어 목록입니다. 앱에서 지원하는 언어 목록별로 사용자 언어를 필터링하면 SDK(소프트웨어 개발 키트), 클래스 라이브러리, 종속 프레임워크 패키지 및 앱 간의 일관성이 유지됩니다.
 3.  **1과 2가 비어 있는 경우 앱에서 지원되는 기본 언어 또는 첫 번째 언어**. 사용자 프로필 언어 목록에 앱에서 지원되는 언어가 포함되어 있지 않은 경우 앱 런타임 언어가 앱에서 지원되는 첫 번째 언어입니다.
 
@@ -98,7 +98,7 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
 **참고** 앱의 기본 언어 리소스도 언어 한정자를 지정 해야 합니다. 예를 들어 앱의 기본 언어가 영어 (미국) 이면 자격이으로 자산 `\Assets\Images\en-US\logo.png`.
 
 - Windows는 복합 일치, EN-US 및 EN-GB와 같은 지역 변수 포함 하 여 수행 합니다. 따라서 적절 하 게 하는 지역 하위 태그를 포함 합니다. [리소스 관리 시스템이 언어 태그를 일치하는 방법](../../app-resources/how-rms-matches-lang-tags.md)을 참조하세요.
-- 언어에 대해 정의 된 억제 스크립트 값이 없는 경우에 한정자에 언어 스크립트 하위 태그를 지정 합니다. 예를 들어, ZH-CN 또는 ZH-TW 대신 Zh-hant, Hant-ZH-TW, 또는 Zh-hans을 사용 하 여 (자세한 정보를 얻기 위해 [IANA 언어 하위 태그 레지스트리](http://go.microsoft.com/fwlink/p/?linkid=227303)참조).
+- 언어에 대해 정의 된 억제 스크립트 값이 없는 경우에 한정자에 언어 스크립트 하위 태그를 지정 합니다. 예를 들어, ZH-CN 또는 ZH-TW 대신 Zh-hant, Hant-ZH-TW, 또는 Zh-hans을 사용 하 여 (자세한 정보를 얻기 위해 [IANA 언어 하위 태그 레지스트리](https://go.microsoft.com/fwlink/p/?linkid=227303)참조).
 - 표준 사투리 하나 있는 언어, 지역 한정자를 포함 하지 않아도가 있습니다. 예를 들어, JA-JP 대신 ja를 사용 합니다.
 - 일부 도구와 기계 번역기와 같은 다른 구성 요소가 데이터 이해에 도움이 되는 사투리 정보와 같은 특정 언어 태그를 찾을 수도 있습니다.
 
@@ -150,21 +150,21 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
 <tr>
 <td align="left">영어(GB)(기본값); 독일어(독일)</td>
 <td align="left">영어(GB)</td>
-<td align="left">없음</td>
+<td align="left">none</td>
 <td align="left">영어(GB)</td>
 <td align="left">UI: 영어(GB)<br>날짜/시간/숫자: 영어(GB)</td>
 </tr>
 <tr>
 <td align="left">독일어(독일)(기본값); 프랑스어(프랑스); 이탈리아어(이탈리아)</td>
 <td align="left">프랑스어(오스트리아)</td>
-<td align="left">없음</td>
+<td align="left">none</td>
 <td align="left">프랑스어(오스트리아)</td>
 <td align="left">UI: 프랑스어(프랑스) (프랑스어(오스트리아)에서 대체)<br>날짜/시간/숫자: 프랑스어(오스트리아)</td>
 </tr>
 <tr>
 <td align="left">영어(미국)(기본값); 프랑스어(프랑스); 영어(GB)</td>
 <td align="left">영어(캐나다); 프랑스어(캐나다)</td>
-<td align="left">없음</td>
+<td align="left">none</td>
 <td align="left">영어(캐나다); 프랑스어(캐나다)</td>
 <td align="left">UI: 영어(US)(영어(캐나다)에서 대체)<br>날짜/시간/숫자: 영어(캐나다)</td>
 </tr>
@@ -208,12 +208,12 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
 * [GeographicRegion](/uwp/api/windows.globalization.geographicregion?branch=live)
 
 ## <a name="related-topics"></a>관련 항목
-* [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)
-* [IANA 언어 하위 태그 레지스트리](http://go.microsoft.com/fwlink/p/?linkid=227303)
+* [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [IANA 언어 하위 태그 레지스트리](https://go.microsoft.com/fwlink/p/?linkid=227303)
 * [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [지원되는 언어](../../publish/supported-languages.md)
 * [날짜/시간 숫자 형식 세계화](use-global-ready-formats.md)
 * [리소스 관리 시스템이 언어 태그를 일치하는 방법](../../app-resources/how-rms-matches-lang-tags.md)
 
 ## <a name="samples"></a>샘플
-* [응용 프로그램 리소스 및 지역화 샘플(영문)](http://go.microsoft.com/fwlink/p/?linkid=231501)
+* [응용 프로그램 리소스 및 지역화 샘플(영문)](https://go.microsoft.com/fwlink/p/?linkid=231501)

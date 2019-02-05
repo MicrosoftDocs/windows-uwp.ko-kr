@@ -6,12 +6,12 @@ ms.date: 11/26/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 51d671ef4542598322ec79d9cc3b16abd8105731
-ms.sourcegitcommit: 393180e82e1f6b95b034e99c25053d400e987551
+ms.openlocfilehash: 69e73d020738e0bad5404f164417bbce35e5e60c
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "8990506"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047877"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -66,7 +66,7 @@ ms.locfileid: "8990506"
 | **마이크** | **microphone** 접근 권한 값을 사용하면 마이크의 오디오 피드에 액세스할 수 있으므로 앱이 연결된 마이크에서 녹음할 수 있습니다. 앱은 사용자가 **설정** 참 메뉴에서 마이크를 사용하지 않도록 설정한 경우를 해결해야 합니다. |
 | **근접** | **proximity** 접근 권한 값을 사용하면 근접한 여러 장치가 서로 통신할 수 있습니다. 이 접근 권한 값은 주로 캐주얼 멀티 플레이어 게임 및 정보를 교환하는 앱에서 사용됩니다. 장치에서는 Bluetooth, Wi-Fi, 인터넷을 비롯하여 최적의 가용 연결을 제공하는 통신 기술을 사용하려고 합니다. 이 접근 권한 값은 장치 간에 통신을 시작하는 데만 사용됩니다. |
 | **Webcam** | **webcam** 접근 권한 값은 기본 제공 카메라나 외부 webcam의 화상 대화에 대한 액세스 권한을 제공하여 앱에서 사진 및 동영상을 캡처할 수 있도록 합니다. Windows에서 앱은 사용자가 **설정** 참 메뉴에서 카메라를 사용하지 않도록 설정한 경우를 처리해야 합니다.<br/>**webcam** 접근 권한 값은 비디오 스트림에 대한 액세스 권한만 부여합니다. 오디오 스트림에 대한 액세스 권한도 부여하려면 **microphone** 접근 권한 값을 추가해야 합니다. |
-| **USB** | **USB** 디바이스 접근 권한 값은 [USB 디바이스용 앱 매니페스트 패키지 업데이트](http://go.microsoft.com/fwlink/p/?LinkId=302259)에서 API 액세스를 가능하게 합니다. |
+| **USB** | **USB** 디바이스 접근 권한 값은 [USB 디바이스용 앱 매니페스트 패키지 업데이트](https://go.microsoft.com/fwlink/p/?LinkId=302259)에서 API 액세스를 가능하게 합니다. |
 | **HID(휴먼 인터페이스 장치)** | **humaninterfacedevice** 디바이스 접근 권한 값은 [HID용 디바이스 접근 권한 값을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/Dn263091)에서 API 액세스가 가능하게 합니다. |
 | **POS(Point of Service)** | **pointOfService** 장치 접근 권한 값은 [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) 네임스페이스에서 API 액세스를 가능하게 합니다. 이 네임스페이스는 앱이 POS(서비스 시점) 바코드 스캐너 및 자기 띠 판독기에 액세스할 수 있게 합니다. 이 네임스페이스는 UWP Microsoft Store 앱에서 다양한 제조업체의 POS 장치에 액세스할 수 있도록 하는 공급업체 중립 인터페이스를 제공합니다. |
 | **Bluetooth** | **bluetooth** 장치 접근 권한 값은 앱이 GATT(일반 특성) 또는 클래식 기본 속도(RFCOMM) 프로토콜을 통해 이미 연결된 Bluetooth 장치와 통신할 수 있도록 합니다.<br/>이 접근 권한 값은 [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/Dn263413) 네임스페이스의 일부 API를 사용하는 데 필요합니다. |

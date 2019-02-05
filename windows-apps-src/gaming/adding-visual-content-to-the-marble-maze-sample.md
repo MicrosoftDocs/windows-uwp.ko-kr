@@ -6,12 +6,12 @@ ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 그래픽
 ms.localizationpriority: medium
-ms.openlocfilehash: 60dd12c3e18b82118053d72d0983e13008dd8a0e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b8ad6b9a46993dc1121703e820c924b113120e51
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918908"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "9046476"
 ---
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Marble Maze 샘플에 시각적 콘텐츠 추가
 
@@ -30,10 +30,10 @@ Marble Maze의 시각적 측면을 개발할 때 다음과 같은 기본 단계�
 
 또한 집중 먼저 한 다음 2D 자산에 3D 자산을 추가 합니다. 예를 들어 메뉴 시스템과 타이머를 추가하기 전에 핵심 게임 논리에 집중했습니다.
 
-또한 개발 과정에서 이러한 단계 중 일부를 여러 번 반복해야 했습니다. 예를 들어 메시 및 구슬 모델을 변경 하는 때 해당 모델을 지 원하는 셰이더 코드 중 일부도 변경 했습니다.
+또한 개발 과정에서 이러한 단계 중 일부를 여러 번 반복해야 했습니다. 예를 들어 메시 및 구슬 모델을 변경 했습니다 때 해당 모델을 지 원하는 셰이더 코드 중 일부도 변경 했습니다.
 
 > [!NOTE]
-> 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](http://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
+> 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](https://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
 
  
 DirectX 및 시각적 게임 콘텐츠 작업을 하는 경우, 즉 DirectX 그래픽 라이브러리를 초기화하고, 장면 리소스를 로드하고, 장면을 업데이트 및 렌더링하는 경우에 대해 이 문서에서 논의하는 주요 사항은 다음과 같습니다.
@@ -50,14 +50,14 @@ DirectX 및 시각적 게임 콘텐츠 작업을 하는 경우, 즉 DirectX 그�
 ## <a name="getting-started-with-directx-graphics"></a>DirectX 그래픽으로 시작
 
 
-구슬이 미로 유니버설 Windows 플랫폼 (UWP) 게임을 계획할 때 선택 했습니다 c + + 및 Direct3D 11.1 최대 제어 렌더링 및 고 성능이 필요한 3D 게임을 만들기 위한 좋은 선택 이기 때문입니다. DirectX 11.1은 DirectX 9에서 DirectX 11 사이의 하드웨어를 지원하며 이전 DirectX 버전에 대해 각각 코드를 다시 작성하지 않아도 되므로 보다 효율적으로 더 많은 고객에 도달하는 데 도움이 됩니다.
+Marble Maze 유니버설 Windows 플랫폼 (UWP) 게임을 하 계획할 때 선택 c + + 및 Direct3D 11.1 최대 제어 렌더링 및 고 성능이 필요한 3D 게임을 만들기 위한 좋은 선택 이기 때문입니다. DirectX 11.1은 DirectX 9에서 DirectX 11 사이의 하드웨어를 지원하며 이전 DirectX 버전에 대해 각각 코드를 다시 작성하지 않아도 되므로 보다 효율적으로 더 많은 고객에 도달하는 데 도움이 됩니다.
 
 Marble Maze는 Direct3D 11.1 3D 게임 자산, 즉 구슬과 미로 렌더링 합니다. 또한 marble Maze는 메뉴, 타이머 등의 2D 게임 자산을 그립니다 Direct2D, DirectWrite 및 WIC Windows 이미징 구성 요소 ()를 사용 합니다.
 
-게임 개발에는 계획이 필요합니다. DirectX 그래픽을 처음 접하는 경우 읽는 것이 좋습니다 [DirectX: 시작](directx-getting-started.md) UWP DirectX 게임 만들기의 기본 개념을 합니다. 이 문서를 읽고 Marble Maze 소스 코드를 진행할 때 DirectX 그래픽에 대 한 자세한 내용은 다음 리소스를 참조할 수 있습니다.
+게임 개발에는 계획이 필요합니다. DirectX 그래픽을 처음 접하는 경우 읽는 것이 좋습니다 [DirectX: 시작](directx-getting-started.md) 를 UWP DirectX 게임 만들기의 기본 개념을 잘 이해 합니다. 이 문서를 읽고 Marble Maze 소스 코드를 진행할 때 DirectX 그래픽에 대 한 자세한 내용은 다음 리소스를 참조할 수 있습니다.
 
--   [Direct3D 11 그래픽](https://msdn.microsoft.com/library/windows/desktop/ff476080): 설명 Direct3D 11, 강력한 하드웨어 가속 3D 그래픽 API Windows 플랫폼에서 3D 기 하 도형을 렌더링 합니다.
--   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990): Direct2D에 설명 하는 하드웨어 가속 2D 그래픽 API를 제공 고성능 및 고품질 렌더링 2D 기 하 도형, 비트맵 및 텍스트입니다.
+-   [Direct3D 11 그래픽](https://msdn.microsoft.com/library/windows/desktop/ff476080): Direct3D 11에 설명, 강력한 하드웨어 가속 3D 그래픽 API Windows 플랫폼에서 3D 기 하 도형을 렌더링 합니다.
+-   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990): Direct2D에 설명 하는 하드웨어 가속 2D 그래픽 API를 제공 하는 고성능 및 고품질 렌더링 2D 기 하 도형, 비트맵 및 텍스트에 대 한 합니다.
 -   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038): 고품질 텍스트 렌더링을 지 원하는 DirectWrite에 설명 합니다.
 -   [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902): WIC에 디지털 이미지용 하위 수준 API를 제공 하는 확장 가능한 플랫폼인 설명 합니다.
 
@@ -70,9 +70,9 @@ Direct3D 11 *기능 수준*이라는 패러다임을 소개 합니다. 기능 �
 
 장치는 디스플레이 어댑터를 나타냅니다. 클래식 Windows 데스크톱 앱과 거의 유사한 방식으로 UWP 앱에서 Direct3D 및 Direct2D 장치를 만듭니다. 주요 차이점은 Direct3D 스왑 체인을 창 시스템에 연결하는 방법입니다.
 
-**DeviceResources** 클래스는 Direct3D 및 Direct2D 관리의 토대가 됩니다. 이 클래스는 게임 관련 자산이 아니라 일반적인 인프라를 처리합니다. Marble Maze **MarbleMazeMain** 클래스를 정의 핸들 게임 관련 자산을 Direct3D 및 Direct2D에 액세스할 수는 **DeviceResources** 개체에 대 한 참조가 있습니다.
+**DeviceResources** 클래스는 Direct3D 및 Direct2D 관리의 토대가 됩니다. 이 클래스는 게임 관련 자산이 아니라 일반적인 인프라를 처리합니다. Marble Maze **MarbleMazeMain** 클래스를 정의 핸들 게임 관련 자산을 Direct3D 및 Direct2D에 액세스할 수는 **DeviceResources** 개체에 대 한 참조가입니다.
 
-**DeviceResources** 생성자는 초기화 하는 동안 장치 독립적인 리소스와 Direct3D 및 Direct2D 장치를 만듭니다.
+초기화 하는 동안 **DeviceResources** 생성자는 장치 독립적인 리소스와 Direct3D 및 Direct2D 장치를 만듭니다.
 
 ```cpp
 // Initialize the Direct3D resources required to run. 
@@ -144,7 +144,7 @@ void DX::DeviceResources::CreateDeviceIndependentResources()
 
 ###  <a name="creating-the-direct3d-and-direct2d-devices"></a>Direct3D 및 Direct2D 장치 만들기
 
-**DeviceResources::CreateDeviceResources** 메서드는 [D3D11CreateDevice](https://msdn.microsoft.com/library/windows/desktop/ff476082)를 호출하여 Direct3D 디스플레이 어댑터를 나타내는 장치 개체를 만듭니다. Marble maze가 기능 수준 9.1을 지원 하므로 이상, **deviceresources:: Createdeviceresources** 메서드 **featureLevels** 배열에 수준 9.1 ~ 11.1 지정 합니다. Direct3D는 목록을 순서대로 검색하고 사용 가능한 첫 번째 기능 수준을 앱에 제공합니다. 따라서 **D3D\_FEATURE\_LEVEL** 배열 항목에서 나열 됩니다 낮은 앱을 사용할 수 있는 가장 높은 기능 수준을 가져옴 되도록 합니다. **DeviceResources::CreateDeviceResources** 메서드는 **D3D11CreateDevice**에서 반환된 Direct3D 11 장치를 쿼리하여 Direct3D 11.1 장치를 가져옵니다.
+**DeviceResources::CreateDeviceResources** 메서드는 [D3D11CreateDevice](https://msdn.microsoft.com/library/windows/desktop/ff476082)를 호출하여 Direct3D 디스플레이 어댑터를 나타내는 장치 개체를 만듭니다. Marble maze가 기능 수준 9.1을 지원 하기 때문에 이상, **deviceresources:: Createdeviceresources** 메서드 **featureLevels** 배열에 수준 9.1 ~ 11.1 지정 합니다. Direct3D는 목록을 순서대로 검색하고 사용 가능한 첫 번째 기능 수준을 앱에 제공합니다. 따라서 **D3D\_FEATURE\_LEVEL** 배열 항목에서 나열 됩니다 낮은 앱을 사용할 수 있는 가장 높은 기능 수준을 가져옴 되도록 합니다. **DeviceResources::CreateDeviceResources** 메서드는 **D3D11CreateDevice**에서 반환된 Direct3D 11 장치를 쿼리하여 Direct3D 11.1 장치를 가져옵니다.
 
 ```cpp
 // This flag adds support for surfaces with a different color channel ordering
@@ -248,7 +248,7 @@ DXGI 및 Direct2D와 Direct3D 간의 상호 운용성에 대한 자세한 내용
 
 ### <a name="associating-direct3d-with-the-view"></a>Direct3D를 뷰에 연결
 
-**DeviceResources::CreateWindowSizeDependentResources** 메서드는 스왑 체인, Direct3D 및 Direct2D 렌더링 대상 등 지정된 창 크기에 종속된 그래픽 리소스를 만듭니다. DirectX UWP 앱과 데스크톱 앱의 중요한 차이점 중 하나는 스왑 체인이 출력 창에 연결되는 방식입니다. 스왑 체인은 장치가 렌더링되는 버퍼를 모니터에 표시합니다. [Marble Maze 응용 프로그램 구조](marble-maze-application-structure.md) 는 UWP 앱 용 창 시스템과 데스크톱 앱 간의 차이점을 설명 합니다. [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751) 개체를 사용 하 여 UWP 앱은 작동 하지 않으면 때문에 Marble Maze 장치 출력을 뷰에 연결 [idxgifactory2:: Createswapchainforcorewindow](https://msdn.microsoft.com/library/windows/desktop/hh404559) 메서드를 사용 해야 합니다. 다음 예제에서는 스왑 체인을 만드는 **DeviceResources::CreateWindowSizeDependentResources** 메서드의 일부를 보여 줍니다.
+**DeviceResources::CreateWindowSizeDependentResources** 메서드는 스왑 체인, Direct3D 및 Direct2D 렌더링 대상 등 지정된 창 크기에 종속된 그래픽 리소스를 만듭니다. DirectX UWP 앱과 데스크톱 앱의 중요한 차이점 중 하나는 스왑 체인이 출력 창에 연결되는 방식입니다. 스왑 체인은 장치가 렌더링되는 버퍼를 모니터에 표시합니다. [Marble Maze 응용 프로그램 구조](marble-maze-application-structure.md) 는 UWP 앱 용 창 시스템과 데스크톱 앱의 차이점을 설명 합니다. [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751) 개체를 사용 하 여 UWP 앱은 작동 하지 않으면 때문에 Marble Maze는 장치 출력을 뷰에 연결 [idxgifactory2:: Createswapchainforcorewindow](https://msdn.microsoft.com/library/windows/desktop/hh404559) 메서드를 사용 해야 합니다. 다음 예제에서는 스왑 체인을 만드는 **DeviceResources::CreateWindowSizeDependentResources** 메서드의 일부를 보여 줍니다.
 
 ```cpp
 // Obtain the final swap chain for this window from the DXGI factory.
@@ -277,7 +277,7 @@ DX::ThrowIfFailed(
 **DeviceResources::CreateWindowSizeDependentResources** 메서드는 대부분의 게임에서 작동하는 방식으로 그래픽 리소스를 초기화합니다.
 
 > [!NOTE]
-> *보기* 용어 의미를 갖습니다 다른 Windows 런타임에서 Direct3D 합니다. Windows 런타임에서 뷰는 표시 영역, 입력 동작, 처리에 사용하는 스레드를 비롯하여 앱의 사용자 인터페이스 설정 컬렉션을 가리킵니다. 뷰를 만들 때 필요한 구성과 설정을 지정합니다. 앱 뷰를 설정하는 프로세스는 [Marble Maze 응용 프로그램 구조](marble-maze-application-structure.md)에서 설명합니다.
+> *보기* 용어는 Direct3D 보다 서로 다른 의미 Windows 런타임의 있습니다. Windows 런타임에서 뷰는 표시 영역, 입력 동작, 처리에 사용하는 스레드를 비롯하여 앱의 사용자 인터페이스 설정 컬렉션을 가리킵니다. 뷰를 만들 때 필요한 구성과 설정을 지정합니다. 앱 뷰를 설정하는 프로세스는 [Marble Maze 응용 프로그램 구조](marble-maze-application-structure.md)에서 설명합니다.
 > Direct3D에서 뷰 용어에는 여러 가지 의미가 있습니다. 리소스 뷰는 리소스에 액세스할 수 있는 하위 리소스를 정의 합니다. 예를 들어 텍스처 개체가 셰이더 리소스 뷰와 연결된 경우 나중에 해당 셰이더가 텍스처에 액세스할 수 있습니다. 리소스 뷰의 장점 중 하나는 렌더링 파이프라인의 각 단계에서 서로 다른 방식으로 데이터를 해석할 수 있다는 것입니다. 리소스 뷰에 대 한 자세한 내용은 [리소스 뷰](https://msdn.microsoft.com/library/windows/desktop/ff476900#Views)를 참조 하세요.
 > 뷰 변형 또는 뷰 변형 행렬의 컨텍스트에서 사용되는 경우 뷰는 카메라의 위치와 방향을 가리킵니다. 뷰 변형은 카메라의 위치 및 방향을 중심으로 개체 위치를 옮깁니다. 뷰 변형에 대한 자세한 내용은 [뷰 변형(Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb206342)을 참조하세요. 이 항목에서는 Marble Maze가 리소스 및 행렬 뷰를 사용하는 방식에 대해 자세히 설명합니다.
 
@@ -286,7 +286,7 @@ DX::ThrowIfFailed(
 ## <a name="loading-scene-resources"></a>장면 리소스 로드
 
 
-Marble Maze **BasicLoader.h**에 선언 된 **BasicLoader** 클래스를 사용 하 여 텍스처 및 셰이더를 로드 합니다. Marble Maze **SDKMesh** 클래스를 사용 하 여 미로 구슬에 대 한 3D 메시를 로드할 수 있습니다.
+Marble Maze **BasicLoader.h**에 선언 된 **BasicLoader** 클래스를 사용 하 여 텍스처 및 셰이더를 로드 합니다. Marble Maze **SDKMesh** 클래스를 사용 하 여 미로 구슬에 대 한 3D 메시를 로드 합니다.
 
 반응형 앱이 되기 위해 Marble Maze는 비동기적으로 또는 백그라운드에서 장면 리소스를 로드합니다. 자산이 백그라운드에서 로드될 때 게임이 창 이벤트에 응답할 수 있습니다. 이 프로세스는 이 가이드의 [백그라운드에서 게임 자산 로드](marble-maze-application-structure.md#loading-game-assets-in-the-background)에서 자세히 설명합니다.
 
@@ -337,7 +337,7 @@ protected:
 UI 요소에 대한 공용 기본 클래스를 제공할 경우 사용자 인터페이스를 관리하는 **UserInterface** 클래스가 **ElementBase** 개체 컬렉션만 저장하면 되기 때문에 UI 관리가 간소화되고 재사용 가능한 사용자 인터페이스 관리자가 제공됩니다. Marble Maze는 **ElementBase**에서 파생되고 게임 관련 동작을 구현하는 형식을 정의합니다. 예를 들어 **HighScoreTable**은 최소 점수 테이블의 동작을 정의합니다. 이러한 형식에 대한 자세한 내용은 소스 코드를 참조하세요.
 
 > [!NOTE]
-> XAML을 사용 하면 시뮬레이션 및 전략 게임 처럼 복잡 한 사용자 인터페이스를 더 쉽게 만들 수 있으므로 XAML UI 정의를 사용 하 여 여부를 고려 합니다. DirectX UWP 게임에서 XAML의 사용자 인터페이스를 개발 하는 방법에 대 한 정보를 [확장 게임 샘플](tutorial-resources.md), DirectX 3D 슈팅 게임 샘플을 참조를 참조 하세요.
+> XAML을 사용 하면 시뮬레이션 및 전략 게임과 같은 복잡 한 사용자 인터페이스를 더 쉽게 만들 수 때문에 XAML UI 정의를 사용 하 여 여부를 고려 합니다. DirectX UWP 게임에서 XAML의 사용자 인터페이스를 개발 하는 방법에 대 한 정보를 [확장 게임 샘플](tutorial-resources.md), DirectX 3D 슈팅 게임 샘플을 참조를 참조 하세요.
 
  
 
@@ -345,11 +345,11 @@ UI 요소에 대한 공용 기본 클래스를 제공할 경우 사용자 인터
 
 Marble Maze는 **BasicLoader::LoadShader** 메서드를 사용하여 파일에서 셰이더를 로드합니다.
 
-셰이더는 최신 게임에서 GPU 프로그래밍의 기본 단위입니다. 거의 모든 3D 그래픽 처리 셰이더, 모델 변환 및 장면 조명 인지 또는 더 복잡 한 기 하 도형 없이 문자 스킨에서 공간 분할을 처리 의해 구동 됩니다. 셰이더 프로그래밍 모델에 대한 자세한 내용은 [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561)을 참조하세요.
+셰이더는 최신 게임에서 GPU 프로그래밍의 기본 단위입니다. 거의 모든 3D 그래픽 처리 셰이더, 모델 변환 및 장면 조명 인지 또는 더 복잡 한 기 하 도형 처리, 문자 스킨에서 공간 분할에 의해 구동 됩니다. 셰이더 프로그래밍 모델에 대한 자세한 내용은 [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561)을 참조하세요.
 
 Marble Maze는 꼭짓점 및 픽셀 셰이더를 사용합니다. 꼭짓점 셰이더는 항상 하나의 입력 꼭짓점에서 작동하며 출력으로 하나의 꼭짓점을 생성합니다. 픽셀 셰이더는 숫자 값, 텍스처 데이터, 보간된 꼭짓점별 값 및 기타 데이터를 사용하여 출력으로 픽셀 색상을 생성합니다. 셰이더는 한 번에 하나의 요소를 변형하기 때문에 여러 셰이더 파이프라인을 제공하는 그래픽 하드웨어는 요소 집합을 병렬로 처리할 수 있습니다. GPU에서 사용할 수 있는 병렬 파이프라인 수가 CPU에서 사용할 수 있는 개수보다 훨씬 많을 수 있습니다. 따라서 기본 셰이더도 처리량을 훨씬 향상시킬 수 있습니다.
 
-**Marblemazemain:: Loaddeferredresources** 메서드 오버레이 로드 한 후 하나의 꼭 짓 점 셰이더와 하나의 픽셀 셰이더를 로드 합니다. 디자인 타임 버전은 각각 **BasicVertexShader.hlsl** 및 **BasicPixelShader.hlsl**정의 됩니다. Marble Maze는 렌더링 단계에서 이러한 셰이더를 구슬과 미로에 적용합니다.
+**Marblemazemain:: Loaddeferredresources** 메서드 오버레이 로드 된 후 하나의 꼭 짓 점 셰이더와 하나의 픽셀 셰이더를 로드 합니다. 디자인 타임 버전은 각각 **BasicVertexShader.hlsl** 및 **BasicPixelShader.hlsl**정의 됩니다. Marble Maze는 렌더링 단계에서 이러한 셰이더를 구슬과 미로에 적용합니다.
 
 Marble Maze 프로젝트에는 .hlsl(디자인 타임 형식) 및 .cso(런타임 형식) 버전의 셰이더 파일이 둘 다 포함되어 있습니다. 빌드할 때 Visual Studio는 fxc.exe 효과 컴파일러를 사용하여 .hlsl 소스 파일을 .cso 이진 셰이더로 컴파일합니다. 효과 컴파일러 도구에 대한 자세한 내용은 [효과 컴파일러 도구](https://msdn.microsoft.com/library/windows/desktop/bb232919)를 참조하세요.
 
@@ -442,7 +442,7 @@ loader->LoadShader(
 
 [ID3D11Device::CreateInputLayout](https://msdn.microsoft.com/library/windows/desktop/ff476512) 메서드를 사용하여 입력 요소 설명 배열에서 입력 레이아웃을 만듭니다. 배열에는 하나 이상의 입력 요소가 포함됩니다. 각 입력 요소는 단일 꼭짓점 버퍼의 꼭짓점 데이터 요소 1개에 대해 설명합니다. 전체 입력 요소 설명 집합은 IA 단계에 바인딩할 모든 꼭짓점 버퍼의 꼭짓점 데이터 요소를 모두 설명합니다. 
 
-위의 코드 조각에서 **layoutDesc** Marble maze는 레이아웃 설명을 보여 줍니다. 레이아웃 설명은 꼭짓점 데이터 요소 4개가 포함된 꼭짓점 버퍼를 설명합니다. 배열에 포함된 각 항목의 중요한 부분은 의미 체계 이름, 데이터 형식 및 바이트 오프셋입니다. 예를 들어 **POSITION** 요소는 개체 공간의 꼭짓점 위치를 지정합니다. 바이트 오프셋 0에서 시작하고 부동 소수점 구성 요소 3개(총 12바이트)를 포함합니다. **NORMAL** 요소는 법선 벡터를 지정합니다. 레이아웃에서 **POSITION** 바로 뒤에 표시되며 12바이트가 필요하기 때문에 바이트 오프셋 12에서 시작됩니다. **NORMAL** 요소는 4개 구성 요소로 이루어진 32비트 부호 없는 정수를 포함합니다.
+위의 코드 조각에서 **layoutDesc** Marble Maze는 사용 되는 레이아웃 설명을 보여 줍니다. 레이아웃 설명은 꼭짓점 데이터 요소 4개가 포함된 꼭짓점 버퍼를 설명합니다. 배열에 포함된 각 항목의 중요한 부분은 의미 체계 이름, 데이터 형식 및 바이트 오프셋입니다. 예를 들어 **POSITION** 요소는 개체 공간의 꼭짓점 위치를 지정합니다. 바이트 오프셋 0에서 시작하고 부동 소수점 구성 요소 3개(총 12바이트)를 포함합니다. **NORMAL** 요소는 법선 벡터를 지정합니다. 레이아웃에서 **POSITION** 바로 뒤에 표시되며 12바이트가 필요하기 때문에 바이트 오프셋 12에서 시작됩니다. **NORMAL** 요소는 4개 구성 요소로 이루어진 32비트 부호 없는 정수를 포함합니다.
 
 다음 예제와 같이 꼭짓점 셰이더에서 정의된 **sVSInput** 구조와 입력 레이아웃을 비교합니다. **sVSInput** 구조는 **POSITION**, **NORMAL** 및 **TEXCOORD0** 요소를 정의합니다. DirectX 런타임은 레이아웃의 각 요소를 셰이더에서 정의된 입력 구조에 매핑합니다.
 
@@ -518,7 +518,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-**Marblemazemain:: Update** 메서드는 나중에 **ConstantBuffer** 개체, 미로 및 구슬를 업데이트합니다. **Marblemazemain:: Render** 메서드는 각 **ConstantBuffer** 개체를 상수 버퍼 각 개체가 렌더링 되기 전에 합니다. 다음 예제에서는 **MarbleMazeMain.h**에 있는 **ConstantBuffer** 구조를 보여 줍니다.
+**Marblemazemain:: Update** 메서드는 나중에 **ConstantBuffer** 개체, 미로 및 구슬에 업데이트합니다. **Marblemazemain:: Render** 메서드는 각 **ConstantBuffer** 개체를 상수 버퍼 각 개체가 렌더링 되기 전에 합니다. 다음 예제에서는 **MarbleMazeMain.h**에 있는 **ConstantBuffer** 구조를 보여 줍니다.
 
 ```cpp
 // Describes the constant buffer that draws the meshes.
@@ -534,7 +534,7 @@ struct ConstantBuffer
 };
 ```
 
-더 잘 이해할 수 방법을 상수 버퍼가 셰이더 코드 **MarbleMazeMain.h** **ConstantBuffer** 구조 **BasicVertexShader.hlsl에서에서 꼭 짓 점 셰이더로 정의 된 **ConstantBuffer** 상수 버퍼를 비교 **:
+어떻게 상수 버퍼가 지도 더 잘 이해 하려면 셰이더 코드에서 **MarbleMazeMain.h** **ConstantBuffer** 구조 **BasicVertexShader.hlsl에서에서 꼭 짓 점 셰이더로 정의 된 **ConstantBuffer** 상수 버퍼를 비교 **:
 
 ```hlsl
 cbuffer ConstantBuffer : register(b0)
@@ -548,7 +548,7 @@ cbuffer ConstantBuffer : register(b0)
 };
 ```
 
-**ConstantBuffer** 구조의 레이아웃은 **cbuffer** 개체와 일치합니다. **cbuffer** 변수는 레지스터 b0을 지정하며, 이는 상수 버퍼 데이터가 레지스터 0에 저장됨을 의미합니다. **Marblemazemain:: Render** 메서드는 상수 버퍼를 활성화할 때 레지스터 0을 지정 합니다. 이 프로세스는 이 문서의 뒷부분에서 자세히 설명합니다.
+**ConstantBuffer** 구조의 레이아웃은 **cbuffer** 개체와 일치합니다. **cbuffer** 변수는 레지스터 b0을 지정하며, 이는 상수 버퍼 데이터가 레지스터 0에 저장됨을 의미합니다. **Marblemazemain:: Render** 메서드 상수 버퍼를 활성화할 때 레지스터 0을 지정 합니다. 이 프로세스는 이 문서의 뒷부분에서 자세히 설명합니다.
 
 상수 버퍼에 대한 자세한 내용은 [Direct3D 11의 버퍼 소개](https://msdn.microsoft.com/library/windows/desktop/ff476898)를 참조하세요. register 키워드에 대한 자세한 내용은 [register](https://msdn.microsoft.com/library/windows/desktop/dd607359)를 참조하세요.
 
@@ -621,14 +621,14 @@ float radius = m_marbleMesh.GetMeshBoundingBoxExtents(0).x / 2;
 m_physics.SetRadius(radius);
 ```
 
-대체로 충돌 데이터를 로드 하는 방법을 사용 하는 런타임 형식에 따라 달라 집니다. Marble Maze는 SDK 메시 파일에서 충돌 기 하 도형에 로드 하는 방법에 대 한 자세한 내용은 소스 코드에서 **MarbleMazeMain::ExtractTrianglesFromMesh** 메서드를 참조 하세요.
+주로 충돌 데이터를 로드 하는 방식으로 사용 하는 런타임 형식에 따라 달라 집니다. Marble Maze는 SDK 메시 파일에서 충돌 기 하 도형에 로드 하는 방법에 대 한 자세한 내용은 소스 코드에서 **MarbleMazeMain::ExtractTrianglesFromMesh** 메서드를 참조 하세요.
 
 ## <a name="updating-game-state"></a>게임 상태 업데이트
 
 
 Marble Maze는 렌더링하기 전에 모든 장면 개체를 먼저 업데이트하여 렌더링 논리에서 게임 논리를 분리합니다.
 
-[Marble Maze 응용 프로그램 구조](marble-maze-application-structure.md) 주 게임 루프에 설명 합니다. 게임 루프에 포함된 장면 업데이트는 Windows 이벤트 및 입력이 처리된 후, 장면이 렌더링되기 전에 발생합니다. **Marblemazemain:: Update** 메서드는 UI 및 게임 업데이트를 처리합니다.
+[Marble Maze 응용 프로그램 구조](marble-maze-application-structure.md) 주 게임 루프를 설명합니다. 게임 루프에 포함된 장면 업데이트는 Windows 이벤트 및 입력이 처리된 후, 장면이 렌더링되기 전에 발생합니다. **Marblemazemain:: Update** 메서드는 UI 및 게임 업데이트를 처리 합니다.
 
 ### <a name="updating-the-user-interface"></a>사용자 인터페이스 업데이트
 
@@ -652,7 +652,7 @@ void UserInterface::Update(float timeTotal, float timeDelta)
 }
 ```
 
-**ElementBase** ( **UserInterface.h**에서 정의 됨)에서 파생 된 클래스는 특정 동작을 수행 **Update** 메서드를 구현 합니다. 예를 들어 **StopwatchTimer::Update** 메서드는 경과 시간을 제공된 양만큼 업데이트하고 나중에 표시되는 텍스트를 업데이트합니다.
+**ElementBase** ( **UserInterface.h**에서 정의 됨)에서 파생 되는 클래스는 특정 동작을 수행 **Update** 메서드를 구현 합니다. 예를 들어 **StopwatchTimer::Update** 메서드는 경과 시간을 제공된 양만큼 업데이트하고 나중에 표시되는 텍스트를 업데이트합니다.
 
 ```cpp
 void StopwatchTimer::Update(float timeTotal, float timeDelta)
@@ -672,7 +672,7 @@ void StopwatchTimer::Update(float timeTotal, float timeDelta)
 
 ###  <a name="updating-the-scene"></a>장면 업데이트
 
-**Marblemazemain:: Update** 메서드 (의 **GameState**, **m_gameState**에 저장 된) 상태 시스템의 현재 상태에 따라 게임을 업데이트 합니다. 게임이 활성 상태 (**GameState::InGameActive**) 이면 Marble Maze는 카메라 구슬을 따르고를 업데이트 하 상수 버퍼의 뷰 행렬 부분을 업데이트 및 물리학 시뮬레이션을 업데이트 합니다.
+**Marblemazemain:: Update** 메서드 (의 **GameState**, **m_gameState**에 저장 된) 상태 시스템의 현재 상태에 따라 게임을 업데이트 합니다. 게임이 활성 상태 (**GameState::InGameActive**) 이면 Marble Maze는 카메라를 구슬을 따르고 업데이트, 상수 버퍼의 뷰 행렬 부분을 업데이트 및 물리학 시뮬레이션을 업데이트 합니다.
 
 다음 예제에서는 **marblemazemain:: Update** 메서드가 카메라의 위치를 업데이트 하는 방법을 보여 줍니다. Marble Maze는 **m\_resetCamera** 변수를 사용하여 카메라가 구슬 바로 위에 오도록 다시 설정해야 한다는 플래그를 지정합니다. 게임이 시작되거나 구슬이 미로에서 떨어지면 카메라가 다시 설정됩니다. 주 메뉴 또는 최고 점수 표시 화면이 활성화된 경우 카메라가 일정한 위치에 설정됩니다. 그렇지 않으면 Marble Maze는 *timeDelta* 매개 변수를 사용하여 현재 위치와 대상 위치 사이에서 카메라 위치를 보간합니다. 대상 위치는 구슬 앞에서 약간 위에 있습니다. 경과된 프레임 시간을 사용하면 카메라가 구슬을 점점 따라가거나 추적할 수 있습니다.
 
@@ -758,7 +758,7 @@ m_marbleConstantBufferData.view = view;
 5.  장면 앞에 표시 하려는 2D 개체를 렌더링 합니다.
 6.  렌더링된 이미지를 모니터에 표시합니다.
 
-**Marblemazemain:: Render** 메서드는 렌더링 대상 및 깊이 스텐실 뷰, 해당 뷰의 선택을 취소, 장면 및 오버레이 그립니다.
+**Marblemazemain:: Render** 메서드는 렌더링 대상 및 깊이 스텐실 보기, 해당 뷰의 선택을 취소, 장면 및 오버레이 그립니다.
 
 ###  <a name="preparing-the-render-targets"></a>렌더링 대상 준비
 
@@ -806,13 +806,13 @@ context->ClearDepthStencilView(
 
  
 
-이 문서의 [셰이더 로드](#loading-shaders) 섹션에서는 꼭짓점 셰이더를 만들 때 입력 레이아웃이 생성되는 방식에 대해 설명합니다. 다음 예제에서는 **marblemazemain:: Render** 메서드가이 레이아웃을 현재 레이아웃으로 설정 하는 [id3d11devicecontext:: iasetinputlayout](https://msdn.microsoft.com/library/windows/desktop/ff476454) 메서드를 사용 하는 방법을 보여 줍니다.
+이 문서의 [셰이더 로드](#loading-shaders) 섹션에서는 꼭짓점 셰이더를 만들 때 입력 레이아웃이 생성되는 방식에 대해 설명합니다. 다음 예제에서는 **marblemazemain:: Render** 메서드 [id3d11devicecontext:: iasetinputlayout](https://msdn.microsoft.com/library/windows/desktop/ff476454) 메서드를 사용 하 여이 레이아웃을 현재 레이아웃으로 설정 하는 방법을 보여 줍니다.
 
 ```cpp
 m_deviceResources->GetD3DDeviceContext()->IASetInputLayout(m_inputLayout.Get());
 ```
 
-다음 예제에서는 **marblemazemain:: Render** 메서드 꼭 짓 점 및 픽셀 셰이더를 현재 셰이더로 설정 하는 [id3d11devicecontext:: vssetshader](https://msdn.microsoft.com/library/windows/desktop/ff476493) 및 [id3d11devicecontext:: pssetshader](https://msdn.microsoft.com/library/windows/desktop/ff476472) 메서드를 사용 하는 방법을 보여 줍니다. 각각 합니다.
+다음 예제에서는 **marblemazemain:: Render** 메서드를 현재 셰이더로 꼭 짓 점 및 픽셀 셰이더를 설정 하려면 [id3d11devicecontext:: vssetshader](https://msdn.microsoft.com/library/windows/desktop/ff476493) 및 [id3d11devicecontext:: pssetshader](https://msdn.microsoft.com/library/windows/desktop/ff476472) 메서드를 사용 하는 방법을 보여 줍니다. 각각 합니다.
 
 ```cpp
 // Set the vertex shader stage state.
@@ -855,7 +855,7 @@ m_deviceResources->GetD3DDeviceContext()->PSSetConstantBuffers(
     m_constantBuffer.GetAddressOf());   // to use this buffer
 ```
 
-**Marblemazemain:: Render** 메서드 렌더링할 구슬을 준비 하는 유사한 단계를 수행 합니다.
+**Marblemazemain:: Render** 메서드는 유사한 단계를 렌더링할 구슬을 준비를 수행 합니다.
 
 ### <a name="rendering-the-maze-and-the-marble"></a>미로 및 구슬 렌더링
 

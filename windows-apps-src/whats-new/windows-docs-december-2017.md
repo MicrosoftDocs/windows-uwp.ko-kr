@@ -5,18 +5,18 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 52a60189d7fba39709aa679dbff79551b151e5a4
-ms.sourcegitcommit: b66c5ccbf519b99a432c83c890436a044fc891df
+ms.openlocfilehash: a79edb39cc4bfa5794d79d68f4fb8d5b0e976105
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "8992617"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050636"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>2017년 12월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. Fall Creators Update 이후 Windows 개발자를 위한 새 정보와 업데이트된 정보를 포함하는 다음과 같은 기능 개요, 개발자 지침 및 샘플이 추가되었습니다.
 
-Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## <a name="features"></a>기능
 

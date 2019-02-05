@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: dc4adf5002858b394c6908b91f14557c3e1eed7b
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 0760805128f8f11b4598a5c8b0d19d8e9f20d04d
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037345"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050956"
 ---
 # <a name="command-bar-flyout"></a>명령 모음 플라이아웃
 
@@ -406,7 +406,7 @@ TextCommandBarFlyout 인쇄할 수 및 각 텍스트 컨트롤에 의해 자동�
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
-- [XAML 명령 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620019)
+- [XAML 명령 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ## <a name="related-articles"></a>관련 문서
 

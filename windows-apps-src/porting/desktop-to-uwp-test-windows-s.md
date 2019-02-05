@@ -6,12 +6,12 @@ ms.date: 05/11/2017
 ms.topic: article
 keywords: windows 10 S, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a8b17697612d50d10ecfbb07388207527a4cb39b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cf442da9344f37525bf3c17e4a62a319b9c04044
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937834"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048460"
 ---
 # <a name="test-your-windows-app-for-windows-10-in-s-mode"></a>Windows 10 S 모드 Windows 앱 테스트
 
@@ -87,7 +87,7 @@ Device Guard 코드 무결성 정책은 Windows 10 S에서 실행을 위해 앱�
 
 **질문에 대한 답변 찾기**
 
-질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
+질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 
 **피드백 제공 또는 기능 제안**
 

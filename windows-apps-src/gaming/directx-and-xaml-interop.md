@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, xaml 상호 운용성
 ms.localizationpriority: medium
-ms.openlocfilehash: 058a1458f8990e5f70e7ed0ea4ef1a2b5f4a4956
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 34fb65ec53f6addccf8723b451d333d602c17908
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944528"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9046213"
 ---
 # <a name="directx-and-xaml-interop"></a>DirectX 및 XAML 상호 운용성
 
@@ -21,7 +21,7 @@ UWP(유니버설 Windows 플랫폼) 게임 또는 앱에서 XAML(Extensible Appl
 
 앱이 주로 2D 렌더링에 중점을 두는 경우 [Win2D](https://github.com/microsoft/win2d) Windows 런타임 라이브러리를 사용하려고 할 수 있습니다. 이 라이브러리는 Microsoft에서 유지 관리하며, 핵심 Direct2D 기술을 기반으로 합니다. 이 라이브러리는 2D 그래픽을 구현하는 사용 패턴을 크게 간소화하며 이 문서에 설명된 기법 중 일부에 대한 유용한 추상화를 포함하고 있습니다. 자세한 내용은 프로젝트 페이지를 참조하세요. 이 문서에서는 Win2D를 사용*하지* 않도록 선택한 앱 개발자를 위한 지침을 다룹니다.
 
-> **참고**DirectX Api는 일반적으로 VisualC + + 구성 요소 확장을 사용 하므로 Windows 런타임 형식으로 정의 되지 않습니다 (C + + CX) DirectX와 상호 운용 되는 XAML UWP 구성 요소를 개발 하는 합니다. 또한 DirectX 호출을 개별 Windows 런타임 메타데이터 파일에 래핑할 경우 DirectX를 사용하는 C# 및 XAML로 UWP 앱을 만들 수 있습니다.
+> **참고**DirectX Api는 일반적으로 VisualC + + 구성 요소 확장을 사용 하므로 Windows 런타임 형식으로 정의 되지 않습니다 (C + + CX) DirectX와 상호 운용 되는 XAML UWP 구성 요소를 개발 하는 데 있습니다. 또한 DirectX 호출을 개별 Windows 런타임 메타데이터 파일에 래핑할 경우 DirectX를 사용하는 C# 및 XAML로 UWP 앱을 만들 수 있습니다.
 
  
 
@@ -53,7 +53,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
 1.  [SurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702041) 생성자에 높이와 너비를 전달하여 공유 표면의 크기를 정의합니다. 표면에 알파(불투명도) 지원이 필요한지 여부도 지정할 수 있습니다.
 
-    예제:
+    예를 들면 다음과 같습니다.
 
     `SurfaceImageSource^ surfaceImageSource = ref new SurfaceImageSource(400, 300);`
 
@@ -77,7 +77,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
     > [!NOTE]
     > 백그라운드 스레드에서 **SurfaceImageSource**에 그릴 경우 DXGI 디바이스에 다중 스레드 액세스가 활성화되어 있는지도 확인해야 합니다. 이는 백그라운드 스레드에서 그릴 경우에만 성능을 위해 취해야 하는 조치입니다.
 
-    예제:
+    예를 들면 다음과 같습니다.
 
     ```cpp
     Microsoft::WRL::ComPtr<ID3D11Device> m_d3dDevice;
@@ -460,7 +460,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm)
+* [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm)
 * [SurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702041)
 * [VirtualSurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702050)
 * [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834)

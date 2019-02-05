@@ -6,24 +6,24 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, uwp, 광고, 광고, 릴리스 정보
 ms.localizationpriority: medium
-ms.openlocfilehash: 1bab822c81cdd5af1e6b00ca8d33ed7f7ea3838f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d7a250880d148dd4ca3ced522312904f2786715e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923860"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050866"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Advertising 라이브러리에 대한 릴리스 정보
 
 
 
 
-이 섹션에서는 Microsoft Advertising 라이브러리의 최신 릴리스 정보를 제공합니다. 이러한 라이브러리 Windows10, Windows8.1, Windows Phone 8.1 및 WindowsPhone8에 대 한 XAML 및 JavaScript/HTML 앱을 지원합니다.
+이 섹션에서는 Microsoft Advertising 라이브러리의 최신 릴리스 정보를 제공합니다. 이러한 라이브러리는 windows 10, windows 8.1, Windows Phone 8.1 및 WindowsPhone8에 대 한 XAML 및 JavaScript/HTML 앱을 지원합니다.
 
 ## <a name="installation"></a>설치
 
 
-Microsoft 광고 라이브러리는 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)의 일부로 제공되고 있습니다. SDK 설치에 대한 자세한 내용은 [Microsoft Advertising SDK 설치](install-the-microsoft-advertising-libraries.md)를 참조하세요.
+Microsoft 광고 라이브러리는 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)의 일부로 제공되고 있습니다. SDK 설치에 대한 자세한 내용은 [Microsoft Advertising SDK 설치](install-the-microsoft-advertising-libraries.md)를 참조하세요.
 
 ## <a name="uninstall-previous-versions"></a>이전 버전 제거
 
@@ -39,7 +39,7 @@ Microsoft Advertising 라이브러리(**AdControl** 및 **InterstitialAd** 클�
 
 ## <a name="no-toolbox-control"></a>도구 상자 컨트롤 없음
 
-[Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)에 있는 Microsoft Advertising 라이브러리의 현재 릴리스에는 **AdControl** 또는 **InterstitialAd**를 앱의 Design Surface로 끌기 위한 도구 상자 컨트롤이 없습니다. 태그 및 코드에서 이러한 컨트롤을 추가하는 방법에 대한 자세한 내용은 [개발자 연습](developer-walkthroughs.md)을 참조하세요.
+[Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)에 있는 Microsoft Advertising 라이브러리의 현재 릴리스에는 **AdControl** 또는 **InterstitialAd**를 앱의 Design Surface로 끌기 위한 도구 상자 컨트롤이 없습니다. 태그 및 코드에서 이러한 컨트롤을 추가하는 방법에 대한 자세한 내용은 [개발자 연습](developer-walkthroughs.md)을 참조하세요.
 
 ## <a name="latitude-and-longitude-properties-no-longer-available"></a>위도 및 경도 속성을 더 이상 사용할 수 없음
 

@@ -1,17 +1,17 @@
 ---
 title: 백그라운드 작업 등록
-description: 대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다.
+description: 대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다.
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: f940b0433c5cf7818102f92c9e61a6fe012bf4b9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e586e85e15202e0186afe481ec18b32c2f480712
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947905"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048720"
 ---
 # <a name="register-a-background-task"></a>백그라운드 작업 등록
 
@@ -387,4 +387,4 @@ ms.locfileid: "8947905"
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](https://go.microsoft.com/fwlink/p/?linkid=254345)

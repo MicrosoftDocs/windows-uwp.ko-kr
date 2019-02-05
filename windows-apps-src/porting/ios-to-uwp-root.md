@@ -7,16 +7,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d4740c108491751afa038894de2e9c50579e74c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6ddcb64aed8205f18b17706e987cbd9981bb8044
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928052"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051066"
 ---
 # <a name="move-from-ios-to-uwp"></a>iOS에서 UWP로 이동
 
-Windows 10 및 UWP(유니버설 Windows 플랫폼)가 포함될 수 있도록 사용자 기반을 확장하는 방법에 대해 궁금한 iOS 개발자인 경우 도움이 되는 방법이 다양하게 늘어나고 있습니다. 사용할 수 있는 방법은 작업 중인 앱 유형(게임, 라이프스타일, 엔터프라이즈 등)과 개발 프로세스의 진행 정도에 따라 달라집니다. 예를 들면 주로 OpenGL 또는 Cocos2D에 종속되어 완성되었거나 거의 완성된 게임은 [iOS용 Windows 브리지](https://dev.windows.com/bridges/ios)에 적합하고, 중소기업용 플랫폼 간 앱을 계획하고 있는 경우에는 [Xamarin.Forms](https://www.xamarin.com/forms)를 사용해 보세요. Unity와 같은 플랫폼 간 도구에서 앱을 작성한 경우 [Windows에 게시](http://blogs.unity3d.com/2015/09/09/windows-10-universal-apps-in-unity-5-2/)하는 작업은 매우 간단합니다.
+Windows 10 및 UWP(유니버설 Windows 플랫폼)가 포함될 수 있도록 사용자 기반을 확장하는 방법에 대해 궁금한 iOS 개발자인 경우 도움이 되는 방법이 다양하게 늘어나고 있습니다. 사용할 수 있는 방법은 작업 중인 앱 유형(게임, 라이프스타일, 엔터프라이즈 등)과 개발 프로세스의 진행 정도에 따라 달라집니다. 예를 들면 주로 OpenGL 또는 Cocos2D에 종속되어 완성되었거나 거의 완성된 게임은 [iOS용 Windows 브리지](https://dev.windows.com/bridges/ios)에 적합하고, 중소기업용 플랫폼 간 앱을 계획하고 있는 경우에는 [Xamarin.Forms](https://www.xamarin.com/forms)를 사용해 보세요. Unity와 같은 플랫폼 간 도구에서 앱을 작성한 경우 [Windows에 게시](https://blogs.unity3d.com/2015/09/09/windows-10-universal-apps-in-unity-5-2/)하는 작업은 매우 간단합니다.
 
 ## <a name="why-windows"></a>왜 Windows여야 할까요?
 
@@ -33,5 +33,5 @@ Windows 10 및 UWP(유니버설 Windows 플랫폼)가 포함될 수 있도록 �
 ## <a name="related-topics"></a>관련 항목
 
 **디자이너 및 개발자용**
-* [모든 Windows 장치용 유니버설 Windows 앱 빌드](http://go.microsoft.com/fwlink/p/?LinkID=397871)
+* [모든 Windows 장치용 유니버설 Windows 앱 빌드](https://go.microsoft.com/fwlink/p/?LinkID=397871)
 * [UWP 앱용 디자인 자산 다운로드](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)

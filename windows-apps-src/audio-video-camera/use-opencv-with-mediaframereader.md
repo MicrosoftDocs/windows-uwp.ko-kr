@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: a603899776879cb7c8dc2439c3c22906db0b8038
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d72a8d3fcaf337973f585ab19370140cd80f3826
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938664"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9047468"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>MediaFrameReader와 OpenCV(오픈 소스 컴퓨터 비전 라이브러리) 사용
 
@@ -28,7 +28,7 @@ ms.locfileid: "8938664"
 
 이 문서 외에, 여기에서 설명하는 시나리오의 종단 간 작업 샘플 전체를 확인하고 다운로드하려면, Windows 유니버설 샘플 GitHub 리포의 [카메라 프레임 + OpenCV 샘플](https://go.microsoft.com/fwlink/?linkid=854003)을 참조하세요.
 
-개발을 빠르게 시작 하려면 포함할 수 OpenCV 라이브러리를 UWP 앱 프로젝트에서 NuGet 패키지를 사용 하 여 있지만 하므로 OpenCV 다운로드 하는 것이 좋습니다. 스토어에 앱을 제출할 때 이러한 패키지 앱 certficication 프로세스를 전달 하지 않을 수 있습니다. 라이브러리는 소스 코드 및 앱을 제출 하기 전에 사용자가 직접 바이너리를 빌드합니다. OpenCV에 관한 최신 소식은 [http://opencv.org](http://opencv.org)에서 확인할 수 있습니다.
+개발을 빠르게 시작 하려면 포함할 수 OpenCV 라이브러리를 UWP 앱 프로젝트에서 NuGet 패키지를 사용 하 여 있지만 하므로 OpenCV 다운로드 하는 것이 좋습니다. 저장소에 앱을 제출할 때 이러한 패키지 앱 certficication 프로세스를 통과 하지 않을 수 있습니다. 라이브러리는 소스 코드 하 고 앱을 제출 하기 전에 직접 바이너리를 빌드합니다. OpenCV에 관한 최신 소식은 [https://opencv.org](https://opencv.org)에서 확인할 수 있습니다.
 
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>OpenCVHelper 네이티브 Windows 런타임 구성 요소 구현
@@ -68,7 +68,7 @@ ms.locfileid: "8938664"
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [MediaFrameReader를 사용하여 미디어 프레임 처리](process-media-frames-with-mediaframereader.md)
 * [OpenCV로 소프트웨어 비트맵 처리](process-software-bitmaps-with-opencv.md)
-* [카메라 프레임 샘플](http://go.microsoft.com/fwlink/?LinkId=823230)
+* [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)
 * [카메라 프레임 + OpenCV 샘플](https://go.microsoft.com/fwlink/?linkid=854003)
  
 

@@ -9,12 +9,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ac71b1fd876c5fec67bcdc292f407a04211de88c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a3615dac98c5bc8469c8c8ebc47ef718c0131844
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927689"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9048440"
 ---
 # <a name="generate-a-3mf-package"></a>3MF 패키지 생성
 
@@ -28,7 +28,7 @@ ms.locfileid: "8927689"
 
 3D 제조 형식은 제조(3D 인쇄)를 위한 용도로 XML을 사용하여 3D 모델의 모양과 구조를 설명하는 규칙 집합입니다. 3D 제조 디바이스에 필요한 모든 정보를 제공하려는 목표로 부분 집합(일부는 필수이고 일부는 선택임)과 해당하는 관계를 정의합니다. 3D 제조 형식을 준수하는 데이터 집합은 .3mf 확장명의 파일로 저장할 수 있습니다.
 
-Windows10, **Windows.Graphics.Printing3D** 네임 스페이스의 [**Printing3D3MFPackage**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) 클래스는 단일.3mf 파일과 유사 하 고 다른 클래스 파일의 특정 XML 요소에 매핑합니다. 이 가이드에서는 3MF 문서의 주요 부분을 각각 만들고 프로그래밍 방식으로 설정하는 방법과 3MF 재료 확장을 활용하는 방법 그리고 **Printing3D3MFPackage** 개체를 변환하고 .3mf 파일로 저장할 수 있는 방법을 설명합니다. 3MF 또는 3MF 재료 확장의 표준에 대한 자세한 내용은 [3MF 사양](http://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요.
+Windows 10의 **Windows.Graphics.Printing3D** 네임 스페이스의 [**Printing3D3MFPackage**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) 클래스는 단일.3mf 파일과 유사 하며 다른 클래스 파일의 특정 XML 요소에 매핑합니다. 이 가이드에서는 3MF 문서의 주요 부분을 각각 만들고 프로그래밍 방식으로 설정하는 방법과 3MF 재료 확장을 활용하는 방법 그리고 **Printing3D3MFPackage** 개체를 변환하고 .3mf 파일로 저장할 수 있는 방법을 설명합니다. 3MF 또는 3MF 재료 확장의 표준에 대한 자세한 내용은 [3MF 사양](https://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요.
 
 <!-- >**Note** This guide describes how to construct a 3MF document from scratch. If you wish to make changes to an already existing 3MF document provided in the form of a .3mf file, you simply need to convert it to a **Printing3D3MFPackage** and alter the contained classes/properties in the same way (see [link]) below). -->
 
@@ -43,7 +43,7 @@ Windows10, **Windows.Graphics.Printing3D** 네임 스페이스의 [**Printing3D3
 
 ## <a name="metadata"></a>메타데이터
 
-3MF 문서의 모델 부분은 **메타데이터** 속성에 저장된 문자열의 키/값 쌍의 형식으로 메타데이터를 저장할 수 있습니다. 미리 정의된 메타데이터의 이름이 많이 있지만 다른 쌍은 일부 확장으로 추가할 수 있습니다([3MF 사양](http://3mf.io/what-is-3mf/3mf-specification/)에 자세히 설명되어 있음). 패키지 수신기(3D 제조 디바이스)가 메타데이터를 처리할지 여부 및 처리하는 방법을 결정하지만 3MF 패키지에 가능한 한 많은 기본 정보를 포함하는 것이 좋습니다.
+3MF 문서의 모델 부분은 **메타데이터** 속성에 저장된 문자열의 키/값 쌍의 형식으로 메타데이터를 저장할 수 있습니다. 미리 정의된 메타데이터의 이름이 많이 있지만 다른 쌍은 일부 확장으로 추가할 수 있습니다([3MF 사양](https://3mf.io/what-is-3mf/3mf-specification/)에 자세히 설명되어 있음). 패키지 수신기(3D 제조 디바이스)가 메타데이터를 처리할지 여부 및 처리하는 방법을 결정하지만 3MF 패키지에 가능한 한 많은 기본 정보를 포함하는 것이 좋습니다.
 
 [!code-cs[Metadata](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetMetadata)]
 

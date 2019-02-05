@@ -6,12 +6,12 @@ ms.date: 10/18/2017
 ms.topic: article
 keywords: windows 10, uwp, 오디오, 게임, 샘플
 ms.localizationpriority: medium
-ms.openlocfilehash: 666ea75f1d4f18121b7ae9fa3def3b455ae3e7a3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 40fa8b1c23d591453308c3ad066967ed65902917
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924713"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9050896"
 ---
 # <a name="adding-audio-to-the-marble-maze-sample"></a>Marble Maze 샘플에 오디오 추가
 
@@ -20,7 +20,7 @@ ms.locfileid: "8924713"
 Marble Maze는 백그라운드에서 음악을 재생할 뿐 아니라 게임 플레이 소리를 사용하여 구슬이 벽에 부딪치는 경우와 같은 게임 이벤트를 나타냅니다. 구현의 중요한 부분 중 하나는 Marble Maze가 반향 또는 에코 효과를 사용하여 구슬이 튀어 나갈 때 나는 소리를 시뮬레이트하는 것입니다. 반향 효과 구현에서는 에코가 작은 방에서 더 빠르고 크게 들리고, 큰 방에서 더 조용하고 느리게 들립니다.
 
 > [!NOTE]
-> 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](http://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
+> 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](https://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
 
 게임에서 오디오 작업을 하는 경우에 대해 논의하는 주요 사항은 다음과 같습니다.
 

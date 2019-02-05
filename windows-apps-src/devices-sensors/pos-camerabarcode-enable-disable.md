@@ -5,12 +5,12 @@ ms.date: 05/1/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: f3e1d955ce7e70f2f2a454823020df38db66e47d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6b802dfa44f36768dc2446ee1d15bf9ca6d4f9f3
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930431"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9051046"
 ---
 # <a name="enable-or-disable-the-software-decoder-that-ships-with-windows"></a>Windows와 함께 배송된 소프트웨어 디코더를 활성화 또는 비활성화
 Windows 10 버전 1803에서는 기본적으로 소프트웨어 디코더가 설치 및 활성화됩니다.  카메라 바코드 스캐너를 사용하고 싶지 않거나 Windows.Devices.PointOfService.BarcodeScanner API에서 작동하는 타사 디코더를 구입했고 둘 모두를 사용하고 싶지 않은 경우에는 Windows와 함께 배송된 소프트웨어 디코더를 비활성화할 수 있습니다.
@@ -46,7 +46,7 @@ Windows Registry Editor Version 5.00
 ```  
 
 > [!Warning] 
-> 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다.  보호를 강화하기 위해 수정 전에 레지스트리를 백업합니다.  그러면 문제가 발생했을 때 레지스트리를 복원할 수 있습니다.  레지스트리를 백업 및 복원하는 방법에 대한 자세한 내용은 다음 문서 번호를 클릭하여 Microsoft 기술 자료의 문서를 확인하세요. <br/><br/> [322756](http://support.microsoft.com/kb/322756) Windows에서 레지스트리를 백업 및 복원하는 방법입니다.
+> 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다.  보호를 강화하기 위해 수정 전에 레지스트리를 백업합니다.  그러면 문제가 발생했을 때 레지스트리를 복원할 수 있습니다.  레지스트리를 백업 및 복원하는 방법에 대한 자세한 내용은 다음 문서 번호를 클릭하여 Microsoft 기술 자료의 문서를 확인하세요. <br/><br/> [322756](https://support.microsoft.com/kb/322756) Windows에서 레지스트리를 백업 및 복원하는 방법입니다.
 
 > [!NOTE]
 > Windows 10에서 기본 제공되는 소프트웨어 디코더는  [**Digimarc Corporation**](https://www.digimarc.com/)이 무료로 제공합니다.
