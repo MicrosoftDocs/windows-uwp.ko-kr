@@ -5,12 +5,12 @@ ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 74753c2c91912969342d2989ed76900e8386f292
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 5154593065ce40c5ac67a4873d58b2aac913d1f8
+ms.sourcegitcommit: f01e7abae23b91bbaa007055942e93587c0ec137
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050936"
+ms.locfileid: "9059015"
 ---
 # <a name="supported-point-of-service-peripherals"></a>지원되는 서비스 지점 주변 장치
 
@@ -61,13 +61,15 @@ ms.locfileid: "9050936"
 | Socket Mobile | SocketScan S740                | 2D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
 | Socket Mobile | SocketScan S800                | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
 | Socket Mobile | SocketScan S850                | 2D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Zebra         | DS2208²                        | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
 | Zebra         | DS2278                         | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Zebra         | DS8108²                        | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Zebra         | DS8108³                        | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
 |
 
 
 Honeywell 통해 2D 바코드를 지원 하기 위해 ¹ Upgradable <br/>
-² 최소 펌웨어 016 (2018.01.18)가 필요 합니다. 업그레이드할 Zebra [123Scan](https://www.zebra.com/123Scan)를 사용 하 여 합니다. 
+² 최소 펌웨어 009 (2018.07.09)가 필요 합니다. 업그레이드할 Zebra [123Scan](http://www.zebra.com/123Scan)를 사용 하 여 합니다.<br/>
+³ 최소 펌웨어 016 (2018.01.18)가 필요 합니다. 업그레이드할 Zebra [123Scan](http://www.zebra.com/123Scan)를 사용 하 여 합니다. 
 
 
 <hr>
