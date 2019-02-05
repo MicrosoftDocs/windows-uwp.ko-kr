@@ -8,12 +8,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a06859d6580720150383f2995505e671c0a31a4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: d84683544628a9b6df0eafb2999fabb134465ea8
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947238"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049630"
 ---
 # <a name="accessibility-testing"></a>접근성 테스트  
 
@@ -79,7 +79,7 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 <span id="VERIFY_THE_CONTRAST_RATIO_OF_VISIBLE_TEXT"/>
 
 ## <a name="verify-the-contrast-ratio-of-visible-text"></a>표시되는 텍스트의 대비 확인  
-색상 대비 도구를 사용하여 표시되는 텍스트 명암비가 허용되는지 검증합니다. 여기서 비활성 UI 요소 및 로고, 또는 정보를 전달하지 않으며 그 의미를 변경하지 않고 다시 정렬할 수 있는 장식 텍스트는 예외입니다. 명암비 및 예외에 대한 자세한 내용은 [접근성 있는 텍스트 요구 사항](accessible-text-requirements.md)을 참조하세요. 명암비를 테스트할 수 있는 도구는 [Techniques for WCAG 2.0 G18(리소스 섹션)](http://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources)을 참조하세요.
+색상 대비 도구를 사용하여 표시되는 텍스트 명암비가 허용되는지 검증합니다. 여기서 비활성 UI 요소 및 로고, 또는 정보를 전달하지 않으며 그 의미를 변경하지 않고 다시 정렬할 수 있는 장식 텍스트는 예외입니다. 명암비 및 예외에 대한 자세한 내용은 [접근성 있는 텍스트 요구 사항](accessible-text-requirements.md)을 참조하세요. 명암비를 테스트할 수 있는 도구는 [Techniques for WCAG 2.0 G18(리소스 섹션)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources)을 참조하세요.
 
 > [!NOTE]
 > Techniques for WCAG 2.0 G18에 나열된 도구 중 일부는 UWP 앱에서 대화형으로 사용할 수 없습니다. 도구에서 수동으로 전경색 및 배경색 값을 입력하고, 앱 UI의 화면 캡처를 만든 다음 화면 캡처 이미지에서 대비 비율 도구를 실행하거나, 앱에서 해당 이미지를 로드할 때가 아니라 이미지 편집 프로그램에서 원본 비트맵 파일을 열 때 도구를 실행해야 할 수도 있습니다.
@@ -163,5 +163,5 @@ Windows 10 버전 1607부터 내레이터에 새 개발자 모드가 도입되�
 * [접근성](accessibility.md)
 * [피해야 할 사례](practices-to-avoid.md)
 * [UI 자동화](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
-* [Windows의 접근성](http://go.microsoft.com/fwlink/p/?LinkId=320802)
+* [Windows의 접근성](https://go.microsoft.com/fwlink/p/?LinkId=320802)
 * [내레이터 시작](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

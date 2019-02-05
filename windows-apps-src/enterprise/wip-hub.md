@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 인식 앱
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
-ms.openlocfilehash: b65da20c8931f74800f817ecba0139b14d0447ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f6938118b3a9041eea27367c3916e94ce34d468e
+ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946105"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "9049500"
 ---
 # <a name="windows-information-protection-wip"></a>WIP(Windows Information Protection)
 
@@ -61,13 +61,13 @@ WIP API를 사용하여 앱을 지원한 다음 엔터프라이즈 인식 앱으
 
 앱을 인식할 준비가 되면 다음 가이드 중 하나를 참조하세요.
 
-**C#을 사용 하 여 빌드하는 유니버설 Windows 플랫폼 (UWP) 앱에 대 한**
+**C#을 사용 하 여 작성 하는 유니버설 Windows 플랫폼 (UWP) 앱에 대 한**
 
 [WIP(Windows Information Protection) 개발자 가이드](wip-dev-guide.md).
 
 **C++를 사용하여 빌드하는 데스크톱 앱의 경우**
 
-[WIP(Windows Information Protection) 개발자 가이드(C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
+[WIP(Windows Information Protection) 개발자 가이드(C++)](https://go.microsoft.com/fwlink/?LinkId=822192).
 
 
 ## <a name="create-non-enlightened-enterprise-app"></a>미인식 엔터프라이즈 앱 만들기
