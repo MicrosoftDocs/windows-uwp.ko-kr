@@ -6,12 +6,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 920ff8e295959ad6ea66cdb3b673217ff19b89e2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 212ef252e7d123ebf457a6584f77addb04fdfb2c
+ms.sourcegitcommit: a5f5bd724e65ce4a62d28dfd9080afb127886d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943154"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059994"
 ---
 # <a name="storyboarded-animations"></a>스토리보드 애니메이션
 
@@ -149,7 +149,7 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 
 ### <a name="fromtoby-are-nullable"></a>nullable인 From/To/By
 
-앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 속성의 형식이 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. VisualC + + 구성 요소 확장 (C + + CX)는 **Nullable** 형식 대신 [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) 사용 되므로 필요는 없습니다.
+앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 속성의 형식이 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. VisualC + + 구성 요소 확장 (C + + CX)는 **Nullable** 형식 갖고 있지 않으므로 [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) 대신 사용 합니다.
 
 ### <a name="other-properties-of-an-animation"></a>애니메이션의 다른 속성
 
@@ -265,7 +265,8 @@ UI 스레드의 속도를 저하시킬 약간의 위험이 있는 것으로 확�
 또한 앱 개발자는 종속 애니메이션을 항상 사용하지 않도록 설정하는 앱 수준의 설정을 적용하도록 선택할 수 있으며, **EnableDependentAnimation**이 **true**인 애니메이션에서도 마찬가지입니다. [**Timeline.AllowDependentAnimations**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.allowdependentanimations)을 참조하세요.
 
 > [!TIP]
-> Visual Studio를 사용하여 컨트롤에 대한 시각적 상태를 구성하면 시각적 상태 속성에 종속 애니메이션을 적용하려고 할 때마다 디자이너에서 경고가 생성됩니다.
+> 시각적 상태 속성에 종속 애니메이션을 적용 하려고 할 때마다 애니메이션 창 Blend for Visual Studio 2017에서에서 사용 하 고, 경우 디자이너에서 경고가 표시 됩니다. 경고 빌드 출력 또는 오류 목록에 표시 되지 않습니다. XAML을 직접 편집 하는 경우 디자이너 경고가 표시 되지 않습니다. 출력 창의 디버그 출력 런타임에 디버그할 때 경고를 표시 하는 애니메이션 독립적 이며 건너뜁니다.
+
 
 ## <a name="starting-and-controlling-an-animation"></a>애니메이션 시작 및 제어
 
