@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7dd7ca5ed7694ba5f114d913580e7e3a233537ae
-ms.sourcegitcommit: 8e0fa6e2cdd5d7456a4c8a10fd9f2501b346294f
+ms.openlocfilehash: a699ef00b3f377656940e66e6d35bfcba1cc5762
+ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "9041051"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059704"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>키보드, 게임 패드, 원격 제어 및 접근성 도구에 대한 포커스 탐색
 
@@ -425,7 +425,7 @@ ms.locfileid: "9041051"
 
 이 섹션에서는 포커스 기반의 비 포인터 입력 유형 모두를 지원하는 탐색 전략 속성 세트를 통해 기본 탐색 전략을 지정하고 응용 프로그램 내 포커스 탐색을 세부 조정하는 방법을 설명합니다.
 
-Xbox/TV용 앱 및 환경을 구축하는 방법에 대한 자세한 내용은 [키보드 조작](keyboard-interactions.md) 및 [Xbox 및 TV용 디자인](../devices/designing-for-tv.md#xy-focus-navigation-and-interaction)를 참조하세요.
+Xbox/TV 용 앱 및 환경 구축에 대 한 일반적인 내용은 [키보드 상호 작용](keyboard-interactions.md), [Xbox 및 TV 용 디자인](../devices/designing-for-tv.md)및 [게임 패드 및 리모컨 상호 작용을](gamepad-and-remote-interactions.md)참조 하세요.
 
 ### <a name="navigation-strategies"></a>탐색 전략
 

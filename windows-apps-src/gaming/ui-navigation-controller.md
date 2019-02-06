@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, ui, 탐색
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cc879ba89dc3c70ebc08d948b25f31bc30a3c6e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: ec5ba9d893a622e256030601cca204abab35045f
+ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926458"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059714"
 ---
 # <a name="ui-navigation-controller"></a>UI 탐색 컨트롤러
 
@@ -35,7 +35,7 @@ UI 탐색 컨트롤러는 다양한 _물리적_ 입력 장치에서 지원할 �
 
 탐색 장치는 _필수 집합_의 모든 탐색 명령, 즉 방향(위쪽, 아래쪽, 왼쪽, 오른쪽), 보기, 메뉴, 수락 및 취소 명령을 지원해야 합니다.
 
-방향 명령은 단일 UI 요소 간 기본 [XY 포커스 탐색](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction)을 위한 것입니다. 보기 및 메뉴 명령은 게임 플레이 정보(주로 일시적, 가끔 형식적)를 표시하고 각각 게임 플레이와 메뉴 컨텍스트 간에 전환하기 위한 것입니다. 수락 및 취소 명령은 각각 긍정(예) 및 부정(아니요) 응답을 위한 것입니다.
+방향 명령은 단일 UI 요소 간 기본 [XY 포커스 탐색](../design/input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction)을 위한 것입니다. 보기 및 메뉴 명령은 게임 플레이 정보(주로 일시적, 가끔 형식적)를 표시하고 각각 게임 플레이와 메뉴 컨텍스트 간에 전환하기 위한 것입니다. 수락 및 취소 명령은 각각 긍정(예) 및 부정(아니요) 응답을 위한 것입니다.
 
 다음 표에는 이러한 명령과 올바른 사용법이 예제와 함께 요약되어 있습니다.
 | 명령 | 올바른 사용법

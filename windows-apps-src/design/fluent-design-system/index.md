@@ -6,12 +6,12 @@ ms.date: 3/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7c5d2c1b112b96dc86d1dfef3015f9b52f43cb83
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cc0af4cba5d4d14c862724cd199c9e6ab221a24d
+ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942424"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059724"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Fluent 디자인 시스템에 대 한 Windows 응용 프로그램 작성자
 
@@ -19,7 +19,7 @@ ms.locfileid: "8942424"
 
 ## <a name="introduction"></a>소개
 
-Fluent 디자인 시스템은 적응형 공감 다우 며 멋진 사용자 인터페이스에 대 한 시스템입니다.
+Fluent 디자인 시스템에는 적응형, 공감 만들기 및 멋진 사용자 인터페이스는 시스템 이기도 합니다.
 
 ## <a name="principles"></a>원칙
 
@@ -36,7 +36,7 @@ Fluent 환경은 동작이나 의도에 반응하여 필요한 것을 이해하�
 Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활용합니다. 조명, 그림자, 동작, 깊이, 질감 등을 사용하여 직관적이고 본능적으로 느낄 수 있도록 정보를 구성합니다.
 
 
-## <a name="applying-fluent-design-to-your-app-with-uwp"></a>UWP 사용 하 여 앱에 흐름 디자인 적용
+## <a name="applying-fluent-design-to-your-app-with-uwp"></a>Fluent 디자인을 UWP 사용 하 여 앱에 적용
 
 ![흐름 디자인 로고](images/fluentdesign_header.png)
 
@@ -48,11 +48,11 @@ Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활
 
 <!-- To apply Fluent Design to your app, follow our guidelines and use UWP (Universal Windows Platform) you can use UWP UI features combined with best practices for creating apps that perform beautifully on all types of Windows-powered devices. -->
 
-디자인 지침 뿐만 아니라 Fluent 디자인 기사도 하는 방법을 보여 발생할 디자인 하는 코드를 작성 합니다. UWP XAML 사용자 인터페이스를 만드는 더 쉽게 태그 기반 언어를 사용 합니다. 예를 들면 다음과 같습니다.
+디자인 지침 뿐만 아니라 Fluent 디자인 기사도 하는 방법을 보여 발생할 디자인 하는 코드를 작성 합니다. UWP XAML을 쉽게 사용자 인터페이스를 만들 수 있는 태그 기반 언어를 사용 합니다. 예를 들면 다음과 같습니다.
 
 ```xaml
 <Grid BorderBrush="Blue" BorderThickness="4">
-    <TextBox Text="Design with XAML" Margin="20" Padding="24,16"/>
+    <TextBox Text="Design with XAML" Margin="20" Padding="16,24"/>
 </Grid>
 ```
 

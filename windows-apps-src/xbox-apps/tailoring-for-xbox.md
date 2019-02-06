@@ -5,12 +5,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 400d80018201c8ae048cb4a5d326fa560b9cdd5c
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.openlocfilehash: e273b1b3bb84929005cfbe4a205397fa298ea1c8
+ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981397"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9059734"
 ---
 # <a name="xbox-best-practices"></a>Xbox 모범 사례
 
@@ -22,11 +22,11 @@ ms.locfileid: "8981397"
 
 ### <a name="do-turn-off-mouse-mode"></a>*작업:* 마우스 모드 끄기
 
-Xbox 사용자는 컨트롤러를 선호 합니다. 컨트롤러 입력을 위해 최적화하려면 [마우스 모드를 사용하지 않도록 설정](how-to-disable-mouse-mode.md)하고 방향 탐색([X-Y 포커스](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction)라고도 함)을 사용합니다. 포커스 트래핑 및 액세스할 수 없는 UI에 주의 합니다.
+Xbox 사용자는 컨트롤러를 선호 합니다. 컨트롤러 입력, [마우스 모드를 사용 하지 않도록 설정](how-to-disable-mouse-mode.md) 에 대 한 최적화 및 방향 탐색 (라고도 [XY 포커스 탐색 및 상호 작용](../design/input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction))를 사용 하도록 설정 합니다. 포커스 트래핑 및 액세스할 수 없는 UI에 대 한 주의 하십시오.
 
 ### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*작업:* 약 10피트 환경에 적합한 포커스 사각형 그리기
 
-대부분의 Xbox 사용자는 거실에서 TV 주위에 앉아 있으므로 표준 포커스 사각형이 10피트를 넘는 일은 거의 없습니다. 입력 포커스가 있는 UI 요소가 항상 사용자에게 명확하게 표시되도록 하려면 [포커스 화면 효과](../design/devices/designing-for-tv.md#focus-visual) 지침을 따릅니다. XAML에서는 Xbox에서 앱이 실행될 때 이 동작을 무료로 사용할 수 있지만 HTML 앱에서는 사용자 지정 CSS 스타일을 사용해야 합니다.
+대부분의 Xbox 사용자는 거실에서 TV 주위에 앉아 있으므로 표준 포커스 사각형이 10피트를 넘는 일은 거의 없습니다. 입력 포커스가 있는 UI 요소가 항상 사용자에게 명확하게 표시되도록 하려면 [포커스 화면 효과](../design/input/gamepad-and-remote-interactions.md#focus-visual) 지침을 따릅니다. XAML에서는 Xbox에서 앱이 실행될 때 이 동작을 무료로 사용할 수 있지만 HTML 앱에서는 사용자 지정 CSS 스타일을 사용해야 합니다.
 
 ### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*작업:* SystemMediaTransportControls 클래스와 통합
 
