@@ -2,20 +2,18 @@
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Windows 데스크톱의 장치 포털
 description: Windows Device Portal이 Windows 데스크톱의 진단 및 자동화를 제공하는 방법을 알아봅니다.
-ms.date: 03/15/2018
+ms.date: 2/6/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 1be8dfd11e68dc8e6382f98e08e6c23f2a4d6be6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 3dcf35a1bd43930e616edc6d1e7180c9cea31560
+ms.sourcegitcommit: b79cc7e0eac414ac2275517a7f56d1f9a817d112
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938833"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9060047"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Windows 데스크톱의 장치 포털
-
-
 
 Windows 장치 포털을 사용하면 진단 정보를 보거나 브라우저 창에서 HTTP를 통해 데스크톱을 조작할 수 있습니다. 장치 포털을 사용하여 다음 작업을 수행할 수 있습니다.
 - 실행 중인 프로세스 목록 확인 및 조작
@@ -77,6 +75,7 @@ Windows 데스크톱의 장치 포털은 표준 페이지 세트를 제공합니
 - 스크래치
 
 ## <a name="more-device-portal-options"></a>기타 장치 포털 옵션
+
 ### <a name="registry-based-configuration-for-device-portal"></a>장치 포털의 레지스트리 기반 구성
 
 장치 포털용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음 레지스트리 키를 설정할 수 있습니다.
@@ -106,7 +105,31 @@ Windows 데스크톱의 장치 포털은 표준 페이지 세트를 제공합니
     - 특정한 구성과 표시되는 디버그 메시지로 독립 실행형 장치 포털 버전을 실행합니다. 이는 [패키지된 플러그인](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-plugin) 구성에 가장 유용합니다. 
     - 패키지된 플러그인을 테스트하기 위해 이를 실행하는 방법에 대한 자세한 내용은 [MSDN 잡지 문서](https://msdn.microsoft.com/en-us/magazine/mt826332.aspx)를 참조하세요.
 
-## <a name="see-also"></a>기타 참조
+## <a name="common-errors-and-issues"></a>일반 오류 및 문제
+
+다음은 장치 포털을 설정할 때 발생할 수 있는 몇 가지 일반적인 오류입니다.
+
+### <a name="windowsupdatesearch-returns-invalid-number-of-updates-0x800f0950-cbseinvalidwindowsupdatecount"></a>잘못 된 업데이트 수를 반환 하는 WindowsUpdateSearch (0x800f0950 CBS_E_INVALID_WINDOWS_UPDATE_COUNT)
+
+Windows 10의 시험판 빌드에 대해 개발자 패키지를 설치 하려고 할 때이 오류가 발생할 수 있습니다. 이러한 기능-수동 (FoD) 패키지는 Windows 업데이트에서 호스트 하 고 플 라이팅 옵트인 필요 시험판 빌드를 다운로드 합니다. 설치는 올바른 빌드 및 링 조합에 대 한 플 라이팅 옵트인 하지 페이로드 다운로드 되지 않습니다. 다음 다시 확인 합니다.
+
+1. **설정 gt_ 업데이트 & 보안 gt_ Windows 참가자 프로그램을** 찾아 **Windows 참가자 계정** 섹션에 올바른 계정 정보에 있는지 확인 합니다. **Windows 참가자 계정을 연결**선택 해당 섹션 보이지 않으면 메일 계정을 추가 하 고 있는지 표시 (해야 다시 **Windows 참가자 계정을 연결** 선택 **Windows 참가자 계정** 아래 확인 새로 추가 된 계정을 연결 실제로).
+ 
+2. 아래 **콘텐츠 종류를 수신 하 시겠습니까?**, **Windows 적극적으로 개발** 선택 되어 있는지 확인 합니다.
+ 
+3. 아래 **어떤 속도 새 빌드를 받도록 하 시겠습니까?**, **Windows 참가자 빠른** 선택 되어 있는지 확인 합니다.
+ 
+4. 이제 Fod 설치할 수 있습니다. 에 있는 확인 한 경우 Windows 참가자 빠르고 여전히 Fod 설치, 하세요 피드백을 제공 수 없으며 **C:\Windows\Logs\CBS**에서 로그 파일을 첨부 합니다.
+
+### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>[SC] StartService: openservice가 실패 1060: 설치 된 서비스로 지정 된 서비스가 없습니다.
+
+개발자 패키지 설치 되어 있지 않으면이 오류가 발생할 수 있습니다. 개발자 패키지, 없으면 웹 서비스를 관리 합니다. 개발자 패키지를 다시 설치 해 보세요.
+
+### <a name="cbs-cannot-start-download-because-the-system-is-on-metered-network-cbsemeterednetwork"></a>시스템 데이터 통신 연결된 네트워크 (CBS_E_METERED_NETWORK)에 있기 때문에 CBS 다운로드를 시작할 수 없음
+
+데이터 통신된 인터넷에 연결 하는 경우이 오류가 발생할 수 있습니다. 데이터 통신 연결 개발자 패키지를 다운로드할 수 없습니다.
+
+## <a name="see-also"></a>참고 항목
 
 * [Windows 장치 포털 개요](device-portal.md)
 * [장치 포털 핵심 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

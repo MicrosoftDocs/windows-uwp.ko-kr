@@ -1,16 +1,16 @@
 ---
 title: UWP의 파일 속성에 빠르게 액세스
 description: UWP 앱에서 사용할 라이브러리에서 파일 및 속성 목록을 효율적으로 수집합니다.
-ms.date: 03/22/2018
+ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp, 파일, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: 772abd3696850be202593c582e6338a04de38537
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 5ae884ca5424f50a7a835bc55602b5aa7c54096d
+ms.sourcegitcommit: b79cc7e0eac414ac2275517a7f56d1f9a817d112
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926538"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9060057"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>UWP의 파일 속성에 빠르게 액세스 
 
@@ -118,6 +118,5 @@ while (images.Count != 0 || index < 10000) 
 [QueryOptions API 참조](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions)  
 [파일 및 폴더 열거 및 쿼리](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
 [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)  
-[빠른 속성 액세스 연습](https://blogs.msdn.microsoft.com/adamdwilson/2017/12/20/fast-file-enumeration-with-partially-initialized-storagefiles/)
  
  

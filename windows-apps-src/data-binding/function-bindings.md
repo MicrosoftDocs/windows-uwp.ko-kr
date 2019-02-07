@@ -1,20 +1,21 @@
 ---
 description: XBind 태그 확장 기능을 태그에서 사용할 수 있습니다.
 title: X:bind 함수
-ms.date: 04/26/2018
+ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: 38573bf4602c88d2e04d4bf29b39191045eddec8
-ms.sourcegitcommit: 58783d1ea22e632b9c50dcfbaa1cc57686bcdd8e
+ms.openlocfilehash: b85777c254c36cc7bf5b156569c7cef267a6c567
+ms.sourcegitcommit: b79cc7e0eac414ac2275517a7f56d1f9a817d112
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024220"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "9060037"
 ---
 # <a name="functions-in-xbind"></a>X:bind 함수
 
-**참고**바인딩 **{x: Bind}** 를 사용 하 여 (및는 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
+> [!NOTE]
+> **{X: Bind}** 를 사용 하 여 앱에 데이터 바인딩을 사용 하는 방법에 대 한 일반 정보 (그리고는 비교 **{x: Bind}** **{Binding}** 사이 대 한) [데이터 바인딩 심층 분석을](data-binding-in-depth.md)참조 하세요.
 
 Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이 통해:
 
@@ -54,7 +55,7 @@ class ColorEntry
 
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
-``` syntax
+```xaml
 <object property="{x:Bind pathToFunction.FunctionName(functionParameter1, functionParameter2, ...), bindingProperties}" ... />
 ```
 
@@ -75,6 +76,7 @@ class ColorEntry
     </StackPanel>
 </Page>
 ```
+
 ```csharp
 namespace MyNamespace
 {
@@ -86,6 +88,7 @@ namespace MyNamespace
 ```
 
 예를 들어 날짜 서식을, 텍스트, 텍스트 연결 등과 같은 간단한 시나리오를 수행 하기 위해 태그에서 직접 시스템 함수를 사용할 수 있습니다.
+
 ```xaml
 <Page 
      xmlns:sys="using:System"
@@ -105,9 +108,9 @@ namespace MyNamespace
 - 인수 형식은 전달 중인 데이터와 일치해야 합니다. 변환을 축소하지 않습니다.
 - 함수의 반환 형식은 바인딩을 사용 중인 속성의 형식과 일치해야 합니다.
 
-바인딩 엔진은 Windows 10의 다음 주요 업데이트부터 속성 변경 알림을 발생 하는 함수 이름에 반응 및 필요에 따라 바인딩이 다시 평가 합니다. 예를 들면 다음과 같습니다. 
+바인딩 엔진은 속성 변경 알림을 발생 하는 함수 이름 및 필요에 따라 바인딩이 다시 평가에 반응 합니다. 예를 들면 다음과 같습니다.
 
-```XAML
+```xaml
 <DataTemplate x:DataType="local:Person">
    <StackPanel>
       <TextBlock Text="{x:Bind FullName}" />
@@ -115,6 +118,7 @@ namespace MyNamespace
    </StackPanel>
 </DataTemplate>
 ```
+
 ```csharp
 public class Person:INotifyPropertyChanged
 {
@@ -148,7 +152,7 @@ public class Person:INotifyPropertyChanged
     public string FullName
     {
         get { return this.fullName; }
-        set 
+        set
         {
             this.fullName = value;
             this.OnPropertyChanged ();
@@ -175,6 +179,7 @@ public class Person:INotifyPropertyChanged
 ### <a name="two-way-function-bindings"></a>양방향 함수 바인딩
 
 양방향 바인딩 시나리오에서는 두 번째 함수를 바인딩의 반대 방향으로 지정해야 합니다. 이 작업은 수행 **하지** 바인딩 속성을 사용 하 여 합니다. 에 함수 아래 예에서는 값 모델로 다시 푸시 해야 하는 인수 하나를 수행 해야 합니다.
+
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```
