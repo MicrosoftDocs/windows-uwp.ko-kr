@@ -3,17 +3,19 @@ description: 스타일을 사용하면 컨트롤 속성을 설정하고 이 설�
 MS-HAID: dev\_ctrl\_layout\_txt.styling\_controls
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
+ms.date: 01/03/2019
 title: XAML 스타일
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: XAML styles
 template: detail.hbs
+ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d9f77d92e3c80e4a0d4e0808289f032b4a1125a5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f0bed73a3b0d21329c5195be0772538f3a99bdcd
+ms.sourcegitcommit: e83f30486d899401debc782de891c388ba5fc03b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932161"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "9062465"
 ---
 # <a name="xaml-styles"></a>XAML 스타일
 
