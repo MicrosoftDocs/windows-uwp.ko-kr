@@ -11,23 +11,20 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7075df3d5c3de0dd7d756432400dfe934651c5b4
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.openlocfilehash: 212b5843a302c8210cd01dd0ab4017eda016098a
+ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058765"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "9075126"
 ---
 # <a name="text-box"></a>입력란
-
- 
 
 TextBox 컨트롤을 사용하면 사용자가 앱에 텍스트를 입력할 수 있습니다. 일반적으로 한 줄의 텍스트를 캡처하는 데 사용되지만 여러 줄의 텍스트를 캡처하도록 구성할 수 있습니다. 텍스트는 단순하고 균일한 일반 텍스트 형식으로 화면에 표시됩니다.
 
 TextBox에는 텍스트 입력을 간소화할 수 있는 다양한 기능이 있습니다. 텍스트 복사 및 붙여넣기를 지원하는 친숙한 기본 제공 상황에 맞는 메뉴와 함께 제공됩니다. "모두 지우기" 단추를 통해 사용자는 입력된 모든 텍스트를 빠르게 삭제할 수 있습니다. 또한 맞춤법 검사 기능이 기본 제공되며 기본적으로 사용됩니다.
 
 > **중요 API**: [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [Text 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)
-
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -86,6 +83,18 @@ rootGrid.Children.Add(textBox);
 
 입력란을 사용하여 양식의 데이터 입력을 수락하고 [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) 속성을 사용하여 입력란에서 전체 텍스트 문자열을 가져오는 것이 일반적입니다. 일반적으로 제출 단추 클릭과 같은 이벤트를 사용하여 Text 속성에 액세스하지만, 텍스트가 변경될 때 특정 작업을 수행해야 하는 경우 [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanged.aspx) 또는 [TextChanging](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanging.aspx) 이벤트를 처리할 수 있습니다.
 
+이 예제에서는 텍스트 상자의 현재 콘텐츠를 설정 하는 방법을 보여 줍니다.
+
+```xaml
+<TextBox name="SampleTextBox" Text="Sample Text"/>
+```
+
+```csharp
+string sampleText = SampleTextBox.Text;
+...
+SampleTextBox.Text = "Sample text retrieved";
+```
+
 [Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.header.aspx)(또는 레이블) 및 [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.placeholdertext.aspx)(또는 워터마크)를 입력란에 추가하여 입력란의 용도를 사용자에게 표시할 수 있습니다. 헤더의 모양을 사용자 지정하려면 Header 대신 [HeaderTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.headertemplate.aspx) 속성을 설정할 수 있습니다. *디자인 정보는 레이블에 대한 지침을 참조하세요*.
 
 [MaxLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.maxlength.aspx) 속성을 설정하여 사용자가 입력할 수 있는 문자 수를 제한할 수 있습니다. 그러나 MaxLength는 붙여넣은 텍스트의 길이는 제한하지 않습니다. 앱에 중요한 경우 붙여넣은 텍스트를 수정하려면 [Paste](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.paste.aspx) 이벤트를 사용합니다.
@@ -97,6 +106,7 @@ rootGrid.Children.Add(textBox);
 모두 지우기 단추는 텍스트를 포함하며 포커스가 있는 편집 가능한 한 줄 입력란에만 표시됩니다.
 
 다음과 같은 경우에는 모두 지우기 단추가 표시되지 않습니다.
+
 - **IsReadOnly**가 **true**인 경우
 - **AcceptsReturn**이 **true**인 경우
 - **TextWrap**에 **NoWrap** 이외의 값이 있는 경우
@@ -111,10 +121,10 @@ IsReadOnly 속성을 true로 설정하여 TextBox를 읽기 전용으로 만들 
 사용자는 텍스트를 선택하여 복사할 수 있습니다.
 IsEnabled
 
-
 ### <a name="enable-multi-line-input"></a>여러 줄 입력 사용
 
 입력란에서 여러 줄에 텍스트를 표시할지 여부를 제어하는 데 사용할 수 있는 두 개의 속성이 있습니다. 일반적으로 여러 줄 입력란을 만들려면 두 속성을 모두 설정합니다.
+
 - 입력란에서 줄 바꿈 또는 리턴 문자를 허용하고 표시할 수 있게 하려면 [AcceptsReturn](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx) 속성을 **true**로 설정합니다.
 - 텍스트 줄 바꿈을 사용하도록 설정하려면 [TextWrapping](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textwrapping.aspx) 속성을 **Wrap**으로 설정합니다. 이렇게 하면 줄 구분 기호에 관계없이 입력란의 가장자리에 도달하면 텍스트가 줄 바꿈됩니다.
 
@@ -244,46 +254,45 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 
 ## <a name="recommendations"></a>권장 사항
 
--   텍스트 상자의 용도가 명확하지 않은 경우 레이블 또는 개체 틀 텍스트를 사용하세요. 레이블은 텍스트 입력란에 값이 있는지 여부에 상관없이 표시됩니다. 개체 틀 텍스트는 텍스트 입력란 내에 표시되었다가 값을 입력하면 사라집니다.
--   입력할 수 있는 값의 범위에 적절한 너비로 텍스트 상자를 설정하세요. 단어 길이는 언어에 따라 달라지므로 앱을 세계화하려는 경우 지역화를 고려해야 합니다.
--   텍스트 입력란은 일반적으로 한 줄(`TextWrap = "NoWrap"`)입니다. 긴 문자열을 입력하거나 편집해야 하는 경우 텍스트 입력란을 여러 줄(`TextWrap = "Wrap"`)로 설정합니다.
--   일반적으로 텍스트 입력란은 편집 가능한 텍스트에 사용됩니다. 내용을 읽고, 선택하고, 복사할 수 있지만, 편집할 수 없도록 텍스트 입력란을 읽기 전용으로 설정할 수 있습니다.
--   보기를 깔끔하게 정리해야 하는 경우 제어 확인란을 선택한 경우에만 텍스트 입력 상자를 표시하도록 설정하는 것이 좋습니다. 사용 상태인 텍스트 입력 상자를 컨트롤(예: 확인란)에 바인딩할 수도 있습니다.
--   값이 포함된 텍스트 입력란을 탭할 때 텍스트 입력란이 어떻게 동작하는지를 고려하세요. 기본 동작은 값을 바꾸지 않고 편집하는 데 적합합니다. 삽입 지점은 단어 사이에 있고 아무것도 선택되어 있지 않습니다. 주어진 텍스트 입력란의 가장 일반적인 사용 사례가 바꾸기인 경우 컨트롤이 포커스를 받을 때마다 필드에서 모든 텍스트를 선택할 수 있습니다. 입력이 선택을 대체합니다.
+- 텍스트 상자의 용도가 명확하지 않은 경우 레이블 또는 개체 틀 텍스트를 사용하세요. 레이블은 텍스트 입력란에 값이 있는지 여부에 상관없이 표시됩니다. 개체 틀 텍스트는 텍스트 입력란 내에 표시되었다가 값을 입력하면 사라집니다.
+- 입력할 수 있는 값의 범위에 적절한 너비로 텍스트 상자를 설정하세요. 단어 길이는 언어에 따라 달라지므로 앱을 세계화하려는 경우 지역화를 고려해야 합니다.
+- 텍스트 입력란은 일반적으로 한 줄(`TextWrap = "NoWrap"`)입니다. 긴 문자열을 입력하거나 편집해야 하는 경우 텍스트 입력란을 여러 줄(`TextWrap = "Wrap"`)로 설정합니다.
+- 일반적으로 텍스트 입력란은 편집 가능한 텍스트에 사용됩니다. 내용을 읽고, 선택하고, 복사할 수 있지만, 편집할 수 없도록 텍스트 입력란을 읽기 전용으로 설정할 수 있습니다.
+- 보기를 깔끔하게 정리해야 하는 경우 제어 확인란을 선택한 경우에만 텍스트 입력 상자를 표시하도록 설정하는 것이 좋습니다. 사용 상태인 텍스트 입력 상자를 컨트롤(예: 확인란)에 바인딩할 수도 있습니다.
+- 값이 포함된 텍스트 입력란을 탭할 때 텍스트 입력란이 어떻게 동작하는지를 고려하세요. 기본 동작은 값을 바꾸지 않고 편집하는 데 적합합니다. 삽입 지점은 단어 사이에 있고 아무것도 선택되어 있지 않습니다. 주어진 텍스트 입력란의 가장 일반적인 사용 사례가 바꾸기인 경우 컨트롤이 포커스를 받을 때마다 필드에서 모든 텍스트를 선택할 수 있습니다. 입력이 선택을 대체합니다.
 
-**한 줄 입력란**
+### <a name="single-line-input-boxes"></a>한 줄 입력란
 
--   한 줄 입력란을 여러 개 사용하여 다양한 텍스트 정보를 캡처합니다. 입력란이 본질적으로 관련된 경우 함께 그룹화합니다.
+- 한 줄 입력란을 여러 개 사용하여 다양한 텍스트 정보를 캡처합니다. 입력란이 본질적으로 관련된 경우 함께 그룹화합니다.
 
--   한 줄 입력란은 예상되는 제일 긴 입력보다 약간 넓게 만듭니다. 이 경우 컨트롤이 너무 넓어지면 두 개의 컨트롤로 분리합니다. 예를 들어 단일 주소 입력을 "주소 1"과 "주소 2"로 분할할 수 있습니다.
--   입력할 수 있는 문자의 최대 길이를 설정합니다. 지원 데이터 원본이 긴 입력 문자열을 허용하지 않는 경우 입력을 제한하고 유효성 검사 팝업을 사용하여 사용자에게 한계에 도달했음을 알립니다.
--   한 줄 텍스트 입력 컨트롤을 사용하여 사용자로부터 텍스트 조각들을 수집할 수 있습니다.
+- 한 줄 입력란은 예상되는 제일 긴 입력보다 약간 넓게 만듭니다. 이 경우 컨트롤이 너무 넓어지면 두 개의 컨트롤로 분리합니다. 예를 들어 단일 주소 입력을 "주소 1"과 "주소 2"로 분할할 수 있습니다.
+- 입력할 수 있는 문자의 최대 길이를 설정합니다. 지원 데이터 원본이 긴 입력 문자열을 허용하지 않는 경우 입력을 제한하고 유효성 검사 팝업을 사용하여 사용자에게 한계에 도달했음을 알립니다.
+- 한 줄 텍스트 입력 컨트롤을 사용하여 사용자로부터 텍스트 조각들을 수집할 수 있습니다.
 
     다음 예는 보안 질문에 대한 답변을 캡처하기 위한 한 줄 입력란을 보여줍니다. 답변은 짧을 것이므로 여기서는 한 줄 입력란이 적합합니다.
 
     ![기본 데이터 입력](images/guidelines_and_checklist_for_singleline_text_input_type_text.png)
 
--   짧고 크기가 정해져 있는 한 줄 텍스트 입력 컨트롤 집합을 사용하여 특수한 형식의 데이터를 입력할 수 있습니다.
+- 짧고 크기가 정해져 있는 한 줄 텍스트 입력 컨트롤 집합을 사용하여 특수한 형식의 데이터를 입력할 수 있습니다.
 
     ![서식이 지정된 데이터 입력](images/textinput_example_productkey.png)
 
--   제약이 없는 한 줄 텍스트 입력 컨트롤과 사용자가 유효한 값을 선택하는 데 도움이 되는 명령 단추를 이용하여 문자열을 입력 또는 편집할 수 있습니다.
+- 제약이 없는 한 줄 텍스트 입력 컨트롤과 사용자가 유효한 값을 선택하는 데 도움이 되는 명령 단추를 이용하여 문자열을 입력 또는 편집할 수 있습니다.
 
     ![보조 데이터 입력](images/textinput_example_assisted.png)
 
+### <a name="multi-line-text-input-controls"></a>여러 줄 텍스트 입력 컨트롤
 
-**여러 줄 텍스트 입력 컨트롤**
-
--   서식 있는 텍스트 상자를 만들 때 스타일 단추를 제공하고 해당 작업을 구현합니다.
--   앱의 스타일과 일치하는 글꼴을 사용합니다.
--   텍스트 컨트롤의 높이는 기본 입력을 수용하기에 충분하게 만듭니다.
--   최대 개수의 문자 또는 단어가 포함된 긴 텍스트를 캡처할 때는 일반 입력란을 사용하고 한계에 도달하려면 몇 글자 또는 몇 단어가 남았는지 보여 주는 카운터를 제공합니다. 카운터는 직접 만들어야 합니다. 카운터를 입력란 아래에 놓고 사용자가 문자 또는 단어를 입력할 때 동적으로 업데이트되도록 합니다.
+- 서식 있는 텍스트 상자를 만들 때 스타일 단추를 제공하고 해당 작업을 구현합니다.
+- 앱의 스타일과 일치하는 글꼴을 사용합니다.
+- 텍스트 컨트롤의 높이는 기본 입력을 수용하기에 충분하게 만듭니다.
+- 최대 개수의 문자 또는 단어가 포함된 긴 텍스트를 캡처할 때는 일반 입력란을 사용하고 한계에 도달하려면 몇 글자 또는 몇 단어가 남았는지 보여 주는 카운터를 제공합니다. 카운터는 직접 만들어야 합니다. 카운터를 입력란 아래에 놓고 사용자가 문자 또는 단어를 입력할 때 동적으로 업데이트되도록 합니다.
 
     ![긴 텍스트 스팬](images/guidelines_and_checklist_for_multiline_text_input_text_limits.png)
 
--   사용자가 입력하는 동안 텍스트 입력 컨트롤의 높이가 늘어나도록 만들지 마세요.
--   한 줄만 필요한 경우에는 여러 줄 입력란을 사용하지 마세요.
--   일반 텍스트 컨트롤으로도 충분한 경우 서식 있는 텍스트 컨트롤을 사용하지 마세요.
+- 사용자가 입력하는 동안 텍스트 입력 컨트롤의 높이가 늘어나도록 만들지 마세요.
+- 한 줄만 필요한 경우에는 여러 줄 입력란을 사용하지 마세요.
+- 일반 텍스트 컨트롤으로도 충분한 경우 서식 있는 텍스트 컨트롤을 사용하지 마세요.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 

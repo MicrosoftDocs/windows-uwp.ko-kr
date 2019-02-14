@@ -5,12 +5,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, SQLite, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 3780423b0c2fc2bbe1ebc81054e13997d5ebde7f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 552de1ccb8f8e69a4ad716e54557ae0b5cd3a3f4
+ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934598"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "9075146"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>UWP 앱에서 SQLite 데이터베이스 사용
 SQLite를 사용해 사용자 장치에서 경량 데이터베이스의 데이터를 저장하고 검색할 수 있습니다. 이 가이드는 그 방법을 보여줍니다.
@@ -83,7 +83,7 @@ UWP 프로젝트의 최소 버전을 Fall Creator Update로 올리면 몇 가지
 
 먼저 일반 클래스 라이브러리 대신 .NET Standard 2.0 라이브러리를 사용할 수 있습니다. 그러면 데이터 액세스 코드를 WPF, Windows FOrms, Android, iOS, ASP.NET 앱 등 다른 .NET 기반 앱과 공유할 수 있습니다.
 
-둘째, 앱이 SQLite 라이브러리 패키지를 만들지 않습니다. 대신 Windows와 함께 설치된 SQLite 버전을 사용할 수 있습니다. 이는 몇 가지 방법으로 도움을 줍니다.
+둘째, 앱에서 SQLite 라이브러리 패키지 필요가 없습니다. 대신 Windows와 함께 설치된 SQLite 버전을 사용할 수 있습니다. 이는 몇 가지 방법으로 도움을 줍니다.
 
 :heavy_check_mark: SQLite 바이너리를 다운로드받아 응용 프로그램의 일부로 패키징 할 필요가 없기 때문에 응용 프로그램의 크기를 줄입니다.
 
