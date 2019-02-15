@@ -5,12 +5,12 @@ ms.date: 01/31/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: 5281049aa9ddec58a97283a2ca6ba5d229a49c4e
-ms.sourcegitcommit: 038fe813c73804285d5e74d97864ac1a2fb531f3
+ms.openlocfilehash: 883463f291864016ebc32f2d510936452c931366
+ms.sourcegitcommit: fde2d41ef4b5658785723359a8c4b856beae8f95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042607"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "9079221"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -111,6 +111,8 @@ VSIX 확장의 최신 버전을 사용 하 여 유효 하지 않은 할 프로�
 위에서 언급 한 대로, C + + WinRT 프로젝트는 이제 NuGet 패키지가 설치 해야 합니다.
 
 이후 합니다 `<CppWinRTEnabled>` 요소는 이제 사용 되지 않는, 선택적으로 편집할 수 있습니다에 `.vcxproj`, 요소를 삭제 합니다. 반드시 필요한 경우가 아니라면 이지만 옵션입니다.
+
+또한 경우에 `.vcxproj` 포함 `<RequiredBundles>$(RequiredBundles);Microsoft.Windows.CppWinRT</RequiredBundles>`를 다음 C + 필요 없이 빌드할 수 있도록 제거할 수 있습니다 + /winrt VSIX 확장을 설치 합니다.
 
 ## <a name="custom-types-in-the-cwinrt-projection"></a>C++/WinRT 프로젝션의 사용자 지정 형식
 C + + /winrt 프로그래밍에서는 표준 c + + 언어 기능을 사용할 수 및 [표준 c + + 데이터 형식 및 C + + WinRT](std-cpp-data-types.md)&mdash;일부 c + + 표준 라이브러리 데이터 형식이 포함 됩니다. 그 밖에도 프로젝션에서 일부 사용자 지정 데이터 형식에 대해서도 알아둘 필요가 있으며, 실제로 사용자 지정 데이터 형식을 사용할 수도 있습니다. 예를 들어 [C++/WinRT 시작](get-started.md)의 빠른 시작 코드 예제에서 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)을 사용합니다.
