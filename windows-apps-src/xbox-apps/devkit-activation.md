@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
-ms.openlocfilehash: 59da5dd5866fe79f4420e1e895af74f976526f27
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 3664ecae152b7178709bffc373a877e58a86461a
+ms.sourcegitcommit: eaee5a45d5eace64c69e67691e5330b466cc74c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046263"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9083266"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Xbox One 개발자 모드 활성화
 
@@ -38,19 +38,21 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
 
     ![활성화 5단계](images/activation-step-5.png)  
     
-5.  [Partner.microsoft.com/xboxconfig/devices](https://partner.microsoft.com/xboxconfig/devices)으로 이동 합니다.
+5.  [파트너 센터에서 앱 개발자 계정을 등록](https://developer.microsoft.com/store/register)합니다.  또한 게임을 게시 하기 위한 첫 번째 단계입니다.
 
-6.  [파트너 센터](https://partner.microsoft.com/dashboard) 계정 자격 증명으로 로그인 합니다.
+6.  [파트너 센터](https://partner.microsoft.com/dashboard) 에 유효한, 현재 파트너 센터 앱 개발자 계정으로 로그인 합니다.  왼쪽 탐색 창에서 여러 옵션이 표시 되지 또는 다음 단계 및 활성화 링크가 _작동 하지 않습니다_; **개요** 섹션에서 **새 앱 만들기** 옵션이 표시 되지 않을 경우 이전 단계에서 응용 프로그램 개발자 계정을 등록 한 완전히 있는지 확인 합니다.
 
-7.  개발자 모드 활성화 앱에 표시된 활성화 코드를 입력합니다. 계정에 연결된 활성화 수에는 제한이 있습니다. 개발자 모드 활성화 되 면 파트너 센터 계정에 연결 된 정품 인증 중 하나를 사용 알려줍니다.
+7.  [Partner.microsoft.com/xboxconfig/devices](https://partner.microsoft.com/xboxconfig/devices)으로 이동 합니다.
+
+8.  개발자 모드 활성화 앱에 표시된 활성화 코드를 입력합니다. 계정에 연결된 활성화 수에는 제한이 있습니다. 개발자 모드 활성화 되 면 파트너 센터 계정에 연결 된 정품 인증 중 하나를 사용 알려줍니다.
 
     ![활성화 8단계](images/activation-step-8-rs2.png)    
     
-8.  **동의 및 활성화**를 클릭합니다. 페이지가 다시 로드되고 표에 디바이스가 표시됩니다. Xbox One 개발자 모드 정품 인증 프로그램 계약 조건은 [Xbox One 개발자 모드 정품 인증 프로그램](https://go.microsoft.com/fwlink/p/?LinkId=760399)에서 확인할 수 있습니다.
+9.  **동의 및 활성화**를 클릭합니다. 페이지가 다시 로드되고 표에 디바이스가 표시됩니다. Xbox One 개발자 모드 정품 인증 프로그램 계약 조건은 [Xbox One 개발자 모드 정품 인증 프로그램](https://go.microsoft.com/fwlink/p/?LinkId=760399)에서 확인할 수 있습니다.
 
-9.  활성화 코드를 입력한 후 활성화 절차에 대한 진행 화면이 콘솔에 표시됩니다.  
+10. 활성화 코드를 입력한 후 활성화 절차에 대한 진행 화면이 콘솔에 표시됩니다.  
     
-10. 활성화가 완료되면 개발자 모드 활성화 앱을 열고 **전환 및 다시 시작**을 클릭하여 개발자 모드로 이동합니다. 이 작업은 평소보다 더 오래 걸립니다.
+11. 활성화가 완료되면 개발자 모드 활성화 앱을 열고 **전환 및 다시 시작**을 클릭하여 개발자 모드로 이동합니다. 이 작업은 평소보다 더 오래 걸립니다.
 
     ![활성화 12단계](images/activation-step-12.png)   
 
