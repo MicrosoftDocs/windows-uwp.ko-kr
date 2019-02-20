@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: e6d36c368672675f503359735de8717df1be8b57
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: dbd2c6c9f5e3cf2200f9b260687f05718178868a
+ms.sourcegitcommit: 4dd9f76bd7f0ebdb42d78eab472d33a979dce60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050656"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9082886"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -67,6 +67,7 @@ Visual Studio 2017에서 프로젝트를 열고 샘플을 실행 하려면 **F5*
 **protected override void UnloadContent()** 이 메서드는 비 콘텐츠-관리자 콘텐츠를 언로드하는 데 사용됩니다. 여기서는 이 메서드는 사용할 일이 없습니다.
 
 **protected override void Update (GameTime gameTime)** 이 메서드는 게임 루프 주기 마다 한 번 호출 됩니다. 게임에 사용되는 개체 또는 변수의 상태를 여기서 업데이트합니다. 개체의 위치, 속도, 색 등이 포함됩니다. 또한 사용자 입력이 처리 하는 위치입니다. 즉, 이 메서드는 화면에 개체를 그리는 것을 제외한 게임 논리의 모든 부분을 처리합니다.
+
 **protected override void Draw(GameTime gameTime)** 이 메서드는 Update 메서드가 제공하는 위치를 사용하여 화면에 개체를 그립니다.
 
 ## <a name="draw-a-sprite"></a>스프라이트 그리기
@@ -254,7 +255,7 @@ public void Draw (SpriteBatch spriteBatch)
 **Draw** 메서드는 Game1.cs의 **Draw** 메서드에서 호출되며 게임 창에 스프라이트를 그리는 데 사용됩니다.
 
 ## <a name="user-input-and-animation"></a>사용자 입력 및 애니메이션
-앞에서 만든 SpriteClass를 사용하여 새로운 게임 개체를 두 개 만들겠습니다. 첫 번째 개체는 플레이어가 화살표 키와 스페이스바로 제어할 수 있는 아바타입니다. 두 번째는 플레이어가 피해야 하는 개체입니다.
+앞에서 만든 SpriteClass를 사용하여 새로운 게임 개체를 두 개 만들겠습니다. 첫 번째 개체는 플레이어가 화살표 키와 스페이스바로 제어할 수 있는 아바타입니다. 두 번째는 플레이어가 피해 야 하는 개체입니다.
 
 ### <a name="1-get-the-textures"></a>1. 텍스처 가져오기
 플레이어 아바타로는 믿음직한 티라노사우루스를 타고 있는 Microsoft 고유의 닌자 고양이를 사용하겠습니다. [이미지를 다운로드하려면 여기를 클릭하세요](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/ninja-cat-dino.png).
@@ -565,7 +566,7 @@ if (!gameStarted)
 
 먼저 문자열을 두 개 만듭니다. 그 중 하나는 우리가 그리려고 하는 각 텍스트 줄에 대한 것입니다. 다음으로 **SpriteFont.MeasureString(String)** 메서드를 사용하여 각 줄을 인쇄했을 때의 너비와 높이를 측정합니다. 그러면 **Vector2** 개체의 크기, 너비가 포함된 **X** 속성, 높이가 포함된 **Y** 속성을 구할 수 있습니다.
 
-마지막으로 각 줄을 그립니다. 텍스트를 가로 방향으로 가운데에 맞추기 위해 위치 벡터의 **X** 값을 **screenWidth / 2 - textSize.X / 2**로 맞춥니다.
+마지막으로 각 줄을 그립니다. 텍스트를 가로로 가운데에 양식이 위치 벡터의 **X** 값과 같습니다 **screenWidth / 2-textSize.X 2 /** 합니다.
 
 **과제:** 텍스트를 가로 방향뿐 아니라 세로 방향으로도 가운데에 맞추려면 위의 절차를 어떻게 변경해야 할까요?
 
@@ -576,7 +577,12 @@ if (!gameStarted)
 ## <a name="collision-detection"></a>충돌 감지
 플레이어 주변을 따라다니는 브로콜리와 브로콜리가 새로 생성될 때마다 올라가는 점수를 만들었습니다. 하지만 현재는 이 게임이 끝나는 조건이 없습니다. 공룡 스프라이트와 브로콜리 스프라이트의 충돌 여부를 확인하는 방법 그리고 두 스프라이트가 충돌할 경우 게임 종료를 선언하는 방법을 알아야 합니다.
 
-### <a name="1-rectangular-collision"></a>1. 사각형 충돌
+### <a name="1-get-the-textures"></a>1. 텍스처 가져오기
+필요한 마지막 이미지는 "게임 오버"에 대 한 하나입니다. [이미지를 다운로드하려면 여기를 클릭하세요](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/game-over.png).
+
+마찬가지로 하기 전에 녹색 사각형에 맞춰 닌자 고양이 브로콜리 이미지가이 이미지를 추가 **MonoGame 파이프라인**에 이름을 지정 "게임 over.png"를 통해 **Content.mgcb** 합니다.
+
+### <a name="2-rectangular-collision"></a>2. 사각형 충돌
 게임에서 충돌을 감지할 때 종종 관련 수식의 복잡성을 줄이기 위해 개체를 간소화하곤 합니다. 충돌을 감지하기 위해 플레이어 아바타와 브로콜리 장애물을 사각형으로 취급하겠습니다.
 
 **SpriteClass.cs**를 열고 새 클래스 변수를 추가합니다.
@@ -602,7 +608,7 @@ public bool RectangleCollision(SpriteClass otherSprite)
 
 이 메서드는 두 사각형 개체의 충돌을 감지합니다. 알고리즘은 사각형의 측면 사이 틈이 있는지 테스트 하 여 작동 합니다. 틈이 있으면 충돌하지 않은 것이고 틈이 없으면 충돌한 것입니다.
 
-### <a name="2-load-new-textures"></a>2. 새 텍스처 로드
+### <a name="3-load-new-textures"></a>3. 새 텍스처 로드
 
 그런 다음 **Game1.cs**를 열고 새로운 클래스 변수 두 개를 추가합니다. 하나는 게임 종료 스프라이트 텍스처를 저장하는 변수이고, 다른 하나는 게임 상태를 추적하는 부울입니다.
 
@@ -623,7 +629,7 @@ gameOver = false;
 gameOverTexture = Content.Load<Texture2D>("game-over");
 ```
 
-### <a name="3-implement-game-over-logic"></a>3. “게임 종료” 논리 구현
+### <a name="4-implement-game-over-logic"></a>4. "게임 종료" 논리를 구현 합니다.
 **Update** 메서드에서 **KeyboardHandler** 메서드가 호출되는 위치 바로 다음에 다음 코드를 추가합니다.
 
 ```CSharp
@@ -647,7 +653,7 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 
 이렇게 하면 우리가 **SpriteClass**에 만든 **RectangleCollision** 메서드가 호출되고, 만약 true 값이 반환되면 게임이 끝난 것으로 플래그가 지정됩니다.
 
-### <a name="4-add-user-input-for-resetting-the-game"></a>4. 게임 초기화를 위한 사용자 입력 추가
+### <a name="5-add-user-input-for-resetting-the-game"></a>5. 게임 초기화를 위한 사용자 입력을 추가 합니다.
 사용자가 Enter 키를 누를 경우 게임을 다시 설정 하는 **KeyboardHandler** 메서드에이 코드를 추가 합니다.
 
 ```CSharp
@@ -658,7 +664,7 @@ if (gameOver && state.IsKeyDown(Keys.Enter))
 }
 ```
 
-### <a name="5-draw-game-over-splash-and-text"></a>5. 게임 종료 화면 및 텍스트 그리기
+### <a name="6-draw-game-over-splash-and-text"></a>6. 게임 종료 화면 및 텍스트 그리기
 마지막으로 Draw 메서드에서 **spriteBatch.Draw**가 처음으로 호출되는 위치 바로 뒤에 다음 코드를 추가합니다(풀밭 텍스처를 그리는 호출이어야 함).
 
 ```CSharp
