@@ -2,30 +2,30 @@
 Description: You can submit apps to the Microsoft Store in over 100 languages.
 title: 지원되는 언어
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
-ms.date: 10/25/2018
+ms.date: 02/20/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d2e883fca2b5ca350322fc44c1de51a02aaa4d85
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 02a68cd325823bf671f7e0a99c64a899b17caddd
+ms.sourcegitcommit: a32f656253acc1e8b150919e73c886a59e65756a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938023"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "9083711"
 ---
 # <a name="supported-languages"></a>지원되는 언어
 
 
 100 개 이상 언어로 Microsoft Store에 앱을 제출할 수 있습니다.
 
-앱의 언어를 구성 하는 방법에 대 한 자세한 내용은 [이해 사용자 프로필 언어 및 앱 매니페스트 언어](../design/globalizing/manage-language-and-region.md)및 [세계화 및 지역화를](../design/globalizing/globalizing-portal.md) 참조 하세요. 여러 언어를 지원하는 앱을 작성하는 데 도움이 되는 [다국어 앱 도구 키트](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat)도 있습니다.
+앱의 언어를 구성 하는 방법에 대 한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md) 및 [이해 사용자 프로필 언어 및 앱 매니페스트 언어를](../design/globalizing/manage-language-and-region.md)참조 하세요. 여러 언어를 지원하는 앱을 작성하는 데 도움이 되는 [다국어 앱 도구 키트](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat)도 있습니다.
 
 ## <a name="supported-languages"></a>지원되는 언어
 
 
-이들은 Microsoft 스토어에서 지원 되는 언어입니다. 앱에 이러한 언어 중 하나를 지원 해야 합니다. 
+이 Microsoft 스토어를 지 원하는 언어입니다. 앱이 이러한 언어 중 하나 이상이 지원 해야 합니다. 
 
-여기에 포함 되지 않은 언어 코드 스토어에서 지원 되지 않습니다. 아래에 나열 되지 않은 언어 코드를 대상으로 하는 패키지를 포함 하지 않는 것이 좋습니다. 이러한 패키지는 고객에 게 배포 되지 않습니다 및 인증에서 지연 또는 오류가 발생할 수 있습니다.
+여기에 포함 되지 않은 언어 코드 저장소에서 지원 되지 않습니다. 아래에 나열 되지 않은 언어 코드를 대상으로 하는 패키지를 포함 하지 않는 것이 좋습니다. 이러한 패키지는 고객에 게 배포 되지 않습니다 및 인증에 지연 또는 오류가 발생할 수 있습니다.
 
 | 언어 이름         | 지원되는 언어 코드                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -43,7 +43,7 @@ ms.locfileid: "8938023"
 | 불가리아어             | bg, bg-bg                                                                                                                                                                                             |
 | 카탈로니아어               | ca, ca-es, ca-es-valencia                                                                                                                                                                             |
 | 체로키어              | chr-cher, chr-cher-us, chr-latn                                                                                                                                                                       |
-| 중국어(간체)  | zh, zh-Hans, zh-cn, zh-hans-cn, zh-sg, zh-hans-sg                                                                                                                                                     |
+| 중국어(간체)  | Zh-hans, cn 글꼴, 글꼴-hans-cn, sg 글꼴, 글꼴 hans sg                                                                                                                                                     |
 | 중국어(번체) | zh-Hant, zh-hk, zh-mo, zh-tw, zh-hant-hk, zh-hant-mo, zh-hant-tw                                                                                                                                      |
 | 크로아티아어              | hr, hr-hr, hr-ba                                                                                                                                                                                      |
 | 체코어                 | cs, cs-cz                                                                                                                                                                                             |
