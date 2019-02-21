@@ -1,17 +1,17 @@
 ---
 title: Windows 설정 앱 실행
-description: 앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
+description: 앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 체계를 통해 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
 ms.date: 1/8/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 92cfb1318f176e7d8adb8052c119a006389f49e5
-ms.sourcegitcommit: 158467c576c5924e1822d397bd449fc8251bf92f
+ms.openlocfilehash: 5a1f9d853e41642ca5f8027d42b49fcbc3122a66
+ms.sourcegitcommit: 6ba110be80bc343a1aecaf4361edcdb70278c0a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "8996078"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "9086661"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -103,7 +103,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-| 사용 권한 및 기록 | ms-settings:cortana-permissions |
+| 사용 권한 & 기록 | ms-settings:cortana-permissions |
 | 추가 정보 | ms-settings:cortana-moredetails |
 | 장치에서 Cortana | ms-settings:cortana-notifications |
 | Cortana에게 말하기 | ms-settings:cortana-language<br/>ms-cortana 설정:<br/>ms-설정: cortana-talktocortana |
@@ -136,7 +136,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 오디오 | ms-settings:easeofaccess-audio |
 | 선택 자막 | ms-settings:easeofaccess-closedcaptioning |
 | 색상 필터 | ms-설정: easeofaccess-colorfilter |
-| 커서 및 포인터 크기 | ms-설정: easeofaccess-cursorandpointersize |
+| 커서 & 포인터 크기 | ms-설정: easeofaccess-cursorandpointersize |
 | 디스플레이 | ms-settings:easeofaccess-display |
 | 아이 컨트롤 | ms-settings:easeofaccess-eyecontrol |
 | 글꼴 | ms-settings:fonts |
@@ -268,7 +268,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 배터리 절약 모드 설정 | ms-settings:batterysaver-settings(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 배터리 사용 | ms-settings:batterysaver-usagedetails(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 클립보드 | ms-설정: 클립보드 |
-| 디스플레이 | ms-settings:display |
+| Display | ms-settings:display |
 | 기본 저장 위치 | ms-settings:savelocations |
 | 디스플레이 | ms-settings:screenrotation |
 | 내 디스플레이 복제 | ms-settings:quietmomentspresentation |
@@ -288,7 +288,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 원격 데스크톱 | ms-settings:remotedesktop |
 | 휴대폰 | ms-설정: 휴대폰 (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
 | 전원 및 절전 | ms-settings:powersleep |
-| 소리 | ms-settings:sounds |
+| 소리 | ms-설정: 사운드 |
 | 저장소 | ms-settings:storagesense |
 | 저장소 센스 | ms-settings:storagepolicies |
 

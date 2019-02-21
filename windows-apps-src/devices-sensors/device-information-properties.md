@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ca733ef88eb8b575b8974f71f9395800d5de3875
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f2810221aca0399d037fc56f7f3ac783a2c0df12
+ms.sourcegitcommit: 6ba110be80bc343a1aecaf4361edcdb70278c0a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935175"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "9086671"
 ---
 # <a name="device-information-properties"></a>디바이스 정보 속성
 
@@ -153,7 +153,7 @@ ms.locfileid: "8935175"
 | **System.Devices.AepService.ParentAepIsPaired** | 부울 | 부모 **AssociationEndpoint** 개체가 시스템과 페어링되었는지 여부를 나타냅니다.                           |
 | **System.Devices.AepService.ProtocolId**        | GUID    | 이 장치를 검색하는 데 사용된 프로토콜의 ID입니다.                                                           |
 | **System.Devices.AepService.ServiceClassId**    | GUID    | 이 장치가 나타내는 서비스의 ID입니다.                                                             |
-| **System.Devices.AeoService.ServiceId**         | 문자열  | 이 서비스의 ID입니다. [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) 값이기도 합니다. |
+| **System.Devices.AepService.ServiceId**         | 문자열  | 이 서비스의 ID입니다. [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) 값이기도 합니다. |
 | **System.ItemNameDisplay**                      | 문자열  | 서비스의 가장 적합한 표시 이름입니다.                                                                           |
 
  
