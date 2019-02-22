@@ -8,12 +8,12 @@ keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5442dacb5c01bc6e22460e9d772ad73ba06b54e2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 70a9b6046e3b7be9ac84678ac21c0c9f89a4a7b2
+ms.sourcegitcommit: 1a4bbfb8495e2f414deac5ee050ab679a78b1717
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049940"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "9089755"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>데스크톱 응용 프로그램 패키지 (데스크톱 브리지)
 
@@ -127,13 +127,13 @@ Auto Packager는 설치/캡처, 런타임 분석을 사용, 응용 프로그램 
 
 #### <a name="firegiant"></a>FireGiant
 
-[FireGiant Appx extension](https://www.firegiant.com/products/wix-expansion-pack/appx)은 동일한 WiX 소스 코드로 동시에 Windows 앱 패키지와 MSI 패키지를 만들 수 있도록 도와줍니다. 를 빌드할 때마다 Windows 앱 패키지와 MSI 사용 하 여 Windows의 이전 버전 Windows 10으로 지정할 수 있습니다.
+[FireGiant MSIX 확장](https://www.firegiant.com/products/wix-expansion-pack/msix) 은 동일한 WiX 소스 코드에서 Windows 앱 패키지와 MSI 패키지를 동시에 만들 수 있습니다. 를 빌드할 때마다 Windows 앱 패키지와 MSI 사용 하 여 Windows의 이전 버전 Windows 10으로 지정할 수 있습니다.
 
 <img width="20%" src="images/desktop-to-uwp/FG3rdPartyLogo.png">
 
-FireGiant Appx 확장은 WiX 프로젝트의 지능형 에뮬레이션과 동적 분석을 사용, 컨테이너나 VM의 디스크 공간이나 런타임에 부담을 주지 않고 Windows 앱 패키지를 생성합니다.
+FireGiant MSIX 확장 정적 분석 및 WiX 프로젝트의 지능형 에뮬레이션을 사용 하 여 컨테이너 또는 가상 컴퓨터의 디스크 공간 및 런타임 오버 헤드 없이 Windows 앱 패키지를 생성 합니다.
 
-FireGiant Appx 확장은 설치 관리자를 변환하지 않기 때문에, Windows 앱 패키지로 반복해 변환하지 않고도 WiX 설치 관리자를 계속 유지할 수 있습니다. 여러 다른 버전의 Windows 사용자가 최신 향상을 얻을 수 있습니다. 또 MSI 및 Windows 앱 패키지가 동기화 되지 않는 문제를 걱정할 필요가 없습니다.
+FireGiant MSIX 확장 실행 하 여 설치 관리자를 변환 하지, 때문에 반복 해 서 Windows 앱 패키지를 변환 하지 않고도 WiX 설치 관리자를 유지할 수 있습니다. 여러 다른 버전의 Windows 사용자가 최신 향상을 얻을 수 있습니다. 또 MSI 및 Windows 앱 패키지가 동기화 되지 않는 문제를 걱정할 필요가 없습니다.
 
 체크 아웃이 [비디오](https://www.youtube.com/watch?v=AFBpdBiAYQE) 및 어떻게 몇 줄의 코드만으로 FireGiant CEO가 생성 인기 오픈 소스 7-zip 압축 도구의 Appx (Windows 앱 패키지) 버전 및 Windows 응용 프로그램 및 MSI 패키지를 모두 향상가 어떻게 참조 동일한 WiX 소스 코드에서 변경 됩니다.
 
