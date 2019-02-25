@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b11f927eca82e2c068f0210022893905b1503db
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: c0113f039ccd2d2df0c155b77295afef194018ce
+ms.sourcegitcommit: f7b8112a99097c7c8a76b028aef436d1a5c68cdb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049970"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "9099463"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows10 게임 개발 가이드
 
@@ -1512,21 +1512,6 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     <tr>
         <td>언어, 문화 및 기술 브리징</td>
         <td><a href="https://www.microsoft.com/Language/Default.aspx">언어 규칙 및 표준 Microsoft 용어에 대한 온라인 리소스</a></td>
-    </tr>
-</table>
-
-### <a name="security"></a>보안
-
-게이머가 공정하게 경쟁할 수 있는 게임 환경을 만듭니다. TruePlay에 등록된 게임은 보호된 프로세스에서 실행되기 때문에 일반적인 공격 수준을 완화할 수 있습니다. 또한 게임 모니터링 시스템은 일반적인 부정 행위 시나리오를 식별할 수 있도록 도와줍니다. 
-
-<table>
-    <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-    </colgroup>
-    <tr>
-        <td>PC 게임 내에서 부정 행위를 퇴치하기 위한 도구</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/mt808781">TruePlay</a></td>
     </tr>
 </table>
 
