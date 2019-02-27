@@ -6,12 +6,12 @@ ms.date: 08/01/2018
 ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store 컬렉션 API, Microsoft Store 구매 API, 제품 보기, 제품 권한 부여
 ms.localizationpriority: medium
-ms.openlocfilehash: a749550c1dc644c4a9fb3f91530503adf192246e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 0bf85a73cb35044b4be2282c9a13c1e65b836a92
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050263"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114509"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>서비스에서 제품 권한 관리
 
@@ -253,5 +253,5 @@ Microsoft Store ID 키는 액세스하려는 제품 소유권 정보의 소유�
 * [사용자의 구독 청구 상태 변경](change-the-billing-state-of-a-subscription-for-a-user.md)
 * [Microsoft Store ID 키 갱신](renew-a-windows-store-id-key.md)
 * [응용 프로그램과 Azure Active Directory 통합](https://go.microsoft.com/fwlink/?LinkId=722502)
-* [Azure Active Directory 응용 프로그램 매니페스트 이해]( http://go.microsoft.com/fwlink/?LinkId=722500)
+* [Azure Active Directory 응용 프로그램 매니페스트 이해]( https://go.microsoft.com/fwlink/?LinkId=722500)
 * [지원되는 토큰 및 클레임 유형](https://go.microsoft.com/fwlink/?LinkId=722501)

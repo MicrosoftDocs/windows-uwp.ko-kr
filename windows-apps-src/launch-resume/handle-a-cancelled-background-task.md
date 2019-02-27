@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 2c8bb1e352fe4924b45fd56963de324528269a12
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 1feffac4d9b616c2fadff0080c3282e4200f3be7
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044477"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114439"
 ---
 # <a name="handle-a-cancelled-background-task"></a>취소된 백그라운드 작업 처리
 
@@ -85,7 +85,7 @@ private:
 
 1 단계에서 만든 **OnCanceled** 메서드에서 **\_CancelRequested** 플래그 변수 **true로**설정 합니다.
 
-**OnCanceled** 메서드 전체 [백그라운드 작업 샘플]( http://go.microsoft.com/fwlink/p/?linkid=227509) **\_CancelRequested** 를 **true** 로 설정 하 고 잠재적으로 유용한 디버그 출력을 씁니다.
+**OnCanceled** 메서드 전체 [백그라운드 작업 샘플]( https://go.microsoft.com/fwlink/p/?linkid=227509) **\_CancelRequested** 를 **true** 로 설정 하 고 잠재적으로 유용한 디버그 출력을 씁니다.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)

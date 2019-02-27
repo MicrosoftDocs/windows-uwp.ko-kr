@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 3527cae294f2268b2457b9fe9a6593cf1b539ee8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 4d10dbf52f0ed01d46f9e5cba83cd14d48bfc88d
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050150"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114559"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>JavaScript로 UWP 게임 만들기
 
@@ -88,7 +88,7 @@ EaselJS는 *스테이지*라고 하는 새로운 개체를 제공합니다. 스�
 
 ### <a name="2-loading-the-bitmaps"></a>2. 비트맵 로드
 
-EaselJS는 여러 종류의 그래픽 개체를 제공합니다. 하늘에 사용되는 파란색 사각형 같은 간단한 셰이프, 잠시 후 우리가 추가할 구름 같은 비트맵, 텍스트 개체 그리고 스프라이트를 만들 수 있습니다. 스프라이트 사용 (SpriteSheet) [http://createjs.com/docs/easeljs/classes/SpriteSheet.html]: 여러 이미지가 들어 있는 단일 비트맵인 합니다. 예를 들어 이 SpriteSheet를 사용하여 공룡 애니메이션의 여러 프레임을 저장합니다.
+EaselJS는 여러 종류의 그래픽 개체를 제공합니다. 하늘에 사용되는 파란색 사각형 같은 간단한 셰이프, 잠시 후 우리가 추가할 구름 같은 비트맵, 텍스트 개체 그리고 스프라이트를 만들 수 있습니다. 스프라이트 사용 (SpriteSheet) [https://createjs.com/docs/easeljs/classes/SpriteSheet.html]: 여러 이미지가 들어 있는 단일 비트맵인 합니다. 예를 들어 이 SpriteSheet를 사용하여 공룡 애니메이션의 여러 프레임을 저장합니다.
 
 ![Walking Dino 스프라이트 시트](images/JS2D_4.png)
 

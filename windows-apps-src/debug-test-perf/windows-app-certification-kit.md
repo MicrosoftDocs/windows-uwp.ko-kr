@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: e3c8729a6d2ac828f3d7b257681d64f4c7834587
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: b480e96621e143e283a2556bdbef394aaf7dbc07
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048873"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114469"
 ---
 # <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 
@@ -24,13 +24,13 @@ ms.locfileid: "9048873"
 유니버설 Windows 앱을 테스트하기 위한 필수 구성 요소:
 
 -   설치 하 고 windows 10을 실행 해야 합니다.
--   [Windows 앱 인증 키트 버전 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666), windows 10에 대 한 Windows 소프트웨어 개발 키트 (SDK)에 포함 된 설치 해야 합니다.
+-   [Windows 앱 인증 키트 버전 10]( https://go.microsoft.com/fwlink/p/?LinkID=309666), windows 10에 대 한 Windows 소프트웨어 개발 키트 (SDK)에 포함 된 설치 해야 합니다.
 -   [개발을 위해 디바이스를 사용](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)하도록 설정해야 합니다.
 -   테스트할 Windows 앱을 컴퓨터에 배포해야 합니다.
 
 **현재 위치 업그레이드에 대한 참고 사항**
 
-최신 [Windows 앱 인증 키트]( http://go.microsoft.com/fwlink/p/?LinkID=309666)를 설치하면 컴퓨터에 설치되어 있는 이전 버전의 키트가 대체됩니다.
+최신 [Windows 앱 인증 키트]( https://go.microsoft.com/fwlink/p/?LinkID=309666)를 설치하면 컴퓨터에 설치되어 있는 이전 버전의 키트가 대체됩니다.
 
 ## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-interactively"></a>대화식으로 Windows 앱 인증 키트를 사용하여 Windows 앱의 유효성 검사
 

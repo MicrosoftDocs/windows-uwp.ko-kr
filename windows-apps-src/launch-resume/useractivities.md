@@ -5,12 +5,12 @@ keywords: 사용자 활동, 사용자 활동, 타임라인, cortana 사용자의
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e1c2a3da3711bbc5335a9c44a4b280e3934adac
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 2756231b067176da66c6dbcedf7a1452d5d109f4
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046203"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114549"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>장치 간 사용자 활동 계속 수행
 
@@ -34,7 +34,7 @@ ms.locfileid: "9046203"
 
 1. [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri#Windows_ApplicationModel_UserActivities_UserActivity_ActivationUri)를 사용하여 특정 컨텍스트로 응용 프로그램을 다시 시작합니다. 일반적으로 이 링크는 스키마에 대한 프로토콜 처리기 양식(예: “my-app://page2?action=edit”) 또는 AppUriHandler 양식(예: http://constoso.com/page2?action=edit)을 사용합니다.
 2. [VisualElements](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.visualelements)는 사용자가 제목, 설명 또는 적응형 카드 요소로 활동을 시각적으로 식별할 수 있는 클래스를 노출합니다.
-3. 마지막으로 [Content](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content)에는 특정 컨텍스트에서 활동을 그룹화하고 검색하는 데 사용할 수 있는 활동 메타데이터를 저장할 수 있습니다. 여기서는 종종 [http://schema.org](https://schema.org) 데이터 양식을 사용합니다.
+3. 마지막으로 [Content](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content)에는 특정 컨텍스트에서 활동을 그룹화하고 검색하는 데 사용할 수 있는 활동 메타데이터를 저장할 수 있습니다. 여기서는 종종 [https://schema.org](https://schema.org) 데이터 양식을 사용합니다.
 
 앱에 **UserActivity**를 추가하려면 다음과 같이 합니다.
 
@@ -165,7 +165,7 @@ Microsoft 계정을 사용하여 응용 프로그램 또는 서비스를 인증�
 
 * [UserActivities 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 
-## <a name="related-topics"></a>관련 항목
+## <a name="related-topics"></a>관련 주제
 
 * [사용자 활동 (프로젝트 "로마" 문서)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [적응형 카드](https://docs.microsoft.com/adaptive-cards/)

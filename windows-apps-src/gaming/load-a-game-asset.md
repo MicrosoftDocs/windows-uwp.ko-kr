@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 리소스 로드
 ms.localizationpriority: medium
-ms.openlocfilehash: ca16dd6115bbbe84529928ca58ee0d3074498728
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 478c61713dfcf5bc8a420aa71b0dced81ed6a169
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937212"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114589"
 ---
 # <a name="load-resources-in-your-directx-game"></a>DirectX 게임에 리소스 로드
 
@@ -690,7 +690,7 @@ task<void> BasicLoader::LoadShaderAsync(
 
 이 코드에서 지점 셰이더의 CSO 파일에 대한 바이트 데이터를 읽고 나면 [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524)를 호출하여 꼭짓점 셰이더를 만듭니다. 그런 다음 동일한 람다로 셰이더의 입력 레이아웃을 만듭니다.
 
-헐(hull) 및 기하 도형 셰이더 등, 다른 셰이더 형식에도 특정 구성이 필요할 수 있습니다. 다양한 셰이더 로딩 메서드에 대한 전체 코드는 [BasicLoader의 전체 코드](complete-code-for-basicloader.md) 및 [Direct3D 리소스 로딩 샘플]( http://go.microsoft.com/fwlink/p/?LinkID=265132)에 제공됩니다.
+헐(hull) 및 기하 도형 셰이더 등, 다른 셰이더 형식에도 특정 구성이 필요할 수 있습니다. 다양한 셰이더 로딩 메서드에 대한 전체 코드는 [BasicLoader의 전체 코드](complete-code-for-basicloader.md) 및 [Direct3D 리소스 로딩 샘플]( https://go.microsoft.com/fwlink/p/?LinkID=265132)에 제공됩니다.
 
 ## <a name="remarks"></a>설명
 
@@ -698,7 +698,7 @@ task<void> BasicLoader::LoadShaderAsync(
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Direct3D 리소스 로드 샘플]( http://go.microsoft.com/fwlink/p/?LinkID=265132)
+* [Direct3D 리소스 로드 샘플]( https://go.microsoft.com/fwlink/p/?LinkID=265132)
 * [BasicLoader의 전체 코드](complete-code-for-basicloader.md)
 * [BasicReaderWriter의 전체 코드](complete-code-for-basicreaderwriter.md)
 * [DDSTextureLoader의 전체 코드](complete-code-for-ddstextureloader.md)

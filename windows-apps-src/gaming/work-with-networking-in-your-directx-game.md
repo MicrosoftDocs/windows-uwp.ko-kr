@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 네트워킹, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d9675d59a727829946a7ef2a7d4f3780db36bee
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: e3dc77b48feb0c7ceba9fa3cede82c1a44687d0d
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044803"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114629"
 ---
 # <a name="networking-for-games"></a>게임의 네트워킹
 
@@ -389,6 +389,6 @@ using namespace Windows::Web::Http;
 **샘플**
 
 * [DatagramSocket 샘플](https://go.microsoft.com/fwlink/p/?LinkID=243037)
-* [HttpClient 샘플]( http://go.microsoft.com/fwlink/p/?linkid=242550)
+* [HttpClient 샘플]( https://go.microsoft.com/fwlink/p/?linkid=242550)
 * [근접 연결 샘플](https://go.microsoft.com/fwlink/p/?linkid=245082)
 * [StreamSocket 샘플](https://go.microsoft.com/fwlink/p/?linkid=243037)

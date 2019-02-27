@@ -6,12 +6,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, fiddler, 서비스 호출, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 52660fa90b9771d956ff710cb1b5295d4d8fa975
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 84c6717a4f9f5aff9fd3ff1f68c870fdd9174865
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050378"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114431"
 ---
 # <a name="troubleshooting-xbox-live-using-fiddler"></a>Xbox Live Fiddler를 사용 하 여 문제 해결
 
@@ -20,7 +20,7 @@ Fiddler는 웹 디버깅 프록시 디바이스와 인터넷 간의 모든 HTTP 
 ## <a name="for-windows-uwp-pc-apps"></a>Windows UWP PC 앱
 
 1. 현재 사용자가 PC에 관리자 그룹에 있는지 확인
-1. Fiddler에서 다운로드[http://www.telerik.com/fiddler](https://www.telerik.com/fiddler)
+1. Fiddler에서 다운로드[https://www.telerik.com/fiddler](https://www.telerik.com/fiddler)
 1. "빌드되는.NET 4" 버전을 선택 했는지 확인
 1. 설치 되 면 도구 >Fiddler 옵션으로 이동 하 고 HTTPS 연결 캡처 및 암호 해독 HTTPS 트래픽을 합니다.  런타임 및 Xbox LIVE 서비스 간의 모든 통신에 SSL 암호화 됩니다.  이 옵션 없이 유용한 기능을 전혀 표시 되지 않습니다.  Fiddler 팝업 해야 수 5 대화 상자 등 UAC 모든 대화 상자를 수락 합니다.
 1. "WinConfig", "제외 모두" 및 "변경 내용을 저장"으로 이동 합니다.  그렇지 않은 경우 스토어 앱을 사용 하 여 Fiddler 작동 하지 않습니다.

@@ -6,12 +6,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: bec5b694d86f41f3a4b1f5e7fb3119b4945d14f9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 4a9efeec63399916444de9ba33d4e587a914f2a7
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049021"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114425"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---november-2016"></a>새로운 기능에 대 한 Xbox Live SDK-2016 년 11 월
 
@@ -61,5 +61,5 @@ ms.locfileid: "9049021"
 * [Xbox Live 소개](../get-started-with-partner/get-started-with-xbox-live-partner.md) 섹션 재작성 했습니다.  새 문서를 볼 수 새 Xbox Live가 지원 타이틀을 만드는 다른 Xbox Live 기능 게임에 통합 궁금한 경우 [다음과 같습니다](../get-started-with-partner/get-started-with-xbox-live-partner.md).
 
 ## <a name="tools"></a>도구
-* Xbox Live 추적 분석기에서 찾을 수 있습니다 [http://aka.ms/XboxLiveTools](https://aka.ms/XboxLiveTools) 인증서 모드 되었습니다.  
+* Xbox Live 추적 분석기에서 찾을 수 있습니다 [https://aka.ms/XboxLiveTools](https://aka.ms/XboxLiveTools) 인증서 모드 되었습니다.  
 * 또한 Xbox Live 추적 분석기의 여러 콘솔 지원이입니다.  여러 콘솔에 대 한 HTTP 요청을 포함 하는 Fiddler 추적에 전달 하는 경우 각각에 대해 별도 보고서 생성 됩니다.

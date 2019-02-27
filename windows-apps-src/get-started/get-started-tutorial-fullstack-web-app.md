@@ -5,12 +5,12 @@ keywords: 호스트된 웹앱, HWA, REST API, 단일 페이지 앱, SPA
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fa606da245c3506c8b4125edeb1edfc47f6aab0d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: f60eb37d7bff1187e282f5af2207c6df92f4ec24
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049550"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114579"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>REST API 백 엔드를 사용하는 단일 페이지 생성
 
@@ -209,7 +209,7 @@ Server.listen(port, function () {  // Starts server with our modfied port settin
 ]
 ```
 
-이제 F5를 누르고 브라우저에서 [http://localhost:8000](https://localhost:8000)을 엽니다. 이 페이지는 기억력 게임 API를 위한 Swagger UI를 엽니다. 여기에서 각 메서드에 대한 세부 정보와 입력 필드를 확장할 수 있습니다. API 호출 시도도 할 수 있지만, 응답에는 [Swagmock](https://www.npmjs.com/package/swagmock) 모듈에서 제공하는 실험 데이터만 포함됩니다. 이제 이러한 API를 실제 API로 만들기 위해 게임 논리를 추가할 시간입니다.
+이제 F5를 누르고 브라우저에서 [https://localhost:8000](https://localhost:8000)을 엽니다. 이 페이지는 기억력 게임 API를 위한 Swagger UI를 엽니다. 여기에서 각 메서드에 대한 세부 정보와 입력 필드를 확장할 수 있습니다. API 호출 시도도 할 수 있지만, 응답에는 [Swagmock](https://www.npmjs.com/package/swagmock) 모듈에서 제공하는 실험 데이터만 포함됩니다. 이제 이러한 API를 실제 API로 만들기 위해 게임 논리를 추가할 시간입니다.
 
 ### <a name="3-set-up-your-route-handlers"></a>3. 경로 처리기 설정
 
@@ -235,7 +235,7 @@ Swagger 파일(config\swagger.json)은 처리기 파일(\handlers 내)로 정의
 
 간소화를 위해, 게임 보드를 노드 서버의 글로벌 변수(`global.board`)에 저장합니다. 하지만 실제로는 Google [클라우드 데이터 저장소](https://cloud.google.com/datastore/) 또는 Azure [DocumentDB](https://azure.microsoft.com/en-us/services/documentdb/) 같은 클라우드 저장소를 사용하여 이 변수를 여러 게임과 플레이어를 동시에 지원하는 기억력 게임 API 서비스로 만들 것입니다.
 
-VS 코드에 모든 변경 사항이 저장되었는지 확인하고 서버를 다시 시작(VS 코드에서 F5 또는 셸에서 `npm start`를 입력하고 [http://localhost:8000](https://localhost:8000) 검색)하여 게임 API를 테스트합니다.
+VS 코드에 모든 변경 사항이 저장되었는지 확인하고 서버를 다시 시작(VS 코드에서 F5 또는 셸에서 `npm start`를 입력하고 [https://localhost:8000](https://localhost:8000) 검색)하여 게임 API를 테스트합니다.
 
 **Try it out!** 단추를 **/game**, **/guess** 또는 **/new** 작업에서 누를 때마다 모든 작업이 기대한 대로 작동하는지 확인하는 아래의 **Response Body** 및 **Response Code** 결과 확인이 수행됩니다.
 
@@ -333,7 +333,7 @@ Express를 사용하여 Node.js 프로젝트 만들기를 시작합니다.
     npm start
     ```
 
-5. [http://localhost:3000/](https://localhost:3000/)으로 이동하여 응용 프로그램을 확인합니다.
+5. [https://localhost:3000/](https://localhost:3000/)으로 이동하여 응용 프로그램을 확인합니다.
 
     ![http://localhost:3000/의 스크린샷](./images/express.png)
 
@@ -620,7 +620,7 @@ memory\public\stylesheets의 style.css 파일을 Start 폴더의 style.css 파�
 
 1. memory 디렉터리에서 명령 프롬프트를 열고 다음 명령을 입력합니다. `npm start`
 
-2. 브라우저에서 [http://localhost:3000/](https://localhost:3000/)으로 이동하여 게임을 플레이합니다!
+2. 브라우저에서 [https://localhost:3000/](https://localhost:3000/)으로 이동하여 게임을 플레이합니다!
 
 3. 오류가 발생할 경우, 키보드에서 F5를 누르고 `Node.js`를 입력하여 Visual Studio Code의 Node.js 디버깅 도구를 사용할 수 있습니다. Visual Studio Code의 디버깅에 대한 자세한 내용은 이 [문서](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations)를 확인하세요. 
 

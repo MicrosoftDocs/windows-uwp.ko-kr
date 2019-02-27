@@ -6,12 +6,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox 서비스 구성
 ms.localizationpriority: medium
-ms.openlocfilehash: eb086333518fb8ec57c3030a858662f74f755c76
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: d12c66e61a189c13ddbcd96dd99caa351206ecf6
+ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049034"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9114428"
 ---
 # <a name="xbox-live-service-configuration"></a>Xbox Live 서비스 구성
 
@@ -31,7 +31,7 @@ Xbox Live 크리에이터 스 프로그램의 일부로 개발 타이틀 인 경
 
 ## <a name="choose-your-development-portal"></a>개발 포털 선택
 
-위에서 설명한 대로 Xbox Live 서비스를 구성 하는 사용할 수 있는 두 개의 서로 다른 포털 있습니다. 파트너 센터에서 [https://partner.microsoft.com/dashboard](https://partner.microsoft.com/dashboard) Xbox 개발 포털 (XDP)에서 [http://xdp.xboxlive.com](https://xdp.xboxlive.com).
+위에서 설명한 대로 Xbox Live 서비스를 구성 하는 사용할 수 있는 두 개의 서로 다른 포털 있습니다. 파트너 센터에서 [https://partner.microsoft.com/dashboard](https://partner.microsoft.com/dashboard) Xbox 개발 포털 (XDP)에서 [https://xdp.xboxlive.com](https://xdp.xboxlive.com).
 
 그 이후에 모든 제목에 대 한 파트너 센터는 것이 좋습니다. 하지만 특정 기능을 여전히 하려는 경우 XDP 사용 합니다. 이 섹션에서는 타이틀을 구성 하는 위치를 알리는 데 도움이 됩니다.
 
