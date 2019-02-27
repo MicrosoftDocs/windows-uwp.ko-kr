@@ -2,15 +2,15 @@
 title: 2018 년 5 월 Windows 문서의 새로운 내용-UWP 앱 개발
 description: 새로운 기능, 동영상 및 개발자 지침 2018 년 5 월에 대 한 Windows 10 개발자 설명서 및 Microsoft 빌드 회의에 추가한 합니다.
 keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 5 월 빌드
-ms.date: 5/7/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: be67c83a986602318adf995bae35c09e5a7a4997
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 69df2bbe8bc91fcf4a2631c0f257fc44851c24f2
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048670"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116225"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>2018 년 5 월의에서 새로운 Windows 개발자 문서의 내용
 
@@ -99,7 +99,7 @@ Sets 기능은 Windows Insider preview 빌드에 사용할 수 있습니다. Set
 
 ## <a name="developer-guidance"></a>개발자 지침
 
-### <a name="get-started"></a>시작
+### <a name="get-started"></a>시작하기
 
 우리의 Get revitalized 했습니다에서는 새로운 학습 트랙을 사용 하 여 콘텐츠를 시작 합니다. 이러한 새 항목에 대 한 정보 몇 가지 일반적인 작업을 수행 하려고 새로운 Windows 10 개발자에 게 제공을 목표로 합니다. 자습서 들지 및 핸드 연습을 제공 하지 않는 되지만 기존 설명서가 있는 경우 및 사용 하는 방법 대신 지적 합니다. [코딩 시작](../get-started/create-uwp-apps.md) 혁신적 체크아웃 페이지 또는 각 개별 학습 트랙을 살펴보세요.
 

@@ -6,12 +6,12 @@ ms.date: 01/28/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xbox 통합된 멀티 플레이어, xim, 채팅
 ms.localizationpriority: medium
-ms.openlocfilehash: ab7aca94ca491cd986fcff050e17da5fed1f2ea9
-ms.sourcegitcommit: 9b0f9c8854277d2e786e9294af3a2b559aa457a8
+ms.openlocfilehash: 82b38b8d0d94e4cccf501a101faee0e28a6b43c0
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "9099312"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117546"
 ---
 # <a name="using-xim-as-a-dedicated-chat-solution-via-out-of-band-reservations"></a>대역 외 예약을 통해 전용 채팅 솔루션으로 XIM 사용
 
@@ -23,13 +23,6 @@ ms.locfileid: "9099312"
 
 후속 항목 XIM에서 대역의 예약을 활용 하는 방법에 설명 합니다. 이전 섹션에 설명 된 "표준" XIM 사용에서 비교적 적은 차이로 인해 일부 토론 축약 됩니다. [XIM 사용 하 여](using-xim.md) 익숙한 것이 좋습니다.
 
-항목:
-
-1. [새 예약의 대역 XIM 네트워크로 이동](#moving)
-1. [대역의 예약을 사용 하 여 관리 플레이어를 XIM 네트워크에 추가](#adding)
-1. [대역의 예약을 사용 하 여 관리 XIM 네트워크에서 채팅 대상 구성](#targets)
-1. [대역의 예약을 사용 하 여 관리 플레이어가 XIM 네트워크에서 제거](#remove)
-1. [대역의 예약을 사용 하 여 관리 XIM 네트워크를 정리](#clean)
 
 ## <a name="moving-to-a-new-out-of-band-reservation-xim-network"></a>새 예약의 대역 XIM 네트워크로 이동
 

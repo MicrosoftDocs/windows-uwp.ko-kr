@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4de36ba8c87c764ff1280e2c886d1ff8692b3246
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 7b8bb652c3d8b978d631da2e529662a455310458
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046037"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117853"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Windows 런타임 8.x XAML 및 UI를 UWP로 포팅
 
@@ -86,7 +86,7 @@ ms.locfileid: "9046037"
 
 ## <a name="controls-and-control-styles-and-templates"></a>컨트롤과 컨트롤 스타일 및 템플릿
 
-Windows 10에서 실행 되는 유니버설 8.1 앱은 8.1 모양 및 컨트롤에 대 한 동작을 유지 합니다. 하지만 해당 앱을 windows 10 앱에 포팅하는 경우 일부의 차이점이 있습니다 모양 및 동작을 고려해 야 합니다. 아키텍처 및 컨트롤의 디자인은 [디자인 언어](#design-language-in-windows-10), 간소화 및 유용성 주위 주로 변경 기본적으로 windows 10 앱에 대 한 변경 되지 않습니다.
+Windows 10에서 실행 되는 유니버설 8.1 앱은 8.1 모양 및 컨트롤에 대 한 동작을 유지 합니다. 하지만 해당 앱을 windows 10 앱에 포팅하는 경우 일부의 차이점이 있습니다 모양 및 동작을 고려해 야 합니다. 아키텍처 및 컨트롤의 디자인은 대부분의 디자인 언어, 간소화 및 유용성 향상 주위 변경 기본적으로 windows 10 앱에 대 한 변경 되지 않습니다.
 
 **참고**  PointerOver 시각적 상태는 사용자 지정 스타일/템플릿이 windows 10 앱 및 Windows 런타임 8.x 앱 하지만 Windows Phone 스토어 앱에 없는 합니다. 이러한 이유로 (그리고 때문에 windows 10 앱에 대 한 지원 되는 시스템 리소스 키)를 다시 사용 하는 사용자 지정 스타일/템플릿이 Windows 런타임 8.x 앱에서 앱을 windows 10으로 포팅할 때 하는 것이 좋습니다.
 확인 하려는 경우 사용자 지정 스타일/템플릿이 최신 시각적 상태 집합을 사용 하는 및 기본 스타일/템플릿에 수행한 성능 개선 으로부터 이점을 얻도록 다음 새 windows 10 기본 템플릿의 복사본을 편집 하 고 다시 적용 합니다 사용자 지정 합니다. 성능 개선의 한 가지 예는 이전에 **ContentPresenter** 또는 패널을 묶은 **Border**가 제거되었으며 이제 자식 요소가 테두리를 렌더링한다는 점입니다.
@@ -122,7 +122,7 @@ UWP 앱 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://ms
 
 ##  <a name="design-language-in-windows10"></a>Windows 10의 디자인 언어
 
-유니버설 8.1 앱과 windows 10 앱 사이의 디자인 언어의 몇 가지 작지만 중요 한 차이점이 있습니다. 자세한 내용은 [디자인](https://dev.windows.com/design)을 참조하세요. 디자인 언어의 변경에도 불구하고 디자인 원칙은 일관되게 유지됩니다. 즉, 세부 정보에 신경을 쓰지만 항상 크롬이 아니라 콘텐츠에 집중하여 간결함을 추구하며, 시각적 요소를 적극적으로 최소화하고, 디지털 도메인에 대한 인증 상태를 유지하며, 특히 입력 체계에 시각적 계층 구조를 사용하며, 그리드에 디자인을 사용하고 유연한 애니메이션을 사용하여 독창적인 사용자 환경을 제공합니다.
+유니버설 8.1 앱과 windows 10 앱 사이의 디자인 언어의 몇 가지 작지만 중요 한 차이점이 있습니다. 자세한 내용은 [디자인](https://developer.microsoft.com/en-us/windows/apps/design)을 참조하세요. 디자인 언어의 변경에도 불구하고 디자인 원칙은 일관되게 유지됩니다. 즉, 세부 정보에 신경을 쓰지만 항상 크롬이 아니라 콘텐츠에 집중하여 간결함을 추구하며, 시각적 요소를 적극적으로 최소화하고, 디지털 도메인에 대한 인증 상태를 유지하며, 특히 입력 체계에 시각적 계층 구조를 사용하며, 그리드에 디자인을 사용하고 유연한 애니메이션을 사용하여 독창적인 사용자 환경을 제공합니다.
 
 ## <a name="effective-pixels-viewing-distance-and-scale-factors"></a>유효 픽셀, 가시거리 및 배율 인수
 
@@ -247,7 +247,7 @@ Windows 10에 대 한 디자인 언어가 발전 하 고 특정 시스템 스타
 
 다른 경우에는 리소스 키가 더 이상 지원되지 않습니다. Visual Studio의 XAML 태그 편집기는 확인할 수 없는 리소스 키에 대한 참조를 강조 표시합니다. 예를 들어 XAML 태그 편집기에서는 스타일 키 `ListViewItemTextBlockStyle`에 대한 참조에 빨간색 구부러진 곡선으로 밑줄을 표시합니다. 문제가 수정되지 않은 경우 해당 키를 에뮬레이터 또는 장치에 배포하려고 하면 앱이 즉시 종료됩니다. 따라서 XAML 태그가 정확한지 유의해야 합니다. Visual Studio는 이러한 문제를 식별하는 데 유용한 도구입니다.
 
-계속 지원되는 키의 경우 디자인 언어의 변경은 일부 스타일에서 설정한 속성이 변경되었음을 의미합니다. 예를 들어 `TitleTextBlockStyle` Windows 런타임 8.x 앱에서 14.667px 및 Windows Phone 스토어 앱에서 18.14px **FontSize** 으로 설정 합니다. 하지만 동일한 스타일 **FontSize** windows 10 앱에서 훨씬 더 큰 24px로 설정 합니다. 디자인 및 레이아웃을 검토하고 올바른 위치에 적절한 스타일을 사용하세요. 자세한 내용은 [글꼴에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) 및 [UWP 앱 디자인](https://dev.windows.com/design)을 참조하세요.
+계속 지원되는 키의 경우 디자인 언어의 변경은 일부 스타일에서 설정한 속성이 변경되었음을 의미합니다. 예를 들어 `TitleTextBlockStyle` Windows 런타임 8.x 앱에서 14.667px 및 Windows Phone 스토어 앱에서 18.14px **FontSize** 으로 설정 합니다. 하지만 동일한 스타일 **FontSize** windows 10 앱에서 훨씬 더 큰 24px로 설정 합니다. 디자인 및 레이아웃을 검토하고 올바른 위치에 적절한 스타일을 사용하세요. 자세한 내용은 [글꼴에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) 및 [UWP 앱 디자인](https://developer.microsoft.com/en-us/windows/apps/design)을 참조하세요.
 
 다음은 더 이상 지원되지 않는 키의 전체 목록입니다.
 

@@ -8,12 +8,12 @@ ms.date: 07/28/2017
 ms.topic: article
 keywords: windows 10, uwp, 타일, 타일 알림, 타일 콘텐츠, 스키마, 타일 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 02ac975ae3893b1d3d591133862d0ff3733cca6b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f12f1c2b6ac158b6f8e837fd3d6a64f96939ed99
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925141"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117733"
 ---
 # <a name="tile-content-schema"></a>타일 콘텐츠 스키마
 
@@ -67,7 +67,7 @@ TileContent는 시각적 개체를 포함한 타일 알림의 콘텐츠를 설�
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
 | **콘텐츠** | [ITileBindingContent](#itilebindingcontent) | false | 타일에 표시할 시각적 콘텐츠입니다. [TileBindingContentAdaptive](#tilebindingcontentadaptive), [TileBindingContentIconic](#TileBindingContentIconic), [TileBindingContentContact](#TileBindingContentContact), [TileBindingContentPeople](#TileBindingContentPeople) 또는 [TileBindingContentPhotos](#TileBindingContentPhotos) 중 하나입니다. |
-| **브랜딩** | [TileBranding](#tilebranding) | false | 타일이 앱의 브랜드를 표시하는 데 사용해야 하는 형식입니다. 기본적으로 브랜딩은 기본 타일에서 상속됩니다. |
+| **브랜딩** | TileBranding | false | 타일이 앱의 브랜드를 표시하는 데 사용해야 하는 형식입니다. 기본적으로 브랜딩은 기본 타일에서 상속됩니다. |
 | **DisplayName** | 문자열 | false | 이 타일 크기에 대한 타일의 표시 이름을 재정의하기 위한 선택적 문자열입니다. |
 | **인수** | string | false | 1주년 업데이트의 새로운 기능: 사용자가 Live Tile에서 앱을 시작할 경우 LaunchActivatedEventArgs의 TileActivatedInfo 속성을 통해 앱에 다시 전달되는 앱 정의 데이터입니다. 이를 통해 사용자가 Live Tile을 탭했을 때 사용자에게 어떤 타일 알림이 표시되었는지 알 수 있습니다. 기념일 업데이트를 하지 않은 디바이스에서는 이 기능이 무시됩니다. |
 | **BaseUri** | URI | false | 이미지 소스 특성에 상대 URL과 결합되는 기본 기준 URL입니다. |
@@ -92,7 +92,7 @@ TileContent는 시각적 개체를 포함한 타일 알림의 콘텐츠를 설�
 
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
-| **Children** | IList<[ITileBindingContentAdaptiveChild](#ITileBindingContentAdaptiveChild)> | false | 인라인 시각 요소입니다. [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage), [AdaptiveGroup](#adaptivegroup) 개체를 추가할 수 있습니다. 하위 항목은 수직 StackPanel 방식으로 표시됩니다. |
+| **Children** | IList<ITileBindingContentAdaptiveChild> | false | 인라인 시각 요소입니다. [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage), [AdaptiveGroup](#adaptivegroup) 개체를 추가할 수 있습니다. 하위 항목은 수직 StackPanel 방식으로 표시됩니다. |
 | **BackgroundImage** | [TileBackgroundImage](#tilebackgroundimage) | false | 모든 타일 콘텐츠 뒤에 전체적으로 표시되는 배경 이미지 옵션입니다. |
 | **PeekImage** | [TilePeekImage](#tilepeekimage) | false | 타일 맨 위에서부터 애니메이션으로 표현되는 미리 보기 이미지 옵션입니다. |
 | **TextStacking** | [TileTextStacking](#tiletextstacking) | false | 하위 항목 콘텐츠 전체의 텍스트 스택(수직 정렬)를 제어합니다. |

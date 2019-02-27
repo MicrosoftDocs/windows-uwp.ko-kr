@@ -6,12 +6,12 @@ ms.date: 01/31/2019
 ms.topic: article
 keywords: Windows 10, uwp, 세금, 앱 세금, 세금 요구 사항, 상거래 확장, 세율
 ms.localizationpriority: medium
-ms.openlocfilehash: cf57fa923297b8e4a57d7c5ca4668868bfae7038
-ms.sourcegitcommit: b9ee49402db7a8999cade1c5cf7f7b6ac4d783db
+ms.openlocfilehash: e5ada027b835e852d1db728ef124a798540abdf7
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042493"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117763"
 ---
 # <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Windows 응용 프로그램/게임 개발자와 Azure 마켓플레이스 게시자의 세금 세부 정보
 
@@ -223,7 +223,7 @@ ms.locfileid: "9042493"
 | 슬로베니아                         | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다. 지급 전에 가격에서 세금이 공제됩니다.              | (선택한 가격에서 22% 세금을 뺀 금액)의 70% | Microsoft          |
 | 솔로몬 제도                  | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 | 소말리아                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
-| 남아프리카 공화국                     | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다. [이 국가의 세금 고려 사항에 대해 자세히 읽어보세요.](#mixed-remittance-countriesregions) | 선택한 가격의 70%                 | 개발자          |
+| 남아프리카 공화국                     | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다. [이 국가의 세금 고려 사항에 대해 자세히 읽어보세요.](#mixed-remittance-countriesregions-for-windows-appgame-developers) | 선택한 가격의 70%                 | 개발자          |
 | 스페인                            | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다. 지급 전에 가격에서 세금이 공제됩니다.              | (선택한 가격에서 21% 세금을 뺀 금액)의 70% | Microsoft          |
 | 스리랑카                        | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 | 수리남                         | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
@@ -257,7 +257,7 @@ ms.locfileid: "9042493"
 | 바누아투                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 | 바티칸시국                     | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 | 베네수엘라                        | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
-| 베트남                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다. [이 국가의 세금 고려 사항에 대해 자세히 읽어보세요.](#mixed-remittance-countriesregions) | 선택한 가격의 70%                 | 개발자          |
+| 베트남                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다. [이 국가의 세금 고려 사항에 대해 자세히 읽어보세요.](#mixed-remittance-countriesregions-for-windows-appgame-developers) | 선택한 가격의 70%                 | 개발자          |
 | 월리스 푸투나                | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 | 예멘                            | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 | 잠비아                           | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |

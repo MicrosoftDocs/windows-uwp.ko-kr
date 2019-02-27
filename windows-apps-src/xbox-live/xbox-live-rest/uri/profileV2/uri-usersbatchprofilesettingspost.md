@@ -7,12 +7,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: aa029c0cffa369eeb802521b394a52b958b54557
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 0f859a58e32624223d59d918d46f6230a3abd6db
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939099"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115437"
 ---
 # <a name="post-usersbatchprofilesettings"></a>POST (/users/batch/profile/settings)
 사용자 또는 사용자에 대 한 프로필을 가져옵니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
@@ -28,7 +28,7 @@ ms.locfileid: "8939099"
  
 ## <a name="remarks"></a>설명
  
-정규화 된 이름만 프로필 URL에 사용할 수입니다. 클라이언트에서 다른 모든 프로필 Api 차단 됩니다.
+이 정규화 된 이름만 프로필 URL에 사용할 수 있습니다. 클라이언트에서 다른 모든 프로필 Api 차단 됩니다.
   
 <a id="ID4EFB"></a>
 
@@ -44,7 +44,7 @@ ms.locfileid: "8939099"
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | 
-| xbl 계약 버전 x| 32 비트 부호 없는 정수| Xbox 360 API에서이 호출을 구분 하기 위해 계약 버전 2로 설정 해야 합니다.| 
+| xbl 계약 버전 x| 32 비트 부호 없는 정수| Xbox 360 API에서이 호출을 구분 하기 위해 계약 버전 2로 설정 되어야 합니다.| 
 | 콘텐츠 형식| string| 값 = <code>application/json</code>| 
   
 <a id="ID4EZC"></a>
@@ -98,7 +98,7 @@ POST /users/batch/profile/settings
                },
                {
                   "id":"GameDisplayPicRaw",
-                  "value":"http://images-eds.xboxlive.com/image?url=z951ykn43p4FqWbbFvR2Ec.8vbDhj8G2Xe7JngaTToBrrCmIEEXHC9UNrdJ6P7KIN0gxC2r1YECCd3mf2w1FDdmFCpSokJWa2z7xtVrlzOyVSc6pPRdWEXmYtpS2xE4F"
+                  "value":"https://images-eds.xboxlive.com/image?url=z951ykn43p4FqWbbFvR2Ec.8vbDhj8G2Xe7JngaTToBrrCmIEEXHC9UNrdJ6P7KIN0gxC2r1YECCd3mf2w1FDdmFCpSokJWa2z7xtVrlzOyVSc6pPRdWEXmYtpS2xE4F"
                },
                {
                   "id":"Gamerscore",

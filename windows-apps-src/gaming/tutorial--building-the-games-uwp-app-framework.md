@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 16af4bcabbc21c60a5dc0006da51f5bd23eef791
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 175009773f7969adbaf36a036e733443f593467f
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941996"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117773"
 ---
 #  <a name="define-the-uwp-app-framework"></a>UWP 앱 프레임워크 정의
 
@@ -23,7 +23,7 @@ ms.locfileid: "8941996"
 
 앱 단일 항목이 호출하는 이러한 5가지 메서드를 반드시 구현해야 합니다.
 * [__Initialize__](#initialize-the-view-provider)
-* [__SetWindow__](#configure-the-window-and-display-behavior)
+* [__SetWindow__](#configure-the-window-and-display-behaviors)
 * [__Load__](#load-method-of-the-view-provider)
 * [__Run__](#run-method-of-the-view-provider)
 * [__Uninitialize__](#uninitialize-method-of-the-view-provider)
@@ -384,7 +384,7 @@ void GameMain::Run()
 
 사용자가 결국 게임 세션을 종료하면 정리가 필요합니다. 이 때 **Uninitialize**가 필요하게 됩니다.
 
-Windows10, 앱 창을 닫아도 앱의 프로세스가 하지만 대신 앱 단일 항목의 상태를 메모리에 기록 합니다. 시스템에서 이 메모리를 확보해야 할 때 리소스를 특별 정리하는 등 특별한 조치가 필요한 경우에는 이 메서드에 해당 정리를 위한 코드를 포함시킵니다.
+Windows 10의 앱 창을 닫아도 앱의 프로세스가 하지만 대신 앱 단일 항목의 상태가 메모리에 기록 합니다. 시스템에서 이 메모리를 확보해야 할 때 리소스를 특별 정리하는 등 특별한 조치가 필요한 경우에는 이 메서드에 해당 정리를 위한 코드를 포함시킵니다.
 
 ### <a name="app-uninitialize"></a>App:: Uninitialize
 

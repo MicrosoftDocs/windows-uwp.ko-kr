@@ -4,32 +4,12 @@ description: 이 로드맵은 windows 10 및 유니버설 Windows 플랫폼 (UWP
 title: Enterprise
 ms.date: 08/30/2018
 ms.topic: article
-keywords: windows 10, uwp
+keywords: 'windows 10, uwp'
 ms.localizationpriority: medium
-ms.openlocfilehash: a2d5db17be1367deea66ff2762d0350931e1861e
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058584"
 ---
 # <a name="enterprise"></a>Enterprise
 
-이 문서에서는 Windows 10 앱에 대 한 유니버설 Windows 플랫폼 (UWP)에서 제공 하는 주요 엔터프라이즈 기능의 개요를 제공 합니다.
-
-## <a name="whats-new-and-recent-for-enterprise-applications"></a>새로운 기능 및 엔터프라이즈 응용 프로그램에 대 한 최근
-
-> [!div class="checklist"]
-> * [Windows Template Studio](#template-studio)
-> * [데스크톱 스타일 Ui를 만들 수 있는 컨트롤](#desktop-style-UI)
-> * [엔터프라이즈 시나리오를 지 원하는 컨트롤](#enterprise)
-> * [Windows UI 라이브러리](#UI-library)
-> * [데스크톱 응용 프로그램의 UWP 컨트롤](#xaml-islands)
-> * [.NET Standard 2.0](#standard)
-> * [SQL Server 연결](#sql-server)
-> * [MSIX 배포](#MSIX)
-
-세부 정보에서 이러한 기능 중 일부를 보여 주는 비디오를 [신속 하 게 구성 LOB 응용 프로그램을 UWP 및 Visual Studio를](https://channel9.msdn.com/Events/Build/2018/BRK3502)참조 하세요.
+이 문서에서는 Windows 10 앱에 대 한 유니버설 Windows 플랫폼 (UWP)에서 제공 하는 주요 엔터프라이즈 기능의 개요를 제공 합니다. 세부 정보에서 이러한 기능 중 일부를 보여 주는 비디오를 [신속 하 게 구성 LOB 응용 프로그램을 UWP 및 Visual Studio를](https://channel9.msdn.com/Events/Build/2018/BRK3502)참조 하세요.
 
 <a id="template-studio" />
 

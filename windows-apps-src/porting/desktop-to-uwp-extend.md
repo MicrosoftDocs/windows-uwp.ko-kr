@@ -6,12 +6,12 @@ ms.date: 06/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 76e4b60e1cd25a205d6a304f12a0b04f5db693b5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2d1fac6d735d4f6915dea1af531dffa666607fe3
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941100"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117813"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장
 
@@ -20,7 +20,7 @@ ms.locfileid: "8941100"
 대부분의 경우에서 데스크톱 응용 프로그램에서 직접 Windows 런타임 Api를 호출, 되므로이 가이드를 검토 하기 전에 [Windows 10 향상](desktop-to-uwp-enhance.md)볼 수 있습니다.
 
 >[!NOTE]
->이 가이드는 데스크톱 응용 프로그램에 대 한 Windows 앱 패키지를 생성 한 가정 합니다. 이 아직 완료 하지 않았다면, [데스크톱 응용 프로그램 패키지를](desktop-to-uwp-root.md)참조 하세요.
+>이 가이드는 만든 Windows 앱 패키지를 데스크톱 응용 프로그램에 대 한 가정 합니다. 이 아직 완료 하지 않았다면, [데스크톱 응용 프로그램 패키지를](desktop-to-uwp-root.md)참조 하세요.
 
 준비가 되었으면 시작하겠습니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "8941100"
 
 ![새 프로젝트 시작](images/desktop-to-uwp/extend-start-project.png)
 
-솔루션에 패키징 프로젝트가 없는 하는 경우 [Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-packaging-dot-net.md)를 참조 하세요.
+솔루션에 패키징 프로젝트 없으면 [Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-packaging-dot-net.md)를 참조 하세요.
 
 ### <a name="configure-the-desktop-application"></a>데스크톱 응용 프로그램 구성
 
@@ -93,7 +93,7 @@ UWP 프로젝트와 런타임 구성 요소를 사용하여 할 수 있는 몇 �
 ![적응형 디자인](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->이 예제에서는 솔루션에 UWP 프로젝트를 추가 하 여 XAML UI를 보여 줍니다. 데스크톱 응용 프로그램에서 XAML Ui 표시 안정적인 지원 되는 접근 방식입니다. 이 방법을 사용 하는 대신 XAML 섬을 사용 하 여 데스크톱 응용 프로그램에 직접 UWP XAML 컨트롤을 추가 하는 것입니다. XAML 제도 개발자 미리 현재 사용할 수 있습니다. 하지만 체험 프로토타입 작성 하는 코드에서 이제 새, 사용 하는 이러한 프로덕션 코드에서 현재 하지 않는 것이 좋습니다. 이러한 Api 및 컨트롤 성숙 안정화 나중에 Windows 릴리스를 계속 합니다. XAML 제도 대 한 자세한 내용은 참조 [데스크톱 응용 프로그램의 UWP 컨트롤](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+>이 예제에서는 UWP 프로젝트를 솔루션에 추가 하 여 XAML UI를 보여 줍니다. 데스크톱 응용 프로그램에서 XAML Ui를 표시 하는 안정적 지원 되는 방법입니다. 이 방법을 사용 하는 대신 XAML 섬을 사용 하 여 데스크톱 응용 프로그램에 직접 UWP XAML 컨트롤을 추가 하는 것입니다. XAML 제도 개발자 미리 현재 사용할 수 있습니다. 하지만 직접 사용해 프로토타입 작성 하는 코드에서 이제 새, 사용 하는 이러한 프로덕션 코드에서이 시간에 하지 않는 것이 좋습니다. 이러한 Api 및 컨트롤 성숙 안정화 나중에 Windows 릴리스를 계속 합니다. XAML 제도 대 한 자세한 내용은 참조 [데스크톱 응용 프로그램의 UWP 컨트롤](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>디자인 패턴
 
@@ -103,7 +103,7 @@ XAML 기반 UI를 표시하려면 다음 작업을 수행합니다.
 
 :2: [XAML UI 만들기](#xaml-UI)
 
-:3: [UWP 프로젝트에 프로토콜 확장 추가](#protocol)
+:3: [UWP 프로젝트에 프로토콜 확장 추가](#add-a-protocol-extension)
 
 :4: [데스크톱 앱에서 UWP 앱 시작](#start)
 
@@ -250,7 +250,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 데스크톱 응용 프로그램을 공유 대상으로 만들면 사용자가 공유를 지원하는 다른 앱의 사진 등 데이터를 쉽게 공유할 수 있습니다.
 
-예를 들어 사용자가 Microsoft Edge, 사진 앱에서에서 사진을 공유 하는 응용 프로그램을 선택할 수 있습니다. 해당 기능이 있는 WPF 샘플 응용 프로그램 다음과 같습니다.
+예를 들어 사용자가 Microsoft Edge, 사진 앱에서에서 사진을 공유 하는 응용 프로그램 선택할 수 있습니다. 해당 기능이 있는 WPF 샘플 응용 프로그램 다음과 같습니다.
 
 ![공유 대상](images/desktop-to-uwp/share-target.png).
 
@@ -296,7 +296,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다. 이 태그는 UWP 앱에 대 한 실행 파일의 이름 이라고 가정 `ShareTarget.exe`.
 
-또 앱이 공유할 수 있는 파일 형식을 지정해야 합니다. 이 예제에서는 보도록 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램을 공유 대상으로 지정 되므로 비트맵 이미지에 대 한 `Bitmap` 지원 되는 파일 형식에 대 한 합니다.
+또 앱이 공유할 수 있는 파일 형식을 지정해야 합니다. 이 예제에서는 보도록 [PhotoStoreDemo WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램을 공유 대상으로 지정 되므로 비트맵 이미지에 대 한 `Bitmap` 지원 되는 파일 형식에 대 한 합니다.
 
 <a id="override" />
 
@@ -329,7 +329,7 @@ private async void shareWithDesktopApplication(ShareOperation shareOperation)
 }
 ```
 
-이 코드에서는 앱 로컬 저장소 폴더에 사용자가 공유 되는 이미지를 저장 합니다. 나중에 동일한 폴더에서 데스크톱 응용 프로그램 끌어오기 이미지를 수정 합니다. 데스크톱 응용 프로그램은 UWP 앱과 같은 패키지에 포함 되어 있으므로 수행할 수 있습니다.
+이 코드에서는 앱 로컬 저장소 폴더에 사용자가 공유 되는 이미지를 저장 합니다. 나중에 동일한 폴더에서 데스크톱 응용 프로그램 풀 이미지를 수정 합니다. 데스크톱 응용 프로그램은 UWP 앱과 같은 패키지에 포함 되어 있으므로 수행할 수 있습니다.
 
 <a id="desktop-extensions" />
 
@@ -353,7 +353,7 @@ UWP 앱 프로젝트에 **UWP 용 Windows 데스크톱 확장** 확장을 추가
 </Extensions>  
 ```
 
-이 확장 파일 공유를 원하는 데스크톱 응용 프로그램을 시작 하는 UWP 앱으로 활성화 됩니다. 예제에서는 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램의 실행 파일을 참조 합니다.
+이 확장 파일 공유를 원하는 데스크톱 응용 프로그램을 시작 하려면 UWP 앱으로 활성화 됩니다. 예제에서는 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램의 실행 파일을 참조 합니다.
 
 <a id="modify-desktop" />
 
@@ -365,7 +365,7 @@ UWP 앱 프로젝트에 **UWP 용 Windows 데스크톱 확장** 확장을 추가
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-사용자가 이미 있는 데스크톱 응용 프로그램의 인스턴스 열려, 수도 있습니다 또한 [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) 이벤트를 처리 하 고 경로에서 파일 위치를 전달 합니다. 그러면 데스크톱 응용 프로그램의 열려 있는 인스턴스 공유 사진을 표시 됩니다.
+사용자가 이미 사용 중인 데스크톱 응용 프로그램의 인스턴스 열려, 수 또한 [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) 이벤트를 처리 하 고 경로에서 파일 위치를 전달 합니다. 그러면 데스크톱 응용 프로그램의 열려 있는 인스턴스 공유 사진을 표시 됩니다.
 
 ```csharp
 ...
@@ -401,7 +401,7 @@ private void Watcher_Created(object sender, FileSystemEventArgs e)
 
 작업은 http 요청을 만들고 요청이 응답을 반환하는 데 걸리는 시간을 측정합니다. 귀하의 작업 훨씬 더 흥미로울 수 있지만 이 샘플은 백그라운드 작업의 기본 메커니즘을 학습하는 데 적합합니다.
 
-전체 샘플 [다음과 같습니다](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/BGTask).
+전체 샘플을 참조 [다음과 같습니다](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/BGTask).
 
 ### <a name="the-design-pattern"></a>디자인 패턴
 

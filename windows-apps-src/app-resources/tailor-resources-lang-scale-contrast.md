@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 82dd3d20aa39ea471618e7707d066c67a6547f9f
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.openlocfilehash: 1ac80888019044beabc44335290bc6ad59cf377c
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058754"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117663"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 
@@ -130,7 +130,7 @@ ms.locfileid: "9058754"
 
 ## <a name="custom"></a>사용자 지정
 
-앱은 `custom` 한정자에 대한 값을 설정할 수 있으며 그 값과 가장 잘 일치하는 리소스가 로드됩니다. 예를 들어 앱의 라이선스에 따라 리소스를 로드할 수 있습니다. 코드 예에 나온 바와 같이, 앱이 실행되면 라이선스를 확인하고 [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)를 호출하여 `custom` 한정자의 값으로 사용합니다.
+앱은 `custom` 한정자에 대한 값을 설정할 수 있으며 그 값과 가장 잘 일치하는 리소스가 로드됩니다. 예를 들어 앱의 라이선스에 따라 리소스를 로드할 수 있습니다. 코드 예에 나온 바와 같이, 앱이 실행되면 라이선스를 확인하고 [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue)를 호출하여 `custom` 한정자의 값으로 사용합니다.
 
 ```csharp
 public void SetLicenseLevel(BrandID brand)
@@ -263,7 +263,7 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 ## <a name="important-apis"></a>중요 API
 
 * [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
-* [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
+* [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue)
 
 ## <a name="related-topics"></a>관련 항목
 

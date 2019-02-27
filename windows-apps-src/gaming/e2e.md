@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: c0113f039ccd2d2df0c155b77295afef194018ce
-ms.sourcegitcommit: f7b8112a99097c7c8a76b028aef436d1a5c68cdb
+ms.openlocfilehash: 38fc73eb602c1307fdd345d02c621791feb89dc2
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "9099463"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117743"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows10 게임 개발 가이드
 
@@ -1070,7 +1070,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
     </colgroup>
     <tr>
         <td>UWP 디자인 기초 및 지침</td>
-        <td><a href="https://dev.windows.com/design">UWP 앱 디자인</a></td>
+        <td><a href="https://developer.microsoft.com/en-us/windows/apps/design">UWP 앱 디자인</a></td>
     </tr>
     <tr>
         <td>앱 수명 주기 상태에 대한 디자인</td>

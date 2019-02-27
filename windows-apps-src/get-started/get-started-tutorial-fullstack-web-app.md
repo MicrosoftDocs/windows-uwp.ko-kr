@@ -5,12 +5,12 @@ keywords: 호스트된 웹앱, HWA, REST API, 단일 페이지 앱, SPA
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f60eb37d7bff1187e282f5af2207c6df92f4ec24
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.openlocfilehash: 4c76f0da8c3ac1d50ccd2d328dd321df9aa9bd3e
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114579"
+ms.locfileid: "9117723"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>REST API 백 엔드를 사용하는 단일 페이지 생성
 
@@ -40,7 +40,7 @@ Azure 부분을 생략하거나 연기하려면, Azure 호스팅과 Microsoft St
 
 먼저 기억력 게임 웹앱의 중심이 될 간단한 기억력 게임 API를 만듭니다. [Swagger](https://swagger.io/)를 사용하여 API를 정의하고, 기반 코드를 만들고, 수동 테스팅을 위한 웹 UI를 만듭니다.
 
-이 부분을 건너뛰고 [2부: 단일 페이지 웹 응용 프로그램 제작](#part-ii-build-a-single-page-web-appl)으로 바로 이동하려면 여기 [1부에 대한 완료된 코드](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend)를 사용하면 됩니다. *추가 정보* 지침을 따라 코드를 로컬로 실행하거나, *5. Azure에서 API 서비스를 호스트하고 CORS 활성화*를 참조하여 Azure에서 실행합니다.
+이 부분을 건너뛰고 [2부: 단일 페이지 웹 응용 프로그램 제작](#part-ii-build-a-single-page-web-application)으로 바로 이동하려면 여기 [1부에 대한 완료된 코드](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend)를 사용하면 됩니다. *추가 정보* 지침을 따라 코드를 로컬로 실행하거나, *5. Azure에서 API 서비스를 호스트하고 CORS 활성화*를 참조하여 Azure에서 실행합니다.
 
 ### <a name="game-overview"></a>게임 개요
 

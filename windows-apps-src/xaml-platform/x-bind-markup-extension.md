@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d8e065b76a79a6733d1fa066cd924d07a8fc7c9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 625c48e2f0fc57a4e9fd3a98acc505e01e2eb42c
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045369"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117833"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
@@ -52,7 +52,7 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 | _bindingProperties_ |
 | _propName_=_value_\[, _propName_=_value_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
 | _propName_ | 바인딩 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
-| _value_ | 속성을 설정할 값. 인수 구문은 설정할 속성에 따라 다릅니다. 다음은 값 자체가 태그 확장인 _propName_=_value_ 사용법의 예입니다. `Converter={StaticResource myConverterClass}`. 자세한 내용은 아래의 [{x:Bind}로 설정할 수 있는 속성](#properties-you-can-set)을 참조하세요. |
+| _value_ | 속성을 설정할 값. 인수 구문은 설정할 속성에 따라 다릅니다. 다음은 값 자체가 태그 확장인 _propName_=_value_ 사용법의 예입니다. `Converter={StaticResource myConverterClass}`. 자세한 내용은 아래의 [{x:Bind}로 설정할 수 있는 속성](#properties-that-you-can-set-with-xbind)을 참조하세요. |
 
 ## <a name="examples"></a>예제
 

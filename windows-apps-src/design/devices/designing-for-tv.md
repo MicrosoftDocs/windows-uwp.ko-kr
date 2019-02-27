@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 788f47c1b29766cae1f437992aee8414580f3935
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.openlocfilehash: 431b8912e43647bc2678aaab7efc9ec68b866d10
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116495"
+ms.locfileid: "9117583"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Xbox 및 TV용 디자인
 
@@ -122,7 +122,7 @@ TV 해상도에 관계없이 Xbox One에서 실행되는 경우 200%(또는 HTML
 
 #### <a name="number-of-clicks"></a>클릭 수
 
-UI를 간소화하려면 사용자가 TV 화면의 한쪽 가장자리에서 다른 쪽 가장자리로 이동할 때 **6번 클릭**을 넘지 않도록 해야 합니다. 여기서도 다시 **단순성**의 원칙이 적용됩니다. 자세한 내용은 [최소 클릭 경로](#path-of-least-clicks)를 참조하세요.
+UI를 간소화하려면 사용자가 TV 화면의 한쪽 가장자리에서 다른 쪽 가장자리로 이동할 때 **6번 클릭**을 넘지 않도록 해야 합니다. 여기서도 다시 **단순성**의 원칙이 적용됩니다. 
 
 ![가로로 6개 아이콘](images/designing-for-tv/six-clicks.png)
 
@@ -462,7 +462,7 @@ DirectX 11 또는 DirectX 12를 사용해 앱을 개발하면서 사용자 고�
 
 중첩된 UI는 중첩된 항목과 컨테이너 항목이 각각 독립적인 포커스를 가질 수도 있는 컨테이너 UI 요소 내에 중첩된 실행 가능한 항목을 묶어 표시합니다.
 
-중첩된 UI는 일부 입력 유형과 잘 작동하지만 XY 탐색을 사용하는 게임 패드 및 원격에 대해서는 작동하지 않는 경우도 있습니다. UI가 3m 환경에 최적화되고 조작 가능한 모든 요소에 사용자가 쉽게 액세스할 수 있도록 이 항목의 지침을 수행해야 합니다. 일반적인 솔루션은 중첩된 UI 요소를 `ContextFlyout`에 배치하는 것입니다([CommandBar 및 ContextFlyout](#commandbar-and-contextflyout) 참조).
+중첩된 UI는 일부 입력 유형과 잘 작동하지만 XY 탐색을 사용하는 게임 패드 및 원격에 대해서는 작동하지 않는 경우도 있습니다. UI가 3m 환경에 최적화되고 조작 가능한 모든 요소에 사용자가 쉽게 액세스할 수 있도록 이 항목의 지침을 수행해야 합니다. 일반적인 솔루션은 중첩 된 UI 요소를 배치 하는 `ContextFlyout`.
 
 중첩된 UI에 대한 자세한 내용은 [목록 항목의 중첩된 UI](../controls-and-patterns/nested-ui.md)를 참조하세요.
 
@@ -558,7 +558,7 @@ bool IsTenFoot = (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily 
                     "Windows.Xbox");
 ```
 
-그런 다음 이 검사 후의 코드 블록에서 UI를 적절하게 조정할 수 있습니다. 이 작업의 예는 [UWP 색 샘플](#uwp-color-sample)에 나와 있습니다.
+그런 다음 이 검사 후의 코드 블록에서 UI를 적절하게 조정할 수 있습니다. 
 
 ## <a name="summary"></a>요약
 

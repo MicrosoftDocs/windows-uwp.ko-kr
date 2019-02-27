@@ -5,12 +5,12 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: 531bd349fca825a8bb80630192698b647db3129a
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.openlocfilehash: 488516f94a53eb26b4a9e2f49927b8399c62bff5
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042325"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117693"
 ---
 # <a name="consume-apis-with-cwinrt"></a>C++/WinRT를 통한 API 사용
 
@@ -40,7 +40,7 @@ int main()
 > [!TIP]
 > Windows 네임스페이스의 형식을 사용할 때마다 해당 네임스페이스와 일치하는 C++/WinRT 헤더를 추가하세요. `using namespace` 지시문은 선택 사항이지만 편리합니다.
 
-위의 코드 예제에서는 C++/WinRT를 초기화한 후 공개적으로 기록되는 생성자(이번 예제에서는 [**Uri(문자열)**](/uwp/api/windows.foundation.uri#Windows_Foundation_Uri__ctor_System_String_)) 중 하나를 통해 프로젝션된 형식인 **winrt::Windows::Foundation::Uri**의 값을 스택 할당합니다. 이러한 이유로 가장 공통적인 사용 사례이며, 일반적으로 더 이상은 할 것이 없습니다. C++/WinRT 프로젝션된 형식 값이 있으면 모든 동일한 구성원을 가지므로 이를 실제 Windows 런타임 형식의 인스턴스처럼 처리할 수 있습니다.
+위의 코드 예제에서는 C++/WinRT를 초기화한 후 공개적으로 기록되는 생성자(이번 예제에서는 [**Uri(문자열)**](/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_)) 중 하나를 통해 프로젝션된 형식인 **winrt::Windows::Foundation::Uri**의 값을 스택 할당합니다. 이러한 이유로 가장 공통적인 사용 사례이며, 일반적으로 더 이상은 할 것이 없습니다. C++/WinRT 프로젝션된 형식 값이 있으면 모든 동일한 구성원을 가지므로 이를 실제 Windows 런타임 형식의 인스턴스처럼 처리할 수 있습니다.
 
 사실, 그 프로젝션된 값은 프록시입니다. 기본적으로 지원 개체에 대한 스마트 포인터인 것입니다. 프로젝션된 값은 생성자는 [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646)를 호출하여 Windows 런타임 클래스(이 경우 **Windows.Foundation.Uri**)를 지원하는 인스턴스를 만들고 해당 개체의 기본 인터페이스를 새 프로젝션된 값 내에 저장합니다. 아래와 같이 프로젝션 된 값의 구성원에 대 한 호출은 실제로 대리자를 지 원하는 개체; 스마트 포인터를 통해 즉, 상태 변경이 발생할 위치인입니다.
 

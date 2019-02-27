@@ -5,33 +5,16 @@ ms.date: 05/02/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅 2, 게임 채팅, 음성 통신
 ms.localizationpriority: medium
-ms.openlocfilehash: b21544744f4bbe7954bd6eb29787b144bd693cd6
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.openlocfilehash: e963210091694a07114f10d5a3dc531a353621df
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116011"
+ms.locfileid: "9117543"
 ---
 # <a name="migration-from-game-chat-to-game-chat-2"></a>게임 채팅 2 게임 채팅에서 마이그레이션
 
-이 문서는 게임 채팅 및 게임 채팅 2와 게임 채팅에서 게임 채팅 2로 마이그레이션하는 방법 사이의 유사성 자세히 설명 합니다. 따라서 게임 채팅 2로 마이그레이션할 하고자 하는 기존 게임 채팅 구현에서 제목입니다. 게임 채팅 구현, 아직 없는 경우 제안 된 시작점 [Game Chat 2를 사용 하 여](using-game-chat-2.md)됩니다. 이 문서에는 다음 항목을 포함합니다.
-
-1. [앞](#preface)
-2. [필수 조건](#prerequisites)
-3. [초기화](#initialization)
-4. [사용자 구성](#configuring-users)
-5. [데이터 처리](#processing-data)
-6. [이벤트 처리](#processing-events)
-7. [텍스트 채팅](#text-chat)
-8. [접근성](#accessibility)
-9. [UI](#UI)
-10. [음소거](#muting)
-11. [나쁜 평판 자동 음소거](#bad-reputation-auto-mute)
-12. [권한 및 개인 정보 보호](#privilege-and-privacy)
-13. [정리](#cleanup)
-14. [오류 모델 및 디버깅](#failure-model-and-debugging)
-15. [인기 있는 시나리오를 구성 하는 방법](#how-to-configure-popular-scenarios)
-16. [미리 인코딩 및 사후 오디오 조작 디코드](#pre-encode-and-post-decode-audio-manipulation)
+이 문서는 게임 채팅 및 게임 채팅 2와 게임 채팅에서 게임 채팅 2로 마이그레이션하는 방법 사이의 유사성 자세히 설명 합니다. 따라서 게임 채팅 2로 마이그레이션할 하고자 하는 기존 게임 채팅 구현에서 제목입니다. 게임 채팅 구현, 아직 없는 경우 제안 된 시작점 [Game Chat 2를 사용 하 여](using-game-chat-2.md)됩니다. 
 
 ## <a name="preface"></a>앞
 
@@ -65,7 +48,7 @@ ms.locfileid: "9116011"
 
 게임 채팅 2 컴파일 기본 GameChat2.h 헤더를 포함 해야 합니다. 제대로 연결 하기 위해 프로젝트 (일반적인 미리 컴파일된 헤더 스텁 함수 구현은 컴파일러 "inline"으로 생성 하는 쉽고 작은 때문에 권장 됨) 하나 이상 컴파일 단위에서 GameChat2Impl.h도 포함 해야 합니다.
 
-게임 채팅 2 인터페이스 프로젝트를 C + 컴파일 중 하나를 선택 하지 않아도 + CX 기존 c + +; 비교 와 함께 사용할 수 있습니다. 또한 구현 치명적이 지 않은 오류 수 사용 하기 쉽게 예외 없이 프로젝트에서 원하는 경우 하므로 보고 하는 수단으로 예외를 throw 하지 않습니다. 그러나 구현, 심각한 오류 보고 ( [오류 모델](#failure) 에 대 한 자세한 내용은 참조) 하는 수단으로 예외를 throw 합니다.
+게임 채팅 2 인터페이스 프로젝트를 C + 컴파일 중 하나를 선택 하지 않아도 + CX 기존 c + +; 비교 와 함께 사용할 수 있습니다. 또한 구현 치명적이 지 않은 오류 수 사용 하기 쉽게 예외 없이 프로젝트에서 원하는 경우 하므로 보고 하는 수단으로 예외를 throw 하지 않습니다. 그러나 구현, 심각한 오류 보고 ( [오류 모델](#failure-model-and-debugging) 에 대 한 자세한 내용은 참조) 하는 수단으로 예외를 throw 합니다.
 
 ## <a name="initialization"></a>초기화
 

@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 008dce5ffc3824d49830bc368a3eaa9d55b7d229
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 2d4739442414b02358f3afea8967b0fc404ff7f9
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8948025"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117823"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
 
@@ -43,7 +43,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>디자인 언어.</strong><br><br>플랫폼의 앱 모양과 동작을 규정하는 규칙 집합입니다.</td>
 <td align="left"><strong>Android 자료 디자인</strong> 지침에서는 Android 디자이너 및 개발자를 위한 시각적 언어를 제공합니다.</td>
 <td align="left"><strong>휴먼 인터페이스 지침</strong>에서는 iOS 디자이너 및 개발자를 위한 권장 사항을 제공합니다.</td>
-<td align="left"><a href="https://dev.windows.com/design"><strong>UWP Windows 앱 디자인</strong></a>에서는 모든 Windows 10 장치에서 올바르게 표시되는 앱을 만드는 방법을 보여 줍니다. UI(사용자 인터페이스) 디자인 기본 사항, 반응형 디자인 기술 및 자세한 지침의 전체 목록을 찾을 수 있습니다.<br/></td>
+<td align="left"><a href="https://developer.microsoft.com/en-us/windows/apps/design"><strong>UWP Windows 앱 디자인</strong></a>에서는 모든 Windows 10 장치에서 올바르게 표시되는 앱을 만드는 방법을 보여 줍니다. UI(사용자 인터페이스) 디자인 기본 사항, 반응형 디자인 기술 및 자세한 지침의 전체 목록을 찾을 수 있습니다.<br/></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>사용자 인터페이스 생성 언어.</strong> <br><br>UI와 해당 구성 요소를 렌더링 및 설명하는 생성 언어입니다. 각 플랫폼은 디자인 및 태그 편집을 위한 편집기를 제공합니다.<br/></td>

@@ -2,16 +2,16 @@
 Description: Use pointer animations to provide users with visual feedback when the user taps on an item.
 title: UWP 앱의 포인터 클릭 애니메이션
 ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
-ms.date: 08/9/2017
+ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cedab3f589f41b791a6c387ec776dc4c8ee23a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: f1abd71cda8358e3f7e2fe36091f9c42f05bcb00
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936381"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116019"
 ---
 # <a name="pointer-click-animations"></a>포인터 클릭 애니메이션
 

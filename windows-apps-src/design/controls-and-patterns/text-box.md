@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 212b5843a302c8210cd01dd0ab4017eda016098a
-ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
+ms.openlocfilehash: 7e3faf82ab9786f6ba079e44d79b6ed49394b881
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "9075126"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117793"
 ---
 # <a name="text-box"></a>입력란
 
@@ -110,6 +110,19 @@ SampleTextBox.Text = "Sample text retrieved";
 - **IsReadOnly**가 **true**인 경우
 - **AcceptsReturn**이 **true**인 경우
 - **TextWrap**에 **NoWrap** 이외의 값이 있는 경우
+
+이 예제에서는 텍스트 상자의 현재 콘텐츠를 설정 하는 방법을 보여 줍니다.
+
+```xaml
+<TextBox name="SampleTextBox" Text="Sample Text"/>
+```
+
+```csharp
+string sampleText = SampleTextBox.Text;
+...
+SampleTextBox.Text = "Sample text retrieved";
+```
+
 
 ### <a name="make-a-text-box-read-only"></a>입력란을 읽기 전용으로 만들기
 

@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
-ms.openlocfilehash: f73665e60513e4f8465be3dbe69f792af285a8e1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 108e9bf21b0552ac7f88721bf4b1ee72ca2a5e2c
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934648"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117753"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>렌더링 프레임워크 II: 게임 렌더링
 
@@ -42,7 +42,7 @@ ms.locfileid: "8934648"
     * 각각 빈도가 다른 여러 상수 버퍼를 사용하면 프레임당 GPU로 전송해야 하는 데이터 양이 감소합니다. 이 샘플에서는 업데이트해야 하는 빈도를 기준으로 상수를 각기 다른 버퍼로 구분합니다. 이 방법은 Direct3D 프로그래밍의 모범 사례입니다. 
     * 이 게임 샘플에서 4 상수 버퍼가 정의됩니다.
         1. __m\_constantBufferNeverChanges__에는 조명 매개 변수가 들어 있습니다. 이는 __FinalizeCreateGameDeviceResources__ 메서드에서 한 번 설정되고 다시 변경되지 않습니다.
-        2. __m\_constantBufferChangeOnResize__에는 투영 행렬이 들어 있습니다. 투영 행렬은 창의 크기와 가로 세로 비율에 따라 달라집니다. 이는 [__CreateWindowSizeDependentResources__](#createwindowsizedependentresources-method)에서 설정된 다음 리소스가 [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method) 메서드에 로드된 후 업데이트됩니다. 3D로 렌더링하면 이 또한 프레임별로 두 번 변경됩니다.
+        2. __m\_constantBufferChangeOnResize__에는 투영 행렬이 들어 있습니다. 투영 행렬은 창의 크기와 가로 세로 비율에 따라 달라집니다. 이는 [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method)에서 설정된 다음 리소스가 [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method) 메서드에 로드된 후 업데이트됩니다. 3D로 렌더링하면 이 또한 프레임별로 두 번 변경됩니다.
         3. __m\_constantBufferChangesEveryFrame__에는 보기 행렬이 들어 있습니다. 이 행렬은 카메라 위치와 보기 방향(프로젝션에 수직)에 따라 달라지며 __Render__ 메서드에서 프레임당 한 번 변경됩니다. 이는 이전에 [__GameRenderer::Render__ 메서드](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method) 아래의 __렌더링 프레임워크 I: 렌더링 소개__에서 다루었습니다.
         4. __m\_constantBufferChangesEveryPrim__에는 각 원형의 모델 행렬과 재질 속성이 들어 있습니다. 모델 행렬은 로컬 좌표에서 월드 좌표로 꼭짓점을 변환합니다. 이러한 상수는 각 원형과 관련이 있으며 그리기 호출 시마다 업데이트됩니다. 이는 이전에 [원형 렌더링](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering) 아래의 __렌더링 프레임워크 I: 렌더링 소개__에서 다루었습니다.
 * 이 클래스에서 원형의 텍스처를 포함하는 셰이더 리소스 개체도 정의됩니다.
@@ -158,7 +158,7 @@ GameRenderer::GameRenderer(const std::shared_ptr<DX::DeviceResources>& deviceRes
 게임 샘플(그리고 Visual Studio의 __DirectX 11 앱(유니버설 Windows)__ 템플릿)에서 게임 리소스 만들기 및 로딩은 __GameRenderer__ 생성자에서 호출되는 이 두 메서드를 사용하여 구현됩니다.
 
 * [__CreateDeviceDependentResources__](#createdevicedependentresources-method)
-* [__CreateWindowSizeDependentResources__](#createwindowsizedependentresources-method)
+* [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method)
 
 ## <a name="createdevicedependentresources-method"></a>CreateDeviceDependentResources 메서드
 
@@ -581,7 +581,7 @@ void GameRenderer::FinalizeCreateGameDeviceResources()
 
 ## <a name="createwindowsizedependentresource-method"></a>CreateWindowSizeDependentResource 메서드
 
-CreateWindowSizeDependentResources 메서드는 창 크기, 방향, 스테레오 활성화 렌더링, 또는 해상도 변경 시마다 호출됩니다. 샘플 게임에서 __ConstantBufferChangeOnResize__투영 행렬을 업데이트합니다.
+CreateWindowSizeDependentResources 메서드는 창 크기, 방향, 스테레오 활성화 렌더링, 또는 해상도 변경 시마다 호출됩니다. 샘플 게임에서 __ConstantBufferChangeOnResize__에서 투영 행렬을 업데이트합니다.
 
 창 크기 리소스는 이러한 방식으로 업데이트됩니다. 
 * 앱 프레임워크는 창 상태의 변경을 나타내는 몇 가지 가능한 이벤트 중 하나를 가져옵니다. 
@@ -590,7 +590,7 @@ CreateWindowSizeDependentResources 메서드는 창 크기, 방향, 스테레오
 
 이 게임 샘플에서는 여러 메서드 호출은 [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method) 메서드와 동일합니다. 코드 연습의 경우 이전 섹션으로 이동합니다.
 
-게임 HUD 및 오버레이 창 크기 렌더링 조정은 [사용자 인터페이스 추가](#tutorial--adding-a-user-interface)에서 다룹니다.
+게임 HUD 및 오버레이 창 크기 렌더링 조정은 [사용자 인터페이스 추가](tutorial--adding-a-user-interface.md)에서 다룹니다.
 
 ```cpp
 // Initializes view parameters when the window size changes.

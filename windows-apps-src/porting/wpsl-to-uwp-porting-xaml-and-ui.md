@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ec5f12c60e9fd244805209720e3e6d29260d5100
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 869ab9994f10070797fb4b803b1189127d84eadf
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049690"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117713"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>WindowsPhone Silverlight XAML 및 UI를 UWP로 포팅
 
@@ -205,7 +205,7 @@ UWP 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://msdn.m
 
 ##  <a name="design-language-in-windows10"></a>Windows 10의 디자인 언어
 
-WindowsPhone Silverlight 앱과 windows 10 앱 사이의 디자인 언어에 차이점이 몇 가지 있습니다. 자세한 내용은 [디자인](https://dev.windows.com/design)을 참조하세요. 디자인 언어의 변경에도 불구하고 디자인 원칙은 일관되게 유지됩니다. 즉, 세부 정보에 신경을 쓰지만 항상 크롬이 아니라 콘텐츠에 집중하여 간결함을 추구하며, 시각적 요소를 적극적으로 최소화하고, 디지털 도메인에 대한 인증 상태를 유지하며, 특히 입력 체계에 시각적 계층 구조를 사용하며, 그리드에 디자인을 사용하고 유연한 애니메이션을 사용하여 독창적인 사용자 환경을 제공합니다.
+WindowsPhone Silverlight 앱과 windows 10 앱 사이의 디자인 언어에 차이점이 몇 가지 있습니다. 자세한 내용은 [디자인](https://developer.microsoft.com/en-us/windows/apps/design)을 참조하세요. 디자인 언어의 변경에도 불구하고 디자인 원칙은 일관되게 유지됩니다. 즉, 세부 정보에 신경을 쓰지만 항상 크롬이 아니라 콘텐츠에 집중하여 간결함을 추구하며, 시각적 요소를 적극적으로 최소화하고, 디지털 도메인에 대한 인증 상태를 유지하며, 특히 입력 체계에 시각적 계층 구조를 사용하며, 그리드에 디자인을 사용하고 유연한 애니메이션을 사용하여 독창적인 사용자 환경을 제공합니다.
 
 ## <a name="localization-and-globalization"></a>지역화 및 전역화
 
@@ -313,7 +313,7 @@ XAML 태그에 `shell:SystemTray.IsVisible`로 설정되는 시스템 트레이�
 
 Windows 10 앱의 시스템 TextBlock 스타일
 
-WindowsPhone Silverlight 앱에서 기본 글꼴 패밀리는 맑은 고딕입니다. Windows 10 앱에서 기본 글꼴 패밀리는 맑은 고딕입니다. 결과적으로 앱에서 글꼴 메트릭은 다르게 보일 수 있습니다. WindowsPhone Silverlight 텍스트의 모양을 재현 하려는 경우 [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) , [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362)등의 속성을 사용 하 여 고유한 메트릭을 설정할 수 있습니다. 자세한 내용은 [글꼴에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) 및 [UWP 앱 디자인](https://dev.windows.com/design)을 참조하세요.
+WindowsPhone Silverlight 앱에서 기본 글꼴 패밀리는 맑은 고딕입니다. Windows 10 앱에서 기본 글꼴 패밀리는 맑은 고딕입니다. 결과적으로 앱에서 글꼴 메트릭은 다르게 보일 수 있습니다. WindowsPhone Silverlight 텍스트의 모양을 재현 하려는 경우 [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) , [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362)등의 속성을 사용 하 여 고유한 메트릭을 설정할 수 있습니다. 자세한 내용은 [글꼴에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) 및 [UWP 앱 디자인](https://developer.microsoft.com/en-us/windows/apps/design)을 참조하세요.
 
 ## <a name="theme-changes"></a>테마 변경
 

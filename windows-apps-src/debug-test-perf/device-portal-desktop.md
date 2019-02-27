@@ -6,12 +6,12 @@ ms.date: 02/6/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: c499c14d98f63836d80134aac70b2c80902f049b
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.openlocfilehash: 4fe1f2a51199dd12cd1d285c17c5d48c9a25b969
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116135"
+ms.locfileid: "9117803"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Windows 데스크톱의 장치 포털
 
@@ -39,7 +39,7 @@ Windows 10 1607 버전부터 데스크톱의 새로운 기능 중 일부는 개�
 
 ![설정 앱의 장치 포털 섹션](images/device-portal/device-portal-desk-settings.png) 
 
-장치 포털을 사용할 수 있도록 설정하면 섹션 아래쪽에 웹 링크가 표시됩니다. URL 목록의 끝에 첨부되어 있는 포트 번호를 적어두세요. 이 포트 번호는 장치 포털을 사용할 수 있도록 설정할 때 무작위로 생성되지만 데스크톱을 다시 부팅해도 동일하게 유지됩니다. 영구적으로 유지되도록 포트 번호를 수동으로 설정하려면 [포트 번호 설정](device-portal-desktop.md#setting-port-numbers)을 참조하세요.
+장치 포털을 사용할 수 있도록 설정하면 섹션 아래쪽에 웹 링크가 표시됩니다. URL 목록의 끝에 첨부되어 있는 포트 번호를 적어두세요. 이 포트 번호는 장치 포털을 사용할 수 있도록 설정할 때 무작위로 생성되지만 데스크톱을 다시 부팅해도 동일하게 유지됩니다. 
 
 이 링크를 이용해 로컬 네트워크(VPN 포함)이나 로컬 호스트의 2가지 방법 중 하나로 장치 포털에 연결할 수 있습니다.
 

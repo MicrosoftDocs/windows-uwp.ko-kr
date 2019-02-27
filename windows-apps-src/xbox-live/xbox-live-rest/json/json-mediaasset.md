@@ -7,12 +7,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 42a2a6e62494bd8fd5872e7664da8ac71cccbf57
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 308a65b7c049a6aba0405865bab63fb9d28b8506
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944569"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115469"
 ---
 # <a name="mediaasset-json"></a>MediaAsset(JSON)
 도전 과제 또는 해당 보상와 관련 된 미디어 자산입니다.
@@ -21,25 +21,25 @@ ms.locfileid: "8944569"
 
 ## <a name="mediaasset"></a>MediaAsset
 
-MediaAsset 개체에 다음과 같이 지정 합니다.
+MediaAsset 개체에는 다음과 같이 지정 합니다.
 
 | 멤버| 유형| 설명|
 | --- | --- | --- |
-| name| 문자열| "Tile01" 등의 MediaAsset의 이름입니다.|
+| name| 문자열| "Tile01"와 같은 MediaAsset의 이름입니다.|
 | type| MediaAssetType 열거형| 미디어 자산 유형: <ul><li>아이콘 (0): 성과 아이콘입니다.</li><li>아트 (1): 디지털 아트 자산입니다.</li></ul> | 
 | url| string| URL은 MediaAsset입니다.|
 
 <a id="ID4EFC"></a>
 
 
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
 
 
 ```json
 {
   "name":"Icon Name",
   "type":"Icon",
-  "url":"http://www.xbox.com"
+  "url":"https://www.xbox.com"
 }
 
 ```

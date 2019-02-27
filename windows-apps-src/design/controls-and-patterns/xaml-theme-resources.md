@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 770896f467ff3a2c24fff65fdf16f1e13c83b688
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: e65ad1f4dcb5a83eb7336fc8e1eb794b107dcf01
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933551"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117613"
 ---
 # <a name="xaml-theme-resources"></a>XAML 테마 리소스
 
@@ -375,7 +375,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 </Style>
 ```
 
-**참고**: [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) 스타일 **RichTextBlock** 에 대 한 블록 기반 문서 개체 모델을 사용 하면 개별 텍스트에 특성을 설정 하기 때문에 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) 을 수행 하는 모든 텍스트 램프 스타일 없는 요소입니다. 또한 XAML 콘텐츠 속성을 사용하여 [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676)를 설정하면 스타일 지정할 텍스트 요소가 없어서 컨테이너의 스타일을 지정해야 하는 상황이 발생합니다. 이는 **RichTextBlock**의 경우 문제가 아닙니다. 왜냐하면 해당 텍스트 콘텐츠가 항상 페이지 머리글, 페이지 하위 머리글 및 비슷한 텍스트 램프 정의에 대해 XAML 스타일을 적용하는 [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503) 같은 특정 텍스트 요소여야 하기 때문입니다.
+**참고**: [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) 스타일 기능이 **RichTextBlock** 에 대 한 블록 기반 문서 개체 모델을 사용 하면 개별 텍스트에 특성을 설정할 수 있기 때문에 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) 을 수행 하는 모든 텍스트 램프 스타일 없는 요소입니다. 또한 XAML 콘텐츠 속성을 사용하여 [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676)를 설정하면 스타일 지정할 텍스트 요소가 없어서 컨테이너의 스타일을 지정해야 하는 상황이 발생합니다. 이는 **RichTextBlock**의 경우 문제가 아닙니다. 왜냐하면 해당 텍스트 콘텐츠가 항상 페이지 머리글, 페이지 하위 머리글 및 비슷한 텍스트 램프 정의에 대해 XAML 스타일을 적용하는 [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503) 같은 특정 텍스트 요소여야 하기 때문입니다.
 
 ## <a name="miscellaneous-named-styles"></a>기타 명명된 스타일
 
@@ -430,7 +430,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 
 ## <a name="troubleshooting-theme-resources"></a>테마 리소스 문제 해결
 
-[테마 리소스 사용 지침](#guidelines-for-using-theme-resources)을 따르지 않으면 앱에서 테마와 관련된 예기치 않은 동작이 발생할 수 있습니다.
+[테마 리소스 사용 지침](#guidelines-for-custom-theme-resources)을 따르지 않으면 앱에서 테마와 관련된 예기치 않은 동작이 발생할 수 있습니다.
 
 예를 들어 밝은 테마 플라이아웃을 열면 어두운 테마 앱 부분이 마치 원래 밝은 테마였던 것처럼 변경됩니다. 또는 밝은 테마 페이지로 이동했다가 되돌아오면 원래 어두운 테마 페이지(또는 일부)가 맑은 테마인 것처럼 보입니다.
 

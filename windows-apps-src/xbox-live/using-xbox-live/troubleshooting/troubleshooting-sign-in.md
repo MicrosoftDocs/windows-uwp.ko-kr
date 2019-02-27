@@ -6,12 +6,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox에 로그인 한, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: becff46ce8fc186ff615c9f66eaed014f036f971
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: ff8d66105d8a1a44708bf23a681767a3044cb654
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046115"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117537"
 ---
 # <a name="troubleshooting-xbox-live-sign-in"></a>Xbox Live 로그인 문제 해결
 
@@ -82,7 +82,7 @@ UWP 응용 프로그램을 개발 하는 경우 Xbox 앱을 사용 하 여 몇 �
 
 Visual Studio는 자동으로 하면 하지 않았던 로그인 경우 파트너 센터에서 앱을 프로 비전에 사용 되는 Microsoft 계정을 사용 하 여 Visual Studio로, 개인 Microsoft 계정 또는 도메인 계정에 따라 서명 pfx 파일을 생성 합니다. Appx 패키지를 빌드할 때 Visual Studio는 자동으로 생성 pfx 서명에 사용할 패키지 & package.appxmanifest에서 패키지 id "publisher" 부분을 변경 합니다. 결과적으로, 생성 된 비트 (특히 appxmanifest.xml)을 사용 하려는 보다 다른 패키지 id를 갖게 됩니다. 
 
-2. 파트너 센터에서 사용자 package.appxmanifest 타이틀 같은 응용 프로그램 id로 설정 되어 있는지 확인 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 저장소 선택-gt_ 연결 앱으로 스토어에 표시 된 대로...는 아래 스크린샷. 또는 수동으로 편집 하 여 package.appxmanifest 합니다. 자세한 내용은 [UWP 게임에 대 한 Visual Studio 시작](../../get-started-with-partner/get-started-with-visual-studio-and-uwp.md) 을 참조 하세요.
+2. 파트너 센터에서 사용자 package.appxmanifest 타이틀 같은 응용 프로그램 id로 설정 되어 있는지 확인 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 저장소 선택-gt_ 저장소와 응용 프로그램 연결... 에 표시 된 대로 아래 스크린샷. 또는 수동으로 편집 하 여 package.appxmanifest 합니다. 자세한 내용은 [UWP 게임에 대 한 Visual Studio 시작](../../get-started-with-partner/get-started-with-visual-studio-and-uwp.md) 을 참조 하세요.
 
 ![스토어 연결](../../images/troubleshooting/appxmanifest_binding.png)
 
@@ -102,7 +102,7 @@ Windows 10에서 기존 사용자 계정을 제거 해야 할 수, 시작 메뉴
 
 ### <a name="0x87dd000e-title-not-authorized"></a>0x87DD000E 제목 권한이 없음
 
-장치가 적절 한 개발 샌드박스 설정 되어 있는지 및 사용자에 게 샌드박스에 액세스할 수 있는지 확인 합니다. Xbox 앱을 사용 하 여이 확인 하는 방법에 자세한 정보는 [Xbox 앱을 사용 하 여 테스트](#test-xbox-app) 섹션을 참조 하세요.
+장치가 적절 한 개발 샌드박스 설정 되어 있는지 및 사용자에 게 샌드박스에 액세스할 수 있는지 확인 합니다. Xbox 앱을 사용 하 여이 확인 하는 방법에 자세한 정보는 [Xbox 앱을 사용 하 여 테스트](#test-using-the-xbox-app) 섹션을 참조 하세요.
 
 문제가 해결 되지 않으면, 다음 또한 개발자 센터 바인딩 및 앱 ID 설정을 확인 위에서 설명한 대로 합니다.
 

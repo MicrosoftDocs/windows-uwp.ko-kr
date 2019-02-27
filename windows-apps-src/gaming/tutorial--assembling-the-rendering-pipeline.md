@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
-ms.openlocfilehash: 6724aedf898706dd4c5bf728616c918d64b2fb32
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4c16f1fbb55374b1d04c9fc9f5f7eae72ad19b00
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931298"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117783"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>렌더링 프레임워크 I: 렌더링 소개
 
@@ -71,10 +71,10 @@ void App::Initialize(
 
 ## <a name="display-the-graphics-by-rendering-the-frame"></a>프레임을 렌더링하여 그래픽 표시
 
-게임이 시작되면 게임 장면이 렌더링되어야 합니다. 아래와 같이 렌더링을 위한 지침은 [__GameMain::Run__](#gameamainrun-method) 메서드에서 시작됩니다.
+게임이 시작되면 게임 장면이 렌더링되어야 합니다. 아래와 같이 렌더링을 위한 지침은 [__GameMain::Run__](#gamemainrun-method) 메서드에서 시작됩니다.
 
 간단한 흐름은 다음과 같습니다.
-1. __업데이트__
+1. __Update__
 2. __렌더링__
 3. __표시__
 
@@ -130,7 +130,7 @@ void GameMain::Run()
 
 __GameMain::Run__에서 [__GameRenderer::Render__](#gamerendererrender-method) 메서드를 호출하면 렌더링이 실행됩니다.
 
-[스테레오 렌더링](#stereo-rendering)이 활성화되어 있으면 두 가지 렌더링 패스가 존재하는데, 하나는 오른쪽 눈을 위한 것이고 다른 하나는 왼쪽 눈을 위한 것입니다. 각 렌더링 패스에서 렌더링 대상 및 [깊이 - 스텐실 보기](#depth-stencil-view)를 해당 디바이스에 바인딩합니다. 깊이 - 스텐실 보기는 이후에 삭제가 됩니다.
+[스테레오 렌더링](#stereo-rendering)이 활성화되어 있으면 두 가지 렌더링 패스가 존재하는데, 하나는 오른쪽 눈을 위한 것이고 다른 하나는 왼쪽 눈을 위한 것입니다. 각 렌더링 패스에서 렌더링 대상 및 깊이 - 스텐실 보기를 해당 디바이스에 바인딩합니다. 깊이 - 스텐실 보기는 이후에 삭제가 됩니다.
 
 > [!Note]
 > 꼭지점 인스턴스화나 기하 도형 셰이더를 사용하는 단일 패스 스테레오 같은 다른 메서드를 사용해 스테레오 렌더링을 수행할 수 있습니다. 두 개의 렌더링 패스 메서드를 사용하면 느리지만 보다 편리하게 스테레오 렌더링을 수행할 수 있습니다.
@@ -146,7 +146,7 @@ __GameMain::Run__에서 [__GameRenderer::Render__](#gamerendererrender-method) �
 
 입력 꼭지점 레이아웃을 사용하여 Direct3D 컨텍스트를 설정합니다. 입력 - 레이아웃 개체는 꼭지점 버퍼 데이터가 [렌더링 파이프라인](#rendering-pipeline)에 어떻게 스트리밍되는지 설명합니다. 
 
-다음으로 앞서 정의한 [상수 버퍼](#constant-buffers)를 사용하여 Direct3D 컨텍스트를 설정합니다. 상수 버퍼는 [꼭지점 렌더링](#vertex-shaders-and-pixel-shaders) 파이프라인 단계와 [픽셀 셰이더](#vertex-shaders-and-pixel-shaders) 파이프라인 단계에서 사용됩니다. 
+다음으로 앞서 정의한 상수 버퍼를 사용하여 Direct3D 컨텍스트를 설정합니다. 상수 버퍼는 [꼭지점 렌더링](#vertex-shaders-and-pixel-shaders) 파이프라인 단계와 [픽셀 셰이더](#vertex-shaders-and-pixel-shaders) 파이프라인 단계에서 사용됩니다. 
 
 > [!Note]
 > 상수 버퍼의 정의에 대한 자세한 내용은 [렌더링 프레임워크 II: 게임 렌더링](tutorial-game-rendering.md)을 참조하세요.
@@ -338,11 +338,11 @@ void GameRenderer::Render()
 * __m\_constantBufferChangesEveryPrim__에는 각 개체에 대한 매개 변수가 포함되어 있습니다.  여기에는 월드 변환 매트릭스에 대한 개체를 비롯하여 조명 계산을 위한 색과 반사 지수 같은 재질 속성이 포함되어 있습니다.
 * 메시 개체 데이터가 [렌더링 파이프라인](#rendering-pipeline)의 입력 어셈블러(IA) 단계에 스트리밍될 수 있도록 입력 꼭지점 레이아웃을 사용하도록 Direct3D 컨텍스트를 설정합니다.
 * IA 단계에서 [인덱스 버퍼](#index-buffer)를 사용하도록 Direct3D 컨텍스트를 설정합니다. 원형 정보(유형, 데이터 순서 등)를 제공합니다.
-* 인덱싱된 비 인스턴스 원형을 그리기 위해 그리기 호출을 제출합니다. __GameObject::Render__ 메서드는 원형의 [상수 버퍼](#constant-buffer-or-shader-constant-buffer)를 지정된 원형 고유의 데이터로 업데이트합니다. 그러면 각 원형의 기하 도형을 그릴 수 있도록 컨텍스트에서 __DrawIndexed__가 호출됩니다. 구체적으로 설명하자면 이러한 그리기 호출은 상수 버퍼 데이터에 의해 매개 변수화되어 그래픽 처리 장치(GPU)의 대기열에 명령 및 데이터를 저장합니다. 그리기 호출을 할 때마다 꼭지점마다 한 번씩 [꼭지점 셰이더](#vertex-shaders-and-pixel-shaders)가 실행되고, 원형에 있는 각 삼각형의 모든 픽셀마다 한 번씩 [픽셀 셰이더](#vertex-shaders-and-pixel-shaders)가 실행됩니다. 텍스처는 픽셀 셰이더가 렌더링을 수행하는 데 사용하는 상태의 일부입니다.
+* 인덱싱된 비 인스턴스 원형을 그리기 위해 그리기 호출을 제출합니다. __GameObject::Render__ 메서드는 원형의 [상수 버퍼](#constant-buffer-or-shader-constant-buffer)를 지정된 원형 고유의 데이터로 업데이트합니다. 그러면 각 원형의 기하 도형을 그릴 수 있도록 컨텍스트에서 __DrawIndexed__가 호출됩니다. 구체적으로 설명하자면 이러한 그리기 호출은 상수 버퍼 데이터에 의해 매개 변수화되어 그래픽 처리 장치(GPU)의 대기열에 명령 및 데이터를 저장합니다. 그리기 호출을 할 때마다 꼭지점마다 한 번씩 꼭지점 셰이더가 실행되고, 원형에 있는 각 삼각형의 모든 픽셀마다 한 번씩 [픽셀 셰이더](#vertex-shaders-and-pixel-shaders)가 실행됩니다. 텍스처는 픽셀 셰이더가 렌더링을 수행하는 데 사용하는 상태의 일부입니다.
 
 상수 버퍼가 여러 개인 이유는 다음과 같습니다.
     * 게임에서는 여러 상수 버퍼를 사용하지만 이러한 버퍼는 원형당 한 번만 업데이트해야 합니다. 앞서 설명했듯이 상수 버퍼는 각 원형에서 실행되는 셰이더에 대한 입력과 같습니다. 일부 데이터는 정적(__m\_constantBufferNeverChanges__)이고, 어떤 데이터는 카메라 위치와 같이 프레임에서 일정(__m\_constantBufferChangesEveryFrame__)하며, 또 어떤 데이터는 색상 및 텍스처와 같이 원형에 고유합니다(__m\_constantBufferChangesEveryPrim__).
-    * 게임 [렌더러](#renderer)는 이러한 입력을 서로 다른 상수 버퍼로 분리하여 CPU 및 GPU가 사용하는 메모리 대역폭을 최적화합니다. 이러한 접근 방식은 GPU에서 추적해야 하는 데이터의 양을 최소화하는 데도 도움이 됩니다. GPU에는 대형 명령 대기열이 있어서 게임에서 __Draw__를 호출할 때마다 해당 명령이 관련 데이터와 함께 대기열에 저장됩니다. 게임에서 원형 상수 버퍼를 업데이트하고 다음 __Draw__ 명령을 실행하면 그래픽 드라이버에서 이 다음 명령과 관련 데이터를 대기열에 추가합니다. 게임에서 100개의 원형을 그리면 대기열에 상수 버퍼 데이터 복사본 100개가 생성될 수 있습니다. 게임에서 GPU로 보내는 데이터의 양을 최소화하려고 하므로 게임에서는 각 원형에 대한 업데이트만 포함하는 별도의 원형 상수 버퍼를 사용합니다.
+    * 게임 렌더러에서는 이러한 입력을 서로 다른 상수 버퍼로 분리하여 CPU 및 GPU에서 사용하는 메모리 대역폭을 최적화합니다. 이러한 접근 방식은 GPU에서 추적해야 하는 데이터의 양을 최소화하는 데도 도움이 됩니다. GPU에는 대형 명령 대기열이 있어서 게임에서 __Draw__를 호출할 때마다 해당 명령이 관련 데이터와 함께 대기열에 저장됩니다. 게임에서 원형 상수 버퍼를 업데이트하고 다음 __Draw__ 명령을 실행하면 그래픽 드라이버에서 이 다음 명령과 관련 데이터를 대기열에 추가합니다. 게임에서 100개의 원형을 그리면 대기열에 상수 버퍼 데이터 복사본 100개가 생성될 수 있습니다. 게임에서 GPU로 보내는 데이터의 양을 최소화하려고 하므로 게임에서는 각 원형에 대한 업데이트만 포함하는 별도의 원형 상수 버퍼를 사용합니다.
 
 #### <a name="gameobjectrender-method"></a>GameObject::Render 메서드
 
@@ -626,7 +626,7 @@ Microsoft DirectX 그래픽 인프라 (DXGI)는 Direct3D 10 되는 하위 수준
 
 기능 수준을 사용하면 디바이스를 만들 때 요청하고자 하는 기능 수준에 맞게 디바이스를 생성하려고 시도할 있습니다. 디바이스 생성이 진행되면 기능 수준이 지원되는 것이고, 그렇지 않으면 하드웨어에서 기능 수준이 지원되지 않는 것입니다. 더 낮은 기능 수준에서 디바이스를 다시 생성해 보거나 응용 프로그램을 종료하는 방법을 선택할 수 있습니다. 예를 들어 12\_0 기능 수준에는 Direct3D 11.3 또는 Direct3D 12와 셰이더 모델 l 5.1이 필요합니다. 자세한 내용은 [Direct3D 기능 수준: 각 기능 수준에 대한 개요](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview)를 참조하세요.
 
-기능 수준을 사용 Direct3D9, Microsoft Direct3D10 또는 Direct3D11, 응용 프로그램을 개발 하 고 9, 10 또는 11 하드웨어 (일부 예외)에서 실행할 수 있습니다. 자세한 내용은 [Direct3D 기능 수준](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx)을 참조하세요.
+기능 수준을 사용 하면 Direct3D9, Microsoft Direct3D10 또는 Direct3D11, 응용 프로그램을 개발 하 고 9, 10 또는 11 하드웨어 (일부 예외)에서 실행할 수 있습니다. 자세한 내용은 [Direct3D 기능 수준](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx)을 참조하세요.
 
 ### <a name="stereo-rendering"></a>스테레오 렌더링
 
