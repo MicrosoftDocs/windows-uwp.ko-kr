@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 04a5285c39e46019275b3dd6fb3843d932b53901
-ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
+ms.openlocfilehash: 788f47c1b29766cae1f437992aee8414580f3935
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "9059754"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116495"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Xbox 및 TV용 디자인
 
@@ -434,7 +434,7 @@ DirectX 11 또는 DirectX 12를 사용해 앱을 개발하면서 사용자 고�
 
 ![피벗 밑줄](images/designing-for-tv/pivot-underline.png)
 
-선택한 피벗 헤더가 항상 첫 번째 위치로 이동하도록 하는 대신 피벗이 항상 동일한 위치를 유지하도록 [Pivot.IsHeaderItemsCarouselEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabledproperty) 속성을 `true`로 설정할 수 있습니다. TV와 같은 큰 화면 표시에서는 헤더 래핑이 사용자에게 방해가 될 수 있으므로 환경이 개선됩니다. 모든 피벗 헤더가 한 번에 화면에 들어가지 않는 경우 고객이 다른 헤더를 볼 수 있도록 스크롤 막대가 표시됩니다. 그러나 최상의 환경을 제공하려면 모두 화면에 들어가도록 해야 합니다. 자세한 내용은 [탭 및 피벗](../controls-and-patterns/tabs-pivot.md)을 참조하세요.
+선택한 피벗 헤더가 항상 첫 번째 위치로 이동하도록 하는 대신 피벗이 항상 동일한 위치를 유지하도록 [Pivot.IsHeaderItemsCarouselEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabledproperty) 속성을 `true`로 설정할 수 있습니다. TV와 같은 큰 화면 표시에서는 헤더 래핑이 사용자에게 방해가 될 수 있으므로 환경이 개선됩니다. 모든 피벗 헤더가 한 번에 화면에 들어가지 않는 경우 고객이 다른 헤더를 볼 수 있도록 스크롤 막대가 표시됩니다. 그러나 최상의 환경을 제공하려면 모두 화면에 들어가도록 해야 합니다. 자세한 내용은 [탭 및 피벗](/windows/uwp/design/controls-and-patterns/pivot)을 참조하세요.
 
 ### <a name="navigation-pane-a-namenavigation-pane-"></a>탐색 창 <a name="navigation-pane" />
 

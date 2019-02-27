@@ -1,17 +1,17 @@
 ---
 title: 웹 계정 관리자
 description: '이 문서는 Windows10 웹 계정 관리자 API를 사용하여 AccountsSettingsPane에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다.'
-ms.date: 12/6/2017
+ms.date: 12/06/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: e2c1be80ada3e337a4bf7353b854ae4cbe5bd99a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: a0a16ac9a2d810f7f4cbe2be403713b5cec4997b
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050986"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116049"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 

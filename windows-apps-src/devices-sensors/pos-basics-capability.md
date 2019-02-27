@@ -1,16 +1,16 @@
 ---
 title: PointOfService 장치 접근 권한 값
 description: PointOfService 접근 권한 값은 Windows.Devices.PointOfService 네임스페이스의 사용에 필요합니다.
-ms.date: 05/1/2018
+ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 832881919a3ed1f44c0912703ede5948c5b10d11
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9c09a9093389fc0a917243773eae6803220ed610
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945474"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115757"
 ---
 # <a name="pointofservice-device-capability"></a>PointOfService 장치 접근 권한 값
 응용 프로그램 패키지 매니페스트에서 접근 권한 값을 선언하여 PointOfService API에 대한 액세스를 요청합니다. 대부분의 접근 권한 값은 매니페스트 디자이너를 사용하여, 또는 Microsoft Visual Studio에서 선언하거나 수동으로 추가할 수 있습니다.  

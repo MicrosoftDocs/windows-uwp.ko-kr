@@ -7,12 +7,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b7c30815a2d6e9a8bcac0730f0330ea41624c3e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 1c74d0831c3b841ad2a1366bd2e03fb8a9b0448d
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944073"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115366"
 ---
 # <a name="gameclipuri-json"></a>GameClipUri(JSON)
  
@@ -21,7 +21,7 @@ ms.locfileid: "8944073"
  
 ## <a name="gameclipuri"></a>GameClipUri
  
-GameClipUri 개체에 다음과 같이 지정 합니다.
+GameClipUri 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
@@ -33,12 +33,12 @@ GameClipUri 개체에 다음과 같이 지정 합니다.
 <a id="ID4EMC"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json
 {
-         "uri": "http://gameclips.xbox.com/clips/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/clip.mp4",
+         "uri": "https://gameclips.xbox.com/clips/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/clip.mp4",
          "fileSize": 1234565,
          "uriType": "Download",
          "expiration": "9999-12-31T23:59:59.9999999"

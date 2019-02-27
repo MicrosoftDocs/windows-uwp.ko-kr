@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b61c36143749ddb358cea1d4cf59f43ecb8c6338
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: 4ba3a45701d82ad0b43591469bf390190ec18db0
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037095"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116455"
 ---
 # <a name="navigation-view"></a>탐색 보기
 
@@ -143,7 +143,7 @@ _왼쪽된 탐색 레이아웃_
 NavigationView 창에 포함 될 수 있습니다.
 
 - [NavigationViewItem](/uwp/api/windows.ui.xaml.controls.navigationviewitem) 개체입니다. 특정 페이지를 탐색 하는 것에 대 한 항목을 탐색 합니다.
-- [NavigationViewItemSeparator](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator) 개체입니다. 탐색 항목 그룹화를 위한 구분 합니다. 공백으로 구분 기호를 렌더링 하는 0으로 [Opacity](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator.opacity) 속성을 설정 합니다.
+- [NavigationViewItemSeparator](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator) 개체입니다. 탐색 항목 그룹화를 위한 구분 합니다. 공백으로 구분 기호를 렌더링 하는 0으로 [Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) 속성을 설정 합니다.
 - [NavigationViewItemHeader](/uwp/api/windows.ui.xaml.controls.navigationviewitemheader) 개체입니다. 항목 그룹에 레이블을 지정 헤더입니다.
 - 앱 수준 검색을 허용할 옵션 [AutoSuggestBox](auto-suggest-box.md) 컨트롤입니다. 컨트롤 [NavigationView.AutoSuggestBox](/uwp/api/windows.ui.xaml.controls.navigationview.autosuggestbox) 속성을 할당 합니다.
 - [앱 설정](../app-settings/app-settings-and-data.md)에 대한 선택적 진입점 설정 항목을 숨기려면 [IsSettingsVisible](/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) 속성을 **false**로 설정 합니다.

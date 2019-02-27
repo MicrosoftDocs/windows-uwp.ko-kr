@@ -2,16 +2,16 @@
 title: 쓰기 스타일
 description: 적절한 음성과 톤을 사용하는 것은 앱의 텍스트를 디자인의 자연스러운 부분으로 보이게 하는 데 필수적입니다.
 keywords: UWP, Windows 10, 텍스트, 쓰기, 음성, 톤, 디자인, UI, UX
-ms.date: 5/7/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b09265164ccd922ab310c06e6c2bd14b6d7a841c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: aaaf13c455d3d05d5ccfac6b2bd61418f3e8e5bb
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938955"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116205"
 ---
 # <a name="writing-style"></a>쓰기 스타일
 

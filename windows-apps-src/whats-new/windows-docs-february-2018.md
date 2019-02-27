@@ -2,15 +2,15 @@
 title: 2018년 2월 Windows 문서의 새로운 내용 - UWP 앱 개발
 description: 2018년 2월 Windows 10 개발자 설명서에 추가된 새로운 기능, 동영상 및 개발자 지침
 keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 2월
-ms.date: 2/5/2018
+ms.date: 02/05/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 22ff57fb32d9c65c675ca63ae0c644b146226795
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 421fb7c973c1aaa4e9e1924548d7f11439fd5350
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044224"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115840"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>2018년 2월 Windows 개발자 문서의 새로운 내용
 

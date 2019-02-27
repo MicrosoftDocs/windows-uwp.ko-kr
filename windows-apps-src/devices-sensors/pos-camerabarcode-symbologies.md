@@ -1,16 +1,16 @@
 ---
 title: 카메라 바코드 스캐너 기호
 description: 카메라 바코드 스캐너에서 지원되는 기호
-ms.date: 05/1/2018
+ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: ecb40528ee0104a2e25b5e95499c4404057eba1f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 14cb42e0bd0f1bac307a9dfc1ac188d8b11d8cb8
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928019"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115800"
 ---
 # <a name="symbologies"></a>기호
 이 항목에는 UPC/EAN, Code 39, Code 128, Interleaved 2 of 5, Databar Omnidirectional, Databar Stacked, QR 코드 및 GS1DWCode를 포함하여 Windows 10과 함께 배송되는 소프트웨어 바코드 디코더에서 지원되는 기호 각각에 샘플 바코드를 제공합니다.

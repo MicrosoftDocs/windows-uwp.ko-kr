@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5182981483069d42339ad71a5347dc9c6c36ed58
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.openlocfilehash: 733ce75942a05482ade88c1510e788f1cbd515d4
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058744"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115950"
 ---
 # <a name="using-lights-in-windows-ui"></a>Windows UI에 광원을 사용 하 여
 
@@ -22,7 +22,7 @@ Windows.UI.Composition Api를 사용 하 여 실시간 애니메이션 및 효�
 컴퍼지션 조명 함으로써 UI 흥미로운 만들 수 있습니다.
 
 - 음악 재생 장면 같은 몰입 형 시나리오를 활성화 하는 장면에서 다른 개체의 밝은 독립적의 변환 합니다.
-- 광원을 사용 하 여 개체 쌍으로 함께 이동 하도록 하는 기능 독립적 장면 Fluent [표시](/design/style/reveal) 강조와 같은 시나리오를 사용 하도록 설정의 나머지 부분입니다.
+- 광원을 사용 하 여 개체 쌍으로 함께 이동 하도록 하는 기능 독립적 장면 Fluent [표시](/windows/uwp/design/style/reveal) 강조와 같은 시나리오를 사용 하도록 설정의 나머지 부분입니다.
 - 재료를 만들고 깊이를 그룹으로 빛과 장면 전체 변환 합니다.
 
 컴퍼지션 조명 세 가지 주요 개념을 지원: **조명**, **대상**및 **SceneLightingEffect**합니다.
@@ -74,7 +74,7 @@ CompositionLight 하 여 조명을 콘텐츠를 결정할 때 고려해 야 할 
 **주변 광원** | 장면에 비 주변 광원을 추가 모든 기존 빛 꺼집니다.  비 주변 광원의 대상으로 지정 되지 항목은 검게 표시 됩니다.  자연 스러운 방법으로 조명에 의해 대상이 아닌 주변 시각 효과 강조 하는 주변 광원 다른 조명와 함께 사용 합니다.
 **조명 수** | UI를 대상으로 모든 두 주변 컴퍼지션 조명 조합에서 사용할 수 있습니다. 주변 광원; 제한 되지 않습니다. 발견 점과 원거리 광원 됩니다.
 **수명** | CompositionLight 수명 조건 발생할 수 있습니다 (예: 가비지 수집기는 사용 하기 전에 조명 개체를 재활용 될 수 있습니다).  응용 프로그램 수명을 관리 하는 데 멤버로 조명을 추가 하 여 광원에 대 한 참조를 유지 하는 것이 좋습니다.
-**변환** | 조명 노드에 올바로 그리려는 시각적 구조에 [관점 변환을](/design/layout/3-d-perspective-effects) 같은 효과 사용 하는 UI 위에 배치 되어야 합니다.
+**변환** | 조명 노드에 올바로 그리려는 시각적 구조에 [관점 변환을](/windows/uwp/design/layout/3-d-perspective-effects) 같은 효과 사용 하는 UI 위에 배치 되어야 합니다.
 **대상 및 좌표 공간** | CoordinateSpace는 시각적 공간은 모든 조명 속성을 설정 해야 합니다. CompositionLight.Targets는 CoordinateSpace 트리 내에 있어야 합니다.
 
 ## <a name="lighting-properties"></a>조명 속성

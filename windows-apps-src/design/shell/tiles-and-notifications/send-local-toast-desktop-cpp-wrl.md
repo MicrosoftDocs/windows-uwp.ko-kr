@@ -3,16 +3,16 @@ Description: Learn how Win32 C++ WRL apps can send local toast notifications and
 title: 데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 label: Send a local toast notification from desktop C++ WRL apps
 template: detail.hbs
-ms.date: 03/7/2018
+ms.date: 03/07/2018
 ms.topic: article
 keywords: Windows 10, uwp, win32, 데스크톱, 알림 메시지, 알림 보내기, 로컬 알림 보내기, 데스크톱 브리지, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: f4b7dbe75b06e264eed67d9f08b1e12a42ecb890
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 82de349009350c970fce923a2aa503df0801c3b7
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926821"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116265"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 
@@ -395,7 +395,7 @@ if (SUCCEEDED(hr))
 
 ## <a name="step-10-deploying-and-debugging"></a>10단계: 배포 및 디버깅
 
-데스크톱 브리지 앱을 배포하고 디버깅하려면 [패키지로 만든 데스크톱 앱 실행, 디버깅, 테스트](/porting/desktop-to-uwp-debug.md)를 참조하세요.
+데스크톱 브리지 앱을 배포하고 디버깅하려면 [패키지로 만든 데스크톱 앱 실행, 디버깅, 테스트](/windows/uwp/porting/desktop-to-uwp-debug)를 참조하세요.
 
 클래식 Win32 앱을 배포하고 디버깅하려면, 정상적으로 디버깅하기 전에 한 번 설치 프로그램을 통해 앱을 설치해야 해야만 AUMID 및 CLSID로 시작 바로 가기가 표시됩니다. 시작 바로 가기가 나타나면 Visual Studio에서 F5를 사용하여 디버깅할 수 있습니다.
 

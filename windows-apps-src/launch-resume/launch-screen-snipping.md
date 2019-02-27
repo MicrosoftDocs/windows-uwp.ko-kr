@@ -1,17 +1,17 @@
 ---
 title: 화면 캡처 시작
 description: 이 항목에서는 ms screenclip 및 ms-screensketch URI 스키마를 설명합니다. 앱 캡처 & 스케치 응용 프로그램을 실행 하거나 새 캡처를 열고 이러한 URI 체계를 사용할 수 있습니다.
-ms.date: 8/1/2017
+ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp, uri, 캡처, 스케치
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2bddea1dd2b5f21a145bde789f1ad760bb5e556a
-ms.sourcegitcommit: b126940932935ebd2965ea68078798fb6e876b23
+ms.openlocfilehash: 06e988387f574b74d511b14a2ebca24b0a149158
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "9065990"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116175"
 ---
 # <a name="launch-screen-snipping"></a>화면 캡처 시작
 

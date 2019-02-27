@@ -2,19 +2,19 @@
 description: 포커스 표시는 사용자가 게임 패드 또는 키보드 포커스를 이동 하면 포커스 맞출 수 있는 요소의 테두리를 애니메이션화 하는 조명 효과입니다.
 title: 포커스 표시
 template: detail.hbs
-ms.date: 03/1/2018
+ms.date: 03/01/2018
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 15c0ff77d511e531bcb8b20b21f3c52a8c753b7a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 7bcceb8d44b6d92cab05a9c077531b3fe1b05c79
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049118"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115970"
 ---
 # <a name="reveal-focus"></a>포커스 표시
 

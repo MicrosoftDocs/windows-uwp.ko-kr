@@ -6,12 +6,12 @@ ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 143aa8310cdfe9dd5f0be29bf07f03c23293a647
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 6c5c8b99ec3646d1eebbb922557f97c9e9304ed4
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919038"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116465"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
@@ -46,7 +46,7 @@ URI 스키마를 사용하면 하이퍼링크를 클릭하여 앱을 열 수 있
 <br>
 예를 들어 다음 URI는 기본 브라우저를 열고 Bing 웹 사이트를 표시합니다.
 
-`http://bing.com`
+`https://bing.com`
 
 사용자 지정 URI 스키마를 실행할 수도 있습니다. 해당 URI를 처리하는 앱이 설치되지 않은 경우 사용자가 설치할 앱을 권장할 수 있습니다. 자세한 내용은 [URI를 처리할 수 없는 경우 앱 권장](#recommend-an-app-if-one-is-not-available-to-handle-the-uri)을 참조하세요.
 
@@ -119,7 +119,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)를 호출하는 원본 앱은 URI가 시작된 후 화면에 유지되도록 요청할 수 있습니다. 기본적으로 Windows는 URI를 처리하는 대상 앱과 원본 앱 사이에 모든 사용 가능한 공간을 동일하게 공유하려고 합니다. 원본 앱은 [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 속성을 사용하여 앱 창이 거의 모든 사용 가능한 공간을 사용하려고 한다는 것을 운영 체제에 나타냅니다. **DesiredRemainingView**를 사용하여 URI가 시작된 후 원본 앱이 화면에서 유지될 필요가 없고 대상 앱으로 완전히 대체될 수 있다는 것을 나타낼 수도 있습니다. 이 속성은 호출 앱의 기본 창 크기만 지정합니다. 화면에 동시에 나타날 수도 있는 다른 앱의 동작은 지정하지 않습니다.
 
-**참고**Windows 고려 같은 여러 가지 요소 예를 들어 원본 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 화면, 화면 방향 및 등에서 앱의 수입니다. [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
+**참고**같은 여러 가지 요소 예를 들어 원본 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 앱 화면, 화면 방향 등에 수 Windows는를 고려 합니다. [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
 
 ```cs
 // Set the desired remaining view.
@@ -206,7 +206,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="photos-app-uri-scheme"></a>사진 앱 URI 스키마
 
-**ms-photos:** URI 스키마로 사진 앱을 실행하여 이미지를 보거나 비디오를 편집할 수 있습니다. 예를 들어,  
+**ms-photos:** URI 스키마로 사진 앱을 실행하여 이미지를 보거나 비디오를 편집할 수 있습니다. 예를 들면 다음과 같습니다.  
 이미지를 보려면 다음을 수행합니다. `ms-photos:viewer?fileName=c:\users\userName\Pictures\image.jpg`  
 또는 비디오를 편집하려면 다음을 수행합니다. `ms-photos:videoedit?InputToken=123abc&Action=Trim&StartTime=01:02:03`  
 
@@ -240,8 +240,8 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="weather-app-uri-scheme"></a>날씨 앱 URI 스키마
 
-사용 합니다 **msnweather:** URI 스키마를 날씨 응용 프로그램을 실행 합니다.
+사용 하는 **msnweather:** URI 스키마를 날씨 응용 프로그램을 실행 합니다.
 
 | URI 스키마 | 결과 |
 |------------|---------|
-| msnweather://forecast?la= \[latitude\] 및 lo = \ [longitude\] | 위치 지리적 좌표를 기반으로 예측 페이지에 있는 날씨 앱을 실행 합니다.<br>`latitude` latitude 위치를 나타냅니다.<br> `longitude` 경도 위치를 나타냅니다.<br> |
+| msnweather://forecast?la= \[latitude\]&lo=\[longitude\] | 위치 지리적 좌표를 기반으로 예측 페이지에 있는 날씨 앱을 실행 합니다.<br>`latitude` latitude 위치를 나타냅니다.<br> `longitude` 경도 위치를 나타냅니다.<br> |

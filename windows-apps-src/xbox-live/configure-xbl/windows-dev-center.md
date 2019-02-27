@@ -1,23 +1,23 @@
 ---
 title: 파트너 센터 서비스 구성
 description: 파트너 센터에서 Xbox Live 서비스를 구성 하는 방법에 자세히 설명 하는 항목에 대 한 링크를 제공 합니다.
-ms.date: 7/30/2018
+ms.date: 07/30/2018
 ms.topic: article
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
-ms.openlocfilehash: dc081925e1a3bd671c01794dca5e432e957a7809
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 83874add42f0a7656c249890857aa018028474a1
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946712"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115408"
 ---
 # <a name="partner-center-service-configuration"></a>파트너 센터 서비스 구성
 
-파트너 센터에서 [파트너 센터](https://partner.microsoft.com/dashboard) 에 게시 하 고 Xbox Live 기능 전체 집합을 사용 하는 게임의 Xbox Live 서비스를 구성할 수 있습니다.
+파트너 센터에서 [파트너 센터](https://partner.microsoft.com/dashboard) 에 게시 하 고 Xbox Live 기능의 전체 집합을 사용 하는 게임의 Xbox Live 서비스를 구성할 수 있습니다.
 
 > [!IMPORTANT]
-> 다음이 항목 타이틀에 Xbox Live 크리에이터 스 프로그램에 적용 되지 않습니다.
+> 이러한 항목 타이틀에 Xbox Live 크리에이터 스 프로그램에 적용 되지 않습니다.
 
 게임 구성 페이지에 액세스 하기 위해 Xbox Live 전체 액세스에 대 한 활성화 되어야 합니다.
 

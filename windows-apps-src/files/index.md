@@ -1,17 +1,11 @@
 ---
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
-title: 파일, 폴더 및 라이브러리
-description: 앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/음악 라이브러리와 같은 특수 샌드박스가 적용된 위치에 대해 알아봅니다.
+title: '파일, 폴더 및 라이브러리'
+description: '앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/음악 라이브러리와 같은 특수 샌드박스가 적용된 위치에 대해 알아봅니다.'
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp
+keywords: 'windows 10, uwp'
 ms.localizationpriority: medium
-ms.openlocfilehash: 517302b7db1e7b65ca7a181a8c766ce1e71737ac
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044547"
 ---
  # <a name="files-folders-and-libraries"></a>파일, 폴더 및 라이브러리
 
@@ -22,6 +16,7 @@ ms.locfileid: "9044547"
 |-------|--------------|
 | [파일 및 폴더 열거 및 쿼리](quickstart-listing-files-and-folders.md) | 폴더, 라이브러리, 디바이스 또는 네트워크 위치에 있는 파일 및 폴더에 액세스합니다. 파일 및 폴더 쿼리를 작성하여 위치에 있는 파일 및 폴더를 쿼리할 수도 있습니다. |
 | [파일 만들기, 쓰기 및 읽기](quickstart-reading-and-writing-files.md) | [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 사용하여 파일을 읽고 씁니다. |
+| [파일을 작성 하기 위한 모범 사례](best-practices-for-writing-to-files.md) | [FileIO](https://docs.microsoft.com/uwp/api/windows.storage.fileio) 및 [PathIO](https://docs.microsoft.com/uwp/api/windows.storage.pathio) 클래스의 메서드를 작성 하는 다양 한 파일을 사용 하기 위한 모범 사례에 알아봅니다. |
 | [파일 속성 가져오기](quickstart-getting-file-properties.md) | [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171) 개체로 표시되는 파일의 최상위, 기본 및 확장 속성을 가져옵니다. |
 | [선택기를 사용하여 파일 및 폴더 열기](quickstart-using-file-and-folder-pickers.md) | 사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. [FolderPicker](https://msdn.microsoft.com/library/windows/apps/br207881)를 사용하여 폴더에 액세스할 수 있습니다. |
 | [선택기를 사용하여 파일 저장](quickstart-save-a-file-with-a-picker.md) | 사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 [FileSavePicker](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용합니다. |

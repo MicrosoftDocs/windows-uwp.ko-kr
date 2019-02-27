@@ -2,16 +2,16 @@
 title: 2D, 3D 및 Streetside 뷰가 있는 지도 표시
 description: 지도 *장소 카드*라는 빠른 해제 가능 창 또는 전체 기능을 갖춘 지도 컨트롤에서 지도를 표시할 수 있습니다.
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
-ms.date: 03/14/2018
+ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지도 컨트롤, 지도 보기
 ms.localizationpriority: medium
-ms.openlocfilehash: 03c864a6e8bc6191f63a2b6fd55d8eb23ad965e4
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 41d44f75c80e10123c21fc310bff46371ede0fca
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046992"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116385"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>2D, 3D, Streetside 뷰로 지도 표시
 

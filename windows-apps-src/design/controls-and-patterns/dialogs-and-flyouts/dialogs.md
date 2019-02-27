@@ -12,14 +12,14 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f3fd2173296c433015fa30b81c0d90e32d2d4b0
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.openlocfilehash: bee954cba446ac7dc7eb41622d9275b3b73af6ee
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036945"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116102"
 ---
-## <a name="dialog-controls"></a>대화 상자 컨트롤
+# <a name="dialog-controls"></a>대화 상자 컨트롤
 
 대화 상자 컨트롤은 상황에 맞는 앱 정보를 제공 하는 모달 UI 오버레이입니다. 이러한 명시적으로 닫을 때까지 앱 창의 조작을 차단 합니다. 종종 사용자의 작업을 요청하기도 합니다.
 

@@ -2,16 +2,16 @@
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: HoloLens용 디바이스 포털
 description: HoloLens용 Windows Device Portal을 사용하여 HoloLens 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다.
-ms.date: 1/3/2019
+ms.date: 01/3/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d02f9eac43687974ed76ef25e53f654783956a9
-ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
+ms.openlocfilehash: 2561f18e2ac054c8b378b0c7c0a9689bebcc4140
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991619"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116092"
 ---
 # <a name="device-portal-for-hololens"></a>HoloLens용 디바이스 포털
 
@@ -34,7 +34,7 @@ ms.locfileid: "8991619"
 #### <a name="connect-over-wi-fi"></a>Wi-Fi를 통해 연결 
 
 1. HoloLens를 Wi-Fi에 연결
-2. 디바이스의 IP 주소를 찾습니다. 아래의 장치에서 IP 주소를 확인할 **설정 > 네트워크 및 인터넷 > Wi-fi > 하드웨어 속성**합니다. "안녕 코타나, 내 IP 주소는?"이라고 말하여 요청할 수도 있습니다.
+2. 디바이스의 IP 주소를 찾습니다. **설정 gt_ 네트워크 & 인터넷 gt_ Wi-fi gt_ 하드웨어 속성**에서 장치의 IP 주소를 찾습니다. "안녕 코타나, 내 IP 주소는?"이라고 말하여 요청할 수도 있습니다.
 
 3. PC의 웹 브라우저에서 다음으로 이동합니다. `https://<YOUR_HOLOLENS_IP_ADDRESS>`
     - 브라우저에 "이 웹 사이트의 보안 인증서에 문제가 있습니다"라는 메시지가 표시됩니다. 이 오류는 디바이스 포털에 발행된 인증서가 테스트 인증서이기 때문에 발생합니다.

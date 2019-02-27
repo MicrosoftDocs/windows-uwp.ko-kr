@@ -6,19 +6,19 @@ label: Designing for Mixed Reality
 template: detail.hbs
 isNew: true
 keywords: Mixed Reality, Hololens, 증강 현실, 응시, 음성, 컨트롤러
-ms.date: 2/5/2018
+ms.date: 02/05/2018
 ms.topic: article
 pm-contact: chigy
 design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: e6aebac45dc32933f55d917c0b1153cba952d819
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: b988859422a80b31d94a133e36631b078ac7c14e
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932566"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116215"
 ---
 # <a name="designing-for-mixed-reality"></a>혼합 현실을 위한 디자인
 
@@ -84,7 +84,7 @@ HoloLens와 혼합 현실 플랫폼 모두 키보드 및 마우스가 지원됩�
 * [Clicker 장치](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories)(HoloLens 전용)
 * [모션 컨트롤러](https://developer.microsoft.com/windows/mixed-reality/motion_controllers)(혼합 현실 장치 전용, 위 그림 참조)
 
-위 컨트롤러는 가상 개체와 일어나는 상호 작용이 자연스럽고 정확하게 보일 수 있도록 지원합니다. 일부 상호 작용은 아무런 대가 없이 지원됩니다. 예를 들어 HoloLens 제스처를 선택 하거나 예상한 다시, 혹은 코딩할 필요 없이 입력된 응답 생성는 모션 컨트롤러의 Windows 키 또는 트리거를 클릭 합니다.
+위 컨트롤러는 가상 개체와 일어나는 상호 작용이 자연스럽고 정확하게 보일 수 있도록 지원합니다. 일부 상호 작용은 아무런 대가 없이 지원됩니다. 예를 들어 HoloLens 제스처를 선택 하거나 모션 컨트롤러의 Windows 키 또는 트리거를 클릭 하면 예상한 다시, 혹은 코딩할 필요 없이 입력된 응답 생성 됩니다.
 
 그 밖에 추가로 제공되는 정보나 입력 방식을 활용하려면 코드를 추가해야 하는 경우도 있습니다. 예를 들어, 개체 위치나 버튼 누르기를 고려하여 코드를 작성하는 경우에는 모션 컨트롤러를 사용해 제어를 세분화하여 개체를 조작할 수 있습니다.
 

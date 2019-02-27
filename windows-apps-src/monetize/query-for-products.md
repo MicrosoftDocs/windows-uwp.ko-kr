@@ -2,16 +2,16 @@
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클라이언트 ID와 연관된 앱에 대해 고객이 소유한 모든 제품을 가져옵니다. 특정 제품으로 쿼리의 범위를 지정하거나 다른 필터를 사용할 수 있습니다.
 title: 제품에 대한 쿼리
-ms.date: 03/16/2018
+ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, 제품 보기
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0f7f8c0f682eaa129f44eaa421fabd63dbfce4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 700cb111f74a4534f2f5e1de70eddfb88b456aa7
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922470"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116195"
 ---
 # <a name="query-for-products"></a>제품에 대한 쿼리
 
@@ -43,10 +43,10 @@ Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클�
 
 | 헤더         | 유형   | 설명                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| 권한 부여  | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
-| 호스트           | 문자열 | **collections.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
+| 권한 부여  | string | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
+| 호스트           | string | **collections.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
-| Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
+| Content-Type   | string | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -54,13 +54,13 @@ Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클�
 | 매개 변수         | 유형         | 설명         | 필수 |
 |-------------------|--------------|---------------------|----------|
 | beneficiaries     | UserIdentity | 제품에 대해 쿼리 중인 사용자를 나타내는 UserIdentity 개체입니다. 자세한 내용은 아래 표를 참조하세요.    | 예      |
-| continuationToken | 문자열       | 제품 집합이 여러 개 있는 경우 페이지 제한에 도달할 때 응답 본문이 연속 토큰을 반환합니다. 나머지 제품을 검색하는 후속 호출에서 그 연속 토큰을 제공합니다.       | 아니요       |
+| continuationToken | string       | 제품 집합이 여러 개 있는 경우 페이지 제한에 도달할 때 응답 본문이 연속 토큰을 반환합니다. 나머지 제품을 검색하는 후속 호출에서 그 연속 토큰을 제공합니다.       | 아니요       |
 | maxPageSize       | 숫자       | 하나의 응답에 반환하는 제품의 최대 수입니다. 기본 및 최대 값은 100입니다.                 | 아니요       |
 | modifiedAfter     | datetime     | 지정한 경우 서비스는 이 날짜 이후 수정된 제품만 반환합니다.        | 아니요       |
-| parentProductId   | 문자열       | 지정한 경우 서비스는 지정된 앱에 해당하는 추가 기능만 반환합니다.      | 아니요       |
+| parentProductId   | string       | 지정한 경우 서비스는 지정된 앱에 해당하는 추가 기능만 반환합니다.      | 아니요       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | 지정한 경우 서비스는 제공된 제품/SKU 쌍에 해당하는 제품만 반환합니다. 자세한 내용은 아래 표를 참조하세요.      | 아니요       |
-| productTypes      | 목록&lt;string&gt;       | 쿼리 결과에 반환 하는 제품 유형을 지정 합니다. 지원 되는 제품 유형은 **Application**, **Durable**, 및 **UnmanagedConsumable**입니다.     | 예       |
-| validityType      | 문자열       | **All**로 설정된 경우 만료된 항목을 포함하여 사용자의 모든 제품이 반환됩니다. **Valid**로 설정된 경우 이 시점에 유효한 제품만 반환됩니다(즉, 현재 활성 상태인 제품, 시작 날짜가 &lt;지금 이전인 제품, 종료 날짜가 &gt;지금 이후인 제품이 있습니다). | 아니요       |
+| productTypes      | 목록&lt;문자열&gt;       | 쿼리 결과에 반환 하는 제품 유형을 지정 합니다. 지원 되는 제품 유형은 **Application**, **Durable**, 및 **UnmanagedConsumable**입니다.     | 예       |
+| validityType      | string       | **All**로 설정된 경우 만료된 항목을 포함하여 사용자의 모든 제품이 반환됩니다. **Valid**로 설정된 경우 이 시점에 유효한 제품만 반환됩니다(즉, 현재 활성 상태인 제품, 시작 날짜가 &lt;지금 이전인 제품, 종료 날짜가 &gt;지금 이후인 제품이 있습니다). | 아니요       |
 
 
 UserIdentity 개체에는 다음 매개 변수가 포함됩니다.
@@ -76,8 +76,8 @@ ProductSkuId 개체에는 다음 매개 변수가 포함됩니다.
 
 | 매개 변수 | 유형   | 설명          | 필수 |
 |-----------|--------|----------------------|----------|
-| productId | 문자열 | Microsoft Store 카탈로그의 [제품](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 스토어 ID의 예는 9NBLGGH42CFD입니다. | 예      |
-| skuID     | 문자열 | Microsoft Store 카탈로그의 제품 [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. SKU에 대한 스토어 ID의 예는 0010입니다.       | 예      |
+| productId | string | Microsoft Store 카탈로그의 [제품](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 스토어 ID의 예는 9NBLGGH42CFD입니다. | 예      |
+| skuID     | string | Microsoft Store 카탈로그의 제품 [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. SKU에 대한 스토어 ID의 예는 0010입니다.       | 예      |
 
 
 ### <a name="request-example"></a>요청 예제
@@ -119,7 +119,7 @@ Content-Type: application/json
 
 | 매개 변수         | 유형                     | 설명          | 필수 |
 |-------------------|--------------------------|-----------------------|----------|
-| continuationToken | 문자열                   | 제품 집합이 여러 개 있는 경우 페이지 제한에 도달할 때 이 토큰이 반환됩니다. 나머지 제품을 검색하는 후속 호출에서 그 연속 토큰을 지정할 수 있습니다. | 아니요       |
+| continuationToken | string                   | 제품 집합이 여러 개 있는 경우 페이지 제한에 도달할 때 이 토큰이 반환됩니다. 나머지 제품을 검색하는 후속 호출에서 그 연속 토큰을 지정할 수 있습니다. | 아니요       |
 | 항목             | CollectionItemContractV6 | 사용자가 지정된 제품의 배열입니다. 자세한 내용은 아래 표를 참조하세요.        | 아니요       |
 
 
@@ -128,26 +128,26 @@ CollectionItemContractV6 개체에는 다음 매개 변수가 포함됩니다.
 | 매개 변수            | 유형               | 설명            | 필수 |
 |----------------------|--------------------|-------------------------|----------|
 | acquiredDate         | datetime           | 사용자가 항목을 획득한 날짜입니다.                  | 예      |
-| campaignId           | 문자열             | 구매 시 이 항목에 대해 제공된 캠페인 ID입니다.                  | 아니요       |
-| devOfferId           | 문자열             | 앱에서 바로 구매 시 제공되는 ID입니다.              | 아니요       |
+| campaignId           | string             | 구매 시 이 항목에 대해 제공된 캠페인 ID입니다.                  | 아니요       |
+| devOfferId           | string             | 앱에서 바로 구매 시 제공되는 ID입니다.              | 아니요       |
 | endDate              | datetime           | 항목의 종료 날짜입니다.              | 예      |
 | fulfillmentData      | 문자열             | 해당 없음         | 아니요       |
-| inAppOfferToken      | 문자열             | 파트너 센터에 있는 항목에 할당 된 개발자가 지정한 제품 ID 문자열입니다. 예제에서는 제품 ID는 *product123*있습니다. | 아니요       |
+| inAppOfferToken      | string             | 파트너 센터에서 해당 항목에 할당 된 개발자가 지정한 제품 ID 문자열입니다. 예제에서는 제품 ID는 *product123*있습니다. | 아니요       |
 | itemId               | 문자열             | 사용자가 소유한 다른 항목에서 이 컬렉션 항목을 식별하는 ID입니다. 이 ID는 제품마다 고유합니다.   | 예      |
-| localTicketReference | 문자열             | 요청 본문에서 이전에 제공된 *localTicketReference*의 ID.                  | 예      |
+| localTicketReference | string             | 요청 본문에서 이전에 제공된 *localTicketReference*의 ID.                  | 예      |
 | modifiedDate         | datetime           | 이 항목을 마지막으로 수정한 날짜입니다.              | 예      |
-| orderId              | 문자열             | 있는 경우 이 항목을 받은 주문 ID입니다.              | 아니요       |
-| orderLineItemId      | 문자열             | 있는 경우 이 항목을 받은 특정 주문의 품목입니다.              | 아니요       |
+| orderId              | string             | 있는 경우 이 항목을 받은 주문 ID입니다.              | 아니요       |
+| orderLineItemId      | string             | 있는 경우 이 항목을 받은 특정 주문의 품목입니다.              | 아니요       |
 | ownershipType        | 문자열             | 문자열 *OwnedByBeneficiary*입니다.   | 예      |
-| productId            | 문자열             | Microsoft Store 카탈로그의 [제품](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 스토어 ID의 예는 9NBLGGH42CFD입니다.          | 예      |
+| productId            | string             | Microsoft Store 카탈로그의 [제품](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 스토어 ID의 예는 9NBLGGH42CFD입니다.          | 예      |
 | productType          | 문자열             | 다음 제품 유형 중 하나: **Application**, **Durable**, 및 **UnmanagedConsumable**.        | 예      |
 | purchasedCountry     | 문자열             | 해당 없음   | 아니요       |
 | purchaser            | IdentityContractV6 | 있는 경우 항목 구매자의 ID입니다. 아래에 나오는 이 개체에 대한 세부 정보를 참조하세요.        | 아니요       |
 | quantity             | 숫자             | 항목의 수량입니다. 현재 수량은 항상 1입니다.      | 아니요       |
-| skuId                | 문자열             | Microsoft Store 카탈로그의 제품 [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. SKU에 대한 스토어 ID의 예는 0010입니다.     | 예      |
+| skuId                | string             | Microsoft Store 카탈로그의 제품 [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. SKU에 대한 스토어 ID의 예는 0010입니다.     | 예      |
 | skuType              | 문자열             | SKU의 유형입니다. 가능한 값은 **Trial**, **Full** 및 **Rental**입니다.        | 예      |
 | startDate            | datetime           | 항목이 유효한 시작 날짜입니다.       | 예      |
-| status               | 문자열             | 항목의 상태입니다. 가능한 값은 **Active**, **Expired**, **Revoked** 및 **Banned**입니다.    | 예      |
+| status               | string             | 항목의 상태입니다. 가능한 값은 **Active**, **Expired**, **Revoked** 및 **Banned**입니다.    | 예      |
 | tags                 | 문자열             | 해당 없음    | 예      |
 | transactionId        | GUID               | 이 항목의 구매 결과인 트랜잭션 ID입니다. 항목을 처리됨으로 보고하는 데 사용할 수 있습니다.      | 예      |
 

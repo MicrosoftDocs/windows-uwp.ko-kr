@@ -1,16 +1,16 @@
 ---
 title: 서비스, 확장 및 패키지로 앱 확장
 description: 유니버설 Windows 플랫폼 (UWP) 스토어 앱 업데이트 시 실행 되는 백그라운드 작업을 만드는 방법을 설명 합니다.
-ms.date: 05/7/2018
+ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 확장하기, 구성 요소화, 앱 서비스, 패키지, 확장
 ms.localizationpriority: medium
-ms.openlocfilehash: fd14ce6248f7017160a0c6b222e31ba55e9d2977
-ms.sourcegitcommit: f35480718452a8d95b1862581449a038b63184de
+ms.openlocfilehash: 47ab6491d09775bf86f0f484fc96d85bd07f53a4
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "9015101"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116185"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>서비스, 확장 및 패키지로 앱 확장
 

@@ -7,12 +7,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b9f846c9335a3c8213b7e213b354f71fdd855e4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4cfc2ac0a635e4aacdc9eeefb5097c6bd946a518
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933314"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115392"
 ---
 # <a name="gameclip-json"></a>GameClip(JSON)
  
@@ -21,7 +21,7 @@ ms.locfileid: "8933314"
  
 ## <a name="gameclip"></a>GameClip
  
-GameClip 개체에 다음과 같이 지정 합니다.
+GameClip 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
@@ -30,12 +30,12 @@ GameClip 개체에 다음과 같이 지정 합니다.
 | <b>dateRecorded</b>| DateTime| 날짜 및 UTC (ISO 8601 형식)에서 녹음/녹화 시작 된 시간입니다.| 
 | <b>lastModified</b>| DateTime| 마지막으로 수정한 시간 게임 클립 또는 UTC (ISO 8601 형식)에 메타 데이터입니다.| 
 | <b>userCaption</b>| string| 사용자가 입력 한 지역화 되지 않은 문자열 게임 클립에 대해입니다.| 
-| <b>type</b>| GameClipTypes| 클립의 형식입니다. 여러 값을 하 고 만약 그렇다면 쉼표로 구분 됩니다.| 
-| <b>원본</b>| GameClipSource| 어떻게 클립 였던 수 있습니다.| 
+| <b>type</b>| GameClipTypes| 클립의 유형입니다. 여러 값을 하 고 그렇다면 쉼표로 구분 됩니다.| 
+| <b>소스</b>| GameClipSource| 어떻게 클립 였던 합니다.| 
 | <b>visibility</b>| GameClipVisibility| 시스템에 게시 되 면 게임 클립의 표시 여부입니다.| 
 | <b>durationInSeconds</b>| 32 비트 부호 없는 정수| 몇 초만에 게임 클립의 지속 됩니다.| 
 | <b>서비스 안내</b>| string| 게임 클립 연결 된 서비스 안내 합니다.| 
-| <b>rating</b>| 배정밀도 부동 소수점 숫자| 연결 된 게임 클립 0.0에서 5.0 범위에 대 한 평점입니다.| 
+| <b>rating</b>| 배정밀도 부동 소수점 숫자| 0.0에서 5.0 범위에 대 한 게임 클립을와 관련 된 평점입니다.| 
 | <b>ratingCount</b>| 32 비트 부호 없는 정수| 이 클립 등급이 횟수입니다.| 
 | <b>레이아웃</b>| 32 비트 부호 없는 정수| 게임 클립와 관련 된 보기의 수입니다.| 
 | <b>titleData</b>| string| 제목 관련 속성 모음입니다.| 
@@ -48,7 +48,7 @@ GameClip 개체에 다음과 같이 지정 합니다.
 <a id="ID4ERH"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json
@@ -69,7 +69,7 @@ GameClip 개체에 다음과 같이 지정 합니다.
      "views": 5,
      "thumbnails": [
        {
-         "uri": "http://gameclips.xbox.com/thumbnails/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/small.jpg",
+         "uri": "https://gameclips.xbox.com/thumbnails/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/small.jpg",
          "fileSize": 123,
          "width": 120,
          "height": 250
@@ -77,7 +77,7 @@ GameClip 개체에 다음과 같이 지정 합니다.
      ],
      "gameClipUris": [
        {
-         "uri": "http://gameclips.xbox.com/clips/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/clip.mp4",
+         "uri": "https://gameclips.xbox.com/clips/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/clip.mp4",
          "fileSize": 1234565,
          "uriType": "Download",
          "expiration": "9999-12-31T23:59:59.9999999"

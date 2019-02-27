@@ -7,15 +7,15 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: f69ceaa0ecffcbd230127818b0a566666c936680
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 720170e88808db7ef95b88896fbca4f1cda4a091
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920488"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115446"
 ---
 # <a name="get-usersxuidxuidachievements"></a>GET (/users/xuid({xuid})/achievements)
-도전 과제 제목, 사용자가 잠금 해제 된 또는 진행 중에서 사용자가 해당 정의의 목록을 가져옵니다. 이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`.
+제목, 사용자가 잠금 해제 된 또는 사용자가 진행 중에서에 정의 된 도전 과제의 목록을 가져옵니다. 이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EX)
   * [쿼리 문자열 매개 변수](#ID4ECB)
@@ -32,7 +32,7 @@ ms.locfileid: "8920488"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 인 (리소스)에 액세스 하 고 사용자의 합니다. 인증된 된 사용자의 XUID 일치 해야 합니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID)입니다 (리소스)에 액세스 하는 사용자의 합니다. 인증된 된 사용자의 XUID 일치 해야 합니다.| 
   
 <a id="ID4ECB"></a>
 
@@ -41,14 +41,14 @@ ms.locfileid: "8920488"
  
 | 매개 변수| 필수| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | 
-| <b>skipItems</b>| 아니요| 32 비트 부호 있는 정수| 항목 수가 지정 된 후 시작 하는 항목을 반환 합니다. 예를 들어 <b>skipItems = "3"</b> 항목을 검색 하는 시작 네 번째 항목으로 검색 합니다. | 
+| <b>skipItems</b>| 아니요| 32 비트 부호 있는 정수| 항목의 지정 된 시간 후 시작 하는 항목을 반환 합니다. 예를 들어 <b>skipItems = "3"</b> 항목을 검색 하는 시작 네 번째 항목으로 검색 합니다. | 
 | <b>continuationToken</b>| 아니요| string| 지정 된 연속 토큰에서 시작 하는 항목을 반환 합니다. | 
-| <b>maxItems</b>| 아니요| 32 비트 부호 있는 정수| 최대 <b>skipItems</b> <b>continuationToken</b> 항목의 범위를 반환할 수와 결합할 수 있는 컬렉션에서 반환할 항목 수입니다. 서비스 수 기본값을 제공 <b>maxItems</b> 존재 하지 <b>maxItems</b>보다 적은 반환 될 수 있는 경우 결과의 마지막 페이지 아직 반환 되지 않은 경우에 합니다. | 
-| <b>titleId</b>| 아니요| string| 반환 된 결과 필터입니다. 하나 이상의 쉼표로 구분 된, 10 진수 제목 식별자를 수락합니다.| 
-| <b>unlockedOnly</b>| 아니요| 부울 값| 반환 된 결과 필터링 합니다. 하는 경우 <b>true</b>로 설정, 사용자가 잠금 해제 도전 과제만 반환 됩니다. 기본값은 <b>false</b>입니다.| 
-| <b>possibleOnly</b>| 아니요| 부울 값| 반환 된 결과 필터링 합니다. 하는 경우 <b>true</b>로 설정, 가능한 모든 결과 하지만 하지 잠금 해제 된 메타 데이터-x m S의 도전 과제 정보만 반환 됩니다. 기본값은 <b>false</b>입니다.| 
-| <b>유형</b>| 아니요| string| 반환 된 결과 필터입니다. "영구" 또는 "도전" 수 있습니다. 기본값은 지원 되는 모든 형식입니다.| 
-| <b>orderBy</b>| 아니요| string| 결과 반환 하는 순서를 지정 합니다. "순서가 지정 되지 않은", "제목", "UnlockTime" 또는 "EndingSoon" 수 있습니다. 기본값은 "순서 없음"입니다.| 
+| <b>maxItems</b>| 아니요| 32 비트 부호 있는 정수| 최대 <b>skipItems</b> <b>continuationToken</b> 항목의 범위를 반환할 수와 결합할 수 있는 컬렉션에서 반환할 항목 수입니다. 서비스 수 기본값을 제공 <b>maxItems</b> 있는 이며 <b>maxItems</b>보다 적은 반환할 수 있습니다 결과의 마지막 페이지 아직 반환 되지 않은 경우에 합니다. | 
+| <b>titleId</b>| 아니요| string| 반환 된 결과 대 한 필터입니다. 하나 이상의 쉼표로 구분 된, 10 진수 제목 식별자를 수락합니다.| 
+| <b>unlockedOnly</b>| 아니요| 부울 값| 반환 된 결과 필터링 합니다. 하는 경우 <b>true</b>로 설정, 사용자에 대해 도전 과제만 반환 됩니다. 기본값은 <b>false</b>입니다.| 
+| <b>possibleOnly</b>| 아니요| 부울 값| 반환 된 결과 필터링 합니다. 하는 경우 <b>true</b>로 설정, 가능한 모든 결과 하지만 하지 잠금 해제 된 메타 데이터-x m S에서 도전 과제 정보만 반환 됩니다. 기본값은 <b>false</b>입니다.| 
+| <b>유형</b>| 아니요| string| 반환 된 결과 대 한 필터입니다. "영구" 또는 "도전" 수 있습니다. 기본값은 지원 되는 모든 형식입니다.| 
+| <b>orderBy</b>| 아니요| string| 결과 반환 하는 순서를 지정 합니다. "순서가 지정 되지 않은", "제목", "UnlockTime" 또는 "EndingSoon" 될 수 있습니다. 기본값은 "순서 없음"입니다.| 
   
 <a id="ID4ENF"></a>
 
@@ -66,7 +66,7 @@ ms.locfileid: "8920488"
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > "입니다.| 
+| 권한 부여| 문자열| HTTP 인증에 대 한 인증 자격 증명 합니다. 예제 값: "XBL3.0 x =&lt;userhash>; &lt;token> ".| 
   
 <a id="ID4ESH"></a>
 
@@ -75,9 +75,9 @@ ms.locfileid: "8920488"
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| <b>X RequestedServiceVersion</b>| string| 이 요청은 전송 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다. 기본값: 1입니다.| 
-| <b>xbl 계약 버전 x</b>| 32 비트 부호 없는 정수| 있는 경우에 2로 설정 V2 버전이이 API의 사용 됩니다. 그렇지 않으면 V1 합니다.| 
-| <b>Accept Language</b>| string| 원하는 로캘 및 대체 (예: FR-FR, fr, EN-US ~ EN-GB, en 전세계) 목록입니다. 지역화 된 문자열을 일치를 찾을 때까지 도전 과제 서비스 목록을 통해 작동 합니다. 발견 되 면 사용자의 IP 주소에서 제공 되는 사용자 토큰에 정의 된 위치와 일치 하도록 시도 합니다. 없는 일치 하는 지역화 된 문자열을 여전히 발견 되 면 제목 개발자/게시자가 제공 하는 기본 문자열을 사용 합니다. | 
+| <b>X RequestedServiceVersion</b>| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트됩니다 됩니다. 기본값: 1입니다.| 
+| <b>xbl 계약 버전 x</b>| 32 비트 부호 없는 정수| 있는 경우 고 2로 설정,이 API의 V2 버전 사용 됩니다. 그렇지 않으면 V1 합니다.| 
+| <b>Accept Language</b>| string| 원하는 로캘 및 대체 (예: FR-FR, fr, EN-US ~ EN-GB, en 전세계) 목록입니다. 지역화 된 문자열을 일치를 찾을 때까지 도전 과제 서비스 목록에서 작동 합니다. 발견 되 면 사용자의 IP 주소에서 제공 되는 사용자 토큰에 정의 된 위치와 일치 하도록 시도 합니다. 없는 일치 하는 지역화 된 문자열을 여전히 발견 되 면 제목 개발자/게시자가 제공 하는 기본 문자열을 사용 합니다. | 
   
 <a id="ID4EIBAC"></a>
 
@@ -123,7 +123,7 @@ ms.locfileid: "8920488"
         [{
                 "name":"Icon Name",
                 "type":"Icon",
-                "url":"http://www.xbox.com"
+                "url":"https://www.xbox.com"
         }],
         "platform":"D",
         "isSecret":true,

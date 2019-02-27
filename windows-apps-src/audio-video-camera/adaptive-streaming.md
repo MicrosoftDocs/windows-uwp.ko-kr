@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d983de8f9f58e5c9fe6b048b98ea00ebef7197c0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 66618d79166e06f6ee2696ed3c9f193a310b6ae9
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923413"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116345"
 ---
 # <a name="adaptive-streaming"></a>적응 스트리밍
 
@@ -95,7 +95,7 @@ UWP 앱에서 적응 스트리밍 미디어를 재생하려면 DASH 또는 HLS �
 [!code-cs[AMSDownloadCompleted](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetAMSDownloadCompleted)]
 
 ## <a name="gather-adaptive-streaming-telemetry-data-with-adaptivemediasourcediagnostics"></a>AdaptiveMediaSourceDiagnostics로 적응 스트리밍 원격 분석 데이터 수집
-**AdaptiveMediaSource**는 [**AdaptiveMediaSourceDiagnostics**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcediagnostics) 개체를 반환하는 [**진단**](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource?branch=master.Diagnostics) 속성을 노출합니다. 이 개체를 사용하여 [**DiagnosticAvailable**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcediagnostics.DiagnosticAvailable) 이벤트를 등록합니다. 이 이벤트는 원격 분석 컬렉션에 대해 사용하도록 하고 실행 시 앱 동작을 수정하는 데 사용하지 않아야 합니다. 이 진단 이벤트는 다양한 이유로 발생합니다. 이벤트가 발생한 이유를 확인하기 위해 이벤트에 전달된 [**AdaptiveMediaSourceDiagnosticAvailableEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcediagnosticavailableeventargs) 개체의 [**DiagnosticType**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcediagnosticavailableeventargs.DiagnosticType) 속성을 확인합니다. 가능한 이유에는 요청된 리소스에 액세스하는 오류 및 매니페스트 파일 스트리밍 구문 분석 오류가 포함됩니다. 진단 이벤트를 시작할 수 있는 경우에 대한 목록은 [**AdaptiveMediaSourceDiagnosticType**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcediagnostictype)을 참고하세요. 다른 적응 스트리밍 이벤트에 대한 인수와 같이 **AdaptiveMediaSourceDiagnosticAvailableEventArgs**는 다른 이벤트 간 요청 정보의 상관 관계를 지정하는 **RequestId** 속성을 제공합니다.
+**AdaptiveMediaSource**는 [**AdaptiveMediaSourceDiagnostics**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcediagnostics) 개체를 반환하는 [**진단**](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource) 속성을 노출합니다. 이 개체를 사용하여 [**DiagnosticAvailable**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcediagnostics.DiagnosticAvailable) 이벤트를 등록합니다. 이 이벤트는 원격 분석 컬렉션에 대해 사용하도록 하고 실행 시 앱 동작을 수정하는 데 사용하지 않아야 합니다. 이 진단 이벤트는 다양한 이유로 발생합니다. 이벤트가 발생한 이유를 확인하기 위해 이벤트에 전달된 [**AdaptiveMediaSourceDiagnosticAvailableEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcediagnosticavailableeventargs) 개체의 [**DiagnosticType**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcediagnosticavailableeventargs.DiagnosticType) 속성을 확인합니다. 가능한 이유에는 요청된 리소스에 액세스하는 오류 및 매니페스트 파일 스트리밍 구문 분석 오류가 포함됩니다. 진단 이벤트를 시작할 수 있는 경우에 대한 목록은 [**AdaptiveMediaSourceDiagnosticType**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcediagnostictype)을 참고하세요. 다른 적응 스트리밍 이벤트에 대한 인수와 같이 **AdaptiveMediaSourceDiagnosticAvailableEventArgs**는 다른 이벤트 간 요청 정보의 상관 관계를 지정하는 **RequestId** 속성을 제공합니다.
 
 [!code-cs[AMSDiagnosticAvailable](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetAMSDiagnosticAvailable)]
 

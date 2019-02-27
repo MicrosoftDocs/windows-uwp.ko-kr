@@ -5,17 +5,17 @@ ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
 op-migration-status: ready
-ms.date: 7/16/2018
+ms.date: 07/16/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4eb31ed1f802b8827c124958438ceb6c5902aee1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: bba6d42e6ce494c0655c6b6c60db91c1e2e006e8
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944689"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116245"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>UWP 앱의 탐색 디자인 기본 사항
 
@@ -55,7 +55,7 @@ ms.locfileid: "8944689"
 
 ### <a name="consistency"></a>일관성
 
-탐색은 사용자 경험과 일관되어야 합니다. 사용자는 익숙한 및 아이콘에 대 한 표준 규칙을 다음 [표준 컨트롤](#use-the-right-controls) 을 사용 하 여, 위치 및 스타일 됩니다 탐색 예측 가능 하 고 직관적인 사용자를 위해로 합니다.
+탐색은 사용자 경험과 일관되어야 합니다. 사용자는 익숙한 및 아이콘에 대 한 표준 규칙을 다음 [표준 컨트롤](#use-the-right-controls) 을 사용 하 여, 위치 및 스타일 됩니다 탐색할 수 있도록 예측 가능 하 고 직관적인 사용자에 대 한 합니다.
 
 ![페이지 구성 요소 이미지](images/nav/page-components.svg)
 
@@ -185,13 +185,13 @@ ms.locfileid: "8944689"
         Use top navigation when:
 
         - 화면의 탐색 옵션을 모두 표시 하려고 합니다.
-        - 원하는 앱의 콘텐츠에 대 한 더 많은 공간.
-        - 아이콘 탐색 범주 설명 명확 하 게 수 없습니다.
+        - 앱의 콘텐츠에 대 한 더 많은 공간이 필요 합니다.
+        - 아이콘 탐색 범주를 명확 하 게 나타내는 수 없습니다.
         
-        사용 하 여 탭 하는 경우:
+        사용 하 여 탭 경우:
 
         - 탐색 기록 및 페이지 상태를 유지 하려고 합니다.
-        - 사용자가 탭 자주 간을 전환할 것으로 예상 합니다.
+        - 사용자가 탭 자주 전환할 것으로 예상 합니다.
 
 :::row-end:::
 
@@ -205,7 +205,7 @@ ms.locfileid: "8944689"
         Displays a vertical list of links to top-level pages. Use when:
         
         - 페이지가 최상위 수준에 있습니다.
-        - 많은 탐색 항목이 (5 개)
+        - 탐색 항목이 많습니다 (5 개 이상)
         - 사용자가 페이지 간을 자주 전환할 것으로 예상되지 않습니다.
         
 :::row-end:::

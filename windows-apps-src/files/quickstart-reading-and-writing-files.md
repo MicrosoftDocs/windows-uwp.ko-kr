@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: d60dcb60d8628822d7597ad25268aae5e7a7ae6a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 6ff7b37eee4f2b9228a635a117e164d7d9859629
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044580"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116069"
 ---
 # <a name="create-write-and-read-a-file"></a>파일 만들기, 쓰기 및 읽기
 
@@ -328,6 +328,10 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
     Await dataWriter.StoreAsync()
     Await outputStream.FlushAsync()
     ```
+
+**파일에 쓰기에 대 한 모범 사례**
+
+추가 세부 정보 및 모범 사례 지침에 대 한 [파일을 작성 하기 위한 모범 사례](best-practices-for-writing-to-files.md)를 참조 하세요.
     
 ## <a name="reading-from-a-file"></a>파일에서 읽기
 
@@ -549,3 +553,7 @@ Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
     Dim numBytesLoaded As UInteger = Await dataReader.LoadAsync(CUInt(size))
     Dim text As String = dataReader.ReadString(numBytesLoaded)
     ```
+
+## <a name="see-also"></a>참고 항목
+
+- [파일을 작성 하기 위한 모범 사례](best-practices-for-writing-to-files.md)

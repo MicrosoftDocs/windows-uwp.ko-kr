@@ -2,16 +2,16 @@
 title: Windows 설정 앱 실행
 description: 앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 체계를 통해 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
-ms.date: 1/8/2019
+ms.date: 01/08/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a1f9d853e41642ca5f8027d42b49fcbc3122a66
-ms.sourcegitcommit: 6ba110be80bc343a1aecaf4361edcdb70278c0a3
+ms.openlocfilehash: 87074e9871fae6be32e2862fc547097898baede8
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "9086661"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116475"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 

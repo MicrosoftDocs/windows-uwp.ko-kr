@@ -2,16 +2,16 @@
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 지정된 고객에 대해 소모성 제품을 처리됨으로 보고합니다. 사용자가 소모성 제품을 다시 구입하려면 앱 또는 서비스에서 해당 사용자에 대해 소모성 제품이 처리됨으로 보고되어야 합니다.
 title: 소모성 제품을 처리됨으로 보고
-ms.date: 03/16/2018
+ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, 처리, 소모성
 ms.localizationpriority: medium
-ms.openlocfilehash: e3271dd26a4e7eaa23d63efa3b75cf321480528d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: cea8937af3df0ad1e80434d649f431d188521667
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935664"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116029"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>소모성 제품을 처리됨으로 보고
 
@@ -46,10 +46,10 @@ Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 지정된 고�
 
 | 헤더         | 유형   | 설명                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| 권한 부여  | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
-| 호스트           | 문자열 | **collections.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
+| 권한 부여  | string | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
+| 호스트           | string | **collections.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
-| Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
+| Content-Type   | string | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -59,7 +59,7 @@ Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 지정된 고�
 | beneficiary   | UserIdentity | 이 항목을 사용 중인 사용자입니다. 자세한 내용은 다음 표를 참조하세요.        | 예      |
 | itemId        | 문자열       | [제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *itemId* 값. 이 매개 변수를 *trackingId*에 사용하지 마세요.      | 아니요       |
 | trackingId    | guid         | 개발자가 제공하는 고유한 추적 ID입니다. 이 매개 변수를 *itemId*에 사용하지 마세요.         | 아니요       |
-| productId     | 문자열       | [제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *productId* 값. 이 매개 변수를 *transactionId*에 사용하지 마세요.   | 아니요       |
+| productId     | string       | [제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *productId* 값. 이 매개 변수를 *transactionId*에 사용하지 마세요.   | 아니요       |
 | transactionId | guid         | 다음 소스 중 하나에서 가져온 트랜잭션 ID 값입니다. 이 매개 변수를 *productId*에 사용하지 마세요.<ul><li>[PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392) 클래스의 [TransactionID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.purchaseresults.transactionid) 속성.</li><li>[RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) 또는 [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync)에서 반환되는 앱 또는 제품 영수증입니다.</li><li>[제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *transactionId* 매개 변수.</li></ul>   | 아니요       |
 
 

@@ -1,16 +1,16 @@
 ---
 title: 유니버설 Windows 플랫폼을 통해 앱 제작
-description: Windows10 용 유니버설 Windows 플랫폼 (UWP) 앱을 만들 생각 보다 쉽습니다.
-ms.date: 5/7/2018
+description: Windows 10 용 유니버설 Windows 플랫폼 (UWP) 앱을 만들 생각 보다 쉽습니다.
+ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f4e38d590fc2e905221c71c1fbc6b137f5fdea0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 9f45bf66854fbf51fc6f5b42418e0faa107eb2f6
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919219"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116305"
 ---
 # <a name="start-coding"></a>코딩 시작
 

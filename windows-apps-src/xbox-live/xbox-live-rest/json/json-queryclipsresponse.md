@@ -7,31 +7,31 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 23955d311d57fa3454bdb84df67ddae07a0c8548
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: a0369de617fd60fcc71e7d69b46ced6b499e8de5
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918109"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115353"
 ---
 # <a name="queryclipsresponse-json"></a>QueryClipsResponse(JSON)
-목록에 대 한 페이징 정보와 함께 반환 게임 클립 목록을 래핑합니다. 
+목록에 대 한 페이징 정보와 함께 반환 게임 클립의 목록을 래핑합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="queryclipsresponse"></a>QueryClipsResponse
  
-QueryClipsResponse 개체에 다음과 같이 지정 합니다.
+QueryClipsResponse 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| <b>gameClips</b>| 게임 클립의 배열| 요청 제한이 (<b>maxItems</b>) 쿼리를 충족 하는 게임 클립의 배열입니다.| 
+| <b>gameClips</b>| GameClip의 배열| 요청 제한이 (<b>maxItems</b>) 쿼리를 충족 하는 게임 클립의 배열입니다.| 
 | <b>pagingInfo</b>| PagingInfo| 필요한 연속 작업 및 목록에 대 한 후속 호출에 대 한 페이징 하는 요청 제한을 초과 (<b>maxItems</b>) 정보를 포함 합니다.| 
   
 <a id="ID4E2B"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json
@@ -55,7 +55,7 @@ QueryClipsResponse 개체에 다음과 같이 지정 합니다.
      "views": 5,
      "thumbnails": [
        {
-         "uri": "http://gameclips.xbox.com/thumbnails/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/small.jpg",
+         "uri": "https://gameclips.xbox.com/thumbnails/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/small.jpg",
          "fileSize": 123,
          "width": 120,
          "height": 250
@@ -63,7 +63,7 @@ QueryClipsResponse 개체에 다음과 같이 지정 합니다.
      ],
      "gameClipUris": [
        {
-         "uri": "http://gameclips.xbox.com/clips/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/clip.mp4",
+         "uri": "https://gameclips.xbox.com/clips/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/clip.mp4",
          "fileSize": 1234565,
          "uriType": "Download",
          "expiration": "9999-12-31T23:59:59.9999999"
@@ -90,7 +90,7 @@ QueryClipsResponse 개체에 다음과 같이 지정 합니다.
      "systemProperties": "{ 'Id': '123456', 'Location': 'C:\\videos\\123456.mp4' }",
      "thumbnails": [
        {
-         "uri": "http://gameclips.xbox.com/thumbnails/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/small.jpg",
+         "uri": "https://gameclips.xbox.com/thumbnails/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/small.jpg",
          "fileSize": 123,
          "width": 120,
          "height": 250
@@ -98,13 +98,13 @@ QueryClipsResponse 개체에 다음과 같이 지정 합니다.
      ],
      "gameClipUris": [
        {
-         "uri": "http://gameclips.xbox.com/clips/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/clip.mp4",
+         "uri": "https://gameclips.xbox.com/clips/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/clip.mp4",
          "fileSize": 1234567,
          "uriType": "Download",
          "expiration": "9999-12-31T23:59:59.9999999"
        },
        {
-         "uri": "http://gameclips.xbox.com/clips/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/manifest",
+         "uri": "https://gameclips.xbox.com/clips/7ce5c1a7-1255-46d3-a90e-34a0e2dfab06/manifest",
          "fileSize": 0,
          "uriType": "SmoothStreaming",
          "expiration": "2013-01-18T11:25:51.6522794Z"

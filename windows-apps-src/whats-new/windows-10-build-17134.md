@@ -2,15 +2,15 @@
 title: 개발자, 도구 및 기능을 위한 Windows 10의 새로운 기능
 description: Windows10 빌드 17134 및 새로운 개발자 도구는 유니버설 Windows 플랫폼이 지원되는 도구, 기능 및 환경을 제공합니다.
 keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능, 신규, Windows10, 최신, 개발자, 17134
-ms.date: 4/10/2018
+ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 570e9c463175475db15bd15adbb6b9b88cb9ff39
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 7d880b2167e718b1ff66aa349c32329e6c19e5b5
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046283"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116485"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>개발자를 위한 Windows 10 빌드 17134의 새로운 기능
 

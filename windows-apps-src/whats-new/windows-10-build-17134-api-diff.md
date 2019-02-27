@@ -2,15 +2,15 @@
 title: Windows 10 빌드 17134 API 변경 사항
 description: 개발자는 다음 목록을 사용하여 Windows10 빌드 17134에서 새롭게 추가되었거나 변경된 네임스페이스를 식별할 수 있습니다.
 keywords: 새로운 기능, 새로운 기능, 업데이트, Windows 10, 최신, apis, 17134
-ms.date: 4/10/2018
+ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ed4682b6deac68d74d40576d0eb9cbafc6bfdd1d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 4b0860021386c52ead3defb17c1b3ba56d65f224
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925214"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116415"
 ---
 # <a name="new-apis-in-windows-10-build-17134"></a>Windows 10 빌드 17134의 새로운 API
 

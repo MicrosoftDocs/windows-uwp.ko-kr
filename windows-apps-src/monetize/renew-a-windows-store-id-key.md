@@ -2,16 +2,16 @@
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: 이 메서드를 사용하여 Microsoft Store 키를 갱신합니다.
 title: Microsoft Store ID 키 갱신
-ms.date: 03/16/2018
+ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, Microsoft Store 구매 API, Microsoft Store ID 키, 갱신
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f1c6248b2d87a68b77cad6f1bdc7cce0fae587e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: fd4d7ce26e12f7ff939ced8d456390b97d0c8a0d
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939094"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116039"
 ---
 # <a name="renew-a-microsoft-store-id-key"></a>Microsoft Store ID 키 갱신
 
@@ -42,9 +42,9 @@ ms.locfileid: "8939094"
 
 | 헤더         | 유형   | 설명                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| 호스트           | 문자열 | **collections.mp.microsoft.com** 또는 **purchase.mp.microsoft.com** 값으로 설정해야 합니다.           |
+| 호스트           | string | **collections.mp.microsoft.com** 또는 **purchase.mp.microsoft.com** 값으로 설정해야 합니다.           |
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
-| Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
+| Content-Type   | string | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
 
 
 ### <a name="request-body"></a>요청 본문

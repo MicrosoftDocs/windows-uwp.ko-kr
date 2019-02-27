@@ -1,16 +1,16 @@
 ---
 title: POSPrinter
 description: 이 문서에는 UWP 앱에 사용할 수 있는 POSPrinter 기능과 그 사용 방법을 보여 주는 방법 문서의 링크가 나와 있습니다.
-ms.date: 05/1/2018
+ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: b1b01f366c5a094e538424c57091fb2589eae329
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 11937934230b2c977e8e328fae0e693e8c1ab95a
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930372"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116425"
 ---
 # <a name="posprinter"></a>POSPrinter
 

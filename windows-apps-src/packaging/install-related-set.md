@@ -1,16 +1,16 @@
 ---
 title: 앱 설치 관리자 파일을 사용하여 관련 집합 설치
 description: 이 섹션에서는 앱 설치 관리자를 통해 관련 집합을 설치하는 데 필요한 단계를 검토합니다. 또한 관련 집합을 정의하는 *.appinstaller 파일을 만드는 단계를 수행합니다.
-ms.date: 1/4/2018
+ms.date: 01/04/2018
 ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 테스트용으로 로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: c90fffeee7003159f58cf2e108286f4fe7732fd6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: 946c0ae2251d1f75ea250d43881b29b172b9ad1d
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944035"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9116165"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>앱 설치 관리자 파일을 사용하여 관련 집합 설치
 
@@ -87,7 +87,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 ```
 
 ### <a name="step-3-add-the-main-package-information"></a>3단계: 주 패키지 정보 추가 
-주 앱 패키지는.msixbundle 또는.appxbundle 파일을 사용 하 여는 `<MainBundle>` 아래에 표시 합니다. 주 앱 패키지가.appx 또는.msix 파일을 사용 하 여 `<MainPackage>` 대신 `<MainBundle>` 코드 조각에서. 
+주 앱 패키지는.msixbundle 또는.appxbundle 파일을 사용 하 여는 `<MainBundle>` 아래에 표시 합니다. 주 앱 패키지는.appx 또는.msix 파일을 사용 하 여 `<MainPackage>` 대신 `<MainBundle>` 코드 조각에서. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
