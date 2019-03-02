@@ -67,6 +67,8 @@ items:
     href: controls-and-patterns/index.md
   - name: 컨트롤 및 이벤트 소개
     href: controls-and-patterns/controls-and-events-intro.md
+  - name: 명령 소개
+    href: controls-and-patterns/commanding.md
   - name: 기능별 컨트롤 인덱스
     href: controls-and-patterns/controls-by-function.md
   - name: 기본 입력
@@ -562,9 +564,9 @@ items:
       href: in-app-help/external-help.md
 - name: 디자인 도구 키트
   href: downloads/index.md
-ms.openlocfilehash: af1472f7650982783ac08da2c73ebb5046401f3c
-ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
-ms.translationtype: HT
+ms.openlocfilehash: b6430ee5f121d672282513fa524a50e7788f404c
+ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004569"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9117452"

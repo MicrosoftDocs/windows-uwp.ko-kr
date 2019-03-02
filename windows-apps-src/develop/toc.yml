@@ -245,6 +245,8 @@ items:
       href: ../files/quickstart-listing-files-and-folders.md
     - name: 파일 만들기, 쓰기 및 읽기
       href: ../files/quickstart-reading-and-writing-files.md
+    - name: 파일을 작성 하기 위한 모범 사례
+      href: ../files/best-practices-for-writing-to-files.md
     - name: 파일 속성 가져오기
       href: ../files/quickstart-getting-file-properties.md
     - name: 선택기를 사용하여 파일 및 폴더 열기
@@ -1513,9 +1515,9 @@ items:
       href: ../threading-async/use-a-timer-to-submit-a-work-item.md
     - name: 다중 스레드 환경에서 Windows 런타임 개체 사용
       href: ../threading-async/using-windows-runtime-objects-in-a-multithreaded-environment.md
-ms.openlocfilehash: 30584a90fbfaf39ed66cf90fd27575ff055ef69e
-ms.sourcegitcommit: a774dac901ad6ad3a85520ef75ee9a1029aa9792
+ms.openlocfilehash: e9c39734eb066058d549ed8c36ad73b2c2c6a5e1
+ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "9070383"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "9115940"
