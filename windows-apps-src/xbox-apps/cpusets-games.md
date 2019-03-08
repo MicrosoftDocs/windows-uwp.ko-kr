@@ -5,11 +5,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
 ms.openlocfilehash: 49662d476d6d022ca05d53e9358fc547fda92a32
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945014"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625668"
 ---
 # <a name="cpusets-for-game-development"></a>게임 개발용 CPUSets
 
@@ -47,13 +47,13 @@ GetSystemCpuSetInformation(cpuSets, size, &size, curProc, 0);
 
 **GetSystemCpuSetInformation**에서 반환된 이 데이터 구조체의 각 인스턴스에 있는 정보에는 스레드가 예약될 수 있는 고유한 처리 장치에 대한 정보가 포함되어 있습니다. 대상 디바이스의 가능한 범위 때문에 **SYSTEM_CPU_SET_INFORMATION** 데이터 구조체의 많은 정보가 게임 개발에 해당하지 않을 수 있습니다. 표 1에서는 게임 개발에 유용한 데이터 멤버에 대해 설명합니다.
 
- **표 1. 게임 개발에 유용한 데이터 멤버**
+ **표 1입니다. 게임 개발에 유용한 데이터 멤버입니다.**
 
 | 멤버 이름  | 데이터 형식 | 설명 |
 | ------------- | ------------- | ------------- |
-| 종류  | CPU_SET_INFORMATION_TYPE  | 구조체에 있는 정보의 유형입니다. 이 멤버의 값이 **CpuSetInformation**이 아닌 경우 이 멤버는 무시되어야 합니다.  |
+| 형식  | CPU_SET_INFORMATION_TYPE  | 구조체에 있는 정보의 유형입니다. 이 멤버의 값이 **CpuSetInformation**이 아닌 경우 이 멤버는 무시되어야 합니다.  |
 | Id  | unsigned long  | 지정된 CPU 집합의 ID입니다. **SetThreadSelectedCpuSets**와 같은 CPU 집합 함수와 함께 사용해야 하는 ID입니다.  |
-| Group  | unsigned short  | CPU 집합의 "프로세서 그룹"을 지정합니다. 프로세서 그룹은 PC에 64개가 넘는 논리 코어가 포함될 수 있도록 하고 시스템이 실행되는 동안 CPU의 핫 스와핑을 허용합니다. 둘 이상의 그룹이 포함된 서버가 아닌 PC를 보기는 흔치 않습니다. 큰 서버나 서버 팜에서 실행될 응용 프로그램을 작성하지 않는 한 대부분의 소비자 PC에는 프로세서 그룹이 하나만 있기 때문에 단일 그룹에서 CPU 집합을 사용하는 것이 좋습니다. 이 구조체의 다른 모든 값은 그룹에 상대적입니다.  |
+| 그룹  | unsigned short  | CPU 집합의 "프로세서 그룹"을 지정합니다. 프로세서 그룹은 PC에 64개가 넘는 논리 코어가 포함될 수 있도록 하고 시스템이 실행되는 동안 CPU의 핫 스와핑을 허용합니다. 둘 이상의 그룹이 포함된 서버가 아닌 PC를 보기는 흔치 않습니다. 큰 서버나 서버 팜에서 실행될 응용 프로그램을 작성하지 않는 한 대부분의 소비자 PC에는 프로세서 그룹이 하나만 있기 때문에 단일 그룹에서 CPU 집합을 사용하는 것이 좋습니다. 이 구조체의 다른 모든 값은 그룹에 상대적입니다.  |
 | LogicalProcessorIndex  | unsigned char  | CPU 집합의 그룹 상대 인덱스  |
 | CoreIndex  | unsigned char  | CPU 집합이 위치한 물리적 CPU 코어의 그룹 상대 인덱스  |
 | LastLevelCacheIndex  | unsigned char  | 이 CPU 집합과 연결된 마지막 캐시의 그룹 상대 인덱스. 시스템에서 NUMA 노드를 활용하지 않는 한 가장 느린 캐시이며, 대개 L2 또는 L3 캐시입니다.  |
@@ -64,15 +64,15 @@ GetSystemCpuSetInformation(cpuSets, size, &size, curProc, 0);
 
 다음은 다양한 유형의 하드웨어에서 실행되는 UWP 응용 프로그램에서 수집된 정보 유형의 몇 가지 예입니다.
 
-**표 2. Microsoft Lumia 950에서 실행되는 UWP 앱에서 반환된 정보. 마지막 수준 캐시가 여러 개인 시스템의 예입니다. Lumia 950에는 듀얼 코어 ARM Cortex A57 및 쿼드 코어 ARM Cortex A53 CPU가 포함된 Qualcomm 808 Snapdragon 프로세스가 있습니다.**
+**표 2입니다. Microsoft Lumia 950에서 실행되는 UWP 앱에서 반환된 정보. 마지막 수준 캐시가 여러 개인 시스템의 예입니다. Lumia 950 Qualcomm 808 Snapdragon 프로세스 ARM Cortex A57 듀얼 코어 및 쿼드 코어 ARM Cortex A53 Cpu를 포함 하는 기능입니다.**
 
-  ![표 2.](images/cpusets-table2.png)
+  ![표 2](images/cpusets-table2.png)
 
-**표 3. 일반 PC에서 실행되는 UWP 앱에서 반환된 정보. 하이퍼스레딩을 사용하는 시스템의 예입니다. 각 물리적 코어에는 스레드가 예약될 수 있는 논리 코어가 두 개 있습니다. 이 경우 시스템에 Intel Xenon CPU E5-2620이 포함되어 있습니다.**
+**표 3입니다. 일반 PC에서 실행되는 UWP 앱에서 반환된 정보. 하이퍼스레딩을 사용하는 시스템의 예입니다. 각 물리적 코어에는 스레드가 예약될 수 있는 논리 코어가 두 개 있습니다. 이 경우 시스템에는 Intel 논 CPU E5-2620 포함 되어 있습니다.**
 
   ![표 3](images/cpusets-table3.png)
 
-**표 4. 쿼드 코어 Microsoft Surface Pro 4에서 실행되는 UWP 앱에서 반환된 정보. 이 시스템에는 Intel Core i5-6300 CPU가 있습니다.**
+**표 4입니다. 쿼드 코어 Microsoft Surface Pro 4에서 실행되는 UWP 앱에서 반환된 정보. 이 시스템에는 Intel Core i5 6300 CPU를 했습니다.**
 
   ![표 4](images/cpusets-table4.png)
 
@@ -182,7 +182,7 @@ for (size_t i = 0; i < count; ++i)
 
 그림 1에 나와 있는 캐시 레이아웃은 시스템에서 볼 수 있는 레이아웃 유형의 예입니다. 이 그림은 Microsoft Lumia 950에 있는 캐시를 나타낸 것입니다. CPU 256과 CPU 260 간에 발생하는 스레드 간 통신은 시스템에서 L2 캐시의 일관성을 유지해야 하므로 상당한 오버헤드를 유발합니다.
 
-**그림 1. Microsoft Lumia 950 디바이스에 있는 캐시 아키텍처**
+**그림 1입니다. Microsoft Lumia 950 장치에서 검색 아키텍처를 캐시 합니다.**
 
 ![Lumia 950 캐시](images/cpusets-lumia950cache.png)
 
@@ -191,7 +191,7 @@ for (size_t i = 0; i < count; ++i)
 UWP 개발에 사용할 수 있는 CPUSets API는 다중 스레딩 옵션에 대한 상당한 양의 정보와 제어 기능을 제공합니다. Windows 개발을 위한 이전의 다중 스레드 API와 비교할 때 더 복잡해졌으므로 학습 기간이 어느 정도 필요하지만, 유연성 향상으로 결국 다양한 소비자 PC와 기타 하드웨어 대상 전체에서 성능을 높일 수 있습니다. 
 
 ## <a name="additional-resources"></a>추가 리소스
-- [CPU 집합(MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
-- [ATG에서 제공한 CPUSets 샘플](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
-- [Xbox One의 UWP](index.md)
+- [CPU 집합 (MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
+- [ATG 제공한 CPUSets 샘플](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
+- [Xbox One에서 UWP](index.md)
 

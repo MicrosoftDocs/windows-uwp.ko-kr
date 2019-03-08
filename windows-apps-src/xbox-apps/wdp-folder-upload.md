@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
 ms.localizationpriority: medium
 ms.openlocfilehash: 0805dbeedcf66bc3596f3d284f51e8f177608396
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946178"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617608"
 ---
 # <a name="upload-a-folder-to-the-development-directory"></a>개발 디렉터리로 폴더 업로드
 
@@ -52,7 +52,7 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 <br />
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Xbox
 

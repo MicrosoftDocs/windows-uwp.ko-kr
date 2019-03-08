@@ -1,5 +1,5 @@
 ---
-Description: Use handwriting recognition and ink analysis to recognize Windows Ink strokes as text and shapes.
+Description: 필기 인식 및 잉크 분석을 사용하여 Windows Ink 스트로크를 텍스트 및 셰이프로 인식합니다.
 title: Windows Ink 스트로크를 텍스트 및 셰이프로 인식
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
@@ -9,17 +9,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9bdd122f438cc9584b5e1eff2236c625adea9c2b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048986"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633748"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Windows Ink 스트로크를 텍스트 및 셰이프로 인식
 
 Windows Ink에 내장된 인식 기능을 사용하여 잉크 스트로크 및 셰이프를 변환합니다.
 
-> **중요 API**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **중요 한 Api**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
 ## <a name="free-form-recognition-with-ink-analysis"></a>잉크 분석을 통한 자유 형식 인식
@@ -31,7 +31,7 @@ Windows Ink에 내장된 인식 기능을 사용하여 잉크 스트로크 및 �
 
 이 예에서는 사용자가 그리기를 마쳤음을 알리는 단추를 클릭하면 인식이 시작됩니다.
 
-**[잉크 분석 샘플(기본)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)에서 이 샘플 다운로드**
+**이 샘플을 다운로드할 [잉크 분석 샘플 (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)**
 
 1.  먼저 UI(MainPage.xaml)를 설정합니다. 
 
@@ -75,7 +75,7 @@ Windows Ink에 내장된 인식 기능을 사용하여 잉크 스트로크 및 �
     InkAnalysisResult inkAnalysisResults = null;
 ```
 4.  다음으로 몇 가지 기본 잉크 입력 동작을 설정합니다.
-    - [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜, 마우스 및 터치의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 
+    - [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜, 마우스 및 터치의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 
     - 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/desktop/ms695050)에 렌더링됩니다. 
     - "인식" 단추의 Click 이벤트에 대한 수신기도 선언합니다.
 ```csharp
@@ -107,8 +107,8 @@ public MainPage()
     - 먼저 [**InkCanvas.InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter)의 [**StrokeContainer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter.StrokeContainer)에서 [**GetStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkstrokecontainer.GetStrokes)를 호출하여 모든 현재 잉크 스트로크 컬렉션을 가져옵니다.
     - 잉크 스트로크가 있는 경우 InkAnalyzer의 [**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer#Windows_UI_Input_Inking_Analysis_InkAnalyzer_AddDataForStrokes_Windows_Foundation_Collections_IIterable_Windows_UI_Input_Inking_InkStroke__) 호출에 전달합니다.
     - 여기서는 드로잉과 텍스트를 모두 인식하려고 시도할 예정이지만, [**SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) 메서드를 사용하여 텍스트(문서 구조 및 글머리 기호 목록 포함)만 또는 드로잉(셰이프 인식 포함)만 인식하도록 지정할 수 있습니다.
-    - [**AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync)를 호출하여 잉크 분석을 시작하고 [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult)를 가져옵니다.
-    - [**상태**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status)가 **업데이트됨**을 반환하면 [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) 및 [**InkAnalysisNodeKind.InkDrawing**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) 모두에 대해 [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes)를 호출합니다.
+    - [  **AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync)를 호출하여 잉크 분석을 시작하고 [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult)를 가져옵니다.
+    - [  **상태**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status)가 **업데이트됨**을 반환하면 [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) 및 [**InkAnalysisNodeKind.InkDrawing**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) 모두에 대해 [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes)를 호출합니다.
     - 두 노드 유형 집합을 반복하고 인식 캔버스(잉크 캔버스 아래에 있음)에서 각각의 텍스트 또는 셰이프를 그립니다.
     - 마지막으로 InkAnalyzer에서 인식된 노드를 삭제하고 잉크 캔버스에서 해당 잉크 스트로크를 삭제합니다.
 ```csharp
@@ -208,7 +208,7 @@ private async void RecognizeStrokes_Click(object sender, RoutedEventArgs e)
         }
     }
 ```
-6. 다음은 인식 캔버스에 TextBlock을 그리는 함수입니다. TextBlock의 글꼴 크기와 위치를 설정 하려면 연결 된 잉크 스트로크의 경계 사각형을 잉크 캔버스에 사용 합니다.
+6. 다음은 인식 캔버스에 TextBlock을 그리는 함수입니다. 사용 하 여 연결 된 잉크 스트로크의 경계 사각형을 잉크 캔버스에서 TextBlock의 글꼴 크기와 위치를 설정 합니다.
 ```csharp
 /// <summary>
 /// Draw ink recognition text string on the recognitionCanvas.
@@ -227,7 +227,7 @@ private void DrawText(string recognizedText, Rect boundingRect)
     recognitionCanvas.Children.Add(text);
 }
 ```
-7. 다음은 인식 캔버스에 줄임표와 다각형을 그리는 함수입니다. 셰이프의 글꼴 크기와 위치를 설정 하려면 연결 된 잉크 스트로크의 경계 사각형을 잉크 캔버스에 사용 합니다.
+7. 다음은 인식 캔버스에 줄임표와 다각형을 그리는 함수입니다. 잉크 캔버스에서 연결된 잉크 스트로크의 경계 사각형 모양의 글꼴 크기와 위치를 설정 하려면 사용 합니다.
 ```csharp
     // Draw an ellipse on the recognitionCanvas.
     private void DrawEllipse(InkAnalysisInkDrawing shape)
@@ -279,11 +279,11 @@ private void DrawText(string recognizedText, Rect boundingRect)
 이번 섹션에서는 Windows Ink 필기 인식 엔진을 사용하여(잉크 분석 아님) [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 필기된 일련의 스트로크를 텍스트로 변환(설치된 기본 언어 팩을 기반으로)하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> 이 섹션에서 보여 주는 기본 필기 인식은 양식 입력처럼 한 줄로 된 텍스트 입력 시나리오에 가장 적합합니다. 텍스트 인식뿐 아니라 문서 구조, 목록 항목, 셰이프 및 드로잉이 포함된 풍부한 인식 시나리오에 대한 내용은 이전 섹션 [잉크 분석을 통한 풍부한 인식](#free-form-recognition-with-ink-analysis)을 참조하세요.
+> 이 섹션에서 보여 주는 기본 필기 인식은 양식 입력처럼 한 줄로 된 텍스트 입력 시나리오에 가장 적합합니다. 분석 및 문서 구조, 목록 항목, 도형 및 텍스트 인식) (외 그리기의 해석을 포함 하는 다양 한 인식 시나리오에 대 한 이전 섹션을 참조 합니다. [잉크 분석을 사용 하 여 자유 형식 인식](#free-form-recognition-with-ink-analysis)합니다.
 
 이 예에서는 사용자가 필기를 마쳤음을 알리는 단추를 클릭하면 인식이 시작됩니다.
 
-**[잉크 필기 인식 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)에서 이 샘플 다운로드**
+**이 샘플을 다운로드할 [잉크 필기 인식 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)**
 
 1.  먼저 UI를 설정합니다.
 
@@ -327,7 +327,7 @@ private void DrawText(string recognizedText, Rect boundingRect)
 
 3.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/desktop/ms695050)에 렌더링됩니다. "인식" 단추의 Click 이벤트에 대한 수신기도 선언합니다.
+    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/desktop/ms695050)에 렌더링됩니다. "인식" 단추의 Click 이벤트에 대한 수신기도 선언합니다.
 
     ```csharp
     public MainPage()
@@ -353,7 +353,7 @@ private void DrawText(string recognizedText, Rect boundingRect)
 
 4.  마지막으로 기본 필기 인식을 수행합니다. 이 예제에서는 "인식" 단추의 Click 이벤트 처리기를 사용하여 필기 인식을 수행합니다.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 모든 잉크 스트로크를 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) 개체에 저장합니다. 스트로크는 **InkPresenter**의 [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) 속성을 통해 노출되고 [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) 메서드를 사용하여 검색합니다.
+    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 모든 잉크 스트로크를 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) 개체에 저장합니다. 스트로크는 **InkPresenter**의 [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) 속성을 통해 노출되고 [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) 메서드를 사용하여 검색합니다.
 
     ```csharp
     // Get all strokes on the InkCanvas.
@@ -369,9 +369,9 @@ private void DrawText(string recognizedText, Rect boundingRect)
             new InkRecognizerContainer();
     ```
 
-    [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/br208446) [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) 개체의 집합을 검색 하 라고 합니다.
+    [**RecognizeAsync** ](https://msdn.microsoft.com/library/windows/apps/br208446) 집합을 검색 하기 위해 호출 됩니다 [ **InkRecognitionResult** ](https://msdn.microsoft.com/library/windows/apps/br208464) 개체입니다.
 
-    [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478)는 검색 된 각 단어에 대 한 인식 결과가 생성 됩니다.
+    인식 결과에서 발견 된 각 단어에 대해 생성 되는 [ **InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478)합니다.
 
     ```csharp
     // Recognize all ink strokes on the ink canvas.
@@ -381,9 +381,9 @@ private void DrawText(string recognizedText, Rect boundingRect)
                 InkRecognitionTarget.All);
     ```
 
-    각 [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) 개체 텍스트 후보 집합이 포함 되어 있습니다. 이 목록의 맨 위에 있는 항목 뒤에 하위 신뢰도 나머지 후보를 가장 일치 인식 엔진을 통해 간주 됩니다.
+    각 [ **InkRecognitionResult** ](https://msdn.microsoft.com/library/windows/apps/br208464) 개체 텍스트 후보 집합을 포함 합니다. 이 목록의 맨 위에 있는 항목의 신뢰도 내림차순 나머지 후보 뒤에 최상의 일치 되도록 인식 엔진으로 간주 됩니다.
 
-    각 [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) 반복 하 고 제안 목록이 컴파일합니다. 후보 표시 됩니다 하 고 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) (도 지웁니다 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535))는 선택을 취소 합니다.
+    각 반복 [ **InkRecognitionResult** ](https://msdn.microsoft.com/library/windows/apps/br208464) 후보 목록을 컴파일합니다. 후보 표시 됩니다 및 [ **InkStrokeContainer** ](https://msdn.microsoft.com/library/windows/apps/br208492) 지워집니다 (또한 지웁니다 합니다 [ **InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)).
 
     ```csharp
     string str = "Recognition result\n";
@@ -471,11 +471,11 @@ private void DrawText(string recognizedText, Rect boundingRect)
 
 Windows 잉크 플랫폼에 내장된 필기 인식은 Windows에서 지원되는 방대한 로캘 및 언어 하위 집합을 포함하고 있습니다.
 
-[**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478)에서 지원하는 언어 목록은 [**InkRecognizer.Name**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkrecognizer.name.aspx) 속성 항목을 참조하세요.
+[  **InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478)에서 지원하는 언어 목록은 [**InkRecognizer.Name**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkrecognizer.name.aspx) 속성 항목을 참조하세요.
 
 앱이 설치된 필기 인식 엔진 집합을 쿼리하고 그 중 하나를 사용할 수도 있고, 사용자가 기본 언어를 선택할 수도 있습니다.
 
-**참고**  으로 이동 하 여 사용자가 설치 된 언어 목록을 볼 수 **설정-&gt; 시간 & 언어**합니다. 설치된 언어는 **언어** 아래에 나열됩니다.
+**참고**    으로 이동 하 여 사용자가 설치 된 언어의 목록을 볼 수 있습니다 **설정-&gt; 시간 및 언어**합니다. 설치된 언어는 **언어** 아래에 나열됩니다.
 
 새 언어 팩을 설치하고 해당 언어에 대해 필기 인식을 사용하도록 설정하려면 다음과 같이 하세요.
 
@@ -538,7 +538,7 @@ Windows 잉크 플랫폼에 내장된 필기 인식은 Windows에서 지원되�
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/desktop/ms695050)에 렌더링됩니다.
+    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/desktop/ms695050)에 렌더링됩니다.
 
     `InitializeRecognizerList` 함수를 호출하여 인식기 콤보 상자에 설치된 필기 인식기 목록을 채웁니다.
 
@@ -608,7 +608,7 @@ Windows 잉크 플랫폼에 내장된 필기 인식은 Windows에서 지원되�
 
 5.  마지막으로 선택한 필기 인식기를 기반으로 필기 인식을 수행합니다. 이 예제에서는 "인식" 단추의 Click 이벤트 처리기를 사용하여 필기 인식을 수행합니다.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 모든 잉크 스트로크를 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) 개체에 저장합니다. 스트로크는 **InkPresenter**의 [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) 속성을 통해 노출되고 [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) 메서드를 사용하여 검색합니다.
+    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 모든 잉크 스트로크를 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) 개체에 저장합니다. 스트로크는 **InkPresenter**의 [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) 속성을 통해 노출되고 [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) 메서드를 사용하여 검색합니다.
 ```csharp
 // Get all strokes on the InkCanvas.
     IReadOnlyList<InkStroke> currentStrokes =
@@ -760,7 +760,7 @@ string str = "Recognition result\n";
     - [**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
     사용자가 펜 또는 손가락을 떼거나 마우스 단추를 놓아 수동 입력을 중지하면 InkAnalyzer에 잉크 스트로크를 추가하고([**AddDataForStrokes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.adddataforstrokes)) 인식 타이머를 시작합니다. 1초 동안 수동 입력이 없으면 인식이 시작됩니다.  
 
-        [**SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) 메서드를 사용하여 텍스트(문서 구조 및 글머리 기호 목록 포함)만 또는 드로잉(셰이프 인식 포함)만 인식할 것인지 여부를 지정합니다.
+        [  **SetStrokeDataKind**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) 메서드를 사용하여 텍스트(문서 구조 및 글머리 기호 목록 포함)만 또는 드로잉(셰이프 인식 포함)만 인식할 것인지 여부를 지정합니다.
 
     - [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
     다음 타이머 틱 이벤트 전에 새 스트로크가 시작되면 새 스트로크는 단일 필기 항목의 연속이 될 가능성이 있으므로 타이머를 중지합니다.
@@ -803,8 +803,8 @@ string str = "Recognition result\n";
 ```
 
 4.  마지막으로 필기 인식을 수행합니다. 이 예제에서는 [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244256)의 [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244250) 이벤트 처리기를 사용하여 필기 인식을 시작합니다.
-    - [**AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync)를 호출하여 잉크 분석을 시작하고 [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult)를 가져옵니다.
-    - [**Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status)에서 **업데이트됨** 상태를 반환하면 [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) 노드 유형에 대해 [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes)를 호출합니다.
+    - [  **AnalyzeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync)를 호출하여 잉크 분석을 시작하고 [**InkAnalysisResult**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult)를 가져옵니다.
+    - [  **Status**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status)에서 **업데이트됨** 상태를 반환하면 [**InkAnalysisNodeKind.InkWord**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) 노드 유형에 대해 [**FindNodes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes)를 호출합니다.
     - 노드를 반복하고 인식된 텍스트를 표시합니다.
     - 마지막으로 InkAnalyzer에서 인식된 노드를 삭제하고 잉크 캔버스에서 해당 잉크 스트로크를 삭제합니다.
 ```csharp
@@ -855,19 +855,19 @@ string str = "Recognition result\n";
 
 ## <a name="related-articles"></a>관련 문서
 
-* [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
+* [펜 및 스타일러스 상호 작용](pen-and-stylus-interactions.md)
 
 **항목 샘플**
-* [잉크 분석 샘플(기본)(C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
-* [잉크 필기 인식 샘플(C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
+* [잉크 분석 샘플 (basic) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
+* [잉크 필기 인식 샘플 (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
 
-**기타 샘플**
-* [간단한 잉크 샘플(C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [복잡한 잉크 샘플(C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [잉크 샘플(JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [시작 자습서: UWP 앱에서 잉크 지원](https://aka.ms/appsample-ink)
-* [색칠하기 책 샘플](https://aka.ms/cpubsample-coloringbook)
-* [가족 메모 샘플](https://aka.ms/cpubsample-familynotessample)
+**다른 샘플**
+* [간단한 잉크 샘플 (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [복잡 한 잉크 샘플 (c + +)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [잉크 샘플 (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [자습서 시작 하기: UWP 앱에서 잉크를 지원 합니다.](https://aka.ms/appsample-ink)
+* [색 지정 책 샘플](https://aka.ms/cpubsample-coloringbook)
+* [제품군 정보 샘플](https://aka.ms/cpubsample-familynotessample)
 
 
  

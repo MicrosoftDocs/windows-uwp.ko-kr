@@ -6,24 +6,24 @@ ms.topic: article
 keywords: windows 10, uwp, SQLite, 데이터베이스
 ms.localizationpriority: medium
 ms.openlocfilehash: 552de1ccb8f8e69a4ad716e54557ae0b5cd3a3f4
-ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "9075146"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635668"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>UWP 앱에서 SQLite 데이터베이스 사용
 SQLite를 사용해 사용자 장치에서 경량 데이터베이스의 데이터를 저장하고 검색할 수 있습니다. 이 가이드는 그 방법을 보여줍니다.
 
 ## <a name="some-benefits-of-using-sqlite-for-local-storage"></a>로컬 저장소에 SQLite를 사용했을 때의 이점
 
-:heavy_check_mark: SQLite는 가볍고 독립적입니다. 다른 종속성이 없는 코드 라이브러리입니다. 구성이 필요 없습니다.
+:heavy_check_mark: SQLite 간단 하 고 자체 포함 됩니다. 다른 종속성이 없는 코드 라이브러리입니다. 구성이 필요 없습니다.
 
-: heavy_check_mark: 데이터베이스 서버가 없습니다. 클라이언트 및 서버가 동일한 프로세스에서 실행됩니다.
+:heavy_check_mark: 데이터베이스 서버가 없습니다. 클라이언트 및 서버가 동일한 프로세스에서 실행됩니다.
 
-: heavy_check_mark: SQLite는 공용 도메인에 기반을 두고 있어 자유롭게 사용하고 앱으로 배포할 수 있습니다.
+:heavy_check_mark: SQLite 이므로 공용 도메인에서 자유롭게 사용할 수 있으며 앱과 함께 배포 합니다.
 
-:heavy_check_mark: SQLite는 여러 플랫폼과 아키텍처에서 작동합니다.
+:heavy_check_mark: SQLite는 플랫폼 및 아키텍처에서 작동합니다.
 
 SQLite에 대한 자세한 내용은 [여기](https://sqlite.org/about.html)를 참조하세요.
 
@@ -83,13 +83,13 @@ UWP 프로젝트의 최소 버전을 Fall Creator Update로 올리면 몇 가지
 
 먼저 일반 클래스 라이브러리 대신 .NET Standard 2.0 라이브러리를 사용할 수 있습니다. 그러면 데이터 액세스 코드를 WPF, Windows FOrms, Android, iOS, ASP.NET 앱 등 다른 .NET 기반 앱과 공유할 수 있습니다.
 
-둘째, 앱에서 SQLite 라이브러리 패키지 필요가 없습니다. 대신 Windows와 함께 설치된 SQLite 버전을 사용할 수 있습니다. 이는 몇 가지 방법으로 도움을 줍니다.
+둘째, 앱 패키지 SQLite 라이브러리 필요가 없습니다. 대신 Windows와 함께 설치된 SQLite 버전을 사용할 수 있습니다. 이는 몇 가지 방법으로 도움을 줍니다.
 
-:heavy_check_mark: SQLite 바이너리를 다운로드받아 응용 프로그램의 일부로 패키징 할 필요가 없기 때문에 응용 프로그램의 크기를 줄입니다.
+:heavy_check_mark: 이진 SQLite를 다운로드 하 여 응용 프로그램의 일부로 패키징 필요가 없기 때문에 응용 프로그램의 크기를 줄입니다.
 
-:heavy_check_mark: SQLite가 SQLite의 버그와 보안 취약점에 대해 중요한 수정 사항을 게시할 때 사용자에게 새 앱 버전을 푸시할 필요가 없습니다. SQLite Windows 버전은 Microsoft가 SQLite.org와 함께 유지관리하고 있습니다.
+:heavy_check_mark: SQLite 버그 및 SQLite의 보안 취약점에 중요 한 수정 사항을 게시 하는 경우에 새 버전의 앱 사용자에 게 푸시할 필요가 없습니다. SQLite Windows 버전은 Microsoft가 SQLite.org와 함께 유지관리하고 있습니다.
 
-:heavy_check_mark: SQLite의 SDK 버전이 메모리에 로드되기 때문에 앱 로드 시간이 더 빨라질 수 있습니다.
+:heavy_check_mark: 앱 로드 시간에는 대부분의 경우 SQLite의 SDK 버전이 이미 로드 되기 때문에 메모리를 빨라야 될 수 있습니다.
 
 .NET Standard 2.0 클래스 라이브러리를 솔루션에 추가해 시작합니다. 데이터 액세스 코드를 포함시키기 위해 클래스 라이브러리를 사용할 필요는 없습니다. 그러나 여기에서는 예로 사용합니다. 라이브러리에 **DataAccessLibrary**라는 이름을 지정할 것입니다. 또 라이브러리 클래스에는 **DataAccess**라는 이름을 줄 것입니다.
 
@@ -125,15 +125,15 @@ Windows에 포함된 SQLite 버전 사용 방법부터 시작하겠습니다.
 
 다음과 같습니다.
 
-:1: 데이터 액세스 클래스를 준비합니다.
+: 하나: 데이터 액세스 클래스를 준비 합니다.
 
-:2: SQLite 데이터베이스를 초기화 합니다.
+: 두: SQLite 데이터베이스를 초기화 합니다.
 
-:3: SQLite 데이터베이스에 데이터를 삽입합니다.
+: 3: SQLite 데이터베이스에 데이터를 삽입 합니다.
 
-:4: SQLite 데이터베이스에서 데이터를 검색합니다.
+: 4: SQLite 데이터베이스에서 데이터를 검색 합니다.
 
-:5: 기본 사용자 인터페이스를 추가합니다.
+: 5: 기본 사용자 인터페이스를 추가 합니다.
 
 ### <a name="prepare-the-data-access-class"></a>데이터 액세스 클래스 준비
 
@@ -163,7 +163,7 @@ namespace DataAccessLibrary
 
 ```
 
-다음 코드를 추가이 파일의 맨 위에 문을 사용 합니다.
+다음을 추가 합니다이 파일의 맨 위에 문을 사용 하 여 합니다.
 
 ```csharp
 using Microsoft.Data.Sqlite;
@@ -317,14 +317,14 @@ private void AddData(object sender, RoutedEventArgs e)
 
 ## <a name="next-steps"></a>다음 단계
 
-**앱을 SQL Server 데이터베이스에 직접 연결**
+**SQL Server 데이터베이스에 직접 앱 연결**
 
 [UWP 앱에서 SQL Server 데이터베이스 사용](sql-server-databases.md)을 참조하세요.
 
-**여러 앱이 여러 플랫폼에서 코드를 공유**
+**다른 플랫폼에서 다른 앱 간에 코드 공유**
 
 [데스크톱과 UWP에서 코드 공유](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate)를 참조하세요.
 
-**Azure SQL 백 엔드로 마스터 세부 정보 페이지 추가**
+**Azure SQL 백 엔드를 사용 하 여 마스터-세부 페이지 추가**
 
 [고객 주문 데이터베이스 샘플](https://github.com/Microsoft/Windows-appsample-customers-orders-database)을 참조하세요.

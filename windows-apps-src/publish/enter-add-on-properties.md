@@ -1,5 +1,5 @@
 ---
-Description: When submitting an add-on, the options on the Properties page help determine the behavior of your add-on when offered to customers.
+Description: 추가 기능을 제출할 때 속성 페이지의 옵션을 통해 고객에게 제공되었을 때 나타나는 추가 기능의 동작을 결정할 수 있습니다.
 title: 추가 기능 속성 입력
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.date: 10/31/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: 17025282aec18da01f14431996a3942ffdd90312
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925827"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57629678"
 ---
 # <a name="enter-add-on-properties"></a>추가 기능 속성 입력
 
@@ -29,7 +29,7 @@ ms.locfileid: "8925827"
 
 ## <a name="product-lifetime"></a>제품 수명
 
-제품 유형으로 **지속형**을 선택한 경우 **제품 수명**이 여기에 표시됩니다. 지속형 추가 기능의 기본 **제품 수명**은 **계속**으로, 추가 기능이 만료되지 않음을 나타냅니다. 원하는 경우, 추가 기능 (1 ~ 365 일 옵션)으로 기간 후 만료 되도록 **제품 수명** 변경할 수 있습니다.
+제품 유형으로 **지속형**을 선택한 경우 **제품 수명**이 여기에 표시됩니다. 지속형 추가 기능의 기본 **제품 수명**은 추가 기능이 만료되지 않음을 나타내는 **계속**입니다. 원하는 경우 변경할 수 있습니다 합니다 **제품 수명** 추가 기능 (1 ~ 365 일에서 옵션과) 설정된 된 기간 후에 만료 되도록 합니다.
 
 
 ## <a name="quantity"></a>수량
@@ -39,7 +39,7 @@ ms.locfileid: "8925827"
 
 ## <a name="subscription-period"></a>구독 기간
 
-제품 유형으로 **구독**을 선택한 경우 **구독 기간**이 여기에 표시됩니다. 구독에 대해 고객에게 얼마나 자주 요금을 청구할지 지정하는 옵션을 선택합니다. 기본 옵션은 **월별**, 하지만 **3 개월**, **6 개월**, **연간**또는 **24 개월**선택할 수도 있습니다.
+제품 유형으로 **구독**을 선택한 경우 **구독 기간**이 여기에 표시됩니다. 구독에 대해 고객에게 얼마나 자주 요금을 청구할지 지정하는 옵션을 선택합니다. 기본 옵션은 **월간**를 선택할 수도 있습니다 하지만 **3 개월**를 **6 개월**를 **매년**, 또는 **24 개월**.
 
 > [!IMPORTANT]
 > 추가 기능을 게시한 후에는 선택한 **구독 기간**을 변경할 수 없습니다.
@@ -55,7 +55,7 @@ ms.locfileid: "8925827"
 
 ## <a name="content-type"></a>콘텐츠 유형
 
-추가 기능의 제품 유형과 관계없이 제공할 콘텐츠 유형도 표시해야 합니다. 대부분의 추가 기능에 대한 콘텐츠 유형은 **전자 소프트웨어 다운로드**여야 합니다. 목록의 다른 옵션이 추가 기능을 더 잘 설명하는 경우(예를 들어 음악 다운로드 또는 전자책을 제공하는 경우) 해당 옵션을 대신 선택합니다.
+추가 기능의 제품 유형과 관계없이 제공할 콘텐츠 유형도 표시해야 합니다. 대부분의 추가 기능에 대한 콘텐츠 형식은 **전자 소프트웨어 다운로드**여야 합니다. 목록의 다른 옵션이 추가 기능을 더 잘 설명하는 경우(예를 들어 음악 다운로드 또는 전자책을 제공하는 경우) 해당 옵션을 대신 선택합니다.
 
 추가 기능의 콘텐츠 형식에 대한 가능한 옵션은 다음과 같습니다.
 
@@ -84,7 +84,7 @@ ms.locfileid: "8925827"
 이 필드를 쿼리하려면 [Windows.Services.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.Services.Store)의 [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) 속성을 사용합니다. (또는 [Windows.ApplicationModel.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)를 사용하는 경우 [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords) 속성을 사용합니다.)
 
 > [!NOTE]
-> 키워드는 Windows8 및 Windows8.1을 대상으로 하는 패키지를 사용할 수 없습니다.
+> 키워드는 Windows 8 및 Windows 8.1 대상으로 하는 패키지에서 사용할 수 없습니다.
 
 <span id="custom-developer-data" />
 
@@ -97,7 +97,7 @@ ms.locfileid: "8925827"
 이 필드를 쿼리하려면 [Windows.Services.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.Services.Store)의 [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) 속성을 사용합니다. (또는 [Windows.ApplicationModel.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)를 사용하는 경우 [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag) 속성을 사용합니다.)
 
 > [!NOTE]
-> **사용자 지정 개발자 데이터** 필드 Windows8 및 Windows8.1을 대상으로 하는 패키지를 사용할 수 없는 경우
+> 합니다 **사용자 지정 개발자 데이터** 필드는 Windows 8 및 Windows 8.1 대상으로 하는 패키지에서 사용 하 여 사용할 수 없습니다.
 
  
 

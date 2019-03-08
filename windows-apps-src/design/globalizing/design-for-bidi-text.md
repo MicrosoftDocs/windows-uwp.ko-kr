@@ -1,5 +1,5 @@
 ---
-Description: Design your app to provide bidirectional text support (BiDi) so that you can combine script from left-to-right (LTR) and right-to-left (RTL) writing systems, which generally contain different types of alphabets.
+Description: 왼쪽에서 오른쪽 (왼쪽에서 오른쪽) 및를 왼쪽 (RTL) 일반적으로 다양 한 알파벳을 포함 하는 시스템을 작성 하는 스크립트를 결합할 수 있도록 양방향 텍스트 지원 (BiDi)를 제공 하 여 앱을 디자인 합니다.
 title: 양방향 텍스트를 위한 앱 디자인
 template: detail.hbs
 ms.date: 11/10/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 세계화, 지역화, 현지화, 오른쪽에서 왼쪽, 왼쪽에서 오른쪽,
 ms.localizationpriority: medium
 ms.openlocfilehash: 66a158a96fcab5391030f4517b6420ba4585bf04
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942026"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641128"
 ---
 # <a name="design-your-app-for-bidirectional-text"></a>양방향 텍스트를 위한 앱 디자인
 
@@ -42,8 +42,8 @@ Windows는 4가지 양방향 디자인 요소를 지원합니다. Windows의 주
 
 텍스트가 오른쪽에서 왼쪽으로 진행될 수 있도록 Windows는 인쇄 그리드의 방향을 조정합니다. 이렇게 하면 그리드의 첫 번째 파일이 오른쪽 상단에 위치하고, 마지막 타일이 왼쪽 하단에 위치하게 됩니다. 책, 잡지와 같은 인쇄된 출판물의 RTL 패턴과 일치하며, 읽기 패턴은 항상 오른쪽 상단 모서리에서 출발하여 왼쪽으로 진행됩니다.
 
-![양방향 시작 메뉴](images/56283_BIDI_01_startscreen_resized.png)
-![참이 포함된 양방향 시작 메뉴](images/56283_BIDI_02_startscreen_charm_resized.png)
+![양방향 텍스트의 시작 메뉴](images/56283_BIDI_01_startscreen_resized.png)
+![BiDi 참 메뉴 시작](images/56283_BIDI_02_startscreen_charm_resized.png)
 
 일관된 UI 흐름을 유지하려면 타일의 콘텐츠가 오른쪽에서 왼쪽 레이아웃을 유지해야 합니다. 즉, 앱 UI 언어에 관계없이 앱 이름 및 로고가 타일의 오른쪽 하단에 위치해야 합니다.
 
@@ -65,11 +65,11 @@ Windows는 4가지 양방향 디자인 요소를 지원합니다. Windows의 주
 
 Windows UI의 모든 요소는 RTL 방향에 적합합니다. 참 및 플라이아웃은 검색 결과와 겹치지 않고 터치 최적화를 저하시키지 않도록 화면의 왼쪽 가장자리에 위치됩니다. 엄지 손가락으로 쉽게 누를 수 있습니다.
 
-![양방향 스크린샷](images/56286_BIDI_05_search_flyout_resized.png)
-![양방향 스크린샷](images/56286_BIDI_06_print_flyout_resized.png)
+![양방향 텍스트 스크린 샷](images/56286_BIDI_05_search_flyout_resized.png)
+![BiDi 스크린 샷](images/56286_BIDI_06_print_flyout_resized.png)
 
-![양방향 스크린샷](images/56286_BIDI_07_settings_flyout_resized.png)
-![양방향 스크린샷](images/56286_BIDI_08_app_bars_resized.png)
+![양방향 텍스트 스크린 샷](images/56286_BIDI_07_settings_flyout_resized.png)
+![BiDi 스크린 샷](images/56286_BIDI_08_app_bars_resized.png)
 
 ### <a name="text-input-in-any-direction"></a>방향에 관계없이 텍스트 입력
 
@@ -99,10 +99,10 @@ BPA(양방향 괄호 알고리즘)의 도입으로 쌍으로 이루어진 괄호
 
 Windows는 모든 양방향 언어에 대해 맑은 고딕 UI를 사용합니다. 이 글꼴은 Windows UI에 맞게 모양이 형성되고 크기가 조정됩니다.
 
-![양방향 언어를 위한 맑은 고딕 글꼴](images/56290_BIDI_13_start_screen_segoe.png)
-![양방향 언어를 위한 맑은 고딕 글꼴](images/56290_BIDI_13_start_screen_segoe_arabic.png)
+![양방향 텍스트 언어에 대 한 Segoe UI 글꼴](images/56290_BIDI_13_start_screen_segoe.png)
+![양방향 텍스트 언어에 대 한 Segoe UI 글꼴](images/56290_BIDI_13_start_screen_segoe_arabic.png)
 
-## <a name="case-study-1-a-bidi-music-app"></a>사례 1: 양방향 음악 앱
+## <a name="case-study-1-a-bidi-music-app"></a>사례 #1: 양방향 텍스트 음악 앱
 
 ### <a name="overview"></a>개요
 
@@ -182,7 +182,7 @@ string NormalizeTextDirection(string data)
 
 추가된 유니코드 문자를 너비가 0이므로 문자열 간격에 영향을 미치지 않습니다. 문자열의 방향 감지는 중립 문자가 아닌 문자를 만날 때까지 문자열을 계속 읽어야 하므로 이 코드는 잠재적으로 성능을 떨어뜨릴 수 있습니다. 중립성이 검사된 각 문자는 먼저 몇몇 유니코드 범위에 대해 비교되므로 간단한 검사가 아닙니다.
 
-## <a name="case-study-2-a-bidi-mail-app"></a>사례 2: 양방향 메일 앱
+## <a name="case-study-2-a-bidi-mail-app"></a>사례 #2: 양방향 텍스트 메일 앱
 
 ### <a name="overview"></a>개요
 

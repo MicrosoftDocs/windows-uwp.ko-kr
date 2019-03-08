@@ -7,11 +7,11 @@ keywords: 시작, uwp, windows 10, 학습 트랙, 설정, 설정 저장, 설정 
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4aa56bf24d2dfa1fd4ae1947a5b0edf7f312ea2f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931901"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614638"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a>UWP 앱의 설정 저장 및 로드
 
@@ -89,13 +89,13 @@ if (composite != null)
 | [ApplicationData.LocalSettings](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.temporaryfolder) | 로컬 앱 데이터 저장소에서 응용 프로그램 설정 컨테이너를 가져옵니다. |
 | [ApplicationData.RoamingSettings](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings) | 로밍 앱 데이터 저장소에서 응용 프로그램 설정 컨테이너를 가져옵니다. |
 | [ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) | 컨테이너 계층 만들기, 삭제, 열거 및 통과를 지원하는 앱 설정에 대한 컨테이너입니다. |
-| [Windows.UI.ApplicationSettings 네임스페이스](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings) | Windows 셸의 설정 창에 표시되는 앱 설정을 정의하는 데 사용할 수 있는 클래스를 제공합니다. |
+| [Windows.UI.ApplicationSettings Namespace](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings) | Windows 셸의 설정 창에 표시되는 앱 설정을 정의하는 데 사용할 수 있는 클래스를 제공합니다. |
 
 ### <a name="useful-docs"></a>유용한 문서
 
 | 항목 | 설명 |
 |-------|----------------|
-| [앱 설정에 대한 지침](https://docs.microsoft.com/windows/uwp/design/app-settings/guidelines-for-app-settings) | 앱 설정을 만들고 표시하기 위한 모범 사례를 설명합니다. |
+| [앱 설정에 대 한 지침](https://docs.microsoft.com/windows/uwp/design/app-settings/guidelines-for-app-settings) | 앱 설정을 만들고 표시하기 위한 모범 사례를 설명합니다. |
 | [설정 및 기타 앱 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#create-and-read-a-local-file) | 로밍 설정을 포함하여 설정을 저장하고 검색하는 단계를 안내합니다. |
 
 ## <a name="useful-code-samples"></a>유용한 코드 샘플

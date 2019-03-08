@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 0d84c6eb678bf884709e13ecefd81e64097ee738
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940225"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630208"
 ---
 # <a name="manage-targeting-profiles"></a>타기팅 프로필 관리
 
@@ -20,7 +20,7 @@ Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 �
 
 타기팅 프로필과 광고 캠페인, 배달 라인 및 크리에이티브 간의 관계에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 광고 캠페인 실행](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api)을 참조하세요.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 메서드를 사용하려면 먼저 다음 작업을 완료해야 합니다.
 
@@ -40,10 +40,10 @@ Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 �
 
 ### <a name="header"></a>헤더
 
-| 헤더        | 유형   | 설명         |
+| 헤더        | 형식   | 설명         |
 |---------------|--------|---------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
-| 추적 ID   | GUID   | 선택 사항입니다. 호출 흐름을 추적하는 ID입니다.                                  |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| 추적 ID   | GUID   | 선택 사항. 호출 흐름을 추적하는 ID입니다.                                  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -51,7 +51,7 @@ Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 �
 POST 및 PUT 메서드는 [타기팅 프로필](#targeting-profile) 개체의 필수 필드 및 설정하거나 변경하려는 추가 필드가 있는 JSON 요청 본문이 필요합니다.
 
 
-### <a name="request-examples"></a>요청 예시
+### <a name="request-examples"></a>요청 예제
 
 다음 예시에서는 POST 메서드를 호출하여 타기팅 프로필을 만드는 방법을 보여줍니다.
 
@@ -139,17 +139,17 @@ Authorization: Bearer <your access token>
 
 이 메서드에 대한 요청 및 응답 본문은 다음 필드를 포함합니다. 이 표에서는 읽기 전용(PUT 메서드에서 변경할 수 없음을 의미) 필드와 POST 메서드에 대한 요청 본문에서 필요한 필드가 어떤 것인지 보여줍니다.
 
-| 필드        | 유형   |  설명      |  읽기 전용  | 기본값  | POST에 필요한지 여부 |  
+| 필드        | 형식   |  설명      |  읽기 전용  | 기본값  | POST에 필요한지 여부 |  
 |--------------|--------|---------------|------|-------------|------------|
-|  id   |  정수   |  타기팅 프로필의 ID입니다.     |   예    |       |   아니요      |       
-|  name   |  문자열   |   대상 프로필의 이름입니다.    |    아니요   |      |  예     |       
-|  targetingType   |  문자열   |  다음 값 중 하나입니다. <ul><li>**자동**: Microsoft 파트너 센터에서 앱에 대 한 설정에 따라 타기 팅 프로필을 선택할 수 있도록이 값을 지정 합니다.</li><li>**수동**: 이 값을 지정하여 자신만의 타기팅 프로필을 정의합니다.</li></ul>     |  아니요     |  자동    |   예    |       
-|  age   |  배열   |   대상으로 지정할 사용자의 연령대를 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [연령 값](#age-values)을 참조하세요.    |    아니요    |  null    |     아니요    |       
-|  gender   |  배열   |  대상으로 지정할 사용자의 성별을 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [성별 값](#gender-values)을 참조하세요.       |  아니요    |  null    |     아니요    |       
-|  country   |  배열   |  대상으로 지정할 사용자의 국가 코드를 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [국가 코드 값](#country-code-values)을 참조하세요.    |  아니요    |  null   |      아니요   |       
-|  osVersion   |  배열   |   대상으로 지정할 사용자의 OS 버전을 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [OS 버전 값](#osversion-values)을 참조하세요.     |   아니요    |  null   |     아니요    |       
-|  deviceType   | 배열    |  대상으로 지정할 사용자의 장치 유형을 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [장치 유형 값](#devicetype-values)을 참조하세요.       |   아니요    |  null    |    아니요     |       
-|  supplyType   |  배열   |  캠페인의 광고가 표시될 인벤토리 유형을 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [제공 유형 값](#supplytype-values)을 참조하세요.      |   아니요    |  null   |     아니요    |   |  
+|  id   |  정수   |  타기팅 프로필의 ID입니다.     |   예    |       |   아니오      |       
+|  name   |  문자열   |   대상 프로필의 이름입니다.    |    아니오   |      |  예     |       
+|  targetingType   |  문자열   |  다음 값 중 하나입니다. <ul><li>**자동**: Microsoft 파트너 센터에서 앱에 대 한 설정에 따라 대상 프로필을 선택할 수 있도록이 값을 지정 합니다.</li><li>**수동**: 사용자 프로필을 대상으로 지정 하려면이 값을 지정 합니다.</li></ul>     |  아니오     |  자동    |   예    |       
+|  age   |  배열   |   대상으로 지정할 사용자의 연령대를 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [연령 값](#age-values)을 참조하세요.    |    아니오    |  null    |     아니오    |       
+|  gender   |  배열   |  대상으로 지정할 사용자의 성별을 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [성별 값](#gender-values)을 참조하세요.       |  아니오    |  null    |     아니오    |       
+|  country   |  배열   |  대상으로 지정할 사용자의 국가 코드를 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [국가 코드 값](#country-code-values)을 참조하세요.    |  아니오    |  null   |      아니오   |       
+|  osVersion   |  배열   |   대상으로 지정할 사용자의 OS 버전을 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [OS 버전 값](#osversion-values)을 참조하세요.     |   아니오    |  null   |     아니오    |       
+|  deviceType   | 배열    |  대상으로 지정할 사용자의 장치 유형을 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [장치 유형 값](#devicetype-values)을 참조하세요.       |   아니오    |  null    |    아니오     |       
+|  supplyType   |  배열   |  캠페인의 광고가 표시될 인벤토리 유형을 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [제공 유형 값](#supplytype-values)을 참조하세요.      |   아니오    |  null   |     아니오    |   |  
 
 
 <span id="age-values"/>
@@ -166,7 +166,7 @@ Authorization: Bearer <your access token>
 |     654     |            35~49             |
 |     655     |            50 이상             |
 
-*age* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  ```Authorization``` 헤더의 경우, **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰을 전달합니다.
+*age* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  에 대 한 합니다 ```Authorization``` 헤더 형태로 Azure AD 액세스 토큰을 전달 **전달자** &lt; *토큰*&gt;합니다.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/age
@@ -200,7 +200,7 @@ Authorization: Bearer <your access token>
 |     700     |            남성             |
 |     701     |           여성             |
 
-*gender* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  ```Authorization``` 헤더의 경우, **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰을 전달합니다.
+*gender* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  에 대 한 합니다 ```Authorization``` 헤더 형태로 Azure AD 액세스 토큰을 전달 **전달자** &lt; *토큰*&gt;합니다.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/gender
@@ -236,11 +236,11 @@ Authorization: Bearer <your access token>
 |     504     |           Windows Phone 8.0             |
 |     505     |           Windows Phone 8.1             |
 |     506     |           Windows 8.0             |
-|     507     |           Windows8.1             |
+|     507     |           Windows 8.1             |
 |     508     |           Windows 10             |
 |     509     |           Windows 10 Mobile             |
 
-*osVersion* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  ```Authorization``` 헤더의 경우, **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰을 전달합니다.
+*osVersion* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  에 대 한 합니다 ```Authorization``` 헤더 형태로 Azure AD 액세스 토큰을 전달 **전달자** &lt; *토큰*&gt;합니다.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/osversion
@@ -280,7 +280,7 @@ Authorization: Bearer <your access token>
 |     710     |  Windows   |  이것은 데스크톱 버전 Windows 10 또는 Windows 8.x를 실행하는 디바이스를 나타냅니다.  |
 |     711     |  전화     |  이것은 Windows 10 Mobile, Windows Phone 8.x 또는 Windows Phone 7.x를 실행하는 디바이스를 나타냅니다.
 
-*deviceType* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  ```Authorization``` 헤더의 경우, **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰을 전달합니다.
+*deviceType* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  에 대 한 합니다 ```Authorization``` 헤더 형태로 Azure AD 액세스 토큰을 전달 **전달자** &lt; *토큰*&gt;합니다.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/devicetype
@@ -312,7 +312,7 @@ Authorization: Bearer <your access token>
 |     11470     |  앱        |  이것은 앱에만 표시되는 광고를 가리킵니다.  |
 |     11471     |  범용        |  이것은 앱, 웹 및 기타 디스플레이 화면에 표시되는 광고를 가리킵니다.  |
 
-*supplyType* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  ```Authorization``` 헤더의 경우, **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰을 전달합니다.
+*supplyType* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  에 대 한 합니다 ```Authorization``` 헤더 형태로 Azure AD 액세스 토큰을 전달 **전달자** &lt; *토큰*&gt;합니다.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/supplytype
@@ -340,7 +340,7 @@ Authorization: Bearer <your access token>
 
 |  *country* 필드의 정수 값  |  해당 국가 코드  |  
 |-------------------------------------|------------------------------|
-|     1      |            US                  |
+|     1      |            미국                  |
 |     2      |            AU                  |
 |     3      |            AT                  |
 |     4      |            BE                  |
@@ -360,7 +360,7 @@ Authorization: Bearer <your access token>
 |     18      |            MX                  |
 |     19      |            NL                  |
 |     20      |            NZ                  |
-|     21      |            NO                  |
+|     21      |            아니요                  |
 |     22      |            PL                  |
 |     23      |            PT                  |
 |     24      |            SG                  |
@@ -447,7 +447,7 @@ Authorization: Bearer <your access token>
 |     145      |            ME                  |
 |     146      |            MA                  |
 |     147      |            MZ                  |
-|     148      |            NA                  |
+|     148      |            해당 없음                  |
 |     150      |            NP                  |
 |     151      |            NI                  |
 |     153      |            NG                  |
@@ -470,7 +470,7 @@ Authorization: Bearer <your access token>
 |     225      |            RE                  |
 |     246      |            PR                  |
 
-*country* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  ```Authorization``` 헤더의 경우, **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰을 전달합니다.
+*country* 필드에 지원되는 값을 프로그래밍 방식으로 가져오려면 다음과 같이 GET 메서드를 호출하면 됩니다.  에 대 한 합니다 ```Authorization``` 헤더 형태로 Azure AD 액세스 토큰을 전달 **전달자** &lt; *토큰*&gt;합니다.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/reference/country
@@ -619,8 +619,8 @@ Authorization: Bearer <your access token>
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용하여 광고 캠페인 실행](run-ad-campaigns-using-windows-store-services.md)
+* [Microsoft Store Services를 사용 하 여 광고 캠페인을 실행 합니다.](run-ad-campaigns-using-windows-store-services.md)
 * [광고 캠페인 관리](manage-ad-campaigns.md)
-* [광고 캠페인 배달 라인 관리](manage-delivery-lines-for-ad-campaigns.md)
-* [광고 캠페인 크리에이티브 관리](manage-creatives-for-ad-campaigns.md)
-* [광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)
+* [광고 캠페인에 대 한 배달 줄 관리](manage-delivery-lines-for-ad-campaigns.md)
+* [광고 캠페인에 대 한 소재를 관리 합니다.](manage-creatives-for-ad-campaigns.md)
+* [광고 캠페인 성능 데이터 가져오기](get-ad-campaign-performance-data.md)

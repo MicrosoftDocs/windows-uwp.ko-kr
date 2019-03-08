@@ -1,5 +1,5 @@
 ---
-Description: Use speech recognition to provide input, specify an action or command, and accomplish tasks.
+Description: 음성 인식 기능을 사용하여 입력을 제공하고, 동작이나 명령을 지정하고 작업을 수행합니다.
 title: 음성 인식
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
@@ -9,34 +9,34 @@ ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b7eec51044a70b0738e246d3aa516c37643cf68
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048550"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608078"
 ---
 # <a name="speech-recognition"></a>음성 인식
 
 
 음성 인식 기능을 사용하여 입력을 제공하고, 동작이나 명령을 지정하고 작업을 수행합니다.
 
-> **중요 API**: [**Windows.Media.SpeechRecognition**](https://msdn.microsoft.com/library/windows/apps/dn653262)
+> **중요 한 Api**: [**Windows.Media.SpeechRecognition**](https://msdn.microsoft.com/library/windows/apps/dn653262)
 
 음성 인식은 음성 런타임, 런타임을 프로그래밍하기 위한 인식 API, 바로 사용할 수 있는 받아쓰기 및 웹 검색 문법, 사용자가 음성 인식 기능을 검색하고 사용하는 데 도움이 되는 기본 시스템 UI로 구성됩니다.
 
-## <a name="configure-speech-recognition"></a>음성 인식 구성
+## <a name="configure-speech-recognition"></a>음성 인식을 구성합니다
 
-음성 인식 앱을 지원 하기 위해 사용자 해야 연결가 장치에 마이크를 사용 하도록 설정 및 사용 하려면 앱에 대 한 권한을 부여 Microsoft 개인 정보 보호 정책을 적용 합니다.
+를 지원 하기 위해 앱을 사용 하 여 음성 인식을 사용자 연결 및 해당 장치의 마이크를 사용 하도록 설정 하며 사용에 대 한 앱에 대 한 권한 부여 Microsoft 개인 정보 취급 방침에 동의 합니다.
 
-자동으로 액세스 하 고 마이크를 사용할 수 있는 권한을 요청 하는 시스템 대화 상자를 사용 하 여 사용자를 입력 하도록의 오디오 피드 정당한 집합 (예)에서 [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897) 아래 표시 된 **마이크** [장치 접근 권한 값](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) [앱 패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest)에 있습니다. 자세한 내용은 [앱 기능 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)를 참조 하세요.
+사용자에 게 자동으로 프롬프트에 액세스 하는 마이크의 오디오 피드에 사용 권한을 요청 하는 시스템 대화 상자를 사용 하 여 (의 예제는 [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897) 아래에 표시 된)만 설정 합니다  **마이크** [장치 기능](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) 에 [앱 패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest)합니다. 자세한 내용을 참조 하세요 [앱 기능 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)합니다.
 
 ![마이크 액세스에 대 한 개인 정보 취급 방침](images/speech/privacy.png)
 
-사용자가 마이크에 대 한 액세스 권한을 부여 하는 예를 클릭 하면 앱 설정에 허용 된 응용 프로그램 목록에 추가 됩니다-gt_ 개인 정보-gt_ 마이크 페이지. 하지만 사용자는 언제 든 지가이 설정을 사용 하지 않으려면 선택할 수, 사용 하기 전에 앱에서 마이크에 대 한 액세스에 있는지 확인 해야 합니다.
+앱 설정에 승인 된 응용 프로그램 목록에 추가 됩니다 마이크에 대 한 액세스 권한을 부여 하려면 예 클릭 하면-> 개인 정보-> 마이크 페이지입니다. 그러나 언제 든 지가이 설정을 해제 하려면 사용자 수 선택 하는 앱에 사용 하기 전에 마이크에 대 한 액세스 확인 해야 합니다.
 
-Cortana, 받아쓰기 지원 하려는 경우, 다른 음성 인식 서비스 (예: 항목 제약 조건에 정의 된 경우 [미리 정의 된 문법](#predefined-grammars) ) 또한 확인 해야 하는 **온라인 음성 인식** (설정-gt_ 개인 정보-음성 gt_)은 사용할 수 있습니다.
+받아쓰기, Cortana, 또는 기타 음성 인식 서비스를 지원 하려는 경우 (같은 [문법 미리 정의 된](#predefined-grammars) 항목 제약 조건에 정의)를 확인 해야 합니다 **온라인 음성 인식** (설정-개인 정보 > 음성->) 사용 가능 합니다.
 
-이 조각 마이크 존재 하 고 사용할 수 있는 권한이 있으면 앱 어떻게 확인할 수를 보여 줍니다.
+이 조각은 마이크가 있는 경우 및를 사용할 권한이 있는 경우 앱 수 확인 하는 방법을 보여 줍니다.
 
 ```csharp
 public class AudioCapturePermissions
@@ -210,17 +210,17 @@ var AudioCapturePermissions = WinJS.Class.define(
 
 *제약 조건*은 앱이 음성 입력에서 인식하는 단어와 구(어휘)를 정의합니다. 제약 조건은 음성 인식의 핵심이며 앱의 음성 인식 정확도를 높입니다.
 
-음성 입력 인식에 대 한 다음과 같은 유형의 제약 조건 사용할 수 있습니다.
+음성 입력을 인식 하는 것에 대 한 다음과 같은 유형의 제약 조건 사용할 수 있습니다.
 
 ### <a name="predefined-grammars"></a>미리 정의된 문법
 
 미리 정의된 받아쓰기 및 웹 검색 문법은 사용자가 문법을 작성할 필요 없이 앱에 대한 음성 인식 기능을 제공합니다. 이러한 문법을 사용할 때 음성 인식은 원격 웹 서비스에서 수행되고 결과가 장치로 반환됩니다.
 
-기본 자유 텍스트 받아쓰기 문법은 사용자가 특정 언어로 말할 수 있는 대부분의 단어와 구를 인식할 수 있으며 짧은 구를 인식하도록 최적화되어 있습니다. [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 개체에 대한 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. 자유 텍스트 받아쓰기는 사용자가 말할 수 있는 내용을 제한하지 않으려는 경우에 유용합니다. 일반적인 사용에는 노트 만들기나 메시지 내용 받아쓰기가 포함됩니다.
+기본 자유 텍스트 받아쓰기 문법은 사용자가 특정 언어로 말할 수 있는 대부분의 단어와 구를 인식할 수 있으며 짧은 구를 인식하도록 최적화되어 있습니다. [  **SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 개체에 대한 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. 자유 텍스트 받아쓰기는 사용자가 말할 수 있는 내용을 제한하지 않으려는 경우에 유용합니다. 일반적인 사용에는 노트 만들기나 메시지 내용 받아쓰기가 포함됩니다.
 
 받아쓰기 문법과 같은 웹 검색 문법에는 사용자가 말할 수 있는 매우 많은 단어 및 구가 포함되어 있습니다. 그러나 웹 검색 문법은 사람들이 일반적으로 웹을 검색할 때 사용하는 용어를 인식하도록 최적화되어 있습니다.
 
-**참고**고에 미리 정의 된 받아쓰기 및 웹 검색 문법은 용량이 클 수 있기 때문에 (디바이스)에 없는 성능 하지 않을 장치에 설치 된 사용자 지정 문법에서와 마찬가지로 빠릅니다.     
+**참고**  온라인 고 미리 정의 된 받아쓰기 및 웹 검색 문법을 클 수 있기 때문에 (장치)에 없는 성능은 아닐 장치에 설치는 사용자 지정 문법에 대해서와 마찬가지로 빨리 합니다.     
 
 이러한 미리 정의된 문법은 최대 10초의 음성 입력을 인식하는 데 사용할 수 있으며 특별한 작성 작업이 필요하지 않습니다. 그러나 네트워크에 연결되어 있어야 합니다.
 
@@ -228,7 +228,7 @@ var AudioCapturePermissions = WinJS.Class.define(
 
 여기에서는 음성 입력이 사용되도록 설정되어 있는지 테스트하고 설정되어 있지 않으면 설정 -> 개인 정보 -> 음성, 수동 입력 및 입력 페이지를 여는 방법을 보여 줍니다.
 
-먼저, 전역 변수(HResultPrivacyStatementDeclined)를 0x80045509의 HResult 값으로 초기화합니다. [C\# 또는 Visual Basic으로 작성된 예외 처리](https://msdn.microsoft.com/library/windows/apps/dn532194)를 참조하세요.
+먼저, 전역 변수(HResultPrivacyStatementDeclined)를 0x80045509의 HResult 값으로 초기화합니다. 참조 [의 예외 처리에 대 한 C\# 또는 Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194)합니다.
 
 ```csharp
 private static uint HResultPrivacyStatementDeclined = 0x80045509;
@@ -257,29 +257,29 @@ catch (Exception exception)
 }
 ```
 
-[**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)를 참조 하세요.
+See [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446).
 
-### <a name="programmatic-list-constraints"></a>프로그래밍 방식 목록 제약 조건 
+### <a name="programmatic-list-constraints"></a>프로그래밍 방식으로 목록 제약 조건 
 
 프로그래밍 방식 목록 제약 조건은 단어 또는 구 목록을 사용하여 간단한 문법을 만드는 가벼운 방법을 제공합니다. 짧고 고유한 구를 인식하는 데는 목록 제약 조건이 유용합니다. 음성 인식 엔진이 일치를 확인하기 위해서만 음성을 처리해야 하므로 문법의 모든 단어를 명시적으로 지정하면 인식 정확도도 향상됩니다. 또한 목록은 프로그래밍 방식으로도 업데이트할 수 있습니다.
 
 목록 제약 조건은 앱이 인식 작업에 대해 받아들이는 음성 입력을 나타내는 문자열 배열로 구성됩니다. 음성 인식 목록 제약 조건 개체를 만들고 문자열 배열을 전달하여 앱에서 목록 제약 조건을 만들 수 있습니다. 그런 다음 인식기 제약 조건 컬렉션에 해당 개체를 추가합니다. 음성 인식기가 배열에 있는 문자열 중 하나를 인식하면 인식에 성공합니다.
 
-[**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)를 참조 하세요.
+참조 [ **SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)합니다.
 
 ### <a name="srgs-grammars"></a>SRGS 문법
 
 SRGS(Speech Recognition Grammar Specification) 문법은 프로그래밍 방식 목록 제약 조건과 달리 [SRGS 버전 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302)에서 정의한 XML 형식을 사용하는 정적 문서입니다. SRGS 문법을 사용하면 단일 인식에서 여러 시맨틱 의미를 캡처할 수 있으므로 음성 인식 환경을 가장 잘 제어할 수 있습니다.
 
- [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)를 참조 하세요.
+ See [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412).
 
 ### <a name="voice-command-constraints"></a>음성 명령 제약 조건
 
 VCD(음성 명령 정의) XML 파일을 사용하여 사용자가 앱을 활성화할 때 동작을 시작하기 위해 말할 수 있는 명령을 정의합니다. 자세한 내용은 [Cortana에서 음성 명령으로 포그라운드 앱 시작](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana)을 참조하세요.
 
-[ **SpeechRecognitionVoiceCommandDefinitionConstraint** 를 참조 하세요.](https://msdn.microsoft.com/library/windows/apps/dn653220)/
+See [**SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220)/
 
-**참고**유형을 사용 하는 제약 조건 유형은 만들려는 인식 환경의 복잡성에 따라 달라 집니다. 어떤 유형이나 특정 인식 작업에 가장 적합한 선택이 될 수 있으며, 앱에서 모든 제약 조건 유형의 용도를 찾을 수 있습니다.
+**참고**  제약 조건 형식을 사용 하면 만들려는 인식 환경의 복잡성에 따라 달라 집니다. 어떤 유형이나 특정 인식 작업에 가장 적합한 선택이 될 수 있으며, 앱에서 모든 제약 조건 유형의 용도를 찾을 수 있습니다.
 제약 조건을 시작하려면 [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md)을 참조하세요.
 
 미리 정의된 유니버설 Windows 앱 받아쓰기 문법은 언어의 단어와 짧은 구를 대부분 인식합니다. 사용자 지정 제약 조건 없이 음성 인식기 개체를 인스턴스화할 때 기본적으로 활성화됩니다.

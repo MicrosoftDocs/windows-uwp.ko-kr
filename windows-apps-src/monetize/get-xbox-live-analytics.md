@@ -6,28 +6,28 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석
 ms.localizationpriority: medium
 ms.openlocfilehash: 74c898630641e8b0d53a181d1874c6df62baaa78
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922674"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637088"
 ---
 # <a name="get-xbox-live-analytics-data"></a>Xbox Live 분석 데이터 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원 게임](../xbox-live/index.md)을 플레이하는 고객의 지난 30일 동안의 일반 분석 데이터를 가져옵니다. 여기에는 장치 액세서리 사용량, 인터넷 연결 유형, 게이머 점수 분포, 게임 통계 및 친구와 팔로워 데이터가 포함되어 있습니다. 이 정보는 파트너 센터에서 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 에 사용할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원 게임](../xbox-live/index.md)을 플레이하는 고객의 지난 30일 동안의 일반 분석 데이터를 가져옵니다. 여기에는 장치 액세서리 사용량, 인터넷 연결 유형, 게이머 점수 분포, 게임 통계 및 친구와 팔로워 데이터가 포함되어 있습니다. 이 정보를 사용할 수 있습니다 합니다 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 파트너 센터에서.
 
 > [!IMPORTANT]
 > 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](../xbox-live/developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
 
 Xbox Live 지원 게임은 다음 방법을 통해 사용할 수 있습니다.
-* [Xbox Live 도전 과제 데이터 가져오기](get-xbox-live-achievements-data.md)
+* [Xbox Live 성과 데이터 가져오기](get-xbox-live-achievements-data.md)
 * [Xbox Live 상태 데이터 가져오기](get-xbox-live-health-data.md)
 * [Xbox Live 게임 허브 데이터 가져오기](get-xbox-live-game-hub-data.md)
-* [Xbox Live 클럽 데이터 가져오기](get-xbox-live-club-data.md)
-* [Xbox Live 멀티플레이 데이터 가져오기](get-xbox-live-multiplayer-data.md)
-* [Xbox Live 동시 사용 데이터 가져오기](get-xbox-live-concurrent-usage-data.md)
+* [Xbox Live club 데이터 가져오기](get-xbox-live-club-data.md)
+* [Xbox Live 멀티 플레이 데이터 가져오기](get-xbox-live-multiplayer-data.md)
+* [Xbox Live 동시 사용 현황 데이터 가져오기](get-xbox-live-concurrent-usage-data.md)
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -46,9 +46,9 @@ Xbox Live 지원 게임은 다음 방법을 통해 사용할 수 있습니다.
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
@@ -82,10 +82,10 @@ Authorization: Bearer <your access token>
 
 이 리소스에는 지난 30일 동안 게임의 장치 사용량 데이터 또는 모든 Xbox Live 고객의 평균 장치 사용량 데이터가 포함되어 있습니다.
 
-| 값           | 유형    | 설명        |
+| 값           | 형식    | 설명        |
 |-----------------|---------|------|
 |  applicationId               |    문자열     |  분석 데이터를 검색한 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.   |
-|  connectionTypeDistribution               |    배열     |   Xbox에서 유선 인터넷 연결을 사용하는 고객 대 무선 인터넷 연결을 사용하는 고객 수를 표시하는 개체가 포함됩니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**conType**: 연결 유형을 지정합니다.</li><li>**deviceCount**: **ProductData** 개체에서 이 필드는 해당 연결 유형을 사용하는 게임 고객 수를 지정합니다. **XboxwideData** 개체에서 이 필드는 해당 연결 유형을 사용하는 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>   |     
+|  connectionTypeDistribution               |    배열     |   Xbox에서 유선 인터넷 연결을 사용하는 고객 대 무선 인터넷 연결을 사용하는 고객 수를 표시하는 개체가 포함됩니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**conType**: 연결 유형을 지정합니다.</li><li>**deviceCount**: 에 **ProductData** 개체를이 필드 연결 유형을 사용 하는 게임 고객의 수를 지정 합니다. **XboxwideData** 개체에서 이 필드는 해당 연결 유형을 사용하는 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>   |     
 |  deviceCount               |   문자열      |  **ProductData** 개체에서 이 필드는 지난 30일 동안 게임이 플레이된 고객 장치 수를 지정합니다. **XboxwideData** 개체에서 이 필드는 항상 1이며, 이는 모든 Xbox Live 고객의 데이터에 대해 100% 시작 비율을 나타냅니다.   |     
 |  eliteControllerPresentDeviceCount               |   문자열      |  **ProductData** 개체에서 이 필드는 Xbox Elite 무선 컨트롤러를 사용하는 게임 고객 수를 지정합니다. **XboxwideData** 개체에서 이 필드는 Xbox Elite 무선 컨트롤러를 사용하는 모든 Xbox Live 고객의 백분율을 지정합니다.  |     
 |  externalDrivePresentDeviceCount               |   문자열      |  **ProductData** 개체에서 이 필드는 Xbox의 외장 하드 드라이브를 사용하는 게임 고객 수를 지정합니다. **XboxwideData** 개체에서 이 필드는 Xbox의 외장 하드 드라이브를 사용하는 모든 Xbox Live 고객의 백분율을 지정합니다.  |
@@ -95,17 +95,17 @@ Authorization: Bearer <your access token>
 
 이 리소스에는 지난 30일 동안 게임의 장치 사용자 데이터 또는 모든 Xbox Live 고객의 평균 사용자 데이터가 포함되어 있습니다.
 
-| 값           | 유형    | 설명        |
+| 값           | 형식    | 설명        |
 |-----------------|---------|------|
 |  applicationId               |    문자열     |   분석 데이터를 검색한 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.  |
 |  userCount               |    문자열     |   **ProductData** 개체에서 이 필드는 지난 30일 동안 게임을 플레이한 고객 수를 지정합니다. **XboxwideData** 개체에서 이 필드는 항상 1이며, 이는 모든 Xbox Live 고객의 데이터에 대해 100% 시작 비율을 나타냅니다.   |     
-|  dvrUsageCounts               |   배열      |  게임 플레이를 기록하고 보기 위해 게임 DVR을 사용한 고객 수를 표시하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**dvrName**: 사용되는 게임 DVR 기능을 지정합니다. 가능한 값은 **gameClipUploads**, **gameClipViews**, **screenshotUploads** 및 **screenshotViews**입니다.</li><li>**userCount**: **ProductData** 개체에서 이 필드는 지정된 게임 DVR 기능을 사용한 게임 고객 수를 지정합니다. **XboxwideData** 개체에서 이 필드는 지정된 게임 DVR 기능을 사용한 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>   |     
-|  followerCountPercentiles               |   배열      |  고객의 팔로워 수에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**percentage**: 현재 이 값은 항상 50이며, 이는 팔로워 데이터가 중간 값으로 제공됨을 나타냅니다.</li><li>**value**: **ProductData** 개체에서 이 필드는 게임 고객의 팔로워 수를 중간 값으로 지정합니다. **XboxwideData** 개체에서 이 필드는 모든 Xbox Live 고객의 팔로워 수를 중간 값으로 지정합니다.</li></ul>  |   
-|  friendCountPercentiles               |   배열      |  고객의 친구 수에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**percentage**: 현재 이 값은 항상 50이며, 이는 친구 데이터가 중간 값으로 제공됨을 나타냅니다.</li><li>**value**: **ProductData** 개체에서 이 필드는 게임 고객의 친구 수를 중간 값으로 지정합니다. **XboxwideData** 개체에서 이 필드는 모든 Xbox Live 고객의 친구 수를 중간 값으로 지정합니다.</li></ul>  |     
-|  gamerScoreRangeDistribution               |   배열      |  고객의 게이머 점수 분포에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**scoreRange**: 다음 필드에서 사용량 데이터를 제공하는 게이머 점수 범위입니다. 예를 들어 **10K-25K**입니다.</li><li>**userCount**: **ProductData** 개체에서 이 필드는 고객이 플레이한 모든 게임에 대해 게이머 점수가 지정된 범위에 포함되는 게임 고객 수를 지정합니다. **XboxwideData** 개체에서 이 필드는 고객이 플레이한 모든 게임에 대해 게이머 점수가 지정된 범위에 포함되는 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>  |
-|  titleGamerScoreRangeDistribution               |   배열      |  게임의 게이머 점수 분포에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**scoreRange**: 다음 필드에서 사용량 데이터를 제공하는 게이머 점수 범위입니다. 예를 들어 **100-200**입니다.</li><li>**userCount**: **ProductData** 개체에서 이 필드는 사용자 게임에 대해 게이머 점수가 지정된 범위에 포함되는 게임 고객 수를 지정합니다. **XboxwideData** 개체에서 이 필드는 사용자 게임에 대해 게이머 점수가 지정된 범위에 포함되는 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>   |
-|  socialUsageCounts               |   배열      |  고객의 소셜 사용에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**scName**: 소셜 사용 유형입니다. 예를 들어 **gameInvites** 및 **textMessages**입니다.</li><li>**userCount**: **ProductData** 개체에서 이 필드는 지정된 소셜 사용 유형에 참여한 게임 고객 수를 지정합니다. **XboxwideData** 개체에서 이 필드는 지정된 소셜 사용 유형에 참여한 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>   |
-|  streamingUsageCounts               |   배열      |  고객의 스트리밍 사용에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**stName**: 스트리밍 플랫폼 유형입니다. 예를 들어 **youtubeUsage**, **twitchUsage** 및 **mixerUsage**입니다.</li><li>**userCount**: **ProductData** 개체에서 이 필드는 지정된 스트리밍 플랫폼을 사용한 게임 고객 수를 지정합니다. **XboxwideData** 개체에서 이 필드는 지정된 스트리밍 플랫폼을 사용한 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>  |
+|  dvrUsageCounts               |   배열      |  게임 플레이를 기록하고 보기 위해 게임 DVR을 사용한 고객 수를 표시하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**dvrName**: 게임 DVR 지정 기능을 사용 합니다. 가능한 값은 **gameClipUploads**, **gameClipViews**, **screenshotUploads** 및 **screenshotViews**입니다.</li><li>**userCount**: 에 **ProductData** 개체를이 필드 지정된 게임 DVR 기능을 사용 하는 게임 고객의 수를 지정 합니다. **XboxwideData** 개체에서 이 필드는 지정된 게임 DVR 기능을 사용한 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>   |     
+|  followerCountPercentiles               |   배열      |  고객의 팔로워 수에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**percentage**: 현재이 값은 항상 50, 팔로 워 데이터 중간 값으로 제공 되도록 나타내는입니다.</li><li>**value**: 에 **ProductData** 개체를이 필드는 게임의 고객에 대 한 팔로 워의 중앙값 숫자를 지정 합니다. **XboxwideData** 개체에서 이 필드는 모든 Xbox Live 고객의 팔로워 수를 중간 값으로 지정합니다.</li></ul>  |   
+|  friendCountPercentiles               |   배열      |  고객의 친구 수에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**percentage**: 현재이 값은 항상 50, 친구 데이터 중간 값으로 제공 되도록 나타내는입니다.</li><li>**value**: 에 **ProductData** 개체를이 필드는 게임 고객을 위한 친구의 중앙값 숫자를 지정 합니다. **XboxwideData** 개체에서 이 필드는 모든 Xbox Live 고객의 친구 수를 중간 값으로 지정합니다.</li></ul>  |     
+|  gamerScoreRangeDistribution               |   배열      |  고객의 게이머 점수 분포에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**scoreRange**: 다음 필드는 사용 현황 데이터를 제공 하는 게임 범위입니다. 예를 들어 **10K-25K**입니다.</li><li>**userCount**: 에 **ProductData** 개체를이 필드는 게임을 재생 한 이러한 모든 게임에 대 한 지정된 된 범위에 있는 게임 고객의 수를 지정 합니다. **XboxwideData** 개체에서 이 필드는 고객이 플레이한 모든 게임에 대해 게이머 점수가 지정된 범위에 포함되는 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>  |
+|  titleGamerScoreRangeDistribution               |   배열      |  게임의 게이머 점수 분포에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**scoreRange**: 다음 필드는 사용 현황 데이터를 제공 하는 게임 범위입니다. 예를 들어 **100-200**입니다.</li><li>**userCount**: 에 **ProductData** 개체를이 필드는 게임 게임에 대 한 지정된 된 범위에 있는 게임 고객의 수를 지정 합니다. **XboxwideData** 개체에서 이 필드는 사용자 게임에 대해 게이머 점수가 지정된 범위에 포함되는 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>   |
+|  socialUsageCounts               |   배열      |  고객의 소셜 사용에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**scName**: 소셜 사용량의 형식입니다. 예를 들어 **gameInvites** 및 **textMessages**입니다.</li><li>**userCount**: 에 **ProductData** 개체를이 필드는 지정 된 소셜 사용 형식에 참가 한 게임 고객 수가 지정 합니다. **XboxwideData** 개체에서 이 필드는 지정된 소셜 사용 유형에 참여한 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>   |
+|  streamingUsageCounts               |   배열      |  고객의 스트리밍 사용에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**stName**: 형식 스트리밍 플랫폼입니다. 예를 들어 **youtubeUsage**, **twitchUsage** 및 **mixerUsage**입니다.</li><li>**userCount**: 에 **ProductData** 개체를이 필드 지정된 된 스트리밍 플랫폼을 사용한 게임 고객의 수를 지정 합니다. **XboxwideData** 개체에서 이 필드는 지정된 스트리밍 플랫폼을 사용한 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>  |
 
 
 ### <a name="response-example"></a>응답 예제
@@ -409,10 +409,10 @@ Authorization: Bearer <your access token>
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
-* [Xbox Live 도전 과제 데이터 가져오기](get-xbox-live-achievements-data.md)
+* [Microsoft Store 서비스를 사용 하 여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
+* [Xbox Live 성과 데이터 가져오기](get-xbox-live-achievements-data.md)
 * [Xbox Live 상태 데이터 가져오기](get-xbox-live-health-data.md)
 * [Xbox Live 게임 허브 데이터 가져오기](get-xbox-live-game-hub-data.md)
-* [Xbox Live 클럽 데이터 가져오기](get-xbox-live-club-data.md)
-* [Xbox Live 멀티플레이 데이터 가져오기](get-xbox-live-multiplayer-data.md)
-* [Xbox Live 동시 사용 데이터 가져오기](get-xbox-live-concurrent-usage-data.md)
+* [Xbox Live club 데이터 가져오기](get-xbox-live-club-data.md)
+* [Xbox Live 멀티 플레이 데이터 가져오기](get-xbox-live-multiplayer-data.md)
+* [Xbox Live 동시 사용 현황 데이터 가져오기](get-xbox-live-concurrent-usage-data.md)

@@ -8,13 +8,13 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e3089444820f990644526eaafb7f2ef9007fa70a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929904"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631888"
 ---
-# <a name="span-iddirect3dconceptsrasterizerbehaviorwithnon-mappedtilesspanrasterizer-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.rasterizer_behavior_with_non-mapped_tiles"></span>비매핑된 타일을 사용하는 래스터라이저 동작
+# <a name="span-iddirect3dconceptsrasterizerbehaviorwithnon-mappedtilesspanrasterizer-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.rasterizer_behavior_with_non-mapped_tiles"></span>래스터 라이저 아닌 매핑된 타일 동작
 
 
 이 섹션에서는 비매핑된 타일을 사용하는 래스터라이저 동작을 설명합니다.
@@ -39,10 +39,10 @@ RTV(렌더링 대상 뷰) 읽기 및 쓰기 동작은 하드웨어 지원 수준
 
 RTV의 읽기가 누락 타일에서 0을 반환하고 쓰기가 누락됩니다. 쓰기 처리에 대한 이러한 이상적 정의는 [계층 2](tier-2.md)에 필요하지 않습니다. 매핑되지 않은 타일에 대한 쓰기는 후속 읽기에서 선택할 수 있는 캐시에 남게 됩니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[스트리밍 리소스에 대한 파이프라인 액세스](pipeline-access-to-streaming-resources.md)
+[리소스를 스트리밍에 대 한 파이프라인 액세스](pipeline-access-to-streaming-resources.md)
 
  
 

@@ -1,6 +1,6 @@
 ---
 title: 키보드, 게임 패드, 원격 제어 및 접근성 도구에 대한 포커스 탐색
-Description: Learn how to use focus navigation to provide comprehensive and consistent interaction experiences in your UWP apps and custom controls for keyboard power users, those with disabilities and other accessibility requirements, as well as the 10-foot experience of television screens and the Xbox One.
+Description: 포커스 탐색을 사용 하 여 키보드 고급 사용자, 장애가 있는 사용자 및 다른 접근성 요구 사항와의 원격 제어 환경 UWP 앱 및 사용자 지정 컨트롤의 포괄적이 고 일관적인 상호 작용 경험을 제공 하는 방법 알아보기 텔레비전 화면 및 Xbox One입니다.
 label: ''
 template: detail.hbs
 keywords: 키보드, 게임 컨트롤러, 원격 제어, 탐색, 방향 내부 탐색, 방향 영역, 탐색 전략, 입력, 사용자 조작, 접근성, 유용성
@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a699ef00b3f377656940e66e6d35bfcba1cc5762
-ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "9059704"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625828"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>키보드, 게임 패드, 원격 제어 및 접근성 도구에 대한 포커스 탐색
 
@@ -59,7 +59,7 @@ ms.locfileid: "9059704"
 2D 내부 탐색 컨트롤 지역 또는 컨트롤 그룹을 "방향 영역"이라고 부릅니다. 이 개체로 포커스가 옮겨 가면, 키보드의 화살표 키(왼쪽, 오른쪽, 위쪽 및 아래쪽)을 사용하여 방향 영역 내 하위 요소 간을 탐색할 수 있습니다.
 
 ![방향 영역](images/keyboard/directional-area-small.png)
-*2D 내부 탐색 지역 또는 컨트롤 그룹의 방향 영역*
+*2D 내부 탐색 영역 또는 컨트롤 그룹의 방향 영역*
 
 [XYFocusKeyboardNavigation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_XYFocusKeyboardNavigation) 속성([가능한 값: 자동](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode), [사용](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode) 또는 [사용 안 함](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode))을 사용하면 키보드 화살표 키를 사용하여 2D 내부 탐색을 관리할 수 있습니다.
 
@@ -70,12 +70,12 @@ ms.locfileid: "9059704"
 
 자동으로 설정되어 있으면, 방향 탐색 동작이 요소의 상위 구조 또는 상속 계층을 기반으로 결정됩니다. 모든 상위 항목이 기본 모드(**자동**으로 설정됨)에 있으면 키보드를 사용한 방향 탐색이 지원되지 *않습니다*.
 
-### [<a name="disabled"></a>사용 안 함](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
+### <a name="disabledhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode"></a>[사용 안 함](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
 
 **XYFocusKeyboardNavigation**을 **사용 안 함**으로 설정하면 컨트롤 및 하위 요소에 대해 방향 탐색을 차단할 수 있습니다.
 
-![XYFocusKeyboardNavigation 사용 하지 않는 동작](images/keyboard/xyfocuskeyboardnav-disabled.gif)
-*XYFocusKeyboardNavigation 사용 하지 않는 동작*
+![XYFocusKeyboardNavigation 동작을 사용 하지 않도록 설정](images/keyboard/xyfocuskeyboardnav-disabled.gif)
+*XYFocusKeyboardNavigation 동작을 사용 하지 않도록 설정*
 
 이 예에서는 기본 [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel)(ContainerPrimary)의 **XYFocusKeyboardNavigation**이 **사용**으로 설정되어 있습니다. 모든 하위 요소가 이 설정을 상속하며 화살표 키로 이를 탐색할 수 있습니다. 그러나 B3와 B4 요소는 보조 [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerSecondary)에 **XYFocusKeyboardNavigation** 설정이 **사용 안 함**으로 설정되어 있으므로, 기본 컨테이너를 재정의하여 화살표 키가 하위 요소 자체를 및 하위 요소 간을 탐색할 수 없습니다.
 
@@ -125,13 +125,13 @@ ms.locfileid: "9059704"
 </Grid>
 ```
 
-### [<a name="enabled"></a>활성화](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
+### <a name="enabledhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode"></a>[사용 하도록 설정](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
 
 **XYFocusKeyboardNavigation**을 **사용**으로 설정하면 컨트롤 및 해당 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 하위 개체 각각에 대한 2D 방향 탐색을 사용할 수 있습니다.
 
 설정 시 화살표 키를 사용하는 탐색은 방향 영역 내 요소로 제한됩니다. 모든 컨트롤이 탭 순서 계층 구조를 통해 액세스 가능 상태로 유지되므로 탭 탐색은 영향을 받지 않습니다.
 
-![XYFocusKeyboardNavigation 활성화 동작](images/keyboard/xyfocuskeyboardnav-enabled.gif)
+![동작을 사용 하도록 설정 XYFocusKeyboardNavigation](images/keyboard/xyfocuskeyboardnav-enabled.gif)
 *XYFocusKeyboardNavigation 동작을 사용 하도록 설정*
 
 이 예에서는 기본 [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel)(ContainerPrimary)의 **XYFocusKeyboardNavigation**이 **사용**으로 설정되어 있습니다. 모든 하위 요소가 이 설정을 상속하며 화살표 키로 이를 탐색할 수 있습니다. B3 및 B4 요소에서 보조 [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerSecondary)의 **XYFocusKeyboardNavigation**이 설정되어 있지 않으므로 기본 컨테이너 설정을 상속합니다. B5 요소는 선언된 방향 영역 내에 있지 않으므로 화살표 키 탐색은 지원하지 않지만 표준 탭 탐색 동작은 지원합니다.
@@ -194,8 +194,8 @@ ms.locfileid: "9059704"
 
 다음은 2D 방향 탐색을 명시적으로 지원하지 않는 요소 내에 있는 두 개의 중첩 방향 영역의 예입니다. 이 경우, 두 개의 중첩된 영역 간에 방향 탐색이 지원되지 않습니다.
 
-![XYFocusKeyboardNavigation을 사용 하는 중첩 동작](images/keyboard/xyfocuskeyboardnav-enabled-nested1.gif)
-*XYFocusKeyboardNavigation을 사용 하는 중첩 동작*
+![XYFocusKeyboardNavigation 사용 하도록 설정 하 고 동작 중첩](images/keyboard/xyfocuskeyboardnav-enabled-nested1.gif)
+*XYFocusKeyboardNavigation 사용 하도록 설정 하 고 동작 중첩*
 
 다음은 좀 더 복잡한 3개의 중첩 방향 영역의 예입니다.
 
@@ -205,7 +205,7 @@ ms.locfileid: "9059704"
 
 ![XYFocusKeyboardNavigation을 사용하는 보다 복잡한 중첩 동작](images/keyboard/xyfocuskeyboardnav-enabled-nested2.gif)
 
-*XYFocusKeyboardNavigation을 사용하는 보다 복잡한 중첩 동작*
+*XYFocusKeyboardNavigation 사용 하도록 설정 하 고 복잡 한 중첩 동작*
 
 ## <a name="tab-navigation"></a>탭 탐색
 
@@ -234,16 +234,16 @@ ms.locfileid: "9059704"
 
    !["로컬" 탭 탐색 동작](images/keyboard/tabnav-local.gif)
 
-   *"로컬" 탭 탐색 동작*
+   *"Local" 탭 탐색 동작*
 
-- **한 번**  
+- **Once**  
   컨테이너 및 모든 하위 요소가 포커스를 한 번씩 받습니다. 이 예의 경우 탭 순서가 B1, B2, B7, B1입니다(화살표 키를 사용한 내부 탐색도 설명됨).
 
    !["한 번" 탭 탐색 동작](images/keyboard/tabnav-once.gif)
 
-   *"한 번" 탭 탐색 동작*
+   *"한 번" 탐색 동작 탭*
 
-- **주기**   
+- **Cycle**   
   컨테이너 내의 첫 포커스 가능 요소로 되돌아오는 포커스 주기입니다. 이 예에서는 탭 순서가 B1, B2, B3, B4, B5, B6, B2...입니다.
 
    !["주기" 탭 탐색 동작](images/keyboard/tabnav-cycle.gif)
@@ -318,7 +318,7 @@ ms.locfileid: "9059704"
 </Grid>
 ```
 
-### [<a name="tabindex"></a>TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex)
+### <a name="tabindexhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolscontrolwindowsuixamlcontrolscontroltabindex"></a>[TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex)
 
 [TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex)를 사용하면 사용자가 탭 키를 사용하여 컨트롤을 탐색할 때 포커스를 받는 요소의 순서를 지정할 수 있습니다. 탭 인덱스가 낮은 컨트롤이 인덱스가 높은 컨트롤보다 먼저 포커스를 받습니다.
 
@@ -338,7 +338,7 @@ ms.locfileid: "9059704"
 
 ![TabIndex 동작을 사용한 "로컬" 탭 탐색](images/keyboard/tabnav-tabindex.gif)
 
-*TabIndex 동작을 사용한 "로컬" 탭 탐색*
+*"Local" TabIndex 동작을 사용 하 여 탐색 탭*
 
 위 예제에서 두 개의 범위는 다음과 같습니다. 
 - B1, 방향 영역(B2 - B6) 및 B7
@@ -425,7 +425,7 @@ ms.locfileid: "9059704"
 
 이 섹션에서는 포커스 기반의 비 포인터 입력 유형 모두를 지원하는 탐색 전략 속성 세트를 통해 기본 탐색 전략을 지정하고 응용 프로그램 내 포커스 탐색을 세부 조정하는 방법을 설명합니다.
 
-Xbox/TV 용 앱 및 환경 구축에 대 한 일반적인 내용은 [키보드 상호 작용](keyboard-interactions.md), [Xbox 및 TV 용 디자인](../devices/designing-for-tv.md)및 [게임 패드 및 리모컨 상호 작용을](gamepad-and-remote-interactions.md)참조 하세요.
+Xbox/TV 용 앱 및 환경을 빌드에 대 한 일반적인 내용은 참조 하세요. [키보드 상호 작용](keyboard-interactions.md)하십시오 [Xbox 및 TV에 대 한 디자인](../devices/designing-for-tv.md), 및 [Gamepad 및 원격 제어 상호 작용](gamepad-and-remote-interactions.md).
 
 ### <a name="navigation-strategies"></a>탐색 전략
 
@@ -483,7 +483,7 @@ RectilinearDistance 전략은 2D 일직선 거리를 기준으로 가장 가까�
 
 ## <a name="related-articles"></a>관련 문서
 - [프로그래밍 방식 포커스 탐색](focus-navigation-programmatic.md)
-- [키보드 조작](keyboard-interactions.md)
+- [키보드 상호 작용](keyboard-interactions.md)
 - [키보드 접근성](../accessibility/keyboard-accessibility.md) 
 
 

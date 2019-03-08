@@ -1,6 +1,6 @@
 ---
 description: 표시는 앱의 대화형 요소에 깊이와 포커스를 더해주는 조명 효과입니다.
-title: 강조
+title: 강조 표시
 template: detail.hbs
 ms.date: 08/09/2017
 ms.topic: article
@@ -11,22 +11,22 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: aeba4dbd734ea4b521033726968e90c232c154cb
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116405"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628668"
 ---
-# <a name="reveal-highlight"></a>강조
+# <a name="reveal-highlight"></a>강조 표시
 
 ![영웅 이미지](images/header-reveal-highlight.svg)
 
-강조 표시는 사용자가 포인터 명령 모음과 같은 대화형 요소를 강조 표시 하는 조명 효과 표시 합니다. 
+강조 표시 하는 사용자 가까이 대 한 포인터를 움직이면 명령 모음 같은 대화형 요소를 강조 표시 하는 조명 결과 표시 합니다. 
 
-> **중요 API**: [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
+> **중요 한 Api**: [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush)를 [RevealBorderBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush)하십시오 [RevealBrushHelper 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>작동 방식
-표시는 포인터가이 그림에 나와 있는 것 처럼 근처에 있을 때 요소의 컨테이너를 표시 하 여 대화형 요소를 강조 나타난:
+포인터가 있으면이 그림과 같이 인접 요소의 컨테이너를 노출 하 여 호출 주의 대화형 요소를 강조 표시를 표시 합니다.
 
 ![Visual 표시](images/Nav_Reveal_Animation.gif)
 
@@ -41,8 +41,8 @@ ms.locfileid: "9116405"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Reveal">앱을 열고 작동 중인 표시를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -54,7 +54,7 @@ ms.locfileid: "9116405"
 
 ## <a name="how-to-use-it"></a>사용 방법
 
-일부 컨트롤에 대해 자동으로 표시됩니다. 다른 컨트롤에 대 한이 문서의 [다른 컨트롤에서 표시를 사용 하도록 설정](#enabling-reveal-on-other-controls) 하 고 [사용자 지정 컨트롤에서 표시를 사용 하도록 설정](#enabling-reveal-on-custom-controls) 섹션에 설명 된 대로 컨트롤에 특별 한 스타일을 지정 하 여 표시를 사용할 수 있습니다.
+일부 컨트롤에 대해 자동으로 표시됩니다. 다른 컨트롤에 대해 설정할 수 있습니다. 표시 컨트롤에 특별 한 스타일을 할당 하 여에 설명 된 대로 합니다 [다른 컨트롤에 대해 표시를 사용 하도록 설정](#enabling-reveal-on-other-controls) 하 고 [사용자 지정 컨트롤에서 표시를 사용 하도록 설정](#enabling-reveal-on-custom-controls) 이 섹션에서는 문서입니다.
 
 ## <a name="controls-that-automatically-use-reveal"></a>자동으로 표시를 사용하는 컨트롤
 
@@ -65,7 +65,7 @@ ms.locfileid: "9116405"
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-이 그림은 여러 가지 컨트롤에서 강조 표시 보여줍니다.
+이러한 그림은 여러 다른 컨트롤에서 강조 표시을 표시합니다.
 
 ![표시 예제](images/RevealExamples_Collage.png)
 
@@ -76,9 +76,9 @@ ms.locfileid: "9116405"
 
 이러한 컨트롤은 일반적으로 응용 프로그램 주요 포커스 지점의 도우미 컨트롤인 작은 컨트롤이기 때문에 기본적으로 표시가 없지만, 똑같은 앱은 하나도 없으며 이러한 컨트롤이 앱에서 가장 많이 사용되는 경우를 대비하여 일부 스타일이 제공되었습니다.
 
-| 컨트롤 이름   | 리소스 이름 |
+| 컨트롤 이름   | Resource Name |
 |----------|:-------------:|
-| 단추 |  ButtonRevealStyle |
+| Button |  ButtonRevealStyle |
 | ToggleButton | ToggleButtonRevealStyle |
 | RepeatButton | RepeatButtonRevealStyle |
 | AppBarButton | AppBarButtonRevealStyle |
@@ -113,7 +113,7 @@ ms.locfileid: "9116405"
 
 ## <a name="enabling-reveal-on-custom-controls"></a>사용자 지정 컨트롤에서 표시를 사용하도록 설정
 
-사용자 지정 컨트롤에 표시를 추가할 수 있습니다. 를 수행 하기 전에 표시 효과 작동 방식에 대해 좀 더 알아야 하는 것이 좋습니다. 표시는 **표시 테두리** 및 **가리켜서 표시**의 두 가지 효과로 이루어져 있습니다.
+사용자 지정 컨트롤에 표시를 추가할 수 있습니다. 를 수행 하기 전에 표시 효과 작동 원리에 대해 좀 더 알아야 유용 합니다. 두 개의 별도 효과 대 한 표시 구성 됩니다. **테두리 표시** 하 고 **가리킬 때 표시할**합니다.
 
 - **테두리**는 포인터가 근처에 있을 때 대화형 요소의 테두리를 표시합니다. 이 효과는 주변 개체가 현재 포커스가 설정된 작업과 비슷한 작업을 수행할 수 있음을 보여 줍니다.
 - **가리키기**는 가리킨 항목 또는 포커스가 설정된 항목 주변에 은은한 후광 형상을 적용하며 이를 클릭하면 애니메이션이 재생됩니다. 
@@ -130,8 +130,8 @@ ms.locfileid: "9116405"
 
 
 이러한 효과는 두 가지 브러시로 정의됩니다. 
-* **RevealBorderBrush** 에 의해 정의 테두리 표시
-* 가리켜서 표시 **RevealBackgroundBrush** 에 의해 정의 됩니다.
+* 테두리 표시 정의한 **RevealBorderBrush**
+* 가리킬 때 표시 정의한 **RevealBackgroundBrush**
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
@@ -255,14 +255,14 @@ ms.locfileid: "9116405"
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>사용자 지정 컨트롤에 표시 효과 미세 조정 
 
-사용자 지정 또는 다시 템플릿 컨트롤 또는 사용자 지정 명령 화면에 표시를 사용 하면 최적화 이러한 팁 수 있습니다.
+다시 템플릿 또는 사용자 지정 컨트롤 또는 사용자 지정 명령 화면에서 표시를 사용 하도록 설정 하면 이러한 팁 효과 최적화할 수 있습니다.
  
-* 근처에 있는 높이나 너비(특히 목록에서)가 맞지 않는 크기의 항목에서: 테두리 접근 동작을 제거하고 테두리가 가리켜서 표시 시에만 표시되도록 합니다.
-* 빈번하게 사용할 수 없는 상태로 전환되는 명령 항목의 경우: 요소 백플레이트의 테두리 접근 브러시뿐만 아니라 상태를 강조하는 테두리 또한 배치합니다.
-* 맞닿을 정도로 근접한 명령 요소의 경우: 두 개의 요소 사이에 여백을 1px 추가합니다. 
+* 크기를 사용 하 여 인접 한 항목에는 정렬 되지 않는 높이 또는 너비 (특히 나열): 테두리 방법은 동작을 제거 하 고 가리키기만 표시 하 여 테두리를 유지 합니다.
+* 명령 항목에 대 한는 자주 이동 인 및 체크 아웃 사용 안 함 상태: 요소의 backplates 뿐만 아니라 해당 상태를 강조 하기 위해 해당 테두리 테두리 방법은 브러시를 배치 합니다.
+* 따라서 닫기는 인접 명령 요소에 대 한 터치 있습니다. 두 요소 사이의 1px 여백을 추가 합니다. 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
-### <a name="do"></a>이 작업을 수행 합니다.
+### <a name="do"></a>수행 합니다.
 - 사용자가 여러 조치를 취할 수 있는 요소에 표시 사용(CommandBars, 탐색 메뉴)
 - 기본적으로 시각적 구분 기호가 없는 대화형 요소를 그룹화하는 데 표시를 사용하지 않음(목록, 리본)
 - 대화형 요소의 밀도가 높은 영역에 표시 사용(명령 시나리오)
@@ -287,8 +287,8 @@ ms.locfileid: "9116405"
 ## <a name="related-articles"></a>관련 문서
 
 - [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
-- [아크릴](acrylic.md)
+- [못](acrylic.md)
 - [컴퍼지션 효과](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
-- [UWP용 Fluent 디자인](../fluent-design-system/index.md)
+- [UWP 용 Fluent 디자인](../fluent-design-system/index.md)
 - [시스템의 과학: Fluent 디자인 및 깊이](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
-- [시스템의 과학: Fluent 디자인 및 빛](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)
+- [시스템의 과학: Fluent 디자인 및 Light](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

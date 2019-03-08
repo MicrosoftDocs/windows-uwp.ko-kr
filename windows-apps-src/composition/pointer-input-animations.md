@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: 3512d47c8b3e689b0baadec26c1d8f0f510e03ef
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931404"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639928"
 ---
 # <a name="pointer-based-animations"></a>포인터 기반 애니메이션
 
@@ -43,7 +43,7 @@ Fluent 디자인 언어에서 터치가 UI와 상호 작용할 수 있는 유일
 
 PointerPositionPropertySet를 사용하여 이러한 경험을 만들 수 있습니다. 이 PropertySet은 UIElement가 포인터의 위치를 유지하는 한편, 적중 횟수 테스트를 통과하도록 만들어집니다. 위치 값은 UIElement의 좌표 공간을 기준으로 합니다(<0,0>의 위치는 UIElement의 왼쪽 위 모서리입니다). 그런 다음 애니메이션에서 이 속성 집합을 활용하여 다른 속성의 동작을 구동할 수 있습니다.
 
-각기 다른 포인터 입력 형식별로 수많은 입력 상태가 있으며 가리키기, 누름, 누르고 이동 등, 위치가 변화하는 공간에서 입력이 이루어질 수 있습니다. PointerPositionPropertySet은 마우스와 펜에 대해 가리키기, 누름, 누르고 이동 상태에서만 포인터의 위치를 유지합니다.
+다른 포인터 입력 형식 각각에 대 한 입력 상태 입력 위치를 변경 하는 위치에 있을 수 있습니다 사항이 있습니다. 마우스 포인터를 누르면, 누른 및 이동 PointerPositionPropertySet은 마우스와 펜에 대해 가리키기, 누름, 누르고 이동 상태에서만 포인터의 위치를 유지합니다.
 
 시작하기 위한 일반 절차:
 

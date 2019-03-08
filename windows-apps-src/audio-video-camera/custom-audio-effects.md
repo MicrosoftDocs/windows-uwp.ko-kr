@@ -1,5 +1,5 @@
 ---
-Description: This article describes how to create a Windows Runtime component that implements the IBasicAudioEffect interface to allow you to create custom effects for audio streams.
+Description: 이 문서에서는 오디오 스트림에 대한 사용자 지정 효과를 만들 수 있도록 하는 IBasicAudioEffect 인터페이스를 구현하는 Windows 런타임 구성 요소를 만드는 방법을 설명합니다.
 title: 사용자 지정 오디오 효과
 ms.date: 02/08/2017
 ms.topic: article
@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
 ms.openlocfilehash: e04b3a764c170fa3e3e0ce1372e72b73795b5b12
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049330"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617958"
 ---
 # <a name="custom-audio-effects"></a>사용자 지정 오디오 효과
 
@@ -22,7 +22,7 @@ ms.locfileid: "9049330"
 
 사용자 지정 오디오 효과는 [**IBasicAudioEffect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect) 인터페이스를 구현하는 클래스에 정의됩니다. 이 클래스를 앱의 프로젝트에 직접 포함할 수는 없습니다. 대신 Windows 런타임 구성 요소를 사용하여 오디오 효과 클래스를 호스트해야 합니다.
 
-**오디오 효과에 대한 Windows 런타임 구성 요소 추가**
+**오디오 효과 대 한 Windows 런타임 구성 요소를 추가 합니다.**
 
 1.  Microsoft Visual Studio에서 솔루션을 열고 **파일** 메뉴로 이동한 후 **추가-&gt;새 프로젝트**를 선택합니다.
 2.  **Windows 런타임 구성 요소(유니버설 Windows)** 프로젝트 유형을 선택합니다.
@@ -59,7 +59,7 @@ ms.locfileid: "9049330"
 
 ### <a name="setproperties-method"></a>SetProperties 메서드
 
-[**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) 메서드를 사용하면 효과를 사용하는 앱에 따라 효과 매개 변수가 조정될 수 있습니다. 속성은 속성 이름 및 값의 [**IPropertySet**](https://msdn.microsoft.com/library/windows/apps/br226054) 맵으로 전달됩니다.
+[  **SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) 메서드를 사용하면 효과를 사용하는 앱에 따라 효과 매개 변수가 조정될 수 있습니다. 속성은 속성 이름 및 값의 [**IPropertySet**](https://msdn.microsoft.com/library/windows/apps/br226054) 맵으로 전달됩니다.
 
 [!code-cs[SetProperties](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetSetProperties)]
 
@@ -69,7 +69,7 @@ ms.locfileid: "9049330"
 
 ### <a name="processframe-method"></a>ProcessFrame 메서드
 
-[**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764784) 메서드는 효과가 스트림의 오디오 데이터를 수정하는 위치입니다. 이 메서드는 프레임당 한번씩 호출되고 [**ProcessAudioFrameContext**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext) 개체가 전달됩니다. 이 개체에는 처리될 수신 프레임이 포함된 입력 [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.AudioFrame) 개체와 나머지 오디오 파이프라인에 전달되는 오디오 데이터를 쓰는 출력 **AudioFrame** 개체가 포함됩니다. 오디오 프레임은 오디오 데이터의 짧은 조각을 나타내는 오디오 샘플 버퍼입니다.
+[  **ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764784) 메서드는 효과가 스트림의 오디오 데이터를 수정하는 위치입니다. 이 메서드는 프레임당 한번씩 호출되고 [**ProcessAudioFrameContext**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext) 개체가 전달됩니다. 이 개체에는 처리될 수신 프레임이 포함된 입력 [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.AudioFrame) 개체와 나머지 오디오 파이프라인에 전달되는 오디오 데이터를 쓰는 출력 **AudioFrame** 개체가 포함됩니다. 오디오 프레임은 오디오 데이터의 짧은 조각을 나타내는 오디오 샘플 버퍼입니다.
 
 **AudioFrame**의 데이터 버퍼에 액세스하려면 COM interop이 필요하므로 **System.Runtime.InteropServices** 네임스페이스를 효과 클래스 파일에 포함한 다음 효과에서 오디오 버퍼 액세스에 필요한 인터페이스를 가져오도록 네임스페이스 내부에 다음 코드를 추가합니다.
 
@@ -93,13 +93,13 @@ ms.locfileid: "9049330"
 
 ### <a name="close-method"></a>Close 메서드
 
-시스템은 효과를 종료해야 하는 경우 클래스에 대해 [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764782)[**Close**](https://msdn.microsoft.com/library/windows/apps/dn764782) 메서드를 호출합니다. 이 메서드를 사용하여 생성된 모든 리소스를 삭제해야 합니다. 이 메서드에 대한 인수는 효과가 정상적으로 닫혔는지, 오류가 발생했는지 또는 효과가 필수 인코딩 형식을 지원하지 않는지를 알 수 있도록 하는 [**MediaEffectClosedReason**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.MediaEffectClosedReason)입니다.
+시스템은 호출 된 [ **닫기** ](https://msdn.microsoft.com/library/windows/apps/dn764782) [ **닫기** ](https://msdn.microsoft.com/library/windows/apps/dn764782) 효과 종료 해야 하는 경우 클래스에서 메서드. 이 메서드를 사용하여 생성된 모든 리소스를 삭제해야 합니다. 이 메서드에 대한 인수는 효과가 정상적으로 닫혔는지, 오류가 발생했는지 또는 효과가 필수 인코딩 형식을 지원하지 않는지를 알 수 있도록 하는 [**MediaEffectClosedReason**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.MediaEffectClosedReason)입니다.
 
 [!code-cs[Close](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetClose)]
 
 ### <a name="discardqueuedframes-method"></a>DiscardQueuedFrames 메서드
 
-[**DiscardQueuedFrames**](https://msdn.microsoft.com/library/windows/apps/dn764790) 메서드는 효과를 다시 설정해야 할 때 호출됩니다. 이에 대한 일반적인 시나리오는 효과가 현재 프레임 처리에 사용하기 위해 이전에 처리한 프레임을 저장하는 경우입니다. 이 메서드가 호출되면 저장했던 이전 프레임 집합을 삭제해야 합니다. 이 메서드는 누적된 오디오 프레임이 아니라 이전 프레임과 관련된 상태를 다시 설정하는 데 사용할 수 있습니다.
+[  **DiscardQueuedFrames**](https://msdn.microsoft.com/library/windows/apps/dn764790) 메서드는 효과를 다시 설정해야 할 때 호출됩니다. 이에 대한 일반적인 시나리오는 효과가 현재 프레임 처리에 사용하기 위해 이전에 처리한 프레임을 저장하는 경우입니다. 이 메서드가 호출되면 저장했던 이전 프레임 집합을 삭제해야 합니다. 이 메서드는 누적된 오디오 프레임이 아니라 이전 프레임과 관련된 상태를 다시 설정하는 데 사용할 수 있습니다.
 
 [!code-cs[DiscardQueuedFrames](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetDiscardQueuedFrames)]
 
@@ -111,7 +111,7 @@ TimeIndependent[**TimeIndependent**](https://msdn.microsoft.com/library/windows/
 
 ### <a name="useinputframeforoutput-property"></a>UseInputFrameForOutput 속성
 
-[**UseInputFrameForOutput**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect.UseInputFrameForOutput) 속성을 **true**로 설정하여 효과가 출력을 [**OutputFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext.OutputFrame)에 기록하는 대신 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764784)로 전달된 [**ProcessAudioFrameContext**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext)의 [**InputFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext.InputFrame) 오디오 버퍼에 기록한다고 시스템에 알립니다. 
+[  **UseInputFrameForOutput**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect.UseInputFrameForOutput) 속성을 **true**로 설정하여 효과가 출력을 [**OutputFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext.OutputFrame)에 기록하는 대신 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764784)로 전달된 [**ProcessAudioFrameContext**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext)의 [**InputFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext.InputFrame) 오디오 버퍼에 기록한다고 시스템에 알립니다. 
 
 [!code-cs[UseInputFrameForOutput](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetUseInputFrameForOutput)]
 

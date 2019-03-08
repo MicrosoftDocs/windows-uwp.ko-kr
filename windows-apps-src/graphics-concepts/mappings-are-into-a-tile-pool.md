@@ -1,6 +1,6 @@
 ---
 title: 타일 풀에 대한 매핑
-description: 리소스를 스트리밍 리소스로 만들면 리소스를 구성하는 타일이 타일 풀 내 위치를 가리키는 데서부터 생성됩니다. 타일 풀은 응용 프로그램으로는 보이지 않는 막후에서 하나 이상의 할당이 지원하는 메모리 풀입니다.
+description: 리소스를 스트리밍 리소스로 만들 때 리소스를 구성하는 타일은 타일 풀의 위치를 가리키는 것에서 시작합니다. 타일 풀은 메모리 풀로서 응용 프로그램에 보이지 않는 장면 뒤에서 하나 이상의 할당으로 지원됩니다.
 ms.assetid: 58B8DBD5-62F5-4B94-8DD1-C7D57A812185
 keywords:
 - 타일 풀에 대한 매핑
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a0474345e21161e76fbfeebe0086e5d433b2d219
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932260"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607358"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>타일 풀에 대한 매핑
 
 
-리소스를 스트리밍 리소스로 만들면 리소스를 구성하는 타일이 타일 풀 내 위치를 가리키는 데서부터 생성됩니다. 타일 풀은 응용 프로그램으로는 보이지 않는 막후에서 하나 이상의 할당이 지원하는 메모리 풀입니다. 운영 체제 및 디스플레이 드라이버가 이 메모리 풀을 관리하고, 메모리 사용 공간은 응용 프로그램이 쉽게 이해합니다. 스트리밍 리소스는 타일 풀 내 위치를 가리킴으로써 64KB 영역을 매핑합니다. 이러한 설정으로 인한 좋지 않은 결과 중 하나는 여러 리소스가 같은 타일을 공유 및 재사용할 수 있게 할 뿐 아니라, 원하는 경우 리소스 내 다른 위치에서 같은 타일을 재사용할 수 있게 한다는 것입니다.
+리소스를 스트리밍 리소스로 만들 때 리소스를 구성하는 타일은 타일 풀의 위치를 가리키는 것에서 시작합니다. 타일 풀은 메모리 풀로서 응용 프로그램에 보이지 않는 장면 뒤에서 하나 이상의 할당으로 지원됩니다. 운영 체제 및 디스플레이 드라이버가 이 메모리 풀을 관리하고, 메모리 사용 공간은 응용 프로그램이 쉽게 이해합니다. 스트리밍 리소스는 타일 풀 내 위치를 가리킴으로써 64KB 영역을 매핑합니다. 이러한 설정으로 인한 좋지 않은 결과 중 하나는 여러 리소스가 같은 타일을 공유 및 재사용할 수 있게 할 뿐 아니라, 원하는 경우 리소스 내 다른 위치에서 같은 타일을 재사용할 수 있게 한다는 것입니다.
 
 타일 풀로 리소스용 타일을 채우는 유연성에 대해 치러야 할 비용은 타일 풀의 어떤 타일이 리소스에 필요한 타일을 나타낼지에 대한 매핑을 정의 및 유지하는 작업을 해야 한다는 것입니다. 타일 매핑은 변경할 수 있습니다. 또한 리소스의 모든 타일을 한 번에 매핑해야 하는 것은 아닙니다. 리소스는 **NULL** 매핑이 가능합니다. **NULL** 매핑은 타일에 액세스하는 리소스의 관점에서 사용할 수 없는 타일로 정의합니다.
 
@@ -31,19 +31,19 @@ ms.locfileid: "8932260"
 
 각 페이지 테이블 항목이 64비트라고 가정합시다.
 
-최악의 페이지 테이블에 대 한 크기 스트리밍 리소스는 생성는 128 비트-요소당 (예를 들어 RGBA float)를 사용 하 여 되므로 64KB 타일 가정해 Direct3D11에서 리소스 제한을 지정 하는 단일 surface 적중만 4096 픽셀을 포함 합니다. 64비트 테이블 항목을 사용하여 완전히 채우는 경우(mipmap은 포함하지 않음), 지원되는 최대 [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) 크기(16384\*16384\*2048)에는 페이지 테이블에 약 1GB의 저장소가 필요합니다. mipmap을 추가하면 완전히 매핑된(최악의 경우) 페이지 테이블 저장소가 1/3 정도, 즉 1.3GB까지 증가합니다.
+최악의 페이지 테이블에 대 한 스트리밍 리소스를 만든 128 비트-요소별 형식 (예를 들어 RGBA float의 경우)를 사용 하 여 따라서 64KB 타일 가정 Direct3D 11에서 리소스 한도 지정 된 단일 화면을 적중 하는 크기는 4096만 픽셀을 포함 합니다. 지원 되는 최대 [ **Texture2DArray** ](https://msdn.microsoft.com/library/windows/desktop/ff471526) 16384 크기인\*16384\*완전히 채워진 경우 (하지만 단일 mip 맵만을 사용 하 여) 2048 약 1GB 페이지 테이블의 저장소 필요 (제외한, mip 맵을) 64 비트 테이블 항목을 사용합니다. mipmap을 추가하면 완전히 매핑된(최악의 경우) 페이지 테이블 저장소가 1/3 정도, 즉 1.3GB까지 증가합니다.
 
 이 경우 약 10.6 테라바이트의 주소 지정 가능 메모리에 액세스할 수 있습니다. 그러나 주소 지정 가능 메모리의 크기에 제한을 두어 테라바이트 범위 정도로 그 공간을 줄일 수 있습니다.
 
-고려해야 할 또 다른 경우는 mipmap을 포함해 요소당 32비트 형식인 16384\*16384의 [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) 스트리밍 리소스입니다. 완전히 채운 페이지 테이블에 필요한 공간은 64비트 테이블 항목을 포함해 대략 170KB입니다.
+고려해 야 할 또 다른 경우는 단일 [ **Texture2D** ](https://msdn.microsoft.com/library/windows/desktop/ff471525) 16384의 리소스를 스트리밍\*16384 mip 맵을 포함 하는 32 비트-요소별 형식 사용 합니다. 완전히 채운 페이지 테이블에 필요한 공간은 64비트 테이블 항목을 포함해 대략 170KB입니다.
 
-끝으로 BC 형식을 사용하는 예, 즉 4x4 픽셀 타일당 128비트인 BC7의 경우를 생각해봅시다. 이는 픽셀당 1 바이트입니다. mipmap을 포함해 16384\*16384\*2048인 [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526)는 페이지 테이블에서 이 메모리를 완전히 채우려면 대략 85MB가 필요합니다. 이 경우 스트리밍 리소스 하나가 550기가픽셀(이 경우에는 512GB의 메모리)을 차지하도록 허용하는 것을 고려하면 나쁜 것은 아닙니다.
+끝으로 BC 형식을 사용하는 예, 즉 4x4 픽셀 타일당 128비트인 BC7의 경우를 생각해봅시다. 이는 픽셀당 1 바이트입니다. A [ **Texture2DArray** ](https://msdn.microsoft.com/library/windows/desktop/ff471526) 16384\*16384\*2048 mip 맵을 포함 하 여 약 85 (mb)가이 메모리 페이지 테이블의 전체 채우기 해야 합니다. 이 경우 스트리밍 리소스 하나가 550기가픽셀(이 경우에는 512GB의 메모리)을 차지하도록 허용하는 것을 고려하면 나쁜 것은 아닙니다.
 
 실제로는, 사용할 수 있는 물리적 메모리의 양이 한 번에 매핑 및 참조될 만큼의 양과는 거리가 먼 조건에서 이러한 전체 매핑을 정의하는 것은 합당하지 않은 일입니다. 그러나 타일 풀을 사용하면 응용 프로그램이 타일 풀(즉 페이지 테이블 매핑)을 메모리 압축 도구로 활용하여 타일을 다시 사용할 수 있습니다(간단한 예로, 이미지의 넓은 검은색 영역에 "검정색" 타일을 다시 사용).
 
 페이지 테이블의 초기 내용은 모든 항목에 대해 **NULL**입니다. 또한 응용 프로그램은 표면의 메모리 콘텐츠에 대한 초기 데이터를 전달할 수 없습니다. 왜냐하면 메모리 백업 없이 시작하기 때문입니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
 
 
 <table>
@@ -60,22 +60,22 @@ ms.locfileid: "8932260"
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="tile-pool-creation.md">타일 풀 만들기</a></p></td>
-<td align="left"><p>응용 프로그램은 Direct3D 장치당 하나 이상의 타일 풀을 만들 수 있습니다. 각 타일 풀의 총 크기는 Direct3D11의 리소스 크기 제한, 대략 GPU RAM의 1/4로 제한 합니다.</p></td>
+<td align="left"><p>응용 프로그램은 Direct3D 장치 하나당 1개 이상의 타일 풀을 만들 수 있습니다. 각 타일 풀의 총 크기는 1/4 GPU RAM의 대략는 Direct3D 11의 리소스 크기 제한으로 제한 됩니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="tile-pool-resizing.md">타일 풀 크기 조정</a></p></td>
+<td align="left"><p><a href="tile-pool-resizing.md">풀 크기 조정 타일</a></p></td>
 <td align="left"><p>응용 프로그램이 자기에게 매핑되는 스트리밍 리소스에 대해 더 많은 작업 집합이 필요한 경우에는 타일 풀의 크기를 조정하여 타일 풀을 늘리고, 더 적은 공간이 필요한 경우에는 타일 풀을 줄입니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="hazard-tracking-versus-tile-pool-resources.md">위험 추적 및 타일 풀 리소스</a></p></td>
-<td align="left"><p>비스트리밍 리소스의 경우, Direct3D는 렌더링하는 동안 특정 위험 조건을 예방할 수 있지만, 추적 위험이 스트리밍 리소스에 대해 타일 수준에 있기 때문에 스트리밍 리소스 렌더링 중 추적 위험 조건이 너무 비쌀 수 있습니다.</p></td>
+<td align="left"><p><a href="hazard-tracking-versus-tile-pool-resources.md">리소스를 풀링 하는 타일 및 추적 하는 위험물</a></p></td>
+<td align="left"><p>비 스트리밍 리소스의 경우, Direct3D는 렌더링하는 동안 특정 위험 조건을 예방할 수 있지만, 위험 추적이 스트리밍 리소스에 대해 타일 수준에 있기 때문에 스트리밍 리소스 렌더링 중 위험 조건 추적에 너무 많은 리소스가 필요할 수 있습니다.</p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [스트리밍 리소스 만들기](creating-streaming-resources.md)

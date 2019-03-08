@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a6d39a78ba73dcb598f209ea48c4b131e375ab6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922615"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594808"
 ---
 # <a name="sign-an-app-package-using-signtool"></a>SignTool을 사용하여 앱 패키지에 서명
 
@@ -24,7 +24,7 @@ ms.locfileid: "8922615"
 코드 서명 및 인증서 전반에 대한 자세한 내용은 [코드 서명 소개](https://msdn.microsoft.com/library/windows/desktop/aa380259.aspx#introduction_to_code_signing)를 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
-- **앱 패키지**  
+- **패키지 된 앱**  
     수동으로 앱 패키지를 만드는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구로 앱 패키지 만들기](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요. 
 
 - **유효한 서명 인증서**  
@@ -119,13 +119,13 @@ SignTool sign /debug [options]
  
 이벤트 로그에서 자세한 내용을 확인하려면
 - Eventvwr.msc를 실행합니다.
-- 이벤트 로그를 엽니다. Event Viewer (Local) -> Applications and Services Logs -> Microsoft -> Windows -> AppxPackagingOM -> Microsoft-Windows-AppxPackaging/Operational
+- 이벤트 로그를 엽니다. 이벤트 뷰어 (로컬)-> 응용 프로그램 및 서비스 로그-> Microsoft-> Windows AppxPackagingOM-> Microsoft-Windows-AppxPackaging 운영->
 - 가장 최근의 오류 이벤트를 찾습니다.
 
 내부 오류 0x8007000B는 일반적으로 다음 값 중 하나에 해당합니다.
 
-| **이벤트 ID** | **이벤트 문자열 예** | **제안** |
+| **이벤트 ID** | **이벤트 문자열의 예** | **Suggestion** |
 |--------------|--------------------------|----------------|
-| 150          | error 0x8007000B: The app manifest publisher name (CN=Contoso) must match the subject name of the signing certificate (CN=Contoso, C=US). | 앱 매니페스트 게시자 이름이 서명의 주체 이름과 정확히 일치해야 합니다.               |
-| 151          | error 0x8007000B: The signature hash method specified (SHA512) must match the hash method used in the app package block map (SHA256).     | /fd 매개 변수에 지정된 해시 알고리즘이 잘못되었습니다. 앱 패키지 블록 맵(앱 패키지를 만드는 데 사용)과 일치하는 해시 알고리즘을 사용하여 **SignTool**을 다시 실행합니다.  |
-| 152          | error 0x8007000B: The app package contents must validate against its block map.                                                           | 앱 패키지가 손상되었으며 앱 패키지를 다시 빌드하여 새 블록 앱을 생성해야 합니다. 앱 패키지를 만드는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구로 앱 패키지 만들기](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요. |
+| 150          | error 0x8007000B: 앱 매니페스트 게시자 이름 (CN = Contoso) 서명 인증서의 주체 이름과 일치 해야 합니다 (CN = Contoso, C = US)입니다. | 앱 매니페스트 게시자 이름이 서명의 주체 이름과 정확히 일치해야 합니다.               |
+| 151          | error 0x8007000B: 서명 해시 방법 지정된 (SHA512) 앱 패키지 블록 맵에 (SHA256)에 사용 된 해시 메서드가 일치 해야 합니다.     | /fd 매개 변수에 지정된 해시 알고리즘이 잘못되었습니다. 앱 패키지 블록 맵(앱 패키지를 만드는 데 사용)과 일치하는 해시 알고리즘을 사용하여 **SignTool**을 다시 실행합니다.  |
+| 152          | error 0x8007000B: 해당 블록 맵에 대 한 앱 패키지 콘텐츠를 확인 해야 합니다.                                                           | 앱 패키지가 손상되었으며 앱 패키지를 다시 빌드하여 새 블록 앱을 생성해야 합니다. 앱 패키지를 만드는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구로 앱 패키지 만들기](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요. |

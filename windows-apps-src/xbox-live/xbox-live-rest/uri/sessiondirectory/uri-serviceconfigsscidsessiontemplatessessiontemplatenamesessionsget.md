@@ -8,17 +8,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1020c9d9c378a95070a7b0bf3faeb9d2c6751d51
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943120"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627478"
 ---
 # <a name="get-serviceconfigsscidsessiontemplatessessiontemplatenamesessions"></a>GET (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions)
 세션 템플릿 문서를 검색합니다.
 
 > [!IMPORTANT]
-> 이 URI 메서드에 필요 X Xbl-계약 버전의 헤더 요소: 104/105 또는 나중에 모든 요청.
+> 이 URI 메서드를 헤더 요소의 X Xbl-계약 버전이 필요합니다. 104/105 또는 나중에 모든 요청 합니다.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4EKB)
@@ -31,16 +31,16 @@ ms.locfileid: "8943120"
 
 ## <a name="remarks"></a>설명
 
-이 HTTP/REST 메서드는 제공 된 필터에 대 한 세션 템플릿 정보를 검색합니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetSessionsAsync**하 여 줄 바꿈할 수 있습니다.
+이 HTTP/REST 메서드는 제공 된 필터에 대 한 세션 템플릿 정보를 검색합니다. 이 메서드는로 래핑할 수 있습니다 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetSessionsAsync**합니다.
 
 
 > [!NOTE] 
-> 2015 멀티 플레이어 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetSessionsForUsersFilterAsync</b>하 여이 메서드가 호출 됩니다.  
+> 2015 멀티 플레이어 게임에이 메서드는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetSessionsForUsersFilterAsync</b>합니다.  
 
 
 
 > [!NOTE] 
-> 이 메서드를 호출할 때마다 키워드, Xbox 사용자 ID 필터 또는 둘 다 포함 해야 합니다. 호출자에 <i>개인</i> 및 <i>예약</i> 매개 변수에 대 한 올바른 권한이 없는 경우 이러한 세션은 실제로 존재 여부 메서드 403의 오류 코드를 반환 합니다.  
+> 이 메서드를 호출할 때마다 키워드, Xbox 사용자 ID 필터 또는 둘 다 포함 해야 합니다. 호출자에 대 한 올바른 권한이 없는 경우는 <i>사설</i> 하 고 <i>예약</i> 매개 변수를 메서드 반환 오류 코드 403 사용할 수 없음, 이러한 세션을 실제로 존재 하는지 여부.  
 
 
 <a id="ID4EKB"></a>
@@ -48,17 +48,17 @@ ms.locfileid: "8943120"
 
 ## <a name="uri-parameters"></a>URI 매개 변수
 
-| 매개 변수| 유형| 설명|
+| 매개 변수| 형식| 설명|
 | --- | --- | --- | --- | --- | --- |
-| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 파트 1 세션의 id.|
-| 키워드| string| 해당 문자열을 사용 하 여 식별 하는 단지 세션에 결과 필터링 하는 데 키워드입니다.|
-| xuid| GUID| 세션을 검색 하 고 사용자에 대 한 Xbox 사용자 Id입니다. 사용자 세션에서 활성 상태 여야 합니다. |
-| 예약| string| 세션 목록에 사용자가 수락 하지 않는 경우를 나타내는 값입니다. 이 매개 변수를 설정할 수만 true로 합니다. 이 설정은 호출자가 세션에 대 한 서버 수준 액세스 이상의 호출자의 XUID Xbox 사용자 ID 필터와 일치 하도록 요청 합니다. |
-| 비활성| string| 세션 목록에 사용자가 수락 하지만 적극적으로 재생 되지 않는 경우를 나타내는 값입니다. 이 매개 변수를 설정할 수만 true로 합니다. |
-| 개인| string| 세션 목록을 개인 세션을 포함 하는 경우를 나타내는 값입니다. 이 매개 변수를 설정할 수만 true로 합니다. 서버를 쿼리 하는 경우 또는 고유한 세션을 쿼리 하는 경우에 유효 합니다. 호출자가 세션에 대 한 서버 수준 액세스 하려면이 매개 변수를 true로 설정 하거나 호출자의 XUID Xbox 사용자 ID 필터와 일치 하도록 요청 합니다. |
-| visibility| 문자열| 결과 필터링에 사용 되는 표시 상태를 나타내는 열거형 값입니다. 현재이 매개 변수 시키면 열기 열려 있는 세션을 포함 하도록 합니다. <b>MultiplayerSessionVisibility</b>를 참조 하세요. |
-| 버전| 문자열| 양의 정수 주요 세션 버전 또는 하위 세션을 나타내는 포함 하도록 합니다. 값은 100 나머지 요청의 계약 버전 보다 작거나 이어야 합니다. |
-| 시험| string| 양의 정수 세션의 최대 수를 나타내는를 검색 합니다.|
+| scid| GUID| (서비스 안내) 식별자를 구성 하는 서비스입니다. 1 부 세션의 id입니다.|
+| keyword| 문자열| 해당 문자열을 사용 하 여 식별만 세션에 대 한 결과 필터링 하는 데 사용 하는 키워드입니다.|
+| xuid| GUID| Xbox 사용자 세션을 검색할 사용자에 대 한 사용자 Id입니다. 사용자 세션에서 활성 상태 여야 합니다. |
+| 예약| 문자열| 사용자가 수락 하지 않은 세션 목록을 포함 하는 경우를 나타내는 값입니다. 이 매개 변수는 설정만 가능 true로 합니다. 호출자의 XUID Xbox 사용자 ID 필터를 일치 하도록 클레임 또는이 설정은 호출자가 세션에 대 한 서버 수준 권한이 있어야 합니다. |
+| 비활성| 문자열| 세션의 목록에 포함 된 경우 사용자가 수락 하지만 오디오가 재생 하지는 것을 나타내는 값입니다. 이 매개 변수는 설정만 가능 true로 합니다. |
+| 개인| 문자열| 개인 세션 세션의 목록에 포함 하는 경우를 나타내는 값입니다. 이 매개 변수는 설정만 가능 true로 합니다. 서버-투-서버를 쿼리 하는 경우 또는 사용자 자신의 세션을 쿼리 하는 경우에 유효 합니다. 호출자의 XUID Xbox 사용자 ID 필터를 일치 하도록 클레임 또는 호출자가 세션에 대 한 서버 수준 권한이 있어야이 매개 변수를 true로 설정 합니다. |
+| visibility| 문자열| 결과 필터링에 사용 되는 표시 상태를 나타내는 열거형 값입니다. 현재이 매개 변수 에서만 설정할 수 있습니다 열 열려 있는 세션을 포함 합니다. 참조 <b>MultiplayerSessionVisibility</b>합니다. |
+| version| 문자열| 양의 정수 버전 주요 세션 또는 세션 중 더 작은 값을 나타내는를 포함 합니다. 값 보다 작거나 100 모듈로 요청의 계약 버전 이어야 합니다. |
+| Take| 문자열| 양의 정수 세션의 최대 수를 나타내는를 검색 합니다.|
 
 <a id="ID4EXB"></a>
 
@@ -70,14 +70,14 @@ ms.locfileid: "8943120"
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
 
 <a id="ID4EKC"></a>
 
 
 ## <a name="response-body"></a>응답 본문
 
-이 메서드에서 반환의 세션 참조, 일부 세션 포함 데이터 인라인 JSON 배열입니다.
+이 메서드에서 반환에는 일부 세션 데이터가 포함 된 인라인을 사용 하 여 세션 참조의 JSON 배열입니다.
 
 
 ```cpp
@@ -111,6 +111,6 @@ ms.locfileid: "8943120"
 <a id="ID4EWC"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
 [/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions](uri-serviceconfigsscidsessiontemplatessessiontemplatenamesessions.md)

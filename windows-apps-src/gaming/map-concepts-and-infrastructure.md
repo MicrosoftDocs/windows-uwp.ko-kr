@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d, 포팅
 ms.localizationpriority: medium
 ms.openlocfilehash: e09dcb1830e62d17983f564771b4808d132179a0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926515"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640828"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Direct3D 11에 OpenGL ES 2.0 매핑
 
@@ -32,19 +32,19 @@ ms.locfileid: "8926515"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="compare-opengl-es-2-0-api-design-to-directx.md">OpenGL ES 2.0에서 Direct3D로의 포팅 계획</a></p></td>
+<td align="left"><p><a href="compare-opengl-es-2-0-api-design-to-directx.md">OpenGL ES 2.0에서 direct3d 포트를 계획 합니다.</a></p></td>
 <td align="left"><p>iOS 또는 Android 플랫폼에서 게임을 포팅하는 경우 OpenGL ES 2.0에 많은 투자를 했을 것입니다. 그래픽 파이프라인 코드베이스를 Direct3D 11 및 Windows 런타임으로 이동할 준비를 할 때에는 시작하기 전에 몇 가지 사항을 고려해야 합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="moving-from-egl-to-dxgi.md">EGL 코드와 DXGI 및 Direct3D 비교</a></p></td>
+<td align="left"><p><a href="moving-from-egl-to-dxgi.md">DXGI 및 Direct3D EGL 코드 비교</a></p></td>
 <td align="left"><p>DXGI(DirectX Graphics Interface) 및 여러 Direct3D API는 EGL과 동일한 역할을 합니다. 이 항목은 EGL의 관점에서 DXGI 및 Direct3D 11을 이해하는 데 도움을 줍니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="porting-uniforms-and-attributes.md">OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교</a></p></td>
+<td align="left"><p><a href="porting-uniforms-and-attributes.md">OpenGL ES 2.0 버퍼, uniforms, 및 꼭 짓 점 특성 direct3d 비교</a></p></td>
 <td align="left"><p>OpenGL ES 2.0에서 Direct3D 11로 포팅하는 프로세스 중에 앱과 셰이더 프로그램 사이에 데이터를 전달하기 위한 구문 및 API 동작을 변경해야 합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="change-your-shader-loading-code.md">OpenGL ES 2.0 셰이더 파이프라인과 Direct3D 비교</a></p></td>
+<td align="left"><p><a href="change-your-shader-loading-code.md">OpenGL ES 2.0 셰이더 파이프라인 direct3d 비교</a></p></td>
 <td align="left"><p>개념적으로 Direct3D 11 셰이더 파이프라인은 OpenGL ES 2.0의 셰이더 파이프라인과 매우 유사합니다. 그러나 API 디자인의 관점에서 셰이더 단계를 만들고 관리하기 위한 주요 구성 요소는 두 가지 주 인터페이스 <a href="https://msdn.microsoft.com/library/windows/desktop/hh404575"><strong>ID3D11Device1</strong></a> 및 <a href="https://msdn.microsoft.com/library/windows/desktop/hh404598"><strong>ID3D11DeviceContext1</strong></a>의 일부입니다. 이 항목에서는 일반적인 OpenGL ES 2.0 셰이더 파이프라인 API 패턴을 이러한 인터페이스의 Direct3D 11 셰이더 파이프라인 API 패턴에 매핑하려고 합니다.</p></td>
 </tr>
 </tbody>

@@ -8,11 +8,11 @@ keywords: windows 10, uwp, 연락처, 연락처 카드, 주석
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a3485635a49b1690116e7cb271435e63bee2151
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920401"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616438"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>연락처 카드의 작업에 앱 연결
 
@@ -185,7 +185,7 @@ public async void OpenContactCard(object sender, RoutedEventArgs e)
 
 페이지의 코드 숨김 파일에서 [Page.OnNavigatedTo](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.onnavigatedto.aspx) 메서드를 재정의합니다. 연락처 카드는 이 메서드에 작업 이름과 사용자 ID를 전달합니다.
 
-영상 통화나 음성 통화를 시작하려면 [VoIP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP)을 참조하세요. [WIndows.ApplicationModel.Calls](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.calls.aspx) 네임스페이스에서 전체 API를 확인할 수 있습니다.
+비디오 또는 오디오 호출을 시작 하려면이 샘플을 참조 하세요. [VoIP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP)합니다. [WIndows.ApplicationModel.Calls](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.calls.aspx) 네임스페이스에서 전체 API를 확인할 수 있습니다.
 
 메시지를 간편하게 하려면 [Windows.ApplicationModel.Chat](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.aspx) 네임스페이스를 참조하세요.
 

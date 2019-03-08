@@ -1,34 +1,34 @@
 ---
-Description: Special tile templates are unique templates that are either animated, or just allow you to do things that aren't possible with adaptive tiles.
+Description: 특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다.
 title: 특수 타일 템플릿
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10 uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 09647347134463c8dd2d93f6b869796c8def44e2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944334"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619808"
 ---
 # <a name="special-tile-templates"></a>특수 타일 템플릿
  
 
-특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다. 각 특수 타일 템플릿은 특히 용으로 빌드된 Windows10, 아이콘 타일 템플릿을 제외 하 고 Windows10에 대 한 업데이트 된 클래식 특수 템플릿인 합니다. 이 문서에서는 세 가지 특수 타일 템플릿인 아이콘, 사진 및 피플에 대해 설명합니다.
+특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다. 각 특별 한 타일 템플릿에 특히 빌드된 Windows 10에 대 한 아이콘 타일 템플릿에 제외 하 고 Windows 10에 대 한 업데이트 된 클래식 특별 한 서식 파일입니다. 이 문서에서는 세 가지 특별 한 타일 템플릿 설명: 아이콘, 사진 및 사용자.
 
 ## <a name="iconic-tile-template"></a>아이콘 타일 템플릿
 
 
-아이콘 템플릿("IconWithBadge" 템플릿이라고도 함)을 사용하면 타일 중앙에 작은 이미지를 표시할 수 있습니다. Windows10은 휴대폰과 태블릿/데스크톱 둘 다에서 템플릿을 지원 합니다.
+아이콘 템플릿("IconWithBadge" 템플릿이라고도 함)을 사용하면 타일 중앙에 작은 이미지를 표시할 수 있습니다. Windows 10 phone 및 태블릿/데스크톱 모두에서 서식 파일을 지원합니다.
 
 ![작은 크기 및 중간 크기 메일 타일](images/iconic-template-mail-2sizes.png)
 
 ### <a name="how-to-create-an-iconic-tile"></a>아이콘 타일을 만드는 방법
 
-다음 단계를 설명 Windows10에 대 한 아이콘 타일을 만들기 위해 알아야 할 모든 것입니다. 대략적으로 설명하면, 아이콘 이미지 자산이 필요하며, 아이콘 템플릿을 사용하여 타일에 알림을 보내고, 마지막으로 타일에 표시할 번호를 제공하는 배지 알림을 보냅니다.
+다음 단계를 Windows 10에 대 한 아이콘 타일을 만드는 알아야 할 모든 내용을 다룹니다. 대략적으로 설명하면, 아이콘 이미지 자산이 필요하며, 아이콘 템플릿을 사용하여 타일에 알림을 보내고, 마지막으로 타일에 표시할 번호를 제공하는 배지 알림을 보냅니다.
 
 ![아이콘 타일의 개발자 흐름](images/iconic-template-dev-flow.png)
 
@@ -54,11 +54,11 @@ ms.locfileid: "8944334"
 
 ![배지가 있거나 없는 정사각형이 아닌 자산 크기 조정](images/assetguidance26b.png)
 
-**2단계: 기본 타일 만들기**
+**2 단계: 기본 타일 만들기**
 
 기본 타일과 보조 타일 둘 다에서 아이콘 템플릿을 사용할 수 있습니다. 보조 타일에서 사용하는 경우 먼저 보조 타일을 만들거나 이미 고정된 보조 타일을 사용해야 합니다. 기본 타일은 암시적으로 고정되어 있으며 항상 알림을 받을 수 있습니다.
 
-**3단계: 타일에 알림 보내기**
+**3 단계: 타일 알림 보내기**
 
 이 단계는 알림이 로컬로 전송되는지, 서버 푸시 통해 전송되는지에 따라 다를 수 있지만 보내는 XML 페이로드는 동일합니다. 로컬 타일 알림을 보내려면 타일(기본 타일 또는 보조 타일)에 대한 [**TileUpdater**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater)를 만든 다음 아래와 같이 아이콘 타일 템플릿을 사용하는 타일에 알림을 보냅니다. 이상적일 경우 [적응형 타일 템플릿](create-adaptive-tiles.md)을 사용하여 와이드 타일 및 큰 타일 크기에 대한 바인딩도 포함해야 합니다.
 
@@ -82,7 +82,7 @@ XML 페이로드에 대한 샘플 코드는 다음과 같습니다.
 
 이 아이콘 타일 템플릿 XML 페이로드는 1단계에서 만든 이미지를 가리키는 이미지 요소를 사용합니다. 이제 타일이 아이콘 옆에 배지를 표시할 준비가 되었습니다. 배지 알림을 보내기만 하면 됩니다.
 
-**4단계: 타일에 배지 알림 보내기**
+**4 단계: 타일에 배지 알림 보내기**
 
 3단계와 마찬가지로, 이 단계는 알림이 로컬로 전송되는지, 서버 푸시 통해 전송되는지에 따라 다를 수 있지만 보내는 XML 페이로드는 동일합니다. 로컬 배지 알림을 보내려면 타일(기본 타일 또는 보조 타일)에 대한 [**BadgeUpdater**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater)를 만든 다음 원하는 값이 포함된 배지 알림을 보내거나 배지를 지웁니다.
 
@@ -94,7 +94,7 @@ XML 페이로드에 대한 샘플 코드는 다음과 같습니다.
 
 타일의 배지가 적절하게 업데이트됩니다.
 
-**5단계: 요약**
+**5단계: 전체 과정**
 
 다음 이미지는 다양한 API 및 페이로드가 아이콘 타일 템플릿의 각 측면과 연결되는 방식을 보여 줍니다. &lt;binding&gt; 요소를 포함하는 [타일 알림](https://msdn.microsoft.com/library/windows/apps/hh779724)은 아이콘 템플릿과 이미지 자산을 지정하는 데 사용되고, [배지 알림](https://msdn.microsoft.com/library/windows/apps/hh779719)은 숫자 값을 지정합니다. 타일 속성은 타일의 표시 이름, 색 등을 제어합니다.
 
@@ -184,7 +184,7 @@ TileContent content = new TileContent()
 ## <a name="people-tile-template"></a>피플 타일 템플릿
 
 
-Windows 10의 피플 앱 타일은 타일에 세로 또는 가로로 슬라이드되는 원 안의 이미지 컬렉션을 표시하는 특수 타일 템플릿을 사용합니다. 이 타일 템플릿은 사용할 수 있는 Windows10 빌드 10572부터 되었으며 누구 든 지 앱에서 사용할 수 있습니다.
+Windows 10의 피플 앱 타일은 타일에 세로 또는 가로로 슬라이드되는 원 안의 이미지 컬렉션을 표시하는 특수 타일 템플릿을 사용합니다. Windows 10 빌드 10572 이후이 타일 템플릿에 사용할 수 있었던 및 모든 사용자가 해당 앱에서 사용을 시작 합니다.
 
 피플 타일 템플릿은 다음 크기의 타일에서 작동합니다.
 
@@ -261,9 +261,9 @@ TileContent content = new TileContent()
 
 최상의 사용자 환경을 얻으려면 각 타일 크기에 대해 다음 개수의 사진을 제공하는 것이 좋습니다.
 
--   중간 크기 타일: 사진 9장
--   와이드 타일: 사진 15장
--   큰 타일: 사진 20장
+-   중간 크기 타일: 9 사진
+-   넓은 타일: 15 사진
+-   큰 타일: 20 사진
 
 해당 개수의 사진을 제공하면 빈 원이 몇 개 남기 때문에 타일이 시각적으로 너무 혼잡하지 않습니다. 자유롭게 사진 수를 조정하여 가장 적합한 모양을 만들 수 있습니다.
 
@@ -272,10 +272,10 @@ TileContent content = new TileContent()
 ## <a name="related-topics"></a>관련 항목
 
 
-* [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-people-tile-template)
+* [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-people-tile-template)
 * [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 * [타일, 배지 및 알림](index.md)
-* [적응형 타일 만들기](create-adaptive-tiles.md)
+* [적응 타일 만들기](create-adaptive-tiles.md)
 * [타일 콘텐츠 스키마](../tiles-and-notifications/tile-schema.md)
  
 

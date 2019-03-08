@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ad106da41f8cd5d91cfba0ef5c58e66cf3534e06
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945138"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632448"
 ---
 # <a name="globalscidsscid"></a>/global/scids/{scid}
-이 저장소 형식에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
+이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`합니다.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -24,18 +24,18 @@ ms.locfileid: "8945138"
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| 서비스 안내| guid| 조회 서비스 구성의 ID입니다.| 
+| scid| guid| 조회 서비스 구성 파일의 ID입니다.| 
   
 <a id="ID4ETB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [GET](uri-globalscidsscid-get.md)
 
-&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다. 
+&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다. 
  
 <a id="ID4E4B"></a>
 
@@ -45,8 +45,8 @@ ms.locfileid: "8945138"
 <a id="ID4E6B"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[타이틀 저장소 URI](atoc-reference-storagev2.md)
+[제목 저장소 Uri](atoc-reference-storagev2.md)
 
    

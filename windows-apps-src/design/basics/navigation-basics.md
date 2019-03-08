@@ -1,5 +1,5 @@
 ---
-Description: Navigation in Universal Windows Platform (UWP) apps is based on a flexible model of navigation structures, navigation elements, and system-level features.
+Description: UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다.
 title: UWP 앱을 위한 탐색의 기본
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
@@ -7,15 +7,15 @@ template: detail.hbs
 op-migration-status: ready
 ms.date: 07/16/2018
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: bba6d42e6ce494c0655c6b6c60db91c1e2e006e8
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116245"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636098"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>UWP 앱의 탐색 디자인 기본 사항
 
@@ -49,13 +49,13 @@ ms.locfileid: "9116245"
 
 좋은 탐색 디자인의 기본 원칙부터 시작하겠습니다.
 
-- **일관성**: 사용자 기대 충족
-- **단순함**: 필요한 것 외는 하지 않음
-- **명료함**: 명확한 경로와 옵션을 제공
+- **일관성:** 사용자의 기대를 충족 합니다.
+- **간편함:** 필요한 것 보다 더 수행 하지 마십시오.
+- **쉽게 구별할 수 있도록 합니다.** 지우기 경로 및 옵션을 제공 합니다.
 
-### <a name="consistency"></a>일관성
+### <a name="consistency"></a>Consistency
 
-탐색은 사용자 경험과 일관되어야 합니다. 사용자는 익숙한 및 아이콘에 대 한 표준 규칙을 다음 [표준 컨트롤](#use-the-right-controls) 을 사용 하 여, 위치 및 스타일 됩니다 탐색할 수 있도록 예측 가능 하 고 직관적인 사용자에 대 한 합니다.
+탐색은 사용자 경험과 일관되어야 합니다. 사용 하 여 [표준 컨트롤](#use-the-right-controls) 사용자가 아이콘을 위치에 대 한 표준 규칙을 사용 하 여 친숙 하 고 다음을 스타일은 탐색할 수 있도록 예측 하기 쉽고 직관적인 사용자에 대 한 합니다.
 
 ![페이지 구성 요소 이미지](images/nav/page-components.svg)
 
@@ -96,7 +96,7 @@ ms.locfileid: "9116245"
 
 1. 사용자에 대해 생각하세요. 앱과 각 페이지에서 일반적으로 통과할 경로를 추적하고, 사용자가 이를 통과하는 이유와 사용자가 가고 싶어하는 장소에 대해 생각하세요.
 
-2. 깊은 탐색 계층을 사용 하지 마세요. 탐색이 3개 수준을 넘어가면 사용자가 깊은 계층에서 빠져나오기 어려울 수 있습니다.
+2. 심층 탐색 계층을 방지 합니다. 탐색이 3개 수준을 넘어가면 사용자가 깊은 계층에서 빠져나오기 어려울 수 있습니다.
 
 3. "페이지 왕복"을 피합니다. 페이지 왕복은 관련된 콘텐츠가 있지만 탐색하려면 위 단계로 올라갔다가 다시 내려와야 하는 경우를 말합니다.
 
@@ -117,7 +117,7 @@ ms.locfileid: "9116245"
 
         - 순서에 관계없이 페이지를 볼 수 있습니다.
         - 페이지끼리 명확히 구분이 가며 명확한 부모/자식 관계가 없습니다.
-        - 그룹은 페이지 수가 8 미만입니다. <br>
+        - 보다 작거나 8 페이지 그룹에 있습니다. <br>
         (그룹의 7페이지 이상이 있는 경우 페이지가 고유한 페이지인지를 이해하거나 그룹 내에서의 현재 위치를 파악하기 어려울 수 있습니다. 이러한 것이 앱에 문제가 되지 않는다면 계속 진행하고 페이지를 피어로 만듭니다. 그러지 않은 경우 계층 구조를 사용하여 페이지를 둘 이상의 더 작은 그룹으로 구분하는 것이 좋습니다.)
 
     :::column-end:::
@@ -184,14 +184,14 @@ ms.locfileid: "9116245"
         
         Use top navigation when:
 
-        - 화면의 탐색 옵션을 모두 표시 하려고 합니다.
-        - 앱의 콘텐츠에 대 한 더 많은 공간이 필요 합니다.
-        - 아이콘 탐색 범주를 명확 하 게 나타내는 수 없습니다.
+        - 화면에서 모든 탐색 옵션을 표시 하려고 합니다.
+        - 원하는 앱의 콘텐츠에 대 한 더 많은 공간입니다.
+        - 아이콘에는 사용자 탐색 범주 명확 하 게 설명 수 없습니다.
         
-        사용 하 여 탭 경우:
+        사용 시기를 탭 합니다.
 
         - 탐색 기록 및 페이지 상태를 유지 하려고 합니다.
-        - 사용자가 탭 자주 전환할 것으로 예상 합니다.
+        - 예상한 자주 탭 사이 전환할 수 있습니다.
 
 :::row-end:::
 
@@ -204,8 +204,8 @@ ms.locfileid: "9116245"
 
         Displays a vertical list of links to top-level pages. Use when:
         
-        - 페이지가 최상위 수준에 있습니다.
-        - 탐색 항목이 많습니다 (5 개 이상)
+        - 페이지는 최상위 수준에 있습니다.
+        - 여러 항목이 탐색 (5 개)
         - 사용자가 페이지 간을 자주 전환할 것으로 예상되지 않습니다.
         
 :::row-end:::
@@ -235,6 +235,6 @@ ms.locfileid: "9116245"
         Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
 :::row-end:::
 
-## <a name="next-add-navigation-code-to-your-app"></a>다음: 앱에 탐색 코드 추가
+## <a name="next-add-navigation-code-to-your-app"></a>다음: 탐색 코드를 앱에 추가
 
 다음 문서인 [기본 탐색 구현](navigate-between-two-pages.md)에서는 프레임 컨트롤을 사용하여 앱에서 기본 탐색을 구현하는 데 필요한 코드를 소개합니다.

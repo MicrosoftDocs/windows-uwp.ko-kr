@@ -8,43 +8,43 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d15066da96078dcbae290f9edddb772d1963ee25
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935548"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621668"
 ---
 # <a name="eds-tables"></a>EDS 테이블
 
-  * [미디어 항목 맵에 미디어 그룹](#ID4EQ)
-  * [유효한 클라이언트 유형 목록](#ID4EFD)
+  * [미디어 항목 맵에 Media Group](#ID4EQ)
+  * [유효한 클라이언트 형식 목록](#ID4EFD)
   * [올바른 장치 유형 목록](#ID4EPE)
-  * [입력된 방법 목록](#ID4ERF)
+  * [입력된 메서드가 목록](#ID4ERF)
 
 <a id="ID4EQ"></a>
 
 
-## <a name="media-group-to-media-item-map"></a>미디어 항목 맵에 미디어 그룹
+## <a name="media-group-to-media-item-map"></a>미디어 항목 맵에 Media Group
 
-| 미디어 그룹| 미디어 항목 유형| 
+| 미디어 그룹| 미디어 항목 형식| 
 | --- | --- |
-| 게임| Xbox360Game, XboxGameTrial, Xbox360GameContent, Xbox360GameDemo, XboxTheme, XboxOriginalGame, XboxGamerTile, XboxArcadeGame, XboxGameConsumable, XboxGameVideo, XboxGameTrailer, XboxBundle, XboxXnaCommunityGame, XboxMarketplace, AvatarItem, MobileGame, XboxMobilePDLC, XboxMobileConsumable, WebGame, MetroGame, MetroGameContent, MetroGameConsumable, DGame, DGameDemo, DConsumable, DDurable|
+| GameType| Xbox360Game XboxGameTrial, Xbox360GameContent, Xbox360GameDemo, XboxTheme, XboxOriginalGame, XboxGamerTile, XboxArcadeGame, XboxGameConsumable, XboxGameVideo, XboxGameTrailer, XboxBundle, XboxXnaCommunityGame, XboxMarketplace, AvatarItem, MobileGame XboxMobilePDLC, XboxMobileConsumable, WebGame, MetroGame, MetroGameContent, MetroGameConsumable, DGame, DGameDemo, DConsumable, DDurable|
 | AppType| XboxApp, DApp|
 | MovieType| 영화|
-| TVType| TVEpisode, TVSeries, TVSeason TVShow (일회용 TV 프로그램)|
+| TVType| TVEpisode, TVSeries, TVSeason TVShow (일회용 tv)|
 | MusicType| 앨범 트랙 MusicVideo|
 | MusicArtistType| MusicArtist|
 | WebVideoType| WebVideo, WebVideoCollection|
 | EnhancedContentType| GameLayer, GameActivity, AppActivity, VideoLayer, VideoActivity, DActivity, DNativeApp|
-| 구독 유형| 구독|
+| SubscriptionType| 구독|
 
 <a id="ID4EFD"></a>
 
 
-## <a name="valid-client-type-list"></a>유효한 클라이언트 유형 목록
+## <a name="valid-client-type-list"></a>유효한 클라이언트 형식 목록
 
    * 앱
-   * C 13
+   * C13
    * CommercialService
    * 도우미
    * 콘솔
@@ -83,9 +83,9 @@ ms.locfileid: "8935548"
 <a id="ID4ERF"></a>
 
 
-## <a name="input-method-list"></a>입력된 방법 목록
+## <a name="input-method-list"></a>입력된 메서드가 목록
 
-   * 조정자
+   * 컨트롤러
    * ControllerAutoSuggest
    * 제스처
    * GestureAutoSuggest
@@ -102,7 +102,7 @@ ms.locfileid: "8935548"
 <a id="ID4ELG"></a>
 
 
-##### <a name="parent"></a>부모  
+##### <a name="parent"></a>Parent  
 
 [추가 참조](atoc-xboxlivews-reference-additional.md)
 
@@ -110,6 +110,6 @@ ms.locfileid: "8935548"
 <a id="ID4EXG"></a>
 
 
-##### <a name="further-information"></a>자세한 정보
+##### <a name="further-information"></a>추가 정보
 
-[마켓플레이스 URI](../uri/marketplace/atoc-reference-marketplace.md)
+[Marketplace Uri](../uri/marketplace/atoc-reference-marketplace.md)

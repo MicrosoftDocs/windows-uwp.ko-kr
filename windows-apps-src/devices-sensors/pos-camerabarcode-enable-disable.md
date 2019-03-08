@@ -1,16 +1,16 @@
 ---
 title: 카메라 바코드 스캐너 구성
 description: 카메라 바코드 스캐너 활성화 또는 비활성화
-ms.date: 05/1/2018
+ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b802dfa44f36768dc2446ee1d15bf9ca6d4f9f3
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.openlocfilehash: 3db54caa5be88559aa44f9a99273e9d8d5d6a00d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051046"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610308"
 ---
 # <a name="enable-or-disable-the-software-decoder-that-ships-with-windows"></a>Windows와 함께 배송된 소프트웨어 디코더를 활성화 또는 비활성화
 Windows 10 버전 1803에서는 기본적으로 소프트웨어 디코더가 설치 및 활성화됩니다.  카메라 바코드 스캐너를 사용하고 싶지 않거나 Windows.Devices.PointOfService.BarcodeScanner API에서 작동하는 타사 디코더를 구입했고 둘 모두를 사용하고 싶지 않은 경우에는 Windows와 함께 배송된 소프트웨어 디코더를 비활성화할 수 있습니다.
@@ -20,7 +20,7 @@ Windows 10 버전 1803에서는 기본적으로 소프트웨어 디코더가 설
 
 | 값 이름  | 값 유형 | 값 | 상태 |
 | ----------- | --------- | -------|--------|
-| 활성화      | DWORD     | 1(기본값)<br/>0 |  Windows와 함께 배송된 소프트웨어 디코더 활성화 <br/> Windows와 함께 배송된 소프트웨어 디코더 비활성화 |
+| 사용      | DWORD     | 1(기본값)<br/>0 |  Windows와 함께 배송된 소프트웨어 디코더 활성화 <br/> Windows와 함께 배송된 소프트웨어 디코더 비활성화 |
 
 
 Windows와 함께 배송된 소프트웨어 디코더를 **비활성화**하는 데 사용할 수 있는 레지스트리 파일의 예는 다음과 같습니다.

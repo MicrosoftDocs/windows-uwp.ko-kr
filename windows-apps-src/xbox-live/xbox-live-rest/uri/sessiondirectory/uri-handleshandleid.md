@@ -8,17 +8,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a312d3744e96755a899d73307a47c01e3dc79fd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945102"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632638"
 ---
 # <a name="handleshandleid"></a>/handles/{handleId}
-세션 핸들 식별자에서 지정 하 고 삭제 작업을 지원 합니다. 
+식별자로 지정 하는 세션 핸들에 대 한 DELETE 및 GET 작업을 지원 합니다. 
 
 > [!NOTE] 
-> 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 용도가 템플릿 계약 104/105 이상을 사용 하 여 사용 합니다.  
+> 이 URI 2015 멀티 플레이 게임에서 사용 되 고 이상 멀티 플레이 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용에 대 한 것입니다.  
 
  
 <a id="ID4EQ"></a>
@@ -31,22 +31,22 @@ sessiondirectory.xboxlive.com
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | --- | 
 | handleId| GUID| 세션에 대 한 핸들의 고유 ID입니다.| 
   
 <a id="ID4ERB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [DELETE (/handles/{handleId})](uri-handleshandleiddelete.md)
 
-&nbsp;&nbsp;핸들 id 지정 핸들을 삭제 합니다.
+&nbsp;&nbsp;핸들 ID로 지정 된 핸들을 삭제 합니다.
 
-[GET (/handles/{handle-id})](uri-handleshandleidget.md)
+[GET (/handles/ {핸들-id})](uri-handleshandleidget.md)
 
-&nbsp;&nbsp;핸들 id 지정 핸들을 검색 합니다.
+&nbsp;&nbsp;핸들 ID로 지정한 검색 처리
  
 <a id="ID4E4B"></a>
 
@@ -56,8 +56,8 @@ sessiondirectory.xboxlive.com
 <a id="ID4E6B"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[세션 디렉터리 URI](atoc-reference-sessiondirectory.md)
+[세션 디렉터리 Uri](atoc-reference-sessiondirectory.md)
 
    

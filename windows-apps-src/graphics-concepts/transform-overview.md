@@ -1,5 +1,5 @@
 ---
-title: 변환 개요
+title: 변형 개요
 description: 매트릭스 변환은 수많은 하위 수준의 3D 그래픽 연산을 처리합니다.
 ms.assetid: B5220EE8-2533-4B55-BF58-A3F9F612B977
 ms.date: 02/08/2017
@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b6be8ee8aa67196581907087d99e0324d741a00
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928072"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640148"
 ---
-# <a name="transform-overview"></a>변환 개요
+# <a name="transform-overview"></a>변형 개요
 
 
 매트릭스 변환은 수많은 하위 수준의 3D 그래픽 연산을 처리합니다.
@@ -38,7 +38,7 @@ ms.locfileid: "8928072"
 -   [보기 변환](view-transform.md) - 월드 공간에서 보기 공간으로 변환합니다.
 -   [프로젝션 변환](projection-transform.md) - 보기 공간에서 프로젝션 공간으로 변환합니다.
 
-## <a name="span-idmatrixtransformsspanspan-idmatrixtransformsspanspan-idmatrixtransformsspanmatrix-transforms"></a><span id="Matrix_Transforms"></span><span id="matrix_transforms"></span><span id="MATRIX_TRANSFORMS"></span>매트릭스 변환*
+## <a name="span-idmatrixtransformsspanspan-idmatrixtransformsspanspan-idmatrixtransformsspanmatrix-transforms"></a><span id="Matrix_Transforms"></span><span id="matrix_transforms"></span><span id="MATRIX_TRANSFORMS"></span>매트릭스 변환
 
 
 3D 그래픽을 사용하는 응용 프로그램에서 기하 도형 변환을 사용하여 다음 작업을 수행할 수 있습니다.
@@ -72,7 +72,7 @@ D3DMATRIX scale = {
 };
 ```
 
-## <a name="span-idtranslatespanspan-idtranslatespanspan-idtranslatespantranslate"></a><span id="Translate"></span><span id="translate"></span><span id="TRANSLATE"></span>좌표 이동
+## <a name="span-idtranslatespanspan-idtranslatespanspan-idtranslatespantranslate"></a><span id="Translate"></span><span id="translate"></span><span id="TRANSLATE"></span>번역하기
 
 
 다음 수식은 지점 (x, y, z)를 새 지점 (x', y', z')로 좌표 이동합니다.
@@ -135,7 +135,7 @@ D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
 }
 ```
 
-## <a name="span-idconcatenatingmatricesspanspan-idconcatenatingmatricesspanspan-idconcatenatingmatricesspanconcatenating-matrices"></a><span id="Concatenating_Matrices"></span><span id="concatenating_matrices"></span><span id="CONCATENATING_MATRICES"></span>매트릭스 연결
+## <a name="span-idconcatenatingmatricesspanspan-idconcatenatingmatricesspanspan-idconcatenatingmatricesspanconcatenating-matrices"></a><span id="Concatenating_Matrices"></span><span id="concatenating_matrices"></span><span id="CONCATENATING_MATRICES"></span>행렬에 연결
 
 
 매트릭스를 사용할 때 얻을 수 있는 장점 중 하나는 두 개 이상의 매트릭스를 곱하여 여러 효과를 결합할 수 있다는 점입니다. 즉, 모델을 회전하고 다른 위치로 좌표 이동하기 위해 두 개의 매트릭스를 적용할 필요가 없습니다. 그 대신 회전 매트릭스와 좌표 이동 매트릭스를 곱하여 해당 효과를 모두 포함하는 합성 매트릭스를 만들면 됩니다. 매트릭스 연결이라고 하는 이 과정은 다음 수식을 사용하여 작성할 수 있습니다.
@@ -154,7 +154,7 @@ D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
 
 어떤 유형의 매트릭스를 만들든, 기대하는 효과를 얻을 수 있도록 왼쪽에서 오른쪽 규칙을 기억하시기 바랍니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [변환](transforms.md)

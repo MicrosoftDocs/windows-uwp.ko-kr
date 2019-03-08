@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c004feabf561c5a94fadba858762bf683c9ff0e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935877"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628048"
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a>스레드 풀을 사용하기 위한 모범 사례
 
@@ -26,7 +26,7 @@ ms.locfileid: "8935877"
 
 -   오래가지 않고 독립적인 작업 항목을 만듭니다. 작업 항목은 비동기적으로 실행되며 순서에 관계없이 큐에서 풀로 제출될 수 있습니다.
 
--   [**Windows.UI.Core.CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211)를 사용하여 업데이트를 UI 스레드로 디스패치합니다.
+-   [  **Windows.UI.Core.CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211)를 사용하여 업데이트를 UI 스레드로 디스패치합니다.
 
 -   **Sleep** 함수 대신 [**ThreadPoolTimer.CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921)를 사용합니다.
 
@@ -54,4 +54,4 @@ ms.locfileid: "8935877"
 
 * [정기 작업 항목 만들기](create-a-periodic-work-item.md)
 * [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)
-* [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
+* [타이머를 사용 하 여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)

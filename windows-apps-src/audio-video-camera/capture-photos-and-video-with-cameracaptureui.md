@@ -1,19 +1,19 @@
 ---
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: 이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다.
-title: Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처
+title: Windows 기본 카메라 UI를 사용하여 사진 및 비디오 캡처
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 18ea6af70d4c0be068ecd79b925bff69ff149a8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947460"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617858"
 ---
-# <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처
+# <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Windows 기본 카메라 UI를 사용하여 사진 및 비디오 캡처
 
 
 
@@ -22,7 +22,7 @@ ms.locfileid: "8947460"
 자체 카메라 UI를 제공하려고 하거나 시나리오가 캡처 작업에 대해 좀 더 강력한 하위 수준의 제어를 요구하는 경우 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체를 사용하고 자체 캡처 환경을 구현해야 합니다. 자세한 내용은 [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)를 참조하세요.
 
 > [!NOTE]
-> 하지 앱만 CameraCaptureUI를 사용 하는 경우 앱 매니페스트 파일에 **웹캠** 또는 **마이크** 기능을 지정 해야 합니다. 그러면 디바이스의 카메라 개인 정보 설정에 앱이 표시되지만 사용자가 앱에 대한 카메라 액세스를 거부하더라도 CameraCaptureUI의 미디어 캡처가 차단되지 않습니다. Windows 기본 제공 카메라 앱은 사용자가 단추를 눌러서 사진, 오디오 및 비디오 캡처를 시작해야 하는 신뢰할 수 있는 자사 앱이기 때문입니다. 앱에만 사진 캡처 메커니즘으로 CameraCaptureUI 사용 시 웹캠 또는 마이크 기능을 지정 하는 경우 스토어에 제출 된 Windows 응용 프로그램 인증 키트 인증을 실패할 수 있습니다.
+> 지정 하지 않아야 합니다 **웹캠** 또는 **마이크** 앱만 CameraCaptureUI를 사용 하는 경우 앱에서 기능 매니페스트 파일. 그러면 디바이스의 카메라 개인 정보 설정에 앱이 표시되지만 사용자가 앱에 대한 카메라 액세스를 거부하더라도 CameraCaptureUI의 미디어 캡처가 차단되지 않습니다. Windows 기본 제공 카메라 앱은 사용자가 단추를 눌러서 사진, 오디오 및 비디오 캡처를 시작해야 하는 신뢰할 수 있는 자사 앱이기 때문입니다. 앱에는 Windows 응용 프로그램 인증 키트 인증 CameraCaptureUI만 사진 캡처 메커니즘으로 사용 하는 경우 웹캠 또는 마이크 기능을 지정 하는 경우 스토어에 제출할 때 실패할 수 있습니다.
 > MediaCapture를 사용하여 오디오, 사진 또는 비디오를 프로그래밍 방식으로 캡처하는 경우 앱 매니페스트 파일에 웹캠 또는 마이크 기능을 지정해야 합니다.
 
 ## <a name="capture-a-photo-with-cameracaptureui"></a>CameraCaptureUI로 사진 캡처
@@ -34,9 +34,9 @@ ms.locfileid: "8947460"
 사진을 캡처하려면 새 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 개체를 만듭니다. 개체의 [**PhotoSettings**](https://msdn.microsoft.com/library/windows/apps/br241058) 속성을 사용하여 사진의 이미지 형식과 같은 반환된 사진에 대한 속성을 지정할 수 있습니다. 기본적으로 이 카메라 캡처 UI는 [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성을 사용하여 해제할 수 있지만 반환되기 전에 사진을 자르는 데 사용할 수 있습니다. 이 예제에서는 [**CroppedSizeInPixels**](https://msdn.microsoft.com/library/windows/apps/br241044)를 설정하여 반환된 이미지가 200x200 픽셀 단위로 되도록 요청합니다.
 
 > [!NOTE]
-> **CameraCaptureUI**의 이미징 자르기는 모바일 디바이스 패밀리의 디바이스에 대해 지원되지 않습니다. [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성 값은 앱이 이러한 디바이스에서 실행되는 경우 무시됩니다.
+> **CameraCaptureUI**의 이미징 자르기는 모바일 디바이스 패밀리의 디바이스에 대해 지원되지 않습니다. [  **AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성 값은 앱이 이러한 디바이스에서 실행되는 경우 무시됩니다.
 
-[**CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057)를 호출하고 [**CameraCaptureUIMode.Photo**](https://msdn.microsoft.com/library/windows/apps/br241040)를 지정하여 사진을 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 이미지를 포함하는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
+[  **CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057)를 호출하고 [**CameraCaptureUIMode.Photo**](https://msdn.microsoft.com/library/windows/apps/br241040)를 지정하여 사진을 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 이미지를 포함하는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
 
 [!code-cs[CapturePhoto](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCapturePhoto)]
 
@@ -50,7 +50,7 @@ ms.locfileid: "8947460"
 
 [!code-cs[UsingSoftwareBitmap](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingSoftwareBitmap)]
 
-[**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116)를 호출하여 이미지 파일에서 스트림을 가져옵니다. 그런 후 [**BitmapDecoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226182)를 호출하여 스트림에 대한 비트맵 디코더를 가져옵니다. 그런 다음 [**GetSoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887332)을 호출하여 이미지의 **SoftwareBitmap** 표현을 가져옵니다.
+[  **OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116)를 호출하여 이미지 파일에서 스트림을 가져옵니다. 그런 후 [**BitmapDecoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226182)를 호출하여 스트림에 대한 비트맵 디코더를 가져옵니다. 그런 다음 [**GetSoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887332)을 호출하여 이미지의 **SoftwareBitmap** 표현을 가져옵니다.
 
 [!code-cs[SoftwareBitmap](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetSoftwareBitmap)]
 
@@ -58,7 +58,7 @@ UI에 이미지를 표시하려면 XAML 페이지에서 [**Image**](https://msdn
 
 [!code-xml[ImageControl](./code/CameraCaptureUIWin10/cs/MainPage.xaml#SnippetImageControl)]
 
-XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트에 [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258)네임스페이스 사용을 포함합니다.
+XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트에 using [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258)네임스페이스를 포함합니다.
 
 [!code-cs[UsingSoftwareBitmapSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingSoftwareBitmapSource)]
 
@@ -70,7 +70,7 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 비디오를 캡처하려면 새 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 개체를 만듭니다. 개체의 [**VideoSettings**](https://msdn.microsoft.com/library/windows/apps/br241059) 속성을 사용하여 비디오의 형식과 같은 반환된 비디오에 대한 속성을 지정할 수 있습니다.
 
-[**CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057)를 호출하고 [**Video**](https://msdn.microsoft.com/library/windows/apps/br241059)를 지정하여 비디오를 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 비디오를 포함하는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
+[  **CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057)를 호출하고 [**Video**](https://msdn.microsoft.com/library/windows/apps/br241059)를 지정하여 비디오를 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 비디오를 포함하는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
 
 [!code-cs[CaptureVideo](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCaptureVideo)]
 
@@ -89,7 +89,7 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 
  
 

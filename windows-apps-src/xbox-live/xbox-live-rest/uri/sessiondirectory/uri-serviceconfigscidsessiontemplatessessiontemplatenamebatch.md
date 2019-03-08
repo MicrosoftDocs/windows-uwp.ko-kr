@@ -8,17 +8,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 93ecaa95488493fa8779a44d76bf7d635d1751ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931142"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612598"
 ---
 # <a name="serviceconfigsscidsessiontemplatessessiontemplatenamebatch"></a>/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/batch
-세션 템플릿 수준에서 일괄 처리 쿼리를 만들려면 POST 작업을 지원 합니다.
+세션 템플릿 수준에서 일괄 처리 쿼리를 만드는 POST 작업을 지원 합니다.
 
 > [!IMPORTANT]
-> 이 메서드는 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 하 고 X Xbl-계약 버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
+> 이 메서드는 2015 멀티 플레이 게임에서 사용 되 고 이상 멀티 플레이 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 하 고 X-Xbl-계약-버전 헤더 요소를 필요 합니다. 104/105 또는 나중에 모든 요청 합니다.
 
 <a id="ID4ER"></a>
 
@@ -30,19 +30,19 @@ sessiondirectory.xboxlive.com
 
 ## <a name="uri-parameters"></a>URI 매개 변수
 
-| 매개 변수| 유형| 설명|
+| 매개 변수| 형식| 설명|
 | --- | --- | --- | --- |
-| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 1 부 세션 식별자입니다.|
-| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션 식별자입니다.|
+| scid| GUID| (서비스 안내) 식별자를 구성 하는 서비스입니다. 1 부 세션 식별자입니다.|
+| sessionTemplateName| 문자열| 세션 템플릿의 현재 인스턴스의 이름입니다. 2 부를 선택 하면 세션 식별자입니다.|
 
 <a id="ID4E2B"></a>
 
 
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [POST (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/batch)](uri-serviceconfigscidsessiontemplatessessiontemplatenamebatchpost.md)
 
-&nbsp;&nbsp;여러 Xbox 사용자 Id에서 일괄 처리 쿼리를 만듭니다.
+&nbsp;&nbsp;Xbox 사용자 Id가 여러 일괄 처리 쿼리를 만듭니다.
 
 <a id="ID4EFC"></a>
 
@@ -52,6 +52,6 @@ sessiondirectory.xboxlive.com
 <a id="ID4EHC"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
-[세션 디렉터리 URI](atoc-reference-sessiondirectory.md)
+[세션 디렉터리 Uri](atoc-reference-sessiondirectory.md)

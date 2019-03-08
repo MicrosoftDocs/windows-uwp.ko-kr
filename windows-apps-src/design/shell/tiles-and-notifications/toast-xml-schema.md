@@ -1,5 +1,5 @@
 ---
-Description: The following article describes all of the properties and elements within the toast content XML payload.
+Description: 다음 문서에서는 알림 콘텐츠 XML 페이로드 내의 모든 속성과 요소를 설명합니다.
 title: 알림 콘텐츠 XML 스키마
 ms.assetid: AF49EFAC-447E-44C3-93C3-CCBEDCF07D22
 label: Toast content XML schema
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b9535cd8c2dd82b0c209919080df9a88bb80ccc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934392"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612778"
 ---
 # <a name="toast-content-xml-schema"></a>알림 콘텐츠 XML 스키마
 
@@ -43,7 +43,7 @@ ms.locfileid: "8934392"
 </toast>
 ```
 
-**&lt;toast&gt;의 특성**
+**특성 &lt;알림&gt;**
 
 launch?
 
@@ -75,7 +75,7 @@ scenario?
 -   시나리오에서 알람, 미리 알림 또는 수신 전화를 표시하지 않을 경우 이 특성이 필요하지 않습니다.
 -   화면에 알림을 계속 표시하기 위한 목적만으로 이 특성을 사용하지 마세요.
 
-**&lt;visual&gt;의 특성**
+**특성 &lt;visual&gt;**
 
 lang?
 
@@ -89,11 +89,11 @@ addImageQuery?
 
 -   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
 
-**&lt;binding&gt;의 특성**
+**특성 &lt;바인딩&gt;**
 
 template?
 
--   \[Important\] template? = "ToastGeneric"
+-   \[중요 한\] 템플릿? = "ToastGeneric"
 -   새로운 적응형 및 대화형 알림 기능을 사용 중이면 레거시 템플릿 대신 "ToastGeneric" 템플릿을 사용하여 시작하는지 확인하세요.
 -   이제 레거시 템플릿을 새 작업과 함께 사용할 수 있지만 이는 의도된 사용 사례가 아니고 작업이 계속될지 보장할 수 없습니다.
 
@@ -109,13 +109,13 @@ addImageQuery?
 
 -   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
 
-**&lt;text&gt;의 특성**
+**특성 &lt;텍스트&gt;**
 
 lang?
 
 -   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
 
-**&lt;image&gt;의 특성**
+**특성 &lt;이미지&gt;**
 
 src
 
@@ -144,7 +144,7 @@ hint-crop?
 -   "none"은 자르기가 없음을 의미하는 기본값입니다.
 -   "circle"은 이미지를 원 모양으로 자릅니다. 연락처의 프로필 이미지, 개인 이미지 등에 이 모양을 사용합니다.
 
-**&lt;audio&gt;의 특성**
+**특성 &lt;오디오&gt;**
 
 src?
 
@@ -177,7 +177,7 @@ silent?
 </toast>
 ```
 
-**&lt;input&gt;의 특성**
+**특성 &lt;입력&gt;**
 
 id
 
@@ -210,7 +210,7 @@ defaultInput?
 -   입력 형식이 "text"이면 이는 문자열 입력으로 처리됩니다.
 -   입력 형식이 "selection"이면 이는 이 입력 요소 내부에서 사용 가능한 선택 항목 중 하나의 ID여야 합니다.
 
-**&lt;selection&gt;의 특성**
+**특성 &lt;선택&gt;**
 
 id
 
@@ -220,7 +220,7 @@ id
 
 -   이 특성은 필수입니다. 이 선택 요소에 대해 표시할 문자열을 제공합니다.
 
-**&lt;action&gt;의 특성**
+**특성 &lt;작업&gt;**
 
 콘텐츠
 
@@ -299,4 +299,4 @@ hint-inputId
         -   입력 ID가 다시 알림 작업의: &lt;input id="snoozeTime"&gt;&lt;/input&gt;&lt;action hint-inputId="snoozeTime"/&gt;와 일치하도록 설정합니다.
         -   선택 ID를 다시 알림 간격(분)을 나타내는 nonNegativeInteger로 지정합니다. &lt;selection id="240" /&gt;은 4시간 간격으로 다시 알림을 의미합니다.
         -   &lt;input&gt;의 defaultInput 값이 &lt;selection&gt; 자식 요소의 ID 중 하나와 일치하는지 확인합니다.
-        -   최대 5개의 &lt;selection&gt; 값을 제공합니다.
+        -   최대 5개 &lt;selection&gt; 값을 제공합니다.

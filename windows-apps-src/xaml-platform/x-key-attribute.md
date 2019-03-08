@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 407ceeb4964e616bdbcacb14620ed1a488a0072b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924773"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618218"
 ---
 # <a name="xkey-attribute"></a>x:Key 특성
 
@@ -54,7 +54,7 @@ DecimalDigit ::= '0'-'9'
 CombiningCharacter::= none
 ```
 
--   문자는 낮은 ASCII 범위에 있는 알파벳 대/소문자, 숫자 및 밑줄(\_) 문자로 제한됩니다.
+-   문자는 ASCII 하한값을 로마 알파벳 대문자 및 소문자, 숫자 및 밑줄을 좀 더 구체적으로 제한 (\_) 문자입니다.
 -   유니코드 문자 범위는 지원되지 않습니다.
 -   이름은 숫자로 시작될 수 없습니다.
 

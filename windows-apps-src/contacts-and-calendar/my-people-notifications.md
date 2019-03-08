@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e4657c9dfb651c1e7f6bb4e2cafdc49d0a11237b
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058724"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630568"
 ---
 # <a name="my-people-notifications"></a>내 피플 알림
 
@@ -67,7 +67,7 @@ experienceType=”shoulderTap”
 
 또한 최상위 알림 메시지 노드에는 보내는 연락처를 지정하는 **hint-people** 매개 변수가 포함되어야 합니다. 이 매개 변수에 가능한 값은 다음과 같습니다.
 
-+ **메일 주소** 
++ **전자 메일 주소** 
     + 예: mailto:johndoe@mydomain.com
 + **전화 번호** 
     + 예: tel:888-888-8888
@@ -134,7 +134,7 @@ XmlDocument xmlContent = new XmlDocument();
 xmlContent.LoadXml(xmlText);
 ```
 
-그런 다음 이 코드를 사용하여 알림을 만들고 보낼 수 있습니다.
+이 코드를 사용하여 알림을 만들고 보낼 수 있습니다.
 
 ```CSharp
 ToastNotification notification = new ToastNotification(xmlContent);
@@ -151,7 +151,7 @@ ToastNotificationManager.CreateToastNotifier().Show(notification);
 내 피플 알림이 알림 메시지로 대체되면 두 번째 내 피플 관련 바인딩은 무시되고 첫 번째 바인딩만 알림 메시지 표시에 사용됩니다. 이는 첫 번째 알림 바인딩에서 대체 페이로드를 제공하는 것이 중요한 이유입니다.
 
 ## <a name="see-also"></a>참고 항목
-+ [내 피플 알림 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
-+ [내 피플 지원 추가](my-people-support.md)
-+ [적응형 알림 메시지](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
++ [내 사용자 알림 사용 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
++ [내 사용자를 추가 지원](my-people-support.md)
++ [적응 알림](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
 + [ToastNotification 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification)

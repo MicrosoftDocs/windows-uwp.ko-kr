@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7faa018dad336b6e22dd236e57585cade38f8a94
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921933"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622518"
 ---
 # <a name="get-a-preview-frame"></a>미리 보기 프레임 가져오기
 
@@ -29,11 +29,11 @@ ms.locfileid: "8921933"
 
 [!code-cs[CreateFormatFrame](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateFormatFrame)]
 
-[**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체가 초기화되고 활성 현재 미리 보기 스트림이 있는 경우 [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926711)를 호출하여 미리 보기 스트림을 가져옵니다. 마지막 단계에서 만든 비디오 프레임을 전달하여 반환된 프레임의 형식을 지정합니다.
+[  **MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체가 초기화되고 활성 현재 미리 보기 스트림이 있는 경우 [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926711)를 호출하여 미리 보기 스트림을 가져옵니다. 마지막 단계에서 만든 비디오 프레임을 전달하여 반환된 프레임의 형식을 지정합니다.
 
 [!code-cs[GetPreviewFrameAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewFrameAsync)]
 
-[**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) 개체의 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) 속성에 액세스하여 미리 보기 프레임의 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 표현을 가져옵니다. 소프트웨어 비트맵 저장, 로드 및 수정에 대한 자세한 내용은 [이미징](imaging.md)을 참조하세요.
+[  **VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) 개체의 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) 속성에 액세스하여 미리 보기 프레임의 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 표현을 가져옵니다. 소프트웨어 비트맵 저장, 로드 및 수정에 대한 자세한 내용은 [이미징](imaging.md)을 참조하세요.
 
 [!code-cs[GetPreviewBitmap](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewBitmap)]
 
@@ -57,7 +57,7 @@ Direct3D API에서 이미지를 사용하려면 미리 보기 프레임의 [**ID
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

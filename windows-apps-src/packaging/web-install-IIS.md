@@ -1,90 +1,90 @@
 ---
 title: IIS 서버에서 UWP 앱 설치
-description: 이 자습서에서는 IIS 서버를 설정, 웹 앱 수 있는 앱 패키지를 호스트할와 확인 호출 앱 설치 관리자를 효과적으로 사용 하는 방법에 설명 합니다.
+description: 이 자습서에는 IIS 서버를 설정 하려면 웹 앱 수 확인 앱 패키지를 호스트 및 호출 한 효과적으로 앱 설치 관리자를 사용 하는 방법을 보여 줍니다.
 ms.date: 05/30/2018
 ms.topic: article
-keywords: windows 10, uwp, 앱 설치 관리자, AppInstaller, 사이드 로드, 관련 설정, 선택적 패키지를 IIS 서버
+keywords: windows 10, uwp, 앱 설치 관리자에서 AppInstaller, 테스트용으로 로드, 관련 설정 (선택 사항) 패키지를 IIS 서버
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a4512229a29a7adc59d6b61edd596eaeb56a5a8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932109"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623568"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>IIS 서버에서 UWP 앱 설치
 
-이 자습서에서는 IIS 서버를 설정, 웹 앱 수 있는 앱 패키지를 호스트할와 확인 호출 앱 설치 관리자를 효과적으로 사용 하는 방법에 설명 합니다.
+이 자습서에는 IIS 서버를 설정 하려면 웹 앱 수 확인 앱 패키지를 호스트 및 호출 한 효과적으로 앱 설치 관리자를 사용 하는 방법을 보여 줍니다.
 
 앱 설치 관리자 앱을 사용하여 개발자 및 IT 전문가가 자신의 CDN(콘텐츠 배달 네트워크)에서 Windows 10 앱을 호스트하여 배포할 수 있습니다. Microsoft Store에 자신의 앱을 게시하고 싶지 않거나 게시할 필요가 없지만 여전히 Windows 10 패키지 및 배포 플랫폼을 활용하고자 하는 기업에 유용합니다. 
 
-## <a name="setup"></a>Setup
+## <a name="setup"></a>설치
 
-이 자습서를 사용 하 여 진행 성공적으로, 하기 위해 다음이 필요 합니다.
+이 자습서를 통해 성공적으로 이동, 다음 해야 합니다.
 
 1. Visual Studio 2017  
 2. IIS 및 웹 개발 도구 
 3. UWP 앱 패키지 - 배포할 앱 패키지
 
-옵션: GitHub의 [Starter 프로젝트](https://github.com/AppInstaller/MySampleWebApp) 이 기능을 사용 하는 방법을 알아보려면 여전히 작업할 앱 패키지에 없는 경우에 유용 합니다.
+선택 사항: [시작 프로젝트](https://github.com/AppInstaller/MySampleWebApp) github입니다. 앱 패키지에서 작업할 필요는 없지만이 기능을 사용 하는 방법을 알아보려면 계속 수 하는 경우에 유용 합니다.
 
-## <a name="step-1---install-iis-and-aspnet"></a>단계 1-IIS와 ASP.NET 설치 
+## <a name="step-1---install-iis-and-aspnet"></a>1 단계-ASP.NET 및 IIS 설치 
 
-[인터넷 정보 서비스](https://www.iis.net/) 시작 메뉴를 통해 설치할 수 있는 Windows 기능입니다. **Windows 기능**에 대 한 **시작 메뉴** 검색 합니다.
+[인터넷 정보 서비스](https://www.iis.net/) 시작 메뉴를 통해 설치할 수 있는 Windows 기능입니다. **시작 메뉴** 검색할 **설정 하는 Windows 기능 사용 /** 합니다.
 
-찾아 **인터넷 정보 서비스** IIS 설치를 선택 합니다.
+찾기 및 선택 **인터넷 정보 서비스** IIS를 설치 합니다.
 
 > [!NOTE]
-> 인터넷 정보 서비스에서 모든 확인란을 선택 하지 않아도 됩니다. **인터넷 정보 서비스** 를 선택 하면 선택한 이벤트만 충분 합니다.
+> 인터넷 정보 서비스에서 모든 확인란을 선택 하지 않아도 됩니다. 선택 하면 선택한 항목만 **인터넷 정보 서비스** 충분 합니다.
 
-ASP.NET 4.5 이상을 설치 해야 합니다. 설치 하기 위해, 찾을 **인터넷 정보 서비스 웹-> 서비스-응용 프로그램 개발 기능 >** 합니다. ASP.NET 4.5 보다 크거나 ASP.NET의 버전을 선택 합니다.
+ASP.NET 4.5 이상 설치 해야 합니다. 을 설치 하려면 찾습니다 **인터넷 정보 서비스 웹 사이트-> 서비스-> 응용 프로그램 개발 기능**합니다. ASP.NET 4.5 이상이 되는 ASP.NET의 버전을 선택 합니다.
 
-![ASP.NET 설치](images/install-asp.png)
+![ASP.NET을 설치 합니다.](images/install-asp.png)
 
-## <a name="step-2---install-visual-studio-2017-and-web-development-tools"></a>2 단계-설치 Visual Studio 2017 및 웹 개발 도구 
+## <a name="step-2---install-visual-studio-2017-and-web-development-tools"></a>2 단계-Visual Studio 2017 설치 및 웹 개발 도구 
 
-[Visual Studio 2017 설치](https://docs.microsoft.com/visualstudio/install/install-visual-studio) 아직 설치 하지 않은 경우. Visual Studio 2017 이미 있는 경우 다음 작업 설치 되어 있는지 확인 합니다. 워크 로드를 설치에 없는 경우 따라야 (시작 메뉴에서 찾을 수) Visual Studio 설치 관리자를 사용 합니다.  
+[Visual Studio 2017 설치](https://docs.microsoft.com/visualstudio/install/install-visual-studio) 아직 설치 하지 않은 경우. Visual Studio 2017에 이미 있는 경우 다음 워크 로드가 설치 되어 있는지 확인 합니다. 워크 로드 설치에 없는 경우 과정을 따르려면 Visual Studio 설치 관리자 (시작 메뉴에서 찾을 수 있음).  
 
-설치 하는 동안 **ASP.NET 및 웹 개발** 및 관심 있는 다른 워크 로드를 선택 합니다. 
+설치 중 선택 **ASP.NET 및 웹 개발** 및 관심 있는 기타 워크 로드. 
 
 설치가 완료 되 면 Visual Studio를 시작 하 고 새 프로젝트를 만듭니다 (**파일** -> **새 프로젝트**).
 
-## <a name="step-3---build-a-web-app"></a>3 단계-웹 앱 제작
+## <a name="step-3---build-a-web-app"></a>3 단계-웹 앱 빌드
 
-**관리자 권한** 으로 Visual Studio 2017을 시작 하 고 **빈** 프로젝트 템플릿을 사용 하 여 새 **Visual C# 웹 응용 프로그램** 프로젝트를 만듭니다. 
+으로 Visual Studio 2017을 시작 **관리자** 을 새로 만듭니다 **시각적 C# 웹 응용 프로그램** 프로젝트를 **빈** 프로젝트 템플릿. 
 
 ![새 프로젝트](images/sample-web-app.png)
 
-## <a name="step-4---configure-iis-with-our-web-app"></a>4 단계-IIS 웹 앱을 사용 하 여 구성 
+## <a name="step-4---configure-iis-with-our-web-app"></a>4 단계-웹 앱을 사용 하 여 IIS를 구성 합니다. 
 
-솔루션 탐색기에서 루트 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+솔루션 탐색기에서 루트 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.
 
-웹 응용 프로그램 속성에서 **웹** 탭을 선택 합니다. **서버** 섹션에서 드롭다운 메뉴에서에서 **로컬 IIS** 를 선택 하 고 **가상 디렉터리 만들기**를 클릭 합니다. 
+웹 앱 속성을 선택 합니다 **웹** 탭 합니다. 에 **서버** 섹션을 선택 **로컬 IIS** 드롭다운 메뉴를 클릭 **가상 디렉터리 만들기**합니다. 
 
 ![웹 탭](images/web-tab.png)
 
-## <a name="step-5---add-an-app-package-to-a-web-application"></a>5 단계-앱 패키지 웹 응용 프로그램 추가 
+## <a name="step-5---add-an-app-package-to-a-web-application"></a>5 단계-웹 응용 프로그램에 앱 패키지를 추가 합니다. 
 
-웹 응용 프로그램을 배포 하려는 앱 패키지를 추가 합니다. 앱 패키지를 사용할 수 없는 경우 GitHub에서 제공 된 [starter 프로젝트 패키지](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) 에 포함 된 앱 패키지를 사용할 수 있습니다. 패키지를 서명한 인증서(MySampleApp.cer)는 GitHub의 샘플도 서명합니다. 인증서가 (9 단계) 앱을 설치 하기 전에 장치에 설치 되어 있어야 합니다.
+웹 응용 프로그램에 배포 하려는 앱 패키지를 추가 합니다. 제공 된 포함 된 앱 패키지를 사용할 수 있습니다 [시작 프로젝트 패키지](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) GitHub 앱 패키지를 사용할 수 없는 경우에 합니다. 패키지를 서명한 인증서(MySampleApp.cer)는 GitHub의 샘플도 서명합니다. 인증서가 앱 (9 단계)를 설치 하기 전에 장치에 설치 되어 있어야 합니다.
 
-라는 웹 앱에 추가 된 새 폴더 starter 프로젝트 웹 응용 프로그램에서 `packages` 앱 패키지 배포를 포함 하는 합니다. Visual Studio에서 폴더를 만들려면 솔루션 탐색기의 루트를 마우스 오른쪽 단추로 클릭을 **추가** -> **새 폴더** 이름을 `packages`. 앱 패키지 폴더에 추가 하려면 마우스 오른쪽 단추로 클릭 합니다 `packages` 폴더 **추가**선택 하 고 -> **기존 항목...** 및 앱을 검색 위치를 패키지 합니다. 
+시작 프로젝트 웹 응용 프로그램에서 새 폴더를 호출 하는 웹 앱에 추가한 `packages` 배포 앱 패키지를 포함 하는 합니다. 솔루션 탐색기에서 선택의 루트에 Visual Studio에서 폴더를 만들려면 마우스 오른쪽 단추로 클릭 **추가** -> **새 폴더** 하 고 이름을 `packages`입니다. 앱 패키지에 폴더를 추가 하려면 마우스 오른쪽 단추로 클릭 합니다 `packages` 선택한 폴더 **추가** -> **기존 항목...**  앱 패키지 위치를 찾습니다. 
 
 ![패키지 추가](images/add-package.png)
 
 ## <a name="step-6---create-a-web-page"></a>6 단계-웹 페이지 만들기
 
-이 샘플 웹 응용 프로그램 간단한 HTML을 사용합니다. 사용자는 필요에 맞게 필요에 따라 웹 응용 프로그램을 빌드할 수 있습니다. 
+샘플 웹 앱이 간단한 HTML을 사용합니다. 필요에 따라 필요에 따라 웹 앱을 빌드할 수 있습니다. 
 
-솔루션 탐색기의 루트 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **추가**선택 합니다 -> **새 항목**을 **웹** 섹션에서 새 **HTML 페이지** 를 추가 합니다.
+솔루션 탐색기의 루트 프로젝트를 마우스 오른쪽 단추로 클릭 **추가** -> **새 항목**, 새로 추가한 **HTML 페이지** 에서 **웹**섹션입니다.
 
-HTML 페이지를 만든 후 솔루션 탐색기에서 HTML 페이지에서 마우스 오른쪽 단추로 클릭 하 고 **시작 페이지로 설정**을 선택 합니다.  
+HTML 페이지 만들어지면 솔루션 탐색기에서 HTML 페이지를 마우스 오른쪽 단추로 클릭 하 고 선택 **시작 페이지로 설정**합니다.  
 
-코드 편집기 창에서 열려는 HTML 파일을 두 번 클릭 합니다. 이 자습서에서는 앱 설치 관리자 앱이 Windows 10 앱을 설치 하는 성공적으로 호출 하는 웹 페이지에서 필수 요소에만 사용 됩니다. 
+코드 편집기 창에서 열려는 HTML 파일을 두 번 클릭 합니다. 이 자습서에서는 Windows 10 앱을 설치 하는 성공적으로 앱 설치 관리자 앱을 호출 하려면 웹 페이지에서 필수 요소만 사용 됩니다. 
 
-웹 페이지에 다음 HTML 코드를 포함 합니다. 운영 체제를 사용 하 여 앱 설치 관리자를 등록 하는 사용자 지정 체계를 사용 하 여 성공적으로 호출 하는 앱 설치 관리자를 관건은: `ms-appinstaller:?source=`. 자세한 내용은 아래 코드 예제를 참조 하세요.
+웹 페이지에 다음 HTML 코드를 포함 합니다. 성공적으로 앱 설치 관리자를 호출 하는 키 OS를 사용 하 여 앱 설치 관리자를 등록 하는 사용자 지정 체계를 사용 하는 것: `ms-appinstaller:?source=`합니다. 자세한 내용은 아래 코드 예제를 참조 하세요.
 
 > [!NOTE]
-> VS 솔루션의 웹 탭에서 프로젝트 Url 일치 하는 사용자 지정 스키마 뒤에 지정 된 URL 경로 확인 합니다.
+> 사용자 지정 체계 VS 솔루션의 웹 탭에서 프로젝트 Url과 일치 하는 뒤에 지정 된 URL 경로 확인 합니다.
  
 ```HTML
 <html>
@@ -98,9 +98,9 @@ HTML 페이지를 만든 후 솔루션 탐색기에서 HTML 페이지에서 마�
 </html>
 ```
 
-## <a name="step-7---configure-the-web-app-for-app-package-mime-types"></a>7 단계-앱 패키지 MIME 형식에 대 한 웹 응용 프로그램 구성
+## <a name="step-7---configure-the-web-app-for-app-package-mime-types"></a>7 단계-앱 패키지 MIME 형식에 대 한 웹 앱 구성
 
-솔루션 탐색기에서 **Web.config** 파일을 열고 내에서 다음 줄을 추가 합니다 `<configuration>` 요소입니다. 
+엽니다는 **Web.config** 내에서 다음 줄을 추가한 솔루션 탐색기에서 파일을 `<configuration>` 요소. 
 
 ```xml
 <system.webServer>
@@ -115,11 +115,11 @@ HTML 페이지를 만든 후 솔루션 탐색기에서 HTML 페이지에서 마�
 </system.webServer>
 ```
 
-## <a name="step-8---add-loopback-exemption-for-app-installer"></a>-8 단계 앱 설치 관리자에 대 한 루프백 예외를 추가 합니다.
+## <a name="step-8---add-loopback-exemption-for-app-installer"></a>8 단계-앱 설치 관리자에 대 한 루프백 제외를 추가 합니다.
 
-네트워크 격리로 인해 앱 설치 관리자와 같은 UWP 앱은 같은 IP 루프백 주소를 사용 하 여 제한 된 http://localhost/. 로컬 IIS 서버를 사용 하면 앱 설치 관리자 루프백 제외 목록에 추가 되어야 합니다. 
+네트워크 격리로 인해 앱 설치 관리자와 같은 UWP 앱은 같은 IP 루프백 주소를 사용 하도록 제한 http://localhost/합니다. 로컬 IIS 서버를 사용 하는 경우 앱 설치 관리자는 루프백 제외 목록에 추가 되어야 합니다. 
 
-이렇게 하려면 **관리자** 권한으로 **명령 프롬프트** 열고 하 고 다음을 입력: ' ' 명령줄 CheckNetIsolation.exe LoopbackExempt-a-n="microsoft.desktopappinstaller_8wekyb3d8bbwe"
+이 작업을 수행 하려면 엽니다 **명령 프롬프트** 으로 **관리자** 하 고 다음을 입력: ' ' 명령줄 CheckNetIsolation.exe LoopbackExempt-a-n="microsoft.desktopappinstaller_8wekyb3d8bbwe"
 ```
 
 To verify that the app is added to the exempt list, use the following command to display the apps in the loopback exempt list: 
@@ -127,11 +127,11 @@ To verify that the app is added to the exempt list, use the following command to
 CheckNetIsolation.exe LoopbackExempt -s
 ```
 
-찾아야 `microsoft.desktopappinstaller_8wekyb3d8bbwe` 목록에 있습니다.
+찾아야 `microsoft.desktopappinstaller_8wekyb3d8bbwe` 목록에서입니다.
 
-앱 설치 관리자를 통해 앱 설치의 로컬 유효성 검사가 완료 되 면이 단계에서 추가한 루프백 예외를 제거할 수 있습니다.
+앱 설치 관리자를 통해 앱 설치의 로컬 유효성 검사가 완료 되 면에서이 단계에서 추가한 루프백 예외를 제거할 수 있습니다.
 
-' ' 명령줄 CheckNetIsolation.exe LoopbackExempt-d-n="microsoft.desktopappinstaller_8wekyb3d8bbwe"
+```Command Line CheckNetIsolation.exe LoopbackExempt -d -n="microsoft.desktopappinstaller_8wekyb3d8bbwe"
 ```
 
 ## Step 9 - Run the Web App 

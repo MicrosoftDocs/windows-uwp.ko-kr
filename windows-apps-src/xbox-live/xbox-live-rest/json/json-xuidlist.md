@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d8172063d40f8df77827ab845c4dfd0c0799811
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946856"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627918"
 ---
 # <a name="xuidlist-json"></a>XuidList(JSON)
-작업을 수행 하는 XUIDs의 목록입니다. 
+작업을 수행 하는 데 기반이 XUIDs의 목록입니다. 
 <a id="ID4EN"></a>
 
  
@@ -23,9 +23,9 @@ ms.locfileid: "8946856"
  
 XuidList 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| xuids| 문자열의 배열| 작업을 수행 해야 하는 또는 데이터 반환할지 Xbox 사용자 ID (XUID) 값 목록입니다.| 
+| xuids| 문자열의 배열| 작업을 수행 해야 하거나 데이터를 반환할 Xbox 사용자 ID (XUID) 값 목록입니다.| 
   
 <a id="ID4EMB"></a>
 
@@ -53,16 +53,16 @@ XuidList 개체에 다음과 같이 지정 합니다.
 <a id="ID4EXB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
   
 <a id="ID4EBC"></a>
 
  
-##### <a name="reference"></a>참조 
+##### <a name="reference"></a>참고자료 
 
-[POST (/users/{ownerId}/people/xuids)](../uri/people/uri-usersowneridpeoplexuidspost.md)
+[POST (/users/ {ownerId} / 사용자/xuids)](../uri/people/uri-usersowneridpeoplexuidspost.md)
 
    

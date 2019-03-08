@@ -1,5 +1,5 @@
 ---
-Description: Incorporate speech into your apps using Cortana voice commands, speech recognition, and speech synthesis.
+Description: Cortana 음성 명령, 음성 인식, 음성 합성을 사용하여 음성 명령을 앱에 통합합니다.
 title: 음성 조작
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 09787d5a83415b65b8946860edb5b7cad09a5846
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050816"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637078"
 ---
 # <a name="speech-interactions"></a>음성 조작
 
@@ -80,14 +80,14 @@ ms.locfileid: "9050816"
 
 -   미리 정의된 문법(받아쓰기 또는 웹 검색)
 
-    -   **듣는 중** 화면
+    -   **Listening** 화면
     -   **생각하는 중** 화면
-    -   **들은 내용** 화면 또는 오류 화면
+    -   **Heard you say** 화면 또는 오류 화면
 -   단어 또는 구 목록 또는 SRGS 문법 파일
 
-    -   **듣는 중** 화면
+    -   **Listening** 화면
     -   **확인 내용** 화면 - 사용자가 말한 내용을 둘 이상의 가능한 결과로 해석할 수 있는 경우
-    -   **들은 내용** 화면 또는 오류 화면
+    -   **Heard you say** 화면 또는 오류 화면
 
 **듣는 중** 화면에서 다음을 수행할 수 있습니다.
 
@@ -207,11 +207,11 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 | 항목 | 설명 |
 | --- | --- |
 | [음성 인식](speech-recognition.md) | 음성 인식 기능을 사용하여 입력을 제공하고, 동작이나 명령을 지정하고 작업을 수행합니다. |
-| [음성 인식기 언어 지정](specify-the-speech-recognizer-language.md) | 음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다. |
+| [음성 인식기의 언어를 지정 합니다.](specify-the-speech-recognizer-language.md) | 음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다. |
 | [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md) | 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다. |
 | [연속 받아쓰기 사용](enable-continuous-dictation.md) |긴 형식의 연속 받아쓰기 음성 입력을 캡처 및 인식하는 방법을 알아봅니다. |
-| [오디오 입력 관련 문제 관리](manage-issues-with-audio-input.md) | 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다. |
-| [음성 인식 시간 제한 설정](set-speech-recognition-timeouts.md) | Set how long a speech recognizer ignores silence or unrecognizable sounds (babble) and continues listening for speech input. |
+| [오디오 입력을 사용 하 여 문제를 관리 합니다.](manage-issues-with-audio-input.md) | 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다. |
+| [음성 인식 시간 제한 설정](set-speech-recognition-timeouts.md) | 음성 인식기에서 무음 또는 인식할 수 없는 소리(왁자지껄)를 무시하고 계속해서 음성 입력에 대해 수신 대기하는 시간을 설정합니다. |
 
 ## <a name="related-articles"></a>관련 문서
 

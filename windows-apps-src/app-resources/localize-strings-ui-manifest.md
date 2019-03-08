@@ -1,5 +1,5 @@
 ---
-Description: If you want your app to support different display languages, and you have string literals in your code or XAML markup or app package manifest, then move those strings into a Resources File (.resw). You can then make a translated copy of that Resources File for each language that your app supports.
+Description: 앱에서 다른 표시 언어를 지원하길 원하고 코드 또는 XAML 태그 또는 앱 패키지 매니페스트에 문자열 리터럴이 있는 경우, 해당 문자열을 리소스 파일(.resw)로 이동합니다. 그런 다음 앱에서 지원하는 언어별로 해당 리소스 파일의 번역본을 만들 수 있습니다.
 title: UI와 앱 패키지 매니페스트에 문자열 지역화
 ms.assetid: E420B9BB-C0F6-4EC0-BA3A-BA2875B69722
 label: Localize strings in your UI and app package manifest
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 321f8efc1475bc153102f3f8157cd2d094b37077
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049055"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630138"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI와 앱 패키지 매니페스트에 문자열 지역화
 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요.
@@ -28,12 +28,12 @@ ms.locfileid: "9049055"
 1. 앱의 기본 언어를 설정합니다.
     1. Visual Studio에서 솔루션을 연 상태로 `Package.appxmanifest`를 엽니다.
     2. 응용 프로그램 탭에서 기본 언어가 제대로 설정되어 있는지 확인합니다(예: "en" 또는 "en-US"). 나머지 단계에서는 기본 언어를 "en-US"로 설정했다고 가정합니다.
-    <br>**참고**최소한이 기본 언어에 대해 지역화 된 문자열 리소스를 제공 해야 합니다. 이러한 리소스는 사용자의 기본 설정 언어 또는 표시 언어 설정에 대해 더 나은 일치를 찾을 수 없는 경우 로드됩니다.
+    <br>**참고** 최소한이 기본 언어에 대해 지역화 된 문자열 리소스를 제공 해야 합니다. 이러한 리소스는 사용자의 기본 설정 언어 또는 표시 언어 설정에 대해 더 나은 일치를 찾을 수 없는 경우 로드됩니다.
 2. 기본 언어에 대한 리소스 파일(.resw)을 만듭니다.
     1. 프로젝트 노드에서 새 폴더를 만들고 이름을 "Strings"로 지정합니다.
     2. `Strings` 아래에 새 하위 폴더를 만들고 이름을 "en-US"로 지정합니다.
     3. `en-US`아래에서 새 리소스 파일(.resw)을 만들고 이름이 "Resources.resw"인지 확인합니다.
-    <br>**참고**포트 하려는.NET 리소스 파일 (.resx)가 경우 [XAML 및 UI 포팅](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization)참조 하세요.
+    <br>**참고** .NET 리소스 파일 (.resx) 포트를 추가 하려는 경우 참조 [이식 XAML 및 UI](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization)합니다.
 3.  `Resources.resw`를 열고 이러한 문자열 리소스를 추가합니다.
 
     `Strings/en-US/Resources.resw`
@@ -53,13 +53,13 @@ ms.locfileid: "9049055"
 <TextBlock x:Uid="Greeting"/>
 ```
 
-실행 시 `\Strings\en-US\Resources.resw`가 로드됩니다(현재 이것이 프로젝트의 유일한 리소스 파일입니다). **TextBlock**의 **x:Uid** 지시어로 조회를 실행하여 문자열 리소스 식별자 "Greeting"을 포함하는 `Resources.resw` 내에 있는 속성 식별자를 찾을 수 있습니다. "Greeting.Text" 및 "Greeting.Width" 속성 식별자가 검색되고 해당 값은 **TextBlock**에 적용되며 태그에 로컬로 설정된 모든 값을 재정의합니다. "Greeting.Foreground" 값 또한 사용자가 추가한 경우 적용됩니다. 그러나 유일한 속성 식별자는 XAML 태그 요소의 속성을 설정하는 데 사용되기 때문에 이 TextBlock에서 **x:Uid**를 "Farewell"로 설정해도 영양을 미치지 않습니다. `Resources.resw` *does*에 문자열 리소스 식별자 "Farewell"가 포함되어 있지만 이에 대한 속성 식별자는 포함하지 않습니다.
+실행 시 `\Strings\en-US\Resources.resw`가 로드됩니다(현재 이것이 프로젝트의 유일한 리소스 파일입니다). **TextBlock**의 **x:Uid** 지시어로 조회를 실행하여 문자열 리소스 식별자 "Greeting"을 포함하는 `Resources.resw` 내에 있는 속성 식별자를 찾을 수 있습니다. "Greeting.Text" 및 "Greeting.Width" 속성 식별자가 검색되고 해당 값은 **TextBlock**에 적용되며 태그에 로컬로 설정된 모든 값을 재정의합니다. "Greeting.Foreground" 값 또한 사용자가 추가한 경우 적용됩니다. 그러나 유일한 속성 식별자는 XAML 태그 요소의 속성을 설정하는 데 사용되기 때문에 이 TextBlock에서 **x:Uid**를 "Farewell"로 설정해도 영양을 미치지 않습니다. `Resources.resw` *않습니다* "발전"의 문자열 리소스 id가 포함 되어 있지만 없습니다 속성 식별자를 포함 합니다.
 
 XAML 요소에 문자열 리소스 식별자를 할당할 해당 식별자에 대한 *모든*이 XAML 요소에 적절한지 확인하세요. 예를 들어 **TextBlock**에서 `x:Uid="Greeting"`을 설정하면 **TextBlock** 유형에 Text 속성이 있기 때문에 "Greeting.Text"가 확인됩니다. 그러나 **Button**에 `x:Uid="Greeting"`을 설정하는 경우 **Button** 형식의 텍스트 속성이 없기 때문에 "Greeting.Text"는 런타임 오류를 발생합니다. 이 경우에 대한 한 가지 해결 방법은 "ButtonGreeting.Content"라는 속성 식별자를 작성하고 **Button**에 `x:Uid="ButtonGreeting"`을 설정하는 것입니다.
 
 리소스 파일에서 **너비**를 설정하는 대신 콘텐츠에 동적으로 크기를 맞추는 컨트롤을 허용하도록 할 수 있습니다.
 
-**참고** [연결 된 속성](../xaml-platform/attached-properties-overview.md)에 대 한.resw 파일의 이름 열에 특수 구문이 필요 합니다. 예를 들어 "Greeting" 식별자에 대한 [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties.NameProperty) 연결된 속성에 대한 값을 설정하려면 이름 열에서 이를 입력합니다.
+**참고** 에 대 한 [연결 된 속성](../xaml-platform/attached-properties-overview.md)를.resw 파일의 이름 열에서 특수 구문을 사용 해야 합니다. 예를 들어 "Greeting" 식별자에 대한 [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties.NameProperty) 연결된 속성에 대한 값을 설정하려면 이름 열에서 이를 입력합니다.
 
 ```xml
 Greeting.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
@@ -69,7 +69,7 @@ Greeting.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
 명시적으로 단순한 문자열 리소스 식별자를 기반으로 문자열 리소스를 로드할 수 있습니다.
 
 > [!NOTE]
-> 백그라운드/작업자 스레드에서 *실행되었을 수 있는* **GetForCurrentView** 메서드를 호출하는 경우 해당 호출을 `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` 테스트로 보호하세요. 백그라운드/작업자 스레드에서 **GetForCurrentView**를 호출하면 예외 "CoreWindow가 없는 스레드에서는 *&lt;typename&gt;을(를) 만들 수 없습니다.*"가 발생합니다.
+> 백그라운드/작업자 스레드에서 *실행되었을 수 있는***GetForCurrentView** 메서드를 호출하는 경우 해당 호출을 `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` 테스트로 보호하세요. 백그라운드/작업자 스레드에서 **GetForCurrentView**를 호출하면 예외 "CoreWindow가 없는 스레드에서는 *&lt;typename&gt;을(를) 만들 수 없습니다.*"가 발생합니다.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
@@ -88,13 +88,13 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 클래스 라이브러리(유니버설 Windows) 또는 [Windows 런타임 라이브러리(유니버설 Windows)](../winrt-components/index.md) 프로젝트 내에서 동일할 코드를 사용할 수 있습니다. 런타임 시 라이브러리를 호스팅하는 앱의 리소스가 로드됩니다. 앱에는 뛰어난 지역화 수준이 있을 가능성이 높으므로 라이브러리를 호스팅하는 앱에서 리소스를 로드하는 것이 좋습니다. 라이브러리는 리소스를 제공한 다음 호스팅 앱에 이러한 리소스를 입력으로 교체하는 옵션을 제공해야 합니다.
 
-리소스 이름을 분할 하는 경우 (포함 된 "." 문자), 다음 바꾸기 점으로 슬래시 ("/") 문자를 리소스 이름입니다. 속성 식별자 예 포함 되는 점입니다. 따라서 코드에서 그 중 하나를 로드 하기 위해이 substition 수행 해야 합니다.
+리소스 이름을 분할 하는 경우 (포함 된 "." 문자), 다음 바꾸기 점 앞에 슬래시 ("/")를 사용 하 여 리소스 이름에는 문자입니다. 속성 식별자에는 예를 들어 점; 포함 따라서이 substition 코드에서 이러한 값 중 하나를 로드 하기 위해 수행 해야 합니다.
 
 ```csharp
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
 ```
 
-잘 모르겠으면, 앱의 PRI 파일을 덤프 하 [MakePri.exe](makepri-exe-command-options.md) 를 사용할 수 있습니다. 각 리소스의 `uri` 덤프 파일에 표시 됩니다.
+사용할 수 있는 확실 하지 않은 경우 [MakePri.exe](makepri-exe-command-options.md) 앱의 PRI 파일을 덤프 합니다. 각 리소스의 `uri` 덤프 파일에 표시 됩니다.
 
 ```xml
 <ResourceMapSubtree name="Fare"><NamedResource name="Well" uri="ms-resource://<GUID>/Resources/Fare/Well">...
@@ -116,7 +116,7 @@ this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <da
 ## <a name="localize-the-string-resources"></a>문자열 리소스 지역화
 1. 다른 언어에 대한 리소스 파일(.resw)의 복사본을 만듭니다.
     1. "Strings" 아래에서 새 하위 폴더를 만들고 독일어(독일)에 대해 이름을 "de-DE"로 지정합니다.
-   <br>**참고**폴더 이름에 대 한 모든 [bcp-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)를 사용할 수 있습니다. 언어 한정자 및 일반 언어 태그 목록에 대한 자세한 내용은 [언어, 규모 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)을 참조하세요.
+   <br>**참고** 폴더 이름에 대해 사용할 수 있습니다 [BCP-47 언어 태그로](https://go.microsoft.com/fwlink/p/?linkid=227302)합니다. 언어 한정자 및 일반 언어 태그 목록에 대한 자세한 내용은 [언어, 규모 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)을 참조하세요.
    2. `Strings/de-DE` 폴더의 `Strings/en-US/Resources.resw`의 복사본을 만듭니다.
 2. 문자열을 번역합니다.
     1. `Strings/de-DE/Resources.resw`를 열고 값 열에서 값을 번역합니다. 설명을 번역할 필요가 없습니다.
@@ -132,7 +132,7 @@ this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <da
 ![리소스 추가, 프랑스어](images/addresource-fr-fr.png)
 
 ## <a name="test-your-app"></a>앱 테스트
-기본 표시 언어에 대해 앱을 테스트합니다. 그런 다음 **설정** > **시간 및 언어** > **지역 및 언어** > **언어**에서 표시 언어를 변경하고 앱을 다시 테스트할 수 있습니다. UI와 셸의 문자열을 확인합니다(예를 들어, 사용자의 표시 이름이 제목 표시줄 및 타일의 짧은 이름).
+기본 표시 언어를 위한 앱 테스트 그런 다음 **설정** > **시간 및 언어** > **지역 및 언어** > **언어**에서 표시 언어를 변경하고 앱을 다시 테스트할 수 있습니다. UI와 셸의 문자열을 확인합니다(예를 들어, 사용자의 표시 이름이 제목 표시줄 및 타일의 짧은 이름).
 
 **참고** 표시 언어 설정과 일치하는 폴더 이름을 찾을 수 있을 경우 해당 폴더 내의 리소스 파일이 로드됩니다. 그렇지 않은 경우 앱의 기본 언어에 대한 리소스로 대체됩니다.
 
@@ -147,12 +147,12 @@ this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <da
 <TextBlock x:Uid="/ErrorMessages/PasswordTooWeak"/>
 ```
 
-`Resources.resw`가 *아닌* 리소스 파일에 대한 문자열 리소스 식별자 전에 `/<resources-file-name>/`을 추가하기만 하면 됩니다. 이는 "Resources.resw"가 기본 파일 이름이므로 파일 이름을 생략한 경우 이것이 파일 이름으로 간주됩니다(이 항목의 이전 예제에서 설명).
+추가 해야 `/<resources-file-name>/` 리소스 파일에 대 한 문자열 리소스 식별자 앞 *이외의* `Resources.resw`합니다. 이는 "Resources.resw"가 기본 파일 이름이므로 파일 이름을 생략한 경우 이것이 파일 이름으로 간주됩니다(이 항목의 이전 예제에서 설명).
 
 아래의 코드 예제는 `ErrorMessages.resw`가 이름이 "MismatchedPasswords"고 값이 오류를 설명하는 리소스를 포함한다고 가정합니다.
 
 > [!NOTE]
-> 백그라운드/작업자 스레드에서 *실행되었을 수 있는* **GetForCurrentView** 메서드를 호출하는 경우 해당 호출을 `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` 테스트로 보호하세요. 백그라운드/작업자 스레드에서 **GetForCurrentView**를 호출하면 예외 "CoreWindow가 없는 스레드에서는 *&lt;typename&gt;을(를) 만들 수 없습니다.*"가 발생합니다.
+> 백그라운드/작업자 스레드에서 *실행되었을 수 있는***GetForCurrentView** 메서드를 호출하는 경우 해당 호출을 `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` 테스트로 보호하세요. 백그라운드/작업자 스레드에서 **GetForCurrentView**를 호출하면 예외 "CoreWindow가 없는 스레드에서는 *&lt;typename&gt;을(를) 만들 수 없습니다.*"가 발생합니다.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ErrorMessages");
@@ -171,13 +171,13 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 
 "AppDisplayName" 리소스를 `Resources.resw`에서 `ManifestResources.resw`로 이동하고자 하는 경우 앱 패키지 매니페스트에서 `ms-resource:AppDisplayName`을 `ms-resource:/ManifestResources/AppDisplayName`으로 변경합니다.
 
-리소스 파일 이름이 있는 분리 된 경우 (포함 된 "." 문자)를 참조 하는 경우 이름에 점이 둡니다. 리소스 이름에 대 한 것 처럼 슬래시 ("/") 문자로 점을 대체 **하지 않습니다** .
+리소스 파일 이름을 분할 하는 경우 (포함 된 "." 문자)를 참조 하는 경우 이름에 점 둡니다. **없는** 대체 문자, 리소스 이름에 대 한 것 처럼 슬래시 ("/")를 사용 하 여 점입니다.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
 ```
 
-잘 모르겠으면, 앱의 PRI 파일을 덤프 하 [MakePri.exe](makepri-exe-command-options.md) 를 사용할 수 있습니다. 각 리소스의 `uri` 덤프 파일에 표시 됩니다.
+사용할 수 있는 확실 하지 않은 경우 [MakePri.exe](makepri-exe-command-options.md) 앱의 PRI 파일을 덤프 합니다. 각 리소스의 `uri` 덤프 파일에 표시 됩니다.
 
 ```xml
 <ResourceMapSubtree name="Err.Msgs"><NamedResource name="MismatchedPasswords" uri="ms-resource://<GUID>/Err.Msgs/MismatchedPasswords">...
@@ -203,7 +203,7 @@ this.myXAMLTextBlockElement.Text = resourceMap.GetValue("Farewell", resourceCont
 resourceContext.Languages = new string[] { "de-DE" };
 ```
 
-전역 수준에서 같은 효과를 적용하려면 기본 **ResourceContext**의 한정자 값을 재정의*하면 됩니다*. 그러나 이 대신 [**ResourceContext.SetGlobalQualifierValue**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)를 호출하는 것이 좋습니다. **SetGlobalQualifierValue**를 호출하는 값을 한 번 설정하면 조회를 위해 해당 값을 사용할 때마다 기본 **ResourceContext**에 적용됩니다.
+전역 수준에서 같은 효과를 적용하려면 기본 **ResourceContext**의 한정자 값을 재정의*할 수* 있습니다. 그러나 이 대신 [**ResourceContext.SetGlobalQualifierValue**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)를 호출하는 것이 좋습니다. **SetGlobalQualifierValue**를 호출하는 값을 한 번 설정하면 조회를 위해 해당 값을 사용할 때마다 기본 **ResourceContext**에 적용됩니다.
 
 ```csharp
 Windows.ApplicationModel.Resources.Core.ResourceContext.SetGlobalQualifierValue("Language", "de-DE");
@@ -257,27 +257,27 @@ private void RefreshUIText()
 ## <a name="loading-strings-from-a-class-library-or-a-windows-runtime-library"></a>클래스 라이브러리 또는 Windows 런타임 라이브러리에서 문자열 로드
 참조 클래스 라이브러리(유니버설 Windows) 또는 [Windows 런타임 라이브러리(유니버설 Windows)](../winrt-components/index.md)의 문자열 리소스는 일반적으로 빌드 과정에서 포함되는 패키지의 하위 폴더에 추가됩니다. 이러한 문자열의 리소스 식별자는 대개 *LibraryName/ResourcesFileName/ResourceIdentifier*의 형식을 띱니다.
 
-라이브러리는 자체 리소스에 대한 ResourceLoader를 가져올 수 있습니다. 예를 들어 다음 코드는 라이브러리 또는 참조 하는 앱이 라이브러리의 문자열 리소스에 대 한 ResourceLoader 가져오는 방법을 보여 줍니다.
+라이브러리는 자체 리소스에 대한 ResourceLoader를 가져올 수 있습니다. 예를 들어, 다음 코드를 참조 하는 앱 또는 라이브러리는 라이브러리의 문자열 리소스에 대 한 ResourceLoader를 가져올 수 있습니다 하는 방법을 보여 줍니다.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ContosoControl/Resources");
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
 ```
 
-Windows 런타임 라이브러리 (유니버설 Windows), 기본 네임 스페이스를 분할 하는 경우에 대 한 (포함 된 "." 문자), 리소스 맵 이름에 점이 사용 합니다.
+Windows 런타임 라이브러리 (유니버설 Windows), 기본 네임 스페이스는 분할 된 경우 (포함 된 "." 문자), 다음 리소스 맵 이름에 사용 합니다.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-클래스 라이브러리 (유니버설 Windows)에 대해 수행할 필요가 없습니다. 확실 하지에서 [MakePri.exe](makepri-exe-command-options.md) 구성 요소 또는 라이브러리의 PRI 파일을 덤프를 사용할 수 있습니다. 각 리소스의 `uri` 덤프 파일에 표시 됩니다.
+클래스 라이브러리 (유니버설 Windows)에 대 한 작업을 수행 하지 않아도 됩니다. 사용할 수 있는 확실 하지 않은 경우 [MakePri.exe](makepri-exe-command-options.md) 구성 요소 또는 라이브러리의 PRI 파일을 덤프 합니다. 각 리소스의 `uri` 덤프 파일에 표시 됩니다.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>다른 패키지에서 문자열 로드
-앱 패키지에 대 한 리소스를 관리 하 고 패키지를 통해 액세스 현재[**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)에서 액세스할 수 있는 최상위[**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) 소유 합니다. 각 패키지 내에서 다양 한 구성 요소는 ownResourceMapsubtrees [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)통해 액세스할 수 있을 수 있습니다.
+리소스 앱 패키지를 관리 하 고 패키지를 통해서만 액세스에 대 한 소유 최상위 [**ResourceMap** ](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) 현재에서 액세스할 수 있는 [**ResourceManager** ](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live). 각 패키지 내에서 다양 한 구성 요소를 통해 액세스할 수 있는 자체 ResourceMap 하위 트리를 가질 수 있습니다 [ **ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)합니다.
 
 프레임워크 패키지는 절대 리소스 식별자 URI로 자체 리소스에 액세스할 수 있습니다. [URI 스키마](uri-schemes.md)도 참조하세요.
 
@@ -287,10 +287,10 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 * [MapChanged](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)
 
 ## <a name="related-topics"></a>관련 항목
-* [XAML 및 UI 포팅](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization)
-* [x:Uid 지시어](../xaml-platform/x-uid-directive.md)
-* [연결된 속성](../xaml-platform/attached-properties-overview.md)
-* [지역화할 수 있는 매니페스트 항목](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
+* [XAML 및 UI를 이식합니다.](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization)
+* [x:Uid directive](../xaml-platform/x-uid-directive.md)
+* [연결 된 속성](../xaml-platform/attached-properties-overview.md)
+* [매니페스트 지역화 가능한 항목](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
 * [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [언어, 규모 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)
-* [문자열 리소스를 로드하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)
+* [언어, 배율 및 다른 한정자에 대 한 리소스를 조정 합니다.](tailor-resources-lang-scale-contrast.md)
+* [문자열 리소스를 로드 하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)

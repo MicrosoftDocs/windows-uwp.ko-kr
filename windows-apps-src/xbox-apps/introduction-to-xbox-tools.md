@@ -1,17 +1,17 @@
 ---
 title: Xbox One 도구 소개
-description: Windows 장치 포털을 사용하는 Xbox One 특정 도구 개발자 홈입니다.
+description: Windows Device Portal을 사용하는 Xbox One 특정 도구 개발자 홈입니다.
 ms.date: 10/04/2017
 ms.topic: article
 keywords: Windows 10, uwp, xbox one, 도구
 ms.assetid: 6eaf376f-0d7c-49de-ad78-38e689b43658
 ms.localizationpriority: medium
 ms.openlocfilehash: ed106095d83ed0c6e055d22a1a0cf229380cff71
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945895"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609328"
 ---
 # <a name="introduction-to-xbox-one-tools"></a>Xbox One 도구 소개
 
@@ -56,6 +56,6 @@ Xbox One 본체에서 Xbox 장치 포털을 사용하도록 설정하려면:
 Xbox 개발자 모드 도우미는 PC를 종료하지 않고 콘솔에서 작업할 수 있는 도구입니다. 앱에서 콘솔 화면을 보고 입력을 보낼 수 있습니다. 자세한 내용은 [Xbox 개발자 모드 도우미](xbox-dev-mode-companion.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
-- [UWP용으로 개발하는 경우 Xbox One에서 Fiddler를 사용하는 방법](uwp-fiddler.md)
-- [Windows 장치 포털 개요](../debug-test-perf/device-portal.md)
-- [Xbox One의 UWP](index.md)
+- [UWP 용 개발 하는 경우 Xbox One을 사용 하 여 Fiddler를 사용 하는 방법](uwp-fiddler.md)
+- [Windows Device Portal 개요](../debug-test-perf/device-portal.md)
+- [Xbox One에서 UWP](index.md)

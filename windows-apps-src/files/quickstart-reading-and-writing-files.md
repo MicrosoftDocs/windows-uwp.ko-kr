@@ -4,7 +4,7 @@ title: 파일 만들기, 쓰기 및 읽기
 description: StorageFile 개체를 사용하여 파일을 읽고 씁니다.
 ms.date: 12/19/2018
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 dev_langs:
 - csharp
@@ -12,32 +12,32 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 6ff7b37eee4f2b9228a635a117e164d7d9859629
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116069"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610998"
 ---
 # <a name="create-write-and-read-a-file"></a>파일 만들기, 쓰기 및 읽기
 
-**중요 API**
+**중요 한 Api**
 
 -   [**StorageFolder 클래스**](/uwp/api/windows.storage.storagefolder)
 -   [**StorageFile 클래스**](/uwp/api/windows.storage.storagefile)
 -   [**FileIO 클래스**](/uwp/api/windows.storage.fileio)
 
-[**StorageFile**](/uwp/api/windows.storage.storagefile) 개체를 사용하여 파일을 읽고 씁니다.
+[  **StorageFile**](/uwp/api/windows.storage.storagefile) 개체를 사용하여 파일을 읽고 씁니다.
 
 > [!NOTE]
-> 전체 샘플 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)을 참조 하세요.
+> 전체 샘플을 참조 하세요. 합니다 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
--   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
+-   **유니버설 Windows 플랫폼 (UWP) 앱 용 비동기 프로그래밍 이해**
 
-    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C +에서 비동기 앱을 작성 하는 방법을 알아보려면 + /winrt를 참조 하세요 [동시성 및 비동기 작업을 사용 하 여 C + + WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency). C +에서 비동기 앱을 작성 하는 방법을 알아보려면 + /CX 참조 [비동기 프로그래밍 C + + CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)합니다.
+    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C + 비동기 앱을 작성 하는 방법을 알아보려면 + WinRT, 참조 [동시성 및 비동기 작업을 사용 하 여 C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)합니다. C + 비동기 앱을 작성 하는 방법을 알아보려면 + CX, 참조 [비동기 프로그래밍 C + + /cli CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)합니다.
 
--   **읽거나, 쓰거나, 일고 쓸 파일을 가져오는 방법에 대해 알아봅니다.**
+-   **읽기, 쓰기, 하려는 파일을 가져오는 방법 중 하나 또는 둘 다 알으십시오**
 
     파일 선택기를 사용하여 파일을 가져오는 방법은 [선택기를 사용하여 파일 및 폴더 열기](quickstart-using-file-and-folder-pickers.md)를 참조하세요.
 
@@ -80,7 +80,7 @@ Dim sampleFile As StorageFile = Await storageFolder.CreateFileAsync("sample.txt"
 
 ## <a name="writing-to-a-file"></a>파일에 쓰기
 
-[**StorageFile**](/uwp/api/windows.storage.storagefile) 클래스를 사용하여 디스크의 쓰기 가능 파일에 쓰는 방법은 다음과 같습니다. 파일에 쓰는 각 방법의 공통적인 첫 번째 단계(파일을 만든 즉시 해당 파일에 쓰는 경우 제외)는 [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync)를 사용하여 파일을 가져오는 것입니다.
+[  **StorageFile**](/uwp/api/windows.storage.storagefile) 클래스를 사용하여 디스크의 쓰기 가능 파일에 쓰는 방법은 다음과 같습니다. 파일에 쓰는 각 방법의 공통적인 첫 번째 단계(파일을 만든 즉시 해당 파일에 쓰는 경우 제외)는 [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync)를 사용하여 파일을 가져오는 것입니다.
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder =
@@ -116,7 +116,7 @@ Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 
 **파일에 텍스트 쓰기**
 
-[**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) 메서드를 호출 하 여 파일에 텍스트를 작성 합니다.
+호출 하 여 파일에 텍스트를 작성 합니다 [ **FileIO.WriteTextAsync** ](/uwp/api/windows.storage.fileio.writetextasync) 메서드.
 
 ```csharp
 await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow");
@@ -148,9 +148,9 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
 ```
 
-**버퍼를 사용하여 파일에 바이트 쓰기(2단계)**
+**버퍼 (2 단계)를 사용 하 여 파일에 바이트를 쓰기**
 
-1.  [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) 바이트 (문자열 기반)의 버퍼를 가져오려면 먼저 호출 파일을 작성 하려는입니다.
+1.  첫째, 호출 [ **CryptographicBuffer.ConvertStringToBinary** ](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) (문자열에 따라) 바이트의 버퍼를 가져오지 파일에 쓸 원하는 합니다.
 
     ```csharp
     var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(
@@ -191,7 +191,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
         Windows.Security.Cryptography.BinaryStringEncoding.Utf8)
     ```
 
-2.  그런 다음 바이트를 씁니다 버퍼의 파일에 [**FileIO.WriteBufferAsync**](/uwp/api/windows.storage.fileio.writebufferasync) 메서드를 호출 합니다.
+2.  그런 다음 파일에 쓸 바이트 수를 버퍼에서 사용자를 호출 하 여 합니다 [ **FileIO.WriteBufferAsync** ](/uwp/api/windows.storage.fileio.writebufferasync) 메서드.
 
     ```csharp
     await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer);
@@ -217,7 +217,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
     Await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer)
     ```
 
-**스트림을 사용하여 파일에 텍스트 쓰기(4단계)**
+**스트림 (4 단계)를 사용 하 여 파일에 텍스트 쓰기**
 
 1.  먼저 [**StorageFile.OpenAsync**](/uwp/api/windows.storage.storagefile.openasync) 메서드를 호출하여 파일을 엽니다. 이 메서드는 열기 작업이 완료되면 파일 내용의 스트림을 반환합니다.
 
@@ -254,7 +254,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
     Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite)
     ```
 
-2.  다음으로 [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) 메서드를 호출 하 여 출력 스트림을 가져옵니다는 `stream`. C#을 사용 하는 경우 다음이를 묶습니다 **using** 문을 출력 스트림의 수명을 관리 합니다. 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 다음 블록에 포함 하거나를 설정 하 여는 수명 주기를 제어할 수 있습니다 `nullptr` 을 완료 했으면 합니다.
+2.  다음으로 호출 하 여 출력 스트림을 가져옵니다 합니다 [ **IRandomAccessStream.GetOutputStreamAt** ](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) 메서드에서 `stream`합니다. 사용 중인 경우 C#를 다음에서이 묶습니다를 **를 사용 하 여** 출력 스트림의 수명을 관리 하는 문. 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 블록에서 바깥쪽 또는로 설정 하 여 수명을 제어할 수 있습니다 `nullptr` 되어 완료 되 면 합니다.
 
     ```csharp
     using (var outputStream = stream.GetOutputStreamAt(0))
@@ -280,7 +280,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
     End Using
     ```
 
-3.  이제이 추가 코드 새 [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) 개체를 만들고 [**DataWriter.WriteString**](/uwp/api/windows.storage.streams.datawriter.writestring) 메서드를 호출 하 여 출력 스트림에 쓸를 (사용 중인 경우 C#을 **사용 하 여** 기존 문 내에서).
+3.  이제이 코드를 추가 (사용 중인 경우 C#, 기존 **를 사용 하 여** 문) 새 출력 스트림에 쓸 [ **DataWriter** ](/uwp/api/windows.storage.streams.datawriter) 개체를 호출 합니다 [ **DataWriter.WriteString** ](/uwp/api/windows.storage.streams.datawriter.writestring) 메서드.
 
     ```csharp
     using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
@@ -306,7 +306,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
     dataWriter.WriteString("DataWriter has methods to write to various types, such as DataTimeOffset.")
     ```
 
-4.  마지막으로,이 추가 코드 (사용 하는 C#을 **사용 하 여** 내부 문 내) [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) 를 사용 하 여 파일에 텍스트를 저장 하 고 [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync)로 스트림을 닫습니다.
+4.  마지막으로,이 코드를 추가 (사용 중인 경우 C#, 내부 내 **사용 하 여** 문) 사용 하 여 파일에 텍스트를 저장 하려면 [ **DataWriter.StoreAsync** ](/uwp/api/windows.storage.streams.datawriter.storeasync) 스트림을 닫고 사용 하 여 [ **IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync)합니다.
 
     ```csharp
     await dataWriter.StoreAsync();
@@ -331,11 +331,11 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
 
 **파일에 쓰기에 대 한 모범 사례**
 
-추가 세부 정보 및 모범 사례 지침에 대 한 [파일을 작성 하기 위한 모범 사례](best-practices-for-writing-to-files.md)를 참조 하세요.
+추가 세부 정보 및 모범 사례 가이드를 참조 하세요 [파일에 쓰기에 대 한 유용한](best-practices-for-writing-to-files.md)합니다.
     
 ## <a name="reading-from-a-file"></a>파일에서 읽기
 
-[**StorageFile**](/uwp/api/Windows.Storage.StorageFile) 클래스를 사용하여 디스크의 파일에서 읽는 방법은 다음과 같습니다. 파일에서 읽는 각 방법의 공통적인 첫 번째 단계는 [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync)를 사용하여 파일을 가져오는 것입니다.
+[  **StorageFile**](/uwp/api/Windows.Storage.StorageFile) 클래스를 사용하여 디스크의 파일에서 읽는 방법은 다음과 같습니다. 파일에서 읽는 각 방법의 공통적인 첫 번째 단계는 [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync)를 사용하여 파일을 가져오는 것입니다.
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder =
@@ -365,7 +365,7 @@ Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 
 **파일에서 텍스트 읽기**
 
-[**FileIO.ReadTextAsync**](/uwp/api/windows.storage.fileio.readtextasync) 메서드를 호출 하 여 파일에서 텍스트를 읽습니다.
+호출 하 여 텍스트 파일에서 읽기를 [ **FileIO.ReadTextAsync** ](/uwp/api/windows.storage.fileio.readtextasync) 메서드.
 
 ```csharp
 string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
@@ -392,9 +392,9 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
 ```
 
-**버퍼를 사용하여 파일에서 텍스트 읽기(2단계)**
+**버퍼 (2 단계)를 사용 하 여 파일에서 텍스트 읽기**
 
-1.  먼저, [**FileIO.ReadBufferAsync**](/uwp/api/windows.storage.fileio.readbufferasync) 메서드를 호출 합니다.
+1.  첫째, 호출 된 [ **FileIO.ReadBufferAsync** ](/uwp/api/windows.storage.fileio.readbufferasync) 메서드.
 
     ```csharp
     var buffer = await Windows.Storage.FileIO.ReadBufferAsync(sampleFile);
@@ -448,9 +448,9 @@ Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
     Dim text As String = dataReader.ReadString(buffer.Length)
     ```
 
-**스트림을 사용하여 파일에서 텍스트 읽기(4단계)**
+**스트림 (4 단계)를 사용 하 여 파일에서 텍스트 읽기**
 
-1.  [**StorageFile.OpenAsync**](/uwp/api/windows.storage.storagefile.openasync) 메서드를 호출하여 파일의 스트림을 엽니다. 이 메서드는 작업이 완료되면 파일 내용의 스트림을 반환합니다.
+1.  [  **StorageFile.OpenAsync**](/uwp/api/windows.storage.storagefile.openasync) 메서드를 호출하여 파일의 스트림을 엽니다. 이 메서드는 작업이 완료되면 파일 내용의 스트림을 반환합니다.
 
     ```csharp
     var stream = await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.Read);
@@ -498,7 +498,7 @@ Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
     Dim size = stream.Size
     ```
 
-3.  [**IRandomAccessStream.GetInputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getinputstreamat) 메서드를 호출 하 여 입력된 스트림을 가져옵니다. 이를 **using** 문에 배치하여 스트림의 수명을 관리합니다. **GetInputStreamAt**을 호출할 때 0을 지정하여 위치를 스트림의 시작 부분으로 설정합니다.
+3.  호출 하 여 입력된 스트림을 가져옵니다 합니다 [ **IRandomAccessStream.GetInputStreamAt** ](/uwp/api/windows.storage.streams.irandomaccessstream.getinputstreamat) 메서드. 이를 **using** 문에 배치하여 스트림의 수명을 관리합니다. **GetInputStreamAt**을 호출할 때 0을 지정하여 위치를 스트림의 시작 부분으로 설정합니다.
 
     ```csharp
     using (var inputStream = stream.GetInputStreamAt(0))
@@ -556,4 +556,4 @@ Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
 
 ## <a name="see-also"></a>참고 항목
 
-- [파일을 작성 하기 위한 모범 사례](best-practices-for-writing-to-files.md)
+- [파일에 쓰기에 대 한 모범 사례](best-practices-for-writing-to-files.md)

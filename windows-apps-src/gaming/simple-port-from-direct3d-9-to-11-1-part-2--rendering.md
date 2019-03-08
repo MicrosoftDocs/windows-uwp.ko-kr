@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 렌더링 프레임 워크, 변환, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: aba723a5ee2443664d6d640adc124b991ff0da7e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919249"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608828"
 ---
 # <a name="convert-the-rendering-framework"></a>렌더링 프레임워크 변환
 
@@ -19,9 +19,9 @@ ms.locfileid: "8919249"
 
 **요약**
 
--   [1부: Direct3D 11 초기화](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)
+-   [1 부: 초기화 Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)
 -   2부: 렌더링 프레임워크 변환
--   [3부: 게임 루프 포팅](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
+-   [3 부: 게임 루프 포트](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
 기하 도형 버퍼를 포팅하는 방법, HLSL 셰이더 프로그램을 컴파일하고 로드하는 방법 및 Direct3D 11에서 렌더링 체인을 구현하는 방법을 포함하여 간단한 렌더링 프레임 워크를 Direct3D 9에서 Direct3D 11로 변환하는 방법을 보여 줍니다. [간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)으로 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습의 2부.
@@ -93,19 +93,19 @@ technique RenderSceneSimple
 }
 ```
 
-Direct3D 11에서는 HLSL 셰이더를 계속 사용할 수 있습니다. 각 셰이더를 자체 HLSL 파일에 넣어 Visual Studio가 별도 파일로 컴파일하게 하고 나중에 별도의 Direct3D 리소스로 로드할 것입니다. 이러한 셰이더는 DirectX 9.1 GPU에 대해 작성되었기 때문에 대상 수준을 [셰이더 모델 4 수준 9\_1(/4\_0\_level\_9\_1)](https://msdn.microsoft.com/library/windows/desktop/ff476876)로 설정합니다.
+Direct3D 11에서는 HLSL 셰이더를 계속 사용할 수 있습니다. 각 셰이더를 자체 HLSL 파일에 넣어 Visual Studio가 별도 파일로 컴파일하게 하고 나중에 별도의 Direct3D 리소스로 로드할 것입니다. 대상 수준을 설정 [셰이더 모델 4 수준 9\_1 (4 /\_0\_수준\_9\_1)](https://msdn.microsoft.com/library/windows/desktop/ff476876) 이러한 셰이더 DirectX 9.1 Gpu에 대 한 기록 되기 때문에 있습니다.
 
 입력 레이아웃을 정의했을 때 시스템 메모리와 GPU 메모리에서 꼭짓점별 데이터를 저장하는 데 사용하는 동일한 데이터 구조를 나타내는지 확인했습니다. 마찬가지로 꼭짓점 셰이더의 출력은 픽셀 셰이더에 대한 입력으로 사용되는 구조와 일치해야 합니다. 규칙은 C++에서의 한 함수에서 다른 함수로 데이터 전달과 동일 하지 않습니다. 구조의 끝에서 사용하지 않는 변수를 생략할 수 있습니다. 하지만 순서를 다시 정렬할 수 없으며 데이터 구조의 가운데에서 콘텐츠를 건너뛸 수 없습니다.
 
-> **참고**  픽셀 셰이더에 꼭 짓 점 셰이더 바인딩 위한 Direct3D 9의 규칙은 Direct3D 11의 규칙 보다 더 완화 된 상태 였습니다. Direct3D 9 정렬은 유연하지만 비효율적이었습니다.
+> **참고**    Direct3D 9에서 규칙을 바인딩 꼭 짓 점 셰이더가 픽셀 셰이더 된 Direct3D 11의 규칙 보다 더 느 슨 합니다. Direct3D 9 정렬은 유연하지만 비효율적이었습니다.
 
  
 
-HLSL 파일은 셰이더 의미 체계에 대한 이전 구문을 사용할 수 있습니다(예: SV\_TARGET 대신 COLOR). 그러한 경우 HLSL 호환성 모드(/Gec 컴파일러 옵션)를 사용하거나 셰이더 [의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb509647)를 현재 구문으로 업데이트해야 합니다. 이 예제의 꼭짓점 셰이더는 현재 구문으로 업데이트되었습니다.
+HLSL 파일 이전 구문을 사용 하 여 셰이더 의미 체계-예를 들어, SV 대신 색 수\_대상입니다. 그러한 경우 HLSL 호환성 모드(/Gec 컴파일러 옵션)를 사용하거나 셰이더 [의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb509647)를 현재 구문으로 업데이트해야 합니다. 이 예제의 꼭짓점 셰이더는 현재 구문으로 업데이트되었습니다.
 
 하드웨어 변환 꼭짓점 셰이더는 다음과 같습니다. 이번에는 고유한 파일에 정의되어 있습니다.
 
-> **참고**꼭 짓 점 셰이더는 SV\_POSITION 시스템 값 의미 체계를 출력 하는 데 필요한 합니다. 이 의미 체계는 꼭짓점 위치 데이터를 결정하여 값을 조정합니다. 여기서 x는 -1과 1 사이입니다. y는 -1과 1 사이입니다. z는 원래 같은 유형의 좌표 w 값으로 나눕니다(z/w). w는 원래 w 값으로 1을 나눈 값입니다(1/w).
+> **참고**  꼭 짓 점 셰이더 SV를 출력 하는 데 필요한\_위치 시스템 값 의미 체계. 이 의미 체계는 꼭짓점 위치 데이터를 결정하여 값을 조정합니다. 여기서 x는 -1과 1 사이입니다. y는 -1과 1 사이입니다. z는 원래 같은 유형의 좌표 w 값으로 나눕니다(z/w). w는 원래 w 값으로 1을 나눈 값입니다(1/w).
 
  
 
@@ -150,9 +150,9 @@ VS_OUTPUT main(VS_INPUT input) // main is the default function name
 }
 ```
 
-통과 픽셀 셰이더에는 이것만 있으면 됩니다. 이를 통과라고 하지만 각 픽셀에 대한 보간된 원근 수정 색상 데이터를 실제로 가져옵니다. SV\_TARGET 시스템 값 의미 체계는 API에서 필요한 대로 픽셀 셰이더에 의해 색상 값 출력에 적용됩니다.
+통과 픽셀 셰이더에는 이것만 있으면 됩니다. 이를 통과라고 하지만 각 픽셀에 대한 보간된 원근 수정 색상 데이터를 실제로 가져옵니다. SV\_대상 시스템 값 의미 체계 API에서 필요에 따라 픽셀 셰이더 여 출력 값을 색에 적용 됩니다.
 
-> **참고**셰이더 수준 9 \_x 픽셀 셰이더는 SV\_POSITION 시스템 값 의미 체계를 읽을 수 없습니다. Model 4.0 이상 픽셀 셰이더는 SV\_POSITION을 사용하여 화면에서 픽셀 위치를 검색합니다. 여기서 x는 0과 렌더링 대상 너비 사이이고 y는 0과 렌더링 대상 높이 사이입니다(각각 0.5 기준 오프셋).
+> **참고**  셰이더 수준 9\_픽셀 셰이더 SV에서 읽을 수 없습니다 x\_위치 시스템 값 의미 체계. 모델 4.0 (이상) 픽셀 셰이더 SV 따르면\_여기서 x는 0과 렌더링 대상 너비 및 y 간에 화면의 픽셀 위치를 검색 하는 위치는 0 ~ 렌더링 대상 높이 (0.5 각 오프셋).
 
  
 
@@ -236,17 +236,17 @@ m_d3dDevice->CreateVertexShader(
 
 셰이더 바이트 코드를 컴파일된 앱 패키지에 포함하려면 HLSL 파일을 Visual Studio 프로젝트에 추가하기만 하면 됩니다. Visual Studio는 [효과 컴파일러 도구](https://msdn.microsoft.com/library/windows/desktop/bb232919)(FXC)를 사용하여 HLSL 파일을 컴파일된 셰이더 개체(.CSO 파일)로 컴파일하여 앱 패키지에 포함합니다.
 
-> **참고**  HLSL 컴파일러에 대 한 올바른 대상 기능 수준을 설정 해야 합니다: Visual Studio에서 HLSL 소스 파일을 마우스 오른쪽 단추로 클릭 하 고 속성을 선택 하는 **셰이더 모델** 설정 변경 **HLSL 컴파일러-&gt; 일반**합니다. 앱이 Direct3D 셰이더 자원을 만들 때 Direct3D는 하드웨어 기능에 대해 이 속성을 확인합니다.
+> **참고**    HLSL 컴파일러에 대 한 올바른 대상 기능 수준을 설정 해야 합니다., Visual Studio에서 HLSL 소스 파일을 마우스 오른쪽 단추로 클릭 하 고, 속성을 선택 하 고, 변경 합니다 **셰이더 모델** 설정을**HLSL 컴파일러&gt; 일반**합니다. 앱이 Direct3D 셰이더 자원을 만들 때 Direct3D는 하드웨어 기능에 대해 이 속성을 확인합니다.
 
  
 
 ![HLSL 셰이더 속성](images/hlslshaderpropertiesmenu.png)![HLSL 셰이더 유형](images/hlslshadertypeproperties.png)
 
-Direct3D 9에서 꼭짓점 스트림 선언에 해당하는 입력 레이아웃을 만들기 데 좋은 위치입니다. 꼭짓점별 데이터 구조는 꼭짓점 셰이더가 사용하는 것과 일치해야 합니다. Direct3D 11에는 입력 레이아웃에 대한 추가 컨트롤이 있습니다. 부동 소수점 벡터의 배열 크기 및 비트 길이를 정의하고 꼭짓점 셰이더의 의미 체계를 지정할 수 있습니다. [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조를 만들고 이 구조를 사용하여 꼭짓점별 데이터 모양을 Direct3D에 알려 줍니다. API가 꼭짓점 셰이더 리소스에 대해 입력 레이아웃을 확인하므로 입력 레이아웃을 정의하기 위해 꼭짓점 셰이더를 로드할 때까지 대기했습니다. 입력 레이아웃이 호환되지 않는 경우 Direct3D가 예외를 throw합니다.
+Direct3D 9에서 꼭짓점 스트림 선언에 해당하는 입력 레이아웃을 만들기 데 좋은 위치입니다. 꼭짓점별 데이터 구조는 꼭짓점 셰이더가 사용하는 것과 일치해야 합니다. Direct3D 11에는 입력 레이아웃에 대한 추가 컨트롤이 있습니다. 부동 소수점 벡터의 배열 크기 및 비트 길이를 정의하고 꼭짓점 셰이더의 의미 체계를 지정할 수 있습니다. 만듭니다는 [ **D3D11\_입력\_요소\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조체이 고 사용 하 여 Direct3D를 알리기 위해 꼭 짓 점별 데이터 모양을 합니다. API가 꼭짓점 셰이더 리소스에 대해 입력 레이아웃을 확인하므로 입력 레이아웃을 정의하기 위해 꼭짓점 셰이더를 로드할 때까지 대기했습니다. 입력 레이아웃이 호환되지 않는 경우 Direct3D가 예외를 throw합니다.
 
-꼭짓점별 데이터는 시스템 메모리에서 호환되는 형식으로 저장해야 합니다. DirectXMath 데이터 형식을 활용할 수 있습니다. 예를 들어 DXGI\_FORMAT\_R32G32B32\_FLOAT는 [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475)에 해당합니다.
+꼭짓점별 데이터는 시스템 메모리에서 호환되는 형식으로 저장해야 합니다. 데이터 형식 DirectXMath 도움이; 예를 들어, DXGI\_형식\_R32G32B32\_에 해당 하는 FLOAT [ **XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475)합니다.
 
-> **참고**  상수 버퍼는 한 번에 4 개의 부동 소수점 숫자에 정렬 되는 고정 된 입력된 레이아웃을 사용 합니다. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608)(및 해당 파생물)가 상수 버퍼 데이터에 권장됩니다.
+> **참고**    상수 버퍼에 한 번에 4 개의 부동 소수점 숫자를 정렬 하는 고정된 입력된 레이아웃을 사용 합니다. [**XMFLOAT4** ](https://msdn.microsoft.com/library/windows/desktop/ee419608) (및 해당 파생 항목)는 상수 버퍼 데이터에 대 한 것이 좋습니다.
 
  
 
@@ -483,7 +483,7 @@ DirectX 11을 사용하여 화면에 프레임 표시
 m_swapChain->Present(1, 0);
 ```
 
-방금 만든 렌더링 체인은 [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드에서 구현되는 게임 루프에서 호출됩니다. 이 체인은 [3 부: 뷰포트 및 게임 루프](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)에 나와 있습니다.
+방금 만든 렌더링 체인은 [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드에서 구현되는 게임 루프에서 호출됩니다. 이 확인할 [3 부: 뷰포트 및 게임 루프](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)합니다.
 
  
 

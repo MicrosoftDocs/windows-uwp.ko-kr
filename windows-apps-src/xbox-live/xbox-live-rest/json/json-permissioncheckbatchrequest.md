@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 538547c85648970ab3e9fe3ae413e8a03df814ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920046"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623508"
 ---
 # <a name="permissioncheckbatchrequest-json"></a>PermissionCheckBatchRequest(JSON)
 PermissionCheckBatchRequest 개체의 컬렉션입니다. 
@@ -23,10 +23,10 @@ PermissionCheckBatchRequest 개체의 컬렉션입니다.
  
 PermissionCheckBatchRequest 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| 사용자| 사용자의 배열| 필수. 에 대 한 사용 권한을 확인 하는 대상의 배열입니다. 이 배열의 각 항목은 Xbox 사용자 ID (XUID) 또는 네트워크를 통한 시나리오에 대 한 익명 네트워크 외부 사용자 ("anonymousUser": "allUsers"). | 
-| 사용 권한| [PermissionId 열거형](../enums/privacy-enum-permissionid.md) 의 배열| 필수. 각 사용자에 대해 확인할 수 있는 권한을 부여 합니다.| 
+| 사용자| 사용자의 배열| 필수. 배열에 대 한 사용 권한을 확인 하는 대상입니다. 이 배열의 각 항목은 Xbox 사용자 ID (XUID) 또는 교차 네트워크 시나리오에 대 한 익명 네트워크 외부 사용자 ("anonymousUser": "allUsers"). | 
+| 권한| 배열을 [PermissionId 열거형](../enums/privacy-enum-permissionid.md)| 필수. 각 사용자에 대해 확인할 권한입니다.| 
   
 <a id="ID4E3B"></a>
 
@@ -59,8 +59,8 @@ PermissionCheckBatchRequest 개체에 다음과 같이 지정 합니다.
 <a id="ID4EHC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

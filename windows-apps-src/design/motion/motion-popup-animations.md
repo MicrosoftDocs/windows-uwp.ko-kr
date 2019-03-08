@@ -1,5 +1,5 @@
 ---
-Description: Use pop-up animations to show and hide pop-up UI for flyouts or custom pop-up UI elements. Pop-up elements are containers that appear over the app's content and are dismissed if the user taps or clicks outside of the pop-up element.
+Description: 플라이아웃의 팝업 UI 또는 사용자 지정 팝업 UI 요소를 표시하고 숨기려면 팝업 애니메이션을 사용합니다. 팝업 요소는 앱 콘텐츠 위에 나타났다가 사용자가 팝업 요소 외부를 탭하거나 클릭할 때 해제되는 컨테이너입니다.
 title: UWP 앱의 팝업 UI 애니메이션
 ms.assetid: 4E9025CE-FC90-4d4c-9DE6-EC6B6F2AD9DF
 label: Motion--Pop-up animations
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d79c369e14236b827bdc18aba6c74349528728b3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942046"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57635178"
 ---
 # <a name="pop-up-ui-animations"></a>팝업 UI 애니메이션
 
@@ -21,7 +21,7 @@ ms.locfileid: "8942046"
 
 플라이아웃의 팝업 UI 또는 사용자 지정 팝업 UI 요소를 표시하고 숨기려면 팝업 애니메이션을 사용합니다. 팝업 요소는 앱 콘텐츠 위에 나타났다가 사용자가 팝업 요소 외부를 탭하거나 클릭할 때 해제되는 컨테이너입니다.
 
-> **중요 API**: [**PopInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210383), [**PopupThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969172)
+> **중요 한 Api**: [**PopInThemeAnimation class**](https://msdn.microsoft.com/library/windows/apps/br210383), [**PopupThemeTransition class**](https://msdn.microsoft.com/library/windows/apps/hh969172)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -34,10 +34,10 @@ ms.locfileid: "8942046"
 ## <a name="related-articles"></a>관련 문서
 
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [팝업 UI 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649433)
-* [빠른 시작: 라이브러리 애니메이션을 사용하여 UI에 애니메이션 효과 주기](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [UI를 팝업에 애니메이션 적용](https://msdn.microsoft.com/library/windows/apps/xaml/jj649433)
+* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**PopInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210383)
-* [**PopOutThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210391)
+* [**PopOutThemeAnimation class**](https://msdn.microsoft.com/library/windows/apps/br210391)
 * [**PopupThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969172)
 
  

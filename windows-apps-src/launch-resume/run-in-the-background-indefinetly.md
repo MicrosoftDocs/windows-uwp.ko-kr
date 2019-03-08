@@ -3,15 +3,15 @@ title: 백그라운드에서 무기한 실행
 description: extendedExecutionUnconstrained 기능을 사용하여 백그라운드 작업 또는 확장된 실행 세션을 백그라운드에서 무기한 실행하세요.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
 keywords: 백그라운드 작업을 실행, 리소스, 제한, 백그라운드 작업 확장
-ms.date: 10/3/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aedd948fe58efcc3edc160db971478189d9cb4ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.openlocfilehash: faac1d8d47ddcff4e5ec32d35f2e46bab7a3f4aa
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933927"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630248"
 ---
 # <a name="run-in-the-background-indefinitely"></a>백그라운드에서 무기한 실행
 
@@ -75,7 +75,7 @@ _Package.appxmanifest_
 </Package>
 ```
 
-이 기능은 실행 시간 제한과 유휴 작업 감시를 제거합니다. 트리거 또는 앱 서비스 호출에 의해 백그라운드 작업이 시작되고 **Run** 메서드에서 제공하는 [BackgroundTaskInstance](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)에 지연이 있으면 무기한 실행될 수 있습니다. 앱이 **Windows에서 관리됨**으로 설정된 경우 여전히 앱에 적용된 에너지 할당량을 가질 수 있으며, 배터리 절약 모드가 활성화되어 있을 때 해당 백그라운드 작업은 활성화되지 않습니다. 이는 OS 설정으로 변경할 수 있습니다. 자세한 내용은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)에서 확인할 수 있습니다.
+이 기능은 실행 시간 제한과 유휴 작업 감시를 제거합니다. 트리거 또는 앱 서비스 호출에 의해 백그라운드 작업이 시작되고 **Run** 메서드에서 제공하는 [BackgroundTaskInstance](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)에 지연이 있으면 무기한 실행될 수 있습니다. 앱이 **Windows에서 관리됨**으로 설정된 경우 여전히 앱에 적용된 에너지 할당량을 가질 수 있으며, 배터리 절약 모드가 활성화되어 있을 때 해당 백그라운드 작업은 활성화되지 않습니다. 이 OS 설정을 사용 하 여 변경할 수 있습니다. 자세한 내용은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)에서 확인할 수 있습니다.
 
 유니버설 Windows 플랫폼은 백그라운드 작업 실행을 모니터링하여 배터리 수명을 늘리고 원활한 포그라운드 앱 환경을 보장합니다. 그러나 개인 앱 및 엔터프라이즈 기간 업무 앱은 확장된 실행과 **extendedBackgroundTaskTime** 기능을 사용하여 장치의 리소스 가용성에 관계없이 필요한 만큼 실행되는 앱을 만들 수 있습니다.
 
@@ -83,4 +83,4 @@ _Package.appxmanifest_
 
 ## <a name="see-also"></a>참고 항목
 
-[백그라운드 작업 리소스 제한 제거](https://docs.microsoft.com/windows/application-management/enterprise-background-activity-controls)
+[백그라운드 작업 리소스 제한을 제거합니다](https://docs.microsoft.com/windows/application-management/enterprise-background-activity-controls)
