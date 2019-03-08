@@ -1,5 +1,5 @@
 ---
-Description: Create Universal Windows Platform (UWP) apps with intuitive and distinctive user interaction experiences that are optimized for touchpad but are functionally consistent across input devices.
+Description: 터치 패드에 최적화된 동시에 입력 디바이스 간에 기능적으로 일관된, 직관적이고 차별화된 사용자 조작 환경을 갖춘 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다.
 title: 터치 패드 조작
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
@@ -9,16 +9,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 895bf1ffe4fc79a65fdf452235ee9466e91b7215
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046709"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593908"
 ---
 # <a name="touchpad-design-guidelines"></a>터치 패드 디자인 지침
 
 
-사용자가 터치 패드를 통해 조작할 수 있는 앱을 디자인하세요. 터치 패드는 간접 멀티 터치 입력을 마우스와 같은 포인팅 장치의 정밀도 입력과 결합합니다. 이러한 결합을 통해 터치 패드는 터치 최적화된 UI와 생산성 앱의 작은 대상에 모두 적합합니다.
+사용자가 터치 패드를 통해 조작할 수 있는 앱을 디자인하세요. 터치 패드는 간접 멀티 터치 입력을 마우스와 같은 포인팅 장치의 정밀도 입력과 결합합니다. 이러한 결합을 통해 터치 패드가 터치에 최적화된 UI와 생산성 앱의 작은 대상에 모두 적합하도록 만들 수 있습니다.
 
  
 
@@ -59,7 +59,7 @@ ms.locfileid: "9046709"
 
 ![Windows 정밀 터치 패드 설정](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Windows\\ 정밀\\ 터치 패드\\ 설정</sup>
+<sup>Windows\\ 정밀도\\ 터치 패드\\ 설정</sup>
 
 다음은 일반적인 작업을 수행하기 위한 터치 패드에 최적화된 몇 가지 제스처 예입니다.
 
@@ -128,7 +128,7 @@ ms.locfileid: "9046709"
 
 -   이동 또는 가리키기 이벤트를 통해 터치 패드 커서가 검색되면 마우스 관련 UI를 표시하여 이벤트에 의해 노출되는 기능을 나타냅니다. 터치 패드 커서가 정해진 시간 동안 이동하지 않거나 사용자가 터치 조작을 시작하면 터치 패드 UI가 점점 사라지도록 합니다. 이렇게 하면 UI가 깔끔하고 간결하게 유지됩니다.
 -   가리키기 피드백에 커서를 사용하지 마세요. 요소에서 제공하는 피드백만으로 충분합니다(아래 커서 참조).
--   요소가 조작을 지원하지 않는 경우(예: 정적 테스트) 시각적 피드백을 표시하지 마세요.
+-   요소가 조작을 지원하지 않는 경우(예제: 정적 테스트) 시각적 피드백을 표시하지 마세요.
 -   터치 패드 조작 시 포커스 사각형을 사용하지 마세요. 포커스 사각형은 키보드 조작에 예약합니다.
 -   동일한 입력 대상을 나타내는 모든 요소에 대해 동시에 시각적 피드백을 표시합니다.
 
@@ -155,15 +155,15 @@ ms.locfileid: "9046709"
 * [포인터 입력 처리](handle-pointer-input.md)
 * [입력 디바이스 식별](identify-input-devices.md)
 **샘플**
-* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 **보관 샘플**
-* [입력: 디바이스 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: XAML 사용자 입력 이벤트 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: GestureRecognizer를 사용한 조작 및 제스처](https://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [입력: 제스처와 GestureRecognizer 조작](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
 

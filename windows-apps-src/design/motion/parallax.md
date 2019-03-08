@@ -1,5 +1,5 @@
 ---
-Description: Use the ParallaxView control to add depth and movement to your app.
+Description: ParallaxView 컨트롤을 사용하여 앱에 깊이 및 동작을 추가합니다.
 title: ParallaxView 컨트롤을 사용하여 앱에 깊이 및 동작을 추가하는 방법입니다.
 ms.assetid: ''
 label: Parallax View
@@ -13,17 +13,17 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 719a150c6750116a368d59fff9600fcf65bf8f61
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115810"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590688"
 ---
 # <a name="parallax"></a>시차
 
 시차는 뷰어에 가까이 있는 항목이 배경의 항목보다 빠르게 움직이는 시각 효과입니다. 시차는 깊이감, 원근감 및 운동성을 만듭니다. UWP 앱에서 ParallaxView 컨트롤을 사용하여 시차 효과를 만들 수 있습니다.  
 
-> **중요 API**: [ParallaxView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [VerticalShift 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [HorizontalShift 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
+> **중요 한 Api**: [ParallaxView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview)하십시오 [VerticalShift 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [HorizontalShift 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
 
 ## <a name="examples"></a>예
 
@@ -34,8 +34,8 @@ ms.locfileid: "9115810"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ParallaxView">앱을 열고 작동 중인 ParallaxView를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -47,7 +47,7 @@ ms.locfileid: "9115810"
 
 ## <a name="how-it-works-in-a-user-interface"></a>사용자 인터페이스에서 작동하는 방식
 
-UI에서 UI가 스크롤하거나 이동할 때 여러 개체를 서로 다른 속도로 움직여서 시차 효과를 만들 수 있습니다. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> 시험을 보이기 위해 콘텐츠의 두 계층인 목록과 배경 이미지를 살펴보겠습니다.  목록은 배경 이미지 맨 위에 있으며 이미 목록이 뷰어와 좀 더 가까이 있는 것 같은 착시 효과를 줍니다.  이제 시차 효과를 얻기 위해 가까이에 있는 개체를 멀리 있는 개체보다 “빠르게” 움직여야 합니다.  사용자가 인터페이스를 스크롤할 때 목록이 배경 이미지보다 빠르게 움직이며, 이로 인해 깊이감이 생성됩니다.
+UI에서 UI가 스크롤하거나 이동할 때 여러 개체를 서로 다른 속도로 움직여서 시차 효과를 만들 수 있습니다. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> 을 보여 주기 위해 살펴보겠습니다 콘텐츠, 목록 및 배경 이미지의 두 계층.  목록은 배경 이미지 맨 위에 있으며 이미 목록이 뷰어와 좀 더 가까이 있는 것 같은 착시 효과를 줍니다.  이제 시차 효과를 얻기 위해 가까이에 있는 개체를 멀리 있는 개체보다 “빠르게” 움직여야 합니다.  사용자가 인터페이스를 스크롤할 때 목록이 배경 이미지보다 빠르게 움직이며, 이로 인해 깊이감이 생성됩니다.
 
  ![목록 및 배경 이미지를 사용한 시차의 예](images/_Parallax_v2.gif)
 
@@ -106,8 +106,8 @@ ParallaxView 컨트롤을 사용하려면 Source 요소를 제공하고, 배경 
 
 VerticalShift 및 HorizontalShift 속성을 사용하여 시차 효과의 수준을 제어할 수 있습니다.
 
-* VerticalShift 속성은 전체 시차 작업 중에 배경이 세로 방향으로 얼마나 멀리 이동하는지를 지정합니다. 값 0은 배경이 전혀 이동 하지 않습니다.
-* HorizontalShift 속성은 전체 시차 작업 중에 배경이 가로 방향으로 얼마나 멀리 이동하는지를 지정합니다. 값 0은 배경이 전혀 이동 하지 않습니다.
+* VerticalShift 속성은 전체 시차 작업 중에 배경이 세로 방향으로 얼마나 멀리 이동하는지를 지정합니다. 값이 0 이면 백그라운드에서 이동 하지 않습니다.
+* HorizontalShift 속성은 전체 시차 작업 중에 배경이 가로 방향으로 얼마나 멀리 이동하는지를 지정합니다. 값이 0 이면 백그라운드에서 이동 하지 않습니다.
 
 값이 클수록 보다 극적인 효과를 만듭니다. 
 
@@ -126,5 +126,5 @@ VerticalShift 및 HorizontalShift 속성을 사용하여 시차 효과의 수준
 ## <a name="related-articles"></a>관련 문서
 
 - [ParallaxView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 
-- [UWP용 Fluent 디자인](../fluent-design-system/index.md)
+- [UWP 용 Fluent 디자인](../fluent-design-system/index.md)
 - [시스템의 과학: Fluent 디자인 및 깊이](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)

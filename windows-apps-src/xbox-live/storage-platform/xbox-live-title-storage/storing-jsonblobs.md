@@ -1,21 +1,21 @@
 ---
-title: JSON blob 저장
-description: JSON blob Xbox Live 타이틀 저장소에 저장 하는 방법을 알아봅니다.
+title: JSON blob을 저장합니다.
+description: Xbox Live 제목 저장소에서 JSON blob을 저장 하는 방법에 알아봅니다.
 ms.assetid: f424aca1-e671-4e31-84c6-098fda4a9558
 ms.date: 04/04/2017
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 타이틀 저장소
+keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 제목 저장소
 ms.localizationpriority: medium
 ms.openlocfilehash: dabcd0634bb20bc6b82ae302c77338b5bb726a63
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947672"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595068"
 ---
-# <a name="storing-a-json-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소에 JSON blob 저장
+# <a name="storing-a-json-blob-in-xbox-live-title-storage"></a>Xbox Live 제목 저장소에서 JSON blob을 저장합니다.
 
-1.  *PUT* 메서드를 사용 하 여 타이틀 저장소에 데이터를 보내도록 요청을 보냅니다.
+1.  사용 하 여 요청을 전송 합니다 *배치* 제목 저장소에 데이터를 보내기 위한 메서드.
 
         PUT https://titlestorage.xboxlive.com/json/users/xuid(1245111)/scids/{scid}/data/{pathAndFileName},json
         Content-Type: application/octet-stream
@@ -26,9 +26,9 @@ ms.locfileid: "8947672"
 
 
 
--   사용자가 업데이트를 세션에 있어야 합니다.
+-   사용자 세션 업데이트 해야 합니다.
 
--   STSTokenString 편의 위해 자리 표시자 이며 인증 요청으로 반환 하는 토큰으로 대체 되어야 합니다.
+-   STSTokenString은 간략하게 표현 하기 위해 자리 표시자 이며 인증 요청에 의해 반환 된 토큰으로 바꿔야 합니다.
 
 2.  JSON 개체를 보냅니다.
 
@@ -37,6 +37,6 @@ ms.locfileid: "8947672"
             "expression":"smile"
         }
 
-#### <a name="reference"></a>참조
+#### <a name="reference"></a>참고자료
 
 **/json/users/xuid({xuid})/scids/{scid}/data/{pathAndFileName},json)**

@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 36b4034607fc6b5011491424551ed60bc3da5fa7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933201"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599268"
 ---
 # <a name="serviceconfigsscidsessiontemplatessessiontemplatename"></a>/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}
-세션 템플릿 이름 집합을 검색 하는 가져오기 작업을 지원 합니다. 
+세션 템플릿 이름 집합을 검색 하는 GET 작업을 지원 합니다. 
 <a id="ID4EO"></a>
 
  
@@ -26,15 +26,15 @@ sessiondirectory.xboxlive.com
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| 서비스 안내| GUID| 서비스 구성 식별자 (서비스 안내)입니다. 파트 1 세션의 id.| 
-| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션의 id. | 
+| scid| GUID| (서비스 안내) 식별자를 구성 하는 서비스입니다. 1 부 세션의 id입니다.| 
+| sessionTemplateName| 문자열| 세션 템플릿의 현재 인스턴스의 이름입니다. 2 부 세션의 id입니다. | 
   
 <a id="ID4EYB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [GET (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName})](uri-serviceconfigsscidsessiontemplatessessiontemplatenameget.md)
 
@@ -48,8 +48,8 @@ sessiondirectory.xboxlive.com
 <a id="ID4EEC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[세션 디렉터리 URI](atoc-reference-sessiondirectory.md)
+[세션 디렉터리 Uri](atoc-reference-sessiondirectory.md)
 
    

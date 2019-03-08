@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx xaml, 화면 회전, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 432e7716363f6a51254e1476dac38f713c94fb69
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930006"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599508"
 ---
 # <a name="add-features-to-directx-games"></a>DirectX 게임에 기능 추가
 
@@ -36,7 +36,7 @@ DirectX 및 XAML 상호 운용성 항목에서는 XAML(Extensible Application Ma
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="directx-and-xaml-interop.md">DirectX 및 XAML 상호 운용성</a></p></td>
+<td align="left"><p><a href="directx-and-xaml-interop.md">DirectX 및 XAML interop</a></p></td>
 <td align="left"><p>DirectX와 XAML의 상호 운용성을 지원합니다.</p></td>
 </tr>
 <tr class="even">
@@ -44,7 +44,7 @@ DirectX 및 XAML 상호 운용성 항목에서는 XAML(Extensible Application Ma
 <td align="left"><p>게임에 입력 방법을 추가합니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="supporting-screen-rotation-directx-and-cpp.md">화면 회전 지원</a></p></td>
+<td align="left"><p><a href="supporting-screen-rotation-directx-and-cpp.md">화면 방향을 지원</a></p></td>
 <td align="left"><p>화면 회전 지원을 추가합니다.</p></td>
 </tr>
 </tbody>

@@ -1,17 +1,17 @@
 ---
 title: Windows 런타임 형식의 .NET Framework 매핑
-description: 다음 표에는 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 간에 .NET Framework가 수행하는 매핑이 나열되어 있습니다.
+description: 다음 표에 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 사이에서 .NET Framework가 만드는 매핑을 나열합니다.
 ms.assetid: 5317D771-808D-4B97-8063-63492B23292F
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ef98f3f4a9d20e836d5f9bddbc111a232f864bf5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927509"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602618"
 ---
 # <a name="net-framework-mappings-of-windows-runtime-types"></a>Windows 런타임 형식의 .NET Framework 매핑
 
@@ -24,7 +24,7 @@ ms.locfileid: "8927509"
 
 UWP와 .NET Framework에서 네임스페이스 이름과 형식 이름이 동일한 대부분의 형식은 구조(또는 열거 등의 구조와 관련된 형식)입니다. UWP에서 구조에는 필드 외에 다른 멤버가 없기 때문에 .NET Framework가 숨기고 있는 도우미 형식이 필요합니다. 이러한 구조의 .NET Framework 버전에는 숨겨진 도우미 형식의 기능을 제공하는 속성 및 메서드가 있습니다.
 
-표 1: 다른 이름 및/또는 네임스페이스를 사용하여 .NET Framework 형식에 매핑하는 UWP 형식
+표 1: UWP는 다양 한 이름 및/또는 네임 스페이스를 사용 하 여.NET Framework 형식에 매핑되는 형식입니다.
 
 | UWP 형식/네임스페이스                                            | .NET Framework 형식/네임스페이스                                          | .NET Framework 어셈블리                           |
 |---------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------|
@@ -57,17 +57,17 @@ UWP와 .NET Framework에서 네임스페이스 이름과 형식 이름이 동일
 
  
 
-표 2: 동일한 이름 및 네임스페이스를 사용하여 .NET Framework 형식에 매핑하는 UWP 형식
+표 2: UWP는.NET Framework 형식과 동일한 이름 및 네임 스페이스에 매핑되는 형식.
 
 | 네임스페이스                           | 형식               | .NET Framework 어셈블리                   |
 |-------------------------------------|--------------------|-------------------------------------------|
-| Windows.UI                          | Color              | System.Runtime.WindowsRuntime.dll         |
+| Windows.UI                          | 색              | System.Runtime.WindowsRuntime.dll         |
 | Windows.Foundation                  | Point              | System.Runtime.WindowsRuntime.dll         |
 | Windows.Foundation                  | Rect               | System.Runtime.WindowsRuntime.dll         |
-| Windows.Foundation                  | Size               | System.Runtime.WindowsRuntime.dll         |
+| Windows.Foundation                  | 사이즈               | System.Runtime.WindowsRuntime.dll         |
 | Windows.UI.Xaml.Input               | ICommand           | System.ObjectModel.dll                    |
 | Windows.UI.Xaml                     | CornerRadius       | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml                     | Duration           | System.Runtime.WindowsRuntime.UI.Xaml.dll |
+| Windows.UI.Xaml                     | 기간           | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml                     | DurationType       | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml                     | GridLength         | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml                     | GridUnitType       | System.Runtime.WindowsRuntime.UI.Xaml.dll |

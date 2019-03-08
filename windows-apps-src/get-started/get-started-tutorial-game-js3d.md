@@ -1,17 +1,17 @@
 ---
 title: '시작 자습서: JavaScript로 작성된 3D UWP 게임'
-description: JavaScript와 three.js로 작성 된 Microsoft Store 용 UWP 게임
+description: 불가능 한을 사용 하 여 JavaScript로 작성 된, Microsoft Store 대 한 게임 UWP
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c7d40765e0d12e3543f198aebd5acd15ed3aff3
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595498"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>three.js를 사용하여 3D JavaScript 게임 만들기
 
@@ -24,11 +24,11 @@ ms.locfileid: "9047777"
 
 다음 과정으로 넘어가기 전에 우리가 만들 앱을 먼저 살펴보고 싶은 분들은 CodePen에서 확인하실 수 있습니다.
 
-<iframe height='300' scrolling='no' title='최종 공룡 게임' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpKejy/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpKejy/'>Dino game final</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
+<iframe height='300' scrolling='no' title='최종 Dino 게임' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpKejy/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpKejy/'>Dino game final</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
 > [!NOTE] 
-> 이 전체 게임의 경우 JavaScript 및 타사 라이브러리를 사용 하 여 Microsoft Store에 게시할 수 있는 앱을 만드는 방법을 보여주기 위해 설계 되었습니다.
+> 이 구독은 완전 한 게임; JavaScript 및 타사 라이브러리를 사용 하 여 앱을 Microsoft Store 게시할 수 있도록 보여 주기 위해 설계 되었습니다.
 
 
 ## <a name="requirements"></a>요구 사항
@@ -219,7 +219,7 @@ function onWindowResize() {
 
 #### <a name="animate"></a>animate()
 
-마지막으로 필요한 것은 `animate()` 함수이며, 이 함수는 `render()` 함수를 호출합니다. [`requestAnimationFrame()`](https://developer.mozilla.org/docs/Web/API/window/requestAnimationFrame) 함수는 렌더러를 지속적으로 업데이트하는 데 사용됩니다. 이 자습서의 후반부에 이러한 함수를 사용하여 미로 주변을 움직이는 애니메이션처럼 멋진 애니메이션을 사용하여 렌더러를 업데이트하겠습니다.
+마지막으로 필요한 것은 `animate()` 함수이며, 이 함수는 `render()` 함수를 호출합니다. [`requestAnimationFrame()`  ](https://developer.mozilla.org/docs/Web/API/window/requestAnimationFrame) 함수는 렌더러를 지속적으로 업데이트하는 데 사용됩니다. 이 자습서의 후반부에 이러한 함수를 사용하여 미로 주변을 움직이는 애니메이션처럼 멋진 애니메이션을 사용하여 렌더러를 업데이트하겠습니다.
 
 ```javascript
 function animate() {
@@ -256,7 +256,7 @@ ___
 
 문제가 발생할 경우 모든 JavaScript를 복사하여 CodePen에 붙여 넣어서 문제를 해결할 수도 있고, 코드를 편집하여 일부 조명을 조정하고 일부 색상을 변경할 수도 있습니다. 
 
-<iframe height='300' scrolling='no' title='조명, 카메라, 큐브!' src='//codepen.io/MicrosoftEdgeDocumentation/embed/YZWygZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>펜을 참조 하세요 <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/YZWygZ/'>조명, 카메라, 큐브!</a> Microsoft Edge Docs 하 여 (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) <a href='https://codepen.io'>CodePen</a>에 있습니다.
+<iframe height='300' scrolling='no' title='광원, 카메라, 큐브!' src='//codepen.io/MicrosoftEdgeDocumentation/embed/YZWygZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>펜 참조 <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/YZWygZ/'>광원, 카메라, 큐브!</a> Microsoft Edge Docs에서 (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)에서 <a href='https://codepen.io'>CodePen</a>합니다.
 </iframe>
 
 
@@ -402,7 +402,7 @@ CodePen에서 `init()` 함수의 `createGround()`를 주석 처리하여 자유�
 <iframe height='300' scrolling='no' title='미로 빌드' src='//codepen.io/MicrosoftEdgeDocumentation/embed/JWKYzG/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/JWKYzG/'>Maze building</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
-### <a name="4-allowing-the-player-to-look-around"></a>4. 플레이어가 주변을 둘러볼 수 있게 만들기
+### <a name="4-allowing-the-player-to-look-around"></a>4. 플레이어 주위를 허용 합니다.
 
 이제 미로에 들어가서 주변을 둘러볼 시간입니다. 이렇게 하기 위해 **PointerLockControls.js** 라이브러리와 카메라를 사용하겠습니다.
 
@@ -456,7 +456,7 @@ function getPointerLock() {
 
 ```
 
-`lockChange()` 함수는 컨트롤과 `blocker` 요소를 활성화 또는 비활성화해야 합니다. [`pointerLockElement`](https://developer.mozilla.org/docs/Web/API/Document/pointerLockElement) 속성에서 마우스 이벤트의 대상이 `container`로 설정되었는지 확인하면 포인터 잠금 상태를 확인할 수 있습니다.
+`lockChange()` 함수는 컨트롤과 `blocker` 요소를 활성화 또는 비활성화해야 합니다. [`pointerLockElement`  ](https://developer.mozilla.org/docs/Web/API/Document/pointerLockElement) 속성에서 마우스 이벤트의 대상이 `container`로 설정되었는지 확인하면 포인터 잠금 상태를 확인할 수 있습니다.
 
 ```javascript
 function lockChange() {
@@ -486,7 +486,7 @@ animate();
 
 드디어 주변을 **둘러보는** 기능이 생기기는 했지만 가장 중요한 요소는 **이동** 기능입니다. 이제부터 약간의 수학이 나오고 벡터가 나옵니다. 사실 수학이 전혀 들어가지 않은 3D 그래픽이란 불가능하죠.
 
-<iframe height='300' scrolling='no' title='둘러볼' src='//codepen.io/MicrosoftEdgeDocumentation/embed/gmwbMo/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/gmwbMo/'>Look around</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
+<iframe height='300' scrolling='no' title='둘러보기' src='//codepen.io/MicrosoftEdgeDocumentation/embed/gmwbMo/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/gmwbMo/'>Look around</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
 
@@ -638,15 +638,15 @@ function animatePlayer(delta) {
 
 ---
 
-축하합니다! 주변을 이동하고 둘러볼 수 있는 플레이어 제어 카메라를 만들었습니다. 여전히 벽을 바로 통과하기는 하지만 나중에 해결해도 됩니다. 다음으로 공룡을 추가하겠습니다.
+축하합니다. 주변을 이동하고 둘러볼 수 있는 플레이어 제어 카메라를 만들었습니다. 여전히 벽을 바로 통과하기는 하지만 나중에 해결해도 됩니다. 다음으로 공룡을 추가하겠습니다.
 
-<iframe height='300' scrolling='no' title='이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>펜 <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>사이 이동</a> 하 여 Microsoft Edge 문서를 참조 하세요 (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) <a href='https://codepen.io'>CodePen</a>에 있습니다.
+<iframe height='300' scrolling='no' title='이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>펜을을 참조 하세요 <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>이동할</a> Microsoft Edge Docs에서 (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)에서 <a href='https://codepen.io'>CodePen</a>합니다.
 </iframe>
 
 > [!NOTE]
 > UWP 앱에서 이러한 컨트롤을 사용하면 동작 지연 및 등록되지 않은 `keyUp` 이벤트가 발생할 수 있습니다. 현재 이 부분을 조사 중이며 샘플에서 이 부분이 곧 해결될 것입니다!
 
-### <a name="6-load-that-dino"></a>6. 공룡 로드!
+### <a name="6-load-that-dino"></a>6. 해당 dino 로드!
 
 이 프로젝트 리포지토리를 복제 또는 다운로드한 경우 `dino.json` 안에 `models` 폴더가 있을 것입니다. 이 JSON 파일은 Blender에서 만들어서 내보낸 3D 공룡 모델입니다.
 
@@ -698,10 +698,10 @@ var instructions = document.getElementById('instructions');
 
 드디어 공룡 모델이 로드되었습니다. 확인해 보세요!
 
-<iframe height='300' scrolling='no' title='공룡이 추가' src='//codepen.io/MicrosoftEdgeDocumentation/embed/xqOwBw/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xqOwBw/'>Adding the dino</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
+<iframe height='300' scrolling='no' title='Dino는 추가' src='//codepen.io/MicrosoftEdgeDocumentation/embed/xqOwBw/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xqOwBw/'>Adding the dino</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
-### <a name="7-move-that-dino"></a>7. 공룡 이동!
+### <a name="7-move-that-dino"></a>7. 해당 dino 이동!
 
 게임 AI를 직접 만들기에는 너무 복잡할 수 있으므로 이 예에서는 공룡의 간단한 이동 동작만 구현하기로 하겠습니다. 우리가 만든 공룡은 일직선으로 이동하여 벽을 통과해서 저 멀리 있는 안개 속으로 사라집니다.
 
@@ -729,10 +729,10 @@ function animateDino(delta) {
 
 공룡이 그냥 돌아다니는 광경은 별로 재미가 없습니다. 하지만 충돌 감지를 추가하면 훨씬 흥미로운 상황이 발생합니다.
 
-<iframe height='300' scrolling='no' title='Dino-없음 충돌 이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/jBMbbL/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/jBMbbL/'>Moving the dino - no collision</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
+<iframe height='300' scrolling='no' title='Dino-충돌 없는 이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/jBMbbL/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/jBMbbL/'>Moving the dino - no collision</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
-### <a name="8-collision-detection-for-the-player"></a>8. 플레이어에 대한 충돌 감지
+### <a name="8-collision-detection-for-the-player"></a>8. 플레이어에 대 한 충돌 감지
 
 플레이어와 공룡이 돌아다니는 동작을 구현했지만 벽을 그대로 통과한다는 문제가 여전히 남아 있습니다. 이 자습서의 앞부분에서 처음에 큐브와 벽을 추가할 때 `collidableObjects` 배열에 큐브와 벽을 추가했습니다. 이 배열을 사용하여 플레이어가 통과할 수 없는 물체와 너무 가까이에 있는지 여부를 확인할 것입니다.
 
@@ -844,11 +844,11 @@ function animatePlayer(delta) {
 
 플레이어 충돌 감지를 구현했으니 벽을 뚫고 지나갈 수 있는지 직접 테스트해 보세요!
 
-<iframe height='300' scrolling='no' title='플레이어가-충돌 이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/qraOeO/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qraOeO/'>Moving the player - collision</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
+<iframe height='300' scrolling='no' title='플레이어 업데이트-충돌' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/qraOeO/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qraOeO/'>Moving the player - collision</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
 
-### <a name="9-collision-detection-and-animation-for-dino"></a>9. 공룡에 대한 충돌 감지 및 애니메이션
+### <a name="9-collision-detection-and-animation-for-dino"></a>9. 충돌 감지 및 dino 애니메이션
 
 공룡이 더 이상 벽을 통과하지 않고, 충돌 가능한 개체에 너무 가까이 접근하면 임의의 방향으로 이동하도록 만들겠습니다.
 
@@ -931,10 +931,10 @@ function getRandomInt(min, max) {
 
 드디어 끝났습니다! 미로를 돌아다닐 수 있는 AI를 탑재한 공룡이 완성되었습니다!
 
-<iframe height='300' scrolling='no' title='Dino-collision 이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/bqwMXZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>참조는 펜 <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/bqwMXZ/'>dino-collision 이동</a> 하 여 Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) <a href='https://codepen.io'>CodePen</a>에 있습니다.
+<iframe height='300' scrolling='no' title='Dino-충돌 이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/bqwMXZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>펜을을 참조 하세요 <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/bqwMXZ/'>dino-충돌 이동</a> Microsoft Edge Docs에서 (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)에서 <a href='https://codepen.io'>CodePen</a>합니다.
 </iframe>
 
-### <a name="10-starting-the-chase"></a>10. 추적 시작
+### <a name="10-starting-the-chase"></a>10. 본론을 시작합니다.
 
 공룡이 플레이어와 일정 거리 이내에 있으면 플레이어를 추적하도록 만들겠습니다. 이 예는 단지 예시에 불과하기 때문에 공룡이 플레이어를 찾아내는 고급 알고리즘은 적용되지 않았습니다. 그 대신 공룡이 플레이어를 확인하면 플레이어에게 접근합니다. 미로의 개방된 지역에서는 이 동작이 정상적으로 작동하지만 중간에 벽이 있으면 공룡이 움직이지 못합니다.
 
@@ -999,7 +999,7 @@ dinoAlert.style.display = 'none';
 이제 플레이어가 일정 범위 내에 들어오면 플레이어의 위에 위치할 때까지 플레이어를 계속 추적하는 사나운 공룡이 완성되었습니다.
 마지막으로 공룡이 `CATCHOFFSET` 단위만큼 떨어져 있으면 게임이 종료되는 조건을 추가합니다.
 
-<iframe height='300' scrolling='no' title='추적' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpRBqR/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpRBqR/'>The chase</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
+<iframe height='300' scrolling='no' title='쫓는' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpRBqR/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpRBqR/'>The chase</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
 
@@ -1075,16 +1075,16 @@ function lockChange() {
 
 ---
 
-끝났습니다! 긴 여정 끝에 드디어 **three.js**로 작성된 게임이 완성되었습니다.
+간단하죠. 긴 여정 끝에 드디어 **three.js**로 작성된 게임이 완성되었습니다.
 
 페이지 맨 위로 돌아가서 [최종 CodePen](#introduction)을 살펴보세요!
 
 
-## <a name="publishing-to-the-microsoft-store"></a>Microsoft Store에 게시
-(다듬어야 수 있는!) Microsoft Store에 게시할 수는 UWP 앱을 만들었으니 이제 프로세스에 몇 가지 단계가 있습니다.
+## <a name="publishing-to-the-microsoft-store"></a>Microsoft Store 게시
+(먼저 개선 가정)! Microsoft Store 게시할 수는 UWP 앱을 만들었으므로 몇 가지 단계를 처리해야 합니다.
 
 1.  Windows 개발자로 [등록](https://developer.microsoft.com/store/register)해야 합니다.
 2.  앱 제출 [검사 목록](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
 3.  앱을 제출하여 [인증](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
-자세한 내용은 [UWP 앱 게시](https://developer.microsoft.com/store/publish-apps)를 참조 하세요.
+자세한 내용은 참조 하세요. [UWP 앱을 게시](https://developer.microsoft.com/store/publish-apps)합니다.
 

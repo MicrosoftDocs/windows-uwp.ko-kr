@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: efdf4214-9738-4df6-bf1f-ed7141696ef6
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bf4d62f390a5d324952ef2852a76803f4619fdc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934276"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593808"
 ---
 # <a name="register-an-app-in-a-loose-folder"></a>느슨한 폴더에 앱 등록  
 
@@ -52,13 +52,13 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 <br />
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Xbox
 
-**노트**
+**참고 사항**
 
-콘솔의 원하는 폴더에 느슨한 앱을 가져오는 세 가지 이상의 방법이 있습니다. 가장 쉬운 방법은 SMB를 통해 파일을 \\&lt;IP_Address&gt;\DevelopmentFiles\LooseApps로 복사하는 것입니다. 이 경우 [/ext/smb/developerfolder](wdp-smb-api.md)를 통해 가져올 수 있는 UWA 키트에 사용자 이름과 암호가 있어야 합니다. 
+콘솔의 원하는 폴더에 느슨한 앱을 가져오는 세 가지 이상의 방법이 있습니다. SMB 통해 파일 복사 하는 방법이 가장 쉬운 \\< IP_Address > \DevelopmentFiles\LooseApps 합니다. 이 경우 [/ext/smb/developerfolder](wdp-smb-api.md)를 통해 가져올 수 있는 UWA 키트에 사용자 이름과 암호가 있어야 합니다. 
 
 두 번째 방법은 /api/filesystem/apps/file에 대해 POST를 수행하여 개별 파일을 올바른 위치로 복사하는 것입니다. 여기서 knownfolderid는 DevelopmentFiles이고, packagefullname은 비어 있고, 파일 이름 및 경로를 올바르게 제공해야 합니다(경로는 LooseApps로 시작해야 함).
 

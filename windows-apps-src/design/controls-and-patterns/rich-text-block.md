@@ -1,5 +1,5 @@
 ---
-Description: Use a RichTextBlock with RichTextBlockOverflow elements to create advanced text layouts.
+Description: RichTextBlockOverflow 요소와 함께 RichTextBlock을 사용하여 고급 텍스트 레이아웃을 만듭니다.
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ab83e74dc59b407c15e1a8213540c8954fcd16e
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037048"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610898"
 ---
 # <a name="rich-text-block"></a>서식 있는 텍스트 블록
 
@@ -24,7 +24,7 @@ ms.locfileid: "9037048"
 
 서식 있는 텍스트 블록은 단락, 인라인 UI 요소 또는 복잡한 텍스트 레이아웃에 대한 지원이 필요한 경우 사용할 수 있는 몇 가지 고급 텍스트 레이아웃 기능을 제공합니다.
 
-> **중요 API**: [RichTextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [RichTextBlockOverflow 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx), [Paragraph 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx), [Typography 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
+> **중요 한 Api**: [RichTextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)하십시오 [RichTextBlockOverflow 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx), [클래스를 단락](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx), [입력 체계 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -43,8 +43,8 @@ ms.locfileid: "9037048"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/RichTextBlock">앱을 열고 작동 중인 RichTextBlock을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -52,7 +52,7 @@ ms.locfileid: "9037048"
 
 ## <a name="create-a-rich-text-block"></a>서식 있는 텍스트 블록 만들기
 
-RichTextBlock의 콘텐츠 속성은 [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) 요소를 통해 단락 기반 텍스트를 지원하는 [Blocks](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.blocks.aspx) 속성입니다. 쉽게 앱에서 컨트롤의 텍스트 콘텐츠에 액세스하는 데 사용할 수 있는 **Text** 속성이 없습니다. 그러나 RichTextBlock은 TextBlock에서 제공하지 않는 여러 고유한 기능을 제공합니다. 
+RichTextBlock의 콘텐츠 속성은 [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.blocks.aspx) 요소를 통해 단락 기반 텍스트를 지원하는 [Blocks](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) 속성입니다. 쉽게 앱에서 컨트롤의 텍스트 콘텐츠에 액세스하는 데 사용할 수 있는 **Text** 속성이 없습니다. 그러나 RichTextBlock은 TextBlock에서 제공하지 않는 여러 고유한 기능을 제공합니다. 
 
 RichTextBlock은 다음을 지원합니다.
 - 여러 단락. [TextIndent](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.textindent.aspx) 속성을 설정하여 단락에 대해 들여쓰기를 설정할 수 있습니다.
@@ -158,14 +158,14 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 [텍스트 컨트롤](text-controls.md)
 
 **디자이너용**
-- [맞춤법 검사에 대한 지침](text-controls.md)
+- [맞춤법 검사에 대 한 지침](text-controls.md)
 - [검색 추가](https://msdn.microsoft.com/library/windows/apps/hh465231)
-- [텍스트 입력에 대한 지침](text-controls.md)
+- [텍스트 입력에 대 한 지침](text-controls.md)
 
-**개발자용(XAML)**
+**개발자 (XAML)**
 - [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
 
 
-**개발자용(기타)**
-- [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+**(기타)는 개발자를 위한**
+- [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

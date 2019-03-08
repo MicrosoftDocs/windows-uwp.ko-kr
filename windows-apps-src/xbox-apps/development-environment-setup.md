@@ -7,15 +7,15 @@ keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c1d8c6a33bd7d9249b5000767ece154ab7f8776
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046007"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603878"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Xbox 개발 환경에서의 UWP 설정
 
-Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워크를 통해 Xbox One 본체에 연결된 개발 PC로 구성됩니다.
+Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워크를 통해 Xbox One 본체에 연결된 개발 PC로 구성됩니다. 
 개발 PC에는 Windows 10, Visual Studio 2017 또는 Visual Studio 2015 업데이트 3, Windows 10 SDK 빌드 14393 이상, 그리고 다양한 지원 도구가 필요합니다.
 
 
@@ -23,7 +23,7 @@ Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워
 
 ## <a name="visual-studio-setup"></a>Visual Studio 설치
 
-1. Visual Studio 2017, Visual Studio 2015 업데이트 3 또는 Visual Studio의 최신 버전을 설치 합니다. 설치에 대한 자세한 내용은 [Windows 10용 다운로드 및 도구](https://dev.windows.com/downloads)를 참조하세요. 개발자와 보안에 대 한 최신 업데이트를 받을 수 있도록 Visual Studio의 최신 버전을 사용 하는 것이 좋습니다.
+1. Visual Studio 2017, Visual Studio 2015 업데이트 3 또는 Visual Studio의 최신 릴리스를 설치 합니다. 설치에 대한 자세한 내용은 [Windows 10용 다운로드 및 도구](https://dev.windows.com/downloads)를 참조하세요. 개발자와 보안에 대 한 최신 업데이트를 받을 수 있도록 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
 
 2. Visual Studio 2017을 설치하는 경우 **유니버설 Windows 플랫폼 개발** 작업을 선택하도록 하세요. C++ 개발자인 경우에도 **유니버설 Windows 플랫폼 개발** 아래의 오른쪽 **요약** 창의 **C++ 유니버설 Windows 플랫폼 도구** 확인란을 선택하도록 하세요. 이는 기본 설치에 포함되지 않습니다.
 
@@ -33,7 +33,7 @@ Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워
 
     ![Visual Studio 2015 업데이트 2 설치](images/vs_install_tools.png)
 
-## <a name="windows-10-sdk-setup"></a>Windows 10 SDK 설정
+## <a name="windows-10-sdk-setup"></a>Windows 10 SDK 설치
 
 최신 Windows 10 SDK를 설치합니다. 이는 Visual Studio 설치에 포함되지만 이를 별도로 다운로드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 참조하세요.
 
@@ -90,7 +90,7 @@ Xbox One에 앱을 배포하려면 먼저 사용자가 본체에 로그인되어
 
    b. **디버깅** 탭에서 **실행할 디버거**를 **원격 컴퓨터**로 변경합니다.
 
-   c. **컴퓨터 이름**에 시스템 IP 주소 또는 Xbox One 본체의 호스트 이름을 입력합니다. IP 주소 또는 호스트 이름을 얻는 방법에 대한 자세한 내용은 [Xbox One 도구 소개](introduction-to-xbox-tools.md)를 참조하세요.
+   c. **컴퓨터의 이름**에 시스템 IP 주소 또는 Xbox One 본체의 호스트 이름을 입력합니다. IP 주소 또는 호스트 이름을 얻는 방법에 대한 자세한 내용은 [Xbox One 도구 소개](introduction-to-xbox-tools.md)를 참조하세요.
 
    d. **인증 유형** 드롭다운 목록에서 **유니버설(암호화되지 않은 프로토콜)** 을 선택합니다.
 
@@ -121,8 +121,8 @@ Xbox One에 앱을 배포하려면 먼저 사용자가 본체에 로그인되어
 축하합니다. Xbox에서 첫 UWP 앱을 성공적으로 만들고 배포했습니다.
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox One 개발자 모드 활성화](devkit-activation.md)  
-- [Windows 10용 다운로드 및 도구](https://dev.windows.com/downloads)  
+- [Xbox 개발자 모드 활성화](devkit-activation.md)  
+- [Windows 10 용 다운로드 및 도구](https://dev.windows.com/downloads)  
 - [Windows 참가자 프로그램](https://go.microsoft.com/fwlink/?LinkId=780552)  
 - [Xbox One 도구 소개](introduction-to-xbox-tools.md) 
-- [Xbox One의 UWP](index.md)
+- [Xbox One에서 UWP](index.md)

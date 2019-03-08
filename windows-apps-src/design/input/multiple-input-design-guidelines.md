@@ -1,19 +1,19 @@
 ---
-Description: Just as people use a combination of voice and gesture when communicating with each other, multiple types and modes of input can also be useful when interacting with an app.
+Description: 사람이 서로 커뮤니케이션할 때 음성과 제스처를 결합해서 사용하는 것처럼, 앱을 조작할 때도 여러 유형 및 모드의 입력이 유용할 수 있습니다.
 title: 여러 입력 디자인 지침
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c67430680854e7940d12af15ecd3c07dcd976802
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928102"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601298"
 ---
 # <a name="multiple-inputs"></a>여러 입력
 

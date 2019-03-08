@@ -7,37 +7,37 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b177a7741cae0fe786d095c26a6be08ec598bcbb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923051"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604478"
 ---
-# <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출
+# <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>연습: 간단한 Windows 런타임 구성 요소를 만들고 JavaScript에서 호출
 
 
 
 
 이 연습에서는 Visual Basic 또는 C#과 함께 .NET Framework를 사용하여 Windows 런타임 구성 요소로 패키지된 고유한 Windows 런타임 형식을 만드는 방법 및 JavaScript를 사용하여 Windows용으로 빌드된 유니버설 Windows 앱에서 구성 요소를 호출하는 방법을 보여 줍니다.
 
-Visual Studio에서는 쉽게 C# 또는 Visual Basic으로 작성된 Windows 런타임 구성 요소를 앱에 추가하고 JavaScript에서 호출할 수 있는 Windows 런타임 형식을 만들 수 있습니다. 내부적으로, Windows 런타임 형식에서는 유니버설 Windows 앱에 허용되는 .NET Framework 기능을 사용할 수 있습니다. (자세한 내용은 참조 [Windows 런타임 구성 요소 만들기 C# 및 Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) 및 [.NET UWP 앱 개요에 대 한](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)). 외부적으로 형식의 멤버는 해당 매개 변수에 대 한 Windows 런타임 형식만 표시할 하 고 반환 값 수 있습니다. 솔루션을 빌드할 때 Visual Studio는 .NET Framework Windows 런타임 구성 요소 프로젝트를 빌드한 다음 Windows 메타데이터(.winmd) 파일을 만드는 빌드 단계를 실행합니다. 이는 Visual Studio가 앱에 포함하는 Windows 런타임 구성 요소입니다.
+Visual Studio에서는 쉽게 C# 또는 Visual Basic으로 작성된 Windows 런타임 구성 요소를 앱에 추가하고 JavaScript에서 호출할 수 있는 Windows 런타임 형식을 만들 수 있습니다. 내부적으로, Windows 런타임 형식에서는 유니버설 Windows 앱에 허용되는 .NET Framework 기능을 사용할 수 있습니다. (자세한 내용은 [Creating Windows Runtime Components in C# 및 Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) 하 고 [UWP 앱 개요에 대 한.NET](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx).) 외부적으로 형식의 멤버는 해당 매개 변수에 대 한 Windows 런타임 형식에만 노출 하 고 값을 반환할 수 있습니다. 솔루션을 빌드할 때 Visual Studio는 .NET Framework Windows 런타임 구성 요소 프로젝트를 빌드한 다음 Windows 메타데이터(.winmd) 파일을 만드는 빌드 단계를 실행합니다. 이는 Visual Studio가 앱에 포함하는 Windows 런타임 구성 요소입니다.
 
-> **참고**.NET Framework Windows 런타임 이와 동일한에 기본 데이터 형식 및 컬렉션 형식과 같은 자주 사용 되는 일부.NET Framework 형식의 자동으로 매핑됩니다. 이러한 .NET Framework 형식은 Windows 런타임 구성 요소의 공용 인터페이스에서 사용할 수 있으며 구성 요소 사용자에게 해당 Windows 런타임 형식으로 표시됩니다. [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)를 참조하세요.
+> **참고**  .NET Framework 자동 매핑됩니다 기본 데이터 형식 및 컬렉션 형식과 같은 일부 자주 사용 되는.NET Framework 형식으로 Windows 런타임 및 그에 해당 합니다. 이러한 .NET Framework 형식은 Windows 런타임 구성 요소의 공용 인터페이스에서 사용할 수 있으며 구성 요소 사용자에게 해당 Windows 런타임 형식으로 표시됩니다. [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)를 참조하세요.
 
 이 연습에서는 다음 작업을 보여 줍니다. JavaScript로 작성된 Windows 앱을 설정하는 첫 번째 섹션을 완료한 후 순서에 관계없이 나머지 섹션을 완료할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 조건:
 
--   Windows 10
--   Microsoft Visual Studio2015 또는 Microsoft Visual Studio Community2015
+-   Windows 10
+-   Microsoft Visual Studio 2015 또는 Microsoft Visual Studio Community 2015
 
 ## <a name="creating-a-simple-windows-runtime-class"></a>간단한 Windows 런타임 클래스 만들기
 
 
 이 섹션에서는 JavaScript를 사용하여 Windows용으로 빌드된 유니버설 Windows 앱을 만들고 Visual Basic 또는 C# Windows 런타임 구성 요소 프로젝트를 추가합니다. 관리되는 Windows 런타임 형식을 정의하고 JavaScript에서 형식의 인스턴스를 만들고 정적 및 인스턴스 멤버를 호출하는 방법을 보여 줍니다. 예제 앱의 시각적 표시는 구성 요소에 포커스를 유지하기 위해 의도적으로 흐릿하게 설정됩니다. 자유롭게 표시를 개선할 수 있습니다.
 
-1.  Visual Studio에서 새 JavaScript 프로젝트를 만듭니다. 메뉴 모음에서 **파일, 새로 만들기, 프로젝트**를 선택합니다. **새 프로젝트** 대화 상자의 **설치된 템플릿** 섹션에서 **JavaScript**, **Windows**, **유니버설**을 차례로 선택합니다. Windows를 사용할 수 없는 경우 Windows 8 이상을 사용 중인지 확인합니다. **빈 응용 프로그램** 템플릿을 선택하고 프로젝트 이름에 SampleApp을 입력합니다.
-2.  구성 요소 프로젝트를 만듭니다. 솔루션 탐색기에서 SampleApp 솔루션의 바로 가기 메뉴를 열고 **추가**, **새 프로젝트**를 차례로 선택하여 새 C# 또는 Visual Basic 프로젝트를 솔루션에 추가합니다. **새 프로젝트 추가** 대화 상자의 **설치된 템플릿** 섹션에서 **Visual Basic** 또는 **Visual C#** 을 선택한 다음 **Windows**, **유니버설**을 차례로 선택합니다. **Windows 런타임 구성 요소** 템플릿을 선택하고 프로젝트 이름에 **SampleComponent** 를 입력합니다.
+1.  Visual Studio에서 새로운 JavaScript 프로젝트를 만듭니다. 메뉴 모음에서 선택 **파일, 새로 만들기, 프로젝트**합니다. **새 프로젝트** 대화 상자의 **설치된 템플릿** 섹션에서 **JavaScript**, **Windows**, **유니버설**을 차례로 선택합니다. (Windows를 사용할 수 없는 경우 사용 중인지 확인 하는 Windows 8 이상입니다.) 선택 된 **빈 응용 프로그램** 템플릿 SampleApp 프로젝트 이름을 입력 합니다.
+2.  구성 요소 프로젝트를 만듭니다. 솔루션 탐색기에서 SampleApp 솔루션의 바로 가기 메뉴를 열고 선택한 **추가**를 선택한 후 **새 프로젝트** 새 C# 또는 Visual Basic 프로젝트를 솔루션입니다. **새 프로젝트 추가** 대화 상자의 **설치된 템플릿** 섹션에서 **Visual Basic** 또는 **Visual C#** 을 선택한 다음 **Windows**, **유니버설**을 차례로 선택합니다. **Windows 런타임 구성 요소** 템플릿을 선택하고 프로젝트 이름에 **SampleComponent** 를 입력합니다.
 3.  클래스 이름을 **Example**로 변경합니다. 기본적으로 클래스는 **public sealed**(Visual Basic의 경우 **Public NotInheritable**)로 표시됩니다. 구성 요소에서 노출하는 모든 Windows 런타임 클래스는 봉인해야 합니다.
 4.  클래스에 두 개의 간단한 멤버인 **static** 메서드(Visual Basic의 경우 **Shared** 메서드) 및 인스턴스 속성을 추가합니다.
 
@@ -66,7 +66,7 @@ Visual Studio에서는 쉽게 C# 또는 Visual Basic으로 작성된 Windows 런
     > End Class
     > ```
 
-5.  옵션: 새로 추가된 멤버에 IntelliSense를 사용하도록 설정하려면 솔루션 탐색기에서 SampleComponent 프로젝트의 바로 가기 메뉴를 열고 **빌드**를 선택합니다.
+5.  선택 사항: 솔루션 탐색기에서 새로 추가 된 멤버에 IntelliSense를 사용 하도록 설정 하려면 SampleComponent 프로젝트에 대 한 바로 가기 메뉴를 열고 선택한 후 **빌드**합니다.
 6.  솔루션 탐색기의 JavaScript 프로젝트에서 **참조**의 바로 가기 메뉴를 열고 **참조 추가**를 선택하여 **참조 관리자**를 엽니다. **프로젝트**를 선택한 다음 **솔루션**을 선택합니다. SampleComponent 프로젝트의 확인란을 선택한 다음 **확인**을 선택하여 참조를 추가합니다.
 
 ## <a name="call-the-component-from-javascript"></a>JavaScript에서 구성 요소 호출
@@ -97,14 +97,14 @@ function basics2() {
 
 각 멤버 이름의 첫 글자가 대문자에서 소문자로 변경됩니다. 이 변환은 Windows 런타임을 자연스럽게 사용할 수 있도록 하기 위해 JavaScript에서 제공하는 지원의 일부입니다. 네임스페이스 및 클래스 이름은 Pascal Case됩니다. 멤버 이름은 모두 소문자인 이벤트 이름을 제외하고 Camel Case됩니다. [JavaScript에서 Windows 런타임 사용](https://msdn.microsoft.com/library/hh710230.aspx)을 참조하세요. Camel Casing 규칙은 혼동될 수 있습니다. 일련의 초기 대문자는 일반적으로 소문자로 표시되지만 대문자 3자 뒤에 소문자 하나가 오는 경우 처음 두 문자만 소문자로 표시됩니다. 예를 들어 IDStringKind라는 멤버는 idStringKind로 표시됩니다. Visual Studio에서 Windows 런타임 구성 요소 프로젝트를 빌드한 다음 JavaScript 프로젝트에 IntelliSense를 사용하여 올바른 대/소문자를 확인할 수 있습니다.
 
-유사한 방식으로, .NET Framework는 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 지원합니다. 이 문서는 [Windows 런타임 구성 요소 만들기 C# 및 Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) 및 [UWP 앱 및 Windows 런타임에 대 한.NET Framework 지원](https://msdn.microsoft.com/library/hh694558.aspx)및이 문서의 다음 섹션에서 설명 합니다.
+유사한 방식으로, .NET Framework는 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 지원합니다. 문서에서이 문서의 후속 섹션에 설명 되어 [Creating Windows Runtime Components in C# 및 Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) 하 고 [UWP 앱 및 Windows 런타임용.NETFramework지원](https://msdn.microsoft.com/library/hh694558.aspx).
 
 ## <a name="create-a-simple-user-interface"></a>간단한 사용자 인터페이스 만들기
 
 
 JavaScript 프로젝트에서 default.html 파일을 열고 다음 코드에 표시된 대로 본문을 업데이트합니다. 이 코드는 예제 앱에 대한 전체 컨트롤 집합을 포함하며 클릭 이벤트에 대한 함수 이름을 지정합니다.
 
-> **참고**앱을 처음 실행할 때는 Basics1 및 Basics2 단추만 지원 됩니다.
+> **참고**  앱을 처음으로 실행 하는 경우 Basics1 및 Basics2 단추만 지원 됩니다.
 
 ```html
 <body>
@@ -181,7 +181,7 @@ Basics 1 단추를 선택하여 정적 GetAnswer 메서드의 반환 값을 출�
 
 Basics 2 단추를 선택하여 SampleProperty 속성 값을 증분하고 출력 영역에 새 값을 표시합니다. 문자열 및 숫자와 같은 기본 형식을 매개 변수 형식 및 반환 형식으로 사용할 수 있으며 관리 코드와 JavaScript 간에 전달할 수 있습니다. JavaScript의 숫자는 배정밀도 부동 소수점 형식으로 저장되므로 .NET Framework 숫자 형식으로 변환됩니다.
 
-> **참고**기본적으로 JavaScript 코드 에서만에서 중단점을 설정할 수 있습니다. Visual Basic 또는 C# 코드를 디버그하려면 C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기를 참조하세요.
+> **참고**  기본적으로 JavaScript 코드에만 중단점을 설정할 수 있습니다. Visual Basic 또는 C# 코드를 디버그하려면 C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기를 참조하세요.
 
  
 
@@ -192,7 +192,7 @@ Basics 2 단추를 선택하여 SampleProperty 속성 값을 증분하고 출력
 
 JavaScript 또는 관리 코드에서 Windows 런타임을 호출할 수 있습니다. 둘 간에 Windows 런타임 개체를 전달할 수 있으며, 어느 한 쪽에서 이벤트를 처리할 수 있습니다. 그러나 JavaScript 및 .NET Framework는 Windows 런타임을 다르게 지원하므로 두 환경에서 Windows 런타임 형식을 사용하는 방법이 일부 세부 정보에서 서로 다릅니다. 다음 예제에서는 [Windows.Foundation.Collections.PropertySet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.propertyset.aspx) 클래스를 사용하여 이러한 차이를 보여 줍니다. 이 예제에서는 관리 코드에서 PropertySet 컬렉션의 인스턴스를 만들고 이벤트 처리기를 등록하여 컬렉션의 변경 내용을 추적합니다. 그런 다음 컬렉션을 가져오고 자체 이벤트 처리기를 등록한 다음 컬렉션을 사용하는 JavaScript 코드를 추가합니다. 마지막으로, 관리 코드에서 컬렉션을 변경하고 관리되는 예외를 처리하는 JavaScript를 표시하는 메서드를 추가합니다.
 
-> **중요 한**이 예제는 이벤트가 발생 하는 UI 스레드에서 합니다. 백그라운드 스레드(예: 비동기 호출)에서 이벤트가 발생하는 경우 JavaScript에서 이벤트를 처리하려면 몇 가지 추가 작업을 수행해야 합니다. 자세한 내용은 [Windows 런타임 구성 요소에서 이벤트 발생](raising-events-in-windows-runtime-components.md)을 참조하세요.
+> **중요**  이 예제에서는 이벤트 발생 중인 UI 스레드에서 합니다. 백그라운드 스레드(예: 비동기 호출)에서 이벤트가 발생하는 경우 JavaScript에서 이벤트를 처리하려면 몇 가지 추가 작업을 수행해야 합니다. 자세한 내용은 [Windows 런타임 구성 요소에서 이벤트 발생](raising-events-in-windows-runtime-components.md)을 참조하세요.
 
  
 
@@ -268,7 +268,7 @@ SampleComponent 프로젝트에서 PropertySetStats라는 새 **public sealed** 
 > End Class
 > ```
 
-이벤트 처리기 (이 경우 PropertySet 개체)에서 이벤트를 보낸 사람은 IObservableMap로 캐스팅 되는 친숙 한.NET Framework 이벤트 패턴을 따르는&lt;문자열, 개체&gt; (IObservableMap (문자열, 개체)의 인터페이스 Visual Basic의 경우)는 Windows 런타임 인터페이스의 인스턴스화 [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx)합니다. (캐스팅할 수 발신자의 형식에 필요한 경우.) 또한 이벤트 인수가 개체가 아닌 인터페이스로 표시 됩니다.
+이벤트 처리기 (이 예제의 경우 PropertySet 개체)에 대 한 이벤트의 sender는 IObservableMap로 캐스팅 되는 점을 제외 하 고 친숙 한.NET Framework 이벤트 패턴을 따릅니다&lt;문자열, 개체&gt; 인터페이스 (IObservableMap (Of String, 개체) Visual basic에서)는 Windows 런타임 인터페이스의 인스턴스화 [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx)합니다. (캐스팅할 수 있습니다 전송자를 해당 형식 필요한 경우.) 또한 이벤트 인수를 개체로 되지 않고 인터페이스로 표시 됩니다.
 
 default.js 파일에서 Runtime1 함수를 표시된 대로 추가합니다. 이 코드는 PropertySetStats 개체를 만들고, 해당 PropertySet 컬렉션을 가져오고, 자체 이벤트 처리기인 onMapChanged 함수를 추가하여 MapChanged 이벤트를 처리합니다. 컬렉션을 변경한 후 runtime1은 DisplayStats 메서드를 호출하여 변경 유형에 대한 요약을 표시합니다.
 
@@ -373,14 +373,14 @@ runtimeButton2.addEventListener("click", runtime2, false);
 
 앱을 실행하려면 F5 키를 선택합니다. **Runtime 1**, **Runtime 2**를 차례로 선택합니다. JavaScript 이벤트 처리기가 컬렉션에 대한 첫 번째 변경 내용을 보고합니다. 그러나 두 번째 변경 내용은 중복 키를 갖습니다. .NET Framework 사전의 사용자는 Add 메서드에서 예외가 발생할 것을 예상하며 실제로 예외가 발생합니다. JavaScript는 .NET Framework 예외를 처리합니다.
 
-> **참고**JavaScript 코드에서 예외 메시지를 표시할 수 없습니다. 메시지 텍스트가 스택 추적으로 바뀝니다. 자세한 내용은 C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기에서 "예외 발생"을 참조하세요.
+> **참고**  JavaScript 코드에서 예외 메시지를 표시할 수 없습니다. 메시지 텍스트가 스택 추적으로 바뀝니다. 자세한 내용은 C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기에서 "예외 발생"을 참조하세요.
 
 반면, JavaScript에서 중복 키를 사용하여 insert 메서드를 호출한 경우 항목의 값이 변경되었습니다. 이러한 동작의 차이는 [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)에 설명된 대로 JavaScript 및 .NET Framework에서 Windows 런타임을 지원하는 방법이 서로 다르기 때문입니다.
 
 ## <a name="returning-managed-types-from-your-component"></a>구성 요소에서 관리되는 형식 반환
 
 
-앞에서 설명한 대로 JavaScript 코드와 C# 또는 Visual Basic 코드 간에 자유롭게 네이티브 Windows 런타임 형식을 전달할 수 있습니다. 대체로 형식 이름 및 멤버 이름은 두 경우에서 동일합니다(JavaScript에서는 멤버 이름이 소문자로 시작된다는 점 제외). 그러나 이전 섹션에서 PropertySet 클래스는 관리 코드에서 다른 멤버를 갖는 것으로 표시되었습니다. 예를 들어 JavaScript에서는 insert 메서드를 호출했고 .NET Framework 코드에서는 Add 메서드를 호출했습니다. 이 섹션에서는 이러한 차이가 JavaScript에 전달되는 .NET Framework 형식에 미치는 영향을 설명합니다.
+앞에서 설명한 대로 JavaScript 코드와 C# 또는 Visual Basic 코드 간에 자유롭게 네이티브 Windows 런타임 형식을 전달할 수 있습니다. 대체로 형식 이름 및 멤버 이름은 두 경우에서 동일합니다(JavaScript에서는 멤버 이름이 소문자로 시작된다는 점 제외). 그러나 이전 섹션에서 PropertySet 클래스는 관리 코드에서 다른 멤버를 갖는 것으로 표시되었습니다. (예를 들어 JavaScript insert 메서드를 호출 하 고 추가 메서드를 호출 하면.NET Framework 코드에서) 이 섹션에서는 방식으로 이러한 차이점이 JavaScript에 전달 되는.NET Framework 형식에 영향을 줍니다.
 
 구성 요소에서 만들었거나 JavaScript에서 구성 요소에 전달한 Windows 런타임 형식을 반환하는 것 외에도 해당 Windows 런타임 형식인 것처럼 관리 코드에서 만든 관리되는 형식을 JavaScript에 반환할 수 있습니다. 런타임 클래스의 첫 번째 간단한 예제에서도 멤버의 매개 변수 및 반환 형식은 .NET Framework 형식인 Visual Basic 또는 C# 기본 형식이었습니다. 컬렉션에 대한 이 동작을 표시하려면 Example 클래스에 다음 코드를 추가하여 정수로 인덱싱된 일반 문자열 사전을 반환하는 메서드를 만듭니다.
 
@@ -411,7 +411,7 @@ runtimeButton2.addEventListener("click", runtime2, false);
 
 사전은 [Dictionary&lt;TKey, TValue&gt;](https://msdn.microsoft.com/library/xfhwa508.aspx)에 의해 구현되고 Windows 런타임 인터페이스에 매핑되는 인터페이스로 반환되어야 합니다. 이 경우 인터페이스는 IDictionary&lt;int, string&gt;(Visual Basic의 경우 IDictionary(Of Integer, String))입니다. Windows 런타임 형식 IMap&lt;int, string&gt;은 관리 코드에 전달될 때 IDictionary&lt;int, string&gt;으로 표시되며 관리 형식이 JavaScript에 전달될 때는 그 반대가 됩니다.
 
-**중요 한**는 관리 되는 형식이 여러 인터페이스를 구현 하는 경우 JavaScript는 목록에서 처음 나타나는 인터페이스를 사용 합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
+**중요**  JavaScript 목록에서 가장 먼저 나타나는 인터페이스를 사용 하는 관리 되는 형식이 여러 인터페이스를 구현 하는 경우. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
  
 
@@ -468,9 +468,9 @@ returnsButton2.addEventListener("click", returns2, false);
 
 물론, JavaScript는 강력한 형식의 언어가 아니므로 강력한 형식의 제네릭 컬렉션을 사용하면 몇 가지 놀라운 결과가 나타날 수 있습니다. **Returns 2** 단추를 다시 선택합니다. JavaScript에서 "7"을 숫자 7로 강제 변환하고 ct에 저장된 숫자 7을 문자열로 강제 변환합니다. 또한 문자열 "forty"를 0으로 강제 변환합니다. 그러나 위에서 소개한 기능은 일부에 불과합니다. **Returns 2** 단추를 몇 번 더 선택합니다. 관리 코드에서 Add 메서드는 값이 올바른 형식으로 캐스팅된 경우에도 중복 키 예외를 생성합니다. 반면, Insert 메서드는 기존 키에 연결된 값을 업데이트하고 새 키가 사전에 추가되었는지 여부를 나타내는 부울 값을 반환합니다. 이 때문에 키 7과 연결된 값이 계속 변경됩니다.
 
-다른 예기치 않은 동작이 있습니다. 할당되지 않은 JavaScript 변수를 문자열 인수로 전달하는 경우 "undefined" 문자열을 가져옵니다. 즉, JavaScript 코드에 .NET Framework 컬렉션 형식을 전달할 때는 주의하세요.
+다른 예기치 않은 동작: 문자열 인수는 할당 되지 않은 JavaScript 변수를 전달 하는 경우 "undefined 라는" 문자열은 얻게입니다. 즉, JavaScript 코드에 .NET Framework 컬렉션 형식을 전달할 때는 주의하세요.
 
-> **참고**연결할 텍스트가 많은 경우 할 수 있는 것 보다 효율적으로 코드를.NET Framework 메서드로 이동 하 고 StringBuilder 클래스를 사용 하 여 showMap 함수와 같이 합니다.
+> **참고**  많은 양의 텍스트를 연결할 경우 할 수 있는 것 보다 효율적으로 코드를.NET Framework 메서드로 이동 하 고 StringBuilder 클래스를 사용 하 여 showMap 함수에 표시 된 대로 합니다.
 
 Windows 런타임 구성 요소에서 고유한 제네릭 형식을 표시할 수는 없지만 다음과 같은 코드를 사용하여 Windows 런타임 클래스에 대한 .NET Framework 제네릭 컬렉션을 반환할 수 있습니다.
 
@@ -664,7 +664,7 @@ events1Button.addEventListener("click", events1, false);
 > End Function
 > ```
 
-GetPrimesInRangeAsync는 매우 간단한 소수 찾기이며 이는 의도된 것입니다. 여기서는 비동기 작업 구현에 중점을 두므로 단순성이 중요하며 취소를 보여 주는 경우 느린 구현이 도움이 됩니다. GetPrimesInRangeAsync는 소수만 사용하는 대신 해당 제곱근보다 작거나 같은 모든 정수로 후보를 나누어 무차별 대입(brute force)으로 소수를 찾습니다. 이 코드를 단계별로 실행
+GetPrimesInRangeAsync는 매우 간단한 소수 찾기이며 이는 의도된 것입니다. 여기서는 비동기 작업 구현에 중점을 두므로 단순성이 중요하며 취소를 보여 주는 경우 느린 구현이 도움이 됩니다. GetPrimesInRangeAsync 무차별적을으로 소수를 찾습니다. 으로 보다 작거나 소수만 사용 하지 않고 제곱근 같은 모든 정수로 후보를 나눕니다. 이 코드를 단계별로 실행
 
 -   비동기 작업을 시작하기 전에 매개 변수 유효성 검사 및 잘못된 입력에 대한 예외 발생과 같은 정리 작업을 수행합니다.
 -   이 구현의 관건은 [AsyncInfo.Run&lt;TResult, TProgress&gt;(Func&lt;CancellationToken, IProgress&lt;TProgress&gt;, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx)&gt;) 메서드와 메서드의 유일한 매개 변수인 대리자입니다. 대리자는 취소 토큰과 진행률 보고를 위한 인터페이스를 수락하고 해당 매개 변수를 사용하는 시작된 작업을 반환해야 합니다. JavaScript가 GetPrimesInRangeAsync 메서드를 호출하는 경우 다음 단계가 수행됩니다(여기에 제공된 순서와 다를 수 있음).
@@ -672,7 +672,7 @@ GetPrimesInRangeAsync는 매우 간단한 소수 찾기이며 이는 의도된 �
     -   [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx) 개체는 반환된 결과를 처리하고, 취소에 대응하고, 진행률 보고서를 처리할 함수를 제공합니다.
     -   AsyncInfo.Run 메서드는 취소 원본과 IProgress&lt;T&gt; 인터페이스를 구현하는 개체를 만듭니다. 대리자에게 취소 원본의 [CancellationToken](https://msdn.microsoft.com/library/system.threading.cancellationtoken.aspx) 토큰 및 [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx) 인터페이스 둘 다를 전달합니다.
 
-        > **참고**Promise 개체가 취소에 대응 하는 함수를 제공 하지 않는 경우도 asyncinfo.run은 취소할 수 있는 토큰을 전달 및 취소 취소가 발생할 수 있습니다. Promise 개체가 진행률 업데이트를 처리하는 함수를 제공하지 않는 경우에도 AsyncInfo.Run은 IProgress&lt;T&gt;를 구현하는 개체를 제공하지만 해당 보고서는 무시됩니다.
+        > **참고**  경우 Promise 개체 취소에 대응 함수를 제공 하지 않는, AsyncInfo.Run는 여전히 취소 가능한 토큰을 전달 하 고 취소가 발생할 수 있습니다. Promise 개체가 진행률 업데이트를 처리하는 함수를 제공하지 않는 경우에도 AsyncInfo.Run은 IProgress&lt;T&gt;를 구현하는 개체를 제공하지만 해당 보고서는 무시됩니다.
 
     -   대리자는 [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)) 메서드를 통해 토큰과 진행률 인터페이스를 사용하는 시작된 작업을 만듭니다. 시작된 작업에 대한 대리자는 원하는 결과를 계산하는 람다 함수에 의해 제공됩니다. 잠시 후에 자세히 설명하겠습니다.
     -   AsyncInfo.Run 메서드는 [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx) 인터페이스를 구현하는 개체를 만들고, Windows 런타임 취소 메커니즘을 토큰 원본에 연결하고, Promise 개체의 진행률 보고 함수를 &lt;T&gt; 인터페이스에 연결합니다.
@@ -735,6 +735,6 @@ asyncCancel 함수는 WinJS.Promise 개체의 cancel 메서드만 호출합니�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [.NET UWP 앱 개요](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
-* [UWP 앱용 .NET](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
-* [연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
+* [.NET에 대 한 UWP 앱 개요](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [UWP 앱 용.NET](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
+* [연습: 간단한 Windows 런타임 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

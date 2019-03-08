@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a787992507405a70185140e879be731d72806eff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921771"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612628"
 ---
 # <a name="personsummary-json"></a>PersonSummary(JSON)
-[Person (JSON)](json-person.md) 개체의 컬렉션입니다. 
+컬렉션인 [Person (JSON)](json-person.md) 개체입니다. 
 <a id="ID4ER"></a>
 
  
@@ -23,17 +23,17 @@ ms.locfileid: "8921771"
  
 PersonSummary 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| hasCallerMarkedTargetAsFavorite| 부울 값| 호출자가 표시 여부 대상 즐겨찾기로 합니다. 예제 값: true| 
-| hasCallerMarkedTargetAsKnown| 부울 값| 호출자가 것으로 표시 여부 대상 알려진 합니다. 예제 값: true| 
-| isCallerFollowingTarget| 부울 값| 여부 호출자에 게 대상 팔 로우 합니다. 예제 값: true| 
+| hasCallerMarkedTargetAsFavorite| 부울 값| 여부를 호출자에 게는 대상 즐겨찾기로 표시 있습니다. 예제 값: true| 
+| hasCallerMarkedTargetAsKnown| 부울 값| 여부 호출자에 대상이 알려진 것으로 표시 합니다. 예제 값: true| 
+| isCallerFollowingTarget| 부울 값| 여부를 호출자에 게 대상 팔 로우 합니다. 예제 값: true| 
 | isTargetFollowingCaller| 부울 값| 여부 대상 호출자에 게 다음 됩니다. 예제 값: true| 
-| legacyFriendStatus| string| 호출자가 표시 된 대로 대상의 레거시 친구 상태입니다. "None", "MutuallyAccepted", "OutgoingRequest" 또는 "IncomingRequest" 될 수 있습니다. 예제 값: "MutuallyAccepted"| 
-| recentChangeCount| 32 비트 부호 없는 정수| 선택 사항입니다. 대상의 소셜 그래프의 최근 변경의 수입니다. 이 값은 사용자가 자신의 요약을 보고 하는 경우에 존재 합니다. 예제 값: 5| 
-| targetFollowerCount| > 32 비트 부호 없는 정수| 대상을 수행 하는 사용자의 수입니다. 예제 값: 1308| 
-| targetFollowingCount| 32 비트 부호 없는 정수| 대상을 수행 하는 사용자의 수입니다. 예제 값: 112| 
-| 워터 마크| string| 선택 사항입니다. 대상에 대 한 최근 변경 워터 마크입니다. 이 값은 사용자가 자신의 요약을 보고 하는 경우에 존재 합니다. 예제 값: 5| 
+| legacyFriendStatus| 문자열| 호출자에 의해 표시 된 것과 같이 대상의 레거시 friend 상태입니다. "None", "MutuallyAccepted", "OutgoingRequest" 또는 "IncomingRequest" 될 수 있습니다. 예제 값: "MutuallyAccepted"| 
+| recentChangeCount| 32 비트 부호 없는 정수| 선택 사항. 대상의 소셜 그래프의 최근 변경 내용 수입니다. 이 값은 사용자가 자신의 요약을 보고 하는 경우에 존재 합니다. 예제 값: 5| 
+| targetFollowerCount| > 32 비트 부호 없는 정수| 대상 팔 로우 하는 사용자의 수입니다. 예제 값: 1308| 
+| targetFollowingCount| 32 비트 부호 없는 정수| 대상이 팔 로우 하는 사용자의 수입니다. 예제 값: 112| 
+| 워터 마크| 문자열| 선택 사항. 대상에 대 한 최근 변경 워터 마크입니다. 이 값은 사용자가 자신의 요약을 보고 하는 경우에 존재 합니다. 예제 값: 5| 
   
 <a id="ID4E4D"></a>
 
@@ -65,8 +65,8 @@ PersonSummary 개체에 다음과 같이 지정 합니다.
 <a id="ID4EIE"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

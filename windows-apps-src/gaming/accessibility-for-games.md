@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 접근성, 게임
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e1d9d25fc63dd2fbb8d258fdaee692ccdfdc911
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046336"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592938"
 ---
 #  <a name="making-games-accessible"></a>접근성 높은 게임 만들기
 
@@ -33,7 +33,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 게임을 플레이할 수 있는 사용자 수 x 게임의 우수성 = 게임 매출이기 때문입니다.
 
-뛰어난 게임을 만들었지만 너무 복잡하거나 난해해서 소수의 사람만 플레이할 수 있다면 매출이 제한됩니다. 마찬가지로, 신체, 감각 또는 인지 장애가 있는 사람이 플레이할 수 없는 게임을 만들면 그만큼 잠재적 매출 기회를 잃게 됩니다. 예를 들어 [미국 국민의 19%가 어떤 형태로든 신체 장애를 가지고 있고](https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), [미국 성인의 14% 정도가 난독증을 가지고 있으며](https://nces.ed.gov/naal/estimates/overview.aspx) [남성의 10%는 색각 이상증을 앓고 있고 있다](https://www.aao.org/eye-health/diseases/color-blindness-risk)는 점을 고려해 볼 때, 접근성 높은 게임을 개발하면 매출이 크게 증가할 수 있습니다. 
+뛰어난 게임을 만들었지만 너무 복잡하거나 난해해서 소수의 사람만 플레이할 수 있다면 매출이 제한됩니다. 마찬가지로, 신체, 감각 또는 인지 장애가 있는 사람이 플레이할 수 없는 게임을 만들면 그만큼 잠재적 매출 기회를 잃게 됩니다. 예를 들어 [미국 국민의 19%가 어떤 형태로든 신체 장애를 가지고 있고](https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), [미국 성인의 14% 정도가 난독증을 가지고 있으며](https://nces.ed.gov/naal/estimates/overview.aspx)[남성의 10%는 색각 이상증을 앓고 있고 있다](https://www.aao.org/eye-health/diseases/color-blindness-risk)는 점을 고려해 볼 때, 접근성 높은 게임을 개발하면 매출이 크게 증가할 수 있습니다. 
 
 비즈니스 근거에 대한 자세한 내용은 [접근성 높은 비디오 게임 만들기](https://msdn.microsoft.com/library/windows/desktop/ee415219)를 참조하세요.
 
@@ -41,7 +41,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 접근성 높은 게임을 만들면 궁극적으로 더 나은 게임을 만들 수 있습니다. 
 
-게임의 자막을 예로 들 수 있습니다. 과거에는 게임이 게임 대화에 대해 자막이나 선택 자막을 거의 지원하지 않았습니다. 지금은 대부분의 게임에 자막과 선택 자막이 포함되어 있습니다. 이러한 변화는 장애가 있는 게이머를 위해 시작된 것이 아닙니다. 그 보다는 지역화의 영향과 보다 즐겁게 게임을 즐길 수 있다는 점에서 자막이 포함된 게임을 선호하는 게이머가 증가하면서 비롯된 것입니다. 게이머는 플레이할 때 배경 노이즈가 너무 크거나, 다양한 사운드 효과 또는 동시에 들리는 주변 소리로 인해 음성을 듣기 어렵거나, 다른 사람에게 방해가 되지 않도록 볼륨을 낮춰야 하는 경우 자막과 선택 자막을 켭니다. 자막과 선택 자막은 게이머에게 더 나은 게임 환경을 제공할 뿐만 아니라 청각 장애가 있는 사용자도 게임을 할 수 있도록 합니다.
+게임의 자막을 예로 들 수 있습니다. 과거에는 게임이 게임 대화에 대해 자막이나 선택 자막을 거의 지원하지 않았습니다. 지금은 대부분의 게임에 자막과 선택 자막이 포함되어 있습니다. 이러한 변화는 장애가 있는 게이머가 아니라, 그 보다는 지역화의 영향과 보다 즐겁게 게임을 즐길 수 있다는 점에서 자막이 포함된 게임을 선호하는 게이머가 증가하면서 비롯된 것입니다. 게이머는 플레이할 때 배경 노이즈가 너무 크거나, 다양한 사운드 효과 또는 동시에 들리는 주변 소리로 인해 음성을 듣기 어렵거나, 다른 사람에게 방해가 되지 않도록 볼륨을 낮춰야 하는 경우 자막과 선택 자막을 켭니다. 자막과 선택 자막은 게이머에게 더 나은 게임 환경을 제공할 뿐만 아니라 청각 장애가 있는 사용자도 게임을 할 수 있도록 합니다.
 
 컨트롤러 다시 매핑은 유사한 이유로 게임 산업에서 천천히 표준이 되고 있는 또 다른 기능입니다. 모든 플레이어에게 가장 일반적으로 제공되고 있는 혜택이기도 합니다. 어떤 게이머들은 사용자 지정 게임 환경을 구축하는 것을 즐기고, 또 어떤 게이머들은 디자이너가 원래 구상한 것과 다른 환경을 선호하기도 합니다. 대부분의 사람들이 깨닫지 못하고 있는 사실이 있습니다. 실제로 입력 디바이스의 단추를 다시 매핑할 수 있는 기능은 거동에 다양한 형태의 장애가 있어서 컨트롤러의 특정 영역을 작동하는 데 신체적인 어려움을 겪고 있는 사람들도 게임을 즐길 수 있도록 지원하기 위해 개발된 접근성 기능이기도 하다는 점입니다.
 
@@ -69,7 +69,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 ## <a name="defining-disability"></a>장애 정의
 
-장애는 "개인의 요구와 제공되는 서비스, 제품 또는 환경 간의 불일치"로 정의됩니다. ([포괄 비디오](https://www.microsoft.com/design/inclusive), Microsoft.com.) 즉, 누구나 장애를 겪을 수 있으며 단기적인 조건이나 상황에 따른 조건일 수 있습니다. 게임을 플레이할 때 이러한 조건을 가진 게임에서 발생하는 문제를 상상해 보고 게임을 더 효과적으로 디자인할 수 있는 방법을 구상합니다. 다음은 고려해야 할 몇 가지 장애입니다.
+장애는 "개인의 요구와 제공되는 서비스, 제품 또는 환경 간의 불일치"로 정의됩니다. ([포괄 비디오](https://www.microsoft.com/design/inclusive), Microsoft.com.) 이 장애를 경험할 수 있습니다 누구나 하 고 단기 또는 상황에 따른 조건을 사용할 수 있다는 의미 합니다. 게임을 플레이할 때 이러한 조건을 가진 게임에서 발생하는 문제를 상상해 보고 게임을 더 효과적으로 디자인할 수 있는 방법을 구상합니다. 다음은 고려해야 할 몇 가지 장애입니다.
 
 ### <a name="vision"></a>시각
 
@@ -91,7 +91,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 * 난독증, 간질, ADHD(주의력 결핍 과잉 행동 장애), 치매, 기억 상실 등의 장기 의료 조건
 * 알코올 소비, 수면 부족, 집 옆을 디나는 응급 차량의 사이렌과 같은 일시적인 방해 등 상황에 따른 단기 조건
 
-### <a name="speech"></a>음성
+### <a name="speech"></a>음성 명령
 
 * 성대 손상, 구음 장애, 실행증 등의 장기 의료 조건
 * 치과 치료, 먹기 및 마시기 등 상황에 따른 단기 조건
@@ -99,7 +99,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 ## <a name="how-to-make-games-more-accessible"></a>접근성 높은 게임을 만드는 방법
 
-### <a name="design-shift-inclusive-game-design-approach"></a>디자인 변경: 포괄 게임 디자인 방법
+### <a name="design-shift-inclusive-game-design-approach"></a>디자인 shift: 포괄 게임 디자인 방법
 
 포괄 디자인은 장애가 있는 사용자를 포함하여 보다 광범위한 소비자에 대해 접근성 높은 제품 및 서비스를 만드는 것에 집중합니다.
 
@@ -109,31 +109,31 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 간극을 파악해서 게임 환경을 최적화하고 원래 디자인 개념을 반복하고 개선하여 더 많은 사람들이 여러분의 비전을 경험하도록 할 수 있습니다. 게임 디자인 프로세스에서 포괄성을 높이는 데 시간을 투자하면 최종 게임의 접근성이 향상됩니다. 모든 사람을 만족시킬 수 있는 게임은 없습니다. 기본적으로 게임에는 어느 정도의 도전 과제가 있어야 하지만, 접근성을 고려하여 불필요하게 게임에서 배제되는 사람이 없도록 할 수 있습니다.
 
-### <a name="empower-gamers-give-gamers-options"></a>게이머 강화: 게이머에게 옵션 제공
+### <a name="empower-gamers-give-gamers-options"></a>게이머 역량을 강화 합니다. 게이머 옵션 제공
 
 거의 모든 접근성 솔루션은 두 원칙 중 하나를 따릅니다. 첫 번째는 게이머에게 게임 환경을 지정할 수 있는 옵션을 제공하는 것입니다. 이미 많은 팬이 있다면 어떤 방식으로든 변화를 원하지 않는 대상 고객도 있을 수 있습니다. 그러나 관계 없습니다. 게이머가 이러한 기능을 켜거나 끄고 기능을 개별적으로 구성할 수 있게 하세요. 사람들이 자신의 요구와 선호도에 가장 적합한 방식으로 게임을 즐길 수 있도록 해줘야 합니다.
 
-### <a name="reinforce-communicate-information-in-more-than-one-way"></a>기능 강화: 여러 가지 방법으로 정보 전달
+### <a name="reinforce-communicate-information-in-more-than-one-way"></a>보강 합니다. 둘 이상의 방식으로 정보를 통신 합니다.
 
 두 번째 원칙은 유니버설 디자인 개념에 따라 단일 접근 방식을 통해 더 많은 플레이어를 지원하고 모든 플레이어의 게임 환경을 개선하는 것입니다. 예를 들어 텍스트 및 이미지와 심볼 및 색상을 함께 처리하는 것입니다. 다양한 컬러 마커를 기반으로 하는 지도는 색맹인 게이머는 사용이 불가능할 뿐 아니라, 모든 색상의 의미를 기억해야 한다는 점에서 모든 사용자에게 불편을 초래하고 있습니다. 심볼을 추가하면 모든 사용자에게 더 나은 환경을 제공할 수 있습니다.
 
-### <a name="innovate-be-creative"></a>혁신: 독창성 발휘
+### <a name="innovate-be-creative"></a>혁신: 창의적인
 
 게임의 접근성을 향상시킬 수 있는 많은 독창적인 방법이 있습니다. 독창성을 발휘하고 다른 접근성 높은 게임을 통해 배우세요. 기존 게임이 이미 있는 경우 핵심 게임 기술과 환경을 디자인대로 유지하면서 개선할 수 있는 현재 게임 기능을 파악합니다. 위에서 설명한 대로 게임의 접근성은 게이머에게 게임 환경을 사용자 지정하는 옵션을 제공하는 것입니다. 기능 강화를 통해 여러 가지 방법으로 정보를 교환함으로써 이것이 가능할 수 있습니다. 
 
 접근성을 고려하면 새로운 각도와 지금까지 생각해보지 못한 아이디로부터 디자인에 접근할 수 있습니다. 이러한 디자인 접근 방식 덕분에 흥미로운 개념이 도출된 것은 물론이고, 광범위한 채택과 대중 시장에서의 상업적 성공이 가능한 제품이 개발되었습니다. 자동 완성 텍스트, 음성 인식, 연석 컷, 스피커, 타자기 및 광학 인식(OCR)이 바로 그 예입니다. 개발자들이 솔루션에서 접근성을 고려하기 시작하면서부터 이들 제품에 대한 아이디어가 나왔습니다.
 
-### <a name="adopt-quality-means-accessible-features"></a>채택: 품질은 액세스 가능한 기능에 의해 좌우
+### <a name="adopt-quality-means-accessible-features"></a>채택 합니다. 품질 의미 액세스할 수 있는 기능
 
 접근성으로 품질을 측정할 수 있습니다. 접근성은 갖추면 좋은 작업 항목이 아니라 반드시 필요한 기능입니다. 예를 들어 "색맹인 사용자를 위한 미니맵 조정"을 시간이 남으면 고려하는 우선순위가 낮은 작업 항목으로 간주해서는 안 됩니다. 이 작업 항목이 갖춰지지 않으면 전체 미니맵 기능이 불완전해져서 배송이 불가능하게 됩니다.
 
-### <a name="evangelize-make-accessibility-a-priority-in-your-game-studio"></a>전도: 게임 스튜디오에서 접근성에 우선 순위 지정
+### <a name="evangelize-make-accessibility-a-priority-in-your-game-studio"></a>교육: 게임 studio에서 내게 필요한 옵션 우선 순위를 확인 합니다.
 
 게임 개발은 항상 시간에 쫓기기 때문에 접근성에 우선 순위를 지정하면 더 쉽게 처리할 수 있습니다. 한 가지 방법은 처음부터 접근성을 고려하여 디자인하는 것입니다. 접근성을 초기에 고려할수록 용이성과 경제성이 향상됩니다. 
 
 접근성에 대한 지식을 다른 팀원들과 공유하고 비즈니스 근거를 공유하며, 많은 사람들에게 도움이 되지 않고 엔지니어를 무력화시키며 구현에 많은 비용이 든다는 오해를 해소하세요.
 
-### <a name="review-constantly-evaluate-your-game"></a>검토: 지속적으로 게임 평가
+### <a name="review-constantly-evaluate-your-game"></a>검토: 게임을 지속적으로 평가
 
 개발하는 동안 검토 프로세스를 도입하여 모든 단계에서 접근성이 고려되고 있는지 확인할 수 있습니다. 아래와 같은 검사 목록을 만들어 팀이 생성되는 게임의 접근성 여부를 지속적으로 평가하도록 합니다.
 
@@ -146,13 +146,13 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 | HUD 디스플레이                                       | 조정 가능한 화면 위치, 조정 가능한 글꼴 크기, 색맹에게 편리한 옵션                                                  |        
 | 컨트롤 입력                                     | 입력 디바이스에 매핑 가능한 컨트롤, 사용자 지정 컨트롤러 지원, 허용되는 게임에 대한 간소화된 입력                               |        
 
-### <a name="playtest-and-iterate-get-gamers-feedback"></a>플레이 테스트 및 반복: 게이머 피드백 받기
+### <a name="playtest-and-iterate-get-gamers-feedback"></a>Playtest 반복: 게이머의 피드백 받기
 
 플레이 테스트 세션을 구성하는 경우 게임을 디자인할 때 고려된 장애가 있는 플레이 테스터를 초대하여 게임을 플레이하도록 합니다. 접근성 질문을 반드시 베타 테스트 질문지에 포함시켜야 합니다. 로컬 장애인 그룹은 좋은 설문 조사 대상입니다. 플레이 방식을 관찰하고 피드백을 받습니다. 게임을 개선하기 위해 필요한 변경 내용을 파악합니다.
 
 소셜 미디어와 게임 포럼을 사용하여 가장 중요한 접근성 기능과 그 구현 방법에 대한 고객의 의견을 경청하세요. 
 
-### <a name="shout-it-out-let-the-world-know-your-game-is-accessible"></a>알림: 접근성 높은 게임으로 홍보
+### <a name="shout-it-out-let-the-world-know-your-game-is-accessible"></a>계 것: 게임은 액세스 가능한 지
 
 소비자는 장애가 있는 사용자가 게임을 플레이할 수 있는지 알고 싶어합니다. 게임 웹 사이트, 보도 자료 및 포장에 게임의 접근성을 명확하게 표시하여 소비자가 게임을 구매할 때 알 수 있도록 합니다. 웹 사이트와 모든 게임 판매 채널의 접근성도 높여야 합니다. 무엇보다도 접근성 게임 커뮤니티에 접촉하여 게임에 대해 알리는 것이 중요합니다.
 
@@ -170,8 +170,8 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
  
   + 빨강/녹색 색맹인 사용자가 구분할 수 있는 색 조합을 사용합니다.
   
-    * 유사하게 표시되는 색: 갈색, 주황색 등 빨강과 녹색의 모든 음영
-    * 눈에 띄는 색: 파랑 및 노랑
+    * 에 비슷한 색: 모든 빨간색 및 녹색 brown 등 주황색 음영
+    * 두드러진 색: 파랑 및 노란색
     
   + 색에만 의존해서 게임 개체를 전달하거나 구분해서는 안 됩니다. 모양 및 패턴도 사용합니다.
   + 색에만 의존해야 하는 경우에는 자유롭게 선택할 수 있는 색과 미리 설정을 하나로 결합하여 이를 필요로 하는 플레이어는 완벽하게 사용자 지정이 가능하도록 하고, 필요하지 않은 플레이어는 추가적인 작업을 수행할 필요가 없도록 합니다.
@@ -185,10 +185,10 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 *   읽을 수 있는 단순한 글꼴을 선택합니다.
 *   충분히 큰 글꼴 크기를 선택하거나 유연성을 높이기 위해 조정 가능한 글꼴 크기 옵션을 제공합니다. 적합한 글꼴 크기는 화면 크기, 화면에서 떨어진 시청 거리 등에 따라 다릅니다.
-*   배경색과 글꼴 색 간에 고대비를 만듭니다. 텍스트에 대해 강한 윤곽과 그림자를 사용합니다. 선택 자막에 대해 어두운 배경 오버레이를 사용하고 이를 켜거나 끌 수 있는 옵션을 제공해야 합니다 (자세한 내용은 [명암비 정보](https://msdn.microsoft.com/windows/uwp/accessibility/accessible-text-requirements)를 참조).
+*   배경색과 글꼴 색 간에 고대비를 만듭니다. 텍스트에 대해 강한 윤곽과 그림자를 사용합니다. 선택 자막에 대해 어두운 배경 오버레이를 사용하고 이를 켜거나 끌 수 있는 옵션을 제공해야 합니다 자세한 내용은 [명암비 정보](https://msdn.microsoft.com/windows/uwp/accessibility/accessible-text-requirements)를 참조하세요.
 * 화면 상에 짧은 문장(한 줄에 최대 38자, 한 번에 최대 2 ~ 3줄)을 표시합니다. 이벤트가 발생하기 전에 텍스트를 표시하여 게임이 노출되지 않도록 하세요.
-*   소리를 내는 물체와 말하는 사람을 구별합니다. (예: "Daniel: 안녕하세요!")
-*   선택 자막과 자막을 켜고 끄는 옵션을 제공합니다. (추가 기능: 중요도에 따라 표시되는 소리 정보량을 선택하는 기능)
+*   소리를 내는 물체와 말하는 사람을 구별합니다. (예: "Daniel: 안녕하세요! ")
+*   선택 자막과 자막을 켜고 끄는 옵션을 제공합니다. (추가 기능: 사운드 정보의 양을 표시는 선택 하는 기능 중요도에 따라 합니다.)
 
 ### <a name="game-chat-transcription"></a>게임 채팅 기록
 
@@ -204,7 +204,7 @@ ID@Xbox 및 관리 파트너 프로그램의 개발자들을 위해 텍스트-�
 
 *   3D 오디오 신호를 사용하여 추가 공간 정보를 제공합니다.
 * 음악, 음성 및 사운드 효과 볼륨 컨트롤을 구분합니다.
-*   게이머에게 의미 있는 정보를 제공하는 음성을 디자인합니다. (예: "적이 접근하고 있습니다." 및 "적이 뒷문으로 들어오고 있습니다.")
+*   게이머에게 의미 있는 정보를 제공하는 음성을 디자인합니다. (예: "적에 도달 하 는" vs입니다. "적 입력 하는 백도어에서.")
 *   음성을 적절한 속도로 말하고 접근성 향상을 위해 속도 컨트롤을 제공합니다.
 
 ### <a name="fully-mappable-controls"></a>완전히 매핑 가능한 컨트롤
@@ -241,7 +241,7 @@ Windows, Xbox One 등의 다양한 게임 시스템에서 사용할 수 있는 �
 * 물방울 무늬 같이 크기가 작은 규칙적 요소로 구성된 행이나 열(그리드, 체스판 등)의 형태로 간격이 일정한 고대비 반복 줄무늬가 5개 이상 표시
 * 대문자로만 이루어진 5줄 이상의 문자(글자 간의 간격이 넓지 않고 줄 간격이 줄 자체 만큼 벌어져 있어 줄 바꿈이 일정한 고대비 열로 효과적으로 바꾸는 것이 가능)
 
-자동화된 시스템을 사용하여 게임 플레이에 감광성 간질을 유발할 수 있는 자극이 있는지 확인합니다. (예: Cambridge Research System Ltd와 Graham Harding 교수가 개발한 [Harding 테스트](https://www.hardingtest.com/index.php?page=test) 및 [Harding FPA(Flash and Pattern Analyzer) G2](https://www.hardingfpa.com/harding-fpa-for-games/)) 
+자동화된 시스템을 사용하여 게임 플레이에 감광성 간질을 트리거할 수 있는 자극이 있는지 확인합니다. (예: [The Harding 테스트](https://www.hardingtest.com/index.php?page=test) 하 고 [Harding Flash 및 패턴 분석기 (FPA) G2](https://www.hardingfpa.com/harding-fpa-for-games/) 캠브리지 연구 시스템 Ltd 및 교수 Graham Harding 개발한.) 
 
 설정 옵션으로 **플래싱 켜기/끄기**를 포함시키고 **플래싱**을 **끄기**로 기본 설정합니다. 이를 통해 자신이 발작에 취약할 수 있다는 것을 아직 모르는 플레이어를 보호합니다.
 
@@ -252,24 +252,24 @@ Windows, Xbox One 등의 다양한 게임 시스템에서 사용할 수 있는 �
 다음은 게임 접근성에 대한 추가 정보를 제공하는 일부 외부 사이트입니다.
 
 ### <a name="game-accessibility-guidelines"></a>게임 접근성 지침
-* [게임 접근성 지침](https://gameaccessibilityguidelines.com/)
+* [게임 내게 필요한 옵션 지침](https://gameaccessibilityguidelines.com/)
 * [AbleGamers Foundation 지침](https://www.includification.com/)
-* [UA(Universally Accessible) 게임 디자인](https://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
+* [보편적으로 액세스할 수 있습니다 (UA) 게임 디자인](https://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
 
 ### <a name="custom-input-controllers"></a>사용자 지정 입력 컨트롤러
 * [특수 효과](https://www.specialeffect.org.uk/)
-* [참여한 전쟁 전사](https://www.warfighterengaged.org/)
+* [War 전투기 참여](https://www.warfighterengaged.org/)
 
 ## <a name="references-used"></a>사용된 참조
-* [게임 접근성 지침](https://gameaccessibilityguidelines.com/)
+* [게임 내게 필요한 옵션 지침](https://gameaccessibilityguidelines.com/)
 * [AbleGamers Foundation 지침](https://www.includification.com/)
-* [색맹 인식, 공동체 이익 회사(Community Interest Company)](https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
-* [자막을 제대로 처리하는 방법 - Ian Hamilton이 작성한 Gamasutra의 블로그 문서](https://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
-* [모든 프로그램에 대한 혁신](https://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
-* [간질에 대한 기초 상식](https://www.epilepsy.com/)
+* [시각 인식, 커뮤니티 관심 회사 색](https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
+* [수행 하는 방법을 자막 well-Ian Hamilton 여 Gamasutra 하는 블로그 문서](https://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
+* [모든 프로그램에 대 한 혁신](https://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
+* [간 질 foundation](https://www.epilepsy.com/)
 
 ## <a name="related-links"></a>관련 링크
 * [포괄 디자인](https://www.microsoft.com/design/inclusive)
-* [Microsoft 접근성 개발자 허브](https://developer.microsoft.com/windows/accessible-apps)
-* [접근성 높은 UWP 앱 개발](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)
-* [접근성을 위한 소프트웨어 엔지니어링 전자책](https://www.microsoft.com/download/details.aspx?id=19262)
+* [Microsoft Accessibility Developer Hub](https://developer.microsoft.com/windows/accessible-apps)
+* [액세스 가능한 UWP 앱 개발](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)
+* [엔지니어링 소프트웨어에 대 한 내게 필요한 옵션 전자책](https://www.microsoft.com/download/details.aspx?id=19262)

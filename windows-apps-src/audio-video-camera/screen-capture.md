@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 화면 캡처
 ms.localizationpriority: medium
 ms.openlocfilehash: dfed365e097b6f0d3816477513202b2693127ade
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049980"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592968"
 ---
 # <a name="screen-capture"></a>화면 캡처
 
@@ -20,15 +20,15 @@ Windows 10 버전 1803부터 [Windows.Graphics.Capture](https://docs.microsoft.c
 화면 캡처를 통해 개발자는 최종 사용자가 캡처할 디스플레이 또는 응용 프로그램 창을 선택하기 위해 보안 시스템 UI를 호출하고 적극적으로 캡처된 항목 주위에 있는 시스템을 통해 노란색 알림 테두리가 표시됩니다. 여러 개의 동시 캡처 세션의 경우 캡처 중인 각 항목 주위에 노란색 테두리가 그려집니다.
 
 > [!NOTE]
-> 화면 캡처 Api는 데스크톱 및 Windows Mixed Reality 몰입 형 헤드셋에만 지원 됩니다.
+> 화면 캡처 Api 데스크톱 및 Windows Mixed Reality 몰입 형 헤드셋 에서만 지원 됩니다.
 
 ## <a name="add-the-screen-capture-capability"></a>화면 캡처 기능 추가
 
-**Windows.Graphics.Capture** 네임 스페이스에 Api는 일반 기능이 응용 프로그램의 매니페스트에서 선언 필요 합니다.
+Api에는 **Windows.Graphics.Capture** 네임 스페이스에는 응용 프로그램의 매니페스트에서 선언 해야 일반 기능을 필요 합니다.
     
-1. **솔루션 탐색기**에서 **Package.appxmanifest** 를 엽니다.
+1. 오픈 **Package.appxmanifest** 에 **솔루션 탐색기**합니다.
 2. **접근 권한 값** 탭을 선택합니다.
-3. **그래픽 캡처**를 확인 합니다.
+3. 확인할 **그래픽 캡처**합니다.
 
 ![그래픽 캡처](images/screen-capture-1.png)
 
@@ -68,7 +68,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-UI 코드 이기 때문에 UI 스레드에서 호출 해야 합니다. (예: **MainPage.xaml.cs**) 응용 프로그램의 페이지에 대 한 코드 숨김 파일에서 호출 하는 경우 이렇게 하면 자동으로, 찾도록 할 수 있습니다 다음 코드를 사용 하 여 UI 스레드에서 실행 되도록 하지만:
+UI 코드 이기 때문에 UI 스레드에서 호출 해야 합니다. 응용 프로그램의 페이지에 대 한 코드 숨김 파일에서 호출 하는 경우 (같은 **MainPage.xaml.cs**)를 자동으로 수행 됩니다이 있지만 그렇지 않은 경우 다음 코드를 사용 하 여 UI 스레드에서 실행 되도록를 강제할 수 있습니다.
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -81,7 +81,7 @@ await window.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
 
 ## <a name="create-a-capture-frame-pool-and-capture-session"></a>캡처 프레임 풀 및 캡처 세션 만들기
 
-**GraphicsCaptureItem**을 사용하여 D3D 디바이스, 지원되는 픽셀 형식(**DXGI\_FORMAT\_B8G8R8A8\_UNORM**), 필요한 프레임 개수(임의의 정수), 프레임 크기를 사용하여 [Direct3D11CaptureFramePool](https://docs.microsoft.com/uwp/api/windows.graphics.capture.direct3d11captureframepool)을 만듭니다. **GraphicsCaptureItem** 클래스의 **ContentSize** 속성을 프레임의 크기로 사용할 수 있습니다.
+사용 하는 **GraphicsCaptureItem**, 만들려는 [Direct3D11CaptureFramePool](https://docs.microsoft.com/uwp/api/windows.graphics.capture.direct3d11captureframepool) D3D 장치를 사용 하 여 지원 되는 픽셀 형식 (**DXGI\_형식\_ B8G8R8A8\_UNORM**), 숫자 (해당 되는 모든 정수) 원하는 프레임 및 프레임의 크기입니다. **GraphicsCaptureItem** 클래스의 **ContentSize** 속성을 프레임의 크기로 사용할 수 있습니다.
 
 ```cs
 private GraphicsCaptureItem _item;
@@ -163,10 +163,10 @@ _framePool.FrameArrived += (s, a) =>
 
 ## <a name="putting-it-all-together"></a>요약
 
-다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현 하는 방법의 종단 간 예로 나와 있습니다. 이 샘플에서는 정해 졌 단추 프런트 엔드를 클릭 하면 **Button_ClickAsync** 메서드를 호출 합니다.
+다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현 하는 방법의 종단 간 예제입니다. 이 샘플에서는 프런트 엔드에 단추가 있는 클릭 하면 호출을 **Button_ClickAsync** 메서드.
 
 > [!NOTE]
-> 이 코드 조각에서는 [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm), 2D 그래픽 렌더링 하기 위한 라이브러리를 사용 합니다. 해당 프로젝트에 대해 설정 하는 방법에 대 한 정보에 대 한 설명서를 참조 하세요.
+> 이 코드 조각은 [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm), 2D 그래픽 렌더링에 대 한 라이브러리입니다. 프로젝트에 대해 설정 하는 방법에 대 한 내용은 해당 설명서를 참조 하세요.
 
 ```cs
 using Microsoft.Graphics.Canvas;
@@ -386,7 +386,7 @@ namespace WindowsGraphicsCapture
 
 ## <a name="record-a-video"></a>비디오를 기록합니다
 
-응용 프로그램의 비디오 기록 하려는 경우 [Windows.Media.AppRecording 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.media.apprecording)를 사용 하 여 보다 쉽게 설정할 수 있습니다. 이것은 데스크톱 확장 SDK의 일부 바탕 화면에만 작동 하므로 및 프로젝트에 대 한 참조를 추가 해야 합니다. 자세한 내용은 [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 를 참조 하세요.
+응용 프로그램의 비디오 기록 하려는 경우으로 할 수 있는 보다 쉽게 합니다 [Windows.Media.AppRecording 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.media.apprecording)합니다. Desktop에만 작동 데스크톱 확장 SDK의 일부 이므로 및 프로젝트에서 참조를 추가 해야 합니다. 참조 [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 자세한 내용은 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

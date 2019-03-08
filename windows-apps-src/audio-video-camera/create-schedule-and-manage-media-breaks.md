@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 93bcadad38e3d070e8a6b541db4d68bf547bc0b4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933473"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603588"
 ---
 # <a name="create-schedule-and-manage-media-breaks"></a>미디어 휴지 만들기, 예약 및 관리
 
@@ -41,11 +41,11 @@ ms.locfileid: "8933473"
 
 [!code-cs[Play](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetPlay)]
 
-[**PostrollBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakSchedule.PostrollBreak) 속성에 **MediaBreak** 개체를 할당한다는 점을 제외하고 미리 받기 중단과 동일한 기술을 사용하여 기본 콘텐츠가 포함된 **MediaPlaybackItem**의 재생이 완료된 후 재생되는 사후 받기 중단을 추가합니다.
+[  **PostrollBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakSchedule.PostrollBreak) 속성에 **MediaBreak** 개체를 할당한다는 점을 제외하고 미리 받기 중단과 동일한 기술을 사용하여 기본 콘텐츠가 포함된 **MediaPlaybackItem**의 재생이 완료된 후 재생되는 사후 받기 중단을 추가합니다.
 
 [!code-cs[PostRollBreak](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetPostRollBreak)]
 
-기본 콘텐츠 재생 내의 지정된 시간에 재생되는 중간 받기 중단을 하나 이상 예약할 수도 있습니다. 다음 예제에서는 중단이 재생되는 기본 미디어 항목 재생 내의 시간을 지정하는 **TimeSpan** 개체를 받는 생성자 오버로드를 사용하여 [**MediaBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreak)를 만듭니다. 마찬가지로, 중단이 재생되는 동안 기본 콘텐츠 재생이 일시 중지됨을 나타내기 위해 [**MediaBreakInsertionMethod.Interrupt**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakInsertionMethod)가 지정됩니다. [**InsertMidrollBreak**](https://msdn.microsoft.com/library/windows/apps/mt670692)를 호출하여 일정에 중간 받기 중단이 추가됩니다. [**MidrollBreaks**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakSchedule.MidrollBreaks) 속성에 액세스하여 일정에 있는 현재 중간 받기 중단의 읽기 전용 목록을 가져올 수 있습니다.
+기본 콘텐츠 재생 내의 지정된 시간에 재생되는 중간 받기 중단을 하나 이상 예약할 수도 있습니다. 다음 예제에서는 중단이 재생되는 기본 미디어 항목 재생 내의 시간을 지정하는 **TimeSpan** 개체를 받는 생성자 오버로드를 사용하여 [**MediaBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreak)를 만듭니다. 마찬가지로, 중단이 재생되는 동안 기본 콘텐츠 재생이 일시 중지됨을 나타내기 위해 [**MediaBreakInsertionMethod.Interrupt**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakInsertionMethod)가 지정됩니다. [  **InsertMidrollBreak**](https://msdn.microsoft.com/library/windows/apps/mt670692)를 호출하여 일정에 중간 받기 중단이 추가됩니다. [  **MidrollBreaks**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakSchedule.MidrollBreaks) 속성에 액세스하여 일정에 있는 현재 중간 받기 중단의 읽기 전용 목록을 가져올 수 있습니다.
 
 [!code-cs[MidrollBreak](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetMidrollBreak)]
 
@@ -66,11 +66,11 @@ ms.locfileid: "8933473"
 
 [!code-cs[RegisterMediaBreakEvents](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetRegisterMediaBreakEvents)]
 
-[**BreakStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.BreakStarted)는 미디어 중단이 시작될 때 발생합니다. 미디어 중단 콘텐츠가 재생되고 있음을 사용자에게 알리기 위해 UI를 업데이트하는 것이 좋습니다. 이 예제에서는 처리기에 전달된 [**MediaBreakStartedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakStartedEventArgs)를 사용하여 시작된 미디어 중단에 대한 참조를 가져옵니다. 그런 다음 [**CurrentItemIndex**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.CurrentItemIndex) 속성을 사용하여 재생 중인 미디어 중단 재생 목록의 미디어 항목을 확인합니다. 사용자에게 현재 광고 인덱스 및 중단에 남아 있는 광고 수를 표시하기 위해 UI가 업데이트됩니다. UI 업데이트는 UI 스레드에서 수행해야 하므로 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 호출 내에서 호출해야 합니다. 
+[  **BreakStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.BreakStarted)는 미디어 중단이 시작될 때 발생합니다. 미디어 중단 콘텐츠가 재생되고 있음을 사용자에게 알리기 위해 UI를 업데이트하는 것이 좋습니다. 이 예제에서는 처리기에 전달된 [**MediaBreakStartedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakStartedEventArgs)를 사용하여 시작된 미디어 중단에 대한 참조를 가져옵니다. 그런 다음 [**CurrentItemIndex**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.CurrentItemIndex) 속성을 사용하여 재생 중인 미디어 중단 재생 목록의 미디어 항목을 확인합니다. 사용자에게 현재 광고 인덱스 및 중단에 남아 있는 광고 수를 표시하기 위해 UI가 업데이트됩니다. UI 업데이트는 UI 스레드에서 수행해야 하므로 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 호출 내에서 호출해야 합니다. 
 
 [!code-cs[BreakStarted](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakStarted)]
 
-[**BreakEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.BreakEnded)는 중단에 포함된 모든 미디어 항목의 재생이 완료되거나 모두 건너뛰었을 때 발생합니다. 이 이벤트 처리기를 통해 UI를 업데이트하여 미디어 중단 콘텐츠가 더 이상 재생되지 않음을 나타낼 수 있습니다.
+[**BreakEnded** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.BreakEnded) 중단에 있는 미디어 항목의 전체 재생을 완료 또는 누락 되었을 때 발생 합니다. 이 이벤트 처리기를 통해 UI를 업데이트하여 미디어 중단 콘텐츠가 더 이상 재생되지 않음을 나타낼 수 있습니다.
 
 [!code-cs[BreakEnded](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakEnded)]
 
@@ -80,13 +80,13 @@ ms.locfileid: "8933473"
 
 [!code-cs[BreakSkipped](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakSkipped)]
 
-[**BreaksSeekedOver**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.BreaksSeekedOver)는 기본 미디어 항목의 재생 위치가 하나 이상의 미디어 중단에 예약된 시간을 지났을 때 발생합니다. 다음 예제에서는 둘 이상의 미디어 중단이 검색되었는지, 재생 위치가 앞으로 이동되었는지, 10분 미만으로 앞으로 이동되었는지 확인합니다. 맞으면 이벤트 인수에 의해 노출된 [**SeekedOverBreaks**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakSeekedOverEventArgs.SeekedOverBreaks) 컬렉션에서 가져온 검색된 첫 번째 중단이 **MediaPlayer.BreakManager**의 [**PlayBreak**](https://msdn.microsoft.com/library/windows/apps/mt670689) 메서드를 호출하여 즉시 재생됩니다.
+[**BreaksSeekedOver** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.BreaksSeekedOver) 주 미디어 항목의 재생 위치 하나 이상의 미디어 나누기에 대 한 예약된 된 시간 위로 이동할 때 발생 합니다. 다음 예제에서는 둘 이상의 미디어 중단이 검색되었는지, 재생 위치가 앞으로 이동되었는지, 10분 미만으로 앞으로 이동되었는지 확인합니다. 맞으면 이벤트 인수에 의해 노출된 [**SeekedOverBreaks**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakSeekedOverEventArgs.SeekedOverBreaks) 컬렉션에서 가져온 검색된 첫 번째 중단이 **MediaPlayer.BreakManager**의 [**PlayBreak**](https://msdn.microsoft.com/library/windows/apps/mt670689) 메서드를 호출하여 즉시 재생됩니다.
 
 [!code-cs[BreakSeekedOver](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakSeekedOver)]
 
 
 ## <a name="access-the-current-playback-session"></a>현재 재생 세션 액세스
-[**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) 개체는 **MediaPlayer** 클래스를 사용하여 현재 재생 중인 미디어 콘텐츠와 관련된 데이터 및 이벤트를 제공합니다. [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager)에는 특히 재생 중인 미디어 중단 콘텐츠와 관련된 데이터 및 이벤트를 가져오기 위해 액세스할 수 있는 **MediaPlaybackSession**도 있습니다. 재생 세션에서 가져올 수 있는 정보에는 현재 재생 상태(재생 중 또는 일시 중지됨), 콘텐츠 내의 현재 재생 위치 등이 포함됩니다. 미디어 중단 콘텐츠의 가로 세로 비율이 기본 콘텐츠와 다른 경우 [**NaturalVideoWidth**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoWidth) 및 [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoHeight) 속성과 [**NaturalVideoSizeChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoSizeChanged)를 사용하여 비디오 UI를 조정할 수 있습니다. 앱 성능에 대한 중요한 원격 분석을 제공할 수 있는 [**BufferingStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingStarted), [**BufferingEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingEnded), [**DownloadProgressChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.DownloadProgressChanged) 등의 이벤트를 받을 수도 있습니다.
+[  **MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) 개체는 **MediaPlayer** 클래스를 사용하여 현재 재생 중인 미디어 콘텐츠와 관련된 데이터 및 이벤트를 제공합니다. [  **MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager)에는 특히 재생 중인 미디어 중단 콘텐츠와 관련된 데이터 및 이벤트를 가져오기 위해 액세스할 수 있는 **MediaPlaybackSession**도 있습니다. 재생 세션에서 가져올 수 있는 정보에는 현재 재생 상태(재생 중 또는 일시 중지됨), 콘텐츠 내의 현재 재생 위치 등이 포함됩니다. 미디어 중단 콘텐츠의 가로 세로 비율이 기본 콘텐츠와 다른 경우 [**NaturalVideoWidth**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoWidth) 및 [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoHeight) 속성과 [**NaturalVideoSizeChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoSizeChanged)를 사용하여 비디오 UI를 조정할 수 있습니다. 앱 성능에 대한 중요한 원격 분석을 제공할 수 있는 [**BufferingStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingStarted), [**BufferingEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingEnded), [**DownloadProgressChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.DownloadProgressChanged) 등의 이벤트를 받을 수도 있습니다.
 
 다음 예제에서는 **BufferingProgressChanged 이벤트**의 처리기를 등록합니다. 이벤트 처리기에서 UI를 업데이트하여 현재 버퍼링 진행 상황을 표시합니다.
 
@@ -96,8 +96,8 @@ ms.locfileid: "8933473"
 
 ## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)
-* [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)
-* [시스템 미디어 전송 컨트롤의 수동 컨트롤](system-media-transport-controls.md)
+* [오디오 및 MediaPlayer를 사용 하 여 비디오를 재생 합니다.](play-audio-and-video-with-mediaplayer.md)
+* [수동 시스템 미디어 전송 컨트롤 제어](system-media-transport-controls.md)
 
  
 

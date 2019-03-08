@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7768d63405281d3155affc6c9f09c62568761718
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945510"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607398"
 ---
 # <a name="tessellator-ts-stage"></a>TS(분할기) 단계
 
 
 TS(분할기) 단계에서는 기하 도형 패치를 나타내는 도메인의 샘플링 패턴을 만들고 이러한 샘플을 연결하는 일단의 더 작은 개체(삼각형, 점 또는 선)를 생성합니다.
 
-## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>목적 및 사용
+## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>용도 사용
 
 
 다음 다이어그램에는 Direct3D 그래픽 파이프라인의 단계가 나와 있습니다.
@@ -52,9 +52,9 @@ Direct3D 런타임은 GPU에서 저 세부도 분할 표면을 상위 세부도 
 
 Direct3D 그래픽 파이프라인은 하드웨어에서 공간 분할을 구현하여 작업을 CPU에서 GPU로 분산합니다. 그러므로 응용 프로그램이 많은 수의 모프 대상 및/또는 보다 정교한 스킨 지정/변형 모델을 구현하는 경우 성능이 현저히 개선될 수 있습니다.
 
-분할기는 [헐 셰이더](hull-shader-stage--hs-.md)를 파이프라인에 바인딩하여 초기화되는 고정 함수 단계입니다. ([방법: 분할기 단계 초기화](https://msdn.microsoft.com/library/windows/desktop/ff476341) 참조). 분할기 단계의 목적은 도메인(사각형, 삼각형 또는 선)을 여러 개의 더 작은 개체(삼각형, 점 또는 선)로 세분화하는 것입니다. 분할기는 정규(0~1) 좌표계에서 정식 도메인을 타일링합니다. 예를 들어 사각형 도메인은 단위 정사각형으로 공간 분할됩니다.
+분할기는 [헐 셰이더](hull-shader-stage--hs-.md)를 파이프라인에 바인딩하여 초기화되는 고정 함수 단계입니다. (참조 [방법: Tessellator 단계 초기화](https://msdn.microsoft.com/library/windows/desktop/ff476341)). 분할기 단계의 목적은 도메인(사각형, 삼각형 또는 선)을 여러 개의 더 작은 개체(삼각형, 점 또는 선)로 세분화하는 것입니다. 분할기는 정규(0~1) 좌표계에서 정식 도메인을 타일링합니다. 예를 들어 사각형 도메인은 단위 정사각형으로 공간 분할됩니다.
 
-### <a name="span-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanphases-in-the-tessellator-ts-stage"></a><span id="Phases_in_the_Tessellator__TS__stage"></span><span id="phases_in_the_tessellator__ts__stage"></span><span id="PHASES_IN_THE_TESSELLATOR__TS__STAGE"></span>TS(분할기) 단계의 작업 단계
+### <a name="span-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanphases-in-the-tessellator-ts-stage"></a><span id="Phases_in_the_Tessellator__TS__stage"></span><span id="phases_in_the_tessellator__ts__stage"></span><span id="PHASES_IN_THE_TESSELLATOR__TS__STAGE"></span>Tessellator (TS) 스테이지의 단계
 
 TS(분할기) 단계는 2개 작업 단계로 작동합니다.
 
@@ -63,16 +63,16 @@ TS(분할기) 단계는 2개 작업 단계로 작동합니다.
 
     | 분할 유형 | 범위                       |
     |----------------------|-----------------------------|
-    | Fractional\_odd      | \[1...63\]                  |
-    | Fractional\_even     | TessFactor range: \[2..64\] |
-    | Integer              | TessFactor range: \[1..64\] |
-    | Pow2                 | TessFactor range: \[1..64\] |
+    | 소수 자릿수\_홀수      | \[1...63\]                  |
+    | 소수 자릿수\_도     | TessFactor 범위: \[2..64\] |
+    | 정수              | TessFactor 범위: \[1..64\] |
+    | Pow2                 | TessFactor 범위: \[1..64\] |
 
      
 
-공간 분할은 두 개의 프로그래밍 가능 셰이더 단계 [헐 셰이더](hull-shader-stage--hs-.md) 및 [도메인 셰이더](domain-shader-stage--ds-.md)로 구현됩니다. 이러한 셰이더 단계는 셰이더 모델 5에서 정의되는 HLSL 코드로 프로그래밍되어 있습니다. 셰이더 대상은 hs\_5\_0 및 ds\_5\_0입니다. 제목이 셰이더를 만든 후 하드웨어용 코드가 컴파일된 셰이더에서 추출되어 셰이더가 파이프라인에 바인딩될 때 런타임으로 전달됩니다.
+공간 분할은 두 개의 프로그래밍 가능 셰이더 단계 [헐 셰이더](hull-shader-stage--hs-.md) 및 [도메인 셰이더](domain-shader-stage--ds-.md)로 구현됩니다. 이러한 셰이더 단계는 셰이더 모델 5에서 정의되는 HLSL 코드로 프로그래밍되어 있습니다. 셰이더 대상은: hs\_5\_0 및 ds\_5\_0입니다. 제목이 셰이더를 만든 후 하드웨어용 코드가 컴파일된 셰이더에서 추출되어 셰이더가 파이프라인에 바인딩될 때 런타임으로 전달됩니다.
 
-### <a name="span-idenablingdisablingtessellationspanspan-idenablingdisablingtessellationspanspan-idenablingdisablingtessellationspanenablingdisabling-tessellation"></a><span id="Enabling_disabling_tessellation"></span><span id="enabling_disabling_tessellation"></span><span id="ENABLING_DISABLING_TESSELLATION"></span>공간 분할 활성화/비활성화
+### <a name="span-idenablingdisablingtessellationspanspan-idenablingdisablingtessellationspanspan-idenablingdisablingtessellationspanenablingdisabling-tessellation"></a><span id="Enabling_disabling_tessellation"></span><span id="enabling_disabling_tessellation"></span><span id="ENABLING_DISABLING_TESSELLATION"></span>공간 분할 설정/해제
 
 헐 셰이더를 만들어 헐 셰이더 단계에 바인딩하여(그러면 분할기 단계가 자동으로 설정됨) 공간 분할을 활성화합니다. 또한 공간 분할된 패치에서 최종 꼭짓점 위치를 생성하기 위해 [도메인 셰이더](domain-shader-stage--ds-.md)를 만들어 도메인 셰이더 단계에 바인딩해야 합니다. 공간 분할이 활성화되면 IA(입력 어셈블러) 단계로 입력되는 데이터는 패치 데이터여야 합니다. 입력 어셈블러 토폴로지는 패치 상수 토폴로지여야 합니다.
 
@@ -83,12 +83,12 @@ TS(분할기) 단계는 2개 작업 단계로 작동합니다.
 
 분할기는 헐 셰이더 단계로부터 전달되는 공간 분할 요소(도메인을 얼마나 세부적으로 공간 분할할지 지정) 및 분할 유형(패치를 분할하는 데 사용할 알고리즘을 지정)을 사용하여 패치당 헌 번 작동합니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
 
 
 분할기는 uv(및 선택적으로 w) 좌표 및 표면 토폴로지를 도메인 셰이더 단계로 출력합니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [그래픽 파이프라인](graphics-pipeline.md)

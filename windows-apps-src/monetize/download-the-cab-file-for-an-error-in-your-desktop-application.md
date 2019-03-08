@@ -6,19 +6,19 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 분석 API, CAB 다운로드, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e3535f18b8127ea18bca234cdcc9b695e89ebfd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918491"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607788"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램의 오류에 대한 CAB 파일 다운로드
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스크톱 응용 프로그램 프로그램](https://msdn.microsoft.com/library/windows/desktop/mt826504)에 추가한 데스크톱 응용 프로그램의 특정 오류와 연결된 CAB 파일을 다운로드합니다. 이 메서드는 지난 30일 동안 발생한 앱 오류에 대한 CAB 파일만 다운로드할 수 있습니다. CAB 파일을 다운로드할 데스크톱 응용 프로그램의 파트너 센터에 대 한 [상태 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504) 에서 사용할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스크톱 응용 프로그램 프로그램](https://msdn.microsoft.com/library/windows/desktop/mt826504)에 추가한 데스크톱 응용 프로그램의 특정 오류와 연결된 CAB 파일을 다운로드합니다. 이 메서드는 지난 30일 동안 발생한 앱 오류에 대한 CAB 파일만 다운로드할 수 있습니다. CAB 파일 다운로드에 사용할 합니다 [상태 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504) 파트너 센터에서 데스크톱 응용 프로그램에 대 한 합니다.
 
 이 메서드를 사용하려면 먼저 [데스크톱 응용 프로그램의 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md) 메서드를 사용하여 다운로드할 CAB 파일의 ID 해시를 검색해야 합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
@@ -39,16 +39,16 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스�
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 매개 변수        | 유형   |  설명      |  필수  |
+| 매개 변수        | 형식   |  설명      |  필수  |
 |---------------|--------|---------------|------|
-| applicationId | 문자열 | CAB 파일을 다운로드할 데스크톱 응용 프로그램의 제품 ID입니다. 데스크톱 응용 프로그램의 제품 ID를 가져오려면 모든 [데스크톱 응용 프로그램에 대 한 파트너 센터 분석 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504) (예: **상태 보고서**) 열고 URL에서 제품 ID를 검색 합니다. |  예  |
+| applicationId | 문자열 | CAB 파일을 다운로드할 데스크톱 응용 프로그램의 제품 ID입니다. 열 데스크톱 응용 프로그램의 제품 ID를 가져오려면 [데스크톱 응용 프로그램에 대 한 파트너 센터 분석 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504) (같은 합니다 **상태 보고서**) URL에서 제품 ID를 검색 합니다. |  예  |
 | cabIdHash | 문자열 | 다운로드하려는 CAB 파일의 고유한 ID 해시입니다. 이 값을 가져오려면 [데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md) 메서드를 사용하여 응용 프로그램에서 특정 오류에 대한 세부 정보를 검색하고 해당 메서드의 응답 본문에 **cabIdHash** 값을 사용합니다. |  예  |
 
 
@@ -68,7 +68,7 @@ Authorization: Bearer <your access token>
 ## <a name="related-topics"></a>관련 항목
 
 * [상태 보고서](../publish/health-report.md)
-* [Microsoft Store 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
-* [데스크톱 응용 프로그램에 대한 오류 보고 데이터 가져오기](get-desktop-application-error-reporting-data.md)
-* [데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md)
-* [데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-desktop-application.md)
+* [Microsoft Store 서비스를 사용 하 여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
+* [오류 보고 데스크톱 응용 프로그램에 대 한 데이터 가져오기](get-desktop-application-error-reporting-data.md)
+* [데스크톱 응용 프로그램에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md)
+* [데스크톱 응용 프로그램에서 오류에 대 한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-desktop-application.md)

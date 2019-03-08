@@ -8,17 +8,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ed3482b8e629749d294ed25944db16372cc7fee6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943617"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594748"
 ---
 # <a name="post-handles"></a>POST (/handles)
 사용자의 현재 활동에 대 한 멀티 플레이 세션을 설정 하 고 필요한 경우 세션 멤버를 초대 합니다.
 
 > [!IMPORTANT]
-> 이 메서드는 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 하 고 X Xbl-계약 버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
+> 이 메서드는 2015 멀티 플레이 게임에서 사용 되 고 이상 멀티 플레이 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 하 고 X-Xbl-계약-버전 헤더 요소를 필요 합니다. 104/105 또는 나중에 모든 요청 합니다.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4EHB)
@@ -31,9 +31,9 @@ ms.locfileid: "8943617"
 
 ## <a name="remarks"></a>설명
 
-현재 활동에 대 한 세션을 설정 하이 HTTP/REST 메서드를 사용할 수 있습니다. 이 경우 메서드 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.SetActivityAsync**래핑한 될 수 있습니다. 요청 본문에는 "작업"을 입력 필드를 사용 하 여 JSON 파일에서 **sessionRef** 개체를 사용 하 여 세션 참조를 정의 해야 합니다. 응답 본문이 검색 됩니다. 세션에 대 한 참조에 지정 된 항목의 정의 **Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionReference**를 참조 하세요.
+현재 작업에 대 한 세션을 설정 하려면이 HTTP/REST 메서드를 사용할 수 있습니다. 이 경우 메서드를 래핑할 수 있습니다 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.SetActivityAsync**합니다. 요청 본문에는 세션 정의 해야 사용 하 여 참조를 **sessionRef** "작업"에 유형 필드를 사용 하 여 JSON 파일에는 개체입니다. 응답 본문 없이 검색 됩니다. 세션 참조에 지정 된 항목의 정의 참조 하세요 **Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionReference**합니다.
 
-세션에 대 한 핸들에 지정 된 사용자를 초대 하 여이 POST 메서드를 사용할 수도 있습니다. 이 경우 메서드 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.SendInvitesAsync**래핑한 될 수 있습니다. POST 메서드를이 사용 하려면 세션 참조를 정의 하 여 요청 본문 유형 높습니다 필드 "초대"로 설정 합니다. 응답 본문은 초대 핸들 합니다.
+이 POST 메서드는 세션에 대 한 핸들로 지정 된 사용자를 초대 하려면 데도 사용할 수 있습니다. 이 경우 메서드를 래핑할 수 있습니다 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.SendInvitesAsync**합니다. POST 메서드를 사용이 하는이 세션에 대 한 참조를 정의 하 여 요청 본문에 필요 하지만 형식 필드 "초대"로 설정 합니다. 응답 본문은 핸들을 초대 합니다.
 
 <a id="ID4EHB"></a>
 
@@ -76,7 +76,7 @@ ms.locfileid: "8943617"
 <a id="ID4EBC"></a>
 
 
-### <a name="request-body-for-sending-invites"></a>초대 보내기에 대 한 요청 본문
+### <a name="request-body-for-sending-invites"></a>초대 보내기 위해 요청 본문
 
 
 ```cpp
@@ -110,13 +110,13 @@ ms.locfileid: "8943617"
 <a id="ID4EOC"></a>
 
 
-### <a name="response-body-for-setting-activity"></a>활동 설정에 대 한 응답 본문
+### <a name="response-body-for-setting-activity"></a>활동을 설정 하는 것에 대 한 응답 본문
 없음.  
 <a id="ID4ESC"></a>
 
 
-### <a name="response-body-for-sending-invites"></a>초대 보내기에 대 한 응답 본문
-초대 핸들입니다.   
+### <a name="response-body-for-sending-invites"></a>초대를 전송 하는 것에 대 한 응답 본문
+초대 대 핸들입니다.   
 <a id="ID4EXC"></a>
 
 
@@ -125,6 +125,6 @@ ms.locfileid: "8943617"
 <a id="ID4EZC"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
 [/handles](uri-handles.md)

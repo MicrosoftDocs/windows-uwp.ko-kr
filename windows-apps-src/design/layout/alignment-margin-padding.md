@@ -1,5 +1,5 @@
 ---
-Description: Use alignment, margin, and padding properties to arrange the layout of elements on a page.
+Description: 맞춤, 여백 및 안쪽 여백 속성을 사용 하 여 페이지에 있는 요소의 레이아웃을 정렬 합니다.
 title: 레이아웃 맞춤, 여백 및 안쪽 여백
 ms.date: 03/19/2018
 ms.topic: article
@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 3c7ca724279a6a4d41b1f7757428af8eab403549
-ms.sourcegitcommit: 58783d1ea22e632b9c50dcfbaa1cc57686bcdd8e
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "9024210"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57600938"
 ---
 # <a name="alignment-margin-padding"></a>맞춤, 여백, 안쪽 여백
 
@@ -22,26 +22,26 @@ UWP 앱에서는 대부분 사용자 인터페이스(UI) 요소가 [**FrameworkE
 
 ![차원을 나타내는 다이어그램](images/dimensions.svg)
 
-- [**Height**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) 및 [**Width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.width)는 요소의 크기를 지정합니다. 기본 값은 수학적 표현으로 NaN(Not A Number)입니다. [유효 픽셀](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)로 측정된 고정 값을 사용하거나, 혹은 **자동** 또는 [가변 크기 조정](layout-panels.md#grid)을 유동적 동작에 사용할 수 있습니다.
+- [**높이** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) 하 고 [ **너비** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.width) 요소의 크기를 지정 합니다. 기본 값은 수학적 표현으로 NaN(Not A Number)입니다. [유효 픽셀](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)로 측정된 고정 값을 사용하거나, 혹은 **자동** 또는 [가변 크기 조정](layout-panels.md#grid)을 유동적 동작에 사용할 수 있습니다.
 
-- [**ActualHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualheight) 및 [**ActualWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth)는 런타임 시 요소의 크기를 나타내는 읽기 전용 속성입니다. 유동 레이아웃이 커지거나 줄어드는 경우에는 [**SizeChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged) 이벤트의 값도 바뀝니다. 단, [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform)은 ActualHeight 값과 ActualWidth 값을 바꾸지 못합니다.
+- [**ActualHeight** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualheight) 하 고 [ **ActualWidth** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth) 는 런타임 시 요소의 크기를 제공 하는 읽기 전용 속성입니다. 유동 레이아웃이 커지거나 줄어드는 경우에는 [**SizeChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged) 이벤트의 값도 바뀝니다. 단, [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform)은 ActualHeight 값과 ActualWidth 값을 바꾸지 못합니다.
 
-- [**MinWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.minwidth)/[**MaxWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxwidth) 및 [**MinHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.minheight)/[**MaxHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxheight)는 유동 크기 조정을 허용하면서 요소의 크기를 제한하는 값을 지정합니다.
+- [**MinWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.minwidth)/[**MaxWidth** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxwidth) 하 고 [ **MinHeight** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.minheight) / [ **MaxHeight** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxheight) 유연한 크기 조정 하면서 요소의 크기를 제한 하는 값을 지정 합니다.
 
-- [**FontSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.fontsize) 및 기타 텍스트 속성은 텍스트 요소의 레이아웃 크기를 제어합니다. 텍스트 요소가 차원을 명시적으로 선언하지 않은 경우에는 ActualWidth와 ActualHeight를 계산합니다. 
+- [**FontSize** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.fontsize) 및 기타 텍스트 속성 텍스트 요소에 대 한 레이아웃 크기를 제어 합니다. 텍스트 요소가 차원을 명시적으로 선언하지 않은 경우에는 ActualWidth와 ActualHeight를 계산합니다. 
 
 ## <a name="alignment"></a>맞춤
 맞춤은 UI가 균형 있게 정돈되어 단정하게 보이도록 할 뿐만 아니라 시각적 계층 및 관계를 구성하는 데도 사용됩니다.
 
 ![맞춤을 나타낸 다이어그램](images/alignment.svg)
 
-- [**HorizontalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) 및 [**VerticalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment)는 해당 부모 컨테이너 내에서 요소의 위치가 결정되는 방법을 지정합니다.
+- [**HorizontalAlignment** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) 하 고 [ **VerticalAlignment** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment) 해당 부모 컨테이너 내에서 요소를 배치 하는 방법을 지정 합니다.
     - **HorizontalAlignment**에 대한 값은 **Left**, **Center**, **Right** 및 **Stretch**입니다.
     - **VerticalAlignment**에 대한 값은 **Top**, **Center**, **Bottom** 및 **Stretch**입니다.
 
 - **Stretch**는 두 속성의 기본 값이며, 요소가 부모 컨테이너에 제공된 모든 공간을 채웁니다. 실수인 Height 및 Width 값을 지정하면 Stretch 값이 취소되고, 대신 Center 값으로 작용합니다. Button과 같은 일부 컨트롤은 기본 Stretch 값을 해당하는 기본 스타일로 재정의합니다.
 
-- [**HorizontalContentAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.horizontalcontentalignment) 및 [**VerticalContentAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.verticalcontentalignment)는 컨테이너 내에서 자식 요소의 위치가 결정되는 방법을 지정합니다.
+- [**HorizontalContentAlignment** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.horizontalcontentalignment) 하 고 [ **VerticalContentAlignment** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.verticalcontentalignment) 컨테이너 내에서 자식 요소를 배치 하는 방법을 지정 합니다.
 
 - 맞춤은 레이아웃 패널 내에서 클리핑에 영향을 미칠 수 있습니다. 예를 들어, `HorizontalAlignment="Left"`를 지정했을 때 콘텐츠가 ActualWidth보다 크면 요소의 오른쪽이 잘립니다.
 
@@ -53,7 +53,7 @@ UWP 앱에서는 대부분 사용자 인터페이스(UI) 요소가 [**FrameworkE
 ![XAML 여백 및 안쪽 여백 다이어그램](images/xaml-layout-margins-padding.svg)
 
 ### <a name="margin"></a>여백
-[**여백**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin)은 요소 주위의 빈 공간 크기를 제어합니다. 여백은 ActualHeight 및 ActualWidth에 픽셀을 추가하지 않으며, 적중 횟수 테스트 및 소싱 입력 이벤트와 관련해서 요소의 일부로 간주되지도 않습니다.
+[**여백** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin) 요소 주위의 빈 공간의 크기를 제어 합니다. 여백은 ActualHeight 및 ActualWidth에 픽셀을 추가하지 않으며, 적중 횟수 테스트 및 소싱 입력 이벤트와 관련해서 요소의 일부로 간주되지도 않습니다.
 
 - 여백 값은 동일하거나 서로 다를 수 있습니다. `Margin="20"`일 때는 왼쪽, 위, 오른쪽, 아래 방향으로 20픽셀의 여백이 요소에 동일하게 적용됩니다. `Margin="0,10,5,25"`일 때는 각각 왼쪽, 위, 오른쪽 및 아래 방향으로 값이 적용됩니다. 
 
@@ -63,20 +63,20 @@ UWP 앱에서는 대부분 사용자 인터페이스(UI) 요소가 [**FrameworkE
 
 - 여백 값은 결국에는 제약을 받기 마련입니다. 다시 말해서 컨테이너가 요소를 자르거나 제한할 수 있기 때문에 여백을 지정할 때는 주의가 필요합니다. 여백 값은 요소가 렌더링되지 못하는 원인이 되기도 합니다. 즉, 여백을 적용했을 때 요소의 차원이 0이 되는 경우가 발생할 수 있습니다.
 
-### <a name="padding"></a>안쪽 여백
-[**안쪽 여백**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.padding)은 요소의 내부 테두리와 자식 콘텐츠 또는 요소 사이의 간격을 제어합니다. 양수 안쪽 여백 값은 해당 요소의 콘텐츠 영역을 줄입니다. 
+### <a name="padding"></a>여백
+[**패딩** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.padding) 요소 및 해당 자식 콘텐츠 또는 요소의 내부 테두리 사이의 공간 크기를 제어 합니다. 양수 Padding 값은 해당 요소의 콘텐츠 영역을 줄입니다. 
 
 여백과 달리 안쪽 여백은 FrameworkElement 속성이 아닙니다. 다음과 같이 각각 자신의 안쪽 여백 속성을 정의하는 클래스가 몇 가지 있습니다.
 
--   [**Control.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.padding): 모든 [**Control**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls) 파생 클래스를 상속합니다. 모든 컨트롤에 콘텐츠가 있는 것은 아니므로 이러한 컨트롤은 속성을 설정해도 아무 효과가 없습니다. 컨트롤에 테두리가 있는 경우 해당 테두리 안에 안쪽 여백이 적용됩니다.
--   [**Border.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.padding): [**BorderThickness**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.borderthickness)/[**BorderBrush**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.borderbrush) 및 [**Child**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.child) 요소로 만들어진 직사각형 선 사이의 공간을 정의합니다.
--   [**ItemsPresenter.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemspresenter.padding): 항목 컨트롤의 항목 모양에 영향을 주며 각 항목 주위에 지정한 안쪽 여백을 배치합니다.
--   [**TextBlock.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.padding) 및 [**RichTextBlock.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.padding): 텍스트 요소의 텍스트 주위에 경계 상자를 확장합니다. 이러한 텍스트 요소는 **배경**이 없기 때문에 육안으로 확인하기 어려울 수 있습니다. 이때는 [**Block**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block) 컨테이너에서 [**여백**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block.margin) 설정을 사용하세요.
+-   [**Control.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.padding): 모든 상속 [ **컨트롤** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls) 클래스를 파생 합니다. 모든 컨트롤에 콘텐츠가 있는 것은 아니므로 이러한 컨트롤은 속성을 설정해도 아무 효과가 없습니다. 컨트롤에 테두리가 있는 경우 해당 테두리 안에 안쪽 여백이 적용됩니다.
+-   [**Border.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.padding): 만든 사각형 줄 사이 공백을 정의 [ **BorderThickness**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.borderthickness)/[**BorderBrush**  ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.borderbrush) 하며 [ **자식** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.child) 요소입니다.
+-   [**ItemsPresenter.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemspresenter.padding): 지정 된 패딩을 각 항목 둘레를 배치 하는 항목 컨트롤에 있는 항목의 모양에 기여 합니다.
+-   [**TextBlock.Padding** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.padding) 하 고 [ **RichTextBlock.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.padding): 텍스트 요소의 텍스트를 둘러싸는 경계 상자를 확장 합니다. 이러한 텍스트 요소는 **배경**이 없기 때문에 육안으로 확인하기 어려울 수 있습니다. 이때는 [**Block**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block) 컨테이너에서 [**여백**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block.margin) 설정을 사용하세요.
 
 둘 중 어떠한 경우가 되었든 요소 역시 여백 속성을 갖습니다. 여백과 안쪽 여백을 모두 적용하는 경우 외부 컨테이너와 내부 콘텐츠 사이의 거리는 여백과 안쪽 여백의 합계라는 점에서 가산됩니다.
 
 ### <a name="example"></a>예
-실제 컨트롤에서 여백 및 안쪽 여백의 효과를 살펴보겠습니다. 다음은 기본 Margin과 Padding 값이 0인 Grid 내에 있는 TextBox입니다.
+실제 컨트롤에서 Margin 및 Padding의 효과를 살펴보겠습니다. 다음은 기본 Margin과 Padding 값이 0인 Grid 내에 있는 TextBox입니다.
 
 ![여백 및 안쪽 여백이 0인 TextBox](images/xaml-layout-textbox-no-margins-padding.svg)
 

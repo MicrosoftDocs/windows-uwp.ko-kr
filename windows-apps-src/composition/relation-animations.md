@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: b6fdc59e8a7203a3bb8c6ad79adabd446b884639
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926299"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597718"
 ---
 # <a name="relation-based-animations"></a>관계 기반 애니메이션
 
@@ -112,7 +112,7 @@ var orbitRotation = EF.Vector3(
 ```
 
 > [!NOTE]
-> `EF` ExpressionBuilder.ExpressionFunctions를 정의하기 위한 단축형 "using" 표기법입니다.
+> `EF` 약식 "using" 표기법을 ExpressionBuilder.ExpressionFunctions 정의 합니다.
 
 마지막으로, 이러한 구성 요소를 결합하고 빨간색 공의 위치를 참조하여 수학적 관계를 정의합니다.
 

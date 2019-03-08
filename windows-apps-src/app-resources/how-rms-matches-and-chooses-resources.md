@@ -1,5 +1,5 @@
 ---
-Description: When a resource is requested, there may be several candidates that match the current resource context to some degree. The Resource Management System will analyze all of the candidates and determine the best candidate to return. This topic describes that process in detail and gives examples.
+Description: 리소스를 요청하는 경우 현재 리소스 컨텍스트와 어느 정도 일치하는 몇 가지 후보가 있을 수 있습니다. 리소스 관리 시스템은 모든 후보를 분석하고 반환할 최적의 후보를 결정합니다. 이 항목은 이 프로세스를 자세히 설명하고 예를 제공합니다.
 title: 리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법
 template: detail.hbs
 ms.date: 10/23/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: de34411d9c7d226857214472e691dd6b41f10a18
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943463"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593888"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법
 리소스를 요청하는 경우 현재 리소스 컨텍스트와 어느 정도 일치하는 몇 가지 후보가 있을 수 있습니다. 리소스 관리 시스템은 모든 후보를 분석하고 반환할 최적의 후보를 결정합니다. 이 작업은 모든 후보의 순위를 지정할 모든 한정자를 고려하여 수행됩니다.
@@ -20,7 +20,7 @@ ms.locfileid: "8943463"
 
 언어 태그 일치 방법에 대한 자세한 내용은 [리소스 관리 시스템이 언어 태그를 일치하는 방법](how-rms-matches-lang-tags.md)을 참조하세요.
 
-배율 및 고대비 등의 일부 한정자의 경우 항상 최소한의 어느 정도의 일치가 있습니다. 예를 들어, "scale-100"와 일치 "scale-400" 컨텍스트와 작은 어느 정도 대 한 정규화 된 후보와 하지 하지만"scale-200"또는 (완벽 한 일치)에 대해"scale-400"에 대 한 정규화 된 후보입니다.
+배율 및 고대비 등의 일부 한정자의 경우 항상 최소한의 어느 정도의 일치가 있습니다. 예를 들어, 비록 없습니다 "확장-100"을 작은 어느 정도 "확장-400"의 컨텍스트에서 일치에 대 한 정규화 된 후보 뿐만 "확장-200" 또는 (완벽 하 게 일치) "확장-400"에 대 한 정규화 된 후보입니다.
 
 하지만 언어 또는 홈 지역과 같은 다른 한정자에 대해 일치 정도뿐만 아니라 비일치 비교가 있을 수 있습니다. 예를 들어, "en-US"로 언어에 대해 정규화된 후보는 "en-GB" 컨텍스트에 대한 부분 일치이지만 "fr"로 정규화된 후보는 전혀 일치하지 않습니다. 마찬가지로 홈 지역에 대해 "155"(서유럽)로 정규화된 후보는 "FR"로 홈 지역이 설정된 사용자에 대한 컨텍스트와 일정 부분 일치하지만 "US"로 정규화된 후보는 전혀 일치하지 않습니다.
 
@@ -135,4 +135,4 @@ de/images/contrast-standard/logo.jpg
 * [NamedResource.ResolveAll](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live)
 
 ## <a name="related-topics"></a>관련 항목
-* [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
+* [MakePri.exe 사용 하 여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)

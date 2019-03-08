@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: fca3267a-0c0f-4872-8017-90384fb34215
 ms.localizationpriority: medium
 ms.openlocfilehash: 64a686aea24d23b5e999780eaa0eda661af3637f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927853"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611688"
 ---
 # <a name="bringing-unity-games-to-uwp-on-xbox"></a>Xbox의 UWP에 Unity 게임 가져오기
 
@@ -22,13 +22,13 @@ ms.locfileid: "8927853"
 
 Unity UWP 프로젝트 버전을 찾고 있나요? [UWP 프로젝트 버전 제어](development-lanes-unity-versioning.md)를 참조하세요.
 
-## <a name="step-0-ensure-unity-is-installed-correctly"></a>0단계: Unity가 올바르게 설치되었는지 확인
+## <a name="step-0-ensure-unity-is-installed-correctly"></a>0 단계: Unity가 제대로 설치 되었는지 확인
 
 Unity를 설치할 때 다음과 같은 구성 요소를 선택해야 합니다.
 
 ![Unity 설치 구성 요소](images/unity-install-components.png)
 
-## <a name="step-1-building-the-uwp-solution"></a>1단계: UWP 솔루션 빌드
+## <a name="step-1-building-the-uwp-solution"></a>1단계: UWP 솔루션 구축
 
 Unity 게임 프로젝트에서 **파일 -> 빌드 설정**에 있는 **빌드 설정** 창을 열고 Microsoft Store 옵션 메뉴로 이동합니다.
 
@@ -50,7 +50,7 @@ Unity 게임 프로젝트에서 **파일 -> 빌드 설정**에 있는 **빌드 �
 
 게임에 대한 UWP Visual Studio 솔루션이 마련되었으므로 [이 단계를 수행하여](getting-started.md) 정품 Xbox One에 게임을 성공적으로 배포할 수 있습니다.
 
-## <a name="step-3-modify-and-rebuild"></a>3단계: 수정 및 다시 빌드
+## <a name="step-3-modify-and-rebuild"></a>3단계: 수정 하 고 다시 작성
 
 스크립트가 아닌 항목을 변경한 경우 이러한 변경 내용이 게임의 UWP 빌드에 표시되도록 하려면 편집기 내에서 프로젝트를 다시 빌드해야 합니다(__1단계__에서 설명).
 
@@ -59,5 +59,5 @@ Unity 게임 프로젝트에서 **파일 -> 빌드 설정**에 있는 **빌드 �
 새롭게 생성된 이 UWP 디렉터리 부분을 버전 제어에 추가해야 하는 몇 가지 일반적인 상황이 있습니다. 예를 들어 새 종속성을 UWP 프로젝트에 추가하는 경우입니다(예: Xbox Live SDK).  이 예제는 [UWP 프로젝트 버전 제어](development-lanes-unity-versioning.md)에서 자세히 살펴봅니다.
 
 ## <a name="see-also"></a>참고 항목
-- [기존 게임을 Xbox로 가져오기](development-lanes-landing.md)
-- [Xbox One의 UWP](index.md)
+- [기존 게임을 Xbox에 가져오기](development-lanes-landing.md)
+- [Xbox One에서 UWP](index.md)

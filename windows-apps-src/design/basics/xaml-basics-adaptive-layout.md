@@ -6,11 +6,11 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b444a11ab032034976d2f1b269bd10a89bf339e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928987"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593078"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 
@@ -28,34 +28,34 @@ ms.locfileid: "8928987"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-* Visual Studio 2017: [Visual Studio 2017 Community 다운로드(무료)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
-* Windows 10 SDK(10.0.15063.468 이상): [최신 Windows SDK 다운로드(무료)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* Windows Mobile 에뮬레이터: [Windows 10 Mobile 에뮬레이터 다운로드(무료)](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
+* Visual Studio 2017: [Visual Studio 2017 Community (무료)를 다운로드 합니다.](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
+* Windows 10 SDK (10.0.15063.468 이상):  [(무료) 최신 Windows SDK 다운로드](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* Windows 모바일 에뮬레이터. [Windows 10 모바일 에뮬레이터 (무료)를 다운로드 합니다.](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
 
-## <a name="part-0-get-the-starter-code-from-github"></a>파트 0: github에서 시작 코드 다운로드
+## <a name="part-0-get-the-starter-code-from-github"></a>0 부: 시작 코드를 github에서 가져오기
 
 이번 자습서에서는 PhotoLab 샘플의 간소화된 버전부터 시작합니다. 
 
-1. 이동 [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). 샘플을 볼 수 있는 GitHub 페이지로 이동하게 됩니다. 
-2. 그런 다음 샘플을 복제 또는 다운로드해야 합니다. **복제 또는 다운로드** 버튼을 클릭합니다. 하위 메뉴가 나타납니다.
+1. 로 이동 [ https://github.com/Microsoft/Windows-appsample-photo-lab ](https://github.com/Microsoft/Windows-appsample-photo-lab)합니다. 샘플을 볼 수 있는 GitHub 페이지로 이동하게 됩니다. 
+2. 그런 다음 샘플을 복제 또는 다운로드해야 합니다. **복제 또는 다운로드** 단추를 클릭합니다. 하위 메뉴가 나타납니다.
     <figure>
         <img src="../basics/images/xaml-basics/clone-repo.png" alt="The Clone or download menu on GitHub">
-        <figcaption>Photo lab 샘플의 GitHub 페이지에 있는 <b>복제 또는 다운로드</b> 메뉴</figcaption>
+        <figcaption>PhotoLab 샘플의 GitHub 페이지에 있는 <b>복제 또는 다운로드</b> 메뉴</figcaption>
     </figure>
 
-    **GitHub가 익숙하지 않은 경우:**
+    **GitHub 잘 모르는 경우:**
     
     a. **ZIP 다운로드**를 클릭하고 파일을 로컬에 저장합니다. 그러면 필요한 프로젝트 파일이 모두 포함된 .zip 파일이 다운로드됩니다.
     b. 파일의 압축을 풉니다. 파일 탐색기를 사용해 앞에서 다운로드한 .zip 파일로 이동하여 마우스 오른쪽 버튼을 클릭한 후 **모두 압축 풀기**를 선택합니다. c. 샘플의 로컬 사본으로 탐색한 후 `Windows-appsample-photo-lab-master\xaml-basics-starting-points\adaptive-layout` 디렉토리로 이동합니다.    
 
-    **GitHub가 익숙한 경우:**
+    **GitHub를 사용 하 여 친숙 한 경우:**
 
     a. 리포지토리의 마스터 분기를 로컬에 복제합니다.
     b. `Windows-appsample-photo-lab\xaml-basics-starting-points\adaptive-layout` 디렉토리로 이동합니다.
 
 3. `Photolab.sln`을 클릭하여 프로젝트를 엽니다.
 
-## <a name="part-1-run-the-mobile-emulator"></a>파트 1: 모바일 에뮬레이터 실행
+## <a name="part-1-run-the-mobile-emulator"></a>1부: 모바일 에뮬레이터 실행
 
 Visual Studio 툴바에서 솔루션 플랫폼이 ARM이 아닌 x86 또는 x64로 설정되어 있는지 확인한 다음 대상 장치를 로컬 컴퓨터에서 설치한 모바일 에뮬레이터 중 하나로 변경합니다(예: Mobile Emulator 10.0.15063 WVGA 5인치 1GB). **F5**를 눌러 선택한 모바일 에뮬레이터에서 사진 갤러리 앱을 실행합니다.
 
@@ -63,7 +63,7 @@ Visual Studio 툴바에서 솔루션 플랫폼이 ARM이 아닌 x86 또는 x64�
 
 ![모바일 레이아웃: 이후](../basics/images/xaml-basics/adaptive-layout-mobile-before.png)
 
-## <a name="part-2-build-a-tailored-mobile-layout"></a>파트 2: 맞춤형 모바일 레이아웃 빌드
+## <a name="part-2-build-a-tailored-mobile-layout"></a>2부: 맞춤형된 모바일 레이아웃을 작성
 소형 장치에서 이 앱을 멋지게 보이게 만들려면 XAML 페이지에서 모바일 장치가 감지된 경우에만 사용되는 별도의 스타일 집합을 만들어야 합니다.
 
 ### <a name="create-a-new-datatemplate"></a>새 DataTemplate 만들기
@@ -211,7 +211,7 @@ Visual Studio 툴바에서 솔루션 플랫폼이 ARM이 아닌 x86 또는 x64�
 
 ![모바일 레이아웃: 이후](../basics/images/xaml-basics/adaptive-layout-mobile-after.png)
 
-## <a name="part-3-adapt-to-multiple-window-sizes-on-a-single-device"></a>파트 3: 하나의 장치에서 여러 개의 창 크기 조정
+## <a name="part-3-adapt-to-multiple-window-sizes-on-a-single-device"></a>3부: 단일 장치에서 다양 한 창 크기에 맞게 조정
 새로운 맞춤형 레이아웃을 만들면 모바일 장치의 반응형 디자인 문제를 해결할 수 있지만 데스크톱과 태블릿의 경우는 어떨까요? 앱이 전체 화면으로 보기에는 좋지만 사용자가 창을 축소하면 어색한 인터페이스로 표시될 수 있습니다. **VisualStateManager**를 사용하여 하나의 장치에서 여러 창 크기를 조정함으로써 최종 사용자 환경을 항상 적절한 모습과 느낌으로 유지할 수 있습니다.
 
 ![작은 창: 이전](../basics/images/xaml-basics/adaptive-layout-small-before.png)
@@ -322,7 +322,7 @@ Visual Studio 툴바에서 대상 장치를 **로컬 컴퓨터**로 설정하고
 문제가 있는 경우 [XAML을 사용하여 페이지 레이아웃 정의](../layout/layouts-with-xaml.md)의 이 섹션에서 더 많은 지침을 찾을 수 있습니다.
 
 + [시각적 상태 및 상태 트리거](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#visual-states-and-state-triggers)
-+ [맞춤형 레이아웃](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#tailored-layouts)
++ [맞춤형된 레이아웃](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#tailored-layouts)
 
 또는 초기 사진 편집 앱의 빌드 방법에 대해 자세히 알아보려면 XAML [사용자 인터페이스](../basics/xaml-basics-ui.md) 및 [데이터 바인딩](../../data-binding/xaml-basics-data-binding.md)의 이 자습서를 확인하세요.
 

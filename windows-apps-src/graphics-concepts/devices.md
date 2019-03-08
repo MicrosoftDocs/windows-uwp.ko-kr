@@ -1,23 +1,23 @@
 ---
-title: 디바이스
-description: Direct3D 디바이스는 Direct3D의 렌더링 구성 요소입니다. 디바이스는 렌더링 상태를 캡슐화하여 저장하고, 변환 및 조명 작업을 수행하고 이미지를 표면에 래스터화합니다.
+title: 장치
+description: Direct3D 디바이스는 Direct3D의 렌더링 구성 요소입니다. 디바이스는 렌더링 상태를 캡슐화하여 저장하고, 변환 및 조명 작업을 수행하며, 이미지를 표면에 래스터화합니다.
 ms.assetid: BC903462-A32A-46BA-8411-FB294F5D2CD9
 keywords:
-- 디바이스
+- 장치
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e49a9dcaa2638065946f01797cbea084a1432a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930704"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602308"
 ---
-# <a name="devices"></a>디바이스
+# <a name="devices"></a>장치
 
 
-Direct3D 디바이스는 Direct3D의 렌더링 구성 요소입니다. 장치는 렌더링 상태를 캡슐화하여 저장하고, 변환 및 조명 작업을 수행하고 이미지를 표면에 래스터화합니다.
+Direct3D 디바이스는 Direct3D의 렌더링 구성 요소입니다. 디바이스는 렌더링 상태를 캡슐화하여 저장하고, 변환 및 조명 작업을 수행하며, 이미지를 표면에 래스터화합니다.
 
 Direct3D 디바이스의 아키텍처에는 다음 다이어그램과 같이 변환 모듈, 조명 모둘, 및 래스터화 모듈이 포함됩니다.
 
@@ -38,7 +38,7 @@ Direct3D는 다음과 같은 두 가지 주요 유형의 Direct3D 디바이스�
 
 Direct3D 9와 함께 제공된 소프트웨어와 참조 디바이스의 동작은 hal 디바이스와 동일하므로, hal 디바이스에서 작동하도록 작성된 응용 프로그램 코드는 수정하지 않고도 소프트웨어 또는 참조 디바이스에서 작동합니다. 제공된 소프트웨어 또는 참조 디바이스의 동작은 hal 디바이스와 동일하지만, 디바이스 기능은 다를 수 있으며, 특정 소프트웨어 디바이스는 훨씬 적은 기능만 구현할 수 있습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
 
 
 <table>
@@ -54,15 +54,15 @@ Direct3D 9와 함께 제공된 소프트웨어와 참조 디바이스의 동작�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="device-types.md">디바이스 유형</a></p></td>
+<td align="left"><p><a href="device-types.md">장치 유형</a></p></td>
 <td align="left"><p>Direct3D 디바이스 유형에는 hal(하드웨어 추상화 계층) 디바이스와 기준 래스터라이저가 포함됩니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="windowed-vs--full-screen-mode.md">창 모드와 전체 화면 모드 비교</a></p></td>
+<td align="left"><p><a href="windowed-vs--full-screen-mode.md">전체 화면 모드와 기간 이동</a></p></td>
 <td align="left"><p>Direct3D 응용 프로그램은 창 모드 또는 전체 화면 모드 중 하나에서 실행될 수 있습니다. <em>창 모드</em>에서 응용 프로그램은 실행되는 모든 응용 프로그램과 사용할 수 있는 바탕 화면 공간을 공유합니다. <em>전체 화면 모드</em>에서 응용 프로그램이 실행되는 창은 전체 바탕 화면을 덮어서 개발 환경을 포함하여 실행되는 모든 응용 프로그램을 가립니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="lost-devices.md">손실 디바이스</a></p></td>
+<td align="left"><p><a href="lost-devices.md">분실된 한 장치</a></p></td>
 <td align="left"><p>Direct3D 디바이스는 작동 상태이거나 손실 상태일 수 있습니다. <em>작동</em> 상태는 디바이스가 실행되고 모든 렌더링이 예상대로 표시되는 디바이스의 정상 상태입니다. 전체 화면 응용 프로그램에서 키보드 포커스를 잃어 렌더링이 불가능할 경우, 디바이스는 <em>손실</em> 상태로 전환됩니다.</p></td>
 </tr>
 <tr class="even">
@@ -78,7 +78,7 @@ Direct3D 9와 함께 제공된 소프트웨어와 참조 디바이스의 동작�
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [Direct3D 그래픽 학습 가이드](index.md)

@@ -1,5 +1,5 @@
 ---
-Description: Simulate and automate input from devices such as keyboard, mouse, touch, pen, and gamepad in your UWP apps.
+Description: 시뮬레이션 하 고 키보드, 마우스, 터치, 펜 및 UWP 앱에서 gamepad 같은 장치에서 입력을 자동화 합니다.
 title: 입력 삽입을 통해 사용자 입력 시뮬레이트
 label: Input injection
 template: detail.hbs
@@ -8,17 +8,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: de3f0b1377d4f4209dc012ff56adb2de9c68625f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933977"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602328"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>입력 삽입을 통해 사용자 입력 시뮬레이트
 
 UWP 응용 프로그램의 키보드, 마우스, 터치, 펜 및 게임 패드 등의 디바이스에서 사용자 입력을 시뮬레이트 및 자동화합니다.
 
-> **중요 API**: [**Windows.UI.Input.Preview.Injection**](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection)
+> **중요 한 Api**: [**Windows.UI.Input.Preview.Injection**](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection)
 
 ## <a name="overview"></a>개요
 
@@ -26,7 +26,7 @@ UWP 응용 프로그램의 키보드, 마우스, 터치, 펜 및 게임 패드 �
 
 입력 삽입은 접근성, 테스트(임시, 자동), 그리고 원격 액세스 및 지원 기능을 포함하는 기능을 제공해야 하는 UWP 앱 및 도구에 유용합니다.
 
-## <a name="setup"></a>설정
+## <a name="setup"></a>설치
 
 UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음을 추가해야 합니다.
 
@@ -41,11 +41,11 @@ UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음
 
 | ![터치식 입력 삽입 샘플](images/injection/touch-input-injection.gif) | 
 |:--:|
-| *터치식 입력 삽입 샘플* |
+| *터치 입력된 주입 샘플* |
 
 이 예에서 입력 삽입 API([Windows.UI.Input.Preview.Injection](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection))를 사용하여 앱의 한 지역에서 마우스 입력 이벤트를 수신 대기하고 해당 터치식 입력 이벤트를 다른 지역에서 시뮬레이트하는 방법을 설명합니다.
 
-**[입력 삽입 샘플(마우스에서 터치)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)에서 이 샘플을 다운로드합니다.**
+**이 샘플을 다운로드할 [입력 주입 샘플 (터치 마우스)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)**
 
 1. 먼저 UI(MainPage.xaml)를 설정합니다.
 
@@ -360,8 +360,8 @@ UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음
 
 4. 마지막으로, 입력 삽입 지역의 모든 버튼 [클릭](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase) 라우트된 이벤트를 처리하고 클릭한 버튼의 이름으로 UI를 업데이트합니다.
 
-## <a name="see-also"></a>기타 참조
+## <a name="see-also"></a>참고 항목
 
 ### <a name="topic-samples"></a>항목 샘플
 
-- [입력 삽입 샘플(마우스에서 터치)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)
+- [입력된 주입 샘플 (터치 마우스)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)

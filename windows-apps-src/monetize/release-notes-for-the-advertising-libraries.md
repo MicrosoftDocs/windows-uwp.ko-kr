@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, uwp, 광고, 광고, 릴리스 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: d7a250880d148dd4ca3ced522312904f2786715e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050866"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601228"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Advertising 라이브러리에 대한 릴리스 정보
 
 
 
 
-이 섹션에서는 Microsoft Advertising 라이브러리의 최신 릴리스 정보를 제공합니다. 이러한 라이브러리는 windows 10, windows 8.1, Windows Phone 8.1 및 WindowsPhone8에 대 한 XAML 및 JavaScript/HTML 앱을 지원합니다.
+이 섹션에서는 Microsoft Advertising 라이브러리의 최신 릴리스 정보를 제공합니다. 이러한 라이브러리는 Windows 10, Windows 8.1, Windows Phone 8.1 및 Windows Phone 8에 대 한 XAML 및 JavaScript/HTML 앱을 지원합니다.
 
 ## <a name="installation"></a>설치
 
