@@ -1,68 +1,68 @@
 ---
-Description: Learn how to create effective and user-focused notifications that make your users productive and happy.
+Description: 생산성을 사용자에 게는 효과적이 고 사용자에 초점을 맞춘 알림을 만드는 방법에 알아봅니다.
 title: 알림 UX 지침
 label: Toast UX Guidance
 template: detail.hbs
 ms.date: 05/18/2018
 ms.topic: article
-keywords: windows 10, uwp, 알림, 컬렉션, 그룹, ux, ux 지침, 지침, 알림, 알림, 알림 센터, noninterruptive, 효과적인 알림, nonintrusive 알림, 실행 가능한, 관리, 구성
+keywords: windows 10, uwp, 알림, 컬렉션, 그룹, ux, ux 지침 지침, 작업, 알림, 관리 센터, noninterruptive, 효과적인 알림, 비침입적 알림, 실행 가능한, 관리, 구성
 ms.localizationpriority: medium
 ms.openlocfilehash: 878df85db9ab0e33db06a86ddb726f07dc28f013
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918852"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615768"
 ---
-# <a name="toast-notification-ux-guidance"></a>알림 메시지 UX 지침
-알림은 부분이 최신 사용 합니다. 사용자의 생산성을 하 고 모든 업데이트를 사용 하 여 계속 현재 뿐만 아니라 앱 및 웹 사이트, 약속 된 도움이 됩니다. 그러나 알림 overbearing에 유용 하 고 사용자 중심 방식으로 설계 되지 않은 경우 주입 식에서 신속 하 게 끌 수 있습니다. 알림은 해제 되 고에서 하나의 마우스 오른쪽 단추로 클릭 하 고가 해제 되 면, 것은 다시 설정 합니다.  따라서 인지 확인 알림을 사용자의 화면 공간 및 시간의 정중 하므로이 참여 채널을 열어 둘 수 있습니다.
+# <a name="toast-notification-ux-guidance"></a>토스트 알림 UX 지침
+알림은 최신 수명;의 필수 구성 사용자 생산성과 모든 업데이트를 사용 하 여 최신 뿐만 아니라 앱 및 웹 사이트를 사용 하 여 참여 데 도움이 됩니다. 그러나 알림 overbearing를 유용 하 고 사용자 중심 방식으로 설계 되지 않은 경우 주입에서 신속 하 게 설정할 수 있습니다. 알림은 해제 중에서 하나의 마우스 오른쪽 단추로 클릭 하 고 그럴 가능성은 해제 되 면, 이러한 켜 집니다 다시 합니다.  따라서 사용자 알림은 사용자의 화면 공간 시간과 정직 수 있도록이 engagement 채널 열기 해야 합니다.
 
-> **중요 Api**: [Windows 커뮤니티 도구 키트 알림 nuget 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+> **중요 한 Api**: [Windows 커뮤니티 도구 키트 알림 nuget 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
-우리가 우리의 Windows 원격 분석 뿐만 아니라 다른 첫 번째 및 제 3 자 사례 연구 멋진 알림 스토리 개성을 주위 4 개의 규칙을 분석 했습니다.  우리는 이러한 규칙 플랫폼에 관계 없이 전체적으로 적용 되 고 사용자에 게 긍정적인 영향을 미칠 알림을 하는 데 도움이 됩니다.
+Windows 원격 분석을 뿐만 아니라 다른 첫 번째 및 제 3 자 사례 연구, 유용한 알림 스토리 점에서 주위 4 개의 규칙을 사용 하 여를 분석 한 것입니다.  이러한 규칙은 플랫폼에 관계 없이 보편적으로 적용할 수 있습니다 및 알림을 사용자에 게 긍정적인 영향을 미칠 수 있도록 도와줍니다 확신 합니다.
 
 ## <a name="1-actionable-notifications"></a>1. 실행 가능한 알림
-실행 가능한 알림 허용 사용자에 게 앱을 열지 않고도 생산성을 높일 수 있습니다.  멋진 앱이 시작, 성공의 유일한 측정 아닙니다 및 작은 작업을 수행할 수 있도록 사용자를 안내 상태일 때 작업 앱을 벗어나지 않고 사용자에 게 delighting에 매우 강력한 도구 될 수 있습니다.
+실행 가능한 알림을 통해 사용자가 앱을 열지 않고 생산성을 높일 수 있습니다.  훌 륭 앱을 시작 하 고 이것이 유일한 성공 측정 작은 수행 되려면 사용 하도록 설정 하면 사용자가 앱으로 이동 하지 않고도 작업 에너지가 사용자의 매우 강력한 도구를 수 있습니다.
 
-![텍스트 입력된 상자 및 미리 알림을 설정 하 여 알림에 응답 하는 단추를 사용 하 여 실행 가능한 알림](images/actionable-notification-example01.png)
+![입력된 텍스트 상자 및 미리 알림을 설정 및 알림에 응답 하는 단추를 사용 하 여 실행 가능한 알림](images/actionable-notification-example01.png)
 
-위의 작업을 활용 하는 알림의 예로 나와 있습니다. 마무리 작업의 전체적으로 긍정적인 느낌을 이며의 실행 가능한 콘텐츠에 포함 된 알림을 전송 하 여 앱 또는 웹 사이트에 해당 느낌을 가져올 수 있습니다. 실행 가능한 알림 생산성을 높일 수 있습니다, 그리고 더 작은 이러한 작업을 수행 하기 위해 진행 중인 사용자에 게 시간을 단축 하 여 엔터프라이즈 및 소비자 시나리오에서 모두 합니다. 사용자가 정기적으로 수행할 작업 또는 작업을 수행 하 여 사용자를 교육 하려고 하는 것을 포함 하는 것이 좋습니다.  예를 들면 다음과 같습니다.
-* 원하는 대로, favoriting, 플래그, 또는 콘텐츠 주연
-* 승인 또는 거부 경비 보고서, 권한 등/해제 시간입니다.
-* 인라인 메시지에 회신, 메일, 그룹 채팅, 설명, 등.
-* [보류 중인 업데이트](toast-pending-update.md) 를 사용 하 여 순서를 완료 합니다.
-* 일정에서 시간을 예약 하는 잠재적으로 뿐만 아니라 다른 시간에 대 한 알림 또는 미리 알림 설정
+위에서 작업을 활용 하는 알림의 예시입니다. 완료 작업의 느낌을 보편적으로 양의 느낌 이며 못한 앱 또는 웹 사이트에 실행 가능한 콘텐츠를 포함 하는 알림을 전송 하 여 가져올 수 있습니다. 실행 가능한 알림 생산성을 높이 데도 도움이 수, 더 작은 작업을 수행 하려면 통과 하는 작업 사용자에 게는 시간이 줄어들어 기업 및 소비자 시나리오에서 둘 다. 사용자가 정기적으로 수행, 하는 작업 또는 작업을 수행 하 여 사용자를 교육 하려고 하는 것을 포함 하는 것이 좋습니다.  예를 들면 다음과 같습니다.
+* 원하는 대로, 플래그, 또는 콘텐츠 주연 즐겨찾기에 추가
+* 경비 보고서를 승인 또는 거부, 휴가 권한, 등입니다.
+* 인라인 메시지에 회신, 메일 그룹 채팅, 의견 등입니다.
+* 사용 하 여 주문을 완료 [업데이트 보류 중](toast-pending-update.md)
+* 일정의 시간을 예약 하는 잠재적으로 뿐만 아니라 다른 시간에 대 한 경고 또는 알림 설정
 
-실행 가능한 알림은 사용자가 생산성 그래야 듣는 사람도 작업을 수행 하 고 앱 또는 웹 사이트를 사용 하 여 멋진 있고 효율적인 경험 하는 데 매우 강력한 도구입니다.  다음 기회 수많은 됩니다! 아이디어 브레인스토밍 도움말을 원한다 면 자유롭게 windows 알림 팀에 문의 하십시오.
+실행 가능한 알림은 사용자가 생산성 것으로 생각 될 작업을 수행 하 고 앱 이나 웹 사이트는 훌륭한 고 효율적인 환경을 제공 하는 데 강력한 도구입니다.  많이 여기 기회! 아이디어 브레인스토밍 도움말을 하려는 경우 자유롭게 windows 알림 팀에 문의 하십시오.
 
-## <a name="2-timing-and-urgency"></a>2. 타이밍 및 긴급
-종종 생각 알림에 대 한, 반대로 실시간으로 최상의 되지는 않습니다. 것이 좋습니다 개발자를가 사용자에 대 한 대기 하 고 알림을 보내고 있기 긴급 정보 인지 여부. 사용자가 너무 많은 정보를 사용 하 여 오버 로드 될 쉽게 하 고 포커스 하려고 하는 동안 중단 되는 경우 혼란 받으세요. Windows는 보내는 알림 실행 시기를 고려해 야 하는 방법에 대 한 몇 가지 옵션이 있습니다.
+## <a name="2-timing-and-urgency"></a>2. 타이밍 및 긴급도
+에서는 종종에 대해 어떻게 생각해 알림, 달리 실시간 반드시 최상의 아닙니다. 여부 사용자 고려해 야 하는 경우 알림을 전송 하는 긴급 한 정보를 개발자가 좋습니다. 사용자가 너무 많은 정보를 사용 하 여 쉽게 오버 로드할 수 있습니다 하 고 포커스를 시도 하는 동안 중단 되는 경우 당황 스 러 합니다. Windows는 보내는 알림의 실행 시기를 고려해 야 하는 방법에 대 한 몇 가지 옵션을 제공 합니다.
 
-**원시 알림:** [원시 알림을](raw-notification-overview.md) 사용 하 여 유용할 수 있습니다 여러 가지 이유로 사용자에 게 중단을 최소화 하는 동안 기다립니다 때 특히.  원시 알림 보내기를 절전 앱은 백그라운드에서 알림을 타당 앱의 컨텍스트에서 즉시 제공할 수 있는지 여부를 평가할 수 있도록 합니다. 느껴질 것을 표시할 사용자에 게 즉시, 여기에서 [로컬 알림 메시지](send-local-toast.md) 를 표시할 수 있는 경우.  이라면 사용자가 볼 필요가 지금은, 나중에 발생 하는 [예약 된 알림 메시지](https://blogs.msdn.microsoft.com/tiles_and_toasts/2016/09/30/quickstart-sending-an-alarm-in-windows-10/) 를 만들 수 있습니다.
+**원시 알림:** 사용 하 여 [원시 알림](raw-notification-overview.md) ot 사용자에 게는 중단을 최소화 하더라도 여러 가지 이유로 유용할 수 있습니다.  원시 알림 보내기 시작 앱 백그라운드에서 알림을 통해 앱의 컨텍스트에서 즉시 제공 하는 것이 있는지 여부를 평가할 수 있도록 합니다. 것으로 생각 될 것 표시할지 사용자에 게 즉시 팝 할 수 있으면 한 [로컬 알림](send-local-toast.md) 거기서에서 합니다.  사용자를 보려면 필요가 없습니다 지금, 만들 수는 [알림 예약](https://blogs.msdn.microsoft.com/tiles_and_toasts/2016/09/30/quickstart-sending-an-alarm-in-windows-10/) 는 나중에 실행 됩니다.
 
 
-**알림 고스트:** 되 고 오른쪽 아래 화면에서 팝업을 건너뛰고 대신 알림을 알림 센터에 직접 보낼 알림도 발생할 수 있습니다. [SupressPopup 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) 을 true로 설정 하 여 수행 됩니다. 2 확인 하지 알림을 알림 센터 외부 팝 주변 일부 대처 있을 수 있지만-3 번 더 높은 참여를 통해 관리 센터에서 라이브 알림의 알림 팝 합니다.  사용자는 응답성 알림을 받을 준비가 되 고 때 이러한 중단 되 면 때문에 사용자에 게 알리는 방법을 간접적 훨씬 더 효과적일 수 있는 관리 센터에서 콘텐츠를 제어할 수 있습니다.
+**알림 메시지를 삭제할:** 오른쪽 아래 화면에 팝업를 건너뛰어 대신 관리 센터에 직접 알림을 전송 하는 알림이 발생할 수도 있습니다. 설정 하 여 이렇게 합니다 [SupressPopup 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) True로 합니다. 2 관리 센터 외부에서 알림을 팝 하지 주위 일부 회의적인 있을 수 있습니다, 있지만 볼-3 배 높은 engagement를 통해 관리 센터에서 작동 하는 알림 메시지 표시에 대 한 알림 메시지를 팝 합니다.  사용자는 알림을 받을 준비가 되 고 때 이러한 중단 되 면 이기 때문에 간접적 사용자에 게 알리기 위한 훨씬 더 효과적일 수 있는 작업 센터에서 콘텐츠를 제어할 수 응답성이 향상 됩니다.
 
-## <a name="3-clear-out-the-clutter"></a>3. 복잡 한 지우기
-알림은 시간이 오래 (기본값 3 일)에 대 한 알림 센터에서 유지할 수 있습니다.  여기 있는 콘텐츠는 최신 및 관련 된 사용자가 알림 센터를 열 때마다 되는지 확인 해야 합니다. 사용자의 화면 공간을 낭비 하 더 최신 용도로 사용 될 수 있는 슬롯을 차지 합니다.  사용자가 메일 관리 앱을 설치 하 고 10 이메일 및 해당 메일 함께 10 개의 알림을 수신 가정해 보겠습니다.  원하는 환경에 따라 이러한 알림은 사용자가 해당 메일 읽기 나 알림 센터에서 이전 혼란을 제거 하는 방법으로 앱을 연 경우 취소를 고려할 수 있습니다.
+## <a name="3-clear-out-the-clutter"></a>3. 혼잡 함을 지웁니다
+알림 관리 센터에서 비교적 오랜 시간 (기본값 3 일) 동안 유지할 수 있습니다.  여기에 상주 하는 콘텐츠는 최신 및 관련 사용자가 관리 센터를 열 때마다 없는지 확인 하는 반드시 합니다. 사용자의 화면 공간을 낭비 하 최신 용도로 사용할 수 있는 슬롯을 차지 합니다.  사용자 전자 메일 관리 앱을 설치 하 고 10 개의 전자 메일 및 전자 메일와 함께 10 알림을 받는 경우를 가정해 보십시오.  원하는 환경을 따라 사용자가 해당 전자 메일 읽기 나 관리 센터에서 이전 혼란을 제거 하는 방법으로 앱을 열 경우 이러한 알림을 지우는 것을 고려할 수 있습니다.
 
-우리 [ToastNotificationHistory](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotificationhistory) 알림 센터에는 콘텐츠를 볼 수 있도록 하는 Api는 뿐만 아니라 이러한 알림을 관리 합니다. 사용자에 게 현재 및 관련 콘텐츠를 표시만 하는 주의 하 고 사용자의 화면 공간을 정중 됩니다.
+일련의 있다고 [ToastNotificationHistory](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotificationhistory) Api는 이러한 알림을 관리할 수 있을 뿐만 아니라 관리 센터에서 어떤 콘텐츠를 볼 수 있습니다. 사용자의 화면 공간의 정직 있고 사용자에 게 전문적이 고 현재 콘텐츠 표시는 주의 합니다.
 
-## <a name="4-keeping-organized"></a>4. 유지 구성
-앞서 언급 했 듯이, 3 일에 대 한 알림 센터에는 콘텐츠가 유지 됩니다.  사용자가 찾으려는 신속 하 게 정보를 선택 하는 데, [머리글이](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/toast-headers) 나 [컬렉션](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastcollection)을 사용 하 여 알림 센터에서 알림을 구성 합니다. 아래 헤더의 예를 볼 수 있습니다.
+## <a name="4-keeping-organized"></a>4. 구성 유지
+이전에 설명한 대로 관리 센터의 콘텐츠는 3 일 동안 유지 됩니다.  신속 하 게 찾고 있는 정보를 선택 하는 사용자를 위해 사용 하 여 작업 센터에서 알림을 구성할 [헤더](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/toast-headers) 하거나 [컬렉션](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastcollection)합니다. 아래 헤더의 예제를 볼 수 있습니다.
 
-![알림 예제 헤더 'Camping!!' 레이블이 지정](images/toast-headers-action-center.png)
+![헤더를 사용 하 여 알림 예제 레이블이 'Camping!!'](images/toast-headers-action-center.png)
 
-관련 콘텐츠를 함께 유지 되도록 방식으로 이러한 알림을 그룹화 (즉, 다른 스포츠 리그 스포츠 앱에서는 좌우 또는 그룹 채팅 메시지를 정렬할 생각). 헤더는 보다 섬세 하지만 심사 하 고 알림을 더 빠르게 골라낼 수 있도록 모두 컬렉션은 알림 그룹화 하는 보다 명확 하 게 합니다.
+관련 콘텐츠를 함께 유지 되도록 방식으로 이러한 알림을 그룹 (즉, 스포츠 앱에서 다양 한 스포츠 leagues 분리 또는 그룹 채팅으로 메시지 정렬 생각). 컬렉션은 헤더는 미묘한 하지만 둘 다에 심사 하 고 보다 신속 하 게 알림을 선택 할 수 있습니다. 반면 그룹 알림을 보다 명확 하 게 방법입니다.
 
 ## <a name="other-resources"></a>다른 리소스
-이러한 4 개의 점을 위의 지침 및 첫 번째 및 제 3 자 실험 했으므로 분석, 원격 분석을 통해 효과적인 발견 하는 경우 하지만 유의는 다음이 지침은: 지침.  우리는 확신이 알림, 생산성을 향상 시킵니다 이러한 규칙의 데 도움이 됩니다 하지만 사용자 중심 생각을 하 고 사용자 고유의 데이터로 학습 대체할 수 없습니다.  
+이러한 네 가지 위의 지점은 첫 번째 및 세 번째 파티 실험 및 고유한 분석 원격 분석을 통해 효과적인 개는 지침입니다. 그러나 염두에서에 둡니다,는 이러한 지침 여기에 해당 합니다: 지침입니다.  이러한 규칙 참여 및 알림의 생산성 향상에 도움이 될 하지만 사용자 중심 생각을 배우고 자신의 데이터에서 대체할 수 nothing 확신 합니다.  
 
-UWP 앱에 현재 알림을 보내는 경우 [파트너 센터](https://partner.microsoft.com/dashboard)에서 알림을 변경 사항에 분석을 볼 수 있습니다. [스토어 서비스 SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) 또는 [WNS Api](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview)를 사용 하는 경우이 데이터 무료 제공 됩니다. 이러한 메트릭은 보다 잘 이해할 windows 플랫폼에서 알림을 하에 알림을 사용 하 여 사용자가 상호 작용 하는 방법. 왼쪽 면 참여에 메뉴로 이동 하 여이 데이터에 액세스 > 알림, 알림 페이지 내에서 "분석" 탭을 클릭 합니다.  이 파트너 센터에서 알림을 전송으로 동일한 위치에 있습니다.
+UWP 앱에 현재 알림을 보내는 경우의 알림 내용에 분석을 볼 수 있습니다 [파트너 센터](https://partner.microsoft.com/dashboard)! 사용 하는 경우이 데이터 무료 제공 합니다 [저장소 서비스 SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) 또는 [WNS Api](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview)합니다. 이러한 메트릭을 제공 합니다 되나요 windows 플랫폼에서 알림을 확인할도 사용자가 알림과 상호 작용 하는 방법과. 왼쪽 참여에서 메뉴로 이동 하 여이 데이터에 액세스 > 알림, 알림 페이지 내에서 "분석" 탭을 클릭 합니다.  이 파트너 센터에서 알림을 보내는 이동 해야 하 고 동일한 위치에 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [알림 콘텐츠](adaptive-interactive-toasts.md)
 * [원시 알림](raw-notification-overview.md)
 * [보류 중인 업데이트](toast-pending-update.md)
-* [GitHub의 알림 라이브러리(Windows 커뮤니티 도구 키트의 일부)](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [GitHub (Windows 커뮤니티 도구 키트의 일부)에 대 한 알림 라이브러리](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)

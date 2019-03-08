@@ -1,6 +1,6 @@
 ---
 title: 사각형
-description: Direct3D 및 Windows 프로그래밍에서 화면의 개체는 경계 사각형의 관점에서 참조됩니다.
+description: Direct3D 및 Windows 프로그래밍 전체에서 경계 사각형을 사용하여 화면의 개체를 참조합니다.
 ms.assetid: 3B78AE66-2C1A-4191-BDCA-D737E33460BA
 keywords:
 - 사각형
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: aa94eb00058ba3297e7ca7cc4f93581d9281fd1c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947915"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608018"
 ---
 # <a name="rectangles"></a>사각형
 
 
-Direct3D 및 Windows 프로그래밍 전체에서 경계 사각형을 사용하여 화면의 개체를 참조합니다. 경계 사각형의 측면은 화면의 측면과 항상 평행하므로 사각형은 위 오른쪽 모서리와 아래 오른쪽 모서리라는 두 개의 점으로 설명할 수 있습니다.
+Direct3D 및 Windows 프로그래밍 전체에서 경계 사각형을 사용하여 화면의 개체를 참조합니다. 경계 사각형의 면은 항상 화면의 면에 평행이므로 왼쪽 위 모퉁이와 오른쪽 아래 모퉁이, 이렇게 두 점으로 사각형을 설명할 수 있습니다.
 
 ## <a name="span-idboundingrectanglesspanspan-idboundingrectanglesspanspan-idboundingrectanglesspanbounding-rectangles"></a><span id="Bounding_rectangles"></span><span id="bounding_rectangles"></span><span id="BOUNDING_RECTANGLES"></span>경계 사각형
 
@@ -41,10 +41,10 @@ typedef struct tagRECT {
 
 효율성, 일관성, 사용 편의성을 위해 모든 Direct3D 프레젠테이션 함수는 사각형에서 작동합니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
+[좌표계 및 기 하 도형](coordinate-systems-and-geometry.md)
 
  
 

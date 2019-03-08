@@ -8,19 +8,19 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 93d6d6e6acfd8fa39bd9d26c87ed99362d2c88d6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932311"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614008"
 ---
 # <a name="reputation-uris"></a>평판 URI
  
-이 섹션에서는 **Microsoft.Xbox.Services.Social.ReputationService**에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다. 평판 Uri에 대 한 도메인 reputation.xboxlive.com입니다. 일반적인 URI 표현 될 https://reputation.xboxlive.com/users/xuid(2533274790412952)/feedback. 
+이 섹션에서 Xbox Live 서비스에 대 한 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다 **Microsoft.Xbox.Services.Social.ReputationService** . 평판 Uri에 대 한 도메인 reputation.xboxlive.com입니다. 일반적인 URI 표현 될 수 있습니다 https://reputation.xboxlive.com/users/xuid(2533274790412952)/feedback합니다. 
  
-신뢰도 서비스를 사용 하 여 피드백을 [피드백 (JSON)](../../json/json-feedback.md)설명 된 대로 평판 점수를 계산 합니다. 이 점수 ReputationOverall 키에 따라 사용자에 대 한 통계 영역에 저장 됩니다. 사용자 통계를 검색 하는 방법에 대 한 자세한 내용은 참조 [가져오기 (/users/xuid({xuid})/scids/{scid}/stats)](../userstats/uri-usersxuidscidsscidstatsget.md). 
+평판 서비스에 설명 된 대로 피드백을 사용 하 여 [피드백 (JSON)](../../json/json-feedback.md), 신뢰도 점수를 계산 합니다. 이 점수는 ReputationOverall 키 아래에 사용자에 대 한 통계 영역에 저장 됩니다. 사용자 통계를 검색 하는 방법에 대 한 자세한 내용은 참조 하십시오 [GET (/users/xuid({xuid})/scids/{scid}/stats)](../userstats/uri-usersxuidscidsscidstatsget.md)합니다. 
  
-모든 플랫폼에서 게임 신뢰도 서비스를 사용할 수 있습니다.
+모든 플랫폼에서 게임 평판 서비스를 사용할 수 있습니다.
  
 <a id="ID4EMB"></a>
 
@@ -29,23 +29,23 @@ ms.locfileid: "8932311"
 
 [/users/xuid({xuid})/feedback](uri-reputationusersxuidfeedback.md)
 
-&nbsp;&nbsp;셸을 사용 하지 않고 게임에서 피드백 옵션을 추가 하려면 원하는 경우 타이틀에서 사용 합니다.
+&nbsp;&nbsp;셸을 사용 하는 대신 게임, 사용자 의견 옵션을 추가 하려는 경우을 제목에서 사용 합니다.
 
 [/users/batchfeedback](uri-reputationusersbatchfeedback.md)
 
-&nbsp;&nbsp;타이틀의 인터페이스 외부에서 일괄 처리 형태로 피드백을 보내려면 타이틀의 서비스가 사용 합니다.
+&nbsp;&nbsp;일괄 처리 형식 외부에 제목 인터페이스에서 피드백을 전송할 타이틀의 서비스에서 사용 합니다.
 
 [/users/me/resetreputation](uri-usersmeresetreputation.md)
 
-&nbsp;&nbsp;적용 팀을 현재 사용자의 평판 점수에 액세스할 수 있습니다.
+&nbsp;&nbsp;적용 팀을 현재 사용자의 신뢰도 점수에 액세스할 수 있습니다.
 
 [/users/xuid({xuid})/deleteuserdata](uri-usersxuiddeleteuserdata.md)
 
-&nbsp;&nbsp;테스트 사용자에 대 한 안전도 데이터를 완전히 다시 설정합니다. 만 테스트 합니다.
+&nbsp;&nbsp;테스트 사용자에 대 한 평판 데이터를 완전히 다시 설정합니다. 테스트 전용입니다.
 
 [/users/xuid({xuid})/resetreputation](uri-usersxuidresetreputation.md)
 
-&nbsp;&nbsp;적용 팀을에 지정 된 사용자의 평판 점수에 액세스할 수 있습니다.
+&nbsp;&nbsp;적용 팀을 지정된 된 사용자의 신뢰도 점수에 액세스할 수 있습니다.
  
 <a id="ID4E5B"></a>
 
@@ -55,8 +55,8 @@ ms.locfileid: "8932311"
 <a id="ID4EAC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[URI(Universal Resource Identifier) 참조](../atoc-xboxlivews-reference-uris.md)
+[유니버설 리소스 식별자 (URI) 참조](../atoc-xboxlivews-reference-uris.md)
 
    

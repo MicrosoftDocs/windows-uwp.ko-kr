@@ -7,25 +7,25 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 문제 해결, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d92795ac7de2ab09fd0b3b86e05aa33669c54dd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941390"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615918"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>XAML과 C# 문제 해결 가이드
 
 이 항목에서는 XAML 앱에서 Microsoft Advertising 라이브러리를 사용할 때 발생하는 일반적인 개발 문제에 대한 해결 방법을 알아봅니다.
 
 * [XAML](#xaml)
-  * [AdControl이 표시되지 않음](#xaml-notappearing)
-  * [블랙 박스가 깜박거리다가 사라짐](#xaml-blackboxblinksdisappears)
-  * [광고가 새로 고쳐지지 않음](#xaml-adsnotrefreshing)
+  * [AdControl 표시 되지 않음](#xaml-notappearing)
+  * [블랙 박스를 깜빡이는 및 사라집니다.](#xaml-blackboxblinksdisappears)
+  * [광고 하지 새로 고치는 중](#xaml-adsnotrefreshing)
 
 * [C#](#csharp)
-  * [AdControl이 표시되지 않음](#csharp-adcontrolnotappearing)
-  * [블랙 박스가 깜박거리다가 사라짐](#csharp-blackboxblinksdisappears)
-  * [광고가 새로 고쳐지지 않음](#csharp-adsnotrefreshing)
+  * [AdControl 표시 되지 않음](#csharp-adcontrolnotappearing)
+  * [블랙 박스를 깜빡이는 및 사라집니다.](#csharp-blackboxblinksdisappears)
+  * [광고 하지 새로 고치는 중](#csharp-adsnotrefreshing)
 
 <span id="xaml"/>
 
@@ -37,7 +37,7 @@ ms.locfileid: "8941390"
 
 1.  Package.appxmanifest에서**인터넷(클라이언트)** 기능이 선택되어 있는지 확인합니다.
 
-2.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 응용 프로그램 ID와 광고 단위 ID는 파트너 센터에서 가져온 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+2.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id에는 응용 프로그램 ID 및 파트너 센터에서 얻은 ad 할당 단위 ID와 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -173,7 +173,7 @@ ms.locfileid: "8941390"
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
 
-3.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 응용 프로그램 ID와 광고 단위 ID는 파트너 센터에서 가져온 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+3.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id에는 응용 프로그램 ID 및 파트너 센터에서 얻은 ad 할당 단위 ID와 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs
@@ -238,7 +238,7 @@ ms.locfileid: "8941390"
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet2)]
 
-    블랙 박스를 발생하는 가장 일반적인 오류는 "사용할 수 있는 광고가 없음”입니다. 이 오류는 요청에서 반환할 수 있는 광고가 없음을 의미합니다.
+    블랙 박스를 유발하는 가장 일반적인 오류는 "사용할 수 있는 광고가 없음”입니다. 이 오류는 요청에서 반환할 수 있는 광고가 없음을 의미합니다.
 
 3.  **AdControl**은 정상적으로 동작하고 있습니다. 동일한 광고가 차례대로 두 번 이상 나타나면서 광고는 새로 고쳐지지 않는 경우가 있습니다.
 

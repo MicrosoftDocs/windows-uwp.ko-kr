@@ -1,5 +1,5 @@
 ---
-Description: Edge-based animations show or hide UI that originates from the edge of the screen.
+Description: 가장자리 기반 애니메이션은 화면의 가장자리에서 시작되는 UI를 표시하거나 숨깁니다.
 title: UWP 앱의 가장자리 기반 UI 애니메이션
 ms.assetid: 5A8F73B1-F4F6-424b-9EDF-A9766C5DEAE8
 label: Motion--edge-based UI
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e07ac565fe2e223b2fb33573ad083edfdfbc888a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934848"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610208"
 ---
 # <a name="edge-based-ui-animations"></a>가장자리 기반 UI 애니메이션
 
@@ -23,7 +23,7 @@ ms.locfileid: "8934848"
 
 가장자리 기반 애니메이션은 화면의 가장자리에서 시작되는 UI를 표시하거나 숨깁니다. 표시 및 숨기기 동작은 사용자 또는 앱에서 시작할 수 있습니다. UI는 앱에 오버레이하거나 주 앱 표면의 일부가 될 수 있습니다. UI가 앱 화면의 일부일 경우 나머지 앱 화면은 UI를 포함하도록 크기를 조정해야 합니다.
 
-> **중요 API**: [**EdgeUIThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh702324)
+> **중요 한 Api**: [**EdgeUIThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh702324)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -44,14 +44,14 @@ ms.locfileid: "8934848"
 ## <a name="related-articles"></a>관련 문서
 
 
-**개발자용**
+**개발자를 위한**
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [가장자리 기반 UI 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649428)
-* [빠른 시작: 라이브러리 애니메이션을 사용하여 UI에 애니메이션 효과 주기](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Edge 기반 UI에 애니메이션 적용](https://msdn.microsoft.com/library/windows/apps/xaml/jj649428)
+* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**EdgeUIThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh702324)
 * [**PaneThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969160)
-* [페이드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649429)
-* [위치 변경 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649434)
+* [페이드 애니메이션 적용](https://msdn.microsoft.com/library/windows/apps/xaml/jj649429)
+* [위치를 변경에 애니메이션 적용](https://msdn.microsoft.com/library/windows/apps/xaml/jj649434)
 
  
 

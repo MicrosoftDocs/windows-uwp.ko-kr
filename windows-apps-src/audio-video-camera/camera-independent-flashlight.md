@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fd69900995a51af806c99b25aae43149d6e30a7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919854"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622608"
 ---
 # <a name="camera-independent-flashlight"></a>카메라 독립적 플래시
 
@@ -37,7 +37,7 @@ ms.locfileid: "8919854"
 
 일부 디바이스에는 둘 이상의 램프가 있을 수 있습니다. 디바이스에서 사용할 수 있는 램프 목록을 보려면 [**GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn894328)를 호출하여 디바이스 선택기 문자열을 가져옵니다. 그런 후에 이 선택기 문자열을 [**DeviceInformation.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432)에 전달할 수 있습니다. 이 메서드는 다양한 종류의 디바이스를 열거하는 데 사용되며 선택기 문자열은 해당 메서드에 램프가 있는 디바이스만 반환하도록 알립니다. **FindAllAsync**에서 반환된 [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/br225395) 개체는 디바이스에서 사용할 수 있는 램프를 나타내는 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) 개체 컬렉션입니다. 목록에서 개체 중 하나를 선택한 다음 [**Id**](https://msdn.microsoft.com/library/windows/apps/br225437) 속성을 [**Lamp.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn894326)에 전달하여 요청된 램프에 대한 참조를 가져옵니다. 이 예제에서는 **System.Linq** 네임스페이스의 **GetFirstOrDefault** 확장 메서드를 사용하여 [**EnclosureLocation.Panel**](https://msdn.microsoft.com/library/windows/apps/br229906) 속성 값이 **Back**인 **DeviceInformation** 개체를 선택합니다. 이 속성 값을 지정하면 디바이스 인클로저 뒷면에 있는 램프(있는 경우)가 선택됩니다.
 
-[**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) API는 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/br225459) 네임스페이스에 있습니다.
+[  **DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) API는 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/br225459) 네임스페이스에 있습니다.
 
 [!code-cs[EnumerationNamespace](./code/Lamp/cs/MainPage.xaml.cs#SnippetEnumerationNamespace)]
 
@@ -45,15 +45,15 @@ ms.locfileid: "8919854"
 
 ## <a name="adjust-lamp-settings"></a>램프 설정 조정
 
-[**Lamp**](https://msdn.microsoft.com/library/windows/apps/dn894310) 클래스의 인스턴스가 있으면 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn894330) 속성을 **true**로 설정하여 램프를 켭니다.
+[  **Lamp**](https://msdn.microsoft.com/library/windows/apps/dn894310) 클래스의 인스턴스가 있으면 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn894330) 속성을 **true**로 설정하여 램프를 켭니다.
 
 [!code-cs[LampSettingsOn](./code/Lamp/cs/MainPage.xaml.cs#SnippetLampSettingsOn)]
 
-[**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn894330) 속성을 **false**로 설정하여 램프를 끕니다.
+[  **IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn894330) 속성을 **false**로 설정하여 램프를 끕니다.
 
 [!code-cs[LampSettingsOff](./code/Lamp/cs/MainPage.xaml.cs#SnippetLampSettingsOff)]
 
-일부 디바이스에는 색 값을 지원하는 램프가 있습니다. [**IsColorSettable**](https://msdn.microsoft.com/library/windows/apps/dn894329) 속성을 확인하여 램프가 색을 지원하는지 확인합니다. 이 값이 **true**이면 [**Color**](https://msdn.microsoft.com/library/windows/apps/dn894322) 속성을 사용하여 램프 색을 설정할 수 있습니다.
+일부 디바이스에는 색 값을 지원하는 램프가 있습니다. [  **IsColorSettable**](https://msdn.microsoft.com/library/windows/apps/dn894329) 속성을 확인하여 램프가 색을 지원하는지 확인합니다. 이 값이 **true**이면 [**Color**](https://msdn.microsoft.com/library/windows/apps/dn894322) 속성을 사용하여 램프 색을 설정할 수 있습니다.
 
 [!code-cs[LampSettingsColor](./code/Lamp/cs/MainPage.xaml.cs#SnippetLampSettingsColor)]
 
@@ -69,7 +69,7 @@ ms.locfileid: "8919854"
 
 ## <a name="properly-dispose-of-the-lamp-resource-when-not-in-use"></a>사용되지 않는 램프 리소스를 적절히 해제
 
-램프를 더 이상 사용하지 않을 경우 사용하지 않도록 설정하고 [**Lamp.Close**](https://msdn.microsoft.com/library/windows/apps/dn894320)를 호출하여 리소스를 해제하고 다른 앱이 램프에 액세스할 수 있도록 해야 합니다. C#을 사용하는 경우 이 속성은 **Dispose** 메서드에 매핑됩니다. [**AvailabilityChanged**](https://msdn.microsoft.com/library/windows/apps/dn894317)에 등록한 경우 램프 리소스를 해제할 때 처리기를 등록 취소해야 합니다. 램프 리소스를 해제하기 위한 코드의 오른쪽 부분은 앱에 따라 다릅니다. 램프 액세스 범위를 단일 페이지로 지정하려면 [**OnNavigatingFrom**](https://msdn.microsoft.com/library/windows/apps/br227509) 이벤트의 리소스를 사용 가능하게 해제합니다.
+램프를 더 이상 사용하지 않을 경우 사용하지 않도록 설정하고 [**Lamp.Close**](https://msdn.microsoft.com/library/windows/apps/dn894320)를 호출하여 리소스를 해제하고 다른 앱이 램프에 액세스할 수 있도록 해야 합니다. C#을 사용하는 경우 이 속성은 **Dispose** 메서드에 매핑됩니다. [  **AvailabilityChanged**](https://msdn.microsoft.com/library/windows/apps/dn894317)에 등록한 경우 램프 리소스를 해제할 때 처리기를 등록 취소해야 합니다. 램프 리소스를 해제하기 위한 코드의 오른쪽 부분은 앱에 따라 다릅니다. 램프 액세스 범위를 단일 페이지로 지정하려면 [**OnNavigatingFrom**](https://msdn.microsoft.com/library/windows/apps/br227509) 이벤트의 리소스를 사용 가능하게 해제합니다.
 
 [!code-cs[DisposeLamp](./code/Lamp/cs/MainPage.xaml.cs#SnippetDisposeLamp)]
 

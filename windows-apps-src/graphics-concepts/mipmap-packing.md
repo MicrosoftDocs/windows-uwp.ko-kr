@@ -1,6 +1,6 @@
 ---
 title: Mipmap 압축
-description: mips 중 일부(배열 슬라이스당)는 스트리밍 리소스의 크기, 형식, mipmap의 개수 및 배열 슬라이스에 따라 일부 타일로 압축할 수 있습니다.
+description: mips 중 일부(배열 슬라이스당)는 스트리밍 리소스의 크기, 형식, Mipmap의 개수 및 배열 슬라이스에 따라 일부 타일로 압축할 수 있습니다.
 ms.assetid: 906C3CAC-4E84-4947-B508-06788551BE85
 keywords:
 - Mipmap 압축
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b2733da1f843062a1fa7f2b4a7969326523d54e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935165"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608108"
 ---
 # <a name="mipmap-packing"></a>Mipmap 압축
 
 
-mips 중 일부(배열 슬라이스당)는 스트리밍 리소스의 크기, 형식, mipmap의 개수 및 배열 슬라이스에 따라 일부 타일로 압축할 수 있습니다.
+mips 중 일부(배열 슬라이스당)는 스트리밍 리소스의 크기, 형식, Mipmap의 개수 및 배열 슬라이스에 따라 일부 타일로 압축할 수 있습니다.
 
 특정 크기의 mipmap은 스트리밍 리소스 지원의 [계층](streaming-resources-features-tiers.md)에 따라 표준 타일 모양을 따르지 않고 응용 프로그램에 불투명한 방식으로 모두 함께 상호 압축된 것으로 간주합니다. 더 높은 계층의 지원은 어떤 유형의 표면 크기가 표준 타일 모양에 맞는지(따라서 응용 프로그램에서 개별적으로 매핑할 수 있는지)에 대해 더 폭넓은 보증을 받습니다.
 
@@ -29,10 +29,10 @@ mips 중 일부(배열 슬라이스당)는 스트리밍 리소스의 크기, 형
 
 타일 복사 전용 API는 압축된 mips에 액세스할 수 없습니다. 압축된 mips에 대해 데이터 복사 작업을 할 응용 프로그램은 표면으로 복사 및 렌더링하기 위한 모든 비스트리밍 리소스별 API를 사용하여 해당 작업을 할 수 있습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[스트리밍 리소스 영역의 타일링 방법](how-a-streaming-resource-s-area-is-tiled.md)
+[리소스의 영역을 바둑판식으로 스트리밍 하는 방법](how-a-streaming-resource-s-area-is-tiled.md)
 
  
 

@@ -1,6 +1,6 @@
 ---
 title: 텍스처 소개
-description: 텍스처 리소스는 텍셀을 저장할 수 있는 데이터 구조이며, 여기에서 텍셀이란 읽거나 쓸 수 있는 가장 작은 단위의 텍스처를 의미합니다. 텍스처가 셰이더에서 사용할 준비가 되면 텍스처 샘플러에서 필터링할 수 있습니다.
+description: 텍스처 리소스는 텍셀을 저장할 수 있는 데이터 구조이며, 여기에서 텍셀이란 읽거나 쓸 수 있는 가장 작은 단위의 텍스처를 의미합니다. 셰이더에서 텍스처를 읽을 때는 텍스처 샘플러에서 필터링할 수 있습니다.
 ms.assetid: 6F3C76A8-F762-4296-AE02-BFBD6476A5A8
 keywords:
 - 텍스처 소개
@@ -8,34 +8,34 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3cd5ca66635b57b79c2fca3e6ff10b8debb43fd0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929318"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618168"
 ---
 # <a name="introduction-to-textures"></a>텍스처 소개
 
 
-텍스처 리소스는 텍셀을 저장할 수 있는 데이터 구조이며, 여기에서 텍셀이란 읽거나 쓸 수 있는 가장 작은 단위의 텍스처를 의미합니다. 텍스처가 셰이더에서 사용할 준비가 되면 텍스처 샘플러에서 필터링할 수 있습니다.
+텍스처 리소스는 텍셀을 저장할 수 있는 데이터 구조이며, 여기에서 텍셀이란 읽거나 쓸 수 있는 가장 작은 단위의 텍스처를 의미합니다. 셰이더에서 텍스처를 읽을 때는 텍스처 샘플러에서 필터링할 수 있습니다.
 
-텍스처 리소스는 텍셀을 저장하도록 구조화된 데이터 모음입니다. 텍셀은 파이프라인에서 읽거나 쓸 수 있는 텍스처의 최소 단위를 나타냅니다. 버퍼와 달리 텍스처는 셰이더 단위에서 읽으므로 텍스처 샘플러에서 필터링할 수 있습니다. 텍스처의 유형은 텍스처의 필터링 방식에 영향을 미칩니다. DXGI\_FORMAT 열거형에 정의된 DXGI 형식 중 하나로 정렬된 구성 요소가 텍셀 하나당 1 ~ 4개 포함됩니다.
+텍스처 리소스는 텍셀을 저장하도록 구조화된 데이터 모음입니다. 텍셀은 파이프라인에서 읽거나 쓸 수 있는 텍스처의 최소 단위를 나타냅니다. 버퍼와 달리 텍스처는 셰이더 단위에서 읽으므로 텍스처 샘플러에서 필터링할 수 있습니다. 텍스처의 유형은 텍스처의 필터링 방식에 영향을 미칩니다. 1 ~ 4 구성 요소를 정렬 된 DXGI 정의한 DXGI 형식 중 하나를 포함 하는 각 텍셀\_형식 열거형입니다.
 
 텍스처는 알려진 크기의 구조화된 리소스로 생성됩니다. 그러나 텍스처가 파이프라인에 바인딩될 때 보기를 사용해 유형이 완전히 지정되면 리소스가 만들어질 때 각 텍스처에 유형이 있거나 없을 수 있습니다.
 
-## <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span>텍스처 유형
+## <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span>질감 형식
 
 
 Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소수점 계산은 IEEE 754 32비트 단정밀도 부동 소수점 규칙의 정의된 하위 집합에서 작동합니다.
 
-1D, 2D, 3D 등 여러 유형의 텍스처가 있으며, 각각 Mipmap을 사용하거나 사용하지 않고 만들 수 있습니다. Direct3D는 텍스처 배열과 다중 샘플링된 텍스처도 지원합니다.
+여러 유형의 질감 가지 1 D, 2D, 3D, 각 mip 맵 없이 만들 수 있습니다. Direct3D는 텍스처 배열과 다중 샘플링된 텍스처도 지원합니다.
 
--   [1D 텍스처](#texture1d-resource)
--   [1D 텍스처 배열](#texture1d-array-resource)
--   [2D 텍스처와 2D 텍스처 배열](#texture2d-resource)
--   [3D 텍스처](#texture3d-resource)
+-   [질감 1d](#texture1d-resource)
+-   [1d 질감 배열](#texture1d-array-resource)
+-   [2D 질감 및 2D 텍스처 배열](#texture2d-resource)
+-   [3D 질감](#texture3d-resource)
 
-### <a name="span-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1d-resourcespan1d-textures"></a><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>1D 텍스처
+### <a name="span-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1d-resourcespan1d-textures"></a><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>질감 1d
 
 가장 단순한 형태의 1D 텍스처에는 단일 텍스처 좌표로 주소를 지정할 수 있는 텍스처 데이터가 포함됩니다. 이는 다음 그림과 같이 텍셀 배열로 시각화할 수 있습니다.
 
@@ -51,7 +51,7 @@ Mipmap 수준은 바로 위 수준보다 2의 거듭 제곱만큼 작은 텍스�
 
 홀수 크기의 텍스처에 Mipmap이 생성되면 바로 아래 수준은 항상 짝수 크기(최저 수준이 1에 도달한 경우는 예외)입니다. 예를 들어 다음 그림의 5x1 텍스처를 보면, 바로 아래 수준은 2x1 텍스처이고 그 다음(마지막) mip 수준은 1x1 크기의 텍스처입니다. 이 수준은 카메라에서 가깝지 않은 기하 도형을 렌더링할 때 더 작은 텍스처에 액세스하는 데 사용되는 LOD(level-of-detail)라는 인덱스로 식별됩니다.
 
-### <a name="span-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1d-array-resourcespan1d-texture-arrays"></a><span id="Texture1D_Array_Resource"></span><span id="texture1d_array_resource"></span><span id="TEXTURE1D_ARRAY_RESOURCE"></span><span id="texture1d-array-resource"></span>1D 텍스처 배열
+### <a name="span-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1d-array-resourcespan1d-texture-arrays"></a><span id="Texture1D_Array_Resource"></span><span id="texture1d_array_resource"></span><span id="TEXTURE1D_ARRAY_RESOURCE"></span><span id="texture1d-array-resource"></span>1d 질감 배열
 
 Direct3D는 텍스처 배열도 지원합니다. 이론적으로 1D 텍스처의 배열은 다음 그림과 같이 보입니다.
 
@@ -61,7 +61,7 @@ Direct3D는 텍스처 배열도 지원합니다. 이론적으로 1D 텍스처의
 
 Direct3D의 모든 텍스처 배열은 같은 유형의 텍스처 배열입니다. 즉 텍스처 배열의 모든 텍스처는 동일한 데이터 형식과 크기(텍스처 폭과 Mipmap 수준 개수 포함)로 구성되어야 합니다. 각 배열에 속한 모든 텍스처의 크기가 일치하면 서로 다른 크기의 텍스처 배열을 만들 수 있습니다.
 
-### <a name="span-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2d-resourcespan2d-textures-and-2d-texture-arrays"></a><span id="Texture2D_Resource"></span><span id="texture2d_resource"></span><span id="TEXTURE2D_RESOURCE"></span><span id="texture2d-resource"></span>2D 텍스처와 2D 텍스처 배열
+### <a name="span-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2d-resourcespan2d-textures-and-2d-texture-arrays"></a><span id="Texture2D_Resource"></span><span id="texture2d_resource"></span><span id="TEXTURE2D_RESOURCE"></span><span id="texture2d-resource"></span>2D 질감 및 2D 텍스처 배열
 
 Texture2D 리소스에는 텍셀의 2D 그리드가 포함되어 있습니다. 각 텍셀은 a u, v 벡터로 주소를 지정할 수 있습니다. 이는 텍스처 리소스이므로 Mipmap 수준과 하위 리소스를 포함할 수 있습니다. 완전히 채워진 2D 텍스처 리소스는 다음 그림처럼 보입니다.
 
@@ -75,7 +75,7 @@ Texture2D 리소스에는 텍셀의 2D 그리드가 포함되어 있습니다. �
 
 이 텍스처 배열에는 세 개의 텍스처가 포함되며 각 텍스처는 2 Mipmap 수준의 3x5입니다.
 
-### <a name="span-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanusing-a-2d-texture-array-as-a-texture-cube"></a><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>2D 텍스처 배열을 텍스처 큐브로 사용
+### <a name="span-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanusing-a-2d-texture-array-as-a-texture-cube"></a><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>질감 2D 배열을 사용 하 여 질감 큐브의으로
 
 텍스처 큐브는 각각 큐브의 한 면에 해당하는 6개 텍스처를 포함한 2D 텍스처 배열입니다. 완전히 채워진 텍스처 큐브는 다음 그림처럼 보입니다.
 
@@ -83,7 +83,7 @@ Texture2D 리소스에는 텍셀의 2D 그리드가 포함되어 있습니다. �
 
 6개 텍스처를 포함하는 2D 텍스처 배열은 큐브-텍스처 보기로 파이프라인에 바인딩된 후 큐브 맵 기본 기능이 있는 셰이더 내에서 읽을 수 있습니다. 셰이더에서 텍스처 큐브는 텍스처 큐브의 중앙에서부터 시작되는 3D 벡터로 주소가 지정됩니다.
 
-### <a name="span-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3d-resourcespan3d-textures"></a><span id="Texture3D_Resource"></span><span id="texture3d_resource"></span><span id="TEXTURE3D_RESOURCE"></span><span id="texture3d-resource"></span>3D 텍스처
+### <a name="span-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3d-resourcespan3d-textures"></a><span id="Texture3D_Resource"></span><span id="texture3d_resource"></span><span id="TEXTURE3D_RESOURCE"></span><span id="texture3d-resource"></span>3D 질감
 
 볼륨 텍스처라고도 하는 3D 텍스처 리소스에는 텍셀의 3D 볼륨이 포함되어 있습니다. 텍스처 리소스이기 때문에 Mipmap 수준이 포함될 수 있습니다. 완전히 채워진 3D 텍스처는 다음 그림처럼 보입니다.
 
@@ -95,7 +95,7 @@ Texture2D 리소스에는 텍셀의 2D 그리드가 포함되어 있습니다. �
 
 Direct3D의 좌표계는 픽셀과 텍셀에 대해 정의됩니다.
 
-## <a name="span-idpixelspanspan-idpixelspanspan-idpixelspanpixel-coordinate-system"></a><span id="Pixel"></span><span id="pixel"></span><span id="PIXEL"></span>픽셀 좌표계
+## <a name="span-idpixelspanspan-idpixelspanspan-idpixelspanpixel-coordinate-system"></a><span id="Pixel"></span><span id="pixel"></span><span id="PIXEL"></span>픽셀 좌표 시스템
 
 
 Direct3D의 픽셀 좌표계는 다음 그림과 같이 왼쪽 위 모서리에 렌더링 대상의 원점을 정의합니다. 픽셀 중앙은 정수 위치에서 (0.5f,0.5f)만큼 오프셋됩니다.
@@ -113,19 +113,19 @@ Direct3D의 픽셀 좌표계는 다음 그림과 같이 왼쪽 위 모서리에 
 
 정규화된 좌표의 경우:
 
--   점 샘플링: 텍셀 \# = floor(U \* 폭)
--   선형 샘플링: 왼쪽 텍셀 \# = floor(U \* 폭), 오른쪽 텍셀 \# = 왼쪽 텍셀 \# + 1
+-   샘플링을 가리킵니다. Texel \# = floor(U \* Width)
+-   선형 샘플링 합니다. Left Texel \# = floor(U \* Width), Right Texel \# = Left Texel \# + 1
 
 배율이 적용된 좌표:
 
--   점 샘플링: 텍셀 \# = floor(U)
--   선형 샘플링: 왼쪽 텍셀 \# = floor(U - 0.5), 오른쪽 텍셀 \# = 왼쪽 텍셀 \# + 1
+-   샘플링을 가리킵니다. 텍셀 \# floor(U) =
+-   선형 샘플링 합니다. 왼쪽 텍셀 \# floor (U-0.5), 오른쪽 텍셀 = \# 왼쪽 텍셀 = \# + 1
 
 여기서 폭은 텍스처의 폭(텍셀 단위)입니다.
 
 텍스처 주소 래핑은 텍셀 위치가 계산된 후 이루어집니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[텍스처](textures.md)
+[질감](textures.md)

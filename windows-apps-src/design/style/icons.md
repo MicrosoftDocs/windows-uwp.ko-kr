@@ -1,6 +1,6 @@
 ---
-Description: Good icons harmonize with typography and with the rest of the design language. They don’t mix metaphors, and they communicate only what’s needed, as speedily and simply as possible.
-title: 아이콘 단추
+Description: 좋은 아이콘은 입력 체계 및 나머지 디자인 언어와 조화를 이룹니다. 상징을 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다.
+title: 아이콘
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
@@ -12,11 +12,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: fb97f69ccdffcec86dfdaf5fa6c5f817644ebd61
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947576"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612448"
 ---
 # <a name="icons-for-uwp-apps"></a>UWP 앱의 아이콘
 
@@ -81,7 +81,7 @@ ms.locfileid: "8947576"
 
 ## <a name="using-the-right-type-of-icon"></a>올바른 유형의 아이콘 사용
 
-여러 가지 방법으로 아이콘을 만들 수 있습니다. Segoe MDL2 자산 같은 기호 글꼴을 사용할 수 있습니다. 벡터 기반 이미지를 만들 수 있습니다. 비트맵 이미지를 사용할 수도 있지만 권장하지 않습니다. 앱에 아이콘을 추가할 수 있는 다양한 방법에 대한 요약은 다음과 같습니다. 
+여러 가지 방법으로 아이콘을 만들 수 있습니다. Segoe MDL2 자산 같은 기호 글꼴을 사용할 수 있습니다. 사용자 고유의 벡터 기반 이미지를 만들 수 있습니다. 비트맵 이미지를 사용할 수도 있지만 권장하지 않습니다. 앱에 아이콘을 추가할 수 있는 다양한 방법에 대한 요약은 다음과 같습니다. 
 
 ### <a name="use-a-predefined-icon"></a>미리 정의된 아이콘을 사용합니다.
 :::row:::
@@ -136,7 +136,7 @@ ms.locfileid: "8947576"
 
 ## <a name="make-the-icon-do-something"></a>아이콘으로 작업을 수행하도록 만들기
 
-아이콘이 있는 경우 다음 단계는 명령이 나 탐색 작업을 연결 하 여 작업을 수행 하기 쉽게입니다. 이 작업을 수행 하는 가장 좋은 방법은 단추나 명령 모음에 아이콘을 추가 하는 것입니다. 
+아이콘을 만든 후에 명령 또는 탐색 작업을 연결 하 여 작업을 수행 하도록 다음 단계가입니다. 이 작업을 수행 하는 가장 좋은 방법은 단추 또는 명령 모음 아이콘을 추가 하는 것입니다. 
 
 ![명령 모음 이미지](images/icons/app-bar-desktop.svg)
 
@@ -221,4 +221,4 @@ ms.locfileid: "8947576"
 
 ## <a name="related-articles"></a>관련 문서
 
-* [타일 및 아이콘 자산에 대한 지침](../shell/tiles-and-notifications/app-assets.md)
+* [타일 및 아이콘 자산에 대 한 지침](../shell/tiles-and-notifications/app-assets.md)

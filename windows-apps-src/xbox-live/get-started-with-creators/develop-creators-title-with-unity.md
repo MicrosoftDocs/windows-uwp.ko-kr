@@ -1,42 +1,42 @@
 ---
-title: Unity로 크리에이터 스 타이틀 개발
-description: Unity를 사용 하 여 Xbox Live 크리에이터 스 프로그램 타이틀 개발 시작
+title: Unity 사용 하 여 작성자 제목을 개발합니다
+description: Xbox Live 크리에이터 스 프로그램 제목에는 Unity를 사용 하 여 개발 시작
 ms.assetid: 656d0da1-0c6d-4719-b2f9-5896aaa240f6
 ms.date: 04/04/2017
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 크리에이터 스
+keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 작성자
 ms.localizationpriority: medium
 ms.openlocfilehash: caeedd11d18474721f291e14f5db1697cf650db7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941945"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599848"
 ---
 # <a name="get-started-developing-an-xbox-live-creators-program-title-with-the-unity-game-engine"></a>Unity 게임 엔진을 사용하여 Xbox Live 크리에이터스 프로그램 타이틀 개발 시작
 
-이 섹션에는 Unity 게임 엔진을 사용 하 여 개발 하는 게임에 Xbox Live를 통합 하는 방법을 설명 합니다. [Xbox Live 크리에이터 스 프로그램](../developer-program-overview.md#xbox-live-creators-program) 타이틀에 사용할 Xbox Live Unity 플러그를 위한 것입니다. Unity 프로젝트에 Xbox Live를 통합 하려면 다음이 문서를 진행 합니다.
+이 섹션에서는 Unity 게임 엔진을 사용 하 여 개발 하는 게임에 Xbox Live를 통합 하는 방법에 설명 합니다. Xbox Live Unity 플러그 인에 사용 되는 것 [Xbox Live 크리에이터 스 프로그램](../developer-program-overview.md#xbox-live-creators-program) 제목입니다. Unity 프로젝트에 Xbox Live를 통합 하려면 다음이 문서와 함께 수행 합니다.
 
-## <a name="knowledge"></a>기술
+## <a name="knowledge"></a>기술 자료
 
-[만들기 및 테스트는 Xbox Live 크리에이터 스 프로그램 타이틀 게시](create-and-test-a-new-creators-title.md)
+[만들기 및 테스트 게시는 Xbox Live 크리에이터 스 프로그램 제목](create-and-test-a-new-creators-title.md)
 
-[구성 Xbox Live Unity의](configure-xbox-live-in-unity.md)
+[구성 Xbox Live Unity에서](configure-xbox-live-in-unity.md)
 
-[Xbox Live 계정에 권한을 부여합니다](authorize-xbox-live-accounts.md)
+[Xbox Live 계정에 권한 부여](authorize-xbox-live-accounts.md)
 
-[Unity에서 Live Xbox에 로그인](unity-prefabs-and-sign-in.md) Unity 플러그 인 릴리스 이전 1804
+[Unity에서 라이브 Xbox에 로그인](unity-prefabs-and-sign-in.md) 1804 Unity 플러그 인 시험판
 
-[PlayerAuthentication 프리 팹 로그인](playerauthentication-prefab-sign-in.md)  Post 1804 Unity 플러그 인 릴리스
+[PlayerAuthentication prefab 로그인](playerauthentication-prefab-sign-in.md) Post 1804 Unity 플러그 인 릴리스
 
-[로그인 하 고 SignInManager](sign-in-manager.md)
+[SignInManager를 사용 하 여 로그인](sign-in-manager.md)
 
-[플레이어 통계 및 순위표 Unity 프로젝트에 추가](add-stats-and-leaderboards-in-unity.md)
+[플레이어 통계 및 순위표를 Unity 프로젝트에 추가](add-stats-and-leaderboards-in-unity.md)
 
-[점수 판 예제 장면](setup-leaderboard-example-scene.md)
+[Leaderboard 예제 장면](setup-leaderboard-example-scene.md)
 
-[순위표 스크립트](unity-leaderboard-from-scratch.md)
+[Leaderboard 스크립팅](unity-leaderboard-from-scratch.md)
 
 [Unity 프로젝트에 다중 사용자 지원 추가](add-multi-user-support.md)
 
-[Xbox Live 프리 팹에 컨트롤러 지원 추가](add-controller-support-to-xbox-live-prefabs.md)
+[Xbox Live Prefabs에 컨트롤러 지원 추가](add-controller-support-to-xbox-live-prefabs.md)

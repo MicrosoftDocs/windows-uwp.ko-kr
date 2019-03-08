@@ -1,17 +1,17 @@
 ---
-Description: This topic explains the general concept of qualifiers, how to use them, and the purpose of each of the qualifier names.
-title: 언어, 규모, 고대비 및 기타 한정자에 맞게 리소스 조정
+Description: 이 주제에서는 한정자의 일반적인 개념, 사용 방법 및 각 한정자 이름의 목적에 대해 설명합니다.
+title: 언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 template: detail.hbs
 ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ac80888019044beabc44335290bc6ad59cf377c
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117663"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608138"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 
@@ -29,7 +29,7 @@ ms.locfileid: "9117663"
 | :--------------- | :--------------- | :--------------- |
 | 고대비 설정 | 대비 | 표준, 높음, 검은색, 흰색 |
 
-한정자 이름을 한정자 값과 결합하여 한정자를 구성합니다. `<qualifier name>-<qualifier value>` 한정자의 형식입니다. `contrast-standard` 한정자의 예입니다.
+한정자 이름을 한정자 값과 결합하여 한정자를 구성합니다. `<qualifier name>-<qualifier value>` 한정자의 형식이입니다. `contrast-standard` 한정자의 예시입니다.
 
 따라서 고대비의 경우 한정자 집합은 `contrast-standard`, `contrast-high`, `contrast-black` 및 `contrast-white`입니다. 한정자 이름과 한정자 값은 대소문자를 구분하지 않습니다. 예를 들어, `contrast-standard` 및 `Contrast-Standard`는 동일한 한정자입니다.
 
@@ -102,7 +102,7 @@ ms.locfileid: "9117663"
 \Assets\Images\contrast-high_scale-400\<logo.png, and other image files>
 ```
 
-폴더 이름에서 밑줄로 구분된 여러 한정자를 결합합니다. `<qualifier1>[_<qualifier2>...]` 형식입니다.
+폴더 이름에서 밑줄로 구분된 여러 한정자를 결합합니다. `<qualifier1>[_<qualifier2>...]` 형식이입니다.
 
 동일한 형식의 파일 이름에 여러 한정자를 결합할 수 있습니다.
 
@@ -124,7 +124,7 @@ ms.locfileid: "9117663"
 
 `configuration` 한정자는 `MS_CONFIGURATION_ATTRIBUTE_VALUE` 환경 변수의 값과 가장 잘 일치하는 리소스를 로드하는 데 사용됩니다. 따라서 변수를 관련 리소스에 할당된 문자열 값으로 설정할 수 있습니다(예: `designer` 또는 `test`).
 
-## <a name="contrast"></a>대비
+## <a name="contrast"></a>이 예와
 
 `contrast` 한정자는 고대비 설정과 가장 잘 일치하는 리소스를 제공하는 데 사용됩니다.
 
@@ -193,7 +193,7 @@ public void SetLicenseLevel(BrandID brand)
 
 `homeregion` 한정자는 국가 또는 지역에 대한 사용자 설정에 해당합니다. 이는 사용자의 홈 위치를 나타냅니다. 값에는 유효한 [BCP 47 지역 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)가 포함되어 있습니다. 즉, **ISO 1 3166 alpha-2** 두 자리 문자 지역 코드와 구성된 지역에 대한 **ISO 1 3166 숫자** 세 자리 지리적 코드 집합입니다([United Nations Statistic Division M49 지역 코드의 구성](https://go.microsoft.com/fwlink/p/?linkid=247929) 참조). '선택된 경제 및 기타 그룹화"에 대한 코드는 유효하지 않습니다.
 
-## <a name="language"></a>언어
+## <a name="language"></a>외국어
 
 `language` 한정자는 표시 언어 설정에 해당합니다. 값에는 유효한 [BCP 47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)가 포함되어 있습니다. 언어 목록은 [IANA 언어 하위 태그 레지스트리](https://go.microsoft.com/fwlink/p/?linkid=227303)를 참조하세요.
 
@@ -267,13 +267,13 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 
 ## <a name="related-topics"></a>관련 항목
 
-* [유효 픽셀 및 배율](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
+* [효과적인 픽셀이 고 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
 * [리소스 관리 시스템](resource-management-system.md)
-* [지역화를 준비하는 방법](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
-* [앱이 실행되고 있는 플랫폼 검색](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
+* [지역화를 위한 준비 방법](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
+* [플랫폼 검색 앱에서 실행 되](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
 * [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
 * [UI 문자열 지역화](localize-strings-ui-manifest.md)
 * [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [United Nations Statistic Division M49 지역 코드의 구성](https://go.microsoft.com/fwlink/p/?linkid=247929)
+* [United Nations 통계 부서 M49 컴퍼지션 지역 코드](https://go.microsoft.com/fwlink/p/?linkid=247929)
 * [IANA 언어 하위 태그 레지스트리](https://go.microsoft.com/fwlink/p/?linkid=227303)
 * [레이아웃 및 글꼴 조정, RTL 지원](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

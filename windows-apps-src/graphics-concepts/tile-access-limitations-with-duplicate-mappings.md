@@ -8,36 +8,36 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d5563a9909ba3d6cb3deaae43bcf9e55b4b2c880
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947835"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607968"
 ---
 # <a name="tile-access-limitations-with-duplicate-mappings"></a>중복 매핑을 사용하는 타일 액세스 제한
 
 
 중복되는 원본과 대상을 이용해 스트리밍 리소스를 복사하거나, 혹은 렌더링 영역의 공유 타일로 렌더링할 때처럼 중복 매핑을 사용하여 타일에 액세스하는 데는 제한이 따릅니다.
 
-## <a name="span-idcopyingstreamingresourceswithoverlappingsourceanddestinationspanspan-idcopyingstreamingresourceswithoverlappingsourceanddestinationspanspan-idcopyingstreamingresourceswithoverlappingsourceanddestinationspancopying-streaming-resources-with-overlapping-source-and-destination"></a><span id="Copying_streaming_resources_with_overlapping_source_and_destination"></span><span id="copying_streaming_resources_with_overlapping_source_and_destination"></span><span id="COPYING_STREAMING_RESOURCES_WITH_OVERLAPPING_SOURCE_AND_DESTINATION"></span>중복되는 원본과 대상을 이용한 스트리밍 리소스 복사
+## <a name="span-idcopyingstreamingresourceswithoverlappingsourceanddestinationspanspan-idcopyingstreamingresourceswithoverlappingsourceanddestinationspanspan-idcopyingstreamingresourceswithoverlappingsourceanddestinationspancopying-streaming-resources-with-overlapping-source-and-destination"></a><span id="Copying_streaming_resources_with_overlapping_source_and_destination"></span><span id="copying_streaming_resources_with_overlapping_source_and_destination"></span><span id="COPYING_STREAMING_RESOURCES_WITH_OVERLAPPING_SOURCE_AND_DESTINATION"></span>겹치는 소스와 대상 스트리밍 리소스 복사
 
 
-두 리소스가 스트리밍 리소스가 아니고, Copy\* 연산이 중복 복사본을 지원하더라도 Copy\* 연산에서 원본 및 대상 영역의 타일이 복사 영역에 중복 매핑이 있어서 서로 중복될 수 있는 경우에는 Copy\* 연산이 마치 원본이 대상에 복사되기 전에 임시 위치에 복사되는 것처럼 대처합니다. 하지만 중복이 분명하지 않은 경우(예: 원본 및 대상 리소스가 다르지만 매핑을 공유하는 경우, 매핑이 일정 표면에 걸쳐 중복되는 경우)에는 공유하는 타일에 대한 복사 연산 결과를 알 수 없습니다.
+경우 타일 원본 및 대상 영역의 복사본\* 작업 모두 리소스 된 리소스 및 복사를 스트리밍 하지 않습니다 하는 경우에 overlapped가 복사 영역에서 매핑을 복제 했습니다.\* 겹치는 작업 지원 복사본을 복사\* 작업 처럼 작동 합니다 제대로 (소스를 대상으로 이동 하기 전에 임시 위치로 복사 됩니다). 하지만 중복이 분명하지 않은 경우(예: 원본 및 대상 리소스가 다르지만 매핑을 공유하는 경우, 매핑이 일정 표면에 걸쳐 중복되는 경우)에는 공유하는 타일에 대한 복사 연산 결과를 알 수 없습니다.
 
-## <a name="span-idcopyingtostreamingresourcewithduplicatedtilesindestinationareaspanspan-idcopyingtostreamingresourcewithduplicatedtilesindestinationareaspanspan-idcopyingtostreamingresourcewithduplicatedtilesindestinationareaspancopying-to-streaming-resource-with-duplicated-tiles-in-destination-area"></a><span id="Copying_to_streaming_resource_with_duplicated_tiles_in_destination_area"></span><span id="copying_to_streaming_resource_with_duplicated_tiles_in_destination_area"></span><span id="COPYING_TO_STREAMING_RESOURCE_WITH_DUPLICATED_TILES_IN_DESTINATION_AREA"></span>대상 영역의 중복 타일을 사용하여 스트리밍 리소스에 복사
+## <a name="span-idcopyingtostreamingresourcewithduplicatedtilesindestinationareaspanspan-idcopyingtostreamingresourcewithduplicatedtilesindestinationareaspanspan-idcopyingtostreamingresourcewithduplicatedtilesindestinationareaspancopying-to-streaming-resource-with-duplicated-tiles-in-destination-area"></a><span id="Copying_to_streaming_resource_with_duplicated_tiles_in_destination_area"></span><span id="copying_to_streaming_resource_with_duplicated_tiles_in_destination_area"></span><span id="COPYING_TO_STREAMING_RESOURCE_WITH_DUPLICATED_TILES_IN_DESTINATION_AREA"></span>대상 영역에서 중복 된 타일을 사용 하 여 스트리밍 리소스 복사
 
 
 대상 영역의 중복 타일을 사용하여 스트리밍 리소스에 복사할 경우에는 데이터가 동일하지 않으면 이 타일의 결과를 알 수 없습니다. 예를 들어 타일마다 서로 다른 순서로 타일을 작성할 수도 있기 때문입니다.
 
-## <a name="span-iduavaccessestoduplicatetilesmappingsspanspan-iduavaccessestoduplicatetilesmappingsspanspan-iduavaccessestoduplicatetilesmappingsspanuav-accesses-to-duplicate-tiles-mappings"></a><span id="UAV_accesses_to_duplicate_tiles_mappings"></span><span id="uav_accesses_to_duplicate_tiles_mappings"></span><span id="UAV_ACCESSES_TO_DUPLICATE_TILES_MAPPINGS"></span>중복 타일 매핑에 대한 UAV 액세스
+## <a name="span-iduavaccessestoduplicatetilesmappingsspanspan-iduavaccessestoduplicatetilesmappingsspanspan-iduavaccessestoduplicatetilesmappingsspanuav-accesses-to-duplicate-tiles-mappings"></a><span id="UAV_accesses_to_duplicate_tiles_mappings"></span><span id="uav_accesses_to_duplicate_tiles_mappings"></span><span id="UAV_ACCESSES_TO_DUPLICATE_TILES_MAPPINGS"></span>UAV 매핑 복제 타일에 액세스
 
 
 예를 들어 스트리밍 리소스의 UAV(Unordered Access View)가 자신의 영역에, 혹은 다른 리소스가 파이프라인에 바인딩되어 중복 타일 매핑이 있다고 가정하겠습니다. 이때 다른 스레드로 실행할 경우에는 마치 UAV에 대한 메모리 액세스 순서가 지정되지 않는 것처럼 중복 타일에 대한 액세스 순서가 정의되지 않습니다.
 
-## <a name="span-idrenderingaftertilemappingchangesorcontentupdatesfromoutsidemappingsspanspan-idrenderingaftertilemappingchangesorcontentupdatesfromoutsidemappingsspanspan-idrenderingaftertilemappingchangesorcontentupdatesfromoutsidemappingsspanrendering-after-tile-mapping-changes-or-content-updates-from-outside-mappings"></a><span id="Rendering_after_tile_mapping_changes_or_content_updates_from_outside_mappings"></span><span id="rendering_after_tile_mapping_changes_or_content_updates_from_outside_mappings"></span><span id="RENDERING_AFTER_TILE_MAPPING_CHANGES_OR_CONTENT_UPDATES_FROM_OUTSIDE_MAPPINGS"></span>타일 매핑 변경 또는 외부 매핑의 콘텐츠 업데이트 이후 렌더링
+## <a name="span-idrenderingaftertilemappingchangesorcontentupdatesfromoutsidemappingsspanspan-idrenderingaftertilemappingchangesorcontentupdatesfromoutsidemappingsspanspan-idrenderingaftertilemappingchangesorcontentupdatesfromoutsidemappingsspanrendering-after-tile-mapping-changes-or-content-updates-from-outside-mappings"></a><span id="Rendering_after_tile_mapping_changes_or_content_updates_from_outside_mappings"></span><span id="rendering_after_tile_mapping_changes_or_content_updates_from_outside_mappings"></span><span id="RENDERING_AFTER_TILE_MAPPING_CHANGES_OR_CONTENT_UPDATES_FROM_OUTSIDE_MAPPINGS"></span>타일 매핑 변경 또는 외부 매핑에서 콘텐츠 업데이트 된 후 렌더링
 
 
-스트리밍 리소스의 타일 매핑이 변경되었거나, 혹은 타일 풀에서 매핑된 타일의 콘텐츠가 다른 스트리밍 리소스의 매핑을 통해 변경된 후 스트리밍 리소스가 렌더링 대상 뷰 또는 깊이 스텐실 뷰를 통해 렌더링되는 경우에는 응용 프로그램이 고정 함수인 Clear API를 사용하여 매핑 여부에 상관없이 렌더링 대상 영역 내에서 변경된 타일을 지우거나 Copy\*/Update\* API를 사용하여 완전히 복사해야 합니다.
+스트리밍 리소스의 타일 매핑을 변경 되거나 매핑된 바둑판식으로 배열 된 풀 타일의 콘텐츠를 다른 스트리밍 리소스 매핑 및 스트리밍 리소스를 통해 변경 된 경우 렌더링 대상 뷰를 통해 렌더링 하려는 또는 깊이 스텐실 뷰를 응용 프로그램 해야 합니다. (고정된 함수의 선택을 취소 Api 사용)의 선택을 취소 하거나 완전히 복사를 사용 하 여 복사할\*/업데이트\* Api 영역 내에서 변경 된 타일 렌더링 되 고 (매핑).
 
 응용 프로그램이 지우거나 복사하지 못하면 렌더링 대상 뷰 또는 깊이 스텐실 뷰의 하드웨어 최적화 구조가 진부해져서 일부 하드웨어에서는 렌더링 품질이 떨어질 뿐만 아니라 다른 하드웨어로 인한 불일치까지 발생합니다. 이렇게 하드웨어에서 사용하는 숨겨진 최적화 데이터 구조는 개별 매핑에 대해 로컬이어서 동일한 메모리에 대한 다른 매핑에 보이지 않을 수 있습니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "8947835"
 
 타일이 다수의 스트리밍 리소스에 동시에 매핑되고 스트리밍 리소스 중 하나를 통해 어떤 수단(렌더링, 복사 등)으로든 타일 내용이 조작되는 경우, 동일한 타일을 다른 스트리밍 리소스를 통해 렌더링하려면 앞에서 설명한 대로 타일을 먼저 지워야 합니다.
 
-## <a name="span-idrenderingtotilessharedoutsiderenderareaspanspan-idrenderingtotilessharedoutsiderenderareaspanspan-idrenderingtotilessharedoutsiderenderareaspanrendering-to-tiles-shared-outside-render-area"></a><span id="Rendering_to_tiles_shared_outside_render_area"></span><span id="rendering_to_tiles_shared_outside_render_area"></span><span id="RENDERING_TO_TILES_SHARED_OUTSIDE_RENDER_AREA"></span>렌더링 영역 외부의 공유 타일로 렌더링
+## <a name="span-idrenderingtotilessharedoutsiderenderareaspanspan-idrenderingtotilessharedoutsiderenderareaspanspan-idrenderingtotilessharedoutsiderenderareaspanrendering-to-tiles-shared-outside-render-area"></a><span id="Rendering_to_tiles_shared_outside_render_area"></span><span id="rendering_to_tiles_shared_outside_render_area"></span><span id="RENDERING_TO_TILES_SHARED_OUTSIDE_RENDER_AREA"></span>외부에서 공유 하는 타일 렌더링 영역 렌더링
 
 
 예를 들어 스트리밍 리소스의 영역이 렌더링되고, 렌더링 영역에서 참조하는 타일 풀의 타일 역시 렌더링 영역 외부에서 매핑된다고 가정하겠습니다(동시든 아니든 다른 스트리밍 리소스를 통하는 경우도 포함). 이러한 타일로 렌더링되는 데이터는 기본 메모리 레이아웃이 호환 가능하더라도 나머지 매핑을 통해 확인했을 때 올바로 표시된다는 보장이 없습니다. 이는 일부 하드웨어에서 사용하는 최적화 데이터 구조가 렌더링 가능한 표면의 개별 매핑에 로컬이지만 동일한 메모리 위치에 대한 다른 매핑에게는 보이지 않는다는 사실에 기인합니다.
@@ -56,12 +56,12 @@ ms.locfileid: "8947835"
 
 또한 매핑을 공유하는 다른 스트리밍 리소스를 서로 바꿔가며 사용할 때도(읽기만 하지 않는 경우) 다수의 타일식 리소스 사이에 데이터 액세스 순서를 정하는 제약 조건(장벽)을 지정해야 합니다.
 
-## <a name="span-idrenderingtotilessharedwithinrenderareaspanspan-idrenderingtotilessharedwithinrenderareaspanspan-idrenderingtotilessharedwithinrenderareaspanrendering-to-tiles-shared-within-render-area"></a><span id="Rendering_to_tiles_shared_within_render_area"></span><span id="rendering_to_tiles_shared_within_render_area"></span><span id="RENDERING_TO_TILES_SHARED_WITHIN_RENDER_AREA"></span>렌더링 영역 내부의 공유 타일로 렌더링
+## <a name="span-idrenderingtotilessharedwithinrenderareaspanspan-idrenderingtotilessharedwithinrenderareaspanspan-idrenderingtotilessharedwithinrenderareaspanrendering-to-tiles-shared-within-render-area"></a><span id="Rendering_to_tiles_shared_within_render_area"></span><span id="rendering_to_tiles_shared_within_render_area"></span><span id="RENDERING_TO_TILES_SHARED_WITHIN_RENDER_AREA"></span>렌더링 영역 내에서 공유 하는 타일을 렌더링 합니다.
 
 
 다수의 타일이 동일한 타일 풀 위치로 매핑되는 렌더링 영역 내부로 스트리밍 리소스의 영역이 렌더링되는 경우에는 이 타일에 대한 렌더링 결과를 알 수 없습니다.
 
-## <a name="span-iddatacompatibilityacrossstreamingresourcessharingtilesspanspan-iddatacompatibilityacrossstreamingresourcessharingtilesspanspan-iddatacompatibilityacrossstreamingresourcessharingtilesspandata-compatibility-across-streaming-resources-sharing-tiles"></a><span id="Data_compatibility_across_streaming_resources_sharing_tiles"></span><span id="data_compatibility_across_streaming_resources_sharing_tiles"></span><span id="DATA_COMPATIBILITY_ACROSS_STREAMING_RESOURCES_SHARING_TILES"></span>스트리밍 리소스 공유 타일 간 데이터 호환성
+## <a name="span-iddatacompatibilityacrossstreamingresourcessharingtilesspanspan-iddatacompatibilityacrossstreamingresourcessharingtilesspanspan-iddatacompatibilityacrossstreamingresourcessharingtilesspandata-compatibility-across-streaming-resources-sharing-tiles"></a><span id="Data_compatibility_across_streaming_resources_sharing_tiles"></span><span id="data_compatibility_across_streaming_resources_sharing_tiles"></span><span id="DATA_COMPATIBILITY_ACROSS_STREAMING_RESOURCES_SHARING_TILES"></span>스트리밍 타일을 공유 하는 리소스 간 데이터 호환성
 
 
 다수의 스트리밍 리소스가 동일한 타일 풀 위치에 대한 매핑을 가지고 있고, 각 리소스가 동일한 데이터에 액세스하는 데 사용된다고 가정하겠습니다. 이 시나리오는 하드웨어 최적화 구조에 대한 문제를 방지할 수 있는 나머지 규칙을 회피하고, 적절한 장벽이 지정되고(다수의 타일식 리소스 간 데이터 액세스 순서를 정하는 제약 조건 지정), 스트리밍 리소스가 서로 호환된다는 전제 하에서만 유효합니다.
@@ -70,16 +70,16 @@ ms.locfileid: "8947835"
 
 나머지 리소스 공유 매핑이 새로운 데이터로 처음 초기화되는 경우에는(다른 용도의 메모리 재활용) 데이터가 호환되지 않는 해석으로 유출되지 않기 때문에 후속 읽기 또는 렌더링 연산이 괜찮습니다. 하지만 이처럼 비보환 매핑에 대한 액세스 사이를 서로 전환하려면 장벽을 지정해야 합니다(다수의 타일식 리소스 간 데이터 액세스 순서를 정하는 제약 조건 지정).
 
-렌더링 대상 또는 깊이 스텐실 바인드 플래그가 어떤 리소스 공유 매핑에도 서로 설정되지 않으면 제약 조건은 훨씬 더 줄어듭니다. 형식 및 표면 유형(예: Texture2D)이 동일하기만 하다면 타일을 공유할 수 있습니다. 호환 가능한 다른 형식은 BC\* 표면을 비롯해 BC6H 및 R32G32B32A32 같이 요소 형식당 동일한 크기의 비압축 32비트 또는 16비트 같은 경우입니다. 요소 형식당 32비트는 다수가 R32\_\*라는 별칭으로 불릴 수 있습니다(R10G10B10A2\_\*, R8G8B8A8\_\*, B8G8R8A8\_\*,B8G8R8X8\_\*,R16G16\_\*). 이러한 연산은 항상 비스트리밍 리소스에서 허용되어 왔습니다.
+렌더링 대상 또는 깊이 스텐실 바인드 플래그가 어떤 리소스 공유 매핑에도 서로 설정되지 않으면 제약 조건은 훨씬 더 줄어듭니다. 형식 및 표면 유형(예: Texture2D)이 동일하기만 하다면 타일을 공유할 수 있습니다. 호환 되는 다양 한 형식 BC와 같은 사례가\* 표면 및 해당 크기의 압축 되지 않은 32 비트 또는 16 비트 BC6H R32G32B32A32 등의 구성 요소 형식입니다. 요소당 많은 32 비트 형식 R32 사용 하 여 별칭이 지정 될 수 있습니다\_ \* 도 (R10G10B10A2\_\*, R8G8B8A8\_\*, B8G8R8A8\_\*, B8G8R8X8\_ \*, R16G16\_\*);이 작업이 항상 비 스트리밍 리소스에 대 한 허용 되었습니다.
 
 형식이 호환되고, 타일이 솔리드 색상으로 채워져 있다면 압축 타일과 비압축 타일 간 공유도 문제 없습니다.
 
 마지막으로 렌더링 대상 또는 깊이 스텐실 바인드 플래그가 없다는 것을 제외하고 리소스 공유 타일 매핑에 대한 공통점이 없는 경우에는 0으로 채워진 메모리만 안전하게 공유할 수 있습니다. 그러면 임의의 리소스 형식(일반적으로 0)에 대한 정의로 0이 무엇을 디코딩하든지 매핑이 표시됩니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[스트리밍 리소스에 대한 파이프라인 액세스](pipeline-access-to-streaming-resources.md)
+[리소스를 스트리밍에 대 한 파이프라인 액세스](pipeline-access-to-streaming-resources.md)
 
  
 

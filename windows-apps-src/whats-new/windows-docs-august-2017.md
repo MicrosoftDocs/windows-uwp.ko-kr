@@ -6,11 +6,11 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: edf81f0474855c868ea1fb50afa683523aedcd07
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050786"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614868"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>2017년 8월 Windows 개발자 문서의 새로운 내용
 
@@ -69,7 +69,7 @@ Xbox Live API를 사용하여 게임을 Xbox Live 소셜 게임 네트워크에 
 
 Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 자세한 내용은 [Xbox Live 개발자 프로그램 개요](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/developer-program-overview)를 참조하세요.
 
-## <a name="videos"></a>동영상
+## <a name="videos"></a>비디오
 
 ### <a name="mixed-reality"></a>혼합 현실
 

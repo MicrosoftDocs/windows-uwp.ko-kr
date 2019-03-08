@@ -6,20 +6,20 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 11937934230b2c977e8e328fae0e693e8c1ab95a
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116425"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615458"
 ---
 # <a name="posprinter"></a>POSPrinter
 
 이 섹션에서는 POSPrinter를 사용하는 UWP(유니버설 Windows 플랫폼) 앱을 만들기 위한 지침을 제공합니다.
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 |항목 |설명 |
 |------|------------|
-| [서식 지정을 사용하는 Epson ESC/POS](epson-esc-pos-with-formatting.md) | ESC/POS 명령 언어를 사용하여 서비스 지점 프린터에 대한 텍스트 서식(예: 굵게, 2배 크기)을 지정하는 방법을 알아봅니다. |
+| [서식을 사용 하 여 Epson ESC/POS](epson-esc-pos-with-formatting.md) | ESC/POS 명령 언어를 사용하여 서비스 지점 프린터에 대한 텍스트 서식(예: 굵게, 2배 크기)을 지정하는 방법을 알아봅니다. |
 |
 
 <!-- Future topics to be added

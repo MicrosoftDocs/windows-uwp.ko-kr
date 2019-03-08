@@ -1,19 +1,19 @@
 ---
-Description: Here are the elements and attributes you use to create adaptive tiles.
+Description: 다음은 적응형 타일을 만드는 데 사용되는 요소 및 특성입니다.
 title: 적응형 타일 스키마 및 템플릿
 ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
 label: Adaptive tile schema and templates
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10 uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ed9124b0b66239c10b277f070ac2c9594c336fdd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942697"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611018"
 ---
 # <a name="adaptive-tile-templates-schema-and-guidance"></a>적응형 타일 템플릿: 스키마 및 지침
 
@@ -141,7 +141,7 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 ## <a name="related-topics"></a>관련 항목
 
 
-* [적응형 타일 만들기](create-adaptive-tiles.md)
+* [적응 타일 만들기](create-adaptive-tiles.md)
  
 
  

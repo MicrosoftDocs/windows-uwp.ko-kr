@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 렌더링, 장면, 깊이 테스트, direct3d, 그림자
 ms.localizationpriority: medium
 ms.openlocfilehash: 237da82ef51466ae2460c3be27486091bf4066f3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924522"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630458"
 ---
 # <a name="render-the-scene-with-depth-testing"></a>깊이 테스트로 장면 렌더링
 
 
 
 
-꼭짓점(또는 기하 도형) 셰이더와 픽셀 셰이더에 깊이 테스트를 추가하여 그림자 효과를 만듭니다. [연습의 3부: Direct3D 11의 깊이 버퍼를 사용하여 그림자 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md).
+꼭짓점(또는 기하 도형) 셰이더와 픽셀 셰이더에 깊이 테스트를 추가하여 그림자 효과를 만듭니다. 3 부 [연습: Direct3D 11에서 깊이 버퍼를 사용 하 여 섀도 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md)합니다.
 
 ## <a name="include-transformation-for-light-frustum"></a>광원 절두체에 대한 변환 포함
 
@@ -67,7 +67,7 @@ PixelShaderInput main(VertexShaderInput input)
 ## <a name="test-whether-the-position-is-in-the-light-frustum"></a>위치가 광원 절두체에 있는지 여부 테스트
 
 
-먼저 X 및 Y 좌표를 정규화하여 픽셀이 광원의 보기 절두체에 있는지 확인합니다. 둘 다 \[0, 1\] 범위 내에 있는 경우 픽셀이 그림자에 있을 가능성이 있습니다. 그렇지 않으면 깊이 테스트를 건너뛸 수 있습니다. 셰이더는 [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231)를 호출하고 원래 값과 결과를 비교하여 빠르게 이를 테스트할 수 있습니다.
+먼저 X 및 Y 좌표를 정규화하여 픽셀이 광원의 보기 절두체에 있는지 확인합니다. 범위 내에서 둘 다 하는 경우 \[0, 1\] 섀도에 픽셀의 가능성이 있습니다. 그렇지 않으면 깊이 테스트를 건너뛸 수 있습니다. 셰이더는 [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231)를 호출하고 원래 값과 결과를 비교하여 빠르게 이를 테스트할 수 있습니다.
 
 ```cpp
 // Compute texture coordinates for the current point's location on the shadow map.

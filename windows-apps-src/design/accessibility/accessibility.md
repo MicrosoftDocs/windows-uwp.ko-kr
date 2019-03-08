@@ -1,5 +1,5 @@
 ---
-Description: Introduces accessibility concepts that relate to Universal Windows Platform (UWP) apps.
+Description: UWP(유니버설 Windows 플랫폼) 앱과 관련된 접근성 개념을 소개합니다.
 ms.assetid: C89D79C2-B830-493D-B020-F3FF8EB5FFDD
 title: 접근성
 label: Accessibility
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f9cdfb8a20e273d5d9e5819fc1e28aba97e4296
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945484"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611698"
 ---
 # <a name="accessibility"></a>접근성  
 
@@ -33,16 +33,16 @@ UWP(유니버설 Windows 플랫폼) 앱과 관련된 접근성 개념을 소개�
 | [포괄 Windows 앱 개발](developing-inclusive-windows-apps.md) | 이 문서는 접근성 있는 UWP 앱을 개발하기 위한 로드맵입니다. |
 | [접근성 테스트](accessibility-testing.md) | UWP 앱에 접근성을 구현하기 위해 따라야 할 몇 가지 테스트 절차입니다. |
 | [스토어의 접근성](accessibility-in-the-store.md) | UWP 앱을 Microsoft Store에서 접근 가능한 앱으로 선언하기 위한 요구 사항에 대해 설명합니다. |
-| [접근성 검사 목록](accessibility-checklist.md) | UWP 앱이 접근 가능한지 확인하는 검사 목록을 제공합니다. |
-| [기본적인 접근성 정보 표시](basic-accessibility-information.md) | 경우에 따라 기본 접근성 정보는 이름, 역할 및 값으로 분류됩니다. 이 항목에서는 보조 기술이 필요로 하는 기본 정보를 앱에 표시하는 데 도움이 되는 코드에 대해 설명합니다. |
+| [액세스 가능성 검사 목록](accessibility-checklist.md) | UWP 앱이 접근 가능한지 확인하는 검사 목록을 제공합니다. |
+| [기본 내게 필요한 옵션 정보를 노출 합니다.](basic-accessibility-information.md) | 경우에 따라 기본 접근성 정보는 이름, 역할 및 값으로 분류됩니다. 이 항목에서는 보조 기술이 필요로 하는 기본 정보를 앱에 표시하는 데 도움이 되는 코드에 대해 설명합니다. |
 | [키보드 접근성](keyboard-accessibility.md) | 따라서 앱의 키보드 접근성이 좋지 않을 경우 시각 장애나 이동성 문제가 있는 사용자가 앱을 사용하는 데 어려움을 겪거나 아예 사용하지 못할 수 있습니다. |
 | [랜드마크 및 머리글](landmarks-and-headings.md) | 랜드마크 및 머리글은 화면 읽기 프로그램 등의 보조 기술의 사용자에 대한 효율적인 탐색에 도움이 되는 사용자 인터페이스의 섹션을 정의합니다. |
 | [고대비 테마](high-contrast-themes.md) | 고대비 테마가 활성 상태일 때 UWP 앱을 사용할 수 있도록 하는 데 필요한 단계에 대해 설명합니다. |
 | [접근성 있는 텍스트 요구 사항](accessible-text-requirements.md) | 이 항목에서는 색 및 배경이 필요한 명암비를 충족하도록 하여 앱 텍스트의 접근성에 대한 모범 사례를 설명합니다. 또한 이 항목에서는 UWP 앱의 텍스트 요소에 부여될 수 있는 Microsoft UI 자동화 역할 및 그래픽의 텍스트에 대한 모범 사례를 설명합니다. |
-| [피해야 할 접근성 사례](practices-to-avoid.md) | UWP 앱에 접근성을 구현하려는 경우 피해야 할 사례에 대해 설명합니다. |
+| [내게 필요한 옵션 예방 방법](practices-to-avoid.md) | UWP 앱에 접근성을 구현하려는 경우 피해야 할 사례에 대해 설명합니다. |
 | [사용자 지정 자동화 피어](custom-automation-peers.md) | UI 자동화의 자동화 피어 개념과 고유한 사용자 지정 UI 클래스에 대해 자동화 지원을 제공하는 방법을 설명합니다. |
 | [컨트롤 패턴 및 인터페이스](control-patterns-and-interfaces.md) | Microsoft UI 자동화 컨트롤 패턴, 클라이언트가 컨트롤 패턴에 액세스하는 데 사용하는 클래스 및 공급자가 컨트롤 패턴을 구현하는 데 사용하는 인터페이스를 나열합니다. |
 
 ## <a name="related-topics"></a>관련 항목  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179) 
-* [내레이터 시작](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)
+* [내레이터를 사용 하 여 시작](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)

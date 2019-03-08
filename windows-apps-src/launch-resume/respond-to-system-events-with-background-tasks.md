@@ -11,23 +11,23 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: de8d585d7178a277d1df248858f69a5a5705fb1d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044537"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634858"
 ---
 # <a name="respond-to-system-events-with-background-tasks"></a>백그라운드 작업으로 시스템 이벤트에 응답
 
-**중요 API**
+**중요 한 Api**
 
 - [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
 - [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
 - [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)
 
-[**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다.
+[  **SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다.
 
-이 항목에서는 앱에 대해 작성된 백그라운드 작업 클래스가 있고, 인터넷 가용성이 변경되거나 사용자가 로그인하는 등 시스템에서 트리거된 이벤트에 응답하여 이 작업을 실행해야 한다고 가정합니다. 이 항목에서는 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 클래스에 중점을 둡니다. 백그라운드 작업 클래스를 작성하는 방법은 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
+이 항목에서는 앱에 대해 작성된 백그라운드 작업 클래스가 있고, 인터넷 가용성이 변경되거나 사용자가 로그인하는 등 시스템에서 트리거된 이벤트에 응답하여 이 작업을 실행해야 한다고 가정합니다. 이 항목에서는 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 클래스에 중점을 둡니다. 백그라운드 작업 클래스를 작성하는 방법은 [in-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
 ## <a name="create-a-systemtrigger-object"></a>SystemTrigger 개체 만들기
 
@@ -79,7 +79,7 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 ```
 
 > [!NOTE]
-> 유니버설 Windows 플랫폼 앱 백그라운드 트리거 형식을 등록 하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) 를 호출 해야 합니다.
+> 유니버설 Windows 플랫폼 앱에서 호출 해야 합니다 [ **RequestAccessAsync** ](https://msdn.microsoft.com/library/windows/apps/hh700485) 백그라운드 트리거 유형 중 하나를 등록 하기 전에 합니다.
 
 업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 및 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
 
@@ -90,22 +90,22 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 
 적용 중인 백그라운드 작업 등록을 보려면 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)을 다운로드합니다.
 
-[**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) 및 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) 이벤트에 대한 응답으로 백그라운드 작업을 실행할 수 있지만 [응용 프로그램 매니페스트에서 백그라운드 작업을 선언](declare-background-tasks-in-the-application-manifest.md)해야 합니다. 백그라운드 작업 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)도 호출해야 합니다.
+[  **SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) 및 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) 이벤트에 대한 응답으로 백그라운드 작업을 실행할 수 있지만 [응용 프로그램 매니페스트에서 백그라운드 작업을 선언](declare-background-tasks-in-the-application-manifest.md)해야 합니다. 백그라운드 작업 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)도 호출해야 합니다.
 
 앱은 [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) 및 [**NetworkOperatorNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/br224831) 이벤트에 응답하는 백그라운드 작업을 등록하여, 앱이 포그라운드에 있지 않은 경우에도 사용자와 실시간으로 통신할 수 있습니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
-* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
+* [만들고 out-of-process-백그라운드 태스크를 등록 합니다.](create-and-register-a-background-task.md)
+* [만들고 프로세스에서 백그라운드 작업을 등록 합니다.](create-and-register-an-inproc-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
-* [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
-* [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
+* [취소 된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
+* [백그라운드 작업 진행률 및 완료를 모니터링 합니다.](monitor-background-task-progress-and-completion.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
-* [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
+* [백그라운드 작업을 실행 하기 위한 조건을 설정 합니다.](set-conditions-for-running-a-background-task.md)
 * [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
-* [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
-* [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-* [백그라운드 작업 디버그](debug-a-background-task.md)
-* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [타이머에서 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
+* [백그라운드 작업에 대 한 지침](guidelines-for-background-tasks.md)
+* [백그라운드 작업 디버깅](debug-a-background-task.md)
+* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)

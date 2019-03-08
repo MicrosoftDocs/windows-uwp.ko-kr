@@ -8,28 +8,28 @@ ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 3c6958491092498451743085af38b2d0fa6bdf8a
-ms.sourcegitcommit: 62bc4936ca8ddf1fea03d43a4ede5d14a5755165
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "8991609"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634658"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>MakeAppx.exe 도구를 사용하여 앱 패키지 만들기
 
 
-**MakeAppx.exe** 는 앱 패키지 (.appx 또는.msix)와 앱 패키지 번들 (.msixbundle 또는.appxbundle) 만듭니다. 또한 **MakeAppx.exe**는 앱 패키지 또는 번들에서 파일을 추출하고 앱 패키지와 번들을 암호화 또는 암호 해독합니다. 이 도구는 Windows 10 SDK에 포함되어 있으며 명령 프롬프트 또는 스크립트 파일에서 사용할 수 있습니다.
+**MakeAppx.exe** 앱 패키지 (.msix 또는.appx)와 앱 패키지 번들 (.appxbundle 또는.msixbundle)을 만듭니다. 또한 **MakeAppx.exe**는 앱 패키지 또는 번들에서 파일을 추출하고 앱 패키지와 번들을 암호화 또는 암호 해독합니다. 이 도구는 Windows 10 SDK에 포함되어 있으며 명령 프롬프트 또는 스크립트 파일에서 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > Visual Studio를 사용하여 앱을 개발하는 경우 Visual Studio 마법사를 사용하여 앱 패키지를 만드는 것이 좋습니다. 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](packaging-uwp-apps.md)을 참조하세요.
 
 > [!IMPORTANT]
-> Note **MakeAppx.exe** 는 [앱 패키지 업로드 파일 (.appxupload 또는.msixupload)](packaging-uwp-apps.md#types-of-app-packages), 즉 [파트너 센터로 제출](../publish/upload-app-packages.md)에 대 한 유효한 앱 패키지의 권장된 형식 만들기 되지 않습니다. 앱 패키지 업로드 파일은 일반적으로 [Visual Studio 패키징 프로세스의 일부로 생성](packaging-uwp-apps.md#create-an-app-package-upload-file)하지만 것도 수동으로 만들 수 있습니다.
+> 유의 **MakeAppx.exe** 만들어지지는지 않습니다는 [앱 패키지 업로드 파일 (.appxupload 또는.msixupload)](packaging-uwp-apps.md#types-of-app-packages), 올바른 앱 패키지에 대 한 권장 되는 형식인 [파트너 센터에 대 한 전송 ](../publish/upload-app-packages.md). 앱 패키지 업로드 파일은 일반적으로 [Visual Studio 패키징 프로세스의 일부로 만들어진](packaging-uwp-apps.md#create-an-app-package-upload-file)이지만 수동으로 만들 수도 있습니다 것입니다.
 
 ## <a name="using-makeappxexe"></a>MakeAppx.exe 사용
 
 SDK 설치 경로에 따라 Windows 10 PC에서 **MakeAppx.exe**가 있는 위치는 다음과 같습니다.
-- x86: C:\Program Files (x86) \Windows Kits\10\bin\\&lt;빌드 번호&gt;\x86\makeappx.exe
-- x64: C:\Program Files (x86) \Windows Kits\10\bin\\&lt;빌드 번호&gt;\x64\makeappx.exe
+- x86: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x86\makeappx.exe
+- x64: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x64\makeappx.exe
 
 이 도구의 ARM 버전은 없습니다.
 
@@ -73,31 +73,31 @@ MakeAppx <command> [options]
 
 | **인수**                          | **설명**                       |
 |---------------------------------------|---------------------------------------|
-| &lt;출력 패키지 이름&gt;           | 생성되는 패키지 이름입니다. 추가 된.msix 또는.appx 파일 이름입니다. |
-| &lt;암호화된 출력 패키지 이름&gt; | 생성되는 암호화된 패키지 이름입니다. 추가 된.emsix 또는.eappx 파일 이름입니다. |
-| &lt;입력 패키지 이름&gt;            | 패키지 이름입니다. 추가 된.msix 또는.appx 파일 이름입니다. |
-| &lt;암호화된 입력 패키지 이름&gt;  | 암호화된 패키지 이름입니다. 추가 된.emsix 또는.eappx 파일 이름입니다. |
-| &lt;출력 번들 이름&gt;            | 생성되는 번들 이름입니다. 추가 된.msixbundle 또는.appxbundle 파일 이름입니다. |
-| &lt;암호화된 출력 번들 이름&gt;  | 생성되는 암호화된 번들 이름입니다. 추가 된.emsixbundle 또는.eappxbundle 파일 이름입니다. |
-| &lt;입력 번들 이름&gt;             | 번들 이름입니다. 추가 된.msixbundle 또는.appxbundle 파일 이름입니다. |
-| &lt;암호화된 입력 번들 이름&gt;   | 암호화된 번들 이름입니다. 추가 된.emsixbundle 또는.eappxbundle 파일 이름입니다. |
+| &lt;출력 패키지 이름&gt;           | 생성되는 패키지 이름입니다. 추가.msix 또는.appx 파일 이름입니다. |
+| &lt;암호화된 출력 패키지 이름&gt; | 생성되는 암호화된 패키지 이름입니다. .Emsix 또는.eappx 추가 된 파일 이름입니다. |
+| &lt;입력 패키지 이름&gt;            | 패키지 이름입니다. 추가.msix 또는.appx 파일 이름입니다. |
+| &lt;암호화된 입력 패키지 이름&gt;  | 암호화된 패키지 이름입니다. .Emsix 또는.eappx 추가 된 파일 이름입니다. |
+| &lt;출력 번들 이름&gt;            | 생성되는 번들 이름입니다. .Msixbundle 또는.appxbundle 추가 된 파일 이름입니다. |
+| &lt;암호화된 출력 번들 이름&gt;  | 생성되는 암호화된 번들 이름입니다. .Emsixbundle 또는.eappxbundle 추가 된 파일 이름입니다. |
+| &lt;입력 번들 이름&gt;             | 번들 이름입니다. .Msixbundle 또는.appxbundle 추가 된 파일 이름입니다. |
+| &lt;암호화된 입력 번들 이름&gt;   | 암호화된 번들 이름입니다. .Emsixbundle 또는.eappxbundle 추가 된 파일 이름입니다. |
 | &lt;콘텐츠 디렉터리&gt;             | 앱 패키지 또는 번들 콘텐츠 경로입니다. |
 | &lt;매핑 파일&gt;                  | 패키지 원본 및 대상을 지정하는 파일 이름입니다. |
 | &lt;출력 디렉터리&gt;              | 출력 패키지 및 번들의 디렉터리 경로입니다. |
 | &lt;키 파일&gt;                      | 암호화 또는 암호 해독에 사용되는 키가 포함된 파일 이름입니다. |
-| &lt;알고리즘 ID&gt;                  | 블록 맵을 만들 때 사용되는 알고리즘입니다. 유효한 알고리즘에는 SHA256(기본값), SHA384, SHA512 등이 있습니다. |
+| &lt;알고리즘 ID&gt;                  | 블록 맵을 만들 때 사용되는 알고리즘입니다. 유효한 알고리즘은 다음과 같습니다. SHA256 (기본값), SHA384, SHA512 합니다. |
 
 
 ### <a name="create-an-app-package"></a>앱 패키지 만들기
 
-앱 패키지는.msix 또는.appx 패키지 파일에 패키징된 앱의 파일의 전체 집합입니다. **pack** 명령을 사용하여 앱 패키지를 만들려면 패키지 위치에 대한 매핑 파일이나 콘텐츠 디렉터리를 제공해야 합니다. 패키지를 만드는 동안 암호화할 수도 있습니다. 패키지를 암호화하려는 경우 /ep를 사용하고 키 파일(/kf) 또는 전역 테스트 키(/kt)를 사용 중인지 지정해야 합니다. 암호화된 패키지를 만드는 방법에 대한 자세한 내용은 [패키지나 번들 암호화 또는 암호 해독](#encrypt-or-decrypt-a-package-or-bundle)을 참조하세요.
+앱 패키지는.msix 또는.appx 패키지 파일에 패키지 된 앱의 파일의 전체 집합. **pack** 명령을 사용하여 앱 패키지를 만들려면 패키지 위치에 대한 매핑 파일이나 콘텐츠 디렉터리를 제공해야 합니다. 패키지를 만드는 동안 암호화할 수도 있습니다. 패키지를 암호화하려는 경우 /ep를 사용하고 키 파일(/kf) 또는 전역 테스트 키(/kt)를 사용 중인지 지정해야 합니다. 암호화된 패키지를 만드는 방법에 대한 자세한 내용은 [패키지나 번들 암호화 또는 암호 해독](#encrypt-or-decrypt-a-package-or-bundle)을 참조하세요.
 
 **pack** 명령과 관련된 옵션은 다음과 같습니다.
 
 | **옵션**    | **설명**                       |
 |---------------|---------------------------------------|
 | /f            | 매핑 파일을 지정합니다.           |
-| /h            | 블록 맵을 만들 때 사용할 해시 알고리즘을 지정합니다. pack 명령에만 사용할 수 있습니다. 유효한 알고리즘에는 SHA256(기본값), SHA384, SHA512 등이 있습니다. |
+| /h            | 블록 맵을 만들 때 사용할 해시 알고리즘을 지정합니다. pack 명령에만 사용할 수 있습니다. 유효한 알고리즘은 다음과 같습니다. SHA256 (기본값), SHA384, SHA512 합니다. |
 | /m            | 출력 앱 패키지 또는 리소스 패키지 매니페스트를 생성하기 위한 기초로 사용할 입력 앱 매니페스트의 경로를 지정합니다.  이 옵션을 사용하는 경우 /f도 사용하고 매핑 파일에 [ResourceMetadata] 섹션을 포함하여 생성된 매니페스트에 포함될 리소스 차원을 지정해야 합니다.|
 | /nc           | 패키지 파일이 압축되지 않도록 합니다. 기본적으로 검색된 파일 형식에 따라 파일이 압축됩니다. |
 | /r            | 리소스 패키지를 빌드합니다. /m과 함께 사용해야 하 고 /l 옵션 사용을 암시합니다. |  
@@ -133,7 +133,7 @@ MakeAppx pack /v /h SHA256 /d "C:\My Files" /ep MyPackage.emsix /kt
 
 | **옵션**    | **설명**                       |
 |---------------|---------------------------------------|
-| /bv           | 번들의 버전 번호를 지정합니다. 버전 번호는 &lt;주&gt;.&lt;부&gt;.&lt;빌드&gt;.&lt;수정 버전&gt; 형식의 마침표로 구분된 네 부분으로 구성되어야 합니다. |
+| /bv           | 번들의 버전 번호를 지정합니다. 버전 번호는 형태로 마침표로 구분 하 여 네 부분으로 구성에서 이어야 합니다. &lt;주요&gt;.&lt; 사소한&gt;.&lt; 빌드할&gt;.&lt; 수정 버전&gt;합니다. |
 | /f            | 매핑 파일을 지정합니다.           |
 
 번들 버전을 지정하지 않거나 "0.0.0.0"으로 설정하면 현재 날짜와 시간을 사용하여 번들이 생성됩니다.
@@ -268,6 +268,6 @@ MakeAppx.exe decrypt p MyPackage.msix /ep MyEncryptedPackage.emsix /kf MyKeyFile
 이 유효성 검사는 다음을 확인합니다.
 - 패키지 매니페스트에서 참조된 모든 파일이 앱 패키지에 포함되어 있습니다.
 - 응용 프로그램에 두 개의 동일한 키가 없습니다.
-- 응용 프로그램이 이 목록에서 금지된 프로토콜(SMB, FILE, MS-WWA-WEB, MS-WWA)에 등록하지 않습니다.
+- 이 목록에서 사용할 수 없는 프로토콜에 대 한 응용 프로그램을 등록 하지 않습니다. SMB, FILE, MS-WWA-WEB, MS-WWA.
 
 일반적인 오류만 catch하도록 설계되었기 때문에 전체 의미 체계 유효성 검사는 아닙니다. **MakeAppx.exe**에서 빌드된 패키지는 설치 가능한 패키지가 아닐 수도 있습니다.

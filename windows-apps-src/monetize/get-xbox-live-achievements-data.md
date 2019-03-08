@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 도전 과제
 ms.localizationpriority: medium
 ms.openlocfilehash: 23a99c637dfd466ba21169626315803dec60e4e8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945169"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607818"
 ---
 # <a name="get-xbox-live-achievements-data"></a>Xbox Live 도전 과제 데이터 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 도전 과제 데이터가 사용 가능한 최근 날짜, 해당 날짜 이전 30일 및 해당 날짜까지 게임의 총 수명 동안 [Xbox Live 지원 게임](../xbox-live/index.md)에 대한 각 도전 과제를 잠금 해제한 고객 수를 가져옵니다. 이 정보는 파트너 센터에서 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 에 사용할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 도전 과제 데이터가 사용 가능한 최근 날짜, 해당 날짜 이전 30일 및 해당 날짜까지 게임의 총 수명 동안 [Xbox Live 지원 게임](../xbox-live/index.md)에 대한 각 도전 과제를 잠금 해제한 고객 수를 가져옵니다. 이 정보를 사용할 수 있습니다 합니다 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 파트너 센터에서.
 
 > [!IMPORTANT]
 > 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](../xbox-live/developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
@@ -38,9 +38,9 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 도전 과제 데
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
@@ -50,8 +50,8 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 도전 과제 데
 |---------------|--------|---------------|------|
 | applicationId | 문자열 | Xbox Live 도전 과제 데이터를 검색하려는 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.  |  예  |
 | metricType | 문자열 | 검색할 Xbox Live 분석 데이터의 유형을 지정하는 문자열입니다. 이 메서드의 경우 값 **achievements**를 지정합니다.  |  예  |
-| top | int | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니요  |
-| skip | int | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 큰 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10000 및 skip=0이면 데이터의 처음 10000개 행을 검색하고 top=10000 및 skip=10000이면 데이터의 다음 10000개 행을 검색하는 방식입니다. |  아니요  |
+| top | int | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니오  |
+| skip | int | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 큰 데이터 집합의 페이지를 탐색할 수 있습니다. 예를 들어 top=10000 및 skip=0이면 데이터의 처음 10000개 행을 검색하고 top=10000 및 skip=10000이면 데이터의 다음 10000개 행을 검색하는 방식입니다. |  아니오  |
 
 
 ### <a name="request-example"></a>요청 예제
@@ -66,16 +66,16 @@ Authorization: Bearer <your access token>
 
 ## <a name="response"></a>응답
 
-| 값      | 유형   | 설명                  |
+| 값      | 형식   | 설명                  |
 |------------|--------|-------------------------------------------------------|
 | 값      | 배열  | 게임의 각 도전 과제 데이터가 포함된 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 다음 표를 참조하세요.                                                                                                                      |
-| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 100으로 설정되어 있지만 쿼리에 대한 데이터의 행이 100개보다 많은 경우 이 값이 반환됩니다. |
+| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 100으로 설정되어 있지만 쿼리에 대한 데이터의 행이 100개보다 많은 경우 이 값이 반환됩니다. |
 | TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.  |
 
 
 *값* 배열의 요소에는 다음 값이 포함됩니다.
 
-| 값               | 유형   | 설명                           |
+| 값               | 형식   | 설명                           |
 |---------------------|--------|-------------------------------------------|
 | applicationId       | 문자열 | 도전 과제 데이터를 검색할 게임의 Store ID입니다.     |
 | reportDateTime     | 문자열 |  도전 과제 데이터의 날짜입니다.    |
@@ -132,9 +132,9 @@ Authorization: Bearer <your access token>
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
-* [Xbox Live 분석 데이터 가져오기](get-xbox-live-analytics.md)
+* [Microsoft Store 서비스를 사용 하 여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
+* [Xbox Live analytics 데이터 가져오기](get-xbox-live-analytics.md)
 * [Xbox Live 상태 데이터 가져오기](get-xbox-live-health-data.md)
 * [Xbox Live 게임 허브 데이터 가져오기](get-xbox-live-game-hub-data.md)
-* [Xbox Live 클럽 데이터 가져오기](get-xbox-live-club-data.md)
-* [Xbox Live 멀티플레이 데이터 가져오기](get-xbox-live-multiplayer-data.md)
+* [Xbox Live club 데이터 가져오기](get-xbox-live-club-data.md)
+* [Xbox Live 멀티 플레이 데이터 가져오기](get-xbox-live-multiplayer-data.md)

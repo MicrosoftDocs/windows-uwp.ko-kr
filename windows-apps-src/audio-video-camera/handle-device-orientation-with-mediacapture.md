@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 866a3b02d67409d03fccf427663de65cc94919b2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919762"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618098"
 ---
 # <a name="handle-device-orientation-with-mediacapture"></a>MediaCapture를 사용하여 디바이스 방향 처리
 앱이 사용자 디바이스의 파일에 저장하거나 온라인으로 공유하는 등 앱 외부에서 보려는 사진 또는 비디오를 캡처하는 경우 다른 앱이나 디바이스에서 이미지를 표시할 때 올바른 방향으로 표시되도록 적절한 방향 메타데이터를 사용하여 이미지를 인코드하는 것이 중요합니다. 디바이스 섀시 방향, 디스플레이 방향, 섀시의 카메라 배치(전면 또는 후면 카메라) 등 고려할 여러 가지 변수가 있기 때문에 미디어 파일에 포함할 올바른 방향 데이터를 결정하는 작업은 복잡할 수 있습니다. 
@@ -26,7 +26,7 @@ ms.locfileid: "8919762"
 
 [!code-cs[OrientationUsing](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetOrientationUsing)]
 
-앱에 방향 지원을 추가하는 과정의 첫 번째 단계는 디바이스를 회전할 때 자동으로 회전하지 않도록 디스플레이를 잠그는 것입니다. 자동 UI 회전은 대부분의 앱 유형에서 잘 작동하지만 카메라 미리 보기가 회전하는 경우 사용자에게 불편합니다. [**DisplayInformation.AutoRotationPreferences**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayInformation.AutoRotationPreferences) 속성을 [**DisplayOrientations.Landscape**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayOrientations)로 설정하여 디스플레이 방향을 잠급니다. 
+앱에 방향 지원을 추가하는 과정의 첫 번째 단계는 디바이스를 회전할 때 자동으로 회전하지 않도록 디스플레이를 잠그는 것입니다. 자동 UI 회전은 대부분의 앱 유형에서 잘 작동하지만 카메라 미리 보기가 회전하는 경우 사용자에게 불편합니다. [  **DisplayInformation.AutoRotationPreferences**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayInformation.AutoRotationPreferences) 속성을 [**DisplayOrientations.Landscape**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayOrientations)로 설정하여 디스플레이 방향을 잠급니다. 
 
 [!code-cs[AutoRotationPreference](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetAutoRotationPreference)]
 
@@ -37,9 +37,9 @@ ms.locfileid: "8919762"
 [!code-cs[DeclareCameraDevice](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetDeclareCameraDevice)]
 
 ## <a name="select-a-camera-device-and-initialize-the-mediacapture-object"></a>카메라 디바이스 선택 및 MediaCapture 개체 초기화
-[**MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처**](basic-photo-video-and-audio-capture-with-mediacapture.md) 문서에서는 몇 줄의 코드만으로 **MediaCapture** 개체를 초기화하는 방법을 보여 줍니다. 카메라 방향을 지원하려면 초기화 프로세스에 몇 단계를 더 추가합니다.
+[  **MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처**](basic-photo-video-and-audio-capture-with-mediacapture.md) 문서에서는 몇 줄의 코드만으로 **MediaCapture** 개체를 초기화하는 방법을 보여 줍니다. 카메라 방향을 지원하려면 초기화 프로세스에 몇 단계를 더 추가합니다.
 
-먼저 [**DeviceInformation.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation.FindAllAsync)를 호출하고 장치 선택기 [**DeviceClass.VideoCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceClass)를 전달하여 사용 가능한 모든 비디오 캡처 디바이스 목록을 가져옵니다. 그런 다음 목록에서 카메라의 패널 위치가 알려져 있고 제공된 값과 일치하는 첫 번째 디바이스(이 예제에서는 전면 카메라)를 선택합니다. 원하는 패널에 카메라가 없는 경우 사용 가능한 첫 번째 또는 기본 카메라가 사용됩니다.
+먼저 [**DeviceInformation.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation.FindAllAsync)를 호출하고 디바이스 선택기 [**DeviceClass.VideoCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceClass)를 전달하여 사용 가능한 모든 비디오 캡처 디바이스 목록을 가져옵니다. 그런 다음 목록에서 카메라의 패널 위치가 알려져 있고 제공된 값과 일치하는 첫 번째 디바이스(이 예제에서는 전면 카메라)를 선택합니다. 원하는 패널에 카메라가 없는 경우 사용 가능한 첫 번째 또는 기본 카메라가 사용됩니다.
 
 카메라 디바이스를 발견한 경우 새 [**MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings) 개체가 생성되고 [**VideoDeviceId**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.VideoDeviceId) 속성이 선택한 디바이스로 설정됩니다. MediaCapture 개체를 만든 다음 [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture.InitializeAsync)를 호출하고 설정 개체를 전달하여 선택한 카메라를 사용하도록 시스템에 알립니다.
 
@@ -57,7 +57,7 @@ ms.locfileid: "8919762"
 ## <a name="add-orientation-data-to-the-camera-preview-stream"></a>카메라 미리 보기 스트림에 방향 데이터 추가
 미리 보기 스트림의 메타데이터에 올바른 방향을 추가해도 미리 보기가 사용자에게 표시되는 모양에는 영향을 주지 않지만 시스템이 미리 보기 스트림에서 캡처된 프레임을 올바르게 인코드하는 데 도움이 됩니다.
 
-[**MediaCapture.StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture.StartPreviewAsync)를 호출하여 카메라 미리 보기를 시작합니다. 이 작업을 수행하기 전에 멤버 변수를 검사하여 미리 보기를 미러해야 하는지 여부(전면 카메라)를 확인합니다. 미러해야 하는 경우 [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.CaptureElement)(이 예제에서는 *PreviewControl*로 명명됨)의 [**FlowDirection**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.FrameworkElement.FlowDirection) 속성을 [**FlowDirection.RightToLeft**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.FlowDirection)로 설정합니다. 미리 보기를 시작한 후 도우미 메서드 **SetPreviewRotationAsync**를 호출하여 미리 보기 회전을 설정합니다. 다음은 이 메서드의 구현입니다.
+[  **MediaCapture.StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture.StartPreviewAsync)를 호출하여 카메라 미리 보기를 시작합니다. 이 작업을 수행하기 전에 멤버 변수를 검사하여 미리 보기를 미러해야 하는지 여부(전면 카메라)를 확인합니다. 미러해야 하는 경우 [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.CaptureElement)(이 예제에서는 *PreviewControl*로 명명됨)의 [**FlowDirection**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.FrameworkElement.FlowDirection) 속성을 [**FlowDirection.RightToLeft**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.FlowDirection)로 설정합니다. 미리 보기를 시작한 후 도우미 메서드 **SetPreviewRotationAsync**를 호출하여 미리 보기 회전을 설정합니다. 다음은 이 메서드의 구현입니다.
 
 [!code-cs[StartPreviewWithRotationAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStartPreviewWithRotationAsync)]
 
@@ -76,9 +76,9 @@ GUID를 키로 지정하고 미리 보기 회전을 값으로 지정하여 스�
 [!code-cs[HelperOrientationChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetHelperOrientationChanged)]
 
 ## <a name="capture-a-photo-with-orientation-data"></a>방향 데이터를 사용하여 사진 캡처
-[**MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처**](basic-photo-video-and-audio-capture-with-mediacapture.md) 문서에서는 먼저 메모리 내 스트림에 캡처한 다음 디코더를 통해 스트림에서 이미지 데이터를 읽고 인코더를 통해 이미지 데이터를 파일로 코드 변환하여 사진을 파일에 캡처하는 방법을 보여 줍니다. **CameraRotationHelper** 클래스에서 가져온 방향 데이터를 코드 변환 작업 중 이미지 파일에 추가할 수 있습니다.
+[  **MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처**](basic-photo-video-and-audio-capture-with-mediacapture.md) 문서에서는 먼저 메모리 내 스트림에 캡처한 다음 디코더를 통해 스트림에서 이미지 데이터를 읽고 인코더를 통해 이미지 데이터를 파일로 코드 변환하여 사진을 파일에 캡처하는 방법을 보여 줍니다. **CameraRotationHelper** 클래스에서 가져온 방향 데이터를 코드 변환 작업 중 이미지 파일에 추가할 수 있습니다.
 
-다음 예제에서는 [**CapturePhotoToStreamAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture.CapturePhotoToStreamAsync)를 호출하여 사진을 [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/Windows.Storage.Streams.InMemoryRandomAccessStream)에 캡처하고 스트림에서 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.BitmapDecoder)를 만듭니다. [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/Windows.Storage.StorageFile)을 만든 다음 열어서 파일에 쓸 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/Windows.Storage.Streams.IRandomAccessStream)을 검색합니다. 
+다음 예제에서는 [**CapturePhotoToStreamAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture.CapturePhotoToStreamAsync)를 호출하여 사진을 [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/Windows.Storage.Streams.InMemoryRandomAccessStream)에 캡처하고 스트림에서 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.BitmapDecoder)를 만듭니다. [  **StorageFile**](https://msdn.microsoft.com/library/windows/apps/Windows.Storage.StorageFile)을 만든 다음 열어서 파일에 쓸 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/Windows.Storage.Streams.IRandomAccessStream)을 검색합니다. 
 
 파일을 코드 변환하기 전에 도우미 클래스 메서드 **GetCameraCaptureOrientation**에서 사진 방향을 검색합니다. 이 메서드는 [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Sensors.SimpleOrientation) 개체를 반환하고, 해당 개체는 도우미 메서드 **ConvertSimpleOrientationToPhotoOrientation**을 사용하여 [**PhotoOrientation**](https://msdn.microsoft.com/library/windows/apps/Windows.Storage.FileProperties.PhotoOrientation) 개체로 변환됩니다. 새 **BitmapPropertySet** 개체를 만들고, 키가 "System.Photo.Orientation"이고 값이 **BitmapTypedValue**로 표시된 사진 방향인 속성을 추가합니다. "System.Photo.Orientation"은 이미지 파일에 메타데이터로 추가될 수 있는 많은 Windows 속성 중 하나입니다. 모든 사진 관련 속성 목록은 [**Windows 속성 - 사진**](https://msdn.microsoft.com/library/windows/desktop/ff516600)을 참조하세요. 이미지의 메타데이터 작업 방법에 대한 자세한 내용은 [**이미지 메타데이터**](image-metadata.md)를 참조하세요.
 
@@ -111,7 +111,7 @@ GUID를 키로 지정하고 미리 보기 회전을 값으로 지정하여 스�
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

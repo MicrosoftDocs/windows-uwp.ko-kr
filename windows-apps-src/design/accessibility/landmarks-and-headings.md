@@ -1,5 +1,5 @@
 ---
-Description: Describes the landmarks and headings features of accessibility.
+Description: 내게 필요한 옵션의 랜드마크 및 머리글 기능을 설명 합니다.
 ms.assetid: 019CC63D-D915-4EBD-9442-DE899AB973C9
 title: 랜드마크 및 머리글
 label: Landmarks and Headings
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d81957c379bd948a50d08b980ff20debc6c223c5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927387"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611268"
 ---
 # <a name="landmarks-and-headings"></a>랜드마크 및 머리글
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 구매 API, 구독
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e4cf27331a218c0c0ef06ee1a80c141b889504a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943738"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607838"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>사용자의 구독 청구 상태 변경
 
@@ -41,9 +41,9 @@ Microsoft Store 구매 API에서 이 메서드를 사용하여 지정된 사용�
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더         | 유형   | 설명   |
+| 헤더         | 형식   | 설명   |
 |----------------|--------|-------------|
-| 권한 부여  | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
+| 권한 부여  | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다.                           |
 | 호스트           | 문자열 | **purchase.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
 | Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
@@ -51,17 +51,17 @@ Microsoft Store 구매 API에서 이 메서드를 사용하여 지정된 사용�
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 이름         | 유형  | 설명   |  필수  |
+| 이름         | 형식  | 설명   |  필수  |
 |----------------|--------|-------------|-----------|
-| recurrenceId | 문자열 | 변경하려는 구독의 ID입니다. 이 ID를 가져오려면 [사용자의 구독을 가져오고](get-subscriptions-for-a-user.md) 메서드를 호출, 변경 하려는 구독 추가 기능을 나타내는 응답 본문 항목을 식별 하 고 항목에 대 한 **id** 필드의 값을 사용 합니다.     | 예      |
+| recurrenceId | 문자열 | 변경하려는 구독의 ID입니다. 이 ID를 가져오려면 호출 합니다 [사용자에 대 한 구독을 얻으려면](get-subscriptions-for-a-user.md) 메서드를 변경 하려는 구독 추가 기능을 해당 하는 응답 본문 항목을 식별 하 고 값을 사용 합니다 **id** 항목에 대 한 필드.     | 예      |
 
 
 ### <a name="request-body"></a>요청 본문
 
-| 필드      | 유형   | 설명   | 필수 |
+| 필드      | 형식   | 설명   | 필수 |
 |----------------|--------|---------------|----------|
 | b2bKey         | 문자열 | 구독을 변경할 사용자의 ID를 나타내는 [Microsoft Store ID 키](view-and-grant-products-from-a-service.md#step-4)입니다.     | 예      |
-| changeType     | 문자열 |  수행하려는 변경 유형을 식별하는 다음 문자열 중 하나입니다.<ul><li>**취소**: 구독을 취소합니다.</li><li>**연장**: 구독을 연장 합니다. 이 값을 지정하는 경우 *extensionTimeInDays* 매개 변수도 포함해야 합니다.</li><li>**환불**: 고객에게 구독을 환불합니다.</li><li>**ToggleAutoRenew**: 구독에 자동 갱신을 사용하지 않습니다. 현재 구독의 자동 갱신이 비활성화되어 있으면 이 값이 아무 것도 수행하지 않습니다.</li></ul>   | 예      |
+| changeType     | 문자열 |  수행하려는 변경 유형을 식별하는 다음 문자열 중 하나입니다.<ul><li>**취소**: 구독을 취소합니다.</li><li>**확장**: 구독을 확장합니다. 이 값을 지정하는 경우 *extensionTimeInDays* 매개 변수도 포함해야 합니다.</li><li>**환불**: 고객에 게 구독을 환불 합니다.</li><li>**ToggleAutoRenew**: 구독에 대 한 자동 갱신을 사용 하지 않도록 설정 합니다. 현재 구독의 자동 갱신이 비활성화되어 있으면 이 값이 아무 것도 수행하지 않습니다.</li></ul>   | 예      |
 | extensionTimeInDays  | 문자열  | *changeType* 매개 변수 값이 **연장**이면 이 매개 변수는 구독을 연장하는 일 수를 지정합니다. |  *changeType*의 값이 **연장**이면 예, 그렇지 않으면 아니요입니다.  ||
 
 
@@ -83,7 +83,7 @@ Host: https://purchase.mp.microsoft.com
 ```
 
 
-## <a name="response"></a>Response
+## <a name="response"></a>응답
 
 이 메서드는 수정된 필드를 포함하여 수정된 구독 추가 기능에 대한 정보가 포함된 JSON 응답 본문을 반환합니다. 다음 예제에서는 이 메서드의 응답 본문을 보여 줍니다.
 
@@ -111,16 +111,16 @@ Host: https://purchase.mp.microsoft.com
 
 응답 본문에는 다음 데이터가 포함됩니다.
 
-| 값        | 유형   | 설명                                                                 |
+| 값        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------|
 | autoRenew | 부울 |  현재 구독 기간이 종료되면 구독을 자동으로 갱신할 것인지 여부를 나타냅니다.   |
 | beneficiary | 문자열 |  이 구독과 연결된 권한의 수취인 ID입니다.   |
 | expirationTime | 문자열 | 구독이 만료되는 날짜 및 시간이며, ISO 8601 형식입니다. 이 필드는 구독이 특정 상태일 때만 사용할 수 있습니다. 만료 시간은 일반적으로 현재 상태가 만료되는 시간을 나타냅니다. 예를 들어 활성 구독의 경우 만료 날짜는 다음 자동 갱신이 이루어지는 시간을 나타냅니다.    |
-| expirationTimeWithGrace | string | 날짜 및 시간 유예 기간, ISO 8601 형식으로 포함 하 여 구독 만료 됩니다. 이 값 때 통해 사용자 구독에 자동으로 갱신 하는 데 실패 한 구독에 대 한 액세스를 손실 됩니다.    |
+| expirationTimeWithGrace | 문자열 | 날짜 및 시간 유예 기간은 ISO 8601 형식으로 포함 하 여 구독이 만료 됩니다. 이 값 경우 통해 해당 사용자 구독 갱신에 실패 한 후 구독에 대 한 액세스를 잃게 됩니다.    |
 | id | 문자열 |  구독의 ID입니다. 이 값을 사용하여 [change the billing state of a subscription for a user](change-the-billing-state-of-a-subscription-for-a-user.md) 메서드를 호출할 때 수정할 구독을 나타냅니다.    |
 | isTrial | 부울 |  구독이 평가판인지 여부를 나타냅니다.     |
 | lastModified | 문자열 |  구독이 마지막으로 수정된 날짜 및 시간이며, ISO 8601 형식입니다.      |
-| market | 문자열 | 사용자가 구독을 획득한 국가 코드입니다(두 문자로 된 ISO 3166-1 alpha-2 형식).      |
+| 출시 | 문자열 | 사용자가 구독을 획득한 국가 코드입니다(두 문자로 된 ISO 3166-1 alpha-2 형식).      |
 | productId | 문자열 | Microsoft Store 카탈로그에서 구독 추가 기능을 나타내는 [제품](in-app-purchases-and-trials.md#products-skus-and-availabilities)의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 스토어 ID의 예는 9NBLGGH42CFD입니다.     |
 | skuId | 문자열 |  Microsoft Store 카탈로그에서 구독 추가 기능을 나타내는 [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities)의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. SKU에 대한 스토어 ID의 예는 0010입니다.    |
 | startTime | 문자열 |  구독의 시작 날짜 및 시간이며, ISO 8601 형식입니다.     |
@@ -131,8 +131,8 @@ Host: https://purchase.mp.microsoft.com
 ## <a name="related-topics"></a>관련 항목
 
 
-* [서비스에서 제품 권한 관리](view-and-grant-products-from-a-service.md)
-* [사용자의 구독 가져오기](get-subscriptions-for-a-user.md)
-* [제품에 대한 쿼리](query-for-products.md)
-* [소모성 제품을 처리됨으로 보고](report-consumable-products-as-fulfilled.md)
-* [Microsoft Store ID 키 갱신](renew-a-windows-store-id-key.md)
+* [서비스에서 제품 자격 관리](view-and-grant-products-from-a-service.md)
+* [사용자에 대 한 구독을 얻으려면](get-subscriptions-for-a-user.md)
+* [제품에 대 한 쿼리](query-for-products.md)
+* [충족 하는 대로 소모 성 제품을 보고](report-consumable-products-as-fulfilled.md)
+* [Microsoft Store ID 키를 갱신](renew-a-windows-store-id-key.md)

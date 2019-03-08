@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 중간, javascript, 샘플 코드
 ms.localizationpriority: medium
 ms.openlocfilehash: 641a3bfc2c2869cab6f3bbf480aa599cadd955a2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618558"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a>JavaScript의 중간 광고 샘플 코드
 
@@ -23,7 +23,7 @@ ms.locfileid: "9047112"
 
 이 샘플 앱은 2개의 버튼을 사용하여 중간 광고를 요청한 다음 실행합니다. Visual Studio에서 생성된 main.js 및 index.html은 수정되었으며 아래와 같습니다. 아래의 script.js 파일에는 샘플의 코드 대부분이 포함되어 있으므로 이 파일을 프로젝트의 **js** 폴더에 추가해야 합니다.
 
-값을 바꿉니다는 ```applicationId``` 및 ```adUnitId``` 스토어에 앱을 제출 하기 전에 파트너 센터에서 라이브 값으로 변수입니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+값을 대체 합니다 ```applicationId``` 및 ```adUnitId``` 앱 스토어에 제출 하기 전에 파트너 센터에서 라이브 값을 사용 하 여 변수. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
 > [!NOTE]
 > 동영상 중간 광고 대신 배너 중간 광고를 표시하도록 이 예제를 변경하려면 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드의 첫 번째 매개 변수에 **InterstitialAdType.video** 대신 **InterstitialAdType.display** 값을 전달하세요. 자세한 내용은 [중간 광고](interstitial-ads.md)를 참조하세요.
