@@ -1,25 +1,25 @@
 ---
-Description: The Xbox analytics report in Partner Center shows you statistics about how your customers are engaging with the Xbox features in your product.
+Description: 파트너 센터에서 Xbox 분석 보고서는 Xbox 기능을 사용 하 여 제품에 고객에 게는 참여 하는 방법에 대 한 통계를 보여 줍니다.
 title: Xbox 분석 보고서
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, xbox 분석, xbox live 분석, xbox 통계
 ms.localizationpriority: medium
 ms.openlocfilehash: ae9bacd88f957954c5cd1d3f6ccd6d3c04a568a2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922394"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607448"
 ---
 # <a name="xbox-analytics-report"></a>Xbox 분석 보고서
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **Xbox 분석** 보고서에 고객은 게임에서 Xbox 기능을 사용 하는 방법에 대 한 통계가 표시 합니다. 또한 클라이언트 오류를 해결하는 데 도움이 되는 서비스 상태 정보를 제공합니다.
+합니다 **Xbox analytics** 보고서 [파트너 센터](https://partner.microsoft.com/dashboard) 고객에 게 게임에 Xbox 기능으로 조작 하는 방법에 대 한 통계를 보여 줍니다. 또한 클라이언트 오류를 해결하는 데 도움이 되는 서비스 상태 정보를 제공합니다.
 
 > [!IMPORTANT]
-> Xbox용 게임이나 Xbox Live 서비스를 사용하는 게임을 게시하는 경우에만 이 보고서가 표시됩니다. 이렇게 하려면 [개념 승인 프로세스](../gaming/concept-approval.md)를 통해 [Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) 파트너가 게시 된 게임을 통해 제출한 게임을 포함 하는 이동 해야 합니다 [ ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id)합니다. [Xbox Live 크리에이터 스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 을 통해 게시 된 게임 현재이 보고서에 표시 되지 않습니다.
+> Xbox용 게임이나 Xbox Live 서비스를 사용하는 게임을 게시하는 경우에만 이 보고서가 표시됩니다. 이 위해 수행 해야 합니다는 [개념 승인 프로세스](../gaming/concept-approval.md), 게임에서 게시를 포함 하는 [Microsoft 파트너](../xbox-live/developer-program-overview.md#microsoft-partners) 및 게임을 통해 제출 합니다 [ ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id). 게임을 통해 게시 합니다 [Xbox Live 크리에이터 스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 현재이 보고서에 표시 되지 않습니다.
 
-게임에 대 한 **분석** 을 확장 하 고 **Xbox 분석**을 선택 하 여 왼쪽된 탐색 메뉴에서 **Xbox 분석** 보고서를 볼 수 있습니다.  파트너 센터 또는 [보고서를 다운로드](download-analytic-reports.md) 를 오프 라인으로이 데이터를 볼 수 있습니다.
+볼 수 있습니다 합니다 **Xbox analytics** 를 확장 하 여 게임의 왼쪽된 탐색 메뉴에서 보고서 **분석** 선택 하 고 **Xbox analytics**합니다.  파트너 센터에서이 데이터를 볼 수 있습니다 또는 [보고서 다운로드](download-analytic-reports.md) 오프 라인으로 볼 수 있습니다.
 
 
 ## <a name="overview-tab"></a>개요 탭
@@ -89,9 +89,9 @@ ms.locfileid: "8922394"
 탭 위쪽에서 데이터가 표시되는 기간을 선택할 수 있습니다. 기본 설정은 **30D**(30일)이지만, **7D**(7일) 동안 데이터를 표시하거나 사용자가 지정한 데이터 범위에서 데이터를 표시하도록 선택할 수 있습니다(30일 이하). 사용자 지정 날짜 범위의 경우 모든 차트는 입력한 날짜 범위 내에 제공된 데이터의 첫 번째 날과 마지막 날까지 차트 범위를 잘라냅니다.
 
 또한 **필터**를 확장하여 패키지 버전, 장치 유형 및/또는 샌드박스를 기준으로 이 페이지의 모든 데이터를 필터링할 수 있습니다.
-- **패키지 버전**: 기본 필터는 **모든 버전**이지만 서비스 상태 데이터를 특정 패키지 버전으로 제한할 수 있습니다.
-- **장치 유형**: 기본 설정은 **모든 장치**이지만 서비스 상태 데이터를 특정 장치 유형으로 제한할 수 있습니다.
-- **샌드박스**: 기본 설정은 **RETAIL**이지만 서비스 상태 데이터를 특정 샌드박스로 제한할 수 있습니다.
+- **패키지 버전**: 기본 필터는 **모든 버전**, 있지만 특정 패키지 버전에 서비스 상태 데이터를 제한할 수 있습니다.
+- **장치 유형**: 기본 설정은 **모든 장치**, 있지만 서비스 상태 데이터를 특정 장치 유형 제한할 수 있습니다.
+- **샌드박스**: 기본 설정은 **소매**, 있지만 특정 샌드박스에 서비스 상태 데이터를 제한할 수 있습니다.
 
 아래에 나열된 모든 차트의 정보는 선택한 날짜 범위와 모든 필터를 반영합니다. 또한 일부 섹션에서는 추가 필터를 적용할 수 있습니다.
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a062fd417bae37fd66c944e0e534ef7a50de5fa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923779"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599368"
 ---
 # <a name="usersrequestoridpermissionvalidate"></a>/users/{requestorId}/permission/validate
  
@@ -23,22 +23,22 @@ ms.locfileid: "8923779"
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| requestorId| string| 필수. 작업을 수행 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code> 및 <code>me</code>. 로그인 한 사용자 여야 합니다. 예제 값: <code>xuid(0987654321)</code>.| 
+| requestorId| 문자열| 필수. 작업을 수행 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code> 고 <code>me</code>입니다. 로그인 한 사용자 이어야 합니다. 예제 값: <code>xuid(0987654321)</code>합니다.| 
   
 <a id="ID4ETB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [GET (/users/{requestorId}/permission/validate)](uri-privacyusersrequestoridpermissionvalidateget.md)
 
-&nbsp;&nbsp;대상 사용자를 사용 하 여 지정 된 작업을 수행 하는 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 응답을 가져옵니다.
+&nbsp;&nbsp;사용자가 대상 사용자를 사용 하 여 지정 된 작업을 수행할 수 있는지 여부에 대 한 예 또는 아니요 응답을 가져옵니다.
 
 [POST (/users/{requestorId}/permission/validate)](uri-privacyusersrequestoridpermissionvalidatepost.md)
 
-&nbsp;&nbsp;대상 사용자의 집합을 사용 하 여 지정 된 작업을 수행 하는 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 답변의 집합을 가져옵니다.
+&nbsp;&nbsp;사용자가 대상 사용자 집합을 사용 하 여 지정 된 작업을 수행할 수 있는지 여부에 대 한 답변 예 또는 아니요의 집합을 가져옵니다.
  
 <a id="ID4EAC"></a>
 
@@ -47,7 +47,7 @@ ms.locfileid: "8923779"
  
 <a id="ID4ECC"></a>
 
-   [개인 정보 URI](atoc-reference-privacyv2.md)
+   [개인 정보 Uri](atoc-reference-privacyv2.md)
 
  [PermissionId 열거형](../../enums/privacy-enum-permissionid.md)
 

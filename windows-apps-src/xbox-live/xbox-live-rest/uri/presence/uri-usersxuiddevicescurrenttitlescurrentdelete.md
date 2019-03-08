@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: dd916fee5455276d45e4437e4ee90cacbde30bf9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921512"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604218"
 ---
 # <a name="delete-usersxuidxuiddevicescurrenttitlescurrent"></a>DELETE (/users/xuid({xuid})/devices/current/titles/current)
-[PresenceRecord](../../json/json-presencerecord.md) 만료 될 때까지 기다리지 않고 닫는 타이틀의 존재 여부를 제거 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
+기다리지 않고 닫는 제목의 존재를 제거 합니다 [PresenceRecord](../../json/json-presencerecord.md) 만료 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`합니다.
  
   * [URI 매개 변수](#ID4EZ)
   * [권한 부여](#ID4EEB)
@@ -29,59 +29,59 @@ ms.locfileid: "8921512"
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID)는 대상 사용자의 합니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 대상 사용자입니다.| 
   
 <a id="ID4EEB"></a>
 
  
 ## <a name="authorization"></a>권한 부여
  
-| 형식| 필수| 설명| 누락 된 경우 응답| 
+| 형식| 필수| 설명| 응답 없는 경우| 
 | --- | --- | --- | --- | --- | --- | --- | 
-| XUID| 예| 호출자의 Xbox 사용자 ID (XUID)| 403 사용할 수 없음| 
-| titleId| 예| titleId 제목| 403 사용할 수 없음| 
-| deviceId| Windows 및 웹을 제외 하 고 모든 예| 호출자의 deviceId| 403 사용할 수 없음| 
-| deviceType| 웹을 제외 하 고 모든 예| 호출자의 deviceType| 403 사용할 수 없음| 
+| XUID| 예| 호출자의 Xbox 사용자 ID (XUID)| 403 Forbidden| 
+| titleId| 예| 제목의 titleId| 403 Forbidden| 
+| deviceId| Windows 및 웹을 제외한 모든 예| 호출자의 deviceId| 403 Forbidden| 
+| deviceType| 웹을 제외한 모든 예| 호출자의 deviceType| 403 Forbidden| 
   
 <a id="ID4ERD"></a>
 
  
 ## <a name="required-request-headers"></a>필요한 요청 헤더
  
-| 헤더| 유형| 설명| 
+| 헤더| 형식| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > "입니다.| 
-| xbl 계약 버전 x| string| 이 요청은 전송 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 서비스의 인증 토큰을 클레임 헤더의 유효성을 확인 한 후에 있습니다. 예제 값: 3, vnext 합니다.| 
-| Content-Type| 문자열| 예제 값 요청 본문의 mime 형식: 응용 프로그램/j 합니다.| 
-| Content-Length| string| 요청 본문의 길이입니다. 예제 값: 312 합니다.| 
-| 호스트| 문자열| 도메인 이름 서버입니다. 예제 값: presencebeta.xboxlive.com 합니다.| 
+| 권한 부여| 문자열| HTTP 인증을 위해 자격 증명을 인증 합니다. 예를 들어 값: "XBL3.0 x=&lt;userhash>;&lt;token>".| 
+| x-xbl-contract-version| 문자열| 이 요청은 리디렉션되어야 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 헤더, 인증 토큰의 클레임의 유효성을 확인 한 후 서비스는 합니다. 예제 값: 3, vnext입니다.| 
+| Content-Type| 문자열| 예를 들어 값 요청 본문의 mime 형식: application/json.| 
+| Content-Length| 문자열| 요청 본문의 길이입니다. 예를 들어 값: 312.| 
+| 호스트| 문자열| 서버의 도메인 이름입니다. 예제 값: presencebeta.xboxlive.com 합니다.| 
   
 <a id="ID4EVF"></a>
 
  
 ## <a name="optional-request-headers"></a>선택적 요청 헤더
  
-| 헤더| 유형| 설명| 
+| 헤더| 형식| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| X RequestedServiceVersion|  | 이 요청은 전송 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 서비스의 인증 토큰을 클레임 헤더의 유효성을 확인 한 후에 있습니다. 기본값: 1입니다.| 
+| X-RequestedServiceVersion|  | 이 요청은 리디렉션되어야 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 헤더, 인증 토큰의 클레임의 유효성을 확인 한 후 서비스는 합니다. 기본값: 1.| 
   
 <a id="ID4EVG"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
   
 <a id="ID4EAH"></a>
 
  
 ## <a name="response-body"></a>응답 본문
  
-성공 시 HTTP 상태 코드 응답 본문이 반환 됩니다.
+성공의 경우 응답 본문 없이 HTTP 상태 코드가 반환 됩니다.
  
-(HTTP 4xx 또는 5xx) 오류를 발생 하는 경우 응답 본문에 적절 한 오류 정보를 반환 합니다.
+오류 (HTTP 4xx 또는 5xx)의 경우 적절 한 오류 정보가 응답 본문에 반환 됩니다.
   
 <a id="ID4ELH"></a>
 
@@ -91,7 +91,7 @@ ms.locfileid: "8921512"
 <a id="ID4ENH"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
 [/users/xuid({xuid})/devices/current/titles/current](uri-usersxuiddevicescurrenttitlescurrent.md)
 

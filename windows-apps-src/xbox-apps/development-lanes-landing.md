@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 9ac96766-df89-4403-89f2-200549436921
 ms.localizationpriority: medium
 ms.openlocfilehash: 11af5f09d9c66fc9103b36dc80eae8b8bbc88854
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945359"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595168"
 ---
 # <a name="bringing-existing-games-to-xbox"></a>기존 게임을 Xbox로 가져오기
 
@@ -23,10 +23,10 @@ ms.locfileid: "8945359"
 
 | 엔진      | 설명 |
 |------------|-------------|
-|[사용자 지정 C++](development-lanes-custom-cpp.md)| UWP를 사용하여 Xbox에서 C++ 게임을 개발하는 것과 관련된 정보입니다. |
+|[사용자 지정 c + +](development-lanes-custom-cpp.md)| UWP를 사용하여 Xbox에서 C++ 게임을 개발하는 것과 관련된 정보입니다. |
 |[Unity](development-lanes-unity.md)| Unity에서 Xbox로 기존 게임을 가져오는 데 도움을 주는 자습서입니다. |
 |[HTML / JS](development-lanes-html.md)| Xbox에서 HTML 게임을 개발하는 것과 관련된 정보입니다. |
 
 ## <a name="see-also"></a>참고 항목
 
-- [Xbox One의 UWP](index.md)
+- [Xbox One에서 UWP](index.md)

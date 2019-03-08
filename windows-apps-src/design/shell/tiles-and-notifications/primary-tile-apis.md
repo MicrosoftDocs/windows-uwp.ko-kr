@@ -1,5 +1,5 @@
 ---
-Description: You can programmatically pin your own app's primary tile to Start, just like you can pin secondary tiles. And you can check whether it's currently pinned.
+Description: 보조 타일을 고정하는 것처럼 프로그래밍 방법으로 시작에 앱의 기본 타일을 고정할 수 있습니다. 그리고 현재 고정되어 있는지 확인할 수 있습니다.
 title: 기본 타일 API
 label: Primary tile API's
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, StartScreenManager, 기본 타일 고정, 기본 타일 api, 타일이 고정되었는지 확인, live tile
 ms.localizationpriority: medium
 ms.openlocfilehash: 04d7c66b358a3a465522ad3b56d8ae926358ae57
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922938"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596198"
 ---
 # <a name="primary-tile-apis"></a>기본 타일 API
  
@@ -20,9 +20,9 @@ ms.locfileid: "8922938"
 기본 타일 API를 사용하여 현재 앱이 시작에 고정되었는지 확인하고 앱을 기본 타일에 고정하라고 요청할 수 있습니다.
 
 > [!IMPORTANT]
-> **크리에이터스 업데이트 필요**: 기본 타일 API를 사용하려면 SDK 15063을 대상으로 하고 빌드 15063 이상을 실행하고 있어야 합니다.
+> **크리에이터 스 업데이트를 설치 해야**: SDK 15063 대상으로 해야 합니다 하 고 빌드 15063 이상을 기본 타일 Api를 사용 하 여 실행 합니다.
 
-> **중요 API**: [**StartScreenManager class**](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager), [ContainsAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_), [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_)
+> **중요 한 Api**: [**StartScreenManager class**](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager), [ContainsAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_), [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_)
 
 
 ## <a name="when-to-use-primary-tile-apis"></a>기본 타일 API를 사용하는 시기
@@ -84,7 +84,7 @@ bool isPinned = await StartScreenManager.GetDefault().ContainsAppListEntryAsync(
 기본 타일이 현재 고정되어 있지 않으며 시작에서 타일을 지원하는 경우 기본 타일을 고정할 수 있다는 설명을 사용자에게 표시할 수 있습니다.
 
 > [!NOTE]
-> 앱은 포그라운드에서 이며 사용자가 기본 타일 bepinned (예를 들어 사용자가 타일을 고정 하는 방법에 대 한 설명 예 클릭) 한 후 요청 의도적으로이 APIafterthe만 호출 해야 하는 동안 UI 스레드에서이 API를 호출 해야 합니다.
+> 앱이 포그라운드에서 사용자가 의도적으로 요청 하 여 (예를 들어,를 클릭 한 후 예 타일을 고정 하는 방법에 대 한 팁을)를 기본 타일을 고정 한 후에이 API를 호출 해야 하는 동안 UI 스레드에서이 API를 호출 해야 합니다.
 
 사용자가 기본 타일을 고정하는 단추를 클릭하면 [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_) 메서드를 호출하여 시작에 타일 고정을 요청합니다. 타일을 시작에 고정할지 다시 묻는 대화 상자가 나타납니다.
 
@@ -101,7 +101,7 @@ bool isPinned = await StartScreenManager.GetDefault().RequestAddAppListEntryAsyn
 
 ## <a name="resources"></a>리소스
 
-* [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-pin-primary-tile)
+* [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-pin-primary-tile)
 * [작업 표시줄에 고정](../pin-to-taskbar.md)
 * [타일, 배지 및 알림](index.md)
-* [적응형 타일 설명서](create-adaptive-tiles.md)
+* [적응 타일 설명서](create-adaptive-tiles.md)

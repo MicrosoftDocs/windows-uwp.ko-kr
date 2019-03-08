@@ -1,5 +1,5 @@
 ---
-Description: Learn how Fluent motion fundamentals come together in your app.
+Description: 기본 앱에서 함께 일 하는 방법을 Fluent 동작에 알아봅니다.
 title: 동작 중인 움직임 - UWP 앱의 애니메이션
 label: Motion in practice
 template: detail.hbs
@@ -12,11 +12,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 6eafbfd965d2783c0f72e75c91a04e5ac1cb119f
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058564"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599408"
 ---
 # <a name="bringing-it-together"></a>통합
 
@@ -80,25 +80,25 @@ ms.locfileid: "9058564"
 
 ## <a name="implicit-animations"></a>암시적 애니메이션
 
-> 암시적 애니메이션에는 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 필요 이상.
+> 암시적 애니메이션 필요한 Windows 10 버전 1809 ([17763 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상.
 
 
-암시적 애니메이션은 자동으로 매개 변수를 변경 하는 동안 이전 및 새 값 사이의 보간에 따라 Fluent 움직임을 달성 하는 간단한 방법입니다.
+암시적 애니메이션은 매개 변수를 변경 하는 동안 이전 및 새 값을 자동으로 보간하여 Fluent 동작을 달성 하는 간단한 방법입니다.
 
-다음 속성 변경에 암시적으로 애니메이션할 수 있습니다.
+암시적으로 같은 속성을 변경 애니메이션을 적용할 수 있습니다.
 
 - [UIElement](/uwp/api/windows.ui.xaml.uielement)
   - **불투명도**
   - **회전**
   - **배율**
-  - **Translation**
+  - **번역**
 
-- [테두리](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)또는 [패널](/uwp/api/windows.ui.xaml.controls.panel)
-  - **Background**
+- [테두리](/uwp/api/windows.ui.xaml.controls.border)하십시오 [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter), 또는 [패널](/uwp/api/windows.ui.xaml.controls.panel)
+  - **배경**
 
-변경 내용을 암시적으로 애니메이션 효과 줄 수 있는 각 속성을 해당 _전환_ 속성이 있습니다. 속성에 애니메이션을 전환 유형을 해당 _전환_ 속성에 할당 합니다. 이 표에서 _전환_ 속성 및 전환 형식이 각각에 대 한 사용을 보여 줍니다.
+암시적으로 애니메이션 효과가 적용 된 변경 수 있는 각 속성에는 해당 _전환_ 속성입니다. 전환 형식을 해당에 할당 하는 속성에 애니메이션 효과 _전환_ 속성입니다. 이 테이블에 표시 된 _전환_ 속성 및 각각에 대해 사용 하도록 전환 형식입니다.
 
-| 애니메이션 효과 준된 속성 | 전환 속성 | 암시적 전환 유형 |
+| 애니메이션된 속성 | 전환 속성 | 암시적 전환 형식 |
 | -- | -- | -- |
 | [UIElement.Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Rotation](/uwp/api/windows.ui.xaml.uielement.rotation) | [RotationTransition](/uwp/api/windows.ui.xaml.uielement.rotationtransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
@@ -108,7 +108,7 @@ ms.locfileid: "9058564"
 | [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 | [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 
-이 예제에서는 불투명도 속성 및 전환 컨트롤을 사용 하는 페이드 인 / 페이드 아웃 비활성화 된 경우 단추를 사용 하 여 하는 방법을 보여 줍니다.
+이 예제에서는 단추 컨트롤을 사용 하는 경우 페이드 인 및 페이드 아웃 비활성화 되었을 때를 확인 하려면 Opacity 속성 및 전환 사용 방법을 보여 줍니다.
 
 ```xaml
 <Button x:Name="SubmitButton"
@@ -129,6 +129,6 @@ public double OpaqueIfEnabled(bool IsEnabled)
 
 ## <a name="related-articles"></a>관련 문서
 
-- [움직임 개요](index.md)
-- [타이밍 및 감속](timing-and-easing.md)
+- [동작 개요](index.md)
+- [시간 및 감속/가속](timing-and-easing.md)
 - [방향 및 무게](directionality-and-gravity.md)

@@ -1,16 +1,16 @@
 ---
-Description: Learn about several ways you can programmatically enable customers to rate and review your app.
+Description: 에 대해 알아봅니다 몇 가지 방법에 대해 설정할 수 있습니다. 프로그래밍 방식으로 고객 평가 하 고 앱을 검토 합니다.
 title: 앱에 대한 평점 및 리뷰 요청
 ms.date: 01/22/2019
 ms.topic: article
 keywords: windows 10, uwp, 평점, 리뷰
 ms.localizationpriority: medium
 ms.openlocfilehash: b167f4cc40ee72e6405436bacee28f2f20b4623c
-ms.sourcegitcommit: 7a1899358cd5ce9d2f9fa1bd174a123740f98e7a
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042639"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601308"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>앱에 대한 평점 및 리뷰 요청
 
@@ -18,14 +18,14 @@ ms.locfileid: "9042639"
 * 앱의 컨텍스트에서 평점 및 리뷰 대화 상자를 직접 표시할 수 있습니다.
 * 프로그래밍 방식으로 Microsoft Store에서 앱의 평점 및 리뷰 페이지를 열 수 있습니다.
 
-평점 및 리뷰 데이터를 분석할 준비가 되 면 파트너 센터에서 데이터를 볼 또는 Microsoft Store 분석 API를 사용 하 여 프로그래밍 방식으로이 데이터를 검색할 수 있습니다.
+평가 및 검토 데이터를 분석할 준비가 되었을 때에 파트너 센터에서 데이터를 볼 수도 있고 Microsoft Store 분석 API를 사용 하 여이 데이터를 프로그래밍 방식으로 검색할 수 있습니다.
 
 > [!IMPORTANT]
-> 앱 내 평점 함수를 추가할 때 모든 리뷰 별 평점 선택한에 상관 없이 저장소의 등급 메커니즘에 사용자를 보내야 합니다. 사용자의 피드백 또는 의견을 수집 하는 경우 관련이 없는 앱 평점 또는 리뷰를 스토어에서 앱 개발자에 게 직접 전송 되는 명확 해야 합니다. 개발자 준수 [Fraudulent 또는 악의적인 활동에](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities)관한 자세한 내용은 참조 하세요.
+> 앱 내에서 등급 함수를 추가할 때 모든 검토를 별 등급 선택에 관계 없이 저장소의 등급 메커니즘으로 사용자를 전송 해야 합니다. 사용자의 의견이 나 의견을 수집 하는 경우는 앱 등급 또는 저장소에서의 검토와 관련 되지 않지만 앱 개발자에 게 직접 보내집니다의 선택을 취소 해야 합니다. 개발자 준수와 관련 된 자세한 내용은 참조 하세요 [Fraudulent 또는 악의적인 활동](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities)합니다.
 
 ## <a name="show-a-rating-and-review-dialog-in-your-app"></a>앱에서 평점 및 리뷰 대화 상자 표시
 
-고객의 앱 평가 하 고 리뷰를 제출에 요청 하는 앱에서 대화 상자를 프로그래밍 방식으로 표시 하려면 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임 스페이스에서 [RequestRateAndReviewAppAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestrateandreviewappasync) 메서드를 호출 합니다. 
+프로그래밍 방식으로 고객에 게 앱의 등급 및 리뷰를 제출 하도록 요청 하는 앱에서 대화 상자를 표시 하려면 호출을 [RequestRateAndReviewAppAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestrateandreviewappasync) 에서 메서드는 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임 스페이스입니다. 
 
 > [!IMPORTANT]
 > 평점 및 리뷰 대화 상자를 표시하라는 요청은 앱의 UI 스레드에서 호출되어야 합니다.
@@ -101,11 +101,11 @@ private async Task PromptUserToRateApp()
 }
 ```
 
-**RequestRateAndReviewAppAsync** 메서드를 Windows 10, 버전 1809에에서 도입 되었으며 2018 년 10 월 10 일 **Windows를 대상으로 하는 프로젝트 에서만 사용할 수 있는 업데이트 (10.0; 빌드 17763)** 또는 Visual Studio의 최신 릴리스 합니다.
+합니다 **RequestRateAndReviewAppAsync** 메서드 버전 1809, Windows 10에서 도입 되었으며 사용할 수 있습니다만 대상으로 하는 프로젝트에서 **Windows 10 년 10 월 2018 업데이트 (10.0; 17763 빌드)** 또는 Visual Studio의 이후 릴리스 합니다.
 
 ### <a name="response-data-for-the-rating-and-review-request"></a>평점 및 리뷰 요청에 대한 응답 데이터
 
-평점을 표시 하 고 대화를 검토 요청을 제출 하면 [StoreRateAndReviewResult](https://docs.microsoft.com/uwp/api/windows.services.store.storerateandreviewresult) 클래스의 [ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storerateandreviewresult.extendedjsondata) 속성은 요청에 성공 했는지 여부를 지정 하는 JSON 형식 문자열을 포함 합니다.
+등급을 표시 하 고 대화 상자에서 검토를 요청을 제출한 후는 [ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storerateandreviewresult.extendedjsondata) 의 속성을 [StoreRateAndReviewResult](https://docs.microsoft.com/uwp/api/windows.services.store.storerateandreviewresult) 나타내는 JSON 형식 문자열을 포함 하는 클래스 있는지 여부를 요청에 성공 합니다.
 
 다음 예제에서는 고객이 평점이나 리뷰를 제출한 후의 이 요청에 대한 반환 값에 대해 설명합니다.
 
@@ -149,11 +149,11 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 ## <a name="analyze-your-ratings-and-reviews-data"></a>평점 및 리뷰 데이터 분석
 
 고객의 평점 및 리뷰 데이터를 분석하는 데 몇 가지 옵션이 있습니다.
-* 고객의 평점 및 리뷰를 보려면 파트너 센터에서 [리뷰](../publish/reviews-report.md) 보고서를 사용할 수 있습니다. 이 보고서를 다운로드하여 오프라인에서 볼 수도 있습니다.
+* 사용할 수는 [검토](../publish/reviews-report.md) 등급 및 리뷰 고객 으로부터 확인 하려면 파트너 센터에서 보고서입니다. 이 보고서를 다운로드하여 오프라인에서 볼 수도 있습니다.
 * Microsoft Store 분석 API에서 [앱 평점 가져오기](get-app-ratings.md) 및 [앱 리뷰 가져오기](get-app-reviews.md) 메서드를 사용하여 JSON 형식으로 된 고객의 평점 및 리뷰를 프로그래밍 방식으로 검색할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store에 요청 보내기](send-requests-to-the-store.md)
-* [Microsoft Store 앱 실행](../launch-resume/launch-store-app.md)
+* [저장소에 요청을 전송 합니다.](send-requests-to-the-store.md)
+* [Microsoft Store 앱 시작](../launch-resume/launch-store-app.md)
 * [리뷰 보고서](../publish/reviews-report.md)

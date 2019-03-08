@@ -1,32 +1,32 @@
 ---
 title: 앱 내에서 백그라운드 작업 트리거
-description: 응용 프로그램 내에서 백그라운드 작업을 트리거하는 방법에 설명
+description: 응용 프로그램 내에서 백그라운드 작업을 트리거하는 방법을 설명합니다.
 ms.date: 07/06/2018
 ms.topic: article
-keywords: 백그라운드 작업 트리거 백그라운드 작업
+keywords: 백그라운드 작업 트리거를 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 02e4bf3d7977c9bdd675f264a37e608a5082ef4c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050726"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608098"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>앱 내에서 백그라운드 작업 트리거
 
 [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger)를 사용하여 앱 내에서 백그라운드 작업을 활성화하는 방법을 알아봅니다.
 
-Application 트리거를 만드는 방법의 예제를이 [예제](https://github.com/Microsoft/Windows-universal-samples/blob/v2.0.0/Samples/BackgroundTask/cs/BackgroundTask/Scenario5_ApplicationTriggerTask.xaml.cs)를 참조 하세요.
+응용 프로그램 트리거를 만드는 방법의 예제를 참조 하세요 [예제에서는](https://github.com/Microsoft/Windows-universal-samples/blob/v2.0.0/Samples/BackgroundTask/cs/BackgroundTask/Scenario5_ApplicationTriggerTask.xaml.cs)합니다.
 
-이 항목에서는 응용 프로그램에서 활성화 하려는 백그라운드 작업이 있다고 가정 합니다. 백그라운드 작업을 아직 없는 경우 [BackgroundActivity.cs](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackgroundActivation/cs/BackgroundActivity.cs)회 샘플 백그라운드 작업이입니다. 또는 [out of process 백그라운드 작업 만들기 및 등록을](create-and-register-a-background-task.md) 만들라는의 단계를 따릅니다.
+이 항목에서는 응용 프로그램에서 활성화하려는 백그라운드 작업이 이미 있다고 가정합니다. 백그라운드 작업이 아직 없는 경우 [BackgroundActivity.cs](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackgroundActivation/cs/BackgroundActivity.cs)에 샘플 백그라운드 작업이 있습니다. 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)의 단계에 따라 백그라운드 작업을 하나 만듭니다.
 
-## <a name="why-use-an-application-trigger"></a>Application 트리거를 사용 하는 이유
+## <a name="why-use-an-application-trigger"></a>응용 프로그램 트리거를 사용하는 이유
 
-포그라운드 앱에서 코드는 별도 프로세스를 실행 하는 **ApplicationTrigger** 를 사용 합니다. 앱이 포그라운드 앱을 닫은 경우에-백그라운드에서 수행 해야 하는 작업 하는 경우는 **ApplicationTrigger** 적합 합니다. 백그라운드 작업을 중지 해야 하는 경우 때 앱을 닫거나 [확장 실행](run-minimized-with-extended-execution.md) 를 대신 사용 해야 하는 다음 포그라운드 프로세스의 상태에 연결 해야 합니다.
+**ApplicationTrigger**를 사용하여 포그라운드 앱에서 별도의 프로세스로 코드를 실행합니다. 앱에 사용자가 포그라운드 앱을 닫더라도 배경에서 수행해야 하는 작업이 있는 경우 **ApplicationTrigger**가 적합합니다. 백그라운드 작업이 앱이 닫힐 때 정지되어야 하거나 프로그라운드 프로세스의 상태에 연결되어야 하는 경우 [확장 실행](run-minimized-with-extended-execution.md)을 대신 사용해야 합니다.
 
-## <a name="create-an-application-trigger"></a>응용 프로그램 트리거 만들기
+## <a name="create-an-application-trigger"></a>응용 프로그램 트리거를 만듭니다.
 
-새 [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger)를 만듭니다. 아래 코드 조각 에서처럼 필드에서이 저장할 수 있습니다. 이 편의 위해 신호 트리거 하려고 하면 나중에 새 인스턴스를 만들 필요가 없습니다. 하지만 트리거를 알리기 위해 **ApplicationTrigger** 인스턴스를 사용할 수 있습니다.
+새 [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger)를 만듭니다. 아래 조각에서 완성되면 필드에 저장할 수 있습니다. 이는 편의상 나중에 트리거 신호를 보내려고 할 때 새 인스턴스를 만들 필요가 없게 하기 위함입니다. 그러나 **ApplicationTrigger** 인스턴스를 사용하여 트리거 신호를 보낼 수 있습니다.
 
 ```csharp
 // _AppTrigger is an ApplicationTrigger field defined at a scope that will keep it alive
@@ -54,9 +54,9 @@ ApplicationTrigger ^ _AppTrigger = ref new ApplicationTrigger();
 
 ## <a name="optional-add-a-condition"></a>(옵션) 조건 추가
 
-작업이 실행 될 때 제어 하는 백그라운드 작업 조건을 만들 수 있습니다. 조건이 충족 될 때까지 실행 되는 백그라운드 작업을 조건이 합니다. 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)참조 합니다.
+작업이 실행되는 시간을 제어하는 백그라운드 작업 조건을 만들 수 있습니다. 조건이 맞을 때까지 조건이 백그라운드 작업 실행을 막습니다. 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)을 참조하세요.
 
-이 예제에서는 한 번 트리거되는 조건 **InternetAvailable** 로 설정 되어 작업 인터넷 액세스를 사용할 수에 실행 합니다. 가능한 조건 목록은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
+이 예제에서는 조건으로 설정 됩니다 **InternetAvailable** 트리거할 수 있도록, 한 번에 작업 인터넷 액세스를 사용할 수 있으면을 실행 합니다. 가능한 조건 목록은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -71,11 +71,11 @@ Windows::ApplicationModel::Background::SystemCondition internetCondition{
 SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionType::InternetAvailable)
 ```
 
-자세한 내용은 조건 및 백그라운드 트리거 유형에 대 한 [백그라운드 작업을 사용 하 여 앱 지원](support-your-app-with-background-tasks.md)을 참조 하세요.
+조건 및 백그라운드 트리거 유형에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
 ##  <a name="call-requestaccessasync"></a>RequestAccessAsync() 호출
 
-**ApplicationTrigger** 백그라운드 작업을 등록 하기 전에 사용자를 사용할 경우 사용자가 앱에 대 한 백그라운드 작업을 비활성화 한 수 있으므로 백그라운드 작업의 수준을 확인 하려면 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494) 호출 합니다. [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) 방법으로 사용자에 대 한 자세한 정보에 대 한 백그라운드 작업에 대 한 설정을 제어할 수를 참조 하세요.
+사용자가 앱에 대한 백그라운드 작업을 비활성화했을 수 있으므로 **ApplicationTrigger** 백그라운드 작업을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494)를 호출하여 사용자가 허용하는 백그라운드 작업 수준을 결정합니다. 사용자가 백그라운드 작업에 대한 설정을 제어하는 방법은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)를 참조하세요.
 
 ```csharp
 var requestStatus = await Windows.ApplicationModel.Background.BackgroundExecutionManager.RequestAccessAsync();
@@ -88,9 +88,9 @@ if (requestStatus != BackgroundAccessStatus.AlwaysAllowed)
 
 ## <a name="register-the-background-task"></a>백그라운드 작업 등록
 
-백그라운드 작업 등록 함수를 호출하여 백그라운드 작업을 등록합니다. 백그라운드 작업 등록 및 샘플 코드는 아래에 있는 **RegisterBackgroundTask()** 메서드의 정의를 보려면 자세한 내용은 [백그라운드 작업 등록](register-a-background-task.md)을 참조 하세요.
+백그라운드 작업 등록 함수를 호출하여 백그라운드 작업을 등록합니다. 백그라운드 작업 등록에 대한 자세한 내용과 아래 샘플 코드의 **RegisterBackgroundTask()** 메서드 정의를 보려면 [백그라운드 작업 등록](register-a-background-task.md)을 참조하세요.
 
-포그라운드 프로세스의 수명을 연장 하는 응용 프로그램 트리거를 사용 하 여를 고려 하는 경우 [확장 실행](run-minimized-with-extended-execution.md) 을 대신 사용 하는 것이 좋습니다. Application 트리거에서 작업을 수행 하려면 별도로 호스트 프로세스를 만들기 위해 설계 되었습니다. 다음 코드 조각은 out of process 백그라운드 트리거를 등록합니다.
+Application 트리거를 사용하여 포그라운드 프로세스의 수명을 연장하려는 경우 [확장 실행](run-minimized-with-extended-execution.md)을 대신 사용합니다. Application 트리거는 별도로 호스트되는 작업용 프로세스를 만들도록 설계되었습니다. 다음 코드 조각은 Out-of-process 백그라운드 트리거를 등록합니다.
 
 ```csharp
 string entryPoint = "Tasks.ExampleBackgroundTaskClass";
@@ -118,48 +118,48 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 
 ## <a name="trigger-the-background-task"></a>백그라운드 작업 트리거
 
-백그라운드 작업을 트리거하기 전에 [BackgroundTaskRegistration](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) 사용 하 여 백그라운드 작업 등록 되어 있는지 확인 합니다. 이때 모든 백그라운드 작업 등록 되어 있는지 확인 하는 앱 실행 중입니다.
+백그라운드 작업을 트리거하기 전에 [BackgroundTaskRegistration](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration)을 사용하여 백그라운드 작업이 등록되었는지 확인합니다. 앱 시작 중에 모든 백그라운드 작업이 등록되었는지 확인하는 것이 좋습니다.
 
-[ApplicationTrigger.RequestAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtrigger)를 호출 하 여 백그라운드 작업을 트리거하십시오. **ApplicationTrigger** 인스턴스를 수행 합니다.
+[ApplicationTrigger.RequestAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtrigger)를 호출하여 백그라운드 작업을 트리거합니다. **ApplicationTrigger** 인스턴스라면 다 됩니다.
 
-자체는 백그라운드 작업 또는 앱 백그라운드 상태를 실행 중인 경우 **ApplicationTrigger.RequestAsync** 은 호출 수 없습니다 ( [앱 수명 주기](app-lifecycle.md) 응용 프로그램 상태에 대 한 자세한 내용은 참조).
-사용자가 앱 백그라운드 작업을 수행 하지 못하도록 하는 에너지 또는 개인 정보 보호 정책을 설정 하는 경우 [DisabledByPolicy](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtriggerresult) 반환할 수 있습니다.
-또한 한 번에 하나의 AppTrigger 실행할 수 있습니다. 다른 이미 실행 중인 동안는 AppTrigger를 실행 하려고 하면 [CurrentlyRunning](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtriggerresult)반환 합니다.
+앱이 백그라운드 실행 상태일 때 또는 백그라운드 작업 자체에서 **ApplicationTrigger.RequestAsync**를 호출할 수 없습니다. 응용 프로그램 상태에 대한 자세한 내용은 [앱 수명 주기](app-lifecycle.md)를 참조하세요.
+사용자가 앱의 백그라운드 작업 실행을 차단하는 에너지 정책이나 개인정보 보호정책을 설정한 경우 [DisabledByPolicy](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtriggerresult)를 반환할 수 있습니다.
+또한 한 번에 한 AppTrigger만 실행할 수 있습니다. AppTrigger가 실행 중인 동안 다른 AppTrigger를 실행하려고 하면 [CurrentlyRunning](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtriggerresult)이 반환됩니다.
 
 ```csharp
 var result = await _AppTrigger.RequestAsync();
 ```
 
-## <a name="manage-resources-for-your-background-task"></a>백그라운드 작업에 대 한 리소스를 관리 합니다.
+## <a name="manage-resources-for-your-background-task"></a>백그라운드 작업에 대한 리소스 관리
 
-[BackgroundExecutionManager.RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx)를 사용하면 사용자가 앱의 백그라운드 작업을 제한하기로 결정했는지 확인할 수 있습니다. 배터리 사용 정보를 파악하고 사용자가 원하는 작업을 완료해야 하는 경우에 백그라운드에서만 실행해야 합니다. [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) 방법으로 사용자에 대 한 자세한 정보에 대 한 백그라운드 작업에 대 한 설정을 제어할 수를 참조 하세요.  
+[BackgroundExecutionManager.RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx)를 사용하면 사용자가 앱의 백그라운드 작업을 제한하기로 결정했는지 확인할 수 있습니다. 배터리 사용 정보를 파악하고 사용자가 원하는 작업을 완료해야 하는 경우에 백그라운드에서만 실행해야 합니다. 사용자가 백그라운드 작업에 대한 설정을 제어하는 방법은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)를 참조하세요.  
 
-- 메모리: 키가 있는지 확인 하는 운영 체제를 실행 하려면 백그라운드 작업은 앱의 메모리와 에너지 사용을 조정 합니다. [메모리 관리 Api](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx) 를 사용 하 여 백그라운드 작업을 사용 하는 메모리 양을 확인 합니다. 백그라운드 작업 사용 하 여 더 많은 메모리, 다른 앱이 포그라운드에서 실행 상태로 유지 하려면 운영 체제에 대 한 더 어려워집니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.  
-- CPU 시간: 백그라운드 작업은 트리거 유형에 따라 가져오는 벽 시계 사용 시간으로 제한 됩니다. Application 트리거에 의해 트리거된 백그라운드 작업은 약 10 분으로 제한 됩니다.
+- 메모리: 앱의 메모리 및 에너지 사용 하 여 튜닝는 운영 체제를 실행 하 여 백그라운드 작업을 사용할 수 있음을 보장 하는 키입니다. [메모리 관리 API](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx)를 사용하면 백그라운드 작업에서 사용 중인 메모리의 양을 확인할 수 있습니다. 백그라운드 작업이 사용하는 메모리가 많을수록 다른 앱이 포그라운드에 있을 때 OS에서 백그라운드 작업을 계속 실행하기 어렵습니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.  
+- CPU 시간: 백그라운드 작업 트리거 형식에 따라 가져오기는 벽 시계 사용 기간으로 제한 됩니다. Application 트리거로 트리거된 백그라운드 작업은 약 10초로 제한됩니다.
 
 백그라운드 작업에 적용되는 리소스 제약 조건은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-Windows 10부터 더 이상 필요는 백그라운드 작업을 활용 하기 위해 잠금 화면에 앱을 추가 사용자에 대 한.
+Windows 10 부터는 더 이상 필요는 백그라운드 작업을 사용 하려면 잠금 화면에 앱을 추가 하려면 사용자에 대 한.
 
-백그라운드 작업 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) 먼저 호출한 경우는 **ApplicationTrigger** 를 사용 하 여 실행 됩니다.
+백그라운드 작업은 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 먼저 호출한 경우에만 **ApplicationTrigger**를 사용하여 실행됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [백그라운드 작업 지침](guidelines-for-background-tasks.md)
+* [백그라운드 작업에 대 한 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)
-* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md).
-* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
-* [백그라운드 작업 디버그](debug-a-background-task.md)
+* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
+* [만들고 out-of-process-백그라운드 태스크를 등록 합니다.](create-and-register-a-background-task.md)
+* [백그라운드 작업 디버깅](debug-a-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
-* [앱이 백그라운드로 이동할 때 메모리 회수](reduce-memory-usage.md)
-* [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
-* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](https://go.microsoft.com/fwlink/p/?linkid=254345)
-* [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
-* [확장 실행을 사용하여 앱 일시 중단 연기](run-minimized-with-extended-execution.md)
+* [앱은 배경으로 이동 하는 경우 사용 가능한 메모리](reduce-memory-usage.md)
+* [취소 된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
+* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [백그라운드 작업 진행률 및 완료를 모니터링 합니다.](monitor-background-task-progress-and-completion.md)
+* [확장된 실행을 사용 하 여 응용 프로그램 일시 중단을 연기 합니다.](run-minimized-with-extended-execution.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
-* [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
-* [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
+* [백그라운드 작업과 함께 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
+* [백그라운드 작업을 실행 하기 위한 조건을 설정 합니다.](set-conditions-for-running-a-background-task.md)
 * [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)

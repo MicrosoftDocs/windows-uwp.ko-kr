@@ -1,19 +1,19 @@
 ---
-Description: The master/detail pattern displays a master list and the details for the currently selected item. This pattern is frequently used for email and contact lists/address books.
+Description: 마스터/세부 정보 패턴은 현재 선택한 항목에 대한 마스터 목록과 세부 정보를 표시합니다. 이 패턴은 메일 및 연락처 목록/주소록에 자주 사용됩니다.
 title: 마스터/세부
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b9d8d8a381c0fce186b39853f57d35c1dce4b8f8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940642"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601258"
 ---
 # <a name="masterdetails-pattern"></a>마스터/세부 정보 패턴
 
@@ -21,7 +21,7 @@ ms.locfileid: "8940642"
 
 마스터/세부 정보 패턴에는 마스터 창(일반적으로 [목록 보기](lists.md)와 함께) 및 콘텐츠의 세부 정보 창이 있습니다. 마스터 목록의 항목을 선택하면 세부 정보 창이 업데이트됩니다. 이 패턴은 메일 및 주소록에 자주 사용됩니다.
 
-> **중요 API**: [ListView 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+> **중요 한 Api**: [ListView 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [분할 된 뷰 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![마스터/세부 정보 패턴의 예](images/HIGSecOne_MasterDetail.png)
 
@@ -95,7 +95,7 @@ ms.locfileid: "8940642"
 다음 샘플은 적응형 레이아웃을 통해 마스터/세부 정보 패턴을 구현하고 정적, 데이터베이스 및 온라인 리소스에 대한 데이터 바인딩을 보여줍니다. 
 - [마스터/세부 정보 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
 - [마스터/세부 정보 및 선택 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
-- [Windows Template Studio 마스터/세부 정보 샘플](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
+- [Windows 템플릿 Studio 마스터/세부 정보 샘플](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
 - [고객 주문 데이터베이스 샘플](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
 - [RSS 수집기 샘플](https://github.com/Microsoft/Windows-appsample-rssreader)
 
@@ -105,4 +105,4 @@ ms.locfileid: "8940642"
 - [검색](search.md)
 - [앱 및 명령 모음](app-bars.md)
 - [ListView 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
-- [SplitView 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+- [분할 된 뷰 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)

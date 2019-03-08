@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 수익 창출
 ms.localizationpriority: medium
 ms.openlocfilehash: 92d85f81be25eed5f0a43cafb4bb34d9f879c827
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050926"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606338"
 ---
 #  <a name="monetization-for-games"></a>게임의 수익 창출
 
@@ -20,14 +20,14 @@ ms.locfileid: "9050926"
 과거에는 게임에 가격을 지정하고 사람들이 스토어에서 구입하기만 기다리면 되었습니다. 하지만 요즘에는 옵션이 있습니다. "오프라인" 스토어에 게임을 배포하거나, 온라인으로 게임을 판매하거나(실제 또는 소프트 카피), 모든 사람이 무료로 게임을 즐길 수 있도록 하면서 구매 가능한 일종의 광고나 게임 내 항목을 포함하도록 선택할 수 있습니다. 게임 또한 더 이상 독립 실행형 제품이 아닙니다. 주 게임 외에 구매할 수 있는 추가 콘텐츠가 함께 제공되기도 합니다.
 
 다음 방법 중 한 가지 이상으로 UWP 게임을 홍보하고 수익을 창출할 수 있습니다.
-* 보안, 온라인 스토어 제품 [전 세계 배포](#worldwide-distribution-channel)되는 Microsoft Store에 게임을 저장 합니다. 전 세계의 게이머가 [사용자가 설정한 가격](#set-a-price-for-your-game)으로 온라인으로 게임을 구입할 수 있습니다.
+* 게임에는 보안이 적용 되는 Microsoft Store put, 온라인 제품을 상점 [전세계 배포](#worldwide-distribution-channel)합니다. 전 세계의 게이머가 [사용자가 설정한 가격](#set-a-price-for-your-game)으로 온라인으로 게임을 구입할 수 있습니다.
 * Windows SDK의 API를 사용하여 [게임에서 바로 구매](#in-game-purchases)를 만듭니다. 게이머는 게임 내에서 항목을 구입하거나 추가 장비, 스킨, 지도 또는 게임 레벨과 같은 추가 콘텐츠를 구입할 수 있습니다.
 * [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)의 API를 사용하여 광고 네트워크의 광고를 표시합니다. [게임에 광고를 표시](#display-ads-in-your-game)하고 게이머에게 게임 보상으로 비디오 광고를 볼 수 있는 옵션을 제공합니다.
 * [광고 캠페인을 통해 게임 잠재력을 극대화](#maximize-your-games-potential-through-ad-campaigns)합니다. 유료, 커뮤니티(무료) 또는 하우스(무료) 광고 캠페인을 사용하여 게임을 홍보함으로써 사용자 기반을 넓힙니다.
 
 ## <a name="worldwide-distribution-channel"></a>전 세계 배포 채널
 
-Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상의 국가 및 지역에서 전 세계 다양 한 형식의 결제 Visa, Mastercard, PayPal 등을 통해 한 지원 합니다. 전체 목록은 국가 및 지역, [지역/국가 선택 정의](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)참조 하세요.
+Microsoft Store 가능 게임 다운로드에 사용할 수 있는 200 개 이상의 국가 및 지역에서 전 세계 다양 한 형태의 결제 Visa, Mastercard, PayPal 등을 통해 청구 지원 합니다. 국가 및 지역의 전체 목록을 참조 하세요 [정의 시장 선택](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)합니다.
 
 ## <a name="set-a-price-for-your-game"></a>게임에 대한 가격 설정
 
@@ -37,7 +37,7 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 
 ### <a name="base-price"></a>기본 가격
 
-게임의 기본 가격은 게임이 _유료_로 분류되는지, _무료_로 분류되는지를 결정합니다. [파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하 여 국가 및 지역에 따라 기본 가격을 구성할 수 있습니다.
+게임의 기본 가격은 게임이 _유료_로 분류되는지, _무료_로 분류되는지를 결정합니다. 사용할 수 있습니다 [파트너 센터](https://partner.microsoft.com/dashboard) 국가 및 지역을 기반으로 기본 가격을 구성 합니다.
 가격을 결정하는 프로세스에는 [다른 국가로 판매할 때의 세금 책임](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) 및 [특정 시장에 대한 가격 고려 사항](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets)이 포함될 수 있습니다. [특정 시장에 대한 사용자 지정 가격을 설정](../publish/set-and-schedule-app-pricing.md#override-base-price-for-specific-markets)할 수도 있습니다.
 
 ### <a name="sale-price"></a>판매 가격
@@ -47,18 +47,18 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 
 ## <a name="in-game-purchases"></a>게임에서 바로 구매
 
-게임에서 바로 구매는 게임 내에서 제품을 구매하는 것을 말합니다. 일반적으로 _앱에서 바로 구매_라고도 알려져 있습니다. Microsoft 스토어에서 이러한 제품 _추가 기능을_이라고 합니다. 파트너 센터를 통해 [추가 기능에 게시 됩니다](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) . 또한 게임 코드에서 추가 기능을 사용하도록 설정해야 합니다.
+게임에서 바로 구매는 게임 내에서 제품을 구매하는 것을 말합니다. 일반적으로 _앱에서 바로 구매_라고도 알려져 있습니다. Microsoft Store 이러한 제품 이라고 _추가 기능_합니다. [추가 기능 게시](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) 파트너 센터를 통해. 또한 게임 코드에서 추가 기능을 사용하도록 설정해야 합니다.
 
 ### <a name="types-of-add-ons"></a>추가 기능 유형
 
 스토어에는 _지속성_ 또는 _소모성_의 두 가지 추가 기능 유형을 만들 수 있습니다. 지속성은 지정된 기간 동안 지속되며 만료될 때까지 한 번만 구입할 수 있는 항목을 나타냅니다. 소모성은 반복해서 구입하여 사용할 수 있는 항목을 나타냅니다.
 
-소모성 항목을 만들 때는 이러한 항목을 추적하는 방법을 결정해야 합니다. 즉, _개발자가 관리하는지_ 또는 _스토어에서 관리하는지_ 여부를 추적해야 합니다(이 기능은 Windows10 버전 1607부터 사용할 수 있음). 개발자 관리 소모 성 책임이 추적 하기 위해; 게이머의 항목 잔액 스토어 관리 소모 성, Microsoft Store의 경우 추적 항목 잔액 드립니다. 자세한 내용은 [소모성 추가 기능 개요](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons)를 참조하세요.
+소모성 항목을 만들 때는 이러한 항목을 추적하는 방법을 결정해야 합니다. 즉, _개발자가 관리하는지_ 또는 _스토어에서 관리하는지_ 여부를 추적해야 합니다(이 기능은 Windows 10 버전 1607부터 사용할 수 있음). 게이머;에 대 한 항목의 분산 된 추적에 대 한 책임은 개발자 관리 소모품을 사용 하 여 저장소 관리 소모품을 사용 하 여 Microsoft Store 추적 항목의 분산 있습니다. 자세한 내용은 [소모성 추가 기능 개요](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons)를 참조하세요.
 
 ### <a name="create-in-game-purchases"></a>게임에서 바로 구매 만들기
 
-최신 앱에서 바로 구매 및 라이선스 정보 API는 Windows SDK(Windows10, 버전 1607부터)의 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있습니다. 1607 이상 릴리스를 대상으로 하는 새 게임을 개발하는 경우 __Windows.Services.Store__ 네임스페이스가 최신 추가 기능 유형을 지원하 고 더 나은 성능을 제공하기 때문에 권장됩니다.
-또한 이후 제품 및 파트너 센터 및 스토어에서 지 원하는 기능 유형과 호환 되도록 설계 된 것입니다. 이전 버전의 Windows 10용으로 개발할 때는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 대신 사용합니다.
+최신 앱에서 바로 구매 및 라이선스 정보 API는 Windows SDK(Windows 10, 버전 1607부터)의 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있습니다. 1607 이상 릴리스를 대상으로 하는 새 게임을 개발하는 경우 __Windows.Services.Store__ 네임스페이스가 최신 추가 기능 유형을 지원하 고 더 나은 성능을 제공하기 때문에 권장됩니다.
+또한 향후 유형의 제품 및 파트너 센터와 저장소를 지 원하는 기능을 사용 하 여 호환 되도록 설계 되었습니다. 이전 버전의 Windows 10용으로 개발할 때는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 대신 사용합니다.
 
 자세한 내용은 [앱에서 바로 구매 및 평가판](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials)을 참조하세요.
 
@@ -78,31 +78,31 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 
 게임 개발 동안 추가 기능을 만들려면
 1. [패키지 만들기](#create-a-package)
-2. [게임을 숨김으로 게시](#publish-the-game-as-hidden)
-3. [Visual Studio의 게임 솔루션을 스토어에 연결](#associate-your-game-solution-with-the-store)
-4. [스토어에서 추가 기능 만들기](#create-an-add-on-in-the-store)
+2. [숨김으로 게임 게시](#publish-the-game-as-hidden)
+3. [저장소를 사용 하 여 Visual Studio에서 게임 솔루션 연결](#associate-your-game-solution-with-the-store)
+4. [저장소에 추가 기능 만들기](#create-an-add-on-in-the-store)
 
 #### <a name="create-a-package"></a>패키지 만들기
 
-게임이 게시되려면 최소 Windows 앱 인증 요구 사항을 충족해야 합니다. Windows10 SDK의 일부인 [Windows 앱 인증 키트](https://msdn.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)를 통해 게임 테스트를 실행하여 스토어에 게시할 준비가 되었는지 확인할 수 있습니다. Windows 앱 인증 키트를 포함하는 Windows10 SDK를 아직 다운로드하지 않은 경우 [Windows10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)로 이동합니다.
+게임이 게시되려면 최소 Windows 앱 인증 요구 사항을 충족해야 합니다. Windows 10 SDK의 일부인 [Windows 앱 인증 키트](https://msdn.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)를 통해 게임 테스트를 실행하여 스토어에 게시할 준비가 되었는지 확인할 수 있습니다. Windows 앱 인증 키트를 포함하는 Windows 10 SDK를 아직 다운로드하지 않은 경우 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)로 이동합니다.
 
 스토어에 업로드할 수 있는 패키지를 만들려면
 
 1. Visual Studio에서 게임 솔루션을 엽니다.
 2. Visual Studio 내에서 __프로젝트__ > __스토어__ > __앱 패키지 만들기...__ 로 이동합니다.
-3. 에 대 한 합니다 __Microsoft Store에 업로드할 패키지를 작성 하 시겠습니까?__ 옵션을 __예__를 선택 합니다.
-4. [파트너 센터](https://partner.microsoft.com/dashboard) 개발자 계정에 로그인 합니다. 또는 개발자 계정이 없으면 [등록](https://developer.microsoft.com/store/register)합니다.
+3. 에 대 한 합니다 __Microsoft Store 업로드할 패키지를 작성 하 시겠습니까?__ 옵션을 선택 __예__합니다.
+4. 에 로그인 하 여 [파트너 센터](https://partner.microsoft.com/dashboard) 개발자 계정. 또는 개발자 계정이 없으면 [등록](https://developer.microsoft.com/store/register)합니다.
 5. 업로드 패키지를 만들 앱을 선택합니다. 앱 제출을 아직 만들지 않은 경우 새 앱 이름을 제공하여 새 제출을 만듭니다. 자세한 내용은 [이름을 예약하여 앱 만들기](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)를 참조하세요.
 6. 패키지가 성공적으로 만들어진 후에 __Windows 앱 인증 키트 시작__을 클릭하여 테스트 프로세스를 시작합니다.
 7. 모든 오류를 수정하여 게임 패키지를 만듭니다.
 
 #### <a name="publish-the-game-as-hidden"></a>게임을 숨김으로 게시
 
-1. [파트너](https://partner.microsoft.com/dashboard) 센터로 이동한 다음에 로그인 합니다.
+1. 로 이동 [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 합니다.
 2. __대시보드 개요__ 또는 __모든 앱__ 페이지에서 사용하려는 앱을 클릭합니다. 앱 제출을 아직 만들지 않은 경우 __새 앱 만들기__를 클릭하고 이름을 예약합니다.
 3. __앱 개요__ 페이지에서 __제출 시작__을 클릭합니다.
 4. 새 제출을 구성합니다. 제출 페이지에서 다음을 수행합니다.
-    * __가격 책정 및 가용성__을 클릭합니다. __표시 여부__ 섹션에서 '__이 앱 숨기기 및 판매 중지...__' 보장 하기 위해 개발 팀만 게임에 대 한 액세스에 선택 합니다. 자세한 내용은 [배포 및 표시 여부](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility)를 참조하세요.
+    * __가격 책정 및 가용성__을 클릭합니다. 에 __가시성__ 섹션을 선택 '__이 앱 숨기기 및 취득을 방지 하는 중...__ ' 확인만 개발 팀이 게임에 대 한 액세스. 자세한 내용은 [배포 및 표시 여부](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility)를 참조하세요.
     * __속성__을 클릭합니다. __범주 및 하위 범주__ 섹션에서 __게임__을 선택한 다음 게임에 적합한 하위 범주를 선택합니다.
     * __연령별 등급__을 클릭합니다. 질문지를 정확하게 작성합니다.
     * __패키지__를 클릭합니다. 이전 단계에서 만든 게임 패키지를 업로드합니다.
@@ -118,7 +118,7 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 Visual Studio에서 게임 솔루션을 연 상태로 다음 작업을 수행합니다.
 
 1. __프로젝트__ > __스토어__ > __응용 프로그램을 스토어에 연결...__ 로 이동합니다.
-2. 파트너 센터 개발자 계정에 로그인 하 고이 솔루션을 연결할 앱 이름을 선택 합니다.
+2. 파트너 센터 개발자 계정에 로그인 하 고 사용 하 여이 솔루션에 연결할 앱 이름을 선택 합니다.
 3. __Package.appxmanifest.xml 파일__을 두 번 클릭하고 __패키징__으로 이동하여 게임이 올바르게 연결되었는지 확인합니다.
 
 스토어에 게시하여 라이브 상태로 등록된 게임에 솔루션을 연결한 경우 활성 라이선스가 솔루션에 적용되므로 게임용 추가 기능을 더욱 쉽게 만들 수 있습니다. 자세한 내용은 [앱 패키징](https://msdn.microsoft.com/windows/uwp/packaging/index)을 참조하세요.
@@ -127,10 +127,10 @@ Visual Studio에서 게임 솔루션을 연 상태로 다음 작업을 수행합
 
 추가 기능을 만들 때 적절한 게임 제출에 연결하고 있는지 확인합니다. 추가 기능과 연결된 모든 다양한 정보를 구성하는 방법에 대한 자세한 내용은 [추가 기능 제출](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions)을 참조하세요.
 
-1. [파트너](https://partner.microsoft.com/dashboard) 센터로 이동한 다음에 로그인 합니다.
+1. 로 이동 [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 합니다.
 2. __대시보드 개요__ 또는 __모든 앱__ 페이지에서 추가 기능을 구현하려는 앱을 클릭합니다.
 3. __앱 개요__ 페이지의 __추가 기능__ 섹션에서 __새 추가 기능 만들기__를 선택합니다.
-4. 추가 기능에 대한 제품 유형으로 __개발자 관리 소모 __, __스토어 관리 소모성__ 또는 __지속성__ 중 하나를 선택합니다.
+4. 추가 기능에 대한 제품 유형으로 __개발자 관리 소모__ , __스토어 관리 소모성__ 또는 __지속성__ 중 하나를 선택합니다.
 5. 게임 코드에 이 추가 기능을 통합하는 경우 문자열 변수로 사용할 고유 제품 ID를 입력합니다. 이 ID는 소비자에게 표시되지 않습니다. 자세한 내용은 [앱 제품 유형 및 제품 ID 설정](https://msdn.microsoft.com/windows/uwp/publish/set-your-add-on-product-id)을 참조하세요.
 
 추가 기능에 대한 기타 구성은 다음과 같습니다.
@@ -138,7 +138,7 @@ Visual Studio에서 게임 솔루션을 연 상태로 다음 작업을 수행합
 * [가격 책정 및 가용성](https://msdn.microsoft.com/windows/uwp/publish/set-add-on-pricing-and-availability)
 * [스토어 목록](https://msdn.microsoft.com/windows/uwp/publish/create-add-on-store-listings)
 
-게임에 많은 추가 기능이 있는 경우 만들 수 있습니다을 프로그래밍 방식으로 __Microsoft Store 제출 API__사용 하 여. 자세한 내용은 참조 [만들기 및 Microsoft Store 서비스를 사용 하 여 제출 관리](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services)합니다.
+게임 많은 추가 기능에 만들면 이러한 프로그래밍 방식으로 사용 하 여 합니다 __Microsoft Store 제출 API__합니다. 자세한 내용은 참조 하세요. [만들기 및 Microsoft Store 서비스를 사용 하 여 제출 관리](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services)합니다.
 
 ## <a name="display-ads-in-your-game"></a>게임에서 광고 표시
 
@@ -171,17 +171,17 @@ Microsoft Advertising SDK의 [AdControl](https://msdn.microsoft.com/library/wind
 
 이 연습에서는 __AdControl__, __InterstitialAd__ 및 __NativeAd__를 사용하여 광고를 구현하는 방법을 보여 줍니다.
 
-* [XAML 및 .NET으로 배너 광고 만들기](https://msdn.microsoft.com/windows/uwp/monetize/adcontrol-in-xaml-and--net)
-* [HTML5 및 JavaScript로 배너 광고 만들기](https://msdn.microsoft.com/windows/uwp/monetize/adcontrol-in-html-5-and-javascript)
+* [XAML 및.NET에서 배너 광고를 만듭니다](https://msdn.microsoft.com/windows/uwp/monetize/adcontrol-in-xaml-and--net)
+* [HTML5 및 JavaScript 배너 광고 만들기](https://msdn.microsoft.com/windows/uwp/monetize/adcontrol-in-html-5-and-javascript)
 * [중간 광고 만들기](https://msdn.microsoft.com/windows/uwp/monetize/interstitial-ads)
-* [기본 광고 만들기](https://msdn.microsoft.com/windows/uwp/monetize/native-ads)
+* [네이티브 광고 만들기](https://msdn.microsoft.com/windows/uwp/monetize/native-ads)
 
 개발하는 동안 [테스트 광고 단위 값](../monetize/test-mode-values.md)을 사용하여 광고가 렌더링되는 방식을 확인할 수 있습니다. 이러한 테스트 광고 단위 값은 위의 연습에도 사용됩니다.
 
 디자인 및 구현 프로세스에 도움이 되는 몇 가지 모범 사례는 다음과 같습니다.
 
-* [배너 광고 모범 사례](https://msdn.microsoft.com/windows/uwp/monetize/ui-and-user-experience-guidelines)
-* [중간 광고 모범 사례](https://msdn.microsoft.com/windows/uwp/monetize/ui-and-user-experience-guidelines#interstitialbestpractices10)
+* [배너 광고에 대 한 모범 사례](https://msdn.microsoft.com/windows/uwp/monetize/ui-and-user-experience-guidelines)
+* [중간 광고에 대한 모범 사례](https://msdn.microsoft.com/windows/uwp/monetize/ui-and-user-experience-guidelines#interstitialbestpractices10)
 
 광고 표시 안 됨, 블랙 박스 깜박임 및 사라짐 또는 광고가 새로 고쳐지지 않음 등의 일반적인 개발 문제에 대한 해결 방법을 보려면 [문제 해결 가이드](https://msdn.microsoft.com/windows/uwp/monetize/troubleshooting-guides)를 참조하세요.
 
@@ -205,11 +205,11 @@ Smaato에서는 UWP 앱 및 게임에 배너 광고를 통합할 수 있습니�
 
 AdDuplex를 사용하여 게임에서 배너 또는 중간 광고를 구현할 수 있습니다.
 
-Windows10 XAML 프로젝트에 직접 AdDuplex를 통합하는 방법을 알아보려면 AdDuplex 웹 사이트로 이동합니다.
-* 광고 배너: [Windows10 SDK for XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage)
-* 중간 광고: [Windows10 XAML AdDuplex 중간 광고 설치 및 사용](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage)
+Windows 10 XAML 프로젝트에 직접 AdDuplex를 통합하는 방법을 알아보려면 AdDuplex 웹 사이트로 이동합니다.
+* 배너 광고: [Windows 10 XAML 용 SDK](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage)
+* 중간 광고: [Windows 10 XAML AdDuplex 중간 Ad 설치 및 사용](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage)
 
-Unity를 사용하여 만든 Windows10 UWP 게임에 AdDuplex SDK를 통합하는 방법에 대한 자세한 내용은 [Unity 앱 설치 및 사용에 대한 Windows10 SDK](https://adduplex.zendesk.com/hc/en-us/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage)를 참조하세요.
+Unity를 사용하여 만든 Windows 10 UWP 게임에 AdDuplex SDK를 통합하는 방법에 대한 자세한 내용은 [Unity 앱 설치 및 사용에 대한 Windows 10 SDK](https://adduplex.zendesk.com/hc/en-us/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage)를 참조하세요.
 
 ## <a name="maximize-your-games-potential-through-ad-campaigns"></a>광고 캠페인을 통해 게임 잠재력 극대화
 
@@ -229,5 +229,5 @@ Unity를 사용하여 만든 Windows10 UWP 게임에 AdDuplex SDK를 통합하�
 * [계정 유형, 위치 및 수수료](https://msdn.microsoft.com/windows/uwp/publish/account-types-locations-and-fees)
 * [분석](https://msdn.microsoft.com/windows/uwp/publish/analytics)
 * [세계화 및 지역화](https://msdn.microsoft.com/windows/uwp/globalizing/globalizing-portal)
-* [앱의 평가판 구현](https://msdn.microsoft.com/windows/uwp/monetize/implement-a-trial-version-of-your-app)
-* [A/B 테스트로 앱 실험 실행](https://msdn.microsoft.com/windows/uwp/monetize/run-app-experiments-with-a-b-testing)
+* [앱의 평가판 버전을 구현 합니다.](https://msdn.microsoft.com/windows/uwp/monetize/implement-a-trial-version-of-your-app)
+* [사용 하 여 앱 실험 실행 / B 테스트](https://msdn.microsoft.com/windows/uwp/monetize/run-app-experiments-with-a-b-testing)

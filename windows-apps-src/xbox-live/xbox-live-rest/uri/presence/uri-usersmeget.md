@@ -8,15 +8,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b06305fde989d0c30570beda5d4b0aabe7bf0518
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918582"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606728"
 ---
 # <a name="get-usersme"></a>GET (/users/me)
-사용자의 XUID 알아야 할 필요 없이 현재 사용자의 [PresenceRecord](../../json/json-presencerecord.md) 를 가져옵니다.
-이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
+현재 사용자의 가져올 [PresenceRecord](../../json/json-presencerecord.md) 사용자 XUID 알 필요 없이 합니다.
+이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`합니다.
 
   * [쿼리 문자열 매개 변수](#ID4EZ)
   * [권한 부여](#ID4EIC)
@@ -30,47 +30,47 @@ ms.locfileid: "8918582"
 
 ## <a name="query-string-parameters"></a>쿼리 문자열 매개 변수
 
-| 매개 변수| 유형| 설명|
+| 매개 변수| 형식| 설명|
 | --- | --- | --- |
-| level| string| 선택 사항입니다. <ul><li><b>사용자</b>: 사용자 노드만 반환 합니다.</li><li><b>장치</b>: 사용자 노드 및 장치 노드를 반환 합니다.</li><li><b>제목</b>: 기본값입니다. 활동을 제외 하 고 전체 트리를 반환합니다.</li><li><b>모든</b>: 활동 수준 상태를 포함 하 여 전체 트리를 반환 합니다.</li></ul> | 
+| level| 문자열| 선택 사항. <ul><li><b>user</b>: 사용자 노드만을 반환합니다.</li><li><b>device</b>: 노드 및 장치 노드 사용자를 반환합니다.</li><li><b>title</b>: Default. 활동을 제외 하 고 전체 트리를 반환합니다.</li><li><b>all</b>: 작업 수준 현재 상태를 포함 하 여 전체 트리를 반환 합니다.</li></ul> | 
 
 <a id="ID4EIC"></a>
 
 
 ## <a name="authorization"></a>권한 부여
 
-| 형식| 필수| 설명| 누락 된 경우 응답|
+| 형식| 필수| 설명| 응답 없는 경우|
 | --- | --- | --- | --- | --- | --- | --- |
-| XUID| 예| 호출자의 Xbox 사용자 ID (XUID)| 403 사용할 수 없음|
+| XUID| 예| 호출자의 Xbox 사용자 ID (XUID)| 403 Forbidden|
 
 <a id="ID4ELD"></a>
 
 
 ## <a name="required-request-headers"></a>필요한 요청 헤더
 
-| 헤더| 유형| 설명|
+| 헤더| 형식| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > "입니다.|
-| xbl 계약 버전 x| string| 이 요청은 전송 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 서비스의 인증 토큰을 클레임 헤더의 유효성을 확인 한 후에 있습니다. 예제 값: 3, vnext 합니다.|
-| 수락| string| 허용 되는 콘텐츠-형식입니다. 유일 하 게 현재 상태에서 지 원하는 응용 프로그램/j 이지만 헤더에 지정 해야 합니다.|
-| Accept Language| string| 응답에는 문자열에 대 한 허용 로캘입니다. 예제 값: EN-US입니다.|
-| 호스트| 문자열| 도메인 이름 서버입니다. 예제 값: presencebeta.xboxlive.com 합니다.|
+| 권한 부여| 문자열| HTTP 인증을 위해 자격 증명을 인증 합니다. 예를 들어 값: "XBL3.0 x=&lt;userhash>;&lt;token>".|
+| x-xbl-contract-version| 문자열| 이 요청은 리디렉션되어야 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 헤더, 인증 토큰의 클레임의 유효성을 확인 한 후 서비스는 합니다. 예제 값: 3, vnext입니다.|
+| 수락| 문자열| 허용 되는 콘텐츠-유형입니다. 현재 상태에서 지 원하는 유일한 application/json이 되었지만 헤더에 지정 해야 합니다.|
+| Accept-Language| 문자열| 응답에는 문자열에 대 한 허용 가능한 로캘입니다. 예제 값: EN-US입니다.|
+| 호스트| 문자열| 서버의 도메인 이름입니다. 예제 값: presencebeta.xboxlive.com 합니다.|
 
 <a id="ID4EPF"></a>
 
 
 ## <a name="optional-request-headers"></a>선택적 요청 헤더
 
-| 헤더| 유형| 설명|
+| 헤더| 형식| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X RequestedServiceVersion|  | 이 요청은 전송 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 서비스의 인증 토큰을 클레임 헤더의 유효성을 확인 한 후에 있습니다. 기본값: 1입니다.|
+| X-RequestedServiceVersion|  | 이 요청은 리디렉션되어야 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 헤더, 인증 토큰의 클레임의 유효성을 확인 한 후 서비스는 합니다. 기본값: 1.|
 
 <a id="ID4EPG"></a>
 
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
 
 <a id="ID4E1G"></a>
 
@@ -80,9 +80,9 @@ ms.locfileid: "8918582"
 <a id="ID4EAH"></a>
 
 
-### <a name="sample-response"></a>예제 응답
+### <a name="sample-response"></a>샘플 응답
 
-이 메서드는 [PresenceRecord](../../json/json-presencerecord.md)를 반환합니다.
+이 메서드는 반환 된 [PresenceRecord](../../json/json-presencerecord.md)합니다.
 
 
 ```cpp
@@ -144,6 +144,6 @@ ms.locfileid: "8918582"
 <a id="ID4ESH"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
 [/users/me](uri-usersme.md)

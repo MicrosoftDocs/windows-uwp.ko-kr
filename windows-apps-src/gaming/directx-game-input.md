@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 입력, 마우스, 터치, 컨트롤
 ms.localizationpriority: medium
 ms.openlocfilehash: 549a4da0614dd1c7cc6884c5556c061edfccaf18
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936166"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599458"
 ---
 # <a name="game-input-for-directx-games"></a>DirectX 게임의 게임 입력
 
@@ -36,7 +36,7 @@ ms.locfileid: "8936166"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="tutorial--adding-move-look-controls-to-your-directx-game.md">게임용 이동-보기 컨트롤</a></p></td>
+<td align="left"><p><a href="tutorial--adding-move-look-controls-to-your-directx-game.md">게임에 대 한 모양을 이동 컨트롤</a></p></td>
 <td align="left"><p>이동 보기 컨트롤을 추가합니다.</p></td>
 </tr>
 <tr class="even">

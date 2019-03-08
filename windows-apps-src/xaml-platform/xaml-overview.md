@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 639f552a240cf8d28d1a2a0ce530315671128746
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931731"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599808"
 ---
 # <a name="xaml-overview"></a>XAML 개요
 
@@ -69,10 +69,10 @@ XAML 파일은 거의 항상 해당 루트 요소에서 기본 XAML 네임스페
 | 용어 | 설명 |
 |------|-------------|
 | [x:Key](x-key-attribute.md) | XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 각 리소스에 대해 고유한 사용자 정의 키를 설정합니다. 키의 토큰 문자열은 **StaticResource** 태그 확장에 대한 인수이며, 나중에 이 키를 사용하여 앱 XAML의 다른 위치에서 달리 사용된 XAML의 XAML 리소스를 검색합니다. |
-| [x:Class](x-class-attribute.md) | XAML 페이지에 대한 코드 숨김을 제공하는 클래스의 코드 네임스페이스 및 코드 클래스 이름을 지정합니다. 이 이름은 앱을 빌드할 때 빌드 작업에 의해 만들어지거나 조인되는 클래스를 지정합니다. 이 빌드 작업은 XAML 태그 컴파일러를 지원하고 앱이 컴파일될 때 태그와 코드 숨김을 결합합니다. XAML 페이지에 대해 코드 숨김을 지원하려면 이런 클래스가 있어야 합니다. 기본 Windows 런타임 활성화 모델의 [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/br209051)입니다. |
-| [x:Name](x-name-attribute.md) | XAML에 정의된 개체 요소를 처리한 후 런타임 코드에 존재하는 인스턴스에 대한 런타임 개체 이름을 지정합니다. XAML에서 **x:Name**을 설정하는 것을 코드에서 명명된 변수를 선언하는 것과 같다고 생각하면 됩니다. 나중에 알게 되겠지만, XAML이 Windows 런타임 앱의 구성 요소로 로드될 때 이와 똑같은 상황이 발생합니다. <br/><div class="alert">**참고** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) 프레임 워크에서 비슷한 속성 이지만 모든 요소가를 지원 합니다. 해당 요소 형식에서 **FrameworkElement.Name**이 지원되지 않는 경우 요소 식별을 위해 **x:Name**을 사용합니다. |
-| [x:Uid](x-uid-directive.md) | 해당 속성 값 중 일부에 대해 지역화된 리소스를 사용해야 하는 요소를 식별합니다. **x:Uid**를 사용하는 방법에 대한 자세한 내용은 [빠른 시작: UI 리소스 변환](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329)을 참조하세요. |
-| [XAML 기본 데이터 형식](xaml-intrinsic-data-types.md) | 이 형식은 특성 또는 리소스에 필요할 경우 단순 값 형식에 대한 값을 지정할 수 있습니다. 이러한 내부 형식은 일반적으로 각 프로그래밍 언어의 내부 정의의 일부로 정의되는 단순 값 형식에 해당합니다. 예를 들어 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) 스토리보드 시각적 상태에서 사용할 **true** 부울 값을 나타내는 개체가 필요할 수 있습니다. XAML 해당 값의 경우 **x:Boolean** 내부 형식을 다음과 같이 개체 요소로 사용합니다. <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> | 
+| [x: 클래스](x-class-attribute.md) | XAML 페이지에 대한 코드 숨김을 제공하는 클래스의 코드 네임스페이스 및 코드 클래스 이름을 지정합니다. 이 이름은 앱을 빌드할 때 빌드 작업에 의해 만들어지거나 조인되는 클래스를 지정합니다. 이 빌드 작업은 XAML 태그 컴파일러를 지원하고 앱이 컴파일될 때 태그와 코드 숨김을 결합합니다. XAML 페이지에 대해 코드 숨김을 지원하려면 이런 클래스가 있어야 합니다. [**Window.Content** ](https://msdn.microsoft.com/library/windows/apps/br209051) 기본 Windows 런타임 정품 인증 모델에서. |
+| [x:Name](x-name-attribute.md) | XAML에 정의된 개체 요소를 처리한 후 런타임 코드에 존재하는 인스턴스에 대한 런타임 개체 이름을 지정합니다. XAML에서 **x:Name**을 설정하는 것을 코드에서 명명된 변수를 선언하는 것과 같다고 생각하면 됩니다. 나중에 알게 되겠지만, XAML이 Windows 런타임 앱의 구성 요소로 로드될 때 이와 똑같은 상황이 발생합니다. <br/><div class="alert">**참고**  [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735)은 프레임워크 내의 비슷한 속성이지만, 모든 요소가 이를 지원하지는 않습니다. 해당 요소 형식에서 **FrameworkElement.Name**이 지원되지 않는 경우 요소 식별을 위해 **x:Name**을 사용합니다. |
+| [x:Uid](x-uid-directive.md) | 해당 속성 값 중 일부에 대해 지역화된 리소스를 사용해야 하는 요소를 식별합니다. 사용 하는 방법에 대 한 자세한 내용은 **X:uid**를 참조 하세요 [빠른 시작: UI 리소스를 번역](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329)합니다. |
+| [XAML 내장 데이터 형식](xaml-intrinsic-data-types.md) | 이 형식은 특성 또는 리소스에 필요할 경우 단순 값 형식에 대한 값을 지정할 수 있습니다. 이러한 내부 형식은 일반적으로 각 프로그래밍 언어의 내부 정의의 일부로 정의되는 단순 값 형식에 해당합니다. 예를 들어 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) 스토리보드 시각적 상태에서 사용할 **true** 부울 값을 나타내는 개체가 필요할 수 있습니다. XAML에서 해당 값을 사용 합니다 **x: 부울** 개체 요소와 같이 기본 형식: <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> | 
 
 XAML 언어 XAML 네임스페이스의 다른 프로그래밍 구조도 있지만 잘 사용되지 않습니다.
 
@@ -86,9 +86,9 @@ Windows 런타임 핵심 라이브러리와 메타데이터 이외의 다른 라
 
 접두사는 태그의 나머지 부분에 있는 해당 XAML 네임스페이스를 참조하는 데 사용되는 태그 토큰을 정의합니다. XAML 네임스페이스 내에서 참조되는 엔터티와 접두사 사이에는 콜론(:)이 있습니다.
 
-예를 들어 `myTypes` 접두사를 `myCompany.myTypes` 네임스페이스에 매핑하는 특성 구문은 `    xmlns:myTypes="using:myCompany.myTypes"`이며 대표적인 요소의 사용 예는 다음과 같습니다. `<myTypes:CustomButton/>`
+접두사를 매핑할 특성 구문 예를 들어 `myTypes` 네임 스페이스 `myCompany.myTypes` 는: `    xmlns:myTypes="using:myCompany.myTypes"`, 대표 요소 사용량이 및: `<myTypes:CustomButton/>`
 
-사용자 지정 형식에 대 한 매핑 XAML 네임 스페이스에 대 한 자세한 내용은 VisualC + + 구성 요소 확장에 대 한 특수 고려 사항을 포함 하 여 (C + + CX), [XAML 네임 스페이스 및 네임 스페이스 매핑을](xaml-namespaces-and-namespace-mapping.md)참조 하세요.
+사용자 지정 형식에 대 한 매핑 XAML 네임 스페이스에 대 한 자세한 내용은 Visual c + + 구성 요소 확장에 대 한 특별 고려 사항 포함 (C + + CX)를 참조 하세요 [XAML 네임 스페이스 및 네임 스페이스 매핑](xaml-namespaces-and-namespace-mapping.md)합니다.
 
 ## <a name="other-xaml-namespaces"></a>다른 XAML 네임스페이스
 
@@ -114,11 +114,11 @@ Windows 런타임은 또한 [{x:Null} 태그 확장](x-null-markup-extension.md)
 
 태그 확장은 일반적으로 앱에 대한 개체 그래프의 일부 다른 부분에서 기존 인스턴스를 반환하거나 값을 런타임까지 지연합니다. 태그 확장을 특성 값으로 사용할 수 있으며 일반적인 사용 예이므로 그렇지 않은 경우 속성 요소 구문이 필요할 수 있는 참조 유형 속성에 대한 값을 제공하는 태그 확장을 종종 볼 수 있습니다.
 
-예를 들어 다음은 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에서 다시 사용할 수 있는 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)을 참조하기 위한 구문입니다. `<Button Style="{StaticResource SearchButtonStyle}"/>`. [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)은 단순 값이 아니라 참조 형식이므로 `{StaticResource}`를 사용하지 않을 경우 [**FrameworkElement.Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성을 설정하려면 XAML 내부에 `<Button.Style>` 속성 요소 및 `<Style>` 정의가 필요합니다.
+예를 들어 다음은 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에서 다시 사용할 수 있는 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)을 참조하기 위한 구문입니다. `<Button Style="{StaticResource SearchButtonStyle}"/>`. [  **Style**](https://msdn.microsoft.com/library/windows/apps/br208849)은 단순 값이 아니라 참조 형식이므로 `{StaticResource}`를 사용하지 않을 경우 [**FrameworkElement.Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성을 설정하려면 XAML 내부에 `<Button.Style>` 속성 요소 및 `<Style>` 정의가 필요합니다.
 
 태그 확장을 사용하면 XAML에서 설정할 수 있는 모든 속성을 잠재적으로 특성 구문에서 설정할 수 있게 됩니다. 직접 개체 인스턴스화에 대한 특성 구문을 지원하지 않더라도 특성 구문을 사용하여 속성에 대한 참조 값을 제공할 수 있습니다. 값 형식 또는 새로 만든 참조 형식을 통해 XAML 속성을 채워야 한다는 일반 요구 사항을 지연하는 특정 동작을 사용할 수 있습니다.
 
-세부적으로, 다음 XAML 예제는 특성 구문을 사용하여 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)의 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성 값을 설정합니다. [**Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성은 기본적으로 특성 구문 문자열을 사용하여 만들 수 없는 참조 형식인 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) 클래스의 인스턴스를 가져옵니다. 하지만 이 경우 특성은 [StaticResource](staticresource-markup-extension.md) 태그 확장을 참조합니다. 이 태그 확장은 처리되면 앞에서 리소스 사전에서 키가 지정된 리소스로 정의한 **Style** 요소에 대한 참조를 반환합니다.
+세부적으로, 다음 XAML 예제는 특성 구문을 사용하여 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)의 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성 값을 설정합니다. [  **Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성은 기본적으로 특성 구문 문자열을 사용하여 만들 수 없는 참조 형식인 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) 클래스의 인스턴스를 가져옵니다. 하지만 이 경우 특성은 [StaticResource](staticresource-markup-extension.md) 태그 확장을 참조합니다. 이 태그 확장은 처리되면 앞에서 리소스 사전에서 키가 지정된 리소스로 정의한 **Style** 요소에 대한 참조를 반환합니다.
 
 ```xml
 <Canvas.Resources>
@@ -141,13 +141,13 @@ Windows 런타임은 또한 [{x:Null} 태그 확장](x-null-markup-extension.md)
 
 XAML은 개체와 개체 속성에 대한 선언적 언어이지만, 이벤트 처리기를 태그의 개체에 연결하는 구문도 포함합니다. XAML 이벤트 구문은 Windows 런타임 프로그래밍 모델을 통해 XAML로 선언된 이벤트를 통합할 수 있습니다. 이벤트가 처리되는 개체에 대한 특성 이름으로 이벤트 이름을 지정합니다. 특성 값에 대해서는 코드에 정의된 이벤트 처리기 함수의 이름을 지정합니다. XAML 프로세서는 이 이름을 사용하여 로드된 개체 트리에서 위임 표현을 만들고 지정된 처리기를 내부 처리기 목록에 추가합니다. 거의 모든 Windows 런타임 앱은 태그와 코드 숨김 소스를 모두 사용하여 정의됩니다.
 
-다음은 간단한 예제입니다. [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 클래스가 이름이 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)인 이벤트를 지원합니다. 사용자의 **Button** 클릭 후에 호출되는 코드를 실행하는 **Click**에 대한 처리기를 작성할 수 있습니다. XAML에서 **Click**을 **Button**에 대한 특성으로 지정합니다. 특성 값으로 처리기의 메서드 이름인 문자열을 제공합니다.
+다음은 간단한 예제입니다. [  **Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 클래스가 이름이 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)인 이벤트를 지원합니다. 사용자의 **Button** 클릭 후에 호출되는 코드를 실행하는 **Click**에 대한 처리기를 작성할 수 있습니다. XAML에서 **Click**을 **Button**에 대한 특성으로 지정합니다. 특성 값으로 처리기의 메서드 이름인 문자열을 제공합니다.
 
 ```xml
 <Button Click="showUpdatesButton-Click">Show updates</Button>
 ```
 
-컴파일하면 이제 컴파일러가 이름이 `showUpdatesButton-Click`인 메서드가 코드 숨김 파일에 정의되어 있고 네임스페이스에서 XAML 페이지의 [x:Class](x-class-attribute.md) 값에 선언되어 있다고 예상합니다. 또한 이 메서드는 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트의 위임 계약을 충족해야 합니다. 예:
+컴파일하면 이제 컴파일러가 이름이 `showUpdatesButton-Click`인 메서드가 코드 숨김 파일에 정의되어 있고 네임스페이스에서 XAML 페이지의 [x:Class](x-class-attribute.md) 값에 선언되어 있다고 예상합니다. 또한 이 메서드는 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트의 위임 계약을 충족해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```csharp
 namespace App1
@@ -198,11 +198,11 @@ namespace App1
 
 프로젝트 내에서 XAML은 .xaml 파일로 기록되며, 원하는 언어(C#, Visual Basic, C++/CX)를 사용하여 코드 숨김 파일을 작성할 수 있습니다. 프로젝트에 대한 빌드 작업 중에 XAML 파일을 태그로 컴파일할 때 XAML 페이지 루트 요소의 [x:Class](x-class-attribute.md) 특성으로 네임스페이스와 클래스를 지정하여 각 XAML 페이지에 대한 XAML 코드 숨김 파일 위치를 식별합니다. XAML에서 이러한 메커니즘을 사용하는 방법과 프로그래밍 및 응용 프로그램 모델과의 관계에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](events-and-routed-events-overview.md)를 참조하세요.
 
-**참고**C + /CX의 경우 개의 두 개의 코드 숨김 파일, 하나는 헤더 (. xaml.h) 이며 다른 구현 (. xaml.cpp). 구현은 헤더를 참조하고, 엄밀히 말하자면 헤더는 코드 숨김 연결의 진입점을 나타냅니다.
+**참고**  에 대 한 C+ + CX 있는 두 개의 코드 숨김 파일을 하나는 헤더 (. xaml.h) 고 다른 하나는 구현 (. xaml.cpp). 구현은 헤더를 참조하고, 엄밀히 말하자면 헤더는 코드 숨김 연결의 진입점을 나타냅니다.
 
 ## <a name="resource-dictionaries"></a>리소스 사전
 
-[**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)를 만드는 것은 일반적으로 XAML 페이지의 영역 또는 개별 XAML 파일로 리소스 사전을 작성하여 수행하는 일반 작업입니다. 리소스 사전 및 이 사전을 사용하는 방법은 이 항목의 범위를 벗어나는 더 큰 개념 분야입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
+[  **ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)를 만드는 것은 일반적으로 XAML 페이지의 영역 또는 개별 XAML 파일로 리소스 사전을 작성하여 수행하는 일반 작업입니다. 리소스 사전 및 이 사전을 사용하는 방법은 이 항목의 범위를 벗어나는 더 큰 개념 분야입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
 
 ## <a name="xaml-and-xml"></a>XAML 및 XML
 
@@ -240,7 +240,7 @@ XAML은 앱 개발 프로세스에서 여러 중요한 역할을 합니다.
 -   디자인 리소스([**MergedDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208801))를 제공하는 별도의 XAML 파일을 사용하고 있다면 사용되지 않는 리소스를 주석으로 처리하거나 이 파일에서 제거하는 것이 좋습니다. 두 개 이상의 앱에서 사용 중이거나 모든 앱의 공통 리소스를 제공하는 공유 XAML 시작 지점이 있는 경우에도 매번 XAML 리소스를 패키지화하고 잠재적으로 로드해야 하는 것은 여전히 개발자의 앱입니다.
 -   컴퍼지션에 필요 없는 UI 요소를 정의하지 말고, 가능한 한 항상 기본 컨트롤 템플릿을 사용하세요. 이 템플릿은 테스트를 거쳤으며 로드 성능이 검증되었습니다.
 -   UI 요소를 의도적으로 과도하게 그리지 말고 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)와 같은 컨테이너를 사용합니다. 기본적으로, 같은 픽셀을 여러 번 그리지 않습니다. 과도한 그리기 및 이를 테스트하는 방법에 대한 자세한 내용은 [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/hh701823)를 참조하세요.
--   [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 기본 항목 템플릿을 사용하세요. 여기에는 많은 목록 항목에 대해 시각적 트리를 빌드할 때 성능 문제를 해결하는 특수한 **Presenter** 논리가 있습니다.
+-   [  **ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 기본 항목 템플릿을 사용하세요. 여기에는 많은 목록 항목에 대해 시각적 트리를 빌드할 때 성능 문제를 해결하는 특수한 **Presenter** 논리가 있습니다.
 
 ## <a name="debugging-xaml"></a>XAML 디버깅
 
@@ -252,6 +252,6 @@ XAML은 흔히 Visual Studio와 같은 IDE 및 해당 XAML 디자인 화면 중 
 
 앱이 실제로 실행되고 나면, 디자인 타임에 XAML 구문 분석 오류가 검색되지 않은 채로 지나간 경우 이러한 오류는 CLR(공용 언어 런타임)에 의해 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)으로 보고됩니다. 런타임 **XamlParseException**에 대해 수행할 수 있는 작업에 대한 자세한 내용은 [C# 또는 Visual Basic으로 작성된 Windows 런타임 앱의 예외 처리](https://msdn.microsoft.com/library/windows/apps/dn532194)를 참조하세요.
 
-**참고**앱을 사용 하 여 C + + /CX 코드를 특정 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)다운로드 하지 않습니다. 하지만 **XamlParseException**과 마찬가지로, 예외의 메시지는 오류의 근원이 XAML과 관련이 있음을 명확히 하며 XAML 파일의 줄 수와 같은 컨텍스트 정보를 포함합니다.
+**참고**  앱을 사용 하 여 C + + 코드에 대 한 CX 특정 얻지 [ **XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)합니다. 하지만 **XamlParseException**과 마찬가지로, 예외의 메시지는 오류의 근원이 XAML과 관련이 있음을 명확히 하며 XAML 파일의 줄 수와 같은 컨텍스트 정보를 포함합니다.
 
 Windows 런타임 앱 디버깅에 대한 자세한 내용은 [디버그 세션 시작](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx)을 참조하세요.

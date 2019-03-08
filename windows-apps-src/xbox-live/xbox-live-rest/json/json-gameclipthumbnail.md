@@ -8,31 +8,31 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ad2d35431cb4c40690978f4f3920f2e47f2b9bc0
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115411"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606568"
 ---
 # <a name="gameclipthumbnail-json"></a>GameClipThumbnail(JSON)
-개별는 미리 보기와 관련 된 정보를 포함 합니다. 클립 당 여러 크기 있을 수 있으며 사용자가 디스플레이 위해 적절 한 선택 클라이언트 합니다. 
+개별 미리 보기에 관한 정보를 포함 합니다. 클립, 당 여러 크기 있을 수 있으며 클라이언트 표시에 대 한 적절 한 선택에 달려 있습니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="gameclipthumbnail"></a>GameClipThumbnail
  
-GameClipThumbnail 개체에는 다음과 같이 지정 합니다.
+GameClipThumbnail 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| <b>uri</b>| string| 미리 보기 이미지에 대 한 URI입니다.| 
-| <b>파일 크기</b>| 32 비트 부호 없는 정수| 미리 보기 이미지의 총 파일 크기입니다.| 
-| <b>thumbnailType</b>| ThumbnailType| 미리 보기 이미지의 형식입니다.| 
+| <b>uri</b>| 문자열| 미리 보기 이미지에 대 한 URI입니다.| 
+| <b>fileSize</b>| 32 비트 부호 없는 정수| 축소판 그림 이미지의 총 파일 크기입니다.| 
+| <b>thumbnailType</b>| ThumbnailType| 축소판 그림 이미지의 형식입니다.| 
   
 <a id="ID4EAC"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json
@@ -54,8 +54,8 @@ GameClipThumbnail 개체에는 다음과 같이 지정 합니다.
 <a id="ID4ELC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

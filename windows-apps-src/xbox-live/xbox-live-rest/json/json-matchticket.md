@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bc638dfe7735856295ed92f35e244213be7bc1e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923924"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608338"
 ---
 # <a name="matchticket-json"></a>MatchTicket(JSON)
 멀티 플레이 세션 디렉터리 (MPSD)를 통해 다른 플레이어를 찾는 데 플레이어가 일치 티켓을 나타내는 JSON 개체입니다. 
@@ -22,13 +22,13 @@ ms.locfileid: "8923924"
  
 MatchTicket JSON 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| serviceConfig| GUID| 세션에 대 한 서비스 구성 id (서비스 안내).| 
-| hopperName| string| 이 티켓을 배치 해야 hopper의 이름입니다.| 
-| giveUpDuration| 32 비트 부호 있는 정수| 최대 대기 시간 (초 정수 수)입니다.| 
-| preserveSession| 열거형| 일치 하는 세션 세션 다시 사용 해야 하는 경우를 나타내는 값입니다. 가능한 값은 "항상" 또는 "안 함"입니다. | 
-| ticketSessionRef| MultiplayerSessionReference| <b>MultiplayerSessionReference</b> 개체는 플레이어 또는 그룹은 현재 재생 세션에 대 한입니다. 이 멤버는 항상 필요 합니다. | 
+| serviceConfig| GUID| 서비스 구성 (서비스 안내) 세션 식별자입니다.| 
+| hopperName| 문자열| 이 티켓은 hopper의 이름입니다.| 
+| giveUpDuration| 32 비트 부호 있는 정수| 최대 대기 시간 (정수 초 수)입니다.| 
+| preserveSession| 열거형| 일치 하는 세션으로 세션을 다시 해야 있는지를 나타내는 값입니다. 가능한 값은 "항상" 또는 "never"입니다. | 
+| ticketSessionRef| MultiplayerSessionReference| <b>MultiplayerSessionReference</b> 는 플레이어 또는 그룹을 현재 재생 중인 세션에 대 한 개체입니다. 이 멤버는 항상 필요 합니다. | 
 | ticketAttributes| 개체의 배열| 플레이어에 대 한 사용자가 제공한 특성 및 티켓에 대 한 값의 컬렉션입니다.| 
 | 플레이어| 개체의 배열| 사용자가 제공한 특성의 속성 모음을 사용 하 여 각 플레이어 개체의 컬렉션입니다. | 
   
@@ -83,8 +83,8 @@ MatchTicket JSON 개체에 다음과 같이 지정 합니다.
 <a id="ID4EGB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

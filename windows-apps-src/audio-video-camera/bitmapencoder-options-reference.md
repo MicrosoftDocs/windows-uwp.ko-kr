@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 07f5c6ef180cb4abe90a705e73be8d99ecbd2ca7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947086"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603188"
 ---
 # <a name="bitmapencoder-options-reference"></a>BitmapEncoder 옵션 참조
 
@@ -24,11 +24,11 @@ ms.locfileid: "8947086"
 | CompressionQuality      | single       | 유효한 값은 0에서 1.0 사이입니다. 값이 높으면 더 효율적이고 더 느린 압축 구조입니다. | TIFF          |
 | Lossless                | boolean      | true로 설정되면 ImageQuality 옵션이 무시됩니다.                                        | JPEG-XR       |
 | InterlaceOption         | boolean      | 이미지를 인터레이스할지 여부입니다.                                                                    | PNG           |
-| FilterOption            | uint8        | [**PngFilterMode**](https://msdn.microsoft.com/library/windows/apps/br226389) 열거형을 사용합니다.                                | PNG           |
-| TiffCompressionMethod   | uint8        | [**TiffCompressionMode**](https://msdn.microsoft.com/library/windows/apps/br226399) 열거형을 사용합니다.                    | TIFF          |
+| FilterOption            | uint8        | [  **PngFilterMode**](https://msdn.microsoft.com/library/windows/apps/br226389) 열거형을 사용합니다.                                | PNG           |
+| TiffCompressionMethod   | uint8        | [  **TiffCompressionMode**](https://msdn.microsoft.com/library/windows/apps/br226399) 열거형을 사용합니다.                    | TIFF          |
 | Luminance               | uint32Array  | 광도 양자화 상수를 포함하는 64개 요소의 배열입니다.                               | JPEG          |
 | Chrominance             | uint32Array  | 색상 양자화 상수를 포함하는 64개 요소의 배열입니다.                             | JPEG          |
-| JpegYCrCbSubsampling    | uint8        | [**JpegSubsamplingMode**](https://msdn.microsoft.com/library/windows/apps/br226386) 열거형을 사용합니다.                    | JPEG          |
+| JpegYCrCbSubsampling    | uint8        | [  **JpegSubsamplingMode**](https://msdn.microsoft.com/library/windows/apps/br226386) 열거형을 사용합니다.                    | JPEG          |
 | SuppressApp0            | boolean      | App0 메타데이터 블록이 생성되지 않게 할지 여부입니다.                                        | JPEG          |
 | EnableV5Header32bppBGRA | boolean      | 알파를 지원하는 버전 5 BMP로 인코드할지 여부입니다.                                         | BMP           |
 
@@ -36,8 +36,8 @@ ms.locfileid: "8947086"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [비트맵 이미지 만들기, 편집 및 저장](imaging.md)
-* [지원되는 코덱](supported-codecs.md)
+* [만들기, 편집 및 비트맵 이미지를 저장 합니다.](imaging.md)
+* [지원 되는 코덱](supported-codecs.md)
 
  
 

@@ -1,5 +1,5 @@
 ---
-Description: The universal design features included in every UWP app help you build apps that scale beautifully across a range of devices.
+Description: 모든 UWP 앱 도움말에 포함 된 유니버설 디자인 기능은 다양 한 장치에서 멋지게 규모가 조정 되는 앱을 빌드합니다.
 title: UWP(유니버설 Windows 플랫폼) 앱 디자인 소개(Windows 앱)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 ms.date: 05/05/2018
@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 32838e2c3369535928c9e9311f62654eba54e4e0
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058784"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611758"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 
@@ -26,11 +26,11 @@ ms.locfileid: "9058784"
 
 ## <a name="effective-pixels-and-scaling"></a>유효 픽셀 및 크기 조정
 
-UWP 앱은 TV에서 태블릿 또는 PC에서 모든 [Windows 10 장치](../devices/index.md)에서 실행 합니다. 그렇다면 어떻게 다양 한 장치 및 화면 크기에서 멋지게 UI를 디자인할?
+UWP 앱에서 모두 실행 [Windows 10 장치](../devices/index.md), 태블릿 또는 PC에 TV에서 합니다. 다양 한 장치 및 화면 크기에 정상적으로 진행 하는 UI를 어떻게 디자인할?
 
 ![다양한 디바이스에서 동일한 앱](images/universal-image-1.jpg)
 
-UWP는 쉽게 읽고 모든 장치와 화면 크기에서 상호 작용할 수 있도록 UI 요소를 자동으로 조정 하 여는 데 도움이 됩니다.
+UWP에서 모든 장치 및 화면 크기와 상호 작용을 보다 쉽고 읽을 수 있도록 UI 요소를 자동으로 조정 하 여는 데 도움이 됩니다.
 
 디바이스에서 앱이 실행될 때 시스템은 화면에 UI 요소가 표시되는 방식을 정규화하는 알고리즘을 사용합니다. 이 크기 조정 알고리즘은 가시거리 및 화면 밀도(인치당 픽셀)를 고려하여 물리적 크기가 아닌 인식되는 크기를 최적화합니다. 크기 조정 알고리즘에 따르면 3m 떨어져 있는 Surface Hub의 24픽셀 글꼴은 몇 인치 떨어져 있는 5인치 휴대폰의 24픽셀 글꼴과 마찬가지로 읽힙니다.
 
@@ -140,11 +140,11 @@ UWP의 디자인 플랫폼은 모든 Windows 기반 장치에서 제대로 작�
 
 ## <a name="devices"></a>장치
 
-![장치](../layout/images/size-classes.svg)
+![디바이스](../layout/images/size-classes.svg)
 
 마찬가지로, UWP는 자동으로 앱을 다른 디바이스로 확장하지만 [특정 디바이스에 대한 UWP 앱을 최적화](../devices/index.md)할 수도 있습니다.
 
-## <a name="usability"></a>사용 편의성
+## <a name="usability"></a>유용성
 
 <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REYaAb?ver=727c">
 
@@ -170,7 +170,7 @@ UWP의 디자인 플랫폼은 모든 Windows 기반 장치에서 제대로 작�
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
 
-## <a name="next-fluent-design-system"></a>다음: 흐름 디자인 시스템
+## <a name="next-fluent-design-system"></a>다음: Fluent 디자인 시스템
 
 흐름 디자인(Microsoft의 디자인 시스템)의 기반이 되는 원칙에 대해 학습하고, UWP 앱에 포함시킬 수 있는 더 많은 기능에 대해 알아보고 싶다면 계속해서 [흐름 디자인 시스템](../fluent-design-system/index.md)에 대해 알아보세요.
 

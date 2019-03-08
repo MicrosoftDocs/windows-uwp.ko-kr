@@ -1,23 +1,23 @@
 ---
 title: 다중 사용자 응용 프로그램 소개
-description: Xbox 다중 사용자 모델에 대한 높은 수준의 간략한 소개입니다.
+description: Xbox 다중 사용자 모델에 대해 간단히 소개합니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
 ms.localizationpriority: medium
 ms.openlocfilehash: b56140f9a71c8233d2832c2b0da6ed927b5a19ac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922248"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607718"
 ---
 # <a name="introduction-to-multi-user-applications"></a>다중 사용자 응용 프로그램 소개
 
-이 항목은 Xbox 다중 사용자 모델에 대한 높은 수준의 소개를 간략히 드리기 위한 것입니다.
+이 항목은 Xbox 다중 사용자 모델을 간단하게 소개하기 위한 것입니다.
 
-Xbox One 사용자 모델은 하나의 디바이스에서 여러 사용자가 협력해서 게임을 하는 기능을 지원하는 게임 콘솔의 요구 사항에 맞게 조정되어 있습니다. 따라서 각각 자신의 컨트롤러가 있는 여러 사용자가 로그인하고 단일 대화형 세션에서 동시에 콘솔을 사용할 수 있습니다. 이는 다른 Windows 디바이스와 다른 점입니다. 예제:
+Xbox One 사용자 모델은 하나의 디바이스에서 여러 사용자가 협력해서 게임을 하는 기능을 지원하는 게임 콘솔의 요구 사항에 맞게 조정되어 있습니다. 따라서 각각 자신의 컨트롤러가 있는 여러 사용자가 로그인하고 단일 대화형 세션에서 동시에 콘솔을 사용할 수 있습니다. 이는 다른 Windows 디바이스와 다른 점입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 * **Windows 데스크톱 PC**에서는 여러 사용자가 동일한 디바이스를 사용할 수 있지만, 사용자마다 고유한 대화형 세션이 있으며 각 세션이 디바이스의 다른 세션과 완전히 독립적입니다.
 * **Windows Phone**에서는 단일 사용자만 디바이스를 사용할 수 있습니다. 이 단일 사용자는 OOBE(첫 실행 경험) 중에 결정되며 사용자가 로그인한 후 로그아웃할 수 없습니다. 실제로 다른 사용자가 디바이스를 사용하려는 경우 디바이스를 초기화해야 합니다. 
 * **Xbox One**을 사용하면 여러 사용자가 로그인하고 단일 대화형 세션에서 동시에 디바이스를 사용할 수 있습니다.
@@ -51,4 +51,4 @@ Windows.System.UserDeviceAssociation.FindUserFromDeviceId 메서드를 사용하
 모든 UWP 앱과 대다수 단일 사용자 게임은 SUA로 작성할 수 있습니다. 협력적인 멀티 플레이어 게임의 경우에만 Xbox One 다중 사용자 모델을 옵트인(opt in)하는 것이 좋습니다.
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox One의 UWP](index.md)
+- [Xbox One에서 UWP](index.md)
