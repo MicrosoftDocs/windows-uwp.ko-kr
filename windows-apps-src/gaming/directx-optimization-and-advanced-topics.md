@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 최적화, 다중 샘플링, 스왑 체인
 ms.localizationpriority: medium
 ms.openlocfilehash: e9618a35ecd8f9d1a37b627494c0f00a5ed84806
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940392"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595018"
 ---
 # <a name="optimization-and-advanced-topics-for-directx-games"></a>DirectX 게임에 대한 최적화 및 고급 항목
 
@@ -42,23 +42,23 @@ DXGI 1.3 스왑 체인으로 대기 시간 단축 항목에서는 스왑 체인�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="asynchronous-programming-directx-and-cpp.md">게임용 비동기 프로그래밍</a></p></td>
+<td align="left"><p><a href="asynchronous-programming-directx-and-cpp.md">게임에 대 한 비동기 프로그래밍</a></p></td>
 <td align="left"><p>DirectX를 사용한 비동기 프로그래밍과 스레드를 이해합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="handling-device-lost-scenarios.md">Direct3D 11에서 디바이스 제거 시나리오 처리</a></p></td>
+<td align="left"><p><a href="handling-device-lost-scenarios.md">Direct3D 11에서 제거 하는 장치 시나리오를 처리 합니다.</a></p></td>
 <td align="left"><p>그래픽 어댑터가 제거되거나 다시 초기화될 때 Direct3D 및 DXGI 디바이스 인터페이스 체인을 다시 만듭니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md">UWP 앱의 다중 샘플링</a></p></td>
+<td align="left"><p><a href="multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md">UWP 앱에서 다중 샘플링</a></p></td>
 <td align="left"><p>Direct3D를 사용하여 빌드된 UWP 게임에서 다중 샘플링을 사용합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md">입력 및 렌더링 루프 최적화</a></p></td>
+<td align="left"><p><a href="optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md">입력 및 렌더링 루프를 최적화 합니다.</a></p></td>
 <td align="left"><p>입력 대기 시간을 단축하고 렌더링 루프를 최적화합니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="reduce-latency-with-dxgi-1-3-swap-chains.md">DXGI 1.3 스왑 체인으로 대기 시간 단축</a></p></td>
+<td align="left"><p><a href="reduce-latency-with-dxgi-1-3-swap-chains.md">DXGI 1.3 스왑 체인을 사용 하 여 대기 시간 줄이기</a></p></td>
 <td align="left"><p>DXGI 1.3을 사용하여 유효 프레임 대기 시간을 단축합니다.</p></td>
 </tr>
 <tr class="even">

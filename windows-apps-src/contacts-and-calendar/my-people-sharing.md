@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 91d88dc78fd02ae3f16e1d980aa207d1dd458417
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945399"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597828"
 ---
 # <a name="my-people-sharing"></a>내 피플 공유
 
@@ -27,8 +27,8 @@ ms.locfileid: "8945399"
 
 응용 프로그램을 내 피플 공유 대상으로 사용하려면 세 단계를 거쳐야 합니다.
 
-1. [응용 프로그램 매니페스트에서 shareTarget 정품 인증 계약에 대한 지원을 선언합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [사용자가 앱을 사용하여 공유할 수 있는 연락처에 주석을 답니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [응용 프로그램 매니페스트에 shareTarget 활성화 계약에 대 한 지원을 선언 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [사용자가 앱을 사용 하 여 공유할 수 있는 연락처에 주석을 추가 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3. 동시에 실행되는 여러 응용 프로그램 인스턴스를 지원합니다.  사용자가 다른 사람과 공유하기 위해 응용 프로그램을 사용하는 동안 응용 프로그램의 전체 버전과 상호 작용할 수 있어야 합니다. 사용자가 동시에 여러 공유 창에서 응용 프로그램을 사용할 수도 있습니다. 이 상황을 지원하려면 응용 프로그램이 여러 보기를 동시에 실행할 수 있어야 합니다. 자세한 방법은 ["앱에 대한 여러 보기 표시"](https://docs.microsoft.com/en-us/windows/uwp/layout/show-multiple-views)를 참조하세요.
 
 여기까지 마치면 응용 프로그램이 내 피플 공유 창에 공유 대상으로 표시되며, 다음과 같은 두 가지 방법으로 시작할 수 있습니다.
@@ -40,7 +40,7 @@ ms.locfileid: "8945399"
 공유 대상으로써 응용 프로그램에 대한 지원을 선언하려면 먼저 Visual Studio에서 응용 프로그램을 엽니다. **솔루션 탐색기**에서 **Package.appxmanifest**를 오른쪽 단추로 클릭하고**연결 프로그램**을 선택합니다. 메뉴에서 **XML(텍스트) 편집기**를 선택하고 **확인**을 클릭합니다. 그런 다음 매니페스트를 다음과 같이 변경합니다.
 
 
-**이전**
+**전에**
 ```xml
 <Applications>
     <Application Id="MyApp"
@@ -50,7 +50,7 @@ ms.locfileid: "8945399"
 </Applications>
 ```
 
-**이후**
+**After**
 
 ```xml
 <Applications>
@@ -103,7 +103,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-“appId”는 패키지 패밀리 이름이며, 그 뒤에 ‘!’ 그리고 활성화 가능한 클래스 ID가 붙습니다. 패키지 패밀리 이름을 확인 하 고 **Package.appxmanifest** 기본 편집기를 사용 하 여 열고 "패키징" 탭에서 찾아봅니다. 여기서 "앱"은 공유 대상 보기에 해당 하는 활성화 가능한 클래스입니다.
+“appId”는 패키지 패밀리 이름이며, 그 뒤에 ‘!’ 그리고 활성화 가능한 클래스 ID가 붙습니다. 패키지 패밀리 이름을 찾으려면 기본 편집기를 사용하여 **Package.appxmanifest**를 열고 "패키징" 탭에서 찾아봅니다. 여기서 "앱"은 공유 대상 보기에 해당하는 활성화 가능한 클래스입니다.
 
 ## <a name="running-as-a-my-people-share-target"></a>내 피플 공유 대상으로 실행
 
@@ -132,6 +132,6 @@ protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs arg
 ```
 
 ## <a name="see-also"></a>참고 항목
-+ [내 피플 지원 추가](my-people-support.md)
++ [내 사용자를 추가 지원](my-people-support.md)
 + [ShareTarget 클래스](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appxmanifestschema/element-sharetarget)
 + [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)

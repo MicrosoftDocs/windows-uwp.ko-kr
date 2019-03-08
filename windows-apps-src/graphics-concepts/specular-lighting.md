@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f28f1f46cfd34ee1aab614c57dc99019dbd6111
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930918"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597978"
 ---
 # <a name="specular-lighting"></a>반사 조명
 
@@ -23,20 +23,20 @@ ms.locfileid: "8930918"
 
 기본 조명 상태는 반사 하이라이트를 계산하지 않습니다.
 
-## <a name="span-idspecularlightingequationspanspan-idspecularlightingequationspanspan-idspecularlightingequationspanspecular-lighting-equation"></a><span id="Specular_Lighting_Equation"></span><span id="specular_lighting_equation"></span><span id="SPECULAR_LIGHTING_EQUATION"></span>반사 조명 수식
+## <a name="span-idspecularlightingequationspanspan-idspecularlightingequationspanspan-idspecularlightingequationspanspecular-lighting-equation"></a><span id="Specular_Lighting_Equation"></span><span id="specular_lighting_equation"></span><span id="SPECULAR_LIGHTING_EQUATION"></span>반사 조명은 수식
 
 
 반사 조명은 다음 수식에 의해 설명됩니다.
 
 |                                                                             |
 |-----------------------------------------------------------------------------|
-| 반사 조명 = Cₛ \* sum\[Lₛ \* (N · H)<sup>P</sup> \* Atten \* Spot\] |
+| 반사 조명은 = Cₛ \* 합계\[Lₛ \* (? N H)<sup>P</sup> \* Atten \* 위치\] |
 
  
 
 변수, 형식 및 해당 범위는 다음과 같습니다.
 
-| 매개 변수    | 기본값 | 유형                                                             | 설명                                                                                            |
+| 매개 변수    | 기본값 | 형식                                                             | 설명                                                                                            |
 |--------------|---------------|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Cₛ           | (0,0,0,0)     | 빨간색, 녹색, 파란색 및 알파 투명도(부동 소수점 값) | 반사 색.                                                                                        |
 | sum          | 해당 없음           | 해당 없음                                                              | 각 빛의 반사 구성 요소 합계.                                                          |
@@ -55,7 +55,7 @@ Cₐ의 값은 다음 중 하나입니다.
 -   반사 재질 소스가 반사 꼭짓점 색이고, 꼭지점 선언에 두 번째 꼭짓점 색이 제공된 경우, 꼭짓점 색 2.
 -   재질 반사 색
 
-**참고**  반사 재질 소스 옵션은 사용 하 고 꼭 짓 점 색을 제공 하지 않을 경우 재질 반사 색이 사용 됩니다.
+**참고**    반사 재질 원본 옵션 중 하나는 및 꼭 짓 점 색을 제공 하지 않으면 경우 재질 반사 색이 사용 됩니다.
 
  
 
@@ -72,7 +72,7 @@ Cₐ의 값은 다음 중 하나입니다.
 
  
 
-| 매개 변수       | 기본값 | 유형                                          | 설명                                                  |
+| 매개 변수       | 기본값 | 형식                                          | 설명                                                  |
 |-----------------|---------------|-----------------------------------------------|--------------------------------------------------------------|
 | Cₛ              | 해당 없음           | 3D 벡터(x, y, 및 z 부동 소수점 값) | 카메라 위치.                                             |
 | Vₚ              | 해당 없음           | 3D 벡터(x, y, 및 z 부동 소수점 값) | 꼭짓점 위치.                                             |
@@ -111,7 +111,7 @@ Cₐ의 값은 다음 중 하나입니다.
 
 반사 조명은 확산 조명보다 계산이 더 많이 필요합니다. 일반적으로 표면 재질에 대한 시각적 단서를 제공하는 데 사용합니다. 반사 하이라이트는 표면 재질에 따라 크기와 색이 다릅니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [조명의 수학](mathematics-of-lighting.md)

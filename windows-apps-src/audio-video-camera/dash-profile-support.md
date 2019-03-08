@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d680f7d4a3510f66cba74d1c8b30d8883b07369a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926063"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627208"
 ---
 # <a name="dynamic-adaptive-streaming-over-http-dash-profile-support"></a>DASH(Dynamic Adaptive Streaming over HTTP) 프로필 지원
 
@@ -19,11 +19,11 @@ ms.locfileid: "8926063"
 ## <a name="supported-dash-profiles"></a>지원되는 DASH 프로필
 다음 표는 UWP 앱에서 지원되는 DASH 프로필을 보여 줍니다.
 
-|태그 | 매니페스트 유형 | 참고|Windows 10 7월 릴리스|Windows 10 버전 1511|Windows 10 버전 1607 |Windows 10 버전 1607 |Windows 10 버전 1703|
+|Tag | 매니페스트 유형 | 참고|Windows 10 7월 릴리스|Windows 10 버전 1511|Windows 10 버전 1607 |Windows 10 버전 1607 |Windows 10 버전 1703|
 |----------------|------|-------|-----------|--------------|---------|-------|--------|
-|urn:mpeg&#58;dash:profile:isoff-live:2011 | 정적 |     |지원            |  지원              | 지원        |지원| 지원|
-|urn:mpeg&#58;dash:profile:isoff-main:2011 |        | 최상 | 지원            |  지원              | 지원        |지원| 지원|
-|urn:mpeg&#58;dash:profile:isoff-live:2011 | 동적 | 세그먼트 템플릿에서 $Time$은 지원되지만 $Number$는 지원되지 않음 | 지원되지 않음            | 지원되지 않음              | 지원되지 않음        |지원되지 않음| 지원|
+|urn:mpeg&#58;dash:profile:isoff-live:2011 | Static |     |지원함            |  지원함              | 지원함        |지원함| 지원함|
+|urn:mpeg&#58;dash:profile:isoff-main:2011 |        | 최상 | 지원함            |  지원함              | 지원함        |지원함| 지원함|
+|urn:mpeg&#58;dash:profile:isoff-live:2011 | 동적 | 세그먼트 템플릿에서 $Time$은 지원되지만 $Number$는 지원되지 않음 | 지원되지 않음            | 지원되지 않음              | 지원되지 않음        |지원되지 않음| 지원함|
 
 
 ## <a name="unsupported-dash-profiles"></a>지원되지 않는 DASH 프로필

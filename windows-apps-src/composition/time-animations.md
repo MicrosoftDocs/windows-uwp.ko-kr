@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: 838a8c3a6dfe89de49fddefd28c53cea563408cf
-ms.sourcegitcommit: dcff44885956094e0a7661b69d54a8983921ce62
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "8968577"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593168"
 ---
 # <a name="time-based-animations"></a>시간 기반 애니메이션
 
-구성 요소가 도입되거나 전체 사용자 경험이 변경되면 최종 사용자는 시간을 두고 적응하거나 즉시 이를 받아들입니다. Windows 플랫폼에서 전자가 기본 후자 보다-사용자 경험이 급작스럽게 변경 되 혼동을 줄 고 느끼고 수 없기 때문에 최종 사용자에 게 불편 합니다. 그러면 최종 사용자들은 사용 환경이 불안하고 부자연스럽다고 인식합니다.
+구성 요소가 도입되거나 전체 사용자 경험이 변경되면 최종 사용자는 시간을 두고 적응하거나 즉시 이를 받아들입니다. Windows 플랫폼에서 이전 보다 선호 됩니다 후자-즉시 자주 변경 하는 사용자 환경을 혼동 및 내용에 따라 할 수 없기 때문에 최종 사용자를 놀라게 됩니다. 그러면 최종 사용자들은 사용 환경이 불안하고 부자연스럽다고 인식합니다.
 
 대신, 시간을 두고 UI를 변경하여 최종 사용자에게 안내를 제공하거나 경험 변경 내용을 알릴 수 있습니다. Windows 플랫폼에서는 KeyFrameAnimations라고도 하는 시간 기반 애니메이션을 사용하여 이 작업을 수행합니다. KeyFrameAnimations를 사용하면 시간을 두고 UI를 변경하고, 시작 방법 및 시작 시간, 종료 상태에 도달하는 방법을 비롯하여 애니메이션의 각 요소를 제어할 수 있습니다. 예를 들어 300밀리초 동안 새로운 위치에 애니메이션으로 개체를 표현하면 즉시 "이동"되도록 하는 것보다 즐거운 경험이 됩니다. 즉시 변경하는 대신 애니메이션을 사용하면 결과적으로 더 즐겁고 매력적인 경험을 창출할 수 있습니다.
 
@@ -62,10 +62,10 @@ KeyFrameAnimations로 명시적인 시간 기반 애니메이션을 만드는 �
 1. 애니메이션 템플릿을 사용하여 KeyFrames를 추가하고 애니메이션의 속성을 정의하기 시작합니다.
     - 하나 이상의 KeyFrame이 필요합니다(100% 또는 1f 키 프레임).
     - 기간도 정의하는 것이 좋습니다.
-1. 한 번이 애니메이션을 실행 하 고 애니메이션 효과를 줄 속성을 대상으로 CompositionObject에 적용할을 호출할 준비가 됩니다. 특히 다음 사항에 주의하세요.
+1. 한 번이 애니메이션을 실행 하 고 애니메이션 효과 주려는 속성을 대상으로 하는 CompositionObject StartAnimation(...) 호출 수 있습니다. 특히 다음 사항에 주의하세요.
     - `visual.StartAnimation("targetProperty", CompositionAnimation animation);`
     - `visual.StartAnimationGroup(AnimationGroup animationGroup);`
-1. 실행 중인 애니메이션이 있는 경우 애니메이션 또는 애니메이션 그룹을 중지 하려면 이러한 Api를 사용할 수 있습니다.
+1. 실행 중인 애니메이션이 있는 있고 애니메이션이 나 애니메이션 그룹을 중지 하려는 경우에 이러한 Api를 사용할 수 있습니다.
     - `visual.StopAnimation("targetProperty");`
     - `visual.StopAnimationGroup(AnimationGroup AnimationGroup);`
 
@@ -73,7 +73,7 @@ KeyFrameAnimations로 명시적인 시간 기반 애니메이션을 만드는 �
 
 ## <a name="example"></a>예
 
-이 예제에서는 1 초 이상 0, < 0, 0 > < 200,0,0 >는 시각적 개체의 offset에 애니메이션 효과 하려는. 또한 이러한 위치 사이에서 시각적 애니메이션을 10회 보고 싶습니다.
+이 예제에서는 1 초 애니메이션 < 200,0,0 >를 < 0,0,0 >에서 시각적 요소의 오프셋을 적용 해야 합니다. 또한 이러한 위치 사이에서 시각적 애니메이션을 10회 보고 싶습니다.
 
 ![키 프레임 애니메이션](images/animation/animated-rectangle.gif)
 
@@ -86,7 +86,7 @@ KeyFrameAnimations로 명시적인 시간 기반 애니메이션을 만드는 �
     animation.InsertKeyFrame(1f, new Vector3(200f, 0f, 0f));
 ```
 
-다음을 설명 두 위치 (현재 및 < 200,0,0 >) 10 배 사이 애니메이션 하는 동작과 KeyFrameAnimation의 속성을 정의 합니다.
+두 위치 (현재 및 < 200,0,0 >) 10 시간 사이 애니메이션 효과를 동작 함께 기간을 설명 하기 위해 KeyFrameAnimation의 속성을 정의 합니다.
 
 ```csharp
     animation.Duration = TimeSpan.FromSeconds(2);

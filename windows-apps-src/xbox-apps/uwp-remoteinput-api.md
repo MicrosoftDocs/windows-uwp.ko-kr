@@ -5,11 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 882e84c5126e4f67e246dd479008133c979c06b1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939961"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595958"
 ---
 # <a name="remote-input-api-reference"></a>원격 입력 API 참조   
 이 API를 통해 원격으로 실시간으로 컨트롤러, 키보드 및 마우스 입력을 보낼 수 있습니다.
@@ -38,8 +38,8 @@ Websocket | /ext/remoteinput
 |------------|-------------|
 Keyboard KeyCodes | 0x01
 Keyboard ScanCodes | 0x02
-Mouse | 0x03
-Clear All | 0x04
+마우스 | 0x03
+모두 지우기 | 0x04
 
 KeyboardKeyCodes 및 KeyboardScanCodes의 경우 두 번째 바이트는 키 코드 또는 스캔 코드 값이며 세 번째 바이트는 아래쪽 누르기에 대해 0x01이며 놓기에 대해 0x00입니다.
 
@@ -47,7 +47,7 @@ KeyboardKeyCodes 및 KeyboardScanCodes의 경우 두 번째 바이트는 키 코
 
 | 작업 유형        | UINT16 값 |
 |------------|-------------|
-Move | 0x0001
+이동 | 0x0001
 LeftDown | 0x0002
 LeftUp | 0x0004
 RightDown | 0x0008
@@ -110,6 +110,6 @@ HTTP 상태 코드      | 설명
 5XX | 오류 코드
 
 <br />
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Xbox

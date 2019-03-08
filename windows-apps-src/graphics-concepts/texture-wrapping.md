@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6618b7573be7cd39f703299b9418d1575297120e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928404"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622628"
 ---
 # <a name="texture-wrapping"></a>텍스처 래핑
 
@@ -21,7 +21,7 @@ ms.locfileid: "8928404"
 
 ![두 지점 간 보간선 다이어그램](images/interp1.png)
 
-그림을 보면 A 지점과 B 지점 간 최단 거리가 대략적으로 텍스처의 중간을 향합니다. 이때 u-텍스처 또는 v- 텍스처 좌표 래핑을 사용하면 Direct3D가 u-방향과 v-방향의 텍스처 좌표 간 최단 거리를 인지하는 방식이 바뀝니다. 텍스처 래핑의 정의에 따라 래스터라이저는 0.0과 1.0이 일치한다는 가정 하에 텍스처 좌표 집합 간 최단 거리를 이용합니다. 마지막 비트는 까다로운 부분입니다. 텍스처 래핑을 한 방향으로 사용하면 시스템이 마치 원통을 중심으로 래핑되는 것처럼 텍스처를 처리할 것이라고 생각할 수 있습니다. 예를 들어 다음 다이어그램을 가정해보겠습니다.
+그림을 보면 A 지점과 B 지점 간 최단 거리가 대략적으로 텍스처의 중간을 향합니다. 이때 u-텍스처 또는 v- 텍스처 좌표 래핑을 사용하면 Direct3D가 u-방향과 v-방향의 텍스처 좌표 간 최단 거리를 인지하는 방식이 바뀝니다. 텍스처 래핑의 정의에 따라 래스터라이저는 0.0과 1.0이 일치한다는 가정 하에 텍스처 좌표 집합 간 최단 거리를 이용합니다. 마지막은 쉽지 않습니다. 사용 하도록 설정 하면 질감 한 방향으로 배치 하면 원기둥 주위에 래핑된 된 것 처럼 질감을 처리 하도록 시스템을 상상할 수 있습니다. 예를 들어 다음 다이어그램을 가정해보겠습니다.
 
 ![텍스처와 두 지점이 원통을 중심으로 래핑된 다이어그램](images/interp2.png)
 
@@ -41,17 +41,17 @@ u-방향으로 래핑을 사용하면 텍스처 처리된 기둥이 환경 맵�
 
 텍스처 래핑을 사용하지 않으면 래스터라이저가 올바른 반사 이미지를 생성하는 데 필요한 방향으로 보간하지 않습니다. 오히려 텍스처 중간을 지나가면서 u-좌표 0.175와 0.875 사이에 가로로 압축된 버전의 텍셀이 기둥 전면 영역에 나타납니다. 결국 랩 효과가 손상됩니다.
 
-텍스처 래핑과 비슷한 이름의 텍스처 주소 지정 모드를 혼동하지 마세요. 텍스처 래핑은 텍스처 주소 지정 이전에 실행됩니다. 알 수 없는 결과가 나올 수 있으므로 텍스처 래핑 데이터에 \[0.0, 1.0\]의 범위를 벗어나는 텍스처 좌표가 포함되어서는 안 됩니다. 텍스처 주소 지정에 대한 자세한 내용은 [텍스처 주소 지정 모드](texture-addressing-modes.md)를 참조하세요.
+텍스처 래핑과 비슷한 이름의 텍스처 주소 지정 모드를 혼동하지 마세요. 텍스처 래핑은 텍스처 주소 지정 이전에 실행됩니다. 데이터를 래핑 질감의 범위를 벗어난 모든 질감 좌표는 반드시 \[0.0, 1.0\] 하므로 정의 되지 않은 결과가 생성 됩니다. 텍스처 주소 지정에 대한 자세한 내용은 [텍스처 주소 지정 모드](texture-addressing-modes.md)를 참조하세요.
 
-## <a name="span-iddisplacementmapwrappingspanspan-iddisplacementmapwrappingspanspan-iddisplacementmapwrappingspandisplacement-map-wrapping"></a><span id="Displacement_Map_Wrapping"></span><span id="displacement_map_wrapping"></span><span id="DISPLACEMENT_MAP_WRAPPING"></span>변위 맵 래핑
+## <a name="span-iddisplacementmapwrappingspanspan-iddisplacementmapwrappingspanspan-iddisplacementmapwrappingspandisplacement-map-wrapping"></a><span id="Displacement_Map_Wrapping"></span><span id="displacement_map_wrapping"></span><span id="DISPLACEMENT_MAP_WRAPPING"></span>래핑 치환 맵
 
 
 변위 맵은 테셀레이션 엔진을 통해 보간됩니다. 테셀레이션 엔진에서는 랩 모드를 지정할 수 없기 때문에 변위 맵으로는 텍스처 래핑을 실행하지 못합니다. 응용 프로그램은 강제 보간을 통한 꼭짓점 집합을 사용하여 어떤 방향으로든 래핑할 수 있습니다. 또한 단순한 선형 보간으로 지정하는 것도 가능합니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[텍스처](textures.md)
+[질감](textures.md)
 
  
 

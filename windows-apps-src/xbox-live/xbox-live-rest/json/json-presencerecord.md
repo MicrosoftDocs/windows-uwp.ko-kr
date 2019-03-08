@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d531352c4336e00c93a91e7c945602ab69695f2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918415"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622588"
 ---
 # <a name="presencerecord-json"></a>PresenceRecord(JSON)
-단일 사용자의 온라인 상태에 대 한 데이터를 제공 합니다.
+단일 사용자의 온라인 상태에 대 한 데이터입니다.
 <a id="ID4EN"></a>
 
 
@@ -23,12 +23,12 @@ ms.locfileid: "8918415"
 
 PresenceRecord 개체에 다음과 같이 지정 합니다.
 
-| 멤버| 유형| 설명|
+| 멤버| 형식| 설명|
 | --- | --- | --- |
-| xuid| string| Xbox 사용자 ID (XUID)는 대상 사용자의 합니다. 이 사용자에 대 한 현재 상태 데이터를 제공 됩니다.|
-| 장치| [DeviceRecord](json-devicerecord.md) 의 배열| 사용자의 장치 레코드의 목록입니다.|
-| 상태| string| Xbox LIVE에서 사용자의 작업 합니다. 가능한 값: <ul><li>온라인: 사용자가 하나 이상의 장치 레코드.</li><li>바로: 사용자가 Xbox LIVE에 서명 된 있지만 모든 제목에 활성화 되지 않습니다.</li><li>오프 라인: 사용자가 모든 장치에 존재 합니다.</li></ul> | 
-| lastSeen| [LastSeenRecord](json-lastseenrecord.md)| 마지막 확인 한 정보는 사용자가 없는 유효한 DeviceRecords 때에 사용할 수 있습니다. 개체가 캐시에서 제거 된 데이터 하지 반환 될 수 있습니다, 없는 영구 저장소 때문입니다.|
+| xuid| 문자열| Xbox 사용자 ID (XUID) 대상 사용자입니다. 제공 된 현재 상태 데이터를이 사용자입니다.|
+| 디바이스| 배열을 [DeviceRecord](json-devicerecord.md)| 사용자의 장치 레코드의 목록입니다.|
+| 상태| 문자열| Xbox LIVE에서 사용자의 작업입니다. 가능한 값: <ul><li>온라인: 사용자가 하나 이상의 장치 레코드입니다.</li><li>제거: 사용자는 Xbox LIVE에 로그인 하지만 모든 제목에 활성 상태가 아닙니다.</li><li>오프 라인으로: 사용자는 장치에 나타나지 않습니다.</li></ul> | 
+| lastSeen| [LastSeenRecord](json-lastseenrecord.md)| 사용자가 유효한 DeviceRecords 없는 경우에 마지막 표시 된 정보를 제공 됩니다. 개체 캐시에서 제거 된 경우 데이터 하지 반환 될 수 있습니다, 영구 저장소가 없는 있기 때문입니다.|
 
 <a id="ID4E2C"></a>
 
@@ -95,19 +95,19 @@ PresenceRecord 개체에 다음과 같이 지정 합니다.
 <a id="ID4EGD"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
 
 <a id="ID4EQD"></a>
 
 
-##### <a name="reference"></a>참조
+##### <a name="reference"></a>참고자료
 
-[POST (/users/batch)](../uri/presence/uri-usersbatchpost.md)
+[POST (/ 사용자/일괄 처리)](../uri/presence/uri-usersbatchpost.md)
 
- [GET (/users/me)](../uri/presence/uri-usersmeget.md)
+ [가져오기 (/ 사용자/me)](../uri/presence/uri-usersmeget.md)
 
  [DELETE (/users/xuid({xuid})/devices/current/titles/current)](../uri/presence/uri-usersxuiddevicescurrenttitlescurrentdelete.md)
 

@@ -6,20 +6,20 @@ ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a1eacc42720e7bce4290476676b0864fbd8a3694
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926903"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592958"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 
 이 자습서는 XAML 앱의 UI를 사용자 지정하는 방법을 보여 줍니다. 경고 :이 자습서에는 유니콘이 포함될 수도 있습니다. (확인해 보세요!)  
 
 ## <a name="prerequisites"></a>필수 구성 요소
-* [Visual Studio 2017 및 Windows 10 SDK(10.0.15063.468 이상)](https://developer.microsoft.com/windows/downloads)
+* [Visual Studio 2017 및 Windows 10 SDK (10.0.15063.468 이상)](https://developer.microsoft.com/windows/downloads)
 
-## <a name="part-0-get-the-code"></a>파트 0: 코드 다운로드
+## <a name="part-0-get-the-code"></a>0 부: 코드 다운로드
 이 실습은 [xaml-basics-starting-points/style/ folder](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/style)의 PhotoLab 샘플 리포지토리에서 시작됩니다. 리포지토리를 복제/다운로드 한 후에는 Visual Studio 2017로 PhotoLab.sln을 열어 프로젝트를 편집할 수 있습니다.
 
 PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
@@ -30,7 +30,7 @@ PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
 **DetailPage.xaml:** 하나의 사진을 선택한 후에 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
 ![DetailPage](../basics/images/xaml-basics/detailpage.png)
 
-## <a name="part-1-create-a-fancy-slider-control"></a>파트 1: 멋진 슬라이더 컨트롤 만들기  
+## <a name="part-1-create-a-fancy-slider-control"></a>1부: 멋진 슬라이더 컨트롤 만들기  
 
 UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 여러 가지 방법을 제공합니다. 글꼴 및 인쇄 설정에서 색상 및 효과를 흐리게 처리하는 그라데이션에 이르기까지 많은 옵션이 있습니다. 
 
@@ -38,7 +38,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
 
 <figure>
     <img src="../basics/images/xaml-basics/slider-start.png" />
-    <figure>*기본 스타일 기능의 간단한 슬라이더.*</figure>
+    <figure>*기본 스타일을 사용 하 여 humble 슬라이더입니다.*</figure>
 </figure>
 
 이 슬라이더는 뛰어납니다. 슬라이더가 해야 할 모든 작업을 수행하지만, 멋진 모습은 아닙니다. 문제를 해결해 보겠습니다. 
@@ -62,7 +62,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
     
     <!-- TODO reduce size --> ![유니콘](../basics/images/xaml-basics/unicorn.png)
     
-    > **확인 항목:** [셰이프 그리기](https://docs.microsoft.com/en-us/windows/uwp/graphics/drawing-shapes) 문서에서는 XAML 도형에 대해 알아야 할 모든 정보를 제공합니다. 
+    > **관련 된 내용을 읽으세요.** 합니다 [도형을 그릴](https://docs.microsoft.com/en-us/windows/uwp/graphics/drawing-shapes) 문서를 알려 XAML 모양에 알아야 하는 데 필요한 모든 것입니다. 
     
     스테레오의 볼륨 컨트롤에서 볼 수 있는 모양과 같은 삼각형 모양의 위젯을 만들려고 합니다.
     
@@ -79,7 +79,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
     * **Polygon**에 선형 그라데이션 채우기를 적용합니다.     
     * 노출 슬라이더에서 **Foreground** 속성을 "Transparent"로 설정하여 다각형을 볼 수 있게 합니다. 
 
-    **이전**
+    **전에**
     ```xaml
     <Slider Header="Exposure"
         Grid.Row="2"
@@ -87,7 +87,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
         Minimum="-2"
         Maximum="2" />
     ```
-    **이후**
+    **After**
     ```xaml
     <Polygon Grid.Row="2" Stretch="Fill"
                 Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -121,7 +121,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
 
     이 배경 형태에 이전과 같은 크기의 또 다른 다각형을 사용하지만, 이번에는 채우기를 흑백이 아닌 파란색-노란색 그라데이션으로 만들 것입니다. 
 
-    **이전**
+    **전에**
     ```xaml
     <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -134,7 +134,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
             Minimum="-1"
             Maximum="1" />
     ```
-    **이후**
+    **After**
     ```xaml
     <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -164,7 +164,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
 
     ![두 개의 멋진 슬라이더](../basics/images/xaml-basics/style-2sliders-done.png)
 
-7. **추가 크레딧**
+7. **추가 혜택**
 
     초록색에서 빨간색으로 그라데이션 처리된 색조 슬라이더에 대한 배경 형태를 추가합니다. 
 
@@ -175,7 +175,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
 
  
     
-## <a name="part-2-create-basic-styles"></a>파트 2: 기본 스타일 만들기
+## <a name="part-2-create-basic-styles"></a>2부: 기본 스타일 만들기
 
 XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대폭 줄일 수 있고 앱의 모양을 훨씬 쉽게 업데이트할 수 있다는 것입니다.
 
@@ -244,7 +244,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
     ```
 3. **Margin**을 "10,8,0,0"으로, **VerticalAlignment**를 "Center"로, **Padding**을 "0"으로 설정하는 **TextBlock** 스타일을 만듭니다.
 
-    **이전**
+    **전에**
     ```XAML
         <Grid.Resources>
             <Style TargetType="Slider">
@@ -262,7 +262,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
         </Grid.Resources>
     ```
 
-    **이후**
+    **After**
     ```XAML
         <Grid.Resources>
             <Style TargetType="Slider">
@@ -290,7 +290,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
 
 4. 이를 명명된 스타일로 만들어 **TextBlock**이 적용되는 컨트롤을 지정할 수 있습니다. 스타일의 **x:Key** 속성을 "ValueTextBox"로 설정합니다. 
 
-    **이전**
+    **전에**
     ```XAML
             <Style TargetType="TextBlock">
                 <Setter Property="Margin"
@@ -302,7 +302,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             </Style>                            
     ```    
 
-    **이후**
+    **After**
     ```XAML
             <Style TargetType="TextBlock"
                    x:Key="ValueTextBox">
@@ -317,7 +317,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
 
 5. 각 **TextBlock**에 대해 **Margin**, **VerticalAlignment** 및 **Padding** 속성을 제거하고, **Style** 속성을 "{StaticResource ValueTextBox}"로 설정합니다.
 
-    **이전**
+    **전에**
     ```XAML
      <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -325,7 +325,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
                 Text="{x:Bind item.Exposure.ToString('N', culture), Mode=OneWay}" />   
     ```
 
-    **이후**
+    **After**
     ```XAML
      <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -337,11 +337,10 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
 
 6. 앱을 컴파일하고 실행합니다. 동일한 모습으로 보여야 합니다. 하지만 효율적이고 유지 관리하기 쉬운 코드를 작성함으로써 얻은 만족감과 성취감을 느낄 수 있습니다.
 
-<!-- TODO add new start/end points -->
-축하합니다. 파트 2를 완료했습니다!
+<!-- TODO add new start/end points --> 축 하 합니다, 2 부를 완료 했습니다!
 
 
-## <a name="part-3-use-a-control-template-to-make-a-fancy-slider"></a>파트 3: 컨트롤 템플릿을 사용하여 멋진 슬라이더 만들기
+## <a name="part-3-use-a-control-template-to-make-a-fancy-slider"></a>3부: 컨트롤 템플릿을 사용 하 여 멋진 슬라이더를 확인 합니다.
 
 파트 1에서 슬라이더 뒤에 형태를 추가하여 멋지게 표현한 것을 기억하세요?
 
@@ -632,7 +631,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
 
 5.  파트 1의 노출 슬라이더용으로 만든 다각형과 동일한 다각형을 만듭니다. **Grid.RowDefinitions** 태그 뒤에 다각형을 추가합니다. **Grid.Row**를 "0"으로, **Grid.RowSpan**을 "3"으로, **Grid.ColumnSpan**을 "3"으로 설정합니다. 
 
-    **이전**
+    **전에**
     ```XAML
     <Grid x:Name="HorizontalTemplate" MinHeight="44">
         <Grid.ColumnDefinitions>
@@ -647,7 +646,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
         </Grid.RowDefinitions>        
     ```
 
-    **이후**
+    **After**
     ```XAML
     <Grid x:Name="HorizontalTemplate" MinHeight="44">
         <Grid.ColumnDefinitions>
@@ -676,7 +675,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
 
 6. **Polygon.Fill** 설정을 제거합니다. **Fill**을 "{TemplateBinding Background}"로 설정합니다. 이렇게 하면 슬라이더의 **Background** 속성이 다각형의 **Fill** 속성으로 설정됩니다. 
 
-    **이전**
+    **전에**
     ```XAML
         <Polygon Grid.Row="0" Grid.RowSpan="3"  Grid.ColumnSpan="3" Stretch="Fill"
                     Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -692,7 +691,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
         </Polygon>           
     ```
     
-    **이후**
+    **After**
     ```XAML
         <Polygon Grid.Row="0" Grid.RowSpan="3"  Grid.ColumnSpan="3" Stretch="Fill"
                     Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -703,7 +702,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
 
 7. 추가한 다각형 다음에 **HorizontalTrackRect**라는 사각형이 있습니다. 사각형의 **Fill** 설정을 제거하여 사각형을 보이지 않게 하고 다각형 형태를 차단하지 않게 합니다. (컨트롤 템플릿은 마우스 호버와 같은 상호 작용 시각적 이미지에도 사용되기 때문에 사각형을 완전히 제거하지는 않습니다.)
 
-    **이전**
+    **전에**
     ```XAML
         <Rectangle x:Name="HorizontalTrackRect"
                     Fill="{TemplateBinding Background}"
@@ -712,7 +711,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
                     Grid.ColumnSpan="3" />          
     ```
     
-    **이후**
+    **After**
     ```XAML
         <Rectangle x:Name="HorizontalTrackRect"
                     Height="{ThemeResource SliderTrackThemeHeight}"
@@ -729,7 +728,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
     * 슬라이더의 배경을 검은색에서 흰색으로 전환되는 선형 그라데이션으로 설정합니다.
     * 파트 1에서 만든 배경 다각형을 제거합니다.
         
-    **이전**
+    **전에**
     ```XAML
     <Polygon Grid.Row="2" Stretch="Fill"
                 Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -751,7 +750,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             Template="{StaticResource FancySliderControlTemplate}"/>    
     ```
     
-    **이후**
+    **After**
     ```XAML
     <Slider Header="Exposure" 
             Grid.Row="2"  Foreground="Transparent"
@@ -771,7 +770,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
     ```        
 9. 온도 슬라이더와 동일한 업데이트를 실행합니다.
 
-    **이전**
+    **전에**
     ```XAML
     <Polygon Grid.Row="3" Stretch="Fill"
                 Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -792,7 +791,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             Maximum="1" />
     ```
     
-    **이후**
+    **After**
     ```XAML
     <Slider Header="Temperature"
             Grid.Row="3" Foreground="Transparent"
@@ -813,7 +812,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
 
 10. 색조 슬라이더와 동일한 업데이트를 실행합니다.
 
-    **이전**
+    **전에**
     ```XAML
     <Polygon Grid.Row="4" Stretch="Fill"
                 Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -834,7 +833,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             Maximum="1" />
     ```
     
-    **이후**
+    **After**
     ```XAML
     <Slider Header="Tint"
             Grid.Row="4" Foreground="Transparent"
@@ -859,5 +858,4 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
     
     보시다시피, 업데이트를 통해 다각형의 위치를 개선했습니다. 이제 다각형의 아래쪽이 슬라이더 위치 조정 컨트롤의 아래쪽에 정렬됩니다.
     
-<!-- TODO correct folder -->
-축하합니다! 이 자습서를 완료했습니다. 중간에 문제가 생겼거나 최종 솔루션을 확인하려는 경우 [UWP 앱 샘플 리포지토리](https://github.com/Microsoft/Windows-universal-samples)에서 전체 샘플을 찾을 수 있습니다.
+<!-- TODO correct folder --> 축, 자습서를 완료 했습니다! 중간에 문제가 생겼거나 최종 솔루션을 확인하려는 경우 [UWP 앱 샘플 리포지토리](https://github.com/Microsoft/Windows-universal-samples)에서 전체 샘플을 찾을 수 있습니다.

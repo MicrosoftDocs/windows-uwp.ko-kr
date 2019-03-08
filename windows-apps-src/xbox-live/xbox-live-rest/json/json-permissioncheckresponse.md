@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7623a45fa21e30a015bd5c6a7c1f5add19cc189b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926862"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623368"
 ---
 # <a name="permissioncheckresponse-json"></a>PermissionCheckResponse(JSON)
-단일 대상 사용자에 대해 하나의 권한 설정에 대 한 명의 사용자가 검사의 결과입니다. 
+단일 대상 사용자에 대 한 단일 사용 권한 설정에 대 한 단일 사용자 확인의 결과입니다. 
 <a id="ID4EN"></a>
 
  
@@ -23,10 +23,10 @@ ms.locfileid: "8926862"
  
 PermissionCheckResponse 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| IsAllowed| 부울 값| 필수. 이 멤버는 요청 하는 사용자가 대상 사용자를 사용 하 여 요청 된 작업을 수행할 수 있으면 <b>true</b> 입니다.| 
-| 결과| [PermissionCheckResult (JSON)](json-permissioncheckresult.md) 의 배열| 선택 사항입니다. <b>IsAllowed</b> false 되었으며 요청자에 게 관련 된 것으로 거부 되었음을 확인 하는 경우 권한을 거부 된 이유를 나타냅니다.| 
+| IsAllowed| 부울 값| 필수. 이 멤버인 <b>true</b> 요청 하는 사용자는 대상 사용자를 사용 하 여 요청한 작업을 수행 하도록 허용 된 경우.| 
+| 결과| 배열을 [PermissionCheckResult (JSON)](json-permissioncheckresult.md)| 선택 사항. 하는 경우 <b>IsAllowed</b> false 확인이 거부 되어 요청자에 게 관련 된 작업에 의해 사용 권한이 거부 된 이유를 나타냅니다.| 
   
 <a id="ID4E3B"></a>
 
@@ -55,8 +55,8 @@ PermissionCheckResponse 개체에 다음과 같이 지정 합니다.
 <a id="ID4EHC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

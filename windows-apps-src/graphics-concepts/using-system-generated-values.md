@@ -1,20 +1,20 @@
 ---
-title: 시스템 생성 값 사용
+title: 시스템에서 생성된 값 사용
 description: 시스템 생성 값은 셰이더 작업에서 어느 정도의 효율성을 허용하기 위해 IA(입력 어셈블러) 단계(사용자가 제공한 입력 의미 체계 기반)에서 생성됩니다.
 ms.assetid: C7CBA81D-68CA-4E9A-95E3-8185C280C843
 keywords:
-- 시스템 생성 값 사용
+- 시스템에서 생성된 값 사용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6efe7aa27721f519ba93052abf2d0e8189f58941
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933723"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622318"
 ---
-# <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>시스템 생성 값 사용
+# <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>시스템에서 생성 된 값을 사용 하 여
 
 
 시스템 생성 값은 셰이더 작업에서 어느 정도의 효율성을 허용하기 위해 [IA(입력 어셈블러) 단계](input-assembler-stage--ia-.md)(사용자가 제공한 입력 [의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb509647) 기반)에서 생성됩니다. 후속 셰이더 단계에서는 인스턴스 ID([VS(꼭짓점 셰이더) 단계](vertex-shader-stage--vs-.md)에 표시), 꼭짓점 ID(VS에 표시) 또는 기본 ID([GS(기하 도형 셰이더) 단계](geometry-shader-stage--gs-.md)/[PS(픽셀 셰이더) 단계](pixel-shader-stage--ps-.md)에 표시)와 같은 데이터를 연결하여 해당 단계에서 처리를 최적화하는 시스템 값을 찾을 수 있습니다.
@@ -95,10 +95,10 @@ IA 단계에서는 [GS(기하 도형 셰이더) 단계](geometry-shader-stage--g
 
 [IA(입력 어셈블러) 단계](input-assembler-stage--ia-.md)에서는 ID(꼭짓점, 기본 형식, 인스턴스)를 생성합니다. 그리고 각 인스턴스에는 고유한 인스턴스 ID가 지정됩니다. 데이터는 스트립 잘라내기로 마무리되며, 이를 통해 삼각형 스트립의 각 인스턴스가 분리됩니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[IA(입력 어셈블러) 단계](input-assembler-stage--ia-.md)
+[입력 어셈블러 (IA) 단계](input-assembler-stage--ia-.md)
 
  
 

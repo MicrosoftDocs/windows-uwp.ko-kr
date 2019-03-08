@@ -6,11 +6,11 @@ ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1875fecbdfa6b97cdc30413c8afa6cc58d3251ef
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045482"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595038"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>2017년 7월 Windows 개발자 문서의 새로운 내용
 
@@ -50,7 +50,7 @@ SDK Preview 빌드의 [Windows 참가자](https://insider.windows.com/)에서 �
 
 [사람 그림 컨트롤](../design/controls-and-patterns/person-picture.md)은 사람에 대한 아바타 이미지를 표시합니다.
 
-![사람 사진 컨트롤](../design/controls-and-patterns/images/person-picture/person-picture_hero.png)
+![인물 사진 컨트롤](../design/controls-and-patterns/images/person-picture/person-picture_hero.png)
 
 [등급 컨트롤](../design/controls-and-patterns/rating.md)은 사용자가 콘텐츠 및 서비스에 대한 만족도를 반영하는 등급을 손쉽게 확인 및 설정할 수 있도록 해줍니다.
 
@@ -78,7 +78,7 @@ Sketch 및 Adobe XD의 추가로 [UWP 앱에 대한 디자인 도구 키트 및 
 
 ### <a name="my-people"></a>내 피플
 
-SDK Preview 빌드의 [Windows 참가자](https://insider.windows.com/)에 곧 추가될 내 피플 기능을 통해 응용 프로그램에서 작업 표시줄로 연락처를 직접 고정할 수 있습니다. [응용 프로그램에 내 피플 지원을 추가하는 방법을 알아보세요.](../contacts-and-calendar/my-people-support.md)
+SDK Preview 빌드의 [Windows 참가자](https://insider.windows.com/)에 곧 추가될 내 피플 기능을 통해 응용 프로그램에서 작업 표시줄로 연락처를 직접 고정할 수 있습니다. [응용 프로그램 내 사용자 지원을 추가 하는 방법을 알아봅니다.](../contacts-and-calendar/my-people-support.md)
 
 ![내 피플 연락처 패널](images/my-people.png)
 
@@ -128,7 +128,7 @@ Windows S를 실행하는 디바이스에서 Windows 앱이 제대로 작동하�
 
 ![쇼핑 앱 샘플의 스크린샷](images/shoppingcart.png)  
 
-## <a name="videos"></a>동영상
+## <a name="videos"></a>비디오
 
 ### <a name="accessibility"></a>접근성
 
@@ -138,6 +138,6 @@ Windows S를 실행하는 디바이스에서 Windows 앱이 제대로 작동하�
 
 결제 요청 API는 고객과 판매자가 보다 원활하게 온라인 체크아웃 프로세스를 완료할 수 있도록 도와줍니다. [동영상을 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-the-Payments-Request-API)하고 [결제 요청 설명서](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-the-Payments-Request-API)를 살펴보세요.
 
-### <a name="windows-10-iot-core"></a>Windows 10 IoT Core
+### <a name="windows-10-iot-core"></a>Windows 10 IoT Core K
 
 Windows 10 IoT Core 및 유니버설 Windows 플랫폼을 사용하여 이 애완동물 인식 출입구와 같이 시각과 구성 요소 연결을 활용한 프로젝트의 프로토타입을 빠르게 제작하고 빌드할 수 있습니다. [동영상을 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Building-a-Pet-Recognition-Door-Using-Windows-10-IoT-Core)하고 [Windows 10 IoT Core 시작](https://developer.microsoft.com/en-us/windows/iot) 방법을 알아보세요.

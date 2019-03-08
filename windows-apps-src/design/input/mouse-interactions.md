@@ -1,19 +1,19 @@
 ---
-Description: Respond to mouse input in your apps by handling the same basic pointer events that you use for touch and pen input.
+Description: 터치 및 펜 입력에 사용하는 것과 동일한 기본 포인터 이벤트를 처리하여 앱에서 마우스 입력에 응답합니다.
 title: 마우스 조작
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f81634fdb0f9382b1f660394764e5555189783e4
-ms.sourcegitcommit: 444fd387c55618f9afdac115264c85b14fd8b826
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "8999916"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622358"
 ---
 # <a name="mouse-interactions"></a>마우스 조작
 
@@ -21,7 +21,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 ![마우스](images/input-patterns/input-mouse.jpg)
 
-마우스 입력은 가리키고 클릭할 때 정밀도가 필요한 사용자 조작에 가장 적합합니다. 이러한 고유 정밀도는 터치의 부정확한 특성에 최적화된 Windows의 UI에서 자연스럽게 지원됩니다.
+마우스 입력은 가리키고 클릭할 때 정밀도가 필요한 사용자 조작에 가장 적합합니다. 이러한 고유 정밀도는 터치의 부정확한 특성에 최적화된 Windows의 UI에서도 당연히 지원됩니다.
 
 마우스 및 터치식 입력이 분리되는 위치는 해당 개체에서 직접 수행되는 실제 제스처(예: 살짝 밀기, 밀기, 끌기, 회전 등)를 통해 UI 요소의 직접 조작을 보다 밀접하게 에뮬레이트하는 터치의 기능입니다. 마우스 조작에는 일반적으로 개체를 회전하거나 크기를 조정하는 데 핸들을 사용하는 것과 같은 일부 다른 UI 어포던스가 필요합니다.
 
@@ -59,7 +59,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 <td align="left"><p>마우스 오른쪽 단추를 클릭하여 명령 선택</p></td>
 <td align="left"><p>마우스 오른쪽 단추를 클릭하여 탐색 모음 (사용 가능한 경우) 및 글로벌 명령이 포함된 앱 바를 표시합니다. 요소를 마우스 오른쪽 단추로 클릭하여 선택하고 선택한 요소에 대한 상황에 맞는 명령이 포함된 앱 바를 표시합니다.</p>
 <div class="alert">
-<strong>참고</strong>를 선택 또는 앱 바 명령이 적합 한 UI 동작이 아닌 경우 상황에 맞는 메뉴를 표시 합니다. 그러나 모든 명령 동작에 앱 바를 사용하는 것이 좋습니다.
+<strong>참고</strong>  적절 한 UI 동작 하지 않는 선택 또는 앱 표시줄 명령 하는 경우 상황에 맞는 메뉴를 표시 하려면 마우스 오른쪽 단추로 클릭 합니다. 그러나 모든 명령 동작에 앱 바를 사용하는 것이 좋습니다.
 </div>
 <div>
  
@@ -86,7 +86,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 ## <a name="mouse-input-events"></a>마우스 입력된 이벤트
 
-모든 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체에서 지 원하는 일반적인 라우트된 입력된 이벤트를 통해 대부분의 마우스 입력을 처리할 수 있습니다. 다음이 포함됩니다.
+대부분의 마우스 입력에서 모든 지원 되는 공용 라우트된 입력된 이벤트를 통해 처리할 수 있습니다 [ **UIElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체입니다. 확인할 수 있습니다.
 
 - [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
 - [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
@@ -97,11 +97,11 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 - [**DragLeave**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragleave)
 - [**DragOver**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
 - [**DragStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragstarting)
-- [**놓기**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
+- [**Drop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
 - [**DropCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dropcompleted)
 - [**GettingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gettingfocus)
 - [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
-- [**Holding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
+- [**보유**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
 - [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown)
 - [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup)
 - [**LosingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.losingfocus)
@@ -124,17 +124,17 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 - [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup.md)
 - [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
 - [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
-- [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
+- [**탭**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
 
-그러나 [Windows.UI.Input](https://docs.microsoft.com/uwp/api/windows.ui.input)에서 포인터, 제스처 및 조작 이벤트를 사용 하 여 각 장치 (예: 마우스 휠 이벤트)의 특정 기능 활용을 걸릴 수 있습니다.
+각 장치 (예: 마우스 휠 이벤트)의 특정 기능에 대 한 포인터, 제스처 및 조작 이벤트를 사용 하 여를 활용할 수는 있지만 [Windows.UI.Input](https://docs.microsoft.com/uwp/api/windows.ui.input)합니다.
 
-**샘플:** [BasicInput 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)을 참조 하세요.
+**샘플:** 참조 우리의 [BasicInput 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)에 대 한 합니다.
 
 ## <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 
 - 이동 또는 가리키기 이벤트를 통해 마우스가 검색되면 마우스 관련 UI를 표시하여 이벤트에 의해 노출되는 기능을 나타냅니다. 마우스가 정해진 시간 동안 이동하지 않거나 사용자가 터치 조작을 시작하면 마우스 UI가 점점 사라지도록 합니다. 이렇게 하면 UI가 깔끔하고 간결하게 유지됩니다.
 - 가리키기 피드백에 커서를 사용하지 마세요. 요소에서 제공하는 피드백만으로 충분합니다(아래 커서 참조).
-- 요소가 조작을 지원하지 않는 경우(예: 정적 테스트) 시각적 피드백을 표시하지 마세요.
+- 요소가 조작을 지원하지 않는 경우(예제: 정적 테스트) 시각적 피드백을 표시하지 마세요.
 - 마우스 조작 시 포커스 사각형을 사용하지 마세요. 포커스 사각형은 키보드 조작에 예약합니다.
 - 동일한 입력 대상을 나타내는 모든 요소에 대해 동시에 시각적 피드백을 표시합니다.
 - 이동, 회전, 확대/축소 등의 터치 기반 조작을 에뮬레이트하기 위한 단추(예: + 및 -)를 제공합니다.
@@ -145,7 +145,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 마우스 포인터에 일련의 표준 커서를 사용할 수 있습니다. 이러한 커서는 요소의 기본 동작을 나타내는 데 사용됩니다.
 
-각 표준 커서에는 해당 기본 이미지가 연결되어 있습니다. 사용자나 앱은 언제든지 표준 커서와 연결된 기본 이미지를 바꿀 수 있습니다. [**PointerCursor**](https://msdn.microsoft.com/library/windows/apps/br208273) 함수를 통해 커서 이미지를 지정합니다.
+각 표준 커서에는 해당 기본 이미지가 연결되어 있습니다. 사용자나 앱은 언제든지 표준 커서와 연결된 기본 이미지를 바꿀 수 있습니다. [  **PointerCursor**](https://msdn.microsoft.com/library/windows/apps/br208273) 함수를 통해 커서 이미지를 지정합니다.
 
 마우스 커서를 사용자 지정해야 하는 경우
 
@@ -158,12 +158,12 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 ## <a name="related-articles"></a>관련 문서
 
 - [포인터 입력 처리](handle-pointer-input.md)
-- [입력 장치 식별](identify-input-devices.md)
+- [입력 디바이스 식별](identify-input-devices.md)
 - [이벤트 및 라우트된 이벤트 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)
 
 ### <a name="samples"></a>샘플
 
-- [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-- [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-- [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-- [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+- [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+- [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+- [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)

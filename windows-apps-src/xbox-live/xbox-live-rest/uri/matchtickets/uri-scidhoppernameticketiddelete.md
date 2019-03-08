@@ -8,18 +8,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: fdd28cb94b31102d9af98aa95afde45424dadce9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919542"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589668"
 ---
 # <a name="delete-serviceconfigsscidhoppershoppernameticketsticketid"></a>DELETE (/serviceconfigs/{scid}/hoppers/{hoppername}/tickets/{ticketid})
 
-일치 티켓을 제거 합니다.
+일치 티켓을 제거합니다.
 
 > [!IMPORTANT]
-> 이 메서드를 계약 103 이상을 사용 하 여 사용 하기 위한 있으며 X Xbl-계약 버전의 헤더 요소: 103 또는 나중에 모든 요청.
+> 이 103 이상 계약과 함께 사용 하기 위한 메서드와 X Xbl-계약 버전 헤더 요소를 필요: 103 또는 나중에 모든 요청 합니다.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4E2)
@@ -33,15 +33,15 @@ ms.locfileid: "8919542"
 
 ## <a name="remarks"></a>설명
 
-이 HTTP/REST 메서드에 서비스 구성 ID (서비스 안내) 수준에서 명명 된 hopper에서 지정 된 티켓 ID를 삭제합니다. 이 메서드는 **Microsoft.Xbox.Services.Matchmaking.MatchmakingService.DeleteMatchTicketAsync**하 여 줄 바꿈할 수 있습니다.  
+이 HTTP/REST 메서드는 서비스 구성 서비스 ID (안내) 수준에서 명명 된 hopper에서 지정 된 티켓 ID를 삭제합니다. 이 메서드는로 래핑할 수 있습니다 **Microsoft.Xbox.Services.Matchmaking.MatchmakingService.DeleteMatchTicketAsync**합니다.  
 <a id="ID4E2"></a>
 
 
 ## <a name="uri-parameters"></a>URI 매개 변수
 
-| 매개 변수| 유형| 설명|
+| 매개 변수| 형식| 설명|
 | --- | --- | --- | --- |
-| 서비스 안내| GUID| 서비스 구성 (서비스 안내) 세션 식별자입니다.|
+| scid| GUID| 서비스 구성 (서비스 안내) 세션 식별자입니다.|
 | name| 문자열| hopper의 이름입니다.|
 | ticketId| GUID| 티켓 id입니다.|
 
@@ -50,10 +50,10 @@ ms.locfileid: "8919542"
 
 ## <a name="authorization"></a>권한 부여
 
-| 형식| 필수| 설명| 누락 된 경우 응답|
+| 형식| 필수| 설명| 응답 없는 경우|
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| XUID (사용자 ID)| 예| 요청 사용자 티켓이 참조 하는 티켓 세션의 구성원 이어야 합니다.| 403|
-| 남용 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 된 경우 해당 클레임의 멀티 플레이 권한 있는 사용자만는 매치 메이 킹 서비스 호출을 할 수 있습니다.| 403|
+| XUID (사용자 ID)| 예| 요청을 만드는 사용자 티켓에서 참조 하는 티켓 세션의 멤버 여야 합니다.| 403|
+| 권한 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 되 면 클레임에서 멀티 플레이 권한이 있는 사용자만 결혼 정보 회사 연결 서비스를 호출할 수 있습니다.| 403|
 
 <a id="ID4EOC"></a>
 
@@ -66,7 +66,7 @@ ms.locfileid: "8919542"
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
 
 <a id="ID4ECD"></a>
 
@@ -83,6 +83,6 @@ ms.locfileid: "8919542"
 <a id="ID4ERD"></a>
 
 
-##### <a name="parent"></a>부모  
+##### <a name="parent"></a>Parent  
 
 [/serviceconfigs/{scid}/hoppers/{hoppername}/tickets/{ticketid}](uri-scidhoppernameticketid.md)
