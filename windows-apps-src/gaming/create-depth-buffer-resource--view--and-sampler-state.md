@@ -1,24 +1,24 @@
 ---
-title: 깊이 버퍼 장치 리소스 만들기
-description: 섀도 볼륨에 대한 깊이 테스트를 지원하는 데 필요한 Direct3D 장치 리소스를 만드는 방법을 알아봅니다.
+title: 깊이 버퍼 디바이스 리소스 만들기
+description: 섀도 볼륨에 대한 깊이 테스트를 지원하는 데 필요한 Direct3D 디바이스 리소스를 만드는 방법을 알아봅니다.
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, direct3d, 깊이 버퍼
 ms.localizationpriority: medium
 ms.openlocfilehash: f5ce1ec522a194111e175e41f82c4275cda4fbf5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946746"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613698"
 ---
-# <a name="create-depth-buffer-device-resources"></a>깊이 버퍼 장치 리소스 만들기
+# <a name="create-depth-buffer-device-resources"></a>깊이 버퍼 디바이스 리소스 만들기
 
 
 
 
-섀도 볼륨에 대한 깊이 테스트를 지원하는 데 필요한 Direct3D 디바이스 리소스를 만드는 방법을 알아봅니다. [연습: Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md)의 1부입니다.
+섀도 볼륨에 대한 깊이 테스트를 지원하는 데 필요한 Direct3D 디바이스 리소스를 만드는 방법을 알아봅니다. 개 중 1 부 [연습: Direct3D 11에서 깊이 버퍼를 사용 하 여 섀도 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md)합니다.
 
 ## <a name="resources-youll-need"></a>필요한 리소스
 
@@ -38,7 +38,7 @@ ms.locfileid: "8946746"
 ## <a name="check-feature-support"></a>기능 지원 확인
 
 
-깊이 맵을 만들기 전에 Direct3D 디바이스에서 [**CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) 메서드를 호출하고 **D3D11\_FEATURE\_D3D9\_SHADOW\_SUPPORT**를 요청한 다음 [**D3D11\_FEATURE\_DATA\_D3D9\_SHADOW\_SUPPORT**](https://msdn.microsoft.com/library/windows/desktop/jj247569) 구조를 제공합니다.
+깊이 지도 만들기 전에 호출 된 [ **CheckFeatureSupport** ](https://msdn.microsoft.com/library/windows/desktop/ff476497) 메서드는 Direct3D 장치에서 요청 **D3D11\_기능\_D3D9\_ 섀도\_지원**를 제공 하 고는 [ **D3D11\_기능\_데이터\_D3D9\_섀도\_지원** ](https://msdn.microsoft.com/library/windows/desktop/jj247569) 구조입니다.
 
 ```cpp
 D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT isD3D9ShadowSupported;
@@ -55,14 +55,14 @@ if (isD3D9ShadowSupported.SupportsDepthAsTextureWithLessEqualComparisonFilter)
 
 ```
 
-이 기능이 지원되지 않는 경우 단순 비교 함수를 호출하는 셰이더 모델 4 수준 9\_x에 대해 컴파일된 셰이더를 로드하지 마세요. 대부분의 경우 이 기능이 지원되지 않는다는 것은 GPU가 최소한 WDDM 1.2를 지원하도록 업데이트되지 않은 드라이버가 있는 레거시 장치임을 의미합니다. 디바이스가 기능 레벨 10\_0 이상을 지원하는 경우 셰이더 모델 4\_0에 대해 컴파일된 샘플 비교 셰이더를 로드할 수 있습니다.
+이 기능은 지원 되지 않는 경우 셰이더 모델 4 수준 9에 대 한 컴파일된 셰이더를 로드 하지 않습니다\_샘플 비교 함수를 호출 하는 x입니다. 대부분의 경우 이 기능이 지원되지 않는다는 것은 GPU가 최소한 WDDM 1.2를 지원하도록 업데이트되지 않은 드라이버가 있는 레거시 장치임을 의미합니다. 장치가 지 원하는 최소 기능 수준을 10 하는 경우\_0을 컴파일된 셰이더 모델 4에 대 한 샘플 비교 셰이더를 로드할 수\_0 대신 합니다.
 
 ## <a name="create-depth-buffer"></a>깊이 버퍼 만들기
 
 
 먼저, 높은 정밀도 깊이 형식으로 깊이 맵을 만들어 봅니다. 먼저, 일치하는 셰이더 리소스 보기 속성을 설정합니다. 장치 메모리가 부족하거나 하드웨어에서 지원하지 않는 형식 등으로 인해 리소스 만들기에 실패하면 낮은 정밀도 형식을 시도해 보고 일치시킬 속성을 변경합니다.
 
-이 단계는 선택적 단계로서, 중간 해상도 Direct3D 기능 수준 9\_1 디바이스에서 렌더링하는 경우 등 낮은 정밀도 깊이 형식만 필요한 경우에 수행합니다.
+이 단계는 낮은 정밀도 깊이 형식, 예를 들어 중간 해상도 Direct3D 기능 수준의 9 렌더링할 때만 필요한 경우 선택적\_1 장치입니다.
 
 ```cpp
 D3D11_TEXTURE2D_DESC shadowMapDesc;
@@ -82,7 +82,7 @@ HRESULT hr = pD3DDevice->CreateTexture2D(
     );
 ```
 
-그런 다음 리소스 보기를 만듭니다. 깊이 스텐실 보기에서 MIP 조각을 0으로 설정하고, 셰이더 리소스 보기에서 MIP 수준을 1로 설정합니다. 이러한 두 보기 모두에 TEXTURE2D의 텍스처 차원이 있고, 이러한 두 보기 모두가 일치하는 [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059) 형식을 사용해야 합니다.
+그런 다음 리소스 보기를 만듭니다. 깊이 스텐실 보기에서 MIP 조각을 0으로 설정하고, 셰이더 리소스 보기에서 MIP 수준을 1로 설정합니다. 둘 다 TEXTURE2D, 질감 차원의 있고 둘 다 일치 하는 데 필요한 [ **DXGI\_형식**](https://msdn.microsoft.com/library/windows/desktop/bb173059)합니다.
 
 ```cpp
 D3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc;
@@ -113,11 +113,11 @@ hr = pD3DDevice->CreateShaderResourceView(
 ## <a name="create-comparison-state"></a>비교 상태 만들기
 
 
-이제 비교 샘플러 상태 개체를 만듭니다. 기능 수준 9\_1은 D3D11\_COMPARISON\_LESS\_EQUAL만 지원합니다. 필터링 선택 사항은 [다양한 하드웨어에서 그림자 맵 지원](target-a-range-of-hardware.md)에 자세히 설명되어 있으며, 점 필터링을 선택하여 빠르게 그림자 맵을 사용할 수 있습니다.
+이제 비교 샘플러 상태 개체를 만듭니다. 기능 수준을 9\_1 D3D11 지원\_비교\_적은\_동일 합니다. 필터링 선택 사항은 [다양한 하드웨어에서 그림자 맵 지원](target-a-range-of-hardware.md)에 자세히 설명되어 있으며, 점 필터링을 선택하여 빠르게 그림자 맵을 사용할 수 있습니다.
 
-D3D11\_TEXTURE\_ADDRESS\_BORDER 주소 모드를 지정할 수 있으며, 이 주소 모드를 지정하면 기능 수준 9\_1 디바이스에서 작동합니다. 이 내용은 깊이 테스트를 하기 전에 픽셀이 조명의 시각 절두체에 있는지 여부를 테스트하지 않는 픽셀 셰이더에 적용됩니다. 각 테두리에 대해 0 또는 1을 지정하여 조명의 시각 절두체 밖에 있는 픽셀이 깊이 테스트를 통과하는지 아니면 실패하는지를 제어할 수 있으므로 픽셀이 켜지는지 여부를 제어할 수 있습니다.
+D3D11를 지정할 수 있습니다\_질감\_주소\_테두리 주소 모드와 작동 기능 수준 9\_1 장치입니다. 이 내용은 깊이 테스트를 하기 전에 픽셀이 조명의 시각 절두체에 있는지 여부를 테스트하지 않는 픽셀 셰이더에 적용됩니다. 각 테두리에 대해 0 또는 1을 지정하여 조명의 시각 절두체 밖에 있는 픽셀이 깊이 테스트를 통과하는지 아니면 실패하는지를 제어할 수 있으므로 픽셀이 켜지는지 여부를 제어할 수 있습니다.
 
-기능 수준 9\_1에서 다음 필수 값을 설정해야 합니다. **MinLOD**를 0으로 설정하고, **MaxLOD**를 **D3D11\_FLOAT32\_MAX**로 설정하고 **MaxAnisotropy**를 0으로 설정합니다.
+기능 수준 9\_1, 다음과 같은 필수 값을 설정 해야 합니다. **MinLOD** 0으로 설정 됩니다 **MaxLOD** 로 설정 되어 **D3D11\_FLOAT32\_MAX**, 및 **MaxAnisotropy** 0으로 설정 됩니다.
 
 ```cpp
 D3D11_SAMPLER_DESC comparisonSamplerDesc;
@@ -152,7 +152,7 @@ DX::ThrowIfFailed(
 ## <a name="create-render-states"></a>렌더 상태 만들기
 
 
-이제 앞면 컬링을 사용하도록 설정하는 데 사용할 수 있는 렌더 상태를 만듭니다. 기능 수준 9\_1 디바이스를 사용하려면 **DepthClipEnable**을 **true**로 설정해야 합니다.
+이제 앞면 컬링을 사용하도록 설정하는 데 사용할 수 있는 렌더 상태를 만듭니다. 해당 기능 수준 9 유의\_1 장치 필요 **DepthClipEnable** 로 설정 **true**합니다.
 
 ```cpp
 D3D11_RASTERIZER_DESC drawingRenderStateDesc;

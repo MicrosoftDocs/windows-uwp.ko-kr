@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 86b8627461251a5d43762facc18c8a414a117fc9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941410"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604128"
 ---
 # <a name="light-properties"></a>조명 속성
 
@@ -24,11 +24,11 @@ ms.locfileid: "8941410"
 ## <a name="span-idlightattenuationspanspan-idlightattenuationspanspan-idlightattenuationspanlight-attenuation"></a><span id="Light_Attenuation"></span><span id="light_attenuation"></span><span id="LIGHT_ATTENUATION"></span>조명 감쇠
 
 
-감쇠는 범위 속성에서 정의한 최대 거리를 향하는 동안 조명 강도가 어떻게 줄어드는지 제어합니다. Attenuation0, Attenuation1, Attenuation2 등 세 개의 부동 소수점 값이 빛 감쇠를 나타내는 데 사용되기도 합니다. 0.0부터 무한대까지 이 부동 소수점 값이 조명 감쇠를 제어합니다. 일부 응용 프로그램은 Attenuation1 구성원을 1.0으로 나머지를 0.0으로 설정하여 1 / D로 변화하는 빛 강도를 만들어냅니다. 여기서 D는 광원에서 꼭짓점까지 거리입니다. 최대 빛 강도는 광원에서 측정되며 조명 범위에서 1/(조명 범위)로 줄어듭니다.
+감쇠는 범위 속성에서 정의한 최대 거리를 향하는 동안 조명 강도가 어떻게 줄어드는지 제어합니다. 세 개의 부동 소수점 값은 조명 감쇠를 나타내는 데 경우도 있습니다. Attenuation0 Attenuation1, 하며 Attenuation2 합니다. 0.0부터 무한대까지 이 부동 소수점 값이 조명 감쇠를 제어합니다. 일부 응용 프로그램은 Attenuation1 구성원을 1.0으로 나머지를 0.0으로 설정하여 1 / D로 변화하는 빛 강도를 만들어냅니다. 여기서 D는 광원에서 꼭짓점까지 거리입니다. 최대 빛 강도는 광원에서 측정되며 조명 범위에서 1/(조명 범위)로 줄어듭니다.
 
 일반적으로 응용 프로그램은 Attenuation0을 0.0으로 Attenuation1을 상수 값으로, Attenuation2를 0.0으로 설정하는데, 이 값을 바꿔 다양한 조명 효과를 낼 수 있습니다. 감쇠 값을 조합하면 더욱 복잡한 감쇠 효과를 낼 수 있습니다. 또는 일반 범위를 벗어난 값으로 설정하여 더욱 독특한 감쇠 효과를 만들어낼 수 있습니다. 하지만 음의 감쇠 값은 허용되지 않습니다. [감쇠 및 스포트라이트 계수](attenuation-and-spotlight-factor.md)를 참조하세요.
 
-## <a name="span-idlightcolorspanspan-idlightcolorspanspan-idlightcolorspanlight-color"></a><span id="Light_Color"></span><span id="light_color"></span><span id="LIGHT_COLOR"></span>조명 색상
+## <a name="span-idlightcolorspanspan-idlightcolorspanspan-idlightcolorspanlight-color"></a><span id="Light_Color"></span><span id="light_color"></span><span id="LIGHT_COLOR"></span>밝은 색
 
 
 Direct3D에서 조명은 시스템의 조명 계산에서 독립적으로 사용되는 세 가지 색상, 즉 확산 색, 주변 색, 반사 색을 방출합니다. 각각의 색은 Direct3D 조명 모듈에 의해 통합되며 현재 재료의 상대와 상호 작용하여 렌더링에 사용되는 최종 색상을 만들어냅니다. 확산 색은 현재 재료의 확산 반사율 속성과 상호 작용하고 반사 색은 재료의 반사율 속성 등과 상호 작용합니다. Direct3D가 어떻게 이러한 색상에 적용되는지에 관한 자세한 내용은 [조명의 수학](mathematics-of-lighting.md)을 참조하세요.
@@ -56,20 +56,20 @@ Direct3D가 조명에 RGBA 값을 사용하더라도 알파 색 구성 요소는
 
 조명 방향 벡터를 정규화할 필요는 없지만 크기가 있다는 점에 유의해야 합니다. 다시 말해 &lt;0,0,0&gt; 방향 벡터를 사용하지 마십시오.
 
-## <a name="span-idlightpositionspanspan-idlightpositionspanspan-idlightpositionspanlight-position"></a><span id="Light_Position"></span><span id="light_position"></span><span id="LIGHT_POSITION"></span>조명 위치
+## <a name="span-idlightpositionspanspan-idlightpositionspanspan-idlightpositionspanlight-position"></a><span id="Light_Position"></span><span id="light_position"></span><span id="LIGHT_POSITION"></span>밝은 위치
 
 
 조명 위치는 벡터 구조를 이용해 설명됩니다. x, y, z 좌표는 월드 공간에 있는 것으로 간주됩니다. 방향성 광원은 위치 속성을 사용하지 않는 유일한 빛 유형입니다.
 
-## <a name="span-idlightrangespanspan-idlightrangespanspan-idlightrangespanlight-range"></a><span id="Light_Range"></span><span id="light_range"></span><span id="LIGHT_RANGE"></span>조명 범위
+## <a name="span-idlightrangespanspan-idlightrangespanspan-idlightrangespanlight-range"></a><span id="Light_Range"></span><span id="light_range"></span><span id="LIGHT_RANGE"></span>Light 범위
 
 
 월드 공간에서 조명의 범위 속성은 장면에서 메시가 더 이상 그 물체에서 방출되는 빛을 받아들이지 않는 거리를 결정합니다. 방향성 광원은 범위 속성을 사용하지 않습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[조명과 재료](lights-and-materials.md)
+[광원 및 재질](lights-and-materials.md)
 
  
 

@@ -1,5 +1,5 @@
 ---
-Description: Sound helps complete an application's user experience, and gives them that extra audio edge they need to match the feel of Windows across all platforms.
+Description: 소리는 응용 프로그램의 사용자 환경을 완성하고 모든 플랫폼에서 Windows 느낌을 일치시키는 데 필요한 추가 오디오 이점을 제공합니다.
 label: Sound
 title: 소리
 template: detail.hbs
@@ -13,11 +13,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f04d364aac79ed232f35cbdd8378bc50393d2c74
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058514"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614378"
 ---
 # <a name="sound"></a>소리
 
@@ -29,11 +29,11 @@ ms.locfileid: "9058514"
 
 UWP는 단순히 "스위치를 플리핑"하여 전체 앱에서 몰입형 오디오 환경을 얻을 수 있는, 쉽게 액세스할 수 있는 사운드 시스템을 제공합니다.
 
-[**ElementSoundPlayer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer)는 XAML 내의 통합 사운드 시스템이며, 켤 경우 모든 기본 컨트롤이 자동으로 소리를 재생합니다.
+[  **ElementSoundPlayer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer)는 XAML 내의 통합 사운드 시스템이며, 켤 경우 모든 기본 컨트롤이 자동으로 소리를 재생합니다.
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
-**ElementSoundPlayer**에는 **켜짐**, **꺼짐** 및 **자동**의 세 가지 상태가 있습니다.
+합니다 **ElementSoundPlayer** 세 가지 다른 상태가 있습니다. **온** **해제** 하 고 **자동**합니다.
 
 **꺼짐**으로 설정된 경우 앱을 실행하는 위치에 관계없이 소리가 재생되지 않습니다. **켜짐**으로 설정된 경우 앱의 소리가 모든 플랫폼에서 재생됩니다.
 
@@ -44,9 +44,9 @@ ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off
 ```
 
 **SpatialAudioMode** 속성은 다음 값을 취할 수 있습니다. 
-- **Auto**: 소리가 켜져 있으면 공간 오디오를 켭니다. 
-- **Off**: 소리가 켜져 있더라도 공간 오디오를 항상 끕니다.
-- **On**: 공간 오디오를 항상 재생합니다.
+- **자동**: 사운드 때 공간 오디오 켜 집니다 켜져 있습니다. 
+- **해제**: 공간 오디오는 항상 off, 사운드 경우에 켜져 있습니다.
+- **켜짐**: 항상 공간 오디오 재생 됩니다.
 
 공간 오디오 및 XAML 처리 방법에 대한 자세한 내용은 [AudioGraph - 공간 오디오](/windows/uwp/audio-video-camera/audio-graphs#spatial-audio)를 참조하세요.
 
@@ -69,7 +69,7 @@ ElementSoundPlayer.Volume = 0.5;
 
 컨트롤의 기본 소리가 부적절한 경우 사용하지 않도록 설정할 수 있습니다. 이 작업은 컨트롤의 **ElementSoundMode**를 통해 수행합니다.
 
-**ElementSoundMode**에는 **꺼짐**과 **기본값**의 두 가지 상태가 있습니다. 설정하지 않으면 **기본값**입니다. **꺼짐**으로 설정하면 *포커스를 제외*하고 컨트롤이 재생하는 모든 소리가 음소거됩니다.
+합니다 **ElementSoundMode** 두 가지 상태: **Off** 하 고 **기본**입니다. 설정하지 않으면 **기본값**입니다. **꺼짐**으로 설정하면 *포커스를 제외*하고 컨트롤이 재생하는 모든 소리가 음소거됩니다.
 
 ```XAML
 <Button Name="ButtonName" Content="More Info" ElementSoundMode="Off"/>
@@ -89,7 +89,7 @@ ButtonName.ElementSoundState = ElementSoundMode.Off;
 
 오늘날 컨트롤에 의해 트리거되는 가장 일반적인 시스템 소리는 **Invoke** 소리입니다. 이 소리는 사용자가 탭/클릭/Enter/스페이스 또는 게임 패드의 'A' 단추 누르기를 통해 컨트롤을 호출할 때 재생됩니다.
 
-일반적으로 이 소리는 사용자가 [입력 장치](../input/index.md)를 통해 단순 컨트롤이나 컨트롤 부분의 대상을 명시적으로 지정하는 경우에만 재생됩니다.
+일반적으로 이 소리는 사용자가 [입력 디바이스](../input/index.md)를 통해 단순 컨트롤이나 컨트롤 부분의 대상을 명시적으로 지정하는 경우에만 재생됩니다.
 
 &lt;여기에 SelectButtonClick.mp3 사운드 클립 포함&gt;
 
@@ -118,7 +118,7 @@ ElementSoundPlayer.Play(ElementSoundKind.Hide);
 ```
 ### <a name="navigation-within-a-page"></a>페이지 내의 탐색
 
-앱의 페이지 내의 패널 또는 보기 간에 탐색 하는 경우 (참조 [탭 및 피벗](../controls-and-patterns/pivot.md))은 일반적으로 양방향 이동 합니다. 따라서 현재 앱 페이지를 나가지 않고도 다음 보기/패널 또는 이전 보기/패널로 이동할 수 있습니다.
+패널 또는 앱의 페이지 내에서 뷰 사이 탐색할 때 (참조 [탭 및 피벗](../controls-and-patterns/pivot.md))에 일반적으로 양방향 이동 합니다. 따라서 현재 앱 페이지를 나가지 않고도 다음 보기/패널 또는 이전 보기/패널로 이동할 수 있습니다.
 
 이 탐색 개념을 중심으로 하는 오디오 환경은 **MovePrevious** 및 **MoveNext** 소리로 나타냅니다.
 

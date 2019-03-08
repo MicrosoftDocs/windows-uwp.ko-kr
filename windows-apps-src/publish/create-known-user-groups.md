@@ -1,16 +1,16 @@
 ---
-Description: Learn how to create known user groups to use for package flighting and more.
+Description: 패키지 플라이팅 등에 사용할 알려진 사용자 그룹을 만드는 방법을 알아보세요.
 title: 알려진 사용자 그룹 만들기
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 대상 그룹, 고객, 플라이트 그룹, 사용자 그룹, 알려진 사용자
 ms.localizationpriority: medium
 ms.openlocfilehash: 1fcb111121511553bba22cef55f94125d47e9f21
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938268"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605288"
 ---
 # <a name="create-known-user-groups"></a>알려진 사용자 그룹 만들기
 
@@ -20,7 +20,7 @@ ms.locfileid: "8938268"
 
 ## <a name="to-create-a-known-user-group"></a>알려진 사용자 그룹을 만들려면
 
-1. [파트너 센터](https://partner.microsoft.com/dashboard)왼쪽된 탐색 메뉴에서 **참여** 를 확장 하 고 **고객 그룹**을 선택 합니다. 
+1. [파트너 센터](https://partner.microsoft.com/dashboard)를 확장 하 고 **참여** 에서 왼쪽된 탐색 메뉴를 선택 합니다 **고객 그룹**합니다. 
 2. **내 고객 그룹** 섹션에서 **새 그룹 만들기**를 선택합니다.
 3. 다음 페이지에서 **그룹 이름** 상자에 그룹 이름을 입력합니다.
 4. **알려진 사용자 그룹** 라디오 단추가 선택되었는지 확인합니다.
@@ -36,13 +36,13 @@ ms.locfileid: "8938268"
 
 ## <a name="to-edit-a-known-user-group"></a>알려진 사용자 그룹을 편집하려면
 
-파트너 센터에서 알려진된 사용자 그룹을 제거 (하거나 변경할 수는 이름) 만든 된 후 언제 든 지 구성원을 편집할 수 있습니다.
+사용자 수 없습니다. 파트너 센터에서 알려진된 사용자 그룹을 제거 (또는 해당 이름을 변경)이 생성 된 후 언제 든 지 해당 멤버 자격을 편집할 수 있습니다.
 
 알려진 사용자 그룹을 검토 및 편집하려면 왼쪽 탐색 메뉴에서 **참여**를 확장하고 **고객 그룹**을 선택합니다. **내 고객 그룹**에서 편집하려는 그룹의 이름을 선택합니다. 새 플라이트를 만들 때 **기존 그룹 보기 및 관리**를 선택하거나 패키지 플라이트의 개요 페이지에서 그룹 이름을 선택하여 패키지 플라이트 생성 페이지에서 알려진 사용자 그룹을 편집할 수도 있습니다. 
 
 편집하려는 그룹을 선택한 후 필드에서 직접 메일 주소를 추가 또는 제거할 수 있습니다.
 
-대대적인 변경이 필요할 때는 **.csv 내보내기**를 선택하여 .csv 파일로 그룹 구성원을 저장합니다. 새 버전을 사용하여 그룹 구성원을 업데이트하려면 이 파일을 변경한 다음 **.csv 가져오기**를 클릭합니다.
+대대적인 변경이 필요할 때는 **.csv 내보내기**를 선택하여 .csv 파일로 그룹 구성원을 저장합니다. 새 버전을 사용하여 그룹 구성원을 업데이트하려면 이 파일을 변경한 다음 **Import .csv**(.csv 가져오기)를 클릭합니다.
 
 구성원 변경이 구현되는 데는 최대 30분이 소요될 수 있습니다. 새 그룹 구성원이 패키지 플라이트 또는 개인 대상을 통해 제출에 액세스(변경을 수행하는 즉시 액세스)할 수 있도록 하려면 새 제출을 게시해서는 안 됩니다. 
 

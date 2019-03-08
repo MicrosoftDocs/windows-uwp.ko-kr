@@ -1,5 +1,5 @@
 ---
-Description: Learn about receiving payments for your apps, add-ons (in-app products), and advertising earnings.
+Description: 앱에 추가 기능 (앱에서 제품)에 대 한 결제가 수신 및 수입 광고에 대해 알아봅니다.
 title: 지급 받기
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
 ms.date: 10/31/2018
@@ -7,23 +7,23 @@ ms.topic: article
 keywords: Windows 10, uwp, 결제, 앱 판매, 앱 수익, 지급액, Microsoft Store 요금, 지급 보류, 백분율
 ms.localizationpriority: medium
 ms.openlocfilehash: 0d59519e23955b53b32d2178e37e75f195fd54eb
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044364"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596498"
 ---
 # <a name="getting-paid"></a>지급 받기
-앱, 추가 기능 및 광고 수익에 대 한 지급 받는 방법에 대 한 중요 한 정보는 다음과 같습니다.
+앱, 추가 기능 및 광고 수입에 대 한 지불을 수신 하는 방법에 대 한 몇 가지 중요 한 정보는 다음과 같습니다.
 
 > [!IMPORTANT]
-> Microsoft Store의 앱 판매에서 번 돈을 받으려면, 먼저 [지급 계좌를 설정](setting-up-your-payout-account-and-tax-forms.md)하 고 필요한 세금 양식을 입력 해야 합니다.
+> Microsoft Store 앱 판매에서 비용을 받을 수 있습니다, 전에 해야 [지급 계좌를 설정 하 고 필요한 세금 양식 작성](setting-up-your-payout-account-and-tax-forms.md)합니다.
 
-## <a name="store-fee"></a>Microsoft Store 수수료
+## <a name="store-fee"></a>스토어 수수료
 
 [개발자 계정에 등록](https://go.microsoft.com/fwlink/p/?LinkID=615100)할 때 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 동의합니다. 이 계약에서는 Microsoft에서 각 판매에 대해 청구하는 스토어 수수료를 포함하여 Microsoft Store에서 앱을 판매할 때 적용되는 개발자와 Microsoft 간의 관계에 대해 설명합니다.
 
-대부분의 경우 Microsoft Store 수수료는 30%입니다. 수수료는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 공식적으로 정의됩니다. 질문이 있으면 항상 해당 문서를 검토하세요.
+대부분의 경우 스토어 수수료는 30%입니다. 수수료는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 공식적으로 정의됩니다. 질문이 있으면 항상 해당 문서를 검토하세요.
 
 Microsoft Store 수수료는 추가 기능을 포함하여 Microsoft Store가 수금하는 모든 앱 매출에 적용됩니다.
 
@@ -46,7 +46,7 @@ Microsoft Store 수수료는 추가 기능을 포함하여 Microsoft Store가 �
 
 ## <a name="payout-reporting"></a>지급 보고
 
-결제 정보에 대 한 세부 정보에 액세스할 수 있으며 [파트너 센터](https://partner.microsoft.com/dashboard)의 **지급 요약** 에 보고서 다운로드 수 있습니다. 여기에 표시된 정보와 Microsoft에서 개발자가 번 돈을 분류하는 방법에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요.
+지불 정보에 대 한 세부 정보에 액세스 하 고에 보고서를 다운로드 합니다 **지급액 요약** 의 [파트너 센터](https://partner.microsoft.com/dashboard)합니다. 여기에 표시된 정보와 Microsoft에서 개발자가 번 돈을 분류하는 방법에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요.
 
 
 ## <a name="payout-timeframe"></a>지급 기간
@@ -63,7 +63,7 @@ Microsoft Store 수수료는 추가 기능을 포함하여 Microsoft Store가 �
 지급 보류 상태를 **켜짐**으로 설정한 후에는 슬라이더를 다시 **꺼짐**으로 전환할 때까지 모든 지급이 보류됩니다. 다시 전환하면 다음 월별 지급 주기 중에 포함됩니다(해당 지급 임계값이 충족된 경우). 예를 들어 지급을 보류했지만 6월에 지급이 생성되게 하려는 경우 5월 말 전에 지급 보류 상태를 **꺼짐**으로 전환해야 합니다.
 
 > [!NOTE]
-> **지급 보류 상태** 선택에 파트너 센터 (Microsoft Store, 광고, Azure Marketplace 등)에서 Windows 개발자 프로그램을 통해 지급 되는 **모든** 수입원에 적용 됩니다. 각 수입원에 대해 다른 보류 상태를 선택할 수 없습니다.
+> 프로그램 **지급 보류 상태** 선택을 적용할 **모든** 파트너 센터 (Microsoft Store, 광고, Azure Marketplace, 등.)에서 Windows 개발자 프로그램을 통해 지불 하는 수익 원본입니다. 각 수입원에 대해 다른 보류 상태를 선택할 수 없습니다.
 
 
  

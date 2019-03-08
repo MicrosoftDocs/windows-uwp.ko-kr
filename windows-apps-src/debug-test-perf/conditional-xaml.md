@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a3133508a0cb8919994543845412ef71a8d463fe
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611768"
 ---
 # <a name="conditional-xaml"></a>조건부 XAML
 
@@ -183,7 +183,7 @@ xmlns:contract5Present="http://schemas.microsoft.com/winfx/2006/xaml/presentatio
 </Rectangle>
 ```
 
-조건부 네임스페이스에 의존하는 다른 속성에 속성을 바인딩할 경우, 두 속성에 같은 조건을 사용해야 합니다. 여기에서 `colorPicker.Color`는 'contract5Present' 조건부 네임스페이스에 의존하므로, 'contract5Present' 접두사를 SolidColorBrush.Color 속성에도 붙여야 합니다. (또는 Color 속성 대신 SolidColorBrush에 'contract5Present' 접두사를 붙어야 합니다.) 그렇지 않으면 컴파일 시간 오류가 발생합니다.
+조건부 네임스페이스에 의존하는 다른 속성에 속성을 바인딩할 경우, 두 속성에 같은 조건을 사용해야 합니다. 여기에서 `colorPicker.Color`는 'contract5Present' 조건부 네임스페이스에 의존하므로, 'contract5Present' 접두사를 SolidColorBrush.Color 속성에도 붙여야 합니다. (또는 색 속성 대신 SolidColorBrush를 'contract5Present' 접두사를 배치할 수 있습니다.) 그렇지 않으면 컴파일 타임 오류를 얻게 됩니다.
 
 ```xaml
 <SolidColorBrush contract5Present:Color="{x:Bind colorPicker.Color, Mode=OneWay}"/>
@@ -245,5 +245,5 @@ xmlns:contract5Present="http://schemas.microsoft.com/winfx/2006/xaml/presentatio
 ## <a name="related-articles"></a>관련 문서
 
 - [UWP 앱 가이드](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
-- [API 계약을 사용하여 동적으로 기능 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [API 계약을 사용 하 여 기능을 동적으로 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [API 계약](https://channel9.msdn.com/Events/Build/2015/3-733)(빌드 2015 비디오)

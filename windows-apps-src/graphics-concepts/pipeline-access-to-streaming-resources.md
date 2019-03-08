@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d95ffc14e9ae6d4ea59a4b3bdc33fd215cb61be
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925910"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616378"
 ---
 # <a name="pipeline-access-to-streaming-resources"></a>스트리밍 리소스에 대한 파이프라인 액세스
 
@@ -23,7 +23,7 @@ ms.locfileid: "8925910"
 
 셰이더의 메모리 액세스 공간 뒤의 모든 타일이 고유의 타일에 매핑되는 경우, 비타일 방식으로 동일한 메모리 콘텐츠를 가진 표면에 대한 모든 구현에서 동작은 동일합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
 
 
 <table>
@@ -39,23 +39,23 @@ ms.locfileid: "8925910"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="srv-behavior-with-non-mapped-tiles.md">비매핑된 타일을 사용하는 SRV 동작</a></p></td>
+<td align="left"><p><a href="srv-behavior-with-non-mapped-tiles.md">비 매핑된 타일을 사용 하 여 SRV 동작</a></p></td>
 <td align="left"><p>비매핑된 타일과 관련된 셰이더 리소스 뷰(SRV) 읽기 동작은 하드웨어 지원 수준에 따라 다릅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="uav-behavior-with-non-mapped-tiles.md">비매핑된 타일을 사용하는 UAV 동작</a></p></td>
-<td align="left"><p>순서가 지정되지 않은 액세스 뷰(UAV) 읽기 및 쓰기 동작은 하드웨어 지원 수준에 따라 다릅니다.</p></td>
+<td align="left"><p><a href="uav-behavior-with-non-mapped-tiles.md">비 매핑된 타일을 사용 하 여 UAV 동작</a></p></td>
+<td align="left"><p>UAV(정렬되지 않은 액세스 보기) 읽기 및 쓰기 동작은 하드웨어 지원 수준에 따라 다릅니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="rasterizer-behavior-with-non-mapped-tiles.md">비매핑된 타일을 사용하는 래스터라이저 동작</a></p></td>
+<td align="left"><p><a href="rasterizer-behavior-with-non-mapped-tiles.md">래스터 라이저 아닌 매핑된 타일 동작</a></p></td>
 <td align="left"><p>이 섹션에서는 비매핑된 타일을 사용하는 래스터라이저 동작을 설명합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="tile-access-limitations-with-duplicate-mappings.md">중복 매핑을 사용하는 타일 액세스 제한</a></p></td>
-<td align="left"><p>중복되는 원본과 대상을 이용해 스트리밍 리소스를 복사하거나 렌더링 영역 내에서 공유된 타일로 렌더링할 때처럼 중복 매핑을 사용한 타일 액세스에는 제한이 따릅니다.</p></td>
+<td align="left"><p><a href="tile-access-limitations-with-duplicate-mappings.md">중복 된 매핑 사용 하 여 타일 액세스 제한</a></p></td>
+<td align="left"><p>중복되는 원본과 대상을 이용해 스트리밍 리소스를 복사하거나, 혹은 렌더링 영역의 공유 타일로 렌더링할 때처럼 중복 매핑을 사용하여 타일에 액세스하는 데는 제한이 따릅니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="streaming-resources-texture-sampling-features.md">스트리밍 리소스 텍스처 샘플링 기능</a></p></td>
+<td align="left"><p><a href="streaming-resources-texture-sampling-features.md">스트리밍 리소스 질감 샘플링 기능</a></p></td>
 <td align="left"><p>스트리밍 리소스 텍스처 샘플링 기능에는 매핑된 영역에 대한 셰이더 상태 피드백 받기, 액세스되는 모든 데이터가 리소스에서 매핑되었는지 확인, 비매핑으로 알려진 mipmap 스트리밍 리소스의 영역을 셰이더가 피하도록 돕는 고정, 전체 텍스처 필터 공간에 대해 완전히 매핑된 최소 LOD 발견이 포함됩니다.</p></td>
 </tr>
 <tr class="even">
@@ -67,7 +67,7 @@ ms.locfileid: "8925910"
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [스트리밍 리소스](streaming-resources.md)

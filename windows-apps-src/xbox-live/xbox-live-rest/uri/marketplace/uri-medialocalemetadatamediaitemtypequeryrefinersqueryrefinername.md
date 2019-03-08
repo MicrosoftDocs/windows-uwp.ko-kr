@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 356c7d6eb30eb14156e434f717530d6f4f48a990
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940518"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611478"
 ---
 # <a name="mediamarketplaceidmetadatamediaitemtypesmediaitemtypequeryrefinersqueryrefinername"></a>/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryrefinername}
-지정 된 쿼리 구체화 이름 및 미디어 항목 유형 지정 된 허용 되는 값에 액세스합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
+지정 된 쿼리 구체화 이름 및 지정 된 미디어 항목 유형에 허용 되는 값에 액세스합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`합니다.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -24,20 +24,20 @@ ms.locfileid: "8940518"
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| marketplaceId| string| 필수. 문자열 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>에서 가져온 값입니다.| 
-| mediaitemtype| string| 필수. 값 중 하나로 [GET (/media/ {marketplaceId} / /metadata/mediagroups/ {mediagroup} / mediaItemTypes)](uri-medialocalemetadatamediagroupsmediaitemtypesget.md).| 
-| queryrefinername| string| 필수. 이름 쿼리 구체화의 어떤 값이 필요한에 대 한, 예: "장르" 또는 "10 년"입니다. QueryRefiners를 참조 하세요.| 
+| marketplaceId| 문자열| 필수. 문자열에서 가져온 값을 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>합니다.| 
+| mediaitemtype| 문자열| 필수. 값 중 하나 [GET (/media/ {marketplaceId} / 메타 데이터/mediaGroups / {mediagroup} / mediaItemTypes)](uri-medialocalemetadatamediagroupsmediaitemtypesget.md)합니다.| 
+| queryrefinername| 문자열| 필수. 이름 쿼리 구체화의 어떤 값이 필요 하는 것에 대 한, "장르" 또는 "10" 등입니다. QueryRefiners를 참조 하세요.| 
   
 <a id="ID4EKC"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
-[GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryrefinername})](uri-medialocalemetadatamediaitemtypequeryrefinersqueryrefinernameget.md)
+[가져오기 (/media/ {marketplaceId} / {queryrefinername} 메타 데이터/mediaItemTypes / {mediaitemtype} /queryrefiners/)](uri-medialocalemetadatamediaitemtypequeryrefinersqueryrefinernameget.md)
 
-&nbsp;&nbsp;지정 된 쿼리 구체화 이름 및 미디어 항목 유형 지정 된 허용 되는 값을 나열합니다.
+&nbsp;&nbsp;지정 된 쿼리 구체화 이름 및 지정 된 미디어 항목 유형에 허용 되는 값을 나열합니다.
  
 <a id="ID4EUC"></a>
 
@@ -47,17 +47,17 @@ ms.locfileid: "8940518"
 <a id="ID4EWC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[마켓플레이스 URI](atoc-reference-marketplace.md)
+[Marketplace Uri](atoc-reference-marketplace.md)
 
   
 <a id="ID4EAD"></a>
 
  
-##### <a name="further-information"></a>자세한 정보 
+##### <a name="further-information"></a>추가 정보 
 
-[EDS 공통 헤더](../../additional/edscommonheaders.md)
+[EDS 일반적인 헤더](../../additional/edscommonheaders.md)
 
  [EDS 매개 변수](../../additional/edsparameters.md)
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 08acb2972469a84e6a37d7293ed00cae8df94dfb
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044447"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611538"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>응용 프로그램에 내 피플 지원 추가
 
@@ -27,8 +27,8 @@ ms.locfileid: "9044447"
 
 응용 프로그램에서 내 피플 기능을 사용할 수 있게 하려면 세 가지를 수행해야 합니다.
 
-1. [응용 프로그램 매니페스트에서 shareTarget 정품 인증 계약에 대한 지원을 선언합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [사용자가 앱을 사용하여 공유할 수 있는 연락처에 주석을 답니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [응용 프로그램 매니페스트에 shareTarget 활성화 계약에 대 한 지원을 선언 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [사용자가 앱을 사용 하 여 공유할 수 있는 연락처에 주석을 추가 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3.  동시에 실행되는 여러 응용 프로그램 인스턴스를 지원합니다. 사용자가 연락처 패널에서 응용 프로그램을 사용하는 동안 응용 프로그램의 전체 버전과 상호 작용할 수 있어야 합니다.  사용자가 동시에 여러 연락처 패널에서 응용 프로그램을 사용할 수도 있습니다.  이 상황을 지원하려면 응용 프로그램이 여러 보기를 동시에 실행할 수 있어야 합니다. 자세한 방법은 ["앱에 대한 여러 보기 표시"](https://docs.microsoft.com/en-us/windows/uwp/layout/show-multiple-views)를 참조하세요.
 
 여기까지 마치면 주석 처리된 연락처의 연락처 패널에 응용 프로그램이 표시됩니다.
@@ -37,7 +37,7 @@ ms.locfileid: "9044447"
 
 내 피플 계약에 대한 지원을 선언하려면 Visual Studio에서 응용 프로그램을 엽니다. **솔루션 탐색기**에서 **Package.appxmanifest**를 오른쪽 단추로 클릭하고**연결 프로그램**을 선택합니다. 메뉴에서 **XML(텍스트) 편집기**를 선택하고 **확인**을 클릭합니다. 매니페스트를 다음과 같이 변경합니다.
 
-**이전**
+**전에**
 
 ```xml
 <Package
@@ -53,7 +53,7 @@ ms.locfileid: "9044447"
 
 ```
 
-**이후**
+**After**
 
 ```xml
 <Package
@@ -101,13 +101,13 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-“appId”는 패키지 패밀리 이름이며, 그 뒤에 ‘!’ 그리고 활성화 가능한 클래스 ID가 붙습니다. 패키지 패밀리 이름을 확인하려면 기본 편집기를 사용해 **Package.appxmanifest**를 열고 “패키징” 탭을 찾습니다. 여기에서 “앱”은 응용 프로그램 시작 보기에 해당하는 활성화 가능한 클래스입니다.
+“appId”는 패키지 패밀리 이름이며, 그 뒤에 ‘!’ 그리고 활성화 가능한 클래스 ID가 붙습니다. 패키지 패밀리 이름을 찾으려면 기본 편집기를 사용하여 **Package.appxmanifest**를 열고 "패키징" 탭에서 찾아봅니다. 여기서 "앱"은 응용 프로그램 시작 보기에 해당하는 활성화 가능한 클래스입니다.
 
 ## <a name="allow-contacts-to-invite-new-potential-users"></a>연락처에서 새로운 잠재적 사용자를 초대할 수 있도록 허용
 
 기본적으로 응용 프로그램은 개발자가 구체적으로 주석을 단 연락처의 연락처 패널에만 표시됩니다.  이는 앱을 통해 상호 작용할 수 없는 연락처와 혼동하지 않도록 방지하기 위한 조치입니다.  응용 프로그램이 알지 못하는 연락처에 대해서도 응용 프로그램을 표시하려면(예: 해당 연락처를 계정에 추가하도록 사용자를 초대하기 위해) 다음을 매니페스트에 추가하면 됩니다.
 
-**이전**
+**전에**
 
 ```Csharp
 <Applications>
@@ -121,7 +121,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 </Applications>
 ```
 
-**이후**
+**After**
 
 ```Csharp
 <Applications>
@@ -184,7 +184,7 @@ ContactPanel 개체에는 응용 프로그램에서 수신 대기해야 하는 �
 ![피플 알림 배지](images/my-people-badging.png)
 
 연락처를 배지로 표시하려면 최상위 알림 메시지 노드에는 발신 또는 관련 연락처를 나타내는 hint-people 매개 변수가 포함되어야 합니다. 이 매개 변수에 가능한 값은 다음과 같습니다.
-+ **메일 주소** 
++ **전자 메일 주소** 
     + 예: mailto:johndoe@mydomain.com
 + **전화 번호** 
     + 예: tel:888-888-8888
@@ -249,10 +249,10 @@ async Task PinMultipleContacts(Contact[] contacts)
 **참고:** 
 
 ## <a name="see-also"></a>참고 항목
-+ [내 피플 공유](my-people-sharing.md)
-+ [내 피플 알림](my-people-notifications.md)
-+ [응용 프로그램에 내 피플 지원 추가에 대한 Channel 9 동영상](https://channel9.msdn.com/Events/Build/2017/P4056)
-+ [내 피플 통합 샘플](https://aka.ms/mypeoplebuild2017)
++ [공유 내 사용자](my-people-sharing.md)
++ [내 사용자 알림](my-people-notifications.md)
++ [Channel 9 비디오 내 사용자 지원 응용 프로그램에 추가 하는 방법](https://channel9.msdn.com/Events/Build/2017/P4056)
++ [사용자 통합 샘플](https://aka.ms/mypeoplebuild2017)
 + [연락처 카드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
 + [PinnedContactManager 클래스 설명서](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
-+ [연락처 카드의 작업에 앱 연결](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)
++ [연락처 카드에 대 한 작업에 앱 연결](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

@@ -1,5 +1,5 @@
 ---
-Description: Some kinds of apps (multilingual dictionaries, translation tools, etc.) need to override the default behavior of an app bundle, and build resources into the app package instead of having them in separate resource packages. This topic explains how to do that.
+Description: 일부 앱(다국어 사전, 번역 도구 등)은 앱 번들의 기본 동작을 재정의하고, 리소스를 별도의 리소스 패키지에 두는 대신 앱 패키지에 빌드해야 합니다. 이 항목에서는 이러한 작업을 수행하는 방법을 설명합니다.
 title: 리소스 팩 대신 앱 패키지에 리소스 빌드
 template: detail.hbs
 ms.date: 11/14/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bf2d34bc3dae20750f66c9116499a17444b798c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938496"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627288"
 ---
 # <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>리소스 팩 대신 앱 패키지에 리소스 빌드
 
@@ -97,6 +97,6 @@ Visual Studio가 앱 패키지에 리소스를 빌드하도록 구성하는 데�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Visual Studio를 사용하여 UWP 앱 패키징](../packaging/packaging-uwp-apps.md)
-* [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
-* [앱에서 사용하는 기본 리소스 지정](specify-default-resources-installed.md)
+* [Visual Studio 사용 하 여 UWP 앱 패키지](../packaging/packaging-uwp-apps.md)
+* [MakePri.exe 사용 하 여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
+* [앱에서 사용 되는 기본 리소스 지정](specify-default-resources-installed.md)

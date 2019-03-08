@@ -4,7 +4,7 @@ description: 시스템에서 앱을 다시 시작할 때 표시 콘텐츠를 새
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
 ms.date: 07/06/2018
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 dev_langs:
 - csharp
@@ -12,15 +12,15 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: f424a274d3e96b58f32875620f3165ccfac82ba6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939361"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612468"
 ---
 # <a name="handle-app-resume"></a>앱 다시 시작 처리
 
-**중요 API**
+**중요 한 Api**
 
 - [**다시 시작**](https://msdn.microsoft.com/library/windows/apps/br242339)
 
@@ -116,16 +116,16 @@ void MainPage::App_Resuming(Object^ sender, Object^ e)
 ```
 
 > [!NOTE]
-> [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) 이벤트는 UI 스레드에서 발생 되지, 때문에 UI 모든 호출을 디스패치해야 처리기에서 디스패처를 사용 해야 합니다.
+> 때문에 합니다 [ **다시 시작 중** ](https://msdn.microsoft.com/library/windows/apps/br242339) UI 스레드에서 이벤트가 발생 하지 않습니다, 디스패처 처리기에서 UI에 대 한 모든 호출을 발송 하는 데 사용 해야 합니다.
 
 ## <a name="remarks"></a>설명
 
 앱이 Visual Studio 디버거에 연결되어 있는 경우 일시 중단되지 않습니다. 그러나 디버거에서 일시 중단하고 **Resume** 이벤트를 전송하여 코드를 디버그할 수 있습니다. **디버그 위치 도구 모음**이 표시되는지 확인하고 **일시 중단** 아이콘 옆에 있는 드롭다운을 클릭합니다. 그런 다음 **다시 시작**을 선택합니다.
 
-Windows Phone 스토어 앱에서는 앱이 현재 일시 중단되었으며 사용자가 기본 타일이나 앱 목록에서 앱을 다시 시작하는 경우에도 [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) 이벤트 뒤에 항상 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)이(가) 발생합니다. 현재 창에 이미 설정된 콘텐츠가 있는 경우 앱에서 초기화를 건너뛸 수 있습니다. [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) 속성을 검사하여 앱이 기본 타일에서 시작되었는지 또는 보조 타일에서 시작되었는지 확인할 수 있으며, 해당 정보에 따라 새로운 환경을 표시할지 또는 앱 환경을 다시 시작할지 결정할 수 있습니다.
+Windows Phone 스토어 앱에서는 앱이 현재 일시 중단되었으며 사용자가 기본 타일이나 앱 목록에서 앱을 다시 시작하는 경우에도 [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) 이벤트 뒤에 항상 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)이(가) 발생합니다. 현재 창에 이미 설정된 콘텐츠가 있는 경우 앱에서 초기화를 건너뛸 수 있습니다. [  **LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) 속성을 검사하여 앱이 기본 타일에서 시작되었는지 또는 보조 타일에서 시작되었는지 확인할 수 있으며, 해당 정보에 따라 새로운 환경을 표시할지 또는 앱 환경을 다시 시작할지 결정할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [앱 수명 주기](app-lifecycle.md)
-* [앱 활성화 처리](activate-an-app.md)
-* [앱 일시 중단 처리](suspend-an-app.md)
+* [앱 활성화를 처리 합니다.](activate-an-app.md)
+* [핸들 앱 일시 중단](suspend-an-app.md)

@@ -1,22 +1,22 @@
 ---
 ms.assetid: DA562509-D893-425A-AAE6-B2AE9E9F8A19
-Description: Text block is the primary control for displaying read-only text in apps.
+Description: 텍스트 블록은 앱에서 읽기 전용 텍스트를 표시하기 위한 주 컨트롤입니다.
 title: 텍스트 블록
 label: Text block
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10 uwp
+keywords: windows 10, uwp
 pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 692b8837f3bd74dfc5f74bee02786213c9a898f2
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058524"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599388"
 ---
 # <a name="text-block"></a>텍스트 블록
 
@@ -24,7 +24,7 @@ ms.locfileid: "9058524"
 
  텍스트 블록은 앱에서 읽기 전용 텍스트를 표시하기 위한 주 컨트롤입니다. 이 컨트롤을 사용하여 한 줄 또는 여러 줄 텍스트, 인라인 하이퍼링크 및 굵게, 기울임꼴 또는 밑줄 서식이 적용된 텍스트를 표시할 수 있습니다.
  
- > **중요 API**: [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [Text 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx), [Inlines 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx)
+ > **중요 한 Api**: [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)하십시오 [Text 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx), [Inlines 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -43,8 +43,8 @@ ms.locfileid: "9058524"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/TextBlock">앱을 열고 작동 중인 TextBlock을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -70,7 +70,7 @@ textBlock1.Text = "Hello, world!";
 
 ### <a name="content-model"></a>콘텐츠 모델
 
-TextBlock에 콘텐츠를 추가하는 데 사용할 수 있는 속성은 두 가지 즉, [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx) 및 [Inlines](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx)가 있습니다.
+두 가지 속성이 있습니다 사용 하 여 텍스트 블록에 콘텐츠를 추가할 수 있습니다. [텍스트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx) 하 고 [인라인](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx)합니다.
 
 텍스트를 표시하는 가장 일반적인 방법은 이전 예제에 나와 있듯이 Text 속성을 문자열 값으로 설정하는 것입니다.
 
@@ -88,18 +88,18 @@ Bold, Italic, Run, Span 및 LineBreak와 같이 Inline 클래스에서 파생된
 가능한 경우 언제나 XAML에서는 레이아웃 텍스트에 대한 더 효율적인 코드 경로를 사용합니다. 이 빠른 경로는 텍스트를 측정하고 정렬하는 드는 전체 메모리 사용량을 줄이고 CPU 시간을 크게 단축합니다. 이 빠른 경로는 TextBlock에만 적용되므로 가능한 경우에는 RichTextBlock 대신 이 경로를 사용해야 합니다.
 
 특정 조건에서는 텍스트 렌더링을 위해 TextBlock이 기능이 풍부하고 CPU를 많이 사용하는 코드 경로를 사용해야 합니다. 텍스트 렌더링을 빠른 경로에서 유지하려면 여기에 나열된 속성을 설정할 때 다음 지침에 따야 합니다.
-- [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): 가장 중요한 조건은 XAML 또는 코드에서(이전 예제에 나온 대로) 명시적으로 Text 속성을 설정하여 텍스트를 설정할 때만 빠른 경로를 사용한다는 점입니다. 여러 형식의 잠재적 복잡성으로 인해, TextBlock의 Inlines 컬렉션(예: `<TextBlock>Inline text</TextBlock>`)을 통해 텍스트를 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
-- [CharacterSpacing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): 기본값 0만 빠른 경로입니다.
-- [TextTrimming](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): **None**, **CharacterEllipsis** 및 **WordEllipsis** 값만 빠른 경로입니다. **Clip** 값은 빠른 경로를 사용하지 않도록 설정합니다.
+- [텍스트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): 가장 중요 한 조건 (앞의 예제에 표시 됨)에 따라 코드 또는 XAML에서 Text 속성을 명시적으로 설정 하 여 텍스트를 설정 하는 경우에 빠른 경로입니다. 여러 형식의 잠재적 복잡성으로 인해, TextBlock의 Inlines 컬렉션(예: `<TextBlock>Inline text</TextBlock>`)을 통해 텍스트를 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
+- [CharacterSpacing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): 만 기본값 0은 빠른 경로입니다.
+- [TextTrimming](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): 만 **None**를 **CharacterEllipsis**, 및 **WordEllipsis** 값은 빠른 경로입니다. **Clip** 값은 빠른 경로를 사용하지 않도록 설정합니다.
 
 > **참고**&nbsp;&nbsp;Windows 10 버전 1607 이전에는 추가 속성도 빠른 경로에 영향을 주었습니다. 앱이 이전 버전의 Windows에서 실행되는 경우 이러한 조건으로 인해 텍스트가 느린 경로로 렌더링됩니다. 버전에 대한 자세한 내용은 버전 적응 코드를 참조하세요.
-- [Typography](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): 다양한 Typography 속성에 대한 기본값만 빠른 경로입니다.
-- [LineStackingStrategy](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx)가 0이 아닌 경우 **BaselineToBaseline** 및 **MaxHeight** 값이 빠른 경로를 사용하지 않도록 설정합니다.
-- [IsTextSelectionEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): **false**만 빠른 경로입니다. 이 속성을 **true**로 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
+- [입력 체계](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): 다양 한 입력 체계 속성에 대 한 기본값에만 빠른 경로입니다.
+- [LineStackingStrategy](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): 경우 [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx) 는 0이 아닌 합니다 **BaselineToBaseline** 하 고 **MaxHeight** 값 빠른 경로 사용 하지 않도록 설정 합니다.
+- [IsTextSelectionEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): 만 **false** 빠른 경로입니다. 이 속성을 **true**로 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
 
 디버그 도중에 [DebugSettings.IsTextPerformanceVisualizationEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.debugsettings.istextperformancevisualizationenabled.aspx) 속성을 **true**로 설정하여 텍스트가 빠른 경로 렌더링을 사용하고 있는지 여부를 확인할 수 있습니다. 이 속성이 true로 설정된 경우 빠른 경로에 있는 텍스트가 밝은 녹색으로 표시됩니다.
 
->**팁**&nbsp;&nbsp;이 기능에 대해서는 빌드 2015 - [XAML Performance: Techniques for Maximizing Universal Windows App Experiences Built with XAML](https://channel9.msdn.com/Events/Build/2015/3-698)(XAML 성능: XAML을 사용하여 빌드한 유니버설 Windows 앱 환경을 극대화하는 기법)의 이 세션에서 자세히 설명합니다.
+>**팁**&nbsp;&nbsp;이 기능은이 세션에서 자세히 설명 되어 빌드 2015-에서 [XAML 성능: 유니버설 Windows 앱 경험을 극대화 하기 위한 기술을 XAML을 사용 하 여 빌드한](https://channel9.msdn.com/Events/Build/2015/3-698)합니다.
 
 
 
@@ -195,9 +195,9 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 ## <a name="related-articles"></a>관련 문서
 
 - [텍스트 컨트롤](text-controls.md)
-- [맞춤법 검사에 대한 지침](text-controls.md)
+- [맞춤법 검사에 대 한 지침](text-controls.md)
 - [검색 추가](search.md)
-- [텍스트 입력에 대한 지침](text-controls.md)
+- [텍스트 입력에 대 한 지침](text-controls.md)
 - [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
-- [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+- [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

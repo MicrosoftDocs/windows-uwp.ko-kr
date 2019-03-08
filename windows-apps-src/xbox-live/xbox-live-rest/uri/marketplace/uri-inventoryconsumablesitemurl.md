@@ -2,21 +2,21 @@
 title: /users/me/consumables/{itemID}
 assetID: 45724827-5e35-326f-3f17-f49e606d9e08
 permalink: en-us/docs/xboxlive/rest/uri-inventoryconsumablesitemurl.html
-description: RESTful 끝점 사용자에 대 한 Xbox 소모 성 항목입니다.
+description: Xbox 사용자에 대해 사용할 수 있는 항목에 대 한 rESTful 끝점입니다.
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4822180f11879417be67351f901474a38f89d82e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936320"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57614088"
 ---
 # <a name="usersmeconsumablesitemid"></a>/users/me/consumables/{itemID}
-특정 소모 성 인벤토리 항목에 대 한 세부 정보의 전체 집합을 액세스 합니다.
-이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`.
+전체 집합을 사용할 수 있는 특정 재고 항목에 대 한 세부 정보에 액세스 합니다.
+이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`합니다.
 
   * [URI 매개 변수](#ID4EV)
 
@@ -25,18 +25,18 @@ ms.locfileid: "8936320"
 
 ## <a name="uri-parameters"></a>URI 매개 변수
 
-| 매개 변수| 유형| 설명|
+| 매개 변수| 형식| 설명|
 | --- | --- | --- |
-| itemID| string| 각 사용자에 단일 인벤토리 항목에 대 한 고유 ID|
+| itemID| 문자열| 단일 인벤토리 항목에 대 한 각 사용자에 게 고유 ID|
 
 <a id="ID4ERB"></a>
 
 
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [POST ({itemID})](uri-inventoryconsumablesitemurlpost.md)
 
-&nbsp;&nbsp;전체 또는 일부 소모 성 인벤토리 항목의 사용 되었는지 나타냅니다 점감 수량을 요청 된 양만큼 소모 성입니다.
+&nbsp;&nbsp;일부 또는 전부를 사용할 수 있도록 인벤토리 항목의 사용 되었음을 나타냅니다 롤백하고 요청 된 크기 만큼 사용할 수 있는 양입니다.
 
 <a id="ID4E4B"></a>
 
@@ -46,17 +46,17 @@ ms.locfileid: "8936320"
 <a id="ID4E6B"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
-[마켓플레이스 URI](atoc-reference-marketplace.md)
+[Marketplace Uri](atoc-reference-marketplace.md)
 
 
 <a id="ID4EJC"></a>
 
 
-##### <a name="further-information"></a>자세한 정보
+##### <a name="further-information"></a>추가 정보
 
-[EDS 공통 헤더](../../additional/edscommonheaders.md)
+[EDS 일반적인 헤더](../../additional/edscommonheaders.md)
 
  [EDS 매개 변수](../../additional/edsparameters.md)
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 위치 기능
 ms.localizationpriority: medium
 ms.openlocfilehash: b3582aa8ed406a25eb704f2f86f8ed272bea2c63
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050223"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627328"
 ---
 # <a name="get-the-users-location"></a>사용자 위치 가져오기
 
@@ -22,7 +22,7 @@ ms.locfileid: "9050223"
 
 **팁** 앱에서 사용자의 위치에 액세스하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
 
--   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [유니버설 Windows 플랫폼 (UWP) 맵 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>위치 접근 권한 값 사용
 
@@ -42,9 +42,9 @@ ms.locfileid: "9050223"
 
 이 섹션에서는 [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603) 네임스페이스에서 UPI를 사용하여 사용자의 지리적 위치를 검색하는 방법을 설명합니다.
 
-### <a name="step-1-request-access-to-the-users-location"></a>1단계: 사용자의 위치에 대한 액세스 요청
+### <a name="step-1-request-access-to-the-users-location"></a>1단계: 사용자의 위치에 대 한 액세스를 요청 합니다.
 
-앱에 거친 위치 접근 권한 값 (참고 참조)을 위치 액세스를 시도 하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드를 사용 하 여 사용자의 위치에 대 한 액세스를 요청 해야 합니다. UI 스레드에서 **RequestAccessAsync** 메서드를 호출해야 하며 앱이 포그라운드에 있어야 합니다. 사용자가 앱에 권한을 부여할 때까지는 앱에서 사용자의 위치 정보에 액세스할 수 없습니다.\*
+앱에 대략적인 위치 기능 (참고 참조)를 사용 하 여 사용자의 위치에 대 한 액세스를 요청 해야 합니다는 [ **RequestAccessAsync** ](https://msdn.microsoft.com/library/windows/apps/dn859152) 위치에 액세스 하기 전에 메서드. UI 스레드에서 **RequestAccessAsync** 메서드를 호출해야 하며 앱이 포그라운드에 있어야 합니다. 앱은 앱에 사용자 권한 부여 권한 지날 때까지 사용자의 위치 정보에 액세스할 수 없습니다.\*
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -54,13 +54,13 @@ var accessStatus = await Geolocator.RequestAccessAsync();
 
 
 
-[**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드는 사용자에게 위치 액세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
+[  **RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드는 사용자에게 위치 액세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
 
->그러나 참고: 거친 위치 기능 앱이 사용자의 명시적 권한을 (시스템 수준 위치 스위치 여전히 있어야 **에**,) 하지 않고도 의도적으로 조작 된 (부정확 한) 위치를 가져올 수 있도록 합니다. 앱의 거친 위치를 활용 하는 방법을 알아보려면 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx) 클래스에서 [**AllowFallbackToConsentlessPositions**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) 메서드를 참조 하세요.
+>참고:  정교 하지 않은 위치 기능을 통해 앱 사용자의 명시적인 허가 없이 의도적으로 난독 처리 된 (정확 하지 않은) 위치를 가져오려면 (시스템 차원의 위치 스위치가 있어야 **에서**그러나). 응용 프로그램에서 정교 하지 않은 위치를 활용 하는 방법에 알아보려면 참조를 [ **AllowFallbackToConsentlessPositions** ](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) 에서 메서드를 [ **Geolocator** ](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx)클래스입니다.
 
-### <a name="step-2-get-the-users-location-and-register-for-changes-in-location-permissions"></a>2단계: 사용자의 위치를 가져오고 위치 사용 권한 변경에 대해 등록
+### <a name="step-2-get-the-users-location-and-register-for-changes-in-location-permissions"></a>2단계: 사용자의 위치를 가져오고 위치 권한의 변경에 대 한 등록
 
-[**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) 메서드는 현재 위치에 대한 일회성 판독을 수행합니다. 사용자 위치에 액세스가 허용될 때만 **switch** 문이 (이전 예제의) **accessStatus**와 함께 사용됩니다. 사용자 위치에 대한 액세스가 허용되는 경우, 코드는 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 생성하고 위치 사용 권한 변경에 등록하며 사용자의 위치를 요청합니다.
+[  **GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) 메서드는 현재 위치에 대한 일회성 판독을 수행합니다. 사용자 위치에 액세스가 허용될 때만 **switch** 문이 (이전 예제의) **accessStatus**와 함께 사용됩니다. 사용자 위치에 대한 액세스가 허용되는 경우, 코드는 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 생성하고 위치 사용 권한 변경에 등록하며 사용자의 위치를 요청합니다.
 
 ```csharp
 switch (accessStatus)
@@ -94,9 +94,9 @@ switch (accessStatus)
 }
 ```
 
-### <a name="step-3-handle-changes-in-location-permissions"></a>3단계: 위치 사용 권한의 변경 내용 처리
+### <a name="step-3-handle-changes-in-location-permissions"></a>3단계: 위치 사용 권한 변경 내용을 처리 합니다.
 
-[**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트를 트리거하여 사용자의 위치 설정이 변경되었음을 나타냅니다. 해당 이벤트는 인수의 **Status** 속성(유형 [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599))을 통해 해당 상태를 전달합니다. 이 메서드는 UI 스레드로부터 호출되지 않고 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체가 UI 변경 사항을 호출합니다.
+[  **Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트를 트리거하여 사용자의 위치 설정이 변경되었음을 나타냅니다. 해당 이벤트는 인수의 **Status** 속성(유형 [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599))을 통해 해당 상태를 전달합니다. 이 메서드는 UI 스레드로부터 호출되지 않고 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체가 UI 변경 사항을 호출합니다.
 
 ```csharp
 using Windows.UI.Core;
@@ -169,11 +169,11 @@ async private void OnStatusChanged(Geolocator sender, StatusChangedEventArgs e)
 
 이 섹션에서는 위치 접근 권한 값을 이미 사용하고 포그라운드 앱의 UI 스레드에서 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152)를 호출한 것으로 가정합니다.
 
-### <a name="step-1-define-the-report-interval-and-register-for-location-updates"></a>1단계: 보고서 간격을 정의하고 위치 업데이트에 등록
+### <a name="step-1-define-the-report-interval-and-register-for-location-updates"></a>1단계: 보고 간격을 정의 하 고 위치 업데이트에 대 한 등록
 
 이 예제에서는 사용자 위치에 대한 액세스가 허용될 때만 **switch** 문이 이전 예제의 **accessStatus**와 함께 사용됩니다. 사용자 위치에 대한 액세스가 허용된 경우 코드가 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 생성하고 추적 유형을 지정하며 위치 업데이트에 등록합니다.
 
-[**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 위치 변경(거리 기반 추적) 또는 시간 변경(정기 기반 추적)을 바탕으로 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트를 트리거할 수 있습니다.
+[  **Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 위치 변경(거리 기반 추적) 또는 시간 변경(정기 기반 추적)을 바탕으로 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트를 트리거할 수 있습니다.
 
 -   거리 기반 추적의 경우 [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539) 속성을 설정하세요.
 -   정기 기반 추적의 경우 [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) 속성을 설정하세요.
@@ -214,9 +214,9 @@ switch (accessStatus)
 }
 ```
 
-### <a name="step-2-handle-location-updates"></a>2단계: 위치 업데이트 처리
+### <a name="step-2-handle-location-updates"></a>2단계: 위치 업데이트를 처리 합니다.
 
-[**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 구성된 방식에 따라 이벤트를 트리거하여 사용자의 위치가 변경되었거나 시간이 지났음을 나타냅니다. 해당 이벤트는 인수의 **Position** 속성(유형 [**Geoposition**](https://msdn.microsoft.com/library/windows/apps/br225543))을 통해 해당 위치로 전달됩니다. 이 예제에서는 메서드가 UI 스레드로부터 호출되지 않고 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체가 UI 변경 사항을 호출합니다.
+[  **Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 구성된 방식에 따라 이벤트를 트리거하여 사용자의 위치가 변경되었거나 시간이 지났음을 나타냅니다. 해당 이벤트는 인수의 **Position** 속성(유형 [**Geoposition**](https://msdn.microsoft.com/library/windows/apps/br225543))을 통해 해당 위치로 전달됩니다. 이 예제에서는 메서드가 UI 스레드로부터 호출되지 않고 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체가 UI 변경 사항을 호출합니다.
 
 ```csharp
 using Windows.UI.Core;
@@ -259,14 +259,14 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 ## <a name="troubleshoot-your-app"></a>앱 문제 해결
 
 
-앱이 사용자 위치에 액세스하려면 먼저 디바이스에서 **위치**를 사용하도록 설정해야 합니다. **설정** 앱에서 다음 **위치 개인정보 설정** 이 켜져 있는지 확인합니다.
+앱이 사용자 위치에 액세스하려면 먼저 디바이스에서 **위치**를 사용하도록 설정해야 합니다. **설정** 앱에서 다음 **위치 개인정보 설정**이 켜져 있는지 확인합니다.
 
--   **이 장치에 대 한 위치** 이 **켜져 (windows 10 Mobile에는 적용 되지 않음)**
+-   **이 장치에 대 한 위치...**  꺼져 **에서** (Windows 10 Mobile는 적용 되지 않음)
 -   위치 서비스 설정 **위치**가 **켜짐** 상태임
 -   **사용자의 위치를 사용할 수 있는 앱 선택**에서 앱이 **on** 상태임
 
 ## <a name="related-topics"></a>관련 항목
 
 * [UWP 지리적 위치 샘플](https://go.microsoft.com/fwlink/p/?linkid=533278)
-* [지오펜스에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn631756)
-* [위치 인식 앱에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [지 오 펜싱에 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn631756)
+* [위치 인식 앱에 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)
