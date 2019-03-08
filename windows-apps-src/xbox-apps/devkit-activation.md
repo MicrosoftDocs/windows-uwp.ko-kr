@@ -7,24 +7,24 @@ keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
 ms.openlocfilehash: 3664ecae152b7178709bffc373a877e58a86461a
-ms.sourcegitcommit: eaee5a45d5eace64c69e67691e5330b466cc74c2
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "9083266"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590538"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Xbox One 개발자 모드 활성화
 
 ## <a name="how-developer-mode-works"></a>개발자 모드의 작동 방식
-Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가지 모드가 있습니다. 정품 모드에서는 Xbox One 본체의 모든 고객 또는 사용자가 콘솔을 사용할 수 있는 상태이며 사용자로서 게임을 플레이하고 앱을 실행할 수 있습니다. 개발자 모드에서는 콘솔에 대한 소프트웨어를 개발할 수 있지만 정품 게임을 플레이하거나 소매 앱을 실행할 수 없습니다.
+Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가지 모드가 있습니다. 정품 모드에서는 Xbox One 콘솔의 모든 고객 또는 사용자가 콘솔을 사용할 수 있는 상태이며 사용자로서 게임을 플레이하고 앱을 실행할 수 있습니다. 개발자 모드에서는 콘솔에 대한 소프트웨어를 개발할 수 있지만 정품 게임을 플레이하거나 소매 앱을 실행할 수 없습니다.
 
-모든 정품 Xbox One 본체에서 개발자 모드를 사용할 수 있습니다. 개발자 모드를 사용하도록 설정한 후 정품(**2a**)과 개발자 모드(**2b**) 사이를 전환할 수 있습니다.
+모든 정품 Xbox One 콘솔에서 개발자 모드를 사용할 수 있습니다. 개발자 모드를 사용하도록 설정한 후 정품(**2a**)과 개발자 모드(**2b**) 사이를 전환할 수 있습니다.
 
 ![Xbox One 모드](images/dev-mode-flow.png)
 
-## <a name="activate-developer-mode-on-your-retail-xbox-one-console"></a>정품 Xbox One 본체에서 개발자 모드 활성화
+## <a name="activate-developer-mode-on-your-retail-xbox-one-console"></a>정품 Xbox One 콘솔에서 개발자 모드 활성화
 
-1.  Xbox One 본체를 시작합니다.
+1.  Xbox One 콘솔을 시작합니다.
 
 2.  Microsoft Store에서 **개발자 모드 활성화** 앱을 검색하여 설치합니다.
 
@@ -38,13 +38,13 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
 
     ![활성화 5단계](images/activation-step-5.png)  
     
-5.  [파트너 센터에서 앱 개발자 계정을 등록](https://developer.microsoft.com/store/register)합니다.  또한 게임을 게시 하기 위한 첫 번째 단계입니다.
+5.  [파트너 센터에서 앱 개발자 계정을 등록](https://developer.microsoft.com/store/register)합니다.  이 게임을 게시 하는 첫 번째 단계 이기도 합니다.
 
-6.  [파트너 센터](https://partner.microsoft.com/dashboard) 에 유효한, 현재 파트너 센터 앱 개발자 계정으로 로그인 합니다.  왼쪽 탐색 창에서 여러 옵션이 표시 되지 또는 다음 단계 및 활성화 링크가 _작동 하지 않습니다_; **개요** 섹션에서 **새 앱 만들기** 옵션이 표시 되지 않을 경우 이전 단계에서 응용 프로그램 개발자 계정을 등록 한 완전히 있는지 확인 합니다.
+6.  에 로그인 [파트너 센터](https://partner.microsoft.com/dashboard) 유효 하 고 현재 파트너 센터 앱 개발자 계정을 사용 하 여 합니다.  왼쪽 탐색 창에서 여러 옵션이 표시 되지 않습니다 또는 표시 되지 않는 경우는 **새 앱을 만듭니다** 옵션을 **개요** 섹션에서 다음 단계와 활성화 링크 _작동 하지 것입니다_ ; 이전 단계의 앱 개발자 계정의 완벽 하 게 등록 되어 있는지 확인 합니다.
 
-7.  [Partner.microsoft.com/xboxconfig/devices](https://partner.microsoft.com/xboxconfig/devices)으로 이동 합니다.
+7.  로 이동 [partner.microsoft.com/xboxconfig/devices](https://partner.microsoft.com/xboxconfig/devices)합니다.
 
-8.  개발자 모드 활성화 앱에 표시된 활성화 코드를 입력합니다. 계정에 연결된 활성화 수에는 제한이 있습니다. 개발자 모드 활성화 되 면 파트너 센터 계정에 연결 된 정품 인증 중 하나를 사용 알려줍니다.
+8.  개발자 모드 활성화 앱에 표시된 활성화 코드를 입력합니다. 계정에 연결된 활성화 수에는 제한이 있습니다. 개발자 모드를 활성화 한 후 파트너 센터 계정에 연결 된 정품 인증 적 표시 됩니다.
 
     ![활성화 8단계](images/activation-step-8-rs2.png)    
     
@@ -68,5 +68,5 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
   ![활성화 14단계](images/activation-step-12.png)  
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox One 개발자 모드 비활성화](devkit-deactivation.md)
-- [Xbox One의 UWP](index.md)
+- [Xbox 개발자 모드 비활성화](devkit-deactivation.md)
+- [Xbox One에서 UWP](index.md)

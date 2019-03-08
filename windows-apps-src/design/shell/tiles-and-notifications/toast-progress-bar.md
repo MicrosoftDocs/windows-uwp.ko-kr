@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use a progress bar within your toast notification.
+Description: 사용자 알림 내에 진행률 표시줄을 사용 하는 방법에 알아봅니다.
 title: 알림 진행률 표시줄 및 데이터 바인딩
 label: Toast progress bar and data binding
 template: detail.hbs
@@ -8,22 +8,22 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 진행률 표시줄, 알림 진행률 표시줄, 알림, 알림 데이터 바인딩
 ms.localizationpriority: medium
 ms.openlocfilehash: f955f2a71fed6444c65f9550e1f4fa3baeabe092
-ms.sourcegitcommit: 88265a8c9f6a77a0508a0c9d89b6ab0a6238a1da
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "8969060"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624828"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>알림 진행률 표시줄 및 데이터 바인딩
 
 알림 메시지에서 진행률 표시줄을 사용하면 다운로드, 비디오 렌더링, 운동 목표 등과 같은 장기 실행 작업의 상태를 사용자에게 전달할 수 있습니다.
 
 > [!IMPORTANT]
-> **Creators Update 및 알림 라이브러리 1.4.0 필요**: 알림에서 진행률 표시줄을 사용하려면 SDK 15063을 대상으로 지정하고 빌드 15063 이상을 실행해야 합니다. 버전 1.4.0 이상의 [UWP 커뮤니티 도구 키트 알림 NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용해야만 알림의 콘텐츠에 대한 진행률 표시줄을 생성할 수 있습니다.
+> **크리에이터 업데이트 및 알림 라이브러리의 1.4.0 필요**: SDK 15063 대상으로 해야 합니다 하 고 빌드 15063 또는 팝업에서 진행률 표시줄을 사용 하려면 실행 합니다. 버전 1.4.0 이상의 [UWP 커뮤니티 도구 키트 알림 NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용해야만 알림의 콘텐츠에 대한 진행률 표시줄을 생성할 수 있습니다.
 
-알림 메시지에서 진행률 표시줄 수 없습니다 '확정' (특정 값 없음, 움직이는 점이 나타내는 점이 작업이 일어나) 또는 '확정' (표시줄의 특정 비율이 채워지면 60% 등).
+알림 내에서 진행률 표시줄이 수 없습니다 "비활성화" (특정 값 없음-애니메이션된 점을 나타낼 작업 발생) 또는 "비활성화" (특정 비율의 모음 채워집니다, 60% 등).
 
-> **중요 API**: [NotificationData 클래스](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata), [ToastNotifier.Update 메서드](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [ToastNotification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
+> **중요 한 Api**: [NotificationData 클래스](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata)하십시오 [ToastNotifier.Update 메서드](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [ToastNotification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
 
 > [!NOTE]
 > 데스크톱은 알림 메시지에서 진행률 표시줄만을 지원합니다. 다른 디바이스에서는 알림의 진행률 표시줄이 삭제됩니다.
@@ -34,10 +34,10 @@ ms.locfileid: "8969060"
 
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
-| **제목** | 문자열 또는 [BindableString](toast-schema.md#bindablestring) | false | 선택적 제목 문자열을 가져오거나 설정합니다. 데이터 바인딩을 지원합니다. |
+| **Title** | 문자열 또는 [BindableString](toast-schema.md#bindablestring) | false | 선택적 제목 문자열을 가져오거나 설정합니다. 데이터 바인딩을 지원합니다. |
 | **값** | 이중 또는 [AdaptiveProgressBarValue](toast-schema.md#adaptiveprogressbarvalue) 또는 [BindableProgressBarValue](toast-schema.md#bindableprogressbarvalue) | false | 진행률 표시줄의 값을 가져오거나 설정합니다. 데이터 바인딩을 지원합니다. 기본값은 0입니다. 0.0과 1.0, `AdaptiveProgressBarValue.Indeterminate` 또는 `new BindableProgressBarValue("myProgressValue")` 사이에서 이중일 수 있습니다. |
 | **ValueStringOverride** | 문자열 또는 [BindableString](toast-schema.md#bindablestring) | false | 기본 백분율 문자열 대신 표시할 선택적 문자열을 가져오거나 설정합니다. 이것을 제공하지 않는 경우 '70%'와 같은 내용이 표시됩니다. |
-| **Status** | 문자열 또는 [BindableString](toast-schema.md#bindablestring) | true | 왼쪽의 진행률 표시줄 아래에 표시되는 상태 문자열(필수)을 가져오거나 설정합니다. 이 문자열은 '다운로드 중...' 또는 '설치 중...'과 같은 작업의 상태를 반영해야 합니다. |
+| **상태** | 문자열 또는 [BindableString](toast-schema.md#bindablestring) | true | 왼쪽의 진행률 표시줄 아래에 표시되는 상태 문자열(필수)을 가져오거나 설정합니다. 이 문자열은 '다운로드 중...' 또는 '설치 중...'과 같은 작업의 상태를 반영해야 합니다. |
 
 
 위에서 확인한 알림을 생성하는 방법은 다음과 같습니다.
@@ -204,10 +204,10 @@ Windows 10부터 동일한 **Tag** 및 **Group**을 사용하여 새로운 알�
 
 | | 바꾸기 | 업데이트 |
 | -- | -- | --
-| **알림 센터의 위치** | 알림을 알림 센터 상단으로 이동 | 알림 센터 내에서 알림을 제자리에 둡니다. |
-| **콘텐츠 수정** | 전체 알림 콘텐츠/레이아웃을 완전히 변경할 수 있습니다. | 데이터 바인딩을 지원하는 속성만 변경할 수 있습니다(진행률 표시줄 및 최상위 텍스트). |
-| **팝업으로 다시 표시** | **SuppressPopup**을 `false`로 설정하는 경우 알림 팝업으로 다시 표시할 수 있습니다(또는 true로 설정하여 알림 센터에 무음으로 보냄). | 팝업으로 다시 표시하지 않습니다. 즉, 알림의 데이터는 알림 센터 내에서 무음으로 업데이트됩니다. |
-| **사용자 해제됨** | 사용자가 이전 알림을 해제했는지에 상관 없이 교체 알림이 항상 발송됩니다. | 사용자가 알림을 해제하면 알림 업데이트에 실패합니다. |
+| **관리 센터의 위치** | 알림을 알림 센터 상단으로 이동 | 알림 센터 내에서 알림을 제자리에 둡니다. |
+| **콘텐츠를 수정합니다.** | 전체 알림 콘텐츠/레이아웃을 완전히 변경할 수 있습니다. | 데이터 바인딩을 지원하는 속성만 변경할 수 있습니다(진행률 표시줄 및 최상위 텍스트). |
+| **팝업으로 다시 나타납니다.** | **SuppressPopup**을 `false`로 설정하는 경우 알림 팝업으로 다시 표시할 수 있습니다(또는 true로 설정하여 알림 센터에 무음으로 보냄). | 팝업으로 다시 표시하지 않습니다. 즉, 알림의 데이터는 알림 센터 내에서 무음으로 업데이트됩니다. |
+| **해제 된 사용자** | 사용자가 이전 알림을 해제했는지에 상관 없이 교체 알림이 항상 발송됩니다. | 사용자가 알림을 해제하면 알림 업데이트에 실패합니다. |
 
 일반적으로 **업데이트가 유용한 경우...**
 
@@ -222,5 +222,5 @@ Windows 10부터 동일한 **Tag** 및 **Group**을 사용하여 새로운 알�
 
 ## <a name="related-topics"></a>관련 항목
 
-- [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-toast-progress-bar)
+- [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-toast-progress-bar)
 - [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)

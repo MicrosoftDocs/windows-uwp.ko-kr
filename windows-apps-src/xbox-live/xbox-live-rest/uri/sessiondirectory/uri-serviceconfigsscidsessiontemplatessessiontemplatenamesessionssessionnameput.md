@@ -8,17 +8,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d35b3f89f8b866a5236e8f5ac91eb37d9a82d306
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937493"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598558"
 ---
 # <a name="put-serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionname"></a>PUT (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName})
-업데이트, 만들거나 세션에 참가 합니다.
+업데이트를 만들거나 세션에 참가 합니다.
 
 > [!IMPORTANT]
-> 이 URI 메서드에 필요 X Xbl-계약 버전의 헤더 요소: 104/105 또는 나중에 모든 요청.
+> 이 URI 메서드를 헤더 요소의 X Xbl-계약 버전이 필요합니다. 104/105 또는 나중에 모든 요청 합니다.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4EYB)
@@ -31,13 +31,13 @@ ms.locfileid: "8937493"
 
 ## <a name="remarks"></a>설명
 
-이 HTTP/REST 메서드에, 조인 만들거나 전송 되는 동일한 JSON 요청 본문 서식 파일의 하위 집합에 따라 세션을 업데이트 합니다. 성공 시 서버에서 반환 된 응답을 포함 하는 **MultiplayerSession** 개체를 반환 합니다. 특성에 전달 된 **MultiplayerSession** 개체의 속성에서 다를 수 있습니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.WriteSessionAsync**하 여 줄 바꿈할 수 있습니다.
+이 HTTP/REST 메서드 만듭니다, 조인 또는 동일한 JSON 요청 본문 템플릿의 하위 집합은 전송에 따라 세션을 업데이트 합니다. 성공 하면 반환 된 **MultiplayerSession** 응답을 포함 하는 서버에서 반환 된 개체입니다. 특성에 전달 기능에 대 한 특성에서 다를 수 있습니다 **MultiplayerSession** 개체입니다. 이 메서드는로 래핑할 수 있습니다 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.WriteSessionAsync**합니다.
 
-세션 만들기 및 업데이트 작업 PUT 적용할 변경 내용을 나타내는 응용 프로그램/j 본문을 사용 합니다. 작업은 idempotent, 즉, 동일한 변경의 여러 응용 프로그램 추가 영향을 주지 않습니다.
+세션 만들기 및 업데이트 작업 적용 된 변경 내용을 나타내는 application/json 본문을 사용 하 여 PUT을 사용 합니다. 작업은 idempotent 상태, 즉, 동일한 변경 내용 여러 응용 프로그램 추가 영향을 주지 않습니다.
 
-JSON 요청 본문 세션 데이터 구조를 미러링합니다. 모든 필드와 하위 필드는 옵션입니다.
+JSON 요청 본문 세션 데이터 구조를 반영합니다. 모든 필드 및 하위 필드는 선택 사항입니다.
 
-PUT 메서드에서 세션 만들기 또는 모드에 대 한 통신 형식은 다음과 같습니다.
+PUT 메서드의 세션 만들기 또는 가입 모드에 대 한 통신 형식으로 다음과 같습니다.
 
 > [!NOTE]
 > 이 패턴을 사용 하 여 처리 합니다. 업데이트, 세션의 현재 상태에 관계 없이 적용 됩니다.
@@ -52,7 +52,7 @@ PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 
 
 
-PUT 메서드에서 세션 업데이트 모드에 대 한 통신 형식은 다음과 같습니다.
+PUT 메서드의 세션 업데이트 모드에 대 한 통신 형식으로 다음과 같습니다.
 
 ```cpp
 PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/sessions/00000000-0000-0000-0000-000000000001 HTTP/1.1
@@ -62,7 +62,7 @@ PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 
 
 
-와이어 형식은 세션 속성을 업데이트할 PUT 메서드는 다음과 같습니다. 것 URI 세션에 PUT 연산에 해당 하는 것은 본문 속성으로 아래 개체에만 필요 합니다. 차이점은이 작업은 오류 코드 404는 세션 존재 하지 않는 경우 찾을 수 없습니다. 이 작업은 헤더를 지원합니다.
+세션 속성을 업데이트 하는 PUT 메서드에 대 한 통신 형식으로 다음과 같습니다. 동일 세션 URI에 PUT 작업에 아무 것도도 아래 개체 속성으로 본문을 포함 합니다. 차이점은이 작업 오류 코드 404를 반환 하는 세션 없는 경우 찾을 수 없습니다. 이 작업은 If-match 헤더를 지원 합니다.
 
 ```cpp
 PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/sessions/00000000-0000-0000-0000-000000000001/properties HTTP/1.1
@@ -79,11 +79,11 @@ PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 
 ## <a name="uri-parameters"></a>URI 매개 변수
 
-| 매개 변수| 유형| 설명|
+| 매개 변수| 형식| 설명|
 | --- | --- | --- | --- | --- |
-| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 1 부 세션 식별자입니다.|
-| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션 식별자입니다.|
-| 세션 이름| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.|
+| scid| GUID| (서비스 안내) 식별자를 구성 하는 서비스입니다. 1 부 세션 식별자입니다.|
+| sessionTemplateName| 문자열| 세션 템플릿의 현재 인스턴스의 이름입니다. 2 부를 선택 하면 세션 식별자입니다.|
+| sessionName| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.|
 
 <a id="ID4EFC"></a>
 
@@ -95,15 +95,15 @@ PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 
 ## <a name="request-body"></a>요청 본문
 
-다음은 샘플 요청 본문을 만들거나 세션에 참가 하기 위한입니다. 요청 본문의 다음 멤버는 옵션입니다. 다른 모든 가능한 멤버는 요청에 사용할 수 없습니다.
+다음은 만들거나 세션에 참가 대 한 예제 요청 본문입니다. 요청 본문의 다음 멤버는 선택적입니다. 다른 모든 가능한 멤버를 요청에 사용할 수 없습니다.
 
-| 멤버| 유형| 설명|
+| 멤버| 형식| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 상수| 개체| 세션에 대 한 상수를 생성 하기 위해 세션 템플릿을 사용 하 여 병합 된 읽기 전용으로 설정 합니다. |
-| 속성 | 개체 | 세션 속성에 병합할 변경 합니다.|
-| members.me | 개체| 상수 및 많은 작동 하는 속성 같은 최상위에 상응 합니다. PUT 메서드는 사용자 세션의 구성원에 게 하 고 필요한 경우 사용자를 추가 합니다. "Me"를 null로 지정을 요청 하는 멤버 세션에서 제거 됩니다. |
-| 멤버 | 개체| 인덱스 0부터 시작 하 여 키 입력 세션을 추가 하는 사용자를 표시 하는 다른 개체입니다. 세션을 이미 멤버를 포함 하는 경우에 항상 요청의 구성원 수를 0으로 시작 합니다. 멤버는 요청에 나타나는 순서로 세션에 추가 됩니다. 구성원 속성 속한 받은 사용자만 설정할 수 있습니다. |
-| 서버 | 개체| 업데이트 및 추가 세션을 나타내는 값의 연결 된 서버 참가자 설정 됩니다. 서버를 null로 지정 하는 경우 해당 서버 항목 세션에서 제거 됩니다. |
+| 상수| object| 세션에 대 한 상수를 생성 하기 위해 세션 템플릿으로 병합 되는 읽기 전용으로 설정 합니다. |
+| 속성 | object | 세션 속성에 병합할 변경 내용입니다.|
+| members.me | object| 상수 및 속성 대부분을 작동 하는 같은 최상위 대응 합니다. 모든 PUT 메서드 사용자 세션의 멤버 여야 하며 필요한 경우 사용자를 추가 합니다. "Me"를 null로 지정 하면 요청 된 멤버는 세션에서 제거 됩니다. |
+| 멤버 | object| 인덱스는 0부터 시작 하 여 키가 지정 된 세션에 추가 하는 사용자를 나타내는 다른 개체입니다. 세션 이미 멤버를 포함 하는 경우에 요청에 대 한 멤버 수가 항상 0으로 시작 합니다. 멤버는 세션에서 요청에 나타나는 순서에 추가 됩니다. 만 속해 부여한 사용자가 멤버 속성을 설정할 수 있습니다. |
+| 서버 | object| 연결 된 서버 참가자의 업데이트 및 세션에 대 한 추가 나타내는 값의 집합입니다. 서버는 null로 지정 된 경우 세션에서 해당 서버 항목이 제거 됩니다. |
 
 
 
@@ -133,7 +133,7 @@ PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 
 ## <a name="response-body"></a>응답 본문
 
-응답 본문 만들거나 세션에 참가 하기 위한 샘플:
+만들거나 세션에 참가 대 한 샘플 응답 본문:
 
 
 ```cpp
@@ -210,6 +210,6 @@ PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 <a id="ID4EKD"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
 [/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName}](uri-serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionname.md)

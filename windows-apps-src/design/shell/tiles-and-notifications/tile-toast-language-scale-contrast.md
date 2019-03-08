@@ -1,5 +1,5 @@
 ---
-Description: Your tiles and toasts can load strings and images tailored for display language, display scale factor, high contrast, and other runtime contexts.
+Description: 타일 및 알림은 표시 언어, 디스플레이 배율 인수, 고대비 및 기타 런타임 컨텍스트에 맞게 조정된 문자열 및 이미지를 로드할 수 있습니다.
 title: 언어, 배율, 고대비에 대한 타일 및 알림 메시지
 template: detail.hbs
 ms.date: 10/12/2017
@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: aa6e93196d30c15374129eee7714604cfab7b82e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942909"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601478"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>언어, 배율, 고대비에 대한 타일 및 알림 메시지
 
-타일 및 알림은 표시 언어, [디스플레이 배율 인수](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), 고대비 및 기타 런타임 컨텍스트에 맞게 조정된 문자열 및 이미지를 로드할 수 있습니다. 리소스 파일 이름에 한정자를 사용 하는 방법에 대 한 배경, [언어, 규모 및 기타 한정자에 대 한 리소스에 맞게 조정](../../../app-resources/tailor-resources-lang-scale-contrast.md) 하 고 [앱 아이콘 및 로고를](/windows/uwp/design/style/app-icons-and-logos)참조 하세요.
+타일 및 알림은 표시 언어, [디스플레이 배율 인수](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), 고대비 및 기타 런타임 컨텍스트에 맞게 조정된 문자열 및 이미지를 로드할 수 있습니다. 백그라운드 리소스 파일의 이름에 한정자를 사용 하는 방법에 대해서 [언어, 배율 및 다른 한정자에 대 한 리소스를 조정할](../../../app-resources/tailor-resources-lang-scale-contrast.md) 하 고 [앱 아이콘 및 로고](/windows/uwp/design/style/app-icons-and-logos)합니다.
 
 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../../globalizing/globalizing-portal.md)를 참조하세요.
 
@@ -73,8 +73,8 @@ ms.locfileid: "8942909"
 | 한정자 | 쿼리 문자열 | 예 |
 | --------- | ------------ | ------- |
 | 배율 | ms-scale | ?ms-scale=400 |
-| 언어 | ms-lang | ?ms-lang=en-US |
-| 대비 | ms-contrast | ?ms-contrast=high |
+| 외국어 | ms-lang | ?ms-lang=en-US |
+| 이 예와 | ms-contrast | ?ms-contrast=high |
 
 쿼리 문자열에 사용할 수 있는 모든 한정자 값에 대한 참조 테이블은 [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)를 참조하세요.
 
@@ -84,12 +84,12 @@ ms.locfileid: "8942909"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [반응형 디자인에 대한 화면 크기 및 중단점](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md)
-* [언어, 규모 및 기타 한정자에 맞게 리소스 조정](../../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [화면 크기 및 반응 형 디자인에 대 한 중단점](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md)
+* [언어, 배율 및 다른 한정자에 대 한 리소스를 조정 합니다.](../../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [타일 및 아이콘 자산에 대한 지침](app-assets.md).
 * [세계화 및 지역화](../../globalizing/globalizing-portal.md)
-* [UI와 앱 패키지 매니페스트에 문자열 지역화](../../../app-resources/localize-strings-ui-manifest.md)
-* [XAML 태그와 코드에서 이미지 또는 다른 자산 참조](../../../app-resources/images-tailored-for-scale-theme-contrast.md)
+* [UI 및 앱 패키지 매니페스트에 문자열 지역화](../../../app-resources/localize-strings-ui-manifest.md)
+* [XAML 태그 및 코드에서 이미지 또는 다른 자산 참조](../../../app-resources/images-tailored-for-scale-theme-contrast.md)
 * [addImageQuery](/uwp/schemas/tiles/tilesschema/element-visual?branch=live)
 * [타일 스키마](/uwp/schemas/tiles/tilesschema/schema-root?branch=live)
-* [알림 스키마](/uwp/schemas/tiles/toastschema/schema-root?branch=live)
+* [알림 메시지 스키마](/uwp/schemas/tiles/toastschema/schema-root?branch=live)

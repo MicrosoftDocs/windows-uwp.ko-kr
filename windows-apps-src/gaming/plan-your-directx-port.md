@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, directx, 포트
 ms.localizationpriority: medium
 ms.openlocfilehash: 6779fd95d4fd1964a8ca19aa4a7a9f9c29a6179b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044384"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602128"
 ---
 # <a name="plan-your-directx-port"></a>DirectX 포트 계획
 
@@ -20,7 +20,7 @@ ms.locfileid: "9044384"
 **요약**
 
 -   DirectX 포트 계획
--   [Direct3D 9에서 Direct3D 11로의 중요 변경 사항](understand-direct3d-11-1-concepts.md)
+-   [Direct3D 9에서 Direct3D 11의 중요 한 변경입니다.](understand-direct3d-11-1-concepts.md)
 -   [기능 매핑](feature-mapping.md)
 
 
@@ -35,11 +35,11 @@ Direct3D 9에서 Direct3D 11로 업그레이드하면 검색 및 바꾸기 변�
 
 고유한 도우미 라이브러리 또는 커뮤니티 도구로 D3DX 및 DXUT 도우미 라이브러리를 교체해야 합니다. 자세한 내용은 [기능 매핑](feature-mapping.md) 섹션을 참조하세요.
 
-> **참고**  이전의 D3DX 및 DXUT에서 제공한 일부 기능을 대체 [DirectX 도구 키트](https://go.microsoft.com/fwlink/p/?LinkID=248929) 또는 [DirectXTex](https://go.microsoft.com/fwlink/p/?LinkID=248926) 를 사용할 수 있습니다.
+> **참고**    사용할 수는 [DirectX 도구 키트](https://go.microsoft.com/fwlink/p/?LinkID=248929) 하거나 [DirectXTex](https://go.microsoft.com/fwlink/p/?LinkID=248926) D3DX DXUT를 제공 하 던는 일부 기능을 대체 합니다.
 
  
 
-어셈블리 언어로 작성된 셰이더는 셰이더 모델 4 수준 9\_1 또는 9\_3 기능을 사용하는 HLSL로 업그레이드해야 하고 효과 라이브러리에 대해 작성된 셰이더는 최신 버전의 HLSL 구문으로 업데이트해야 합니다. 자세한 내용은 [기능 매핑](feature-mapping.md) 섹션을 참조하세요.
+어셈블리 언어로 작성 된 셰이더를 HLSL 셰이더 모델 4 수준 9를 사용 하 여 업그레이드 해야 합니다\_1 또는 9\_기능 및 셰이더 효과 라이브러리는 HLSL 구문의 최신 버전으로 업데이트 해야 용으로 작성 된 3입니다. 자세한 내용은 [기능 매핑](feature-mapping.md) 섹션을 참조하세요.
 
 여러 [Direct3D 기능 수준](https://msdn.microsoft.com/library/windows/desktop/ff476876)에 익숙해지세요. 기능 수준은 알려진 기능 집합을 정의하여 다양한 범위의 비디오 하드웨어를 분류합니다. 각 집합은 대략 각각 9.1에서 11.2까지 Direct3D 버전에 해당합니다. 모든 기능 수준은 DirectX 11 API를 사용합니다.
 

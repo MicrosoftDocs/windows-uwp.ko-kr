@@ -1,5 +1,5 @@
 ---
-Description: This topic describes the new Windows UI for selecting and manipulating text, images, and controls and provides user experience guidelines that should be considered when using these new selection and manipulation mechanisms in your UWP app.
+Description: 이 항목 선택 및 텍스트, 이미지 및 컨트롤을 조작 하기 위한 새로운 Windows UI를 설명 하 고 UWP 앱에서 이러한 새 선택 및 조작 메커니즘을 사용 하는 경우 고려해 야 하는 사용자 환경 지침을 제공 합니다.
 title: 텍스트 및 이미지 선택
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
@@ -9,18 +9,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9679e6e658e7fa1eb50b41331e7e59ec2115fc14
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939008"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612508"
 ---
 # <a name="selecting-text-and-images"></a>텍스트 및 이미지 선택
 
 
 이 문서에서는 텍스트, 이미지 및 컨트롤을 선택하고 조작하는 방법을 설명하고 앱에서 이러한 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 
-> **중요 API**: [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
+> **중요 한 Api**: [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
  
 
 
@@ -45,24 +45,24 @@ ms.locfileid: "8939008"
 
 텍스트 선택 및 조작은 터치 조작으로 인해 발생하는 사용자 환경 문제에 특히 영향을 미칠 수 있습니다. 마우스, 펜/스타일러스 및 키보드 입력은 고도로 세분화되어 있습니다. 마우스 클릭이나 펜/스타일러스 접촉은 일반적으로 단일 픽셀에 매핑되고 키는 누른 상태 또는 누르지 않은 상태가 됩니다. 그렇지만 터치식 입력은 세분화되어 있지 않습니다. 한 손가락의 전체 표면을 화면의 특정 x-y 위치에 매핑시켜 텍스트 캐럿을 정확히 배치하는 것은 어려운 일입니다.
 
-**고려 사항 및 권장 지침**
+**고려 사항 및 권장 사항**
 
-선택 및 조작 동작을 포함 한 전체 플랫폼 사용자 조작 환경을 제공 하는 Windowsto 빌드 앱의 언어 프레임 워크를 통해 노출 되는 기본 제공 컨트롤을 사용 합니다. 기본 제공 컨트롤의 조작 기능은 대부분의 UWP 앱에서 충분히 작동합니다.
+선택 및 조작 동작을 포함 하 여 전체 플랫폼 사용자 상호 작용 경험을 제공 하는 앱을 빌드하려면 Windows의 언어 프레임 워크를 통해 노출 하는 기본 제공 컨트롤을 사용 합니다. 기본 제공 컨트롤의 조작 기능은 대부분의 UWP 앱에서 충분히 작동합니다.
 
 표준 UWP 텍스트 컨트롤을 사용할 경우에는 이 항목에 설명된 선택 동작 및 시각 효과를 사용자 지정할 수 없습니다.
 
 **텍스트 선택**
 
-앱에서 텍스트 선택을 지 원하는 사용자 지정 UI에 필요한 경우 여기에 설명 된 Windowsselection 동작을 따르는 것이 좋습니다.
+앱에서 텍스트 선택 영역을 지 원하는 사용자 지정 UI에 필요한 경우 여기에 설명 된 Windows 선택 동작을 수행 하는 것이 좋습니다.
 
-**편집 가능 및 편집 불가능 콘텐츠**
+**편집 가능한과 편집 불가능 콘텐츠**
 
 
-터치를 사용할 경우 선택 조작은 주로 삽입 커서를 설정하거나 단어를 선택하기 위한 탭하기, 선택 영역을 수정하기 위한 밀기 등의 제스처를 통해 수행됩니다. 다른 Windowstouch 상호 작용에서와 마찬가지로 시간이 제한 된 조작은 제한 되며 정보 UI를 표시 하는 제스처를 보유 합니다. 자세한 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
+터치를 사용할 경우 선택 조작은 주로 삽입 커서를 설정하거나 단어를 선택하기 위한 탭하기, 선택 영역을 수정하기 위한 밀기 등의 제스처를 통해 수행됩니다. 다른 Windows를 사용 하 여 터치 상호 작용을 시간된 상호 작용은 눌러 제한 되 고 정보 UI를 표시 하는 제스처를 보유 합니다. 자세한 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
 
-두 Windowsrecognizes 가능한 선택 조작에 편집 가능 및 편집 불가능 상태 및 선택 UI, 피드백 및 기능을 적절 하 게 조정 합니다.
+Windows 선택 상호 작용, 편집 가능한과 편집 불가능 상태를 인식 하 고 선택 UI, 피드백 및 기능을 적절 하 게 조정 합니다.
 
-**편집 가능 콘텐츠**
+**편집 가능한 콘텐츠**
 
 단어의 왼쪽 절반에서 탭하면 단어 바로 왼쪽에 커서가 배치되고, 오른쪽 절반에서 탭하면 단어 바로 오른쪽에 커서가 배치됩니다.
 
@@ -78,11 +78,11 @@ ms.locfileid: "8939008"
 
 ![선택 영역 내부 또는 위치 조정 막대를 탭하여(또는 길게 눌러) 상황에 맞는 메뉴를 호출합니다.](images/textselection-show-context.png)
 
-**참고**철자가 틀린된 단어의 경우 이러한 조작이 다소 합니다. 철자가 틀린 것으로 표시된 단어를 탭하면 전체 단어가 강조 표시되고 제안되는 맞춤법 상황에 맞는 메뉴가 호출됩니다.
+**참고**  맞춤법이 틀린된 단어의 경우 약간 다를 이러한 상호 작용 합니다. 철자가 틀린 것으로 표시된 단어를 탭하면 전체 단어가 강조 표시되고 제안되는 맞춤법 상황에 맞는 메뉴가 호출됩니다.
 
  
 
-**편집 불가능 콘텐츠**
+**비-편집 가능한 콘텐츠**
 
 다음 이미지는 단어 내부를 탭하여 단어를 선택하는 방법을 보여 줍니다(초기 선택에는 공백이 포함되지 않음).
 
@@ -98,34 +98,34 @@ ms.locfileid: "8939008"
 
 ![진행률 위치 조정 막대가 있는 미디어 플레이어](images/gripper-mediaplayer.png)
 
-*조정 가능한 진행률 표시줄이 있는 미디어 플레이어입니다.*
+*조정 진행률 표시줄을 사용 하 여 미디어 플레이어입니다.*
 
 ![자르기 위치 조정 막대가 있는 이미지](images/gripper-imagemanip.png)
 
-*자르기 위치 조정 막대가 있는 이미지 편집기입니다.*
+*위치 조정 막대 자르기를 사용 하 여 이미지 편집기입니다.*
 
 ## <a name="related-articles"></a>관련 문서
 
 
 
-**개발자용**
-* [사용자 지정 사용자 조작](https://msdn.microsoft.com/library/windows/apps/mt185599)
+**개발자를 위한**
+* [사용자 지정 사용자 상호 작용](https://msdn.microsoft.com/library/windows/apps/mt185599)
 
 **샘플**
-* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
-* [입력: XAML 사용자 입력 이벤트 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 디바이스 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: 터치 적중 횟수 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: 간단한 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 터치 적중된 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
 * [입력: Windows 8 제스처 샘플](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처(C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [DirectX 터치 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [입력: 조작 및 제스처 (c + +) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

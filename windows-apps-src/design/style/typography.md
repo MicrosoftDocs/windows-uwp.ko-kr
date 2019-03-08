@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 0943273dab239669be75b30070222d698246aa41
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944725"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610028"
 ---
 # <a name="typography"></a>입력 체계
 
@@ -154,7 +154,7 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
     :::column-end:::
 :::row-end:::
 
-**참고**: 잘 정의되지 않은(예: 차별화된 배경색 없음) 컨테이너의 경우나 추가 텍스트를 확인해야 하는 링크가 있는 경우 줄임표를 사용합니다.
+**참고**: 컨테이너 잘 정의 된 경우 (예: 차별화 배경 색 없음), 또는 더 많은 텍스트를 보려면 링크의 경우 다음 줄임표를 사용 합니다.
 
 ## <a name="languages"></a>언어 
 
@@ -171,7 +171,7 @@ Segoe UI는 영어, 유럽 언어, 그리스어, 히브리어, 아르메니아�
 <tr class="header">
 <th align="left">글꼴 패밀리</th>
 <th align="left">스타일</th>
-<th align="left">노트</th>
+<th align="left">참고</th>
 </tr>
 </thead>
 <tbody>
@@ -192,7 +192,7 @@ Segoe UI는 영어, 유럽 언어, 그리스어, 히브리어, 아르메니아�
 </tr>
 <tr class="odd">
 <td align="left" style="font-family: Malgun Gothic;">Malgun Gothic</td>
-<td align="left">보통</td>
+<td align="left">Regular</td>
 <td align="left">한국어의 사용자 인터페이스 글꼴</td>
 </tr>
 <tr class="even">
@@ -207,7 +207,7 @@ Segoe UI는 영어, 유럽 언어, 그리스어, 히브리어, 아르메니아�
 </tr>
 <tr class="odd">
 <td align="left" style="font-family: Myanmar Text;">Myanmar Text</td>
-<td align="left">보통</td>
+<td align="left">Regular</td>
 <td align="left">미얀마 문자 스크립트의 대체 글꼴</td>
 </tr>
 <tr class="even">
@@ -217,7 +217,7 @@ Segoe UI는 영어, 유럽 언어, 그리스어, 히브리어, 아르메니아�
 </tr>
 <tr class="odd">
 <td align="left" style="font-family: SimSun;">SimSun</td>
-<td align="left">보통</td>
+<td align="left">Regular</td>
 <td align="left">레거시 중국어 UI 글꼴입니다. </td>
 </tr>
 <tr class="even">
@@ -244,7 +244,7 @@ Sans-serif 글꼴은 제목 및 UI 요소에 적합합니다.
 <tr class="header">
 <th align="left">글꼴 패밀리</th>
 <th align="left">스타일</th>
-<th align="left">노트</th>
+<th align="left">참고</th>
 </tr>
 </thead>
 <tbody>
@@ -272,7 +272,7 @@ Sans-serif 글꼴은 제목 및 UI 요소에 적합합니다.
 <tr class="even">
 <td style="font-family: Selawik;">Selawik</td>
 <td align="left">보통, Semilight, 가늘게, 굵게, Semibold</td>
-<td align="left">Segoe UI와 계측적으로 호환되는 오픈 소스 글꼴이며 Segoe UI를 번들로 만들지 않으려는 다른 플랫폼의 앱을 위한 글꼴입니다. <a href="https://github.com/Microsoft/Selawik">Github에서 Selawik를 가져옵니다.</a></td>
+<td align="left">Segoe UI와 계측적으로 호환되는 오픈 소스 글꼴이며 Segoe UI를 번들로 만들지 않으려는 다른 플랫폼의 앱을 위한 글꼴입니다. <a href="https://github.com/Microsoft/Selawik">GitHub에서 Selawik를 가져옵니다.</a></td>
 </tr>
 
 </tbody>
@@ -287,13 +287,13 @@ Serif 글꼴은 대량 텍스트를 표시하는 데 적합합니다.
 <tr class="header">
 <th align="left">글꼴 패밀리</th>
 <th align="left">스타일</th>
-<th align="left">노트</th>
+<th align="left">참고</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="font-family: Cambria;">Cambria</td>
-<td align="left">보통</td>
+<td align="left">Regular</td>
 <td align="left">유럽 스크립트(라틴 문자, 그리스어, 키릴 자모)를 지원하는 Serif 글꼴입니다.</td>
 </tr>
 <tr class="even">
@@ -323,23 +323,23 @@ Serif 글꼴은 대량 텍스트를 표시하는 데 적합합니다.
 <tr class="header">
 <th align="left">글꼴 패밀리</th>
 <th align="left">스타일</th>
-<th align="left">노트</th>
+<th align="left">참고</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">Segoe MDL2 자산</td>
-<td align="left">보통</td>
+<td align="left">Regular</td>
 <td align="left">앱 아이콘의 사용자 인터페이스 글꼴 자세한 내용은 <a href="segoe-ui-symbol-font.md">Segoe MDL2 자산 문서</a>를 참조하세요.</td>
 </tr>
 <tr class="even">
 <td align="left">Segoe UI Emoji</td>
-<td align="left">보통</td>
+<td align="left">Regular</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Segoe UI Symbol</td>
-<td align="left">보통</td>
+<td align="left">Regular</td>
 <td align="left">기호의 대체 글꼴</td>
 </tr>
 </tbody>

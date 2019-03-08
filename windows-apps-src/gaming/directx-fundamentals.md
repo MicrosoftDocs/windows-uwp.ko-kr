@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 로드, 래스터화, 메시, 비트맵, 2D, 3D
 ms.localizationpriority: medium
 ms.openlocfilehash: afd08d62182bd0980f43ce1c4578c1181f8a6d2f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925154"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613748"
 ---
 # <a name="fundamentals-of-directx-programming"></a>DirectX 프로그래밍의 기본 사항
 
@@ -38,7 +38,7 @@ DirectX 게임에 리소스 로드 항목에서는 로컬 저장소 또는 기�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="working-with-2d-graphics-in-your-directx-game.md">DirectX 게임용 2D 그래픽</a></p></td>
+<td align="left"><p><a href="working-with-2d-graphics-in-your-directx-game.md">DirectX 게임에 대 한 2D 그래픽</a></p></td>
 <td align="left"><p>DirectX를 사용하여 2D 그래픽을 만듭니다.</p></td>
 </tr>
 <tr class="even">
@@ -46,11 +46,11 @@ DirectX 게임에 리소스 로드 항목에서는 로컬 저장소 또는 기�
 <td align="left"><p>Direct3D 그래픽 개념을 이해합니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="an-introduction-to-3d-graphics-with-directx.md">DirectX 게임용 기본 3D 그래픽</a></p></td>
+<td align="left"><p><a href="an-introduction-to-3d-graphics-with-directx.md">DirectX 게임에 대 한 기본 3D 그래픽</a></p></td>
 <td align="left"><p>기본 3D DirectX 그래픽을 만듭니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="load-a-game-asset.md">DirectX 게임에 리소스 로드</a></p></td>
+<td align="left"><p><a href="load-a-game-asset.md">DirectX 게임에서 리소스 로드</a></p></td>
 <td align="left"><p>DirectX 게임에 메시를 로드합니다.</p></td>
 </tr>
 </tbody>

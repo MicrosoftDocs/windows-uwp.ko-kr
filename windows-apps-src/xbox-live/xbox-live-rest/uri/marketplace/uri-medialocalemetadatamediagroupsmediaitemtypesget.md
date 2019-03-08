@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c48079e57d4d490ab75e8120eff81c77af855923
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936810"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611448"
 ---
 # <a name="get-mediamarketplaceidmetadatamediagroupsmediagroupmediaitemtypes"></a>GET (/media/{marketplaceId}/metadata/mediaGroups/{mediagroup}/mediaItemTypes)
-EDS의 지정 된 버전에 대 한 미디어 그룹당 사용할 수 있는 mediaItemTypes 나열 되어 있습니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
+EDS의 지정된 된 버전에 대 한 미디어 그룹당 사용 가능한 mediaItemTypes를 나열합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`합니다.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -24,10 +24,10 @@ EDS의 지정 된 버전에 대 한 미디어 그룹당 사용할 수 있는 med
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| marketplaceId| string| 필수. 문자열 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>에서 가져온 값입니다.| 
-| mediagroup| string| 필수. [GET (/media/ {marketplaceId} / 메타 데이터/mediaGroups)](uri-medialocalemetadatamediagroupsget.md)의 값 중 하나입니다.| 
+| marketplaceId| 문자열| 필수. 문자열에서 가져온 값을 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>합니다.| 
+| mediagroup| 문자열| 필수. 값 중 하나 [GET (/media/ {marketplaceId} / 메타 데이터/mediaGroups)](uri-medialocalemetadatamediagroupsget.md)합니다.| 
   
 <a id="ID4EAB"></a>
 
@@ -37,7 +37,7 @@ EDS의 지정 된 버전에 대 한 미디어 그룹당 사용할 수 있는 med
 <a id="ID4ECB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
 [/media/{marketplaceId}/metadata/mediaGroups/{mediagroup}/mediaItemTypes](uri-medialocalemetadatamediagroupsmediaitemtypes.md)
 
@@ -45,15 +45,15 @@ EDS의 지정 된 버전에 대 한 미디어 그룹당 사용할 수 있는 med
 <a id="ID4EMB"></a>
 
  
-##### <a name="further-information"></a>자세한 정보 
+##### <a name="further-information"></a>추가 정보 
 
-[EDS 공통 헤더](../../additional/edscommonheaders.md)
+[EDS 일반적인 헤더](../../additional/edscommonheaders.md)
 
  [EDS 매개 변수](../../additional/edsparameters.md)
 
  [EDS 쿼리 구체화](../../additional/edsqueryrefiners.md)
 
- [마켓플레이스 URI](atoc-reference-marketplace.md)
+ [Marketplace Uri](atoc-reference-marketplace.md)
 
  [추가 참조](../../additional/atoc-xboxlivews-reference-additional.md)
 

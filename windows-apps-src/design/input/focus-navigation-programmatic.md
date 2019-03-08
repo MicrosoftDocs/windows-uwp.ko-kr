@@ -1,5 +1,5 @@
 ---
-Description: Learn how to programmatically manage focus navigation with keyboard, gamepad, and accessibility tools in a UWP app.
+Description: 프로그래밍 방식으로 키보드, 게임 패드, 및 UWP 앱에서 내게 필요한 옵션 도구를 사용 하 여 포커스 탐색을 관리 하는 방법에 알아봅니다.
 title: 키보드, 게임 패드 및 접근성 도구를 사용한 프로그래밍 방식 포커스 탐색
 label: Programmatic focus navigation
 keywords: 키보드, 게임 컨트롤러, 원격 제어, 탐색, 탐색 전략, 입력, 사용자 조작, 접근성, 유용성
@@ -11,11 +11,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 00d25896a490b0a6b1d65075852f44dfb89c2e53
-ms.sourcegitcommit: 9af94470480ef67438f6fd189edab47395fb77e6
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "9075136"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662718"
 ---
 # <a name="programmatic-focus-navigation"></a>프로그래밍 방식 포커스 탐색
 
@@ -143,7 +143,7 @@ private void OnKeyDown(object sender, KeyRoutedEventArgs e)
 
 ![탐색 힌트를 사용한 사용자 지정 포커스 탐색 동작](images/keyboard/navigation-hints.png)
 
-*탐색 힌트를 사용한 사용자 지정 포커스 탐색 동작*
+*탐색 힌트를 사용 하 여 사용자 지정 포커스 탐색 동작*
 
 ## <a name="navigation-focus-events"></a>탐색 포커스 이벤트
 
@@ -211,7 +211,7 @@ private void OnNoFocusCandidateFound (
 
 ![GettingFocus 이벤트에서 포커스 탐색 대상 변경](images/keyboard/focus-events.png)
 
-*GettingFocus 이벤트에서 포커스 탐색 대상 변경*
+*GettingFocus 이벤트 포커스 탐색 대상 변경*
 
 다음은 [GettingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) 이벤트를 처리하고 포커스를 리디렉팅하는 방법을 보여줍니다.
 
@@ -327,6 +327,6 @@ private void OnLosingFocus(UIElement sender, LosingFocusEventArgs args)
 
 ## <a name="related-articles"></a>관련 문서
 
-- [키보드, 게임 패드, 원격 제어 및 접근성 도구에 대한 포커스 탐색](focus-navigation.md)
-- [키보드 조작](keyboard-interactions.md)
+- [키보드, 게임 패드, 원격 제어 및 내게 필요한 옵션 도구에 대 한 포커스 탐색](focus-navigation.md)
+- [키보드 상호 작용](keyboard-interactions.md)
 - [키보드 접근성](../accessibility/keyboard-accessibility.md)

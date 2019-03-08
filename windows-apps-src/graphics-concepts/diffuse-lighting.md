@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1785b06aa2217e8ec15aeaa560bd98a65522df2e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939609"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603378"
 ---
 # <a name="diffuse-lighting"></a>확산 조명
 
@@ -25,9 +25,9 @@ ms.locfileid: "8939609"
 
 확산 조명은 다음 수식에 의해 설명됩니다.
 
-확산 조명 = sum\[C<sub>d</sub>\*L<sub>d</sub>\*(N<sup>.</sup>L<sub>dir</sub>)\*Atten\*Spot\]
+확산 조명 = sum\[C<sub>d</sub>\*L<sub>d</sub>\*(N<sup>.</sup> L<sub>dir</sub>)\*Atten\*위치\]
 
-| 매개 변수       | 기본값 | 유형          | 설명                                                                                      |
+| 매개 변수       | 기본값 | 형식          | 설명                                                                                      |
 |-----------------|---------------|---------------|--------------------------------------------------------------------------------------------------|
 | sum             | 해당 없음           | 해당 없음           | 각 조명의 확산 구성 요소 합계.                                                     |
 | C<sub>d</sub>   | (0,0,0,0)     | D3DCOLORVALUE | 확산 색상.                                                                                   |
@@ -48,13 +48,13 @@ ms.locfileid: "8939609"
 
 이 예에서 개체는 조명 확산 색상과 물질 확산 색상을 사용하여 색상이 지정됩니다.
 
-수식에 따라 물체 색과 광원 색을 조합한 결과가 개체 꼭짓점의 색이 됩니다.
+수식에 따라 재질 색과 광원 색을 합친 색이 개체 꼭짓점의 색이 됩니다.
 
 다음 두 그림은 재질 색(회색)과 조명 색(밝은 빨강)을 보여 줍니다.
 
 ![회색 구 그림](images/amb1.jpg)![빨강 구 그림](images/lightred.jpg)
 
-결과 장면은 다음 그림에 나와 있습니다. 장면의 개체는 구 뿐입니다. 확산 조명 계산은 물질과 조명 확산 색상을 고려하며, 조명 방향과 내적을 사용한 꼭짓점 법선 사이의 각도를 사용하여 수정합니다. 결과적으로, 구 뒷면의 표면은 조명에서 곡선으로 떨어지므로 어두워집니다.
+결과 장면은 다음 그림에 나와 있습니다. 장면의 개체만 구입니다. 확산 조명 계산은 물질과 조명 확산 색상을 고려하며, 조명 방향과 내적을 사용한 꼭짓점 법선 사이의 각도를 사용하여 수정합니다. 결과적으로, 구 뒷면의 표면은 조명에서 곡선으로 떨어지므로 어두워집니다.
 
 ![확산 광원이 적용된 구 그림](images/lightd.jpg)
 
@@ -64,7 +64,7 @@ ms.locfileid: "8939609"
 
 확산 조명은 주변 조명보다 계산이 더 많이 필요합니다. 이 조명은 꼭짓점 법선 및 조명 방향에 따라 달라지므로, 주변 조명보다 더 현실적인 조명을 생성하는 3D 공간에서 개체 기하 도형을 볼 수 있습니다. 더 현실적인 모습을 표현하기 반사 하이라이트를 사용할 수 있습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [조명의 수학](mathematics-of-lighting.md)

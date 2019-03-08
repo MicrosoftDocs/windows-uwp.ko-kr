@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx 9, directx 11, 포팅
 ms.localizationpriority: medium
 ms.openlocfilehash: 0cfaa071ea0182ef5fac264e85d919be5744d15d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050676"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619318"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>DirectX 11 API에 DirectX 9 기능 매핑
 
@@ -19,8 +19,8 @@ ms.locfileid: "9050676"
 
 **요약**
 
--   [DirectX 포트 계획](plan-your-directx-port.md)
--   [Direct3D 9에서 Direct3D 11로의 중요 변경 사항](understand-direct3d-11-1-concepts.md)
+-   [DirectX 포트를 계획 합니다.](plan-your-directx-port.md)
+-   [Direct3D 9에서 Direct3D 11의 중요 한 변경입니다.](understand-direct3d-11-1-concepts.md)
 -   기능 매핑
 
 
@@ -66,7 +66,7 @@ Visual Studio에서는 여전히 내부의 FXC를 사용하여 셰이더 개체�
 
 셰이더 리소스 로드를 간단히 살펴보려면 [Direct3D 9에서 UWP로의 간단한 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md)을 참조하세요.
 
-Direct3D 11은 셰이더 모델 5에 도입되었으며, 이 모델에는 Direct3D 기능 수준 11\_0 이상이 필요합니다. [Direct3D 11용 HLSL 셰이더 모델 5 기능](https://msdn.microsoft.com/library/windows/desktop/ff471419)을 참조하세요.
+Direct3D 11 기능 수준 Direct3D 11을 해야 하는 셰이더 모델 5 도입\_0 (이상). [Direct3D 11용 HLSL 셰이더 모델 5 기능](https://msdn.microsoft.com/library/windows/desktop/ff471419)을 참조하세요.
 
 ## <a name="replace-xnamath-and-d3dxmath"></a>XNAMath 및 D3DXMath 바꾸기
 
@@ -101,18 +101,18 @@ DirectShow는 더 이상 DirectX API(또는 Windows API)의 일부가 아닙니�
 
 Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서비스를 사용하는 경우 UWP 요구 사항을 준수하는 네트워킹 코드를 제공해야 합니다. 다음 API를 사용합니다.
 
--   [UWP 앱(네트워킹)(Windows)용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205759)
--   [**Windows.Networking 네임스페이스(Windows)**](https://msdn.microsoft.com/library/windows/apps/br207124)
--   [**Windows.Networking.Sockets 네임스페이스(Windows)**](https://msdn.microsoft.com/library/windows/apps/br226960)
--   [**Windows.Networking.Connectivity 네임스페이스(Windows)**](https://msdn.microsoft.com/library/windows/apps/br207308)
--   [**Windows.ApplicationModel.Background 네임스페이스(Windows)**](https://msdn.microsoft.com/library/windows/apps/br224847)
+-   [(네트워킹) (Windows) UWP 앱 용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205759)
+-   [**Windows.Networking 네임 스페이스 (Windows)**](https://msdn.microsoft.com/library/windows/apps/br207124)
+-   [**Windows.Networking.Sockets 네임 스페이스 (Windows)**](https://msdn.microsoft.com/library/windows/apps/br226960)
+-   [**Windows.Networking.Connectivity 네임 스페이스 (Windows)**](https://msdn.microsoft.com/library/windows/apps/br207308)
+-   [**Windows.ApplicationModel.Background 네임 스페이스 (Windows)**](https://msdn.microsoft.com/library/windows/apps/br224847)
 
 다음 문서는 네트워킹 기능을 추가하고 앱의 패키지 매니페스트에 네트워킹에 대한 지원을 선언하는 데 도움이 됩니다.
 
--   [소켓을 사용하여 연결(C#/VB/C++ 및 XAML로 작성한 UWP 앱)(Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh452976)
--   [WebSocket을 사용하여 연결(C#/VB/C++ 및 XAML로 작성한 UWP 앱)(Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh994396)
--   [웹 서비스에 연결(C#/VB/C++ 및 XAML로 작성한 UWP 앱)(Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh761504)
--   [네트워킹 기본 사항](https://msdn.microsoft.com/library/windows/apps/mt280233)
+-   [소켓을 사용 하 여 연결 (UWP 앱을 사용 하 여 C#, VB 또는 c + + 및 XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh452976)
+-   [Websocket을 사용 하 여 연결 (UWP 앱을 사용 하 여 C#, VB 또는 c + + 및 XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh994396)
+-   [웹 서비스에 연결 (UWP 앱을 사용 하 여 C#, VB 또는 c + + 및 XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh761504)
+-   [네트워킹 기초](https://msdn.microsoft.com/library/windows/apps/mt280233)
 
 모든 UWP 앱(게임 포함)은 특정 유형의 백그라운드 작업을 사용하여, 앱이 일시 중단된 동안에도 연결을 유지합니다. 게임이 일시 중단된 동안 연결 상태를 유지해야 하는 경우 [네트워킹 기본 사항](https://msdn.microsoft.com/library/windows/apps/mt280233)을 참조하세요.
 
@@ -216,7 +216,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <tr class="odd">
 <td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174373">IDirect3DDevice9:DrawRectPatch</a></p>
 <p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174374">IDirect3DDevice9:DrawTriPatch</a></p>
-<p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174421">IDirect3DDevice9: LightEnable</a></p>
+<p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174421">IDirect3DDevice9:LightEnable</a></p>
 <p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174422">IDirect3DDevice9:MultiplyTransform</a></p>
 <p><a href="https://msdn.microsoft.com/library/windows/desktop/bb205798">IDirect3DDevice9:SetLight</a></p>
 <p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174437">IDirect3DDevice9:SetMaterial</a></p>
@@ -261,7 +261,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R8G8B8</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8R8G8B8</p></td>
@@ -279,7 +279,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X1R5G5B5</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A1R5G5B5</p></td>
@@ -291,7 +291,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_R3G3B2</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A8</p></td>
@@ -299,11 +299,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8R3G3B2</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X4R4G4B4</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A2B10G10R10</p></td>
@@ -316,7 +316,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_X8B8G8R8</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_G16R16</p></td>
@@ -324,7 +324,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A2R10G10B10</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A16B16G16R16</p></td>
@@ -332,17 +332,17 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8P8</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_P8</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>  빨간색을 다른 구성 요소 Direct3D 9 동작을 얻으려면 셰이더에서.r swizzle을 사용 합니다.
+<strong>참고</strong>    빨간색 Direct3D 9 동작을 가져오도록 다른 구성 요소를 복제 하는 셰이더에서 사용 하 여.r swizzle 합니다.
 </div>
 <div>
  
@@ -352,7 +352,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_A8L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>  셰이더에서 swizzle.rrrg를 사용 하 여 빨간색을 복제 하 고 녹색을 알파 구성 Direct3D 9 동작을 얻으려면 이동 합니다.
+<strong>참고</strong>    셰이더의 swizzle.rrrg를 사용 하 여 빨간색 중복을 녹색 Direct3D 9 동작을 가져오도록 알파 구성 요소를 이동 합니다.
 </div>
 <div>
  
@@ -360,7 +360,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A4L4</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_V8U8</p></td>
@@ -368,11 +368,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L6V5U5</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X8L8V8U8</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_Q8W8V8U8</p></td>
@@ -384,21 +384,21 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_W11V11U10</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A2W10V10U10</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_UYVY</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
 <td align="left"><p>DXGI_FORMAT_G8R8_G8B8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>  Direct3D 9 데이터, 255.0 f 씩 되었지만이 셰이더에서 처리할 수 있습니다.
+<strong>참고</strong>    Direct3D 9 데이터 255.0f, 상향 조정 된 있지만 셰이더에이 처리할 수 있습니다.
 </div>
 <div>
  
@@ -406,13 +406,13 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_YUY2</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_B8G8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>  Direct3D 9 데이터, 255.0 f 씩 되었지만이 셰이더에서 처리할 수 있습니다.
+<strong>참고</strong>    Direct3D 9 데이터 255.0f, 상향 조정 된 있지만 셰이더에이 처리할 수 있습니다.
 </div>
 <div>
  
@@ -426,7 +426,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_DXT2</p></td>
 <td align="left"><p>DXGI_FORMAT_BC1_UNORM 및 DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>  DXT1 및 DXT2는 / 하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
+<strong>참고</strong>    DXT1 및 DXT2는 API/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
 </div>
 <div>
  
@@ -440,7 +440,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM 및 DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>  DXT3 및 DXT4는 / 하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
+<strong>참고</strong>    DXT3 및 DXT4는 API/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
 </div>
 <div>
  
@@ -456,23 +456,23 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D32</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D15S1</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D24S8</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D24X8</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D24X4S4</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D16</p></td>
@@ -484,11 +484,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D24FS8</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_S1D15</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_S8D24</p></td>
@@ -496,17 +496,17 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_X8D24</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X4S4D24</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>참고</strong>  빨간색을 복제 하 여 D3D9 동작을 얻으려면 다른 구성 요소를 셰이더에서.r swizzle을 사용 합니다.
+<strong>참고</strong>    빨간색 D3D9 동작을 가져오도록 다른 구성 요소를 복제 하는 셰이더에서 사용 하 여.r swizzle 합니다.
 </div>
 <div>
  
@@ -526,7 +526,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_MULTI2_ARGB8</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R16F</p></td>
@@ -554,7 +554,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_CxV8U8</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_FLOAT1</p></td>
@@ -574,13 +574,13 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPED3DCOLOR</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8B8A8_UINT</p>
 <div class="alert">
-<strong>참고</strong>  UINT 값을 가져오지만 경우 Direct3D 9 스타일의 정수 float가 필요한 (0.0 f, 1.0 f... 255.f) 셰이더에서 float32를 UINT를 변환할 수 있습니다.
+<strong>참고</strong>    셰이더 UINT 값을 가져오지만 Direct3D 9 스타일 정수 경우 float가 필요 (0.0f, 1.0f... 255.f), UINT 셰이더에서 float32 바로 변환 될 수 있습니다.
 </div>
 <div>
  
@@ -590,7 +590,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DDECLTYPE_SHORT2</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16_SINT</p>
 <div class="alert">
-<strong>참고</strong>  SINT 값을 가져오지만 Direct3D 9 스타일의 정수 float가 필요한 경우 셰이더에서 float32로 SINT 변환 방금 수 있습니다.
+<strong>참고</strong>    셰이더 SINT 값을 가져오지만 Direct3D 9 스타일 정수 부동 소수점 수를 필요한 경우 SINT만 변환할 수 셰이더에서 float32입니다.
 </div>
 <div>
  
@@ -600,7 +600,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DDECLTYPE_SHORT4</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_SINT</p>
 <div class="alert">
-<strong>참고</strong>  SINT 값을 가져오지만 Direct3D 9 스타일의 정수 float가 필요한 경우 셰이더에서 float32로 SINT 변환 방금 수 있습니다.
+<strong>참고</strong>    셰이더 SINT 값을 가져오지만 Direct3D 9 스타일 정수 부동 소수점 수를 필요한 경우 SINT만 변환할 수 셰이더에서 float32입니다.
 </div>
 <div>
  
@@ -628,11 +628,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_UDEC3</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_DEC3N</p></td>
-<td align="left"><p>사용할 수 없음</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_FLOAT16_2</p></td>
@@ -646,7 +646,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>FourCC 'ATI1'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC4_UNORM</p>
 <div class="alert">
-<strong>참고</strong>  기능 수준 10.0 이상 필요
+<strong>참고</strong>    10.0 이상 기능 수준이 필요
 </div>
 <div>
  
@@ -656,7 +656,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>FourCC 'ATI2'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC5_UNORM</p>
 <div class="alert">
-<strong>참고</strong>  기능 수준 10.0 이상 필요
+<strong>참고</strong>    10.0 이상 기능 수준이 필요
 </div>
 <div>
  

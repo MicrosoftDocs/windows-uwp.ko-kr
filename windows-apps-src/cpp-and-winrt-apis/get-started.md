@@ -6,23 +6,23 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 얻기, 시작
 ms.localizationpriority: medium
 ms.openlocfilehash: c0d11a8718f61666d6285d8a1c91b48992044b22
-ms.sourcegitcommit: 2d2483819957619b6de21b678caf887f3b1342af
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042355"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602238"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 
-사용 하 여 속도 하기 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt),이 항목은 단순한 코드 예제를 기반으로 새 안내 **Windows 콘솔 응용 프로그램 (C + + WinRT)** 프로젝트. 이 항목에서는 또한 표시 하는 방법을 [추가 C + + /winrt 지원을 Windows 데스크톱 응용 프로그램 프로젝트를](#modify-a-windows-desktop-application-project-to-add-cwinrt-support)합니다.
+사용 하 여 속도 얻게 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt),이 항목에서는 새에 따라 간단한 코드 예제를 안내 **Windows 콘솔 응용 프로그램 (C + + WinRT)** 프로젝트입니다. 이 항목에서는 또한 보여줍니다 하는 방법 [추가 C + + Windows 데스크톱 응용 프로그램 프로젝트에 WinRT 지원](#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
 > [!IMPORTANT]
-> Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0 (Windows 10, 버전 1803) 한 다음 새로 생성 된 C + + WinRT 프로젝트 컴파일 오류와 하지 못할 수도 있습니다 "C3861*오류: 'from_abi': 식별자 하지 발견*"를 다른 오류 *base.h*에서 발생 합니다. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 설정 프로젝트 속성 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** 프로젝트 속성 **에에서 표시 됩니다 C/C++** > **언어** >  **추가 옵션****명령줄** 삭제).
+> Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상), Windows SDK 버전 (Windows 10, 버전 1803) 10.0.17134.0 다음 새로 만든 C +를 대상으로 하 고 + WinRT 프로젝트는 오류가 발생 하 여 컴파일하는 데 실패할 수 있습니다 "*오류 C3861: 'from_abi'. 식별자를 찾을 수 없습니다*", 및에서 발생 하는 다른 오류로 *base.h*합니다. 두 대상에는 솔루션을 이상 (더 부합) 버전의 Windows SDK 또는 프로젝트 속성 설정 **C/c + +** > **언어** > **준수 모드: 더** (또한 경우 **/ permissive-** 프로젝트 속성에 표시 됩니다 **C/c + +** > **언어** > **명령줄**  아래에서 **추가 옵션**, 삭제).
 
 ## <a name="a-cwinrt-quick-start"></a>C++/WinRT 빠른 시작
 
 > [!NOTE]
-> 설치 및 사용 하 여 C +에 대 한 정보에 대 한 + WinRT Visual Studio Extension (VSIX) (제공 하는 프로젝트 템플릿 지원과) 참조 [Visual Studio 지원 C + + WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> 설치 및 C +를 사용 하는 방법에 대 한 정보에 대 한 + WinRT VSIX Visual Studio Extension () (지원을 제공 하는 프로젝트 템플릿)를 참조 하세요 [Visual Studio 지원 C + + /cli WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
 
 새 **Windows 콘솔 응용 프로그램(C++/WinRT)** 프로젝트를 만듭니다.
 
@@ -97,46 +97,46 @@ SyndicationClient syndicationClient;
 SyndicationFeed syndicationFeed = syndicationClient.RetrieveFeedAsync(rssFeedUri).get();
 ```
 
-[**SyndicationClient::RetrieveFeedAsync**](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)는 비동기식 Windows 런타임 함수의 예입니다. 위의 코드 예제는 **RetrieveFeedAsync**에서 비동기 연산 개체를 수신한 후 해당 개체에 대해 **get**을 호출하여 호출 스레드를 차단하고 결과를 기다립니다(이 경우 배포 피드). 동시성에 대한 자세한 내용과 비차단 기법에 대해서는 [C++/WinRT로 동시성 및 비동기 작업](concurrency.md)을 참조하세요.
+[**SyndicationClient::RetrieveFeedAsync** ](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) 은 비동기 Windows 런타임 함수의 예입니다. 위의 코드 예제는 **RetrieveFeedAsync**에서 비동기 연산 개체를 수신한 후 해당 개체에 대해 **get**을 호출하여 호출 스레드를 차단하고 결과를 기다립니다(이 경우 배포 피드). 동시성에 대한 자세한 내용과 비차단 기법에 대해서는 [C++/WinRT로 동시성 및 비동기 작업](concurrency.md)을 참조하세요.
 
 ```cppwinrt
 for (const SyndicationItem syndicationItem : syndicationFeed.Items()) { ... }
 ```
 
-[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items)는 **begin** 및 **end** 함수에서 반환된 반복기(또는 상수, 역방향 및 상수-역방향 변형)로 정의되는 범위입니다. 이에 따라 범위 기반 `for` 문 또는 **std::for_each** 템플릿 함수와 함께 **Items**를 열거할 수 있습니다.
+[**SyndicationFeed.Items** ](/uwp/api/windows.web.syndication.syndicationfeed.items) 에서 반환 된 반복기가 정의 하는 범위 **시작** 하 고 **끝** 함수 (또는 상수, 역방향, 및 상수 역방향 변형). 이에 따라 범위 기반 `for` 문 또는 **std::for_each** 템플릿 함수와 함께 **Items**를 열거할 수 있습니다.
 
 ```cppwinrt
 winrt::hstring titleAsHstring = syndicationItem.Title().Text();
 std::wcout << titleAsHstring.c_str() << std::endl;
 ```
 
-[**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) 개체로서 피드의 제목 텍스트를 가져옵니다(자세한 내용은 [C++/WinRT의 문자열 처리](strings.md) 참조). 그러면 **hstring**이 C++ 표준 라이브러리 문자열과 함께 사용되는 패턴을 반영하는 **c_str** 함수를 통해 출력됩니다.
+[  **winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) 개체로서 피드의 제목 텍스트를 가져옵니다(자세한 내용은 [C++/WinRT의 문자열 처리](strings.md) 참조). 그러면 **hstring**이 C++ 표준 라이브러리 문자열과 함께 사용되는 패턴을 반영하는 **c_str** 함수를 통해 출력됩니다.
 
 이와 같이 C++/WinRT는 `syndicationItem.Title().Text()` 같이 클래스와 유사한 최신 C++ 표현식의 사용을 장려합니다. 이는 기존 COM 프로그래밍과 확연히 다를 뿐만 아니라 더욱 완전한 프로그래밍 스타일입니다. 직접 COM을 초기화할 필요가 없으며, COM 포인터로 작업합니다.
 
 HRESULT 반환 코드를 처리할 필요도 없습니다. C++/WinRT가 [**winrt::hresult-error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 등의 HRESULT 오류를 예외로 전환하기 때문에 자연스러운 최신 프로그래밍 스타일을 유지합니다. 오류 처리와 코드 샘플에 대한 자세한 내용은 [C++/WinRT를 통한 오류 처리](error-handling.md)를 참조하세요.
 
-## <a name="modify-a-windows-desktop-application-project-to-add-cwinrt-support"></a>수정 Windows 데스크톱 응용 프로그램 프로젝트를 추가 하는 C + + /winrt 지원은
+## <a name="modify-a-windows-desktop-application-project-to-add-cwinrt-support"></a>수정 Windows 데스크톱 응용 프로그램 프로젝트를 추가 하 고 C + + /cli WinRT 지원
 
-이 섹션 표시 추가 하는 방법을 C + + /winrt 지원을 포함 될 수 있는 Windows 데스크톱 응용 프로그램 프로젝트를 합니다. 하지 않는 경우 기존 Windows 데스크톱 응용 프로그램 프로젝트에 다음 만드는 첫 번째 하 여 이러한 단계를 실행할 수 있습니다. 예를 들어 Visual Studio를 열고 **Visual c + +** 만들기 \> **Windows 데스크톱** \> **Windows 데스크톱 응용 프로그램** 프로젝트.
+이 섹션에서는 추가 하는 C + + /cli WinRT 있을 수 있는 Windows 데스크톱 응용 프로그램 프로젝트를 지원 합니다. 없으면 기존 Windows 데스크톱 응용 프로그램 프로젝트를 다음에서 만드는 첫 번째이 단계와 함께 따를 수 있습니다. 예를 들어, Visual Studio를 열고 만듭니다는 **Visual c + +** \> **Windows 바탕 화면** \> **Windows 데스크톱 응용 프로그램** 프로젝트입니다.
 
-선택적으로 설치할 수는 [C + + WinRT Visual Studio Extension (VSIX)](https://aka.ms/cppwinrt/vsix). 자세한 내용은 참조 [Visual Studio 지원 C + + WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+필요에 따라 설치할 수 있습니다 합니다 [C + + /cli WinRT Visual Studio 확장 (VSIX)](https://aka.ms/cppwinrt/vsix)합니다. 세부 정보를 참조 하세요 [Visual Studio 지원 C + + /cli WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
 
 ### <a name="set-project-properties"></a>프로젝트 속성 설정
 
-프로젝트 속성 **일반**로 이동 \> **Windows SDK 버전**선택 **모든 구성** 및 **모든 플랫폼**입니다. **Windows SDK 버전** 10.0.17134.0 (Windows 10, 버전 1803)로 설정 되어 있는지 확인 이상.
+프로젝트 속성으로 이동 **일반** \> **Windows SDK 버전**를 선택 하 고 **모든 구성** 하 고 **모든 플랫폼**합니다. 했는지 **Windows SDK 버전** 10.0.17134.0 (Windows 10, 버전 1803)로 설정 된 이상.
 
-사용자는 영향을 받지 않도록 확인 [새 프로젝트 컴파일되지 왜?](/windows/uwp/cpp-and-winrt-apis/faq)합니다.
+확인 하는 영향을 받지 않도록 [새 프로젝트 컴파일되지 이유?](/windows/uwp/cpp-and-winrt-apis/faq)합니다.
 
-때문에 C + + /winrt가 C + + 17 표준의 기능을 사용, **C/c + +** 프로젝트 속성을 설정 > **언어** > **c + + 언어 표준** 에 *ISO C + + 17 표준 (/ /std: + + 17)* 합니다.
+때문에 C + + C + + 17 표준, 프로젝트 속성에서 기능을 사용 하는 WinRT **C/c + +** > **언어** > **c + + 언어 표준** 를 *ISO C + + 17 표준을 (/ /std: c + + 17)* 합니다.
 
 ### <a name="the-precompiled-header"></a>미리 컴파일된 헤더
 
-이름 변경에 `stdafx.h` 및 `stdafx.cpp` 를 `pch.h` 및 `pch.cpp`각각 합니다. **C/c + +** 프로젝트 속성을 설정 > **미리 컴파일된 헤더** > **미리 컴파일된 헤더 파일** 을 *pch.h*합니다.
+이름 바꾸기에 `stdafx.h` 하 고 `stdafx.cpp` 하 `pch.h` 및 `pch.cpp`각각. 프로젝트 속성 설정 **C/c + +** > **미리 컴파일된 헤더** > **미리 컴파일된 헤더 파일** 하 *pch.h*합니다.
 
-모든 replace `#include "stdafx.h"` 와 `#include "pch.h"`.
+찾기 및 모두 바꾸기 `#include "stdafx.h"` 사용 하 여 `#include "pch.h"`입니다.
 
-`pch.h`을 포함 `winrt/base.h`.
+`pch.h`에 포함 `winrt/base.h`합니다.
 
 ```cppwinrt
 // pch.h
@@ -146,28 +146,28 @@ HRESULT 반환 코드를 처리할 필요도 없습니다. C++/WinRT가 [**winrt
 
 ### <a name="linking"></a>연결
 
-C + + [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 상위 라이브러리에 연결 해야 하는 /winrt 언어 프로젝션에 특정 Windows 런타임 무료 (비 구성원) 함수 및 진입점에 따라 달라 합니다. 이 섹션에서는 링커 만족 하는 방법을 설명 합니다.
+C + +에 연결 해야 하는 WinRT 언어 프로젝션인은 특정 Windows 런타임 사용 가능한 (비멤버) 함수 및 진입점에 따라 종속 합니다 [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 포괄적인 라이브러리입니다. 이 섹션에서는 링커를 만족 하는 세 가지를 설명 합니다.
 
-Visual Studio 사용자를 추가 하는 첫 번째 옵션은 프로젝트 모든 C + + /winrt MSBuild 속성 및 대상입니다. 이렇게 하려면 프로젝트에 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 를 설치 합니다. Visual Studio에서 프로젝트 클릭 **프로젝트**열기 \> **NuGet 패키지 관리...**  \>  **찾아보기**입력 또는 **Microsoft.Windows.CppWinRT** 검색 상자에 붙여 넣을, 검색 결과에서 항목을 선택 하 고 다음 해당 프로젝트에 대 한 패키지를 설치 하려면 **설치** 를 클릭 합니다.
+Visual Studio에 추가할 첫 번째 옵션은 프로젝트 모든 C + + /cli WinRT MSBuild 속성 및 대상을 합니다. 이 작업을 수행 하려면 설치 합니다 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 프로젝트로 합니다. Visual Studio에서 프로젝트를 열고 클릭 **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 입력 하거나 붙여 넣습니다 **Microsoft.Windows.CppWinRT** 검색 상자에서 검색 결과에서 항목을 선택 하 고 클릭 **설치** 해당 프로젝트에 대 한 패키지를 설치 합니다.
 
-또한 프로젝트 연결 설정을 사용 하 여 명시적으로 연결할 수 있습니다 `WindowsApp.lib`. 또는 소스 코드에서 수행할 수 있습니다 (에서 `pch.h`예를 들어,)이 있습니다.
+명시적으로 링크 프로젝트 링크 설정을 사용할 수도 있습니다 `WindowsApp.lib`합니다. 또는 소스 코드에서 수행할 수 있습니다 (에서 `pch.h`예를 들어) 다음과 같이 합니다.
 
 ```cppwinrt
 #pragma comment(lib, "windowsapp")
 ```
 
-이제 컴파일 및 링크를 추가 하는 C + + /winrt 코드를 프로젝트 (예를 들어에 표시 된 코드는 [A C+ + /winrt 빠른 시작](#a-cwinrt-quick-start) 위 섹션)
+이제 컴파일 및 링크를 추가 하는 C + + /cli WinRT 코드 프로젝트를 (예에 표시 된 코드를 [는 C+ + WinRT 빠른 시작](#a-cwinrt-quick-start) 위의 섹션)
 
 ## <a name="important-apis"></a>중요 API
-* [Syndicationclient:: Retrievefeedasync 메서드](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
+* [SyndicationClient::RetrieveFeedAsync 메서드](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
 * [SyndicationFeed.Items 속성](/uwp/api/windows.web.syndication.syndicationfeed.items)
 * [winrt::hstring 구조체](/uwp/cpp-ref-for-winrt/hstring)
-* [hresult-error 구조체](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
+* [winrt::hresult 오류 구조체](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
-* [C++/WinRT를 통한 오류 처리](error-handling.md)
-* [C++/WinRT와 C++/CX 사이의 상호 운용성](interop-winrt-cx.md)
-* [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md)
-* [C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md)
-* [C++/WinRT의 문자열 처리](strings.md)
+* [오류 처리를 C + + /cli WinRT](error-handling.md)
+* [Interop 간에 C + + /cli WinRT 및 C + + /cli CX](interop-winrt-cx.md)
+* [Interop 간에 C + + /cli WinRT 및 ABI](interop-winrt-abi.md)
+* [이동할 C + + /cli WinRT C + + /cli CX](move-to-winrt-from-cx.md)
+* [문자열 처리 C + + /cli WinRT](strings.md)

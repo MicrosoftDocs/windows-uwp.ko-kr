@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 레이싱 휠, 힘 피드백
 ms.localizationpriority: medium
 ms.openlocfilehash: ab7c5bc15b149d5f469b7fc5e6b6285986569b22
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981557"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608838"
 ---
 # <a name="racing-wheel-and-force-feedback"></a>레이싱 휠 및 힘 피드백
 
-이 페이지에서는 Xbox One 레이싱 휠 [Windows.Gaming.Input.RacingWheel] 사용에 대 한 프로그래밍의 기본 사항을 설명[ racingwheel] 및 관련 Api는 유니버설 Windows 플랫폼 (UWP)에 대 한 합니다.
+이 페이지를 사용 하 여 Xbox One racing 바퀴에 대 한 프로그래밍의 기본 사항을 설명 [Windows.Gaming.Input.RacingWheel] [ racingwheel] 및 관련 Api에 대 한 Windows 플랫폼 (UWP (유니버설).
 
 이 페이지에서는 다음에 대해 알아봅니다.
 
@@ -33,7 +33,7 @@ Xbox One 레이싱 휠은 다양한 가격대로 제공되며, 일반적으로 �
 
 ### <a name="device-capabilities"></a>장치 접근 권한 값
 
-Xbox One 레이싱 휠은 다양 한 옵션 장치 기능 및 다양 한 수준의; 해당 접근 권한 값에 대 한 지원 제공 이 단일 기종 입력 장치 간 변형 수준은 [Windows.Gaming.Input](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input) API 지 원하는 장치 간에 고유 합니다. 또 사용자가 접하는 대부분의 장치는 일부 옵션 기능 또는 기타 변형 기능을 최소한 지원합니다. 그렇기 때문에 연결된 레이싱 휠 각각의 기능을 개별적으로 확인하고 게임에 적합한 모든 변형 기능을 지원하는 것이 중요합니다.
+다른 Xbox One racing 바퀴 가지의 선택적 장치 기능 및 다양 한 수준의 해당 기능에 대 한 지원 제공 단일 유형의 입력된 장치 간의 차이가 많음을이 수준은에서 지 원하는 장치에서 고유 합니다 [Windows.Gaming.Input](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input) API. 또 사용자가 접하는 대부분의 장치는 일부 옵션 기능 또는 기타 변형 기능을 최소한 지원합니다. 그렇기 때문에 연결된 레이싱 휠 각각의 기능을 개별적으로 확인하고 게임에 적합한 모든 변형 기능을 지원하는 것이 중요합니다.
 
 자세한 내용은 [레이싱 휠 기능 확인](#determining-racing-wheel-capabilities)을 참조하세요.
 
@@ -53,31 +53,31 @@ Xbox One 레이싱 휠은 다양 한 옵션 장치 기능 및 다양 한 수준�
 
 | 탐색 명령 | 레이싱 휠 입력 |
 | ------------------:| ------------------ |
-|                 위로 | D 패드 위로           |
-|               아래로 | D 패드 아래로         |
-|               왼쪽으로 | D 패드 왼쪽으로         |
-|              오른쪽으로 | D 패드 오른쪽으로        |
+|                 위쪽 | D 패드 위쪽           |
+|               아래쪽 | D 패드 아래쪽         |
+|               왼쪽 | D 패드 왼쪽         |
+|              오른쪽 | D 패드 오른쪽        |
 |               보기 | 보기 버튼        |
 |               메뉴 | 메뉴 버튼        |
 |             수락 | A 버튼           |
-|             취소 | B 버튼           |
+|             Cancel | B 버튼           |
 
 또한 일부 레이싱 휠은 탐색 명령에 대한 [선택 집합](ui-navigation-controller.md#optional-set) 중 일부를 지원되는 다른 입력에 매핑할 수 있지만 명령 매핑은 장치마다 다를 수 있습니다. 그러한 명령의 지원도 고려해 볼 수 있으나 해당 명령이 게임 인터페이스의 탐색에 필수적이지 않아야 합니다.
 
 | 탐색 명령 | 레이싱 휠 입력    |
 | ------------------:| --------------------- |
-|            한 페이지 위로 | _다양_              |
-|          한 페이지 아래로 | _다양_              |
-|          한 페이지 왼쪽으로 | _다양_              |
-|         한 페이지 오른쪽으로 | _다양_              |
-|          위로 스크롤 | _다양_              |
-|        아래로 스크롤 | _다양_              |
-|        왼쪽으로 스크롤 | _다양_              |
-|       오른쪽으로 스크롤 | _다양_              |
+|            한 페이지 위로 | _varies_              |
+|          한 페이지 아래로 | _varies_              |
+|          한 페이지 왼쪽으로 | _varies_              |
+|         한 페이지 오른쪽으로 | _varies_              |
+|          위로 스크롤 | _varies_              |
+|        아래로 스크롤 | _varies_              |
+|        왼쪽으로 스크롤 | _varies_              |
+|       오른쪽으로 스크롤 | _varies_              |
 |          컨텍스트 1 | X 버튼(_일반적_) |
 |          컨텍스트 2 | Y 버튼(_일반적_) |
-|          컨텍스트 3 | _다양_              |
-|          컨텍스트 4 | _다양_              |
+|          컨텍스트 3 | _varies_              |
+|          컨텍스트 4 | _varies_              |
 
 ## <a name="detect-and-track-racing-wheels"></a>레이싱 휠 감지 및 추적
 
@@ -260,7 +260,7 @@ if(racingwheel->HasClutch)
 
 ### <a name="reading-the-pattern-shifter"></a>패턴 변환기 읽기
 
-패턴 변환기는 부호 있는 정수 값으로 표시된 -1부터 [MaxPatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.maxpatternshiftergear) 사이의 디지털 판독값을 제공하는 옵션 컨트롤입니다. 값이 -1 또는 0이면 각각 _후진_ 기어와 _중립_ 기어에 해당합니다. 값이 플러스 쪽으로 증가할수록 전진 기어 변속 단계가 최대 **MaxPatternShifterGear**까지 커집니다. 패턴 변환기 값은 [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading) 구조체의 [PatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading.patternshiftergear) 속성에서 읽습니다.
+패턴 변환기는 부호 있는 정수 값으로 표시된 -1부터 [MaxPatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.maxpatternshiftergear) 사이의 디지털 판독값을 제공하는 옵션 컨트롤입니다. 값이 -1 또는 0이면 각각 _후진_ 기어와 _중립_ 기어에 해당합니다. 값이 플러스 쪽으로 증가할수록 전진 기어 변속 단계가 최대 **MaxPatternShifterGear**까지 커집니다. 패턴 변환기의 값에서 읽힙니다 합니다 [PatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading.patternshiftergear) 의 속성을 [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading) 구조체.
 
 ```cpp
 if (racingwheel->HasPatternShifter)
@@ -278,7 +278,7 @@ if (racingwheel->HasPatternShifter)
 
 ## <a name="force-feedback-overview"></a>힘 피드백 개요
 
-수많은 레이싱 휠이 힘 피드백 기능을 갖추고 있어 더욱 높은 몰입감과 도전 의지가 샘솟는 주행 경험을 제공합니다. 힘 피드백을 지원하는 레이싱 휠에는 일반적으로 단일 축, 즉 핸들 회전축을 따라 조종 핸들에 힘을 적용하는 단일 모터가 장착되어 있습니다. 힘 피드백 [Windows.Gaming.Input.ForceFeedback](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback) 네임 스페이스에서 Windows 10 및 Xbox One UWP 앱에서 지원 됩니다.
+수많은 레이싱 휠이 힘 피드백 기능을 갖추고 있어 더욱 높은 몰입감과 도전 의지가 샘솟는 주행 경험을 제공합니다. 힘 피드백을 지원하는 레이싱 휠에는 일반적으로 단일 축, 즉 핸들 회전축을 따라 조종 핸들에 힘을 적용하는 단일 모터가 장착되어 있습니다. 힘 피드백 하 여 Windows 10 및 Xbox One UWP 앱에서 지원 되는 [Windows.Gaming.Input.ForceFeedback](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback) 네임 스페이스입니다.
 
 > [!NOTE]
 > 힘 피드백 API는 힘을 받는 축을 여러 개 지원할 수 있지만 Xbox One 레이싱 휠은 현재 핸들 회전축 이외의 피드백 축을 지원하지 않습니다.
@@ -315,7 +315,7 @@ if (racingwheel->WheelMotor != nullptr)
 
 ### <a name="loading-force-feedback-effects"></a>힘 피드백 효과 로딩
 
-힘 피드백 효과는 피드백 장치에 로드되며 여기에서 게임의 명령에 자동으로 "재생"됩니다. 다양 한 효과 기본 제공 됩니다. [IForceFeedbackEffect](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback.iforcefeedbackeffect) 인터페이스를 구현 하는 클래스를 통해 사용자 지정 효과 만들 수 있습니다.
+힘 피드백 효과는 피드백 장치에 로드되며 여기에서 게임의 명령에 자동으로 "재생"됩니다. 다양 한 효과 기본 제공 됩니다. 사용자 지정 효과 구현 하는 클래스를 통해 만들 수 있습니다 합니다 [IForceFeedbackEffect](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback.iforcefeedbackeffect) 인터페이스입니다.
 
 | 효과 클래스         | 효과 설명                                                                     |
 | -------------------- | -------------------------------------------------------------------------------------- |
@@ -373,7 +373,7 @@ else
 
 * [Windows.Gaming.Input.UINavigationController](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.uinavigationcontroller)
 * [Windows.Gaming.Input.IGameController](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.igamecontroller)
-* [게임 입력 시스템](input-practices-for-games.md)
+* [게임에 대 한 입력된 사례](input-practices-for-games.md)
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.UINavigationController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationcontroller.aspx

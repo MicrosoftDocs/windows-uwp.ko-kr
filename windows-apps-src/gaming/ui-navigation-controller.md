@@ -1,17 +1,17 @@
 ---
 title: UI 탐색 컨트롤러
-description: Windows.Gaming.Input UI 탐색 컨트롤러 API를 사용하여 UI 탐색을 위한 여러 가지 입력 장치를 검색하고 읽어보세요.
+description: Windows.Gaming.Input UI 탐색 컨트롤러 API를 사용하여 UI 탐색을 위한 여러 가지 입력 장치를 검색하고 읽으세요.
 ms.assetid: 5A14926D-8C2E-4DE8-AAFB-BEEB9BFE91A5
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, ui, 탐색
 ms.localizationpriority: medium
 ms.openlocfilehash: ec5ba9d893a622e256030601cca204abab35045f
-ms.sourcegitcommit: 888a4679fa45637b1cc35f62843727ce44322e57
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "9059714"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599928"
 ---
 # <a name="ui-navigation-controller"></a>UI 탐색 컨트롤러
 
@@ -47,7 +47,7 @@ UI 탐색 컨트롤러는 다양한 _물리적_ 입력 장치에서 지원할 �
 |    보기 | 게임 플레이 정보 표시 _(점수판, 게임 통계, 목표, 세계 또는 지역 지도)_
 |    메뉴 | 기본 메뉴/일시 중지 _(설정, 상태, 장비, 인벤토리, 일시 중지)_
 |  수락 | 긍정적인 응답 _(수락, 다음, 확인, 시작, 예)_
-|  취소 | 부정적인 응답 _(거부, 뒤로, 거절, 중지, 아니요)_
+|  Cancel | 부정적인 응답 _(거부, 뒤로, 거절, 중지, 아니요)_
 
 
 ### <a name="optional-set"></a>선택 집합
@@ -89,24 +89,24 @@ Windows.Gaming.Input 네임스페이스에서 지원하는 모든 입력 장치�
 |               보기 | 보기 버튼                         | 보기 버튼        | 보기 버튼        |
 |               메뉴 | 메뉴 버튼                         | 메뉴 버튼        | 메뉴 버튼        |
 |             수락 | A 버튼                            | 동작 1 버튼    | A 버튼           |
-|             취소 | B 버튼                            | 동작 2 버튼    | B 버튼           |
+|             Cancel | B 버튼                            | 동작 2 버튼    | B 버튼           |
 
 다음 표에는 탐색 명령의 _선택 집합_이 다양한 입력 장치에 매핑되는 방식이 요약되어 있습니다.
 
 | 탐색 명령 | 게임 패드 입력          | 아케이드 스틱 입력 | 레이싱 휠 입력    |
 | ------------------:| ---------------------- | ------------------ | --------------------- |
-|             PageUp | 왼쪽 트리거           | _지원되지 않음_    | _다양_              |
-|           PageDown | 오른쪽 트리거          | _지원되지 않음_    | _다양_              |
-|           PageLeft | 왼쪽 범퍼            | _지원되지 않음_    | _다양_              |
-|          PageRight | 오른쪽 범퍼           | _지원되지 않음_    | _다양_              |
-|           ScrollUp | 오른쪽 섬스틱(thumbstick) 위쪽    | _지원되지 않음_    | _다양_              |
-|         ScrollDown | 오른쪽 섬스틱(thumbstick) 아래쪽  | _지원되지 않음_    | _다양_              |
-|         ScrollLeft | 오른쪽 섬스틱(thumbstick) 왼쪽  | _지원되지 않음_    | _다양_              |
-|        ScrollRight | 오른쪽 섬스틱(thumbstick) 오른쪽 | _지원되지 않음_    | _다양_              |
-|           Context1 | X 버튼               | _지원되지 않음_    | X 버튼(_일반적_) |
-|           Context2 | Y 버튼               | _지원되지 않음_    | Y 버튼(_일반적_) |
-|           Context3 | 왼쪽 섬스틱(thumbstick) 누름  | _지원되지 않음_    | _다양_              |
-|           Context4 | 오른쪽 섬스틱(thumbstick) 누름 | _지원되지 않음_    | _다양_              |
+|             PageUp | 왼쪽 트리거           | _지원 되지 않음_    | _varies_              |
+|           PageDown | 오른쪽 트리거          | _지원 되지 않음_    | _varies_              |
+|           PageLeft | 왼쪽 범퍼            | _지원 되지 않음_    | _varies_              |
+|          PageRight | 오른쪽 범퍼           | _지원 되지 않음_    | _varies_              |
+|           ScrollUp | 오른쪽 섬스틱(thumbstick) 위쪽    | _지원 되지 않음_    | _varies_              |
+|         ScrollDown | 오른쪽 섬스틱(thumbstick) 아래쪽  | _지원 되지 않음_    | _varies_              |
+|         ScrollLeft | 오른쪽 섬스틱(thumbstick) 왼쪽  | _지원 되지 않음_    | _varies_              |
+|        ScrollRight | 오른쪽 섬스틱(thumbstick) 오른쪽 | _지원 되지 않음_    | _varies_              |
+|           Context1 | X 버튼               | _지원 되지 않음_    | X 버튼(_일반적_) |
+|           Context2 | Y 버튼               | _지원 되지 않음_    | Y 버튼(_일반적_) |
+|           Context3 | 왼쪽 섬스틱(thumbstick) 누름  | _지원 되지 않음_    | _varies_              |
+|           Context4 | 오른쪽 섬스틱(thumbstick) 누름 | _지원 되지 않음_    | _varies_              |
 
 
 ## <a name="detect-and-track-ui-navigation-controllers"></a>UI 탐색 컨트롤러 검색 및 추적
@@ -160,7 +160,7 @@ UINavigationController::UINavigationControllerRemoved += ref new EventHandler<UI
 
 ## <a name="reading-the-ui-navigation-controller"></a>UI 탐색 컨트롤러 읽기
 
-관심 있는 UI 탐색 장치를 식별하면 장치의 입력을 수집할 준비가 된 것입니다. 하지만 기존에 사용하던 다른 입력 유형과 달리 탐색 장치는 이벤트 발생을 통해 상태 변경을 알리지 않습니다. 대신, 탐색 장치를 직접 _폴링_하여 현재 상태의 규칙적인 판독값을 가져올 수 있습니다.
+관심 있는 UI 탐색 장치를 식별하면 장치의 입력을 수집할 준비가 된 것입니다. 하지만 기존에 사용하던 다른 입력 유형과 달리 탐색 장치는 이벤트 발생을 통해 상태 변경을 알리지 않습니다. 대신, 아케이드 스틱을 직접 _폴링_하여 현재 상태의 규칙적인 판독값을 가져올 수 있습니다.
 
 ### <a name="polling-the-ui-navigation-controller"></a>UI 탐색 컨트롤러 폴링
 
