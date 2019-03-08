@@ -1,43 +1,43 @@
 ---
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: 이 섹션에서는 변경 내용을 windows 8.1 이전 버전의 windows 10 버전을 지원 하도록 PlayReady 웹 앱을 수정 하는 방법을 설명 합니다.
+description: 이 섹션에는 Windows 10 버전을 Windows 8.1 이전 버전에서 변경 내용을 지원 하기 위해 PlayReady 웹 앱을 수정 하는 방법을 설명 합니다.
 title: PlayReady 암호화된 미디어 확장
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c598868610e42e0f2ad64ef2d4fedfb48c4d91e9
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047295"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598618"
 ---
 # <a name="playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장
 
 
 
-이 섹션에서는 변경 내용을 windows 8.1 이전 버전의 windows 10 버전을 지원 하도록 PlayReady 웹 앱을 수정 하는 방법을 설명 합니다.
+이 섹션에는 Windows 10 버전을 Windows 8.1 이전 버전에서 변경 내용을 지원 하기 위해 PlayReady 웹 앱을 수정 하는 방법을 설명 합니다.
 
 Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹앱을 만들어, 콘텐츠 공급자가 정의한 액세스 규칙을 적용하는 한편 사용자에게 PlayReady 콘텐츠를 제공할 수 있습니다. 이 섹션에서는 HTML5와 JavaScript만 사용하여 기존 웹앱에 PlayReady 미디어 요소를 추가하는 방법을 설명합니다.
 
 ## <a name="whats-new-in-playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장의 새로운 기능
 
-이 섹션에서는 목록을 변경 하는 PlayReady eme 암호화 된 미디어 확장 () windows 10에서 PlayReady 콘텐츠 보호를 사용 하도록 설정 합니다.
+이 섹션에서는 Windows 10에 대 한 PlayReady 콘텐츠 보호를 사용 하도록 설정 하는 PlayReady 확장 EME (Encrypted Media) 대 한 변경 내용 목록을 제공 합니다.
 
-새로운 기능 및 windows 10에 대 한 PlayReady 암호화 된 미디어 확장에 대 한 변경 사항은 다음과 같습니다.
+다음 목록에는 새로운 기능 및 PlayReady 암호화 된 미디어 확장에 대 한 Windows 10에 대 한 변경 내용을 설명 합니다.
 
 -   하드웨어 DRM(디지털 권한 관리)이 추가되었습니다.
 
-    하드웨어 기반 콘텐츠 보호 지원을 통해 여러 디바이스 플랫폼에서 고해상도(HD) 및 초고해상도(UHD) 콘텐츠를 안전하게 재생할 수 있습니다. 개인 키, 콘텐츠 키 및 이러한 키를 파생하거나 잠금 해제하는 데 사용하는 기타 키 자료를 포함하는 키 자료와 암호 해독되어 압축 및 압축 해제된 비디오 샘플은 하드웨어 보안을 활용하여 보호합니다.
+    하드웨어 기반 콘텐츠 보호 지원을 통해 여러 장치 플랫폼에서 고해상도(HD) 및 초고해상도(UHD) 콘텐츠를 안전하게 재생할 수 있습니다. 개인 키, 콘텐츠 키 및 이러한 키를 파생하거나 잠금 해제하는 데 사용하는 기타 키 자료를 포함하는 키 자료와 암호 해독되어 압축 및 압축 해제된 비디오 샘플은 하드웨어 보안을 활용하여 보호합니다.
 
 -   비영구적 라이선스를 미리 취득할 수 있습니다.
 -   한 메시지로 여러 라이선스를 취득할 수 있습니다.
 
-    Windows 8.1와 여러 키 id (Keyid)를 사용 하 여 PlayReady 개체를 사용 하거나 [콘텐츠 암호 해독 모델 데이터 (CDMData)를](https://go.microsoft.com/fwlink/p/?LinkID=626819) 사용 하 여 여러 keyid와 함께 수 있습니다.
+    Windows 8.1 같이 여러 키 식별자 (KeyIDs)를 사용 하 여 PlayReady를 사용 하거나 사용 하 여 [콘텐츠 모델 데이터 암호 해독 (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) 여러 KeyIDs를 사용 하 여 합니다.
 
     > [!NOTE]
-    > Windows 10에서 여러 키 id 아래에서 지원 됩니다 &lt;KeyID&gt; CDMData의 합니다.
+    > Windows 10에서 여러 키 식별자에서 지원 되는 &lt;KeyID&gt; CDMData에서.
 
 -   실시간 만료 지원 또는 LDL(제한된 기간 라이선스)이 추가되었습니다.
 
@@ -47,7 +47,7 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
 -   이제 출력으로서의 Miracast는 암시적입니다.
 -   보안 중지가 추가되었습니다.
 
-    보안 중지를 통해 PlayReady 디바이스는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다.
+    보안 중지를 통해 PlayReady 장치는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다.
 
 -   오디오 및 동영상 라이선스 분리가 추가되었습니다.
 
@@ -78,7 +78,7 @@ PlayReady 하드웨어 DRM을 사용하려면 JavaScript 웹앱에서 키 시스
 
 이 섹션에서는 웹앱에 보안 중지를 추가하는 방법을 설명합니다.
 
-보안 중지를 통해 PlayReady 장치는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 디바이스의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
+보안 중지를 통해 PlayReady 장치는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 장치의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
 
 보안 중지 챌린지를 보내는 주요 시나리오는 두 가지가 있습니다.
 
@@ -262,13 +262,13 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 ```
 
 > [!NOTE]
-> 위의 샘플에 있는 보안 중지 데이터의 `<SessionID>B64 encoded session ID</SessionID>`는 기록된 모든 보안 중지 세션의 와일드 카드인 별표(\*)가 될 수 있습니다. 즉 **SessionID** 태그는 구체적인 세션이거나 모든 보안 중지 세션을 선택하도록 와일드 카드(\*)가 될 수 있습니다.
+> 보안 중지 데이터 `<SessionID>B64 encoded session ID</SessionID>` 위의 샘플에서 별표를 수 있습니다 (\*), 기록 된 모든 보안 중지 세션에 대 한 와일드 카드는 합니다. 즉,는 **SessionID** 태그는 특정 세션 또는 와일드 카드를 수 있습니다 (\*) 모든 보안 중지 세션을 선택 합니다.
 
 ## <a name="programming-considerations-for-encrypted-media-extension"></a>암호화된 미디어 확장에 대한 프로그래밍 고려 사항
 
-이 섹션에서는 windows 10 용 PlayReady 사용 웹 앱을 만들 때 고려해 야 하는 프로그래밍 고려 사항이 나열 되어 있습니다.
+이 섹션에서는 Windows 10 용 PlayReady 사용 웹 앱을 만들 때 고려해 야 하는 프로그래밍 고려 사항을 나열 합니다.
 
-앱에서 만든 **MSMediaKeys** 및 **MSMediaKeySession** 개체는 앱을 닫을 때까지 활성화되어 있어야 합니다. 이러한 개체를 활성 상태로 유지하는 한 가지 방법은 해당 개체를 전역 변수로 할당하는 것입니다. 변수가 함수 내부의 로컬 변수로 선언된 경우에는 변수가 범위에서 벗어나게 되며 가비지 수집에 따라 달라질 수 있습니다. 예를 들어 다음 샘플에서는 *g\_msMediaKeys* 및 *g\_mediaKeySession* 변수를 전역 변수로 할당합니다. 그런 다음 해당 변수가 함수의 **MSMediaKeys** 및 **MSMediaKeySession** 개체에 할당됩니다.
+앱에서 만든 **MSMediaKeys** 및 **MSMediaKeySession** 개체는 앱을 닫을 때까지 활성화되어 있어야 합니다. 이러한 개체를 활성 상태로 유지하는 한 가지 방법은 해당 개체를 전역 변수로 할당하는 것입니다. 변수가 함수 내부의 로컬 변수로 선언된 경우에는 변수가 범위에서 벗어나게 되며 가비지 수집에 따라 달라질 수 있습니다. 다음 샘플에서 변수를 할당 하는 예를 들어 *g\_msMediaKeys* 하 고 *g\_mediaKeySession* 전역 변수로 다음에 할당 되는 **MSMediaKeys** 하 고 **MSMediaKeySession** 함수에는 개체입니다.
 
 ``` syntax
 var g_msMediaKeys;

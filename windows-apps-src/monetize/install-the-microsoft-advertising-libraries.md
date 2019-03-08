@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, uwp, 광고, 설치, SDK, 광고 라이브러리
 ms.localizationpriority: medium
 ms.openlocfilehash: 121accdfc8996c609c616838f645f19e2377c7c5
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047754"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658038"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK 설치
 
 Windows 10용 UWP 앱에 광고를 표시하려면 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 설치합니다. 이 SDK는 Visual Studio 2015 이상 버전의 확장입니다.
 
 > [!NOTE]
-> 개발 하는 경우 JavaScript/HTML UWP 앱을 설치한 Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트) 또는 나중에, [WinJS](https://github.com/winjs/winjs) 라이브러리도 설치 해야 합니다. 이전 Windows 10 SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다.
+> JavaScript/HTML UWP 앱을 개발 하는 및 Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트)를 설치 하거나 나중에 설치 해야 합니다 [WinJS](https://github.com/winjs/winjs) 라이브러리입니다. 이전 Windows 10 SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다.
 
 <span id="install-msi" />
 
@@ -94,8 +94,8 @@ Microsoft Advertising SDK를 설치한 후에는 다음 지침에 따라 광고 
 
 * [중간 광고](interstitial-ads.md)
 * [기본 광고](native-ads.md)
-* [XAML 및 .NET의 AdControl](adcontrol-in-xaml-and--net.md)
-* [HTML 5 및 JavaScript의 AdControl](adcontrol-in-html-5-and-javascript.md)
+* [XAML 및.NET의 AdControl](adcontrol-in-xaml-and--net.md)
+* [Html 5 AdControl 및 Javascript](adcontrol-in-html-5-and-javascript.md)
 
 <span id="framework" />
 

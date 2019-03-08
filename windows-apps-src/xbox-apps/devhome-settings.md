@@ -1,33 +1,33 @@
 ---
 ms.assetid: ec3945e7-cfb1-b91a-7ae6-e767a7227f8a
-title: 설정 페이지 (개발자 홈)
-description: Xbox one 개발자 홈 앱의 설정 페이지에 대 한 정보를 제공합니다.
+title: 설정 페이지(개발자 홈)
+description: Xbox One용 개발자 홈 앱의 설정 페이지에 대한 정보를 제공합니다.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a0a94a7a8e22ee63cb126bb50ad1c74837c4f55
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942159"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654208"
 ---
-# <a name="settings-page-dev-home"></a>설정 페이지 (개발자 홈)
+# <a name="settings-page-dev-home"></a>설정 페이지(개발자 홈)
    
   
-개발자 홈의 **설정** 페이지 개발 콘솔에 대 한 다양 한 설정에 대 한 액세스를 제공 합니다.   
- ![개발자 홈의 설정 페이지](images/devhome_settings.png)   
+개발자 홈의 **설정** 페이지에서 개발 콘솔의 다양한 설정에 액세스할 수 있습니다.   
+ ![개발자 홈 페이지 설정](images/devhome_settings.png)   
   
-**설정** 페이지에는 다음 창이:   
+**설정** 페이지에는 다음과 같은 창이 있습니다.   
  
    *  [콘솔 설정](#ID4EEB)  
    *  [OS 복구 업데이트 설정](#ID4EOB)  
    *  [Visual Studio](#ID4EYB)  
    *  [디버그 설정](#ID4ECC)  
-   *  [무인 설치 스크립트 구성](#ID4EMC)  
-   *  [기본 홈 경험](#ID4E3C)  
+   *  [무인된 스크립트 구성](#ID4EMC)  
+   *  [기본 홈 환경](#ID4E3C)  
 
  
 <a id="ID4EEB"></a>
@@ -37,7 +37,7 @@ ms.locfileid: "8942159"
 ## <a name="console-settings"></a>콘솔 설정  
    
   
-**콘솔 설정** 창은 콘솔 설정과 정보의 "한눈 에" 보기를 제공합니다. 이 도구를 사용 하 여를 보고 콘솔의 호스트 이름, 샌드박스 및 보안 액세스 키 설정을 편집할 수 있습니다.   
+**설정 콘솔** 창에서는 콘솔 설정 및 정보를 "한 눈에" 볼 수 있습니다. 이러한 도구를 사용하여 콘솔의 호스트 이름, 샌드박스 및 보안 액세스 키 설정을 살펴보고 편집할 수 있습니다.   
   
 <a id="ID4EOB"></a>
 
@@ -46,7 +46,7 @@ ms.locfileid: "8942159"
 ## <a name="os-recovery-update-settings"></a>OS 복구 업데이트 설정  
    
   
-**설정을 업데이트 하는 OS 복구** 창은 콘솔의 자동 업데이트 설정을 구성합니다. 이러한 설정을 변경 사항은 적용 되려면 최대 24 시간이 걸릴 수 있습니다.   
+**OS 복구 업데이트 설정** 창은 콘솔의 자동 업데이트 설정을 구성합니다. 설정 변경 사항이 적용될 때까지 최대 24시간이 걸릴 수 있습니다.   
   
 <a id="ID4EYB"></a>
 
@@ -55,7 +55,7 @@ ms.locfileid: "8942159"
 ## <a name="visual-studio"></a>Visual Studio  
    
   
-**Visual Studio** 창이 콘솔과 Visual Studio와 함께 사용 됩니다. 모든 연결된 Visual Studio 인스턴스를 제거할 수도 있습니다.   
+**Visual Studio** 창은 콘솔을 Visual Studio와 페어링하는 데 사용됩니다. 페어링된 Visual Studio 인스턴스를 모두 제거할 수도 있습니다.   
   
 <a id="ID4ECC"></a>
 
@@ -64,31 +64,31 @@ ms.locfileid: "8942159"
 ## <a name="debug-settings"></a>디버그 설정  
    
   
-**디버그 설정** 창 보고 일반적인 전환 하는 디버그 설정 합니다.   
+**디버그 설정** 창은 일반적인 디버그 설정을 살펴보고 전환하는 데 사용됩니다.   
   
 <a id="ID4EMC"></a>
 
    
 
-## <a name="unattended-script-configuration"></a>무인 설치 스크립트 구성  
+## <a name="unattended-script-configuration"></a>무인 스크립트 구성  
    
   
-**무인 설치 스크립트 구성** 창 Xbox One 콘솔에 대 한 설치 스크립트를 관리합니다.   
+**무인 스크립트 구성** 창은 Xbox One 콘솔의 설치 스크립트를 관리합니다.   
   
 <a id="ID4E3C"></a>
 
    
 
-## <a name="default-home-experience"></a>기본 홈 경험  
+## <a name="default-home-experience"></a>기본 홈 환경  
    
   
-**기본 홈 경험** 창 정품 홈 화면이 나 [(개발자 홈) 콘솔의 개발자 홈](dev-home.md) 화면 콘솔이 시작 될 때 표시 되는지 여부를 결정 합니다.   
+**기본 홈 환경** 창은 콘솔이 시작될 때 소매 홈 화면 또는 [콘솔의 개발자 홈(개발자 홈)](dev-home.md) 화면의 표시 여부를 결정합니다.   
   
 <a id="ID4EJD"></a>
 
    
 
 ## <a name="see-also"></a>참고 항목  
- [(개발자 홈) 콘솔의 개발자 홈](dev-home.md)
+ [(개발 홈) 콘솔에서 개발자 홈](dev-home.md)
 
   

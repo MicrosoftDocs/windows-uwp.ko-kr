@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 00d6c16ecaa64abf7d83154fdb864671dbff3eae
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936285"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643488"
 ---
 # <a name="hlsl-streaming-resources-exposure"></a>HLSL 스트리밍 리소스 노출
 
@@ -21,7 +21,7 @@ ms.locfileid: "8936285"
 
 셰이더 모델 5용 HLSL 구문은 스트리밍 리소스를 지원하는 디바이스에서만 허용됩니다. 다음 표의 스트리밍 리소스용 각 관련 HLSL 메서드는 하나(피드백) 또는 두 개(순서대로 클램프, 피드백)의 선택적 추가 매개 변수를 받습니다. 예를 들어 **Sample** 메서드는 다음과 같습니다.
 
-**Sample(샘플러, 위치 \[, 오프셋 \[, 클램프 \[, 피드백\] \] \])**
+**샘플 (샘플러, 위치 \[, 오프셋 \[에 고정 \[, 피드백\] \] \])**
 
 **Sample** 메서드의 예는 [**Texture2D.Sample(S,float,int,float,uint)**](https://msdn.microsoft.com/library/windows/desktop/dn393787)입니다.
 
@@ -31,11 +31,11 @@ ms.locfileid: "8936285"
 
 피드백 매개 변수는 메모리 액세스 쿼리 내장 함수 [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083)에 제공할 수 있는 **uint** 변수입니다. 피드백 매개 변수의 값을 수정하거나 해석해서는 안 되지만, 컴파일러는 값이 수정되었는지 감지할 수 있는 고급 분석 및 진단 기능을 제공하지는 않습니다.
 
-[**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083)의 구문은 다음과 같습니다.
+[  **CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083)의 구문은 다음과 같습니다.
 
-**bool CheckAccessFullyMapped(in uint FeedbackVar);**
+**bool CheckAccessFullyMapped (에: uint FeedbackVar);**
 
-[**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083)는 *FeedbackVar* 값을 해석하여 액세스하는 모든 데이터가 리소스에 매핑되었으면 true를 반환하며, 그렇지 않으면 **CheckAccessFullyMapped**는 false를 반환합니다.
+[**CheckAccessFullyMapped** ](https://msdn.microsoft.com/library/windows/desktop/dn292083) 의 값을 해석 *FeedbackVar* 액세스 하는 모든 데이터가 고, 그렇지 않으면 리소스에 매핑된 경우 true를 반환 하 고 **CheckAccessFullyMapped**는 false를 반환 합니다.
 
 클램프 또는 피드백 매개 변수가 있으면 컴파일러는 기본 명령을 변형하여 반환합니다. 예를 들어, 스트리밍 리소스의 샘플은 `sample_cl_s` 명령을 생성합니다.
 
@@ -110,10 +110,10 @@ HLSL 컴파일러가 클램프를 0.0f으로, 피드백이 사용되지 않는 �
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[스트리밍 리소스에 대한 파이프라인 액세스](pipeline-access-to-streaming-resources.md)
+[리소스를 스트리밍에 대 한 파이프라인 액세스](pipeline-access-to-streaming-resources.md)
 
  
 

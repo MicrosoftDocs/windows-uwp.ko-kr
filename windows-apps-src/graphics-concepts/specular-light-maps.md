@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7d88989be04704395c056f1bae058e2aefd1a2a4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940435"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57591288"
 ---
 # <a name="specular-light-maps"></a>반사 조명 맵
 
@@ -21,10 +21,10 @@ ms.locfileid: "8940435"
 
 반사 조명 매핑을 수행하려면 원형의 텍스처에 반사 라이트 맵을 추가한 다음 RGB 조명 맵을 조절합니다(결과를 곱함).
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[텍스처와 조명 매핑](light-mapping-with-textures.md)
+[질감을 사용 하 여 간단한 매핑](light-mapping-with-textures.md)
 
  
 

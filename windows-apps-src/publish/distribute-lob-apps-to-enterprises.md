@@ -1,5 +1,5 @@
 ---
-Description: You can publish line-of-business (LOB) apps directly to enterprises for volume acquisition via the Microsoft Store for Business or Microsoft Store for Education, without making the apps broadly available in the Store.
+Description: LOB(기간 업무) 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 통해 대량 구매하도록 엔터프라이즈에 직접 해당 앱을 게시할 수 있습니다.
 title: 엔터프라이즈에 LOB 앱 배포
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ms.date: 10/31/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, lob, 엔터프라이즈 앱, 비즈니스용 Store, 교육용 Store, 엔터프라이즈
 ms.localizationpriority: medium
 ms.openlocfilehash: c6e1eafbce5eca1570161da1656c0242228ff7de
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044590"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653018"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>엔터프라이즈에 LOB 앱 배포
 
@@ -22,7 +22,7 @@ LOB 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고
 > 지금은 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 통해 무료 앱만 독점적으로 엔터프라이즈에 배포할 수 있습니다. LOB로 유료 앱을 제출하는 경우 엔터프라이즈에서 사용할 수 없습니다. 
 
 > [!IMPORTANT]
-> [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 LOB 앱을 엔터프라이즈에 직접 게시할 수 없습니다. 파트너 센터를 통해 LOB 앱에 대 한 모든 제출은 게시 해야 합니다.
+> [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 LOB 앱을 엔터프라이즈에 직접 게시할 수 없습니다. LOB 앱에 대 한 모든 서브 미션 파트너 센터를 통해 게시 되어야 합니다.
 
 
 ## <a name="set-up-the-enterprise-association"></a>엔터프라이즈 연결 설정
@@ -54,7 +54,7 @@ LOB 앱을 엔터프라이즈에 독점적으로 게시하는 첫 번째 단계�
 
 ### <a name="organizational-licensing"></a>조직 라이선스
 
-기본적으로 앱을 제출할 때 **스토어 관리(온라인) 볼륨 라이선싱** 상자가 클릭되어 있습니다. LOB 앱을 게시할 때 엔터프라이즈에서 앱을 대량으로 구매할 수 있도록 이 상자가 계속 클릭한 상태를 유지해야 합니다. 이렇게 하면 **배포 및 표시 여부** 섹션에서 선택한 엔터프라이즈의 외부에 있는 사용자는 해당 앱을 사용할 수 없게 됩니다.
+기본적으로 앱을 제출할 때 **스토어에서 관리하는 (온라인) 볼륨 라이선싱** 상자를 선택합니다. LOB 앱을 게시할 때 엔터프라이즈에서 앱을 대량으로 구매할 수 있도록 이 상자가 계속 클릭한 상태를 유지해야 합니다. 이렇게 하면 **배포 및 표시 여부** 섹션에서 선택한 엔터프라이즈의 외부에 있는 사용자는 해당 앱을 사용할 수 없게 됩니다.
 
 연결이 끊어진 (오프라인) 라이선싱을 통해 엔터프라이즈가 앱을 사용할 수 있도록 하려면 **연결이 끊어진 (오프라인) 라이선싱** 상자를 선택하면 됩니다.
 
@@ -68,12 +68,12 @@ LOB 앱의 경우 제출 프로세스의 [연령별 등급](age-ratings.md) 단�
 
 ## <a name="enterprise-deployment-of-lob-apps"></a>LOB 앱의 엔터프라이즈 배포
 
-**스토어에 제출**을 클릭한 후 앱이 인증 프로세스를 거칩니다. 준비가 되면 엔터프라이즈 관리자가 해당 앱을 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어 포털의 개인 저장소에 추가해야 합니다. 이제 엔터프라이즈에서 사용자에게 앱을 배포할 수 있습니다.
+**스토어에 제출**을 클릭한 후 앱이 인증 프로세스를 거칩니다. 준비가 되면 엔터프라이즈 관리자가 해당 앱을 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어 포털의 개인 저장소에 추가해야 합니다. 그런 다음 엔터프라이즈에서 사용자에게 앱을 배포할 수 있습니다.
 
 > [!NOTE]
 > LOB 앱을 가져오려면 조직이 [지원 시장](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets)에 위치해 있어야 하며, 앱을 제출할 때 [해당 시장을 제외](define-pricing-and-market-selection.md)하지 않아야 합니다. 
 
-자세한 내용은 [기간 업무 앱 사용](https://go.microsoft.com/fwlink/p/?LinkId=698846) 및 [개인 저장소를 사용하여 앱 배포](https://go.microsoft.com/fwlink/p/?LinkId=698847)를 참조하세요.
+자세한 내용은 [기간 업무 앱 작업](https://go.microsoft.com/fwlink/p/?LinkId=698846) 및 [개인 저장소를 사용하여 앱 배포](https://go.microsoft.com/fwlink/p/?LinkId=698847)를 참조하세요.
 
 
 ## <a name="update-lob-apps"></a>LOB 앱 업데이트
@@ -92,7 +92,7 @@ LOB 앱의 경우 제출 프로세스의 [연령별 등급](age-ratings.md) 단�
 
 비즈니스용 Microsoft 스토어와 교육용 Microsoft 스토어를 통해 엔터프라이즈가 앱을 사용할 수 있도록 하면 앱이 스토어에서 서명되었고 표준 스토어 정책을 준수함을 보장할 수 있습니다.
 
-경우에 따라 회사 (예: 규제 준수 때문 이거나 앱 추가 기능이 필요한) 파트너 센터를 통해 제출 되 LOB 앱이 하지 않을. 이 경우 엔터프라이즈에서 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 사용하지 않고 테스트용 로드를 통해 컴퓨터에 직접 앱을 배포할 수 있습니다.
+경우에 따라 회사 파트너 센터 (예: 준수 이유 또는 추가 기능을 사용 해야 하는 앱)를 통해 제출 해야 하는 LOB 앱을 원하지 않을 수 있습니다. 이 경우 엔터프라이즈에서 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 사용하지 않고 테스트용 로드를 통해 컴퓨터에 직접 앱을 배포할 수 있습니다.
 
 자세한 내용은 [Windows 10에서 LOB 앱을 테스트용으로 로드](https://go.microsoft.com/fwlink/p/?LinkId=623433)를 참조하세요.
 

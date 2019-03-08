@@ -6,11 +6,11 @@ ms.date: 10/24/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7cb1c9f9cf6cbc6cce0c5d4547ed503bb9a06e56
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941708"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660118"
 ---
 # <a name="extend-the-game-sample"></a>게임 샘플 확장
 
@@ -23,7 +23,7 @@ ms.locfileid: "8941708"
 ## <a name="using-xaml-for-the-overlay"></a>오버레이에서 XAML 사용
 
 
-이 문서에서 자세히 다루지는 않았지만, 오버레이에서 [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) 대신 XAML을 사용하는 것도 하나의 방법입니다. XAML은 사용자 인터페이스 요소를 작성하는 데 있어 Direct2D 보다 장점이 많습니다. 가장 중요 한 장점은 Windows10 모양과 느낌을 DirectX 게임에 보다 편리 하 게 통합할 수 있다는 것입니다. UWP 앱을 정의하는 대부분의 공통 요소, 스타일 및 동작이 XAML 모델로 긴밀하게 통합되어 게임 개발자가 훨씬 더 적은 작업으로 구현할 수 있습니다. 고유한 게임 디자인에 복잡한 사용자 인터페이스가 있는 경우 Direct2D 대신 XAML 사용을 고려해 보세요.
+이 문서에서 자세히 다루지는 않았지만, 오버레이에서 [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) 대신 XAML을 사용하는 것도 하나의 방법입니다. XAML은 사용자 인터페이스 요소를 작성하는 데 있어 Direct2D 보다 장점이 많습니다. 가장 중요 한 장점은 편리한 DirectX 게임에 Windows 10 모양과 느낌을 통합 하기가 어렵다는 것입니다. UWP 앱을 정의하는 대부분의 공통 요소, 스타일 및 동작이 XAML 모델로 긴밀하게 통합되어 게임 개발자가 훨씬 더 적은 작업으로 구현할 수 있습니다. 고유한 게임 디자인에 복잡한 사용자 인터페이스가 있는 경우 Direct2D 대신 XAML 사용을 고려해 보세요.
 
 XAML에서는 Direct2D와 비슷한 모양의 게임 인터페이스를 훨씬 손쉽게 만들 수 있습니다.
 
@@ -35,7 +35,7 @@ XAML에서는 Direct2D와 비슷한 모양의 게임 인터페이스를 훨씬 �
 
 최종 결과는 비슷하지만, Direct2D 구현과 XAML 인터페이스 구현 간에 많은 차이점이 있습니다.
 
-특징 | XAML| Direct2D
+기능 | XAML| Direct2D
 :----------|:----------- | :-----------
 오버레이 정의 | XAML 파일 `\*.xaml`에 정의되어 있습니다. 일단 XAML을 이해하면 보다 정교한 오버레이를 생성 및 구성하는 것이 Direct2D에 비해 훨씬 쉽습니다.| Direct2D 대상 버퍼에 수동으로 배치되고 기록되는 Direct2D 원형 및 [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) 문자열 컬렉션으로 정의됩니다. 
 사용자 인터페이스 요소 | XAML 사용자 인터페이스 요소는 [**Windows::UI::Xaml**](https://msdn.microsoft.com/library/windows/apps/br209045) 및 [**Windows::UI::Xaml::Controls**](https://msdn.microsoft.com/library/windows/apps/br227716) 같이 Windows 런타임 XAML API의 일부인 표준화된 요소로부터 나옵니다. XAML 사용자 인터페이스 요소의 동작을 처리하는 코드는 코드 숨김 파일인 Main.xaml.cpp에 정의되어 있습니다. | 사각형 및 줄임표처럼 간단한 셰이프를 그릴 수 있습니다.
@@ -80,7 +80,7 @@ void App::OnLaunched(_In_ LaunchActivatedEventArgs^ /* args */)
 
 구성된 스왑 체인을 XAML에 정의된 [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 인스턴스에 연결하려면 기본 네이티브 [**ISwapChainPanelNative**](https://msdn.microsoft.com/library/dn302143) 인터페이스 구현에 대한 포인터를 가져오고 여기에서 [**ISwapChainPanelNative::SetSwapChain**](https://msdn.microsoft.com/library/windows/desktop/dn302144)를 호출하여 구성된 스왑 체인에 전달해야 합니다. 
 
-[**DX::DeviceResources::CreateWindowSizeDependentResources**](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/Common/DeviceResources.cpp#L218-L521)에서 나온 다음 조각에는 DirectX/XAML 상호 운용성을 위한 이 기능이 자세히 설명되어 있습니다.
+[  **DX::DeviceResources::CreateWindowSizeDependentResources**](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/Common/DeviceResources.cpp#L218-L521)에서 나온 다음 조각에는 DirectX/XAML 상호 운용성을 위한 이 기능이 자세히 설명되어 있습니다.
 
 ```cpp
         ComPtr<IDXGIDevice3> dxgiDevice;

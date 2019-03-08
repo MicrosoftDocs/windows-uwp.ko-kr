@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, .net, unity
 ms.localizationpriority: medium
 ms.openlocfilehash: 247761f47b578099bf8672d9e1b2469e6506682e
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116082"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641788"
 ---
 # <a name="missing-net-apis-in-unity-and-uwp"></a>Unity 및 UWP에서 누락된 .NET API
 
 .NET을 사용하여 UWP 게임을 빌드할 때 Unity 편집기나 독립 실행형 PC 게임에서 사용할 수 있는 몇 가지 API가 UWP에 대해 없는 것을 발견할 수 있습니다. UWP 앱용 .NET에 각 네임스페이스에 대한 전체 .NET Framework에서 제공하는 하위 집합 형식이 포함되어 있기 때문입니다.
 
-또한 일부 게임 엔진은 Unity의 Mono와 같은 UWP용 .NET과 완전히 호환되지 않는 다른 형식을 사용합니다. 따라서 사용자가 게임을 작성할 때 편집기에서 모든 것이 제대로 작동하지만 UWP용 빌드로 이동했을 때 **'System.Runtime.Serialization' 네임스페이스에 'Formatters' 형식 또는 네임스페이스가 존재하지 않습니다(어셈블리 참조가 누락되었습니까?)** 와 같은 오류가 발생할 수 있습니다.
+또한 일부 게임 엔진은 Unity의 Mono와 같은 UWP용 .NET과 완전히 호환되지 않는 다른 형식을 사용합니다. 따라서 게임을 작성 하는 경우 모든 항목이 작동 제대로 편집기에서 하지만 UWP에 대 한 빌드 하려는 경우 다음과 같은 오류가 발생할 수 있습니다.: **형식 또는 네임 스페이스 '포맷터' 'System.Runtime.Serialization' 네임 스페이스에 존재 하지 않습니다 (되는 어셈블리 참조가?)**
 
-다행히 Unity에는 이러한 누락된 일부 API를 확장 메서드 및 대체 형식으로 제공하며, [유니버설 Windows 플랫폼: .NET 스크립팅 백 엔드에서 누락된 .NET 형식](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)에 설명되어 있습니다. 그러나 필요한 기능이 없는 경우 [Windows 8.x 앱용 .NET 개요](https://msdn.microsoft.com/library/windows/apps/br230302)에서 WinRT 또는 UWP용 .NET API를 사용하기 위한 코드를 변환할 수 있는 방법에 대해 설명합니다. (Windows 8을 다루고 있지만 Windows 10 UWP 앱에도 적용할 수 있습니다.)
+Unity 확장 메서드 및 설명 하는 대체 형식으로 이러한 누락 된 Api의 일부으로 제공 되는 다행 스럽게도 [유니버설 Windows 플랫폼: .NET 백 엔드 스크립트에서.NET 형식 누락](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)합니다. 그러나 필요한 기능이 없는 경우 [Windows 8.x 앱용 .NET 개요](https://msdn.microsoft.com/library/windows/apps/br230302)에서 WinRT 또는 UWP용 .NET API를 사용하기 위한 코드를 변환할 수 있는 방법에 대해 설명합니다. (Windows 8을 다루고 있지만 Windows 10 UWP 앱에도 적용할 수 있습니다.)
 
 ## <a name="net-standard"></a>.NET Standard
 
@@ -43,7 +43,7 @@ UWP를 빌드하는 데 문제가 있는 경우 먼저 **플레이어 설정**(*
 
 일반적으로 **스크립팅 런타임 버전** 및 **Api 호환성 수준**에 대해 .NET Framework와 더 많은 호환성을 획득하여 .NET API를 사용할 수 있도록 사용 가능한 가장 최신 버전을 선택해야 합니다.
 
-![구성: 스크립팅 런타임 버전, 스크립팅 백 엔드, Api 호환성 수준](images/missing-dot-net-apis-in-unity-1.png)
+![구성: 스크립팅 런타임 버전입니다. 백 엔드; 스크립팅 Api 호환성 수준](images/missing-dot-net-apis-in-unity-1.png)
 
 ## <a name="platform-dependent-compilation"></a>플랫폼 종속 컴파일
 
@@ -60,7 +60,7 @@ UWP를 포함한 여러 플랫폼에 대해 Unity 게임을 작성하는 경우 
 ```
 
 > [!NOTE]
-> `NETFX_CORE` 이는 .NET 스크립팅 백 엔드에 대해 C# 코드를 컴파일하는지 확인하기 위함입니다. IL2CPP 등의 다른 스크립팅 백 엔드를 사용하는 경우 대신 `UNITY_WSA_10_0`을 사용합니다.
+> `NETFX_CORE` 컴파일하는 경우를 확인 하는 기능만 C# .NET 스크립팅 백 엔드에 대 한 코드입니다. IL2CPP 등의 다른 스크립팅 백 엔드를 사용하는 경우 대신 `UNITY_WSA_10_0`을 사용합니다.
 
 플랫폼 종속 컴파일 지시어의 전체 목록 [플랫폼 종속 컴파일](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html)을 참조하세요.
 
@@ -144,6 +144,6 @@ WinRT 보안 API를 사용하는 방법에 대한 자세한 내용은 [보안](h
 
 ## <a name="see-also"></a>참고 항목
 
-* [유니버설 Windows 플랫폼: .NET 스크립팅 백 엔드에서 누락된 .NET 형식](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)
-* [UWP 앱용 .NET 개요](https://msdn.microsoft.com/library/windows/apps/br230302)
+* [유니버설 Windows 플랫폼: 백 엔드를 스크립팅 하는.NET에서 누락 된.NET 형식](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)
+* [.NET에 대 한 UWP 앱 개요](https://msdn.microsoft.com/library/windows/apps/br230302)
 * [Unity UWP 포팅 가이드](https://unity3d.com/partners/microsoft/porting-guides)

@@ -1,19 +1,19 @@
 ---
-Description: Share code between a desktop application and a UWP app
+Description: 데스크톱 응용 프로그램 및 UWP 앱 간에 코드 공유
 Search.Product: eADQiWindows 10XVcnh
-title: 데스크톱 응용 프로그램 및 UWP 앱 간의 코드 공유
+title: 데스크톱 응용 프로그램 및 UWP 앱 간에 코드 공유
 ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 151584f15013c9d4ab7d9566e175b957a7a84149
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9045742"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644348"
 ---
-# <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>데스크톱 응용 프로그램 및 UWP 앱 간의 코드 공유
+# <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>데스크톱 응용 프로그램 및 UWP 앱 간에 코드 공유
 
 코드를 .NET Standard 라이브러리로 옮기고 모든 Windows 10 장치에 연결할 수 있는 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다. 데스크톱 응용 프로그램을 UWP 앱으로 변환할 수 있는 도구는 없지만, 수많은 기존 코드를 재사용할 수 있으며 이를 통해 빌드 비용을 낮출 수 있습니다. 이 가이드에서는 이 작업을 수행하는 방법을 보여 줍니다.
 
@@ -61,9 +61,9 @@ ms.locfileid: "9045742"
 
 일부 코드는 플랫폼에 따라 다르며 데스크톱 응용 프로그램 프로젝트에 남아 있어야 합니다.
 
-### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>예: 데이터 액세스 코드를 .NET Standard 2.0 라이브러리로 마이그레이션
+### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>예제: .NET Standard 2.0 라이브러리에 데이터 액세스 코드 마이그레이션
 
-Northwind 샘플 데이터베이스에서 고객을 표시 하는 매우 기본적인 Windows Forms 응용 프로그램 있다고 가정해 보겠습니다.
+Northwind 샘플 데이터베이스에서 고객에 게 보여 주는 기본적인 Windows Forms 응용 프로그램을 있다고 가정해 보겠습니다.
 
 ![Windows Forms 앱](images/desktop-to-uwp/win-forms-app.png)
 
@@ -268,7 +268,7 @@ Android, iOS 및 크로스 플랫폼 프로젝트를 시작하려면 [Xamarin �
 
 ## <a name="next-steps"></a>다음 단계
 
-**질문에 대한 답변 찾기**
+**질문에 답변**
 
 질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 

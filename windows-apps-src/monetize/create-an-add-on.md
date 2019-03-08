@@ -1,26 +1,26 @@
 ---
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
-description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 PartnerCenter 계정에 등록 된 앱에 대 한 추가 기능 만들기.
+description: PartnerCenter 계정에 등록 된 앱에 대 한 추가 기능을 만들려면 Microsoft Store 제출 API 사용 하 여이 메서드를 사용 합니다.
 title: 추가 기능 만들기
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 만들기, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8465dc7a42961a20fcd33ba8d43c71e2d73727ff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925940"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651038"
 ---
 # <a name="create-an-add-on"></a>추가 기능 만들기
 
-파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 (라고도 앱에서 제품 또는 IAP)를 만들려면 Microsoft Store 제출 API에서에서이 메서드를 사용 합니다.
+파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 (라고도 앱에서 제품 또는 IAP)를 만들려면 Microsoft Store 제출 API 사용 하 여이 메서드를 사용 합니다.
 
 > [!NOTE]
 > 이 메서드는 제출 없이 추가 기능을 만듭니다. 추가 기능에 대한 제출을 만들려면 [추가 기능 제출 관리](manage-add-on-submissions.md)의 메서드를 참조하세요.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -38,20 +38,20 @@ ms.locfileid: "8925940"
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-body"></a>요청 본문
 
 요청 본문에는 다음 매개 변수가 있습니다.
 
-|  매개 변수  |  유형  |  설명  |  필수  |
+|  매개 변수  |  형식  |  설명  |  필수  |
 |------|------|------|------|
 |  applicationIds  |  배열  |  이 추가 기능이 연결된 앱의 스토어 ID가 포함된 배열입니다. 이 배열에서는 한 개의 항목만 지원됩니다.   |  예  |
 |  productId  |  문자열  |  추가 기능의 제품 ID입니다. 코드에서 추가 기능을 참조하는 데 사용할 수 있는 식별자입니다. 자세한 내용은 [제품 유형 및 제품 ID 설정](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id)을 참조하세요.  |  예  |
-|  productType  |  문자열  |  추가 기능의 제품 유형입니다. **Durable** 및 **Consumable** 값이 지원됩니다.  |  예  |
+|  productType  |  문자열  |  추가 기능의 제품 유형입니다. 다음 값이 지원 됩니다. **영 속** 하 고 **읽은**합니다.  |  예  |
 
 
 ### <a name="request-example"></a>요청 예제
@@ -97,13 +97,13 @@ Content-Type: application/json
 | 오류 코드 |  설명                                                                                                                                                                           |
 |--------|------------------|
 | 400  | 요청이 잘못되었습니다. |
-| 409  | 추가 기능의 현재 상태 때문에 만들 수 없거나 또는 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
+| 409  | 파트너 센터 기능을 사용 하는 추가 기능 또는 현재 상태로 인해 추가 기능을 만들 수 없습니다 [현재 Microsoft Store 전송 API에 의해 지원 되지 않습니다](create-and-manage-submissions-using-windows-store-services.md#not_supported)합니다. |   
 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-* [추가 기능 제출 관리](manage-add-on-submissions.md)
-* [모든 추가 기능 가져오기](get-all-add-ons.md)
+* [Microsoft Store 서비스를 사용 하 여 서브 미션을 만들고 설정 합니다.](create-and-manage-submissions-using-windows-store-services.md)
+* [추가 기능 제안 관리](manage-add-on-submissions.md)
+* [모든 추가 기능 얻기](get-all-add-ons.md)
 * [추가 기능 가져오기](get-an-add-on.md)
 * [추가 기능 삭제](delete-an-add-on.md)

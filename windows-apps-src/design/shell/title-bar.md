@@ -8,11 +8,11 @@ keywords: Windows 10, uwp, 제목 표시줄
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 88c613456525648883735850fe831cb3b67f145c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923453"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648818"
 ---
 # <a name="title-bar-customization"></a>제목 표시줄 사용자 지정
 
@@ -20,7 +20,7 @@ ms.locfileid: "8923453"
 
 앱이 데스크톱 창에서 실행될 때 앱의 퍼스낼리티와 일치하도록 제목 표시줄을 사용자 지정할 수 있습니다. 제목 표시줄 사용자 지정 API를 사용하여 제목 표시줄 요소의 색상을 지정하거나 앱 콘텐츠를 제목 표시줄 영역으로 확장하고 모든 내용을 제어할 수 있습니다.
 
-> **중요 API**: [ApplicationView.TitleBar 속성](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [ApplicationViewTitleBar 클래스](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [CoreApplicationViewTitleBar 클래스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
+> **중요 한 Api**: [ApplicationView.TitleBar 속성](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview)하십시오 [ApplicationViewTitleBar 클래스](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [CoreApplicationViewTitleBar 클래스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
 
 ## <a name="how-much-to-customize-the-title-bar"></a>제목 표시줄의 사용자 지정 수준
 
@@ -166,7 +166,7 @@ UIElement(`AppTitleBar`)는 앱에 대한 XAML의 일부입니다. 변경되지 
 
 자막 버튼 크기 변경에 응답하기 위해 [LayoutMetricsChanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.LayoutMetricsChanged) 이벤트를 처리할 수 있습니다. 예를 들어, 시스템 뒤로 버튼이 표시되거나 숨겨져 있을 때 이 문제가 발생할 수 있습니다. 제목 표시줄의 크기에 종속되는 UI 요소의 위치를 확인하고 업데이트하려면 이 이벤트를 처리합니다.
 
-이 예제는 제목 표시줄의 레이아웃을 조정하여 시스템 뒤로 버튼을 표시하거나 숨기는 것과 같은 변경 사항을 처리하는 방법을 보여 줍니다. `AppTitleBar``LeftPaddingColumn` 및 `RightPaddingColumn`은 이전에 표시된 XAML에서 선언됩니다.
+이 예제는 제목 표시줄의 레이아웃을 조정하여 시스템 뒤로 버튼을 표시하거나 숨기는 것과 같은 변경 사항을 처리하는 방법을 보여 줍니다. `AppTitleBar`를 `LeftPaddingColumn`, 및 `RightPaddingColumn` 앞에 표시 된 XAML에 선언 됩니다.
 
 ```csharp
 private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sender, object args)
@@ -275,7 +275,7 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 ```
 
 >[!NOTE]
->_전체 화면_ 모드는 앱에서 지원하는 경우에만 진입할 수 있습니다. 자세한 내용은 [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode)를 참조하세요. [_태블릿 모드_](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet)는 지원되는 하드웨어의 사용자 옵션이므로, 사용자는 태블릿 모드로 앱을 실행하도록 선택할 수 있습니다.
+>_전체 화면_ 모드는 앱에서 지원하는 경우에만 진입할 수 있습니다. 자세한 내용은 [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode)를 참조하세요. [_태블릿 모드_ ](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) 사용자 태블릿 모드에서 앱을 실행 하도록 선택할 수 있도록 지원 되는 하드웨어 사용자 옵션입니다.
 
 ## <a name="full-customization-example"></a>전체 사용자 지정의 예
 
@@ -381,5 +381,5 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 
 ## <a name="related-articles"></a>관련 문서
 
-- [아크릴](../style/acrylic.md)
-- [색상](../style/color.md)
+- [못](../style/acrylic.md)
+- [색](../style/color.md)

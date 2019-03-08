@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e90e460cf5f5bda7d90447440d76cf6898a83747
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660208"
 ---
 # <a name="lighting-overview"></a>조명 개요
 
@@ -27,7 +27,7 @@ Direct3D 조명을 사용하는 경우 Direct3D가 조명의 세부 사항을 �
 
 장면을 렌더링하기 위해 조명이 반드시 필요하지는 않으나 빛 없이 렌더링된 장면에서는 세부가 보이지 않습니다. 조명 없이 장면을 렌더링하면 기껏해야 사물의 윤곽만 보입니다. 대부분의 경우 이 정도로는 충분하지 않습니다.
 
-## <a name="span-iddirectlightvsambientlightspanspan-iddirectlightvsambientlightspandirect-light-vs-ambient-light"></a><span id="direct_light_vs._ambient_light"></span><span id="DIRECT_LIGHT_VS._AMBIENT_LIGHT"></span>직접 조명과 주변 광원 비교
+## <a name="span-iddirectlightvsambientlightspanspan-iddirectlightvsambientlightspandirect-light-vs-ambient-light"></a><span id="direct_light_vs._ambient_light"></span><span id="DIRECT_LIGHT_VS._AMBIENT_LIGHT"></span>직접 광원 한 앰비언트 조명 비교
 
 
 한 장면에서 사물을 비추기 위해 직접 조명과 주변 광원이 모두 사용되지만 서로 독립적으로 작용하며 매우 다른 효과를 가져옵니다. 사용자는 전혀 다른 방식으로 이 둘을 다루어야 합니다.
@@ -40,7 +40,7 @@ Direct3D 조명을 사용하는 경우 Direct3D가 조명의 세부 사항을 �
 
 적색, 녹색, 청색 요소가 결합되어 최종적인 주변 광원의 색상을 결정합니다. 알파 구성 요소가 색의 투명도를 제어합니다. 하드웨어 가속이나 RGB 에뮬레이션을 사용하면 알파 구성 요소가 무시됩니다.
 
-## <a name="span-iddirect3dlightmodelvsnaturespanspan-iddirect3dlightmodelvsnaturespandirect3d-light-model-vs-nature"></a><span id="direct3d_light_model_vs._nature"></span><span id="DIRECT3D_LIGHT_MODEL_VS._NATURE"></span>Direct3D 조명 모델과 자연광 비교
+## <a name="span-iddirect3dlightmodelvsnaturespanspan-iddirect3dlightmodelvsnaturespandirect3d-light-model-vs-nature"></a><span id="direct3d_light_model_vs._nature"></span><span id="DIRECT3D_LIGHT_MODEL_VS._NATURE"></span>특성 및 Direct3D 조명 모델
 
 
 자연 상태에서 광원으로부터 빛이 방출되면 수백 또는 수천, 수백만 개의 사물에 반사된 후 사람의 눈에 도달합니다. 빛이 반사될 때 빛의 일부는 표면에 흡수되고 일부는 임의의 방향으로 흩어지며 나머지는 다른 물체의 표면이나 사람의 눈에 도달합니다. 빛이 완전히 사라지거나 사람이 빛을 인지할 때까지 이 과정이 계속됩니다.
@@ -57,7 +57,7 @@ Direct3D에서는 자연 상태에서와 마찬가지로 주변광에 실제 방
 
 게다가 다각형의 재료는 다각형에 도달한 빛을 반사하는 방식에 영향을 미치는 속성이 있습니다. 재료가 주변 광원을 반사하는 방식을 결정하는 단일 반사 특성을 설정하고, 재료의 정반사율과 확산 반사율을 결정하는 개별 특성을 설정합니다.
 
-## <a name="span-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspancolor-values-for-lights-and-materials"></a><span id="Color_Values_for_Lights_and_Materials"></span><span id="color_values_for_lights_and_materials"></span><span id="COLOR_VALUES_FOR_LIGHTS_AND_MATERIALS"></span>조명과 재료의 색 값
+## <a name="span-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspanspan-idcolorvaluesforlightsandmaterialsspancolor-values-for-lights-and-materials"></a><span id="Color_Values_for_Lights_and_Materials"></span><span id="color_values_for_lights_and_materials"></span><span id="COLOR_VALUES_FOR_LIGHTS_AND_MATERIALS"></span>광원 및 재질 색상 값
 
 
 Direct3D는 서로 결합되어 최종 색상을 형성하는 네 개 구성 요소(적색, 녹색, 청색, 알파)로 색을 정의합니다. 각 구성 요소의 범위는 0.0 ~ 1.0입니다. 빛과 재료는 모두 동일한 구조를 사용하여 색을 정의하지만, 값은 빛과 재료에서 각기 조금씩 다르게 사용됩니다.
@@ -70,10 +70,10 @@ Direct3D는 서로 결합되어 최종 색상을 형성하는 네 개 구성 요
 
 [조명 유형](light-types.md) 및 [조명 속성](light-properties.md)을 참조하세요.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[조명과 재료](lights-and-materials.md)
+[광원 및 재질](lights-and-materials.md)
 
  
 

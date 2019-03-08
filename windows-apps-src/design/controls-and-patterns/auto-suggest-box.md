@@ -1,5 +1,5 @@
 ---
-Description: A text entry box that provides suggestions as the user types.
+Description: 사용자가 입력할 때 제안을 제공하는 텍스트 입력 상자입니다.
 title: 자동 제안 상자에 대한 지침
 ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
@@ -13,17 +13,17 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 86b0063175b5e040cd7d92357bfa4b8abac4e13c
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037175"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592408"
 ---
 # <a name="auto-suggest-box"></a>자동 제안 상자
 
 AutoSuggestBox를 사용하여 사용자가 입력과 동시에 선택할 수 있는 제안 사항 목록을 제공합니다.
 
-> **중요 API**: [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [TextChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx), [SuggestionChose 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx), [QuerySubmitted 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx)
+> **중요 한 Api**: [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)하십시오 [TextChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)를 [SuggestionChose 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx), [QuerySubmitted 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx)
 
 ![자동 제안 상자](images/controls/auto-suggest-box-open.png)
 
@@ -42,8 +42,8 @@ AutoSuggestBox를 사용하여 사용자가 입력과 동시에 선택할 수 �
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우에는 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/AutoSuggestBox">앱을 열고 작동 중인 AutoSuggestBox를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -186,4 +186,4 @@ AutoSuggestBox를 사용하여 사용자가 입력과 동시에 선택할 수 �
 - [검색](search.md)
 - [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
-- [String.Length 속성](https://msdn.microsoft.com/library/system.string.length.aspx)
+- [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length.aspx)

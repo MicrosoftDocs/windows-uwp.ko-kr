@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5451c59ab608105677a657ade41154bd2b622f5e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941010"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655048"
 ---
 # <a name="usersettings-json"></a>UserSettings(JSON)
 현재 인증 된 사용자에 대 한 설정을 반환합니다. 
@@ -21,14 +21,14 @@ ms.locfileid: "8941010"
  
 ## <a name="usersettings"></a>UserSettings
  
-사용자 개체에 다음과 같이 지정 합니다.
+UserSettings 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
 | id| 32 비트 부호 없는 정수| 설정의 식별자입니다.| 
-| 원본| 32 비트 부호 없는 정수| 설정의 소스를 나타냅니다. | 
-| titleId| 32 비트 부호 없는 정수| 식별자는 설정과 관련 된 제목입니다. | 
-| value| 8 비트 부호 없는 정수의 배열| 설정의 값을 나타냅니다. 클라이언트 설정을 검색 데이터를 읽을 수 있도록 표시 형식을 이해 해야 합니다. | 
+| 소스| 32 비트 부호 없는 정수| 설정의 원본을 나타냅니다. | 
+| titleId| 32 비트 부호 없는 정수| 설정과 연결 된 제목의 식별자입니다. | 
+| value| 8 비트 부호 없는 정수 배열| 설정의 값을 나타냅니다. 클라이언트 설정을 가져오는 데이터를 읽을 수 있으려면 표현 형식을 이해 해야 합니다. | 
   
 <a id="ID4EJC"></a>
 
@@ -55,8 +55,8 @@ ms.locfileid: "8941010"
 <a id="ID4EUC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

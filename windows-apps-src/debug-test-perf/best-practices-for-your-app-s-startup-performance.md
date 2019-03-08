@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e50d3613e5f7058e99f2e71ba023fb4191e5c734
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051106"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644538"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>앱 시작 성능 모범 사례
 
@@ -32,7 +32,7 @@ UWP 앱이 고객의 컴퓨터에 도착할 때까지 앱은 .NET 네이티브 �
 
 다음 절차는 Ngen.exe를 실행하여 앱을 프리컴파일하는 방법을 설명합니다.
 
-**Ngen.exe를 실행하려면**
+**Ngen.exe를 실행 하려면**
 
 1.  앱을 한 번 이상 실행하여 Ngen.exe에서 이를 검색할 수 있게 합니다.
 2.  다음 중 한 가지를 수행하여 **작업 스케줄러**를 엽니다.
@@ -152,7 +152,7 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 
 ### <a name="phase-2"></a>2단계
 
-앱을 활성화하는 다양한 이유가 있고 각 이유를 다르게 처리할 수 있습니다. [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/BR242330), [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/BR242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701801), [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/BR242335), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/BR242336) 및 [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701806) 메서드를 재정의하여 각 활성화 이유를 처리할 수 있습니다. 앱이 이러한 메서드로 수행해야 하는 작업 중 하나는 UI를 만들고 [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/BR209051)에 할당한 다음 [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046)를 호출하는 것입니다. 이때 시작 화면이 앱에서 만든 UI로 바뀝니다. 이 표시는 로드 화면이 되거나, 활성화할 때 UI를 만들 충분한 정보가 있는 경우 앱의 실제 UI가 될 수 있습니다.
+앱을 활성화하는 다양한 이유가 있고 각 이유를 다르게 처리할 수 있습니다. [  **OnActivated**](https://msdn.microsoft.com/library/windows/apps/BR242330), [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/BR242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701801), [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/BR242335), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/BR242336) 및 [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701806) 메서드를 재정의하여 각 활성화 이유를 처리할 수 있습니다. 앱이 이러한 메서드로 수행해야 하는 작업 중 하나는 UI를 만들고 [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/BR209051)에 할당한 다음 [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046)를 호출하는 것입니다. 이때 시작 화면이 앱에서 만든 UI로 바뀝니다. 이 표시는 로드 화면이 되거나, 활성화할 때 UI를 만들 충분한 정보가 있는 경우 앱의 실제 UI가 될 수 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp

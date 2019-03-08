@@ -1,35 +1,35 @@
 ---
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "\"Hello, world\" 앱(XAML)을 만드는 방법 알아보기"
-description: C#을 사용 하 여 응용 프로그램 언어 XAML (Extensible Markup)를 사용 하 여 Windows10에서 유니버설 Windows 플랫폼 (UWP)를 대상으로 하는 간단한 Hello, world 앱을 만들 수 있습니다.
+description: Extensible Application Markup Language (XAML)으로 사용 하 여 C# 를 만드는 간단한 Hello, world 앱이 Windows 플랫폼 (UWP (유니버설) Windows 10을 대상으로 합니다.
 ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
 ms.openlocfilehash: 433536673efb9d2f17d822599051030b219ed02f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941080"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57642158"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
 
-이 자습서에서는 간단한 만들려면 XAML과 C#을 사용 하는 방법을 "Hello, world" 앱 Windows10에서 유니버설 Windows 플랫폼 (UWP) 용입니다. Microsoft Visual Studio의 단일 프로젝트를 사용 하 여 Windows10 장치에서 실행 되는 앱을 빌드할 수 있습니다.
+이 자습서에서는 XAML을 사용 하는 방법을 설명 하 고 C# 는 간단한 "Hello, world" 앱에 대 한 Windows 플랫폼 (UWP (유니버설) Windows 10에서. Microsoft Visual Studio에서 단일 프로젝트를 사용 하 여 모든 Windows 10 장치에서 실행 되는 앱을 빌드할 수 있습니다.
 
-여기에 배울 내용은 다음과 같습니다.
+여기에서는 다음에 대한 방법을 알아봅니다.
 
--   **Windows10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2017** 프로젝트를 만듭니다.
+-   새 **Visual Studio 2017** 대상으로 하는 프로젝트 **Windows 10** 하며 **UWP**합니다.
 -   시작 페이지에서 UI를 변경하는 XAML을 작성합니다.
 -   Visual Studio의 로컬 데스크톱에서 프로젝트를 실행합니다.
--   SpeechSynthesizer를 사용하여 단추를 누르면 앱이 말하게 합니다.
+-   SpeechSynthesizer를 사용하여 단추를 누를 때 앱이 말하게 합니다.
 
 
 ## <a name="before-you-start"></a>시작하기 전에...
 
--   [유니버설 Windows 앱이란?](universal-application-platform-guide.md)
+-   [유니버설 Windows 앱 이란?](universal-application-platform-guide.md)
 -   [Visual Studio 2017(및 Windows 10) 다운로드](https://developer.microsoft.com/windows/downloads). 도움이 필요하면 [설정](get-set-up.md) 방법을 알아보세요.
--   또한, 여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃을 변경하는 경우 **창** 메뉴에서 **창 레이아웃 다시 설정** 명령을 사용하여 다시 설정할 수 있습니다.
+-   또한, 여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃이 변경된 경우 **창** 메뉴에서 **창 레이아웃 다시 설정** 명령을 사용하여 다시 설정할 수 있습니다.
 
 > [!NOTE]
 > 이 자습서에서는 Visual Studio Community 2017을 사용합니다. 다른 버전의 Visual Studio를 사용하는 경우 약간 다르게 보일 수 있습니다.
@@ -40,15 +40,15 @@ ms.locfileid: "8941080"
 
 
 
-## <a name="step-1-create-a-new-project-in-visual-studio"></a>1단계: Visual Studio에서 새 프로젝트 만들기
+## <a name="step-1-create-a-new-project-in-visual-studio"></a>1단계: Visual Studio에서 새 프로젝트를 만듭니다.
 
 1.  Visual Studio 2017을 시작합니다.
 
-2.  **파일** 메뉴에서 **새로 만들기 > 프로젝트** *새 프로젝트* 대화 상자를 엽니다.
+2.  **파일** 메뉴에서 **새로 만들기 > 프로젝트** 열려는 합니다 *새 프로젝트* 대화 합니다.
 
-3.  왼쪽에 있는 템플릿 목록에서 선택 **설치 됨 > Visual C# > Windows 유니버설** UWP 프로젝트 템플릿 목록이 표시 됩니다.
+3.  왼쪽의 템플릿 목록에서 선택 **설치 됨 > Visual C# > Windows 유니버설** UWP 프로젝트 템플릿 목록을 보려면.
 
-    (유니버설 템플릿이 보이지 않으면 UWP 앱을 만들기 위한 구성 요소가 누락된 것일 수 있습니다. 설치 과정을 다시 실행하고 **새 프로젝트** 대화 상자에서 *Visual Studio 설치 관리자 열기*를 클릭하여 UWP 지원을 추가할 수 있습니다. 참조 [설정](get-set-up.md)합니다.)
+    (유니버설 템플릿이 보이지 않으면 UWP 앱을 만들기 위한 구성 요소가 누락된 것일 수 있습니다. 설치 과정을 다시 실행하고 **새 프로젝트** 대화 상자에서 *Visual Studio 설치 관리자 열기*를 클릭하여 UWP 지원을 추가할 수 있습니다. 참조 [설정할](get-set-up.md).)
 
     ![설치 과정을 다시 실행하는 방법](images/win10-cs-install.png)
 
@@ -83,7 +83,7 @@ ms.locfileid: "8941080"
 -   App.xaml은 앱 전체에서 사용되는 리소스를 선언하는 파일입니다.
 -   App.xaml.cs는 App.xaml의 코드 숨김 파일입니다. 모든 코드 숨김 페이지와 같이 여기에는 `InitializeComponent` 메서드를 호출하는 생성자가 포함되어 있습니다. `InitializeComponent` 메서드는 작성하지 않습니다. 이 메서드는 Visual Studio에서 생성되며 그 주요 목적은 XAML 파일에 선언된 요소를 초기화하는 것입니다.
 -   App.xaml.cs는 앱의 진입점입니다.
--   App.xaml.cs는 [활성화](../launch-resume/activate-an-app.md) 와 앱의 [일시 중단](../launch-resume/suspend-an-app.md) 처리 하는 방법을도 포함 되어 있습니다.
+-   App.xaml.cs를 처리 하는 메서드도 포함 [활성화](../launch-resume/activate-an-app.md) 하 고 [일시 중단](../launch-resume/suspend-an-app.md) 앱.
 
 *MainPage.xaml*
 
@@ -93,20 +93,20 @@ ms.locfileid: "8941080"
 
 *Package.appxmanifest*
 -   이름, 설명, 타일, 시작 페이지 등 앱을 설명하는 매니페스트 파일입니다.
--   종속성, 리소스 및 응용 프로그램에 포함 된 파일의 목록이 포함 되어 있습니다.
+-   종속성, 리소스 및 앱에 포함 된 파일의 목록을 포함 합니다.
 
 *로고 이미지 집합*
--   Assets/Square150x150Logo.scale-200.png와 Wide310x150Logo.scale 200.png 시작 메뉴에서 앱을 (보통 또는 전체 크기)를 나타냅니다.
--   Assets/Square44x44Logo.png 작업 관리자, 작업 표시줄 및 시작 메뉴의 앱 목록에 앱을 나타냅니다.
+-   Assets/Square150x150Logo.scale-200.png 및 Wide310x150Logo.scale 200.png 시작 메뉴에서 앱을 (보통 또는 와이드 크기)를 나타냅니다.
+-   Assets/Square44x44Logo.png 시작 메뉴, 작업 표시줄 및 작업 관리자의 앱 목록에 앱을 나타냅니다.
 -   Assets/StoreLogo.png는 Microsoft Store에 앱을 나타냅니다.
 -   Assets/SplashScreen.scale-200.png는 앱 시작 시 표시되는 시작 화면입니다.
--   Assets/LockScreenLogo.scale-200.png은 시스템이 잠겨 있을 때 잠금 화면에서 앱을 나타내는 데 사용할 수 있습니다.
+-   Assets/LockScreenLogo.scale-200.png은 시스템 잠기면 잠금 화면에서 앱을 나타내는 데 사용할 수 있습니다.
 
 ## <a name="step-2-adding-a-button"></a>2단계: 단추 추가
 
 ### <a name="using-the-designer-view"></a>디자이너 보기 사용
 
-페이지에 단추를 추가해 보겠습니다. 이 자습서에서는 이전에 나열한 파일 중 App.xaml, MainPage.xaml 및 MainPage.xaml.cs만 다룹니다.
+페이지에 단추를 추가해 보겠습니다. 이 자습서에서는 몇 가지 파일을 사용 하 여 작업 이전에 나열 합니다. App.xaml, MainPage.xaml을 및 MainPage.xaml.cs를 선택 합니다.
 
 1.  **MainPage.xaml**을 두 번 클릭하여 디자인 뷰에서 엽니다.
 
@@ -155,16 +155,16 @@ ms.locfileid: "8941080"
 -   **로컬 컴퓨터**
 -   **원격 컴퓨터**
 
-**로컬 컴퓨터에서 디버깅을 시작하려면**
+**로컬 컴퓨터에서 디버깅을 시작 하려면**
 
 1.  **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **로컬 컴퓨터**가 선택되었는지 확인합니다. 기본적으로 선택되어 있습니다.
 2.  도구 모음에서 **디버깅 시작** 단추(![디버깅 시작 단추](images/startdebug-sm.png))를 클릭합니다.
 
-   –또는–
+   -또는-
 
    **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.
 
-   –또는–
+   -또는-
 
    F5 키를 누릅니다.
 
@@ -178,15 +178,15 @@ Windows 키를 눌러 **시작** 메뉴를 연 후 모든 앱을 표시합니다
 
 아직 기능은 많지 않지만, 첫 UWP 앱을 빌드한 것을 축하드립니다.
 
-**디버깅을 중지하려면**
+**디버깅을 중지 하려면**
 
    도구 모음에서 **디버깅 중지** 단추(![디버깅 중지 단추](images/stopdebug.png))를 클릭합니다.
 
-   –또는–
+   -또는-
 
    **디버그** 메뉴에서 **디버깅 중지**를 클릭합니다.
 
-   –또는–
+   -또는-
 
    앱 창을 닫습니다.
 
@@ -222,7 +222,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-메서드 서명을 이제 **비동기** 키워드를 포함 하거나 앱을 실행 하려고 할 때 오류가 있는 있는지 확인 합니다.
+메서드 서명은 이제 포함 되어 있는지 확인 합니다 **비동기** 키워드 또는 하면 앱을 실행 하려고 할 때 오류가 표시 됩니다.
 
 ### <a name="what-did-we-just-do"></a>방금 어떤 작업을 수행했나요?
 
@@ -233,7 +233,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 ## <a name="summary"></a>요약
 
-축 하 합니다, Windows10 및 UWP 용 첫 번째 앱을 만들었습니다!
+축, UWP 및 Windows 10에 대 한 첫 번째 앱을 만들었습니다!
 
 XAML을 통해 앱에서 사용할 컨트롤을 배치하는 방법을 알아보려면 [표 자습서](../design/layout/grid-tutorial.md)를 살펴보거나 [다음 단계](learn-more.md)로 바로 이동하세요.
 
@@ -241,7 +241,7 @@ XAML을 통해 앱에서 사용할 컨트롤을 배치하는 방법을 알아보
 
 * [첫 번째 앱](your-first-app.md)
 * [UWP 앱 게시](https://developer.microsoft.com/store/publish-apps)
-* [UWP 앱 개발에 대한 방법 문서](https://developer.microsoft.com/windows/apps/develop)
+* [UWP 앱 개발에 대 한 방법 문서](https://developer.microsoft.com/windows/apps/develop)
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
-* [유니버설 Windows 앱이란?](universal-application-platform-guide.md)
-* [Windows 계정 등록](sign-up.md)
+* [유니버설 Windows 앱 이란?](universal-application-platform-guide.md)
+* [Windows 계정에 등록](sign-up.md)

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 869f0ac2b255c0dee231828f6d9064a917668821
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937468"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646378"
 ---
 # <a name="line-strips"></a>선 스트립
 
@@ -55,10 +55,10 @@ CUSTOMVERTEX Vertices[] =
 d3dDevice->DrawPrimitive( D3DPT_LINESTRIP, 0, 5 );
 ```
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[기본 요소](primitives.md)
+[기본 형식](primitives.md)
 
  
 

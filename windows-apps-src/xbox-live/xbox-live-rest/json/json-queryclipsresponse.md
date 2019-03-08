@@ -8,30 +8,30 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a0369de617fd60fcc71e7d69b46ced6b499e8de5
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115353"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650508"
 ---
 # <a name="queryclipsresponse-json"></a>QueryClipsResponse(JSON)
-목록에 대 한 페이징 정보와 함께 반환 게임 클립의 목록을 래핑합니다. 
+목록에 대 한 페이징 정보와 함께 반환 게임 클립 목록을 래핑합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="queryclipsresponse"></a>QueryClipsResponse
  
-QueryClipsResponse 개체에는 다음과 같이 지정 합니다.
+QueryClipsResponse 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| <b>gameClips</b>| GameClip의 배열| 요청 제한이 (<b>maxItems</b>) 쿼리를 충족 하는 게임 클립의 배열입니다.| 
-| <b>pagingInfo</b>| PagingInfo| 필요한 연속 작업 및 목록에 대 한 후속 호출에 대 한 페이징 하는 요청 제한을 초과 (<b>maxItems</b>) 정보를 포함 합니다.| 
+| <b>gameClips</b>| 클립의 배열| 요청 제한까지 쿼리를 충족 하는 게임 클립의 배열 (<b>maxItems</b>).| 
+| <b>pagingInfo</b>| pagingInfo| 필요한 연속 및 목록에 대 한 후속 호출에 대 한 페이징 하는 요청 한도 초과 된 정보가 포함 되어 있습니다 (<b>maxItems</b>).| 
   
 <a id="ID4E2B"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json
@@ -129,12 +129,12 @@ QueryClipsResponse 개체에는 다음과 같이 지정 합니다.
 <a id="ID4EGC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
   
 <a id="ID4ESC"></a>
 
  
-##### <a name="reference"></a>참조   
+##### <a name="reference"></a>참고자료   

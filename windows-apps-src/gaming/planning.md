@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 계획, 접근성, 클라우드, 수익 창출, 패키지, 기술, 개념, 승인
 ms.localizationpriority: medium
 ms.openlocfilehash: 47f613ff814788df947ee39590af0e01b7e3622f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946005"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653778"
 ---
 # <a name="planning-for-uwp-games"></a>UWP 게임 계획
 
@@ -34,23 +34,23 @@ ms.locfileid: "8946005"
 <td align="left"><p>게임을 개발하는 데 도움이 되는 기술의 목록입니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="accessibility-for-games.md">게임의 접근성</a></p></td>
+<td align="left"><p><a href="accessibility-for-games.md">게임에 대 한 내게 필요한 옵션</a></p></td>
 <td align="left"><p>게임의 접근성을 높이는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="cloud-for-games.md">게임용 클라우드</a></p></td>
+<td align="left"><p><a href="cloud-for-games.md">게임을 위한 클라우드</a></p></td>
 <td align="left"><p>게임용 클라우드를 사용합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="monetization-for-games.md">게임의 수익 창출</a></p></td>
+<td align="left"><p><a href="monetization-for-games.md">게임에 대 한 수익 화</a></p></td>
 <td align="left"><p>게임의 수익을 창출하는 방법입니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="package-your-windows-store-directx-game.md">게임 패키지 작성</a></p></td>
+<td align="left"><p><a href="package-your-windows-store-directx-game.md">게임 패키지</a></p></td>
 <td align="left"><p>Microsoft Store용 게임 패키지를 준비합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="concept-approval.md">개념 승인</a></p></td>
+<td align="left"><p><a href="concept-approval.md">컨셉 승인</a></p></td>
 <td align="left"><p>게임 개념을 승인받습니다.</p></td>
 </tr>
 </tbody>

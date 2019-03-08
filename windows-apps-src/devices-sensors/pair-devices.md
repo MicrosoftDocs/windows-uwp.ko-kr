@@ -1,33 +1,33 @@
 ---
 ms.assetid: F8A741B4-7A6A-4160-8C5D-6B92E267E6EA
-title: 장치 페어링
-description: 일부 디바이스는 페어링해야 사용할 수 있습니다. Windows.Devices.Enumeration 네임스페이스는 세 가지 방법의 장치 페어링을 지원합니다.
+title: 디바이스 페어링
+description: 일부 디바이스는 페어링해야 사용할 수 있습니다. Windows.Devices.Enumeration 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bb5c156dc29f8229db9e4cb215fe462b4be6af6
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050436"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653388"
 ---
-# <a name="pair-devices"></a>장치 페어링
+# <a name="pair-devices"></a>디바이스 페어링
 
 
 
-**중요 API**
+**중요 한 Api**
 
 - [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
-일부 디바이스는 페어링해야 사용할 수 있습니다. [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) 네임스페이스는 세 가지 방법으로 장치를 페어링하도록 지원합니다.
+일부 디바이스는 페어링해야 사용할 수 있습니다. [  **Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다.
 
 -   자동 페어링
 -   기본 페어링
 -   사용자 지정 페어링
 
-**팁**일부 장치 사용 하기 위해 페어링하지 않아도 됩니다. 이는 자동 페어링에 대한 섹션에서 설명합니다.
+**팁**  일부 장치를 사용 하려면 연결할 필요가 없습니다. 이는 자동 페어링에 대한 섹션에서 설명합니다.
 
  
 
@@ -68,7 +68,7 @@ ms.locfileid: "9050436"
 ## <a name="sample"></a>샘플
 
 
-[**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](https://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
+[  **Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](https://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
 
  
 

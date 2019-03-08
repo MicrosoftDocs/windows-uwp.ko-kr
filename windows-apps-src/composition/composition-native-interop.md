@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cab06db098312531a488731fb50bae99d8f2c8f6
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058834"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645068"
 ---
 # <a name="composition-native-interoperation-with-directx-and-direct2d"></a>DirectX 및 Direct2D를 사용하여 컴퍼지션 네이티브 상호 운용
 
@@ -29,7 +29,7 @@ Windows.UI.Composition API는 콘텐츠를 작성자로 직접 이동할 수 있
 
 표면에 픽셀을 로드하려면 응용 프로그램의 요청에 따라 Direct2D 컨텍스트 또는 텍스처를 나타내는 DirectX 인터페이스를 반환하는 [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) 메서드를 응용 프로그램에서 호출해야 합니다. 그런 다음 응용 프로그램은 픽셀을 해당 텍스처로 렌더링하거나 업로드해야 합니다. 응용 프로그램이 완료되면 [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) 메서드를 호출해야 합니다. 이 시점에서만 컴퍼지션에서 새 픽셀을 사용할 수 있지만 다음에 시각적 트리에 대한 모든 변경 사항이 커밋될 때까지 화면에 표시되지 않습니다. **EndDraw**가 호출되기 전에 시각적 트리가 커밋되면 진행 중인 업데이트가 화면에 표시되지 않고 표면에 **BeginDraw** 전의 콘텐츠가 계속 표시됩니다. **EndDraw**가 호출되면 BeginDraw에서 반환한 텍스처 또는 Direct2D 컨텍스트 포인터가 무효화됩니다. **EndDraw** 호출 후에는 응용 프로그램에서 해당 포인터를 캐시할 수 없습니다.
 
-응용 프로그램에서는 지정된 [**CompositionGraphicsDevice**](https://msdn.microsoft.com/library/windows/apps/Dn706749)에 대해 한 번에 한 표면에서만 BeginDraw를 호출할 수 있습니다. [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) 호출 후 응용 프로그램은 해당 표면에서 [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060)를 호출한 다음 다른 표면에서 **BeginDraw**를 호출해야 합니다. API는 Agile이므로 여러 작업자 스레드에서 렌더링을 수행하려면 응용 프로그램에서 이러한 호출을 동기화합니다. 응용 프로그램에서 한 표면의 렌더링을 중단하고 임시로 다른 표면으로 전환하려는 경우 [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx) 메서드를 사용할 수 있습니다. 이렇게 하면 다른 **BeginDraw**가 성공하지만 화면 컴퍼지션에서 첫 번째 표면 업데이트를 사용할 수 없습니다. 이 경우 응용 프로그램에서 트랜잭션 방식으로 여러 업데이트를 수행할 수 있습니다. 표면이 일시 중단되면 응용 프로그램에서 [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) 메서드를 호출하여 업데이트를 계속 진행하거나 **EndDraw**를 호출하여 해당 업데이트가 완료된 것으로 선언할 수 있습니다. 즉, 지정된 **CompositionGraphicsDevice**에 대해 한 번에 한 표면만 업데이트할 수 있습니다. 각 그래픽 장치는 상호 독립적으로 이 상태를 유지하므로 표면이 서로 다른 그래픽 장치에 속한 경우 응용 프로그램에서 두 표면을 동시에 렌더링할 수 있습니다. 그러나 이러한 두 표면의 비디오 메모리를 함께 풀링할 수 없으므로 메모리 효율성이 떨어집니다.
+응용 프로그램에서는 지정된 [**CompositionGraphicsDevice**](https://msdn.microsoft.com/library/windows/apps/Dn706749)에 대해 한 번에 한 표면에서만 BeginDraw를 호출할 수 있습니다. [  **BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) 호출 후 응용 프로그램은 해당 표면에서 [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060)를 호출한 다음 다른 표면에서 **BeginDraw**를 호출해야 합니다. API는 Agile이므로 여러 작업자 스레드에서 렌더링을 수행하려면 응용 프로그램에서 이러한 호출을 동기화합니다. 응용 프로그램에서 한 표면의 렌더링을 중단하고 임시로 다른 표면으로 전환하려는 경우 [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx) 메서드를 사용할 수 있습니다. 이렇게 하면 다른 **BeginDraw**가 성공하지만 화면 컴퍼지션에서 첫 번째 표면 업데이트를 사용할 수 없습니다. 이 경우 응용 프로그램에서 트랜잭션 방식으로 여러 업데이트를 수행할 수 있습니다. 표면이 일시 중단되면 응용 프로그램에서 [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) 메서드를 호출하여 업데이트를 계속 진행하거나 **EndDraw**를 호출하여 해당 업데이트가 완료된 것으로 선언할 수 있습니다. 즉, 지정된 **CompositionGraphicsDevice**에 대해 한 번에 한 표면만 업데이트할 수 있습니다. 각 그래픽 장치는 상호 독립적으로 이 상태를 유지하므로 표면이 서로 다른 그래픽 장치에 속한 경우 응용 프로그램에서 두 표면을 동시에 렌더링할 수 있습니다. 그러나 이러한 두 표면의 비디오 메모리를 함께 풀링할 수 없으므로 메모리 효율성이 떨어집니다.
 
 응용 프로그램에서 잘못된 인수를 전달하거나 한 표면에서 **EndDraw**를 호출하기 전에 다른 표면에서 **BeginDraw**를 호출하는 등 잘못된 작업을 수행한 경우 [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx), [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) 및 [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) 메서드에서 오류를 반환합니다. 이러한 오류는 응용 프로그램 버그를 의미하므로 빠른 오류로 처리되어야 합니다. 기본 DirectX 장치가 분실된 경우에도 **BeginDraw**에서 오류를 반환할 수 있습니다. 응용 프로그램에서 해당 DirectX 장치를 다시 만든 다음 다시 시도할 수 있으므로 이 오류는 치명적이지 않습니다. 따라서 응용 프로그램은 렌더링을 생략하여 장치 분실을 처리해야 합니다. 어떤 이유로든 **BeginDraw**가 실패한 경우 시작되지 않았으므로 응용 프로그램에서 **EndDraw**를 호출해서는 안 됩니다.
 
@@ -39,11 +39,11 @@ Windows.UI.Composition API는 콘텐츠를 작성자로 직접 이동할 수 있
 
 ## <a name="usage-example"></a>사용 예제
 
-다음 코드 예제에서는 상호 운용 하는 시나리오를 보여 줍니다. 이 예제에서는 interop 머리글과 COM 기반 DirectWrite 및 Direct2D Api를 사용 하 여 텍스트를 렌더링 하는 코드의 종류와 함께 Windows 컴퍼지션의 Windows 런타임 기반 노출 영역에서 형식을 결합 합니다. 이 예제에서는 이러한 기술 간의 상호 작용을 원활 하 게 하기 위해 [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) 및 [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) 를 사용 합니다. 이 예제에서는 DirectWrite를 사용 하 여 텍스트를 배치 하 고 Direct2D 렌더링을 사용 합니다. 컴퍼지션 그래픽 장치는 초기화 시 직접 Direct2D 장치를 사용합니다. 이렇게 하면 **BeginDraw** 은 응용 프로그램 각 그리기 작업에서 반환 된 ID3D11Texture2D 인터페이스를 래핑하는 Direct2D 컨텍스트를 만들어 보다 훨씬 더 효율적는 **ID2D1DeviceContext** 인터페이스 포인터를 반환할 수 있습니다.
+다음 코드 예제에서는 상호 운용성 시나리오를 보여 줍니다. 이 예제에서는 COM 기반 DirectWrite 및 Direct2D Api를 사용 하 여 텍스트를 렌더링 하는 코드 interop 헤더와 함께 Windows 컴퍼지션의 Windows 런타임 기반 노출 영역에서 형식을 결합 합니다. 예제에서는 [ **BeginDraw** ](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) 하 고 [ **EndDraw** ](https://msdn.microsoft.com/library/windows/apps/mt620060) 이들이 기술 간의 상호 운용 하도록 원활 하 게 확인 합니다. 예제 DirectWrite를 사용 하 여 텍스트를 레이아웃할 수 및 Direct2D 렌더링을 사용 합니다. 컴퍼지션 그래픽 장치는 초기화 시 직접 Direct2D 장치를 사용합니다. 따라서 **BeginDraw** 반환 하는 **ID2D1DeviceContext** 응용 프로그램을 래핑하는 반환 된 Direct2D 컨텍스트 만들기 보다 훨씬 더 효율적 인터페이스 포인터 각 그리기 작업에서 ID3D11Texture2D 인터페이스입니다.
 
-아래 코드 예제 두 가지 있습니다. 첫 번째는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 예제입니다 (완료) 하 여 다음 C + + (이 예제에서는 DirectWrite 및 Direct2D 부분을 생략)는 CX 코드 예제입니다.
+아래 두 코드 예제가 있습니다. 첫 번째는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 합니다 (전체) 예 고 C + + CX 코드 예제 (DirectWrite 및 Direct2D 예제 부분을 생략).
 
-사용 하 여 C + + WinRT 아래 코드 예제에서는 먼저 새 만듭니다 **Core App (C + + WinRT)** Visual Studio에서 프로젝트 (요구 사항에 대 한 참조 [Visual Studio 지원 C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). 프로젝트를 만들 때 대상 버전 **Windows 10, 버전 1803 (10.0;으로 선택 빌드 17134)**. 이 코드는 빌드 및 테스트 버전입니다. 내용을 `App.cpp` , 아래 코드 목록을 사용 하 여 소스 코드 파일을 빌드하고 실행 합니다. 응용 프로그램이 렌더링 문자열 "Hello, World!" 투명 배경에서 검은색 텍스트입니다.
+사용할 C + + 아래 WinRT 코드 예에서는 먼저 새로 만듭니다 **Core 앱 (C + + /cli WinRT)** Visual Studio에서 프로젝트 (요구 사항에 대 한 참조 [Visual Studio 지원 C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). 프로젝트를 만드는 동안 대상 버전 선택 **Windows 10, 버전 1803 (10.0; 빌드 17134)** 합니다. 이 코드를 빌드 및 테스트 버전입니다. 내용을 대체 하 `App.cpp` 아래 나열 된 코드를 사용 하 여 소스 코드 파일을 빌드 및 실행 합니다. 응용 프로그램 렌더링 문자열 "Hello, World!" 투명 한 배경 기반 검은색 텍스트로 합니다.
 
 ```cppwinrt
 // App.cpp

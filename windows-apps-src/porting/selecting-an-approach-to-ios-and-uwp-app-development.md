@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9bf23926a1c17615db5ef838d21f9a46a8921c8c
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114669"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655788"
 ---
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>iOS 및 UWP 앱 개발 방법 선택
 
@@ -54,7 +54,7 @@ Windows 및 iOS는 양상이 매우 다른 거대한 제품으로 보일 수 있
 
     핵심 비즈니스 논리를 Objective-C 또는 Swift가 아닌 C++로 작성하는 경우 프로젝트를 사소하게 변경할 때만 이 코드를 사용하는 것이 좋습니다. 그런 후 다른 Windows 앱처럼 XAML을 사용하여 UI를 정의하고, 필요할 때 C++ 코드로 불러올 수 있습니다.
 
--   [ANGLE을 사용하여 Windows에서 OpenGL ES를 실행합니다.](https://go.microsoft.com/fwlink/p/?linkid=618387)
+-   [각도 사용 하 여 Windows에서 OpenGL ES를 실행 하려면](https://go.microsoft.com/fwlink/p/?linkid=618387)
 
     OpenGL ES 2.0 프로젝트를 포팅하는 중간 단계에서 ANGLE을 사용합니다. ANGLE을 사용하면 OpenGL ES API 호출을 DirectX 11 API 호출로 변환하여 Windows에서 OpenGL ES 콘텐츠를 실행할 수 있습니다.
 

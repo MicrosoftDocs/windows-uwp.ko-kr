@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d2c965bcfbf81efe73ce8aff93cdb8b31163fbd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941738"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653848"
 ---
 # <a name="custom-manipulation-experiences-with-interactiontracker"></a>InteractionTracker를 사용한 사용자 지정 조작 경험
 
@@ -59,7 +59,7 @@ InteractionTracker는 Windows.UI.Composition.Interactions 네임스페이스 105
 
 ### <a name="interactiontracker-state-machine"></a>InteractionTracker 상태 시스템
 
-앞서 언급 했 듯이 InteractionTracker는 상태 시스템으로 구성-각각 다른 fourstates 중 하나로 전환할 수 있습니다. (InteractionTracker가 이러한 상태 사이에서 전환하는 방식에 대한 자세한 내용은 [InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker) 클래스 설명서를 참조하세요.)
+이전에 설명한 대로 InteractionTracker는 다른 네 가지 상태 중 하나로 전환할 수 있으며 각 – 4 상태를 사용 하 여 상태 시스템. (InteractionTracker가 이러한 상태 사이에서 전환하는 방식에 대한 자세한 내용은 [InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker) 클래스 설명서를 참조하세요.)
 
 | 상태 | 설명 |
 |-------|-------------|
@@ -78,7 +78,7 @@ InteractionTracker가 입력으로 구동되도록 하려면 VisualInteractionSo
 
 1. 입력이 추적되고 좌표 공간 제스처가 감지될 적중 횟수 테스트 영역
 1. 감지되고 라우팅될 입력 구성의 몇 가지 예는 다음과 같습니다.
-    - 감지되는 제스처: 위치 X 및 Y(수평 및 수직 이동), 크기 조정(손가락 모으기)
+    - 검색 가능한 제스처의 경우: 위치 X 및 Y (가로 및 세로 이동) 확장 (축소)
     - 관성
     - 레일 및 체인
     - 리디렉션 모드: 자동으로 InteractionTracker로 리디렉션되는 입력 데이터
@@ -121,7 +121,7 @@ var opacityExp = -_tracker.GetReference().Position;
 > [!NOTE]
 > 식에서 InteractionTracker의 위치를 참조하는 경우, 올바른 방향으로 이동하도록 결과 식의 값을 무효화해야 합니다. 그래프상에서 InteractionTracker가 원점에서부터 벗어나 "실제" 좌표에서 InteractionTracker의 진행(예: 원점으로부터의 거리)에 대해 생각할 수 있기 때문입니다.
 
-## <a name="get-started"></a>시작하기
+## <a name="get-started"></a>시작
 
 InteractionTracker를 사용하여 사용자 지정 조작 경험을 만들기 시작하려면:
 
@@ -167,5 +167,5 @@ private void InteractionTrackerSetup(Compositor compositor, Visual hitTestRoot)
 
 InteractionTracker의 고급 사용법은 다음 문서를 참조하세요.
 
-- [InertiaModifier로 끌기 지점 만들기](inertia-modifiers.md)
-- [SourceModifier로 당겨서 새로 고침](source-modifiers.md)
+- [맞춤 지점이 InertiaModifiers를 사용 하 여 만들기](inertia-modifiers.md)
+- [끌어오기-새로 고침 SourceModifiers 사용 하 여](source-modifiers.md)

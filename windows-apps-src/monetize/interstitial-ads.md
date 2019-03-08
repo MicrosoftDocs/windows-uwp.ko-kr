@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 광고 관리, 중간 광고
 ms.localizationpriority: medium
 ms.openlocfilehash: 9abf761aa141ef3d0c19d6d5401b6815542d4172
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047734"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603918"
 ---
 # <a name="interstitial-ads"></a>중간 광고
 
@@ -44,7 +44,7 @@ ms.locfileid: "9047734"
 
 * [XAML/.NET](#interstitialadsxaml10)
 * [HTML/JavaScript](#interstitialadshtml10)
-* [C++(DirectX interop)](#interstitialadsdirectx10)
+* [C + + (DirectX Interop)](#interstitialadsdirectx10)
 
 <span id="interstitialadsxaml10"/>
 
@@ -60,7 +60,7 @@ ms.locfileid: "9047734"
 
 3. 프로젝트에 Microsoft Advertising SDK 참조를 추가합니다.
 
-    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
+    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가.** 를 선택합니다.
     2.  **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for XAML**(버전 10.0) 옆의 확인란을 선택합니다.
     3.  **참조 관리자**에서 확인을 클릭합니다.
 
@@ -71,7 +71,7 @@ ms.locfileid: "9047734"
 4.  앱의 적절한 위치(예: ```MainPage``` 또는 다른 페이지)에서 [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 개체를 비롯하여 중간 광고 응용 프로그램 ID 및 광고 단위 ID를 나타내는 여러 문자열 필드를 선언합니다. 다음 코드 예제에서는 `myAppId` 및 `myAdUnitId` 필드를 중간 광고에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)에 할당합니다.
 
     > [!NOTE]
-    > 모든 **InterstitialAd**에는 컨트롤 할 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 스토어에 앱을 게시 하기 전 [대체 이러한 테스트 값을 라이브 값](#release) 파트너 센터에서.
+    > 모든 **InterstitialAd**에는 컨트롤 할 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 앱 스토어에 게시 하기 전에 수행 해야 합니다 [대체 이러한 실시간 값을 사용 하 여 값을 테스트](#release) 파트너 센터에서.
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet2)]
 
@@ -79,11 +79,11 @@ ms.locfileid: "9047734"
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet3)]
 
-6.  *동영상 중간* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 30~60초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType.Video**를 지정합니다.
+6.  표시 하려는 경우는 *중간 비디오* ad: 약 30 ~ 60 초 광고를 필요 하기 전에 사용 된 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) ad 사전 인출 하는 방법입니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType.Video**를 지정합니다.
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet4)]
 
-    *중간 배너* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 5~8초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType.Display**를 지정합니다.
+    표시 하려는 경우는 *중간 배너* ad: 약 5 ~ 8 초 광고를 필요 하기 전에 사용 된 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) ad 사전 인출 하는 방법입니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType.Display**를 지정합니다.
 
     ```csharp
     myInterstitialAd.RequestAd(AdType.Display, myAppId, myAdUnitId);
@@ -111,7 +111,7 @@ ms.locfileid: "9047734"
 
 3. 프로젝트에 Microsoft Advertising SDK 참조를 추가합니다.
 
-    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
+    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가.** 를 선택합니다.
     2.  **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for JavaScript**(버전 10.0) 옆의 확인란을 선택합니다.
     3.  **참조 관리자**에서 확인을 클릭합니다.
 
@@ -124,7 +124,7 @@ ms.locfileid: "9047734"
 4.  프로젝트의 .js 파일에서 [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 개체를 비롯하여 중간 광고 응용 프로그램 ID 및 광고 단위 ID를 포함하는 여러 필드를 선언합니다. 다음 코드 예제에서는 `applicationId` 및 `adUnitId` 필드를 중간 광고에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)에 할당합니다.
 
     > [!NOTE]
-    > 모든 **InterstitialAd**에는 컨트롤 할 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 스토어에 앱을 게시 하기 전 [대체 이러한 테스트 값을 라이브 값](#release) 파트너 센터에서.
+    > 모든 **InterstitialAd**에는 컨트롤 할 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 앱 스토어에 게시 하기 전에 수행 해야 합니다 [대체 이러한 실시간 값을 사용 하 여 값을 테스트](#release) 파트너 센터에서.
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet1)]
 
@@ -132,11 +132,11 @@ ms.locfileid: "9047734"
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet2)]
 
-5. *동영상 중간* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 30~60초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **InterstitialAdType.video**를 지정합니다.
+5. 표시 하려는 경우는 *중간 비디오* ad: 약 30 ~ 60 초 광고를 필요 하기 전에 사용 된 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) ad 사전 인출 하는 방법입니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **InterstitialAdType.video**를 지정합니다.
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet3)]
 
-    *중간 배너* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 5~8초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **InterstitialAdType.display**를 지정합니다.
+    표시 하려는 경우는 *중간 배너* ad: 약 5 ~ 8 초 광고를 필요 하기 전에 사용 된 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) ad 사전 인출 하는 방법입니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **InterstitialAdType.display**를 지정합니다.
 
     ```js
     if (interstitialAd) {
@@ -156,7 +156,7 @@ ms.locfileid: "9047734"
 
 <span id="interstitialadsdirectx10"/>
 
-### <a name="c-directx-interop"></a>C++(DirectX Interop)
+### <a name="c-directx-interop"></a>C++(DirectX interop)
 
 이 샘플에서는 사용자가 Visual Studio에서 C++ **DirectX 및 XAML 앱(유니버설 Windows)** 프로젝트를 만들었으며 특정 CPU 아키텍처를 대상으로 한다고 가정합니다.
  
@@ -164,7 +164,7 @@ ms.locfileid: "9047734"
 
 3. 프로젝트에 Microsoft Advertising SDK 참조를 추가합니다.
 
-    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
+    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가.** 를 선택합니다.
     2.  **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for XAML**(버전 10.0) 옆의 확인란을 선택합니다.
     3.  **참조 관리자**에서 확인을 클릭합니다.
 
@@ -175,7 +175,7 @@ ms.locfileid: "9047734"
 3.  동일한 헤더 파일에서 중간 광고 응용 프로그램 ID 및 광고 단위 ID를 나타내는 여러 문자열 필드를 선언합니다. 다음 코드 예제에서는 `myAppId` 및 `myAdUnitId` 필드를 중간 광고에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)에 할당합니다.
 
     > [!NOTE]
-    > 모든 **InterstitialAd**에는 컨트롤 할 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 스토어에 앱을 게시 하기 전 [대체 이러한 테스트 값을 라이브 값](#release) 파트너 센터에서.
+    > 모든 **InterstitialAd**에는 컨트롤 할 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 앱 스토어에 게시 하기 전에 수행 해야 합니다 [대체 이러한 실시간 값을 사용 하 여 값을 테스트](#release) 파트너 센터에서.
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet2)]
 
@@ -187,11 +187,11 @@ ms.locfileid: "9047734"
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet4)]
 
-7. *동영상 중간* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 30~60초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType::Video**를 지정합니다.
+7. 표시 하려는 경우는 *중간 비디오* ad: 중간 광고가 필요한 시점에서 약 30~60초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType::Video**를 지정합니다.
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet5)]
 
-    *중간 배너* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 5~8초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType::Display**를 지정합니다.
+    표시 하려는 경우는 *중간 배너* ad: 약 5 ~ 8 초 광고를 필요 하기 전에 사용 된 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) ad 사전 인출 하는 방법입니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType::Display**를 지정합니다.
 
     ```cpp
     m_interstitialAd->RequestAd(AdType::Display, myAppId, myAdUnitId);
@@ -209,35 +209,35 @@ ms.locfileid: "9047734"
 
 <span id="release" />
 
-## <a name="release-your-app-with-live-ads"></a>라이브 광고로 앱 릴리스
+## <a name="release-your-app-with-live-ads"></a>라이브 광고와 앱 릴리스
 
 1. 앱에 사용할 중간 광고는 [중간 광고에 대한 지침](ui-and-user-experience-guidelines.md#interstitialbestpractices10)을 따라야 합니다.
 
-2.  파트너 센터에서 이동 [인 앱 광고](../publish/in-app-ads.md) 페이지와 [광고 단위를 생성](set-up-ad-units-in-your-app.md#live-ad-units)합니다. 광고 단위 유형에는 표시하려는 중간 광고의 유형에 따라 **동영상 중간 광고** 또는 **배너 중간 광고**를 선택합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
+2.  파트너 센터에서로 이동 합니다 [앱 내 광고](../publish/in-app-ads.md) 페이지 및 [ad 단위 만들기](set-up-ad-units-in-your-app.md#live-ad-units)합니다. 광고 단위 유형에는 표시하려는 중간 광고의 유형에 따라 **동영상 중간 광고** 또는 **배너 중간 광고**를 선택합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
     > [!NOTE]
-    > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. 파트너 센터에서 라이브 UWP 광고 단위를 만들 때 광고 단위에 대 한 응용 프로그램 ID 값에 항상 (예: Store ID 값은 9NBLGGH4R315와) 앱에 대 한 스토어 ID와 일치 합니다.
+    > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. 파트너 센터에서 라이브 UWP ad 단위를 만들 때 ad 단위에 대 한 응용 프로그램 ID 값 (Store ID 값의 예로 같습니다 9NBLGGH4R315) 앱에 대 한 Store ID 항상 일치 합니다.
 
 3. [인앱 광고](../publish/in-app-ads.md) 페이지의 [조정 설정](../publish/in-app-ads.md#mediation) 섹션에서 설정을 구성하여, **InterstitialAd**의 광고 조정을 사용하는 방법도 있습니다. 광고 조정을 통해 Taboola 및 Smaato 같은 기타 유료 광고 네트워크와 Microsoft 앱 프로모션 캠페인에 대한 광고를 포함하여 여러 광고 네트워크의 광고를 표시하여 광고 수익과 앱 프로모션 기능을 최대화할 수 있습니다.
 
-4.  코드에서 테스트 광고 단위 값을 파트너 센터에서 생성 한 라이브 값으로 바꿉니다.
+4.  코드에서 파트너 센터에서 생성 된 실시간 값을 사용 하 여 테스트 ad 단위 값을 대체 합니다.
 
-5.  파트너 센터를 사용 하 여 스토어에 [앱을 제출](../publish/app-submissions.md) 합니다.
+5.  [앱 제출](../publish/app-submissions.md) 파트너 센터를 사용 하 여 저장소에 있습니다.
 
-6.  파트너 센터에서 [광고 성과 보고서](../publish/advertising-performance-report.md) 를 검토 합니다.
+6.  검토 하 [성능 보고서를 광고](../publish/advertising-performance-report.md) 파트너 센터에서.
 
 <span id="manage" />
 
 ## <a name="manage-ad-units-for-multiple-interstitial-ad-controls-in-your-app"></a>앱에서 여러 중간광고 컨트롤에 대한 광고 단위 관리
 
-단일 앱에서 여러 **InterstitialAd** 컨트롤을 사용할 수 있습니다. 이 경우, 각 컨트롤에 다른 광고 단위를 지정하는 것이 좋습니다. 각 컨트롤에 다른 광고 단위를 사용하면 별도로 [조정 설정을 구성](../publish/in-app-ads.md#mediation)할 수 있고, 각 컨트롤에 대해 별개의 [보고 데이터](../publish/advertising-performance-report.md)를 가져올 수 있습니다. 또 이렇게 하면 서비스가 지원하는 앱에서 더 효과적으로 광고를 최적화할 수 있습니다.
+단일 앱에서 여러 **InterstitialAd** 컨트롤을 사용할 수 있습니다. 이 경우, 각 컨트롤에 다른 광고 단위를 지정하는 것이 좋습니다. 각 컨트롤에 다른 광고 단위를 사용하면 별도로 [조정 설정을 구성](../publish/in-app-ads.md#mediation)할 수 있고, 각 컨트롤에 대해 별개의 [보고 데이터](../publish/advertising-performance-report.md)를 가져올 수 있습니다. 이렇게 하면 서비스를 통해 앱에 지원하는 광고를 더 효과적으로 최적화할 수 있습니다.
 
 > [!IMPORTANT]
 > 앱별로 하나의 광고 단위만 사용할 수 있습니다. 특정 광고 단위를 하나 이상의 앱에 사용하면, 해당 광고 단위에 광고가 제공되지 않습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [중간 광고에 대한 지침](ui-and-user-experience-guidelines.md#interstitialbestpractices10)
-* [C#의 중간 광고 샘플 코드](interstitial-ad-sample-code-in-c.md)
-* [JavaScript의 중간 광고 샘플 코드](interstitial-ad-sample-code-in-javascript.md)
+* [중간 광고에 대 한 지침](ui-and-user-experience-guidelines.md#interstitialbestpractices10)
+* [중간 ad 샘플 코드C#](interstitial-ad-sample-code-in-c.md)
+* [JavaScript에서 중간 ad 샘플 코드](interstitial-ad-sample-code-in-javascript.md)
 * [GitHub의 광고 샘플](https://aka.ms/githubads)
-* [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md)
+* [설정 앱에 대 한 ad 단위](set-up-ad-units-in-your-app.md)

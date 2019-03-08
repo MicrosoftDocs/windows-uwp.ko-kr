@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: 51c2435c8edeac2431198b7b5f3d9b1a307b5b78
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920199"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648848"
 ---
 # <a name="how-to-activate-an-app-directx-and-c"></a>앱 활성화 방법(DirectX 및 C++)
 
@@ -42,7 +42,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## <a name="activate-the-corewindow-instance-for-the-app"></a>앱용 CoreWindow 인스턴스 활성화
 
 
-앱이 시작되면 앱에 대한 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 참조를 획득해야 합니다. **CoreWindow**에는 앱이 창 이벤트를 처리하는 데 사용하는 창 이벤트 메시지 디스패처가 포함되어 있습니다. [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589)를 호출하여 앱 활성화 이벤트에 대한 콜백에서 이 참조를 획득합니다. 이 참조를 획득한 후 [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254)를 호출하여 메인 앱 창을 활성화합니다.
+앱이 시작되면 앱에 대한 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 참조를 획득해야 합니다. **CoreWindow**에는 앱이 창 이벤트를 처리하는 데 사용하는 창 이벤트 메시지 디스패처가 포함되어 있습니다. [  **CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589)를 호출하여 앱 활성화 이벤트에 대한 콜백에서 이 참조를 획득합니다. 이 참조를 획득한 후 [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254)를 호출하여 메인 앱 창을 활성화합니다.
 
 ```cpp
 void App::OnActivated(CoreApplicationView^ applicationView, IActivatedEventArgs^ args)
@@ -85,8 +85,8 @@ void App::Run()
 ## <a name="related-topics"></a>관련 항목
 
 
-* [앱 일시 중단 방법(DirectX 및 C++)](how-to-suspend-an-app-directx-and-cpp.md)
-* [앱 다시 시작 방법(DirectX 및 C++)](how-to-resume-an-app-directx-and-cpp.md)
+* [(DirectX 및 c + +) 앱을 중지 하는 방법](how-to-suspend-an-app-directx-and-cpp.md)
+* [(DirectX 및 c + +)는 앱을 다시 시작 하는 방법](how-to-resume-an-app-directx-and-cpp.md)
 
  
 

@@ -7,20 +7,20 @@ keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
 ms.openlocfilehash: f60f3fc8678208f694a9ffabde06fa60de759a45
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937814"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603338"
 ---
 # <a name="fiddler-settings-api-reference"></a>Fiddler 설정 API 참조   
 REST API를 사용하여 devkit에서 Fiddler 네트워크 추적을 사용하거나 사용하지 않을 수 있습니다.
 
-## <a name="determine-if-fiddler-tracing-is-enabled"></a>Fiddler 추적을 사용 하는지 확인
+## <a name="determine-if-fiddler-tracing-is-enabled"></a>Fiddler 추적이 사용되는지 확인
 
 **요청**
 
-다음 요청을 사용 하 여 장치에서 Fiddler 추적을 사용 하는지 확인할 수 있습니다.
+다음 요청을 사용하여 디바이스에서 Fiddler 추적이 사용되는지 확인할 수 있습니다.
 
 메서드      | 요청 URI
 :------     | :-----
@@ -40,7 +40,7 @@ GET | /ext/fiddler
 
 **응답**   
 
-- JSON 부울 속성 IsProxyEnabled 지정자는 프록시를 사용 하는지 여부입니다.
+- 프록시 사용 여부를 지정하는 JSON 부울 속성 IsProxyEnabled.
 
 **상태 코드**
 
@@ -132,10 +132,10 @@ HTTP 상태 코드      | 설명
 5XX | 오류 코드
 
 <br />
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Xbox
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox에서 UWP용 Fiddler 구성](uwp-fiddler.md)
+- [Xbox에서 UWP 용 Fiddler를 구성합니다.](uwp-fiddler.md)
 

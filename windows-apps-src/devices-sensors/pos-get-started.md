@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 518529fecff9f25a83a03847b1623bf9f09a8145
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116003"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661158"
 ---
 # <a name="getting-started-with-point-of-service"></a>서비스 지점 시작하기
 
@@ -152,7 +152,7 @@ catch (Exception ex)
 ```
 
 ### <a name="retaining-the-device"></a>디바이스 유지
-네트워크 또는 Bluetooth 연결을 통해 서비스 지점 디바이스를 사용할 경우, 네트워크의 다른 앱과 디바이스를 공유하고자 할 수도 있습니다 (이에 대한 자세한 내용은 [디바이스 공유](#sharing-a-device-between-apps) 참조). 그렇지 않다면 장시간 사용을 위해 디바이스를 유지해야 할 것입니다. 이 예는 다른 앱이 디바이스를 요청했을 때 클레임한 바코드 스캐너를 유지하는 방법을 보여 줍니다.
+네트워크 또는 Bluetooth 연결을 통해 서비스 지점 디바이스를 사용할 경우, 네트워크의 다른 앱과 디바이스를 공유하고자 할 수도 있습니다 (이 대 한 자세한 내용은 참조 하세요. [공유 장치](#sharing-a-device-between-apps).) 다른 경우에 장기간된의 사용에 대 한 장치에 유지 하는 것이 좋습니다. 이 예는 다른 앱이 디바이스를 요청했을 때 클레임한 바코드 스캐너를 유지하는 방법을 보여 줍니다.
 
 ```Csharp
 claimedBarcodeScanner.ReleaseDeviceRequested += claimedBarcodeScanner_ReleaseDeviceRequested;
@@ -209,8 +209,8 @@ if (claimedBarcodeScanner != null)
 
 ## <a name="see-also"></a>참고 항목
 + [바코드 스캐너 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
-+ [현금 출납기 샘플]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
-+ [라인 디스플레이 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
-+ [자기 띠 판독기 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
++ [현금 서랍 샘플]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
++ [줄 표시 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
++ [마그네틱 띠 판독기 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
 + [POSPrinter 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
 

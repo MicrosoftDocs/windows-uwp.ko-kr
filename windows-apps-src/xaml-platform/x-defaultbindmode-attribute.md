@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c8917b09f04206a5466797f48414defeb35baf5e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929561"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647608"
 ---
 # <a name="xdefaultbindmode-attribute"></a>x:DefaultBindMode 특성
 
@@ -30,4 +30,4 @@ XAML 태그에서 x:Bind에 대한 기본 모드를 지정합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [x:Bind 태그 확장](x-bind-markup-extension.md)
+* [X:bind 태그 확장](x-bind-markup-extension.md)

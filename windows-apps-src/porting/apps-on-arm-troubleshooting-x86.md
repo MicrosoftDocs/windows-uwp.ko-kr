@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10 s, 항상 연결, x86 ARM 기반 에뮬레이션, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: 396bb0bf2c5ba5236e0e46e7b474867ffacb8c75
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938614"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589858"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>x86 데스크톱 앱의 문제 해결
 >[!IMPORTANT]
@@ -18,7 +18,7 @@ ms.locfileid: "8938614"
 
 x86 데스크톱 앱 x86 컴퓨터에서와 다르게 작동하는 경우 문제 해결에 도움이 되는 몇 가지 지침은 다음과 같습니다.
 
-|문제|해결 방법|
+|문제|솔루션|
 |-----|--------|
 | 앱은 ARM용으로 고안되지 않은 드라이버를 사용합니다. | x86 드라이버를 ARM64에 다시 컴파일합니다. [WDK를 사용하여 ARM64 드라이버 빌드](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)를 참조하세요. |
 | 앱은 x64에서만 사용할 수 있습니다. | Microsoft Store용으로 개발하는 경우 앱의 ARM 버전을 제출하세요. 자세한 내용은 [앱 패키지 아키텍처](../packaging/device-architecture.md)를 참조하세요. Win32 개발자는 앱을 ARM64에 다시 컴파일하는 것이 좋습니다. 자세한 내용은 [ARM 개발에서 Windows 10에 대한 Visual Studio 지원 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/)를 참조하세요. |
@@ -45,5 +45,5 @@ Windows 구성 요소를 연결하거나 DLL을 Windows 프로세스에 로드�
 ## <a name="debugging"></a>디버깅
 앱의 동작에 대해 더 깊이 탐구하려면 [ARM 기반 디버깅](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-arm64)을 참조하여 ARM 기반 디버깅을 위한 도구 및 전략에 대해 자세한 정보를 알아보세요.
 
-## <a name="virtual-machines"></a>가상 컴퓨터
+## <a name="virtual-machines"></a>가상 머신
 Windows 하이퍼바이저 플랫폼은 Qualcomm Snapdragon 835 모바일 PC 플랫폼에서 지원되지 않습니다. 따라서 Hyper-V를 사용하여 가상 컴퓨터를 실행할 수 없습니다. 현재 추후 Qualcomm 칩셋에 대한 기술에 계속 투자하고 있습니다. 

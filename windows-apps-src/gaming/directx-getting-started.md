@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 127d600b840c21eb78c3f6b98a100b7639ea25bc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929146"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660228"
 ---
 # <a name="directx-getting-started"></a>DirectX: 시작
 
@@ -36,15 +36,15 @@ ms.locfileid: "8929146"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="about-the-uwp-user-interface-and-directx.md">앱 개체 및 DirectX</a></p></td>
+<td align="left"><p><a href="about-the-uwp-user-interface-and-directx.md">앱 개체와 DirectX</a></p></td>
 <td align="left"><p>앱 개체에 직접 액세스하고 상호 작용합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="prepare-your-dev-environment-for-windows-store-directx-game-development.md">게임용 프로젝트 템플릿 및 도구</a></p></td>
+<td align="left"><p><a href="prepare-your-dev-environment-for-windows-store-directx-game-development.md">프로젝트 템플릿 및 게임용 도구</a></p></td>
 <td align="left"><p>UWP DirectX 게임 개발을 위한 개발 환경을 준비합니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="launching-and-resuming-apps-directx-and-cpp.md">앱 시작 및 다시 시작</a></p></td>
+<td align="left"><p><a href="launching-and-resuming-apps-directx-and-cpp.md">시작 하 고 앱 다시 시작</a></p></td>
 <td align="left"><p>UWP DirectX 게임을 시작, 일시 중단 및 다시 시작합니다.</p></td>
 </tr>
 </tbody>

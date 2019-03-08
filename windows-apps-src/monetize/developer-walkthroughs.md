@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10 uwp, 광고, 광고, 연습
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bf2605c55b9b73ccd3376f9c812da31339caedc
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050716"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662668"
 ---
 # <a name="implement-ads-in-your-app"></a>앱에 광고 구현
 
@@ -24,7 +24,7 @@ ms.locfileid: "9050716"
 | [배너 광고](banner-ads.md)     | Microsoft Advertising SDK에서 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 클래스를 사용하여 UWP 앱에 배너 광고를 추가하기 위한 지침을 제공합니다.        |
 | [중간 광고](interstitial-ads.md)    | Microsoft Advertising SDK에서 [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 클래스를 사용하여 UWP 앱에 중간 광고를 추가하기 위한 지침을 제공합니다.       |
 | [기본 광고](native-ads.md)       | Microsoft Advertising SDK에서 [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) 및 [NativeAdV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) 클래스를 사용하여 UWP 앱에 기본 광고를 추가하기 위한 지침을 제공합니다.  |
-| [비디오 콘텐츠에 광고 표시](add-advertisements-to-video-content.md)     |  UWP 앱에서 비디오 콘텐츠 도중에 광고를 표시하기 위한 지침을 제공합니다(현재 이 기능은 HTML과 JavaScript를 사용하여 작성된 앱에만 지원됩니다). |
+| [비디오 콘텐츠에서 광고를 표시 합니다.](add-advertisements-to-video-content.md)     |  UWP 앱에서 비디오 콘텐츠 도중에 광고를 표시하기 위한 지침을 제공합니다(현재 이 기능은 HTML과 JavaScript를 사용하여 작성된 앱에만 지원됩니다). |
 
 
 

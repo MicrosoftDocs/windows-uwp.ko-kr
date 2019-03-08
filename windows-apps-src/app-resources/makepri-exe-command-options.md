@@ -1,5 +1,5 @@
 ---
-Description: MakePri.exe has the set of commands createconfig, dump, new, resourcepack, and versioned. This topic details their use.
+Description: MakePri.exe에는 createconfig, dump, new, resourcepack, versioned 명령 집합이 있습니다. 이 항목에서는 그 사용에 대해 자세히 설명합니다.
 title: MakePri.exe 명령줄 옵션
 template: detail.hbs
 ms.date: 04/10/2018
@@ -7,22 +7,22 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: bc08376dafec8aad9d65ef5acd8d19943d242eed
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943417"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603398"
 ---
 # <a name="makepriexe-command-line-options"></a>MakePri.exe 명령줄 옵션
 
 [MakePri.exe](compile-resources-manually-with-makepri.md)에는 `createconfig`, `dump`, `new`, `resourcepack` 및 `versioned` 명령 집합이 있습니다. 이 항목에서는 이들의 사용에 대한 명령줄 옵션을 자세히 설명합니다.
 
 > [!NOTE]
-> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **Windows SDK UWP 앱의 관리** 옵션을 선택 하면 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 메모가 다른 아키텍처에 대 한 폴더에 따라 합니다. 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
+> 확인할 때 MakePri.exe 되어는 **앱을 관리 하는 UWP 용 Windows SDK** Windows 소프트웨어 개발 키트를 설치 하는 동안 옵션입니다. 경로에 설치 되어 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (물론 다른 아키텍처에 대 한 명명 된 폴더). 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
 
-## <a name="getting-help-from-the-command-line"></a>명령줄에서 도움말 보기
+## <a name="getting-help-from-the-command-line"></a>명령줄에서 도움말 가져오기
 
-실행할 수 있습니다 `MakePri.exe help` 또는 `MakePri.exe /?` 하 여 MakePri.exe로 사용할 수 있는 명령을 봅니다. 실행할 수 있습니다 `MakePri.exe <command> /?` 명령에 대 한 하 고, 매우 드물지만에서 세부 사항을 보려면,에 `MakePri.exe <command> <option>` 옵션에 대 한 세부 사항을 볼 수 있습니다.
+실행할 수 있습니다 `MakePri.exe help` 또는 `MakePri.exe /?` MakePri.exe를 사용 하 여 사용할 수 있는 명령이 나타납니다. 발급할 수도 있습니다 `MakePri.exe <command> /?` 명령에 대 한 고 매우 드문 경우에서 세부 정보를 보려면도 `MakePri.exe <command> <option>` 옵션에 대 한 세부 정보를 확인 합니다.
 
 ## <a name="makepri-commands"></a>MakePri 명령
 
@@ -115,7 +115,7 @@ Help:
 `dump` 명령은 지정된 PRI 파일의 모든 리소스 목록을 포함하는 덤프된 xml 파일을 출력합니다. `MakePri.exe dump /?`를 실행하여 이 명령에 대한 자세한 도움말을 봅니다.
 
 > [!NOTE]
-> 스키마가 없는 리소스 팩은 PRI config 파일에서 *omitSchemaFromResourcePacks* 스위치를 사용하여 생성한 것입니다. 스키마가 없는 리소스 팩을 덤프하려면 `/es <main_package_PRI_file>` 스위치를 사용하세요. 주 파일을 지정하지 않으면 오류 메시지 "*패키지의 resources.pri가 손상되었으므로 암호화에 실패했습니다(오류 PRI222: 0xdef0000f - 지정되지 않은 오류 발생함)*"가 표시됩니다.
+> 스키마가 없는 리소스 팩은 PRI config 파일에서 *omitSchemaFromResourcePacks* 스위치를 사용하여 생성한 것입니다. 스키마가 없는 리소스 팩을 덤프하려면 `/es <main_package_PRI_file>` 스위치를 사용하세요. 기본 파일을 지정 하지 않는 경우 오류 메시지가 표시 됩니다 "*패키지에서 resources.pri 손상 되었습니다 하므로 암호화에 실패 했습니다 (오류 PRI222: 0xdef0000f-알 수 없는 오류가 발생 했습니다)*"입니다.
 
 ```console
 C:\>makepri dump /?
@@ -416,18 +416,18 @@ MakePri는 인덱서 메타데이터 파일에 리소스 팩 관련 정보를 �
 
 **FILEPATH**는 입력 PRI 파일이나 PRI 스키마 파일의 위치를 지정하는 토큰입니다.
 
-## <a name="47indexoptionsio-option"></a>& #47;IndexOptions(io) 옵션
+## <a name="47indexoptionsio-option"></a>&#47;IndexOptions(io) 옵션
 
-인덱스 옵션 옵션을 사용 하 여 (/ io)와 `new`, `resourcepack`, 및 `versioned` 리소스 인덱서의 동작을 보다 세부적된으로 제어를 제공 하는 옵션을 지정 합니다. 인덱스 옵션은 기본적으로 비활성화 됩니다.
+인덱스 옵션 옵션을 사용 하면 (/ io) 사용 하 여 `new`, `resourcepack`, 및 `versioned` 인덱서 리소스의 동작을 보다 세부적된으로 제어를 제공 하는 옵션을 지정 합니다. 인덱스 옵션은 기본적으로 비활성화 됩니다.
 
 ```console
 /IndexOptions(io) <OPTIONS>
 ```
 
-**옵션** 은 다음과 같은 옵션으로 이루어진 쉼표로 구분 된 목록입니다.
+**옵션** 은 다음 옵션 중 구성 된 쉼표로 구분 된 목록입니다.
 
-- HiddenFiles(hf) + /. (+) 인덱싱하거나 (-)를 무시 숨김 파일 및 폴더.
-- LinkedFiles(lf) + /. (+) 인덱싱하거나 (-)를 무시 파일 및 폴더를 연결 합니다.
+- +/-HiddenFiles(hf). (+) 인덱싱하거나 무시 (-) 숨김 파일 및 폴더입니다.
+- +/-LinkedFiles(lf). (+) 인덱싱하거나 (-)를 무시 파일 및 폴더를 연결 합니다.
 
 ## <a name="47mappingfilemf-option"></a>/MappingFile(mf) 옵션
 
@@ -501,7 +501,7 @@ Overwrite these file(s)? [Y]es (any other key to cancel):
 
 | 오류 조건 | 오류 메시지 |
 | --------------- | ------------- |
-| 출력 파일 이름은 구성의 리소스 팩 이름 중 하나와 같습니다. | 잘못된 구성: 리소스 팩 이름 <resource pack name>이(가) 출력 파일 <outputfilename.pri>와 동일해야 합니다. |
+| 출력 파일 이름은 구성의 리소스 팩 이름 중 하나와 같습니다. | 잘못 된 구성: 리소스 팩 이름 <resource pack name> < outputfilename.pri > 출력 파일로 같을 수 없습니다. |
 
 ## <a name="reversemaprm-option"></a>/ReverseMap(rm) 옵션
 

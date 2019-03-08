@@ -1,17 +1,17 @@
 ---
 ms.assetid: 2CC2E526-DACB-4008-9539-DA3D0C190290
 description: UWP 개발자가 사용할 수 있는 네트워킹 기술에 대한 빠른 개요 및 앱에 적합한 기술을 선택하는 방법에 대한 제안 사항입니다.
-title: 네트워킹 기술 선택
+title: 네트워킹 기술 선택'
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b64ddadd0e543930fa72d0c44a6cacf0a873df89
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050686"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656308"
 ---
 # <a name="which-networking-technology"></a>네트워킹 기술 선택
 
@@ -22,7 +22,7 @@ UWP 개발자가 사용할 수 있는 네트워킹 기술에 대한 빠른 개�
 
 다른 장치와 통신할 때 사용자 고유의 프로토콜을 사용하려는 경우 [소켓](sockets.md)을 사용합니다.
 
-UWP(유니버설 Windows 플랫폼) 개발자는 두 가지 소켓 구현 [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 및 [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673)을 사용할 수 있습니다. 새 코드를 작성하는 경우 Windows.Networking.Socket은 UWP 개발자용으로 디자인된 최신 API를 활용합니다. 플랫폼 간 네트워킹 라이브러리나 기존의 다른 Winsock 코드를 사용하려는 경우 또는 기본적으로 Winsock API를 사용하려는 경우에 사용합니다.
+소켓의 두 가지 구현이 유니버설 Windows 플랫폼 (UWP) 개발자가 사용할 수 있습니다. [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960), 및 [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673)합니다. 새 코드를 작성하는 경우 Windows.Networking.Socket은 UWP 개발자용으로 디자인된 최신 API를 활용합니다. 플랫폼 간 네트워킹 라이브러리나 기존의 다른 Winsock 코드를 사용하려는 경우 또는 기본적으로 Winsock API를 사용하려는 경우에 사용합니다.
 
 ### <a name="when-to-use-sockets"></a>소켓을 사용하는 경우
 
@@ -69,7 +69,7 @@ HTTP(S)를 사용하여 웹 서비스 또는 웹 서버와 통신하는 경우 [
 
 네트워크를 통해 안정적으로 파일을 전송하려는 경우 [백그라운드 전송 API](background-transfers.md)를 사용합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 장치 배터리 상태에 따라 다운로드 작업이 조정됩니다. 앱이 모바일 또는 배터리 전원을 장치에서 실행되는 경우 이러한 접근 권한 값이 필요합니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
 
-Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 업데이트, 다른 앱을 활성화 하거나 다운로드가 완료 되 면 사용자에 게 알릴 수 있도록 파일 전송이 완료 되 면 사후 처리를 실행 하는 기능입니다.
+Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 업데이트, 다른 앱을 활성화 하거나 다운로드 완료 되 면 사용자에 게 알릴 수 있도록 파일 전송이 완료 되 면 사후 처리를 실행 하는 기능입니다.
 
 ### <a name="when-to-use-background-transfers"></a>백그라운드 전송을 사용하는 경우
 
@@ -87,53 +87,53 @@ Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 
 
 ### <a name="connection-quality"></a>연결 품질
 
-[**Windows.Networking.Connectivity**](https://msdn.microsoft.com/library/windows/apps/br207308) API는 네트워크 연결, 비용 및 사용 정보에 액세스할 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [네트워크 연결 상태 액세스 및 네트워크 비용 관리](https://msdn.microsoft.com/library/windows/apps/hh452983)를 참조하세요.
+[  **Windows.Networking.Connectivity**](https://msdn.microsoft.com/library/windows/apps/br207308) API는 네트워크 연결, 비용 및 사용 정보에 액세스할 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [네트워크 연결 상태 액세스 및 네트워크 비용 관리](https://msdn.microsoft.com/library/windows/apps/hh452983)를 참조하세요.
 
 ### <a name="dns-service-discovery"></a>DNS 서비스 검색
 
-[**Windows.Networking.ServiceDiscovery.Dnssd**](https://msdn.microsoft.com/library/windows/apps/dn895183) API는 IETF [RFC 2782](https://go.microsoft.com/fwlink/?LinkId=524158)에 설명된 DNS-SD 프로토콜을 사용하여 네트워크의 다른 장치에 네트워크 서비스를 보급하도록 지원합니다.
+[  **Windows.Networking.ServiceDiscovery.Dnssd**](https://msdn.microsoft.com/library/windows/apps/dn895183) API는 IETF [RFC 2782](https://go.microsoft.com/fwlink/?LinkId=524158)에 설명된 DNS-SD 프로토콜을 사용하여 네트워크의 다른 장치에 네트워크 서비스를 보급하도록 지원합니다.
 
 ### <a name="communicating-over-bluetooth"></a>Bluetooth를 통한 통신
 
-[**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/dn263413) API는 특히 Bluetooth를 사용하여 다른 디바이스에 연결하고 데이터를 전송하도록 지원합니다. 자세한 내용은 [RFCOMM을 사용하여 파일 보내기 및 받기](https://msdn.microsoft.com/library/windows/apps/mt270289)를 참조하세요.
+[  **Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/dn263413) API는 특히 Bluetooth를 사용하여 다른 디바이스에 연결하고 데이터를 전송하도록 지원합니다. 자세한 내용은 [RFCOMM을 사용하여 파일 보내기 및 받기](https://msdn.microsoft.com/library/windows/apps/mt270289)를 참조하세요.
 
 ### <a name="push-notifications-wns"></a>푸시 알림(WNS)
 
-[**Windows.Networking.PushNotifications**](https://msdn.microsoft.com/library/windows/apps/br241307) API는 WNS(Windows 알림 서비스)를 사용하여 네트워크를 통해 푸시 알림을 받을 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [WNS(Windows 푸시 알림 서비스) 개요](https://msdn.microsoft.com/library/windows/apps/mt187203)를 참조하세요.
+[  **Windows.Networking.PushNotifications**](https://msdn.microsoft.com/library/windows/apps/br241307) API는 WNS(Windows 알림 서비스)를 사용하여 네트워크를 통해 푸시 알림을 받을 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [WNS(Windows 푸시 알림 서비스) 개요](https://msdn.microsoft.com/library/windows/apps/mt187203)를 참조하세요.
 
 ### <a name="near-field-communications"></a>근거리 통신
 
-[**Windows.Networking.Proximity**](https://msdn.microsoft.com/library/windows/apps/br241250) API는 디바이스와의 근접 연결 또는 탭 연결을 사용하여 손쉬운 데이터 전송을 지원하는 앱에 근거리 통신을 사용하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [근접 연결 및 탭 지원](https://msdn.microsoft.com/library/windows/apps/hh465229)을 참조하세요.
+[  **Windows.Networking.Proximity**](https://msdn.microsoft.com/library/windows/apps/br241250) API는 디바이스와의 근접 연결 또는 탭 연결을 사용하여 손쉬운 데이터 전송을 지원하는 앱에 근거리 통신을 사용하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [근접 연결 및 탭 지원](https://msdn.microsoft.com/library/windows/apps/hh465229)을 참조하세요.
 
 ### <a name="rssatom-feeds"></a>RSS/Atom 피드
 
-[**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) API는 RSS 및 Atom 형식을 사용하여 배포 피드를 관리하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [RSS/Atom 피드](web-feeds.md)를 참조하세요.
+[  **Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) API는 RSS 및 Atom 형식을 사용하여 배포 피드를 관리하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [RSS/Atom 피드](web-feeds.md)를 참조하세요.
 
 ### <a name="wi-fi-enumeration-and-connection-control"></a>Wi-Fi 열거형 및 연결 제어
 
-[**Windows.Devices.WiFi**](https://msdn.microsoft.com/library/windows/apps/dn975224) API는 Wi-Fi 어댑터를 열거하고, 사용 가능한 Wi-Fi 네트워크를 검색하고, 어댑터를 네트워크에 연결하도록 지원합니다.
+[  **Windows.Devices.WiFi**](https://msdn.microsoft.com/library/windows/apps/dn975224) API는 Wi-Fi 어댑터를 열거하고, 사용 가능한 Wi-Fi 네트워크를 검색하고, 어댑터를 네트워크에 연결하도록 지원합니다.
 
 ### <a name="radio-control"></a>무선 제어
 
-[**Windows.Devices.Radios**](https://msdn.microsoft.com/library/windows/apps/dn996447) API는 로컬 장치에서 Wi-Fi, Bluetooth 등의 무선을 찾고 제어하도록 지원합니다.
+[  **Windows.Devices.Radios**](https://msdn.microsoft.com/library/windows/apps/dn996447) API는 로컬 장치에서 Wi-Fi, Bluetooth 등의 무선을 찾고 제어하도록 지원합니다.
 
 ### <a name="wi-fi-direct"></a>Wi-Fi Direct
 
-[**Windows.Devices.WiFiDirect**](https://msdn.microsoft.com/library/windows/apps/dn297687) API는 Wi-Fi Direct를 사용하여 애드혹 로컬 무선 네트워크를 만드는 방식으로 다른 로컬 장치와 연결하고 통신하도록 지원합니다.
+[  **Windows.Devices.WiFiDirect**](https://msdn.microsoft.com/library/windows/apps/dn297687) API는 Wi-Fi Direct를 사용하여 애드혹 로컬 무선 네트워크를 만드는 방식으로 다른 로컬 장치와 연결하고 통신하도록 지원합니다.
 
 ### <a name="wi-fi-direct-services"></a>Wi-Fi Direct 서비스
 
-[**Windows.Devices.WiFiDirect.Services**](https://msdn.microsoft.com/library/windows/apps/dn996481) API는 Wi-Fi Direct 서비스를 제공하고 연결하도록 지원합니다. Wi-Fi Direct 서비스는 Wi-Fi Direct 애드혹 네트워크의 장치(Service Advertiser)에서 Wi-Fi Direct 연결을 통해 다른 장치(Service Seeker)에 접근 권한 값을 제공하는 방식입니다.
+[  **Windows.Devices.WiFiDirect.Services**](https://msdn.microsoft.com/library/windows/apps/dn996481) API는 Wi-Fi Direct 서비스를 제공하고 연결하도록 지원합니다. Wi-Fi Direct 서비스는 Wi-Fi Direct 애드혹 네트워크의 장치(Service Advertiser)에서 Wi-Fi Direct 연결을 통해 다른 장치(Service Seeker)에 접근 권한 값을 제공하는 방식입니다.
 
 ### <a name="mobile-operators"></a>통신사
 
-Windows 10 장치 제조업체 및 통신사에만 노출 이전에 일부 Api를 광범위 한 개발자 그룹에 노출 합니다. 이러한 API는 현재 노출되어 있지만 앱을 게시하기 전에 Microsoft의 승인을 받아야 하는 특정 앱 접근 권한 값으로 제어됩니다. 이러한 API의 실제 사용은 주로 장치 제조업체 및 통신사로 제한됩니다.
+Windows 10에는 일부 Api만 장치 제조업체 및 모바일 운영자에 게 표시 되어 이전에 와이드 개발자에 게 표시 합니다. 이러한 API는 현재 노출되어 있지만 앱을 게시하기 전에 Microsoft의 승인을 받아야 하는 특정 앱 접근 권한 값으로 제어됩니다. 이러한 API의 실제 사용은 주로 장치 제조업체 및 통신사로 제한됩니다.
 
 ### <a name="network-operations"></a>네트워크 운영
 
-[**Windows.Networking.NetworkOperators**](https://msdn.microsoft.com/library/windows/apps/br241148) API는 휴대폰의 구성 및 프로비저닝을 주로 처리합니다. 따라서 이를 제어하는 접근 권한 값의 사용 권한은 장치 제조업체 및 통신사로 제한됩니다.
+[  **Windows.Networking.NetworkOperators**](https://msdn.microsoft.com/library/windows/apps/br241148) API는 휴대폰의 구성 및 프로비저닝을 주로 처리합니다. 따라서 이를 제어하는 접근 권한 값의 사용 권한은 장치 제조업체 및 통신사로 제한됩니다.
 
 ### <a name="sms"></a>SMS
 
-[**Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/br206567) 네임스페이스는 SMS 및 관련 메시지를 하위 수준 엔터티로 처리합니다. 이는 통신사에서 앱 지정 SMS에 사용하도록 제공되며, 대부분의 앱 개발자용으로 승인되지 않는 접근 권한 값으로 제어됩니다. 메시지를 처리할 앱을 작성하는 경우 대신 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/dn642321) API를 사용해야 합니다. 이 API는 SMS 메시지뿐만 아니라 실시간 채팅 앱과 같은 다른 소스의 메시지도 처리하도록 디자인되었으므로 훨씬 풍부한 채팅/메시징 환경을 지원합니다.
+[  **Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/br206567) 네임스페이스는 SMS 및 관련 메시지를 하위 수준 엔터티로 처리합니다. 이는 통신사에서 앱 지정 SMS에 사용하도록 제공되며, 대부분의 앱 개발자용으로 승인되지 않는 접근 권한 값으로 제어됩니다. 메시지를 처리할 앱을 작성하는 경우 대신 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/dn642321) API를 사용해야 합니다. 이 API는 SMS 메시지뿐만 아니라 실시간 채팅 앱과 같은 다른 소스의 메시지도 처리하도록 디자인되었으므로 훨씬 풍부한 채팅/메시징 환경을 지원합니다.
 

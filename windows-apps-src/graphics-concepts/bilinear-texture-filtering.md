@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 437650883b4782ca02c0daf24cc8ebed01d954f6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932932"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651258"
 ---
 # <a name="bilinear-texture-filtering"></a>쌍선형 텍스처 필터링
 
@@ -27,7 +27,7 @@ ms.locfileid: "8932932"
 
 ![단색 블록으로 구성된 4x4 텍스처의 그림](images/bilinear-fig7a.png)
 
-텍스처는 대개 단색 블록으로 구성된 것처럼 표현되지만 실제로는 래스터 디스플레이를 생각할 때와 같은 방식으로 텍스처를 생각하는 것이 더 정확합니다. 다음 그림과 같이 각 텍셀이 표 형태 창 셀의 정중앙에 정의됩니다.
+질감은 일반적으로 단색 블록 색으로 구성 된 것 이지만 실제로 더 질감 래스터 디스플레이의 야 동일한 방식으로 생각 하는 올바른 것 처럼 표시 됩니다. 다음 그림에 나와 있는 것 처럼 각 텍셀은 표 형태 셀의 정확한 센터에서 정의 됩니다.
 
 ![텍셀이 표 형태 창 셀의 중앙에 정의된 4x4 텍스처의 그림](images/bilinear-fig7b.png)
 
@@ -86,10 +86,10 @@ UV: (0.375, 0.375)
 
 ![모든 텍스처 주소에서 쌍선형 필터링이 수행된 4x4 텍스처의 그림](images/bilinear-fig7c.jpg)
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[텍스처 필터링](texture-filtering.md)
+[질감 필터링](texture-filtering.md)
 
  
 

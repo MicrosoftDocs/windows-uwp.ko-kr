@@ -1,5 +1,5 @@
 ---
-Description: This topic lists the fonts available for UWP apps that are localized into languages other than U.S. English.
+Description: 이 항목에서는 미국 이외의 언어로 지역화 된 UWP 앱에 대 한 사용 가능한 글꼴을 보여 줍니다. 영어.
 title: 국가별 글꼴
 template: detail.hbs
 ms.date: 11/02/2017
@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f1d618a111ee207eacfceb52680859c8272e0ed
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046656"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601138"
 ---
 # <a name="international-fonts"></a>국가별 글꼴
 
-이 항목에서는 미국 영어 이외의 언어로 지역화되어 UWP 앱에 사용할 수 있는 글꼴을 나열합니다.
+이 항목에서는 미국 이외의 언어로 지역화 된 UWP 앱에 대 한 사용 가능한 글꼴을 보여 줍니다. 영어.
 
 다음 표에서 "언어 태그" 열은 해당 언어의 [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302) 언어 태그 목록입니다. Microsoft Store에서 지원되는 언어 태그 목록을 구체적으로 보려면 [지원되는 언어](../../publish/supported-languages.md)를 참조하세요.
 
-| 언어 | 언어 태그 | Windows에서 사용되는 글꼴 |
+| 외국어 | 언어 태그 | Windows에서 사용되는 글꼴 |
 | --------- | ----------- | -------------------- |
 | 아프리칸스어 | af-ZA | Segoe UI |
 | 알바니아어 | sq-AL | Segoe UI |
@@ -30,7 +30,7 @@ ms.locfileid: "9046656"
 | 아제르바이잔어(라틴 문자) | az-Latn-AZ | Segoe UI |
 | 벵골어(방글라데시) | bn-BD | Nirmala UI |
 | 벵골어(인도) | bn-IN | Nirmala UI |
-| 바스크어(바스크어) | eu-ES | Segoe UI |
+| 바스크어(바스크) | eu-ES | Segoe UI |
 | 벨로루시어 | be-BY | Segoe UI |
 | 보스니아어(라틴) | bs-Latn-BA | Segoe UI |
 | 불가리아어 | bg-BG | Segoe UI |
@@ -67,7 +67,7 @@ ms.locfileid: "9046656"
 | 줄루어 | zu-ZA | Segoe UI |
 | 이탈리아어 | it-IT | Segoe UI |
 | 일본어 | ja-JP | Meiryo UI(아래 설명 참조) |
-| 카나다어 | kn-IN | Nirmala UI |
+| 칸나다어 | kn-IN | Nirmala UI |
 | 카자흐어 | kk-KZ | Segoe UI |
 | 크메르어 | km-KH | Leelawadee UI |
 | 끼체어 | qut-GT | Segoe UI |
@@ -88,7 +88,7 @@ ms.locfileid: "9046656"
 | 몽골어(키릴 자모) | mn-MN | Segoe UI |
 | 네팔어 | ne-NP | Nirmala UI |
 | 노르웨이어(복말) | nb-NO | Segoe UI |
-| 노르웨이어(니노르스크) | nn-NO | Segoe UI |
+| 노르웨이어(니노르스크)  | nn-NO | Segoe UI |
 | 오디아어 | or-IN | Nirmala UI |
 | 이란어 | fa-IR | Segoe UI |
 | 폴란드어 | pl-PL | Segoe UI |
@@ -136,4 +136,4 @@ Meiryo UI 글꼴은 Windows에서 사용됩니다. Windows에는 Yu Gothic과 Yu
 ## <a name="related-topics"></a>관련 항목
 
 * [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [지원되는 언어](../../publish/supported-languages.md)
+* [지원 되는 언어](../../publish/supported-languages.md)

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: dab59fefb389cf550a1bc4fc6429f6b0970f50ab
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942815"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589838"
 ---
 # <a name="initialuploadresponse-json"></a>InitialUploadResponse(JSON)
  
@@ -23,12 +23,12 @@ ms.locfileid: "8942815"
  
 InitialUploadResponse 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| <b>gameClipId</b>| string| 업로드 데이터 요청에 대 한 할당 ID입니다.| 
-| <b>uploadUri</b>| URI| 위치는 게임 클립을 업로드 해야 합니다.| 
-| <b>largeThumbnailUri</b>| URI| 선택 사항입니다. 위치 큰 미리 보기 업로드할 수 있습니다. 이 필드의 현재 상태 (업로드가 지정 되었을 때 존재 하 게 됩니다) <b>InitialUploadRequest</b> [ThumbnailSource 열거형](../enums/gvr-enum-thumbnailsource.md) 값으로 결정 됩니다.| 
-| <b>smallThumbnailUri</b>| URI| 선택 사항입니다. 위치 작은 미리 보기 업로드할 수 있습니다. 이 필드의 현재 상태 (업로드가 지정 되었을 때 존재 하 게 됩니다) <b>InitialUploadRequest</b> [ThumbnailSource 열거형](../enums/gvr-enum-thumbnailsource.md) 값으로 결정 됩니다.| 
+| <b>gameClipId</b>| 문자열| 업로드 데이터 요청에 대 한 할당 ID입니다.| 
+| <b>uploadUri</b>| URI| 게임 클립이 업로드 될 위치입니다.| 
+| <b>largeThumbnailUri</b>| URI| 선택 사항. 위치는 큰 썸네일 업로드 해야 합니다. 이 필드의 존재 여부에 따라 결정 됩니다 합니다 [ThumbnailSource 열거형](../enums/gvr-enum-thumbnailsource.md) 값을 <b>InitialUploadRequest</b> (에 업로드 된 경우 표시 됩니다).| 
+| <b>smallThumbnailUri</b>| URI| 선택 사항. 위치는 작은 축소판 그림을 업로드 합니다. 이 필드의 존재 여부에 따라 결정 됩니다 합니다 [ThumbnailSource 열거형](../enums/gvr-enum-thumbnailsource.md) 값을 <b>InitialUploadRequest</b> (에 업로드 된 경우 표시 됩니다).| 
   
 <a id="ID4EYC"></a>
 
@@ -55,8 +55,8 @@ InitialUploadResponse 개체에 다음과 같이 지정 합니다.
 <a id="ID4EDD"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

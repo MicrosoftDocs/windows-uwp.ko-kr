@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use custom audio on your toast notifications.
+Description: 사용자 알림 메시지에 사용자 지정 오디오를 사용 하는 방법에 알아봅니다.
 title: 알림에 대한 사용자 지정 오디오
 label: Custom audio on toasts
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 사용자 지정 오디오, 알림, 오디오, 사운드
 ms.localizationpriority: medium
 ms.openlocfilehash: 982340901d13f17945c1e7ffa11099f52732f619
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944702"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644068"
 ---
 # <a name="custom-audio-on-toasts"></a>알림에 대한 사용자 지정 오디오
 
@@ -54,7 +54,7 @@ ToastContent toastContent = new ToastContent()
 
 Windows Mobile은 항상 알림 메시지에서 사용자 지정 오디오를 지원해 왔습니다. 그렇지만 Desktop은 버전 1511(빌드 10586)에서 사용자 지정 오디오 지원만을 추가했습니다. 버전 1511 이전의 Desktop 디바이스에 사용자 지정 오디오를 포함한 알림을 보내면 이 알림은 무음으로 전달됩니다. 따라서 버전 1511 이전 Desktop의 경우에는 알림이 최소한 기본 알림 사운드를 사용할 것이므로 알림 메시지에 사용자 지정 오디오를 포함해서는 안 됩니다.
 
-**알려진 문제**: Desktop 버전 1511을 사용하는 경우 Microsoft Store를 통해 앱을 설치할 때에만 사용자 지정 메시지 오디오가 작동합니다. 즉, Microsoft Store에 제출하기 전에 Desktop에서 사용자 정의 오디오를 로컬에서 테스트할 수 없지만 일단 Microsoft Store에서 설치하고 나면 오디오가 제대로 작동합니다. Anniversary Update에서 이 문제를 해결했으므로 로컬에 배포된 앱의 사용자 지정 오디오는 올바르게 작동합니다.
+**알려진 문제**: 데스크톱 버전 1511을 사용 하는 경우 앱 스토어를 통해 설치 된 경우 사용자 지정 알림 오디오만 작동 합니다. 즉, Microsoft Store에 제출하기 전에 Desktop에서 사용자 정의 오디오를 로컬에서 테스트할 수 없지만 일단 Microsoft Store에서 설치하고 나면 오디오가 제대로 작동합니다. Anniversary Update에서 이 문제를 해결했으므로 로컬에 배포된 앱의 사용자 지정 오디오는 올바르게 작동합니다.
 
 ```csharp
 ?
@@ -102,6 +102,6 @@ ToastNotificationManager.CreateToastNotifier().Show(notification);
 
 ## <a name="related-topics"></a>관련 항목
 
-- [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-toast-with-custom-audio)
+- [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-toast-with-custom-audio)
 - [로컬 알림 보내기](send-local-toast.md)
 - [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)

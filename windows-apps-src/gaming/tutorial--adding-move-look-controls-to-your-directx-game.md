@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 이동-보기, 컨트롤
 ms.localizationpriority: medium
 ms.openlocfilehash: 222f46bbda165442003aecea0bbd138bcb844a3b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943280"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604378"
 ---
-# <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>게임용 이동-보기 컨트롤
+# <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>게임에 대 한 모양을 이동 컨트롤
 
 
 
@@ -145,28 +145,28 @@ internal:
 
 먼저 카메라 보기에 대해 업데이트된 정보를 저장하는 유용한 필드 몇 가지를 정의합니다.
 
--   **m\_position**은 3D 장면에서 장면 좌표를 사용하는 카메라의 위치이므로 보기 기준면입니다.
--   **m\_pitch**는 카메라의 피치 또는 보기 기준면 x-축 기준의 위-아래 회전(라디안 단위)입니다.
--   **m\_yaw**는 카메라의 요 또는 보기 기준면 y-축 기준의 왼쪽-오른쪽 회전(라디안 단위)입니다.
+-   **m\_위치** 카메라 (및 따라서는 viewplane) 3D 장면에서 장면 좌표를 사용 하 여의 위치입니다.
+-   **m\_피치** 피치 카메라의 라디안에서 viewplane의 x 축 회전 각도-축소 됩니다.
+-   **m\_yaw** 는 카메라의 라디안에서 viewplane의 y 축 중심 왼쪽-오른쪽 회전 요.
 
 이제 컨트롤러의 상태 및 위치에 대한 정보를 저장하는 데 사용하는 필드를 정의해 보겠습니다. 먼저 터치 기반 이동 컨트롤러에 필요한 필드를 정의합니다. 이동 컨트롤러의 키보드 구현에 특별히 필요한 사항은 없습니다. 특정 처리기를 사용하여 키보드 이벤트를 읽으면 됩니다.
 
--   **m\_moveInUse**는 이동 컨트롤러가 사용 중인지 여부를 나타냅니다.
--   **m\_movePointerID**는 현재 이동 포인터의 고유한 ID입니다. 포인터 ID 값을 확인할 때 이 ID를 사용하여 보기 포인터와 이동 포인터를 구분합니다.
--   **m\_moveFirstDown**는 플레이어가 처음으로 이동 컨트롤러 포인터 영역을 터치한 화면의 점입니다. 나중에 이 값을 사용하여 데드존을 설정함으로써 작은 이동으로 보기가 방해되지 않도록 합니다.
--   **m\_movePointerPosition**는 플레이어가 현재 포인터를 이동한 화면의 점입니다. **m\_moveFirstDown**을 기준으로 이 값을 검사하여 플레이어가 이동하려고 한 방향을 확인하는 데 사용합니다.
--   **m\_moveCommand**는 이동 컨트롤러에 대해 계산된 최종 명령으로 위쪽(앞으로), 아래쪽(뒤로), 왼쪽 또는 오른쪽입니다.
+-   **m\_moveInUse** 이동 컨트롤러를 사용 중인지 여부를 나타냅니다.
+-   **m\_movePointerID** 현재 이동 포인터에 대 한 고유 ID입니다. 포인터 ID 값을 확인할 때 이 ID를 사용하여 보기 포인터와 이동 포인터를 구분합니다.
+-   **m\_moveFirstDown** 이동 컨트롤러 포인터 영역에 플레이어 먼저 작업 화면에서 지점입니다. 나중에 이 값을 사용하여 데드존을 설정함으로써 작은 이동으로 보기가 방해되지 않도록 합니다.
+-   **m\_movePointerPosition** 플레이어에 대 한 포인터를 움직인 현재 화면에서 지점입니다. 사용 하 여 플레이어를 기준으로 검사 하 여 이동 하려는 방향을 결정할 **m\_moveFirstDown**합니다.
+-   **m\_moveCommand** 이동 컨트롤러에 대 한 최종 계산된 명령입니다. (앞으로), 스핀 (뒤로), left 또는 right입니다.
 
 이제 마우스 및 터치 구현에서 보기 컨트롤러에 사용하는 필드를 정의합니다.
 
--   **m\_lookInUse**는 보기 컨트롤이 사용 중인지 여부를 나타냅니다.
--   **m\_lookPointerID**는 현재 보기 포인터의 고유한 ID입니다. 포인터 ID 값을 확인할 때 이 ID를 사용하여 보기 포인터와 이동 포인터를 구분합니다.
--   **m\_lookLastPoint**는 이전 프레임에서 캡처된 마지막 점(장면 좌표로 표시)입니다.
--   **m\_lookLastDelta**는 현재 **m\_position**과 **m\_lookLastPoint** 간의 계산된 차이입니다.
+-   **m\_lookInUse** 모양 컨트롤이 사용 중인지 여부를 나타냅니다.
+-   **m\_lookPointerID** 현재 모양 포인터에 대 한 고유 ID입니다. 포인터 ID 값을 확인할 때 이 ID를 사용하여 보기 포인터와 이동 포인터를 구분합니다.
+-   **m\_lookLastPoint** 마지막 요소는 장면 좌표에서 이전 프레임에서 캡처한 것입니다.
+-   **m\_lookLastDelta** 현재 계산 차이가 **m\_위치** 하 고 **m\_lookLastPoint**합니다.
 
 마지막으로 6개의 이동 수준에 대해 6개의 부울 값을 정의합니다. 이 값은 각 방향 이동 작업의 현재 상태(설정 또는 해제)를 나타내는 데 사용됩니다.
 
--   **m\_forward**, **m\_back**, **m\_left**, **m\_right**, **m\_up** and **m\_down**.
+-   **m\_전달**, **m\_다시**를 **m\_왼쪽**를 **m\_오른쪽**, **m\_위로** 하 고 **m\_아래로**합니다.
 
 6개의 이벤트 처리기를 사용하여 컨트롤러의 상태를 업데이트하는 데 사용하는 입력 데이터를 캡처합니다.
 
@@ -181,7 +181,7 @@ internal:
 -   **Initialize**. 앱에서 이 이벤트 처리기를 호출하여 컨트롤을 초기화하고 디스플레이 창에 대해 설명하는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체에 연결합니다.
 -   **SetPosition**. 앱에서 이 메서드를 호출하여 장면 공간에서 컨트롤의 x, y 및 z 좌표를 설정합니다.
 -   **SetOrientation**. 앱에서 이 메서드를 호출하여 카메라의 피치 및 요를 설정합니다.
--   **get\_Position**. 앱에서 이 속성에 액세스하여 장면 공간에서 카메라의 현재 위치를 가져옵니다. 앱에 현재 카메라 위치를 전달하는 방법으로 이 속성을 사용합니다.
+-   **가져올\_위치**합니다. 앱에서 이 속성에 액세스하여 장면 공간에서 카메라의 현재 위치를 가져옵니다. 앱에 현재 카메라 위치를 전달하는 방법으로 이 속성을 사용합니다.
 -   **get\_LookPoint**. 앱에서 이 속성에 액세스하여 컨트롤러 카메라가 향하고 있는 현재 점을 가져옵니다.
 -   **Update**. 이동 및 보기 컨트롤러의 상태를 읽고 카메라 위치를 업데이트합니다. 앱의 주 루프에서 이 메서드를 계속 호출하여 장면 공간에서 카메라 컨트롤러 데이터 및 카메라 위치를 새로 고칩니다.
 
@@ -251,9 +251,9 @@ _In_ PointerEventArgs^ args)
 }
 ```
 
-이 이벤트 처리기는 포인터가 마우스가 아닌지(이 샘플에서는 마우스와 터치 모두 지원), 이동 컨트롤러 영역에 있는지를 확인합니다. 두 조건이 모두 충족되면 방금 포인터를 눌렀는지 확인합니다. 특히 **m\_moveInUse**가 false인지 테스트하여 이 클릭이 이전 이동 또는 보기 입력과 관련이 없는지 확인합니다. 그럴 경우 처리기는 누르기 동작이 발생한 이동 컨트롤러 영역에서 점을 캡처하고 **m\_moveInUse**를 true로 설정하여 이 처리기가 다시 호출될 때 이동 컨트롤러 입력 상호 작업의 시작 위치를 덮어쓰지 않도록 합니다. 또한 이동 컨트롤러 포인터 ID를 현재 포인터의 ID로 업데이트합니다.
+이 이벤트 처리기는 포인터가 마우스가 아닌지(이 샘플에서는 마우스와 터치 모두 지원), 이동 컨트롤러 영역에 있는지를 확인합니다. 두 조건이 true 이면 확인 포인터를 눌렀는지 여부를 방금, 특히이 클릭 관련 인지 하는 경우 이전에 이동 하거나 테스트 하 여 입력을 찾는 위치 **m\_moveInUse** 은 false입니다. 따라서 처리기 캡처하면 눌러의 발생 위치 및 설정 이동 컨트롤러 영역 시점의 **m\_moveInUse** 이동의 시작 위치를 덮어쓰지 않습니다이 처리기가 다시 호출 되 면 있도록 true로 컨트롤러 입력된 상호 작용 합니다. 또한 이동 컨트롤러 포인터 ID를 현재 포인터의 ID로 업데이트합니다.
 
-포인터가 마우스이거나 터치 포인터가 이동 컨트롤러 영역에 없는 경우에는 보기 컨트롤러 영역에 있어야 합니다. 사용자가 마우스 단추를 누르거나 터치하고 누른 현재 위치로 **m\_lookLastPoint**를 설정하고 델타를 재설정하며 보기 컨트롤러의 포인터 ID를 현재 포인터 ID로 업데이트합니다. 또한 보기 컨트롤러의 상태를 활성으로 설정합니다.
+포인터가 마우스이거나 터치 포인터가 이동 컨트롤러 영역에 없는 경우에는 보기 컨트롤러 영역에 있어야 합니다. 설정 **m\_lookLastPoint** 사용자가 마우스 단추를 눌렀습니다 또는 작업 하 고 누른를 현재 위치에 델타를 다시 설정 하 고 현재 포인터 id 확인 컨트롤러의 포인터 ID 업데이트 또한 보기 컨트롤러의 상태를 활성으로 설정합니다.
 
 **OnPointerMoved**
 
@@ -303,7 +303,7 @@ void MoveLookController::OnPointerMoved(
 
 보기 컨트롤러일 경우 약간 더 복잡할 수 있습니다. 새로운 보기 지점을 계산하고 카메라를 중심에 배치해야 합니다. 따라서 마지막 보기 지점과 현재 화면 위치 간의 델타를 계산한 다음 배율 인수를 곱하면 화면 이동 거리를 기준으로 보기 이동을 더 작거나 더 크게 만들 수 있습니다. 해당 값을 사용하여 피치 및 요를 계산합니다.
 
-마지막으로 플레이어가 마우스 이동이나 화면 터치를 중지하면 이동 또는 보기 컨트롤러 동작을 비활성화해야 합니다. [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)가 실행될 때 호출하는 **OnPointerReleased**를 사용하여 **m\_moveInUse** 또는 **m\_lookInUse**를 FALSE로 설정하고 카메라 팬 이동을 해제한 다음 포인터 ID를 0으로 설정합니다.
+마지막으로 플레이어가 마우스 이동이나 화면 터치를 중지하면 이동 또는 보기 컨트롤러 동작을 비활성화해야 합니다. 사용 하 여 **OnPointerReleased**, 경우 라고 하는 [ **PointerReleased** ](https://msdn.microsoft.com/library/windows/apps/br208279) 설정 하는 발생 **m\_moveInUse** 또는**m\_lookInUse** FALSE 카메라 이동 이동 해제 하 고 포인터 ID 영구
 
 **OnPointerReleased**
 
@@ -384,7 +384,7 @@ void MoveLookController::OnKeyUp(
 
 이제 이벤트를 연결하고 모든 컨트롤러 상태 필드를 초기화하겠습니다.
 
-**Initialize**
+**초기화**
 
 ```cpp
 void MoveLookController::Initialize( _In_ CoreWindow^ window )
@@ -470,7 +470,7 @@ DirectX::XMFLOAT3 MoveLookController::get_LookPoint()
 ## <a name="updating-the-controller-state-info"></a>컨트롤러 상태 정보 업데이트
 
 
-이제 **m\_movePointerPosition** 에서 추적된 포인터 좌표 정보를 표준 좌표계의 새 좌표 정보로 변환하는 계산을 수행합니다. 앱에서는 메인 앱 루프를 새로 고칠 때마다 이 메서드를 호출합니다. 따라서 뷰포트로 투영하기 전에 보기 매트릭스를 업데이트하려면 앱에 전달한 새로운 보기 지점 위치 정보를 여기에서 계산해야 합니다.
+이제 포인터 좌표에서 추적 정보를 변환 하는 계산을 수행할 것 **m\_movePointerPosition** 새 좌표를 정보로 각 세계 좌표 시스템입니다. 앱에서는 메인 앱 루프를 새로 고칠 때마다 이 메서드를 호출합니다. 따라서 뷰포트로 투영하기 전에 보기 매트릭스를 업데이트하려면 앱에 전달한 새로운 보기 지점 위치 정보를 여기에서 계산해야 합니다.
 
 ```cpp
 void MoveLookController::Update(CoreWindow ^window)
@@ -557,7 +557,7 @@ void MoveLookController::Update(CoreWindow ^window)
 
 또한 속도를 계산할 때 이동 및 보기 컨트롤러에서 받은 좌표를 장면에 대한 보기 매트릭스를 계산하는 메서드로 전송하는 실제 보기 지점의 이동으로 변환합니다. 보기 컨트롤러로 클릭하여 이동하거나 왼쪽 또는 오른쪽으로 끄는 경우 장면의 보기 지점이 반대 방향으로 회전하여 카메라가 중심 축 주위로 흔들릴 수 있으므로 먼저 x 좌표를 반대로 합니다. 그런 다음, 이동 컨트롤러에서 위쪽/아래쪽 키 누름 또는 터치 끌기 동작(y-축 동작으로 읽음)이 보기 지점을 화면(z-축) 내외부로 이동하는 카메라 동작으로 변환되므로 y-축과 z-축을 바꿉니다.
 
-플레이어에 대한 보기 지점의 최종 위치는 마지막 위치에 계산된 속도를 더한 위치이며 렌더러에서 **get\_Position** 메서드를 호출할 때(대부분 각 프레임을 설정하는 동안) 읽는 값입니다. 그런 다음 이동 명령을 0으로 재설정합니다.
+플레이어에 대 한 최종 확인 지점의 위치 마지막 위치 및 계산된 속도 이며이 호출할 때 렌더러가 읽은 내용을 합니다 **가져올\_위치** (가능성이 각각에 대해 설치 하는 동안 메서드 프레임)입니다. 그런 다음 이동 명령을 0으로 재설정합니다.
 
 ## <a name="updating-the-view-matrix-with-the-new-camera-position"></a>새 카메라 위치로 보기 매트릭스 업데이트
 
@@ -575,7 +575,7 @@ myFirstPersonCamera->SetViewParameters(
                  ); 
 ```
 
-축하합니다! 게임에서 터치 스크린 및 키보드/마우스 입력 터치 컨트롤에 대한 기본 이동-보기 컨트롤이 구현되었습니다.
+축하합니다. 게임에서 터치 스크린 및 키보드/마우스 입력 터치 컨트롤에 대한 기본 이동-보기 컨트롤이 구현되었습니다.
 
 
 

@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d09c8bbc1130f91dfea3d4c35e391dcf9adcf127
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922993"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649418"
 ---
 # <a name="resetreputation-json"></a>ResetReputation(JSON)
-사용자의 기존 점수를 변경 해야 하는 새 기본 평판 점수를 포함 되어 있습니다. 
+기존 사용자의 점수를 변경 해야 할 새 기본 신뢰도 점수를 포함 합니다. 
 <a id="ID4EN"></a>
 
  
@@ -23,11 +23,11 @@ ms.locfileid: "8922993"
  
 ResetReputation 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| fairplayReputation| 숫자| 원하는 Fairplay 평판 점수 (유효한 범위 0 ~ 75) 사용자에 대 한 새로운 기본 합니다.| 
-| commsReputation| 숫자| 원하는 사용자 (유효한 범위 0 ~ 75)에 대 한 의사 소통 평판 점수 새로운 기본 합니다.| 
-| userContentReputation| 숫자| 원하는 UserContent 평판 점수 (유효한 범위 0 ~ 75) 사용자에 대 한 새로운 기본 합니다.| 
+| fairplayReputation| 숫자| 원하는 사용자 (유효한 범위 0 ~ 75)에 대 한 Fairplay 신뢰도 점수 새 기본입니다.| 
+| commsReputation| 숫자| 원하는 사용자 (유효한 범위 0 ~ 75)에 대 한 통신에 대 한 신뢰도 점수 새 기본입니다.| 
+| userContentReputation| 숫자| 원하는 UserContent 신뢰도 점수 (유효한 범위 0 ~ 75) 사용자에 대 한 새 기본입니다.| 
   
 <a id="ID4E4B"></a>
 
@@ -53,8 +53,8 @@ ResetReputation 개체에 다음과 같이 지정 합니다.
 <a id="ID4EIC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    
