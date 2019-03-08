@@ -1,5 +1,5 @@
 ---
-Description: Learn how to manage issues with speech-recognition accuracy caused by audio-input quality.
+Description: 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다.
 title: 오디오 입력 관련 문제 관리
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
@@ -9,18 +9,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d2c80fd30d158f0890ed70311cdf83dce2058e5
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046626"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644908"
 ---
 # <a name="manage-issues-with-audio-input"></a>오디오 입력 관련 문제 관리
 
 
 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다.
 
-> **중요 API**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243), [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
+> **중요 한 Api**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243), [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
 
 
 ## <a name="assess-audio-input-quality"></a>오디오 입력 품질 평가
@@ -65,7 +65,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 ## <a name="manage-the-speech-recognition-experience"></a>음성 인식 환경 관리
 
 
-[**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) 속성에서 제공하는 설명을 사용하여 사용자가 인식 조건을 향상시킬 수 있도록 지원합니다.
+[  **Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) 속성에서 제공하는 설명을 사용하여 사용자가 인식 조건을 향상시킬 수 있도록 지원합니다.
 
 여기에서는 낮은 볼륨 수준을 확인하는 [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) 이벤트에 대한 처리기를 만듭니다. 그런 다음 [**SpeechSynthesizer**](https://msdn.microsoft.com/library/windows/apps/dn298152) 개체를 사용하여 사용자가 더 크게 말해 보도록 제안합니다.
 

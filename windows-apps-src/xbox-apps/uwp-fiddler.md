@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: fae6caf73cb8a5b569193a17e65e5d8b4f582ff2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046729"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57652228"
 ---
 # <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>UWP용으로 개발하는 경우 Xbox One에서 Fiddler를 사용하는 방법
 
@@ -37,10 +37,10 @@ Fiddler는 콘솔에서 보고하는 네트워크 상태에 영향을 줄 수 �
   | 이름              | FiddlerProxy                   |
   | 그룹             | *값 없음* |
   | 프로필           | 모두                            |
-  | 설정됨           | 예                            |
-  | 액션            | 허용                          |
-  | 재정의          | 아니요                             |
-  | 프로그램           | *Fiddler.exe 경로*          |
+  | Enabled           | 예                            |
+  | 작업            | 허용                          |
+  | 재정의          | 아니오                             |
+  | 프로그램           | *fiddler.exe 경로*          |
   | LocalAddress      | 임의                            |
   | RemoteAddress     | 임의                            |
   | 프로토콜          | TCP                            |
@@ -72,12 +72,12 @@ Fiddler는 콘솔에서 보고하는 네트워크 상태에 영향을 줄 수 �
 2. **사용 안 함**을 클릭합니다.
 
 > [!NOTE]
-> Fiddler가 설치된 각 PC마다 다른 Fiddler 루트 인증서를 사용합니다. 개발 키트용 Fiddler 프록시를 제공하는 데 사용되는 PC가 두 대 이상인 경우 두 PC 간에 전환할 때 새 루트 인증서를 선택해야 합니다. If you are using only one PC, you need to select the root certificate only the first time you enable Fiddler. IP 주소 및 포트는 여전히 지정해야 합니다.
+> Fiddler가 설치된 각 PC마다 다른 Fiddler 루트 인증서를 사용합니다. 개발 키트용 Fiddler 프록시를 제공하는 데 사용되는 PC가 두 대 이상인 경우 두 PC 간에 전환할 때 새 루트 인증서를 선택해야 합니다. PC를 한 대만 사용하는 경우 Fiddler를 처음 사용할 때만 루트 인증서를 선택하면 됩니다. IP 주소 및 포트는 여전히 지정해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 - [Fiddler 설정 API 참조](wdp-fiddler-api.md)
 - [질문과 대답](frequently-asked-questions.md)
-- [Xbox One의 UWP](index.md)
+- [Xbox One에서 UWP](index.md)
 
 
 

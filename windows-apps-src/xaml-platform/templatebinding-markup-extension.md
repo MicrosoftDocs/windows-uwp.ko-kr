@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ade10b4d5e2653eb214d93c2c9166e6a3e3defc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661808"
 ---
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding} 태그 확장
 
@@ -38,11 +38,11 @@ ms.locfileid: "8940112"
 
 ## <a name="remarks"></a>설명
 
-사용자 지정 컨트롤을 만드는 경우 또는 기존 컨트롤에 대한 컨트롤 템플릿을 바꾸는 경우 **TemplateBinding** 사용은 컨트롤 템플릿 정의 방법의 핵심 부분입니다. 자세한 내용은 [빠른 시작: 컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)을 참조하세요.
+사용자 지정 컨트롤을 만드는 경우 또는 기존 컨트롤에 대한 컨트롤 템플릿을 바꾸는 경우 **TemplateBinding** 사용은 컨트롤 템플릿 정의 방법의 핵심 부분입니다. 자세한 내용은 참조 하세요. [빠른 시작: 컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)합니다.
 
-*propertyName* 및 *targetProperty*에서 동일한 속성 이름을 사용하는 것은 일반적입니다. 이 경우 컨트롤은 자체적으로 속성을 정의하고 정의한 속성을 해당 구성 요소 일부 중 하나인 직관적인 이름을 사용하는 기존 속성에 전달할 수 있습니다. 예를 들어 컨트롤 합성으로 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)을 통합하는 컨트롤을 사용하여 컨트롤의 고유 **Text** 속성을 표시하면 이 XAML을 컨트롤 템플릿의 일부로 포함할 수 있습니다. `<TextBlock Text="{TemplateBinding Text}" .... />`
+*propertyName* 및 *targetProperty*에서 동일한 속성 이름을 사용하는 것은 일반적입니다. 이 경우 컨트롤은 자체적으로 속성을 정의하고 정의한 속성을 해당 구성 요소 일부 중 하나인 직관적인 이름을 사용하는 기존 속성에 전달할 수 있습니다. 예를 들어, 통합 하는 컨트롤을 [ **TextBlock** ](https://msdn.microsoft.com/library/windows/apps/br209652) 는 합성 컨트롤의 자체를 표시 하려면 사용 되는 **텍스트** 속성인 일부로이 XAML이 포함 될 수 있습니다 컨트롤 템플릿에서: `<TextBlock Text="{TemplateBinding Text}" .... />`
 
-원본 속성 및 대상 속성의 값으로 사용된 형식이 일치해야 합니다. **TemplateBinding**을 사용 중인 경우에는 변환기를 도입하는 기회가 없습니다. 값이 일치하지 않으면 XAML을 구문 분석할 때 오류가 발생합니다. 변환기가 필요한 경우 템플릿 바인딩을 위한 자세한 구문을 사용할 수 있습니다(예: ). `{Binding RelativeSource={RelativeSource TemplatedParent}, Converter="..." ...}`
+원본 속성 및 대상 속성의 값으로 사용된 형식이 일치해야 합니다. **TemplateBinding**을 사용 중인 경우에는 변환기를 도입하는 기회가 없습니다. 값이 일치하지 않으면 XAML을 구문 분석할 때 오류가 발생합니다. 변환기를 해야 하는 경우와 같은 템플릿 바인딩에 대 한 자세한 구문을 사용할 수 있습니다. `{Binding RelativeSource={RelativeSource TemplatedParent}, Converter="..." ...}`
 
 XAML의 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) 정의 밖에서 **TemplateBinding**을 사용하려고 하면 파서 오류가 발생합니다.
 
@@ -52,20 +52,20 @@ XAML의 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br
 
 **TemplateBinding**은 태그 확장입니다. 태그 확장은 특정 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 구현되며, 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. XAML의 모든 태그 확장은 특성 구문에 "{" 및 "}" 문자를 사용하며, 여기서 특성 구문은 XAML 프로세서가 태그 확장이 특성을 처리해야 함을 인식하는 데 사용하는 규칙입니다.
 
-**참고**Windows 런타임 XAML 프로세서 구현에는 **TemplateBinding**에 대 한 지원 클래스 표현이 없습니다. **TemplateBinding**은 XAML 태그에서만 사용됩니다. 코드에서 이 동작을 재현하는 간단한 방법은 없습니다.
+**참고**  Windows 런타임 XAML 프로세서 구현에 대 한 지원 클래스 표현이 없는 **TemplateBinding**합니다. **TemplateBinding**은 XAML 태그에서만 사용됩니다. 코드에서 이 동작을 재현하는 간단한 방법은 없습니다.
 
-### <a name="xbind-in-controltemplate"></a>ControlTemplate에서 X:bind
+### <a name="xbind-in-controltemplate"></a>X:bind ControlTemplate에서
 
 > [!NOTE]
-> Windows 10 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))는 ControlTemplate에서 X:bind를 사용 하려면 이상. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
+> Windows 10 버전 1809 ControlTemplate에서 X:bind를 사용 하려면 ([17763 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
 
-Windows 10, 버전 1809부터 **X:bind** 태그 확장을 사용할 수는 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)에서 **TemplateBinding** 을 사용 하는 곳입니다. 
+Windows 10 버전 1809부터 사용할 수는 **X:bind** 태그 확장 어디서 나 사용할 **TemplateBinding** 에 [ **ControlTemplate** ](https://msdn.microsoft.com/library/windows/apps/br209391). 
 
-[TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 속성 (옵션 아님) 필요한 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) **X:bind**를 사용 하는 경우에 있습니다.
+합니다 [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 속성이 필요 (필수)에서 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) 사용 하는 경우 **X:bind**합니다.
 
-**X: Bind** 지원 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)에서 원활 하 게으로 양방향 바인딩을으로 두 [함수 바인딩](../data-binding/function-bindings.md) 을 사용할 수 있습니다.
+사용 하 여 **X:bind** 지원, 모두 사용할 수 있습니다 [바인딩을 함수](../data-binding/function-bindings.md) 양방향 바인딩으로 설정에서 뿐만 아니라는 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)합니다.
 
-이 예제에서는 **TextBlock.Text** 속성 **Button.Content.ToString**으로 계산 됩니다. ControlTemplate에서 TargetType 데이터 소스 역할을 하 고 부모 TemplateBinding와 동일한 결과 수행 합니다.
+이 예제는 **TextBlock.Text** 속성 값이 **Button.Content.ToString**합니다. ControlTemplate에 TargetType 데이터 소스로 사용 될 및 부모 TemplateBinding으로 동일한 결과 수행 합니다.
 
 ```xaml
 <ControlTemplate TargetType="Button">
@@ -78,7 +78,7 @@ Windows 10, 버전 1809부터 **X:bind** 태그 확장을 사용할 수는 [**Co
 ## <a name="related-topics"></a>관련 항목
 
 * [빠른 시작: 컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
-* [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)
+* [깊이에서 데이터 바인딩](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)
 * [XAML 개요](xaml-overview.md)
 * [종속성 속성 개요](dependency-properties-overview.md)

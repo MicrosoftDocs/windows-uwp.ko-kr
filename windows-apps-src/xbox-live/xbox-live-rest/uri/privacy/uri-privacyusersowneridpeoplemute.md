@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 86010d11ff0a7ebe188766f51bc3160a4f2befa4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935489"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641548"
 ---
 # <a name="usersowneridpeoplemute"></a>/users/{ownerId}/people/mute
-사용자에 대 한 음소거 목록에 액세스합니다.
+음소거 사용자 목록에 액세스합니다.
 
   * [URI 매개 변수](#ID4EQ)
 
@@ -24,16 +24,16 @@ ms.locfileid: "8935489"
 
 ## <a name="uri-parameters"></a>URI 매개 변수
 
-| 매개 변수| 유형| 설명|
+| 매개 변수| 형식| 설명|
 | --- | --- | --- |
-| ownerId| string| 필수. 해당 리소스를 액세스 하는 사용자의 식별자입니다. 가능한 값은 "me" <code>xuid({xuid})</code>, 또는 gt({gamertag}) 합니다. 인증된 된 사용자 여야 합니다. 예제 값: <code>xuid(2603643534573581)</code>, <code>gt(SomeGamertag)</code>. 최대 크기: 없음. |
+| ownerId| 문자열| 필수. 해당 리소스에 액세스 하는 사용자의 식별자입니다. 가능한 값은 "me" <code>xuid({xuid})</code>, 또는 gt({gamertag}) 합니다. 인증 된 사용자 여야 합니다. 예제 값: <code>xuid(2603643534573581)</code>, <code>gt(SomeGamertag)</code>합니다. 최대 크기: 없음. |
 
 <a id="ID4ETB"></a>
 
 
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
-[GET (/users/{ownerId}/people/mute)](uri-privacyusersowneridpeoplemuteget.md)
+[GET (/users/ {ownerId} / 사용자/음소거)](uri-privacyusersowneridpeoplemuteget.md)
 
 &nbsp;&nbsp;사용자에 대 한 음소거 목록을 가져옵니다.
 
@@ -45,6 +45,6 @@ ms.locfileid: "8935489"
 <a id="ID4E6B"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
-[개인 정보 URI](atoc-reference-privacyv2.md)
+[개인 정보 Uri](atoc-reference-privacyv2.md)

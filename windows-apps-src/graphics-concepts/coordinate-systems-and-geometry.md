@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 962002d635c3e6edbf1f9581a4cbc57fbd5b1d96
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931682"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646298"
 ---
 # <a name="coordinate-systems-and-geometry"></a>좌표계 및 기하 도형
 
 
 Direct3D 응용 프로그램을 프로그래밍하려면 3D 기하 도형 원칙 작업에 익숙해야 합니다. 이 섹션에서는 3D 장면을 만드는 데 필요한 가장 중요한 기하 도형 개념을 소개합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
 
 
 <table>
@@ -39,11 +39,11 @@ Direct3D 응용 프로그램을 프로그래밍하려면 3D 기하 도형 원칙
 <td align="left"><p>일반적으로 3D 그래픽 응용 프로그램은 두 가지 유형의 카티전 좌표계(왼손 또는 오른손) 중 하나를 사용합니다. 두 좌표계에서 양의 x-축은 오른쪽을 가리키고 양의 y-축은 위를 가리킵니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="primitives.md">기본 요소</a></p></td>
+<td align="left"><p><a href="primitives.md">기본 형식</a></p></td>
 <td align="left"><p>3D <em>원형</em>은 단일 3D 엔터티를 구성하는 꼭짓점의 모음입니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="face-and-vertex-normal-vectors.md">면 및 꼭짓점 법선 벡터</a></p></td>
+<td align="left"><p><a href="face-and-vertex-normal-vectors.md">얼굴 및 꼭 짓 점 법선 벡터</a></p></td>
 <td align="left"><p>메시의 각 면에는 수직 단위 법선 벡터가 있습니다. 벡터의 방향은 꼭짓점이 정의된 순서와 좌표계가 오른손용인지 왼손용인지에 따라 결정됩니다.</p></td>
 </tr>
 <tr class="even">
@@ -55,7 +55,7 @@ Direct3D 응용 프로그램을 프로그래밍하려면 3D 기하 도형 원칙
 <td align="left"><p>렌더링 중에 파이프라인은 각 삼각형에서 꼭짓점 데이터를 보간합니다. 꼭짓점 데이터는 광범위한 데이터로써 확산 색, 반사 색, 확산 알파(삼각형 불투명도), 반사 알파 및 포그 인수를 포함할 수 있습니다(이에 국한되지 않음).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="vectors--vertices--and-quaternions.md">벡터, 꼭짓점 및 사원수</a></p></td>
+<td align="left"><p><a href="vectors--vertices--and-quaternions.md">벡터, 꼭 짓 점, 및 쿼터 니 언을</a></p></td>
 <td align="left"><p>Direct3D 전체에서 꼭짓점은 위치 및 방향을 설명합니다. 기본 형식의 각 꼭짓점은 위치, 색, 텍스처 좌표 및 방향을 제공하는 일반적인 벡터로 설명됩니다.</p></td>
 </tr>
 <tr class="odd">
@@ -71,7 +71,7 @@ Direct3D 응용 프로그램을 프로그래밍하려면 3D 기하 도형 원칙
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [Direct3D 그래픽 학습 가이드](index.md)

@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ee9c97a01ce9edc945dd7b83cc13328c8668631
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938360"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628168"
 ---
 # <a name="thumbnailtype-enumeration"></a>ThumbnailType 열거형
-ThumbnailType 열거형에 자세히 설명합니다. 
+ThumbnailType 열거형을 자세히 설명합니다. 
 <a id="ID4ER"></a>
 
  
@@ -23,7 +23,7 @@ ThumbnailType 열거형에 자세히 설명합니다.
  
 | <b>열거자</b>| <b>설명</b>| 
 | --- | --- | 
-| 없음| 미리 보기 형식 지정 되지 않습니다. 대부분의 경우 잘못 된 값입니다.| 
-| 소형| 작은 미리 보기를 지정합니다. 208 픽셀 너비가 높이 424 픽셀을는 적습니다.| 
-| 대형| 큰 미리 보기를 지정합니다. 큰 타일 424 픽셀 너비가 높이 856 픽셀입니다.| 
+| 없음| 미리 보기 형식을 지정 하지 않았습니다. 이 값은 대부분의 경우에서 잘못 된 값입니다.| 
+| 소| 작은 축소판 그림을 지정합니다. 작은 424 x 높이 208 픽셀 너비에서 됩니다.| 
+| 대| 큰 미리 보기를 지정합니다. 큰은 424 픽셀 너비에서 856 픽셀 높이입니다.| 
   

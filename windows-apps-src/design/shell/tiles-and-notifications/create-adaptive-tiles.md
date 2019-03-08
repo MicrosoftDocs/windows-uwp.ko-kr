@@ -1,32 +1,32 @@
 ---
-Description: Adaptive tile templates are a new feature in Windows 10, allowing you to design your own tile notification content using a simple and flexible markup language that adapts to different screen densities.
+Description: 적응 타일 템플릿은 다양 한 화면 밀도에 맞게 조정 되는 단순 하 고 유연한 태그 언어를 사용 하 여 사용자 고유의 타일 알림 콘텐츠를 설계할 수 있도록 Windows 10의 새로운 기능입니다.
 title: 적응형 타일 만들기
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10 uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 524cc15dbb7a3264d8476210f727508ea41ace87
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945530"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639608"
 ---
 # <a name="create-adaptive-tiles"></a>적응형 타일 만들기
 
-적응형 타일 템플릿은 다양 한 화면 밀도에 맞게 조정 되는 단순 하 고 유연한 태그 언어를 사용 하 여 고유한 타일 알림 콘텐츠를 디자인할 수 있도록 Windows10의 새로운 기능입니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. 적응형 요소 및 특성의 전체 목록은 [적응형 타일 스키마](../tiles-and-notifications/tile-schema.md)를 참조하세요.
+적응 타일 템플릿은 다양 한 화면 밀도에 맞게 조정 되는 단순 하 고 유연한 태그 언어를 사용 하 여 사용자 고유의 타일 알림 콘텐츠를 설계할 수 있도록 Windows 10의 새로운 기능입니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. 적응형 요소 및 특성의 전체 목록은 [적응형 타일 스키마](../tiles-and-notifications/tile-schema.md)를 참조하세요.
 
-(원할 경우 사용할 수 있습니다 여전히 [Windows8 타일 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761491) 에서 미리 설정 된 템플릿을 Windows10 용 알림을 디자인할 때.)
+(원하는 경우에서 미리 설정 된 템플릿을 계속 사용할 수 있습니다 합니다 [Windows 8 타일 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761491) Windows 10에 대 한 알림을 디자인 하는 경우입니다.)
 
 
 ## <a name="getting-started"></a>시작
 
-**알림 라이브러리 설치.** XML 대신 C#을 사용하여 알림을 생성하려면 [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)("notifications uwp" 검색)라는 NuGet 패키지를 설치합니다. 이 문서에서 제공하는 C# 샘플은 NuGet 패키지 버전 1.0.0을 사용합니다.
+**알림 라이브러리를 설치 합니다.** XML 대신 C#을 사용하여 알림을 생성하려면 [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)("notifications uwp" 검색)라는 NuGet 패키지를 설치합니다. 이 문서에서 제공하는 C# 샘플은 NuGet 패키지 버전 1.0.0을 사용합니다.
 
-**알림 시각화 도우미 설치.** 이 무료 UWP 앱은 Visual Studio의 XAML 편집기/디자인 뷰와 비슷하게 타일을 편집할 때 시각적 미리 보기를 곧바로 제공하여 적응형 라이브 타일을 디자인하는 데 도움이 됩니다. 자세한 내용은 [알림 시각화 도우미](notifications-visualizer.md)를 참조하거나 [Microsoft Store에서 알림 시각화 도우미를 다운로드하세요](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
+**알림 시각화 도우미를 설치 합니다.** 이 무료 UWP 앱은 Visual Studio의 XAML 편집기/디자인 뷰와 비슷하게 타일을 편집할 때 시각적 미리 보기를 곧바로 제공하여 적응형 라이브 타일을 디자인하는 데 도움이 됩니다. 자세한 내용은 [알림 시각화 도우미](notifications-visualizer.md)를 참조하거나 [Microsoft Store에서 알림 시각화 도우미를 다운로드하세요](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
 
 
 ## <a name="how-to-send-a-tile-notification"></a>타일 알림을 보내는 방법
@@ -208,7 +208,7 @@ TileContent content = new TileContent()
 
 알림 페이로드에서 브랜딩 특성을 사용하여 라이브 타일 아래쪽의 브랜딩(표시 이름 및 모서리 로고)을 제어할 수 있습니다. "none," "name"만, "logo"만 또는 "nameAndLogo"를 사용하여 둘 다 표시하도록 선택할 수 있습니다.
 
-**참고**Windows Mobile mobile 모서리 로고, 따라서 "logo" 및 "nameAndLogo"는 기본적으로 "name"를 지원 하지 않습니다.
+**참고**  Windows Mobile 모바일 모퉁이 로고, 따라서 "로고" 및 "nameAndLogo" 기본 "name"을 지원 하지 않습니다.
 
  
 
@@ -274,13 +274,13 @@ TileContent content = new TileContent()
 };
 ```
 
-**기본 브랜딩 결과:**
+**기본 결과 브랜딩:**
 
 ![타일의 기본 브랜딩](images/adaptive-tiles-defaultbranding.png)
 
 알림 페이로드에서 브랜딩을 지정하지 않으면 기본 타일의 속성에 따라 브랜딩이 결정됩니다. 기본 타일에 표시 이름이 표시되는 경우 브랜딩의 기본값은 "name"입니다. 그렇지 않고 표시 이름이 표시되지 않는 경우 브랜딩의 기본값은 "none"입니다.
 
-**참고**  는 "logo"이 기본 브랜딩 Windows8.x에서 변경 된 것이
+**참고**    이 변경 내용에서 Windows 8.x는 "로고입니다."가 기본 브랜딩
 
  
 
@@ -406,7 +406,7 @@ new AdaptiveText()
 
 ![적응형 타일 텍스트 스타일](images/adaptive-tiles-textstyles.png)
 
-**참고**스타일을 기본값은 caption 힌트 스타일 지정 하지 않으면 합니다.
+**참고**  힌트 스타일 지정 되지 않은 경우 스타일을 캡션 기본값으로 합니다.
 
  
 
@@ -414,14 +414,14 @@ new AdaptiveText()
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;text hint-style = "\ *" /&gt; | 글꼴 높이               | 글꼴 두께 |
+| &lt;text hint-style="\*" /&gt; | 글꼴 높이               | 글꼴 두께 |
 | 자막                        | 12epx(유효 픽셀) | Regular     |
 | 본문                           | 15epx                    | Regular     |
 | 하단                           | 15epx                    | Semibold    |
 | 부제목                       | 20epx                    | Regular     |
-| 제목                          | 24epx                    | Semilight   |
-| 하위 머리글                      | 34epx                    | Light       |
-| 머리글                         | 46epx                    | Light       |
+| title                          | 24epx                    | Semilight   |
+| 하위 머리글                      | 34epx                    | 밝게       |
+| 머리글                         | 46epx                    | 밝게       |
 
  
 
@@ -481,11 +481,11 @@ new AdaptiveText()
 ## <a name="groups-and-subgroups"></a>그룹 및 하위 그룹
 
 
-그룹을 사용하면 그룹 내의 콘텐츠가 관련이 있고 콘텐츠 전체를 표시해야만 이해될 수 있다고 의미상 선언할 수 있습니다. 예를 들어 머리글과 하위 머리글의 두 텍스트 요소가 있을 경우 머리글만 표시하면 의미가 통하지 않을 수 있습니다. 이러한 요소를 하위 그룹 내로 그룹화하면 요소는 모두 표시되거나(맞을 경우) 전혀 표시되지 않습니다(맞지 않을 경우).
+그룹은 그룹 내 콘텐츠가 관련이 있으며 콘텐츠의 적합성을 위해 전체적으로 표시되어야 함을 의미론적으로 선언할 수 있습니다. 예를 들어 머리글과 하위 머리글의 두 텍스트 요소가 있을 경우 머리글만 표시하면 의미가 통하지 않을 수 있습니다. 이러한 요소를 하위 그룹 내로 그룹화하면 요소는 모두 표시되거나(맞을 경우) 전혀 표시되지 않습니다(맞지 않을 경우).
 
 디바이스 및 화면 전체에서 최상의 환경을 제공하려면 여러 그룹을 제공합니다. 여러 그룹이 있으면 타일이 큰 화면에 맞게 조정될 수 있습니다.
 
-**참고**그룹의 유효한 하위 요소는 하위 그룹은 합니다.
+**참고**  만 유효한 자식 그룹의 하위 그룹입니다.
 
  
 
@@ -576,7 +576,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 ## <a name="subgroups-columns"></a>하위 그룹(열)
 
 
-또한 하위 그룹을 사용하여 데이터를 그룹 내의 의미 체계 섹션으로 나눌 수 있습니다. 라이브 타일의 경우 이는 시각적으로 열로 변환됩니다.
+하위 그룹에서도 데이터를 그룹 내의 의미적 섹션으로 나눌 수 있습니다. 라이브 타일의 경우 시각적으로는 열로 변환됩니다.
 
 **hint-weight** 특성을 사용하면 열 너비를 제어할 수 있습니다. **hint-weight**의 값은 **GridUnitType.Star** 동작과 동일하게 사용 가능한 공간의 가중 비율로 표시됩니다. 너비가 같은 열의 경우 각 열에 가중치를 1로 할당합니다.
 
@@ -679,7 +679,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 
 ![하위 그룹, 가중치 합계가 100](images/adaptive-tiles-subgroups03.png)
 
-**참고**열 사이의 8 픽셀 여백이 자동으로 추가 됩니다.
+**참고**  를 8 픽셀의 여백을 열 간에 자동으로 추가 됩니다.
 
  
 
@@ -1179,7 +1179,7 @@ TileWide = new TileBinding()
 
 ![미리 보기 이미지의 예](images/adaptive-tiles-imagepeeking.png)
 
-**미리 보기 및 배경 이미지에 대한 원 자르기**
+**미리 보기 및 배경 이미지에 대 한 원 자르기**
 
 미리 보기 및 배경 이미지의 hint-crop 특성을 사용하여 원 자르기 작업을 수행할 수 있습니다.
 
@@ -1199,7 +1199,7 @@ new TilePeekImage()
 
 ![미리 보기 및 배경 이미지에 대한 원 자르기](images/circlecrop-image.png)
 
-**미리 보기 및 배경 이미지 둘 다 사용**
+**미리 보기 및 배경 이미지를 사용 합니다.**
 
 타일 알림에 미리 보기 및 배경 이미지 둘 다 사용하려면 알림 페이로드에 미리 보기 이미지와 배경 이미지 둘 다 지정합니다.
 
@@ -1212,7 +1212,7 @@ new TilePeekImage()
 
 **hint-overlay**를 사용하여 배경 및 미리 보기 이미지에 검정 오버레이를 설정할 수 있습니다. 이 특성에는 0에서 100 사이의 정수를 사용할 수 있으며, 0이면 오버레이가 없고 100이면 전체 검정 오버레이가 설정됩니다. 오버레이를 사용하여 타일의 텍스트를 읽기 쉽게 만들 수 있습니다.
 
-**배경 이미지에 hint-overlay 사용**
+**배경 이미지에서 힌트 오버레이 사용 합니다.**
 
 페이로드에 일부 텍스트 요소가 있으면 배경 이미지는 기본적으로 20% 오버레이로 설정됩니다(없으면 기본적으로 0% 오버레이로 설정됨).
 
@@ -1239,11 +1239,11 @@ TileWide = new TileBinding()
 }
 ```
 
-**hint-overlay 결과:**
+**힌트-오버레이 결과:**
 
 ![이미지 hint-overlay의 예](images/adaptive-tiles-image-hintoverlay.png)
 
-**미리 보기 이미지에 hint-overlay 사용**
+**힌트-오버레이 사용 하 여 미리 보기 이미지**
 
 Windows 10 버전 1511에서는 배경 이미지와 마찬가지로 미리 보기 이미지에 대해서도 오버레이가 지원됩니다. 미리 보기 이미지 요소의 hint-overlay를 0-100 사이의 정수로 지정합니다. 미리 보기 이미지에 대한 기본 오버레이는 0(오버레이 없음)입니다.
 
@@ -1393,8 +1393,8 @@ TileWide = new TileBinding()
 * [타일 콘텐츠 스키마](../tiles-and-notifications/tile-schema.md)
 * [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)
 * [특수 타일 템플릿](special-tile-templates-catalog.md)
-* [UWP 커뮤니티 도구 키트 - 알림](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
-* [GitHub의 Windows 알림](https://github.com/WindowsNotifications)
+* [UWP 커뮤니티 도구 키트-알림](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [GitHub에서 Windows 알림](https://github.com/WindowsNotifications)
 
  
 

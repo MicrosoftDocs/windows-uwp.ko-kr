@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a5967cbfecd47c5675926bd45939442c45dda7b6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923875"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622498"
 ---
 # <a name="player-json"></a>Player(JSON)
-게임 세션에는 플레이어에 대 한 데이터를 포함합니다. 
+플레이어 게임 세션에서 데이터를 포함합니다. 
 <a id="ID4EN"></a>
 
  
@@ -23,13 +23,13 @@ ms.locfileid: "8923875"
  
 플레이어 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| customData| 8 비트 부호 없는 정수의 배열| 1024 바이트의 Base64 인코딩된 플레이어 게임 관련 데이터입니다. 이 값은 서버에 불투명 합니다.| 
-| 게이머 태그| string| 게이머 태그-15 자-플레이어의 합니다. 플레이어를 식별할 때 클라이언트 UI에서이 값을 사용 해야 합니다. | 
-| isCurrentlyInSession| 부울 값| 플레이어가 현재 세션에 또는 세션 왼쪽 나타냅니다.| 
+| customData| 8 비트 부호 없는 정수 배열| 1024 바이트 base64 인코딩된 플레이어 게임 별 데이터입니다. 이 값은 서버에 불투명 합니다.| 
+| 게이머 태그| 문자열| 게이머 태그-최대 15 자-플레이어입니다. 클라이언트는 플레이어를 식별할 때 UI에서이 값을 사용 해야 합니다. | 
+| isCurrentlyInSession| 부울 값| 플레이어는 현재 세션의에서 세션을 유지 하는지 여부를 나타냅니다.| 
 | seatIndex| 32 비트 부호 있는 정수| 세션에서 플레이어의 인덱스입니다.| 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 플레이어의 합니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 플레이어입니다.| 
   
 <a id="ID4E3C"></a>
 
@@ -57,16 +57,16 @@ ms.locfileid: "8923875"
 <a id="ID4EHD"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
   
 <a id="ID4ERD"></a>
 
  
-##### <a name="reference"></a>참조 
+##### <a name="reference"></a>참고자료 
 
-[GameSession(JSON)](json-gamesession.md)
+[GameSession (JSON)](json-gamesession.md)
 
    

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지, Azure 웹 서버
 ms.localizationpriority: medium
 ms.openlocfilehash: 074a8e9941d4314bb35c28b0ee296e9d86fa23a5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929690"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608798"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Azure 웹앱에서 UWP 앱 설치
 
@@ -18,14 +18,14 @@ ms.locfileid: "8929690"
 
 이 항목에서는 UWP 앱 패키지를 호스트하기 위해 Azure 웹 서버를 구성하는 단계 및 앱 패키지를 설치하기 위해 앱 설치 관리자 앱을 사용하는 방법을 설명합니다.
 
-## <a name="setup"></a>설정
+## <a name="setup"></a>설치
 
 이 자습서를 수행하려면 다음이 필요합니다.
  
 1. Microsoft Azure 구독 
 2. UWP 앱 패키지 - 배포할 앱 패키지
 
-옵션: GitHub의 [Starter 프로젝트](https://github.com/AppInstaller/MySampleWebApp) 작업할 앱 패키지 또는 웹 페이지가 없지만 여전히 이 기능을 사용하는 방법을 알아보고자 하는 경우 유용합니다.
+선택 사항: [시작 프로젝트](https://github.com/AppInstaller/MySampleWebApp) github입니다. 작업할 앱 패키지 또는 웹 페이지가 없지만 여전히 이 기능을 사용하는 방법을 알아보고자 하는 경우 유용합니다.
 
 ### <a name="step-1---get-an-azure-subscription"></a>1단계 - Azure 구독 가져오기
 Azure 구독을 가져오려면 [Azure 계정 페이지](https://azure.microsoft.com/free/)를 방문합니다. 이 자습서의 목적을 위해 무료 멤버십을 사용할 수 있습니다.

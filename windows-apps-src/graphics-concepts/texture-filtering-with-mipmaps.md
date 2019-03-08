@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 474f97f32439c389be8283bb10e0c0ed716b3f69
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923337"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662048"
 ---
 # <a name="texture-filtering-with-mipmaps"></a>Mipmap을 사용하는 텍스처 필터링
 
@@ -43,20 +43,20 @@ Direct3D는 Mipmap 집합에서 원하는 출력에 가장 가까운 해상도�
 
 Mipmap을 사용하려면 응용 프로그램이 Mipmap 세트를 생성해야 합니다. 응용 프로그램은 현재 텍스처 집합에서 Mipmap 집합을 첫 번째 텍스처로 선택하여 Mipmap을 적용합니다. [텍스처 혼합](texture-blending.md)을 참조하세요.
 
-그런 다음 응용 프로그램이 Direct3D가 텍셀 샘플링에 사용할 필터링 방법을 설정해야 합니다. 가장 빠른 Mipmap 필터링 방법은 Direct3D가 가장 가까운 텍셀을 선택하도록 하는 것입니다. D3DTEXF\_POINT 열거형 값을 사용하여 이 방법을 선택하세요. 응용 프로그램이 D3DTEXF\_LINEAR 열거형 값을 사용하는 경우에는 Direct3D의 필터링 결과가 더 나아질 수 있습니다. 가장 가까운 Mipmap을 선택한 후 텍스처에서 현재 픽셀이 매핑되는 위치를 중심으로 텍셀의 가중 평균을 계산하기 때문입니다.
+그런 다음 응용 프로그램이 Direct3D가 텍셀 샘플링에 사용할 필터링 방법을 설정해야 합니다. 가장 빠른 Mipmap 필터링 방법은 Direct3D가 가장 가까운 텍셀을 선택하도록 하는 것입니다. D3DTEXF 사용\_지점 열거 값이 옵션을 선택 합니다. Direct3D 응용 프로그램을 D3DTEXF를 사용 하는 경우 결과 더 잘 필터링을 생성할 수 있습니다\_선형 열거형 값입니다. 가장 가까운 Mipmap을 선택한 후 텍스처에서 현재 픽셀이 매핑되는 위치를 중심으로 텍셀의 가중 평균을 계산하기 때문입니다.
 
 Mipmap 텍스처는 렌더링 시간을 줄일 목적으로 3D 장면에 사용됩니다. 또한 장면의 현실감을 높이기도 합니다. 단, 종종 많은 양의 메모리가 필요합니다.
 
-**참고**  체인의 표면의 절반은 mipmap 사슬에서 각 표면 차원이 합니다. 예를 들어 최상위 Mipmap의 크기가 256x128이라면, 두 번째 Mipmap의 크기가 128x64이고, 세 번째가 64x32인 식으로 이어져 1x1까지 계속 됩니다. 수준에서 다수의 Mipmap 수준을 요청할 수는 없습니다. 사슬의 Mipmap 너비 또는 높이가 1보다 작아질 수도 있기 때문입니다. 쉽게 말해서 최상위 Mipmap 표면의 크기가 4x2라면 수준에서 허용되는 최대 값은 3입니다. 최상위 크기가 4x2이면, 두 번째는 2x1이고, 세 번째는 1x1이 됩니다. 수준에서 값을 3보다 크게 설정하면 두 번째 Mipmap의 높이가 분수 값이 되어 사용할 수 없습니다.
+**참고**    각 화면 mip 맵 체인에서 체인의 이전 화면의 절반 된 치수를 가집니다. 예를 들어 최상위 Mipmap의 크기가 256x128이라면, 두 번째 Mipmap의 크기가 128x64이고, 세 번째가 64x32인 식으로 이어져 1x1까지 계속 됩니다. 수준에서 다수의 Mipmap 수준을 요청할 수는 없습니다. 사슬의 Mipmap 너비 또는 높이가 1보다 작아질 수도 있기 때문입니다. 쉽게 말해서 최상위 Mipmap 표면의 크기가 4x2라면 수준에서 허용되는 최대 값은 3입니다. 최상위 크기가 4x2이면, 두 번째는 2x1이고, 세 번째는 1x1이 됩니다. 수준에서 값을 3보다 크게 설정하면 두 번째 Mipmap의 높이가 분수 값이 되어 사용할 수 없습니다.
 
  
 
 Direct3D는 Mipmap 텍스처 필터링을 자동 실행할 수 있습니다. 응용 프로그램은 Mipmap 사슬을 수동으로 횡단하여 사슬의 각 표면에 비트맵 데이터를 로드할 수 있습니다. 종종 사슬을 횡단하는 이유는 단 하나입니다. 텍스처 생성 시 Mipmap을 자동으로 생성하게 하면 Mipmap이 비디오 메모리에 상주하여 하드웨어 필터링을 이용하기 때문입니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[텍스처 필터링](texture-filtering.md)
+[질감 필터링](texture-filtering.md)
 
  
 

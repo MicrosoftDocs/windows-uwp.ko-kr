@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, 게임, 마우스, 입력
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 ms.localizationpriority: medium
 ms.openlocfilehash: 71985841e6c0fa764201c179fb12408581823e5e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931566"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639658"
 ---
 # <a name="relative-mouse-movement-and-corewindow"></a>상대 마우스 이동 및 CoreWindow
 
@@ -98,5 +98,5 @@ void MoveLookController::OnMouseMoved(
 
 ## <a name="related-topics"></a>관련 항목
 
-* [게임용 이동-보기 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md) 
+* [게임에 대 한 모양을 이동 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md) 
 * [게임용 터치 컨트롤](tutorial--adding-touch-controls-to-your-directx-game.md)

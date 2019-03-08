@@ -8,18 +8,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a0a0df14b442babec363dfebc96a0c33935563e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933771"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658548"
 ---
 # <a name="titlestitleidvariants"></a>/titles/{titleId}/variants
-URI는 제목에 대 한 사용 가능한 변형 가져오려면 클라이언트에 의해 호출 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
+제목에 대 한 사용 가능한 변형을 가져오려면 클라이언트에서 호출 하는 URI입니다. 이러한 Uri에 대 한 도메인이 `gameserverds.xboxlive.com` 고 `gameserverms.xboxlive.com`입니다.
  
   * [URI 매개 변수](#ID4EU)
   * [호스트 이름](#ID4EIB)
-  * [유효한 메서드](#ID4EPB)
+  * [올바른 메서드](#ID4EPB)
  
 <a id="ID4EU"></a>
 
@@ -28,7 +28,7 @@ URI는 제목에 대 한 사용 가능한 변형 가져오려면 클라이언트
  
 | 매개 변수| 설명| 
 | --- | --- | 
-| titleid| ID 요청을 실행 해야 하는 제목입니다.| 
+| titleid| ID는 요청에서 작동 해야 하는 제목입니다.| 
   
 <a id="ID4EIB"></a>
 
@@ -40,9 +40,9 @@ gameserverds.xboxlive.com
 <a id="ID4EPB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
   
 [POST](uri-titlestitleidvariants-post.md)
  
-&nbsp;&nbsp;URI의 id입니다. 지정 된 제목에 대 한 게임 변형의 목록을 검색 하는 클라이언트에 의해 호출
+&nbsp;&nbsp;Id입니다. 지정 된 제목의 게임 변형의 목록을 검색 하는 클라이언트에서 호출 하는 URI
    

@@ -8,23 +8,23 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: cf13b8d28de1c6f9ba3e17bc5c3d8914d68aacc8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933239"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655508"
 ---
 # <a name="systemstringsvalidate"></a>/system/strings/validate
-유효성 검사에 대 한 문자열의 배열에 액세스합니다. 이러한 Uri에 대 한 도메인은 `client-strings.xboxlive.com`.
+유효성 검사에 대 한 문자열의 배열에 액세스합니다. 이러한 Uri에 대 한 도메인은 `client-strings.xboxlive.com`합니다.
   
 <a id="ID4EV"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
-[POST (/system/strings/validate)](uri-systemstringsvalidatepost.md)
+[POST (/ 시스템/문자열/유효성 검사)](uri-systemstringsvalidatepost.md)
 
-&nbsp;&nbsp;유효성 검사에 대 한 문자열의 배열 받아들이고 일련의 같은 크기의 결과 반환 합니다.
+&nbsp;&nbsp;유효성 검사에 대 한 문자열의 배열을 수락 하 고 동일한 크기의 결과 배열을 반환 합니다.
  
 <a id="ID4E6"></a>
 
@@ -34,8 +34,8 @@ ms.locfileid: "8933239"
 <a id="ID4EBB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[시스템 문자열 유효성 검사 URI](atoc-reference-systemstringsvalidate.md)
+[시스템은 유효성 검사 Uri 문자열](atoc-reference-systemstringsvalidate.md)
 
    

@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 911546f1c2973a79aea4b597a47352149a4e4210
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929706"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651118"
 ---
 # <a name="compute-pipeline"></a>계산 파이프라인
 
 
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
+\[일부 정보는 정식으로 발표 되기 전에 대폭 수정 될 수 있는 사전 릴리스된 제품과 관련이 있습니다. Microsoft는 명시적이 든 여기에 제공 된 정보에 따라 묵시적 보증도 하지 않습니다.\]
 
 
 Direct3D 계산 파이프라인은 대개 그래픽 파이프라인과 함께 병렬로 수행할 수 있는 계산을 처리하도록 설계되었습니다. 계산 파이프라인에는 프로그래밍 가능한 계산 셰이더 단계를 통해 입력에서 출력으로 데이터가 흐르는 몇 가지 단계만 있습니다.
@@ -54,7 +54,7 @@ Direct3D 계산 파이프라인은 대개 그래픽 파이프라인과 함께 �
 </table>
 -->
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [Direct3D 그래픽 학습 가이드](index.md)

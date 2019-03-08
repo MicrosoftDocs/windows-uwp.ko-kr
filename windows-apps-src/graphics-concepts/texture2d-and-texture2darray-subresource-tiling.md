@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2175ce19824068a850ff70340b467f09e5c76540
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941586"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592748"
 ---
 # <a name="texture2d-and-texture2darray-subresource-tiling"></a>Texture2D 및 Texture2DArray 하위 리소스 타일링
 
 
 다음은 [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) 및 [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) 하위 리소스 타일 방식을 나타낸 표입니다. 표에 표기된 값에 꼬리 MIP 압축은 포함되지 않았습니다.
 
-## <a name="span-idsubresources-with-multisample-counts-of-1spanspan-idsubresources-with-multisample-counts-of-1spanspan-idsubresources-with-multisample-counts-of-1spansubresources-with-multisample-counts-of-1"></a><span id="Subresources-with-multisample-counts-of-1"></span><span id="subresources-with-multisample-counts-of-1"></span><span id="SUBRESOURCES-WITH-MULTISAMPLE-COUNTS-OF-1"></span>다중 샘플 개수가 1개인 하위 리소스
+## <a name="span-idsubresources-with-multisample-counts-of-1spanspan-idsubresources-with-multisample-counts-of-1spanspan-idsubresources-with-multisample-counts-of-1spansubresources-with-multisample-counts-of-1"></a><span id="Subresources-with-multisample-counts-of-1"></span><span id="subresources-with-multisample-counts-of-1"></span><span id="SUBRESOURCES-WITH-MULTISAMPLE-COUNTS-OF-1"></span>1의 다중 샘플 개수를 사용 하 여 하위
 
 
 다음은 다중 샘플 수가 1개인 [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) 및 [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) 하위 리소스 타일 방식을 나타낸 표입니다.
@@ -36,9 +36,9 @@ ms.locfileid: "8941586"
 
  
 
-스트리밍 리소스로 지원되지 않는 포맷 비트 개수는 96 bpp 포맷, 비디오 포맷, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM, 그리고 DXGI\_FORMAT\_R8R8\_G8B8\_UNORM입니다.
+리소스를 스트리밍 지원 되지 않습니다 하는 형식이 비트 수는 96 bpp 형식, 비디오 형식 DXGI\_형식\_R1\_UNORM, DXGI\_형식\_R8G8\_B8G8\_UNORM, 및 DXGI\_형식\_R8R8\_G8B8\_UNORM 합니다.
 
-## <a name="span-idsubresources-with-various-multisample-countsspanspan-idsubresources-with-various-multisample-countsspanspan-idsubresources-with-various-multisample-countsspansubresources-with-various-multisample-counts"></a><span id="Subresources-with-various-multisample-counts"></span><span id="subresources-with-various-multisample-counts"></span><span id="SUBRESOURCES-WITH-VARIOUS-MULTISAMPLE-COUNTS"></span>다중 샘플 개수가 여러 개인 하위 리소스
+## <a name="span-idsubresources-with-various-multisample-countsspanspan-idsubresources-with-various-multisample-countsspanspan-idsubresources-with-various-multisample-countsspansubresources-with-various-multisample-counts"></a><span id="Subresources-with-various-multisample-counts"></span><span id="subresources-with-various-multisample-counts"></span><span id="SUBRESOURCES-WITH-VARIOUS-MULTISAMPLE-COUNTS"></span>다양 한 다중 샘플 개수를 사용 하 여 하위
 
 
 다음은 다중 샘플 수가 여러 개인 [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) 및 [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) 하위 리소스 타일 방식을 나타낸 표입니다.
@@ -61,10 +61,10 @@ ms.locfileid: "8941586"
 
 지원되는 샘플 개수와 포맷이 제한적인 이유는 사양에 따라 하드웨어가 다르기 때문입니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[스트리밍 리소스 영역의 타일링 방법](how-a-streaming-resource-s-area-is-tiled.md)
+[리소스의 영역을 바둑판식으로 스트리밍 하는 방법](how-a-streaming-resource-s-area-is-tiled.md)
 
  
 

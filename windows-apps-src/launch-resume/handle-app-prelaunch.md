@@ -7,21 +7,21 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925807"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658708"
 ---
 # <a name="handle-app-prelaunch"></a>앱 사전 실행 처리
 
-[**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드를 재정의하여 앱 사전 실행을 처리하는 방법을 알아봅니다.
+[  **OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드를 재정의하여 앱 사전 실행을 처리하는 방법을 알아봅니다.
 
 ## <a name="introduction"></a>소개
 
-사용 가능한 시스템 리소스를 허용 하는 경우 사전 백그라운드에서 사용자의 가장 자주 사용 되는 앱을 시작 하 여 데스크톱 디바이스 패밀리 디바이스에서 UWP 앱의 시작 성능을 향상 되었습니다. 사전 실행된 앱은 시작된 후 일시 중단 상태가 됩니다. 그런 다음 사용자가 앱을 호출하면 앱이 일시 중단 상태에서 실행 상태로 전환되어 다시 시작합니다. 이는 앱 콜드를 시작하는 것보다 빠릅니다. 사용자 환경은 앱이 쉽고 빠르게 시작되는 것입니다.
+사용 가능한 시스템 리소스를 허용 하는 경우 사전에 사용자의 백그라운드에서 가장 자주 사용 되는 앱을 시작 하 여 데스크톱 장치 패밀리 장치에서 UWP 앱의 시작 성능을 개선 되었습니다. 사전 실행된 앱은 시작된 후 일시 중단 상태가 됩니다. 그런 다음 사용자가 앱을 호출하면 앱이 일시 중단 상태에서 실행 상태로 전환되어 다시 시작합니다. 이는 앱 콜드를 시작하는 것보다 빠릅니다. 사용자 환경은 앱이 쉽고 빠르게 시작되는 것입니다.
 
-Windows 10 이전 버전에서는 앱이 자동으로 사전 실행을 활용하지 않았습니다. Windows10, 버전 1511에서는 모든 유니버설 Windows 플랫폼 (UWP) 앱 사전 실행 되는 것에 대 한 후보를 했습니다. Windows 10 버전 1607에서는 [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)를 호출하여 사전 실행 동작에 옵트인(opt-in)해야 합니다. 이 호출을 배치하기 좋은 위치는 `if (e.PrelaunchActivated == false)` 확인이 수행되는 위치 근처의 `OnLaunched()` 내입니다.
+Windows 10 이전 버전에서는 앱이 자동으로 사전 실행을 활용하지 않았습니다. Windows 10 버전 1511에서 모든 유니버설 Windows 플랫폼 (UWP) 앱 사전 실행 되었다는 뜻 되에 대 한 후보를 했습니다. Windows 10 버전 1607에서는 [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)를 호출하여 사전 실행 동작에 옵트인(opt-in)해야 합니다. 이 호출을 배치하기 좋은 위치는 `if (e.PrelaunchActivated == false)` 확인이 수행되는 위치 근처의 `OnLaunched()` 내입니다.
 
 앱의 사전 실행 여부는 시스템 리소스에 따라 달라집니다. 시스템에 리소스가 부족하면 앱은 사전 실행되지 않습니다.
 
@@ -35,7 +35,7 @@ XAML 프로젝트(C#, VB, C++)와 WinJS의 기본 템플릿은 Visual Studio 201
 
 ## <a name="detect-and-handle-prelaunch"></a>사전 실행 감지 및 처리
 
-앱이 활성화되는 동안 [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) 플래그를 수신합니다. 이 플래그를 사용 하 여 [**Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)를 다음과 같이 수정에 표시 된 대로 사용자가 앱을 명시적으로 시작을 실행만 해야 하는 코드를 실행 합니다.
+앱이 활성화되는 동안 [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) 플래그를 수신합니다. 이 플래그를 사용 하 여만 실행 되는 사용자가 앱을 명시적으로 시작 하는 경우 다음의 수정에 표시 된 대로 코드를 실행할 [ **Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)합니다.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -110,9 +110,9 @@ private void TryEnablePrelaunch()
 }
 ```
 
-참고는 `TryEnablePrelaunch()` 위에 작동 합니다. 호출 하는 이유를 `CoreApplication.EnablePrelaunch()` 는 포함이 기능으로 JIT (컴파일)에 전체 메서드를 컴파일할 하려고 메서드를 호출할 때 하기 때문입니다. 앱이 지원 하지 않는 Windows 10 버전에서 실행 하는 경우 `CoreApplication.EnablePrelaunch()`, JIT 실패 합니다. 예상 되는 앱 플랫폼에서 지를 결정 하는 경우에 라고 하는 메서드를 호출 하 여 `CoreApplication.EnablePrelaunch()`,이 문제를 방지 하는 것입니다.
+참고는 `TryEnablePrelaunch()` 함수를 위에 있습니다. 호출 하는 이유를 `CoreApplication.EnablePrelaunch()` 되 JIT (적시에 컴파일)는 전체 메서드 컴파일을 시도 메서드를 호출 하는 경우이 함수로 제한 되므로 합니다. 앱 버전을 지원 하지 않는 Windows 10에서 실행 중인 경우 `CoreApplication.EnablePrelaunch()`, JIT 실패 합니다. 예상 되는 앱 플랫폼에서 지원 하는지 확인 하는 경우에 라고 하는 메서드를 호출 `CoreApplication.EnablePrelaunch()`, 해당 문제를 방지 하는 것입니다.
 
-위 예제에서 코드도 앱 옵트아웃 사전 실행의 Windows 10 버전 1511에서 실행 해야 하는 경우 주석 수는 있습니다. 자동으로 옵트인 된 모든 UWP 앱 버전 1511에서는에 사전 실행 하지 않을 앱에 적합 합니다.
+위의 예제에서 코드 또한 옵트아웃 하려면 사전 실행의 Windows 10 버전 1511 실행 하는 경우 앱에서 필요한 경우 주석 수는 있습니다. 자동으로 옵트인 되었습니다 모든 UWP 앱 버전 1511에서는에 사전 실행에 적합 하지 않을 앱에 대 한 합니다.
 
 ## <a name="use-the-visibilitychanged-event"></a>VisibilityChanged 이벤트 사용
 
@@ -203,7 +203,7 @@ WinJS 앱이 Windows 10의 이전 버전을 대상으로 하는 경우 [onactiva
     -   성능 영향의 예는 앱이 사전 실행될 때 현재 날씨 정보를 로드하는 대신 사용자가 앱으로 전환하여 이 정보를 검색한 다음 앱이 표시되면 다시 로드하여 해당 정보가 최신 정보인지 확인해야 하는 경우입니다.
 -   앱이 시작되었을 때 라이브 타일을 지우면 VisibilityChanged 이벤트가 발생할 때까지 이를 연기합니다.
 -   앱에 대한 원격 분석으로 일반적인 타일 활성화와 사전 실행된 활성화를 구별하여 문제 발생 시 시나리오의 범위를 쉽게 좁힐 수 있습니다.
--   Microsoft Visual Studio2015 업데이트 1 및 Windows10, 버전 1511 경우 시뮬레이션할 수 있습니다 사전 실행 시각적 Studio2015에서 앱에 대 한 **디버그** 선택 하 여 &gt; **기타 디버그 대상** &gt; **Windows 유니버설 앱 디버그 사전 실행**합니다.
+-   Microsoft Visual Studio 2015 업데이트 1, 및 Windows 10 버전 1511에 있는 경우 시뮬레이션할 수 있습니다 막기 위 함 Visual Studio 2015에서 앱을 앱에 대 한 선택 하 여 **디버깅할** &gt; **기타 디버그 대상** &gt; **Windows 유니버설 앱 사전 실행 디버그**합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

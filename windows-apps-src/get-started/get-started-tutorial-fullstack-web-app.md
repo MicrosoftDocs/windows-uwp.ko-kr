@@ -6,15 +6,15 @@ ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c76f0da8c3ac1d50ccd2d328dd321df9aa9bd3e
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117723"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624628"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>REST API 백 엔드를 사용하는 단일 페이지 생성
 
-**인기 있는 전체 스택 웹 기술을 사용하여 Microsoft Store용으로 호스트된 웹앱 빌드**
+**빌드 호스트 된 웹 앱을 인기 있는 fullstack 사용 하 여 Microsoft Store 대 한 웹 기술**
 
 ![단일 페이지 웹앱인 간단한 기억력 게임](images/fullstack.png)
 
@@ -28,7 +28,7 @@ ms.locfileid: "9117723"
 
  - [Node.js](https://nodejs.org/en/download/) - 경로에 노드를 추가하는 옵션을 선택하세요.
 
- - [Express generator](https://expressjs.com/en/starter/generator.html)- 노드를 설치한 후 다음 코드를 실행하여 Express를 설치합니다. `npm install express-generator -g`
+ - [Express 생성기](https://expressjs.com/en/starter/generator.html)-노드를 설치한 후 실행 하 여 Express 설치 `npm install express-generator -g`
 
  - [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -36,11 +36,11 @@ Microsoft Azure에서 API 서비스와 기억력 게임 앱을 호스팅하는 �
 
 Azure 부분을 생략하거나 연기하려면, Azure 호스팅과 Microsoft Store를 위한 앱 패키징을 다루는 1부와 2부의 마지막 섹션을 건너뛰면 됩니다. 제작할 API 서비스와 웹앱은 컴퓨터에서 로컬(각각 `http://localhost:8000`과 `http://localhost:3000`)로 실행됩니다.
 
-## <a name="part-i-build-a-rest-api-backend"></a>1부: REST API 백 엔드 제작
+## <a name="part-i-build-a-rest-api-backend"></a>1 부: REST API 백 엔드 빌드
 
 먼저 기억력 게임 웹앱의 중심이 될 간단한 기억력 게임 API를 만듭니다. [Swagger](https://swagger.io/)를 사용하여 API를 정의하고, 기반 코드를 만들고, 수동 테스팅을 위한 웹 UI를 만듭니다.
 
-이 부분을 건너뛰고 [2부: 단일 페이지 웹 응용 프로그램 제작](#part-ii-build-a-single-page-web-application)으로 바로 이동하려면 여기 [1부에 대한 완료된 코드](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend)를 사용하면 됩니다. *추가 정보* 지침을 따라 코드를 로컬로 실행하거나, *5. Azure에서 API 서비스를 호스트하고 CORS 활성화*를 참조하여 Azure에서 실행합니다.
+이 부분을 건너뛰고 바로 이동 하려는 경우 [II 부: 단일 페이지 웹 응용 프로그램 빌드](#part-ii-build-a-single-page-web-application), 같습니다 합니다 [부에 대 한 코드를 완료](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend)합니다. 수행 합니다 *추가 정보* 가져오고에 대 한 코드를 로컬로 실행 하거나 참조 지침 *5입니다. Azure에서 API 서비스를 호스트 하 고 CORS를 사용 하도록 설정* Azure에서 실행할 수 있습니다.
 
 ### <a name="game-overview"></a>게임 개요
 
@@ -80,7 +80,7 @@ Azure 부분을 생략하거나 연기하려면, Azure 호스팅과 Microsoft St
 
 | 매개 변수 | 설명 |
 |-----------|-------------|
-| int *size* |게임 "보드"에 섞여 배치되는 카드 짝의 수입니다. 예제: `http://memorygameapisample/new?size=2`|
+| int *size* |게임 "보드"에 섞여 배치되는 카드 짝의 수입니다. 예: `http://memorygameapisample/new?size=2`|
 
 | 응답 | 설명 |
 |----------|-------------|
@@ -91,25 +91,25 @@ Azure 부분을 생략하거나 연기하려면, Azure 호스팅과 Microsoft St
 #### <a name="get-game"></a>GET /game
 기억력 게임 보드의 현재 상태를 가져옵니다.
 
-*매개 변수 없음*
+*매개 변수 없이*
 
 | 응답 | 설명 |
 |----------|-------------|
-| 200 OK | 카드 개체의 JSON 배열을 반환합니다. 각 카드에는 일치하는 짝을 이미 찾았는지 나타내는 **cleared** 속성이 있습니다. 일치하는 카드는 자신의 **value**도 보고합니다. 예제: `[{"cleared":"false"},{"cleared":"false"},{"cleared":"true","value":1},{"cleared":"true","value":1}]`|
+| 200 OK | 카드 개체의 JSON 배열을 반환합니다. 각 카드에는 일치하는 짝을 이미 찾았는지 나타내는 **cleared** 속성이 있습니다. 일치하는 카드는 자신의 **value**도 보고합니다. 예: `[{"cleared":"false"},{"cleared":"false"},{"cleared":"true","value":1},{"cleared":"true","value":1}]`|
 
 #### <a name="put-guess"></a>PUT /guess
 펼칠 카드를 지정하고 이전에 펼친 카드와 일치하는지 확인합니다.
 
 | 매개 변수 | 설명 |
 |-----------|-------------|
-| int *card* | 펼칠 카드의 카드 ID(게임 보드 배열의 인덱스)입니다. 두 개의 카드로 구성된 완성된 각 "추측"(예: 유효하고 고유한 *카드* 값을 가진 두 개의 **/guess** 호출)입니다. 예제: `http://memorygameapisample/guess?card=0`|
+| int *card* | 펼칠 카드의 카드 ID(게임 보드 배열의 인덱스)입니다. 두 개의 카드로 구성된 완성된 각 "추측"(예: 유효하고 고유한 *카드* 값을 가진 두 개의 **/guess** 호출)입니다. 예: `http://memorygameapisample/guess?card=0`|
 
 | 응답 | 설명 |
 |----------|-------------|
 | 200 OK | 지정한 카드의 **id**와 **value**를 가진 JSON을 반환합니다. 예: `[{"id":0,"value":1}]`|
 | 400 BAD REQUEST |  지정한 카드에 오류가 있습니다. 자세한 내용은 HTTP 응답 본문을 참조하세요.|
 
-### <a name="1-spec-out-the-api-and-generate-code-stubs"></a>1. API 사양을 확인하고 코드 스텁 생성
+### <a name="1-spec-out-the-api-and-generate-code-stubs"></a>1. Api 사양 및 코드 스텁 생성
 
 기억력 게임 API를 작동하는 Node.js 서버 코드로 변환하기 위해 [Swagger](https://swagger.io/)를 사용할 것입니다. [기억력 게임 Swagger 메타데이터](https://github.com/Microsoft/Windows-tutorials-web/blob/master/Single-Page-App-with-REST-API/backend/api.json)를 정의하는 방법은 다음과 같습니다. 이를 사용하여 서버 코드 스텁을 생성할 것입니다.
 
@@ -144,7 +144,7 @@ Azure 부분을 생략하거나 연기하려면, Azure 호스팅과 Microsoft St
 
     이제 VS Code를 시작하고 **파일** > **폴더 열기...** 를 선택한 다음 MemoryGameAPI 디렉터리로 이동합니다. 이는 여러분이 만든 Node.js API 서버입니다. 이는 인기 있는 [ExpressJS](https://expressjs.com/en/4x/api.html) 웹 응용 프로그램 프레임워크를 사용하여 프로젝트를 구성하고 실행합니다.
 
-### <a name="2-customize-the-server-code-and-setup-debugging"></a>2. 서버 코드 사용자 지정 및 설정 디버깅
+### <a name="2-customize-the-server-code-and-setup-debugging"></a>2. 서버 코드와 디버깅 설치 프로그램을 사용자 지정
 
 프로젝트 루트의 *server.js* 파일은 서버의 "주" 기능 역할을 합니다. VS 코드에서 이를 열고 다음 코드를 복사합니다. 생성된 코드에서 수정된 줄은 설명과 함께 주석이 추가되어 있습니다.
 
@@ -270,13 +270,13 @@ for (var i=0; i < board.length; i++){
 
 이 변경으로 인해 **GET /game** 메서드는 아직 클리어하지 않은 것을 포함하여 모든 카드 값을 반환합니다. 이는 기억력 게임을 위한 프런트 엔드를 제작할 때 유용한 디버그 방식입니다.
 
-### <a name="5-optional-host-your-api-service-on-azure-and-enable-cors"></a>5. (선택 사항) Azure에서 API 서비스를 호스트하고 CORS 활성화
+### <a name="5-optional-host-your-api-service-on-azure-and-enable-cors"></a>5. (선택 사항) Azure에서 API 서비스를 호스트 하 고 CORS를 사용 하도록 설정
 
 Azure 문서는 다음 내용을 설명합니다.
 
- - [Azure Portal에 새 *API 앱* 등록](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#createapiapp)
+ - [새 등록 *API 앱* Azure Portal을 사용 하 여](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#createapiapp)
  - [API 앱을 위한 Git 배포 설정](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
- - [Azure에 API 앱 코드 배포](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
+ - [Azure API 앱 코드 배포](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
 
 앱을 등록할 때 *앱 이름*을 차별화하세요(*http://memorygameapi.azurewebsites.net* URL에서 다른 사용자의 변형 요청으로 인해 명명 충돌이 발생하지 않도록 하기 위해).
 
@@ -288,9 +288,9 @@ Azure 문서는 다음 내용을 설명합니다.
 
 더 발전시키기 위한 유용한 몇 가지 리소스는 다음과 같습니다.
 
- - [Visual Studio Code를 사용한 고급 Node.js 디버깅](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
+ - [Visual Studio Code를 사용 하 여 디버깅 하는 고급 Node.js](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
 
- - [Azure 웹 + 모바일 문서](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=web)
+ - [Azure 웹 + 모바일 docs](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=web)
 
  - [Azure DocumentDB 문서](https://docs.microsoft.com/en-us/azure/documentdb/index)
 
@@ -307,7 +307,7 @@ Azure 문서는 다음 내용을 설명합니다.
 * [부트스크랩](https://getbootstrap.com/): 반응형 레이아웃용
 * [Visual Studio Code ](https://code.visualstudio.com/): 코드 작성, 마크다운 보기 및 디버깅용
 
-### <a name="1-create-a-nodejs-application-by-using-express"></a>1. Express를 사용하여 Node.js 응용 프로그램 만들기
+### <a name="1-create-a-nodejs-application-by-using-express"></a>1. Express를 사용 하 여 Node.js 응용 프로그램 만들기
 
 Express를 사용하여 Node.js 프로젝트 만들기를 시작합니다.
 
@@ -333,7 +333,7 @@ Express를 사용하여 Node.js 프로젝트 만들기를 시작합니다.
     npm start
     ```
 
-5. [https://localhost:3000/](https://localhost:3000/)으로 이동하여 응용 프로그램을 확인합니다.
+5. [https://localhost:3000/  ](https://localhost:3000/)으로 이동하여 응용 프로그램을 확인합니다.
 
     ![http://localhost:3000/의 스크린샷](./images/express.png)
 
@@ -345,7 +345,7 @@ Express를 사용하여 Node.js 프로젝트 만들기를 시작합니다.
 
 7. 앱을 새로 고치고 새 제목을 보려면, 명령 프롬프트에서 **Crtl + C**, **Y**를 눌러 앱을 중지하고 `npm start`로 다시 시작합니다.
 
-### <a name="2-add-client-side-game-logic-code"></a>2. 클라이언트 쪽 게임 논리 코드 추가
+### <a name="2-add-client-side-game-logic-code"></a>2. 클라이언트 쪽 게임 논리 코드를 추가 합니다.
 자습서의 이 부분에 필요한 파일은 [Start](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/frontend/Start) 폴더에서 찾을 수 있습니다. 코드를 잃어버린 경우, [Final](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/frontend/Final) 폴더에서 완료된 코드를 찾을 수 있습니다. 
 
 1. [Start](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/frontend/Start) 폴더 내의 scripts.js 파일을 복사하여 memory\public\javascripts에 붙여넣습니다. 이 파일은 다음을 포함하여 게임을 실행하는 데 필요한 모든 게임 논리가 포함되어 있습니다.
@@ -464,14 +464,14 @@ Express를 사용하여 Node.js 프로젝트 만들기를 시작합니다.
 > [!TIP] 
 > Visual Studio Code를 사용하는 경우, 주석 처리를 제거하려는 코드의 모든 줄을 선택하고 Crtl + K, U를 누릅니다.
 
-여기서 1부에서 만든 [`jQuery.ajax()`](https://api.jquery.com/jQuery.ajax/) 및 **PUT**[`/guess`](#part-i-build-a-rest-api-backend) 메서드를 사용합니다. 
+여기서 사용 하 여 [ `jQuery.ajax()` ](https://api.jquery.com/jQuery.ajax/) 하며 **배치** [ `/guess` ](#part-i-build-a-rest-api-backend) 부에서 만든 메서드. 
 
 이 코드는 다음 순서로 실행됩니다.
 
-* 사용자가 선택한 첫 카드의 `id`가 selectedCards[] 배열의 첫 번째 값으로 추가됩니다. `selectedCards[0]` 
+* `id` 첫 번째 카드의 사용자가 선택한 첫 번째 값으로 배열에 추가 되는 selectedCards: `selectedCards[0]` 
 * `selectedCards[0]`의 값(`id`)이 [`/guess`](#part-i-build-a-rest-api-backend) 메서드를 사용하여 서버에 게시됩니다.
 * 서버가 카드의 `value`(정수)로 응답합니다.
-* [부트스트랩 문자 모양 아이콘](https://getbootstrap.com/components/)이 카드 뒷면에 추가되며 `id`: `selectedCards[0]`
+* A [부트스트랩 glyphicon](https://getbootstrap.com/components/) 추가할 카드 뒷면 갖는 `id` 는 `selectedCards[0]`
 * 첫 번째 카드의 `value`(서버에서 반환)가 `selectedCardsValues[]` 배열인 `selectedCardsValues[0]`에 저장됩니다. 
 
 사용자의 두 번째 추측은 다음 논리를 따릅니다. 사용자가 선택한 카드의 ID가 동일한 경우(예: `selectedCards[0] == selectedCards[1]`) 카드가 일치하는 것입니다! CSS 클래스 `.matched`가 일치하는 카드(녹색으로 전환)에 추가되고 카드가 뒤집힌 채로 유지됩니다.
@@ -537,13 +537,13 @@ body
     ```
 
 > [!TIP] 
-> Pug는 공백을 구분합니다. 모든 들여쓰기가 정확한지 확인하십시오!
+> 기억해 야 합니다. Pug 공백이 중요 한 경우 모든 들여쓰기가 정확한지 확인하십시오!
 
-### <a name="4-use-bootstraps-grid-system-to-create-a-responsive-layout"></a>4. 부트스크랩의 그리드 시스템을 사용하여 반응형 레이아웃 만들기
+### <a name="4-use-bootstraps-grid-system-to-create-a-responsive-layout"></a>4. 부트스트랩 그리드 시스템을 사용 하 여 반응 형 레이아웃을 만들려면
 부트스크랩의 [그리드 시스템](https://getbootstrap.com/css/#grid)은 디바이스의 뷰포트 변경에 따라 그리드의 크기를 변경하는 유연한 그리드 시스템입니다. 이 게임의 카드는 다음을 포함하여 레이아웃에 부트스트랩의 미리 정의된 그리드 시스템 클래스를 사용합니다.
-* `.container-fluid`: 그리드에 대한 유동 컨테이너 지정
-* `.row-fluid`: 유동 행 지정
-* `.col-xs-3`: 열 수 지정
+* `.container-fluid`: 표에 대 한 유연한 컨테이너를 지정 합니다.
+* `.row-fluid`: 유연한 행을 지정 합니다.
+* `.col-xs-3`: 열의 수를 지정 합니다.
 
 부트스트랩의 그리드 시스템을 사용하면 그리드 시스템을 하나의 세로 열로 축소할 수 있습니다. 이는 모바일 디바이스의 탐색 메뉴에서 볼 수 있는 것과 같습니다.  하지만 게임에 항상 열이 있기를 원하므로, 그리드를 항상 가로로 유지하는 사전 정의된 클래스 `.col-xs-3`를 사용합니다. 
 
@@ -572,7 +572,7 @@ body
                 script restoreGame();
     ```
 
-### <a name="5-add-a-card-flip-animation-with-css-transforms"></a>5. CSS 변환을 사용하여 카드 뒤집기 애니메이션 추가
+### <a name="5-add-a-card-flip-animation-with-css-transforms"></a>5. 카드-대칭 이동 후 애니메이션을 사용 하 여 CSS 변환 추가
 memory\public\stylesheets의 style.css 파일을 Start 폴더의 style.css 파일로 바꿉니다.
 
 카드가 진짜처럼 보이게 만드는 3D 뒤집기 동작을 표현하는 [CSS 변환](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/css/transforms)을 사용하여 뒤집기 동작을 추가합니다. 게임의 카드는 다음 HTML 구조를 사용하여 만들어지며, 프로그래밍 방식으로 게임 보드에 추가(앞서 본 `drawGameBoard()` 기능 내에)됩니다.
@@ -592,16 +592,16 @@ memory\public\stylesheets의 style.css 파일을 Start 폴더의 style.css 파�
     perspective: 1000px; 
     ```
 
-2. 이제 다음 속성을 style.css의 `.cards` 클래스에 추가합니다. `.cards` `div`는 카드의 앞면 또는 뒷면을 표시하는 뒤집기 애니메이션을 실제로 수행하는 요소입니다. 
+2. 이제 다음 속성을 style.css의 `.cards` 클래스에 추가합니다. 합니다 `.cards` `div` 실제로 작업을 수행 합니다 회의 대칭 이동 애니메이션 카드 뒷면 또는 앞면을 표시 하는 요소가 있습니다. 
 
     ``` css
     transform-style: preserve-3d;
     transition-duration: 1s;
     ```
 
-    [`transform-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style) 속성은 3D 렌더링 컨텍스트와 `.cards` 클래스(`.front`와 `.back`는 3D 공간의 멤버임)를 구축합니다. [`transition-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration) 속성을 추가하면 애니메이션을 완료할 시간(초)를 지정합니다. 
+    [`transform-style`  ](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style) 속성은 3D 렌더링 컨텍스트와 `.cards` 클래스(`.front`와 `.back`는 3D 공간의 멤버임)를 구축합니다. [`transition-duration`  ](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration) 속성을 추가하면 애니메이션을 완료할 시간(초)를 지정합니다. 
 
-3.  [`transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) 속성을 사용하여 카드를 Y축으로 회전할 수 있습니다.  다음 CSS를 `cards.flip`에 추가합니다.
+3.  [`transform`  ](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) 속성을 사용하여 카드를 Y축으로 회전할 수 있습니다.  다음 CSS를 `cards.flip`에 추가합니다.
 
     ``` css
     transform: rotateY(180deg);
@@ -615,10 +615,10 @@ memory\public\stylesheets의 style.css 파일을 Start 폴더의 style.css 파�
 
     이제 사용자가 카드를 클릭하면 카드가 180도 회전됩니다.
 
-### <a name="6-test-and-play"></a>6. 테스트 및 플레이
-축하합니다! 웹앱을 만들기가 완료되었습니다! 테스트해 보겠습니다. 
+### <a name="6-test-and-play"></a>6. 테스트 및 재생
+축하합니다. 웹앱을 만들기가 완료되었습니다! 테스트해 보겠습니다. 
 
-1. memory 디렉터리에서 명령 프롬프트를 열고 다음 명령을 입력합니다. `npm start`
+1. 메모리 디렉터리에 명령 프롬프트를 열고 다음 명령을 입력 합니다. `npm start`
 
 2. 브라우저에서 [https://localhost:3000/](https://localhost:3000/)으로 이동하여 게임을 플레이합니다!
 
@@ -626,11 +626,11 @@ memory\public\stylesheets의 style.css 파일을 Start 폴더의 style.css 파�
 
     작성한 코드를 최종 폴더의 코드와 비교할 수도 있습니다.
 
-4. 게임을 중지하려면 명령 프롬프트에서 **Ctrl + C**, **Y**를 입력합니다. 
+4. 명령 프롬프트에서 게임을 중지 합니다. **Ctrl + C**, **Y**. 
 
 ### <a name="going-further"></a>더 나아가기
 
-이제 모바일, 태블릿, 데스크톱과 같은 서로 다른 디바이스 폼 팩터에서 테스팅하기 위해 앱을 Azure(또는 다른 클라우드 호스팅 서비스)에 배포할 수 있습니다. (다른 브라우저에서도 테스트하는 것을 잊지 마세요!) 앱이 프로덕션 준비가 되면 손쉽게 *유니버설 Windows 플랫폼*(UWP)을 위한 *호스트된 웹앱*(HWA)으로 패키징하여 Microsoft Store에서 배포할 수 있습니다.
+이제 모바일, 태블릿, 데스크톱과 같은 서로 다른 디바이스 폼 팩터에서 테스팅하기 위해 앱을 Azure(또는 다른 클라우드 호스팅 서비스)에 배포할 수 있습니다. (너무 다양 한 브라우저에서 테스트할 찾기 없습니다!) 앱 프로덕션 준비 되 면 수 쉽게로 패키지를 *호스트 웹 앱* (HWA)에 대 한 합니다 *유니버설 Windows 플랫폼* (UWP) 및 Microsoft Store 배포 합니다.
 
 Microsoft Store에 게시하는 기본 단계는 다음과 같습니다.
 
@@ -640,8 +640,8 @@ Microsoft Store에 게시하는 기본 단계는 다음과 같습니다.
 
 더 발전시키기 위한 유용한 몇 가지 리소스는 다음과 같습니다.
 
- - [응용 프로그램 개발 프로젝트를 Azure 웹 사이트에 배포](https://docs.microsoft.com/azure/cosmos-db/documentdb-nodejs-application#_Toc395783182)
+ - [Azure Websites에 응용 프로그램 개발 프로젝트 배포](https://docs.microsoft.com/azure/cosmos-db/documentdb-nodejs-application#_Toc395783182)
 
- - [UWP(유니버설 Windows 플랫폼) 앱으로 웹 응용 프로그램 변환](https://docs.microsoft.com/en-us/windows/uwp/porting/hwa-create-windows)
+ - [유니버설 Windows 플랫폼 (UWP) 앱에 웹 응용 프로그램으로 변환](https://docs.microsoft.com/en-us/windows/uwp/porting/hwa-create-windows)
 
  - [Windows 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)

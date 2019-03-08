@@ -1,22 +1,22 @@
 ---
 title: 예약된 파일 및 URI 체계 이름
-description: 이 항목에는 앱에 사용할 수 없는 예약된 파일 및 URI 스키마 이름이 나열됩니다.
+description: 이 항목에서는 앱에 사용할 수 없는 예약된 파일 및 URI 체계 이름을 보여 줍니다.
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 81bd9f699e899f895d55b2b2132681824ed40b7b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921861"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650628"
 ---
 # <a name="reserved-file-and-uri-scheme-names"></a>예약된 파일 및 URI 체계 이름
 
 
-URI 연결을 사용하여 다른 앱이 특정 URI 체계를 시작할 때 자동으로 앱을 실행할 수 있습니다. 하지만 일부 URI 연결은 사용할 수 없는 예약된 연결입니다. 앱이 예약된 연결에 등록하는 경우 해당 등록은 무시됩니다. 이 항목에는 앱에 사용할 수 없는 예약된 파일 및 URI 스키마 이름이 나열됩니다.
+URI 연결을 사용하여 다른 앱이 특정 URI 체계를 시작할 때 자동으로 앱을 실행할 수 있습니다. 하지만 일부 URI 연결은 사용할 수 없는 예약된 연결입니다. 앱이 예약된 연결에 등록하는 경우 해당 등록은 무시됩니다. 이 항목에서는 앱에 사용할 수 없는 예약된 파일 및 URI 체계 이름을 보여 줍니다.
 
 ## <a name="reserved-file-types"></a>예약된 파일 형식
 

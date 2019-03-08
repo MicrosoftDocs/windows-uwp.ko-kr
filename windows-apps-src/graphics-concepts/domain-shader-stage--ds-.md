@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: bbde90d848d3bc8fb18a5ecf370c85121adc02f6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934668"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620498"
 ---
 # <a name="domain-shader-ds-stage"></a>DS(도메인 셰이더) 단계
 
 
 DS(도메인 셰이더) 단계는 출력 패치에서 세분화된 지점의 꼭짓점 위치를 계산합니다. 이 단계에서 각 도메인 샘플에 해당하는 꼭짓점 위치도 계산합니다. 도메인 셰이더는 분할기 단계 출력 지점당 한 번씩 실행되며, 헐 셰이더 출력 패치 및 출력 패치 상수, 분할기 단계 출력 UV 좌표에 대한 읽기 전용 액세스 권한을 가집니다.
 
-## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>목적 및 사용
+## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>용도 사용
 
 
 DS(도메인 셰이더) 단계 [HS(헐 셰이더) 단계](hull-shader-stage--hs-.md) 및 [TS(분할기) 단계](tessellator-stage--ts-.md)의 입력을 기반으로 출력 패치의 세분화된 지점의 꼭짓점 위치를 출력합니다.
@@ -35,10 +35,10 @@ DS(도메인 셰이더) 단계 [HS(헐 셰이더) 단계](hull-shader-stage--hs-
     -   공간 분할 요소. 공간 분할 요소는 고정 함수 분할기에서 사용하는 값뿐 아니라 기하 모핑 등에서 사용되는 원시 값(예를 들어 정수 공간 분할로 반올림하기 전)도 포함됩니다.
 -   도메인 셰이더는 [TS(분할기) 단계](tessellator-stage--ts-.md)의 출력 좌표당 한 번씩 호출됩니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
 
 
--   DS(도메인 셰이더) 단계는 출력 패치의 세분화된 지점의 꼭짓점 위치를 출력합니다.
+-   DS(도메인 셰이더) 단계는 출력 패치의 세분화된 지점의 꼭지점 위치를 출력합니다.
 
 도메인 셰이더가 완료되면, 공간 분할이 끝나고 파이프라인 데이터는 [GS(기하 도형 셰이더) 단계](geometry-shader-stage--gs-.md) 및 [PS(픽셀 셰이더) 단계](pixel-shader-stage--ps-.md)와 같은 다음 파이프라인 단계로 계속됩니다. 인접한 기본 요소(예를 들어, 삼각형당 6개 꼭짓점)을 기대하는 기하 도형 셰이더는 공간 분할이 활성화된 경우 유효하지 않습니다. 이로 인해 디버그 계층에서 문제를 삼을 정의되지 않은 동작이 발생합니다.
 
@@ -58,7 +58,7 @@ void main( out    MyDSOutput result,
 }
 ```
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [그래픽 파이프라인](graphics-pipeline.md)

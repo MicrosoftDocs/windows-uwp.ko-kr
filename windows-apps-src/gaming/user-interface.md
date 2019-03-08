@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 템플릿
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a4491fe9a3bb97a73652c40a2968f2f53c377b5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933371"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634248"
 ---
 # <a name="directx-game-project-templates"></a>DirectX 게임 프로젝트 템플릿
 
@@ -19,17 +19,17 @@ ms.locfileid: "8933371"
 
 DirectX 및 UWP(유니버설 Windows 플랫폼) 템플릿을 사용하여 게임의 시작 지점으로 프로젝트를 신속하게 만들 수 있습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 
 프로젝트를 만들려면 다음을 수행해야 합니다.
 
--   [Microsoft Visual Studio2015를 다운로드](https://www.visualstudio.com/vs-2015-product-editions)합니다. 시각적 Studio2015에 그래픽 디버깅 도구 등의 프로그래밍에 대 한 도구가 있습니다. DirectX 그래픽 및 게임 기능과 도구에 대한 개요를 보려면 [DirectX 게임 개발을 위한 Visual Studio 도구](set-up-visual-studio-for-game-development.md)를 참조하세요.
+-   [Microsoft Visual Studio 2015 다운로드](https://www.visualstudio.com/vs-2015-product-editions)합니다. Visual Studio 2015에는 그래픽 디버깅 도구와 같은 프로그래밍에 대 한 도구가 있습니다. DirectX 그래픽 및 게임 기능과 도구에 대한 개요를 보려면 [DirectX 게임 개발을 위한 Visual Studio 도구](set-up-visual-studio-for-game-development.md)를 참조하세요.
 
 ## <a name="choosing-a-template"></a>템플릿 선택
 
 
-시각적 Studio2015 세 가지 DirectX 및 UWP 템플릿이 포함 됩니다.
+Visual Studio 2015에는 세 가지 DirectX 및 UWP 템플릿이 포함 되어 있습니다.
 
 -   DirectX 11 앱(유니버설 Windows) - DirectX 11 앱(유니버설 Windows) 템플릿은 DirectX 11을 사용하여 앱 창에 직접 렌더링되는 UWP 프로젝트를 만듭니다.
 -   DirectX 12 앱(유니버설 Windows) - DirectX 12 앱(유니버설 Windows) 템플릿은 DirectX 12를 사용하여 앱 창에 직접 렌더링되는 UWP 프로젝트를 만듭니다.
@@ -44,9 +44,9 @@ DirectX 유니버설 Windows 템플릿은 다음 파일을 포함합니다.
 
 -   pch.h 및 pch.cpp - 사전 컴파일된 헤더 지원
 -   Package.appxmanifest - 앱 배포 패키지 속성
--   \*.pfx - 응용 프로그램 인증서
+-   \*.pfx-응용 프로그램에 대 한 인증서입니다.
 -   외부 종속성 - 프로젝트에서 사용하는 외부 파일에 대한 링크
--   \*Main.h 및 \*Main.cpp - 응용 프로그램 자산을 관리하고, 응용 프로그램 상태를 업데이트하며, 프레임을 렌더링하는 메서드
+-   \*Main.h 및 \*Main.cpp-방법, 응용 프로그램 자산을 관리 하 고, 응용 프로그램 상태를 업데이트 하 고, 프레임을 렌더링 합니다.
 -   App.h 및 App.cpp - 응용 프로그램의 기본 진입점 앱을 Windows 셸과 연결하고 응용 프로그램 수명 주기 이벤트를 처리합니다. 이러한 파일은 DirectX 11 앱(유니버설 Windows) 및 DirectX 12 앱(유니버설 Windows) 템플릿에만 표시됩니다.
 -   App.xaml, App.xaml.cpp 및 App.xaml.h - 응용 프로그램의 기본 진입점. 앱을 Windows 셸과 연결하고 응용 프로그램 수명 주기 이벤트를 처리합니다. 이러한 파일은 DirectX 11 및 XAML 앱(유니버설 Windows) 템플릿에만 표시됩니다.
 -   DirectXPage.xaml, DirectXPage.xaml.cpp 및 DirectXPage.xaml.h - DirectX SwapChainPanel을 호스팅하는 페이지. 이러한 파일은 DirectX 11 및 XAML 앱(유니버설 Windows) 템플릿에만 표시됩니다.
@@ -70,10 +70,10 @@ DirectX 유니버설 Windows 템플릿은 다음 파일을 포함합니다.
 
 기존 게임을 포팅하려면 다음 항목을 참조하세요.
 
--   [OpenGL ES 2.0에서 Direct3D 11.1로 포팅](port-from-opengl-es-2-0-to-directx-11-1.md)
--   [DirectX 9에서 유니버설 Windows 플랫폼으로 포팅](porting-your-directx-9-game-to-windows-store.md)
+-   [포트 OpenGL ES 2.0에서에서 direct3d 11.1](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [유니버설 Windows 플랫폼으로 DirectX 9에서 포트](porting-your-directx-9-game-to-windows-store.md)
 
 DirectX 게임을 새로 만드는 경우 다음 항목을 참조하세요.
 
 -   [DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-uwp-directx-game.md)
--   [C++ 및 DirectX로 유니버설 Windows 플랫폼 게임 Marble Maze 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+-   [C + + 및 DirectX에서 유니버설 Windows 플랫폼 게임 Marble Maze 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)

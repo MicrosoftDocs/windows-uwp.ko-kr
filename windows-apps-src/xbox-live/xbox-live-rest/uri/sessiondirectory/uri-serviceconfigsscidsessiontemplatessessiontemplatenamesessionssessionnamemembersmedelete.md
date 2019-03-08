@@ -8,17 +8,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3de35398f4685a0b0cfda1a251c65ed6a74956d7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938775"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637198"
 ---
 # <a name="delete-serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionnamemembersme"></a>DELETE (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName}/members/me)
-세션의 구성원을 제거합니다.
+세션에서 멤버를 제거 합니다.
 
 > [!IMPORTANT]
-> 이 URI 메서드에 필요 X Xbl-계약 버전의 헤더 요소: 104/105 또는 나중에 모든 요청.
+> 이 URI 메서드를 헤더 요소의 X Xbl-계약 버전이 필요합니다. 104/105 또는 나중에 모든 요청 합니다.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4E3)
@@ -30,17 +30,17 @@ ms.locfileid: "8938775"
 
 
 ## <a name="remarks"></a>설명
-모든 세션 멤버 리소스 작업에는 Xbox 사용자 ID (XUID) 승인을 받아야합니다.  
+모든 세션 멤버 리소스 작업을 Xbox 사용자 ID (XUID) 권한 부여가 필요 합니다.  
 <a id="ID4E3"></a>
 
 
 ## <a name="uri-parameters"></a>URI 매개 변수
 
-| 매개 변수| 유형| 설명|
+| 매개 변수| 형식| 설명|
 | --- | --- | --- | --- |
-| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 1 부 세션 식별자입니다.|
-| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션 식별자입니다.|
-| 세션 이름| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.|
+| scid| GUID| (서비스 안내) 식별자를 구성 하는 서비스입니다. 1 부 세션 식별자입니다.|
+| sessionTemplateName| 문자열| 세션 템플릿의 현재 인스턴스의 이름입니다. 2 부를 선택 하면 세션 식별자입니다.|
+| sessionName| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.|
 
 <a id="ID4EHB"></a>
 
@@ -52,13 +52,13 @@ ms.locfileid: "8938775"
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
 
 <a id="ID4EYB"></a>
 
 
 ## <a name="response-body"></a>응답 본문
-[MultiplayerSession (JSON)](../../json/json-multiplayersession.md)에 대 한 응답 구조를 참조 하세요.  
+응답 구조를 볼 [MultiplayerSession (JSON)](../../json/json-multiplayersession.md)합니다.  
 <a id="ID4EBC"></a>
 
 
@@ -67,6 +67,6 @@ ms.locfileid: "8938775"
 <a id="ID4EDC"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
 [/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName}/members/me](uri-serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionnamemembersme.md)

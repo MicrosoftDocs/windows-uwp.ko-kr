@@ -1,5 +1,5 @@
 ---
-Description: To view performance data for the ad units in your apps, use the advertising performance report in Partner Center.
+Description: Ad 장치 앱에 대 한 성능 데이터를 보려는 파트너 센터에서 광고 성능 보고서를 사용 합니다.
 title: 광고 성과 보고서
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
 ms.date: 10/31/2018
@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a96f6f6593a8ccc6714f67b6f825a6416750b432
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944130"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640278"
 ---
 # <a name="advertising-performance-report"></a>광고 성과 보고서
 
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **광고 성과 보고서** 커뮤니티 광고를 포함 하 여 [광고 단위](in-app-ads.md) 에 수행 하는 방법을 보여 줍니다. 이 보고서에는 [광고 조정](in-app-ads.md#mediation)을 사용하는 UWP 앱의 여러 광고 공급자의 데이터가 포함되어 있습니다.
+**성능 보고서를 광고** 에 [파트너 센터](https://partner.microsoft.com/dashboard) 보여 줍니다 하는 방법에 [ad 단위](in-app-ads.md) 커뮤니티 광고를 포함 하 여 수행 됩니다. 이 보고서에는 [광고 조정](in-app-ads.md#mediation)을 사용하는 UWP 앱의 여러 광고 공급자의 데이터가 포함되어 있습니다.
 
-이 보고서를 보려면 왼쪽 탐색 메뉴에서 **분석**을 확장하고 **광고 성과**를 선택합니다. 파트너 센터에서이 데이터를 보거나 보고서 데이터를 다운로드 하는 페이지에 있는 화살표 아이콘을 클릭 하 여 오프 라인으로 볼 수 있습니다. 또는 [분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)에서 [광고 성과 데이터 가져오기](../monetize/get-ad-performance-data.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
+이 보고서를 보려면 왼쪽 탐색 메뉴에서 **분석**을 확장하고 **광고 성과**를 선택합니다. 파트너 센터에서이 데이터를 보거나 페이지의 화살표 아이콘을 클릭 하 여 오프 라인으로 보려는 보고서 데이터를 다운로드할 수 있습니다. 또는 [분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)에서 [광고 성과 데이터 가져오기](../monetize/get-ad-performance-data.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
 광고 성과 보고서를 볼 때는 다양한 소스에서 새 데이터를 수신하고 처리하기 때문에 지난 3일간의 보고 데이터가 변경될 수 있다는 사실에 유의하세요. 뿐만 아니라 최대 90일 이전까지 데이터를 다시 지정할 수 있습니다.
 
@@ -28,9 +28,9 @@ ms.locfileid: "8944130"
 
 또한 **필터**를 확장하여 광고 단위, 앱, 광고 공급자, 장치 유형을 기준으로 이 페이지의 모든 데이터를 필터링할 수 있습니다. 다음 옵션 중에서 선택할 수 있습니다.
 
-* **집계**: 보고서 데이터 집계 방법 및 추가 필터링 방법을 선택할 수 있습니다. 기본적으로 이 필터는 **모든 광고 단위**로 설정되어 있습니다. 원하는 경우 이 필터를 **모든 앱** 또는 **모든 광고 공급자**로 변경하거나 광고를 사용하는 특정 앱별로 집계하도록 선택할 수도 있습니다.
-* **광고 공급자**: 특정 [광고 공급자](in-app-ads.md#paid-networks)에 대한 성과 데이터를 보고하도록 필터링합니다. 기본적으로 보고서는 모든 광고 공급자의 데이터를 표시합니다. **집계** 드롭다운 목록에서 **모든 광고 공급자**를 선택하면 이 옵션이 비활성화됩니다.
-* **장치**: 특정 장치 유형에 대한 성과 데이터를 보고하도록 필터링합니다. 기본적으로 보고서는 모든 장치 유형의 데이터를 표시합니다.
+* **집계**: 보고서 데이터를 집계 하는 방법 및 어떻게이 필터링 될 수 있습니다 더 선택 합니다. 기본적으로 이 필터는 **모든 광고 단위**로 설정되어 있습니다. 원하는 경우 이 필터를 **모든 앱** 또는 **모든 광고 공급자**로 변경하거나 광고를 사용하는 특정 앱별로 집계하도록 선택할 수도 있습니다.
+* **Ad 공급자**: 특정 보고서 성능 데이터를 필터링 [ad 공급자](in-app-ads.md#paid-networks)합니다. 기본적으로 보고서는 모든 광고 공급자의 데이터를 표시합니다. **집계** 드롭다운 목록에서 **모든 광고 공급자**를 선택하면 이 옵션이 비활성화됩니다.
+* **장치**: 특정 장치 유형에 대 한 성능 데이터 보고서를 필터링 합니다. 기본적으로 보고서는 모든 장치 유형의 데이터를 표시합니다.
 
 ## <a name="overall-performance"></a>전반적인 성과
 
@@ -58,15 +58,15 @@ ms.locfileid: "8944130"
 | 유효 노출률  | 광고가 표시된 앱에서 보낸 광고 요청의 백분율입니다.  |
 | 클릭 수  |  앱에서 광고를 클릭한 횟수입니다. |
 | CTR  |  광고 클릭률(Click-through rate)을 나타내며 광고가 클릭된 횟수를 광고가 노출된 수로 나눕니다. |
-| 가시성 | 앱에서 볼 수 있는 광고 노출의 백분율입니다. 이 값은 계산 하는 방법에 대 한 자세한 내용은 [광고 단위 가시성 최적화](../monetize/optimize-ad-unit-viewability.md)를 참조 하세요. |
+| 가시성 | 앱에서 볼 수 있는 광고 노출의 비율입니다. 이 값은 계산 하는 방법에 대 한 자세한 내용은 참조 하세요. [ad 단위를 사용 하 여 가시성을 최적화](../monetize/optimize-ad-unit-viewability.md)합니다. |
 | 획득한 크레딧  | [커뮤니티 광고](https://docs.microsoft.com/windows/uwp/publish/about-community-ads) 캠페인을 실행하는 경우, 이는 앱에서 커뮤니티 광고를 표시해 광고 공간을 홍보해 획득한 크레딧의 수를 나타냅니다.  |
 | 사용한 크레딧  | [커뮤니티 광고](https://docs.microsoft.com/windows/uwp/publish/about-community-ads) 캠페인을 실행하는 경우, 이는 앱에서 광고에 지출한 크레딧 수를 나타냅니다.  |
 
 ## <a name="related-topics"></a>관련 항목
 
-* [인앱 광고](in-app-ads.md)
-* [Microsoft Advertising SDK를 사용하여 앱에 광고 표시](../monetize/display-ads-in-your-app.md)
-* [광고 단위의 가시성 최적화](../monetize/optimize-ad-unit-viewability.md)
+* [앱 내 광고](in-app-ads.md)
+* [Microsoft Advertising SDK를 사용 하 여 앱에서 광고를 표시 합니다.](../monetize/display-ads-in-your-app.md)
+* [Ad 단위를 사용 하 여 가시성을 최적화](../monetize/optimize-ad-unit-viewability.md)
 
 
  

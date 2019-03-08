@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 인쇄, 3dprinting, 3d 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: 99272c4e9ffd461901b4b2f2d2aa93b416a1b100
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044690"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605618"
 ---
 # <a name="printing-and-scanning"></a>인쇄 및 스캔
 
@@ -20,15 +20,15 @@ ms.locfileid: "9044690"
 
 | 항목 | 설명 | 
 |-------|-------------|
-| [앱에서 인쇄하기](print-from-your-app.md) | 유니버설 Windows 앱에서 문서를 인쇄하는 방법을 알아봅니다. 이 항목에서는 특정 페이지를 인쇄하는 방법도 보여 줍니다. |
-| [인쇄 미리 보기 UI 사용자 지정](customize-the-print-preview-ui.md) | 이 섹션에서는 인쇄 옵션 및 인쇄 미리 보기 UI의 설정을 사용자 지정하는 방법을 설명합니다. |
+| [앱에서 인쇄](print-from-your-app.md) | 유니버설 Windows 앱에서 문서를 인쇄하는 방법을 알아봅니다. 이 항목에서는 특정 페이지를 인쇄하는 방법도 보여 줍니다. |
+| [인쇄 미리 보기 UI를 사용자 지정](customize-the-print-preview-ui.md) | 이 섹션에서는 인쇄 옵션 및 인쇄 미리 보기 UI의 설정을 사용자 지정하는 방법을 설명합니다. |
 | [인쇄 워크플로 사용자 지정](print-workflow-customize.md) | 이 섹션에서는 조직의 요구 사항을 충족하는 사용자 지정 인쇄 워크플로 환경을 만드는 방법을 설명합니다.  |
-| [앱에서 스캔](scan-from-your-app.md) | 여기서는 평판, 문서 공급 디바이스 또는 자동 구성된 스캔 소스를 사용하여 앱에서 콘텐츠를 스캔하는 방법에 대해 알아봅니다.|
+| [앱에서 검색](scan-from-your-app.md) | 여기서는 평판, 문서 공급 디바이스 또는 자동 구성된 스캔 소스를 사용하여 앱에서 콘텐츠를 스캔하는 방법에 대해 알아봅니다.|
 
 ## <a name="related-topics"></a>관련 항목
 
-* [인쇄에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/Hh868178)
-* [//빌드 2015 동영상: Windows 10에서 인쇄하는 앱 개발](https://channel9.msdn.com/Events/Build/2015/2-94)
+* [인쇄에 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/Hh868178)
+* [빌드 2015 비디오: Windows 10에서 인쇄 하는 앱 개발](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [UWP 인쇄 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619984)
  
 

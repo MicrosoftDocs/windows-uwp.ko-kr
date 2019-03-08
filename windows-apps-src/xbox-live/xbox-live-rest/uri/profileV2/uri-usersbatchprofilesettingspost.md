@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f859a58e32624223d59d918d46f6230a3abd6db
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115437"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662228"
 ---
 # <a name="post-usersbatchprofilesettings"></a>POST (/users/batch/profile/settings)
-사용자 또는 사용자에 대 한 프로필을 가져옵니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
+사용자 또는 사용자 프로필을 가져옵니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`합니다.
  
   * [설명](#ID4EV)
   * [권한 부여](#ID4EFB)
@@ -28,24 +28,24 @@ ms.locfileid: "9115437"
  
 ## <a name="remarks"></a>설명
  
-이 정규화 된 이름만 프로필 URL에 사용할 수 있습니다. 클라이언트에서 다른 모든 프로필 Api 차단 됩니다.
+이 정규화 된 이름 에서만 프로필 URL을 허용 합니다. 클라이언트에서 다른 모든 프로필 Api 차단 됩니다.
   
 <a id="ID4EFB"></a>
 
  
 ## <a name="authorization"></a>권한 부여
  
-프로필에 액세스 하려면 일반 인증 토큰 및 클레임 필요 합니다.
+프로필에 액세스 하려면 일반 인증 토큰 및 클레임만 필요 합니다.
   
 <a id="ID4EOB"></a>
 
  
 ## <a name="required-request-headers"></a>필요한 요청 헤더
  
-| 헤더| 유형| 설명| 
+| 헤더| 형식| 설명| 
 | --- | --- | --- | 
-| xbl 계약 버전 x| 32 비트 부호 없는 정수| Xbox 360 API에서이 호출을 구분 하기 위해 계약 버전 2로 설정 되어야 합니다.| 
-| 콘텐츠 형식| string| 값 = <code>application/json</code>| 
+| x-xbl-contract-version| 32 비트 부호 없는 정수| Xbox 360 API에서이 호출을 구분 하기 위해 계약 버전 2로 설정 되어야 합니다.| 
+| content-type| 문자열| Value = <code>application/json</code>| 
   
 <a id="ID4EZC"></a>
 
@@ -83,7 +83,7 @@ POST /users/batch/profile/settings
 <a id="ID4EPD"></a>
 
  
-### <a name="sample-response"></a>예제 응답
+### <a name="sample-response"></a>샘플 응답
  
 
 ```cpp
@@ -124,7 +124,7 @@ POST /users/batch/profile/settings
 <a id="ID4E2D"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
 [/users/batch/profile/settings](uri-usersbatchprofilesettings.md)
 
@@ -132,8 +132,8 @@ POST /users/batch/profile/settings
 <a id="ID4EFE"></a>
 
  
-##### <a name="reference"></a>참조 
+##### <a name="reference"></a>참고자료 
 
-[Profile(JSON)](../../json/json-profile.md)
+[프로필 (JSON)](../../json/json-profile.md)
 
    

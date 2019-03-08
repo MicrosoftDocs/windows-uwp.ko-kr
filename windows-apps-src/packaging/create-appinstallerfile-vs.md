@@ -6,15 +6,15 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aa7622fe408fcbc1f8da4c0fe0c6b8d54dd2cd6
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648488"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Visual Studio를 사용하여 앱 설치 관리자 파일 만들기
 
-Windows 10, 버전 1803 및 Visual Studio 2017 업데이트 15.7부터 사이드 로드 된 앱 구성할 수를 사용 하 여 자동 업데이트를 받을 수 있는 `.appinstaller` 파일. Visual Studio는 이러한 업데이트를 사용할 수 있도록 지원합니다.
+Windows 10, 버전 1803 및 Visual Studio 2017 업데이트 15.7부터 테스트용 로드 앱 구성할 수 있습니다 사용 하 여 자동 업데이트를 수신 하는 `.appinstaller` 파일입니다. Visual Studio는 이러한 업데이트를 사용할 수 있도록 지원합니다.
 
 ## <a name="app-installer-file-location"></a>앱 설치 관리자 파일 위치
 `.appinstaller` 파일은 HTTP 끝점 또는 UNC 공유 폴더와 같은 공유 위치에 호스팅할 수 있으며 설치할 앱 패키지 찾기 위해 경로를 포함합니다. 사용자는 공유 위치에서 앱을 설치하고 새 업데이트에 대한 주기적 검사를 사용하도록 설정합니다. 
@@ -25,18 +25,18 @@ Windows 10, 버전 1803 및 Visual Studio 2017 업데이트 15.7부터 사이드
 프로젝트를 만들 때 `TargetPlatformMinVersion` 속성을 구성하거나 나중에 프로젝트 속성에서 이를 변경할 수 있습니다. 
 
 >[!IMPORTANT]
-> 앱 설치 관리자 파일은만 할 때 생성 되는 `TargetPlatformMinVersion` 은 Windows 10, 버전 1803 이상.
+> 앱 설치 관리자 파일은 에서만 때 생성 되는 `TargetPlatformMinVersion` 은 Windows 10, 버전 1803 이상이 있습니다.
 
 
 ### <a name="create-packages"></a>패키지 만들기
 
-테스트용 로드를 통해 앱을 배포 하려면 앱 패키지 (.appx/.msix) 또는 앱 번들 (.appxbundle/.msixbundle) 만들기 하 고 공유 위치에 게시 해야 합니다.
+테스트용 로드를 통해 앱을 배포 하려면 앱 패키지 (.appx/.msix) 또는 앱 번들 (.appxbundle/.msixbundle)을 만들고 하며 공유 위치에 게시 합니다.
 
 이를 위해 다음 단계를 따라 Visual Studio에서 **앱 패키지 만들기** 마법사를 사용합니다.
 
-1. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Microsoft Store** -> **앱 패키지 만들기**를 선택합니다.  
+1. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **스토어** -> **패키지 만들기**를 선택합니다.  
 
-![앱 패키지 만들기로 이동할 수 있는 컨텍스트 메뉴](images/packaging-screen2.jpg)   
+![앱 패키지 만들기로 이동할 수 있는 상황에 맞는 메뉴](images/packaging-screen2.jpg)   
 
 **앱 패키지 만들기** 마법사가 나타납니다.
 

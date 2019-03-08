@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8eb1238499355cf37b3f5113dbb10c456de55961
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943638"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624768"
 ---
 # <a name="xclass-attribute"></a>x:Class 특성
 
 
-XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래스를 조인합니다. 코드 partial 클래스는 별도의 코드 파일에 정의되고, 태그 partial 클래스는 XAML 컴파일 시 코드 생성을 통해 만들어집니다.
+XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래스를 연결합니다. 코드 partial 클래스는 별도의 코드 파일에 정의되고, 태그 partial 클래스는 XAML 컴파일 시 코드 생성을 통해 만들어집니다.
 
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
@@ -31,7 +31,7 @@ XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래�
 
 | 용어 | 설명 |
 |------|-------------|
-| 네임스페이스 | 옵션. _classname_에서 지정한 partial 클래스가 포함된 네임스페이스를 지정합니다. _namespace_를 지정한 경우 점(.)은 _namespace_와 _classname_을 분리합니다. _namespace_를 생략한 경우 _classname_은 네임스페이스가 없는 것으로 간주됩니다. |
+| 네임스페이스 | 선택 사항. _classname_에서 지정한 partial 클래스가 포함된 네임스페이스를 지정합니다. _namespace_를 지정한 경우 점(.)은 _namespace_와 _classname_을 분리합니다. _namespace_를 생략한 경우 _classname_은 네임스페이스가 없는 것으로 간주됩니다. |
 | 클래스이름 | 필수. 로드된 XAML 및 해당 XAML의 코드 숨김을 연결하는 partial 클래스의 이름을 지정합니다. | 
 
 ## <a name="remarks"></a>설명

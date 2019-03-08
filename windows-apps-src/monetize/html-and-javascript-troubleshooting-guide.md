@@ -7,25 +7,25 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 문제 해결, HTML, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 01e2781b64629e24cba9b4ac02629a79ee4d998b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919633"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633238"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>HTML 및 JavaScript 문제 해결 가이드
 
 이 항목에서는 JavaScript/HTML 앱에서 Microsoft Advertising 라이브러리를 사용할 때 발생하는 일반적인 개발 문제에 대한 해결 방법을 제공합니다.
 
 * [HTML](#html)
-  * [AdControl이 표시되지 않음](#html-notappearing)
-  * [블랙 박스가 깜박거리다가 사라짐](#html-blackboxblinksdisappears)
-  * [광고가 새로 고쳐지지 않음](#html-adsnotrefreshing)
+  * [AdControl 표시 되지 않음](#html-notappearing)
+  * [블랙 박스를 깜빡이는 및 사라집니다.](#html-blackboxblinksdisappears)
+  * [광고 하지 새로 고치는 중](#html-adsnotrefreshing)
 
 * [JavaScript](#js)
-  * [AdControl이 표시되지 않음](#js-adcontrolnotappearing)
-  * [블랙 박스가 깜박거리다가 사라짐](#js-blackboxblinksdisappears)
-  * [광고가 새로 고쳐지지 않음](#js-adsnotrefreshing)
+  * [AdControl 표시 되지 않음](#js-adcontrolnotappearing)
+  * [블랙 박스를 깜빡이는 및 사라집니다.](#js-blackboxblinksdisappears)
+  * [광고 하지 새로 고치는 중](#js-adsnotrefreshing)
 
 ## <a name="html"></a>HTML
 
@@ -46,7 +46,7 @@ ms.locfileid: "8919633"
     </head>
     ```
 
-3.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 응용 프로그램 ID와 광고 단위 ID는 파트너 센터에서 가져온 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+3.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id에는 응용 프로그램 ID 및 파트너 센터에서 얻은 ad 할당 단위 ID와 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -161,7 +161,7 @@ ms.locfileid: "8919633"
     </div>
     ```
 
-    블랙 박스를 발생하는 가장 일반적인 오류는 "사용할 수 있는 광고가 없음”입니다. 이 오류는 요청에서 반환할 수 있는 광고가 없음을 의미합니다.
+    블랙 박스를 유발하는 가장 일반적인 오류는 "사용할 수 있는 광고가 없음”입니다. 이 오류는 요청에서 반환할 수 있는 광고가 없음을 의미합니다.
 
 3.  **AdControl**은 정상적으로 동작하고 있습니다. 기본적으로 **AdControl**은 광고를 표시할 수 없을 때 축소됩니다. 다른 요소가 같은 부모의 자식인 경우 축소된 **AdControl**의 간격을 채우기 위해 이동된 후 다음 요청이 있을 때 확장될 수 있습니다.
 
@@ -183,7 +183,7 @@ ms.locfileid: "8919633"
     </div>
     ```
 
-2.  **refresh** 메서드에 대한 호출을 확인합니다. 자동 새로 고침을 사용하는 경우 **refresh**를 사용해서 다른 광고를 검색할 수 없습니다. 수동 새로 고침을 사용하는 경우 장치의 현재 데이터 연결에 따라 30-60초경과된 후에만 **refresh**가 호출됩니다.
+2.  **refresh** 메서드에 대한 호출을 확인합니다. 자동 새로 고침을 사용하는 경우 **refresh**를 사용해서 다른 광고를 검색할 수 없습니다. 수동 새로 고침을 사용하는 경우 디바이스의 현재 데이터 연결에 따라 30-60초경과된 후에만 **refresh**가 호출됩니다.
 
     다음 예제에서는 **refresh** 메서드를 사용하는 방법을 보여 줍니다. 다음 HTML 코드에서는 **isAutoRefreshEnabled**를 false로 설정한 상태로 **AdControl**을 인스턴스화하는 방법의 예를 보여 줍니다.
 
@@ -271,7 +271,7 @@ ms.locfileid: "8919633"
     });  
     ```
 
-4.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 응용 프로그램 ID와 광고 단위 ID는 파트너 센터에서 가져온 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+4.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id에는 응용 프로그램 ID 및 파트너 센터에서 얻은 ad 할당 단위 ID와 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
     > [!div class="tabbedCodeSnippets"]
     ``` javascript
@@ -330,7 +330,7 @@ ms.locfileid: "8919633"
     );
     ```
 
-    블랙 박스를 발생하는 가장 일반적인 오류는 "사용할 수 있는 광고가 없음”입니다. 이 오류는 요청에서 반환할 수 있는 광고가 없음을 의미합니다.
+    블랙 박스를 유발하는 가장 일반적인 오류는 "사용할 수 있는 광고가 없음”입니다. 이 오류는 요청에서 반환할 수 있는 광고가 없음을 의미합니다.
 
 3.  **AdControl**은 정상적으로 동작하고 있습니다. 동일한 광고가 차례대로 두 번 이상 나타나면서 광고는 새로 고쳐지지 않는 경우가 있습니다.
 
@@ -340,7 +340,7 @@ ms.locfileid: "8919633"
 
 1.  **AdControl**의 [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) 속성이 false로 설정되어 있는지 확인하세요. 기본적으로 이 선택적 속성은 **true**로 설정되어 있습니다. **false**로 설정된 경우 **Refresh** 메서드를 사용하여 다른 광고를 검색해야 합니다.
 
-2.  [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx) 메서드에 대한 호출을 확인합니다. 자동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **true**로 설정된 경우) **Refresh**를 사용하여 다른 광고를 검색할 수 없습니다. 수동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **false**로 설정된 경우) 장치의 현재 데이터 연결에 따라 최소 30-60초가 경과된 후에만 **Refresh**가 호출됩니다.
+2.  [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx) 메서드에 대한 호출을 확인합니다. 자동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **true**로 설정된 경우) **Refresh**를 사용하여 다른 광고를 검색할 수 없습니다. 수동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **false**로 설정된 경우) 디바이스의 현재 데이터 연결에 따라 최소 30-60초가 경과된 후에만 **Refresh**가 호출됩니다.
 
     이 예제에서는 **AdControl**의 **div**를 만드는 방법을 보여 줍니다.
 

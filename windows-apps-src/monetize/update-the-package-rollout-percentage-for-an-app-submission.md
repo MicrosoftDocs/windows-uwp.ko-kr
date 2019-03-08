@@ -7,11 +7,11 @@ keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 앱 제
 ms.assetid: 4c82d837-7a25-4f3a-997e-b7be33b521cc
 ms.localizationpriority: medium
 ms.openlocfilehash: 172c750d370f8fd8822d78265a04e694bc958ddf
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924703"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57605708"
 ---
 # <a name="update-the-rollout-percentage-for-an-app-submission"></a>앱 제출에 대한 출시 백분율 업데이트
 
@@ -19,14 +19,14 @@ ms.locfileid: "8924703"
 Microsoft Store 제출 API에서 이 메서드를 사용하여 앱 제출에 대한 [출시 백분율을 업데이트](../publish/gradual-package-rollout.md#setting-the-rollout-percentage)합니다. Microsoft Store 제출 API를 사용하여 앱 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
 
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
 * 아직 완료하지 않은 경우 Microsoft Store 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
-* 앱 중 하나에 대 한 제출을 만듭니다. 파트너 센터에서 이렇게 하려면 또는 [앱 제출 만들기](create-an-app-submission.md) 메서드를 사용 하 여이 수행할 수 있습니다.
-* 제출에 대한 점진적 패키지 출시를 사용하도록 설정합니다. [파트너 센터에서](../publish/gradual-package-rollout.md)이렇게 하려면 또는 [Microsoft Store 제출 API를 사용 하](manage-app-submissions.md#manage-gradual-package-rollout)여이 수행할 수 있습니다.
+* 앱 중 하나에 대해 제출을 생성 합니다. 파트너 센터에서이 수행할 수 있는 또는 사용 하 여이 수행할 수는 [는 응용 프로그램 제출 만들기](create-an-app-submission.md) 메서드.
+* 제출에 대한 점진적 패키지 출시를 사용하도록 설정합니다. 이 수행할 수 있는 [파트너 센터에서](../publish/gradual-package-rollout.md), 또는이 하 여 수행할 수 있습니다 [Microsoft Store 제출 API를 사용 하 여](manage-app-submissions.md#manage-gradual-package-rollout)입니다.
 
 ## <a name="request"></a>요청
 
@@ -39,17 +39,17 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 앱 제출에 대
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 이름        | 유형   | 설명                                                                 |
+| 이름        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | 필수. 업데이트하려는 패키지 출시 백분율의 제출을 포함하는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
-| submissionId | string | 필수. 업데이트하려는 패키지 출시 백분율의 제출 ID입니다. 이 ID는 [앱 제출 만들기](create-an-app-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대해이 ID는 또한 파트너 센터에서 제출 페이지의 URL을 사용할 수 있습니다.   |
+| applicationId | 문자열 | 필수. 업데이트하려는 패키지 출시 백분율의 제출을 포함하는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
+| submissionId | 문자열 | 필수. 업데이트하려는 패키지 출시 백분율의 제출 ID입니다. 이 ID는 [앱 제출 만들기](create-an-app-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대 한이 ID의 파트너 센터에서 제출 페이지의 URL을 사용할 수도 있습니다.   |
 | percentage  |  float  |  필수. 점진적 배포 패키지를 받을 사용자의 백분율입니다.  |
 
 
@@ -86,11 +86,11 @@ Authorization: Bearer <your access token>
 | 오류 코드 |  설명   |
 |--------|------------------|
 | 404  | 제출을 찾을 수 없습니다. |
-| 409  | 이 코드는 다음 오류 중 하나를 나타냅니다.<br/><br/><ul><li>제출이 점진적 배포 작업에 대해 유효한 상태가 아닙니다(이 메서드를 호출하기 전에 제출을 게시해야 하고 [packageRolloutStatus](manage-app-submissions.md#package-rollout-object) 값을 **PackageRolloutInProgress**로 설정해야 함).</li><li>제출이 지정된 앱에 속해 있지 않습니다.</li><li>앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다.</li></ul> |   
+| 409  | 이 코드는 다음 오류 중 하나를 나타냅니다.<br/><br/><ul><li>제출이 점진적 배포 작업에 대해 유효한 상태가 아닙니다(이 메서드를 호출하기 전에 제출을 게시해야 하고 [packageRolloutStatus](manage-app-submissions.md#package-rollout-object) 값을 **PackageRolloutInProgress**로 설정해야 함).</li><li>제출이 지정된 앱에 속해 있지 않습니다.</li><li>파트너 센터 기능을 사용 하는 앱 [현재 Microsoft Store 전송 API에 의해 지원 되지 않습니다](create-and-manage-submissions-using-windows-store-services.md#not_supported)합니다.</li></ul> |   
 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [점진적 패키지 배포](../publish/gradual-package-rollout.md)
-* [Microsoft Store 제출 API를 사용하여 앱 제출 관리](manage-app-submissions.md)
-* [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [패키지를 점진적으로 롤아웃](../publish/gradual-package-rollout.md)
+* [Microsoft Store 제출 API를 사용 하 여 응용 프로그램 제출을 관리합니다](manage-app-submissions.md)
+* [Microsoft Store 서비스를 사용 하 여 서브 미션을 만들고 설정 합니다.](create-and-manage-submissions-using-windows-store-services.md)

@@ -8,23 +8,23 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a99bfaf11074092bd4c6aa1ed822f71f65a9d62
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925551"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650388"
 ---
 # <a name="usersme"></a>/users/me
-현재 사용자의 현재 상태에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
+현재 사용자의 현재 상태에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`합니다.
   
 <a id="ID4EV"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
-[GET (/users/me)](uri-usersmeget.md)
+[가져오기 (/ 사용자/me)](uri-usersmeget.md)
 
-&nbsp;&nbsp;사용자의 XUID 알아야 할 필요 없이 현재 사용자의 [PresenceRecord](../../json/json-presencerecord.md) 를 가져옵니다.
+&nbsp;&nbsp;현재 사용자의 가져올 [PresenceRecord](../../json/json-presencerecord.md) 사용자 XUID 알 필요 없이 합니다.
  
 <a id="ID4E6"></a>
 
@@ -34,8 +34,8 @@ ms.locfileid: "8925551"
 <a id="ID4EBB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[상태 URI](atoc-reference-presence.md)
+[현재 상태 Uri](atoc-reference-presence.md)
 
    

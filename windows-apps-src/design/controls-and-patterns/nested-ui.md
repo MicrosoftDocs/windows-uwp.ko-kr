@@ -1,22 +1,22 @@
 ---
-Description: Use nested UI to enable multiple actions on a list item
+Description: 중첩된 UI를 사용하여 한 목록 항목에서 여러 작업을 사용합니다.
 title: 목록 항목의 중첩된 UI
 label: Nested UI in list items
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.assetid: 60a29717-56f2-4388-a9ff-0098e34d5896
 pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8edb38b8ae91d836e283a8eb37830850bf504db4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929106"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661308"
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 
@@ -26,7 +26,7 @@ ms.locfileid: "8929106"
 
 중첩된 UI를 사용하여 중요 작업 실행을 가속화하는 추가 옵션을 사용자에게 제공할 수 있습니다. 그러나 표시하는 작업이 많을수록 UI가 복잡해집니다. 이 UI 패턴을 사용할 경우 더 많은 주의가 필요합니다. 이 문서에서는 특정 UI에 가장 적합한 작업 과정을 결정하는 지침을 제공합니다.
 
-> **중요 API**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
+> **중요 한 Api**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
 
 이 문서에서는 [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 및 [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) 항목에서 중첩된 UI를 생성하는 방법에 대해 설명합니다. 이 섹션에서는 다른 중첩 UI 사례에 대해 다루지 않지만 이러한 개념에 대해서는 설명합니다. 시작하기 전에 UI에 있는 ListView 또는 GridView 컨트롤 사용에 대한 일반 지침을 잘 알고 있어야 합니다. 이에 대한 내용은 [목록](lists.md) 및 [ListView 및 GridView](listview-and-gridview.md) 문서를 참조하세요.
 
@@ -109,7 +109,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 
 ![중첩된 UI 부분](images/nested-ui-navigation.png)
 
-**게임 패드**
+**Gamepad**
 
 게임 패드에서 입력하는 경우 다음 사용자 환경을 제공합니다.
 
@@ -167,7 +167,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 
 목록 항목에서 작업을 수행하지 않는 경우 이 지침을 사용하여 게임 패드 또는 키보드로 탐색을 처리하는 것이 좋습니다.
 
-**게임 패드**
+**Gamepad**
 
 게임 패드에서 입력하는 경우 다음 사용자 환경을 제공합니다.
 
@@ -186,7 +186,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 - 중첩된 UI 항목 중 하나에서 Tab 키를 누르면 탭 순서에 따라 중첩된 UI 항목 사이를 이동합니다.  중첩된 UI 항목 사이를 모두 이동한 후에는 탭 순서상 ListView 다음인 컨트롤로 포커스가 이동합니다.
 - Shift+Tab을 누르면 탭 동작이 반대 방향으로 수행됩니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 예제에서는 [목록 항목이 작업을 수행하는 중첩된 UI](#nested-ui-where-list-items-perform-an-action)를 구현하는 방법을 보여 줍니다.
 

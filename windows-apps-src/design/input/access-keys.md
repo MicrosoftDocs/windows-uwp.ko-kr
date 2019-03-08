@@ -1,5 +1,5 @@
 ---
-Description: Learn how to improve both the usability and the accessibility of your UWP app by providing an intuitive way for users to quickly navigate and interact with an app's visible UI through a keyboard instead of a pointer device (such as touch or mouse).
+Description: 사용자가 터치 또는 마우스 같은 포인터 디바이스 대신 키보드를 통해 앱의 시각적 UI를 신속하게 탐색하고 상호 작용할 수 있는 직관적인 방법을 제공하여 UWP 앱의 사용 편의성과 접근성을 개선하는 방법을 알아보세요.
 title: 선택키 설계 지침
 label: Access keys design guidelines
 keywords: 키보드, 선택키, 키팁, 키 팁, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 조작
@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: bd71e4715b26f9e06326690d3642b4d19e23d292
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945805"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617268"
 ---
 # <a name="access-keys"></a>선택키
 
@@ -44,7 +44,7 @@ Microsoft Office 앱은 선택키에 대한 다양한 지원을 제공합니다.
 
 ![Microsoft Word의 선택키에 대한 키 팁 배지](images/accesskeys/keytip-badges-word.png)
 
-_Microsoft Word의 선택키에 대한 키 팁 배지_
+_Microsoft Word에서 액세스 키에 대 한 KeyTip 배지_
 
 컨트롤에 선택키를 추가하려면 **AccessKey 속성**을 사용합니다. 이 속성의 값은 선택키 순서, 바로 가기(단일 영숫자인 경우) 및 키 팁을 지정합니다.
 
@@ -58,7 +58,7 @@ _Microsoft Word의 선택키에 대한 키 팁 배지_
 
 1.  키를 한 번에 하나만 누를 수 있거나 마우스 사용에 어려움이 있는 사용자를 포함하여 거동 장애가 있는 사용자를 위해 **선택키로 앱의 접근성을 향상**합니다.
 
-    잘 디자인된 키보드 UI는 소프트웨어 접근성의 중요한 요소입니다. 시각 장애나 특정 거동 장애가 있는 사용자는 키보드 UI를 사용하여 앱을 탐색하고 기능을 조작할 수 있습니다. 이러한 사용자는 마우스를 작동할 수 없으며 다양한 보조 기술(예: 키보드 향상 도구, 화상 키보드, 화면 확대기, 화면 낭독 프로그램 및 음성 입력 유틸리티)을 대신 사용할 수 있습니다. 이러한 사용자에게는 포괄적인 명령 범위가 매우 중요합니다.
+    잘 디자인된 키보드 UI는 소프트웨어 접근성의 중요한 측면입니다. 시각 장애나 특정 거동 장애가 있는 사용자는 키보드 UI를 사용하여 앱을 탐색하고 기능을 조작할 수 있습니다. 이러한 사용자는 마우스를 작동할 수 없으며 다양한 보조 기술(예: 키보드 향상 도구, 화상 키보드, 화면 확대기, 화면 낭독 프로그램 및 음성 입력 유틸리티)을 대신 사용할 수 있습니다. 이러한 사용자에게는 포괄적인 명령 범위가 매우 중요합니다.
 
 2.  키보드로 조작하는 것을 선호하는 고급 사용자를 위해 **선택키로 앱의 사용 편의성을 향상**합니다.
 
@@ -72,11 +72,11 @@ _Microsoft Word의 선택키에 대한 키 팁 배지_
 
 다음 이미지는 Word의 두 선택키 범위를 보여 줍니다. 첫 번째는 사용자가 탭 및 다른 최상위 수준 명령을 선택할 수 있는 주 선택키를 보여 주고, 두 번째는 홈 탭의 선택키를 보여 줍니다.
 
-![Microsoft Word의 주 선택키](images/accesskeys/primary-access-keys-word.png)
-_Microsoft Word의 주 선택키_
+![Microsoft Word에서 기본 액세스 키](images/accesskeys/primary-access-keys-word.png)
+_Microsoft Word에서 기본 액세스 키_
 
-![Microsoft Word의 보조 선택키](images/accesskeys/secondary-access-keys-word.png)
-_Microsoft Word의 보조 선택키_
+![Microsoft Word에 대 한 보조 액세스 키](images/accesskeys/secondary-access-keys-word.png)
+_Microsoft Word에 대 한 보조 액세스 키_
 
 선택키는 여러 범위의 요소에 대해 중복 가능합니다. 위 예제에서 "2"는 주 범위의 실행 취소 그리고 보조 범위의 "기울임꼴"에 대한 선택키입니다.
 
@@ -110,11 +110,11 @@ _Microsoft Word의 보조 선택키_
 
 ![CommandBar에 대한 기본 선택키](images/accesskeys/primary-access-keys-commandbar.png)
 
-_CommandBar 주 범위 및 지원되는 선택키_
+_CommandBar 기본 범위 및 지원 되는 액세스 키_
 
 ![CommandBar에 대한 보조 선택키](images/accesskeys/secondary-access-keys-commandbar.png)
 
-_CommandBar 보조 범위 및 지원되는 선택키_
+_CommandBar 보조 범위 및 지원 되는 액세스 키_
 
 ### <a name="windows-10-creators-update-and-older"></a>Windows 10 크리에이터스 업데이트 이상
 
@@ -233,13 +233,13 @@ public class CommandBarHack : CommandBar
 
 ![영어 및 스페인어 리소스 문자열 폴더](images/accesskeys/resource-string-folders.png)
 
-_영어 및 스페인어 리소스 문자열 폴더_
+_영어와 스페인어 리소스 문자열 폴더_
 
 지역화된 선택키는 프로젝트 resources.resw 파일에 지정됩니다.
 
 ![resources.resw 파일에 지정된 AccessKey 속성 지정](images/accesskeys/resource-resw-file.png)
 
-_resources.resw 파일에 지정된 AccessKey 속성 지정_
+_Resources.resw 파일에서 지정 된 AccessKey 속성 지정_
 
 자세한 내용은 [UI 리소스 번역](https://msdn.microsoft.com/library/windows/apps/xaml/Hh965329(v=win.10).aspx)을 참조하세요.
 
@@ -255,17 +255,17 @@ _자동 키 팁 배치의 예_
 
 그러나 키 팁 위치를 보다 세밀하게 제어해야 하는 경우 다음 사항을 따르는 것이 좋습니다.
 
-1.  **명확한 연관성 원칙**: 사용자가 컨트롤을 키 팁과 쉽게 연결할 수 있습니다.
+1.  **명백한 연결 원칙**: 사용자는 키 팁으로 쉽게 컨트롤을 연결할 수 있습니다.
 
     a.  키 팁은 선택키를 갖고 있는 요소(소유자)와 **가까이** 있어야 합니다.  
     b.  키 팁은 선택키를 갖고 있는 **활성화된 요소를 포함하면 안 됩니다**.   
     c.  키 팁을 소유자와 가까운 곳에 배치할 수 없는 경우 소유자와 겹쳐야 합니다. 
 
-2.  **검색 기능**: 사용자가 키 팁을 사용하여 신속하게 컨트롤을 검색할 수 있습니다.
+2.  **검색 기능**: 사용자 키 팁을 사용 하 여 컨트롤을 신속 하 게 검색할 수 있습니다.
 
     a.  키 팁은 절대로 다른 키 팁과 **겹치면** 안 됩니다.  
 
-3.  **쉬운 검사:** 사용자가 키 팁을 간단하게 살펴볼 수 있습니다.
+3.  **쉽게 검색 합니다.** 사용자는 앞부분을 건너뛰고 키 팁을 쉽게 합니다.
 
     a.  키 팁을 다른 키 팁 및 UI 요소와 일직선으로 **정렬**해야 합니다.
     b.  키 팁을 최대한 많이 **그룹화**해야 합니다. 
@@ -274,7 +274,7 @@ _자동 키 팁 배치의 예_
 
 **KeyTipPlacementMode** 속성을 사용하여 요소 또는 그룹별로 키 팁의 배치를 사용자 지정합니다.
 
-배치 모드는 위, 아래, 오른쪽, 왼쪽, 숨김, 가운데 및 자동입니다.
+배치 모드는 다음과 같습니다. 위쪽, 아래쪽, 오른쪽, 왼쪽, 숨겨진, 가운데 및 자동입니다.
 
 ![키 팁 배치 모드](images/accesskeys/keytip-postion-modes.png)
 
@@ -303,7 +303,7 @@ KeyTipHorizontalOffset 속성은 키 팁을 왼쪽 또는 오른쪽으로 얼마
 
 ![키 팁 배치 모드](images/accesskeys/keytip-offsets.png)
 
-_키 팁의 세로 및 가로 오프셋 설정_
+_키 팁에 대 한 가로 및 세로 오프셋을 설정 합니다._
 
 ``` xaml
 <Button
@@ -320,7 +320,7 @@ _키 팁의 세로 및 가로 오프셋 설정_
 
 ![키 팁 배치 모드](images/accesskeys/keytips-screen-edge.png)
 
-_화면 가장자리를 사용하면 키 팁이 자동으로 위치를 변경합니다._
+_화면 가장자리 하면 자동으로 재배치 하 키 팁_
 
 ## <a name="key-tip-style"></a>스타일 키 팁
 
@@ -357,10 +357,10 @@ UIElement 또는 TextElement 컨트롤에서 AccessKey 속성을 지정하는 �
 
 ## <a name="related-articles"></a>관련 문서
 
-* [키보드 조작](keyboard-interactions.md)
-* [바로 가기 키](keyboard-accelerators.md)
+* [키보드 상호 작용](keyboard-interactions.md)
+* [키보드 액셀러레이터 키](keyboard-accelerators.md)
 
 **샘플**
-* [XAML 컨트롤 갤러리 (일명 XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+* [XAML 컨트롤 갤러리 (즉, XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
 
 

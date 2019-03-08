@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3437119979073a5cec27948fc90f954e06c2fc93
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944934"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596088"
 ---
 # <a name="state-objects"></a>상태 개체
 
@@ -24,7 +24,7 @@ ms.locfileid: "8944934"
 
 이 상태 그룹은 [IA(입력 어셈블러) 단계](input-assembler-stage--ia-.md)가 입력 버퍼에서 데이터를 읽고 꼭짓점 셰이더가 사용하도록 어셈블하는 방식을 지정합니다. 여기에는 입력 버퍼 내 요소 수, 입력 데이터의 서명 등의 상태가 포함됩니다. IA(입력 어셈블러) 단계는 원형을 메모리에서 파이프라인으로 스트리밍합니다.
 
-## <a name="span-idrasterizerspanspan-idrasterizerspanspan-idrasterizerspanrasterizer-state"></a><span id="Rasterizer"></span><span id="rasterizer"></span><span id="RASTERIZER"></span>래스터라이저 상태
+## <a name="span-idrasterizerspanspan-idrasterizerspanspan-idrasterizerspanrasterizer-state"></a><span id="Rasterizer"></span><span id="rasterizer"></span><span id="RASTERIZER"></span>래스터 라이저 상태
 
 
 이 상태 그룹은 [RS(래스터라이저) 단계](rasterizer-stage--rs-.md)를 초기화합니다. 이 개체는 fill 또는 cull 모드와 같은 상태를 포함하여 클리핑을 위해 가위 직사각형을 활성화하고 다중 샘플 매개 변수를 설정합니다. 이 단계에서는 원형을 픽셀로 래스터화하여 원형을 클리핑하고 뷰포트로 매핑하는 등의 작업을 수행합니다.
@@ -34,7 +34,7 @@ ms.locfileid: "8944934"
 
 이 상태 그룹은 [OM(출력 병합기) 단계](output-merger-stage--om-.md)의 깊이 스텐실 부분을 초기화합니다. 보다 구체적으로는, 이 개체는 깊이 및 스텐실 테스트를 초기화합니다.
 
-## <a name="span-idblendspanspan-idblendspanspan-idblendspanblend-state"></a><span id="Blend"></span><span id="blend"></span><span id="BLEND"></span>혼합 상태
+## <a name="span-idblendspanspan-idblendspanspan-idblendspanblend-state"></a><span id="Blend"></span><span id="blend"></span><span id="BLEND"></span>블렌드 상태
 
 
 이 상태 그룹은 [OM(출력 병합기) 단계](output-merger-stage--om-.md)의 혼합 부분을 초기화합니다.
@@ -57,12 +57,12 @@ API가 상태 개체를 사용하도록 설계하면 여러 가지 성능 이점
 
 또는, 앱에서 자동으로 효율적인 상태 개체 생성 및 삭제를 관리하는 효과 시스템을 사용할 수도 있습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [그래픽 파이프라인](graphics-pipeline.md)
 
-[뷰](views.md)
+[레이아웃](views.md)
 
  
 

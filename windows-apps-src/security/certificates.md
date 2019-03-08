@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ee96628fd90ec9eea998abf312c5da11bff3826
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937418"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624358"
 ---
 # <a name="intro-to-certificates"></a>인증서 소개
 
@@ -22,7 +22,7 @@ ms.locfileid: "8937418"
 
 ### <a name="shared-certificate-stores"></a>공유 인증서 저장소
 
-UWP 앱 Windows8에 도입 된 새로운 격리 형 응용 프로그램 모델을 사용 합니다. 이 모델에서는 앱이 앱 컨테이너라는 하위 수준 운영 체제 구성체에서 실행되게 하여 명시적으로 허용된 경우 외에는 앱 외부의 리소스나 파일에 액세스하지 못하게 할 수 있습니다. 다음 섹션에서는 PKI(공개 키 인프라)에 의미를 설명합니다.
+Windows 8에 도입 된 새 고립주의 응용 프로그램 모델을 사용 하는 UWP 앱. 이 모델에서는 앱이 앱 컨테이너라는 하위 수준 운영 체제 구성체에서 실행되게 하여 명시적으로 허용된 경우 외에는 앱 외부의 리소스나 파일에 액세스하지 못하게 할 수 있습니다. 다음 섹션에서는 PKI(공개 키 인프라)에 의미를 설명합니다.
 
 ### <a name="certificate-storage-per-app-container"></a>앱 컨테이너별 인증서 저장소
 
@@ -82,7 +82,7 @@ X.509 버전 3 인증서에는 버전 1과 버전 2에 정의된 기본 필드�
 
 | 필드  | 설명 |
 |--------|-------------|
-| 권한 키 식별자 | 인증서에 서명하는 데 사용된 CA(인증 기관) 개인 키에 해당하는 CA 공개 키를 식별합니다. |
+| 기관 키 식별자 | 인증서에 서명하는 데 사용된 CA(인증 기관) 개인 키에 해당하는 CA 공개 키를 식별합니다. |
 | 기본 제약 조건 | 엔터티를 CA로 사용할 수 있는지 여부를 지정하고 그럴 경우 인증서 체인에서 이 엔터티 아래에 있는 하위 CA의 수를 지정합니다. |
 | 인증서 정책 | 인증서를 발급할 때 따른 정책과 인증서를 사용할 수 있는 용도를 지정합니다. |
 | CRL 배포 지점 | 기본 CRL(인증서 해지 목록)의 URI를 포함합니다. |

@@ -8,35 +8,35 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7bb528f139e9db97f886f57fb98461ce15e77a42
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928746"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645688"
 ---
 # <a name="usersxuidxuidhistorytitles"></a>/users/xuid({xuid})/history/titles
  
-이 유니버설 리소스 식별자 (URI) 사용자의 관련 도전 과제 타이틀 기록에 액세스할 수 있습니다.
+이 유니버설 리소스 식별자 (URI)는 사용자의 성과 달성 하셨습니다 관련 제목 기록에 대 한 액세스를 제공합니다.
  
-이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`.
+이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`합니다.
  
 <a id="ID4E1"></a>
 
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID)의 제목 기록에 액세스 하는 사용자의 합니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 제목 기록을 액세스 하는 사용자입니다.| 
   
 <a id="ID4EAC"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [GET](uri-titlehistoryusersxuidhistorytitlesgetv2.md)
 
-&nbsp;&nbsp;사용자가 잠금 해제 하거나 진행률에서 수행의 도전 과제 타이틀의 목록을 가져옵니다. 이 API는 사용자의 전체 기록 제목 재생 또는 실행을 반환 하지 않습니다.
+&nbsp;&nbsp;사용자가 잠금 해제 하거나 해당 성과에서 진전을 보였습니다 타이틀의 목록을 가져옵니다. 이 API는 사용자의 전체 기록을 재생 하거나 시작 제목의 반환 하지 않습니다.
  
 <a id="ID4EKC"></a>
 
@@ -46,8 +46,8 @@ ms.locfileid: "8928746"
 <a id="ID4EMC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[도전 과제 타이틀 기록 URI](atoc-reference-titlehistoryv2.md)
+[도전 과제 제목 기록 Uri](atoc-reference-titlehistoryv2.md)
 
    

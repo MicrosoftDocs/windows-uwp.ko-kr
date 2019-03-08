@@ -1,18 +1,18 @@
 ---
-title: 실행 가능한 코드가 있는 선택적 패키지
+title: 실행 가능한 코드가 있는 옵션 패키지
 description: Visual Studio를 사용하여 실행 코드로 선택적 패키지를 사용하는 방법을 알아보세요.
 ms.date: 09/30/2018
 ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 44e32438034cf09695f313d24055b6ed3c82df0b
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115890"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637108"
 ---
-# <a name="optional-packages-with-executable-code"></a>실행 가능한 코드가 있는 선택적 패키지
+# <a name="optional-packages-with-executable-code"></a>실행 가능한 코드가 있는 옵션 패키지
  
 실행 코드를 사용하는 선택적 패키지는 대용량 또는 복잡한 앱을 분할하거나 이미 게시된 앱에 추가하는 데 유용합니다. Visual Studio 2017 버전 15.7 및 .NET 네이티브 2.1을 사용하면 C++와 C# 선택적 패키지에서 실행 코드를 로드할 수 있습니다.
 
@@ -24,10 +24,10 @@ ms.locfileid: "9115890"
 최신 개발 도구를 다운로드하는 방법은 [Windows 10용 다운로드 및 도구](https://developer.microsoft.com/windows/downloads)를 참조하세요. 
 
 > [!NOTE]
-> 선택적 패키지 및 관련 집합을 사용하는 앱을 Microsoft Store에 제출하려면 권한이 필요합니다. 선택적 패키지 및 관련된 집합을 스토어에 제출 되지 않은 경우 파트너 센터 권한 없이 줄의 lob (기간 업무) 나 엔터프라이즈 앱에 사용할 수 있습니다. 선택적 패키지 및 관련 집합을 사용한 앱을 제출할 권한을 얻는 방법은 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
+> 선택적 패키지 및 관련 집합을 사용하는 앱을 Microsoft Store에 제출하려면 권한이 필요합니다. 선택적 패키지 및 관련된 집합 스토어로 전송 되지 않습니다 하는 경우 파트너 센터의 허가 없이 업무 (LOB) 또는 엔터프라이즈 앱에 사용할 수 있습니다. 선택적 패키지 및 관련 집합을 사용한 앱을 제출할 권한을 얻는 방법은 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
 
 > [!NOTE]
-> 실행 코드를 포함 하는 선택적 패키지는 [관련된 집합](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets)의 일부 여야 합니다. 관련된 집합의 일부가 아닌 한 선택적 패키지에서 코드를 실행할 수 없습니다.
+> 실행 코드를 포함 하는 선택적 패키지의 일부 여야 합니다.는 [집합 관련](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets)합니다. 관련된 집합의 일부가 아닌 선택적 패키지에서 코드를 실행할 수 없습니다.
 
 ## <a name="c-optional-packages-with-executable-code"></a>실행 가능한 코드가 있는 C++ 선택적 패키지
 

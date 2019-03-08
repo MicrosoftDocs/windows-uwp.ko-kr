@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2eca388b37cc95803b7ecb94bc0b0b5b990f5de3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921373"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654108"
 ---
 # <a name="beta-testing"></a>베타 테스트
 
@@ -32,7 +32,7 @@ ms.locfileid: "8921373"
 -   다양한 장치에서 앱 테스트
 -   베타 테스트가 아니면 찾을 수 없는 성능 문제와 기타 버그 식별
 -   사용자 환경을 개선하는 데 사용할 수 있는 실제 사용 정보 얻기
--   Microsoft 스토어의 공공 평가 영향을 주지 않고 피드백을 받습니다.
+-   Microsoft Store 공용 등급에 영향을 주지 않고 피드백을 받습니다.
 
 ## <a name="when-to-beta-test"></a>베타 테스트 시기
 
@@ -40,7 +40,7 @@ ms.locfileid: "8921373"
 
 ## <a name="next-steps"></a>다음 단계
 
-[파트너 센터](https://partner.microsoft.com/dashboard)제한할 수 있습니다 앱 배포에는 운영 체제에 관계 없이 테스터 에게만 앱의 대상인. 별도의 이름과 패키지 ID를 가진 별도 버전의 앱을 만들 필요가 없습니다. 테스트를 수행한 다음 모든 사용자가 앱을 사용할 수 있도록 준비한 경우 새 제출을 만들 수 있습니다. 원하는 경우 테스트 전용의 별도 앱을 만들 수도 있습니다. 이 경우 의도한 이름과 다른 이름을 최종 공용 앱 이름으로 지정해야 합니다.
+[파트너 센터](https://partner.microsoft.com/dashboard), 앱의 대상만 프로그램 테스터에 운영 체제에 관계 없이 앱의 배포를 제한할 수 있습니다. 별도의 이름과 패키지 ID를 가진 별도 버전의 앱을 만들 필요가 없습니다. 테스트를 수행한 다음 모든 사용자가 앱을 사용할 수 있도록 준비한 경우 새 제출을 만들 수 있습니다. 원하는 경우 테스트 전용의 별도 앱을 만들 수도 있습니다. 이 경우 의도한 이름과 다른 이름을 최종 공용 앱 이름으로 지정해야 합니다.
 
 베타 테스트를 위해 스토어에 앱을 제출하는 방법은 [베타 테스트 및 대상이 지정된 배포](../publish/beta-testing-and-targeted-distribution.md)를 참조하세요.
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, SQL Server, 데이터베이스
 ms.localizationpriority: medium
 ms.openlocfilehash: 4fe215a593293ff91afb7f71a830512ac365093f
-ms.sourcegitcommit: 8ac3818db796a144b44f848b6211bc46a62ab544
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "8976930"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621158"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>UWP 앱에서 SQL Server 데이터베이스 사용
 앱을 SQL Server 데이터베이스에 직접 연결한 후, [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) 네임스페이스를 사용해 데이터를 저장 및 검색할 수 있습니다.
@@ -29,7 +29,7 @@ ms.locfileid: "8976930"
 
 매니페스트 디자이너에서 UWP 프로젝트의 **Package.appxmanifest** 파일을 엽니다.
 
-**접근 권한 값** 탭에서 SQL Server를 인증 하기 위한 Windows 인증을 사용 하는 경우 **엔터프라이즈 인증** 확인란을 선택 합니다.
+에 **기능** 탭을 선택 합니다 **엔터프라이즈 인증** SQL Server 인증에 대 한 Windows 인증을 사용 하는 경우 확인란을 선택 합니다.
 
 ![Enterprise Authentication Capability](images/enterprise-authentication.png)
 
@@ -39,15 +39,15 @@ ms.locfileid: "8976930"
 
 이 섹션에서는 다음을 수행합니다.
 
-:1: 연결 스트링을 추가합니다.
+: 하나: 연결 문자열을 추가 합니다.
 
-:2: 제품 데이터를 저장할 클래스를 만듭니다.
+: 두: 제품 데이터를 보유 하는 클래스를 만듭니다.
 
-: 3: SQL Server 데이터베이스에서 제품을 검색합니다.
+: 3: SQL Server 데이터베이스에서 제품을 검색 합니다.
 
-: 4: 기본 사용자 인터페이스를 추가합니다.
+: 4: 기본 사용자 인터페이스를 추가 합니다.
 
-: 5: UI를 제품으로 채웁니다.
+: 5: 제품을 사용 하 여 UI를 채웁니다.
 
 >[!NOTE]
 > 이 섹션에서는 데이터 액세스 코드를 구성하는 방법 중 하나를 설명합니다. SQL Server 데이터베이스에서 데이터를 저장 및 검색하기 위해 [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)를 사용하는 방법에 대한 예만 제공합니다. 응용 프로그램 디자인에 가장 적합한 방식으로 코드를 구성할 수 있습니다.
@@ -236,14 +236,14 @@ public MainPage()
 
 ## <a name="next-steps"></a>다음 단계
 
-**경량 데이터베이스를 사용해 사용자 장치에 데이터 저장**
+**간단한 데이터베이스를 사용 하 여 사용자 장치에 데이터를 저장 합니다.**
 
 [UWP 앱에서 SQLite 데이터베이스 사용](sqlite-databases.md)을 참조하세요.
 
-**여러 앱이 여러 플랫폼에서 코드를 공유**
+**다른 플랫폼에서 다른 앱 간에 코드 공유**
 
 [데스크톱과 UWP에서 코드 공유](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate)를 참조하세요.
 
-**Azure SQL 백 엔드로 마스터 세부 정보 페이지 추가**
+**Azure SQL 백 엔드를 사용 하 여 마스터-세부 페이지 추가**
 
 [고객 주문 데이터베이스 샘플](https://github.com/Microsoft/Windows-appsample-customers-orders-database)을 참조하세요.

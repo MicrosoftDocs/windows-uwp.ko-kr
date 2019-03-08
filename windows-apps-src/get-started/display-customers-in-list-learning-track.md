@@ -7,11 +7,11 @@ keywords: 시작, uwp, windows 10, 학습 트랙, 데이터 바인딩, 목록
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: bd4a1f6747ea68623039b7eac22ac08aaa15d9ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947745"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651378"
 ---
 # <a name="display-customers-in-a-list"></a>목록에서 고객 표시
 
@@ -32,8 +32,8 @@ UI에서 실제 데이터를 표시하고 조작하는 것은 매우 많은 앱�
 
 데이터 바인딩을 구현하려면 바인딩에 데이터를 제공하는 소스에 코드를 추가해야 합니다. 또한 데이터 원본 속성을 지정하기 위해 XAML에 두 개의 태그 확장을 추가해야 합니다. 두 가지의 주요 차이는 다음과 같습니다.
 
-* [**x:Bind**](../xaml-platform/x-bind-markup-extension.md)는 강력한 형식이며 성능 향상을 위해 컴파일 시 코드를 생성합니다. x:Bind은 기본적으로 변경되지 않는 읽기 전용 데이터의 빠른 디스플레이를 위해 최적화되는 일회성 바인딩입니다.
-* [**바인딩**](../xaml-platform/binding-markup-extension.md)은 약한 형식이며 런타임 시 조립됩니다. 따라서 x:Bind보다 성능이 저하됩니다. 대부분의 경우 바인딩 대신 x:Bind를 사용해야 합니다. 그러나 이전 코드에서 바인딩이 발생할 수 있습니다. 바인딩은 기본적으로 원본에서 변경할 수 있는 읽기 전용 데이터를 최적화하는 단방향 데이터 전송입니다.
+* [**X:bind** ](../xaml-platform/x-bind-markup-extension.md) 강력한 형식 및 성능 향상을 위해 컴파일 타임에 코드를 생성 합니다. x:Bind은 기본적으로 변경되지 않는 읽기 전용 데이터의 빠른 디스플레이를 위해 최적화되는 일회성 바인딩입니다.
+* [**바인딩** ](../xaml-platform/binding-markup-extension.md) 이며 약하게 형식화 된 런타임 시 구성 합니다. 따라서 x:Bind보다 성능이 저하됩니다. 대부분의 경우 바인딩 대신 x:Bind를 사용해야 합니다. 그러나 이전 코드에서 바인딩이 발생할 수 있습니다. 바인딩은 기본적으로 원본에서 변경할 수 있는 읽기 전용 데이터를 최적화하는 단방향 데이터 전송입니다.
 
 가능한 때마다 **x:Bind**를 사용하는 것이 좋으며 이 문서의 조각에서 이를 설명하겠습니다. 차이점에 대한 자세한 내용은 [{x:Bind} 및 {Binding} 기능 비교](../data-binding/data-binding-in-depth.md#xbind-and-binding-feature-comparison)를 참조하세요.
 
@@ -104,9 +104,9 @@ public sealed partial class MainPage : Page
 
 목록에 고객을 표시했지만 데이터 B=바인딩으로 더 많은 것을 수행할 수 있습니다. UI에서 어떻게 바로 데이터를 편집할 수 있나요? 이렇게 하려면 먼저에 데이터 바인딩의 세 가지 모드에 대해 살펴보겠습니다.
 
-* *일회성*: 이 데이터 바인딩은 한 번만 활성화되며 변경에 대응하지 않습니다.
-* *단방향*: 이 데이터 바인딩은 데이터 원본의 변경 내용으로 UI를 업데이트합니다.
-* *양방향*: 이 데이터 바인딩은 데이터 원본의 변경 내용으로 UI를 업데이트하고 UI 내의 변경 사항으로 데이터를 업데이트합니다.
+* *일회성*: 이 데이터를 한 번만 활성화 됩니다 바인딩과 변경에 대응 하지 않습니다.
+* *단방향*: 이 데이터 바인딩은 데이터 원본에 대 한 변경 내용으로 UI를 업데이트 됩니다.
+* *Two-Way*: 이 데이터 바인딩을 UI 데이터 소스에 대 한 변경 내용으로 업데이트 되며 UI 내에서 수행 된 변경 데이터를 업데이트할 수도 있습니다.
 
 앞에서 코드 조각을 따랐다면 귀하가 만든 바인딩을 x:Bind를 사용하며 모드를 지정하지 않고 이를 일회성 바인딩으로 만듭니다. UI에서 바로 고객을 편집하려는 경우 데이터 변경이 고객 개체에도 다시 전달되도록 하기 위해 양방향 바인딩으로 변경해야 합니다. [데이터 바인딩 심층 분석](../data-binding/data-binding-in-depth.md)에 자세한 내용이 나와 있습니다.
 
@@ -167,7 +167,7 @@ public class Customer : INotifyPropertyChanged
 |------|---------------|
 | [데이터 템플릿](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) | UI의 특정 요소를 표시하도록 데이터 개체의 시각적 구조에 대해 설명합니다. |
 | [x:Bind](../xaml-platform/x-bind-markup-extension.md) | 권장된 x:Bind 태그 확장에 대한 설명서. |
-| [바인딩](../xaml-platform/binding-markup-extension.md) | 이전 바인딩 태그 확장에 대한 설명서. |
+| [Binding](../xaml-platform/binding-markup-extension.md) | 이전 바인딩 태그 확장에 대한 설명서. |
 | [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) | 세로 스택에 데이터 항목을 표시하는 UI 컨트롤입니다. |
 | [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | UI에서 편집할 수 있는 텍스트 데이터를 표시하기 위한 기본 텍스트 컨트롤입니다. |
 | [INotifyPropertyChanged](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged(d=robot).aspx) | 데이터를 관찰할 수 있도록 만들어 데이터 바인딩에 제공하는 인터페이스입니다. |
@@ -177,7 +177,7 @@ public class Customer : INotifyPropertyChanged
 
 | 항목 | 설명 |
 |-------|----------------|
-| [데이터 바인딩 심층 분석](../data-binding/data-binding-in-depth.md) | 데이터 바인딩 원칙의 기본 개요 |
+| [깊이에서 데이터 바인딩](../data-binding/data-binding-in-depth.md) | 데이터 바인딩 원칙의 기본 개요 |
 | [데이터 바인딩 개요](../data-binding/data-binding-quickstart.md) | 데이터 바인딩에 대한 자세한 개념 정보. |
 | [목록 보기](../design/controls-and-patterns/listview-and-gridview.md) | **DataTemplate**의 구현을 포함하여 ListView를 만들고 구성하는 정보 |
 

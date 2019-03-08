@@ -8,22 +8,22 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e7b6990917437c22dd4d9282492e2a0eab37893b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922884"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628148"
 ---
 # <a name="handleshandleidsession"></a>/handles/{handleId}/session
-GET 및 PUT 작업 세션에 대 한 핸들 해제를 사용 하 여 지원 합니다. 
+PUT 및 GET 작업 세션에 대 한 핸들 역참조를 사용 하 여 지원 합니다. 
 
 > [!NOTE] 
-> 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 용도가 템플릿 계약 104/105 이상을 사용 하 여 사용 합니다.  
+> 이 URI 2015 멀티 플레이 게임에서 사용 되 고 이상 멀티 플레이 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용에 대 한 것입니다.  
 
  
 
 > [!NOTE] 
-> 이 URI는 현재 Xbox One 콘솔 및 서비스 식별자를 사용 하 여 서버에서 외부에서 액세스할 수만 있습니다.  
+> 이 URI는 현재 Xbox One 콘솔과 서버 서비스 식별자를 사용 하 여 외부에서 액세스할 수만 있습니다.  
 
  
 <a id="ID4ES"></a>
@@ -36,22 +36,22 @@ sessiondirectory.xboxlive.com
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | --- | --- | 
 | handleId| GUID| 세션에 대 한 핸들의 고유 ID입니다.| 
   
 <a id="ID4ESB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
-[GET (/handles/{handleId}/session)](uri-handleshandleidsessionget.md)
+[가져오기 (/handles/ {handleId} / 세션)](uri-handleshandleidsessionget.md)
 
 &nbsp;&nbsp;지정 된 핸들 식별자에 대 한 세션 개체를 가져옵니다. 
 
-[PUT (/handles/{handle-id}/session)](uri-handleshandleidsessionput.md)
+[배치 (/handles/ {핸들-id} / 세션)](uri-handleshandleidsessionput.md)
 
-&nbsp;&nbsp;만들거나 핸들을 해제 하 여 세션을 업데이트 합니다.
+&nbsp;&nbsp;만들거나 세션 핸들을 역참조 하 여 업데이트 합니다.
  
 <a id="ID4E6B"></a>
 
@@ -61,8 +61,8 @@ sessiondirectory.xboxlive.com
 <a id="ID4EBC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[세션 디렉터리 URI](atoc-reference-sessiondirectory.md)
+[세션 디렉터리 Uri](atoc-reference-sessiondirectory.md)
 
    

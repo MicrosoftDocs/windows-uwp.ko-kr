@@ -11,30 +11,30 @@ dev_langs:
 - cppcx
 - cppwinrt
 ms.openlocfilehash: 7d66eaa77f86deffd59ebc81360ccb8183afd7d6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929650"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654538"
 ---
 # <a name="xaml-lighting"></a>XAML 조명
 
-[**CompositionLight**](/uwp/api/Windows.UI.Composition.CompositionLight) 개체는 [**SceneLightingEffect**](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect)와 함께 동적 조명 및 반사를 시뮬레이트하기 위해 사용됩니다.
+[**CompositionLight** ](/uwp/api/Windows.UI.Composition.CompositionLight) 개체와 함께에서 사용 됩니다 [ **SceneLightingEffect** ](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) 동적 조명 및 반사를 시뮬레이션할 수 있습니다.
 
-[**시각 효과**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 및 XAML [**UIElements**](/uwp/api/Windows.UI.Xaml.UIElement)에 조명을 적용할 수 있습니다.
+[  **시각 효과**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 및 XAML [**UIElements**](/uwp/api/Windows.UI.Xaml.UIElement)에 조명을 적용할 수 있습니다.
 
 ## <a name="applying-lights-to-xaml-uielements"></a>XAML UIElements에 조명 적용
 
-[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) 개체는 [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight)에 적용하여 동적으로 XAML UIElements를 조명하는 데 사용됩니다. XamlLight는 UIElements 또는 uielements 트리에 적용 하 고 XAML 브러시에 대 한 메서드를 제공 하 고 현재 있는지 여부에 따라 리소스 사용 CompositionLight의 수명을 관리 합니다.
+[**XamlLight** ](/uwp/api/windows.ui.xaml.media.xamllight) 개체를 적용 하는 데 사용 됩니다 [ **CompositionLights** ](/uwp/api/Windows.UI.Composition.CompositionLight) 동적으로 XAML Uielement를 명확 하 게 합니다. XamlLight Uielement 또는 Uielement 트리로 조명을 적용 하는 XAML 브러시를 대상으로 하는 메서드를 제공 하 고 현재 있는지 여부에 따라 리소스 사용 CompositionLight의 수명 관리를 지원 합니다.
 
 - **브러시**를 XamlLight로 대상으로 지정하면 해당 브러시를 사용하는 모든 UIElements의 일부가 조명에 의해 켜집니다.
 - XamlLight로 **UIElement**를 대상으로 지정하는 경우 전체 UIElement 및 하위 UIElements가 모두 조명에 의해 켜집니다.
 
 ## <a name="creating-and-using-a-xamllight"></a>XamlLight 만들기 및 사용
 
-[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight)는 사용자 지정 조명을 생성하는 데 사용할 수 있는 기본 클래스입니다.
+[**XamlLight** ](/uwp/api/windows.ui.xaml.media.xamllight) 는 사용자 지정 광원을 만드는 데 사용할 수 있는 기본 클래스입니다.
 
-이 예제에서는 대상 UIElements 및 브러시 컬러 스포트라이트 적용 되는 사용자 지정 XamlLight에 대 한 정의 보여 줍니다.
+이 예제에서는 다양 한 색상된 추천을 대상으로 지정 된 UIElements 및 브러시 적용 되는 사용자 지정 XamlLight에 대 한 정의 보여 줍니다.
 
 ```csharp
 public sealed class OrangeSpotLight : XamlLight
@@ -457,10 +457,10 @@ Platform::String^ OrangeSpotLight::GetId()
 }
 ```
 
-이 빛이 하기 위해 모든 XAML UIElement 또는 브러시를 적용할 수 있습니다. 이 예제에서는 다른 잠재적 사용법을 보여 줍니다.
+다음 XAML ui 요소 또는 브러시에 명확 하 게이 빛을 적용할 수 있습니다. 이 예제에서는 다른 잠재적인 사용법을 보여 줍니다.
 
 > [!Important]
-> 에 대 한 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 두 개를 제거 `local:OrangeSpotLight.IsTarget="True"` 아래의 태그입니다. 연결 된 속성은 코드 숨김에 이미 설정 됩니다.
+> 에 대 한 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 두 개를 제거 `local:OrangeSpotLight.IsTarget="True"` 태그 아래에서. 연결 된 속성은 이미 코드 숨김에 설정 됩니다.
 
 ```xaml
 <StackPanel Width="100">
@@ -491,11 +491,11 @@ Platform::String^ OrangeSpotLight::GetId()
 
 이 XAML의 결과 다음과 같습니다.
 
-![요소는 xaml 조명에 의해 켜 집니다.](images/orange-spot-light.png)
+![Xaml 밝게 빛나는 요소의 예](images/orange-spot-light.png)
 
 > [!Important]
 > 위 예에서 마크업에서 UIElement.Lights 설정은 최소 Windows 10 크리에이터 업데이트 이상에 해당하는 버전의 앱에서만 지원됩니다. 이전 버전을 대상으로 하는 앱의 경우 코드 숨김에서 조명을 만들어야 합니다.
 
 ## <a name="additional-resources"></a>추가 리소스
 
-* [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)의 고급 UI 및 Composition 샘플.
+* [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)의 고급 UI 및 Composition 샘플

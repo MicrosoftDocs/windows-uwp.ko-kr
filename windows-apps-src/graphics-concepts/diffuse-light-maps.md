@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0605de5313b59689c19b9560d10e088d26d29b52
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940864"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627738"
 ---
 # <a name="diffuse-light-maps"></a>확산 조명 맵
 
@@ -21,10 +21,10 @@ ms.locfileid: "8940864"
 
 확산 조명 효과는 일반 효과로만 생성되는 조명 계산으로 시뮬레이션됩니다. 응용 프로그램에서 텍스처 조명 맵을 사용하여 더 복잡한 확산 조명을 시뮬레이션할 수 있습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[텍스처와 조명 매핑](light-mapping-with-textures.md)
+[질감을 사용 하 여 간단한 매핑](light-mapping-with-textures.md)
 
  
 

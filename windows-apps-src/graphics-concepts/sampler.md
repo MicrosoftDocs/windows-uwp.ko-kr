@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e80e160e1225e510ab95f52cbd9f21049c890457
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942474"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57663658"
 ---
 # <a name="sampler"></a>샘플러
 
@@ -23,10 +23,10 @@ ms.locfileid: "8942474"
 
 렌더링할 영역이 뷰에 대해 큰 사각을 이루는 경우(예: 뷰 앵글 때문에 256 x 256픽셀 텍스처를 너비가 100픽셀이지만 깊이가 5픽셀에 불과한 영역으로 렌더링하는 경우) 또 다른 문제가 발생합니다. 이 경우 "이방성" 필터링이 자주 적용됩니다. 이방성 필터링은 과도한 흐림 없이 앨리어싱 효과를 제거하므로 쌍선형보다 뛰어난 이미지 품질을 제공하지만 계산 비용은 더 많이 듭니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[보기](views.md)
+[레이아웃](views.md)
 
  
 

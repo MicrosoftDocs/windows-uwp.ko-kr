@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 샘플
 ms.localizationpriority: medium
 ms.openlocfilehash: d545f696a93bfa8416e1a772ecc015867a3615c2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045449"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611818"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Marble Maze 샘플에 입력 및 대화형 작업 추가
 
@@ -324,7 +324,7 @@ case GameState::InGamePaused:
 
 ### <a name="tracking-touch-and-mouse-input"></a>터치식 및 마우스 입력 추적
 
-터치식 및 마우스 입력의 경우 사용자가 터치하거나 클릭하면 메뉴 항목이 선택됩니다. 다음 예제에서는 **MarbleMazeMain::Update** 메서드가 포인터 입력을 처리하여 메뉴 항목을 선택하는 방법을 보여줍니다. **m\_pointQueue** 멤버 변수는 사용자가 화면에서 터치하거나 클릭한 위치를 추적합니다. Marble Maze가 포인터 입력을 수집하는 방법은 이 문서의 뒷부분에 있는 [포인터 입력 처리](#processing-pointer-input) 섹션에서 자세히 설명합니다.
+터치식 및 마우스 입력의 경우 사용자가 터치하거나 클릭하면 메뉴 항목이 선택됩니다. 다음 예제에서는 **MarbleMazeMain::Update** 메서드가 포인터 입력을 처리하여 메뉴 항목을 선택하는 방법을 보여줍니다. 합니다 **m\_pointQueue** 멤버 변수는 화면에 사용자의 작업 또는 클릭할 위치를 위치를 추적 합니다. Marble Maze가 포인터 입력을 수집하는 방법은 이 문서의 뒷부분에 있는 [포인터 입력 처리](#processing-pointer-input) 섹션에서 자세히 설명합니다.
 
 ```cpp
 // Check whether the user chose a button from the UI. 
@@ -541,7 +541,7 @@ if ((oppositeSquared + adjacentSquared) > m_deadzoneSquared)
 
 ###  <a name="applying-input-to-the-game-state"></a>게임 상태에 입력 적용
 
-장치는 각기 다른 방법으로 입력 값을 보고합니다. 예를 들어 포인터 입력은 화면 좌표이고 컨트롤러 입력은 완전히 다른 형식일 수 있습니다. 여러 장치의 입력을 하나의 입력 값 집합으로 결합하는 경우의 한 가지 문제는 정규화, 즉 값을 공통 형식으로 변환하는 것입니다. Marble Maze는 값을 \[-1.0, 1.0\] 범위로 조정하여 정규화합니다. 이 섹션의 앞부분에서 설명한 **PointToTouch** 함수는 약 -1.0에서 +1.0 사이의 정규화된 값으로 화면 좌표를 변환합니다.
+장치는 각기 다른 방법으로 입력 값을 보고합니다. 예를 들어 포인터 입력은 화면 좌표이고 컨트롤러 입력은 완전히 다른 형식일 수 있습니다. 여러 장치의 입력을 하나의 입력 값 집합으로 결합하는 경우의 한 가지 문제는 정규화, 즉 값을 공통 형식으로 변환하는 것입니다. Marble Maze 범위를 확장 하 여 값을 정규화 \[-1.0, 1.0\]합니다. 이 섹션의 앞부분에서 설명한 **PointToTouch** 함수는 약 -1.0에서 +1.0 사이의 정규화된 값으로 화면 좌표를 변환합니다.
 
 > [!TIP]
 > 응용 프로그램이 하나의 입력 방법을 사용하는 경우에도 항상 입력 값을 정규화하는 것이 좋습니다. 이렇게 하면 물리학 시뮬레이션 등 게임의 다른 구성 요소에서 입력이 해석되는 방식을 간소화할 수 있으며, 각기 다른 화면 해상도에서 작동하는 게임을 더 쉽게 작성할 수 있습니다.
@@ -613,9 +613,9 @@ if (marblePosition.z >= resetDepth)
 ## <a name="related-topics"></a>관련 항목
 
 
-* [Marble Maze 샘플에 오디오 추가](adding-audio-to-the-marble-maze-sample.md)
+* [Marble Maze 샘플에 오디오를 추가](adding-audio-to-the-marble-maze-sample.md)
 * [Marble Maze 샘플에 시각적 콘텐츠 추가](adding-visual-content-to-the-marble-maze-sample.md)
-* [C++ 및 DirectX로 UWP 게임 Marble Maze 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* [C + + 및 DirectX에서 UWP 게임, Marble Maze 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b5c17f1791d69ca8a4c902b6c37736c4da28a31
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928247"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645668"
 ---
 # <a name="usersxuidxuiddevicescurrenttitlescurrent"></a>/users/xuid({xuid})/devices/current/titles/current
-제목이 나 제목의 사용자의 존재 여부에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
+제목 또는 타이틀의 사용자의 현재 상태에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`합니다.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -24,22 +24,22 @@ ms.locfileid: "8928247"
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID)는 대상 사용자의 합니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 대상 사용자입니다.| 
   
 <a id="ID4EUB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [DELETE (/users/xuid({xuid})/devices/current/titles/current)](uri-usersxuiddevicescurrenttitlescurrentdelete.md)
 
-&nbsp;&nbsp;[PresenceRecord](../../json/json-presencerecord.md) 만료 될 때까지 기다리지 않고 닫는 타이틀의 존재 여부를 제거 합니다.
+&nbsp;&nbsp;기다리지 않고 닫는 제목의 존재를 제거 합니다 [PresenceRecord](../../json/json-presencerecord.md) 만료 합니다.
 
 [POST (/users/xuid({xuid})/devices/current/titles/current)](uri-usersxuiddevicescurrenttitlescurrentpost.md)
 
-&nbsp;&nbsp;사용자의 현재 상태를 사용 하 여 타이틀을 업데이트 합니다.
+&nbsp;&nbsp;사용자의 현재 상태를 사용 하 여 제목을 업데이트 합니다.
  
 <a id="ID4EBC"></a>
 
@@ -49,8 +49,8 @@ ms.locfileid: "8928247"
 <a id="ID4EDC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[상태 URI](atoc-reference-presence.md)
+[현재 상태 Uri](atoc-reference-presence.md)
 
    

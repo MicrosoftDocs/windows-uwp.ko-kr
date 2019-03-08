@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: da8d61634d0a849d51e2ab6ff143469ec05cc75c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944319"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657478"
 ---
 # <a name="serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionname"></a>/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName}
-GET 및 PUT 작업 만들기 및 검색 세션을 지원 합니다.
+PUT 및 GET 작업을 만들고 세션 검색을 지원 합니다.
 <a id="ID4EO"></a>
 
 
@@ -26,16 +26,16 @@ sessiondirectory.xboxlive.com
 
 ## <a name="uri-parameters"></a>URI 매개 변수
 
-| 매개 변수| 유형| 설명|
+| 매개 변수| 형식| 설명|
 | --- | --- | --- |
-| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 1 부 세션 식별자입니다.|
-| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션 식별자입니다.|
-| 세션 이름| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.| 
+| scid| GUID| (서비스 안내) 식별자를 구성 하는 서비스입니다. 1 부 세션 식별자입니다.|
+| sessionTemplateName| 문자열| 세션 템플릿의 현재 인스턴스의 이름입니다. 2 부를 선택 하면 세션 식별자입니다.|
+| sessionName| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.| 
 
 <a id="ID4EBC"></a>
 
 
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [GET (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName})](uri-serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionnameget.md)
 
@@ -43,7 +43,7 @@ sessiondirectory.xboxlive.com
 
 [PUT (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName})](uri-serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionnameput.md)
 
-&nbsp;&nbsp;업데이트, 만들거나 세션에 참가 합니다.
+&nbsp;&nbsp;업데이트를 만들거나 세션에 참가 합니다.
 
 <a id="ID4EOC"></a>
 
@@ -53,6 +53,6 @@ sessiondirectory.xboxlive.com
 <a id="ID4EQC"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
-[세션 디렉터리 URI](atoc-reference-sessiondirectory.md)
+[세션 디렉터리 Uri](atoc-reference-sessiondirectory.md)

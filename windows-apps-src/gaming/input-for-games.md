@@ -1,17 +1,17 @@
 ---
-title: 게임 입력 장치
-description: 이 섹션에서는 UWP(유니버설 Windows 플랫폼) 게임용 게임 패드 및 기타 입력 장치를 사용하는 방법을 보여줍니다.
+title: 게임용 입력 시스템
+description: 이 섹션에서는 UWP(유니버설 Windows 플랫폼) 게임용 게임 패드 및 기타 입력 장치를 사용하는 방법을 보여 줍니다.
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10 uwp, 게임, 입력
+keywords: Windows 10, uwp, 게임, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f1daac8bc94d49c501307728c1e966ba89435f9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941261"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631668"
 ---
 # <a name="input-for-games"></a>게임용 입력 시스템
 
@@ -43,15 +43,15 @@ UWP 게임에서 레이싱 휠을 사용하는 방법에 대해 자세한 내용
 
 ### <a name="flight-sticks"></a>플라이트 스틱
 
-플라이트 스틱은 평면 또는 우주선의 조종석에서 찾을 수 있는 플라이트 스틱의 느낌을 재현 하는 게임 입력된 장치입니다. 신속하고 정확한 플라이트 제어를 위한 완벽한 입력 디바이스입니다.
+플라이트 스틱은 평면 또는 우주선의 조종석에서 찾을 수 있는 플라이트 스틱의 느낌을 재현하는 게임 입력입니다. 신속하고 정확한 플라이트 제어를 위한 완벽한 입력 디바이스입니다.
 
-UWP 게임에서 플라이트 스틱을 사용 하는 방법에 대 한 자세한 내용은 [플라이트 스틱](flight-stick.md)를 참조 하세요.
+UWP 게임에서 플라이트 스틱을 이용하는 방법에 대해 자세한 내용은 [플라이트 스틱](flight-stick.md)을 참조하세요.
 
 ### <a name="raw-game-controllers"></a>원시 게임 컨트롤러
 
 원시 게임 컨트롤러는 다양한 유형의 일반적인 게임 컨트롤러에서 발견된 입력으로 나타나는 게임 컨트롤러의 일반적인 표현입니다. 이러한 입력은 이름 없는 단추, 스위치 및 축의 단순한 배열로 표시됩니다. 원시 게임 컨트롤러를 사용하여 고객이 사용자는 컨트롤러 유형에 관계 없이 사용자 지정 입력 매핑을 만들도록 허용할 수 있습니다.
 
-UWP 게임에서 원시 게임 컨트롤러를 사용 하는 방법에 대 한 자세한 내용은 [원시 게임 컨트롤러](raw-game-controller.md)를 참조 하세요.
+UWP 게임에서 원시 게임 컨트롤러를 사용하는 방법에 대한 자세한 내용은 [원시 게임 컨트롤러](raw-game-controller.md)를 참조하세요.
 
 ### <a name="ui-navigation-controllers"></a>UI 탐색 컨트롤러
 
@@ -73,6 +73,6 @@ UWP 게임에서 헤드셋을 사용하는 방법에 대해 자세한 내용은 
 
 ## <a name="see-also"></a>참고 항목
 
-* [게임 입력 시스템](input-practices-for-games.md)
-* [Windows.Gaming.Input 네임스페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input)
+* [게임에 대 한 입력된 사례](input-practices-for-games.md)
+* [Windows.Gaming.Input 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input)
 * [Windows.Gaming.Input.Custom 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)

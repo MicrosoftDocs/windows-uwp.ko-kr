@@ -8,22 +8,22 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 012b0bae7c0abdacba352a3e8f60bcfd0aa1dd54
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935224"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646328"
 ---
 # <a name="lighting"></a>조명
 
 
 조명은 장면에서 물체를 비추는 데 사용됩니다. 각 개체 꼭짓점의 색상은 현재 텍스처 맵, 꼭짓점 색상, 광원을 기반으로 합니다.
 
-**참고**  이 섹션은 고정 함수 파이프라인에만 적용 됩니다. 프로그램 가능 셰이더는 모든 조명 작업을 명시적으로 수행합니다.
+**참고**    이 섹션에서는 고정 함수 파이프라인에만 사용 됩니다. 프로그램 가능 셰이더는 모든 조명 작업을 명시적으로 수행합니다.
 
  
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
 
 
 <table>
@@ -43,7 +43,7 @@ ms.locfileid: "8935224"
 <td align="left"><p>Direct3D 조명을 사용하는 경우 Direct3D가 조명의 세부 사항을 대신 처리하도록 허용합니다. 고급 사용자는 필요에 따라 직접 조명 작업을 수행할 수 있습니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="light-types.md">조명 유형</a></p></td>
+<td align="left"><p><a href="light-types.md">밝은 형식</a></p></td>
 <td align="left"><p>조명 유형 속성은 어떤 유형의 광원을 사용할지 정의합니다. Direct3D에는 점 광원, 스포트라이트, 방향성 광원 등 세 종류의 조명이 있습니다.</p></td>
 </tr>
 <tr class="odd">
@@ -59,7 +59,7 @@ ms.locfileid: "8935224"
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [Direct3D 그래픽 학습 가이드](index.md)

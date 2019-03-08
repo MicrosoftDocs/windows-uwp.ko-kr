@@ -8,13 +8,13 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d62a1d3158e13187f89277a1ba009bd56fc2b39a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921406"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659428"
 ---
-# <a name="span-iddirect3dconceptssrvbehaviorwithnon-mappedtilesspansrv-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.srv_behavior_with_non-mapped_tiles"></span>비매핑된 타일을 사용하는 SRV 동작
+# <a name="span-iddirect3dconceptssrvbehaviorwithnon-mappedtilesspansrv-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.srv_behavior_with_non-mapped_tiles"></span>비 매핑된 타일을 사용 하 여 SRV 동작
 
 
 비매핑된 타일과 관련된 셰이더 리소스 뷰(SRV) 읽기 동작은 하드웨어 지원 수준에 따라 다릅니다. 자세한 요구 사항은 [스트리밍 리소스 기능 계층](streaming-resources-features-tiers.md)의 읽기 동작을 참조하세요. 이 섹션에는 [계층 2](tier-2.md)가 필요한 이상적 동작이 요약되어 있습니다.
@@ -23,10 +23,10 @@ SRV의 텍셀 집합에서 읽는 텍스처 필터 작업을 생각해 봅시다
 
 일부 초기 [계층 2](tier-2.md) 수준 하드웨어는 이 사양 요구 사항을 충족하지 않아 비매핑된 타일에 속하는 텍셀(가중치가 0이 아님)이 있는 경우 앞서 설명한 기본값을 포함하여 0을 전체 필터 결과로 반환합니다. 다른 어떤 하드웨어도 필터에 모든 (가중치가 0이 아닌) 텍셀을 포함해야 하는 요구 사항을 누락시킬 수 없습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[스트리밍 리소스에 대한 파이프라인 액세스](pipeline-access-to-streaming-resources.md)
+[리소스를 스트리밍에 대 한 파이프라인 액세스](pipeline-access-to-streaming-resources.md)
 
  
 

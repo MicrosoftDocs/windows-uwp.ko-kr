@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b3e37d4de3a346e0f29909727a46d3b31f9d59d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934548"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608498"
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>PLM(프로세스 수명 관리) 테스트 및 디버깅 도구
 
@@ -84,5 +84,5 @@ plmdebug /enableDebug 279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.0.0_x86__c6sq6kwg
 모든 **/enableDebug** 호출은 나중에 **/disableDebug** 스위치가 포함된 다른 PLMDebug 호출과 결합되어야 합니다. 또한 디버거 경로는 절대 경로여야 합니다(상대 경로는 지원되지 않음).
 
 ## <a name="related-topics"></a>관련 항목
-- [UWP 앱 배포 및 디버그](deploying-and-debugging-uwp-apps.md)
+- [UWP 앱 디버그 및 배포](deploying-and-debugging-uwp-apps.md)
 - [디버깅, 테스트 및 성능](index.md)

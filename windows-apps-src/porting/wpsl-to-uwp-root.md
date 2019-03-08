@@ -1,37 +1,37 @@
 ---
-description: 경우에 개발자는 WindowsPhone Silverlight 앱으로 windows 10으로 이동 하는 멋진 활용 자신의 기술과 소스 코드를 생성할 수 있습니다.
-title: WindowsPhone Silverlight에서 UWP로 이동
+description: Windows Phone Silverlight 앱 개발자 인 경우 만들 수 있습니다 기술 집합 및 소스 코드의 좋은 사용 이동에서 Windows 10으로 합니다.
+title: Windows Phone Silverlight에서 UWP로 이동
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c644e53ec0126edf418ead573e50653e8cb1cf0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045216"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649938"
 ---
-#  <a name="move-from-windowsphone-silverlight-to-uwp"></a>WindowsPhone Silverlight에서 UWP로 이동
+#  <a name="move-from-windowsphone-silverlight-to-uwp"></a>Windows Phone Silverlight에서 UWP로 이동
 
 
-경우에 개발자는 WindowsPhone Silverlight 앱으로 windows 10으로 이동 하는 멋진 활용 자신의 기술과 소스 코드를 생성할 수 있습니다. Windows 10 고객에 게 모든 종류의 장치에 설치할 수 있는 단일 앱 패키지는 유니버설 Windows 플랫폼 (UWP) 앱을 만들 수 있습니다. Windows 10에 대 한 자세한 배경, UWP 앱 및 적응 코드 및이 포팅 가이드에서 언급할 적응 UI 개념 [유니버설 Windows 플랫폼 (UWP) 앱 가이드](https://msdn.microsoft.com/library/windows/apps/dn894631)를 참조 합니다.
+Windows Phone Silverlight 앱 개발자 인 경우 만들 수 있습니다 기술 집합 및 소스 코드의 좋은 사용 이동에서 Windows 10으로 합니다. Windows 10을 사용 하 여 고객에 게 모든 종류의 장치에 설치할 수 있는 단일 앱 패키지는 유니버설 Windows 플랫폼 (UWP) 앱을 만들 수 있습니다. Windows 10에서 UWP 앱 및 적응 코드 및이 포팅 가이드에서 언급할 수는 적응 UI의 개념에 자세한 배경 정보를 참조 하세요. 합니다 [유니버설 Windows 플랫폼 (UWP) 앱 가이드](https://msdn.microsoft.com/library/windows/apps/dn894631)합니다.
 
-[Windows Phone 8.1에서 도입](https://msdn.microsoft.com/library/windows/apps/dn632424)된 모바일 기능을 뛰어넘는 유니버설 Windows 플랫폼 (UWP) 앱 모델 및 UI 프레임 워크를 사용 하도록 수 있게 됩니다 WindowsPhone Silverlight 앱을 windows 10 앱에 포팅하는 경우 모든 windows 10 디바이스에서 유니버설 됩니다. PC, 태블릿, 휴대폰 및 기타 여러 종류의 장치를 하나의 코드 베이스에서 그리고 하나의 앱 패키지를 통해 지원할 수 있게 됩니다. 또한 앱의 잠재 사용자 수가 배로 증가하고 공유 데이터, 구매한 소모성 항목 등을 통해 새로운 가능성이 열립니다. 새로운 기능에 대 한 자세한 내용은 [windows 10의 개발자 용 새로운 란](https://dev.windows.com/getstarted/whats-new-windows-10)을 참조 하세요.
+Windows 10 앱 Windows Phone Silverlight 앱을 포팅하 면에 있던 모바일 기능에 따라잡을 수 있습니다 [Windows Phone 8.1에 도입 된](https://msdn.microsoft.com/library/windows/apps/dn632424)를 뛰어넘는 Windows 플랫폼 (UWP (유니버설)을 사용 하도록 앱 및 모든 Windows 10 장치에서 모델 및 UI 프레임 워크는 범용입니다. PC, 태블릿, 휴대폰 및 기타 여러 종류의 장치를 하나의 코드 베이스에서 그리고 하나의 앱 패키지를 통해 지원할 수 있게 됩니다. 또한 앱의 잠재 사용자 수가 배로 증가하고 공유 데이터, 구매한 소모성 항목 등을 통해 새로운 가능성이 열립니다. 새로운 기능에 대 한 자세한 내용은 참조 하세요. [개발자를 위한 Windows 10의 새로운 기능](https://dev.windows.com/getstarted/whats-new-windows-10)합니다.
 
-하기로 선택한 경우, WindowsPhone Silverlight 버전의 앱 및 windows 10 버전을 모두 사용할 수 고객에 게 동시에 합니다.
+원하는 경우 Windows Phone Silverlight 버전의 앱 및 Windows 10 버전을 모두 사용할 수 있습니다 고객에 게 동시에.
 
-**참고**이 가이드는 windows 10으로 WindowsPhone Silverlight 앱을 수동으로 포팅할 수 있도록 설계 되었습니다. 이 가이드의 정보를 사용하여 앱을 포팅하는 것 외에도 **Mobilize.NET의 Silverlight 브리지**의 개발자 미리 보기를 시도하여 포팅 프로세스를 자동화할 수 있습니다. 이 도구는 앱의 소스 코드를 분석 하 고 WindowsPhone Silverlight 컨트롤에 대 한 참조 및 Api를 해당 UWP 항목으로 변환 합니다. 이 도구는 여전히 개발자 미리 보기 상태이므로 아직 모든 변환 시나리오를 처리하지는 않습니다. 그러나 이 도구로 시작하면 대부분의 개발자가 일부 시간과 노력을 줄일 수 있습니다. 개발자 미리 보기를 시도하려면 [Mobilize.NET 웹 사이트](https://go.microsoft.com/fwlink/p/?LinkId=624546)를 방문하세요.
+**참고**  이 가이드는 Windows Phone Silverlight 앱을 Windows 10을 수동으로 이식할 수 있도록 디자인 되었습니다. 이 가이드의 정보를 사용하여 앱을 포팅하는 것 외에도 **Mobilize.NET의 Silverlight 브리지**의 개발자 미리 보기를 시도하여 포팅 프로세스를 자동화할 수 있습니다. 이 도구는 앱의 소스 코드를 분석 하 고 UWP 상응 하는 Windows Phone Silverlight 컨트롤에 대 한 참조 및 Api를 변환 합니다. 이 도구는 여전히 개발자 미리 보기 상태이므로 아직 모든 변환 시나리오를 처리하지는 않습니다. 그러나 이 도구로 시작하면 대부분의 개발자가 일부 시간과 노력을 줄일 수 있습니다. 개발자 미리 보기를 시도하려면 [Mobilize.NET 웹 사이트](https://go.microsoft.com/fwlink/p/?LinkId=624546)를 방문하세요.
 
 ## <a name="xaml-and-net-or-html"></a>XAML 및 .NET 또는 HTML?
 
-WindowsPhone Silverlight의 XAML UI 프레임 워크는 Silverlight 4.0 및.NET Framework 버전과 UWP Api의 일부 하위 집합에 대해 프로그래밍 기반으로 합니다. XAML을 가능성이 선택한 windows 10 버전에 대 한 소스 코드의 대부분은 대로 대부분의 경험은 전송 하기 때문에 WindowsPhone Silverlight 앱에서 응용 프로그램 언어 XAML (Extensible Markup)을 사용 하 고 사용 중인 소프트웨어 패턴도 합니다. UI 태그와 디자인도 쉽게 포팅될 수 있습니다. Managed API, XAML 태그, UI 프레임워크 및 도구가 매우 친숙함을 알 수 있으며, UWP 앱에서 XAML과 함께 C++, C# 또는 Visual Basic을 사용할 수 있습니다. 처리하는 과정에서 한 두 가지 문제가 있긴 하지만 프로세스는 상대적으로 쉽습니다.
+Windows Phone Silverlight는 Silverlight 4.0 및.NET Framework의 버전 및 UWP Api의 작은 하위 집합을 대상으로 프로그래밍할 수에 따라 XAML UI 프레임 워크입니다. Windows Phone Silverlight 앱에서 Extensible Application Markup Language (XAML)을 사용해 이므로 XAML 되도록 Windows 10 버전에 대 한 원하는 대로 소스 코드의 대부분은 대부분의 기술 및 경험은 전송 하기 때문에 가능성이 및 소프트웨어 패턴을 사용 합니다. UI 태그와 디자인도 쉽게 포팅될 수 있습니다. Managed API, XAML 태그, UI 프레임워크 및 도구가 매우 친숙함을 알 수 있으며, UWP 앱에서 XAML과 함께 C++, C# 또는 Visual Basic을 사용할 수 있습니다. 처리하는 과정에서 한 두 가지 문제가 있긴 하지만 프로세스는 상대적으로 쉽습니다.
 
 [C# 또는 Visual Basic을 사용한 UWP(유니버설 Windows 플랫폼) 앱용 로드맵](https://msdn.microsoft.com/library/windows/apps/br229583)을 참조하세요.
 
-**참고**보다 훨씬 더.NET Framework는 Windows Phone 스토어 앱은 windows 10을 지원 합니다. 예를 들어 windows 10에는 여러 가지 System.ServiceModel.\* 네임 스페이스 뿐만 아니라 System.Net, System.Net.NetworkInformation 및 System.Net.Sockets에 있습니다. 따라서 번째로 WindowsPhone Silverlight로 포팅하고.NET 코드를 바로 컴파일하고 새 플랫폼에서 작업입니다. [네임스페이스 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md)을 참조하세요.
-Windows 10 앱으로 기존.NET 소스 코드를 다시 컴파일해야 할 또 다른 이유는.NET 네이티브의 이점을 수는 MSIL을 기본적으로 실행 가능 컴퓨터 코드로 변환 하는 미리 컴파일 기술입니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
+**참고**  Windows 10은 훨씬 더 많은.NET Framework의 Windows Phone 스토어 앱을 보다 지원 합니다. 예를 들어, Windows 10에는 여러 System.ServiceModel에 있습니다. \* 네임 스페이스 System.Net.Sockets System.Net, System.Net.NetworkInformation, 및입니다. 따라서 이제는.NET 코드를 방금 컴파일하여 새 플랫폼에서 작동 및 Windows Phone Silverlight 포트 수 있는 좋은 시간입니다. [네임스페이스 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md)을 참조하세요.
+Windows 10 앱에 기존.NET 소스 코드를 다시 컴파일하거나 또 다른 좋은 이유는.NET 네이티브 코드에서 이익을 MSIL을 고유 하 게 실행 가능한 기계어 코드로 변환 하는 미리 컴파일 기술입니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
 
 이 포팅 가이드에서는 XAML에 집중하지만, JavaScript, CSS 스타일시트 및 HTML5를 JavaScript용 Windows 라이브러리와 함께 사용하여 동일한 UWP API 중 다수를 많이 호출하는 기능적으로 동일한 앱을 빌드할 수 있습니다. XAML과 HTML의 Windows 런타임 UI 프레임워크는 서로 다르지만 어느 경우든 모든 Windows 디바이스에서 보편적으로 작동합니다.
 
@@ -55,39 +55,39 @@ Windows 10 앱으로 기존.NET 소스 코드를 다시 컴파일해야 할 또 
 
 이 포팅 가이드를 읽었으므로 [네임스페이스 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md)을 참조할 수 있습니다. 상당히 간단한 매핑은 일반 규칙이며, 네임스페이스 및 클래스 매핑 테이블은 예외를 설명합니다.
 
-다행히도 UWP의 기능 수준에서 지원되지 않는 경우는 거의 없습니다. 이 포팅 가이드의 나머지 부분에서 알 수 있듯이 대부분의 기술과 소스 코드는 UWP 앱으로 매우 잘 변환됩니다. 하지만 다음은 사용 했던 몇 가지 WindowsPhone Silverlight 기능에는 UWP 항목이 없는 있습니다.
+다행히도 UWP의 기능 수준에서 지원되지 않는 경우는 거의 없습니다. 이 포팅 가이드의 나머지 부분에서 알 수 있듯이 대부분의 기술과 소스 코드는 UWP 앱으로 매우 잘 변환됩니다. 그러나 몇 가지 Windows Phone Silverlight 기능을 사용 했을 수도 대 한 것은 없다는 UWP는 다음과 같습니다.
 
-| 해당하는 UWP 항목이 없는 기능 | 이 기능에 대 한 WindowsPhone Silverlight 설명서 |
+| 해당하는 UWP 항목이 없는 기능 | 기능에 대 한 Windows Phone Silverlight 설명서 |
 |----------------------------------------------|---------------------------------------------------------|
 | Microsoft XNA. 일반적으로 C++로 작성한 [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)로 대체됩니다. [게임 개발](https://msdn.microsoft.com/library/windows/apps/hh452744) 및 [DirectX 및 XAML interop](https://msdn.microsoft.com/library/windows/apps/hh825871)을 참조하세요. | [XNA Framework 클래스 라이브러리](https://msdn.microsoft.com/library/bb203940.aspx) | 
-|필터 앱 | [Windows Phone 8의 필터](https://msdn.microsoft.com/library/windows/apps/jj206990.aspx) |
+|필터 앱 | [Windows Phone 8에 대 한 필터](https://msdn.microsoft.com/library/windows/apps/jj206990.aspx) |
 
 &nbsp;
 
 | 항목| 설명|
 |------|------------| 
-| [네임스페이스 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md) | 이 항목에서는 이와 동일한 UWP에 대 한 포괄적인 매핑을 WindowsPhone Silverlight api를 제공 합니다. |
-| [프로젝트 포팅](wpsl-to-uwp-porting-to-a-uwp-project.md) | Visual Studio에서 새 windows 10 프로젝트를 만들고 파일에 복사 하 여 포팅 프로세스를 시작 합니다. |
+| [Namespace 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md) | 이 항목에서는 UWP 해당 Windows Phone Silverlight Api의 포괄적인 매핑을 제공합니다. |
+| [프로젝트를 이식합니다.](wpsl-to-uwp-porting-to-a-uwp-project.md) | Visual Studio에서 새 Windows 10 프로젝트를 만들고 파일에 복사 하 여 이식 프로세스를 시작 합니다. |
 | [문제 해결](wpsl-to-uwp-troubleshooting.md) | 이 포팅 가이드를 끝까지 읽어 보시고 프로젝트를 빌드하여 실행하는 단계를 신속하게 진행해 보세요. 그렇게 하려면 필수가 아닌 코드에 주석이나 설명을 추가하고 나중에 돌아와서 해당 부채를 청산하여 일시적으로 진행할 수 있습니다. 이 항목의 문제 해결 증상 및 해결 방법 표는 다음 몇 개 항목을 대체하지는 않지만 이 단계에 유용한 정보를 제공합니다. 이후 항목을 진행하는 중에 언제든지 이 표를 다시 참조할 수 있습니다. |
-| [XAML 및 UI 포팅](wpsl-to-uwp-porting-xaml-and-ui.md) | 선언적 XAML 태그 형식으로 UI를 정의 하는 방법이 매우 원활 하 게 WindowsPhone Silverlight에서에서 UWP 앱으로 변환 합니다. 시스템 리소스 키 참조를 업데이트하고 일부 요소 형식 이름을 변경하고 "clr-namespace"를 "using"으로 변경한 경우 태그의 많은 부분이 호환됩니다. |
-| [I/O, 디바이스 및 앱 모델에 대한 포팅](wpsl-to-uwp-input-and-sensors.md) | 디바이스 및 센서와 통합되는 코드는 사용자의 입력과 사용자에 대한 출력을 포함합니다. 데이터 처리를 포함할 수도 있습니다. 하지만 이 코드는 UI 계층 또는 데이터 계층으로 간주되지 않습니다. 이 코드는 진동 컨트롤러, 가속도계, 자이로스코프, 마이크와 스피커(음성 인식 및 음성 합성과 교차), 지리적 위치, 입력 형식(예제: 터치, 마우스, 키보드, 펜) 등과의 통합을 포함합니다. |
-| [비즈니스 및 데이터 계층 포팅](wpsl-to-uwp-business-and-data.md) | UI의 뒤에는 비즈니스 및 데이터 계층이 있습니다. 이러한 계층의 코드는 운영 체제 및 .NET Framework API를 호출합니다(예제: 후순위 처리, 위치, 카메라, 파일 시스템, 네트워크 및 기타 데이터 액세스). 대부분은 [UWP 앱에서 사용할 수 있으므로](https://msdn.microsoft.com/library/windows/apps/br211369), 이 코드의 대부분을 변경하지 않고 포팅할 수 있습니다. |
-| [폼 팩터 및 UX에 대한 포팅](wpsl-to-uwp-form-factors-and-ux.md) | Windows 앱은 PC, 모바일 디바이스 및 기타 여러 종류의 디바이스에서 일반적인 모양과 느낌을 공유합니다. 사용자 인터페이스, 입력 및 조작 패턴이 매우 비슷하고, 디바이스 간에 이동하면 친숙한 환경이 제공됩니다.|
-|[사례 연구: Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) | 이 항목에서는 매우 간단한 WindowsPhone Silverlight 앱을 Windows10UWP 앱으로 포팅하는 사례 연구를 제공 합니다. Windows 10을 사용 하 여 만들 수 있습니다 단일 앱 패키지는 고객에 게 다양 한 장치에 설치할 수 이며이이 사례 연구에서 수행할 수 있습니다. |
-| [사례 연구: Bookstore2](wpsl-to-uwp-case-study-bookstore2.md) | 이 사례 연구, [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)에 제공 된 정보에 기반 하는-데이터는 **LongListSelector**에서 그룹화 된 표시 하는 WindowsPhone Silverlight 앱으로 시작 합니다. 보기 모델에서 **Author** 클래스의 각 인스턴스는 해당 저자가 쓴 책의 그룹을 나타내며, **LongListSelector**에서 저자가 그룹화한 책 목록을 보거나 저자의 점프 목록을 축소할 수 있습니다. |
+| [XAML 및 UI를 이식합니다.](wpsl-to-uwp-porting-xaml-and-ui.md) | UWP 앱을 Windows Phone Silverlight에서 매우 잘 선언적 XAML 태그의 형태로 UI를 정의 하는 방법으로 변환 합니다. 시스템 리소스 키 참조를 업데이트하고 일부 요소 형식 이름을 변경하고 "clr-namespace"를 "using"으로 변경한 경우 태그의 많은 부분이 호환됩니다. |
+| [I/O, 장치 및 앱 모델에 대 한 이식](wpsl-to-uwp-input-and-sensors.md) | 디바이스 및 센서와 통합되는 코드는 사용자의 입력과 사용자에 대한 출력을 포함합니다. 데이터 처리를 포함할 수도 있습니다. 하지만 이 코드는 UI 계층 또는 데이터 계층으로 간주되지 않습니다. 이 코드는 진동 컨트롤러, 가속도계, 자이로스코프, 마이크와 스피커(음성 인식 및 음성 합성과 교차), 지리적 위치, 입력 형식(예제: 터치, 마우스, 키보드, 펜) 등과의 통합을 포함합니다. |
+| [비즈니스 및 데이터 계층을 이식](wpsl-to-uwp-business-and-data.md) | UI의 뒤에는 비즈니스 및 데이터 계층이 있습니다. 이러한 계층의 코드는 운영 체제 및 .NET Framework API를 호출합니다(예제: 후순위 처리, 위치, 카메라, 파일 시스템, 네트워크 및 기타 데이터 액세스). 대부분은 [UWP 앱에서 사용할 수 있으므로](https://msdn.microsoft.com/library/windows/apps/br211369), 이 코드의 대부분을 변경하지 않고 포팅할 수 있습니다. |
+| [폼 팩터 및 UX에 이식](wpsl-to-uwp-form-factors-and-ux.md) | Windows 앱은 PC, 모바일 디바이스 및 기타 여러 종류의 디바이스에서 일반적인 모양과 느낌을 공유합니다. 사용자 인터페이스, 입력 및 조작 패턴이 매우 비슷하고, 디바이스 간에 이동하면 친숙한 환경이 제공됩니다.|
+|[사례 연구: Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) | 이 항목에서는 Windows 10 UWP 앱에 매우 간단한 Windows Phone Silverlight 앱을 포팅 사례 연구를 제공 합니다. Windows 10을 사용 하 여 만들 수 있습니다 단일 앱 패키지는 고객에 게 다양 한 장치에 설치할 수 있으며이 사례 연구에서 수행할입니다. |
+| [사례 연구: Bookstore2](wpsl-to-uwp-case-study-bookstore2.md) | 이 사례 연구-에 지정 된 정보에 따라 빌드되는 [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)-표시 하는 앱에서 데이터를 그룹화 하는 Windows Phone Silverlight로 시작 하는 **LongListSelector**합니다. 보기 모델에서 **Author** 클래스의 각 인스턴스는 해당 저자가 쓴 책의 그룹을 나타내며, **LongListSelector**에서 저자가 그룹화한 책 목록을 보거나 저자의 점프 목록을 축소할 수 있습니다. |
 
 ## <a name="related-topics"></a>관련 항목
 
 **설명서**
-* [개발자를 위한 windows 10의 새로운 기능](https://dev.windows.com/getstarted/whats-new-windows-10)
-* [UWP(유니버설 Windows 플랫폼) 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)
-* [C# 또는 Visual Basic을 사용한 UWP(유니버설 Windows 플랫폼) 앱용 로드맵](https://msdn.microsoft.com/library/windows/apps/br229583)
-* [Windows Phone 8 개발자용 추가 사항](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
+* [개발자를 위한 Windows 10의 새로운 기능](https://dev.windows.com/getstarted/whats-new-windows-10)
+* [UWP(유니버설 Windows 플랫폼) 앱 가이드](https://msdn.microsoft.com/library/windows/apps/dn894631)
+* [사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱 용 로드맵 C# 또는 Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583)
+* [Windows Phone 8 개발자를 위한 새로운 기능](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
 
 **잡지 기사**
-* [Visual Studio Magazine: Windows Phone 8.1: 수렴을 위한 큰 도약](https://go.microsoft.com/fwlink/p/?LinkID=398541)
+* [Visual Studio Magazine: Windows Phone 8.1: 일치에 대 한 정방향 Giant Leap](https://go.microsoft.com/fwlink/p/?LinkID=398541)
 
 **프레젠테이션**
-* [Windows8에 Windows Phone Nokia Music 가져오기](https://go.microsoft.com/fwlink/p/?LinkId=321521)
+* [Nokia 음악을 Windows Phone Windows 8로 전환 하는 스토리](https://go.microsoft.com/fwlink/p/?LinkId=321521)
  
 

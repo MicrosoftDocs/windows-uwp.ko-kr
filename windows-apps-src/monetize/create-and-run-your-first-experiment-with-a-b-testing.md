@@ -1,37 +1,37 @@
 ---
-Description: In this walkthrough, you will create, run, and manage your first experiment with A/B testing.
+Description: 이 연습에서는 A/B 테스트로 첫 번째 실험을 만들고, 실행하고, 관리합니다.
 title: 첫 번째 실험 만들기 및 실행
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, Microsoft Store Services SDK, A/B 테스트, 실험
+keywords: Windows 10 uwp, Microsoft Store Services SDK A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 8dba9095326c01029e14742c98c1c368b896dfb8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924486"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660218"
 ---
 # <a name="create-and-run-your-first-experiment"></a>첫 번째 실험 만들기 및 실행
 
 이 연습에서는 다음을 수행합니다.
-* 텍스트 및 색의 앱 단추를 나타내는 여러 원격 변수를 정의 하는 파트너 센터에서 실험 [프로젝트](run-app-experiments-with-a-b-testing.md#terms) 를 만듭니다.
-* 파트너 센터에 변환 이벤트 데이터를 다시 및 원격 변수 값을 검색 하 고이 데이터를 사용 하 여 단추의 배경색을 변경 하려면 보기를 기록 하는 코드를 사용 하 여 앱을 만듭니다.
+* 실험 만들기 [프로젝트](run-app-experiments-with-a-b-testing.md#terms) 텍스트 및 앱 단추의 색을 나타내는 여러 원격 변수를 정의 하는 파트너 센터에서.
+* 원격 변수 값을 검색 하 고이 데이터를 사용 하 여 단추의 배경색 변경 로그 보기를 제공 하는 코드 및 파트너 센터에 데이터를 다시 변환 이벤트를 사용 하 여 앱을 만듭니다.
 * 앱 단추의 배경색을 변경하면 단추 클릭 수가 늘어나는지 여부를 테스트하도록 프로젝트에 실험을 만듭니다.
 * 실험 데이터를 수집하는 앱을 실행합니다.
-* 파트너 센터에서 실험 결과 검토 하 고 앱의 모든 사용자에 대해 사용 하도록 설정 하려면 변형을 선택 실험을 완료 합니다.
+* 파트너 센터에서 실험 결과 검토 하 고 앱의 모든 사용자에 대해 사용 하도록 변형 선택한 실험을 완료 합니다.
 
-A 개요에 대 한 파트너 센터를 사용 하 여 테스트 B / [A로 앱 실험 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)합니다.
+A에 대 한 개요 참조 파트너 센터를 사용 하 여 B 테스트 [A를 사용 하 여 앱 실험 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-이 연습을 수행 하려면 파트너 센터 계정이 있어야 하 고 개발 컴퓨터에 설명 된 대로 구성 해야 [A로 앱 실험 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)합니다.
+이 연습을 수행 하려면 파트너 센터 계정이 있어야 하 고 개발 컴퓨터에 설명 된 대로 구성 해야 합니다 [A를 사용 하 여 앱 실험 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)합니다.
 
-## <a name="create-a-project-with-remote-variables-in-partner-center"></a>파트너 센터에서 원격 변수로 프로젝트 만들기
+## <a name="create-a-project-with-remote-variables-in-partner-center"></a>파트너 센터에서 원격 변수를 사용 하 여 프로젝트 만들기
 
 1. [파트너 센터](https://partner.microsoft.com/dashboard)에 로그인합니다.
-2. 실험을 만들 사용 하려면 파트너 센터에서 앱 이미 있는 경우 파트너 센터에서 앱을 선택 합니다. 작업을 수행 아직 있는 경우 앱 [이름을 예약 하 여 새 앱 만들기](../publish/create-your-app-by-reserving-a-name.md) 파트너 센터에서 다음 파트너 센터에서 해당 앱을 선택 합니다.
+2. 실험을 만드는 데 사용할 파트너 센터에서 앱을 이미 있으면 파트너 센터에서 해당 앱을 선택 합니다. 파트너 센터에서 앱 아직 하지 않은 경우 [새 앱 이름을 예약 하 여 만들기](../publish/create-your-app-by-reserving-a-name.md) 파트너 센터에서 해당 앱을 선택 합니다.
 3. 탐색 창에서 **서비스**를 클릭한 다음 **실험**을 클릭합니다.
 4. 다음 페이지의 **프로젝트** 섹션에서 **새 프로젝트** 단추를 클릭합니다.
 5. **새 프로젝트** 페이지에서 새 프로젝트에 대한 이름 **Button Click Experiments**를 입력합니다.
@@ -44,21 +44,21 @@ A 개요에 대 한 파트너 센터를 사용 하 여 테스트 B / [A로 앱 �
 
 ## <a name="code-the-experiment-in-your-app"></a>앱에서 실험 코딩
 
-1. Visual Studio에서 Visual C#을 사용 하 여 새 유니버설 Windows 플랫폼 프로젝트를 만듭니다. 프로젝트 이름을 **SampleExperiment**로 지정합니다.
+1. Visual Studio에서 Visual C#을 사용하여 새 유니버설 Windows 플랫폼 프로젝트를 만듭니다. 프로젝트 이름을 **SampleExperiment**로 지정합니다.
 2. 솔루션 탐색기에서 프로젝트 노드를 확장하여 **참조**를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.
 3. **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭합니다.
 4. SDK 목록에서 **Microsoft Engagement Framework**(Microsoft 참여 프레임워크) 옆의 확인란을 선택하고 **확인**을 클릭합니다.
 5. **솔루션 탐색기**에서 MainPage.xaml을 두 번 클릭하여 앱에서 기본 페이지에 대한 디자이너를 엽니다.
 6. **도구 상자**에서 페이지로 **단추**를 끌어다 놓습니다.
 7. 디자이너에서 단추를 두 번 클릭하여 코드 파일을 열고 **Click** 이벤트에 대한 이벤트 처리기를 추가합니다.  
-8. 코드 파일의 전체 내용을 다음 코드로 바꿉니다. 할당은 ```projectId``` 변수는 이전 섹션에서 파트너 센터에서 가져온 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값입니다.
+8. 코드 파일의 전체 내용을 다음 코드로 바꿉니다. 할당 합니다 ```projectId``` 변수를 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 이전 섹션에서 파트너 센터에서 얻은 값.
     [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
 9. 코드 파일을 저장하고 프로젝트를 빌드합니다.
 
 ## <a name="create-the-experiment-in-partner-center"></a>파트너 센터에서 실험 만들기
 
-1. 파트너 센터에서 **Button Click Experiments** 프로젝트 페이지로 돌아갑니다.
+1. 반환 합니다 **단추를 클릭 실험** 파트너 센터에서 프로젝트 페이지.
 2. **실험** 섹션에서 **새 실험** 단추를 클릭합니다.
 3. **실험 세부 정보** 섹션에서 **실험 이름** 필드에 **Optimize Button Clicks** 이름을 입력합니다.
 4. **보기 이벤트** 섹션에서 **보기 이벤트 이름** 필드에 **userViewedButton**을 입력합니다. 이 이름은 이전 섹션에서 추가한 코드에 기록한 보기 이벤트 문자열과 일치합니다.
@@ -88,13 +88,13 @@ A 개요에 대 한 파트너 센터를 사용 하 여 테스트 B / [A로 앱 �
 이전 섹션을 완료한 후 몇 시간 동안 기다린 후 다음 단계를 수행하여 실험의 결과를 검토하고 실험을 완료합니다.
 
 > [!NOTE]
-> 실험을 활성화 하는 즉시 파트너 센터 즉시 시작에서 실험에 대 한 데이터를 기록 하기 위해 계측 되는 모든 앱에서 데이터를 수집 합니다. 그러나 실험 데이터를 파트너 센터에 표시 하려면 몇 시간이 걸릴 수 있습니다.
+> 실험을 활성화 하는 즉시 파트너 센터 즉시 시작 실험에 대 한 데이터를 기록할 계측 된 앱에서 데이터를 수집 합니다. 그러나 실험 데이터를 파트너 센터에서 표시 하는 데 몇 시간이 걸릴 수 있습니다.
 
-1. 파트너 센터에서 앱에 대 한 **실험** 페이지로 돌아갑니다.
+1. 파트너 센터를 반환 합니다 **실험** 페이지 앱에 대 한 합니다.
 2. **활성 실험** 섹션에서 **단추 클릭 최적화**를 클릭하여 이 실험 페이지로 이동합니다.
-3. **결과 요약** 및 **결과 세부 정보** 섹션에 표시되는 결과가 예상과 일치하는지 확인합니다. 이 섹션에 대 한 자세한 내용은 [관리 파트너 센터에서 실험을](manage-your-experiment.md#review-the-results-of-your-experiment)참조 하세요.
+3. **결과 요약** 및 **결과 세부 정보** 섹션에 표시되는 결과가 예상과 일치하는지 확인합니다. 이러한 섹션에 대 한 자세한 내용은 참조 하세요. [파트너 센터에서 실험 관리](manage-your-experiment.md#review-the-results-of-your-experiment)합니다.
     > [!NOTE]
-    > 파트너 센터 24 시간 동안에서 각 사용자에 대 한 첫 번째 전환 이벤트만을 보고합니다. 사용자가 24시간 내에 앱에서 여러 전환 이벤트를 트리거하는 경우 첫 번째 전환 이벤트만 보고됩니다. 이렇게 하면 많은 전환 이벤트를 트리거하는 단일 사용자가 샘플 그룹 사용자의 실험 결과를 왜곡시키지 않을 수 있습니다.
+    > 파트너 센터는 24 시간 기간 내에 각 사용자에 대 한 첫 번째 변환 이벤트를 보고합니다. 사용자가 24시간 내에 앱에서 여러 전환 이벤트를 트리거하는 경우 첫 번째 전환 이벤트만 보고됩니다. 이렇게 하면 많은 전환 이벤트를 트리거하는 단일 사용자가 샘플 그룹 사용자의 실험 결과를 왜곡시키지 않을 수 있습니다.
 
 4. 이제 실험을 끝낼 준비가 완료되었습니다. **결과 요약** 섹션의 **변형 B** 열에서 **스위치**를 클릭합니다. 이렇게 하면 앱의 모든 사용자가 파란색 단추로 전환됩니다.
 5. **확인**을 클릭하여 실험을 종료할 것인지 확인합니다.
@@ -103,8 +103,8 @@ A 개요에 대 한 파트너 센터를 사용 하 여 테스트 B / [A로 앱 �
 
 ## <a name="related-topics"></a>관련 항목
 
-* [프로젝트 만들기 및 파트너 센터에서 원격 변수 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [실험용 앱 코딩](code-your-experiment-in-your-app.md)
-* [파트너 센터에서 실험 정의](define-your-experiment-in-the-dev-center-dashboard.md)
+* [프로젝트를 만들고 파트너 센터에서 원격 변수를 정의 합니다.](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [실험에 대 한 앱 코드](code-your-experiment-in-your-app.md)
+* [파트너 센터에서 실험을 정의 합니다.](define-your-experiment-in-the-dev-center-dashboard.md)
 * [파트너 센터에서 실험 관리](manage-your-experiment.md)
-* [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)
+* [사용 하 여 앱 실험 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)

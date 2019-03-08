@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: d9e11445d77434320c8842608bf8183a078c0660
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919329"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644468"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Device Portal에 대한 사용자 지정 플러그 인 작성
 
@@ -108,7 +108,7 @@ public void Run(IBackgroundTaskInstance taskInstance) {
 }
 ```
 
-요청 처리 루프를 완료 하기 위해 앱에서 처리 해야 하는 두 가지 이벤트가: **Closed**, 때마다에 대 한 Device Portal 서비스가 종료 되 고 [**RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), 들어오는 HTTP을 표시 하는 요청 하 고 기본 제공 Device Portal 공급자의 기능입니다. 
+가지 루프 처리 요청을 완료 하려면 앱에서 처리 해야 하는 두 개의 이벤트가 있습니다. **닫힌**때마다 장치 포털 서비스 종료에 대 한, 및 [ **RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), 들어오는 HTTP 요청 및 장치 포털의 주요 기능을 제공 하는 화면 공급자입니다. 
 
 ## <a name="handle-the-requestreceived-event"></a>RequestReceived 이벤트 처리
 플러그 인의 지정된 처리기 경로에 요청된 모든 HTTP 요청에 대해 **RequestReceived** 이벤트가 한 번 발생합니다. Device Portal 공급자가에 대한 요청 처리 루프는 NodeJS Express의 요청 처리 루프와 비슷합니다. 요청 및 응답 개체는 이벤트에 함께 제공되고 처리기는 응답 개체를 작성하여 응답합니다. Device Portal 공급자에서 **RequestReceived** 이벤트 및 처리기는 [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httprequestmessage) 및 [**HttpResponseMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpresponsemessage) 개체를 사용합니다.   
@@ -188,7 +188,7 @@ Device Portal 공급자에서 제공되는 정적 콘텐츠는 코어 Device Por
 2.  디버깅 탭 아래에서 시작 작업 섹션에서 "시작하지 않음(시작 시 코드 디버그)"을 선택합니다.  
 ![플러그 인 디버그 모드로 전환](images/device-portal/plugin-debug-mode.png)
 3.  RequestReceived 처리기 함수에서 중단점을 설정합니다.
-![requestreceived 처리기의 중단점](images/device-portal/plugin-requestreceived-breakpoint.png)
+![requestreceived 처리기에 중단점](images/device-portal/plugin-requestreceived-breakpoint.png)
 > [!NOTE] 
 > 빌드 아키텍처가 대상의 아키텍처와 정확하게 일치하는지 확인합니다. 64비트 PC를 사용하는 경우 AMD64 빌드를 사용하여 배포해야 합니다. 
 4.  F5 키를 눌러 앱을 배포합니다.
@@ -197,6 +197,6 @@ Device Portal 공급자에서 제공되는 정적 콘텐츠는 코어 Device Por
 
 ## <a name="related-topics"></a>관련 항목
 * [Windows Device Portal 개요](device-portal.md)
-* [앱 서비스 만들기 및 사용](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
+* [만들기 및 app service를 사용 합니다.](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
 
 

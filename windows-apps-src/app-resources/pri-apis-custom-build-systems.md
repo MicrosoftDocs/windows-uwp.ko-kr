@@ -1,5 +1,5 @@
 ---
-Description: With the package resource indexing (PRI) APIs, you can develop a custom build system for your UWP app's resources. The build system will be able to create, version, and dump PRI files to whatever level of complexity your UWP app needs.
+Description: 패키지 리소스 인덱스 (PRI) Api를 사용 하 여 UWP 앱의 리소스에 대 한 사용자 지정 빌드 시스템을 개발할 수 있습니다. 빌드 시스템은 UWP 앱에 필요한 복잡도 수준에 상관없이 PRI 파일을 만들고 버전화하고 덤프할 수 있습니다.
 title: 패키지 리소스 인덱싱(PRI) API 및 사용자 지정 빌드 시스템
 template: detail.hbs
 ms.date: 05/07/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 617812415d3dcd00ec24d5f55971ae311265b61d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931754"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598518"
 ---
 # <a name="package-resource-indexing-pri-apis-and-custom-build-systems"></a>패키지 리소스 인덱싱(PRI) API 및 사용자 지정 빌드 시스템
 [패키지 리소스 인덱싱(PRI) API](https://msdn.microsoft.com/library/windows/desktop/mt845690)를 사용하여 UWP 앱 리소스에 대한 사용자 지정 빌드 시스템을 개발할 수 있습니다. 빌드 시스템은 UWP 앱에 필요한 복잡도 수준에 상관없이 PRI(패키지 리소스 인덱스) 파일을 만들고 버전화하고 덤프할 수 있습니다(XML로). 현재 MakePri.exe 명령줄 도구를 사용하는 사용자 지정 빌드 시스템이 있는 경우([MakePri.exe를 사용하여 수동으로 리소스 컴파일](makepri-exe-command-options.md)), 성능을 높이고 제어권을 강화하기 위해 MakePri.exe를 호출하는 대신 PRI API를 호출하는 것이 좋습니다.
@@ -28,12 +28,12 @@ PRI 파일의 크기 제한은 64킬로바이트입니다.
 ## <a name="scenario-walkthroughs"></a>시나리오 연습
 |항목|설명|
 |-|-|
-|[시나리오 1: 문자열 리소스와 자산 파일에서 PRI 파일 생성](pri-apis-scenario-1.md)|이 시나리오에서는 사용자 지정 빌드 시스템을 표시하는 새로운 앱을 만듭니다. 리소스 인덱서를 만들고 문자열 및 다른 종류의 리소스를 여기에 추가합니다. 그런 다음 PRI 파일을 생성하고 덤프합니다.|
+|[시나리오 1: 문자열 리소스 및 자산 파일에서 PRI 파일을 생성 합니다.](pri-apis-scenario-1.md)|이 시나리오에서는 사용자 지정 빌드 시스템을 표시하는 새로운 앱을 만듭니다. 리소스 인덱서를 만들고 문자열 및 다른 종류의 리소스를 여기에 추가합니다. 그런 다음 PRI 파일을 생성하고 덤프합니다.|
 
 ## <a name="important-apis"></a>중요 API
-* [패키지 리소스 인덱싱(PRI) 참조](https://msdn.microsoft.com/library/windows/desktop/mt845690)
+* [패키지 리소스 인덱스 (PRI) 참조](https://msdn.microsoft.com/library/windows/desktop/mt845690)
 
 ## <a name="related-topics"></a>관련 항목
-* [MakePri.exe를 사용하여 수동으로 리소스 컴파일](makepri-exe-command-options.md)
-* [관리되지 않는 DLL 기능 사용](/dotnet/framework/interop/consuming-unmanaged-dll-functions?branch=live)
+* [MakePri.exe 사용 하 여 수동으로 리소스 컴파일](makepri-exe-command-options.md)
+* [관리 되지 않는 DLL 함수 사용](/dotnet/framework/interop/consuming-unmanaged-dll-functions?branch=live)
 * [리소스 관리 시스템](resource-management-system.md)

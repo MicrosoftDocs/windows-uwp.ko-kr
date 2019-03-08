@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 패키징, 아키텍처, 패키지 구성
 ms.localizationpriority: medium
 ms.openlocfilehash: 338dac1d43e08257fa00b51c0c311a090f3d95c0
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619938"
 ---
 # <a name="app-package-architectures"></a>앱 패키지 아키텍처
 
@@ -44,8 +44,8 @@ x86 구성보다 적게 사용되는 구성입니다. Windows 10 64비트 버전
 ARM 구성의 Windows 10은 데스크톱 PC, 모바일 장치, 일부 IoT Core 장치(Rasperry Pi 2, Raspberry Pi 3 및 DragonBoard)를 예로 들 수 있습니다. Windows 패밀리에 ARM 기반의 Windows 10 데스크톱 PC가 추가되었습니다. UWP 앱 개발자라면 이러한 PC에 최고의 환경을 제공하기 위해 스토어에 ARM 패키지를 제출해야 합니다.
 
 >[!NOTE]
-> 기본적으로 ARM64 플랫폼을 대상으로 UWP 응용 프로그램을 빌드하려면 Visual Studio 2017 버전 15.9 이상 있어야 합니다. 자세한 내용은 [이 블로그 게시물](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development)을 참조 하세요.
+> 고유 하 게 ARM64 플랫폼을 대상으로 UWP 응용 프로그램을 빌드하려면 Visual Studio 2017 버전 15.9 이상이 있어야 합니다. 자세한 내용은 [이 블로그 게시물](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development)합니다.
 
-자세한 내용은 [arm 기반 Windows 10](../porting/apps-on-arm.md)을 참조 하세요. [ARM 기반 Windows 10](https://channel9.msdn.com/Events/Build/2017/P4171) 데모를 보려면 여기 //Build 대화를 확인한 후, 작동 방식에 대해 더 자세히 알아봅니다.
+자세한 내용은 [ARM에서 Windows 10](../porting/apps-on-arm.md)합니다. [ARM 기반 Windows 10](https://channel9.msdn.com/Events/Build/2017/P4171) 데모를 보려면 여기 //Build 대화를 확인한 후, 작동 방식에 대해 더 자세히 알아봅니다.
 
-IoT에 특정 적인 주제에 대 한 자세한 내용은 [Visual Studio를 사용 하 여 앱 배포](https://developer.microsoft.com/windows/iot/Docs/AppDeployment)를 참조 하세요.
+IoT 특정 항목에 대 한 자세한 내용은 참조 하세요. [Visual Studio를 사용 하 여 앱을 배포](https://developer.microsoft.com/windows/iot/Docs/AppDeployment)합니다.

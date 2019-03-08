@@ -1,5 +1,5 @@
 ---
-Description: A color picker lets a user browse through and select colors.
+Description: 색 선택을 사용하면 색을 찾아보고 선택할 수 있습니다.
 title: 색 선택
 label: Color Picker
 template: detail.hbs
@@ -12,17 +12,17 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 215a15e3a8e1b0264987adcf6228ec52a696f50c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047102"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654478"
 ---
 # <a name="color-picker"></a>색 선택
 
 색 선택은 색을 찾아보고 선택하는 데 사용됩니다. 색 선택을 사용하면 사용자가 기본적으로 색 스펙트럼에서 색을 탐색하거나 RGB(Red-Green-Blue), HSV(색상 채도 값) 또는 16진수 텍스트 상자에서 색을 지정할 수 있습니다.
 
-> **중요 API**: [ColorPicker 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker), [Color 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [ColorChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
+> **중요 한 Api**: [ColorPicker 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker)하십시오 [속성 색](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [ColorChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
 
 ![기본 색 선택](images/color-picker-default.png)
 
@@ -42,8 +42,8 @@ ms.locfileid: "9047102"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ColorPicker">앱을 열고 작동 중인 ColorPicker를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -213,8 +213,8 @@ private void cancelColor_Click(object sender, RoutedEventArgs e)
 
 ## <a name="related-articles"></a>관련 문서
 
-- [UWP 앱에서 펜 및 스타일러스 조작](../input/pen-and-stylus-interactions.md)
-- [수동 입력](inking-controls.md)
+- [UWP 앱에서 펜과 스타일러스 상호 작용](../input/pen-and-stylus-interactions.md)
+- [잉크 입력](inking-controls.md)
 
 <!--
 <div class=”microsoft-internal-note”>

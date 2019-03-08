@@ -8,18 +8,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c0a97d0c87f9204371daeaa825d6636ef6b8409c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919800"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658328"
 ---
 # <a name="titlestitleidsessionhosts"></a>/titles/{titleId}/sessionhosts
-지정 된 제목 id에 할당 하는 Xbox Live 계산 sessionhost을 요청 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
+지정 된 제목 id가 할당 되는 Xbox Live Compute sessionhost를 요청 합니다. 이러한 Uri에 대 한 도메인이 `gameserverds.xboxlive.com` 고 `gameserverms.xboxlive.com`입니다.
  
   * [URI 매개 변수](#ID4EU)
   * [호스트 이름](#ID4EIB)
-  * [유효한 메서드](#ID4EPB)
+  * [올바른 메서드](#ID4EPB)
  
 <a id="ID4EU"></a>
 
@@ -28,7 +28,7 @@ ms.locfileid: "8919800"
  
 | 매개 변수| 설명| 
 | --- | --- | 
-| titleId| ID 요청을 실행 해야 하는 제목입니다.| 
+| titleId| ID는 요청에서 작동 해야 하는 제목입니다.| 
   
 <a id="ID4EIB"></a>
 
@@ -40,7 +40,7 @@ gameserverms.xboxlive.com
 <a id="ID4EPB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
   
 [POST](uri-titlestitleidsessionhosts-post.md)
  

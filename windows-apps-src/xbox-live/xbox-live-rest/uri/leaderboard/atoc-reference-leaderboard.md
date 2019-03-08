@@ -8,17 +8,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b9e22b926f01a2020504d4d5c70eba6af9e52afb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932581"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613018"
 ---
 # <a name="leaderboards-uris"></a>순위표 URI
 
-이 섹션에서는 *순위표*에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서 Xbox Live 서비스에 대 한 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 *순위표*합니다.
 
-이러한 Uri에 대 한 도메인 leaderboards.xboxlive.com입니다.
+이러한 Uri는 도메인은 leaderboards.xboxlive.com입니다.
 
 <a id="ID4EDB"></a>
 
@@ -27,11 +27,11 @@ ms.locfileid: "8932581"
 
 [/scids/{scid}/leaderboards/{leaderboardname}](uri-scidsscidleaderboardsleaderboardname.md)
 
-&nbsp;&nbsp;미리 정의 된 전역 순위표에 액세스합니다.
+&nbsp;&nbsp;미리 정의 된 전역 leaderboard에 액세스합니다.
 
-[/ 사용자/xuid ({xuid}) /scids/ {서비스 안내} /stats/{statname {) /people/{all {all\ | favorite}](uri-usersxuidscidstatnamepeople.md)
+[/users/xuid({xuid})/scids/{scid}/stats/{statname)/people/{all\|favorite}](uri-usersxuidscidstatnamepeople.md)
 
-&nbsp;&nbsp;소셜 (순위) 순위표에 액세스합니다.
+&nbsp;&nbsp;소셜 (등급된) leaderboard에 액세스합니다.
  
 <a id="ID4EMB"></a>
 
@@ -41,6 +41,6 @@ ms.locfileid: "8932581"
 <a id="ID4EOB"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
-[URI(Universal Resource Identifier) 참조](../atoc-xboxlivews-reference-uris.md)
+[유니버설 리소스 식별자 (URI) 참조](../atoc-xboxlivews-reference-uris.md)

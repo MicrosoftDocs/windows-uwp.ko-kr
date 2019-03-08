@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: f99ebc4b98c87a4bc6d77fd2c626f481563e50c5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943934"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639638"
 ---
 # <a name="create-snap-points-with-inertia-modifiers"></a>관성 한정자로 끌기 지점 만들기
 
@@ -21,7 +21,7 @@ ms.locfileid: "8943934"
 여기에서는 여러분이 이 문서에서 다룬 개념에 익숙하다고 가정합니다.
 
 - [입력 기반 애니메이션](input-driven-animations.md)
-- [InteractionTracker를 사용한 사용자 지정 조작 경험](interaction-tracker-manipulations.md)
+- [사용자 지정 조작 경험과 InteractionTracker](interaction-tracker-manipulations.md)
 - [관계 기반 애니메이션](relation-animations.md)
 
 ## <a name="what-are-snap-points-and-why-are-they-useful"></a>끌기 지점이란 무엇이고 왜 유용할까요?

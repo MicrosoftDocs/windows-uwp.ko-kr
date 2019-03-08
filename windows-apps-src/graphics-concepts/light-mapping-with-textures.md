@@ -1,23 +1,23 @@
 ---
-title: 텍스처를 사용한 조명 매핑
+title: 텍스처와 조명 매핑
 description: 조명 맵은 3D 장면에서 조명에 대한 정보를 포함하는 텍스처 또는 텍스처 그룹입니다.
 ms.assetid: 5C7518D2-AC92-4A97-B7AF-4469D213D7BD
 keywords:
-- 텍스처를 사용한 조명 매핑
+- 텍스처와 조명 매핑
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b5d245247d33f3c04839620615f2778ef7dfb59
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944679"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660028"
 ---
-# <a name="light-mapping-with-textures"></a>텍스처를 사용한 조명 매핑
+# <a name="light-mapping-with-textures"></a>텍스처와 조명 매핑
 
 
-조명 맵은 3D 장면에서 조명 정보가 저장되는 텍스처 또는 텍스처 그룹으로서 조명 맵은 원형에 빛과 그림자 영역을 매핑합니다. 멀티패스와 여러 텍스처 혼합을 사용하면 응용 프로그램에서 음영 기술보다 사실적인 모양으로 장면을 렌더링할 수 있습니다.
+조명 맵은 3D 장면에서 조명에 대한 정보를 포함하는 텍스처 또는 텍스처 그룹입니다. 조명 맵은 원형에 빛과 그림자 영역을 매핑합니다. 멀티패스와 여러 텍스처 혼합을 사용하면 응용 프로그램에서 음영 기술보다 사실적인 모양으로 장면을 렌더링할 수 있습니다.
 
 응용 프로그램에서 3D 장면을 사실적으로 렌더링하려면 광원이 장면 형태에 가져다 주는 효과를 고려해야 합니다. 그런 면에서 기본 및 고우러드 음영 등의 기술은 유용한 도구이지만 충분하지 않을 수 있습니다. Direct3D는 멀티패스와 여러 텍스처 혼합을 지원합니다. 이러한 기능을 통해 응용 프로그램에서 음영 기술 하나만으로 렌더링한 장면보다 사실적인 형태로 장면을 렌더링할 수 있습니다. 하나 이상의 조명 맵을 적용하면 응용 프로그램이 빛과 그림 영역을 원형에 매핑할 수 있습니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "8944679"
 
 조명 매핑을 위해 Direct3D 텍스처 혼합을 사용하는 경우에 대한 정보가 다음 그림에 나와 있습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
 
 
 <table>
@@ -47,12 +47,12 @@ ms.locfileid: "8944679"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="monochrome-light-maps.md">단색 조명 맵</a></p></td>
+<td align="left"><p><a href="monochrome-light-maps.md">단색 light 맵</a></p></td>
 <td align="left"><p>이전 3D 가속기 보드가 대상 픽셀의 알파 값을 사용하는 텍스처 혼합을 지원하지 않는 경우, 단색 조명 매핑을 사용하면 이전 어댑터가 멀티패스 텍스처 혼합을 수행할 수 있습니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="color-light-maps.md">컬러 조명 맵</a></p></td>
-<td align="left"><p>컬러 조명 맵은 조명 지도에 RGB 데이터를 사용해 조명 정보를 표시합니다. 응용 프로그램은 일반적으로 컬러 조명 맵을 사용할 경우 3D 장면을 더 사실적으로 렌더링합니다.</p></td>
+<td align="left"><p><a href="color-light-maps.md">밝은 색 지도</a></p></td>
+<td align="left"><p>컬러 조명 맵은 조명 정보로 조명 맵의 RGB 데이터를 사용합니다. 응용 프로그램은 컬러 조명 맵을 사용할 경우 더 사실적으로 3D 장면을 렌더링합니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="specular-light-maps.md">반사 조명 맵</a></p></td>
@@ -67,10 +67,10 @@ ms.locfileid: "8944679"
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[텍스처](textures.md)
+[질감](textures.md)
 
  
 

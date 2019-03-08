@@ -1,11 +1,11 @@
 ---
-Description: Use the pull-to-refresh control to get new content into a list.
+Description: 목록에 새 콘텐츠를 가져올 끌어오기-새로 고침 컨트롤을 사용 합니다.
 title: 당겨서 새로 고침
 label: Pull-to-refresh
 template: detail.hbs
 ms.date: 03/07/2018
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.assetid: aaeb1e74-b795-4015-bf41-02cb1d6f467e
 pm-contact: predavid
 design-contact: kimsea
@@ -13,17 +13,17 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 2efd091d90a856e45d76c0b1357f30417812160a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932839"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659258"
 ---
 # <a name="pull-to-refresh"></a>당겨서 새로 고침
 
 당겨서 새로 고침을 사용하면 터치로 데이터 목록을 아래로 당겨서 더 많은 데이터를 검색할 수 있습니다. 당겨서 새로 고침은 터치 스크린이 장착된 디바이스에서 널리 사용되고 있습니다. 여기 나온 API를 사용하여 앱에서 당겨서 새로 고침을 구현할 수 있습니다.
 
-> **중요 API**: [RefreshContainer](/uwp/api/windows.ui.xaml.controls.refreshcontainer), [RefreshVisualizer](/uwp/api/windows.ui.xaml.controls.refreshvisualizer)
+> **중요 한 Api**: [RefreshContainer](/uwp/api/windows.ui.xaml.controls.refreshcontainer), [RefreshVisualizer](/uwp/api/windows.ui.xaml.controls.refreshvisualizer)
 
 ![당겨서 새로 고침 gif](images/Pull-To-Refresh.gif)
 
@@ -48,7 +48,7 @@ ms.locfileid: "8932839"
 
  사용자가 새로 고침을 시작하기 위해 목록에서 끌어 내려야 하는 거리를 _임계값_이라고 합니다. 시각화 도우미 [상태](/uwp/api/windows.ui.xaml.controls.refreshvisualizer.State)는 이 임계값과 관련된 끌어오기 상태에 의해 결정됩니다. 가능한 값들은 [RefreshVisualizerState](/uwp/api/windows.ui.xaml.controls.refreshvisualizerstate) 열거형에 포함되어 있습니다.
 
-### <a name="idle"></a>유휴
+### <a name="idle"></a>유휴 상태
 
 시각화 도우미의 기본 상태는 **유휴** 상태입니다. 사용자는 터치를 통해 RefreshContainer와 상호 작용을 하지 않으며, 진행 중에는 새로 고침이 수행되지 않습니다.
 
@@ -70,7 +70,7 @@ ms.locfileid: "8932839"
 
     시각적으로 이 아이콘은 100% 불투명도와 펄스로 최대 150% 크기의 펄스로 전환되고, 전환 중에 다시 100% 크기로 돌아갑니다.
 
-### <a name="pending"></a>보류 중
+### <a name="pending"></a>Pending
 
 사용자가 임계값을 초과한 목록을 끌어오면 시각화 도우미의 상태가 **보류 중**이 됩니다.
 
@@ -101,7 +101,7 @@ ms.locfileid: "8932839"
 
 기본적으로 사용자는 새로 고침을 시작하기 위해 위에서 아래로 목록을 끌어옵니다. 목록이나 그리드가 다른 방향을 향하고 있으면 이에 맞춰 새로 고침 컨테이너의 끌어오기 방향을 변경해야 합니다.
 
-[PullDirection](/uwp/api/windows.ui.xaml.controls.refreshcontainer.PullDirection) 속성은 **BottomToTop**, **TopToBottom**, **RightToLeft**, **LeftToRight** 같은 [RefreshPullDirection](/uwp/api/windows.ui.xaml.controls.refreshpulldirection) 값 중 하나를 가져옵니다.
+합니다 [PullDirection](/uwp/api/windows.ui.xaml.controls.refreshcontainer.PullDirection) 속성은 다음 중 하나를 사용 [RefreshPullDirection](/uwp/api/windows.ui.xaml.controls.refreshpulldirection) 값: **BottomToTop**하십시오 **TopToBottom**, **RightToLeft**, 또는 **LeftToRight**합니다.
 
 끌어오기 방향이 변경되면 시각화 도우미의 진행율 스피너의 시작 부분이 자동으로 회전되어 끌어오기 방향에 적합한 위치에서 화살표가 시작됩니다. 필요할 경우 [RefreshVisualizer.Orientation](/uwp/api/windows.ui.xaml.controls.refreshvisualizer.Orientation) 속성을 변경하여 자동 동작을 재정의할 수 있습니다. 대부분의 경우에는 기본값을 **자동**으로 그대로 두는 것이 좋습니다.
 
@@ -116,7 +116,7 @@ ms.locfileid: "8932839"
 > [!NOTE]
 > 사용자가 자체적으로 RefreshVisualizer를 시작할 수 있습니다. 하지만 터치를 지원하지 않는 시나리오라 하더라도 RefreshContainer에 콘텐츠를 래핑하고 RefreshContainer.Visualizer 속성에서 제공되는 RefreshVisualizer를 사용하는 것이 좋습니다. 이 문서에서는 시각화 도우미를 항상 새로 고침 컨테이너에서 얻는다고 가정합니다.
 
-> 또한 편의 상 새로 고침 컨테이너의 RequestRefresh 및 RefreshRequested 멤버를 사용합니다. `refreshContainer.RequestRefresh()` 이는 `refreshContainer.Visualizer.RequestRefresh()`에 해당하며, 이로 인해 RefreshContainer.RefreshRequested 이벤트와 RefreshVisualizer.RefreshRequested 이벤트가 모두 발생합니다.
+> 또한 편의 상 새로 고침 컨테이너의 RequestRefresh 및 RefreshRequested 멤버를 사용합니다. `refreshContainer.RequestRefresh()` 동일 `refreshContainer.Visualizer.RequestRefresh()`, RefreshContainer.RefreshRequested 이벤트 및 RefreshVisualizer.RefreshRequested 이벤트 중 하나에서 발생 하 고 있습니다.
 
 ### <a name="request-a-refresh"></a>새로 고침 요청
 
@@ -333,7 +333,7 @@ public class ListItemData
 
 ## <a name="related-articles"></a>관련 문서
 
-- [터치 조작](../input/touch-interactions.md)
+- [터치 상호 작용](../input/touch-interactions.md)
 - [목록 보기 및 그리드 보기](listview-and-gridview.md)
 - [항목 컨테이너 및 템플릿](item-containers-templates.md)
 - [식 애니메이션](../../composition/composition-animation.md)

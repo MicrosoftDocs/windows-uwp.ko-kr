@@ -1,32 +1,32 @@
 ---
-Description: Manage ad campaigns for your apps in Partner Center.
+Description: 파트너 센터에서 앱에 대 한 광고 캠페인을 관리 합니다.
 title: 광고 캠페인 관리
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
 ms.date: 06/19/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ead654573d16628e5dd07c58c937d4f71cb7f84c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938700"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608508"
 ---
 # <a name="manage-your-ad-campaign"></a>광고 캠페인 관리
 
 
-[파트너 센터](https://partner.microsoft.com/dashboard)에서 앱에 대 한 광고 캠페인을 관리 하려면 왼쪽된 탐색 메뉴에서 **모집** 확장 하 고 **광고 캠페인**을 선택 합니다. 앱과 연결된 모든 광고 캠페인과 각 광고 캠페인의 노출 수, 클릭 수 및 설치 수가 표시됩니다. 노출 수, 클릭 수 및 설치 수에 대한 자세한 내용은 [광고 캠페인 보고서](promote-your-app-report.md)에서 이러한 용어에 대한 정의를 참조하세요.
+앱에 대 한 광고 캠페인을 관리 하려면 [파트너 센터](https://partner.microsoft.com/dashboard)를 확장 하 고 **Attract** 에서 왼쪽된 탐색 메뉴를 선택 합니다 **광고 캠페인**합니다. 앱과 연결된 모든 광고 캠페인과 각 광고 캠페인의 노출 수, 클릭 수 및 설치 수가 표시됩니다. 노출 수, 클릭 수 및 설치 수에 대한 자세한 내용은 [광고 캠페인 보고서](promote-your-app-report.md)에서 이러한 용어에 대한 정의를 참조하세요.
 
 광고 캠페인 목록을 필터링하려면 **섹션 필터** 드롭다운을 클릭하고 다음 필터에서 선택합니다.
 
--   **날짜**: 광고 캠페인과 연결된 노출 수, 클릭 수 및 설치 수에 대한 데이터 범위를 지정합니다.
+-   **날짜**: 이 인상을 클릭 하 고 광고 캠페인에 연관 된 설치에 대 한 데이터 범위를 지정 합니다.
 -   **상태**: 광고 캠페인의 상태를 지정합니다.
     -   **활성**은 광고 캠페인이 실행 중이고 데이터를 처리하는 상태임을 나타냅니다. 광고 캠페인을 일시적으로 중단하려면 광고 캠페인 테이블의 **작업** 열에서 **일시 중지**를 클릭합니다.
     -   **일시 중지됨**은 광고 캠페인이 보류 중이고 데이터를 처리하지 않는 상태임을 나타냅니다. 광고 캠페인을 다시 시작하려면 광고 캠페인 테이블의 **작업** 열에서 **다시 시작**을 클릭합니다.
     -   **종료됨**은 광고 캠페인을 만들거나 마지막으로 수정할 때 지정한 광고 캠페인의 종료 날짜에 도달했다는 의미입니다.
     -   **주의 필요**는 광고 캠페인에 청구 실패 또는 사용자 지정 광고 디자인의 유효성 검사 실패 등 주의가 필요한 문제가 있음을 나타냅니다. 문제를 수정하려면 광고 캠페인 테이블의 **작업** 열에서 텍스트를 클릭합니다.
--   **캠페인 종류**: 유료 또는 [하우스](about-house-ads.md) 광고 캠페인을 표시할지 여부를 지정합니다.
+-   **캠페인 형식**: 유료 표시 여부를 지정 하거나 [집](about-house-ads.md) 광고 캠페인입니다.
 
 ## <a name="reporting"></a>보고
 
@@ -42,8 +42,8 @@ ms.locfileid: "8938700"
 ## <a name="related-topics"></a>관련 항목
 
 
-* [앱 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
-* [하우스 광고 정보](about-house-ads.md)
+* [앱에 대 한는 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
+* [내부 광고에 대 한](about-house-ads.md)
 * [앱 설치 광고 보고서](app-install-ads-reports.md)
 * [일반적인 질문](common-questions.md)
  

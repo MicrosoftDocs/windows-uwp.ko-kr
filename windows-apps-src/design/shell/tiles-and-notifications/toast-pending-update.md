@@ -1,5 +1,5 @@
 ---
-Description: Learn how to create multi-step interactions in your notifications.
+Description: 알림에서 다단계 상호 작용을 만드는 방법에 알아봅니다.
 title: 보류 중인 업데이트 활성화를 적용한 알림
 label: Toast with pending update activation
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 보류 중인 업데이트, 대기 중 업데이트, 다단계 대화형 작업, 다단계 조작
 ms.localizationpriority: medium
 ms.openlocfilehash: b1574ee2913bd2889af204aae1089dc170df95b8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940738"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648558"
 ---
 # <a name="toast-with-pending-update-activation"></a>보류 중인 업데이트 활성화를 적용한 알림
 
@@ -21,15 +21,15 @@ ms.locfileid: "8940738"
 ![대기 중인 업데이트 알림](images/toast-pendingupdate.gif)
 
 > [!IMPORTANT]
-> **알림 라이브러리의 Desktop Fall Creators Update 및 2.0.0 필요**: 보류 중인 업데이트 작업을 보려면 데스크톱 빌드 16299 이상을 실행해야 합니다. 버전 2.0.0 이상의 [UWP 커뮤니티 도구 키트 알림 NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용해야만 단추에서 **PendingUpdate**를 할당할 수 있습니다. **PendingUpdate**는 데스크톱에서만 지원되며 다른 디바이스에서는 무시됩니다.
+> **필요한 데스크톱 Fall Creators Update 및 알림 라이브러리 2.0.0**: 실행 해야 데스크톱 빌드 16299 이상을 보류 중인 업데이트 작업을 참조 하세요. 버전 2.0.0 이상의 [UWP 커뮤니티 도구 키트 알림 NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용해야만 단추에서 **PendingUpdate**를 할당할 수 있습니다. **PendingUpdate**는 데스크톱에서만 지원되며 다른 디바이스에서는 무시됩니다.
 
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
 이 문서에서는 다음 실무 지식을 알고 있다고 가정합니다.
 
-- [알림 콘텐츠 생성](adaptive-interactive-toasts.md)
-- [알림 보내기 및 백그라운드 활성화 처리](send-local-toast.md)
+- [알림 콘텐츠 구성](adaptive-interactive-toasts.md)
+- [알림을 보내고 처리 백그라운드 활성화](send-local-toast.md)
 
 
 ## <a name="overview"></a>개요
@@ -116,7 +116,7 @@ ToastNotificationManager.CreateToastNotifier().Show(notif);
 
 ## <a name="related-topics"></a>관련 항목
 
-- [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-toast-pending-update)
-- [로컬 알림 보내기 및 활성화 처리](send-local-toast.md)
+- [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-toast-pending-update)
+- [로컬 알림 및 핸들 활성화 보내기](send-local-toast.md)
 - [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)
 - [알림 진행률 표시줄](toast-progress-bar.md)

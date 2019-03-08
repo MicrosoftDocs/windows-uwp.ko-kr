@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c74d0831c3b841ad2a1366bd2e03fb8a9b0448d
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115366"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623498"
 ---
 # <a name="gameclipuri-json"></a>GameClipUri(JSON)
  
@@ -21,19 +21,19 @@ ms.locfileid: "9115366"
  
 ## <a name="gameclipuri"></a>GameClipUri
  
-GameClipUri 개체에는 다음과 같이 지정 합니다.
+GameClipUri 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| <b>uri</b>| string| 비디오 자산 위치의 URI입니다.| 
-| <b>파일 크기</b>| 32 비트 부호 없는 정수| 미리 보기 이미지의 총 파일 크기입니다.| 
+| <b>uri</b>| 문자열| 비디오 자산 위치의 URI입니다.| 
+| <b>fileSize</b>| 32 비트 부호 없는 정수| 축소판 그림 이미지의 총 파일 크기입니다.| 
 | <b>uriType</b>| GameClipUriType| URI의 형식입니다.| 
-| <b>만료</b>| DateTime| 이 응답에 포함 된 URI의 만료 시간입니다. URL이 비어 있거나 재생 하기 전에 만료 된 것으로 간주, 호출자에 게 API를 호출 해야 RefreshUrl 합니다.| 
+| <b>expiration</b>| DateTime| 이 응답에 포함 된 URI의 만료 시간입니다. URL이 비어 있거나 재생 하기 전에 만료 된 것으로 간주 합니다 호출자 해야 RefreshUrl API 호출 합니다.| 
   
 <a id="ID4EMC"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json
@@ -55,8 +55,8 @@ GameClipUri 개체에는 다음과 같이 지정 합니다.
 <a id="ID4EXC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c5c8b99ec3646d1eebbb922557f97c9e9304ed4
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116465"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658368"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
 
-**중요 API**
+**중요 한 Api**
 
 - [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)
 - [**PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482)
@@ -30,7 +30,7 @@ URI 스키마를 사용하면 하이퍼링크를 클릭하여 앱을 열 수 있
 
 | URI 스키마 | 시작 |
 | ----------:|----------|
-|[bingmaps:, ms-drive-to: 및 ms-walk-to: ](#maps-app-uri-schemes) | 지도 앱 |
+|[bingmaps: ms 드라이브-간,:, 및 ms 워크: ](#maps-app-uri-schemes) | 지도 앱 |
 |[http:](#http-uri-scheme) | 기본 웹 브라우저 |
 |[mailto:](#email-uri-scheme) | 기본 메일 앱 |
 |[ms-call:](#call-app-uri-scheme) |  통화 앱 |
@@ -54,7 +54,7 @@ URI 스키마를 사용하면 하이퍼링크를 클릭하여 앱을 열 수 있
 
 ### <a name="call-launchuriasync-to-launch-a-uri"></a>LaunchUriAsync를 호출하여 URI 실행
 
-[**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 사용하여 URI를 실행합니다. 이 메서드를 호출할 때 앱은 포그라운드 앱이어야 합니다. 즉, 사용자에게 표시되어야 합니다. 이 요구 사항은 사용자가 제어권을 갖도록 하는 데 도움이 됩니다. 이 요구 사항을 충족하려면 모든 URI 실행을 앱의 UI에 직접 연결해야 합니다. 사용자는 항상 URI 실행을 시작하기 위해 일부 작업을 수행해야 합니다. URI를 실행하려는 경우 앱이 포그라운드에 없으면 URI가 실행되지 않으며 오류 콜백이 호출됩니다.
+[  **LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 사용하여 URI를 실행합니다. 이 메서드를 호출할 때 앱은 포그라운드 앱이어야 합니다. 즉, 사용자에게 표시되어야 합니다. 이 요구 사항은 사용자가 제어권을 갖도록 하는 데 도움이 됩니다. 이 요구 사항을 충족하려면 모든 URI 실행을 앱의 UI에 직접 연결해야 합니다. 사용자는 항상 URI 실행을 시작하기 위해 일부 작업을 수행해야 합니다. URI를 실행하려는 경우 앱이 포그라운드에 없으면 URI가 실행되지 않으며 오류 콜백이 호출됩니다.
 
 먼저 URI를 나타내는 [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/system.uri.aspx) 개체를 만든 다음 이 개체를 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드로 전달합니다. 반환되는 결과를 사용하여 다음 예제에 표시된 대로 호출에 성공했는지 확인합니다.
 
@@ -117,9 +117,9 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="set-remaining-view-preference"></a>나머지 보기 기본 설정 지정
 
-[**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)를 호출하는 원본 앱은 URI가 시작된 후 화면에 유지되도록 요청할 수 있습니다. 기본적으로 Windows는 URI를 처리하는 대상 앱과 원본 앱 사이에 모든 사용 가능한 공간을 동일하게 공유하려고 합니다. 원본 앱은 [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 속성을 사용하여 앱 창이 거의 모든 사용 가능한 공간을 사용하려고 한다는 것을 운영 체제에 나타냅니다. **DesiredRemainingView**를 사용하여 URI가 시작된 후 원본 앱이 화면에서 유지될 필요가 없고 대상 앱으로 완전히 대체될 수 있다는 것을 나타낼 수도 있습니다. 이 속성은 호출 앱의 기본 창 크기만 지정합니다. 화면에 동시에 나타날 수도 있는 다른 앱의 동작은 지정하지 않습니다.
+[  **LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)를 호출하는 원본 앱은 URI가 시작된 후 화면에 유지되도록 요청할 수 있습니다. 기본적으로 Windows는 URI를 처리하는 대상 앱과 원본 앱 사이에 모든 사용 가능한 공간을 동일하게 공유하려고 합니다. 원본 앱은 [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 속성을 사용하여 앱 창이 거의 모든 사용 가능한 공간을 사용하려고 한다는 것을 운영 체제에 나타냅니다. **DesiredRemainingView**를 사용하여 URI가 시작된 후 원본 앱이 화면에서 유지될 필요가 없고 대상 앱으로 완전히 대체될 수 있다는 것을 나타낼 수도 있습니다. 이 속성은 호출 앱의 기본 창 크기만 지정합니다. 화면에 동시에 나타날 수도 있는 다른 앱의 동작은 지정하지 않습니다.
 
-**참고**같은 여러 가지 요소 예를 들어 원본 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 앱 화면, 화면 방향 등에 수 Windows는를 고려 합니다. [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
+**참고**  Windows 계정에는 예를 들어 원본 앱의 최종 창 크기를 결정 하는 경우 여러 가지 요인, 원본 앱의 기본 설정, 앱 화면, 화면 방향 및 등의 수입니다. [  **DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
 
 ```cs
 // Set the desired remaining view.
@@ -136,7 +136,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="call-app-uri-scheme"></a>통화 앱 URI 스키마
 
-**ms-call:** URI 스키마를 사용하여 통화 앱을 실행할 수 있습니다.
+사용 된 **ms 호출 합니다.** 호출 응용 프로그램을 실행 하는 URI 체계입니다.
 
 | URI 스키마       | 결과                   |
 |------------------|--------------------------|
@@ -144,16 +144,16 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="email-uri-scheme"></a>메일 URI 스키마
 
-**mailto:** URI 스키마를 사용하여 기본 메일 앱을 실행할 수 있습니다.
+사용 된 **mailto:** 기본 메일 앱을 시작 하려면 URI 체계입니다.
 
 | URI 스키마 |결과                          |
 |------------|---------------------------------|
 | mailto:    | 기본 메일 앱을 실행합니다. |
-| mailto:\[email address\] | 메일 앱을 실행하고 받는 사람 줄에 메일 주소를 지정한 새 메서드를 작성합니다. 메일은 사용자가 보내기를 탭해야 전송됩니다. |
+| mailto:\[전자 메일 주소\] | 메일 앱을 실행하고 받는 사람 줄에 메일 주소를 지정한 새 메서드를 작성합니다. 메일은 사용자가 보내기를 탭해야 전송됩니다. |
 
 ### <a name="http-uri-scheme"></a>HTTP URI 스키마
 
-**http:** URI 스키마를 사용하여 기본 웹 브라우저를 실행할 수 있습니다.
+사용 된 **http:** 기본 웹 브라우저를 시작 하는 URI 체계입니다.
 
 | URI 스키마 | 결과                           |
 |------------|-----------------------------------|
@@ -161,7 +161,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="maps-app-uri-schemes"></a>지도 앱 URI 스키마
 
-**bingmaps:**, **ms-drive-to:** 및 **ms-walk-to:** URI 스키마로 [Windows 지도 앱을 실행](launch-maps-app.md)하여 특정 지도, 길 찾기 및 검색 결과를 표시할 수 있습니다. 예를 들어 다음 URI는 Windows 지도 앱을 열고 뉴욕시를 중심으로 지도를 표시합니다.
+사용 합니다 **bingmaps:** 를 **ms 드라이브-간:**, 및 **ms 워크-간:** URI 구성표 [Windows 맵 앱 시작](launch-maps-app.md) 특정 지도, 방향 및 검색 결과를 합니다. 예를 들어 다음 URI는 Windows 지도 앱을 열고 뉴욕시를 중심으로 지도를 표시합니다.
 
 `bingmaps:?cp=40.726966~-74.006076`
 
@@ -171,7 +171,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="messaging-app-uri-scheme"></a>메시징 앱 URI 스키마
 
-**ms-chat:** URI 스키마를 사용하여 Windows 메시지 앱을 실행할 수 있습니다.
+사용 된 **ms 채팅:** Windows 메시징 앱을 시작 하는 URI 체계입니다.
 
 | URI 스키마 |결과 |
 |------------|--------|
@@ -183,7 +183,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="tone-picker-uri-scheme"></a>톤 선택기 URI 스키마
 
-**ms-tonepicker:** URI 스키마를 사용하여 벨소리, 알람 및 시스템 톤을 선택할 수 있습니다. 새 벨소리를 저장하고 톤의 표시 이름을 가져올 수도 있습니다.
+사용 된 **ms tonepicker:** 벨 소리, 경보 및 시스템 소리를 선택 하는 URI 체계입니다. 새 벨소리를 저장하고 톤의 표시 이름을 가져올 수도 있습니다.
 
 | URI 스키마 | 결과 |
 |------------|---------|
@@ -193,36 +193,36 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="nearby-numbers-app-uri-scheme"></a>근처 전화 번호 앱 URI 스키마
 
-**ms-yellowpage:** URI 스키마를 사용하여 근처 전화 번호 앱을 실행할 수 있습니다.
+사용 된 **ms yellowpage:** 주변 숫자 앱을 시작 하는 URI 체계입니다.
 
 | URI 스키마 | 결과 |
 |------------|---------|
-| ms-yellowpage:?input=\[keyword\]&amp;method=\[문자열 또는 T9\] | 근처 전화 번호 앱을 시작합니다.<br>`input` 검색하려는 키워드를 나타냅니다.<br>`method` 검색의 유형(문자열 또는 T9 검색)을 나타냅니다.<br>`method`가 `T9`(키보드의 일종)인 경우 `keyword`는 검색할 T9 키보드 문자에 매핑되는 숫자 문자열이어야 합니다.<br>`method`가 `String`인 경우 `keyword`는 검색할 키워드입니다. |
+| ms yellowpage:? 입력 =\[키워드\]& 메서드 =\[문자열 또는 T9\] | 근처 전화 번호 앱을 시작합니다.<br>`input` 검색할 키워드를 가리킵니다.<br>`method` 검색 (문자열 또는 T9 검색)의 형식을 참조 합니다.<br>`method`가 `T9`(키보드의 일종)인 경우 `keyword`는 검색할 T9 키보드 문자에 매핑되는 숫자 문자열이어야 합니다.<br>`method`가 `String`인 경우 `keyword`는 검색할 키워드입니다. |
 
 ### <a name="people-app-uri-scheme"></a>피플 앱 URI 스키마
 
-**ms-people:** URI 스키마를 사용하여 피플 앱을 실행할 수 있습니다.
+사용 된 **ms 사람:** 사용자 앱을 시작 하는 URI 체계입니다.
 자세한 내용은 [피플 앱 실행](launch-people-apps.md)을 참조하세요.
 
 ### <a name="photos-app-uri-scheme"></a>사진 앱 URI 스키마
 
-**ms-photos:** URI 스키마로 사진 앱을 실행하여 이미지를 보거나 비디오를 편집할 수 있습니다. 예를 들면 다음과 같습니다.  
-이미지를 보려면 다음을 수행합니다. `ms-photos:viewer?fileName=c:\users\userName\Pictures\image.jpg`  
-또는 비디오를 편집하려면 다음을 수행합니다. `ms-photos:videoedit?InputToken=123abc&Action=Trim&StartTime=01:02:03`  
+사용 된 **ms 사진:** 사진 앱 이미지를 확인 하거나 비디오 편집을 시작 하는 URI 체계입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+이미지를 보려면: `ms-photos:viewer?fileName=c:\users\userName\Pictures\image.jpg`  
+또는 비디오를 편집 하려면: `ms-photos:videoedit?InputToken=123abc&Action=Trim&StartTime=01:02:03`  
 
 > [!NOTE]
 > 비디오를 편집하거나 이미지를 표시하는 URI는 데스크톱에서만 사용할 수 있습니다.
 
 | URI 스키마 |결과 |
 |------------|--------|
-| ms-photos:viewer?fileName={filename} | 사진 앱을 실행하여 지정된 이미지를 봅니다. 여기서, {filename}은 정규화된 경로 이름입니다. 예를 들어, `c:\users\userName\Pictures\ImageToView.jpg` |
+| ms-photos:viewer?fileName={filename} | 사진 앱을 실행하여 지정된 이미지를 봅니다. 여기서, {filename}은 정규화된 경로 이름입니다. 예를 들면 다음과 같습니다. `c:\users\userName\Pictures\ImageToView.jpg` |
 | ms-photos:videoedit?InputToken={input token} | 파일 토큰에 의해 표시되는 파일을 위해 사진 앱을 비디오 편집 모드로 실행합니다. **InputToken**은 필수입니다. [SharedStorageAccessManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager)를 사용하여 파일의 토큰을 가져옵니다. |
-| ms-photos:videoedit?Action={action} | 지정된 비디오 편집 모드에서 사진 앱을 여는 선택적 매개 변수입니다. 여기서, {action}은 **SlowMotion**, **FrameExtraction**, **Trim**, **View**, **Ink** 중 하나입니다. 이를 지정하지 않는 경우 기본값은 **View**입니다. |
-| ms-photos:videoedit?StartTime={timespan} | 비디오 재생을 시작할 위치를 지정하는 선택적 매개 변수입니다. `{timespan}` `"hh:mm:ss.ffff"` 형식을 사용해야 합니다. 이를 지정하지 않는 경우 기본값은 다음과 같습니다. `00:00:00.0000` |
+| ms-photos:videoedit?Action={action} | 선택적 매개 변수 Photos 앱은 {action}는 중에 지정 된 비디오 편집 모드에서 열립니다. **SlowMotion**, **FrameExtraction**, **Trim**, **View**, **Ink**. 이를 지정하지 않는 경우 기본값은 **View**입니다. |
+| ms-photos:videoedit?StartTime={timespan} | 비디오 재생을 시작할 위치를 지정하는 선택적 매개 변수입니다. `{timespan}` 형식에서 이어야 합니다 `"hh:mm:ss.ffff"`합니다. 지정 하지 않으면 기본값은 `00:00:00.0000` |
 
 ### <a name="settings-app-uri-scheme"></a>설정 앱 URI 스키마
 
-**ms-settings:** URI 스키마를 사용하여 [Windows 설정 앱을 실행](launch-settings-app.md)할 수 있습니다. 설정 앱 실행은 개인 정보 인식 앱 작성의 중요한 부분입니다. 앱에서 중요한 리소스에 액세스할 수 없는 경우 사용자에게 해당 리소스의 개인 정보 설정에 대한 편리한 링크를 제공하는 것이 좋습니다. 예를 들어 다음 URI는 설정 앱을 열고 카메라 개인 정보 설정을 표시합니다.
+사용 된 **ms 설정:** URI 구성표입니다 [Windows 설정 앱을 시작](launch-settings-app.md)합니다. 설정 앱 실행은 개인 정보 인식 앱 작성의 중요한 부분입니다. 앱에서 중요한 리소스에 액세스할 수 없는 경우 사용자에게 해당 리소스의 개인 정보 설정에 대한 편리한 링크를 제공하는 것이 좋습니다. 예를 들어 다음 URI는 설정 앱을 열고 카메라 개인 정보 설정을 표시합니다.
 
 `ms-settings:privacy-webcam`
 
@@ -232,16 +232,16 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="store-app-uri-scheme"></a>스토어 앱 URI 스키마
 
-**ms-windows-store:** URI 스키마를 사용하여 [UWP 앱을 실행](launch-store-app.md)할 수 있습니다. 제품 세부 정보 페이지, 제품 리뷰 페이지, 검색 페이지 등을 엽니다. 예를 들어 다음 URI는 UWP 앱을 열고 Microsoft Store의 홈페이지를 시작합니다.
+사용 된 **ms-windows-스토어:** URI 구성표입니다 [UWP 앱 시작](launch-store-app.md)합니다. 제품 세부 정보 페이지, 제품 검토 페이지 및 검색 페이지를 엽니다. 예를 들어, 다음 URI는 UWP 앱 열리고 저장소의 홈 페이지를 시작 합니다.
 
 `ms-windows-store://home/`
 
 자세한 내용은 [UWP 앱 실행](launch-store-app.md)을 참조하세요.
 
-### <a name="weather-app-uri-scheme"></a>날씨 앱 URI 스키마
+### <a name="weather-app-uri-scheme"></a>날씨 앱 URI 체계
 
-사용 하는 **msnweather:** URI 스키마를 날씨 응용 프로그램을 실행 합니다.
+사용 된 **msnweather:** 날씨 앱을 시작 하는 URI 체계입니다.
 
 | URI 스키마 | 결과 |
 |------------|---------|
-| msnweather://forecast?la= \[latitude\]&lo=\[longitude\] | 위치 지리적 좌표를 기반으로 예측 페이지에 있는 날씨 앱을 실행 합니다.<br>`latitude` latitude 위치를 나타냅니다.<br> `longitude` 경도 위치를 나타냅니다.<br> |
+| msnweather://forecast?la=\[latitude\]&lo=\[longitude\] | 위치 지리 좌표를 기준으로 예측 페이지에서 날씨 앱을 시작 합니다.<br>`latitude` 위치의 위도 가리킵니다.<br> `longitude` 위치의 경도 가리킵니다.<br> |

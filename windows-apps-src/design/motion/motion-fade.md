@@ -1,5 +1,5 @@
 ---
-Description: Use fade animations to bring items into a view or to take items out of a view. The two common fade animations are fade-in and fade-out.
+Description: 항목을 보기로 가져오거나 보기 외부로 이동하려면 페이드 애니메이션을 사용합니다. 두 가지의 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
 title: UWP 앱의 페이드 애니메이션
 ms.assetid: 975E5EE3-EFBE-4159-8D10-3C94143DD07F
 label: Motion--fades
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d3fee78f3608466f588a79d2811f1464e27a0ab
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940142"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620418"
 ---
 # <a name="fade-animations"></a>페이드 애니메이션
 
@@ -21,7 +21,7 @@ ms.locfileid: "8940142"
 
 항목을 보기로 가져오거나 보기 외부로 이동하려면 페이드 애니메이션을 사용합니다. 두 가지의 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
 
-> **중요 API**: [**FadeInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210298), [**FadeOutThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210302)
+> **중요 한 Api**: [**FadeInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210298)하십시오 [ **FadeOutThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210302)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -35,8 +35,8 @@ ms.locfileid: "8940142"
 ## <a name="related-articles"></a>관련 문서
 
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [페이드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649429)
-* [빠른 시작: 라이브러리 애니메이션을 사용하여 UI에 애니메이션 효과 주기](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [페이드 애니메이션 적용](https://msdn.microsoft.com/library/windows/apps/xaml/jj649429)
+* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**FadeInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210298)
 * [**FadeOutThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210302)
 

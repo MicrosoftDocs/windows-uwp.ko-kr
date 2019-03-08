@@ -1,23 +1,23 @@
 ---
 ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
-description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 패키지 플라이트 정보를 검색 합니다.
+description: 파트너 센터 계정에 등록 된 앱에 대 한 패키지 비행 정보를 검색할 Microsoft Store 제출 API에서에서이 메서드를 사용 합니다.
 title: 앱의 패키지 플라이트 가져오기
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트, 패키지 플라이트
 ms.localizationpriority: medium
 ms.openlocfilehash: c7e7ab4db7690cee86b76e39caa30b3c0fb25618
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937262"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659878"
 ---
 # <a name="get-package-flights-for-an-app"></a>앱의 패키지 플라이트 가져오기
 
-Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱의 패키지 플라이트를 나열 합니다. 패키지 플라이트에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.
+Microsoft Store 제출 API 사용 하는이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 패키지 항공편을 나열 합니다. 패키지 플라이트에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -35,18 +35,18 @@ Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-|  이름  |  유형  |  설명  |  필수  |
+|  이름  |  형식  |  설명  |  필수  |
 |------|------|------|------|
 |  applicationId  |  문자열  |  패키지 플라이트를 검색하려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |  예  |
-|  top  |  int  |  요청에 반환할 항목 수(즉, 반환할 패키지 플라이트 수)입니다. 계정에 쿼리에서 지정한 값보다 더 많은 패키지 플라이트가 있을 경우 응답 본문에는 데이터의 다음 페이지를 요청하기 위해 메서드 URI에 추가할 수 있는 상대 URI 경로가 포함됩니다.  |  아니요  |
-|  skip  |  int  |  나머지 항목을 반환하기 전에 쿼리에서 바이패스할 항목 수입니다. 이 매개 변수를 사용하여 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10이고 skip=0이면 1-10 항목을 검색하고 top=10이고 skip=10이면 11-20 항목을 검색합니다.  |  아니요  |
+|  top  |  int  |  요청에 반환할 항목 수(즉, 반환할 패키지 플라이트 수)입니다. 계정에 쿼리에서 지정한 값보다 더 많은 패키지 플라이트가 있을 경우 응답 본문에는 데이터의 다음 페이지를 요청하기 위해 메서드 URI에 추가할 수 있는 상대 URI 경로가 포함됩니다.  |  아니오  |
+|  skip  |  int  |  나머지 항목을 반환하기 전에 쿼리에서 바이패스할 항목 수입니다. 이 매개 변수를 사용하여 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10이고 skip=0이면 1-10 항목을 검색하고 top=10이고 skip=10이면 11-20 항목을 검색합니다.  |  아니오  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -99,9 +99,9 @@ Authorization: Bearer <your access token>
 
 ### <a name="response-body"></a>응답 본문
 
-| 값      | 유형   | 설명       |
+| 값      | 형식   | 설명       |
 |------------|--------|---------------------|
-| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 2로 설정되어 있지만 앱의 패키지 플라이트가 4개인 경우 응답 본문에는 ```applications/{applicationid}/listflights/?skip=2&top=2```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2```를 호출하여 다음 2개의 패키지 플라이트를 호출할 수 있음을 나타냅니다. |
+| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 2로 설정되어 있지만 앱의 패키지 플라이트가 4개인 경우 응답 본문에는 ```applications/{applicationid}/listflights/?skip=2&top=2```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2```를 호출하여 다음 2개의 패키지 플라이트를 호출할 수 있음을 나타냅니다. |
 | value      | 배열  | 지정된 앱의 패키지 플라이트에 대한 정보를 제공하는 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 [플라이트 리소스](get-app-data.md#flight-object)를 참조하세요.               |
 | totalCount | int    | 쿼리에 대한 데이터 결과의 총 행 수(즉, 지정한 앱의 총 패키지 플라이트 수)입니다.   |
 
@@ -113,12 +113,12 @@ Authorization: Bearer <your access token>
 | 오류 코드 |  설명   |
 |--------|------------------|
 | 404  | 패키지 플라이트가 없습니다. |
-| 409  | 앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다.  |
+| 409  | 파트너 센터 기능을 사용 하는 앱 [현재 Microsoft Store 전송 API에 의해 지원 되지 않습니다](create-and-manage-submissions-using-windows-store-services.md#not_supported)합니다.  |
 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [Microsoft Store 서비스를 사용 하 여 서브 미션을 만들고 설정 합니다.](create-and-manage-submissions-using-windows-store-services.md)
 * [모든 앱 가져오기](get-all-apps.md)
 * [앱 가져오기](get-an-app.md)
-* [앱에 대한 추가 기능 가져오기](get-add-ons-for-an-app.md)
+* [앱에 대 한 추가 기능 얻기](get-add-ons-for-an-app.md)

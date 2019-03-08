@@ -1,5 +1,5 @@
 ---
-Description: Design your app so that it looks good and functions well on your television.
+Description: TV에서 멋지게 보이고 제대로 작동하도록 앱을 디자인합니다.
 title: Xbox 및 TV용 디자인
 ms.assetid: 780209cb-3e8a-4cf7-8f80-8b8f449580bf
 label: Designing for Xbox and TV
@@ -14,17 +14,17 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 431b8912e43647bc2678aaab7efc9ec68b866d10
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117583"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616658"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Xbox 및 TV용 디자인
 
 Xbox One 및 TV 화면에서 멋지게 보이고 제대로 작동하도록 UWP(유니버설 Windows 플랫폼) 앱을 디자인합니다.
 
-[게임 패드 및 리모컨 조작](../input/gamepad-and-remote-interactions.md) *10 피트* 환경에 UWP 응용 프로그램의 조작 환경에 대 한 지침을 참조 하십시오.
+참조 [Gamepad 및 원격 제어 상호 작용](../input/gamepad-and-remote-interactions.md) 상호 작용에 대 한 지침에 대 한 환경에서 UWP 응용 프로그램에는 *원격 제어* 경험 합니다.
 
 ## <a name="overview"></a>개요
 
@@ -32,7 +32,7 @@ Xbox One 및 TV 화면에서 멋지게 보이고 제대로 작동하도록 UWP(�
 UWP 프레임워크에서 제공하는 대부분의 기능은 추가 작업 없이 앱이 이러한 디바이스에서 동일한 UI(사용자 인터페이스)를 사용할 수 있게 합니다.
 그러나 Xbox One 및 TV 화면에서 잘 작동하도록 앱을 조정하고 최적화하려면 특별한 고려 사항이 필요합니다.
 
-실내의 소파에 앉아 TV와 상호 작용 하는 게임 패드 또는 리모컨을 사용하여 TV를 조작하는 환경을 **3m 환경**이라고 합니다.
+실내의 소파에 앉아 TV와 상호 작용 하는 게임 패드 또는 리모컨을 사용하여 TV를 조작하는 환경을 **10피트 환경**이라고 합니다.
 일반적으로 사용자가 화면에서 약 3m 떨어진 곳에 앉아 있기 때문에 이렇게 이름이 지정되었습니다.
 이 경우 가령 *0.6m* 환경이나 PC 조작 시에는 존재하지 않는 고유한 과제가 발생합니다.
 Xbox One 또는 TV 화면에 출력되고 입력에 컨트롤러를 사용하는 다른 모든 디바이스용 앱을 개발하는 경우 항상 이 점에 유의해야 합니다.
@@ -40,7 +40,7 @@ Xbox One 또는 TV 화면에 출력되고 입력에 컨트롤러를 사용하는
 이 문서의 모든 단계가 3m 환경에 적합한 앱을 만드는 데 필요한 것은 아니지만 이해하고 앱에 적절한 결정을 하면 앱의 특정 요구에 맞는 더 나은 3m 환경을 만들 수 있습니다.
 3m 환경에 맞는 앱을 만들려면 다음 디자인 원칙을 고려합니다.
 
-### <a name="simple"></a>단순
+### <a name="simple"></a>Simple
 
 3m 환경에 맞게 디자인하려면 일련의 고유한 과제를 처리해야 합니다. 해상도 및 시청 거리 때문에 사용자가 너무 많은 정보를 처리하기 어려울 수 있습니다.
 가능한 가장 간단한 구성 요소로 줄여 디자인을 명확하게 유지합니다. TV에 표시되는 정보량은 데스크톱이 아니라 휴대폰에 표시되는 정보량과 일치해야 합니다.
@@ -54,7 +54,7 @@ Xbox One 또는 TV 화면에 출력되고 입력에 컨트롤러를 사용하는
 
 ![Xbox One 영화 앱](images/designing-for-tv/xbox-movies-app.png)
 
-_**스크린샷에 표시된 모든 영화는 Microsoft 영화 및 TV에서 시청할 수 있습니다.**_  
+_**스크린샷에 표시 된 모든 동영상 Microsoft 영화 및 TV에 사용할 수 있습니다.**_  
 
 ### <a name="captivating"></a>흥미 유발
 
@@ -71,19 +71,19 @@ _**스크린샷에 표시된 모든 영화는 Microsoft 영화 및 TV에서 시�
 | [UI 요소 크기 조정](#ui-element-sizing)  | 유니버설 Windows 플랫폼은 [크기 조정 및 유효 픽셀](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)을 사용하여 시청 거리에 따라 UI의 크기를 조정합니다. 크기 조정을 이해하고 UI 전체에 적용하면 3m 환경에 앱을 최적화하는 데 도움이 됩니다.  |
 |  [TV 안전 영역](#tv-safe-area) | UWP는 기본적으로 안전하지 않은 TV 영역(화면 가장자리에 가까운 영역)에 UI가 표시되는 것을 자동으로 방지합니다. 그러나 이 때문에 UI가 레터박스처럼 보이는 "박스" 효과가 발생합니다. TV에서 진정한 몰입형 앱이 되려면 지원하는 TV에서 화면 가장자리까지 확장되도록 앱을 수정하는 것이 좋습니다. |
 | [색](#colors)  |  UWP는 색 테마를 지원하며, 시스템 테마를 적용하는 앱은 Xbox One에서 기본적으로 **어둡게**로 설정됩니다. 앱에 특정 색 테마가 있는 경우 일부 색은 TV에서 제대로 작동하지 않으며 피해야 한다는 것을 고려해야 합니다. |
-| [소리](../style/sound.md)    | 소리는 사용자를 몰두하게 하고 피드백을 제공하는 데 도움이 되어 3m 환경에 중요한 역할을 합니다. UWP는 앱이 Xbox One에서 실행 중일 때 공통 컨트롤에 대한 소리를 자동으로 켜는 기능을 제공합니다. UWP에 기본 제공되는 소리 지원 기능에 대한 자세한 내용을 살펴보고 이를 활용하는 방법을 알아봅니다.    |
-| [UI 컨트롤에 대한 지침](#guidelines-for-ui-controls)  |  여러 UI 컨트롤이 다양한 디바이스에서 잘 작동하지만 TV에서 사용할 경우 특별히 고려해야 할 사항이 있습니다. 3m 환경용으로 디자인할 경우 이러한 컨트롤 사용을 위한 몇 가지 모범 사례에 대해 알아봅니다. |
-| [Xbox에 대한 사용자 지정 시각적 상태 트리거](#custom-visual-state-trigger-for-xbox) | 3m 환경에 맞게 UWP 앱을 조정하려면 사용자 지정 *시각적 상태 트리거*를 사용하여 앱이 Xbox 콘솔에서 시작된 것을 감지할 때 레이아웃을 변경하는 것이 좋습니다. |
+| [Sound](../style/sound.md)    | 소리는 사용자를 몰두하게 하고 피드백을 제공하는 데 도움이 되어 3m 환경에 중요한 역할을 합니다. UWP는 앱이 Xbox One에서 실행 중일 때 공통 컨트롤에 대한 소리를 자동으로 켜는 기능을 제공합니다. UWP에 기본 제공되는 소리 지원 기능에 대한 자세한 내용을 살펴보고 이를 활용하는 방법을 알아봅니다.    |
+| [UI 컨트롤에 대 한 지침](#guidelines-for-ui-controls)  |  여러 UI 컨트롤이 다양한 디바이스에서 잘 작동하지만 TV에서 사용할 경우 특별히 고려해야 할 사항이 있습니다. 3m 환경용으로 디자인할 경우 이러한 컨트롤 사용을 위한 몇 가지 모범 사례에 대해 알아봅니다. |
+| [Xbox 용 사용자 지정 시각적 상태 트리거](#custom-visual-state-trigger-for-xbox) | 10피트 환경에 맞게 UWP 앱을 조정하려면 사용자 지정 *시각적 상태 트리거*를 사용하여 앱이 Xbox 콘솔에서 시작된 것을 감지할 때 레이아웃을 변경하는 것이 좋습니다. |
 
-앞의 디자인 및 레이아웃 고려 사항, 외에도 앱을 빌드할 때 고려해 야 하는 [게임 패드 및 리모컨](../input/gamepad-and-remote-interactions.md) 최적화는 여러 가지가 있습니다.
+이전 디자인 및 레이아웃 고려 사항 외에 여러 가지가 [gamepad 및 원격 제어 상호 작용](../input/gamepad-and-remote-interactions.md) 최적화 프로그램을 빌드할 때 고려해 야 합니다.
 
 | 기능        | 설명           |
 | -------------------------------------------------------------- |--------------------------------|
-| [XY 포커스 탐색 및 조작](../input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction) | **XY 포커스 탐색** 앱의 UI를 탐색할 수 있습니다. 그러나 사용자가 위, 아래, 왼쪽 및 오른쪽으로만 탐색할 수 있도록 제한됩니다. 이 섹션에는 이 문제를 해결하기 위한 권장 사항과 기타 고려 사항이 요약되어 있습니다. |
-| [마우스 모드](../input/gamepad-and-remote-interactions.md#mouse-mode)|XY 포커스 탐색 실용적이 지 또는 지도 또는 그리기 및 그리기 앱 등의 응용 프로그램의 일부 형식에 대 한 수도 없습니다. 이러한 경우 **마우스 모드** 에서는 사용자가 게임 패드 또는 원격 제어, PC의 마우스 처럼 자유롭게 탐색할 수 있습니다.|
-| [포커스 화면 효과](../input/gamepad-and-remote-interactions.md#focus-visual)  | 포커스 화면 효과 현재 포커스가 있는 UI 요소를 강조 표시 하는 테두리입니다. 이렇게 하면 사용자가 UI 탐색을 통해 인지와 상호 작용을 신속 하 게 식별 됩니다.  |
-| [포커스 연결](../input/gamepad-and-remote-interactions.md#focus-engagement) | 포커스 연결 사용자 상호 작용 하기 위해 UI 요소에 포커스가 있을 때 게임 패드 또는 원격 제어에서 **A/선택** 버튼을 눌러 필요 합니다. |
-| [하드웨어 버튼](../input/gamepad-and-remote-interactions.md#hardware-buttons) | 게임 패드 및 리모컨 매우 다른 단추 및 구성을 제공합니다. |
+| [XY 포커스 탐색 및 상호 작용](../input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction) | **XY 포커스 탐색** 사용자가 앱의 UI 주위를 탐색할 수 있도록 합니다. 그러나 사용자가 위, 아래, 왼쪽 및 오른쪽으로만 탐색할 수 있도록 제한됩니다. 이 섹션에는 이 문제를 해결하기 위한 권장 사항과 기타 고려 사항이 요약되어 있습니다. |
+| [마우스 모드](../input/gamepad-and-remote-interactions.md#mouse-mode)|XY 포커스 탐색 실용적이 지 또는 일부 유형의 지도 또는 그리기 및 칠하기 앱 등의 응용 프로그램에 대 한 수도 없습니다. 이러한 경우 **마우스 모드** 같은 PC에서 마우스 사용자는 게임 패드 또는 원격 제어를 사용 하 여 자유롭게 탐색할 수 있습니다.|
+| [포커스 시각적 개체](../input/gamepad-and-remote-interactions.md#focus-visual)  | 포커스 시각적 개체는 현재 포커스가 있는 UI 요소를 강조 표시 하는 테두리입니다. 이렇게 하면 사용자가 신속 하 게 탐색 하거나 상호 작용 하는 UI를 식별 하는 수 있습니다.  |
+| [포커스 engagement](../input/gamepad-and-remote-interactions.md#focus-engagement) | 포커스 engagement에 필요한 키를 눌러 사용자는 **A/선택** gamepad 또는 상호 작용 하기 위해 UI 요소에 포커스가 있을 때 원격 제어에는 단추입니다. |
+| [하드웨어 단추](../input/gamepad-and-remote-interactions.md#hardware-buttons) | Gamepad 및 원격 제어를 매우 다른 단추 및 구성을 제공합니다. |
 
 > [!NOTE]
 > 이 항목의 코드 조각은 대부분 XAML/C#으로 작성되었지만 원칙과 개념은 모든 UWP 앱에 적용됩니다. Xbox용 HTML/JavaScript UWP 앱을 개발하는 경우 GitHub 라이브러리에서 뛰어난 [TVHelpers](https://github.com/Microsoft/TVHelpers/wiki) 라이브러리를 확인하세요.
@@ -130,8 +130,8 @@ UI를 간소화하려면 사용자가 TV 화면의 한쪽 가장자리에서 다
 
 일정 거리에서 UI를 볼 수 있게 하려면 다음과 같은 경험적 규칙을 따르세요.
 
-* 기본 텍스트 및 읽기용 콘텐츠: 최소 15epx
-* 중요하지 않은 텍스트 및 보충 콘텐츠: 최소 12epx
+* 기본 텍스트 및 내용 읽기: 15 epx 최소
+* 중요 하지 않은 텍스트 및 보충 합니다. 12 epx 최소
 
 UI에 큰 텍스트를 사용하는 경우 다른 콘텐츠가 채울 수 있는 공간을 사용하여 화면 공간을 너무 제한하지 않는 크기를 선택합니다.
 
@@ -147,7 +147,7 @@ bool result =
     Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayoutScaling(true);
 ```
 
-`result` 에서 성공적으로 옵트아웃 했는지 여부를 알려줍니다.
+`result` 알려줍니다 성공적으로 옵트인 여부.
 
 HTML/JavaScript용 샘플 코드를 포함하여 자세한 내용은 [크기 조정을 끄는 방법](../../xbox-apps/disable-scaling.md)을 참조하세요.
 
@@ -241,7 +241,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 
 [CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)는 앱의 하나 이상 가장자리 근처에 자주 배치되는 창의 또 다른 예이므로 TV에서는 배경이 화면 가장자리까지 확장되어야 합니다. 또한 일반적으로 TV 안전 영역에 유지되어야 하는 **자세히** 단추(“...”로 표시됨)가 오른쪽에 있습니다. 다음은 원하는 조작 및 시각 효과를 얻기 위한 몇 가지 전략입니다.
 
-**옵션 1**: `CommandBar` 배경색을 투명 또는 페이지 배경과 동일한 색으로 변경합니다.
+**옵션 1**: 변경 된 `CommandBar` 배경색을 투명 하 게 또는 같은 페이지 배경 색:
 
 ```xml
 <CommandBar x:Name="topbar"
@@ -252,7 +252,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 
 이렇게 하면 `CommandBar`이 페이지의 나머지 부분과 동일한 배경 위에 있는 것처럼 표시되므로 배경이 화면 가장자리까지 매끄럽게 이어집니다.
 
-**옵션 2**: 채우기가 `CommandBar` 배경과 동일한 색인 사각형을 추가하고 페이지의 나머지 부분에 걸쳐 `CommandBar` 아래에 표시되게 합니다.
+**옵션 2**: 채우기 색이 배경 사각형을 추가으로 `CommandBar` 배경과 아래에 게는 `CommandBar` 및 페이지의 나머지 부분에서:
 
 ```xml
 <Rectangle VerticalAlignment="Top"
@@ -333,7 +333,7 @@ UWP에는 포커스 화면 효과를 [VisibleBounds](https://docs.microsoft.com/
 > [!NOTE]
 > 이 코드 조각은 `ListView`용으로 특별히 작성되었습니다. `GridView` 스타일의 경우 [ControlTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 및 [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) 둘 다의 [TargetType](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) 특성을 `GridView`로 설정합니다.
 
-보다 세부적으로 제어 하는 방법에 대 한 항목 할지, 응용 프로그램이 대상 버전 1803 또는 나중에 [UIElement.BringIntoViewRequested 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)를 사용할 수 있습니다. **ListView**에 대 한 [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 에 넣을 수/**GridView** 다음 코드 조각 에서처럼 내부 **ScrollViewer** 는 전에 catch:
+응용 프로그램 버전 1803를 대상으로 하거나 나중에 사용할 수 있습니다 하는 경우 항목 보기로 옮겨진 스토리는 어떻게 보다 세분화 된 제어를 [UIElement.BringIntoViewRequested 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)합니다. 에 넣을 수를 [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 에 대 한 합니다 **ListView**/**GridView** 전에 내부 catch **ScrollViewer** 다음 코드 조각 처럼 수행합니다.
 
 ```xaml
 <GridView x:Name="gridView">
@@ -440,7 +440,7 @@ DirectX 11 또는 DirectX 12를 사용해 앱을 개발하면서 사용자 고�
 
 탐색 창(*햄버거 메뉴*라고도 함)은 UWP 앱에서 일반적으로 사용되는 탐색 컨트롤입니다. 주로 목록 스타일 메뉴에서 선택하며 사용자를 다른 페이지로 이동하는 여러 옵션이 있는 창입니다. 일반적으로 이 창은 공간을 절약하기 위해 축소된 형태로 시작되며 사용자가 단추를 클릭하여 열 수 있습니다.
 
-탐색 창은 마우스와 터치를 사용한 접근성이 높은 반면, 사용자가 창을 여는 단추로 이동해야 하기 때문에 게임 패드/리모컨의 접근성은 낮습니다. 따라서 **보기** 버튼을 통해 탐색 창을 여는 것뿐 아니라 사용자가 페이지의 왼쪽으로 이동하여 창을 열 수 있도록 하는 것이 좋습니다. 이 디자인 패턴을 구현하는 방법에 대한 코드 샘플은 [프로그래밍 방식 포커스 탐색](../input/focus-navigation-programmatic.md#split-view-code-sample) 문서에서 찾을 수 있습니다. 이렇게 하면 사용자가 창의 내용에 쉽게 액세스할 수 있습니다. 탐색 창이 다양한 화면 크기에서 동작하는 방식 및 게임 패드/리모컨 탐색 모범 사례에 대한 자세한 내용은 [탐색 창](../controls-and-patterns/navigationview.md)을 참조하세요.
+탐색 창은 마우스와 터치를 사용한 접근성이 높은 반면, 사용자가 창을 여는 단추로 이동해야 하기 때문에 게임 패드/리모컨의 접근성은 낮습니다. 따라서 **보기** 단추를 통해 탐색 창을 여는 것뿐 아니라 사용자가 페이지의 왼쪽으로 이동하여 창을 열 수 있도록 하는 것이 좋습니다. 이 디자인 패턴을 구현하는 방법에 대한 코드 샘플은 [프로그래밍 방식 포커스 탐색](../input/focus-navigation-programmatic.md#split-view-code-sample) 문서에서 찾을 수 있습니다. 이렇게 하면 사용자가 창의 내용에 쉽게 액세스할 수 있습니다. 탐색 창이 다양한 화면 크기에서 동작하는 방식 및 게임 패드/리모컨 탐색 모범 사례에 대한 자세한 내용은 [탐색 창](../controls-and-patterns/navigationview.md)을 참조하세요.
 
 ### <a name="commandbar-labels"></a>CommandBar 레이블
 
@@ -462,7 +462,7 @@ DirectX 11 또는 DirectX 12를 사용해 앱을 개발하면서 사용자 고�
 
 중첩된 UI는 중첩된 항목과 컨테이너 항목이 각각 독립적인 포커스를 가질 수도 있는 컨테이너 UI 요소 내에 중첩된 실행 가능한 항목을 묶어 표시합니다.
 
-중첩된 UI는 일부 입력 유형과 잘 작동하지만 XY 탐색을 사용하는 게임 패드 및 원격에 대해서는 작동하지 않는 경우도 있습니다. UI가 3m 환경에 최적화되고 조작 가능한 모든 요소에 사용자가 쉽게 액세스할 수 있도록 이 항목의 지침을 수행해야 합니다. 일반적인 솔루션은 중첩 된 UI 요소를 배치 하는 `ContextFlyout`.
+중첩된 UI는 일부 입력 유형과 잘 작동하지만 XY 탐색을 사용하는 게임 패드 및 원격에 대해서는 작동하지 않는 경우도 있습니다. UI가 3m 환경에 최적화되고 조작 가능한 모든 요소에 사용자가 쉽게 액세스할 수 있도록 이 항목의 지침을 수행해야 합니다. 일반적인 솔루션의 중첩 된 UI 요소를 배치 하는 것을 `ContextFlyout`입니다.
 
 중첩된 UI에 대한 자세한 내용은 [목록 항목의 중첩된 UI](../controls-and-patterns/nested-ui.md)를 참조하세요.
 
@@ -486,7 +486,7 @@ DirectX 11 또는 DirectX 12를 사용해 앱을 개발하면서 사용자 고�
 
 ### <a name="search-experience"></a>검색 환경
 
-콘텐츠 검색은 3m 환경에서 가장 일반적으로 수행되는 기능 중 하나입니다. 앱에서 검색 환경을 제공하는 경우 사용자는 게임 패드의 **Y** 버튼을 바로 가기로 사용하여 빠르게 액세스할 수 있습니다.
+콘텐츠 검색은 3m 환경에서 가장 일반적으로 수행되는 기능 중 하나입니다. 앱에서 검색 환경을 제공하는 경우 사용자는 게임 패드의 **Y** 단추를 바로 가기로 사용하여 빠르게 액세스할 수 있습니다.
 
 대부분의 고객은 이 바로 가기에 대해 이미 잘 알고 있지만, 원하는 경우 고객이 버튼을 사용하여 검색 기능에 액세스할 수 있음을 나타내기 위해 UI에 **Y** 문자 모양을 시각적으로 추가할 수 있습니다. 이 신호를 추가하는 경우 Xbox 셸 및 다른 앱과의 일관성이 제공되도록 **Segoe Xbox MDL2 Symbol** 글꼴(XAML 앱의 경우 `&#xE3CC;`, HTML 앱의 경우 `\E426`)의 기호를 사용해야 합니다.
 
@@ -566,6 +566,6 @@ bool IsTenFoot = (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily 
 
 ## <a name="related-articles"></a>관련 문서
 
-- [UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서](index.md)
-- [게임 패드 및 리모컨 조작](../input/gamepad-and-remote-interactions.md)
-- [UWP 앱의 소리](../style/sound.md)
+- [유니버설 Windows 플랫폼 (UWP) 앱에 대 한 장치 입문서](index.md)
+- [Gamepad 및 원격 제어 상호 작용](../input/gamepad-and-remote-interactions.md)
+- [UWP 앱에서 소리](../style/sound.md)

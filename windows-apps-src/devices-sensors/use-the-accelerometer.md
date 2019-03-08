@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 77ee3191bc41fca672a055a708523578390860b4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919149"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623708"
 ---
 # <a name="use-the-accelerometer"></a>가속도계 사용
 
 
-**중요 API**
+**중요 한 Api**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**가속도계**](https://msdn.microsoft.com/library/windows/apps/BR225687)
+-   [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687)
 
 **샘플**
 
@@ -29,9 +29,9 @@ ms.locfileid: "8919149"
 
 단순 게임 앱은 가속도계와 같은 센서 하나를 입력 장치로 사용합니다. 이러한 앱은 일반적으로 입력에 축을 하나나 두 개만 사용하지만 흔들기 이벤트를 또 다른 입력 소스로 사용할 수도 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트에 알고 있어야 합니다.
+사용 하 여 Extensible Application Markup Language (XAML), Microsoft Visual 친숙 해야 C#, 및 이벤트입니다.
 
 사용하는 장치 또는 에뮬레이터가 가속도계를 지원해야 합니다.
 
@@ -136,11 +136,11 @@ ms.locfileid: "8919149"
 
 이전 코드 조각에서 클래스 이름의 첫 번째 부분을 앱의 네임스페이스로 바꾸어야 합니다. 예를 들어 **AccelerometerCS**라는 프로젝트를 만든 경우 `x:Class="App1.MainPage"`을 `x:Class="AccelerometerCS.MainPage"`로 바꿉니다. 또한 `xmlns:local="using:App1"`을 `xmlns:local="using:AccelerometerCS"`로 바꾸어야 합니다.
 
--   F5 키를 누르거나 **디버그** &gt; **디버깅 시작**을 선택하여 앱을 빌드, 배포 및 실행합니다.
+-   F5 키를 누르거나 **디버깅할** &gt; **디버깅 시작** 을 빌드, 배포 및 앱을 실행 합니다.
 
 앱이 실행 중이면 디바이스를 이동하거나 에뮬레이터 도구를 사용하여 가속도계 값을 변경할 수 있습니다.
 
--   Visual Studio로 돌아가서 Shift+F5를 눌러 앱을 중지하거나 **디버그** &gt; **디버깅 중지**를 선택하여 앱을 중지합니다.
+-   Visual Studio로 반환 하 고 Shift + F5 키를 눌러 앱을 중지 하거나 선택 **디버깅할** &gt; **디버깅 중지** 앱을 중지 합니다.
 
 ### <a name="explanation"></a>설명
 

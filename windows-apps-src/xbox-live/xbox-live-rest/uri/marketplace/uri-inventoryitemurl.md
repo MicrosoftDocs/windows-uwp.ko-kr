@@ -8,32 +8,32 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: adac175675230e107b3066d1d8f955e660bdbd00
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925495"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645638"
 ---
 # <a name="inventoryitemid"></a>/inventory/{itemID}
-특정 인벤토리 항목에 대 한 세부 정보의 전체 집합을 액세스 합니다. 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`.
+특정 재고 항목에 대 한 세부 정보의 전체 집합에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`합니다.
  
 <a id="ID4ET"></a>
 
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| itemID| string| 각 사용자에 단일 인벤토리 항목에 대 한 고유 ID| 
+| itemID| 문자열| 단일 인벤토리 항목에 대 한 각 사용자에 게 고유 ID| 
   
 <a id="ID4EPB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
-[GET (/inventory/{itemID})](uri-inventoryitemurlget.md)
+[GET (/inventory/ {itemID})](uri-inventoryitemurlget.md)
 
-&nbsp;&nbsp;특정 인벤토리 항목에 대 한 세부 정보의 전체 집합을 제공합니다.
+&nbsp;&nbsp;특정 재고 항목에 대 한 전체 정보 집합을 제공합니다.
  
 <a id="ID4EZB"></a>
 
@@ -43,17 +43,17 @@ ms.locfileid: "8925495"
 <a id="ID4E2B"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[마켓플레이스 URI](atoc-reference-marketplace.md)
+[Marketplace Uri](atoc-reference-marketplace.md)
 
   
 <a id="ID4EFC"></a>
 
  
-##### <a name="further-information"></a>자세한 정보 
+##### <a name="further-information"></a>추가 정보 
 
-[EDS 공통 헤더](../../additional/edscommonheaders.md)
+[EDS 일반적인 헤더](../../additional/edscommonheaders.md)
 
  [EDS 매개 변수](../../additional/edsparameters.md)
 

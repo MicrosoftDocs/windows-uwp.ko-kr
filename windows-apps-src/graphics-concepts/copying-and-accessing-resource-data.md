@@ -1,6 +1,6 @@
 ---
 title: 리소스 데이터 복사 및 액세스
-description: 사용 플래그는 성능이 가장 좋은 메모리 영역에 리소스를 배치할 수 있도록 응용 프로그램에서 리소스 데이터를 사용하는 방법을 나타냅니다. 리소스 데이터는 성능에 영향을 주지 않고 CPU나 GPU에서 액세스할 수 있도록 전체 리소스에 복사됩니다.
+description: 사용법 플래그는 성능이 가장 좋은 메모리 영역에 리소스를 배치할 수 있도록 응용 프로그램에서 리소스 데이터를 사용하는 방법을 나타냅니다. 리소스 데이터는 성능에 영향을 주지 않고 CPU나 GPU에서 액세스할 수 있도록 전체 리소스에 복사됩니다.
 ms.assetid: 6A09702D-0FF2-4EA6-A353-0F95A3EE34E2
 keywords:
 - 리소스 데이터 복사 및 액세스
@@ -8,22 +8,22 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d4364bf9973b69587ae042a809d026b553ee2ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932148"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662318"
 ---
 # <a name="copying-and-accessing-resource-data"></a>리소스 데이터 복사 및 액세스
 
 
-사용 플래그는 성능이 가장 좋은 메모리 영역에 리소스를 배치할 수 있도록 응용 프로그램에서 리소스 데이터를 사용하는 방법을 나타냅니다. 리소스 데이터는 성능에 영향을 주지 않고 CPU나 GPU에서 액세스할 수 있도록 전체 리소스에 복사됩니다.
+사용법 플래그는 성능이 가장 좋은 메모리 영역에 리소스를 배치할 수 있도록 응용 프로그램에서 리소스 데이터를 사용하는 방법을 나타냅니다. 리소스 데이터는 성능에 영향을 주지 않고 CPU나 GPU에서 액세스할 수 있도록 전체 리소스에 복사됩니다.
 
 리소스를 비디오 메모리 또는 시스템 메모리에 만들어지는 것으로 생각하거나 런타임에서 메모리를 관리해야 하는지 여부를 결정할 필요가 없습니다. 응용 프로그램에서 WDDM(Windows Display Driver Model)의 아키텍처를 바탕으로 서로 다른 사용법 플래그를 가진 Direct3D 리소스를 만들어 리소스 데이터가 사용되는 방법을 나타냅니다. 이 드라이버 모델은 리소스에서 사용하는 메모리를 가상화합니다. 사용법이 예상되는 상황에서 성능이 가장 좋은 메모리 영역에 리소스를 배치하는 것은 운영 체제/드라이버/메모리 관리자의 책임입니다.
 
 Default case로 GPU에서 리소스를 사용할 수 있습니다. CPU에서 리소스 데이터를 사용할 수 있어야 하는 경우가 있습니다. 해당 프로세서가 성능에 영향을 주지 않고 액세스할 수 있도록 리소스 데이터를 전체에 복사하려면 API 메서드의 작동 방식에 대한 이해가 필요합니다.
 
-## <a name="span-idcopyingspanspan-idcopyingspanspan-idcopyingspancopying-resource-data"></a><span id="Copying"></span><span id="copying"></span><span id="COPYING"></span>리소스 데이터 복사
+## <a name="span-idcopyingspanspan-idcopyingspanspan-idcopyingspancopying-resource-data"></a><span id="Copying"></span><span id="copying"></span><span id="COPYING"></span>리소스 데이터를 복사합니다.
 
 
 Direct3D에서 만들기 호출을 실행하면 메모리에 리소스가 만들어집니다. 비디오 메모리, 시스템 메모리 또는 다른 종류의 메모리에 리소스가 만들어질 수 있습니다. WDDM 드라이버 모델이 이 메모리를 가상화하므로 이제 응용 프로그램에서 어떤 종류의 메모리 리소스가 만들어지는지 추적할 필요가 없습니다.
@@ -42,7 +42,7 @@ GPU에서 즉시 액세스할 수 있도록 모든 리소스가 비디오 메모
 
 CPU에서 데이터를 읽을 수 있도록 기본 사용법의 리소스에서 준비 사용법의 리소스로 데이터를 복사하려는 응용 프로그램은 주의해야 합니다. GPU 다시 읽기 문제가 발생할 수 있기 때문입니다. 아래의 [리소스 데이터 액세스](#accessing)를 참조하세요.
 
-## <a name="span-idaccessingspanspan-idaccessingspanspan-idaccessingspanaccessing-resource-data"></a><span id="Accessing"></span><span id="accessing"></span><span id="ACCESSING"></span>리소스 데이터 액세스
+## <a name="span-idaccessingspanspan-idaccessingspanspan-idaccessingspanaccessing-resource-data"></a><span id="Accessing"></span><span id="accessing"></span><span id="ACCESSING"></span>리소스 데이터에 액세스
 
 
 리소스에 액세스하려면 리소스 매핑이 필요합니다. 기본적으로 매핑은 응용 프로그램에서 CPU에 메모리에 대한 액세스 권한을 주려고 함을 의미합니다. CPU에서 기본 메모리에 액세스할 수 있도록 리소스를 매핑하는 프로세스는 성능 병목 현상을 일으킬 수 있습니다. 따라서 이 작업을 언제, 어떻게 수행할지 결정할 때 신중을 기해야 합니다.
@@ -128,7 +128,7 @@ Direct3D의 비동기 호출(대부분 메서드와 렌더링 호출)은 *명령
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [리소스](resources.md)

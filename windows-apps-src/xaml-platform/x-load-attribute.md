@@ -1,27 +1,27 @@
 ---
 title: xLoad 특성
-description: xLoad 요소와 하위 시작 시간 및 메모리 사용량을 감소의 동적 생성 및 제거가 수 있습니다.
+description: xLoad는 요소 및 자식 요소의 동적인 생성 및 소멸을 지원하여 시작 시간과 메모리 사용을 줄일 수 있도록 합니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1fa0f12779ad56d57c92f667443644851dc3d5e5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925038"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57629368"
 ---
 # <a name="xload-attribute"></a>x:Load 특성
 
-시작, 시각적 트리 생성 및 XAML 앱의 메모리 사용량을 최적화 하기 위해 **X:load** 를 사용할 수 있습니다. 유사한 시각 효과를 **표시**하지 요소를 로드할 때 해당 메모리를 해제 하 고 시각적 트리에서 해당 위치를 표시 하는 작은 자리 표시자를 사용 하는 내부적으로에 **X:load** 를 사용 하 여 있습니다.
+**x:Load**를 사용하여 XAML 앱의 시작, 시각적 트리 생성 및 메모리 사용을 최적화할 수 있습니다. **x:Load**를 사용하면 **Visibility**와 유사한 시각적 효과를 갖습니다. 단, 요소가 로드되지 않으면 메모리가 해제되고 내부적으로 작은 자리 표시자를 사용해 시각적 트리에 위치를 표시된다는 점이 다릅니다.
 
-X:load를 사용 하 여 특성을 사용 하는 UI 요소는 로드 및 언로드를 통해 코드 또는 [X:bind](x-bind-markup-extension.md) 식을 사용 하 여 수 있습니다. 가끔 또는 조건부로 표시되는 요소의 비용을 줄이는 데 유용합니다. 그리드 등 StackPanel 컨테이너에서 X:load를 사용 하면 컨테이너 및 모든 하위가 로드 되거나 언로드될 그룹으로 합니다.
+x:Load 특성이 지정된 UI 요소는 코드를 통해, 또는 [x:Bind](x-bind-markup-extension.md) 식을 사용해 로드 및 언로드가 가능합니다. 가끔 또는 조건부로 표시되는 요소의 비용을 줄이는 데 유용합니다. 그리드 또는 StackPanel 같은 컨테이너에서 x:Load를 사용하면 컨테이너와 그 자식 요소들이 하나의 그룹으로 로드 또는 언로드됩니다.
 
-자리 표시자에 맞게 새롭게 X:load를 사용 하 여 특성을 사용 하는 각 요소에 대 한 메모리 사용량에 약 600 바이트를 추가 하는 XAML 프레임 워크에서 지연 된 요소를 추적 합니다. 따라서 될 정도로이 특성을 지나치게 실제로 그러므로 성능이 수 있습니다. 만 사용 하는 것에서 요소를 숨겨야 하는 것이 좋습니다. 컨테이너에서 X:load를 사용 하는 경우 X:load 특성을 사용 하 여 요소에 대해서만 오버 헤드가 지급 됩니다.
+XAML 프레임워크에서 지연된 요소를 추적하면 자리 표시자를 고려하여 x:Load 특성이 지정된 각 요소에서 메모리 사용이 약 600바이트 추가됩니다. 그러므로 실제 성능이 저하될 정도로 이 특성을 지나치게 많이 사용할 수 있습니다. 숨겨야 하는 요소에서만 이 특성을 사용하는 것이 좋습니다. 컨테이너에서 x:Load를 사용하면 x:Load 특성을 가진 요소에만 오버헤드 비용이 지불됩니다.
 
 > [!IMPORTANT]
-> X:load 특성은 Windows 10 버전 1703 (크리에이터 스 업데이트)부터 사용할 수 있습니다. Visual Studio 프로젝트가 대상으로 하는 최소 버전이 *Windows 10 크리에이터스 업데이트(10.0, Build 15063)* 는 되어야 x:Load를 사용할 수 있습니다.
+> X: 로드 특성은 Windows 10 버전 1703 (크리에이터 업데이트)부터 사용할 수 있습니다. Visual Studio 프로젝트가 대상으로 하는 최소 버전이 *Windows 10 크리에이터스 업데이트(10.0, Build 15063)* 는 되어야 x:Load를 사용할 수 있습니다.
 
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
@@ -31,61 +31,61 @@ X:load를 사용 하 여 특성을 사용 하는 UI 요소는 로드 및 언로�
 <object x:Load="{x:Bind Path.to.a.boolean, Mode=OneWay}" .../>
 ```
 
-## <a name="loading-elements"></a>요소를 로드합니다.
+## <a name="loading-elements"></a>요소 로드
 
-요소를 로드 하는 여러 가지 방법으로 가지 있습니다.
+요소를 로드하는 여러 가지 방법이 있습니다.
 
-- [X: Bind](x-bind-markup-extension.md) 식을 사용 하 여 로드 상태를 지정 합니다. 식 **true** 로드 및 **false** 언로드 요소를 반환 해야 합니다.
+- [x:Bind](x-bind-markup-extension.md) 식을 사용해 로드 상태를 지정합니다. 식은 요소를 로드하려면 **true**를, 언로드하려면 **false**를 반환해야 합니다.
 - 요소에 정의된 이름을 사용하여 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)을 호출합니다.
 - 요소에 정의된 이름을 사용하여 [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/br209416)를 호출합니다.
-- [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007)에서 X:load 요소를 대상으로 하는 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 또는 **스토리 보드** 애니메이션을 사용 합니다.
-- 모든 **스토리 보드**에 언로드할된 요소를 대상으로 합니다.
+- [  **VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007)에서 x:Load 요소를 대상으로 하는 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 또는 **Storyboard** 애니메이션을 사용합니다.
+- 모든 **Storyboard**에서 언로드된 요소를 대상으로 합니다.
 
-> 참고: 요소의 인스턴스화가 시작되면 UI 스레드에 요소가 만들어지므로 한 번에 너무 많이 만들 경우 UI 스터터가 발생할 수 있습니다.
+> 참고: 요소의 인스턴스화 시작 된 후 UI 끊길 경우 너무 많은 동시에 생성 됩니다 될 수 있도록 UI 스레드에서 만들어집니다.
 
 위에 나열된 방법 중 하나에 의해 지연된 요소가 만들어진 경우 몇 가지 사항이 발생합니다.
 
 - 요소의 [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) 이벤트가 발생합니다.
-- X:name 필드는 설정 됩니다.
-- 요소의 모든 X:bind 바인딩이 평가 됩니다.
+- x:Name에 대한 필드가 설정됩니다.
+- 요소에 대한 모든 x:Bind 바인딩이 평가됩니다.
 - 지연된 요소를 포함하는 특성에 대한 특성 변경 알림을 받도록 등록된 경우 알림이 발생합니다.
 
-## <a name="unloading-elements"></a>언로드 요소
+## <a name="unloading-elements"></a>요소 언로드
 
-요소를 언로드할:
+요소를 언로드하는 방법:
 
-- X: Bind 식을 사용 하 여 로드 상태를 지정 합니다. 식 **true** 로드 및 **false** 언로드 요소를 반환 해야 합니다.
-- 페이지 또는 UserControl, **UnloadObject** 를 호출 하 고 개체 참조에 전달 합니다.
-- **Windows.UI.Xaml.Markup.XamlMarkupHelper.UnloadObject** 를 호출 하 고 개체 참조에 전달 합니다.
+- x:Bind 식을 사용해 로드 상태를 지정합니다. 식은 요소를 로드하려면 **true**를, 언로드하려면 **false**를 반환해야 합니다.
+- Page 또는 UserControl에서 **UnloadObject**를 호출하고 개체 참조에 전달합니다.
+- **Windows.UI.Xaml.Markup.XamlMarkupHelper.UnloadObject**를 호출하고 개체 참조에 전달합니다.
 
-개체 언로드될 때 트리의 자리 표시자를 사용 하 여 대체 될 예정입니다. 개체 인스턴스는 릴리스된 모든 참조 될 때까지 메모리에 남아 있습니다. 페이지/UserControl에서 UnloadObject API 보유 떨어뜨리지 X:name 및 X:bind에 대 한 참조를 해제 하도록 설계 되었습니다. 앱 코드에서 추가 대 한 참조를 보유 하는 경우도 해제 해야 합니다.
+언로드된 개체는 트리에서 자리 표시자로 대체가 됩니다. 모든 참조가 해제될 때까지 개체 인스턴스는 메모리에 그대로 유지됩니다. Page/UserControl의 UnloadObject API는 x:Name 및 x:Bind에서 codegen이 보유한 참조를 해제하도록 설계되었습니다. 앱 코드에 추가 참조를 보유하고 있는 경우에도 이들을 해제해야 합니다.
 
-요소를 로드할 때 요소와 관련 된 모든 상태 삭제 됩니다, 그리고 따라서 표시 여부를 최적화 된 버전으로 X:load를 사용 하는 경우 다음 바인딩을 통해 적용 된 모든 상태를 확인 또는 Loaded 이벤트 발생 시 코드에 의해 다시 적용 됩니다.
+요소가 언로드되면 요소와 관련된 모든 상태가 삭제되기 때문에 x:Load를 최적화된 버전의 Visibility로 사용하는 경우에는 모든 상태가 바인딩을 통해 적용되었는지, 아니면 Loaded 이벤트가 발생할 때 코드에 의해 다시 적용되었는지 확인합니다.
 
 ## <a name="restrictions"></a>제한 사항
 
-**X:load** 를 사용 하기 위한 제한 됩니다.
+**x:Load** 사용에 대한 제한 사항은 다음과 같습니다.
 
-- [X:name](x-name-attribute.md)을 정의 해야요소에 대 한 경우가 되어야 할 나중에 요소를 찾을 수 있습니다.
-- X:load [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 또는 [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249)에서 파생 된 유형을 에서만 사용할 수 있습니다.
-- [**페이지**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol)또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)의 루트 요소에 X:load를 사용할 수 없습니다.
-- [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)요소에 X:load를 사용할 수 없습니다.
-- [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)로 로드 된 느슨한 XAML에서 X:load를 사용할 수 없습니다.
-- 부모 요소를 이동 로드 되지 않은 모든 요소가 지워집니다 됩니다.
+- 정의 해야 합니다는 [X:name](x-name-attribute.md) 요소 만큼 해야 나중에 요소를 찾을 수 있습니다.
+- [  **UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 또는 [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249)에서 파생된 형식에서만 x:Load를 사용할 수 있습니다.
+- [  **Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)의 루트 요소에서는 x:Load를 사용할 수 없습니다.
+- [  **ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 요소에서는 x:Load를 사용할 수 없습니다.
+- [  **XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)를 통해 로드된 느슨한 XAML에서는 x:Load를 사용할 수 없습니다.
+- 부모 요소를 이동하면 로드되지 않은 모든 요소가 지워집니다.
 
 ## <a name="remarks"></a>설명
 
-있지만 가장 바깥쪽 요소에서 실현 해야 중첩 된 요소에 X:load를 사용할 수 있습니다. 부모 요소를 실현하기 전에 자식 요소를 실현하려고 하면 예외가 발생합니다.
+중첩된 요소에서 x:Load를 사용할 수 있지만, 가장 바깥쪽 요소에서 실현해야 합니다.  부모 요소를 실현하기 전에 자식 요소를 실현하려고 하면 예외가 발생합니다.
 
-일반적으로 첫 번째 프레임에서 볼 수 없는 요소를 지연시키는 것이 좋습니다.지연할 후보 요소를 찾으려면 축소된 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992)로 만들려는 요소를 찾는 것이 좋습니다. 또한 사용자 조작에 의해 트리거되는 UI도 지연시킬 수 있는 요소를 찾기에 좋은 위치입니다.
+일반적으로 첫 번째 프레임에서 볼 수 없는 요소를 지연시키는 것이 좋습니다. 지연할 후보를 찾으려면 축소된 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992)로 만들려는 요소를 찾는 것이 좋습니다. 또한 사용자 조작에 의해 트리거되는 UI도 지연시킬 수 있는 요소를 찾기에 좋은 위치입니다.
 
-[**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)에서는 요소 지연에 조심해야 하는데, 시작 시간이 단축되지만 만드는 항목에 따라 이동 성능이 저하될 수 있기 때문입니다. 이동 성능을 향상시키려면 [{x:Bind} markup extension](x-bind-markup-extension.md) 및 [x:Phase attribute](x-phase-attribute.md) 설명서를 참조하세요.
+[  **ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)에서는 요소 지연에 조심해야 하는데, 시작 시간이 단축되지만 만드는 항목에 따라 이동 성능이 저하될 수 있기 때문입니다. 이동 성능을 향상시키려면 [{x:Bind} markup extension](x-bind-markup-extension.md) 및 [x:Phase attribute](x-phase-attribute.md) 설명서를 참조하세요.
 
-그런 다음 [X:phase 특성](x-phase-attribute.md) 은 **X:load** 와 함께에서 사용 요소 또는 요소 트리가 실현 되 면, 바인딩 및 현재 단계까지 적용 됩니다. **X:phase** 에 대해 지정 된 단계는에 영향을 미치거나 요소의 로드 상태를 제어 합니다. 목록 항목이 이동의 부분으로 재활용 되 면 실현 요소는 다른 활성 요소를 동일한 방식으로 동작 하 고, 컴파일된 바인딩 (**{x: Bind}** 바인딩)은 단계를 포함 하 여 동일한 규칙을 사용 하 여 처리 됩니다.
+[x:Phase attribute](x-phase-attribute.md)가 **x:Load**와 함께 사용되는 경우, 요소 또는 요소 트리가 실현되면 바인딩이 현재 단계까지 적용됩니다. **x:Phase**에 지정된 단계는 요소의 로드 상태에 영향을 미치거나 제어하지 않습니다. 목록 항목이 이동의 한 부분으로 재활용되면 실현된 요소는 다른 활성 요소와 같은 방식으로 동작하고, 컴파일된 바인딩(**{x:Bind}** 바인딩)은 단계를 포함하여 동일한 규칙을 사용해 처리됩니다.
 
 일반적인 지침은 이전과 이후에 앱의 성능을 측정하여 원하는 성능을 얻었는지 확인하기 위한 것입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```xml
 <StackPanel>

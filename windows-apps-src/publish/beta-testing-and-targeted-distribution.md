@@ -1,5 +1,5 @@
 ---
-Description: Partner Center gives you several options to let testers try out your app before you offer it to the public.
+Description: 파트너 센터 공개적으로 제공 하기 전에 앱을 사용해 테스터 수 있도록 몇 가지 옵션이 있습니다.
 title: 베타 테스트 및 대상이 지정된 배포
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
 ms.date: 10/31/2018
@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, UWP, 베타 테스트, 제한 배포, 베타, 베타들, 테스트, 테스터
 ms.localizationpriority: medium
 ms.openlocfilehash: 1560da53ebcc2b24bc9bc13034431c3a2208dfe5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944258"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597128"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>베타 테스트 및 대상이 지정된 배포
 
 아무리 엄격한 앱 테스트도 다른 사용자가 실제로 앱을 사용하는 현실 세계의 테스트만큼 엄격하지는 않습니다. 테스터는 맞춤법 오류, 명확하지 않은 앱 흐름, 앱 충돌을 초래할 수 있는 오류 등 개발자가 간과한 문제를 찾아낼 수 있습니다. 그런 다음 제출 앱을 공개적으로 릴리스하기 전에 문제를 수정할 기회가 생기므로 보다 다듬어진 최종 제품을 만들 수 있습니다. 
 
-파트너 센터에 게 제공 하기 전에 앱을 사용해 테스터 몇 가지 옵션이 있습니다.
+파트너 센터 공개적으로 제공 하기 전에 앱을 사용해 테스터 수 있도록 몇 가지 옵션이 있습니다.
 
 선택한 방법에 관계 없이 앱을 베타 테스트할 때 주의해야 할 몇 가지 사항이 있습니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "8944258"
 
 다른 사람이 이용하기 전에 테스터가 앱을 사용하도록 하고 다른 사람은 목록을 볼 수 없도록 하고 싶은 경우에는 [가시성](choose-visibility-options.md) 아래 **개인 대상**옵션을 사용합니다(제출서의 **가격 책정 및 가용성** 페이지에서). 직접 링크에 입력이 가능한 경우라도 다른 사람이 앱의 Store 목록을 보지 못하도록 철저하게 차단하는 동시에 테스터에게 앱을 배포할 수 있는 유일한 방법입니다. 
 
-**개인 대상** 옵션과 공중 대상에 앱 이미 게시 하지 않은 경우에 사용 수 있습니다. 이 옵션을 사용 하 여 모든 OS 버전을 대상으로 하는 앱과 하지만, 테스터가 Windows 10 버전 1607 이상 (Xbox One 포함)을 실행 해야 하 고 제공 하는 메일 주소와 연결 된 Microsoft 계정으로 로그인 해야 합니다.
+합니다 **개인 대상** 옵션 공용 대상에 게 앱에 이미 게시 하지 않은 경우 사용할 수만 있습니다. 모든 OS 버전을 대상으로 하는 앱을 사용 하 여이 옵션을 사용할 수 있지만 테스터 Windows 10 버전 1607 이상 (포함 하 여 Xbox One)를 실행 해야 하며 사용자가 제공한 전자 메일 주소와 연결 된 Microsoft 계정으로 로그인 해야 합니다.
 
 자세한 내용은 [개인 대상](choose-visibility-options.md#audience)을 참조하세요.
 
@@ -47,15 +47,15 @@ ms.locfileid: "8944258"
 
 <span id="hide" />
 
-## <a name="hiding-the-app-in-the-store-and-using-promotional-codes"></a>Store에서 앱 숨기기 및 홍보 코드 사용
+## <a name="hiding-the-app-in-the-store-and-using-promotional-codes"></a>스토어에서 앱 숨기기 및 홍보 코드 사용
 
-이 옵션은 누구도 스토어에서 앱을 검색 하지 못하도록 동시 테스터 특정 그룹 으로만 앱 배포를 제한할 수 있는 다른 방법을 제공 (또는 프로 모션 코드 없이 획득). 그러나 개인 대상 옵션과 달리, 직접 링크가 있는 경우에는 누구라도 앱 목록을 볼 수 있습니다. 제출에 있어 기밀성이 중요한 경우에는 대신에 개인 대상에 게시하는 것이 좋습니다.
+이 옵션은 때 다른 사용자가 스토어에서 앱을 검색 하지 않도록만 특정 그룹에 테스터를 앱의 배포를 제한 하는 다른 방법 (또는 프로 모션 코드 없이 획득) 합니다. 그러나 개인 대상 옵션과 달리, 직접 링크가 있는 경우에는 누구라도 앱 목록을 볼 수 있습니다. 제출에 있어 기밀성이 중요한 경우에는 대신에 개인 대상에 게시하는 것이 좋습니다.
 
 앱 숨기기 및 홍보 코드 이용 기능은 모든 OS 버전을 대상으로 하는 앱에서 사용이 가능하지만, Windows 10을 실행 중인 경우에만 테스터가 앱을 다운로드할 수 있습니다.
 
 이 옵션을 사용하려면
 
-- **가격 책정 및 가용성** 페이지의 **가시성** 섹션으로 이동하여 [검색 기능](choose-visibility-options.md#discoverability) 아래에서 **이 제품을 Store에서 다운로드는 가능하지만 검색은 불가능하게 설정**을 선택합니다. **취득 중지: 직접 링크가 있는 고객은 제품의 스토어 목록을 확인할 수 있지만, 과거 제품을 소유했거나, 판촉 코드가 있고, Windows 10 장치를 사용 중인 경우에만 다운로드 가능** 선택 사항을 선택합니다. 
+- **가격 책정 및 가용성** 페이지의 **가시성** 섹션으로 이동하여 [검색 기능](choose-visibility-options.md#discoverability) 아래에서 **이 제품을 Store에서 다운로드는 가능하지만 검색은 불가능하게 설정**을 선택합니다. 에 대 한 옵션을 선택 **취득을 중지 합니다. 직접 링크를 사용 하 여 모든 고객 제품의 스토어 목록을 볼 수 있지만 이러한 이전에 제품을 소유 또는 프로 모션 코드를 Windows 10 장치를 사용 하는 경우만 다운로드할 수 있습니다**합니다. 
 - 앱이 인증을 통과한 후 앱에 대한 [홍보 코드를 생성](generate-promotional-codes.md)하고 테스터에게 배포합니다. 6개월 동안 단일 앱에 대해 최대 1600의 교환이 가능한 코드를 생성할 수 있습니다. 이러한 코드는 테스터에게 앱 목록에 대한 직접 링크를 제공하며, 제출을 만들 때 가격을 설정한 경우에도 테스터가 무료로 다운로드하도록 허용합니다.
 - 앱을 공중 대상에게 제공할 준비가 되면 새 제출을 만들고 **가시성** 옵션을 **이 제품을 Store에서 다운로드 및 검색이 가능하게 설정**(변경하려는 다른 모든 사항 포함)으로 변경합니다.
 
@@ -65,16 +65,16 @@ ms.locfileid: "8944258"
 위에서 설명한 옵션과 달리, 이 옵션은 Windows 10을 비롯해 Windows Phone 8.1 고객을 위한 것입니다(단, Windows 8.x 고객은 지원하지 않음). 어떤 고객도 Store를 검색 또는 탐색해 앱을 찾을 수 없습니다. 그러나 Store 목록에 대한 직접 링크를 갖고 있는 고객은 Windows Phone 8.1 이전 버전을 실행하는 장치나 Windows 10에서 이를 다운로드 할 수 있습니다. 테스터가 앱을 무료로 다운로드하려면 가격을 **무료**로 설정해야 합니다.
 
 이 옵션을 사용하려면
-- **가격 책정 및 가용성** 페이지의 **가시성** 섹션으로 이동하여 [검색 기능](choose-visibility-options.md#discoverability) 아래에서 **이 제품을 Store에서 다운로드는 가능하지만 검색이 불가능하도록 설정**을 선택합니다. **직접 링크만: 제품 목록에 대한 직접 링크가 있는 고객은 다운로드 가능(Windows 8.x 제외)** 옵션을 선택합니다.
+- **가격 책정 및 가용성** 페이지의 **가시성** 섹션으로 이동하여 [검색 기능](choose-visibility-options.md#discoverability) 아래에서 **이 제품을 Store에서 다운로드는 가능하지만 검색은 불가능하게 설정**을 선택합니다. 에 대 한 옵션을 선택 **직접 링크: 제품의 목록에 직접 링크를 사용 하 여 모든 고객에서 다운로드할 수를 제외 하 고 Windows 8.x.** 합니다.
 - 제품이 게시된 후에 이를 한번 사용해 볼 수 있도록 링크([앱 ID 페이지](view-app-identity-details.md)의 **URL**)를 테스터에게 배포합니다.
 - 앱을 공중 대상에게 제공할 준비가 되면 새 제출을 만들고 **가시성** 옵션을 **이 제품을 Store에서 다운로드 및 검색이 가능하게 설정**(변경하려는 다른 모든 사항 포함)으로 변경합니다.
 
 > [!IMPORTANT]
-> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows Phone 대상으로 하는 패키지를 포함할 수 없습니다 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
+> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows Phone 대상으로 하는 패키지를 포함할 수 없습니다 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)합니다.
 
 ## <a name="targeted-distribution-to-windows-phone-customers-with-specified-email-addresses"></a>지정된 이메일 주소를 사용하여 Windows Phone 고객에게 배포
 
 > [!IMPORTANT]
 > 이 옵션은 새 제출에서 사용할 수 없습니다. Windows Phone 8.1 이전 버전을 대상으로 하는 앱에서 이 옵션을 선택한 경우에는 해당 앱에서 이를 계속 사용할 수 있습니다. 새 제출을 만들어서 테스터 목록(최대 10,000명)을 변경할 수 있습니다. 
 
-이 옵션에서는 지정된 이메일 주소를 가진 사용자가 목록에 대한 직접 링크를 사용하여 앱을 다운로드할 수 있습니다(Windows Phone 8.1 이전 버전만 실행 중인 장치에서). 링크를 가지고 있더라도 다른 고객들은 앱을 다운로드할 수 없으며, 검색 또는 탐색을 통해 Store에서 앱을 찾을 수 없습니다. 테스터가 앱을 다운로드할 수 있으려면 테스터에게 링크([앱 ID 페이지](view-app-identity-details.md)의 **URL**)를 제공해야 하고, 사용자가 제공한 이메일 주소에 연결된 Microsoft 계정으로 테스터가 로그인해야 합니다. 또한 가능 앱 사용할 수 있는 Windows10 장치의 테스터에 게 [홍보 코드를 생성](generate-promotional-codes.md)합니다. 앱의 홍보 코드 중 하나를 사용 하 여 모든 사용자가 다운로드 가능 Windows10 장치에 전자 여기 입력 하지 않은 경우에 합니다.
+이 옵션에서는 지정된 이메일 주소를 가진 사용자가 목록에 대한 직접 링크를 사용하여 앱을 다운로드할 수 있습니다(Windows Phone 8.1 이전 버전만 실행 중인 장치에서). 링크를 가지고 있더라도 다른 고객들은 앱을 다운로드할 수 없으며, 검색 또는 탐색을 통해 Store에서 앱을 찾을 수 없습니다. 테스터가 앱을 다운로드할 수 있으려면 테스터에게 링크([앱 ID 페이지](view-app-identity-details.md)의 **URL**)를 제공해야 하고, 사용자가 제공한 이메일 주소에 연결된 Microsoft 계정으로 테스터가 로그인해야 합니다. 사용할 수 있습니다도 앱에서 Windows 10 장치에서 테스터를 위한 [프로 모션 코드를 생성할](generate-promotional-codes.md); 여기에 해당 전자 메일을 입력 하지 않은 경우에 Windows 10 장치에 다운로드할 수 있습니다 누구나 앱의 프로 모션 코드 중 하나를 사용 하 여 합니다.

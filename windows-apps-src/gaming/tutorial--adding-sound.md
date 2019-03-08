@@ -1,66 +1,66 @@
 ---
 title: 소리 추가
-description: XAudio2 Api를 사용 하 여 재생 게임 음악 및 사운드 효과를 간단한 사운드 엔진을 개발 합니다.
+description: 재생 게임 음악 및 소리 효과를 XAudio2 Api를 사용 하 여 간단한 사운드 엔진을 개발 합니다.
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
 ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 사운드
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d5a976ef65bee5efc3329afc98bf198d094b037
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117843"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589938"
 ---
 # <a name="add-sound"></a>소리 추가
 
-이 항목에서는 [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) Api를 사용 하 여 간단한 사운드 엔진을 만듭니다. __XAudio2__을 처음 접하는 경우 [오디오 개념](#audio-concepts)에서 짧은 소개를 포함 되어 있습니다.
+이 항목에서는 간단한 사운드 엔진을 만듭니다 [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) Api. 처음 사용 하는 경우 __XAudio2__, 아래 짧은 소개 포함 했습니다 [오디오 개념](#audio-concepts)합니다.
 
 >[!Note]
 >이 샘플의 최신 게임 코드를 다운로드하지 않은 경우 [Direct3D 게임 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동합니다. 이 샘플은 UWP 기능 샘플의 큰 컬렉션의 일부입니다. 샘플을 다운로드하는 방법에 대한 지침은 [GitHub에서 UWP 샘플 가져오기](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)를 참조하세요.
 
 ## <a name="objective"></a>목표
 
-[XAudio2](/windows/desktop/xaudio2/xaudio2-introduction)를 사용 하 여 샘플 게임에 소리를 추가 합니다.
+사용 하 여 샘플 게임에 사운드를 추가 [XAudio2](/windows/desktop/xaudio2/xaudio2-introduction)합니다.
 
 ## <a name="define-the-audio-engine"></a>오디오 엔진 정의
 
 게임 샘플에서 오디오 개체와 동작은 다음 세 개의 파일에 정의됩니다.
 
-* __[Audio.h](#audioh)/.cpp__: 사운드 재생을 위한 __XAudio2__ 리소스를 포함 하는 __오디오__ 개체를 정의 합니다. 또한 게임이 일시 중지되거나 비활성화된 경우 오디오 재생을 일시 중단하고 다시 시작하는 메서드를 정의합니다.
-* __ [MediaReader.h](#mediareaderh)/.cpp__: 로컬 저장소에서 오디오.wav 파일을 읽는 메서드를 정의 합니다.
-* __ [SoundEffect.h](#soundeffecth)/.cpp__: 게임 내 사운드 재생을 위한 개체를 정의 합니다.
+* __[Audio.h](#audioh)/.cpp__: 정의 __오디오__ 포함 된 개체를 __XAudio2__ 소리 재생에 대 한 리소스입니다. 또한 게임이 일시 중지되거나 비활성화된 경우 오디오 재생을 일시 중단하고 다시 시작하는 메서드를 정의합니다.
+* __[MediaReader.h](#mediareaderh)/.cpp__: 로컬 저장소에서 오디오.wav 파일을 읽기 위한 메서드를 정의 합니다.
+* __[SoundEffect.h](#soundeffecth)/.cpp__: 게임에서 소리 재생을 위한 개체를 정의합니다.
 
 ## <a name="overview"></a>개요
 
-게임에 오디오 재생에 대 한 설정에 세 가지 주요 부분이 있습니다.
+게임에 오디오 재생에 대 한 설정의 세 가지 주요 부분이 있습니다.
 
-1. [만들기 및 오디오 리소스 초기화](#create-and-initialize-the-audio-resources)
+1. [만들기 및 오디오 리소스를 초기화 합니다.](#create-and-initialize-the-audio-resources)
 2. [오디오 파일 로드](#load-audio-file)
-3. [소리 개체에 연결](#associate-sound-to-object)
+3. [개체는 소리를 연결 합니다.](#associate-sound-to-object)
 
-모든 정의 된 [simple3dgame:: initialize](#simple3dgameinitialize-method) 메서드에서 합니다. 이제 먼저이 메서드를 검사 하 고 다음의 각 섹션에서 자세히 살펴볼 합니다.
+모두에 정의 된 [Simple3DGame::Initialize](#simple3dgameinitialize-method) 메서드. 그럼 먼저이 메서드를 검사 하 고 다음의 각 섹션에서 자세한 세부 정보에 자세히 알아보기.
 
-를 설정한 후 재생 소리 효과 트리거하는 방법에 알아봅니다 했습니다. 자세한 내용은 [소리를 재생](#play-the-sound)하려면 이동 합니다.
+를 설정한 후 재생할 소리 효과 트리거하는 방법을 설명 합니다. 자세한 내용은 이동 [소리를 재생](#play-the-sound)합니다.
 
-### <a name="simple3dgameinitialize-method"></a>Simple3dgame:: initialize 메서드
+### <a name="simple3dgameinitialize-method"></a>Simple3DGame::Initialize 메서드
 
-__Simple3dgame:: initialize__, 여기서 __m\_controller__ 및 __m\_renderer__ 도 초기화에서 오디오 엔진을 설정 하 고 소리를 재생 하려면 준비 합니다.
+__Simple3DGame::Initialize__여기서 __m\_컨트롤러__ 하 고 __m\_렌더러__ 는 또한 초기화 오디오 엔진을 설정 하 고 가져오기 소리를 재생할 준비가 되었습니다.
 
- * [오디오](#audioh) 클래스의 인스턴스인 __m\_audioController__만듭니다.
- * [Audio::CreateDeviceIndependentResources](#audiocreatedeviceindependentresources-method) 메서드를 사용 하 여 필요한 오디오 리소스를 만듭니다. 다음은, 두 개의 __XAudio2__ 개체 &mdash; 각각에 대 한 마스터 음성을 음악 엔진 개체 및 사운드 엔진 개체를 생성 합니다. 게임에 대 한 배경 음악을 재생 하는 음악 엔진 개체를 사용할 수 있습니다. 게임에 소리 효과 재생 소리 엔진을 사용할 수 있습니다. 자세한 내용은 참조 [만들기 및 오디오 리소스 초기화](#create-and-initialize-the-audio-resources)합니다.
- * [MediaReader](#mediareaderh) 클래스의 인스턴스인 __mediaReader__만듭니다. [MediaReader](#mediareaderh), [SoundEffect](#soundeffecth) 클래스에 대 한 도우미 클래스는 파일 위치에서 동기적으로 작은 오디오 파일을 읽고 고 바이트 배열로 사운드 데이터를 반환 합니다.
- * [Mediareader:: Loadmedia](#mediareaderloadmedia-method) 를 사용 하 여 해당 위치에서 사운드 파일을 로드 하 고 로드.wav 사운드 데이터를 저장할 __targetHitSound__ 변수를 만듭니다. 자세한 내용은 [부하 오디오 파일](#load-audio-file)을 참조 하세요. 
+ * 만들 __m\_audioController__의 인스턴스인 합니다 [오디오](#audioh) 클래스입니다.
+ * 사용 하 여 필요한 오디오 리소스를 만들려고 합니다 [Audio::CreateDeviceIndependentResources](#audiocreatedeviceindependentresources-method) 메서드. 여기, 두 __XAudio2__ 개체 &mdash; 음악 엔진 개체 및 사운드 엔진 개체 및 각각에 대해 마스터 음성 생성 되었습니다. 음악 엔진 개체 게임에 대 한 배경 음악을 재생 하는 데 사용할 수 있습니다. 사운드 엔진 게임에서 음향 효과 재생 하는 데 사용할 수 있습니다. 자세한 내용은 참조 하세요. [만들기 및 오디오 리소스 초기화](#create-and-initialize-the-audio-resources)합니다.
+ * 만들 __mediaReader__의 인스턴스인 [MediaReader](#mediareaderh) 클래스입니다. [MediaReader](#mediareaderh)에 대 한 도우미 클래스인 합니다 [SoundEffect](#soundeffecth) 클래스 읽기 작은 오디오 파일 위치에서 파일을 동기적으로 및 사운드 데이터를 바이트 배열로 반환 합니다.
+ * 사용 하 여 [MediaReader::LoadMedia](#mediareaderloadmedia-method) 사운드 파일을 해당 위치에서 로드 한를 __targetHitSound__ 로드할된.wav 사운드 데이터를 보유할 변수로 대체 합니다. 자세한 내용은 참조 하세요. [오디오 파일 로드](#load-audio-file)합니다. 
 
-사운드 효과 게임 개체와 연결 됩니다. 따라서 해당 게임 개체를 사용 하 여 충돌이 발생 하면 재생 되도록 소리 효과 트리거합니다. 이 게임 샘플에서 대상 및 탄약 (어떻게 사용 하 여 대상을 촬영을)에 대 한 사운드 효과 했습니다. 
+음향 효과 게임 개체와 연결 됩니다. 따라서 해당 게임 개체를 사용 하 여 충돌이 발생 하면 재생할 소리 효과를 트리거합니다. 이 게임 샘플에서는 음향 효과 (어떤를 사용 하 여 대상을 사용 하 여 문제를 해결) 탄약 및 대상 했습니다. 
     
-* __GameObject__ 클래스에서 소리 효과 개체를 연결 하는 데 사용 되는 __HitSound__ 속성이 있습니다.
-* [SoundEffect](#soundeffecth) 클래스의 새 인스턴스를 만들고 초기화 합니다. 초기화 하는 동안 소리 효과 대 한 원본 음성이 만들어집니다. 
-* 이 클래스는 [오디오](#audioh) 클래스에서 제공 하는 마스터링 음성을 사용 하 여 소리를 재생 합니다. 사운드 데이터는 [MediaReader](#mediareaderh) 클래스를 사용 하 여 파일 위치에서 읽습니다. 자세한 내용은 [연결 소리 개체를](#associate-sound-to-object)참조 하세요.
+* 에 __GameObject__ 클래스, 즉를 __HitSound__ 소리 효과 개체에 연결 하는 데 사용 되는 속성입니다.
+* 새 인스턴스를 만들고 합니다 [SoundEffect](#soundeffecth) 클래스 및 초기화 합니다. 초기화 하는 동안 소리 효과 대 한 원본 음성을 생성 됩니다. 
+* 이 클래스에서 제공 하는 마스터 음성을 사용 하 여 소리를 재생 합니다 [오디오](#audioh) 클래스입니다. 사운드 데이터를 사용 하 여 파일 위치에서 읽기를 [MediaReader](#mediareaderh) 클래스입니다. 자세한 내용은 참조 하세요. [개체는 소리 연결](#associate-sound-to-object)합니다.
 
 >[!Note]
->소리를 재생 하려면 실제 트리거 이동 및 이러한 게임 개체의 충돌에 의해 결정 됩니다. 따라서 실제로 이러한 소리를 재생에 대 한 호출 [Simple3DGame::UpdateDynamics](#simple3dgameupdatedynamics-method) 메서드에서 정의 됩니다. 자세한 내용은 [소리를 재생](#play-the-sound)하려면 이동 합니다.
+>소리를 재생 하려면 실제 트리거 이동 및 이러한 게임 개체의 충돌에 의해 결정 됩니다. 따라서 실제로 이러한 소리를 재생에 대 한 호출에 정의 된 [Simple3DGame::UpdateDynamics](#simple3dgameupdatedynamics-method) 메서드. 자세한 내용은 이동 [소리를 재생](#play-the-sound)합니다.
 
 ```cpp
 void Simple3DGame::Initialize(
@@ -127,12 +127,12 @@ void Simple3DGame::Initialize(
 }
 ```
 
-## <a name="create-and-initialize-the-audio-resources"></a>만들기 및 오디오 리소스 초기화
+## <a name="create-and-initialize-the-audio-resources"></a>만들기 및 오디오 리소스를 초기화 합니다.
 
-* [XAudio2Create](https://msdn.microsoft.com/library/windows/desktop/ee419212), XAudio2 API를 사용 하 여 음악 및 사운드 효과 엔진을 정의 하는 두 개의 새로운 XAudio2 개체를 만듭니다. 이 메서드는 오디오 처리 스레드, 음성 그래프 모든 오디오 엔진 상태를 관리 하는 개체의 [IXAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415908) 인터페이스에 대 한 포인터를 반환 합니다.
-* 엔진이 후 인스턴스화된, [ixaudio2:: Createmasteringvoice](https://msdn.microsoft.com/library/windows/desktop/hh405048) 를 사용 하 여 사운드 엔진 개체 각각에 대 한 마스터 음성을 만듭니다.
+* 사용 하 여 [XAudio2Create](https://msdn.microsoft.com/library/windows/desktop/ee419212), XAudio2 API 음악 및 소리 효과 엔진을 정의 하는 두 새 XAudio2 개체를 만듭니다. 이 메서드는 개체에 대 한 포인터를 반환 [IXAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415908) 모든 오디오 엔진을 관리 하는 인터페이스 상태, 오디오, 스레드, 음성 그래프 등을 처리 합니다.
+* 엔진에서 인스턴스화된 후 사용 하 여 [IXAudio2::CreateMasteringVoice](https://msdn.microsoft.com/library/windows/desktop/hh405048) 각 사운드 엔진 개체에 대 한 마스터 음성을 만들려고 합니다.
 
-자세한 내용을 보려면 [하는 방법: XAudio2 초기화](https://msdn.microsoft.com/library/windows/desktop/ee415779.aspx)합니다.
+자세한 내용은 이동 [방법: XAudio2 초기화](https://msdn.microsoft.com/library/windows/desktop/ee415779.aspx)합니다.
 
 ### <a name="audiocreatedeviceindependentresources-method"></a>Audio::CreateDeviceIndependentResources 메서드
 
@@ -168,33 +168,33 @@ void Audio::CreateDeviceIndependentResources()
 
 ## <a name="load-audio-file"></a>오디오 파일 로드
 
-게임 샘플에서 오디오 형식 파일을 읽는 코드 [MediaReader.h](#mediareaderh)/cpp__에서 정의 됩니다.  인코드된.wav 오디오 파일로 읽으려는 [mediareader:: Loadmedia](#mediareaderloadmedia-method)의 입력된 매개 변수로.wav 파일 이름에 전달 하 여 호출 합니다.
+게임 샘플에 오디오 형식 파일을 읽기 위한 코드 정의 [MediaReader.h](#mediareaderh)/cpp__ 합니다.  호출로 인코딩된.wav 오디오 파일을 읽으려면 [MediaReader::LoadMedia](#mediareaderloadmedia-method)의 입력된 매개 변수로.wav 파일 이름을 전달 합니다.
 
-### <a name="mediareaderloadmedia-method"></a>Mediareader:: Loadmedia 메서드
+### <a name="mediareaderloadmedia-method"></a>MediaReader::LoadMedia 메서드
 
 이 메서드는 [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) API를 사용하여 .wav 오디오 파일을 PCM(Pulse Code Modulation) 버퍼로 읽습니다.
 
-#### <a name="set-up-the-source-reader"></a>원본 뷰어 설정
+#### <a name="set-up-the-source-reader"></a>원본 판독기 설정
 
-1. [MFCreateSourceReaderFromURL](https://msdn.microsoft.com/library/windows/desktop/dd388110) 를 사용 하 여 미디어 원본 뷰어 ([IMFSourceReader](https://msdn.microsoft.com/library/windows/desktop/dd374655))를 만듭니다.
-2. [MFCreateMediaType](https://msdn.microsoft.com/library/windows/desktop/ms693861) 를 사용 하 여 미디어 유형 ([IMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms704850)) 개체 (_mediaType_)를 만듭니다. 미디어 형식에 대 한 설명을 나타냅니다. 
-3. 디코드된 출력 _mediaType_의 __XAudio2__ 사용할 수 있는 오디오 유형인 PCM 오디오가 되도록 지정 합니다.
-4. [:: Setcurrentmediatype](https://msdn.microsoft.com/library/windows/desktop/dd374667.aspx)호출 하 여 원본 뷰어 디코딩된 출력 미디어 유형을 설정 합니다.
+1. 사용 하 여 [MFCreateSourceReaderFromURL](https://msdn.microsoft.com/library/windows/desktop/dd388110) 미디어 원본 판독기를 만들려면 ([IMFSourceReader](https://msdn.microsoft.com/library/windows/desktop/dd374655)).
+2. 사용 하 여 [MFCreateMediaType](https://msdn.microsoft.com/library/windows/desktop/ms693861) 미디어 형식을 만들려면 ([IMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms704850)) 개체 (_mediaType_). 미디어 형식에 대 한 설명을 나타냅니다. 
+3. 지정 합니다 _mediaType_의 디코딩된 출력은 오디오 PCM 오디오를 입력 하는 __XAudio2__ 사용할 수 있습니다.
+4. 호출 하 여 원본 판독기에 대 한 디코딩된 출력 미디어 유형 집합 [IMFSourceReader::SetCurrentMediaType](https://msdn.microsoft.com/library/windows/desktop/dd374667.aspx)합니다.
 
-원본 뷰어 사용 하 여 이유에 대 한 자세한 내용은 [소스 판독기](https://msdn.microsoft.com/library/windows/desktop/dd940436.aspx)으로 이동 합니다.
+에 대 한 자세한 내용은 원본 판독기를 사용 하는 이유,로 이동 [원본 판독기](https://msdn.microsoft.com/library/windows/desktop/dd940436.aspx)합니다.
 
-#### <a name="describe-the-data-format-of-the-audio-stream"></a>오디오 스트림의 데이터 형식을 설명합니다
+#### <a name="describe-the-data-format-of-the-audio-stream"></a>데이터 형식의 오디오 스트림 설명
 
-1. [Imfsourcereader:: Getcurrentmediatype](https://msdn.microsoft.com/library/windows/desktop/dd374660) 를 사용 하 여 스트림에 대 한 현재 미디어 형식을 가져옵니다.
-2. [IMFMediaType::MFCreateWaveFormatExFromMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms702177) 를 사용 하 여 이전 작업의 결과 사용 하 여 입력으로 [WAVEFORMATEX](https://msdn.microsoft.com/library/windows/hardware/ff538799) 버퍼를 현재 오디오 미디어 형식을 변환 합니다. 이 구조에는 오디오를 로드 한 후에 사용 되는 진행할 오디오 스트림의 데이터 형식을 지정 합니다. 
+1. 사용 하 여 [IMFSourceReader::GetCurrentMediaType](https://msdn.microsoft.com/library/windows/desktop/dd374660) 스트림에 대 한 현재 미디어 형식을 가져오려고 합니다.
+2. 사용 하 여 [IMFMediaType::MFCreateWaveFormatExFromMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms702177) 변환할 현재 오디오 미디어 유형입니다는 [WAVEFORMATEX](https://msdn.microsoft.com/library/windows/hardware/ff538799) 버퍼를 입력으로 이전 작업의 결과 사용 합니다. 이 구조는 웨이브 오디오 스트림을 오디오 로드 된 후에 사용 되는 데이터 형식을 지정 합니다. 
 
-__WAVEFORMATEX__ 형식은 PCM 버퍼를 설명 하기 위해 사용할 수 있습니다. [WAVEFORMATEXTENSIBLE](https://msdn.microsoft.com/library/windows/hardware/ff538802) 구조와 비교할 때만 사용할 수 오디오 진행할 형식의 하위 집합을 설명 하기 위해 합니다. __WAVEFORMATEX__ 와 __WAVEFORMATEXTENSIBLE__간의 차이점에 대 한 자세한 내용은 [Extensible 진행할 형식 설명자](https://docs.microsoft.com/windows-hardware/drivers/audio/extensible-wave-format-descriptors)를 참조 하세요.
+합니다 __WAVEFORMATEX__ 형식은 PCM 버퍼를 설명 하기 위해 사용할 수 있습니다. 비교 했을 때를 [WAVEFORMATEXTENSIBLE](https://msdn.microsoft.com/library/windows/hardware/ff538802) 구조를 사용할 수 있습니다만 오디오 wave 형식의 하위 집합을 설명 합니다. 간의 차이점에 대 한 자세한 내용은 __WAVEFORMATEX__ 및 __WAVEFORMATEXTENSIBLE__를 참조 하십시오 [확장할 수 있는 웨이브 형식 설명자](https://docs.microsoft.com/windows-hardware/drivers/audio/extensible-wave-format-descriptors)합니다.
 
-#### <a name="read-the-audio-stream"></a>오디오 스트림 읽기
+#### <a name="read-the-audio-stream"></a>오디오 스트림에서 읽기
 
-1.  기간을 바이트로 기간 [imfsourcereader:: Getpresentationattribute](https://msdn.microsoft.com/library/windows/desktop/dd374662) 및 변환을 호출 하 여 오디오 스트림의 초 단위로 가져옵니다.
-2.  [:: Readsample](https://msdn.microsoft.com/library/windows/desktop/dd374665)를 호출 하 여에서 오디오 파일을 스트림으로 읽습니다. __ReadSample__ 미디어 소스에서 다음 샘플을 읽습니다.
-3.  [IMFSample::ConvertToContiguousBuffer](https://msdn.microsoft.com/library/windows/desktop/ms698917.aspx) 를 사용 하 여 (_샘플_) 오디오 샘플 버퍼의 내용을 배열 (_mediaBuffer_)에 복사 합니다.
+1.  가져오기는 기간 (초)를 호출 하 여 오디오 스트림의 [IMFSourceReader::GetPresentationAttribute](https://msdn.microsoft.com/library/windows/desktop/dd374662) 바이트를 지속 시간을 변환 합니다.
+2.  오디오 파일을 호출 하 여 스트림으로 읽는 [IMFSourceReader::ReadSample](https://msdn.microsoft.com/library/windows/desktop/dd374665)합니다. __ReadSample__ 미디어 소스에서 다음 샘플을 읽습니다.
+3.  사용 하 여 [IMFSample::ConvertToContiguousBuffer](https://msdn.microsoft.com/library/windows/desktop/ms698917.aspx) 오디오 샘플 버퍼의 내용을 복사할 (_샘플_)을 배열로 (_mediaBuffer_).
 
 ```cpp
 Platform::Array<byte>^ MediaReader::LoadMedia(_In_ Platform::String^ filename)
@@ -293,17 +293,17 @@ Platform::Array<byte>^ MediaReader::LoadMedia(_In_ Platform::String^ filename)
     return fileData;
 }
 ```
-## <a name="associate-sound-to-object"></a>소리 개체에 연결
+## <a name="associate-sound-to-object"></a>개체는 소리를 연결 합니다.
 
-소리 개체에 연결 [simple3dgame:: initialize](#simple3dgameinitialize-method) 메서드에서 게임 초기화 될 때 수행이 됩니다.
+게임 초기화 때 발생 하는 개체에 소리를 연결 합니다 [Simple3DGame::Initialize](#simple3dgameinitialize-method) 메서드.
 
-요점:
-* __GameObject__ 클래스에서 소리 효과 개체를 연결 하는 데 사용 되는 __HitSound__ 속성이 있습니다.
-* [SoundEffect](#soundeffecth) 클래스 개체의 새 인스턴스를 만들고 게임 개체와 연결 합니다. 이 클래스는 __XAudio2__ Api를 사용 하 여 소리를 재생 합니다.  [Audio](#audioh) 클래스에서 제공 하는 마스터링 음성을 사용 합니다. [MediaReader](#mediareaderh) 클래스를 사용 하 여 파일 위치에서 사운드 데이터를 읽을 수 있습니다.
+요약:
+* 에 __GameObject__ 클래스, 즉를 __HitSound__ 소리 효과 개체에 연결 하는 데 사용 되는 속성입니다.
+* 새 인스턴스를 만들고 합니다 [SoundEffect](#soundeffecth) 개체 클래스 및 게임 개체와 연결 합니다. 이 클래스를 사용 하는 사운드 재생 __XAudio2__ Api.  제공한 마스터 음성을 사용 합니다 [오디오](#audioh) 클래스입니다. 사운드 데이터를 사용 하 여 파일 위치에서 읽을 수 있습니다 합니다 [MediaReader](#mediareaderh) 클래스입니다.
 
-[Soundeffect:: Initialize](#soundeffectinitialize-method) __SoundEffect__ 인스턴스 다음 입력된 매개 변수를 사용 하 여 초기화 하는 데 사용 됩니다: 사운드 엔진 개체 (IXAudio2 [Audio::CreateDeviceIndependentResources](#audiocreatedeviceindependentresources-method) 메서드에서 만든 개체)에 대 한 포인터 형식에 대 한 포인터는.wav의 __mediareader:: Getoutputwaveformatex__및 사운드 데이터를 사용 하 여 파일 [mediareader:: Loadmedia](#mediareaderloadmedia-method) 메서드를 사용 하 여 로드 합니다. 초기화 하는 동안 소리 효과 대 한 원본 음성 생성 됩니다.
+[SoundEffect::Initialize](#soundeffectinitialize-method) 초기화 하는 데 사용 되는 __SoundEffect__ 다음 입력된 매개 변수를 사용 하 여 인스턴스: 사운드 엔진 개체에 대 한 포인터 (IXAudio2 개체에서 만든는 [오디오: CreateDeviceIndependentResources](#audiocreatedeviceindependentresources-method) 메서드), 형식에 대 한 포인터 사용 하 여.wav 파일 __MediaReader::GetOutputWaveFormatEx__를 사용 하 여 사운드 데이터 로드 및 [MediaReader::LoadMedia ](#mediareaderloadmedia-method) 메서드. 초기화 하는 동안 소리 효과 대 한 원본 음성도 생성 됩니다.
 
-### <a name="soundeffectinitialize-method"></a>Soundeffect:: Initialize 메서드
+### <a name="soundeffectinitialize-method"></a>SoundEffect::Initialize 메서드
 
 ```cpp
 void SoundEffect::Initialize(
@@ -331,19 +331,19 @@ void SoundEffect::Initialize(
 }
 ```
 
-## <a name="play-the-sound"></a>소리를 재생 합니다.
+## <a name="play-the-sound"></a>소리 재생
 
-소리 효과 재생 하는 트리거 있는 개체의 움직임 업데이트 되 고 개체 간 충돌 결정 되 이므로 [Simple3DGame::UpdateDynamics](#simple3dgameupdatedynamics-method) 메서드 정의 되어 있습니다.
+에 음향 효과 재생 하려면 트리거가 정의 [Simple3DGame::UpdateDynamics](#simple3dgameupdatedynamics-method) 메서드는 개체의 이동 업데이트 되 고 개체 간의 충돌 이기 때문에 결정 됩니다.
 
-게임에 따라 크게 달라 집니다 개체 간의 상호 작용 하므로 하지 하겠습니다 여기 게임 개체의 역학에 설명 합니다. 관심이 있는 경우 구현 이해 하려면, [Simple3DGame::UpdateDynamics](#simple3dgameupdatedynamics-method) 방법으로 이동 합니다.
+게임을 따라 크게 달라 집니다 개체 간의 상호 작용 하므로 여기 게임 개체의 동적 특성을 설명 하지 않습니다. 로 이동 하는 구현 방식을 이해 하려면 싶다면 [Simple3DGame::UpdateDynamics](#simple3dgameupdatedynamics-method) 메서드.
 
-원칙적으로 충돌이 발생 하기 **soundeffect:: Playsound**호출 하 여 재생 하기 위해 소리 효과를 트리거합니다. 이 메서드는 현재 재생 되 고 메모리 버퍼 원하는 사운드 데이터가 대기 하는 모든 소리 효과 중지 합니다. 원본 음성을 사용 하 여 볼륨 설정, 사운드 데이터를 제출 하 고 재생을 시작 합니다.
+원칙적으로 충돌이 발생 하는 경우 해당 트리거를 호출 하 여 재생할 소리 효과 **SoundEffect::PlaySound**합니다. 이 메서드는 현재 재생 중인 소리 원하는 데이터를 사용 하 여 메모리 내 버퍼를 큐에 모든 음향 효과 중지 합니다. 원본 음성 사용 하 여 볼륨 설정, 사운드 데이터 전송 및 재생을 시작 합니다.
 
-### <a name="soundeffectplaysound-method"></a>Soundeffect:: Playsound 메서드
+### <a name="soundeffectplaysound-method"></a>SoundEffect::PlaySound 메서드
 
-* 원본 음성 개체 **m\_sourceVoice** 를 사용 하 여 사운드 데이터 버퍼 **m\_soundData** 의 재생을 시작 하려면
-* [XAUDIO2\_BUFFER](https://msdn.microsoft.com/library/windows/desktop/ee419228), 하려는 것 사운드 데이터 버퍼에 대 한 참조를 제공 하 고 다음 제출 [ixaudio2sourcevoice:: Submitsourcebuffer](https://msdn.microsoft.com/library/windows/desktop/ee418473)호출 하 여 만듭니다. 
-* 사운드 데이터가 대기하고 있으면 **SoundEffect::PlaySound**에서 [IXAudio2SourceVoice::Start](https://msdn.microsoft.com/library/windows/desktop/ee418471)를 호출하여 재생을 시작합니다.
+* 원본 음성 개체를 사용 하 여 **m\_sourceVoice** 사운드 데이터 버퍼의 재생을 시작 하 **m\_soundData**
+* 만듭니다는 [XAUDIO2\_버퍼](https://msdn.microsoft.com/library/windows/desktop/ee419228)하는 사운드 데이터 버퍼에 대 한 참조를 제공 하 고 다음에 대 한 호출을 사용 하 여 전송 [IXAudio2SourceVoice::SubmitSourceBuffer](https://msdn.microsoft.com/library/windows/desktop/ee418473)합니다. 
+* 사운드 데이터로 대기 **SoundEffect::PlaySound** 시작 호출 하 여 재생 [IXAudio2SourceVoice::Start](https://msdn.microsoft.com/library/windows/desktop/ee418471)합니다.
 
 ```cpp
 void SoundEffect::PlaySound(_In_ float volume)
@@ -382,7 +382,7 @@ void SoundEffect::PlaySound(_In_ float volume)
 
 ### <a name="simple3dgameupdatedynamics-method"></a>Simple3DGame::UpdateDynamics 메서드
 
-상호 작용 및 게임 개체 간 충돌 __Simple3DGame::UpdateDynamics__ 메서드를 처리합니다. 충돌 (개체나 교차), 관련된 소리 효과를 재생을 트리거합니다.
+합니다 __Simple3DGame::UpdateDynamics__ 메서드는 상호 작용 및 게임 개체 간의 충돌 담당 합니다. 개체 충돌, 교차 하는 경우 재생 하려면 연결 된 소리 효과를 트리거합니다.
 
 ```cpp
 void Simple3DGame::UpdateDynamics()
@@ -453,35 +453,35 @@ void Simple3DGame::UpdateDynamics()
 ```
 ## <a name="next-steps"></a>다음 단계
 
-우리는 UWP 프레임 워크, 그래픽, 컨트롤, 사용자 인터페이스 및 Windows 10 게임의 오디오 처리 됩니다. [게임 샘플 확장](tutorial-resources.md),이 자습서의 다음 부분 게임을 개발 하는 경우 사용할 수 있는 다른 옵션을 설명 합니다.
+UWP 프레임 워크, 그래픽, 컨트롤, 사용자 인터페이스 및 Windows 10 게임의 오디오 설명 했습니다. 이 자습서의 다음 부분 [게임 샘플 확장](tutorial-resources.md), 게임을 개발할 때 사용할 수 있는 다른 옵션을 설명 합니다.
 
 ## <a name="audio-concepts"></a>오디오 개념
 
-Windows 10 게임 개발을 위한 XAudio2 버전 2.9를 사용 합니다. 이 버전은 Windows 10과 함께 제공 됩니다. 자세한 내용은 [XAudio2 버전](https://msdn.microsoft.com/library/windows/desktop/ee415802.aspx)으로 이동 합니다.
+Windows 10 게임 개발을 위한 XAudio2 버전 2.9를 사용 합니다. 이 버전은 Windows 10과 함께 제공 됩니다. 자세한 내용은 이동 [XAudio2 버전](https://msdn.microsoft.com/library/windows/desktop/ee415802.aspx)합니다.
 
-__AudioX2__ 신호 처리 및 믹싱 기초를 제공 하는 하위 수준 API입니다. 자세한 내용은 [XAudio2 주요 개념](https://msdn.microsoft.com/library/windows/desktop/ee415764.aspx)을 참조 하세요.
+__AudioX2__ 는 신호 처리 및 foundation 혼합 제공 하는 하위 수준 API. 자세한 내용은 참조 하세요. [XAudio2 주요 개념](https://msdn.microsoft.com/library/windows/desktop/ee415764.aspx)합니다.
 
 ### <a name="xaudio2-voices"></a>XAudio2 음성
 
-세 가지 유형의 XAudio2 음성 개체가 가지: 원본, 서브 믹스 및 마스터링 음성 합니다. 음성은 XAudio2 개체 사용 처리, 조작 및 오디오 데이터를 재생 합니다. 
+XAudio2 음성 개체의 세 가지 종류가 있습니다: 원본를 및 음성을 마스터 합니다. 음성은 XAudio2 개체 처리, 조작 및 오디오 데이터를 재생 하는 데 사용 됩니다. 
 * 원본 음성은 클라이언트에서 제공한 오디오 데이터에서 작동합니다. 
 * 원본 및 서브믹스 음성은 해당 출력을 하나 이상의 서브믹스 또는 마스터링 음성으로 보냅니다. 
 * 서브믹스 및 마스터링 음성은 해당 음성을 공급하는 모든 음성으로부터 오디오를 믹싱하고 그 결과에서 작동합니다. 
-* 마스터링 음성은 원본 음성 및 서브 믹스 음성에서 데이터를 받 및 해당 데이터를 오디오 하드웨어에 보냅니다.
+* 마스터 음성 원본 음성 및 믹스 음성 데이터를 수신 하 고 오디오 하드웨어에 해당 데이터를 보냅니다.
 
-자세한 내용은 [XAudio2 음성](/windows/desktop/xaudio2/xaudio2-voices)으로 이동 합니다.
+자세한 내용은 이동 [XAudio2 음성](/windows/desktop/xaudio2/xaudio2-voices)합니다.
 
 ### <a name="audio-graph"></a>오디오 그래프
 
-오디오 그래프는 [XAudio2 음성](/windows/desktop/xaudio2/xaudio2-voices)의 모음입니다. 오디오 원본 음성의 오디오 그래프의 한쪽에서 시작 하 고, 선택적으로 하나 이상의 서브 믹스 음성 통과, 마스터링 음성에서 끝납니다. 오디오 그래프는 현재 재생, 서브 믹스 음성 0 개 이상의 각 소리의 원본 음성 및 마스터 음성 1 개가 포함 됩니다. 가장 간단한 오디오 그래프 및 XAudio2에서 노이즈를 만드는 데 필요한 최소 마스터 음성에 직접 출력 단일 원본 음성입니다. 자세한 내용은 [오디오 그래프](https://msdn.microsoft.com/library/windows/desktop/ee415739.aspx)으로 이동 합니다.
+오디오 그래프의 컬렉션인 [XAudio2 음성](/windows/desktop/xaudio2/xaudio2-voices)합니다. 오디오 소스 음성의 오디오 그래프의 한 쪽에서 시작 하 고, 필요에 따라 하나 이상의 믹스 음성 통과, 마스터 음성에서 끝납니다. 각 현재 재생 중인 소리를 0 개 이상의 믹스 음성에 대 한 원본 음성 및 하나의 마스터 음성 오디오 그래프를 포함 됩니다. 가장 간단한 오디오 그래프 및 XAudio2에 노이즈를 확인 하는 데 필요한 최소 마스터 음성에 직접 출력을 단일 소스 음성입니다. 자세한 내용은 이동 [오디오 그래프](https://msdn.microsoft.com/library/windows/desktop/ee415739.aspx)합니다.
 
-### <a name="additional-reading"></a>추가 정보
+### <a name="additional-reading"></a>더 보기
 
 * [방법: XAudio2 초기화](https://msdn.microsoft.com/library/windows/desktop/ee415779.aspx)
-* [방법: XAudio2에 오디오 데이터 파일 로드](https://msdn.microsoft.com/library/windows/desktop/ee415781(v=vs.85).aspx)
-* [방법: XAudio2를 사용한 소리 재생](https://msdn.microsoft.com/library/windows/desktop/ee415787.aspx)
+* [방법: XAudio2의 오디오 데이터 파일 로드](https://msdn.microsoft.com/library/windows/desktop/ee415781(v=vs.85).aspx)
+* [방법: XAudio2 사용 하 여 소리 재생](https://msdn.microsoft.com/library/windows/desktop/ee415787.aspx)
 
-## <a name="key-audio-h-files"></a>주요 오디오.h 파일
+## <a name="key-audio-h-files"></a>키 오디오.h 파일
 
 ### <a name="audioh"></a>Audio.h
 

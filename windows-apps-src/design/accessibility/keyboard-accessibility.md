@@ -1,5 +1,5 @@
 ---
-Description: If your app does not provide good keyboard access, users who are blind or have mobility issues can have difficulty using your app or may not be able to use it at all.
+Description: 따라서 앱의 키보드 접근성이 좋지 않을 경우 시각 장애나 이동성 문제가 있는 사용자가 앱을 사용하는 데 어려움을 겪거나 아예 사용하지 못할 수 있습니다.
 ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: 키보드 접근성
 label: Keyboard accessibility
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ad64c2a0d4d7569ec2c0c0a44f9236fc4b2819f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045522"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602068"
 ---
 # <a name="keyboard-accessibility"></a>키보드 접근성  
 
@@ -56,11 +56,11 @@ XAML
 
 일반적으로 포커스가 있는 모든 요소는 기본적으로 탭 순서에 있습니다. 텍스트 선택을 위해 클립보드에서 액세스할 수 있도록 [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) 같은 특정 텍스트 표시 형식에 포커스가 있는 경우는 예외입니다. 그러나 정적 텍스트 요소가 탭 순서에 있어서는 안 되므로 탭 순서에 없습니다. 정적 요소는 기본적으로 대화형이 아니므로 호출할 수 없으며 텍스트 입력을 요구하지 않지만 텍스트의 선택 포인트 찾기 및 조정을 지원하는 [텍스트 컨트롤 패턴](https://msdn.microsoft.com/library/windows/desktop/Ee671194)은 지원합니다. 텍스트는 포커스를 설정하면 가능한 일부 동작을 사용하도록 설정하는 의미가 없어야 합니다. 텍스트 요소는 보조 기술에 의해 검색되고 화면 프로그램에서 소리 내어 읽지만 특정 탭 순서에서 해당 요소를 찾는 것과는 다른 기술을 사용합니다.
 
-[**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) 값을 조정할지 기본 순서를 사용할지에 따라 다음 규칙이 적용됩니다.
+[  **TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) 값을 조정할지 기본 순서를 사용할지에 따라 다음 규칙이 적용됩니다.
 
-* [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461)가 0인 UI 요소는 XAML 또는 자식 컬렉션의 선언 순서를 기준으로 탭 순서에 추가됩니다.
-* [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461)가 0보다 큰 UI 요소는 **TabIndex** 값을 기준으로 탭 순서에 추가됩니다.
-* [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461)가 0보다 작은 UI 요소는 탭 순서에 추가되며 0 값 앞에 나타납니다. 이것은 잠재적으로 HTML에서 **tabindex** 특성을 처리하는 것과는 다르며, 이전 HTML 사양에서는 음의 **tabindex**가 지원되지 않았습니다.
+* [  **TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461)가 0인 UI 요소는 XAML 또는 자식 컬렉션의 선언 순서를 기준으로 탭 순서에 추가됩니다.
+* [  **TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461)가 0보다 큰 UI 요소는 **TabIndex** 값을 기준으로 탭 순서에 추가됩니다.
+* [  **TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461)가 0보다 작은 UI 요소는 탭 순서에 추가되며 0 값 앞에 나타납니다. 이것은 잠재적으로 HTML에서 **tabindex** 특성을 처리하는 것과는 다르며, 이전 HTML 사양에서는 음의 **tabindex**가 지원되지 않았습니다.
 
 <span id="keyboard_navigation_within_a_UI_element"/>
 <span id="keyboard_navigation_within_a_ui_element"/>
@@ -73,11 +73,11 @@ XAML
 <span id="KEYBOARD_ACTIVATION"/>
 
 ## <a name="keyboard-alternatives-to-pointer-actions-and-events-for-specific-control-elements"></a>특정 컨트롤 이벤트의 포인터 동작 및 이벤트를 대신하는 키보드  
-클릭할 수 있는 UI 요소는 키보드를 사용해서도 호출할 수 있어야 합니다. UI 요소와 함께 키보드를 사용하려면 요소에 포커스가 있어야 합니다. [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390)에서 파생되는 클래스만 포커스 및 탭 탐색을 지원합니다.
+클릭할 수 있는 UI 요소는 키보드를 사용해서도 호출할 수 있어야 합니다. UI 요소와 함께 키보드를 사용하려면 요소에 포커스가 있어야 합니다. [  **Control**](https://msdn.microsoft.com/library/windows/apps/BR209390)에서 파생되는 클래스만 포커스 및 탭 탐색을 지원합니다.
 
 호출할 수 있는 UI 요소의 경우 스페이스바 및 Enter 키에 대한 키보드 이벤트 처리기를 구현합니다. 이렇게 하면 기본 키보드 접근성 지원이 완벽해지고 사용자가 키보드만 사용하여 기본 앱 시나리오를 수행할 수 있습니다. 즉, 사용자는 모든 대화형 UI 요소에 액세스하고 기본 기능을 활성화할 수 있습니다.
 
-UI에서 사용하려는 요소에 포커스가 없는 경우 사용자 지정 컨트롤을 직접 만들 수 있습니다. [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) 속성을 **true**로 설정하여 포커스를 사용하도록 설정하고 포커스 표시기로 UI를 데코레이트하는 시각적 상태를 만들어 포커스된 상태의 시각적 표시를 제공해야 합니다. 그러나 포함된 콘텐츠를 구성하기 위해 선택한 컨트롤로 탭 중지, 포커스, Microsoft UI 자동화 피어 및 패턴에 대한 지원을 처리하도록 컨트롤 컴퍼지션을 이용하는 것이 더욱 간편합니다.
+UI에서 사용하려는 요소에 포커스가 없는 경우 사용자 지정 컨트롤을 직접 만들 수 있습니다. [  **IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) 속성을 **true**로 설정하여 포커스를 사용하도록 설정하고 포커스 표시기로 UI를 데코레이트하는 시각적 상태를 만들어 포커스된 상태의 시각적 표시를 제공해야 합니다. 그러나 포함된 콘텐츠를 구성하기 위해 선택한 컨트롤로 탭 중지, 포커스, Microsoft UI 자동화 피어 및 패턴에 대한 지원을 처리하도록 컨트롤 컴퍼지션을 이용하는 것이 더욱 간편합니다.
 
 예를 들어 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752)에서 포인터 누름 이벤트를 처리하는 대신 포인터, 키보드 및 포커스 지원을 가져오도록 해당 요소를 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)에 래핑할 수 있습니다.
 
@@ -103,7 +103,7 @@ XAML
 
 따라서 화면 읽기 프로그램 및 다른 보조 기술을 사용하는 사용자에게 앱의 바로 가기 키를 찾을 수 있는 손쉬운 방법을 제공할 필요가 있습니다. 도구 설명, 접근성 있는 이름, 접근성 있는 설명 또는 몇 가지 다른 형식의 화면 통신을 사용하여 바로 가기 키를 제공합니다. 최소한 바로 가기 키에 대한 설명이 앱의 도움말 콘텐츠에 잘 나타나 있어야 합니다.
 
-[**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) 연결된 속성을 바로 가기 키를 설명하는 문자열로 설정하여 화면 읽기 프로그램을 통해 액세스 키를 문서화할 수 있습니다. 또한 니모닉이 아닌 바로 가기 키를 문서화하는 데 사용하는 [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) 연결된 속성도 있습니다. 단, 화면 읽기 프로그램은 대개 두 속성을 같은 방식으로 처리합니다. 도구 설명, 자동화 속성 및 작성된 도움말 문서를 사용하여 여러 가지 방법으로 바로 가기 키를 문서화합니다.
+[  **AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) 연결된 속성을 바로 가기 키를 설명하는 문자열로 설정하여 화면 읽기 프로그램을 통해 액세스 키를 문서화할 수 있습니다. 또한 니모닉이 아닌 바로 가기 키를 문서화하는 데 사용하는 [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) 연결된 속성도 있습니다. 단, 화면 읽기 프로그램은 대개 두 속성을 같은 방식으로 처리합니다. 도구 설명, 자동화 속성 및 작성된 도움말 문서를 사용하여 여러 가지 방법으로 바로 가기 키를 문서화합니다.
 
 다음 예제에서는 미디어 재생, 일시 중지 및 중지 단추에 대한 바로 가기 키를 문서화하는 방법을 보여 줍니다.
 
@@ -144,7 +144,7 @@ XAML
 ```
 
 > [!IMPORTANT]
-> [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) 또는 [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) 설정을 통해 키보드 기능을 사용하도록 설정할 수 없습니다. 이 설정은 사용해야 하는 키를 UI 자동화 프레임워크에 보고하여 보조 기술을 통해 이러한 정보를 사용자에게 전달할 수 있도록 하는 역할만 합니다. 키 처리 구현은 XAML이 아니라 코드에서 수행해야 합니다. 앱에서 바로 가기 키 동작을 실제로 구현하려면 관련 컨트롤에 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/BR208941) 또는 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/BR208942) 이벤트 처리기를 연결해야 합니다. 또한 액세스 키에 대한 밑줄로 표시된 텍스트 장식은 자동으로 제공되지 않습니다. UI에서 밑줄로 표시된 텍스트를 표시하려면 니모닉에서 명시적으로 특정 키의 텍스트에 밑줄을 인라인 [**Underline**](https://msdn.microsoft.com/library/windows/apps/BR209982) 서식으로 표시해야 합니다.
+> [  **AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) 또는 [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) 설정을 통해 키보드 기능을 사용하도록 설정할 수 없습니다. 이 설정은 사용해야 하는 키를 UI 자동화 프레임워크에 보고하여 보조 기술을 통해 이러한 정보를 사용자에게 전달할 수 있도록 하는 역할만 합니다. 키 처리 구현은 XAML이 아니라 코드에서 수행해야 합니다. 앱에서 바로 가기 키 동작을 실제로 구현하려면 관련 컨트롤에 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/BR208941) 또는 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/BR208942) 이벤트 처리기를 연결해야 합니다. 또한 액세스 키에 대한 밑줄로 표시된 텍스트 장식은 자동으로 제공되지 않습니다. UI에서 밑줄로 표시된 텍스트를 표시하려면 니모닉에서 명시적으로 특정 키의 텍스트에 밑줄을 인라인 [**Underline**](https://msdn.microsoft.com/library/windows/apps/BR209982) 서식으로 표시해야 합니다.
 
 간단하게 하기 위해 위 예제에서는 "Ctrl+A" 같은 문자열에 대한 리소스 사용을 생략합니다. 그러나 지역화할 때도 바로 가기 키를 고려해야 합니다. 바로 가기 키로 사용할 키의 선택은 일반적으로 해당 요소에 대해 표시되는 텍스트 레이블에 따라 달라지므로 바로 가기 키 지역화가 관련이 있습니다.
 
@@ -175,7 +175,7 @@ Ctrl 키 등의 보조키 확인을 포함하는 키 이벤트 처리기 작성 
 ## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>포커스 표시기의 시각적 상태 예제  
 앞에서 사용자가 포커스를 설정할 수 있는 모든 사용자 지정 컨트롤에 시각적 포커스 표시기가 있어야 한다고 설명했습니다. 일반적으로 포커스 표시기는 컨트롤의 일반 경계 사각형 주위에 사각형 모양을 그리는 것처럼 단순합니다. 시각적 포커스의 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)은 컨트롤 템플릿에 있는 컨트롤 컴퍼지션의 나머지 부분에 대한 피어 요소이지만 컨트롤이 아직 포커스되지 않았으므로 초기에 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) 값 **Collapsed**를 사용하여 설정됩니다. 그런 다음 컨트롤에 포커스가 있으면 구체적으로 시각적 포커스의 **Visibility**를 **Visible**로 설정하는 시각적 상태가 호출됩니다. 포커스가 다른 곳으로 이동되면 다른 시각적 상태가 호출되고 **Visibility**는 **Collapsed**가 됩니다.
 
-모든 기본 XAML 컨트롤은 포커스되었을 때 해당하는 시각적 포커스 표시기를 표시합니다(포커스될 수 있는 경우). 또한 사용자가 선택한 테마에 따라 모양이 다를 수 있습니다(특히 사용자가 고대비 모드를 사용 중인 경우). UI에서 XAML 컨트롤을 사용 중이며 컨트롤 템플릿을 바꾸지 않는 경우 제대로 작동하고 표시하는 컨트롤에 대한 시각적 포커스 표시기를 얻기 위해 추가로 어떤 작업도 수행할 필요가 없습니다. 하지만 컨트롤을 다시 템플릿으로 지정하려는 경우나 XAML 컨트롤이 시각적 포커스 지시기를 제공하는 방법을 알고 싶은 경우를 위해 이 섹션의 나머지 부분에서는 XAML 및 컨트롤 논리에서 이를 수행하는 방법을 설명합니다.
+모든 기본 XAML 컨트롤은 포커스되었을 때 해당하는 시각적 포커스 표시기를 표시합니다(포커스될 수 있는 경우). 밖에도 사용자의 선택한 테마에 따라 잠재적으로 다른 모양 (특히 사용자가 사용 중인 경우 고대비 모드입니다.) XAML 컨트롤에 UI 컨트롤 템플릿을 대체 하지 않으면를 사용 하는 경우에 모든 동작을 올바르게 표시 하는 컨트롤의 시각적 포커스 표시기를 가져오려면 추가 작업을 수행할 필요가 없습니다. 하지만 컨트롤을 다시 템플릿으로 지정하려는 경우나 XAML 컨트롤이 시각적 포커스 지시기를 제공하는 방법을 알고 싶은 경우를 위해 이 섹션의 나머지 부분에서는 XAML 및 컨트롤 논리에서 이를 수행하는 방법을 설명합니다.
 
 다음은 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)에 대한 기본 XAML 템플릿에서 가져온 일부 XAML입니다.
 
@@ -247,7 +247,7 @@ Windows Phone 장치에는 일반적으로 전용 하드웨어 키보드가 없�
 
 ## <a name="related-topics"></a>관련 항목  
 * [접근성](accessibility.md)
-* [키보드 조작](https://msdn.microsoft.com/library/windows/apps/Mt185607)
+* [키보드 상호 작용](https://msdn.microsoft.com/library/windows/apps/Mt185607)
 * [터치 키보드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML 액세스 가능성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
 

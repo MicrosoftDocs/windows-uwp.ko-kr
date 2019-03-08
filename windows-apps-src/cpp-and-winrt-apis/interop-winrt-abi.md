@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, ABI
 ms.localizationpriority: medium
 ms.openlocfilehash: a33a52cd8c18b312dc9e020a4c4ba518c33b0dd9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932899"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639948"
 ---
 # <a name="interop-between-cwinrt-and-the-abi"></a>C++/WinRT와 ABI 사이의 상호 운용성
 
-이 항목에서는 SDK 응용 프로그램 이진 인터페이스 (ABI) 간에 변환 하는 방법을 설명 하 고 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 개체. 여기에서 설명하는 방법은 Windows 런타임을 통한 두 가지 프로그래밍 방법을 사용하는 코드 사이의 상호 운용성에 사용하거나, 혹은 코드를 ABI에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
+이 항목에서는 SDK 응용 프로그램 이진 인터페이스 (ABI) 간에 변환 하는 방법 및 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 개체입니다. 여기에서 설명하는 방법은 Windows 런타임을 통한 두 가지 프로그래밍 방법을 사용하는 코드 사이의 상호 운용성에 사용하거나, 혹은 코드를 ABI에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
 
 ## <a name="what-is-the-windows-runtime-abi-and-what-are-abi-types"></a>Windows 런타임 ABI란 무엇이며, ABI 형식이란 무엇인가요?
 Windows 런타임 클래스(런타임 클래스)는 추상화입니다. 이 추상화는 여러 프로그래밍 언어가 개체와 상호 작용할 수 있게 하는 이진 인터페이스(응용 프로그램 바이너리 인터페이스, ABI)를 정의합니다. 프로그래밍 언어에 관계없이 Windows 런타임 개체와의 클라이언트 코드 상호 작용은 개체의 ABI에 대한 호출로 번역되는 클라이언트 언어 구문으로 최저 수준에서 수행됩니다.
@@ -104,7 +104,7 @@ int main()
 }
 ```
 
-**as** 함수의 구현체가 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 호출합니다. [**AddRef**](https://msdn.microsoft.com/library/windows/desktop/ms691379)만 호출하는 하위 수준의 변환을 원한다면 도우미 함수로 [**winrt::copy_to_abi**](/uwp/cpp-ref-for-winrt/copy-to-abi)와 [**winrt::copy_from_abi**](/uwp/cpp-ref-for-winrt/copy-from-abi)를 사용할 수 있습니다. 다음 코드 예제에서는 이러한 하위 수준 변환을 위의 코드 예제에 추가합니다.
+**as** 함수의 구현체가 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 호출합니다. [  **AddRef**](https://msdn.microsoft.com/library/windows/desktop/ms691379)만 호출하는 하위 수준의 변환을 원한다면 도우미 함수로 [**winrt::copy_to_abi**](/uwp/cpp-ref-for-winrt/copy-to-abi)와 [**winrt::copy_from_abi**](/uwp/cpp-ref-for-winrt/copy-from-abi)를 사용할 수 있습니다. 다음 코드 예제에서는 이러한 하위 수준 변환을 위의 코드 예제에 추가합니다.
 
 ```cppwinrt
 int main()
@@ -246,11 +246,11 @@ int main()
 ## <a name="important-apis"></a>중요 API
 * [AddRef 함수](https://msdn.microsoft.com/library/windows/desktop/ms691379)
 * [QueryInterface 함수](https://msdn.microsoft.com/library/windows/desktop/ms682521)
-* [winrt:: attach_abi 함수](/uwp/cpp-ref-for-winrt/attach-abi)
+* [winrt::attach_abi 함수](/uwp/cpp-ref-for-winrt/attach-abi)
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
-* [copy_from_abi 함수](/uwp/cpp-ref-for-winrt/copy-from-abi)
-* [copy_to_abi 함수](/uwp/cpp-ref-for-winrt/copy-to-abi)
-* [winrt:: detach_abi 함수](/uwp/cpp-ref-for-winrt/detach-abi)
+* [winrt::copy_from_abi function](/uwp/cpp-ref-for-winrt/copy-from-abi)
+* [winrt::copy_to_abi function](/uwp/cpp-ref-for-winrt/copy-to-abi)
+* [winrt::detach_abi 함수](/uwp/cpp-ref-for-winrt/detach-abi)
 * [winrt::get_abi 함수](/uwp/cpp-ref-for-winrt/get-abi)
-* [winrt::Windows::Foundation::IUnknown::as 멤버 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
+* [winrt::Windows::Foundation::IUnknown:: 멤버 함수로](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 * [winrt::Windows::Foundation::IUnknown::try_as 멤버 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)

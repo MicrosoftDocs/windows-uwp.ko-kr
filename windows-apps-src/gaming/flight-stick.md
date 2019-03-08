@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 플라이트 스틱
 ms.localizationpriority: medium
 ms.openlocfilehash: 5eceb30c62f1e803397aff71d59b560c39736cf9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927976"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609018"
 ---
 # <a name="flight-stick"></a>플라이트 스틱
 
@@ -41,20 +41,20 @@ Xbox One 플라이트 스틱은 다음과 같은 컨트롤이 장착되어 있�
 
 ### <a name="ui-navigation"></a>UI 탐색
 
-사용자 인터페이스 탐색을 위해 다양한 입력 장치를 지원해야 하는 부담을 덜고 게임과 장치 간 일관성을 추구하기 위해 대부분의  _물리적_ 입력 장치는 [UI 탐색 컨트롤러](ui-navigation-controller.md)라는 별도의 _논리적_ 입력 장치 역할을 동시에 수행합니다. UI 탐색 컨트롤러는 여러 입력 장치의 UI 탐색 명령에 대한 공통 용어 모음집을 제공합니다.
+사용자 인터페이스 탐색을 위해 다양한 입력 장치를 지원해야 하는 부담을 덜고 게임과 장치 간 일관성을 추구하기 위해 대부분의  _물리적_ 입력 장치는 [UI 탐색 컨트롤러](ui-navigation-controller.md)라는 별도의 _논리적_ 입력 장치 역할을 동시에 수행합니다. UI 탐색 컨트롤러는 입력 장치 전반적으로 UI 탐색 명령에 대한 공통 어휘를 제공합니다.
 
 UI 탐색 컨트롤러로 플라이트 스틱은 탐색 명령의 [필수 집합](ui-navigation-controller.md#required-set) 조이스틱과 **보기**, **메뉴**, **FirePrimary**, 및 **FireSecondary** 단추에 매핑합니다.
 
 | 탐색 명령 | 플라이트 스틱 입력                  |
 | ------------------:| ----------------------------------- |
-|                 위 | 조이스틱 위                         |
-|               아래 | 조이스틱 아래                       |
+|                 위쪽 | 조이스틱 위                         |
+|               아래쪽 | 조이스틱 아래                       |
 |               왼쪽 | 조이스틱 왼쪽                       |
 |              오른쪽 | 조이스틱 오른쪽                      |
 |               보기 | **보기** 버튼                     |
 |               메뉴 | **메뉴** 버튼                     |
 |             수락 | **FirePrimary** 단추              |
-|             취소 | **FireSecondary** 단추            |
+|             Cancel | **FireSecondary** 단추            |
 
 플라이트 스틱은 탐색 명령의 [선택 집합](ui-navigation-controller.md#optional-set)을 매핑하지 않습니다.
 
@@ -116,7 +116,7 @@ Each flight stick can be associated with a user account to link their identity t
 
 ## <a name="reading-the-flight-stick"></a>플라이트 스틱 읽기
 
-관심 있는 플라이트 스틱을 식별하면 장치의 입력을 수집할 준비가 된 것입니다. 하지만 기존에 사용하던 다른 입력 유형과 달리 플라이트 스틱은 이벤트 발생을 통해 상태 변경을 알리지 않습니다. 대신, 플라이트 스틱을 직접 _폴링_하여 현재 상태의 규칙적인 판독값을 가져올 수 있습니다.
+관심 있는 플라이트 스틱을 식별하면 장치의 입력을 수집할 준비가 된 것입니다. 하지만 기존에 사용하던 다른 입력 유형과 달리 플라이트 스틱은 이벤트 발생을 통해 상태 변경을 알리지 않습니다. 대신, 아케이드 스틱을 직접 _폴링_하여 현재 상태의 규칙적인 판독값을 가져올 수 있습니다.
 
 ### <a name="polling-the-flight-stick"></a>플라이트 스틱 폴링
 
@@ -177,7 +177,7 @@ if ((oppositeSquared + adjacentSquared) < deadzoneSquared)
 > [!NOTE]
 > 플라이트 스틱에는 UI 탐색에 사용되는 **보기** 및 **메뉴** 버튼과 같은 추가 버튼이 탑재되어 있습니다. 이러한 버튼은 `FlightStickButtons` 열거에 포함되지 않으며 UI 탐색 장치 역할을 하는 플라이트 스틱에 액세스해야만 읽을 수 있습니다. 자세한 내용은 [UI 탐색 컨트롤러](ui-navigation-controller.md)를 참조하세요.
 
-단추 값은 [FlightStickReading.Buttons](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstickreading.Buttons) 속성에서 읽습니다. 이러한 속성은 비트 필드이므로 해당 버튼의 값을 격리하기 위해 비트 마스킹이 사용됩니다. 해당 비트가 설정된 경우에는 버튼이 눌리고(아래), 그렇지 않은 경우에는 놓입니다(위).
+단추 값은 [FlightStickReading.Buttons](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstickreading.Buttons) 속성에서 읽습니다. 이러한 속성은 비트 필드이므로 해당 버튼 값을 격리하기 위해 비트 마스킹이 사용됩니다. 해당 비트가 설정된 경우에는 버튼이 눌리고(아래), 그렇지 않은 경우에는 놓입니다(위).
 
 다음 예제에서는 **FirePrimary** 버튼이 눌렸는지 확인합니다.
 
@@ -227,4 +227,4 @@ The [InputInterfacingUWP sample _(github)_](https://github.com/Microsoft/Xbox-AT
 
 * [Windows.Gaming.Input.UINavigationController 클래스](https://docs.microsoft.com/uwp/api/windows.gaming.input.uinavigationcontroller)
 * [Windows.Gaming.Input.IGameController 인터페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
-* [게임용 입력 시스템](input-practices-for-games.md)
+* [게임에 대 한 입력된 사례](input-practices-for-games.md)

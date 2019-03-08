@@ -1,5 +1,5 @@
 ---
-Description: List animations let you insert or remove single or multiple items from a collection, such as a photo album or a list of search results.
+Description: 목록 애니메이션을 사용하면 사진 앨범이나 검색 결과 목록 같은 컬렉션에서 단일 항목이나 여러 항목을 삽입하거나 제거할 수 있습니다.
 title: UWP 앱에서 애니메이션 추가 및 삭제
 ms.assetid: A85006AE-4992-457a-B514-500B8BEF5DC8
 label: Motion--add and delete animations
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c7ca332b73aba067c2ae003d458e8d0d97c7a7e3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942889"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57642838"
 ---
 # <a name="add-and-delete-animations"></a>추가 및 삭제 애니메이션
 
@@ -21,7 +21,7 @@ ms.locfileid: "8942889"
 
 목록 애니메이션을 사용하면 사진 앨범이나 검색 결과 목록 같은 컬렉션에서 단일 항목이나 여러 항목을 삽입하거나 제거할 수 있습니다.
 
-> **중요 API**: [**AddDeleteThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/br243048)
+> **중요 한 Api**: [**AddDeleteThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/br243048)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -39,8 +39,8 @@ ms.locfileid: "8942889"
 ## <a name="related-articles"></a>관련 문서
 
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [목록 추가 및 삭제 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649430)
-* [빠른 시작: 라이브러리 애니메이션을 사용하여 UI에 애니메이션 효과 주기](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [애니메이션 목록 추가 및 삭제](https://msdn.microsoft.com/library/windows/apps/xaml/jj649430)
+* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**AddDeleteThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/br243048)
 
  

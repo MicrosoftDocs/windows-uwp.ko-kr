@@ -6,11 +6,11 @@ ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a79edb39cc4bfa5794d79d68f4fb8d5b0e976105
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050636"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645318"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>2017년 12월 Windows 개발자 문서의 새로운 내용
 
@@ -20,7 +20,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ## <a name="features"></a>기능
 
-### <a name="windows-mixed-reality-enthusiasts-guide"></a>Windows Mixed Reality: 마니아의 가이드
+### <a name="windows-mixed-reality-enthusiasts-guide"></a>Windows Mixed Reality: 전문가 가이드
 
 Mixed Reality의 세계에 대해 보다 깊이 알아보려는 기술 매니아를 대상으로 [마니아 가이드](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/)는 Windows Mixed Reality에 대해 사람들이 가지는 주요 질문에 답변합니다. 
 
@@ -44,7 +44,7 @@ Mixed Reality의 세계에 대해 보다 깊이 알아보려는 기술 매니아
 
 ### <a name="microsoft-collaborate"></a>Microsoft Collaborate
 
-Microsoft Collaborate 포털은 엔지니어링 시스템 작업 항목(버그, 기능 요청 등)의 공유와 콘텐츠(빌드, 문서, 사양)의 배포를 를 활성화하여 Microsoft 에코 시스템 내에서 엔지니어링 협업을 간소화하는 도구와 서비스를 제공합니다. [자세한 내용을 알아보세요](https://docs.microsoft.com/en-us/collaborate).
+Microsoft Collaborate 포털은 엔지니어링 시스템 작업 항목(버그, 기능 요청 등)의 공유와 콘텐츠(빌드, 문서, 사양)의 배포를 를 활성화하여 Microsoft 에코 시스템 내에서 엔지니어링 협업을 간소화하는 도구와 서비스를 제공합니다. [자세한 내용을 알아보십시오](https://docs.microsoft.com/en-us/collaborate).
 
 ![Microsoft은 파트너 센터에서 공동 작업](images/microsoft_collaborate_screenshot.PNG)
 
@@ -58,13 +58,13 @@ Visual Studio 2017 버전 15.5에서는 **Windows 응용 프로그램 패키징 
 
 ### <a name="subscription-add-ons-are-now-available-to-developers-in-the-windows-dev-center-insider-program"></a>Windows 개발자 센터 참가자 프로그램의 개발자는 이제 구독 추가 기능을 사용할 수 있습니다.
 
-개발자 센터 참가자 프로그램에 가입한 모든 개발자는 이제 구독 추가 기능을 사용하여 그들의 앱 내에서 자동화된 반복 청구 기간으로 디지털 제품을 판매할 수 있습니다(예: 앱 기능 또는 디지털 콘텐츠). 자세한 내용은 [앱에 구독 추가 기능을 사용하도록 설정](../monetize/enable-subscription-add-ons-for-your-app.md)을 참조하세요.
+Dev Center 참가자 프로그램에 참여 모든 개발자 해당 앱 앱 (예: 앱 기능 또는 디지털 콘텐츠)에서 디지털 제품 판매에 구독 추가 기능 되풀이 하는 자동화 된 청구 기간을 사용 하 여 사용 수 있습니다. 자세한 내용은 [앱에 구독 추가 기능을 사용하도록 설정](../monetize/enable-subscription-add-ons-for-your-app.md)을 참조하세요.
 
 ## <a name="developer-guidance"></a>개발자 지침
 
-### <a name="color"></a>색상
+### <a name="color"></a>색
 
-최적의 사용자 경험을 위해 앱에서 색을 사용하는 방법에 대해 새로운 몇 가지 지침을 추가했습니다. UI 디자인 및 접근성에 대한 일반적인 지침뿐 아니라 API 사용 시나리오 또한 포함됩니다. 또한 Xbox에서 사용할 수 있는 사용자 테마 컬러 목록을 업데이트했습니다. [여기에서 업데이트된 색 문서를 확인하세요.](../design/style/color.md)
+최적의 사용자 경험을 위해 앱에서 색을 사용하는 방법에 대해 새로운 몇 가지 지침을 추가했습니다. UI 디자인 및 접근성에 대한 일반적인 지침뿐 아니라 API 사용 시나리오 또한 포함됩니다. 또한 Xbox에서 사용할 수 있는 사용자 테마 컬러 목록을 업데이트했습니다. [업데이트 된 색 문서를 확인 합니다.](../design/style/color.md)
 
 ![유니버설 windows 색상표](../design/basics/images/colors.png)
 
@@ -97,4 +97,4 @@ Visual Studio 2017 버전 15.5에서는 **Windows 응용 프로그램 패키징 
 
 ### <a name="package-a-net-app-in-visual-studio"></a>Visual Studio에서 .NET 앱 패키징
 
-그 어느 때보다도 쉽게 데스크톱 앱을 유니버설 Windows 플랫폼으로 가져올 수 있습니다. [동영상을 시청](https://www.youtube.com/watch?v=fJkbYPyd08w)하여 배포를 위해 .NET 앱을 패키징하는 방법을 알아보고 자세한 내용은 [이 페이지를 확인](../porting/desktop-to-uwp-packaging-dot-net.md)하세요.
+그 어느 때보다도 쉽게 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져올 수 있습니다. [동영상을 시청](https://www.youtube.com/watch?v=fJkbYPyd08w)하여 배포를 위해 .NET 앱을 패키징하는 방법을 알아보고 자세한 내용은 [이 페이지를 확인](../porting/desktop-to-uwp-packaging-dot-net.md)하세요.

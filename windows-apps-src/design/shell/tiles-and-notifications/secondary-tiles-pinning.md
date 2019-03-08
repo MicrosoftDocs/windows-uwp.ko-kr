@@ -1,6 +1,6 @@
 ---
-Description: Learn how to pin a secondary tile to Start from your UWP app.
-title: 시작 화면에 보조 타일 고정
+Description: UWP 앱에서 시작 하는 보조 타일을 고정 하는 방법에 알아봅니다.
+title: 시작 하려면 핀 보조 타일
 label: Pin secondary tiles to Start
 template: detail.hbs
 ms.date: 05/25/2017
@@ -8,13 +8,13 @@ ms.topic: article
 keywords: windows 10, uwp, 보조 타일, 고정, 고정하기, 빠른 시작, 코드 샘플, 예제, 보조타일
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bebee86c824242cf031503617d4a880ebbb74df
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939669"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653158"
 ---
-# <a name="pin-secondary-tiles-to-start"></a>시작 화면에 보조 타일 고정
+# <a name="pin-secondary-tiles-to-start"></a>시작 하려면 핀 보조 타일
 
 
 이 항목에서는 UWP 앱의 보조 타일을 만들고 시작 메뉴에 고정하는 단계를 안내합니다.
@@ -37,10 +37,10 @@ using Windows.UI.StartScreen;
 
 보조 타일은 몇 가지 핵심 구성 요소로 이루어져 있습니다.
 
-* **TileId**: 여러 보조 타일 중에서 특정 타일을 식별할 수 있게 해 주는 고유 식별자입니다.
+* **TileId**: 다른 보조 타일 간에 타일을 식별할 수 있는 고유 식별자입니다.
 * **DisplayName**: 타일에 표시할 이름입니다.
-* **Arguments**: 사용자가 타일을 클릭할 때 다시 앱으로 전달할 인수입니다.
-* **Square150x150Logo**: 필수 로고이며, 중간 크기 타일에 표시됩니다(소형 로고가 제공되지 않을 경우 소형 타일에 맞게 크기가 조정됨).
+* **인수**: 인수 하려는 전달 다시 앱 사용자가 타일을 클릭 합니다.
+* **Square150x150Logo**: 보통 크기에 표시 되는 필수 로고, 타일과 경우 제공 된 작은 로고 작은 크기는 타일 크기를 조정 합니다.
 
 위의 모든 속성에 대한 초기화 값을 **반드시** 제공해야 합니다. 그렇지 않으면 예외가 발생합니다.
 
@@ -67,7 +67,7 @@ SecondaryTile tile = new SecondaryTile(
 ```
 
 
-## <a name="optional-add-support-for-larger-tile-sizes"></a>선택 사항: 큰 타일 크기에 대한 지원 추가
+## <a name="optional-add-support-for-larger-tile-sizes"></a>선택 사항: 큰 타일 크기에 대 한 지원 추가
 
 보조 타일에 풍부한 타일 알림을 표시할 생각이라면 사용자가 더 많은 콘텐츠를 볼 수 있도록 타일을 더 넓게 또는 더 크게 조정할 수 있도록 허용해야 합니다.
 
@@ -88,7 +88,7 @@ tile.VisualElements.Square44x44Logo = new Uri("ms-appx:///Assets/CityTiles/Squar
 ```
 
 
-## <a name="optional-enable-showing-the-display-name"></a>선택 사항: 표시 이름을 표시하도록 설정
+## <a name="optional-enable-showing-the-display-name"></a>선택 사항: 표시 이름을 보여 주는 사용 하도록 설정
 
 기본적으로 표시 이름이 표시되지 않습니다. 중간/와이드/큰 타일에 표시 이름을 표시하려면 다음 코드를 추가합니다.
 

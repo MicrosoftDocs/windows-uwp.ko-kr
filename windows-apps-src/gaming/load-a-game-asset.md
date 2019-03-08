@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 리소스 로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 478c61713dfcf5bc8a420aa71b0dced81ed6a169
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114589"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633358"
 ---
 # <a name="load-resources-in-your-directx-game"></a>DirectX 게임에 리소스 로드
 
@@ -28,7 +28,7 @@ ms.locfileid: "9114589"
 
 -   병렬 패턴 라이브러리(ppltasks.h)
 
-### <a name="prerequisites"></a>필수 조건
+### <a name="prerequisites"></a>필수 구성 요소
 
 -   기본 Windows 런타임 이해
 -   비동기 작업 이해
@@ -55,15 +55,15 @@ ms.locfileid: "9114589"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="complete-code-for-basicloader.md">BasicLoader의 전체 코드</a></p></td>
+<td align="left"><p><a href="complete-code-for-basicloader.md">BasicLoader에 대 한 전체 코드</a></p></td>
 <td align="left"><p>그래픽 메시 개체를 변환하여 메모리에 로드하는 클래스 및 메서드의 전체 코드입니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="complete-code-for-basicreaderwriter.md">BasicReaderWriter의 전체 코드</a></p></td>
+<td align="left"><p><a href="complete-code-for-basicreaderwriter.md">BasicReaderWriter에 대 한 전체 코드</a></p></td>
 <td align="left"><p>일반적으로 이진 데이터 파일을 읽고 쓰기 위한 클래스 및 메서드의 전체 코드입니다. <a href="complete-code-for-basicloader.md">BasicLoader</a> 클래스에서 사용됩니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="complete-code-for-ddstextureloader.md">DDSTextureLoader의 전체 코드</a></p></td>
+<td align="left"><p><a href="complete-code-for-ddstextureloader.md">DDSTextureLoader에 대 한 전체 코드</a></p></td>
 <td align="left"><p>메모리에서 DDS 텍스처를 로드하는 클래스 및 메서드의 전체 코드입니다.</p></td>
 </tr>
 </tbody>
@@ -77,7 +77,7 @@ ms.locfileid: "9114589"
 
 비동기 로딩은 PPL(병렬 패턴 라이브러리)에서 **task** 템플릿을 사용하여 처리됩니다. **task**에는 비동기 호출 완료 후 그 결과를 처리하는 람다 앞에 오는 메서드 호출이 포함되어 있으며, 대개 다음 형식을 따릅니다.
 
-`task<generic return type>(async code to execute).then((parameters for lambda){ lambda code contents });`.
+`task<generic return type>(async code to execute).then((parameters for lambda){ lambda code contents });`을 차례로 클릭합니다.
 
 한 작업이 완료되면 앞 작업의 결과에 따라 다른 비동기 작업이 실행되도록 **.then()** 구문을 사용하여 작업을 함께 연결할 수 있습니다. 이렇게 하면 플레이어에게 거의 노출하지 않고 복잡한 자산을 개별 스레드에서 로드, 변환 및 관리할 수 있습니다.
 
@@ -130,7 +130,7 @@ return m_basicReaderWriter->ReadDataAsync(filename).then([=](const Platform::Arr
 
 그러나 비동기 로딩을 모두 완료한 후에 게임이 시작되게 하려는 경우에는 로딩이 완료되면 신호로 알려 주는 메서드(예: 특정 필드)를 만들고, 로딩을 마쳤을 때 로딩 메서드에 람다를 사용하여 해당 신호를 설정합니다. 이렇게 로드된 리소스를 사용하는 구성 요소를 시작하기 전에 변수를 확인합니다.
 
-다음은 게임이 시작되면 BasicLoader.cpp에 정의된 비동기 메서드를 사용하여 셰이더, 메시, 텍스처를 로드하는 예제입니다. 이 예제는 모든 로딩 메서드가 완료되면 게임 개체 **m\_loadingComplete**에 특정 필드를 설정합니다.
+다음은 게임이 시작되면 BasicLoader.cpp에 정의된 비동기 메서드를 사용하여 셰이더, 메시, 텍스처를 로드하는 예제입니다. 게임 개체에서 특정 필드를 설정 하는 알 수 있습니다 **m\_loadingComplete**로드 메서드의 모두 완료 하는 경우.
 
 ```cpp
 void ResourceLoading::CreateDeviceResources()
@@ -191,7 +191,7 @@ void ResourceLoading::CreateDeviceResources()
 }
 ```
 
-이 작업은 모든 작업이 완료되었을 때만 로딩 완료 플래그를 설정하는 람다가 트리거되도록 &amp;&amp; 연산자를 사용하여 집계되었습니다. 플래그가 여러 개인 경우 경합 상태의 가능성이 있다는 점에 유의하세요. 예를 들어, 람다가 동일한 값에 두 개의 플래그를 순차적으로 설정할 경우 두 번째 플래그가 설정되기 전에 플래그를 검사하는 다른 스레드는 첫 번째 플래그만 보게 될 수 있습니다.
+이 작업은 모든 작업이 완료되었을 때만 로딩 완료 플래그를 설정하는 람다가 트리거되도록 &&amp;amp; 연산자를 사용하여 집계되었습니다. 플래그가 여러 개인 경우 경합 상태의 가능성이 있다는 점에 유의하세요. 예를 들어, 람다가 동일한 값에 두 개의 플래그를 순차적으로 설정할 경우 두 번째 플래그가 설정되기 전에 플래그를 검사하는 다른 스레드는 첫 번째 플래그만 보게 될 수 있습니다.
 
 지금까지 리소스 파일을 비동기식으로 로드하는 방법에 대해 알아보았습니다. 동기 파일 로드는 훨씬 더 간단하며, [BasicReaderWriter의 전체 코드](complete-code-for-basicreaderwriter.md) 및 [BasicLoader의 전체 코드](complete-code-for-basicloader.md)에 해당 예제가 나와 있습니다.
 
@@ -205,14 +205,14 @@ void ResourceLoading::CreateDeviceResources()
 
 가능하면 항상 내부 표현에 최대한 가까운 형식으로 자산 데이터를 패키지합니다. 그러면 리소스 사용이 줄어들고 시간이 절약됩니다.
 
-이제 메시의 파일에서 바이트 데이터를 가져오겠습니다. 예제에 사용된 형식은 파일이 .vbo 접미사가 붙은 샘플별 형식이라고 가정합니다. 다시 말하지만, 이 형식은 OpenGL의 VBO 형식과는 다릅니다. 각 꼭짓점은 자체적으로 **BasicVertex** 형식에 매핑합니다. 이 형식은 obj2vbo 변환기 도구의 코드에 정의된 구조체입니다. .vbo 파일에서 꼭짓점 데이터의 레이아웃은 다음과 같습니다.
+이제 메시의 파일에서 바이트 데이터를 가져오겠습니다. 예제에 사용된 형식은 파일이 .vbo 접미사가 붙은 샘플별 형식이라고 가정합니다. (다시이 형식이 않습니다 OpenGL의 VBO 형식과 동일 합니다.) 각 꼭 짓 점 자체 매핑되는 **BasicVertex** obj2vbo 변환기 도구에 대 한 코드에 정의 된 구조체 형식을 합니다. .vbo 파일에서 꼭짓점 데이터의 레이아웃은 다음과 같습니다.
 
 -   데이터 스트림의 첫 32비트(4바이트)에는 unit32 값으로 나타낸 메시의 꼭짓점 수(numVertices)가 들어 있습니다.
 -   데이터 스트림의 다음 32비트(4바이트)에는 unit32 값으로 나타낸 메시의 인덱스 수(numIndices)가 들어 있습니다.
--   그 뒤 후속 (numVertices \* sizeof(**BasicVertex**)) 비트에는 꼭짓점 데이터가 들어 있습니다.
--   데이터의 마지막 (numIndices \* 16) 비트에는 unit16 값의 시퀀스로 나타낸 인덱스 데이터가 들어 있습니다.
+-   그런 다음 후속 (numVertices \* sizeof (**BasicVertex**)) 꼭 짓 점 데이터를 포함 하는 비트입니다.
+-   마지막 (numIndices \* 16) 데이터 비트를 uint16 값 시퀀스로 표시 인덱스 데이터를 포함 합니다.
 
-핵심은 로드한 메시 데이터의 비트 수준 레이아웃을 알아야 하며, endian과 일관성을 유지해야 한다는 것입니다. 모든 Windows8 플랫폼은 little-endian입니다.
+핵심은 로드한 메시 데이터의 비트 수준 레이아웃을 알아야 하며, endian과 일관성을 유지해야 한다는 것입니다. 모든 Windows 8 플랫폼은 little endian입니다.
 
 예제에서는 **LoadMeshAsync** 메서드에서 CreateMesh 메서드를 호출하여 이 비트 수준 해석을 수행합니다.
 
@@ -239,7 +239,7 @@ task<void> BasicLoader::LoadMeshAsync(
 }
 ```
 
-**CreateMesh**는 파일에서 로드한 바이트 데이터를 해석한 다음 [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)에 꼭짓점 및 인덱스 목록을 각각 전달하고 D3D11\_BIND\_VERTEX\_BUFFER 또는 D3D11\_BIND\_INDEX\_BUFFER를 지정하여 메시에 대한 꼭짓점 버퍼와 인덱스 버퍼를 만듭니다. 다음은 **BasicLoader**에 사용된 코드입니다.
+**CreateMesh** 파일에서 로드 된 바이트 데이터를 해석 하 고 꼭 짓 점 버퍼를 만들고 꼭 짓 점 및 인덱스 목록을 전달 하 여 메시에 서 인덱스 버퍼를 각각 [ **ID3D11Device::CreateBuffer** ](https://msdn.microsoft.com/library/windows/desktop/ff476501) D3D11 중 하나를 지정 하 고\_바인딩할\_꼭 짓 점\_버퍼 또는 D3D11\_바인딩합니다\_인덱스\_버퍼입니다. 다음은 **BasicLoader**에 사용된 코드입니다.
 
 ```cpp
 void BasicLoader::CreateMesh(
@@ -320,14 +320,14 @@ DDS 파일은 다음 정보를 포함하는 이진 파일입니다.
 
 -   파일의 데이터에 대한 설명.
 
-    데이터는 [**DDS\_HEADER**](https://msdn.microsoft.com/library/windows/desktop/bb943982)를 사용하여 헤더 설명으로 설명됩니다. 픽셀 형식은 [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984)을 사용하여 정의됩니다. **DDS\_HEADER** 및 **DDS\_PIXELFORMAT** 구조는 사용되지 않는 DDSURFACEDESC2, DDSCAPS2 및 DDPIXELFORMAT DirectDraw 7 구조를 대체합니다. **DDS\_HEADER**는 DDSURFACEDESC2 및 DDSCAPS2의 이진 값입니다. **DDS\_PIXELFORMAT**은 DDPIXELFORMAT의 이진 값입니다.
+    데이터를 사용 하 여 헤더 설명 설명 [ **DDS\_헤더**](https://msdn.microsoft.com/library/windows/desktop/bb943982); 픽셀 형식을 사용 하 여 정의 됩니다 [ **DDS\_PIXELFORMAT** ](https://msdn.microsoft.com/library/windows/desktop/bb943984). **DDS\_헤더** 하 고 **DDS\_PIXELFORMAT** 구조는 사용 되지 않는 DDSURFACEDESC2, DDSCAPS2 및 DDPIXELFORMAT DirectDraw 7 구조를 대체 합니다. **DDS\_헤더** DDSURFACEDESC2 및 DDSCAPS2 이진 동일 합니다. **DDS\_PIXELFORMAT** DDPIXELFORMAT 이진과 같습니다.
 
     ```cpp
     DWORD               dwMagic;
     DDS_HEADER          header;
     ```
 
-    [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984)에서 **dwFlags**의 값은 DDPF\_FOURCC로 설정되고 **dwFourCC**는 "DX10"으로 설정됩니다. 부동 소수점 형식, sRGB 형식 등, RGB 픽셀 형식으로 표현할 수 없는 DXGI 형식 또는 텍스처 배열을 수용하기 위해 추가 [**DDS\_HEADER\_DXT10**](https://msdn.microsoft.com/library/windows/desktop/bb943983) 구조가 표시됩니다. **DDS\_HEADER\_DXT10** 구조가 표시될 때 전체 데이터 설명은 다음과 같이 나타납니다.
+    경우 값 **dwFlags** 에 [ **DDS\_PIXELFORMAT** ](https://msdn.microsoft.com/library/windows/desktop/bb943984) DDPF로 설정 되어\_FOURCC 및 **dwFourCC** 로 설정 되어 "DX10"를 추가 [ **DDS\_헤더\_DXT10** ](https://msdn.microsoft.com/library/windows/desktop/bb943983) 구조 질감 배열 또는 RGB로 표현할 수 없는 DXGI 형식에 맞게 표시 됩니다. 픽셀 형식 등 sRGB 부동 소수점 형식을 같은 형식입니다. 경우는 **DDS\_헤더\_DXT10** 구조가 있는 경우 전체 데이터 설명은 다음과 같이 표시 됩니다.
 
     ```cpp
     DWORD               dwMagic;
@@ -551,7 +551,7 @@ task<void> BasicLoader::LoadShaderAsync(
 
 ```
 
-이 예제에서는 **BasicReaderWriter** 인스턴스(**m\_basicReaderWriter**)를 사용하여 제공된 .cso(컴파일된 셰이더 개체) 파일에서 바이트 스트림으로 읽습니다. 해당 작업이 완료되면 람다는 파일에서 로드된 바이트 데이터를 사용하여 [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)를 호출합니다. 콜백은 로드가 성공적이었음을 나타내는 일부 플래그를 설정해야 하며, 코드는 셰이더를 실행하기 전에 이 플래그를 확인해야 합니다.
+이 예제를 사용 하 여 합니다 **BasicReaderWriter** 인스턴스 (**m\_basicReaderWriter**)를 바이트 스트림으로 제공 된 컴파일된 셰이더 개체 (.cso) 파일에서 읽을 수 있습니다. 해당 작업이 완료되면 람다는 파일에서 로드된 바이트 데이터를 사용하여 [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)를 호출합니다. 콜백은 로드가 성공적이었음을 나타내는 일부 플래그를 설정해야 하며, 코드는 셰이더를 실행하기 전에 이 플래그를 확인해야 합니다.
 
 꼭짓점 셰이더는 조금 더 복잡합니다. 꼭짓점 셰이더의 경우에도 꼭짓점 데이터를 정의하는 개별 입력 레이아웃을 로드합니다. 다음 코드는 사용자 지정 꼭짓점 입력 레이아웃과 함께 꼭짓점 셰이더를 비동기식으로 로드하는 데 사용할 수 있습니다. 메시에서 로드하는 꼭짓점 정보는 이 입력 레이아웃에 의해 올바르게 나타낼 수 있습니다.
 
@@ -698,10 +698,10 @@ task<void> BasicLoader::LoadShaderAsync(
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Direct3D 리소스 로드 샘플]( https://go.microsoft.com/fwlink/p/?LinkID=265132)
-* [BasicLoader의 전체 코드](complete-code-for-basicloader.md)
-* [BasicReaderWriter의 전체 코드](complete-code-for-basicreaderwriter.md)
-* [DDSTextureLoader의 전체 코드](complete-code-for-ddstextureloader.md)
+* [Direct3D 리소스 로드 예제]( https://go.microsoft.com/fwlink/p/?LinkID=265132)
+* [BasicLoader에 대 한 전체 코드](complete-code-for-basicloader.md)
+* [BasicReaderWriter에 대 한 전체 코드](complete-code-for-basicreaderwriter.md)
+* [DDSTextureLoader에 대 한 전체 코드](complete-code-for-ddstextureloader.md)
 
  
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c78e16a50bdca09f474d5016fdc86b6d27702d5b
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058774"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598588"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 오디오 프레임 처리
 
@@ -26,7 +26,7 @@ ms.locfileid: "9058774"
 ## <a name="setting-up-your-project"></a>프로젝트 설정
 오디오 프레임을 획득하는 프로세스는 다른 유형의 미디어 프레임을 획득하는 것과 대체로 동일합니다. **MediaCapture**를 사용하는 앱의 경우 카메라 장치에 액세스하기 전에 앱에서 *웹캠* 기능을 사용하도록 선언해야 합니다. 앱이 오디오 장치에서 캡처하는 경우 *마이크* 장치 기능도 선언해야 합니다. 
 
-**앱 매니페스트에 접근 권한 값 추가**
+**앱 매니페스트에 기능 추가**
 
 1.  Microsoft Visual Studio의 **솔루션 탐색기**에서 **package.appxmanifest** 항목을 두 번 클릭하여 응용 프로그램 매니페스트 디자이너를 엽니다.
 2.  **접근 권한 값** 탭을 선택합니다.
@@ -39,9 +39,9 @@ ms.locfileid: "9058774"
 
 오디오 프레임을 캡처하는 첫 단계는 마이크나 다른 오디오 캡처 디바이스와 같은 오디오 데이터 소스를 나타내는 [**MediaFrameSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource)를 초기화하는 것입니다. 이 작업을 하려면 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) 개체의 새로운 인스턴스를 만들어야 합니다. 이 예제에서는 **MediaCapture**의 초기화 설정만이 캡처 디바이스에서 오디오를 스트리밍해야 함을 나타내는[**StreamingCaptureMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.streamingcapturemode) 설정입니다. 
 
-[**MediaCapture.InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.initializeasync)를 호출한 후 [**FrameSources**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.framesources) 속성으로 액세스 가능한 미디어 프레임 소스 목록을 가져올 수 있습니다. 이 예제에서는 Linq 쿼리를 사용하여 모든 프레임 소스를 선택하며, 이 경우에 프레임 소스를 나타내는 [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo)에는 **Audio**의 [**MediaStreamType**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.mediastreamtype)가 있고, 이것은 미디어 소스가 오디오 데이터를 생성함을 나타냅니다.
+[  **MediaCapture.InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.initializeasync)를 호출한 후 [**FrameSources**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.framesources) 속성으로 액세스 가능한 미디어 프레임 소스 목록을 가져올 수 있습니다. 이 예제에서는 Linq 쿼리를 사용하여 모든 프레임 소스를 선택하며, 이 경우에 프레임 소스를 나타내는 [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo)에는 **Audio**의 [**MediaStreamType**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.mediastreamtype)가 있고, 이것은 미디어 소스가 오디오 데이터를 생성함을 나타냅니다.
 
-쿼리에서 하나 이상의 프레임 소스를 반환하는 경우 [**CurrentFormat**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesource.currentformat) 속성을 선택하여 이 예제에서와 같이 필요한 오디오 포맷 즉, float 오디오 데이터를 지원하는지 확인할 수 있습니다. [**AudioEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframeformat.audioencodingproperties)를 확인하여 필요한 오디오 인코딩을 소스에서 지원하는지 확인합니다.
+쿼리에서 하나 이상의 프레임 소스를 반환하는 경우 [**CurrentFormat**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesource.currentformat) 속성을 선택하여 이 예제에서와 같이 필요한 오디오 포맷 즉, float 오디오 데이터를 지원하는지 확인할 수 있습니다. [  **AudioEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframeformat.audioencodingproperties)를 확인하여 필요한 오디오 인코딩을 소스에서 지원하는지 확인합니다.
 
 [!code-cs[InitAudioFrameSource](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitAudioFrameSource)]
 
@@ -49,7 +49,7 @@ ms.locfileid: "9058774"
 
 새로운 **MediaFrameReader** 인스턴스를 가져오려면 [**MediaCapture.CreateFrameReaderAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync#Windows_Media_Capture_MediaCapture_CreateFrameReaderAsync_Windows_Media_Capture_Frames_MediaFrameSource_)를 호출하여 이전 단계에서 선택한 **MediaFrameSource** 개체를 전달합니다. 기본적으로 오디오 프레임은 버퍼링된 모드에서 가져오므로 프레임이 삭제될 가능성이 적습니다. 그러나 오디오 프레임을 충분히 빠르게 처리하지 않고 시스템의 할당된 메모리 버퍼를 채우는 경우에도 여전히 발생할 수 있습니다.
 
-오디오 데이터의 새 프레임을 사용할 수 있을 때 발생하는 [**MediaFrameReader.FrameArrived**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.framearrived) 이벤트에 대한 처리기를 등록합니다. [**StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.startasync)를 호출하여 오디오 프레임 획득을 시작합니다. 프레임 읽기 프로그램이 시작되지 않으면 [**Success**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus) 이외에 호출에서 반환된 상태 값은 값을 갖습니다.
+오디오 데이터의 새 프레임을 사용할 수 있을 때 발생하는 [**MediaFrameReader.FrameArrived**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.framearrived) 이벤트에 대한 처리기를 등록합니다. [  **StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.startasync)를 호출하여 오디오 프레임 획득을 시작합니다. 프레임 읽기 프로그램이 시작되지 않으면 [**Success**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus) 이외에 호출에서 반환된 상태 값은 값을 갖습니다.
 
 [!code-cs[CreateAudioFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCreateAudioFrameReader)]
 
@@ -72,13 +72,13 @@ ms.locfileid: "9058774"
 
 [!code-cs[AudioDeviceControllerMute](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetAudioDeviceControllerMute)]
 
-[**AudioFrame**](https://docs.microsoft.com/uwp/api/windows.media.audioframe) 개체를 사용하여 미디어 프레임 소스에서 캡처한 오디오 데이터를 [**AudioGraph**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph)로 전달할 수 있습니다. [**AudioFrameInputNode**](https://docs.microsoft.com/en-us/uwp/api/windows.media.audio.audioframeinputnode)의  [**AddFrame**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode.addframe) 메서드에 프레임을 전달합니다. 오디오 그래프를 사용하여 오디오 신호를 캡처하고, 처리하고, 혼합하는 방법에 대한 자세한 내용은 [오디오 그래프](audio-graphs.md)를 참조하세요.
+[  **AudioFrame**](https://docs.microsoft.com/uwp/api/windows.media.audioframe) 개체를 사용하여 미디어 프레임 소스에서 캡처한 오디오 데이터를 [**AudioGraph**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph)로 전달할 수 있습니다. [  **AudioFrameInputNode**](https://docs.microsoft.com/en-us/uwp/api/windows.media.audio.audioframeinputnode)의  [**AddFrame**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode.addframe) 메서드에 프레임을 전달합니다. 오디오 그래프를 사용하여 오디오 신호를 캡처하고, 처리하고, 혼합하는 방법에 대한 자세한 내용은 [오디오 그래프](audio-graphs.md)를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [MediaFrameReader를 사용하여 미디어 프레임 처리](process-media-frames-with-mediaframereader.md)
+* [MediaFrameReader 사용 하 여 미디어 처리 프레임](process-media-frames-with-mediaframereader.md)
 * [카메라](camera.md)
-* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)
 * [오디오 그래프](audio-graphs.md)
  

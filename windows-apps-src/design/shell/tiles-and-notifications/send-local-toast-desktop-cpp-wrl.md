@@ -1,5 +1,5 @@
 ---
-Description: Learn how Win32 C++ WRL apps can send local toast notifications and handle the user clicking the toast.
+Description: WRL Win32 c + + 앱 수 로컬 알림을 보낼 하 고 알림을 클릭 하는 사용자를 처리 하는 방법에 대해 알아봅니다.
 title: 데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 label: Send a local toast notification from desktop C++ WRL apps
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, win32, 데스크톱, 알림 메시지, 알림 보내기, 로컬 알림 보내기, 데스크톱 브리지, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
 ms.openlocfilehash: 82de349009350c970fce923a2aa503df0801c3b7
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116265"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609848"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 
@@ -22,7 +22,7 @@ ms.locfileid: "9116265"
 > UWP 앱을 작성하는 경우 [UWP 설명서](send-local-toast.md)를 참조하세요. 다른 데스크톱 언어는 [Desktop C#](send-local-toast-desktop.md)을 참조하세요.
 
 
-## <a name="step-1-enable-the-windows-10-sdk"></a>1단계: Windows 10 SDK 활성화
+## <a name="step-1-enable-the-windows-10-sdk"></a>1단계: Windows 10을 사용 하도록 설정 SDK
 
 Win32 앱용 Windows 10 SDK를 활성화하지 않았다면 먼저 활성화 해야 합니다. 몇 가지 주요 단계가 있습니다.
 
@@ -38,14 +38,14 @@ Win32 앱용 Windows 10 SDK를 활성화하지 않았다면 먼저 활성화 해
 그런 다음 **일반**에서 **Windows SDK 버전**이 10.0 이상(Windows 8.1. 아님)으로 설정되어 있는지 확인합니다.
 
 
-## <a name="step-2-copy-compat-library-code"></a>2단계: compat 라이브러리 코드 복사
+## <a name="step-2-copy-compat-library-code"></a>2단계: Compat 라이브러리 코드를 복사 합니다.
 
 [DesktopNotificationManagerCompat.h](https://raw.githubusercontent.com/WindowsNotifications/desktop-toasts/master/CPP-WRL/DesktopToastsCppWrlApp/DesktopNotificationManagerCompat.h)와 [DesktopNotificationManagerCompat.cpp](https://raw.githubusercontent.com/WindowsNotifications/desktop-toasts/master/CPP-WRL/DesktopToastsCppWrlApp/DesktopNotificationManagerCompat.cpp) 파일을 GitHub에서 프로젝트로 복사합니다. 호환되는 라이브러리는 데스크톱 알림의 복잡성을 대부분 추상화합니다. 다음 지침은 호환되는 라이브러리가 필요합니다.
 
 미리 컴파일된 헤더를 사용하는 경우 `#include "stdafx.h"`를 DesktopNotificationManagerCompat.cpp 파일의 첫 번째 행으로 지정합니다.
 
 
-## <a name="step-3-include-the-header-files-and-namespaces"></a>3단계: 헤더 파일 및 네임스페이스 포함
+## <a name="step-3-include-the-header-files-and-namespaces"></a>3단계: 헤더 파일 및 네임 스페이스를 포함 합니다.
 
 compat 라이브러리 헤더 파일을 포함하고 UWP 알림 API 사용과 관련된 헤더 파일과 네임스페이스를 포함합니다.
 
@@ -60,7 +60,7 @@ using namespace Microsoft::WRL;
 ```
 
 
-## <a name="step-4-implement-the-activator"></a>4단계: 활성자 구현
+## <a name="step-4-implement-the-activator"></a>4단계: 활성기를 구현 합니다.
 
 알림 활성화를 위해 처리기를 구현해야하므로 사용자가 알림을 클릭할 때 앱에서 작업을 수행할 수 있습니다. 이때 알림을 알림 센터에서 지속해야 합니다(앱을 종료하고 나서 며칠 후 알림을 클릭할 수 있기 때문). 이 클래스는 프로젝트의 어느 위치에나 배치할 수 있습니다.
 
@@ -87,7 +87,7 @@ CoCreatableClass(NotificationActivator);
 ```
 
 
-## <a name="step-5-register-with-notification-platform"></a>5단계: 알림 플랫폼에 등록
+## <a name="step-5-register-with-notification-platform"></a>5단계: 알림 플랫폼을 사용 하 여 등록
 
 그런 다음 알림 플랫폼에 등록해야 합니다. 데스크톱 브리지 또는 클래식 Win32 중 어느 것을 사용하는지에 따라 단계가 달라집니다. 이 둘을 모두 지원하는 경우 두 단계를 수행해야 합니다(하지만, 코드를 분기하지 않아도 되며 라이브러리가 이것을 자동으로 처리합니다!)
 
@@ -143,7 +143,7 @@ CoCreatableClass(NotificationActivator);
 
 Win32 앱을 식별하는 고유한 AUMID를 선택합니다. 이것은 일반적으로 [CompanyName].[AppName]의 형태지만, 모든 앱에서 고유해야 합니다(끝 부분에 임의의 숫자를 자유롭게 추가할 수 있음).
 
-#### <a name="step-51-wix-installer"></a>5.1단계: WiX 설치 관리자
+#### <a name="step-51-wix-installer"></a>5.1 단계 WiX 설치 관리자
 
 설치 프로그램에 WiX를 사용하는 경우 **Product.wxs** 파일을 편집하여 두 개의 바로 가기 속성을 아래 보이는 시작 메뉴 바로 가기에 추가합니다. 4단계에서 GUID가 아래와 같이 `{}`로 묶여 있는지 확인해야 합니다.
 
@@ -165,7 +165,7 @@ Win32 앱을 식별하는 고유한 AUMID를 선택합니다. 이것은 일반�
 > 알림을 실제로 사용하려면 정상적으로 디버깅하기 전에 한 번 설치 프로그램을 통해 앱을 설치해야 AUMID 및 CLSID로 시작 바로 가기가 표시됩니다. 시작 바로 가기가 나타나면 Visual Studio에서 F5를 사용하여 디버깅할 수 있습니다.
 
 
-#### <a name="step-52-register-aumid-and-com-server"></a>5.2단계: AUMID 및 COM 서버 등록
+#### <a name="step-52-register-aumid-and-com-server"></a>5.2 단계 AUMID 및 COM 서버 등록
 
 그런 다음 설치 프로그램과 관계없이 앱의 시작 코드(알림 API를 호출하기 전)에서 4단계의 알림 활성자 클래스와 위에 사용된 AUMID를 지정하여 **RegisterAumidAndComServer** 메서드를 호출합니다.
 
@@ -179,7 +179,7 @@ hr = DesktopNotificationManagerCompat::RegisterAumidAndComServer(L"YourCompany.Y
 이 메서드를 사용하면 AUMID를 지속적으로 제공하지 않고도 compat API를 호출하여 알림을 보내고 관리할 수 있습니다. 또한 이 메서드는 COM 서버에 대해 LocalServer32 레지스트리 키를 삽입합니다.
 
 
-## <a name="step-6-register-com-activator"></a>6단계: COM 활성자 등록
+## <a name="step-6-register-com-activator"></a>6단계: COM 활성기를 등록 합니다.
 
 데스크톱 브리지 및 클래식 Win32 앱 모두에서 알림 활성화를 처리할 수 있도록 알림 활성자 유형을 등록해야 합니다.
 
@@ -375,7 +375,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE, _In_ LPWSTR cm
 데스크톱 앱의 경우 전경 및 배경 활성화가 동일하게 처리되어 COM 활성화가 호출됩니다. 창을 표시할지 아니면 단순히 작업을 수행한 다음 종료할지 결정하는 것은 앱의 코드에 따라 달라집니다. 따라서 알림 콘텐츠에 **background**의 **activationType**을 지정해도 동작이 바뀌지 않습니다.
 
 
-## <a name="step-9-remove-and-manage-notifications"></a>9단계: 알림 제거 및 관리
+## <a name="step-9-remove-and-manage-notifications"></a>9단계: 제거 알림 및 관리
 
 알림 제거 및 관리는 UWP 앱과 동일합니다. 그렇지만 compat 라이브러리를 사용하여 **DesktopNotificationHistoryCompat**을 가져오는 것이 좋습니다. 따라서 클래식 Win32를 사용하는 경우 AUMID 제공에 대해 걱정하지 않아도 됩니다.
 
@@ -420,8 +420,8 @@ Windows 8은 알림 메시지를 도입했지만, ToastText01과 같은 [레거�
 
 | OS | ToastGeneric | COM 활성자 | 레거시 알림 템플릿 |
 | -- | ------------ | ------------- | ---------------------- |
-| Windows10 | 지원 | 지원 | 지원(하지만 COM 서버 활성화 제외) |
-| Windows 8.1/8 | 해당 없음 | 해당 없음 | 지원 |
+| Windows 10 | 지원함 | 지원함 | 지원(하지만 COM 서버 활성화 제외) |
+| Windows 8.1/8 | 해당 없음 | 해당 없음 | 지원함 |
 | Windows 7 이하 | 해당 없음 | 해당 없음 | 해당 없음 |
 
 Windows 10을 실행하고 있는지 확인하려면, `<VersionHelpers.h>` 헤더를 포함하고 **IsWindows10OrGreater** 메서드를 확인합니다. true를 반환하면 계속해서 이 설명서 나오는 모든 메서드를 호출합니다! 
@@ -438,11 +438,11 @@ if (IsWindows10OrGreater())
 
 ## <a name="known-issues"></a>알려진 문제
 
-**수정된 내용: 알림 클릭 후 앱의 초점이 맞춰지지 않음**: 빌드 15063 및 이전 버전에서는 전경 권한이 COM 서버를 활성화할 때 응용 프로그램으로 전달되지 않았습니다. 따라서 앱을 전경으로 옮기려고 하면 앱이 깜박입니다. 이 문제에 대한 해결 방법이 없었습니다. 빌드 16299 이상에서 이 문제를 해결했습니다.
+**수정 됨: 앱 알림 메시지를 클릭 한 후 포커스를 받을 하지**: 빌드 15063 및 이전 버전에서는 COM 서버를 활성화 하는 경우 포그라운드 rights는 응용 프로그램에 전송 되 되지 않았습니다. 따라서 앱을 전경으로 옮기려고 하면 앱이 깜박입니다. 이 문제에 대한 해결 방법이 없었습니다. 빌드 16299 이상에서 이 문제를 해결했습니다.
 
 
 ## <a name="resources"></a>리소스
 
-* [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/desktop-toasts)
+* [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/desktop-toasts)
 * [데스크톱 앱에서 알림 메시지](toast-desktop-apps.md)
 * [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)

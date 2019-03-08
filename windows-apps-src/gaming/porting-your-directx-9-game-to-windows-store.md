@@ -1,17 +1,17 @@
 ---
 title: DirectX 9에서 UWP(유니버설 Windows 플랫폼)로 포팅
-description: 이 섹션에는 UWP(유니버설 Windows 플랫폼)로의 DirectX 9 게임 포팅에 대한 문서, 개요 및 연습이 포함되어 있습니다.
+description: 이 섹션에는 UWP(유니버설 Windows 플랫폼)으로 DirectX 9 게임 포팅에 대한 문서, 개요 및 연습이 포함되어 있습니다.
 ms.assetid: 536c0b99-cdf3-1527-1ee2-4187f50a2cf0
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, 게임, directx 9, directx 11, 포팅
+keywords: windows 10, uwp, 게임, directx 9, directx 11, 포팅
 ms.localizationpriority: medium
 ms.openlocfilehash: 68c80f0fbe83d0a9a931a8437b5125c064bbe438
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933121"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644388"
 ---
 # <a name="port-from-directx-9-to-universal-windows-platform-uwp"></a>DirectX 9에서 UWP(유니버설 Windows 플랫폼)로 포팅
 

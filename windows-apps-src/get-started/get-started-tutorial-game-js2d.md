@@ -1,17 +1,17 @@
 ---
 title: JavaScript로 UWP 게임 만들기
-description: 간단한 UWP JavaScript 및 createjs로 작성 된 Microsoft Store에 대 한 게임
+description: 간단한 UWP JavaScript 및 CreateJS로 작성 하는 Microsoft Store 대 한 게임
 ms.date: 02/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d10dbf52f0ed01d46f9e5cba83cd14d48bfc88d
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114559"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639178"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>JavaScript로 UWP 게임 만들기
 
@@ -24,13 +24,13 @@ ms.locfileid: "9114559"
 ## <a name="introduction"></a>소개
 
 
-Microsoft Store에 앱을 게시 공유 (하거나 판매할!) 수백만 명의 사람들과, 각종 디바이스.  
+Microsoft Store 의미 하는 앱을 게시 공유 (하거나 판매할!) 수백만의 사람들이, 다양 한 장치에서 사용 하 여 합니다.  
 
-Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 앱으로 작성 해야 합니다. 한편 UWP는 매우 유연하며 다양한 언어와 프레임워크를 지원합니다. 이를 입증하듯, 이 샘플은 JavaScript로 작성된 간단한 게임으로 여러 CreateJS 라이브러리를 사용하며, 스프라이트를 그리고 게임 루프를 만들고 키보드와 마우스를 지원하고 다양한 화면 크기에 맞게 조정하는 방법을 보여줍니다.
+Microsoft Store 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 앱으로 작성 되어야 합니다. 한편 UWP는 매우 유연하며 다양한 언어와 프레임워크를 지원합니다. 이를 입증하듯, 이 샘플은 JavaScript로 작성된 간단한 게임으로 여러 CreateJS 라이브러리를 사용하며, 스프라이트를 그리고 게임 루프를 만들고 키보드와 마우스를 지원하고 다양한 화면 크기에 맞게 조정하는 방법을 보여줍니다.
 
 이 프로젝트는 Visual Studio를 사용하여 JavaScript로 빌드되었습니다. 몇 가지 사소한 변경 작업을 수행하면 웹 사이트에 호스트하거나 다른 플랫폼에 맞게 조정할 수도 있습니다. 
 
-**참고:** 이 완전 한 (또는 뛰어난) 게임이 아니며, JavaScript 및 제 3 자 라이브러리를 사용 하 여 앱을 Microsoft Store에 게시할 수 있도록 하는 방법을 보여 주기 위해 설계 되었습니다.
+**참고:** 이 구독은 완료 (또는 좋은!) 게임; JavaScript 및 세 번째 타사 라이브러리를 사용 하 여 앱을 Microsoft Store 게시할 수 있도록 보여 주기 위해 설계 되었습니다.
 
 
 ## <a name="requirements"></a>요구 사항
@@ -61,7 +61,7 @@ Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 
 
 이제 게임을 실행할 수 있습니다!
 
-**F5** 키를 눌러 앱을 실행합니다. 창이 열리고 목가적인 () 경우 landscape 낯익은 공룡이 서 보일 것입니다. 이제 계속 진행하면서 앱을 검사하고, 몇 가지 중요한 부분에 대해 설명하고, 나머지 기능의 잠금을 해제합니다.
+**F5** 키를 눌러 앱을 실행합니다. 창 열고 (스파스) 경우 idyllic는 환경에서 친숙 한 공룡 고정이 표시 됩니다. 이제 계속 진행하면서 앱을 검사하고, 몇 가지 중요한 부분에 대해 설명하고, 나머지 기능의 잠금을 해제합니다.
 
 ![닌자 고양이를 등에 업고 있는 평범한 공룡](images/JS2D_3.png)
 
@@ -69,9 +69,9 @@ Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 
 
 ## <a name="walkthough"></a>연습
 
-F5 키로 게임을 시작했으면 이제 어떻게 될지 궁금하실 것입니다. 및 대답은 "별로 없습니다", 많은 코드는 현재 주석으로 합니다. 지금까지 공룡 그리고 스페이스바를 눌러야 글자만 무성의 모두 표시 됩니다. 
+F5 키로 게임을 시작했으면 이제 어떻게 될지 궁금하실 것입니다. 현재는 많은 코드가 주석으로 처리되어 있기 때문에 표시되는 것이 "별로 없습니다". 현재는 공룡 그리고 스페이스바를 누르라는 무성의한 글자만 보입니다. 
 
-### <a name="1-setting-the-stage"></a>1 스테이지 설정
+### <a name="1-setting-the-stage"></a>1. 스테이지 설정
 
 **index.html**을 열어서 살펴보면 거의 비어 있습니다. 이 파일은 앱이 들어 있는 기본 웹 페이지이며, 두 가지 중요한 역할만 수행합니다. 첫째, **EaselJS** 및 **PreloadJS** CreateJS 라이브러리의 JavaScript 소스 코드와 **main.js**(이 예제의 소스 코드 파일)를 포함합니다.
 둘째, 모든 그래픽이 표시되는 &lt;canvas&gt; 태그를 정의합니다. &lt;canvas&gt;는 표준 HTML5 문서 구성 요소입니다. **main.js**로 작성된 코드에서 참조할 수 있도록 gameCanvas라는 이름을 붙이겠습니다. JavaScript 게임을 처음부터 새로 만드는 경우에는 **EaselJS** 및 **PreloadJS** 파일을 솔루션으로 복제한 다음 캔버스 개체를 만들어야 합니다.
@@ -86,9 +86,9 @@ EaselJS는 *스테이지*라고 하는 새로운 개체를 제공합니다. 스�
 
 말이 나온 김에 지금 **main.js**를 열도록 하겠습니다.
 
-### <a name="2-loading-the-bitmaps"></a>2. 비트맵 로드
+### <a name="2-loading-the-bitmaps"></a>2. 비트맵을 로드
 
-EaselJS는 여러 종류의 그래픽 개체를 제공합니다. 하늘에 사용되는 파란색 사각형 같은 간단한 셰이프, 잠시 후 우리가 추가할 구름 같은 비트맵, 텍스트 개체 그리고 스프라이트를 만들 수 있습니다. 스프라이트 사용 (SpriteSheet) [https://createjs.com/docs/easeljs/classes/SpriteSheet.html]: 여러 이미지가 들어 있는 단일 비트맵인 합니다. 예를 들어 이 SpriteSheet를 사용하여 공룡 애니메이션의 여러 프레임을 저장합니다.
+EaselJS는 여러 종류의 그래픽 개체를 제공합니다. 하늘에 사용되는 파란색 사각형 같은 간단한 셰이프, 잠시 후 우리가 추가할 구름 같은 비트맵, 텍스트 개체 그리고 스프라이트를 만들 수 있습니다. 스프라이트 (SpriteSheet)를 사용 하 여 [https://createjs.com/docs/easeljs/classes/SpriteSheet.html]: 여러 이미지를 포함 하는 단일 비트맵입니다. 예를 들어 이 SpriteSheet를 사용하여 공룡 애니메이션의 여러 프레임을 저장합니다.
 
 ![Walking Dino 스프라이트 시트](images/JS2D_4.png)
 
@@ -124,7 +124,7 @@ EaselJS는 여러 종류의 그래픽 개체를 제공합니다. 하늘에 사�
 
 **init()** 함수를 찾을 때까지 **main.js**를 찾아봅니다. 이 함수는 게임이 시작될 때 호출되며 모든 그래픽 개체를 여기서 설정합니다.
 
-다음 코드를 찾아서 구름 이미지를 참조하는 줄에서 주석(\\)을 제거합니다.
+다음 코드를 찾아 주석을 제거 (\\) 클라우드 이미지를 참조 하는 줄에서.
 
 ```
  manifest = [
@@ -160,14 +160,13 @@ JavaScript는 이미지 같은 리소스를 로드할 때 약간의 도움이 �
 
 F5 키를 눌러 앱을 다시 실행하면 구름이 표시된 것을 볼 수 있습니다.
 
-### <a name="3-moving-the-clouds"></a>3. 구름 이동
+### <a name="3-moving-the-clouds"></a>3. 클라우드로 이동
 
 이번에는 구름을 움직여 보겠습니다. 구름을 포함하여 어떤 물체를 움직이는 방법은 1초에 여러 차례 반복해서 호출되는 [ticker](https://www.createjs.com/docs/easeljs/classes/Ticker.html) 함수입니다. 이 함수는 호출될 때마다 약간 다른 위치에 그래픽을 다시 그립니다.
 
 <p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen"><a href="https://codepen.io">CodePen</a>에서 Pen <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS - Animating clouds</a> by Microsoft Edge Docs(<a href="https://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>)를 참조하세요.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
- 
-이 작업을 수행하는 코드는 EaselJS이며 CreateJS 라이브러리에서 제공하는 **main.js** 파일에 이미 있습니다. 다음과 같이 표시됩니다.
+  이렇게 하려면 코드를 이미 합니다 **main.js** EaselJS CreateJS 라이브러리를 제공 하는 파일입니다. 다음과 같이 표시됩니다.
 
 ```
     // Set up the game loop and keyboard handler.
@@ -203,7 +202,7 @@ function animate_clouds()
 
 이제 앱을 실행하면 구름이 움직이는 것을 볼 수 있습니다. 드디어 동작을 구현했습니다.
 
-### <a name="4-adding-keyboard-and-mouse-input"></a>4. 키보드 및 마우스 입력 추가
+### <a name="4-adding-keyboard-and-mouse-input"></a>4. 추가 키보드 및 마우스 입력
 
 사용자가 조작할 수 없는 게임은 게임이 아닙니다. 플레이어가 키보드나 마우스로 무언가를 할 수 있게 만들어 보겠습니다. **loadingComplete()** 함수로 돌아가면 다음과 같이 표시될 것입니다. 주석을 제거합니다.
 
@@ -255,9 +254,9 @@ Gamestate는 게임에 일반적으로 사용되는 디자인 패턴입니다. �
 
 이제 앱을 다시 실행하면 창 크기를 조절할 수 있으며 보다 나아진 결과를 얻을 수 있습니다.
 
-## <a name="publishing-to-the-microsoft-store"></a>Microsoft Store에 게시
+## <a name="publishing-to-the-microsoft-store"></a>Microsoft Store 게시
 
-(다듬어야 수 있는!) Microsoft Store에 게시할 수는 UWP 앱을 만들었으니 이제 
+(먼저 개선 가정)! Microsoft Store 게시할 수는 UWP 앱을 만들었으므로 
 
 몇 가지 단계를 처리해야 합니다.
 
@@ -265,7 +264,7 @@ Gamestate는 게임에 일반적으로 사용되는 디자인 패턴입니다. �
 2. 앱 제출 [검사 목록](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
 3. 앱을 제출하여 [인증](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
-자세한 내용은 [UWP 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 참조 하세요.
+자세한 내용은 참조 하세요. [UWP 앱을 게시](https://developer.microsoft.com/en-us/store/publish-apps)합니다.
 
 ## <a name="suggestions-for-other-features"></a>다른 기능에 대한 제안.
 
@@ -275,9 +274,9 @@ Gamestate는 게임에 일반적으로 사용되는 디자인 패턴입니다. �
 2. 게임 패드 지원. [API](https://gamedevelopment.tutsplus.com/tutorials/using-the-html5-gamepad-api-to-add-controller-support-to-browser-games--cms-21345)가 제공됩니다.
 3. 좀 더 멋진 게임을 만들어보세요! 이 부분은 개발자에게 달렸지만, 온라인에 수많은 리소스가 제공됩니다. 
 
-## <a name="other-links"></a>기타 링크
+## <a name="other-links"></a>다른 링크
 
-* [JavaScript로 간단한 Windows 게임 만들기](https://www.sitepoint.com/creating-a-simple-windows-8-game-with-javascript-game-basics-createjseaseljs/)
-* [HTML/JS 게임 엔진 선택](https://html5gameengine.com/)
-* [JS 기반 게임에 CreateJS 사용](https://blogs.msdn.microsoft.com/cbowen/2012/09/19/using-createjs-in-your-javascript-based-windows-8-game/)
-* [LinkedIn Learning의 게임 개발 과정](https://www.linkedin.com/learning/topics/game-development)
+* [JavaScript 사용 하 여 간단한 Windows 게임 제작](https://www.sitepoint.com/creating-a-simple-windows-8-game-with-javascript-game-basics-createjseaseljs/)
+* [HTML/JS 게임 엔진을 선택합니다.](https://html5gameengine.com/)
+* [게임 기반 CreateJS 프로그램 JS에서 사용 하 여](https://blogs.msdn.microsoft.com/cbowen/2012/09/19/using-createjs-in-your-javascript-based-windows-8-game/)
+* [LinkedIn Learning에서 게임 개발 과정](https://www.linkedin.com/learning/topics/game-development)

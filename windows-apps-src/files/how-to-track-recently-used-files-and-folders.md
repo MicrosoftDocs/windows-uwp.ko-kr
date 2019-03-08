@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c0eb2b6e668baec9f5ad1ef859b7213f20748beb
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049580"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601628"
 ---
 # <a name="track-recently-used-files-and-folders"></a>최근에 사용한 파일 및 폴더 추적
 
-**중요 API**
+**중요 한 Api**
 
 - [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458)
 - [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/hh738369)
@@ -25,25 +25,25 @@ ms.locfileid: "9049580"
 앱의 MRU는 정적 [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458) 속성에서 가져오는 [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475) 클래스로 표현됩니다. MRU 항목은 [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129) 개체로 저장되므로 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체와 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 개체를 모두 MRU에 추가할 수 있습니다.
 
 > [!NOTE]
-> 전체 샘플 [파일 선택기 샘플](https://go.microsoft.com/fwlink/p/?linkid=619994) 및 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)을 참조 하세요.
+> 전체 샘플에 대 한 참조를 [파일 선택 샘플](https://go.microsoft.com/fwlink/p/?linkid=619994) 및 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
--   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
+-   **유니버설 Windows 플랫폼 (UWP) 앱 용 비동기 프로그래밍 이해**
 
     C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://msdn.microsoft.com/library/windows/apps/mt187337)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187334)을 참조하세요.
 
--   **위치에 대한 액세스 권한**
+-   **위치에 대 한 액세스 권한**
 
     [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
--   [선택기를 사용하여 파일 및 폴더 열기](quickstart-using-file-and-folder-pickers.md)
+-   [선택기를 사용 하 여 파일 및 폴더를 열으십시오](quickstart-using-file-and-folder-pickers.md)
 
     선택한 파일은 종종 사용자가 반복해서 열어 보는 파일과 동일한 파일입니다.
 
  ## <a name="add-a-picked-file-to-the-mru"></a>MRU에 선택한 파일 추가
 
--   사용자가 선택하는 파일은 해당 사용자가 반복적으로 돌아가는 파일인 경우가 많습니다. 따라서 사용자가 파일을 선택하는 즉시 해당 파일을 앱의 MRU에 추가하는 것이 좋습니다. 방법은 다음과 같습니다.
+-   사용자가 선택하는 파일은 해당 사용자가 반복적으로 돌아가는 파일인 경우가 많습니다. 따라서 사용자가 파일을 선택하는 즉시 해당 파일을 앱의 MRU에 추가하는 것이 좋습니다. 다음과 같이 하세요.
 
     ```cs
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
@@ -52,7 +52,7 @@ ms.locfileid: "9049580"
     string mruToken = mru.Add(file, "profile pic");
     ```
 
-    [**StorageItemMostRecentlyUsedList.Add**](https://msdn.microsoft.com/library/windows/apps/br207476)가 오버로드됩니다. 이 예제에서는 메타데이터를 파일과 연결할 수 있도록 [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481)를 사용합니다. 메타데이터를 설정하면 항목의 용도(예: "프로필 사진")를 기록할 수 있습니다. [**Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480)을 호출하면 메타데이터 없이 파일을 MRU에 추가할 수 있습니다. 항목을 MRU에 추가한 경우 메서드는 항목을 검색하는 데 사용되는 고유하게 식별되는 문자열(토큰)을 반환합니다.
+    [**StorageItemMostRecentlyUsedList.Add** ](https://msdn.microsoft.com/library/windows/apps/br207476) 오버 로드 합니다. 이 예제에서는 메타데이터를 파일과 연결할 수 있도록 [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481)를 사용합니다. 메타데이터를 설정하면 항목의 용도(예: "프로필 사진")를 기록할 수 있습니다. [  **Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480)을 호출하면 메타데이터 없이 파일을 MRU에 추가할 수 있습니다. 항목을 MRU에 추가한 경우 메서드는 항목을 검색하는 데 사용되는 고유하게 식별되는 문자열(토큰)을 반환합니다.
 
 > [!TIP]
 > MRU에서 항목을 검색하려면 토큰이 필요하므로 다른 곳에 유지해야 합니다. 앱 데이터에 대한 자세한 내용은 [응용 프로그램 데이터 관리](https://msdn.microsoft.com/library/windows/apps/hh465109)를 참조하세요.
@@ -83,7 +83,7 @@ foreach (Windows.Storage.AccessCache.AccessListEntry entry in mru.Entries)
 }
 ```
 
-[**AccessListEntryView**](https://msdn.microsoft.com/library/windows/apps/br227349)를 사용하면 MRU에서 항목을 반복할 수 있습니다. 이러한 항목은 항목에 대한 토큰과 메타데이터가 포함된 [**AccessListEntry**](https://msdn.microsoft.com/library/windows/apps/br227348) 구조입니다.
+[  **AccessListEntryView**](https://msdn.microsoft.com/library/windows/apps/br227349)를 사용하면 MRU에서 항목을 반복할 수 있습니다. 이러한 항목은 항목에 대한 토큰과 메타데이터가 포함된 [**AccessListEntry**](https://msdn.microsoft.com/library/windows/apps/br227348) 구조입니다.
 
 ## <a name="removing-items-from-the-mru-when-its-full"></a>가득 찬 경우 MRU에서 항목 제거
 
@@ -95,5 +95,5 @@ MRU뿐만 아니라 앱에는 향후 액세스 목록도 있습니다. 파일 �
 
 사용자가 항목을 선택하면 MRU뿐만 아니라 향후 액세스 목록에도 추가하는 것이 좋습니다.
 
--   [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)에는 최대 1000개의 항목을 저장할 수 있습니다. 파일뿐만 아니라 폴더도 유지할 수 있으므로 많은 폴더가 있을 수 있습니다.
+-   [  **FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)에는 최대 1000개의 항목을 저장할 수 있습니다. 파일뿐만 아니라 폴더도 유지할 수 있으므로 많은 폴더가 있을 수 있습니다.
 -   플랫폼은 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)에서 항목을 자동으로 제거하지 않습니다. 1000개 항목 제한에 도달한 경우 [**Remove**](https://msdn.microsoft.com/library/windows/apps/br207497) 메서드로 공간을 확보할 때까지 다른 항목을 추가할 수 없습니다.

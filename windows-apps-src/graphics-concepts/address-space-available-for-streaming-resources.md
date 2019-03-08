@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 35a591d805870df97ee03169b20e664316e094a7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925048"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57652378"
 ---
 # <a name="address-space-available-for-streaming-resources"></a>스트리밍 리소스에 사용할 수 있는 주소 공간
 
@@ -27,7 +27,7 @@ GPU(그래픽 처리 장치)를 위한 별도의 페이지 테이블이 있는 �
 
 CPU와 GPU가 페이지 테이블을 공유하는 향후 시스템에서는 프로세스의 모든 CPU 할당과 GPU 할당이 사용 가능한 주소 공간을 공유합니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [스트리밍 리소스 생성 매개 변수](streaming-resource-creation-parameters.md)

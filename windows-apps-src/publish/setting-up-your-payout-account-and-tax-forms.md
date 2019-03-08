@@ -1,5 +1,5 @@
 ---
-Description: In order to receive money from app sales in the Microsoft Store, you need to set up your payout account and fill out the necessary tax forms.
+Description: Microsoft Store 앱 판매에서 비용을 받으려면 지급 계좌를 설정 하 고 필요한 세금 양식을 작성 해야 합니다.
 title: 지급 계좌 및 세금 양식 설정
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
 ms.date: 12/14/2017
@@ -7,29 +7,29 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dff4e3b37be14729abdc3262d484745a0245776
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048050"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641008"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
 
 
-Microsoft Store의 앱 판매에서 번 돈을 받으려면 지급액 계좌를 설정 하 고 [파트너 센터](https://partner.microsoft.com/dashboard)에서 필요한 세금 양식을 입력 해야 합니다.
+지급 계좌를 설정 하 고 필요한 세금 양식 작성 해야 Microsoft Store 앱 판매에서 비용을 받으려면 [파트너 센터](https://partner.microsoft.com/dashboard)합니다.
 
-앱에서 바로 구매를 제공하거나 Microsoft Advertising을 사용하지 않고 무료 앱 목록만 올리려면 지급액 계좌를 설정하거나 세금 양식을 작성할 필요가 없습니다. 나중에 마음이 하지 않으려면 앱 (또는 추가 기능)을 판매 하는 경우 지급액 계좌를 설정 하 고 해당 시간에 세금 양식을 입력 수 있습니다. 지급 계좌와 세금 프로필이 완료될 때까지 유료 앱 또는 추가 기능을 제출할 수 없습니다.
-
-> [!NOTE]
-> [특정 시장](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)에서는 개발자가 무료 앱만 제출할 수 있습니다. 계정이 이러한 시장 중 하나에 등록되어 있는 경우 지급 계좌를 설정하는 옵션이 제공되지 않습니다.
-
-[개발자 계정을 설정 했](opening-a-developer-account.md)을 설정한 후 Microsoft Store에서 앱 (또는 추가 기능)을 판매 하기 전에 수행 해야 하는 두 가지 가지 있습니다.
-
--   [지급 계좌 설정](#payout-account)
--   [세금 양식 작성](#tax-forms)
+앱에서 바로 구매를 제공하거나 Microsoft Advertising을 사용하지 않고 무료 앱 목록만 올리려면 지급액 계좌를 설정하거나 세금 양식을 작성할 필요가 없습니다. 경우 나중에 마음이 앱 (또는 추가 기능)을 판매 하려면, 지급 계좌를 설정 하 고 이때 세금 양식을 채울 수 있습니다. 지급 계좌와 세금 프로필이 완료될 때까지 유료 앱 또는 추가 기능을 제출할 수 없습니다.
 
 > [!NOTE]
-> 앱으로 번 돈을 지급 받는 방법과 시기에 대한 자세한 내용은 [지급 받기](getting-paid-apps.md)를 참조하세요.
+> [특정 시장](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)에서는 개발자가 무료 앱만 제출할 수 있습니다. 계정이 이러한 시장 중 하나에 등록되어 있는 경우 지급액 계좌를 설정하는 옵션이 제공되지 않습니다.
+
+설정한 후 [개발자 계정을 설정](opening-a-developer-account.md)은 Microsoft Store 앱 (또는 추가 기능)을 판매할 수 전에 수행 해야 하는 두 가지가 있습니다.
+
+-   [지급 계좌를 설정](#payout-account)
+-   [세금 양식 채우기](#tax-forms)
+
+> [!NOTE]
+> 방법 및 시기는 수에 대해 지불한 돈을 앱에 대 한 세부 정보 확인을 참조 하세요 [유료 가져오기](getting-paid-apps.md)합니다.
  
 
 ## <a name="payout-account"></a>지급 계좌
@@ -40,15 +40,15 @@ Microsoft Store의 앱 판매에서 번 돈을 받으려면 지급액 계좌를 
 > 몇몇 시장에서는 PayPal을 지급 계좌에 사용할 수 있습니다. 특정 지역/국가에서 PayPal이 지원되는지 확인하려면 [계정 유형, 위치 및 수수료](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)를 참조하고, 자세한 내용은 [PayPal 정보](#paypal-info)를 읽어보세요.
 
  
-**지급 계좌를 설정하려면**
+**지급 계좌를 설정 하려면**
 
-1.  [파트너 센터](https://partner.microsoft.com/dashboard)오른쪽 상단 모서리에서 **설정** 기어 아이콘을 선택한 다음 **개발자 설정**을 선택 합니다.
-2.  설정 페이지의 왼쪽된 탐색 메뉴에서 **지급 계좌**를 선택 합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)를 선택 합니다 **설정** 기어 모양의 오른쪽 위 모서리의 아이콘을 선택 **개발자 설정을**합니다.
+2.  설정 페이지의 왼쪽된 탐색 메뉴에서 선택 **지급 계좌**합니다.
 
    > [!NOTE]
    > 이는 중요한 정보이므로 다시 로그인하라는 메시지가 표시될 수 있습니다.
 
-3.  화면이 나타나면 계좌 정보를 입력합니다.
+3.  표시되는 화면에서 계좌 정보를 입력합니다.
 
    > [!NOTE]
    > 계좌 정보를 제공하기 위해 사용하는 필드에는 영숫자 문자만 입력할 수 있습니다.
@@ -70,10 +70,10 @@ Microsoft Store의 앱 판매에서 번 돈을 받으려면 지급액 계좌를 
 
 PayPal을 결제 방법으로 사용하는 것에 대한 일반적인 질문:
 
--   **지급을 받기 위해 내가 해야 할 PayPal 설정은 무엇인가요?** PayPal 계정이 eCheck 결제를 차단하지 않도록 해야 합니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다. 자세한 내용은 [PayPal의 계정 설정 페이지](https://go.microsoft.com/fwlink/p/?linkid=513139)를 참조하세요.
--   **내 국가/지역이 지원되나요?** 결제 방법으로 PayPal이 지원되는 곳을 알려면 [계정 유형, 위치 및 수수료](account-types-locations-and-fees.md)를 참조하세요.
--   **내 PayPal 계정을 내 파트너 센터 계정으로 동일한 국가/지역에 등록 해야 합니까?** 아니요. PayPal 계정을 설정할 때, 기본 구간을 수락하면 됩니다. 일부 통화의 지급을 차단하지 않는 한 다른 국가/지역 과 통화 문제는 발생하지 않을 것입니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다.
--   **PayPal 결제를 수동으로 수락해야 하나요?** 아니요. PayPal 계정은 기본적으로 사용자가 지급을 수동으로 수락하도록 설정되어 있으며, 이것은 사용자가 30일 내에 지급을 수락하지 않는 경우 반송됨을 의미합니다. PayPal의 More Settings 페이지에서 “Ask Me”를 끄면 이 설정을 변경할 수 있습니다.
+-   **PayPal 설정을 결제 금액을 받으려면 있어야 하나요?** PayPal 계정이 eCheck 결제를 차단하지 않도록 해야 합니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다. 자세한 내용은 [PayPal의 계정 설정 페이지](https://go.microsoft.com/fwlink/p/?linkid=513139)를 참조하세요.
+-   **내 국가/지역 지원 되나요?** 결제 방법으로 PayPal이 지원되는 곳을 알려면 [계정 유형, 위치 및 수수료](account-types-locations-and-fees.md)를 참조하세요.
+-   **내 PayPal 계정 내 파트너 센터 계정과 동일한 국가/지역에 등록할 수 있습니까?** 아니요. PayPal 계정을 설정할 때, 기본 구간을 수락하면 됩니다. 일부 통화의 지급을 차단하지 않는 한 다른 국가/지역 과 통화 문제는 발생하지 않을 것입니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다.
+-   **PayPal 결제 기능을 수동으로 적용 해야 합니까?** 아니요. PayPal 계정은 기본적으로 사용자가 지급을 수동으로 수락하도록 설정되어 있으며, 이것은 사용자가 30일 내에 지급을 수락하지 않는 경우 반송됨을 의미합니다. PayPal의 More Settings 페이지에서 “Ask Me”를 끄면 이 설정을 변경할 수 있습니다.
 
 
 ### <a name="specific-requirements-for-certain-countriesregions"></a>특정 국가/지역에 대한 구체적인 요구 사항
@@ -97,9 +97,9 @@ Form-R은 지급을 받을 수 있는 달마다 은행에 제출해야 합니다
 
 지급이 성공적으로 이루어지게 하려면 다음을 명심하시기 바랍니다.
 
--   파트너 센터에서 지급 계좌에 입력 한 **예금주 이름** 은행 계좌와 관련 된 정확한 동일한 이름 이어야 합니다. 예를 들어, 은행 계좌에 중간 이름이 포함되어 있는 경우에는 **예금주 이름**에 중간 이름을 추가하세요.
+-   합니다 **계정 소유자 이름** 파트너 센터에서 지급 계좌 귀하의 은행 계좌와 관련 된 정확한 이름이 있어야 합니다.를 입력 합니다. 예를 들어, 은행 계좌에 중간 이름이 포함되어 있는 경우에는 **예금주 이름**에 중간 이름을 추가하세요.
 -   Microsoft에서 은행 계좌로 직접 이체하며, 지급액의 통화는 루블(RUB)입니다.
--   파트너 센터에 라틴어 입력 한 은행 정보는 키릴 문자로 번역 됩니다.
+-   파트너 센터에서 라틴 문자 입력 은행 정보 키릴 자모 문자로 변환 됩니다.
 -   은행 계좌로 지급되며, 은행 카드로는 지급되지 않습니다.
 
 #### <a name="ukraine"></a>우크라이나
@@ -114,28 +114,28 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 
 지급이 성공적으로 이루어지게 하려면 다음을 명심하시기 바랍니다.
 
--   파트너 센터에서 지급 계좌에 입력 한 **예금주 이름** 은행 계좌와 관련 된 정확한 동일한 이름 이어야 합니다. 예를 들어, 은행 계좌에 중간 이름이 포함되어 있는 경우에는 **예금주 이름**에 중간 이름을 추가하세요.
+-   합니다 **계정 소유자 이름** 파트너 센터에서 지급 계좌 귀하의 은행 계좌와 관련 된 정확한 이름이 있어야 합니다.를 입력 합니다. 예를 들어, 은행 계좌에 중간 이름이 포함되어 있는 경우에는 **예금주 이름**에 중간 이름을 추가하세요.
 -   Microsoft에서 은행 계좌로 직접 이체하며, 지급액의 통화는 미화(USD)입니다.
--   파트너 센터에 라틴어 입력 한 은행 정보는 키릴 문자로 번역 됩니다.
+-   파트너 센터에서 라틴 문자 입력 은행 정보 키릴 자모 문자로 변환 됩니다.
 
 
 ## <a name="tax-forms"></a>세금 양식
 
-[개발자 계정에 등록](opening-a-developer-account.md) 한 후 [지급 계좌](#payout-account)설정, 다음 단계를 완료 하 여 Microsoft Store에 대 한 *세금 프로필* 을 만들 수 있습니다.
+설정한 후 [개발자 계정에 등록](opening-a-developer-account.md) 설정 및 사용자 [지급 계좌](#payout-account)를 만들 수 있습니다 하 *세금 프로필* 다음을 완료 하 여 Microsoft Store 대 한 단계:
 
 -   거주 국가 및 국적을 지정합니다.
 -   적절한 세금 양식을 작성합니다.
 
-완료 하 고 파트너 센터;에서 온라인으로 세금 양식에 제출 대부분의 경우, 인쇄와 양식을 메일 필요가 없습니다.
+완료 하 고 전자적으로 Partner Center;에서 세금 양식 제출 대부분의 경우, 인쇄 및 폼 메일 필요가 없습니다.
 
 > [!IMPORTANT]
-> 국가 및 지역에 따라 세금 요건이 다릅니다. 세금으로 납부해야 하는 정확한 액수는 앱을 판매하는 국가 및 지역에 따라 다릅니다. Microsoft에서 판매세와 이용세를 대신 납부하는 국가에 대해서는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 다른 국가에서는 등록된 위치에 따라 현지 세무 당국에 직접 앱 판매세와 이용세를 납부해야 할 수도 있습니다. 또한 지급되는 앱 판매 수익에 대해 소득세가 과세될 수 있습니다. 국가 또는 지역 가장 잘 하도록 도와주는 Microsoft 스토어 개발자 활동에 대 한 정확한 세금 정보를 확인 하는 것에 대 한 관련 기관에 문의 하 좋습니다.
+> 국가 및 지역에 따라 세금 요건이 다릅니다. 세금으로 납부해야 하는 정확한 액수는 앱을 판매하는 국가 및 지역에 따라 다릅니다. Microsoft에서 판매세와 이용세를 대신 납부하는 국가에 대해서는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 다른 국가에서는 등록된 위치에 따라 현지 세무 당국에 직접 앱 판매세와 이용세를 납부해야 할 수도 있습니다. 또한 지급되는 앱 판매 수익에 대해 소득세가 과세될 수 있습니다. 해당 국가 또는 지역에 가장 도움이 될 수 있습니다 Microsoft Store 개발자 활동에 대 한 올바른 세금 정보를 확인 하는 관련 기관에 연결할 좋습니다.
 
  
-**세금 프로필을 완성하려면**
+**귀하의 세금 프로필이 완료**
 
-1.  [파트너 센터](https://partner.microsoft.com/dashboard) **계정 설정** 아이콘 오른쪽 상단 모서리에서 선택한 **개발자 설정**을 선택 합니다.
-2.  왼쪽된 탐색 메뉴에서 **세금 프로필**을 선택 합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)를 선택 합니다 **계정 설정** 상단 오른쪽 모서리의 아이콘을 선택 합니다. **개발자 설정을**합니다.
+2.  왼쪽된 탐색 메뉴에서 선택 **세금 프로필**합니다.
 
    > [!NOTE]
    > 이는 중요한 정보이므로 다시 로그인하라는 메시지가 표시될 수 있습니다.
@@ -144,7 +144,7 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 4.  미국 시민권과 영주권에 대한 질문에 대답하고 **다음**을 클릭합니다.
 5.  이름 및 주소 정보가 표시되면 세금 신고를 위해 확인합니다.
 
-완성해야 하는 세금 양식의 온라인 버전이 표시됩니다. 국가 거주 또는 국적과 관계 없이 앱 또는 Microsoft Store를 통해 추가 기능을 판매 하려면 미국 세금 양식을 작성 해야 합니다. 특정 미국 영주권 요구 사항을 충족하는 개발자는 IRS W-9 양식을 작성해야 합니다. 미국 이외 지역의 다른 개발자는 IRS W-8 양식을 작성해야 합니다. 세금 프로필을 완성하면 온라인으로 이러한 양식을 작성할 수 있습니다.
+완성해야 하는 세금 양식의 온라인 버전이 표시됩니다. 거주 하거나 citizenship의 국가 관계 없이 모든 앱 또는 Microsoft Store 통해 추가 기능을 판매 하려면 미국 세금 양식을 채워야 합니다. 특정 미국 영주권 요구 사항을 충족하는 개발자는 IRS W-9 양식을 작성해야 합니다. 미국 이외 지역의 다른 개발자는 IRS W-8 양식을 작성해야 합니다. 세금 프로필을 완성하면 온라인으로 이러한 양식을 작성할 수 있습니다.
 
 미국 ITIN(개인 납세자 번호)이 없어도 Microsoft에서 지급을 받거나 조세조약 혜택을 클레임할 수 있습니다.
 
@@ -154,7 +154,7 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 
 ### <a name="tax-treaty-benefits"></a>조세조약 혜택
 
-미국 이외 지역에 거주하는 경우 조세조약 혜택을 활용할 수 있습니다. 이러한 혜택 국가 마다 다르며 사용 하면 Microsoft Store 원천 징수 하는 시간을 줄일 수 있습니다. W-8BEN 양식의 Part II를 완성하면 조세조약 혜택을 클레임할 수 있습니다. 이러한 혜택을 받을 수 있는지 확인하려면 거주 국가나 지역의 관련 기관에 문의하는 것이 좋습니다.
+미국 이외 지역에 거주하는 경우 조세조약 혜택을 활용할 수 있습니다. 이러한 혜택에는 국가 마다 다르며 Microsoft Store 보류 하는 세금의 양을 줄일 수 있습니다. W-8BEN 양식의 Part II를 완성하면 조세조약 혜택을 클레임할 수 있습니다. 이러한 혜택을 받을 수 있는지 확인하려면 거주 국가나 지역의 관련 기관에 문의하는 것이 좋습니다.
 
  
 

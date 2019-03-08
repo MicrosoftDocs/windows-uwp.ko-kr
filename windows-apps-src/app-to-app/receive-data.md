@@ -4,14 +4,14 @@ title: 데이터 수신
 ms.assetid: 0AFF9E0D-DFF4-4018-B393-A26B11AFDB41
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e17b9ddd5833899a83e24d24c74f9c620a28f5c8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943529"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617638"
 ---
 # <a name="receive-data"></a>데이터 수신
 
@@ -79,7 +79,7 @@ if (shareOperation.Data.Contains(StandardDataFormats.Text))
 shareOperation.ReportStarted(); 
 ```
 
-[**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted)를 호출한 후에는 앱과의 사용자 상호 작용이 더 이상 필요하지 않습니다. 따라서 사용자가 앱을 종료해도 되는 경우에만 이 메서드를 호출해야 합니다.
+[  **ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted)를 호출한 후에는 앱과의 사용자 상호 작용이 더 이상 필요하지 않습니다. 따라서 사용자가 앱을 종료해도 되는 경우에만 이 메서드를 호출해야 합니다.
 
 확장 공유에서는 앱이 DataPackage 개체로부터 모든 데이터를 가져오기 전에 사용자가 원본 앱을 해제할 수 있습니다. 따라서 앱에서 필요한 데이터 가져오기를 완료한 경우 이를 시스템에서 알 수 있도록 하는 것이 좋습니다. 그러면 시스템에서 필요에 따라 원본 앱을 일시 중단하거나 종료할 수 있습니다.
 
@@ -105,7 +105,7 @@ shareOperation.ReportCompleted();
 
 사용자가 콘텐츠를 받기 위해 앱을 선택한 경우 [**QuickLink**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink)를 만드는 것이 좋습니다. **QuickLink**는 사용자가 앱과 정보를 쉽게 공유할 수 있도록 해주는 바로 가기와 비슷합니다. 예를 들어 친구의 메일 주소로 미리 구성된 새 메일 메시지를 여는 **QuickLink**를 만들 수 있습니다.
 
-**QuickLink**에는 제목, 아이콘 및 ID가 있어야 합니다. 사용자가 공유 참을 탭하면 제목(예: "엄마에게 전자 메일 보내기")과 아이콘이 표시됩니다. ID는 앱에서 메일 주소, 로그인 자격 증명 등과 같은 사용자 지정 정보에 액세스하는 데 사용됩니다. 앱에서 **QuickLink**를 만들 때 [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted)를 호출하여 **QuickLink**를 시스템에 반환합니다.
+**QuickLink**에는 제목, 아이콘 및 ID가 있어야 합니다. 사용자가 공유 참을 탭하면 제목(예: "엄마의 메일")과 아이콘이 나타납니다. ID는 앱에서 메일 주소, 로그인 자격 증명 등과 같은 사용자 지정 정보에 액세스하는 데 사용됩니다. 앱에서 **QuickLink**를 만들 때 [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted)를 호출하여 **QuickLink**를 시스템에 반환합니다.
 
 **QuickLink**에서는 실제로 데이터를 저장하지 않습니다. 대신 선택한 경우에 앱으로 전송되는 식별자를 포함합니다. 앱에서 **QuickLink**의 ID와 해당 사용자 데이터를 저장해야 합니다. 사용자가 **QuickLink**를 탭할 때 [**QuickLinkId**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.QuickLinkId) 속성을 통해 해당 ID를 가져올 수 있습니다.
 
@@ -134,7 +134,7 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 ## <a name="see-also"></a>참고 항목 
 
 * [앱 간 통신](index.md)
-* [데이터 공유](share-data.md)
+* [공유 데이터](share-data.md)
 * [OnShareTargetActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onsharetargetactivated.aspx)
 * [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
 * [ReportError](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reporterror.aspx)

@@ -1,5 +1,5 @@
 ---
-Description: Design external help pages for detailed instructions and advice about your app.
+Description: 앱에 대한 자세한 지침과 권장 사항에 대해 외부 도움말 페이지를 디자인합니다.
 title: 외부 도움말 페이지 디자인에 대한 지침
 label: External help
 template: detail.hbs
@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 56afd553-c520-4a28-b63d-2e1b3c1d3606
 ms.localizationpriority: medium
 ms.openlocfilehash: eaca2af3a497de75beaffe5d3af4a261b24d8ba4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938180"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617178"
 ---
 # <a name="external-help-pages"></a>외부 도움말 페이지
 
@@ -44,4 +44,4 @@ ms.locfileid: "8938180"
 
 ## <a name="related-articles"></a>관련 문서
 
-* [앱 도움말에 대한 지침](guidelines-for-app-help.md)
+* [앱 도움말에 대 한 지침](guidelines-for-app-help.md)

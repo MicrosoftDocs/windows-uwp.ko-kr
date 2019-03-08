@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 36d08006fa2f32812f97daef5135a98dce16c4e5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929597"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594618"
 ---
 # <a name="index-buffers"></a>인덱스 버퍼
 
 
-*인덱스 버퍼*는 인덱스 데이터를 포함하는 메모리 버퍼로써 기본 요소를 렌더링하는 데 사용되는 버텍스 버퍼에 대한 정수 오프셋입니다.
+*인덱스 버퍼*는 인덱스 데이터를 포함하는 메모리 버퍼로써 기본 요소를 렌더링하는 데 사용되는 꼭짓점 버퍼에 대한 정수 오프셋입니다.
 
 인덱스 버퍼는 인덱스 데이터를 포함하는 메모리 버퍼입니다. 인덱스 데이터 또는 인덱스는 꼭짓점 버퍼에 대한 정수 오프셋이며 원형 렌더링에 사용됩니다.
 
@@ -37,10 +37,10 @@ ms.locfileid: "8929597"
 
 응용 프로그램은 드라이버 최적 메모리에 할당된 인덱스 버퍼에 직접 인덱스를 작성할 수 있습니다. 이 기술은 나중에 중복 사본 작업이 발생하는 것을 방지합니다. 응용 프로그램이 인덱스 버퍼에서 데이터를 다시 읽는 경우, 드라이버 최적 메모리의 호스트에서 수행하는 읽기 작업이 매우 느릴 수 있기 때문에 이 기술은 제대로 작동하지 않습니다. 따라서 응용 프로그램이 처리 중에 데이터를 읽거나 버퍼에 이상하게 데이터를 써야 하는 경우, 시스템 메모리 인덱스 버퍼가 더 낫습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[꼭짓점 및 인덱스 버퍼](vertex-and-index-buffers.md)
+[꼭 짓 점 및 인덱스 버퍼](vertex-and-index-buffers.md)
 
  
 

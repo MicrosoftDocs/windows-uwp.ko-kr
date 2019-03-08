@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c89a1901d15d00c7c102157c8f44d6ab96272ef0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919775"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617908"
 ---
 # <a name="integrate-with-the-system-media-transport-controls"></a>시스템 미디어 전송 컨트롤과 통합
 
@@ -29,14 +29,14 @@ XAML 페이지에서 [**MediaPlayerElement**](https://msdn.microsoft.com/library
 **MediaSource**, **MediaPlaybackItem**, **MediaPlaybackList** 작업 방법에 대한 자세한 내용은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요.
 
 ## <a name="add-metadata-to-be-displayed-by-the-smtc"></a>SMTC에서 표시할 메타데이터 추가
-SMTC에서 비디오 또는 노래 제목과 같은 미디어 항목에 표시되는 메타데이터를 수정하거나 추가하려는 경우 미디어 항목을 나타내는 **MediaPlaybackItem**의 표시 속성을 업데이트해야 합니다. 먼저 [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties)를 호출하여 [**MediaItemDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties) 개체에 대한 참조를 가져옵니다. [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type) 속성을 사용하여 항목에 대한 미디어 유형(음악 또는 비디오)을 설정합니다. 지정한 미디어 유형에 따라 [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) 또는 [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) 필드를 채웁니다. 마지막으로, [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923)를 호출하여 미디어 항목에 대한 메타데이터를 업데이트합니다.
+SMTC에서 비디오 또는 노래 제목과 같은 미디어 항목에 표시되는 메타데이터를 수정하거나 추가하려는 경우 미디어 항목을 나타내는 **MediaPlaybackItem**의 표시 속성을 업데이트해야 합니다. 먼저 [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties)를 호출하여 [**MediaItemDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties) 개체에 대한 참조를 가져옵니다. [  **Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type) 속성을 사용하여 항목에 대한 미디어 유형(음악 또는 비디오)을 설정합니다. 지정한 미디어 유형에 따라 [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) 또는 [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) 필드를 채웁니다. 마지막으로, [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923)를 호출하여 미디어 항목에 대한 메타데이터를 업데이트합니다.
 
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
 [!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
 
 ## <a name="use-commandmanager-to-modify-or-override-the-default-smtc-commands"></a>CommandManager를 사용하여 기본 SMTC 명령 수정 또는 재정의
-앱에서 [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) 클래스를 사용하여 SMTC 컨트롤의 동작을 수정하거나 완전히 재정의할 수 있습니다. [**CommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.CommandManager) 속성에 액세스하여 각 **MediaPlayer** 클래스 인스턴스에 대한 명령 관리자 인스턴스를 가져올 수 있습니다.
+앱에서 [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) 클래스를 사용하여 SMTC 컨트롤의 동작을 수정하거나 완전히 재정의할 수 있습니다. [  **CommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.CommandManager) 속성에 액세스하여 각 **MediaPlayer** 클래스 인스턴스에 대한 명령 관리자 인스턴스를 가져올 수 있습니다.
 
 기본적으로 **MediaPlaybackList**의 다음 항목으로 건너뛰는 *Next* 명령 등의 모든 명령에 대해 명령 관리자는 [**NextReceived**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.NextReceived) 등의 수신된 이벤트와 [**NextBehavior**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.NextBehavior) 등의 명령 동작을 관리하는 개체를 표시합니다. 
 
@@ -64,7 +64,7 @@ SMTC 명령의 동작을 완전히 재정의하려는 경우도 있습니다. �
 
 **PreviousReceived** 처리기에서 먼저 처리기에 전달된 [**MediaPlaybackCommandManagerPreviousReceivedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs)의 [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs.GetDeferral)을 호출하여 [**Deferral**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Deferral)을 가져옵니다. 그러면 시스템에서 명령을 실행하기 전에 지연이 완료될 때까지 기다립니다. 처리기에서 비동기 호출을 수행하려는 경우 이 작업이 매우 중요합니다. 이때 예제에서는 이전 라디오 방송국을 나타내는 **MediaPlaybackItem**을 반환하는 사용자 지정 메서드를 호출합니다.
 
-[**Handled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs.Handled) 속성을 검사하여 이벤트가 다른 처리기에서 처리되지 않았는지 확인합니다. 처리되지 않은 경우 **Handled** 속성을 true로 설정합니다. 그러면 SMTC 및 구독한 다른 처리기에서 이 명령이 이미 처리되었으므로 명령을 실행하기 위한 작업을 수행하면 안 된다는 것을 알 수 있습니다. 그런 다음 코드에서 미디어 플레이어에 대한 새 원본을 설정하고 플레이어를 시작합니다.
+[  **Handled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs.Handled) 속성을 검사하여 이벤트가 다른 처리기에서 처리되지 않았는지 확인합니다. 처리되지 않은 경우 **Handled** 속성을 true로 설정합니다. 그러면 SMTC 및 구독한 다른 처리기에서 이 명령이 이미 처리되었으므로 명령을 실행하기 위한 작업을 수행하면 안 된다는 것을 알 수 있습니다. 그런 다음 코드에서 미디어 플레이어에 대한 새 원본을 설정하고 플레이어를 시작합니다.
 
 마지막으로, 지연 개체에서 [**Complete**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Deferral.Complete)를 호출하여 명령 처리가 완료되었음을 시스템에 알립니다.
 
@@ -77,9 +77,9 @@ SMTC 명령의 동작을 완전히 재정의하려는 경우도 있습니다. �
 
 ## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)
-* [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)
-* [시스템 미디어 전송 컨트롤의 수동 컨트롤](system-media-transport-controls.md)
-* [github의 시스템 미디어 전송 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
+* [오디오 및 MediaPlayer를 사용 하 여 비디오를 재생 합니다.](play-audio-and-video-with-mediaplayer.md)
+* [수동 시스템 미디어 전송 컨트롤 제어](system-media-transport-controls.md)
+* [Github의 시스템 미디어 전송 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
  
 
  

@@ -1,23 +1,23 @@
 ---
-Description: Set restrictions on how your app can be discovered and acquired, including whether people can find your app in the Store or see its Store listing at all.
+Description: 앱 어떻게 검색 및 사용자가 스토어에서 앱을 찾는 하거나 전혀 나열 하는 저장소를 참조 하는지 여부를 비롯 하 여 획득 한 수에 제한을 설정 합니다.
 title: 표시 여부 옵션 선택
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 표시 여부, 개인 대상, 사용 가능, 검색 가능
 ms.localizationpriority: medium
 ms.openlocfilehash: a002037e85f179e4a2dbe3dfdaf4bc3579e110e4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921126"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601738"
 ---
 # <a name="choose-visibility-options"></a>표시 여부 옵션 선택
 
 
 [가격 책정 및 가용성](set-app-pricing-and-availability.md)의 **표시 여부** 옵션을 사용하면 앱을 검색 및 취득하는 방법에 대해 제한 사항을 설정할 수 있습니다. 이렇게 하면 선택에 따라 Store에서 앱을 찾을 수 있는지, 또는 Store 목록을 전부 볼 수 있는지 여부를 지정할 수 있습니다.
 
-표시 여부 섹션 내에는**대상 그룹** 및 **검색 기능** 등 두 개의 섹션이 있습니다. 
+표시 유형 섹션 내에서 별도 섹션을 두 가지가 있습니다. **Audience** 하 고 **검색**합니다. 
 
 ## <a name="audience"></a>대상 그룹
 
@@ -58,7 +58,7 @@ ms.locfileid: "8921126"
 - 조직 라이선싱 설정에 관계 없이 개인 대상 그룹의 사용자라해도 비즈니스용 Microsoft Store 및/또는 교육용 Microsoft Store를 통해 앱을 사용할 수 없습니다.
 - Store는 개인 대상 그룹에 추가한 Microsoft 계정으로 로그인한 사용자만 앱을 보고 사용할 수 있도록 하고 있지만, 개인 대상 그룹에 속하지 않은 사용자가 정보나 스크린샷을 공유하지 못하도록 막을 수 없습니다. 기밀성이 중요한 경우에는 개인 대상 그룹에 앱에 대한 세부 정보를 다른 사람과 공유하지 않을 것이라고 믿는 사용자만 포함시켜야 합니다.
 - 테스터에게 피드백을 제공하는 방법을 알고 있어야 합니다. 다른 고객들이 피드백을 볼 수 있기 때문에 피드백 허브에 피드백을 남기지 못하도록 하고 싶을 수 있습니다. 이들이 다른 방법으로 이메일을 전송하거나 피드백을 제공하도록 링크를 포함시키는 것이 좋습니다.
-- 개인 대상에서 다른 사람이 작성한 모든 리뷰를 확인할 수 있습니다. 하지만 이들 리뷰는 **공중 대상**으로 제출이 이동한 후에도 앱의 Store 목록에 게시되지 않습니다. [리뷰 보고서](reviews-report.md)를 보는 대상이 작성 한 리뷰를 읽을 수 있지만이 데이터를 다운로드 하거나 [Microsoft Store 분석 API](../monetize/access-analytics-data-using-windows-store-services.md) 사용 하 여 이러한 리뷰에 프로그래밍 방식으로 액세스할 수 없습니다.
+- 개인 대상에서 다른 사람이 작성한 모든 리뷰를 확인할 수 있습니다. 하지만 이들 리뷰는 **공중 대상**으로 제출이 이동한 후에도 앱의 Store 목록에 게시되지 않습니다. 개인 대상을 확인 하 여 기록한 검토를 읽을 수 있습니다 합니다 [보고서를 검토](reviews-report.md),이 데이터를 다운로드 하거나 사용할 수 있지만 [Microsoft Store 분석 API](../monetize/access-analytics-data-using-windows-store-services.md) 이러한 검토를 프로그래밍 방식으로 액세스할 수 합니다.
 - **개인 대상**에서 **공중 대상**으로 앱을 이동할 때 Microsoft Store 목록에 표시되는 **릴리스 날짜**는 공중 대상에 처음 앱이 게시된 날짜입니다.
 
 ## <a name="discoverability"></a>검색 기능
@@ -71,7 +71,7 @@ ms.locfileid: "8921126"
 
 ### <a name="make-this-product-available-and-discoverable-in-the-store"></a>Store에서 사용할 수 있지만 검색되지 않는 제품으로 설정
 
-이는 기본 옵션입니다. 이 옵션을 선택한 경우 앱의 직접 링크를 통해 또는 검색 포함, 찾아보기, 큐 레이트 목록에 다른 방법을 사용 하 여 고객에 대 한 스토어에 앱을 둡니다. 
+이는 기본 옵션입니다. 선택한 앱을 스토어 앱의 직접 링크를 통해 및/또는 큐 레이트 목록의 검색, 찾아보기 및 포함을 비롯 한 다른 메서드에서 찾기에 표시 하려는 경우이 옵션을 그대로 둡니다. 
 
 ### <a name="make-this-product-available-but-not-discoverable-in-the-store"></a>Store에서 사용할 수 있지만 검색되지 않는 제품으로 설정
 
@@ -86,11 +86,11 @@ ms.locfileid: "8921126"
 >[!IMPORTANT]
 > 각 옵션마다 고객이 앱을 취득할 수 있는 OS 버전에 제한이 있습니다. 아래 설명을 자세히 읽고, 지원하는 OS 버전을 파악하세요. 
 
-- **직접 링크에만 해당: 제품 목록에 대한 직접 링크가 있는 고객은 앱을 다운로드 할 수 있습니다(Windows 8.x 제외).** 직접 링크를 통해 앱 목록에 액세스하는 고객은 이를 Windows 10이나 Windows Phone 8.1 이하를 실행 중인 디바이스(그러나 Windows 8.x를 실행 중인 디바이스는 제외)에 이를 다운로드할 수 있습니다.
-- **취득 중지: 직접 링크가 있는 고객은 제품의 Microsoft Store 목록을 확인할 수 있지만, 과거 제품을 소유했거나, 홍보 코드가 있고, Windows 10 장치를 사용 중인 경우에만 다운로드가 가능합니다.** 고객에게 직접 링크가 있는 경우에도 [홍보 코드](generate-promotional-codes.md)를 가지고 있고, Windows 10 장치를 사용하고 있어야 앱을 다운로드 할 수 있습니다. 고객이 홍보 코드를 가지고 있는 경우에는 다른 고객에게 이를 제공하지 않는 경우에도 이 코드를 사용하여 무료로 앱을 다운로드할 수 있습니다(Windows 10에만 해당). 홍보 코드를 사용하는 것 외에는 누구도 앱을 다운로드할 수 없습니다.
+- **직접 링크에만 해당: 제품의 목록에 직접 링크를 사용 하 여 모든 고객에서 다운로드할 수를 제외 하 고 Windows 8.x 합니다.** 직접 링크를 통해 앱 목록에 액세스하는 고객은 이를 Windows 10이나 Windows Phone 8.1 이하를 실행 중인 디바이스(그러나 Windows 8.x를 실행 중인 디바이스는 제외)에 이를 다운로드할 수 있습니다.
+- **취득을 중지 합니다. 직접 링크를 사용 하 여 모든 고객을 나열 하는 제품의 저장소를 볼 수 있지만 이러한 이전에 제품을 소유 또는 프로 모션 코드를 Windows 10 장치를 사용 하는 경우만 다운로드할 수 있습니다.** 고객에게 직접 링크가 있는 경우에도 [홍보 코드](generate-promotional-codes.md)를 가지고 있고, Windows 10 장치를 사용하고 있어야 앱을 다운로드 할 수 있습니다. 고객이 홍보 코드를 가지고 있는 경우에는 다른 고객에게 이를 제공하지 않는 경우에도 이 코드를 사용하여 무료로 앱을 다운로드할 수 있습니다(Windows 10에만 해당). 홍보 코드를 사용하는 것 외에는 누구도 앱을 다운로드할 수 없습니다.
 
 > [!TIP]
-> 앱이 새 고객에게 제공되지 않게 하려면 개요 페이지에서 **앱을 사용할 수 없도록 설정**을 선택하면 됩니다. 앱을 사용할 수 없도록 설정하면 몇 시간 내에 해당 앱이 Store에 더 이상 표시되지 않고 새 고객이 가져올 수 없게 됩니다([프로모션 코드](generate-promotional-codes.md)를 보유한 Windows 10 장치 고객은 예외). 이 작업은 제출에 포함된 **표시 여부** 선택을 재정의합니다. 새 고객이 앱을 다시 사용할 수 있도록 설정하려면(**표시 여부** 선택에 따라) 언제든지 개요 페이지에서 **앱을 사용할 수 있도록 설정**을 클릭하면 됩니다. 자세한 내용은 [Store에서 앱 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store)를 참조하세요.
+> 앱이 새 고객에게 제공되지 않게 하려면 개요 페이지에서 **앱을 사용할 수 없도록 설정**을 선택하면 됩니다. 앱을 사용할 수 없도록 설정하면 몇 시간 내에 해당 앱이 Store에 더 이상 표시되지 않고 새 고객이 가져올 수 없게 됩니다([프로모션 코드](generate-promotional-codes.md)를 보유한 Windows 10 장치 고객은 예외). 이 작업은 제출에 포함된 **표시 여부** 선택을 재정의합니다. 새 고객이 앱을 다시 사용할 수 있도록 설정하려면(**표시 여부** 선택에 따라) 언제든지 개요 페이지에서 **앱을 사용할 수 있도록 설정**을 클릭하면 됩니다. 자세한 내용은 [스토어에서 앱 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store)를 참조하세요.
 
 
 

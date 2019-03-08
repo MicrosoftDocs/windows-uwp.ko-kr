@@ -1,5 +1,5 @@
 ---
-Description: Use templates to modify the look of items in ListView or GridView controls.
+Description: 템플릿을 사용 하 여 ListView 또는 GridView 컨트롤에서 항목의 모양을 수정 합니다.
 title: 항목 컨테이너 및 템플릿
 label: Item containers and templates
 template: detail.hbs
@@ -13,11 +13,11 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dcf0176e20e498f8c6744a542010b5197689b8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947825"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639938"
 ---
 # <a name="item-containers-and-templates"></a>항목 컨테이너 및 템플릿
 
@@ -25,7 +25,7 @@ ms.locfileid: "8947825"
 
 **ListView** 및 **GridView** 컨트롤은 항목 정렬 방법(가로, 세로, 줄 바꿈 등) 및 사용자가 항목을 조작하는 방법을 관리하지만 개별 항목이 화면에 표시되는 모양은 관리하지 않습니다. 항목 시각화는 항목 컨테이너에 의해 관리됩니다. 항목을 목록 보기에 추가하는 경우 항목이 자동으로 컨테이너에 추가됩니다. ListView에 대한 기본 항목 컨테이너는 [ListViewItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listviewitem.aspx)입니다. GridView의 경우 해당 [GridViewItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridviewitem.aspx)입니다.
 
-> **중요 API**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx), [ItemTemplate 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx), [ItemContainerStyle 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx)
+> **중요 한 Api**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)하십시오 [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)합니다 [ItemTemplate 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx), [ItemContainerStyle 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx)
 
 
 > [!NOTE]
@@ -73,7 +73,7 @@ ms.locfileid: "8947825"
 </ListView>
 ```
  
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 - 여기서는 목록 보기 컨트롤을 사용하는 방법을 알고 있다고 가정합니다. 자세한 내용은 [ListView 및 GridView](listview-and-gridview.md) 문서를 참조하세요.
 - 또한 스타일 인라인 또는 리소스로 사용하는 방법 등 컨트롤 스타일 및 템플릿을 이해하고 있다고 가정합니다. 자세한 내용은 [컨트롤 스타일 지정](xaml-styles.md) 및 [컨트롤 템플릿](control-templates.md)을 참조하세요.
@@ -166,7 +166,7 @@ namespace ColorsListApp
 
 ![항목 속성의 문자열 표현을 나타내는 목록 보기](images/listview-display-member-path.png)
 
-일반적으로 데이터를 보다 다양하게 표시하려는 경우가 많습니다. 목록 보기에서 항목이 표시되는 방법을 정확히 지정하려면 [DataTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx)을 만듭니다. DataTemplate의 XAML은 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃 및 모양을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 정적 콘텐츠 정의 인라인을 가질 수 있습니다. 목록 컨트롤의 [ItemTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) 속성에 DataTemplate을 할당합니다.
+일반적으로 데이터를 보다 다양하게 표시하려는 경우가 많습니다. 목록 보기에서 항목이 표시되는 방법을 정확히 지정하려면 [DataTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx)을 만듭니다. DataTemplate의 XAML은 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃 및 모양을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 정적 콘텐츠 정의 인라인을 가질 수 있습니다. 목록 컨트롤의 [ItemTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) 속성에 DataTemplate를 할당합니다.
 
 > [!IMPORTANT]
 > **ItemTemplate** 및 **DisplayMemberPath**를 동시에 사용할 수 없습니다. 두 속성을 모두 설정한 경우 예외가 발생합니다.
@@ -262,7 +262,7 @@ GridView에 데이터를 표시할 수 있습니다. 다음은 그리드 레이�
 
 데이터 템플릿은 목록 보기의 모양을 정의하는 기본적인 방법입니다. 목록에 많은 수의 항목이 표시되는 경우 데이터 템플릿이 성능에 큰 영향을 미칠 수도 있습니다. 
 
-목록 보기에서 각 항목에 대해 데이터 템플릿의 모든 XAML 요소 인스턴스가 만들어집니다. 예를 들어 이전 예제의 그리드 템플릿에는 10개의 XAML 요소(Grid 1개, Rectangle 1개, Border 3개, TextBlock 5개)가 있습니다. 이 데이터 템플릿을 사용하여 화면에 20개의 항목을 표시하는 GridView는 최소 200개의 요소(20*10=200)를 만듭니다. 데이터 템플릿의 요소 수를 줄이면 목록 보기에 대해 만든 요소의 총 개수를 크게 줄일 수 있습니다. 자세한 내용은 [ListView 및 GridView UI 최적화: 항목별 요소 감소](https://msdn.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview#element-reduction-per-item)를 참조하세요.
+목록 보기에서 각 항목에 대해 데이터 템플릿의 모든 XAML 요소 인스턴스가 만들어집니다. 예를 들어 이전 예제의 그리드 템플릿에는 10개의 XAML 요소(Grid 1개, Rectangle 1개, Border 3개, TextBlock 5개)가 있습니다. 이 데이터 템플릿을 사용하여 화면에 20개의 항목을 표시하는 GridView는 최소 200개의 요소(20*10=200)를 만듭니다. 데이터 템플릿의 요소 수를 줄이면 목록 보기에 대해 만든 요소의 총 개수를 크게 줄일 수 있습니다. 자세한 내용은 참조 하세요. [ListView 및 GridView UI 최적화: 항목당 요소 개수 감소](https://msdn.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview#element-reduction-per-item)합니다.
 
  이 섹션에서 그리드 데이터 템플릿을 참조하세요. 요소 수를 줄일 수 있는 몇 가지 방법을 살펴보겠습니다.
 
@@ -333,7 +333,7 @@ ListViewItem 기본 스타일에서 ListViewItemPresenter **ContentMargin** 속�
 > [!NOTE]
 > ListViewItem 및 GridViewItem 기본 스타일은 ListViewItemPresenter에 대해 많은 속성을 설정합니다. 항상 기본 스타일의 복사본을 사용하여 시작한 다음 필요한 속성만 수정해야 합니다. 그러지 않으면 일부 속성이 올바르게 설정되지 않으므로 시각적 개체가 예상대로 표시되지 않습니다.
 
-**Visual Studio에서 기본 템플릿의 복사본을 만들려면**
+**Visual Studio에서 기본 템플릿의 복사본**
  
 1. 문서 개요 창(**보기 &gt; 다른 창 &gt; 문서 개요**)을 엽니다.
 2. 수정할 목록 또는 그리드 요소를 선택합니다. 이 예제에서는 `colorsGridView` 요소를 선택합니다.
@@ -404,8 +404,8 @@ ListView 및 GridView는 컨트롤 및 [SelectionMode](https://msdn.microsoft.co
 
 [CheckMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.checkmode.aspx) 속성을 설정하여 확인란을 인라인 스타일 또는 오버레이 스타일을 사용하여 표시할지 여부를 지정할 수 있습니다.
 
-- **인라인**: 이 스타일은 콘텐츠 왼쪽에 확인란을 표시하고 항목 컨테이너의 배경색을 통해 선택을 나타냅니다. ListView의 기본 스타일입니다.
-- **오버레이**: 이 스타일은 콘텐츠 위에 확인란을 표시하고 항목 컨테이너의 테두리 색을 통해 선택을 나타냅니다. GridView의 기본 스타일입니다.
+- **인라인**: 이 스타일에는 선택 영역을 나타내는 항목 컨테이너의 배경 색 및 콘텐츠를 왼쪽에 있는 확인란을 보여 줍니다. ListView의 기본 스타일입니다.
+- **오버레이**: 이 스타일 확인란 콘텐츠를 기반으로 나타나며만 선택 영역을 나타내는 항목 컨테이너의 테두리 색입니다. GridView의 기본 스타일입니다.
 
 이 표에서는 선택을 나타내는 데 사용되는 기본 시각적 개체를 보여 줍니다.
 
@@ -430,13 +430,13 @@ SelectionMode:&nbsp;&nbsp; | Single/Extended | Multiple
 
 상태/브러시 이름 | 인라인 스타일 | 오버레이 스타일
 ------------|--------------|--------------
-<b>Normal</b><ul><li><b>CheckBoxBrush="Red"</b></li></ul> | ![인라인 항목 선택 일반](images/listview-item-normal.png) | ![오버레이 항목 선택 일반](images/gridview-item-normal.png)
+<b>보통</b><ul><li><b>CheckBoxBrush="Red"</b></li></ul> | ![인라인 항목 선택 일반](images/listview-item-normal.png) | ![오버레이 항목 선택 일반](images/gridview-item-normal.png)
 <b>PointerOver</b><ul><li><b>PointerOverForeground="DarkOrange"</b></li><li><b>PointerOverBackground="MistyRose"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 포인터 가리키기](images/listview-item-pointerover.png) | ![오버레이 항목 선택 포인터 가리키기](images/gridview-item-pointerover.png)
-<b>Pressed</b><ul><li><b>PressedBackground="LightCyan"</b></li><li>PointerOverForeground="DarkOrange"</li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 누름](images/listview-item-pressed.png) | ![오버레이 항목 선택 누름](images/gridview-item-pressed.png)
-<b>Selected</b><ul><li><b>SelectedForeground="Navy"</b></li><li><b>SelectedBackground="Khaki"</b></li><li><b>CheckBrush="Green"</b></li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 선택됨](images/listview-item-selected.png) | ![오버레이 항목 선택 선택됨](images/gridview-item-selected.png)
+<b>누름</b><ul><li><b>PressedBackground="LightCyan"</b></li><li>PointerOverForeground="DarkOrange"</li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 누름](images/listview-item-pressed.png) | ![오버레이 항목 선택 누름](images/gridview-item-pressed.png)
+<b>선택</b><ul><li><b>SelectedForeground="Navy"</b></li><li><b>SelectedBackground="Khaki"</b></li><li><b>CheckBrush="Green"</b></li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 선택됨](images/listview-item-selected.png) | ![오버레이 항목 선택 선택됨](images/gridview-item-selected.png)
 <b>PointerOverSelected</b><ul><li><b>SelectedPointerOverBackground="Lavender"</b></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki"(오버레이만 해당)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 포인터 가리키기 선택됨](images/listview-item-pointeroverselected.png) | ![오버레이 항목 선택 포인터 가리키기 선택됨](images/gridview-item-pointeroverselected.png)
 <b>PressedSelected</b><ul><li><b>SelectedPressedBackground="MediumTurquoise"</b></li></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki"(오버레이만 해당)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 누름 선택됨](images/listview-item-pressedselected.png) | ![오버레이 항목 선택 누름 선택됨](images/gridview-item-pressedselected.png)
-<b>Focused</b><ul><li><b>FocusBorderBrush="Crimson"</b></li><li><b>FocusSecondaryBorderBrush="Gold"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 포커스 있음](images/listview-item-focused.png) | ![오버레이 항목 선택 포커스 있음](images/gridview-item-focused.png)
+<b>초점을 맞춘</b><ul><li><b>FocusBorderBrush="Crimson"</b></li><li><b>FocusSecondaryBorderBrush="Gold"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 포커스 있음](images/listview-item-focused.png) | ![오버레이 항목 선택 포커스 있음](images/gridview-item-focused.png)
 
 ListViewItemPresenter에는 데이터 자리 표시자 및 끌기 상태에 대한 다른 브러시 속성이 있습니다. 목록 보기에서 증분 로드 또는 끌어서 놓기를 사용하는 경우 이러한 추가 브러시 속성도 수정해야 하는지 고려해야 합니다. 수정할 수 있는 전체 속성 목록은 ListViewItemPresenter 클래스를 참조하세요. 
 
@@ -451,14 +451,14 @@ ListViewItemPresenter에는 데이터 자리 표시자 및 끌기 상태에 대�
 
 확장된 XAML 템플릿을 사용자 지정하려면 앱에서 해당 템플릿의 복사본을 만든 다음 **ItemContainerStyle** 속성을 복사본으로 설정해야 합니다.
 
-**확장된 템플릿을 복사하려면**
+**확장 된 서식 파일을 복사 하려면**
 1. ListView 또는 GridView에 대해 다음과 같이 ItemContainerStyle 속성을 설정합니다.
     ```xaml
     <ListView ItemContainerStyle="{StaticResource ListViewItemExpanded}"/>
     <GridView ItemContainerStyle="{StaticResource GridViewItemExpanded}"/>
     ```
 2. Visual Studio 속성 창에서 기타 섹션을 확장하고 ItemContainerStyle 속성을 찾습니다. ListView 또는 GridView가 선택되어 있는지 확인합니다.
-3. ItemContainerStyle 속성에 대한 속성 마커를 클릭합니다. 속성 마커는 텍스트 상자 옆에 있는 작은 상자입니다. StaticResource로 설정된 경우 녹색으로 표시됩니다. 속성 메뉴가 열립니다.
+3. ItemContainerStyle 속성에 대한 속성 마커를 클릭합니다. 속성 마커는 텍스트 상자 옆에 있는 작은 상자입니다. coloreed 녹색 StaticResource로 설정 되어 있는지를 표시 합니다.) 속성 메뉴가 열립니다.
 4. 속성 메뉴에서 **새 리소스로 변환**을 클릭합니다. 
     
     ![Visual Studio 속성 메뉴](images/listview-convert-resource-vs.png)

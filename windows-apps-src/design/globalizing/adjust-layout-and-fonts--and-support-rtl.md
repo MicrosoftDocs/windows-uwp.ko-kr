@@ -1,5 +1,5 @@
 ---
-Description: Design your app to support the layouts and fonts of multiple languages, including RTL (right-to-left) flow direction.
+Description: RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 설계합니다.
 title: 레이아웃 및 글꼴 조정, RTL 지원
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 지역화 가능, 지역화, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: e428dd068337ecd79992e8e27cd193bed112d9c2
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930464"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645308"
 ---
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a>레이아웃 및 글꼴 조정, RTL 지원
 RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 설계합니다. 텍스트 흐름 방향은 스크립트가 작성되고 표시되는 방향이며 페이지의 UI 요소는 눈으로 스캔됩니다.
@@ -34,7 +34,7 @@ RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언�
 ## <a name="fonts"></a>글꼴
 특정 언어의 권장 글꼴 패밀리, 크기, 두께 및 스타일에 대한 프로그래밍 방식 액세스는 [**LanguageFont**](/uwp/api/Windows.Globalization.Fonts.LanguageFont?branch=live) 글꼴 매핑을 사용하십시오. **LanguageFont** 클래스를 통해 UI 헤더, 알림, 본문 텍스트 및 사용자 수정 가능 문서 본문 글꼴을 포함한 다양한 콘텐츠 양식에 대한 정확한 글꼴 정보에 액세스할 수 있습니다.
 
-## <a name="mirroring-images"></a>미러링 이미지
+## <a name="mirroring-images"></a>이미지 미러링
 RTL에 대해 미러링해야 하는 이미지(동일한 이미지가 대칭될 수 있음)가 앱에 있는 경우 **FlowDirection**을 사용할 수 있습니다.
 
 ```xaml
@@ -45,10 +45,10 @@ RTL에 대해 미러링해야 하는 이미지(동일한 이미지가 대칭될 
 <Image ... FlowDirection="RightToLeft" />
 ```
 
-이미지를 올바르게 전환하기 위해 앱에 다른 이미지가 필요한 경우 한정자가 `LayoutDirection`인 리소스 관리 시스템을 사용할 수 있습니다([언어, 크기 및 다른 한정자의 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md#layoutdirection)의 LayoutDirection 섹션 참조). 앱 런타임 언어([사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md) 참조)가 RTL 언어로 설정된 경우 시스템에서 `file.layoutdir-rtl.png`이라는 이미지를 선택합니다. 이미지의 일부가 전환된 경우 이러한 접근이 필요할 수 있지만 그 외의 경우는 그렇지 않습니다.
+이미지를 올바르게 전환하기 위해 앱에 다른 이미지가 필요한 경우 한정자가 `LayoutDirection`인 리소스 관리 시스템을 사용할 수 있습니다([언어, 크기 및 다른 한정자의 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md#layoutdirection)의 LayoutDirection 섹션 참조). 앱 런타임 언어([사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md) 참조)가 RTL 언어로 설정된 경우 시스템에서 `file.layoutdir-rtl.png`이라는 이미지를 선택합니다. 이 방법은 이미지의 일부만 대칭 이동되는 경우에 사용할 수 있습니다.
 
 ## <a name="handling-right-to-left-rtl-languages"></a>RTL(오른쪽에서 왼쪽) 언어 처리
-앱이 RTL(오른쪽에서 왼쪽) 언어에 대해 현지화된 경우 [**FrameworkElement.FlowDirection**](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) 속성을 사용하고 대칭되는 안쪽 여백 및 여백을 설정하십시오. [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid?branch=live) 배율 및 대칭 이동과 같은 레이아웃 패널은 설정한 **FlowDirection** 값을 자동으로 따릅니다.
+앱이 RTL(오른쪽에서 왼쪽) 언어에 대해 현지화된 경우 [**FrameworkElement.FlowDirection**](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) 속성을 사용하고 대칭되는 안쪽 여백 및 여백을 설정하십시오. [  **Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid?branch=live) 배율 및 대칭 이동과 같은 레이아웃 패널은 설정한 **FlowDirection** 값을 자동으로 따릅니다.
 
 페이지의 루트 레이아웃 패널(또는 프레임)에서, 또는 페이지 자체에서 **FlowDirection**을 설정합니다. 그러면 포함된 모든 컨트롤이 해당 속성을 상속합니다.
 
@@ -123,7 +123,7 @@ else
 * [FrameworkElement.FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection)
 * [LanguageFont](/uwp/api/Windows.Globalization.Fonts.LanguageFont?branch=live)
 
-## <a name="related-topics"></a>관련 주제
-* [UI 및 앱 패키지 매니페스트의 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
-* [언어, 크기 및 다른 한정자에 대해 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)
+## <a name="related-topics"></a>관련 항목
+* [UI 및 앱 패키지 매니페스트에 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
+* [언어, 배율 및 다른 한정자에 대 한 리소스를 조정 합니다.](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md)

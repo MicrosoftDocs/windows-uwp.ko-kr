@@ -1,45 +1,45 @@
 ---
-title: XDK 프로젝트에 Xbox Live 추가
-description: 새로운 또는 기존 Xbox 개발자 키트 (XDK) 프로젝트에 Xbox Live를 추가 하는 방법을 알아봅니다.
+title: Xbox Live XDK 프로젝트에 추가
+description: 새 또는 기존 Xbox 개발자 키트 (XDK) 프로젝트에 Xbox Live를 추가 하는 방법에 알아봅니다.
 ms.assetid: fc6f987c-1a87-4ff5-b063-891591aa6653
 ms.date: 04/04/2017
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox xdk
+keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xdk
 ms.localizationpriority: medium
 ms.openlocfilehash: f17765b09dcb0b6f5c89d168f2d3d9611a60ffa6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932644"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649048"
 ---
-# <a name="add-xbox-live-to-a-new-or-existing-xdk-project"></a>새로운 또는 기존 XDK 프로젝트에 Xbox Live 추가
+# <a name="add-xbox-live-to-a-new-or-existing-xdk-project"></a>새 또는 기존 XDK 프로젝트에 Xbox Live를 추가 합니다.
 
-이 항목에서는 Xbox Live 새로운 또는 기존 XDK 프로젝트에 추가 하는 방법을 설명 합니다.
+이 항목에서는 기존 또는 새 XDK 프로젝트에 Xbox Live를 추가 하는 방법을 간략하게 설명 합니다.
 
 프로세스는.
 
-- Xbox One 개발 환경 구성 설정
-- 사용자 id
+- Xbox One 개발 환경 설정
+- 사용자 Id를 가져오려면
 - 개발 콘솔 구성
-- TitleID 및 서비스 안내 하려면 이진 파일을 추가
+- TitleID 및 서비스 안내 이진 파일에 추가
 
 
-## <a name="setup-up-your-xbox-one-development-environment"></a>Xbox One 개발 환경 구성 설정
-먼저 XDK 설명서의 "Xbox One 개발 환경 설정을" 섹션에 따라 콘솔을 설치
+## <a name="setup-up-your-xbox-one-development-environment"></a>Xbox One 개발 환경 설정
+먼저 콘솔 XDK 설명서에서 "Xbox 하나의 개발 환경 설정을" 섹션을 따라 설치
 
-## <a name="get-your-ids"></a>사용자 id
+## <a name="get-your-ids"></a>사용자 Id를 가져오려면
 
-Xbox Live 서비스를 사용 하려면 개발 키트 및 타이틀을 구성 하는 여러 개의 Id를 해야 합니다. 이러한 동일한 프로세스를 사용 하 여 수행할 수 있습니다.
+Xbox Live 서비스를 사용 하려면 개발 키트 및 제목을 구성 하려면 여러 Id를 가져오는 해야 합니다. 이러한 동일한 프로세스를 사용 하 여 수행할 수 있습니다.
 
-[Xbox Live 서비스 구성](../xbox-live-service-configuration.md) 하는 프로세스를 수행 하 여 사용자 Id를 가져오는 됩니다.
+프로세스를 수행 하 여 사용자 Id를 가져오는 [Xbox Live 서비스 구성](../xbox-live-service-configuration.md)
 
 ## <a name="configure-your-development-console"></a>개발 콘솔 구성
 
-사용자 Id가 있으면 개발 콘솔을 설치 하려면 [개발 콘솔 구성](configure-your-development-console.md) 가이드를 따릅니다.
+사용자 Id를 만든 후에 따라 합니다 [개발 콘솔 구성](configure-your-development-console.md) 개발 콘솔을 설치 하는 가이드입니다.
 
-## <a name="add-the-titleid-and-scid-to-your-binary"></a>TitleID 및 서비스 안내 하려면 이진 파일을 추가
-플랫폼 수준에서 각 개발 키트에 대 한 샌드박스를 구성 하는 동안 TitleID 및 서비스 안내 특정 이진 파일에 바인딩됩니다. TitleID 및 서비스 안내를 위해 이진 파일을 추가 하려면 해당 이진 파일에 대 한 Package.appxmanifest에서 새 노드를 추가 하 여 수정 합니다 <Extensions> 노드 아래와 같이 합니다.
+## <a name="add-the-titleid-and-scid-to-your-binary"></a>TitleID 및 서비스 안내 이진 파일에 추가
+플랫폼 수준에서 각 개발 키트에 대 한 샌드박스를 구성할 서비스 안내 고 TitleID 특정 이진 파일에 바인딩됩니다. TitleID 및 서비스 안내를 위해 이진 파일에 추가 하려면 해당 이진 파일에 대해 Package.appxmanifest에 새 노드를 추가 하 여 수정 된 <Extensions> 다음과 같은 노드:
 
 ```
 <Applications>
@@ -55,10 +55,10 @@ Xbox Live 서비스를 사용 하려면 개발 키트 및 타이틀을 구성 �
 </Applications>
 ```
 
-AppxManifest.xml 파일에 대 한 자세한 내용은 Xbox One 개발에 대 한 Visual Studio에서 프로젝트 템플릿을를 참조 합니다.
+AppxManifest.xml 파일에 대 한 자세한 내용은 Xbox 개발에 대 한 Visual Studio에서 프로젝트 템플릿을 참조 합니다.
 
-응용 프로그램 매니페스트 스키마에 대 한 설명은 응용 프로그램 매니페스트 스키마 참조 하세요.
+응용 프로그램 매니페스트 스키마에 대 한 설명은 응용 프로그램 매니페스트 스키마를 참조 하세요.
 
-**RequireXboxLive 플래그** Windows.Networking.Connectivity 연결 수준 하지 않는 한 플래그가 제목을 true로 설정 되어 RequireXboxLive 시작 되지 않는 XboxLiveAccess로 반환 하 고 제목 인증 Xbox live를 지웁니다. 그러면 제목 콘텐츠 최신 업데이트를 수행 했습니다. 제목 실행 되는 동안 연결이 끊기면, 제목 일시 중단 됩니다.
+**RequireXboxLive 플래그** 플래그가 제목 true로 설정 되어 RequireXboxLive XboxLiveAccess Windows.Networking.Connectivity 연결 수준을 반환 하 고 제목 지웁니다 Xbox Live를 사용한 인증 하지 않으면 시작 되지 않는 경우. 이렇게 하면 제목에는 최신 콘텐츠 업데이트를 수행 했습니다. 제목 실행 되는 동안 연결이 끊어지면, 제목 일시 중단 됩니다.
 
-유일한 "인터넷 필수" 제목 true 및 타이틀이 방식으로 표시 되지는지 않습니다 들이 제목에 대 한 필수 서비스는 실행 RequireXboxLive 표시 해야 합니다.
+True는 방식에서에 제목 표시 되지 않을 제목에 필요한 서비스가 실행 중 및 실행만 "인터넷 Required" 제목 RequireXboxLive를 표시 해야 합니다.

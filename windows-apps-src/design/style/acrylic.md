@@ -1,5 +1,5 @@
 ---
-description: 투명 한 텍스처를 만드는 브러시 유형입니다.
+description: 유형 반투명 질감을 만듭니다는 브러시입니다.
 title: 아크릴 소재
 template: detail.hbs
 ms.date: 08/09/2017
@@ -11,19 +11,19 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 0600e66c672a28683befdb7b0090f5455a28c948
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116325"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624198"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
 ![영웅 이미지](images/header-acrylic.svg)
 
-아크릴은 투명 한 텍스처를 만드는 [브러시](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush) 유형입니다. 앱 표면에 아크릴을 적용하여 깊이를 추가하고 시각적 계층을 설정할 수 있습니다.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
+못합니다의 형식인 [브러시](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush) 는 반투명 질감을 만듭니다. 앱 표면에 아크릴을 적용하여 깊이를 추가하고 시각적 계층을 설정할 수 있습니다.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
 
-> **중요한 API**: [AcrylicBrush 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background)
+> **중요 한 Api**: [AcrylicBrush 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background)
 
 :::row:::
     :::column:::
@@ -68,50 +68,50 @@ ms.locfileid: "9116325"
 
  ![인앱 아크릴](images/AppAcrylic_DarkTheme.png)
 
- 여러 아크릴 표면을 레이어로 주의: 여러 겹의 배경 아크릴은 방해가 만들 수 있습니다.
+ 주의 해 서 여러 아크릴 화면 계층: 여러 단계의 백그라운드 못합니다 산만 광학 환상 효과 만들 수 있습니다.
 
 ## <a name="when-to-use-acrylic"></a>아크릴을 사용하는 경우
 
-* 스크롤 또는와 상호 작용할 때 콘텐츠를 겹칠 수는 화면에서와 같은 UI를 지원 하기 위한 인 앱 아크릴을 사용 합니다.
-* 상황에 맞는 메뉴, 플라이 아웃 및 빛 dimsissable UI와 같은 임시 UI 요소에 대 한 배경 아크릴을 사용 합니다.<br />아크릴을 사용 하 여 임시 시나리오에서 임시 UI를 트리거한 콘텐츠와 시각적 관계를 유지 하는 데 도움이 됩니다.
+* 스크롤 또는 상호 작용할 때 콘텐츠를 겹칠 수 있는 표면에서와 같은 UI를 지원 하기 위해 앱에서 못합니다를 사용 합니다.
+* 상황에 맞는 메뉴, 플라이 아웃, light dimsissable UI 등 일시적인 UI 요소에 대 한 백그라운드 못합니다를 사용 합니다.<br />못합니다 일시적인 시나리오에서 사용 하 여 일시적인 UI를 트리거한 콘텐츠로 visual 관계를 유지 관리 하는 데 도움이 됩니다.
 
-인 앱 아크릴 탐색 표면에를 사용 하는 경우에 앱의 흐름을 개선 하기 위해 아크릴 창 아래에 콘텐츠를 확장 하는 것이 좋습니다. NavigationView를 사용 하 여에서는이를 자동으로 수행 합니다. 하지만 스트라이핑 효과, 여러 가지 아크릴을 가장자리에 배치 하지 마십시오 하기를 원하지 않는 경계선이 두 흐린된 표면 사이의 만들 수이. 아크릴은 디자인, 시각적 조화 도구 하지만 잘못 사용할 경우 짐이 발생할 수 있습니다.
+앱에서 못합니다 탐색 화면에서를 사용 하는 경우에 앱에서 흐름을 개선 하기 위해 아크릴 창 아래에 있는 콘텐츠를 확장 하는 것이 좋습니다. NavigationView를 사용 하 여에서는이를 자동으로 수행 합니다. 그러나 스트라이프 효과 만들지 않도록 여러 가지 아크릴 edge-에 지-배치 해를 흐리게 표시 된 두 화면 사이 원치 않는 이음새를 만들 수이 있습니다. 못합니다 visual 조화 디자인을 전환 하는 도구 이지만 사용 하는 경우 올바르게 지저분한 발생할 수 있습니다.
 
-앱에 아크릴을 통합 하는 가장 좋은 방법을 결정 하려면 다음 사용 패턴을 고려 하세요.
+못합니다 앱에 통합 하기 위해 최상의 방법을 결정 하려면 다음 사용 패턴을 고려 합니다.
 
-### <a name="horizontal-navigation-or-commanding"></a>가로 탐색 또는 명령
+### <a name="horizontal-navigation-or-commanding"></a>가로 탐색 또는 명령 실행
 
-앱이 NavigationView를 활용할 수 없는 아크릴을 직접 추가 하려는 경우 색조 불투명도 60% 상대적으로 반투명 아크릴을 사용 하는 것이 좋습니다.
+앱 NavigationView 활용할 수 이며 직접 못합니다를 추가 하려는, 경우에 60 %tint 불투명도 사용 하 여 비교적 반투명 못합니다를 사용 하는 것이 좋습니다.
  - 창이 다른 앱 콘텐츠 위에 오버레이로 열리는 경우 [60% 인앱 아크릴](#acrylic-theme-resources)이어야 합니다.
 
-![앱에서 가로 명령을 사용 하 여 지도 앱](images/Maps_In_App_Acrylic_1.png)
+![앱에서 가로 명령 사용 하 여 지도 앱](images/Maps_In_App_Acrylic_1.png)
 
-또한 콘텐츠 확장 또는 스크롤 아크릴에서 맨 위에 있는 것 됩니다 앱은 더 몰입 형 하 고 원활한 환경을 제공 합니다.
+또한 사용자 콘텐츠 확장 또는 스크롤을 못합니다에서 맨 위에 있는 더욱 앱 보다 몰입 하 고 원활한 환경을 있습니다.
 
-### <a name="vertical-panes"></a>서로 다른 창
+### <a name="vertical-panes"></a>세로 창
 
-서로 다른 창 또는 앱의 콘텐츠 오프 섹션에 도움이 되는 표면에 대 한 불투명 배경 아크릴 대신 사용 하는 것이 좋습니다. 서로 다른 창에 콘텐츠 위에 여는 경우와 같은 NavigationView의 **컴팩트** 기간 또는 **최소** 모드에서 좋습니다 인 앱 아크릴을 사용 하 여 사용자가 열이 창은 페이지의 컨텍스트를 유지 하기 위해.
+앱의 콘텐츠 해제 섹션 데 도움이 되는 화면, 세로 창에 대 한 못합니다 대신는 불투명 한 배경을 사용 하는 것이 좋습니다. NavigationView의 세로 창이 콘텐츠를 기반으로 여는 경우 에서처럼 **Compact** 또는 **최소** 앱 못합니다를 사용 하 여 사용자에 게이 창을 열 때 페이지의 컨텍스트를 유지 하기 위해 제안 모드에서는 합니다.
 
-### <a name="transient-surfaces"></a>임시 표면
+### <a name="transient-surfaces"></a>일시적인 화면
 
-모달이 팝업 메뉴 플라이 아웃을 사용 하 여 앱에 대 한 빠른 해제 창 또는 배경 아크릴을 사용 하는 것이 좋습니다.
+비 모달 팝업 메뉴 플라이 아웃을 사용 하 여 앱에 대 한 조명 해제 창 또는 백그라운드 못합니다를 사용 하는 것이 좋습니다.
 
 ![정보는 플라이 아웃을 사용 하 여 메일 앱 패턴](images/Mail_TransientContextMenu.png)
 
-컨트롤의 상당수는 기본적으로 아크릴을 사용 합니다. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) 및 빛 dimiss 팝업을 사용 하 여 유사한 컨트롤이 모두 사용 하 여 임시 아크릴 호출 되는 경우.
+이 컨트롤은 대부분 못합니다는 기본적으로 사용 합니다. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box)합니다 [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) light dimiss 팝업을 사용 하 여 유사한 컨트롤은 모두 사용 하 여 일시적인 못합니다 호출 될 때.
 
 > [!Note]
-> 아크릴 표면 렌더링 GPU을 많이 사용을 배터리 사용 시간을 단축 하 고 장치 전력 소비를 높일 수 있는입니다. 아크릴 효과 장치의 배터리 절약 모드를 입력 하 고 사용자가 모든 앱의 아크릴 효과 비활성화할 수 있습니다 비활성화 자동으로 선택 합니다.
+> GPU가 많이 사용, 장치 전원 사용이 증가 하 고 배터리 수명을 줄일 수 있는 아크릴 화면을 렌더링 합니다. 아크릴 효과 선택 하는 경우 자동으로 장치에 배터리 절약 모드 모드로 전환 하 고 사용자는 모든 앱에 대해 아크릴 효과 비활성화할 수 비활성화.
 
 ## <a name="usability-and-adaptability"></a>유용성 및 적응성
 아크릴은 다양한 디바이스 및 컨텍스트에 맞춰 자동으로 모양을 바꿉니다.
 
-고대비 모드에서는 아크릴 대신 사용자가 선택한 익숙한 배경색이 계속 표시됩니다. 또한 배경 아크릴과 인 앱 아크릴이 모두 단색으로 표시 됩니다.
- - 사용자가 경우 gt_ 설정에서에서 투명도 해제 개인 설정 gt_ 색
- - 배터리 절약 모드가 활성화 된 경우
+고대비 모드에서는 아크릴 대신 사용자가 선택한 익숙한 배경색이 계속 표시됩니다. 또한 배경 못합니다 및 앱 내 못합니다 모두 단색으로 표시 됩니다.
+ - 사용자 설정에서 투명성을 끄면 > 개인 설정 > 색
+ - 배터리 절약 모드 활성화 될 때
  - 앱이 저사양 하드웨어에서 실행되는 경우
 
-또한 배경 아크릴만 대체할는 투명 한 텍스처를 단색:
+또한 배경 못합니다만 바뀝니다 해당 반투명도 및 질감 단색으로:
  - 바탕 화면에서 앱 창이 비활성화되는 경우
  - UWP 앱이 휴대폰, Xbox, HoloLens 또는 태블릿 모드에서 실행되는 경우
 
@@ -129,7 +129,7 @@ ms.locfileid: "9116325"
     <tr>
         <th align="center">리소스 키</th>
         <th align="center">색조 불투명도</th>
-        <th align="center"><a href="color.md">대체 색</a> </th>
+        <th align="center"><a href="color.md">대체 (fallback) 색</a> </th>
     </tr>
     <tr>
         <td> SystemControlAcrylicWindowBrush, SystemControlAcrylicElementBrush <br/> SystemControlChromeLowAcrylicWindowBrush, SystemControlChromeLowAcrylicElementBrush <br/> SystemControlBaseHighAcrylicWindowBrush, SystemControlBaseHighAcrylicElementBrush <br/> SystemControlBaseLowAcrylicWindowBrush, SystemControlBaseLowAcrylicElementBrush <br/> SystemControlAltHighAcrylicWindowBrush, SystemControlAltHighAcrylicElementBrush <br/> SystemControlAltLowAcrylicWindowBrush, SystemControlAltLowAcrylicElementBrush </td>
@@ -137,7 +137,7 @@ ms.locfileid: "9116325"
         <td> ChromeMedium <br/> ChromeLow <br/><br/> BaseHigh <br/><br/> BaseLow <br/><br/> AltHigh <br/><br/> AltLow </td>
     </tr>
     </tr>
-        <td> <b>권장 사용법:</b> 다음은 다양한 사용법에서 제대로 작동하는 범용 아크릴 리소스입니다. 앱에서 텍스트 크기가 18픽셀보다 작은 AltMedium 컬러 보조 텍스트를 사용하는 경우 <a href="../accessibility/accessible-text-requirements.md">명암비 요구 사항을 충족</a>하도록 80% 아크릴 리소스를 텍스트 뒤에 배치합니다. </td>
+        <td> <b>권장된 사용법:</b> 이들은 다양 한 용도에서 잘 작동 하는 범용 아크릴 리소스입니다. 앱에서 텍스트 크기가 18픽셀보다 작은 AltMedium 컬러 보조 텍스트를 사용하는 경우 <a href="../accessibility/accessible-text-requirements.md">명암비 요구 사항을 충족</a>하도록 80% 아크릴 리소스를 텍스트 뒤에 배치합니다. </td>
     </tr>
     <tr>
         <td> SystemControlAcrylicWindowMediumHighBrush, SystemControlAcrylicElementMediumHighBrush <br/> SystemControlBaseHighAcrylicWindowMediumHighBrush, SystemControlBaseHighAcrylicElementMediumHighBrush </td>
@@ -145,7 +145,7 @@ ms.locfileid: "9116325"
         <td> ChromeMedium <br/><br/> BaseHigh </td>
     </tr>
     <tr>
-        <td> <b>권장 사용법:</b> 앱에서는 AltMedium 컬러 보조 텍스트, 텍스트 크기가 18 픽셀 이상인 경우 텍스트 뒤에 이러한 더 반투명 70% 아크릴 리소스를 배치할 수 있습니다. 앱의 상단 가로 탐색 및 명령 영역에 이러한 리소스를 사용하는 것이 좋습니다.  </td>
+        <td> <b>권장된 사용법:</b> 앱 AltMedium 색의 보조 텍스트 18px 이상인 텍스트 크기를 사용 하는 경우 더 반투명 70% 아크릴 리소스인 텍스트 뒤에 배치할 수 있습니다. 앱의 상단 가로 탐색 및 명령 영역에 이러한 리소스를 사용하는 것이 좋습니다.  </td>
     </tr>
     <tr>
         <td> SystemControlChromeHighAcrylicWindowMediumBrush, SystemControlChromeHighAcrylicElementMediumBrush <br/> SystemControlChromeMediumAcrylicWindowMediumBrush, SystemControlChromeMediumAcrylicElementMediumBrush <br/> SystemControlChromeMediumLowAcrylicWindowMediumBrush, SystemControlChromeMediumLowAcrylicElementMediumBrush <br/> SystemControlBaseHighAcrylicWindowMediumBrush, SystemControlBaseHighAcrylicElementMediumBrush <br/> SystemControlBaseMediumLowAcrylicWindowMediumBrush, SystemControlBaseMediumLowAcrylicElementMediumBrush <br/> SystemControlAltMediumLowAcrylicWindowMediumBrush, SystemControlAltMediumLowAcrylicElementMediumBrush  </td>
@@ -153,7 +153,7 @@ ms.locfileid: "9116325"
         <td> ChromeHigh <br/><br/> ChromeMedium <br/><br/> ChromeMediumLow <br/><br/> BaseHigh <br/><br/> BaseLow <br/><br/> AltMediumLow </td>
     </tr>
     <tr>
-        <td> <b>권장 사용법:</b> 아크릴 위에 AltHigh 색의 기본 텍스트만 배치할 경우 앱에서 이러한 60% 리소스를 활용할 수 있습니다. 앱의 <a href="../controls-and-patterns/navigationview.md">세로 탐색 창</a>, 다시 말해서 햄버거 메뉴는 60% 아크릴로 그리는 것이 좋습니다. </td>
+        <td> <b>권장된 사용법:</b> AltHigh 색의 기본 텍스트만 못합니다 조치에 배치 하는 경우 앱이 60% 리소스를 활용할 수 있습니다. 앱의 <a href="../controls-and-patterns/navigationview.md">세로 탐색 창</a>, 다시 말해서 햄버거 메뉴는 60% 아크릴로 그리는 것이 좋습니다. </td>
     </tr>
 </table>
 
@@ -162,7 +162,7 @@ ms.locfileid: "9116325"
     <tr>
         <th align="center">리소스 키</th>
         <th align="center">색조 불투명도</th>
-        <th align="center"><a href="color.md">색조 및 대체 색</a> </th>
+        <th align="center"><a href="color.md">Tint 및 대체 (fallback)</a> </th>
     </tr>
     <tr>
         <td> SystemControlAccentAcrylicWindowAccentMediumHighBrush, SystemControlAccentAcrylicElementAccentMediumHighBrush  </td>
@@ -191,21 +191,21 @@ ms.locfileid: "9116325"
 ## <a name="custom-acrylic-brush"></a>사용자 지정 아크릴 브러시
 브랜딩을 표시하거나 페이지의 다른 요소와 시각적으로 균형을 맞추기 위해 앱의 아크릴에 컬러 색조를 추가할 수 있습니다. 회색조 대신 컬러를 표시하려면 다음 속성을 사용하여 사용자 고유의 아크릴 브러시를 정의해야 합니다.
  - **TintColor**: 색/색조 오버레이 계층입니다. RGB 컬러 값과 알파 채널 불투명도를 모두 지정하는 방안을 고려해 보세요.
- - **TintOpacity**: 색조 계층의 불투명도입니다. 좋습니다 80% 불투명도를 시작 점으로 하지만 서로 다른 색상 다른 translucencies에 더 멋지게 보일 수 있습니다.
- - **TintLuminosityOpacity**: 백그라운드에서 아크릴 표면을 통해서는 허용 되는 채도의 양을 제어 합니다.
+ - **TintOpacity**: 색조 계층의 불투명도입니다. 서로 다른 색 다른 translucencies에서 더욱 설득력 보일 수 있지만 80% 불투명도 출발점으로 권장 합니다.
+ - **TintLuminosityOpacity**: 채도 백그라운드에서 아크릴 화면을 통해 허용 되는 양을 제어 합니다.
  - **BackgroundSource**: 배경 아크릴과 인앱 아크릴 중에서 원하는 것을 지정하는 플래그입니다.
- - **FallbackColor**: 단색 배터리 절약 모드에서 아크릴을 대체 합니다. 배경 아크릴의 경우 앱이 활성 데스크톱 창에 없거나 앱이 휴대폰 및 Xbox에서 실행 중인 경우 대체 색이 아크릴도 대체합니다.
+ - **FallbackColor**: 못합니다 배터리 절약 모드에서 대체 되는 단색입니다. 배경 아크릴의 경우 앱이 활성 데스크톱 창에 없거나 앱이 휴대폰 및 Xbox에서 실행 중인 경우 대체 색이 아크릴도 대체합니다.
 
 ![밝은 테마 아크릴 견본](images/CustomAcrylic_Swatches_LightTheme.png)
 
 ![어두운 테마 아크릴 견본](images/CustomAcrylic_Swatches_DarkTheme.png)
 
-![색조 불투명도에 비해 광도 opactity](images/LuminosityVersusTint.png)
+![명도 opactity tint 불투명도 비교](images/LuminosityVersusTint.png)
 
 아크릴 브러시를 추가하려면 어두운 테마, 밝은 테마, 고대비 테마에 대한 세 개 리소스를 정의합니다. 고대비에서는 어두운/밝은 AcrylicBrush와 동일한 x:Key와 함께 SolidColorBrush를 사용하는 것이 좋습니다.
 
 > [!Note] 
-> TintLuminosityOpacity 값을 지정 하지 않으면 시스템 TintColor 및 TintOpacity에 따라 값 자동으로 조정 됩니다.
+> TintLuminosityOpacity 값을 지정 하지 않으면, 시스템 TintColor 및 TintOpacity 사항에 따라 해당 값에 자동으로 조정 됩니다.
 
 ```xaml
 <ResourceDictionary.ThemeDictionaries>
@@ -319,16 +319,16 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 * 탐색 창처럼 기본이 아닌 앱 표면의 배경 소재로 아크릴을 사용하세요.
 * 앱 주변과 살짝 혼합하여 원활한 환경을 제공할 수 있도록 아크릴을 앱 가장자리 중 하나 이상으로 확장하세요.
-* 앱의 큰 배경 표면에 데스크톱 arylic 배치 하지 마세요-이 임시 표면에 주로 사용 되는 아크릴의 멘 탈 모델을 중단 합니다.
+* 앱의 큰 배경 화면에서 데스크톱 arylic을 넣지 마세요-이 일시적인 표면에 주로 사용 중인 못합니다의 멘 탈 모델을 중단 합니다.
 * 경계선에 시각적 긴장감이 발생하지 않도록 인앱 아크릴과 배경 아크릴을 바로 인접하게 배치하지 마세요.
 * 색조와 불투명도가 동일한 여러 아크릴 창을 나란히 배치하면 원치 않는 시각적 경계선이 생기므로 이렇게 배치하지 마세요.
 * 아크릴 표면 위에 테마 컬러 텍스트를 배치하지 마세요.
 
 ## <a name="how-we-designed-acrylic"></a>아크릴 설계 방식
 
-아크릴의 고유한 모양과 속성에 도달할 수 있도록 아크릴의 핵심 구성 요소를 세밀하게 조정했습니다. 투명, 흐림 및 노이즈 시각적 깊이 입체감을 추가를 시작 합니다. 아크릴 배경에 배치된 UI의 대비와 가독성을 보장하기 위해 제외 혼합 모드 레이어를 추가했습니다. 마지막으로 개인 설정 기회를 제공하기 위해 컬러 색조를 추가했습니다. 이러한 레이어가 합쳐져서 생생하고 편리한 소재가 완성됩니다.
+아크릴의 고유한 모양과 속성에 도달할 수 있도록 아크릴의 핵심 구성 요소를 세밀하게 조정했습니다. 반투명도, blur 및 visual 깊이 차원 평면 표면에 추가할 노이즈를 사용 하 여 시작 했습니다. 아크릴 배경에 배치된 UI의 대비와 가독성을 보장하기 위해 제외 혼합 모드 레이어를 추가했습니다. 마지막으로 개인 설정 기회를 제공하기 위해 컬러 색조를 추가했습니다. 이러한 레이어가 합쳐져서 생생하고 편리한 소재가 완성됩니다.
 
-![아크릴 제작법](images/AcrylicRecipe_Diagram.jpg)
+![아크릴 레시피](images/AcrylicRecipe_Diagram.jpg)
 <br/>아크릴 제작법: 배경, 흐림, 제외 혼합, 색/색조 오버레이, 노이즈
 
 

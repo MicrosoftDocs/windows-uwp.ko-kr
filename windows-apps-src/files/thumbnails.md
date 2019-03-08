@@ -1,5 +1,5 @@
 ---
-Description: How to use thumbnail images to help users preview files in UWP apps.
+Description: UWP 앱에서 파일을 미리 볼 수 있도록 썸네일 이미지를 사용 하는 방법입니다.
 title: UWP 앱의 미리 보기 이미지에 대한 지침
 label: Thumbnail images
 template: detail.hbs
@@ -8,17 +8,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 15984e00b036bf44d6e4a7f60cb6435ea1add291
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980351"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57642008"
 ---
 # <a name="thumbnail-images"></a>미리 보기 이미지
 
 이러한 지침은 사용자가 UWP 앱에서 찾아볼 때 미리 보기 이미지를 사용하여 파일을 미리 볼 수 있는 방법에 대해 설명합니다. 
 
-**중요 API**
+**중요 한 Api**
 
 -   [**ThumbnailMode**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
 
@@ -64,18 +64,18 @@ ms.locfileid: "8980351"
 <th> 검색된 미리 보기 이미지의 기능 </th>
 </tr>
 <tr>
-<td> 사진<br /> 동영상 </td>
+<td> 사진<br /> 비디오 </td>
 <td> PicturesView <br />VideosView </td>
-<td> <b>크기</b>: 중간, 가급적 190 이상(이미지 크기가 190x130인 경우) <br />
-<b>가로 세로 비율</b>: 약 .7의 균일한 와이드 가로 세로 비율(190인 경우 190x130) <br />
+<td> <b>크기</b>: 보통, 가급적 최소한 190 (이미지 크기는 190 x 130) 하는 경우 <br />
+<b>가로 세로 비율</b>: .7 (190 x 130 크기가 190)에 대 한 균일 한 와이드 가로 세로 비율 <br />
 미리 보기를 위해 잘라냅니다. <br /> 
 균일한 가로 세로 비율로 인해 격자에서 이미지를 정렬하는 데 적합합니다.  </td>
 </tr>
 <tr>
 <td> 문서<br />음악 </td>
 <td> DocumentsView <br />MusicView <br /> ListView</td>
-<td> <b>크기</b>: 작은, 가급적 40 x 40 픽셀 이상 <br />
-<b>가로 세로 비율</b>:  균일한 사각형 가로 세로 비율  <br />
+<td> <b>크기</b>: 작음, 가급적 최소한 40 x 40 픽셀 <br />
+<b>가로 세로 비율</b>:  사각형을 가로 세로 비율  <br />
 사각형 가로 세로 비율로 인해 앨범 이미지를 미리 보는 데 적합합니다. <br /> 
 문서는 파일 선택기 창에서 볼 때와 동일하게 표시됩니다(동일한 아이콘 사용). </td>
 </tr>
@@ -83,8 +83,8 @@ ms.locfileid: "8980351"
 <tr>
 <td> 단일 항목(파일 형식에 관계 없음) </td>
 <td> SingleItem </td>
-<td> <b>크기</b>: 작은, 가급적 40 x 40 픽셀 이상 <br />
-<b>가로 세로 비율</b>:  균일한 사각형 가로 세로 비율  <br />
+<td> <b>크기</b>: 작음, 가급적 최소한 40 x 40 픽셀 <br />
+<b>가로 세로 비율</b>:  사각형을 가로 세로 비율  <br />
 사각형 가로 세로 비율로 인해 앨범 이미지를 미리 보는 데 적합합니다. <br /> 
 문서는 파일 선택기 창에서 볼 때와 동일하게 표시됩니다(동일한 아이콘 사용). </td>
 </tr>
@@ -109,7 +109,7 @@ ms.locfileid: "8980351"
 <img src="images/thumbnail-pic-single-mode.png" alt="Picture thumbnail in single mode"/> </td>
 </tr>
 <tr>
-<td>동영상</td>
+<td>비디오</td>
 <td>미리 보기에 사진과 구별되는 아이콘이 있습니다. <br />
 <img src="images/thumbnail-vid-picvid-modes.png" alt="Video thumbnail in picture or video mode"/></td>
 <td>미리 보기가 사각형 가로 세로 비율로 잘립니다. <br />
@@ -163,8 +163,8 @@ ms.locfileid: "8980351"
 </div>
 
 ## <a name="related-topics"></a>관련 항목
-- [ThumbnailMode enum](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
+- [ThumbnailMode 열거형](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
 - [StorageItemThumbnail 클래스](https://docs.microsoft.com/uwp/api/Windows.Storage.FileProperties.StorageItemThumbnail)
 - [StorageFile 클래스](https://docs.microsoft.com/uwp/api/windows.storage.storagefile)
-- [파일 및 폴더 미리 보기 샘플(GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileThumbnails)
-- [목록 및 그리드 보기](../design/controls-and-patterns/lists.md)
+- [파일 및 폴더 미리 보기 샘플 (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileThumbnails)
+- [뷰 목록 및 표 뷰에서](../design/controls-and-patterns/lists.md)

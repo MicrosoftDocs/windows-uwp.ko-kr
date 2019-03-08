@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f868fdf4f3d5cd36000784d9c5a3437fa5d67ffa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943048"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593858"
 ---
 # <a name="get-usersuseridprofilesettingspeopleuserlist"></a>GET (/users/{userId}/profile/settings/people/{userList})
-사용자 프로필을 가져오거나 사용자 모니커를 사용 하 여 사용자를 지원 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
+사용자에 대 한 프로필을 가져오거나 사용자 모니커를 사용 하 여 사용자를 지원 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`합니다.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4EKB)
@@ -28,36 +28,36 @@ ms.locfileid: "8943048"
  
 ## <a name="remarks"></a>설명
  
-**userList** 및 **userIds** 상호 배타적인 매개 변수가 있습니다. 하나 또는 둘 다를 지정 하는 경우에 **BadRequest** 다시 볼 수 있습니다. **userList** 여러 명명 된 목록을 요청에 유용한 시나리오에서 future 검사에 대 한 배열입니다. **userIds** XUIDs에 대 한 10 진수 문자열의 구성 됩니다-JSON 64 비트 부호 없는 정수를 직렬화 하는 작업에 잘못 되었습니다. 마지막으로, 설정, 일반 읽을 이름 대신 64 비트 부호 없는 정수로 또는 **XONLINE_PROFILE_ASDF**같은 모호한 상수를 사용 하 여 Xbox One의 설정 이름이 됩니다.
+**userList** 하 고 **사용자 Id** 는 상호 배타적인 매개 변수입니다. 얻게 이거나 둘 다 지정 된 경우는 **BadRequest** 다시 합니다. **userList** 여러 명명 된 목록을 요청 하는 데 유용 시나리오에서는 향후 점검 하는 것에 대 한 배열입니다. **사용자 Id** 이루어집니다 JSON XUIDs-에 대 한 10 진수 문자열의 64 비트 부호 없는 정수를 직렬화 하는 작업에서 잘못 되었습니다. 마지막으로, Xbox One에 대 한 설정으로 명명 됩니다 설정을 일반 알기 쉬운 이름 보다는 64 비트 부호 없는 정수 또는 모호한 상수와 같은 **XONLINE_PROFILE_ASDF**합니다.
   
 <a id="ID4EKB"></a>
 
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| 사용자 Id| string| 'Xuid(12345)', 'gt(myGamertag)' 또는 'm e' 수 있습니다.| 
-| userList| string| 명명 된 목록에 대 한 설정을 가져오려면 사용자입니다. 현재 사용자가 지원 되는 유일한 목록입니다.| 
+| userId| 문자열| 'Xuid(12345)', 'gt(myGamertag)' 또는 'me' 수 있습니다.| 
+| userList| 문자열| 명명 된 목록 설정을 가져올 사용자입니다. 현재 사용자는 지원 되는 유일한 목록입니다.| 
   
 <a id="ID4EVB"></a>
 
  
 ## <a name="query-string-parameters"></a>쿼리 문자열 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | --- | --- | --- | 
-| 설정| string| 이름 설정의 쉼표로 구분 된 목록입니다.| 
+| 설정| 문자열| 쉼표로 구분 된 목록의 이름을 설정 합니다.| 
   
 <a id="ID4EQC"></a>
 
  
 ## <a name="required-request-headers"></a>필요한 요청 헤더
  
-| 헤더| 유형| 설명| 
+| 헤더| 형식| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| xbl 계약 버전 x| 32 비트 부호 있는 정수| 값 = 2| 
-| 콘텐츠 형식| string| 값 = <code>application/json</code>| 
+| x-xbl-contract-version| 32 비트 부호 있는 정수| 값 = 2| 
+| content-type| 문자열| Value = <code>application/json</code>| 
   
 <a id="ID4E2D"></a>
 
@@ -84,7 +84,7 @@ GET /users/me/profile/settings/people/people?settings=GameDisplayName,GameDispla
 
  
 ##### <a name="response-body"></a>응답 본문 
-응답은 **ReadMultiSettingsResponseV2** 개체입니다. 호출 하는 사용자를 가정 하나만 친구에 있습니다.
+응답은는 **ReadMultiSettingsResponseV2** 개체입니다. 호출 하는 사용자를 가정 하나만 friend에 있습니다.
   
 
 ```cpp
@@ -125,10 +125,10 @@ GET /users/me/profile/settings/people/people?settings=GameDisplayName,GameDispla
 <a id="ID4E5E"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
 [/users/{userId}/profile/settings/people/{userList}?settings={settings}](uri-usersuseridprofilesettingspeopleuserlist.md)
 
- [Profile(JSON)](../../json/json-profile.md)
+ [프로필 (JSON)](../../json/json-profile.md)
 
    

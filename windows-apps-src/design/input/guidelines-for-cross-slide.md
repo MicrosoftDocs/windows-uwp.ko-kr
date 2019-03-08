@@ -1,5 +1,5 @@
 ---
-Description: Use cross-slide to support selection with the swipe gesture and drag (move) interactions with the slide gesture.
+Description: 교차 방향으로 밀기를 사용하면 살짝 밀기 제스처를 이용한 항목 선택과 밀기 제스처를 이용한 끌기(이동) 조작을 지원할 수 있습니다.
 title: 교차 방향으로 밀기에 대한 지침
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 ms.date: 10/25/2017
@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b2d402bca61fc271b6d1e2e972cca280693f9ce3
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045196"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658128"
 ---
 # <a name="guidelines-for-cross-slide"></a>교차 방향으로 밀기에 대한 지침
 
 
 
 
-**중요 API**
+**중요 한 Api**
 
 -   [**CrossSliding**](https://msdn.microsoft.com/library/windows/apps/br241942)
 -   [**CrossSlideThresholds**](https://msdn.microsoft.com/library/windows/apps/br241941)
@@ -26,14 +26,14 @@ ms.locfileid: "9045196"
 
 교차 방향으로 밀기를 사용하면 살짝 밀기 제스처를 이용한 항목 선택과 밀기 제스처를 이용한 끌기(이동) 조작을 지원할 수 있습니다.
 
-## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
+## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>할 일과
 
 
 -   단일 방향으로 스크롤되는 목록이나 모음에는 교차 방향으로 밀기를 사용합니다.
 -   탭 조작이 다른 용도로 사용되는 경우 항목 선택에 교차 방향으로 밀기를 사용합니다.
 -   큐에 항목을 추가할 때는 교차 방향으로 밀기를 사용하지 마세요.
 
-## <a name="span-idadditionalusageguidancespanspan-idadditionalusageguidancespanspan-idadditionalusageguidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
+## <a name="span-idadditionalusageguidancespanspan-idadditionalusageguidancespanspan-idadditionalusageguidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용 지침
 
 
 선택 및 끌기는 한 방향(세로 또는 가로)으로 이동 가능한 콘텐츠 영역 내에서만 사용할 수 있습니다. 다른 조작이 작동하려면 하나의 이동 방향을 잠그고 이동 방향에 수직으로 제스처를 수행해야 합니다.
@@ -56,7 +56,7 @@ ms.locfileid: "9045196"
 
 단일 방향으로 스크롤되는 목록이나 모음에는 교차 방향으로 밀기를 사용합니다. 자세한 내용은 [ListView 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/hh465382)를 참조하세요.
 
-**참고**콘텐츠 영역 웹 브라우저나 전자 판독기와 같이 두 방향으로 이동할 수 있는 경우에서 시간이 제한 된 길게와 상호 작용 이미지 및 하이퍼링크와 같은 개체에 대 한 상황에 맞는 메뉴를 호출 사용 해야 합니다.
+**참고**  경우 웹 브라우저 또는 전자와 같은 양방향 콘텐츠 영역 수 이동 하는 위치에 이미지 및 하이퍼링크와 같은 개체에 대 한 상황에 맞는 메뉴를 호출 하려면 키를 눌러-대기 시간된 상호 작용을 사용 합니다.
 
  
 
@@ -97,7 +97,7 @@ ms.locfileid: "9045196"
 
 유일한 기본 동작인 경우 응용 프로그램에서 한 번 탭하여 선택을 수행합니다. 가로질러 밀기 자체 노출 애니메이션은 이러한 표준 탭하기 조작의 기능을 명확히 보여 줌으로써 활성화 및 탐색에 도움을 주기 위해 표시됩니다.
 
-**선택 바스켓**
+**바구니**
 
 선택 바스켓은 응용 프로그램의 기본 목록이나 모음에서 선택된 항목에 대한 시각적으로 고유한 동적 표현입니다. 이 기능은 선택한 항목을 추적하는 데 유용하며, 다음이 가능한 응용 프로그램에서 사용해야 합니다.
 
@@ -129,23 +129,23 @@ ms.locfileid: "9045196"
 
 여러 개체를 이동해야 하는 경우 사용자가 여러 항목을 선택한 다음 모든 항목을 한 번에 끌 수 있게 합니다.
 
-## <a name="span-idrelatedtopicsspanrelated-articles"></a><span id="related_topics"></span>관련 문서
+## <a name="span-idrelatedtopicsspanrelated-articles"></a><span id="related_topics"></span>관련된 문서
 
 
 **샘플**
-* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 **보관 샘플**
-* [입력: XAML 사용자 입력 이벤트 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 디바이스 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: 터치 적중 횟수 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: 간단한 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 터치 적중된 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
 * [입력: Windows 8 제스처 샘플](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처(C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [DirectX 터치 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [입력: 조작 및 제스처 (c + +) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

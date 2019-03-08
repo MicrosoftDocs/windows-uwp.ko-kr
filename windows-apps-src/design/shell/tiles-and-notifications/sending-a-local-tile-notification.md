@@ -1,23 +1,23 @@
 ---
-Description: This article describes how to send a local tile notification to a primary tile and a secondary tile using adaptive tile templates.
+Description: 이 문서에서는 적응형 타일 템플릿을 사용하여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명합니다.
 title: 로컬 타일 알림 보내기
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10 uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5752a7bf18d785121258ea3fe75afe8383be2aff
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946318"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636108"
 ---
 # <a name="send-a-local-tile-notification"></a>로컬 타일 알림 보내기
  
 
-Windows10의 기본 앱 타일은 보조 타일은 프로그래밍 방식으로 생성 하 고 앱 코드에서 정의 하는 동안 앱 매니페스트에 정의 됩니다. 이 문서에서는 적응형 타일 템플릿을 사용하여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명합니다. 로컬 알림은 웹 서버에서 푸시되거나 끌어온 알림이 아니라 앱 코드에서 전송된 알림입니다.
+Windows 10의 기본 앱 타일 보조 타일은 프로그래밍 방식으로 만들고 앱 코드에서 정의 하는 동안 앱 매니페스트에 정의 됩니다. 이 문서에서는 적응형 타일 템플릿을 사용하여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명합니다. 로컬 알림은 웹 서버에서 푸시되거나 끌어온 알림이 아니라 앱 코드에서 전송된 알림입니다.
 
 ![기본 타일 및 알림 타일](images/sending-local-tile-01.png)
 
@@ -46,7 +46,7 @@ using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 ## <a name="create-the-notification-content"></a>알림 콘텐츠 만들기
 
 
-Windows10, 타일 페이로드 알림에 대 한 사용자 지정 시각적 레이아웃을 만들 수 있도록 하는 적응형 타일 템플릿을 사용 하 여 정의 됩니다. 적응형 타일로 수행할 수 있는 작업에 대한 자세한 내용은 [적응형 타일 만들기](create-adaptive-tiles.md)를 참조하세요.
+Windows 10에서 타일 페이로드는 알림의 사용자 지정 시각적 레이아웃을 만들 수 있는 적응 타일 템플릿을 사용 하 여 정의 됩니다. 적응형 타일로 수행할 수 있는 작업에 대한 자세한 내용은 [적응형 타일 만들기](create-adaptive-tiles.md)를 참조하세요.
 
 이 코드 예제에서는 중간 크기 및 와이드 타일에 대한 적응형 타일 콘텐츠를 만듭니다.
 
@@ -164,7 +164,7 @@ TileUpdateManager.CreateTileUpdaterForApplication().Update(notification);
 
 **보조 타일**
 
-보조 타일에 알림을 보내려면 먼저 보조 타일이 있는지 확인합니다. 존재하지 않는 보조 타일에 대한 타일 업데이트 프로그램을 만들려고 하면(예: 사용자가 보조 타일 고정을 해제한 경우) 예외가 발생합니다. [**SecondaryTile.Exists**](https://docs.microsoft.com/uwp/api/Windows.UI.StartScreen.SecondaryTile#Windows_UI_StartScreen_SecondaryTile_Exists_System_String_)(tileId)를 사용하여 보조 타일이 고정되었는지 검색한 다음 보조 타일에 대한 타일 업데이트 프로그램을 만들고 알림을 보낼 수 있습니다.
+보조 타일에 알림을 보내려면 먼저 보조 타일이 있는지 확인합니다. 존재하지 않는 보조 타일에 대한 타일 업데이트 프로그램을 만들려고 하면(예: 사용자가 보조 타일 고정을 해제한 경우) 예외가 발생합니다. [  **SecondaryTile.Exists**](https://docs.microsoft.com/uwp/api/Windows.UI.StartScreen.SecondaryTile#Windows_UI_StartScreen_SecondaryTile_Exists_System_String_)(tileId)를 사용하여 보조 타일이 고정되었는지 검색한 다음 보조 타일에 대한 타일 업데이트 프로그램을 만들고 알림을 보낼 수 있습니다.
 
 이 코드 예제에서는 보조 타일에 알림을 보냅니다.
 
@@ -202,15 +202,15 @@ TileUpdateManager.CreateTileUpdaterForApplication().Clear();
 ## <a name="next-steps"></a>다음 단계
 
 
-**알림 큐 사용**
+**알림 큐를 사용 하 여**
 
 지금까지 첫 번째 타일 업데이트를 수행했으며 [알림 큐](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)를 사용하도록 설정하여 타일 기능을 확장할 수 있습니다.
 
-**기타 알림 전달 방법**
+**다른 알림 배달 방법**
 
 이 문서에서는 타일 업데이트를 알림으로 보내는 방법을 보여 줍니다. 예약, 정기, 푸시 등 다른 알림 전달 방법을 탐색하려면 [알림 전달](choosing-a-notification-delivery-method.md)을 참조하세요.
 
-**XmlEncode 전달 방법**
+**XmlEncode 배달 방법**
 
 [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용하지 않는 경우 이 알림 전달 방법이 다른 대체 방법입니다.
 
@@ -286,13 +286,13 @@ var notification = new TileNotification(doc);
 
 ## <a name="related-topics"></a>관련 항목
 
-* [적응형 타일 만들기](create-adaptive-tiles.md)
+* [적응 타일 만들기](create-adaptive-tiles.md)
 * [타일 콘텐츠 스키마](../tiles-and-notifications/tile-schema.md)
 * [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
-* [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-sending-local-tile-win10)
-* [**Windows.UI.Notifications 네임스페이스**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications)
-* [알림 큐 사용 방법(XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
-* [알림 전달](choosing-a-notification-delivery-method.md)
+* [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-sending-local-tile-win10)
+* [**Windows.UI.Notifications 네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications)
+* [알림 큐 (XAML)을 사용 하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
+* [알림 배달](choosing-a-notification-delivery-method.md)
  
 
  

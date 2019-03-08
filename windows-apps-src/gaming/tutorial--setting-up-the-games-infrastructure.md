@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 설정, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 252d7ccb8e50e773a19282afaf19bb18d4c5d5a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944587"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608708"
 ---
 # <a name="set-up-the-game-project"></a>게임 프로젝트 설정
 
@@ -33,13 +33,13 @@ UWP(유니버설 Windows 플랫폼) 개발이 처음인 경우에는 Visual Stud
 
 ### <a name="use-directx-template-to-create-a-project"></a>DirectX 템플릿을 사용하여 프로젝트 생성
 
-Visual Studio 템플릿은 기본 언어 및 기술을 기반으로 하는 특정 앱 유형을 대상으로 하는 설정 및 코드 파일 모음입니다. Microsoft Visual Studio2017에서 다양 한 게임 및 그래픽 앱 개발을 상당히 줄일 수 있는 템플릿 찾을 수 있습니다. 템플릿을 사용하지 않을 경우 기본 그래픽 렌더링 및 디스플레이 프레임워크 대부분을 직접 개발해야 하는데, 초보 게임 개발자에게는 매우 힘들 일이 될 수 있습니다.
+Visual Studio 템플릿은 기본 언어 및 기술을 기반으로 하는 특정 앱 유형을 대상으로 하는 설정 및 코드 파일 모음입니다. Microsoft Visual Studio 2017의 다양 한 게임 및 그래픽 앱 개발을 크게 줄일 수 있는 템플릿 찾을 수 있습니다. 템플릿을 사용하지 않을 경우 기본 그래픽 렌더링 및 디스플레이 프레임워크 대부분을 직접 개발해야 하는데, 초보 게임 개발자에게는 매우 힘들 일이 될 수 있습니다.
 
 이 자습서에 사용된 템플릿은  **DirectX 11 앱(유니버설 Windows)** 이라는 템플릿입니다. 
 
 Visual Studio에서 DirectX 11 게임 프로젝트를 만들기 위한 단계:
-1.  **파일...** &gt; **신규**  &gt; **프로젝트...** 를 선택
-2.  왼쪽 창에서 **설치 완료** &gt; **템플릿** &gt; **Visual C++** &gt; **Windows 유니버설**을 선택
+1.  선택 **파일...** &gt; **새** &gt; **프로젝트...** 
+2.  왼쪽된 창에서 선택 **설치 됨** &gt; **템플릿** &gt; **Visual c + +** &gt; **Windows 유니버설**
 3.  가운데 창에서 **DirectX 11 앱(유니버설 Windows)** 을 선택
 4.  게임 프로젝트에 이름을 지정하고 **확인**을 클릭합니다.
 
@@ -53,7 +53,7 @@ Visual Studio에서 DirectX 11 게임 프로젝트를 만들기 위한 단계:
 
 ### <a name="inspect-apph"></a>**App.h**를 검사합니다.
 
-뷰 공급자를 정의하는 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700469) 인터페이스를 구현할 때 [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505), [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523) 등 **App.h**의 5가지 메서드를 간략하게 살펴보겠습니다. 이러한 메서드는 게임이 시작될 때 만들어지는 앱 단일 항목에서 실행되며 앱의 모든 리소스를 로드할 뿐만 아니라 적절한 이벤트 처리기를 연결합니다.
+보겠습니다에서 5 개의 메서드를 신속 하 게 살펴볼 **App.h** &mdash; [ **초기화**](https://msdn.microsoft.com/library/windows/apps/hh700495)하십시오 [ **SetWindow** ](https://msdn.microsoft.com/library/windows/apps/hh700509), [ **부하**](https://msdn.microsoft.com/library/windows/apps/hh700501)합니다 [ **실행**](https://msdn.microsoft.com/library/windows/apps/hh700505), 및 [ **초기화** ](https://msdn.microsoft.com/library/windows/apps/hh700523) 구현 하는 경우는 [ **IFrameworkView** ](https://msdn.microsoft.com/library/windows/apps/hh700469) 보기 공급자를 정의 하는 인터페이스입니다. 이러한 메서드는 게임이 시작될 때 만들어지는 앱 단일 항목에서 실행되며 앱의 모든 리소스를 로드할 뿐만 아니라 적절한 이벤트 처리기를 연결합니다.
 
 ```cpp
     // Main entry point for our app. Connects the app with the Windows shell and handle application lifecycle events.
@@ -118,7 +118,7 @@ void App::Run()
 }
 ```
 
-이 메서드는 게임 창이 닫혀 있지 않으면 모든 이벤트를 디스패치하고 타이머를 업데이트한 다음, 그래픽 파이프라인의 결과를 렌더링 및 표현합니다. 이에 대한 자세한 내용은 [UWP 앱 프레임워크 정의](tutorial--building-the-games-uwp-app-framework.md), [렌더링 프레임워크 I: 렌더링 소개](tutorial--assembling-the-rendering-pipeline.md) 및  [렌더링 프레임워크 II: 게임 렌더링](tutorial-game-rendering.md)에서 살펴보겠습니다. 지금은 UWP DirectX 게임의 기본 코드 구조를 알아보아야 합니다.
+이 메서드가 수행 합니다. 게임에 대 한 창, 닫힌 경우 모든 이벤트를 발송, 타이머를 업데이트, 다음 렌더링 하 고 그래픽 파이프라인 결과 표시 합니다. 에 더 자세히이 대해 알아보겠습니다 [UWP 응용 프로그램 프레임 워크 정의](tutorial--building-the-games-uwp-app-framework.md), [렌더링 프레임 워크 i: 렌더링에 대 한 소개](tutorial--assembling-the-rendering-pipeline.md), 및 [렌더링 프레임 워크 II: 게임 렌더링](tutorial-game-rendering.md)합니다. 지금은 UWP DirectX 게임의 기본 코드 구조를 알아보아야 합니다.
 
 ## <a name="review-and-update-the-packageappxmanifest-file"></a>package.appxmanifest 파일을 검토 및 업데이트
 
@@ -129,28 +129,28 @@ void App::Run()
 
 ![package.appx 매니페스트 편집기의 스크린샷입니다.](images/simple-dx-game-setup-app-manifest.png)
 
-**package.appxmanifest** 파일 및 패키징에 대한 자세한 내용은 [매니페스트 디자이너](https://msdn.microsoft.com/library/windows/apps/br230259.aspx)를 참조하세요. 우선, **기능** 탭과 제공되는 옵션들에 대해 살펴보겠습니다.
+**package.appxmanifest** 파일 및 패키징에 대한 자세한 내용은 [매니페스트 디자이너](https://msdn.microsoft.com/library/windows/apps/br230259.aspx)를 참조하세요. 이제 **기능** 탭을 살펴보고 제공된 옵션을 살펴봅니다.
 
 ![Direct3D 앱의 기본 기능에 대한 스크린샷입니다.](images/simple-dx-game-setup-capabilities.png)
 
 전역 최고 점수 보드를 위한 **인터넷** 액세스 같이 게임에서 사용되는 기능을 선택하지 않으면 해당 리소스나 기능에 액세스할 수 없습니다. 새 게임을 만들 때는 게임에서 실행되어야 하는 기능을 선택해야 합니다.
 
-이제, **DirectX 11 앱(유니버설 Windows)** 템플릿과 함께 제공되는 나저미 파일들을 살펴보겠습니다.
+이제 **DirectX 11 앱(유니버설 Windows)** 템플릿과 함께 제공되는 나머지 파일을 살펴보겠습니다.
 
 ## <a name="review-the-included-libraries-and-headers"></a>포함된 라이브러리 및 헤더를 검토합니다.
 
-There are a few files we haven't looked at yet. 이 파일은 Direct3D 게임 개발 시나리오에 공통적으로 적용되는 추가 도구 및 지원을 제공합니다. 기본 DirectX 게임 프로젝트와 함께 제공되는 전체 파일 목록은 [DirectX 게임 프로젝트 템플릿](user-interface.md#template-structure)을 참조하세요.
+아직 살펴보지 않은 몇 개의 파일이 있습니다. 이 파일은 Direct3D 게임 개발 시나리오에 공통적으로 적용되는 추가 도구 및 지원을 제공합니다. 기본 DirectX 게임 프로젝트와 함께 제공되는 전체 파일 목록은 [DirectX 게임 프로젝트 템플릿](user-interface.md#template-structure)을 참조하세요.
 
 | 템플릿 원본 파일         | 파일 폴더            | 설명 |
 |------------------------------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DeviceResources.h/.cpp       | 일반                 | 모든 DirectX [디바이스 리소스](tutorial--assembling-the-rendering-pipeline.md#resource)를 제어하는 클래스 개체를 정의합니다. 여기에는 디바이스를 분실하거나 만들 때 알림이 제공되는 DeviceResources 소유 응용 프로그램의 인터페이스도 포함됩니다.                                                |
 | DirectXHelper.h              | 일반                 | **DX::ThrowIfFailed**, **ReadDataAsync** 및 **ConvertDipsToPixels 같은 메서드를 구현합니다. **DX::ThrowIfFailed**는 DirectX Win32 API에서 반환된 오류 HRESULT 값을 Windows 런타임 예외로 변환합니다. 이 메서드를 사용하여 DirectX 오류를 디버깅하기 위한 중단점을 배치합니다. 자세한 내용은 [ThrowIfFailed](https://github.com/Microsoft/DirectXTK/wiki/ThrowIfFailed)를 참조하세요. **ReadDataAsync**는 이진 파일을 비동기적으로 읽습니다. **ConvertDipsToPixels**는 장치 독립적인 픽셀(DIP)의 길이를 실제 픽셀의 길이로 변환합니다. |
 | StepTimer.h                  | 일반                 | 게임 또는 대화형 렌더링 앱에 유용한 고해상도 타이머를 정의합니다.   |
-| Sample3DSceneRenderer.h/.cpp | 내용                | 기본 렌더링 파이프라인을 인스턴스화하도록 클래스 개체를 정의합니다. 이렇게 하면 DirectX를 사용하여 Direct3D 스왑 체인 및 그래픽 어댑터를 UWP에 연결하는 기본적인 렌더러가 구현됩니다.   |
-| SampleFPSTextRenderer.h/.cpp | 내용                | Direct2D 및 DirectWrite를 사용하여 화면 오른쪽 아래에 있는 현재 초당 프레임(FPS) 값을 렌더링하도록 클래스 개체를 정의합니다.  |
-| SamplePixelShader.hlsl       | 내용                | 기본 픽셀 셰이더에 대한 HLSL(High Level Shader Language) 코드가 들어 있습니다.                                            |
-| SampleVertexShader.hlsl      | 내용                | 기본 꼭짓점 셰이더에 대한 HLSL(High Level Shader Language) 코드가 들어 있습니다.                                           |
-| ShaderStructures.h           | 내용                | 꼭지점 셰이더에 MVP 매트릭스 및 꼭지점별 데이터를 보내는 데 사용할 수 있는 셰이더 구조가 포함되어 있습니다.  |
+| Sample3DSceneRenderer.h/.cpp | 콘텐츠                | 기본 렌더링 파이프라인을 인스턴스화하도록 클래스 개체를 정의합니다. 이렇게 하면 DirectX를 사용하여 Direct3D 스왑 체인 및 그래픽 어댑터를 UWP에 연결하는 기본적인 렌더러가 구현됩니다.   |
+| SampleFPSTextRenderer.h/.cpp | 콘텐츠                | Direct2D 및 DirectWrite를 사용하여 화면 오른쪽 아래에 있는 현재 초당 프레임(FPS) 값을 렌더링하도록 클래스 개체를 정의합니다.  |
+| SamplePixelShader.hlsl       | 콘텐츠                | 기본 픽셀 셰이더에 대한 HLSL(High Level Shader Language) 코드가 들어 있습니다.                                            |
+| SampleVertexShader.hlsl      | 콘텐츠                | 기본 꼭짓점 셰이더에 대한 HLSL(High Level Shader Language) 코드가 들어 있습니다.                                           |
+| ShaderStructures.h           | 콘텐츠                | 꼭지점 셰이더에 MVP 매트릭스 및 꼭지점별 데이터를 보내는 데 사용할 수 있는 셰이더 구조가 포함되어 있습니다.  |
 | pch.h/.cpp                   | 기본                   | DirectX 11 API를 포함하여 Direct3D 앱이 사용하는 API에 대한 모든 Windows 시스템 include가 들어 있습니다.| 
 
 ### <a name="next-steps"></a>다음 단계

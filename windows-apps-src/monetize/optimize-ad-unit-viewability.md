@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 지침, 모범 사례, 가시성
 ms.localizationpriority: medium
 ms.openlocfilehash: 87e21f4e98c58f79f397c369891212eccb196c18
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919352"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662268"
 ---
 # <a name="optimize-the-viewability-of-your-ad-units"></a>광고 단위의 가시성 최적화
 
@@ -18,17 +18,17 @@ ms.locfileid: "8919352"
 
 IAB 가시성 지침과 맞추어, 배너 광고 노출은 다음 조건을 충족하는 경우 볼 수 있는 것으로 간주됩니다.
 
-* 픽셀 요구 사항: 광고에서 50% 이상의 픽셀은 앱의 볼 수 있는 공간에 있었습니다.
-* 시간 요구 사항: 픽셀 요구 사항을 충족하는 시간은 하나의 연속 초 게시물 광고 렌더링과 같거나 보다 컸습니다.
+* 픽셀 요구 사항: 알림에 픽셀의 50% 보다 크거나 앱의 표시 되는 공간에 있는 것입니다.
+* 시간 요구 사항: 픽셀 요구 사항을 충족 하는 시간 보다 크거나 같음 ad 렌더링 후 연속 초당 했습니다.
 
 비디오 광고 노출은 다음 조건을 충족하는 경우 볼 수 있는 것으로 간주됩니다.
 
-* 픽셀 요구 사항: 광고에서 50% 이상의 픽셀은 앱의 볼 수 있는 부분에 있었습니다.
-* 시간 요구 사항: 동영상은 픽셀 요구 사항을 충족하고 두 개의 지속적인 초 게시물 광고 렌더링에 대해 재생됩니다.
+* 픽셀 요구 사항: 알림에 픽셀의 50% 보다 크거나 앱의 볼 수 있는 부분에 있는 것입니다.
+* 시간 요구 사항: 비디오 픽셀 요구 사항을 충족 하 고 post ad 렌더링 하는 두 연속 초 동안 재생.
 
 가시성은 다음 공식에 따라 계산됩니다.
 
-**가시성 = [본 광고 노출] * 100 / [ 총 광고 노출]**
+**Viewability = [Viewed impressions] * 100 / [ Total ad impressions]**
 
 ## <a name="guidelines-to-improve-ad-unit-viewability"></a>광고 단위 가시성을 개선하기 위한 지침
 

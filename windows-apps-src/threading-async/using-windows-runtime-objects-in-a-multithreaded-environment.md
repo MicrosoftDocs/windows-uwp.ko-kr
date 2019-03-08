@@ -7,11 +7,11 @@ ms.assetid: 43ffd28c-c4df-405c-bf5c-29c94e0d142b
 keywords: windows 10, uwp, 타이머, 스레드
 ms.localizationpriority: medium
 ms.openlocfilehash: f11207a774b1ffcebde95e316634592020e6ed49
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058504"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631218"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>다중 스레드 환경에서 Windows 런타임 개체 사용
 이 문서에서는 .NET Framework가 C# 및 Visual Basic 코드에서 Windows 런타임 또는 Windows 런타임 구성 요소에서 제공하는 개체로의 호출을 처리하는 방식을 설명합니다.
@@ -161,6 +161,6 @@ End Sub
 UI에서 실행되고 UI 스레드가 아닌 다른 스레드에서 호출되면 예외를 throw하는 개체의 경우 UI 스레드의 [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029) 개체를 사용하여 호출을 발송할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
-[C# 가이드](/dotnet/csharp/)
+[C#가이드](/dotnet/csharp/)
 
 [Visual Basic 가이드](/dotnet/visual-basic/)

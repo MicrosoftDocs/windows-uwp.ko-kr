@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c9c232bc60bbbb3cccc16618d82ec23452c58ee8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933187"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645958"
 ---
 # <a name="texture3d-subresource-tiling"></a>Texture3D 하위 리소스 타일링
 
@@ -21,7 +21,7 @@ ms.locfileid: "8933187"
 
 이 표는 [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) 타일을 가져와서 x/y 크기를 각각 4로 나눈 다음 16개의 깊이 레이어를 더한 것입니다. 첫 번째 평면(첫 번째 16개의 깊이 레이어를 정의하는 타일이 2D 평면)의 모든 타일이 후속 평면 이전에 표시됩니다.
 
-**참고** 스트리밍 리소스의 초기 구현에서 스트리밍 리소스의 [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) 지원 않지만 원하는 타일 모양이 여기에 향후 릴리스에서 지원할 나열 됩니다.
+**참고**  스트리밍 리소스의 초기 구현 시   [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562)가 스트리밍 리소스에서 지원되지는 않지만 향후 리소스에서 지원할 수 있도록 원하는 타일 모양이 여기에 나열됩니다.
 
  
 
@@ -37,12 +37,12 @@ ms.locfileid: "8933187"
 
  
 
-스트리밍 리소스로 지원되지 않는 포맷 비트 개수는 96 bpp 포맷, 비디오 포맷, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM, 그리고 DXGI\_FORMAT\_R8R8\_G8B8\_UNORM입니다.
+리소스를 스트리밍 지원 되지 않습니다 하는 형식이 비트 수는 96 bpp 형식, 비디오 형식 DXGI\_형식\_R1\_UNORM, DXGI\_형식\_R8G8\_B8G8\_UNORM, 및 DXGI\_형식\_R8R8\_G8B8\_UNORM 합니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[스트리밍 리소스 영역의 타일링 방법](how-a-streaming-resource-s-area-is-tiled.md)
+[리소스의 영역을 바둑판식으로 스트리밍 하는 방법](how-a-streaming-resource-s-area-is-tiled.md)
 
  
 

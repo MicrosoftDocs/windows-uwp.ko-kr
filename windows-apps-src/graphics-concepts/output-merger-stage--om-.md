@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 63a77048bed3ad27f2040a672d93380d0250f9aa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929851"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641098"
 ---
 # <a name="output-merger-om-stage"></a>OM(출력 병합기) 단계
 
 
 OM(출력 병합기) 단계는 다양한 유형의 출력 데이터(픽셀 셰이더 값, 깊이 및 스텐실 정보)를 렌더링 대상 및 깊이/스텐실 버퍼의 내용과 결합하여 최종 파이프라인 결과를 생성합니다.
 
-## <a name="span-idpurpose-and-usesspanspan-idpurpose-and-usesspanspan-idpurpose-and-usesspanpurpose-and-uses"></a><span id="Purpose-and-uses"></span><span id="purpose-and-uses"></span><span id="PURPOSE-AND-USES"></span>목적 및 사용
+## <a name="span-idpurpose-and-usesspanspan-idpurpose-and-usesspanspan-idpurpose-and-usesspanpurpose-and-uses"></a><span id="Purpose-and-uses"></span><span id="purpose-and-uses"></span><span id="PURPOSE-AND-USES"></span>용도 사용
 
 
 OM(출력 병합기) 단계는 표시되는 픽셀을 결정하고(깊이 스텐실 테스트 사용) 최종 픽셀 색상을 혼합하기 위한 최종 단계입니다.
@@ -43,7 +43,7 @@ OM 단계는 다음과 같은 조합을 사용하여 최종 렌더링된 픽셀 
 
 sRGB 렌더링 대상을 사용하면 런타임은 혼합을 수행하기 전에 렌더링 대상 색상을 선형 공간으로 변환합니다. 런타임은 혼합된 최종 값을 다시 sRGB 공간으로 변환한 후 렌더링 대상에 값을 다시 저장합니다.
 
-### <a name="span-iddual-source-color-blendingspanspan-iddual-source-color-blendingspanspan-iddual-source-color-blendingspandual-source-color-blending"></a><span id="Dual-source-color-blending"></span><span id="dual-source-color-blending"></span><span id="DUAL-SOURCE-COLOR-BLENDING"></span>듀얼 소스 색상 혼합
+### <a name="span-iddual-source-color-blendingspanspan-iddual-source-color-blendingspanspan-iddual-source-color-blendingspandual-source-color-blending"></a><span id="Dual-source-color-blending"></span><span id="dual-source-color-blending"></span><span id="DUAL-SOURCE-COLOR-BLENDING"></span>이중 소스 색 혼합
 
 이 기능을 통해 출력 병합기 단계는 두 가지 픽셀 셰이더 출력(o0와 o1) 모두를 슬롯 0에서 단일 렌더링 대상이 포함된 혼합 연산에 대한 입력으로 동시에 사용할 수 있습니다. 유효한 blend 연산에는 add, subtract, revsubtract가 포함됩니다. Blend 수식과 출력 쓰기 마스크는 픽셀 셰이더가 출력하는 구성 요소를 지정합니다. 추가 구성 요소는 무시됩니다.
 
@@ -79,20 +79,20 @@ OM(출력 병합기) 단계는 다음과 같은 조합을 사용하여 최종 �
 -   렌더링 대상의 콘텐츠
 -   깊이/스텐실 버퍼의 콘텐츠.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
 
 
 ### <a name="span-idoutput-write-mask-overviewspanspan-idoutput-write-mask-overviewspanspan-idoutput-write-mask-overviewspanoutput-write-mask-overview"></a><span id="Output-write-mask-overview"></span><span id="output-write-mask-overview"></span><span id="OUTPUT-WRITE-MASK-OVERVIEW"></span>출력 쓰기 마스크 개요
 
 출력 쓰기 마스크를 사용하여 렌더링 대상에 쓸 수 있는 데이터를 (구성 요소별로) 제어합니다.
 
-### <a name="span-idmultiple-render-targets-overviewspanspan-idmultiple-render-targets-overviewspanspan-idmultiple-render-targets-overviewspanmultiple-render-targets-overview"></a><span id="Multiple-render-targets-overview"></span><span id="multiple-render-targets-overview"></span><span id="MULTIPLE-RENDER-TARGETS-OVERVIEW"></span>다중 렌더링 대상 개요
+### <a name="span-idmultiple-render-targets-overviewspanspan-idmultiple-render-targets-overviewspanspan-idmultiple-render-targets-overviewspanmultiple-render-targets-overview"></a><span id="Multiple-render-targets-overview"></span><span id="multiple-render-targets-overview"></span><span id="MULTIPLE-RENDER-TARGETS-OVERVIEW"></span>여러 렌더링 대상 개요
 
 픽셀 셰이더를 사용하여 8개 이상의 개별적 렌더링 대상을 렌더링할 수 있으며, 렌더링 대상은 모두 동일한 유형(버퍼, Texture1D, Texture1DArray 등)이어야 합니다. 또한 모든 렌더링 대상은 모든 치수(너비, 높이, 깊이, 배열 크기, 샘플 수)의 크기가 동일해야 합니다. 렌더링 대상마다 데이터 형식이 다를 수 있습니다.
 
 렌더링 대상 슬롯의 어떤 조합도 사용할 수 있습니다(최대 8). 하지만 리소스 보기는 다중 렌더링 대상 슬롯에 동시에 바인딩할 수 없습니다. 리소스를 동시에 사용하지 않는 한 보기는 다시 사용할 수 있습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
 
 
 <table>
@@ -109,14 +109,14 @@ OM(출력 병합기) 단계는 다음과 같은 조합을 사용하여 최종 �
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="configuring-depth-stencil-functionality.md">깊이 스텐실 기능 구성</a></p></td>
-<td align="left"><p>이 섹션에서는 깊이 스텐실 버퍼와 출력 병합기 단계의 깊이 스텐실 상태를 설정하는 단계에 대해 설명합니다.</p></td>
+<td align="left"><p>이 섹션에서는 출력 병합기 단계의 깊이 스텐실 버퍼와 깊이 스텐실 상태를 설정하는 단계를 다룹니다.</p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [그래픽 파이프라인](graphics-pipeline.md)

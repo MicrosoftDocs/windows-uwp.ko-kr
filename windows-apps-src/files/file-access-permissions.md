@@ -12,24 +12,24 @@ dev_langs:
 - cpp
 - javascript
 ms.openlocfilehash: 4845b20ed74642f6fb34ea40dd774c91ae378e7b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050283"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630408"
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 
-유니버설 Windows 플랫폼 (UWP) 앱은 기본적으로 특정 파일 시스템 위치를 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다.
+UWP (유니버설 Windows 플랫폼) 앱은 기본적으로 특정 파일 시스템 위치를 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다.
 
 ## <a name="the-locations-that-all-apps-can-access"></a>모든 앱이 액세스할 수 있는 위치
 
 새 앱을 만들면 기본적으로 다음 파일 시스템 위치에 액세스할 수 있습니다.
 
 ### <a name="application-install-directory"></a>응용 프로그램 설치 디렉터리
-앱이 사용자의 시스템에 설치 되어 있는 폴더.
+앱 사용자의 시스템에 설치 되어 있는 폴더입니다.
 
-두 가지 기본 액세스 파일 및 폴더에 앱의 설치 디렉터리:
+두 가지 기본 파일에 액세스 하 고 폴더에서 앱의 설치 디렉터리:
 
 1. 아래와 같이 앱의 설치 디렉터리를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색할 수 있습니다.
 
@@ -86,20 +86,20 @@ ms.locfileid: "9050283"
     });
     ```
 
-    [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱 설치 디렉터리에 있는 `file.txt` 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
+    [  **GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱 설치 디렉터리에 있는 `file.txt` 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
     
     URI의 "ms-appx:///" 접두사는 앱의 설치 디렉터리를 나타냅니다. 앱 URI 사용에 대한 자세한 내용은 [URI를 사용하여 콘텐츠를 참조하는 방법](https://msdn.microsoft.com/library/windows/apps/hh781215)을 참조하세요.
 
 또한 다른 위치와는 달리 일부 [UWP(유니버설 Windows 플랫폼) 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205757) 및 [Microsoft Visual Studio의 C/C++ 표준 라이브러리 기능](https://msdn.microsoft.com/library/hh875057.aspx)을 사용하여 앱 설치 디렉터리에서 파일에 액세스할 수 있습니다.
 
-앱의 설치 디렉터리는 읽기 전용 위치입니다. 파일 선택기를 통해서는 설치 디렉터리에 액세스할 수 없습니다.
+앱의 설치 디렉터리는 읽기 전용 위치입니다. 파일 선택기를 통해 설치 디렉터리에 액세스할을 수 없게 합니다.
 
 ### <a name="application-data-locations"></a>응용 프로그램 데이터 위치
 앱이 데이터를 저장할 수 있는 폴더입니다. 이러한 폴더(로컬, 로밍 및 임시)는 앱이 설치될 때 만들어집니다.
 
-앱의 데이터 위치에서 파일 및 폴더에 액세스 하는 두 가지 기본 방법으로 가지 있습니다.
+두 가지 기본 응용 프로그램의 데이터 위치에서 파일 및 폴더에 액세스 하려면:
 
-1.  [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) 속성을 사용하여 앱 데이터 폴더를 검색합니다.
+1.  [  **ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) 속성을 사용하여 앱 데이터 폴더를 검색합니다.
 
     예를 들어 [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587).[**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)를 사용하여 아래와 같이 앱의 로컬 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색할 수 있습니다.
     
@@ -127,7 +127,7 @@ ms.locfileid: "9050283"
     
     앱 데이터 위치를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색한 후 **StorageFolder** 메서드를 사용하여 해당 위치의 파일과 폴더에 액세스할 수 있습니다. 위 예제에서 이 **StorageFolder** 개체는 `localFolder` 변수에 저장됩니다. [ApplicationData 클래스](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata) 페이지의 지침에서, 그리고 GitHub에서 [응용 프로그램 데이터 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ApplicationData)을 다운로드하여 앱 데이터 위치 사용에 대해 자세히 알아볼 수 있습니다.
 
-2. 이와 같이 앱 URI를 사용 하 여 앱의 로컬 폴더에서 직접 파일을 검색할 수 있습니다.
+2. 다음과 같은 응용 프로그램 URI를 사용 하 여 앱의 로컬 폴더에서 직접 파일을 검색할 수 있습니다.
     
     ```csharp
     using Windows.Storage;
@@ -158,13 +158,13 @@ ms.locfileid: "9050283"
     });
     ```
     
-    [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱의 로컬 폴더에 있는 `file.txt` 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
+    [  **GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱의 로컬 폴더에 있는 `file.txt` 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
     
     URI의 "ms-appdata:///local/" 접두사는 앱의 로컬 폴더를 나타냅니다. 앱의 로밍 또는 임시 폴더에 있는 파일에 액세스하려면 대신 "ms-appdata:///roaming/" 또는 "ms-appdata:///temporary/"를 사용합니다. 앱 URI 사용에 대한 자세한 내용은 [파일 리소스를 로드하는 방법](https://msdn.microsoft.com/library/windows/apps/hh781229)을 참조하세요.
 
 또한 다른 위치와는 달리 일부 [UWP 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205757) 및 Visual Studio의 일부 C/C++ 표준 라이브러리 기능을 사용하여 앱 데이터 위치에서 파일에 액세스할 수 있습니다.
 
-파일 선택기를 통해서는 로컬, 로밍 또는 임시 폴더에 액세스할 수 없습니다.
+파일 선택기를 통해 로컬, 로밍 또는 임시 폴더에 액세스할 수 없습니다.
 
 ### <a name="removable-devices"></a>이동식 장치
 또한 앱은 연결된 디바이스의 일부 파일에 기본적으로 액세스할 수 있습니다. 사용자가 카메라나 USB 썸 드라이브(thumb drive)와 같은 장치를 시스템에 연결할 때 앱이 [자동 실행 확장](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay)을 사용하여 자동으로 실행되는 경우 이것은 옵션입니다. 앱이 액세스할 수 있는 파일은 앱 매니페스트에서 파일 형식 연결 선언을 통해 지정한 특정 파일 형식으로 제한됩니다.
@@ -212,7 +212,7 @@ ms.locfileid: "9050283"
     });
     ```
 
-    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 파일이 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다. 위 예제에서 이 파일은 `newFile`입니다.
+    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[ **CreateFileAsync** ](https://msdn.microsoft.com/library/windows/apps/hh996761) 시스템에서 수행 해야 할 작업을 지정할 수 있도록 오버 로드는 이미 있으면 기존 파일 이름이 동일한 다운로드 폴더에 있습니다. 이러한 메서드가 완료되면 만든 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다. 위 예제에서 이 파일은 `newFile`입니다.
 
 - 아래와 같이 사용자 다운로드 폴더에 하위 폴더를 만들 수 있습니다.
 
@@ -245,7 +245,7 @@ ms.locfileid: "9050283"
     });
     ```
 
-    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 하위 폴더가 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 하위 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 반환합니다. 위 예제에서 이 파일은 `newFolder`입니다.
+    [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[ **CreateFolderAsync** ](https://msdn.microsoft.com/library/windows/apps/hh996763) 시스템에서 수행 해야 할 작업을 지정할 수 있도록 오버 로드는 이미 있으면 기존 하위 폴더는 동일한 이름을 가진 Downloads 폴더에 있습니다. 이러한 메서드가 완료되면 만든 하위 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 반환합니다. 위 예제에서 이 파일은 `newFolder`입니다.
 
 다운로드 폴더에 파일이나 폴더를 만드는 경우 해당 항목의 앱의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)에 추가하여 앱이 나중에 해당 항목에 쉽게 액세스할 수 있도록 하는 것이 좋습니다.
 
@@ -257,19 +257,19 @@ ms.locfileid: "9050283"
 
 다음 표에는 접근 권한 값을 선언하고 관련 [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) API를 사용하여 액세스할 수 있는 추가 위치가 나와 있습니다.
 
-| 위치 | 접근 권한 값 | Windows.Storage API |
+| 위치 | 기능 | Windows.Storage API |
 |----------|------------|---------------------|
-| 사용자가 액세스 권한을 가지고 있는 모든 파일. 예: 문서, 그림, 사진, 다운로드, 데스크톱, OneDrive 등. | broadFileSystemAccess<br><br>이는 제한된 접근 권한 값입니다. 액세스는 **설정**에서 구성할 수 있는 > **개인 정보** > **파일 시스템**입니다. 사용자가 허용 또는 거부할 수 권한을 **설정**에서 언제 든 지, 때문에 앱이 해당 변경 내용에 복원 해야 합니다. 앱 액세스할 수 없는 경우 [Windows 10 파일 시스템 액세스 및 개인 정보](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) 문서에 대 한 링크를 제공 하 여 설정을 변경 하 라는 메시지를 선택할 수 있습니다. 참고는 사용자가 응용 프로그램, 설정을 전환 하 여, 닫았다가 다시 시작 해야 앱. 이러한 설정을 전환 하 여 앱이 실행 되는 동안, 하는 경우 플랫폼은 앱을 일시 중단 상태를 저장 한 다음 강제로 새 설정을 적용 하기 위해 앱을 종료할 수 있도록 합니다. 2018 년 4 월 업데이트에서 권한에 대 한 기본 켜져 있습니다. 2018 년 10 월 업데이트에서 기본값은 Off입니다.<br /><br />이 접근 권한 값을 선언하는 Microsoft Store에 앱을 제출하는 경우 앱에 이 접근 권한 값이 필요한 이유와 이를 사용할 방법에 대한 추가 설명을 제공해야 합니다.<br>이 접근 권한이 값 [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임 스페이스의 Api에 대 한 작동합니다. 앱에서이 기능을 사용 하는 방법에 대 한 예제는이 문서의 끝에 있는 **예제** 섹션을 참조 하세요. | 해당 없음 |
-| 문서 | DocumentsLibrary <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. <br><br>앱에서 다음 작업을 하려는 경우 이 접근 권한 값을 사용합니다.<br>- 유효한 OneDrive URL 또는 리소스 ID를 사용하여 특정 OneDrive 콘텐츠에 대한 플랫폼 간 오프라인 액세스를 용이하게 합니다.<br>-열려 있는 동안 자동으로 사용자의 OneDrive에 파일 저장 오프 라인 | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
+| 사용자가 액세스 권한을 가지고 있는 모든 파일. 예: 문서, 그림, 사진, 다운로드, 데스크톱, OneDrive 등. | broadFileSystemAccess<br><br>이는 제한된 접근 권한 값입니다. 액세스는 구성할 수 있습니다 **설정을** > **개인 정보 취급** > **파일 시스템**입니다. 사용자 권한을 부여 또는 거부 권한을 언제 든 지 수 있으므로 **설정을**, 앱이 이러한 변경 사항을 탄력적으로 확인 해야 합니다. 앱 액세스가 없는 경우에 대 한 링크를 제공 하 여 설정을 변경 하려면 사용자에 게 프롬프트 수도 있습니다는 [Windows 10 파일 시스템 액세스 및 개인 정보 보호](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) 문서. 참고는 사용자 앱을 닫으려면, 설정을 설정/해제 하며 앱을 다시 시작 합니다. 이러한 앱이 실행 되는 동안 설정을 전환, 플랫폼은 일시 중단 앱 상태를 저장 한 다음 새 설정을 적용 하기 위해 응용 프로그램을 강제로 종료 수 있도록 합니다. 2018 년 4 월 업데이트에서 사용 권한의 기본 켜져 있습니다. 2018 년 10 월 업데이트에서 기본값은 Off입니다.<br /><br />이 접근 권한 값을 선언하는 Microsoft Store에 앱을 제출하는 경우 앱에 이 접근 권한 값이 필요한 이유와 이를 사용할 방법에 대한 추가 설명을 제공해야 합니다.<br>이 기능에는 Api에 대 한 작동 합니다 [ **Windows.Storage** ](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임 스페이스입니다. 참조 된 **예제에서는** 앱에서이 기능을 사용 하는 방법의 예는이 문서의 끝에 있는 섹션입니다. | 해당 없음 |
+| 문서 | DocumentsLibrary <br><br>참고: 앱이이 위치에 액세스할 수 있는 특정 파일 형식을 선언 하는 앱 매니페스트 파일 유형 연결 추가 해야 합니다. <br><br>앱에서 다음 작업을 하려는 경우 이 접근 권한 값을 사용합니다.<br>- 유효한 OneDrive URL 또는 리소스 ID를 사용하여 특정 OneDrive 콘텐츠에 대한 플랫폼 간 오프라인 액세스를 용이하게 합니다.<br>-저장 하면서 자동으로 사용자의 OneDrive에 파일을 열고 오프 라인 | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | 음악     | MusicLibrary <br>[음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | 사진  | PicturesLibrary<br> [음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
-| 동영상    | VideosLibrary<br>[음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   
+| 비디오    | VideosLibrary<br>[음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   
 | 이동식 장치  | RemovableDevices <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. <br><br>[SD 카드 액세스](access-the-sd-card.md)도 참조하세요. | [KnownFolders.RemovableDevices](https://msdn.microsoft.com/library/windows/apps/br227158) |  
 | 홈 그룹 라이브러리  | 다음 접근 권한 값 중 하나 이상이 필요합니다. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.HomeGroup](https://msdn.microsoft.com/library/windows/apps/br227153) |      
 | 미디어 서버 장치(DLNA) | 다음 접근 권한 값 중 하나 이상이 필요합니다. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.MediaServerDevices](https://msdn.microsoft.com/library/windows/apps/br227154) |
-| UNC(범용 명명 규칙) 폴더 | 다음과 같은 접근 권한 값의 조합이 필요합니다. <br><br>홈 및 회사 네트워크 접근 권한 값: <br>- PrivateNetworkClientServer <br><br>하나 이상의 인터넷 및 공용 네트워크 접근 권한 값: <br>- InternetClient <br>- InternetClientServer <br><br>해당되는 경우 도메인 자격 증명 접근 권한 값:<br>- EnterpriseAuthentication <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. | 다음을 사용하여 폴더 검색: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>다음을 사용하여 파일 검색: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
+| UNC(범용 명명 규칙) 폴더 | 다음과 같은 접근 권한 값의 조합이 필요합니다. <br><br>홈 및 회사 네트워크 접근 권한 값: <br>- PrivateNetworkClientServer <br><br>하나 이상의 인터넷 및 공용 네트워크 접근 권한 값: <br>- InternetClient <br>- InternetClientServer <br><br>해당되는 경우 도메인 자격 증명 접근 권한 값:<br>- EnterpriseAuthentication <br><br>참고: 앱이이 위치에 액세스할 수 있는 특정 파일 형식을 선언 하는 앱 매니페스트 파일 유형 연결 추가 해야 합니다. | 다음을 사용하여 폴더 검색: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>다음을 사용하여 파일 검색: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
 
-**예**
+**예제**
 
 이 예는 제한된 `broadFileSystemAccess` 접근 권한 값을 추가합니다. 접근 권한 값을 지정할 뿐 아니라 `rescap` 네임스페이스가 추가되어야 하고 `IgnorableNamespaces`에도 추가됩니다.
 

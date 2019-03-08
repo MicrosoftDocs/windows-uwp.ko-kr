@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: de4d8fc797efe2a0dde7340f42208a97bccf0b10
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927989"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645108"
 ---
 # <a name="create-a-windows-hello-login-service"></a>Windows Hello 로그인 서비스 만들기
 
 이제 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 기존 사용자 이름 및 암호 인증 시스템의 대안으로 Windows Hello를 사용하는 방법을 안내해드리는 전체 과정의 제2부를 시작하겠습니다. 이 문서에서는 1부 [Windows Hello 로그인 앱](microsoft-passport-login.md)의 마지막 내용을 이어 받아, 기능을 확장하여 Windows Hello를 기존 응용 프로그램에 통합하는 방법을 알려드립니다.
 
-이 프로젝트를 빌드하려면 C# 및 XAML 사용 경험이 약간 필요합니다. 또한 Windows 10 컴퓨터에서 Visual Studio 2015(Community Edition 이상)를 사용해야 합니다.
+이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. 또한 Windows 10 컴퓨터에서 Visual Studio 2015(Community Edition 이상)를 사용해야 합니다.
 
 ## <a name="exercise-1-server-side-logic"></a>연습 1: 서버 쪽 논리
 
 
-이 연습에서는 첫 번째 랩에 빌드된 Windows Hello 응용 프로그램을 시작하고 로컬 모의 서버와 데이터베이스를 만듭니다. 이 실습 교육의 목적은 Windows Hello를 기존 시스템에 통합하는 방법을 알려드리는 것입니다. 모의 서버와 모의 데이터베이스를 사용하여 관련이 없는 설정을 다수 제거합니다. 자체 응용 프로그램에서는 실제 서비스 및 데이터베이스로 모의 개체를 교체해야 합니다.
+이 연습에서는 첫 번째 랩에 빌드된 Windows Hello 응용 프로그램을 시작하고 로컬 모의 서버와 데이터베이스를 만듭니다. 이 실습 교육의 목적은 Windows Hello를 기존 시스템에 통합하는 방법을 알려드리는 것입니다. 모의 서버와 모의 데이터베이스를 사용하여 관련이 없는 많은 설치가 제거됩니다. 자체 응용 프로그램에서는 실제 서비스 및 데이터베이스로 모의 개체를 교체해야 합니다.
 
 -   시작하려면 첫 번째 Passport 실습 교육에서 PassportLogin 솔루션을 엽니다.
 -   모의 서버와 모의 데이터베이스를 구현하는 작업부터 시작합니다. "AuthService"라는 새 폴더를 만듭니다. 솔루션 탐색기에서 "PassportLogin(유니버설 Windows)" 솔루션을 마우스 오른쪽 단추로 클릭하고 추가 &gt; 새 폴더를 선택합니다.
@@ -53,7 +53,7 @@ ms.locfileid: "8927989"
 
     주석으로 처리된 PassportDevices 목록을 확인했을 수 있습니다. 이는 현재 구현에서 기존 사용자 모델에 적용해야 하는 수정 작업입니다. PassportDevices 목록에는 deviceID, Windows Hello에서 만든 공개 키 및 [**KeyCredentialAttestationResult**](https://msdn.microsoft.com/library/windows/apps/dn973034)가 포함됩니다. 이 실습 교육의 경우 TPM(신뢰할 수 있는 플랫폼 모듈) 칩이 있는 디바이스에서 Windows Hello만 이것들을 제공하므로 keyAttestationResult를 구현해야 합니다. **KeyCredentialAttestationResult**는 여러 속성의 조합이며 데이터베이스에 저장 및 로드하기 위해 분할해야 합니다.
 
--   "PassportDevice.cs"라는 AuthService 폴더에 새 클래스를 만듭니다. 위에서 설명한 것처럼 이것은 Windows Hello 디바이스용 모델입니다. 클래스 정의를 public으로 변경하고 다음 속성을 추가합니다.
+-   "PassportDevice.cs"라는 AuthService 폴더에 새 클래스를 만듭니다. 위에서 설명한 것처럼 이것은 Windows Hello 디바이스용 모델입니다. 클래스 정의를 public이 되도록 변경하고 다음 속성을 추가합니다.
 
     ```cs
     namespace PassportLogin.AuthService
@@ -182,7 +182,7 @@ ms.locfileid: "8927989"
     }
 ```
 
--   Load 메서드에서 InitializeSampleUserAccounts 메서드가 주석으로 처리된 것을 알 수 있습니다. MockStore.cs에서 이 메서드를 만들어야 합니다. 이 메서드는 로그인이 수행될 수 있도록 사용자 계정 목록을 채웁니다. 실제 환경에서 사용자 데이터베이스는 이미 채워집니다. 이 단계에서 사용자 목록 및 호출 부하를 초기화할 생성자도 만듭니다.
+-   Load 메서드에서 InitializeSampleUserAccounts 메서드가 주석으로 처리된 것을 알 수 있습니다. 이 메서드를 MockStore.cs에서 만들어야 합니다. 이 메서드는 로그인이 수행될 수 있도록 사용자 계정 목록을 채웁니다. 실제 환경에서 사용자 데이터베이스는 이미 채워집니다. 이 단계에서 사용자 목록 및 호출 부하를 초기화할 생성자도 만듭니다.
 
     ```cs
     namespace PassportLogin.AuthService
@@ -295,7 +295,7 @@ ms.locfileid: "8927989"
     }
     ```
 
--   구현할 다음 메서드에서는 계정 추가 및 제거뿐 아니라 디바이스 제거까지 단순 작업을 처리합니다. Windows Hello는 디바이스별로 지정되므로 디바이스 제거가 필요합니다. Windows Hello는 로그인하는 각 디바이스에 대해 새로운 공개 키 및 개인 키 쌍을 만듭니다. 이는 로그인하는 각 디바이스에 대해 다른 암호를 가지는 것과 같습니다. 다만 서버에서 기억하는 모든 암호를 기억할 필요는 없습니다. MockStore.cs에 다음 메서드를 추가합니다.
+-   구현할 다음 메서드에서는 계정을 추가하고 계정을 제거하며 디바이스도 제거하는 간단한 작업을 처리합니다. Windows Hello는 디바이스별로 지정되므로 디바이스 제거가 필요합니다. Windows Hello는 로그인하는 각 디바이스에 대해 새로운 공개 키 및 개인 키 쌍을 만듭니다. 이는 로그인하는 각 디바이스에 대해 다른 암호를 가지는 것과 같습니다. 다만 서버에서 기억하는 모든 암호를 기억할 필요는 없습니다. MockStore.cs에 다음 메서드 추가
 
     ```cs
     public UserAccount AddAccount(string username)
@@ -537,7 +537,7 @@ ms.locfileid: "8927989"
 
 ## <a name="exercise-2-client-side-logic"></a>연습 2: 클라이언트 쪽 논리
 
-이 연습에서 AuthService 클래스를 사용하도록 클라이언트 쪽 뷰 및 도우미 클래스를 첫 번째 랩에서 변경합니다. 실제 환경에서 AuthService가 인증 서버가 되고 서버에서 데이터를 보내고 받으려면 Web API를 사용해야 합니다. 이 실습 교육의 경우 단순화를 위해 클라이언트와 서버 모두 로컬입니다. 목표는 Windows Hello API 사용법을 배우는 것입니다.
+이 연습에서 AuthService 클래스를 사용하도록 클라이언트 쪽 뷰 및 도우미 클래스를 첫 번째 랩에서 변경합니다. 실제 환경에서 AuthService가 인증 서버가 되고 서버에서 데이터를 보내고 받으려면 Web API를 사용해야 합니다. 이 실습 교육의 경우 간단히 하기 위해 클라이언트와 서버 모두 로컬입니다. 목표는 Windows Hello API 사용법을 배우는 것입니다.
 
 -   AuthService 클래스에서 계정 목록을 로드하는 MockStore의 인스턴스를 만들므로 MainPage.xaml.cs에서 로드된 메서드의 AccountHelper.LoadAccountListAsync 메서드 호출을 제거할 수 있습니다. 이제 로드된 메서드는 아래와 같이 표시되어야 합니다. 아무것도 대기하고 있지 않으므로 비동기 메서드 정의가 제거됩니다.
 
@@ -548,7 +548,7 @@ ms.locfileid: "8927989"
     }
     ```
 
--   Passport 입력을 요청하도록 로그인 페이지 인터페이스를 업데이트합니다. 이 실습 교육에서는 기존 시스템을 마이그레이션하여 Windows Hello를 사용하도록 하는 방법과 기존 계정이 사용자 이름 및 암호를 얻는 방법을 알려드립니다. 또한 XAML 하단의 설명이 기본 암호를 포함하도록 업데이트합니다. Login.xaml에서 다음 XAML 업데이트
+-   Passport 입력을 요청하도록 로그인 페이지 인터페이스를 업데이트합니다. 이 실습 교육에서는 기존 시스템을 마이그레이션하여 Windows Hello를 사용하도록 하는 방법과 기존 계정이 사용자 이름 및 암호를 얻는 방법을 알려드립니다. 또한 XAML의 맨 아래에서 기본 암호를 포함하도록 설명을 업데이트합니다. Login.xaml에서 다음 XAML 업데이트
 
     ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -687,7 +687,7 @@ ms.locfileid: "8927989"
     }
     ```
 
--   Login.xaml.cs 파일의 SignInPassport 메서드에서 AccountHelper 대신 AuthService를 사용하도록 업데이트해야 합니다. 자격 증명의 유효성 검사는 AuthService를 통해 수행합니다. 이 실습 교육의 경우 유일하게 구성된 계정은 "sampleUsername"입니다. 이 계정은 MockStore.cs의 InitializeSampleUserAccounts 메서드에 만들어집니다. 이제 Login.xaml.cs에서 SignInPassport 메서드를 업데이트하여 아래 코드 조각을 반영합니다.
+-   Login.xaml.cs 파일의 SignInPassport 메서드에서 AccountHelper 대신 AuthService를 사용하도록 업데이트해야 합니다. 자격 증명의 유효성 검사는 AuthService를 통해 수행합니다. 이 실습 교육의 경우 유일하게 구성된 계정은 "sampleUsername"입니다. 이 계정은 MockStore.cs의 InitializeSampleUserAccounts 메서드에 만들어집니다. 이제 아래 코드 조각을 반영하도록 Login.xaml.cs에서 SignInPassport 메서드를 업데이트합니다.
 
     ```cs
     private async void SignInPassportAsync()
@@ -804,7 +804,7 @@ ms.locfileid: "8927989"
     }
     ```
 
--   계정을 제거할 때 AuthService를 사용하므로 Button\_Forget\_User\_Click 메서드의 AccountHelper에 대한 참조를 제거할 수 있습니다. 이제 메서드가 아래와 같이 표시됩니다.
+-   수를 사용 하 여 AuthService 단추에서 계정을 AccountHelper에 대 한 참조를 제거 하는 동안\_무시\_사용자\_클릭 메서드를 제거할 수 있습니다. 이제 메서드가 아래와 같이 표시됩니다.
 
     ```cs
     private void Button_Forget_User_Click(object sender, RoutedEventArgs e)
@@ -984,7 +984,7 @@ ms.locfileid: "8927989"
     }
     ```
 
--   응용 프로그램을 빌드 및 실행합니다(F5). "sampleUsername" 및 "samplePassword" 자격 증명을 사용하여 샘플 사용자 계정으로 로그인합니다. 환영 화면에서 디바이스 무시 단추가 보이지만 디바이스는 없을 수 있습니다. 사용자를 만들거나 마이그레이션하여 Windows Hello로 작업하도록 하는 경우 passport 정보는 AuthService로 푸시되지 않습니다.
+-   응용 프로그램을 빌드 및 실행합니다(F5). "sampleUsername" 및 "samplePassword" 자격 증명을 사용하여 샘플 사용자 계정으로 로그인합니다. 환영 화면에서 디바이스 무시 단추가 표시되어 있지만 디바이스는 없다는 것을 알 수 있습니다. 사용자를 만들거나 마이그레이션하여 Windows Hello로 작업하도록 하는 경우 passport 정보는 AuthService로 푸시되지 않습니다.
 
     ![Windows Hello 로그인 화면](images/passport-auth-3.png)
 
@@ -1060,7 +1060,7 @@ ms.locfileid: "8927989"
     }
     ```
 
--   방금 추가한 GetKeyAttestationAsync 메서드에서 마지막 행이 주석 처리되었음을 알았을 수 있습니다. 이 마지막 행은 사용자 만드는 새로운 메서드가 되며 모든 Windows Hello 정보를 AuthService로 보냅니다. 실제 환경에서는 그 정보를 Web API가 있는 실제 서버로 전송해야 합니다.
+-   방금 추가한 GetKeyAttestationAsync 메서드에서 마지막 줄이 주석으로 처리된 것을 알 수 있습니다. 이 마지막 줄은 새로 만들 메서드로서, 모든 Windows Hello 정보를 AuthService로 보냅니다. 실제 환경에서는 이를 Web API가 있는 실제 서버에 전송해야 합니다.
 
     ```cs
     using System.Runtime.InteropServices.WindowsRuntime;

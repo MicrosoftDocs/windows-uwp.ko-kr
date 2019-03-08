@@ -6,20 +6,20 @@ ms.topic: article
 keywords: windows 10, uwp, 파일, 속성
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ae884ca5424f50a7a835bc55602b5aa7c54096d
-ms.sourcegitcommit: b79cc7e0eac414ac2275517a7f56d1f9a817d112
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "9060057"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630238"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>UWP의 파일 속성에 빠르게 액세스 
 
 라이브러리에서 파일 및 속성 목록을 신속하게 수집하고 앱에서 해당 속성을 사용하는 방법에 대해 알아봅니다.  
 
 필수 구성 요소 
-- **비동기 프로그래밍 유니버설 Windows 플랫폼 (UWP) 앱에 대 한**  C# 또는 Visual Basic에서 비동기 앱을 작성, [C# 또는 Visual Basic에서 비동기식 Api 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조 하는 방법을 알아볼 수 있습니다.     C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요. 
-- **라이브러리에 대 한 액세스 권한**  이러한 예제의 코드에서는 **picturesLibrary** 기능이 필요 하지만 파일 위치에 필요할 수는 다른 기능이 하거나 아무 기능도 전혀 합니다. 자세한 내용은 [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)을 참조하세요. 
-- **단순 파일 열거**  이 예제에서는 [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) 를 사용 하 여 몇 가지 고급 열거 속성을 설정 합니다. 작은 디렉터리에 대한 단순 파일 목록을 가져오는 방법에 대한 자세한 내용은 [파일 및 폴더 열거 및 쿼리](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)를 참조하세요. 
+- **유니버설 Windows 플랫폼 (UWP) 앱에 대 한 프로그래밍 비동기**   에서 비동기 앱을 작성 하는 방법을 알아볼 수 있습니다 C# 또는 Visual Basic을 참조 하십시오 [에서 비동기 Api를 호출 C# 또는 Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).     C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요. 
+- **라이브러리에 대 한 사용 권한을 액세스할**   이 예제의 코드를 실행 하려면를 **picturesLibrary** 기능 하지만 현재 파일 위치 필요할 수 없는 기능 또는 다른 기능을 전혀. 자세한 내용은 [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)을 참조하세요. 
+- **간단한 파일 열거형**    사용 하 여이 예제 [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) 몇 가지 고급 열거형 속성을 설정 합니다. 작은 디렉터리에 대한 단순 파일 목록을 가져오는 방법에 대한 자세한 내용은 [파일 및 폴더 열거 및 쿼리](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)를 참조하세요. 
 
 ## <a name="usage"></a>용도  
 많은 경우 앱이 파일 그룹의 속성을 나열해야 하지만 항상 파일과 직접 상호 작용할 필요는 없습니다. 예를 들어, 뮤직 앱은 한 번에 하나의 파일을 재생하지만(열지만), 앱이 곡 대기열을 표시하거나 사용자가 유효한 재생 파일을 선택할 수 있도록 하기 위해 폴더의 모든 파일에 대한 속성이 필요합니다. 
@@ -44,7 +44,7 @@ ms.locfileid: "9060057"
 이 예에서는 [StorageFileQueryResult.GetFilesAsync(UInt32 StartIndex, UInt32 maxNumberOfItems)](https://docs.microsoft.com/uwp/api/windows.storage.search.storagefilequeryresult.getfilesasync)를 사용하여 한 번에 100개의 파일만 가져옵니다. 그러면 앱이 파일을 처리하고 나중에 OS가 해당 메모리를 해제할 수 있습니다. 이 기법은 앱의 최대 메모리 상한을 지정하고, 시스템이 응답을 유지하도록 합니다. 물론 시나리오에 반환되는 파일 수를 조정해야 하지만 모든 사용자에게 신속한 응답을 제공하려면 한 번에 500개가 넘는 파일을 가져오지 않는 것이 좋습니다.
 
 
-**예**  
+**예제**  
 ```csharp
 StorageFolder folderToEnumerate = KnownFolders.PicturesLibrary; 
 // Check if the folder is indexed before doing anything. 
@@ -109,14 +109,14 @@ while (images.Count != 0 || index < 10000) 
 ```
 
 ### <a name="results"></a>결과 
-결과로 생성된 StorageFile 파일에는 요청된 속성만 포함되지만 다른 IndexerOptions에 비해 10배 빠릅니다.앱은 쿼리에 아직 포함되지 않은 속성에 대한 액세스도 요청할 수 있지만 파일을 열고 속성을 검색할 때 성능이 저하될 수 있습니다.  
+결과로 생성된 StorageFile 파일에는 요청된 속성만 포함되지만 다른 IndexerOptions에 비해 10배 빠릅니다. 앱은 쿼리에 아직 포함되지 않은 속성에 대한 액세스도 요청할 수 있지만 파일을 열고 속성을 검색할 때 성능이 저하될 수 있습니다.  
 
 ## <a name="adding-folders-to-libraries"></a>라이브러리에 폴더 추가 
 앱은 [StorageLibrary.RequestAddFolderAsync](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageLibrary.RequestAddFolderAsync)를 통해 사용자에게 색인에 위치를 추가하도록 요청할 수 있습니다. 위치가 포함되면 자동으로 인덱싱되고 앱은 이 방법을 사용하여 파일을 열거할 수 있습니다.
  
 ## <a name="see-also"></a>참고 항목
 [QueryOptions API 참조](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions)  
-[파일 및 폴더 열거 및 쿼리](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
+[열거 하 고 쿼리 파일 및 폴더](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
 [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)  
  
  

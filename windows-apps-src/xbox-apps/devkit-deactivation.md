@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 ms.localizationpriority: medium
 ms.openlocfilehash: 5606a8fa6db5b439aa71f5d72b34c0f519d7eea9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947304"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651778"
 ---
 # <a name="xbox-one-developer-mode-deactivation"></a>Xbox One 개발자 모드 비활성화
 
@@ -19,7 +19,7 @@ ms.locfileid: "8947304"
 
 ## <a name="switch-to-retail-mode"></a>정품 모드로 전환
 
-먼저 Xbox One 본체를 정품 모드로 되돌립니다.
+먼저 Xbox One 콘솔을 정품 모드로 되돌립니다.
 
 1. **개발자 홈**을 엽니다.
 
@@ -70,11 +70,11 @@ ms.locfileid: "8947304"
    
     ![다시 설정 및 모두 제거](images/devkit-deactivation-4.png)
 
-## <a name="deactivate-your-console-using-partner-center"></a>파트너 센터를 사용 하 여 콘솔 비활성화
+## <a name="deactivate-your-console-using-partner-center"></a>파트너 센터를 사용 하 여 본체를 비활성화 합니다.
 
-어떤 이유로 든 콘솔에 액세스할 수 없는 경우 파트너 센터를 사용 하 여 콘솔에서 개발자 모드를 비활성화할 수도 있습니다.
+어떤 이유로 든 콘솔에 액세스할 수 없는 경우 파트너 센터를 사용 하 여 콘솔에서 개발자 모드가 비활성화할 수도 있습니다.
 
-1. 파트너 센터에서 [Xbox One 본체 관리](https://partner.microsoft.com/xboxdevices) 페이지로 이동 합니다. 로그인 하 라는 메시지가 표시 될 수 있습니다.
+1. 로 이동 합니다 [Xbox One 관리 콘솔](https://partner.microsoft.com/xboxdevices) 파트너 센터의 페이지입니다. 로그인 하 라는 메시지가 표시 될 수 있습니다.
 
 2. 콘솔 목록에서 일련 번호, 콘솔 ID 또는 디바이스 ID와 일치하는 비활성화하려는 콘솔을 찾습니다.  
 
@@ -85,5 +85,5 @@ ms.locfileid: "8947304"
 이전에 Xbox One 본체가 정품 모드로 되돌아가지 않았으면 [정품 모드로 전환](#switch-to-retail-mode)에 설명된 것처럼 지금 전환합니다.
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox One 개발자 모드 활성화](devkit-activation.md)
-- [Xbox One의 UWP](index.md)
+- [Xbox 개발자 모드 활성화](devkit-activation.md)
+- [Xbox One에서 UWP](index.md)

@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c1c9b75599efe4566bc1783f68ff9752510d1d99
-ms.sourcegitcommit: 9448348d7bc6590849db3a41e988dff9470ec111
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "9031379"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640568"
 ---
 # <a name="share-data"></a>데이터 공유
 
 
-이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 공유 계약을 지원하는 방법을 설명합니다. 공유 계약은 텍스트, 링크, 사진과 같은 데이터를 앱 간에 신속하게 공유할 수 있는 편리한 방법입니다. 예를 들어 사용자가 소셜 네트워킹 앱을 사용하여 친구와 웹 페이지를 공유하거나 링크를 나중에 참조하기 위해 노트 기록 앱에 저장할 수 있습니다.
+이 문서에서는 UWP(Universal Windows Platform) 앱에서 공유 계약을 지원하는 방법을 설명합니다. 공유 계약은 텍스트, 링크, 사진과 같은 데이터를 앱 간에 신속하게 공유할 수 있는 편리한 방법입니다. 예를 들어 사용자가 소셜 네트워킹 앱을 사용하여 친구와 웹 페이지를 공유하거나 링크를 나중에 참조하기 위해 노트 기록 앱에 저장할 수 있습니다.
 
 ## <a name="set-up-an-event-handler"></a>이벤트 처리기 설정
 
@@ -24,7 +24,7 @@ ms.locfileid: "9031379"
 
 [!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
 
-[**DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested) 이벤트가 발생하면 앱이 [**DataRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest) 개체를 받습니다. 여기에는 사용자가 공유하려는 콘텐츠를 제공하는 데 사용할 수 있는 [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)가 포함되어 있습니다. 공유할 제목과 데이터를 제공해야 합니다. 설명은 선택 사항이지만 사용하는 것이 좋습니다.
+[  **DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested) 이벤트가 발생하면 앱이 [**DataRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest) 개체를 받습니다. 여기에는 사용자가 공유하려는 콘텐츠를 제공하는 데 사용할 수 있는 [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)가 포함되어 있습니다. 공유할 제목과 데이터를 제공해야 합니다. 설명은 선택 사항이지만 사용하는 것이 좋습니다.
 
 [!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
@@ -40,7 +40,7 @@ ms.locfileid: "9031379"
 -   파일
 -   사용자 지정 개발자 정의 데이터
 
-[**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) 개체에는 하나 이상의 이러한 형식이 임의 조합으로 포함될 수 있습니다. 다음 예제는 텍스트 공유를 보여 줍니다.
+[  **DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) 개체에는 하나 이상의 이러한 형식이 임의 조합으로 포함될 수 있습니다. 다음 예제는 텍스트 공유를 보여 줍니다.
 
 [!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 

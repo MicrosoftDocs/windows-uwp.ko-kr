@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a6eb19ca5954b3ce71ecbaefe3339bee78f8717
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933521"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616768"
 ---
 # <a name="transcode-media-files"></a>미디어 파일 코드 변환
 
@@ -37,7 +37,7 @@ ms.locfileid: "8933521"
 
 인코딩 프로필에는 대상 파일의 인코드 방법을 결정하는 설정이 포함되어 있습니다. 파일을 코드 변환하는 경우 여기서 가장 많은 옵션을 사용할 수 있습니다.
 
-[**MediaEncodingProfile**](https://msdn.microsoft.com/library/windows/apps/hh701026) 클래스는 미리 정의된 인코딩 프로필을 만들기 위한 정적 메서드를 제공합니다.
+[  **MediaEncodingProfile**](https://msdn.microsoft.com/library/windows/apps/hh701026) 클래스는 미리 정의된 인코딩 프로필을 만들기 위한 정적 메서드를 제공합니다.
 
 ### <a name="methods-for-creating-audio-only-encoding-profiles"></a>오디오 전용 인코딩 프로필 만들기 위한 메서드
 
@@ -64,7 +64,7 @@ ms.locfileid: "8933521"
 
 [!code-cs[TranscodeMediaProfile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeMediaProfile)]
 
-정적 [**CreateMp4**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4) 메서드는 MP4 인코딩 프로필을 만듭니다. 이 메서드의 매개 변수는 동영상의 대상 해상도를 제공합니다. 이 경우 [**VideoEncodingQuality.hd720p**](https://msdn.microsoft.com/library/windows/apps/hh701290)는 초당 30 프레임 속도에서 1280 x 720 픽셀을 의미합니다. "720p"는 프레임당 720 프로그레시브 스캔 선을 나타냅니다. 미리 정의된 프로필을 만드는 다른 모든 메서드도 이 패턴을 따릅니다.
+정적 [**CreateMp4**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4) 메서드는 MP4 인코딩 프로필을 만듭니다. 이 메서드의 매개 변수는 동영상의 대상 해상도를 제공합니다. 이 경우 [**VideoEncodingQuality.hd720p**](https://msdn.microsoft.com/library/windows/apps/hh701290)는 초당 30 프레임 속도에서 1280 x 720 픽셀을 의미합니다. (프레임당 점진적 720 스캐닝선 "720p"는 의미합니다.) 기타 모든 미리 정의 된 프로필을 만드는 방법과이 패턴을 따릅니다.
 
 또는 [**MediaEncodingProfile.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701047) 메서드를 사용하여 기존 미디어 파일과 일치하는 프로필을 만들 수 있습니다. 또는 원하는 인코딩 설정을 정확하게 알고 있는 경우 새 [**MediaEncodingProfile**](https://msdn.microsoft.com/library/windows/apps/hh701026) 개체를 만들고 프로필 세부 정보를 채울 수 있습니다.
 
@@ -82,13 +82,13 @@ ms.locfileid: "8933521"
 
 
 ## <a name="encode-a-metadata-stream"></a>메타데이터 스트림 인코딩
-Windows 10, 버전 1803 부터는 시간이 제한 된 메타 데이터를 포함할 수 때 미디어 파일 코드 변환 합니다. 위의 비디오 코드 변환 예제와 달리 인코딩 프로필 만들기 메서드 [**MediaEncodingProfile.CreateMp4**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4)같은 기본 제공 미디어를 사용 하는 수동으로 만들어야 메타 데이터 인코딩 프로필을 인코딩하는 메타 데이터의 형식을 지원합니다 .
+Windows 10, 버전 1803에서부터 타이밍된 메타 데이터를 포함할 수 있습니다 때 미디어 파일 트랜스 코딩 합니다. 기본 제공 미디어 인코딩을 사용 하는 위의 예제 비디오를 트랜스 코딩 달리 생성 메서드를 같은 프로필 [ **MediaEncodingProfile.CreateMp4**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4), 인코딩 메타 데이터를 수동으로 만들어야 합니다 인코딩 되는 메타 데이터 유형을 지원 하기 위해 프로필입니다.
 
-메타 데이터 incoding 프로필을 만드는 첫 번째 단계를 코드 변환 된 메타 데이터의 인코딩을 설명 하는 [**TimedMetadataEncodingProperties**] 개체를 만드는 것입니다. 하위 속성 메타 데이터의 형식을 지정 하는 GUID입니다. 각 메타 데이터 유형에 대 한 인코딩 세부 독점 이며 Windows에서 제공 되지 않습니다. 이 예제에서는 GoPro 메타 데이터 (gprs)에 대 한 GUID 사용 됩니다. 다음으로 [**SetFormatUserData**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) 메타 데이터 형식 관련 된 스트림 형식을 설명 하는 데이터의 이진 blob을 설정 하 라고 합니다. 다음을 **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) 인코딩 속성에서 만들어집니다 메타 데이터 스트림을 식별 하 고 필요에 따라 스트림 이름 UI에 표시할 endcoded 스트림을 읽는 응용 프로그램이 허용 하는 트랙 레이블 및 이름입니다. 
+메타 데이터 incoding 프로필을 만드는이 첫 번째 단계를 만드는 것을 [**TimedMetadataEncodingProperties**] 트랜스 메타 데이터의 인코딩을 설명 하는 개체입니다. 하위 속성은 메타 데이터의 형식을 지정 하는 GUID입니다. 각 메타 데이터 형식에 대 한 인코딩 세부 정보는 고유한 언어 이며 Windows에서 제공 되지 않습니다. 이 예제에서는 GoPro 메타 데이터 (gprs)에 대 한 GUID 사용 됩니다. 그런 다음, [ **SetFormatUserData** ](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) 메타 데이터 형식과 관련 된 스트림 형식을 설명 하는 데이터의 이진 blob을 설정 하기 위해 호출 됩니다. 다음으로 **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) 인코딩 속성에서 만들어진 추적 레이블 이름과 메타 데이터 스트림을 식별할 endcoded 스트림을 읽는 응용 프로그램이 허용 하 고 및 필요에 따라 UI에 스트림 이름을 표시 합니다. 
  
 [!code-cs[GetStreamDescriptor](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetStreamDescriptor)]
 
-**TimedMetadataStreamDescriptor**를 만든 후 비디오, 오디오 및 메타 데이터 파일에 인코딩할 수를 설명 하는 **MediaEncodingProfile** 을 만들 수 있습니다. 마지막 예제에서 만든 **TimedMetadataStreamDescriptor** 이 예제에서는 도우미 함수에 전달 되 고 [**SetTimedMetadataTracks**](https://docs.microsoft.com/en-us/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks)를 호출 하 여 **MediaEncodingProfile** 에 추가 됩니다.
+만든 후 합니다 **TimedMetadataStreamDescriptor**를 만들 수 있습니다를 **MediaEncodingProfile** 비디오, 오디오 및 메타 데이터 파일에서 인코딩할 수를 설명 하는 합니다. 합니다 **TimedMetadataStreamDescriptor** 만든 마지막에서 예제에서는이 예제에서는 도우미 함수에 전달 되는 및에 추가 됩니다 합니다 **MediaEncodingProfile** 호출 하 여 [  **SetTimedMetadataTracks**](https://docs.microsoft.com/en-us/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks)합니다.
 
 [!code-cs[GetMediaEncodingProfile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetMediaEncodingProfile)]
  

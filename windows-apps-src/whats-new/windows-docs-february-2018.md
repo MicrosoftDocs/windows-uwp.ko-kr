@@ -6,11 +6,11 @@ ms.date: 02/05/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 421fb7c973c1aaa4e9e1924548d7f11439fd5350
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115840"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632868"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>2018년 2월 Windows 개발자 문서의 새로운 내용
 
@@ -59,7 +59,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ### <a name="getting-started-for-game-development"></a>게임 개발 시작
 
-Windows10 게임 개발에 흥미가 있으신가요? 새로운 [게임 개발 시작](../gaming/getting-started.md) 페이지는 앱과 게임을 스스로 설정 및 등록하고 제출하기 위해 수행해야 할 작업에 대한 전체 개요를 제공 합니다.
+Windows 10 게임 개발에 흥미가 있으신가요? 새로운 [게임 개발 시작](../gaming/getting-started.md) 페이지는 앱과 게임을 스스로 설정 및 등록하고 제출하기 위해 수행해야 할 작업에 대한 전체 개요를 제공 합니다.
 
 ## <a name="videos"></a>비디오
 
@@ -69,7 +69,7 @@ Xbox Live 크리에이터스 프로그램을 사용하면 개발자는 UWP 게�
 
 ### <a name="creating-3d-app-launchers-for-windows-mixed-reality"></a>Windows Mixed Reality용 3D 앱 시작 관리자 만들기
 
-3D 시작 관리자는 사용자가 그들의 Mixed Reality 홈 환경에서 앱의 진정한 현실감 표현을 배치할 수 있는 독특한 방법을 제공합니다. [동영상을 시청](https://www.youtube.com/watch?v=TxIslHsEXno)하여 3D 모델을 준비하고 이를 앱에 대한 시작 관리자로 지정하는 방법을 알아보고 자세한 내용은 [개발자 문서를 읽거나](https://developer.microsoft.com/windows/mixed-reality/implementing_3d_app_launchers) [디자인 지침을 확인](https://developer.microsoft.com/windows/mixed-reality/3d_app_launcher_design_guidance)하세요.
+3D 시작 관리자는 사용자가 그들의 Mixed Reality 홈 환경에서 앱의 진정한 현실감 표현을 배치할 수 있는 독특한 방법을 제공합니다. [동영상을 시청](https://www.youtube.com/watch?v=TxIslHsEXno)하여 3D 모델을 준비하고 이를 앱에 대한 시작 관리자로 지정하는 방법을 알아보고 자세한 내용은 [개발자 문서를 읽거나](https://developer.microsoft.com/windows/mixed-reality/implementing_3d_app_launchers)[디자인 지침을 확인](https://developer.microsoft.com/windows/mixed-reality/3d_app_launcher_design_guidance)하세요.
 
 ### <a name="motion-controller-tracking"></a>모션 컨트롤러 추적
 

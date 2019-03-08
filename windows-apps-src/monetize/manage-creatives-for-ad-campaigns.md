@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c11ee9c5decffff57a2d443e1385398ce40d89
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934538"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658468"
 ---
 # <a name="manage-creatives"></a>크리에이티브 관리
 
@@ -22,7 +22,7 @@ Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 �
 > [!NOTE]
 > 이 API를 사용하여 직접 만든 크리에이티브를 업로드할 때 크리에이티브에 허용되는 최대 크기는 40KB입니다. 이보다 큰 크리에이티브 파일을 제출하면 이 API에서 오류를 반환하지는 않지만 캠페인이 성공적으로 생성되지 않습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 메서드를 사용하려면 먼저 다음 작업을 완료해야 합니다.
 
@@ -45,10 +45,10 @@ Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 �
 
 ### <a name="header"></a>헤더
 
-| 헤더        | 유형   | 설명         |
+| 헤더        | 형식   | 설명         |
 |---------------|--------|---------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
-| 추적 ID   | GUID   | 선택 사항입니다. 호출 흐름을 추적하는 ID입니다.                                  |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| 추적 ID   | GUID   | 선택 사항. 호출 흐름을 추적하는 ID입니다.                                  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -56,7 +56,7 @@ Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 �
 POST 메서드는 [크리에이티브](#creative) 개체의 필수 필드가 있는 JSON 요청 본문이 필요합니다.
 
 
-### <a name="request-examples"></a>요청 예시
+### <a name="request-examples"></a>요청 예제
 
 다음 예시에서는 POST 메서드를 호출하여 크리에이티브를 만드는 방법을 보여줍니다. 이 예시에서는 간략히 나타내기 위해 *콘텐츠* 값을 줄였습니다.
 
@@ -113,32 +113,32 @@ Authorization: Bearer <your access token>
 
 이 메서드에 대한 요청 및 응답 본문은 다음 필드를 포함합니다. 이 표에서는 읽기 전용(PUT 메서드에서 변경할 수 없음을 의미) 필드와 POST 메서드에 대한 요청 본문에서 필요한 필드가 어떤 것인지 보여줍니다.
 
-| 필드        | 유형   |  설명      |  읽기 전용  | 기본값  |  POST에 필요한지 여부 |  
+| 필드        | 형식   |  설명      |  읽기 전용  | 기본값  |  POST에 필요한지 여부 |  
 |--------------|--------|---------------|------|-------------|------------|
-|  id   |  정수   |  크리에이티브의 ID입니다.     |   예    |      |    아니요   |       
-|  name   |  문자열   |   크리에이티브의 이름입니다.    |    아니요   |      |  예     |       
-|  콘텐츠   |  문자열   |  Base64 인코딩 형식의 크리에이티브 이미지 콘텐츠입니다.<br/><br/>**참고**&nbsp;&nbsp;크리에이티브에 허용되는 최대 크기는 40KB입니다. 이보다 큰 크리에이티브 파일을 제출하면 이 API에서 오류를 반환하지는 않지만 캠페인이 성공적으로 생성되지 않습니다.     |  아니요     |      |   예    |       
-|  height   |  integer   |   크리에이티브의 높이입니다.    |    아니요    |      |   예    |       
-|  width   |  integer   |  크리에이티브의 너비입니다.     |  아니요    |     |    예   |       
-|  landingUrl   |  string   |  Kochava, AppsFlyer 또는 Tune과 같은 캠페인 추적 서비스를 사용하여 앱에 대한 설치 분석을 측정하는 경우 POST 메서드를 호출할 때 이 필드에 추적 URL을 할당합니다(지정할 경우 이 값은 유효한 URI여야 합니다). 캠페인 추적 서비스를 사용하지 않는 경우 POST 메서드를 호출할 때 이 값을 생략하세요(이 경우 이 URL이 자동으로 생성됩니다).   |  아니요    |     |   예    |       
-|  format   |  string   |   광고 형식입니다. 현재는 **Banner** 값만 지원합니다.    |   아니요    |  배너   |  아니요     |       
-|  imageAttributes   | [ImageAttributes](#image-attributes)    |   크리에이티브에 속성을 제공합니다.     |   아니요    |      |   예    |       
-|  storeProductId   |  string   |   이 광고 캠페인이 연결된 앱의 [스토어 ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 예시 스토어 ID는 9nblggh42cfd입니다.    |   아니요    |    |  아니요     |   |  
+|  id   |  정수   |  크리에이티브의 ID입니다.     |   예    |      |    아니오   |       
+|  name   |  문자열   |   크리에이티브의 이름입니다.    |    아니오   |      |  예     |       
+|  콘텐츠   |  문자열   |  Base64 인코딩 형식의 크리에이티브 이미지 콘텐츠입니다.<br/><br/>**참고**&nbsp;&nbsp;크리에이티브에 허용되는 최대 크기는 40KB입니다. 이보다 큰 크리에이티브 파일을 제출하면 이 API에서 오류를 반환하지는 않지만 캠페인이 성공적으로 생성되지 않습니다.     |  아니오     |      |   예    |       
+|  height   |  정수   |   크리에이티브의 높이입니다.    |    아니오    |      |   예    |       
+|  width   |  정수   |  크리에이티브의 너비입니다.     |  아니오    |     |    예   |       
+|  landingUrl   |  문자열   |  Kochava, AppsFlyer 또는 Tune과 같은 캠페인 추적 서비스를 사용하여 앱에 대한 설치 분석을 측정하는 경우 POST 메서드를 호출할 때 이 필드에 추적 URL을 할당합니다(지정할 경우 이 값은 유효한 URI여야 합니다). 캠페인 추적 서비스를 사용하지 않는 경우 POST 메서드를 호출할 때 이 값을 생략하세요(이 경우 이 URL이 자동으로 생성됩니다).   |  아니오    |     |   예    |       
+|  format   |  문자열   |   광고 형식입니다. 현재는 **Banner** 값만 지원합니다.    |   아니오    |  배너   |  아니오     |       
+|  imageAttributes   | [ImageAttributes](#image-attributes)    |   크리에이티브에 속성을 제공합니다.     |   아니오    |      |   예    |       
+|  storeProductId   |  문자열   |   이 광고 캠페인이 연결된 앱의 [스토어 ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 예시 스토어 ID는 9nblggh42cfd입니다.    |   아니오    |    |  아니오     |   |  
 
 
 <span id="image-attributes"/>
 
 ## <a name="imageattributes-object"></a>ImageAttributes 개체
 
-| 필드        | 유형   |  설명      |  읽기 전용  | 기본값  | POST에 필요한지 여부 |  
+| 필드        | 형식   |  설명      |  읽기 전용  | 기본값  | POST에 필요한지 여부 |  
 |--------------|--------|---------------|------|-------------|------------|
-|  imageExtension   |   string  |   **PNG** 또는 **JPG** 값 중 하나입니다.    |    아니요   |      |   예    |       |
+|  imageExtension   |   문자열  |   다음 값 중 하나입니다. **PNG** 나 **JPG**합니다.    |    아니오   |      |   예    |       |
 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용하여 광고 캠페인 실행](run-ad-campaigns-using-windows-store-services.md)
+* [Microsoft Store Services를 사용 하 여 광고 캠페인을 실행 합니다.](run-ad-campaigns-using-windows-store-services.md)
 * [광고 캠페인 관리](manage-ad-campaigns.md)
-* [광고 캠페인 배달 라인 관리](manage-delivery-lines-for-ad-campaigns.md)
-* [광고 캠페인 타기팅 프로필 관리](manage-targeting-profiles-for-ad-campaigns.md)
-* [광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)
+* [광고 캠페인에 대 한 배달 줄 관리](manage-delivery-lines-for-ad-campaigns.md)
+* [광고 캠페인에 대 한 대상 프로필 관리](manage-targeting-profiles-for-ad-campaigns.md)
+* [광고 캠페인 성능 데이터 가져오기](get-ad-campaign-performance-data.md)

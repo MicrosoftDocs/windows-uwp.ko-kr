@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 1f0eb76e-fe3e-4674-a27e-229beec7e63d
 ms.localizationpriority: medium
 ms.openlocfilehash: e248a6ff666efe7dca262daa81a21ab44a4dc5aa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922948"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617708"
 ---
 # <a name="developer-folder-api-reference"></a>개발자 폴더 API 참조   
 표준 파일 탐색기를 사용하여 Xbox One의 개발 관련 파일에 액세스할 수 있습니다. 이렇게 하면 PC에서 쉽게 파일을 보고 콘솔로 이동할 수 있습니다.
@@ -54,6 +54,6 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 <br />
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Xbox

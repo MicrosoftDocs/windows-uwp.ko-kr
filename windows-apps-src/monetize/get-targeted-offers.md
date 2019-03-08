@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 대상 제품 API, 대상 제품 가져오기
 ms.localizationpriority: medium
 ms.openlocfilehash: 71cd6ce3b9736b812f8ccdf4d21d35357928c63c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943718"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622768"
 ---
 # <a name="get-targeted-offers"></a>대상 제품 가져오기
 
@@ -33,9 +33,9 @@ ms.locfileid: "8943718"
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명  |
+| 헤더        | 형식   | 설명  |
 |---------------|--------|--------------|
-| 권한 부여 | 문자열 | 필수. 현재 앱에 로그인한 사용자의 Microsoft 계정 토큰이며 **Bearer**&lt;*token*&gt; 형식입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 앱의 현재 로그인 한 사용자에 대 한 Microsoft 계정 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
@@ -53,13 +53,13 @@ Authorization: Bearer <Microsoft Account token>
 
 이 메서드는 다음 필드가 포함된 개체 배열이 들어 있는 JSON 형식의 응답 본문을 반환합니다. 배열의 각 개체는 특정 고객 세그먼트의 일부로 지정된 사용자에게 제공되는 대상 제품을 나타냅니다.
 
-| 필드      | 유형   | 설명         |
+| 필드      | 형식   | 설명         |
 |------------|--------|------------------|
-| offers      | 배열  | 현재 사용자에게 제공되는 대상 제품과 연결된 추가 기능에 대한 제품 ID의 배열입니다. 이러한 제품 Id는 파트너 센터에서 앱에 대 한 **대상 지정을 제공** 하는 페이지에 지정 됩니다.            |
+| offers      | 배열  | 현재 사용자에게 제공되는 대상 제품과 연결된 추가 기능에 대한 제품 ID의 배열입니다. 이러한 제품 Id에 지정 된 된 **제품을 대상으로** 파트너 센터에서 앱에 대 한 페이지입니다.            |
 | trackingId  | 문자열 | 코드나 서비스에서 대상 제품을 추적하기 위해 선택적으로 사용할 수 있는 GUID입니다. |
 
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 이 요청에 대한 예제 JSON 응답 본문을 보여 줍니다.
 
@@ -77,7 +77,7 @@ Authorization: Bearer <Microsoft Account token>
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용하여 대상 제품 관리](manage-targeted-offers-using-windows-store-services.md)
+* [저장소 서비스를 사용 하 여 대상된 제품 관리](manage-targeted-offers-using-windows-store-services.md)
 
  
 

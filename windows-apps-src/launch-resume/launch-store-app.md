@@ -1,36 +1,36 @@
 ---
-title: Microsoft Store 앱 실행
-description: 이 항목에서는 ms-windows-store URI 스키마에 대해 설명합니다. 앱은 스토어의 특정 페이지를 Microsoft Store 앱을 시작 하려면이 URI 체계를 사용할 수 있습니다.
+title: Microsoft Store 앱 열기
+description: 이 항목에서는 ms-windows-store URI 체계에 대해 설명합니다. 앱이 URI 체계를 사용 하 여 저장소의 특정 페이지에 Microsoft Store 앱을 시작 수 있습니다.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cda37ee9964a3e7e02f4e4ce3829a8b55e823692
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981537"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660898"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Microsoft Store 앱 열기
 
 
 
-이 항목에서는 **ms-windows-store:** URI 스키마를 설명합니다. 앱은 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 사용 하 여 스토어의 특정 페이지를 Microsoft Store 앱을 시작 하려면이 URI 체계를 사용할 수 있습니다.
+이 항목에 설명 합니다 **ms-windows-스토어:** URI 체계입니다. 앱이 URI 체계를 사용 하 여 사용 하 여 저장소의 특정 페이지에 Microsoft Store 앱을 시작 하려면 수는 [ **LaunchUriAsync** ](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드.
 
-이 예제에서는 스토어에 게임 페이지를 여는 방법을 보여 줍니다.
+다음 예는 게임에 연결되는 Store 페이지를 여는 방법을 보여줍니다.
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
 ```
 
-## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows-store: URI 스키마 참조
+## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows-store: URI 체계 참조입니다.
 
 <table>
 <tr><th>설명</th><th></th><th>URI 스키마</th></tr>
 <tr><td>스토어의 홈 페이지를 실행합니다.</td><td /><td>ms-windows-store://home</td></tr>
-<tr><td>스토어의 최상위 범주를 실행합니다.<p>참고: 모든 사용자는 일부 범주에 액세스할 수 없습니다.</p>
+<tr><td>스토어의 최상위 범주를 실행합니다.<p>참고: 일부 사용자가 모든 감축할에 대 한 액세스.</p>
 </td><td /><td>
 <p>ms-windows-store://navigatetopage/?Id=Apps </p>
 <p>ms-windows-store://navigatetopage/?Id=Games</p>
@@ -40,11 +40,11 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </td>
 </tr>
 <tr>
-<td rowspan="4">제품에 대한 PDP(제품 세부 정보 페이지)를 실행합니다. <p>저장소 ID는 Windows 10 고객에게 권장되고 모든 OS 버전에서 작동하지만 이전 방식(예: PFN)도 여전히 지원됩니다.</p>
-<p>이러한 값은 각 앱에 대 한 앱 관리 섹션의 <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">앱 id</a> 페이지에 <a href="https://partner.microsoft.com/dashboard">파트너 센터</a> 에서 찾을 수 있습니다.</p>
+<td rowspan="4">제품에 대한 PDP(제품 세부 정보 페이지)를 실행합니다. <p>Store ID Windows 10에서 고객에 게 권장 되 고 모든 OS 버전 있지만 그렇게 하는 이전 가지 작동 (예: PFN) 계속 지원 됩니다.</p>
+<p>이러한 값을 찾을 수 있습니다 <a href="https://partner.microsoft.com/dashboard">파트너 센터</a> 에 <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">앱 id</a> 페이지의 각 앱에 대 한 앱 관리 섹션입니다.</p>
 </td>
 <td>
-스토어 ID <p>(권장)</p>
+Store ID <p>(권장)</p>
 </td>
 <td>
 <p>ms-windows-store://pdp/?ProductId=9WZDNCRFHVJL</p>
@@ -66,7 +66,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">제품에 대한 리뷰 작성 환경을 실행합니다.</td>
-<td>스토어 ID <p>(권장)</p></td>
+<td>Store ID <p>(권장)</p></td>
 <td>ms-windows-store://review/?ProductId=9WZDNCRFHVJL </td>
 </tr>
 <tr>

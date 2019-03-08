@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 285e4a70062c57c957530aa1e548c22c4cf7711e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934708"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57629468"
 ---
 # <a name="stencil-buffers"></a>스텐실 버퍼
 
@@ -23,7 +23,7 @@ ms.locfileid: "8934708"
 
 스텐실 버퍼 정보는 z 버퍼 데이터에 포함됩니다.
 
-## <a name="span-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanhow-the-stencil-buffer-works"></a><span id="How_the_Stencil_Buffer_Works"></span><span id="how_the_stencil_buffer_works"></span><span id="HOW_THE_STENCIL_BUFFER_WORKS"></span>스텐실 버퍼 작동 방식
+## <a name="span-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanhow-the-stencil-buffer-works"></a><span id="How_the_Stencil_Buffer_Works"></span><span id="how_the_stencil_buffer_works"></span><span id="HOW_THE_STENCIL_BUFFER_WORKS"></span>스텐실 버퍼의 작동 원리
 
 
 Direct3D는 픽셀 단위로 스텐실 버퍼의 내용을 테스트합니다. 대상 표면의 각 픽셀에 대해, 스텐실 버퍼 내 해당 값, 스텐실 참조 값, 스텐실 마스크 값을 사용하여 테스트를 수행합니다. 테스트가 통과하면 Direct3D가 작업을 수행합니다. 테스트는 다음 단계를 사용하여 수행됩니다.
@@ -44,18 +44,18 @@ Direct3D는 픽셀 단위로 스텐실 버퍼의 내용을 테스트합니다. �
 -   StencilBufferValue는 현재 픽셀의 스텐실 버퍼 내용입니다.
 -   앰퍼샌드(&) 기호는 비트 AND 연산을 나타냅니다.
 
-현재 픽셀은 스텐실 테스트가 통과하면 대상 표면에 기록되고, 실패하면 무시됩니다. 기본 비교 동작은 각 비트 연산에 관계 없이 픽셀을 쓰는 것입니다. 원하는 비교 함수를 식별 하도록 열거 된 형식의 값을 변경 하 여이 동작을 변경할 수 있습니다.
+현재 픽셀은 스텐실 테스트가 통과하면 대상 표면에 기록되고, 실패하면 무시됩니다. 기본 비교 동작은 각 비트 연산 결과와 상관없이 픽셀을 쓰는 것입니다. 열거된 형식의 값을 원하는 비교 함수를 식별하도록 변경하여 이 동작을 변경할 수 있습니다.
 
 응용 프로그램이 스텐실 버퍼의 작업을 사용자 지정할 수 있습니다. 비교 함수, 스텐실 마스크 및 스텐실 참조 값을 설정할 수 있습니다. 또한 스텐실 테스트가 통과 또는 실패할 때 Direct3D가 수행하는 작업을 제어할 수도 있습니다.
 
-## <a name="span-idcompositingspanspan-idcompositingspanspan-idcompositingspancompositing"></a><span id="Compositing"></span><span id="compositing"></span><span id="COMPOSITING"></span>합성
+## <a name="span-idcompositingspanspan-idcompositingspanspan-idcompositingspancompositing"></a><span id="Compositing"></span><span id="compositing"></span><span id="COMPOSITING"></span>혼합
 
 
 응용 프로그램에서 스텐실 버퍼를 사용하여 2D 또는 3D 이미지를 3D 장면으로 합칠 수 있습니다. 스텐실 버퍼 안의 마스크는 렌더링 대상 표면의 특정 영역을 폐색하는 데 사용합니다. 그러면 텍스트 또는 비트맵과 같은 저장된 2D 정보가 폐색된 영역에 기록될 수 있습니다. 또는, 응용 프로그램이 렌더링 대상 표면의 스텐실 마스크된 영역에 추가 3D 원형을 렌더링할 수 있습니다. 심지어 전체 장면을 렌더링할 수도 있습니다.
 
 게임은 흔히 여러 3D 장면을 합성합니다. 예를 들어 드라이빙 게임은 일반적으로 백미러를 표시합니다. 미러에는 드라이버 후방의 3D 장면에 대한 뷰가 포함됩니다. 이 뷰는 기본적으로 드라이버의 전방 뷰와 합성된 두 번째 3D 장면입니다.
 
-## <a name="span-iddecalingspanspan-iddecalingspanspan-iddecalingspandecaling"></a><span id="Decaling"></span><span id="decaling"></span><span id="DECALING"></span>데칼링
+## <a name="span-iddecalingspanspan-iddecalingspanspan-iddecalingspandecaling"></a><span id="Decaling"></span><span id="decaling"></span><span id="DECALING"></span>Decaling
 
 
 Direct3D 응용 프로그램은 데칼링을 사용하여 특정 원형 이미지에서 어느 픽셀을 렌더링 대상 표면에 그릴지 제어할 수 있습니다. 응용 프로그램은 공면 다각형이 올바로 렌더링될 수 있도록 원형의 이미지에 데칼을 적용합니다.
@@ -66,7 +66,7 @@ Direct3D 응용 프로그램은 데칼링을 사용하여 특정 원형 이미�
 
 다중 텍스처 혼합을 사용하여 이 문제를 해결할 수 있지만 그러면 응용 프로그램이 생성할 수 있는 다른 특수 효과의 수가 제한됩니다. 스텐실 버퍼를 사용하여 데칼을 적용하면 다른 효과를 위한 텍스처 혼합 단계를 확보할 수 있습니다.
 
-## <a name="span-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspandissolves-fades-and-swipes"></a><span id="Dissolves__fades__and_swipes"></span><span id="dissolves__fades__and_swipes"></span><span id="DISSOLVES__FADES__AND_SWIPES"></span>디졸브, 페이드 및 스와이프
+## <a name="span-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspanspan-iddissolvesfadesandswipesspandissolves-fades-and-swipes"></a><span id="Dissolves__fades__and_swipes"></span><span id="dissolves__fades__and_swipes"></span><span id="DISSOLVES__FADES__AND_SWIPES"></span>디졸브 고 페이드, 천공 기와
 
 
 응용 프로그램이 디졸브, 스와이프, 페이드와 같이 영화와 비디오에서 흔히 사용되는 특수 효과를 이용하는 경우가 점점 늘고 있습니다.
@@ -83,7 +83,7 @@ Direct3D 응용 프로그램은 스와이프에 대해 비슷한 기법을 사�
 
 스와이프는 응용 프로그램이 스와이프의 역순으로 종료 이미지의 픽셀을 읽어야 한다는 점에서 디졸브보다 약간 복잡합니다. 즉, 스와이프가 왼쪽에서 오른쪽으로 이동한다면 응용 프로그램은 종료 이미지의 픽셀을 오른쪽에서 왼쪽으로 읽어야 합니다.
 
-## <a name="span-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanoutlines-and-silhouettes"></a><span id="Outlines_and_silhouettes"></span><span id="outlines_and_silhouettes"></span><span id="OUTLINES_AND_SILHOUETTES"></span>아웃라인과 실루엣
+## <a name="span-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanspan-idoutlinesandsilhouettesspanoutlines-and-silhouettes"></a><span id="Outlines_and_silhouettes"></span><span id="outlines_and_silhouettes"></span><span id="OUTLINES_AND_SILHOUETTES"></span>윤곽선과 실루엣
 
 
 아웃라인과 실루엣과 같은 보다 추상적인 효과에 스텐실 버퍼를 사용할 수 있습니다.
@@ -97,11 +97,11 @@ Direct3D 응용 프로그램은 스와이프에 대해 비슷한 기법을 사�
 
 스텐실 버퍼를 사용하여 그림자를 그리는 데 섀도 볼륨이 사용됩니다. 응용 프로그램은 실루엣 가장자리를 계산하고 이들을 조명에서 3D 볼륨 집합으로 밀어내는 방식으로 기하 도형을 폐색하여 형성된 섀도 볼륨을 계산합니다. 이러한 볼륨이 스텐실 버퍼로 두 번 렌더링됩니다.
 
-첫 번째 렌더는 전면 다각형을 그린 다음 스텐실 버퍼 값을 점증시킵니다. 두 번째 렌더는 섀도 볼륨의 후면 다각형을 그린 다음 스텐실 버퍼 값을 점감시킵니다. 일반적으로 모든 증가 및 감소 값 서로 위배 됩니다. 하지만 장면은 이미 정상 기 하 도형 일부 픽셀이 섀도 볼륨이 렌더링 될 z 버퍼 테스트에서 실패 원인을 사용 하 여 렌더링 합니다. 스텐실 버퍼에 남은 값이 그림자의 픽셀에 해당합니다. 이 나머지 스텐실 버퍼 내용은 마스크로 사용되어 전부를 포함하는 큰 검은색 사각형을 장면에 알파 혼합합니다. 스텐실 버퍼가 마스크로 작용하므로 결과는 그림자 안의 픽셀이 어두워지는 것입니다.
+첫 번째 렌더는 전면 다각형을 그린 다음 스텐실 버퍼 값을 점증시킵니다. 두 번째 렌더는 섀도 볼륨의 후면 다각형을 그린 다음 스텐실 버퍼 값을 점감시킵니다. 일반적으로 모든 증가 및 감소된 값은 상계됩니다. 그러나 장면은 이미 정상 기하 도형으로 렌더링되었기 때문에 섀도 볼륨이 렌더링될 때 일부 픽셀이 z 버퍼 테스트에서 실패합니다. 스텐실 버퍼에 남은 값이 그림자의 픽셀에 해당합니다. 이 나머지 스텐실 버퍼 내용은 마스크로 사용되어 전부를 포함하는 큰 검은색 사각형을 장면에 알파 혼합합니다. 스텐실 버퍼가 마스크로 작용하므로 결과는 그림자 안의 픽셀이 어두워지는 것입니다.
 
 즉, 그림자 기하 도형을 광원당 두 번 그립니다. 그러므로 GPU의 꼭짓점 처리량에 부담을 줍니다. 양면 스텐실 기능은 이 상황을 완화하기 위해 고안되었습니다. 이 접근 방법에는 전면 삼각형과 후면 삼각형에 대해 각각 하나씩, 두 개의 스텐실 상태 집합(이름은 아래에서 설명)이 있습니다. 이러한 방식으로 각 섀도 볼륨에 대해 광원당 한 번의 패스만 그립니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [깊이 및 스텐실 버퍼](depth-and-stencil-buffers.md)

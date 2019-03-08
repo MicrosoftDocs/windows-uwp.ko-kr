@@ -7,26 +7,26 @@ ms.topic: article
 keywords: windows 10, uwp, 사용자 지정, 앱, 홍보, 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 407a34294155e688e672db392c262e1607c01a39
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934170"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653738"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>사용자 지정 앱 홍보 캠페인 만들기
 
 Windows 앱에서 실행되는 [앱용 광고 캠페인](create-an-ad-campaign-for-your-app.md)을 만든 후 다른 채널을 사용하여 앱을 홍보할 수도 있습니다. 예를 들어 타사 앱 마케팅 공급자를 사용하여 앱을 홍보하거나 소셜 미디어 사이트에 앱의 링크를 게시할 수 있습니다. 이러한 활동을 *사용자 지정 캠페인*이라고 합니다.
 
-앱에서 사용자 지정 캠페인을 실행하는 경우, 각 URL에 서로 다른 *캠페인 ID*를 포함하여 각 사용자 지정 캠페인에 대해 다른 URL을 만들어 각 캠페인의 상대적인 성과를 추적할 수 있습니다. Windows10를 실행 하는 고객이 캠페인 ID가 포함 된 URL을 클릭 하면, Microsoft 클릭 해당 사용자 지정 캠페인에 연결 하 고이 데이터를 사용할 수 있게 할 [파트너 센터](https://partner.microsoft.com/dashboard)에서.
+앱에서 사용자 지정 캠페인을 실행하는 경우, 각 URL에 서로 다른 *캠페인 ID*를 포함하여 각 사용자 지정 캠페인에 대해 다른 URL을 만들어 각 캠페인의 상대적인 성과를 추적할 수 있습니다. Microsoft 클릭 해당 사용자 지정 캠페인을 사용 하 여 연결 및 사용자에 게이 데이터를 사용할 수 있도록 Windows 10을 실행 하는 고객, 캠페인 ID를 포함 하는 URL에 놓이면 [파트너 센터](https://partner.microsoft.com/dashboard)합니다.
 
 > [!IMPORTANT]
-> 이 데이터는 Windows10에만 고객에 대 한 추적 됩니다. 다른 운영 체제를 사용하는 고객도 앱 목록 링크를 따라갈 수 있지만 해당 고객의 활동에 대한 데이터는 포함되지 않습니다.
+> 이 데이터는 Windows 10에서 고객에 대 한만 추적 됩니다. 다른 운영 체제를 사용하는 고객도 앱 목록 링크를 따라갈 수 있지만 해당 고객의 활동에 대한 데이터는 포함되지 않습니다.
 
 사용자 지정 캠페인과 연결되는 데이터는 앱의 Store 목록에 대한 *페이지 보기*와 *변환* 두 가지 기본 유형이 있습니다. 변환은 고객이 사용자 지정 캠페인 ID가 포함된 URL에서 앱의 스토어 목록 페이지를 클릭한 결과로 이루어진 앱 구입입니다. 변환에 대한 자세한 내용은 이 항목의 [앱 구입이 변환으로 인정되는 방법 이해](#understanding-how-acquisitions-qualify-as-conversions)를 참조하세요.
 
 앱에 대한 사용자 지정 캠페인 성과 데이터는 다음과 같은 방식으로 검색할 수 있습니다.
 
-* [구입 보고서](acquisitions-report.md)에 페이지 보기 및 앱 또는 추가 기능에 대 한 **캠페인 ID 별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환** 차트에서 변환에 대 한 데이터를 볼 수 있습니다.
+* 페이지 보기 및 앱 이나에서 추가 기능에 대 한 변환에 대 한 데이터를 볼 수 있습니다는 **앱 페이지 보기 및 캠페인 ID로 변환** 하 고 **총 캠페인 변환** 에서 차트를 [획득 보고서](acquisitions-report.md)합니다.
 * 앱이 UWP(유니버설 Windows 플랫폼) 앱인 경우 Windows SDK의 API를 사용하여 변환으로 이어진 사용자 지정 캠페인 ID를 프로그래밍 방식으로 검색할 수 있습니다.
 
 ## <a name="example-custom-campaign-scenario"></a>예제 사용자 지정 캠페인 시나리오
@@ -35,9 +35,9 @@ Windows 앱에서 실행되는 [앱용 광고 캠페인](create-an-ad-campaign-f
 
 이러한 각 홍보 채널의 성공을 추적하기 위해 이 개발자는 게임의 Store 목록에 대한 두 가지 변형을 만듭니다.
 
-* 개발자가 Facebook 페이지에 게시할 URL에는 사용자 지정 캠페인 ID가 포함됩니다. `my-facebook-campaign`
+* 그녀는 자신의 Facebook 페이지에 게시 하는 URL을 사용자 지정 캠페인 ID를 포함 합니다. `my-facebook-campaign`
 
-* Twitter에 게시할 URL에는 사용자 지정 캠페인 ID를 포함됩니다. `my-twitter-campaign`
+* Twitter에 게시 그녀 URL 사용자 지정 캠페인 ID를 포함 합니다. `my-twitter-campaign`
 
 Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭을 추적하여 해당 사용자 지정 캠페인에 연결합니다. 이후의 게임 다운로드 및 추가 기능 구매는 사용자 지정 캠페인에 연결되고 변환으로 보고됩니다.
 
@@ -45,9 +45,9 @@ Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭
 
 ## <a name="understanding-how-acquisitions-qualify-as-conversions"></a>앱 구입이 변환으로 인정되는 방법 이해
 
-사용자 지정 캠페인 *변환*은 고객이 사용자 지정 캠페인을 통해 홍보된 URL을 클릭한 결과로 이루어진 구입입니다. [에 대 한 변환으로 인정 되는 및 [구입 보고서](acquisitions-report.md) 에 **캠페인 ID 별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환** 차트에 대 한 변환으로 인정 되는 다른 시나리오는 프로그래밍 방식으로 캠페인 ID를 검색](#programmatically)합니다.
+사용자 지정 캠페인 *변환*은 고객이 사용자 지정 캠페인을 통해 홍보된 URL을 클릭한 결과로 이루어진 구입입니다. 에 대 한 변환으로 정규화 하는 것에 대 한 여러 시나리오가 있으며 합니다 **앱 페이지 보기 및 캠페인 ID로 변환** 및 **총 캠페인 변환** 에서 차트를 [구매 보고서 ](acquisitions-report.md) 한에 대 한 변환으로 한 정하는 [캠페인 ID를 프로그래밍 방식으로 검색](#programmatically)합니다.
 
-### <a name="qualifying-conversions-in-the-acquisitions-report"></a>구입 보고서에서 변환으로 인정
+### <a name="qualifying-conversions-in-the-acquisitions-report"></a>구매 보고서에는 변환 정규화
 
 아래 시나리오는 [구입 보고서](acquisitions-report.md)의 **캠페인 ID별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환** 차트에서 변환으로 인정됩니다.
 
@@ -62,9 +62,9 @@ Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭
 
 앱과 연결된 캠페인 ID를 프로그래밍 방식으로 검색할 때 변환으로 인정되려면 다음 조건을 충족해야 합니다.
 
-* **Windows 10 버전 1607 이상**을 실행하는 장치: 고객(정식 Microsoft 계정으로 로그인했든 아니든 관계 없음)이 사용자 지정 캠페인 ID가 포함된 URL을 클릭하면 앱의 스토어 목록 페이지로 리디렉션됩니다. 고객이 URL 클릭 결과로 스토어 목록을 보는 동안 앱을 구입합니다.
+* 실행 중인 장치의 **Windows 10 버전 1607을 이상을**: 고객 (여부를 인식할 수 있는 Microsoft 계정으로 로그인) 여부를 사용자 지정 캠페인 ID를 포함 하는 앱 스토어 목록 페이지로 리디렉션됩니다 URL을 클릭 합니다. 고객이 URL 클릭 결과로 스토어 목록을 보는 동안 앱을 구입합니다.
 
-* **Windows 10 버전 1511 이하**를 실행하는 장치: 고객(반드시 정식 Microsoft 계정으로 로그인해야 함)이 사용자 지정 캠페인 ID가 포함된 URL을 클릭하면 앱의 스토어 목록 페이지로 리디렉션됩니다. 고객이 URL 클릭 결과로 스토어 목록을 보는 동안 앱을 구입합니다. 이러한 버전의 Windows 10에서는 프로그래밍 방식으로 캠페인 ID를 검색할 때 변환으로 인정되려면 사용자가 정식 Microsoft 계정으로 로그인해야 합니다.
+* 실행 중인 장치의 **Windows 10 버전 1511, 이하의**: 고객 (인식할 수 있는 Microsoft 계정을 사용 하 여 서명 해야 합니다)가 URL을 사용자 지정 캠페인 ID를 포함 하는 앱 스토어 목록 페이지로 리디렉션됩니다. 고객이 URL 클릭 결과로 스토어 목록을 보는 동안 앱을 구입합니다. 이러한 버전의 Windows 10에서는 프로그래밍 방식으로 캠페인 ID를 검색할 때 변환으로 인정되려면 사용자가 정식 Microsoft 계정으로 로그인해야 합니다.
 
 > [!NOTE]
 > 고객이 스토어 목록 페이지를 떠나지만 24시간 내에 페이지로 돌아와서(같은 Microsoft 계정으로 로그인할 때 같은 장치나 다른 장치에서) 앱을 구입하는 경우, 이렇게 하면 [구입 보고서](acquisitions-report.md)의 **캠페인 ID별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환**에서 변환으로 인정이 **됩니다**. 그러나 캠페인 ID를 프로그래밍 방식으로 검색하는 경우에는 변환으로 인정되지 **않습니다**.
@@ -86,9 +86,9 @@ Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭
 
 3.  앱의 URL 끝에 다음 문자열을 추가합니다.
 
-    * HTML 형식 URL의 경우 **`?cid=*my custom campaign ID*`** 를 추가합니다. 예를 들어 Skype에서 값이 **custom\_campaign**인 캠페인 ID를 소개하는 경우 해당 캠페인 ID가 포함된 새 URL은 `https://www.microsoft.com/store/apps/skype/9wzdncrfj364?cid=custom\_campaign`이 됩니다.
+    * HTML 형식 URL의 경우 **`?cid=*my custom campaign ID*`** 를 추가합니다. 예를 들어 Skype 값을 사용 하 여 캠페인 ID를 도입 **사용자 지정\_캠페인**, 캠페인 ID는 것을 포함 하 여 새 URL: `https://www.microsoft.com/store/apps/skype/9wzdncrfj364?cid=custom\_campaign`합니다.
 
-    * 프로토콜 형식 URL의 경우 **`&cid=*my custom campaign ID*`** 를 추가합니다. 예를 들어 Skype에서 값이 **custom\_campaign**인 캠페인 ID를 소개하는 경우 해당 캠페인 ID를 포함하는 새 프로토콜 URL은 `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364&cid=custom\_campaign`입니다.
+    * 프로토콜 형식 URL의 경우 **`&cid=*my custom campaign ID*`** 를 추가합니다. 예를 들어 Skype 값을 사용 하 여 캠페인 ID를 도입 **사용자 지정\_캠페인**, 캠페인 ID는 것을 포함 하 여 새 프로토콜 URL: `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364&cid=custom\_campaign`합니다.
 
 <span id="programmatically" />
 
@@ -100,12 +100,12 @@ Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭
 
 앱이 대상으로 하는 Windows 10의 버전에 따라 사용할 수 있는 API가 다릅니다.
 
-* Windows 10 버전 1607 이상: **Windows.Services.Store** 네임스페이스의 [**StoreContext**](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스를 사용합니다. 이 API를 사용하는 경우, 사용자가 정식 Microsoft 계정으로 로그인을 하는지 여부에 관계 없이 모든 [적격 취득](#conversions)의 사용자 지정 캠페인 ID를 검색할 수 있습니다.
+* Windows 10 버전 1607을 이상: 사용 된 [ **StoreContext** ](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스를 **Windows.Services.Store** 네임 스페이스입니다. 이 API를 사용하는 경우, 사용자가 정식 Microsoft 계정으로 로그인을 하는지 여부에 관계 없이 모든 [적격 취득](#conversions)의 사용자 지정 캠페인 ID를 검색할 수 있습니다.
 
-* Windows 10 버전 1511 이하: **Windows.ApplicationModel.Store** 네임스페이스의 [**CurrentApp**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 클래스를 사용합니다. 이 API를 사용하는 경우, 사용자가 정식 Microsoft 계정으로 로그인한 경우에만 [적격 취득](#conversions)의 사용자 지정 캠페인 ID를 검색할 수 있습니다.
+* Windows 10 버전 1511, 또는 그 이전 버전: 사용 된 [ **CurrentApp** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 클래스를 **Windows.ApplicationModel.Store** 네임 스페이스입니다. 이 API를 사용하는 경우, 사용자가 정식 Microsoft 계정으로 로그인한 경우에만 [적격 취득](#conversions)의 사용자 지정 캠페인 ID를 검색할 수 있습니다.
 
 > [!NOTE]
-> **Windows.ApplicationModel.Store** 네임스페이스는 모든 버전의 Windows 10에서 사용할 수 있지만, 앱이 Windows 10 버전 1607 이상을 대상으로 할 경우 **Windows.Services.Store** 네임스페이스의 API를 사용하는 것이 좋습니다. 이러한 네임스페이스 차이점에 대한 자세한 내용은 [앱에서 바로 구매 및 평가판](../monetize/in-app-purchases-and-trials.md#choose-namespace)을 참조하세요. 다음 코드 예제는 같은 프로젝트에서 두 API 모두를 사용하도록 코드를 구성하는 방법을 보여줍니다.
+> **Windows.ApplicationModel.Store** 네임스페이스는 모든 버전의 Windows 10에서 사용할 수 있지만, 앱이 Windows 10 버전 1607 이상을 대상으로 할 경우 **Windows.Services.Store** 네임스페이스의 API를 사용하는 것이 좋습니다. 이러한 네임스페이스 차이점에 대한 자세한 내용은 [앱 내 구매 및 평가판](../monetize/in-app-purchases-and-trials.md#choose-namespace)을 참조하세요. 다음 코드 예제는 같은 프로젝트에서 두 API 모두를 사용하도록 코드를 구성하는 방법을 보여줍니다.
 
 ### <a name="code-example"></a>코드 예제
 
@@ -172,7 +172,7 @@ public async Task<string> GetCampaignId()
 
 ### <a name="specify-the-campaign-id-in-the-proxy-file-for-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스에 대한 프록시 파일에서 캠페인 ID를 지정
 
-**Windows.ApplicationModel.Store** 네임스페이스에는 스토어에 앱을 제출하기 전에 코드 테스트를 위해 스토어 작업을 시뮬레이션하는 특수 클래스인 [**CurrentAppSimulator**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator)가 포함되어 있습니다. 이 클래스는 [Windows.StoreProxy.xml이라는 로컬 파일](../monetize/in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#using-the-windowsstoreproxyxml-file-with-currentappsimulator)에서 데이터를 검색합니다. 이전 코드 예제에서 **CurrentApp**과 **CurrentAppSimulator** 모두를 프로젝트의 디버그 및 비 디버그 코드 사용하는 방법을 볼 수 있습니다. 디버그 환경에서 이 코드를 테스트하려면, 다음 예제와 같이 개발 컴퓨터의 WindowsStoreProxy.xml 파일에 **AppPurchaseCampaignId** 요소를 추가합니다. 앱을 실행하면 [**GetAppPurchaseCampaignIdAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.GetAppPurchaseCampaignIdAsync) 메서드는 항상 이 값을 반환합니다.
+**Windows.ApplicationModel.Store** 네임스페이스에는 스토어에 앱을 제출하기 전에 코드 테스트를 위해 스토어 작업을 시뮬레이션하는 특수 클래스인 [**CurrentAppSimulator**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator)가 포함되어 있습니다. 이 클래스는 [Windows.StoreProxy.xml이라는 로컬 파일](../monetize/in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#using-the-windowsstoreproxyxml-file-with-currentappsimulator)에서 데이터를 검색합니다. 이전 코드 예제에서 **CurrentApp**과 **CurrentAppSimulator** 모두를 프로젝트의 디버그 및 비 디버그 코드 사용하는 방법을 볼 수 있습니다. 디버그 환경에서 이 코드를 테스트하려면, 다음 예제와 같이 개발 컴퓨터의 WindowsStoreProxy.xml 파일에 **AppPurchaseCampaignId** 요소를 추가합니다. 앱을 실행하는 경우 [**GetAppPurchaseCampaignIdAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.GetAppPurchaseCampaignIdAsync) 메서드는 항상 이 값을 반환합니다.
 
 ``` xml
 <CurrentApp>
@@ -193,4 +193,4 @@ public async Task<string> GetCampaignId()
 
 3.  URL을 여러 번 클릭하고 앱 페이지를 방문할 때마다 UWP 앱 또는 브라우저 페이지를 닫습니다. 앱 페이지 방문 중 **하나** 동안 앱을 구입하여 변환을 생성합니다. URL을 클릭한 총 횟수를 계산합니다.
 
-4. 예상 된 페이지 보기 및 변환 [구입 보고서](acquisitions-report.md) **총 캠페인 변환** 및 **캠페인 ID 별 앱 페이지 보기 및 변환** 차트에 표시 되며 앱의 코드를 테스트 수 있는지 여부를 확인 하는지 여부를 확인 합니다. 성공적으로 위에서 설명한 Api를 사용 하 여 캠페인 ID를 검색 합니다.
+4. 예상된 된 페이지 보기 및 변환에 표시할지 여부를 확인 합니다 **앱 페이지 보기 및 캠페인 ID로 변환** 및 **총 캠페인 변환** 에서 차트를 [구매 보고서 ](acquisitions-report.md), 앱의 코드 성공적으로 위에서 설명한 Api를 사용 하 여 캠페인 ID를 검색할 수 있는지 여부를 확인 하 고 테스트 합니다.

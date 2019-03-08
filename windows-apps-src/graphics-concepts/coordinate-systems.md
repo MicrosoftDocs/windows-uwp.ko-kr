@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f85bf490bd1dd68e2d0ba31335f2fc0f89fe27b0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944058"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655798"
 ---
 # <a name="coordinate-systems"></a>좌표계
 
 
 일반적으로 3D 그래픽 응용 프로그램은 두 가지 유형의 카티전 좌표계(왼손 또는 오른손) 중 하나를 사용합니다. 두 좌표계에서 양의 x-축은 오른쪽을 가리키고 양의 y-축은 위를 가리킵니다.
 
-## <a name="span-idleftandrighthandedcoordinatesspanspan-idleftandrighthandedcoordinatesspanspan-idleftandrighthandedcoordinatesspanleft-and-right-handed-coordinates"></a><span id="Left_and_right_handed_coordinates"></span><span id="left_and_right_handed_coordinates"></span><span id="LEFT_AND_RIGHT_HANDED_COORDINATES"></span>왼손 및 오른손 좌표
+## <a name="span-idleftandrighthandedcoordinatesspanspan-idleftandrighthandedcoordinatesspanspan-idleftandrighthandedcoordinatesspanleft-and-right-handed-coordinates"></a><span id="Left_and_right_handed_coordinates"></span><span id="left_and_right_handed_coordinates"></span><span id="LEFT_AND_RIGHT_HANDED_COORDINATES"></span>왼쪽 및 오른쪽 좌표를 전달
 
 
 왼손이나 오른손 손가락을 양의 x 방향 쪽으로 하고 양의 y 방향으로 구부려서 양의 z-축이 가리키는 방향을 기억할 수 있습니다. 엄지가 가리키는 방향이 해당 좌표계에 대해 양의 z-축이 가리키는 방향입니다. 다음 그림은 이 두 좌표계를 보여 줍니다.
@@ -28,7 +28,7 @@ ms.locfileid: "8944058"
 
 Direct3D는 왼손 좌표계를 사용합니다. 왼손 좌표와 오른손 좌표가 가장 일반적인 좌표계이지만 3D 소프트웨어에 사용되는 다른 다양한 좌표계가 있습니다. 예를 들어, 3D 모델링 응용 프로그램에서 x-축이 관찰자 쪽이나 그 반대쪽을 가리키고 z-축은 위를 가리키는 좌표계를 사용하는 것은 드물지 않습니다.
 
-## <a name="span-idverticesandvectorsspanspan-idverticesandvectorsspanspan-idverticesandvectorsspanvertices-and-vectors"></a><span id="Vertices_and_vectors"></span><span id="vertices_and_vectors"></span><span id="VERTICES_AND_VECTORS"></span>꼭짓점 및 벡터
+## <a name="span-idverticesandvectorsspanspan-idverticesandvectorsspanspan-idverticesandvectorsspanvertices-and-vectors"></a><span id="Vertices_and_vectors"></span><span id="vertices_and_vectors"></span><span id="VERTICES_AND_VECTORS"></span>꼭 짓 점 및 벡터
 
 
 좌표계가 지정되면 x, y 및 z 좌표가 공간의 한 점("꼭짓점")이나 3D 방향("벡터")를 정의할 수 있습니다.
@@ -39,18 +39,18 @@ Direct3D는 왼손 좌표계를 사용합니다. 왼손 좌표와 오른손 좌�
 
 이러한 작업을 결합할 때 결과는 가환성이 없습니다. 매트릭스를 곱하는 순서가 중요합니다.
 
-## <a name="span-idportingfromaright-handedcoordinatesystemspanspan-idportingfromaright-handedcoordinatesystemspanspan-idportingfromaright-handedcoordinatesystemspanporting-from-a-right-handed-coordinate-system"></a><span id="Porting_from_a_right-handed_coordinate_system"></span><span id="porting_from_a_right-handed_coordinate_system"></span><span id="PORTING_FROM_A_RIGHT-HANDED_COORDINATE_SYSTEM"></span>오른손 좌표계로 포팅
+## <a name="span-idportingfromaright-handedcoordinatesystemspanspan-idportingfromaright-handedcoordinatesystemspanspan-idportingfromaright-handedcoordinatesystemspanporting-from-a-right-handed-coordinate-system"></a><span id="Porting_from_a_right-handed_coordinate_system"></span><span id="porting_from_a_right-handed_coordinate_system"></span><span id="PORTING_FROM_A_RIGHT-HANDED_COORDINATE_SYSTEM"></span>오른손 좌표계에서 이식
 
 
 오른손 좌표계를 기반으로 하는 응용 프로그램을 포팅하는 경우 Direct3D에 전달되는 데이터에 대한 두 가지 변경이 필요합니다.
 
 -   시스템이 앞쪽에서부터 시계 방향으로 트래버스하도록 삼각형 꼭짓점의 순서를 대칭 이동합니다. 즉, 꼭짓점이 v0, v1, v2일 경우 이를 Direct3D에 v0, v2, v1로 전달합니다.
--   세계 좌표 공간을 z 방향으로 -1씩 크기 조정하려면 뷰 매트릭스를 사용합니다. 이렇게 하려면 뷰 매트릭스에 사용하는 매트릭스 구조의 \_31, \_32, \_33 및 \_34 멤버의 부호를 대칭 이동합니다.
+-   세계 좌표 공간을 z 방향으로 -1씩 크기 조정하려면 뷰 매트릭스를 사용합니다. 이 위해의 기호를 대칭 이동 합니다 \_31, \_32 \_33으로 및 \_보기 행렬에 사용 하는 행렬 구조의 34 멤버입니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
+[좌표계 및 기 하 도형](coordinate-systems-and-geometry.md)
 
  
 

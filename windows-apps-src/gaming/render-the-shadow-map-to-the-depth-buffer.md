@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 렌더링, 그림자 지도, 깊이 버퍼, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 27cd535dc51a330937c345acf352677a42c652eb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925572"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621338"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>그림자 맵을 깊이 버퍼로 렌더링
 
 
 
 
-광원의 관점에서 렌더링하여 그림자 볼륨을 나타내는 2차원 깊이 맵을 만듭니다. 깊이 맵은 그림자에서 렌더링되는 공간을 마스킹합니다. [연습의 2부: Direct3D 11의 깊이 버퍼를 사용하여 그림자 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md).
+광원의 관점에서 렌더링하여 그림자 볼륨을 나타내는 2차원 깊이 맵을 만듭니다. 깊이 맵은 그림자에서 렌더링되는 공간을 마스킹합니다. 2 부 [연습: Direct3D 11에서 깊이 버퍼를 사용 하 여 섀도 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md)합니다.
 
 ## <a name="clear-the-depth-buffer"></a>깊이 버퍼 지우기
 
@@ -125,7 +125,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-**보기 절두체 최적화:**  깊이 버퍼에서 최고의 정밀도를 얻을 수 있도록 구현에서 세밀한 보기 절두체를 계산해야 합니다. 그림자 기술에 대한 자세한 팁은 [그림자 깊이 맵 향상을 위한 일반 기술](https://msdn.microsoft.com/library/windows/desktop/ee416324)을 참조하세요.
+**하면 보기 프러스텀을 최적화 합니다.**  깊이 버퍼에서 가장 정밀도 받을 수 있도록 구현 꼭지점이 절을 긴밀 하 게 보기 두 체를 계산 해야 합니다. 그림자 기술에 대한 자세한 팁은 [그림자 깊이 맵 향상을 위한 일반 기술](https://msdn.microsoft.com/library/windows/desktop/ee416324)을 참조하세요.
 
 ## <a name="vertex-shader-for-shadow-pass"></a>그림자 단계의 꼭짓점 셰이더
 

@@ -1,23 +1,23 @@
 ---
-description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 앱에 대 한 인 사이트 데이터를 가져옵니다.
-title: 정보 데이터 가져오기
+description: Microsoft Store analytics API에서에서이 메서드를 사용 하 여 앱에 대 한 insights 데이터를 가져오려고 합니다.
+title: Insights 데이터 가져오기
 ms.date: 07/31/2018
 ms.topic: article
-keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 인 사이트
+keywords: Microsoft Store 분석 API, insights, 저장소 서비스, uwp, windows 10
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1847f22f52eb066115b5681e745e74ec74f77f7d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934979"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662848"
 ---
-# <a name="get-insights-data"></a>정보 데이터 가져오기
+# <a name="get-insights-data"></a>Insights 데이터 가져오기
 
-사용 하 여 지정 된 날짜 범위 및 다른 선택 필터 동안 구입, 상태 및 앱에 대 한 메트릭을 사용 관련 인 사이트 데이터를 가져오는 Microsoft Store 분석 API에서에서이 메서드. 이 정보는 파트너 센터에서 [인 사이트 보고서](../publish/insights-report.md) 에 사용할 수 있습니다.
+사용 하 여 지정된 된 날짜 범위 및 다른 선택적 필터 중 획득, 상태 및 앱에 대 한 사용 메트릭을 관련 insights 데이터를 가져올 수 있도록 Microsoft Store 분석 API에서에서이 메서드. 이 정보를 사용할 수 있습니다 합니다 [Insights 보고서](../publish/insights-report.md) 파트너 센터에서.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
@@ -37,23 +37,23 @@ ms.locfileid: "8934979"
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 매개 변수        | 유형   |  설명      |  필수  
+| 매개 변수        | 형식   |  설명      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | string | 인 사이트 데이터를 검색 하려는 앱의 [스토어 ID](in-app-purchases-and-trials.md#store-ids) 입니다. 이 매개 변수를 지정 하지 않으면 경우 응답 본문에는 계정에 등록 된 모든 앱에 대 한 정보 데이터 포함 됩니다.  |  아니요  |
-| startDate | date | 검색할 인 사이트 데이터의 날짜 범위에 대 한 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다. |  아니요  |
-| endDate | date | 검색 정보 데이터의 날짜 범위에 대 한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
-| filter | string  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 각 문에는 응답 본문의 필드 이름 및 **eq** 또는 **ne** 연산자와 연결된 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 문자열 값은 *filter* 매개 변수에서 단일 따옴표로 묶여야 합니다. 예를 들어 *필터 dataType eq '취득' =* 합니다. <p/><p/>다음 필드를 지정할 수 있습니다.<p/><ul><li><strong>취득</strong></li><li><strong>상태</strong></li><li><strong>사용</strong></li></ul> | 아니요   |
+| applicationId | 문자열 | 합니다 [Store ID](in-app-purchases-and-trials.md#store-ids) insights 데이터를 검색 하려는 앱입니다. 이 매개 변수를 지정 하지 않으면 하는 경우 응답 본문에는 계정에 등록 된 모든 앱에 대 한 정보 데이터가 포함 됩니다.  |  아니오  |
+| startDate | date | 검색할 insights 데이터의 날짜 범위의 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다. |  아니오  |
+| endDate | date | 검색할 insights 데이터의 날짜 범위의 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니오  |
+| filter | 문자열  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 각 문에는 응답 본문의 필드 이름 및 **eq** 또는 **ne** 연산자와 연결된 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 문자열 값은 *filter* 매개 변수에서 단일 따옴표로 묶여야 합니다. 예를 들어 *필터 dataType eq '구입' =* 합니다. <p/><p/>다음 필터 필드를 지정할 수 있습니다.<p/><ul><li><strong>acquisition</strong></li><li><strong>health</strong></li><li><strong>usage</strong></li></ul> | 아니오   |
 
 ### <a name="request-example"></a>요청 예제
 
-다음 예제에서는 인 사이트 데이터를 가져오려는 요청을 보여 줍니다. *applicationId* 값을 앱의 스토어 ID로 바꿉니다.
+다음 예제에서는 insights 데이터를 가져오기 위한 요청을 보여 줍니다. *applicationId* 값을 앱의 스토어 ID로 바꿉니다.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/insights?applicationId=9NBLGGGZ5QDR&startDate=6/1/2018&endDate=6/15/2018&filter=dataType eq 'acquisition' or dataType eq 'health' HTTP/1.1
@@ -64,36 +64,36 @@ Authorization: Bearer <your access token>
 
 ### <a name="response-body"></a>응답 본문
 
-| 값      | 유형   | 설명                  |
+| 값      | 형식   | 설명                  |
 |------------|--------|-------------------------------------------------------|
-| 값      | array  | 앱에 대 한 인 사이트 데이터를 포함 하는 개체의 배열입니다. 각 개체의 데이터에 대 한 자세한 내용은 아래 [정보 값](#insight-values) 섹션을 참조 하세요.                                                                                                                      |
+| 값      | 배열  | 앱에 대 한 insights 데이터를 포함 하는 개체의 배열입니다. 각 개체의 데이터에 대 한 자세한 내용은 참조는 [Insight 값](#insight-values) 섹션 아래.                                                                                                                      |
 | TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.                 |
 
 
-### <a name="insight-values"></a>통찰력 값
+### <a name="insight-values"></a>정보 값
 
 *값* 배열의 요소에는 다음 값이 포함됩니다.
 
-| 값               | 유형   | 설명                           |
+| 값               | 형식   | 설명                           |
 |---------------------|--------|-------------------------------------------|
-| applicationId       | string | 인 사이트 데이터를 검색할 앱의 스토어 ID입니다.     |
-| insightDate                | string | 특정 메트릭 변화를 식별 하는 날짜입니다. 이 날짜는 크게 증가 감지 하는 주의 끝을 나타내는 또는 이전 주에 비해 메트릭이 감소 합니다. |
-| 데이터 형식     | string | 이 정보를 설명 하는 일반 분석 영역을 나타내는 다음 문자열 중 하나입니다.<p/><ul><li><strong>취득</strong></li><li><strong>상태</strong></li><li><strong>사용</strong></li></ul>   |
-| insightDetail          | array | 하나 이상의 [InsightDetail 값](#insightdetail-values) 현재 정보에 대 한 세부 정보를 표시 하는 합니다.    |
+| applicationId       | 문자열 | Insights 데이터를 검색 하는 앱의 Store ID입니다.     |
+| insightDate                | 문자열 | 특정 메트릭이 변경을 식별 하는 날짜입니다. 이 날짜는 상당한 증가 감지 하는 주 끝을 나타내는 또는 이전 주에 비해 메트릭이 감소 합니다. |
+| dataType     | 문자열 | 이 정보를 설명 하는 일반 분석 영역을 지정 하는 다음 문자열 중 하나입니다.<p/><ul><li><strong>acquisition</strong></li><li><strong>health</strong></li><li><strong>usage</strong></li></ul>   |
+| insightDetail          | 배열 | 하나 이상의 [InsightDetail 값](#insightdetail-values) 현재 정보에 대 한 세부 정보를 나타냅니다.    |
 
 
 ### <a name="insightdetail-values"></a>InsightDetail 값
 
-| 값               | 유형   | 설명                           |
+| 값               | 형식   | 설명                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | string | **데이터 형식** 값에 따라 현재 통찰력 또는 현재 차원에 설명 하는 메트릭을 지정 하는 다음 값 중 하나입니다.<ul><li>**상태**대 한이 값은 항상 **적중 횟수**입니다.</li><li>**구입**이 값은 항상 **AcquisitionQuantity**합니다.</li><li>**사용**대 한이 값은 다음 문자열 중 하나일 수 있습니다.<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
-| SubDimensions         | array |  정보에 대 한 단일 메트릭을 설명 하는 하나 이상의 개체입니다.   |
-| PercentChange            | string |  메트릭은 전체 고객 기반에서 변경 된 백분율입니다.  |
-| DimensionName           | string |  현재 차원에 설명 된 메트릭의 이름입니다. **EventType**, **시장**, **DeviceType**, **PackageVersion**, **AcquisitionType**, **AgeGroup** 및 **성별**을 예로 들 수 있습니다.   |
-| DimensionValue              | string | 현재 차원에 설명 된 메트릭의 값입니다. 예를 들어 **DimensionName** **EventType**인 경우에 **크래시** 또는 **중단** **DimensionValue** 수 있습니다.   |
-| FactValue     | string | 통찰력은 감지 된 날짜에 메트릭의 절대 값입니다.  |
-| 방향 | string |  방향 변경 내용 (**양수** 또는 **음수**)입니다.   |
-| Date              | 문자열 |  현재 통찰력 또는 현재 차원 관련 된 변경 내용을 확인 하는 날짜입니다.   |
+| FactName           | 문자열 | 에 따라 현재 정보 또는 현재 차원에 설명 하는 메트릭을 표시 하는 다음 값 중 하나는 **dataType** 값입니다.<ul><li>에 대 한 **health**,이 값은 항상 **히트 카운트**합니다.</li><li>에 대 한 **취득**,이 값은 항상 **구매 수량**합니다.</li><li>에 대 한 **사용량**,이 값 다음 문자열 중 하나일 수 있습니다.<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
+| SubDimensions         | 배열 |  해당 정보에 대 한 단일 메트릭을 설명 하는 하나 이상의 개체입니다.   |
+| PercentChange            | 문자열 |  전체 고객 기반에서 메트릭을 변경 비율입니다.  |
+| DimensionName           | 문자열 |  현재 차원에 설명 된 메트릭의 이름입니다. 예를 들면 **EventType**, **시장**를 **DeviceType**를 **PackageVersion**, **AcquisitionType**하십시오 **연령대** 하 고 **성별**합니다.   |
+| DimensionValue              | 문자열 | 현재 차원에 설명 된 메트릭 값입니다. 예를 들어 경우 **DimensionName** 은 **EventType**, **DimensionValue** 않을 **크래시** 또는 **중단** .   |
+| FactValue     | 문자열 | 정보가 검색 된 날짜에서 메트릭의 절대 값입니다.  |
+| 방향 | 문자열 |  변경의 방향 (**양의** 하거나 **음수**).   |
+| 날짜              | 문자열 |  현재 정보 또는 현재 차원과 관련 된 변경 내용을 식별 하는 날짜입니다.   |
 
 ### <a name="response-example"></a>응답 예제
 
@@ -152,5 +152,5 @@ Authorization: Bearer <your access token>
 
 ## <a name="related-topics"></a>관련 항목
 
-* [인사이트 보고서](../publish/insights-report.md)
-* [Microsoft Store 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
+* [Insights 보고서](../publish/insights-report.md)
+* [Microsoft Store 서비스를 사용 하 여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)

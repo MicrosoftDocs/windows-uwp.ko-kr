@@ -8,31 +8,31 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 308a65b7c049a6aba0405865bab63fb9d28b8506
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115469"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623478"
 ---
 # <a name="mediaasset-json"></a>MediaAsset(JSON)
-도전 과제 또는 해당 보상와 관련 된 미디어 자산입니다.
+도전 과제 또는 보상은 있다와 연결 된 미디어 자산입니다.
 <a id="ID4EN"></a>
 
 
 ## <a name="mediaasset"></a>MediaAsset
 
-MediaAsset 개체에는 다음과 같이 지정 합니다.
+MediaAsset 개체에 다음과 같이 지정 합니다.
 
-| 멤버| 유형| 설명|
+| 멤버| 형식| 설명|
 | --- | --- | --- |
-| name| 문자열| "Tile01"와 같은 MediaAsset의 이름입니다.|
-| type| MediaAssetType 열거형| 미디어 자산 유형: <ul><li>아이콘 (0): 성과 아이콘입니다.</li><li>아트 (1): 디지털 아트 자산입니다.</li></ul> | 
-| url| string| URL은 MediaAsset입니다.|
+| name| 문자열| "Tile01" 등의 MediaAsset의 이름입니다.|
+| 유형| MediaAssetType 열거형| 미디어 자산 유형: <ul><li>아이콘 (0): 도전 과제는 아이콘입니다.</li><li>아트 (1): 디지털 아트 자산입니다.</li></ul> | 
+| url| 문자열| URL은 MediaAsset입니다.|
 
 <a id="ID4EFC"></a>
 
 
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
 
 
 ```json
@@ -53,6 +53,6 @@ MediaAsset 개체에는 다음과 같이 지정 합니다.
 <a id="ID4EQC"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)

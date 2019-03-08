@@ -1,18 +1,18 @@
 ---
-Description: Periodic notifications, which are also called polled notifications, update tiles and badges at a fixed interval by downloading content from a cloud service.
+Description: 정기 알림(폴링된 알림이라고도 함)은 고정된 간격에 따라 클라우드 서비스에서 콘텐츠를 다운로드하여 타일 및 배지를 업데이트합니다.
 title: 정기 알림 개요
 ms.assetid: 1EB79BF6-4B94-451F-9FAB-0A1B45B4D01C
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10 uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a3bf2ce69105787b7ca9e83c7f7fe5db8ae1038
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050516"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624858"
 ---
 # <a name="periodic-notification-overview"></a>정기 알림 개요
  
@@ -25,7 +25,7 @@ ms.locfileid: "9050516"
 
 정기 알림을 사용하면 최소한의 클라우드 서비스와 클라이언트 투자로 앱에서 라이브 타일 업데이트를 받을 수 있습니다. 정기 알림은 동일한 콘텐츠를 다양한 대상에게 배포하는 데 좋은 전달 방법입니다.
 
-**참고**  windows 8.1에 대 한는 [푸시 및 정기 알림 샘플을](https://go.microsoft.com/fwlink/p/?linkid=231476) 다운로드 하 고 windows 10 앱에서 해당 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
+**참고**    다운로드 하 여 자세히 알아볼 수 있습니다 합니다 [푸시 및 정기 알림 사용 샘플](https://go.microsoft.com/fwlink/p/?linkid=231476) Windows 8.1 및 Windows 10 앱의 소스 코드를 다시 사용 합니다.
 
  
 
@@ -48,9 +48,9 @@ ms.locfileid: "9050516"
 
 다음 메서드 중 하나를 호출하여 폴링을 시작합니다.
 
--   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_)(타일)
--   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_)(배지)
--   [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_)(타일)
+-   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (타일)
+-   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (배지)
+-   [**StartPeriodicUpdateBatch** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (타일)
 
 이러한 메서드 중 하나를 호출하면 URI가 즉시 폴링되고 타일 또는 배지가 수신된 콘텐츠로 업데이트됩니다. 이 초기 폴링 후 Windows는 요청된 간격에 따라 업데이트를 계속 제공합니다. 폴링은 명시적으로 중지([**TileUpdater.StopPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater.StopPeriodicUpdate) 사용)하거나 앱을 제거할 때까지 계속되며 보조 타일의 경우 타일이 제거될 때가지 계속됩니다. 그렇지 않으면 앱이 다시 시작되지 않는 경우에도 Windows에서 타일 또는 배지에 대한 업데이트를 계속 폴링합니다.
 
@@ -98,12 +98,12 @@ URI는 장치가 온라인 상태인 경우에만 폴링됩니다. 네트워크�
 
 ### <a name="polling-for-more-than-one-notification-at-a-time"></a>한 번에 둘 이상의 알림 폴링
 
-Windows가 타일에 대해 다운로드할 각 알림의 고유한 URI를 제공해야 합니다. [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) 메서드를 사용하여 알림 큐에 사용하도록 한 번에 최대 5개의 URI를 제공할 수 있습니다. 각 URI는 거의 동일한 시간에 단일 알림 페이로드에 대해 폴링됩니다. 폴링된 각 URI는 고유한 만료 및 태그 값을 반환할 수 있습니다.
+Windows가 타일에 대해 다운로드할 각 알림의 고유한 URI를 제공해야 합니다. [  **StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) 메서드를 사용하여 알림 큐에 사용하도록 한 번에 최대 5개의 URI를 제공할 수 있습니다. 각 URI는 거의 동일한 시간에 단일 알림 페이로드에 대해 폴링됩니다. 폴링된 각 URI는 고유한 만료 및 태그 값을 반환할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 
-* [정기적 알림에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh761461)
-* [배지에 대해 정기 알림을 설정하는 방법](https://msdn.microsoft.com/library/windows/apps/hh761476)
-* [타일에 대해 정기 알림을 설정하는 방법](https://msdn.microsoft.com/library/windows/apps/hh761476)
+* [정기 알림에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh761461)
+* [배지에 대 한 정기 알림을 설정 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh761476)
+* [타일에 대 한 정기 알림을 설정 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh761476)
  

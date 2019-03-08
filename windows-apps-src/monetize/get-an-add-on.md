@@ -1,23 +1,23 @@
 ---
 ms.assetid: 78278741-09A4-4406-A112-9AF3C73F5C16
-description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능에 대 한 정보를 검색 합니다.
+description: 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능에 대 한 정보를 검색할 Microsoft Store 제출 API에서에서이 메서드를 사용 합니다.
 title: 추가 기능 가져오기
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: cc02cd5ae94b51b274c0e3ce1245020222e101f1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936358"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645918"
 ---
 # <a name="get-an-add-on"></a>추가 기능 가져오기
 
-Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 (라고도 앱에서 제품 또는 IAP)에 대 한 정보를 검색 합니다.
+파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 (라고도 앱에서 제품 또는 IAP)에 대 한 정보를 검색할 Microsoft Store 제출 API에서에서이 메서드를 사용 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -35,16 +35,16 @@ Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 이름        | 유형   | 설명                                                                 |
+| 이름        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | string | 필수. 검색할 추가 기능의 스토어 ID입니다. 스토어 ID는 파트너 센터에서 사용할 수 있습니다.  |
+| id | 문자열 | 필수. 검색할 추가 기능의 스토어 ID입니다. 파트너 센터에서 Store ID 제공 됩니다.  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -97,13 +97,13 @@ Authorization: Bearer <your access token>
 | 오류 코드 |  설명   |
 |--------|------------------|
 | 404  | 지정된 추가 기능을 찾을 수 없습니다. |
-| 409  | [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다.  |
+| 409  | 파트너 센터 기능을 사용 하는 추가 기능 [현재 Microsoft Store 전송 API에 의해 지원 되지 않습니다](create-and-manage-submissions-using-windows-store-services.md#not_supported)합니다.  |
 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-* [추가 기능 제출 관리](manage-add-on-submissions.md)
-* [모든 추가 기능 가져오기](get-all-add-ons.md)
+* [Microsoft Store 서비스를 사용 하 여 서브 미션을 만들고 설정 합니다.](create-and-manage-submissions-using-windows-store-services.md)
+* [추가 기능 제안 관리](manage-add-on-submissions.md)
+* [모든 추가 기능 얻기](get-all-add-ons.md)
 * [추가 기능 만들기](create-an-add-on.md)
 * [추가 기능 삭제](delete-an-add-on.md)

@@ -8,17 +8,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: cf8ae4bd06abfb1ea9a4d5fe40c869057b68ad93
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932117"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617488"
 ---
 # <a name="achievements-uris"></a>도전 과제 URI
 
-이 섹션에서는 *도전 과제*에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서 Xbox Live 서비스에 대 한 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 *성과*합니다.
 
-이러한 Uri에 대 한 도메인 achievements.xboxlive.com입니다.
+이러한 Uri는 도메인은 achievements.xboxlive.com입니다.
 
 <a id="ID4EDB"></a>
 
@@ -27,11 +27,11 @@ ms.locfileid: "8932117"
 
 [/users/xuid({xuid})/achievements](uri-achievementsusersxuidachievementsv2.md)
 
-&nbsp;&nbsp;사용자 도전 과제에 대 한 액세스를 제공합니다.
+&nbsp;&nbsp;사용자 성과에 대 한 액세스를 제공합니다.
 
 [/users/xuid({xuid})/achievements/{scid}/{achievementid}](uri-usersxuidachievementsscidachievementid.md)
 
-&nbsp;&nbsp;도전 과제, 구성 된 메타 데이터 및 사용자 관련 데이터에 대 한 세부 정보를 반환 합니다.
+&nbsp;&nbsp;구성 된 메타 데이터 및 사용자 관련 데이터를 포함 하 여 도전 과제에 대 한 정보를 반환 합니다.
 
 
 > [!NOTE] 
@@ -47,6 +47,6 @@ ms.locfileid: "8932117"
 <a id="ID4EOB"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
-[URI(Universal Resource Identifier) 참조](../atoc-xboxlivews-reference-uris.md)
+[유니버설 리소스 식별자 (URI) 참조](../atoc-xboxlivews-reference-uris.md)

@@ -1,5 +1,5 @@
 ---
-title: DirectX 게임의 기본 3D 그래픽
+title: DirectX 게임용 기본 3D 그래픽
 description: DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하는 방법을 소개합니다.
 ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
 ms.date: 02/08/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 그래픽
 ms.localizationpriority: medium
 ms.openlocfilehash: 5dbdf6072f57d12d424f0787cfa2e8993a1624af
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932135"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621798"
 ---
 # <a name="basic-3d-graphics-for-directx-games"></a>DirectX 게임용 기본 3D 그래픽
 
@@ -19,21 +19,21 @@ ms.locfileid: "8932135"
 
 DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하는 방법을 소개합니다.
 
-**목표:** 3D 그래픽 앱의 프로그래밍 방법을 알아봅니다.
+**목표:** 3D 그래픽 앱을 프로그래밍 하는 방법을 알아봅니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 
 사용자가 C++에 익숙하다고 가정합니다. 그래픽 프로그래밍 개념에 대한 기본 경험도 필요합니다.
 
-**총 완료 시간:** 30분입니다.
+**완료 하는 데 걸리는 총 시간:** 30 분입니다.
 
 ## <a name="where-to-go-from-here"></a>여기에서 이동할 위치
 
 
-여기서는 DirectX 및 C++\\Cx를 사용하여 3D 그래픽을 개발하는 방법에 대해 설명합니다. 이 5개의 부분으로 구성된 자습서에서는 [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) API와 많은 다른 DirectX 샘플에서도 사용된 개념 및 코드에 대해 소개합니다. 각 부분은 UWP C++ 앱용 DirectX 구성에서 기본 형식의 텍스처 설정 및 효과 추가에 이르기까지 서로를 기반으로 구성됩니다.
+DirectX 및 c + +를 사용 하 여 3D 그래픽을 개발 하는 방법에 대 한 이야기 여기서\\Cx 합니다. 이 5개의 부분으로 구성된 자습서에서는 [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) API와 많은 다른 DirectX 샘플에서도 사용된 개념 및 코드에 대해 소개합니다. 각 부분은 UWP C++ 앱용 DirectX 구성에서 기본 형식의 텍스처 설정 및 효과 추가에 이르기까지 서로를 기반으로 구성됩니다.
 
-> **참고**이 자습서에서는 열 벡터를 사용 하 여 오른손 좌표계를 사용 합니다. 대다수의 DirectX 샘플 및 앱에서는 왼손용 행 벡터 좌표계를 사용합니다. 왼손용 열 벡터 좌표계를 지원하는 보다 완벽한 그래픽 수학 솔루션에는 [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833)를 사용하는 것이 좋습니다. 자세한 내용은 [DirectXMath와 Direct3D 사용](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D)을 참조하세요.
+> **참고**  이 자습서에서는 열 벡터는 오른손 좌표계를 사용 합니다. 대다수의 DirectX 샘플 및 앱에서는 왼손용 행 벡터 좌표계를 사용합니다. 왼손용 열 벡터 좌표계를 지원하는 보다 완벽한 그래픽 수학 솔루션에는 [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833)를 사용하는 것이 좋습니다. 자세한 내용은 [DirectXMath와 Direct3D 사용](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D)을 참조하세요.
 
  
 
@@ -51,7 +51,7 @@ DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하�
 
 이제 Direct3D 장치, 스왑 체인 및 렌더링 대상 보기를 만들고, 렌더링된 이미지를 디스플레이에 표시합니다.
 
-[빠른 시작: DirectX 리소스 설정 및 이미지 표시](setting-up-directx-resources.md)
+[DirectX 리소스를 설정 하 고 이미지를 표시 하는 빠른 시작:](setting-up-directx-resources.md)
 
 ## <a name="related-topics"></a>관련 항목
 

@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, 3dprinting, 3d 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: 4013341a3e4e44d6ac2df66d58d4114313573d2a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048270"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57652248"
 ---
 # <a name="3d-printing-from-your-app"></a>앱에서 3D 인쇄
 
-**중요 API**
+**중요 한 Api**
 
 -   [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/dn998169)
 
@@ -24,7 +24,7 @@ ms.locfileid: "9048270"
 > [!NOTE]
 > 이 가이드의 샘플 코드에서는 편의상 단순하게 오류 보고 및 처리를 보여 줍니다.
 
-## <a name="setup"></a>설정
+## <a name="setup"></a>설치
 
 
 3D 인쇄 기능을 사용하게 될 응용 프로그램 클래스에 [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/dn998169) 네임스페이스를 추가합니다.
@@ -78,22 +78,22 @@ UI 피드백에 대한 **TextBlock**을 추가합니다.
 
 .3mf 형식에서도 모든 3D 모델 데이터 인쇄가 가능한 것은 아닙니다. 프린터에서 채워야 할 공간과 비워 두어야 할 공간을 정확하게 판단하려면 인쇄할 각각의 모델이 이음새가 없는 메시로서, 바깥쪽 면이 수직이고 다중 형상으로 되어야 합니다. 이러한 영역의 문제들은 다양한 형태로 발생하기 때문에 복잡한 셰이프에서는 발견이 어려울 수 있습니다. 하지만 원시 기하 도형을 인쇄 가능한 3D 셰이프로 변환할 수 있는 최신 소프트웨어 솔루션이 많이 나와 있습니다. 모델 *복구*라는 이 과정은 `OnFixClick` 메서드에서 수행됩니다.
 
-[**Printing3DModel**](https://msdn.microsoft.com/library/windows/apps/mt203679) 개체를 생성하는 데 사용할 수 있는 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)을 구현하려면 3D 데이터 파일을 변환해야 합니다.
+[  **Printing3DModel**](https://msdn.microsoft.com/library/windows/apps/mt203679) 개체를 생성하는 데 사용할 수 있는 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)을 구현하려면 3D 데이터 파일을 변환해야 합니다.
 
 [!code-cs[RepairModel](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetRepairModel)]
 
-이제 **Printing3DModel** 개체를 복구 및 인쇄할 수 있습니다. [**SaveModelToPackageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.savemodeltopackageasync)를 사용하여 클래스 생성 시 선언한 **Printing3D3MFPackage** 개체에 모델을 할당합니다.
+이제 **Printing3DModel** 개체를 복구 및 인쇄할 수 있습니다. [  **SaveModelToPackageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.savemodeltopackageasync)를 사용하여 클래스 생성 시 선언한 **Printing3D3MFPackage** 개체에 모델을 할당합니다.
 
 [!code-cs[SaveModel](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetSaveModel)]
 
 ## <a name="execute-printing-task-create-a-taskrequested-handler"></a>인쇄 작업 실행: TaskRequested 처리기 만들기
 
 
-나중에 3D 인쇄 대화 상자가 사용자에게 표시되고 사용자가 인쇄를 시작하면 앱에서 원하는 매개 변수를 3D 인쇄 파이프라인에 전달해야 합니다. 3D 인쇄 API는 **[TaskRequested](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Print3DManager.TaskRequested)** 이벤트를 발생시킵니다. 이 이벤트를 적절하게 처리하는 메서드를 작성해야 합니다. 처리기 메서드는 항상 해당 이벤트와 동일한 형식이어야 합니다. **TaskRequested** 이벤트에는 [**Print3DManager**](https://msdn.microsoft.com/library/windows/apps/dn998029) 매개 변수(해당 송신자 개체에 대한 참조) 및 대부분의 관련 정보가 포함된 [**Print3DTaskRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn998051) 개체가 있습니다.
+나중에 3D 인쇄 대화 상자가 사용자에게 표시되고 사용자가 인쇄를 시작하면 앱에서 원하는 매개 변수를 3D 인쇄 파이프라인에 전달해야 합니다. 3D 인쇄 API는 **[TaskRequested](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Print3DManager.TaskRequested)** 이벤트를 발생시킵니다. 이 이벤트를 적절하게 처리하는 메서드를 작성해야 합니다. 항상 처리기 메서드 해당 이벤트와 동일한 형식 이어야 합니다. 합니다 **TaskRequested** 이벤트에 매개 변수가 [ **Print3DManager** ](https://msdn.microsoft.com/library/windows/apps/dn998029) (개체 참조를 해당 보낸 사람) 및 [  **Print3DTaskRequestedEventArgs** ](https://msdn.microsoft.com/library/windows/apps/dn998051) 대부분의 관련 정보를 보유 하는 개체입니다.
 
 [!code-cs[MyTaskTitle](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetMyTaskTitle)]
 
-이 메서드의 주요 목적은 *args* 매개 변수를 사용하여 **Printing3D3MFPackage**를 파이프라인 아래쪽으로 보내는 것입니다. **Print3DTaskRequestedEventArgs** 형식에는 [**Request**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtaskrequestedeventargs.request.aspx) 속성 한 가지가 있습니다. 이 속성의 형식은 [**Print3DTaskRequest**](https://msdn.microsoft.com/library/windows/apps/dn998050)이며 하나의 인쇄 작업 요청을 나타냅니다. 해당 메서드 [**CreateTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtaskrequest.createtask.aspx)를 사용하면 프로그램에서 인쇄 작업에 대한 올바른 정보를 제출할 수 있으며 3D 인쇄 파이프라인 아래쪽으로 **Print3DTask** 개체에 대한 참조를 반환합니다.
+이 메서드의 주요 목적은 *args* 매개 변수를 사용하여 **Printing3D3MFPackage**를 파이프라인 아래쪽으로 보내는 것입니다. 합니다 **Print3DTaskRequestedEventArgs** 형식에는 하나의 속성: [**요청**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtaskrequestedeventargs.request.aspx)합니다. 이 속성의 형식은 [**Print3DTaskRequest**](https://msdn.microsoft.com/library/windows/apps/dn998050)이며 하나의 인쇄 작업 요청을 나타냅니다. 해당 메서드 [**CreateTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtaskrequest.createtask.aspx)를 사용하면 프로그램에서 인쇄 작업에 대한 올바른 정보를 제출할 수 있으며 3D 인쇄 파이프라인 아래쪽으로 **Print3DTask** 개체에 대한 참조를 반환합니다.
 
 **CreateTask**의 입력 매개 변수로 인쇄 작업 이름에 대한 string 매개 변수, 사용할 프린터 ID에 대한 string 및 [**Print3DTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtasksourcerequestedhandler.aspx) 대리자가 있습니다. **3DTaskSourceRequested** 이벤트가 발생하면(API에 의해 자동으로 수행됨) 대리자가 자동으로 호출됩니다. 이 대리자는 인쇄 작업이 시작될 때 호출되며 올바른 3D 인쇄 패키지를 제공하는 역할을 한다는 점을 기억해야 합니다.
 

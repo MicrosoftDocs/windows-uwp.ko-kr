@@ -1,17 +1,17 @@
 ---
 ms.assetid: 159681E4-BF9E-4A57-9FEE-EC7ED0BEFFAD
 title: MVVM 및 언어 성능 팁
-description: 이 항목에서는 선택한 소프트웨어 디자인 패턴 및 프로그래밍 언어와 관련된 몇 가지 성능 고려 사항을 살펴봅니다.
+description: 이 항목에서는 선택한 소프트웨어 디자인 패턴 및 프로그래밍 언어와 관련된 몇 가지 성능 고려 사항을 설명합니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9027362eccfb8130b181bee26a57f13ce1e1af66
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936457"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621768"
 ---
 # <a name="mvvm-and-language-performance-tips"></a>MVVM 및 언어 성능 팁
 
@@ -29,8 +29,8 @@ MVVM(Model-View-ViewModel) 패턴은 다양한 XAML 앱에서 일반적으로 �
 MVVM 패턴에 대한 여러 개의 구체적인 정의와 이를 구현하는 데 도움이 되는 타사 프레임워크가 있습니다. 그러나 특정 패턴 변형을 엄격하게 따르면 앱에 조정할 수 있는 것보다 훨씬 더 많은 오버헤드가 발생할 수 있습니다.
 
 -   XAML 데이터 바인딩({Binding} 태그 확장)은 부분적으로 모델/보기 패턴을 사용하도록 설계되었습니다. 하지만 {Binding}을 사용하면 특수 작업 집합과 CPU 오버헤드가 발생합니다. {Binding}을 만들면 일련의 할당이 발생하고, 바인딩 대상을 업데이트하면 리플렉션 및 boxing이 발생할 수 있습니다. 이 문제는 빌드 시 바인딩을 컴파일하는 {x:Bind} 태그 확장을 통해 해결됩니다. **권장 사항:** {x:Bind}를 사용합니다.
--   MVVM에서는 일반적인 DelegateCommand 또는 RelayCommand 도우미와 같은 ICommand를 사용하여 Button.Click을 보기 모델에 연결하는 방법을 많이 사용합니다. 이러한 명령은 CanExecuteChanged 이벤트 수신기 포함, 작업 집합에 추가, 페이지의 시작/탐색 시간에 추가 등을 포함한 추가 할당입니다. **권장 사항:** 편리한 ICommand 인터페이스를 사용하는 대신, 이벤트 처리기를 코드 숨김에 배치하고 보기 이벤트에 추가한 다음 이러한 이벤트 발생 시 보기 모델에 대해 명령을 호출합니다. 또한 명령을 사용할 수 없는 경우 단추를 비활성화하는 추가 코드를 추가해야 합니다.
--   MVVM에서는 가능한 모든 UI 구성을 사용하여 페이지를 만든 다음 VM의 속성에 표시 여부 속성을 바인딩하여 트리의 일부를 축소하는 방법을 많이 사용합니다. 이렇게 하면 시작 시간이 불필요하게 늘어나며 작업 집합도 많아질 수 있습니다(트리의 일부가 전혀 표시되지 않을 수 있기 때문). **권장 사항:** [x:Load attribute](../xaml-platform/x-load-attribute.md) 또는 [x:DeferLoadStrategy 특성](../xaml-platform/x-deferloadstrategy-attribute.md) 기능을 사용하여 트리의 불필요한 부분을 시작에서 지연되도록 만듭니다. 또한 페이지의 다양한 모드별로 별도의 사용자 컨트롤을 만들고 코드 숨김을 사용하여 필수 컨트롤만 로드된 상태로 유지합니다.
+-   MVVM에서는 일반적인 DelegateCommand 또는 RelayCommand 도우미와 같은 ICommand를 사용하여 Button.Click을 보기 모델에 연결하는 방법을 많이 사용합니다. 이러한 명령은 CanExecuteChanged 이벤트 수신기 포함, 작업 집합에 추가, 페이지의 시작/탐색 시간에 추가 등을 포함한 추가 할당입니다. **권장 사항:** 편리한 ICommand 인터페이스를 사용 하는 대신, 코드 숨김에 이벤트 처리기를 배치 하 고 이벤트 보기에 연결 하 고 이러한 이벤트가 발생할 때 보기-모델에 명령을 호출 합니다. 또한 명령을 사용할 수 없는 경우 단추를 비활성화하는 추가 코드를 추가해야 합니다.
+-   MVVM에서는 가능한 모든 UI 구성을 사용하여 페이지를 만든 다음 VM의 속성에 표시 여부 속성을 바인딩하여 트리의 일부를 축소하는 방법을 많이 사용합니다. 이렇게 하면 시작 시간이 불필요하게 늘어나며 작업 집합도 많아질 수 있습니다(트리의 일부가 전혀 표시되지 않을 수 있기 때문). **권장 사항:** 사용 된 [x: 로드 특성](../xaml-platform/x-load-attribute.md) 또는 [x: DeferLoadStrategy 특성](../xaml-platform/x-deferloadstrategy-attribute.md) 불필요 한 부분 시작에서 트리를 연기 하는 기능입니다. 또한 페이지의 다양한 모드별로 별도의 사용자 컨트롤을 만들고 코드 숨김을 사용하여 필수 컨트롤만 로드된 상태로 유지합니다.
 
 ## <a name="ccx-recommendations"></a>C++/CX 권장 사항
 

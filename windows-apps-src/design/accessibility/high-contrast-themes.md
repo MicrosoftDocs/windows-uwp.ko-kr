@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b58eb4b6e3f3f02bb1f72fcba9da3710f08a72da
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045997"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649008"
 ---
 # <a name="high-contrast-themes"></a>고대비 테마  
 
@@ -20,7 +20,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ![밝은 테마 및 고대비 검정 테마로 표시된 계산기](images/high-contrast-calculators.png)
 
-*밝은 테마 및 고대비 검정 테마로 표시된 계산기*
+*밝은 테마 및 고대비 검정 테마에 표시 된 계산기입니다.*
 
 *설정 &gt; 접근성 &gt; 고대비*를 사용하여 고대비 테마로 전환할 수 있습니다.
 
@@ -82,20 +82,20 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ## <a name="high-contrast-colors"></a>고대비 색
 
-*설정 > 접근성 > 고대비* 페이지에는 기본값으로 4가지 고대비 테마가 있습니다. 
+*설정 &gt; 접근성 &gt; 고대비* 페이지에는 기본적으로 4개의 고대비 테마가 있습니다. 
 
 
 ![고대비 설정](images/high-contrast-settings.png)  
 
-*사용자가 옵션을 선택하면 페이지에 미리 보기가 표시됩니다.*  
+*사용자가 미리 보기를 표시 하는 페이지 옵션을 선택 합니다.*  
 
 ![고대비 리소스](images/high-contrast-resources.png)  
 
-*미리 보기에서 각 색 견본을 클릭하면 값을 변경할 수 있습니다. 또한 각 견본은 XAML 색 리소스에 직접 매핑됩니다.*  
+*해당 값을 변경 하려면 미리 보기에서 모든 색 견본을 클릭할 수 있습니다. 모든 견본 XAML 색 리소스를 직접 매핑합니다.*  
 
-각 **SytemColor*Color **리소스는 사용자가 고대비 테마를 전환할 때 자동으로 색을 업데이트하는 변수입니다. 다음은 각 리소스를 사용할 위치 및 시기에 대한 지침입니다.
+각 **SytemColor*Color** 리소스는 사용자가 고대비 테마를 전환할 때 자동으로 색을 업데이트하는 변수입니다. 다음은 각 리소스를 사용할 위치 및 시기에 대한 지침입니다.
 
-리소스 | 사용 |
+리소스 | 용도 |
 |--------|-------|
 **SystemColorWindowTextColor** | 본문 복사, 제목, 목록, 조작할 수 없는 모든 텍스트 |
 | **SystemColorHotlightColor** | 하이퍼링크 |
@@ -108,13 +108,13 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 기존 앱, 시작 또는 공용 컨트롤을 살펴보고 다른 개발자가 유사한 고대비 디자인 문제를 어떻게 해결했는지 확인하면 도움이 되는 경우가 많습니다.
 
-**권장 사항**
+**Do**
 
 * 가능하면 배경/전경 쌍을 준수합니다.
 * 앱이 실행되는 동안 4개의 고대비 테마에서 모두 테스트합니다. 사용자가 테마를 전환할 때 앱을 다시 시작할 필요가 없어야 합니다.
 * 일관성을 유지합니다.
 
-**금지 사항**
+**안 함**
 
 * **HighContrast** 테마에 색을 하드 코딩하지 않습니다. **SysemColor*Color**리소스를 사용합니다.
 * 미학적으로 색 리소스를 선택하지 않습니다. 테마에 따라 변경된다는 것을 명심하세요.
@@ -148,13 +148,13 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 </Application.Resources>
 ```
 
-나중에 해당 앱에서 배경을 설정할 수 있습니다.
+나중에 해당 앱에서 이제 배경을 설정할 수 있습니다.
 
 ```xaml
 <Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
 ```
 
-참고: **\{ThemeResource\}** 를 두 번 사용하는 방법(한 번은 **SystemColorWindowColor** 참조에, 그리고 다시 **BrandedPageBackgroundBrush** 참조에). 앱이 런타임에 테마를 올바르게 적용하려면 둘 다 필요합니다. 이때 앱의 기능을 테스트하는 것이 좋습니다. 고대비 테마로 전환하면 그리드의 배경이 자동으로 업데이트됩니다. 다른 고대비 테마로 전환할 때도 업데이트됩니다.
+참고 어떻게 **\{ThemeResource\}** 을 두 번 사용 하는 참조에 한 번만 **SystemColorWindowColor** 및 참조를 다시 **BrandedPageBackgroundBrush**. 앱이 런타임에 테마를 올바르게 적용하려면 둘 다 필요합니다. 이때 앱의 기능을 테스트하는 것이 좋습니다. 고대비 테마로 전환하면 그리드의 배경이 자동으로 업데이트됩니다. 다른 고대비 테마로 전환할 때도 업데이트됩니다.
 
 ## <a name="when-to-use-borders"></a>테두리를 사용하는 경우
 
@@ -162,7 +162,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ![페이지의 나머지 부분과 분리된 탐색 창](images/high-contrast-actions-content.png)  
 
-*탐색 창과 페이지는 고대비에서 동일한 배경색을 공유합니다. 따라서 두 항목을 구분하는 고대비 전용 테두리가 필요합니다.*
+*탐색 창 및 페이지 고대비에서 동일한 배경색을 공유합니다. 높은 대비 전용에 테두리를 구분 하는 것이 중요 합니다.*
 
 
 ## <a name="list-items"></a>목록 항목
@@ -171,7 +171,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ![밝은 테마 및 고대비 검정 테마의 간단한 목록](images/high-contrast-list1.png)
 
-*밝은 테마(왼쪽) 및 고대비 검정 테마(오른쪽)의 간단한 목록. 두 번째 항목이 선택되어 있습니다. 고대비에서 해당 텍스트 색이 어떻게 반전되는지 확인합니다.*
+*(왼쪽) 밝은 테마 및 고대비 검정 테마 (오른쪽)에서 단순 목록입니다. 두 번째 항목 선택 됩니다. 고대비에서 해당 텍스트 색이 반전 하는 방법을 note 합니다.*
 
 
 ### <a name="list-items-with-colored-text"></a>색이 지정된 텍스트가 있는 목록 항목
@@ -180,7 +180,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ![밝은 테마 및 고대비 검정 테마의 복잡한 목록](images/high-contrast-list2.png)
 
-*밝은 테마(왼쪽) 및 고대비 검정 테마(오른쪽)의 복잡한 목록. 고대비에서 선택한 항목의 두 번째 줄은 반전되지 않습니다.*  
+*복잡 한 목록 (왼쪽) 밝은 테마 및 고대비 검정 테마 (오른쪽). 고대비에서 선택한 항목의 두 번째 줄 반전 하지 못했습니다.*  
 
 **ThemeDictionaries** 컬렉션에 있는 Style을 통해 조건부로 Foreground를 설정하면 이 문제를 해결할 수 있습니다. **HighContrast**에서 **SecondaryBodyTextBlockStyle**에 의해 **Foreground**가 설정되지 않았으므로 해당 색이 올바르게 반전됩니다.
 
@@ -228,14 +228,14 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ## <a name="detecting-high-contrast"></a>고대비 검색
 
-[**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) 클래스의 멤버를 사용하여 프로그래밍 방식으로 현재 테마가 고대비 테마인지 확인할 수 있습니다.
+[  **AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) 클래스의 멤버를 사용하여 프로그래밍 방식으로 현재 테마가 고대비 테마인지 확인할 수 있습니다.
 
 > [!NOTE]
 > 앱이 초기화되어 이미 콘텐츠를 표시하고 있는 범위에서 **AccessibilitySettings** 생성자를 호출해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목  
 * [접근성](accessibility.md)
-* [UI 대비 및 설정 샘플](https://go.microsoft.com/fwlink/p/?linkid=231539)
-* [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [UI 설정과 대비 샘플](https://go.microsoft.com/fwlink/p/?linkid=231539)
+* [XAML 액세스 가능성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [XAML 고대비 샘플](https://go.microsoft.com/fwlink/p/?linkid=254993)
 * [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: 834f631cd5c4b8696e75f83f194b95f809b1cf8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932599"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649868"
 ---
 # <a name="pull-to-refresh-with-source-modifiers"></a>SourceModifier로 당겨서 새로 고침
 
@@ -21,7 +21,7 @@ ms.locfileid: "8932599"
 여기에서는 여러분이 이 문서에서 다룬 개념에 익숙하다고 가정합니다.
 
 - [입력 기반 애니메이션](input-driven-animations.md)
-- [InteractionTracker를 사용한 사용자 지정 조작 경험](interaction-tracker-manipulations.md)
+- [사용자 지정 조작 경험과 InteractionTracker](interaction-tracker-manipulations.md)
 - [관계 기반 애니메이션](relation-animations.md)
 
 ## <a name="what-is-a-sourcemodifier-and-why-are-they-useful"></a>SourceModifier란 무엇이고 어떤 면에서 유용한가요?
@@ -67,7 +67,7 @@ ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.IsScrollInertiaEnabled="F
 </StackPanel>
 ```
 
-ListView(`ThumbnailList`)는 이미 스크롤이 적용된 XAML 컨트롤이므로, 맨 위 항목에 도달해 더 이상 스크롤할 수 없을 때 스크롤 동작이 상위 항목(`ContentPanel`)으로 연결되도록 해야 합니다. (ContentPanel은 Source Modifier를 적용할 위치입니다.) 이렇게 되려면 ListView 태그에서 ScrollViewer.IsVerticalScrollChainingEnabled를 **true**로 설정해야 합니다. 또한 VisualInteractionSource의 연결 모드를 **Always**로 설정해야 합니다.
+ListView(`ThumbnailList`)는 이미 스크롤이 적용된 XAML 컨트롤이므로, 맨 위 항목에 도달해 더 이상 스크롤할 수 없을 때 스크롤 동작이 상위 항목(`ContentPanel`)으로 연결되도록 해야 합니다. (ContentPanel은 원본 한정자를 적용 합니다.) ScrollViewer.IsVerticalScrollChainingEnabled로 설정 해야 합니다. 그러려면 **true** ListView 태그에 있습니다. 또한 VisualInteractionSource의 연결 모드를 **Always**로 설정해야 합니다.
 
 _handledEventsToo_ 매개 변수를 사용하여 PointerPressedEvent 처리기를 **true**로 설정해야 합니다. 이 옵션을 사용하지 않으면 ListView 컨트롤이 해당 이벤트를 처리된 것으로 표시하므로 PointerPressedEvent가 ContentPanel에 연결되지 않고 상위 비주얼 체인으로 보내지지 않습니다.
 

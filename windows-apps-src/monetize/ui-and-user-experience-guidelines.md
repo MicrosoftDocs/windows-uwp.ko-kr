@@ -1,17 +1,17 @@
 ---
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
-description: 앱 내 광고의 UI 및 사용자 환경 지침을 알아봅니다.
+description: 앱 내 광고에 대한 UI 및 사용자 환경 지침을 알아봅니다.
 title: 광고의 UI 및 사용자 환경 지침
 ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 지침, 모범 사례
 ms.localizationpriority: medium
 ms.openlocfilehash: 78f044890e49f4631abf710764bc2f9746a1306f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930754"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639148"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>광고의 UI 및 사용자 환경 지침
 
@@ -71,7 +71,7 @@ ms.locfileid: "8930754"
 
 * 사용자 개입 없이 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 개체를 바꾸거나 페이지를 강제로 새로 고치는 등 어떤 식으로든 배너 광고의 기본 제공되는 최소 새로 고침 타이머를 무시하는 경우.
 
-* 라이브 광고 단위 (즉, 파트너 센터에서 얻을 수 있는 광고 단위)를 사용 하 여 개발 및 테스트 하는 동안 또는 에뮬레이터에서.
+* 라이브 광고 단위 (즉, 파트너 센터에서 가져오는 ad 단위)를 사용 하 여 개발 및 테스트 하는 동안 또는 에뮬레이터에서.
 
 * 앱 컨텍스트에서 실행되는 Microsoft 광고 라이브러리 이외의 다른 방식을 통해 광고 서비스를 호출하는 코드를 작성하거나 배포하는 경우.
 
@@ -133,7 +133,7 @@ ms.locfileid: "8930754"
 
 * 동영상 중간 광고를 가져오고 5분 이상 경과한 후 [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show)를 호출하지 않습니다. 좋은 인벤토리는 미리 가져온 광고가 청구 가능한 광고 노출로 최대한 많이 변환되도록 합니다.
 
-* 광고 제공이 실패할 경우 광고를 사용할 수 없는 것과 같은 벌칙을 부과하지 않습니다. 예를 들어 "광고를 시청하여 *xxx* 받기" UI 옵션을 표시한다면 사용자가 광고를 시청한 후 *xxx*를 제공해야 합니다. 다음 두 가지 옵션을 고려해야 합니다.
+* 광고 제공이 실패할 경우 광고를 사용할 수 없는 것과 같은 벌칙을 부과하지 않습니다. 예를 들어 "광고를 시청하여 *xxx* 받기" UI 옵션을 표시하는 경우 사용자가 자신의 역할을 해낼 경우 *xxx*를 제공해야 합니다. 다음 두 가지 옵션을 고려해야 합니다.
 
     * [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready) 이벤트가 발생하지 않는 한 이 옵션을 포함하지 않습니다.
 
@@ -155,7 +155,7 @@ ms.locfileid: "8930754"
 
 * 단순히 일련의 광고에 대한 백업 광고를 위해 중간 광고 요청. 중간 광고를 요청한 후 [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready) 이벤트를 받은 경우 앱에 표시되는 다음 중간 광고는 [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 메서드를 통해 표시할 준비가 된 광고여야 합니다.
 
-* 라이브 광고 단위 (즉, 파트너 센터에서 얻을 수 있는 광고 단위)를 사용 하 여 개발 및 테스트 하는 동안 또는 에뮬레이터에서.
+* 라이브 광고 단위 (즉, 파트너 센터에서 가져오는 ad 단위)를 사용 하 여 개발 및 테스트 하는 동안 또는 에뮬레이터에서.
 
 * 앱 컨텍스트에서 실행되는 Microsoft 광고 라이브러리 이외의 다른 방식을 통해 광고 서비스를 호출하는 코드를 작성하거나 배포하는 경우.
 
@@ -189,7 +189,7 @@ ms.locfileid: "8930754"
 
 기본 광고가 앱 나머지 부분과 명확히 구분되어야 하고, 실수로 클릭하는 것을 방지하기 위해 주변에 공간이 있어야 합니다. 광고 콘텐츠를 앱 나머지와 분리하기 위해 경계, 다른 배경, 기타 UI를 사용합니다. 실수로 클릭을 하는 것은 장기적으로 최종 사용자의 경험이나 광고 기반 수익에 도움이 되지 않는다는 점을 유념하세요.
 
-### <a name="description"></a>Description
+### <a name="description"></a>설명
 
 광고에 대한 설명을 표시하려면(**NativeAdV2** 개체의 **설명** 속성에 사용 가능), 75자 이상을 표시할 수 있는 충분한 공간을 제공하세요. 애니메이션을 사용해 광고 설명의 콘텐츠를 전부 표시하는 것이 좋습니다.
 

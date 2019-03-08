@@ -1,5 +1,5 @@
 ---
-Description: Test your app for Windows 10 in S mode.
+Description: S 모드에서 Windows 10 용 앱을 테스트 합니다.
 Search.Product: eADQiWindows 10XVcnh
 title: Windows 10 S용 Windows 앱 테스트
 ms.date: 05/11/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10 S, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cf442da9344f37525bf3c17e4a62a319b9c04044
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048460"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655948"
 ---
 # <a name="test-your-windows-app-for-windows-10-in-s-mode"></a>Windows 10 S 모드 Windows 앱 테스트
 
@@ -46,7 +46,7 @@ Device Guard 코드 무결성 정책은 Windows 10 S에서 실행을 위해 앱�
 ### <a name="audit-mode-policy"></a>감사 모드 정책
 이 모드에서는 Windows 10 S에서 지원되지 않는 작업을 수행하는 경우에도 앱이 실행됩니다. Windows는 코드 무결성 이벤트 로그로 차단된 모든 실행 파일을 기록합니다.
 
-**이벤트 뷰어**를 열고, '응용 프로그램 및 서비스 로그->Microsoft->Windows->CodeIntegrity>Operational 위치를 검색해 로그를 찾을 수 있습니다.
+열어 해당 로그를 찾을 수 있습니다 합니다 **이벤트 뷰어**, 그런 다음이 위치를 찾아: 응용 프로그램 및 서비스 로그-> Microsoft-> Windows-CodeIntegrity >-> 운영 합니다.
 
 ![code-integrity-event-logs](images/desktop-to-uwp/code-integrity-logs.png)
 
@@ -55,7 +55,7 @@ Device Guard 코드 무결성 정책은 Windows 10 S에서 실행을 위해 앱�
 #### <a name="optional-find-specific-failure-points-in-the-call-stack"></a>(선택 사항) 호출 스택에서 특정 실패 지점 찾기
 차단 문제가 발생한 호출 스택에서 특정 지점을 찾으려면, 이 레지스트리 키를 추가한 후 [커널 모드 디버깅 환경](https://docs.microsoft.com/windows-hardware/drivers/debugger/getting-started-with-windbg--kernel-mode-#span-idsetupakernel-modedebuggingspanspan-idsetupakernel-modedebuggingspanspan-idsetupakernel-modedebuggingspanset-up-a-kernel-mode-debugging)을 설정합니다.
 
-|키|이름|유형|값|
+|키|이름|형식|값|
 |--|---|--|--|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurentControlSet\Control\CI| DebugFlags |REG_DWORD | 1 |
 
@@ -76,7 +76,7 @@ Device Guard 코드 무결성 정책은 Windows 10 S에서 실행을 위해 앱�
 
 이들 정책을 로컬 컴퓨터에 적용하려면 감사 모드 정책으로 시작하는 것이 가장 좋습니다. 이 정책에서는 코드 무결성 이벤트 로그를 검토해서 적용된 정책에서 중요한 기능이 차단되는 일이 없도록 할 수 있습니다.
 
-정책을 적용할 준비가 끝나면 선택한 정책에 대한 .P7B 파일을 찾아서 이름을 **SIPolicy.P7B**로 변경한 다음, 파일을 시스템의 해당 위치 **C:\Windows\System32\CodeIntegrity\\**에 저장합니다.
+정책을 적용할 준비가 찾을 합니다. 선택한 정책에 대 한 P7B 파일 이름을 **SIPolicy.P7B**, 시스템에서이 위치에 해당 파일을 저장 합니다. **C:\Windows\System32\CodeIntegrity\\**.
 
 그런 다음 컴퓨터를 다시 시작합니다.
 
@@ -85,7 +85,7 @@ Device Guard 코드 무결성 정책은 Windows 10 S에서 실행을 위해 앱�
 
 ## <a name="next-steps"></a>다음 단계
 
-**질문에 대한 답변 찾기**
+**질문에 답변**
 
 질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 
@@ -93,10 +93,10 @@ Device Guard 코드 무결성 정책은 Windows 10 S에서 실행을 위해 앱�
 
 [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)를 참조하세요.
 
-**저희 App Consult Team이 게시한 자세한 블로그 글을 참조하세요.**
+**앱 참조 팀에서 게시 된 블로그 문서 검토**
 
 [데스크톱 브리지로 전형적인 Windows 10 데스크톱 응용 프로그램을 포인팅 및 테스트](https://blogs.msdn.microsoft.com/appconsult/2017/06/15/porting-and-testing-your-classic-desktop-applications-on-windows-10-s-with-the-desktop-bridge/)를 참조하세요.
 
-**Windows S 모드 테스트를 도와주는 도구 알아보기**
+**S 모드에서 Windows에 대 한 테스트를 쉽게 해 주는 도구에 대해 알아보기**
 
 [APPX 패키지 풀기, 수정, 다시 패키징, 서명](https://blogs.msdn.microsoft.com/appconsult/2017/08/07/unpack-modify-repack-sign-appx/)을 참조하세요.

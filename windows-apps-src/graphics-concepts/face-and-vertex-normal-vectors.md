@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2347efc5d68abd53442f52ecabdc060393ee561b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929894"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636558"
 ---
 # <a name="face-and-vertex-normal-vectors"></a>면 및 꼭짓점 법선 벡터
 
 
 메시의 각 면에는 수직 단위 법선 벡터가 있습니다. 벡터의 방향은 꼭짓점이 정의된 순서와 좌표계가 오른손용인지 왼손용인지에 따라 결정됩니다.
 
-## <a name="span-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanperpendicular-unit-normal-vector-for-a-front-face"></a><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>앞면에 대한 수직 단위 법선 벡터
+## <a name="span-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanperpendicular-unit-normal-vector-for-a-front-face"></a><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>수직 단위는 앞면에 대 한 법선 벡터
 
 
 메시의 각 면에는 수직 단위 법선 벡터가 있습니다. 벡터의 방향은 꼭짓점이 정의된 순서와 좌표계가 오른손용인지 왼손용인지에 따라 결정됩니다. 면 법선 지점은 면의 앞면에서 떨어져 있습니다. Direct3D에서는 면의 앞면만 표시됩니다. 앞면은 꼭짓점이 시계 방향 순서로 정의되는 면입니다.
@@ -28,12 +28,12 @@ ms.locfileid: "8929894"
 
 ![앞면에 대한 법선 벡터](images/nrmlvect.png)
 
-## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>뒷면 컬링
+## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>얼굴 다시 고르기
 
 
 앞면이 아닌 모든 면은 뒷면입니다. Direct3D는 뒷면을 렌더링하지 않습니다. 뒷면은 컬링된다고 합니다. 뒷면 컬링은 렌더링에서 뒷면을 제거하는 것을 의미합니다. 원하는 경우 뒷면을 렌더링하도록 컬링 모드를 변경할 수 있습니다. 자세한 내용은 [컬링 상태](https://msdn.microsoft.com/library/windows/desktop/bb204882)를 참조하세요.
 
-## <a name="span-idvertexunitnormalsspanspan-idvertexunitnormalsspanspan-idvertexunitnormalsspanvertex-unit-normals"></a><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>꼭짓점 단위 법선
+## <a name="span-idvertexunitnormalsspanspan-idvertexunitnormalsspanspan-idvertexunitnormalsspanvertex-unit-normals"></a><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>꼭 짓 점 단위 법선
 
 
 Direct3D는 고우러드 음영, 조명, 텍스처링 효과를 위해 꼭짓점 단위 법선을 사용합니다.
@@ -44,7 +44,7 @@ Direct3D는 고우러드 음영, 조명, 텍스처링 효과를 위해 꼭짓점
 
 다각형에 고우러드 음영을 적용할 때, Direct3D는 꼭짓점 법선을 사용하여 광원과 표면 사이의 각도를 계산합니다. 꼭짓점에 대한 색상과 강도 값을 계산한 다음, 모든 기본 요소의 표면에 걸친 모든 지점을 보간합니다. Direct3D는 각도를 사용하여 조명 강도 값을 계산합니다. 각도가 클수록 더 적은 빛이 표면에서 빛나게 됩니다.
 
-## <a name="span-idflatsurfacesspanspan-idflatsurfacesspanspan-idflatsurfacesspanflat-surfaces"></a><span id="Flat_surfaces"></span><span id="flat_surfaces"></span><span id="FLAT_SURFACES"></span>평평한 표면
+## <a name="span-idflatsurfacesspanspan-idflatsurfacesspanspan-idflatsurfacesspanflat-surfaces"></a><span id="Flat_surfaces"></span><span id="flat_surfaces"></span><span id="FLAT_SURFACES"></span>플랫 화면
 
 
 평평한 개체를 만드는 경우 꼭짓점 법선이 표면에 수직인 지점을 가리키도록 설정합니다.
@@ -53,7 +53,7 @@ Direct3D는 고우러드 음영, 조명, 텍스처링 효과를 위해 꼭짓점
 
 ![두 개의 삼각형과 꼭짓점 법선으로 구성된 평평한 표면](images/flatvert.png)
 
-## <a name="span-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspansmooth-shading-on-a-non-flat-object"></a><span id="Smooth_shading_on_a_non-flat_object"></span><span id="smooth_shading_on_a_non-flat_object"></span><span id="SMOOTH_SHADING_ON_A_NON-FLAT_OBJECT"></span>평평하지 않은 개체에 부드러운 음영 적용
+## <a name="span-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspansmooth-shading-on-a-non-flat-object"></a><span id="Smooth_shading_on_a_non-flat_object"></span><span id="smooth_shading_on_a_non-flat_object"></span><span id="SMOOTH_SHADING_ON_A_NON-FLAT_OBJECT"></span>단순이 아닌 개체에 시킴
 
 
 개체는 평평하지 않고 삼각형 스트립과 동일 평면에 있지 않은 삼각형으로 만들어지는 경우가 많습니다. 스트립의 모든 삼각형에 걸쳐 부드러운 음영을 적용하는 간단한 한 가지 방법은, 꼭짓점이 연결된 각 다각형 표면에 대한 표면 법선 벡터를 먼저 계산하는 것입니다. 꼭짓점 법선은 각 표면 법선과 같은 각도를 가지도록 설정할 수 있습니다. 그러나 이 방법은 복잡한 기본 요소에는 효율이 충분하지 않을 수 있습니다.
@@ -70,7 +70,7 @@ Direct3D는 고우러드 음영, 조명, 텍스처링 효과를 위해 꼭짓점
 
 ![꼭짓점 법선 벡터가 한 면으로 기운 두 표면(s1과 s2)](images/gvert2.png)
 
-## <a name="span-idsharpedgesspanspan-idsharpedgesspanspan-idsharpedgesspansharp-edges"></a><span id="Sharp_edges"></span><span id="sharp_edges"></span><span id="SHARP_EDGES"></span>예리한 모서리
+## <a name="span-idsharpedgesspanspan-idsharpedgesspanspan-idsharpedgesspansharp-edges"></a><span id="Sharp_edges"></span><span id="sharp_edges"></span><span id="SHARP_EDGES"></span>날카로운 가장자리
 
 
 고우러드 음영을 사용하여 3D 장면에 가장자리가 예리한 일부 개체를 표시할 수 있습니다. 이렇게 하려면 예리한 가장자리가 필요한 면의 모든 교차 지점에서 꼭짓점 법선 벡터를 복제합니다.
@@ -85,10 +85,10 @@ DrawPrimitive 메서드를 사용하여 장면을 렌더링할 경우, 예리한
 
 또 다른 방법은 예리한 가장자리를 가진 개체를 렌더링할 때 평평한 음영으로 변경하는 것입니다. 이 방법이 계산상 가장 효율적인 방법이지만, 개체에 고우러드 음영이 적용되지 않아 장면의 개체가 현실적으로 렌더링되지 않는 결과가 발생할 수 있습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
+[좌표계 및 기 하 도형](coordinate-systems-and-geometry.md)
 
  
 
