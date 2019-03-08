@@ -1,5 +1,5 @@
 ---
-Description: This topic describes the new Windows UI for rotation and provides user experience guidelines that should be considered when using this new interaction mechanism in your UWP app.
+Description: 이 항목에서는 회전에 대 한 새로운 Windows UI를 설명 하 고 UWP 앱에서이 새 상호 작용 메커니즘을 사용 하는 경우 고려해 야 하는 사용자 환경 지침을 제공 합니다.
 title: 회전
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f631f3178b4af4fe1c1d2d8b27e8ae6ac25c6ad1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923797"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617208"
 ---
 # <a name="rotation"></a>회전
 
 
-이 문서에서는 회전하기 위한 새로운 Windows UI에 대해 설명하고 UWP 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
+이 문서에서는 새로운 회전 Windows UI에 대해 설명하고 UWP 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 
-> **중요 API**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **중요 한 Api**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
@@ -38,30 +38,30 @@ ms.locfileid: "8923797"
 -   선택한 개체의 회전 위치 조정 막대를 이동하려는 경우 마우스 또는 액티브 펜/스타일러스
 -   회전 동작을 사용하여 원하는 방향으로 개체를 돌리려는 경우 터치식 또는 패시브 펜/스타일러스
 
-**회전을 사용하는 경우**
+**회전을 사용 하는 경우**
 
 사용자들이 UI 요소를 직접 회전하는 데 도움을 주려는 경우 회전을 사용합니다. 다음 다이어그램은 회전 조작 시 지원되는 손가락 위치를 보여 줍니다.
 
 ![회전에서 지원되는 다양한 손가락 동작을 보여 주는 다이어그램](images/ux-rotate-positions.png)
 
-**참고**  직관적으로, 및 대부분의 경우, 회전 지점이 않는 두 개의 터치 포인트 중 하나 (예: 그리기 또는 레이아웃 응용 프로그램)에 접촉 지점과 관련 되지 않은 회전 지점을 지정할 수 있습니다. 다음 이미지는 이러한 방식으로 회전 지점이 제한되지 않을 경우 사용자 환경이 어떻게 저하될 수 있는지를 보여 줍니다.
+**참고**    직관적으로 및 대부분의 경우에서 회전 지점 않는 두 터치 지점 중 하나는 사용자 (예를 들어 드로잉 또는 레이아웃 응용 프로그램)에서 연결 지점 관련이 회전 지점을 지정할 수 있습니다. 다음 이미지는 이러한 방식으로 회전 지점이 제한되지 않을 경우 사용자 환경이 어떻게 저하될 수 있는지를 보여 줍니다.
 
 첫 번째 그림은 엄지손가락과 집게손가락의 터치 지점을 보여 줍니다. 집게손가락은 나무를 터치하고 엄지손가락은 통나무를 터치하고 있습니다.
 
-![회전 제스처의 초기 터치 지점 2개를 보여 주는 이미지](images/ux-rotate-points1.png)
+![이미지 회전 제스처에 대 한 두 개의 초기 터치 포인트를 표시 합니다.](images/ux-rotate-points1.png)
 두 번째 그림에서는 초기(엄지 손가락) 터치 지점에 대해 회전이 수행되었습니다. 회전 후에 검지 손가락은 여전히 나무 줄기를 터치하고 있고 엄지 손가락도 여전히 통나무(회전 지점)를 터치하고 있습니다.
 
-![회전 지점이 두 개의 초기 터치 지점 중 하나로 제한되어 회전된 그림을 보여 주는 이미지](images/ux-rotate-points2.png)
+![이미지 회전 지점과 회전된 그림을 보여 주는 두 초기 터치 지점 중 하나에 제한 합니다.](images/ux-rotate-points2.png)
 세 번째 그립에서는 회전 중심이 응용 프로그램에 의해(또는 사용자가 설정) 그림의 중심점으로 정의되었습니다. 회전한 후에 그림은 손가락 중 하나로 인해 회전되지 않았으므로 직접 조작했다는 착시 효과가 깨집니다(사용자가 이 설정을 선택하지 않은 경우).
 
-![회전 지점이 두 개의 초기 터치 지점 중 하나가 아닌 그림의 중심으로 제한되어 회전된 그림을 보여 주는 이미지](images/ux-rotate-points3.png)
+![회전 지점과 회전된 그림을 보여 주는 이미지 가운데 부분을 보다는 두 개의 초기 터치 지점 중 하나를 제한 합니다.](images/ux-rotate-points3.png)
 마지막 그립에서는 회전 중심이 응용 프로그램에 의해(또는 사용자가 설정) 그림 왼쪽 가장자리 중앙에 있는 지점으로 정의되었습니다. 마찬가지로 사용자가 이 설정을 선택한 것이 아니므로 직접 조작했다는 착시 효과가 깨집니다.
 
 ![회전 지점이 두 개의 초기 터치 지점 중 하나가 아닌 그림의 맨 왼쪽 중심으로 제한되어 회전된 그림을 보여 주는 이미지](images/ux-rotate-points4.png)
 
  
 
-Windows8 세 가지 유형의 회전 지원: 무료, 제한 형 및 조합 합니다.
+Windows 8은 세 가지 유형의 회전을 지원 합니다: 무료이 고, 제한 된 결합 합니다.
 
 <table>
 <colgroup>
@@ -70,14 +70,14 @@ Windows8 세 가지 유형의 회전 지원: 무료, 제한 형 및 조합 합�
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">유형</th>
+<th align="left">형식</th>
 <th align="left">설명</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">자유형 회전</td>
-<td align="left"><p>자유형 회전을 사용하면 사용자가 360도 호 내에서 어느 곳이든 자유롭게 콘텐츠를 회전할 수 있습니다. 사용자가 개체를 놓으면 개체가 선택된 위치로 유지됩니다. 자유형 회전은 Microsoft PowerPoint, Word, Visio 및 Paint와 Adobe Photoshop, Illustrator, Flash와 같은 그리기 및 레이아웃 응용 프로그램에 유용합니다.</p></td>
+<td align="left"><p>자유형 회전을 사용하면 어디에서든지 360도 방향으로 콘텐츠를 자유롭게 회전할 수 있습니다. 사용자가 개체를 놓으면 개체는 선택된 위치에 남아 있습니다. 자유형 회전은 Microsoft PowerPoint, Word, Visio 및 Paint와 Adobe Photoshop, Illustrator, Flash와 같은 그리기 및 레이아웃 응용 프로그램에 유용합니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left">제한형 회전</td>
@@ -88,7 +88,7 @@ Windows8 세 가지 유형의 회전 지원: 무료, 제한 형 및 조합 합�
 <td align="left">조합형 회전</td>
 <td align="left"><p>조합형 회전은 제한된 회전에 의해 적용된 각각의 90도 끌기 지점에서 구역을 통한 자유형 회전(<a href="guidelines-for-panning.md">이동에 대한 지침</a>의 이동 경로와 비슷)을 지원합니다. 사용자가 90도 구역 중 하나 밖에서 개체를 놓으면 개체는 해당 위치에 그대로 남아 있고 그렇지 않은 경우 자동으로 끌기 지점으로 회전합니다.</p>
 <div class="alert">
-<strong>참고</strong>사용자 인터페이스 이동 경로 대상 주변 영역이 특정 값 이나 선택에 영향을 미칠 위치로 이동을 제한 하는 기능입니다.
+<strong>참고</strong>  사용자 인터페이스에 레일은 대상 관련 영역 일부 특정 값 또는 위치에 해당 선택 항목이 영향을 주는 방향으로 이동 제한 하는 기능입니다.
 </div>
 <div>
  
@@ -103,20 +103,20 @@ Windows8 세 가지 유형의 회전 지원: 무료, 제한 형 및 조합 합�
 
 
 **샘플**
-* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
-* [입력: XAML 사용자 입력 이벤트 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 디바이스 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: 터치 적중 횟수 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: 간단한 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [입력: GestureRecognizer를 사용한 조작 및 제스처](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처(C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [DirectX 터치 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 터치 적중된 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [입력: 제스처와 GestureRecognizer 조작](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [입력: 조작 및 제스처 (c + +) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

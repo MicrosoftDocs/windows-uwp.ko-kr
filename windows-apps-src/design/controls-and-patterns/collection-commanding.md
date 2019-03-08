@@ -13,11 +13,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925615"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658598"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>컬렉션 및 리스트에 대한 상황에 맞는 명령
 
@@ -25,7 +25,7 @@ ms.locfileid: "8925615"
 
 많은 앱에 사용자가 조작할 수 있는 목록, 표 및 트리 형식의 콘텐츠 컬렉션이 들어 있습니다. 예를 들어, 사용자가 항목을 삭제하거나, 항목의 이름을 바꾸거나, 항목에 플래그를 지정하거나, 항목을 새로 고칠 수 있습니다. 이 문서에서는 상황에 맞는 명령을 사용하여 모든 입력 형식에 대한 최상의 환경을 제공하는 방식으로 이러한 종류의 작업을 구현하는 방법을 보여 줍니다.  
 
-> **중요 API**: [ICommand 인터페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand), [UIElement.ContextFlyout 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [INotifyPropertyChanged 인터페이스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
+> **중요 한 Api**: [ICommand 인터페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)하십시오 [UIElement.ContextFlyout 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [INotifyPropertyChanged 인터페이스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
 
 ![다양한 입력을 사용하여 즐겨찾기 명령 수행](images/ContextualCommand_AddFavorites.png)
 
@@ -43,9 +43,9 @@ ms.locfileid: "8925615"
 | 즐겨찾기에 항목 추가 | 상황에 맞는 메뉴   | 호버 단추      | F, Ctrl+S            | 살짝 밀어 즐겨찾기에 추가 |
 
 
-* **일반적으로 항목의 [상황에 맞는 메뉴](menus.md)에서 해당 항목에 대한 모든 명령을 사용할 수 있게 만들어야 합니다.** 상황에 맞는 메뉴는 입력 형식에 관계없이 사용자가 액세스할 수 있으며 사용자가 수행할 수 있는 상황에 맞는 메뉴를 모두 포함해야 합니다.
+* **일반적으로 만들어야 합니다를 항목에 대 한 모든 명령 항목의 사용 가능한 [상황에 맞는 메뉴](menus.md)합니다.** 상황에 맞는 메뉴는 입력 형식에 관계없이 사용자가 액세스할 수 있으며 사용자가 수행할 수 있는 상황에 맞는 메뉴를 모두 포함해야 합니다.
 
-* **자주 액세스하는 명령의 경우 입력 가속기 사용을 고려하세요.** 입력 가속기는 사용자가 입력 장치를 기반으로 빠르게 작업을 수행할 수 있게 합니다. 다음과 같은 입력 가속기가 있습니다.
+* **자주 액세스 명령에 대 한 입력된 가속기를 사용 하는 것이 좋습니다.** 입력 가속기는 사용자가 입력 장치를 기반으로 빠르게 작업을 수행할 수 있게 합니다. 다음과 같은 입력 가속기가 있습니다.
     - 살짝 밀어 작업 수행(터치 가속기)
     - 당겨서 데이터 새로 고침(터치 가속기)
     - 키보드 바로 가기(키보드 가속기)
@@ -55,7 +55,7 @@ ms.locfileid: "8925615"
 > [!NOTE]
 > 사용자가 모든 유형의 장치에서 모든 명령에 액세스할 수 있어야 합니다. 예를 들어, 앱의 명령이 호버 단추 포인터 가속기를 통해서만 노출되는 경우 터치 사용자가 해당 명령에 액세스할 수 없습니다. 최소한 상황에 맞는 메뉴를 사용하여 모든 명령에 대한 액세스를 제공합니다.  
 
-## <a name="example-the-podcastobject-data-model"></a>예: PodcastObject 데이터 모델
+## <a name="example-the-podcastobject-data-model"></a>예제: PodcastObject 데이터 모델
 
 명령 권장 사항을 보여 주기 위해 이 문서에서는 팟캐스트 앱에 대한 팟캐스트 목록을 만듭니다. 코드 예에서는 사용자가 목록의 특정 팟캐스트를 "즐겨찾기에 추가"할 수 있게 하는 방법을 보여 줍니다.
 
@@ -240,9 +240,9 @@ PodcastObject를 몇 개 생성한 후 ListView에 PodcastObject를 바인딩하
 | 키보드 | Shift+F10, 메뉴 단추                  |
 | 터치    | 항목 길게 누르기                      |
 | 펜      | 펜 단추 누르기, 항목 길게 누르기 |
-| 게임 패드  | 메뉴 단추                             |
+| 게임 패드  | 메뉴 버튼                             |
 
-**사용자가 입력 형식에 관계없이 상황에 맞는 메뉴를 열 수 있으므로 상황에 맞는 메뉴에는 목록 항목에 사용할 수 있는 상황에 맞는 명령이 모두 들어 있어야 합니다.**
+**사용자 입력된 형식에 관계 없이 상황에 맞는 메뉴를 열 수, 있으므로 상황에 맞는 메뉴의 모든 목록 항목에 대 한 상황에 맞는 명령을 포함 해야 합니다.**
 
 ### <a name="contextflyout"></a>ContextFlyout
 
@@ -273,7 +273,7 @@ PodcastUserControl에 ContextFlyout을 추가하겠습니다. ContextFlyout으�
 
 팟캐스트 앱에서 자주 사용하는 명령은 "즐겨찾기에 추가"입니다.
 
-### <a name="keyboard-accelerators"></a>키보드 가속기
+### <a name="keyboard-accelerators"></a>바로 가기 키
 
 #### <a name="shortcuts-and-direct-key-handling"></a>바로 가기 및 직접 키 처리
 
@@ -376,7 +376,7 @@ protected override void OnPointerExited(PointerRoutedEventArgs e)
 
 살짝 밀기 명령은 터치 장치의 사용자가 터치를 사용하여 일반적인 보조 작업을 수행할 수 있게 하는 터치 가속기입니다. 살짝 밀기를 통해 터치 사용자는 살짝 밀어 삭제나 살짝 밀어 호출과 같은 일반적인 작업을 사용하여 빠르고 자연스럽게 콘텐츠와 상호 작용할 수 있습니다. 자세한 내용은 [swipe commanding(살짝 밀기 명령)](swipe.md) 문서를 참조하세요.
 
-컬렉션에 살짝 밀기를 통합하려면 두 가지 구성 요소가 필요합니다. 그 중 하나는 명령을 호스트하는 SwipeItems이고 다른 하나는 항목을 줄 바꿈하고 살짝 밀기 조작을 허용하는 SwipeControl입니다.
+안쪽으로 살짝 밀어를 컬렉션에 통합 하기 위해 두 가지 구성 요소가 필요 합니다. 명령을; 호스팅하는 SwipeItems 및를 SwipeControl 항목을 래핑하는 스와이프 상호 작용을 허용 합니다.
 
 SwipeItems는 PodcastUserControl에서 리소스로 정의할 수 있습니다. 이 예에서는 SwipeItems에 즐겨찾기에 항목을 추가하는 명령이 포함되어 있습니다.
 
@@ -453,7 +453,7 @@ private void SwipeItem_Invoked(SwipeItem sender, SwipeItemInvokedEventArgs args)
 ## <a name="related-topics"></a>관련 항목
 * [ICommand 인터페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)
 * [메뉴 및 상황에 맞는 메뉴](menus.md)
-* [살짝 밀기](swipe.md)
+* [Swipe](swipe.md)
 * [당겨서 새로 고침](pull-to-refresh.md)
-* [펜 및 스타일러스 조작](../input/pen-and-stylus-interactions.md)
-* [게임 패드 및 Xbox에 맞게 앱 조정](../devices/designing-for-tv.md)
+* [펜 및 스타일러스 상호 작용](../input/pen-and-stylus-interactions.md)
+* [Gamepad 및 Xbox 용 앱을 조정](../devices/designing-for-tv.md)

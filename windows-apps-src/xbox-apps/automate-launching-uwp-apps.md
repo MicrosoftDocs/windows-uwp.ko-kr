@@ -5,11 +5,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
 ms.openlocfilehash: fb68b4bbd1b751591e9f336efe5dad3c22b3bf92
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937202"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618308"
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Windows 10 UWP 앱 시작 자동화
 
@@ -21,7 +21,7 @@ ms.locfileid: "8937202"
 
 *시작 활성화*는 앱 타일에서 시작하는 것과 같은 앱의 일반적인 시작 방법입니다.
 
-각 활성화 방법에서 명령줄 또는 시작 관리자 응용 프로그램 중 하나를 선택하여 사용할 수 있습니다. 모든 활성화 방법에서, 앱이 현재 실행되고 있는 경우 활성화를 수행하면 앱이 전경으로 나오고(다시 활성화) 새로운 활성화 인수가 제공됩니다. 따라서 활성화 명령을 유연하게 사용하여 앱에 새 메시지를 제공할 수 있습니다. 활성화 방법에서 새로 업데이트된 앱을 실행하려면 프로젝트를 컴파일한 후 배포해야 합니다. 
+각 활성화 방법에서 명령줄 또는 시작 관리자 응용 프로그램 중 하나를 선택하여 사용할 수 있습니다. 모든 활성화 방법에서, 앱이 현재 실행되고 있는 경우 활성화를 수행하면 앱이 포그라운드로 나오고(다시 활성화) 새로운 활성화 인수가 제공됩니다. 따라서 활성화 명령을 유연하게 사용하여 앱에 새 메시지를 제공할 수 있습니다. 활성화 방법에서 새로 업데이트된 앱을 실행하려면 프로젝트를 컴파일한 후 배포해야 합니다. 
 
 ## <a name="protocol-activation"></a>프로토콜 활성화
 
@@ -105,7 +105,7 @@ Uri(URI));
 
 ## <a name="launch-activation"></a>시작 활성화
 
-시작 활성화를 사용하여 앱을 시작할 수도 있습니다. 필요한 설정은 없지만 UWP 앱의 AUMID(응용 프로그램 사용자 모델 ID)가 필요합니다. AUMID는 패키지 패밀리 이름, 느낌표 및 응용 프로그램 ID로 구성됩니다. 
+시작 활성화를 사용하여 앱을 시작할 수도 있습니다. 필요한 설정은 없지만 UWP 앱의 AUMID(응용 프로그램 사용자 모델 ID)가 필요합니다. AUMID는 패키지 제품군 이름, 느낌표 및 응용 프로그램 ID로 구성됩니다. 
 
 패키지 패밀리 이름을 가져오는 가장 좋은 방법은 다음 단계를 완료하는 것입니다.
 
@@ -114,7 +114,7 @@ Uri(URI));
 
     ![시작 활성화](images/automate-uwp-apps-2.png)
 
-3. **패키지 패밀리 이름**이 나열되지 않으면 PowerShell을 열고 `>get-appxpackage MyPackageName`을(를) 실행하여 **PackageFamilyName**을 찾습니다.
+3. **패키지 제품군 이름**이 나열되지 않으면 PowerShell을 열고 `>get-appxpackage MyPackageName`을(를) 실행하여 **PackageFamilyName**을 찾습니다.
 
 응용 프로그램 ID는 XML 뷰에 열려 있는 **Package.appxmanifest** 파일의 `<Applications>` 요소 아래에서 볼 수 있습니다.
 
@@ -211,5 +211,5 @@ void OnActivated(IActivatedEventArgs^ args)
 다양한 방법으로 UWP 앱을 시작할 수 있습니다. 요구 사항 및 사용 사례에 따라 좀 더 적절한 방법을 사용하는 것이 좋습니다. 
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox One의 UWP](index.md)
+- [Xbox One에서 UWP](index.md)
 

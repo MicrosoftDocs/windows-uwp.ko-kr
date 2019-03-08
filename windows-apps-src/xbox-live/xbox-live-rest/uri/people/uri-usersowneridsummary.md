@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f8ad32fb2033c97a408ccb0f6cc6871b01caf5c5
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058490"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617808"
 ---
 # <a name="usersowneridsummary"></a>/users/{ownerId}/summary
 호출자의 관점에서 소유자에 대 한 요약 데이터에 액세스 합니다.
@@ -24,16 +24,16 @@ ms.locfileid: "9058490"
 
 ## <a name="uri-parameters"></a>URI 매개 변수
 
-| 매개 변수| 유형| 설명|
+| 매개 변수| 형식| 설명|
 | --- | --- | --- |
-| ownerId| string| 해당 리소스를 액세스 하는 사용자의 식별자입니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag}) 합니다. 예제 값: <code>me</code>, <code>xuid(2603643534573581)</code>, <code>gt(SomeGamertag)</code>|
+| ownerId| 문자열| 해당 리소스에 액세스 하는 사용자의 식별자입니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag})입니다. 예제 값: <code>me</code>, <code>xuid(2603643534573581)</code>, <code>gt(SomeGamertag)</code>|
 
 <a id="ID4ESB"></a>
 
 
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
-[GET (/users/{ownerId}/summary)](uri-usersowneridsummaryget.md)
+[가져오기 (/users/ {ownerId} / 요약)](uri-usersowneridsummaryget.md)
 
 &nbsp;&nbsp;호출자의 관점에서 소유자에 대 한 요약 데이터를 가져옵니다.
 
@@ -45,6 +45,6 @@ ms.locfileid: "9058490"
 <a id="ID4E5B"></a>
 
 
-##### <a name="parent"></a>부모
+##### <a name="parent"></a>Parent
 
 [/users/{ownerId}/summary](uri-usersowneridsummaryget.md)

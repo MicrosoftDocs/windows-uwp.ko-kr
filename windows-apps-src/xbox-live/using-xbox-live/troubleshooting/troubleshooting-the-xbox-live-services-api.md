@@ -1,27 +1,27 @@
 ---
 title: Xbox Live 서비스 API 문제 해결
-description: Xbox Live Api를 사용 하 여 문제를 해결 하는 동안 추가 오류 정보를 기록 하는 방법을 알아봅니다.
+description: Xbox Live Api를 사용 하 여 문제를 해결 하는 동안 추가 오류 정보를 기록 하는 방법에 알아봅니다.
 ms.assetid: 3827bba1-902f-4f2d-ad51-af09bd9354c4
 ms.date: 04/04/2017
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 문제 해결, 오류, 로그
+keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나, 문제 해결, 오류, 로그
 ms.localizationpriority: medium
 ms.openlocfilehash: 67735d83e5ff301ee4434a6917fce814cabe8309
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933656"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621418"
 ---
 # <a name="troubleshooting-the-xbox-live-apis"></a>Xbox Live Api 문제 해결
 
-## <a name="code"></a>Code
+## <a name="code"></a>코드
 
-Xbox Live 서비스 API 계층에서 오류만을 사용 하 여 오류를 진단 하기가 어렵습니다. 추가 오류 정보-모든 RESTful 호출의 로깅 같은-서버를 사용할 수 있습니다. 이 데이터를 수신할 수 응답으로 거 연결 하 고 디버그 추적을 활성화 합니다. 응답 로깅을 사용 하면 유용한 Fiddler 추적 이기도 HTTP 트래픽 및 웹 서비스 응답 코드를 볼 수 있습니다.
+Xbox Live Services API 계층에서 오류만을 사용 하 여 오류를 진단 하는 것이 어렵습니다. 추가 오류 정보-모든 RESTful 호출의 로깅을 같은-서버에 제공 될 수 있습니다. 이 데이터를 수신 대기 하 고, 응답으로 거를 연결 및 디버그 추적을 사용 하도록 설정 합니다. 응답 로깅을 사용 하는 Fiddler 추적으로으로 유용한 경우가 많습니다에 HTTP 트래픽 및 웹 서비스 응답 코드를 확인할 수 있습니다.
 
 ### <a name="c"></a>C++
 
-다음 코드 예제에서는 응답 로깅을 사용 하 고 디버그 오류 수준을 Verbose (설정할 수도 있습니다 디버그 오류 수준을 추적 호출이 실패만 표시 하려면 오류 또는 추적을 사용 하지 않도록 꺼짐)로 설정 합니다. Visual Studio에서 프로젝트를 실행 하는 경우 결과 디버그 출력 출력 창에 전송 됩니다.  
+다음 코드 예제는 응답 로깅을 사용 하도록 설정 하 고 (또한 수준을 설정할 수 있습니다는 디버그 오류 실패 한 호출을 추적만 표시 하는 오류 또는 추적을 사용 하지 않도록 설정 해제) 하는 자세한 정보 표시로 디버그 오류 수준을 설정 합니다. Visual Studio에서 프로젝트를 실행 하는 경우 결과 디버그 출력은 출력 창으로 전송 됩니다.  
 
 ```cpp
 
@@ -31,7 +31,7 @@ Xbox Live 서비스 API 계층에서 오류만을 사용 하 여 오류를 진�
                 );
 ```
 
-디버그 출력 고유한 로그 파일을 리디렉션할 수도 되도록 합니다.
+고유한 로그 파일에 디버그 출력을 리디렉션할 수도 있습니다 다음과 같이 합니다.
 
 ```cpp
 

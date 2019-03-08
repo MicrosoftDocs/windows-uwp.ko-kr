@@ -1,5 +1,5 @@
 ---
-Description: Listing your app in the right category and subcategory helps customers find your app and understand more about it.
+Description: 올바른 범주와 하위 범주에 앱을 나열하면 고객이 앱을 찾고 자세히 파악하는 데 도움이 됩니다.
 title: 범주 및 하위 범주 테이블
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ms.date: 10/31/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 범주, 하위 범주, 장르, 범주, 장르
 ms.localizationpriority: medium
 ms.openlocfilehash: f8c28db9b0ca4437579e98ae156392c7b7b383ea
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935817"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653648"
 ---
 # <a name="category-and-subcategory-table"></a>범주 및 하위 범주 테이블
 
@@ -20,7 +20,7 @@ ms.locfileid: "8935817"
 
 앱을 가장 잘 설명하는 범주를 선택해야 합니다. 원할 경우 하위 범주를 선택합니다(사용 가능한 경우). 사용할 범주 또는 하위 범주가 확실하지 않거나 정확하게 일치하는 범주 또는 하위 범주를 찾을 수 없는 경우, 고객이 개발자의 앱과 같은 앱을 찾으려고 할 때 확인할 가능성이 큰 범주 또는 하위 범주를 선택합니다.
 
-**게임** 범주를 선택 하면 하나 이상의 하위 범주 ( *장르* 게임에 대 한 호출)를 선택 해야 합니다. 게임에 적절한 개수만큼 장르를 선택할 수 있습니다. Xbox에서 고객에게 게임을 게시하려면 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 사용하도록 설정하거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 거쳐야 합니다. 
+선택 하면 **게임** 필요한 하나 이상의 하위 범주를 선택 하 여 범주에 대 한 (호출 *장르* 게임에 대 한). 게임에 적절한 개수만큼 장르를 선택할 수 있습니다. Xbox에서 고객에게 게임을 게시하려면 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 사용하도록 설정하거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 거쳐야 합니다. 
 
 > [!IMPORTANT] 
 > **게임** 범주에 앱을 게시하는 경우, 새로 제출할 때 다른 범주를 선택할 수 없습니다. 계속 **게임** 범주로 게시해야 합니다(단, 새로 제출할 때 장르 선택 항목은 변경할 수 있음). 마찬가지로, 이전에 다른 범주에 게시한 앱을 업데이트할 때 **게임** 범주를 선택할 수 없습니다.
@@ -46,7 +46,7 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
     <td>전자 책 리더 <br> 픽션 <br> 논픽션 <br> 참고자료</td>
   </tr>
   <tr>
-    <td>비즈니스</td>
+    <td>Business</td>
     <td>회계 + 재무 <br> 협업 <br> CRM <br> 데이터 + 분석 <br> 파일 관리 <br> 재고 + 물류 <br> 법무 + 인사 <br> 프로젝트 관리 <br> 원격 데스크톱 <br> 영업 + 마케팅 <br> 시간 + 경비</td>
   </tr>
   <tr>
@@ -55,7 +55,7 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
   </tr>
   <tr>
     <td>교육</td>
-    <td>책 + 참고자료 <br> 조기 학습 <br> 교육용 도구 <br> 언어 <br> 학습 도우미</td>
+    <td>책 + 참고자료 <br> 조기 학습 <br> 교육용 도구 <br> 외국어 <br> 학습 도우미</td>
   </tr>
   <tr>
     <td>엔터테인먼트</td>
@@ -67,7 +67,7 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
   </tr>
   <tr>
     <td>게임</td>
-    <td>액션 + 어드벤처 <br> 카드 + 보드 <br> 카지노 <br> 클래식 <br> 교육 <br> 가족 + 어린이 <br> 격투 <br> 멀티 플레이어 온라인 배틀 아레나 <br> 음악 <br> 기타 <br> 플랫포머 <br> 퍼즐 + 퀴즈 <br> 레이싱 + 비행 <br> 롤플레잉 <br> 사격 <br> 시뮬레이션 <br> 스포츠 <br> 전략 <br> 도구 <br> 워드</td>
+    <td>액션 + 어드벤처 <br> 카드 + 보드 <br> 카지노 <br> 클래식 <br> 교육 <br> 가족 + 어린이 <br> 격투 <br> 멀티 플레이어 온라인 배틀 아레나 <br> 음악 <br> 기타 <br> 플랫포머 <br> 퍼즐 + 퀴즈 <br> 레이싱 + 비행 <br> 롤플레잉 <br> 사격 <br> Simulation <br> 스포츠 <br> 전략 <br> 도구 <br> Word</td>
   </tr>
   <tr>
     <td>정부 + 정치</td>
@@ -110,7 +110,7 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
     <td>금융 + 투자 <br> 예산 + 소득공제</td>
   </tr>
   <tr>
-    <td>개인 설정</td>
+    <td>Personalization</td>
     <td>벨소리 + 사운드 <br> 테마 <br> 배경 화면 + 잠금 화면</td>
   </tr>
   <tr>

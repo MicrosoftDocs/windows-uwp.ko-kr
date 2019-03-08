@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 183d15a306d0f15fcb5f9f7fad8411772f763c13
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945697"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661818"
 ---
 # <a name="get-mediamarketplaceidmetadatamediaitemtypesmediaitemtypequeryrefinersqueryrefinersubqueryrefinervalues"></a>GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryRefiner}/subQueryRefinerValues)
-지정 된 쿼리 구체화 값 (예: "subgenres 주어진 장르의")에 대 한 하위 값 목록을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
+지정 된 쿼리 구체화 값 (예를 들어 "subgenres 지정 장르의")에 대 한 하위 값의 목록을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`합니다.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4EDB)
@@ -25,18 +25,18 @@ ms.locfileid: "8945697"
  
 ## <a name="remarks"></a>설명
  
-쿼리 구체화 값에서 **queryRefinerValue**를 전달할 수 URI 획에서 금지 문자를 사용 하 여 쿼리 구체화 값을 허용 하도록 수행할 라는 쿼리 문자열 매개 변수로 전달 됩니다.
+쿼리 구체화는 전달 된 값의 명명 된 쿼리 문자열 매개 변수로 **queryRefinerValue**,이 형식은 전달할 URI 형태소에서 사용할 수 없는 문자를 사용 하 여 쿼리 구체화 값을 허용 하도록 합니다.
  
-이 API는 음악에 대 한 에서만 지원 됩니다.
+이 API는 음악만 지원 됩니다.
   
 <a id="ID4EDB"></a>
 
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| marketplaceId| string| 필수. 문자열 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>에서 가져온 값입니다.| 
+| marketplaceId| 문자열| 필수. 문자열에서 가져온 값을 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>합니다.| 
   
 <a id="ID4EOB"></a>
 
@@ -46,7 +46,7 @@ ms.locfileid: "8945697"
 <a id="ID4EQB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryRefiner}/subQueryRefinerValues](uri-medialocalemediaitemtypequeryrefinersubqueryrefinervalues.md)
 
@@ -54,15 +54,15 @@ ms.locfileid: "8945697"
 <a id="ID4E1B"></a>
 
  
-##### <a name="further-information"></a>자세한 정보 
+##### <a name="further-information"></a>추가 정보 
 
-[EDS 공통 헤더](../../additional/edscommonheaders.md)
+[EDS 일반적인 헤더](../../additional/edscommonheaders.md)
 
  [EDS 매개 변수](../../additional/edsparameters.md)
 
  [EDS 쿼리 구체화](../../additional/edsqueryrefiners.md)
 
- [마켓플레이스 URI](atoc-reference-marketplace.md)
+ [Marketplace Uri](atoc-reference-marketplace.md)
 
  [추가 참조](../../additional/atoc-xboxlivews-reference-additional.md)
 

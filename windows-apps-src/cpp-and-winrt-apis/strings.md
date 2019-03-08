@@ -6,20 +6,20 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문자열
 ms.localizationpriority: medium
 ms.openlocfilehash: 9572d9ba8b96d245b783535e159acbae9043ea3e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934618"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649638"
 ---
 # <a name="string-handling-in-cwinrt"></a>C++/WinRT의 문자열 처리
 
-사용 하 여 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), **std:: wstring** 같은 c + + 표준 라이브러리 전각 문자열 형식을 사용 하 여 Windows 런타임 Api를 호출할 수 있습니다 (참고: **std::string**같은 좁은 문자열 형식이 된 아님). C++/WinRT에는 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)이라고 불리는 사용자 지정 문자열 형식이 없습니다(C++/WinRT 기본 라이브러리인 `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`에 정의됨). 또한 Windows 런타임 생성자, 함수 및 속성이 실제로 가져와 반환하는 문자열 형식이기도 합니다. 하지만 대부분 경우 **hstring**의 변환 생성자와 변환 연산자 덕분에 클라이언트 코드의 **hstring** 인식 여부를 선택할 수 있습니다. API를 직접 *작성하는* 경우에는 **hstring**에 대해 알아둘 필요가 더욱 많습니다.
+사용 하 여 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)와 같은 c + + 표준 라이브러리 와이드 문자열 형식을 사용 하 여 Windows 런타임 Api를 호출할 수 있습니다 **std:: wstring** (참고: 좁은와 문자열 형식 같은 **std:: string**). C++/WinRT에는 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)이라고 불리는 사용자 지정 문자열 형식이 없습니다(C++/WinRT 기본 라이브러리인 `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`에 정의됨). 또한 Windows 런타임 생성자, 함수 및 속성이 실제로 가져와 반환하는 문자열 형식이기도 합니다. 하지만 대부분 경우 **hstring**의 변환 생성자와 변환 연산자 덕분에 클라이언트 코드의 **hstring** 인식 여부를 선택할 수 있습니다. API를 직접 *작성하는* 경우에는 **hstring**에 대해 알아둘 필요가 더욱 많습니다.
 
-C++에는 문자열 형식이 많습니다. 또한 C++ 표준 라이브러리의 **std::basic_string** 외에도 변형된 형식이 여러 라이브러리에 존재합니다. C++17에는 다양한 문자열 변환 유틸리티를 비롯해 **std::basic_string_view**도 있기 때문에 모든 문자열 형식의 차이를 좁힐 수 있습니다.  [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)은 **std::basic_string_view**가 설계된 목적인 상호 운용성을 제공하기 위해 **std::wstring_view**와의 상호 운용성을 제공합니다.
+C++에는 문자열 형식이 많습니다. 또한 C++ 표준 라이브러리의 **std::basic_string** 외에도 변형된 형식이 여러 라이브러리에 존재합니다. C++17에는 다양한 문자열 변환 유틸리티를 비롯해 **std::basic_string_view**도 있기 때문에 모든 문자열 형식의 차이를 좁힐 수 있습니다.  [**winrt::hstring** ](/uwp/cpp-ref-for-winrt/hstring) 사용 하 여 가능성을 제공 **std::wstring_view** 상호 운용성을 제공 하는 **std::basic_string_view** 에 대 한 설계 되었습니다.
 
-## <a name="using-stdwstring-and-optionally-winrthstring-with-uri"></a>**std::wstring**(옵션으로 **winrt::hstring**)에 **Uri** 사용
-[**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri)는 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)에서 생성됩니다.
+## <a name="using-stdwstring-and-optionally-winrthstring-with-uri"></a>사용 하 여 **std:: wstring** (및 필요에 따라 **winrt::hstring**) 사용 하 여 **Uri**
+[**Windows::Foundation::Uri** ](/uwp/api/windows.foundation.uri) 에서 생성 되는 [ **winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)합니다.
 
 ```cppwinrt
 public:
@@ -91,7 +91,7 @@ hstring tostringHstring{ contosoUri.ToString() }; // L"http://www.contoso.com/"
 tostringHstring = awUri.ToString(); // L"http://www.adventure-works.com/"
 ```
 
-[**hstring::c_str 함수**](/uwp/api/windows.foundation.uri#hstringcstr-function)를 사용하여 표준 전각 함수를 **hstring**에서 가져올 수 있습니다(**std::wstring**에서 가져오는 방식과 동일).
+[  **hstring::c_str 함수**](/uwp/api/windows.foundation.uri#hstringcstr-function)를 사용하여 표준 전각 함수를 **hstring**에서 가져올 수 있습니다(**std::wstring**에서 가져오는 방식과 동일).
 
 ```cppwinrt
 #include <iostream>
@@ -131,7 +131,7 @@ void Print(winrt::hstring const& hstring)
 ```
 
 ## <a name="winrthstring-functions-and-operators"></a>**winrt::hstring** 함수와 연산자
-[**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)일 때는 다양한 생성자, 연산자, 함수 및 반복기가 구현됩니다.
+[  **winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)일 때는 다양한 생성자, 연산자, 함수 및 반복기가 구현됩니다.
 
 **hstring**은 범위이기 때문에 범위 기반 `for`와 함께, 혹은 `std::for_each`와 함께 사용할 수 있습니다. 또한 C++ 표준 라이브러리에서 상응하는 항목을 자연스럽게, 그리고 효율적으로 비교할 수 있는 비교 연산자도 제공합니다. 여기에는 **hstring**을 연결 컨테이너의 키로 사용하는 데 필요한 모든 것이 포함됩니다.
 
@@ -173,5 +173,5 @@ void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::hstring 구조체](/uwp/cpp-ref-for-winrt/hstring)
-* [winrt:: to_hstring 함수](/uwp/cpp-ref-for-winrt/to-hstring)
-* [winrt:: to_string 함수](/uwp/cpp-ref-for-winrt/to-string)
+* [winrt::to_hstring 함수](/uwp/cpp-ref-for-winrt/to-hstring)
+* [winrt::to_string 함수](/uwp/cpp-ref-for-winrt/to-string)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 입력, 원시 게임 컨트롤러
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5f4d49ad49cf9f9065fe17788456e9dd2a4a4e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946799"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644628"
 ---
 # <a name="raw-game-controller"></a>원시 게임 컨트롤러
 
@@ -233,9 +233,9 @@ The [RawGameControllerUWP sample (GitHub)](TODO: Link) demonstrates how to use r
 
 ## <a name="see-also"></a>참고 항목
 
-* [게임 입력 디바이스](input-for-games.md)
-* [게임 입력 시스템](input-practices-for-games.md)
-* [Windows.Gaming.Input 네임스페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input)
+* [게임에 대 한 입력](input-for-games.md)
+* [게임에 대 한 입력된 사례](input-practices-for-games.md)
+* [Windows.Gaming.Input 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input)
 * [Windows.Gaming.Input.RawGameController 클래스](https://docs.microsoft.com/uwp/api/windows.gaming.input.rawgamecontroller)
 * [Windows.Gaming.Input.IGameController 인터페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
 * [Windows.Gaming.Input.IGameControllerBatteryInfo 인터페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo)

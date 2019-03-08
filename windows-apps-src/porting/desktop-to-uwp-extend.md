@@ -1,5 +1,5 @@
 ---
-Description: Extend your desktop application with Windows UIs and components
+Description: Windows UI와 구성 요소로 데스크톱 응용 프로그램 확장
 Search.Product: eADQiWindows 10XVcnh
 title: Windows UI와 구성 요소로 데스크톱 응용 프로그램 확장
 ms.date: 06/08/2018
@@ -7,20 +7,20 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2d1fac6d735d4f6915dea1af531dffa666607fe3
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117813"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641708"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장
 
 일부 Windows 10 환경(예, 터치 구현 UI 페이지)은 최신 앱 컨테이너 내부에서 실행해야 합니다. 이러한 환경을 추가하려는 경우, UWP 프로젝트 및 Windows 런타임 구성 요소로 데스크톱 응용 프로그램을 확장합니다.
 
-대부분의 경우에서 데스크톱 응용 프로그램에서 직접 Windows 런타임 Api를 호출, 되므로이 가이드를 검토 하기 전에 [Windows 10 향상](desktop-to-uwp-enhance.md)볼 수 있습니다.
+대부분의 데스크톱 응용 프로그램에서 직접 Windows 런타임 Api를 호출, 따라서이 가이드를 검토 하기 전에 볼 수 있습니다 [향상에 대 한 Windows 10](desktop-to-uwp-enhance.md)합니다.
 
 >[!NOTE]
->이 가이드는 만든 Windows 앱 패키지를 데스크톱 응용 프로그램에 대 한 가정 합니다. 이 아직 완료 하지 않았다면, [데스크톱 응용 프로그램 패키지를](desktop-to-uwp-root.md)참조 하세요.
+>이 가이드에서는 데스크톱 응용 프로그램에 대 한 Windows 앱 패키지를 만들었음을 가정 합니다. 이렇게 아직 하지 않은 경우 [데스크톱 응용 프로그램 패키지](desktop-to-uwp-root.md)합니다.
 
 준비가 되었으면 시작하겠습니다.
 
@@ -36,13 +36,13 @@ ms.locfileid: "9117813"
 
 ![새 프로젝트 시작](images/desktop-to-uwp/extend-start-project.png)
 
-솔루션에 패키징 프로젝트 없으면 [Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-packaging-dot-net.md)를 참조 하세요.
+솔루션 패키징 프로젝트 없으면 참조 [Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-packaging-dot-net.md)합니다.
 
 ### <a name="configure-the-desktop-application"></a>데스크톱 응용 프로그램 구성
 
 데스크톱 응용 프로그램에 Windows 런타임 Api를 호출 해야 하는 파일에 대 한 참조가 있는지 확인 합니다.
 
-이렇게 하려면 [Windows 10 용 데스크톱 응용 프로그램 향상](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project)항목의 [프로젝트를 먼저 설치](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project) 섹션을 참조 하세요.
+이렇게 하려면 참조는 [프로젝트를 먼저 설치](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project) 항목의 섹션 [Windows 10 용 데스크톱 응용 프로그램을 향상](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project)합니다.
 
 ### <a name="add-a-uwp-project"></a>UWP 프로젝트 추가
 
@@ -76,7 +76,7 @@ ms.locfileid: "9117813"
 
 ### <a name="build-your-solution"></a>솔루션 빌드
 
-오류 없이 표시 하려면 솔루션을 빌드하십시오. 오류가 발생 하면 **Configuration Manager** 열고 프로젝트를 동일한 플랫폼 대상 확인 합니다.
+오류가 표시 되는지 확인 하기 위해 솔루션을 빌드하십시오. 오류가 발생할 경우 엽니다 **Configuration Manager** 프로젝트는 동일한 플랫폼 대상 있는지 확인 합니다.
 
 ![구성 관리자](images/desktop-to-uwp/config-manager.png)
 
@@ -93,21 +93,21 @@ UWP 프로젝트와 런타임 구성 요소를 사용하여 할 수 있는 몇 �
 ![적응형 디자인](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->이 예제에서는 UWP 프로젝트를 솔루션에 추가 하 여 XAML UI를 보여 줍니다. 데스크톱 응용 프로그램에서 XAML Ui를 표시 하는 안정적 지원 되는 방법입니다. 이 방법을 사용 하는 대신 XAML 섬을 사용 하 여 데스크톱 응용 프로그램에 직접 UWP XAML 컨트롤을 추가 하는 것입니다. XAML 제도 개발자 미리 현재 사용할 수 있습니다. 하지만 직접 사용해 프로토타입 작성 하는 코드에서 이제 새, 사용 하는 이러한 프로덕션 코드에서이 시간에 하지 않는 것이 좋습니다. 이러한 Api 및 컨트롤 성숙 안정화 나중에 Windows 릴리스를 계속 합니다. XAML 제도 대 한 자세한 내용은 참조 [데스크톱 응용 프로그램의 UWP 컨트롤](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+>이 예제에는 UWP 프로젝트를 솔루션에 추가 하 여 XAML UI를 보여 줍니다. 데스크톱 응용 프로그램에서 XAML Ui를 표시 하는 안정적인 지원 되는 방법입니다. 이 방법 대신 XAML 아일랜드를 사용 하 여 데스크톱 응용 프로그램에 직접 UWP XAML 컨트롤을 추가 하는 것입니다. XAML 제도 개발자 미리 보기로 현재 사용할 수 있습니다. 직접 사용해 고유의 프로토타입 코드에서 이제 하는 것이 좋습니다, 있지만 사용 것 프로덕션 코드에서는 현재 하지 않는 것이 좋습니다. 이러한 Api 및 컨트롤 성숙 하 고 안정화 향후 Windows 릴리스에서 계속 됩니다. XAML 아일랜드에 대 한 자세한 내용은를 참조 하세요. [데스크톱 응용 프로그램에서 UWP 컨트롤](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>디자인 패턴
 
 XAML 기반 UI를 표시하려면 다음 작업을 수행합니다.
 
-:1: [솔루션 설정](#solution-setup)
+: 하나: [솔루션 설치](#solution-setup)
 
-:2: [XAML UI 만들기](#xaml-UI)
+: 두: [XAML UI 만들기](#xaml-UI)
 
-:3: [UWP 프로젝트에 프로토콜 확장 추가](#add-a-protocol-extension)
+: 3: [UWP 프로젝트에 프로토콜 확장 추가](#add-a-protocol-extension)
 
-:4: [데스크톱 앱에서 UWP 앱 시작](#start)
+: 4: [데스크톱 앱에서 UWP 앱 시작](#start)
 
-:5: [UWP 프로젝트에서 원하는 페이지 표시](#parse)
+: 5: [UWP 프로젝트에서 페이지를 표시 하려는](#parse)
 
 <a id="solution-setup" />
 
@@ -151,7 +151,7 @@ UWP 프로젝트에 XAML UI를 추가합니다. 기본 지도의 XAML은 다음�
 
 ### <a name="add-a-protocol-extension"></a>프로토콜 확장 추가
 
-**솔루션 탐색기**솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일을 열고이 확장을 추가 합니다.
+**솔루션 탐색기**오픈를 **package.appxmanifest** 솔루션의 패키징 프로젝트의 파일이이 확장을 추가 합니다.
 
 ```xml
 <Extensions>
@@ -219,7 +219,7 @@ protected override void OnActivated(Windows.ApplicationModel.Activation.IActivat
 }
 ```
 
-코드 숨김 XAML 페이지에서에서 재정의 ``OnNavigatedTo`` 페이지에 전달 된 매개 변수를 사용 하는 방법. 이 경우에 이 페이지에 전달된 위도 및 경도를 사용하여 지도에서 위치를 표시합니다.
+XAML 페이지에 숨김 코드에서 재정의 된 ``OnNavigatedTo`` 페이지에 전달 된 매개 변수를 사용 하는 방법입니다. 이 경우에 이 페이지에 전달된 위도 및 경도를 사용하여 지도에서 위치를 표시합니다.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -250,25 +250,25 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 데스크톱 응용 프로그램을 공유 대상으로 만들면 사용자가 공유를 지원하는 다른 앱의 사진 등 데이터를 쉽게 공유할 수 있습니다.
 
-예를 들어 사용자가 Microsoft Edge, 사진 앱에서에서 사진을 공유 하는 응용 프로그램 선택할 수 있습니다. 해당 기능이 있는 WPF 샘플 응용 프로그램 다음과 같습니다.
+예를 들어 사용자 Photos 앱은 Microsoft Edge에서 사진을 공유 하는 응용 프로그램을 선택할 수 있습니다. 해당 기능이 있는 WPF 샘플 응용 프로그램을 다음과 같습니다.
 
 ![공유 대상](images/desktop-to-uwp/share-target.png).
 
-전체 샘플을 참조 합니다. [여기서](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/ShareTarget)
+전체 샘플을 볼 [여기](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/ShareTarget)
 
 ### <a name="the-design-pattern"></a>디자인 패턴
 
 응용 프로그램을 공유 대상으로 만들려면 이런 작업을 수행합니다.
 
-:1: [공유 대상 확장 추가](#share-extension)
+: 하나: [공유 대상 확장 추가](#share-extension)
 
-: 2: [OnShareTargetActivated 이벤트 핸들러 재정의](#override)
+: 두: [OnShareTargetActivated 이벤트 처리기를 재정의 합니다.](#override)
 
 : 3: [UWP 프로젝트에 데스크톱 확장 추가](#desktop-extensions)
 
 : 4: [완전 신뢰 프로세스 확장 추가](#full-trust)
 
-: 5: [공유 파일을 가져오는 데스크톱 응용 프로그램 수정](#modify-desktop)
+: 5: [공유 파일을 가져오려면 데스크톱 응용 프로그램 수정](#modify-desktop)
 
 <a id="share-extension" />
 
@@ -276,7 +276,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ### <a name="add-a-share-target-extension"></a>공유 대상 확장 추가
 
-**솔루션 탐색기**솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일을 열고 공유 대상 확장 추가 합니다.
+**솔루션 탐색기**오픈를 **package.appxmanifest** 패키징의 솔루션의 프로젝트 파일과 공유 대상 확장명을 추가 합니다.
 
 ```xml
 <Extensions>
@@ -294,15 +294,15 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 </Extensions>  
 ```
 
-UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다. 이 태그는 UWP 앱에 대 한 실행 파일의 이름 이라고 가정 `ShareTarget.exe`.
+UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다. 이 태그는 UWP 앱에 대 한 실행 파일의 이름 이라고 가정 `ShareTarget.exe`합니다.
 
-또 앱이 공유할 수 있는 파일 형식을 지정해야 합니다. 이 예제에서는 보도록 [PhotoStoreDemo WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램을 공유 대상으로 지정 되므로 비트맵 이미지에 대 한 `Bitmap` 지원 되는 파일 형식에 대 한 합니다.
+또 앱이 공유할 수 있는 파일 형식을 지정해야 합니다. 이 예제에서는 진행 중인 합니다 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 공유 대상 비트맵에 대 한 이미지를 지정 하도록 데스크톱 응용 프로그램 `Bitmap` 지원 되는 파일 형식에 대 한 합니다.
 
 <a id="override" />
 
-### <a name="override-the-onsharetargetactivated-event-handler"></a>OnShareTargetActivated 이벤트 핸들러 재정의
+### <a name="override-the-onsharetargetactivated-event-handler"></a>OnShareTargetActivated 이벤트 처리기를 재정의 합니다.
 
-UWP 프로젝트의 **응용 프로그램** 클래스에서 **OnShareTargetActivated** 이벤트 핸들러를 재정의 합니다.
+재정의 **OnShareTargetActivated** 이벤트 처리기는 **앱** UWP 프로젝트의 클래스입니다.
 
 이 이벤트 처리기는 사용자가 파일을 공유하기 위해 앱을 선택할 때 호출됩니다.
 
@@ -329,13 +329,13 @@ private async void shareWithDesktopApplication(ShareOperation shareOperation)
 }
 ```
 
-이 코드에서는 앱 로컬 저장소 폴더에 사용자가 공유 되는 이미지를 저장 합니다. 나중에 동일한 폴더에서 데스크톱 응용 프로그램 풀 이미지를 수정 합니다. 데스크톱 응용 프로그램은 UWP 앱과 같은 패키지에 포함 되어 있으므로 수행할 수 있습니다.
+이 코드에서는 사용자가 앱 로컬 저장소 폴더에 공유 되는 이미지를 저장 합니다. 나중에 동일한 폴더에서 이미지를 끌어올 데스크톱 응용 프로그램을 수정 합니다. UWP 앱으로 동일한 패키지에 포함 되어 있으므로 데스크톱 응용 프로그램은 가능 합니다.
 
 <a id="desktop-extensions" />
 
 ### <a name="add-desktop-extensions-to-the-uwp-project"></a>UWP 프로젝트에 데스크톱 확장 추가
 
-UWP 앱 프로젝트에 **UWP 용 Windows 데스크톱 확장** 확장을 추가 합니다.
+추가 된 **UWP 용 Windows 데스크톱 확장** UWP 앱 프로젝트를 확장 합니다.
 
 ![데스크톱 확장](images/desktop-to-uwp/desktop-extensions.png)
 
@@ -343,7 +343,7 @@ UWP 앱 프로젝트에 **UWP 용 Windows 데스크톱 확장** 확장을 추가
 
 ### <a name="add-the-full-trust-process-extension"></a>완전 신뢰 프로세스 확장 추가
 
-**솔루션 탐색기**솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일을 열고 하 고이 파일을 이전 추가 하면 공유 대상 확장 옆에 있는 완전 신뢰 프로세스 확장을 추가 합니다.
+**솔루션 탐색기**오픈 합니다 **package.appxmanifest** 솔루션의 패키징 프로젝트의 파일 폴더를 추가한 다음이 추가 하는 공유 대상 확장명 옆에 있는 완전 신뢰 처리 확장 이전 파일입니다.
 
 ```xml
 <Extensions>
@@ -353,19 +353,19 @@ UWP 앱 프로젝트에 **UWP 용 Windows 데스크톱 확장** 확장을 추가
 </Extensions>  
 ```
 
-이 확장 파일 공유를 원하는 데스크톱 응용 프로그램을 시작 하려면 UWP 앱으로 활성화 됩니다. 예제에서는 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램의 실행 파일을 참조 합니다.
+이 확장 파일 공유를 원하는 데스크톱 응용 프로그램을 시작 하는 UWP 앱을 사용 하도록 설정 됩니다. 예제에서는 참조의 실행 파일을 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램입니다.
 
 <a id="modify-desktop" />
 
-### <a name="modify-the-desktop-application-to-get-the-shared-file"></a>공유 파일을 가져오는 데스크톱 응용 프로그램을 수정
+### <a name="modify-the-desktop-application-to-get-the-shared-file"></a>공유 파일을 가져오려면 데스크톱 응용 프로그램 수정
 
-데스크톱 응용 프로그램을 찾아 공유 파일을 처리를 수정 합니다. 이 예제에서는 UWP 앱 로컬 앱 데이터 폴더에 공유 파일을 저장 합니다. 따라서 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램 풀 사진에 해당 폴더에서는 수정 했습니다.
+찾기 및 공유 파일을 처리 하도록 데스크톱 응용 프로그램을 수정 합니다. UWP 앱이 예제에서는 로컬 앱 데이터 폴더에 공유 파일을 저장 합니다. 따라서 수정에서는 합니다 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 해당 폴더에서 끌어오기 사진에 데스크톱 응용 프로그램.
 
 ```csharp
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-사용자가 이미 사용 중인 데스크톱 응용 프로그램의 인스턴스 열려, 수 또한 [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) 이벤트를 처리 하 고 경로에서 파일 위치를 전달 합니다. 그러면 데스크톱 응용 프로그램의 열려 있는 인스턴스 공유 사진을 표시 됩니다.
+이미 있는 데스크톱 응용 프로그램의 인스턴스를 사용자가 열려면에 대 한 것도 처리 합니다 [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) 이벤트 및 파일 위치에 경로 전달 합니다. 이런 방식으로 데스크톱 응용 프로그램의 열려 있는 모든 인스턴스는 공유 사진을 표시 됩니다.
 
 ```csharp
 ...
@@ -395,23 +395,23 @@ private void Watcher_Created(object sender, FileSystemEventArgs e)
 
 앱이 일시 중단된 경우에도 코드를 실행하는 백그라운드 작업을 추가합니다. 백그라운드 작업은 사용자의 상호 작용이 필요하지 않은 작은 작업에 적합합니다. 예를 들어, 메일을 다운로드하거나, 들어오는 채팅 메시지에 대한 알림을 표시하거나, 시스템 조건의 변경에 대응하는 작업입니다.
 
-백그라운드 작업을 등록 하는 WPF 샘플 응용 프로그램 다음과 같습니다.
+백그라운드 작업을 등록 하는 WPF 샘플 응용 프로그램을 다음과 같습니다.
 
 ![백그라운드 작업](images/desktop-to-uwp/sample-background-task.png)
 
 작업은 http 요청을 만들고 요청이 응답을 반환하는 데 걸리는 시간을 측정합니다. 귀하의 작업 훨씬 더 흥미로울 수 있지만 이 샘플은 백그라운드 작업의 기본 메커니즘을 학습하는 데 적합합니다.
 
-전체 샘플을 참조 [다음과 같습니다](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/BGTask).
+전체 샘플을 참조 하세요 [여기](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/BGTask)합니다.
 
 ### <a name="the-design-pattern"></a>디자인 패턴
 
 백그라운드 서비스를 만들려면 다음 작업을 수행합니다.
 
-:1: [백그라운드 작업 구현](#implement-task)
+: 하나: [백그라운드 작업 구현](#implement-task)
 
-:2: [백그라운드 작업 구성](#configure-background-task)
+: 두: [백그라운드 태스크 구성](#configure-background-task)
 
-:3: [백그라운드 작업 등록](#register-background-task)
+: 3: [백그라운드 작업 등록](#register-background-task)
 
 <a id="implement-task" />
 
@@ -458,7 +458,7 @@ public sealed class SiteVerifier : IBackgroundTask
 
 ### <a name="configure-the-background-task"></a>백그라운드 작업 구성
 
-매니페스트 디자이너에서 솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일을 엽니다.
+매니페스트 디자이너에서 엽니다는 **package.appxmanifest** 솔루션의 패키징 프로젝트의 파일입니다.
 
 **선언** 탭에서 **백그라운드 작업** 선언을 추가합니다.
 
@@ -502,7 +502,7 @@ public void RegisterBackgroundTask(String triggerName)
 
 ## <a name="support-and-feedback"></a>지원 및 피드백
 
-**질문에 대한 답변 찾기**
+**질문에 답변**
 
 질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 

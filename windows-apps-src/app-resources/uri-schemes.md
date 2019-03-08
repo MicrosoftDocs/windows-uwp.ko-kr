@@ -1,5 +1,5 @@
 ---
-Description: There are several URI (Uniform Resource Identifier) schemes that you can use to refer to files that come from your app's package, your app's data folders, or the cloud. You can also use a URI scheme to refer to strings loaded from your app's Resources Files (.resw).
+Description: 앱 패키지, 앱의 데이터 폴더 또는 클라우드에서 파일을 참조하는 데 사용할 수 있는 몇 가지 URI (Uniform Resource Identifier) 스키마가 있습니다. URI 스키마를 사용하여 앱의 리소스 파일(.resw)에서 로드되는 문자열을 참조할 수 있습니다.
 title: URI 스키마
 template: detail.hbs
 ms.date: 10/16/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: b449179468d26c357e69ad1d8868004cadd6e2fa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048350"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632058"
 ---
 # <a name="uri-schemes"></a>URI 스키마
 
@@ -41,7 +41,7 @@ hier-part   = "//" authority path-abempty
 
 이 항목에 설명된 모든 URI 스키마는 스키마에 대한 표준화 및 리소스 검색에 대한 일반적인 URI 스키마 규칙(RFC 3986)을 따릅니다. 이러한 URI의 표준화된 형태는 대소문자 및 퍼센트 디코드 RFC 3986 예약되지 않은 문자를 유지합니다.
 
-이 항목에 설명된 모든 URI 스키마의 경우 *스키마*, *기관*, 및 *경로*는 표준 방법으로 대/소문자를 구분하거나 시스템에 의해 대/소문자 구분이 처리됩니다. **참고** 규칙의 예외는 `ms-resource` *기관*이 있으며 대/소문자를 구분합니다.
+이 항목에 설명된 모든 URI 스키마의 경우 *스키마*, *기관*, 및 *경로*는 표준 방법으로 대/소문자를 구분하거나 시스템에 의해 대/소문자 구분이 처리됩니다. **참고** 규칙의 예외는 `ms-resource`*기관*이 있으며 대/소문자를 구분합니다.
 
 ## <a name="ms-appx-and-ms-appx-web"></a>ms-appx 및 ms-appx-web
 
@@ -251,9 +251,9 @@ ms-resource://john:password@contoso.myapp:8080/Resources/String1
 
 자세한 내용과 예는 [UI 및 앱 패키지 매니페스트의 문자열 지역화](localize-strings-ui-manifest.md) 및 [언어, 배율, 고대비에 대한 타일 및 알림 메시지](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)를 참조하세요.
 
-`ms-resource`의 경로 구성 요소는 일반 URI와 같이 대/소문자를 구분합니다. 그러나 기본 검색 수행 [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) *ignoreCase* 설정 `true`합니다.
+`ms-resource`의 경로 구성 요소는 일반 URI와 같이 대/소문자를 구분합니다. 그러나 기본 검색에는 [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) 사용 하 여 *ignoreCase* 로 `true`합니다.
 
-URI의 표준화된 형태는 대소문자와 퍼센트 디코드(두자리 16진수가 따르는 "%" 기호) RFC 3986 예약되지 않은 문자를 유지합니다. 문자 "?", "#", "/", "*", '”'(큰따옴표)는 파일 또는 폴더 이름 같은 데이터를 나타내는 경로에 %로 인코딩되어야 합니다. 검색하기 전에 모든 퍼센트로 인코딩된 문자를 디코딩합니다. 따라서 라는 리소스 파일에서 문자열 리소스를 검색 하려면 `Hello#World.resw`을이 URI를 사용 합니다.
+URI의 표준화된 형태는 대소문자와 퍼센트 디코드(두자리 16진수가 따르는 "%" 기호) RFC 3986 예약되지 않은 문자를 유지합니다. 문자 "?", "#", "/", "*", '”'(큰따옴표)는 파일 또는 폴더 이름 같은 데이터를 나타내는 경로에 %로 인코딩되어야 합니다. 검색하기 전에 모든 퍼센트로 인코딩된 문자를 디코딩합니다. 따라서 리소스 파일에서 문자열 리소스를 검색 하 라는 `Hello#World.resw`,이 URI를 사용 합니다.
 
 ```xml
 ms-resource:///Hello%23World/String1
@@ -267,10 +267,10 @@ ms-resource:///Hello%23World/String1
 
 ## <a name="related-topics"></a>관련 항목
 
-* [URI(Uniform Resource Identifier): 일반 구문](https://go.microsoft.com/fwlink/p/?LinkId=263444)
+* [URI (uniform Resource Identifier): 제네릭 구문](https://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [앱 패키징](../packaging/index.md)
-* [XAML 태그와 코드에서 이미지 또는 다른 자산 참조](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
+* [XAML 태그 및 코드에서 이미지 또는 다른 자산 참조](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)
-* [UI와 앱 패키지 매니페스트에 문자열 지역화](localize-strings-ui-manifest.md)
+* [UI 및 앱 패키지 매니페스트에 문자열 지역화](localize-strings-ui-manifest.md)
 * [리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/jj552947)
-* [언어, 배율, 고대비에 대한 타일 및 알림 메시지](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)
+* [언어, 배율 및 고대비 대 한 타일 및 알림 알림 지원](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

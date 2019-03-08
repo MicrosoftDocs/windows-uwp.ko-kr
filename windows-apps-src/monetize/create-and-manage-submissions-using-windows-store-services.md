@@ -1,22 +1,22 @@
 ---
 ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
-description: Microsoft Store 제출 API를 사용 하 여 프로그래밍 방식으로 만들고 파트너 센터 계정에 등록 된 앱 제출을 관리 합니다.
+description: Microsoft Store 제출 API를 사용 하 여 프로그래밍 방식으로 만들고 파트너 센터 계정에 등록 된 앱에 대 한 서브 미션을 관리 합니다.
 title: 제출 만들기 및 관리
 ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API
 ms.localizationpriority: medium
 ms.openlocfilehash: 82e5ba10b8f0480f4d996840df26817e324111d8
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049470"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613118"
 ---
 # <a name="create-and-manage-submissions"></a>제출 만들기 및 관리
 
 
-*Microsoft Store 제출 API* 사용 하 여 프로그래밍 방식으로 쿼리하고 앱, 추가 기능 및 사용자 또는 사용자 조직의 파트너 센터 계정에 대 한 패키지 플라이트에 대 한 제출을 만듭니다. 이 API는 계정에서 많은 앱 또는 추가 기능을 관리하고 이러한 자산의 제출 프로세스를 자동화 및 최적화하려는 경우 유용합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
+사용 된 *Microsoft Store 제출 API* 귀하나 귀하 조직의 파트너 센터 계정에 대 한 프로그래밍 방식으로 쿼리 하 고 앱, 추가 기능 및 패키지에 대 한 서브 미션을 만들 항공편 합니다. 이 API는 계정에서 많은 앱 또는 추가 기능을 관리하고 이러한 자산의 제출 프로세스를 자동화 및 최적화하려는 경우 유용합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
 다음 단계에서는 Microsoft Store 제출 API를 사용하는 종단 간 프로세스를 설명합니다.
 
@@ -27,29 +27,29 @@ ms.locfileid: "9049470"
 <span id="not_supported" />
 
 > [!IMPORTANT]
-> 이 API를 사용 하 여 앱, 패키지 플라이트 또는 추가 기능에 대 한 제출을 생성 하는 경우 추가 변경 제출 API를 사용 하 여만 아니라 파트너 센터에서 해야 합니다. 파트너 센터를 사용 하 여 원래 API를 사용 하 여 만든 제출을 변경 수를 변경 하거나 API를 사용 하 여 해당 제출을 커밋 됩니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
+> 이 API를 사용 하 여 응용 프로그램, 패키지 비행 또는 추가 기능에 대 한 제출을 만드는 경우 아니라 파트너 센터 API를 사용해 서만 제출에 대 한 추가 변경이 수행 해야 합니다. 파트너 센터를 사용 하 여 API를 사용 하 여 원래 만든 제출물을 변경 하려면 변경 하거나 해당 제출 API를 사용 하 여 커밋할 수 됩니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 > [!IMPORTANT]
-> [비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 대량 구매](../publish/organizational-licensing.md)하기 위한 제출을 게시하거나 [LOB 앱](../publish/distribute-lob-apps-to-enterprises.md)에 대한 제출을 기업에 직접 게시하는 데 이 API를 사용할 수 없습니다. 이러한 시나리오 모두 사용 해야 파트너 센터에 제출 게시 합니다.
+> [비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 대량 구매](../publish/organizational-licensing.md)하기 위한 제출을 게시하거나 [LOB 앱](../publish/distribute-lob-apps-to-enterprises.md)에 대한 제출을 기업에 직접 게시하는 데 이 API를 사용할 수 없습니다. 이러한 시나리오 모두를 사용 해야 제출 파트너 센터에 게시 합니다.
 
 > [!NOTE]
-> 필수 앱 업데이트 및 Microsoft Store 관리 소모성 추가 기능을 사용하는 앱 또는 추가 기능에 이 API를 사용할 수 없습니다. 이러한 기능 중 하나를 사용하는 앱 또는 추가 기능에서 Microsoft Store 제출 API를 사용하는 경우 이 API는 409 오류 코드를 반환합니다. 이 경우 앱 또는 추가 기능에 대 한 제출을 관리 하려면 파트너 센터를 사용 해야 합니다.
+> 필수 앱 업데이트 및 Microsoft Store 관리 소모성 추가 기능을 사용하는 앱 또는 추가 기능에 이 API를 사용할 수 없습니다. 이러한 기능 중 하나를 사용하는 앱 또는 추가 기능에서 Microsoft Store 제출 API를 사용하는 경우 이 API는 409 오류 코드를 반환합니다. 이 경우 앱 또는 추가 기능에 대 한 전송을 관리 하려면 파트너 센터를 사용 해야 합니다.
 
 <span id="prerequisites" />
 
-## <a name="step-1-complete-prerequisites-for-using-the-microsoft-store-submission-api"></a>1단계: Microsoft Store 제출 API를 사용하기 위한 필수 조건 완료
+## <a name="step-1-complete-prerequisites-for-using-the-microsoft-store-submission-api"></a>1단계: Microsoft Store 제출 API를 사용 하기 위한 필수 구성 요소를 완료 합니다.
 
 Microsoft Store 제출 API를 호출하는 코드 작성을 시작하기 전에 다음 필수 조건을 완료했는지 확인합니다.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](https://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않은 경우 추가 비용 없이 [파트너 센터에서 Azure AD를 새로 만들](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
+* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](https://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 수이 고, 그렇지 [파트너 센터에서 새 Azure AD 만들기](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 추가 요금 없이 합니다.
 
-* [파트너 센터 계정과 Azure AD 응용 프로그램 연결](#associate-an-azure-ad-application-with-your-windows-partner-center-account) 해야 하 고 테 넌 트 ID, 클라이언트 ID 및 키 가져와야 합니다. 이러한 값은 Microsoft Store 제출 API에 대한 호출에 사용하는 Azure AD 액세스 토큰을 가져오는 데 필요합니다.
+* 수행 해야 합니다 [파트너 센터 계정을 사용 하 여 Azure AD 응용 프로그램에 연결할](#associate-an-azure-ad-application-with-your-windows-partner-center-account) 가져오고, 테 넌 트 ID, 클라이언트 ID 및 키입니다. 이러한 값은 Microsoft Store 제출 API에 대한 호출에 사용하는 Azure AD 액세스 토큰을 가져오는 데 필요합니다.
 
 * Microsoft Store 제출 API에서 사용하도록 앱을 준비합니다.
 
-  * 파트너 센터에서 앱 아직 존재 하지 않는 경우 [파트너 센터에서 해당 이름을 예약 하 여 앱 만들기](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)해야 합니다. Microsoft Store 제출 API는 앱을 만드는; 파트너 센터에서 사용할 수 없습니다. 을 만드는 파트너 센터에서 작업 해야 있으며 다음 그 후 사용할 수 있습니다 API를 앱에 액세스 하 고 그에 대 한 제출을 프로그래밍 방식으로 만들 합니다. 그러나 해당 제출을 만들기 전에 API를 사용하여 프로그래밍 방식으로 추가 기능 및 패키지 플라이트를 만들 수 있습니다.
+  * 파트너 센터에 아직 존재 하지 않는 앱 해야 [파트너 센터에서 해당 이름을 예약 하 여 앱 만들기](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)합니다. 파트너 센터에서 앱을 만드는 Microsoft Store 제출 API를 사용할 수 없습니다. 만들려면 파트너 센터에서 작업 해야 하 고 그 후 사용할 수 있습니다 API 앱에 액세스 하 여 프로그래밍 방식으로 해당 서브 미션을 만들 합니다. 그러나 해당 제출을 만들기 전에 API를 사용하여 프로그래밍 방식으로 추가 기능 및 패키지 플라이트를 만들 수 있습니다.
 
-  * 이 API를 사용 하 여 지정된 된 앱에 대 한 제출을 만들기 전에 먼저 등의 [파트너 센터에서 앱에 대 한 개의 제출을](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 설문지에 답변 하기 해야 합니다. 이 작업을 수행한 후 API를 사용하여 프로그래밍 방식으로 이 앱에 대한 새 제출을 만들 수 있습니다. 이러한 유형의 제출에 대해 API를 사용하기 전에 추가 기능 제출 또는 패키지 플라이트 제출을 만들 필요는 없습니다.
+  * 이 API를 사용 하 여 지정된 된 앱에 대 한 제출을 만들기 전에 먼저 [파트너 센터에서 앱에 대 한 하나의 제출을 만들기](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), 응답을 포함 하는 [등급 age](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 설문지. 이 작업을 수행한 후 API를 사용하여 프로그래밍 방식으로 이 앱에 대한 새 제출을 만들 수 있습니다. 이러한 유형의 제출에 대해 API를 사용하기 전에 추가 기능 제출 또는 패키지 플라이트 제출을 만들 필요는 없습니다.
 
   * 앱 제출을 만들거나 업데이트하는 중이고 앱 패키지를 포함해야 하는 경우 [앱 패키지를 준비합니다](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements).
 
@@ -59,16 +59,16 @@ Microsoft Store 제출 API를 호출하는 코드 작성을 시작하기 전에 
 
 <span id="associate-an-azure-ad-application-with-your-windows-partner-center-account" />
 
-### <a name="how-to-associate-an-azure-ad-application-with-your-partner-center-account"></a>Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하는 방법
+### <a name="how-to-associate-an-azure-ad-application-with-your-partner-center-account"></a>파트너 센터 계정을 사용 하 여 Azure AD 응용 프로그램을 연결 하는 방법
 
-Microsoft Store 제출 API를 사용 하려면 먼저 Azure AD 응용 프로그램을 파트너 센터 계정에 연결 해야 합니다, 그리고 ID 및 클라이언트 ID 응용 프로그램에 대 한 테 넌 트를 검색 및 키를 생성 합니다. Azure AD 응용 프로그램은 Microsoft Store 제출 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
+Microsoft Store 제출 API를 사용 하려면 먼저 파트너 센터 계정을 사용 하 여 Azure AD 응용 프로그램을 연결 하 고, ID 및 클라이언트 응용 프로그램 ID를 테 넌 트를 검색 하 고, 키를 생성 해야 있습니다. Azure AD 응용 프로그램은 Microsoft Store 제출 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
 
 > [!NOTE]
 > 이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
 
-1.  파트너 센터에서는 [조직의 파트너 센터 계정을 조직의 Azure AD 디렉터리와 연결](../publish/associate-azure-ad-with-partner-center.md)합니다.
+1.  파트너 센터에서 [조직의 Azure AD 디렉터리를 사용 하 여 조직의 파트너 센터 계정을 연결](../publish/associate-azure-ad-with-partner-center.md)합니다.
 
-2.  파트너 센터, [Azure AD 응용 프로그램을 추가](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) 앱을 나타내는 또는 파트너 센터 계정에 대 한 제출에 액세스 하는 데 사용할 서비스의 **계정 설정** 섹션에서 **사용자가** 페이지에서 다음으로. 이 응용 프로그램에 **관리자** 역할을 할당하도록 합니다. 응용 프로그램이 아직 Azure AD 디렉터리에 수 있는 경우 [새 파트너 센터에서 Azure AD 응용 프로그램](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account)합니다.  
+2.  다음으로, 합니다 **사용자** 페이지에 **계정 설정** 파트너 센터의 섹션 [Azure AD 응용 프로그램을 추가](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) 앱 또는 서비스를 사용 하 여 나타내는 파트너 센터 계정에 대 한 서브 미션에 액세스 합니다. 이 응용 프로그램에 **관리자** 역할을 할당하도록 합니다. Azure AD 디렉터리에서 아직 응용 프로그램이 없는 경우 [새 파트너 센터에서 Azure AD 응용 프로그램](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account)합니다.  
 
 3.  **사용자** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
 
@@ -93,7 +93,7 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-POST URI 및 *client\_id* 및 *client\_secret* 매개 변수에서 *tenant\_id* 값에 대 한 테 넌 트 ID, 클라이언트 ID 및 이전 섹션에서 파트너 센터에서 검색 하는 응용 프로그램에 대 한 키를 지정 합니다. *resource* 매개 변수에는 ```https://manage.devcenter.microsoft.com```을 지정해야 합니다.
+에 대 한 합니다 *테 넌 트\_id* POST 값 및 *클라이언트\_id* 및 *클라이언트\_비밀* 매개 변수를 지정 된 테 넌 트 ID, 클라이언트 ID 및 이전 섹션에서 파트너 센터에서 검색 하는 응용 프로그램에 대 한 키입니다. *resource* 매개 변수에는 ```https://manage.devcenter.microsoft.com```을 지정해야 합니다.
 
 만료된 액세스 토큰은 [여기](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens)의 지침에 따라 새로 고칠 수 있습니다.
 
@@ -101,7 +101,7 @@ C#, Java 또는 Python 코드를 사용하여 액세스 토큰을 가져오는 �
 
 <span id="call-the-windows-store-submission-api">
 
-## <a name="step-3-use-the-microsoft-store-submission-api"></a>3단계: Microsoft Store 제출 API 사용
+## <a name="step-3-use-the-microsoft-store-submission-api"></a>3단계: Microsoft Store 제출 API를 사용 합니다.
 
 Azure AD 액세스 토큰이 있으면 Microsoft Store 제출 API에서 메서드를 호출할 수 있습니다. API에는 앱, 추가 기능 및 패키지 플라이트에 대한 시나리오로 그룹화된 많은 메서드가 포함되어 있습니다. 제출을 만들거나 업데이트하려면 일반적으로 Microsoft Store 제출 API에서 특정 순서로 여러 메서드를 호출합니다. 각 시나리오와 각 메서드의 구문에 대한 자세한 내용은 다음 표의 문서를 참조하세요.
 
@@ -110,9 +110,9 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 제출 API에서 메서�
 
 | 시나리오       | 설명                                                                 |
 |---------------|----------------------------------------------------------------------|
-| 앱 |  앱에 대 한 제출을 만들고 파트너 센터 계정에 등록 된 모든 앱에 대 한 데이터를 검색 합니다. 이러한 메서드에 대한 자세한 내용은 다음 문서를 참조하세요. <ul><li>[앱 데이터 가져오기](get-app-data.md)</li><li>[앱 제출 관리](manage-app-submissions.md)</li></ul> |
-| 추가 기능 | 앱에 대한 추가 기능을 가져오거나 만들거나 삭제한 다음 추가 기능에 대한 제출을 가져오거나 만들거나 삭제합니다. 이러한 메서드에 대한 자세한 내용은 다음 문서를 참조하세요. <ul><li>[추가 기능 관리](manage-add-ons.md)</li><li>[추가 기능 제출 관리](manage-add-on-submissions.md)</li></ul> |
-| 패키지 플라이트 | 앱에 대한 패키지 플라이트를 가져오거나 만들거나 삭제한 다음 패키지 플라이트에 대한 제출을 가져오거나 만들거나 삭제합니다. 이러한 메서드에 대한 자세한 내용은 다음 문서를 참조하세요. <ul><li>[패키지 플라이트 관리](manage-flights.md)</li><li>[패키지 플라이트 제출 관리](manage-flight-submissions.md)</li></ul> |
+| 앱 |  파트너 센터 계정에 등록 되어 있고 앱에 대 한 서브 미션을 만들 수 있는 모든 앱에 대 한 데이터를 검색 합니다. 이러한 메서드에 대한 자세한 내용은 다음 문서를 참조하세요. <ul><li>[앱 데이터 가져오기](get-app-data.md)</li><li>[응용 프로그램 제출을 관리합니다](manage-app-submissions.md)</li></ul> |
+| 추가 기능 | 앱에 대한 추가 기능을 가져오거나 만들거나 삭제한 다음 추가 기능에 대한 제출을 가져오거나 만들거나 삭제합니다. 이러한 메서드에 대한 자세한 내용은 다음 문서를 참조하세요. <ul><li>[추가 기능 관리](manage-add-ons.md)</li><li>[추가 기능 제안 관리](manage-add-on-submissions.md)</li></ul> |
+| 패키지 플라이트 | 앱에 대한 패키지 플라이트를 가져오거나 만들거나 삭제한 다음 패키지 플라이트에 대한 제출을 가져오거나 만들거나 삭제합니다. 이러한 메서드에 대한 자세한 내용은 다음 문서를 참조하세요. <ul><li>[패키지 항공편 관리](manage-flights.md)</li><li>[비행 서브 미션 패키지를 관리 합니다.](manage-flight-submissions.md)</li></ul> |
 
 <span id="code-samples"/>
 
@@ -120,12 +120,12 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 제출 API에서 메서�
 
 다음 문서는 여러 다른 프로그래밍 언어로 Microsoft Store 제출 API를 사용하는 방법을 보여 주는 자세한 코드 예제를 제공합니다.
 
-* [C# 샘플: 앱, 추가 기능, 플라이트 제출](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [C# 샘플: 앱의 게임 옵션과 예고편 제출](csharp-code-examples-for-submissions-game-options-and-trailers.md)
-* [Java 샘플: 앱, 추가 기능, 플라이트 제출](java-code-examples-for-the-windows-store-submission-api.md)
-* [Java 샘플: 앱의 게임 옵션과 예고편 제출](java-code-examples-for-submissions-game-options-and-trailers.md)
-* [Python 샘플: 앱, 추가 기능, 플라이트 제출](python-code-examples-for-the-windows-store-submission-api.md)
-* [Python 샘플: 게임 옵션과 예고편이 포함된 앱 제출](python-code-examples-for-submissions-game-options-and-trailers.md)
+* [C#샘플: 앱, 추가 기능 및 항공편에 대 한 서브 미션](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [C#예제: 게임 옵션 및 트레일러를 사용 하 여 앱 제출](csharp-code-examples-for-submissions-game-options-and-trailers.md)
+* [Java 샘플: 앱, 추가 기능 및 항공편에 대 한 서브 미션](java-code-examples-for-the-windows-store-submission-api.md)
+* [Java 샘플: 게임 옵션 및 트레일러를 사용 하 여 앱 제출](java-code-examples-for-submissions-game-options-and-trailers.md)
+* [Python 샘플: 앱, 추가 기능 및 항공편에 대 한 서브 미션](python-code-examples-for-the-windows-store-submission-api.md)
+* [Python 샘플: 게임 옵션 및 트레일러를 사용 하 여 앱 제출](python-code-examples-for-submissions-game-options-and-trailers.md)
 
 ## <a name="storebroker-powershell-module"></a>StoreBroker PowerShell 모듈
 
@@ -135,7 +135,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 ## <a name="troubleshooting"></a>문제 해결
 
-| 문제      | 해결 방법                                          |
+| 문제      | 해상도                                          |
 |---------------|---------------------------------------------|
 | PowerShell에서 Microsoft Store 제출 API를 호출한 후 API에 대한 응답 데이터를 [ConvertFrom Json](https://technet.microsoft.com/library/hh849898.aspx) cmdlet을 사용하여 JSON 형식에서 PowerShell 개체로 변환하고 [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet을 사용하여 다시 JSON 형식으로 변환하면 API에 대한 응답 데이터가 손상됩니다. |  기본적으로 [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet에 대한 *-Depth* 매개 변수는 개체의 2개 수준으로 설정되며 이는 Microsoft Store 제출 API에 에서 반환하는 대부분의 JSON 개체에는 너무 얕습니다. [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet을 호출할 때 *-Depth* 매개 변수를 20과 같이 큰 수로 설정합니다. |
 
@@ -144,13 +144,13 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 Microsoft Store 제출 API에 대한 질문이 있거나 이 API의 제출을 관리하는 데 도움이 필요한 경우 다음 리소스를 사용합니다.
 
 * [포럼](https://social.msdn.microsoft.com/Forums/windowsapps/home?forum=wpsubmit)에서 궁금한 사항을 질문합니다.
-* 우리의 [지원 페이지를](https://developer.microsoft.com/windows/support) 방문 하 고 파트너 센터에 대 한 보조 지원 옵션 중 하나를 요청 합니다. 문제 유형 및 범주를 선택하라는 메시지가 표시되면 **앱 제출 및 인증**과 **앱 제출**을 각각 선택합니다.  
+* 방문 우리의 [지원 페이지](https://developer.microsoft.com/windows/support) 및 파트너 센터에 대 한 보조 지원 옵션 중 하나를 요청 합니다. 문제 유형 및 범주를 선택하라는 메시지가 표시되면 **앱 제출 및 인증**과 **앱 제출**을 각각 선택합니다.  
 
 ## <a name="related-topics"></a>관련 항목
 
 * [앱 데이터 가져오기](get-app-data.md)
-* [앱 제출 관리](manage-app-submissions.md)
+* [응용 프로그램 제출을 관리합니다](manage-app-submissions.md)
 * [추가 기능 관리](manage-add-ons.md)
-* [추가 기능 제출 관리](manage-add-on-submissions.md)
-* [패키지 플라이트 관리](manage-flights.md)
-* [패키지 플라이트 제출 관리](manage-flight-submissions.md)
+* [추가 기능 제안 관리](manage-add-on-submissions.md)
+* [패키지 항공편 관리](manage-flights.md)
+* [비행 서브 미션 패키지를 관리 합니다.](manage-flight-submissions.md)

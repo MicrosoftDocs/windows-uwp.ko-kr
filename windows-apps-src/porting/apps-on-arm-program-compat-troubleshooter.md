@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10 s, 항상 연결, 호환성 문제 해결사, ARM의 windows
 ms.localizationpriority: medium
 ms.openlocfilehash: 763b00a5790274d81b6daa2838ef926936e458db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946371"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57647618"
 ---
 # <a name="program-compatibility-troubleshooter-on-arm"></a>ARM의 프로그램 호환성 문제 해결사
 x86 앱을 지원하는 에뮬레이션은 ARM64 기반 Windows 10을 위해 만들어진 새 기능입니다. 때때로 에뮬레이션은 최상의 환경을 제공하지 않는 최적화를 수행합니다. 프로그램 호환성 문제 해결사를 사용하여 사용자 x86에 대한 에뮬레이션을 전환하여 기본 최적화를 줄이고 잠재적으로 호환성을 늘릴 수 있습니다.
@@ -32,7 +32,7 @@ x86 앱을 지원하는 에뮬레이션은 ARM64 기반 Windows 10을 위해 만
 
 실행 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 에뮬레이션 설정을 전환할 수 있습니다.
 
-ARM에서 **ARM 기반 Windows10**이란 제목의 섹션은 **호환성** 탭에서 사용할 수 있습니다. **에뮬레이션 설정 변경**을 클릭하여 여기와 같은 두 번째 창을 실행합니다.
+ARM에서 섹션 이라는 **ARM에서 Windows 10** 에서 사용할 수 있습니다 합니다 **호환성** 탭 합니다. 클릭 **에뮬레이션 설정을 변경할** 다음과 같이 두 번째 창을 시작 합니다.
 
 ![에뮬레이션 설정 변경 스크린샷](images/arm/Capture.png)
 

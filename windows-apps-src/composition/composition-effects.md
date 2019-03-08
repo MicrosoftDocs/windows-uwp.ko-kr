@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ebf54e062ef2388562cc970a2f124f0ce1f978c7
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045316"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653828"
 ---
 # <a name="composition-effects"></a>컴퍼지션 효과
 
-[**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) API를 사용하면 애니메이션 효과를 줄 수 있는 효과 속성을 사용하여 이미지 및 UI에 실시간 효과를 적용할 수 있습니다. 이 개요에서는 컴퍼지션 시각적 개체에 효과를 적용할 수 있는 전체 기능을 실행할 것입니다.
+[  **Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) API를 사용하면 애니메이션 효과를 줄 수 있는 효과 속성을 사용하여 이미지 및 UI에 실시간 효과를 적용할 수 있습니다. 이 개요에서는 컴퍼지션 시각적 개체에 효과를 적용할 수 있는 전체 기능을 실행할 것입니다.
 
 응용 프로그램에서 효과를 설명하는 개발자를 위해 [UWP(유니버설 Windows 플랫폼)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)를 일관적으로 지원하기 위해, 컴퍼지션 효과에서는 Win2D의 IGraphicsEffect 인터페이스를 활용하여 [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 통해 효과 설명을 사용합니다.
 
@@ -23,15 +23,15 @@ ms.locfileid: "9045316"
 
 효과 브러시는 효과 그래프 출력에서 내용을 가져오는 컴퍼지션 트리 시각적 개체에 사용됩니다. 효과는 기존 표면/텍스처를 참조할 수 있지만 다른 컴퍼지션 트리의 출력은 참조할 수 없습니다.
 
-[**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)와 효과 브러시를 사용하여 XAML UIElements에도 효과를 적용할 수 있습니다.
+[  **XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)와 효과 브러시를 사용하여 XAML UIElements에도 효과를 적용할 수 있습니다.
 
 ## <a name="effect-features"></a>효과 기능
 
 - [효과 라이브러리](./composition-effects.md#effect-library)
-- [효과 연결](./composition-effects.md#chaining-effects)
+- [효과 체인](./composition-effects.md#chaining-effects)
 - [애니메이션 지원](./composition-effects.md#animation-support)
-- [상수 및 애니메이션 효과 속성](./composition-effects.md#constant-vs-animated-effect-properties)
-- [독립 속성이 있는 여러 효과 인스턴스](./composition-effects.md#multiple-effect-instances-with-independent-properties)
+- [상수 및 애니메이션된 적용 속성](./composition-effects.md#constant-vs-animated-effect-properties)
+- [독립적인 속성을 사용 하 여 여러 효과 인스턴스](./composition-effects.md#multiple-effect-instances-with-independent-properties)
 
 ### <a name="effect-library"></a>효과 라이브러리
 
@@ -44,8 +44,8 @@ ms.locfileid: "9045316"
 | 혼합 효과         | 두 개의 이미지를 결합하는 혼합 효과를 만듭니다. 컴퍼지션은 Win2D에서 지원되는 26개의 [혼합 모드](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.htm) 중에서 21개를 제공합니다.        |
 | 색 소싱         | 단색을 포함하는 이미지를 생성합니다.                                                                                                                                                                               |
 | 합성            | 두 개의 이미지를 결합합니다. 컴퍼지션은 Win2D에서 지원되는 13개의 [합성 모드](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.htm)를 모두 제공합니다.                                              |
-| 대비             | 이미지의 대비를 늘리거나 줄입니다.                                                                                                                                                                           |
-| 노출             | 이미지의 노출을 늘리거나 줄입니다.                                                                                                                                                                           |
+| 이 예와             | 이미지의 대비를 늘리거나 줄입니다.                                                                                                                                                                           |
+| Exposure             | 이미지의 노출을 늘리거나 줄입니다.                                                                                                                                                                           |
 | 회색조            | 이미지를 단색형 회색으로 변환합니다.                                                                                                                                                                                   |
 | 감마 전달       | 채널당 감마 전달 함수를 적용하여 이미지의 색을 변경합니다.                                                                                                                                           |
 | 색상 회전           | 색상 값을 회전하여 이미지의 색을 변경합니다.                                                                                                                                                                   |
@@ -54,7 +54,7 @@ ms.locfileid: "9045316"
 | 세피아                | 이미지를 세피아 톤으로 변환합니다.                                                                                                                                                                                          |
 | 온도 및 색조 | 이미지의 온도 및/또는 색조를 조정합니다.                                                                                                                                                                           |
 
-자세한 내용은 Win2D의 [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 참조하세요. 컴퍼지션에서 지원되지 않는 효과는 \[NoComposition\]으로 표시됩니다.
+자세한 내용은 Win2D의 [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 참조하세요. 컴퍼지션에서 지원 되지 않습니다 효과 이라고 명시 \[NoComposition\]합니다.
 
 ### <a name="chaining-effects"></a>효과 연결
 
@@ -136,9 +136,9 @@ catEffect.Properties.StartAnimation("saturationEffect.Saturation", effectAnimati
 - [Visual Studio 설치](./composition-effects.md#installing-visual-studio)
 - [새 프로젝트 만들기](./composition-effects.md#creating-a-new-project)
 - [Win2D 설치](./composition-effects.md#installing-win2d)
-- [컴퍼지션 기본 사항 설정](./composition-effects.md#setting-your-composition-basics)
+- [컴퍼지션 사항을 설정합니다.](./composition-effects.md#setting-your-composition-basics)
 - [CompositionSurface 브러시 만들기](./composition-effects.md#creating-a-compositionsurface-brush)
-- [효과 만들기, 컴파일 및 적용](./composition-effects.md#creating-compiling-and-applying-effects)
+- [만들기, 컴파일 및 효과 적용](./composition-effects.md#creating-compiling-and-applying-effects)
 
 ### <a name="installing-visual-studio"></a>Visual Studio 설치
 
@@ -235,9 +235,9 @@ LoadImage(surfaceBrush);
 
 ![흐릿한 이미지](images/composition-cat-desaturated.png)
 
-## <a name="more-information"></a>추가 정보
+## <a name="more-information"></a>자세한 정보
 
-- [Microsoft – 컴퍼지션 GitHub](https://github.com/Microsoft/composition)
+- [Microsoft-컴퍼지션 GitHub](https://github.com/Microsoft/composition)
 - [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878)
 - [Twitter의 Windows 컴퍼지션 팀](https://twitter.com/wincomposition)
 - [컴퍼지션 개요](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
@@ -245,4 +245,4 @@ LoadImage(surfaceBrush);
 - [컴퍼지션 브러시](composition-brushes.md)
 - [XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)
 - [애니메이션 개요](composition-animation.md)
-- [BeginDraw 및 EndDraw를 사용하여 컴퍼지션 네이티브 DirectX 및 Direct2D 상호 운용](composition-native-interop.md)
+- [컴퍼지션 네이티브 DirectX 및 Direct2D와의 상호 운용 BeginDraw 및 EndDraw](composition-native-interop.md)

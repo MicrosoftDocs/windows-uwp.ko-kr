@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7258e8870519478ce49b7b2e60493a91a1277bbc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935525"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57658398"
 ---
 # <a name="get-mediamarketplaceidcrossmediagroupsearch"></a>GET (/media/{marketplaceId}/crossMediaGroupSearch)
-여러 다른 미디어 그룹에서 항목을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
+여러 다양 한 미디어 그룹에서 항목을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`합니다.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4EEB)
@@ -27,28 +27,28 @@ ms.locfileid: "8935525"
  
 ## <a name="remarks"></a>설명
  
-그룹 간 API에는 클라이언트가 여러 다른 미디어 그룹에서 항목을 검색할 수 있습니다. 이 API 결과 통해 페이징을 정방향 연속 토큰을 사용을 해야 합니다. 이 API는 쿼리 구체화를 수락합니다.
+그룹 간 API 클라이언트를 여러 다양 한 미디어 그룹에서 항목을 검색할 수 있습니다. 이 API는 결과 통해 페이징에 대 한 정방향 전용 연속 토큰을 사용할이 필요합니다. 이 API는 쿼리 구체화를 허용합니다.
  
-이제 **SandboxId** 는 XToken 클레임이에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
+**SandboxId** 는 XToken에 클레임에서 검색 되 고 적용 합니다. 경우는 **SandboxId** 없을 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류가 throw 됩니다.
   
 <a id="ID4EEB"></a>
 
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| marketplaceId| string| 필수. 문자열 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>에서 가져온 값입니다.| 
+| marketplaceId| 문자열| 필수. 문자열에서 가져온 값을 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>합니다.| 
   
 <a id="ID4EPB"></a>
 
  
 ## <a name="query-string-parameters"></a>쿼리 문자열 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | --- | --- | --- | 
-| continuationToken| string| 선택 사항입니다. ContinuationToken 매개 변수를 참조 하세요.| 
-| q| string| 필수. 검색에 사용 된 용어를 쿼리 합니다.| 
+| continuationToken| 문자열| 선택 사항. ContinuationToken 매개 변수를 참조 하세요.| 
+| q:| 문자열| 필수. 검색에 사용 된 용어를 쿼리 합니다.| 
   
 <a id="ID4ETC"></a>
 
@@ -58,9 +58,9 @@ ms.locfileid: "8935525"
 <a id="ID4EZC"></a>
 
  
-### <a name="sample-response"></a>예제 응답
+### <a name="sample-response"></a>샘플 응답
  
-아래 JSON 코드 호출에 대 한 응답에서은 `/media/en-us/crossMediaGroupSearch?q=vector&maxItems=25&fields=all`.
+아래의 JSON 코드는 호출에 대 한 응답에서 `/media/en-us/crossMediaGroupSearch?q=vector&maxItems=25&fields=all`합니다.
  
 
 ```cpp
@@ -208,7 +208,7 @@ ms.locfileid: "8935525"
 <a id="ID4EKD"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
 [/media/{marketplaceId}/crossMediaGroupSearch](uri-localecrossmediagroupsearch.md)
 
@@ -216,15 +216,15 @@ ms.locfileid: "8935525"
 <a id="ID4EUD"></a>
 
  
-##### <a name="further-information"></a>자세한 정보 
+##### <a name="further-information"></a>추가 정보 
 
-[EDS 공통 헤더](../../additional/edscommonheaders.md)
+[EDS 일반적인 헤더](../../additional/edscommonheaders.md)
 
  [EDS 매개 변수](../../additional/edsparameters.md)
 
  [EDS 쿼리 구체화](../../additional/edsqueryrefiners.md)
 
- [마켓플레이스 URI](atoc-reference-marketplace.md)
+ [Marketplace Uri](atoc-reference-marketplace.md)
 
  [추가 참조](../../additional/atoc-xboxlivews-reference-additional.md)
 

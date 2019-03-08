@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 82cb45dae1a4b9b1a9db8fabc044edf8157f1eb1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920447"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646338"
 ---
-# <a name="getting-started-getting-around-in-visual-studio"></a>시작: Visual Studio 둘러보기
+# <a name="getting-started-getting-around-in-visual-studio"></a>시작 하기: Visual Studio 둘러보기
 
 
 ## <a name="getting-around-in-microsoft-visual-studio"></a>Microsoft Visual Studio 둘러보기
@@ -70,7 +70,7 @@ Visual Studio도 유사합니다. **속성**의 오른쪽 위에 번개 모양�
 
 ![Visual Studio의 단추 이벤트 목록](images/ios-to-uwp/vs-button-event.png)
 
-단추의 클릭 이벤트에 대한 코드를 추가하려면 먼저 **디자인** 창에서 단추를 선택합니다. 그런 다음 번개 모양 단추를 클릭하고 **클릭**이라는 이름 옆의 빈 상자를 클릭합니다. Visual Studio에서 다음과 같이 "myButton\_Click" 이벤트를 **클릭** 상자에 추가하고 MainPage.xaml.cs 파일에 해당 이벤트 처리기를 추가한 다음 표시합니다.
+단추의 클릭 이벤트에 대한 코드를 추가하려면 먼저 **디자인** 창에서 단추를 선택합니다. 그런 다음 번개 모양 단추를 클릭하고 **클릭**이라는 이름 옆의 빈 상자를 클릭합니다. Visual Studio에 추가한 이벤트 "myButton\_클릭" 하는 **클릭** 상자의 로컬 폴더를 더하고 같이 MainPage.xaml.cs 파일에서 해당 이벤트 처리기를 표시 합니다.
 
 ```csharp
 private void myButton_Click(object sender, RoutedEventArgs e)
@@ -98,7 +98,7 @@ Visual Studio에서는 컨트롤을 연결할 필요가 없습니다. 항상 자
 
 ![Visual Studio의 레이블 속성 창](images/ios-to-uwp/vs-label-properties.png)
 
-이제 단추의 클릭 이벤트에 일부 코드를 추가합니다. 이렇게 하려면 MainPage.xaml.cs 파일을 탭하고 다음 코드를 myButton\_Click 이벤트 처리기에 추가합니다.
+이제 단추의 클릭 이벤트에 일부 코드를 추가합니다. 이렇게 하려면 MainPage.xaml.cs 파일을 누르고 다음 코드는 myButton 추가할\_클릭 이벤트 처리기입니다.
 
 ```csharp
 private void myButton_Click(object sender, RoutedEventArgs e)
@@ -124,5 +124,5 @@ private void myButton_Click(object sender, RoutedEventArgs e)
 
 ## <a name="next-step"></a>다음 단계
 
-[시작: 공용 컨트롤](getting-started-common-controls.md)
+[시작 하기: 공용 컨트롤](getting-started-common-controls.md)
 

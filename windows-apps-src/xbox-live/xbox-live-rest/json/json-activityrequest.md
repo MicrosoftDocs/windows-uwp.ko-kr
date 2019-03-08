@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 791a566d278b92aeb34ab36d38719b44e9cc6c8f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936584"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628158"
 ---
 # <a name="activityrequest-json"></a>ActivityRequest(JSON)
-하나 이상의 사용자의 다양 한 상태에 대 한 정보에 대 한 요청 합니다. 
+하나 이상의 사용자 다기능 현재 상태에 대 한 정보에 대 한 요청입니다. 
 <a id="ID4EN"></a>
 
  
@@ -23,10 +23,10 @@ ms.locfileid: "8936584"
  
 ActivityRequest 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| richPresence| [RichPresenceRequest](json-richpresencerequest.md)| 사용 해야 하는 다양 한 상태 문자열의 식별 이름입니다.| 
-| 미디어| MediaRequest| 사용자에 대 한 미디어 정보 시청를 수신 합니다.| 
+| richPresence| [RichPresenceRequest](json-richpresencerequest.md)| 사용 해야 하는 다기능 현재 상태 문자열의 이름입니다.| 
+| 미디어| MediaRequest| 사용자에 대 한 미디어 정보를 시청 하거나 수신 대기 합니다.| 
   
 <a id="ID4EVB"></a>
 
@@ -54,8 +54,8 @@ ActivityRequest 개체에 다음과 같이 지정 합니다.
 <a id="ID4EAC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

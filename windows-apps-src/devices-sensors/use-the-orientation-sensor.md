@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4426cbc2e2d3c6e7d980b0733b6deb5178025abb
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114619"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57624098"
 ---
 # <a name="use-the-orientation-sensor"></a>방향 센서 사용
 
 
-**중요 API**
+**중요 한 Api**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)
@@ -25,15 +25,15 @@ ms.locfileid: "9114619"
 **샘플**
 
 -   [방향 센서 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/OrientationSensor)
--   [단순 방향 센서 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor)
+-   [간단한 방향 센서 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor)
 
 방향 센서를 사용하여 디바이스 방향을 확인하는 방법을 알아봅니다.
 
-[**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408) 네임스페이스에는 [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) 및 [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)이라는 두 가지 유형의 방향 센서 API가 있습니다. 두 센서는 모두 방향 센서이지만 해당 용어가 오버로드되어 매우 다른 용도로 사용됩니다. 그러나 둘 다 방향 센서이므로 모두 이 문서에서 다뤄집니다.
+두 가지 유형의 Api에 포함 하는 방향 센서를 가지는 [ **Windows.Devices.Sensors** ](https://msdn.microsoft.com/library/windows/apps/BR206408) 네임 스페이스: [**OrientationSensor** ](https://msdn.microsoft.com/library/windows/apps/BR206371) 하 고 [ **SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)합니다. 두 센서는 모두 방향 센서이지만 해당 용어가 오버로드되어 매우 다른 용도로 사용됩니다. 그러나 둘 다 방향 센서이므로 모두 이 문서에서 다뤄집니다.
 
-[**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) API는 3차원 앱이 쿼터니언과 회전 행렬을 가져오는 데 사용됩니다. 쿼터니언은 임의의 축을 중심으로 한 점 \[x,y,z\]의 회전이라고 이해하면 제일 쉽습니다(세 축을 중심으로 한 회전을 나타내는 회전 행렬과 대조적). 쿼터니언의 수학적 배경은 쿼터니언이 복소수의 기하학적 속성과 허수의 수학적 속성과 관련이 있으므로 매우 매력적이지만 이에 대한 작업은 간단하고 DirectX같은 프레임워크가 이를 지원합니다. 복합 3-D 앱은 방향 센서를 사용하여 사용자 시각을 조정할 수 있습니다. 이 센서는 가속도계, 회전계 및 나침반의 입력을 결합합니다.
+[  **OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) API는 3차원 앱이 쿼터니언과 회전 행렬을 가져오는 데 사용됩니다. 쿼터 니 언을 지점의 회전으로 가장 쉽게 이해할 수 있습니다 \[x, y, z\] (세 개의 축 회전을 나타내는 회전 행렬을 사용 하 여 대조) 임의의 축에 대 한 합니다. 쿼터니언의 수학적 배경은 쿼터니언이 복소수의 기하학적 속성과 허수의 수학적 속성과 관련이 있으므로 매우 매력적이지만 이에 대한 작업은 간단하고 DirectX같은 프레임워크가 이를 지원합니다. 복합 3-D 앱은 방향 센서를 사용하여 사용자 시각을 조정할 수 있습니다. 이 센서는 가속도계, 회전계 및 나침반의 입력을 결합합니다.
 
-[**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) API는 세로 위로, 세로 아래로, 가로 왼쪽, 가로 오른쪽과 같은 정의 측면에서 현재 장치 방향을 확인하는 데 사용됩니다. 장치가 앞면 위로 또는 앞면 아래로인지도 탐지할 수 있습니다. 이 센서는 "세로 위로"나 "가로 왼쪽"같은 속성을 반환하기 보다는 "Not rotated(회전하지 않음)", "Rotated90DegreesCounterclockwise" 등과 같은 회전 값을 반환합니다. 다음 표는 일반적인 방향 속성을 해당 센서 표기에 매핑합니다.
+[  **SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) API는 세로 위로, 세로 아래로, 가로 왼쪽, 가로 오른쪽과 같은 정의 측면에서 현재 장치 방향을 확인하는 데 사용됩니다. 장치가 앞면 위로 또는 앞면 아래로인지도 탐지할 수 있습니다. "왼쪽 가로" 또는 "등록 portrait" 등의 속성을 반환 하는 대신이 센서 회전 값을 반환 합니다. "회전 하지", "Rotated90DegreesCounterclockwise", 및 등입니다. 다음 표는 일반적인 방향 속성을 해당 센서 표기에 매핑합니다.
 
 | 방향     | 해당 센서 표기      |
 |-----------------|-----------------------------------|
@@ -42,9 +42,9 @@ ms.locfileid: "9114619"
 | Portrait Down(세로 아래로)   | Rotated180DegreesCounterclockwise |
 | Landscape Right(가로 오른쪽) | Rotated270DegreesCounterclockwise |
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트에 알고 있어야 합니다.
+사용 하 여 Extensible Application Markup Language (XAML), Microsoft Visual 친숙 해야 C#, 및 이벤트입니다.
 
 사용하는 장치 또는 에뮬레이터가 방향 센서를 지원해야 합니다.
 

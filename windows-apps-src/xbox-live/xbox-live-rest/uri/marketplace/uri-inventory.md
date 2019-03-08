@@ -8,23 +8,23 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d1585c5c33ef6a50de6f79835249287f5df88329
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922283"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650878"
 ---
 # <a name="usersmeinventory"></a>/users/me/inventory
-현재 제공 되는 사용자와 관련 된 인벤토리 집합에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`.
+현재 제공 된 사용자와 연결 된 인벤토리 집합에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`합니다.
   
 <a id="ID4EV"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
-[GET (/users/me/inventory)](uri-inventoryget.md)
+[가져오기 (/ 사용자/me/재고)](uri-inventoryget.md)
 
-&nbsp;&nbsp;현재 호출자에 게 제공 되는 사용자와 관련 된 인벤토리 집합을 제공 합니다.
+&nbsp;&nbsp;현재 호출자에 게 제공 된 사용자와 연결 된 인벤토리를 제공 합니다.
  
 <a id="ID4E6"></a>
 
@@ -34,17 +34,17 @@ ms.locfileid: "8922283"
 <a id="ID4EBB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[마켓플레이스 URI](atoc-reference-marketplace.md)
+[Marketplace Uri](atoc-reference-marketplace.md)
 
   
 <a id="ID4ELB"></a>
 
  
-##### <a name="further-information"></a>자세한 정보 
+##### <a name="further-information"></a>추가 정보 
 
-[EDS 공통 헤더](../../additional/edscommonheaders.md)
+[EDS 일반적인 헤더](../../additional/edscommonheaders.md)
 
  [EDS 매개 변수](../../additional/edsparameters.md)
 

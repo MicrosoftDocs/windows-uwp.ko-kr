@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f9e51910e921c7efaa92dfd063e9d37975fda18f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919679"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637118"
 ---
 # <a name="usersxuidxuidlistspinslistnamecontainsitems"></a>/users/xuid(xuid)/lists/PINS/{listname}/ContainsItems
-전체 목록을 검색 하지 않고 일련의 항목 (itemId 지정한) 목록에 포함 되어 있는지 여부를 결정 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
+전체 목록을 검색 하지 않고 (itemId에 의해 지정 됨) 하는 항목 집합 목록에 포함 되어 있는지 여부를 결정 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`합니다.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -24,19 +24,19 @@ ms.locfileid: "8919679"
  
 ## <a name="uri-parameters"></a>URI 매개 변수 
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| XUID| string| 사용자의 XUID 합니다.| 
-| listname| string| 조작 목록의 이름입니다.| 
+| XUID| 문자열| 사용자의 XUID 합니다.| 
+| listname| 문자열| 조작 목록의 이름입니다.| 
   
 <a id="ID4E5B"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [POST](uri-usersxuidlistspinslistnamecontainsitemspost.md)
 
-&nbsp;&nbsp;목록 전체 목록을 검색 하지 않고 (itemId 지정한) 항목 집합이 포함 되어 있는지 여부를 결정 합니다.
+&nbsp;&nbsp;전체 목록을 검색 하지 않고 (itemId에 의해 지정 됨) 하는 항목 집합 목록에 포함 되는지 여부를 결정 합니다.
  
 <a id="ID4EIC"></a>
 
@@ -46,8 +46,8 @@ ms.locfileid: "8919679"
 <a id="ID4EKC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[URI(Universal Resource Identifier) 참조](../atoc-xboxlivews-reference-uris.md)
+[유니버설 리소스 식별자 (URI) 참조](../atoc-xboxlivews-reference-uris.md)
 
    

@@ -8,27 +8,27 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 18929c060adeae47f0305422dd312e7410f93981
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944145"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628348"
 ---
 # <a name="multiplayersessionrequest-json"></a>MultiplayerSessionRequest(JSON)
-**MultiplayerSession** 개체에 대 한 작업에 대 한 전달 되는 요청 JSON 개체입니다. 
+요청 JSON 개체에 대 한 작업에 전달 된 **MultiplayerSession** 개체입니다. 
 <a id="ID4EQ"></a>
 
   
  
 MultiplayerSessionRequest JSON 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| 상수| 개체| 세션에 대 한 상수를 생성 하기 위해 세션 템플릿을 사용 하 여 병합 된 읽기 전용으로 설정 합니다. | 
-| 속성 | 개체 | 세션 속성에 병합할 변경 합니다.| 
-| members.me | 개체| 상수 및 많은 작동 하는 속성 같은 최상위에 상응 합니다. PUT 메서드는 사용자 세션의 구성원에 게 하 고 필요한 경우 사용자를 추가 합니다. "Me"를 null로 지정을 요청 하는 멤버 세션에서 제거 됩니다. | 
-| 멤버 | 개체| 인덱스 0부터 시작 하 여 키 입력 세션을 추가 하는 사용자를 표시 하는 다른 개체입니다. 세션을 이미 멤버를 포함 하는 경우에 항상 요청의 구성원 수를 0으로 시작 합니다. 멤버는 요청에 나타나는 순서로 세션에 추가 됩니다. 구성원 속성 속한 받은 사용자만 설정할 수 있습니다. | 
-| 서버 | 개체| 업데이트 및 추가 세션을 나타내는 값의 연결 된 서버 참가자 설정 됩니다. 서버를 null로 지정 하는 경우 해당 서버 항목 세션에서 제거 됩니다. | 
+| 상수| object| 세션에 대 한 상수를 생성 하기 위해 세션 템플릿으로 병합 되는 읽기 전용으로 설정 합니다. | 
+| 속성 | object | 세션 속성에 병합할 변경 내용입니다.| 
+| members.me | object| 상수 및 속성 대부분을 작동 하는 같은 최상위 대응 합니다. 모든 PUT 메서드 사용자 세션의 멤버 여야 하며 필요한 경우 사용자를 추가 합니다. "Me"를 null로 지정 하면 요청 된 멤버는 세션에서 제거 됩니다. | 
+| 멤버 | object| 인덱스는 0부터 시작 하 여 키가 지정 된 세션에 추가 하는 사용자를 나타내는 다른 개체입니다. 세션 이미 멤버를 포함 하는 경우에 요청에 대 한 멤버 수가 항상 0으로 시작 합니다. 멤버는 세션에서 요청에 나타나는 순서에 추가 됩니다. 만 속해 부여한 사용자가 멤버 속성을 설정할 수 있습니다. | 
+| 서버 | object| 연결 된 서버 참가자의 업데이트 및 세션에 대 한 추가 나타내는 값의 집합입니다. 서버는 null로 지정 된 경우 세션에서 해당 서버 항목이 제거 됩니다. | 
   
 <a id="ID4EZ"></a>
 
@@ -81,17 +81,17 @@ MultiplayerSessionRequest JSON 개체에 다음과 같이 지정 합니다.
 <a id="ID4ECB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
   
 <a id="ID4EMB"></a>
 
  
-##### <a name="reference"></a>참조 
+##### <a name="reference"></a>참고자료 
 
-[MultiplayerSession(JSON)](json-multiplayersession.md)
+[MultiplayerSession (JSON)](json-multiplayersession.md)
 
  [PUT (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName})](../uri/sessiondirectory/uri-serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionnameput.md)
 

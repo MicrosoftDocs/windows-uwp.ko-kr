@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f9610b400e9530f86e264cea30bfdfdd1b09c8d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920593"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627998"
 ---
 # <a name="usersxuidxuidlistspinslistname"></a>/users/xuid(xuid)/lists/PINS/{listname}
-항목을 목록에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
+목록에서 항목에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`합니다.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -24,16 +24,16 @@ ms.locfileid: "8920593"
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| xuid| string| Xbox 사용자 ID (XUID)입니다.| 
-| listtype| string| 유형 (사용 하는 방법 및 작동 방식을) 목록입니다. 항상 "핀"이에 대 한 관련 메서드.| 
-| listname| string| 목록 이름 (의 지정 된 listtype 어떤 목록). 항상 "XBLPins"에 대 한 Pin 항목입니다.| 
+| xuid| 문자열| Xbox 사용자 ID (XUID)입니다.| 
+| listtype| 문자열| 형식 (사용 방법 및 작업 방식) 목록입니다. 항상 "핀"에 대 한 관련 방법.| 
+| listname| 문자열| 목록의 이름입니다 (작업할 지정된 listtype는 목록). 항상 "XBLPins"에 대 한 Pin의 항목입니다.| 
   
 <a id="ID4EGC"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [DELETE](uri-usersxuidlistspinslistnamedelete.md)
 
@@ -41,15 +41,15 @@ ms.locfileid: "8920593"
 
 [GET](uri-usersxuidlistspinslistnameget.md)
 
-&nbsp;&nbsp;목록의 콘텐츠를 반환합니다.
+&nbsp;&nbsp;목록 내용을 반환합니다.
 
 [POST](uri-usersxuidlistspinslistnamepost.md)
 
-&nbsp;&nbsp;쿼리 문자열 매개 변수 **insertIndex**에 따라 인덱스에 있는 목록에 항목을 삽입 합니다.
+&nbsp;&nbsp;쿼리 문자열 매개 변수 기반으로 인덱스에 있는 목록에 항목 삽입 **insertIndex**합니다.
 
 [PUT](uri-usersxuidlistspinslistnameput.md)
 
-&nbsp;&nbsp;요청 본문에서 각 항목에 대해 지정 된 인덱스에 따라 목록에서 항목을 업데이트 합니다.
+&nbsp;&nbsp;요청 본문의 각 항목에 대해 지정 된 인덱스에 따라 목록에서 항목을 업데이트 합니다.
  
 <a id="ID4EZC"></a>
 
@@ -59,8 +59,8 @@ ms.locfileid: "8920593"
 <a id="ID4E2C"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[URI(Universal Resource Identifier) 참조](../atoc-xboxlivews-reference-uris.md)
+[유니버설 리소스 식별자 (URI) 참조](../atoc-xboxlivews-reference-uris.md)
 
    

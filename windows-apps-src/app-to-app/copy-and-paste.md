@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ba498a9bc6541f45f01e74b1ea90f4f9a1bfde90
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947441"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640598"
 ---
 # <a name="copy-and-paste"></a>복사 및 붙여넣기
 
@@ -21,7 +21,7 @@ ms.locfileid: "8947441"
 
 대부분의 경우에는 클립보드 작업을 지원하는 코드를 작성할 필요가 없습니다. 앱을 만드는 데 사용할 수 있는 많은 기본 XAML 컨트롤이 클립보드 작업을 이미 지원합니다. 
 
-## <a name="get-set-up"></a>설정 방법
+## <a name="get-set-up"></a>설정
 
 먼저 앱에 [**Windows.ApplicationModel.DataTransfer**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer) 네임스페이스를 포함합니다. 그런 후 [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) 개체의 인스턴스를 추가합니다. 이 개체에는 사용자가 복사하려는 데이터와 포함할 속성(예: 설명)이 모두 포함되어 있습니다.
 
@@ -34,7 +34,7 @@ DataPackage dataPackage = new DataPackage();
 
 ## <a name="copy-and-cut"></a>복사 및 잘라내기
 
-복사 및 잘라내기(*이동*이라고도 함)는 거의 정확히 동일하게 작동합니다. [**RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation) 속성을 사용하여 수행하려는 작업을 선택합니다.
+복사 및 잘라내기(*이동*이라고도 함)는 거의 정확히 동일하게 작동합니다. [  **RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation) 속성을 사용하여 수행하려는 작업을 선택합니다.
 
 ```cs
 // copy 

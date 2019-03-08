@@ -1,5 +1,5 @@
 ---
-Description: Dialogs and flyouts display transient UI elements that appear when the user requests them or when something happens that requires notification or approval.
+Description: 대화 상자 및 플라이아웃은 사용자가 요청할 경우나 알림 또는 승인이 필요한 문제가 발생할 경우 나타나는 임시 UI 요소를 표시합니다.
 title: 대화 상자 컨트롤
 label: Dialogs
 template: detail.hbs
@@ -13,26 +13,26 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: bee954cba446ac7dc7eb41622d9275b3b73af6ee
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116102"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621838"
 ---
 # <a name="dialog-controls"></a>대화 상자 컨트롤
 
-대화 상자 컨트롤은 상황에 맞는 앱 정보를 제공 하는 모달 UI 오버레이입니다. 이러한 명시적으로 닫을 때까지 앱 창의 조작을 차단 합니다. 종종 사용자의 작업을 요청하기도 합니다.
+대화 상자 컨트롤은 상황에 맞는 앱 정보를 제공 하는 모달 UI 오버레이입니다. 상호 작용 앱 창 사용 하 여 명시적으로 해제 될 때까지 차단 합니다. 종종 사용자의 작업을 요청하기도 합니다.
 
 ![대화 상자 예제](../images/dialogs/dialog_RS2_delete_file.png)
 
 
-> **중요 Api**: [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
+> **중요 한 Api**: [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 대화 상자를 사용하여 사용자에게 중요한 정보를 알리거나 확인 또는 추가 정보를 요청한 후에 작업을 완료할 수 있습니다.
 
-권장 사항 사용 하는 경우에 대화 상자 및 플라이 아웃 (유사한 컨트롤)를 사용 하는 경우 [대화 상자 및 플라이 아웃](index.md)참조 하세요. 
+(유사한 컨트롤), 플라이 아웃을 사용 하는 경우 및 대화 상자를 사용 하는 경우에 권장 사항을 참조 하세요 [대화 상자와 플라이 아웃](index.md)합니다. 
 
 ## <a name="examples"></a>예
 
@@ -43,8 +43,8 @@ ms.locfileid: "9116102"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 작동 중인 <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> 또는 <a href="xamlcontrolsgallery:/item/Flyout">플라이아웃</a>을 확인합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -62,7 +62,7 @@ ms.locfileid: "9116102"
     -   대화 상자 제목을 사용하는 경우, 콘텐츠 영역을 사용하여 세부 정보를 제공하거나 용어를 정의할 수 있습니다. 제목과 똑같은 내용을 표현만 조금 바꿔 제공하지 마세요.
 -   하나 이상의 대화 상자 단추가 표시되어야 합니다.
     -   "확인", "닫기" 또는 "취소"와 같은 안전한 비파괴 작업에 해당하는 단추가 대화 상자에 하나 이상 있는지 확인합니다. CloseButton API를 사용하여 이 단추를 추가합니다.
-    -   기본 지시 사항이나 내용에 대한 특정 응답을 단추 텍스트로 사용합니다. 예를 들어, "AppName에서 해당 위치에 액세스하도록 하시겠어요?" 뒤에 "허용" 및 "차단" 단추를 제공합니다. 특정 응답은 보다 신속하게 이해할 수 있어서 효율적인 결정을 유도할 수 있습니다.
+    -   기본 지시 사항이나 내용에 대한 특정 응답을 단추 텍스트로 사용합니다. 예를 들어 "AppName에서 해당 위치에 액세스하도록 하시겠어요?" 뒤에 "허용" 및 "차단" 단추를 제공합니다. 특정 응답은 보다 신속하게 이해할 수 있어서 효율적인 결정을 유도할 수 있습니다.
     - 작업 단추의 텍스트가 간결한지 확인합니다. 짧은 문자열을 사용하면 사용자가 빠르고 자신 있게 선택할 수 있습니다.
     - 안전한 비파괴 작업 외에도 필요에 따라 기본 지시 사항과 관련된 1-2개의 단추를 사용자에게 제공할 수 있습니다. 이러한 "수행" 작업 단추는 대화 상자의 기본 요소를 확인합니다. PrimaryButton 및 SecondaryButton API를 사용하여 이러한 "수행" 작업을 추가합니다.
     - "수행" 작업 단추는 맨 왼쪽 단추로 나타나야 합니다. 안전한 비파괴 작업은 맨 오른쪽 단추로 나타나야 합니다.
@@ -119,7 +119,7 @@ private async void DisplayDeleteFileDialog()
 ```
 
 ## <a name="provide-a-safe-action"></a>안전한 작업을 제공 합니다.
-대화 상자는 사용자 상호 작용을 차단하고 단추는 사용자가 대화 상자를 해제하는 기본 메커니즘이기 때문에 대화 상자에 "닫기"나 "확인" 등의 "안전한" 비파괴 단추가 하나 이상 있는지 확인하세요. **모든 대화 상자에 대화 상자를 닫기 위한 안전한 작업 단추가 하나 이상 있어야 합니다.** 이를 통해 사용자가 작업을 수행하지 않고 대화 상자를 닫을 수 있습니다.<br>![단추가 1개인 대화 상자](../images/dialogs/dialog_RS2_one_button.png)
+대화 상자는 사용자 상호 작용을 차단하고 단추는 사용자가 대화 상자를 해제하는 기본 메커니즘이기 때문에 대화 상자에 "닫기"나 "확인" 등의 "안전한" 비파괴 단추가 하나 이상 있는지 확인하세요. **모든 대화 상자는 대화 상자를 닫습니다 안전 실행 단추를 하나 이상 포함 해야 합니다.** 이를 통해 사용자가 작업을 수행하지 않고 대화 상자를 닫을 수 있습니다.<br>![대화 상자를 하나의 단추](../images/dialogs/dialog_RS2_one_button.png)
 
 ```csharp
 private async void DisplayNoWifiDialog()
@@ -248,7 +248,7 @@ private async void DisplaySubscribeDialog()
     </li>
 </ul>
 
-> 일부 플랫폼에서는 확정 단추가 왼쪽 대신 오른쪽에 배치됩니다. 왼쪽에 배치하는 것을 권장하는 이유는 무엇일까요?  대부분의 사용자가 오른손잡이고 오른손으로 전화를 든다고 가정하면 확정 단추가 왼쪽에 있을 때 실제로 좀 더 편안하다고 느낍니다. 단추가 사용자의 엄지 손가락을 뻗어 닿기 편한 곳에 있기 때문입니다. 화면의 오른쪽에 있는 단추는 사용자가 엄지 손가락을 약간 불편한 위치로 안쪽으로 당겨야 합니다.
+> 일부 플랫폼에서는 확정 단추가 왼쪽 대신 오른쪽에 배치됩니다. 왼쪽에 배치하는 것을 권장하는 이유는 무엇일까요?  대부분의 사용자가 오른손잡이고 오른손으로 휴대폰을 휴대한다고 가정하면 확정 단추가 왼쪽에 있을 때 실제로 좀 더 편안하다고 느낍니다. 단추가 사용자의 엄지 손가락을 뻗어 닿기 편한 곳에 있기 때문입니다. 화면의 오른쪽에 있는 단추는 사용자가 엄지 손가락을 약간 불편한 위치로 안쪽으로 당겨야 합니다.
 
 
 
@@ -261,5 +261,5 @@ private async void DisplaySubscribeDialog()
 ## <a name="related-articles"></a>관련 문서
 - [도구 설명](../tooltips.md)
 - [메뉴 및 상황에 맞는 메뉴](../menus.md)
-- [Flyout 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+- [플라이 아웃 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 - [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)

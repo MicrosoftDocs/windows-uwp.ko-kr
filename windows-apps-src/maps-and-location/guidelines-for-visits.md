@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use the powerful Visits Tracking feature for more practical location tracking.
+Description: 더욱 효과적인 추적을 위한 강력한 방문 추적 기능을 사용하는 방법에 대해 알아보세요.
 title: 방문 추적 사용에 대한 지침
 ms.assetid: 0c101684-48a9-4592-9ed5-6c20f3b830f2
 ms.date: 05/18/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, geovisit
 ms.localizationpriority: medium
 ms.openlocfilehash: db351660722cd13a4e8f14bebb651d60f33d1671
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927542"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640778"
 ---
 # <a name="guidelines-for-using-visits-tracking"></a>방문 추적 사용에 대한 지침
 
@@ -269,6 +269,6 @@ private async void RegisterBackgroundTask(object sender, RoutedEventArgs e) {
 이제 앱에서 방문 처리 백그라운드 작업을 등록할 수 있어야 하며 장치가 방문 관련 상태 변경을 기록할 때마다 이 작업이 활성화되어야 합니다. 이 상태 변경 정보로 수행할 작업을 결정하려면 백그라운드 작업 클래스의 논리를 입력해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목
-* [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
-* [사용자 위치 가져오기](get-location.md)
-* [Windows.Devices.Geolocation 네임스페이스](https://docs.microsoft.com/uwp/api/windows.devices.geolocation)
+* [만들고 out-of-process-백그라운드 태스크를 등록 합니다.](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
+* [사용자의 위치를 가져옵니다.](get-location.md)
+* [Windows.Devices.Geolocation 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.devices.geolocation)

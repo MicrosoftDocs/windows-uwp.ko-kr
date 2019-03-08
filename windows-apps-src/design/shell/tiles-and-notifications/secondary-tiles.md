@@ -1,5 +1,5 @@
 ---
-Description: Secondary tiles allow users to pin specific content and deep links from your app onto their Start menu, providing easy future access to the content within your app.
+Description: 사용자가 보조 타일을 통해 앱의 특정 콘텐츠 및 딥 링크를 시작 메뉴에 고정해 두면 나중에 앱 내에서 해당 콘텐츠에 간편하게 액세스할 수 있습니다.
 title: 보조 타일
 label: Secondary tiles
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보조 타일
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f95699fd6eb0803824c9bcdea46d275ab4383ac
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940622"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653188"
 ---
 # <a name="secondary-tiles"></a>보조 타일
 
@@ -27,12 +27,12 @@ ms.locfileid: "8940622"
 
 **오직 사용자만이 보조 타일을 고정할 수 있으며, 앱은 사용자 동의 없이는 프로그래밍 방식으로 보조 타일을 고정할 수 없습니다**. 사용자가 앱 내에서 "고정" 단추를 명시적으로 클릭해야 하며, 클릭하는 순간 개발자는 API를 사용하여 보조 타일을 만들라고 요청합니다. 그러면 시스템에서 타일을 고정할 것인지 사용자에게 확인을 요청하는 대화 상자를 표시합니다.
 
-## <a name="quick-links"></a>빠른 연결
+## <a name="quick-links"></a>빠른 링크
 
 | 문서 | 설명 |
 | --- | --- |
-| [보조 타일에 대한 지침](secondary-tiles-guidance.md) | 보조 타일을 언제 어디에 사용해야 하는지 알아보세요. |
-| [보조 타일 고정](secondary-tiles-pinning.md) | 보조 타일을 고정하는 방법을 알아보세요. |
+| [보조 타일에 대 한 지침](secondary-tiles-guidance.md) | 보조 타일을 언제 어디에 사용해야 하는지 알아보세요. |
+| [핀 보조 타일](secondary-tiles-pinning.md) | 보조 타일을 고정하는 방법을 알아보세요. |
 | [데스크톱 응용 프로그램에서 고정](secondary-tiles-desktop-pinning.md) | Windows 데스크톱 응용 프로그램은 데스크톱 브리지 덕분에 보조 타일을 고정할 수 있습니다! |
 
 
@@ -66,9 +66,9 @@ ms.locfileid: "8940622"
 * 사용자가 언제든지 상위 앱을 삭제하지 않고도 보조 타일을 삭제할 수 있습니다.
 * 보조 타일은 런타임에 만들 수 있습니다. 앱 타일은 설치 중에만 만들 수 있습니다.
 * 플라이아웃은 보조 타일을 추가하기 전에 사용자에게 확인을 요청합니다.
-* 사용자 요청을 통해 프로그래밍 방식으로 잠금 화면에 대해 선택할 수 없습니다. 사용자가 PC 설정의 개인 설정 페이지를 통해 보조 타일을 수동으로 추가 해야 합니다.
+* 사용자 요청을 통해 프로그래밍 방식으로 잠금 화면에 대해 선택할 수 없습니다. 사용자 PC 설정에서 개인 설정 페이지를 통해 보조 타일을 수동으로 추가 해야 합니다.
 
-알림 보내기의 경우 보조 타일에 사용되는 타일 및 배지 업데이트와 푸시 알림 채널에 대한 특정 메서드가 제공됩니다. 이는 기본 타일에 사용되는 버전과 비슷합니다. CreateBadgeUpdaterForApplication과 CreateBadgeUpdaterForSecondaryTile을 예로 들 수 있습니다.
+알림 보내기의 경우 보조 타일에 사용되는 타일 및 배지 업데이트와 푸시 알림 채널에 대한 특정 메서드가 제공됩니다. 이는 기본 타일에 사용되는 버전과 비슷합니다. 예를 들어 CreateBadgeUpdaterForApplication vs입니다. CreateBadgeUpdaterForSecondaryTile.
 
 
 ## <a name="guidance-on-secondary-tiles"></a>보조 타일에 대한 지침

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4dec176206aacb946bfd65341c483d8ba61558ad
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938740"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57629748"
 ---
 # <a name="hazard-tracking-versus-tile-pool-resources"></a>위험 추적 및 타일 풀 리소스
 
@@ -25,10 +25,10 @@ ms.locfileid: "8938740"
 
 응용 프로그램은 타일 풀 메모리를 참조하는 스트리밍 리소스에 쓰기 또는 읽기 작업을 발행할 경우, 향후 읽기 또는 쓰기 작업의 별도의 스트리밍 리소스가 같은 타일 풀 메모리를 참조하고 첫 번째 작업이 완료되기 전에 이어지는 작업이 시작될 것으로 예상한다면 디스플레이 드라이버에 이를 알려야 합니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[타일 풀에 대한 매핑](mappings-are-into-a-tile-pool.md)
+[매핑은 타일 풀으로](mappings-are-into-a-tile-pool.md)
 
  
 

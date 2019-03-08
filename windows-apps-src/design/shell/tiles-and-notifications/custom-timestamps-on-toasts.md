@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use custom timestamps on your toast notifications.
+Description: 사용자 알림 메시지에 사용자 지정 타임 스탬프를 사용 하는 방법에 알아봅니다.
 title: 알림에 대한 사용자 지정 타임스탬프
 label: Custom timestamps on toasts
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 사용자 지정 타임스탬프, 타임스탬프, 알림, 알림 센터
 ms.localizationpriority: medium
 ms.openlocfilehash: c18c32e1dcee5486ff6545a1db0ec8f0cd67bfae
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944492"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625818"
 ---
 # <a name="custom-timestamps-on-toasts"></a>알림에 대한 사용자 지정 타임스탬프
 
@@ -23,7 +23,7 @@ ms.locfileid: "8944492"
 선택적으로 사용자 지정 날짜 및 시간으로 타임스탬프를 재정의할 수 있으므로 타임스탬프는 알림이 전송된 시간이라기 보다는 메시지/정보/콘텐츠가 실제로 작성된 시간을 나타냅니다. 또한 이것은 알림 센터 내에서 알림이 올바른 순서(시간순 정렬)로 표시되도록 보장합니다. 대다수 앱에서 사용자 지정 타임스탬프를 지정하는 것이 좋습니다.
 
 > [!IMPORTANT]
-> **Creators Update 및 알림 라이브러리 1.4.0 필요**: 사용자 지정 타임스탬프를 표시하려면 빌드 15063 이상을 실행해야 합니다. 버전 1.4.0 이상의 [UWP 커뮤니티 도구 키트 알림 NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용해야만 알림의 콘텐츠에 대한 타임스탬프를 할당할 수 있습니다.
+> **크리에이터 업데이트 및 알림 라이브러리의 1.4.0 필요**: 실행 해야 빌드 15063 이상을 사용자 지정 타임 스탬프를 참조 하세요. 버전 1.4.0 이상의 [UWP 커뮤니티 도구 키트 알림 NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용해야만 알림의 콘텐츠에 대한 타임스탬프를 할당할 수 있습니다.
 
 사용자 지정 타임스탬프를 사용하려면 간단히 **ToastContent**에서 **DisplayTimestamp** 속성을 할당합니다.
 

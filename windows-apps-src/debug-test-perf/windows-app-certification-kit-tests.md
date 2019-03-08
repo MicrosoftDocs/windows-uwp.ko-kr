@@ -1,34 +1,34 @@
 ---
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Windows 앱 인증 키트 테스트
-description: Windows 앱 인증 키트는 다양을 한 앱 Microsoft 스토어에 게시할 준비가 되었는지 확인 하는 데 도움이 되는 테스트가 포함 되어 있습니다.
+description: Windows 앱 인증 키트를 앱에 Microsoft Store 게시 될 준비가 되었는지 확인 하는 데 도움이 되는 테스트를 포함 합니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, 앱 인증
+keywords: windows 10 uwp 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: ecb7cb68b57e3d9b30a25237a63410d3bfa319b3
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047162"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645088"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
 
-[Windows 앱 인증 키트](windows-app-certification-kit.md) 는 다양을 한 앱은 Microsoft Store에 게시할 수 있도록 하는 데 도움이 되는 테스트가 포함 되어 있습니다. 테스트 하 여 조건을 세부 정보를 사용 하 여 아래 나열 되 고 오류가 발생할 경우 작업을 제안 합니다.
+합니다 [Windows 앱 인증 키트](windows-app-certification-kit.md) 앱이 Microsoft Store 게시할 준비를 확인 하는 데 도움이 되는 테스트의 수를 포함 합니다. 테스트 세부 정보를 해당 조건을 사용 하 여 아래 나열 된 및 실패 한 경우 작업을 제안 합니다.
 
 ## <a name="deployment-and-launch-tests"></a>배포 및 시작 테스트
 
 인증 테스트 동안 앱을 모니터하여 크래시가 발생하거나 작동이 중단되는 경우를 기록합니다.
 
-### <a name="background"></a>Background
+### <a name="background"></a>배경
 
 앱이 응답하지 않거나 크래시가 발생하면 사용자 데이터가 손실되고 성능이 저하될 수 있습니다.
 
 Windows 호환성 모드, AppHelp 메시지 또는 호환성 수정을 사용하지 않고 앱이 제대로 작동해야 합니다.
 
-앱이 로드할 DLL을 HKEY\-LOCAL\-MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\AppInit\-DLLs 레지스트리 키에 나열하지 않아야 합니다.
+앱 HKEY에서 로드할 Dll을 나열 하지 해야 합니다\-로컬\-MACHINE\\소프트웨어\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\AppInit \-Dll 레지스트리 키입니다.
 
 ### <a name="test-details"></a>테스트 정보
 
@@ -44,8 +44,8 @@ Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplic
 
 앱이 시작되지 않는 경우 테스트 플랫폼이 [**ActivateApplication**](https://msdn.microsoft.com/library/windows/desktop/Hh706903)의 필수 조건을 충족하면 활성화 이벤트 로그를 검토하여 문제를 해결할 수 있습니다. 이벤트 로그에서 이러한 항목을 찾으려면
 
-1.  eventvwr.exe를 열고 Application and Services Log\\Microsoft\\Windows\\Immersive-Shell 폴더로 이동합니다.
-2.  보기를 필터링하여 이벤트 ID 5900-6000을 표시합니다.
+1.  Eventvwr.exe를 열고 응용 프로그램 및 서비스 로그를 이동할\\Microsoft\\Windows\\Immersive 셸 폴더입니다.
+2.  이벤트 Id를 표시 하도록 보기를 필터링 합니다. 5900-6000.
 3.  로그 항목에서 앱이 시작되지 않은 이유를 설명하는 정보를 검토합니다.
 
 문제가 있는 파일을 식별하고 문제를 해결합니다. 앱을 다시 빌드하고 다시 테스트하세요. 앱을 디버그하는 데 사용할 수 있는 덤프 파일이 Windows 앱 인증 키트 로그 폴더에 생성되었는지 확인할 수도 있습니다.
@@ -54,9 +54,9 @@ Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplic
 
 Windows 앱이 OS의 이후 버전에서 실행할 수 있는지 확인합니다. 이 테스트는 기존에 데스크톱 앱 워크플로에만 적용되었지만 이제는 스토어 및 유니버설 Windows 플랫폼(UWP) 워크플로에 사용할 수 있습니다.
 
-### <a name="background"></a>Background
+### <a name="background"></a>배경
 
-운영 체제 버전 정보는 Microsoft Store에 대 한 사용을 제한 했습니다. 이 정보는 종종 앱에서 앱 OS 버전과 관련된 기능을 사용자에게 제공할 수 있도록 OS 버전을 확인하는 데 잘못 사용되었습니다.
+운영 체제 버전 정보는 Microsoft Store 대 한 사용량을 제한 했습니다. 이 정보는 종종 앱에서 앱 OS 버전과 관련된 기능을 사용자에게 제공할 수 있도록 OS 버전을 확인하는 데 잘못 사용되었습니다.
 
 ### <a name="test-details"></a>테스트 정보
 
@@ -70,7 +70,7 @@ Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방
 
 선언된 백그라운드 작업에 대한 취소 처리기가 앱에 있는지 확인합니다. 작업이 취소될 때 호출되는 전용 함수가 있어야 합니다. 이 테스트는 배포된 앱에만 적용됩니다.
 
-### <a name="background"></a>Background
+### <a name="background"></a>배경
 
 스토어 앱은 백그라운드에서 실행하는 프로세스를 등록할 수 있습니다. 예를 들어 메일 앱에서 서버로 때때로 ping할 수 있습니다. 그러나 이러한 리소스가 OS에 필요한 경우 백그라운드 작업을 취소하고 앱에서 이 취소를 적절하게 처리해야 합니다. 취소 처리기가 없는 앱의 경우 크래시가 발생하거나 사용자가 앱을 닫으려고 할 때 닫히지 않을 수 있습니다.
 
@@ -86,7 +86,7 @@ Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방
 
 이 앱 패키지(APPX, 앱 번들)에 응용 프로그램이 하나 포함되어 있는지 확인합니다. 키트에서 독립 실행형 테스트가 되도록 이 검사가 변경되었습니다.
 
-### <a name="background"></a>Background
+### <a name="background"></a>배경
 
 이 테스트는 스토어 정책에 따라 구현되었습니다.
 
@@ -104,7 +104,7 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
 앱 매니페스트의 내용을 테스트하여 내용이 올바른지 확인합니다.
 
-### <a name="background"></a>Background
+### <a name="background"></a>배경
 
 앱의 매니페스트가 형식이 올발라야 합니다.
 
@@ -112,19 +112,19 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
 앱 매니페스트를 검사하여 [앱 패키지 요구 사항](https://msdn.microsoft.com/library/windows/apps/Mt148525)에 설명된 대로 내용이 올바른지 확인합니다.
 
--   **파일 확장명 및 프로토콜**
+-   **파일 확장명과 프로토콜**
 
     앱이 연결되어야 하는 파일 확장명을 선언할 수 있습니다. 잘못 사용될 경우 앱은 많은 파일 확장명을 선언할 수 있으며, 대부분의 확장명은 사용할 수도 없어 좋지 않은 사용자 환경을 제공할 수 있습니다. 이 테스트에서는 검사를 추가하여 앱이 연결할 수 있는 파일 확장명 수를 제한합니다.
 
--   **프레임워크 종속성 규칙**
+-   **프레임 워크 종속성 규칙**
 
     이 테스트에서는 앱이 UWP에 적절하게 종속되는 요구 사항을 적용합니다. 부적절한 종속성이 있으면 이 테스트가 실패합니다.
 
     앱이 적용되는 OS 버전과 프레임워크 종속성 간에 불일치가 있으면 테스트가 실패합니다. 또한 앱이 프레임워크 dll의 미리 보기 버전을 참조하는 경우에도 테스트가 실패합니다.
 
--   **IPC(프로세스 간 통신) 검증**
+-   **프로세스 간 통신 (IPC) 확인**
 
-    이 테스트는 UWP 앱 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신 하지 않는 요구 사항을 적용 합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414)를 지정하는 앱은 이 테스트에 실패합니다.
+    이 테스트는 uwp 앱 컨테이너 데스크톱 구성 요소를 외부에서 통신 하지 않는 요구 사항을 적용 합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414)를 지정하는 앱은 이 테스트에 실패합니다.
 
 ### <a name="corrective-action"></a>수정 작업
 
@@ -154,9 +154,9 @@ BinScope 이진 분석기 테스트는 다음과 같은 보안 관련 기능이 
 BinScope 이진 분석기 테스트는 다음과 같은 보안 관련 기능이 올바로 사용되는지 확인합니다.
 
 -   [AllowPartiallyTrustedCallersAttribute](#binscope-1)
--   [/SafeSEH 예외 처리 보호](#binscope-2)
+-   [/Safeseh 예외 처리 방지](#binscope-2)
 -   [데이터 실행 방지](#binscope-3)
--   [ASLR(Address Space Layout Randomization)](#binscope-4)
+-   [주소 공간 레이아웃 불규칙화](#binscope-4)
 -   [읽기/쓰기 공유 PE 섹션](#binscope-5)
 -   [AppContainerCheck](#appcontainercheck)
 -   [ExecutableImportsCheck](#binscope-7)
@@ -168,7 +168,7 @@ BinScope 이진 분석기 테스트는 다음과 같은 보안 관련 기능이 
 
 APTCA(AllowPartiallyTrustedCallersAttribute) 특성을 사용하면 서명된 어셈블리의 부분적으로 신뢰할 수 있는 코드에서 완전히 신뢰할 수 있는 코드에 액세스할 수 있습니다. APTCA 특성을 어셈블리에 적용하면 부분적으로 신뢰할 수 있는 호출자가 어셈블리 수명 동안 해당 어셈블리에 액세스할 수 있으므로 보안이 손상될 수 있습니다.
 
-**앱이 이 테스트에 실패할 경우 수행할 작업**
+**앱이이 테스트에 실패 하는 경우 수행할 작업**
 
 프로젝트에 필요하고, 그 위험성을 잘 이해하고 있는 경우가 아니면 강력한 이름이 지정된 어셈블리에 APTCA 특성을 사용하지 마세요. 필요한 경우 모든 API를 적절한 코드 액세스 보안 요구로 보호하세요. 어셈블리가 UWP(유니버설 Windows 플랫폼) 앱의 일부인 경우 APTCA는 적용되지 않습니다.
 
@@ -176,13 +176,13 @@ APTCA(AllowPartiallyTrustedCallersAttribute) 특성을 사용하면 서명된 �
 
 이 테스트는 관리 코드(C#, .NET 등)에서만 수행됩니다.
 
-### <a name="span-idbinscope-2spansafeseh-exception-handling-protection"></a><span id="binscope-2"></span>/SafeSEH 예외 처리 보호
+### <a name="span-idbinscope-2spansafeseh-exception-handling-protection"></a><span id="binscope-2"></span>/Safeseh 예외 처리 방지
 
 **Windows 앱 인증 키트 오류 메시지:** SafeSEHCheck 테스트 실패
 
 앱에서 0으로 나누기 오류 등의 예외 상태가 발생하면 예외 처리기가 실행됩니다. 예외 처리기의 주소는 함수 호출 시 스택에 저장되기 때문에 일부 악성 소프트웨어가 스택을 덮어쓰려고 할 경우 버퍼 오버플로 공격자에게 취약할 수 있습니다.
 
-**앱이 이 테스트에 실패할 경우 수행할 작업**
+**앱이이 테스트에 실패 하는 경우 수행할 작업**
 
 앱을 빌드할 때 링커 명령에서 /SAFESEH 옵션을 사용하도록 설정합니다. 이 옵션은 Visual Studio의 릴리스 구성에서 기본적으로 설정되어 있습니다. 빌드 지침에서 앱의 모든 실행 모듈에 대해 이 옵션을 사용하도록 설정했는지 확인하세요.
 
@@ -196,7 +196,7 @@ APTCA(AllowPartiallyTrustedCallersAttribute) 특성을 사용하면 서명된 �
 
 이 테스트는 앱이 데이터 세그먼트에 저장된 코드를 실행하지 않는지 확인합니다.
 
-**앱이 이 테스트에 실패할 경우 수행할 작업**
+**앱이이 테스트에 실패 하는 경우 수행할 작업**
 
 앱을 빌드할 때 링커 명령에서 /NXCOMPAT 옵션을 사용하도록 설정하세요. 이 옵션은 DEP(데이터 실행 방지)를 지원하는 링커 버전에서 기본적으로 설정되어 있습니다.
 
@@ -204,13 +204,13 @@ APTCA(AllowPartiallyTrustedCallersAttribute) 특성을 사용하면 서명된 �
 
 DEP 가능 CPU에서 앱을 테스트하고 DEP에서 발생하는 모든 오류를 수정하는 것이 좋습니다.
 
-### <a name="span-idbinscope-4spanaddress-space-layout-randomization"></a><span id="binscope-4"></span>ASLR(Address Space Layout Randomization)
+### <a name="span-idbinscope-4spanaddress-space-layout-randomization"></a><span id="binscope-4"></span>주소 공간 레이아웃 불규칙화
 
 **Windows 앱 인증 키트 오류 메시지:** DBCheck 테스트 실패
 
 ASLR(Address Space Layout Randomization)은 실행 가능 이미지를 예측할 수 없는 메모리 위치에 로드하므로 프로그램이 특정 가상 주소에 로드될 것을 예상하는 악성 소프트웨어가 예측대로 작동하기 어렵습니다. 앱과 앱이 사용하는 모든 구성 요소가 ASLR을 지원해야 합니다.
 
-**앱이 이 테스트에 실패할 경우 수행할 작업**
+**앱이이 테스트에 실패 하는 경우 수행할 작업**
 
 앱을 빌드할 때 링커 명령에서 /DYNAMICBASE 옵션을 사용하도록 설정하세요. 앱이 사용하는 모든 모듈에서 이 링커 옵션도 사용하는지 확인하세요.
 
@@ -222,11 +222,11 @@ ASLR(Address Space Layout Randomization)은 실행 가능 이미지를 예측할
 
 ### <a name="span-idbinscope-5spanreadwrite-shared-pe-section"></a><span id="binscope-5"></span>읽기/쓰기 공유 PE 섹션
 
-**Windows 앱 인증 키트 오류 메시지:** SharedSectionsCheck 테스트 실패.
+**Windows 앱 인증 키트 오류 메시지:** SharedSectionsCheck 테스트가 실패 했습니다.
 
-공유로 표시된 쓰기 가능한 섹션이 있는 이진 파일은 보안 위협이 됩니다. 필요한 경우가 아니면 쓰기 가능한 공유 섹션을 사용하여 앱을 빌드하지 마세요. [**CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) 또는 [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761)을 사용하여 보안이 제대로 설정된 공유 메모리 개체를 만드세요.
+공유로 표시된 쓰기 가능한 섹션이 있는 이진 파일은 보안 위협이 됩니다. 필요한 경우가 아니면 쓰기 가능한 공유 섹션을 사용하여 앱을 빌드하지 마세요. [  **CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) 또는 [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761)을 사용하여 보안이 제대로 설정된 공유 메모리 개체를 만드세요.
 
-**앱이 이 테스트에 실패할 경우 수행할 작업**
+**앱이이 테스트에 실패 하는 경우 수행할 작업**
 
 앱에서 공유 섹션을 제거하고 적절한 보안 특성으로 [**CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) 또는 [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761)을 호출하여 공유 메모리 개체를 만든 다음 앱을 다시 빌드하세요.
 
@@ -236,15 +236,15 @@ ASLR(Address Space Layout Randomization)은 실행 가능 이미지를 예측할
 
 ### <a name="appcontainercheck"></a>AppContainerCheck
 
-**Windows 앱 인증 키트 오류 메시지:** AppContainerCheck 테스트 실패.
+**Windows 앱 인증 키트 오류 메시지:** AppContainerCheck 테스트가 실패 했습니다.
 
 AppContainerCheck는 실행 가능 이진 파일의 PE(이식 가능 파일) 헤더에 **appcontainer** 비트가 설정되어 있는지 확인합니다. 앱이 올바로 실행되려면 모든 .exe 파일과 모든 관리되지 않는 DLL에 **appcontainer** 비트가 올바로 설정되어 있어야 합니다.
 
-**앱이 이 테스트에 실패할 경우 수행할 작업**
+**앱이이 테스트에 실패 하는 경우 수행할 작업**
 
 기본 실행 파일이 테스트에 실패할 경우 최신 컴파일러 및 링커를 사용하여 파일을 빌드했고 링커에서 */appcontainer* 플래그를 사용하는지 확인하세요.
 
-관리 되는 실행 파일이 테스트에 실패할 경우 최신 컴파일러 및 링커를 Microsoft Visual Studio와 같은 UWP 앱을 빌드하는 데 사용 해야 합니다.
+관리 되는 실행 파일을 테스트에 실패 하면 최신 컴파일러 및 링커, Microsoft Visual Studio와 같은 UWP 앱 빌드를 사용 해야 합니다.
 
 **설명**
 
@@ -252,11 +252,11 @@ AppContainerCheck는 실행 가능 이진 파일의 PE(이식 가능 파일) 헤
 
 ### <a name="span-idbinscope-7spanexecutableimportscheck"></a><span id="binscope-7"></span>ExecutableImportsCheck
 
-**Windows 앱 인증 키트 오류 메시지:** ExecutableImportsCheck 테스트 실패.
+**Windows 앱 인증 키트 오류 메시지:** ExecutableImportsCheck 테스트가 실패 했습니다.
 
 PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 섹션에 배치된 경우 이 테스트에 실패합니다. 이 오류는 Visual C++ 링커의 */merge* 플래그를 */merge:.rdata=.text*로 설정하여 PE 이미지에 대해 .rdata 병합을 사용하도록 설정한 경우에 발생할 수 있습니다.
 
-**앱이 이 테스트에 실패할 경우 수행할 작업**
+**앱이이 테스트에 실패 하는 경우 수행할 작업**
 
 가져오기 테이블을 실행 코드 섹션에 병합하지 마세요. Visual C++ 링커의 */merge* 플래그를 설정하여 ".rdata" 섹션을 코드 섹션에 병합하지 않아야 합니다.
 
@@ -266,13 +266,13 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 ### <a name="span-idbinscope-8spanwxcheck"></a><span id="binscope-8"></span>WXCheck
 
-**Windows 앱 인증 키트 오류 메시지:** WXCheck 테스트 실패.
+**Windows 앱 인증 키트 오류 메시지:** WXCheck 테스트가 실패 했습니다.
 
-이러한 검사를 통해 쓰기 가능 및 실행 가능으로 매핑된 페이지가 이진에 없는지 확인할 수 있습니다. 쓰기 가능 및 실행 가능 섹션이 이진에 있거나 이진 *SectionAlignment*가 *PAGE\-SIZE*보다 작은 경우 이러한 오류가 발생할 수 있습니다.
+이러한 검사를 통해 쓰기 가능 및 실행 가능으로 매핑된 페이지가 이진에 없는지 확인할 수 있습니다. 이진 파일에 쓰기 및 실행 섹션 없거나 경우 발생할 수 있습니다 이진 *SectionAlignment* 는 보다 작은 *페이지\-크기*합니다.
 
-**앱이 이 테스트에 실패할 경우 수행할 작업**
+**앱이이 테스트에 실패 하는 경우 수행할 작업**
 
-쓰기 가능 및 실행 가능 섹션이 이진에 없고 이진 *SectionAlignment* 값이 해당 *PAGE\-SIZE* 이상인지 확인합니다.
+이진 파일 쓰기 또는 실행 섹션 및 없는 있는지 이진 *SectionAlignment* 값은 적어도 해당 *페이지\-크기*합니다.
 
 **설명**
 
@@ -280,7 +280,7 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 편집 및 계속이 사용 설정된 상태로 실행 파일이 작성된 경우 쓰기 가능 및 실행 가능 섹션이 실행 파일에 있을 수 있습니다(/ZI). 편집 및 계속을 사용하지 않도록 설정하면 잘못된 섹션이 표시되지 않습니다.
 
-*PAGE\-SIZE*는 실행 파일의 기본 *SectionAlignment*입니다.
+*페이지\-크기* 기본값인 *SectionAlignment* 실행 파일에 대 한 합니다.
 
 ### <a name="private-code-signing"></a>전용 코드 서명
 
@@ -304,22 +304,22 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 ### <a name="background"></a>배경
 
-응용 프로그램 (Windows 런타임 또는 지원 되는 Win32 Api) Microsoft Store 용으로 인증 받으려면 UWP 앱에 대 한 Api를 사용 해야 합니다. 이 테스트는 관리되는 이진 파일이 승인된 프로필 외부의 기능에 종속하는 경우도 식별합니다.
+앱 (Windows 런타임 또는 지원 되는 Win32 Api)을 통해 Microsoft Store 대해 인증 되어야 하는 UWP 앱 용 Api를 사용 해야 합니다. 이 테스트는 관리되는 이진 파일이 승인된 프로필 외부의 기능에 종속하는 경우도 식별합니다.
 
 ### <a name="test-details"></a>테스트 정보
 
--   하지 않는지 확인 앱 패키지 내의 각 이진 파일이 종속성 이진 파일의 가져오기 주소 테이블을 검사 하 여 UWP 앱 개발에 지원 되지 않는 Win32 api입니다.
+-   각 이진 앱 패키지 내에서 이진 파일의 가져오기 주소 테이블을 확인 하 여 UWP 앱 개발을 위한 지원 되지 않는 Win32 API에 종속 되지 않습니다는 확인 합니다.
 -   앱 패키지 내의 각 관리되는 이진 파일이 승인된 프로필 외부의 기능에 종속하지 않는지 확인합니다.
 
 ### <a name="corrective-actions"></a>수정 작업
 
 앱이 디버그 빌드가 아니라 릴리스 빌드로 컴파일되었는지 확인하세요.
 
-> **참고** [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)만 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다.
+> **참고**  앱의 디버그 빌드를이 테스트는 앱만 사용 하는 경우에 실패 [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)합니다.
 
-[UWP 앱에 대 한 API](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)되지 않은 앱은 API를 식별 하기 위해 오류 메시지를 검토 합니다.
+앱 사용 되지 않는 API를 식별 하는 오류 메시지를 검토는 [UWP 앱 용 API](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)합니다.
 
-> **참고**UWP 앱 용 Windows SDK의 Api만 사용 하는 경우에 디버그 구성에서 빌드된 c + + 앱이이 테스트에 실패 합니다. 자세한 정보에 대 한 [UWP 앱의 Windows Api 대안](https://go.microsoft.com/fwlink/p/?LinkID=244022) 을 참조 하세요.
+> **참고**  구성만 UWP 앱 용 Windows SDK에서 Api를 사용 하는 경우에 디버그 구성에서 만든 c + + 앱에서이 테스트를 실패 합니다. 하세요 [UWP 앱에서 Windows Api에 대 한 대안](https://go.microsoft.com/fwlink/p/?LinkID=244022) 자세한 정보에 대 한 합니다.
 
 ## <a name="performance-tests"></a>성능 테스트
 
@@ -429,7 +429,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>"resources.pri" 파일에서 자동 병합을 사용할 수 있도록 설정해서는 안 됩니다.</p>
 </td><td>
-<p>MakePRI.exe는 <strong>AutoMerge</strong>라는 옵션을 지원합니다. <strong>AutoMerge</strong>의 기본값은 <strong>off</strong>입니다. 이 옵션을 사용하면 <strong>AutoMerge</strong>에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. 이 Microsoft Store를 통해 배포 하려는 앱에 대 한 권장 하지 않습니다. Microsoft Store를 통해 배포 되는 앱의 resources.pri는 앱의 패키지의 루트에 하 고 앱에서 지 원하는 모든 언어 참조를 포함 해야 합니다.</p>
+<p>MakePRI.exe는 <strong>AutoMerge</strong>라는 옵션을 지원합니다. <strong>AutoMerge</strong>의 기본값은 <strong>off</strong>입니다. 이 옵션을 사용하면 <strong>AutoMerge</strong>에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. Microsoft Store 통해 배포 하려는 앱에 대 한이 권장 하지 않습니다. Microsoft Store 통해 배포 되는 앱의 resources.pri 앱의 패키지의 루트에 하 고 앱을 지 원하는 모든 언어 참조를 포함 해야 합니다.</p>
 </td></tr>
 <tr><td>
 <p>{string} 문자열에서 {number}자의 최대 길이 제한을 준수하지 못했습니다.</p>
@@ -461,17 +461,17 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <p>앱 매니페스트의 resources.pri에 유효한 리소스가 정의되어 있는지 확인하세요.</p>
 </td></tr>
 <tr><td>
-<p>{filename} 이미지 파일은 204800바이트보다 작아야 합니다.\*\*</p>
+<p>이미지 파일 {filename} 204800 바이트 보다 작아야 합니다.\*\*</p>
 </td><td>
 <p>표시된 이미지의 크기를 줄이세요.</p>
 </td></tr>
 <tr><td>
-<p>{filename} 파일에는 리버스 맵 섹션이 없어야 합니다.\*\*</p>
+<p>역방향 map 섹션 {filename} 파일을 사용할 수 없습니다.\*\*</p>
 </td><td>
 <p>Visual Studio 'F5 디버깅' 중 makepri.exe를 호출할 때 리버스 맵이 생성된 경우에는 pri 파일을 생성할 때 /m 매개 변수 없이 makepri.exe를 실행하여 제거할 수 있습니다.</p>
 </td></tr>
 <tr><td colspan="2">
-<p>\*\* 테스트가 Windows 8.1용 Windows 앱 인증 키트 3.3에서 추가되었음을 나타내며 해당 버전 이상의 키트를 사용할 때만 적용됩니다.</p>
+<p>\*\* Windows 8.1 대 한 Windows 앱 인증 키트 3.3에서 테스트를 추가한 경우에만 적용할 수를 사용 하 고는 나타냅니다 키트 이상 버전.</p>
 </td></tr>
 </table>
 
@@ -481,7 +481,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 
 ### <a name="branding-validation"></a>브랜딩 유효성 검사
 
-UWP 앱은 완전 하 고 제대로 작동 해야 합니다. 템플릿 또는 SDK 샘플의 기본 이미지를 사용하는 앱은 부적절한 사용자 환경을 제공하며 스토어 카탈로그에서 쉽게 식별할 수 없습니다.
+UWP 앱은 완전 하 고 완벽 하 게 작동 해야 합니다. 템플릿 또는 SDK 샘플의 기본 이미지를 사용하는 앱은 부적절한 사용자 환경을 제공하며 스토어 카탈로그에서 쉽게 식별할 수 없습니다.
 
 ### <a name="test-details"></a>테스트 정보
 
@@ -495,9 +495,9 @@ UWP 앱은 완전 하 고 제대로 작동 해야 합니다. 템플릿 또는 SD
 
 앱을 테스트하여 디버그 빌드가 아닌지 확인합니다.
 
-### <a name="background"></a>Background
+### <a name="background"></a>배경
 
-Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디버그 및 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
+Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야 디버그 및 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
 
 ### <a name="test-details"></a>테스트 정보
 
@@ -505,7 +505,7 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 
 ### <a name="corrective-actions"></a>수정 작업
 
--   Microsoft Store에 제출 하기 전에 릴리스 빌드로 앱을 빌드하십시오.
+-   Microsoft Store 제출 하기 전에 릴리스 빌드를로 앱을 빌드하십시오.
 -   올바른 버전의 .NET Framework를 설치했는지 확인합니다.
 -   앱이 디버그 버전의 프레임워크에 연결되어 있지 않은지, 릴리스 버전으로 빌드되고 있는지 확인합니다. 이 앱에 .NET 구성 요소가 포함되어 있을 경우 올바른 버전의 .NET Framework를 설치했는지 확인합니다.
 
@@ -513,7 +513,7 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 
 ### <a name="utf-8-file-encoding"></a>UTF-8 파일 인코딩
 
-### <a name="background"></a>Background
+### <a name="background"></a>배경
 
 바이트코드 캐싱의 장점을 이용하고 다른 런타임 오류 조건을 방지하려면 HTML, CSS 및 JavaScript 파일은 해당 BOM(바이트 순서 표시)을 사용하여 UTF-8 형식으로 인코딩해야 합니다.
 
@@ -531,25 +531,25 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 
 Microsoft Direct3D 앱을 테스트하여 이전 그래픽 하드웨어가 있는 디바이스에서 작동이 중단되지 않는지 확인합니다.
 
-### <a name="background"></a>Background
+### <a name="background"></a>배경
 
-Microsoft Store에서 제대로 렌더링 되거나 정상적으로 기능 수준 9 \-1 그래픽 카드 실패를 Direct3D를 사용 하 여 모든 응용 프로그램에 필요 합니다.
+Microsoft Store 정상적으로 실패 하거나 제대로 렌더링 Direct3D를 사용 하 여 모든 응용 프로그램 기능 수준 9 필요\-1 그래픽 카드.
 
-사용자는 앱 설치 후 디바이스의 그래픽 하드웨어를 변경할 수 있으므로 9\-1 이상의 최소 기능 수준을 선택하는 경우 실행 시 현재 하드웨어가 최소 요구 사항을 충족하는지 여부를 앱에서 확인해야 합니다. 최소 요구 사항을 충족하지 않는 경우 앱은 Direct3D 요구 사항이 자세히 설명된 메시지를 사용자에게 표시해야 합니다. 또한 호환되지 않는 디바이스에서 앱을 다운로드하는 경우 앱은 시작 시 이 사항을 감지하고 요구 사항을 자세히 설명하는 메시지를 고객에게 표시해야 합니다.
+사용자가 변경 될 수 있으므로 그래픽 하드웨어 장치에 앱을 설치한 후 9 보다 큰 최소 기능 수준을 선택한 경우\-1, 현재 설치 된 하드웨어 최소 요구 사항을 충족 하는지 여부 시작 시 앱 검색 해야 합니다. 최소 요구 사항을 충족하지 않는 경우 앱은 Direct3D 요구 사항이 자세히 설명된 메시지를 사용자에게 표시해야 합니다. 또한 호환되지 않는 디바이스에서 앱을 다운로드하는 경우 앱은 시작 시 이 사항을 감지하고 요구 사항을 자세히 설명하는 메시지를 고객에게 표시해야 합니다.
 
 ### <a name="test-details"></a>테스트 정보
 
-이 테스트는 앱이 기능 수준 9\-1에서 정확하게 렌더링되는지 검증합니다.
+테스트는 앱 기능 수준 9에서 정확 하 게 렌더링 하는 경우 유효성을 검사 합니다\-1입니다.
 
 ### <a name="corrective-action"></a>수정 작업
 
-높은 기능 수준에서 앱을 실행하더라도 앱이 Direct3D 기능 수준 9\-1에서 올바르게 렌더링되는지 확인합니다. 자세한 내용은 [각 Direct3D 기능 수준에 대한 개발](https://go.microsoft.com/fwlink/p/?LinkID=253575)을 참조하세요.
+앱 기능 수준 Direct3D 9에서 올바르게 렌더링 되도록\-1, 더 높은 기능 수준에서 실행 되도록 하려는 경우에 합니다. 자세한 내용은 [각 Direct3D 기능 수준에 대한 개발](https://go.microsoft.com/fwlink/p/?LinkID=253575)을 참조하세요.
 
 ### <a name="direct3d-trim-after-suspend"></a>일시 중단 후 Direct3D 자르기
 
-> **참고**이 테스트에 대 한 windows 8.1 이상용 UWP 앱에만 적용 됩니다.
+> **참고**  이 테스트 이상 및 Windows 8.1 용으로 개발 된 UWP 앱에만 적용 됩니다.
 
-### <a name="background"></a>Background
+### <a name="background"></a>배경
 
 앱이 Direct3D 디바이스에서 [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346)을 호출하지 않는 경우 앱은 이전 3D 작업에 할당된 메모리를 해제하지 않습니다. 이 경우 시스템 메모리 부족으로 인해 앱이 종료될 가능성이 커집니다.
 
@@ -565,7 +565,7 @@ Microsoft Store에서 제대로 렌더링 되거나 정상적으로 기능 수�
 
 ### <a name="special-use-capabilities"></a>특수 사용 접근 권한 값
 
-### <a name="background"></a>Background
+### <a name="background"></a>배경
 
 특수 사용 접근 권한 값은 특정 시나리오를 위한 것입니다. 회사 계정만 이러한 접근 권한 값을 사용할 수 있습니다.
 
@@ -585,7 +585,7 @@ Microsoft Store에서 제대로 렌더링 되거나 정상적으로 기능 수�
 
 ## <a name="windows-runtime-metadata-validation"></a>Windows 런타임 메타데이터 유효성 검사
 
-### <a name="background"></a>Background
+### <a name="background"></a>배경
 
 앱에 포함된 구성 요소가 UWP 형식 시스템을 준수하는지 확인합니다.
 
@@ -595,11 +595,11 @@ Microsoft Store에서 제대로 렌더링 되거나 정상적으로 기능 수�
 
 ### <a name="corrective-actions"></a>수정 작업
 
--   **ExclusiveTo 특성 테스트:** UWP 클래스가 다른 클래스에 ExclusiveTo로 표시된 인터페이스를 구현하지 않는지 확인합니다.
--   **형식 위치 테스트:** 모든 UWP 형식에 대한 메타데이터가 앱 패키지에서 네임스페이스와 일치하는 가장 긴 이름을 가진 winmd 파일에 있는지 확인합니다.
--   **형식 이름 대/소문자 구분 테스트:** 앱 패키지 내에서 모든 UWP 형식의 이름이 대/소문자를 구분하지 않는 고유한 이름인지 확인합니다. 또한 UWP 이름이 앱 패키지 내에서 네임스페이스 이름으로도 사용되지 않았는지 확인합니다.
--   **형식 이름 수정 테스트:** 글로벌 네임스페이스 또는 Windows 최상위 네임스페이스에 UWP 형식이 없는지 확인합니다.
--   **일반 메타데이터 수정 테스트:** 사용 중인 형식을 생성하는 컴파일러가 최신 UWP 사양으로 업데이트되었는지 확인합니다.
+-   **ExclusiveTo 특성 테스트:** UWP 클래스가 다른 클래스 ExclusiveTo 변수로 표시 되는 인터페이스를 구현 하지 확인 합니다.
+-   **형식 위치 테스트:** 모든 UWP 형식에 대 한 메타 데이터를 앱 패키지의 가장 긴 네임 스페이스와 일치 하는 이름을 가진 winmd 파일에 있는지 확인 합니다.
+-   **형식 이름 대/소문자 구분 테스트:** 모든 UWP 형식에 앱 패키지 내 고유한 대/소문자가 구분된 이름이 있는지 확인합니다. 또한 UWP 이름이 앱 패키지 내에서 네임스페이스 이름으로도 사용되지 않았는지 확인합니다.
+-   **형식 이름 올바른지 테스트 합니다.** 글로벌 네임스페이스 또는 Windows 최상위 네임스페이스에 UWP 형식이 없는지 확인합니다.
+-   **일반 메타 데이터 정확성 테스트:** 컴파일러가 형식을 생성 하는 UWP 사양을 사용 하 여 최신 상태 인지 확인 합니다.
 -   **속성 테스트:** UWP 클래스의 모든 속성에 get 메서드가 있는지 확인합니다(set 메서드는 옵션임). UWP 형식의 모든 속성에 대해 get 메서드 반환 값 유형이 set 메서드 입력 매개 변수 유형과 일치하는지 확인합니다.
 
 ## <a name="package-sanity-tests"></a>패키지 온전성 테스트
@@ -632,15 +632,15 @@ Microsoft Store에서 제대로 렌더링 되거나 정상적으로 기능 수�
 
 ### <a name="supported-directory-structure-test"></a>지원되는 디렉터리 구조 테스트
 
-응용 프로그램이 MAX\-PATH보다 긴 하위 디렉터리를 설치 과정에서 만들지 않는지 확인합니다.
+응용 프로그램 최대 보다 긴 설치의 일부로 하위 디렉터리를 만드는 것이 확인\-경로입니다.
 
 ### <a name="background"></a>배경
 
-OS 구성 요소(Trident, WWAHost 등 포함)는 내부적으로 파일 시스템 경로가 MAX\-PATH로 제한되며 이보다 긴 경로에서는 제대로 작동하지 않습니다.
+OS 구성 요소 (Trident, WWAHost 등 포함)는 내부적으로 최대 제한\-경로 대 한 파일 시스템 경로 보다 긴 경로 대 한 제대로 작동 하지 것입니다.
 
 ### <a name="test-details"></a>테스트 정보
 
-앱 설치 디렉터리 내의 경로가 MAX\-PATH를 초과하지 않는지 확인합니다.
+최대값을 초과 하는 앱 설치 디렉터리 경로가 없는 확인\-경로입니다.
 
 ### <a name="corrective-action"></a>수정 작업
 
@@ -667,6 +667,6 @@ Close()를 올바르게 호출하도록 백그라운드 JavaScript 코드를 업
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Windows 데스크톱 브리지 앱 테스트](windows-desktop-bridge-app-tests.md)
+* [Windows 데스크톱 브리지 응용 프로그램 테스트](windows-desktop-bridge-app-tests.md)
 * [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)
  

@@ -1,72 +1,72 @@
 ---
-title: 파트너는 Xbox live 시작
-description: 관리 파트너 도움이 되는 링크를 제공 하거나 ID@Xbox 멤버 Xbox Live 개발 시작 합니다.
+title: Xbox Live를 사용한 파트너로 시작
+description: 관리 되는 파트너 도움말 링크를 제공 하거나 ID@Xbox 멤버 Xbox Live 개발을 시작 하세요.
 ms.assetid: 69ab75d1-c0e7-4bad-bf8f-5df5cfce13d5
 ms.date: 06/07/2017
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 파트너,ID@Xbox
+keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 파트너 ID@Xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a219ee6f4e1dc80ead893c4e230d70e8caa2400
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940541"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659828"
 ---
-# <a name="get-started-with-xbox-live-as-a-managed-partner-or-an-idxbox-developer"></a>Xbox Live 관리 파트너로 시작 또는 ID@Xbox 개발자
+# <a name="get-started-with-xbox-live-as-a-managed-partner-or-an-idxbox-developer"></a>관리 되는 파트너로 서 Xbox Live 시작 또는 ID@Xbox 개발자
 
-이 섹션에서는 관리 파트너 또는 Xbox live 시작 된 ID@Xbox 개발자 합니다. 파트너 및 ID 개발자 도전 과제, 멀티 플레이어을 등의 전체 범위 Xbox Live 기능에 액세스할 수 있습니다.
+이 섹션에서는 관리 되는 파트너 또는 Xbox Live를 사용한 시작을 ID@Xbox 개발자. 파트너 및 개발자 ID 성과, 멀티 플레이 게임을 등의 전체 범위 Xbox Live 기능에 액세스할 수 있습니다.
 
-관리 파트너 및 ID@Xbox 개발자가 유니버설 Windows 플랫폼 (UWP) 또는 Xbox 개발자 키트 (XDK) 플랫폼 모두에 대 한 Xbox Live 타이틀을 개발할 수 있습니다.
+파트너를 관리 하 고 ID@Xbox 개발자가 Windows 플랫폼 (UWP (유니버설) 또는 Xbox 개발자 키트 (XDK) 플랫폼 모두에 대 한 제목 Xbox Live를 개발할 수 있습니다.
 
-사용 가능한 콘텐츠 외에도 여기서 됩니다 파트너 권한이 부여 된 파트너 센터 계정으로 사용할 수 있는 추가 설명서. 여기에 해당 콘텐츠를 액세스할 수 있습니다: [Xbox Live 파트너 콘텐츠](https://developer.microsoft.com/en-us/games/xbox/docs/xboxlive/xbox-live-partners/partner-content).
+사용 가능한 콘텐츠 외에도 여기서 설명서도 포함 되어 추가 권한이 부여 된 파트너 센터 계정 사용 하 여 파트너를 사용할 수 있는 합니다. 여기에 해당 콘텐츠를 액세스할 수 있습니다. [Xbox Live 파트너 콘텐츠](https://developer.microsoft.com/en-us/games/xbox/docs/xboxlive/xbox-live-partners/partner-content)합니다.
 
-## <a name="why-should-you-use-xbox-live"></a>Xbox Live 왜 사용 해야 하나요?
+## <a name="why-should-you-use-xbox-live"></a>Xbox Live 왜 사용 해야 합니까?
 
-Xbox Live 일련의 게임을 홍보 하 고 플레이어의 참여를 유지 하도록 설계 된 기능을 제공 합니다.
+Xbox Live 게임을 홍보 및 게이머 참여를 유지할 수 있도록 하는 기능 배열을 제공 합니다.
 
-- Xbox Live 소셜 플랫폼 게이머를 친구와 연결 하 고 게임에 대해 수 있습니다.
-- Xbox Live 도전 과제는 게이머가 도전 과제를 잠금 해제 하는 경우 Xbox Live 소셜 그래프에 게임에 사용 가능한 프로 모션을 제공 하 여 인기 있는 가져오기 게임 도움이 됩니다.
-- Xbox Live 순위표 친구에 게 경쟁 하 고 순위로 이동 하 게 수 있도록 하 여 게임의 참여를 높일 수 있습니다.
-- Xbox Live 멀티 플레이어 게이머는 친구 또는 get 재생을 사용 하 게 또는 게임에서 협력 다른 플레이어와 일치 합니다.
-- Xbox Live 저장소 제품 저장 된 게임 게이머 Xbox One 및 Windows PC 게임 진행 상황을 쉽게 계속할 수 있도록 디바이스 간에 로밍 무료 연결 되어 있습니다.
+- 소셜 플랫폼 Xbox Live 게이머를 친구 들과 연결 하 고 게임에 대 한 이야기 있습니다.
+- 성과 Xbox Live 게이머 도전 과제를 잠금 해제 하는 경우에 게임 무료 프로 모션 Xbox Live 소셜 그래프를 제공 하 여 인기 있는 가져오기 게임을 수 있습니다.
+- 순위표 Xbox Live 게이머 친구 들을 갱신 하 고 순위를 위로 이동 하기 위해 경쟁할 수 있도록 하 여 게임의 드라이브 engagement를 수 있습니다.
+- 다중 접속 Xbox Live 게이머 게 친구 또는 get을 사용 하 여 재생 있습니다 경쟁 게임에서 협력에 다른 플레이어와 일치 합니다.
+- Xbox Live 연결 저장소에서 저장 된 게임 게이머 Xbox One 및 Windows PC 간에 게임 진행 상황을 쉽게 계속할 수 있도록 장치 간에 로밍 무료로 제공 합니다.
 
-## <a name="1-choose-a-platform"></a>1. 플랫폼을 선택 합니다.
-Xbox 개발 키트 (XDK), 유니버설 Windows 플랫폼 (UWP), 또는 크로스 플레이 게임을 만드는 중 하나를 선택 합니다.
+## <a name="1-choose-a-platform"></a>1. 플랫폼 선택
+Xbox 개발 키트 (XDK), 유니버설 Windows 플랫폼 (UWP) 게임 간 진행 하면서 결정 합니다.
 
-- XDK 기반 게임용 Xbox One 콘솔에서 실행
-- UWP 게임을 Windows PC, Windows Phone 또는 Xbox One 등 모든 Windows 플랫폼을 대상으로 수 있습니다.
-  - Xbox One 용 [Xbox One의 UWP](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index) 및 특히 [Xbox One의 UWP 앱 및 게임에 대 한 시스템 리소스](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/system-resource-allocation) 참조
-- 크로스 플레이 게임은 일반적으로 Xbox One 및 XDK와 UWP 경로 사용 하 여 Windows PC를 대상으로 하는 게임입니다.
+- XDK은 Xbox One 콘솔 에서만 실행 하는 게임 기반
+- UWP 게임 Windows PC, Windows Phone 또는 Xbox One와 같은 모든 Windows 플랫폼을 대상 수 있습니다.
+  - Xbox One에 대 한 참조 [Xbox One에 UWP](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index) 및 특히 [Xbox One에서 UWP 앱과 게임에 대 한 시스템 리소스](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/system-resource-allocation)
+- 교차 play 게임은 일반적으로 게임 Xbox One 및 XDK와 UWP 모두 경로 사용 하 여 Windows PC를 대상으로 하는입니다.
 
-## <a name="2-ensure-that-you-have-a-title-created-in-partner-center-or-xdp"></a>2. 파트너 센터 또는 XDP에서 만든 타이틀이 있는지 확인
-모든 Xbox Live 타이틀 전에 로그인 및 Xbox Live 서비스를 호출 하는 수 있게 됩니다 파트너 센터 또는 Xbox 개발자 포털 (XDP)에서 정의 되어야 합니다.  [새 타이틀 만들기](create-a-new-title.md) 에서는이 작업을 수행 하는 방법을 보여 줍니다.
+## <a name="2-ensure-that-you-have-a-title-created-in-partner-center-or-xdp"></a>2. 파트너 센터 또는 XDP에서 만든 제목을 했는지 확인
+Xbox Live 제목 모든 로그인 및 Xbox Live 서비스를 호출 하는 일을 할 수 있습니다 파트너 센터 또는 Xbox 개발자 포털 (XDP)에 정의 되어야 합니다.  [새 제목을 만들](create-a-new-title.md) 이 작업을 수행 하는 방법을 표시 됩니다.
 
-## <a name="3-follow-the-appropriate-guide-to-setup-your-ide-or-game-engine"></a>3. IDE 또는 게임 엔진 설정 적절 한 가이드를 따라
-플랫폼 및 엔진에 대 한 적절 한 시작 가이드를 따라 하 고 진행 하면서 Xbox Live의 기본 사항을 알아볼 수 있습니다.
+## <a name="3-follow-the-appropriate-guide-to-setup-your-ide-or-game-engine"></a>3. 프로그램 IDE 또는 게임 엔진을 설정 하려면 적절 한 가이드
+플랫폼 및 엔진에 대해 적절 한 시작 가이드를 따르세요를 진행 하면서 Xbox Live의 기본 사항을 알아봅니다.
 
-* [UWP 게임에 대 한 Visual Studio를 사용 하 여 시작](get-started-with-visual-studio-and-uwp.md) Visual Studio 프로젝트를 파트너 센터에서 Xbox Live 구성과 연결 하는 방법을 표시 됩니다.
-* [Unity UWP 게임을 사용 하 여 시작](partner-add-xbox-live-to-unity-uwp.md) 하면 새 Xbox Live를 만들려면 Unity 제목, 사용 방법 제목, 순위표 등의 기능을 추가 하 고 기본 Visual Studio 프로젝트를 생성 표시 됩니다.
-* [XDK 용 Visual Studio를 사용 하 여 시작 기반 게임은](xdk-developers.md) XDK를 사용 하는 Xbox One 제목 하는 경우 Visual Studio 프로젝트 설정 하는 방법을 표시 됩니다.
-* [크로스 플레이 게임 만들고 시작](get-started-with-cross-play-games.md) 을 Windows 10 PC에 대 한 제품을 기반으로 하는 XDK에 대해 Xbox One 및 기반 UWP 게임에 대 한 게임을 만드는 방법을 설명 합니다.
+* [Visual Studio를 사용 하 여 UWP 게임을 위한 시작](get-started-with-visual-studio-and-uwp.md) 파트너 센터에서 Xbox Live 구성 사용 하 여 Visual Studio 프로젝트를 연결 하는 방법을 표시 됩니다.
+* [Unity를 사용 하 여 UWP 게임을 위한 시작](partner-add-xbox-live-to-unity-uwp.md) 새 Xbox Live 만들려면 Unity title을 사용 하도록 설정 하는 방법을 제목에 순위표와 같은 기능을 추가 하는 네이티브 Visual Studio 프로젝트 생성에 표시 됩니다.
+* [게임 기반 XDK 용 Visual Studio를 사용 하 여 시작](xdk-developers.md) 는 XDK를 사용 하 여 Xbox One title을 하는 경우 Visual Studio 프로젝트 설정을 가져오는 방법 표시 됩니다.
+* [가져오기 시작 게임을 만들면 간 play](get-started-with-cross-play-games.md) 제품 Xbox One 및 기반 UWP는 XDK 기반 게임을 Windows 10 PC에 대 한 게임을 확인 하는 방법에 설명 합니다.
 
 ## <a name="4-xbox-live-concepts"></a>4. Xbox Live 개념
-만든 타이틀이 있으면 있습니다 타이틀 개발 경험 영향을 주는 Xbox Live 개념에 알아 두어야 합니다.
+만든 제목을 만든 후에 제목 개발 환경이 영향을 주는 Xbox Live 개념 알아 두어야 할:
 
 - [Xbox Live 샌드박스](../xbox-live-sandboxes.md)
 - [Xbox Live 테스트 계정](../xbox-live-test-accounts.md)
-- [Xbox Live API 소개](../introduction-to-xbox-live-apis.md)
+- [Xbox Live Api 소개](../introduction-to-xbox-live-apis.md)
 
-## <a name="5-add-xbox-live-features"></a>5. Xbox Live 기능을 추가 합니다.
+## <a name="5-add-xbox-live-features"></a>5. Xbox Live 기능 추가
 
 게임에 Xbox Live 기능을 추가 합니다.
 
-- [Xbox Live 소셜 플랫폼 - 프로필, 친구, 상태](../social-platform/social-platform.md)
-- [Xbox Live 데이터 플랫폼-통계, 순위표, 도전 과제](../data-platform/data-platform.md)
-- [Xbox Live 멀티 플레이 플랫폼-토너먼트 초대, 연결,](../multiplayer/multiplayer-intro.md)
-- [Xbox Live 저장소 플랫폼-연결 된 저장소, 타이틀 저장소](../storage-platform/storage-platform.md)
-- [상황에 맞는 검색](../contextual-search/introduction-to-contextual-search.md)
+- [Xbox Live 친구 소셜 플랫폼-프로필 상태](../social-platform/social-platform.md)
+- [Xbox Live 성과 데이터 플랫폼-Stats 순위표](../data-platform/data-platform.md)
+- [Xbox Live 멀티 플레이 플랫폼-매 치메이 킹, 초대 토너먼트](../multiplayer/multiplayer-intro.md)
+- [Xbox Live 플랫폼-연결 된 저장소 제목 저장소](../storage-platform/storage-platform.md)
+- [상황별 검색](../contextual-search/introduction-to-contextual-search.md)
 
-## <a name="6-release-your-title"></a>6. 타이틀을 릴리스 합니다.
+## <a name="6-release-your-title"></a>6. 제목 릴리스
 
-ID@Xbox및 관리 파트너의 제목을 릴리스하기 전에 인증 프로세스를 통해 이동 해야 합니다.  제목은 온라인 멀티 플레이어, 도전 과제, 다양 한 상태 등의 추가 기능에 액세스할 수 때문입니다.  타이틀을 릴리스할 준비가 되 면 제출 및 릴리스 프로세스에 대 한 자세한 내용은 Microsoft 담당자에 게 문의 합니다.
+ID@Xbox 및 관리 되는 파트너 직함을 해제 하기 전에 인증 프로세스를 통해 이동 해야 합니다.  이는 제목이 멀티 플레이어 온라인 게임, 성과, 그리고 다기능 현재 상태와 같은 추가 기능에 대 한 액세스를 갖기 때문입니다.  제목 릴리스 준비가 되 면 제출 및 릴리스 프로세스에 대 한 자세한 내용은 Microsoft 담당자에 게 문의 합니다.

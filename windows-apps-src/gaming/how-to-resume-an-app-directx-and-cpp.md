@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 다시 시작, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: f0aa60061ae9fc14392bfe4beb0693ba50fda0df
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947344"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601608"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>앱 다시 시작 방법(DirectX 및 C++)
 
@@ -43,7 +43,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## <a name="refresh-displayed-content-after-suspension"></a>일시 중단 후 표시 콘텐츠 새로 고침
 
 
-앱에서 Resuming 이벤트를 처리하면 표시 콘텐츠를 새로 고칠 기회가 생깁니다. [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860)에 대한 처리기를 사용하여 저장한 앱을 복원하고 처리를 다시 시작합니다. 게임 개발: 오디오 엔진을 일시 중단한 경우 이제 다시 시작합니다.
+앱에서 Resuming 이벤트를 처리하면 표시 콘텐츠를 새로 고칠 기회가 생깁니다. [  **CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860)에 대한 처리기를 사용하여 저장한 앱을 복원하고 처리를 다시 시작합니다. 게임 개발: 오디오 엔진을 일시 중단한 경우 이제 다시 시작합니다.
 
 ```cpp
 void App::OnResuming(Platform::Object^ sender, Platform::Object^ args)
@@ -90,8 +90,8 @@ void App::Run()
 
 ## <a name="related-topics"></a>관련 항목
 
-* [앱 일시 중단 방법(DirectX 및 C++)](how-to-suspend-an-app-directx-and-cpp.md)
-* [앱 활성화 방법(DirectX 및 C++)](how-to-activate-an-app-directx-and-cpp.md)
+* [(DirectX 및 c + +) 앱을 중지 하는 방법](how-to-suspend-an-app-directx-and-cpp.md)
+* [(DirectX 및 c + +) 앱을 활성화 하는 방법](how-to-activate-an-app-directx-and-cpp.md)
 
  
 

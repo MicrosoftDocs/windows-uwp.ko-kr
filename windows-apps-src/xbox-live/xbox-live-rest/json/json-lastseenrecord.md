@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e06de31cabaedb68ed57d3d4f2ff30614ceb6317
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933055"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613378"
 ---
 # <a name="lastseenrecord-json"></a>LastSeenRecord(JSON)
-시스템 사용자, 사용자가 없는 유효한 DeviceRecord 때 사용할 수 있는 마지막 본 되는 시기에 대 한 정보. 
+시스템 사용자가 유효한 DeviceRecord 없는 경우 사용할 수 있는 사용자를 마지막으로 확인 되는 경우에 대 한 정보입니다. 
 <a id="ID4EN"></a>
 
  
@@ -23,12 +23,12 @@ ms.locfileid: "8933055"
  
 LastSeenRecord 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| deviceType| string| 형식에는 사용자가 마지막 현재 장치입니다.| 
-| titleId| 32 비트 부호 없는 정수| 식별자는 사용자가 마지막 현재 제목입니다.| 
-| titleName| string| 이름에는 사용자가 마지막 현재 제목입니다.| 
-| 타임 스탬프| DateTime| 사용자의 마지막으로 표시 된 시기를 나타내는 UTC 타임 스탬프입니다.| 
+| deviceType| 문자열| 형식에는 사용자가 마지막으로 현재 장치입니다.| 
+| titleId| 32 비트 부호 없는 정수| 식별자는 사용자가 마지막으로 현재 제목입니다.| 
+| titleName| 문자열| 사용자가 마지막으로 현재 타이틀의 이름입니다.| 
+| 타임 스탬프| DateTime| 사용자의 마지막 표시 된 시간을 나타내는 UTC 타임 스탬프입니다.| 
   
 <a id="ID4EHC"></a>
 
@@ -55,12 +55,12 @@ LastSeenRecord 개체에 다음과 같이 지정 합니다.
 <a id="ID4ESC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
   
 <a id="ID4E5C"></a>
 
  
-##### <a name="reference"></a>참조   
+##### <a name="reference"></a>참고자료   

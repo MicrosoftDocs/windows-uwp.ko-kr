@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 751cda36fc58d0e6add9204327a74ec947c9fc53
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930594"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660918"
 ---
 # <a name="xfieldmodifier-attribute"></a>x:FieldModifier 특성
 
@@ -30,11 +30,11 @@ ms.locfileid: "8930594"
 
 ## <a name="remarks"></a>설명
 
-**x:FieldModifier** 특성의 값은 프로그래밍 언어에 따라 다릅니다. 유효한 값은 **private**, **public**, **protected**, **internal** 또는 **friend**입니다. C#, Microsoft Visual Basic 또는 VisualC + + 구성 요소 확장 (C + + CX), 문자열을 제공할 수 있습니다 값 "public" 또는 "Public"; 파서가이 특성 값에 대/소문자를 적용 하지 않습니다.
+**x:FieldModifier** 특성의 값은 프로그래밍 언어에 따라 다릅니다. 유효한 값은 **private**, **public**, **protected**, **internal** 또는 **friend**입니다. 에 대 한 C#, Microsoft Visual Basic 또는 Visual c + + 구성 요소 확장 (C + + /cli CX), 문자열을 제공할 수 있습니다 "public" 또는 "공용"; 값 파서는 특성 값이 대/소문자를 적용 하지 않습니다.
 
 **Private** 액세스가 기본값입니다.
 
 **x:FieldModifier**는 [x:Name 특성](x-name-attribute.md)이 있는 요소에만 해당됩니다. 해당 이름은 public이 된 필드를 참조하는 데 사용되기 때문입니다.
 
-**참고** **X:classmodifier** 또는 **X:subclass**Windows 런타임 XAML 지원 하지 않습니다.
+**참고**  Windows 런타임 XAML을 지원 하지 않습니다 **X:classmodifier** 하거나 **X:subclass**합니다.
 

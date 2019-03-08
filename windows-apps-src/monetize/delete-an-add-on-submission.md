@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 삭제, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: cdcd74b86ce846f19f8a4eb912781762adb66a2d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925774"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655778"
 ---
 # <a name="delete-an-add-on-submission"></a>추가 기능 제출 삭제
 
 Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 제출을 삭제합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -35,17 +35,17 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 추가 기
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 이름        | 유형   | 설명                                                                 |
+| 이름        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | 필수. 삭제할 제출이 포함된 추가 기능의 스토어 ID입니다. 스토어 ID는 파트너 센터에서 사용할 수 있습니다.  |
-| submissionId | string | 필수. 삭제할 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대해이 ID는 또한 파트너 센터에서 제출 페이지의 URL을 사용할 수 있습니다.  |
+| inAppProductId | 문자열 | 필수. 삭제할 제출이 포함된 추가 기능의 스토어 ID입니다. 파트너 센터에서 Store ID 제공 됩니다.  |
+| submissionId | 문자열 | 필수. 삭제할 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대 한이 ID의 파트너 센터에서 제출 페이지의 URL을 사용할 수도 있습니다.  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -74,14 +74,14 @@ Authorization: Bearer <your access token>
 |--------|------------------|
 | 400  | 요청 매개 변수가 잘못되었습니다. |
 | 404  | 지정된 제출을 찾을 수 없습니다. |
-| 409  | 지정 된 제출을 찾았지만 현재 상태로 삭제할 수 없거나 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |
+| 409  | 지정 된 전송 찾을 수 있지만 현재 상태의 삭제할 수 없습니다 또는 파트너 센터 기능을 사용 하는 추가 기능 [현재 Microsoft Store 전송 API에 의해 지원 되지 않습니다](create-and-manage-submissions-using-windows-store-services.md#not_supported)합니다. |
 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [Microsoft Store 서비스를 사용 하 여 서브 미션을 만들고 설정 합니다.](create-and-manage-submissions-using-windows-store-services.md)
 * [추가 기능 제출 가져오기](get-an-add-on-submission.md)
 * [추가 기능 제출 만들기](create-an-add-on-submission.md)
 * [추가 기능 제출 커밋](commit-an-add-on-submission.md)
-* [추가 기능 제출 업데이트](update-an-add-on-submission.md)
-* [추가 기능 제출 상태 가져오기](get-status-for-an-add-on-submission.md)
+* [업데이트는 추가 기능 제출](update-an-add-on-submission.md)
+* [추가 기능 제출 상태를 가져옵니다.](get-status-for-an-add-on-submission.md)

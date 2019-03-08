@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 입력 대기 시간
 ms.localizationpriority: medium
 ms.openlocfilehash: 537dd6e9d3f300666a0692b66f422ce00dd68460
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934100"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601748"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임에 대한 입력 대기 시간 최적화
 
@@ -91,7 +91,7 @@ void App::Run()
 }
 ```
 
-## <a name="scenario-2-render-on-demand-with-transient-animations"></a>시나리오 2: 임시 애니메이션을 사용하여 요청 시 렌더링
+## <a name="scenario-2-render-on-demand-with-transient-animations"></a>시나리오 2: 일시적인 애니메이션을 사용 하 여 요청 시 렌더링
 
 
 두 번째 반복에서는 사용자가 퍼즐 조각을 선택한 다음 해당 조각의 올바른 목적지를 터치할 때 목적지에 도착할 때까지 화면에서 애니메이트되도록 게임이 수정됩니다.
@@ -139,7 +139,7 @@ void App::Run()
 
 **ProcessOneAndAllPending**과 **ProcessAllIfPresent** 간의 전환을 지원하려면 앱이 애니메이트 중인지 확인하기 위해 상태를 추적해야 합니다. 퍼즐 앱에서는 게임 루프 중 GameState 클래스에 대해 호출될 수 있는 새 메서드를 추가하여 상태를 추적합니다. 게임 루프의 애니메이션 분기는 GameState의 새 Update 메서드를 호출하여 애니메이션 상태의 업데이트를 제어합니다.
 
-## <a name="scenario-3-render-60-frames-per-second"></a>시나리오 3: 초당 60프레임 렌더링
+## <a name="scenario-3-render-60-frames-per-second"></a>시나리오 3: 초당 60 프레임을 렌더링 합니다.
 
 
 세 번째 반복에서 앱은 퍼즐 작업이 수행된 기간을 사용자에게 보여 주는 타이머를 표시합니다. 밀리초까지 경과 시간을 표시하기 때문에 디스플레이를 최신 상태로 유지하려면 초당 60프레임을 렌더링해야 합니다.
@@ -177,7 +177,7 @@ void App::Run()
 
 그러나 개발이 용이한 대신 단점이 있습니다. 초당 60프레임으로 렌더링할 경우 요청 시 렌더링보다 많은 전원이 사용됩니다. 게임에서 각 프레임에 표시되는 내용이 변경될 때 **ProcessAllIfPresent**를 사용하는 것이 좋습니다. 또한, 이제 앱이 **ProcessEvents** 대신 디스플레이의 동기화 간격에서 게임 루프를 차단하기 때문에 입력 대기 시간이 16.7ms만큼 증가합니다. 큐가 프레임당 한 번만(60Hz) 처리되므로 일부 입력 이벤트가 삭제될 수도 있습니다.
 
-## <a name="scenario-4-render-60-frames-per-second-and-achieve-the-lowest-possible-input-latency"></a>시나리오 4: 초당 60프레임 렌더링 및 가능한 가장 짧은 입력 대기 시간 구현
+## <a name="scenario-4-render-60-frames-per-second-and-achieve-the-lowest-possible-input-latency"></a>시나리오 4: 초당 60 프레임을 렌더링 하 고 가장 낮은 가능한 입력 지연 시간
 
 
 일부 게임은 시나리오 3의 입력 대기 시간 증가를 무시하거나 보상할 수 있습니다. 그러나 짧은 입력 대기 시간이 게임 환경과 플레이어 피드백에 중요한 경우 초당 60프레임을 렌더링하는 게임이 별도 스레드에서 입력을 처리해야 합니다.
@@ -233,7 +233,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-Microsoft Visual Studio2015에서 **DirectX 11 및 XAML 앱 (유니버설 Windows)** 템플릿은 유사한 방식으로 여러 스레드로 게임 루프를 분할 합니다. [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) 개체를 사용하여 입력 처리 전용 스레드를 시작하고 XAML UI 스레드와 독립적인 렌더링 스레드도 만듭니다. 이러한 템플릿에 대한 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
+**DirectX 11 및 XAML 앱 (유니버설 Windows)** Microsoft Visual Studio 2015에서 템플릿 비슷한 방식으로 여러 스레드를 게임 루프를 분할 합니다. [  **Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) 개체를 사용하여 입력 처리 전용 스레드를 시작하고 XAML UI 스레드와 독립적인 렌더링 스레드도 만듭니다. 이러한 템플릿에 대한 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>입력 대기 시간을 줄이는 추가 방법
 
@@ -246,13 +246,13 @@ DirectX 게임은 사용자에게 표시되는 화면 내용을 업데이트하�
 
 ![그림 1 directx의 입력 대기 시간 ](images/input-latency1.png)
 
-Windows8.1, DXGI 스왑 체인에 앱을 쉽게 Present 큐를 빈 상태로 유지 하기 위해 추론을 구현 하지 않고도이 대기 시간을 줄일 수 있도록 **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** 플래그를 도입 했습니다. 이 플래그를 사용하여 만든 스왑 체인을 대기 가능 스왑 체인이라고 합니다. 그림 2에서는 대기 가능 스왑 체인을 사용할 경우의 입력 이벤트에 대한 응답과 대략적인 수명 주기를 보여 줍니다.
+DXGI에 도입 된 Windows 8.1는 **DXGI\_스왑\_체인\_플래그\_프레임\_대기 시간이\_WAITABLE\_개체** 교환에 대 한 플래그 앱을 손쉽게 비어 있는 큐를 유지 하는 추론을 구현 하도록 요구 하지 않고이 대기 시간을 줄일 수 있는 체인입니다. 이 플래그를 사용하여 만든 스왑 체인을 대기 가능 스왑 체인이라고 합니다. 그림 2에서는 대기 가능 스왑 체인을 사용할 경우의 입력 이벤트에 대한 응답과 대략적인 수명 주기를 보여 줍니다.
 
 그림 2
 
 ![그림 2 directx 대기 가능의 입력 대기 시간](images/input-latency2.png)
 
-이러한 다이어그램을 통해 게임이 디스플레이의 새로 고침 빈도로 정의된 16.7ms 할당 내에서 각 프레임을 렌더링 및 표시할 수 있는 경우 입력 대기 시간을 전체 프레임 2개만큼 줄일 수 있음을 알 수 있습니다. 퍼즐 샘플은 대기 가능 스왑 체인을 사용하며 다음을 호출하여 Present 큐 제한을 제어합니다.` m_deviceResources->SetMaximumFrameLatency(1);`
+이러한 다이어그램을 통해 게임이 디스플레이의 새로 고침 빈도로 정의된 16.7ms 할당 내에서 각 프레임을 렌더링 및 표시할 수 있는 경우 입력 대기 시간을 전체 프레임 2개만큼 줄일 수 있음을 알 수 있습니다. 퍼즐 샘플 대기 가능 스왑 체인을 사용 하 고 있는 큐도 호출 하 여 제어:` m_deviceResources->SetMaximumFrameLatency(1);`
 
  
 

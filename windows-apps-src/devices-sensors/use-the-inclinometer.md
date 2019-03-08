@@ -1,25 +1,25 @@
 ---
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: 경사계 사용
-description: 경사계를 사용하여 피치, 롤 및 요를 확인하는 방법을 알아봅니다.
+description: 경사계를 사용하여 피치, 롤 및 요를 판단하는 방법을 알아봅니다.
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bfd617c3c08cdcb7815010648c6036a5f39ee3ab
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932662"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623808"
 ---
 # <a name="use-the-inclinometer"></a>경사계 사용
 
 
-**중요 API**
+**중요 한 Api**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**경사계**](https://msdn.microsoft.com/library/windows/apps/BR225766)
+-   [**경사 계**](https://msdn.microsoft.com/library/windows/apps/BR225766)
 
 **샘플**
 
@@ -29,9 +29,9 @@ ms.locfileid: "8932662"
 
 일부 3차원 게임에는 입력 장치로서 경사계가 필요합니다. 일반적인 한 예로, 경사계의 세 축(X, Y 및 Z)을 항공기의 승강키, 보조 날개 및 방향타 입력에 매핑하는 비행 시뮬레이터가 있습니다.
 
- ## <a name="prerequisites"></a>사전 요구 사항
+ ## <a name="prerequisites"></a>필수 구성 요소
 
-응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트에 알고 있어야 합니다.
+사용 하 여 Extensible Application Markup Language (XAML), Microsoft Visual 친숙 해야 C#, 및 이벤트입니다.
 
 사용하는 장치 또는 에뮬레이터가 경사계를 지원해야 합니다.
 

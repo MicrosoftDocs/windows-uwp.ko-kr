@@ -1,5 +1,5 @@
 ---
-Description: Hyperlinks navigate the user to another part of the app, to another app, or launch a specific uniform resource identifier (URI) using a separate browser app.
+Description: 하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다.
 title: 하이퍼링크
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
@@ -13,11 +13,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 9aa5053d83518c61335807874cd0d31943a60695
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058604"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606478"
 ---
 # <a name="hyperlinks"></a>하이퍼링크
 
@@ -25,7 +25,7 @@ ms.locfileid: "9058604"
 
 하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다. XAML 앱에 하이퍼링크를 추가할 수 있는 두 가지 방법(**Hyperlink** 텍스트 요소 및 **HyperlinkButton** 컨트롤)이 있습니다.
 
-> **중요 API**: [Hyperlink 텍스트 요소](https://msdn.microsoft.com/library/windows/apps/dn279356), [HyperlinkButton 컨트롤](https://msdn.microsoft.com/library/windows/apps/br242739)
+> **중요 한 Api**: [하이퍼링크 텍스트 요소](https://msdn.microsoft.com/library/windows/apps/dn279356), [HyperlinkButton 컨트롤](https://msdn.microsoft.com/library/windows/apps/br242739)
 
 ![하이퍼링크 단추](images/controls/hyperlink-button.png)
 
@@ -49,8 +49,8 @@ ms.locfileid: "9058604"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/HyperlinkButton">앱을 열고 작동 중인 HyperlinkButton을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -123,7 +123,7 @@ URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성
 하이퍼링크가 기본 웹 브라우저에 콘텐츠를 로드하지 않도록 않고 브라우저를 표시하고 싶지 않은 경우 NavigateUri 값을 설정하지 않습니다. 대신 Click 이벤트를 처리하고 원하는 작업을 수행하는 코드를 작성합니다.
 
 
-**Click 이벤트 처리**
+**클릭 이벤트를 처리 합니다.**
 
 앱 내 이동과 같이 브라우저에서의 URI 실행 이외의 작업에 대해 Click 이벤트를 사용합니다. 예를 들어 브라우저를 열지 않고 새 앱 페이지를 로드하려는 경우 새 앱 페이지로 이동하기 위해 Click 이벤트 처리기 내에서 [Frame.Navigate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.frame.navigate.aspx) 메서드를 호출합니다. 외부, 절대 URI를 앱에 있는 [WebView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webview.aspx) 컨트롤 내에서 로드하려는 경우 클릭 처리기 논리의 일부로 [WebView.Navigate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webview.navigate.aspx)를 호출합니다.
 
@@ -134,7 +134,7 @@ URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성
 ## <a name="hyperlink-underlines"></a>하이퍼링크 밑줄
 기본적으로 하이퍼링크에 밑줄이 표시됩니다. 이 밑줄은 접근성 요구 사항을 충족하는 데 도움이 되므로 중요합니다. 색맹인 사용자는 밑줄을 사용하여 하이퍼링크 및 기타 텍스트를 구분합니다. 밑줄을 사용하지 않도록 설정하려면 하이퍼링크와 다른 텍스트를 구분할 수 있는 다른 유형의 서식(FontWeight 또는 FontStyle)을 지정하는 것이 좋습니다.
 
-**Hyperlink 텍스트 요소**
+**하이퍼링크 텍스트 요소**
 
 [UnderlineStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.hyperlink.underlinestyle.aspx) 속성에서 밑줄을 사용하지 않도록 설정할 수 있습니다. 그렇게 하려면 [FontWeight](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.fontweight.aspx) 또는 [FontStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.fontstyle.aspx)을 사용하여 링크 텍스트를 구분하는 것이 좋습니다.
 
@@ -152,7 +152,7 @@ URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성
 
 이 섹션은 Hyperlink 텍스트 요소에만 적용되고 HyperlinkButton 컨트롤에는 적용되지 않습니다.
 
-**입력 이벤트**
+**입력된 이벤트**
 
 Hyperlink는 [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx)가 아니기 때문에 Tapped, PointerPressed 등의 UI 요소 입력 이벤트 집합은 없습니다. 대신 Hyperlink에는 고유 Click 이벤트와 NavigateUri로 지정된 모든 URI를 로드하는 시스템의 암시적 동작이 있습니다. 시스템은 Hyperlink 작업을 호출하여 그 응답으로 Click 이벤트를 발생시키는 모든 입력 작업을 처리합니다.
 
@@ -160,7 +160,7 @@ Hyperlink는 [UIElement](https://msdn.microsoft.com/library/windows/apps/windows
 
 Hyperlink는 해당 [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx) 컬렉션에 존재할 수 있는 콘텐츠를 제한합니다. 특히 Hyperlink는 다른 Hyperlink가 없는 [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) 및 기타 [Span](/uwp/api/windows.ui.xaml.documents.span) 형식만 허용합니다. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx)는 Hyperlink의 Inlines 컬렉션에 있을 수 없습니다. 제한된 콘텐츠를 추가하려고 하면 잘못된 인수 예외 또는 XAML 구문 분석 예외가 발생합니다.
 
-**하이퍼링크와 테마/스타일 동작**
+**하이퍼링크 및 테마/스타일 동작**
 
 Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.aspx)에서 상속되지 않으므로 [Style](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.style.aspx) 속성 또는 [Template](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.template.aspx)이 없습니다. 하이퍼링크의 모양을 변경하기 위해 Foreground 또는 FontFamily와 같은 [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.aspx)에서 상속되는 속성은 편집할 수 있지만 변경 내용을 적용하는 데 일반적인 스타일 또는 템플릿은 사용할 수 없습니다. 템플릿을 사용하는 대신 Hyperlink 속성 값에 대한 공통 리소스를 사용하여 일관성을 제공하는 것이 좋습니다. Hyperlink의 일부 속성은 시스템에서 제공하는 {ThemeResource} 태그 확장 값의 기본값을 사용합니다. 이렇게 하면 사용자가 런타임 시 시스템 테마를 변경할 때 하이퍼링크 모양을 적절한 방법으로 전환할 수 있습니다.
 
@@ -180,8 +180,8 @@ Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.u
 ## <a name="related-articles"></a>관련 문서
 
 - [텍스트 컨트롤](text-controls.md)
-- [도구 설명에 대한 지침](tooltips.md)
+- [도구 설명에 대 한 지침](tooltips.md)
 
-**개발자용(XAML)**
+**개발자 (XAML)**
 - [Windows.UI.Xaml.Documents.Hyperlink 클래스](https://msdn.microsoft.com/library/windows/apps/dn279356)
 - [Windows.UI.Xaml.Controls.HyperlinkButton 클래스](https://msdn.microsoft.com/library/windows/apps/br242739)

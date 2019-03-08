@@ -5,11 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
 ms.openlocfilehash: 2c7dc6fab021c11c98276ee53af161bea25601a9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926502"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57663358"
 ---
 # <a name="ssh-pins-api-reference"></a>SSH 핀 API 참조
 이 REST API를 사용하여 devkit에서 신뢰할 수 있는 모든 SSH 핀을 제거할 수 있습니다.
@@ -49,7 +49,7 @@ HTTP 상태 코드      | 설명
 5XX | 오류 코드
 
 <br />
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Xbox
 

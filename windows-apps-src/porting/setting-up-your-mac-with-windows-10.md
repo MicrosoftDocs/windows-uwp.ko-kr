@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e4f7b0469ae8c50e6da40fb248678a69a2827931
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051026"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57663828"
 ---
 # <a name="setting-up-your-mac-with-windows-10"></a>Windows 10에서 Mac 설정
 
@@ -20,17 +20,17 @@ ms.locfileid: "9051026"
 
 ## <a name="run-windows-on-your-mac-and-use-visual-studio"></a>Mac에서 Windows를 실행하고 Visual Studio를 사용합니다.
 
-유니버설 Windows 앱 개발을 시작할 준비가 되었지만 편리한 PC가 없나요? 상관없습니다. Mac을 사용할 수 있으니까요! Apple Boot Camp, Oracle VirtualBox, VMware Fusion 및 Parallels Desktop 같은 인기 있는 타사 솔루션을 사용 하 여 windows 10 및 Microsoft Visual Studio Apple 컴퓨터에 설치할 수 있습니다.
+유니버설 Windows 앱 개발을 시작할 준비가 되었지만 편리한 PC가 없나요? 상관없습니다. Mac을 사용할 수 있으니까요! Parallels Desktop Apple Boot Camp, Oracle VirtualBox, VMware Fusion 등 인기 있는 타사 솔루션을 사용 하 여 Apple 컴퓨터에 Windows 10 및 Microsoft Visual Studio를 설치할 수 있습니다.
 
-**참고**디스크 또는 USB 플래시 드라이브에 windows 10 부팅 가능 이미지가 필요 합니다. MSDN 구독자인 경우 MSDN 구독자 다운로드 센터에서 설치 이미지를 다운로드할 수 있습니다. 구독자가 아닌 경우 [Microsoft Store](https://apps.microsoft.com/windows/app)에서 설치 프로그램을 구입할 수 있습니다. 이미 Windows를 실행하고 있으며 업그레이드하려는 경우에는 [이 위치](https://go.microsoft.com/fwlink/?LinkId=623906)에서 다운로드하는 것이 유용할 수도 있습니다.
+**참고**  디스크 또는 USB 플래시 드라이브의 Windows 10 부팅 이미지를 해야 합니다. MSDN 구독자인 경우 MSDN 구독자 다운로드 센터에서 설치 이미지를 다운로드할 수 있습니다. 구독자가 아닌 경우 설치 관리자에서 구입할 수 있습니다 합니다 [Microsoft Store](https://apps.microsoft.com/windows/app)합니다. 이미 Windows를 실행하고 있으며 업그레이드하려는 경우에는 [이 위치](https://go.microsoft.com/fwlink/?LinkId=623906)에서 다운로드하는 것이 유용할 수도 있습니다.
 
-실행 중인 Windows가 있으면 다음 [windows 10을 위한 개발자 다운로드](https://developer.microsoft.com/en-us/windows/downloads) 에서 Visual Studio의 최신 버전을 설치 및 앱 작성을 시작할 수 있습니다!
+Windows 실행을 만든 후 다음에서 Visual Studio의 최신 릴리스를 설치할 수 [개발자는 Windows 10 용 다운로드](https://developer.microsoft.com/en-us/windows/downloads) 앱 작성을 시작!
 
-**참고**Visual Studio 장치 에뮬레이터를 사용 하려는 경우 64 비트 (x64) 버전의 windows 10 Pro 이상을 설치 **해야 합니다** . 하지만 일부 이전 Mac은 64비트 Windows를 실행할 수 없습니다. Apple에 문의하여 이 [Apple 지원 페이지](https://go.microsoft.com/fwlink/p/?LinkID=397959)에서 하드웨어가 호환되는지 확인하세요.
+**참고**  Visual Studio 장치 에뮬레이터를 사용 하려는 경우 있습니다 **해야** 64 비트 (x64) 버전의 Windows 10 Pro 이상을 설치 합니다. 하지만 일부 이전 Mac은 64비트 Windows를 실행할 수 없습니다. Apple에 문의하여 이 [Apple 지원 페이지](https://go.microsoft.com/fwlink/p/?LinkID=397959)에서 하드웨어가 호환되는지 확인하세요.
 
 ## <a name="apple-boot-camp"></a>Apple Boot Camp
 
-Boot Camp 앱은 모든 최근 Mac에 미리 설치 되어 및 시작 안내 windows 10을 설치 하는 프로세스입니다. 따라서 30GB 이상의 여유 디스크 공간을 준비하고 위에 나열된 원본에서 Windows를 복사하기만 하면 됩니다. 설치되면 Mac OSX 또는 Windows 10으로 부팅하도록 선택할 수 있습니다. 자세한 내용은 Apple의 [Boot Camp 지침 페이지](https://go.microsoft.com/fwlink/?LinkId=623912)를 참조하세요.
+Boot Camp 도우미 앱은 모든 최신 Mac에 사전 설치 및 시작 안내 Windows 10을 설치 하는 프로세스입니다. 따라서 30GB 이상의 여유 디스크 공간을 준비하고 위에 나열된 원본에서 Windows를 복사하기만 하면 됩니다. 설치되면 Mac OSX 또는 Windows 10으로 부팅하도록 선택할 수 있습니다. 자세한 내용은 Apple의 [Boot Camp 지침 페이지](https://go.microsoft.com/fwlink/?LinkId=623912)를 참조하세요.
 
 ## <a name="parallels-desktop"></a>Parallels Desktop
 

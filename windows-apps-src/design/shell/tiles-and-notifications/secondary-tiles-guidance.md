@@ -1,5 +1,5 @@
 ---
-Description: Learn about when and where you should use secondary tiles in your UWP app.
+Description: UWP 앱에서 보조 타일을 언제 어디에 사용해야 하는지 알아보세요.
 title: 보조 타일
 label: Secondary tiles
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보조 타일, 안내, 지침, 모범 사례
 ms.localizationpriority: medium
 ms.openlocfilehash: de3bfa94de1152b3945d42169143a5ae36328c75
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943319"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625348"
 ---
 # <a name="secondary-tile-guidance"></a>보조 타일 지침
 
@@ -32,7 +32,7 @@ ms.locfileid: "8943319"
 * 포커스 상태의 콘텐츠가 이미 고정된 경우 앱 바의 "시작에 고정" 단추를 "시작에서 제거" 단추로 바꿔야 합니다. "시작에서 제거" 단추는 기존 보조 타일을 제거해야 합니다.
 * 포커스 상태의 콘텐츠를 고정할 수 없는 경우에는 "시작에 고정" 단추를 표시하지 마세요(또는 비활성화된 "시작에 고정" 단추를 표시할 것).
 * "시작에 고정" 및 "시작에서 제거" 단추에 시스템에서 제공한 문자를 사용합니다(Windows.UI.Xaml.Controls.Symbol 또는 WinJS.UI.AppBarIcon의 멤버 고정 및 고정 해제 참조).
-* 표준 단추 텍스트 "시작에 고정" 및 "시작에서 제거"를 사용합니다. 시스템에서 제공한 고정 및 고정 해제 문자를 사용하는 경우 기본 텍스트를 재정의해야 합니다.
+* 표준 단추 텍스트를 사용 합니다. "시작 화면에 고정" 및 "시작에서 고정 해제" 합니다. 시스템에서 제공한 고정 및 고정 해제 문자를 사용하는 경우 기본 텍스트를 재정의해야 합니다.
 * 보조 타일을 상위 앱과 상호 작용하기 위한 가상 명령 단추로 사용하지 마세요(예: "다음 트랙으로 건너뛰기").
 
 
@@ -48,7 +48,7 @@ ms.locfileid: "8943319"
 ## <a name="related"></a>관련 항목
 
 * [보조 타일 개요](secondary-tiles.md)
-* [보조 타일 고정](secondary-tiles-pinning.md)
+* [핀 보조 타일](secondary-tiles-pinning.md)
 * [타일 자산](app-assets.md)
 * [타일 콘텐츠 설명서](create-adaptive-tiles.md)
 * [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)

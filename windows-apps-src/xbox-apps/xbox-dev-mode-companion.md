@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
 ms.localizationpriority: medium
 ms.openlocfilehash: b04272c99d9062be2eaea27aa5b107e6078872f8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940748"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616828"
 ---
 # <a name="xbox-dev-mode-companion"></a>Xbox 개발자 모드 도우미
 
@@ -44,4 +44,4 @@ Xbox 개발자 모드 도우미를 사용하면 원격으로 Xbox One 콘솔에 
 연결 대화 상자 또는 명령 모음에서 ? 아이콘을 클릭하여 도움말 페이지를 볼 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox One의 UWP](index.md)
+- [Xbox One에서 UWP](index.md)

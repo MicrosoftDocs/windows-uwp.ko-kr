@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c1b3a34ef329696d51e615dd79d57783a132d05
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936813"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641358"
 ---
 # <a name="user-json"></a>User(JSON)
-사용자 순위표 데이터가 들어 있습니다. 
+사용자 순위표 데이터를 포함합니다. 
 <a id="ID4EN"></a>
 
  
@@ -23,12 +23,12 @@ ms.locfileid: "8936813"
  
 사용자 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| 게이머 태그| string| (최대 15 자) 플레이어의 게이머 태그입니다. 플레이어를 식별할 때 클라이언트 UI에서이 값을 사용 해야 합니다.| 
-| 순위| 32 비트 부호 있는 정수| 순위표 데이터를 요청 하는 사용자를 기준으로 사용자의 순위를 지정 합니다.| 
-| rating| string| 사용자의 평점입니다.| 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 사용자의 합니다.| 
+| 게이머 태그| 문자열| 게이머의 플레이어 (최대 15 자). 클라이언트는 플레이어를 식별할 때 UI에서이 값을 사용 해야 합니다.| 
+| 순위| 32 비트 부호 있는 정수| 순위표 데이터를 요청 하는 사용자를 기준으로 사용자의 순위입니다.| 
+| rating| 문자열| 사용자의 등급입니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 사용자입니다.| 
   
 <a id="ID4EMC"></a>
 
@@ -55,8 +55,8 @@ ms.locfileid: "8936813"
 <a id="ID4EXC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

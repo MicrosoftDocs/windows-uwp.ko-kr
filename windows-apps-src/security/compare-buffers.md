@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 828f3a081aa3dcd095f036fb47385fc261335a7a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928560"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589778"
 ---
 # <a name="compare-buffers"></a>버퍼 비교
 

@@ -1,23 +1,23 @@
 ---
-title: 스트리밍 리소스에서 할 수 있는 작업
-description: 이 섹션에서는 스트리밍 리소스에서 할 수 있는 작업이 무엇인지 설명합니다.
+title: 스트리밍 리소스에서 사용할 수 있는 작업
+description: 이 섹션에서는 스트리밍 리소스에 대해 수행할 수 있는 작업이 나와 있습니다.
 ms.assetid: 700D8C54-0E20-4B2B-BEA3-20F6F72B8E24
 keywords:
-- 스트리밍 리소스에서 할 수 있는 작업
+- 스트리밍 리소스에서 사용할 수 있는 작업
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 922798fad97754421541297a5434a81e9c660b2b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937372"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655518"
 ---
-# <a name="operations-available-on-streaming-resources"></a>스트리밍 리소스에서 할 수 있는 작업
+# <a name="operations-available-on-streaming-resources"></a>스트리밍 리소스에서 사용할 수 있는 작업
 
 
-이 섹션에서는 스트리밍 리소스에서 할 수 있는 작업이 무엇인지 설명합니다.
+이 섹션에서는 스트리밍 리소스에 대해 수행할 수 있는 작업이 나와 있습니다.
 
 -   void를 반환하는 타일 매핑 업데이트 작업과 void를 반환하는 타일 매핑 복사 작업 - 이 작업들은 스트리밍 리소스의 타일 위치를 타일 풀의 위치나 NULL 또는 둘 다로 가리킵니다. 이러한 작업은 공통 원소를 갖지 않는 타일 포인터 하위 집합을 업데이트할 수 있습니다.
 -   복사 및 업데이트 작업 - 스트리밍 리소스에 대한 기본 풀 표면 작업에 대해 데이터 복사 작업을 할 수 있는 모든 API. 매핑되지 않은 타일에서 읽기는 0을 산출하고 매핑되지 않은 타일에 쓰기는 삭제됩니다.
@@ -26,7 +26,7 @@ ms.locfileid: "8937372"
 
 타일 컨트롤은 즉시 또는 지연 컨텍스트에서 사용할 수 있으며(일반적인 리소스로 업데이트하는 것과 마찬가지임) 실행 시 타일에 대한 후속 액세스에 영향을 미칩니다(이전에 제출한 작업).
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [스트리밍 리소스 만들기](creating-streaming-resources.md)

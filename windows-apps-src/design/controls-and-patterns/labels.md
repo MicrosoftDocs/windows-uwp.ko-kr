@@ -1,6 +1,6 @@
 ---
-Description: Use a label to indicate to the user what they should enter into an adjacent control. You can also label a group of related controls, or display instructional text near a group of related controls.
-title: 레이블
+Description: 레이블을 사용하여 인접한 컨트롤에 입력해야 하는 내용을 사용자에게 표시합니다. 관련 컨트롤 그룹에 레이블을 지정하거나 관련 컨트롤 그룹 근처에 지침 텍스트를 표시할 수도 있습니다.
+title: Labels(레이블)
 ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
 template: detail.hbs
@@ -12,19 +12,19 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 4345daf5b879fed7ba9805e4a448c473299031d7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926032"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654148"
 ---
-# <a name="labels"></a>레이블
+# <a name="labels"></a>Labels(레이블)
 
  
 
 레이블은 컨트롤 또는 관련 컨트롤 그룹의 이름이나 제목입니다.
 
-> **중요 API**: Header 속성, [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/br209652)
+> **중요 한 Api**: 헤더 속성 [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/br209652)
 
 XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우에는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)을 사용할 수 있습니다.
 

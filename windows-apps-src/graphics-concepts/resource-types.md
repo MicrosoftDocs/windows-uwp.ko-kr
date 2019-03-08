@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4138fd7275f7e1f9addb7685ff0846e756701003
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942929"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661988"
 ---
 # <a name="resource-types"></a>리소스 종류
 
@@ -34,11 +34,11 @@ ms.locfileid: "8942929"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>형식 있음</p></td>
+<td align="left"><p><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>입력</p></td>
 <td align="left"><p>리소스를 만들 때 형식을 완전히 지정합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Typeless"></span><span id="typeless"></span><span id="TYPELESS"></span>형식 없음</p></td>
+<td align="left"><p><span id="Typeless"></span><span id="typeless"></span><span id="TYPELESS"></span>관대 한 형식의</p></td>
 <td align="left"><p>리소스가 파이프라인에 바인딩될 때 형식을 완전히 지정합니다.</p></td>
 </tr>
 </tbody>
@@ -53,13 +53,13 @@ ms.locfileid: "8942929"
 
 버퍼는 구조화되지 않은 리소스로 생성됩니다. 구조화되지 않았기 때문에 버퍼는 Mipmap 수준을 포함할 수 없고, 읽었을 때 필터링되지 않으며, 다중 샘플링될 수 없습니다.
 
-### <a name="span-idbuffertypesspanspan-idbuffertypesspanspan-idbuffertypesspanbuffer-types"></a><span id="Buffer_Types"></span><span id="buffer_types"></span><span id="BUFFER_TYPES"></span>버퍼 유형
+### <a name="span-idbuffertypesspanspan-idbuffertypesspanspan-idbuffertypesspanbuffer-types"></a><span id="Buffer_Types"></span><span id="buffer_types"></span><span id="BUFFER_TYPES"></span>버퍼 형식
 
--   [꼭짓점 버퍼](#vertex-buffer)
+-   [꼭 짓 점 버퍼](#vertex-buffer)
 -   [인덱스 버퍼](#index-buffer)
 -   [상수 버퍼](#shader-constant-buffer)
 
-### <a name="span-idvertexbufferspanspan-idvertexbufferspanspan-idvertexbufferspanspan-idvertex-bufferspanvertex-buffer"></a><span id="Vertex_Buffer"></span><span id="vertex_buffer"></span><span id="VERTEX_BUFFER"></span><span id="vertex-buffer"></span>꼭짓점 버퍼
+### <a name="span-idvertexbufferspanspan-idvertexbufferspanspan-idvertexbufferspanspan-idvertex-bufferspanvertex-buffer"></a><span id="Vertex_Buffer"></span><span id="vertex_buffer"></span><span id="VERTEX_BUFFER"></span><span id="vertex-buffer"></span>꼭 짓 점 버퍼
 
 버퍼는 요소의 모음입니다. 꼭짓점 버퍼에는 꼭짓점별 데이터가 포함됩니다. 가장 단순한 예는 위치 데이터 등 한 가지 형식의 데이터를 포함하는 꼭짓점 버퍼입니다. 다음 그림과 같이 표현할 수 있습니다.
 
@@ -69,7 +69,7 @@ ms.locfileid: "8942929"
 
 ![위치, 일반 및 텍스처 데이터가 포함된 꼭짓점 버퍼의 그림](images/d3d10-vertex-buffer-element.png)
 
-이 꼭짓점 버퍼에는 8개 꼭짓점의 꼭짓점별 데이터가 포함되며, 각각의 꼭짓점은 3개의 요소(위치, 일반 및 텍스처 좌표)를 저장합니다. 위치 및 일반 좌표는 일반적으로 32비트 부동 소수점 3개를 사용하여 지정되고 텍스처 좌표는 32비트 부동 소수점 2개를 사용하여 지정됩니다.
+이 꼭짓점 버퍼에는 8개 꼭짓점의 꼭짓점별 데이터가 포함되며, 각각의 꼭짓점은 3개의 요소(위치, 일반 및 텍스처 좌표)를 저장합니다. 위치 및 일반 좌표는 일반적으로 32비트 부동 소수점 3개로 지정되고 텍스처 좌표는 32비트 부동 소수점 두 개로 지정됩니다.
 
 꼭짓점 버퍼에서 데이터에 액세스하려면 액세스할 꼭짓점과 다음과 같은 그 밖의 버퍼 매개 변수를 알아야 합니다.
 
@@ -100,7 +100,7 @@ Direct3D에는 셰이더 상수 버퍼 또는 간단히 상수 버퍼라고 하�
 
 ![셰이더 상수 버퍼의 그림](images/d3d10-shader-resource-buffer.png)
 
-각 요소는 저장된 데이터의 형식에 의해 결정되는 1~4개 구성 요소 상수를 저장합니다.
+각 요소는 저장된 데이터의 형식에 의해 결정되는 1 ~4개 구성 요소 상수를 저장합니다.
 
 상수 버퍼는 각각의 셰이더 상수를 개별적으로 호출해 개별적으로 커밋하지 않고 그룹화하여 동시에 커밋할 수 있도록 함으로써 셰이더 상수 업데이트에 필요한 대역폭을 줄입니다.
 
@@ -112,49 +112,49 @@ Direct3D에는 셰이더 상수 버퍼 또는 간단히 상수 버퍼라고 하�
 
 셰이더에서 상수 버퍼를 선언하는 예는 [셰이더 상수(DirectX HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581)를 참조하세요.
 
-## <a name="span-idtextureresourcesspanspan-idtextureresourcesspanspan-idtextureresourcesspanspan-idtexture-resourcesspantexture-resources"></a><span id="Texture_Resources"></span><span id="texture_resources"></span><span id="TEXTURE_RESOURCES"></span><span id="texture-resources"></span>텍스처 리소스
+## <a name="span-idtextureresourcesspanspan-idtextureresourcesspanspan-idtextureresourcesspanspan-idtexture-resourcesspantexture-resources"></a><span id="Texture_Resources"></span><span id="texture_resources"></span><span id="TEXTURE_RESOURCES"></span><span id="texture-resources"></span>질감 리소스
 
 
-텍스처 리소스는 텍셀을 저장하도록 구조화된 데이터 모음입니다. 버퍼와 달리 텍스처는 셰이더 단위에서 읽으므로 텍스처 샘플러에서 필터링할 수 있습니다. 텍스처의 유형은 텍스처의 필터링 방식에 영향을 미칩니다. 텍셀은 파이프라인에서 읽거나 쓸 수 있는 텍스처의 최소 단위를 나타냅니다. 각 텍셀에는 DXGI 형식 중 하나로 배열된 1~4개의 구성 요소가 포함됩니다([**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059) 참조).
+텍스처 리소스는 텍셀을 저장하도록 구조화된 데이터 모음입니다. 버퍼와 달리 텍스처는 셰이더 단위에서 읽으므로 텍스처 샘플러에서 필터링할 수 있습니다. 텍스처의 유형은 텍스처의 필터링 방식에 영향을 미칩니다. 텍셀은 파이프라인에서 읽거나 쓸 수 있는 텍스처의 최소 단위를 나타냅니다. DXGI 형식 중 하나로 정렬, 1 ~ 4 구성 요소를 포함 하는 각 텍셀 (참조 [ **DXGI\_형식**](https://msdn.microsoft.com/library/windows/desktop/bb173059)).
 
 텍스처는 크기를 알 수 있도록 구조화된 리소스로 생성됩니다. 그러나 텍스처가 파이프라인에 바인딩될 때 보기를 사용해 형식이 완전히 지정되면 리소스 생성 시간에 각 텍스처에 형식이 있거나 없을 수 있습니다.
 
--   [텍스처 형식](#texture-types)
--   [하위 리소스](#subresources)
--   [강력한 형식 지정 대 약한 형식 지정](#typed)
+-   [질감 형식](#texture-types)
+-   [Subresources](#subresources)
+-   [강력한 vs입니다. 약한 형식화](#typed)
 
-### <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspanspan-idtexture-typesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span><span id="texture-types"></span>텍스처 형식
+### <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspanspan-idtexture-typesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span><span id="texture-types"></span>질감 형식
 
-1D, 2D, 3D 등 여러 유형의 텍스처가 있으며, 각각 Mipmap을 사용하거나 사용하지 않고 만들 수 있습니다. Direct3D는 텍스처 배열과 다중 샘플링된 텍스처도 지원합니다.
+여러 유형의 질감 가지 1 D, 2D, 3D, 각 mip 맵 없이 만들 수 있습니다. Direct3D는 텍스처 배열과 다중 샘플링된 텍스처도 지원합니다.
 
--   [1D 텍스처](#texture1d-resource)
--   [1D 텍스처 배열](#texture1d-array-resource)
--   [2D 텍스처 및 2D 텍스처 배열](#texture2d-resource)
--   [3D 텍스처](#texture3d-resource)
+-   [질감 1d](#texture1d-resource)
+-   [질감 1d 배열](#texture1d-array-resource)
+-   [2D 질감 및 질감 2D 배열](#texture2d-resource)
+-   [3D 질감](#texture3d-resource)
 
-### <a name="span-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1d-resourcespan1d-texture"></a><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>1D 텍스처
+### <a name="span-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1d-resourcespan1d-texture"></a><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>질감 1d
 
 가장 단순한 형태의 1D 텍스처에는 단일 텍스처 좌표로 주소를 지정할 수 있는 텍스처 데이터가 포함됩니다. 이는 다음 그림과 같이 텍셀 배열로 시각화할 수 있습니다.
 
 ![1D 텍스처 그림](images/d3d10-1d-texture.png)
 
-저장되는 데이터 형식에 따라 각각의 텍셀에 수많은 색상 구성 요소가 포함됩니다. 다음 그림과 같이 Mipmap 수준이 포함된 1D 텍스처를 생성할 수 있다는 점에서 더욱 복잡합니다.
+저장되는 데이터 형식에 따라 텍셀 하나당 수많은 색상 구성 요소가 포함됩니다. 다음 그림과 같이 Mipmap 수준으로 1D 텍스처를 생성할 수 있다는 점에서 더욱 복잡합니다.
 
 ![Mipmap 수준이 포함된 1D 텍스처 그림](images/d3d10-resource-texture1d.png)
 
 Mipmap 수준은 바로 위 수준보다 2의 거듭 제곱만큼 작은 텍스처입니다. 최상위 수준에는 가장 많은 세부가 포함되며, 이후의 각 수준은 그보다 작습니다. 1D Mipmap의 경우, 가장 작은 수준은 하나의 텍셀을 포함합니다. 서로 다른 수준은 LOD(level-of-detail)라고 하는 인덱스로 식별됩니다. 카메라에 가깝지 않은 기하 도형을 렌더링할 때 LOD를 사용하여 보다 작은 텍스처에 액세스할 수 있습니다.
 
-### <a name="span-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1d-array-resourcespan1d-texture-array"></a><span id="Texture1D_Array_Resource"></span><span id="texture1d_array_resource"></span><span id="TEXTURE1D_ARRAY_RESOURCE"></span><span id="texture1d-array-resource"></span>1D 텍스처 배열
+### <a name="span-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1d-array-resourcespan1d-texture-array"></a><span id="Texture1D_Array_Resource"></span><span id="texture1d_array_resource"></span><span id="TEXTURE1D_ARRAY_RESOURCE"></span><span id="texture1d-array-resource"></span>질감 1d 배열
 
 Direct3D 10에도 텍스처 배열을 위한 새로운 데이터 구조가 있습니다. 이론적으로 1D 텍스처의 배열은 다음 그림과 같이 보입니다.
 
 ![1D 텍스처 배열 그림](images/d3d10-resource-texture1darray.png)
 
-이 텍스처 배열에는 3개의 텍스처가 포함되어 있습니다. 이 3개 텍스처의 폭은 각각 5(첫 번째 계층의 요소 개수)입니다. 각 텍스처에는 3 계층 Mipmap도 포함되어 있습니다.
+이 텍스처 배열에는 세 개의 텍스처가 포함되어 있습니다. 이 세 개 텍스처의 폭은 각각 5(첫 번째 계층의 요소 개수)입니다. 각 텍스처에는 3 계층 Mipmap도 포함되어 있습니다.
 
 Direct3D의 모든 텍스처 배열은 같은 유형의 텍스처 배열입니다. 즉 텍스처 배열의 모든 텍스처는 동일한 데이터 형식과 크기(텍스처 폭과 Mipmap 수준 개수 포함)로 구성되어야 합니다. 각 배열에 속한 모든 텍스처의 크기가 일치하면 서로 다른 크기의 텍스처 배열을 만들 수 있습니다.
 
-### <a name="span-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2d-resourcespan2d-texture-and-2d-texture-array"></a><span id="Texture2D_Resource"></span><span id="texture2d_resource"></span><span id="TEXTURE2D_RESOURCE"></span><span id="texture2d-resource"></span>2D 텍스처 및 2D 텍스처 배열
+### <a name="span-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2d-resourcespan2d-texture-and-2d-texture-array"></a><span id="Texture2D_Resource"></span><span id="texture2d_resource"></span><span id="TEXTURE2D_RESOURCE"></span><span id="texture2d-resource"></span>2D 질감 및 질감 2D 배열
 
 Texture2D 리소스에는 텍셀의 2D 그리드가 포함되어 있습니다. 각 텍셀은 a u, v 벡터로 주소를 지정할 수 있습니다. 이는 텍스처 리소스이므로 Mipmap 수준과 하위 리소스를 포함할 수 있습니다. 완전히 채워진 2D 텍스처 리소스는 다음 그림처럼 보입니다.
 
@@ -168,7 +168,7 @@ Texture2DArray 리소스는 동일한 유형의 2D 텍스처 배열입니다. �
 
 이 텍스처 배열에는 세 개의 텍스처가 포함되며 각 텍스처는 2 Mipmap 수준의 3x5입니다.
 
-### <a name="span-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanusing-a-texture2darray-as-a-texture-cube"></a><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>Texture2DArray를 텍스처 큐브로 사용
+### <a name="span-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanusing-a-texture2darray-as-a-texture-cube"></a><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>질감 큐브의 Texture2DArray를 사용 하 여
 
 텍스처 큐브는 각각 큐브의 한 면에 해당하는 6개 텍스처를 포함한 2D 텍스처 배열입니다. 완전히 채워진 텍스처 큐브는 다음 그림처럼 보입니다.
 
@@ -176,17 +176,17 @@ Texture2DArray 리소스는 동일한 유형의 2D 텍스처 배열입니다. �
 
 6개 텍스처를 포함하는 2D 텍스처 배열은 큐브-텍스처 보기로 파이프라인에 바인딩된 후 큐브 맵 기본 기능이 있는 셰이더 내에서 읽을 수 있습니다. 셰이더에서 텍스처 큐브는 텍스처 큐브의 중앙에서부터 시작되는 3D 벡터로 주소가 지정됩니다.
 
-### <a name="span-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3d-resourcespan3d-texture"></a><span id="Texture3D_Resource"></span><span id="texture3d_resource"></span><span id="TEXTURE3D_RESOURCE"></span><span id="texture3d-resource"></span>3D 텍스처
+### <a name="span-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3d-resourcespan3d-texture"></a><span id="Texture3D_Resource"></span><span id="texture3d_resource"></span><span id="TEXTURE3D_RESOURCE"></span><span id="texture3d-resource"></span>3D 질감
 
 볼륨 텍스처라고도 하는 Texture3D 리소스에는 텍셀의 3D 볼륨이 포함되어 있습니다. 텍스처 리소스이기 때문에 Mipmap 수준이 포함될 수 있습니다. 완전히 채워진 3D 텍스처는 다음 그림처럼 보입니다.
 
 ![3D 텍스처 리소스 그림](images/d3d10-resource-texture3d.png)
 
-3D 텍스처 Mipmap 슬라이스가 렌더링 대상 출력으로 바인딩되면(렌더링 대상 뷰 이용) 3D 텍스처가 n개 슬라이스가 있는 2D 텍스처 배열과 동일하게 동작합니다. 특정한 렌더링 슬라이스가 기하 도형 셰이더 단계에서 선택됩니다.
+3D 텍스처 Mipmap 슬라이스가 렌더링 대상 출력으로 바인딩되면(렌더링 대상 보기 이용) 3D 텍스처가 n개 슬라이스가 있는 2D 텍스처 배열과 동일하게 동작합니다. 특정한 렌더링 슬라이스가 기하 도형 셰이더 단계에서 선택됩니다.
 
 3D 텍스처 배열의 개념이 없기 때문에 3D 텍스처 하위 리소스는 단일 Mipmap 수준입니다.
 
-### <a name="span-idsubresourcesspanspan-idsubresourcesspanspan-idsubresourcesspansubresources"></a><span id="Subresources"></span><span id="subresources"></span><span id="SUBRESOURCES"></span>하위 리소스
+### <a name="span-idsubresourcesspanspan-idsubresourcesspanspan-idsubresourcesspansubresources"></a><span id="Subresources"></span><span id="subresources"></span><span id="SUBRESOURCES"></span>하위
 
 Direct3D API는 전체 리소스 또는 리소스의 하위 집합을 참조합니다. 리소스 일부를 지정하기 위해 Direct3D는 리소스의 하위 집합을 뜻하는 *하위 리소스*라는 용어를 만들었습니다.
 
@@ -204,31 +204,31 @@ Direct3D API는 전체 리소스 또는 리소스의 하위 집합을 참조합�
 
 ![0부터 시작하는 하위 리소스 인덱스 그림](images/d3d10-resource-texture1darray-sub-indexing.png)
 
-### <a name="span-idselectingsubresourcesspanspan-idselectingsubresourcesspanspan-idselectingsubresourcesspanselecting-subresources"></a><span id="Selecting_Subresources"></span><span id="selecting_subresources"></span><span id="SELECTING_SUBRESOURCES"></span>하위 리소스 선택
+### <a name="span-idselectingsubresourcesspanspan-idselectingsubresourcesspanspan-idselectingsubresourcesspanselecting-subresources"></a><span id="Selecting_Subresources"></span><span id="selecting_subresources"></span><span id="SELECTING_SUBRESOURCES"></span>하위를 선택합니다.
 
 전체 리소스에 액세스하는 API도 있고 리소스 일부에 액세스하는 API도 있습니다. 리소스 일부에 액세스하는 API는 일반적으로 보기 설명을 사용하여 액세스할 하위 리소스를 지정합니다.
 
 이 그림은 텍스처 배열에 액세스할 때 보기 설명이 사용하는 용어를 보여 줍니다.
 
-### <a name="span-idarrayslicespanspan-idarrayslicespanspan-idarrayslicespanarray-slice"></a><span id="Array_Slice"></span><span id="array_slice"></span><span id="ARRAY_SLICE"></span>배열 슬라이스
+### <a name="span-idarrayslicespanspan-idarrayslicespanspan-idarrayslicespanarray-slice"></a><span id="Array_Slice"></span><span id="array_slice"></span><span id="ARRAY_SLICE"></span>배열 조각
 
 다음 그림에서 보듯 주어진 텍스처 배열에서 Mipmap이 포함된 각 텍스처, 배열 슬라이스(흰색 사각형으로 표시)에는 하나의 텍스처와 그 모든 하위 텍스처가 포함됩니다.
 
 ![배열 슬라이스 그림](images/d3d10-resource-array-slice.png)
 
-### <a name="span-idmipslicespanspan-idmipslicespanspan-idmipslicespanmip-slice"></a><span id="Mip_Slice"></span><span id="mip_slice"></span><span id="MIP_SLICE"></span>Mip 슬라이스
+### <a name="span-idmipslicespanspan-idmipslicespanspan-idmipslicespanmip-slice"></a><span id="Mip_Slice"></span><span id="mip_slice"></span><span id="MIP_SLICE"></span>Mip 조각
 
 다음 그림에서 보듯 Mip 슬라이스(흰색 사각형으로 표시)에는 배열 내 모든 텍스처마다 하나의 Mipmap 수준이 포함됩니다.
 
 ![Mip 스플라이스 그림](images/d3d10-resource-mip-slice.png)
 
-### <a name="span-idselectingasinglesubresourcespanspan-idselectingasinglesubresourcespanspan-idselectingasinglesubresourcespanselecting-a-single-subresource"></a><span id="Selecting_a_Single_Subresource"></span><span id="selecting_a_single_subresource"></span><span id="SELECTING_A_SINGLE_SUBRESOURCE"></span>단일 하위 리소스 선택
+### <a name="span-idselectingasinglesubresourcespanspan-idselectingasinglesubresourcespanspan-idselectingasinglesubresourcespanselecting-a-single-subresource"></a><span id="Selecting_a_Single_Subresource"></span><span id="selecting_a_single_subresource"></span><span id="SELECTING_A_SINGLE_SUBRESOURCE"></span>단일 하위 선택
 
 다음 그림에서 보듯 이 두 가지 유형의 슬라이스를 사용하여 단일 하위 리소스를 선택할 수 있습니다.
 
 ![배열 슬라이스와 Mip 슬라이스를 사용한 하위 리소스 선택 그림](images/d3d10-resource-subresources-1.png)
 
-### <a name="span-idselectingmultiplesubresourcesspanspan-idselectingmultiplesubresourcesspanspan-idselectingmultiplesubresourcesspanselecting-multiple-subresources"></a><span id="Selecting_Multiple_Subresources"></span><span id="selecting_multiple_subresources"></span><span id="SELECTING_MULTIPLE_SUBRESOURCES"></span>여러 하위 리소스 선택
+### <a name="span-idselectingmultiplesubresourcesspanspan-idselectingmultiplesubresourcesspanspan-idselectingmultiplesubresourcesspanselecting-multiple-subresources"></a><span id="Selecting_Multiple_Subresources"></span><span id="selecting_multiple_subresources"></span><span id="SELECTING_MULTIPLE_SUBRESOURCES"></span>여러 하위 선택
 
 또는 이 두 가지 유형의 슬라이스와 Mipmap 수준의 수 및/또는 텍스처 수를 사용하여 여러 개의 하위 리소스를 선택할 수 있습니다.
 
@@ -236,7 +236,7 @@ Direct3D API는 전체 리소스 또는 리소스의 하위 집합을 참조합�
 
 사용 중인 텍스처 형식에 상관없이(Mipmap 유무, 텍스처 배열 유무 불문) 특정 하위 리소스의 인덱스를 계산하도록 제공된 도우미 기능이 있는 경우가 많습니다.
 
-### <a name="span-idtypedspanspan-idtypedspanspan-idtypedspanstrong-vs-weak-typing"></a><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>강력한 형식 지정 대 약한 형식 지정
+### <a name="span-idtypedspanspan-idtypedspanspan-idtypedspanstrong-vs-weak-typing"></a><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>강력한 vs입니다. 약한 형식화
 
 완전히 형식이 지정된 리소스를 만들면 리소스는 생성된 형식으로 제한됩니다. 이로써 특히 응용 프로그램에 매핑될 수 없음을 나타내는 플래그를 사용하여 리소스가 생성된 경우, 런타임이 액세스를 최적화할 수 있습니다. 특정 형식을 사용하여 생성된 리소스는 보기 메커니즘을 사용하여 다시 해석할 수 없습니다.
 
@@ -246,7 +246,7 @@ Direct3D API는 전체 리소스 또는 리소스의 하위 집합을 참조합�
 
 각 리소스에 각 위치에서 형식을 완전히 한정하는 고유의 보기가 있으면 단일 리소스를 여러 파이프라인 단계에 바인딩할 수 있습니다. 예를 들어 형식 없는 형식으로 만들어진 리소스를 파이프라인의 서로 다른 위치에서 동시에 FLOAT 형식과 UNIT 형식으로 사용할 수 있습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [리소스](resources.md)

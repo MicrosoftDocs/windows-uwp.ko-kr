@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 03cf647fdb243fd18212ca894f7682e913378907
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943184"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57609638"
 ---
 # <a name="xuid-directive"></a>x:Uid 지시어
 
@@ -38,7 +38,7 @@ ms.locfileid: "8943184"
 <Button x:Uid="GoButton" Content="Go"/>
 ```
 
-표시 텍스트 **Go**를 바꿀 콘텐츠를 지정하려면 리소스 파일에서 가져올 새 리소스를 지정해야 합니다. 리소스 파일에 "GoButton.Content"라는 리소스 항목이 있어야 합니다. 이 경우 [**Content**](/uwp/api/windows.ui.xaml.controls.contentcontrol.content)는 [**Button**](/uwp/api/windows.ui.xaml.controls.button) 클래스에 상속된 특정 속성입니다. 이 단추의 다른 속성에 대해 지역화된 값을 제공할 수도 있습니다. 예를 들어 "GoButton.FlowDirection"에 대해 리소스 기반 값을 제공할 수 있습니다. **x:Uid** 및 리소스 파일을 함께 사용하는 방법에 대한 자세한 내용은 [UI와 앱 패키지 매니페스트에 문자열 지역화](../app-resources/localize-strings-ui-manifest.md)를 참조하세요.
+표시 텍스트 **Go**를 바꿀 콘텐츠를 지정하려면 리소스 파일에서 가져올 새 리소스를 지정해야 합니다. 리소스 파일에 "GoButton.Content"라는 리소스 항목이 있어야 합니다. [**콘텐츠** ](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 에서 상속 되는 특정 속성을이 예제의 경우 합니다 [ **단추** ](/uwp/api/windows.ui.xaml.controls.button) 클래스입니다. 이 단추의 다른 속성에 대해 지역화된 값을 제공할 수도 있습니다. 예를 들어 "GoButton.FlowDirection"에 대해 리소스 기반 값을 제공할 수 있습니다. **x:Uid** 및 리소스 파일을 함께 사용하는 방법에 대한 자세한 내용은 [UI와 앱 패키지 매니페스트에 문자열 지역화](../app-resources/localize-strings-ui-manifest.md)를 참조하세요.
 
 **x:Uid** 값으로 사용할 수 있는 문자열의 유효성은 실제로 리소스 파일과 리소스 경로에서 식별자로 적합한 문자열이 제어합니다.
 

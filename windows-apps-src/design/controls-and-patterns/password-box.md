@@ -1,5 +1,5 @@
 ---
-Description: A password box is a text input box that conceals the characters typed into it for the purpose of privacy.
+Description: 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력 상자입니다.
 title: 암호 상자에 대한 지침
 ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
@@ -13,19 +13,19 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 43639ac22c07501da89e29419a226a8a3ce8af48
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036915"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613068"
 ---
-# <a name="password-box"></a>암호 상자
+# <a name="password-box"></a>비밀번호 상자
 
  
 
 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력 상자입니다. 암호 상자는 입력란처럼 보이지만 입력된 텍스트 대신 자리 표시자 문자를 렌더링합니다. 자리 표시자 문자는 구성할 수 있습니다.
 
-> **중요 API**: [PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [Password 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx), [PasswordChar 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx), [PasswordRevealMode 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx), [PasswordChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)
+> **중요 한 Api**: [PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [Password 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx)합니다 [PasswordChar 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx)를 [PasswordRevealMode 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx), [PasswordChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)
 
 기본적으로 암호 상자는 사용자가 표시 단추를 누른 채로 자신의 암호를 볼 수 있는 방법을 제공합니다. 표시 단추를 사용하지 않도록 설정하거나 확인란과 같은 암호를 표시하는 대체 메커니즘을 제공할 수 있습니다.
 
@@ -44,8 +44,8 @@ ms.locfileid: "9036915"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/PasswordBox">앱을 열고 작동 중인 PasswordBox를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -198,9 +198,9 @@ private void CheckBox_Changed(object sender, RoutedEventArgs e)
 
 [텍스트 컨트롤](text-controls.md)
 
-- [맞춤법 검사에 대한 지침](text-controls.md)
+- [맞춤법 검사에 대 한 지침](text-controls.md)
 - [검색 추가](https://msdn.microsoft.com/library/windows/apps/hh465231)
-- [텍스트 입력에 대한 지침](text-controls.md)
+- [텍스트 입력에 대 한 지침](text-controls.md)
 - [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
-- [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+- [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

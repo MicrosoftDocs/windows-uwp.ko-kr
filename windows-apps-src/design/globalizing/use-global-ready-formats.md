@@ -1,5 +1,5 @@
 ---
-Description: Design your app to be global-ready by appropriately formatting dates, times, numbers, phone numbers, and currencies. You'll then be able later to adapt your app for additional cultures, regions, and languages in the global market.
+Description: 날짜, 시간, 숫자, 전화 번호 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 디자인합니다. 그러면 나중에 전 세계 지역/국가의 다른 문화, 지역 및 언어에 맞춰 앱을 조정할 수 있습니다.
 title: 날짜/시간 숫자 형식 세계화
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 template: detail.hbs
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: d641bcff48b830c56a1d03ee861ec2a4c5f433b6
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048610"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634138"
 ---
 # <a name="globalize-your-datetimenumber-formats"></a>날짜/시간 숫자 형식 세계화
 
@@ -72,7 +72,7 @@ ms.locfileid: "9048610"
 
 ## <a name="format-numbers-and-currencies-appropriately"></a>숫자 및 통화의 형식을 적절하게 지정
 
-각 문화에는 저마다의 숫자 형식이 있습니다. 표시할 소수 자릿수, 소수점 구분 기호로 사용할 문자 및 사용할 통화 기호 등이 문화권별 숫자 형식 차이점에 포함될 수 있습니다. [**NumberFormatting**](/uwp/api/windows.globalization.numberformatting?branch=live) 네임스페이스에 클래스를 사용하여 소수점, 백분율 또는 천분율 숫자, 통화를 표시합니다. 대부분의 경우 사용자 프로필에 가장 적합한 형식을 포맷터 클래스에 사용하려고 할 것입니다. 그러나 포맷터를 사용하여 특정 지역 또는 형식의 통화를 표시할 수 있습니다.
+각 문화에는 저마다의 숫자 형식이 있습니다. 표시할 소수 자릿수, 소수점 구분 기호로 사용할 문자 및 사용할 통화 기호 등이 문화별 숫자 형식 차이점에 포함될 수 있습니다. [  **NumberFormatting**](/uwp/api/windows.globalization.numberformatting?branch=live) 네임스페이스에 클래스를 사용하여 소수점, 백분율 또는 천분율 숫자, 통화를 표시합니다. 대부분의 경우 사용자 프로필에 가장 적합한 형식을 포맷터 클래스에 사용하려고 할 것입니다. 그러나 포맷터를 사용하여 특정 지역 또는 형식의 통화를 표시할 수 있습니다.
 
 다음 예는 사용자 프로필 및 특정 통화 체계에 따라 통화를 표시하는 방법을 보여 줍니다.
 
@@ -116,9 +116,9 @@ ms.locfileid: "9048610"
 
 전화 번호는 지역에 따라 형식이 다르게 지정됩니다. 자릿수, 숫자 그룹화 방법, 전화 번호 중 특정 부분의 의미는 국가마다 다릅니다. Windows 10 버전 1607부터 [**PhoneNumberFormatting**](/uwp/api/windows.globalization.phonenumberformatting?branch=live)네임스페이스에 클래스를 사용하여 전화 번호의 형식을 현재 지역에 맞게 설정할 수 있습니다.
 
-[**PhoneNumberInfo**](/uwp/api/windows.globalization.phonenumberformatting.phonenumberinfo?branch=live)는 숫자 문자열의 구문을 분석하여 숫자가 현재 지역의 전화 번호에 유효한지 확인하고, 두 번호가 동일한지 비교하고, 국가 코드 또는 지리적 영역 코드 등 전화 번호의 다양한 기능 부분을 추출할 수 있도록 해줍니다.
+[**PhoneNumberInfo** ](/uwp/api/windows.globalization.phonenumberformatting.phonenumberinfo?branch=live) 숫자의 문자열을 구문 분석 하 고 수 있습니다: 현재 지역에서 올바른 전화 번호를 숫자 인지 확인; 같은지;과 휴대폰의 여러 기능 부분을 추출 하는 두 숫자를 비교 합니다. 국가 코드 또는 지리적 지역 번호와 같은 숫자입니다.
 
-[**PhoneNumberFormatter**](/uwp/api/windows.globalization.phonenumberformatting.phonenumberformatter?branch=live)는 숫자 문자열이 전화 번호의 일부를 나타내는 경우에도 숫자 문자열 또는 **PhoneNumberInfo**의 표시 형식을 설정합니다. 이 부분 숫자 형식을 사용하여 사용자가 숫자를 입력할 때 숫자의 형식을 설정할 수 있습니다.
+[**PhoneNumberFormatter** ](/uwp/api/windows.globalization.phonenumberformatting.phonenumberformatter?branch=live) 자릿수는 문자열이 나 형식 **PhoneNumberInfo** 숫자 문자열에 부분 전화번호를 표시 하는 경우에 표시에 대 한 합니다. 이 부분 숫자 형식을 사용하여 사용자가 숫자를 입력할 때 숫자의 형식을 설정할 수 있습니다.
 
 아래 예에서는 전화 번호를 입력할 때 **PhoneNumberFormatter**를 사용하여 전화 번호의 형식을 설정하는 방법을 보여 줍니다. phoneNumberInputTextBox라는 이름의 **TextBox**에서 텍스트가 변경될 때마다 입력란의 내용이 현재 기본 지역을 사용하여 형식이 설정되고 phoneNumberOutputTextBlock라는 **TextBlock**에 표시됩니다. 여기서는 설명을 위해 뉴질랜드 지역을 사용하여 문자열의 형식이 설정되고 phoneNumberOutputTextBlockNZ라는 TextBlock에 표시됩니다.
   
@@ -168,12 +168,12 @@ ms.locfileid: "9048610"
 ## <a name="related-topics"></a>관련 항목
 
 * [달력, 날짜 및 시간 컨트롤](../controls-and-patterns/date-and-time.md)
-* [사용자 프로필 언어와 앱 매니페스트 언어 이해](manage-language-and-region.md)
-* [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md)
+* [언어, 배율, 고대비 등 및 다른 한정자에 대 한 리소스를 조정 합니다.](../../app-resources/tailor-resources-lang-scale-contrast.md)
 
 ## <a name="samples"></a>샘플
 
-* [달력 세부 정보 및 수학 샘플](https://go.microsoft.com/fwlink/p/?linkid=231636)
-* [날짜 및 시간 형식 지정 샘플](https://go.microsoft.com/fwlink/p/?linkid=231618)
-* [세계화 기본 설정 샘플](https://go.microsoft.com/fwlink/p/?linkid=231608)
-* [숫자 형식 지정 및 구문 분석 샘플](https://go.microsoft.com/fwlink/p/?linkid=231620)
+* [일정 세부 정보 및 수학 샘플](https://go.microsoft.com/fwlink/p/?linkid=231636)
+* [날짜 및 시간 형식 샘플](https://go.microsoft.com/fwlink/p/?linkid=231618)
+* [Globalization 기본 샘플](https://go.microsoft.com/fwlink/p/?linkid=231608)
+* [숫자 서식 및 샘플을 구문 분석](https://go.microsoft.com/fwlink/p/?linkid=231620)

@@ -1,5 +1,5 @@
 ---
-Description: This article is an overview of the concepts and technologies related to accessibility scenarios for Universal Windows Platform (UWP) apps.
+Description: 이 문서는 UWP(유니버설 Windows 플랫폼) 앱의 접근성 시나리오와 관련된 개념 및 기술에 대한 개요입니다.
 ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: 접근성 개요
 label: Accessibility overview
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d0c3bea228cae8d9482a8e0cb24c958e36992848
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046576"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649738"
 ---
 # <a name="accessibility-overview"></a>접근성 개요  
 
@@ -192,7 +192,7 @@ XAML UI([**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn2
 
 ## <a name="related-topics"></a>관련 항목  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
-* [접근성을 위한 디자인](https://msdn.microsoft.com/library/windows/apps/Hh700407)
-* [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [내게 필요한 옵션에 대 한 디자인](https://msdn.microsoft.com/library/windows/apps/Hh700407)
+* [XAML 액세스 가능성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [접근성](accessibility.md)
-* [내레이터 시작](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)
+* [내레이터를 사용 하 여 시작](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

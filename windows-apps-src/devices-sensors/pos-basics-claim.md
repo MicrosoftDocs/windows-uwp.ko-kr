@@ -1,27 +1,27 @@
 ---
 title: PointOfService 장치 클레임 및 모델을 사용 하도록 설정
-description: PointOfService 클레임에 알아보고 모델을 사용 하도록 설정
+description: PointOfService 클레임에 대해 알아보고 모델을 사용 하도록 설정
 ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e7d60c0b612a8067ac4c225dff9da5da428f1a1
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117653"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639318"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>서비스 지점 장치 클레임 및 모델을 사용 하도록 설정
 
-## <a name="claiming-for-exclusive-use"></a>단독 사용 클레임
+## <a name="claiming-for-exclusive-use"></a>단독으로 사용에 대 한 요청
 
 성공적으로 PointOfService 장치 개체를 만들었으면 입력 또는 출력에 장치를 사용하기 전에 먼저 장치 유형에 대한 적절한 클레임 메서드를 사용하여 요청해야 합니다.  클레임은 응용 프로그램에 장치의 여러 기능에 대한 독점적인 액세스를 부여하여 한 응용 프로그램이 다른 응용 프로그램의 장치 사용을 방해하지 않도록 합니다.  한 번에 하나의 응용 프로그램만 PointOfService 장치에 대한 단독 사용을 주장할 수 있습니다. 
 
 > [!Note]
-> 클레임 작업 장치에 대 한 단독 잠금을 설정 하지만 작동 상태로에 배치 하지 않습니다.  자세한 내용은 [I/O 작업에 대 한 장치 사용](#enable-device-for-io-operations) 을 참조 하세요.
+> 클레임 작업을 장치에 대 한 단독 잠금을 설정 하지만 운영 상태로 두지 않습니다.  참조 [I/O 작업에 대 한 사용 장치](#enable-device-for-io-operations) 자세한 내용은 합니다.
 
-### <a name="apis-used-to-claim--release"></a>클레임 / 해제 Api를 사용
+### <a name="apis-used-to-claim--release"></a>클레임 / 릴리스를 사용 하는 Api
 
 |장치|클레임 | 릴리스 | 
 |-|:-|:-|
@@ -34,22 +34,22 @@ ms.locfileid: "9117653"
 
 ## <a name="enable-device-for-io-operations"></a>I/O 작업에 대 한 장치를 사용 하도록 설정
 
-클레임 작업은 단순히 장치에 대 한 독점는 권한을 설정 하는 작동 상태로에 배치 하지 않습니다.  이벤트를 수신 하거나 출력 작업을 수행 하려면 **EnableAsync**를 사용 하 여 장치를 활성화 해야 합니다.  반대로, 장치 또는 수행 출력에서 이벤트를 수신 대기를 중지 **DisableAsync** 호출할 수 있습니다.  디바이스의 상태를 확인 하려면 **IsEnabled** 를 사용할 수도 있습니다.
+클레임 동작을 설정 하는 장치에 대 한 독점 단순히 운영 상태로 두지 않습니다.  사용 하 여 장치를 활성화 해야 이벤트를 수신 하거나 출력 작업을 수행 하기 위해 **EnableAsync**합니다.  반대로, 호출할 수 있습니다 **DisableAsync** 중지 장치에서 이벤트를 수신 하거나 또는 출력을 수행 합니다.  사용할 수도 있습니다 **IsEnabled** 장치의 상태를 결정 합니다.
 
-### <a name="apis-used-enable--disable"></a>사용 되는 Api 사용/사용 안 함
+### <a name="apis-used-enable--disable"></a>사용 되는 Api 설정/해제
 
 | 장치 | 사용 | 사용 안 함 | IsEnabled? |
 |-|:-|:-|:-|
 |ClaimedBarcodeScanner | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isenabled) | 
 |ClaimedCashDrawer | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.isenabled) |
-|ClaimedLineDisplay | 하지 Applicable¹ | 하지 Applicable¹ | 하지 Applicable¹ | 
+|ClaimedLineDisplay | Applicable¹ 없습니다 | Applicable¹ 없습니다 | Applicable¹ 없습니다 | 
 |ClaimedMagneticStripeReader | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.isenabled) |  
 |ClaimedPosPrinter | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.disableasyc) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.isenabled) |
 |
 
-¹ 라인 디스플레이 I/O 작업에 대 한 장치를 명시적으로 사용 하도록 설정 하 필요 하지 않습니다.  I/O를 수행 하는 PointOfService LineDisplay Api를 통해 사용 하면 자동으로 수행 됩니다.
+¹ 줄 표시 I/O 작업에 대 한 장치를 명시적으로 하도록 필요가 없습니다.  I/O를 수행 하는 PointOfService LineDisplay Api에서 사용 하도록 설정 하면 자동으로 수행 됩니다.
 
-## <a name="code-sample-claim-and-enable"></a>코드 샘플: 클레임 및 사용
+## <a name="code-sample-claim-and-enable"></a>코드 샘플: 클레임 하 고 사용 하도록 설정
 
 이 샘플은 성공적으로 바코드 스캐너 개체를 만든 후 바코드 스캐너 장치를 주장하는 방법을 보여 줍니다.
 
@@ -93,7 +93,7 @@ Windows는 멀티태스킹 환경이기 때문에 동일한 컴퓨터의 여러 
 
 활성 클레임이 있는 응용 프로그램이 즉시 **RetainDevice**로 응답하지 않는 경우 해당 응용 프로그램이 일시 중단되었거나 장치가 필요하지 않은 것으로 간주되며 클레임이 취소되고 새 응용 프로그램에 제공됩니다. 
 
-첫 번째 단계와 **RetainDevice** **ReleaseDeviceRequested** 이벤트에 응답 하는 이벤트 처리기를 만드는 것입니다.  
+첫 번째 단계는 응답 하는 이벤트 처리기를 만드는 것을 **ReleaseDeviceRequested** 사용 하 여 이벤트 **RetainDevice**합니다.  
 
 ```Csharp
     /// <summary>
@@ -107,7 +107,7 @@ Windows는 멀티태스킹 환경이기 때문에 동일한 컴퓨터의 여러 
     }
 ```
 
-그런 다음 청구 장치와 관련에서 이벤트 처리기를 등록
+요청 된 장치와 연결에서 이벤트 처리기를 등록 한 다음
 
 ```Csharp
     BarcodeScanner barcodeScanner = await BarcodeScanner.FromIdAsync(DeviceId);

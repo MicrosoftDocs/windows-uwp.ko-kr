@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, visual studio, 도구, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a3938f486d52942031944b1184a711ddbc579db
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924647"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653478"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>게임 프로그래밍용 Visual Studio 도구
 
@@ -19,7 +19,7 @@ ms.locfileid: "8924647"
 
 **요약**
 
--   [템플릿에서 DirectX 게임 프로젝트 만들기](user-interface.md)
+-   [DirectX 게임 프로젝트를 템플릿에서 만들기](user-interface.md)
 -   DirectX 게임 프로그래밍용 Visual Studio 도구
 
 
@@ -45,7 +45,7 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 
 자세한 내용은 [텍스처 및 이미지 작업](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx)을 참조하세요.
 
-> **참고**이미지 편집기는 전체 기능의 이미지 편집 앱에 대 한 대체용이 아니지 단순한 여러 가지 보기 및 편집 시나리오에 적합 합니다.
+> **참고**  The 이미지 편집기는 전체 기능 이미지 편집 앱을 대체할 수 없습니다 하지만 많은 단순 보기 및 편집 시나리오에 적합 합니다.
 
  
 
@@ -64,7 +64,7 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 
 자세한 내용은 [3D 모델 작업](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx)을 참조하세요.
 
-> **참고**모델 편집기는 전체 기능의 모델 편집 앱에 대 한 대체용이 아니지 단순한 여러 가지 보기 및 편집 시나리오에 적합 합니다.
+> **참고**  The 모델 편집기 앱을 편집 하는 전체 기능 모델을 대체할 수 없습니다 있지만 많은 단순 보기 및 편집 시나리오에 적합 합니다.
 
  
 
@@ -116,7 +116,7 @@ float3 LambertLighting(
 
 Visual Studio가 리소스를 사용할 수 있는 형식으로 변환하도록 프로젝트에 사용자 지정 빌드를 추가할 수 있습니다. 그 후 다른 DirectX 앱에서와 마찬가지로 DirectX 리소스를 만들고 채워서 앱에 자산을 로드하고 사용할 수 있습니다.
 
-사용자 지정 빌드를 추가 하려면 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **사용자 지정 빌드...** 를 선택 합니다. 다음과 같은 유형의 사용자 지정 빌드를 프로젝트에 추가할 수 있습니다.
+사용자 지정 빌드를 추가하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **사용자 지정 빌드...** 를 선택합니다. 다음과 같은 유형의 사용자 지정 빌드를 프로젝트에 추가할 수 있습니다.
 
 -   이미지 콘텐츠 파이프라인은 입력으로 이미지 파일을 가져오고 DirectDraw Surface(.dds) 파일을 출력합니다.
 -   메시 콘텐츠 파이프라인은 메시 파일(.fbx)을 가져오고 .cmo 메시 파일을 출력합니다.

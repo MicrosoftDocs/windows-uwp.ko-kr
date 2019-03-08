@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ca5fdc7f418895cb23ee0e3b03d4ca39c33756
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933598"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632468"
 ---
 # <a name="serviceconfigsscidsessiontemplates"></a>/serviceconfigs/{scid}/sessiontemplates
-MPSD 세션 템플릿 집합을 검색 하는 가져오기 작업을 지원 합니다. 
+MPSD 세션 템플릿 집합을 검색 하는 GET 작업을 지원 합니다. 
 <a id="ID4EO"></a>
 
  
@@ -26,14 +26,14 @@ sessiondirectory.xboxlive.com
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 1 부 세션 식별자입니다.| 
+| scid| GUID| (서비스 안내) 식별자를 구성 하는 서비스입니다. 1 부 세션 식별자입니다.| 
   
 <a id="ID4EPB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [GET (/serviceconfigs/{scid}/sessiontemplates)](uri-serviceconfigsscidsessiontemplatesget.md)
 
@@ -47,8 +47,8 @@ sessiondirectory.xboxlive.com
 <a id="ID4E2B"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[세션 디렉터리 URI](atoc-reference-sessiondirectory.md)
+[세션 디렉터리 Uri](atoc-reference-sessiondirectory.md)
 
    

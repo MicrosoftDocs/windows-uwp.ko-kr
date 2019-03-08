@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 일시 중지, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b588d6bf6e7cbf43651d94a7fd46e9a767c6f09
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945715"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656038"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>앱 일시 중단 방법(DirectX 및 C++)
 
@@ -97,7 +97,7 @@ void App::Run()
 ## <a name="call-trim"></a>Trim() 호출
 
 
-Windows8.1부터 모든 DirectX UWP 앱 호출 해야 [**idxgidevice3:: Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) 일시 중단 시 합니다. 이 호출은 앱에 할당된 모든 임시 버퍼를 해제하도록 그래픽 드라이버에 알리는데, 그러면 일시 중단된 상태인 동안 메모리 리소스를 회수하기 위해 앱이 종료되는 가능성이 줄어듭니다. Windows8.1에 대 한 인증 요구 사항입니다.
+Windows 8.1 모든 DirectX UWP 앱 호출 해야 합니다 [ **IDXGIDevice3::Trim** ](https://msdn.microsoft.com/library/windows/desktop/dn280346) 일시 중단 하는 경우. 이 호출은 앱에 할당된 모든 임시 버퍼를 해제하도록 그래픽 드라이버에 알리는데, 그러면 일시 중단된 상태인 동안 메모리 리소스를 회수하기 위해 앱이 종료되는 가능성이 줄어듭니다. Windows 8.1 대 한 인증 요구 사항입니다.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)
@@ -141,12 +141,12 @@ void DX::DeviceResources::Trim()
 
 앱이 일시 중단된 동안 시스템은 앱과 데이터를 메모리에 유지하려고 합니다. 그러나 앱을 메모리에 유지할 리소스가 없으면 시스템은 앱을 종료합니다. 사용자가 일시 중단 후 일시 중단된 앱으로 다시 돌아오면, 시스템은 [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) 이벤트를 전송하며 **CoreApplicationView::Activated** 이벤트에 대한 처리기에서 응용 프로그램 데이터를 복원해야 합니다.
 
-시스템은 앱이 종료되었을 때 앱에게 알리지 않으므로, 앱은 일시 중단될 때 응용 프로그램 데이터를 저장하고 단독 리소스와 파일 핸들을 해제하며 앱이 종료 후 활성화될 때 이 리소스와 파일 핸들을 복원해야 합니다.
+시스템은 앱 종료 시 앱에 알리지 않으므로, 앱은 일시 중단될 때 응용 프로그램 데이터를 저장하고 단독 리소스와 파일 핸들을 해제하며 앱이 종료 후 활성화될 때 이 리소스와 파일 핸들을 복원해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [앱 다시 시작 방법(DirectX 및 C++)](how-to-resume-an-app-directx-and-cpp.md)
-* [앱 활성화 방법(DirectX 및 C++)](how-to-activate-an-app-directx-and-cpp.md)
+* [(DirectX 및 c + +)는 앱을 다시 시작 하는 방법](how-to-resume-an-app-directx-and-cpp.md)
+* [(DirectX 및 c + +) 앱을 활성화 하는 방법](how-to-activate-an-app-directx-and-cpp.md)
 
  
 

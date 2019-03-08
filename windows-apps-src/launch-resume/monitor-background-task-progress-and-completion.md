@@ -11,15 +11,15 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 5417a2cded6dab98747569acc4e6e92356361482
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050826"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595818"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>백그라운드 작업 진행 및 완료 모니터링
 
-**중요 API**
+**중요 한 Api**
 
 - [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)
 - [**BackgroundTaskProgressEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224785)
@@ -34,9 +34,9 @@ out-of-process로 실행되는 백그라운드 작업이 보고하는 진행 및
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>완료된 백그라운드 작업을 처리하는 이벤트 처리기를 만듭니다.
 
 ### <a name="step-1"></a>1단계
-완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드는 [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) 개체와 [**BackgroundTaskCompletedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224778) 개체는 특정 공간을 수행 해야 합니다.
+완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드를 사용 하는 특정 공간을 수행 해야 하는 [ **IBackgroundTaskRegistration** ](https://msdn.microsoft.com/library/windows/apps/br224803) 개체와 [ **BackgroundTaskCompletedEventArgs** ](https://msdn.microsoft.com/library/windows/apps/br224778) 개체입니다.
 
-**OnCompleted** 백그라운드 작업 이벤트 처리기 메서드에 대해 다음 공간을 사용 합니다.
+에 대 한 다음 필요한 공간을 사용 합니다 **OnCompleted** 백그라운드 작업 이벤트 처리기 메서드.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
@@ -287,16 +287,16 @@ void SampleBackgroundTask::OnNavigatedTo(NavigationEventArgs^ e)
 
 ## <a name="related-topics"></a>관련 항목
 
-* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md).
-* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
+* [만들고 out-of-process-백그라운드 태스크를 등록 합니다.](create-and-register-a-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
-* [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
+* [취소 된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
-* [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
-* [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
+* [백그라운드 작업과 함께 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
+* [백그라운드 작업을 실행 하기 위한 조건을 설정 합니다.](set-conditions-for-running-a-background-task.md)
 * [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
-* [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
-* [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-* [백그라운드 작업 디버그](debug-a-background-task.md)
-* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [타이머에서 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
+* [백그라운드 작업에 대 한 지침](guidelines-for-background-tasks.md)
+* [백그라운드 작업 디버깅](debug-a-background-task.md)
+* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)

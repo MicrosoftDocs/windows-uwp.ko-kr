@@ -1,6 +1,6 @@
 ---
 title: 부동 소수점 규칙
-description: Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소수점 계산은 IEEE 754 32비트 단정밀도 부동 소수점 규칙의 정의된 하위 집합 하에서 작동합니다.
+description: Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소수점 계산은 IEEE 754 32비트 단정밀도 부동 소수점 규칙의 정의된 하위 집합에서 작동합니다.
 ms.assetid: 3B0C95E2-1025-4F70-BF14-EBFF2BB53AFF
 keywords:
 - 부동 소수점 규칙
@@ -8,23 +8,23 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4de5ba146c8241598527dd268d604fcc9bb97d6d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921047"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662358"
 ---
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>부동 소수점 규칙
 
 
-Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소수점 계산은 IEEE 754 32비트 단정밀도 부동 소수점 규칙의 정의된 하위 집합 하에서 작동합니다.
+Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소수점 계산은 IEEE 754 32비트 단정밀도 부동 소수점 규칙의 정의된 하위 집합에서 작동합니다.
 
-## <a name="span-idalpha32bitspanspan-idalpha32bitspan32-bit-floating-point-rules"></a><span id="alpha_32_bit"></span><span id="ALPHA_32_BIT"></span>32비트 부동 소수점 규칙
+## <a name="span-idalpha32bitspanspan-idalpha32bitspan32-bit-floating-point-rules"></a><span id="alpha_32_bit"></span><span id="ALPHA_32_BIT"></span>32 비트 부동 소수점 규칙
 
 
 두 가지 규칙 집합이 있습니다. IEEE-754를 준수하는 것과 표준에서 벗어난 것입니다.
 
-### <a name="span-idalpha754rulesspanspan-idalpha754rulesspanspan-idalpha754rulesspanhonored-ieee-754-rules"></a><span id="alpha_754_Rules"></span><span id="alpha_754_rules"></span><span id="ALPHA_754_RULES"></span>적용되는 IEEE-754 규칙
+### <a name="span-idalpha754rulesspanspan-idalpha754rulesspanspan-idalpha754rulesspanhonored-ieee-754-rules"></a><span id="alpha_754_Rules"></span><span id="alpha_754_rules"></span><span id="ALPHA_754_RULES"></span>IEEE-754 규칙 적용된
 
 이러한 규칙의 일부는 IEEE-754에서 제공하는 유일한 선택 항목입니다.
 
@@ -44,13 +44,13 @@ Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소
 -   한 피연산자 또는 두 피연산자가 NaN일 경우 NE 비교는 **TRUE**를 반환합니다.
 -   NaN이 아닌 모든 값을 +/-INF와 비교하면 올바른 결과를 반환합니다.
 
-### <a name="span-idalpha754deviationsspanspan-idalpha754deviationsspanspan-idalpha754deviationsspandeviations-or-additional-requirements-from-ieee-754-rules"></a><span id="alpha_754_Deviations"></span><span id="alpha_754_deviations"></span><span id="ALPHA_754_DEVIATIONS"></span>IEEE-754 규칙에서 벗어나거나 추가된 요구 사항
+### <a name="span-idalpha754deviationsspanspan-idalpha754deviationsspanspan-idalpha754deviationsspandeviations-or-additional-requirements-from-ieee-754-rules"></a><span id="alpha_754_Deviations"></span><span id="alpha_754_deviations"></span><span id="ALPHA_754_DEVIATIONS"></span>편차 또는 IEEE-754 규칙에서 추가 요구 사항
 
 -   IEEE-754에서는 부동 소수점 연산이 표현할 수 있는 가장 근접한 값을 무한한 정확도의 결과로 생성되도록 요구합니다. 이를 가장 가까운 짝수로 반올림이라고 합니다.
 
-    Direct3D 11 이상은 IEEE-754와 동일한 요구 사항을 가지고 있습니다. 32비트 부동 소수점 연산은 무한한 정확도의 결과에서 0.5 마지막 위치 단위(ULP) 내의 결과를 생성합니다. 즉, 예를 들어 하드웨어가 가장 가까운 짝수로 반올림 대신 결과를 32비트로 자르도록 허용하며 오류가 최대 0.5 ULP의 범위 내에서만 발생하게 됩니다. 이 규칙은 더하기, 빼기, 곱하기에만 적용됩니다.
+    Direct3D 11 및 최대 IEEE-754와 동일한 요구 사항을 정의 합니다. 32 비트 부동 소수점 연산 0.5 단위 마지막-전체 (ULP) 무한 정밀도 결과의 내에 있는 결과 생성 합니다. 즉, 예를 들어 하드웨어가 가장 가까운 짝수로 반올림 대신 결과를 32비트로 자르도록 허용하며 오류가 최대 0.5 ULP의 범위 내에서만 발생하게 됩니다. 이 규칙은 더하기, 빼기, 곱하기에만 적용됩니다.
 
-    이전 버전의 Direct3D는 IEEE-754보다 가벼운 요구 사항을 가지고 있습니다. 32비트 부동 소수점 연산이 무한한 정확도의 결과에서 1 마지막 위치 단위(ULP) 내의 결과를 생성합니다. 즉, 예를 들어 하드웨어가 가장 가까운 짝수로 반올림 대신 결과를 32비트로 자르도록 허용하면 오류가 최대 1 ULP의 범위 내에서만 발생하게 됩니다.
+    이전 버전의 Direct3D IEEE-754 보다 느슨한 요구 사항을 정의합니다. 32 비트 부동 소수점 작업 단위-마지막-의 한 위치 (1 ULP) 무한 정밀도 결과 내에 있는 결과 생성 합니다. 즉, 예를 들어 하드웨어가 가장 가까운 짝수로 반올림 대신 결과를 32비트로 자르도록 허용하면 오류가 최대 1 ULP의 범위 내에서만 발생하게 됩니다.
 
 -   부동 소수점 예외, 상태 비트 또는 트랩은 지원되지 않습니다.
 -   비정규화 값은 모든 부동 소수점 수학 연산의 입력과 출력에서 부호가 유지된 0으로 플러시됩니다. 데이터를 조작하지 않는 모든 I/O 또는 데이터 이동 작업에 대해서는 예외 사항이 있습니다.
@@ -59,7 +59,7 @@ Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소
 -   연산에 NaN이 입력되면 항상 NaN이 출력됩니다. 하지만 연산이 데이터를 변경하지 않는 순수 이동 명령인 경우 NaN의 정확한 비트 패턴은 동일하게 유지될 필요가 없습니다.
 -   하나의 피연산자만 NaN인 최소 또는 최대 연산의 경우, 앞서 살펴본 비교 규칙과 반대로 다른 피연산자를 결과로 반환합니다. 이는 IEEE 754R 규칙입니다.
 
-    부동 소수점 최소 또는 최대 연산에 대한 IEEE-754R 사양은 최소 또는 최대의 입력 중 하나가 QNaN 값인 경우, 연산의 결과는 다른 매개 변수가 된다고 정의하고 있습니다. 예:
+    부동 소수점 최소 또는 최대 연산에 대한 IEEE-754R 사양은 최소 또는 최대의 입력 중 하나가 QNaN 값인 경우, 연산의 결과는 다른 매개 변수가 된다고 정의하고 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
     ```ManagedCPlusPlus
     min(x,QNaN) == min(QNaN,x) == x (same for max)
@@ -72,12 +72,12 @@ Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소
      
     ```
 
-    일반적으로 Direct3D는 산술에 대한 표준 IEEE-754 및 IEEE 754R을 따릅니다. 하지만 이 경우 다르게 적용되는 것이 있습니다.
+    일반적으로 Direct3D 산술 연산에 대 한 표준을 따릅니다. IEEE-754 및 IEEE 754R 합니다. 하지만 이 경우 다르게 적용되는 것이 있습니다.
 
     Direct3D 10 이상의 산술 규칙에서는 QNaN과 SNaN 값 사이에 구분이 없습니다. 모든 NaN 값은 같은 방식으로 처리됩니다. 최소 및 최대의 경우 모든 NaN 값에 대한 Direct3D의 동작은 QNaN이 IEEE 754R 정의에서 처리되는 것과 비슷합니다. (완벽한 설명을 위해 보충하면, 두 입력이 모두 NaN이면 둘 중 하나의 NaN이 반환됩니다.)
 
 -   다른 IEEE 754R 규칙은 min(-0,+0) == min(+0,-0) == -0, max(-0,+0) == max(+0,-0) == +0으로 부호를 유지합니다. 앞서 본 부호가 있는 0에 대한 비교 규칙과는 반대입니다. Direct3D는 여기에 IEEE 754R의 동작을 권장하지만, 강요하지는 않습니다. 부호를 무시한 비교를 사용하여 매개 변수의 순서에 따라 0을 비교하는 것이 가능합니다.
--   x\*1.0f의 결과는 항상 x입니다(비정규화 값이 플러시되는 경우는 제외).
+-   x\*1.0f x에서 항상 결과 (denorm 플러시) 제외 합니다.
 -   x/1.0f의 결과는 항상 x입니다(비정규화 값이 플러시되는 경우는 제외).
 -   x +/- 0.0f의 결과는 항상 x입니다(비정규화 값이 플러시되는 경우는 제외). 하지만 -0 + 0 = +0입니다.
 -   혼합 연산(예: mad, dp3)은 연산의 비혼합 확장이 가질 수 있는 가장 최악의 직렬 배열보다는 정확한 결과를 생성합니다. 최악의 배열의 정의는 허용 오차의 목적에서 지정된 혼합 연산을 위한 고정된 정의가 아닙니다. 이는 입력의 특정 값에 따라 달라집니다. 비혼합 확장의 개별 단계는 각각 1의 ULP 허용 오차가 허용됩니다. 또는 특정 명령에 Direct3D가 1 ULP보다 더 유연한 허용 오차를 사용하는 경우 더 유연한 허용 오차가 허용됩니다.
@@ -85,16 +85,16 @@ Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소
 -   sqrt와 rcp의 허용 오차는 1 ULP입니다. 셰이더 역수와 역수 제곱근 명령인 [**rcp**](https://msdn.microsoft.com/library/windows/desktop/hh447205)와 [**rsq**](https://msdn.microsoft.com/library/windows/desktop/hh447221)에는 자체적인 별도의 완화된 정밀도 요구 사항이 있습니다.
 -   곱하기와 나누기는 각각 32비트 부동 소수점 정밀도 수준에서 계산됩니다(곱하기의 정밀도는 0.5 ULP, 역의 경우 1.0 ULP). x/y를 바로 구현하는 경우, 결과는 두 단계 방법보다 높거나 같은 정확도를 가져야 합니다.
 
-## <a name="span-iddoubleprec64bitspanspan-iddoubleprec64bitspan64-bit-double-precision-floating-point-rules"></a><span id="double_prec_64_bit"></span><span id="DOUBLE_PREC_64_BIT"></span>64비트(배정밀도) 부동 소수점 규칙
+## <a name="span-iddoubleprec64bitspanspan-iddoubleprec64bitspan64-bit-double-precision-floating-point-rules"></a><span id="double_prec_64_bit"></span><span id="DOUBLE_PREC_64_BIT"></span>64 비트 (배정밀도) 점 규칙 부동
 
 
-하드웨어 및 디스플레이 드라이버는 선택적으로 배정밀도 부동 소수점을 지원합니다. 지원하도록 지정하기 위해 [**D3D11\_FEATURE\_DOUBLES**](https://msdn.microsoft.com/library/windows/desktop/ff476124#d3d11-feature-doubles)과 함께 [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497)를 호출하면, 드라이버가 [**D3D11\_FEATURE\_DATA\_DOUBLES**](https://msdn.microsoft.com/library/windows/desktop/ff476127)의 **DoublePrecisionFloatShaderOps**를 TRUE로 설정합니다. 그러면 드라이버와 하드웨어는 모든 배정밀도 부동 소수점 명령을 지원해야 합니다.
+하드웨어 및 디스플레이 드라이버는 선택적으로 배정밀도 부동 소수점을 지원합니다. 호출 하는 경우 지원을 나타내려면 [ **ID3D11Device::CheckFeatureSupport** ](https://msdn.microsoft.com/library/windows/desktop/ff476497) 사용 하 여 [ **D3D11\_기능\_DOUBLE** ](https://msdn.microsoft.com/library/windows/desktop/ff476124#d3d11-feature-doubles), 드라이버 집합 **DoublePrecisionFloatShaderOps** 의 [ **D3D11\_기능\_DATA\_DOUBLE** ](https://msdn.microsoft.com/library/windows/desktop/ff476127) TRUE로 합니다. 그러면 드라이버와 하드웨어는 모든 배정밀도 부동 소수점 명령을 지원해야 합니다.
 
 배정밀도 명령은 IEEE 754R 동작 요구 사항을 따릅니다.
 
 배정밀도 데이터(0으로 플러시 동작 없음)를 위해 비정규화 값의 생성 지원이 필요합니다. 마찬가지로, 명령은 비정규화 데이터를 부호가 있는 0으로 읽지 않으며 비정규화 값을 그대로 따릅니다.
 
-## <a name="span-idalpha16bitspanspan-idalpha16bitspan16-bit-floating-point-rules"></a><span id="alpha_16_bit"></span><span id="ALPHA_16_BIT"></span>16비트 부동 소수점 규칙
+## <a name="span-idalpha16bitspanspan-idalpha16bitspan16-bit-floating-point-rules"></a><span id="alpha_16_bit"></span><span id="ALPHA_16_BIT"></span>16 비트 부동 소수점 규칙
 
 
 Direct3D 부동 소수점의 16비트 표시도 지원합니다.
@@ -108,17 +108,17 @@ Direct3D 부동 소수점의 16비트 표시도 지원합니다.
 float16 값(v)은 이러한 규칙을 따릅니다.
 
 -   e == 31이고 f != 0인 경우 s와 관계없이 v는 NaN입니다.
--   e == 31이고 f == 0이면 v = (-1)s\*무한(부호 있는 무한)입니다.
--   e가 0에서 31 사이에 있으면 v = (-1)s\*2(e-15)\*(1.f)입니다.
--   e == 0이고 f != 0이면 v = (-1)s\*2(e-14)\*(0.f)(비정규화 숫자)입니다.
--   e == 0이고 f == 0이면 v = (-1)s\*0(부호 있는 0)입니다.
+-   경우 e 31 및 f = = 0 이면, v = = (-1) = s\*무한대 (서명 된 무한대)
+-   e가 0, 31, 고 v 사이 (-1) = s\*2(e-15)\*(1.f)
+-   경우 e = = 0 및 f! = 0 이면 v (-1) = s\*2(e-14)\*(0.f) (정규화 되지 않은 숫자)
+-   경우 e = = 0 및 f = = 0, v (-1) = s\*(부호 있는 0)
 
 32비트 부동 소수점 규칙은 앞에서 설명한 비트 레이아웃을 위해 조정되어 16비트 부동 소수점 숫자에도 적용됩니다. 다음과 같은 경우는 예외입니다.
 
--   정밀도: 16비트 부동 소수점 숫자에 대한 혼합 연산은 무한한 정확도 결과에 가장 가까운 표현 가능한 값(IEEE-754에 따른 가장 근사한 짝수로 반올림이 16비트 값에 적용)을 생성합니다. 32비트 부동 소수점 규칙은 1 ULP의 허용 오차를 따르며, 16비트 부동 소수점 규칙은 비혼합 연산의 경우 0.5 ULP, 혼합 연산의 경우 0.6 ULP 허용 오차를 따릅니다.
+-   전체 자릿수: 결과가 들뜬된 연산은 16 비트 부동 소수점 숫자는 무한 정밀도 결과 (라운드 더 가장 가까운 16 비트 값에 적용 된 IEEE-754 당)를 표현할 수 있는 값에 가장 가까운. 32비트 부동 소수점 규칙은 1 ULP의 허용 오차를 따르며, 16비트 부동 소수점 규칙은 비혼합 연산의 경우 0.5 ULP, 혼합 연산의 경우 0.6 ULP 허용 오차를 따릅니다.
 -   16비트 부동 소수점 숫자는 비정규화 값을 유지합니다.
 
-## <a name="span-idalpha11bitspanspan-idalpha11bitspan11-bit-and-10-bit-floating-point-rules"></a><span id="alpha_11_bit"></span><span id="ALPHA_11_BIT"></span>11비트 및 10비트 부동 소수점 규칙
+## <a name="span-idalpha11bitspanspan-idalpha11bitspan11-bit-and-10-bit-floating-point-rules"></a><span id="alpha_11_bit"></span><span id="ALPHA_11_BIT"></span>11 비트 및 10 비트 부동 소수점 규칙
 
 
 Direct3D는 11비트와 10비트 부동 소수점 형식도 지원합니다.
@@ -133,24 +133,24 @@ float11/float10 값(v)은 다음 규칙을 따릅니다.
 
 -   e == 31이고 f != 0이면 v는 NaN입니다.
 -   e == 31이고 f == 0이면 v = +무한입니다.
--   e가 0에서 31 사이에 있으면 v = 2(e-15)\*(1.f)입니다.
--   e == 0이고 f != 0이면 v = \*2(e-14)\*(0.f)(비정규화 숫자)입니다.
+-   이 0이 고 31 일 후 v 사이 e 경우 = 2(e-15)\*(1.f)
+-   경우 e = = 0 및 f! = 0 이면, v = \*2(e-14)\*(0.f) (정규화 되지 않은 숫자)
 -   e == 0이고 f == 0이면 v = 0입니다.
 
 32비트 부동 소수점 규칙은 앞에서 설명한 비트 레이아웃을 위해 조정되어 11비트 및 10비트 부동 소수점 숫자에도 적용됩니다. 예외에는 다음이 포함됩니다.
 
--   정밀도: 32비트 부동 소수점 규칙은 0.5 ULP를 따릅니다.
+-   전체 자릿수: 0.5 ULP 32 비트 부동 소수점 규칙을 준수합니다.
 -   10/11비트 부동 소수점 숫자는 비정규화 값을 유지합니다.
 -   결과가 0보다 작은 모든 연산은 0으로 고정됩니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [부록](appendix.md)
 
 [리소스](https://msdn.microsoft.com/library/windows/desktop/ff476894)
 
-[텍스처](https://msdn.microsoft.com/library/windows/desktop/ff476902)
+[질감](https://msdn.microsoft.com/library/windows/desktop/ff476902)
 
  
 

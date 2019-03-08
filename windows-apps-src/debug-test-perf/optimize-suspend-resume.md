@@ -4,21 +4,21 @@ title: 일시 중단/다시 시작 최적화
 description: 프로세스 수명 시스템의 사용을 간소화하여 일시 중단 또는 종료 후 효율적으로 다시 시작하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 06af6241bdd75efdd3ff71e02f74252d60540669
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947431"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653658"
 ---
 # <a name="optimize-suspendresume"></a>일시 중단/다시 시작 최적화
 
 
 프로세스 수명 시스템의 사용을 간소화하여 일시 중단 또는 종료 후 효율적으로 다시 시작하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다.
 
-## <a name="launch"></a>실행
+## <a name="launch"></a>시작
 
 일시 중단/종료 후에 앱을 다시 활성화할 때는 오랜 시간이 경과했는지 확인합니다. 시간이 오래 지났다면 오래된 사용자 데이터를 표시하는 대신 앱의 기본 방문 페이지로 돌아가는 것이 좋습니다. 그러면 시작 속도도 높아집니다.
 
@@ -64,7 +64,7 @@ UWP 프로세스 수명 시스템에서는 다양한 이유로 앱을 일시 중
 
 성능적 관점에서 [**XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx) 클래스를 사용하는 것이 좋습니다. **XmlSerializer**의 경우 직렬화 및 역직렬화 시간이 가장 짧고 메모리 사용 공간을 적게 유지합니다. **XmlSerializer**의 경우 일부 .NET Framework에 종속되므로 다른 직렬화 기술에 비해 **XmlSerializer**를 사용하기 위해 앱으로 로드해야 하는 모듈 수가 더 적습니다.
 
-[**DataContractSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx)를 사용하면 사용자 지정 클래스를 더 쉽게 직렬화할 수 있지만 **XmlSerializer**보다 성능에 미치는 영향은 큽니다. 향상된 성능이 필요한 경우 전환을 고려하세요. 일반적으로 직렬 변환기를 2개 이상 로드하지 않아야 하며 다른 직렬 변환기의 기능이 필요하지 않은 경우 **XmlSerializer**를 사용하는 것이 좋습니다.
+[**DataContractSerializer** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) 쉽게 사용자 지정 클래스를 serialize 하지만 보다 성능에 큰 영향 **XmlSerializer**합니다. 향상된 성능이 필요한 경우 전환을 고려하세요. 일반적으로 직렬 변환기를 2개 이상 로드하지 않아야 하며 다른 직렬 변환기의 기능이 필요하지 않은 경우 **XmlSerializer**를 사용하는 것이 좋습니다.
 
 ### <a name="reduce-memory-footprint"></a>메모리 사용 공간 감소
 
@@ -85,7 +85,7 @@ UWP 프로세스 수명 시스템에서는 다양한 이유로 앱을 일시 중
 
 ## <a name="related-topics"></a>관련 항목
 
-* [앱 일시 중단 및 다시 시작에 대한 지침](https://msdn.microsoft.com/library/windows/apps/Hh465088)
+* [일시 중단 하 고 다시 시작 하는 앱에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/Hh465088)
  
 
  

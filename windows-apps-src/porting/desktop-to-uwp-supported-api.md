@@ -1,5 +1,5 @@
 ---
-Description: Packaged desktop apps can use a wide range of Universal Windows Platform (UWP) APIs, even if they have not fully transitioned to a UWP app. This article lists the available classes your packaged app can use.
+Description: 패키지 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 UWP(유니버설 Windows 플랫폼) API를 사용할 수 있습니다. 이 문서는 패키지로 만든 앱이 사용할 수 있는 클래스를 나열합니다.
 Search.Product: eADQiWindows 10XVcnh
 title: 패키지 데스크톱 앱에서 사용할 수 있는 UWP API(데스크톱 브리지)
 ms.date: 10/27/2017
@@ -8,13 +8,13 @@ keywords: windows 10, uwp
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
 ms.openlocfilehash: c3131207c04b421a6d8ab6aeeb16aa3107bbf21d
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048853"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644718"
 ---
-# <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>패키지 데스크톱 앱을 사용할 수 있는 UWP Api
+# <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>패키지에 포함 된 데스크톱 앱에 사용할 수 있는 UWP Api
 
 패키지 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 UWP(유니버설 Windows 플랫폼) API를 사용할 수 있습니다. 이 문서는 패키지로 만든 앱이 사용할 수 있는 클래스를 나열합니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "9048853"
 <tr><td>백그라운드 작업</td><td>패키지 앱에서 백그라운드 작업을 등록할 수는 있지만 완전한 UWP 앱만 백그라운드 작업<i>으로</i> 실행할 수 있습니다. 자세한 내용은 <a href="https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample">GitHub의 백그라운드 작업 샘플</a>을 참조하세요.</td></tr>
 <tr><td>Bluetooth</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>채팅 및 전화 통화</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
-<tr><td>계약 활성화</td><td>완전 한 UWP 앱만 계약에 활성화할 수 있습니다.</td></tr>
+<tr><td>계약 활성화</td><td>서비스 계약에만 전체 UWP 앱을 활성화할 수 있습니다.</td></tr>
 <tr><td>암호화</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>지리적 위치</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>파일 및 폴더 선택기</td><td>패키지로 만든 앱은 파일 시스템에 대한 모든 권한을 가지며 UWP 선택기가 필요하지 않습니다.</td></tr>
@@ -634,15 +634,15 @@ WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [데스크톱 브
 * [Windows.Devices.WiFiDirect.WiFiDirectDevice](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.WiFiDirect.WiFiDirectDevice)
 * [Windows.Devices.WiFiDirect.WiFiDirectInformationElement](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.WiFiDirect.WiFiDirectInformationElement)
 * [Windows.Devices.WiFiDirect.WiFiDirectLegacySettings](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.WiFiDirect.WiFiDirectLegacySettings)
-* [Windows.Foundation.AsyncOperationProgressHandler&lt;Tresult,.TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206573.aspx(d=robot))
-* [Windows.Foundation.AsyncOperationWithProgressCompletedHandler&lt;Tresult,.TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Tresult,.TProgress>)
-* [Windows.Foundation.Collections.MapChangedEventHandler&lt;K,.V&gt;](https://msdn.microsoft.com/library/windows/apps/br206644.aspx)
+* [Windows.Foundation.AsyncOperationProgressHandler<Tresult,.TProgress>](https://msdn.microsoft.com/library/windows/apps/br206573.aspx(d=robot))
+* [Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Tresult,.TProgress>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Tresult,.TProgress>)
+* [Windows.Foundation.Collections.MapChangedEventHandler<K,.V>](https://msdn.microsoft.com/library/windows/apps/br206644.aspx)
 * [Windows.Foundation.Collections.PropertySet](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.PropertySet)
 * [Windows.Foundation.Collections.StringMap](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.StringMap)
 * [Windows.Foundation.Collections.ValueSet](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.ValueSet)
 * [Windows.Foundation.Deferral](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Deferral)
 * [Windows.Foundation.PropertyValue](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.PropertyValue)
-* [Windows.Foundation.TypedEventHandler&lt;Tsender,.TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br225997.aspx(d=robot))
+* [Windows.Foundation.TypedEventHandler<Tsender,.TResult>](https://msdn.microsoft.com/library/windows/apps/br225997.aspx(d=robot))
 * [Windows.Foundation.Uri](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Uri)
 * [Windows.Foundation.WwwFormUrlDecoder](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.WwwFormUrlDecoder)
 * [Windows.Foundation.WwwFormUrlDecoderEntry](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.WwwFormUrlDecoderEntry)
@@ -1048,7 +1048,7 @@ WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [데스크톱 브
 
 ## <a name="next-steps"></a>다음 단계
 
-**질문에 대한 답변 찾기**
+**질문에 답변**
 
 질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 

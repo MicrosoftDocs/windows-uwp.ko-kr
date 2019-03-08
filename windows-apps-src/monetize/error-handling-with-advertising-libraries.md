@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, javascript, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e2e1c019497fc22e8d922ba5f0a02a30034b65
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050666"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617758"
 ---
 # <a name="handle-ad-errors"></a>광고 오류 처리
 
@@ -82,4 +82,4 @@ window.errorLogger = function (sender, evt) {
 });
 ```
 
-JavaScript에서의 **AdControl** 오류 처리를 보여주는 연습에 대해서는 [JavaScript에서 오류 처리 연습](error-handling-in-javascript-walkthrough.md)을 참조하세요.
+JavaScript에서의 **AdControl** 오류 처리를 보여 주는 연습에 대해서는 [JavaScript에서 오류 처리 연습](error-handling-in-javascript-walkthrough.md)을 참조하세요.

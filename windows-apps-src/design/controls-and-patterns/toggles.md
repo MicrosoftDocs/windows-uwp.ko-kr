@@ -1,31 +1,31 @@
 ---
-Description: The toggle switch represents a physical switch that allows users to turn things on or off.
+Description: 토글 스위치는 사용자가 켜거나 끌 수 있는 물리적 스위치를 나타냅니다.
 title: 토글 스위치 컨트롤에 대한 지침
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10 uwp
+keywords: windows 10, uwp
 pm-contact: kisai
 design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a23a7a7da9605c0ffb5a537c75d63e3f06705881
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9036965"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625468"
 ---
 # <a name="toggle-switches"></a>토글 스위치
 
-토글 스위치는 전등 스위치처럼 사용자가 켜거나 끌 수 있는 물리적 스위치를 나타냅니다. 토글 스위치 컨트롤을 사용하여 사용자에게 서로 배타적인 두 옵션(예: 켜짐/꺼짐)을 제공합니다. 이러한 옵션은 선택하는 즉시 결과가 제공됩니다.
+토글 스위치를 등을 끄거나 조명 스위치를 설정 하는 사용자를 허용 하는 실제 스위치를 나타냅니다. 토글 스위치 컨트롤을 사용하여 사용자에게 서로 배타적인 두 옵션(예: 켜짐/꺼짐)을 제공합니다. 이러한 옵션은 선택하는 즉시 결과가 제공됩니다.
 
 토글 스위치 컨트롤을 [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)를 사용합니다.
 
-> **중요 API**: [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [IsOn 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
+> **중요 한 Api**: [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)하십시오 [IsOn 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -46,8 +46,8 @@ ms.locfileid: "9036965"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 작동 중인 <a href="xamlcontrolsgallery:/item/ToggleSwitch">ToggleSwitch</a> 또는 <a href="xamlcontrolsgallery:/item/ToggleButton">ToggleButton</a>을 확인합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -67,7 +67,7 @@ ms.locfileid: "9036965"
 - 변경 사항을 적용하려면 추가 단계를 수행해야 하는 경우에는 확인란을 사용합니다. 예를 들어, 사용자가 '전송' 또는 '다음' 단추를 클릭하여 변경 사항을 적용해야 하는 경우에는 확인란을 사용합니다.
 - 사용자가 단일 설정이나 기능과 관련된 여러 항목을 선택할 수 있을 때 확인란을 사용합니다.
 
-## <a name="toggle-switches-in-the-windows-ui"></a>Windows UI의 토글 스위치
+## <a name="toggle-switches-in-the-windows-ui"></a>Windows UI에 설정/해제 스위치
 
 다음 이미지는 Windows UI에서 토글 스위치를 사용하는 방법을 보여 줍니다. 다음은 Smart Storage 설정 화면에서 토글 스위치를 사용하는 방법입니다.
 
@@ -167,7 +167,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 ## <a name="recommendations"></a>권장 사항
 
 - 가능하면 기본값인 켜짐 및 꺼짐 라벨을 사용합니다. 토글 스위치의 용도를 설명하는 데 필요할 경우에만 다른 라벨을 사용하세요. 라벨을 바꿀 경우 토글을 더 정확하게 설명하는 한 단어를 사용하세요. 일반적으로 "켜짐" 및 "꺼짐"이 토글 스위치에 연결된 작업을 제대로 설명하지 못할 경우 다른 컨트롤이 필요할 수 있습니다.
-- 꼭 필요한 경우 외에는 켜짐과 꺼짐 레이블을 바꾸지 마세요. 사용자 지정 레이블이 필요한 경우 외에는 기본 레이블을 고수하세요.
+- 꼭 그래야 하는 경우 외에는 켜짐과 꺼짐 레이블을 바꾸지 마세요. 사용자 지정 레이블이 필요한 경우 외에는 기본 레이블을 고수하세요.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
@@ -177,5 +177,5 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 - [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)
 - [라디오 단추](radio-button.md)
-- [토글 스위치](toggles.md)
+- [설정/해제 스위치](toggles.md)
 - [확인란](checkbox.md)

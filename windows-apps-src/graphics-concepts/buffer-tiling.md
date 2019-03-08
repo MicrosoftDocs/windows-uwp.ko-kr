@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f3e5e117e05cef478ede508240a6b1d1022dea70
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920743"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655728"
 ---
 # <a name="buffer-tiling"></a>버퍼 타일링
 
@@ -21,10 +21,10 @@ ms.locfileid: "8920743"
 
 구조적 버퍼는 바둑판식으로 표시할 stride에 대한 제약 조건이 없어야 합니다. 그러나 먼저 stride를 바둑판식으로 표시되게 만들어 [**StructuredBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff471514) 사용을 위해 하드웨어에서 가능한 성능 최적화를 희생해야 할 수 있습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[스트리밍 리소스 영역의 타일링 방법](how-a-streaming-resource-s-area-is-tiled.md)
+[리소스의 영역을 바둑판식으로 스트리밍 하는 방법](how-a-streaming-resource-s-area-is-tiled.md)
 
  
 

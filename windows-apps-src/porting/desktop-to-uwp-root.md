@@ -1,5 +1,5 @@
 ---
-Description: Create a modern Windows app package for your existing Windows Forms, WPF, or Win32 app or game. Add modern experiences for Windows 10 users and simplify deployment and monetization.
+Description: 기존 Windows 사용자 기존 Windows 폼, WPF, Win32 앱이나 게임을 위한 최신 Windows 앱 패키지를 만듭니다. Windows 10 사용자를 위해 최신 환경 추가 하 고 배포 및 수익 화를 간소화 합니다.
 Search.Product: eADQiWindows 10XVcnh
 title: 데스크톱 응용 프로그램 패키지
 ms.date: 09/05/2018
@@ -9,47 +9,47 @@ ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 70a9b6046e3b7be9ac84678ac21c0c9f89a4a7b2
-ms.sourcegitcommit: 1a4bbfb8495e2f414deac5ee050ab679a78b1717
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "9089755"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627828"
 ---
-# <a name="package-desktop-applications-desktop-bridge"></a>데스크톱 응용 프로그램 패키지 (데스크톱 브리지)
+# <a name="package-desktop-applications-desktop-bridge"></a>패키지 데스크톱 응용 프로그램 (데스크톱 브리지)
 
-기존 데스크톱 응용 프로그램을 사용 하 고 Windows 10 사용자를 위한 최신 환경을 추가 합니다. 그런 다음 Microsoft Store를 통해 배포, 글로벌 시장에 더 효과적으로 도달하는 성과를 이루세요. 스토어에 내장 된 기능을 활용 하 여 훨씬 간단한 방법에서 응용 프로그램 수익 창출 수 있습니다. 물론 Microsoft Store를 이용하지 않아도 됩니다. 기존 채널을 자유롭게 이용하세요.
+기존 데스크톱 응용 프로그램을 Windows 10 사용자를 위해 최신 환경 추가 하십시오. 그런 다음 Microsoft Store를 통해 배포, 글로벌 시장에 더 효과적으로 도달하는 성과를 이루세요. 저장소에 바로 기본 제공 기능을 활용 하 여 훨씬 간단한 방식으로 응용 프로그램 비용 절감 수 있습니다. 물론 Microsoft Store를 이용하지 않아도 됩니다. 기존 채널을 자유롭게 이용하세요.
 
 ![데스크톱 브리지](images/desktop-to-uwp/desktop-bridge-4.png)
 
-데스크톱 응용 프로그램에 대 한 패키지를 만들 때 응용 프로그램 id를 받게 됩니다 및 해당 id를 사용 하 여 데스크톱 응용 프로그램을 Windows 플랫폼 (UWP (유니버설) Api 액세스할 수 있습니다. 이를 사용해 라이브 타일과 알림 같은 최신 몰입형 환경을 구현할 수 있습니다.  간단한 조건부 컴파일을 사용 하 여 및 런타임 검사 응용 프로그램이 Windows 10에서 실행 되는 경우에 UWP 코드를 실행 합니다.
+데스크톱 응용 프로그램에 대 한 패키지를 만들 때 응용 프로그램 id 가져오기 됩니다 하 고 해당 id를 사용 하 여 데스크톱 응용 프로그램에 액세스 하려면 Windows 플랫폼 (UWP (유니버설) Api입니다. 이를 사용해 라이브 타일과 알림 같은 최신 몰입형 환경을 구현할 수 있습니다.  단순 조건부 컴파일을 사용 하 고 응용 프로그램이 Windows 10에서 실행 하는 경우에 UWP 코드를 실행 하려면 런타임 검사 합니다.
 
-Windows 10 환경을 돋보이게 하는 데 사용할 수 있는 코드를 외에도 응용 프로그램은 그대로 하 고 계속 기존 Windows 7, Windows Vista 또는 Windows XP 사용자에 게 배포할 수 있습니다. Windows 10에서 응용 프로그램에서 계속 실행 완전 신뢰 모드에서와 마찬가지로 사용자 모드는 현재 작업을 수행 합니다.
+Windows 10 환경용 명확 하 게 사용 하는 코드 외에도 응용 프로그램 변경 되지 않습니다 하 고 기존 Windows 7, Windows Vista 또는 Windows XP 사용자를 기반 분산을 계속할 수 있습니다. Windows 10에서 응용 프로그램이 완전 신뢰에서 실행을 계속 처럼 사용자 모드는 지금 수행 합니다.
 
 >[!IMPORTANT]
->데스크톱 응용 프로그램 (데스크톱 브리지 라고도 함)에 대 한 Windows 앱 패키지를 생성 하는 기능은 Windows 10 버전 1607에에서 도입 되었으며 Windows 10 1 주년 업데이트 (10.0; 대상으로 하는 프로젝트 에서만 사용할 수 있습니다. 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
+>(데스크톱 브리지 라고도 함) 데스크톱 응용 프로그램에 대 한 Windows 앱 패키지를 만들 수 있습니다. Windows 10 버전 1607에서에서 도입 되었으며 Windows 10 1 주년 업데이트 (10.0; 대상으로 하는 프로젝트 에서만 사용할 수 있습니다. Build 14393) 또는 Visual Studio의 이후 릴리스 합니다.
 
 > [!NOTE]
-> Microsoft Virtual Academy가 게시한 짧은 동영상에서 <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">이 시리즈</a>를 확인하세요. 이러한 동영상 전체 데스크톱 응용 프로그램 유니버설 Windows 플랫폼 (UWP)을 가져오기 과정을 안내 합니다.
+> Microsoft Virtual Academy가 게시한 짧은 동영상에서 <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">이 시리즈</a>를 확인하세요. 이 비디오에서는 데스크톱 응용 프로그램을 Windows 플랫폼 (UWP (유니버설)을 가져오는 전체 과정을 안내 합니다.
 
-## <a name="benefits"></a>이점
+## <a name="benefits"></a>장점
 
 여기에는 Windows 데스크톱 응용 프로그램용 Windows 앱 패키지를 만들어야 하는 이유가 몇 가지 나와 있습니다.
 
-:heavy_check_mark: **배포 간소화**. 브리지를 사용하는 앱과 게임은 배포가 매우 편리합니다. 이 환경은 사용자 수 있는 응용 프로그램을 설치 및 업데이트 자신 있게 보장 합니다. 사용자가 앱을 제거하도록 선택한 경우 흔적없이 완전히 제거됩니다. 이렇게 하면 설치 환경을 작성하고 사용자를 최신 상태로 유지하는 데 드는 시간이 줄어듭니다.
+:heavy_check_mark: **배포 간소화.** 브리지를 사용하는 앱과 게임은 배포가 매우 편리합니다. 이 환경은 사용자가 안심 하 고 응용 프로그램 설치 및 업데이트는 확인 합니다. 사용자가 앱을 제거하도록 선택한 경우 흔적없이 완전히 제거됩니다. 이렇게 하면 설치 환경을 작성하고 사용자를 최신 상태로 유지하는 데 드는 시간이 줄어듭니다.
 
-:heavy_check_mark: **자동 업데이트 및 라이선스**. 응용 프로그램은 Microsoft Store의 기본 제공 라이선스 및 자동 업데이트 기능에 참여할 수 있습니다. 자동 업데이트를 사용할 경우 파일의 변경된 부분만 다운로드되므로 매우 안정적이고 효율적인 메커니즘입니다.
+:heavy_check_mark: **자동 업데이트 및 라이선스**. 응용 프로그램은 Microsoft Store 기본 제공 라이선스 및 자동 업데이트 기능에 참여할 수 있습니다. 자동 업데이트를 사용할 경우 파일의 변경된 부분만 다운로드되므로 매우 안정적이고 효율적인 메커니즘입니다.
 
-:heavy_check_mark: **도달 범위 증가 및 수익 창출 간소화**. Microsoft Store를 통한 배포를 선택하면 수 백만 명의 Windows10 사용자(현지 결제 옵션으로 앱 및 게임을 취득하고 앱에서 바로 구매를 수행할 수 있음)에게 쉽게 도달할 수 있습니다.
+:heavy_check_mark: **도달 범위 증가 및 수익 창출 간소화**. Microsoft Store를 통한 배포를 선택하면 수 백만 명의 Windows 10 사용자(현지 결제 옵션으로 앱 및 게임을 취득하고 앱에서 바로 구매를 수행할 수 있음)에게 쉽게 도달할 수 있습니다.
 
 :heavy_check_mark: **UWP 기능 추가**.  원하는 속도로 XAML 사용자 인터페이스, 라이브 타일 업데이트, UWP 백그라운드 작업, 앱 서비스 등의 UWP 기능을 앱 패키지에 추가할 수 있습니다.
 
-:heavy_check_mark: **디바이스에서 폭넓어진 사용 사례**. 브리지를 사용하면 코드를 유니버설 Windows 플랫폼으로 점차적으로 마이그레이션하여 모든 Windows10 디바이스(휴대폰, Xbox One 및 HoloLens 포함)에 도달할 수 있습니다.
+:heavy_check_mark: **디바이스에서 폭넓어진 사용 사례**. 브리지를 사용하면 코드를 유니버설 Windows 플랫폼으로 점차적으로 마이그레이션하여 모든 Windows 10 디바이스(휴대폰, Xbox One 및 HoloLens 포함)에 도달할 수 있습니다.
 
 자세한 혜택 목록은 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 참조하세요.
 
 ## <a name="prepare"></a>준비
 
-먼저, [데스크톱 앱을 패키징 준비](desktop-to-uwp-prepare.md)문서를 검토 하 고이 대 한 Windows 앱 패키지를 만들기 전에 응용 프로그램에 적용 되는 문제를 해결 하 여 응용 프로그램을 준비 합니다. 패키지를 작성 하기 전에 응용 프로그램에 많은 내용을 변경할 수 없을 수도 있습니다. 그러나 일부의 상황 하는 것에 대 한 패키지를 만들기 전에 응용 프로그램을 조정 해야 할 수 있습니다.
+먼저 문서를 검토 하 여 응용 프로그램을 준비 [데스크톱 앱 패키지 준비](desktop-to-uwp-prepare.md), 및 다음에 대 한 Windows 앱 패키지를 만들기 전에 응용 프로그램에 적용 되는 문제를 해결 합니다. 변경 하려면 여러 응용 프로그램 패키지를 만들기 전에 없을 수 있습니다. 그러나 패키지를 만들기 전에 응용 프로그램을 조정 해야 할 수도 있습니다는 몇 가지 경우가 있습니다.
 
 <a id="convert" />
 
@@ -59,23 +59,23 @@ Windows 10 환경을 돋보이게 하는 데 사용할 수 있는 코드를 외�
 
 ### <a name="desktop-app-converter"></a>Desktop App Converter
 
-'변환기'가 이 도구의 이름으로 표시되지만, 실제 앱을 변환하지 않습니다. 응용 프로그램 변경 되지 않습니다. 그러나 이 도구는 Windows 앱 패키지를 생성합니다. 응용 프로그램으로 인해 시스템을 수정 하거나 설치 관리자 역할에 대해 잘 알지 있는 경우 경우에서 매우 편리 수 있습니다.
+'변환기'가 이 도구의 이름으로 표시되지만, 실제 앱을 변환하지 않습니다. 응용 프로그램 변경 되지 않습니다. 그러나 이 도구는 Windows 앱 패키지를 생성합니다. 응용 프로그램을 사용 하면 다양 한 시스템을 수정 하는 경우 또는 설치 관리자 기능에 대해 모든 불확실성 경우 사례에서 매우 편리 수 있습니다.
 
-Desktop App Converter 가상 파일 및 응용 프로그램의 패키지 버전에서 사용할 레지스트리 시스템에 설치 관리자의 동작을 변환 합니다. 또한 Desktop App Converter는 사용자를 위해 몇 가지 추가 작업을 수행합니다. 그 중 몇 가지는 다음과 같습니다.
+Desktop App Converter 가상 파일 및 레지스트리 시스템은 응용 프로그램의 패키지 버전을 사용 하는 설치 관리자의 작업으로 변환 합니다. 또한 Desktop App Converter는 사용자를 위해 몇 가지 추가 작업을 수행합니다. 그 중 몇 가지는 다음과 같습니다.
 
 :heavy_check_mark: 미리 보기 처리기, 미리 보기 이미지 처리기, 특성 처리기, 방화벽 규칙, URL 플래그를 자동으로 등록합니다.
 
-:heavy_check_mark: 사용자가 파일 탐색기에서 **종류** 열을 사용해 파일을 그룹화할 수 있도록 파일 형식 매핑을 자동으로 등록합니다.
+:heavy_check_mark: 자동으로 등록 파일 형식 매핑을 사용 하 여 사용자가 그룹 파일을 사용 하도록 설정 하는 **종류** 파일 탐색기에서 열.
 
 :heavy_check_mark: 공용 COM 서버를 등록합니다.
 
-: heavy_check_mark: 앱을 실행 하는 데 사용할 수 있는 인증서를 생성 합니다.
+:heavy_check_mark: 앱을 실행 하는 데 사용할 수 있는 인증서를 생성 합니다.
 
-: heavy_check_mark: 데스크톱 응용 프로그램 패키지 및 Microsoft Store 요구 사항에 대해 응용 프로그램의 유효성을 검사 합니다.
+:heavy_check_mark: 패키지에 포함 된 데스크톱 응용 프로그램 및 Microsoft Store 요구 사항에 대해 응용 프로그램의 유효성을 검사 합니다.
 
-Desktop App Converter를 사용 하 여 또 다른 이유는 Visual Studio 이외의 다양 한 개발 환경을 사용 하 여 응용 프로그램을 유지 하는 경우. 응용 프로그램 설치 관리자가 없는 경우에 Desktop App Converter를 사용할 수 있습니다.
+Desktop App Converter 사용 하는 또 다른 좋은 이유는 Visual Studio 이외의 다른 개발 환경을 사용 하 여 응용 프로그램을 유지 하는 경우. 응용 프로그램 설치 관리자 없는 경우에 Desktop App Converter 사용할 수 있습니다.
 
-[Desktop App Converter를 사용 하 여 데스크톱 응용 프로그램 패키지를](desktop-to-uwp-run-desktop-app-converter.md) 참조 하세요.
+참조 [Desktop App Converter 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-run-desktop-app-converter.md)
 
 ### <a name="visual-studio"></a>Visual Studio
 
@@ -83,23 +83,23 @@ Visual Studio를 사용하여 응용 프로그램을 유지하고 응용 프로�
 
 Visual Studio로 매우 쉽게 패키지를 만들 수 있습니다. 패키징 프로젝트를 추가하고 데스크톱 프로젝트를 참조한 다음 F5 키를 눌러 앱을 디버깅합니다. 수동 조정이 필요하지 않습니다. 이 새로운 간소화된 환경은 이전 버전의 Visual Studio에서 사용할 수 있는 환경에 대해 상당히 향상되었습니다. 이를 사용하여 수행할 수 있는 몇 가지 다른 작업은 다음과 같습니다.
 
-:heavy_check_mark: 자동으로 시각적 자산을 생성합니다.
+:heavy_check_mark: 시각적 자산을 자동으로 생성 합니다.
 
-:heavy_check_mark: 비주얼 디자이너를 사용하여 매니페스트를 변경합니다.
+:heavy_check_mark: 프로그램 매니페스트에 비주얼 디자이너를 사용 하 여 변경 내용을 확인 합니다.
 
-:heavy_check_mark: 마법사를 사용하여 패키지를 생성합니다.
+:heavy_check_mark: 마법사를 사용 하 여 패키지를 생성 합니다.
 
-: heavy_check_mark: [파트너 센터](https://partner.microsoft.com/dashboard)에서 이미 예약 된 이름에서 응용 프로그램 id를 쉽게 할당 합니다.
+:heavy_check_mark: 쉽게 응용 프로그램에서 이미 예약한 이름에서 id를 할당 [파트너 센터](https://partner.microsoft.com/dashboard)합니다.
 
-[Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-packaging-dot-net.md) 를 참조 하세요.
+참조 [Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-packaging-dot-net.md)
 
 ### <a name="third-party-installer"></a>타사 설치 관리자
 
- 몇몇 인기 타사 제품 및 설치 관리자는 이제 데스크톱 응용 프로그램을 패키징하는 기능을 지원 합니다. 이를 사용하면 MSI 설치 관리자 또는 앱 패키지를 몇 번의 클릭만으로 생성할 수 있습니다. 이러한 도구를 사용하는 방법에 대한 설명서는 없지만, 자세한 내용은 웹 사이트를 방문해 확인하세요.
+ 몇 가지 인기 있는 타사 제품 및 설치 관리자는 이제 데스크톱 응용 프로그램을 패키지 하는 기능을 지원 합니다. 이를 사용하면 MSI 설치 관리자 또는 앱 패키지를 몇 번의 클릭만으로 생성할 수 있습니다. 이러한 도구를 사용하는 방법에 대한 설명서는 없지만, 자세한 내용은 웹 사이트를 방문해 확인하세요.
 
 #### <a name="advanced-installer"></a>고급 설치 관리자
 
-Caphyon은 몇 번의 클릭만으로 응용 프로그램에 대한 Windows 앱 패키지를 손쉽게 생성할 수 있도록 GUI 기반의 무료 데스크톱 앱 패키징 도구를 제공합니다. 설치 관리자가; 사용할 수 있습니다. 자동 모드에서 실행 되는 유효성 검사를 수행 하는 이라도 확인 패키징에 적합 한지 여부를 결정 합니다.
+Caphyon은 몇 번의 클릭만으로 응용 프로그램에 대한 Windows 앱 패키지를 손쉽게 생성할 수 있도록 GUI 기반의 무료 데스크톱 앱 패키징 도구를 제공합니다. 모든 설치 관리자가 사용할 수 있습니다. 자동 모드에서 실행 하 고 유효성 검사를 수행 것 확인 응용 프로그램 패키징 적합 한지 여부를 결정 합니다.
 Desktop App Converter는 Hyper-V 및 [VMware](https://www.vmware.com/)에도 통합이 됩니다. 즉, 일치하는 [Docker](https://docs.docker.com/) 이미지(크기가 3GB 이상일 수 있음)를 다운로드할 필요 없이 자체 가상 머신을 사용할 수 있습니다.
 
 <img width="20%" src="images/desktop-to-uwp/Advanced_Installer_Vertical.png">
@@ -119,7 +119,7 @@ Windows 10 및 10 S와 호환되지 않는 LOB 응용 프로그램을 보유한 
 
 <img width="20%" src="images/desktop-to-uwp/cloudhouse-container-logo.png">
 
-Cloudhouse는 Windows XP 등 현재 앱을 실행 중인 운영 체제에서 LOB 응용 프로그램을 [호환성 컨테이너](https://docs.cloudhouse.com/37613-overview/266723-compatibility-containers-for-applications)로 패키징하기 위한 Auto Packager를 제공하고, UWP로 [변환하기 위한 준비를 완료](https://docs.cloudhouse.com/37613-overview/266725-compatibility-containers-for-desktop-bridge?from_search=17883905)합니다. 그런 다음 이 컨테이너가 Microsoft의 Desktop App Converter 도구와 통합되어 새로운 Windows 앱 패키지 형식으로 변환됩니다.
+Cloudhouse 패키징 기간 업무 응용 프로그램에는 자동 Packager 제공 [호환성 컨테이너](https://docs.cloudhouse.com/37613-overview/266723-compatibility-containers-for-applications) 지금 앱에서 실행 되는 운영 체제에서 (예: Windows XP)을 차례로 [변환에 대 한 준비](https://docs.cloudhouse.com/37613-overview/266725-compatibility-containers-for-desktop-bridge?from_search=17883905) uwp입니다. 그런 다음 이 컨테이너가 Microsoft의 Desktop App Converter 도구와 통합되어 새로운 Windows 앱 패키지 형식으로 변환됩니다.
 
 Auto Packager는 설치/캡처, 런타임 분석을 사용, 응용 프로그램 파일, 레지스트리, 런타임, 종속성 Windows 10에서 응용 프로그램이 실행될 수 있도록 하는 데 필요한 호환성 및 리디렉션 엔진이 포함된 응용 프로그램 컨테이너를 생성합니다. 컨테이너는 응용 프로그램 및 런타임에 격리를 제공하므로 사용자 장치에서 실행 중인 다른 응용 프로그램과 충돌하거나 영향을 주지 않습니다.
 
@@ -127,15 +127,15 @@ Auto Packager는 설치/캡처, 런타임 분석을 사용, 응용 프로그램 
 
 #### <a name="firegiant"></a>FireGiant
 
-[FireGiant MSIX 확장](https://www.firegiant.com/products/wix-expansion-pack/msix) 은 동일한 WiX 소스 코드에서 Windows 앱 패키지와 MSI 패키지를 동시에 만들 수 있습니다. 를 빌드할 때마다 Windows 앱 패키지와 MSI 사용 하 여 Windows의 이전 버전 Windows 10으로 지정할 수 있습니다.
+합니다 [FireGiant MSIX 확장](https://www.firegiant.com/products/wix-expansion-pack/msix) 동일한 WiX 소스 코드에서 Windows 앱 패키지 및 MSI 패키지를 동시에 만들 수 있습니다. 를 빌드할 때마다 이전 버전의 MSI 사용 하 여 Windows 및 Windows 앱 패키지를 사용 하 여 Windows 10을 대상 지정할 수 있습니다.
 
 <img width="20%" src="images/desktop-to-uwp/FG3rdPartyLogo.png">
 
-FireGiant MSIX 확장 정적 분석 및 WiX 프로젝트의 지능형 에뮬레이션을 사용 하 여 컨테이너 또는 가상 컴퓨터의 디스크 공간 및 런타임 오버 헤드 없이 Windows 앱 패키지를 생성 합니다.
+FireGiant MSIX 확장 정적 분석 및 WiX 프로젝트의 지능형 에뮬레이션을 사용 하 여 컨테이너 또는 가상 컴퓨터의 디스크 공간 및 런타임 오버 헤드 없이 Windows 앱 패키지 만들기.
 
-FireGiant MSIX 확장 실행 하 여 설치 관리자를 변환 하지, 때문에 반복 해 서 Windows 앱 패키지를 변환 하지 않고도 WiX 설치 관리자를 유지할 수 있습니다. 여러 다른 버전의 Windows 사용자가 최신 향상을 얻을 수 있습니다. 또 MSI 및 Windows 앱 패키지가 동기화 되지 않는 문제를 걱정할 필요가 없습니다.
+FireGiant MSIX 확장을 실행 하 여 설치 관리자를 변환 하지 않습니다, 때문에 반복 해 서 Windows 앱 패키지를 변환 하지 않고도 WiX 설치 관리자를 유지할 수 있습니다. 여러 다른 버전의 Windows 사용자가 최신 향상을 얻을 수 있습니다. 또 MSI 및 Windows 앱 패키지가 동기화 되지 않는 문제를 걱정할 필요가 없습니다.
 
-체크 아웃이 [비디오](https://www.youtube.com/watch?v=AFBpdBiAYQE) 및 어떻게 몇 줄의 코드만으로 FireGiant CEO가 생성 인기 오픈 소스 7-zip 압축 도구의 Appx (Windows 앱 패키지) 버전 및 Windows 응용 프로그램 및 MSI 패키지를 모두 향상가 어떻게 참조 동일한 WiX 소스 코드에서 변경 됩니다.
+이 확인해 [비디오](https://www.youtube.com/watch?v=AFBpdBiAYQE) 어떻게 몇 줄의 코드로 FireGiant CEO Rob Mensching 된 버전을 만듭니다 (Windows 앱 패키지) Appx의 인기 있는 오픈 소스 7-zip 압축 도구 및 Windows 응용 프로그램 모두 어떻게 개선 하는지 그 및 동일한 WiX 소스 코드의 변경 내용으로 MSI 패키지입니다.
 
 #### <a name="installaware"></a>InstallAware
 
@@ -183,7 +183,7 @@ Windows 앱 패키지를 만드는 것 외에 PACE Suite를 사용하여 Windows
 
 #### <a name="raypack-studio"></a>RayPack Studio
 
-Raynet의 패키징 솔루션, [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio)여러 효율적이 고 구성이 쉬운 변환 및 리 패키징 프레임 워크의 결과 중 하나로 데스크톱 응용 프로그램에 대 한 패키지를 지원합니다.
+Raynet의 솔루션을 패키징 [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio), 효율적이 고 구성에 쉽게 변환의 여러 결과 중 하나로 데스크톱 응용 프로그램 패키지 만들기를 지원 및 프레임 워크를 다시 패키징합니다.
 
 <img width="20%" src="images/desktop-to-uwp/RaynetLogo_v3.png">
 
@@ -207,25 +207,25 @@ Raynet의 RayPack Studio 및 RayFlow에 대해 알아보고 [무료 평가판 �
 
 ### <a name="manual-packaging"></a>수동 패키징
 
-마지막 옵션으로 이러한 도구를 사용 하지 않고 응용 프로그램을 변환할 수 있습니다. 변환을 세부적으로 제어하고 싶다면 매니페스트 파일을 만든 다음, **MakeAppx.exe** 도구를 실행하여 Windows 앱 패키지를 만들 수 있습니다.
+최종 옵션으로 이러한 도구 중 하나를 사용 하지 않고 응용 프로그램을 변환할 수 있습니다. 변환을 세부적으로 제어하고 싶다면 매니페스트 파일을 만든 다음, **MakeAppx.exe** 도구를 실행하여 Windows 앱 패키지를 만들 수 있습니다.
 
-[데스크톱 응용 프로그램을 수동으로 패키징하](desktop-to-uwp-manual-conversion.md)참조 하세요.
+참조 [데스크톱 응용 프로그램을 수동으로 패키지](desktop-to-uwp-manual-conversion.md)합니다.
 
 ## <a name="integrate"></a>통합
 
-응용 프로그램을 시스템으로 통합 해야 하는 경우 (예: 방화벽 규칙을 구성 하), 응용 프로그램의 패키지 매니페스트에서 이러한 작업을 설명 하 고 시스템 나머지 작업을 수행 합니다. 이런 작업 대부분에서 코드를 작성할 필요가 없습니다. 매니페스트에 약간의 XML 사용 하 여 수행할 수 있습니다 사용자가 로그온 할 때 프로세스를 시작 하 고, 응용 프로그램 파일 탐색기에 통합, 응용 프로그램 추가 같은 다른 앱에 표시 되는 인쇄 대상 목록입니다.
+응용 프로그램이 시스템과 통합 해야 하는 경우 (예: 방화벽 규칙을 설정), 응용 프로그램의 패키지 매니페스트에 해당 항목을 설명 하 고 시스템은 나머지를 수행 합니다. 이런 작업 대부분에서 코드를 작성할 필요가 없습니다. 매니페스트에서 XML의 비트를 사용 하 여 수행할 수 있습니다, 사용자가 로그온 할 때 프로세스를 시작 하 고, 파일 탐색기에 응용 프로그램을 통합 하 고, 응용 프로그램을 추가 하는 등 다른 앱에서 표시 되는 인쇄 대상 목록입니다.
 
-[Windows 10 패키지로 만든된 데스크톱 응용 프로그램 통합](desktop-to-uwp-extensions.md)을 참조 하세요.
+참조 [Windows 10 데스크톱 응용 프로그램 패키지를 통합할](desktop-to-uwp-extensions.md)합니다.
 
-## <a name="enhance"></a>향상
+## <a name="enhance"></a>개선
 
-일단 앱을 패키징하고 나면, 라이브 타일, 푸시 알림 같은 기능으로 이를 실행할 수 있습니다. 응용 프로그램의 참여 수준을 크게 향상 시킬 수 있는 이러한 기능 중 일부 및 약간의 시간을 추가 합니다. 몇 가지 향상 기능에는 약간의 코드가 추가적으로 필요합니다.
+일단 앱을 패키징하고 나면, 라이브 타일, 푸시 알림 같은 기능으로 이를 실행할 수 있습니다. 응용 프로그램의 참여 수준이 크게 향상 시킬 수 있습니다 이러한 기능 중 일부를 및 추가할 거의 시간 비용이 있습니다. 몇 가지 향상 기능에는 약간의 코드가 추가적으로 필요합니다.
 
 [Windows 10용 데스크톱 응용 프로그램 개선](desktop-to-uwp-enhance.md) 참조
 
 ## <a name="extend"></a>확장
 
-일부 Windows 10 환경(예, 터치 구현 UI 페이지)은 최신 앱 컨테이너 내부에서 실행해야 합니다. 일반적으로 UWP API로 기존 데스크톱 응용 프로그램을 [향상](desktop-to-uwp-enhance.md)시켜 환경을 추가할지 먼저 결정해야 합니다. UWP 구성 요소를 사용 하 여 환경을 구현 하기 위해 해야 할 경우 솔루션에 UWP 프로젝트를 추가 및 앱 서비스를 사용 하 여 데스크톱 응용 프로그램 및 UWP 구성 요소 간에 통신할 수 있습니다.
+일부 Windows 10 환경(예, 터치 구현 UI 페이지)은 최신 앱 컨테이너 내부에서 실행해야 합니다. 일반적으로 UWP API로 기존 데스크톱 응용 프로그램을 [향상](desktop-to-uwp-enhance.md)시켜 환경을 추가할지 먼저 결정해야 합니다. 경험을 얻는 UWP 구성 요소를 사용 해야 할 경우 UWP 프로젝트를 솔루션에 추가 및 앱 서비스를 사용 하 여 데스크톱 응용 프로그램 및 UWP 구성 요소 간 통신을 수 있습니다.
 
 [최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장](desktop-to-uwp-extend.md) 참조.
 
@@ -242,18 +242,18 @@ Raynet의 RayPack Studio 및 RayFlow에 대해 알아보고 [무료 평가판 �
 
 ## <a name="test"></a>테스트
 
-응용 프로그램을 테스트 현실적인 설정에서 배포를 준비 하는 대로, 응용 프로그램에 서명 하 고 다음 설치 하는 것이 좋습니다. [앱 테스트](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-debug#test-your-app)를 참조합니다.
+응용 프로그램을 테스트할 현실적인 설정에서 배포를 준비 하는 대로, 응용 프로그램에 로그인 한 후 설치 하는 것이 좋습니다. [앱 테스트](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-debug#test-your-app)를 참조합니다.
 
 >[!IMPORTANT]
-> Microsoft Store에 응용 프로그램을 게시 하려는 응용 프로그램은 Windows 10 S 모드에서 실행 되는 장치에서 정상적으로 작동 하는지 확인 합니다. 이는 Microsoft Store의 요구 사항입니다. [Windows 10 S 모드 Windows 앱 테스트](desktop-to-uwp-test-windows-s.md)를 참조하세요.
+> Microsoft Store 응용 프로그램을 게시 하려는 경우 Windows 10 S 모드로 실행 되는 장치에서 응용 프로그램이 올바르게 작동 하는지 확인 합니다. 이는 Microsoft Store의 요구 사항입니다. [Windows 10 S 모드 Windows 앱 테스트](desktop-to-uwp-test-windows-s.md)를 참조하세요.
 
-## <a name="validate"></a>정품 확인
+## <a name="validate"></a>유효성 검사
 
-Microsoft Store에 게시 될 가능성은 응용 프로그램을 제공 하거나 [Windows 인증](https://go.microsoft.com/fwlink/p/?LinkID=309666)되 고 유효성을 검사 하 고 인증을 위해 제출 하기 전에 로컬로 테스트 합니다.
+응용 프로그램에 게 Microsoft Store 게시 된 또는 받기의 최상의 있는 기회 [Windows 인증](https://go.microsoft.com/fwlink/p/?LinkID=309666), 유효성 검사 및 인증을 위해 제출 하기 전에 로컬로 테스트 합니다.
 
-DAC를 앱 패키지를 사용 하는 경우 새 사용할 수 ``-Verify`` 데스크톱 응용 프로그램 패키지 및 스토어 요구 사항에 대 한 패키지의 유효성을 검사 하는 플래그입니다. [앱의 패키징, 서명, Microsoft Store 제출 준비](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters)를 참조하세요.
+DAC 응용 프로그램 패키지를 사용 하는 경우 사용할 수 있습니다 새 ``-Verify`` 패키지 데스크톱 응용 프로그램 및 저장소 요구 사항에 대해 패키지의 유효성을 검사 하는 플래그입니다. [앱의 패키징, 서명, Microsoft Store 제출 준비](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters)를 참조하세요.
 
-Visual Studio를 사용 하는 경우 **앱 패키지 만들기** 마법사에서 응용 프로그램을 확인할 수 있습니다. [앱 패키지 업로드 파일 만들기](../packaging/packaging-uwp-apps.md#create-an-app-package-upload-file)를 참조하세요.
+Visual Studio를 사용 하는 경우에 응용 프로그램을 확인할 수 있습니다 합니다 **앱 패키지 만들기** 마법사. [앱 패키지 업로드 파일 만들기](../packaging/packaging-uwp-apps.md#create-an-app-package-upload-file)를 참조하세요.
 
 도구를 수동으로 실행하려면 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md)를 참조하세요.
 
@@ -261,13 +261,13 @@ Visual Studio를 사용 하는 경우 **앱 패키지 만들기** 마법사에�
 
 ## <a name="distribute"></a>배포
 
-Microsoft Store에 게시 하거나 테스트용으로 로드 하 여 응용 프로그램을 배포할 수, 다른 시스템에 있습니다.
+Microsoft Store 게시 하거나 사이드 로드 하 여 응용 프로그램을 배포할 수 있습니다 다른 시스템에 놓습니다.
 
-[패키지 데스크톱 앱 배포](desktop-to-uwp-distribute.md)를 참조 하세요.
+참조 [패키지에 포함 된 데스크톱 앱을 배포할](desktop-to-uwp-distribute.md)합니다.
 
 ## <a name="support-and-feedback"></a>지원 및 피드백
 
-**질문에 대한 답변 찾기**
+**질문에 답변**
 
 질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 
@@ -279,14 +279,14 @@ Microsoft Store에 게시 하거나 테스트용으로 로드 하 여 응용 프
 
 | 항목 | 설명 |
 |-------|-------------|
-| [앱 패키징 준비](desktop-to-uwp-prepare.md) | 데스크톱 앱을 패키징 하기 전에 검토할 항목 목록을 제공합니다. |
-| [Desktop App Converter를 사용 하 여 앱을 패키징](desktop-to-uwp-run-desktop-app-converter.md) | Desktop App Converter를 실행하는 방법을 보여 줍니다. |
-| [데스크톱 응용 프로그램을 수동으로 패키징](desktop-to-uwp-manual-conversion.md) | 앱 패키지 및 매니페스트를 직접 만드는 방법을 알아봅니다. |
-| [Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-packaging-dot-net.md)| Visual Studio를 사용 하 여 데스크톱 응용 프로그램을 패키징하는 방법을 보여 줍니다. |
-| [Windows 10 데스크톱 응용 프로그램 통합](desktop-to-uwp-extensions.md) | 응용 프로그램 패키징 프로젝트의 패키지 매니페스트 파일에 작업을 설명 하 여 사용 하 여 Windows 10 통합. |
-| [Windows 10용 데스크톱 응용 프로그램 개선](desktop-to-uwp-enhance.md)| UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 수 있습니다. |
-| [패키지로 만든된 데스크톱 응용 프로그램에 사용할 수 있는 UWP Api](desktop-to-uwp-supported-api.md) | 사용 하 여 데스크톱 응용 프로그램용 패키지 사용할 있는 UWP Api 참조 하세요. |
-| [최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장](desktop-to-uwp-extend.md)| UWP 앱 컨테이너 내부에서만 실행되는 고급 환경을 추가합니다. 앱 서비스를 사용 하 여 UWP 프로세스를 사용 하 여 데스크톱 응용 프로그램을 연결 합니다.|
+| [앱 패키지 준비](desktop-to-uwp-prepare.md) | 데스크톱 앱을 패키징 하기 전에 검토할 항목 목록을 제공합니다. |
+| [Desktop App Converter 사용 하 여 앱 패키지](desktop-to-uwp-run-desktop-app-converter.md) | 데스크톱 앱 변환기를 실행하는 방법을 보여 줍니다. |
+| [데스크톱 응용 프로그램을 수동으로 패키지](desktop-to-uwp-manual-conversion.md) | 앱 패키지 및 매니페스트를 직접 만드는 방법을 알아봅니다. |
+| [Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-packaging-dot-net.md)| Visual Studio를 사용 하 여 데스크톱 응용 프로그램을 패키지 하는 방법을 보여 줍니다. |
+| [Windows 10 데스크톱 응용 프로그램 통합](desktop-to-uwp-extensions.md) | 패키징 프로젝트의 패키지 매니페스트 파일에서 작업을 설명 하 여 사용 하 여 Windows 10을 사용 하 여 응용 프로그램을 통합 합니다. |
+| [Windows 10 용 데스크톱 응용 프로그램을 향상합니다](desktop-to-uwp-enhance.md)| UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 수 있습니다. |
+| [패키지에 포함 된 데스크톱 응용 프로그램에 사용할 수 있는 UWP Api](desktop-to-uwp-supported-api.md) | 있는지 UWP Api를 사용 하 여 패키지에 포함 된 데스크톱 응용 프로그램에 사용할 수 있습니다. |
+| [최신 UWP 구성 요소를 사용 하 여 데스크톱 응용 프로그램 확장](desktop-to-uwp-extend.md)| UWP 앱 컨테이너 내부에서만 실행되는 고급 환경을 추가합니다. 앱 서비스를 사용 하 여 UWP 프로세스를 사용 하 여 데스크톱 응용 프로그램을 연결 합니다.|
 | [실행, 디버그 및 패키지 된 데스크톱 응용 프로그램 테스트](desktop-to-uwp-debug.md) | 패키지로 만든 앱 디버깅에 대한 옵션에 대해 설명합니다. |
-| [패키지로 만든된 데스크톱 응용 프로그램을 배포 ](desktop-to-uwp-distribute.md) | 사용자에 게 변환 된 응용 프로그램을 배포 하는 방법을 참조 하세요.  |
-| [알려진된 Issues(desktop-to-uwp-known-issues.md) | 알려진 문제 데스크톱 응용 프로그램 패키지를 나열 합니다. |
+| [패키지에 포함 된 데스크톱 응용 프로그램 배포 ](desktop-to-uwp-distribute.md) | 사용자에 게 변환 된 응용 프로그램을 배포 하는 방법을 참조 하세요.  |
+| [알려진된 Issues(desktop-to-uwp-known-issues.md) | 알려진 데스크톱 응용 프로그램 패키징을 사용 하 여 문제를 나열 합니다. |

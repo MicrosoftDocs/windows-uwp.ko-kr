@@ -6,13 +6,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 435bbdbfaaf1bec90fa1ee2d598b4a3fe78d3789
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944954"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631658"
 ---
-# <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>버전 적응 앱: 이전 버전과 호환성을 유지하면서 새로운 API 사용
+# <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>적응 응용 프로그램 버전: 이전 버전과 호환성을 유지 하면서 새 Api를 사용 하 여
 
 Windows 10 SDK의 각 릴리스에서는 활용하고 싶어할 만한 멋진 기능이 새로 추가됩니다. 그러나 모든 고객이 동시에 최신 버전의 Windows 10으로 디바이스를 업데이트하지는 않을 것이므로 앱이 가능한 한 가장 광범위한 디바이스에서 작동하도록 해야 합니다. 여기서는 이전 버전의 Windows 10에서 실행되지만 최신 업데이트가 설치된 디바이스에서 앱이 실행될 때마다 새로운 기능도 활용하도록 앱을 설계하는 방법을 보여 줍니다.
 
@@ -26,8 +26,8 @@ Windows 10 SDK의 각 릴리스에서는 활용하고 싶어할 만한 멋진 �
 
 여러 Windows 10 버전을 지원하기 위한 첫 번째 단계는 Visual Studio 프로젝트에서 *대상* 및 *최소* 지원 OS/SDK 버전을 지정하는 것입니다.
 
-- *대상*: Visual Studio에서 앱 코드를 컴파일하고 모든 도구를 실행하는 SDK 버전입니다. 이 SDK 버전의 모든 API 및 리소스는 컴파일 시에 앱 코드에서 사용할 수 있습니다.
-- *최소*: 앱이 실행될 수 있는 가장 이전 OS 버전을 지원하는(그리고 스토어에서 배포될) SDK 버전과 Visual Studio에서 앱 태그 코드를 컴파일하는 버전입니다. 
+- *대상*: SDK 버전 Visual Studio 앱 코드 컴파일한에 대 한 모든 도구를 실행 합니다. 이 SDK 버전의 모든 API 및 리소스는 컴파일 시에 앱 코드에서 사용할 수 있습니다.
+- *최소*: 앱에서 실행할 수 있습니다 (및 스토어를 통해 배포 됩니다)는 가장 오래 된 OS 버전 및 Visual Studio에 대 한 앱 태그 코드를 컴파일하는 버전을 지 원하는 SDK 버전입니다. 
 
 런타임 중에 앱은 배포 대상인 OS 버전에 대해 실행되므로 해당 버전에서 사용할 수 없는 리소스를 사용하거나 API를 호출하는 경우 앱에서 예외가 발생합니다. 이 문서의 뒷부분에서 런타임 검사를 사용하여 올바른 API를 호출하는 방법을 보여 줍니다.
 
@@ -60,7 +60,7 @@ Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상
 
 출시된 모든 버전의 SDK는 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/downloads/sdk-archive)에서 다운로드할 수 있습니다. 최신 Windows Insider Preview SDK는 [Windows 참가자](https://insider.windows.com/Home/BuildWithWindows) 사이트의 개발자 섹션에서 다운로드할 수 있습니다.
 
- Windows 10 업데이트에 대 한 자세한 내용은 [Windows 10 릴리스 정보를](https://technet.microsoft.com/windows/release-info)참조 하세요. Windows 10에 대 한 중요 정보에 대 한 지원 수명 주기 [Windows 수명 주기 정보 시트](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)를 참조 하십시오.
+ Windows 10 업데이트에 대 한 자세한 내용은 참조 하세요. [Windows 10 릴리스 정보](https://technet.microsoft.com/windows/release-info)합니다. Windows 10 지원 수명 주기에 대 한 중요 한 내용은 참조는 [Windows 수명 주기 팩트 시트](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)합니다.
 
 ## <a name="perform-api-checks"></a>API 검사 수행
 
@@ -83,7 +83,7 @@ API 계약이란? 기본적으로 API 계약은 기능을 나타냅니다. 특�
 가장 크고 자주 사용되는 API 계약은 **Windows.Foundation.UniversalApiContract**입니다. 여기에는 유니버설 Windows 플랫폼의 대부분 API가 포함되어 있습니다. 사용할 수 있는 다양한 API 계약은 [장치 패밀리 확장 SDK 및 API 계약](https://docs.microsoft.com/uwp/extension-sdks/) 설명서에서 찾을 수 있습니다. 대부분의 API 계약은 기능적으로 관련된 API의 집합입니다.
 
 > [!NOTE]
-> 아직 설명서가 없는 미리 보기 버전의 Windows SDK(소프트웨어 개발 키트)가 설치되어 있다면, SDK 설치 폴더인 ‘\(Program Files (x86))\Windows Kits\10\Platforms\<platform>\<SDK version>\Platform.xml’에 있는 ‘Platform.xml’ 파일에서도 API 계약 지원에 대한 정보를 찾을 수 있습니다.
+> 미리 보기 Windows 소프트웨어 개발 키트 (SDK)이 설치 되어 아직 문서화 되지 않은 경우 또한 있습니다 API 계약 지원에 대 한 정보에 SDK 설치 폴더에 있는 'Platform.xml' 파일을 '\(프로그램 파일 (x86)) \ Windows Kits\10\Platforms\<플랫폼 >\<SDK 버전 > \Platform.xml'.
 
 ### <a name="version-adaptive-code-and-conditional-xaml"></a>버전 적응 코드 및 조건부 XAML
 
@@ -104,6 +104,6 @@ API 계약이란? 기본적으로 API 계약은 기능을 나타냅니다. 특�
 
 ## <a name="related-articles"></a>관련 문서
 
-- [UWP 앱](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
-- [API 계약을 사용하여 동적으로 기능 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [UWP 앱 이란](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [API 계약을 사용 하 여 기능을 동적으로 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [API 계약](https://channel9.msdn.com/Events/Build/2015/3-733)(빌드 2015 비디오)

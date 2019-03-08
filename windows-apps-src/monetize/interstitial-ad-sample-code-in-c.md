@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 중간, c#, 샘플 코드
 ms.localizationpriority: medium
 ms.openlocfilehash: 075d98d49ba7e878abc7e800af84984bdb93e3a2
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045089"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640988"
 ---
-# <a name="interstitial-ad-sample-code-in-c"></a>C\#의 중간 광고 샘플 코드 #  
+# <a name="interstitial-ad-sample-code-in-c"></a>C의 중간 ad 샘플 코드\# #  
 
 이 항목에서는 동영상 중간 광고를 게재하는 기본 C# 및 XAML UWP(유니버설 Windows 플랫폼) 앱의 전체 샘플 코드를 제공합니다. 이 코드를 사용하도록 프로젝트를 구성하는 방법을 보여 주는 단계별 지침은 [중간 광고](interstitial-ads.md)를 참조하세요. 전체 샘플 프로젝트는 [GitHub의 광고 샘플](https://aka.ms/githubads)을 참조하세요.
 
@@ -21,7 +21,7 @@ ms.locfileid: "9045089"
 
 이 섹션에서는 중간 광고를 게재하는 기본 앱의 MainPage.xaml 및 MainPage.xaml.cs 파일 콘텐츠를 보여 줍니다. 이러한 예제를 사용하려면 코드를 Visual Studio에서 Visual C# **빈 앱(유니버설 Windows)** 프로젝트에 복사합니다.
 
-이 샘플 앱은 2개의 버튼을 사용하여 중간 광고를 요청한 다음 실행합니다. 값을 바꿉니다는 ```myAppId``` 및 ```myAdUnitId``` 스토어에 앱을 제출 하기 전에 파트너 센터에서 라이브 값으로 필드. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+이 샘플 앱은 2개의 버튼을 사용하여 중간 광고를 요청한 다음 실행합니다. 값을 바꿉니다 합니다 ```myAppId``` 및 ```myAdUnitId``` 앱 스토어에 제출 하기 전에 파트너 센터에서 라이브 값을 가진 필드입니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
 > [!NOTE]
 > 동영상 중간 광고 대신 배너 중간 광고를 표시하도록 이 예제를 변경하려면 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드의 첫 번째 매개 변수에 **AdType.Video** 대신 **AdType.Display** 값을 전달하세요. 자세한 내용은 [중간 광고](interstitial-ads.md)를 참조하세요.

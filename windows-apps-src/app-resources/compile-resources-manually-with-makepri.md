@@ -1,5 +1,5 @@
 ---
-Description: MakePri.exe is a command line tool that you can use to create and dump PRI files. It is integrated as part of MSBuild within Microsoft Visual Studio, but it could be useful to you for creating packages manually or with a custom build system.
+Description: MakePri.exe는 PRI 파일을 만들고 덤프하는 데 사용할 수 있는 명령줄 도구입니다. Microsoft Visual Studio 내에 MSBuild의 일부로 통합되어 있지만 수동으로 또는 사용자 지정 빌드 시스템으로 패키지를 만드는 데 도움이 될 수 있습니다.
 title: MakePri.exe를 사용하여 수동으로 리소스 컴파일
 template: detail.hbs
 ms.date: 10/23/2017
@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f4feff88507ae5f84bccf044aa9ab6711d6b8bb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919864"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645768"
 ---
 # <a name="compile-resources-manually-with-makepriexe"></a>MakePri.exe를 사용하여 수동으로 리소스 컴파일
 
 MakePri.exe는 PRI 파일을 만들고 덤프하는 데 사용할 수 있는 명령줄 도구입니다. Microsoft Visual Studio 내에 MSBuild의 일부로 통합되어 있지만 수동으로 또는 사용자 지정 빌드 시스템으로 패키지를 만드는 데 도움이 될 수 있습니다.
 
 > [!NOTE]
-> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **Windows SDK UWP 앱의 관리** 옵션을 선택 하면 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 메모가 다른 아키텍처에 대 한 폴더에 따라 합니다. 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
+> 확인할 때 MakePri.exe 되어는 **앱을 관리 하는 UWP 용 Windows SDK** Windows 소프트웨어 개발 키트를 설치 하는 동안 옵션입니다. 경로에 설치 되어 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (물론 다른 아키텍처에 대 한 명명 된 폴더). 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
 
 PRI 파일의 크기 제한은 64킬로바이트입니다.
 
@@ -69,4 +69,4 @@ MakePri.exe 또는 MSBuild가 리소스가 명확하지 않은 언어 한정자�
 * [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md)
 * [MakePri.exe 구성](makepri-exe-configuration.md)
 * [MakePri.exe 형식별 인덱서](makepri-exe-format-specific-indexers.md)
-* [언어, 규모 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)
+* [언어, 배율 및 다른 한정자에 대 한 리소스를 조정 합니다.](tailor-resources-lang-scale-contrast.md)

@@ -1,6 +1,6 @@
 ---
-Description: This topic describes the use of contact geometry for touch targeting and provides best practices for targeting in Windows Runtime apps.
-title: 타기팅
+Description: 이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 Windows 런타임 앱에서 타기팅에 대한 모범 사례를 제공합니다.
+title: 대상 지정
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e8425232512650d5c80bf6fee9745b261aee8d9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929007"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646058"
 ---
-# <a name="guidelines-for-targeting"></a>타기팅에 대한 지침
+# <a name="guidelines-for-targeting"></a>대상 지정에 대한 지침
 
 
 Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가락의 전체 접촉 영역을 사용합니다. 사용자가 의도했거나 대상이 될 가능성 높은 대상을 결정할 때 정확도를 높이기 위해 디지타이저가 보고하는 좀 더 크고 좀 더 복잡한 입력 데이터 집합이 사용됩니다.
 
-> **중요 API**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **중요 한 Api**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 UWP 앱에서 타기팅에 대한 모범 사례를 제공합니다.
 
@@ -104,8 +104,8 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 
 이러한 권장 대상 크기는 특정 시나리오에 따라 조정될 수 있습니다. 이 권장 크기에는 일부 고려해야 할 사항이 포함되어 있습니다.
 
--   터치 빈도: 반복되거나 자주 눌리는 대상은 최소 크기보다 크게 지정해 보세요.
--   오류 결과: 터치할 때 심각한 오류가 생기는 대상은 여백보다 커야 하며 콘텐츠 영역보다 커야 합니다. 이는 자주 터치되는 대상의 경우 더 합니다.
+-   터치 빈도: 반복적으로 또는 자주 누르는 최소 크기 보다 큰 목표를 만드는 것이 좋습니다.
+-   오류 결과: 큰 패딩 있어야 하 고 콘텐츠 영역의 가장자리 멀리 배치 하는 심각한 결과가 발생할 경우 오류가 작업 하는 대상입니다. 이는 자주 터치되는 대상의 경우 더 합니다.
 -   콘텐츠 영역의 위치
 -   폼 팩터 및 화면 크기
 -   손가락 모양
@@ -150,20 +150,20 @@ JavaScript를 사용하는 UWP 앱 개발자에게는 이 기능이 노출되지
 
 
 **샘플**
-* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
-* [입력: XAML 사용자 입력 이벤트 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 디바이스 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: 터치 적중 횟수 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: 간단한 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 터치 적중된 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
 * [입력: Windows 8 제스처 샘플](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처(C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [DirectX 터치 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [입력: 조작 및 제스처 (c + +) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

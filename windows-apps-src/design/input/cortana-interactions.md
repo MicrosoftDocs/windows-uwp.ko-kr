@@ -1,5 +1,5 @@
 ---
-Description: Extend the basic functionality of Cortana with voice commands that activate a UWP app and execute a single action.
+Description: UWP 앱을 활성화하고 단일 작업을 실행하는 음성 명령으로 Cortana의 기본 기능을 확장합니다.
 title: Cortana 조작
 ms.assetid: 4C11A7CF-DA26-4CA1-A9B9-FE52670101F5
 label: Cortana
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 49290d0e0ba96a5dce562ca4148b0ebf53bf0ff5
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051126"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648168"
 ---
 # <a name="cortana-interactions-in-uwp-apps"></a>UWP 앱에서 Cortana 조작
 
@@ -33,7 +33,7 @@ Cortana 기능 및 서비스에 대한 모든 개발자 설명서는 이제 [Cor
 
 **디자이너**
 * [음성 디자인 지침](speech-interactions.md)
-* [음성 명령에 대한 Cortana 디자인 지침](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
+* [음성 명령에 대 한 Cortana 디자인 지침](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
 
 **샘플**
 * [Cortana 음성 명령 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619899)

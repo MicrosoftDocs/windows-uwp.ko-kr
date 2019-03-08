@@ -8,15 +8,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c98e4d5581355510e349a48e797dfbfc959e9577
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932045"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57632568"
 ---
 # <a name="usersbatchfeedback"></a>/users/batchfeedback
  
-이러한 Uri에 대 한 도메인 및 포트 번호는 `reputation.xboxlive.com:10443`.
+이러한 Uri에 대 한 도메인 및 포트 번호는 `reputation.xboxlive.com:10443`합니다.
  
 <a id="ID4EW"></a>
 
@@ -28,11 +28,11 @@ ms.locfileid: "8932045"
 <a id="ID4E6"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [POST](uri-reputationusersbatchfeedbackpost.md)
 
-&nbsp;&nbsp;타이틀의 인터페이스 외부에서 일괄 처리 형태로 피드백을 보내려면 타이틀의 서비스가 사용 합니다.
+&nbsp;&nbsp;일괄 처리 형식 외부에 제목 인터페이스에서 피드백을 전송할 타이틀의 서비스에서 사용 합니다.
  
 <a id="ID4EJB"></a>
 
@@ -42,8 +42,8 @@ ms.locfileid: "8932045"
 <a id="ID4ELB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[평판 URI](atoc-reference-reputation.md)
+[평판 Uri](atoc-reference-reputation.md)
 
    

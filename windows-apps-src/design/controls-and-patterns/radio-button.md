@@ -1,27 +1,27 @@
 ---
-Description: Radio buttons let users select one option from two or more choices.
+Description: 라디오 단추를 사용하면 두 가지 이상의 옵션 중 하나를 선택할 수 있습니다.
 title: 라디오 단추에 대한 지침
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 pm-contact: kisai
 design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 91903365a258d54804b420cd217dd7c25d79406a
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037235"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606138"
 ---
 # <a name="radio-buttons"></a>라디오 단추
 
-> **중요 API**: [RadioButton 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [Checked 이벤트](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [IsChecked 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
+> **중요 한 Api**: [RadioButton 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton)하십시오 [선택한 이벤트](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [IsChecked 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
 라디오 단추는 사용자가 집합에서 옵션 중 하나를 선택할 수 있도록 해줍니다. 각 옵션은 하나의 라디오 단추로 표시됩니다. 사용자는 라디오 단추 그룹에서 하나의 라디오 단추만 선택할 수 있습니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "9037235"
 
 사용자가 여러 옵션을 선택할 수 있는 경우에는 [확인란](checkbox.md)을 사용합니다.
 
-![확인란으로 여러 가지 옵션 선택](images/checkbox2.png)
+![확인란으로 여러 개의 옵션 선택](images/checkbox2.png)
 
 옵션이 고정 단위(10, 20, 30)를 가진 숫자인 경우에는 [슬라이더](slider.md) 컨트롤을 사용합니다.
 
@@ -66,8 +66,8 @@ ms.locfileid: "9037235"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/RadioButton">앱을 열고 작동 중인 RadioButton을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -191,10 +191,10 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 **디자이너용**
 - [단추](buttons.md)
-- [토글 스위치](toggles.md)
+- [설정/해제 스위치](toggles.md)
 - [확인란](checkbox.md)
-- [목록과 콤보 상자](lists.md)
+- [목록 및 콤보 상자](lists.md)
 - [슬라이더](slider.md)
 
-**개발자용(XAML)**
+**개발자 (XAML)**
 - [RadioButton 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.radiobutton)

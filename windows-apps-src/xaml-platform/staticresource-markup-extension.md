@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4f8c723dee8e943351d268ac678c8acc77efcbf4
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051136"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57659558"
 ---
 # <a name="staticresource-markup-extension"></a>{StaticResource} 태그 확장
 
@@ -38,7 +38,7 @@ ms.locfileid: "9051136"
 
 **StaticResource**가 리소스 사전의 항목으로 확인하는 규칙은 이 항목에서 설명하지 않습니다. 이 규칙은 참조 및 리소스가 모두 템플릿에 있는지, 병합된 리소스 사전이 사용되는지 등에 따라 다릅니다. 리소스 정의 방법과 샘플 코드를 포함한 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 적절한 사용 방법에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
 
-**중요 한**  **StaticResource** 정의 된 리소스에 대 한 전방 참조를 만들려고 해서는 안 XAML 파일 내에서 구문적으로 더 합니다. 이러한 시도는 지원되지 않습니다. 전방 참조가 실패하지 않더라도 전방 참조를 만들려고 하면 성능이 저하됩니다. 최상의 결과를 얻으려면 전방 참조를 피할 수 있도록 리소스 사전의 컴퍼지션을 조정하세요.
+**중요**    A **StaticResource** 정의 된 리소스에 대 한 전방 참조를 확인 시도 하지 않아야 어휘 적으로 XAML 파일에 추가 합니다. 이러한 시도는 지원되지 않습니다. 전방 참조가 실패하지 않더라도 전방 참조를 만들려고 하면 성능이 저하됩니다. 최상의 결과를 얻으려면 전방 참조를 피할 수 있도록 리소스 사전의 컴퍼지션을 조정하세요.
 
 확인할 수 없는 키에 **StaticResource**를 지정하려고 하면 런타임에 XAML 구문 분석 예외가 발생합니다. 디자인 도구에서 경고나 오류를 제공할 수도 있습니다.
 
@@ -46,7 +46,7 @@ Windows 런타임 XAML 프로세서 구현에는 **StaticResource** 기능을 �
 
 [{ThemeResource} 태그 확장](themeresource-markup-extension.md)은 다른 위치에 있는 명명된 리소스를 참조하는 비슷한 태그 확장입니다. 차이점은 {ThemeResource} 태그 확장에는 현재 시스템 테마에 따라 여러 다른 리소스를 반환하는 기능이 있다는 점입니다. 자세한 내용은 [{ThemeResource} 태그 확장](themeresource-markup-extension.md)을 참조하세요.
 
-**StaticResource**은 태그 확장입니다. 태그 확장은 특정 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 구현되며, 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. XAML의 모든 태그 확장은 특성 구문에 "\{" 및 "\}" 문자를 사용하며, 여기서 특성 구문은 XAML 프로세서가 태그 확장이 특성을 처리해야 함을 인식하는 데 사용하는 규칙입니다.
+**StaticResource**은 태그 확장입니다. 태그 확장은 특정 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 구현되며, 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. XAML 사용의 모든 태그 확장의 "\{"및"\}" XAML 프로세서는 태그 확장이 특성을 처리 해야 한다는 것을 인식 하는 규칙은 특성 구문에는 문자입니다.
 
 ### <a name="an-example-staticresource-usage"></a>{StaticResource} 사용 예제
 
@@ -75,7 +75,7 @@ Windows 런타임 XAML 프로세서 구현에는 **StaticResource** 기능을 �
 
 ## <a name="design-time-tools-support-for-the-staticresource-markup-extension"></a>**{StaticResource}** 태그 확장을 위한 디자인 타임 도구 지원
 
-Microsoft Visual Studio2013 XAML 페이지에서 **{StaticResource}** 태그 확장을 사용 하는 경우 Microsoft IntelliSense 드롭다운에서 가능한 키 값을 포함할 수 있습니다. 예를 들어 "{StaticResource"를 입력하기 시작하면 즉시 현재 조회 범위의 리소스 키가 IntelliSense 드롭다운에 표시됩니다. 페이지 수준([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) 및 앱 수준([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338))에 있는 일반적인 리소스 외에, [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274) 및 프로젝트에서 사용 중인 확장의 리소스도 표시됩니다.
+사용 하는 경우 Microsoft Visual Studio 2013 Microsoft IntelliSense 드롭다운에 사용할 수 있는 키 값 포함할 수는 **{StaticResource}** XAML 페이지의 태그 확장 합니다. 예를 들어 "{StaticResource"를 입력하기 시작하면 즉시 현재 조회 범위의 리소스 키가 IntelliSense 드롭다운에 표시됩니다. 페이지 수준([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) 및 앱 수준([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338))에 있는 일반적인 리소스 외에, [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274) 및 프로젝트에서 사용 중인 확장의 리소스도 표시됩니다.
 
 리소스 키가 **{StaticResource}** 에서 일부로 사용되어 존재하는 경우 **정의로 이동**(F12) 기능이 해당 리소스를 확인하고 리소스가 정의되어 있는 사전을 표시할 수 있습니다. 테마 리소스의 경우에는 디자인 타임의 generic.xaml에 적용됩니다.
 
@@ -83,6 +83,6 @@ Microsoft Visual Studio2013 XAML 페이지에서 **{StaticResource}** 태그 확
 
 * [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)
 * [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
-* [x:Key 특성](x-key-attribute.md)
+* [X:key 특성](x-key-attribute.md)
 * [{ThemeResource} 태그 확장](themeresource-markup-extension.md)
 

@@ -8,24 +8,24 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5986079e1cae3338d8cc24a9e85f6941cf4fbec4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933866"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651248"
 ---
 # <a name="multiplayersessionreference-json"></a>MultiplayerSessionReference(JSON)
-**MultiplayerSessionReference**나타내는 JSON 개체입니다. 
+나타내는 JSON 개체를 **MultiplayerSessionReference**합니다. 
 <a id="ID4EQ"></a>
 
   
  
 MultiplayerSessionReference JSON 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 1 부 세션 식별자입니다.| 
-| templateName | string | 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션 식별자입니다. | 
+| scid| GUID| (서비스 안내) 식별자를 구성 하는 서비스입니다. 1 부 세션 식별자입니다.| 
+| templateName | 문자열 | 세션 템플릿의 현재 인스턴스의 이름입니다. 2 부를 선택 하면 세션 식별자입니다. | 
 | name | 문자열 | 세션의 이름입니다. 3 부 세션 식별자입니다. | 
   
 <a id="ID4EZ"></a>
@@ -53,16 +53,16 @@ MultiplayerSessionReference JSON 개체에 다음과 같이 지정 합니다.
 <a id="ID4ELB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
   
 <a id="ID4EVB"></a>
 
  
-##### <a name="reference"></a>참조 
+##### <a name="reference"></a>참고자료 
 
-[MultiplayerSession(JSON)](json-multiplayersession.md)
+[MultiplayerSession (JSON)](json-multiplayersession.md)
 
    

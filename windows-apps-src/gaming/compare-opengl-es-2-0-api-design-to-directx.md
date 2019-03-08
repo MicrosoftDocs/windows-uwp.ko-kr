@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, opengl, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: b17f18876ebc2faead08d8c777c7502e937aef86
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944012"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662758"
 ---
 # <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>OpenGL ES 2.0에서 Direct3D로의 포팅 계획
 
 
 
 
-**중요 API**
+**중요 한 Api**
 
 -   [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080)
 -   [Visual C++](https://msdn.microsoft.com/library/windows/apps/60k1461a.aspx)
@@ -36,7 +36,7 @@ OpenGL ES 2.0에서 Direct3D 11로 그래픽을 포팅할 때 고려해야 할 �
 
 이 설명서에서는 OpenGL ES 코드 및 참조를 위해 2.0 사양 API만 사용합니다. OpenGL ES 1.1 또는 3.0에서 포팅하는 경우 이 콘텐츠가 여전히 유용할 수 있지만, 일부 OpenGL ES 2.0 코드 예제 및 컨텍스트가 익숙하지 않을 수 있습니다.
 
-이러한 항목의 Direct3D 11 샘플에서는 Microsoft Windows C++ with Component Extensions(CX)를 사용합니다. 이 버전의 C++ 구문에 대한 자세한 내용은 [Visual C++](https://msdn.microsoft.com/library/windows/apps/60k1461a.aspx), [런타임 플랫폼용 구성 요소 확장](https://msdn.microsoft.com/library/windows/apps/xey702bw.aspx) 및 [빠른 참조(C++\\CX)](https://msdn.microsoft.com/library/windows/apps/br212455.aspx)를 읽어 보세요.
+이러한 항목의 Direct3D 11 샘플에서는 Microsoft Windows C++ with Component Extensions(CX)를 사용합니다. 이 버전의 c + + 구문에 대 한 자세한 내용은 참조 하세요 [Visual c + +](https://msdn.microsoft.com/library/windows/apps/60k1461a.aspx)를 [런타임 플랫폼용 구성 요소 확장명](https://msdn.microsoft.com/library/windows/apps/xey702bw.aspx), 및 [빠른 참조 (c + +\\CX)](https://msdn.microsoft.com/library/windows/apps/br212455.aspx)합니다.
 
 ## <a name="understand-your-hardware-requirements-and-resources"></a>하드웨어 요구 사항 및 리소스 이해
 
@@ -48,15 +48,15 @@ OpenGL ES 2.0에서 지원하는 그래픽 처리 기능 집합은 Direct3D 9.1�
 ## <a name="understand-direct3d-feature-levels"></a>Direct3D 기능 수준 이해
 
 
-Direct3D 11은 하드웨어 "기능 수준" 9\_1 (Direct3D 9.1) for 11\_1을 지원합니다. 이러한 기능 수준은 특정 그래픽 기능과 리소스의 가용성을 나타냅니다. 일반적으로 대부분의 OpenGL ES 2.0 플랫폼은 Direct3D 9.1(기능 수준 9\_1) 기능 집합을 지원합니다.
+"Direct3D 11 지원 하드웨어에 대 한 기능 수준을 제공" 9에서\_11에 대 한 1 (Direct3D 9.1)\_1입니다. 이러한 기능 수준은 특정 그래픽 기능과 리소스의 가용성을 나타냅니다. 일반적으로 대부분의 OpenGL ES 2.0 플랫폼 지원 Direct3D 9.1 (기능 수준을 9\_1) 기능 집합입니다.
 
 ## <a name="review-directx-graphics-features-and-apis"></a>DirectX 그래픽 기능 및 API 검토
 
 
 | API 제품군                                                | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)                     | DXGI(DirectX Graphics Infrastructure)는 그래픽 하드웨어와 Direct3D 간의 인터페이스를 제공하며, [**IDXGIAdapter**](https://msdn.microsoft.com/library/windows/desktop/bb174523) 및 [**IDXGIDevice1**](https://msdn.microsoft.com/library/windows/desktop/hh404543) COM 인터페이스를 사용하여 장치 어댑터와 하드웨어 구성을 설정합니다. DXGI를 사용하여 버퍼 및 기타 창 리소스를 만들고 구성할 수 있습니다. 특히, [**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556) 팩터리 패턴은 스왑 체인(프레임 버퍼 집합)을 비롯한 그래픽 리소스를 획득하는 데 사용됩니다. DXGI가 스왑 체인을 소유하고 있으므로 [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) 인터페이스는 화면에 프레임을 표시하는 데 사용됩니다. |
-| [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476080)       | Direct3D는 그래픽 인터페이스의 가상 표현을 제공하는 API 집합으로서, 이를 사용하여 그래픽을 그릴 수 있습니다. 버전 11은 기능면에서 OpenGL 4.3과 거의 비슷합니다. (반면 OpenGL ES 2.0은 기능면에서 DirectX9 및 OpenGL 2.0과 비슷하지만 OpenGL 3.0의 통합 셰이더 파이프라인과 비슷합니다.) 대부분의 번거로운 작업은 개별 리소스와 하위 리소스 및 렌더링 컨텍스트에 각각 액세스를 제공하는 ID3D11Device1 및 ID3D11DeviceContext1 인터페이스를 사용하여 수행합니다.                                                                                                                                          |
+| [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)                     | DXGI(DirectX Graphics Infrastructure)는 그래픽 하드웨어와 Direct3D 간의 인터페이스를 제공하며, [  **IDXGIAdapter**](https://msdn.microsoft.com/library/windows/desktop/bb174523) 및 [**IDXGIDevice1**](https://msdn.microsoft.com/library/windows/desktop/hh404543) COM 인터페이스를 사용하여 장치 어댑터와 하드웨어 구성을 설정합니다. DXGI를 사용하여 버퍼 및 기타 창 리소스를 만들고 구성할 수 있습니다. 특히, [**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556) 팩터리 패턴은 스왑 체인(프레임 버퍼 집합)을 비롯한 그래픽 리소스를 획득하는 데 사용됩니다. DXGI가 스왑 체인을 소유하고 있으므로 [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) 인터페이스는 화면에 프레임을 표시하는 데 사용됩니다. |
+| [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476080)       | Direct3D는 그래픽 인터페이스의 가상 표현을 제공하는 API 집합으로서, 이를 사용하여 그래픽을 그릴 수 있습니다. 버전 11은 기능면에서 OpenGL 4.3과 거의 비슷합니다. (OpenGL ES 2.0 반면에 비슷합니다 DirectX9, 될까요, 및 OpenGL 2.0 셰이더 파이프라인 하지만 OpenGL 3.0 통합) 어려운 작업 중 대부분은 각각 개별 리소스 및 하위를 렌더링 하는 컨텍스트에 대 한 액세스를 제공 하는 ID3D11Device1 및 ID3D11DeviceContext1 인터페이스를 사용 하 여 수행 됩니다.                                                                                                                                          |
 | [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990)                      | Direct2D는 GPU 가속 2D 렌더링을 위한 API 집합을 제공하며, 용도면에서 OpenVG와 비슷한 것으로 간주될 수 있습니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038)            | DirectWrite는 GPU 가속, 고품질 글꼴 렌더링을 위한 API 집합을 제공합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833)                  | DirectXMath는 일반적인 선형 대수 및 삼각법 형식, 값 및 함수 처리를 위한 API 및 매크로 집합을 제공합니다. 이러한 형식 및 함수는 Direct3D 및 해당 셰이더 작업에 맞게 디자인되었습니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -86,7 +86,7 @@ Windows 런타임 API는 UWP 앱을 위한 전체 인프라를 제공합니다. 
 -   Direct3D가 앞쪽에서부터 시계 방향으로 트래버스하도록 삼각형 꼭짓점의 순서를 대칭 이동합니다. 예를 들어, OpenGL 파이프라인에서 꼭짓점의 색인을 0, 1 및 2로 지정한 경우 대신 꼭짓점을 0, 2, 1로 Direct3D에 전달합니다.
 -   월드 공간을 z 방향으로 -1.0f씩 크기 조정하려면 보기 행렬을 사용합니다(효과적으로 z축 좌표를 반전시킴). 이렇게 하려면 보기 행렬에서 위치 M31, M32 및 M33에 있는 값의 부호를 반대로 합니다([**Matrix**](https://msdn.microsoft.com/library/windows/desktop/bb147180) 형식으로 포팅하는 경우). M34가 0이 아닌 경우 해당 부호도 반대로 합니다.
 
-그러나 Direct3D는 오른손 좌표계를 지원할 수 있습니다. DirectXMath는 왼손 좌표계와 오른손 좌표계 둘 다에서 및 둘 다에 대해 작동하는 많은 함수를 제공합니다. 이러한 함수는 원래 메시 데이터 및 행렬 처리 중 일부를 유지하는 데 사용할 수 있습니다. 해당 함수는 다음과 같습니다.
+그러나 Direct3D는 오른손 좌표계를 지원할 수 있습니다. DirectXMath는 왼손 좌표계와 오른손 좌표계 둘 다에서 및 둘 다에 대해 작동하는 많은 함수를 제공합니다. 이러한 함수는 원래 메시 데이터 및 행렬 처리 중 일부를 유지하는 데 사용할 수 있습니다. 해당 기능은 아래와 같습니다.
 
 | DirectXMath 행렬 함수                                                   | 설명                                                                                                                 |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -110,7 +110,7 @@ Windows 런타임 API는 UWP 앱을 위한 전체 인프라를 제공합니다. 
 ## <a name="opengl-es20-to-direct3d-11-porting-frequently-asked-questions"></a>OpenGL ES2.0-Direct3D 11 포팅 질문과 대답
 
 
--   질문: "일반적으로 OpenGL 코드에서 특정 문자열이나 패턴을 검색하여 Direct3D 문자열이나 패턴으로 바꿀 수 있나요?"
+-   질문: "일반적으로 특정 문자열이 나 패턴에서에서 검색 OpenGL 코드 및 수 바꾸거나 해당 하는 Direct3D"?
 -   대답: 아니요. OpenGL ES 2.0과 Direct3D 11은 그래픽 파이프라인 모델링 세대가 서로 다릅니다. 개념과 API 간에 몇 가지 표면적인 유사성(예: 렌더링 컨텍스트 및 셰이더 인스턴스화)이 존재하지만 1:1 매핑을 시도하는 대신 파이프라인을 다시 만들 때 최선의 선택을 할 수 있도록 이 지침과 Direct3D 11 참조를 검토해야 합니다. 그러나 GLSL에서 HLSL로 포팅하는 경우 GLSL 변수, 내부 기능 및 함수에 대한 공통 별칭 집합을 만들면 포팅이 더 쉬워질 뿐만 아니라 단 하나의 셰이더 코드 파일 집합만 유지 관리할 수 있습니다.
 
  

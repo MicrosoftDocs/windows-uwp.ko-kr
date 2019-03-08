@@ -1,21 +1,21 @@
 ---
-title: 다양 한 상태 프로그래밍
-description: Xbox Live 멤버의 온라인 상태 상태 설정에 코드 예제를 제공 합니다.
+title: 대화 상대의 프로그래밍
+description: Xbox Live 멤버의 온라인 상태에서 코드 예제를 제공 합니다.
 ms.assetid: 7e6e7b69-d7c3-42fa-bcc4-6d68947f6fdb
 ms.date: 04/04/2017
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 다양 한 상태, xbox
+keywords: xbox live, xbox, 게임, uwp, windows 10, 다기능 현재 상태, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a113dc140500c982ddf22e25308eaafeaed66d6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932275"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648528"
 ---
-# <a name="programming-rich-presence"></a>다양 한 상태 프로그래밍
+# <a name="programming-rich-presence"></a>대화 상대의 프로그래밍
 
-다양 한 상태는 다른 플레이어에 플레이어의 현재 동작을 광고에 대 한 기능을 제공 합니다. 자세한 내용은 참조 [다양 한 상태 문자열: 개요](rich-presence-strings-overview.md)합니다.
+대화 상대의 플레이어의 현재 활동 다른 플레이어에 광고에 대 한 기능을 제공 합니다. 자세한 내용은 참조 하세요. [풍부한 존재 문자열: 개요](rich-presence-strings-overview.md)합니다.
 
 ```cpp
 

@@ -3,24 +3,24 @@ title: 앱 설치 관리자 파일을 사용하여 관련 집합 설치
 description: 이 섹션에서는 앱 설치 관리자를 통해 관련 집합을 설치하는 데 필요한 단계를 검토합니다. 또한 관련 집합을 정의하는 *.appinstaller 파일을 만드는 단계를 수행합니다.
 ms.date: 01/04/2018
 ms.topic: article
-keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 테스트용으로 로드, 관련 집합, 선택적 패키지
+keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 946c0ae2251d1f75ea250d43881b29b172b9ad1d
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116165"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637148"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>앱 설치 관리자 파일을 사용하여 관련 집합 설치
 
 UWP 선택적 패키지 또는 관련 집합을 처음 시작한 경우 다음 문서를 참고하는 것이 좋습니다. 
 
-1.  [선택적 패키지를 사용하여 응용 프로그램 확장](https://blogs.msdn.microsoft.com/appinstaller/2017/04/05/uwpoptionalpackages/)
+1.  [선택적 패키지를 사용 하 여 응용 프로그램 확장](https://blogs.msdn.microsoft.com/appinstaller/2017/04/05/uwpoptionalpackages/)
 2.  [첫 번째 선택적 패키지 빌드](https://blogs.msdn.microsoft.com/appinstaller/2017/05/09/build-your-first-optional-package/)
-3.  [선택적 패키지에서 코드 로드](https://blogs.msdn.microsoft.com/appinstaller/2017/05/11/loading-code-from-an-optional-package/)
-4.  [관련 집합을 만드는 도구](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/)
-5.  [선택적 패키지 및 관련 집합 제작](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)
+3.  [선택적 패키지에서 코드를 로드합니다.](https://blogs.msdn.microsoft.com/appinstaller/2017/05/11/loading-code-from-an-optional-package/)
+4.  [도구 관련 집합 만들기](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/)
+5.  [선택적 패키지 및 관련된 집합 작성](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)
 
 Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합을 설치할 수 있습니다. 이렇게 하면 관련 집합 앱 패키지를 사용자에게 배포할 수 있습니다. 
 
@@ -72,7 +72,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 
 관련 집합을 하나의 엔터티로 배포하려면 [appinstaller 스키마](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file)에 필요한 요소를 포함하는 앱 설치 관리자 파일을 만들어야 합니다.
 
-### <a name="step-1-create-the-appinstaller-file"></a>1단계: *.appinstaller 파일 만들기
+### <a name="step-1-create-the-appinstaller-file"></a>1단계: *.Appinstaller 파일 만들기
 텍스트 편집기를 사용하여 XML을 포함할 파일을 만들고 이름을 &lt;filename&gt;.appinstaller로 지정합니다. 
 
 ### <a name="step-2-add-the-basic-template"></a>2단계: 기본 템플릿 추가
@@ -87,7 +87,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 ```
 
 ### <a name="step-3-add-the-main-package-information"></a>3단계: 주 패키지 정보 추가 
-주 앱 패키지는.msixbundle 또는.appxbundle 파일을 사용 하 여는 `<MainBundle>` 아래에 표시 합니다. 주 앱 패키지는.appx 또는.msix 파일을 사용 하 여 `<MainPackage>` 대신 `<MainBundle>` 코드 조각에서. 
+기본 앱 패키지는.appxbundle 또는.msixbundle 파일을 사용 하 여는 `<MainBundle>` 아래에 표시 합니다. 기본 앱 패키지는.appx 또는.msix 파일을 사용 하 여 `<MainPackage>` 대신 `<MainBundle>` 코드 조각에 있습니다. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -106,7 +106,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 ```
 `<MainBundle>` 또는 `<MainPackage>` 특성은 각각 앱 번들 매니페스트 또는 앱 패키지 매니페스트의 [패키지/ID](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소와 일치해야 합니다. 
 
-### <a name="step-4-add-the-optional-packages"></a>4단계: 선택적 패키지 추가 
+### <a name="step-4-add-the-optional-packages"></a>4단계: 선택적 패키지를 추가 합니다. 
 주 앱 패키지 특성과 마찬가지로 선택적 패키지가 앱 패키지 또는 앱 번들일 수 있는 경우 `<OptionalPackages>` 특성의 자식 요소는 각각 `<Package>` 또는 `<Bundle>`이어야 합니다. 자식 요소의 패키지 정보는 번들 또는 패키지 매니페스트의 ID 요소와 일치해야 합니다. 
 
 ``` xml
@@ -193,7 +193,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 ```
 
 ### <a name="step-6-add-update-setting"></a>6단계: 업데이트 설정 추가 
-앱 설치 관리자 파일은 업데이트 설정을 지정하여 최신 앱 설치 관리자 파일이 게시될 때 관련 집합이 자동으로 업데이트되도록 할 수 있습니다. **<UpdateSettings>** 는 선택 요소입니다. **<UpdateSettings>** 내 OnLaunch 옵션은 앱 시작 시 업데이트 확인이 이루어져야 함을 지정하고, HoursBetweenUpdateChecks="12"는 업데이트 확인이 12시간마다 이루어져야 함을 지정합니다. HoursBetweenUpdateChecks를 지정하지 않은 경우 업데이트 확인의 기본 간격은 24시간입니다.
+앱 설치 관리자 파일은 업데이트 설정을 지정하여 최신 앱 설치 관리자 파일이 게시될 때 관련 집합이 자동으로 업데이트되도록 할 수 있습니다. **<UpdateSettings>** 선택적 요소입니다. **<UpdateSettings>**  내 OnLaunch 옵션은 앱 시작 시 업데이트 확인이 이루어져야 함을 지정하고, HoursBetweenUpdateChecks="12"는 업데이트 확인이 12시간마다 이루어져야 함을 지정합니다. HoursBetweenUpdateChecks를 지정하지 않은 경우 업데이트 확인의 기본 간격은 24시간입니다.
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller

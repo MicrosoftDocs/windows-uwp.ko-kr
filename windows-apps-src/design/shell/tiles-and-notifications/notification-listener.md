@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use Notification Listener to access all of the user's notifications.
+Description: 알림 수신기를 사용하여 모든 사용자 알림에 액세스하는 방법을 알아봅니다.
 title: 알림 수신기
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Chaseable tiles
@@ -9,21 +9,21 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림 수신기, usernotificationlistener, 설명서, 액세스 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: de1032eb3d0d364a62beff0a1af8f84240c11d87
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942265"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649618"
 ---
-# <a name="notification-listener-access-all-notifications"></a>알림 수신기: 모든 알림에 액세스
+# <a name="notification-listener-access-all-notifications"></a>알림 수신기: 모든 알림 액세스
 
-알림 수신기는 사용자의 알림에 대한 액세스를 제공합니다. 스마트 워치 및 기타 착용식 장치는 알림 수신기를 사용하여 휴대 전화의 알림을 착용식 장치로 전송할 수 있습니다. 홈 자동화 앱 깜박이게은 호출 수신 시 표시등이 만드는 등, 알림 수신 시 특정 작업을 수행 하려면 알림 수신기를 사용할 수 있습니다. 
+알림 수신기는 사용자의 알림에 대한 액세스를 제공합니다. 스마트 워치 및 기타 착용식 장치는 알림 수신기를 사용하여 휴대 전화의 알림을 착용식 장치로 전송할 수 있습니다. 가정 자동화 앱 만들기 호출을 받게 되 면 표시등이 깜박일 같은 알림이 수신 될 때 특정 작업을 수행 하려면 알림 수신기를 사용할 수 있습니다. 
 
 > [!IMPORTANT]
-> **1주년 업데이트 필요**: 알림 수신기를 사용하려면 SDK 15063을 대상으로 하고 빌드 14393 이상을 실행하고 있어야 합니다.
+> **1 주년 업데이트를 설치 해야**: SDK 14393 대상으로 해야 합니다 하 고 빌드 14393 이상을 알림 수신기를 사용 하 여 실행 합니다.
 
 
-> **중요 API**: [UserNotificationListener 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.Management.UserNotificationListener), [UserNotificationChangedTrigger 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.UserNotificationChangedTrigger)
+> **중요 한 Api**: [UserNotificationListener 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.Management.UserNotificationListener), [UserNotificationChangedTrigger 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.UserNotificationChangedTrigger)
 
 
 ## <a name="enable-the-listener-by-adding-the-user-notification-capability"></a>사용자 알림 기능을 추가하여 수신기 활성화 
@@ -91,7 +91,7 @@ switch (accessStatus)
 }
 ```
 
-사용자는 Windows 설정을 통해 언제든 액세스 권한을 취소할 수 있습니다. 따라서 앱은 항상 알림 수신기를 사용 하는 코드를 실행 하기 전에, [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) 메서드를 통해 액세스 상태를 확인 합니다. 사용자가 액세스 권한을 취소하면 예외가 throw되는 대신 API가 자동으로 실패합니다(예: API를 사용하여 모든 알림을 가져오려 하면 빈 목록이 반환됨).
+사용자는 Windows 설정을 통해 언제든 액세스 권한을 취소할 수 있습니다. 따라서 앱을 통해 액세스 상태를 확인 항상 해야 합니다 [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) 알림 수신기를 사용 하는 코드를 실행 하기 전에 메서드. 사용자가 액세스 권한을 취소하면 예외가 throw되는 대신 API가 자동으로 실패합니다(예: API를 사용하여 모든 알림을 가져오려 하면 빈 목록이 반환됨).
 
 
 ## <a name="access-the-users-notifications"></a>사용자의 알림에 액세스
@@ -138,7 +138,7 @@ await appLogo.SetSourceAsync(await appLogoStream.OpenReadAsync());
 
 알림 텍스트와 같은 알림 자체의 내용은 [알림](https://docs.microsoft.com/uwp/api/windows.ui.notifications.usernotification.Notification) 속성에 포함되어 있습니다. 이 속성에는 알림의 시각적 부분도 포함되어 있습니다. (Windows에서 알림을 보내는 데 익숙하다면 [알림](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notification)> 개체의 [Visual](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notification.Visual) 및 [Visual.Bindings](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationvisual.Bindings) 속성이 알림 발생 시 개발자가 보내는 것과 동일하다는 것을 알 수 있을 것입니다.)
 
-알림 바인딩을 찾아야 한다고 가정하겠습니다(코드에 오류가 없으려면 바인딩이 null이 아님을 확인해야 함). 바인딩에서 텍스트 요소를 가져올 수 있습니다. 원하는 개수의 텍스트 요소를 표시하기로 선택할 수 있습니다. (모두 표시하는 것이 가장 이상적입니다.) 텍스트 요소를 다르게 처리하도록 선택할 수 있습니다. 예를 들어 첫 번째 텍스트를 제목 텍스트로 처리하고 후속 요소를 본문 텍스트로 처리합니다.
+알림 바인딩을 찾아야 한다고 가정하겠습니다(코드에 오류가 없으려면 바인딩이 null이 아님을 확인해야 함). 바인딩에서 텍스트 요소를 가져올 수 있습니다. 원하는 개수의 텍스트 요소를 표시하기로 선택할 수 있습니다. (이상적으로 표시할 있습니다 모두.) 텍스트 요소를 다르게; 처리 하도록 선택할 수 있습니다. 예를 들어, 본문 텍스트를 제목 텍스트로 첫 번째 및 후속 요소를 처리 합니다.
 
 ```csharp
 // Get the toast binding, if present
@@ -229,7 +229,7 @@ protected override async void OnBackgroundActivated(BackgroundActivatedEventArgs
 
 백그라운드 작업은 단순히 "Shoulder tap"일 뿐이며 추가되거나 제거된 특정 알림에 대한 정보는 제공하지 않습니다. 백그라운드 작업이 트리거되면 착용식 장치에 있는 알림이 플랫폼의 알림을 반영하도록 동기화해야 합니다. 이렇게 하면 백그라운드 작업이 실패하더라도 다음에 백그라운드 작업을 실행할 때 착용식 장치에 대한 알림이 복구될 수 있습니다.
 
-`SyncNotifications` 은(는) 구현하는 메서드로, 다음 섹션에서 자세히 설명합니다. 
+`SyncNotifications` 구현; 메서드는 다음 섹션 하는 방법을 보여줍니다. 
 
 
 ## <a name="determining-which-notifications-were-added-and-removed"></a>어떤 알림이 추가되고 제거되었는지 확인
@@ -277,9 +277,9 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>추가/해제된 알림의 포그라운드 이벤트
 
 > [!IMPORTANT] 
-> 알려진 문제: 포그라운드 이벤트가 CPU 루프 하면 최신 버전의 Windows 및 이전에 그 전에 작동 하지 않습니다. 포그라운드 이벤트를 사용 하지 마세요. Windows에 대 한 향후 업데이트를에서는이 해결 됩니다.
+> 알려진된 문제: 전경 이벤트를 발생 합니다 CPU 루프에서 최신 버전의 Windows 이전에 이전에 작동 하지 않았습니다. 전경 이벤트를 사용 하지 마세요. Windows, 향후 업데이트에서 수정할 됩니다.
 
-포그라운드 이벤트를 사용 하는 대신 [단일 프로세스 모델](../../../launch-resume/create-and-register-an-inproc-background-task.md) 백그라운드 작업에 대 한 앞의 코드를 사용 합니다. 백그라운드 작업은 변경 이벤트 알림의 받을 두 앱이 종료 되거나 실행 중인 동안 수 있습니다.
+전경 이벤트를 사용 하는 대신 사용에 대 한 앞의 코드를 [단일 프로세스 모델](../../../launch-resume/create-and-register-an-inproc-background-task.md) 백그라운드 작업입니다. 백그라운드 태스크는 변경 이벤트 알림의 받을 두 앱 종료 되거나 실행 중일 수 있습니다.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)
@@ -292,6 +292,6 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 ```
 
 
-## <a name="howto-fixdelays-in-the-background-task"></a>백그라운드 작업에서 fixdelays 방법
+## <a name="howto-fixdelays-in-the-background-task"></a>백그라운드 작업에서 지연 해결 하는 방법
 
-앱을 테스트 하는 경우 백그라운드 작업이 때로는 지연 되 고 몇 분 동안 트리거되지 않는 알 수 있습니다. 시스템 설정으로 사용자 토고 프롬프트 지연을 해결 하려면 시스템-> 배터리-> 앱의 한 배터리 사용-> 목록에서 앱을 찾을 선택 하 고 항상 허용 됨 "백그라운드에서."로 설정그러면 백그라운드 작업이 항상 트리거하도록 내에서 약 1 초의 알림 수신 합니다.
+앱을 테스트할 때에 백그라운드 태스크에는 지연 된 경우에 따라을 몇 분 동안 트리거하지 않습니다를 확인할 수 있습니다. 시스템 설정으로 이동 하 게 지연을 해결 하려면 시스템-> 배터리-> 앱에서 배터리 사용-> 목록에서 앱을 찾는 선택 하 고 "항상 백그라운드에서 사용할 수 있습니다."로 설정 그러면 백그라운드 작업 항상 트리거하도록 내 알림 메시지를 받지 못하고의 두 번째 해결 합니다.

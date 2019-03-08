@@ -1,24 +1,24 @@
 ---
 title: 보안 Windows 앱 개발 소개
-description: 이 소개 문서를 읽으면 앱 설계자 및 개발자가 보안 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 가속화 하는 다양 한 windows 10 플랫폼 기능을 더 잘 이해 합니다.
+description: 이 소개 문서에서는 앱 설계자 및 개발자가 보안 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 가속화 하는 다양 한 Windows 10 플랫폼 기능을 더 잘 이해 합니다.
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c3c57653899ce7d849eec72ad36f14f7806652c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049870"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606518"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>보안 Windows 앱 개발 소개
 
 
 
 
-이 소개 문서를 읽으면 앱 설계자 및 개발자가 보안 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 가속화 하는 다양 한 windows 10 플랫폼 기능을 더 잘 이해 합니다. 인증, 진행 데이터(data-in-flight) 및 저장 데이터(data-at-rest) 등 다음 각 단계에서 사용할 수 있는 Windows 보안 기능을 사용하는 방법을 자세히 설명합니다. 각 항목에 대한 자세한 내용은 각 장에 포함된 추가 리소스를 검토하여 찾을 수 있습니다.
+이 소개 문서에서는 앱 설계자 및 개발자가 보안 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 가속화 하는 다양 한 Windows 10 플랫폼 기능을 더 잘 이해 합니다. 인증, 진행 데이터(data-in-flight) 및 저장 데이터(data-at-rest) 등 다음 각 단계에서 사용할 수 있는 Windows 보안 기능을 사용하는 방법을 자세히 설명합니다. 각 항목에 대한 자세한 내용은 각 장에 포함된 추가 리소스를 검토하여 찾을 수 있습니다.
 
 ## <a name="1-introduction"></a>1 소개
 
@@ -75,7 +75,7 @@ ms.locfileid: "9049870"
 ## <a name="211-web-authentication-broker"></a>2.1.1 웹 인증 브로커
 
 
-앞에서 설명한 대로, 암호 인증의 문제 중 하나는 IT 부서에 사용자 이름/암호, 복원 메커니즘 등의 기본 관리에 따른 오버헤드가 추가된다는 점입니다. 점점 많이 사용되고 있는 방법은 개방형 인증 표준인 OAuth를 통해 인증을 제공하는 타사 ID 공급자를 이용하는 것입니다.
+앞에서 설명한 대로 암호 인증을 사용 하 여 과제 중 하나는 IT 부서는 추가 된 사용자 이름/암호, 다시 설정 메커니즘 등의 기본 관리 오버 헤드입니다. 점차 인기를 더해가는 되는 방법은 타사 id 공급자에서 인증을 위한 개방형 표준인 OAuth 통해 해당 제품 인증을 사용 하는 것입니다.
 
 OAuth를 사용하면 사용자 이름과 암호, 암호 복원 기능 등을 사용하여 데이터베이스를 유지 관리하는 작업을 Facebook, Twitter, Microsoft 같은 ID 공급자에게 "아웃소싱"할 수 있습니다.
 
@@ -90,8 +90,8 @@ Windows 10의 웹 인증 브로커는 인증 및 권한 부여 프로토콜(예:
 다음은 공급자와 통신하기 위해 [**WebAuthenticationBroker**](https://msdn.microsoft.com/library/windows/apps/br227025) API를 호출할 때 사용하는 일반 워크플로입니다.
 
 -   ID 공급자에 보낼 요청 문자열을 생성합니다. 문자열의 수 및 각 문자열의 정보는 웹 서비스마다 다르지만 일반적으로는 보낼 인증 요청 URL이 있는 요청 URI 문자열과 권한 부여가 완료된 후 사용자를 리디렉션할 URL이 있는 두 URI 문자열을 포함합니다.
--   [**WebAuthenticationBroker.AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066)를 호출하여 요청 문자열을 전달한 다음 ID 공급자에게서 응답을 기다립니다.
--   [**WebAuthenticationResult.ResponseStatus**](https://msdn.microsoft.com/library/windows/apps/br227041)를 호출하여 응답을 받을 때의 상태를 가져옵니다.
+-   [  **WebAuthenticationBroker.AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066)를 호출하여 요청 문자열을 전달한 다음 ID 공급자에게서 응답을 기다립니다.
+-   [  **WebAuthenticationResult.ResponseStatus**](https://msdn.microsoft.com/library/windows/apps/br227041)를 호출하여 응답을 받을 때의 상태를 가져옵니다.
 -   통신이 성공하면 ID 공급자에서 반환된 응답 문자열을 처리합니다. 실패하면 오류를 처리합니다.
 
 통신이 성공하면 ID 공급자에서 반환된 응답 문자열을 처리합니다. 실패하면 오류를 처리합니다.
@@ -163,7 +163,7 @@ Azure AD는 단일 요소 인증을 구현할 수도 있지만 기업은 일반�
 
 Windows 10에서는 편리한 다단계 인증 메커니즘이 운영 체제에 빌드되었습니다. Windows Hello는 Windows 10에 새롭게 기본 제공되는 생체 인식 로그인 시스템입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 디바이스의 잠금을 해제할 수 있습니다. Windows 보안 자격 증명 저장소는 디바이스의 생체 인식 데이터를 보호합니다.
 
-Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강력한 방법으로, 사용자와 요청된 서비스 또는 데이터 항목 간의 경로에 대한 첫 번째 부분을 해결합니다. 장치에서 사용자를 인식한 후 요청된 리소스에 대한 액세스를 허용할지 여부를 결정하려면 먼저 사용자를 인증해야 합니다. Windows Hello도 Windows에 완전히 통합된 강력한 2FA(2단계 인증)를 제공하며 재사용 가능한 암호를 특정 장치 및 생체 인식 제스처 또는 PIN의 조합으로 대체합니다. PIN은 Microsoft 계정 등록의 일부로 사용자가 지정합니다.
+Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강력한 방법으로, 사용자와 요청된 서비스 또는 데이터 항목 간의 경로에 대한 첫 번째 부분을 해결합니다. 디바이스에서 사용자를 인식한 후 요청된 리소스에 대한 액세스를 허용할지 결정하려면 먼저 사용자를 인증해야 합니다. Windows Hello도 Windows에 완전히 통합된 강력한 2FA(2단계 인증)를 제공하며 재사용 가능한 암호를 특정 장치 및 생체 인식 제스처 또는 PIN의 조합으로 대체합니다. PIN은 Microsoft 계정 등록의 일부로 사용자가 지정합니다.
 
 그러나 Windows Hello는 기존 2FA 시스템을 대체하는 데 그치는 것은 아닙니다. 개념적으로 보면 스마트 카드와 유사합니다. 문자열 비교 대신 암호화 기본 방식을 사용하여 인증을 수행하고 사용자의 주요 자료를 위조 방지 하드웨어 내에서 보호합니다. Microsoft Hello는 스마트 카드 배포에 필요한 추가 인프라 구성 요소가 필요하지 않습니다. 특히, 현재 PKI(공개 키 인프라)가 없어도 인증서를 관리할 수 있습니다. Windows Hello는 가상 스마트 카드의 배포 유연성과 물리적 스마트 카드의 강력한 보안과 같은 스마트 카드 기술의 주요 장점만 가져오고 단점은 제외하였습니다.
 
@@ -192,9 +192,9 @@ Windows Hello에 대한 자세한 내용은 [Windows Hello 가이드](https://ms
 
 웹 서비스 통신에 대한 보안 요구 사항은 직접 연결 시나리오의 보안 요구 사항보다 높습니다. 이는 데이터가 더 이상 보안 네트워크의 일부가 아니며 데이터를 가로채려는 악의적인 공격자가 될 가능성도 더 높기 때문입니다. 다양한 유형의 디바이스가 서비스에 액세스할 것이므로 WCF와는 반대로 RESTful 서비스로 빌드될 가능성이 큽니다. 따라서 서비스 인증 및 권한 부여 또한 새로운 문제를 가져오게 됩니다. 원격 시스템 보안 통신을 위한 두 가지 요구 사항에 대해 설명하겠습니다.
 
-첫 번째 요구 사항은 메시지 기밀성입니다. 클라이언트와 웹 서비스 간에 전달되는 정보(예: 사용자 ID 및 개인 정보)는 전송 동안에 제3자가 읽을 수 없어야 합니다. 이 작업은 일반적으로 메시지가 전송되는 연결을 암호화하고 메시지 자체를 암호화하여 수행됩니다. 개인/공개 키 암호화에 있어서 공개 키는 누구든지 사용할 수 있으며 특정 수신자로 보낼 메시지를 암호화하는 데 사용됩니다. 개인 키는 수신자만 보유하며 메시지의 암호를 해독하는 데만 사용됩니다.
+첫 번째 요구 사항은 다음과 같습니다. 메시지 기밀성 웹 서비스 (예를 들어, 사용자 및 다른 개인 정보 id)와 클라이언트 간의 전달 된 정보를 전송 중에 타사 읽을 수 있어야 합니다. 이 작업은 일반적으로 메시지가 전송되는 연결을 암호화하고 메시지 자체를 암호화하여 수행됩니다. 개인/공개 키 암호화에 있어서 공개 키는 누구든지 사용할 수 있으며 특정 수신자로 보낼 메시지를 암호화하는 데 사용됩니다. 개인 키는 수신자만 보유하며 메시지의 암호를 해독하는 데만 사용됩니다.
 
-두 번째 요구 사항은 메시지 무결성입니다. 클라이언트 및 웹 서비스는 받은 메시지가 상대방이 보내려던 메시지이고 해당 메시지가 전송 중에 변경되지 않았는지 확인할 수 있어야 합니다. 이를 수행하는 방법은 디지털 서명을 사용하여 메시지를 서명하고 인증서 인증을 사용하는 것입니다.
+두 번째 요구 사항은 다음과 같습니다. 메시지 무결성 클라이언트와 웹 서비스를 확인 하는 메시지 수신은 다른 파티에서 전송 하는 데 고 메시지가 전송 중에 변경 되지 있어야 합니다. 이를 수행하는 방법은 디지털 서명을 사용하여 메시지를 서명하고 인증서 인증을 사용하는 것입니다.
 
 ## <a name="32-ssl-connections"></a>3.2 SSL 연결
 
@@ -286,7 +286,7 @@ Azure API 관리는 서비스(제한이라는 프로시저)에 API 호출 수를
 
 일반적으로 Windows에는 앱에 대한 정의가 없습니다. 가장 흔히 실행 파일(.exe)이라고 하지만 설치, 상태 저장, 실행 길이, 버전 관리, OS 통합 및 앱 간 통신은 정의에 들어가지 않습니다. 유니버설 Windows 플랫폼 모델에서는 설치, 런타임 환경, 리소스 관리, 업데이트, 데이터 모델 및 설치 제거를 다루는 앱 모델을 정의합니다.
 
-Windows 10 앱을 제한 되어 있으므로 권한 (추가 권한을 요청 하 고 수 사용자가 부여) 기본적으로 컨테이너에서 실행 됩니다. 예를 들어, 앱에서 시스템 파일에 액세스하려는 경우 [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) 네임스페이스의 파일 선택기를 사용하여 사용자에게 파일을 선택하도록 할 수 있습니다(파일에 직접 액세스는 불가). 다른 예로, 앱에서 사용자의 위치 데이터에 액세스하려면 위치 디바이스 정보 값 요구를 선언하여 다운로드 시에 이 앱이 사용자에게 사용자 위치 액세스를 요청할 수 있도록 해야 합니다. 그에 앞서 앱이 처음으로 사용자의 위치에 액세스하려는 경우에는 데이터 액세스 권한을 요청하는 추가 동의 확인 프롬프트가 나타납니다.
+Windows 10 앱 (추가 권한이 있습니다 요청 하 고 사용자가 부여) 기본적으로 권한을 제한 하는 컨테이너에서 실행 됩니다. 예를 들어, 앱에서 시스템 파일에 액세스하려는 경우 [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) 네임스페이스의 파일 선택기를 사용하여 사용자에게 파일을 선택하도록 할 수 있습니다(파일에 직접 액세스는 불가). 다른 예로, 앱에서 사용자의 위치 데이터에 액세스하려면 위치 디바이스 정보 값 요구를 선언하여 다운로드 시에 이 앱이 사용자에게 사용자 위치 액세스를 요청할 수 있도록 해야 합니다. 그에 앞서 앱이 처음으로 사용자의 위치에 액세스하려는 경우에는 데이터 액세스 권한을 요청하는 추가 동의 확인 프롬프트가 나타납니다.
 
 이 앱 모델은 앱에 대한 "감옥" 역할을 합니다. 다시 말하면 접근할 수는 없지만 외부에서 다가가지 못할 "성"은 아니라는 것입니다(물론 관리자 권한을 가진 응용 프로그램은 액세스 가능). 조직/IT가 어떤 (Win32) 앱의 실행을 허용할지 지정할 수 있게 하는 Windows 10의 Device Guard는 이 액세스를 추가로 제한하는 데 도움이 될 수 있습니다.
 
@@ -294,7 +294,7 @@ Windows 10 앱을 제한 되어 있으므로 권한 (추가 권한을 요청 하
 
 디바이스의 메모리 리소스가 부족해지는 경우 Windows는 앱을 종료하여 메모리 공간을 확보합니다. 이 수명 주기 모델은 일시 중단과 종료 사이에 주어진 추가 시간이 없기 때문에 앱이 일시 중단될 때마다 데이터를 강제로 유지하도록 합니다.
 
-자세한 내용은 [유니버설: Windows 10 응용 프로그램의 수명 주기 이해](https://visualstudiomagazine.com/articles/2015/09/01/its-universal.aspx)를 참조하세요.
+자세한 내용은 참조 하세요. [Universal 것: Windows 10 응용 프로그램의 수명 주기 이해](https://visualstudiomagazine.com/articles/2015/09/01/its-universal.aspx)합니다.
 
 ## <a name="42-stored-credential-protection"></a>4.2 저장된 자격 증명 보호
 
@@ -397,7 +397,7 @@ Windows 앱은 [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/win
 
 해시 함수는 임의로 긴 데이터 블록을 사용하고 해시 값이라는 고정 크기의 비트 문자열을 반환하는 암호화 알고리즘입니다. 이 작업을 수행할 수 있는 해시 함수의 전체 패밀리가 있습니다.
 
-위의 메시지 전송 시나리오에서 MAC 대신 해시 값을 사용할 수 있습니다. 발신자가 해시 값 및 메시지를 보내고 수신자가 발신자의 해시 값 및 메시지에서 나온 고유한 해시 값을 파생하여 두 해시 값을 비교합니다. Windows 10에서 실행되는 앱은 [**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) 클래스를 호출하여 사용 가능한 해시 알고리즘을 열거하고 그중 하나를 실행할 수 있습니다. [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 클래스는 해시 값을 나타냅니다. [**CryptographicHash.GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) 메서드를 사용하면 사용할 때마다 개체를 다시 만들지 않고도 여러 데이터를 반복적으로 해시할 수 있습니다. **CryptographicHash** 클래스의 Append 메서드는 해시할 버퍼에 새 데이터를 추가합니다. 이 전체 프로세스는 다음 C# 코드 예제에서 보여 줍니다.
+위의 메시지 전송 시나리오에서 MAC 대신 해시 값을 사용할 수 있습니다. 발신자가 해시 값 및 메시지를 보내고 수신자가 발신자의 해시 값 및 메시지에서 나온 고유한 해시 값을 파생하여 두 해시 값을 비교합니다. Windows 10에서 실행되는 앱은 [**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) 클래스를 호출하여 사용 가능한 해시 알고리즘을 열거하고 그중 하나를 실행할 수 있습니다. [  **CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 클래스는 해시 값을 나타냅니다. [  **CryptographicHash.GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) 메서드를 사용하면 사용할 때마다 개체를 다시 만들지 않고도 여러 데이터를 반복적으로 해시할 수 있습니다. **CryptographicHash** 클래스의 Append 메서드는 해시할 버퍼에 새 데이터를 추가합니다. 이 전체 프로세스는 다음 C# 코드 예제에서 보여 줍니다.
 
 ```cs
 public void SampleReusableHash()
@@ -472,15 +472,15 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 -   [인증서](certificates.md)
 -   [암호화 키](cryptographic-keys.md)
 -   [데이터 보호](data-protection.md)
--   [MAC, 해시, 서명](macs-hashes-and-signatures.md)
--   [암호화에 대한 내보내기 제한](export-restrictions-on-cryptography.md)
+-   [Mac, 해시 및 서명에](macs-hashes-and-signatures.md)
+-   [암호화에 대 한 내보내기 제한](export-restrictions-on-cryptography.md)
 -   [일반적인 암호화 작업](common-cryptography-tasks.md)
 
 ### <a name="62-code-samples"></a>6.2 코드 샘플
 
 -   [자격 증명 보관](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/PasswordVault)
 -   [자격 증명 선택](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CredentialPicker)
--   [Azure 로그인으로 디바이스 잠금](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DeviceLockdownAzureLogin)
+-   [Azure 로그인을 사용 하 여 장치 잠금](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DeviceLockdownAzureLogin)
 -   [엔터프라이즈 데이터 보호](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/EnterpriseDataProtection)
 -   [KeyCredentialManager](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/KeyCredentialManager)
 -   [스마트 카드](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SmartCard)

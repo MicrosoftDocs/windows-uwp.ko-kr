@@ -6,11 +6,11 @@ ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a296cc877279292f73b591a86ede9136b0d9758
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044171"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645198"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>2017년 9월 Windows 개발자 문서의 새로운 내용
 
@@ -36,10 +36,10 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 새 문서의 개요를 살펴보면 다음과 같습니다.
 
-+ [**사용자 인터페이스 만들기**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-ui)는 기본 사진 갤러리 인터페이스를 만드는 방법을 보여줍니다.
-+ [**데이터 바인딩 만들기**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-data-binding)는 사진 갤러리에 데이터 바인딩을 추가하여 실제 이미지 데이터로 채우는 방법을 보여줍니다.
-+ [**사용자 지정 스타일 만들기**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-style)는 사진 편집 메뉴에 세련된 사용자 지정 스타일을 추가하는 방법을 보여줍니다.
-+ [**적응형 레이아웃 만들기**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-adaptive-layout)는 갤러리 레이아웃을 적응형으로 만들어 모든 장치와 화면 크기에 최적으로 표시되도록 하는 방법을 보여줍니다.
++ [**사용자 인터페이스를 만들** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-ui) 기본 사진 갤러리 인터페이스를 만드는 방법을 보여 줍니다.
++ [**데이터 바인딩을 만들** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-data-binding) 실제 이미지 데이터로 채우는 사진 갤러리, 데이터 바인딩을 추가 하는 방법을 보여 줍니다.
++ [**사용자 지정 스타일을 만드는** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-style) 사진 편집 메뉴에 유용한 사용자 지정 스타일을 추가 하는 방법을 보여 줍니다.
++ [**적응 레이아웃을 만들** ](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-adaptive-layout) 모든 장치 및 화면 크기에 적합 한 표시 됩니다 갤러리 레이아웃, 적응 하는 방법을 보여 줍니다.
 
 ### <a name="get-started-tutorials"></a>시작 자습서
 

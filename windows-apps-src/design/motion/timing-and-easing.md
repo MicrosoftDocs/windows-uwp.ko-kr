@@ -1,5 +1,5 @@
 ---
-Description: Learn how Fluent motion uses timing and easing functions.
+Description: 시간 및 감속/가속 함수 방법을 Fluent 동작 사용에 알아봅니다.
 title: 타이밍 및 감속 - UWP 앱의 애니메이션
 label: Timing and easing
 template: detail.hbs
@@ -12,11 +12,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 5b9a0719e4967f9d527d2b2565818a0dea1be0a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945494"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645268"
 ---
 # <a name="timing-and-easing"></a>타이밍 및 감속
 
@@ -204,5 +204,5 @@ CubicBezierEasingFunction standard =
 
 ## <a name="related-articles"></a>관련 문서
 
-- [움직임 개요](index.md)
+- [동작 개요](index.md)
 - [방향 및 무게](directionality-and-gravity.md)

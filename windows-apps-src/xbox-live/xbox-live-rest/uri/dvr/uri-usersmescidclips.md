@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 050d80be873d81e1db6a31742ceb6cfaf6602aaa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934490"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660068"
 ---
 # <a name="usersmescidsscidclips"></a>/users/me/scids/{scid}/clips
-초기 액세스 요청을 업로드 합니다. 이러한 Uri에 대 한 도메인은 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.
+초기 액세스 요청을 업로드 합니다. 이러한 Uri에 대 한 도메인이 `gameclipsmetadata.xboxlive.com` 고 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.
  
   * [URI 매개 변수](#ID4EX)
  
@@ -24,16 +24,16 @@ ms.locfileid: "8934490"
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| 서비스 안내| string| 액세스 되는 리소스의 서비스 구성 ID입니다. 인증된 된 사용자의 서비스 안내 일치 해야 합니다.| 
+| scid| 문자열| 서비스 액세스 되는 리소스의 ID를 구성 합니다. 인증된 된 사용자의 서비스 안내 일치 해야 합니다.| 
   
 <a id="ID4ETB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
-[POST (/users/me/scids/{scid}/clips)](uri-usersmescidclipspost.md)
+[POST (/ 사용자/me scids / {서비스 안내} 자르는 /)](uri-usersmescidclipspost.md)
 
 &nbsp;&nbsp;초기 업로드 요청을 확인 합니다.
  
@@ -45,8 +45,8 @@ ms.locfileid: "8934490"
 <a id="ID4E6B"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[게임 DVR URI](atoc-reference-dvr.md)
+[게임 DVR Uri](atoc-reference-dvr.md)
 
    

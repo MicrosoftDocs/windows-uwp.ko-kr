@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 취득 깔때기
 ms.localizationpriority: medium
 ms.openlocfilehash: d9ccbb081ef6f39ad795105ee2449de4d8442ab3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923711"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646198"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>앱 취득 깔때기 데이터 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 취득 깔때기형 데이터를 가져옵니다. 이 정보는 파트너 센터에서 [구입 보고서](../publish/acquisitions-report.md#acquisition-funnel) 에 사용할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 취득 깔때기형 데이터를 가져옵니다. 이 정보를 사용할 수 있습니다 합니다 [구매 보고서](../publish/acquisitions-report.md#acquisition-funnel) 파트너 센터에서.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
@@ -36,19 +36,19 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 매개 변수        | 유형   |  설명      |  필수  
+| 매개 변수        | 형식   |  설명      |  필수  
 |---------------|--------|---------------|------|
 | applicationId | 문자열 | 취득 깔때기 데이터 검색을 원하는 앱의 [스토어 ID](in-app-purchases-and-trials.md#store-ids)입니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
-| startDate | date | 검색할 취득 깔때기 데이터의 날짜 범위에서 시작 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
-| endDate | date | 검색할 취득 깔때기 데이터의 날짜 범위에서 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
-| filter | string  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 자세한 내용은 아래의 [필터 필드](#filter-fields) 섹션을 참조하세요. | 아니요   |
+| startDate | date | 검색할 취득 깔때기 데이터의 날짜 범위에서 시작 날짜입니다. 기본값은 현재 날짜입니다. |  아니오  |
+| endDate | date | 검색할 취득 깔때기 데이터의 날짜 범위에서 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니오  |
+| filter | 문자열  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 자세한 내용은 아래의 [필터 필드](#filter-fields) 섹션을 참조하세요. | 아니오   |
 
  
 ### <a name="filter-fields"></a>필드 필터링
@@ -57,13 +57,13 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 
 
 다음 필드를 지원합니다. 문자열 값은 *filter* 매개 변수에서 단일 따옴표로 묶여야 합니다.
 
-| 필드        |  Description        |
+| 필드        |  설명        |
 |---------------|-----------------|
 | campaignId | 취득과 연결된 [사용자 지정 앱 프로 모션 캠페인](../publish/create-a-custom-app-promotion-campaign.md)의 ID 문자열입니다. |
-| market | 구입이 발생한 시장의 ISO 3166 국가 코드를 포함하는 문자열입니다. |
+| 출시 | 구입이 발생한 시장의 ISO 3166 국가 코드를 포함하는 문자열입니다. |
 | deviceType | 취득이 발생한 장치 유형을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>홀로그램</strong></li><li><strong>알 수 없음</strong></li></ul> |
-| ageGroup | 취득을 완료한 사용자 연령 그룹을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>0 – 17</strong></li><li><strong>18 – 24</strong></li><li><strong>25 – 34</strong></li><li><strong>35 – 49</strong></li><li><strong>50 이상</strong></li><li><strong>모름</strong></li></ul> |
-| 성별 | 취득을 완료한 사용자의 성별을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>남자</strong></li><li><strong>여자</strong></li><li><strong>모름</strong></li></ul> |
+| ageGroup | 취득을 완료한 사용자 연령 그룹을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>0 – 17</strong></li><li><strong>18 – 24</strong></li><li><strong>25 – 34</strong></li><li><strong>35 – 49</strong></li><li><strong>50 개 이상</strong></li><li><strong>알 수 없음</strong></li></ul> |
+| gender | 취득을 완료한 사용자의 성별을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>M</strong></li><li><strong>F</strong></li><li><strong>알 수 없음</strong></li></ul> |
 
 
 ### <a name="request-example"></a>요청 예제
@@ -83,9 +83,9 @@ Authorization: Bearer <your access token>
 
 ### <a name="response-body"></a>응답 본문
 
-| 값      | 유형   | 설명                  |
+| 값      | 형식   | 설명                  |
 |------------|--------|-------------------------------------------------------|
-| 값      | array  | 앱의 취득 깔때기 데이터가 포함된 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [깔때기 값](#funnel-values) 섹션을 참조하세요.                  |
+| 값      | 배열  | 앱의 취득 깔때기 데이터가 포함된 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [깔때기 값](#funnel-values) 섹션을 참조하세요.                  |
 | TotalCount | int    | *값* 배열의 개체 수 총계입니다.        |
 
 
@@ -93,10 +93,10 @@ Authorization: Bearer <your access token>
 
 *값* 배열의 개체에는 다음 값이 포함됩니다.
 
-| 값               | 유형   | Description                           |
+| 값               | 형식   | 설명                           |
 |---------------------|--------|-------------------------------------------|
-| MetricType                | string | 이 개체에 포함된 [깔때기 데이터 유형](../publish/acquisitions-report.md#acquisition-funnel)을 지정한 다음 문자열 중 하나입니다.<ul><li><strong>PageView</strong></li><li><strong>Acquisition</strong></li><li><strong>Install</strong></li><li><strong>Usage</strong></li></ul> |
-| UserCount       | string | *MetricType* 값이 지정한 깔때기 단계를 수행할 수 있는 사용자의 수입니다.             |
+| MetricType                | 문자열 | 이 개체에 포함된 [깔때기 데이터 유형](../publish/acquisitions-report.md#acquisition-funnel)을 지정한 다음 문자열 중 하나입니다.<ul><li><strong>PageView</strong></li><li><strong>취득</strong></li><li><strong>설치</strong></li><li><strong>Usage</strong></li></ul> |
+| UserCount       | 문자열 | *MetricType* 값이 지정한 깔때기 단계를 수행할 수 있는 사용자의 수입니다.             |
 
 
 ### <a name="response-example"></a>응답 예제
@@ -129,6 +129,6 @@ Authorization: Bearer <your access token>
 
 ## <a name="related-topics"></a>관련 항목
 
-* [구입 보고서](../publish/acquisitions-report.md)
-* [Microsoft Store 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
-* [앱 취득 가져오기](get-app-acquisitions.md)
+* [취득 보고서](../publish/acquisitions-report.md)
+* [Microsoft Store 서비스를 사용 하 여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
+* [인 앱 구매 가져오기](get-app-acquisitions.md)

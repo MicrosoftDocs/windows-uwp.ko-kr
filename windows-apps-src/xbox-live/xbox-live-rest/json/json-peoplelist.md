@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f9ab412088707752d62cc20fd54da2639f26ddc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919725"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613328"
 ---
 # <a name="peoplelist-json"></a>PeopleList(JSON)
-[사용자](json-person.md) 개체의 컬렉션입니다. 
+컬렉션인 [Person](json-person.md) 개체입니다. 
 <a id="ID4ER"></a>
 
  
@@ -23,10 +23,10 @@ ms.locfileid: "8919725"
  
 PeopleList 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| 피플| [사용자](json-person.md) 의 배열| 사용자 목록을 구성 하는 [사람](json-person.md) 개체입니다.| 
-| totalCount| 32 비트 부호 없는 정수| 설정에서 사용할 수 있는 [사용자](json-person.md) 개체의 총 수입니다. 이 값의 전체 집합을 가장 최근 응답 뿐만 아니라 크기 나타내므로 페이징 클라이언트에서 사용할 수 있습니다. 예제 값: 680 합니다.| 
+| 피플| 배열을 [사람](json-person.md)| 합니다 [Person](json-person.md) 사람 목록 구성 하는 개체입니다.| 
+| totalCount| 32 비트 부호 없는 정수| 총 수 [Person](json-person.md) 개체 집합에서 사용할 수 있습니다. 이 값은 가장 최근 응답 뿐 아니라 전체 집합의 크기를 나타내므로 페이징에 대 한 클라이언트에서 사용할 수 있습니다. 예를 들어 값: 680.| 
   
 <a id="ID4EAC"></a>
 
@@ -69,18 +69,18 @@ PeopleList 개체에 다음과 같이 지정 합니다.
 <a id="ID4ELC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
   
 <a id="ID4EVC"></a>
 
  
-##### <a name="reference"></a>참조 
+##### <a name="reference"></a>참고자료 
 
-[GET (/users/{ownerId}/people)](../uri/people/uri-usersowneridpeopleget.md)
+[가져오기 (/users/ {ownerId} 사람 /)](../uri/people/uri-usersowneridpeopleget.md)
 
- [POST (/users/{ownerId}/people/xuids)](../uri/people/uri-usersowneridpeoplexuidspost.md)
+ [POST (/users/ {ownerId} / 사용자/xuids)](../uri/people/uri-usersowneridpeoplexuidspost.md)
 
    

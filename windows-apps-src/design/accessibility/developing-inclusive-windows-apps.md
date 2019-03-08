@@ -1,5 +1,5 @@
 ---
-Description: Learn to develop accessible Windows 10 UWP apps that include keyboard navigation, color and contrast settings, and support for assistive technologies.
+Description: 키보드 탐색, 색 및 대비 설정, 그리고 보조 기술에 대한 지원 기능을 포함하는 액세스 가능한 Windows 10 UWP 앱 개발 방법을 알아봅니다.
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: 포괄 Windows 10 앱 개발
 label: Developing inclusive Windows 10 apps
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 58e9ab90115566059fb79220b7b8c0b9c5ce677e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047970"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649728"
 ---
 # <a name="developing-inclusive-windows-apps"></a>포괄 Windows 앱 개발  
 
@@ -66,8 +66,7 @@ XAML
 
 **색상 대비 비율** – 다른 입법뿐만 아니라 미국 장애인 복지법의 업데이트된 섹션 508에서 요구하는 텍스트와 배경 간 기본 색상 대비는 5:1입니다. 큰 텍스트(18포인트 글꼴 크기 또는 14포인트 및 굵은 글씨)의 경우 필요한 기본 대비는 3:1입니다.  
 
-**색 조합** – 약 7%의 남성(및 1% 미만의 여성)에게 일종의 색각 장애가 있습니다. 색맹 사용자는 특정 색을 구분하는 데 어려움이 있으므로 응용 프로그램에서의 상태 또는 의미를 전달할 때 색상만을 사용하지 않는 것이 중요합니다.
- 장식 이미지(예: 아이콘 또는 배경)에 대해서는 색맹 사용자가 이미지를 최대한 인식할 수 있도록 색 조합을 선택해야 합니다.  
+**색 조합** – 약 7%의 남성(및 1% 미만의 여성)에게 일종의 색각 장애가 있습니다. 색맹 사용자는 특정 색을 구분하는 데 어려움이 있으므로 응용 프로그램에서의 상태 또는 의미를 전달할 때 색상만을 사용하지 않는 것이 중요합니다. 장식 이미지(예: 아이콘 또는 배경)에 대해서는 색맹 사용자가 이미지를 최대한 인식할 수 있도록 색 조합을 선택해야 합니다.  
 
 ## <a name="accessibility-checklist"></a>접근성 검사 목록  
 다음은 접근성 검사 목록의 간략화된 버전입니다.
@@ -84,7 +83,7 @@ XAML
 ## <a name="related-topics"></a>관련 항목  
 * [포괄 소프트웨어 디자인](designing-inclusive-software.md)  
 * [포괄 디자인](https://design.microsoft.com/inclusive)
-* [피해야 할 접근성 사례](practices-to-avoid.md)
-* [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/download/details.aspx?id=19262)
-* [Microsoft 접근성 개발자 허브](https://msdn.microsoft.com/enable)
+* [내게 필요한 옵션 예방 방법](practices-to-avoid.md)
+* [내게 필요한 옵션에 대 한 엔지니어링 소프트웨어](https://www.microsoft.com/download/details.aspx?id=19262)
+* [Microsoft accessibility developer hub](https://msdn.microsoft.com/enable)
 * [접근성](accessibility.md)

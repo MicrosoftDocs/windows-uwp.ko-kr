@@ -1,5 +1,5 @@
 ---
-Description: You can submit apps to the Microsoft Store in over 100 languages.
+Description: 100 개 이상의 언어로 Microsoft Store 앱을 제출할 수 있습니다.
 title: 지원되는 언어
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
 ms.date: 02/20/2019
@@ -7,25 +7,25 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 02a68cd325823bf671f7e0a99c64a899b17caddd
-ms.sourcegitcommit: a32f656253acc1e8b150919e73c886a59e65756a
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "9083711"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57657758"
 ---
 # <a name="supported-languages"></a>지원되는 언어
 
 
-100 개 이상 언어로 Microsoft Store에 앱을 제출할 수 있습니다.
+100 개 이상의 언어로 Microsoft Store 앱을 제출할 수 있습니다.
 
-앱의 언어를 구성 하는 방법에 대 한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md) 및 [이해 사용자 프로필 언어 및 앱 매니페스트 언어를](../design/globalizing/manage-language-and-region.md)참조 하세요. 여러 언어를 지원하는 앱을 작성하는 데 도움이 되는 [다국어 앱 도구 키트](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat)도 있습니다.
+앱에서 언어를 구성 하는 방법에 대 한 자세한 내용은 참조 하세요 [전역화 및 지역화](../design/globalizing/globalizing-portal.md) 하 고 [이해 사용자 프로필 언어 및 앱 매니페스트 언어](../design/globalizing/manage-language-and-region.md)합니다. 여러 언어를 지원하는 앱을 작성하는 데 도움이 되는 [다국어 앱 도구 키트](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat)도 있습니다.
 
 ## <a name="supported-languages"></a>지원되는 언어
 
 
-이 Microsoft 스토어를 지 원하는 언어입니다. 앱이 이러한 언어 중 하나 이상이 지원 해야 합니다. 
+Microsoft Store 지 원하는 언어는 다음과 같습니다. 앱에 하나 이상의 이러한 언어를 지원 해야 합니다. 
 
-여기에 포함 되지 않은 언어 코드 저장소에서 지원 되지 않습니다. 아래에 나열 되지 않은 언어 코드를 대상으로 하는 패키지를 포함 하지 않는 것이 좋습니다. 이러한 패키지는 고객에 게 배포 되지 않습니다 및 인증에 지연 또는 오류가 발생할 수 있습니다.
+여기에 포함 되지 않는 언어 코드는 저장소에서 지원 되지 않습니다. 아래에 나열 된 것과 다른 언어 코드를 대상으로 하는 패키지를 포함 하지 않으면 하는 것이 좋습니다. 이러한 패키지는 고객에 게 배포 되지 않습니다 및 인증에서 지연이 나 오류가 발생할 수 있습니다.
 
 | 언어 이름         | 지원되는 언어 코드                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -43,7 +43,7 @@ ms.locfileid: "9083711"
 | 불가리아어             | bg, bg-bg                                                                                                                                                                                             |
 | 카탈로니아어               | ca, ca-es, ca-es-valencia                                                                                                                                                                             |
 | 체로키어              | chr-cher, chr-cher-us, chr-latn                                                                                                                                                                       |
-| 중국어(간체)  | Zh-hans, cn 글꼴, 글꼴-hans-cn, sg 글꼴, 글꼴 hans sg                                                                                                                                                     |
+| 중국어(간체)  | zh-Hans, zh-cn, zh-hans-cn, zh-sg, zh-hans-sg                                                                                                                                                     |
 | 중국어(번체) | zh-Hant, zh-hk, zh-mo, zh-tw, zh-hant-hk, zh-hant-mo, zh-hant-tw                                                                                                                                      |
 | 크로아티아어              | hr, hr-hr, hr-ba                                                                                                                                                                                      |
 | 체코어                 | cs, cs-cz                                                                                                                                                                                             |

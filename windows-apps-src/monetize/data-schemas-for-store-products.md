@@ -6,13 +6,13 @@ ms.topic: article
 keywords: windows 10, uwp, ExtendedJsonData, Microsoft Store 제품, 스키마
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f51f0fffae3fa8e9a54214f78aa93fe39eab080
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937671"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656108"
 ---
-# <a name="data-schemas-for-store-products"></a>Microsoft Store 제품용 데이터 스키마
+# <a name="data-schemas-for-store-products"></a>스토어 제품용 데이터 스키마
 
 스토어에 앱이나 추가 기능 같은 제품을 제출할 때, 스토어는 제품과 라이선스에 대한 종합적인 데이터 세트를 유지합니다. 앱 코드에서 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 속성을 사용, 프로그래밍 방식으로 이런 데이터에 액세스할 수 있습니다. 예를 들어, [StoreProduct.Description](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Description) 및 [StoreProduct.Price](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Price) 속성을 사용, 해당 앱과 앱 추가 기능의 가격, 설명을 검색할 수 있습니다.
 
@@ -72,8 +72,8 @@ ms.locfileid: "8937671"
 ## <a name="related-topics"></a>관련 항목
 
 * [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)
-* [앱 및 추가 기능에 대한 제품 정보 가져오기](get-product-info-for-apps-and-add-ons.md)
-* [앱 및 추가 기능에 대한 라이선스 정보 가져오기](get-license-info-for-apps-and-add-ons.md)
-* [앱에서 바로 앱 및 추가 기능 구매 사용](enable-in-app-purchases-of-apps-and-add-ons.md)
-* [소모성 추가 기능 구매 사용](enable-consumable-add-on-purchases.md)
-* [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)
+* [앱 및 추가 기능에 대 한 제품 정보 가져오기](get-product-info-for-apps-and-add-ons.md)
+* [앱 및 추가 기능에 대 한 라이선스 정보 가져오기](get-license-info-for-apps-and-add-ons.md)
+* [앱 내 구매는 응용 프로그램 및 추가 기능을 사용 하도록 설정](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [사용할 수 있는 추가 기능 구매를 사용 하도록 설정](enable-consumable-add-on-purchases.md)
+* [앱의 평가판 버전을 구현 합니다.](implement-a-trial-version-of-your-app.md)

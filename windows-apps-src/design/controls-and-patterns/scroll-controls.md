@@ -1,5 +1,5 @@
 ---
-Description: Panning and scrolling allows users to reach content that extends beyond the bounds of the screen.
+Description: 이동과 스크롤을 통해 사용자는 화면 경계를 벗어나 확장된 콘텐츠에 액세스할 수 있습니다.
 title: 스크롤 뷰어 컨트롤
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scrollbars
@@ -13,11 +13,11 @@ dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 6578ddfd077e121e0eca5a5fcc8c06cdec26aa42
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058614"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656058"
 ---
 # <a name="scroll-viewer-controls"></a>스크롤 뷰어 컨트롤
 
@@ -25,7 +25,7 @@ ms.locfileid: "9058614"
 
 UI가 너무 많아 한 영역에 다 표시할 수 없는 경우 스크롤 뷰어 컨트롤을 사용합니다.
 
-> **중요 API**: [ScrollViewer 클래스](https://msdn.microsoft.com/library/windows/apps/br209527), [ScrollBar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)
+> **중요 한 Api**: [ScrollViewer 클래스](https://msdn.microsoft.com/library/windows/apps/br209527), [ScrollBar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)
 
 스크롤 뷰어를 사용하면 콘텐츠가 뷰포트(표시 영역)의 경계를 넘어 확장될 수 있습니다. 사용자는 마우스 또는 펜 커서를 사용하여 스크롤 뷰어의 스크롤 막대를 조작하거나 터치, 마우스휠, 키보드 또는 게임 패드를 통해 스크롤 뷰어 표면을 조작하여 이 콘텐츠에 도달합니다. 이 이미지는 스크롤 뷰어 컨트롤의 몇 가지 예를 보여 줍니다.
 
@@ -60,8 +60,8 @@ See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ScrollViewer">앱을 열고 작동 중인 ScrollViewer를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -87,7 +87,7 @@ See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/
 </Page>
 ```
 
-이 XAML은 가로 스크롤 스크롤 뷰어에 이미지를 배치 하 고 확대/축소를 사용 하는 방법을 보여 줍니다.
+이 XAML에는 가로 스크롤을 사용, 스크롤 뷰어 이미지 배치, 확대/축소를 사용 하도록 설정 하는 방법을 보여 줍니다.
 
 ```xaml
 <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"
@@ -105,7 +105,7 @@ ScrollViewer 컨트롤은 다른 컨트롤의 복합 파트로 사용되는 것�
 
 ScrollViewer를 포함하는 컨트롤이 ScrollViewer 파트 내에 있는 일부 동작과 속성에 영향을 줄 수 있도록 ScrollViewer는 스타일에서 설정하고 템플릿 바인딩에 사용할 수 있는 많은 XAML 연결 속성을 정의합니다. 연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](../../xaml-platform/attached-properties-overview.md)를 참조하세요.
 
-**ScrollViewer XAML 연결 속성**
+**ScrollViewer XAML 연결 된 속성**
 
 ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
@@ -151,6 +151,6 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-**개발자용(XAML)**
+**개발자 (XAML)**
 
 * [ScrollViewer 클래스](https://msdn.microsoft.com/library/windows/apps/br209527)

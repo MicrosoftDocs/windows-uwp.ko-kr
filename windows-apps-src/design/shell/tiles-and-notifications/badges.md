@@ -1,19 +1,19 @@
 ---
-Description: Learn how to use tiles, badges, toasts, and notifications to provide entry points into your app and keep users up-to-date.
+Description: 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
 title: UWP 앱에 대한 배지 알림
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10 uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b41069f1ca964f978ba0cff73f5c34a9db133a10
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920288"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649088"
 ---
 # <a name="badge-notifications-for-uwp-apps"></a>UWP 앱에 대한 배지 알림
 
@@ -60,7 +60,7 @@ ms.locfileid: "8920288"
     <th>XML</th>
 </tr>
 <tr>
-    <td>none</td>
+    <td>없음</td>
     <td>표시되는 배지 없음</td>
     <td>`<badge value="none"/>`</td>
 </tr>
@@ -128,7 +128,7 @@ ms.locfileid: "8920288"
 
 ## <a name="create-a-badge"></a>배지 만들기
 
-이 예제에서는 배지 업데이트를 만드는 방법을 보여 줍니다.
+이러한 예제 배지 업데이트를 만드는 방법을 보여 줍니다.
 
 ### <a name="create-a-numeric-badge"></a>숫자 배지 만들기
 
@@ -196,10 +196,10 @@ private void clearBadge()
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-* [알림 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> 라이브 타일을 만들고, 배지 업데이트를 보내고, 알림 메시지를 표시하는 방법을 보여 줍니다. 
+* [알림 사용 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> 라이브 타일을 만들고, 배지 업데이트를 보내고, 알림 메시지를 표시하는 방법을 보여 줍니다. 
 
 ## <a name="related-articles"></a>관련 문서
 
 * [적응형 및 대화형 알림 메시지](adaptive-interactive-toasts.md)
 * [타일 만들기](creating-tiles.md)
-* [적응형 타일 만들기](create-adaptive-tiles.md)
+* [적응 타일 만들기](create-adaptive-tiles.md)

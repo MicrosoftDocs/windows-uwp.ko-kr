@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 793d634bc1e3dc431b3797759751afb6dfd9c00a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927723"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650858"
 ---
 # <a name="get-titlestitleidsessionssessionidallocationstatus"></a>GET (/titles/{titleId}/sessions/{sessionId}/allocationStatus)
-해당 세션 Id로 식별 sessionhost 할당 상태를 반환 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
+해당 세션 Id로 식별 sessionhost의 할당 상태를 반환 합니다. 이러한 Uri에 대 한 도메인이 `gameserverds.xboxlive.com` 고 `gameserverms.xboxlive.com`입니다.
  
   * [필요한 요청 헤더](#ID4E4)
   * [필요한 응답 헤더](#ID4EEB)
@@ -40,26 +40,26 @@ ms.locfileid: "8927723"
  
 ## <a name="response-body"></a>응답 본문
  
-호출 되 면 서비스는 다음 멤버가 포함 된 JSON 개체를 반환 합니다.
+호출이 성공 하면 서비스는 다음 멤버로 구성 된 JSON 개체를 반환 합니다.
  
 | 멤버| 설명| 
 | --- | --- | 
-| description| 빈 (왼쪽에 대 한 이전 버전과 호환성) 문자열을 반환 합니다.| 
-| clusterId| 빈 (왼쪽에 대 한 이전 버전과 호환성) 문자열을 반환 합니다.| 
-| 호스트 이름| 세션 호스트의 URL입니다.| 
-| status| 대기, 처리, 또는 중단을 나타냅니다.| 
+| description| 빈 문자열 (왼쪽에서 대 한 이전 버전과 호환성)를 반환 합니다.| 
+| clusterId| 빈 문자열 (왼쪽에서 대 한 이전 버전과 호환성)를 반환 합니다.| 
+| hostName| 세션 호스트의 URL입니다.| 
+| status| 큐에 대기, 처리 또는 중단을 나타냅니다.| 
 | sessionHostId| 세션 호스트 id입니다.| 
-| sessionId| (할당 시간)에 제공 된 클라이언트 세션 id입니다.| 
+| sessionId| (할당 시) 제공 된 클라이언트 세션 id입니다.| 
 | secureContext| 보안 장치 주소입니다.| 
-| portMappings| 인스턴스에 대 한 포트 매핑을 합니다.| 
+| portMappings| 인스턴스에 대 한 포트 매핑입니다.| 
 | 지역| 인스턴스의 위치입니다.| 
-| ticketId| (왼쪽에 대 한 이전 버전과 호환성) 현재 세션 ID입니다.| 
-| gameHostId| (왼쪽에 대 한 이전 버전과 호환성) 현재 sessionHostId 합니다.| 
+| ticketId| (왼쪽에서 대 한 이전 버전과 호환성) 현재 세션 ID입니다.| 
+| gameHostId| (왼쪽에서 대 한 이전 버전과 호환성) 현재 sessionHostId 합니다.| 
  
 <a id="ID4EGD"></a>
 
  
-### <a name="sample-response"></a>예제 응답
+### <a name="sample-response"></a>샘플 응답
  
 
 ```cpp
@@ -100,11 +100,11 @@ ms.locfileid: "8927723"
  
 ### <a name="remarks"></a>설명
  
-다음과 같은 응답 코드를 받는 경우 제목을 다시 서비스 호출만 해야 합니다.
+제목을 다음 응답 코드를 받을 때 서비스에 대 한 호출 다시 시도 해야 합니다.
  
    * 200-성공 
    * 400-잘못 된 매개 변수를 포함 하는 요청 
    * 401-권한이 없음 
-   * 404-제목 ID 또는 티켓 ID를 잘못 되었거나 찾을 수 없습니다. 
+   * 404-제목 ID 또는 티켓 ID가 잘못 되었거나 찾을 수 없음 
    * 500-예기치 않은 서버 오류입니다. 
     

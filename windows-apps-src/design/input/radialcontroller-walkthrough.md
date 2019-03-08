@@ -7,21 +7,21 @@ ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d8729826c2f372b3d3b5607ce828aaf515e47f3d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933914"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57643988"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>자습서: UWP 앱에서 Surface Dial(및 기타 휠 장치) 지원
 
-![Surface Studio가 있는 Surface Dial 이미지](images/radialcontroller/dial-pen-studio-600px.png)  
+![노출 Studio 사용 하 여 Surface Dial의 이미지](images/radialcontroller/dial-pen-studio-600px.png)  
 *Surface Studio 및 Surface 펜이 있는 Surface Dial*([Microsoft 스토어](https://aka.ms/purchasesurfacedial)에서 구매 가능)
 
 이 자습서에서는 Surface Dial과 같은 휠 디바이스에서 지원하는 사용자 상호 작용 환경을 사용자 지정하는 방법을 단계별로 설명합니다. GitHub에서 다운로드할 수 있는 샘플 앱에서 코드 조각([샘플 코드](#sample-code) 참조)을 사용하여 다양한 기능과 연결된 [**RadialController**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller) API에 대해 설명합니다.
 
 중점을 두고 살펴볼 내용은 다음과 같습니다.
-* [**RadialController**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller) 메뉴에 표시되는 기본 제공 도구 지정
+* [  **RadialController**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller) 메뉴에 표시되는 기본 제공 도구 지정
 * 사용자 지정 도구를 메뉴에 추가
 * 촉각 피드백 제어
 * 클릭 상호 작용 사용자 지정
@@ -41,12 +41,12 @@ Surface Dial은 펜, 터치, 마우스와 같은 기본 입력 디바이스와 �
 ## <a name="prerequisites"></a>필수 구성 요소
 
 * Windows 10 크리에이터 업데이트 이상을 실행하는 컴퓨터(또는 가상 컴퓨터)
-* [Visual Studio 2017(10.0.15063.0)](https://developer.microsoft.com/windows/downloads)
-* [Windows10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* [Visual Studio 2017 (10.0.15063.0)](https://developer.microsoft.com/windows/downloads)
+* [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * 휠 디바이스(지금은 [Surface Dial](https://aka.ms/purchasesurfacedial)만)
 * Visual Studio를 사용하는 UWP(유니버설 Windows 플랫폼) 앱 개발을 처음 하는 경우, 이 자습서를 시작하기 전에 이러한 항목을 살펴보십시오.  
     * [설정하기](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
-    * ["Hello, World" 앱 만들기(XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
+    * [만들기는 "Hello, world" 앱 (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 
 ## <a name="set-up-your-devices"></a>디바이스 설정
 
@@ -58,7 +58,7 @@ Surface Dial은 펜, 터치, 마우스와 같은 기본 입력 디바이스와 �
 6. Windows 디바이스로 돌아가서 **Bluetooth 또는 기타 디바이스 추가**를 선택합니다.
 7. **디바이스 추가** 대화 상자를 선택하고 **Bluetooth** > **Surface Dial**을 선택합니다. 이제 Surface Dial이 연결되어 **Bluetooth 및 기타 디바이스** 설정 페이지의 **마우스, 키보드 및 펜**의 디바이스 목록에 추가됩니다.
 8. 다이얼을 몇 초 동안 길게 눌러 기본 제공 메뉴가 표시되는지 테스트합니다.
-9. 메뉴 (다이얼은 진동도) 화면에 표시 되지 않으면 이동 Bluetooth 설정으로 장치를 제거 하 고 장치를 다시 연결 합니다.
+9. 메뉴 (다이얼 진동도 해야) 화면에 표시 되지 않으면 Bluetooth 설정으로 장치를 제거 하 고 장치 다시 연결 시도 이동 합니다.
 
 > [!NOTE]
 > 휠 디바이스는 **휠** 설정을 통해 구성할 수 있습니다.
@@ -87,7 +87,7 @@ Surface Dial은 펜, 터치, 마우스와 같은 기본 입력 디바이스와 �
 
 | 구성 요소 | 설명 |
 | --- | --- |
-| [**RadialController** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController) 및 관련 항목 | 휠 입력 디바이스 또는 Surface Dial과 같은 액세서리를 나타냅니다. |
+| [**RadialController** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController) 및 관련 | 휠 입력 디바이스 또는 Surface Dial과 같은 액세서리를 나타냅니다. |
 | [**IRadialControllerConfigurationInterop**](https://msdn.microsoft.com/library/windows/desktop/mt790709) / [**IRadialControllerInterop**](https://msdn.microsoft.com/library/windows/desktop/mt790711)<br/>여기서는 이 기능을 다루지 않습니다. 자세한 내용은 [Windows 클래식 데스크톱 샘플](https://aka.ms/radialcontrollerclassicsample)을 참조하세요. | UWP 앱과의 상호 운용성을 가능하게 합니다. |
 
 ## <a name="step-1-run-the-sample"></a>1단계: 샘플 실행
@@ -98,7 +98,7 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
 3. F5를 눌러 컴파일하고, 배포하고, 실행합니다. 
 
 > [!NOTE]
-> 또는 **디버그** > **디버깅 시작** 메뉴 항목을 선택하거나 여기에 표시된 **로컬 컴퓨터** 실행 단추를 선택합니다. ![Visual Studio 프로젝트 빌드 단추](images/radialcontroller/wheel-vsrun.png)
+> 선택할 수 있습니다 **디버그** > **디버깅을 시작할** 메뉴 항목 또는 선택 합니다 **로컬 컴퓨터** 단추 여기에 표시 된 실행: ![Visual Studio 빌드 프로젝트 단추](images/radialcontroller/wheel-vsrun.png)
 
 앱 창이 열리고 몇 초 동안 시작 화면이 나타난 후 이 초기 화면이 표시됩니다.
 
@@ -120,12 +120,12 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
 
 이제 몇 가지 기본 사용자 지정을 시작하겠습니다.
 
-## <a name="step-3-add-controls-for-wheel-input"></a>3단계: 휠 입력에 대한 컨트롤 추가
+## <a name="step-3-add-controls-for-wheel-input"></a>3단계: 휠 입력 컨트롤 추가
 
 먼저 앱을 위한 UI를 추가합니다.
 
 1. MainPage_Basic.xaml 파일을 엽니다.
-2. 이 단계의 제목("\<!-- Step 3: Add controls for wheel input -->")으로 표시된 코드를 찾습니다.
+2. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("\<!-3 단계: 휠 입력에 대 한 제어--> 추가 ").
 3. 다음 줄의 주석 처리를 제거합니다.
 
     ```xaml
@@ -164,7 +164,7 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
 이제 컨트롤에 대한 **RadialController** 액세스에 필요한 코드를 추가합니다.
 
 1. MainPage_Basic.xaml.cs 파일을 엽니다.
-2. 이 단계의 제목("// Step 4: Basic RadialController menu customization")으로 표시된 코드를 찾습니다.
+2. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("/ / 4 단계: 기본 RadialController 메뉴 사용자 지정 ")입니다.
 3. 다음 줄의 주석 처리를 제거합니다.
     - [Windows.UI.Input](https://docs.microsoft.com/uwp/api/windows.ui.input) 및 [Windows.Storage.Streams](https://docs.microsoft.com/uwp/api/windows.storage.streams) 유형 참조는 이후 단계의 기능에 사용됩니다.  
     
@@ -282,12 +282,12 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
 
 이제 단추를 연결해 보겠습니다.
 
-## <a name="step-5-configure-menu-at-runtime"></a>5단계: 런타임 시 메뉴 구성
+## <a name="step-5-configure-menu-at-runtime"></a>5단계: 런타임에 메뉴 구성
 
 이 단계에서 **항목 추가/제거** 및 **RadialController 메뉴 초기화** 단추를 연결하여 메뉴를 동적으로 사용자 지정하는 방법을 설명하겠습니다.
 
 1. MainPage_Basic.xaml.cs 파일을 엽니다.
-2. 이 단계 제목("// Step 5: Configure menu at runtime")으로 표시된 코드를 찾습니다.
+2. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("/ / 5 단계: 구성 메뉴 런타임 시 ").
 3. 다음 메서드의 코드에 대한 주석 처리를 제거하고 앱을 다시 실행합니다. 하지만 다음 단계에서 할 것이므로 아무 단추도 누르지 않습니다.  
 
     ``` csharp
@@ -340,7 +340,7 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
 
     메뉴가 원래 상태로 돌아갑니다.
 
-## <a name="step-6-customize-the-device-haptics"></a>6단계: 디바이스 촉각 사용자 지정
+## <a name="step-6-customize-the-device-haptics"></a>6단계: 장치 haptics 사용자 지정
 Surface Dial 및 기타 휠 디바이스는 현재 상호 작용에 해당하는 촉각 피드백(클릭이나 회전에 따라)을 제공할 수 있습니다.
 
 이 단계에서 슬라이더 및 토글 스위치 컨트롤을 연결하고 이를 사용하여 동적으로 촉각 피드백 동작을 지정함으로써 촉각 피드백을 사용자 지정하는 방법을 보겠습니다. 이 예의 경우, 피드백을 사용하기 위해 토글 스위치를 설정해야 하며, 슬라이더 값을 지정하여 클릭 피드백이 얼마나 자주 반복될지 지정합니다. 
@@ -349,7 +349,7 @@ Surface Dial 및 기타 휠 디바이스는 현재 상호 작용에 해당하는
 > 촉각 피드백은 사용자가 **설정** >  **디바이스** > **휠** 페이지에서 사용하지 않도록 설정할 수 있습니다.
 
 1. App.xaml.cs 파일을 엽니다.
-2. 이 단계 제목("Step 6: Customize the device haptics")으로 표시된 코드를 찾습니다.
+2. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("6 단계: 사용자 지정 장치 haptics ").
 3. 첫 번째와 세 번째 줄("MainPage_Basic"과 "MainPage")은 주석 처리하고 두 번째 줄("MainPage_Haptics")은 주석 처리를 제거합니다.  
 
     ``` csharp
@@ -358,7 +358,7 @@ Surface Dial 및 기타 휠 디바이스는 현재 상호 작용에 해당하는
     rootFrame.Navigate(typeof(MainPage), e.Arguments);
     ```
 4. MainPage_Haptics.xaml 파일을 엽니다.
-5. 이 단계 제목("\<!-- Step 6: Customize the device haptics -->")으로 표시된 코드를 찾습니다.
+5. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("\<!-6 단계: Haptics--> 장치를 사용자 지정 ").
 6. 다음 줄의 주석 처리를 제거합니다. (이 UI 코드는 현재 디바이스에서 어떤 촉각 기능이 지원되는지 나타냅니다.)    
 
     ```xaml
@@ -431,7 +431,7 @@ Surface Dial 및 기타 휠 디바이스는 현재 상호 작용에 해당하는
     </StackPanel>
     ```
 7. MainPage_Haptics.xaml.cs 파일을 엽니다.
-8. 이 단계 제목("Step 6: Haptics customization")으로 표시된 코드를 찾습니다.
+8. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("6 단계: Haptics 사용자 지정 ")
 9. 다음 줄의 주석 처리를 제거합니다.  
 
     - [Windows.Devices.Haptics](https://docs.microsoft.com/uwp/api/windows.devices.haptics) 형식 참조는 이후 단계의 기능에 사용됩니다.  
@@ -580,7 +580,7 @@ Surface Dial 및 기타 휠 디바이스는 현재 상호 작용에 해당하는
 
 이제 앱을 다시 실행하고 슬라이더 값을 변경하고 스위치 상태를 토글하여 사용자 지정 촉각 피드백을 사용해 봅니다.
 
-## <a name="step-7-define-on-screen-interactions-for-surface-studio-and-similar-devices"></a>7단계: Surface Studio 및 유사 디바이스를 위한 화면 상호 작용 정의
+## <a name="step-7-define-on-screen-interactions-for-surface-studio-and-similar-devices"></a>7단계: 화면의 정의 화면 Studio와 유사한 장치에 대 한 상호 작용
 Surface Dial을 Surface Studio와 함께 사용하면 더 고유한 사용자 환경을 만들 수 있습니다. 
 
 설명된 기본 길게 누르기 메뉴 환경 외에, Surface Dial을 Surface Studio 화면에 바로 배치할 수도 있습니다. 이를 통해 특수한 "화면 내부" 메뉴가 제공됩니다. 
@@ -594,7 +594,7 @@ Surface Dial을 Surface Studio와 함께 사용하면 더 고유한 사용자 �
 1. Visual Studio가 설치된 상태에서 Surface Studio 디바이스에 샘플을 다운로드합니다.
 2. Visual Studio에서 샘플을 엽니다.
 3. App.xaml.cs 파일을 엽니다.
-4. 이 단계 제목("Step 7: Define on-screen interactions for Surface Studio and similar devices")으로 표시된 코드를 찾습니다.
+4. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("7 단계: 화면의 정의 화면 Studio와 유사한 장치에 대 한 상호 작용 ")
 5. 첫 번째와 두 번째 줄("MainPage_Basic"과 "MainPage_Haptics")은 주석 처리하고 세 번째 줄("MainPage")은 주석 처리를 제거합니다.  
 
     ``` csharp
@@ -611,4 +611,4 @@ Surface Dial을 Surface Studio와 함께 사용하면 더 고유한 사용자 �
 
 ## <a name="summary"></a>요약
 
-축하합니다. *시작 자습서: UWP 앱에서 Surface Dial(및 기타 휠 디바이스) 지원*을 완료했습니다! UWP 앱에서 휠 디바이스를 지원하기 위해 필요한 기본 코드를 소개하고, **RadialController** API가 지원하는 풍부한 사용자 환경의 일부를 제공하는 방법을 알아보았습니다.
+축, 완료 된 *시작 자습서: UWP 앱에서 Surface Dial (및 다른 휠 장치)를 지 원하는*! UWP 앱에서 휠 디바이스를 지원하기 위해 필요한 기본 코드를 소개하고, **RadialController** API가 지원하는 풍부한 사용자 환경의 일부를 제공하는 방법을 알아보았습니다.

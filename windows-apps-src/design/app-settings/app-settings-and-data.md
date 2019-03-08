@@ -1,5 +1,5 @@
 ---
-Description: This section contains user experience guidelines for presenting app settings and storing those settings as app data.
+Description: 이 섹션에서는 앱 설정을 제공하고 이러한 설정을 앱 데이터로 저장하기 위한 사용자 환경 지침을 제공합니다.
 title: 앱 설정 및 데이터
 ms.assetid: E7F312F7-54D8-411F-8D92-92FBB95C2463
 label: App settings and data
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5790e9fcd05cb873958e53786e3282094ec0a3d4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938434"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57639898"
 ---
 # <a name="app-settings-and-data"></a>앱 설정 및 데이터
 

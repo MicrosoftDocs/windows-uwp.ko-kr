@@ -1,5 +1,5 @@
 ---
-Description: Learn how to use page transitions in your UWP apps.
+Description: UWP 앱에서 페이지 전환을 사용 하는 방법에 알아봅니다.
 title: UWP 앱의 페이지 전환
 template: detail.hbs
 ms.date: 04/08/2018
@@ -9,11 +9,11 @@ pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 38fe6b92828459f91ba6ea2f836d274c2cc8d761
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942245"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646458"
 ---
 # <a name="page-transitions"></a>페이지 전환
 
@@ -37,7 +37,7 @@ myFrame.Navigate(typeof(Page2), null, new EntranceNavigationTransitionInfo());
 
 ```
 
-**참고**: [**프레임**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame)은 자동으로 [**NavigationThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition)을 사용하여 두 페이지 간에 탐색을 애니메이션화합니다. 기본적으로 애니메이션은 페이지 새로 고침입니다.
+**참고**: A [ **프레임** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame) 자동으로 사용 하 여 [ **NavigationThemeTransition** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) 두 페이지 간의 탐색에 애니메이션 효과를 합니다. 기본적으로 애니메이션은 페이지 새로 고침입니다.
 
 ## <a name="drill"></a>드릴
 
@@ -56,9 +56,9 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="horizontal-slide"></a>가로 슬라이드
 
-가로 슬라이드를 사용 하 여 나란히 형제 페이지를 표시 합니다. [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤은 상단 탐색에 대 한이 애니메이션을 자동으로 사용 하지만 고유한 가로 탐색 경험을 빌드하는 경우 SlideNavigationTransitionInfo 사용 하 여 가로 슬라이드를 구현할 수 있습니다.
+가로 슬라이드를 사용 하 여 서로 옆에 있는 형제 페이지 표시 되는지 보여 줍니다. 합니다 [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤 위쪽 탐색 창에 대 한이 애니메이션을 자동으로 사용 하지만 사용자 고유의 가로 탐색 경험을 작성 하는 경우 SlideNavigationTransitionInfo 사용 하 여 가로 슬라이드를 구현할 수 있습니다.
 
-듯한은 사용자는 서로 옆에 있는 페이지를 탐색 하는입니다. 
+원하는 느낌 서로 옆에 있는 페이지 사이 사용자가 탐색 하는입니다. 
 
 ```csharp
 // Navigate to the right, ie. from LeftPage to RightPage
@@ -87,5 +87,5 @@ myFrame.Navigate(typeof(Page2), null, new SuppressNavigationTransitionInfo());
 
 ## <a name="related-topics"></a>관련 항목
 
-- [두 페이지 간 이동](../basics/navigate-between-two-pages.md)
-- [UWP 앱의 동작](index.md)
+- [두 페이지 사이 이동](../basics/navigate-between-two-pages.md)
+- [UWP 앱에서 동작](index.md)

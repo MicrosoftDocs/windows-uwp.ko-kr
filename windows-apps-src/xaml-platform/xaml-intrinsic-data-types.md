@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 26f4153b59c618a4559549ba7fa9ca0f99c4ab64
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933851"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613268"
 ---
 # <a name="xaml-intrinsic-data-types"></a>XAML 기본 데이터 형식
 
@@ -31,18 +31,18 @@ Windows 런타임용 XAML이 언어 수준 지원을 제공하는 형식은 다�
 
 이러한 XAML 언어 primitive는 대개 사용자 XAML에서 **x:** 접두사가 사용되는 개체 요소를 정의하는 경우에만 사용됩니다. 다른 모든 XAML 언어 기능은 일반적으로 특성 폼에 사용되거나 태그 확장으로 사용됩니다.
 
-**참고**통상적으로 XAML 및 다른 모든 XAML 언어 요소에 대 한 언어 primitive "x:" 접두사와 함께 표시 됩니다. 이는 XAML 언어 요소가 실제 태그에서 일반적으로 어떻게 사용되는지를 보여 줍니다. 이는 XAML용 설명서 및 XAML 사양에서도 준수됩니다.
+**참고**  규칙에 따라 XAML 및 다른 모든 XAML 언어 요소에 대 한 언어 기본 형식 "x:" 접두사를 사용 하 여 표시 됩니다. 이는 XAML 언어 요소가 실제 태그에서 일반적으로 어떻게 사용되는지를 보여 줍니다. 이는 XAML용 설명서 및 XAML 사양에서도 준수됩니다.
 
 ## <a name="other-xaml-primitives"></a>기타 XAML primitive
 
 XAML 2009 사양에서는 **x:Uri** 및 **x:Single** 같은 다른 XAML 언어 수준 primitive를 표시합니다. 이 항목의 표에 나열되어 있지 않은 기타 XAML 어휘 또는 XAML 2009 사양에서 정의된 기타 XAML 언어 기본 요소는 현재 Windows 런타임에 대한 XAML에서 지원되지 않습니다.
 
-**참고**날짜 및 시간 ( [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576) 또는 [**DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx), [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996) 또는 [**System.TimeSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/system.timespan.aspx)를 사용 하는 속성)은 XAML 기본 되지 않습니다. Windows 런타임 XAML 파서에 날짜 및 시간에 대한 기본 from-string 변환 동작이 없기 때문에 일반적으로 이러한 속성은 XAML에서 설정할 수 없습니다. 날짜 및 시간 속성의 초기화 값에는 페이지 또는 요소가 로드될 때 실행되는 코드 숨김을 사용해야 합니다.
+**참고**  날짜 및 시간 (사용 하는 속성 [ **DateTime** ](https://msdn.microsoft.com/library/windows/apps/br206576) 하거나 [ **DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx), [ **TimeSpan** ](https://msdn.microsoft.com/library/windows/apps/br225996) 하거나 [ **System.TimeSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/system.timespan.aspx))는 XAML 기본 설정할 수 없습니다. Windows 런타임 XAML 파서에 날짜 및 시간에 대한 기본 from-string 변환 동작이 없기 때문에 일반적으로 이러한 속성은 XAML에서 설정할 수 없습니다. 날짜 및 시간 속성의 초기화 값에는 페이지 또는 요소가 로드될 때 실행되는 코드 숨김을 사용해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [XAML 개요](xaml-overview.md)
 * [XAML 구문 가이드](xaml-syntax-guide.md)
-* [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)
+* [애니메이션 스토리 보드를 만들었습니다](https://msdn.microsoft.com/library/windows/apps/mt187354)
  
 

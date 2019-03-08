@@ -1,20 +1,20 @@
 ---
-title: 카메라 공간 변환
+title: 카메라 공간 변형
 description: 카메라 공간의 꼭짓점은 세계 좌표 뷰 매트릭스로 개체 꼭짓점을 변환하여 계산됩니다.
 ms.assetid: 86EDEB95-8348-4FAA-897F-25251B32B076
 keywords:
-- 카메라 공간 변환
+- 카메라 공간 변형
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b35fb71e51044ee6be6ed90001e3b5614c8cb45
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945975"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655738"
 ---
-# <a name="camera-space-transformations"></a>카메라 공간 변환
+# <a name="camera-space-transformations"></a>카메라 공간 변형
 
 
 카메라 공간의 꼭짓점은 세계 좌표 뷰 매트릭스로 개체 꼭짓점을 변환하여 계산됩니다.
@@ -33,7 +33,7 @@ N = norm(N)
 
 카메라 공간의 조명 위치는 뷰 매트릭스로 광원 위치를 변환하여 계산됩니다.
 
-Lₚ = Lₚ \* vMatrix
+Lₚ Lₚ = \* vMatrix
 
 방향성 광원에 대한 카메라 공간의 광원 방향은 광원 방향에 뷰 매트릭스를 곱하고, 정규화하고, 결과를 부정하여 계산됩니다.
 
@@ -41,20 +41,20 @@ L<sub>dir</sub> = -norm(L<sub>dir</sub> \* wvMatrix)
 
 점 광원과 스포트라이트에 대해 조명 방향은 다음과 같이 계산됩니다.
 
-L<sub>dir</sub> = norm(V \* Lₚ). 여기의 매개 변수는 다음 표에 정의되어 있습니다.
+L<sub>dir</sub> norm = (V \* Lₚ) 매개 변수는 다음 표에 정의 되어 있는, 합니다.
 
-| 매개 변수       | 기본값 | 유형                                          | 설명                                               |
+| 매개 변수       | 기본값 | 형식                                          | 설명                                               |
 |-----------------|---------------|-----------------------------------------------|-----------------------------------------------------------|
-| L<sub>dir</sub> | 해당 없음           | 3D 벡터(x, y 및 z 부동 소수점 값) | 개체 꼭짓점에서 조명으로의 방향 벡터          |
-| V               | 해당 없음           | 3D 벡터(x, y 및 z 부동 소수점 값) | 카메라 공간의 꼭짓점 위치                           |
+| L<sub>dir</sub> | 해당 없음           | 3D 벡터(x, y, 및 z 부동 소수점 값) | 개체 꼭짓점에서 조명으로의 방향 벡터          |
+| V               | 해당 없음           | 3D 벡터(x, y, 및 z 부동 소수점 값) | 카메라 공간의 꼭짓점 위치                           |
 | wvMatrix        | ID      | 부동 소수점 값의 4x4 매트릭스           | 세계 좌표와 뷰 변환을 포함하는 합성 매트릭스 |
-| N               | 해당 없음           | 3D 벡터(x, y 및 z 부동 소수점 값) | 꼭짓점 법선                                             |
-| Lₚ              | 해당 없음           | 3D 벡터(x, y 및 z 부동 소수점 값) | 카메라 공간의 조명 위치                            |
+| N               | 해당 없음           | 3D 벡터(x, y, 및 z 부동 소수점 값) | 꼭짓점 법선                                             |
+| Lₚ              | 해당 없음           | 3D 벡터(x, y, 및 z 부동 소수점 값) | 카메라 공간의 조명 위치                            |
 | vMatrix         | ID      | 부동 소수점 값의 4x4 매트릭스           | 뷰 변환을 포함하는 매트릭스                      |
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [조명의 수학](mathematics-of-lighting.md)

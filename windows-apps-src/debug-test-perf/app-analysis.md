@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f1d37446cb5f540cd77928cb8167d8d4319977d1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945156"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57612008"
 ---
 # <a name="app-analysis-overview"></a>앱 분석 개요
 
@@ -38,7 +38,7 @@ ms.locfileid: "8945156"
 
 BitmapImage가 SetSourceAsync 또는 UriSource를 사용하여 콘텐츠를 설정한 다음 라이브 XAML 트리에 연결되었습니다. 원본을 설정하기 전에 항상 [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235)를 라이브 트리에 연결해야 합니다. 이미지 요소 또는 브러시가 태그에서 지정되면 항상 자동으로 그렇게 됩니다. 아래에 예제가 나와 있습니다. 
 
-**라이브 트리 예제**
+**라이브 트리에 예제**
 
 예제 1(좋음) - 태그에 지정된 URI(Uniform Resource Identifier)
 
@@ -60,7 +60,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-예제 2 코드 숨김 (나쁨)-트리에 연결 하기 전에 BitmapImage의 UriSource를 설정 합니다.
+예 2 코드 숨김 (불량)-BitmapImage의 UriSource 트리에 연결 하기 전에 설정 합니다.
 
 ```vb
 var bitmapImage = new BitmapImage();
@@ -83,7 +83,7 @@ myImage.Source = bitmapImage;
 </Image>
 ```
 
-[**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241)에 대한 단위는 기본적으로 실제 픽셀입니다. [**DecodePixelType**](https://msdn.microsoft.com/library/windows/apps/Dn298545) 속성을 사용하면 이 동작을 변경할 수 있습니다. 즉 **DecodePixelType**을 **Logical**로 설정하면 디코드 크기가 다른 XAML 콘텐츠와 유사하게 시스템의 현재 배율을 자동으로 고려합니다. 그러므로 예를 들어 **DecodePixelWidth** 및 **DecodePixelHeight**를 이미지가 표시되는 이미지 컨트롤의 Height 및 Width 속성과 일치시키려는 경우 **DecodePixelType**을 **Logical**로 설정하는 것이 일반적으로 적절합니다. 실제 픽셀을 사용하는 기본 동작에서는 직접 시스템의 현재 배율을 고려해야 하므로 사용자가 디스플레이 기본 설정을 변경하는 경우 배율 변경 알림을 수신하게 됩니다.
+[  **DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241)에 대한 단위는 기본적으로 실제 픽셀입니다. [  **DecodePixelType**](https://msdn.microsoft.com/library/windows/apps/Dn298545) 속성을 사용하면 이 동작을 변경할 수 있습니다. 즉 **DecodePixelType**을 **Logical**로 설정하면 디코드 크기가 다른 XAML 콘텐츠와 유사하게 시스템의 현재 배율을 자동으로 고려합니다. 그러므로 예를 들어 **DecodePixelWidth** 및 **DecodePixelHeight**를 이미지가 표시되는 이미지 컨트롤의 Height 및 Width 속성과 일치시키려는 경우 **DecodePixelType**을 **Logical**로 설정하는 것이 일반적으로 적절합니다. 실제 픽셀을 사용하는 기본 동작에서는 직접 시스템의 현재 배율을 고려해야 하므로 사용자가 디스플레이 기본 설정을 변경하는 경우 배율 변경 알림을 수신하게 됩니다.
 
 적절한 디코드 크기를 미리 결정할 수 없는 일부 경우, 명시적인 DecodePixelWidth/DecodePixelHeight가 지정되지 않았을 때 XAML의 적절한 크기로 자동 디코드에 맡기는 것이 좋습니다. 이를 사용하면 가장 최선의 노력을 들여서 적절한 크기로 이미지를 디코드할 수 있습니다.
 
@@ -93,11 +93,11 @@ myImage.Source = bitmapImage;
 
 #### <a name="images-used-inside-of-bitmapicons-fall-back-to-decoding-to-natural-size"></a>BitmapIcons 내부에서 사용되는 이미지가 기본 크기로 디코딩되도록 대체 
 
-[**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) 속성을 사용하여 화면에 정확한 크기로 그려지는 이미지 버전을 만들도록 명시적 디코드 크기를 설정합니다.
+[  **DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) 속성을 사용하여 화면에 정확한 크기로 그려지는 이미지 버전을 만들도록 명시적 디코드 크기를 설정합니다.
 
 #### <a name="images-that-appear-extremely-large-on-screen-fall-back-to-decoding-to-natural-size"></a>화면에 매우 크게 표시되는 이미지가 기본 크기로 디코딩되도록 대체 
 
-화면에 매우 크게 표시되는 이미지가 기본 크기로 디코딩되도록 대체됩니다. [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) 속성을 사용하여 화면에 정확한 크기로 그려지는 이미지 버전을 만들도록 명시적 디코드 크기를 설정합니다.
+화면에 매우 크게 표시되는 이미지가 기본 크기로 디코딩되도록 대체됩니다. [  **DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) 속성을 사용하여 화면에 정확한 크기로 그려지는 이미지 버전을 만들도록 명시적 디코드 크기를 설정합니다.
 
 #### <a name="image-is-hidden"></a>이미지가 숨겨짐
 
@@ -115,7 +115,7 @@ DecodePixelWidth/Height가 이미지가 화면에 표시되는 것보다 명시�
 
 #### <a name="image-is-decoded-as-part-of-producing-a-drag-and-drop-image"></a>이미지가 끌어서 놓기 이미지 생성의 일부로 디코딩됨
 
-[**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) 속성을 사용하여 화면에 정확한 크기로 그려지는 이미지 버전을 만들도록 명시적 디코드 크기를 설정합니다.
+[  **DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) 속성을 사용하여 화면에 정확한 크기로 그려지는 이미지 버전을 만들도록 명시적 디코드 크기를 설정합니다.
 
 ## <a name="collapsed-elements-at-load-time"></a>로드 시 축소된 요소
 
@@ -127,7 +127,7 @@ DecodePixelWidth/Height가 이미지가 화면에 표시되는 것보다 명시�
 
 축소된 요소가 다른 요소와 함께 로드되어 로드 시간이 늘어납니다.
 
-### <a name="cause"></a>Cause(원인)
+### <a name="cause"></a>원인
 
 이 규칙은 요소가 로드 시 축소되었기 때문에 트리거되었습니다. 요소를 축소하거나 불투명도를 0으로 설정하면 요소가 만들어지는 것을 방지하지 않습니다. 이 규칙은 기본값이 false인 부울-표시 변환기를 사용하는 앱에서 발생할 수 있습니다.
 
@@ -147,7 +147,7 @@ UI 가상화는 컬렉션 성능을 개선하는 데 몇 가지 핵심 요소 �
 
 가상화되지 않은 ItemsControl은 필요 이상으로 많은 해당 자식 항목을 로드하여 로드 시간과 리소스 사용량을 증가시킵니다.
 
-### <a name="cause"></a>Cause(원인)
+### <a name="cause"></a>원인
 
 프레임워크가 표시될 수 있는 요소를 만들어야 하므로 뷰포트 개념이 UI 가상화에 중요합니다. 일반적으로 ItemsControl의 뷰포트는 논리적 컨트롤 크기입니다. 예를 들어 ListView의 뷰포트는 ListView 요소의 너비 및 높이입니다. 일부 패널에서는 자동 크기 조정 행 또는 열을 사용하여 자식 요소(예: ScrollViewer 및 Grid)에 무제한 공간을 허용합니다. 가상화된 ItemsControl이 이와 같은 패널에 배치된 경우 모든 항목을 표시할 수 있는 공간을 차지하므로 가상화에 실패합니다. 
 
@@ -165,7 +165,7 @@ UI 스레드 차단은 UI 스레드를 차단하는 오프-스레드 실행 함�
 
 로드 중 차단되거나 유휴 상태인 UI 스레드는 레이아웃 및 기타 UI 작업을 차단하여 시작 시간을 증가시킵니다.
 
-### <a name="cause"></a>Cause(원인)
+### <a name="cause"></a>원인
 
 UI 플랫폼 코드와 UI 앱 코드 모두 동일한 UI 스레드에서 실행됩니다. 이 스레드에서는 한 번에 하나의 명령만 실행될 수 있으므로 앱 코드가 이벤트를 처리하는 데 너무 오래 걸리는 경우 프레임워크에서 레이아웃을 실행할 수 없거나 사용자 개입을 나타내는 새 이벤트를 발생시킬 수 있습니다. 앱의 응답성은 작업을 처리하는 UI 스레드의 가용성과 관련이 있습니다.
 
@@ -181,7 +181,7 @@ UI 플랫폼 코드와 UI 앱 코드 모두 동일한 UI 스레드에서 실행�
 
 {Binding}은 {x:Bind}보다 더 많은 시간과 더 많은 메모리를 사용하여 실행됩니다.
 
-### <a name="cause"></a>Cause(원인)
+### <a name="cause"></a>원인
 
 앱이 {x:Bind} 대신 {Binding}을 사용하고 있습니다. {Binding}을 사용하면 특수 작업 집합과 CPU 오버헤드가 발생합니다. {Binding}을 만들면 일련의 할당이 발생하고, 바인딩 대상을 업데이트하면 리플렉션 및 boxing이 발생할 수 있습니다.
 
@@ -199,7 +199,7 @@ ResourceDictionaries는 일반적으로 리소스, 즉 앱이 여러 위치(예:
 
 x:Name이 있는 모든 리소스는 ResourceDictionary가 만들어지면 바로 인스턴스화됩니다. 이렇게 되는 이유는 x:Name에서 앱에 이 리소스에 대한 필드 액세스가 필요함을 플랫폼에 알리므로 플랫폼이 참조를 생성할 관련 항목을 만들어야 하기 때문입니다.
 
-### <a name="cause"></a>Cause(원인)
+### <a name="cause"></a>원인
 
 앱이 리소스에서 x:Name을 설정하고 있습니다.
 
@@ -209,7 +209,7 @@ x:Name이 있는 모든 리소스는 ResourceDictionary가 만들어지면 바�
 
 ## <a name="collections-control-is-using-a-non-virtualizing-panel"></a>컬렉션 컨트롤이 비가상화 패널을 사용하고 있음
 
-사용자 지정 항목 패널 템플릿(ItemsPanel 참조)을 제공하는 경우 ItemsWrapGrid 또는 ItemsStackPanel과 같은 가상화 패널을 사용해야 합니다. VariableSizedWrapGrid, WrapGrid 또는 StackPanel을 사용하는 경우에는 가상화할 수 없습니다. 또한 ItemsWrapGrid 또는 ItemsStackPanel을 사용할 경우에만 ChoosingGroupHeaderContainer, ChoosingItemContainer 및 ContainerContentChanging과 같은 ListView 이벤트가 발생됩니다.
+사용자 지정 항목 패널 템플릿(ItemsPanel 참조)을 제공하는 경우 ItemsWrapGrid 또는 ItemsStackPanel과 같은 가상화 패널을 사용해야 합니다. VariableSizedWrapGrid, WrapGrid 또는 StackPanel을 사용하는 경우에는 가상화할 수 없습니다. 또한 다음 ListView 이벤트는는 ItemsWrapGrid 또는 ItemsStackPanel를 사용 하는 경우에 발생 합니다. ChoosingGroupHeaderContainer ChoosingItemContainer, 하며 ContainerContentChanging 합니다.
 
 UI 가상화는 컬렉션 성능을 개선할 수 있는 가장 중요한 기능입니다. 이는 항목을 나타내는 UI 요소가 필요에 따라 만들어짐을 의미합니다. 1000개 항목의 컬렉션에 바인딩된 항목 컨트롤의 경우 동시에 모든 항목에 대한 UI를 만드는 것은 리소스 낭비입니다. 왜냐하면 이들을 동시에 모두 표시할 수 없기 때문입니다. ListView 및 GridView(및 기타 표준 ItemsControl 파생 컨트롤)는 UI 가상화를 수행합니다. 항목이 보기에 가까이(몇 페이지 밖) 스크롤되면 프레임워크가 항목에 대한 UI를 생성하고 이를 캐시합니다. 항목이 다시 표시될 것 같지 않은 경우 프레임워크는 메모리를 회수합니다.
 
@@ -219,7 +219,7 @@ UI 가상화는 컬렉션 성능을 개선하는 데 몇 가지 핵심 요소 �
 
 가상화되지 않은 ItemsControl은 필요 이상으로 많은 해당 자식 항목을 로드하여 로드 시간과 리소스 사용량을 증가시킵니다.
 
-### <a name="cause"></a>Cause(원인)
+### <a name="cause"></a>원인
 
 가상화를 지원하지 않는 패널을 사용하고 있습니다.
 
@@ -227,7 +227,7 @@ UI 가상화는 컬렉션 성능을 개선하는 데 몇 가지 핵심 요소 �
 
 ItemsWrapGrid 또는 ItemsStackPanel과 같은 가상화 패널을 사용합니다.
 
-## <a name="accessibility-uia-elements-with-no-name"></a>접근성: 이름이 없는 UIA 요소
+## <a name="accessibility-uia-elements-with-no-name"></a>내게 필요한 옵션: 이름이 없는 UIA 요소
 
 XAML에서 AutomationProperties.Name을 설정하여 이름을 제공할 수 있습니다. AutomationProperties.Name이 설정되어 있지 않은 경우 많은 자동화 피어가 UIA에 기본 이름을 제공합니다. 
 
@@ -235,7 +235,7 @@ XAML에서 AutomationProperties.Name을 설정하여 이름을 제공할 수 있
 
 사용자가 이름이 없는 요소에 도달하면 해당 요소가 무엇에 관련된 것인지 알 수 없습니다. 
 
-### <a name="cause"></a>Cause(원인)
+### <a name="cause"></a>원인
 
 요소의 UIA 이름이 null이거나 비어 있습니다. 이 규칙은 AutomationProperties.Name의 값이 아니라 UIA에 표시되는 내용을 확인합니다.
 
@@ -245,7 +245,7 @@ XAML에서 AutomationProperties.Name을 설정하여 이름을 제공할 수 있
 
 경우에 따라 올바른 응용 프로그램 수정은 이름을 제공하는 것이 아니라 UIA 요소를 원시 트리를 제외한 모든 곳에서 제거하는 것입니다. XAML에서 AutomationProperties.AccessibilityView = “Raw”를 설정하여 이 작업을 수행할 수 있습니다.
 
-## <a name="accessibility-uia-elements-with-the-same-controltype-should-not-have-the-same-name"></a>접근성: 동일한 Controltype이 있는 UIA 요소는 이름이 동일하지 않아야 함
+## <a name="accessibility-uia-elements-with-the-same-controltype-should-not-have-the-same-name"></a>내게 필요한 옵션: 동일한 Controltype UIA 요소에는 이름이 없어야 합니다.
 
 동일한 UIA 부모를 가진 두 개의 UIA 요소는 Name 및 ControlType이 같지 않아야 합니다. ControlType이 다른 경우 Name이 동일한 두 개의 컨트롤을 가질 수 있습니다. 
 
@@ -255,7 +255,7 @@ XAML에서 AutomationProperties.Name을 설정하여 이름을 제공할 수 있
 
 사용자가 동일한 UIA 부모를 가진 다른 요소로서 Name 및 ControlType이 동일한 요소에 도달하면 해당 사용자는 요소 간에 차이점을 구분할 수가 없을 수 있습니다.
 
-### <a name="cause"></a>Cause(원인)
+### <a name="cause"></a>원인
 
 UIA 부모가 동일한 UIA 요소는 Name 및 ControlType이 동일합니다.
 

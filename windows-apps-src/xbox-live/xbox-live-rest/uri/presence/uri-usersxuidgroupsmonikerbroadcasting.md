@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 98eaa60204e3c98eb1b09a13372f7b0c084a6608
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941059"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651468"
 ---
 # <a name="usersxuidxuidgroupsmonikerbroadcasting"></a>/users/xuid({xuid})/groups/{moniker}/broadcasting
-액세스 그룹 모니커 하 여 지정 된 브로드캐스트 사용자의 현재 상태 기록 URI에 표시 되는 XUID와 관련이 있습니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
+액세스 그룹 모니커가 지정 된 브로드캐스트 사용자의 현재 상태 레코드를 URI에 표시 되는 XUID 관련이 있습니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`합니다.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -24,19 +24,19 @@ ms.locfileid: "8941059"
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| xuid| string| Xbox 사용자 ID (XUID)와 관련 된 그룹에 XUIDs 사용자의 합니다.| 
-| 모니커| string| 사용자의 그룹을 정의 하는 문자열입니다. 현재 허용 된 유일한 모니커 대문자 'P'를 사용 하 여 "사람" 인 경우| 
+| xuid| 문자열| Xbox 사용자 ID (XUID)의 그룹 XUIDs와 관련 된 사용자입니다.| 
+| 모니커| 문자열| 사용자 그룹을 정의 하는 문자열입니다. 현재 허용 된 유일한 모니커 대문자 'P'를 사용 하 여 "People" 됩니다.| 
   
 <a id="ID4E4B"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [GET (/users/xuid({xuid})/groups/{moniker}/broadcasting )](uri-usersxuidgroupsmonikerbroadcastingget.md)
 
-&nbsp;&nbsp;지정 된 URI에 표시 되는 XUID와 관련 된 그룹 모니커 브로드캐스트 사용자의 현재 상태 레코드를 검색 합니다.
+&nbsp;&nbsp;그룹 모니커가 XUID URI에 표시 되는 관련 된 지정 된 브로드캐스트 사용자의 현재 상태 레코드를 검색 합니다.
  
 <a id="ID4EHC"></a>
 
@@ -46,8 +46,8 @@ ms.locfileid: "8941059"
 <a id="ID4EJC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[상태 URI](atoc-reference-presence.md)
+[현재 상태 Uri](atoc-reference-presence.md)
 
    

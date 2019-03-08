@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 업데이트, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: fd0bb8df9b9fc36216da72e4ad01ebd2e650ad1a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939061"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57620618"
 ---
 # <a name="update-an-add-on-submission"></a>추가 기능 제출 업데이트
 
@@ -20,13 +20,13 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 추가 기
 
 이 메서드가 Microsoft Store 제출 API를 사용하여 추가 기능 제출을 만드는 프로세스에 적용되는 방법은 [추가 기능 제출 관리](manage-add-on-submissions.md)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
 * 아직 완료하지 않은 경우 Microsoft Store 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
-* 앱 중 하나에 대 한 추가 기능 제출을 만듭니다. 파트너 센터에서 이렇게 하려면 또는 [추가 기능 제출 만들기](create-an-add-on-submission.md) 메서드를 사용 하 여이 수행할 수 있습니다.
+* 앱 중 하나에 대 한 추가 기능 제출을 만듭니다. 파트너 센터에서이 수행할 수 있는 또는 사용 하 여이 수행할 수는 [는 추가 기능 제출 만들기](create-an-add-on-submission.md) 메서드.
 
 ## <a name="request"></a>요청
 
@@ -39,24 +39,24 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 추가 기
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 이름        | 유형   | 설명                                                                 |
+| 이름        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | 필수. 제출을 업데이트하려는 추가 기능의 스토어 ID입니다. 파트너 센터에서 스토어 ID는 사용할 수 있으며 [추가 기능 만들기](create-an-add-on.md) 또는 [추가 기능 세부 정보 가져오기](get-all-add-ons.md)에 대 한 요청에 대 한 응답 데이터에 포함 되어 있습니다.  |
-| submissionId | string | 필수. 업데이트할 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대해이 ID는 또한 파트너 센터에서 제출 페이지의 URL을 사용할 수 있습니다.  |
+| inAppProductId | 문자열 | 필수. 제출을 업데이트하려는 추가 기능의 스토어 ID입니다. 파트너 센터에서 Store ID 사용할 수 있으며 응답 데이터에 대 한 요청에 포함 됩니다 [추가 기능을 만듭니다](create-an-add-on.md) 또는 [추가 기능 세부 정보 가져오기](get-all-add-ons.md)합니다.  |
+| submissionId | 문자열 | 필수. 업데이트할 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대 한이 ID의 파트너 센터에서 제출 페이지의 URL을 사용할 수도 있습니다.  |
 
 
 ### <a name="request-body"></a>요청 본문
 
 요청 본문에는 다음 매개 변수가 있습니다.
 
-| 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
+| 값      | 형식   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | contentType           | 문자열  |  추가 기능에 제공된 [콘텐츠의 유형](../publish/enter-add-on-properties.md#content-type)입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
 | 키워드           | 배열  | 추가 기능에 대한 [키워드](../publish/enter-add-on-properties.md#keywords)를 최대 10개까지 포함하는 문자열의 배열입니다. 앱에서 이러한 키워드를 사용하여 추가 기능을 쿼리할 수 있습니다.   |
@@ -189,15 +189,15 @@ Content-Type: application/json
 | 오류 코드 |  설명   |
 |--------|------------------|
 | 400  | 요청이 유효하지 않아서 제출을 업데이트할 수 없습니다. |
-| 409  | 추가 기능을의 현재 상태 때문에 제출을 업데이트할 수 없거나 또는 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
+| 409  | 파트너 센터 기능을 사용 하는 추가 기능 또는 추가 기능을 현재 상태로 인해 제출을 업데이트 하지 못했습니다 [현재 Microsoft Store 전송 API에 의해 지원 되지 않습니다](create-and-manage-submissions-using-windows-store-services.md#not_supported)합니다. |   
 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-* [추가 기능 제출 관리](manage-add-on-submissions.md)
+* [Microsoft Store 서비스를 사용 하 여 서브 미션을 만들고 설정 합니다.](create-and-manage-submissions-using-windows-store-services.md)
+* [추가 기능 제안 관리](manage-add-on-submissions.md)
 * [추가 기능 제출 가져오기](get-an-add-on-submission.md)
 * [추가 기능 제출 만들기](create-an-add-on-submission.md)
 * [추가 기능 제출 커밋](commit-an-add-on-submission.md)
 * [추가 기능 제출 삭제](delete-an-add-on-submission.md)
-* [추가 기능 제출 상태 가져오기](get-status-for-an-add-on-submission.md)
+* [추가 기능 제출 상태를 가져옵니다.](get-status-for-an-add-on-submission.md)

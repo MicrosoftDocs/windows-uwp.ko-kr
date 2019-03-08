@@ -3,15 +3,15 @@ title: Xbox 장치 포털 REST API
 description: Xbox One의 UWP에 대한 API 참조입니다.
 ms.date: 10/25/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.assetid: 5ae8e953-0465-487b-81dd-54a85c904daf
 ms.localizationpriority: medium
 ms.openlocfilehash: d8fdcf01d7d1f72624d73acf2d10ce28dfb75e04
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945835"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57656998"
 ---
 # <a name="xbox-device-portal-rest-api"></a>Xbox 장치 포털 REST API
 
@@ -31,11 +31,11 @@ ms.locfileid: "8945835"
 |[/ext/screenshot](wdp-media-capture-api.md)| 현재 콘솔에 표시되는 화면의 PNG 표현을 캡처합니다. |
 |[/ext/settings](wdp-xboxsettings-api.md)| Xbox One 개발자 설정에 액세스합니다. |
 |[/ext/smb/developerfolder](wdp-smb-api.md)| 개발 PC에서 파일 탐색기를 통해 콘솔의 개발자 폴더에 액세스합니다. |
-|[/ext/user](wdp-user-management.md)| Xbox One 본체에서 사용자를 관리합니다. |
+|[/ext/user](wdp-user-management.md)| Xbox One 콘솔에서 사용자를 관리합니다. |
 |[/ext/xbox/info](wdp-xboxinfo-api.md)| Xbox One 장치에 대한 정보를 제공합니다. |
 |[/ext/xboxlive/sandbox](wdp-sandbox-api.md)| Xbox Live 샌드박스를 관리합니다. |
 
 ## <a name="see-also"></a>참고 항목
 
-- [Xbox One의 UWP](index.md)
-- [Windows 장치 포털](../debug-test-perf/device-portal.md)
+- [Xbox One에서 UWP](index.md)
+- [Windows Device Portal](../debug-test-perf/device-portal.md)

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c622c037f878d1ad34cdadf897dde10683532832
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932826"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660868"
 ---
 # <a name="rasterization-rules"></a>래스터화 규칙
 
@@ -21,7 +21,7 @@ ms.locfileid: "8932826"
 
 매핑되는 기본 요소의 유형과 데이터가 앨리어싱을 줄이기 위해 다중 샘플링을 사용하는지 여부에 따라 달라지는 몇 가지 규칙 유형이 있습니다. 다음 그림은 코너 케이스가 처리되는 방법을 보여 줍니다.
 
-## <a name="span-idtrianglespanspan-idtrianglespanspan-idtrianglespantriangle-rasterization-rules-without-multisampling"></a><span id="Triangle"></span><span id="triangle"></span><span id="TRIANGLE"></span>삼각형 래스터화 규칙(다중 샘플링 없음)
+## <a name="span-idtrianglespanspan-idtrianglespanspan-idtrianglespantriangle-rasterization-rules-without-multisampling"></a><span id="Triangle"></span><span id="triangle"></span><span id="TRIANGLE"></span>삼각형 래스터화 규칙 (샘플링) 없음
 
 
 삼각형 안의 모든 픽셀 중심이 그려집니다. 픽셀이 상단 왼쪽 규칙을 통과하는 경우, 내부에 있는 것으로 간주됩니다. 상단 왼쪽 규칙이란 삼각형의 상단 가장자리 또는 왼쪽 가장자리에 놓여 있는 픽셀 중심은 삼각형 내부에 있는 것으로 정의된다는 규칙입니다.
@@ -39,7 +39,7 @@ ms.locfileid: "8932826"
 
 픽셀의 밝은 회색 및 어두운 회색 외피는 픽셀들을 픽셀 그룹으로 표시해 어떤 삼각형 내부에 있는지 나타냅니다.
 
-## <a name="span-idline1spanspan-idline1spanspan-idline1spanline-rasterization-rules-aliased-without-multisampling"></a><span id="Line_1"></span><span id="line_1"></span><span id="LINE_1"></span>선 래스터화 규칙(앨리어싱됨, 다중 샘플링 없음)
+## <a name="span-idline1spanspan-idline1spanspan-idline1spanline-rasterization-rules-aliased-without-multisampling"></a><span id="Line_1"></span><span id="line_1"></span><span id="LINE_1"></span>선 래스터화 규칙 (다중 샘플링 하지 않고 별칭이 지정)
 
 
 선 래스터화 규칙은 다이아몬드 테스트 영역을 사용하여 선이 픽셀을 포함하는지 결정합니다. x-major 선(-1 &lt;= slope &lt;= +1인 선)의 경우, 다이아몬드 테스트 영역에는 아래 왼쪽 가장자리, 아래 오른쪽 가장자리, 하단 코너가 포함되며(실선으로 표시), 위 왼쪽 가장자리, 위 오른쪽 가장자리, 상단 코너, 왼쪽 코너, 오른쪽 코너는 다이아몬드에서 제외됩니다(점선으로 표시). y-major 선은 x-major 선이 아닌 모든 선입니다. 테스트 다이아몬드 영역은 오른쪽 코너도 포함된다는 점만 제외하고 x-major 선의 설명과 동일합니다.
@@ -50,7 +50,7 @@ ms.locfileid: "8932826"
 
 ![앨리어싱된 선 래스터화의 예](images/d3d10-rasterrulesline.png)
 
-## <a name="span-idline2spanspan-idline2spanspan-idline2spanline-rasterization-rules-antialiased-without-multisampling"></a><span id="Line_2"></span><span id="line_2"></span><span id="LINE_2"></span>선 래스터화 규칙(앤티앨리어싱됨, 다중 샘플링 없음)
+## <a name="span-idline2spanspan-idline2spanspan-idline2spanline-rasterization-rules-antialiased-without-multisampling"></a><span id="Line_2"></span><span id="line_2"></span><span id="LINE_2"></span>선 래스터화 규칙 (다중 샘플링 하지 않고 앤티 앨리어싱)
 
 
 앤티앨리어싱된 선은 사각형(너비 = 1)인 것처럼 래스터화됩니다. 이 사각형은 픽셀별 커버리지 값을 생성하는 렌더링 대상과 교차하며, 이 값은 증가하여 픽셀 셰이더 출력 알파 구성 요소가 됩니다. 다중 샘플링된 렌더링 대상에서 선을 그릴 때는 앤티앨리어싱이 수행되지 않습니다.
@@ -67,7 +67,7 @@ ms.locfileid: "8932826"
 
 srcColor \* srcAlpha + destColor \* (1-srcAlpha)
 
-## <a name="span-idpointspanspan-idpointspanspan-idpointspanpoint-rasterization-rules-without-multisampling"></a><span id="Point"></span><span id="point"></span><span id="POINT"></span>점 래스터화 규칙(다중 샘플링 없음)
+## <a name="span-idpointspanspan-idpointspanspan-idpointspanpoint-rasterization-rules-without-multisampling"></a><span id="Point"></span><span id="point"></span><span id="POINT"></span>사용 (샘플링) 하지 않고 지점 래스터화 규칙
 
 
 점은 삼각형 래스터화 규칙을 사용하는 Z 패턴의 삼각형 2개로 구성된 것으로 해석됩니다. 좌표는 1픽셀 너비의 정사각형의 중심을 식별합니다. 점에는 컬링이 없습니다.
@@ -76,7 +76,7 @@ srcColor \* srcAlpha + destColor \* (1-srcAlpha)
 
 ![점 래스터화의 예](images/d3d10-rasterrulespoint.png)
 
-## <a name="span-idmultisamplespanspan-idmultisamplespanspan-idmultisamplespanmultisample-anti-aliasing-rasterization-rules"></a><span id="Multisample"></span><span id="multisample"></span><span id="MULTISAMPLE"></span>다중 샘플 앤티앨리어싱 래스터화 규칙
+## <a name="span-idmultisamplespanspan-idmultisamplespanspan-idmultisamplespanmultisample-anti-aliasing-rasterization-rules"></a><span id="Multisample"></span><span id="multisample"></span><span id="MULTISAMPLE"></span>다중 샘플 앤티앨리어싱을 래스터화 규칙
 
 
 다중 샘플 앤티앨리어싱(MSAA)은 여러 하위 샘플 위치에서 픽셀 커버리지 및 깊이-스텐실 테스트를 사용하여 기하 도형 앨리어싱을 줄입니다. 성능 향상을 위해 포함된 하위 픽셀에서 셰이더 출력을 공유함으로써 포함된 픽셀마다 픽셀별 계산이 한 번 수행됩니다. 다중 샘플 앤티앨리어싱은 표면 앨리어싱을 줄이지 않습니다. 샘플 위치 및 재구성 함수는 하드웨어 구현에 따라 달라집니다.
@@ -99,16 +99,16 @@ srcColor \* srcAlpha + destColor \* (1-srcAlpha)
 
 [load](https://msdn.microsoft.com/library/windows/desktop/bb509694)를 사용하여 셰이더로 다시 읽어올 수 있는 렌더링 대상에 다중 샘플링 형식을 사용할 수 있습니다. 셰이더가 액세스하는 개별 샘플에는 resolve가 필요하지 않기 때문입니다. 다중 샘플 리소스에는 깊이 형식이 지원되지 않으므로 깊이 형식은 렌더링 대상으로만 제한됩니다.
 
-유형 없는 형식은 다중 샘플링을 지원하여 리소스 뷰가 데이터를 다른 방식으로 해석할 수 있습니다. 예를 들어 R8G8B8A8\_TYPELESS를 사용하여 다중 샘플 리소스를 만들고 R8G8B8A8\_UINT 형식이 포함된 렌더링 대상 뷰 리소스를 사용하여 렌더링한 다음 R8G8B8A8\_UNORM 데이터 형식이 포함된 다른 리소스로 콘텐츠를 해결할 수 있습니다.
+유형 없는 형식은 다중 샘플링을 지원하여 리소스 뷰가 데이터를 다른 방식으로 해석할 수 있습니다. 예를 들어 R8G8B8A8를 사용 하 여 다중 샘플 리소스를 만들 수 있습니다\_TYPELESS는 R8G8B8A8를 사용 하 여 렌더링 대상 뷰 리소스를 사용 하 여 렌더링\_UINT는 R8G8B8A8 사용 하 여 다른 리소스 내용을 확인 한 다음 형식으로\_UNORM 데이터 형식입니다.
 
 ### <a name="span-idhardwaresupportspanspan-idhardwaresupportspanspan-idhardwaresupportspanhardware-support"></a><span id="Hardware_Support"></span><span id="hardware_support"></span><span id="HARDWARE_SUPPORT"></span>하드웨어 지원
 
 API는 품질 수준 수를 통해 다중 샘플링에 대한 하드웨어 지원을 보고합니다. 예를 들어 0 품질 수준은 하드웨어가 다중 샘플링을 지원하지 않음(특정 형식 및 품질 수준에서)을 뜻합니다. 품질 수준 3은 하드웨어가 세 가지 샘플 레이아웃 및/또는 resolve 알고리즘을 지원한다는 뜻입니다. 다음을 가정할 수도 있습니다.
 
 -   다중 샘플링을 지원하는 모든 형식은 해당 패밀리의 모든 형식에 대해 동일한 품질 수준 수를 지원합니다.
--   다중 샘플링을 지원하고 \_UNORM, \_SRGB, \_SNORM 또는 \_FLOAT 형식을 가진 모든 형식도 해결을 지원합니다.
+-   다중 샘플링을 지원 하며이 모든 형식 합니다 \_UNORM를 \_SRGB, \_SNORM 또는 \_FLOAT 형식에 해결 지원 합니다.
 
-### <a name="span-idcentroidsamplingspanspan-idcentroidsamplingspanspan-idcentroidsamplingspancentroid-sampling-of-attributes-when-multisample-antialiasing"></a><span id="Centroid_Sampling"></span><span id="centroid_sampling"></span><span id="CENTROID_SAMPLING"></span>다중 샘플 앤티앨리어싱 시 특성의 중심 샘플링
+### <a name="span-idcentroidsamplingspanspan-idcentroidsamplingspanspan-idcentroidsamplingspancentroid-sampling-of-attributes-when-multisample-antialiasing"></a><span id="Centroid_Sampling"></span><span id="centroid_sampling"></span><span id="CENTROID_SAMPLING"></span>다중 샘플 때 특성 중심 샘플링 앤티 앨리어싱
 
 기본적으로 꼭짓점 특성은 다중 샘플 앤티앨리어싱 도중 픽셀 중심에 보간됩니다. 픽셀 중심이 포함되지 않는 경우, 특성은 픽셀 중심으로 외삽됩니다. 중심 시맨틱을 포함하는(픽셀이 완전히 포함되지 않는다고 가정) 픽셀 셰이더 입력이 픽셀의 포함된 영역 내 어딘가(가능하다면 포함된 샘플 위치 중 하나)에서 샘플링될 경우. 샘플 마스크(래스터라이저 상태에 의해 지정)는 중심 계산 전에 적용됩니다. 따라서 마스크 아웃된 샘플은 중심 위치로 사용되지 않습니다.
 
@@ -117,7 +117,7 @@ API는 품질 수준 수를 통해 다중 샘플링에 대한 하드웨어 지�
 -   샘플 마스크는 모든 샘플을 허용합니다. 픽셀이 포함되거나 샘플 중 포함된 샘플이 없는 경우, 픽셀 중심을 사용합니다. 그렇지 않은 경우, 첫 번째 포함된 샘플이 픽셀 중심부터 시작해 바깥쪽 순서로 선택됩니다.
 -   샘플 마스크는 하나를 제외한 모든 샘플을 끕니다(일반적 시나리오). 응용 프로그램은 싱글 비트 샘플 마스크 값을 순환하고 중심 샘플링을 사용해 각 샘플의 장면을 다시 렌더링함으로써 멀티패스 슈퍼샘플링을 구현할 수 있습니다. 이렇게 하려면 응용 프로그램이 도함수를 조정하여 보다 높은 텍스처 샘플링 밀도를 위해 더욱 상세한 텍스처 mips를 적절히 선택해야 합니다.
 
-### <a name="span-idderivativecalculationsspanspan-idderivativecalculationsspanspan-idderivativecalculationsspanderivative-calculations-when-multisampling"></a><span id="Derivative_Calculations"></span><span id="derivative_calculations"></span><span id="DERIVATIVE_CALCULATIONS"></span>다중 샘플링 시 도함수 계산
+### <a name="span-idderivativecalculationsspanspan-idderivativecalculationsspanspan-idderivativecalculationsspanderivative-calculations-when-multisampling"></a><span id="Derivative_Calculations"></span><span id="derivative_calculations"></span><span id="DERIVATIVE_CALCULATIONS"></span>다중 샘플링 하는 경우 파생 계산
 
 픽셀 셰이더는 항상 최소 2x2 픽셀 영역을 사용하여 실행돼 도함수 계산을 지원합니다. 도함수는 인접 픽셀의 데이터 사이의 델타를 취해 계산됩니다(각 픽셀의 데이터가 수평 또는 수직 단위 간격으로 샘플링되었다고 가정). 이것은 다중 샘플링의 영향을 받지 않습니다.
 
@@ -125,12 +125,12 @@ API는 품질 수준 수를 통해 다중 샘플링에 대한 하드웨어 지�
 
 사실 도함수와 중심 샘플링을 결합하지 않는 것이 좋습니다. 중심 샘플링은 기본 요소의 보간된 특성이 외삽되지 않는 것이 중요한 상황에서 유용할 수 있지만 이 경우, 기본 요소 가장자리가 픽셀을 가로지르는 곳에서 (연속적으로 변하는 것이 아니라) 점프하는 것처럼 보이는 특성이나 LOD를 도출하는 텍스처 샘플링 연산이 사용할 수 없는 도함수와 같은 상충 관계가 따릅니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [부록](appendix.md)
 
-[RS(래스터라이저) 단계](rasterizer-stage--rs-.md)
+[래스터 라이저 (RS) 단계](rasterizer-stage--rs-.md)
 
  
 

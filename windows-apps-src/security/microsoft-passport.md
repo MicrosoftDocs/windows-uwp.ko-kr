@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: aacce5710f8ed0066e5efdfb5e0344473f718f9b
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049450"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651548"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
-이 문서는 새로운 Windows Hello 기술에 설명 Windows 10 운영 체제의 일부로 제공 하 고 개발자가 자신의 유니버설 Windows 플랫폼 (UWP) 앱 및 백 엔드 서비스를 보호 하기 위해이 기술을 구현 하는 방법을 설명 합니다. 여기서는 기존 자격 증명의 사용으로 발생되는 위협 요소를 완화할 수 있는 이러한 기술의 특징에 대해 중점적으로 설명하고 Windows 10 롤아웃의 일부로 이러한 기술을 디자인 및 배포하는 방법에 대한 지침을 제공합니다.
+이 문서에서는 새로운 Windows Hello 기술을 Windows 10 운영 체제의 일부로 제공 되 고 개발자 유니버설 Windows 플랫폼 (UWP) 앱 및 백 엔드 서비스를 보호 하기 위해이 기술을 구현 방법을 설명 하는 설명 합니다. 여기서는 기존 자격 증명의 사용으로 발생되는 위협 요소를 완화할 수 있는 이러한 기술의 특징에 대해 중점적으로 설명하고 Windows 10 롤아웃의 일부로 이러한 기술을 디자인 및 배포하는 방법에 대한 지침을 제공합니다.
 
 이 문서는 앱 개발에 중점을 둡니다. Windows Hello의 아키텍처 및 구현에 대한 자세한 내용은 [TechNet의 Windows Hello 가이드](https://technet.microsoft.com/library/mt589441.aspx)를 참조하세요.
 
@@ -50,27 +50,27 @@ Windows Hello는 기존 자격 증명을 확인하고 생체 인식 또는 PIN �
 
 ## <a name="2-what-is-windows-hello"></a>2 Windows Hello란?
 
-Windows Hello는 Windows 10이 기본 제공하는 새로운 생체 인식 로그인 시스템의 이름입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 장치의 잠금을 해제할 수 있습니다. 사용자가 장치별 자격 증명에 액세스하기 위해 고유한 생체 인식 식별자를 제공하면 인증이 시작됩니다. 이는 장치를 훔친 공격자에게 PIN이 없으면 로그온할 수 없음을 뜻합니다. Windows 보안 자격 증명 저장소는 장치의 생체 인식 데이터를 보호합니다. Windows Hello를 사용하여 장치 잠금을 해제하면 권한 있는 사용자가 모든 Windows 환경, 앱, 데이터, 웹 사이트 및 서비스에 액세스할 수 있습니다.
+Windows Hello는 Windows 10에서 기본 제공되는 새 생체 인식 로그인 시스템의 이름입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 디바이스의 잠금을 해제할 수 있습니다. 사용자가 장치별 자격 증명에 액세스하기 위해 고유한 생체 인식 식별자를 제공하면 인증이 시작됩니다. 이는 장치를 훔친 공격자에게 PIN이 없으면 로그온할 수 없음을 뜻합니다. Windows 보안 자격 증명 저장소는 디바이스의 생체 인식 데이터를 보호합니다. Windows Hello를 사용하여 장치 잠금을 해제하면 권한 있는 사용자가 모든 Windows 환경, 앱, 데이터, 웹 사이트 및 서비스에 액세스할 수 있습니다.
 
 Windows Hello 인증자를 Hello라고 합니다. Hello는 개별 디바이스 및 특정 사용자의 조합에만 있습니다. Hello는 디바이스 간에 로밍되지 않고 서버 또는 호출 앱과 공유되지 않으며 디바이스에서 쉽게 추출할 수 없습니다. 여러 사용자가 디바이스를 공유하는 경우 각 사용자가 자신의 계정을 설정해야 합니다. 모든 계정이 해당 디바이스의 고유 Hello를 갖게 됩니다. Hello는 저장된 자격 증명을 잠금 해제하는 데 사용할 수 있는 토큰이라고 생각할 수 있습니다. Hello 자체는 사용자를 앱이나 서비스에 인증하지 않지만 인증할 수 있는 자격 증명을 해제합니다. 즉, Hello는 사용자 자격 증명이 아니라 인증 프로세스에 대한 두 번째 요소입니다.
 
 ### <a name="21-windows-hello-authentication"></a>2.1 Windows Hello 인증
 
-Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강력한 방법으로, 사용자와 요청된 서비스 또는 데이터 항목 간의 경로에 대한 첫 번째 부분을 해결합니다. 디바이스에서 사용자를 인식한 후 요청된 리소스에 대한 액세스를 허용할지 여부를 결정하려면 먼저 사용자를 인증해야 합니다. Windows Hello는 Windows에 완전히 통합된 강력한 2FA 방식이며 재사용할 수 있는 암호를 특정 디바이스와 생체 인식 제스처 또는 PIN의 조합으로 대체합니다.
+Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강력한 방법으로, 사용자와 요청된 서비스 또는 데이터 항목 간의 경로에 대한 첫 번째 부분을 해결합니다. 디바이스에서 사용자를 인식한 후 요청된 리소스에 대한 액세스를 허용할지 결정하려면 먼저 사용자를 인증해야 합니다. Windows Hello는 Windows에 완전히 통합된 강력한 2FA 방식이며 재사용할 수 있는 암호를 특정 디바이스와 생체 인식 제스처 또는 PIN의 조합으로 대체합니다.
 
-그러나 Windows Hello는 기존 2FA 시스템을 대체하는 데 그치는 것은 아닙니다. 개념적으로 보면 스마트 카드와 유사합니다. 문자열 비교 대신 암호화 기본 방식을 사용하여 인증을 수행하고 사용자의 주요 자료를 변조 방지 하드웨어 내에서 보호합니다. Windows Hello에는 스마트 카드 배포에 필요한 추가 인프라 구성 요소도 필요하지 않습니다. 특히 현재 PKI(공개 키 인프라)가 없는 경우에는 인증서 관리를 위한 PKI가 필요 없습니다. Windows Hello는 가상 스마트 카드의 배포 유연성과 물리적 스마트 카드의 강력한 보안과 같은 스마트 카드 기술의 주요 장점만 가져오고 단점은 제외하였습니다.
+그러나 Windows Hello는 기존 2FA 시스템을 대체하는 데 그치는 것은 아닙니다. 개념적으로 보면 스마트 카드와 유사합니다. 문자열 비교 대신 암호화 기본 방식을 사용하여 인증을 수행하고 사용자의 주요 자료를 변조 방지 하드웨어 내에서 보호합니다. Windows Hello에는 스마트 카드 배포에 필요한 추가 인프라 구성 요소도 필요하지 않습니다. 특히, 현재 없는 경우는 인증서 관리를 위한 인프라 PKI(공개 키)가 필요 없습니다. Windows Hello는 가상 스마트 카드의 배포 유연성과 물리적 스마트 카드의 강력한 보안과 같은 스마트 카드 기술의 주요 장점만 가져오고 단점은 제외하였습니다.
 
 ### <a name="22-how-windows-hello-works"></a>2.2 Windows Hello의 작동 방식
 
-사용자가 자신의 컴퓨터에서 Windows Hello를 설정하면 Windows Hello는 해당 디바이스에 새 공개-개인 키 쌍을 만듭니다. TPM([신뢰할 수 있는 플랫폼 모듈](https://technet.microsoft.com/itpro/windows/keep-secure/trusted-platform-module-overview))은 이 개인 키를 생성하고 보호합니다. 디바이스에 TPM 칩이 없는 경우 개인 키는 소프트웨어에 의해 암호화되고 보호됩니다. 그 외에도 TPM 지원 디바이스는 TPM에 키가 바인딩되어 있음을 증명하는 데 사용할 수 있는 데이터 블록을 생성합니다. 예를 들어 솔루션에서 이 증명 정보를 사용하여 사용자에게 다른 권한 부여 수준이 승인되었는지 여부를 확인할 수 있습니다.
+사용자가 자신의 컴퓨터에서 Windows Hello를 설정하면 Windows Hello는 해당 디바이스에 새 공개-개인 키 쌍을 만듭니다. TPM([신뢰할 수 있는 플랫폼 모듈](https://technet.microsoft.com/itpro/windows/keep-secure/trusted-platform-module-overview))은 이 개인 키를 생성하고 보호합니다. 디바이스에 TPM 칩이 없는 경우 개인 키는 소프트웨어에 의해 암호화되고 보호됩니다. 그 외에도 TPM 지원 디바이스는 TPM에 키가 바인딩되어 있음을 증명하는 데 사용할 수 있는 데이터 블록을 생성합니다. 예를 들어 솔루션에서 이 증명 정보를 사용하여 사용자에게 다른 권한 부여 수준이 지정되었는지 여부를 확인할 수 있습니다.
 
 디바이스에서 Windows Hello를 사용하려면 사용자가 Azure Active Directory 계정 또는 Windows 설정에 연결된 Microsoft 계정이 있어야 합니다.
 
 #### <a name="221-how-keys-are-protected"></a>2.2.1 키 보호 방법
 
-키 자료가 생성될 때마다 공격으로부터 보호해야 합니다. 가장 강력한 보호 방법은 특수 하드웨어를 사용하는 것입니다. 오랫동안 보안에 중요한 응용 프로그램의 키를 생성, 저장 및 처리하는 데 HSM(하드웨어 보안 모듈)이 사용되었습니다. 스마트 카드는 특수한 유형의 HSM으로서, 신뢰할 수 있는 컴퓨팅 그룹 TPM 표준을 준수하는 디바이스입니다. 가능한 경우 Windows Hello 구현은 온보드 TPM 하드웨어를 이용하여 키를 생성, 저장, 처리합니다. 그러나 Windows Hello과 Windows Hello for Work는 온보드 TPM이 필요하지 않습니다.
+키 자료가 생성될 때마다 공격으로부터 보호해야 합니다. 가장 강력한 보호 방법은 특수 하드웨어를 사용하는 것입니다. 오랫동안 보안에 중요한 응용 프로그램의 키를 생성, 저장 및 처리하는 데 HSM(하드웨어 보안 모듈)이 사용되었습니다. 스마트 카드는 특수한 형식의 HSM으로서, 신뢰할 수 있는 컴퓨팅 그룹 TPM 표준 규격의 디바이스입니다. 가능한 경우 Windows Hello 구현은 온보드 TPM 하드웨어를 이용하여 키를 생성, 저장, 처리합니다. 그러나 Windows Hello과 Windows Hello for Work는 온보드 TPM이 필요하지 않습니다.
 
-가능한 경우 TPM 하드웨어를 사용하는 것이 좋습니다. TPM은 PIN 무차별 암호 대입 공격(brute-force attack)을 포함하여 여러 가지 알려진 잠재적 공격으로부터 보호합니다. TPM은 계정 잠금 이후 추가 보호 계층도 제공합니다. TPM이 키 자료를 잠그면 사용자는 PIN을 재설정해야 합니다. PIN을 재설정한다는 것은 이전 키 자료로 암호화된 모든 키와 인증서을 제거함을 뜻합니다.
+가능한 경우 TPM 하드웨어를 사용하는 것이 좋습니다. TPM은 PIN 무차별 암호 대입 공격(brute-force attack)을 포함하여 여러 가지 알려진 잠재적 공격으로부터 보호합니다. TPM은 계정 잠금 이후 추가 보호 계층도 제공합니다. TPM이 키 자료를 잠그면 사용자는 PIN을 재설정해야 합니다. PIN을 재설정한다는 것은 이전 키 자료로 암호화된 모든 키와 인증서가 제거된다는 의미입니다.
 
 #### <a name="222-authentication"></a>2.2.2 인증
 
@@ -82,7 +82,7 @@ Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강�
 
 Windows Hello 작동 방식에 대해 기본적인 사항을 이해했으므로 이제 응용 프로그램에서 Windows Hello를 구현하는 방법에 대해 살펴보겠습니다.
 
-Windows Hello를 사용하여 구현할 수 있는 여러 가지 시나리오가 있습니다. 예를 들어 디바이스에서 앱에 로그온하는 경우가 있습니다. 다른 흔한 예로 서비스에 대해 인증하는 경우를 들 수 있습니다. 로그온 이름과 암호를 사용하는 대신 Windows Hello를 사용하게 됩니다. 다음 장에서는 Windows Hello를 사용하여 서비스에 대해 인증하는 방법, 기존 사용자 이름/암호 시스템을 Windows Hello 시스템으로 변환하는 방법 등을 포함하여 몇 가지 시나리오 구현에 대해 살펴보겠습니다.
+Windows Hello를 사용하여 구현할 수 있는 여러 가지 시나리오가 있습니다. 예를 들어 디바이스에서 앱에 로그온하는 경우 또는 다른 일반적인 예로 서비스에 대해 인증하는 경우를 들 수 있습니다. 로그온 이름과 암호를 사용하는 대신 Windows Hello를 사용하게 됩니다. 다음 장에서는 Windows Hello를 사용하여 서비스에 대해 인증하는 방법, 기존 사용자 이름/암호 시스템을 Windows Hello 시스템으로 변환하는 방법 등을 포함하여 몇 가지 시나리오 구현에 대해 살펴보겠습니다.
 
 마지막으로, Windows Hello API는 앱에 사용할 운영 체제와 일치하는 Windows 10 SDK를 사용해야 한다는 점에 유의하세요. 즉, Windows 10에 배포될 앱에는 10.0.10240 Windows SDK를 사용하고 Windows 10 버전 1511에 배포될 앱에는 10.0.10586을 사용해야 합니다.
 
@@ -90,7 +90,7 @@ Windows Hello를 사용하여 구현할 수 있는 여러 가지 시나리오가
 
 이 장에서는 기존 인증 시스템이 없는 개발 가능 시나리오부터 시작합니다. 그리고 Windows Hello를 구현하는 방법을 설명합니다.
 
-다음 섹션에서는 기존 사용자 이름 및 암호 시스템에서 마이그레이션하는 방법을 다룹니다. 그러나 그 장에 관심이 더 가더라도 우선 필요한 코드와 프로세스에 대한 기본적인 지식을 얻기 위해 이 장을 훑어보는 것이 좋습니다.
+다음 섹션에서는 기존 사용자 이름과 암호 시스템에서 마이그레이션하는 방법에 대해 설명합니다. 그러나 그 장에 관심이 더 가더라도 우선 필요한 코드와 프로세스에 대한 기본적인 지식을 얻기 위해 이 장을 훑어보는 것이 좋습니다.
 
 ### <a name="31-enrolling-new-users"></a>3.1 새 사용자 등록
 
@@ -117,14 +117,14 @@ if (!keyCredentialAvailable)
 
 사용자가 자신의 PIN을 설정한 경우 앱은 사용자의 [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만듭니다. 앱은 또한 키가 TPM에서 생성되었음을 입증하는 암호화된 증거를 제공하는 키 증명 정보를 가져올 수도 있습니다. 사용 중인 디바이스를 등록하도록, 생성된 공개 키와 (선택적으로) 증명 정보가 백 엔드 서버로 전송됩니다. 모든 디바이스에서 생성된 모든 키 쌍은 고유합니다.
 
-[**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만드는 코드는 다음과 같습니다.
+[  **KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만드는 코드는 다음과 같습니다.
 
 ```csharp
 var keyCreationResult = await KeyCredentialManager.RequestCreateAsync(
     AccountId, KeyCredentialCreationOption.ReplaceExisting);
 ```
 
-[**RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048)는 공개 키 및 개인 키를 만드는 부분입니다. 디바이스에 적절한 TPM 칩이 있는 경우 API는 개인 키와 공개 키를 만들어 그 결과를 저장하도록 이 TPM 칩에 요청합니다. 이러한 TPM 칩이 없으면 OS에서 코드에 키 쌍이 만들어집니다. 생성된 개인 키에 대해 앱에서 직접 액세스하는 방법은 없습니다. 키 쌍 생성의 일부분이 결과 증명 정보이기도 합니다. 증명에 대한 자세한 내용은 다음 섹션을 참조하세요.
+[  **RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048)는 공개 키 및 개인 키를 만드는 부분입니다. 디바이스에 적절한 TPM 칩이 있는 경우 API는 개인 키와 공개 키를 만들어 그 결과를 저장하도록 이 TPM 칩에 요청합니다. 이러한 TPM 칩이 없으면 OS에서 코드에 키 쌍이 만들어집니다. 생성된 개인 키에 대해 앱에서 직접 액세스하는 방법은 없습니다. 키 쌍 생성의 일부분이 결과 증명 정보이기도 합니다. 증명에 대한 자세한 내용은 다음 섹션을 참조하세요.
 
 디바이스에서 키 쌍과 증명 정보가 만들어지면 공개 키, (선택적으로) 증명 정보, 고유 식별자(예: 메일 주소) 등을 백 엔드 등록 서비스로 전송하여 백 엔드에 저장해야 합니다.
 
@@ -134,11 +134,11 @@ var keyCreationResult = await KeyCredentialManager.RequestCreateAsync(
 
 ![Windows Hello 샘플 데이터베이스 스키마](images/passport-db.png)
 
-등록 논리는 다음과 같이 전개될 수 있습니다.
+등록 논리는 다음과 유사할 수 있습니다.
 
 ![Windows Hello 등록 논리](images/passport-registration.png)
 
-물론 수집한 등록 정보에는 간단한 시나리오에 포함된 것보다 훨씬 더 많은 식별 정보가 포함될 수 있습니다. 예를 들어, 앱이 은행 업무용 보안 서비스 같은 것에 액세스할 경우에는 등록 프로세스의 일부로 ID 증명과 다른 작업을 요청해야 합니다. 모든 조건이 충족되면 이 사용자의 공개 키가 백 엔드에 저장되고 다음에 사용자가 서비스를 사용하려고 할 때 유효성을 확인하는 데 사용됩니다.
+수집한 등록 정보에는 간단한 시나리오에 포함된 것보다 더 많은 식별 정보가 포함될 수 있습니다. 예를 들어, 앱이 은행 업무용 보안 서비스 같은 것에 액세스할 경우에는 등록 프로세스의 일부로 ID 증명과 다른 작업을 요청해야 합니다. 모든 조건이 충족되면 이 사용자의 공개 키가 백 엔드에 저장되고 다음에 사용자가 서비스를 사용하려고 할 때 유효성을 확인하는 데 사용됩니다.
 
 ```csharp
 using System;
@@ -208,14 +208,14 @@ static async void RegisterUser(string AccountId)
 - AIK 인증서의 시간이 유효합니다.
 - 체인 내 모든 발급 CA 인증서의 시간이 유효하며 인증서가 해지되지 않았습니다.
 - 증명서의 형식이 올바릅니다.
-- [**KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) BLOB에 대한 서명에 AIK 공개 키를 사용합니다.
-- [**KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) BLOB에 포함된 공개 키가 클라이언트에서 증명서와 함께 전송한 공개 RSA 키와 일치합니다.
+- [  **KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) BLOB에 대한 서명에 AIK 공개 키를 사용합니다.
+- [  **KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) BLOB에 포함된 공개 키가 클라이언트에서 증명서와 함께 전송한 공개 RSA 키와 일치합니다.
 
-이러한 조건에 따라 앱은 사용자에게 다른 권한 부여 수준을 할당할 수도 있습니다. 예를 들어 이러한 검사 중 하나에 실패하는 경우, 사용자를 등록하지 않거나 사용자가 할 수 있는 것을 제한할 수 있습니다.
+이러한 조건에 따라 앱은 사용자에게 다른 권한 부여 수준을 할당할 수도 있습니다. 예를 들어, 이러한 검사 중 하나에 실패 하는 경우 사용자를 등록하지 않거나 사용자가 수행할 수 있는 것을 제한할 수도 있습니다.
 
 ### <a name="32-logging-on-with-windows-hello"></a>3.2 Windows Hello로 로그온
 
-시스템에 등록한 사용자는 앱을 사용할 수 있습니다. 시나리오에 따라 사용자에게 앱을 사용하려면 먼저 인증하도록 요청하거나 사용자에게 백 엔드 서비스를 사용하기 시작하면 인증하도록 요청할 수 있습니다.
+시스템에 등록된 후에는 사용자가 앱을 사용할 수 있습니다. 시나리오에 따라 사용자에게 앱을 사용하려면 먼저 인증하도록 요청하거나 사용자에게 백 엔드 서비스를 사용하기 시작하면 인증하도록 요청할 수 있습니다.
 
 ### <a name="33-force-the-user-to-sign-in-again"></a>3.3 사용자에게 다시 로그인하도록 강제
 
@@ -241,7 +241,7 @@ if (consentResult.Equals(UserConsentVerificationResult.Verified))
 
 증명은 버전 2.0 이상인 TPM 칩을 사용하는 디바이스에서만 사용할 수만 있습니다. 따라서 이 정보를 사용하지 못하는 디바이스도 있을 수 있습니다.
 
-클라이언트 워크플로는 다음 차트와 비슷하게 전개될 수 있습니다.
+클라이언트 워크플로는 다음 차트와 비슷합니다.
 
 ![Windows Hello 클라이언트 워크플로](images/passport-client-workflow.png)
 
@@ -271,13 +271,13 @@ if (openKeyResult.Status == KeyCredentialStatus.Success)
 
 API는 개인 키를 사용해 시도에 서명하도록 OS에 요청하며, 그러면 시스템은 사용자에게 PIN 코드나 구성된 생체 인식 로그온을 요구합니다. 올바른 정보가 입력되면 시스템은 암호화 기능을 수행하고 시도에 서명하도록 TPM 칩에 요청합니다. TPM을 사용할 수 없는 경우에는 대체 소프트웨어 솔루션을 사용할 수 있습니다. 클라이언트는 서명된 시도를 다시 서버에 전송해야 합니다.
 
-기본 시도-응답 흐름은 다음 순서도에 나와 있습니다.
+기본 시도-응답 흐름이 이 시퀀스 다이어그램에 표시됩니다.
 
 ![Windows Hello 시도 응답](images/passport-challenge-response.png)
 
-다음으로 서버는 서명의 유효성을 검사해야 합니다. 공개 키를 요청 하 고 이후 유효성 검사에 사용 하도록 서버에 보낼 때 ASN.1 인코딩된 publicKeyInfo blob입니다. [GitHub의 Windows Hello 코드 샘플](https://go.microsoft.com/fwlink/?LinkID=717812)을 보면 Crypt32 함수를 더 많이 사용 되는 CNG blob으로 ASN.1 인코딩된 blob을 래핑하는 도우미 클래스는 표시 됩니다. 이 BLOB에는 공개 키 알고리즘(RSA 및 RSA 공개 키)이 포함됩니다.
+다음으로 서버는 서명의 유효성을 검사해야 합니다. 공개 키를 요청 하 고 향후 유효성 검사에 사용할 서버에 보낼 경우 publicKeyInfo ASN.1로 인코딩된 blob에 있습니다. 보면 합니다 [Windows Hello GitHub의 코드 샘플](https://go.microsoft.com/fwlink/?LinkID=717812), 자주 사용 되는 CNG blob ASN.1로 인코딩된 blob 변환할 Crypt32 함수를 래핑하는 도우미 클래스는 표시 됩니다. 이 BLOB에는 공개 키 알고리즘(RSA 및 RSA 공개 키)이 포함됩니다.
 
-샘플에서는 ASN.1 인코딩된 blob CNG blob으로 변환 하는 이유는 CNG 사용 (/ windows/데스크톱/SecCNG/cng-포털) 될 수 있도록 및 BCrypt API입니다. CNG blob을 조회 하는 경우 관련된 [BCRYPT_KEY_BLOB 구조](/windows/desktop/api/bcrypt/ns-bcrypt-_bcrypt_key_blob)를 안내 합니다 것입니다. 이 API 표면은 인증 및 Windows 응용 프로그램의 암호화에 사용할 수 있습니다. ASN.1 직렬화 할 수 있는 데이터 구조를 통신 하기 위한 문서화 된 표준 이며 공개 키 암호화와 인증서를 사용 하 여 자주 사용 됩니다. 따라서 공개 키 정보는이 방식으로 반환 됩니다. 공개 키가 RSA 키입니다. 및 Windows Hello 때 사용 하는 데이터에 서명 알고리즘입니다.
+이 샘플에서는 ASN.1로 인코딩된 blob CNG blob에 변환 하는 이유는 CNG를 사용 하 여 사용 되는 (/ windows/데스크톱/SecCNG/cng-포털) 될 수 있도록 및 BCrypt API. CNG blob를 조회 하는 경우를 가리키게 됩니다 하면 관련 [BCRYPT_KEY_BLOB 구조](/windows/desktop/api/bcrypt/ns-bcrypt-_bcrypt_key_blob)합니다. 이 API 화면의 Windows 응용 프로그램에서 인증 및 암호화에 사용할 수 있습니다. ASN.1은 serialize 할 수 있는 데이터 구조를 통신 하기 위한 문서화 된 표준 및 공개 키 암호화 및 인증서를 사용 하 여 일반적으로 사용 됩니다. 이유는이 방식으로 공개 키 정보가 반환 됩니다. 공개 키가 RSA 키입니다. 및 Windows Hello를 사용 하는 데이터를 서명 하는 경우 알고리즘입니다.
 
 CNG BLOB으로 변환된 후에는 사용자 공개 키와 비교하여 서명된 시도의 유효성을 검사해야 합니다. 모두가 자신만의 고유 시스템이나 백 엔드 기술을 사용하므로 이 논리를 구현하는 일반적인 방법은 없습니다. Microsoft는 SHA256을 해시 알고리즘으로 사용하고 SignaturePadding용으로 Pkcs1을 사용하므로 클라이언트로부터 전달되는 서명된 응답의 유효성을 검사할 때는 이를 사용해야 합니다. 서버 쪽 .NET 4.6에서 이를 수행하는 방법은 샘플을 참조해야 하지만, 일반적으로 다음과 같습니다.
 
@@ -338,7 +338,7 @@ static async Task<IBuffer> GetAuthenticationMessageAsync(IBuffer message, String
 
 ### <a name="35-enrolling-another-device"></a>3.5 다른 디바이스 등록
 
-요즘에는 사용자가 여러 디바이스에 동일한 앱을 설치하여 사용하는 경우가 흔합니다. 여러 디바이스에서 Windows Hello를 사용하는 경우 어떻게 작동하나요?
+요즘에는 사용자가 여러 디바이스에 동일한 앱을 설치하여 사용하는 것이 상당히 일반적입니다. 여러 디바이스에서 Windows Hello를 사용하는 경우 어떻게 작동하나요?
 
 Windows Hello를 사용하면 모든 디바이스가 고유한 개인 키와 공개 키 집합을 만듭니다. 즉, 사용자가 여러 디바이스를 사용할 수 있게 하려면 백 엔드에서 이 사용자의 여러 공개 키를 저장할 수 있어야 합니다. 테이블 구조의 예를 보려면 섹션 2.1의 데이터베이스 다이어그램을 참조하세요.
 
@@ -357,7 +357,7 @@ var keyCreationResult = await KeyCredentialManager.RequestCreateAsync(
 
 ### <a name="36-using-multiple-accounts-in-your-app"></a>3.6 앱에서 여러 계정 사용
 
-단일 계정에 대해 여러 디바이스를 지원할 뿐만 아니라 단일 앱에서 여러 계정을 지원하는 것도 일반적입니다. 예를 들어 앱 내에서 여러 Twitter 계정에 접속하는 경우가 있습니다. Windows Hello를 사용하면 여러 키 쌍을 만들어 앱 내에서 여러 계정을 지원할 수 있습니다.
+단일 계정에 대해 여러 디바이스를 지원할 뿐만 아니라 단일 앱에서 여러 계정을 지원하는 것도 일반적입니다. 예를 들어 앱 내에서 여러 Twitter 계정에 연결할 수 있습니다. Windows Hello를 사용하면 여러 키 쌍을 만들어 앱 내에서 여러 계정을 지원할 수 있습니다.
 
 이렇게 하는 한 가지 방법은 이전 장에서 사용한 사용자 이름 또는 고유 식별자를 격리된 저장소에 저장하는 것입니다. 따라서 새 계정을 만들 때마다 해당 계정 ID를 격리된 저장소에 저장하게 됩니다.
 
@@ -387,9 +387,9 @@ UI는 다음과 같습니다.
 
 ![Windows Hello UI](images/passport-ui.png)
 
-사용자가 Windows Hello를 사용하기로 한 경우, 앞의 설명대로 [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만듭니다. 백 엔드 등록 서버는 데이터베이스에 공개 키와 증명서(선택 사항)를 추가합니다. 사용자가 이미 사용자 이름 및 암호를 사용하여 인증되었기 때문에 서버에서는 새 자격 증명을 데이터베이스에 있는 현재 사용자 정보에 연결할 수 있습니다. 데이터베이스 모델은 앞에서 설명한 예제와 동일한 것일 수 있습니다.
+사용자가 Windows Hello를 사용하기로 한 경우, 앞의 설명대로 [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만듭니다. 백 엔드 등록 서버에서는 데이터베이스에 공개 키와 (선택적으로) 증명서를 추가합니다. 사용자가 이미 사용자 이름 및 암호를 사용하여 인증되었기 때문에 서버에서는 새 자격 증명을 데이터베이스에 있는 현재 사용자 정보에 연결할 수 있습니다. 데이터베이스 모델은 앞에서 설명한 예제와 동일한 것일 수 있습니다.
 
-앱에서 사용자 [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만든 경우 이 사용자 ID를 격리된 저장소에 저장하여 앱 재시작 시 사용자가 목록에서 이 계정을 선택할 수 있도록 합니다. 이 시점부터는 이전 장에서 설명한 예시의 흐름을 그대로 따릅니다.
+앱에서 사용자 [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만든 경우 이 사용자 ID를 격리된 저장소에 저장하여 앱 재시작 시 사용자가 목록에서 이 계정을 선택할 수 있도록 합니다. 이 시점부터는 이전 장에서 설명한 예제와 흐름이 정확히 동일합니다.
 
 전체 Windows Hello로 마이그레이션하는 시나리오에서 마지막 단계는 앱에서 로그온 이름 및 암호 옵션을 사용하지 않도록 설정한 후 저장해 둔 해시 암호를 데이터베이스에서 제거하는 것입니다.
 
@@ -399,7 +399,7 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 
 개발자는 이러한 기술의 디자인과 배포에 대한 이 지침을 사용하여 앱 및 백 엔드 서비스를 보호하기 위해 손쉽게 Windows 10 롤아웃에 보안 인증을 추가할 수 있습니다. 필요한 코드는 최소한이며 이해하기 쉽습니다. Windows 10은 어려운 작업을 수행합니다.
 
-유연한 구현 옵션 덕분에 Windows Hello가 기존 인증 시스템을 대체하거나 기존 인증 시스템과 함께 작동할 수 있습니다. 배포 환경은 불편함이 없으며 경제적입니다. 추가 인프라 없이 Windows 10 보안을 배포할 수 있습니다. Microsoft Hello를 운영 체제에 기본으로 제공하는 Windows 10은 최근에 개발자가 직면한 인증 문제를 가장 안전하게 해결해줍니다.
+유연한 구현 옵션 덕분에 Windows Hello가 기존 인증 시스템을 대체하거나 기존 인증 시스템과 함께 작동할 수 있습니다. 배포 환경은 불편함이 없으며 경제적입니다. Windows 10 보안을 배포하는 데 추가 인프라가 필요 없습니다. Microsoft Hello를 운영 체제에 기본으로 제공하는 Windows 10은 최근에 개발자가 직면한 인증 문제를 가장 안전하게 해결해줍니다.
 
 임무가 완수되었습니다! 인터넷을 더욱 안전하게 만든 것이죠!
 
@@ -408,8 +408,8 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 ### <a name="61-articles-and-sample-code"></a>6.1 문서 및 샘플 코드
 
 - [Windows Hello 개요](https://windows.microsoft.com/windows-10/getstarted-what-is-hello)
-- [Windows Hello 구현 세부 정보](https://msdn.microsoft.com/library/mt589441)
-- [GitHub의 Windows Hello 코드 샘플](https://go.microsoft.com/fwlink/?LinkID=717812)
+- [Windows Hello에 대 한 구현 세부 정보](https://msdn.microsoft.com/library/mt589441)
+- [Windows Hello GitHub의 코드 샘플](https://go.microsoft.com/fwlink/?LinkID=717812)
 
 ### <a name="62-terminology"></a>6.2 용어
 

@@ -1,5 +1,5 @@
 ---
-Description: Displays images in a collection, such as photos in an album or items in a product details page, one image at a time.
+Description: 앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지를 표시합니다.
 title: 대칭 이동 보기 컨트롤에 대한 지침
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
@@ -12,19 +12,19 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: ac4e5bb7c761ad6661647cb88f831ffa652b6241
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048803"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57662428"
 ---
-# <a name="flip-view"></a>대칭 이동 보기
+# <a name="flip-view"></a>보기 대칭 이동
 
  
 
 대칭 이동 보기를 사용하여 앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지나 다른 항목을 탐색할 수 있습니다. 터치 디바이스의 경우 항목을 살짝 밀면 컬렉션 내에서 이동됩니다. 마우스를 사용할 경우에는 항목 위로 마우스를 가져가면 탐색 단추가 나타납니다. 키보드를 사용할 경우에는 화살표 키를 사용하여 컬렉션 내에서 이동합니다.
 
-> **중요 API**: [FlipView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx), [ItemsSource 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx), [ItemTemplate 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)
+> **중요 한 Api**: [FlipView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx)하십시오 [ItemsSource 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx), [ItemTemplate 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -40,8 +40,8 @@ ms.locfileid: "9048803"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/FlipView">앱을 열고 작동 중인 FlipView를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -61,7 +61,7 @@ FlipView는 [ItemsControl](https://msdn.microsoft.com/library/windows/apps/windo
 
 기본적으로, 데이터 항목은 바운딩된 데이터 개체의 문자열 표현으로 대칭 이동 보기에 표시됩니다. 대칭 이동 뷰에서 항목 표시 방법을 정확히 지정하려면 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.datatemplate.aspx)을 만들어 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 콘텐츠가 정의된 인라인을 가질 수 있습니다. FlipView의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) 속성에 DataTemplate를 할당합니다.
 
-### <a name="add-items-to-the-items-collection"></a>항목 컬렉션에 항목 추가
+### <a name="add-items-to-the-items-collection"></a>Items 컬렉션에 항목 추가
 
 XAML 또는 코드를 사용하여 [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) 컬렉션에 항목을 추가할 수 있습니다. 일반적으로 XAML로 쉽게 정의되며 변경되지 않는 항목 수가 적은 경우 또는 런타임 시 코드에서 항목을 생성하는 경우 이 방식으로 항목을 추가합니다. 다음은 인라인으로 정의된 항목이 있는 대칭 이동 뷰입니다.
 
@@ -231,5 +231,5 @@ FlipView에 상황 표시기를 추가하는 방법을 보여 주는 예제 코�
 
 ## <a name="related-articles"></a>관련 문서
 
-- [목록에 대한 지침](lists.md)
+- [목록에 대 한 지침](lists.md)
 - [**FlipView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242678)

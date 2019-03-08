@@ -6,11 +6,11 @@ ms.date: 10/05/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a7bb6f719f95766c07c1e5f92b50148cf0f2cce
-ms.sourcegitcommit: b589795bedbff993867ddce16ed1f1a4a4b39e8c
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "9070344"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57642368"
 ---
 # <a name="create-and-host-an-app-extension"></a>앱 확장 만들기 및 호스팅
 
@@ -19,7 +19,7 @@ ms.locfileid: "9070344"
 이 문서에는 다음과 같은 코드 샘플이 있습니다.
 - [Math Extension 코드 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip)을 다운로드하고 압축을 풉니다.
 - Visual Studio 2017에서 MathExtensionSample.sln을 엽니다. 빌드 유형을 x86(**빌드** > **구성 관리자**에서 두 프로젝트에 대해 **플랫폼**을 **x86**으로 변경)으로 설정합니다.
-- 솔루션 배포합니다(**빌드** > **솔루션 배포**).
+- 솔루션을 배포 합니다. **빌드할** > **솔루션을 배포**합니다.
 
 ## <a name="introduction-to-app-extensions"></a>앱 확장 소개
 
@@ -29,7 +29,7 @@ UWP 앱 확장은 콘텐츠와 배포 이벤트를 호스트 앱과 공유할 �
 
 앱 확장은 UWP 앱이기 때문에 별도의 앱 패키지를 만들지 않고도 모든 기능 앱, 호스트 확장 및 다른 앱의 확장 기능을 제공할 수 있습니다.
 
-앱 확장 호스트를 만들 때 앱에 대한 에코시스템을 개발하여 다른 개발자가 예상하지 못했던 방법이나 리소스로 앱을 향상시킬 수 있는 기회를 만들 수 있습니다. Microsoft Office 확장, Visual Studio 확장, 브라우저 확장 등을 고려해 보세요. 이는 함께 제공되는 기능을 뛰어넘어 앱에 대한 더 풍부한 환경을 제공합니다. 확장은 앱에 가치와 지속성을 더할 수 있습니다.
+앱 확장 호스트를 만들 때 앱에 대한 에코시스템을 개발하여 다른 개발자가 예상하지 못했던 방법이나 리소스로 앱을 향상시킬 수 있는 기회를 만들 수 있습니다. Microsoft Office 확장, Visual Studio 확장, 브라우저 확장을 고려 합니다. 이러한 함께 제공 된 기능 보다 우수한 해당 앱에 대 한 다양 한 환경을 만듭니다. 확장은 앱에 가치와 지속성을 더할 수 있습니다.
 
 **개요**
 
@@ -49,7 +49,7 @@ UWP 앱 확장은 콘텐츠와 배포 이벤트를 호스트 앱과 공유할 �
 
 앱은 Package.appxmanifest 파일에서 `<AppExtensionHost>` 요소를 선언하여 자체적으로 앱 확장 호스트로 식별합니다. **MathExtensionHost** 프로젝트의 **Package.appxmanifest** 파일을 확인하여 이 작업이 어떻게 수행되는지 살펴봅니다.
 
-_MathExtensionHost 프로젝트의 Package.appxmanifest_
+_MathExtensionHost 프로젝트에서 Package.appxmanifest_
 ```xml
 <Package
   ...
@@ -74,7 +74,7 @@ _MathExtensionHost 프로젝트의 Package.appxmanifest_
 
 `xmlns:uap3="http://..."` 및 `IgnorableNamespaces`의 `uap3`에 주목합니다. uap3 네임스페이스를 사용하기 때문에 이것이 필요합니다.
 
-`<uap3:Extension Category="windows.appExtensionHost">` 이 앱을 확장 호스트로 식별합니다.
+`<uap3:Extension Category="windows.appExtensionHost">` 이 앱 확장 호스트를 식별합니다.
 
 `<uap3:AppExtensionHost>`의 **이름** 요소는 _확장 계약_ 이름입니다. 확장에서 동일한 확장 계약 이름을 지정하면 호스트가 해당 확장 계약 이름을 찾을 수 있습니다. 일반적으로 다른 확장 계약 이름과 잠재적인 충돌을 피하기 위해 앱 또는 게시자 이름을 사용하여 확장 계약 이름을 빌드하는 것이 좋습니다.
 
@@ -84,7 +84,7 @@ _MathExtensionHost 프로젝트의 Package.appxmanifest_
 
 앱은 **Package.appxmanifest** 파일에서 `<uap3:AppExtension>` 요소를 선언하여 자체적으로 앱 확장으로 식별합니다. **MathExtension** 프로젝트의 **Package.appxmanifest** 파일을 열고 이 작업이 어떻게 수행되는지 살펴봅니다.
 
-_MathExtension 프로젝트의 Package.appxmanifest:_
+_MathExtension 프로젝트에서 Package.appxmanifest:_
 ```xml
 <Package
   ...
@@ -116,7 +116,7 @@ _MathExtension 프로젝트의 Package.appxmanifest:_
 
 `xmlns:uap3="http://..."` 라인 및 `IgnorableNamespaces`의 `uap3`에 다시 주목합니다. `uap3` 네임스페이스를 사용하기 때문에 이것이 필요합니다.
 
-`<uap3:Extension Category="windows.appExtension">` 이 앱을 확장으로 식별합니다.
+`<uap3:Extension Category="windows.appExtension">` 확장으로이 앱을 식별합니다.
 
 `<uap3:AppExtension>` 특성의 의미는 다음과 같습니다.
 
@@ -128,7 +128,7 @@ _MathExtension 프로젝트의 Package.appxmanifest:_
 |**설명** | 호스트 앱에서 사용자에 대한 확장을 설명하는 데 사용할 수 있습니다. 쿼리 가능하며, 지역화를 위해 [새로운 리소스 관리 시스템](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games)(`ms-resource:TokenName`)을 사용할 수 있습니다. 지역화된 콘텐츠는 호스트 앱이 아니라 앱 확장 패키지에서 로드됩니다. | |
 |**PublicFolder**|확장 호스트와 콘텐츠를 공유할 수 있는 패키지 루트에 상대적인 폴더의 이름입니다. 일반적으로 이름은 "공개"이지만 확장의 폴더와 일치하는 이름을 사용할 수 있습니다.| :heavy_check_mark: |
 
-`<uap3:Properties>` 호스트가 런타임 시 읽을 수 있는 사용자 지정 메타데이터가 포함되어 있는 선택적 요소입니다. 코드 샘플에서 확장은 앱 서비스로 구현되므로 호스트는 해당 앱 서비스의 이름을 가져와서 호출할 수 있어야 합니다. 앱 서비스의 이름은 미리 정의한 <Service> 요소에 정의되어 있습니다(원하는 대로 부를 수 있음). 코드 샘플의 호스트는 런타임 시 이 속성을 검색하여 앱 서비스의 이름을 확인합니다.
+`<uap3:Properties>` 호스트는 런타임 시 읽을 수 있는 사용자 지정 메타 데이터를 포함 하는 선택적 요소입니다. 코드 샘플에서 확장은 앱 서비스로 구현되므로 호스트는 해당 앱 서비스의 이름을 가져와서 호출할 수 있어야 합니다. 앱 서비스의 이름은 미리 정의한 <Service> 요소에 정의되어 있습니다(원하는 대로 부를 수 있음). 코드 샘플의 호스트는 런타임 시 이 속성을 검색하여 앱 서비스의 이름을 확인합니다.
 
 ## <a name="decide-how-you-will-implement-the-extension"></a>확장을 구현하는 방법을 결정합니다.
 
@@ -145,7 +145,7 @@ _MathExtension 프로젝트의 Package.appxmanifest:_
 
 확장의 앱 서비스를 호출하는 호스트 코드는 다음과 같습니다.
 
-_MathExtensionHost 프로젝트의 ExtensionManager.cs_
+_ExtensionManager.cs MathExtensionHost 프로젝트에서_
 ```cs
 public async Task<double> Invoke(ValueSet message)
 {
@@ -195,7 +195,7 @@ public async Task<double> Invoke(ValueSet message)
 
 호출할 앱 서비스의 이름이 어떻게 결정되는지 주목해야 합니다. 호스트는 확장 구현에 대한 정보를 갖고 있지 않기 때문에, 확장은 해당 앱 서비스의 이름을 제공해야 합니다. 코드 샘플에서, 확장은 다음과 같이 `<uap3:Properties>` 요소에 있는 파일에서 앱 서비스 이름을 선언합니다.
 
-_MathExtension 프로젝트의 Package.appxmanifest_
+_MathExtension 프로젝트에서 Package.appxmanifest_
 ```xml
     ...
     <uap3:Extension Category="windows.appExtension">
@@ -211,7 +211,7 @@ _MathExtension 프로젝트의 Package.appxmanifest_
 
 호스트가 확장을 로드하면 다음과 같은 코드가 확장의 Package.appxmanifest에 정의된 속성에서 서비스의 이름을 추출합니다.
 
-_`Update()` (MathExtensionHost 프로젝트의 ExtensionManager.cs)_
+_`Update()` MathExtensionHost 프로젝트에서 ExtensionManager.cs에서_
 ```cs
 ...
 var properties = await ext.GetExtensionPropertiesAsync() as PropertySet;
@@ -233,7 +233,7 @@ if (_properties != null)
 
 앱 서비스의 이름이 `_serviceName`에 저장되면 호스트는 이를 사용하여 앱 서비스를 호출할 수 있습니다.
 
-앱 서비스를 호출하려면 앱 서비스가 포함된 패키지의 패밀리 이름도 필요합니다. 다행히 앱 확장 API는 다음과 같이 해당 줄에서 얻은 정보를 제공합니다. `connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;`
+앱 서비스를 호출하려면 앱 서비스가 포함된 패키지의 패밀리 이름도 필요합니다. 다행 스럽게도 API 앱 확장 줄에서 가져온이 정보를 제공 합니다. `connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;`
 
 ### <a name="define-how-the-host-and-the-extension-will-communicate"></a>호스트와 해당 확장이 통신하는 방법을 정의합니다.
 
@@ -247,7 +247,7 @@ if (_properties != null)
 
 앱 서비스가 활성화되면 시스템은 `OnBackgroundActivate()`를 만듭니다. 이 코드는 이벤트 처리기가 실제 앱 서비스 호출(`OnAppServiceRequestReceived()`)을 처리할 뿐 아니라 취소 또는 닫힌 이벤트를 처리하는 지연 개체를 가져오는 것과 같은 정리 이벤트를 처리하도록 설정합니다.
 
-_MathExtension 프로젝트의 App.xaml.cs_
+_MathExtension 프로젝트에서 App.xaml.cs를 제공 합니다._
 ```cs
 protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
 {
@@ -271,7 +271,7 @@ protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
 
 확장의 작업을 수행하는 코드는 `OnAppServiceRequestReceived()`에 있습니다. 이 함수는 계산을 수행하기 위해 앱 서비스가 호출될 때 호출됩니다. 이는 **ValueSet**에서 필요한 값을 추출합니다. 계산을 수행할 수 있는 경우 호스트에 반환된 **ValueSet**에 **Result**라는 키 아래에 결과를 저장합니다. 이 호스트와 확장이 통신하는 방법에 대해 정의된 프로토콜에 따라 **Result** 키가 있으면 성공을 나타내고 그렇지 않으면 실패를 나타냅니다.
 
-_MathExtension 프로젝트의 App.xaml.cs_
+_MathExtension 프로젝트에서 App.xaml.cs를 제공 합니다._
 ```cs
 private async void OnAppServiceRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
 {
@@ -303,7 +303,7 @@ Microsoft Store는 패키지로 확장을 제공합니다. [AppExtensionCatalog]
 
 `ExtensionManager` 생성자는 `AppExtensionCatalog`를 사용하여 시스템에서 호스트와 동일한 확장 계약 이름을 가진 앱 확장을 찾습니다.
 
-_MathExtensionHost 프로젝트의 ExtensionManager.cs._
+_ExtensionManager.cs MathExtensionHost 프로젝트에서._
 ```cs
 public ExtensionManager(string extensionContractName)
 {
@@ -342,7 +342,7 @@ public ExtensionManager(string extensionContractName)
 이제 호스트와 확장에서 중단점에 도달할 수 있습니다.
 확장 앱 자체 디버깅을 시작하면 앱의 빈 창이 표시됩니다. 빈 창이 보이지 않게 하려면 확장 프로젝트의 디버깅 설정을 앱이 시작되지 않게 변경하여 시작할 때 디버그되도록 할 수 있습니다(확장 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 **속성** > **디버그** > **시작하지 않음(시작 시 코드 디버그)** 선택). 확장 프로젝트 디버깅(**F5**)을 시작해야 하지만 이 프로젝트는 호스트가 확장을 활성화하고 해당 확장의 중단점에 도달할 때까지 기다리게 됩니다.
 
-**코드 샘플 디버그**
+**코드 샘플은 디버그**
 
 코드 샘플에서 호스트와 확장은 동일한 솔루션에 있습니다. 디버그하려면 다음을 수행합니다.
 
@@ -353,11 +353,11 @@ public ExtensionManager(string extensionContractName)
 5. 배포하고 패키지 설치 이벤트를 호스트에 트리거할 **MathExtension** 프로젝트 디버깅을 시작합니다(**MathExtension** 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 **디버그 > 새 인스턴스 시작** 선택).
 6. **MathExtensionHost** 앱에서 **계산** 페이지로 이동하고 **x^y**를 클릭하여 확장을 활성화합니다. `Invoke()` 중단점에 먼저 도달하고 확장 앱 서비스 호출이 발생하는 것을 확인할 수 있습니다. 그런 다음 `OnAppServiceRequestReceived()` 메서드가 실행되면 앱 서비스가 결과를 계산하고 반환하는 것을 확인할 수 있습니다.
 
-**앱 서비스로 구현된 확장 문제 해결**
+**App service로 구현 하는 확장 문제 해결**
 
 확장 호스트가 확장의 앱 서비스에 연결하는 데 문제가 있는 경우 `<uap:AppService Name="...">` 특성이 `<Service>` 요소에 배치한 항목과 일치하게 합니다. 일치하지 않는 경우 확장이 호스트에 제공하는 서비스 이름은 구현한 앱 서비스 이름과 일치하지 않게 되며, 호스트가 확장을 활성화할 수 없습니다.
 
-_MathExtension 프로젝트의 Package.appxmanifest:_
+_MathExtension 프로젝트에서 Package.appxmanifest:_
 ```xml
 <Extensions>
    <uap:Extension Category="windows.appService">
@@ -386,7 +386,7 @@ _MathExtension 프로젝트의 Package.appxmanifest:_
 - 호스트를 실행한 다음 확장 앱을 최신 버전으로 업데이트합니다.
     - 호스트가 변경 사항을 선택하고 이전 확장 버전을 제대로 언로드합니까?  
 
-**고급 테스트 시나리오**
+**테스트 하는 고급 시나리오:**
 
 - 호스트를 실행하고 확장 앱을 이동식 미디어로 이동한 다음 미디어를 제거합니다.
     - 호스트가 패키지 상태의 변경을 감지하고 확장을 비활성화합니까?
@@ -407,7 +407,7 @@ _MathExtension 프로젝트의 Package.appxmanifest:_
 
 앱 확장은 오픈 에코시스템에 참여합니다. 앱이 앱 확장을 호스팅할 수 있는 경우, 확장에서 정보를 전달/수신하는 방법을 준수하는 한 누구든지 호스트에 대한 확장을 작성할 수 있습니다. 이는 게시자가 앱과 함께 사용할 수 있는 선택적 패키지를 만들 수 있는 대상을 결정하는 폐쇄형 에코시스템에 참여하는 선택적 패키지와 다릅니다.
 
-앱 확장은 독립적 패키지이며 독립 실행형 앱이 될 수 있습니다. 다른 앱에 대한 배포 종속성을 가질 수 없습니다.선택적 패키지에는 기본 패키지가 필요하며 기본 패키지가 없으면 실행할 수 없습니다.
+앱 확장은 독립적 패키지이며 독립 실행형 앱이 될 수 있습니다. 다른 앱에 대한 배포 종속성을 가질 수 없습니다. 선택적 패키지에는 기본 패키지가 필요하며 기본 패키지가 없으면 실행할 수 없습니다.
 
 게임에 대한 확장 팩은 선택적 패키지의 좋은 후보가 될 수 있습니다. 이는 게임에 밀접하게 연결되어 있기 때문에 게임과 독립적으로 실행할 수 없으며 에코시스템의 개발자가 확장 팩을 만들지 못하게 해야 할 수 있습니다.
 
@@ -420,9 +420,9 @@ _MathExtension 프로젝트의 Package.appxmanifest:_
 ## <a name="related-topics"></a>관련 항목
 
 * [앱 확장 소개](https://blogs.msdn.microsoft.com/appinstaller/2017/05/01/introduction-to-app-extensions/)
-* [앱 확장에 대한 빌드 2016 세션](https://channel9.msdn.com/Events/Build/2016/B808)
-* [빌드 2016 앱 확장 코드 샘플](https://github.com/Microsoft/App-Extensibility-Sample)
-* [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)
+* [앱 확장에 대 한 빌드 2016 세션](https://channel9.msdn.com/Events/Build/2016/B808)
+* [Build 2016 앱 확장 코드 샘플](https://github.com/Microsoft/App-Extensibility-Sample)
+* [백그라운드 작업을 사용 하 여 앱을 지원 합니다.](support-your-app-with-background-tasks.md)
 * [앱 서비스를 만들고 사용하는 방법](how-to-create-and-consume-an-app-service.md).
-* [AppExtensions 네임스페이스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions)
-* [서비스, 확장 및 패키지로 앱 확장](https://docs.microsoft.com/windows/uwp/launch-resume/extend-your-app-with-services-extensions-packages)
+* [AppExtensions 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions)
+* [앱 서비스, 확장 및 패키지를 사용 하 여 확장](https://docs.microsoft.com/windows/uwp/launch-resume/extend-your-app-with-services-extensions-packages)

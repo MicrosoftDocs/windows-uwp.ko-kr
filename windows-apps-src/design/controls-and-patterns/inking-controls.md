@@ -1,5 +1,5 @@
 ---
-Description: Ink tools described
+Description: 설명된 잉크 도구
 title: 수동 입력 컨트롤
 label: Inking Controls
 template: detail.hbs
@@ -9,17 +9,17 @@ keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
 ms.openlocfilehash: fcbed8400b31616f92f20aa3a64a4dd8603dc7b0
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047897"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650898"
 ---
-# <a name="inking-controls"></a>수동 입력 컨트롤
+# <a name="inking-controls"></a>잉크 입력 컨트롤
 
 
 
-UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하는 두 가지 컨트롤은 [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) 및 [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)입니다.
+유니버설 Windows 플랫폼 (UWP) 앱에 잉크 입력을 쉽게 수행할 수 있는 다른 컨트롤을 두 가지가 있습니다. [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) 하 고 [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)합니다.
 
 InkCanvas 컨트롤은 펜 입력을 잉크 스트로크(색과 두께에 기본 설정 사용) 또는 지우기 스트로크로 렌더링합니다. 이 컨트롤은 기본 잉크 스트로크 속성을 변경하기 위한 기본 제공 UI를 포함하지 않는 투명 오버레이입니다.
 
@@ -35,7 +35,7 @@ InkCanvas 컨트롤은 기본 잉크 스트로크 설정 변경 지원을 포함
 
 <img src="images/ink-tools-invoked-toolbar.png" width="300" alt="InkToolbar palette flyout">
 
-> **중요 API**: [InkCanvas 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [InkToolbar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [InkPresenter 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **중요 한 Api**: [InkCanvas 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)하십시오 [InkToolbar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)합니다 [InkPresenter 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -58,8 +58,8 @@ InkToolbar와 InkCanvas를 연결하여 잉크 기능을 활성화하고 스트�
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/InkCanvas">앱을 열고 작동 중인 InkCanvas를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -68,12 +68,12 @@ InkToolbar와 InkCanvas를 연결하여 잉크 기능을 활성화하고 스트�
 **Microsoft Edge**
 
 Microsoft Edge는 **웹 노트**에서 InkCanvas 및 InkToolbar를 사용합니다.  
-![InkCanvas는 Microsoft Edge에서 수동 입력에 사용됩니다.](images/ink-tools-edge.png)
+![InkCanvas는 Microsoft Edge에서 잉크를](images/ink-tools-edge.png)
 
 **Windows Ink 작업 영역**
 
 InkCanvas 및 InkToolbar는 **Windows Ink 작업 영역**의 **스케치북**과 **화면 스케치**에서도 사용됩니다.  
-![Windows Ink 작업 영역의 InkToolbar](images/ink-tools-ink-workspace.png)
+![Windows Ink 작업 영역에서 InkToolbar](images/ink-tools-ink-workspace.png)
 
 ## <a name="create-an-inkcanvas-and-inktoolbar"></a>InkCanvas 및 InkToolbar 만들기
 
@@ -111,7 +111,7 @@ InkToolbar에는 다음과 같은 기본 제공 단추가 포함되어 있습니
 
 - 지우개 – 터치된 잉크 스트로크를 모두 삭제합니다. 지우개 스트로크 아래에 있는 부분뿐 아니라 전체 잉크 스트로크가 삭제됩니다.
 
-**토글**
+**Toggle**
 
 - 눈금자 – 눈금자를 표시하거나 숨깁니다. 눈금자 가장자리 근처에 그리면 잉크 스트로크가 눈금자에 맞춰집니다.  
  ![InkToolbar와 연결된 눈금자 화면 효과](images/inking-tools-ruler.png)
@@ -137,7 +137,7 @@ InkToolbar는 다음 두 가지 그룹의 단추 유형으로 이루어져 있�
 - 사용자 지정 토글 - 앱에서 정의된 기능의 상태를 켜짐 또는 꺼짐으로 설정합니다. 켜진 경우 기능이 활성 도구와 함께 작동합니다.
 
 > [!NOTE]
-> 기본 제공 단추의 표시 순서는 변경할 수 없습니다. 기본 표시 순서는 볼펜, 연필, 형광펜, 지우개, 눈금자 순입니다. 사용자 지정 펜은 마지막 기본 펜 뒤에 추가되고, 사용자 지정 도구 단추는 마지막 펜 단추와 지우개 단추 사이에 추가되고, 사용자 지정 토글 단추는 눈금자 단추 뒤에 추가됩니다. 사용자 지정 단추는 지정된 순서대로 추가됩니다.
+> 기본 제공 단추의 표시 순서는 변경할 수 없습니다. 기본 표시 순서 다음과 같습니다. 볼펜, 연필, 형광펜, eraser 및 눈금자 사용자 지정 펜은 마지막 기본 펜 뒤에 추가되고, 사용자 지정 도구 단추는 마지막 펜 단추와 지우개 단추 사이에 추가되고, 사용자 지정 토글 단추는 눈금자 단추 뒤에 추가됩니다. 사용자 지정 단추는 지정된 순서대로 추가됩니다.
 
 InkToolbar는 최상위 항목일 수 있지만 일반적으로 "수동 입력" 단추 또는 명령을 통해 노출됩니다. Segoe MLD2 자산 글꼴의 EE56 문자 모양을 최상위 수준 아이콘으로 사용하는 것이 좋습니다.
 
@@ -148,7 +148,7 @@ InkToolbar는 최상위 항목일 수 있지만 일반적으로 "수동 입력" 
 활성 도구의 단추를 다시 선택하면 플라이아웃이 표시됩니다. 색 또는 크기를 변경하면 플라이아웃이 자동으로 해제되고 수동 입력을 다시 시작할 수 있습니다. 사용자 지정 펜과 도구는 기본 플라이아웃을 사용하거나 사용자 지정 플라이아웃을 지정할 수 있습니다.
 
 지우개에는 **모든 잉크 지우기** 명령을 제공하는 플라이아웃도 있습니다.  
-![지우개 플라이아웃이 호출된 InkToolbar](images/ink-tools-erase-all-ink.png)
+![호출 지우개 플라이 아웃을 사용 하 여 InkToolbar](images/ink-tools-erase-all-ink.png)
 
  사용자 지정 및 확장성에 대한 자세한 내용은 [SimpleInk 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)을 참조하세요.
 
@@ -170,6 +170,6 @@ InkToolbar는 최상위 항목일 수 있지만 일반적으로 "수동 입력" 
 
 ## <a name="related-articles"></a>관련 문서
 
-- [UWP 앱에서 펜 및 스타일러스 조작](https://windowsstyleguide/input/pen-and-stylus-interactions/)
-- [잉크 스트로크 인식](https://windowsstyleguide/input/convert-ink-to-text/)
-- [잉크 스트로크 저장 및 검색](https://windowsstyleguide/input/save-and-load-ink/)
+- [UWP 앱에서 펜과 스타일러스 상호 작용](https://windowsstyleguide/input/pen-and-stylus-interactions/)
+- [잉크 스트로크를 인식 합니다.](https://windowsstyleguide/input/convert-ink-to-text/)
+- [저장 하 고 잉크 스트로크를 검색 합니다.](https://windowsstyleguide/input/save-and-load-ink/)

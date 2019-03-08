@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 개요, 프로그래밍, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 83ac401892761e1e6433d337babbce00dc559b98
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923962"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608848"
 ---
 # <a name="directx-programming"></a>DirectX 프로그래밍
 
@@ -30,7 +30,7 @@ ms.locfileid: "8923962"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="directx-getting-started.md">시작하기</a></p></td>
+<td align="left"><p><a href="directx-getting-started.md">시작 하기</a></p></td>
 <td align="left"><p>DirectX 프로그래밍을 소개합니다.</p></td>
 </tr>
 <tr class="even">
@@ -50,11 +50,11 @@ ms.locfileid: "8923962"
 <td align="left"><p>최적화 및 기타 고급 항목에 대해 알아봅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="porting-your-directx-9-game-to-windows-store.md">DirectX 9에서 UWP로 포팅</a></p></td>
+<td align="left"><p><a href="porting-your-directx-9-game-to-windows-store.md">UWP로 포트 DirectX 9</a></p></td>
 <td align="left"><p>DirectX 9 게임을 UWP로 이식하는 방법을 알아봅시다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="port-from-opengl-es-2-0-to-directx-11-1.md">OpenGL을 Direct3D로 포팅</a></p></td>
+<td align="left"><p><a href="port-from-opengl-es-2-0-to-directx-11-1.md">Direct3d 포트 OpenGL</a></p></td>
 <td align="left"><p>OpenGL ES 2.0 게임을 Direct3D 11로 포팅하는 방법을 알아봅니다.</p></td>
 </tr>
 </tbody>

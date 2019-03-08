@@ -6,17 +6,17 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드
 ms.localizationpriority: medium
 ms.openlocfilehash: f74a7bbfdfd5abe6a32c0ca3d81000e6f2d4758d
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116145"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57660148"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>앱 설치 관리자 파일 관련 설치 문제 해결
 
 앱 설치 관리자 파일에서 응용 프로그램을 설치하는 데 문제가 있는 경우 이 항목은 도움이 될 수 있는 몇 가지 문제 해결 지침을 제공합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 Windows 10에서 앱을 사이드로드할 수 있어야 하며 사용자 장치는 다음 요구 사항을 만족해야 합니다.
 
@@ -63,22 +63,22 @@ UWP 응용 프로그램은 앱을 생성하는 데 사용되는 응용 프로그
 
 HTTP 끝점에서 설치할 때 모든 파일이 올바른 MIME 형식으로 액세스할 수 있는지 확인하는 것이 중요합니다. Visual Studio에서 생성된 HTML 페이지에 제공되는 링크를 따라 이러한 파일을 확인하는 것이 가장 쉬운 방법입니다. 다음 파일을 확인해야 합니다.
 
-- `.appinstaller` 다음으로 사용 가능한 파일 `application/xml`
-- `.appx` 및 다음으로 사용 가능한 `.appxbundle` 파일 `application/vns.ms-appx`
+- `.appinstaller` 파일을 사용할 수 있습니다는 `application/xml`
+- `.appx` 및 `.appxbundle` 파일을 사용할 수 있습니다 `application/vns.ms-appx`
 
 ## <a name="isolate-app-installer-app-issues"></a>앱 설치 관리자 앱 문제 격리
 
 앱 설치 관리자 앱이 앱을 설치할 수 없는 경우 다음 단계는 설치 문제를 식별하는 데 도움이 됩니다.
 
-### <a name="verify-app-package-file-installation"></a>앱 패키지 파일 설치 확인
+### <a name="verify-app-package-file-installation"></a>앱 패키지 파일 설치를 확인 합니다.
 
-- 로컬 폴더에 앱 패키지 파일을 다운로드 하 고 [Add-appxpackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) PowerShell 명령을 사용 하 여이 설치 합니다.
+- 로컬 폴더에 앱 패키지 파일을 다운로드 하 고 사용 하 여 설치를 시도 합니다 [Add-appxpackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) PowerShell 명령입니다.
 
 - 로컬 폴더에 `.appinstaller` 파일을 다운로드하고 `Add-AppxPackage -Appinstaller` PowerShell 명령을 사용하여 이를 설치합니다.
 
 ## <a name="related-logs"></a>관련된 로그
 
-앱 배포 인프라는 Windows 이벤트 뷰어에 디버깅에 대한 로그를 제공합니다. 이러한 로그는 여기에서 찾을 수 있습니다. `Application and Services Logs->Microsoft->Windows->AppxDeployment-Server`
+앱 배포 인프라는 Windows 이벤트 뷰어에 디버깅에 대한 로그를 제공합니다. 이러한 로그에 대 한 연결이 여기 있습니다. `Application and Services Logs->Microsoft->Windows->AppxDeployment-Server`
 
 
 

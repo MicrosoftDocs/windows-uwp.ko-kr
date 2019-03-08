@@ -1,25 +1,25 @@
 ---
 title: 디바이스 포털 Xbox 정보 API 참조
-description: Xbox 장치 정보에 액세스 하는 방법을 알아봅니다.
+description: Xbox 디바이스 정보에 액세스하는 방법을 알아봅니다.
 ms.date: 11/072017
 ms.topic: article
-keywords: windows 10, uwp, xbox 장치 포털
+keywords: 장치 포털, xbox, uwp, windows 10
 ms.localizationpriority: medium
 ms.openlocfilehash: 85c2c139aa8064e1f0769064b95eeb531086b8c1
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115983"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617498"
 ---
 # <a name="xbox-info-api-reference"></a>Xbox 정보 API 참조   
-이 API를 사용 하 여 Xbox One 장치 정보에 액세스할 수 있습니다.
+이 API를 사용하여 Xbox One 디바이스 정보에 액세스할 수 있습니다.
 
-## <a name="get-xbox-one-device-information"></a>Xbox One 장치 정보 가져오기
+## <a name="get-xbox-one-device-information"></a>Xbox One 디바이스 정보 가져오기
 
 **요청**
 
-Xbox One에 대 한 장치 정보를 얻을 수 있습니다.
+Xbox One에 대한 디바이스 정보를 가져올 수 있습니다.
 
 메서드      | 요청 URI
 :------     | :-----
@@ -40,14 +40,14 @@ GET | /ext/xbox/info
 **응답**   
 다음 필드가 있는 JSON 개체입니다.
 
-* OsVersion-(문자열) 운영 체제의 버전입니다.
-* OsEdition-(문자열), 운영 체제의 버전 등 "2017 년 3 월" 또는 "1" QFE 2017 년 3 월 합니다.
-* ConsoleId-(문자열) 콘솔의 id입니다.
-* DeviceId-(문자열) 콘솔의 Xbox Live 장치 id입니다.
-* SerialNumber-(문자열) 콘솔의 일련번호 합니다.
-* DevMode-(문자열) 콘솔의 현재 개발자와 같은 모드를 "None" 또는 "소매".
-* ConsoleType-예: "Xbox One" 또는 "Xbox One S" (문자열) 콘솔의 유형입니다.
-* DevkitCertificateExpirationTime-(숫자)는 UTC 시간 (초) 때 콘솔의 개발자 키트 인증서가 만료 됩니다.
+* OsVersion - (문자열) OS 버전입니다.
+* OsEdition - (문자열) OS 에디션입니다(예: "March 2017" 또는 "March 2017 QFE 1").
+* ConsoleId - (문자열) 콘솔의 ID입니다.
+* DeviceId - (문자열) 콘솔의 Xbox Live 디바이스 Id입니다.
+* SerialNumber - (문자열) 콘솔의 일련 번호입니다.
+* DevMode - (문자열) 콘솔의 현재 개발자 모드입니다(예: "없음" 또는 "정품").
+* ConsoleType - (문자열) 콘솔의 유형입니다(예: "Xbox One" 또는 "Xbox One S").
+* DevkitCertificateExpirationTime - (숫자) 콘솔의 개발자 키트 인증서가 만료되는 UTC 시간입니다.
 
 **상태 코드**
 
@@ -60,6 +60,6 @@ HTTP 상태 코드      | 설명
 5XX | 오류 코드
 
 <br />
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Xbox

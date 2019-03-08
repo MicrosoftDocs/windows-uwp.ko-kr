@@ -8,18 +8,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 95de95b35de496331dd3fe0a4c69f18e047c1020
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943856"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57621698"
 ---
 # <a name="get-serviceconfigsscidhoppersnamestats"></a>GET (/serviceconfigs/{scid}/hoppers/{name}/stats)
 
 hopper에 대 한 통계를 가져옵니다.
 
 > [!IMPORTANT]
-> 이 메서드를 계약 103 이상을 사용 하 여 사용 하기 위한 있으며 X Xbl-계약 버전의 헤더 요소: 103 또는 나중에 모든 요청.
+> 이 103 이상 계약과 함께 사용 하기 위한 메서드와 X Xbl-계약 버전 헤더 요소를 필요: 103 또는 나중에 모든 요청 합니다.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4E5)
@@ -32,15 +32,15 @@ hopper에 대 한 통계를 가져옵니다.
 
 
 ## <a name="remarks"></a>설명
-이 HTTP/REST 메서드에 서비스 구성 ID (서비스 안내) 수준에서 명명 된 hopper에서 통계를 가져옵니다. **Microsoft.Xbox.Services.Matchmaking.MatchmakingService.GetHopperStatisticsAsync** API이 메서드를 줄 바꿈할 수 있습니다.  
+이 HTTP/REST 메서드는 서비스 구성 서비스 ID (안내) 수준에서 명명 된 hopper에서 통계를 가져옵니다. 이 메서드를 래핑할 수는 **Microsoft.Xbox.Services.Matchmaking.MatchmakingService.GetHopperStatisticsAsync** API.  
 <a id="ID4E5"></a>
 
 
 ## <a name="uri-parameters"></a>URI 매개 변수
 
-| 매개 변수| 유형| 설명|
+| 매개 변수| 형식| 설명|
 | --- | --- | --- | --- |
-| 서비스 안내| GUID| 서비스 구성 (서비스 안내) 세션 식별자입니다.|
+| scid| GUID| 서비스 구성 (서비스 안내) 세션 식별자입니다.|
 | name| 문자열| hopper의 이름입니다.|
 
 <a id="ID4EJB"></a>
@@ -48,11 +48,11 @@ hopper에 대 한 통계를 가져옵니다.
 
 ## <a name="authorization"></a>권한 부여
 
-| 형식| 필수| 설명| 누락 된 경우 응답|
+| 형식| 필수| 설명| 응답 없는 경우|
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| XUID (사용자 ID)| 예| 요청 사용자 티켓이 참조 하는 티켓 세션의 구성원 이어야 합니다. | 403|
-| 남용 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 된 경우 해당 클레임의 멀티 플레이 권한 있는 사용자만는 매치 메이 킹 서비스 호출을 할 수 있습니다. | 403|
-| 제목 ID/증명 구매/장치 유형| 예| 제목에 일치 하 되는 지정 된 제목 클레임, 장치 유형 조합에 대 한 연결을 허용 해야 합니다. | 403|
+| XUID (사용자 ID)| 예| 요청을 만드는 사용자 티켓에서 참조 하는 티켓 세션의 멤버 여야 합니다. | 403|
+| 권한 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 되 면 클레임에서 멀티 플레이 권한이 있는 사용자만 결혼 정보 회사 연결 서비스를 호출할 수 있습니다. | 403|
+| 제목 ID/증빙 구매/장치 유형| 예| 제목에 일치 하는 지정 된 제목 클레임, 장치 형식 조합에 대 한 결혼 정보 회사 연결을 허용 해야 합니다. | 403|
 
 <a id="ID4E3C"></a>
 
@@ -64,23 +64,23 @@ hopper에 대 한 통계를 가져옵니다.
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
 
 <a id="ID4EQD"></a>
 
 
 ## <a name="response-body"></a>응답 본문
 
-| 멤버| 유형| 설명|
+| 멤버| 형식| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| hopperName| string| 선택한 hopper의 이름입니다.|
-| waitTime| 32 비트 부호 있는 정수| 평균 시간 hopper (정수로 초)에 대 한 일치 합니다. |
-| 채우기| 32 비트 부호 있는 정수| 사용자는 hopper 이후의 일치 항목을 기다리는 수입니다.|
+| hopperName| 문자열| 선택한 hopper의 이름입니다.|
+| waitTime| 32 비트 부호 있는 정수| Hopper (시간 (초)는 정수 계열 수)에 대 한 시간을 일치 하는 평균입니다. |
+| 채우기| 32 비트 부호 있는 정수| 사용자는 hopper의 일치 항목에 대 한 대기 수입니다.|
 
 <a id="ID4E1D"></a>
 
 
-### <a name="sample-response"></a>예제 응답
+### <a name="sample-response"></a>샘플 응답
 
 
 ```cpp
@@ -102,6 +102,6 @@ hopper에 대 한 통계를 가져옵니다.
 <a id="ID4ELE"></a>
 
 
-##### <a name="parent"></a>부모  
+##### <a name="parent"></a>Parent  
 
 [/serviceconfigs/{scid}/hoppers/{name}/stats](uri-serviceconfigsscidhoppershoppernamestats.md)

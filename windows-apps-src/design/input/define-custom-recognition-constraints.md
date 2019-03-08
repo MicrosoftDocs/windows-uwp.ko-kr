@@ -1,19 +1,19 @@
 ---
-Description: Learn how to define and use custom constraints for speech recognition.
+Description: 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다.
 title: 사용자 지정 인식 제약 조건 정의
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
-keywords: 음성 명령, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용자 조작
+keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입력, 사용자 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 539acb242cfe6ee70d1311133a3f1a193860541a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047558"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631728"
 ---
 # <a name="define-custom-recognition-constraints"></a>사용자 지정 인식 제약 조건 정의
 
@@ -21,7 +21,7 @@ ms.locfileid: "9047558"
 
 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다.
 
-> **중요 API**: [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446), [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421), [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
+> **중요 한 Api**: [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446), [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421), [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
 
 
 인식할 수 있는 어휘를 정의하려면 음성 인식에 하나 이상의 제약 조건이 필요합니다. 제약 조건을 지정하지 않으면 유니버설 Windows 앱의 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
@@ -30,13 +30,13 @@ ms.locfileid: "9047558"
 ## <a name="add-constraints"></a>제약 조건 추가
 
 
-[**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 속성을 사용하여 음성 인식기에 제약 조건을 추가합니다.
+[  **SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 속성을 사용하여 음성 인식기에 제약 조건을 추가합니다.
 
 여기서는 앱 내에서 사용되는 세 종류의 음성 인식 제약 조건에 대해 설명합니다. 음성 명령 제약 조건에 대한 자세한 내용은 [Cortana에서 음성 명령으로 포그라운드 앱 시작](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana)을 참조하세요.
 
--   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)—미리 정의된 문법(받아쓰기 또는 웹 검색)을 기반으로 한 제약 조건입니다.
--   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)—단어 또는 구문 목록을 기반으로 한 제약 조건입니다.
--   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)—SRGS(음성 인식 문법 사양) 파일에 정의된 제약 조건입니다.
+-   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)-미리 정의 된 문법 (받아쓰기 또는 웹 검색)를 기반으로 제약 조건입니다.
+-   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)-단어 또는 문구의 목록에 따라 제약 조건입니다.
+-   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)-음성 인식 문법 Specification (SRGS) 파일에 정의 된 제약 조건입니다.
 
 각 음성 인식기에 하나의 제약 조건 컬렉션을 사용할 수 있습니다. 다음과 같은 제약 조건 조합만 유효합니다.
 
@@ -178,7 +178,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-이 SRGS 파일(srgs.grxml)에는 의미 해석 태그도 포함되어 있습니다. 이러한 태그는 앱에 문법 일치 데이터를 반환하는 메커니즘을 제공합니다. 문법은 World Wide Web 컨소시엄 (W3C)[대 한 음성 인식 (sisr SEMANTIC Interpretation) 1.0](https://go.microsoft.com/fwlink/p/?LinkID=201765) 사양 준수 해야 합니다.
+이 SRGS 파일(srgs.grxml)에는 의미 해석 태그도 포함되어 있습니다. 이러한 태그는 앱에 문법 일치 데이터를 반환하는 메커니즘을 제공합니다. World Wide Web Consortium (W3C) 문법 따라야 [의미 해석에 대 한 음성 인식 (SISR) 1.0](https://go.microsoft.com/fwlink/p/?LinkID=201765) 사양입니다.
 
 여기서는 "yes" 및 "no"의 변형을 수신 대기합니다.
 

@@ -1,33 +1,33 @@
 ---
-title: 분실 장치
-description: Direct3D 장치가 작동 상태이거나 분실된 상태일 수 있습니다.
+title: 분실한 디바이스
+description: Direct3D 디바이스는 작동 상태이거나 손실 상태일 수 있습니다.
 ms.assetid: 1639CC02-8000-4208-AA95-91C1F0A3B08D
 keywords:
-- 분실 장치
+- 분실한 디바이스
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f0b42a10c2cdd61aef84e08d6bd4f6408a978c3
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922083"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617318"
 ---
-# <a name="lost-devices"></a>분실 장치
+# <a name="lost-devices"></a>분실한 디바이스
 
 
-Direct3D 디바이스는 작동 상태이거나 손실 상태일 수 있습니다. *작동* 상태는 디바이스가 실행되고 모든 렌더링이 예상대로 표시되는 디바이스의 정상 상태입니다. 전체 화면 응용 프로그램에서 키보드 포커스를 잃어 렌더링이 불가능할 경우, 장치는 *손실* 상태로 전환됩니다. 분실된 상태의 특징은 모든 렌더링 작업의 자동 실패입니다. 즉 렌더링 작업이 실패하더라도 렌더링 메서드가 성공 코드를 반환할 수 있습니다.
+Direct3D 디바이스는 작동 상태이거나 손실 상태일 수 있습니다. *작동* 상태는 디바이스가 실행되고 모든 렌더링이 예상대로 표시되는 디바이스의 정상 상태입니다. 전체 화면 응용 프로그램에서 키보드 포커스를 잃어 렌더링이 불가능할 경우, 디바이스는 *손실* 상태로 전환됩니다. 분실된 상태의 특징은 모든 렌더링 작업의 자동 실패입니다. 즉 렌더링 작업이 실패하더라도 렌더링 메서드가 성공 코드를 반환할 수 있습니다.
 
 설계상 장치 분실을 일으킬 가능성이 있는 전체 시나리오 집합은 지정되지 않았습니다. 사용자가 ALT+TAB을 누르거나 시스템 대화 상자가 초기화된 경우 등 포커스를 잃어버리는 경우가 대표적인 예입니다. 전원 관리 이벤트가 발생하거나 다른 응용 프로그램이 전체 화면 작업을 가정할 때도 장치를 분실할 수 있습니다. 또한 장치 재설정으로 인한 오류 발생 시 장치가 분실 상태가 됩니다.
 
-[**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)에서 파생된 모든 메서드는 장치 분실 후에도 작동합니다. 장치 분실 후 각 기능에는 일반적으로 다음 세 가지 옵션이 있습니다.
+[  **IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)에서 파생된 모든 메서드는 장치 분실 후에도 작동합니다. 장치 분실 후 각 기능에는 일반적으로 다음 세 가지 옵션이 있습니다.
 
 -   "장치 분실" 오류로 실패 - 즉 응용 프로그램이 장치 분실을 인식하여 예상 대로 작동하지 않음을 파악해야 한다는 뜻입니다.
--   S\_OK 또는 다른 반환 코드를 반환하는 자동 실패 - 기능이 자동으로 실패하면 응용 프로그램은 일반적으로 "성공"과 "자동 실패"의 결과를 구분할 수 없습니다.
+-   자동으로 실패 반환 S\_확인 또는 기타 반환 코드-함수가 자동으로 실패 하는 경우 응용 프로그램 일반적으로 구별할 수 없습니다: "success"의 결과 "자동 오류입니다."
 -   반환 코드를 반환합니다.
 
-## <a name="span-idrespondingtoalostdevicespanspan-idrespondingtoalostdevicespanspan-idrespondingtoalostdevicespanresponding-to-a-lost-device"></a><span id="Responding_to_a_Lost_Device"></span><span id="responding_to_a_lost_device"></span><span id="RESPONDING_TO_A_LOST_DEVICE"></span>장치 분실에 응답
+## <a name="span-idrespondingtoalostdevicespanspan-idrespondingtoalostdevicespanspan-idrespondingtoalostdevicespanresponding-to-a-lost-device"></a><span id="Responding_to_a_Lost_Device"></span><span id="responding_to_a_lost_device"></span><span id="RESPONDING_TO_A_LOST_DEVICE"></span>분실된 한 장치에 응답
 
 
 분실된 장치가 재설정된 후 리소스(비디오 메모리 리소스 포함)를 다시 만들어야 합니다. 장치가 분실되면 응용 프로그램은 작동 상태로 복원할 수 있는지 확인하기 위해 장치에 쿼리합니다. 그렇지 않으면 장치를 복원할 수 있을 때까지 응용 프로그램이 기다립니다.
@@ -50,7 +50,7 @@ Direct3D 디바이스는 작동 상태이거나 손실 상태일 수 있습니�
 
 장치 분실에 응답하기 위해 단일 코드 경로로 응용 프로그램을 개발하는 것이 좋습니다. 이 코드 경로는 시작 시 장치를 초기화하는 데 사용된 코드 경로와 동일하거나 비슷할 가능성이 높습니다.
 
-## <a name="span-idretrieveddataspanspan-idretrieveddataspanspan-idretrieveddataspanretrieved-data"></a><span id="Retrieved_Data"></span><span id="retrieved_data"></span><span id="RETRIEVED_DATA"></span>검색된 데이터
+## <a name="span-idretrieveddataspanspan-idretrieveddataspanspan-idretrieveddataspanretrieved-data"></a><span id="Retrieved_Data"></span><span id="retrieved_data"></span><span id="RETRIEVED_DATA"></span>검색된 된 데이터
 
 
 Direct3D를 통해 응용 프로그램이 하드웨어의 단일 패스 렌더링을 기준으로 텍스처와 렌더링 상태의 유효성을 검사할 수 있습니다.
@@ -59,7 +59,7 @@ Direct3D를 통해 응용 프로그램은 이전에 작성했거나 만든 이�
 
 장치 분실 시 기본 표면이 없기 때문에 복사 작업에 실패할 수 있습니다. 장치가 분실되면 백 버퍼도 만들 수 없으므로 스왑 체인 만들기 역시 실패할 수 있습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [장치](devices.md)

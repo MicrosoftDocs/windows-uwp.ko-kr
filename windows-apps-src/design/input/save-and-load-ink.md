@@ -1,5 +1,5 @@
 ---
-Description: UWP apps that support Windows Ink can serialize and deserialize ink strokes to an Ink Serialized Format (ISF) file. The ISF file is a GIF image with additional metadata for all ink stroke properties and behaviors. Apps that are not ink-enabled, can view the static GIF image, including alpha-channel background transparency.
+Description: Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 잉크 스트로크를 직렬화하고 역직렬화할 수 있습니다. ISF 파일은 모든 잉크 스트로크 속성과 동작에 대한 추가 메타 데이터가 포함된 GIF 이미지입니다. 잉크 불가능 앱에서는 알파 채널 배경 투명도를 포함하여 정적 GIF 이미지를 볼 수 있습니다.
 title: Windows Ink 스트로크 데이터 저장 및 검색
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c12e5cb7012ba9ff9a4ed383427e37b79835983
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045349"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645848"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Windows Ink 스트로크 데이터 저장 및 검색
 
@@ -23,13 +23,13 @@ Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 �
 > [!NOTE]
 > ISF는 잉크 데이터를 가장 많이 압축한 영구적 표시입니다. GIF 파일과 같은 이진 문서 형식에 포함하거나 클립보드에 직접 배치할 수 있습니다.
 
-> **중요 API**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **중요 한 Api**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 ## <a name="save-ink-strokes-to-a-file"></a>파일에 잉크 스트로크 저장
 
 여기서는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에 그려진 잉크 스트로크를 저장하는 방법을 설명합니다.
 
-**[ISF(Ink Serialized Format) 파일에서 잉크 스트로크 저장 및 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)에서 이 샘플을 다운로드하세요.**
+**이 샘플을 다운로드할 [저장 하 고 잉크 스트로크 잉크 직렬화 형식 (ISF) 파일에서 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  먼저 UI를 설정합니다.
 
@@ -63,7 +63,7 @@ Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 �
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
+    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
 ```csharp
 public MainPage()
     {
@@ -85,7 +85,7 @@ public MainPage()
 
 3.  마지막으로, **저장** 단추의 클릭 이벤트 처리기에 잉크를 저장합니다.
 
-    [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하면 잉크 데이터가 저장되는 파일과 위치를 모두 사용자가 선택할 수 있습니다.
+    [  **FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하면 잉크 데이터가 저장되는 파일과 위치를 모두 사용자가 선택할 수 있습니다.
 
     파일을 선택한 후 [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241731)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241635) 스트림 설정을 엽니다.
 
@@ -161,7 +161,7 @@ public MainPage()
 
 다음은 파일에서 잉크 스트로크를 로드하고 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에서 해당 잉크 스트로크를 렌더링하는 방법을 설명합니다.
 
-**[ISF(Ink Serialized Format) 파일에서 잉크 스트로크 저장 및 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)에서 이 샘플을 다운로드하세요.**
+**이 샘플을 다운로드할 [저장 하 고 잉크 스트로크 잉크 직렬화 형식 (ISF) 파일에서 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  먼저 UI를 설정합니다.
 
@@ -195,7 +195,7 @@ public MainPage()
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
+    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
 ```csharp
 public MainPage()
     {
@@ -217,7 +217,7 @@ public MainPage()
 
 3.  마지막으로, **로드** 단추의 클릭 이벤트 처리기에서 잉크를 로드합니다.
 
-    [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하면 저장된 잉크 데이터를 검색할 파일과 위치를 모두 사용자가 선택할 수 있습니다.
+    [  **FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하면 저장된 잉크 데이터를 검색할 파일과 위치를 모두 사용자가 선택할 수 있습니다.
 
     파일을 선택한 후 [**Read**](https://msdn.microsoft.com/library/windows/apps/br241731)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241635) 스트림 설정을 엽니다.
 
@@ -277,7 +277,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 
 이 예제에서는 펜 단추(또는 마우스 오른쪽 단추)를 사용하여 입력을 수정할 때 스트로크 선택을 사용합니다. 스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 고급 처리를 위한 통과 입력을 참조하세요.
 
-**[클립보드에서 잉크 스트로크 저장 및 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)에서 이 샘플을 다운로드하세요.**
+**이 샘플을 다운로드할 [저장 하 고 클립보드에서 잉크 스트로크를 로드 합니다.](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)**
 
 1.  먼저 UI를 설정합니다.
 
@@ -317,7 +317,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 선택 기능에 대한 포인터 및 스트로크 이벤트뿐만 아니라 단추의 클릭 이벤트에 대한 수신기도 여기서 선언합니다.
+    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 선택 기능에 대한 포인터 및 스트로크 이벤트뿐만 아니라 단추의 클릭 이벤트에 대한 수신기도 여기서 선언합니다.
 
     스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 고급 처리를 위한 통과 입력을 참조하세요.
 ```csharp
@@ -434,19 +434,19 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 ## <a name="related-articles"></a>관련 문서
 
-* [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
+* [펜 및 스타일러스 상호 작용](pen-and-stylus-interactions.md)
 
 **항목 샘플**
-* [ISF(Ink Serialized Format) 파일에서 잉크 스트로크 저장 및 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
-* [클립보드에서 잉크 스트로크 저장 및 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
+* [저장 하 고 잉크 스트로크 잉크 직렬화 형식 (ISF) 파일에서 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
+* [클립보드에서 잉크 스트로크를 로드 및 저장](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
 
-**기타 샘플**
-* [간단한 잉크 샘플(C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [복잡한 잉크 샘플(C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [잉크 샘플(JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [시작 자습서: UWP 앱에서 잉크 지원](https://aka.ms/appsample-ink)
-* [색칠하기 책 샘플](https://aka.ms/cpubsample-coloringbook)
-* [가족 메모 샘플](https://aka.ms/cpubsample-familynotessample)
+**다른 샘플**
+* [간단한 잉크 샘플 (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [복잡 한 잉크 샘플 (c + +)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [잉크 샘플 (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [자습서 시작 하기: UWP 앱에서 잉크를 지원 합니다.](https://aka.ms/appsample-ink)
+* [색 지정 책 샘플](https://aka.ms/cpubsample-coloringbook)
+* [제품군 정보 샘플](https://aka.ms/cpubsample-familynotessample)
 
 
 

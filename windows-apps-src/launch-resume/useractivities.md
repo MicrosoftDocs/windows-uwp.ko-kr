@@ -6,11 +6,11 @@ ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2756231b067176da66c6dbcedf7a1452d5d109f4
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114549"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641158"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>장치 간 사용자 활동 계속 수행
 
@@ -39,7 +39,7 @@ ms.locfileid: "9114549"
 앱에 **UserActivity**를 추가하려면 다음과 같이 합니다.
 
 1. 앱에서 사용자 컨텍스트(예: 페이지 탐색, 새 게임 레벨 등)가 변경될 때 **UserActivity** 개체를 생성합니다.
-2. 다음 필수 필드 세트로 **UserActivity** 개체를 채웁니다. [ActivityId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activityid#Windows_ApplicationModel_UserActivities_UserActivity_ActivityId), [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri) 및 [UserActivity.VisualElements.DisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.displaytext#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_DisplayText).
+2. 채울 **UserActivity** 필수 필드의 최소 집합을 사용 하 여 개체: [ActivityId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activityid#Windows_ApplicationModel_UserActivities_UserActivity_ActivityId)하십시오 [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri), 및 [UserActivity.VisualElements.DisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.displaytext#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_DisplayText)합니다.
 3. **UserActivity**가 다시 활성화할 수 있도록 앱에 사용자 지정 스키마 처리기를 추가합니다.
 
 단 몇 줄의 코드만으로 **UserActivity**를 앱에 통합할 수 있습니다. 예를 들어 MainPage 클래스 내의 MainPage.xaml.cs에서 이 코드를 가정해 보세요(참고: `using Windows.ApplicationModel.UserActivities;` 가정).
@@ -99,7 +99,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-이 코드는 앱이 프로토콜을 통해 활성화되었는지 여부를 검색합니다. 앱이 프로토콜을 통해 활성화된 경우 활성화되는 작업을 다시 시작하기 위해 앱이 수행해야 하는 작업을 확인합니다. 간단한 응용 프로그램,이 앱이 다시 시작 하는 유일한 활동 이기 때문에 보조 페이지에서 앱이 시작 되 면 합니다.
+이 코드는 앱이 프로토콜을 통해 활성화되었는지 여부를 검색합니다. 앱이 프로토콜을 통해 활성화된 경우 활성화되는 작업을 다시 시작하기 위해 앱이 수행해야 하는 작업을 확인합니다. 간단한 앱 되 고,이 앱을 다시 시작 하는 유일한 활동은 배치 있습니다 보조 페이지의 앱이 시작 되 면 합니다.
 
 ## <a name="use-adaptive-cards-to-improve-the-timeline-experience"></a>적응형 카드를 사용하여 타임라인 환경 개선
 
@@ -155,7 +155,7 @@ Microsoft 계정을 사용하여 응용 프로그램 또는 서비스를 인증�
 ## <a name="summary"></a>요약
 
 [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities) API를 사용하여 앱을 타임라인 및 Cortana에 표시할 수 있습니다.
-* [ **UserActivity** API에 대 한 자세한](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
+* 에 대 한 자세한 정보는 [ **UserActivity** API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 * [샘플 코드](https://github.com/Microsoft/project-rome)를 확인합니다.
 * [더 정교한 적응형 카드](https://adaptivecards.io/)를 참조하세요.
 * [Microsoft Graph](https://developer.microsoft.com/graph/)를 통해 iOS, Android 또는 웹 서비스에서 **UserActivity**를 게시합니다.
@@ -165,11 +165,11 @@ Microsoft 계정을 사용하여 응용 프로그램 또는 서비스를 인증�
 
 * [UserActivities 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 
-## <a name="related-topics"></a>관련 주제
+## <a name="related-topics"></a>관련 항목
 
-* [사용자 활동 (프로젝트 "로마" 문서)](https://docs.microsoft.com/windows/project-rome/user-activities/)
-* [적응형 카드](https://docs.microsoft.com/adaptive-cards/)
-* [적응형 카드 비주얼라이저, 샘플](https://adaptivecards.io/)
-* [URI 활성화 처리](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-* [Microsoft Graph, 활동 피드 및 적응형 카드를 사용하여 모든 플랫폼에서 고객과 소통](https://channel9.msdn.com/Events/Connect/2017/B111)
+* [사용자 활동 (프로젝트 로마 docs)](https://docs.microsoft.com/windows/project-rome/user-activities/)
+* [Adaptive card](https://docs.microsoft.com/adaptive-cards/)
+* [Adaptive card 시각화 도우미, 샘플](https://adaptivecards.io/)
+* [URI 활성화를 처리 합니다.](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+* [Microsoft Graph, 작업 피드 및 Adaptive Card를 사용 하 여 모든 플랫폼에서 고객 참여](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph/)

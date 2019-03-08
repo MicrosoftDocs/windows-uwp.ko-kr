@@ -1,5 +1,5 @@
 ---
-Description: Content transition animations let you change the content of an area of the screen while keeping the container or background constant. New content fades in. If there is existing content to be replaced, that content fades out.
+Description: 콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다.
 title: 콘텐츠 전환 애니메이션에 대한 지침
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 template: detail.hbs
@@ -11,11 +11,11 @@ design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 096cc0aaa9b0580eb6b45328a3243ba75d82f202
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940572"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649808"
 ---
 # <a name="content-transition-animations"></a>콘텐츠 전환 애니메이션
 
@@ -23,7 +23,7 @@ ms.locfileid: "8940572"
 
 콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다.
 
-> **중요 API**: [**ContentThemeTransition 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/br243104)
+> **중요 한 Api**: [**ContentThemeTransition 클래스 (XAML)**](https://msdn.microsoft.com/library/windows/apps/br243104)
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
@@ -40,10 +40,10 @@ ms.locfileid: "8940572"
 
 ## <a name="related-articles"></a>관련 문서
 
-**개발자용(XAML)**
+**개발자 (XAML)**
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [콘텐츠 전환 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649426)
-* [빠른 시작: 라이브러리 애니메이션을 사용하여 UI에 애니메이션 효과 주기](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [콘텐츠 전환에 애니메이션 적용](https://msdn.microsoft.com/library/windows/apps/xaml/jj649426)
+* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**ContentThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/br243104)
 
  

@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b072c482fba1f36ac425b98c0126b56e735af078
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933198"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622578"
 ---
 # <a name="get-mediamarketplaceidbrowse"></a>GET (media/{marketplaceId}/browse)
-단일 미디어 그룹 내에서 항목을 검색할 수 있습니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
+단일 미디어 그룹 내의 항목에 대 한 검색을 허용 합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`합니다.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4EFB)
@@ -27,27 +27,27 @@ ms.locfileid: "8933198"
  
 ## <a name="remarks"></a>설명
  
-이 검색에서 반환 된 데이터의 페이지가 아닌 순차적으로 skipItems 매개 변수를 사용 하 여 연속 토큰을 사용 하 여 액세스할 수 있습니다. 이 API는 쿼리 구체화를 수락합니다. 
+무작위로 skipItems 매개 변수를 사용 하 여 continuation 토큰을 사용 하는 대신이 검색에서 반환 된 데이터의 페이지를 액세스할 수 있습니다. 이 API는 쿼리 구체화를 허용합니다. 
  
- 이제 **SandboxId** 는 XToken 클레임이에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다. 
+ **SandboxId** 는 XToken에 클레임에서 검색 되 고 적용 합니다. 경우는 **SandboxId** 없을 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류가 throw 됩니다. 
   
 <a id="ID4EFB"></a>
 
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| marketplaceId| string| 필수. 문자열 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>에서 가져온 값입니다.| 
+| marketplaceId| 문자열| 필수. 문자열에서 가져온 값을 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>합니다.| 
   
 <a id="ID4EQB"></a>
 
  
 ## <a name="query-string-parameters"></a>쿼리 문자열 매개 변수
  
-이 API는 다음과 같은 쿼리 매개 변수: combinedContentRating, desiredMediaItemTypes, 필드, maxItems, preferredProvider, q, queryRefiners, skipItems, firstPartyOnly, freeOnly, hasTrailer, latestOnly, subscriptionLevel, 및 topRatedOnly .
+이 API에서는 다음 쿼리 매개 변수: combinedContentRating, desiredMediaItemTypes, 필드, maxItems, preferredProvider, 질문 및 답변, queryRefiners, skipItems, firstPartyOnly, freeOnly, hasTrailer, latestOnly subscriptionLevel, 및 topRatedOnly .
  
-이러한 매개 변수에 대 한 자세한 내용은 [EDS 매개 변수](../../additional/edsparameters.md) 를 참조 하세요.
+참조 [EDS 매개 변수](../../additional/edsparameters.md) 이러한 매개 변수에 대 한 자세한 내용은 합니다.
   
 <a id="ID4E6B"></a>
 
@@ -57,9 +57,9 @@ ms.locfileid: "8933198"
 <a id="ID4EFC"></a>
 
  
-### <a name="sample-response"></a>예제 응답
+### <a name="sample-response"></a>샘플 응답
  
-아래 JSON 코드 호출에 대 한 응답에서은 `/media/en-us/browse?orderBy=releaseDate&desiredMediaItemTypes=DGame&fields=all`.
+아래의 JSON 코드는 호출에 대 한 응답에서 `/media/en-us/browse?orderBy=releaseDate&desiredMediaItemTypes=DGame&fields=all`합니다.
  
 
 ```cpp
@@ -216,7 +216,7 @@ ms.locfileid: "8933198"
 <a id="ID4EWC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
 [/media/{marketplaceId}/browse](uri-medialocalebrowse.md)
 
@@ -224,15 +224,15 @@ ms.locfileid: "8933198"
 <a id="ID4EAD"></a>
 
  
-##### <a name="further-information"></a>자세한 정보 
+##### <a name="further-information"></a>추가 정보 
 
-[EDS 공통 헤더](../../additional/edscommonheaders.md)
+[EDS 일반적인 헤더](../../additional/edscommonheaders.md)
 
  [EDS 매개 변수](../../additional/edsparameters.md)
 
  [EDS 쿼리 구체화](../../additional/edsqueryrefiners.md)
 
- [마켓플레이스 URI](atoc-reference-marketplace.md)
+ [Marketplace Uri](atoc-reference-marketplace.md)
 
  [추가 참조](../../additional/atoc-xboxlivews-reference-additional.md)
 

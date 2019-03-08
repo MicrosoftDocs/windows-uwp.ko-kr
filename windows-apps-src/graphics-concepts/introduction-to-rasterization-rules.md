@@ -1,6 +1,6 @@
 ---
 title: 래스터화 규칙 소개
-description: 흔히 꼭짓점에 지정된 점은 화면의 픽셀과 정확히 일치하지는 않습니다. 이 경우, Direct3D가 삼각형 래스터화 규칙을 적용하여 주어진 삼각형에 어떤 픽셀을 적용할지 결정합니다.
+description: 흔히 꼭짓점에 지정된 점은 화면의 픽셀과 정확히 일치하지는 않습니다. 이 경우, Direct3D가 삼각형 래스터화 규칙을 적용하여 지정된 삼각형에 어떤 픽셀을 적용할지 결정합니다.
 ms.assetid: 4232CDBA-F669-4417-9378-F9013E83462C
 keywords:
 - 래스터화 규칙 소개
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d1907be029254d99be9e6158c93c179baea1fb0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947935"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641088"
 ---
 # <a name="introduction-to-rasterization-rules"></a>래스터화 규칙 소개
 
 
-흔히 꼭짓점에 지정된 점은 화면의 픽셀과 정확히 일치하지는 않습니다. 이 경우, Direct3D가 삼각형 래스터화 규칙을 적용하여 주어진 삼각형에 어떤 픽셀을 적용할지 결정합니다.
+흔히 꼭짓점에 지정된 점은 화면의 픽셀과 정확히 일치하지는 않습니다. 이 경우, Direct3D가 삼각형 래스터화 규칙을 적용하여 지정된 삼각형에 어떤 픽셀을 적용할지 결정합니다.
 
 래스터화 규칙을 간단하게 소개합니다. 자세한 내용은 [래스터화 규칙](rasterization-rules.md)을 참조하세요. [래스터화(RS) 단계](rasterizer-stage--rs-.md)도 참조하세요.
 
@@ -52,24 +52,24 @@ Direct3D가 사용하는 삼각형 래스터화 규칙에 대한 설명이 모�
 
 ![번호가 매겨진 앞의 두 정사각형으로부터 영향을 받는 픽셀](images/samepix.png)
 
-## <a name="span-idpointandlinerulesspanspan-idpointandlinerulesspanspan-idpointandlinerulesspanpoint-and-line-rules"></a><span id="Point_and_Line_Rules"></span><span id="point_and_line_rules"></span><span id="POINT_AND_LINE_RULES"></span>점과 선 규칙
+## <a name="span-idpointandlinerulesspanspan-idpointandlinerulesspanspan-idpointandlinerulesspanpoint-and-line-rules"></a><span id="Point_and_Line_Rules"></span><span id="point_and_line_rules"></span><span id="POINT_AND_LINE_RULES"></span>지점 및 선 규칙
 
 
 점은 점 스프라이트와 동일하게 렌더링됩니다. 즉, 두 가지 모두 화면 정렬 사변형으로 렌더링되기 때문에 다각형 렌더링과 같은 규칙을 준수합니다.
 
 안티앨리어싱되지 않은 선 렌더링 규칙은 [GDI 선](https://msdn.microsoft.com/library/windows/desktop/dd145027)의 규칙과 정확히 동일합니다.
 
-## <a name="span-idpointspriterulesspanspan-idpointspriterulesspanspan-idpointspriterulesspanpoint-sprite-rules"></a><span id="Point_Sprite_Rules"></span><span id="point_sprite_rules"></span><span id="POINT_SPRITE_RULES"></span>점 스프라이트 규칙
+## <a name="span-idpointspriterulesspanspan-idpointspriterulesspanspan-idpointspriterulesspanpoint-sprite-rules"></a><span id="Point_Sprite_Rules"></span><span id="point_sprite_rules"></span><span id="POINT_SPRITE_RULES"></span>포인트 스프라이트 규칙
 
 
 점 스프라이트 및 패치 원형은 원형이 먼저 삼각형으로 분할되고 그 삼각형이 래스터화되는 것처럼 래스터화됩니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [장치](devices.md)
 
-[RS(래스터라이저) 단계](rasterizer-stage--rs-.md)
+[래스터 라이저 (RS) 단계](rasterizer-stage--rs-.md)
 
 [래스터화 규칙](rasterization-rules.md)
 

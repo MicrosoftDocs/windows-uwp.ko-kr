@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 279e650532505467f3c0dbabf3814618b893aedb
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927883"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637028"
 ---
 # <a name="depth-buffers"></a>깊이 버퍼
 
@@ -47,7 +47,7 @@ z-버퍼 사용은 렌더링 중 오버헤드를 유발할 수 있습니다. z-�
 
 깊이 값의 실제 해석은 렌더러에 따라 달라집니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [깊이 및 스텐실 버퍼](depth-and-stencil-buffers.md)

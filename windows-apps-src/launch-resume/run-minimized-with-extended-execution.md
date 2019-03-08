@@ -7,11 +7,11 @@ keywords: windows 10, uwp, 확장 실행, 최소화, ExtendedExecutionSession, �
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
 ms.localizationpriority: medium
 ms.openlocfilehash: 8cc67a7593a340ada8f807fc0fb0c1b846c6f05b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8944025"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641308"
 ---
 # <a name="postpone-app-suspension-with-extended-execution"></a>확장 실행을 사용하여 앱 일시 중단 연기
 
@@ -23,7 +23,7 @@ ms.locfileid: "8944025"
 
 앱을 계속 실행해야 하는 경우 OS에서 앱을 계속 실행시키거나 계속 실행시키도록 요청할 수 있습니다. 예를 들어 백그라운드에서 오디오를 재생할 때 [백그라운드 미디어 재생](../audio-video-camera/background-audio.md)에 대한 몇 가지 단계를 따르면 OS에서 앱 실행 시간을 길게 지속할 수 있습니다. 그렇지 않으면 수동으로 추가 시간을 요청해야 합니다. 백그라운드 실행을 수행할 수 있는 시간은 대개 몇 분이지만 언제든지 취소 중인 세션을 처리할 수 있는 준비가 되어 있어야 합니다. 이러한 응용 프로그램 수명 주기 시간 제약은 디버거 아래에서 앱이 실행 중인 동안 사용되지 않습니다. 이런 이유 때문에 디버거에서 또는 Visual Studio에서 사용할 수 있는 수명 주기 이벤트를 사용하여 실행되지 않는 동안 앱 일시 중단 연기를 위한 확장 실행 및 기타 도구를 테스트하는 것이 중요합니다. 
  
-백그라운드에서 작업을 완료하기 위해 추가 시간을 요청하려면 [ExtendedExecutionSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx)을 만듭니다. 이때 만드는 **ExtendedExecutionSession**의 종류는 만들 때 제공하는 [ExtendedExecutionReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx)에 의해 결정됩니다. **ExtendedExecutionReason** 열거형 값으로는 **Unspecified, LocationTracking**, **SavingData**의 세 가지가 있습니다. 언제든지 하나의 **ExtendedExecutionSession**만 요청할 수 있습니다. 승인된 세션 요청이 현재 활성일 때 다른 세션을 만들려고 하면 그룹 또는 리소스가 요청된 작업을 수행하기 위해 올바른 상태가 아님을 나타내는 **ExtendedExecutionSession** 생성자에서 예외 0x8007139F를 throw합니다. [ExtendedExecutionForegroundSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession.aspx) 및 [ExtendedExecutionForegroundReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason.aspx)을 사용하면 안 됩니다. 이들은 제한된 기능을 필요로 하며 스토어 응용 프로그램에 사용할 수 없습니다.
+백그라운드에서 작업을 완료하기 위해 추가 시간을 요청하려면 [ExtendedExecutionSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx)을 만듭니다. 이때 만드는 **ExtendedExecutionSession**의 종류는 만들 때 제공하는 [ExtendedExecutionReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx)에 의해 결정됩니다. 세 가지 **ExtendedExecutionReason** 열거형 값: **지정 하지 않으면 LocationTracking** 하 고 **SavingData**합니다. 언제든지 하나의 **ExtendedExecutionSession**만 요청할 수 있습니다. 승인된 세션 요청이 현재 활성일 때 다른 세션을 만들려고 하면 그룹 또는 리소스가 요청된 작업을 수행하기 위해 올바른 상태가 아님을 나타내는 **ExtendedExecutionSession** 생성자에서 예외 0x8007139F를 throw합니다. [ExtendedExecutionForegroundSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession.aspx) 및 [ExtendedExecutionForegroundReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason.aspx)을 사용하면 안 됩니다. 이들은 제한된 기능을 필요로 하며 스토어 응용 프로그램에 사용할 수 없습니다.
 
 ## <a name="run-while-minimized"></a>최소화된 상태로 실행
 
@@ -81,7 +81,7 @@ switch (result)
         break;
 }
 ```
-[코드 샘플 보기](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/ExtendedExecution/cs/Scenario1_UnspecifiedReason.xaml.cs#L81-L110)  
+[코드 샘플을 참조 하세요](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/ExtendedExecution/cs/Scenario1_UnspecifiedReason.xaml.cs#L81-L110)  
 
 **RequestExtensionAsync** 호출로 앱의 백그라운드 작업을 사용자가 승인했는지 여부와 백그라운드 실행에 사용 가능한 리소스가 시스템에 있는지 여부를 운영 체제에서 확인합니다. 언제든지 한 앱에 대해 한 세션만 승인되며 **RequestExtensionAsync**에 대한 추가 호출을 발생시켜 세션이 거부됩니다.
 
@@ -119,7 +119,7 @@ private async void SessionRevoked(object sender, ExtendedExecutionRevokedEventAr
     });
 }
 ```
-[코드 샘플 보기](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/ExtendedExecution/cs/Scenario1_UnspecifiedReason.xaml.cs#L124-L141)
+[코드 샘플을 참조 하세요](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/ExtendedExecution/cs/Scenario1_UnspecifiedReason.xaml.cs#L124-L141)
 
 ### <a name="dispose"></a>Dispose
 
@@ -140,7 +140,7 @@ void ClearExtendedExecution(ExtendedExecutionSession session)
     }
 }
 ```
-[코드 샘플 보기](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/ExtendedExecution/cs/Scenario1_UnspecifiedReason.xaml.cs#L49-L63)
+[코드 샘플을 참조 하세요](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/ExtendedExecution/cs/Scenario1_UnspecifiedReason.xaml.cs#L49-L63)
 
 앱은 한 번에 단 하나의 **ExtendedExecutionSession**만 활성화할 수 있습니다. 저장소 또는 네트워크, 네트워크 기반 서비스와 같은 리소스에 액세스해야 하는 복잡한 작업을 완료하기 위해 비동기 작업을 사용하는 앱이 많습니다. 여러 비동기 작업의 완료가 필요한 작업일 경우 **ExtendedExecutionSession**을 삭제하고 앱을 일시 중지하기 전에 여러 비동기 작업 각각의 상태를 고려해야 합니다. 이를 위해서는 아직 실행 중인 작업의 수를 계산하는 참조가 필요하며, 그 값이 0이 될 때까지 세션을 삭제하지 않아야 합니다.
 
@@ -247,7 +247,7 @@ static class ExtendedExecutionHelper
     }
 }
 ```
-[코드 샘플 보기](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/ExtendedExecution/cs/Scenario4_MultipleTasks.xaml.cs)
+[코드 샘플을 참조 하세요](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/ExtendedExecution/cs/Scenario4_MultipleTasks.xaml.cs)
 
 ## <a name="ensure-that-your-app-uses-resources-well"></a>앱이 리소스를 제대로 사용하고 있는지 확인
 
@@ -257,7 +257,7 @@ static class ExtendedExecutionHelper
 
 ## <a name="see-also"></a>참고 항목
 
-[확장 실행 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ExtendedExecution)  
+[확장 된 실행 예제](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ExtendedExecution)  
 [응용 프로그램 수명 주기](https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle)  
 [앱 수명 주기 - 앱을 백그라운드 작업 및 확장된 실행 활성 상태로 유지](https://msdn.microsoft.com/en-us/magazine/mt590969.aspx)
 [백그라운드 메모리 관리](https://msdn.microsoft.com/windows/uwp/launch-resume/reduce-memory-usage)  

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 973091926ddff312b20002f7b535d34a3b7d2bc4
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919601"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650338"
 ---
 # <a name="fingerprint-biometrics"></a>지문 생체 인식
 
@@ -72,7 +72,7 @@ public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
 
 지문 스캔에서 사용자 동의를 요청하려면 [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139) 메서드를 호출합니다. 지문 인증이 작동하려면 사용자가 이전에 지문 "서명"을 지문 데이터베이스에 추가한 상태여야 합니다.
 
-[**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139)를 호출하면 지문 스캔을 요청하는 모달 대화 상자가 사용자에게 표시됩니다. 다음 이미지와 같이 모달 대화 상자의 일부로 사용자에게 표시되는 메시지를 **UserConsentVerifier.RequestVerificationAsync** 메서드에 제공할 수 있습니다.
+[  **UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139)를 호출하면 지문 스캔을 요청하는 모달 대화 상자가 사용자에게 표시됩니다. 다음 이미지와 같이 모달 대화 상자의 일부로 사용자에게 표시되는 메시지를 **UserConsentVerifier.RequestVerificationAsync** 메서드에 제공할 수 있습니다.
 
 ```cs
 private async System.Threading.Tasks.Task<string> RequestConsent(string userMessage)

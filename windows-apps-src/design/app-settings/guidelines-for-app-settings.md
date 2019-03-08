@@ -1,5 +1,5 @@
 ---
-Description: This article describes best practices for creating and displaying app settings.
+Description: 이 문서에서는 앱 설정을 만들고 표시하기 위한 모범 사례에 대해 설명합니다.
 title: 앱 설정에 대한 지침
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a31464d208e8d9abe68703560552c99e5d957463
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049138"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57638238"
 ---
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
 
@@ -36,7 +36,7 @@ ms.locfileid: "9049138"
 
 
 -   설정 페이지를 간단하게 유지하고 이진(켜기/끄기) 컨트롤을 사용합니다. [토글 스위치](../controls-and-patterns/toggles.md)는 일반적으로 이진 설정에 가장 적합한 컨트롤입니다.
--   사용자가 함께 사용할 수 없는 최대 5개의 관련 옵션으로 이루어진 집합에서 한 항목을 선택할 수 있는 설정에는 [라디오 단추](../controls-and-patterns/radio-button.md)를 사용합니다.
+-   사용자가 함께 사용할 수 없는 5개의 관련 옵션으로 이루어진 집합에서 한 항목을 선택할 수 있는 설정에는 [라디오 단추](../controls-and-patterns/radio-button.md)를 사용합니다.
 -   앱 설정 페이지에서 모든 앱 설정에 대한 진입점을 만듭니다.
 -   설정을 간단하게 유지합니다. 스마트 기본값을 정의하고 설정 수를 최소한으로 유지합니다.
 -   사용자가 설정을 변경할 경우 변경 내용이 앱에 즉시 반영되어야 합니다.
@@ -129,11 +129,11 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
 -   필요한 경우 스크롤 가능한 단일 열에 위쪽에서 아래쪽으로 콘텐츠를 제공합니다. 스크롤을 화면 높이의 최대 두 배로 제한합니다.
 -   앱 설정에 다음 컨트롤을 사용합니다.
 
-    -   [토글 스위치](../controls-and-patterns/toggles.md): 사용자가 값을 설정하거나 해제할 수 있습니다.
-    -   [라디오 단추](../controls-and-patterns/radio-button.md): 사용자가 최대 5개의 상호 배타적인 관련 옵션으로 이루어진 집합에서 한 항목을 선택할 수 있습니다.
-    -   [텍스트 입력 상자](../controls-and-patterns/text-block.md): 사용자가 텍스트를 입력할 수 있습니다. 메일이나 암호와 같이, 사용자로부터 얻는 텍스트 형식에 해당하는 텍스트 입력 상자 형식을 사용합니다.
-    -   [하이퍼링크](../controls-and-patterns/hyperlinks.md): 사용자를 앱 내의 다른 페이지나 외부 웹 사이트로 이동합니다. 사용자가 하이퍼링크를 클릭하면 설정 플라이아웃이 해제됩니다.
-    -   [단추](../controls-and-patterns/buttons.md): 사용자가 현재 설정 플라이아웃을 해제하지 않고 즉각적인 작업을 시작할 수 있습니다.
+    -   [설정/해제 스위치](../controls-and-patterns/toggles.md): 사용자가 켜거나 값을 설정 합니다.
+    -   [라디오 단추](../controls-and-patterns/radio-button.md): 사용자가 최대 5 상호 배타적인 집합에서 하나의 항목을 선택할 수 있도록 관련 옵션입니다.
+    -   [텍스트 입력된 상자](../controls-and-patterns/text-block.md): 사용자가 텍스트를 입력할 수 있도록 합니다. 메일이나 암호와 같이, 사용자로부터 얻는 텍스트 형식에 해당하는 텍스트 입력 상자 형식을 사용합니다.
+    -   [하이퍼링크](../controls-and-patterns/hyperlinks.md): 외부 웹 사이트 또는 앱 내에서 다른 페이지로 사용자를 수행 합니다. 사용자가 하이퍼링크를 클릭하면 설정 플라이아웃이 해제됩니다.
+    -   [단추](../controls-and-patterns/buttons.md): 사용자가 현재 설정 플라이 아웃을 해제 하지 않고 작업을 즉시 시작할 수 있도록 합니다.
 -   컨트롤 중 하나가 비활성화되면 설명 메시지를 추가합니다. 이 메시지를 비활성화된 컨트롤 위에 배치합니다.
 -   설정 플라이아웃 및 헤더에 애니메이션 효과를 준 후 단일 블록으로 콘텐츠 및 컨트롤에 애니메이션 효과를 줍니다. 100px 왼쪽 오프셋과 함께 [**enterPage**](https://msdn.microsoft.com/library/windows/apps/br212672) 또는 [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288) 애니메이션을 사용하여 콘텐츠에 애니메이션 효과를 줍니다.
 -   필요한 경우 구역 머리글, 단락 및 레이블을 사용하여 콘텐츠를 구성하고 명확하게 표시합니다.
@@ -146,6 +146,6 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
 ## <a name="related-articles"></a>관련 문서
 
 * [명령 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958433)
-* [진행률 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465469)
+* [진행률 컨트롤에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh465469)
 * [앱 데이터 저장 및 검색](https://msdn.microsoft.com/library/windows/apps/mt299098)
 * [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)

@@ -1,28 +1,28 @@
 ---
 title: Windows 설정 앱 실행
-description: 앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 체계를 통해 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
+description: 앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
 ms.date: 01/08/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 87074e9871fae6be32e2862fc547097898baede8
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9116475"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646958"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
 
-**중요 API**
+**중요 한 Api**
 
 -   [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)
 -   [**PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482)
 -   [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)
 
-Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 **ms-settings:** URI 스키마를 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
+Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에 설명 합니다 **ms 설정:** URI 체계입니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
 
 설정 앱 실행은 개인 정보 인식 앱 작성의 중요한 부분입니다. 앱에서 중요한 리소스에 액세스할 수 없는 경우 사용자에게 해당 리소스의 개인 정보 설정에 대한 편리한 링크를 제공하는 것이 좋습니다. 자세한 내용은 [개인 정보 인식 앱에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh768223)을 참조하세요.
 
@@ -44,7 +44,7 @@ Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서�
 </TextBlock>
 ```
 
-또는 앱이 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 호출하여 **설정** 앱을 시작할 수 있습니다. 이 예제에서는 `ms-settings:privacy-webcam` URI를 사용하여 카메라에 대한 개인 정보 설정 페이지를 시작하는 방법을 보여 줍니다.
+또는 앱이 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 호출하여 **설정** 앱을 시작할 수 있습니다. 이 예제에서는 `ms-settings:privacy-webcam` URI를 사용하여 카메라에 대한 개인 설정 페이지를 시작하는 방법을 보여 줍니다.
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-webcam"));
@@ -56,7 +56,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:
 
 URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 앱 실행](launch-default-app.md)을 참조하세요.
 
-## <a name="ms-settings-uri-scheme-reference"></a>ms-settings: URI 스키마 참조
+## <a name="ms-settings-uri-scheme-reference"></a>ms-settings: URI 체계 참조입니다.
 
 다음 URI를 사용하여 설정 앱의 여러 페이지를 열 수 있습니다.
 
@@ -80,7 +80,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 회사 또는 학교 계정에 액세스 | ms-settings:workplace |
 | 메일 및 앱 계정  | ms-settings:emailandaccounts |
 | 가족 및 다른 사용자 | ms-settings:otherusers |
-| 키오스크 설정 | ms-assignedaccess 설정: |
+| 키오스크 설정 | ms-settings:assignedaccess |
 | 로그인 옵션 | ms-settings:signinoptions<br>ms-settings:signinoptions-dynamiclock |
 | 설정 동기화 | ms-settings:sync |
 | Windows Hello 설정 | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
@@ -95,7 +95,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 웹 사이트용 앱 | ms-settings:appsforwebsites |
 | 기본 앱 | ms-settings:defaultapps |
 | 선택적 기능 관리 | ms-settings:optionalfeatures |
-| 오프라인 지도 | ms-settings:maps<br/>ms-:-downloadmaps (다운로드 지도) |
+| 오프라인 지도 | ms-settings:maps<br/>ms-설정: 맵-downloadmaps (다운로드 maps) |
 | 시작 앱 | ms-settings:startupapps |
 | 비디오 재생 | ms-settings:videoplayback |
 
@@ -105,11 +105,11 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 사용 권한 & 기록 | ms-settings:cortana-permissions |
 | 추가 정보 | ms-settings:cortana-moredetails |
-| 장치에서 Cortana | ms-settings:cortana-notifications |
-| Cortana에게 말하기 | ms-settings:cortana-language<br/>ms-cortana 설정:<br/>ms-설정: cortana-talktocortana |
+| 내 장치 간에 Cortana 사용으로 이동합니다 | ms-settings:cortana-notifications |
+| Cortana에게 말하기 | ms-settings:cortana-language<br/>ms-settings:cortana<br/>ms-settings:cortana-talktocortana |
 
 > [!NOTE] 
-> 이 설정 섹션에서 데스크톱 PC 영역 Cortana 현재 사용할 수 없는 위치나 Cortana가 사용 하지 않도록 설정 된 경우 검색을 호출 됩니다. Cortana 관련 페이지 (Cortana 내 장치 간) 및 Cortana에 음성 채팅이 경우 나열 되지 않습니다. 
+> 이 설정 섹션에서 데스크톱 PC는 Cortana를 현재 사용할 수 없는 경우 또는 Cortana 비활성화 된 지역에 설정 된 경우 검색을 호출 됩니다. Cortana 특정 페이지 (내 장치에서 Cortana) 및 Cortana에 게 문의 여기서 나열 되지 않습니다. 
 
 ## <a name="devices"></a>장치
 
@@ -119,7 +119,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 자동 실행 | ms-settings:autoplay |
 | Bluetooth | ms-settings:bluetooth |
 | 연결 장치 | ms-settings:connecteddevices |
-| 기본 카메라 | ms-설정: 카메라 (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
+| 기본 카메라 | ms-설정: 카메라 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 마우스 및 터치 패드 | ms-settings:mousetouchpad(터치 패드가 있는 장치에서만 사용 가능한 터치 패드 설정) |
 | 펜 및 Windows Ink | ms-settings:pen |
 | 프린터 및 스캐너 | ms-settings:printers |
@@ -134,10 +134,10 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |설정 페이지| URI |
 |-------------|-----|
 | 오디오 | ms-settings:easeofaccess-audio |
-| 선택 자막 | ms-settings:easeofaccess-closedcaptioning |
-| 색상 필터 | ms-설정: easeofaccess-colorfilter |
-| 커서 & 포인터 크기 | ms-설정: easeofaccess-cursorandpointersize |
-| 디스플레이 | ms-settings:easeofaccess-display |
+| 자막 | ms-settings:easeofaccess-closedcaptioning |
+| 색 필터 | ms-settings:easeofaccess-colorfilter |
+| 커서 및 포인터 크기 | ms-settings:easeofaccess-cursorandpointersize |
+| 표시 | ms-settings:easeofaccess-display |
 | 아이 컨트롤 | ms-settings:easeofaccess-eyecontrol |
 | 글꼴 | ms-settings:fonts |
 | 고대비 | ms-settings:easeofaccess-highcontrast |
@@ -146,7 +146,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 돋보기 | ms-settings:easeofaccess-magnifier |
 | 마우스 | ms-settings:easeofaccess-mouse |
 | 내레이터 | ms-settings:easeofaccess-narrator |
-| 기타 옵션 | ms-설정: easeofaccess-otheroptions (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
+| 기타 옵션 | ms-설정: easeofaccess-otheroptions (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 음성 명령 | ms-settings:easeofaccess-speechrecognition |
 
 ## <a name="extras"></a>추가 콘텐츠
@@ -164,7 +164,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 게임 DVR | ms-settings:gaming-gamedvr |
 | 게임 모드 | ms-settings:gaming-gamemode |
 | 전체 화면에서 게임 플레이 | ms-settings:quietmomentsgame |
-| TruePlay | ms-설정: 게임-trueplay (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
+| TruePlay | ms-설정: 게임-trueplay (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | Xbox 네트워킹 | ms-settings:gaming-xboxnetworking |
 
 ## <a name="home-page"></a>홈페이지
@@ -187,63 +187,63 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 알려진 네트워크 관리 | ms-settings:network-wifisettings |
 | 모바일 핫스팟 | ms-settings:network-mobilehotspot |
 | NFC | ms-settings:nfctransactions |
-| 프록시 | ms-settings:network-proxy |
-| 상태 | ms-settings:network-status<br/>ms-: |
+| Proxy (프록시) | ms-settings:network-proxy |
+| 상태 | ms-settings:network-status<br/>ms-settings:network |
 | VPN | ms-settings:network-vpn |
 | Wi-Fi | ms-settings:network-wifi(장치에 wifi 어댑터가 있는 경우에만 사용 가능) |
 | Wi-Fi 통화 | ms-settings:network-wificalling(Wi-Fi 호출이 활성화된 경우에만 사용 가능) |
 
-## <a name="personalization"></a>개인 설정
+## <a name="personalization"></a>Personalization
 
 |설정 페이지| URI |
 |-------------|-----|
-| 백그라운드 | ms-settings:personalization-background |
+| 배경 | ms-settings:personalization-background |
 | 시작 화면에 표시되는 폴더 선택 | ms-settings:personalization-start-places |
-| 색 | ms-settings:personalization-colors<br/>ms-설정: 색상 |
-| 한 눈에 보기 | ms-설정: 개인 설정-눈 (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
+| 색 | ms-settings:personalization-colors<br/>ms-settings:colors |
+| 한 눈에 보기 | ms-설정: 개인 설정-상태 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 잠금 화면 | ms-settings:lockscreen |
-| 탐색 모음 | ms-설정: 개인 설정-탐색 모음 (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
+| 탐색 모음 | ms-설정: 개인 설정-navbar (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 개인 설정(범주) | ms-settings:personalization |
-| 시작 화면 | ms-settings:personalization-start |
+| 시작 | ms-settings:personalization-start |
 | 작업 표시줄 | ms-settings:taskbar |
 | 테마 | ms-settings:themes |
 
-## <a name="phone"></a>Phone
+## <a name="phone"></a>전화
 
 |설정 페이지| URI |
 |-------------|-----|
-| 사용자 전화 | ms-settings:mobile-devices<br/>ms-모바일 설정-장치-addphone<br/>ms-모바일 설정-장치-addphone-direct (열리고 **사용자 전화** 앱) |
+| 사용자 전화 | ms-settings:mobile-devices<br/>ms-settings:mobile-devices-addphone<br/>ms-설정: mobile-장치-addphone-직접 (열립니다 **Your Phone** 앱) |
 
 ## <a name="privacy"></a>개인 정보
 
 |설정 페이지| URI |
 |-------------|-----|
-| 액세서리 앱 | ms-:-accessoryapps (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
+| 액세서리 앱 | ms-설정: 개인 정보-accessoryapps (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 계정 정보 | ms-settings:privacy-accountinfo |
 | 활동 기록 | ms-settings:privacy-activityhistory |
-| 광고 ID | ms-:-advertisingid (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
-| 앱 진단 | ms-settings:privacy-appdiagnostics |
+| 광고 ID | ms-설정: 개인 정보-advertisingid (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
+| 나타납니다 | ms-settings:privacy-appdiagnostics |
 | 자동 파일 다운로드 | ms-settings:privacy-automaticfiledownloads |
-| 백그라운드 앱 | ms-settings:privacy-backgroundapps |
+| 배경 앱 | ms-settings:privacy-backgroundapps |
 | 일정 | ms-settings:privacy-calendar |
 | 통화 기록 | ms-settings:privacy-callhistory |
 | 카메라 | ms-settings:privacy-webcam |
 | 연락처 | ms-settings:privacy-contacts |
 | 문서 | ms-settings:privacy-documents |
-| 이메일 | ms-settings:privacy-email |
+| 메일 | ms-settings:privacy-email |
 | 아이 트래커 | ms-settings:privacy-eyetracker(eyetracker 하드웨어 필요) |
 | 피드백 및 진단 | ms-settings:privacy-feedback |
 | 파일 시스템 | ms-settings:privacy-broadfilesystemaccess |
-| 일반 | ms-settings:privacy-general |
+| 일반 사항 | ms-settings:privacy-general |
 | 위치 | ms-settings:privacy-location |
 | 메시지 | ms-settings:privacy-messaging |
 | 마이크 | ms-settings:privacy-microphone |
 | 동작 | ms-settings:privacy-motion |
 | 알림 | ms-settings:privacy-notifications |
 | 기타 장치 | ms-settings:privacy-customdevices |
-| 그림 | ms-settings:privacy-pictures |
-| 전화 통화 | ms-:-phonecall (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
-| 라디오 | ms-settings:privacy-radios |
+| 사진 | ms-settings:privacy-pictures |
+| 전화 통화 | ms-설정: 개인 정보-전화 통화 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
+| 무선 | ms-settings:privacy-radios |
 | 음성, 수동 입력 및 입력 |ms-settings:privacy-speechtyping |
 | 작업 | ms-settings:privacy-tasks |
 | 비디오 | ms-settings:privacy-videos |
@@ -258,7 +258,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 팀 장치 관리 | ms-settings:surfacehub-devicemanagenent |
 | 시작 화면 | ms-settings:surfacehub-welcome |
 
-## <a name="system"></a>시스템
+## <a name="system"></a>System
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -267,10 +267,10 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 배터리 절약 모드 | ms-settings:batterysaver(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 배터리 절약 모드 설정 | ms-settings:batterysaver-settings(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 배터리 사용 | ms-settings:batterysaver-usagedetails(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
-| 클립보드 | ms-설정: 클립보드 |
-| Display | ms-settings:display |
+| 클립보드 | ms-settings:clipboard |
+| 표시 | ms-settings:display |
 | 기본 저장 위치 | ms-settings:savelocations |
-| 디스플레이 | ms-settings:screenrotation |
+| 표시 | ms-settings:screenrotation |
 | 내 디스플레이 복제 | ms-settings:quietmomentspresentation |
 | 이 시간 동안 | ms-settings:quietmomentsscheduled |
 | 암호화 | ms-settings:deviceencryption |
@@ -279,18 +279,18 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 메시지 | ms-settings:messaging |
 | 멀티태스킹 | ms-settings:multitasking |
 | 야간 설정 | ms-settings:nightlight |
-| 휴대폰 | ms-settings:phone-defaultapps |
+| 전화 | ms-settings:phone-defaultapps |
 | 이 PC에 표시 | ms-settings:project |
 | 공유 환경 | ms-settings:crossdevice |
 | 태블릿 모드 | ms-settings:tabletmode |
 | 작업 표시줄 | ms-settings:taskbar |
-| 알림 및 작업 | ms-settings:notifications |
+| 알림 및 동작 | ms-settings:notifications |
 | 원격 데스크톱 | ms-settings:remotedesktop |
-| 휴대폰 | ms-설정: 휴대폰 (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
+| 전화 | ms-설정: 전화 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 전원 및 절전 | ms-settings:powersleep |
-| 소리 | ms-설정: 사운드 |
-| 저장소 | ms-settings:storagesense |
-| 저장소 센스 | ms-settings:storagepolicies |
+| 소리 | ms-settings:sound |
+| 저장 공간 | ms-settings:storagesense |
+| 저장 공간 센스 | ms-settings:storagepolicies |
 
 ## <a name="time-and-language"></a>시간 및 언어
 
@@ -298,9 +298,9 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 날짜 및 시간 | ms-settings:dateandtime |
 | 일본 IME 설정 | ms-settings:regionlanguage-jpnime(Microsoft 일본 입력기가 설치된 경우 사용 가능) |
-| Language | ms-키보드 설정:<br/>ms-settings:regionlanguage<br/>ms-:-bpmfime<br/>ms-:-cangjieime<br/>ms-:-chsime-pinyin-domainlexicon<br/>ms-:-chsime-pinyin-keyconfig<br/>ms-:-chsime-pinyin-udp<br/>ms-:-chsime-wubi-udp<br/>ms-:-quickime |
+| 외국어 | ms-settings:keyboard<br/>ms-settings:regionlanguage<br/>ms-settings:regionlanguage-bpmfime<br/>ms-settings:regionlanguage-cangjieime<br/>ms-settings:regionlanguage-chsime-pinyin-domainlexicon<br/>ms-settings:regionlanguage-chsime-pinyin-keyconfig<br/>ms-settings:regionlanguage-chsime-pinyin-udp<br/>ms-settings:regionlanguage-chsime-wubi-udp<br/>ms-settings:regionlanguage-quickime |
 | Pinyin IME 설정 | ms-settings:regionlanguage-chsime-pinyin(Microsoft 병음 입력기가 설치된 경우 사용 가능) |
-| Speech | ms-settings:speech |
+| 음성 명령 | ms-settings:speech |
 | Wubi IME 설정  | ms-settings:regionlanguage-chsime-wubi(Microsoft Wubi 입력기가 설치된 경우 사용 가능) |
 
 ## <a name="update--security"></a>업데이트 및 보안
@@ -310,12 +310,12 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 활성화 | ms-settings:activation |
 | 백업 | ms-settings:backup |
 | 배달 최적화 | ms-settings:delivery-optimization |
-| 내 장치 찾기 | ms-settings:findmydevice |
+| 내 디바이스 찾기 | ms-settings:findmydevice |
 | 개발자용 | ms-settings:developers |
 | 복구 | ms-settings:recovery |
 | 문제 해결 | ms-settings:troubleshoot |
 | Windows 보안 | ms-settings:windowsdefender |
-| Windows 참가자 프로그램 | ms-settings:windowsinsider(사용자가 WIP에 등록한 경우에만 표시)<br/>ms-: windowsinsider-optin |
+| Windows 참가자 프로그램 | ms-settings:windowsinsider(사용자가 WIP에 등록한 경우에만 표시)<br/>ms-settings:windowsinsider-optin |
 | Windows 업데이트 | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
 | Windows 업데이트-고급 옵션 | ms-settings:windowsupdate-options |
 | Windows 업데이트-다시 시작 옵션 | ms-settings:windowsupdate-restartoptions |
@@ -325,6 +325,6 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-| 프로비전 | ms-settings:workplace-provisioning(기업에서 프로비전 패키지를 배포한 경우에만 사용 가능) |
-| 프로비전 | ms-settings:provisioning(기업에서 프로비전 패키지를 배포하고 모바일에서만 사용 가능) |
+| 프로비저닝 | ms-settings:workplace-provisioning(기업에서 프로비전 패키지를 배포한 경우에만 사용 가능) |
+| 프로비저닝 | ms-settings:provisioning(기업에서 프로비전 패키지를 배포하고 모바일에서만 사용 가능) |
 | Windows Anywhere | ms-settings:windowsanywhere(장치가 Windows Anywhere를 지원해야 함) |

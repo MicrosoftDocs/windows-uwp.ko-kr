@@ -1,5 +1,5 @@
 ---
-Description: Used to select or deselect action items. Can be used for a single list item or for multiple list items.
+Description: 작업 항목을 선택하거나 선택 취소하는 데 사용합니다. 단일 목록 항목이나 여러 목록 항목에 대해 사용할 수 있습니다.
 title: 확인란
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
@@ -13,11 +13,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a13c0c3d0e91a3932b4f9a26e564fbf364e5551
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037125"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648898"
 ---
 # <a name="check-boxes"></a>확인란
 
@@ -25,7 +25,7 @@ ms.locfileid: "9037125"
 
 확인란은 작업 항목을 선택하거나 선택 취소하는 데 사용됩니다. 사용자가 선택할 수 있는 단일 항목이나 여러 항목의 목록에도 사용할 수 있습니다. 컨트롤에는 3개의 선택 상태, 즉 선택되지 않음, 선택됨 및 확정되지 않음이 있습니다. 하위 항목 컬렉션에 선택되지 않음과 선택됨 상태가 둘 다 있는 경우에 확정되지 않은 상태를 사용합니다.
 
-> **중요 API**: [CheckBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209316), [Checked 이벤트](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [IsChecked 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+> **중요 한 Api**: [확인란 클래스](https://msdn.microsoft.com/library/windows/apps/br209316), [이벤트 선택된](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [IsChecked 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
 
 ![확인란 상태의 예](images/templates-checkbox-states-default.png)
 
@@ -42,7 +42,7 @@ ms.locfileid: "9037125"
 
 사용자가 옵션 조합을 선택할 수 있는 경우 확인란 그룹을 만듭니다.
 
-![확인란으로 여러 가지 옵션 선택](images/checkbox2.png)
+![확인란으로 여러 개의 옵션 선택](images/checkbox2.png)
 
 옵션을 그룹화하는 경우 확정되지 않은 상태 확인란을 사용하여 전체 그룹을 나타낼 수 있습니다. 사용자가 그룹의 하위 항목 전부가 아닌 일부 항목을 선택하는 경우 확인란의 확정되지 않은 상태를 사용합니다.
 
@@ -58,8 +58,8 @@ ms.locfileid: "9037125"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/CheckBox">앱을 열고 작동 중인 CheckBox를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -294,9 +294,9 @@ private void SetCheckedState()
 
     ![확정되지 않은 상태 확인란](images/checkbox4_spicy.png)
 
-    대신 안 매운 맛, 매운 맛, 아주 매운 맛 등 세 가지 옵션을 포함한 라디오 단추 그룹을 사용하세요.
+    세 가지 옵션이 있는 라디오 단추 그룹을 대신 사용 합니다. 매운, 매운, 없고 추가 매운 합니다.
 
-    ![안 매운 맛, 매운 맛, 아주 매운 맛 등 세 가지 옵션을 포함한 라디오 단추 그룹](images/spicyoptions.png)
+    ![세 가지 옵션이 있는 라디오 단추 그룹을 선택 합니다. 매운, 매운, 없고 추가 매운](images/spicyoptions.png)
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
@@ -304,6 +304,6 @@ private void SetCheckedState()
 
 ## <a name="related-articles"></a>관련 문서
 
-- [CheckBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209316) 
+- [확인란 클래스](https://msdn.microsoft.com/library/windows/apps/br209316) 
 - [라디오 단추](radio-button.md)
-- [토글 스위치](toggles.md)
+- [설정/해제 스위치](toggles.md)

@@ -1,54 +1,54 @@
 ---
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: Bookstore에 제공 된 정보를 기반으로 하는이 사례 연구 데이터는 LongListSelector에서 그룹화 된 표시 하는 WindowsPhone Silverlight 앱으로 시작 합니다.
-title: WindowsPhone Silverlight에서 UWP 사례 연구, Bookstore2
+description: Bookstore에 지정 된 정보에 기반 하는이 사례 연구는 표시를 LongListSelector에서 데이터를 그룹화 하는 Windows Phone Silverlight 앱을 시작 합니다.
+title: UWP 사례 연구, Bookstore2 Windows Phone Silverlight
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ae1b0c272af5939deba73ff7a07797207d7caaa4
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048180"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57651008"
 ---
-# <a name="windowsphone-silverlight-to-uwp-case-study-bookstore2"></a>WindowsPhone Silverlight를 UWP로 이동 사례 연구: Bookstore2
+# <a name="windowsphone-silverlight-to-uwp-case-study-bookstore2"></a>Windows Phone Silverlight UWP 사례 연구: Bookstore2
 
 
-이 사례 연구, [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)에 제공 된 정보에 기반 하는-데이터는 **LongListSelector**에서 그룹화 된 표시 하는 WindowsPhone Silverlight 앱으로 시작 합니다. 보기 모델에서 **Author** 클래스의 각 인스턴스는 해당 저자가 쓴 책의 그룹을 나타내며, **LongListSelector**에서 저자가 그룹화한 책 목록을 보거나 저자의 점프 목록을 축소할 수 있습니다. 점프 목록은 책 목록을 스크롤할 때보다 훨씬 더 빠른 탐색이 가능케 합니다. 앱은 Windows10Universal Windows 플랫폼 (UWP) 앱을 포팅하는 단계를 안내 합니다.
+이 사례 연구-에 지정 된 정보에 따라 빌드되는 [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)-표시 하는 앱에서 데이터를 그룹화 하는 Windows Phone Silverlight로 시작 하는 **LongListSelector**합니다. 보기 모델에서 **Author** 클래스의 각 인스턴스는 해당 저자가 쓴 책의 그룹을 나타내며, **LongListSelector**에서 저자가 그룹화한 책 목록을 보거나 저자의 점프 목록을 축소할 수 있습니다. 점프 목록은 책 목록을 스크롤할 때보다 훨씬 더 빠른 탐색이 가능케 합니다. Windows 10 유니버설 Windows 플랫폼 (UWP) 앱에 앱을 이식 하는 단계를 안내 합니다.
 
-**참고**  때 "Visual Studio 업데이트 필요" 메시지가 표시 되 면 Bookstore2Universal\_10 Visual Studio에서 열 단계를 수행 [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md)에서 대상 플랫폼 버전 설정 합니다.
+**참고**    Bookstore2Universal 열면\_10 메시지가 "Visual Studio 업데이트 필요"를 표시 하는 경우 Visual Studio에서 다음에 대상 플랫폼 버전을 설정 하기 위한 단계를 따릅니다 [ TargetPlatformVersion](w8x-to-uwp-troubleshooting.md)합니다.
 
 ## <a name="downloads"></a>다운로드
 
-[WindowsPhone Silverlight 앱을 다운로드 Bookstore2WPSL8 합니다](https://go.microsoft.com/fwlink/p/?linkid=522601).
+[다운로드 Bookstore2WPSL8 Windows Phone Silverlight 앱](https://go.microsoft.com/fwlink/p/?linkid=522601)합니다.
 
-[Bookstore2Universal\_10 windows 10 앱을 다운로드](https://go.microsoft.com/fwlink/?linkid=532952)합니다.
+[다운로드는 Bookstore2Universal\_10 Windows 10 앱](https://go.microsoft.com/fwlink/?linkid=532952)합니다.
 
-##  <a name="the-windowsphone-silverlight-app"></a>WindowsPhone Silverlight 앱
+##  <a name="the-windowsphone-silverlight-app"></a>Windows Phone Silverlight 앱
 
-포팅할 Bookstore2WPSL8 앱은 다음과 같습니다. 저자가 그룹화한 책의 **LongListSelector**을 세로로 스크롤 하는 것입니다. 점프 목록으로 축소할 수 있으며 점프 목록에서 어떤 그룹으로도 다시 이동할 수 있습니다. 이 앱에는 두 가지 주요 특징이 있습니다. 그룹화된 데이터 원본를 제공하는 보기 모델 및 보기 모델에 바인딩하는 사용자 인터페이스가 그것입니다. 하겠지만, 둘 다 살펴보겠지만 특징 유니버설 Windows 플랫폼 (UWP)에 WindowsPhone Silverlight 기술에서 쉽게 포팅 합니다.
+포팅할 Bookstore2WPSL8 앱은 다음과 같습니다. 저자가 그룹화한 책의 **LongListSelector**을 세로로 스크롤 하는 것입니다. 점프 목록으로 축소할 수 있으며 점프 목록에서 어떤 그룹으로도 다시 이동할 수 있습니다. 이 앱에는 두 가지 주요 특징이 있습니다. 그룹화된 데이터 원본를 제공하는 보기 모델 및 보기 모델에 바인딩하는 사용자 인터페이스가 그것입니다. 앞으로 살펴보겠지만, 유니버설 Windows 플랫폼 (UWP)에 Windows Phone Silverlight 기술에서 쉽게 포트를 부분을 모두 합니다.
 
 ![bookstore2wpsl8 모양](images/wpsl-to-uwp-case-studies/c02-01-wpsl-how-the-app-looks.png)
 
-##  <a name="porting-to-a-windows10-project"></a>Windows 10 프로젝트로 포팅
+##  <a name="porting-to-a-windows10-project"></a>Windows 10 프로젝트에 이식
 
-Visual Studio에서 새 프로젝트를 만들고 Bookstore2WPSL8의 파일을 이 프로젝트로 복사한 후 복사한 파일을 새 프로젝트에 포함하는 과정은 빠르게 진행되는 작업입니다. 비어 있는 응용 프로그램(Windows 유니버설) 프로젝트를 새로 만들어 시작합니다. Bookstore2Universal\_10이라고 이름을 지정합니다. 다음은 Bookstore2WPSL8에서 Bookstore2Universal\_10으로 복사할 파일입니다.
+Visual Studio에서 새 프로젝트를 만들고 Bookstore2WPSL8의 파일을 이 프로젝트로 복사한 후 복사한 파일을 새 프로젝트에 포함하는 과정은 빠르게 진행되는 작업입니다. 비어 있는 응용 프로그램(Windows 유니버설) 프로젝트를 새로 만들어 시작합니다. Bookstore2Universal 이름을\_10입니다. 이러한 파일은 복사할 통해 Bookstore2WPSL8 Bookstore2Universal 파일\_10입니다.
 
--   책 표지 이미지 PNG 파일이 들어 있는 폴더를 복사합니다(폴더는 \\Assets\\CoverImages임) 폴더를 복사한 후에 **솔루션 탐색기**에서 **모든 파일 표시**가 설정되어 있는지 확인합니다. 복사한 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 클릭합니다. 이 명령은 파일이나 폴더를 프로젝트에 "포함"하여 우리가 의도한 작업을 진행합니다. 파일이나 폴더를 복사할 때마다 **솔루션 탐색기**에서 **새로 고침**을 클릭한 다음 프로젝트에 파일 또는 폴더를 포함합니다. 대상에서 바꾸려는 파일에 대해서는 이 작업을 수행하지 않아도 됩니다.
--   보기 모델 소스 파일이 포함된 폴더(\\ViewModel)를 복사합니다.
+-   책 표지 이미지 PNG 파일을 포함 하는 폴더를 복사 합니다. (폴더가 \\자산\\CoverImages). 폴더를 복사한 후에 **솔루션 탐색기**에서 **모든 파일 표시**가 설정되어 있는지 확인합니다. 복사한 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 클릭합니다. 이 명령은 파일이나 폴더를 프로젝트에 "포함"하여 우리가 의도한 작업을 진행합니다. 파일이나 폴더를 복사할 때마다 **솔루션 탐색기**에서 **새로 고침**을 클릭한 다음 프로젝트에 파일 또는 폴더를 포함합니다. 대상에서 바꾸려는 파일에 대해서는 이 작업을 수행하지 않아도 됩니다.
+-   보기 모델 원본 파일을 포함 하는 폴더에 복사 (폴더는 \\ViewModel).
 -   MainPage.xaml을 복사한 후 대상의 파일을 바꿉니다.
 
-App.xaml 및 App.xaml.cs를 Visual Studio에서 windows 10 프로젝트를 생성 하 게 유지할 수 있습니다.
+App.xaml, 및 Windows 10 프로젝트에서 Visual Studio에서 생성 한는 App.xaml.cs를 유지할 수 있습니다.
 
-방금 복사한 소스 코드 및 태그 파일을 편집하고 Bookstore2WPSL8 네임스페이스에 대한 참조를 Bookstore2Universal\_10으로 변경합니다. **파일에서 바꾸기** 기능을 사용하면 이 작업을 빠르게 수행할 수 있습니다. 보기 모델 소스 파일의 명령적 코드에서 다음과 같은 포팅 변경이 필요합니다.
+방금 복사한 소스 코드와 태그 파일을 편집 하 고 Bookstore2Universal Bookstore2WPSL8 네임 스페이스에 대 한 참조가 변경\_10입니다. **파일에서 바꾸기** 기능을 사용하면 이 작업을 빠르게 수행할 수 있습니다. 보기 모델 소스 파일의 명령적 코드에서 다음과 같은 포팅 변경이 필요합니다.
 
 -   `System.ComponentModel.DesignerProperties`을(를) `DesignMode`(으)로 변경한 다음 **확인** 명령을 사용합니다. `IsInDesignTool` 속성을 삭제하고 IntelliSense를 사용하여 올바른 속성 이름(`DesignModeEnabled`)을 추가합니다.
 -   `ImageSource`에서 **확인** 명령을 사용합니다.
 -   `BitmapImage`에서 **확인** 명령을 사용합니다.
 -   `using System.Windows.Media;` 및 `using System.Windows.Media.Imaging;`을(를) 삭제합니다.
--   **Bookstore2Universal\_10.BookstoreViewModel.AppName** 속성에 의해 반환된 값을 "BOOKSTORE2WPSL8"에서 "BOOKSTORE2UNIVERSAL"로 변경합니다.
+-   반환 된 값을 변경 합니다 **Bookstore2Universal\_10.BookstoreViewModel.AppName** "BOOKSTORE2WPSL8"에서 속성 "BOOKSTORE2UNIVERSAL"을 합니다.
 -   [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)의 경우에서 그랬던 것처럼, **BookSku.CoverImage** 속성 구현을 업데이트합니다([이미지를 보기 모델에 바인딩](wpsl-to-uwp-case-study-bookstore1.md) 참조).
 
 MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
@@ -58,7 +58,7 @@ MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
 -   나머지 네임스페이스 접두사 선언에서 ‘clr 네임스페이스’를 ‘사용’으로 변경합니다.
 -   `SupportedOrientations="Portrait"` 및 `Orientation="Portrait"`를 삭제하고 새 프로젝트의 앱 패키지 매니페스트에서 **세로**를 구성합니다.
 -   `shell:SystemTray.IsVisible="True"`을(를) 삭제합니다.
--   점프 목록 항목 변환기 유형(태그에서 리소스로 존재)이 [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818) 네임스페이스로 이동했습니다. 따라서 네임스페이스 접두사 선언 Windows\_UI\_Xaml\_Controls\_Primitives를 추가하고 **Windows.UI.Xaml.Controls.Primitives**로 매핑합니다. 점프 목록의 항목 변환기 리소스에서 접두사를 `phone:`에서 `Windows_UI_Xaml_Controls_Primitives:`(으)로 변경합니다.
+-   점프 목록 항목 변환기 유형(태그에서 리소스로 존재)이 [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818) 네임스페이스로 이동했습니다. 따라서 네임 스페이스 접두사 선언만 Windows를 추가\_UI\_Xaml\_컨트롤\_기본형 매핑합니다 **Windows.UI.Xaml.Controls.Primitives**합니다. 점프 목록의 항목 변환기 리소스에서 접두사를 `phone:`에서 `Windows_UI_Xaml_Controls_Primitives:`(으)로 변경합니다.
 -   [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)의 경우에서 그랬던 것처럼, `PhoneTextExtraLargeStyle` **TextBlock** 스타일에 대한 모든 참조를 `SubtitleTextBlockStyle`에 대한 참조로 바꾸고, `PhoneTextSubtleStyle`은(는) `SubtitleTextBlockStyle`(으)로, `PhoneTextNormalStyle`은(는) `CaptionTextBlockStyle`(으)로, `PhoneTextTitle1Style`은(는) `HeaderTextBlockStyle`(으)로 바꿉니다.
 -   `BookTemplate`의 한 가지 예외가 있습니다. 두 번째 **TextBlock**의 스타일은 `CaptionTextBlockStyle`을 참조해야 합니다.
 -   `AuthorGroupHeaderTemplate` 내부의 **TextBlock**에서 FontFamily 특성을 제거하고, **Border**의 Background가 `PhoneAccentBrush` 대신 `SystemControlBackgroundAccentBrush`를 참조하도록 설정합니다.
@@ -120,7 +120,7 @@ MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
 
 ![초기 소스 코드가 변경된 모바일의 UWP 앱](images/wpsl-to-uwp-case-studies/c02-02-mob10-initial-source-code-changes.png)
 
-스타일 지정 및 템플릿 작업을 조금 더 해야 하는 한 가지 문제가 있긴 하지만 보기 모델, 확대 및 축소 보기는 다 함께 올바르게 작동됩니다. 예를 들어 올바른 스타일 및 브러시가 사용 하지 않은 되 고, 텍스트를 클릭 하 여 축소할 수 있는 그룹 헤더에 표시 되지 않도록 합니다. 데스크톱 장치에서 앱을 실행 하면 앱 및 windows의 모바일 장치 화면 보다 훨씬 클 수 있는 큰 장치에서 공간을 사용 최상의 환경을 제공 하도록 해당 사용자 인터페이스를 아직 적용 하지 않은 두 번째 문제는 표시 됩니다. 따라서 다음의 몇몇 섹션([초기 스타일 지정 및 템플릿 작업](#initial-styling-and-templating), [적응 UI](#adaptive-ui) 및 [최종 스타일 지정](#final-styling))에서는 이러한 문제를 해결합니다.
+스타일 지정 및 템플릿 작업을 조금 더 해야 하는 한 가지 문제가 있긴 하지만 보기 모델, 확대 및 축소 보기는 다 함께 올바르게 작동됩니다. 예를 들어 올바른 스타일 및 브러시가 아직 사용되지 않아 텍스트가 클릭하여 축소할 수 있는 그룹 헤더에 표시되지 않습니다. 데스크톱 장치에서 앱을 실행하면 창이 모바일 장치 화면보다 훨씬 클 수 있는 큰 장치에서 최상의 환경 및 사용 공간을 제공하도록 앱에서 해당 사용자 인터페이스를 아직 적용하지 않은 두 번째 문제가 있다는 것을 알게 됩니다. 따라서 다음의 몇몇 섹션([초기 스타일 지정 및 템플릿 작업](#initial-styling-and-templating), [적응 UI](#adaptive-ui) 및 [최종 스타일 지정](#final-styling))에서는 이러한 문제를 해결합니다.
 
 ## <a name="initial-styling-and-templating"></a>초기 스타일 지정 및 템플릿 작업
 
@@ -220,7 +220,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
 
 -   `AuthorGroupHeaderTemplate`에서, 모바일 디바이스 패밀리에서 실행될 때 올바르게 표시되도록 **TextBlock**에서 `Foreground="White"`를 설정합니다.
 -   `FontWeight="SemiBold"`를 `AuthorGroupHeaderTemplate`과 `ZoomedOutAuthorTemplate` 둘 다의 **TextBlock**에 추가합니다.
--   `narrowSeZo`에서 축소 보기의 그룹 헤더와 저자는 확대되지 않고 왼쪽 맞춤 정렬됩니다. 이제 시작해보겠습니다. [**HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/br209417)가 `Stretch`로 설정된 확대 보기의 [**HeaderContainerStyle**](https://msdn.microsoft.com/library/windows/apps/dn251841)을 생성합니다. 또한 동일한 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817)를 포함하고 있는 축소 보기의 [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/br242817)을 생성합니다. 다음과 같이 표시됩니다.
+-   `narrowSeZo`에서 축소 보기의 그룹 헤더와 저자는 확대되지 않고 왼쪽 맞춤 정렬됩니다. 이제 시작해보겠습니다. [  **HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/br209417)가 `Stretch`로 설정된 확대 보기의 [**HeaderContainerStyle**](https://msdn.microsoft.com/library/windows/apps/dn251841)을 생성합니다. 또한 동일한 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817)를 포함하고 있는 축소 보기의 [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/br242817)을 생성합니다. 다음과 같이 표시됩니다.
 
 ```xml
    <Style x:Key="AuthorGroupHeaderContainerStyle" TargetType="ListViewHeaderItem">
@@ -253,22 +253,22 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
 
 ![데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기, 두 개의 창 크기](images/w8x-to-uwp-case-studies/c02-07-desk10-zi-ported.png)
 
-데스크톱 장치, 확대 보기, 두 개의 창 크기에서 실행 되는 포팅된 windows 10 앱  
-![데스크톱 장치, 축소 보기, 두 개의 창 크기에서 실행 되는 포팅된 windows 10 앱](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
+창의 두 크기 확대 된 뷰를 선택한 다음 데스크톱 장치에서 실행 되는 가져오는 Windows 10 앱  
+ ![창의 두 크기 축소 된 보기를 선택한 다음 데스크톱 장치에서 실행 되는 가져오는 windows 10 앱](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
 
-데스크톱 장치, 축소 보기, 두 개의 창 크기에서 실행 되는 포팅된 windows 10 앱
+창의 두 크기 축소 된 보기를 선택한 다음 데스크톱 장치에서 실행 되는 가져오는 Windows 10 앱
 
 ![모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기](images/w8x-to-uwp-case-studies/c02-09-mob10-zi-ported.png)
 
-확대 보기를 모바일 장치에서 실행 되는 포팅된 windows 10 앱
+확대 된 뷰를 모바일 장치에서 실행 되는 가져온된 Windows 10 앱
 
 ![모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기](images/w8x-to-uwp-case-studies/c02-10-mob10-zo-ported.png)
 
-모바일 장치, 축소 보기에서 실행 되는 포팅된 windows 10 앱
+축소 된 보기 모바일 장치에서 실행 중인 Windows 10 앱 이식된
 
 ## <a name="making-the-view-model-more-flexible"></a>보기 모델을 보다 유연하게 만들기
 
-UWP를 사용하도록 앱을 이동함으로써 사용 가능해진 기능의 한 가지 예가 이 섹션에 포함되어 있습니다. 여기에서는 **CollectionViewSource**을(를) 통해 액세스한 경우 내 보기 모델을 보다 유연하게 하기 위해 따를 수 있는 선택적 단계에 대해 설명합니다. 보기 모델 (소스 파일은 ViewModel\\BookstoreViewModel.cs에서)에서 파생 되는 Author 라는 클래스를 포함 Bookstore2WPSL8 WindowsPhone Silverlight 앱에서 포팅한 **목록&lt;T&gt;** 여기에서 **T** 는 BookSku, 합니다. 즉, ‘저자’ 클래스 *은(는) BookSku의* 그룹입니다.
+UWP를 사용하도록 앱을 이동함으로써 사용 가능해진 기능의 한 가지 예가 이 섹션에 포함되어 있습니다. 여기에서는 **CollectionViewSource**을(를) 통해 액세스한 경우 내 보기 모델을 보다 유연하게 하기 위해 따를 수 있는 선택적 단계에 대해 설명합니다. 뷰 모델 (ViewModel에 소스 파일이\\BookstoreViewModel.cs) 작성자에서 파생 되는 클래스를 포함 하는 우리 Bookstore2WPSL8 Windows Phone Silverlight 앱에서 이식 **목록&lt;T&gt;** , 여기서 **T** BookSku 됩니다. 즉, ‘저자’ 클래스 *은(는) BookSku의* 그룹입니다.
 
 **CollectionViewSource.Source**을(를) '저자들'에 바인딩할 때 중요한 것은 바로 '저자들' 속의 각 '저자'는 *무엇*의 그룹이라는 점입니다. 이 경우에 '저자'가 BookSku의 그룹이라는 점을 **CollectionViewSource**에서 결정하도록 맡깁니다. 이 경우 실행되지만 유연하지 않습니다. '저자'가 BookSku 그룹 *그리고* 저자가 살았던 주소 그룹 *둘 다*이길 바라는 경우에는 어떻게 할까요? '저자'는 양 그룹이 동시에 *될 수 없습니다*. 그러나 '저자'가 가질 수 있는 그룹 수에는 *제한이 없습니다*. 다음과 같이 하면 해결할 수 있습니다. 현재 사용하고 있는 *~는 그룹이다* 패턴 대신 또는 그에 추가로 *~그룹이 있다* 패턴을 사용하는 것입니다. 방법은 다음과 같습니다.
 
@@ -277,7 +277,7 @@ UWP를 사용하도록 앱을 이동함으로써 사용 가능해진 기능의 �
 -   이 속성을 추가 합니다. 
 -   물론 위의 두 단계를 반복하여 필요한 만큼의 '저자들'을 추가할 수 있습니다.
 -   AddBookSku 메서드의 구현을 `this.BookSkus.Add(bookSku);`(으)로 변경합니다.
--   이제 '작성자'가 하나 이상의 그룹을 *가졌으므로*, **CollectionViewSource**과(와) 통신해야 합니다. 이렇게 하려면 이 속성을 **CollectionViewSource**에 추가합니다. `ItemsPath="BookSkus"`
+-   이제 '작성자'가 하나 이상의 그룹을 *가졌으므로*, **CollectionViewSource**과(와) 통신해야 합니다. 이렇게 하려면이 속성을 추가 합니다 **CollectionViewSource**: `ItemsPath="BookSkus"`
 
 이런 변경 내용으로도 앱의 기능은 변경되지 않지만 필요할 경우 '저자'와 **CollectionViewSource**을(를) 확장할 수 있는 방법을 우리는 이미 알고 있습니다. '저자'에 대한 마지막 변경 내용입니다. 이 변경을 통해 **CollectionViewSource.ItemsPath**을(를) 지정하지 *않고* '저자'를 사용하는 경우, 선택하는 기본 그룹이 사용됩니다.
 
@@ -301,4 +301,4 @@ UWP를 사용하도록 앱을 이동함으로써 사용 가능해진 기능의 �
 
 ## <a name="conclusion"></a>결론
 
-이 사례 연구는 이전보다 더욱 복잡한 사용자 인터페이스를 포함합니다. 모든 기능 및 WindowsPhone Silverlight **LongListSelector**의 개념-등에- **SemanticZoom**, **ListView**, **GridView**및 **CollectionViewSource**의 형태로 UWP 앱을 사용할 수 없습니다. 가장 좁고 가장 넓은 Windows 디바이스 폼 팩터 및 중간의 모든 크기에 맞게 조정된 기능, UI 및 조작 방식을 구현하기 위해 UWP 앱에서 명령적 코드와 태그를 둘 다 다시 사용하거나 복사 및 편집하는 방법을 살펴보았습니다.
+이 사례 연구는 이전보다 더욱 복잡한 사용자 인터페이스를 포함합니다. 모든 기능 및 Windows Phone Silverlight의 개념 **LongListSelector**-등-형태로 UWP 앱에 사용할 수 있는 것으로 확인 되었습니다 **SemanticZoom**, **ListView**하십시오 **GridView**, 및 **CollectionViewSource**합니다. 가장 좁고 가장 넓은 Windows 디바이스 폼 팩터 및 중간의 모든 크기에 맞게 조정된 기능, UI 및 조작 방식을 구현하기 위해 UWP 앱에서 명령적 코드와 태그를 둘 다 다시 사용하거나 복사 및 편집하는 방법을 살펴보았습니다.

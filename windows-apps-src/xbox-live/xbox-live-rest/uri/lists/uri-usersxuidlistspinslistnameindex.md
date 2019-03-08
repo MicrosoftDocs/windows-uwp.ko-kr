@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b56b563c72c206340aa2c1ce9f73aa8dfe50809d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932697"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641228"
 ---
 # <a name="usersxuidxuidlistspinslistnameindexindexinsertindexinsertindex"></a>/users/xuid(xuid)/lists/PINS/{listname}/index({index})?insertIndex={insertIndex}
-목록 내의 항목으로 이동합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
+목록 내의 항목을 이동합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`합니다.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -24,20 +24,20 @@ ms.locfileid: "8932697"
  
 ## <a name="uri-parameters"></a>URI 매개 변수 
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| XUID| string| 사용자의 XUID 합니다.| 
-| listname| string| 조작 목록의 이름입니다.| 
-| 인덱스| string| 이동할 수 있는 항목의 현재 인덱스를 지정 합니다. 인덱스 값이 0 또는 양의 정수 인 경우이 항목의 현재 인덱스를 참조 하 고 호출의 요청 본문 빈 여야 합니다. 하지만 인덱스 값이 "-1" 인 경우 이동할 항목 ItemId 또는 공급자/ProviderID 호출의 요청 본문에 의해 지정 되어야 합니다. | 
+| XUID| 문자열| 사용자의 XUID 합니다.| 
+| listname| 문자열| 조작 목록의 이름입니다.| 
+| 인덱스| 문자열| 이동할 항목의 현재 인덱스를 지정 합니다. 인덱스 값을 0 또는 양의 정수 이면이 항목의 현재 인덱스를 참조 하며 호출의 요청 본문은 비어 있어야 합니다. 그러나 인덱스 값을 "-1" 인 경우 이동할 항목 ItemId 또는 공급자/ProviderID 호출의 요청 본문에 지정 해야 합니다. | 
   
 <a id="ID4EHC"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [POST](uri-usersxuidlistspinslistnameindexpost.md)
 
-&nbsp;&nbsp;목록에서 항목을 목록 내에서 다른 위치로 이동합니다.
+&nbsp;&nbsp;목록의 항목을 목록 내에서 다른 위치로 이동합니다.
  
 <a id="ID4ERC"></a>
 
@@ -47,8 +47,8 @@ ms.locfileid: "8932697"
 <a id="ID4ETC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[URI(Universal Resource Identifier) 참조](../atoc-xboxlivews-reference-uris.md)
+[유니버설 리소스 식별자 (URI) 참조](../atoc-xboxlivews-reference-uris.md)
 
    

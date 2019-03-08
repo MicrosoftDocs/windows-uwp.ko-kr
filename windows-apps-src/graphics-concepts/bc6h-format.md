@@ -8,29 +8,29 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f147f4c30d2a662806df5928fc79178522b9b6a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939729"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633098"
 ---
 # <a name="bc6h-format"></a>BC6H 형식
 
 
 BC6H 형식은 원본 데이터의 HDR(High Dynamic Range) 색 공간을 지원하도록 설계된 텍스처 압축 형식입니다.
 
-## <a name="span-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanabout-bc6hdxgiformatbc6h"></a><span id="About-BC6H-DXGI-FORMAT-BC6H"></span><span id="about-bc6h-dxgi-format-bc6h"></span><span id="ABOUT-BC6H-DXGI-FORMAT-BC6H"></span>BC6H/DXGI\_FORMAT\_BC6H 정보
+## <a name="span-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanabout-bc6hdxgiformatbc6h"></a><span id="About-BC6H-DXGI-FORMAT-BC6H"></span><span id="about-bc6h-dxgi-format-bc6h"></span><span id="ABOUT-BC6H-DXGI-FORMAT-BC6H"></span>About BC6H/DXGI\_FORMAT\_BC6H
 
 
 BC6H 형식은 값의 각 색 채널에 대한 16비트 값(16:16:16)과 함께 3개의 HDR 색 채널을 사용하는 이미지에 대한 고품질 압축을 제공합니다. 알파 채널은 지원되지 않습니다.
 
-BC6H는 다음과 같은 DXGI\_FORMAT 열거 값으로 지정됩니다.
+다음 DXGI BC6H 된\_열거형 값의 서식 지정 합니다.
 
 -   **DXGI\_FORMAT\_BC6H\_TYPELESS**.
 -   **DXGI\_FORMAT\_BC6H\_UF16**. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용하지 않습니다.
 -   **DXGI\_FORMAT\_BC6H\_SF16**. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용합니다.
 
-**참고**  16 비트 부동 소수점 형식인 색 채널에 대 한 "반" 부동 소수점 형식에 키라고도 됩니다. 이 형식의 비트 레이아웃은 다음과 같습니다.
+**참고**    "중간" 부동 소수점 형식으로 16 비트 부동 소수점 형식 색 채널에 대 한 하 라고 합니다. 이 형식의 비트 레이아웃은 다음과 같습니다.
 |                       |                                                 |
 |-----------------------|-------------------------------------------------|
 | UF16(부호 없는 부동 소수점) | 5개의 지수 비트 + 11개의 가수 비트              |
@@ -46,7 +46,7 @@ BC6H는 16바이트(128비트)의 고정 블록 크기와 4x4 텍셀의 고정 �
 
 BC6H 형식 관련 주의 사항:
 
--   BC6H는 부동 소수점 비정규화를 지원하지만 INF(무한대)와 NaN(숫자가 아님)은 지원하지 않습니다. -INF(음의 무한대)를 지원하는 BC6H(DXGI\_FORMAT\_BC6H\_SF16)의 부호 있는 모드는 예외입니다. -INF에 대한 이러한 지원은 형식 자체의 아티팩트일 뿐이며 이 형식에 대한 인코더에서는 이를 지원하지 않습니다. 일반적으로 인코더가 INF(양수 또는 음수)나 NaN 입력 데이터를 발견하면 해당 데이터를 허용되는 최대 비INF 표현 값으로 변환하고 압축 전에 NaN을 0에 매핑해야 합니다.
+-   BC6H는 부동 소수점 비정규화를 지원하지만 INF(무한대)와 NaN(숫자가 아님)은 지원하지 않습니다. 예외는 BC6H의 서명 된 모드 (DXGI\_형식\_BC6H\_SF16),-INF (음의 무한대)를 지 합니다. -INF에 대한 이러한 지원은 형식 자체의 아티팩트일 뿐이며 이 형식에 대한 인코더에서는 이를 지원하지 않습니다. 일반적으로 인코더가 INF(양수 또는 음수)나 NaN 입력 데이터를 발견하면 해당 데이터를 허용되는 최대 비INF 표현 값으로 변환하고 압축 전에 NaN을 0에 매핑해야 합니다.
 -   BC6H는 알파 채널을 지원하지 않습니다.
 -   BC6H 디코더는 텍스처 필터링을 수행하기 전에 압축 풀기를 수행합니다.
 -   BC6H 압축 풀기는 비트 단위로 정확해야 합니다. 즉, 하드웨어가 이 문서에 설명된 디코더와 동일한 결과를 반환해야 합니다.
@@ -93,7 +93,7 @@ decompress_bc6h(x, y, block)
 
 다음 표에는 BC6H 블록에 대한 14개의 가능한 형식별 비트 개수와 값이 나와 있습니다.
 
-| 모드 | 파티션 인덱스 | 파티션 | 색 끝점                  | 모드 비트      |
+| 모드 | 파티션 인덱스 | Partition | 색 끝점                  | 모드 비트      |
 |------|-------------------|-----------|----------------------------------|----------------|
 | 1    | 46비트           | 5비트    | 75비트(10.555, 10.555, 10.555) | 2비트(00)    |
 | 2    | 46비트           | 5비트    | 75비트(7666, 7666, 7666)       | 2비트(01)    |
@@ -135,13 +135,13 @@ BC6H의 경우 모드에 관계없이 알파 채널이 항상 1.0을 반환합�
 
 ![bc6h 압축된 끝점 형식에 대한 비트 필드](images/bc6h-headers-med.png)
 
-이 표에는 끝점 형식의 기능으로 압축된 끝점에 대한 비트 필드가 나와 있습니다. 열과 행마다 각각 인코딩과 비트 필드가 지정되어 있습니다. 이 접근 방식은 두 영역 타일의 경우 82비트를 차지하고 한 영역 타일의 경우 65비트를 차지합니다. 예를 들어 위의 한 영역 \[16 4\] 인코딩(맨 오른쪽 열)에 대한 처음 5비트는 비트 m\[4:0\]이고, 그 다음 10비트는 비트 rw\[9:0\]이며, 마지막 6비트는 bw\[10:15\]을 포함합니다.
+이 표에는 끝점 형식의 기능으로 압축된 끝점에 대한 비트 필드가 나와 있습니다. 열과 행마다 각각 인코딩과 비트 필드가 지정되어 있습니다. 이 접근 방식은 두 영역 타일의 경우 82비트를 차지하고 한 영역 타일의 경우 65비트를 차지합니다. 예를 들어 한 지역에 대 한 첫 번째 5 비트가 \[16 4\] 비트 m 됩니다 (특히 맨 오른쪽 열) 위의 인코딩\[4:0\]에 다음 10 비트는 비트 rw\[9:0\]등 bw를 포함 하 고 마지막 6 비트\[10시 15분\]합니다.
 
 위 표의 필드 이름은 다음과 같이 정의됩니다.
 
 | 필드 | 변수          |
 |-------|-------------------|
-| m     | 모드              |
+| m     | mode              |
 | d     | 셰이프 인덱스       |
 | rw    | endpt\[0\].A\[0\] |
 | rx    | endpt\[0\].B\[0\] |
@@ -158,11 +158,11 @@ BC6H의 경우 모드에 관계없이 알파 채널이 항상 1.0을 반환합�
 
  
 
-Endpt\[i\]. 여기에서 i는 각각 0번째 또는 1번째 끝점 집합을 나타내는 0 또는 1입니다.
-## <a name="span-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspansign-extension-for-endpoint-values"></a><span id="Sign-extension-for-endpoint-values"></span><span id="sign-extension-for-endpoint-values"></span><span id="SIGN-EXTENSION-FOR-ENDPOINT-VALUES"></span>끝점 값에 대한 부호 확장
+Endpt\[있습니까\]이며, 여기서 i은 0 또는 1 0 번째 또는 첫 번째 일련의 끝점을 각각 가리킵니다.
+## <a name="span-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspansign-extension-for-endpoint-values"></a><span id="Sign-extension-for-endpoint-values"></span><span id="sign-extension-for-endpoint-values"></span><span id="SIGN-EXTENSION-FOR-ENDPOINT-VALUES"></span>끝점 값에 대 한 부호 확장
 
 
-두 영역 타일의 경우 부호를 확장할 수 있는 4개의 끝점 값이 있습니다. 형식이 부호 있는 형식일 경우에만 Endpt\[0\]에 부호가 있으며, 끝점이 변환되었거나 형식이 부호 있는 형식인 경우에만 다른 끝점에 부호가 있습니다. 아래 코드는 두 영역 끝점 값의 부호를 확장하는 알고리즘을 보여 줍니다.
+두 영역 타일의 경우 부호를 확장할 수 있는 4개의 끝점 값이 있습니다. Endpt\[0\]합니다. A 형식은 부호 있는 형식으로 하는 경우에 서명 끝점 변환 된 경우에 또는 형식 서명 된 형식인 경우 다른 끝점 서명 됩니다. 아래 코드는 두 영역 끝점 값의 부호를 확장하는 알고리즘을 보여 줍니다.
 
 ``` syntax
 static void sign_extend_two_region(Pattern &p, IntEndpts endpts[NREGIONS_TWO])
@@ -181,7 +181,7 @@ static void sign_extend_two_region(Pattern &p, IntEndpts endpts[NREGIONS_TWO])
 }
 ```
 
-한 영역 타일의 경우 endpt\[1\]이 제거된 점을 제외하고는 동작이 동일합니다.
+한 지역 타일에 대 한 동작은 동일만 endpt\[1\] 제거 합니다.
 
 ``` syntax
 static void sign_extend_one_region(Pattern &p, IntEndpts endpts[NREGIONS_ONE])
@@ -196,22 +196,22 @@ static void sign_extend_one_region(Pattern &p, IntEndpts endpts[NREGIONS_ONE])
 }
 ```
 
-## <a name="span-idtransform-inversion-for-endpoint-valuesspanspan-idtransform-inversion-for-endpoint-valuesspanspan-idtransform-inversion-for-endpoint-valuesspantransform-inversion-for-endpoint-values"></a><span id="Transform-inversion-for-endpoint-values"></span><span id="transform-inversion-for-endpoint-values"></span><span id="TRANSFORM-INVERSION-FOR-ENDPOINT-VALUES"></span>끝점에 대한 역변환
+## <a name="span-idtransform-inversion-for-endpoint-valuesspanspan-idtransform-inversion-for-endpoint-valuesspanspan-idtransform-inversion-for-endpoint-valuesspantransform-inversion-for-endpoint-values"></a><span id="Transform-inversion-for-endpoint-values"></span><span id="transform-inversion-for-endpoint-values"></span><span id="TRANSFORM-INVERSION-FOR-ENDPOINT-VALUES"></span>끝점 값에 대 한 반전 변환
 
 
-두 영역 타일의 경우 변환 시 총 9개의 더하기 연산에 대한 다른 3개의 항목에 endpt\[0\].A의 기준 값이 더해져 차이 인코딩의 역이 적용됩니다. 아래 이미지에서는 기준 값이 "A0"으로 표현되고 부동 소수점 정밀도가 가장 높습니다. "A1," "B0" 및 "B1"은 모두 앵커 값에서 계산되는 델타이며 이러한 델타 값은 더 낮은 정밀도로 표현됩니다. (A0은 endpt\[0\].A, B0은 endpt\[0\].B, A1은 endpt\[1\].A, B1은 endpt\[1\].B에 해당합니다.)
+두 지역 타일에 대 한 변환을 적용 인코딩, 기준 값 endpt에 추가 차이의 역\[0\]합니다. 세 가지 다른 항목에는 총 9에 대 한 작업을 추가 합니다. 아래 이미지에서는 기준 값이 "A0"으로 표현되고 부동 소수점 정밀도가 가장 높습니다. "A1," "B0" 및 "B1"은 모두 앵커 값에서 계산되는 델타이며 이러한 델타 값은 더 낮은 정밀도로 표현됩니다. (Endpt에 따라 A0\[0\]합니다. Endpt에 해당 하는, B0\[0\]합니다. B, A1 해당 endpt\[1\]합니다. A, B1에 해당 endpt\[1\]합니다. 2.)
 
 ![역변환 끝점 값의 계산](images/bc6h-transform-inverse.png)
 
 한 영역 타일의 경우 델타 오프셋이 하나만 있으므로 더하기 연산이 3개만 있습니다.
 
-압축 풀기 프로그램에서 역변환의 결과로 endpt\[0\].a의 정밀도가 오버플로되지 않는지 확인해야 합니다. 오버플로되는 경우 역변환의 결과 값이 같은 수의 비트 내에 래핑되어야 합니다. A0의 정밀도가 "p" 비트인 경우 변환 알고리즘은 다음과 같습니다.
+압축 풀기 프로그램 결과를 역 변환할 수 있는 endpt 자릿수 오버플로되지 않습니다는 확인 해야 합니다\[0\].을 합니다. 오버플로되는 경우 역변환의 결과 값이 같은 수의 비트 내에 래핑되어야 합니다. A0의 정밀도가 "p" 비트인 경우 변환 알고리즘은 다음과 같습니다.
 
 `B0 = (B0 + A0) & ((1 << p) - 1)`
 
 부호 있는 형식의 경우 델타 계산의 결과도 부호가 확장되어야 합니다. 부호 확장 작업에서 두 부호 모두 확장을 고려할 경우(0은 양수이고 1은 음수) 0의 부호 확장이 위의 Clamp를 처리합니다. 마찬가지로 위의 Clamp 다음에 1(음수)의 값만 부호가 확장되어야 합니다.
 
-## <a name="span-idunquantization-of-color-endpointsspanspan-idunquantization-of-color-endpointsspanspan-idunquantization-of-color-endpointsspanunquantization-of-color-endpoints"></a><span id="Unquantization-of-color-endpoints"></span><span id="unquantization-of-color-endpoints"></span><span id="UNQUANTIZATION-OF-COLOR-ENDPOINTS"></span>색 끝점의 비양자화
+## <a name="span-idunquantization-of-color-endpointsspanspan-idunquantization-of-color-endpointsspanspan-idunquantization-of-color-endpointsspanunquantization-of-color-endpoints"></a><span id="Unquantization-of-color-endpoints"></span><span id="unquantization-of-color-endpoints"></span><span id="UNQUANTIZATION-OF-COLOR-ENDPOINTS"></span>색 끝점 unquantization
 
 
 압축되지 않은 끝점이 지정된 경우 다음 단계는 색 끝점의 초기 비양자화를 수행하는 것입니다. 이 작업은 다음 세 단계로 이루어져 있습니다.
@@ -249,7 +249,7 @@ void generate_palette_unquantized(UINT8 uNumIndices, int c1, int c2, int prec, U
 그 다음 코드 샘플은 다음과 같은 관측과 함께 보간 프로세스를 보여 줍니다.
 
 -   **unquantize** 함수(아래)에 대한 색 값의 전체 범위가 -32768 ~ 65535이므로 17비트의 부호 있는 산술을 사용하여 보간이 구현됩니다.
--   보간 후 값이 최종 조정을 적용하는 **finish\_unquantize** 함수에 전달됩니다.
+-   보간을 후 값에 전달 되는 **완료\_unquantize** 마지막 크기 조정 적용 되는 함수 (이 섹션의 세 번째 샘플에서 설명)과 합니다.
 -   모든 하드웨어 압축 풀기 프로그램에서 이러한 함수를 사용하여 비트 단위로 정확한 결과를 반환해야 합니다.
 
 ``` syntax
@@ -296,7 +296,7 @@ int unquantize(int comp, int uBitsPerComp)
 }
 ```
 
-색상표 보간 후 **finish\_unquantize**가 호출됩니다. **unquantize** 함수는 부호가 있는 경우 31/32, 부호가 없는 경우 31/64로 조정을 연기합니다. 이 동작은 색상표 보간 완료 후 필요한 곱하기 수를 줄이기 위해 유효한 절반 범위(-0x7BFF ~ 0x7BFF)로 최종 값을 가져오는 데 필요합니다. **finish\_unquantize**가 최종 조정을 적용하고 **half**로 재해석되는 **unsigned short** 값을 반환합니다.
+**마침\_unquantize** 색상표 보간 이후에 호출 됩니다. **unquantize** 함수는 부호가 있는 경우 31/32, 부호가 없는 경우 31/64로 조정을 연기합니다. 이 동작은 색상표 보간 완료 후 필요한 곱하기 수를 줄이기 위해 유효한 절반 범위(-0x7BFF ~ 0x7BFF)로 최종 값을 가져오는 데 필요합니다. **마침\_unquantize** 마지막 크기 조정을 적용 하 고 반환을 **unsigned short** 가져옵니다를 해석 하는 값 **절반**합니다.
 
 ``` syntax
 unsigned short finish_unquantize(int comp)
@@ -320,10 +320,10 @@ unsigned short finish_unquantize(int comp)
 }
 ```
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[텍스처 블록 압축](texture-block-compression.md)
+[질감 블록 압축](texture-block-compression.md)
 
  
 

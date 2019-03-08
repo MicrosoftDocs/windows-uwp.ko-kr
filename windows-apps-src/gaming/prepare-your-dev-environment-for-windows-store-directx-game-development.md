@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 템플릿, 도구, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: a272c579fb3ead676fe76f16c33b70f557de4ed8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941176"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653768"
 ---
 # <a name="project-templates-and-tools-for-games"></a>게임용 프로젝트 템플릿 및 도구
 
@@ -25,7 +25,7 @@ ms.locfileid: "8941176"
 ## <a name="get-visual-studio"></a>Visual Studio 다운로드
 
 
-[다운로드 및 Microsoft Visual Studio2015를 설치](https://www.visualstudio.com/vs-2015-product-editions)합니다.
+[다운로드 하 여 Microsoft Visual Studio 2015 설치](https://www.visualstudio.com/vs-2015-product-editions)합니다.
 
 <table>
 <colgroup>
@@ -44,7 +44,7 @@ ms.locfileid: "8941176"
 <td align="left"><p>UWP 및 DirectX 게임을 만들기 위한 템플릿에 대해 알아봅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="set-up-visual-studio-for-game-development.md">게임 프로그래밍용 Visual Studio 도구</a></p></td>
+<td align="left"><p><a href="set-up-visual-studio-for-game-development.md">게임 프로그래밍을 위한 visual Studio tools</a></p></td>
 <td align="left"><p>Visual Studio에서 사용할 수 있는 DirectX 관련 도구 개요.</p></td>
 </tr>
 <tr class="odd">
@@ -61,13 +61,13 @@ ms.locfileid: "8941176"
 
 기존 게임을 포팅하려면 다음 항목을 참조하세요.
 
--   [OpenGL ES 2.0에서 DirectX 11로 포팅](port-from-opengl-es-2-0-to-directx-11-1.md)
--   [DirectX 9에서 UWP로 포팅](porting-your-directx-9-game-to-windows-store.md)
+-   [DirectX 11 OpenGL ES 2.0에서 포트](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [DirectX 9에서에서 UWP로 포트](porting-your-directx-9-game-to-windows-store.md)
 
 DirectX 게임을 새로 만드는 경우 다음 항목을 참조하세요.
 
 -   [DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-uwp-directx-game.md)
--   [C++ 및 DirectX로 유니버설 Windows 플랫폼 게임 Marble Maze 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+-   [C + + 및 DirectX에서 유니버설 Windows 플랫폼 게임 Marble Maze 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

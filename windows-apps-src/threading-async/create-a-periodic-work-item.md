@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp, 정기 작업 항목, 스레딩, 타이머
 ms.localizationpriority: medium
 ms.openlocfilehash: 05ed3b4bc4fa6dbe1119dca40d22107e94cea576
-ms.sourcegitcommit: 7d0e6662de336a3d0e82ae9d1b61b1b0edb5aeeb
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "8981547"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57636908"
 ---
 # <a name="create-a-periodic-work-item"></a>정기 작업 항목 만들기
 
 
-<b>중요 API</b>
+<b>중요 한 Api</b>
 
 -   [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915)
 -   [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587)
@@ -25,13 +25,13 @@ ms.locfileid: "8981547"
 
 ## <a name="create-the-periodic-work-item"></a>주기적 작업 항목 만들기
 
-[**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) 메서드를 사용하여 주기적 작업 항목을 만듭니다. 작업을 수행하는 람다를 제공하고 *period* 매개 변수를 사용하여 제출 간격을 지정합니다. 이 기간은 [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996) 구조를 사용하여 지정합니다. 기간이 경과할 때마다 작업 항목이 다시 제출되므로 작업을 완료할 만큼 기간이 긴지 확인합니다.
+[  **CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) 메서드를 사용하여 주기적 작업 항목을 만듭니다. 작업을 수행하는 람다를 제공하고 *period* 매개 변수를 사용하여 제출 간격을 지정합니다. 이 기간은 [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996) 구조를 사용하여 지정합니다. 기간이 경과할 때마다 작업 항목이 다시 제출되므로 작업을 완료할 만큼 기간이 긴지 확인합니다.
 
-[**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx)는 [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) 개체를 반환합니다. 타이머를 취소해야 하는 경우를 위해 이 개체를 저장합니다.
+[**CreateTimer** ](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) 반환 된 [ **ThreadPoolTimer** ](https://msdn.microsoft.com/library/windows/apps/BR230587) 개체입니다. 타이머를 취소해야 하는 경우를 위해 이 개체를 저장합니다.
 
-> **참고**값으로 0 지정 하지 마세요 (또는 1 밀리초 보다 작은 값) 간격입니다. 지정하면 주기적 타이머가 대신 일회성 타이머로 동작합니다.
+> **참고**  0 값을 지정 하지 마세요 (또는 모든 값 보다 작거나 1 밀리초) 간격입니다. 지정하면 주기적 타이머가 대신 일회성 타이머로 동작합니다.
 
-> **참고** [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) UI에 액세스 하 고 작업 항목의 진행률을 표시 하는 데 사용할 수 있습니다.
+> **참고**  사용할 수 있습니다 [ **CoreDispatcher.RunAsync** ](https://msdn.microsoft.com/library/windows/apps/Hh750317) UI에 액세스 하 여 작업 항목에서 진행률을 표시 합니다.
 
 다음 예제에서는 60초마다 실행되는 작업 항목을 만듭니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "8981547"
 
 ## <a name="handle-cancellation-of-the-periodic-work-item-optional"></a>주기적 작업 항목의 취소 처리(옵션)
 
-필요한 경우 [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)를 사용하여 주기적 타이머의 취소를 처리할 수 있습니다. [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) 오버로드를 사용하여 주기적 작업 항목의 취소를 처리하는 추가 람다를 제공합니다.
+필요한 경우 [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)를 사용하여 주기적 타이머의 취소를 처리할 수 있습니다. [  **CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) 오버로드를 사용하여 주기적 작업 항목의 취소를 처리하는 추가 람다를 제공합니다.
 
 다음 예제에서는 60초마다 반복되는 주기적 작업 항목을 만들고 취소 처리기도 제공합니다.
 
@@ -203,6 +203,6 @@ ms.locfileid: "8981547"
 ## <a name="related-topics"></a>관련 항목
 
 * [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)
-* [스레드 풀을 사용하기 위한 모범 사례](best-practices-for-using-the-thread-pool.md)
-* [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
+* [스레드 풀을 사용 하는 것에 대 한 모범 사례](best-practices-for-using-the-thread-pool.md)
+* [타이머를 사용 하 여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
  

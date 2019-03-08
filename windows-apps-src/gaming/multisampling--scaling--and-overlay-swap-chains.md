@@ -7,13 +7,13 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 스왑 체인 크기 조정, 오버레이, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 12aede6c4af61c4b86d1f1090a2ec3d0e5ecce68
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943788"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644198"
 ---
-# <a name="swap-chain-scaling-and-overlays"></a>스왑 체인 크기 조정 및 오버레이
+# <a name="swap-chain-scaling-and-overlays"></a>스왑 체인 확장 및 오버레이
 
 
 
@@ -148,15 +148,15 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
     ```
     
-    > **참고**  DXGI 어댑터가 오버레이 지 원하는 경우 다음 단계로 넘어갑니다. 디바이스가 오버레이를 지원하지 않는 경우에는 여러 스왑 체인을 사용하는 렌더링이 효율적이지 않습니다. 대신 실시간 게임 콘텐츠와 동일한 스왑 체인에서 축소된 해상도로 UI를 렌더링합니다.
+    > **참고**    DXGI 어댑터 오버레이 지 원하는 경우 다음 단계를 계속 합니다. 디바이스가 오버레이를 지원하지 않는 경우에는 여러 스왑 체인을 사용하는 렌더링이 효율적이지 않습니다. 대신 실시간 게임 콘텐츠와 동일한 스왑 체인에서 축소된 해상도로 UI를 렌더링합니다.
 
      
 
-2.  [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559)로 포그라운드 스왑 체인을 만듭니다. 다음 옵션은 *pDesc* 매개 변수에 제공된 [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)에서 설정해야 합니다.
+2.  [  **IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559)로 포그라운드 스왑 체인을 만듭니다. 다음 옵션을 설정 해야 합니다는 [ **DXGI\_교환\_체인\_DESC1** ](https://msdn.microsoft.com/library/windows/desktop/hh404528) 제공 합니다 *pDesc* 매개 변수:
 
-    -   [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) 스왑 체인 플래그를 지정하여 포그라운드 스왑 체인을 나타냅니다.
-    -   [**DXGI\_ALPHA\_MODE\_PREMULTIPLIED**](https://msdn.microsoft.com/library/windows/desktop/hh404496) 알파 모드 플래그를 사용합니다. 포그라운드 스왑 체인은 항상 프리멀티플라이됩니다.
-    -   [**DXGI\_SCALING\_NONE**](https://msdn.microsoft.com/library/windows/desktop/hh404526) 플래그를 설정합니다. 포그라운드 스왑 체인은 항상 기본 해상도에서 실행됩니다.
+    -   지정 합니다 [ **DXGI\_스왑\_체인\_플래그\_포그라운드\_계층** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) 전경 스왑 체인을 나타내기 위해 체인 플래그를 교환 합니다.
+    -   사용 된 [ **DXGI\_알파\_모드\_사전 다중화** ](https://msdn.microsoft.com/library/windows/desktop/hh404496) 알파 모드 플래그입니다. 포그라운드 스왑 체인은 항상 프리멀티플라이됩니다.
+    -   설정 된 [ **DXGI\_크기 조정\_NONE** ](https://msdn.microsoft.com/library/windows/desktop/hh404526) 플래그입니다. 포그라운드 스왑 체인은 항상 기본 해상도에서 실행됩니다.
 
     ```cpp
      foregroundSwapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FOREGROUND_LAYER;
@@ -164,7 +164,7 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
      foregroundSwapChainDesc.AlphaMode = DXGI_ALPHA_MODE_PREMULTIPLIED; // Foreground swap chain alpha values must be premultiplied.
     ```
 
-    > **참고**  스왑 체인 크기를 조정할 때마다 [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) 를 다시 설정 합니다.
+    > **참고**    설정 된 [ **DXGI\_교환\_체인\_플래그\_전경\_계층** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) 다시 모든 스왑 체인의 크기를 조정 하는 시간입니다.
 
     ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(
@@ -199,7 +199,7 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
 
 4.  포그라운드 스왑 체인은 항상 프리멀티플라이된 알파를 사용합니다. 각 픽셀의 색 값은 프레임을 표시하기 전에 이미 알파 값이 곱해져 있어야 합니다. 예를 들어 50% 알파의 100% 흰색 BGRA 픽셀은 (0.5, 0.5, 0.5, 0.5)로 설정됩니다.
 
-    알파 미리 곱하기 단계는 [**D3D11\_RENDER\_TARGET\_BLEND\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476200) 구조의 **SrcBlend** 필드가 **D3D11\_SRC\_ALPHA**로 설정된 앱 혼합 상태([**ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476349) 참조)를 적용하여 출력 병합 단계에서 수행할 수 있습니다. 프리멀티플라이된 알파 값이 있는 자산을 사용할 수도 있습니다.
+    알파 premultiplication 단계는 응용 프로그램 혼합 상태를 적용 하 여 출력 병합기 단계에서 수행할 수 있습니다 (참조 [ **ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476349))으로 [ **D3D11\_ 렌더링\_대상\_BLEND\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476200) 구조의 **SrcBlend** 로 설정 된 필드 **D3D11\_SRC\_알파**합니다. 프리멀티플라이된 알파 값이 있는 자산을 사용할 수도 있습니다.
 
     알파 미리 곱하기 단계를 수행하지 않으면 포그라운드 스왑 체인의 색이 예상보다 밝아집니다.
 

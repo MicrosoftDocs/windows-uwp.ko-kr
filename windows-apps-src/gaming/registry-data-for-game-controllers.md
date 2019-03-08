@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 레지스트리, 사용자 지정
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d30c19a7fd7641d76e810912d33a96dbbeb3132
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936978"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633608"
 ---
 # <a name="registry-data-for-game-controllers"></a>게임 컨트롤러의 레지스트리 데이터
 
@@ -31,25 +31,25 @@ ms.locfileid: "8936978"
 <table>
     <tr>
         <th>이름</th>
-        <th>유형</th>
+        <th>형식</th>
         <th>필수 여부</th>
         <th>정보</th>
     </tr>
     <tr>
         <td>사용 안 함</td>
         <td>DWORD</td>
-        <td>아니요</td>
+        <td>아니오</td>
         <td>
-            <p>이 특정 장치를 사용할 수 없도록 나타냅니다.</p>
+            <p>이 특정 장치를 비활성화 해야 되었음을 나타냅니다.</p>
             <ul>
-                <li><b>0</b>: 장치가 사용하지 않도록 설정되지 않았습니다.</li>
-                <li><b>1</b>: 장치가 사용하지 않도록 설정되었습니다.</li>
+                <li><b>0</b>: 장치 비활성화 되지 않습니다.</li>
+                <li><b>1</b>: 장치 비활성화 됩니다.</li>
             </ul>
         </td>
     </tr>
     <tr>
         <td>설명</td>
-        <td>REG_SZ <td>아니요</td>
+        <td>REG_SZ <td>아니오</td>
         <td>장치에 대한 간단한 설명입니다.</td>
     </tr>
 </table>
@@ -127,19 +127,19 @@ ms.locfileid: "8936978"
     </tr>
     <tr>
         <td>Paddle1</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Paddle2</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Paddle3</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Paddle4</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>LeftTrigger</td>
@@ -192,118 +192,118 @@ ms.locfileid: "8936978"
     </tr>
     <tr>
         <td>DPadUp</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>DPadDown</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>DPadLeft</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>DPadRight</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button1</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button2</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button3</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button4</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button5</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button6</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button7</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button8</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button9</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button10</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button11</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button12</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button13</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button14</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button15</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Button16</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>FirstGear</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>SecondGear</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>ThirdGear</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>FourthGear</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>FifthGear</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>SixthGear</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>SeventhGear</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>ReverseGear</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
-        <td>Wheel</td>
+        <td>휠</td>
         <td>예</td>
         <td rowspan="5" style="vertical-align: middle;"><a href="#axis-mapping">축 매핑</a> 참조</td>
     </tr>
@@ -317,11 +317,11 @@ ms.locfileid: "8936978"
     </tr>
     <tr>
         <td>Clutch</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Handbrake</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>MaxWheelAngle</td>
@@ -416,7 +416,7 @@ ms.locfileid: "8936978"
         <td rowspan="4" style="vertical-align: middle;"><a href="#axis-mapping">축 매핑</a> 참조</td>
     </tr>
     <tr>
-        <td>Pitch</td>
+        <td>피치</td>
         <td>예</td>
     </tr>
     <tr>
@@ -458,7 +458,7 @@ ms.locfileid: "8936978"
         <td>예</td>
     </tr>
     <tr>
-        <td>취소</td>
+        <td>Cancel</td>
         <td>예</td>
     </tr>
     <tr>
@@ -479,67 +479,67 @@ ms.locfileid: "8936978"
     </tr>
     <tr>
         <td>Context1</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Context2</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Context3</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>Context4</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>PageUp</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>PageDown</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>PageLeft</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>PageRight</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>ScrollUp</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>ScrollDown</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>ScrollLeft</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>ScrollRight</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>SecondaryUp</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>SecondaryDown</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>SecondaryLeft</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
     <tr>
         <td>SecondaryRight</td>
-        <td>아니요</td>
+        <td>아니오</td>
     </tr>
 </table>
 
@@ -555,14 +555,14 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
 
 <table>
     <tr>
-        <th>원본</th>
+        <th>소스</th>
         <th>값 이름</th>
         <th>값 유형</th>
         <th>필수 여부</th>
         <th>값 정보</th>
     </tr>
     <tr>
-        <td>단추</td>
+        <td>Button</td>
         <td>ButtonIndex</td>
         <td>DWORD</td>
         <td>예</td>
@@ -578,7 +578,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
     <tr>
         <td>반전</td>
         <td>DWORD</td>
-        <td>아니요</td>
+        <td>아니오</td>
         <td><b>ThresholdPercent</b> 및 <b>DebouncePercent</b> 인수를 적용하기 전에 축 값을 반전해야 함을 나타냅니다.</td>
     </tr>
     <tr>
@@ -610,13 +610,13 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
         <td>
             <p>매핑된 단추 상태가 손가락으로 누른 상태로 보고되는 스위치 위치를 나타냅니다. 위치 값은 다음 문자열 중 하나일 수 있습니다.</p>
             <ul>
-                <li>Up</li> 
+                <li>위쪽</li> 
                 <li>UpRight</li>
-                <li>Right</li>
+                <li>오른쪽</li>
                 <li>DownRight</li>
-                <li>Down</li>
+                <li>아래쪽</li>
                 <li>DownLeft</li>
-                <li>Left</li>
+                <li>왼쪽</li>
                 <li>UpLeft</li>
             </ul>
         </td>
@@ -624,7 +624,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
     <tr>
         <td>IncludeAdjacent</td>
         <td>DWORD</td>
-        <td>아니요</td>
+        <td>아니오</td>
         <td>마찬가지로 매핑된 단추 상태가 손가락으로 누른 상태로 보고되는 인접 스위치 위치를 나타냅니다.</td>
     </tr>
 </table>
@@ -635,14 +635,14 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
 
 <table>
     <tr>
-        <th>원본</th>
+        <th>소스</th>
         <th>값 이름</th>
         <th>값 유형</th>
         <th>필수 여부</th>
         <th>값 정보</th>
     </tr>
     <tr>
-        <td rowspan="2" style="vertical-align: middle;">단추</td>
+        <td rowspan="2" style="vertical-align: middle;">Button</td>
         <td>MaxValueButtonIndex</td>
         <td>DWORD</td>
         <td>예</td>
@@ -667,7 +667,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
     <tr>
         <td>MinValueButtonIndex</td>
         <td>DWORD</td>
-        <td>아니요</td>
+        <td>아니오</td>
         <td>
             <p>매핑된 축이 양방향임을 나타냅니다. 아래와 같이 <b>MaxButton</b> 및 <b>MinButton</b> 값이 단일 양방향 축에 결합됩니다.</p>
             <table>
@@ -709,7 +709,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
     <tr>
         <td>반전</td>
         <td>DWORD</td>
-        <td>아니요</td>
+        <td>아니오</td>
         <td>매핑된 축 값을 반환하기 전에 먼저 반전해야 함을 나타냅니다.</td>
     </tr>
     <tr>
@@ -726,13 +726,13 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
         <td>
             <p>다음 문자열 중 하나입니다.</p>
             <ul>
-                <li>Up</li>
+                <li>위쪽</li>
                 <li>UpRight</li>
-                <li>Right</li>
+                <li>오른쪽</li>
                 <li>DownRight</li>
-                <li>Down</li>
+                <li>아래쪽</li>
                 <li>DownLeft</li>
-                <li>Left</li>
+                <li>왼쪽</li>
                 <li>UpLeft</li>
             </ul>
             <p>매핑된 축 값이 1.0으로 보고되는 스위치 위치를 나타냅니다. <b>MaxValueSwitchPosition</b>의 반대 방향은 0.0으로 처리됩니다. 예를 들어 <b>MaxValueSwitchPosition</b>이 <b>Up</b>이면 축 값 변환은 아래와 같습니다.</p>
@@ -742,7 +742,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
                     <th>AxisValue</th>
                 </tr>
                 <tr>
-                    <td>Up</td>
+                    <td>위쪽</td>
                     <td>1.0</td>
                 </tr>
                 <tr>
@@ -750,7 +750,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
                     <td>0.5</td>
                 </tr>
                 <tr>
-                    <td>Down</td>
+                    <td>아래쪽</td>
                     <td>0.0</td>
                 </tr>
             </table>
@@ -759,7 +759,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
     <tr>
         <td>IncludeAdjacent</td>
         <td>DWORD</td>
-        <td>아니요</td>
+        <td>아니오</td>
         <td>
             <p>마찬가지로 매핑된 축 값이 1.0으로 보고되는 인접 스위치 위치를 나타냅니다. 위의 예에서 <b>IncludeAdjacent</b>가 설정되면 축 변환은 다음과 같습니다.</p>
             <table>
@@ -768,7 +768,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
                     <th>AxisValue</th>
                 </tr>
                 <tr>
-                    <td>Up</td>
+                    <td>위쪽</td>
                     <td>1.0</td>
                 </tr>
                 <tr>
@@ -784,7 +784,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
                     <td>0.5</td>
                 </tr>
                 <tr>
-                    <td>Down</td>
+                    <td>아래쪽</td>
                     <td>0.0</td>
                 </tr>
                 <tr>
@@ -806,13 +806,13 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
 
 <table>
     <tr>
-        <th>원본</th>
+        <th>소스</th>
         <th>값 이름</th>
         <th>값 유형</th>
         <th>값 정보</th>
     </tr>
     <tr>
-        <td rowspan="10" style="vertical-align: middle;">단추</td>
+        <td rowspan="10" style="vertical-align: middle;">Button</td>
         <td>ButtonCount</td>
         <td>DWORD</td>
         <td>2, 4 또는 8</td>
@@ -820,7 +820,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
     <tr>
         <td>SwitchKind</td>
         <td>REG_SZ</td>
-        <td><b>TwoWay</b>, <b>FourWay</b> 또는 <b>EightWay</b>
+        <td><b>TwoWay</b>하십시오 <b>FourWay</b>, 또는 <b>EightWay</b>
     </tr>
     <tr>
         <td>UpButtonIndex</td>
@@ -926,7 +926,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
                     <td>3</td>
                 </tr>
                 <tr>
-                    <td>Right</td>
+                    <td>오른쪽</td>
                     <td>1</td>
                     <td>2</td>
                 </tr>
@@ -936,7 +936,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Up</td>
+                    <td>위쪽</td>
                     <td>3</td>
                     <td>0</td>
                 </tr>
@@ -946,7 +946,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
                     <td>7</td>
                 </tr>
                 <tr>
-                    <td>Left</td>
+                    <td>왼쪽</td>
                     <td>5</td>
                     <td>6</td>
                 </tr>
@@ -956,7 +956,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
                     <td>5</td>
                 </tr>
                 <tr>
-                    <td>Down</td>
+                    <td>아래쪽</td>
                     <td>7</td>
                     <td>4</td>
                 </tr>
@@ -966,7 +966,7 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
 
 #### <a name="buttonindex-values"></a>*ButtonIndex 값
 
-\*ButtonIndex 값 인덱스는 **RawGameController**의 단추 배열로 인덱싱:
+\*ButtonIndex 값 인덱스는 **RawGameController**의 단추 배열:
 
 <table>
     <tr>
@@ -1045,9 +1045,9 @@ UI 탐색 컨트롤러 및 위의 명령에 대한 자세한 내용은 [UI 탐�
     </tr>
 </table>
 
-## <a name="labels"></a>레이블
+## <a name="labels"></a>Labels(레이블)
 
-레이블은 장치 루트의 **레이블** 아래에 있어야 합니다. **레이블**은 **단추**, **축**, **스위치**의 3개 하위 키를 가질 수 있습니다.
+레이블은 장치 루트의 **레이블** 아래에 있어야 합니다. **레이블** 3 하위 키를 가질 수 있습니다. **단추**하십시오 **축**, 및 **스위치**합니다.
 
 ### <a name="button-labels"></a>단추 레이블
 
@@ -1071,7 +1071,7 @@ RightBumper         // Index 9
 <table>
     <tr>
         <th>이름</th>
-        <th>값(유형: REG_SZ)</th>
+        <th>값 (형식: REG_SZ)</th>
     </tr>
     <tr>
         <td>Button0</td>
@@ -1137,7 +1137,7 @@ RightBumper         // Index 9
 <table>
     <tr>
         <th>이름</th>
-        <th>값(유형: REG_SZ)</th>
+        <th>값 (형식: REG_SZ)</th>
     </tr>
     <tr>
         <td>Switch0Up</td>
@@ -1347,6 +1347,6 @@ Windows Registry Editor Version 5.00
 
 ## <a name="see-also"></a>참고 항목
 
-* [Windows.Gaming.Input 네임스페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input)
-* [Windows.Gaming.Input.Custom 네임스페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
+* [Windows.Gaming.Input Namespace](https://docs.microsoft.com/uwp/api/windows.gaming.input)
+* [Windows.Gaming.Input.Custom Namespace](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
 * [INF 파일](https://docs.microsoft.com/windows-hardware/drivers/install/inf-files)

@@ -1,5 +1,5 @@
 ---
-Description: Use content links to embed rich data in your text controls.
+Description: 텍스트 컨트롤에 다양 한 데이터를 포함 하려면 콘텐츠 링크를 사용 합니다.
 title: 텍스트 컨트롤의 콘텐츠 링크
 label: Content links
 template: detail.hbs
@@ -11,11 +11,11 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: a984e30bbdc569522b04d328087775aa9e8ce2bc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946451"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648538"
 ---
 # <a name="content-links-in-text-controls"></a>텍스트 컨트롤의 콘텐츠 링크
 
@@ -23,10 +23,10 @@ ms.locfileid: "8946451"
 
 사용자가 RichEditBox에서 앰퍼샌드(@) 기호를 항목 앞에 붙이면 항목과 일치되는 사람 및 장소 목록이 표시됩니다. 그런 다음, 예를 들어 사용자가 장소를 선택하면 해당 장소에 대한 ContentLink가 텍스트에 삽입됩니다. 사용자가 RichEditBox에서 콘텐츠 링크를 호출하면 지도 및 이 장소에 대한 추가 정보와 함께 플라이아웃이 표시됩니다.
 
-> **중요 API**: [ContentLink 클래스](/uwp/api/windows.ui.xaml.documents.contentlink), [ContentLinkInfo 클래스](/uwp/api/windows.ui.text.contentlinkinfo), [RichEditTextRange 클래스](/uwp/api/windows.ui.text.richedittextrange)
+> **중요 한 Api**: [ContentLink 클래스](/uwp/api/windows.ui.xaml.documents.contentlink)하십시오 [ContentLinkInfo 클래스](/uwp/api/windows.ui.text.contentlinkinfo), [RichEditTextRange 클래스](/uwp/api/windows.ui.text.richedittextrange)
 
 > [!NOTE]
-> 콘텐츠 링크에 대 한 Api는 다음 네임 스페이스에 분산: Windows.UI.Xaml.Controls, Windows.UI.Xaml.Documents, Windows.UI.Text 합니다.
+> 콘텐츠 링크에 대 한 Api는 다음 네임 스페이스에 분산 됩니다. Windows.UI.Xaml.Controls Windows.UI.Xaml.Documents, 하며 Windows.UI.Text 합니다.
 
 
 
@@ -39,14 +39,14 @@ ms.locfileid: "8946451"
 
 아래에는 RichEditBox 및 TextBlock에서 콘텐츠 링크가 기본적으로 어떻게 나타나는지 나와 있습니다.
 
-![서식 있는 편집 상자의 콘텐츠 링크](images/content-link-default-richedit.png)
-![텍스트 블록의 콘텐츠 링크](images/content-link-default-textblock.png)
+![콘텐츠 링크에서 서식 있는 입력란](images/content-link-default-richedit.png)
+![텍스트 블록에 대 한 콘텐츠 링크](images/content-link-default-textblock.png)
 
 사용 패턴, 렌더링 및 동작의 차이점은 다음 세션에서 자세히 다루겠습니다. 이 표에는 RichEditBox의 콘텐츠 링크와 텍스트 블록의 콘텐츠 링크 간의 가장 큰 차이점이 간략하게 비교되어 있습니다.
 
-| 특징   | RichEditBox | 텍스트 블록 |
+| 기능   | RichEditBox | 텍스트 블록 |
 | --------- | ----------- | ---------- |
-| 사용 패턴 | ContentLinkInfo 인스턴스 | ContentLink 텍스트 요소 |
+| 용도 | ContentLinkInfo 인스턴스 | ContentLink 텍스트 요소 |
 | 커서 | 콘텐츠 링크의 유형에 따라 결정되며 변경이 불가능 | 커서 속성에 의해 결정되며 기본값은 **null** |
 | ToolTip | 렌더링 되지 않음 | 보조 텍스트 표시 |
 
@@ -129,7 +129,7 @@ ContentLinkInfo 개체에는 콘텐츠 링크를 표시, 호출 및 관리하는
 - **SecondaryText** -이 문자열은 렌더링된 콘텐츠 링크의 ToolTip에 표시됩니다.
   - 선택기에서 생성된 장소 콘텐츠 링크에는 위치의 주소가 포함됩니다.
 - **Uri** – 콘텐츠 링크의 주제에 대한 자세한 내용을 제공하는 링크입니다. 이 Uri를 통해 설치된 앱이나 웹 사이트를 열 수 있습니다.
-- **Id** - RichEditBox 컨트롤로 만든 컨트롤당 읽기 전용 카운터입니다. 삭제나 편집 같은 작업을 수행하는 동안 이 ContentLinkInfo를 추적하는 데 사용됩니다. ContentLinkInfo를 해당 컨트롤에 오려서 붙여 넣으면 새로운 ID를 얻을 수 있습니다(ID 값은 증분).
+- **Id** - RichEditBox 컨트롤로 만든 컨트롤당 읽기 전용 카운터입니다. 삭제나 편집 같은 작업을 수행하는 동안 이 ContentLinkInfo를 추적하는 데 사용됩니다. 새 id를 가져오게 됩니다을 ContentLinkInfo 잘라내기는 컨트롤에 다시 붙여를 Id 값은 증분 합니다.
 - **LinkContentKind** – 콘텐츠 링크의 유형을 설명하는 문자열입니다. 기본 제공되는 콘텐츠 유형은 _장소_ 및 _연락처_입니다. 이 값은 대/소문자를 구분합니다.
 
 #### <a name="link-content-kind"></a>링크 콘텐츠 종류
@@ -154,7 +154,7 @@ Uri 속성은 하이퍼링크의 NavigateUri 속성과 상당 부분 비슷하�
 - LinkContentKind가 "장소"가 아니면 지정된 위치로 **지도** 앱이 열립니다. 예를 들어, ContentLinkChanged 이벤트 처리기에서 LinkContentKind를 수정한 경우에 이런 일이 발생할 수 있습니다.
 - 지도 앱에서 Uri가 열리지 않으면 기본 브라우저에서 지도가 열립니다. 사용자의 _웹 사이트용 앱_ 설정에서 **지도** 앱으로 Uri를 열 수 없도록 하고 있을 때 주로 이런 일이 발생합니다.
 
-##### <a name="people"></a>사람
+##### <a name="people"></a>피플
 
 사람 선택기는 **ms-people** 프로토콜을 사용하는 Uri를 통해 ContentLinkInfo를 생성합니다.
 
@@ -162,7 +162,7 @@ Uri 속성은 하이퍼링크의 NavigateUri 속성과 상당 부분 비슷하�
 - LinkContentKind가 "사람"이 아니면 **사람** 앱이 열립니다. 예를 들어, ContentLinkChanged 이벤트 처리기에서 LinkContentKind를 수정한 경우에 이런 일이 발생할 수 있습니다.
 
 > [!TIP]
-> 앱에서 다른 앱과 웹 사이트 열기에 대 한 자세한 내용은 [Uri 사용 하 여 앱을 실행](/windows/uwp/launch-resume/launch-app-with-uri)하는 아래 항목을 참조 하세요.
+> 앱에서 다른 앱 및 웹 사이트 열기에 대 한 자세한 내용은 아래의 항목을 참조 하세요 [Uri 사용 하 여 앱을 시작](/windows/uwp/launch-resume/launch-app-with-uri)합니다.
 
 #### <a name="invoked"></a>호출됨
 

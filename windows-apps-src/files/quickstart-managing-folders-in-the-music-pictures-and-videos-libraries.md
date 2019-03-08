@@ -4,14 +4,14 @@ title: 음악, 사진 및 비디오 라이브러리의 파일 및 폴더
 description: 음악, 사진 또는 비디오의 기존 폴더를 해당 라이브러리에 추가합니다. 라이브러리에서 폴더를 제거하고, 라이브러리에 폴더 목록을 가져오고, 저장된 사진, 음악 및 동영상을 검색할 수도 있습니다.
 ms.date: 06/18/2018
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e04170fb8952ecd5802b6190816d44012f56d8a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927002"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57661438"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>음악, 사진 및 비디오 라이브러리의 파일 및 폴더
 
@@ -19,14 +19,14 @@ ms.locfileid: "8927002"
 
 라이브러리는 기본적으로 알려진 폴더와 사용자가 개발자의 앱 또는 기본 제공 앱 중 하나를 사용하여 라이브러리에 추가한 다른 폴더를 포함하는 가상 폴더 컬렉션입니다. 예를 들어 사진 라이브러리에는 기본적으로 알려진 사진 폴더가 포함되어 있습니다. 사용자는 개발자의 앱 또는 기본 제공 사진 앱을 사용하여 사진 라이브러리에서 폴더를 추가하거나 제거할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 
--   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
+-   **유니버설 Windows 플랫폼 (UWP) 앱 용 비동기 프로그래밍 이해**
 
     C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://msdn.microsoft.com/library/windows/apps/mt187337)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187334)을 참조하세요.
 
--   **위치에 대한 액세스 권한**
+-   **위치에 대 한 액세스 권한**
 
     Visual Studio의 매니페스트 디자이너에서 앱 매니페스트 파일을 엽니다. **기능** 페이지에서 앱이 관리하는 라이브러리를 선택합니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "8927002"
 > 적절한 기능을 선언하는 것을 잊지 마세요. 자세한 내용은 [앱 기능 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.
  
 
-사용자의 음악, 그림, 비디오 라이브러리의 참조를 가져오려면 [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725) 메서드를 호출합니다. [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399) 열거형에서 해당 값을 제공합니다.
+사용자의 음악, 사진 또는 비디오 라이브러리에 대한 참조를 가져오려면 [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725) 메서드를 호출합니다. [  **KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399) 열거형에서 해당 값을 제공합니다.
 
 -   [**KnownLibraryId.Music**](https://msdn.microsoft.com/library/windows/apps/br227155)
 -   [**KnownLibraryId.Pictures**](https://msdn.microsoft.com/library/windows/apps/br227156)
@@ -82,9 +82,9 @@ Windows.Storage.StorageFolder newFolder = await myPictures.RequestAddFolderAsync
 
 ## <a name="remove-a-folder-from-a-library"></a>라이브러리에서 폴더 제거
 
-라이브러리에서 폴더를 제거하려면 [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727) 메서드를 호출하고 제거할 폴더를 지정합니다. [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 및 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤(또는 유사한 컨트롤)을 사용하여 사용자가 제거할 폴더를 선택하도록 할 수 있습니다.
+라이브러리에서 폴더를 제거하려면 [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727) 메서드를 호출하고 제거할 폴더를 지정합니다. [  **StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 및 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤(또는 유사한 컨트롤)을 사용하여 사용자가 제거할 폴더를 선택하도록 할 수 있습니다.
 
-[**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727)를 호출한 경우 폴더가 “더 이상 사진에 표시되지 않지만 삭제되지 않음”을 나타내는 확인 대화 상자가 나타납니다. 이는 폴더가 디스크의 원래 위치에 유지되며, [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 속성에서 제거되고 더 이상 기본 제공 사진 앱에 포함되지 않음을 의미합니다.
+[  **StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727)를 호출한 경우 폴더가 “더 이상 사진에 표시되지 않지만 삭제되지 않음”을 나타내는 확인 대화 상자가 나타납니다. 이는 폴더가 디스크의 원래 위치에 유지되며, [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 속성에서 제거되고 더 이상 기본 제공 사진 앱에 포함되지 않음을 의미합니다.
 
 다음 예제에서는 사용자가 **lvPictureFolders**라는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤에서 제거할 폴더를 선택한 것으로 가정합니다.
 
@@ -173,7 +173,7 @@ private async void getSongs()
 
 카메라 롤과 저장된 사진 폴더는 심층 쿼리를 지원하지 않습니다.
 
-**사진을 캡처한 앱으로 사진 열기**
+**데이터를 캡처는 앱에서 사진을 열기**
 
 나중에 사용자가 사진을 캡처한 앱으로 사진을 다시 열 수 있도록 하려면 다음 예제와 비슷한 코드를 사용하여 사진의 메타데이터로 **CreatorAppId**을(를) 저장할 수 있습니다. 이 예제에서 **testPhoto**는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)입니다.
 
