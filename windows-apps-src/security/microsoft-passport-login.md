@@ -7,46 +7,46 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 8319d4a0975e209edea7cb70b22910e8124f16c1
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927933"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593978"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Windows Hello 로그인 앱 만들기
 
 이 문서는 기존 사용자 이름 및 암호 인증 시스템의 대안으로 Windows Hello를 사용하는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법을 안내하는 전체 연습의 제1부입니다. 앱은 사용자 이름으로 로그인하고 각 계정에 Hello 키를 만듭니다. 이 계정들은 Windows Hello 구성의 Windows 설정에 설정된 PIN의 보호를 받습니다.
 
-이 연습은 앱을 빌드하고 백 엔드 서비스에 접속하는 두 부분으로 나뉘어 있습니다. 이 문서를 마치면 제2부: [Windows Hello 로그인 서비스](microsoft-passport-login-auth-service.md)를 계속 진행하세요.
+이 연습은 앱을 빌드하고 백 엔드 서비스를 연결하는 두 부분으로 나누어집니다. 이 문서를 사용 하 여 완료 되 면, 2 부를 진행 합니다. [Windows Hello 로그인 서비스](microsoft-passport-login-auth-service.md)합니다.
 
 시작하기 전에 Windows Hello 작동 방식을 전반적으로 이해하기 위해 [Windows Hello](microsoft-passport.md) 개요를 읽으셔야 합니다.
 
 ## <a name="get-started"></a>시작
 
 
-이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. Visual Studio 2015를 사용 해야 합니다 (Community Edition 이상), 또는 Windows 10 컴퓨터에서 Visual Studio의 최신 릴리스 합니다. Visual Studio 2015 필요한 최소 버전에는 최신 개발자 및 보안 업데이트에 대 한 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
+이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. Visual Studio 2015를 사용 하 여 수 해야 (Community Edition 이상), 또는 Windows 10 컴퓨터에서 Visual Studio의 이후 릴리스 합니다. Visual Studio 2015 최소 필수 버전 이지만, 최신 개발자와 보안 업데이트를 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
 
--   Visual Studio를 열고 파일 선택 > 새로 만들기 > 프로젝트입니다.
+-   Visual Studio를 열고 파일 > 새로 만들기 > 프로젝트입니다.
 -   "새 프로젝트" 창이 열립니다. 템플릿 &gt; Visual C#으로 이동합니다.
 -   비어 있는 앱(유니버설 Windows)을 선택하고 응용 프로그램의 이름을 "PassportLogin"으로 지정합니다.
 -   새 응용 프로그램을 빌드 및 실행(F5)하면 화면에 빈 창이 표시됩니다. 응용 프로그램을 닫습니다.
 
 ![Windows Hello 새 프로젝트](images/passport-login-1.png)
 
-## <a name="exercise-1-login-with-microsoft-passport"></a>연습 1: Microsoft Passport를 사용하여 로그인
+## <a name="exercise-1-login-with-microsoft-passport"></a>연습 1: Microsoft Passport를 사용 하 여 로그인
 
 
 이 연습에서는 컴퓨터에 Windows Hello가 설정되어 있는지 확인하는 방법과 Windows Hello를 사용하여 계정에 로그인하는 방법을 알아봅니다.
 
--   새 프로젝트에서 솔루션에 "Views"라는 새 폴더를 만듭니다. 이 폴더에는 이 샘플에서 이동할 페이지가 포함됩니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 추가 > 새 폴더를 선택한 다음 폴더 이름을 Views로 바꿉니다.
+-   새 프로젝트에서 솔루션에 "Views"라는 새 폴더를 만듭니다. 이 폴더에는 이 샘플에서 이동할 페이지가 포함됩니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 추가 &gt; 새 폴더를 선택한 다음 폴더 이름을 Views로 바꿉니다.
 
     ![Windows Hello 폴더 추가](images/passport-login-2.png)
 
--   새 Views 폴더를 마우스 오른쪽 단추로 클릭하고 추가 > 새 항목을 선택한 후 빈 페이지를 선택합니다. 이 페이지의 이름을 "Login.xaml"로 지정합니다.
+-   새 Views 폴더를 마우스 오른쪽 단추로 클릭하고 추가 &gt; 새 항목을 선택한 후 빈 페이지를 선택합니다. 이 페이지의 이름을 "Login.xaml"로 지정합니다.
 
     ![Windows Hello 빈 페이지 추가](images/passport-login-3.png)
 
--   새 로그인 페이지에 대한 사용자 인터페이스를 정의하려면 다음 XAML을 추가합니다. 이 XAML은 다음 자식 항목에 맞게 StackPanel을 정의합니다.
+-   새 로그인 페이지에 대한 사용자 인터페이스를 정의하기 위해 다음 XAML을 추가합니다. 이 XAML은 다음 자식 항목에 맞게 StackPanel을 정의합니다.
 
     -   제목을 포함하는 TextBlock
     -   오류 메시지에 대한 TextBlock
@@ -211,7 +211,7 @@ ms.locfileid: "8927933"
 
     ![설정되지 않은 Windows Hello 로그인 화면](images/passport-login-7.png)
 
--   그 다음으로 할 것은 로그인 논리를 작성하는 것입니다. "Models"라는 새 폴더를 만듭니다.
+-   이제 로그인 논리를 작성해야 합니다. "Models"라는 새 폴더를 만듭니다.
 -   Models 폴더에 "Account.cs"라는 새 클래스를 만듭니다. 이 클래스는 계정 모델 역할을 합니다. 샘플이므로 사용자 이름만 포함합니다. 클래스 정의를 public으로 변경하고 Username 속성을 추가합니다.
     
     ```cs
@@ -415,7 +415,7 @@ ms.locfileid: "8927933"
     }
     ```
 
--   MicrosoftPassportHelper의 메서드를 참조한 주석으로 처리된 코드를 확인했을 수 있습니다. MicrosoftPassportHelper.cs에서 CreatePassportKeyAsync라는 새 메서드를 추가합니다. 이 메서드는 [**KeyCredentialManager**](https://msdn.microsoft.com/library/windows/apps/dn973043)에서 Windows Hello API를 사용합니다. [**RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048)를 호출하면 *accountId* 및 로컬 컴퓨터에 해당하는 Passport 키가 생성됩니다. 실제 시나리오에서 이를 구현해 보려면 switch 문의 주석을 확인하세요.
+-   MicrosoftPassportHelper의 메서드를 참조한 주석으로 처리된 코드를 확인했을 수 있습니다. MicrosoftPassportHelper.cs에서 CreatePassportKeyAsync라는 새 메서드를 추가합니다. 이 메서드는 [**KeyCredentialManager**](https://msdn.microsoft.com/library/windows/apps/dn973043)에서 Windows Hello API를 사용합니다. [  **RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048) 호출은 *accountId* 및 로컬 컴퓨터에 해당하는 Passport 키를 생성합니다. 실제 시나리오에서 이를 구현해 보려면 switch 문의 주석을 확인하세요.
 
     ```cs
     /// <summary>
@@ -486,10 +486,10 @@ ms.locfileid: "8927933"
 
     ![Windows Hello 로그인 핀 프롬프트](images/passport-login-8.png)
 
-## <a name="exercise-2-welcome-and-user-selection-pages"></a>연습 2: 환영 및 사용자 선택 페이지
+## <a name="exercise-2-welcome-and-user-selection-pages"></a>연습 2: 시작 하 고 사용자 선택 페이지
 
 
-이 연습은 이전 연습에서 계속됩니다. 성공적으로 로그인하면 계정에서 로그아웃하거나 계정을 삭제할 수 있는 환영 페이지가 표시되어야 합니다. Windows Hello는 모든 컴퓨터에 대해 키를 만들므로 해당 컴퓨터에 로그인한 모든 사용자를 표시하는 사용자 선택 화면을 만들 수 있습니다. 그런 다음 사용자는 이러한 계정 중 하나를 선택하고 컴퓨터에 액세스하도록 이미 인증되었기 때문에 암호를 다시 입력하지 않고도 환영 화면으로 바로 이동할 수 있습니다.
+이 연습은 이전 연습에서 계속됩니다. 성공적으로 로그인하면 계정을 삭제 또는 로그아웃할 수 있는 환영 페이지가 표시되어야 합니다. Windows Hello는 모든 컴퓨터에 대해 키를 만들므로 해당 컴퓨터에 로그인한 모든 사용자를 표시하는 사용자 선택 화면을 만들 수 있습니다. 그런 다음 사용자는 이러한 계정 중 하나를 선택하고 컴퓨터에 액세스하도록 이미 인증되었기 때문에 암호를 다시 입력하지 않고도 환영 화면으로 바로 이동할 수 있습니다.
 
 -   Views 폴더에 "Welcome.xaml"이라는 새 빈 페이지를 추가합니다. 사용자 인터페이스를 완료하려면 다음 XAML을 추가합니다. 제목, 로그인된 사용자 이름 및 두 개의 단추가 표시됩니다. 단추 중 하나는 사용자 목록(나중에 만듦)으로 이동하는 단추이며 다른 단추는 이 사용자를 무시하기 위한 단추입니다.
 
@@ -555,7 +555,7 @@ ms.locfileid: "8927933"
     }
     ```
 
--   사용자 무시 클릭 이벤트에서 주석 처리된 줄을 확인했을 수 있습니다. 로컬 목록에서 제거할 계정이지만 현재로서는 Windows Hello에서 제거할 방법이 없습니다. MicrosoftPassportHelper.cs에 Windows Hello 사용자를 제거할 새 메서드를 구현해야 합니다. 이 메서드는 다른 Windows Hello API를 사용하여 계정을 열고 삭제합니다. 실제 환경에서는 계정을 삭제할 때 사용자 데이터베이스가 여전히 유효하도록 서버나 데이터베이스에 알려야 합니다. Models 폴더에 대한 참조가 필요합니다.
+-   사용자 무시 클릭 이벤트에서 주석 처리된 줄을 확인했을 수 있습니다. 로컬 목록에서 제거할 계정이지만 현재로서는 Windows Hello에서 제거할 방법이 없습니다. MicrosoftPassportHelper.cs에 Windows Hello 사용자를 제거할 새 메서드를 구현해야 합니다. 이 메서드는 다른 Windows Hello API를 사용하여 계정을 열고 삭제합니다. 실제로 계정을 삭제할 때 사용자 데이터베이스가 여전히 유효하도록 서버나 데이터베이스는 알림을 표시해야 합니다. Models 폴더에 대한 참조가 필요합니다.
 
     ```cs
     using PassportLogin.Models;
@@ -620,7 +620,7 @@ ms.locfileid: "8927933"
     }
     ```
 
--   응용 프로그램을 빌드 및 실행합니다. "sampleUsername"으로 로그인하고 로그인을 클릭합니다. PIN을 입력하고 성공하면 환영 화면으로 이동해야 합니다. 사용자 무시를 클릭하고 출력 창을 모니터링하여 사용자가 삭제되었는지 확인합니다. 사용자를 삭제할 때 환영 페이지는 그대로 유지됩니다. 앱에서 찾아갈 수 있는 사용자 선택 페이지를 만들어야 합니다.
+-   응용 프로그램을 빌드 및 실행합니다. "sampleUsername"으로 로그인하고 로그인을 클릭합니다. PIN을 입력하고 성공하면 환영 화면으로 이동해야 합니다. 사용자 무시를 클릭하고 출력 창을 모니터링하여 사용자가 삭제되었는지 확인합니다. 사용자를 삭제할 때 환영 페이지는 그대로 유지됩니다. 앱에서 이동할 수 있는 사용자 선택 페이지를 만들어야 합니다.
 
     ![Windows Hello 시작 화면](images/passport-login-9.png)
 
@@ -875,7 +875,7 @@ ms.locfileid: "8927933"
 ## <a name="exercise-3-registering-a-new-windows-hello-user"></a>연습 3: 새 Windows Hello 사용자 등록
 
 
-이 연습에서는 Windows Hello가 있는 새 계정을 만드는 새 페이지를 작성합니다. 새 페이지는 로그인 페이지가 작동하는 방식과 유사하게 작동합니다. 로그인 페이지는 Windows Hello를 사용하도록 마이그레이션하는 기존 사용자를 위해 구현되었습니다. PassportRegister 페이지는 새 사용자를 위한 Windows Hello 등록을 만듭니다.
+이 연습에서는 Windows Hello가 있는 새 계정을 만드는 새 페이지를 작성합니다. 로그인 페이지가 작동하는 방법과 유사하게 작동됩니다. 로그인 페이지는 Windows Hello를 사용하도록 마이그레이션하는 기존 사용자를 위해 구현되었습니다. PassportRegister 페이지는 새 사용자를 위한 Windows Hello 등록을 만듭니다.
 
 -   Views 폴더에 "PassportRegister.xaml"이라는 빈 페이지를 새로 만듭니다. XAML에서 사용자 인터페이스를 설정하기 위해 다음을 추가합니다. 여기 인터페이스는 로그인 페이지와 비슷합니다.
 
@@ -957,7 +957,7 @@ ms.locfileid: "8927933"
     }
     ```
 
--   응용 프로그램을 빌드 및 실행합니다. 새 사용자를 등록하려고 합니다. 사용자 목록으로 돌아가 해당 사용자 및 로그인을 선택할 수 있는지 확인합니다.
+-   응용 프로그램을 빌드 및 실행합니다. 새 사용자를 등록하려고 합니다. 사용자 목록으로 돌아가서 해당 사용자 및 로그인을 선택할 수 있는지 유효성을 검사합니다.
 
     ![Windows Hello 새 사용자 등록](images/passport-login-11.png)
 

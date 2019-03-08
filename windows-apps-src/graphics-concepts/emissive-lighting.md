@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ba112e04518d3e1ee05e7ee8e23e633d4cf59748
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936863"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599178"
 ---
 # <a name="emissive-lighting"></a>발광 조명
 
@@ -23,9 +23,9 @@ ms.locfileid: "8936863"
 
 발광 조명 = Cₑ
 
-각 항목은 다음을 의미합니다.
+여기서
 
-| 매개 변수 | 기본값 | 유형                                                                 | 설명     |
+| 매개 변수 | 기본값 | 형식                                                                 | 설명     |
 |-----------|---------------|----------------------------------------------------------------------|-----------------|
 | Cₑ        | (0,0,0,0)     | 빨간색, 녹색, 파란색 및 알파 투명도(모두 부동 소수점 값) | 발광 색입니다. |
 
@@ -36,11 +36,11 @@ Cₑ에 대한 값은 색 1 또는 색 2입니다. 꼭짓점 색을 입력하지
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>예제
 
 
-이 예에서는 장면 주변 조명과 물체 주변 색이 개체에 지정됩니다.
+이 예제에서는 장면 주변 조명과 재질 주변 색이 개체에 지정됩니다.
 
 수식에 따라 개체 꼭짓점의 결과 색은 물체의 색입니다.
 
-다음 그림은 물체 색인 녹색을 보여 줍니다. 발광 조명은 모든 개체 꼭짓점을 같은 색으로 비춥니다. 꼭짓점 법선이나 광원 방향의 영향을 받지 않습니다. 그 결과로, 개체 표면 주변에 음영 차이가 없기 때문에 구가 2D 원처럼 보입니다.
+다음 그림은 물체 색인 녹색을 보여 줍니다. 발광 조명은 모든 개체 꼭짓점을 같은 색으로 비춥니다. 꼭짓점 법선이나 조명 방향의 영향을 받지 않습니다. 따라서 객체 표면 주변에 음영 차이가 없기 때문에 구가 2D 원처럼 보입니다.
 
 ![녹색 구 그림](images/lighte.jpg)
 
@@ -48,7 +48,7 @@ Cₑ에 대한 값은 색 1 또는 색 2입니다. 꼭짓점 색을 입력하지
 
 ![발광 조명이 있는 녹색 구 그림](images/lightadse.jpg)
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [조명의 수학](mathematics-of-lighting.md)

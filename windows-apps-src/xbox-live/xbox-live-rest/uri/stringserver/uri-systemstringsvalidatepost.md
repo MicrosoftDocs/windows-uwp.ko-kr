@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 70e86567f449674c7a046e072437d9ee715dc6d6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947656"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595508"
 ---
 # <a name="post-systemstringsvalidate"></a>POST (/system/strings/validate)
-유효성 검사에 대 한 문자열의 배열 받아들이고 일련의 같은 크기의 결과 반환 합니다. 이러한 Uri에 대 한 도메인은 `client-strings.xboxlive.com`.
+유효성 검사에 대 한 문자열의 배열을 수락 하 고 동일한 크기의 결과 배열을 반환 합니다. 이러한 Uri에 대 한 도메인은 `client-strings.xboxlive.com`합니다.
  
   * [설명](#ID4EV)
   * [필요한 요청 헤더](#ID4EIB)
@@ -28,14 +28,14 @@ ms.locfileid: "8947656"
  
 ## <a name="remarks"></a>설명
  
-각 결과 해당 문자열 Xbox LIVE에 허용 되 고 해당 하는 경우 문제가 되는 문자열을 포함 하는지 여부를 나타냅니다.
+각 결과는 해당 문자열의 Xbox LIVE에 적합 하 고 해당 하는 경우 잘못 된 문자열을 포함 하는지 여부를 나타냅니다.
  
-동일한 문자열 동일한 결과 항상 제공 됩니다. 실패 결과 수신 하는 경우 결과 분석 하 고 그에 따라 문자열을 수정 합니다.
+항상 동일한 문자열 동일한 결과 제공 합니다. 성공 하지 못한 결과 표시 되 면 결과 분석 하 고 문자열을 적절 하 게 수정 합니다.
  
  
 
 > [!NOTE] 
-> 결과 <b>VerifyStringResult</b> 는 문자열에 있는 첫 번째 단어를 보고 합니다. 문자열에서 단어를 잘못 된 추가 수 있습니다. 문자열을 사용할 수 있는 단어를 교체 하려는 경우에 잘못 된 단어 또는 하위 문자열을 대체 하 고 있는 하위 문자열을 추가 하는 문자열을 다시 확인 해야 합니다.  
+> 결과 <b>VerifyStringResult</b> 보고서만 문자열에서 첫 번째 잘못 된 단어가 됩니다. 문자열에서 단어를 잘못 추가 수 있습니다. 문자열을 사용할 수 있도록 하려면 잘못 된 단어를 대체 하려는 경우에 잘못 된 단어 또는 부분 문자열을 대체 하 고 추가 잘못 된 부분 문자열을 검색할 문자열을 다시 확인 해야 합니다.  
 
  
   
@@ -46,15 +46,15 @@ ms.locfileid: "8947656"
  
 | 헤더| 설명| 
 | --- | --- | --- | 
-| 권한 부여| 인증 토큰입니다. 예: XBL3.0 x = [해시]. [토큰]입니다.| 
-| xbl 계약 버전 x| 정수 API 계약 버전입니다. 이 API에 대 한 1 또는 2 이어야 합니다.| 
+| 권한 부여| 인증 토큰입니다. 예제: XBL3.0 x=[hash];[token].| 
+| x-xbl-contract-version| 정수 API 계약 버전입니다. 이 API에 대 한 1 또는 2 여야 합니다.| 
   
 <a id="ID4ELC"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-요청 본문은 문자열 배열 크기에 제한이 없는 및 512 자 문자열의 배열입니다.
+요청 본문은 배열의 크기에 제한이 없는 숫자와 문자열 당 512 자 문자열의 배열입니다.
  
 <a id="ID4ETC"></a>
 
@@ -81,22 +81,22 @@ ms.locfileid: "8947656"
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답의이 섹션에는 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스를 사용 하는 표준 HTTP 상태 코드의 전체 목록은 참조 하세요 [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)합니다.
  
-| Code| 이유 구문| 설명| 
+| 코드| 이유 구| 설명| 
 | --- | --- | --- | --- | --- | --- | 
-| 200| 확인| 모든 문자열 성공적으로 처리 합니다. 이 반드시 모든 문자열 양수 Hresult 했습니다.| 
-| 401| 권한 없음| 필요한 사용자 인증을 요청 합니다.| 
-| 403| 금지| 사용자 또는 서비스에 대 한 요청을 허용 되지 않습니다.| 
-| 406| 허용할 수 없음| 없음 <b>콘텐츠 형식: 응용 프로그램/j</b> 헤더.| 
-| 408| 요청 시간 제한| 서비스 잘못 된 요청을 이해 하지 못했습니다. 일반적으로 잘못 된 매개 변수입니다.| 
+| 200| 확인| 모든 문자열은 성공적으로 처리 되었습니다. 이 반드시 모든 문자열 양의 HResults를 했습니다.| 
+| 401| 권한 없음| 요청에 사용자 인증이 필요합니다.| 
+| 403| 사용할 수 없음| 사용자 또는 서비스에 대 한 요청이 허용 되지 않습니다.| 
+| 406| 허용 되지 않음| 누락 <b>콘텐츠 형식: application/json</b> 헤더입니다.| 
+| 408| 요청 시간 초과| 서비스 잘못 된 요청을 이해할 수 없었습니다. 일반적으로 잘못 된 매개 변수입니다.| 
   
 <a id="ID4ETF"></a>
 
  
 ## <a name="response-body"></a>응답 본문
  
-[VerifyStringResult (JSON)](../../json/json-verifystringresult.md), 요청 배열와 같은 크기의 배열을 반환합니다.
+배열을 반환 [VerifyStringResult (JSON)](../../json/json-verifystringresult.md), 요청 배열과 동일한 크기의 합니다.
   
 <a id="ID4EAG"></a>
 
@@ -106,7 +106,7 @@ ms.locfileid: "8947656"
 <a id="ID4ECG"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
 [/system/strings/validate](uri-systemstringsvalidate.md)
 

@@ -8,25 +8,25 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: dda124e5be9a4d21a1ee5b9d6130290207e31921
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919334"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593828"
 ---
 # <a name="progression-json"></a>Progression(JSON)
-도전 과제를 잠금 해제 필요 하면 사용자의 진행 합니다. 
+도전 과제를 잠금 해제 하는까지 사용자의 작업 진행 합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="progression"></a>진행
  
-진행은 개체에 다음과 같이 지정 합니다.
+진행 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| 요구 사항| 배열 요구 사항| 도전 과제를 획득을 위한 요구 사항 및 잠금을 해제 하는 방향으로 사용자가 얼마나 진행 합니다.| 
-| timeUnlocked| DateTime| 먼저 도전 과제를 잠금 시간입니다.| 
+| 요구 사항| 배열 요구 사항| 도전 과제를 획득 하는 요구 사항 및 잠금을 해제 하는 방향으로 사용자까지 진행 합니다.| 
+| timeUnlocked| DateTime| 먼저 도전 과제를 잠긴 시간입니다.| 
   
 <a id="ID4ETB"></a>
 
@@ -56,8 +56,8 @@ ms.locfileid: "8919334"
 <a id="ID4E5B"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

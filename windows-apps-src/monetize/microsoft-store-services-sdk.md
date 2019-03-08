@@ -1,5 +1,5 @@
 ---
-Description: The Microsoft Store Services SDK provides libraries and tools that you can use to add features to your apps that help you make more money and gain customers.
+Description: Microsoft Store Services SDK는 더 많은 수익을 창출하고 고객을 확보할 수 있게 해주는 기능을 앱에 추가하는 데 사용할 수 있는 라이브러리 및 도구를 제공합니다.
 title: Microsoft Store Services SDK를 사용하여 고객과 소통
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
 ms.date: 08/21/2017
@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: 24ec2013735597efae73aee31bb4aee1a8e1413e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044304"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594988"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Microsoft Store Services SDK를 사용하여 고객과 소통
 
-Microsoft Store Services SDK에 도움이 되는 기능 앱에 대상된 알림 보내기는 실행 등, 유니버설 Windows 플랫폼 (UWP) 앱에서 고객을 확보 제공 / B 실험 앱. 이 SDK는 Visual Studio 2015 이상에 대한 확장입니다.
+Microsoft Store Services SDK 제공 하는 기능을 앱에 알림 보내기는 실행 등 유니버설 Windows 플랫폼 (UWP) 앱에서 고객과 소통 / 앱에서 B 실험 합니다. 이 SDK는 Visual Studio 2015 이상에 대한 확장입니다.
 
 > [!NOTE]
 > UWP 앱에서 광고를 표시하려면 Microsoft Store Services SDK 대신 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 사용합니다. Advertising 라이브러리가 Microsoft Store Services SDK에서 Microsoft Advertising SDK로 이동되었습니다. 자세한 내용은 [앱에서 광고 표시](display-ads-in-your-app.md)를 참조하세요.
@@ -28,14 +28,14 @@ Microsoft Store Services SDK는 현재 UWP 앱에 대해 다음과 같은 시나
 
 |  시나리오  |  설명   |
 |------------|----------------|
-|  [A/B 테스트로 UWP 앱에서 실험 실행](run-app-experiments-with-a-b-testing.md)    |  UWP(유니버설 Windows 플랫폼) 앱에서 A/B 테스트를 실행하여, 모든 고객에게 기능을 릴리스하기 전에 일부 고객에 대한 기능의 효과를 측정합니다. 파트너 센터에서 실험을 정의 하 고 나면 실험에 대 한 변형 앱에서이 데이터를 사용 하 여를 테스트할 기능의 동작을 수정 하려면 다음 사용 하려면 LogForVariation [ [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 클래스를 사용 ](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation)메서드를 파트너 센터에 보기 이벤트 및 전환 이벤트를 전송 합니다. 마지막으로, 결과 보고 실험을 관리 하려면 파트너 센터를 사용 합니다.  |
-|  [UWP 앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)    |  UWP 앱에서 [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 클래스를 사용하여 문제, 제안 및 좋아요를 제출할 수 있는 피드백 허브로 Windows10 고객을 안내합니다. 그런 다음 파트너 센터에서 [피드백 보고서](../publish/feedback-report.md) 에이 피드백을 관리 합니다. |
-|  [파트너 센터 푸시 알림을 받도록 UWP 앱 구성](configure-your-app-to-receive-dev-center-notifications.md)    |  UWP 앱에서 [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) 클래스를 사용 하 여 파트너 센터를 사용 하 여 고객에 게 보내는 대상된 푸시 알림을 받도록 앱을 등록 합니다.  |
-|   [파트너 센터에서 사용 보고서에 대 한 UWP 앱에 사용자 지정 이벤트 로깅](log-custom-events-for-dev-center.md)   |  파트너 센터의 앱과 관련 된 사용자 지정 이벤트를 기록 하려면 UWP 앱에서 [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 클래스를 사용 합니다. 그런 다음 파트너 센터에서 [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report) 의 **사용자 지정 이벤트** 섹션에서 사용자 지정 이벤트에 대 한 총 발생 횟수를 검토 합니다.  |
+|  [사용 하 여 UWP 앱에서 실험을 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)    |  UWP(유니버설 Windows 플랫폼) 앱에서 A/B 테스트를 실행하여, 모든 고객에게 기능을 릴리스하기 전에 일부 고객에 대한 기능의 효과를 측정합니다. 파트너 센터에서 실험을 정의한 후 사용 합니다 [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 클래스를 테스트 하는 기능의 동작을 수정 하려면이 데이터를 사용 하는 앱에서 실험에 대 한 변형 가져오려고 하 고 사용 하 여는 [LogForVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) 파트너 센터에 뷰 이벤트 및 변환 이벤트를 보내기 위한 메서드. 마지막으로 결과 보고 실험을 관리 하려면 파트너 센터를 사용 합니다.  |
+|  [UWP 앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)    |  UWP 앱에서 [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 클래스를 사용하여 문제, 제안 및 좋아요를 제출할 수 있는 피드백 허브로 Windows 10 고객을 안내합니다. 그런 다음에서이 피드백을 관리 합니다 [피드백 보고서](../publish/feedback-report.md) 파트너 센터에서. |
+|  [파트너 센터 푸시 알림을 받도록 UWP 앱 구성](configure-your-app-to-receive-dev-center-notifications.md)    |  사용 된 [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) 파트너 센터를 사용 하 여 고객에 게 전송 하는 대상된 푸시 알림을 받도록 앱을 등록 하 여 UWP 앱의 클래스입니다.  |
+|   [파트너 센터에서 사용 현황 보고서에 대 한 UWP 앱에서 사용자 지정 이벤트 로그](log-custom-events-for-dev-center.md)   |  사용 된 [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 파트너 센터에서 앱과 연결 된 사용자 지정 이벤트를 기록 하 여 UWP 앱의 클래스입니다. 그런 다음 사용자 지정 이벤트에 대 한 총 발생 횟수를 검토 합니다 **사용자 지정 이벤트** 섹션을 [사용 현황 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report) 파트너 센터에서.  |
 
 <span id="prerequisites" />
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 Microsoft Store Services SDK에는 다음이 필요합니다.
 
@@ -99,7 +99,7 @@ NuGet을 통해 Microsoft Store Services SDK 라이브러리를 설치하려면
 
 5. 검색 상자에 **Microsoft.Services.Store.Engagement**를 입력하고 Microsoft.Services.Store.Engagement 패키지를 설치합니다. 패키지 설치가 완료되면 솔루션을 저장합니다.
     > [!NOTE]
-    > **출력** 창이 지정된 경로가 너무 길다는 것을 나타내는 *Install-Package* 오류를 보고하는 경우, 기본 위치보다 경로가 더 짧은 다른 위치로 패키지를 추출하도록 NuGet을 구성해야 할 수 있습니다. 이렇게 하려면 컴퓨터의 nuget.config 파일에 ```repositoryPath``` 값을 추가하고 NuGet 패키지를 추출할 수 있는 더 짧은 폴더에 할당합니다. 자세한 내용은 NuGet 설명서에서 [이 문서](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior)를 참조하세요. 또는 Visual Studio 프로젝트를 더 짧은 경로의 대체 폴더로 이동하려고 할 수 있습니다. 또한 문제 너무 오래 되 고 글로벌 패키지 경로 것일 수도 있습니다. 이 경우 추가 합니다 ```globalPackagesFolder``` 값 nuget.config 파일에 복사 합니다.
+    > **출력** 창이 지정된 경로가 너무 길다는 것을 나타내는 *Install-Package* 오류를 보고하는 경우, 기본 위치보다 경로가 더 짧은 다른 위치로 패키지를 추출하도록 NuGet을 구성해야 할 수 있습니다. 이렇게 하려면 컴퓨터의 nuget.config 파일에 ```repositoryPath``` 값을 추가하고 NuGet 패키지를 추출할 수 있는 더 짧은 폴더에 할당합니다. 자세한 내용은 NuGet 설명서에서 [이 문서](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior)를 참조하세요. 또는 Visual Studio 프로젝트를 더 짧은 경로의 대체 폴더로 이동하려고 할 수 있습니다. 문제에 전역 패키지 경로가 너무 길기도 원인일 수 있습니다. 이 경우 추가 ```globalPackagesFolder``` nuget.config 파일에는 값입니다.
 
 6. 프로젝트가 포함된 Visual Studio 솔루션을 닫고, 솔루션을 다시 엽니다.
 
@@ -139,7 +139,7 @@ Microsoft Store Services SDK의 Microsoft.Services.Store.Engagement.dll 라이�
 ## <a name="related-topics"></a>관련 항목
 
 * [Microsoft Store Services SDK API 참조](https://docs.microsoft.com/uwp/api/overview/engagement)
-* [A/B 테스트로 실험 실행](run-app-experiments-with-a-b-testing.md)
+* [A/B 테스트를 통한 실험 수행](run-app-experiments-with-a-b-testing.md)
 * [앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)
 * [파트너 센터 푸시 알림을 받도록 앱 구성](configure-your-app-to-receive-dev-center-notifications.md)
-* [파트너 센터에 대해 사용자 지정 이벤트 로깅](log-custom-events-for-dev-center.md)
+* [파트너 센터에 대 한 사용자 지정 이벤트 로그](log-custom-events-for-dev-center.md)

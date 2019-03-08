@@ -6,11 +6,11 @@ ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cda22488f613c508b2c753c6b530b2b34b10909d
-ms.sourcegitcommit: 175d0fc32db60017705ab58136552aee31407412
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9114479"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589988"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>앱에 구독 추가 기능을 사용하도록 설정
 
@@ -33,30 +33,30 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 
 앱에서 구독 추가 기능 구매를 구현하려면 다음 단계를 따르세요.
 
-1. 파트너 센터에서 구독에 대 한 [추가 기능 제출 만들기](../publish/add-on-submissions.md) 및 제출 게시 합니다. 추가 기능 제출 프로세스를 적용할 때 다음 속성에 주의하세요.
+1. [추가 기능 제출 만들기](../publish/add-on-submissions.md) 파트너 센터에서 구독에 대 한 전송 게시 합니다. 추가 기능 제출 프로세스를 적용할 때 다음 속성에 주의하세요.
 
-    * [제품 유형](../publish/set-your-add-on-product-id.md#product-type): **구독**을 선택해야 합니다.
+    * [제품 유형](../publish/set-your-add-on-product-id.md#product-type): 선택 했는지 **구독**합니다.
 
-    * [구독 기간](../publish/enter-add-on-properties.md#subscription-period): 구독에 대한 반복 청구 기간을 선택합니다. 추가 기능을 게시한 후에는 구독 기간을 변경할 수 없습니다.
+    * [구독 기간 동안](../publish/enter-add-on-properties.md#subscription-period): 구독에 대 한 되풀이 청구 기간을 선택 합니다. 추가 기능을 게시한 후에는 구독 기간을 변경할 수 없습니다.
 
         각 구독 추가 기능에서 단일 구독 기간과 시험 평가 일 구독 기간과 평가 기간을 지원합니다. 앱에서 제공하려는 구독 유형 별로 다른 구독 추가 기능을 만들어야 합니다. 예를 들어 평가 기간이 없는 1개월 구독, 1개월 평가 기간이 제공되는 1개월 구독, 평가 기간이 없는 1년 구독, 1개월 평가 기간이 제공되는 1년 구독을 제공하고 싶다면 4가지 구독 추가 기능을 만들어야 합니다.
 
-    * [평가 기간](../publish/enter-add-on-properties.md#free-trial): 구독에서 사용자가 구매 전에 구독 콘텐츠를 평가할 수 있도록 1주 또는 1개월 평가 기간을 선택합니다. 구독 추가 기능을 게시한 후에는 평가 기간을 변경하거나 제거할 수 없습니다.
+    * [평가판 기간이](../publish/enter-add-on-properties.md#free-trial): 구입 하기 전에 구독 콘텐츠를 시도 하는 사용자를 사용 하도록 설정 하려면 구독에 대 한 1 주 또는 1 개월 평가판 기간을 선택 하는 것이 좋습니다. 구독 추가 기능을 게시한 후에는 평가 기간을 변경하거나 제거할 수 없습니다.
 
         사용자는 구독 무료 평가 기간을 취득하려면, 유효한 결제 유형을 포함해 일반적인 앱 내 구매 프로세스를 통해 구독형 서비스를 구입해야 합니다. 평가 기간 동안에는 요금이 청구되지 않습니다. 평가 기간이 끝나면 구독은 자동으로 유료 구독으로 변경되고, 사용자의 결제 수단에 첫 유료 구독 기간에 대한 요금이 청구됩니다. 사용자가 평가 기간에 구독 취소를 선택해도 평가 기간이 끝날 때까지 구독이 유지됩니다. 일부 평가 기간은 모든 구독 기간에 사용할 수 없습니다.
 
         > [!NOTE]
         > 각 고객은 한 번만 구독 추가 기능에 대한 무료 평가판을 얻을 수 있습니다. 고객이 구독에 대한 무료 평가판을 획득한 후 Microsoft Store는 동일한 고객이 동일한 무료 평가판 구독을 다시 구입하는 것을 막습니다.
 
-    * [표시 여부](../publish/set-add-on-pricing-and-availability.md#visibility): 구독을 대상으로 앱에서 바로 구매 환경을 테스트하기 위해 테스트 추가 기능을 생성하고 싶다면, **Microsoft Store에서 숨김** 옵션 중 하나를 선택하는 것이 좋습니다. 그렇지 않으면 해당 시나리오에서 가장 좋은 표시 옵션을 선택할 수 있습니다.
+    * [표시 유형](../publish/set-add-on-pricing-and-availability.md#visibility): 구독에 대 한 인 앱 구매 환경을 테스트를 사용 하는 테스트 추가 기능을 만들려는 경우 중 하나를 선택 하는 것이 좋습니다 합니다 **저장소의 숨겨진** 옵션입니다. 그렇지 않으면 해당 시나리오에서 가장 좋은 표시 옵션을 선택할 수 있습니다.
 
-    * [가격](../publish/set-add-on-pricing-and-availability.md?#pricing): 이 섹션에서 구독 가격을 선택합니다. 추가 기능을 게시한 후에 구독 가격을 인상할 수 없습니다. 그러나 나중에 가격을 인하할 수는 있습니다.
+    * [가격 책정](../publish/set-add-on-pricing-and-availability.md?#pricing): 이 섹션에서 구독의 가격을 선택 합니다. 추가 기능을 게시한 후에 구독 가격을 인상할 수 없습니다. 그러나 나중에 가격을 인하할 수는 있습니다.
         > [!IMPORTANT]
         > 기본적으로 추가 기능을 생성할 때 처음 가격은 **무료**로 설정됩니다. 추가 기능 제출이 완료된 후에는 구독 추가 기능 가격을 인상할 수 없기 때문에 여기에서 구독 가격을 선택해야 합니다.
 
 2. 앱에서 [**Windows.Services.Store**](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 API를 사용해, 현재 사용자가 구독 추가 기능을 이미 취득했는지 판별하고, 앱에서 바로 구매 형식으로 사용자에게 판매용으로 제공합니다. 자세한 내용은 이 문서의 [코드 예제](#code-examples)를 참조합니다.
 
-3. 앱에서 구독의 앱 내 구매를 테스트합니다. 개발자 장치가 테스트용 라이선스를 사용할 수 있도록 스토어에서 앱을 1회 다운로드해야 합니다. 자세한 내용은 앱에서 바로 구매에 대한 [테스트 가이드](in-app-purchases-and-trials.md#testing)를 참조하세요.  
+3. 앱에서 구독의 앱 내 구매를 테스트합니다. 개발자 장치가 테스트용 라이선스를 사용할 수 있도록 스토어에서 앱을 1회 다운로드해야 합니다. 자세한 내용은 앱 내 구매에 대한 [테스트 가이드](in-app-purchases-and-trials.md#testing)를 참조하세요.  
 
 4. 테스트된 코드 등 업데이트된 앱 패키지를 포함한 앱 제출을 생성해 게시합니다. 자세한 내용은 [앱 제출](../publish/app-submissions.md)을 참조하세요.
 
@@ -68,8 +68,8 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 
 이러한 예제의 필수 조건은 다음과 같습니다.
 * **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
-* [앱 제출을 만들지](https://docs.microsoft.com/windows/uwp/publish/app-submissions) 파트너 센터에서 드라이버와이 앱은 스토어에서 게시 합니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 가이드](in-app-purchases-and-trials.md#testing)를 참조하세요.
-* 파트너 센터에서 [만든 앱에 대 한 구독 추가 기능을](../publish/add-on-submissions.md) 했습니다.
+* 있다고 [는 응용 프로그램 제출 생성](https://docs.microsoft.com/windows/uwp/publish/app-submissions) 파트너 센터에이 앱 스토어에 게시 됩니다. 테스트하는 동안 Store에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
+* 있다고 [앱에 대 한 구독 추가 기능을 만든](../publish/add-on-submissions.md) 파트너 센터에서.
 
 이 예제의 코드는 다음과 같이 가정합니다.
 * 코드 파일에는 **Windows.Services.Store** 및 **System.Threading.Tasks** 네임스페이스에 대한 **using** 문이 있습니다.
@@ -124,7 +124,7 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 다음 시나리오는 현재 구독 추가 기능에서 지원되지 않습니다.
 
 * 현재 스토어를 통해 직접 고객에게 구독을 판매하는 기능은 지원되지 않습니다. 구독은 디지털 제품의 앱에서 바로 구매에만 사용할 수 있습니다.
-* 고객은 Microsoft 계정의 [https://account.microsoft.com/services](https://account.microsoft.com/services) 페이지에서 구독을 전환할 수 없습니다. 다른 구독 기간으로 전환 하려면 고객이 현재 구독을 취소 하 고 한 앱에서 다른 구독 기간으로 구독을 구매 해야 합니다.
+* 고객은 Microsoft 계정의 [https://account.microsoft.com/services](https://account.microsoft.com/services) 페이지에서 구독을 전환할 수 없습니다. 다른 구독 기간으로 전환 하려면 고객은 현재 구독을 취소 하 고 앱에서 다른 구독 기간으로 구독을 구매 해야 합니다.
 * 현재 구독 추가 기능은 계층 전환을 지원하지 않습니다(예를 들어, 고객은 기본 구독에서 기능이 더 많은 프리미엄 구독으로 전환할 수 없음).
 * 현재 구독 추가 기능에서는 [영업](../publish/put-apps-and-add-ons-on-sale.md) 및 [홍보 코드](../publish/generate-promotional-codes.md)를 지원하지 않습니다.
 
@@ -132,4 +132,4 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 ## <a name="related-topics"></a>관련 항목
 
 * [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)
-* [앱 및 추가 기능에 대한 제품 정보 가져오기](get-product-info-for-apps-and-add-ons.md)
+* [앱 및 추가 기능에 대 한 제품 정보 가져오기](get-product-info-for-apps-and-add-ons.md)

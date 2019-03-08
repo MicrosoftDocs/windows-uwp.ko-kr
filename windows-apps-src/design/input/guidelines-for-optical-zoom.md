@@ -1,5 +1,5 @@
 ---
-Description: This topic describes Windows zooming and resizing elements and provides user experience guidelines for using these interaction mechanisms in your apps.
+Description: 이 항목에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘 사용을 위한 사용자 환경 지침을 제공합니다.
 title: 광학 줌 및 크기 조정에 대한 지침
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
@@ -9,19 +9,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fcbaa0a3db826ef971878acd6a553dd7a836508
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931229"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594968"
 ---
 # <a name="optical-zoom-and-resizing"></a>광학 줌 및 크기 조정
 
 
 
-이 문서에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘 사용을 위한 사용자 환경 지침을 제공합니다.
+이 문서에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘 사용하는 방법에 대한 사용자 환경 지침을 제공합니다.
 
-> **중요 API**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Input (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **중요 한 Api**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)하십시오 [ **입력 (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 광학 줌을 사용하면 콘텐츠 영역 내에서 콘텐츠 보기를 확대할 수 있지만(콘텐츠 영역 자체에 대해 수행) 크기 조정을 사용하면 콘텐츠 영역 보기는 바뀌지 않으면서 콘텐츠 영역 내에서 하나 이상 개체의 상대 크기를 변경할 수 있습니다(콘텐츠 영역 내 개체에 대해 수행).
 
@@ -29,15 +29,15 @@ ms.locfileid: "8931229"
 
 다음 다이어그램은 크기 조정과 광학 줌 간의 차이점을 보여 줍니다.
 
-**광학 줌**: 사용자가 영역을 선택한 다음 전체 영역으로 확대/축소합니다.
+**광학 확대/축소**: 사용자 영역을 선택한 다음 전체 영역을 확대 합니다.
 
 ![콘텐츠 영역에서 손가락을 모아서 확대 및 손가락을 벌려서 축소](images/areazoom.png)
 
-**크기 조정**: 영역 내에게 개체를 선택하고 해당 개체의 크기를 조정합니다.
+**크기 조정**: 사용자는 영역 내에서 개체를 선택 하 고 해당 개체의 크기를 조정 합니다.
 
 ![손가락을 모아서 개체를 축소하고 벌려서 확대](images/objectresize.png)
 
-**참고**  광학 줌 [시맨틱 줌](../controls-and-patterns/semantic-zoom.md)과 혼동 하지 않아야 합니다. 두 조작에 모두 동일한 제스처가 사용되지만 시맨틱 줌은 단일 보기(예: 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범) 내에 구성된 콘텐츠의 표시와 탐색을 나타냅니다.
+**참고**    광학 확대/축소와 혼동 해서는 안 됩니다 [의미 체계 확대/축소](../controls-and-patterns/semantic-zoom.md)합니다. 두 조작에 모두 동일한 제스처가 사용되지만 시맨틱 줌은 단일 보기(예: 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범) 내에 구성된 콘텐츠의 표시와 탐색을 나타냅니다.
 
  
 
@@ -55,9 +55,9 @@ ms.locfileid: "8931229"
 
     -   근접 - 접촉을 뗀 후 끌기 지점의 거리 임계값 내에서 관성이 멈추면 끌기 지점이 선택됩니다. 근접 끌기 지점을 사용할 경우 끌기 지점 사이에서 확대/축소 또는 크기 조정을 끝낼 수 있습니다.
     -   필수 - 제스처의 방향과 속도에 따라 접촉을 떼기 전에 마지막으로 교차한 끌기 지점 바로 앞이나 뒤에 있는 끌기 지점이 선택됩니다. 필수 끌기 지점에서 조작을 끝내야 합니다.
--   관성 물리학을 사용합니다. 여기에는 다음과 같은 동작이 포함됩니다.
-    -   감속: 사용자가 손가락 모으기나 확대를 중지할 때 발생합니다. 이 동작은 매끄러운 표면을 미끄러지다가 멈추는 것과 비슷합니다.
-    -   바운스: 크기 제약 조건이나 경계를 지날 때 약간 뒤로 바운스되는 효과가 발생합니다.
+-   관성 물리학을 사용합니다. 예를 들면 다음과 같습니다.
+    -   감속: 밀기 또는 늘이기 중지할 때 발생 합니다. 이 동작은 매끄러운 표면을 미끄러지다가 멈추는 것과 비슷합니다.
+    -   반송: 경계는 전달 또는 때 크기 제약 조건 약간 백 바운스 효과 발생 합니다.
 -   [타기팅에 대한 지침](guidelines-for-targeting.md)에 따라 컨트롤 간격을 조정합니다.
 -   제한된 크기 조정을 위해 크기 조정 핸들을 제공합니다. 핸들이 지정되지 않은 경우 등각 또는 비례식 크기 조정이 기본 방식입니다.
 -   확대/축소를 사용하여 UI를 탐색하거나 앱 내에 추가 컨트롤을 노출하지 마세요. 대신 이동 영역을 사용합니다. 이동에 대한 자세한 내용은 [이동에 대한 지침](guidelines-for-panning.md)을 참조하세요.
@@ -65,7 +65,7 @@ ms.locfileid: "8931229"
     -   크기 조정이 가능한 항목이 크기 조정이 가능한 캔버스나 아트 보드에 표시될 수 있는 그리기 응용 프로그램
     -   맵과 같은 포함 개체가 있는 웹 페이지
 
-    **참고**  콘텐츠 영역의 모든 터치 지점이 크기 조정이 가능한 개체 안에 있는 경우가 아니면 항상에서 크기입니다.
+    **참고**    콘텐츠 영역 크기를 조정할 개체 내에서 모든 터치 지점을 않는 모든 경우에 조정 합니다.
 
      
 
@@ -73,20 +73,20 @@ ms.locfileid: "8931229"
 
 
 **샘플**
-* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
-* [입력: XAML 사용자 입력 이벤트 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 디바이스 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: 터치 적중 횟수 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: 간단한 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 터치 적중된 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
 * [입력: Windows 8 제스처 샘플](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처(C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [DirectX 터치 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [입력: 조작 및 제스처 (c + +) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

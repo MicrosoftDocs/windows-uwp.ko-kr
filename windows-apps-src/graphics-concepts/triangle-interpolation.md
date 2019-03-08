@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e8017cd75ed3dfd4129d6c15d668648792cc8d0a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919269"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592908"
 ---
 # <a name="triangle-interpolation"></a>삼각형 보간
 
@@ -32,10 +32,10 @@ ms.locfileid: "8919269"
 
 디바이스 드라이버가 텍스처 블렌딩이나 스티플링을 사용하는 등 두 가지 방법으로 투명도를 구현할 수 있으므로 색의 알파 구성 요소는 별도의 보간 값으로 처리됩니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
+[좌표계 및 기 하 도형](coordinate-systems-and-geometry.md)
 
  
 

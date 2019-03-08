@@ -1,5 +1,5 @@
 ---
-Description: You can use the SendRequestAsync method to send requests to the Microsoft Store for operations that do not yet have an API available in the Windows SDK.
+Description: 아직 Windows SDK에서 사용할 수 있는 API가 없는 작업에 대 한 Microsoft Store 요청을 보내는 SendRequestAsync 메서드를 사용할 수 있습니다.
 title: Microsoft Store에 요청 보내기
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 03/22/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
 ms.openlocfilehash: d492bc7dde990404552689516731850974c31a7c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8942099"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589798"
 ---
 # <a name="send-requests-to-the-microsoft-store"></a>Microsoft Store에 요청 보내기
 
@@ -77,7 +77,7 @@ public async Task<bool> AddUserToFlightGroup()
 |  *requestKind*                   |  디바이스의 최상위 플라이트 그룹을 반환하려면 7을 지정하고, 현재 사용자 및 디바이스의 최상위 플라이트 그룹을 반환하려면 8을 지정합니다. *requestKind* 매개 변수에는 8을 사용하는 것이 좋습니다. 왜냐하면 이 값은 현재 사용자와 디바이스의 구성원 전체 중에서 최상위 플라이트 그룹을 반환하기 때문입니다.  |
 |  *parametersAsJson*                   |  아래 예제에 표시된 데이터를 포함하는 JSON 형식 문자열을 전달합니다.  |
 
-다음 예제는 JSON 형식 데이터를 *parametersAsJson* 매개 변수로 전달하는 것을 보여 줍니다. *유형* 필드를 *GetRemoteVariables* 문자열에 할당해야 합니다. 파트너 센터에서 원격 변수를 정의한 프로젝트 id *projectId* 필드를 할당 합니다.
+다음 예제는 JSON 형식 데이터를 *parametersAsJson* 매개 변수로 전달하는 것을 보여 줍니다. *유형* 필드를 *GetRemoteVariables* 문자열에 할당해야 합니다. 할당 된 *projectId* 파트너 센터에서 원격 변수를 정의 하는 프로젝트의 id 필드입니다.
 
 ```json
 { 
@@ -90,9 +90,9 @@ public async Task<bool> AddUserToFlightGroup()
 
 |  필드  |  설명  |
 |----------------------|---------------|
-|  *익명*                   |  부울 값이며, **true**는 사용자 또는 디바이스 ID가 요청에 없음을 나타내고 **false**는 사용자 또는 디바이스 ID가 요청에 있음을 나타냅니다.  |
-|  *이름*                   |  디바이스 또는 사용자가 속한 최상위 플라이트 그룹의 이름을 포함하고 있는 문자열입니다.  |
-|  *설정*                   |  개발자가 플라이트 그룹에 대해 구성한 원격 변수의 이름과 값을 포함하고 있는 키/값 쌍 사전입니다.  |
+|  *anonymous*                   |  부울 값이며, **true**는 사용자 또는 디바이스 ID가 요청에 없음을 나타내고 **false**는 사용자 또는 디바이스 ID가 요청에 있음을 나타냅니다.  |
+|  *name*                   |  디바이스 또는 사용자가 속한 최상위 플라이트 그룹의 이름을 포함하고 있는 문자열입니다.  |
+|  *settings*                   |  개발자가 플라이트 그룹에 대해 구성한 원격 변수의 이름과 값을 포함하고 있는 키/값 쌍 사전입니다.  |
 
 다음 예에서는 이 요청에 대한 반환 값을 보여 줍니다.
 
@@ -156,5 +156,5 @@ public async Task<bool> AddUserToFlightGroup()
 
 ## <a name="related-topics"></a>관련 항목
 
-* [앱에서 평점 및 리뷰 대화 상자 표시](request-ratings-and-reviews.md#show-a-rating-and-review-dialog-in-your-app)
+* [등급을 표시 하 고 앱의 대화 상자 검토](request-ratings-and-reviews.md#show-a-rating-and-review-dialog-in-your-app)
 * [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync)

@@ -8,21 +8,21 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 490e2148026719f562b5fd17761546c4244850dc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943758"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596128"
 ---
 # <a name="blending-stages"></a>혼합 단계
 
 
 혼합 단계는 텍스처가 혼합되는 방법을 정의하는 텍스처 작업과 해당 인수의 집합입니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[텍스처 혼합](texture-blending.md)
+[질감 혼합](texture-blending.md)
 
  
 

@@ -1,5 +1,5 @@
 ---
-Description: An overview of common page patterns and UI elements for displaying content in your UWP app.
+Description: 개요 페이지의 일반적인 패턴 및 UWP 앱에서 콘텐츠를 표시 하는 것에 대 한 UI 요소입니다.
 title: UWP(유니버설 Windows 플랫폼) 앱용 콘텐츠 디자인 기본 사항
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b2d85d97fa704b4fb79e93cf95fdd1bfcc41f8ca
-ms.sourcegitcommit: 59f874b6667c3f639d8b0c7eeca886e71bf95614
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "9004609"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594588"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>UWP 앱의 콘텐츠 디자인 기본 사항
 

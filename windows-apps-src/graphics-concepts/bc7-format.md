@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c55a12dfa7757a48874b6857c95af592e818c2b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939573"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590768"
 ---
 # <a name="bc7-format"></a>BC7 형식
 
@@ -21,10 +21,10 @@ BC7 형식은 RGB 및 RGBA 데이터의 고품질 압축에 사용되는 텍스�
 
 BC7 형식의 블록 모드에 대한 자세한 내용은 [BC7 Format Mode Reference(BC7 형식 모드 참조)](https://msdn.microsoft.com/library/windows/desktop/hh308954)를 참조하세요.
 
-## <a name="span-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanabout-bc7dxgiformatbc7"></a><span id="About-BC7-DXGI-FORMAT-BC7"></span><span id="about-bc7-dxgi-format-bc7"></span><span id="ABOUT-BC7-DXGI-FORMAT-BC7"></span>BC7/DXGI\_FORMAT\_BC7 정보
+## <a name="span-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanabout-bc7dxgiformatbc7"></a><span id="About-BC7-DXGI-FORMAT-BC7"></span><span id="about-bc7-dxgi-format-bc7"></span><span id="ABOUT-BC7-DXGI-FORMAT-BC7"></span>About BC7/DXGI\_FORMAT\_BC7
 
 
-BC7은 다음과 같은 DXGI\_FORMAT 열거 값으로 지정됩니다.
+다음 DXGI BC7 된\_열거형 값의 서식 지정 합니다.
 
 -   **DXGI\_FORMAT\_BC7\_TYPELESS**.
 -   **DXGI\_FORMAT\_BC7\_UNORM**.
@@ -51,15 +51,15 @@ BC7 블록에 여러 끝점 쌍이 포함될 수 있습니다. 끝점 쌍에 해
 
 색 구성 요소와 알파 구성 요소를 결합한 BC7 블록은 모드 비트, 압축된 끝점, 압축된 인덱스 및 옵션 파티션 비트와 P 비트로 구성됩니다. 이러한 블록에서는 끝점 색이 RGBA 형식으로 표현되고 알파 구성 요소 값이 색 구성 요소 값과 함께 보간됩니다.
 
-색 구성 요소와 알파 구성 요소가 분리된 BC7 블록은 모드 비트, 회전 비트, 압축된 끝점, 압축된 인덱스 및 옵션 인덱스 선택기 비트로 구성됩니다. 이러한 블록에서는 유효한 RGB 벡터 \[R, G, B\] 및 스칼라 알파 채널 \[A\]가 따로 인코딩됩니다.
+색 구성 요소와 알파 구성 요소가 분리된 BC7 블록은 모드 비트, 회전 비트, 압축된 끝점, 압축된 인덱스 및 옵션 인덱스 선택기 비트로 구성됩니다. 이러한 블록에는 효과적인 RGB 벡터 \[R, G, B\] 및 스칼라 알파 채널 \[는\] 별도로 인코딩된 합니다.
 
 다음 표에는 각 블록 유형의 구성 요소가 나열되어 있습니다.
 
 | BC7 블록 내용     | 모드 비트 | 회전 비트 | 인덱스 선택기 비트 | 파티션 비트 | 압축된 끝점 | P 비트    | 압축된 인덱스 |
 |---------------------------|-----------|---------------|--------------------|----------------|----------------------|----------|--------------------|
-| 색 구성 요소만     | 필수  | 해당 없음           | 해당 없음                | 필수       | 필수             | 옵션 | 필수           |
-| 색 및 알파 결합    | 필수  | 해당 없음           | 해당 없음                | 옵션       | 필수             | 옵션 | 필수           |
-| 색 및 알파 분리 | 필수  | 필수      | 옵션           | 해당 없음            | 필수             | 해당 없음      | 필수           |
+| 색 구성 요소만     | 필수  | 해당 없음           | 해당 없음                | 필수       | 필수             | 선택적 | 필수           |
+| 색 및 알파 결합    | 필수  | 해당 없음           | 해당 없음                | 선택적       | 필수             | 선택적 | 필수           |
+| 색 및 알파 분리 | 필수  | 필수      | 선택적           | 해당 없음            | 필수             | 해당 없음      | 필수           |
 
  
 
@@ -294,7 +294,7 @@ BC7 모드 4에는 다음과 같은 특성이 있습니다.
 
 ![모드 4 비트 레이아웃](images/bc7-mode4.png)
 
-### <a name="span-idmode-5spanspan-idmode-5spanspan-idmode-5spanmode-5"></a><span id="Mode-5"></span><span id="mode-5"></span><span id="MODE-5"></span>모드 5
+### <a name="span-idmode-5spanspan-idmode-5spanspan-idmode-5spanmode-5"></a><span id="Mode-5"></span><span id="mode-5"></span><span id="MODE-5"></span>5 모드
 
 BC7 모드 5에는 다음과 같은 특성이 있습니다.
 
@@ -308,7 +308,7 @@ BC7 모드 5에는 다음과 같은 특성이 있습니다.
 
 ![모드 5 비트 레이아웃](images/bc7-mode5.png)
 
-### <a name="span-idmode-6spanspan-idmode-6spanspan-idmode-6spanmode-6"></a><span id="Mode-6"></span><span id="mode-6"></span><span id="MODE-6"></span>모드 6
+### <a name="span-idmode-6spanspan-idmode-6spanspan-idmode-6spanmode-6"></a><span id="Mode-6"></span><span id="mode-6"></span><span id="MODE-6"></span>6 모드
 
 BC7 모드 6에는 다음과 같은 특성이 있습니다.
 
@@ -319,7 +319,7 @@ BC7 모드 6에는 다음과 같은 특성이 있습니다.
 
 ![모드 6비트 레이아웃](images/bc7-mode6.png)
 
-### <a name="span-idmode-7spanspan-idmode-7spanspan-idmode-7spanmode-7"></a><span id="Mode-7"></span><span id="mode-7"></span><span id="MODE-7"></span>모드 7
+### <a name="span-idmode-7spanspan-idmode-7spanspan-idmode-7spanmode-7"></a><span id="Mode-7"></span><span id="mode-7"></span><span id="MODE-7"></span>7 모드
 
 BC7 모드 7에는 다음과 같은 특성이 있습니다.
 
@@ -339,18 +339,18 @@ BC7에서 다음 방법 중 하나로 알파 구성 요소를 인코딩할 수 �
 
 -   명시적 알파 구성 요소 인코딩이 없는 블록 유형 이러한 블록에서는 색 끝점에 RGB 전용 인코딩이 있고 알파 구성 요소는 원본 데이터의 모든 텍셀에 대해 1.0으로 디코딩됩니다.
 -   색 및 알파 구성 요소가 결합된 블록 유형 이러한 블록에서는 끝점 색 값이 RGBA 형식으로 지정되고 알파 구성 요소 값이 색 값과 함께 보간됩니다.
--   색 및 알파 구성 요소가 분리된 블록 유형 이러한 블록에서는 색 값과 알파 값이 따로 지정되고 각각 자체 인덱스 집합을 가집니다. 결과적으로 유효 벤더와 스칼라 채널이 따로 인코딩됩니다. 여기에서 벡터는 일반적으로 색 채널 \[R, G, B\]를 지정하고 스칼라는 알파 채널 \[A\]를 지정합니다. 이 접근 방식을 지원하기 위해 별도의 2비트 필드가 인코딩에서 제공됩니다. 이를 통해 별도의 채널 인코딩을 스칼라 값으로 지정할 수 있습니다. 결과적으로 블록에 이 알파 인코딩의 다음 4가지 표현 중 하나가 있을 수 있습니다(2비트 필드로 표시됨).
+-   색 및 알파 구성 요소가 분리된 블록 유형 이러한 블록에서는 색 값과 알파 값이 따로 지정되고 각각 자체 인덱스 집합을 가집니다. 결과적으로, 효과적인 벡터를 및 개별적으로 인코딩된, 색 채널에 벡터 일반적으로 지정 하는 스칼라 채널가지고 \[R, G, B\] 스칼라 알파 채널을 지정 하 고 \[는\]합니다. 이 접근 방식을 지원하기 위해 별도의 2비트 필드가 인코딩에서 제공됩니다. 이를 통해 별도의 채널 인코딩을 스칼라 값으로 지정할 수 있습니다. 결과적으로 블록에 이 알파 인코딩의 다음 4가지 표현 중 하나가 있을 수 있습니다(2비트 필드로 표시됨).
     -   RGB|A: 알파 채널 분리
     -   AGB|R: "빨강" 색 채널 분리
     -   RAB|G: "녹색" 색 채널 분리
     -   RGA|B: "파랑" 색 채널 분리
 
-    디코더가 디코딩 후 채널 순서를 다시 RGBA로 재정렬하므로 내부 블록 형식이 개발자에게 표시되지 않습니다. 색 구성 요소와 알파 구성 요소가 분리된 블록에도 2개의 인덱스 데이터 집합이 있습니다. 그 중 하나는 벡터 채널 집합용이고, 다른 하나는 스칼라 채널용입니다. (모드 4의 경우 이러한 인덱스는 너비가 다릅니다\[2비트 또는 3비트\]. 또한 모드 4에는 벡터 또는 스칼라 채널에서 3비트 인덱스를 사용하는지 여부를 지정하는 1비트 선택기가 있습니다.)
+    디코더가 디코딩 후 채널 순서를 다시 RGBA로 재정렬하므로 내부 블록 형식이 개발자에게 표시되지 않습니다. 색 구성 요소와 알파 구성 요소가 분리된 블록에도 2개의 인덱스 데이터 집합이 있습니다. 그 중 하나는 벡터 채널 집합용이고, 다른 하나는 스칼라 채널용입니다. (모드 4의 경우 이러한 인덱스는 서로 다른 너비 \[2 또는 3 비트\]합니다. 또한 모드 4에는 벡터 또는 스칼라 채널에서 3비트 인덱스를 사용하는지 여부를 지정하는 1비트 선택기가 있습니다.)
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[텍스처 블록 압축](texture-block-compression.md)
+[질감 블록 압축](texture-block-compression.md)
 
  
 

@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cb160f3276d215e3aba5dfd671c67fa17d883b5
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926417"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589868"
 ---
 # <a name="post-usersowneridpeoplexuids"></a>POST (/users/{ownerId}/people/xuids)
-컬렉션을 호출자의 사용자 로부터 XUID 사람을 가져옵니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
+컬렉션을에서 호출자의 사용자 XUID 하 여 사용자를 가져옵니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`합니다.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4E5)
@@ -32,23 +32,23 @@ ms.locfileid: "8926417"
  
 ## <a name="remarks"></a>설명
  
-POST 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일한 결과 재현는이 모든 리소스를 수정 하지 않습니다.
+POST 작업 하므로 한 번 또는 여러 번 실행 하는 경우 동일한 결과 생성은이 모든 리소스를 수정 하지 않습니다.
   
 <a id="ID4E5"></a>
 
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| ownerId| string| 해당 리소스를 액세스 하는 사용자의 식별자입니다. 인증된 된 사용자와 일치 해야 합니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag}) 합니다.| 
+| ownerId| 문자열| 해당 리소스에 액세스 하는 사용자의 식별자입니다. 인증된 된 사용자를 일치 해야 합니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag})입니다.| 
   
 <a id="ID4EJB"></a>
 
  
 ## <a name="authorization"></a>권한 부여
  
-| 형식| 필수| 설명| 누락 된 경우 응답| 
+| 형식| 필수| 설명| 응답 없는 경우| 
 | --- | --- | --- | --- | --- | --- | --- | 
 | XUID| 예| 호출자가 사용자의 Xbox 사용자 ID (XUID).| 401 권한이 없음| 
   
@@ -59,9 +59,9 @@ POST 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일�
  
 | 헤더| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 권한 부여| 문자열입니다. Xbox LIVE에 대 한 데이터를 권한 부여 합니다. 일반적으로 암호화 된 XSTS 토큰입니다. 예제 값: XBL3.0 <b>x =&lt;userhash >;&lt; 토큰 ></b>합니다.| 
-| Content-Length| 32 비트 부호 없는 정수입니다. 길이 (바이트)를 요청 본문의 합니다. 예제 값: 22.| 
-| Content-Type| 문자열입니다. 요청 본문의 MIME 형식입니다. <b>응용 프로그램/j</b>이어야 합니다.| 
+| 권한 부여| 문자열입니다. Xbox LIVE에 대 한 권한 부여 데이터입니다. 이것이 일반적으로 암호화 된 XSTS 토큰입니다. 예를 들어 값: <b>XBL3.0 x=&lt;userhash>;&lt;token></b>.| 
+| Content-Length| 32 비트 부호 없는 정수입니다. 길이 (바이트)를 요청 본문입니다. 예를 들어 값: 22.| 
+| Content-Type| 문자열입니다. 요청 본문의 MIME 형식입니다. 이 여야 <b>application/json</b>합니다.| 
   
 <a id="ID4EBE"></a>
 
@@ -70,8 +70,8 @@ POST 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일�
  
 | 헤더| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| X RequestedServiceVersion| 이 요청은 전송 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다. 기본값: 1입니다.| 
-| 수락| 문자열입니다. 호출자는 응답에서 허용 하는 콘텐츠-형식입니다. 모든 응답은 <b>응용 프로그램/j</b>.| 
+| X-RequestedServiceVersion| 이 요청은 리디렉션되어야 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 등 인증 토큰의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우팅됩니다 됩니다. 기본값: 1.| 
+| 수락| 문자열입니다. 호출자가 응답에 허용 하는 콘텐츠-형식입니다. 모든 응답이 <b>application/json</b>합니다.| 
   
 <a id="ID4EHF"></a>
 
@@ -81,25 +81,25 @@ POST 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일�
 <a id="ID4ENF"></a>
 
  
-### <a name="required-members"></a>필수 멤버
+### <a name="required-members"></a>필요한 멤버
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| XuidList| 호출자의 사용자 컬렉션에서 반환 될 사용자를 식별 하는 XUIDs의 배열입니다. [XuidList (JSON)를](../../json/json-xuidlist.md)참조 하세요.| 
+| XuidList| 호출자의 사용자 컬렉션에서 반환할 사용자를 식별 하는 XUIDs의 배열입니다. 참조 [XuidList (JSON)](../../json/json-xuidlist.md)합니다.| 
   
 <a id="ID4EKG"></a>
 
  
 ### <a name="optional-members"></a>선택적 멤버
  
-이 요청에 대 한 선택적 멤버인 없습니다.
+이 요청에 대 한 선택적 멤버가 없습니다.
   
 <a id="ID4EVG"></a>
 
  
-### <a name="prohibited-members"></a>금지 된 멤버
+### <a name="prohibited-members"></a>허용 되지 않는 멤버
  
-다른 모든 멤버는 요청에 사용할 수 없습니다.
+다른 모든 멤버를 요청에 사용할 수 없습니다.
   
 <a id="ID4EAH"></a>
 
@@ -124,38 +124,38 @@ POST 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일�
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답의이 섹션에는 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스를 사용 하는 표준 HTTP 상태 코드의 전체 목록은 참조 하세요 [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)합니다.
  
-| Code| 이유 구문| 설명| 
+| 코드| 이유 구| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 200| 확인| 메서드는 "가져오기" 하는 경우 성공 합니다.| 
-| 204| 콘텐츠| 성공 메서드는 "추가" 또는 "제거" 합니다.| 
-| 400| 잘못 된 요청| 메서드 매개 변수 누락 되거나 잘못 된 형식의 되었거나 사용자 Id를 잘못 되었습니다.| 
-| 403| 금지| 권한 부여 헤더에서 XUID 클레임을 분석할 수 없습니다.| 
+| 200| 확인| 메서드는 "get" 때 성공 했습니다.| 
+| 204| 내용 없음| 메서드는 "추가" 하는 경우 성공 하거나 "제거" 합니다.| 
+| 400| 잘못된 요청| 메서드 매개 변수 누락 되었거나 형식이 잘못 되었거나 사용자 Id 형식이 잘못 되었습니다.| 
+| 403| 사용할 수 없음| XUID 클레임 권한 부여 헤더에서 분석할 수 없습니다.| 
   
 <a id="ID4ENBAC"></a>
 
  
 ## <a name="required-response-headers"></a>필요한 응답 헤더
  
-| 헤더| 유형| 설명| 
+| 헤더| 형식| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| Content-Length| 32 비트 부호 없는 정수| 길이 (바이트)에 대 한 응답 본문의 합니다. 예제 값: 22.| 
-| Content-Type| 문자열| 응답 본문의 MIME 형식입니다. 이 <b>응용 프로그램/j</b>항상 됩니다.| 
+| Content-Length| 32 비트 부호 없는 정수| 길이 (바이트)를 응답 본문입니다. 예를 들어 값: 22.| 
+| Content-Type| 문자열| 응답 본문의 MIME 형식입니다. 이 값은 항상 <b>application/json</b>합니다.| 
   
 <a id="ID4EZCAC"></a>
 
  
 ## <a name="response-body"></a>응답 본문
  
-응답 본문을 요청 방법은 "가져오는" 하는 경우에 전송 됩니다. "추가" 또는 "제거"에 대 한 응답 본문이 없습니다.
+응답 본문 요청 메서드가 "get" 경우에 전송 됩니다. "추가" 또는 "제거"에 대 한 응답 본문이 없습니다.
  
-"Get" 메서드가 호출 되 면 서비스 컬렉션과 호출자의 사용자 컬렉션을 포함 하는 배열을 호출자의 사용자에 사용자의 총 수를 반환 합니다. "추가" 및 "제거" 메서드에 대 한 응답이 반환 됩니다. [PeopleList (JSON)를](../../json/json-peoplelist.md)참조 하세요.
+"Get" 메서드 호출에 성공한 경우 서비스 컬렉션 및 호출자의 사용자 컬렉션을 포함 하는 배열을 호출자의 사용자 들은 사용자의 총 수를 반환 합니다. "Add" 및 "제거" 메서드에 대 한 응답이 반환 됩니다. 참조 [PeopleList (JSON)](../../json/json-peoplelist.md)합니다.
  
 <a id="ID4EHDAC"></a>
 
  
-### <a name="sample-response"></a>예제 응답
+### <a name="sample-response"></a>샘플 응답
  
 
 ```cpp
@@ -193,7 +193,7 @@ POST 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일�
 <a id="ID4ETDAC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
 [/users/{ownerId}/people/xuids](uri-usersowneridpeoplexuids.md)
 

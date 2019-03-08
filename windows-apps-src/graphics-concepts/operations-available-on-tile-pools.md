@@ -1,23 +1,23 @@
 ---
-title: 타일 풀에서 할 수 있는 작업
-description: 타일 풀에서 할 수 있는 작업으로는 타일 풀 크기 조정, 리소스 제공(전체 타일 풀에 대한 시스템에 일시적으로 메모리 양보), 리소스 회수가 있습니다.
+title: 타일 풀에서 사용할 수 있는 작업
+description: 타일 풀에 대한 작업에는 타일 풀 크기 조정, 리소스 제공(시스템에 전체 타일 풀에 대한 메모리 임시 생성) 및 리소스 회수가 포함됩니다.
 ms.assetid: 90347F7F-C991-4287-BD70-494533ECDC8A
 keywords:
-- 타일 풀에서 할 수 있는 작업
+- 타일 풀에서 사용할 수 있는 작업
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b8b0c6f4fa578e4ec483492b320dc9bc346ab66
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929739"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593598"
 ---
-# <a name="operations-available-on-tile-pools"></a>타일 풀에서 할 수 있는 작업
+# <a name="operations-available-on-tile-pools"></a>타일 풀에서 사용할 수 있는 작업
 
 
-타일 풀에서 할 수 있는 작업으로는 타일 풀 크기 조정, 리소스 제공(전체 타일 풀에 대한 시스템에 일시적으로 메모리 양보), 리소스 회수가 있습니다.
+타일 풀에 대한 작업에는 타일 풀 크기 조정, 리소스 제공(시스템에 전체 타일 풀에 대한 메모리 임시 생성) 및 리소스 회수가 포함됩니다.
 
 -   타일 풀의 수명은 이 경우 스트리밍 리소스로부터의 매핑 추적을 포함해 참조 계산의 지원을 받아 다른 모든 Direct3D 리소스와 같이 작동합니다. 응용 프로그램이 더는 타일 풀을 참조하지 않고 메모리에 대한 모든 타일 매핑이 사라지고 GPU(그래픽 처리 장치) 액세스가 완료되면 운영 체제가 타일 풀 할당을 취소합니다.
 -   타일 풀에 대한 표면 공유 및 동기화 작업(스트리밍 리소스에 직접 하는 작업은 아님) 관련 API. 제공한 타일 풀에 대한 동작과 마찬가지로, 타일 풀을 공유한 상태에서 현재 또 하나의 디바이스 및 프로세스에 따라 타일 풀을 획득한 경우, 타일 풀을 가리키는 스트리밍 리소스에 액세스하는 Direct3D 명령은 삭제됩니다.
@@ -26,7 +26,7 @@ ms.locfileid: "8929739"
 
 타일 풀 메모리에 대한 직접적인 데이터 복사 작업은 할 수 없습니다. 메모리에 대한 액세스는 스트리밍 리소스를 통해 언제든지 할 수 있습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [스트리밍 리소스 만들기](creating-streaming-resources.md)

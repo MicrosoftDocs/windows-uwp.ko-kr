@@ -4,14 +4,14 @@ title: 파일 액세스 최적화
 description: 파일 시스템에 효율적으로 액세스하여 디스크 대기 시간 및 메모리/CPU 주기로 인한 성능 문제를 방지하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cacd915530bb599936730ec404a6e524fef0105d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922760"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597268"
 ---
 # <a name="optimize-file-access"></a>파일 액세스 최적화
 
@@ -133,7 +133,7 @@ Windows.Storage 개체(예: `Windows.Storage.ApplicationData.Current.LocalFolder
 
 ### <a name="buffering-between-uwp-and-net-streams"></a>UWP와 .NET 스트림 간의 버퍼링
 
-UWP 스트림(예: [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) 또는 [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728))을 .NET 스트림([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx))으로 변환할 수 있는 여러 시나리오가 있습니다. 예를 들어 이 시나리오는 UWP 앱을 작성하고 UWP 파일 시스템의 스트림에서 작동되는 기존 .NET 코드를 사용하려는 경우에 유용합니다. 이 지원 하려면 UWP 앱 용.NET Api는.NET 및 UWP 스트림 유형 간을 변환할 수 있는 확장 메서드를 제공 합니다. 자세한 내용은 [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx)를 참조하세요.
+UWP 스트림(예: [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) 또는 [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728))을 .NET 스트림([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx))으로 변환할 수 있는 여러 시나리오가 있습니다. 예를 들어 이 시나리오는 UWP 앱을 작성하고 UWP 파일 시스템의 스트림에서 작동되는 기존 .NET 코드를 사용하려는 경우에 유용합니다. 이 기능을 사용 하려면 UWP 앱 용.NET Api는.NET 및 UWP 스트림 형식으로 변환할 수 있는 확장 메서드를 제공 합니다. 자세한 내용은 [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx)를 참조하세요.
 
 UWP 스트림을 .NET 스트림으로 변환하면 결과적으로 기본 UWP 스트림에 대한 어댑터가 만들어집니다. 경우에 따라 UWP 스트림의 메서드 호출과 관련된 런타임 부담이 있을 수 있습니다. 이는 특히 여러 작은 읽기나 쓰기 작업을 빈번히 수행하는 시나리오에서 앱 속도에 영향을 줄 수 있습니다.
 
@@ -196,7 +196,7 @@ UWP 스트림을 .NET 스트림으로 변환하면 결과적으로 기본 UWP �
 
 큰 데이터 집합을 읽거나 쓸 경우에는 [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) 및 [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) 확장 메서드에 큰 버퍼 크기를 제공하여 읽기 또는 쓰기 처리량을 늘릴 수 있습니다. 이렇게 하면 스트림 어댑터에 더 큰 내부 버퍼 크기가 제공됩니다. 예를 들어 큰 파일의 스트림을 XML 파서에 전달할 경우 파서는 스트림에서 여러 작은 읽기를 순서대로 수행할 수 있습니다. 버퍼가 크면 기본 UWP 스트림의 호출 수가 줄고 성능이 향상될 수 있습니다.
 
-> **참고**  을 설정할 때 버퍼 크기를 약 80KB 보다 큰 가비지 수집기 힙에서 조각화가 발생할 수이 주의 해야 ( [가비지 수집 성능 향상](improve-garbage-collection-performance.md)참조). 다음 코드 예제에서는 버퍼가 81,920바이트인 관리 스트림 어댑터를 만듭니다.
+> **참고**    을 설정할 때 버퍼 크기는 약 80 (kb) 보다 큰 가비지 수집기 힙에서 조각화 초래할 수 있으므로 주의 해야 (참조 [가비지 수집 성능을 향상 시키는](improve-garbage-collection-performance.md) ). 다음 코드 예제에서는 버퍼가 81,920바이트인 관리 스트림 어댑터를 만듭니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -208,7 +208,7 @@ Stream managedStream = nativeStream.AsStreamForRead(bufferSize: 81920);
 Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 ```
 
-[**Stream.CopyTo**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copyto.aspx) 및 [**CopyToAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copytoasync.aspx) 메서드도 스트림 간에 복사하기 위한 로컬 버퍼를 할당합니다. [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx) 확장 메서드와 마찬가지로 기본 버퍼 크기를 재정의하여 큰 스트림 복사본에 대한 성능을 향상할 수 있습니다. 다음 코드 예제에서는 **CopyToAsync** 호출의 기본 버퍼 크기를 변경하는 방법을 보여 줍니다.
+[  **Stream.CopyTo**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copyto.aspx) 및 [**CopyToAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copytoasync.aspx) 메서드도 스트림 간에 복사하기 위한 로컬 버퍼를 할당합니다. [  **AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx) 확장 메서드와 마찬가지로 기본 버퍼 크기를 재정의하여 큰 스트림 복사본에 대한 성능을 향상할 수 있습니다. 다음 코드 예제에서는 **CopyToAsync** 호출의 기본 버퍼 크기를 변경하는 방법을 보여 줍니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -236,6 +236,6 @@ Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 
 읽기 및 쓰기의 대기 시간이 짧아야 하고 기본 UWP 스트림에서 큰 블록을 읽지 않는 경우에도 버퍼링을 방지할 수 있습니다. 예를 들어 네트워크 통신을 위해 스트림을 사용하는 경우 읽기 및 쓰기의 대기 시간이 짧아야 합니다.
 
-채팅 앱에서는 네트워크 인터페이스를 통해 스트림을 사용하여 메시지를 주고받을 수 있습니다. 이 경우 메시지를 준비되는 즉시 보내고 버퍼가 찰 때까지 기다리지 않아야 합니다. [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) 및 [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) 확장 메서드를 호출할 때 버퍼 크기를 0으로 설정하면 결과 어댑터는 버퍼를 할당하지 않고 모든 호출에서 기본 UWP 스트림을 직접 조작합니다.
+채팅 앱에서는 네트워크 인터페이스를 통해 스트림을 사용하여 메시지를 주고받을 수 있습니다. 이 경우 메시지를 준비되는 즉시 보내고 버퍼가 찰 때까지 기다리지 않아야 합니다. [  **AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) 및 [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) 확장 메서드를 호출할 때 버퍼 크기를 0으로 설정하면 결과 어댑터는 버퍼를 할당하지 않고 모든 호출에서 기본 UWP 스트림을 직접 조작합니다.
 
 

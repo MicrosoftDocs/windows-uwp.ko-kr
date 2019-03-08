@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d 11, 포트
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b6d06ff168f778c87e46fa399775492a3cebcaa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047681"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594218"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅
 
@@ -80,7 +80,7 @@ typedef struct
 
 이 구조에는 하나의 인스턴스가 있으며 매우 간단한 꼭짓점 음영 메시 렌더링에 대한 모든 필요한 구성 요소가 포함되어 있습니다.
 
-> **참고**이 항목의 모든 OpenGL ES 2.0 코드는 Khronos Group에서 제공 하는 Windows API 구현을 기반으로 하며 Windows C 프로그래밍 구문을 사용 합니다.
+> **참고**  이 항목의 Any OpenGL ES 2.0 코드 Khronos 그룹에서 제공 하는 Windows API 구현을 기반으로 하며 Windows C 프로그래밍 구문을 사용 합니다.
 
  
 
@@ -92,9 +92,9 @@ typedef struct
 -   [Microsoft Visual C++](https://msdn.microsoft.com/library/vstudio/60k1461a.aspx)
 -   OpenGL ES 2.0
 
-### <a name="prerequisites"></a>필수 조건
+### <a name="prerequisites"></a>필수 구성 요소
 
--   옵션. [DXGI 및 Direct3D로 EGL 코드 포팅](moving-from-egl-to-dxgi.md)을 검토하세요. DirectX에서 제공하는 그래픽 인터페이스를 더 잘 이해할 수 있도록 이 항목을 확인하세요.
+-   선택 사항. [DXGI 및 Direct3D로 EGL 코드 포팅](moving-from-egl-to-dxgi.md)을 검토하세요. DirectX에서 제공하는 그래픽 인터페이스를 더 잘 이해할 수 있도록 이 항목을 확인하세요.
 
 ## <a name="span-idkeylinksstepsheadingspansteps"></a><span id="keylinks_steps_heading"></span>단계
 
@@ -112,15 +112,15 @@ typedef struct
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="port-the-shader-config.md">셰이더 개체 포팅</a></p></td>
+<td align="left"><p><a href="port-the-shader-config.md">셰이더 개체 포트</a></p></td>
 <td align="left"><p>OpenGL ES 2.0에서 간단한 렌더러를 포팅하는 경우 첫 번째 단계는 Direct3D 11에서 해당하는 꼭짓점 및 조각 셰이더 개체를 설정하고 주 프로그램이 셰이더 개체가 컴파일된 후 이 셰이더 개체와 통신할 수 있는지 확인하는 것입니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="port-the-vertex-buffers-and-data-config.md">꼭짓점 버퍼 및 데이터 포팅</a></p></td>
+<td align="left"><p><a href="port-the-vertex-buffers-and-data-config.md">꼭 짓 점 버퍼 및 데이터 포트</a></p></td>
 <td align="left"><p>이 단계에서는 메시를 포함하는 꼭짓점 버퍼 및 셰이더가 꼭짓점을 지정된 순서로 트래버스할 수 있게 하는 인덱스 버퍼를 정의합니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="port-the-glsl.md">GLSL 포팅</a></p></td>
+<td align="left"><p><a href="port-the-glsl.md">포트는 GLSL</a></p></td>
 <td align="left"><p>버퍼 및 셰이더 개체를 만들고 구성하는 코드를 이동한 후에는 해당 셰이더 내에서 코드를 OpenGL ES 2.0 GLSL(GL Shader Language)에서 Direct3D 11 HLSL(High Level Shader Language)로 포팅할 차례입니다.</p></td>
 </tr>
 <tr class="even">
@@ -136,8 +136,8 @@ typedef struct
 
 
 -   [UWP DirectX 게임 개발을 위한 개발 환경 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
--   [UWP용 새 DirectX 11 프로젝트 만들기](user-interface.md)
--   [Direct3D 11에 OpenGL ES 2.0 개념 및 인프라 매핑](map-concepts-and-infrastructure.md)
+-   [UWP 용 새 DirectX 11 프로젝트를 만들려면](user-interface.md)
+-   [OpenGL ES 2.0 개념 및 인프라 Direct3D 11로 매핑](map-concepts-and-infrastructure.md)
 
  
 

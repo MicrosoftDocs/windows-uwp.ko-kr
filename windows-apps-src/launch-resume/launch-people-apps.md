@@ -1,5 +1,5 @@
 ---
-title: 피플 앱 시작
+title: 피플 앱 실행
 description: 이 항목에서는 ms-people URI 체계에 대해 설명합니다. 앱에서 이 URI 스키마를 사용하여 특정 작업에 대한 피플 앱을 실행할 수 있습니다.
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
 ms.date: 02/08/2017
@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ab10acab42ab3f03121a7c5a462cb651b0f3f31b
-ms.sourcegitcommit: 8db07db70d7630f322e274ab80dfa09980fc8d52
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9014708"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595568"
 ---
 # <a name="launch-the-people-app"></a>피플 앱 실행
 
-이 항목에서는 **ms-people:** URI 스키마를 설명합니다. 앱에서 이 URI 스키마를 사용하여 특정 작업에 대한 피플 앱을 실행할 수 있습니다.
+이 항목에 설명 합니다 **ms 사람:** URI 체계입니다. 앱에서 이 URI 스키마를 사용하여 특정 작업에 대한 피플 앱을 실행할 수 있습니다.
 
-## <a name="ms-people-uri-scheme-reference"></a>ms-people: URI 스키마 참조
+## <a name="ms-people-uri-scheme-reference"></a>ms-people: URI 체계 참조입니다.
 
 <table>
 <colgroup>
@@ -58,10 +58,10 @@ ms.locfileid: "9014708"
 </div>
 <div> 
 </div></td>
-<td align="left">ms-사람: viewcontact?ContactId =&lt;contactid&gt;&amp;AggregatedId =&lt;aggid&gt;&amp;PhoneNumber = &lt;phonenum&gt;&amp;메일 =&lt;메일&gt;&amp;ContactName =&lt;이름&gt;&amp;연락처 =&lt;contactobj&gt;</td>
+<td align="left">ms-people:viewcontact?ContactId=&lt;contactid&gt;&amp;AggregatedId=&lt;aggid&gt;&amp;PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;&amp;Contact=&lt;contactobj&gt;</td>
 </tr>
 <tr class="odd">
-<td align="left">피플 앱 내의 대화 상대 저장 페이지를 실행하여 제공된 전화 번호 또는 이메일 주소와 함께 지정된 연락처를 저장합니다.
+<td align="left">피플 앱 내의 대화 상대 저장 페이지를 실행하여 제공된 전화 번호 또는 메일 주소와 함께 지정된 연락처를 저장합니다.
 <div class="alert">
 <p>이 매개 변수는 대/소문자를 구분합니다.</p>
 <p>매개 변수의 순서는 중요하지 않습니다.</p>
@@ -96,7 +96,7 @@ ms.locfileid: "9014708"
 <tr class="header">
 <th align="left">매개 변수</th>
 <th align="left">설명</th>
-<th align="left">예제</th>
+<th align="left">예</th>
 </tr>
 </thead>
 <tbody>
@@ -122,7 +122,7 @@ ms.locfileid: "9014708"
 <tr class="header">
 <th align="left">매개 변수</th>
 <th align="left">설명</th>
-<th align="left">예제</th>
+<th align="left">예</th>
 </tr>
 </thead>
 <tbody>
@@ -139,7 +139,7 @@ ms.locfileid: "9014708"
 <td align="left"><p>ms-people:viewcontact?PhoneNumber=%2014257069326</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><b>메일</b></td>
+<td align="left"><b>메일 주소</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 메일입니다.</p></td>
 <td align="left"><p>ms-people:viewcontact?Email=johnsmith@contsco.com</p></td>
@@ -151,7 +151,7 @@ ms.locfileid: "9014708"
 <td align="left"><p>ms-people:viewcontact?ContactName=John%20%Smith</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><b>Contact</b></td>
+<td align="left"><b>연락처</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처 개체입니다.</p></td>
 <td align="left"><p>ms-people:viewcontact?Contact={Serialized Contact}</p></td>
@@ -171,7 +171,7 @@ ms.locfileid: "9014708"
 <tr class="header">
 <th align="left">매개 변수</th>
 <th align="left">설명</th>
-<th align="left">예제</th>
+<th align="left">예</th>
 </tr>
 </thead>
 <tbody>
@@ -182,7 +182,7 @@ ms.locfileid: "9014708"
 <td align="left"><p>ms-people:savetocontact?PhoneNumber=%2014257069326</p></td>
 </tr>
 <tr class="even">
-<td align="left"><b>메일</b></td>
+<td align="left"><b>메일 주소</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 메일입니다.</p></td>
 <td align="left"><p>ms-people:savetocontact?Email=johnsmith@contsco.com</p></td>
@@ -213,158 +213,158 @@ ms.locfileid: "9014708"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><b>Company</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><b>회사</b></td>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 회사 이름입니다.</p></td>
 
 </tr>
 <tr class="even">
 <td align="left"><b>FirstName</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 이름입니다.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><b>HomeAddressCity</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>집 주소의 구/군/시입니다.</p></td>
 
 </tr>
 <tr class="even">
 <td align="left"><b>HomeAddressCountry</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>집 주소의 국가입니다.</p></td>
 
 </tr>
 <tr class="odd">
 <td align="left"><b>HomeAddressState</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>집 주소의 시/도입니다.</p></td>
 
 </tr>
 <tr class="even">
 <td align="left"><b>HomeAddressStreet</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>집 주소의 상세 주소입니다.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><b>HomeAddressZipCode</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>집 주소의 우편 번호입니다.</p></td>
 
 </tr>
 <tr class="even">
 <td align="left"><b>HomePhone</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 집 전화 번호입니다.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><b>JobTitle</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 직위입니다.</p></td>
 </tr>
 
 <tr class="even">
 <td align="left"><b>LastName</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 성입니다.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><b>MiddleName</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 중간 이름입니다.</p></td>
 </tr>
 
 <tr class="even">
 <td align="left"><b>MobilePhone</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 휴대폰 번호입니다.</p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><b>Nickname</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><b>애칭</b></td>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 별명입니다.</p></td>
 </tr>
 
 <tr class="even">
-<td align="left"><b>Notes</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><b>참고 사항</b></td>
+<td align="left"><p>선택 사항.</p>
 <p>연락처에 대한 참고 사항입니다.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><b>OtherEmail</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 기타 전자 메일입니다.</p></td>
 </tr>
 
 <tr class="even">
 <td align="left"><b>PersonalEmail</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 개인 저자 메일입니다.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><b>Suffix</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 호칭입니다.</p></td>
 </tr>
 
 <tr class="even">
 <td align="left"><b>Title</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 직함입니다.</p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><b>Website</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><b>웹 사이트</b></td>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 웹 사이트입니다.</p></td>
 </tr>
 
 <tr class="even">
 <td align="left"><b>WorkAddressCity</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>회사 주소의 구/군/시입니다.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><b>WorkAddressCountry</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>회사 주소의 국가입니다.</p></td>
 </tr>
 
 <tr class="even">
 <td align="left"><b>WorkAddressState</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>회사 주소의 시/도입니다.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><b>WorkAddressStreet</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>회사 주소의 상세 주소입니다.</p></td>
 </tr>
 
 <tr class="even">
 <td align="left"><b>WorkAddressZipCode</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>회사 주소의 우편 번호입니다.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><b>WorkEmail</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 회사 전자 메일입니다.</p></td>
 </tr>
 
 <tr class="even">
 <td align="left"><b>WorkPhone</b></td>
-<td align="left"><p>선택 사항입니다.</p>
+<td align="left"><p>선택 사항.</p>
 <p>연락처의 회사 전화 번호입니다.</p></td>
 </tr>
 </tbody>

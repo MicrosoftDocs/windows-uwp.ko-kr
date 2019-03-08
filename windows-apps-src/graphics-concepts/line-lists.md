@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 43013dc820c0f0f67df2e9502d3c57c77e03f250
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8926174"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57599248"
 ---
 # <a name="line-lists"></a>선 목록
 
@@ -20,7 +20,7 @@ ms.locfileid: "8926174"
 선 목록은 격리된 선 세그먼트의 목록입니다. 선 목록은 진눈깨비나 폭우를 3D 장면에 추가하는 등의 작업에 유용합니다. 응용 프로그램은 꼭짓점 배열을 채워 선 목록을 만듭니다. 선 목록에서 꼭짓점의 개수는 2 이상의 짝수여야 합니다.
 
 -   [예제](#example)
--   [관련 항목](#related-topics)
+-   [관련된 항목](#related-topics)
 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>예제
 
@@ -60,10 +60,10 @@ CUSTOMVERTEX Vertices[] =
 d3dDevice->DrawPrimitive( D3DPT_LINELIST, 0, 3 );
 ```
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[기본 요소](primitives.md)
+[기본 형식](primitives.md)
 
  
 

@@ -8,23 +8,23 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f43244e39d825e75d6c6cd71fd9633ca158a7a16
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8947628"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590448"
 ---
 # <a name="usersmeresetreputation"></a>/users/me/resetreputation
-적용 팀을 현재 사용자의 평판 점수에 액세스할 수 있습니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`.
+적용 팀을 현재 사용자의 신뢰도 점수에 액세스할 수 있습니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`합니다.
   
 <a id="ID4EV"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
-[POST (/users/me/resetreputation)](uri-usersmeresetreputationpost.md)
+[POST (/ 사용자/me/resetreputation)](uri-usersmeresetreputationpost.md)
 
-&nbsp;&nbsp;있습니다 적용 하는 계정 하이재킹 (예) 후 현재 사용자의 평판 점수 일부 중간 값으로 설정 됩니다.
+&nbsp;&nbsp;(예를 들어)는 계정 하이재킹 후 일부 임의 값으로 현재 사용자의 신뢰도 점수를 설정 하려면 적용 팀을 수 있습니다.
  
 <a id="ID4E6"></a>
 
@@ -34,8 +34,8 @@ ms.locfileid: "8947628"
 <a id="ID4EBB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[평판 URI](atoc-reference-reputation.md)
+[평판 Uri](atoc-reference-reputation.md)
 
    

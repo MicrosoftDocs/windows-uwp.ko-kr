@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 포트, 꼭짓점 버퍼, 데이터, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c961a8852fb1e03e4e86209f62bda821b980f8c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938486"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57592818"
 ---
 # <a name="port-the-vertex-buffers-and-data"></a>꼭짓점 버퍼 및 데이터 포팅
 
 
 
 
-**중요 API**
+**중요 한 Api**
 
 -   [**ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)
 -   [**ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456)
@@ -28,7 +28,7 @@ ms.locfileid: "8938486"
 
 이쯤에서, 사용할 큐브 메시에 대한 하드 코드된 모델을 살펴보겠습니다. 두 가지 표현 모두에는 삼각형 목록으로 구성된 꼭짓점이 있습니다(스트립 또는 다른 더 효율적인 삼각형 레이아웃과 반대). 또한 두 가지 표현의 모든 꼭짓점에는 인덱스 및 색상 값이 연결되어 있습니다. 이 항목의 많은 Direct3D 코드는 Direct3D 프로젝트에 정의된 변수 및 개체를 참조합니다.
 
-OpenGL ES 2.0에서 처리할 큐브는 다음과 같습니다. 샘플 구현에서 각 꼭짓점은 7개의 float 값입니다. 3개의 위치 좌표 다음에 4개의 RGBA 색상 값이 나옵니다.
+OpenGL ES 2.0에서 처리할 큐브는 다음과 같습니다. 샘플 구현에 각 꼭 짓 점 7 부동 소수점 값입니다. 3 개 위치 좌표를 뒤에 4 개의 RGBA 색 값입니다.
 
 ```cpp
 #define CUBE_INDICES 36
@@ -112,11 +112,11 @@ unsigned short cubeIndices[] =
 
 ## <a name="instructions"></a>지침
 
-### <a name="step-1-create-an-input-layout"></a>1단계: 입력 레이아웃 만들기
+### <a name="step-1-create-an-input-layout"></a>1단계: 입력 레이아웃
 
 OpenGL ES 2.0에서는 셰이더 개체에 제공하고 이 개체에서 읽는 특성으로 꼭짓점 데이터가 제공됩니다. 일반적으로 셰이더 프로그램 개체에 대한 셰이더의 GLSL 사용되는 특성 이름이 포함된 문자열을 제공하고 셰이더에 제공할 수 있는 메모리 위치를 다시 가져옵니다. 이 예제에서 꼭짓점 버퍼 개체는 다음과 같이 정의되고 서식이 지정된 사용자 지정 꼭짓점 구조 목록을 포함합니다.
 
-OpenGL ES 2.0: 꼭짓점별 정보가 포함된 특성을 구성합니다.
+OpenGL ES 2.0: 꼭 짓 점별 정보가 포함 된 특성을 구성 합니다.
 
 ``` syntax
 typedef struct 
@@ -126,13 +126,13 @@ typedef struct
 } Vertex;
 ```
 
-OpenGL ES 2.0에서는 입력 레이아웃은 암시적입니다. 범용 GL\_ELEMENT\_ARRAY\_BUFFER를 가져오고 꼭짓점 셰이더가 데이터를 업로드 한 후 이 데이터를 해석할 수 있도록 stride 및 오프셋 제공합니다. **glVertexAttribPointer**를 사용하여 꼭짓점 데이터의 각 블록에서 어느 부분에 어떤 특성이 매핑되는지 렌더링하기 전에 셰이더에 알려줍니다.
+입력된 레이아웃은 암시적; OpenGL ES 2.0에서 범용 GL 수행한\_요소\_배열\_버퍼 꼭 짓 점 셰이더 업로드 한 후 데이터를 해석할 수 있도록 오프셋 및 진행 속도 제공 합니다. **glVertexAttribPointer**를 사용하여 꼭짓점 데이터의 각 블록에서 어느 부분에 어떤 특성이 매핑되는지 렌더링하기 전에 셰이더에 알려줍니다.
 
 Direct3D에서 기하 도형을 그리기 전에 대신 버퍼를 만들 때 꼭짓점 버퍼에 있는 꼭짓점 데이터의 구조를 설명하기 위해 입력 레이아웃을 제공해야 합니다. 이렇게 하려면 메모리에서 개별 꼭짓점에 대한 데이터의 레이아웃에 해당하는 입력 레이아웃을 사용합니다. 이를 정확하게 지정하는 것이 매우 중요합니다!
 
-여기에서 입력 설명을 [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조의 배열로 작성합니다.
+배열로 입력된 설명을 작성 하는 이때 [ **D3D11\_입력\_요소\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조입니다.
 
-Direct3D: 입력 레이아웃 설명을 정의합니다.
+Direct3D: 입력된 레이아웃에 대 한 설명을 정의 합니다.
 
 ``` syntax
 struct VertexPositionColor
@@ -153,11 +153,11 @@ const D3D11_INPUT_ELEMENT_DESC vertexDesc[] =
 
 이 입력 설명은 2개의 3 좌표 벡터 쌍으로 꼭짓점을 정의합니다. 하나는 모델 좌표에서 꼭짓점의 위치를 저장할 3D 벡터이고 다른 하나는 꼭짓점과 연결된 RGB 색상 값을 저장할 3D 벡터입니다. 이 경우 3x32비트 부동 소수점 형식을 사용합니다. 이 형식의 요소는 코드에서 `XMFLOAT3(X.Xf, X.Xf, X.Xf)`으로 표시됩니다. 셰이더에서 사용할 데이터를 처리할 때마다 [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/ee415574) 라이브러리의 형식을 사용해야 합니다. 그러면 해당 데이터가 적절하게 압축되고 정렬됩니다. 예를 들어 벡터 데이터에는 [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475) 또는 [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608)를 사용하고 행렬에는 [**XMFLOAT4X4**](https://msdn.microsoft.com/library/windows/desktop/ee419621)를 사용합니다.
 
-가능한 모든 형식 유형 목록은 [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059)을 참조하세요.
+모든 가능한 형식 형식의 목록, 참조 [ **DXGI\_형식**](https://msdn.microsoft.com/library/windows/desktop/bb173059)합니다.
 
-정의된 꼭짓점별 입력 레이아웃을 사용하여 레이아웃 개체를 만듭니다. 다음 코드에서 이 개체를 유형 **ComPtr**(유형 [**D3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)의 개체를 가리킴)의 변수인 **m\_inputLayout**에 씁니다. **fileData**에는 이전 단계 [셰이더 포팅](port-the-shader-config.md)의 컴파일된 꼭짓점 셰이더 개체가 포함되어 있습니다.
+정의된 꼭짓점별 입력 레이아웃을 사용하여 레이아웃 개체를 만듭니다. 다음 코드를 작성 하도록 **m\_inputLayout**, 형식 변수의 **ComPtr** (형식의 개체를 가리키는 [ **ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)). **fileData**에는 이전 단계 [셰이더 포팅](port-the-shader-config.md)의 컴파일된 꼭짓점 셰이더 개체가 포함되어 있습니다.
 
-Direct3D: 꼭짓점 버퍼에서 사용하는 입력 레이아웃을 만듭니다.
+Direct3D: 꼭 짓 점 버퍼에서 사용 하는 입력된 레이아웃을 만듭니다.
 
 ``` syntax
 Microsoft::WRL::ComPtr<ID3D11InputLayout>      m_inputLayout;
@@ -175,11 +175,11 @@ m_d3dDevice->CreateInputLayout(
 
 입력 레이아웃을 정의 했습니다. 이제 이 레이아웃을 사용하는 버퍼를 만들고 큐브 메시 데이터를 사용하여 이 버퍼를 로드합니다.
 
-### <a name="step-2-create-and-load-the-vertex-buffers"></a>2단계: 꼭짓점 버퍼 만들기 및 로드
+### <a name="step-2-create-and-load-the-vertex-buffers"></a>2단계: 만들고 꼭 짓 점 버퍼를 로드 합니다.
 
-OpenGL ES 2.0에서는 위치 데이터의 버퍼 하나와 색상 데이터의 버퍼 하나로 버퍼 쌍을 만듭니다. 둘 다 포함하고 단일 버퍼를 포함하는 구조체를 만들 수도 있습니다. 각 버퍼를 바인딩하고 위치 및 색상 데이터를 여기에 작성합니다. 나중에 렌더 함수 중 버퍼를 다시 바인딩하고 제대로 해석할 수 있도록 버퍼에 있는 데이터의 형식으로 셰이더를 제공합니다.
+OpenGL ES 2.0에서는 위치 데이터의 버퍼 하나와 색상 데이터의 버퍼 하나로 버퍼 쌍을 만듭니다. (모두 포함 된 구조체를 만들 수도 있습니다 및 단일 버퍼입니다.) 각 버퍼를 바인딩하고 위치 및 색 데이터를 작성 합니다. 나중에 렌더 함수 중 버퍼를 다시 바인딩하고 제대로 해석할 수 있도록 버퍼에 있는 데이터의 형식으로 셰이더를 제공합니다.
 
-OpenGL ES 2.0: 꼭짓점 버퍼 바인딩
+OpenGL ES 2.0: 꼭 짓 점 버퍼 바인딩
 
 ``` syntax
 // upload the data for the vertex position buffer
@@ -188,13 +188,13 @@ glBindBuffer(GL_ARRAY_BUFFER, renderer->vertexBuffer);
 glBufferData(GL_ARRAY_BUFFER, sizeof(VERTEX) * CUBE_VERTICES, renderer->vertices, GL_STATIC_DRAW);   
 ```
 
-Direct3D에서 셰이더 액세스 가능한 버퍼는 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조로 표시됩니다. 셰이더 개체에 이 버퍼의 위치를 바인딩하려면 각 버퍼에 대한 CD3D11\_BUFFER\_DESC 구조를 [**ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 사용하여 만든 다음 [**ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) 등 버퍼 유형 관련 set 메서드를 호출하여 Direct3D 디바이스 컨텍스트의 버퍼를 설정합니다.
+Direct3d에서 셰이더를 액세스할 수 있는 버퍼도 표시 됩니다 [ **D3D11\_SUBRESOURCE\_DATA** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조입니다. 이 버퍼의 위치를 셰이더 개체에 바인딩하려면는 CD3D11 만들 필요가\_버퍼\_DESC 구조를 사용 하 여 각 버퍼 [ **ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 설정한 후 set 메서드를 같은 버퍼 형식에 특정 호출 하 여 Direct3D 장치 컨텍스트의 버퍼 [ **ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456)합니다.
 
 버퍼를 설정하는 경우 버퍼의 시작 부분의 오프셋(여기서 실제로 꼭짓점 데이터 배열이 시작함)뿐만 아니라 stride(개별 꼭짓점에 대한 데이터 요소 크기)를 설정해야 합니다.
 
-[**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조의 **pSysMem** 필드에 대한 **vertexIndices** 배열에 포인터를 할당합니다. 올바르지 않으면 메시가 손상되거나 비게 됩니다!
+에 대 한 포인터를 할당 하는 것을 알 수 있습니다는 **vertexIndices** 배열을 합니다 **pSysMem** 필드를 [ **D3D11\_SUBRESOURCE\_데이터** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조입니다. 올바르지 않으면 메시가 손상되거나 비게 됩니다!
 
-Direct3D: 꼭짓점 버퍼 만들기 및 설정
+Direct3D: 만들고 꼭 짓 점 버퍼를 설정 합니다.
 
 ``` syntax
 D3D11_SUBRESOURCE_DATA vertexBufferData = {0};
@@ -220,13 +220,13 @@ m_d3dContext->IASetVertexBuffers(
   &offset);
 ```
 
-### <a name="step-3-create-and-load-the-index-buffer"></a>3단계: 인덱스 버퍼를 만들기 및 로드
+### <a name="step-3-create-and-load-the-index-buffer"></a>3단계: 만들기 및 인덱스 버퍼를 로드 합니다.
 
 인덱스 버퍼는 꼭짓점 셰이더가 개별 꼭짓점을 조회할 수 있게 하는 효율적인 방법입니다. 필수는 아니지만 이 샘플 렌더러에서는 이 버퍼를 사용합니다. OpenGL ES 2.0의 꼭짓점 버퍼에서와 같이, 인덱스 버퍼는 범용 버퍼로 만들어지고 바인딩되며 이전에 만든 꼭짓점 인덱스가 여기에 복사됩니다.
 
 그릴 준비가 되면, 꼭짓점 및 인덱스 버퍼를 모두 다시 바인딩하고 **glDrawElements**를 호출합니다.
 
-OpenGL ES 2.0: 인덱스 순서를 그리기 호출로 보냅니다.
+OpenGL ES 2.0: 그리기 호출을 인덱스 순서를 보냅니다.
 
 ``` syntax
 GLuint indexBuffer;
@@ -248,7 +248,7 @@ glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderer->indexBuffer);
 glDrawElements (GL_TRIANGLES, renderer->numIndices, GL_UNSIGNED_INT, 0);
 ```
 
-약간 더 훈시적이긴 하지만 Direct3D에서 매우 비슷한 프로세스입니다. Direct3D 하위 리소스로 인덱스 버퍼를 Direct3D를 구성할 때 만든 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)에 제공합니다. 다음과 같이 인덱스 배열에 대한 구성된 하위 리소스를 사용하여 [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588)를 호출하여 이 작업을 수행합니다. 다시, [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조의 **pSysMem** 필드에 대한 **cubeIndices** 배열에 포인터를 할당합니다.
+약간 더 훈시적이긴 하지만 Direct3D에서 매우 비슷한 프로세스입니다. Direct3D 하위 리소스로 인덱스 버퍼를 Direct3D를 구성할 때 만든 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)에 제공합니다. 다음과 같이 인덱스 배열에 대한 구성된 하위 리소스를 사용하여 [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588)를 호출하여 이 작업을 수행합니다. (다시에 대 한 포인터를 할당 하는 것을 알 수 있습니다는 **cubeIndices** 배열을 합니다 **pSysMem** 필드를 [ **D3D11\_SUBRESOURCE\_데이터** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조입니다.)
 
 Direct3D: 인덱스 버퍼를 만듭니다.
 
@@ -276,7 +276,7 @@ m_d3dContext->IASetIndexBuffer(
 
 나중에, 다음과 같이 [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409)(또는 인덱싱되지 않은 꼭짓점에 대한 [**ID3D11DeviceContext::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407))에 대한 호출을 사용하여 삼각형을 그립니다. (자세한 내용은 [화면에 그리기](draw-to-the-screen.md)를 참조하세요.)
 
-Direct3D: 인덱싱된 꼭짓점을 그립니다.
+Direct3D: 인덱싱된 꼭 짓 점을 그립니다.
 
 ``` syntax
 m_d3dContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
@@ -293,11 +293,11 @@ m_d3dContext->DrawIndexed(
 ## <a name="previous-step"></a>이전 단계
 
 
-[셰이더 개체 포팅](port-the-shader-config.md)
+[셰이더 개체 포트](port-the-shader-config.md)
 
 ## <a name="next-step"></a>다음 단계
 
-[GLSL 포팅](port-the-glsl.md)
+[포트는 GLSL](port-the-glsl.md)
 
 ## <a name="remarks"></a>설명
 
@@ -306,10 +306,10 @@ Direct3D를 구성할 때 디바이스 리소스를 다시 만들어야 할 때�
 ## <a name="related-topics"></a>관련 항목
 
 
-* [방법: 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
-* [셰이더 개체 포팅](port-the-shader-config.md)
-* [꼭짓점 버퍼 및 데이터 포팅](port-the-vertex-buffers-and-data-config.md)
-* [GLSL 포팅](port-the-glsl.md)
+* [방법: Direct3D 11로 간단한 OpenGL ES 2.0 렌더러를 포트](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
+* [셰이더 개체 포트](port-the-shader-config.md)
+* [꼭 짓 점 버퍼 및 데이터 포트](port-the-vertex-buffers-and-data-config.md)
+* [포트는 GLSL](port-the-glsl.md)
 
  
 

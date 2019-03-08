@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 셰이더, 기본 형식, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 5173adc26e0730ccb80f93fe0c12af286b0c1a49
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923473"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57589768"
 ---
 # <a name="create-shaders-and-drawing-primitives"></a>셰이더 및 그리기 기본 요소 만들기
 
@@ -21,16 +21,16 @@ ms.locfileid: "8923473"
 
 꼭짓점 및 픽셀 셰이더를 사용하여 노란색 삼각형을 만들어 그립니다. Direct3D 장치, 스왑 체인 및 렌더링 대상 보기를 만든 후, 디스크의 이진 셰이더 개체 파일의 데이터를 읽습니다.
 
-**목표:** 셰이더를 만들고 원형을 그리기 위함입니다.
+**목표:** 셰이더를 만들려면 주고 이들을 끌어들일 수 기본 형식입니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 
 사용자가 C++에 익숙하다고 가정합니다. 그래픽 프로그래밍 개념에 대한 기본 경험도 필요합니다.
 
 또한 [빠른 시작: DirectX 리소스 설정 및 이미지 표시](setting-up-directx-resources.md)를 완료했다고 가정합니다.
 
-**완료 시간:** 20분입니다.
+**완료 시간:** 20 분입니다.
 
 ## <a name="instructions"></a>지침
 
@@ -81,11 +81,11 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 
 DirectX 11 앱(유니버설 Windows) 템플릿에서 DirectXHelper.h의 DX::ReadDataAsync 함수를 사용하여 디스크의 파일에서 데이터를 비동기적으로 읽습니다.
 
-### <a name="3-creating-vertex-and-pixel-shaders"></a>3. 꼭짓점 및 픽셀 셰이더 만들기
+### <a name="3-creating-vertex-and-pixel-shaders"></a>3. 꼭 짓 점 및 픽셀 셰이더 만들기
 
-SimpleVertexShader.cso 파일의 데이터를 읽고 데이터를 *vertexShaderBytecode* 바이트 배열에 할당합니다. 바이트 배열과 함께 [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524)를 호출하여 꼭짓점 셰이더([**ID3D11VertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476641))를 만듭니다. 삼각형을 그릴 수 있도록 SimpleVertexShader.hlsl 소스에서 꼭짓점 깊이 값을 0.5로 설정합니다. [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조의 배열을 채워 꼭짓점 셰이더 코드의 레이아웃을 설명한 다음 [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512)을 호출하여 레이아웃을 만듭니다. 배열에는 꼭짓점 위치를 정의하는 하나의 레이아웃 요소가 있습니다. SimplePixelShader.cso 파일의 데이터를 읽고 데이터를 *pixelShaderBytecode* 바이트 배열에 할당합니다. 해당 바이트 배열과 함께 [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)를 호출하여 픽셀 셰이더([**ID3D11PixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476576))를 만듭니다. 삼각형을 노란색으로 만들기 위해 SimplePixelShader.hlsl 소스에서 픽셀 값을 (1,1,1,1)로 설정합니다. 이 값을 변경하여 색을 변경할 수 있습니다.
+SimpleVertexShader.cso 파일의 데이터를 읽고 데이터를 *vertexShaderBytecode* 바이트 배열에 할당합니다. 바이트 배열과 함께 [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524)를 호출하여 꼭짓점 셰이더([**ID3D11VertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476641))를 만듭니다. 삼각형을 그릴 수 있도록 SimpleVertexShader.hlsl 소스에서 꼭짓점 깊이 값을 0.5로 설정합니다. 배열을 채웁니다 [ **D3D11\_입력\_요소\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) 꼭 짓 점 셰이더 코드의 레이아웃을 설명 하 고 호출 하는 구조 [ **ID3D11Device::CreateInputLayout** ](https://msdn.microsoft.com/library/windows/desktop/ff476512) 는 레이아웃을 만들 수 있습니다. 배열에는 꼭짓점 위치를 정의하는 하나의 레이아웃 요소가 있습니다. SimplePixelShader.cso 파일의 데이터를 읽고 데이터를 *pixelShaderBytecode* 바이트 배열에 할당합니다. 해당 바이트 배열과 함께 [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)를 호출하여 픽셀 셰이더([**ID3D11PixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476576))를 만듭니다. 삼각형을 노란색으로 만들기 위해 SimplePixelShader.hlsl 소스에서 픽셀 값을 (1,1,1,1)로 설정합니다. 이 값을 변경하여 색을 변경할 수 있습니다.
 
-간단한 삼각형을 정의하는 꼭짓점 및 인덱스 버퍼를 만듭니다. 먼저 삼각형을 정의하고, 다음으로 삼각형 정의를 사용하여 꼭짓점 및 인덱스 버퍼([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) 및 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220))를 설명하고, 최종적으로 각 버퍼에 대해 [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 한 번씩 호출합니다.
+간단한 삼각형을 정의하는 꼭짓점 및 인덱스 버퍼를 만듭니다. 이렇게 하려면 먼저 정의 된 삼각형의 경우 다음 꼭 짓 점 및 인덱스 버퍼를 설명 ([**D3D11\_버퍼\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) 고 [ **D3D11\_ SUBRESOURCE\_데이터**](https://msdn.microsoft.com/library/windows/desktop/ff476220)) 삼각형 정의 사용 하 고 마지막으로 호출 [ **ID3D11Device::CreateBuffer** ](https://msdn.microsoft.com/library/windows/desktop/ff476501) 각 버퍼에 한 번씩입니다.
 
 ```cpp
         auto loadVSTask = DX::ReadDataAsync(L"SimpleVertexShader.cso");
@@ -200,21 +200,21 @@ SimpleVertexShader.cso 파일의 데이터를 읽고 데이터를 *vertexShaderB
 
 꼭짓점 및 픽셀 셰이더, 꼭짓점 셰이더 레이아웃, 꼭짓점 및 인덱스 버퍼를 사용하여 노란색 삼각형을 그립니다.
 
-### <a name="4-drawing-the-triangle-and-presenting-the-rendered-image"></a>4. 삼각형 그리기 및 렌더링된 이미지 표시
+### <a name="4-drawing-the-triangle-and-presenting-the-rendered-image"></a>4. 삼각형을 그리기 및 렌더링 되는 이미지를 표시 합니다.
 
-장면을 계속해서 렌더링 및 표시하기 위해 무한 루프를 입력합니다. [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464)를 호출하여 렌더링 대상을 출력 대상으로 지정합니다. { 0.071f, 0.04f, 0.561f, 1.0f }와 함께 [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388)를 호출하여 렌더링 대상을 파란색 단색으로 지웁니다.
+장면을 계속해서 렌더링 및 표시하기 위해 무한 루프를 입력합니다. [  **ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464)를 호출하여 렌더링 대상을 출력 대상으로 지정합니다. { 0.071f, 0.04f, 0.561f, 1.0f }와 함께 [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388)를 호출하여 렌더링 대상을 파란색 단색으로 지웁니다.
 
 무한 루프에서, 파란색 표면에 노란색 삼각형을 그립니다.
 
 **노란색 삼각형을 그리려면**
 
 1.  먼저 [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)을 호출하여 꼭짓점 버퍼 데이터를 입력-어셈블러 단계로 스트리밍하는 방법을 설명합니다.
-2.  [**ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) 및 [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453)를 호출하여 꼭짓점 및 인덱스 버퍼를 입력-어셈블러 단계로 바인딩합니다.
-3.  [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455)를 [**D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLESTRIP**](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) 값과 함께 호출하여, 꼭짓점 데이터를 삼각형 스트립으로 해석할 입력-어셈블러 단계를 지정합니다.
-4.  [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493)를 호출하여 꼭짓점 셰이더 단계를 꼭짓점 셰이더 코드로 초기화하고, [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472)를 호출하여 픽셀 셰이더 단계를 픽셀 셰이더 코드로 초기화합니다.
+2.  [  **ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) 및 [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453)를 호출하여 꼭짓점 및 인덱스 버퍼를 입력-어셈블러 단계로 바인딩합니다.
+3.  다음으로 호출 [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) 사용 하 여 합니다 [ **D3D11\_기본\_토폴로지\_ TRIANGLESTRIP** ](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) 삼각형 스트립으로 꼭 짓 점 데이터를 해석 하는 입력 어셈블러 단계에 대해 지정 하는 값입니다.
+4.  [  **ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493)를 호출하여 꼭짓점 셰이더 단계를 꼭짓점 셰이더 코드로 초기화하고, [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472)를 호출하여 픽셀 셰이더 단계를 픽셀 셰이더 코드로 초기화합니다.
 5.  마지막으로 [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409)를 호출하여 큐브를 그린 후 렌더링 파이프라인에 제출합니다.
 
-[**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576)를 호출하여 렌더링된 이미지를 창에 표시합니다.
+[  **IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576)를 호출하여 렌더링된 이미지를 창에 표시합니다.
 
 ```cpp
             // Specify the render target we created as the output target.
@@ -287,7 +287,7 @@ SimpleVertexShader.cso 파일의 데이터를 읽고 데이터를 *vertexShaderB
 
 이제 선회하는 3D 큐브를 만들고 조명 효과를 적용합니다.
 
-[원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)
+[깊이 및 기본 형식에서 효과 사용 하 여](using-depth-and-effects-on-primitives.md)
 
  
 

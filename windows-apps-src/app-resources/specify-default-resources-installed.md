@@ -1,5 +1,5 @@
 ---
-Description: If your app doesn't have resources that match the particular settings of a customer device, then the app's default resources are used. This topic explains how to specify what those default resources are.
+Description: 앱에 고객 장치의 특정 설정과 일치하는 리소스가 없으면, 앱의 기본 리소스가 사용됩니다. 이 항목에서는 그러한 기본 리소스를 지정하는 방법에 대해 설명합니다.
 title: 앱에서 사용하는 기본 리소스 지정
 template: detail.hbs
 ms.date: 11/14/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: b11f6dfec2941ae4eaa277f37de66965bd1ea4aa
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048906"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593988"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a>앱에서 사용하는 기본 리소스 지정
 
@@ -19,7 +19,7 @@ ms.locfileid: "9048906"
 
 고객이 Microsoft Store로부터 앱을 설치하면 고객의 장치 설정이 앱의 사용 가능 리소스와 매칭됩니다. 이러한 매칭은 해당 사용자가 적합한 리소스만 다운로드하고 설치하도록 하기 위해 수행됩니다. 예를 들어, 해당 사용자의 언어 기본 설정, 장치의 해상도와 DPI 설정에 가장 잘 맞는 문자열과 이미지만 사용됩니다. 예를 들어, `200`이 `scale`의 기본값이지만, 원하는 경우 이를 덮어쓸 수 있습니다.
 
-자체 리소스 팩에 포함되지 않을 리소스의 경우에도(고대비 설정용으로 조정된 이미지 등), 사용자의 설정과 일치하는 리소스가 없는 경우 런타임에서 사용되어야 하는 기본 리소스를 지정할 수 있습니다. 예를 들어, `standard`가 `contrast`의 기본값이지만, 원하는 경우 이를 덮어쓸 수 있습니다.
+자체 리소스 팩에 포함되지 않을 리소스의 경우에도(고대비 설정용으로 조정된 이미지 등), 사용자의 설정과 일치하는 리소스가 없는 경우 런타임에서 사용되어야 하는 기본 리소스를 지정할 수 있습니다. 예를 들어, `standard`이 `contrast`의 기본값이지만, 원하는 경우 이를 덮어쓸 수 있습니다.
 
 이러한 기본값은 기본값 리소스 한정자 값 형식으로 지정됩니다. 리소스 한정자의 정의, 사용법 및 용도에 대한 자세한 설명은 [언어, 규모, 고대비 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)을 참조하세요.
 
@@ -68,7 +68,7 @@ ms.locfileid: "9048906"
 
 백그라운드에서 Visual Studio는 `MakePri.exe`라는 도구를 실행하여 PRI(패키지 리소스 인덱스)라고 하는 파일을 생성합니다. 이 파일에는 기본 리소스임을 나타내는 등 모든 앱 리소스에 대한 설명이 들어 있습니다. 이 도구에 대한 자세한 내용은 [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)을 참조하세요. Visual Studio가 구성 파일을 `MakePri.exe`에 전달합니다. `priconfig.default.xml` 파일의 내용이 해당 구성 파일의 `<default>` 요소로 사용됩니다. 이는 기본값으로 적용될 한정자 값 설정을 지정하는 부분입니다. 따라서 `priconfig.default.xml`을 추가하고 편집하면 Visual Studio가 앱에 대해 생성하는 패키지 리소스 인덱스 파일의 내용에 영향이 미치며 해당 내용이 앱 패키지에 포함됩니다.
 
-**참고** `<qualifier name="Language" ... />` 요소의 값을 변경하는 경우 언제나 해당 변경 사항을 앱의 기본 언어와 동기화해야 합니다. 이는 앱의 PRI 파일에서 인덱싱된 언어 리소스가 앱의 매니페스트 기본 언어와 일치하도록 하기 위함입니다. `<qualifier name="Language" ... />` 요소의 값은 `<ProjectFolder>\obj\<ReleaseConfiguration folder>\priconfig.xml` 내용과 관련하여 매니페스트의 값을 덮어쓰지만, 해당 파일 및 앱의 매니페스트는 일치해야 합니다.
+**참고**`<qualifier name="Language" ... />` 요소의 값을 변경하는 경우 언제나 해당 변경 사항을 앱의 기본 언어와 동기화해야 합니다. 이는 앱의 PRI 파일에서 인덱싱된 언어 리소스가 앱의 매니페스트 기본 언어와 일치하도록 하기 위함입니다. `<qualifier name="Language" ... />` 요소의 값은 `<ProjectFolder>\obj\<ReleaseConfiguration folder>\priconfig.xml` 내용과 관련하여 매니페스트의 값을 덮어쓰지만, 해당 파일 및 앱의 매니페스트는 일치해야 합니다.
 
 ### <a name="using-a-different-file-name-than-priconfigdefaultxml"></a>`priconfig.default.xml`이 아닌 다른 파일 이름 사용
 
@@ -98,10 +98,10 @@ ms.locfileid: "9048906"
 
 프로젝트를 저장하고 닫은 다음, 다시 빌드합니다.
 
-**참고** `Language=`의 값을 변경하는 경우 언제나 `Package.appxmanifest`를 열어 매니페스트 디자이너에 있는 앱의 기본 언어와 해당 변경 사항을 동기화해야 합니다.
+**참고**`Language=`의 값을 변경하는 경우 언제나 `Package.appxmanifest`를 열어 매니페스트 디자이너에 있는 앱의 기본 언어와 해당 변경 사항을 동기화해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [언어, 규모, 고대비 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)
+* [언어, 배율, 고대비 등 및 다른 한정자에 대 한 리소스를 조정 합니다.](tailor-resources-lang-scale-contrast.md)
 * [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
+* [MakePri.exe 사용 하 여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)

@@ -8,23 +8,23 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c04c825dde06ab6f75a61d308d758115f898177
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8919754"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593818"
 ---
 # <a name="usersbatchprofilesettings"></a>/users/batch/profile/settings
-사용자 또는 사용자의 프로필에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
+사용자 또는 사용자 프로필에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`합니다.
   
 <a id="ID4EV"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
-[POST (/users/batch/profile/settings)](uri-usersbatchprofilesettingspost.md)
+[POST (/ 사용자/batch/프로필/설정)](uri-usersbatchprofilesettingspost.md)
 
-&nbsp;&nbsp;사용자 또는 사용자에 대 한 프로필을 가져옵니다.
+&nbsp;&nbsp;사용자 또는 사용자 프로필을 가져옵니다.
  
 <a id="ID4E6"></a>
 
@@ -34,10 +34,10 @@ ms.locfileid: "8919754"
 <a id="ID4EBB"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[프로필 URI](atoc-reference-profiles.md)
+[프로필 Uri](atoc-reference-profiles.md)
 
- [Profile(JSON)](../../json/json-profile.md)
+ [프로필 (JSON)](../../json/json-profile.md)
 
    

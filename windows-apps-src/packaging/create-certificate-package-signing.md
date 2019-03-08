@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
 ms.openlocfilehash: 963c73bb7667ced5bbe9e33fef0cac561fe1183a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928977"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57591548"
 ---
 # <a name="create-a-certificate-for-package-signing"></a>패키지 서명용 인증서 만들기
 
@@ -23,10 +23,10 @@ ms.locfileid: "8928977"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- **패키지된 앱 또는 패키지되지 않은 앱**  
+- **패키지 또는 패키지 되지 않은 앱**  
 AppxManifest.xml 파일이 들어 있는 앱 최종 앱 패키지에 서명하는 데 사용될 인증서를 만드는 동안 매니페스트 파일을 참조해야 합니다. 앱을 수동으로 패키지하는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구를 사용하여 앱 패키지 만들기](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요.
 
-- **PKI(공개 키 인프라) Cmdlet**  
+- **공개 키 인프라 (PKI) Cmdlet**  
 서명 인증서를 만들고 내보내려면 PKI cmdlet이 필요합니다. 자세한 내용은 [Public Key Infrastructure Cmdlets(공개 키 인프라 Cmdlet)](https://docs.microsoft.com/powershell/module/pkiclient/)를 참조하세요.
 
 ## <a name="create-a-self-signed-certificate"></a>자체 서명된 인증서 만들기
@@ -54,7 +54,7 @@ AppxManifest.xml 파일이 들어 있는 앱 최종 앱 패키지에 서명하�
 New-SelfSignedCertificate -Type Custom -Subject "CN=Contoso Software, O=Contoso Corporation, C=US" -KeyUsage DigitalSignature -FriendlyName <Your Friendly Name> -CertStoreLocation "Cert:\LocalMachine\My"
 ```
 
-이 명령을 실행한 후 "-CertStoreLocation" 매개 변수에서 지정한 대로 로컬 인증서 스토어에 인증서가 추가됩니다. 명령의 결과 인증서의 지문도 생성 합니다.  
+이 명령을 실행한 후 "-CertStoreLocation" 매개 변수에서 지정한 대로 로컬 인증서 스토어에 인증서가 추가됩니다. 인증서의 지문 명령의 결과 생성 하기도 합니다.  
 
 **참고**  
 다음 명령을 사용하여 PowerShell 창에서 인증서를 볼 수 있습니다.

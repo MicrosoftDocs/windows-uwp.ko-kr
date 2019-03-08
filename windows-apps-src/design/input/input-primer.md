@@ -1,5 +1,5 @@
 ---
-Description: User interactions in the Universal Windows Platform (UWP) are a combination of input and output sources (such as mouse, keyboard, pen, touch, touchpad, speech, Cortana, controller, gesture, gaze, and so on), along with various modes or modifiers that enable extended experiences (including mouse wheel and buttons, pen eraser and barrel buttons, touch keyboard, and background app services).
+Description: UWP(유니버설 Windows 플랫폼)에서 사용자 조작은 환경을 확장할 수 있는 다양한 모드 또는 한정자(마우스 휠 및 단추, 펜 지우개 및 펜 단추, 터치 키보드 및 백그라운드 앱 서비스)와 함께 입력 및 출력 소스(마우스, 키보드, 펜, 터치, 터치 패드, 음성, Cortana, 컨트롤러, 제스처, 응시 등)를 조합한 것입니다.
 title: 조작 입문서
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 80c834257e883d3aeb8594001344abd6ef14682c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9051096"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596568"
 ---
 # <a name="interaction-primer"></a>조작 입문서
 
@@ -43,11 +43,11 @@ UWP는 "스마트"한 상황별 상호 작용 시스템을 사용하여 대부�
 
 ### <a name="more-info"></a>추가 정보
 
-[응시 상호 작용 및 눈 추적](gaze-interactions.md)
+[상호 작용 및 시선 추적 gaze](gaze-interactions.md)
 
 ## <a name="surface-dial"></a>Surface Dial
 
-**Windows 10 1주년 업데이트**를 위해 Windows Wheel이라는 새로운 입력 장치 범주가 도입되었습니다. Surface Dial은 이 클래스의 장치에서 제일 첫 번째 장치입니다.
+**Windows 10 1주년 업데이트**를 위해 Windows Wheel이라는 새로운 입력 장치 범주가 도입되었습니다. Surface Dial은 이 장치급에서 제일 첫 번째 장치입니다.
 
 ### <a name="device-support"></a>장치 지원
 
@@ -64,7 +64,7 @@ UWP는 "스마트"한 상황별 상호 작용 시스템을 사용하여 대부�
 
 ## <a name="cortana"></a>Cortana
 
-Windows 10의 **Cortana** 확장성은 사용자의 음성 명령을 처리 하 고 단일 작업을 수행 하는 응용 프로그램을 시작할 수 있습니다.
+Windows 10에서 **Cortana** 확장성을 사용 하면 사용자의 음성 명령을 처리 하 고 단일 작업을 수행 하는 응용 프로그램을 시작 합니다.
 
 ### <a name="device-support"></a>장치 지원
 
@@ -125,7 +125,7 @@ Windows 10의 **Cortana** 확장성은 사용자의 음성 명령을 처리 하 
 
 명령 및 제어는 음성 명령을 사용하여 단추를 클릭하거나 메뉴 항목을 선택하는 등의 컨트롤 및 기능을 활성화하는 것입니다.
 
-성공적인 사용자 환경에서는 명령 및 제어가 중요하므로 단일 입력 유형은 일반적으로 권장되지 않습니다. 음성은 일반적으로 기본 설정이나 하드웨어 기능을 기반으로 사용자에게 제공되는 여러 가지 입력 옵션 중 하나입니다.
+성공적인 사용자 환경에서는 명령 및 제어가 중요하므로 단일 입력 형식은 일반적으로 권장되지 않습니다. 음성은 일반적으로 기본 설정이나 하드웨어 기능을 기반으로 사용자에게 제공되는 여러 가지 입력 옵션 중 하나입니다.
 
 **받아쓰기**
 
@@ -142,7 +142,7 @@ Windows 10의 **Cortana** 확장성은 사용자의 음성 명령을 처리 하 
 
 펜(또는 스타일러스)은 마우스와 같은 픽셀 단위의 정밀성을 지닌 포인팅 장치 역할을 할 수 있으며 디지털 잉크 입력에 최적화된 장치입니다.
 
-**참고**펜 장치의 두 가지가: 활성과 수동 합니다.
+**참고**  펜 장치는 방법은 두 가지가: 활성 및 수동입니다.
   -   수동 펜은 전자 장치를 포함하지 않으며 손가락의 터치식 입력을 효과적으로 에뮬레이트합니다. 접촉 압력을 기반으로 입력을 인식하는 기본 장치 디스플레이가 필요합니다. 사용자가 입력 표면에 무언가를 쓰는 것처럼 손을 두는 경우 입력 데이터가 실패한 팜 거부로 인해 훼손될 수 있습니다.
   -   활성 펜은 전자 장치를 포함하며 복잡한 장치 디스플레이와 함께 작동하여 훨씬 더 광범위한 입력 데이터(가리키기 또는 근접 데이터 포함)를 시스템 및 앱에 제공할 수 있습니다. 팜 거부는 훨씬 더 강력합니다.
 
@@ -234,7 +234,7 @@ Surface Hub 장치는 100개의 고유한 동시 터치 접촉을 인식합니�
 
 키보드는 텍스트를 위한 기본 입력 장치이며, 일반적으로 키보드가 앱을 조작하는 보다 빠르고 효율적인 방법이라고 생각하는 사용자나 일정한 장애가 있는 사람들에게는 필수 도구입니다.
 
-[휴대폰용 Continuum](https://go.microsoft.com/fwlink/p/?LinkID=699431), windows 10 mobile 장치와 호환 가능한, 새로운 환경을 사용 하 여 사용자가 마우스와 키보드는 휴대폰을 노트북 처럼 작동 하도록 하는 휴대폰을 연결할 수 있습니다.
+사용 하 여 [Phone에 대 한 연속](https://go.microsoft.com/fwlink/p/?LinkID=699431), 호환 되는 Windows 10 모바일 장치에 대 한 새로운 환경 사용자 마우스 및 키보드 랩톱 처럼 작동 하 고 휴대폰을 확인 하 고 휴대폰을 연결할 수 있습니다.
 
 ### <a name="device-support"></a>장치 지원
 
@@ -246,7 +246,7 @@ Surface Hub 장치는 100개의 고유한 동시 터치 접촉을 인식합니�
 -   Xbox
 -   HoloLens
 
-![키보드](images/input-interactions/icons-keyboard01.png)
+![Keyboard](images/input-interactions/icons-keyboard01.png)
 
 ### <a name="typical-usage"></a>일반적인 용도
 
@@ -256,7 +256,7 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 
 터치 키보드는 터치식 입력과 함께 텍스트 입력에 사용되는 시각적 가상 키보드입니다. 터치 키보드는 텍스트 입력에만 사용되고(하드웨어 키보드를 에뮬레이트하지 않음) 텍스트 필드나 다른 편집 가능한 텍스트 컨트롤에 포커스가 있을 때만 표시되므로 OSK를 대체하지 않습니다. 터치 키보드는 앱 또는 시스템 명령을 지원하지 않습니다.
 
-**참고**OSK OSK 있는지 표시 되지 않습니다, 터치 키보드 보다 우선 순위가 있습니다.
+**참고**  The OSK 보다 우선 순위가 터치 키보드를 OSK 있는지 표시 되지 않습니다.
 
 일반적으로 키보드는 다음 특징이 있습니다.
 
@@ -267,7 +267,7 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 
 ### <a name="more-info"></a>추가 정보
 
-[키보드 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh972345)
+[바로 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh972345)
  
 
 ## <a name="mouse"></a>마우스

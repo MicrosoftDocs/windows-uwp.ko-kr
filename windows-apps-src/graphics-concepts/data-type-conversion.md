@@ -1,6 +1,6 @@
 ---
 title: 데이터 형식 변환
-description: 다음 섹션 Direct3D가 데이터 형식 간 변환을 처리하는 방법을 설명합니다.
+description: 다음 섹션에서는 Direct3D에서 데이터 형식 간 변환을 처리하는 방법을 설명합니다.
 ms.assetid: B50AB8DE-CAED-465B-B18C-81F3A984B8AC
 keywords:
 - 데이터 형식 변환
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 08c6dda8759a6e1452daf7cf0a3cd3e5db9ea1e6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930524"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57590578"
 ---
 # <a name="data-type-conversion"></a>데이터 형식 변환
 
 
-다음 섹션은 Direct3D가 데이터 형식 간 변환을 처리하는 방법을 설명합니다.
+다음 섹션에서는 Direct3D에서 데이터 형식 간 변환을 처리하는 방법을 설명합니다.
 
 ## <a name="span-iddatatypeterminologyspanspan-iddatatypeterminologyspanspan-iddatatypeterminologyspandata-type-terminology"></a><span id="Data_Type_Terminology"></span><span id="data_type_terminology"></span><span id="DATA_TYPE_TERMINOLOGY"></span>데이터 형식 용어
 
@@ -37,12 +37,12 @@ ms.locfileid: "8930524"
 
 위 용어는 "형식 이름 한정자"로도 자주 사용되며, 데이터가 메모리에 어떻게 배치되는지, 메모리나 셰이더와 같은 파이프라인에서 전송 경로(필터링 포함 가능)에서 어떤 전송이 수행되는지 설명합니다.
 
-## <a name="span-idfloatingpointconversionspanspan-idfloatingpointconversionspanspan-idfloatingpointconversionspanfloating-point-conversion"></a><span id="Floating_Point_Conversion"></span><span id="floating_point_conversion"></span><span id="FLOATING_POINT_CONVERSION"></span>부동 소수점 변환
+## <a name="span-idfloatingpointconversionspanspan-idfloatingpointconversionspanspan-idfloatingpointconversionspanfloating-point-conversion"></a><span id="Floating_Point_Conversion"></span><span id="floating_point_conversion"></span><span id="FLOATING_POINT_CONVERSION"></span>지점 변환 부동
 
 
 부동 소수점이 아닌 표현을 포함하여 서로 다른 표현의 부동 소수점을 변환할 때는 다음 규칙이 적용됩니다.
 
-### <a name="span-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanconververting-from-a-higher-range-representation-to-a-lower-range-representation"></a><span id="Conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="CONVERVERTING_FROM_A_HIGHER_RANGE_REPRESENTATION_TO_A_LOWER_RANGE_REPRESENTATION"></span>높은 범위의 표현에서 낮은 범위의 표현으로 변환
+### <a name="span-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanspan-idconververtingfromahigherrangerepresentationtoalowerrangerepresentationspanconververting-from-a-higher-range-representation-to-a-lower-range-representation"></a><span id="Conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="conververting_from_a_higher_range_representation_to_a_lower_range_representation"></span><span id="CONVERVERTING_FROM_A_HIGHER_RANGE_REPRESENTATION_TO_A_LOWER_RANGE_REPRESENTATION"></span>더 낮은 범위 표현으로 더 높은 범위 표현에서 Conververting
 
 -   다른 부동 소수점 형식으로 변환할 때는 0으로 반올림이 사용됩니다. 대상이 정수나 고정 소수점 형식인 경우, 가장 가까운 짝수로 반올림이 사용됩니다. FLOAT을 가장 가까운 SNORM으로, FLOAT을 UNORM, FLOAT을 SRGB로 반올림하라는 명확한 변환 지침이 있는 경우에는 예외입니다. 다른 예외로는 0으로 반올림하는 ftoi 및 ftou 셰이더 지침이 있습니다. 마지막으로, 부동 소수점에서 고정 소수점으로의 변환은 무한 정밀도 방식으로 마지막 위치 단위에서 측정된 지정된 허용 범위를 가진 텍스처 샘플러 및 래스터라이저에서 사용됩니다.
 -   낮은 범위 대상 형식의 동적 범위보다 큰 원본 값(예: 큰 32비트 부동 소수점 값이 16비트 부동 소수점 RenderTarget으로 기록)의 경우, 최대값 표현(적절한 부호 사용) 값 결과가 사용됩니다. (위에서 설명한 0으로의 반올림 때문에) 부호 있는 무한의 값은 포함되지 않습니다.
@@ -50,10 +50,10 @@ ms.locfileid: "8930524"
 -   더 높은 범위 형식의 INF는 더 낮은 범위 형식을 사용할 수 있을 경우 이 INF로 변환됩니다. 더 낮은 형식에 INF 표현이 없으면 표현 가능한 최대값 표현으로 변환됩니다. 대상 형식에서 사용할 수 있다면 부호는 유지됩니다.
 -   더 높은 범위 형식의 Denorm은 더 낮은 형식으로 변환이 가능할 경우 더 낮은 범위 형식으로 변환됩니다. 그렇지 않으면 결과는 0이 됩니다. 대상 형식에서 사용할 수 있다면 부호 비트는 유지됩니다.
 
-### <a name="span-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanconverting-from-a-lower-range-representation-to-a-higher-range-representation"></a><span id="Converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="CONVERTING_FROM_A_LOWER_RANGE_REPRESENTATION_TO_A_HIGHER_RANGE_REPRESENTATION"></span>더 낮은 범위 표현에서 더 큰 범위 형식으로 변환
+### <a name="span-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanspan-idconvertingfromalowerrangerepresentationtoahigherrangerepresentationspanconverting-from-a-lower-range-representation-to-a-higher-range-representation"></a><span id="Converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="CONVERTING_FROM_A_LOWER_RANGE_REPRESENTATION_TO_A_HIGHER_RANGE_REPRESENTATION"></span>더 낮은 범위의 표현에서 더 높은 범위 표현으로 변환
 
 -   더 낮은 범위 형식의 NaN은 더 높은 범위 형식의 NaN 표현이 있을 경우 더 높은 범위 형식의 NaN 표현으로 변환됩니다. 더 높은 범위 형식에 NaN 표현이 없으면 0으로 변환됩니다.
--   더 낮은 범위 형식의 INF는 더 높은 범위 형식의 INF 표현이 있을 경우 더 높은 범위 형식의 INF 표현으로 변환됩니다. 더 높은 형식에 INF 표현이 없으면 표현할 수 있는 최대값(해당 형식의 MAX\_FLOAT)으로 변환됩니다. 대상 형식에서 사용할 수 있다면 부호는 유지됩니다.
+-   더 낮은 범위 형식의 INF는 더 높은 범위 형식의 INF 표현이 있을 경우 더 높은 범위 형식의 INF 표현으로 변환됩니다. 나타낼 수 있는 최대 값을 변환할가 높은 형식에 대 한 INF 표현이 없으면 (최대\_해당 형식에서 부동). 대상 형식에서 사용할 수 있다면 부호는 유지됩니다.
 -   낮은 범위 형식의 Denorm은 더 높은 범위 형식이 가능할 경우 정규화된 표현으로 변환됩니다. 또는 더 높은 범위 형식의 Denorm 표현이 있을 경우 이로 표현됩니다. 더 높은 범위 형식에 Denorm 표현이 없어 변환에 실패할 경우, 0으로 변환됩니다. 대상 형식에서 사용할 수 있다면 부호는 유지됩니다. 32비트 부동 소수점 숫자는 Denorm 표현 없는 형식으로 계산됩니다(32비트 부동 소수점에 대한 연산에서 Denorm은 부호 있는 0으로 플러시되기 때문).
 
 ## <a name="span-idintegerconversionspanspan-idintegerconversionspanspan-idintegerconversionspaninteger-conversion"></a><span id="Integer_Conversion"></span><span id="integer_conversion"></span><span id="INTEGER_CONVERSION"></span>정수 변환
@@ -170,7 +170,7 @@ ms.locfileid: "8930524"
 <tr class="odd">
 <td align="left">SINT</td>
 <td align="left">더 많은 비트를 가진 UINT</td>
-<td align="left"><p>SINT를 더 많은 비트를 가진 UINT로 변환하려면, 음수인 경우 값은 0으로 고정됩니다. 그렇지 않으면 숫자가 대상 형식의 LSB로 복사되고 추가 MSB는 0으로 채워집니다.</p></td>
+<td align="left"><p>에서 변환할 SINT UINT 자세한 bits를 사용 하 여: 음수 이면 값은 0으로 고정 됩니다. 그렇지 않으면 숫자가 대상 형식의 LSB로 복사되고 추가 MSB는 0으로 채워집니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left">UINT</td>
@@ -187,7 +187,7 @@ ms.locfileid: "8930524"
 
  
 
-## <a name="span-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanfixed-point-integer-conversion"></a><span id="Fixed_Point_Integer_Conversion"></span><span id="fixed_point_integer_conversion"></span><span id="FIXED_POINT_INTEGER_CONVERSION"></span>고정 소수점 정수 변환
+## <a name="span-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanfixed-point-integer-conversion"></a><span id="Fixed_Point_Integer_Conversion"></span><span id="fixed_point_integer_conversion"></span><span id="FIXED_POINT_INTEGER_CONVERSION"></span>고정된 지점 정수로 변환
 
 
 고정 소수점 정수는 간단하게 일부 비트 크기가 고정된 위치에 암시적 소수점이 있는 것입니다.
@@ -234,15 +234,15 @@ ms.locfileid: "8930524"
 <td align="left">고정 소수점 정수</td>
 <td align="left">FLOAT</td>
 <td align="left"><p>특정 고정 소수점 표현이 부동 소수점으로 변환되면 총 24비트의 정보를 포함하지 않으며, 23비트를 넘는 소수 부분이 포함되지 않습니다. i.f 형식(i 비트 정수, f 비트 소수점)인 고정 소수점 숫자 fxp를 가정해 보겠습니다. 부동 소수점으로의 변환은 다음 가상 코드와 유사합니다.</p>
-<p>부동 소수점 결과 = (float) (fxp &gt; &gt; f) + / / 정수 추출</p>
-((float) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); 소수점 추출</td>
+<p>부동 소수점 결과 = (float)(fxp &gt;&gt; f) + // 정수 추출</p>
+((float)(fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); // extract fraction</td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [부록](appendix.md)

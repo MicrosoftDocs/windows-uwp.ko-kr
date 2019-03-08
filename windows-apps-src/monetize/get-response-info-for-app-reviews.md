@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 리뷰 API, 응답 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: 0497b5eec67f9204139cd10d4523b534d6c8779f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8928839"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595558"
 ---
 # <a name="get-response-info-for-reviews"></a>리뷰에 대한 응답 정보 가져오기
 
 앱의 고객 리뷰에 프로그래밍 방식으로 응답하려면 Microsoft Store 리뷰 API에서 이 메서드를 사용하여 먼저 리뷰에 응답할 권한이 있는지 확인할 수 있습니다. 리뷰 응답을 받지 않기로 선택한 고객이 제출한 리뷰에는 응답할 수 없습니다. 리뷰에 응답할 수 있는지 확인한 후 [앱 리뷰에 대한 응답 제출](submit-responses-to-app-reviews.md) 메서드를 사용하여 프로그래밍 방식으로 응답할 수 있습니다.
 
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -38,17 +38,17 @@ ms.locfileid: "8928839"
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 매개 변수        | 유형   | 설명                                     |  필수  |
+| 매개 변수        | 형식   | 설명                                     |  필수  |
 |---------------|--------|--------------------------------------------------|--------------|
-| applicationId | 문자열 | 응답할 수 있는지 확인하려는 리뷰가 포함된 앱의 스토어 ID입니다. 스토어 ID는 파트너 센터의 [앱 id 페이지](../publish/view-app-identity-details.md) 에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
-| reviewId | 문자열 | 응답하려는 리뷰의 ID(GUID)입니다. 리뷰 ID는 Microsoft Store 분석 API의 [앱 리뷰 가져오기](get-app-reviews.md) 메서드의 응답 데이터와 [리뷰 보고서](../publish/reviews-report.md)의 [오프라인 다운로드](../publish/download-analytic-reports.md)에서 사용할 수 있습니다. <br/>이 매개 변수를 생략하면, 이 메서드에 대한 응답 본문에 지정된 앱의 리뷰에 응답할 수 있는 권한이 있는지 표시됩니다. |  아니요  |
+| applicationId | 문자열 | 응답할 수 있는지 확인하려는 리뷰가 포함된 앱의 스토어 ID입니다. Store ID 사용할 수는 [앱 id 페이지](../publish/view-app-identity-details.md) 파트너 센터에서. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
+| reviewId | 문자열 | 응답하려는 리뷰의 ID(GUID)입니다. 리뷰 ID는 Microsoft Store 분석 API의 [앱 리뷰 가져오기](get-app-reviews.md) 메서드의 응답 데이터와 [리뷰 보고서](../publish/reviews-report.md)의 [오프라인 다운로드](../publish/download-analytic-reports.md)에서 사용할 수 있습니다. <br/>이 매개 변수를 생략하면, 이 메서드에 대한 응답 본문에 지정된 앱의 리뷰에 응답할 수 있는 권한이 있는지 표시됩니다. |  아니오  |
 
 
 ### <a name="request-example"></a>요청 예제
@@ -65,7 +65,7 @@ Authorization: Bearer <your access token>
 
 ### <a name="response-body"></a>응답 본문
 
-| 값      | 유형   | 설명    |  
+| 값      | 형식   | 설명    |  
 |------------|--------|-----------------------|
 | CanRespond      | 부울  | **true** 값은 지정된 리뷰에 응답할 수 있거나 지정된 앱에 대한 리뷰에 응답할 권한이 있음을 나타냅니다. 그렇지 않으면 이 값은 **false**입니다.       |
 | DefaultSupportEmail  | 문자열 |  앱의 스토어 목록에 지정된 앱의 [지원 이메일 주소](../publish/enter-app-properties.md#support-contact-info)입니다. 지원 이메일 주소를 지정하지 않으면 이 필드는 비어 있습니다.    |
@@ -84,7 +84,7 @@ Authorization: Bearer <your access token>
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 분석 API를 사용하여 리뷰에 응답 제출](submit-responses-to-app-reviews.md)
+* [Microsoft Store 분석 API를 사용 하 여 리뷰에 대 한 응답을 제출 합니다.](submit-responses-to-app-reviews.md)
 * [파트너 센터를 사용 하 여 고객 리뷰에 응답](../publish/respond-to-customer-reviews.md)
-* [Microsoft Store 서비스를 사용하여 리뷰에 응답](respond-to-reviews-using-windows-store-services.md)
-* [앱 리뷰 가져오기](get-app-reviews.md)
+* [Microsoft Store 서비스를 사용 하 여 리뷰에 응답](respond-to-reviews-using-windows-store-services.md)
+* [앱 검토를 가져오기](get-app-reviews.md)

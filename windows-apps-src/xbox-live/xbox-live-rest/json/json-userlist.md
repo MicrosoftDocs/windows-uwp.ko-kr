@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 46e5323f4eae8e91b61295c4112b5bacfc8a1759
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922296"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57598498"
 ---
 # <a name="userlist-json"></a>UserList(JSON)
-[사용자](json-user.md) 개체의 컬렉션입니다. 
+컬렉션인 [사용자](json-user.md) 개체입니다. 
 <a id="ID4ER"></a>
 
  
@@ -23,9 +23,9 @@ ms.locfileid: "8922296"
  
 UserList 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| 사용자가| [User (JSON)](json-user.md) 의 배열| 아래 JSON 예제를 참조 하세요.| 
+| 사용자| 배열을 [사용자 (JSON)](json-user.md)| 다음 JSON 예제를 참조 하세요.| 
   
 <a id="ID4EPB"></a>
 
@@ -53,8 +53,8 @@ UserList 개체에 다음과 같이 지정 합니다.
 <a id="ID4E1B"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    
