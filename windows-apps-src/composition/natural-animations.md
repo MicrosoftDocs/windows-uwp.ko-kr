@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fde0cbf5335b4f5c3da2f21f692fc2c23455776
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937166"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57630378"
 ---
 # <a name="natural-motion-animations"></a>자연스러운 동작 애니메이션
 
@@ -22,9 +22,9 @@ ms.locfileid: "8937166"
 
 동작을 통해 이러한 연결을 빌드하는 데 기여하는 한 가지 방법은 사용자에게 친숙한 모양과 느낌의 경험을 창출하는 것입니다. 사용자는 실제 경험을 바탕으로 동작이 이루어질 것이라는 무의식적 기대를 품고 있습니다. 우리는 물체가 어떻게 바닥을 가로질러 미끄러지고, 테이블에서 떨어지고, 서로 부딪혀 튕겨 나가고, 스프링 끝에서 진동하는지 관찰합니다. 실제 물리학 법칙을 기반으로 이러한 기대에 부합하는 동작은 더 자연스러워 보입니다. 이렇게 하면 동작이 더 자연스러워지고 반응성도 우수해지지만, 무엇보다 중요한 것은 더욱 매력적이고 즐거운 경험을 선사할 수 있다는 점입니다.
 
-![애니메이션 없이 크기 조정 동작](images/animation/scale-no-animation.gif)
-![큐빅 베지어로 크기 조정 동작](images/animation/scale-cubic-bezier.gif)
-![스프링 애니메이션으로 크기 조정 동작](images/animation/scale-spring.gif)
+![애니메이션 효과 없이 동작 확장](images/animation/scale-no-animation.gif)
+![입방 형 3 차원을 사용 하 여 동작 확장](images/animation/scale-cubic-bezier.gif)
+![스프링 애니메이션을 사용 하 여 동작 확장](images/animation/scale-spring.gif)
 
 그 결과 앱 사용자의 참여도와 보유율이 높아집니다.
 

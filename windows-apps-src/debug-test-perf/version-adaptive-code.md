@@ -7,15 +7,15 @@ keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 ms.localizationpriority: medium
 ms.openlocfilehash: d62ce9abd84a0769a2393db169b8198d3d9f6cec
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921680"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616408"
 ---
 # <a name="version-adaptive-code"></a>버전 적응 코드
 
-[적응 UI를 만드는](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml) 것은 적응 코드 작성과 유사하게 생각할 수 있습니다. 가장 작은 화면에서 실행될 기본 UI를 디자인한 다음 앱이 더 큰 화면에서 실행되고 있음을 감지하면 요소를 이동하거나 추가할 수 있습니다. 적응 코드를 사용하여 최하위 OS 버전에서 실행될 기본 코드를 작성하고, 앱이 새 기능을 사용할 수 있는 상위 버전에서 실행되고 있음을 감지하면 수동으로 선택한 기능을 추가할 수 있습니다.
+[적응 UI를 만드는](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml) 것과 유사하게 적응 코드 작성에 대해 생각할 수 있습니다. 가장 작은 화면에서 실행될 기본 UI를 디자인한 다음 앱이 더 큰 화면에서 실행되고 있음을 감지하면 요소를 이동하거나 추가할 수 있습니다. 적응 코드를 사용하여 최하위 OS 버전에서 실행될 기본 코드를 작성하고, 앱이 새 기능을 사용할 수 있는 상위 버전에서 실행되고 있음을 감지하면 수동으로 선택한 기능을 추가할 수 있습니다.
 
 ApiInformation, API 계약 및 Visual Studio 구성에 대한 중요한 배경 정보는 [버전 적응 앱](version-adaptive-apps.md)을 참조하세요.
 
@@ -71,9 +71,9 @@ ApiInformation, API 계약 및 Visual Studio 구성에 대한 중요한 배경 �
 
 이 섹션에서는 Windows 10, 버전 1607(Windows Insider Preview)에서 새로 추가된 API를 사용하는 적응 코드의 몇 가지를 예제를 보여 줍니다.
 
-### <a name="example-1-new-enum-value"></a>예제 1: 새 열거형 값
+### <a name="example-1-new-enum-value"></a>예 1: 새 열거형 값
 
-Windows 10, 버전 1607에서는 새로운 값인 **ChatWithoutEmoji**를 [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx) 열거형에 추가합니다. 이 새로운 입력 범위는 **Chat** 입력 범위와 동일한 입력 동작을 포함하고 있지만(맞춤법 검사, 자동 완성, 자동 대문자 표시), 이모지 단추가 없는 터치 키보드에 매핑됩니다. 이는 고유한 이모지 선택기를 만들고 터치 키보드에서 기본 제공 이모지 단추를 사용하지 않도록 설정하려는 경우에 유용합니다. 
+Windows 10 버전 1607에 새 값을 추가 합니다 [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx) 열거형: **ChatWithoutEmoji**. 이 새로운 입력 범위는 **Chat** 입력 범위와 동일한 입력 동작을 포함하고 있지만(맞춤법 검사, 자동 완성, 자동 대문자 표시), 이모지 단추가 없는 터치 키보드에 매핑됩니다. 이는 고유한 이모지 선택기를 만들고 터치 키보드에서 기본 제공 이모지 단추를 사용하지 않도록 설정하려는 경우에 유용합니다. 
 
 이 예제에서는 **ChatWithoutEmoji** 열거형 값이 있는지 확인하고 있으면 **TextBox**의 [InputScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.inputscope.aspx) 속성을 설정하는 방법을 보여 줍니다. 이 값이 앱이 실행되는 시스템에 없는 경우 **InputScope**는 대신 **Chat**로 설정됩니다. 표시된 코드는 Page 생성자나 Page.Loaded 이벤트 처리기에 배치될 수 있습니다.
 
@@ -154,13 +154,13 @@ private void messageBox_Loaded(object sender, RoutedEventArgs e)
 
 XAML이나 코드에서 검사 없이 ChatWithoutEmoji 값을 사용하는 경우 이 값이 대상 OS 버전에 있기 때문에 오류 없이 컴파일됩니다. 또한 대상 OS 버전을 사용하는 시스템에서 오류 없이 실행됩니다. 그러나 앱이 최소 OS 버전을 사용하는 시스템에서 실행되는 경우 ChatWithoutEmoji 열거형 값이 없기 때문에 런타임에 작동이 중단됩니다. 따라서 이 값을 코드에서만 사용하고 런타임 API 검사에 래핑하여 현재 시스템에서 지원되는 경우에만 호출되도록 해야 합니다.
 
-### <a name="example-2-new-control"></a>예제 2: 새 컨트롤
+### <a name="example-2-new-control"></a>예 2: 새 컨트롤
 
 일반적으로 새 버전의 Windows에서는 새로운 기능을 플랫폼에 제공하는 새 컨트롤을 UWP API 노출 영역에 제공합니다. 새 컨트롤을 활용하려면 [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) 메서드를 사용합니다.
 
 Windows 10, 버전 1607에서는 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)라는 새로운 미디어 컨트롤을 도입했습니다. 이 컨트롤은 [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx) 클래스를 기반으로 하므로 배경 오디오에 쉽게 연결하는 기능 등을 제공하며 미디어 스택의 향상된 아키텍처를 이용합니다.
 
-그러나 앱이 버전 1607보다 이전 버전의 Windows 10에서 실행되고 있는 디바이스에서 실행되는 경우 새로운 **MediaPlayerElement** 컨트롤 대신 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx) 컨트롤을 사용해야 합니다. [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) 메서드를 사용하여 런타임에 MediaPlayerElement 컨트롤의 존재 여부를 확인할 수 있으며 앱이 실행되고 있는 시스템에 적합한 컨트롤을 로드할 수 있습니다.
+그러나 앱이 버전 1607보다 이전 버전의 Windows 10에서 실행되고 있는 디바이스에서 실행되는 경우 새로운 **MediaPlayerElement** 컨트롤 대신 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx) 컨트롤을 사용해야 합니다. [  **ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) 메서드를 사용하여 런타임에 MediaPlayerElement 컨트롤의 존재 여부를 확인할 수 있으며 앱이 실행되고 있는 시스템에 적합한 컨트롤을 로드할 수 있습니다.
 
 이 예제에서는 MediaPlayerElement 형식의 존재 여부에 따라 새 MediaPlayerElement 또는 이전 MediaElement를 사용하는 앱을 만드는 방법을 보여 줍니다. 이 코드에서는 [UserControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol.aspx) 클래스를 사용하여 컨트롤과 관련 UI 및 코드를 구성 요소화하므로 OS 버전에 따라 이러한 항목을 내부 및 외부로 전환할 수 있습니다. 다른 방법으로, 이 간단한 예제에 필요한 것보다 많은 기능과 사용자 지정 동작을 제공하는 사용자 지정 컨트롤을 사용할 수 있습니다.
  
@@ -267,7 +267,7 @@ namespace MediaApp
 > [!NOTE]
 > `MediaElementUserControl`에 대한 코드 페이지에는 생성된 코드만 포함되어 있으므로 표시되지 않았습니다.
 
-**IsTypePresent에 따라 컨트롤 초기화**
+**IsTypePresent 기준으로 컨트롤을 초기화 합니다.**
 
 런타임에 **ApiInformation.IsTypePresent**를 호출하여 MediaPlayerElement가 있는지 검사합니다. 있으면 `MediaPlayerUserControl`을 로드하고, 없으면 `MediaElementUserControl`을 로드합니다.
 
@@ -303,7 +303,7 @@ public MainPage()
 
 나머지 UI에 영향을 주지 않을 서로 다른 OS 버전 간의 작은 UI 변경(예: 컨트롤의 속성 또는 열거형 값 변경)이 있는 경우에만 적응 코드에 상태 트리거를 사용해야 합니다.
 
-### <a name="example-1-new-property"></a>예제 1: 새 속성
+### <a name="example-1-new-property"></a>예 1: 새 속성
 
 확장 가능한 상태 트리거를 설정하는 첫 번째 단계는 [StateTriggerBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.statetriggerbase.aspx) 클래스를 하위 클래스화하여 API의 존재 여부에 따라 활성화될 사용자 지정 트리거를 만드는 것입니다. 이 예제에서는 속성 존재 여부가 XAML에서 설정된 `_isPresent` 변수와 일치하는 경우 활성화되는 트리거를 보여 줍니다.
 
@@ -371,7 +371,7 @@ Windows 10 버전 1607에서는 [FrameworkElement](https://msdn.microsoft.com/li
 </Grid>
 ```
 
-### <a name="example-2-new-enum-value"></a>예제 2: 새 열거형 값
+### <a name="example-2-new-enum-value"></a>예 2: 새 열거형 값
 
 이 예제에서는 값의 존재 여부에 따라 다른 열거형 값을 설정하는 방법을 보여 줍니다. 이 예제에서는 사용자 지정 상태 트리거를 사용하여 이전 채팅 예제와 동일한 결과를 얻습니다. 이 예제에서는 디바이스에서 Windows 10, 버전 1607이 실행되면 새로운 ChatWithoutEmoji 입력 범위를 사용하고, 그렇지 않으면 **Chat** 입력 범위를 사용합니다. 이 트리거를 사용하는 시각적 상태는 입력 범위가 새 열거형 값의 존재 여부에 따라 선택되는 *if-else* 스타일에서 설정됩니다.
 
@@ -446,4 +446,4 @@ class IsEnumPresentTrigger : StateTriggerBase
 ## <a name="related-articles"></a>관련 문서
 
 - [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-- [Dynamically detecting features with API contracts(API 계약을 사용하여 동적으로 기능 검색)](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [API 계약을 사용 하 여 기능을 동적으로 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)

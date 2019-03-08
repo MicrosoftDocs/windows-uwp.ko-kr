@@ -1,18 +1,18 @@
 ---
-Description: Raw notifications are short, general purpose push notifications.
+Description: 원시 알림은 짧고 일반적인 목적의 알림으로,
 title: 원시 알림 개요
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10 uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 606cc68aafa4de110f034336cd5d18bd1426a0a7
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047355"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57596368"
 ---
 # <a name="raw-notification-overview"></a>원시 알림 개요
 
@@ -55,7 +55,7 @@ ms.locfileid: "9047355"
 
 원시 알림은 앱이 서비스에 직접 연결하여 대량의 데이터를 동기화하거나, 알림 콘텐츠를 기반으로 로컬 상태를 수정하는 등의 동작을 취하도록 트리거하는 짧은 메시지로 사용하기 위한 것입니다. WNS 푸시 알림은 전달이 보장되지 않으므로 앱과 클라우드 서비스에서는 클라이언트가 오프라인인 경우와 같이 원시 알림이 클라이언트에 도달하지 않을 가능성을 고려해야 합니다.
 
-푸시 알림 보내기에 대한 자세한 내용은 [빠른 시작: 푸시 알림 보내기](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)를 참조하세요.
+푸시 알림을 보내는 방법에 대 한 자세한 내용은 참조 하세요. [빠른 시작: 푸시 알림을 보낼](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)합니다.
 
 ## <a name="receiving-a-raw-notification"></a>원시 알림 받기
 
@@ -76,11 +76,11 @@ ms.locfileid: "9047355"
 
 앱이 실행 중이 아니고 [백그라운드 작업](#background-tasks-triggered-by-raw-notifications)을 사용하지 않는 경우에는 WNS에서 해당 앱으로 보내진 원시 알림이 수신되면 삭제합니다. 클라우드 서비스의 리소스를 낭비하지 않으려면 앱이 활성 상태인지 여부를 추적하도록 서비스에 논리를 구현해야 합니다. 이 정보의 원본은 두 가지입니다. 앱은 알림을 받을 준비가 되었음을 명시적으로 서비스에 알릴 수 있고, WNS는 중지해야 할 시점을 서비스에 알릴 수 있습니다.
 
--   **앱이 클라우드 서비스에 알림**: 앱은 서비스에 연결하여 앱이 포그라운드로 실행 중임을 알릴 수 있습니다. 이러한 접근 방식의 단점은 앱이 서비스 연결을 아주 빈번하게 끊을 수 있다는 것입니다. 그러나 앱이 들어오는 원시 알림을 받을 준비가 되었을 때를 항상 서비스가 알게 된다는 장점도 있습니다. 또 다른 장점은 앱이 서비스에 연결되면 서비스가 브로드캐스트가 아닌 해당 앱의 특정 인스턴스에 원시 알림을 보내야 한다는 것을 아는 것입니다.
--   **클라우드 서비스가 WNS 응답 메시지에 응답**: 앱 서비스는 WNS에서 반환된 [X-WNS-NotificationStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_notification) 및 [X-WNS-DeviceConnectionStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_dcs) 정보를 사용하여 앱에 원시 알림 보내기를 언제 중지할지 결정할 수 있습니다. 서비스가 HTTP POST로 채널에 알림을 보내면 응답으로 다음 메시지 중 하나를 받을 수 있습니다.
+-   **앱에 클라우드 서비스에 알립니다**: 앱에는 해당 서비스 응용 프로그램이 포그라운드에서 실행 되 고 있는지를 알리기를 문의할 수 있습니다. 이러한 접근 방식의 단점은 앱이 서비스 연결을 아주 빈번하게 끊을 수 있다는 것입니다. 그러나 앱이 들어오는 원시 알림을 받을 준비가 되었을 때를 항상 서비스가 알게 된다는 장점도 있습니다. 또 다른 장점은 앱이 서비스에 연결되면 서비스가 브로드캐스트가 아닌 해당 앱의 특정 인스턴스에 원시 알림을 보내야 한다는 것을 아는 것입니다.
+-   **클라우드 서비스가 WNS 응답 메시지에 응답** : App service에서 사용할 수는 [WNS-X-notificationstatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_notification) 및 [X-WNS-DeviceConnectionStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_dcs) 앱에 원시 알림 보내기를 중지 하는 시기를 결정 하는 WNS에서 반환 되는 정보입니다. 서비스가 HTTP POST로 채널에 알림을 보내면 응답으로 다음 메시지 중 하나를 받을 수 있습니다.
 
-    -   **X-WNS-NotificationStatus: 삭제**: 클라이언트가 알림을 받지 않았음을 나타냅니다. 사용자의 디바이스에서 더 이상 포그라운드로 실행 중이지 않은 앱에서 **dropped** 응답이 발생되었다고 추정할 수 있습니다.
-    -   **X-WNS-DeviceConnectionStatus: 연결 끊김** 또는 **X-WNS-DeviceConnectionStatus: 일시적 연결**: Windows 클라이언트가 더 이상 WNS에 연결되어 있지 않음을 나타냅니다. WNS에서 이 메시지를 받으려면 알림의 HTTP POST에 [X-WNS-RequestForStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_request) 헤더를 설정하여 요청해야 합니다.
+    -   **WNS-X-notificationstatus: 삭제**: 이 알림을 클라이언트에서 받은 없습니다 것을 나타냅니다. 사용자의 디바이스에서 더 이상 포그라운드로 실행 중이지 않은 앱에서 **dropped** 응답이 발생되었다고 추정할 수 있습니다.
+    -   **X-WNS DeviceConnectionStatus: 연결 끊김** 나 **DeviceConnectionStatus-WNS-X: tempconnected**: Windows 클라이언트에 WNS에 대 한 연결을 더 이상 나타냅니다. WNS에서 이 메시지를 받으려면 알림의 HTTP POST에 [X-WNS-RequestForStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_request) 헤더를 설정하여 요청해야 합니다.
 
     앱의 클라우드 서비스는 이러한 상태 메시지의 정보를 사용하여 원시 알림을 통해 통신을 시도할 수 있습니다. 앱이 포그라운드로 다시 전환되고 서비스와 연결되면 서비스는 원시 알림 보내기를 다시 시작할 수 있습니다.
 
@@ -103,23 +103,23 @@ ms.locfileid: "9047355"
 
 원시 알림을 사용하여 백그라운드 작업을 트리거하려면 앱이 다음 요구 사항을 충족해야 합니다.
 
-1.  [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)를 사용하여 백그라운드에서 작업을 실행할 수 있는 권한(사용자가 언제든지 해지할 수 있는)을 요청합니다.
+1.  [  **BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)를 사용하여 백그라운드에서 작업을 실행할 수 있는 권한(사용자가 언제든지 해지할 수 있는)을 요청합니다.
 2.  백그라운드 작업을 구현해야 합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](../../../launch-resume/support-your-app-with-background-tasks.md)을 참조하세요.
 
 그러면 백그라운드 작업이 앱에 대한 원시 알림이 수신될 때마다 [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger)에 대한 응답으로 호출됩니다. 백그라운드 작업에서 원시 알림의 앱별 페이로드를 해석하고 그에 따른 조치를 취합니다.
 
 각 앱에 대해 한 번에 하나의 백그라운드 작업만 실행할 수 있습니다. 백그라운드 작업이 이미 실행 중인 앱에 대해 백그라운드 작업이 트리거되면 새 백그라운드 작업이 실행되기 전에 첫 번째 백그라운드 작업을 완료해야 합니다.
 
-## <a name="other-resources"></a>기타 리소스
+## <a name="other-resources"></a>다른 리소스
 
 
-Windows 8.1에 대 한 windows 8.1, 및는 [푸시 및 정기 알림 샘플에](https://go.microsoft.com/fwlink/p/?LinkId=231476) 대 한 [원시 알림 샘플](https://go.microsoft.com/fwlink/p/?linkid=241553) 을 다운로드 하 고 windows 10 앱에서 해당 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
+다운로드 하 여 자세히 알아볼 수 있습니다 합니다 [원시 알림 사용 샘플](https://go.microsoft.com/fwlink/p/?linkid=241553) Windows 8.1 대 한 및 [푸시 및 정기 알림 사용 샘플](https://go.microsoft.com/fwlink/p/?LinkId=231476) Windows 8.1 및 Windows 10 앱에서 해당 소스 코드를 다시 사용 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [원시 알림에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh761463)
-* [빠른 시작: 원시 알림 백그라운드 작업 만들기 및 등록](https://msdn.microsoft.com/library/windows/apps/jj676800)
-* [빠른 시작: 실행 중인 앱에 대한 푸시 알림 가로채기](https://msdn.microsoft.com/library/windows/apps/jj709908)
+* [원시 알림에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh761463)
+* [빠른 시작: 만들기 및 원시 알림 백그라운드 작업 등록](https://msdn.microsoft.com/library/windows/apps/jj676800)
+* [빠른 시작: 앱을 실행 하는 것에 대 한 푸시 알림 차단](https://msdn.microsoft.com/library/windows/apps/jj709908)
 * [**RawNotification**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.RawNotification)
 * [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)
  

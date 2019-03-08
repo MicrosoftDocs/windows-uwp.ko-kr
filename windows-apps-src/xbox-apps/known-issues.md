@@ -7,17 +7,17 @@ keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
 ms.openlocfilehash: 01bc72051e9efa69adbbab574b932da829c83e72
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046536"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626638"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
 
 이 항목에서는 Xbox One 개발자 프로그램에서 UWP에 대해 알려진 문제를 설명합니다. 이 프로그램에 대한 자세한 내용은 [Xbox의 UWP](index.md)를 참조하세요. 
 
-\[API 참조 항목 링크를 통해 이 페이지를 방문했으며 유니버설 장치 패밀리 API 정보를 보려는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](https://go.microsoft.com/fwlink/?LinkID=760755)을 참조하세요.\]
+\[여기서는 API 참조 항목의 링크에서 제공 하 고 유니버설 장치 제품군 API 정보를 찾고 있다면 하세요 [Xbox에서 아직 지원 되지 않는 UWP 기능](https://go.microsoft.com/fwlink/?LinkID=760755)합니다.\]
 
 다음 목록에는 발생할 수 있는 몇 가지 알려진 문제가 요약되어 있습니다. 
 
@@ -65,7 +65,7 @@ Xbox One 장치의 UWP(유니버설 Windows 플랫폼) 앱은 범위 [57344, 655
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>WDP로 이동하면 인증서 경고가 표시됨
 
-Xbox One 본체에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알려진 게시자로 간주되지 않으므로 제공된 인증서에 대해 다음 스크린샷과 유사한 경고가 표시됩니다. Windows 장치 포털에 액세스하려면 **이 웹 사이트를 계속 탐색합니다**를 클릭합니다.
+Xbox One 콘솔에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알려진 게시자로 간주되지 않으므로 제공된 인증서에 대해 다음 스크린샷과 유사한 경고가 표시됩니다. Windows Device Portal에 액세스하려면 **이 웹 사이트를 계속 탐색합니다**를 클릭합니다.
 
 ![웹 사이트 보안 인증서 경고](images/security_cert_warning.jpg)
 
@@ -117,4 +117,4 @@ namespace TestDNLA {
 
 ## <a name="see-also"></a>참고 항목
 - [질문과 대답](frequently-asked-questions.md)
-- [Xbox One의 UWP](index.md)
+- [Xbox One에서 UWP](index.md)

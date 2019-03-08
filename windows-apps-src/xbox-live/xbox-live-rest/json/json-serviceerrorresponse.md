@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 86f9389f6f76c1c51955a6c784393e9b05909298
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925421"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57597508"
 ---
 # <a name="serviceerrorresponse-json"></a>ServiceErrorResponse(JSON)
-서비스 오류가 발생 하는 경우 적절 한 HTTP 오류 코드 반환 됩니다. 필요에 따라 서비스 아래에 정의 된 대로 ServiceErrorResponse 개체를 포함할 수도 있습니다. 프로덕션 환경에서 더 적은 데이터가 포함 될 수 있습니다. 
+서비스 오류가 발생 하는 경우 적절 한 HTTP 오류 코드 반환 됩니다. 필요에 따라 서비스 아래에 정의 된 대로 ServiceErrorResponse 개체를 포함할 수도 있습니다. 프로덕션 환경에서는 적은 양의 데이터를 포함할 수 있습니다. 
 <a id="ID4EN"></a>
 
  
@@ -23,10 +23,10 @@ ms.locfileid: "8925421"
  
 ServiceErrorResponse 개체에 다음과 같이 지정 합니다.
  
-| 멤버| 유형| 설명| 
+| 멤버| 형식| 설명| 
 | --- | --- | --- | 
-| <b>오류 코드</b>| 32 비트 부호 있는 정수| (Null 일 수) 오류와 관련 된 코드입니다.| 
-| <b>errorMessage</b>| string| 오류에 대 한 추가 세부 정보입니다.| 
+| <b>errorCode</b>| 32 비트 부호 있는 정수| (Null 일 수) 오류와 관련 된 코드입니다.| 
+| <b>errorMessage</b>| 문자열| 오류에 대 한 추가 세부 정보입니다.| 
   
 <a id="ID4EVB"></a>
 
@@ -51,8 +51,8 @@ ServiceErrorResponse 개체에 다음과 같이 지정 합니다.
 <a id="ID4EAC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[JSON(JavaScript Object Notation) 개체 참조](atoc-xboxlivews-reference-json.md)
+[JavaScript 개체 표기법 (JSON) 개체 참조](atoc-xboxlivews-reference-json.md)
 
    

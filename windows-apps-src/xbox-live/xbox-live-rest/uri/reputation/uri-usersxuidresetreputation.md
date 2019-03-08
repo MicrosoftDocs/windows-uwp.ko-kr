@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c6cd2f28833cdc86fb3fd01bb85890dcb0654901
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8940997"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607528"
 ---
 # <a name="usersxuidxuidresetreputation"></a>/users/xuid({xuid})/resetreputation
-적용 팀을에 지정 된 사용자의 평판 점수에 액세스할 수 있습니다. 이러한 Uri에 대 한 도메인 및 포트 번호는 `reputation.xboxlive.com:10433`.
+적용 팀을 지정된 된 사용자의 신뢰도 점수에 액세스할 수 있습니다. 이러한 Uri에 대 한 도메인 및 포트 번호는 `reputation.xboxlive.com:10433`합니다.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -24,18 +24,18 @@ ms.locfileid: "8940997"
  
 ## <a name="uri-parameters"></a>URI 매개 변수
  
-| 매개 변수| 유형| 설명| 
+| 매개 변수| 형식| 설명| 
 | --- | --- | --- | 
-| xuid| string| Xbox 사용자 ID (XUID) 사용자 지정 합니다.| 
+| xuid| 문자열| Xbox 사용자 ID (XUID) 지정된 된 사용자입니다.| 
   
 <a id="ID4EVB"></a>
 
  
-## <a name="valid-methods"></a>유효한 메서드
+## <a name="valid-methods"></a>올바른 메서드
 
 [POST (/users/xuid({xuid})/resetreputation)](uri-usersxuidresetreputationpost.md)
 
-&nbsp;&nbsp;예를 들어 있는 계정 하이재킹 후 지정 된 사용자의 평판 점수 일부 임의의 값으로 설정 적용 팀을 수 있습니다.
+&nbsp;&nbsp;(예를 들어)는 계정 하이재킹 후 일부 임의 값으로 지정된 된 사용자의 신뢰도 점수를 설정 하려면 적용 팀을 수 있습니다.
  
 <a id="ID4E6B"></a>
 
@@ -45,8 +45,8 @@ ms.locfileid: "8940997"
 <a id="ID4EBC"></a>
 
  
-##### <a name="parent"></a>부모 
+##### <a name="parent"></a>Parent 
 
-[평판 URI](atoc-reference-reputation.md)
+[평판 Uri](atoc-reference-reputation.md)
 
    

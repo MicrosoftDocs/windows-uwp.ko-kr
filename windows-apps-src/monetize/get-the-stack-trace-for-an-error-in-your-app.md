@@ -7,19 +7,19 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류
 ms.localizationpriority: medium
 ms.openlocfilehash: ceffc7622f756eb17c8475208852e013df814554
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929374"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627458"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>앱에서 오류에 대한 스택 추적 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 오류에 대한 스택 추적을 가져올 수 있습니다. 이 메서드는 지난 30일 동안 발생한 앱 오류에 대한 스택 추적만 다운로드할 수 있습니다. 스택 추적 파트너 센터에서 [상태 보고서](../publish/health-report.md) 의 **오류** 섹션에서 사용할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 오류에 대한 스택 추적을 가져올 수 있습니다. 이 메서드는 지난 30일 동안 발생한 앱 오류에 대한 스택 추적만 다운로드할 수 있습니다. 스택 추적에 사용할 수도 있습니다는 **오류** 섹션을 [상태 보고서](../publish/health-report.md) 파트너 센터에서.
 
 이 메서드를 사용하려면 먼저 [앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md) 메서드를 통해 스택 추적을 검색하려는 오류와 연결된 CAB 파일의 ID를 검색해야 합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
@@ -40,16 +40,16 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 오류에 
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 유형   | 설명                                                                 |
+| 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
 | 매개 변수        | 형식   |  설명      |  필수  |
 |---------------|--------|---------------|------|
-| applicationId | 문자열 | 스택 추적을 가져오려는 앱의 스토어 ID입니다. 스토어 ID는 파트너 센터의 [앱 id 페이지](../publish/view-app-identity-details.md) 에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
+| applicationId | 문자열 | 스택 추적을 가져오려는 앱의 스토어 ID입니다. Store ID 사용할 수는 [앱 id 페이지](../publish/view-app-identity-details.md) 파트너 센터에서. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
 | cabId | 문자열 | 스택 추적을 검색하려는 오류와 연결된 CAB 파일의 고유 ID입니다. 이 ID를 가져오려면 [앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md) 메서드를 사용하여 앱에서 특정 오류에 대한 세부 정보를 검색하고 해당 메서드의 응답 본문에 **cabId** 값을 사용합니다. |  예  |
 
  
@@ -67,10 +67,10 @@ Authorization: Bearer <your access token>
 
 ### <a name="response-body"></a>응답 본문
 
-| 값      | 유형    | 설명                  |
+| 값      | 형식    | 설명                  |
 |------------|---------|--------------------------------|
-| 값      | array   | 각각 스택 추적 데이터의 한 프레임을 포함하는 개체 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [스택 추적 값](#stack-trace-values) 섹션을 참조하세요. |
-| @nextLink  | string  | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10으로 설정되어 있지만 쿼리에 대한 오류의 행이 10개보다 많은 경우 이 값이 반환됩니다. |
+| 값      | 배열   | 각각 스택 추적 데이터의 한 프레임을 포함하는 개체 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [스택 추적 값](#stack-trace-values) 섹션을 참조하세요. |
+| @nextLink  | 문자열  | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10으로 설정되어 있지만 쿼리에 대한 오류의 행이 10개보다 많은 경우 이 값이 반환됩니다. |
 | TotalCount | 정수 | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.          |
 
 
@@ -78,12 +78,12 @@ Authorization: Bearer <your access token>
 
 *값* 배열의 요소에는 다음 값이 포함됩니다.
 
-| 값           | 유형    | 설명      |
+| 값           | 형식    | 설명      |
 |-----------------|---------|----------------|
 | level            | 문자열  |  호출 스택에서 이 요소가 나타내는 프레임 번호입니다.  |
 | image   | 문자열  |   이 스택 프레임에서 호출되는 함수를 포함하는 실행 파일 또는 라이브러리 이미지의 이름입니다.           |
 | function | 문자열  |  이 스택 프레임에서 호출된 함수 이름입니다. 이 함수는 앱에 실행 파일 또는 라이브러리의 기호가 포함된 경우에만 사용할 수 있습니다.              |
-| offset     | 문자열  |  함수의 시작 부분을 기준으로 현재 명령의 바이트 오프셋입니다.      |
+| 오프셋     | 문자열  |  함수의 시작 부분을 기준으로 현재 명령의 바이트 오프셋입니다.      |
 
 
 ### <a name="response-example"></a>응답 예제
@@ -121,7 +121,7 @@ Authorization: Bearer <your access token>
 ## <a name="related-topics"></a>관련 항목
 
 * [상태 보고서](../publish/health-report.md)
-* [Microsoft Store 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
+* [Microsoft Store 서비스를 사용 하 여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
 * [오류 보고 데이터 가져오기](get-error-reporting-data.md)
-* [앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)
-* [앱의 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-app.md)
+* [앱에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)
+* [앱에서 오류에 대 한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-app.md)

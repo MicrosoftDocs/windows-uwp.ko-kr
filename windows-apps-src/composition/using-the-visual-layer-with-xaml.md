@@ -1,19 +1,19 @@
 ---
 ms.assetid: b7a4ac8a-d91e-461b-a060-cc6fcea8e778
 title: XAML로 시각적 계층 사용
-description: 시각적 계층 API를 기존 XAML 콘텐츠와 함께 사용하여 고급 애니메이션 및 효과를 만드는 기술을 알아봅니다.
+description: 고급 애니메이션 및 효과를 만드는 데 기존 XAML 콘텐츠와 함께 시각적 계층 API를 사용하기 위한 기술을 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 66b61b9db88392c7ca7370f06fb2150deba7c8c3
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047538"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606828"
 ---
-# <a name="using-the-visual-layer-with-xaml"></a>시각적 계층을 XAML과 함께 사용
+# <a name="using-the-visual-layer-with-xaml"></a>XAML로 시각적 계층 사용
 
 시각적 계층 기능을 사용하는 대부분의 앱은 XAML을 사용하여 기본 UI 콘텐츠를 정의합니다. Windows 10 1주년 업데이트에는 XAML 프레임워크 및 시각적 계층에 대한 새로운 기능이 있으며 이 두 가지 기술을 쉽게 결합하여 매력적인 사용자 환경을 만들 수 있습니다.
 XAML 및 시각적 계층 interop 기능은 XAML API를 단독으로 사용하여 구현할 수 없는 고급 애니메이션 및 효과를 만드는 데 사용할 수 있습니다. 여기에는 다음이 포함됩니다.
@@ -45,12 +45,12 @@ XAML UI 요소 조명을 포함한 조명 사용에 대한 자세한 내용은 [
 
 ## <a name="the-elementcompositionpreview-class"></a>ElementCompositionPreview 클래스
 
-[**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.aspx)는 XAML 및 시각적 계층 interop 기능을 제공하는 정적 클래스입니다. 시각적 계층 및 해당 기능의 개요는 [시각적 계층](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer)을 참조하세요. **ElementCompositionPreview** 클래스는 다음 메서드를 제공합니다.
+[**ElementCompositionPreview** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.aspx) 는 XAML 및 시각적 계층 interop 기능을 제공 하는 정적 클래스입니다. 시각적 계층 및 해당 기능의 개요는 [시각적 계층](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer)을 참조하세요. **ElementCompositionPreview** 클래스는 다음 메서드를 제공합니다.
 
--   [**GetElementVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): 이 요소를 렌더링하는 데 사용할 "핸드아웃" 시각적 개체를 가져옵니다.
--   [**SetElementChildVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual.aspx): 이 요소의 시각적 트리의 마지막 자식으로 "핸드인" 시각적 개체를 설정합니다. 이 시각적 개체는 나머지 요소의 맨 위에 표시됩니다. 
--   [**GetElementChildVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): **SetElementChildVisual**을 사용하여 시각적 개체 설정을 검색합니다.
--   [**GetScrollViewerManipulationPropertySet**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): **ScrollViewer**에서 스크롤 오프셋 기반 60fps 애니메이션을 만드는 데 사용할 수 있는 개체를 가져옵니다.
+-   [**GetElementVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): "유인물"이이 요소를 렌더링 하는 데 사용 되는 시각적 개체 가져오기
+-   [**SetElementChildVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual.aspx): "handin" 마지막 자식으로 Visual이이 요소의 시각적 트리를 설정합니다. 이 시각적 개체는 나머지 요소의 맨 위에 표시됩니다. 
+-   [**GetElementChildVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): 사용 하 여 Visual 집합 검색 **SetElementChildVisual**
+-   [**GetScrollViewerManipulationPropertySet**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): 스크롤 오프셋에 따라 60 fps 애니메이션을 만드는 데 사용할 수 있는 개체를 가져오기는 **ScrollViewer**
 
 ## <a name="remarks-on-elementcompositionpreviewgetelementvisual"></a>ElementCompositionPreview.GetElementVisual에 대한 설명
 
@@ -96,7 +96,7 @@ ElementCompositionPreview.GetElementVisual(MyImage).StartAnimation("Offset", par
 
 ## <a name="getalphamask-methods"></a>**GetAlphaMask** 메서드
 
-[**Image**](https://msdn.microsoft.com/library/windows/apps/br242752), [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 및 [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape)은 회색조 이미지로 요소의 모양을 표시하는 **CompositionBrush**를 반환하는 **GetAlphaMask**라는 메서드를 구현합니다. 이 **CompositionBrush**는 컴퍼지션 **DropShadow**에 대한 입력으로 사용할 수 있으므로 그림자는 사각형 대신 요소의 모양을 반영할 수 있습니다. 이렇게 하면 텍스트, 알파 이미지 및 모양에 대한 정확한 픽셀, 등고선 기반 그림자를 사용할 수 있습니다. 이 API의 예를 보려면 아래의 *그림자*를 참조하세요.
+[**이미지**](https://msdn.microsoft.com/library/windows/apps/br242752)하십시오 [ **TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652), 및 [ **셰이프** ](/uwp/api/Windows.UI.Xaml.Shapes.Shape) 라는 메서드를 구현 하는 각  **GetAlphaMask** 를 반환 하는 **CompositionBrush** 요소의 셰이프를 사용 하 여 회색조 이미지를 나타내는입니다. 이 **CompositionBrush**는 컴퍼지션 **DropShadow**에 대한 입력으로 사용할 수 있으므로 그림자는 사각형 대신 요소의 모양을 반영할 수 있습니다. 이렇게 하면 텍스트, 알파 이미지 및 모양에 대한 정확한 픽셀, 등고선 기반 그림자를 사용할 수 있습니다. 이 API의 예를 보려면 아래의 *그림자*를 참조하세요.
 
 ## <a name="recipes"></a>레시피
 
@@ -362,7 +362,7 @@ private void InitializeFrostedGlass(UIElement glassHost)
 
 ## <a name="additional-resources"></a>추가 리소스
 
-- [시각적 계층 개요](https://msdn.microsoft.com/windows/uwp/composition/visual-layer)
+- [계층에 대 한 시각적 개요](https://msdn.microsoft.com/windows/uwp/composition/visual-layer)
 - [**ElementCompositionPreview** 클래스](https://msdn.microsoft.com/library/windows/apps/mt608976)
 - [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)의 고급 UI 및 Composition 샘플
 - [BasicXamlInterop 샘플](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/BasicXamlInterop)

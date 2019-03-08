@@ -1,20 +1,20 @@
 ---
-title: 투영 변환
+title: 프로젝션 변형
 description: 투영 변환은 카메라의 렌즈를 선택하는 등 카메라 내부를 제어합니다. 해당 기능은 세 개의 변환 유형 중에서 가장 복잡합니다.
 ms.assetid: 378F205D-3800-4477-9820-5EBE6528B14A
 keywords:
-- 투영 변환
+- 프로젝션 변형
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f0806c0aa7a130a080457f4361d17f64451846f9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8931219"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634548"
 ---
-# <a name="projection-transform"></a>투영 변환
+# <a name="projection-transform"></a>프로젝션 변형
 
 
 *프로젝션 변환*은 카메라의 렌즈를 선택하는 등 카메라 내부를 제어합니다. 해당 기능은 세 개의 변환 유형 중에서 가장 복잡합니다.
@@ -29,7 +29,7 @@ ms.locfileid: "8931219"
 
 ![이동 행렬 그림](images/projmat2.png)
 
-이동 행렬을 투영 행렬(T\*P)로 곱하면 다음 그림에서 보듯 복합 투영 행렬이 나옵니다.
+프로젝션 매트릭스에서는 변환 매트릭스 (T\*P) 다음 그림에 나와 있는 것 처럼 복합 프로젝션 매트릭스를 제공 합니다.
 
 ![복합 투영 행렬 그림](images/projmat3.png)
 
@@ -55,7 +55,7 @@ ms.locfileid: "8931219"
 
 어떤 수식을 사용하건 Zₙ를 최대한 큰 값으로 설정해야 합니다. 카메라에 극도로 가까운 z 값은 크게 달라지지 않기 때문입니다. 이렇게 하면 16비트 z 버퍼를 사용하는 깊이 비교가 다소 복잡해집니다.
 
-## <a name="span-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspana-w-friendly-projection-matrix"></a><span id="A_W_Friendly_Projection_Matrix"></span><span id="a_w_friendly_projection_matrix"></span><span id="A_W_FRIENDLY_PROJECTION_MATRIX"></span>w-friendly 투영 행렬
+## <a name="span-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspanspan-idawfriendlyprojectionmatrixspana-w-friendly-projection-matrix"></a><span id="A_W_Friendly_Projection_Matrix"></span><span id="a_w_friendly_projection_matrix"></span><span id="A_W_FRIENDLY_PROJECTION_MATRIX"></span>W 친화적인 투영 행렬을
 
 
 Direct3D는 월드, 보기, 투영 행렬에 의해 변환된 꼭짓점의 w 구성 요소를 사용하여 깊이 버퍼 또는 안개 효과에서 깊이 기반 계산을 수행할 수 있습니다. 이와 같은 계산에서는 투영 행렬이 w를 월드-공간 z와 동등해지도록 정규화해야 합니다. 요컨대 투영 행렬에 1이 아닌 (3,4) 계수가 포함된 경우, 적절한 행렬을 만들기 위해서는 (3.4) 계수의 역수만큼 모든 계수를 확대해야 합니다. 정책 준수 행렬을 제공하지 않으면 안개 효과 및 깊이 버퍼링이 올바로 적용되지 않습니다.
@@ -68,7 +68,7 @@ Direct3D는 월드, 보기, 투영 행렬에 의해 변환된 꼭짓점의 w 구
 
 Direct3D는 w 기반 깊이 계산에 현재 설정된 투영 행렬을 사용합니다. 결과적으로 응용 프로그램은 변형에 Direct3D를 사용하지 않는 경우에도 원하는 w 기반 기능을 받도록 정책 준수 투영 행렬을 설정해야 합니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
 [변환](transforms.md)

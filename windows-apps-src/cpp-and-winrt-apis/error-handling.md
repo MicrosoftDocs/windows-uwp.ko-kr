@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 오류, 처리, 예외
 ms.localizationpriority: medium
 ms.openlocfilehash: c6f7135e85ab63ddfe92bd0de8c656b58fb1a020
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937511"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57626578"
 ---
 # <a name="error-handling-with-cwinrt"></a>C++/WinRT를 통한 오류 처리
 
-이 항목에서는 설명 프로그래밍 하는 경우 오류를 처리 하기 위한 전략 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). 자세한 정보 및 배경은 [오류 및 예외 처리(최신 C++)](/cpp/cpp/errors-and-exception-handling-modern-cpp)를 참조하세요.
+이 항목에서는 설명 프로그래밍 하는 경우 오류를 처리 하기 위한 전략 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)합니다. 자세한 정보 및 배경은 [오류 및 예외 처리(최신 C++)](/cpp/cpp/errors-and-exception-handling-modern-cpp)를 참조하세요.
 
 ## <a name="avoid-catching-and-throwing-exceptions"></a>예외 catch 및 throw 방지
 [예외로부터 안전 코드](/cpp/cpp/how-to-design-for-exception-safety)를 계속 쓰는 것이 좋지만 가능한 한 예외 catch 및 throw를 방지하는 것이 좋습니다. 예외에 대한 처리기가 없는 경우 Windows는 문제의 위치를 추적하는 데 도움이 되는 오류 보고서(크래시 미니덤프 포함)를 자동으로 생성합니다.
@@ -72,10 +72,10 @@ winrt::check_bool(bool{ h });
 winrt::check_bool(::SetEvent(h.get()));
 ```
 
-[**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool)에 전달한 값이 false인 경우 다음 순서의 작업이 발생합니다.
+[  **winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool)에 전달한 값이 false인 경우 다음 순서의 작업이 발생합니다.
 
 - **winrt::check_bool**은 [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error) 함수를 호출합니다.
-- **winrt:: throw_last_error** 호출 스레드의 마지막 오류 코드 값을 검색 하려면 [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360) 호출 하 고 [**winrt:: throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) 함수를 호출 합니다.
+- **winrt::throw_last_error** 호출 [ **GetLastError** ](https://msdn.microsoft.com/library/windows/desktop/ms679360) 호출 스레드의 마지막 오류 코드 값 및 다음 호출을 검색 하는 [ **winrt::throw_ hresult** ](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) 함수입니다.
 - **winrt::throw_hresult**는 오류 코드를 나타내는 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 개체(또는 표준 개체)를 사용하여 예외를 throw합니다.
 
 Windows API가 다양한 반환 값 형식을 사용하여 런타임 오류를 보고하기 때문에 **winrt::check_bool** 외에도 값을 확인하고 예외를 throw하기 위해 유용한 몇 가지 다른 도우미 함수가 있습니다.
@@ -88,7 +88,7 @@ Windows API가 다양한 반환 값 형식을 사용하여 런타임 오류를 �
 일반적인 반환 코드 형식에 대해 이러한 도우미 함수를 사용하거나 모든 오류 조건에 응답하여 [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error) 또는 [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult)를 호출할 수 있습니다. 
 
 ## <a name="throwing-exceptions-when-authoring-an-api"></a>API를 작성할 때 예외 throw
-[Windows 런타임 ABI](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types) 경계를 넘어가는 예외에 대해 유효하지 않기 때문에 구현에서 발생하는 오류 조건이 HRESULT 오류 코드의 형태로 ABI 계층에서 반환됩니다. C++/WinRT를 사용하여 API를 작성하는 경우 구현에서 HRESULT에 *throw한* 모든 예외를 변환할 수 있도록 코드가 생성됩니다. [**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) 함수는 이러한 패턴에서 생성된 코드에서 사용됩니다.
+[Windows 런타임 ABI](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types) 경계를 넘어가는 예외에 대해 유효하지 않기 때문에 구현에서 발생하는 오류 조건이 HRESULT 오류 코드의 형태로 ABI 계층에서 반환됩니다. C++/WinRT를 사용하여 API를 작성하는 경우 구현에서 HRESULT에 *throw한* 모든 예외를 변환할 수 있도록 코드가 생성됩니다. [  **winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) 함수는 이러한 패턴에서 생성된 코드에서 사용됩니다.
 
 ```cppwinrt
 HRESULT DoWork() noexcept
@@ -105,7 +105,7 @@ HRESULT DoWork() noexcept
 }
 ```
 
-[**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult)는 **std::exception**, [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 및 그 파생 형식에서 파생된 예외를 처리합니다. API 소비자가 풍부한 오류 정보를 받을 수 있도록 구현에서 **winrt::hresult_error** 또는 파생 형식을 사용하는 것이 좋습니다. **std::exception**(E_FAIL에 매핑됨)은 표준 템플릿 라이브러리를 사용하여 발생하는 예외에서 지원됩니다.
+[**winrt::to_hresult** ](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) 에서 파생 된 예외 처리 **std:: exception**, 및 [ **winrt::hresult_error** ](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 및 파생된 형식입니다. API 소비자가 풍부한 오류 정보를 받을 수 있도록 구현에서 **winrt::hresult_error** 또는 파생 형식을 사용하는 것이 좋습니다. **std::exception**(E_FAIL에 매핑됨)은 표준 템플릿 라이브러리를 사용하여 발생하는 예외에서 지원됩니다.
 
 ## <a name="assertions"></a>어설션
 응용 프로그램에서 내부 가정에 대해 어설션이 있습니다. 가능한 경우 컴파일 시간 유효성 검사에 대해 **static_assert**를 선호합니다. 런타임 조건의 경우 부울 식으로 WINRT_ASSERT를 사용합니다.
@@ -136,5 +136,5 @@ WINRT_VERIFY_(TRUE, ::CloseHandle(value));
 * [winrt::to_hresult 함수](/uwp/cpp-ref-for-winrt/error-handling/to-hresult)
 
 ## <a name="related-topics"></a>관련 항목
-* [오류 및 예외 처리(최신 C++)](/cpp/cpp/errors-and-exception-handling-modern-cpp)
-* [방법: 예외 안전을 위한 디자인](/cpp/cpp/how-to-design-for-exception-safety)
+* [오류 및 예외 처리 (최신 c + +)](/cpp/cpp/errors-and-exception-handling-modern-cpp)
+* [방법: 예외 안전성을 위한 디자인](/cpp/cpp/how-to-design-for-exception-safety)

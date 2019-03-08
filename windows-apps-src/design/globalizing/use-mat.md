@@ -1,5 +1,5 @@
 ---
-Description: The Multilingual App Toolkit (MAT) 4.0 integrates with Microsoft Visual Studio 2017 to provide UWP apps with translation support, translation file management, and editor tools.
+Description: MAT(다국어 앱 도구 키트) 4.0은 UWP 앱에 번역 지원, 번역 파일 관리 및 편집기 도구를 제공하도록 Microsoft Visual Studio 2017과 통합되어 있습니다.
 title: 다국어 앱 도구 키트 사용
 template: detail.hbs
 ms.date: 01/23/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 74ad832d5516a4fa9bef849c5f691e2909c6c3d4
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047618"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610118"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>다국어 앱 도구 키트 4.0 사용
 
@@ -119,9 +119,9 @@ Visual Studio 2017을 사용하는 경우 두 설치 프로그램을 차례로 �
 
 번역 및 편집 작업을 지역화 업체로 아웃소싱하려면 솔루션 탐색기에서 .xlf 파일을 선택하고 마우스 오른쪽 단추로 클릭한 후 **다국어 앱 도구 키트** > **번역 내보내기...** 를 클릭합니다.
 
-기존 문자열 리소스 대화 상자에서 **출력: 메일 수신자**를 선택하고 확인을 클릭하면 파일이 압축되어 새 이메일에 첨부됩니다. 폴더에 사용할 **출력: 파일 폴더 위치** 브라우저를 택하고 확인을 클릭하고 선택적으로 압축할 파일에 대해 선택한 후 다시 확인을 클릭합니다. 그러면 파일이 압축되고 선택한 위치(프로젝트에 대해 이름이 지정된 새 폴더 내부)에 저장됩니다.
+선택 **출력: 전자 메일로** 클릭 고 내보내기 문자열 리소스 대화 상자에서 확인을 파일 압축 되며 새 전자 메일에 연결 합니다. 선택 **출력: 파일 폴더 위치**, 브라우저 폴더 및 클릭, 필요에 따라 선택, 압축 파일에 대 한 확인 다시 클릭 하 고 파일 수 (압축 및) 프로젝트 라는 새 폴더 내에서 선택한 위치에 저장 합니다.
 
-지역화 업체에서 번역 작업을 완료하고 번역된 .xlf 파일을 사용자에게 전송하면 사용자는 이 파일을 프로젝트에 가져올 수 있습니다. 솔루션 탐색기에서 원하는 .xlf 파일을 선택하고 마우스 오른쪽 단추로 이 파일을 클릭한 다음 **다국어 앱 도구 키트** > **번역 가져오기/재사용...** 을 클릭합니다. **추가**를 클릭하고 .xlf 또는 .zip 파일을 탐색한 후 **가져오기**를 클릭합니다.
+지역화 업체에서 번역 작업을 완료하고 번역된 .xlf 파일을 사용자에게 전송하면 사용자는 이 파일을 프로젝트에 가져올 수 있습니다. 솔루션 탐색기에서 원하는.xlf 파일을 선택 하 고,를 마우스 오른쪽 단추로 클릭, 클릭 **다국어 앱 도구 키트** > **번역 가져오기/재생 하는 중...** . 클릭 **추가**.xlf 또는.zip 파일을로 이동 하 고 클릭 **가져오기**합니다.
 
 **참고** 가져오기 과정에서 가져오기 전에 기본적인 유효성 검사가 실행됩니다. 이렇게 하면 기존 .xlf 파일에서와 일치하도록 파일의 대상 문화권 정보를 가져올 수 있습니다.
 
@@ -152,7 +152,7 @@ Visual Studio 내의 번역 서비스에 액세스하려면 솔루션 탐색기�
 - [Microsoft 언어 포털](https://go.microsoft.com/fwlink/p/?LinkId=330295) 공급자를 통해 Microsoft 제품 및 서비스의 사용자 인터페이스 텍스트 번역을 기반으로 번역을 재사용하고 용어와 일치하는 지원을 받을 수 있습니다.
 - [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220) 공급자를 통해 주문형 기계 번역 서비스를 사용할 수 있습니다.
 
-사용자 및 사용자의 번역자는 다국어 편집기에서 번역 상태를 관리하여 불확실한 번역을 나중에 검토할 수 있습니다. 각 문자열을 상태를 **속성** 탭에서 설정할 수 있습니다. 상태 값으로는 **새 문자열**, **검토 필요**, **번역됨**, **최종** 및 **로그오프됨**이 있습니다. 행 왼쪽의 표시기는 상태를 나타냅니다. 다국어 편집기에서 모든 행이 녹색으로 표시되면 번역 작업이 완료된 것입니다.
+사용자 및 사용자의 번역자는 다국어 편집기에서 번역 상태를 관리하여 불확실한 번역을 나중에 검토할 수 있습니다. 각 문자열의 상태를 설정할 수 있습니다 합니다 **속성** 탭 합니다. 상태 값은 **새**, **검토 해야**를 **번역**를 **최종**, 및 **로그 오프**합니다. 행 왼쪽의 표시기는 상태를 나타냅니다. 다국어 편집기에서 모든 행이 녹색으로 표시되면 번역 작업이 완료된 것입니다.
 
 방금 편집한 .xlf 파일에 상응하는 번역된 문자열이 리소스 파일(.resw)에 복사되도록 프로젝트를 다시 빌드합니다.
 
@@ -162,16 +162,16 @@ Microsoft Store 인증 과정을 시작하기 전에 프로젝트에서 `<projec
 
 ## <a name="related-topics"></a>관련 항목
 
-* [UI와 앱 패키지 매니페스트에 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
+* [UI 및 앱 패키지 매니페스트에 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
 * [세계화 및 지역화](globalizing-portal.md)
-* [세계화 지침](guidelines-and-checklist-for-globalizing-your-app.md)
-* [자신의 앱을 현지화 가능하도록 만들 수 있습니다.](prepare-your-app-for-localization.md)
+* [세계화에 대 한 지침](guidelines-and-checklist-for-globalizing-your-app.md)
+* [앱을 지역화할 수 확인](prepare-your-app-for-localization.md)
 * [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
 
 ## <a name="downloads"></a>다운로드
 
-* [다국어 앱 도구 키트 4.0 .vsix 설치 프로그램](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
-* [다국어 앱 도구 키트 4.0 .msi 설치 프로그램](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit)
+* [다국어 앱 도구 키트 4.0.vsix 설치 관리자](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
+* [다국어 앱 도구 키트 4.0.msi 설치 관리자](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit)
 
 ## <a name="translation-services"></a>번역 서비스
 

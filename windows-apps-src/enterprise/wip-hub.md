@@ -1,5 +1,5 @@
 ---
-Description: This is a hub topic covering the full developer picture of how Windows Information Protection (WIP) relates to files, buffers, clipboard, networking, background tasks, and data protection under lock.
+Description: WIP(Windows Information Protection)가 파일, 버퍼, 클립보드, 네트워킹, 백그라운드 작업 및 잠금 상태의 데이터 보호와 어떤 관계가 있는지를 보여 주는 전체 개발자 그림을 보여 주는 허브 항목입니다.
 MS-HAID: dev\_enterprise.edp\_hub
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -10,15 +10,15 @@ keywords: windows 10, uwp, Windows Information Protection, 엔터프라이즈 �
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
 ms.openlocfilehash: f6938118b3a9041eea27367c3916e94ce34d468e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049500"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595478"
 ---
 # <a name="windows-information-protection-wip"></a>WIP(Windows Information Protection)
 
-__참고__ WIP(Windows Information Protection) 정책을 Windows10 버전 1607에 적용할 수 있습니다.
+__참고__ WIP(Windows Information Protection) 정책을 Windows 10 버전 1607에 적용할 수 있습니다.
 
 WIP는 조직에서 정의한 정책을 적용하여 조직에 속한 데이터를 보호합니다. 앱이 이러한 정책에 포함된 경우 앱에 의해 생성된 모든 데이터에는 정책 제한이 적용됩니다. 이 항목은 사용자의 개인 데이터에 영향을 주지 않고 더욱 원활하게 이러한 정책을 적용하는 앱을 빌드하는 데 도움이 됩니다.
 <iframe src="https://channel9.msdn.com/Blogs/Windows-Development-for-the-Enterprise/Securing-Enterprise-Data-with-Windows-Information-Protection/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
@@ -43,11 +43,11 @@ WIP와 MDM을 함께 사용하면 조직이 관리하는 디바이스에서 데�
 
 > **WIP에 대해 자세히 알아보기** <br>
 * [Windows Information Protection 소개](https://blogs.technet.microsoft.com/windowsitpro/2016/06/29/introducing-windows-information-protection/)
-* [WIP(Windows Information Protection)를 사용하여 엔터프라이즈 데이터 보호](https://technet.microsoft.com/library/dn985838(v=vs.85).aspx)
+* [Windows 정보 보호 (WIP)를 사용 하 여 엔터프라이즈 데이터 보호](https://technet.microsoft.com/library/dn985838(v=vs.85).aspx)
 
 앱이 허용 목록에 있는 경우 앱에 의해 생성된 모든 데이터에는 정책 제한이 적용됩니다. 즉, 관리자가 엔터프라이즈 데이터에 대한 사용자의 액세스를 해지하면 해당 사용자는 앱에서 생성한 모든 데이터에 액세스할 수 없습니다.
 
-엔터프라이즈 용도로만 설계된 앱일 경우에 좋습니다. 사용자의 개인적인 데이터가 생성될 경우 앱이 엔터프라이즈와 개인 데이터를 지능적으로 구별하여 *인식*할 수 있으면 좋을 것입니다. 이러한 앱은 사용자 개인 데이터의 무결성을 유지하면서 엔터프라이즈 정책을 적절하게 적용할 수 있기 때문에 이런 유형의 앱을 *엔터프라이즈 인식*이라고 합니다.
+엔터프라이즈 용도로만 설계된 앱일 경우에 좋습니다. 사용자의 개인적인 데이터가 생성될 경우 앱이 엔터프라이즈와 개인 데이터를 지능적으로 구별하여 *인식*할 수 있으면 좋을 것입니다. 이러한 앱은 사용자 개인 데이터의 무결성을 유지하면서 엔터프라이즈 정책을 적절하게 적용할 수 있기 때문에 이런 유형의 앱을 *엔터프라이즈 지원*이라고 합니다.
 
 ## <a name="create-an-enterprise-enlightened-app"></a>엔터프라이즈 인식 앱 만들기
 
@@ -61,11 +61,11 @@ WIP API를 사용하여 앱을 지원한 다음 엔터프라이즈 인식 앱으
 
 앱을 인식할 준비가 되면 다음 가이드 중 하나를 참조하세요.
 
-**C#을 사용 하 여 작성 하는 유니버설 Windows 플랫폼 (UWP) 앱에 대 한**
+**사용 하 여 작성 하는 유니버설 Windows 플랫폼 (UWP) 앱에 대 한C#**
 
 [WIP(Windows Information Protection) 개발자 가이드](wip-dev-guide.md).
 
-**C++를 사용하여 빌드하는 데스크톱 앱의 경우**
+**C + +를 사용 하 여 작성 하는 데스크톱 앱**
 
 [WIP(Windows Information Protection) 개발자 가이드(C++)](https://go.microsoft.com/fwlink/?LinkId=822192).
 

@@ -11,15 +11,15 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 27adf5bb39a06e24b7d76e272ceb8dcf6348b57e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943841"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57615628"
 ---
 # <a name="bluetooth-rfcomm"></a>Bluetooth RFCOMM
 
-**중요 API**
+**중요 한 Api**
 
 -   [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/Dn263413)
 -   [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529)
@@ -28,11 +28,11 @@ ms.locfileid: "8943841"
 
 ## <a name="overview"></a>개요
 
-[**instantiation**](https://msdn.microsoft.com/library/windows/apps/BR225654) 네임스페이스의 API는 [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) 및 [**enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)을 포함하여 Windows.Devices에 대한 기존 패턴을 기반으로 합니다. 데이터 읽기 및 쓰기는 [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/BR241791) 및 [**established data stream patterns**](https://msdn.microsoft.com/library/windows/apps/BR208119)의 개체를 사용하도록 디자인되었습니다. SDP(Service Discovery Protocol) 특성마다 값과 필요한 형식이 있습니다. 그러나 일부 일반적인 디바이스에 값 형식이 잘못된 SDP 특성이 구현되어 있습니다. 또한 여러 RFCOMM 사용에는 추가 SDP 특성이 필요하지 않습니다. 이러한 이유로, 이 API는 개발자가 필요한 정보를 얻을 수 있는 구분 분석되지 않은 SDP 데이터에 대한 액세스를 제공합니다.
+[  **instantiation**](https://msdn.microsoft.com/library/windows/apps/BR225654) 네임스페이스의 API는 [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) 및 [**enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)을 포함하여 Windows.Devices에 대한 기존 패턴을 기반으로 합니다. 데이터 읽기 및 쓰기는 [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/BR241791) 및 [**established data stream patterns**](https://msdn.microsoft.com/library/windows/apps/BR208119)의 개체를 사용하도록 디자인되었습니다. SDP(Service Discovery Protocol) 특성마다 값과 필요한 형식이 있습니다. 그러나 일부 일반적인 디바이스에 값 형식이 잘못된 SDP 특성이 구현되어 있습니다. 또한 여러 RFCOMM 사용에는 추가 SDP 특성이 필요하지 않습니다. 이러한 이유로, 이 API는 개발자가 필요한 정보를 얻을 수 있는 구분 분석되지 않은 SDP 데이터에 대한 액세스를 제공합니다.
 
 RFCOMM API에는 서비스 식별자 개념이 사용됩니다. 서비스 식별자는 128비트 GUID지만 일반적으로는 16비트 또는 32비트 정수로도 지정됩니다. RFCOMM API는 128비트 GUID는 물론 32비트 정수로도 지정 및 사용할 수 있도록 하는 서비스 식별자용 래퍼를 제공하지만, 16비트 정수는 제공하지 않습니다. 언어가 32비트 정수까지 자동으로 확대되고 식별자가 여전히 올바르게 생성될 수 있으므로 이는 API에 문제가 되지 않습니다.
 
-앱은 백그라운드 작업으로 다단계 장치 작업을 수행할 수 있으므로 앱이 백그라운드로 이동되고 일시 중단된 경우에도 실행을 완료할 수 있습니다. This allows for reliable device servicing such as changes to persistent settings or firmware, and content synchronization, without requiring the user to sit and watch a progress bar. 장치 서비스에는 [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297315)를 사용하고 콘텐츠 동기화에는 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297337)를 사용합니다. 이러한 백그라운드 작업은 앱이 백그라운드에서 실행될 수 있는 시간을 제한하며, 무기한 작업이나 무기한 동기화를 허용하지 않습니다.
+앱은 백그라운드 작업으로 다단계 장치 작업을 수행할 수 있으므로 앱이 백그라운드로 이동되고 일시 중단된 경우에도 실행을 완료할 수 있습니다. 따라서 사용자가 앉아서 진행률 표시기를 지켜보지 않더라도 콘텐츠 동기화와 지속적인 설정 또는 펌웨어 변경 등 신뢰할 수 있는 장치 서비스가 가능합니다. 장치 서비스에는 [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297315)를 사용하고 콘텐츠 동기화에는 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297337)를 사용합니다. 이러한 백그라운드 작업은 앱이 백그라운드에서 실행될 수 있는 시간을 제한하며, 무기한 작업이나 무기한 동기화를 허용하지 않습니다.
 
 RFCOMM 작업에 대해 자세히 설명하는 전체 코드 샘플은 GitHub의 [**Bluetooth Rfcomm 채팅 샘플**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat)(영문)을 참조하세요.  
 
@@ -40,7 +40,7 @@ RFCOMM 작업에 대해 자세히 설명하는 전체 코드 샘플은 GitHub의
 
 파일을 보낼 때 가장 기본적인 시나리오는 원하는 서비스에 따라 연결된 장치에 연결하는 것입니다. 여기에는 다음 단계가 포함됩니다.
 
--   **RfcommDeviceService.GetDeviceSelector\*** 함수를 사용하여 원하는 서비스의 쌍으로 구성된 디바이스 인스턴스를 열거하는 데 사용할 수 있는 AQS 쿼리를 생성할 수 있습니다.
+-   사용 된 **RfcommDeviceService.GetDeviceSelector\***  열거에 사용할 수 있는 AQS 쿼리를 생성 하는 데 유용한 함수가 쌍에 원하는 서비스의 장치 인스턴스.
 -   열거된 디바이스를 선택하고, [**RfcommDeviceService**](https://msdn.microsoft.com/library/windows/apps/Dn263463)를 만들고, 필요에 따라 SDP 특성을 읽습니다([**established data helpers**](https://msdn.microsoft.com/library/windows/apps/BR208119)를 사용하여 특성 데이터 구문 분석).
 -   소켓을 만들고 [**RfcommDeviceService.ConnectionHostName**](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname.aspx) 및 [**RfcommDeviceService.ConnectionServiceName**](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename.aspx) 속성을 사용하여 적절한 매개 변수로 원격 장치 서비스에 [**StreamSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701504)합니다.
 -   설정된 데이터 스트림 패턴을 따라 파일의 데이터 청크를 읽어와 소켓의 [**StreamSocket.OutputStream**](https://msdn.microsoft.com/library/windows/apps/BR226920)을 통해 장치로 보낼 수 있습니다.
@@ -346,7 +346,7 @@ bool IsCompatibleVersion(RfcommDeviceService^ service)
 
 또 다른 일반적인 RFCOMM 앱 시나리오는 PC에서 서비스를 호스팅하고 다른 장치를 위해 이 서비스를 표시하는 것입니다.
 
--   [**RfcommServiceProvider**](https://msdn.microsoft.com/library/windows/apps/Dn263511)를 만들어 원하는 서비스를 보급합니다.
+-   [  **RfcommServiceProvider**](https://msdn.microsoft.com/library/windows/apps/Dn263511)를 만들어 원하는 서비스를 보급합니다.
 -   필요에 따라 [**established data helpers**](https://msdn.microsoft.com/library/windows/apps/BR208119)를 사용하여 특성 데이터를 생성함으로써 SDP 특성을 설정하고 다른 장치에서 검색하도록 SDP 레코드를 알리기 시작합니다.
 -   클라이언트 장치에 연결하기 위해 소켓 수신기를 만들어서 들어오는 연결 요청에 대한 수신 대기를 시작합니다.
 -   연결이 수신되면 향후 처리를 위해 연결된 소켓을 저장합니다.

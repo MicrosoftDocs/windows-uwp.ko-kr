@@ -1,5 +1,5 @@
 ---
-Description: You can programmatically pin your app to the taskbar,  bnd you can check if it's currently pinned.
+Description: 앱을 프로그래밍 방식으로 작업 표시줄에 고정할 수 있으며, 앱이 현재 고정되어 있는지 확인할 수 있습니다.
 title: 작업 표시줄에 앱 고정
 template: detail.hbs
 ms.date: 02/08/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 작업 표시줄, 작업 표시줄 관리자, 작업 표시줄에 고정, 기본 타일
 ms.localizationpriority: medium
 ms.openlocfilehash: 640dc637a1c50718210d87af87cb8b8e706a5ab7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937571"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604098"
 ---
 # <a name="pin-your-app-to-the-taskbar"></a>작업 표시줄에 앱 고정
 
@@ -20,9 +20,9 @@ ms.locfileid: "8937571"
 ![작업 표시줄](images/taskbar/taskbar.png)
 
 > [!IMPORTANT]
-> **Fall Creators Update 필요**: 작업 표시줄 API를 사용하려면 SDK 16299를 대상으로 하고 빌드 16299 이상을 실행하고 있어야 합니다.
+> **Fall Creators Update 필요**: SDK 16299 대상으로 해야 합니다 하 고 빌드 16299 이상을 작업 표시줄 Api를 사용 하 여 실행 합니다.
 
-> **중요 API**: [TaskbarManager 클래스](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager) 
+> **중요 한 Api**: [TaskbarManager 클래스](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager) 
 
 
 ## <a name="when-should-you-ask-the-user-to-pin-your-app-to-the-taskbar"></a>언제 사용자에게 앱을 작업 표시줄에 고정하라고 요청해야 할까요? 
@@ -36,7 +36,7 @@ ms.locfileid: "8937571"
 * 명시적인 사용자 상호 작용이 없거나 앱이 최소화되어 있거나 열려 있지 않은 경우 고정 API를 **호출하지 마세요**.
 
 
-## <a name="1-check-whether-the-required-apis-exist"></a>1. 필요한 API가 있는지 확인
+## <a name="1-check-whether-the-required-apis-exist"></a>1. 필수 Api의 존재 여부를 확인 합니다.
 
 앱에서 이전 버전의 Windows 10을 지원하는 경우 TaskbarManager 클래스를 사용할 수 있는지 확인해야 합니다. [ApiInformation.IsTypePresent 메서드](https://docs.microsoft.com/en-us/uwp/api/windows.foundation.metadata.apiinformation#Windows_Foundation_Metadata_ApiInformation_IsTypePresent_System_String_)를 사용하여 이 확인 작업을 수행할 수 있습니다. TaskbarManager 클래스를 사용할 수 없는 경우 API 호출을 실행하지 마세요.
 
@@ -53,7 +53,7 @@ else
 ```
 
 
-## <a name="2-check-whether-taskbar-is-present-and-allows-pinning"></a>2. 작업 표시줄이 있고 고정이 가능한지 확인
+## <a name="2-check-whether-taskbar-is-present-and-allows-pinning"></a>2. 작업 표시줄 있는지, 그리고 고정 수 있는지 여부를 확인 합니다.
 
 UWP 앱은 다양한 장치에서 실행 가능하지만 모든 장치가 작업 표시줄을 지원하는 것은 아닙니다. 현재는 데스크톱 장치만 작업 표시줄을 지원합니다. 
 
@@ -68,7 +68,7 @@ bool isPinningAllowed = TaskbarManager.GetDefault().IsPinningAllowed;
 > 앱을 작업 표시줄에 고정하지 않고 작업 표시줄을 사용할 수 있는지만 확인하려면 [TaskbarManager.IsSupported 속성](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.IsSupported)을 사용합니다.
 
 
-## <a name="3-check-whether-your-app-is-currently-pinned-to-the-taskbar"></a>3. 앱이 현재 작업 표시줄에 고정되어 있는지 확인
+## <a name="3-check-whether-your-app-is-currently-pinned-to-the-taskbar"></a>3. 앱 작업 표시줄에 현재 고정 되어 있는지 여부를 확인 합니다.
 
 당연한 말이지만, 앱이 이미 작업 표시줄에 고정되어 있는데 사용자에게 앱을 작업 표시줄에 고정하라고 요청하는 것은 아무 의미가 없습니다. 사용자에게 앱을 고정하라고 요청하기 전에 [TaskbarManager.IsCurrentAppPinnedAsync 메서드](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.IsCurrentAppPinnedAsync)를 사용하여 앱이 이미 고정되어 있는지 확인할 수 있습니다.
 
@@ -108,6 +108,6 @@ bool isPinned = await TaskbarManager.GetDefault().RequestPinCurrentAppAsync();
 
 ## <a name="resources"></a>리소스
 
-* [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-pin-to-taskbar)
+* [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-pin-to-taskbar)
 * [TaskbarManager 클래스](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager)
 * [시작 메뉴에 앱 고정](tiles-and-notifications/primary-tile-apis.md)

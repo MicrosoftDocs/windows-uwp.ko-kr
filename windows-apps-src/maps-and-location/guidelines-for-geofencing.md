@@ -1,34 +1,34 @@
 ---
-Description: Follow these best practices for geofencing in your app.
-title: 지오펜싱 앱에 대한 지침
+Description: 앱에서 지오펜스에 대한 다음 모범 사례를 따릅니다.
+title: 지오펜스 앱에 대한 지침
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지오펜싱
 ms.localizationpriority: medium
 ms.openlocfilehash: e3fe7cb84d4ae265ed20a6a74b76e4f08dd4c1dd
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047408"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622478"
 ---
-# <a name="guidelines-for-geofencing-apps"></a>지오펜싱 앱에 대한 지침
+# <a name="guidelines-for-geofencing-apps"></a>지오펜스 앱에 대한 지침
 
 
 
 
-**중요 API**
+**중요 한 Api**
 
--   [**지오펜스 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/dn263587)
--   [**Geolocator 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/br225534)
+-   [**지역 구분 클래스 (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn263587)
+-   [**Geolocator 클래스 (XAML)**](https://msdn.microsoft.com/library/windows/apps/br225534)
 
 앱에서 [**지오펜스**](https://msdn.microsoft.com/library/windows/apps/dn263744)에 대한 다음 모범 사례를 따릅니다.
 
 ## <a name="recommendations"></a>권장 사항
 
 
--   [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587) 이벤트가 발생할 때 앱이 인터넷에 액세스해야 하는 경우 지오펜스를 만들기 전에 인터넷 액세스를 확인합니다.
+-   [  **Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587) 이벤트가 발생할 때 앱이 인터넷에 액세스해야 하는 경우 지오펜스를 만들기 전에 인터넷 액세스를 확인합니다.
     -   앱이 현재 인터넷에 액세스할 수 없으면 지오펜스를 설정하기 전에 인터넷에 연결하라는 메시지를 표시할 수 있습니다.
     -   인터넷에 액세스할 수 없는 경우 지오펜스 위치 확인에 필요한 전원 사용을 방지합니다.
 -   지오펜스 이벤트에 [**Entered**](https://msdn.microsoft.com/library/windows/apps/dn263660) 또는 **Exited** 상태 변경이 표시되면 타임스탬프 및 현재 위치를 확인하여 지오펜스 알림의 관련성을 확인합니다. 자세한 내용은 아래에서 **타임스탬프 및 현재 위치 확인**을 참조하세요.
@@ -36,7 +36,7 @@ ms.locfileid: "9047408"
 -   장치에서 위치 정보에 액세스할 수 없는 경우를 관리하는 예외를 만들고 필요한 경우 사용자에게 알립니다. 사용 권한이 해제되거나, 장치에 GPS 송수신 장치가 없거나, GPS 신호가 차단되거나, Wi-Fi 신호가 약하기 때문에 위치 정보를 사용할 수 없습니다.
 -   일반적으로 포그라운드와 백그라운드에서 동시에 지오펜스 이벤트를 수신 대기할 필요가 없습니다. 그러나 앱에 포그라운드와 백그라운드에서 지오펜스 이벤트를 수신 대기해야 하는 경우 다음을 수행합니다.
 
-    -   [**ReadReports**](https://msdn.microsoft.com/library/windows/apps/dn263633) 메서드를 호출하여 이벤트가 발생했는지 확인합니다.
+    -   [  **ReadReports**](https://msdn.microsoft.com/library/windows/apps/dn263633) 메서드를 호출하여 이벤트가 발생했는지 확인합니다.
     -   앱이 사용자에게 표시되지 않으면 포그라운드 이벤트 수신기를 등록 취소하고 다시 표시될 때 다시 등록합니다.
 
     코드 예제 및 자세한 내용은 [백그라운드 및 포그라운드 수신기](#background-and-foreground-listeners)를 참조하세요.
@@ -127,9 +127,9 @@ GPS가 가장 정확한 위치 정보를 제공할 수 있지만, 지오펜싱�
 ## <a name="related-topics"></a>관련 항목
 
 
-* [지오펜스 설정](https://msdn.microsoft.com/library/windows/apps/mt219702)
-* [현재 위치 가져오기](https://msdn.microsoft.com/library/windows/apps/mt219698)
-* [UWP 위치 샘플(지리적 위치)](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [한 지역 구분 설정](https://msdn.microsoft.com/library/windows/apps/mt219702)
+* [현재 위치를 가져옵니다.](https://msdn.microsoft.com/library/windows/apps/mt219698)
+* [UWP 위치 샘플 (지리적 위치)](https://go.microsoft.com/fwlink/p/?linkid=533278)
  
 
  

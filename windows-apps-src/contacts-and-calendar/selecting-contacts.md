@@ -7,21 +7,21 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c44f05b5d67fe094859ea0eacfb57c0012004d14
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047598"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57606798"
 ---
 # <a name="select-contacts"></a>연락처 선택
 
 
 
-[**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다.
+[  **Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다.
 
 ## <a name="set-up-the-contact-picker"></a>연락처 선택 기능 설정
 
-[**Windows.ApplicationModel.Contacts.ContactPicker**](https://msdn.microsoft.com/library/windows/apps/BR224913) 인스턴스를 만들고 변수에 할당합니다.
+[  **Windows.ApplicationModel.Contacts.ContactPicker**](https://msdn.microsoft.com/library/windows/apps/BR224913) 인스턴스를 만들고 변수에 할당합니다.
 
 ```cs
 var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
@@ -29,7 +29,7 @@ var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
 
 ## <a name="set-the-selection-mode-optional"></a>선택 모드 설정(옵션)
 
-기본적으로 연락처 선택 기능은 사용자가 선택하는 연락처에 대해 사용 가능한 데이터를 모두 검색합니다. [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 사용하면 연락처 선택 기능이 앱에 필요한 데이터 필드만 검색하도록 구성할 수 있습니다. 사용 가능한 연락처 데이터의 하위 집합만 필요한 경우에 이것은 연락처 선택 기능을 더 효율적으로 사용하는 방법입니다.
+기본적으로 연락처 선택 기능은 사용자가 선택하는 연락처에 대해 사용 가능한 데이터를 모두 검색합니다. [  **SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 사용하면 연락처 선택 기능이 앱에 필요한 데이터 필드만 검색하도록 구성할 수 있습니다. 사용 가능한 연락처 데이터의 하위 집합만 필요한 경우에 이것은 연락처 선택 기능을 더 효율적으로 사용하는 방법입니다.
 
 먼저 [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 **Fields**로 설정합니다.
 

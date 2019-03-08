@@ -1,5 +1,5 @@
 ---
-Description: The estimated time to transfer payments, applicable payment thresholds, and Microsoft marketplaces from which you can receive payments can vary depending on your country/region and payout account type.
+Description: 예상 지급 전달 시간, 적용 가능한 지급 임계값 및 지급을 받을 수 있는 Microsoft 마켓플레이스는 국가/지역 및 지급 계좌 형식에 따라 달라질 수 있습니다.
 title: 지급 임계값, 방법 및 기간
 ms.date: 10/18/2018
 ms.topic: article
@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f837674ff9af123c7535e3aea00b632b8b35bfc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932816"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610668"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>지급 임계값, 방법 및 기간
 
@@ -42,7 +42,7 @@ ms.locfileid: "8932816"
 > [!NOTE]
 > 지급 임계값은 여기에서 USD 단위로 표시됩니다. 일부 마켓플레이스에서는 현지 통화로 환산한 동일한 금액이 사용됩니다. 
 
-- [Microsoft Store](#microsoft-store)
+- [Microsoft 스토어](#microsoft-store)
 - [Microsoft Advertising](#microsoft-advertising)
 - [Azure Marketplace](#azure-marketplace)
 - [Office 스토어](#office-store)
@@ -56,11 +56,11 @@ ms.locfileid: "8932816"
     <th colspan="2">지급 계좌 = PayPal</th>
   </tr>
   <tr>
-    <td><strong>국가/지역</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
+    <td><strong>Country/region</strong></td>
+    <td><strong>결제 임계값</strong></td>
+    <td><strong>지불 방법</strong></td>
+    <td><strong>결제 임계값</strong></td>
+    <td><strong>지불 방법</strong></td>
   </tr>
   <tr>
     <td>아프가니스탄</td>
@@ -322,7 +322,7 @@ ms.locfileid: "8932816"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>체코 공화국</td>
+    <td>체코</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>25USD</td>
@@ -371,7 +371,7 @@ ms.locfileid: "8932816"
     <td>해당 없음</td>
   </tr>
   <tr>
-    <td>에리트리아</td>
+    <td>에리트레아</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -847,7 +847,7 @@ ms.locfileid: "8932816"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>르완다</td>
+    <td>Rwanda</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -1118,11 +1118,11 @@ ms.locfileid: "8932816"
     <th colspan="2">지급 계좌 = PayPal</th>
   </tr>
   <tr>
-    <td><strong>국가/지역</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
+    <td><strong>Country/region</strong></td>
+    <td><strong>결제 임계값</strong></td>
+    <td><strong>지불 방법</strong></td>
+    <td><strong>결제 임계값</strong></td>
+    <td><strong>지불 방법</strong></td>
   </tr>
   <tr>
     <td>아프가니스탄</td>
@@ -1384,7 +1384,7 @@ ms.locfileid: "8932816"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>체코 공화국</td>
+    <td>체코</td>
     <td>50 USD</td>
     <td>전신 송금</td>
     <td>50 USD</td>
@@ -1433,7 +1433,7 @@ ms.locfileid: "8932816"
     <td>해당 없음</td>
   </tr>
   <tr>
-    <td>에리트리아</td>
+    <td>에리트레아</td>
     <td>50 USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -1909,7 +1909,7 @@ ms.locfileid: "8932816"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>르완다</td>
+    <td>Rwanda</td>
     <td>50 USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -2180,11 +2180,11 @@ ms.locfileid: "8932816"
     <th colspan="2">지급 계좌 = PayPal</th>
   </tr>
   <tr>
-    <td><strong>국가/지역</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
+    <td><strong>Country/region</strong></td>
+    <td><strong>결제 임계값</strong></td>
+    <td><strong>지불 방법</strong></td>
+    <td><strong>결제 임계값</strong></td>
+    <td><strong>지불 방법</strong></td>
   </tr>
   <tr>
     <td>아프가니스탄</td>
@@ -2439,7 +2439,7 @@ ms.locfileid: "8932816"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>체코 공화국</td>
+    <td>체코</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>25USD</td>
@@ -2488,7 +2488,7 @@ ms.locfileid: "8932816"
     <td>해당 없음</td>
   </tr>
   <tr>
-    <td>에리트리아</td>
+    <td>에리트레아</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -2957,7 +2957,7 @@ ms.locfileid: "8932816"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>르완다</td>
+    <td>Rwanda</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -3227,11 +3227,11 @@ ms.locfileid: "8932816"
     <th colspan="2">지급 계좌 = PayPal</th>
   </tr>
   <tr>
-    <td><strong>국가/지역</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
+    <td><strong>Country/region</strong></td>
+    <td><strong>결제 임계값</strong></td>
+    <td><strong>지불 방법</strong></td>
+    <td><strong>결제 임계값</strong></td>
+    <td><strong>지불 방법</strong></td>
   </tr>
   <tr>
     <td>알바니아</td>
@@ -3465,7 +3465,7 @@ ms.locfileid: "8932816"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>체코 공화국</td>
+    <td>체코</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>25USD</td>
@@ -3507,7 +3507,7 @@ ms.locfileid: "8932816"
     <td>해당 없음</td>
   </tr>
   <tr>
-    <td>에리트리아</td>
+    <td>에리트레아</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -3955,7 +3955,7 @@ ms.locfileid: "8932816"
     <td>해당 없음</td>
   </tr>
   <tr>
-    <td>르완다</td>
+    <td>Rwanda</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>

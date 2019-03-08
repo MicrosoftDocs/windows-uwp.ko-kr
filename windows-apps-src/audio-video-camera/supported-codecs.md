@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 02d8c67c92a070fbeaaab81ef6c5145dec90e411
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8929235"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631358"
 ---
 # <a name="supported-codecs"></a>지원되는 코덱
 
@@ -2749,7 +2749,7 @@ ms.locfileid: "8929235"
 <tr class="even">
 <td align="left">카메라 원시</td>
 <td align="left">D<sup>3</sup></td>
-<td align="left">아니요</td>
+<td align="left">아니오</td>
 </tr>
 </table>
 

@@ -1,17 +1,17 @@
 ---
 title: 순서도-핸들 프로토콜 활성화
-description: Xbox Live 멀티 플레이어 관리자 순서도-핸들 프로토콜 활성화 합니다.
+description: Xbox Live 멀티 플레이 manager 순서도-핸들 프로토콜 활성화 합니다.
 ms.assetid: f375af52-a18d-4845-aae7-0762d8ec0f1e
 ms.date: 04/04/2017
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
+keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: dcce4de4c8b0ff79d65223cbca7a48635d0ce0f0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938347"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57608298"
 ---
 # <a name="flowchart---handle-protocol-activation"></a>순서도-핸들 프로토콜 활성화
 
@@ -19,4 +19,4 @@ ms.locfileid: "8938347"
 
 ## <a name="handle-protocol-activation"></a>프로토콜 활성화 처리
 
-![스마트 매치 메이 킹](../../../images/multiplayer/mpm-on-activation.png)
+![SmartMatch 매치 메이 킹](../../../images/multiplayer/mpm-on-activation.png)

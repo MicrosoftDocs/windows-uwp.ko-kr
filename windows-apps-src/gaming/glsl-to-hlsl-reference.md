@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, glsl, hlsl, opengl, directx, 셰이더
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f468584d995de40ff14df1527ab1df8275c36a8
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938912"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57611168"
 ---
 # <a name="glsl-to-hlsl-reference"></a>GLSL-HLSL 참조
 
@@ -19,15 +19,15 @@ ms.locfileid: "8938912"
 
 [OpenGL ES 2.0에서 Direct3D 11로 그래픽 아키텍처를 포팅](port-from-opengl-es-2-0-to-directx-11-1.md)하여 UWP(유니버설 Windows 플랫폼)용 게임을 만드는 경우 GLSL(OpenGL Shader Language) 코드를 Microsoft HLSL(High Level Shader Language) 코드로 포팅합니다. 여기서 참조되는 GLSL은 OpenGL ES 2.0과 호환됩니다. HLSL은 Direct3D 11과 호환됩니다. Direct3D 11과 Direct3D의 이전 버전과의 차이점에 대한 자세한 내용은 [기능 매핑](feature-mapping.md)을 참조하세요.
 
--   [OpenGL ES 2.0과 Direct3D 11 비교](#comparing-opengl-es-20-with-direct3d-11)
--   [HLSL로 GLSL 변수 포팅](#porting-glsl-variables-to-hlsl)
--   [GLSL 형식을 HLSL로 포팅](#porting-glsl-types-to-hlsl)
--   [GLSL 미리 정의된 전역 변수를 HLSL로 포팅](#porting-glsl-pre-defined-global-variables-to-hlsl)
--   [HLSL로의 GLSL 변수 포팅 예](#examples-of-porting-glsl-variables-to-hlsl)
-    -   [GLSL의 uniform, attribute 및 varying](#uniform-attribute-and-varying-in-glsl)
-    -   [HLSL의 상수 버퍼 및 데이터 전송](#constant-buffers-and-data-transfers-in-hlsl)
--   [Direct3D로의 OpenGL 렌더링 코드 포팅 예](#examples-of-porting-opengl-rendering-code-to-direct3d)
--   [관련 항목](#related-topics)
+-   [OpenGL ES 2.0에서 Direct3D 사용 하 여 비교 11](#comparing-opengl-es-20-with-direct3d-11)
+-   [GLSL 변수 HLSL에 이식](#porting-glsl-variables-to-hlsl)
+-   [GLSL 형식 HLSL에 이식](#porting-glsl-types-to-hlsl)
+-   [HLSL에 전역 변수를 미리 정의 된 GLSL 이식](#porting-glsl-pre-defined-global-variables-to-hlsl)
+-   [GLSL 변수 HLSL 이식 하는 예가](#examples-of-porting-glsl-variables-to-hlsl)
+    -   [균일, 특성 및 GLSL에서 다양 한](#uniform-attribute-and-varying-in-glsl)
+    -   [HLSL에서 상수 버퍼 및 데이터 전송](#constant-buffers-and-data-transfers-in-hlsl)
+-   [Direct3d OpenGL 렌더링 코드 이식의 예](#examples-of-porting-opengl-rendering-code-to-direct3d)
+-   [관련된 항목](#related-topics)
 
 ## <a name="comparing-opengl-es-20-with-direct3d-11"></a>OpenGL ES 2.0과 Direct3D 11 비교
 
@@ -65,7 +65,7 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 <td align="left">셰이더 컴파일이 그래픽 API에 통합되어 있음</td>
 <td align="left">HLSL 컴파일러는 Direct3D가 셰이더를 드라이버에 전달하기 전에 중간 이진 표현으로 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509633">셰이더를 컴파일</a>합니다.
 <div class="alert">
-<strong>참고</strong>이 이진 표현은 하드웨어 독립적입니다. 일반적으로 앱 런타임이 아니라 앱 빌드 시간에 컴파일됩니다.
+<strong>참고</strong>  이 이진 표현은 하드웨어 독립적입니다. 일반적으로 앱 런타임이 아니라 앱 빌드 시간에 컴파일됩니다.
 </div>
 <div>
  
@@ -94,7 +94,7 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 <td align="left">행 중심 행렬(기본값)</td>
 <td align="left">열 중심 행렬(기본값)
 <div class="alert">
-<strong>참고</strong>  <strong>row_major</strong> 형식 한정자를 사용 하 여 한 변수의 레이아웃을 변경 합니다. 자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">변수 구문</a>을 참조하세요. 또한 전역 기본값을 변경하기 위한 pragma나 컴파일러 플래그를 지정할 수 있습니다.
+<strong>참고</strong>    사용 합니다 <strong>row_major</strong> 변수 하나에 대해 레이아웃을 변경 하려면 형식 한정자입니다. 자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">변수 구문</a>을 참조하세요. 또한 전역 기본값을 변경하기 위한 pragma나 컴파일러 플래그를 지정할 수 있습니다.
 </div>
 <div>
  
@@ -109,11 +109,11 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 
  
 
-> **참고**HLSL에서는 텍스처 및 샘플러 별도 객체 두 합니다. Direct3D 9와 마찬가지로, GLSL에서 텍스처 바인딩은 샘플러 상태의 일부입니다.
+> **참고**  질감 및 두 개의 별도 개체로 샘플러 HLSL에 있습니다. Direct3D 9와 마찬가지로, GLSL에서 텍스처 바인딩은 샘플러 상태의 일부입니다.
 
  
 
-GLSL에서 상당수의 OpenGL 상태는 미리 정의된 전역 변수로 표시됩니다. 예를 들어, GLSL에서는 **gl\_Position** 변수를 사용하여 꼭짓점 위치를 지정하고 **gl\_FragColor** 변수를 사용하여 조각 색을 지정합니다. HLSL에서는 Direct3D 상태를 명시적으로 앱 코드에서 셰이더로 전달합니다. 예를 들어, Direct3D와 HLSL을 사용하는 경우 꼭짓점 셰이더에 대한 입력은 꼭짓점 버퍼의 데이터 형식과 일치해야 하고, 앱 코드의 상수 버퍼 구조는 셰이더 코드의 상수 버퍼([cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581)) 구조와 일치해야 합니다.
+GLSL에서 상당수의 OpenGL 상태는 미리 정의된 전역 변수로 표시됩니다. 예를 들어 GLSL를 사용 하면 다음 합니다 **gl\_위치** 꼭 짓 점 위치를 지정 하는 변수 및 **gl\_FragColor** 조각 색을 지정 하는 변수입니다. HLSL에서는 Direct3D 상태를 명시적으로 앱 코드에서 셰이더로 전달합니다. 예를 들어, Direct3D와 HLSL을 사용하는 경우 꼭짓점 셰이더에 대한 입력은 꼭짓점 버퍼의 데이터 형식과 일치해야 하고, 앱 코드의 상수 버퍼 구조는 셰이더 코드의 상수 버퍼([cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581)) 구조와 일치해야 합니다.
 
 ## <a name="porting-glsl-variables-to-hlsl"></a>HLSL로 GLSL 변수 포팅
 
@@ -137,7 +137,7 @@ GLSL에서는 전역 셰이더 변수 선언에 한정자를 적용하여 셰이
 <p>uniform 변수를 앱 코드에서 꼭짓점 셰이더나 조각 셰이더로 전달하거나 두 셰이더 모두에게 전달합니다. 해당 셰이더로 삼각형을 그리기 전에 모든 uniform의 값을 설정해야 하는데, 이렇게 해야만 해당 값이 삼각형 메시를 그리는 내내 동일하게 유지됩니다. 이러한 값은 uniform입니다. 일부 uniform은 전체 프레임에 대해 설정되며, 나머지 다른 uniform은 하나의 특정 꼭짓점-픽셀 셰이더 쌍에 대해 고유하게 설정됩니다.</p>
 <p>uniform 변수는 다각형별 변수입니다.</p></td>
 <td align="left"><p>상수 버퍼를 사용합니다.</p>
-<p><a href="https://msdn.microsoft.com/library/windows/desktop/ff476896">방법: 상수 버퍼 만들기</a> 및 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509581">셰이더 상수</a>를 참조하세요.</p></td>
+<p>참조 <a href="https://msdn.microsoft.com/library/windows/desktop/ff476896">방법: 상수 버퍼를 만들</a> 하 고 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509581">셰이더 상수</a>합니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>varying</strong></p>
@@ -145,9 +145,9 @@ GLSL에서는 전역 셰이더 변수 선언에 한정자를 적용하여 셰이
 <td align="left">꼭짓점 셰이더에서 픽셀 셰이더에 대한 입력으로 반환하는 구조를 사용합니다. 의미 체계 값이 일치하는지 확인합니다.</td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>특성</strong></p>
+<td align="left"><p><strong>attribute</strong></p>
 <p>attribute는 앱 코드에서 꼭짓점 셰이더로만 전달하는 꼭짓점에 대한 설명의 일부입니다. uniform과 달리, 각 꼭짓점에 대해 attribute의 값을 설정합니다. 그러면 각 꼭짓점이 서로 다른 값을 가질 수 있습니다. attribute 변수는 꼭짓점별 변수입니다.</p></td>
-<td align="left"><p>Direct3D 앱 코드에서 꼭짓점 버퍼를 정의하여 꼭짓점 셰이더에 정의되어 있는 꼭짓점 입력에 일치시킵니다. 선택적으로 인덱스 버퍼를 정의합니다. <a href="https://msdn.microsoft.com/library/windows/desktop/ff476899">방법: 꼭짓점 버퍼 만들기</a> 및 <a href="https://msdn.microsoft.com/library/windows/desktop/ff476897">방법: 인덱스 버퍼 만들기</a>를 참조하세요.</p>
+<td align="left"><p>Direct3D 앱 코드에서 꼭짓점 버퍼를 정의하여 꼭짓점 셰이더에 정의되어 있는 꼭짓점 입력에 일치시킵니다. 선택적으로 인덱스 버퍼를 정의합니다. 참조 <a href="https://msdn.microsoft.com/library/windows/desktop/ff476899">방법: 꼭 짓 점 버퍼를 만들</a> 고 <a href="https://msdn.microsoft.com/library/windows/desktop/ff476897">방법: 인덱스 버퍼를 만들</a>합니다.</p>
 <p>Direct3D 앱 코드에서 입력 레이아웃을 만들고 꼭짓점 입력에서 의미 체계 값을 해당 레이아웃에 일치시킵니다. <a href="https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout">입력 레이아웃 만들기</a>를 참조하세요.</p></td>
 </tr>
 <tr class="even">
@@ -213,9 +213,9 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 <tr class="odd">
 <td align="left"><p>행렬 형식</p>
 <ul>
-<li>mat2: 2x2 float 행렬</li>
-<li>mat3: 3x3 float 행렬</li>
-<li>mat4: 4x4 float 행렬</li>
+<li>mat2: 2x2 부동 소수점 행렬</li>
+<li>mat3: float 3x3 매트릭스</li>
+<li>mat4: float 4x4 매트릭스</li>
 </ul></td>
 <td align="left"><p>행렬 형식</p>
 <ul>
@@ -299,7 +299,7 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 <p>이 의미 체계는 <strong>float4</strong> 형식입니다.</p>
 <p>꼭짓점 셰이더 출력</p>
 <p>꼭짓점 위치</p>
-<p>예 - float4 vPosition : SV_Position;</p></td>
+<p>예를 들어 float4 vPosition: SV_Position;</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>gl_PointSize</strong></p>
@@ -321,10 +321,10 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 <p>이 의미 체계는 <strong>float4</strong> 형식입니다.</p>
 <p>픽셀 셰이더 출력</p>
 <p>픽셀 색</p>
-<p>예 - float4 Color[4] : SV_Target;</p></td>
+<p>예를 들어-float4 색 [4]: SV_Target;</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>gl_FragData [n]</strong></p>
+<td align="left"><p><strong>gl_FragData[n]</strong></p>
 <p>이 변수는 <strong>vec4</strong> 형식입니다.</p>
 <p>색 첨부 n의 조각 색</p></td>
 <td align="left"><p>SV_Target[n]</p>
@@ -340,7 +340,7 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 <p>이 의미 체계는 <strong>float4</strong> 형식입니다.</p>
 <p>픽셀 셰이더 입력</p>
 <p>화면 공간 좌표</p>
-<p>예 - float4 screenSpace : SV_Position</p></td>
+<p>예를 들어 float4 screenSpace: SV_Position</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>gl_FrontFacing</strong></p>
@@ -363,7 +363,7 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 <p>VPOS는 <strong>float2</strong> 형식입니다.</p>
 <p>픽셀 셰이더 입력</p>
 <p>화면 공간에서의 픽셀 또는 샘플 위치</p>
-<p>예 - float4 pos : SV_Position</p></td>
+<p>예를 들어 float4 pos: SV_Position</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>gl_FragDepth</strong></p>
@@ -562,7 +562,7 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 ## <a name="related-topics"></a>관련 항목
 
 
-* [OpenGL ES 2.0에서 Direct3D 11로 포팅](port-from-opengl-es-2-0-to-directx-11-1.md)
+* [포트 OpenGL ES 2.0에서에서 direct3d 11](port-from-opengl-es-2-0-to-directx-11-1.md)
 
  
 
