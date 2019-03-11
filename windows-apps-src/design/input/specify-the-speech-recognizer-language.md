@@ -1,5 +1,5 @@
 ---
-Description: Learn how to select an installed language to use for speech recognition.
+Description: 음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다.
 title: 음성 인식기 언어 지정
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
@@ -9,18 +9,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e23cb9c01178640bfa1519d8df369ec76ed2a6c
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046556"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593838"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>음성 인식기 언어 지정
 
 
 음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다.
 
-> **중요 API**: [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251), [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250), [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804)
+> **중요 한 Api**: [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251), [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250), [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804)
 
 
 여기에서는 시스템에 설치된 언어를 열거하고 기본 언어를 확인하고 인식에 다른 언어를 선택합니다.
@@ -45,7 +45,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
 음성 인식기는 해당 기본 인식 언어로 시스템 음성 언어를 사용합니다. 이 언어는 사용자가 장치의 설정 &gt; 시스템 &gt; 음성 &gt; 음성 언어 화면에서 설정합니다.
 
-[**SystemSpeechLanguage**](https://msdn.microsoft.com/library/windows/apps/dn653252) 정적 속성을 확인하여 기본 언어를 식별합니다.
+[  **SystemSpeechLanguage**](https://msdn.microsoft.com/library/windows/apps/dn653252) 정적 속성을 확인하여 기본 언어를 식별합니다.
 
 ```CSharp
 var language = SpeechRecognizer.SystemSpeechLanguage; 
@@ -56,15 +56,15 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 설치된 언어는 장치마다 다를 수 있습니다. 특정 제약 조건 때문에 특정 언어에 의존하는 경우 해당 언어가 있는지 확인해야 합니다.
 
-**참고**새 언어 팩을 설치한 후 부팅이 필요 합니다. 지정된 언어가 지원되지 않거나 설치가 완료되지 않은 경우 오류 코드 SPERR\_NOT\_FOUND(0x8004503a)의 예외가 발생합니다.
+**참고**  새 언어 팩을 설치한 경우 다시 부팅 필요 합니다. SPERR 오류 코드를 사용 하 여 예외\_되지\_찾았습니다 (0x8004503a)는 지정된 된 언어는 지원 되지 않거나 설치를 완료 되지 않았습니다 하는 경우에 발생 합니다.
 
  
 
-[**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 클래스의 다음 두 정적 속성 중 하나를 확인하여 장치에서 지원되는 언어를 확인합니다.
+[  **SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 클래스의 다음 두 정적 속성 중 하나를 확인하여 장치에서 지원되는 언어를 확인합니다.
 
--   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251) - 미리 정의된 받아쓰기 및 웹 검색 문법에서 사용되는 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체의 컬렉션
+-   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)-컬렉션인 [ **언어** ](https://msdn.microsoft.com/library/windows/apps/br206804) 미리 정의 된 받아쓰기 및 웹 검색 문법을 사용 하 여 사용 되는 개체입니다.
 
--   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250) - 목록 제약 조건 또는 SRGS(Speech Recognition Grammar Specification) 파일에서 사용되는 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체의 컬렉션
+-   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)-컬렉션인 [ **언어** ](https://msdn.microsoft.com/library/windows/apps/br206804) 목록 제약 조건 또는 음성 인식 문법 Specification (SRGS) 파일을 사용 하 여 사용 되는 개체입니다.
 
 ## <a name="specify-a-language"></a>언어 지정
 
@@ -86,7 +86,7 @@ var recognizer = new SpeechRecognizer(language);
 
 목록 제약 조건은 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn631421)의 [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 컬렉션에 [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653226)를 추가한 후 [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)를 호출하여 구성합니다. 사용자 지정 목록의 언어를 직접 지정할 수 없습니다. 대신 목록은 인식기의 언어를 사용하여 처리됩니다.
 
-SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412) 클래스에서 나타내는 개방형 표준 XML 형식입니다. 사용자 지정 목록과 달리 SRGS 태그에서 문법의 언어를 지정할 수 있습니다. 인식기가 SRGS 태그와 동일한 언어로 초기화되지 않은 경우 [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)는 **TopicLanguageNotSupported**의 [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433)로 실패합니다.
+SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412) 클래스에서 나타내는 개방형 표준 XML 형식입니다. 사용자 지정 목록과 달리 SRGS 태그에서 문법의 언어를 지정할 수 있습니다. [**CompileConstraintsAsync** ](https://msdn.microsoft.com/library/windows/apps/dn653240) 실패 한 [ **SpeechRecognitionResultStatus** ](https://msdn.microsoft.com/library/windows/apps/dn631433) 의 **TopicLanguageNotSupported** 경우 인식기 SRGS 태그와 같은 언어로에 초기화 되지 않았습니다.
 
 ## <a name="related-articles"></a>관련 문서
 

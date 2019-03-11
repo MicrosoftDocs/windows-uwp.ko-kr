@@ -7,14 +7,14 @@ ms.topic: article
 keywords: windows 10, uwp, 코덱, 인코더, 디코더, 쿼리
 ms.localizationpriority: medium
 ms.openlocfilehash: 4241aad5a01617d6a002c6f5d6da0a4bb1455616
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921577"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57593868"
 ---
 # <a name="query-for-codecs-installed-on-a-device"></a>디바이스에 설치된 코덱에 대한 쿼리
-**[CodecQuery](https://docs.microsoft.com/uwp/api/windows.media.core.codecquery)** 클래스를 통해 현재 디바이스에 설치된 코덱에 대해 쿼리할 수 있습니다. 다른 장치 제품군에 대한 Windows 10에 포함되어 있는 코덱 목록은 [지원되는 코덱](supported-codecs.md)문서에 나열되어 있지만, 사용자와 앱은 추가 코덱을 장치에 설치할 수 있습니다. 따라서 런타임 시 현재 디바이스에서 사용할 수 있는 코덱을 파악하기 위해 코덱 지원에 대한 쿼리를 수행할 수 있습니다.
+ **[CodecQuery](https://docs.microsoft.com/uwp/api/windows.media.core.codecquery)** 클래스를 통해 현재 디바이스에 설치된 코덱에 대해 쿼리할 수 있습니다. 다른 장치 제품군에 대한 Windows 10에 포함되어 있는 코덱 목록은 [지원되는 코덱](supported-codecs.md)문서에 나열되어 있지만, 사용자와 앱은 추가 코덱을 장치에 설치할 수 있습니다. 따라서 런타임 시 현재 디바이스에서 사용할 수 있는 코덱을 파악하기 위해 코덱 지원에 대한 쿼리를 수행할 수 있습니다.
 
 CodecQuery API는 **[Windows.Media.Core](https://docs.microsoft.com/uwp/api/windows.media.core)** 네임스페이스의 구성원이므로 이 네임스페이스를 앱에 포함해야 합니다.
 
@@ -26,7 +26,7 @@ CodecQuery API는 **[Windows.Media.Core](https://docs.microsoft.com/uwp/api/wind
 
 [!code-cs[NewCodecQuery](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetNewCodecQuery)]
 
-**[FindAllAsync](https://docs.microsoft.com/uwp/api/windows.media.core.codecquery.findallasync)** 메서드는 제공된 매개 변수와 일치하는 모든 설치된 코덱을 반환합니다. 이러한 매개 변수는 오디오 또는 비디오 코덱 또는 둘 다에 대해 쿼리하는지 여부를 지정하는 **[CodecKind](https://docs.microsoft.com/uwp/api/windows.media.core.codeckind)** 값, 인코더 또는 디코더에 대해 쿼리하는지 여부를 지정하는 **[CodecCategory](https://docs.microsoft.com/uwp/api/windows.media.core.codeccategory)** 값, 그리고 H.264 비디오 또는 MP3 오디오와 같이 쿼리하는 미디어 인코딩 하위 형식을 나타내는 문자열을 포함합니다.
+ **[FindAllAsync](https://docs.microsoft.com/uwp/api/windows.media.core.codecquery.findallasync)** 메서드는 제공된 매개 변수와 일치하는 모든 설치된 코덱을 반환합니다. 이러한 매개 변수는 오디오 또는 비디오 코덱 또는 둘 다에 대해 쿼리하는지 여부를 지정하는 **[CodecKind](https://docs.microsoft.com/uwp/api/windows.media.core.codeckind)** 값, 인코더 또는 디코더에 대해 쿼리하는지 여부를 지정하는 **[CodecCategory](https://docs.microsoft.com/uwp/api/windows.media.core.codeccategory)** 값, 그리고 H.264 비디오 또는 MP3 오디오와 같이 쿼리하는 미디어 인코딩 하위 형식을 나타내는 문자열을 포함합니다.
 
 하위 형식 값에 대해 빈 문자열 또는 null을 지정하여 모든 하위 형식에 대해 코덱을 반환합니다. 다음 예제는 장치에 설치된 모든 비디오 인코더를 나열합니다.
 
@@ -45,9 +45,9 @@ CodecQuery API는 **[Windows.Media.Core](https://docs.microsoft.com/uwp/api/wind
 ## <a name="related-topics"></a>관련 항목
 
 * [미디어 재생](media-playback.md)
-* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [미디어 파일 코드 변환](transcode-media-files.md)
-* [지원되는 코덱](supported-codecs.md)
+* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [미디어 파일 트랜스 코딩](transcode-media-files.md)
+* [지원 되는 코덱](supported-codecs.md)
  
 
  

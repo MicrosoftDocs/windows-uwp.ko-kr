@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, 게임, 브로드캐스팅
 ms.localizationpriority: medium
 ms.openlocfilehash: c906551fd626dec726498ded9a7995007230504f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930494"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57607588"
 ---
 # <a name="manage-game-broadcasting"></a>게임 브로드캐스팅 관리
 이 문서는 UWP 앱에 대한 게임 브로드캐스팅을 관리하는 방법을 보여 줍니다. 사용자는 Windows에 기본 제공되는 시스템 UI를 사용하여 브로드캐스트를 시작해야 합니다. 하지만 Windows 10 버전 1709부터 앱에서 시스템 브로드캐스팅 UI를 시작하고 브로드캐스팅이 시작 및 중지될 때 알림을 받을 수 있습니다.
 
 ## <a name="add-the-windows-desktop-extensions-for-the-uwp-to-your-app"></a>앱에 UWP용 Windows 데스크톱 확장 추가
-**[Windows.Media.AppBroadcasting](https://docs.microsoft.com/uwp/api/windows.media.appbroadcasting)** 네임스페이스에서 찾을 수 있는 앱 브로드캐스팅을 관리하기 위한 API는 유니버설 API 계약에 포함되지 않습니다. API에 액세스하려면 다음 단계를 따라 앱에 UWP용 Windows 데스크톱 확장에 대한 참조를 앱 추가해야 합니다.
+ **[Windows.Media.AppBroadcasting](https://docs.microsoft.com/uwp/api/windows.media.appbroadcasting)** 네임스페이스에서 찾을 수 있는 앱 브로드캐스팅을 관리하기 위한 API는 유니버설 API 계약에 포함되지 않습니다. API에 액세스하려면 다음 단계를 따라 앱에 UWP용 Windows 데스크톱 확장에 대한 참조를 앱 추가해야 합니다.
 
 1. Visual Studio에서 **솔루션 탐색기**의 UWP 프로젝트를 확장하고 **참조**를 마우스 오른쪽 단추로 클릭하고 **참조 추가...** 를 선택합니다. 
 2. **유니버설 Windows** 노드를 확장하고 **확장**을 선택합니다.
@@ -33,10 +33,10 @@ ms.locfileid: "8930494"
 
 [!code-cpp[CanStartBroadcast](./code/AppBroadcast/cpp/AppBroadcastExampleApp/App.cpp#SnippetCanStartBroadcast)]
 
-**[ShowBroadcastUI](https://docs.microsoft.com/uwp/api/windows.media.appbroadcasting.appbroadcastingui.ShowBroadcastUI)** 를 호출하여 시스템에서 앱 브로드캐스트 UI를 표시하도록 요청합니다.
+ **[ShowBroadcastUI](https://docs.microsoft.com/uwp/api/windows.media.appbroadcasting.appbroadcastingui.ShowBroadcastUI)** 를 호출하여 시스템에서 앱 브로드캐스트 UI를 표시하도록 요청합니다.
 
 > [!NOTE] 
-> **ShowBroadcastUI** 메서드는 시스템의 현재 상태에 따라 성공하지 않을 수 있는 요청을 나타냅니다. 앱은 이 메서드를 호출한 뒤에 브로드캐스트가 시작된 것으로 가정하지 않아야 합니다. **[IsCurrentAppBroadcastingChanged](https://docs.microsoft.com/uwp/api/windows.media.appbroadcasting.appbroadcastingmonitor.IsCurrentAppBroadcastingChanged)** 이벤트를 사용하여 브로드캐스트가 시작하거나 중지할 때 알림을 받을 수 있습니다.
+> **ShowBroadcastUI** 메서드는 시스템의 현재 상태에 따라 성공하지 않을 수 있는 요청을 나타냅니다. 앱은 이 메서드를 호출한 뒤에 브로드캐스트가 시작된 것으로 가정하지 않아야 합니다.  **[IsCurrentAppBroadcastingChanged](https://docs.microsoft.com/uwp/api/windows.media.appbroadcasting.appbroadcastingmonitor.IsCurrentAppBroadcastingChanged)** 이벤트를 사용하여 브로드캐스트가 시작하거나 중지할 때 알림을 받을 수 있습니다.
 
 [!code-cpp[LaunchBroadcastUI](./code/AppBroadcast/cpp/AppBroadcastExampleApp/App.cpp#SnippetLaunchBroadcastUI)]
 

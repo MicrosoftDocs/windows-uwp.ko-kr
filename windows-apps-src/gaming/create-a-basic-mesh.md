@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 메시, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: d3b6717c0b2d9d85e9c81e78fcaa1df1abbea23b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934628"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57595648"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>기본 메시 만들기 및 표시
 
@@ -19,7 +19,7 @@ ms.locfileid: "8934628"
 
 3-D UWP(유니버설 Windows 플랫폼) 게임에서는 대개 다각형을 사용하여 게임의 개체와 표면을 나타냅니다. 이러한 다각형 개체와 표면의 구조로 이루어진 꼭짓점의 목록을 메시라고 합니다. 여기서는 큐브 개체에 대한 기본 메시를 만들고 이를 렌더링 및 표시할 수 있도록 셰이더 파이프라인에 제공해 보겠습니다.
 
-> **중요 한**  형식 (예: directx:: Xmfloat3 and directx:: Xmfloat4x4) 및 인라인 메서드에서는 DirectXMath.h에 선언 된 여기 포함 된 예제 코드를 사용 합니다. 이 코드를 잘라서 붙여넣을 경우 프로젝트에 &lt;DirectXMath.h&gt;를 포함하세요.
+> **중요**    포함 된 예제 코드를 여기 (예: DirectX::XMFLOAT3 및 DirectX::XMFLOAT4X4) 형식과 DirectXMath.h에 선언 된 인라인 메서드를 사용 합니다. 잘라내기 및 붙여넣기이 코드는 경우 \#포함할 &lt;DirectXMath.h&gt; 프로젝트에서.
 
  
 
@@ -30,7 +30,7 @@ ms.locfileid: "8934628"
 
 -   [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh769064)
 
-### <a name="prerequisites"></a>필수 조건
+### <a name="prerequisites"></a>필수 구성 요소
 
 -   선형 대수 및 3D 좌표계에 대한 기본 지식
 -   Visual Studio 2015 또는 이후 Direct3D 템플릿
@@ -46,7 +46,7 @@ ms.locfileid: "8934628"
 <iframe src="https://channel9.msdn.com/Series/Introduction-to-C-and-DirectX-Game-Development/03/player#time=7m39s:paused" width="600" height="338" allowFullScreen frameBorder="0"></iframe>
 
 
-### <a name="step-1-construct-the-mesh-for-the-model"></a>1단계: 모델에 대한 메시 구성
+### <a name="step-1-construct-the-mesh-for-the-model"></a>1단계: 모델에 대 한 메시를 생성 합니다.
 
 대부분의 게임에서 게임 개체의 메시는 특정 꼭짓점 데이터가 포함된 파일에서 로드됩니다. 이러한 꼭짓점의 순서는 앱에 따라 다르지만 대개 줄 모양 또는 부채꼴로 직렬화됩니다. 꼭짓점 데이터는 어떤 소프트웨어 소스에서나 가져올 수 있으며 직접 만들 수도 있습니다. 이 데이터를 꼭짓점 셰이더가 효과적으로 처리할 수 있는 방식으로 해석하는 능력은 게임에 달려 있습니다.
 
@@ -75,7 +75,7 @@ SimpleCubeVertex cubeVertices[] =
 
 따라서 각각 특정 색이 지정된 8개의 꼭짓점이 있습니다. 각 꼭짓점/색 쌍은 이 예제에서 꼭짓점에 대한 전체 데이터입니다. 꼭짓점 버퍼를 지정할 경우 이 특정 레이아웃을 염두에 두어야 합니다. 꼭짓점 셰이더가 꼭짓점 데이터를 잘 해석할 수 있도록 이 입력 레이아웃을 꼭짓점 셰이더에 제공합니다.
 
-### <a name="step-2-set-up-the-input-layout"></a>2단계; 입력 레이아웃 설정
+### <a name="step-2-set-up-the-input-layout"></a>2단계: 입력된 레이아웃 설정
 
 이제 메모리에 꼭짓점 데이터가 있습니다. 그러나 그래픽 장치에는 자체 메모리가 있으므로 Direct3D를 사용하여 꼭짓점 데이터에 액세스합니다. 꼭짓점 데이터를 처리하기 위해 그래픽 장치로 가져오려면 그 방식을 분명히 해야 합니다. 즉, 그래픽 장치가 게임에서 꼭짓점 데이터를 가져올 때 이를 해석할 수 있도록 꼭짓점 데이터가 배치되는 방식을 선언해야 합니다. 이를 위해 [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)를 사용합니다.
 
@@ -100,25 +100,25 @@ m_d3dDevice->CreateInputLayout(
 
 이 코드에서 꼭짓점의 레이아웃, 특히 꼭짓점 목록의 각 요소에 포함된 데이터를 지정합니다. 여기서는 **basicVertexLayoutDesc**에 두 개의 데이터 구성 요소를 지정합니다.
 
--   **POSITION**: 셰이더에 제공되는 위치 데이터의 HLSL 시맨틱입니다. 이 코드에서는 DirectX::XMFLOAT3이며, 더욱 구체적으로는 3D 좌표(x, y, z)에 해당하는 32비트 부동 소수점 값이 3개 있는 구조입니다. 같은 유형의 "w" 좌표를 제공 중인 경우 float4도 사용할 수 있으며, 그런 경우 DXGI\_FORMAT\_R32G32B32A32\_FLOAT를 지정합니다. DirectX::XMFLOAT3과 float4 중 어떤 것을 사용할지는 게임의 특정 요구 사항에 따라 결정합니다. 메시의 꼭짓점 데이터는 개발자가 사용하는 형식에 정확히 일치한다는 것에 유의하세요.
+-   **위치**: 이 HLSL 셰이더를 제공 하는 위치 데이터에 대 한 의미 체계는입니다. 이 코드에서는 DirectX::XMFLOAT3이며, 더욱 구체적으로는 3D 좌표(x, y, z)에 해당하는 32비트 부동 소수점 값이 3개 있는 구조입니다. 유형이 같은 "w" 좌표를 제공 하는 경우 DXGI를 지정 하는 경우는 float4 사용할 수도 있습니다\_형식\_R32G32B32A32\_FLOAT입니다. DirectX::XMFLOAT3과 float4 중 어떤 것을 사용할지는 게임의 특정 요구 사항에 따라 결정합니다. 메시의 꼭짓점 데이터는 개발자가 사용하는 형식에 정확히 일치한다는 것에 유의하세요.
 
     각 좌표 값은 개체의 좌표 공간에서 -1부터 1 사이의 부동 소수점 값으로 나타냅니다. 꼭짓점 셰이더가 완성되면 변환된 꼭짓점은 같은 유형의(원근이 수정된) 보기 투영 공간에 표시됩니다.
 
     "그런데 열거 값이 XYZ가 아니라 RGB를 나타냅니다!" 란 사실을 알아차리셨나요? 색 데이터와 좌표 데이터의 경우 모두 일반적으로 3개 또는 4개의 구성 요소 값을 사용하는데 왜 동일한 형식을 사용하지 않을까요? 셰이더가 데이터를 처리하는 방식을 나타내는 것은 형식 이름이 아니라 HLSL 시맨틱입니다.
 
--   **COLOR**: 색 데이터에 대한 HLSL 시맨틱입니다. **POSITION**과 마찬가지로, 이는 3개의 32비트 부동 소수점 값(DirectX::XMFLOAT3)으로 구성됩니다. 각 값은 0에서 1 사이의 부동 숫자로 표현된 색 구성 요소인 빨강(r), 파랑(b) 또는 녹색(g)을 포함합니다.
+-   **COLOR**: 이 색 데이터에 대 한 의미 체계는 HLSL입니다. **POSITION**과 마찬가지로, 이는 3개의 32비트 부동 소수점 값(DirectX::XMFLOAT3)으로 구성됩니다. 각 값은 0에서 1 사이의 부동 숫자로 표현된 색 구성 요소인 빨강(r), 파랑(b) 또는 녹색(g)을 포함합니다.
 
     **COLOR** 값은 대개 셰이더 파이프라인의 끝에 4-구성 요소 RGBA로 반환됩니다. 이 예제의 경우 모든 픽셀에 대한 셰이더 파이프라인에서 "A" 알파 값은 1.0(최대 불투명도)으로 설정하게 됩니다.
 
-전체 형식 목록을 보려면 [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059)을 참조하세요. 전체 HLSL 시맨틱 목록을 보려면 [시맨틱](https://msdn.microsoft.com/library/windows/desktop/bb509647)을 참조하세요.
+형식의 전체 목록은 참조 하세요 [ **DXGI\_형식**](https://msdn.microsoft.com/library/windows/desktop/bb173059)합니다. 전체 HLSL 시맨틱 목록을 보려면 [시맨틱](https://msdn.microsoft.com/library/windows/desktop/bb509647)을 참조하세요.
 
 Direct3D 장치에서 [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512)을 호출하고 입력 레이아웃을 만듭니다. 이제 실제로 데이터를 보유할 수 있는 버퍼를 만들어야 합니다.
 
-### <a name="step-3-populate-the-vertex-buffers"></a>3단계: 꼭짓점 버퍼 채우기
+### <a name="step-3-populate-the-vertex-buffers"></a>3단계: 꼭 짓 점 버퍼 채우기
 
 꼭짓점 버퍼는 메시에 있는 각 삼각형의 꼭짓점 목록을 포함합니다. 이 목록에서 모든 꼭짓점은 고유해야 합니다. 이 예제에서는 큐브에 대한 8개의 꼭짓점이 있습니다. 꼭짓점 셰이더는 그래픽 장치에서 실행되어 꼭짓점 버퍼에서 읽고, 이전 단계에서 지정한 입력 레이아웃을 기반으로 데이터를 해석합니다.
 
-다음 예제에서는 꼭짓점 데이터의 실제 매핑 및 그래픽 장치의 메모리에서 이를 처리하는 방식에 관해 많은 정보를 Direct3D에 알려 주는 버퍼에 대한 설명과 하위 리소스를 제공합니다. 포함 항목이 없을 수도 있는 일반 [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351)를 사용하므로 이 과정이 필요합니다. [**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) 및 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조는 Direct3D가 버퍼의 각 꼭짓점 요소의 크기와 꼭짓점 목록의 최대 크기를 비롯하여 버퍼의 실제 메모리 레이아웃을 이해하도록 하기 위해 제공됩니다. 여기서 버퍼 메모리에 대한 액세스 및 버퍼 메모리가 이동하는 방법도 제어할 수 있지만 이 내용은 이 자습서의 범위를 벗어납니다.
+다음 예제에서는 꼭짓점 데이터의 실제 매핑 및 그래픽 장치의 메모리에서 이를 처리하는 방식에 관해 많은 정보를 Direct3D에 알려 주는 버퍼에 대한 설명과 하위 리소스를 제공합니다. 포함 항목이 없을 수도 있는 일반 [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351)를 사용하므로 이 과정이 필요합니다. 합니다 [ **D3D11\_버퍼\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) 고 [ **D3D11\_SUBRESOURCE\_데이터** ](https://msdn.microsoft.com/library/windows/desktop/ff476220)구조는 꼭 짓 점 목록의 최대 크기를 비롯 하 여 버퍼에 각 꼭 짓 점 요소의 크기를 포함 하 여 버퍼의 실제 메모리 레이아웃을 이해 하는 Direct3D 되도록 제공 됩니다. 여기서 버퍼 메모리에 대한 액세스 및 버퍼 메모리가 이동하는 방법도 제어할 수 있지만 이 내용은 이 자습서의 범위를 벗어납니다.
 
 버퍼를 구성한 후 [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 호출하여 실제로 버퍼를 만듭니다. 개체가 둘 이상이면 각 고유 모델별로 버퍼를 만듭니다.
 
@@ -153,7 +153,7 @@ m_d3dDevice->CreateBuffer(
 
 ![번호가 매겨진 8개 꼭짓점이 있는 큐브](images/cube-mesh-1.png)
 
-이 예제 큐브에서는 각 변에 대한 6개의 사각형을 만드는 8개의 꼭짓점이 있습니다. 8개의 꼭짓점을 사용하는 총 12개의 삼각형으로 사각형을 분할합니다. 삼각형마다 3개의 꼭짓점이 있으므로 인덱스 버퍼에는 36개의 항목이 있습니다. 이 예제에서 이 인덱스 패턴을 삼각형 목록이라고 하며, primitive 토폴로지를 설정할 때 Direct3D에 **D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLELIST**로 나타냅니다.
+이 예제 큐브에서는 각 변에 대한 6개의 사각형을 만드는 8개의 꼭짓점이 있습니다. 8개의 꼭짓점을 사용하는 총 12개의 삼각형으로 사각형을 분할합니다. 삼각형마다 3개의 꼭짓점이 있으므로 인덱스 버퍼에는 36개의 항목이 있습니다. 예제에서는이 인덱스 패턴 삼각형 목록으로 알려져 있으며 direct3d으로 나타낼 수는 **D3D11\_기본\_토폴로지\_TRIANGLELIST** 기본 토폴로지를 설정 하는 경우.
 
 삼각형이 점과 변을 공유하면 많은 중복이 있으므로 이는 아마 목록 인덱스에 가장 비효율적인 방법일 것입니다. 예를 들어, 삼각형이 마름모 모양에서 변을 공유할 경우 다음과 같이 4개의 꼭짓점에 6개의 인덱스를 나열합니다.
 
@@ -162,7 +162,7 @@ m_d3dDevice->CreateBuffer(
 -   삼각형 1: \[0, 1, 2\]
 -   삼각형 2: \[0, 2, 3\]
 
-줄 모양 또는 부채꼴 토폴로지에서 횡단 중에 중복되는 여러 면을 제거하는 방식으로 꼭짓점의 순서를 지정합니다(예: 이 이미지의 경우 인덱스 0에서 인덱스 2까지의 변). 대형 메시의 경우 이는 꼭짓점 셰이더의 실행 횟수를 대폭 줄이므로 성능이 크게 향상됩니다. 여기서는 편의를 위해 이 삼각형 목록을 계속 사용하겠습니다.
+줄무늬 또는 팬 토폴로지에서 있습니다 순서 (예: 한쪽 인덱스 0으로 이미지의 인덱스 2.) 이동 하는 동안 중복 면 수를 제거 하는 방식으로 꼭 짓 점 대형 메시가 크게 줄어듭니다 꼭 짓 점 셰이더가 실행 되 고 성능이 크게 향상 횟수입니다. 여기서는 편의를 위해 이 삼각형 목록을 계속 사용하겠습니다.
 
 꼭짓점 버퍼에 대한 인덱스를 간단한 삼각형 목록 토폴로지로 선언합니다.
 
@@ -187,11 +187,11 @@ unsigned short cubeIndices[] =
     0, 4, 7 };
 ```
 
-8개의 꼭짓점만 있으면 버퍼에서 36개의 인덱스 요소가 많이 중복됩니다. 이러한 중복 중 일부를 제거하고 줄 모양이나 부채꼴 등, 다른 꼭짓점 목록 형식을 사용하려면 특정 [**D3D11\_PRIMITIVE\_TOPOLOGY**](https://msdn.microsoft.com/library/windows/desktop/ff476189) 값을 [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455) 메서드에 제공할 때 해당 형식을 지정해야 합니다.
+8개의 꼭짓점만 있으면 버퍼에서 36개의 인덱스 요소가 많이 중복됩니다. 특정을 제공 하는 경우 해당 형식을 지정 해야는 중복성의 일부를 제거 하 고 줄무늬가 그려지는 지 또는 팬와 같은 다른 꼭 짓 점 목록 형식을 사용 하려는 경우 [ **D3D11\_기본\_토폴로지** ](https://msdn.microsoft.com/library/windows/desktop/ff476189) 값을 [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) 메서드.
 
 다른 인덱스 목록 기술에 대한 자세한 내용은 [Primitive 토폴로지](https://msdn.microsoft.com/library/windows/desktop/bb205124)를 참조하세요.
 
-### <a name="step-5-create-a-constant-buffer-for-your-transformation-matrices"></a>5단계: 변환 매트릭스에 대한 상수 버퍼 만들기
+### <a name="step-5-create-a-constant-buffer-for-your-transformation-matrices"></a>5단계: 변환 행렬에 대 한 상수 버퍼를 만들려면
 
 꼭짓점 처리를 시작하려면 먼저 처리가 실행될 때 각 꼭짓점에 적용할(곱할) 변환 매트릭스를 제공해야 합니다. 대부분의 3-D 게임에서는 3가지 매트릭스를 사용합니다.
 
@@ -205,7 +205,7 @@ unsigned short cubeIndices[] =
 
 이 예제에서는 변경되지 않는 데이터, 즉, 3개의 매트릭스에 대한 DirectX::XMFLOAT4X4 데이터용 상수 버퍼만 있습니다.
 
-> **참고**  여기에 나온 예제 코드는 열 중심 매트릭스를 사용 합니다. HLSL에서 **row\_major** 키워드 대신 행 중심 매트릭스를 사용할 수 있고, 원본 매트릭스 데이터 또한 열 중심이 되도록 할 수 있습니다. DirectXMath는 행 중심 매트릭스를 사용하며 **row\_major** 키워드로 정의된 HLSL 매트릭스에 직접 사용할 수 있습니다.
+> **참고**    열 중심 행렬을 사용 하 여 여기에 제시 된 예제 코드입니다. 사용 하 여 행 중심 행렬을 대신 사용할 수 있습니다 합니다 **행\_주요** HLSL, 및 원본 행렬 데이터 확인의 키워드 행 중심 이기도 합니다. DirectXMath 행 중심 행렬을 사용 하 고 HLSL 매트릭스를 사용 하 여 정의를 직접 사용할 수는 **행\_주요** 키워드입니다.
 
  
 
@@ -257,7 +257,7 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> **참고**하면 일반적으로 투영 매트릭스를 선언 장치별 리소스를 설정할 때 곱셈 결과가 현재 2-d 뷰포트 크기 매개 변수와 일치 해야 합니다 (픽셀 높이 및 너비를 사용 하 여 해당 되는 디스플레이)입니다. 변경되면 그에 따라 x 및 y 좌표 값을 조정해야 합니다.
+> **참고**  일반적으로 선언 하면 프로젝션 매트릭스 장치 특정 리소스에 설정 된 곱하기의 결과 (해당 하는 경우가 많습니다 픽셀을 사용 하 여 현재 2 차원 뷰포트 크기 매개 변수를 일치 해야 하므로 높이 너비를 표시). 변경되면 그에 따라 x 및 y 좌표 값을 조정해야 합니다.
 
  
 
@@ -312,7 +312,7 @@ m_d3dDeviceContext->IASetIndexBuffer(
 
 이로써 입력 어셈블리가 완료되었습니다. 렌더링을 위한 모든 작업이 끝났습니다. 꼭짓점 셰이더를 계속 진행하겠습니다.
 
-### <a name="step-6-process-the-mesh-with-the-vertex-shader"></a>6단계: 꼭짓점 셰이더를 사용하여 메시 처리
+### <a name="step-6-process-the-mesh-with-the-vertex-shader"></a>6단계: 꼭 짓 점 셰이더를 사용 하 여 메시를 처리 합니다.
 
 이제 메시를 정의하는 꼭짓점이 포함된 꼭짓점 버퍼 및 꼭짓점이 처리되는 순서를 정의하는 인덱스 버퍼가 있습니다. 이를 꼭짓점 셰이더에 보냅니다. 컴파일된 고급 셰이더 언어로 표현되는 꼭짓점 셰이더 코드는 꼭짓점 버퍼의 각 꼭짓점에 대해 한 번 실행되고, 꼭짓점별 변환을 수행할 수 있게 해 줍니다. 최종 결과는 일반적으로 2-D 투영입니다.
 
@@ -381,9 +381,9 @@ PixelShaderInput SimpleVertexShader(VertexShaderInput input)
 
 **PixelShaderInput**은 꼭짓점 셰이더의 기본 함수에서 반환된 데이터 레이아웃을 지정합니다. 꼭짓점 처리를 마치면 2-D 투영 공간의 꼭짓점 위치와 꼭짓점별 조명 효과에 사용된 색을 반환합니다. 그래픽 카드는 셰이더에 의한 데이터 출력을 사용하여 파이프라인의 다음 단계에서 픽셀 셰이더가 실행될 때 색을 지정해야 할 "프래그먼트"(가능한 픽셀)를 계산합니다.
 
-### <a name="step-7-passing-the-mesh-through-the-pixel-shader"></a>7단계: 픽셀 셰이더를 사용하여 메시 전달
+### <a name="step-7-passing-the-mesh-through-the-pixel-shader"></a>7단계: 픽셀 셰이더를 통한 메시를 전달합니다.
 
-일반적으로 그래픽 파이프라인의 이 단계에서는 개체의 보이는 투영 표면에 픽셀별 작업을 수행합니다. (이때 텍스처를 많이 사용합니다.) 샘플 목적이긴 하지만 간단히 이 단계를 거칩니다.
+일반적으로 그래픽 파이프라인의 이 단계에서는 개체의 보이는 투영 표면에 픽셀별 작업을 수행합니다. (텍스처와 마찬가지로 명) 샘플을 위해 간단히 전달이이 단계를 통해.
 
 먼저 픽셀 셰이더의 인스턴스를 만들겠습니다. 픽셀 셰이더는 장면의 2-D 투영에서 모든 픽셀에 대해 실행되며, 해당 픽셀에 색을 지정합니다. 이 경우 꼭짓점 셰이더에서 반환된 픽셀의 색을 직접 전달합니다.
 
@@ -410,9 +410,9 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 
 이 코드를 꼭짓점 셰이더 HLSL과 별개인 HLSL 파일에 넣습니다(예: SimplePixelShader.hlsl). 이 코드는 개발자의 뷰포트에서 보이는 모든 픽셀에 대해 한 번 실행되며(그리고 있는 화면 부분에 대한 메모리 내 표현), 이 경우 전체 화면에 매핑됩니다. 이제 그래픽 파이프라인이 완벽하게 정의되었습니다.
 
-### <a name="step-8-rasterizing-and-displaying-the-mesh"></a>8단계: 메시 래스터 및 표시
+### <a name="step-8-rasterizing-and-displaying-the-mesh"></a>8단계: 래스터화 및 메시를 표시 합니다.
 
-파이프라인을 실행하겠습니다. [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565)를 호출하기만 하면 되므로 쉽습니다.
+파이프라인을 실행하겠습니다. [  **ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565)를 호출하기만 하면 되므로 쉽습니다.
 
 큐브를 그리세요.
 
@@ -447,7 +447,7 @@ m_swapChain->Present(1, 0);
 ## <a name="related-topics"></a>관련 항목
 
 
-* [DirectX 게임에 리소스를 로드하는 방법](load-a-game-asset.md)
+* [DirectX 게임에서 리소스를 로드 하는 방법](load-a-game-asset.md)
 
  
 

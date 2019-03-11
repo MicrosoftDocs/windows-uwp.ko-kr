@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: 96e308793e60c0367c712fb93a5d25a056397568
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927178"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57653238"
 ---
 # <a name="customize-the-print-workflow"></a>인쇄 워크플로 사용자 지정
 
@@ -22,7 +22,7 @@ WSDA의 경우와 마찬가지로 소스 응용 프로그램 사용자가 무언
 
 백그라운드 및 포그라운드 구성 요소와 관련되어 있고, 다른 앱과 기능적으로 결합되어 있기 때문에 인쇄 워크플로 앱은 다른 범주의 UWP 앱보다 구현이 더 복잡할 수 있습니다. 다양한 기능을 구현하는 방법을 보다 잘 이해하려면 이 가이드의 [워크플로 앱 샘플](https://github.com/Microsoft/print-oem-samples)을 살펴보는 것이 좋습니다. 간결함을 위해 다양한 오류 검사 및 UI 관리 등 일부 기능은 이 설명서에서 생략되었습니다.
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 
 워크플로 앱은 적절한 시점에 시작할 수 있도록 인쇄 시스템에 대한 진입점을 표시해야 합니다. 이를 위해 UWP 프로젝트의 *package.appxmanifest* 파일의 `Application/Extensions` 요소에 다음 선언을 삽입합니다. 
 
@@ -38,7 +38,7 @@ WSDA의 경우와 마찬가지로 소스 응용 프로그램 사용자가 무언
 
 ## <a name="do-background-work-on-the-print-ticket"></a>인쇄 티켓에 대한 백그라운드 작업 수행
 
-인쇄 시스템이 워크플로 앱에서 가장 먼저 수행하는 작업은 백그라운드 작업을 활성화하는 것입니다(이 경우 `WFBackgroundTasks` 네임스페이스의 `WfBackgroundTask` 클래스). 백그라운드 작업의 `Run` 메서드에서 작업의 트리거 세부 정보를 **[PrintWorkflowTriggerDetails](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowtriggerdetails)** 인스턴스로 캐스트해야 합니다. 그러면 인쇄 워크플로 백그라운드 작업을 위한 특수한 기능이 제공됩니다. **[PrintWorkFlowBackgroundSession](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsession)** 의 인스턴스인 **[PrintWorkflowSession](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowtriggerdetails.PrintWorkflowSession)** 속성을 노출합니다. 인쇄 워크플로 세션 클래스(백그라운드 및 포그라운드 유형 모두)가 인쇄 워크플로 앱의 순차적인 단계를 제어합니다. 
+인쇄 시스템이 워크플로 앱에서 가장 먼저 수행하는 작업은 백그라운드 작업을 활성화하는 것입니다(이 경우 `WFBackgroundTasks` 네임스페이스의 `WfBackgroundTask` 클래스). 백그라운드 작업의 `Run` 메서드에서 작업의 트리거 세부 정보를 **[PrintWorkflowTriggerDetails](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowtriggerdetails)** 인스턴스로 캐스트해야 합니다. 그러면 인쇄 워크플로 백그라운드 작업을 위한 특수한 기능이 제공됩니다.  **[PrintWorkFlowBackgroundSession](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsession)** 의 인스턴스인 **[PrintWorkflowSession](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowtriggerdetails.PrintWorkflowSession)** 속성을 노출합니다. 인쇄 워크플로 세션 클래스(백그라운드 및 포그라운드 유형 모두)가 인쇄 워크플로 앱의 순차적인 단계를 제어합니다. 
 
 그런 다음 이 세션 클래스에서 발생시킬 두 이벤트에 대한 처리기 메서드를 등록합니다. 나중에 계속 이러한 메서드를 정의하게 됩니다.
 
@@ -104,7 +104,7 @@ private void OnSetupRequested(PrintWorkflowBackgroundSession sessionManager, Pri
 
 ## <a name="do-foreground-work-on-the-print-job-optional"></a>인쇄 작업에 대한 포그라운드 작업 수행(선택 사항)
 
-**[SetRequiresUI](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsetuprequestedeventargs.SetRequiresUI)** 메서드가 호출되면 인쇄 시스템이 포그라운드 응용 프로그램의 진입점에 대한 매니페스트 파일을 검사합니다. *package.appxmanifest* 파일의 `Application/Extensions` 요소에 다음 행이 있어야 합니다. `EntryPoint`의 값을 포그라운드 앱의 이름으로 바꿉니다.
+ **[SetRequiresUI](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsetuprequestedeventargs.SetRequiresUI)** 메서드가 호출되면 인쇄 시스템이 포그라운드 응용 프로그램의 진입점에 대한 매니페스트 파일을 검사합니다. *package.appxmanifest* 파일의 `Application/Extensions` 요소에 다음 행이 있어야 합니다. `EntryPoint`의 값을 포그라운드 앱의 이름으로 바꿉니다.
 
 ```xml
 <uap:Extension Category="windows.printWorkflowForegroundTask"  
@@ -240,9 +240,9 @@ UI가 **PrintTaskXpsDataAvailable** 이벤트에서 deferral을 완료하면(또
 
 ### <a name="set-the-workflow-apps-policy"></a>워크플로 앱의 정책 설정
 워크플로 앱 정책은 워크플로 앱을 실행할 디바이스에서 Powershell 명령에 의해 설정됩니다. Set-Printer, Add-Printer(기존 포트) 및 Add-Printer(새 WSD 포트) 명령은 워크플로 정책을 설정할 수 있도록 수정됩니다. 
-* `Disabled`: 워크플로 앱이 활성화되지 않습니다.
-* `Uninitialized`: 워크플로 DCA가 시스템에 설치되어 있는 경우 워크플로 앱이 활성화됩니다. 앱이 설치되지 않은 경우에도 인쇄가 계속 진행됩니다. 
-* `Enabled`: 워크플로 DCA가 시스템에 설치되어 있는 경우 워크플로 contract가 활성화됩니다. 앱이 설치되지 않은 경우 인쇄에 실패합니다. 
+* `Disabled`: 워크플로 응용 프로그램 활성화 되지 않습니다.
+* `Uninitialized`: 워크플로 응용 프로그램은 워크플로 DCA 시스템에 설치 된 경우에 활성화 됩니다. 앱이 설치되지 않은 경우에도 인쇄가 계속 진행됩니다. 
+* `Enabled`: 워크플로 계약 워크플로 DCA 시스템에 설치 된 경우 활성화 됩니다. 앱이 설치되지 않은 경우 인쇄에 실패합니다. 
 
 다음 명령을 사용하면 지정된 프린터에 워크플로 앱이 필요합니다.
 ```Powershell
@@ -255,6 +255,6 @@ Set-Printer –Name "Microsoft XPS Document Writer" -WorkflowPolicy On
 
 [워크플로 앱 샘플](https://github.com/Microsoft/print-oem-samples)
 
-[Windows.Graphics.Printing.Workflow 네임스페이스](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow)
+[Windows.Graphics.Printing.Workflow 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow)
 
 

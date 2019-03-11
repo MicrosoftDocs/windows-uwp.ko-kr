@@ -1,5 +1,5 @@
 ---
-Description: Dialogs and flyouts display transient UI elements that appear when the user requests them or when something happens that requires notification or approval.
+Description: 대화 상자 및 플라이아웃은 사용자가 요청할 경우나 알림 또는 승인이 필요한 문제가 발생할 경우 나타나는 임시 UI 요소를 표시합니다.
 title: 플라이 아웃 컨트롤
 template: detail.hbs
 ms.date: 05/19/2017
@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 52de0933bf51adaae6b0923868e12eb92ced4a1a
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037135"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57625018"
 ---
 # <a name="flyouts"></a>플라이아웃
 
@@ -24,13 +24,13 @@ ms.locfileid: "9037135"
 
 ![플라이아웃 내에 중첩된 상황에 맞는 메뉴](../images/flyout-nested.png)
 
-> **중요 Api**: [Flyout 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+> **중요 한 Api**: [플라이 아웃 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 * [도구 설명](../tooltips.md) 또는 [상황에 맞는 메뉴](../menus.md) 대신에 플라이아웃을 사용하지 마세요. 도구 설명을 사용하여 지정된 시간 후에 숨겨지는 간단한 설명을 표시합니다. 복사 및 붙여넣기 등 UI 요소에 관련된 상황별 작업을 위한 상황에 맞는 메뉴를 사용합니다.
 
-사용 시기에 대 한 권장 사항에 대 한 플라이 아웃 및 대화 상자 (유사한 컨트롤)를 사용 하는 경우 참조 [대화 상자 및 플라이 아웃](index.md)하세요. 
+(유사한 컨트롤) 대화 상자를 사용 하는 경우와 플라이 아웃을 사용 하는 경우에 권장 사항을 참조 하세요 [대화 상자와 플라이 아웃](index.md)합니다. 
 
 ## <a name="examples"></a>예
 
@@ -41,8 +41,8 @@ ms.locfileid: "9037135"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 작동 중인 <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> 또는 <a href="xamlcontrolsgallery:/item/Flyout">플라이아웃</a>을 확인합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -51,9 +51,9 @@ ms.locfileid: "9037135"
 ##  <a name="how-to-create-a-flyout"></a>플라이 아웃을 만드는 방법
 
 
-플라이아웃은 특정 컨트롤에 연결됩니다. [Placement](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) 속성을 사용하여 플라이아웃이 표시되는 위치(위쪽, 왼쪽, 아래쪽, 오른쪽 또는 전체)를 지정할 수 있습니다. [전체 배치 모드](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode)를 선택하면 앱은 플라이아웃을 확대하고 앱 창 내에서 가운데로 지정합니다. [Button](/uwp/api/Windows.UI.Xaml.Controls.Button)과 같은 일부 컨트롤은 플라이아웃이나 [상황에 맞는 메뉴](../menus.md)를 연결하는 데 사용할 수 있는 [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) 속성을 제공합니다.
+플라이아웃은 특정 컨트롤에 연결됩니다. 사용할 수는 [배치](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) 플라이 아웃이 표시 되는 위치를 지정 하는 속성: 위쪽, 왼쪽, 아래쪽, 오른쪽 또는 전체. [전체 배치 모드](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode)를 선택하면 앱은 플라이아웃을 확대하고 앱 창 내에서 가운데로 지정합니다. [Button](/uwp/api/Windows.UI.Xaml.Controls.Button)과 같은 일부 컨트롤은 플라이아웃이나 [상황에 맞는 메뉴](../menus.md)를 연결하는 데 사용할 수 있는 [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) 속성을 제공합니다.
 
-이 예에서는 단추를 누를 때 일부 텍스트를 표시하는 간단한 플라이아웃을 만듭니다.
+이 예제에서는 단추를 누를 때 일부 텍스트를 표시하는 간단한 플라이아웃을 만듭니다.
 ````xaml
 <Button Content="Click me">
   <Button.Flyout>
@@ -126,7 +126,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 ````
 
 ## <a name="style-a-flyout"></a>플라이아웃 스타일 지정
-플라이아웃의 스타일을 지정하려면 해당 [FlyoutPresenterStyle](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout.FlyoutPresenterStyle)을 수정합니다. 이 예에서는 줄 바꿈 단락을 보여 주고, 화면 읽기 프로그램에서 텍스트 블록에 액세스하도록 설정합니다.
+플라이아웃의 스타일을 지정하려면 해당 [FlyoutPresenterStyle](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout.FlyoutPresenterStyle)을 수정합니다. 이 예제에서는 줄 바꿈 단락을 보여 주고, 화면 읽기 프로그램에서 텍스트 블록에 액세스하도록 설정합니다.
 
 ![텍스트 줄 바꿈을 포함한 액세스 가능한 플라이아웃](../images/flyout-wrapping-text.png)
 
@@ -145,7 +145,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 </Flyout>
 ````
 
-## <a name="styling-flyouts-for-10-foot-experiences"></a>10 피트 환경 위한 플라이 아웃 스타일 지정
+## <a name="styling-flyouts-for-10-foot-experiences"></a>원격 제어 환경에 대 한 플라이 아웃의 스타일 지정
 
 플라이아웃과 같은 빠른 해제 컨트롤은 해제될 때까지 키보드 및 게임 패드 포커스를 임시 UI 내에 트래핑합니다. 이 동작에 대한 시각 신호를 제공하기 위해 Xbox의 빠른 해제 컨트롤은 범위를 벗어난 UI의 대비와 가시성을 줄이는 오버레이를 그립니다. 이 동작은 [`LightDismissOverlayMode`](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.LightDismissOverlayMode) 속성으로 수정할 수 있습니다. 기본적으로 플라이아웃은 Xbox에 빠른 해제 오버레이를 그리지만 다른 장치 패밀리에는 그리지 않습니다. 그러나 앱에서 오버레이가 항상 **설정** 또는 항상 **해제** 상태가 되도록 선택할 수 있습니다.
 
@@ -215,5 +215,5 @@ private void Folder2_Click(object sender, RoutedEventArgs e)
 ## <a name="related-articles"></a>관련 문서
 - [도구 설명](../tooltips.md)
 - [메뉴 및 상황에 맞는 메뉴](../menus.md)
-- [Flyout 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+- [플라이 아웃 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 - [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)

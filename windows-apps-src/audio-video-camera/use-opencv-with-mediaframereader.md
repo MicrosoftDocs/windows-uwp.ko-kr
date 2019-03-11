@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
 ms.openlocfilehash: d72a8d3fcaf337973f585ab19370140cd80f3826
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047468"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57640178"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>MediaFrameReader와 OpenCV(오픈 소스 컴퓨터 비전 라이브러리) 사용
 
@@ -28,14 +28,14 @@ ms.locfileid: "9047468"
 
 이 문서 외에, 여기에서 설명하는 시나리오의 종단 간 작업 샘플 전체를 확인하고 다운로드하려면, Windows 유니버설 샘플 GitHub 리포의 [카메라 프레임 + OpenCV 샘플](https://go.microsoft.com/fwlink/?linkid=854003)을 참조하세요.
 
-개발을 빠르게 시작 하려면 포함할 수 OpenCV 라이브러리를 UWP 앱 프로젝트에서 NuGet 패키지를 사용 하 여 있지만 하므로 OpenCV 다운로드 하는 것이 좋습니다. 저장소에 앱을 제출할 때 이러한 패키지 앱 certficication 프로세스를 통과 하지 않을 수 있습니다. 라이브러리는 소스 코드 하 고 앱을 제출 하기 전에 직접 바이너리를 빌드합니다. OpenCV에 관한 최신 소식은 [https://opencv.org](https://opencv.org)에서 확인할 수 있습니다.
+시작 하려면 개발을 신속 하 게 포함할 수 OpenCV 라이브러리는 UWP 앱 프로젝트에서 NuGet 패키지를 사용 하 여 있지만 하므로 OpenCV를 다운로드 하는 것이 좋습니다. 앱 스토어에 제출할 때 이러한 패키지 앱 certficication 프로세스를 통과 하지 않을 수 있습니다. 라이브러리 소스 코드와 앱을 제출 하기 전에 직접 바이너리를 빌드합니다. OpenCV에 관한 최신 소식은 [https://opencv.org](https://opencv.org)에서 확인할 수 있습니다.
 
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>OpenCVHelper 네이티브 Windows 런타임 구성 요소 구현
 [OpenCV를 사용하여 소프트웨어 비트맵 처리](process-software-bitmaps-with-opencv.md)에 제시된 단계에 따라 OpenCV 도우미 Windows 런타임 구성 요소를 만들고 구성 요소 프로젝트에 대한 참조를 UWP 앱 솔루션에 추가합니다.
 
 ## <a name="find-available-frame-source-groups"></a>사용 가능한 프레임 소스 그룹 찾기
-먼저 미디어 프레임을 가져올 미디어 프레임 소스 그룹을 찾아야 합니다. **[MediaFrameSourceGroup.FindAllAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.FindAllAsync)** 를 호출하여 현재 장치에서 사용할 수 있는 소스 그룹 목록을 가져옵니다. 그런 다음, 앱 시나리오에 필요한 센서 유형을 제공하는 소스 그룹을 선택합니다. 이 예제에서는 RGB 카메라의 프레임을 제공하는 소스 그룹만 있으면 됩니다.
+먼저 미디어 프레임을 가져올 미디어 프레임 소스 그룹을 찾아야 합니다.  **[MediaFrameSourceGroup.FindAllAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.FindAllAsync)** 를 호출하여 현재 장치에서 사용할 수 있는 소스 그룹 목록을 가져옵니다. 그런 다음, 앱 시나리오에 필요한 센서 유형을 제공하는 소스 그룹을 선택합니다. 이 예제에서는 RGB 카메라의 프레임을 제공하는 소스 그룹만 있으면 됩니다.
 
 [!code-cs[OpenCVFrameSourceGroups](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameSourceGroups)]
 
@@ -58,16 +58,16 @@ ms.locfileid: "9047468"
 
 
 ## <a name="handle-the-framearrived-event"></a>FrameArrived 이벤트 처리
-프레임 읽기 프로그램에서 새 프레임을 사용할 수 있을 때마다 **FrameArrived** 이벤트가 발생합니다. **[TryAcquireLatestFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** 을 호출하여, 프레임이 있을 경우 가져옵니다. **[MediaFrameReference](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)** 에서 **SoftwareBitmap**을 가져옵니다. 이 예제에 사용된 **CVHelper** 클래스의 이미지는 프리멀티플라이된 알파가 있는 BRGA8 픽셀 형식을 사용해야 합니다. 이벤트로 전달된 프레임의 형식이 다른 경우 **SoftwareBitmap**을 올바른 형식으로 변환합니다. 그런 다음, 흐림 작업의 대상으로 사용할 **SoftwareBitmap**을 생성합니다. 소스 이미지 속성이 생성자에 대한 인수로 사용되어, 해당하는 형식으로 비트맵을 만듭니다. 도우미 클래스 **Blur** 메서드를 호출하여 프레임을 처리합니다. 마지막으로, 초기화에 사용된 XAML **Image** 컨트롤로 이미지를 표시하는 **FrameRenderer** 도우미 클래스의 메서드 **PresentSoftwareBitmap**으로 흐림 작업의 출력 이미지를 전달합니다.
+프레임 읽기 프로그램에서 새 프레임을 사용할 수 있을 때마다 **FrameArrived** 이벤트가 발생합니다.  **[TryAcquireLatestFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** 을 호출하여, 프레임이 있을 경우 가져옵니다.  **[MediaFrameReference](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)** 에서 **SoftwareBitmap**을 가져옵니다. 이 예제에 사용된 **CVHelper** 클래스의 이미지는 프리멀티플라이된 알파가 있는 BRGA8 픽셀 형식을 사용해야 합니다. 이벤트로 전달된 프레임의 형식이 다른 경우 **SoftwareBitmap**을 올바른 형식으로 변환합니다. 그런 다음, 흐림 작업의 대상으로 사용할 **SoftwareBitmap**을 생성합니다. 소스 이미지 속성이 생성자에 대한 인수로 사용되어, 해당하는 형식으로 비트맵을 만듭니다. 도우미 클래스 **Blur** 메서드를 호출하여 프레임을 처리합니다. 마지막으로, 초기화에 사용된 XAML **Image** 컨트롤로 이미지를 표시하는 **FrameRenderer** 도우미 클래스의 메서드 **PresentSoftwareBitmap**으로 흐림 작업의 출력 이미지를 전달합니다.
 
 [!code-cs[OpenCVFrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameArrived)]
 
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [MediaFrameReader를 사용하여 미디어 프레임 처리](process-media-frames-with-mediaframereader.md)
-* [OpenCV로 소프트웨어 비트맵 처리](process-software-bitmaps-with-opencv.md)
+* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaFrameReader 사용 하 여 미디어 처리 프레임](process-media-frames-with-mediaframereader.md)
+* [OpenCV 사용 하 여 프로세스 소프트웨어 비트맵](process-software-bitmaps-with-opencv.md)
 * [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)
 * [카메라 프레임 + OpenCV 샘플](https://go.microsoft.com/fwlink/?linkid=854003)
  

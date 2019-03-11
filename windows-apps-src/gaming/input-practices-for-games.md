@@ -1,17 +1,17 @@
 ---
-title: 게임 입력 장치 사용 방법
+title: 게임용 입력 시스템
 description: 입력 장치를 효과적으로 사용하기 위한 패턴 및 기술을 알아봅니다.
 ms.assetid: CBAD3345-3333-4924-B6D8-705279F52676
 ms.date: 11/20/2017
 ms.topic: article
-keywords: Windows 10 uwp, 게임, 입력
+keywords: Windows 10, uwp, 게임, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 73e0ba3e563b57c2e392809097567b7e6739c90d
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927833"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634948"
 ---
 # <a name="input-practices-for-games"></a>게임용 입력 시스템
 
@@ -41,7 +41,7 @@ ms.locfileid: "8927833"
 
 한편 플레이어에서 컨트롤러를 분리하거나 새 컨트롤러를 연결하면 어떻게 되나요? 이러한 이벤트를 처리하고 이에 따라 목록을 업데이트해야 합니다. 자세한 내용은 [게임 패드 추가 및 제거](gamepad-and-vibration.md#adding-and-removing-gamepads)를 참조하세요(다시 말하지만 컨트롤러 유형마다 자체 주제에 대해 비슷한 이름을 가진 섹션이 존재).
 
-추가 및 제거된 이벤트가 비동기적으로 발생하기 때문에 컨트롤러 목록을 처리할 때 잘못된 결과를 얻을 수 있습니다. 따라서 컨트롤러 목록에 액세스할 때는 언제든지 한번에 오직 하나의 스레드만 하나의 목록에 액세스할 수 있도록 잠금을 설정해야 합니다. **&lt;ppl.h&gt;** 의 [동시성 런타임](https://docs.microsoft.com/cpp/parallel/concrt/concurrency-runtime), 구체적으로 [critical_section 클래스](https://docs.microsoft.com/cpp/parallel/concrt/reference/critical-section-class)를 통해 이것이 가능합니다.
+추가 및 제거된 이벤트가 비동기적으로 발생하기 때문에 컨트롤러 목록을 처리할 때 잘못된 결과를 얻을 수 있습니다. 따라서 컨트롤러 목록에 액세스할 때는 언제든지 한번에 오직 하나의 스레드만 하나의 목록에 액세스할 수 있도록 잠금을 설정해야 합니다.  **&lt;ppl.h&gt;** 의 [동시성 런타임](https://docs.microsoft.com/cpp/parallel/concrt/concurrency-runtime), 구체적으로 [critical_section 클래스](https://docs.microsoft.com/cpp/parallel/concrt/reference/critical-section-class)를 통해 이것이 가능합니다.
 
 또 하나 생각할 것은 연결 컨트롤러 목록이 처음에는 비어있다가 채워지는 데 1 ~ 2초가 걸린다는 사실입니다. 따라서 시작 메서드에서 현재 게임 패드를 할당만 하면 값이 **null**이 됩니다!
 
@@ -319,4 +319,4 @@ if (buttonArrangement == buttonSelection)
 
 * [Windows.System.User 클래스](https://docs.microsoft.com/uwp/api/windows.system.user)
 * [Windows.Gaming.Input.IGameController 인터페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
-* [Windows.Gaming.Input.GamepadButtons 열거](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadbuttons)
+* [Windows.Gaming.Input.GamepadButtons 열거형](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadbuttons)

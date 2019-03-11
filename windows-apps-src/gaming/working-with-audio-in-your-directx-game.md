@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 오디오, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: fd106e07e6359e9289074cb62cec6bf7458ac5bc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8935588"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634578"
 ---
 # <a name="audio-for-games"></a>게임의 오디오
 
@@ -64,7 +64,7 @@ XAudio2는 DirectX용 오디오 믹싱 라이브러리로, 주 용도는 게임�
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415813">XAudio2 소개</a></p></td>
-<td align="left"><p>XAudio2에서 지원되는 오디오 프로그래밍 기능의 목록을 제공합니다.</p></td>
+<td align="left"><p> XAudio2에서 지원되는 오디오 프로그래밍 기능의 목록을 제공합니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415762">XAudio2 시작</a></p></td>
@@ -91,7 +91,7 @@ XAudio2는 DirectX용 오디오 믹싱 라이브러리로, 주 용도는 게임�
 <td align="left"><p>들어오는 오디오 데이터를 가져와 전달하기 전에 반향 효과 같은 특정 작업을 데이터에 수행하는 XAudio2 오디오 효과에 대해 설명합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415821">XAudio2를 사용한 오디오 데이터 스트리밍</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415821">XAudio2 사용 하 여 스트리밍 오디오 데이터</a></p></td>
 <td align="left"><p>XAudio2를 사용한 오디오 데이터 스트리밍에 대해 설명합니다.</p></td>
 </tr>
 <tr class="odd">
@@ -126,67 +126,67 @@ XAudio2는 DirectX용 오디오 믹싱 라이브러리로, 주 용도는 게임�
 <td align="left"><p>XAudio2 엔진의 인스턴스를 만들고, 마스터링 음성을 만들어 오디오 재생을 위해 XAudio2를 초기화하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415781">방법: XAudio2에 오디오 데이터 파일 로드</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415781">방법: XAudio2의 오디오 데이터 파일 로드</a></p></td>
 <td align="left"><p>XAudio2에서 오디오 데이터를 재생하는 데 필요한 구조를 채우는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415787">방법: XAudio2를 사용한 소리 재생</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415787">방법: XAudio2 사용 하 여 소리 재생</a></p></td>
 <td align="left"><p>이전에 로드한 오디오 데이터를 XAudio2에서 재생하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415794">방법: 서브믹스 음성 사용</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415794">방법: 믹스 음성 사용</a></p></td>
 <td align="left"><p>동일한 서브믹스 음성에 출력을 보내도록 음성 그룹을 설정하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415769">방법: 원본 음성 콜백 사용</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415769">방법: 원본 음성 콜백을 사용합니다</a></p></td>
 <td align="left"><p>XAudio2 원본 음성 콜백을 사용하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415774">방법: 엔진 콜백 사용</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415774">방법: 엔진 콜백을 사용합니다</a></p></td>
 <td align="left"><p>XAudio2 엔진 콜백을 사용하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415767">방법: 기본 오디오 처리 그래프 작성</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415767">방법: 기본 오디오 처리 그래프를 작성 합니다.</a></p></td>
 <td align="left"><p>단일 마스터링 음성 및 단일 원본 음성에서 구성된 오디오 처리 그래프를 만드는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415772">방법: 오디오 그래프에서 동적으로 음성 추가 또는 제거</a></p></td>
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415767">방법: 기본 오디오 처리 그래프 작성</a>의 각 단계를 수행하여 만든 그래프에서 서브믹스 음성을 추가 또는 제거하는 방법을 알아봅니다.</p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415772">방법: 동적으로 추가 하거나 음성 오디오를 그래프에서 제거</a></p></td>
+<td align="left"><p>추가 하거나 믹스 음성의 단계에 따라 생성 된 그래프에서 제거 하는 방법을 알아봅니다 <a href="https://msdn.microsoft.com/library/windows/desktop/ee415767">방법: 기본 오디오 처리 그래프 빌드</a>합니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415789">방법: 효과 체인 만들기</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415789">방법: 효과 체인 생성</a></p></td>
 <td align="left"><p>음성에 효과 체인을 적용하여 해당 음성의 오디오 데이터에 대한 사용자 지정 처리를 허용하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415730">방법: XAPO 만들기</a></p></td>
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415893"><strong>IXAPO</strong></a>를 구현하여 XAudio2 오디오 처리 개체(XAPO)를 만드는 방법을 자세히 알아보세요.</p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415893">  <strong>IXAPO</strong></a>를 구현하여 XAudio2 오디오 처리 개체(XAPO)를 만드는 방법을 자세히 알아보세요.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415728">방법: XAPO에 런타임 매개 변수 지원 추가</a></p></td>
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415896"><strong>IXAPOParameters</strong></a> 인터페이스를 구현하여 XAPO에 런타임 매개 변수 지원을 추가하는 방법을 자세히 알아보세요.</p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415728">방법: 에 XAPO 런타임 매개 변수 지원 추가</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415896">  <strong>IXAPOParameters</strong></a> 인터페이스를 구현하여 XAPO에 런타임 매개 변수 지원을 추가하는 방법을 자세히 알아보세요.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415733">방법: XAudio2에 XAPO 사용</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415733">방법: XAPO XAudio2 사용</a></p></td>
 <td align="left"><p>XAudio2 효과 체인에서 XAPO로 구현된 효과를 사용하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415723">방법: XAudio2에 XAPOFX 사용</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415723">방법: XAudio2 XAPOFX 사용</a></p></td>
 <td align="left"><p>XAudio2 효과 체인에서 XAPOFX에 포함된 효과 중 하나를 사용하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415791">방법: 디스크에서 소리 스트리밍</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415791">방법: 디스크에서 소리를 Stream</a></p></td>
 <td align="left"><p>오디오 버퍼를 읽을 별도의 스레드를 만들어 XAudio2에서 오디오 데이터를 스트리밍하고, 이 스레드를 제어하는 콜백을 사용하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415798">방법: X3DAudio와 XAudio2 통합</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415798">방법: XAudio2 X3DAudio 통합</a></p></td>
 <td align="left"><p>X3DAudio를 사용하여 XAudio2에 대한 볼륨 및 피치 값과 XAudio2 기본 제공 반향 효과에 대한 매개 변수를 제공하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415783">방법: 오디오 메서드를 작업 집합으로 그룹화</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415783">방법: 작업 집합으로 그룹 오디오 메서드</a></p></td>
 <td align="left"><p>XAudio2 작업 집합을 사용하여 동시에 적용되는 메서드 호출 집합을 만드는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415765">XAudio2에서 오디오 결함 디버깅</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee415765">오디오 결함이 XAudio2에서 디버깅</a></p></td>
 <td align="left"><p>XAudio2에 대한 디버그 로깅 수준을 설정하는 방법을 알아봅니다.</p></td>
 </tr>
 </tbody>
@@ -211,11 +211,11 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ms696274">Media Foundation 정보</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ms696274">미디어 파운데이션에 대 한</a></p></td>
 <td align="left"><p>Media Foundation API 및 이를 지원하는 데 사용할 수 있는 도구에 대한 일반적인 정보를 제공합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee663601">Media Foundation: 필수 개념</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ee663601">미디어 파운데이션: 핵심 개념</a></p></td>
 <td align="left"><p>Media Foundation 응용 프로그램을 작성하기 전에 이해해야 할 개념을 소개합니다.</p></td>
 </tr>
 <tr class="odd">
@@ -231,7 +231,7 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 <td align="left"><p>앱에서 오디오/비디오 재생을 구현하는 방법에 대해 설명합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/dd757927">Media Foundation에서 지원되는 미디어 형식</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/dd757927">Media Foundation에서 지원 되는 미디어 형식</a></p></td>
 <td align="left"><p>Microsoft 미디어 파운데이션이 기본적으로 지원하는 미디어 형식을 보여 줍니다. (타사에서는 사용자 지정 플러그 인을 작성하여 추가 형식을 지원할 수 있습니다.)</p></td>
 </tr>
 <tr class="odd">
@@ -239,7 +239,7 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 <td align="left"><p>Microsoft 미디어 파운데이션을 사용하여 오디오 및 비디오 인코딩을 수행하고 미디어 파일을 작성하는 방법에 대해 설명합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ff819508">Windows Media 코덱</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/ff819508">Windows 미디어 코덱</a></p></td>
 <td align="left"><p>Windows Media 오디오 및 비디오 코덱의 기능을 사용하여 압축된 데이터 스트림을 생성 및 사용하는 방법에 대해 설명합니다.</p></td>
 </tr>
 <tr class="odd">
@@ -296,19 +296,19 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 
  
 
-## <a name="reference"></a>참조
+## <a name="reference"></a>참고자료
 
 
 -   [XAudio2 소개](https://msdn.microsoft.com/library/windows/desktop/ee415813)
--   [XAudio2 프로그래밍 지침](https://msdn.microsoft.com/library/windows/desktop/ee415737)
--   [Microsoft 미디어 파운데이션 개요](https://msdn.microsoft.com/library/windows/desktop/ms694197)
+-   [XAudio2 프로그래밍 가이드](https://msdn.microsoft.com/library/windows/desktop/ee415737)
+-   [Microsoft Media Foundation 개요](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 
  
 
 ## <a name="related-topics"></a>관련 항목
 
 
--   [XAudio2 프로그래밍 지침](https://msdn.microsoft.com/library/windows/desktop/ee415737)
+-   [XAudio2 프로그래밍 가이드](https://msdn.microsoft.com/library/windows/desktop/ee415737)
 
  
 

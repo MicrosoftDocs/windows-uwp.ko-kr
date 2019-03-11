@@ -1,5 +1,5 @@
 ---
-title: 원격 세션을 통해 디바이스 연결
+title: 원격 세션을 통해 장치 연결
 description: 원격 세션에서 여러 장치를 연결하여 공유되는 환경을 만듭니다.
 ms.assetid: 1c8dba9f-c933-4e85-829e-13ad784dd3e2
 ms.date: 06/28/2017
@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.localizationpriority: medium
 ms.openlocfilehash: 3dd23603df1f1c3fac151da2aea2f8435b3ee423
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8932629"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57633418"
 ---
-# <a name="connect-devices-through-remote-sessions"></a>원격 세션을 통해 디바이스 연결
+# <a name="connect-devices-through-remote-sessions"></a>원격 세션을 통해 장치 연결
 
 원격 세션 기능을 사용하면 앱은 명시적 앱 메시지 또는 Windows Holographic 디바이스 간의 홀로그램 공유를 위한 **[SpatialEntityStore](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialentitystore)** 등 시스템 관리 데이터의 조정된 교환을 위해 세션을 통해 다른 디바이스에 연결할 수 있습니다.
 
@@ -156,7 +156,7 @@ public void DiscoverSessions() {
 }
 ```
 
-**[RemoteSystemSessionInfo](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioninfo)** 인스턴스를 얻으면 해당 세션을 제어하는 디바이스에 연결 요청을 하는 데 사용할 수 있습니다. 수락된 연결 요청은 연결된 세션에 대한 참조를 포함하는 **[RemoteSystemSessionJoinResult](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionjoinresult)** 개체를 비동기식으로 반환합니다.
+ **[RemoteSystemSessionInfo](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioninfo)** 인스턴스를 얻으면 해당 세션을 제어하는 디바이스에 연결 요청을 하는 데 사용할 수 있습니다. 수락된 연결 요청은 연결된 세션에 대한 참조를 포함하는 **[RemoteSystemSessionJoinResult](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionjoinresult)** 개체를 비동기식으로 반환합니다.
 
 ```csharp
 public async void JoinSession(RemoteSystemSessionInfo sessionInfo) {
@@ -189,7 +189,7 @@ public async void JoinSession(RemoteSystemSessionInfo sessionInfo) {
 }
 ```
 
-디바이스를 동시에 여러 세션에 연결할 수 있습니다. 이러한 이유로 각 세션과의 실제 상호 작용에서 연결 기능을 분리하는 것이 좋을 수 있습니다. **[RemoteSystemSession](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsession)** 인스턴스에 대한 참조가 앱에 유지되는 한 해당 세션을 통해 통신을 시도할 수 있습니다.
+디바이스를 동시에 여러 세션에 연결할 수 있습니다. 이러한 이유로 각 세션과의 실제 상호 작용에서 연결 기능을 분리하는 것이 좋을 수 있습니다.  **[RemoteSystemSession](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsession)** 인스턴스에 대한 참조가 앱에 유지되는 한 해당 세션을 통해 통신을 시도할 수 있습니다.
 
 ## <a name="share-messages-and-data-through-a-remote-session"></a>원격 세션을 통해 메시지 및 데이터 공유
 
@@ -252,7 +252,7 @@ public async void SendMessageToAllParticipantsAsync(RemoteSystemSessionMessageCh
 }
 ```
 
-특정 참가자에게만 메시지를 보내려면 먼저 세션에 참여하는 원격 시스템에 대한 참조를 얻기 위해 검색 프로세스를 시작해야 합니다. 이는 세션 외부의 원격 시스템을 검색하는 프로세스와 유사합니다. **[RemoteSystemSessionParticipantWatcher](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionparticipantwatcher)** 인스턴스를 사용하여 세션의 참가 디바이스를 찾습니다.
+특정 참가자에게만 메시지를 보내려면 먼저 세션에 참여하는 원격 시스템에 대한 참조를 얻기 위해 검색 프로세스를 시작해야 합니다. 이는 세션 외부의 원격 시스템을 검색하는 프로세스와 유사합니다.  **[RemoteSystemSessionParticipantWatcher](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionparticipantwatcher)** 인스턴스를 사용하여 세션의 참가 디바이스를 찾습니다.
 
 ```csharp
 public void WatchForParticipants() {
@@ -321,5 +321,5 @@ public async void SendMessageToListAsync(RemoteSystemSessionMessageChannel messa
 ```
 
 ## <a name="related-topics"></a>관련 항목
-* [연결된 앱 및 장치(프로젝트 로마)](connected-apps-and-devices.md)
+* [연결 된 앱 및 장치 (프로젝트 로마)](connected-apps-and-devices.md)
 * [원격 시스템 API 참조](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)

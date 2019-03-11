@@ -1,5 +1,5 @@
 ---
-Description: The Microsoft Store reaches customers in over 200 countries and regions around the world.
+Description: Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객에게 다가갑니다.
 title: 시장 선택 정의
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
 ms.date: 10/31/2018
@@ -7,46 +7,46 @@ ms.topic: article
 keywords: Windows 10, uwp, 시장, 국가, 지역
 ms.localizationpriority: medium
 ms.openlocfilehash: 980dc41303a2689c0f86415beb6ba9adb44fe39c
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8936724"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646248"
 ---
 # <a name="define-market-selection"></a>시장 선택 정의
 
 
 Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객에게 다가갑니다. 앱을 제공할 지역/국가를 선택할 수 있습니다. 지역/국가 또는 지역/국가 그룹 별로 [가격 책정 및 가용성](set-app-pricing-and-availability.md)을 다양하게 사용자 지정할 수 있는 옵션도 있습니다.
 
-앱을 전 세계에 적합 한 고객 수 있도록 정보를 [지역화할 수 있는 앱](../design/globalizing/prepare-your-app-for-localization.md)및 [세계화 지침](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) 을 참조 하세요.
+전 세계 고객에 대 한 적합 한 앱을 확인 하는 데 대 한 정보를 참조 하세요. [세계화에 대 한 지침](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) 하 고 [앱을 지역화할 수 있는 확인](../design/globalizing/prepare-your-app-for-localization.md)합니다.
 
 > [!NOTE]
 > 이 항목은 앱을 가리키지만, 추가 기능 제출을 위한 시장 선택은 동일한 프로세스를 사용합니다.
 
-## <a name="markets"></a>시장
+## <a name="markets"></a>지역/국가
 
 기본적으로 나중에 추가될 수 있는 미래 시장을 포함하여 가능한 모든 시장에 기본 가격으로 앱이 제공됩니다.
 
 원하는 경우, 앱을 제공하는 특정 지역/국가를 지정할 수 있습니다. 이렇게 하려면 **가격 책정 및 가용**페이지의 **지역/국가** 섹션에서 **옵션 표시**를 선택하세요. 그러면 앱을 제공할 지역/국가를 선택할 수 있는 **지역/국가 선택** 팝업 창이 표시됩니다.
 
-기본값으로 모든 국가가 선택되어 있습니다.. 개벌 지역/국가의 선택을 취소하거나, **모두 선택 취소**를 클릭한 후 개별 지역/국가를 추가할 수 있습니다. 검색 창에서 특정 지역/국가를 선택할 수 있습니다. 또 Xbox 제품을 판매할 수 있는 지역/국가만 보려면 드롭다운의 **모든 지역/국가**를 **Xbox 지역/국가** 변경합니다. 완료 후 **확인**을 클릭해 선택 내용을 저장합니다.
+기본값으로 모든 국가가 선택되어 있습니다. 개벌 지역/국가의 선택을 취소하거나, **모두 선택 취소**를 클릭한 후 개별 지역/국가를 추가할 수 있습니다. 검색 창에서 특정 지역/국가를 선택할 수 있습니다. 또 Xbox 제품을 판매할 수 있는 지역/국가만 보려면 드롭다운의 **모든 지역/국가**를 **Xbox 지역/국가** 변경합니다. 완료 후 **확인**을 클릭해 선택 내용을 저장합니다.
 
 새 취득에만 선택 내용이 적용됩니다. 특정 지역/국가에서 앱을 소유하고 있는 사용자의 경우, 지역/국가를 제거해도 계속 사용을 할 수 있습니다. 그러나 제출한 업데이트를 다운로드 할 수 없고, 해당 지역/국가의 새 고객은 누구도 앱을 다운로드 할 수 없습니다.
 
 > [!IMPORTANT]
-> 것 이러한 요구 사항이 여기 나 파트너 센터에 나열 되지 않더라도 지역의 법적 요구 사항을 충족 해야 합니다.
+> 여기 또는 파트너 센터에서 이러한 요구 사항 목록에 없는 경우에 것 로컬 법적 요구 사항을 충족 해야 합니다.
 
 모든 지역/국가를 선택하더라도 현지 법률 및 제한이나 기타 요소로 인해 특정 앱은 일부 국가 및 지역에 나열되지 않을 수 있습니다. 또한 일부 지역/국가에는 연령별 등급과 관련된 특정 요구 사항이 있을 수 있습니다. 앱이 이러한 요구 사항을 충족하지 않을 경우 앱을 해당 지역/국가에 제공할 수 없습니다. 자세한 내용은 [연령별 등급](age-ratings.md)을 참조하세요.
 
 > [!NOTE]
-> 이전에 게시 된 앱의 Windows8 또는 Windows8.1 대상으로 하는 패키지를 포함 하는 경우 일부 개별 지역/국가 하나의 "나머지 국가" 지역 /로 처리 됩니다. 자세한 정보는 [Windows 8.x용 "나머지 국가" 지역/국가](#rest-of-world-markets-for-windows-8x)를 참조하세요.
+> Windows 8 또는 Windows 8.1 대상으로 하는 패키지를 포함 하는 이전에 게시 된 앱에 대 한 일부 개별 시장 하나의 단일 "World Rest" 시장으로 처리 됩니다. 자세한 정보는 [Windows 8.x용 "나머지 국가" 지역/국가](#rest-of-world-markets-for-windows-8x)를 참조하세요.
 
 또한 나중에 스토어가 추가될 지역/국가에서 앱을 제공할 지 선택할 수 있는 확인란이 표시됩니다. 이 확인란에 표시를 하면, 나중에 새 지역/국가가 추가되었을 때 제출에서 지정한 기본 가격과 사용 가능 날짜가 해당 시장의 앱에 적용됩니다. 이를 원하지 않을 경우, 확인란에 표시를 하지 않아야 합니다. 그러면 앞으로 추가될 시장에 앱이 목록으로 표시되지 않습니다(추후 항상 추가 가능).
  
 
-## <a name="microsoft-store-consumer-markets"></a>Microsoft 스토어 소비자 지역/국가
+## <a name="microsoft-store-consumer-markets"></a>Microsoft Store 소비자 시장
 
-다음 지역/국가 중 하나 이상에 앱 또는 추가 기능을 나열하도록 선택할 수 있습니다. 별표가 된 지역/국가에 Xbox One, Microsoft Store 지원 **Xbox** **지역/국가 선택** 팝업 창의 이름 옆에 표시 됩니다.
+다음 지역/국가 중 하나 이상에 앱 또는 추가 기능을 나열하도록 선택할 수 있습니다. 별표를 사용 하 여 시장; Microsoft Store on Xbox One 지원 보면 **Xbox** 해당 이름 옆에 **시장 선택** 팝업 창입니다.
 
 
 <table>
@@ -108,7 +108,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   <tr>
     <td>부르키나파소</td>
     <td>부룬디</td>
-    <td>카보베르데</td>
+    <td>Cabo Verde</td>
     <td>캄보디아</td>
   </tr>
   <tr>
@@ -127,7 +127,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
     <td>코코스 제도</td>
     <td>콜롬비아*</td>
     <td>코모로</td>
-    <td>콩고 공화국</td>
+    <td>콩고</td>
   </tr>
   <tr>
     <td>콩고 민주 공화국</td>
@@ -173,7 +173,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   </tr>
   <tr>
     <td>감비아</td>
-    <td>조지아</td>
+    <td>그루지야</td>
     <td>독일*</td>
     <td>가나</td>
   </tr>
@@ -241,7 +241,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
     <td>리히텐슈타인</td>
     <td>리투아니아</td>
     <td>룩셈부르크</td>
-    <td>마카오 특별행정구</td>
+    <td>마카오 특별 행정구</td>
   </tr>
   <tr>
     <td>마케도니아, FYRO</td>
@@ -366,7 +366,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   <tr>
     <td>스웨덴*</td>
     <td>스위스*</td>
-    <td>Taiwan *</td>
+    <td>대만*</td>
     <td>타지키스탄</td>
   </tr>
   <tr>
@@ -389,7 +389,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   </tr>
   <tr>
     <td>미국 소수 외부 제도</td>
-    <td>미국령 버전 아일랜드</td>
+    <td>미국 미국령 버진 아일랜드</td>
     <td>우간다</td>
     <td>우크라이나</td>
   </tr>
@@ -476,9 +476,9 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Windows 8.x용 "나머지 국가" 지역/국가
 
-이전에 게시 된 앱 Windows를 대상으로 하는 패키지가 포함 하는 경우는 다양 한 지역/국가 하나의 "나머지 국가" 지역/국가에서 Windows 스토어를 사용 하는 고객에 대 한으로 처리 되는 알고 있어야 8.x 8.x는 국가로 표시 된다 하더라도 개별 지역/국가 파트너 센터.
+이전에 게시 된 앱 Windows를 대상으로 하는 패키지를 포함 하는 경우 다양 한 시장에서 Windows 스토어를 사용 하는 고객에 대 한 단일 "Rest의 World" 시장으로 처리할지는 알아야 할 중요 한 것이 8.x 8.x, 개별 시장으로 표시 됩니다 하는 경우에 파트너 센터.
 
-앱을 제출할 때 기본 지역/국가 선택 항목을 유지 하면이에 대해 걱정할 필요가 하 고 앱이 모든 가능한 지역/국가에 제공 됩니다. 그러나 특정 지역/국가 제외 하려는 경우 염두에 즉 다음 "나머지 국가" 지역/국가 하나라도 제외 하 고 *모든* Windows8 또는 Windows8.1 고객에 게 "나머지 국가" 지역/국가에서 앱 사용할 수 없습니다.
+앱을 제출 하는 경우 기본 시장 선택 하지 않으면,이에 대해 걱정할 필요가 없습니다 및 앱이 모든 가능한 시장에 제공 됩니다. 그러나 특정 시장을 제외 하려는 경우 유지 염두에서 하는 제외 하 고 앱에서 사용할 수 없는 이러한 "World Rest" 시장 수단 중 하나라도 *모든* "Rest의 전 세계의" Windows 8 또는 Windows 8.1 고객을 위한 마켓입니다.
 
 Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습니다.
 
@@ -528,7 +528,7 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
   <tr>
     <td>부르키나파소</td>
     <td>부룬디</td>
-    <td>카보베르데</td>
+    <td>Cabo Verde</td>
     <td>캄보디아</td>
   </tr>
   <tr>
@@ -541,7 +541,7 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
     <td>크리스마스 섬</td>
     <td>코코스 제도</td>
     <td>코모로</td>
-    <td>콩고 공화국</td>
+    <td>콩고</td>
   </tr>
   <tr>
     <td>콩고 민주 공화국</td>
@@ -574,7 +574,7 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
     <td>감비아</td>
   </tr>
   <tr>
-    <td>조지아</td>
+    <td>그루지야</td>
     <td>가나</td>
     <td>지브롤터</td>
     <td>그린란드</td>
@@ -612,7 +612,7 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
   <tr>
     <td>라이베리아</td>
     <td>리히텐슈타인</td>
-    <td>마카오 특별행정구</td>
+    <td>마카오 특별 행정구</td>
     <td>마케도니아, FYRO</td>
   </tr>
   <tr>
@@ -715,11 +715,11 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
     <td>투발루</td>
     <td>우간다</td>
     <td>미국 소수 외부 제도</td>
-    <td>미국령 버전 아일랜드</td>
+    <td>미국 미국령 버진 아일랜드</td>
   </tr>
   <tr>
     <td>우즈베키스탄</td>
-    <td>바티칸 시국</td>
+    <td>바티칸</td>
     <td>베네수엘라</td>
     <td>베트남</td>
   </tr>
@@ -738,4 +738,4 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
 </table>
 
 > [!NOTE]
-> 개발자 계정을 등록할 수 있는 국가 및 지역 목록은 [계정 유형, 위치 및 수수료](account-types-locations-and-fees.md)를 참조하세요.
+> 국가 및 지역 개발자 계정에 등록할 수 있는 목록을 참조 하세요 [계정 형식, 위치 및 수수료](account-types-locations-and-fees.md)합니다.

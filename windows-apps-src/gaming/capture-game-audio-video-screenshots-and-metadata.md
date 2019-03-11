@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, 게임, 캡처, 오디오, 비디오, 메타데이터
 ms.localizationpriority: medium
 ms.openlocfilehash: c4d4d764395d7f383e9cefcb9d8b1121db098780
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921835"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601938"
 ---
 # <a name="capture-game-audio-video-screenshots-and-metadata"></a>게임 오디오, 비디오, 스크린샷 및 메타데이터 캡처
 이 문서는 앱 등에서 게임 플레이 이벤트가 동기화되는 동적 환경을 만들 수 있도록 게임 비디오, 오디오, 스크린샷을 캡처하는 방법과 시스템이 캡처된 미디어 및 브로드캐스트 미디어에 포함할 메타데이터를 전송하는 방법에 대해 설명합니다. 
@@ -20,7 +20,7 @@ UWP 앱에서 게임 플레이를 캡처하는 방법은 두 가지가 있습니
 
 미디어를 캡처하는 다른 방법은 **[Windows.Media.AppRecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording)** 네임스페이스의 API를 사용하는 것입니다. 디바이스에서 캡처를 사용할 수 있는 경우 앱은 게임 플레이 캡처를 시작하고 약간의 시간이 경과한 후 캡처를 중지할 수 있으며 이때 미디어가 파일에 기록됩니다. 사용자가 기록 캡처를 활성화한 경우 과거의 시작 시간 및 녹화 기간을 지정하여 이미 발생한 게임 플레이를 녹화할 수도 있습니다. 이러한 방법은 모두 앱에서 액세스할 수 있으며 파일을 저장하도록 선택하는 위치에 따라 사용자가 액세스할 수 있는 비디오 파일을 생성합니다. 이 문서의 가운데 섹션은 이러한 시나리오 구현을 설명합니다.
 
-**[Windows.Media.Capture](https://docs.microsoft.com/uwp/api/windows.media.capture)** 네임스페이스는 캡처되는 또는 브로드캐스트되는 게임 플레이를 설명하는 메타데이터를 만드는 API를 제공합니다. 이에는 각 데이터 항목을 식별하는 텍스트 레이블이 있는 텍스트 또는 숫자 값이 포함될 수 있습니다. 메타데이터는 사용자가 레이싱 게임에서 한 바퀴를 돌았거나 하는 등의 단일 모멘트에서 발생하는 "이벤트"를 나타내거나 사용자가 플레이하는 현재 게임 지도와 같이 일정 시간 동안 지속되는 "상태"를 나타낼 수 있습니다. 메타데이터는 시스템에 의해 사용자의 앱에 할당되고 관리되는 캐시에 기록됩니다. 메타데이터는 기본 제공 시스템 캡처 또는 사용자 지정 앱 캡처 기술을 각각 포함하는 브로드캐스트 스트림 및 캡처한 비디오 파일에 포함됩니다. 이 문서의 최종 섹션은 게임 플레이 메타데이터를 쓰는 방법을 보여 줍니다.
+ **[Windows.Media.Capture](https://docs.microsoft.com/uwp/api/windows.media.capture)** 네임스페이스는 캡처되는 또는 브로드캐스트되는 게임 플레이를 설명하는 메타데이터를 만드는 API를 제공합니다. 이에는 각 데이터 항목을 식별하는 텍스트 레이블이 있는 텍스트 또는 숫자 값이 포함될 수 있습니다. 메타데이터는 사용자가 레이싱 게임에서 한 바퀴를 돌았거나 하는 등의 단일 모멘트에서 발생하는 "이벤트"를 나타내거나 사용자가 플레이하는 현재 게임 지도와 같이 일정 시간 동안 지속되는 "상태"를 나타낼 수 있습니다. 메타데이터는 시스템에 의해 사용자의 앱에 할당되고 관리되는 캐시에 기록됩니다. 메타데이터는 기본 제공 시스템 캡처 또는 사용자 지정 앱 캡처 기술을 각각 포함하는 브로드캐스트 스트림 및 캡처한 비디오 파일에 포함됩니다. 이 문서의 최종 섹션은 게임 플레이 메타데이터를 쓰는 방법을 보여 줍니다.
 
 > [!NOTE] 
 > 게임 플레이 메타데이터는 사용자의 제어를 벗어난 네트워크를 통해 잠재적으로 공유될 수 있는 미디어 파일에 포함될 수 있으므로 메타데이터에 식별할 수 있는 개인 정보 또는 잠재적으로 중요한 기타 데이터를 포함해서는 안됩니다.
@@ -44,7 +44,7 @@ UWP 앱에서 게임 플레이를 캡처하는 방법은 두 가지가 있습니
 [!code-cpp[OnCapturingChanged](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetOnCapturingChanged)]
 
 ## <a name="add-the-windows-desktop-extensions-for-the-uwp-to-your-app"></a>앱에 UWP용 Windows 데스크톱 확장 추가
-**[Windows.Media.AppRecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording)** 네임스페이스에서 찾을 수 있는 오디오 및 비디오를 녹화/녹음하고, 앱에서 직접 스크린샷을 캡처하는 API는 유니버설 API 계약에 포함되지 않습니다. API에 액세스하려면 다음 단계를 따라 앱에 UWP용 Windows 데스크톱 확장에 대한 참조를 앱 추가해야 합니다.
+ **[Windows.Media.AppRecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording)** 네임스페이스에서 찾을 수 있는 오디오 및 비디오를 녹화/녹음하고, 앱에서 직접 스크린샷을 캡처하는 API는 유니버설 API 계약에 포함되지 않습니다. API에 액세스하려면 다음 단계를 따라 앱에 UWP용 Windows 데스크톱 확장에 대한 참조를 앱 추가해야 합니다.
 
 1. Visual Studio에서 **솔루션 탐색기**의 UWP 프로젝트를 확장하고 **참조**를 마우스 오른쪽 단추로 클릭하고 **참조 추가...** 를 선택합니다. 
 2. **유니버설 Windows** 노드를 확장하고 **확장**을 선택합니다.
@@ -52,12 +52,12 @@ UWP 앱에서 게임 플레이를 캡처하는 방법은 두 가지가 있습니
 4. **확인**을 클릭합니다.
 
 ## <a name="get-an-instance-of-apprecordingmanager"></a>AppRecordingManager 인스턴스 가져오기
-**[AppRecordingManager](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager)** 클래스는 앱 녹음/녹화 관리에 사용할 중앙 API입니다. 팩터리 메서드 **[GetDefault](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetDefault)** 를 호출하여 이 클래스의 인스턴스를 가져옵니다. **Windows.Media.AppRecording** 네임스페이스에서 API를 사용하기 전에 현재 장치에서 해당 API가 존재하는지 확인해야 합니다. API는 Windows 10 버전 1709 이전의 운영 체제 버전을 실행하는 디바이스에서는 사용할 수 없습니다. 특정 OS 버전을 확인하는 것보다 **[ApiInformation.IsApiContractPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent)** 메서드를 사용하여 *Windows.Media.AppBroadcasting.AppRecordingContract* 버전 1.0을 쿼리하는 것이 좋습니다. 이 계약이 있는 경우 녹음/녹화 API는 디바이스에서 사용할 수 있습니다. 이 문서의 예 코드는 한 번 API를 확인하고 이후 작업 이전에 **AppRecordingManager**가 null인지 확인합니다.
+ **[AppRecordingManager](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager)** 클래스는 앱 녹음/녹화 관리에 사용할 중앙 API입니다. 팩터리 메서드 **[GetDefault](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetDefault)** 를 호출하여 이 클래스의 인스턴스를 가져옵니다. **Windows.Media.AppRecording** 네임스페이스에서 API를 사용하기 전에 현재 장치에서 해당 API가 존재하는지 확인해야 합니다. API는 Windows 10 버전 1709 이전의 운영 체제 버전을 실행하는 디바이스에서는 사용할 수 없습니다. 특정 OS 버전을 확인하는 것보다 **[ApiInformation.IsApiContractPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent)** 메서드를 사용하여 *Windows.Media.AppBroadcasting.AppRecordingContract* 버전 1.0을 쿼리하는 것이 좋습니다. 이 계약이 있는 경우 녹음/녹화 API는 디바이스에서 사용할 수 있습니다. 이 문서의 예 코드는 한 번 API를 확인하고 이후 작업 이전에 **AppRecordingManager**가 null인지 확인합니다.
 
 [!code-cpp[GetAppRecordingManager](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetGetAppRecordingManager)]
 
 ## <a name="determine-if-your-app-can-currently-record"></a>현재 앱이 기록할 수 있는지 여부 확인
-현재 기기가 녹음/녹화의 하드웨어 요구 사항을 충족하지 않거나 다른 앱이 현재 브로드캐스팅 중인 경우를 포함하여 현재 사용자의 앱이 오디오 또는 비디오를 캡처하지 못하는 이유가 여러 가지 있을 수 있습니다. 녹음/녹화를 시작하기 전에 현재 앱이 녹음/녹화를 지원하는지 확인할 수 있습니다. **AppRecordingManager** 개체의 **[GetStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetStatus)** 메서드를 호출한 다음 반환된 **[AppRecordingStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus)** 개체의 **[CanRecord](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.CanRecord)** 속성을 확인합니다. **CanRecord** 앱 현재 기록할 수 없는 의미 **false**를 반환 하는 경우 **[세부 정보](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.Details)** 속성 이유를 확인할 수 있습니다. 이유에 따라 사용자에게 상태를 표시하거나 앱 녹음/녹화 사용에 대한 지침을 표시할 수 있습니다.
+현재 기기가 녹음/녹화의 하드웨어 요구 사항을 충족하지 않거나 다른 앱이 현재 브로드캐스팅 중인 경우를 포함하여 현재 사용자의 앱이 오디오 또는 비디오를 캡처하지 못하는 이유가 여러 가지 있을 수 있습니다. 녹음/녹화를 시작하기 전에 현재 앱이 녹음/녹화를 지원하는지 확인할 수 있습니다. **AppRecordingManager** 개체의 **[GetStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetStatus)** 메서드를 호출한 다음 반환된 **[AppRecordingStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus)** 개체의 **[CanRecord](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.CanRecord)** 속성을 확인합니다. 경우 **CanRecord** 반환 **false**, 앱 현재 기록할 수 없습니다는 의미를 확인할 수 있습니다 합니다 **[세부 정보](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.Details)** 결정할 속성 이유입니다. 이유에 따라 사용자에게 상태를 표시하거나 앱 녹음/녹화 사용에 대한 지침을 표시할 수 있습니다.
 
 
 
@@ -71,7 +71,7 @@ UWP 앱에서 게임 플레이를 캡처하는 방법은 두 가지가 있습니
 
 [!code-cpp[StartRecordToFile](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetStartRecordToFile)]
 
-녹음/녹화 작업이 완료되면 반환된 **[AppRecordingResult](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingresult)** 개체의 **[Succeeded](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingresult.Succeeded)** 속성을 확인하여 녹음/녹화 작업이 성공했는지 확인합니다. 성공했다면 **[IsFileTruncated](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingresult.IsFileTruncated)** 속성을 확인할 수 있으며 저장소 이유로 시스템에서 캡처한 파일을 잘랐을 수도 있습니다. **[Duration](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingresult.Duration)** 속성을 확인하여 실제 녹음/녹화된 파일의 길이를 파악할 수 있으며 파일이 잘린 경우 녹음/녹화 작업의 길이보다 짧을 수 있습니다.
+녹음/녹화 작업이 완료되면 반환된 **[AppRecordingResult](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingresult)** 개체의 **[Succeeded](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingresult.Succeeded)** 속성을 확인하여 녹음/녹화 작업이 성공했는지 확인합니다. 성공했다면 **[IsFileTruncated](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingresult.IsFileTruncated)** 속성을 확인할 수 있으며 저장소 이유로 시스템에서 캡처한 파일을 잘랐을 수도 있습니다.  **[Duration](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingresult.Duration)** 속성을 확인하여 실제 녹음/녹화된 파일의 길이를 파악할 수 있으며 파일이 잘린 경우 녹음/녹화 작업의 길이보다 짧을 수 있습니다.
 
 [!code-cpp[OnRecordingComplete](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetOnRecordingComplete)]
 
@@ -97,7 +97,7 @@ UWP 앱에서 게임 플레이를 캡처하는 방법은 두 가지가 있습니
 [!code-cpp[CallRecordTimeSpanToFile](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetCallRecordTimeSpanToFile)]
 
 ## <a name="save-screenshot-images-to-files"></a>파일에 스크린샷 이미지 저장
-앱은 하나의 이미지 파일이나 다른 이미지 인코딩의 여러 이미지 파일에 앱의 창 현재 내용을 저장하는 스크린샷 캡처를 시작할 수 있습니다. 사용하려는 이미지 인코딩을 지정하려면 각각 이미지 종류를 나타내는 문자열 목록을 만듭니다. **[ImageEncodingSubtypes](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingsubtypes)** 의 속성은 **MediaEncodingSubtypes.Png** 또는 **MediaEncodingSubtypes.JpegXr** 같은 각 지원되는 이미지 유형에 대한 올바른 문자열을 제공합니다.
+앱은 하나의 이미지 파일이나 다른 이미지 인코딩의 여러 이미지 파일에 앱의 창 현재 내용을 저장하는 스크린샷 캡처를 시작할 수 있습니다. 사용하려는 이미지 인코딩을 지정하려면 각각 이미지 종류를 나타내는 문자열 목록을 만듭니다.  **[ImageEncodingSubtypes](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingsubtypes)** 의 속성은 **MediaEncodingSubtypes.Png** 또는 **MediaEncodingSubtypes.JpegXr** 같은 각 지원되는 이미지 유형에 대한 올바른 문자열을 제공합니다.
 
 **AppRecordingManager** 개체의 **[SaveScreenshotToFilesAsync](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.savescreenshottofilesasync)** 메서드를 호출하여 화면 캡처를 시작합니다. 이 메서드에 대한 첫 번째 매개 변수는 이미지 파일이 저장되는 **StorageFolder**입니다. 두 번째 매개 변수는 시스템이 ".png"와 같은 각 이미지 종류별로 확장을 추가하는 파일 이름 접두사입니다.
 
@@ -138,12 +138,12 @@ UWP 앱에서 게임 플레이를 캡처하는 방법은 두 가지가 있습니
 
 [!code-cpp[LevelUp](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetLevelUp)]
 
-**[StopAllStates](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatawriter.StopAllStates)** 를 호출하여 현재 열려 있는 모든 상태를 끝낼 수 있습니다.
+ **[StopAllStates](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatawriter.StopAllStates)** 를 호출하여 현재 열려 있는 모든 상태를 끝낼 수 있습니다.
 
 [!code-cpp[RaceComplete](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetRaceComplete)]
 
 ### <a name="manage-metadata-cache-storage-limit"></a>메타데이터 캐시 저장 공간 제한 관리
-**AppCaptureMetadataWriter**로 쓴 메타데이터는 관련 미디어 스트림에 쓰여질 때까지 시스템에 의해 캐시됩니다. 시스템은 각 앱의 메타데이터 캐시에 대한 크기 제한을 정의합니다. 캐시 크기 제한에 도달하며 시스템은 캐시된 메타데이터 지우기를 시작합니다. **[AppCaptureMetadataPriority.Important](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** 우선 순위를 사용 하 여 메타 데이터를 삭제 하기 전에 **[AppCaptureMetadataPriority.Informational](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** 우선 순위 값을 사용 하 여 작성 된 메타 데이터를 삭제 합니다.
+**AppCaptureMetadataWriter**로 쓴 메타데이터는 관련 미디어 스트림에 쓰여질 때까지 시스템에 의해 캐시됩니다. 시스템은 각 앱의 메타데이터 캐시에 대한 크기 제한을 정의합니다. 캐시 크기 제한에 도달하며 시스템은 캐시된 메타데이터 지우기를 시작합니다. 사용 하 여 작성 된 메타 데이터를 삭제 합니다 **[AppCaptureMetadataPriority.Informational](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** 사용 하 여 메타 데이터를 삭제 하기 전에 우선 순위 값은 **[ AppCaptureMetadataPriority.Important](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** 우선 순위입니다.
 
 언제든지 **[RemainingStorageBytesAvailable](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatawriter.RemainingStorageBytesAvailable)** 을 호출하여 앱의 메타데이터 캐시의 바이트 수를 확인할 수 있습니다. 직접 앱 정의 임계값을 설정하고 이후에 캐시에 쓰는 메타데이터의 양을 줄이도록 선택할 수 있습니다. 다음 예는 이러한 패턴의 간단한 구현을 나타냅니다.
 
@@ -152,7 +152,7 @@ UWP 앱에서 게임 플레이를 캡처하는 방법은 두 가지가 있습니
 [!code-cpp[ComboExecuted](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetComboExecuted)]
 
 ### <a name="receive-notifications-when-the-system-purges-metadata"></a>시스템이 메타데이터를 제거하는 경우 알림 수신
-시스템 **[MetadataPurged](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatawriter.MetadataPurged)** 이벤트에 대 한 처리기를 등록 하 여 앱에 대 한 메타 데이터 지우기를 시작 될 때 알림을 수신 하도록 등록할 수 있습니다.
+시스템 시작에 대 한 처리기를 등록 하 여 앱에 대 한 메타 데이터를 제거 하는 경우 알림을 받으려면 등록 수를 **[MetadataPurged](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatawriter.MetadataPurged)** 이벤트입니다.
 
 [!code-cpp[RegisterMetadataPurged](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetRegisterMetadataPurged)]
 
