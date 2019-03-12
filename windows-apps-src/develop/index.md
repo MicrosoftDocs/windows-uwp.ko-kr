@@ -1,5 +1,5 @@
 ---
-description: UWP 앱을 개발하는 방법에 대해 알아봅니다.
+description: UWP 앱을 개발하는 방법을 알아봅니다.
 title: UWP 앱 개발
 layout: LandingPage
 keywords: Uwp 앱 개발 스레딩 비동기 플랫폼 개요 포털 개발 개발자
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 <div> 
 <h1>UWP 앱 개발</h1>
-<p>Windows 10용 UWP 앱을 만들기 위한 방법 문서와 코드입니다. </p> 
+<p>Windows 10용 UWP 앱을 만드는 방법 문서와 코드입니다. </p> 
 </div>
 
 <ul class="panelContent cardsH" style="margin-left: 1px">
@@ -25,7 +25,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h3>유니버설 Windows 플랫폼 개요</h3>
-                        <p>UWP가 무엇인지, 작동 방식 및 UWP가 제공하는 기능에 대한 설명입니다.</p>
+                        <p>UWP의 정의, 작동 방식 및 UWP에서 제공하는 기능에 대해 설명합니다.</p>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@ ms.localizationpriority: medium
                     </div>                
                     <div class="cardText">
                         <h3>포팅 가이드</h3>
-                        <p>기존 Windows 양식, WPF, Android, 또는 iOS 앱을 UWP에 가져옵니다. </p>
+                        <p>기존 Windows Forms, WPF, Android 또는 iOS 앱을 UWP에 가져옵니다. </p>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardText">
                         <h3>Windows UWP 네임스페이스</h3>
-                        <p>Windows 런타임을 구성하는 네임스페이스에 의해 구성된 클래스, 구조, 인터페이스, 메서드, 속성 및 이벤트입니다.</p>
+                        <p>네임스페이스별로 구성된 Windows 런타임을 구성하는 클래스, 구조체, 인터페이스, 메서드, 속성 및 이벤트입니다.</p>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardText">
                         <h3>UWP용 스키마</h3>
-                        <p>유니버설 Windows 플랫폼(UWP) 앱에 대한 파일 및 XML 스키마 사양. </p>
+                        <p>UWP(유니버설 Windows 플랫폼) 앱용 파일 및 XML 스키마 사양입니다. </p>
                     </div>
                 </div>
             </div>
@@ -95,10 +95,10 @@ ms.localizationpriority: medium
                 <div style="display:block" class="card">
                     <div style="display:block" class="cardText">
                         <h3>앱 유형</h3>
-                        <p style="display: block;"><a  href="/windows/uwp/apps-for-education/">교육 앱</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/enterprise/">기업 앱</a></p>
+                        <p style="display: block;"><a  href="/windows/uwp/apps-for-education/">교육용 앱</a></p>
+                        <p style="display: block;"><a  href="/windows/uwp/enterprise/">엔터프라이즈 앱</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/gaming/">게임 및 DirectX 앱</a></p>
-                        <p style="display: block;"><a  href="/microsoft-edge/progressive-web-apps">점진적 웹앱</a></p>
+                        <p style="display: block;"><a  href="/microsoft-edge/progressive-web-apps">프로그레시브 웹앱</a></p>
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@ ms.localizationpriority: medium
                 <div style="display:block" class="card">
                     <div style="display:block" class="cardText">
                         <h3>앱 UI</h3>
-                        <p><a href="https://developer.microsoft.com/windows/apps/design">컨트롤, 레이아웃, 입력 체계, 애니메이션, 유용성 및 UI 디자인은 디자인 및 UI 섹션을 참조합니다.</a></p>
+                        <p><a href="https://developer.microsoft.com/windows/apps/design">컨트롤, 레이아웃, 입력 체계, 애니메이션, 유용성 및 UI 디자인은 디자인 및 UI 섹션을 참조하세요.</a></p>
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@ ms.localizationpriority: medium
                 <div style="display:block"  class="card">
                     <div style="display:block"  class="cardText">
                         <h3>데이터 및 파일</h3>
-                        <p style="display:block"><a href="/windows/uwp/audio-video-camera/">오디오, 비디오 및 카메라</a></p>
+                        <p style="display:block"><a href="/windows/uwp/audio-video-camera/">오디오 비디오 및 카메라</a></p>
                         <p><a href="/windows/uwp/data-access/" style="display:block" >데이터 액세스</a></p>
                         <p><a href="/windows/uwp/data-binding/"style="display:block" >데이터 바인딩</a></p>
                         <p><a href="/windows/uwp/files/" style="display:block" >파일, 폴더 및 라이브러리</a></p>
@@ -153,7 +153,7 @@ ms.localizationpriority: medium
                         <h3>배포</h3>
                         <p style="display:block"><a href="/windows/uwp/updates-and-versions/choose-a-uwp-version">UWP 버전 선택</a></p>
                         <p style="display:block"><a href="/windows/uwp/debug-test-perf/">디버깅, 테스트 및 성능</a></p>
-                        <p style="display:block"><a href="/windows/uwp/monetize/">수익 창출, 참여 및 Microsoft Store 서비스</a></p>                        
+                        <p style="display:block"><a href="/windows/uwp/monetize/">수익 창출, 참여 및 Store 서비스</a></p>                        
                         <p style="display:block"><a href="/windows/uwp/packaging/">앱 패키징</a></p>
                     </div>
                 </div>
@@ -171,7 +171,7 @@ ms.localizationpriority: medium
                         <p style="display:block"><a href="/windows/uwp/security/">보안</a></p>
                         <p style="display:block"><a href="/windows/uwp/threading-async/">스레딩 및 비동기 프로그래밍</a></p>
                         <p style="display:block"><a href="/windows/uwp/composition/visual-layer">시각적 계층</a></p>
-                        <p style="display:block"><a href="/windows/uwp/updates-and-versions/application-development-for-windows-as-a-service">Windows as a Service</a></p>
+                        <p style="display:block"><a href="/windows/uwp/updates-and-versions/application-development-for-windows-as-a-service">WaaS(Windows as a Service)</a></p>
                         <p style="display:block"><a href="/windows/uwp/winrt-components/">Windows 런타임 구성 요소</a></p>                 
                         <p style="display:block"><a href="/windows/uwp/xaml-platform/">XAML 플랫폼</a></p>                    
                     </div>
@@ -199,8 +199,8 @@ ms.localizationpriority: medium
                     <div style="display:block" class="cardText">
                         <h3>주변 장치, 센서 및 전원</h3>
                         <p style="display:block"><a href="/windows/uwp/contacts-and-calendar/">개요</a></p>
-                        <p style="display:block"><a href="/windows/uwp/devices-sensors/enable-device-capabilities">장치 기능 사용</a></p>
-                        <p style="display:block"><a href="/windows/uwp/devices-sensors/pair-devices">장치 페어링</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/enable-device-capabilities">디바이스 기능 사용</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/pair-devices">디바이스 페어링</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/point-of-service">서비스 지점</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/sensors">센서</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/printing-and-scanning">인쇄</a></p>
@@ -219,10 +219,10 @@ ms.localizationpriority: medium
                     <div style="display:block" class="cardText">
                         <h3>포팅</h3>
                         <p style="display:block"><a href="/windows/uwp/porting/">개요</a></p>
-                        <p style="display:block"><a href="/windows/uwp/porting/wpsl-to-uwp-root">WindowsPhone Silverlight를 UWP</a></p>
-                        <p style="display:block"><a href="/windows/uwp/porting/w8x-to-uwp-root">Windows 런타임 8.x에서 UWP로</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/wpsl-to-uwp-root">Windows Phone Silverlight에서 UWP로 이동</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/w8x-to-uwp-root">Windows 런타임 8.x에서 UWP로 이동</a></p>
                         <p style="display:block"><a href="/windows/uwp/porting/desktop-to-uwp-root">데스크톱 브리지</a></p>
-                        <p style="display:block"><a href="/windows/uwp/porting/desktop-to-uwp-migrate">데스크톱과 UWP 간의 코드 공유</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/desktop-to-uwp-migrate">데스크톱 및 UWP 간의 코드 공유</a></p>
                         <p style="display:block"><a href="/windows/uwp/porting/android-ios-uwp-map">Android 및 iOS 개발자용 개념 매핑</a></p>
                         <p style="display:block"><a href="/windows/uwp/porting/ios-to-uwp-root">iOS에서 UWP로 이동</a></p>
                         <p style="display:block"><a href="/microsoft-edge/progressive-web-apps">웹앱을 PWA로 변환</a></p>
@@ -263,7 +263,7 @@ ms.localizationpriority: medium
                     </div>
                     <div class="cardText">
                         <h3>샘플</h3>
-                        <p> 이러한 샘플을 통해 실험해 보고 멋진 Windows용 앱을 빌드하는 방법을 알아보세요. 이러한 샘플은 기능의 작동 방식을 보여 주며, 고유한 UWP 앱을 바로 시작하는 데 도움이 됩니다.</p>
+                        <p> 이러한 샘플을 실험하여 멋진 Windows용 앱을 빌드하는 방법을 알아봅니다. 이러한 샘플은 기능의 작동 방식을 보여 주고, 사용자 고유의 UWP 앱을 바로 시작하는 데 도움이 됩니다.</p>
                     </div>
                 </div>
             </div>
@@ -282,7 +282,7 @@ ms.localizationpriority: medium
                     </div>                
                     <div class="cardText">
                         <h3>개발자 도구</h3>
-                        <p>Visual Studio 2017, Windows 10 SDK 및 기타 개발자 도구를 가져옵니다.</p>
+                        <p>Visual Studio 2017, Windows 10 SDK 및 다른 개발자 도구를 가져옵니다.</p>
                     </div>
                 </div>
             </div>

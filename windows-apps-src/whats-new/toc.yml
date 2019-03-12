@@ -1,5 +1,5 @@
 items:
-- name: 개발자를 위한 Windows 10 빌드 17763의 새로운 기능
+- name: 개발자용 Windows 10 빌드 17763의 새로운 기능
   href: ../whats-new/windows-10-build-17763.md
   items:
   - name: Windows 10 빌드 17763의 API 추가
@@ -27,12 +27,12 @@ items:
     href: ../whats-new/windows-docs-july-2017.md
 - name: 이전 버전의 Windows 10
   items:
-  - name: 개발자를 위한 Windows 10 빌드 17134의 새로운 기능
+  - name: 개발자용 Windows 10 빌드 17134의 새로운 기능
     href: ../whats-new/windows-10-build-17134.md
     items:
     - name: Windows 10 빌드 17134의 API 추가
       href: ../whats-new/windows-10-build-17134-api-diff.md
-  - name: 개발자를 위한 Windows 10 빌드 16299의 새로운 기능
+  - name: 개발자용 Windows 10 빌드 16299의 새로운 기능
     href: ../whats-new/windows-10-build-16299.md
     items:
     - name: Windows 10 빌드 16299의 API 추가
@@ -54,8 +54,8 @@ items:
 - name: 실험적 API
   href: ../whats-new/experimental-apis.md
 ms.openlocfilehash: 136c6bd34dd3358d3f089aa06a664029a446b368
-ms.sourcegitcommit: cfdc854fede8e586202523cdb59d3d0a2f5b4b36
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "9013942"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582993"

@@ -1,20 +1,14 @@
 ---
 author: mijacobs
 layout: LandingPage
-description: UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, HoloLens 등 모든 Windows 장치용 앱을 빌드하고 스토어에 게시할 수 있습니다.
+description: 'UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, HoloLens 등 모든 Windows 장치용 앱을 빌드하고 Store에 게시할 수 있습니다.'
 title: UWP 설명서 - UWP 앱 개발자 | Microsoft Docs
 ms.topic: landing-page
 ms.author: mijacobs
 ms.date: 08/4/2017
-keywords: windows uwp, 유니버설 windows 플랫폼, Windows 런타임 API, windows api, windows api 참조, winrt api, windows api 참조, uwp api, uwp api 참조, uwp 개발, uwp 설계, uwp 게시
+keywords: 'windows uwp, 유니버설 windows 플랫폼, Windows 런타임 API, windows api, windows api 참조, winrt api, windows api 참조, uwp api, uwp api 참조, uwp 개발, uwp 설계, uwp 게시'
 ms.localizationpriority: medium
 ms.technology: uwp-conceptual-docs
-ms.openlocfilehash: ce1923fa071344a848b4b0c4fab1ed6da6da48f7
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9047152"
 ---
 # <a name="universal-windows-platform-documentation"></a>유니버설 Windows 플랫폼 설명서
 UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, HoloLens 등 모든 Windows 장치용 앱을 빌드하고 Microsoft Store에 게시할 수 있습니다.
@@ -57,13 +51,13 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, Hol
                     <div class="cardText">
                         <h3>시작</h3>
                         <p>
-                            <a href="get-started/universal-application-platform-guide.md">UWP 앱이란 무엇인가요?</a>
+                            <a href="get-started/universal-application-platform-guide.md">UWP 앱이란?</a>
                         </p>
                         <p>
-                            <a href="get-started/sign-up.md">개발자 계정 등록</a>
+                            <a href="get-started/sign-up.md">개발자 계정 가입</a>
                         </p>
                         <p>
-                            <a href="get-started/get-set-up.md">설정하기</a>
+                            <a href="get-started/get-set-up.md">설정</a>
                         </p>
                         <p>
                             <a href="get-started/your-first-app.md">첫 번째 앱 만들기</a>
@@ -88,7 +82,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, Hol
                             <a href="design/basics/design-and-ui-intro.md">디자인 기본 사항</a>
                         </p>
                          <p>
-                            <a href="design/fluent-design-system/index.md">흐름 디자인 시스템</a>
+                            <a href="design/fluent-design-system/index.md">Fluent Design System</a>
                         </p>
                         <p>
                             <a href="design/controls-and-patterns/index.md">컨트롤 및 패턴</a>
@@ -113,7 +107,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, Hol
                     <div class="cardText">
                         <h3>앱 개발</h3>
                         <p>
-                            <a href="enterprise/index.md">기업 앱</a>
+                            <a href="enterprise/index.md">엔터프라이즈 앱</a>
                         </p>
                         <p>
                             <a href="packaging/index.md">앱 패키징</a>
@@ -128,10 +122,10 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, Hol
                             <a href="winrt-components/index.md">Windows 런타임 구성 요소</a>
                         </p>
                         <p>
-                            <a href="apps-for-education/index.md">교육 앱</a>
+                            <a href="apps-for-education/index.md">교육용 앱</a>
                         </p>
                         <p>
-                            <a href="porting/apps-on-arm.md">ARM 기반 Windows10</a>
+                            <a href="porting/apps-on-arm.md">ARM 기반 Windows 10</a>
                         </p>
                     </div>
                 </div>
@@ -150,7 +144,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, Hol
                     <div class="cardText">
                         <h3>게임 개발</h3>
                         <p>
-                            <a href="gaming/e2e.md">Windows10 게임 개발 가이드</a>
+                            <a href="gaming/e2e.md">Windows 10 게임 개발 가이드</a>
                         </p>
                         <p>
                             <a href="gaming/index.md">게임 프로그래밍</a>
@@ -179,7 +173,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, Hol
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>게시</h3>
+                        <h3>게시하기</h3>
                         <p>
                             <a href="publish/app-submissions.md">앱 제출</a>
                         </p>
@@ -249,7 +243,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, Hol
                             <a href="//msdn.microsoft.com/library/windows/apps/mt691886.aspx">Microsoft Store Services SDK API</a>
                         </p>
                         <p>
-                            <a href="//docs.microsoft.com/uwp/extension-sdks">장치 패밀리 확장 SDK 및 API 계약</a>
+                            <a href="//docs.microsoft.com/uwp/extension-sdks">디바이스 패밀리 확장 SDK 및 API 계약</a>
                         </p>
                         <p>
                             <a href="//docs.microsoft.com/uwp/schemas/">UWP 앱의 파일 및 XML 스키마 사양</a>
@@ -271,10 +265,10 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, Hol
                     <div class="cardText">
                         <h3>커뮤니티 및 지원</h3>
                         <p>
-                            <a href="https://twitter.com/WindowsDocs">@WindowsDocsTwitter에서</a>
+                            <a href="https://twitter.com/WindowsDocs">Twitter의 @WindowsDocs</a>
                         </p>
                         <p>
-                            <a href="https://aka.ms/OneDevMinute">YouTube에서 OneDevMinute</a>
+                            <a href="https://aka.ms/OneDevMinute">YouTube의 OneDevMinute</a>
                         </p>
                         <p>
                             <a href="https://developer.microsoft.com/windows/support">Windows 개발자 지원</a>

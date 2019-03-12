@@ -1,19 +1,13 @@
 ---
-Description: Getting to know the devices that support Universal Windows Platform (UWP) apps will help you offer the best user experience for each form factor.
+Description: UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다.
 title: UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
-keywords: 디바이스, 입력, 조작
+keywords: '디바이스, 입력, 조작'
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 127c01321c0341e7125e8c6da955c789c4c65f2f
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049910"
 ---
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서
 
@@ -21,7 +15,7 @@ ms.locfileid: "9049910"
 
 ![Windows 기반 디바이스](images/device-primer/device-primer-ramp.png)
 
-UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다. 특정 디바이스를 디자인할 때의 주요 고려 사항은 해당 디바이스에 앱이 표시되는 방법, 해당 디바이스에서 앱이 사용되는 위치, 시간 및 방법, 사용자가 해당 디바이스를 조작하는 방법 등입니다.
+UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다. 특정 장치를 디자인할 때의 주요 고려 사항은 해당 장치에 앱이 표시되는 방법, 해당 장치에서 앱이 사용되는 위치, 시간 및 방법, 사용자가 해당 장치를 조작하는 방법 등입니다.
 
 ## <a name="pcs-and-laptops"></a>PC와 노트북
 
@@ -92,7 +86,7 @@ UI 고려 사항
 
 ## <a name="xbox-and-tv"></a>Xbox 및 TV
 
-실내의 소파에 앉아 TV와 상호 작용하는 게임 패드 또는 리모컨을 사용하여 TV를 조작하는 환경을 **3m 환경**이라고 합니다. 일반적으로 사용자가 화면에서 약 3m 떨어진 곳에 앉아 있기 때문에 이렇게 이름이 지정되었습니다. 이 경우 가령 *0.6m* 환경이나 PC 조작 시에는 존재하지 않는 고유한 과제가 발생합니다. Xbox One 또는 TV 화면에 연결되고 입력에 게임 패드 또는 리모컨을 사용하는 다른 모든 디바이스용 앱을 개발하는 경우 항상 이 점에 유의해야 합니다.
+실내의 소파에 앉아 TV와 상호 작용 하는 게임 패드 또는 리모컨을 사용하여 TV를 조작하는 환경을 **10피트 환경**이라고 합니다. 일반적으로 사용자가 화면에서 약 3m 떨어진 곳에 앉아 있기 때문에 이렇게 이름이 지정되었습니다. 이 경우 가령 *0.6m* 환경이나 PC 조작 시에는 존재하지 않는 고유한 과제가 발생합니다. Xbox One 또는 TV 화면에 연결되고 입력에 게임 패드 또는 리모컨을 사용하는 다른 모든 디바이스용 앱을 개발하는 경우 항상 이 점에 유의해야 합니다.
 
 3m 환경용으로 UWP 앱을 디자인하는 것은 여기에 나열된 다른 디바이스 범주를 디자인하는 것과 매우 다릅니다. 자세한 내용은 [Xbox 및 TV용 디자인](designing-for-tv.md)을 참조하세요.
 
@@ -129,7 +123,7 @@ UI 고려 사항
 
 모든 컴퓨팅 장치에서 가장 널리 사용되는 휴대폰은 제한된 화면 공간 및 기본 입력만으로 많은 작업을 수행할 수 있습니다. 휴대폰의 크기는 다양하며 큰 휴대폰을 패블릿이라고 합니다. 패블릿의 앱 환경은 휴대폰과 유사하지만 패블릿의 화면 공간 확대로 콘텐츠 사용에서 몇 가지 주요 사항이 변경되었습니다.
 
-호환 가능한 windows 10 모바일 장치를 위한 새 환경인 휴대폰용 Continuum을 사용 하 여 사용자가 휴대폰을 모니터를 연결 하 고도를 사용 하 여 마우스와 키보드 휴대폰을 노트북 처럼 수 있습니다. (자세한 내용은 [휴대폰용 Continuum 문서](https://go.microsoft.com/fwlink/p/?LinkID=699431)를 참조하세요.)
+Windows 10 Mobile 디바이스와 호환 가능한 새로운 환경인 휴대폰용 Continuum을 사용하여 사용자는 휴대폰을 모니터에 연결할 수 있을 뿐만 아니라 마우스와 키보드까지 사용하여 휴대폰을 노트북처럼 사용할 수 있습니다. (자세한 내용은 [휴대폰용 Continuum 문서](https://go.microsoft.com/fwlink/p/?LinkID=699431)를 참조하세요.)
 
 화면 크기
 -   휴대폰의 경우 4~5인치

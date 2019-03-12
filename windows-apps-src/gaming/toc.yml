@@ -1,7 +1,7 @@
 items:
-- name: 시작하기
+- name: 시작
   href: ../gaming/getting-started.md
-- name: Windows10 게임 개발 가이드
+- name: Windows 10 게임 개발 가이드
   href: ../gaming/e2e.md
 - name: 게임 프로그래밍
   href: ../gaming/index.md
@@ -24,7 +24,7 @@ items:
   - name: UWP 프로그래밍
     href: ../gaming/uwp-programming.md
     items:
-    - name: 게임용 오디오
+    - name: 게임의 오디오
       href: ../gaming/working-with-audio-in-your-directx-game.md
     - name: 게임 브로드캐스트 및 캡처
       href: ../gaming/game-broadcast-and-capture.md
@@ -33,7 +33,7 @@ items:
         href: ../gaming/manage-game-broadcasting.md
       - name: 게임 오디오, 비디오, 스크린샷 및 메타데이터 캡처
         href: ../gaming/capture-game-audio-video-screenshots-and-metadata.md
-    - name: 게임 입력 장치
+    - name: 게임용 입력 시스템
       href: ../gaming/input-for-games.md
       items:
       - name: 게임패드 및 진동
@@ -50,7 +50,7 @@ items:
         href: ../gaming/headset.md
       - name: UI 탐색 컨트롤러
         href: ../gaming/ui-navigation-controller.md
-      - name: 게임 입력 장치 사용 방법
+      - name: 게임용 입력 시스템
         href: ../gaming/input-practices-for-games.md
       - name: 게임 컨트롤러의 레지스트리 데이터
         href: ../gaming/registry-data-for-game-controllers.md
@@ -100,9 +100,9 @@ items:
         href: ../gaming/tutorial-game-flow-management.md
       - name: 주 게임 개체
         href: ../gaming/tutorial--defining-the-main-game-loop.md
-      - name: 렌더링 프레임 워크 I
+      - name: 렌더링 프레임워크 I
         href: ../gaming/tutorial--assembling-the-rendering-pipeline.md
-      - name: 렌더링 프레임 워크 II
+      - name: 렌더링 프레임워크 II
         href: ../gaming/tutorial-game-rendering.md
       - name: UI 추가
         href: ../gaming/tutorial--adding-a-user-interface.md
@@ -174,7 +174,7 @@ items:
         href: ../graphics-concepts/introduction-to-buffers.md
       - name: 인덱스 버퍼
         href: ../graphics-concepts/index-buffers.md
-    - name: 디바이스
+    - name: 장치
       href: ../graphics-concepts/devices.md
       items:
       - name: 디바이스 유형
@@ -453,7 +453,7 @@ items:
   - name: 기능 추가
     href: ../gaming/directx-add-features.md
     items:
-    - name: DirectX 및 XAML 상호 운용성
+    - name: DirectX 및 XAML interop
       href: ../gaming/directx-and-xaml-interop.md
     - name: 게임 입력
       href: ../gaming/directx-game-input.md
@@ -479,9 +479,9 @@ items:
       href: ../gaming/optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md
     - name: 스왑 체인으로 대기 시간 단축
       href: ../gaming/reduce-latency-with-dxgi-1-3-swap-chains.md
-    - name: 스왑 체인 크기 조정 및 오버레이
+    - name: 스왑 체인 확장 및 오버레이
       href: ../gaming/multisampling--scaling--and-overlay-swap-chains.md
-  - name: DirectX 9에서 UWP로 포팅
+  - name: DirectX 9을 UWP로 포팅
     href: ../gaming/porting-your-directx-9-game-to-windows-store.md
     items:
     - name: DirectX 9에서 DirectX 11.1로
@@ -548,7 +548,7 @@ items:
 - name: Xbox One의 UWP
   href: ../xbox-apps/index.md
   items:
-  - name: 시작하기
+  - name: 시작
     href: ../xbox-apps/getting-started.md
   - name: 새로운 기능
     href: ../xbox-apps/whats-new.md
@@ -608,7 +608,7 @@ items:
       href: ../xbox-apps/development-lanes-unity.md
     - name: HTML / JS
       href: ../xbox-apps/development-lanes-html.md
-  - name: Xbox 장치 포털 REST API
+  - name: Xbox 디바이스 포털 REST API
     href: ../xbox-apps/reference.md
     items:
     - name: /api/app/packagemanager/register
@@ -644,8 +644,8 @@ items:
 - name: Xbox Live
   href: ../xbox-live/TOC.md
 ms.openlocfilehash: 0d44f8286586f3019864097357051e43fa88fbae
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8962585"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583627"

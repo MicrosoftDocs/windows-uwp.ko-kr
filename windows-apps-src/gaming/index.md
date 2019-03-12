@@ -4,34 +4,28 @@ description: UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 �
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 ms.date: 06/13/2017
 ms.topic: article
-keywords: Windows 10, uwp, 게임, directx
+keywords: 'Windows 10, UWP, 게임, DirectX'
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dddead7dcc2eedbe4e32fa4bfd749bed60ba796
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941596"
 ---
 # <a name="game-programming"></a>게임 프로그래밍
 
-UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 수익을 창출할 수 있는 새로운 기회를 제공합니다. Windows 10용 게임을 만드는 방법을 알아봅니다.
+UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 수익을 창출할 수 있는 새로운 기회를 제공합니다. Windows 10용 게임을 만드는 방법에 대해 알아봅니다.
 
 | 항목 | 설명 |
 |---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Windows10 게임 개발 가이드](e2e.md) | UWP 게임 개발용 리소스 및 정보가 포함된 포괄적인 가이드입니다. |
-| [계획](planning.md) | 이 항목에는 게임 계획 단계에 대한 문서 목록이 포함되어 있습니다. |
-| [UWP 프로그래밍](uwp-programming.md) | Windows 런타임 API를 사용하여 UWP 게임을 개발하는 방법을 알아보세요. |
+| [Windows 10 게임 개발 가이드](e2e.md) | UWP 게임 개발용 리소스와 정보가 포함된 엔드투엔드 가이드입니다. |
+| [계획](planning.md) | 게임 계획 단계에 대한 문서 목록이 나와 있습니다. |
+| [UWP 프로그래밍](uwp-programming.md) | Windows 런타임 API를 사용하여 UWP 게임을 개발하는 방법에 대해 알아봅니다. |
 | [게임 개발 동영상](game-development-videos.md) | 주요 회의 및 이벤트의 게임 개발 동영상 모음입니다. |
 
-DirectX를 사용하여 UWP 게임을 개발하는 방법을 알아보려면 [DirectX 프로그래밍](directx-programming.md)으로 이동하세요.
+DirectX를 사용하여 UWP 게임을 개발하는 방법에 대해 알아보려면 [DirectX 프로그래밍](directx-programming.md)으로 이동하세요.
 
 게임 개발 개요 및 자습서를 가장 효과적으로 사용하려면 다음 주제를 잘 알고 있어야 합니다.
 
--   Microsoft C++ with Component Extensions(C++/CX). 자동 참조 카운트를 통합하는 Microsoft C++의 업데이트이며 DirectX 11.1 이상 버전을 사용하여 UWP 게임을 개발하기 위한 언어입니다.
+-   Microsoft C++ with Component Extensions(C++/CX). 자동 참조 계산을 통합하는 Microsoft C++에 대한 업데이트이며, DirectX 11.1 이상 버전을 사용하여 UWP 게임을 개발하기 위한 언어입니다.
 -   기본 그래픽 프로그래밍 용어
 -   기본 Windows 프로그래밍 개념
--   Direct3D 9 또는 11 API에 대한 기본적인 지식
+-   Direct3D 9 또는 11 API에 대한 기본 지식
 
  
 

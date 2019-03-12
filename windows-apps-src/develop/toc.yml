@@ -1,12 +1,12 @@
 items:
 - name: 앱 유형
   items:
-  - name: 교육 앱
+  - name: 교육용 앱
     href: ../apps-for-education/index.md
     items:
-    - name: 시험 응시 API
+    - name: API 테스트 수행
       href: ../apps-for-education/take-a-test-api.md
-  - name: 기업 앱
+  - name: 엔터프라이즈 앱
     href: ../enterprise/index.md
     items:
     - name: WIP(Windows Information Protection)
@@ -16,14 +16,14 @@ items:
         href: ../enterprise/wip-dev-guide.md
     - name: 엔터프라이즈 공유 저장소
       href: ../enterprise/enterprise-shared-storage.md
-    - name: '자습서: 고객 데이터베이스 응용 프로그램 만들기'
+    - name: '자습서: 고객 데이터베이스 애플리케이션 만들기'
       href: ../enterprise/customer-database-tutorial.md
       items:
       - name: 고객 데이터베이스 자습서 앱 구조
         href: ../enterprise/customer-database-app-structure.md
   - name: 점진적 웹앱
     href: /microsoft-edge/progressive-web-apps
-- name: 오디오, 비디오 및 카메라
+- name: 오디오 비디오 및 카메라
   href: ../audio-video-camera/index.md
   items:
   - name: 카메라
@@ -80,7 +80,7 @@ items:
         href: ../audio-video-camera/system-media-transport-controls.md
     - name: 시스템에서 지원하는 시간이 제한된 메타데이터 신호
       href: ../audio-video-camera/system-supported-metadata-cues.md
-    - name: 미디어 중단 만들기, 예약 및 관리
+    - name: 미디어 휴지 만들기, 예약 및 관리
       href: ../audio-video-camera/create-schedule-and-manage-media-breaks.md
     - name: 백그라운드에서 미디어 재생
       href: ../audio-video-camera/background-audio.md
@@ -113,9 +113,9 @@ items:
     href: ../audio-video-camera/custom-audio-effects.md
   - name: 미디어 컴퍼지션 및 편집
     href: ../audio-video-camera/media-compositions-and-editing.md
-  - name: 오디오 장치 정보 속성
+  - name: 오디오 디바이스 정보 속성
     href: ../audio-video-camera/audio-device-information-properties.md
-  - name: 오디오 상태 변경 사항 검색 및 대응
+  - name: 오디오 상태 변경 감지 및 대응
     href: ../audio-video-camera/detect-and-respond-to-audio-state-changes.md
   - name: 비트맵 이미지 만들기, 편집 및 저장
     href: ../audio-video-camera/imaging.md
@@ -142,7 +142,7 @@ items:
     href: ../audio-video-camera/camera-independent-flashlight.md
   - name: 지원되는 코덱
     href: ../audio-video-camera/supported-codecs.md
-  - name: 설치된 코덱에 대한 쿼리
+  - name: 설치된 코덱 쿼리
     href: ../audio-video-camera/codec-query.md
   - name: 화면 캡처
     href: ../audio-video-camera/screen-capture.md
@@ -183,17 +183,17 @@ items:
     items:
     - name: 리소스 관리 시스템
       href: ../app-resources/resource-management-system.md
-    - name: RMS가 리소스를 일치시키고 선택하는 방법
+    - name: RMS에서 리소스를 일치시키고 선택하는 방법
       href: ../app-resources/how-rms-matches-and-chooses-resources.md
-    - name: RMS가 언어 태그를 일치하는 방법
+    - name: RMS에서 언어 태그를 일치시키는 방법
       href: ../app-resources/how-rms-matches-lang-tags.md
     - name: 언어, 배율, 대비 등에 맞게 리소스 조정
       href: ../app-resources/tailor-resources-lang-scale-contrast.md
-    - name: UI와 앱 패키지 매니페스트에 문자열 지역화
+    - name: UI 및 앱 패키지 매니페스트의 문자열 지역화
       href: ../app-resources/localize-strings-ui-manifest.md
     - name: 배율, 테마, 대비 등에 맞춘 이미지 및 자산 로드
       href: ../app-resources/images-tailored-for-scale-theme-contrast.md
-    - name: URI 스키마
+    - name: URI 체계
       href: ../app-resources/uri-schemes.md
     - name: 앱에서 사용하는 기본 리소스 지정
       href: ../app-resources/specify-default-resources-installed.md
@@ -234,7 +234,7 @@ items:
       href: ../data-binding/xaml-basics-data-binding.md
     - name: 디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
       href: ../data-binding/displaying-data-in-the-designer.md
-    - name: 계층적 데이터를 바인딩하고 마스터/세부 정보 보기 만들기
+    - name: 계층적 데이터에 바인딩하고 마스터/자세히 보기 만들기
       href: ../data-binding/how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md
     - name: 데이터 바인딩 및 MVVM
       href: ../data-binding/data-binding-and-mvvm.md
@@ -245,7 +245,7 @@ items:
       href: ../files/quickstart-listing-files-and-folders.md
     - name: 파일 만들기, 쓰기 및 읽기
       href: ../files/quickstart-reading-and-writing-files.md
-    - name: 파일을 작성 하기 위한 모범 사례
+    - name: 파일 쓰기 모범 사례
       href: ../files/best-practices-for-writing-to-files.md
     - name: 파일 속성 가져오기
       href: ../files/quickstart-getting-file-properties.md
@@ -263,7 +263,7 @@ items:
       href: ../files/thumbnails.md
     - name: 최근에 사용한 파일 및 폴더 추적
       href: ../files/how-to-track-recently-used-files-and-folders.md
-    - name: 배경에서 파일 시스템 변경 추적
+    - name: 백그라운드에서 파일 시스템 변경 추적
       href: ../files/change-tracking-filesystem.md
     - name: SD 카드에 액세스
       href: ../files/access-the-sd-card.md
@@ -271,7 +271,7 @@ items:
       href: ../files/file-access-permissions.md
     - name: UWP의 파일 속성에 빠르게 액세스
       href: ../files/fast-file-properties.md
-  - name: 기계 학습
+  - name: Machine Learning
     href: https://docs.microsoft.com/windows/ai/
 - name: 배포
   items:
@@ -301,13 +301,13 @@ items:
         href: ../debug-test-perf/device-portal-mobile.md
       - name: Xbox용 디바이스 포털
         href: ../debug-test-perf/device-portal-xbox.md
-      - name: HoloLens용 디바이스 포털
+      - name: Hololens용 디바이스 포털
         href: ../debug-test-perf/device-portal-hololens.md
       - name: 디바이스 포털 핵심 API
         href: ../debug-test-perf/device-portal-api-core.md
-      - name: Device Portal에 대한 사용자 지정 플러그 인 작성
+      - name: 디바이스 포털용 사용자 지정 플러그 인 작성
         href: ../debug-test-perf/device-portal-plugin.md
-      - name: 사용자 지정 SSL 인증서로 Device Portal 프로비전
+      - name: 사용자 지정 SSL 인증서로 디바이스 포털 프로비전
         href: ../debug-test-perf/device-portal-ssl.md
     - name: Windows 앱 인증 키트
       href: ../debug-test-perf/windows-app-certification-kit.md
@@ -375,9 +375,9 @@ items:
         href: ../monetize/enable-subscription-add-ons-for-your-app.md
       - name: 앱의 평가판 구현
         href: ../monetize/implement-a-trial-version-of-your-app.md
-      - name: Store 제품용 데이터 스키마
+      - name: Microsoft Store 제품용 데이터 스키마
         href: ../monetize/data-schemas-for-store-products.md
-      - name: Store 작업에 대한 오류 코드
+      - name: Microsoft Store 작업에 대한 오류 코드
         href: ../monetize/error-codes-for-store-operations.md
       - name: Windows.ApplicationModel.Store 네임스페이스 사용
         href: ../monetize/in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md
@@ -390,7 +390,7 @@ items:
           href: ../monetize/enable-consumable-in-app-product-purchases.md
         - name: 앱에서 바로 구매 제품의 큰 카탈로그 관리
           href: ../monetize/manage-a-large-catalog-of-in-app-products.md
-        - name: 영수증을 사용하여 제품 구매 확인
+        - name: 확인 메일을 사용하여 제품 구매 검증
           href: ../monetize/use-receipts-to-verify-product-purchases.md
     - name: Microsoft Advertising SDK를 사용하여 앱에 광고 표시
       href: ../monetize/display-ads-in-your-app.md
@@ -408,7 +408,7 @@ items:
           items:
           - name: XAML 및 .NET의 AdControl
             href: ../monetize/adcontrol-in-xaml-and--net.md
-          - name: HTML 5 및 Javascript의 AdControl
+          - name: HTML 5 및 JavaScript의 AdControl
             href: ../monetize/adcontrol-in-html-5-and-javascript.md
           - name: 지원되는 배너 광고 크기
             href: ../monetize/supported-ad-sizes-for-banner-ads.md
@@ -441,7 +441,7 @@ items:
             href: ../monetize/error-handling-in-xamlc-walkthrough.md
           - name: JavaScript에서 오류 처리 연습
             href: ../monetize/error-handling-in-javascript-walkthrough.md
-      - name: 알려진 문제점 및 문제 해결
+      - name: 알려진 문제 및 문제 해결
         href: ../monetize/known-issues-for-the-advertising-libraries.md
         items:
         - name: HTML 및 JavaScript 문제 해결 가이드
@@ -470,9 +470,9 @@ items:
           href: ../monetize/create-and-run-your-first-experiment-with-a-b-testing.md
       - name: 앱에서 피드백 허브 시작
         href: ../monetize/launch-feedback-hub-from-your-app.md
-      - name: 대상 푸시 알림에 대해 앱 구성
+      - name: 앱에 대상 푸시 알림 구성
         href: ../monetize/configure-your-app-to-receive-dev-center-notifications.md
-      - name: 파트너 센터에 대해 사용자 지정 이벤트 로깅
+      - name: 파트너 센터의 사용자 지정 이벤트 로깅
         href: ../monetize/log-custom-events-for-dev-center.md
     - name: 평점 및 리뷰 요청
       href: ../monetize/request-ratings-and-reviews.md
@@ -484,25 +484,25 @@ items:
         items:
         - name: UWP 앱
           items:
-          - name: 취득 가져오기 및 데이터 설치
+          - name: 취득 및 설치 데이터 가져오기
             items:
-            - name: 앱 취득 가져오기
+            - name: 앱 사용 권한 가져오기
               href: ../monetize/get-app-acquisitions.md
             - name: 앱 설치 가져오기
               href: ../monetize/get-app-installs.md
             - name: 앱 취득 깔때기 데이터 가져오기
               href: ../monetize/get-acquisition-funnel-data.md
-            - name: 채널 별 앱 변환 가져오기
+            - name: 채널별 앱 변환 가져오기
               href: ../monetize/get-app-conversions-by-channel.md
-            - name: 추가 기능 취득 가져오기
+            - name: 추가 기능 구입 가져오기
               href: ../monetize/get-in-app-acquisitions.md
             - name: 구독 추가 기능 취득 가져오기
               href: ../monetize/get-subscription-acquisitions.md
             - name: 채널별 추가 기능 변환 가져오기
               href: ../monetize/get-add-on-conversions-by-channel.md
-          - name: 앱에 대한 정보 데이터 가져오기
+          - name: 앱에 대한 인사이트 데이터 가져오기
             href: ../monetize/get-insights-data-for-your-app.md
-          - name: 앱 등급 가져오기
+          - name: 앱 평점 가져오기
             href: ../monetize/get-app-ratings.md
           - name: 앱 리뷰 가져오기
             href: ../monetize/get-app-reviews.md
@@ -525,22 +525,22 @@ items:
             href: ../monetize/get-ad-campaign-performance-data.md
         - name: 데스크톱 앱
           items:
-          - name: 데스크톱 응용 프로그램 설치 가져오기
+          - name: 데스크톱 애플리케이션 설치 가져오기
             href: ../monetize/get-desktop-app-installs.md
-          - name: 데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
+          - name: 데스크톱 애플리케이션에 대한 인사이트 데이터 가져오기
             href: ../monetize/get-insights-data-for-your-desktop-app.md
-          - name: 데스크톱 응용 프로그램에 대한 업그레이드 차단 가져오기
+          - name: 데스크톱 애플리케이션에 대한 업그레이드 차단 가져오기
             href: ../monetize/get-desktop-block-data.md
-          - name: 데스크톱 응용 프로그램에 대한 업그레이드 차단 세부 정보 가져오기
+          - name: 데스크톱 애플리케이션에 대한 업그레이드 차단 세부 정보 가져오기
             href: ../monetize/get-desktop-block-data-details.md
-          - name: 데스크톱 응용 프로그램에 대한 오류 보고 데이터 가져오기
+          - name: 데스크톱 애플리케이션에 대한 오류 보고 데이터 가져오기
             href: ../monetize/get-desktop-application-error-reporting-data.md
             items:
-            - name: 데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기
+            - name: 데스크톱 애플리케이션에서 오류 세부 정보 가져오기
               href: ../monetize/get-details-for-an-error-in-your-desktop-application.md
-            - name: 데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기
+            - name: 데스크톱 애플리케이션에서 오류에 대한 스택 추적 가져오기
               href: ../monetize/get-the-stack-trace-for-an-error-in-your-desktop-application.md
-            - name: 데스크톱 응용 프로그램의 오류에 대한 CAB 파일 다운로드
+            - name: 데스크톱 애플리케이션의 오류에 대한 CAB 파일 다운로드
               href: ../monetize/download-the-cab-file-for-an-error-in-your-desktop-application.md
         - name: Xbox One 게임 및 Xbox Live
           items:
@@ -548,14 +548,14 @@ items:
             href: ../monetize/get-xbox-one-game-acquisitions.md
           - name: Xbox One 추가 기능 취득 가져오기
             href: ../monetize/get-xbox-one-add-on-acquisitions.md
-          - name: Xbox One 게임에 대한 오류 보고 데이터 가져오기
+          - name: Xbox One 게임의 오류 보고 데이터 가져오기
             href: ../monetize/get-error-reporting-data-for-your-xbox-one-game.md
             items:
-            - name: Xbox One 게임에서 오류에 대한 세부 정보 가져오기
+            - name: Xbox One 게임의 오류 세부 정보 가져오기
               href: ../monetize/get-details-for-an-error-in-your-xbox-one-game.md
-            - name: Xbox One 게임에서 오류에 대한 스택 추적 가져오기
+            - name: Xbox One 게임의 오류에 대한 스택 추적 가져오기
               href: ../monetize/get-the-stack-trace-for-an-error-in-your-xbox-one-game.md
-            - name: Xbox One 게임에서 오류에 대한 CAB 파일 다운로드
+            - name: Xbox One 게임의 오류에 대한 CAB 파일 다운로드
               href: ../monetize/download-the-cab-file-for-an-error-in-your-xbox-one-game.md
           - name: Xbox Live 분석 데이터 가져오기
             href: ../monetize/get-xbox-live-analytics.md
@@ -568,7 +568,7 @@ items:
               href: ../monetize/get-xbox-live-game-hub-data.md
             - name: Xbox Live 클럽 데이터 가져오기
               href: ../monetize/get-xbox-live-club-data.md
-            - name: Xbox Live 멀티플레이 데이터 가져오기
+            - name: Xbox Live 멀티 플레이 데이터 가져오기
               href: ../monetize/get-xbox-live-multiplayer-data.md
             - name: Xbox Live 동시 사용 데이터 가져오기
               href: ../monetize/get-xbox-live-concurrent-usage-data.md
@@ -586,7 +586,7 @@ items:
           href: ../monetize/manage-ad-campaigns.md
         - name: 배달 라인 관리
           href: ../monetize/manage-delivery-lines-for-ad-campaigns.md
-        - name: 타기팅 프로필 관리
+        - name: 대상 프로필 관리
           href: ../monetize/manage-targeting-profiles-for-ad-campaigns.md
         - name: 크리에이티브 관리
           href: ../monetize/manage-creatives-for-ad-campaigns.md
@@ -677,7 +677,7 @@ items:
             href: ../monetize/update-a-flight-submission.md
           - name: 패키지 플라이트 제출 삭제
             href: ../monetize/delete-a-flight-submission.md
-          - name: 패키지 제출에 대한 출시 정보 가져오기
+          - name: 플라이트 제출에 대한 출시 정보 가져오기
             href: ../monetize/get-package-rollout-info-for-a-flight-submission.md
           - name: 플라이트 제출에 대한 출시 백분율 업데이트
             href: ../monetize/update-the-package-rollout-percentage-for-a-flight-submission.md
@@ -688,17 +688,17 @@ items:
         - name: 제출 API에 대한 코드 예제
           href: ../monetize/code-examples-for-the-windows-store-submission-api.md
           items:
-          - name: 'C# 샘플: 앱, 추가 기능, 플라이트 제출'
+          - name: 'C# 샘플: 앱, 추가 기능 및 플라이트 제출'
             href: ../monetize/csharp-code-examples-for-the-windows-store-submission-api.md
-          - name: 'C# 샘플: 앱의 게임 옵션과 예고편 제출'
+          - name: 'C# 샘플: 게임 옵션과 예고편이 포함된 앱 제출'
             href: ../monetize/csharp-code-examples-for-submissions-game-options-and-trailers.md
-          - name: 'Java 샘플: 앱, 추가 기능, 플라이트 제출'
+          - name: 'Java 샘플: 앱, 추가 기능 및 플라이트 제출'
             href: ../monetize/java-code-examples-for-the-windows-store-submission-api.md
-          - name: 'Java 샘플: 앱의 게임 옵션과 예고편 제출'
+          - name: 'Java 샘플: 게임 옵션과 예고편이 포함된 앱 제출'
             href: ../monetize/java-code-examples-for-submissions-game-options-and-trailers.md
-          - name: 'Python 샘플: 앱, 추가 기능, 플라이트 제출'
+          - name: 'Python 샘플: 앱, 추가 기능 및 플라이트 제출'
             href: ../monetize/python-code-examples-for-the-windows-store-submission-api.md
-          - name: 'Python 샘플: 앱의 게임 옵션과 예고편 제출'
+          - name: 'Python 샘플: 게임 옵션과 예고편이 포함된 앱 제출'
             href: ../monetize/python-code-examples-for-submissions-game-options-and-trailers.md
       - name: 대상 제품 관리
         href: ../monetize/manage-targeted-offers-using-windows-store-services.md
@@ -724,9 +724,9 @@ items:
         href: ../monetize/app-metadata-api-for-advertising-networks.md
     - name: Microsoft Store에 요청 보내기
       href: ../monetize/send-requests-to-the-store.md
-    - name: 소매 데모 (RDX) 기능 추가
+    - name: 소매 데모(RDX) 기능 추가
       href: ../monetize/retail-demo-experience.md
-    - name: 결제 요청 API로 결제를 간단하게
+    - name: 결제 요청 API를 사용하여 결제 간소화
       href: ../monetize/payment-request.md
   - name: 앱 패키징
     href: ../packaging/index.md
@@ -757,7 +757,7 @@ items:
       items:
       - name: 소스 콘텐츠 그룹 맵 생성 및 변환
         href: ../packaging/create-cgm.md
-    - name: 선택형 패키지 및 관련 집합 제작
+    - name: 선택형 패키지 및 관련 세트 제작
       href: ../packaging/optional-packages.md
       items:
       - name: 실행 가능한 코드가 있는 옵션 패키지
@@ -769,7 +769,7 @@ items:
         href: ../packaging/create-appinstallerfile-vs.md
       - name: 웹 페이지에서 UWP 앱 설치
         href: ../packaging/installing-UWP-apps-web.md
-      - name: 앱 설치 관리자 파일을 사용하여 관련 집합 설치
+      - name: 앱 설치 관리자 파일을 사용하여 관련 세트 설치
         href: ../packaging/install-related-set.md
       - name: 앱 설치 관리자 파일 관련 설치 문제 해결
         href: ../packaging/troubleshoot-appinstaller-issues.md
@@ -777,7 +777,7 @@ items:
         href: ../packaging/web-install-azure.md
       - name: IIS 서버에서 UWP 앱 설치
         href: ../packaging/web-install-iis.md
-      - name: 웹 설치에 대해 AWS에서 UWP 앱 패키지 호스트
+      - name: 웹 설치용 UWP 앱 패키지를 AWS에 호스팅
         href: ../packaging/web-install-aws.md
     - name: WinAppDeployCmd.exe 도구를 사용하여 앱 설치
       href: ../packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md
@@ -802,7 +802,7 @@ items:
       href: ../cpp-and-winrt-apis/faq.md
     - name: 문제 해결
       href: ../cpp-and-winrt-apis/troubleshooting.md
-    - name: 사진 편집기 샘플 응용 프로그램
+    - name: 사진 편집기 샘플 애플리케이션
       href: ../cpp-and-winrt-apis/photo-editor-sample.md
     - name: 문자열 처리
       href: ../cpp-and-winrt-apis/strings.md
@@ -816,7 +816,7 @@ items:
       href: ../cpp-and-winrt-apis/author-apis.md
     - name: 오류 처리
       href: ../cpp-and-winrt-apis/error-handling.md
-    - name: 대리자를 사용한 이벤트 처리
+    - name: 대리자를 사용하여 이벤트 처리
       href: ../cpp-and-winrt-apis/handle-events.md
     - name: 이벤트 작성
       href: ../cpp-and-winrt-apis/author-events.md
@@ -824,11 +824,11 @@ items:
       href: ../cpp-and-winrt-apis/collections.md
     - name: 동시성 및 비동기 작업
       href: ../cpp-and-winrt-apis/concurrency.md
-    - name: XAML 컨트롤; 속성에 바인딩
+    - name: XAML 컨트롤, 속성에 바인딩
       href: ../cpp-and-winrt-apis/binding-property.md
-    - name: XAML 항목 컨트롤; 컬렉션에 바인딩
+    - name: XAML 항목 컨트롤, 컬렉션에 바인딩
       href: ../cpp-and-winrt-apis/binding-collection.md
-    - name: XAML 사용자 지정 (템플릿) 컨트롤
+    - name: XAML 사용자 지정(템플릿) 컨트롤
       href: ../cpp-and-winrt-apis/xaml-cust-ctrl.md
     - name: COM 구성 요소 사용
       href: ../cpp-and-winrt-apis/consume-com.md
@@ -961,7 +961,7 @@ items:
     items:
     - name: C++/CX로 Windows 런타임 구성 요소 만들기
       href: ../winrt-components/creating-windows-runtime-components-in-cpp.md
-    - name: '연습: C++/CX로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출'
+    - name: '연습: C++/CX로 기본 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출'
       href: ../winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md
     - name: C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
       href: ../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md
@@ -976,11 +976,11 @@ items:
         href: ../winrt-components/distributing-a-managed-windows-runtime-component.md
       - name: Windows 런타임 형식의 .NET Framework 매핑
         href: ../winrt-components/net-framework-mappings-of-windows-runtime-types.md
-    - name: '연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출'
+    - name: '연습: 간단한 Windows 런타임 구성 요소를 만들고 JavaScript에서 호출'
       href: ../winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md
     - name: Windows 런타임 구성 요소에서 이벤트 발생
       href: ../winrt-components/raising-events-in-windows-runtime-components.md
-    - name: 테스트용으로 로드하는 UWP 앱의 조정된 Windows 런타임 구성 요소
+    - name: 테스트용으로 로드된 UWP 앱에 맞게 조정된 Windows 런타임 구성 요소
       href: ../winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md
   - name: XAML 플랫폼
     href: ../xaml-platform/index.md
@@ -1019,7 +1019,7 @@ items:
         href: ../xaml-platform/x-name-attribute.md
       - name: x:Phase 특성
         href: ../xaml-platform/x-phase-attribute.md
-      - name: x:Uid 지시문
+      - name: x:Uid 지시어
         href: ../xaml-platform/x-uid-directive.md
       - name: '{x:Bind} 태그 확장'
         href: ../xaml-platform/x-bind-markup-extension.md
@@ -1027,7 +1027,7 @@ items:
         href: ../xaml-platform/binding-markup-extension.md
       - name: '{x:Null} 태그 확장'
         href: ../xaml-platform/x-null-markup-extension.md
-      - name: XAML 인트린직 데이터 형식
+      - name: XAML 기본 데이터 형식
         href: ../xaml-platform/xaml-intrinsic-data-types.md
       - name: '{CustomResource} 태그 확장'
         href: ../xaml-platform/customresource-markup-extension.md
@@ -1049,7 +1049,7 @@ items:
       href: ../xaml-platform/custom-attached-properties.md
     - name: 이벤트 및 라우트된 이벤트 개요
       href: ../xaml-platform/events-and-routed-events-overview.md
-    - name: 데스크톱 응용 프로그램의 UWP 컨트롤
+    - name: 데스크톱 애플리케이션의 UWP 컨트롤
       href: ../xaml-platform/xaml-host-controls.md
       items:
       - name: UWP XAML 호스팅 API 사용
@@ -1099,14 +1099,14 @@ items:
       href: ../maps-and-location/guidelines-for-visits.md
     - name: 지오펜스 설정
       href: ../maps-and-location/set-up-a-geofence.md
-    - name: 지오펜싱에 대한 디자인 지침
+    - name: 지오펜스에 대한 디자인 지침
       href: ../maps-and-location/guidelines-for-geofencing.md
-    - name: 지도 스타일 시트 참조
+    - name: 지도 스타일시트 참조
       href: ../maps-and-location/elements-of-map-style-sheet.md
-- name: 주변 장치, 센서 및 전원
+- name: 주변 기기, 센서 및 전원
   href: ../devices-sensors/index.md
   items:
-  - name: 장치 기능 사용
+  - name: 디바이스 기능 사용
     href: ../devices-sensors/enable-device-capabilities.md
   - name: 사용자 모드 액세스를 사용하도록 설정
     href: ../devices-sensors/enable-usermode-access.md
@@ -1121,7 +1121,7 @@ items:
       href: ../devices-sensors/device-information-properties.md
     - name: AEP 서비스 클래스 ID
       href: ../devices-sensors/aep-service-class-ids.md
-  - name: 장치 페어링
+  - name: 디바이스 페어링
     href: ../devices-sensors/pair-devices.md
   - name: 서비스 지점
     href: ../devices-sensors/point-of-service.md
@@ -1129,17 +1129,17 @@ items:
     - name: 기본 사항
       href: ../devices-sensors/pos-basics.md
       items:
-      - name: 접근 권한 값 선언
+      - name: 기능 선언
         href: ../devices-sensors/pos-basics-capability.md
-      - name: 장치 열거
+      - name: 디바이스 열거
         href: ../devices-sensors/pos-basics-enumerating.md
-      - name: 장치 개체 만들기
+      - name: 디바이스 개체 만들기
         href: ../devices-sensors/pos-basics-deviceobject.md
       - name: 클레임 및 사용
         href: ../devices-sensors/pos-basics-claim.md
-      - name: 주변 장치를 다른 사용자와 공유
+      - name: 주변 기기를 다른 사용자와 공유
         href: ../devices-sensors/pos-basics-sharing.md
-      - name: 시작하기
+      - name: 시작
         href: ../devices-sensors/pos-get-started.md
     - name: 하드웨어 지원
       href: ../devices-sensors/pos-device-support.md
@@ -1152,7 +1152,7 @@ items:
         href: ../devices-sensors/pos-barcodescanner-software-trigger.md
       - name: 기호 처리
         href: ../devices-sensors/pos-barcodescanner-symbologies.md
-      - name: 바코드 데이터 받기 및 인식하기
+      - name: 바코드 데이터 획득 및 이해
         href: ../devices-sensors/pos-barcodescanner-scan-data.md
       - name: 카메라 바코드 스캐너
         href: ../devices-sensors/pos-camerabarcode.md
@@ -1163,14 +1163,14 @@ items:
           href: ../devices-sensors/pos-camerabarcode-get-started.md
         - name: 카메라 미리 보기 호스팅
           href: ../devices-sensors/pos-camerabarcode-hosting-preview.md
-        - name: 카메라 바코드 스캐너 활성화/비활성화
+        - name: 카메라 바코드 스캐너 사용/사용 안 함
           href: ../devices-sensors/pos-camerabarcode-enable-disable.md
         - name: 지원되는 기호
           href: ../devices-sensors/pos-camerabarcode-symbologies.md
     - name: 자기 띠 판독기
       href: ../devices-sensors/pos-magnetic-stripe-reader.md
       items:
-      - name: 자기 띠 데이터 가져오기 및 이해
+      - name: 자기 띠 데이터 획득 및 이해
         href: ../devices-sensors/pos-magnetic-stripe-reader-data.md
     - name: POSPrinter
       href: ../devices-sensors/pos-printer.md
@@ -1208,7 +1208,7 @@ items:
         href: ../devices-sensors/gatt-client.md
       - name: GATT 서버
         href: ../devices-sensors//gatt-server.md
-      - name: 광고
+      - name: 보급 알림
         href: ../devices-sensors/ble-beacon.md
     - name: Bluetooth 개발자 FAQ
       href: ../devices-sensors/bluetooth-dev-faq.md
@@ -1279,7 +1279,7 @@ items:
       href: ../porting/w8x-to-uwp-case-study-bookstore2.md
     - name: '사례 연구: QuizGame'
       href: ../porting/w8x-to-uwp-case-study-quizgame.md
-  - name: 데스크톱 응용 프로그램 패키지
+  - name: 데스크톱 애플리케이션 패키징
     href: ../porting/desktop-to-uwp-root.md
     items:
     - name: 패키징 준비
@@ -1338,20 +1338,20 @@ items:
         href: ../porting/getting-started-navigation.md
       - name: '시작: 애니메이션'
         href: ../porting/getting-started-animation.md
-      - name: '시작: 다음에 할 일'
+      - name: '시작: 그 다음에 무엇을 해야 합니까?'
         href: ../porting/getting-started-what-next.md
     - name: Windows 10에서 Mac 설정
       href: ../porting/setting-up-your-mac-with-windows-10.md
-  - name: Windows 10에서 웹 앱을 PWA로 변환
+  - name: Windows 10에서 웹앱을 PWA로 변환
     href: https://docs.microsoft.com/microsoft-edge/progressive-web-apps
     items:
-    - name: Windows 7 앱을 PWA로 패키지
+    - name: Windows 7 앱을 PWA로 패키징
       href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-windows7.html
-    - name: iOS 앱을 PWA로 패키지
+    - name: iOS 앱을 PWA로 패키징
       href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-ios.html
-    - name: Android 앱을 PWA로 패키지
+    - name: Android 앱을 PWA로 패키징
       href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-android.html
-    - name: MacOS 앱을 PWA로 패키지
+    - name: MacOS 앱을 PWA로 패키징
       href: https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-mac.html
   - name: ARM 기반 Windows 10
     href: ../porting/apps-on-arm.md
@@ -1405,7 +1405,7 @@ items:
         href: ../launch-resume/launch-store-app.md
       - name: Windows 지도 앱 실행
         href: ../launch-resume/launch-maps-app.md
-      - name: 피플 앱 시작
+      - name: 피플 앱 실행
         href: ../launch-resume/launch-people-apps.md
       - name: 화면 캡처 시작
         href: ../launch-resume/launch-screen-snipping.md
@@ -1414,13 +1414,13 @@ items:
     - name: 파일 활성화를 통해 앱 실행
       href: ../launch-resume/launch-app-from-file.md
       items:
-      - name: 파일에 대한 기본 앱 실행
+      - name: 파일에 대한 기본 앱 시작
         href: ../launch-resume/launch-the-default-app-for-a-file.md
       - name: 파일 활성화 처리
         href: ../launch-resume/handle-file-activation.md
     - name: 자동 실행을 사용한 자동 시작
       href: ../launch-resume/auto-launching-with-autoplay.md
-    - name: 예약된 파일 및 URI 스키마 이름
+    - name: 예약된 파일 및 URI 체계 이름
       href: ../launch-resume/reserved-uri-scheme-names.md
     - name: 앱 서비스 및 확장 사용
       href: ../launch-resume/app-services.md
@@ -1444,7 +1444,7 @@ items:
         href: ../launch-resume/create-and-register-an-inproc-background-task.md
       - name: Out-of-process 백그라운드 작업 만들기 및 등록
         href: ../launch-resume/create-and-register-a-background-task.md
-      - name: out of process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅
+      - name: Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅
         href: ../launch-resume/convert-out-of-process-background-task.md
       - name: 백그라운드 작업 디버그
         href: ../launch-resume/debug-a-background-task.md
@@ -1462,7 +1462,7 @@ items:
         href: ../launch-resume/respond-to-system-events-with-background-tasks.md
       - name: 타이머에 따라 백그라운드 작업 실행
         href: ../launch-resume/run-a-background-task-on-a-timer-.md
-      - name: UWP 앱 업데이트 시 백그라운드 작업을 실행합니다.
+      - name: UWP 앱 업데이트 시 백그라운드 작업 실행
         href: ../launch-resume/run-a-background-task-during-updatetask.md
       - name: 백그라운드에서 무기한 실행
         href: ../launch-resume/run-in-the-background-indefinetly.md
@@ -1477,15 +1477,15 @@ items:
     - name: 연결된 앱 및 디바이스(프로젝트 로마)
       href: ../launch-resume/connected-apps-and-devices.md
       items:
-      - name: 원격 디바이스 검색
+      - name: 원격 장치 검색
         href: ../launch-resume/discover-remote-devices.md
-      - name: 원격 디바이스에서 앱 시작
+      - name: 원격 장치에서 앱 시작
         href: ../launch-resume/launch-a-remote-app.md
       - name: 원격 앱 서비스와 통신
         href: ../launch-resume/communicate-with-a-remote-app-service.md
-      - name: 원격 세션을 통해 장치 연결
+      - name: 원격 세션을 통해 디바이스 연결
         href: ../launch-resume/remote-sessions.md
-      - name: 장치 간 사용자 활동 계속 수행
+      - name: 디바이스 간에도 사용자 활동 계속 수행
         href: ../launch-resume/useractivities.md
       - name: 사용자 활동 모범 사례
         href: ../launch-resume/useractivities-best-practices.md
@@ -1505,7 +1505,7 @@ items:
       href: ../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md
     - name: 스레드 풀을 사용하기 위한 모범 사례
       href: ../threading-async/best-practices-for-using-the-thread-pool.md
-    - name: C# 또는 Visual Basic에서 비동기식 API 호출
+    - name: C# 또는Visual Basic에서 비동기식 API 호출
       href: ../threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md
     - name: 정기 작업 항목 만들기
       href: ../threading-async/create-a-periodic-work-item.md
@@ -1516,8 +1516,8 @@ items:
     - name: 다중 스레드 환경에서 Windows 런타임 개체 사용
       href: ../threading-async/using-windows-runtime-objects-in-a-multithreaded-environment.md
 ms.openlocfilehash: e9c39734eb066058d549ed8c36ad73b2c2c6a5e1
-ms.sourcegitcommit: 079801609165bc7eb69670d771a05bffe236d483
-ms.translationtype: MT
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9115940"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583700"

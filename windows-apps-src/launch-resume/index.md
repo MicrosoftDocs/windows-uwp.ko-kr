@@ -1,17 +1,11 @@
 ---
-title: 실행, 다시 시작 및 백그라운드 작업
-description: 이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱을 시작, 일시 중단, 다시 시작 및 종료할 때 발생하는 상황을 설명합니다.
+title: '실행, 다시 시작 및 백그라운드 작업'
+description: '이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱을 시작, 일시 중단, 다시 시작 및 종료할 때 발생하는 상황을 설명합니다.'
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 ms.date: 10/04/2017
 ms.topic: article
-keywords: windows 10, uwp, 백그라운드 작업을 앱 서비스에 연결 된 장치, 원격 시스템
+keywords: 'windows 10, uwp, 백그라운드 작업, 앱 서비스, 연결된 디바이스, 원격 시스템'
 ms.localizationpriority: medium
-ms.openlocfilehash: d12113329381c6602edf87a11fc1cc6b822dab4e
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8923952"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>실행, 다시 시작 및 백그라운드 작업
 
@@ -52,30 +46,30 @@ ms.locfileid: "8923952"
 
 | 항목 | 설명 |
 |-------|-------------|
-| [URI에 대한 기본 앱 실행](launch-default-app.md) | URI(Uniform Resource Identifier)에 대한 기본 앱 시작 방법을 알아봅니다. URI를 사용하면 다른 앱을 실행하여 특정 작업을 수행할 수 있습니다. 이 항목에서는 Windows에 기본 제공되는 다양한 URI 스키마에 대해서도 간략하게 설명합니다. |
+| [URI에 대한 기본 앱 실행](launch-default-app.md) | URI(Uniform Resource Identifier)에 대한 기본 앱 시작 방법을 알아봅니다. URI를 사용하면 다른 앱을 실행하여 특정 작업을 수행할 수 있습니다. 이 항목에서는 Windows에 기본 제공되는 다양한 URI 스키마에 대한 개요도 제공합니다. |
 | [URI 활성화 처리](handle-uri-activation.md) | 앱을 URI(Uniform Resource Identifier) 체계 이름의 기본 처리기로 등록하는 방법을 알아봅니다. |
 | [결과를 위한 앱 실행](how-to-launch-an-app-for-results.md) | 다른 앱에서 앱을 시작하고 두 사이에서 데이터를 교환하는 방법을 알아봅니다. 이를 결과를 위한 앱 실행이라고 합니다. |
-| [ms-tonepicker URI 체계를 사용하여 톤 선택 및 저장](launch-ringtone-picker.md) | 이 항목에서는 ms-tonepicker URI 체계 및 이 체계를 통해 톤 선택기를 표시하여 톤을 선택하고, 톤을 저장하고, 톤의 식별 이름을 가져오는 방법을 설명합니다. |
+| [ms-tonepicker URI 체계를 사용하여 톤 선택 및 저장](launch-ringtone-picker.md) | 이 항목에서는 ms-tonepicker URI 스키마에 대해 설명하고 이를 사용해 톤 선택기를 표시하여 톤을 선택하고, 톤을 저장하고, 톤의 식별 이름을 가져오는 방법을 설명합니다. |
 | [Windows 설정 앱 실행](launch-settings-app.md) | 앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다. |
-| [Microsoft Store 앱 실행](launch-store-app.md) | 이 항목에서는 ms-windows-store URI 스키마에 대해 설명합니다. 이 URI 스키마로 UWP 앱을 실행하여 Microsoft Store의 특정 페이지를 표시할 수 있습니다. |
+| [Microsoft Store 앱 열기](launch-store-app.md) | 이 항목에서는 ms-windows-store URI 체계에 대해 설명합니다. 이 URI 스키마로 UWP 앱을 실행하여 Microsoft Store의 특정 페이지를 표시할 수 있습니다. |
 | [Windows 지도 앱 실행](launch-maps-app.md) | 앱에서 Windows 지도 앱을 실행하는 방법을 알아봅니다. |
-| [피플 앱 실행](launch-people-apps.md) | 이 항목에서는 ms-people URI 체계에 대해 설명합니다. 앱에서 이 URI 체계를 사용하여 특정 작업을 위한 피플 앱을 실행할 수 있습니다. |
+| [피플 앱 실행](launch-people-apps.md) | 이 항목에서는 ms-people URI 체계에 대해 설명합니다. 앱에서 이 URI 스키마를 사용하여 특정 작업에 대한 피플 앱을 실행할 수 있습니다. |
 | [앱 URI 처리기로 웹과 앱 연결 지원](web-to-app-linking.md) | 앱 URI 처리기를 사용하여 사용자의 앱 참여를 강화합니다. |
 
 [파일 활성화를 통해 앱 실행](launch-app-from-file.md) 섹션에서는 특정 형식의 파일을 열 때 실행되도록 앱을 설정하는 방법을 자세히 설명합니다.
 
 | 항목 | 설명 |
 |-------|-------------|
-| [파일에 대한 기본 앱 실행](launch-the-default-app-for-a-file.md) | 파일에 대한 기본 앱을 실행하는 방법을 알아봅니다. |
+| [파일에 대한 기본 앱 시작](launch-the-default-app-for-a-file.md) | 파일에 대한 기본 앱을 시작하는 방법을 알아봅니다. |
 | [파일 활성화 처리](handle-file-activation.md) | 앱을 특정 파일 형식의 기본 처리기로 등록하는 방법을 알아봅니다. |
 
 아래에서 앱 실행과 관련된 다른 항목을 참조하세요.
 
 | 항목 | 설명 |
 |-------|-------------|
-| [장치 간 사용자 활동 계속 수행](useractivities.md) | 사용자가 종료한 지점에서 앱을 실행하여 장치 간에 앱을 다시 사용할 수 있습니다. |
-| [자동 실행을 사용한 자동 시작](auto-launching-with-autoplay.md) | 자동 실행을 사용하면 사용자가 디바이스를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 디바이스나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 디바이스가 포함됩니다. |
-| [예약된 파일 및 URI 스키마 이름](reserved-uri-scheme-names.md) | 이 항목에는 앱에 사용할 수 없는 예약된 파일 및 URI 스키마 이름이 나열됩니다. |
+| [디바이스 간에도 사용자 활동 계속 수행](useractivities.md) | 사용자가 종료한 지점에서 앱을 실행하여 디바이스 간에 앱을 다시 사용할 수 있습니다. |
+| [자동 실행을 사용한 자동 시작](auto-launching-with-autoplay.md) | 자동 실행을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라, 미디어 플레이어 등의 비볼륨 장치나 USB 썸 드라이브(thumb drive), SD 카드, DVD 등의 볼륨 장치가 포함됩니다. |
+| [예약된 파일 및 URI 체계 이름](reserved-uri-scheme-names.md) | 이 항목에서는 앱에 사용할 수 없는 예약된 파일 및 URI 체계 이름을 보여 줍니다. |
 
 ## <a name="app-services-and-extensions"></a>앱 서비스 및 확장
 
@@ -95,36 +89,36 @@ ms.locfileid: "8923952"
 | 항목 | 설명 |
 |-------|-------------|
 | [백그라운드 작업 지침](guidelines-for-background-tasks.md)                                       | 앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다. |
-| [백그라운드 작업에서 센서 및 장치에 액세스](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. |
+| [백그라운드 작업에서 센서 및 디바이스에 액세스](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 기기에 액세스할 수 있습니다. |
 | [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)       | 포그라운드 앱과 같은 프로세스에서 실행되는 백그라운드 작업을 만들고 등록합니다. |
 | [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)           | 앱과 별도의 프로세스로 실행하는 백그라운드 작업을 만들고 등록한 다음, 앱이 포그라운드에 없는 경우 실행되도록 등록합니다. |
-| [out of process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅](convert-out-of-process-background-task.md) | Out of process 백그라운드 작업을 포그라운드 앱과 동일한 프로세스에서 실행 되는 in-process 백그라운드 작업에 포트 하는 방법을 알아봅니다.|
+| [Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅](convert-out-of-process-background-task.md) | Out-of-process 백그라운드 작업을 포그라운드 앱과 동일한 프로세스에서 실행되는 In-process 백그라운드 작업으로 포팅하는 방법을 알아봅니다.|
 | [백그라운드 작업 디버그](debug-a-background-task.md)                                                       | Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다. |
-| [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md) | 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다. |
+| [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md) | 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다. |
 | [백그라운드 작업 등록 그룹화](group-background-tasks.md)                                             | 그룹으로 백그라운드 작업 등록 격리 |
 | [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)                                 | 영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다. |
 | [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)       | 앱에서 백그라운드 작업 진행률 및 완료를 인식하는 방법에 대해 알아봅니다. |
 | [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) |백그라운드에서 사용하는 에너지를 줄이고 백그라운드 작업에 대한 사용자 설정을 조작하는 방법을 알아봅니다. |
-| [백그라운드 작업 등록](register-a-background-task.md)                                                 | 대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다. |
-| [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)         | [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다. |
+| [백그라운드 작업 등록](register-a-background-task.md)                                                 | 대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다. |
+| [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)         | [  **SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다. |
 | [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)                                    | 일회성 백그라운드 작업을 예약하거나 정기적 백그라운드 작업을 실행하는 방법을 알아봅니다. |
 | [백그라운드에서 무기한 실행](run-in-the-background-indefinetly.md)                                    | 접근 권한 값을 사용하여 백그라운드 작업 또는 확장된 실행 세션을 백그라운드에서 무기한 실행하세요. |
 | [앱 내에서 백그라운드 작업 트리거](trigger-background-task-from-app.md) | [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger)를 사용하여 앱 내에서 백그라운드 작업을 활성화하는 방법을 알아봅니다.|
-| [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)             | 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법에 대해 알아봅니다. |
+| [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)             | 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법을 알아봅니다. |
 | [백그라운드에서 데이터 전송](https://msdn.microsoft.com/library/windows/apps/mt280377)                 | 백그라운드 전송 API를 사용하여 백그라운드에서 파일을 복사합니다. |
-| [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)                   | 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다. |
-| [유지 관리 트리거 사용](use-a-maintenance-trigger.md)                                                   | 장치가 연결되어 있는 동안 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다. |
+| [백그라운드 작업의 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)                   | 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다. |
+| [유지 관리 트리거 사용](use-a-maintenance-trigger.md)                                                   | 디바이스가 연결되어 있는 동안 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다. |
 
 ## <a name="remote-systems"></a>원격 시스템
 
-[연결된 앱 및 장치(프로젝트 로마)](connected-apps-and-devices.md) 섹션에서는 원격 시스템 플랫폼을 사용하여 원격 장치를 검색하고, 원격 장치에서 앱을 실행하고, 원격 장치의 앱 서비스와 통신하는 방법을 설명합니다.
+[연결된 앱 및 디바이스(프로젝트 "로마")](connected-apps-and-devices.md) 섹션에서는 원격 시스템 플랫폼을 사용하여 원격 디바이스를 검색하고, 원격 디바이스에서 앱을 실행하고, 원격 디바이스의 앱 서비스와 통신하는 방법을 설명합니다.
 
 | 항목 | 설명 |
 |-------|-------------|
 | [원격 디바이스 검색](discover-remote-devices.md)  | 연결할 수 있는 장치를 검색하는 방법을 알아봅니다. |
 | [원격 디바이스에서 앱 시작](launch-a-remote-app.md) | 원격 장치에서 앱을 시작하는 방법을 알아봅니다.  |
 | [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 장치에서 앱을 조작하는 방법을 알아봅니다. |
-| [원격 세션을 통해 장치 연결](remote-sessions.md) | 원격 세션에서 여러 장치를 연결하여 공유되는 환경을 만듭니다. |
+| [원격 세션을 통해 디바이스 연결](remote-sessions.md) | 원격 세션에서 여러 디바이스를 연결하여 공유 환경을 만듭니다. |
 
 ## <a name="splash-screens"></a>시작 화면
 

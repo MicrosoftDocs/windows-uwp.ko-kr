@@ -4,18 +4,12 @@ description: Windows 10에서 UWP(유니버설 Windows 플랫폼) 및 앱 개발
 title: UWP(유니버설 Windows 플랫폼) 시작
 ms.date: 03/23/2018
 ms.topic: article
-keywords: 시작, Windows 10, UWP, xaml, c#
+keywords: '시작, windows 10, uwp, xaml, c#'
 ms.localizationpriority: medium
-ms.openlocfilehash: a2a1452de6fe602c8fd21e510de070f49d806eec
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8934728"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작 
  
-모든 Windows 10 디바이스에서 작동하는 앱을 빌드하거나 업데이트된 새 기능을 통해 기존 앱을 개선합니다.  
+모든 Windows 10 디바이스에서 작동하는 앱을 빌드하거나, 새 기능 및 업데이트된 기능을 사용하여 기존 앱을 개선하세요.  
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>
@@ -29,7 +23,7 @@ ms.locfileid: "8934728"
                     </div>
                     <div class="cardText">
                         <h3>Windows 10 앱에 대해 알아보기</h3>
-                        <p>Windows 10 및 유니버설 Windows 플랫폼에서는 모든 유형의 Windows 장치에서 작동하고 제대로 표시되는 앱을 빌드하거나 최신 기능으로 기존 앱을 업데이트할 수 있습니다.</p>
+                        <p>Windows 10 및 유니버설 Windows 플랫폼에서는 모든 유형의 Windows 디바이스에서 작동하고 제대로 표시되는 앱을 빌드하거나, 최신 기능을 사용하여 기존 앱을 업데이트할 수 있습니다.</p>
                         <ul>
                           <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">UWP 앱이란 무엇인가요?</a></li>
                         </ul>
@@ -48,8 +42,8 @@ ms.locfileid: "8934728"
                         </div>
                     </div>
                     <div class="cardText">
-                    <h3>설정하기</h3>
-                    <p>Visual Studio 커뮤니티 및 Windows 10 SDK는 좋은 앱을 빌드하는 데 필요한 모든 것을 무료로 제공합니다.</p>
+                    <h3>설정</h3>
+                    <p>Visual Studio 커뮤니티 및 Windows 10 SDK는 멋진 앱을 빌드하는 데 필요한 모든 것을 무료로 제공합니다.</p>
                     <ul>
                         <li><a href="//docs.microsoft.com/windows/uwp/get-started/get-set-up">도구 및 SDK 다운로드</a></li>
                     </ul>
@@ -69,7 +63,7 @@ ms.locfileid: "8934728"
                     </div>
                     <div class="cardText">
                         <h3>코딩 시작</h3>
-                        <p>숙련된 개발자든 처음 앱을 빌드 중이든 관계 없이 Windows 10 플랫폼 및 문서에서 실습을 할 수 있습니다.</p>
+                        <p>숙련된 개발자든 처음으로 앱을 빌드하는 초보든 관계 없이, Windows 10 플랫폼 및 문서로 실습을 할 수 있습니다.</p>
                         <ul>
                             <li><a href="//docs.microsoft.com/windows/uwp/get-started/create-uwp-apps">코딩 시작</a></li>
                         </ul>
@@ -92,7 +86,7 @@ ms.locfileid: "8934728"
                 </div>
                 <div class="cardText">
                     <h3>자습서</h3>
-                    <p>안내를 따르는 학습 환경을 찾고 있나요? 이러한 자습서가 도움이 될 것입니다.</p>
+                    <p>안내식 학습 환경을 찾고 있나요? 다음 자습서가 도움이 될 것입니다.</p>
                     <br>
                     <p><a href="//docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui">UI 기본 사항</a></p>
                     <p><a href="//docs.microsoft.com/windows/uwp/data-binding/xaml-basics-data-binding">데이터 바인딩</a></p>
@@ -113,7 +107,7 @@ ms.locfileid: "8934728"
                 </div>
                 <div class="cardText">
                     <h3>샘플</h3>
-                    <p>Windows 10 플랫폼을 직접 경험해보고 실행 중인 API를 확인합니다.</p>
+                    <p>Windows 10 플랫폼을 직접 경험해보고 API가 실제로 어떻게 작동하는지 확인하세요.</p>
                     <br>
                     <p><a href="//docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples">UWP 앱 샘플 사용</a></p>
                     <p><a href="//github.com/Microsoft/Windows-appsample-customers-orders-database">고객 주문 데이터베이스</a></p>
@@ -135,9 +129,9 @@ ms.locfileid: "8934728"
                 </div>
                 <div class="cardText">
                     <h3>새로운 기능</h3>
-                    <p>사용자 지평 확장하고 Windows 10의 최신 추가 기능을 살펴보세요.</p>
+                    <p>사고의 범위를 넓히고 Windows 10의 최신 추가 기능을 살펴보세요.</p>
                     <br>
-                    <p><a href="//developer.microsoft.com/windows/windows-10-for-developers">최신 버전 Windows 10의 새로운 기능</a></p>
+                    <p><a href="//developer.microsoft.com/windows/windows-10-for-developers">Windows 10 최신 버전의 유용한 기능</a></p>
                     <p><a href="//docs.microsoft.com/windows/uwp/whats-new/windows-10-version-latest">개발자를 위한 Windows 10의 새로운 기능</a></p>
                 </div>
             </div>
@@ -215,8 +209,8 @@ ms.locfileid: "8934728"
                     <div class="cardText">
                         <h3>개발자 도구</h3>
                         <p><a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows 커뮤니티 도구 키트</a></p>
-                        <p><a href="//developer.microsoft.com/windows/downloads/virtual-machines">가상 컴퓨터</a></p>
-                        <p><a href="//docs.microsoft.com/windows/wsl/about">Windows의 Ubuntu 기반 Bash</a></p>
+                        <p><a href="//developer.microsoft.com/windows/downloads/virtual-machines">가상 머신</a></p>
+                        <p><a href="//docs.microsoft.com/windows/wsl/about">Bash on Ubuntu on Windows</a>(Windows의 Ubuntu 기반 Bash)</p>
                         </div>
                     </div>
                 </div>
@@ -227,7 +221,7 @@ ms.locfileid: "8934728"
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>드라이버 개발이 처음이세요?</h3>
+                        <h3>개발이 처음인가요?</h3>
                         <p><a href="//mva.microsoft.com/training-topics/c-app-development">Microsoft Virtual Academy</a></p>
                         <p><a href="//www.linkedin.com/learning/learning-universal-windows-app-development/welcome">LinkedIn Learning</a></p>
                         </div>

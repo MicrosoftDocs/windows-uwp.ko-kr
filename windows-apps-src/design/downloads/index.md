@@ -1,23 +1,17 @@
 ---
 description: UWP 앱 사용자 인터페이스 레이아웃 및 컨트롤 디자인을 위한 최신 다운로드 및 도구를 가져옵니다.
-keywords: UWP 앱 레이아웃, UI, 사용자 인터페이스 디자인, 다운로드, UWP 도구
-title: UWP 앱에 대한 디자인 도구 키트 및 샘플
+keywords: 'UWP 앱 레이아웃, UI, 사용자 인터페이스 디자인, 다운로드, UWP 도구'
+title: UWP 앱용 디자인 도구 키트 및 샘플
 ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: cbe17d8e7093a15c66e482acd935974bc57074ec
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9050876"
 ---
-# <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱에 대한 디자인 도구 키트 및 샘플
+# <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱용 디자인 도구 키트 및 샘플
  
 
-디자인 및 Fluent 디자인/UWP 앱에 대 한 UI 관련 다운로드 합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요. 
+Fluent 디자인/UWP 앱용 디자인 및 UI 관련 다운로드를 제공합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요. 
 
 
 ## <a name="design-toolkits"></a>디자인 도구 키트
@@ -88,8 +82,8 @@ ms.locfileid: "9050876"
 
 ## <a name="fonts"></a>글꼴
 
-* <a href="https://aka.ms/SegoeFonts">Segoe UI 및 MDL2 아이콘 글꼴(Mac에만 해당)</a>
-* <a href="https://aka.ms/hololensiconfont">Hololens 아이콘 글꼴(Windows에만 해당)</a>
+* <a href="https://aka.ms/SegoeFonts">Segoe UI 및 MDL2 아이콘 글꼴(Mac만 해당)</a>
+* <a href="https://aka.ms/hololensiconfont">Hololens 아이콘 글꼴(Windows만 해당)</a>
 
 ## <a name="tools"></a>도구
 
@@ -98,7 +92,7 @@ ms.locfileid: "9050876"
         <a href="https://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Adobe Photoshop 용 타일 및 아이콘 생성기** 이 Adobe Photoshop 용 작업이 집합이 단 7 파일에서 68 권장된 타일 및 아이콘 자산을 생성 합니다. <br/><a href="https://go.microsoft.com/fwlink/p/?LinkId=760394">타일 및 아이콘 생성기 다운로드</a></p>
+      **Adobe Photoshop용 타일 및 아이콘 생성기** 이 Adobe Photoshop용 작업 세트는 단 7개의 파일로 68개의 권장 타일 및 아이콘 자산을 생성합니다. <br/><a href="https://go.microsoft.com/fwlink/p/?LinkId=760394">타일 및 아이콘 생성기 다운로드</a></p>
     :::column-end:::
 :::row-end:::
 
@@ -106,28 +100,28 @@ ms.locfileid: "9050876"
 ## <a name="samples"></a>샘플
 
 ![Fluent XAML 테마 편집기 이미지](images/XamlThemeEditor_screenshot.png)
-**XAML 테마 편집기 흐름**<br>
-Fluent XAML 테마 편집기는 Fluent 디자인 시스템의 유연성을 설명 하는 데 도움이 되는 도구 뿐만 아니라 유니버설 Windows 플랫폼 응용 프로그램에서 사용 하는 ResourceDictionary 프레임 워크에 대 한 XAML 태그를 생성 하 여 응용 프로그램 개발 프로세스를 지원 합니다. (데 드는)입니다.
-<a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">도구 샘플 다운로드</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">GitHub의 도구 확인</a>
+**Fluent XAML 테마 편집기**<br>
+Fluent XAML 테마 편집기는 Fluent Design System의 유연성을 시연할 수 있을 뿐 아니라 UWP(유니버설 Windows 플랫폼) 애플리케이션에 사용되는 ResourceDictionary 프레임워크의 XAML 태그를 생성하여 앱 개발 프로세스를 지원하는 도구입니다.
+<a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">도구 샘플 다운로드</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">GitHub에서 도구 확인</a>
 
 ![VanArsdel 이미지](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-승 합 차 Arsdel, Ltd. 종단 간 UWP 샘플 응용 프로그램은 Microsoft Fluent 디자인 시스템 차세대 보여 주기 위해 고안 되었습니다. Ux 프레임 워크 및 컴퍼지션의 강력한 기본 기능 뿐만 아니라 <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows UI 라이브러리</a> 에서 향상 된 밀도 및 새 컨트롤의 광범위 한 사용을 쉽습니다. 관리 및 IoT 장치 (이 경우 램프)에서 구매에 대 한 풍부한, 생산성 환경을 구축 하는 방법을 보여 줍니다.<br>
+Van Arsdel, Ltd. 엔드투엔드 UWP 샘플 앱은 차세대 Microsoft Fluent Design System을 보여주기 위해 빌드되었습니다. 이 샘플 앱은 <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows UI 라이브러리</a>의 향상된 밀도와 새 컨트롤뿐 아니라 ux 프레임워크 및 컴퍼지션의 강력한 기본 기능을 광범위하게 사용합니다. 이 샘플은 IoT 디바이스(이 예제에서는 램프)를 관리하고 구매하는 풍부하고 생산적인 환경을 구축하는 방법을 보여줍니다.<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">VanArsdel 샘플 다운로드</a> <br><a href="https://github.com/microsoft/vanarsdel">GitHub에서 VanArsdel 샘플 확인</a>
 
-![캐스트 이미지 빌드](images/buildcast.png)
+![BuildCast 이미지](images/buildcast.png)
 **BuildCast**<br>
-BuildCast는 Fluent 디자인 시스템을 UWP 소개를 기반으로 하는 종단 간 샘플입니다. 이 샘플에서는 Channel 9 및 일부 Windows 기술 매니아 피드에서 가장 인기 있는 샘플을 비롯한 비디오 팟캐스트를 검색하고 다운로드하고 재생할 수 있습니다. 또한 잉크 메모, 책갈피 및 원격 재생을 제공합니다. 이 샘플은 <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Fluent 디자인으로 멋진 앱 만들기</a> 동안 2017 빌드 회의에서 처음 제공되었습니다. <br>
+BuildCast는 Fluent Design System 및 UWP를 보여주기 위해 빌드된 엔드투엔드 샘플입니다. Channel 9 및 일부 Windows 기술 매니아 피드에서 가장 인기 있는 샘플을 비롯한 비디오 팟캐스트를 검색하고 다운로드하고 재생할 수 있습니다. 또한 잉크 메모, 책갈피 및 원격 재생을 제공합니다. 이 샘플은 <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Fluent 디자인으로 멋진 앱 만들기</a> 간담회의 2017 빌드 회의에서 처음 소개되었습니다. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">BuildCast 샘플 다운로드</a> <br><a href="https://github.com/Microsoft/BuildCast">GitHub에서 BuildCast 샘플 확인</a>
 
-![스케줄러 점심](images/lunchscheduler.png)
-**Lunch Scheduler**<br>
-친구 및 직장 동료와 점심을 예약하기 위한 UWP 샘플입니다. 점심 약속을 만들고, 식당에 친구를 초대하면 앱이 관련된 모든 사람의 점심 약속 관리를 담당합니다. 이 앱은 아크릴, 표시, 연결된 애니메이션 등을 포함하여 UWP 앱에 흐름 디자인 시스템의 요소를 통합합니다. <br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler/archive/master.zip">Lunch Scheduler 샘플 다운로드</a><br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler">GitHub에서 Lunch Scheduler 샘플 확인</a></p>  
+![점심 식사 스케줄러](images/lunchscheduler.png)
+**점심 스케줄러**<br>
+친구 및 직장 동료와 점심 식사를 예약하기 위한 UWP 샘플입니다. 점심 식사 일정을 만들고 원하는 식당으로 친구를 초대하면 앱이 모든 관련 당사자의 점심 식사 관리를 알아서 처리합니다. 이 앱은 아크릴, 표시, 연결된 애니메이션을 포함한 Fluent Design System 요소를 UWP 앱에 통합합니다. <br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler/archive/master.zip">점심 식사 스케줄러 샘플 다운로드</a><br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler">GitHub에서 점심 식사 스케줄러 샘플 확인</a></p>  
 
 ![Xaml 컨트롤 갤러리](images/xaml-controls-gallery.png)
 **XAML 컨트롤 갤러리**<br>
-이 샘플은 모든 XAML 컨트롤의 대화형 데모를 제공합니다. 기본에서 적응형까지 다양한 레이아웃을 보여주며 자신의 프로젝트에 복사할 수 있는 태그를 표시합니다. 참고: 다운로드 파일 및 GitHub 저장소는 현재 이 샘플 앱을 "UI 기본(XAML)"으로 참조합니다. <br/><a href="https://github.com/Microsoft/Windows-universal-samples/archive/master.zip">XAML 컨트롤 갤러리 샘플 다운로드</a><br/><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">GitHub에서 XAML 컨트롤 갤러리 샘플 확인</a> <br/><a href="https://www.microsoft.com/store/apps/9msvh128x2zt">Store에서 XAML 컨트롤 갤러리 앱 다운로드</a></p>
+이 샘플은 모든 XAML 컨트롤의 대화형 데모를 제공합니다. 기본형에서 적응형까지 다양한 레이아웃을 보여주며, 사용자의 프로젝트에 복사할 수 있는 태그를 표시합니다. 참고: 다운로드 파일 및 GitHub 리포지토리는 현재 이 샘플 앱을 "UI 기본(XAML)"으로 참조합니다. <br/><a href="https://github.com/Microsoft/Windows-universal-samples/archive/master.zip">XAML 컨트롤 갤러리 샘플 다운로드</a><br/><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">GitHub에서 XAML 컨트롤 갤러리 샘플 확인</a> <br/><a href="https://www.microsoft.com/store/apps/9msvh128x2zt">Microsoft Store에서 XAML 컨트롤 갤러리 앱 다운로드</a></p>
 
 ## <a name="want-more-code"></a>더 많은 코드가 필요하세요?
 
-Windows 샘플 페이지에서 모든 UWP 앱 샘플의 전체 목록을 확인하세요. <a href="https://developer.microsoft.com/samples">샘플 포털로 이동</a>
+Windows 샘플 페이지에서 모든 UWP 앱 샘플의 전체 목록을 확인하세요. <a href="https://developer.microsoft.com/samples">예제 포털로 이동</a>

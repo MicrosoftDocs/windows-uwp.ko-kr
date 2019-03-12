@@ -1,20 +1,14 @@
 ---
 title: 교육용 앱 개발.
-description: 이 섹션에서는 Windows10 플랫폼에 대한 교육용 앱을 작성하는 데 사용할 수 있는 유니버설 Windows 앱 리소스를 설명합니다.
+description: "이 섹션에서는 Windows\_10 플랫폼에 대한 교육용 앱을 작성하는 데 사용할 수 있는 유니버설 Windows 앱 리소스를 설명합니다."
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, 교육
+keywords: 'windows 10, uwp, 교육'
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
-ms.openlocfilehash: 7696cd785b4a8720f6eefb7bc897d13ffb0c7115
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943989"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>교육용 유니버설 Windows 앱 개발
-![응시 시험 앱 스크린샷](images/take-a-test-screen-small.png)
+![시험 응시 앱 스크린샷](images/take-a-test-screen-small.png)
 
 다음 리소스는 유니버설 Windows 교육용 앱을 작성하는 데 도움이 됩니다.
 
@@ -34,11 +28,11 @@ ms.locfileid: "8943989"
 Windows Ink 플랫폼은 학생에게 익숙한 입력 모드에 맞게 조정하여 교육용 앱을 돋보이게 만들 수 있습니다. 앱에 Windows Ink를 구현하는 전체 가이드는 [펜 조작 및 Windows Ink](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions) 및 그 아래 항목을 참조하세요. 다음 샘플 앱은 이 API의 작업 예제를 제공합니다.
 - [잉크 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Ink)에서는 JavaScript로 작성된 유니버설 Windows 앱에서 잉크 기능을 사용하는 방법(예: 잉크 스트로크 캡처, 조작 및 해석)을 보여 줍니다.
 - [간단한 잉크 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)에서는 C#으로 작성된 유니버설 Windows 앱에서 잉크 기능을 사용하는 방법(예: 사용자 입력에서 잉크 캡처, 잉크 스트로크에 대해 필기 인식 수행)을 보여 줍니다.
-- [복잡한 잉크 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)에서는 고급 InkPresenter 기능을 사용하여 잉크를 다른 개체와 인터리빙하고 잉크 선택, 복사/붙여넣기, 이벤트 처리를 수행하는 방법을 보여 줍니다. C++로 작성된 유니버설 Windows 플랫폼을 토대로 작성되었으며 데스크톱 및 모바일 Windows10 SKU 둘 다에서 실행할 수 있습니다.
+- [복잡한 잉크 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)에서는 고급 InkPresenter 기능을 사용하여 잉크를 다른 개체와 인터리빙하고 잉크 선택, 복사/붙여넣기, 이벤트 처리를 수행하는 방법을 보여 줍니다. C++로 작성된 유니버설 Windows 플랫폼을 토대로 작성되었으며 데스크톱 및 모바일 Windows 10 SKU 둘 다에서 실행할 수 있습니다.
 
 
 ### <a name="microsoft-store"></a>Microsoft Store
 교육용 앱은 주로 특정 조직에게 특별한 상황에서 출시됩니다. 이에 대한 자세한 내용은 [엔터프라이즈에 LOB 앱 배포](https://msdn.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises)를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
-- Windows IT 센터의 [Windows10 for Education](https://technet.microsoft.com/edu/windows/index)
+- Windows IT 센터의 [Windows 10 for Education](https://technet.microsoft.com/edu/windows/index)

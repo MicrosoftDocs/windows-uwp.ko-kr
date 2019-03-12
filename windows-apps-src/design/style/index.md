@@ -1,24 +1,18 @@
 ---
-description: UWP 스타일 가이드를 사용하여 색, 입력 체계 및 아이콘을 통해 UWP 앱의 퍼스낼리티를 정의하는 방법을 알아봅니다.
-keywords: UWP 스타일 가이드, 디자인 지침, 입력 체계, 동작, 소리, 동작, 앱 개발
+description: 'UWP 스타일 가이드를 사용하여 색, 입력 체계 및 아이콘을 통해 UWP 앱의 퍼스낼리티를 정의하는 방법을 알아봅니다.'
+keywords: 'UWP 스타일 가이드, 디자인 지침, 입력 체계, 동작, 소리, 동작, 앱 개발'
 title: UWP 앱의 스타일
 ms.date: 08/10/2017
 ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1d313e35b7d1ab3ebe72bd3a073323fe8782098a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8946622"
 ---
 # <a name="style-for-uwp-apps"></a>UWP 앱의 스타일
 
 ![영웅 이미지](images/header-style.svg)
 
-스타일은 앱을 돋보이게 합니다. 이 스타일 지침은 색상, 입력 체계, 그리고 아크릴 재질 및 표시 강조와 같은 새로운 기능을 통해 흐름 디자인을 만드는 데 도움이 됩니다.
+스타일은 앱을 돋보이게 만듭니다. 이 섹션의 스타일 지침은 색상, 입력 체계, 그리고 아크릴 재질이나 표시 같은 새로운 기능을 통해 Fluent Design을 만드는 데 도움이 됩니다.
 
 :::row:::
     :::column:::
@@ -29,7 +23,7 @@ ms.locfileid: "8946622"
     :::column:::
         ![hero image](images/header-typography.svg)
         ### [Typography](typography.md)
-       언어의 시각적인 표현으로써 입력 체계의 주요 작업은 명확하게 하는 것입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 다음 지침 입력 체계를 사용 하 여 사용자가 콘텐츠를 쉽게 이해 하는 방법에 집중 합니다. 
+       언어의 시각적 표현인 입력 체계의 주요 작업은 명확성입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 다음 지침은 사용자가 콘텐츠를 쉽게 이해할 수 있도록 입력 체계를 사용하는 방법을 집중적으로 다룹니다. 
     :::column-end:::
 :::row-end:::
 

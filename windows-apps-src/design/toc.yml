@@ -5,7 +5,7 @@ items:
     href: basics/index.md
   - name: 앱 디자인 소개
     href: basics/design-and-ui-intro.md
-  - name: 흐름 디자인 시스템
+  - name: Fluent 디자인 시스템
     href: fluent-design-system/index.md
   - name: 탐색 기본 사항
     items:
@@ -55,7 +55,7 @@ items:
       href: layout/custom-panels-overview.md
     - name: '사용자 지정 패널 예제: BoxPanel'
       href: layout/boxpanel-example-custom-panel.md
-  - name: 변환
+  - name: 변형
     items:
     - name: 개요
       href: layout/transforms.md
@@ -87,13 +87,13 @@ items:
       href: controls-and-patterns/rating.md
     - name: 슬라이더
       href: controls-and-patterns/slider.md
-    - name: 토글
+    - name: Toggle
       href: controls-and-patterns/toggles.md
   - name: 컬렉션
     items:
     - name: 개요
       href: controls-and-patterns/lists.md
-    - name: 대칭 이동 보기
+    - name: 보기 대칭 이동
       href: controls-and-patterns/flipview.md
     - name: 목록 보기 및 그리드 보기
       href: controls-and-patterns/listview-and-gridview.md
@@ -126,7 +126,7 @@ items:
       href: controls-and-patterns/dialogs-and-flyouts/flyouts.md
   - name: 양식
     href: controls-and-patterns/forms.md
-  - name: 미디어, 그래픽 및 모양
+  - name: 미디어, 그래픽 및 셰이프
     items:
     - name: 이미지 및 이미지 브러시
       href: controls-and-patterns/images-imagebrushes.md
@@ -150,11 +150,11 @@ items:
       href: controls-and-patterns/menus.md
   - name: 탐색
     items:
-    - name: 마스터/세부 정보
+    - name: 마스터/세부
       href: controls-and-patterns/master-details.md
     - name: 탐색 보기
       href: controls-and-patterns/navigationview.md
-    - name: 피벗
+    - name: Pivot
       href: controls-and-patterns/pivot.md
   - name: 피플
     items:
@@ -164,7 +164,7 @@ items:
       href: controls-and-patterns/person-picture.md
   - name: 선택기
     items:
-    - name: 색 선택
+    - name: 색 선택기
       href: controls-and-patterns/color-picker.md
     - name: 날짜 및 시간 컨트롤
       href: controls-and-patterns/date-and-time.md
@@ -174,7 +174,7 @@ items:
       href: controls-and-patterns/calendar-view.md
     - name: 날짜 선택기
       href: controls-and-patterns/date-picker.md
-    - name: 시간 선택
+    - name: 시간 선택기
       href: controls-and-patterns/time-picker.md
   - name: 스크롤
     items:
@@ -188,7 +188,7 @@ items:
     items:
     - name: 진행률
       href: controls-and-patterns/progress-controls.md
-    - name: 도구 설명
+    - name: Tooltip
       href: controls-and-patterns/tooltips.md
   - name: 텍스트
     items:
@@ -200,13 +200,13 @@ items:
       href: controls-and-patterns/text-block.md
     - name: 서식 있는 텍스트 블록
       href: controls-and-patterns/rich-text-block.md
-    - name: 텍스트 상자
+    - name: 입력란
       href: controls-and-patterns/text-box.md
     - name: 서식 있는 편집 상자
       href: controls-and-patterns/rich-edit-box.md
-    - name: 암호 상자
+    - name: 비밀번호 상자
       href: controls-and-patterns/password-box.md
-    - name: 레이블
+    - name: Labels(레이블)
       href: controls-and-patterns/labels.md
     - name: 콘텐츠 링크
       href: controls-and-patterns/content-links.md
@@ -216,7 +216,7 @@ items:
   items:
   - name: 개요
     href: style/index.md
-  - name: 색상
+  - name: 색
     href: style/color.md
   - name: 입력 체계
     href: style/typography.md
@@ -257,7 +257,7 @@ items:
     href: motion/timing-and-easing.md
   - name: 방향 및 무게
     href: motion/directionality-and-gravity.md
-  - name: 동작 중인 움직임
+  - name: 실제 움직임
     href: motion/motion-in-practice.md
   - name: 페이지 전환
     href: motion/page-transitions.md
@@ -334,7 +334,7 @@ items:
         href: shell/tiles-and-notifications/toast-progress-bar.md
       - name: 보류 중인 업데이트
         href: shell/tiles-and-notifications/toast-pending-update.md
-      - name: 사용자 지정 타임 스탬프
+      - name: 사용자 지정 타임스탬프
         href: shell/tiles-and-notifications/custom-timestamps-on-toasts.md
       - name: 컬렉션
         href: shell/tiles-and-notifications/toast-collections.md
@@ -381,7 +381,7 @@ items:
   - name: 펜 및 Windows Ink
     href: input/pen-and-stylus-interactions.md
     items:
-    - name: '자습서: 앱에 수동 입력 지원 추가'
+    - name: '자습서: 앱에 잉크 입력 지원 추가'
       href: input/ink-walkthrough.md
     - name: 잉크 스트로크 인식
       href: input/convert-ink-to-text.md
@@ -447,7 +447,7 @@ items:
       href: https://docs.microsoft.com/cortana/voice-commands/launch-a-background-app-with-voice-commands-in-cortana
     - name: 백그라운드 앱 조작
       href: https://docs.microsoft.com/cortana/voice-commands/interact-with-a-background-app-in-cortana
-    - name: 백그라운드 앱으로의 딥 링크
+    - name: 백그라운드 앱에서 딥 링크
       href: https://docs.microsoft.com/cortana/voice-commands/deep-link-into-your-app-from-cortana
     - name: 자연어 음성 명령 지원
       href: https://docs.microsoft.com/cortana/voice-commands/support-natural-language-voice-commands-in-cortana
@@ -483,7 +483,7 @@ items:
     href: devices/designing-for-tv.md
   - name: 혼합 현실
     href: devices/designing-for-MR.md
-- name: 사용 편의성
+- name: 유용성
   items:
   - name: 개요
     href: usability/index.md
@@ -533,15 +533,15 @@ items:
       href: globalizing/guidelines-and-checklist-for-globalizing-your-app.md
     - name: 사용자 프로필 및 앱 매니페스트 언어 이해
       href: globalizing/manage-language-and-region.md
-    - name: 날짜/시간 숫자 형식 세계화
+    - name: 날짜/시간/숫자 형식 세계화
       href: globalizing/use-global-ready-formats.md
-    - name: 날짜 및 시간 형식 지정 템플릿 및 패턴 사용
+    - name: 날짜 및 시간 형식을 지정하는 템플릿 및 패턴 사용
       href: globalizing/use-patterns-to-format-dates-and-times.md
     - name: 레이아웃 및 글꼴 조정, RTL 지원
       href: globalizing/adjust-layout-and-fonts--and-support-rtl.md
     - name: NumeralSystem 값
       href: globalizing/glob-numeralsystem-values.md
-    - name: 앱을 현지화할 수 있게 만들기
+    - name: 앱을 현지화 가능하게 만들기
       href: globalizing/prepare-your-app-for-localization.md
     - name: 국가별 글꼴
       href: globalizing/loc-international-fonts.md
@@ -551,7 +551,7 @@ items:
       href: globalizing/use-mat.md
     - name: 다국어 앱 도구 키트 4.0 FAQ 및 문제 해결
       href: globalizing/mat-faq-troubleshooting.md
-    - name: 일본의 시대 변경을 대비한 응용 프로그램 준비
+    - name: 일본의 시대 변경을 대비한 애플리케이션 준비
       href: globalizing/japanese-era-change.md
   - name: 앱 도움말에 대한 지침
     href: in-app-help/guidelines-for-app-help.md
@@ -565,8 +565,8 @@ items:
 - name: 디자인 도구 키트
   href: downloads/index.md
 ms.openlocfilehash: b6430ee5f121d672282513fa524a50e7788f404c
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
-ms.translationtype: MT
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117452"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583590"

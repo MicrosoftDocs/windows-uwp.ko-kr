@@ -13,9 +13,9 @@ items:
 - name: 계정 사용자 관리
   href: ../publish/manage-account-users.md
   items:
-  - name: Azure ID와 파트너 센터 계정을 연결
+  - name: 파트너 센터 계정에 Azure AD 연결
     href: ../publish/associate-azure-ad-with-partner-center.md
-  - name: 사용자, 그룹 및 Azure AD 응용 프로그램 추가
+  - name: 사용자, 그룹 및 Azure AD 애플리케이션 추가
     href: ../publish/add-users-groups-and-azure-ad-applications.md
   - name: 역할 및 사용자 지정 권한 설정
     href: ../publish/set-custom-permissions-for-account-users.md
@@ -31,7 +31,7 @@ items:
       href: ../publish/define-market-selection.md
     - name: 표시 여부 옵션 선택
       href: ../publish/choose-visibility-options.md
-    - name: 정확한 릴리스 일정 구성
+    - name: 정확한 릴리스 예약 구성
       href: ../publish/configure-precise-release-scheduling.md
     - name: 앱 가격 설정 및 예약
       href: ../publish/set-and-schedule-app-pricing.md
@@ -49,7 +49,7 @@ items:
   - name: 앱 패키지 업로드
     href: ../publish/upload-app-packages.md
     items:
-    - name: 장치 패밀리 가용성
+    - name: 디바이스 패밀리 가용성
       href: ../publish/device-family-availability.md
     - name: 앱 패키지 요구 사항
       href: ../publish/app-package-requirements.md
@@ -59,16 +59,16 @@ items:
       href: ../publish/supported-languages.md
     - name: 앱 패키지 관리 지침
       href: ../publish/guidance-for-app-package-management.md
-  - name: 앱 Store 목록 만들기
+  - name: 앱 스토어 목록 만들기
     href: ../publish/create-app-store-listings.md
     items:
     - name: 호소력 있는 앱 설명 쓰기
       href: ../publish/write-a-great-app-description.md
     - name: 앱 스크린샷, 이미지 및 예고편
       href: ../publish/app-screenshots-and-images.md
-    - name: 스토어 목록 가져오기 및 내보내기
+    - name: Store 목록 가져오기 및 내보내기
       href: ../publish/import-and-export-store-listings.md
-    - name: 플랫폼별 Store 목록 만들기
+    - name: 플랫폼별 스토어 목록 만들기
       href: ../publish/create-platform-specific-store-listings.md
   - name: 제출 옵션 관리
     href: ../publish/manage-submission-options.md
@@ -99,9 +99,9 @@ items:
     href: ../publish/enter-add-on-properties.md
   - name: 추가 기능 가격 책정 및 가용성 설정
     href: ../publish/set-add-on-pricing-and-availability.md
-  - name: 추가 기능 Store 목록 만들기
+  - name: 추가 기능 저장소 목록 만들기
     href: ../publish/create-add-on-store-listings.md
-- name: 인앱 광고
+- name: 앱 내 광고
   href: ../publish/in-app-ads.md
 - name: 앱 관리 및 서비스
   href: ../publish/app-management-and-services.md
@@ -154,7 +154,7 @@ items:
     href: ../publish/respond-to-customer-feedback.md
   - name: 앱의 고객에게 알림 보내기
     href: ../publish/send-push-notifications-to-your-apps-customers.md
-  - name: 대상 제품 사용
+  - name: 대상 지정된 제품 사용
     href: ../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md
 - name: 앱 성능 분석
   href: ../publish/analytics.md
@@ -186,7 +186,7 @@ items:
 - name: 지급 받기
   href: ../publish/getting-paid-apps.md
   items:
-  - name: 지급액 계좌 및 세금 양식 설정
+  - name: 지급 계좌 및 세금 양식 설정
     href: ../publish/setting-up-your-payout-account-and-tax-forms.md
   - name: 지급 임계값, 방법 및 기간
     href: ../publish/payment-thresholds-methods-and-timeframes.md
@@ -200,7 +200,7 @@ items:
     href: ../publish/mobile-operator-billing.md
   - name: VAT 정보
     href: ../publish/vat-info.md
-- name: Microsoft Store 정책 및 준수 사항
+- name: Store 정책 및 준수 사항
   href: https://docs.microsoft.com/legal/windows/agreements/store-policies-and-code-of-conduct
   items:
   - name: Microsoft Store 정책
@@ -213,8 +213,8 @@ items:
   - name: 개발자 준수 사항
     href: https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct
 ms.openlocfilehash: d44affff4838b8799bfd2e82e4f57058d60e657b
-ms.sourcegitcommit: b9ee49402db7a8999cade1c5cf7f7b6ac4d783db
-ms.translationtype: MT
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "9042473"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57582985"

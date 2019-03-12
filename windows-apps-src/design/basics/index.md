@@ -6,21 +6,21 @@ ms.date: 03/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ---
-# <a name="design-basics-for-uwp-apps"></a>UWP 앱의 디자인 기본 사항
+# <a name="design-basics-for-uwp-apps"></a>UWP 앱에 대한 디자인 기본 사항
 
 ![영웅 이미지](images/header-design-basics.svg)
 
-유니버설 Windows 플랫폼(UWP) 디자인 지침은 세련되고 아름다운 앱을 디자인 및 빌드하기 위한 리소스입니다. 규범적인 규칙 목록이 아닙니다. 발전하는 흐름 디자인 시스템과 앱 빌드 커뮤니티의 필요 사항에 맞춰 적응할 수 있도록 고안된 살아있는 문서입니다. 
+UWP(유니버설 Windows 플랫폼) 디자인 지침은 세련되고 아름다운 앱을 디자인하고 빌드하는 데 도움이 되는 리소스입니다. 규범적인 규칙 목록이 아닙니다. 진화하는 Fluent 디자인 시스템과 앱 빌드 커뮤니티의 요구 사항에 맞게 적응할 수 있도록 설계된 살아있는 문서입니다. 
 
 ## <a name="overview"></a>개요
 
 [**UWP 앱 디자인 소개**](design-and-ui-intro.md)
 
-모든 유형의 Windows 기반 장치에서 확장할 수 있는 앱을 개발하기 위한 모범 사례가 통합된 UWP 기능에 대한 소개.
+모든 유형의 Windows 기반 디바이스에서 멋지게 크기 조정되는 앱을 만드는 모범 사례와 결합된 UWP 기능을 소개합니다.
 
-[**흐름 디자인 시스템**](../fluent-design-system/index.md)
+[**Fluent 디자인 시스템**](../fluent-design-system/index.md)
 
-흐름 디자인 시스템은 아름다우며 공감하는 적응형 사용자 인터페이스를 만들고자 하는 Microsoft의 목표와 원칙을 제공합니다.
+Fluent 디자인 시스템은 아름답고 공감할 수 있는 적응형 사용자 인터페이스를 만들기 위한 목표와 원칙을 제시합니다.
 
 ## <a name="basics"></a>기본 사항
 
@@ -38,17 +38,17 @@ UWP 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의
 
 ## <a name="tutorials"></a>자습서
 
-XAML 및 C#에서 기본 사진 편집 응용 프로그램을 만드는 방법을 알아보세요.
+XAML 및 C#에서 기본 사진 편집 애플리케이션을 만드는 방법을 알아봅니다.
 <!-- <img src="images/landing-page/photolab-50.png" style="{height: 339px}" alt=" " /> -->
 
 [**1. 기본 UI 만들기**](xaml-basics-ui.md)
 
-XAML을 사용해 기본 사용자 인터페이스 만들기
+XAML을 사용하여 기본 사용자 인터페이스를 만듭니다.
 
 [**2. 적응형 레이아웃 만들기**](xaml-basics-adaptive-layout.md)
 
-사진 편집 응용 프로그램에 적응형 레이아웃을 제공합니다.
+사진 편집 애플리케이션에 적응형 레이아웃을 제공합니다.
 
 [**3. 사용자 지정 스타일 만들기**](xaml-basics-style.md)
 
-사용자 지정 스타일을 만들어 UWP 컨트롤에 고유의 모양과 느낌을 구현합니다.
+사용자 지정 스타일을 만들어 UWP 컨트롤에 사용자 고유의 모양과 느낌을 제공합니다.

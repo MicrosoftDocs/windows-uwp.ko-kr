@@ -1,48 +1,48 @@
 ---
-description: '흐름 디자인은 무엇이고, 어떻게 앱에 통합하는지 알아봅니다.'
-title: Windows 용 fluent 디자인 시스템
-keywords: 'uwp 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, 인터페이스, 흐름 디자인 시스템'
+description: Fluent 디자인 및 이를 앱에 통합하는 방법을 알아봅니다.
+title: Windows용 Fluent 디자인 시스템
+keywords: 'UWP 앱 레이아웃, 유니버설 Windows 플랫폼, 앱 디자인, 인터페이스, Fluent 디자인 시스템'
 ms.date: 03/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
-# <a name="the-fluent-design-system-for-windows-app-creators"></a>Fluent 디자인 시스템에 대 한 Windows 응용 프로그램 작성자
+# <a name="the-fluent-design-system-for-windows-app-creators"></a>Windows 앱 작성자용 Fluent 디자인 시스템
 
 ![Fluent 디자인 헤더](images/fluentdesign-app-header.jpg)
 
 ## <a name="introduction"></a>소개
 
-Fluent 디자인 시스템에는 적응형, 공감 만들기 및 멋진 사용자 인터페이스는 시스템 이기도 합니다.
+Fluent 디자인 시스템은 아름답고 공감할 수 있는 적응형 사용자 인터페이스를 만드는 시스템입니다.
 
 ## <a name="principles"></a>원칙
 
-**적응형: 각 장치마다 Fluent 환경을 자연스럽게 느낄 수 있다는 것을 말합니다.**
+**적응형: 각 디바이스에서 자연스럽게 느낄 수 있는 Fluent 환경**
 
-이러한 Fluent 환경이 각 장치의 환경에 적용됩니다. Fluent 환경은 태블릿, 데스크톱 PC 및 Xbox에서 편안한 느낌-도 작동 제대로 혼합 현실 헤드셋에서. PC 모니터 같은 하드웨어를 추가하면 Fluent 환경이 추가된 하드웨어를 이용합니다.
+Fluent 환경은 환경에 맞게 조정됩니다. Fluent 환경은 태블릿, 데스크톱 PC 및 Xbox에서 편안함을 느낄 수 있을 뿐만 아니라 혼합 현실 헤드셋에도 훌륭하게 작동합니다. PC용 추가 모니터와 같은 하드웨어가 추가되면 Fluent 환경에서 이 하드웨어를 활용합니다.
 
-**공감: Fluent 환경은 직관적이고 강력합니다.**
+**공감: 직관적이고 강력한 Fluent 환경**
 
-Fluent 환경은 동작이나 의도에 반응하여 필요한 것을 이해하고 예상합니다. 지구 반대편에 있는 사람이든, 혹은 지금 바로 옆에 있는 사람이든 상관없이 모든 사람과 아이디어를 하나로 결합합니다.
+Fluent 환경은 동작이나 의도에 맞게 조정되어 요구 사항을 인식하고 예상합니다. 지구의 반대편에 있거나 지금 바로 옆에 있는 사람인지 여부에 관계없이 모든 사람과 아이디어를 하나로 결합합니다.
 
-**아름다움: Fluent 환경은 매력적이고 몰입도가 높습니다.**
+**아름다움: 매력적이고 몰입도가 높은 Fluent 환경**
 
-Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활용합니다. 조명, 그림자, 동작, 깊이, 질감 등을 사용하여 직관적이고 본능적으로 느낄 수 있도록 정보를 구성합니다.
+Fluent 환경은 실제 세계의 요소를 통합하여 기본 작업을 활용합니다. 조명, 그림자, 움직임, 깊이 및 질감을 사용하여 직관적이고 본능적으로 느낄 수 있는 방식으로 정보를 구성합니다.
 
 
-## <a name="applying-fluent-design-to-your-app-with-uwp"></a>Fluent 디자인을 UWP 사용 하 여 앱에 적용
+## <a name="applying-fluent-design-to-your-app-with-uwp"></a>UWP를 사용하여 앱에 Fluent 디자인 적용
 
-![흐름 디자인 로고](images/fluentdesign_header.png)
+![Fluent 디자인 로고](images/fluentdesign_header.png)
 
-디자인 지침에는 앱에 흐름 디자인 원칙을 적용 하는 방법을 설명 합니다. 어떤 유형의 앱? 모든 플랫폼에 적용할 수 다양 한 지침을 하는 동안 UWP (유니버설 Windows 플랫폼) 흐름 디자인을 지원 하기 위해 만들었습니다.
+디자인 지침에서는 Fluent 디자인 원칙을 앱에 적용하는 방법을 설명합니다. 어떤 종류의 앱인가요? 지침의 많은 부분을 모든 플랫폼에 적용할 수 있지만, Fluent 디자인을 지원하는 UWP(유니버설 Windows 플랫폼)를 만들었습니다.
 
-흐름 디자인은 UWP에 기본적으로 적용됩니다. 이러한 기능 중에서 유효 픽셀이나 범용 입력 시스템 같은 일부 기능은 자동입니다. 이 기능을 활용하기 위해 추가 코드를 작성할 필요가 없습니다. 아크릴 같은 다른 기능은 선택 사항입니다. 즉 추가할 코드를 직접 작성하여 앱에 추가하면 됩니다.
+Fluent 디자인 기능은 UWP에 기본적으로 제공됩니다. 이러한 기능 중 일부(예: 유효 픽셀 또는 범용 입력 시스템)는 자동입니다. 해당 기능을 활용하기 위해 추가 코드를 작성할 필요가 없습니다. 아크릴과 같은 다른 기능은 선택 사항입니다. 이 경우 코드를 작성하여 앱에 추가합니다.
 
-> 기존 WPF 또는 흐름 디자인 기능이 있는 Windows 응용 프로그램의 모양과 느낌, 기능을 향상시킬 수 있도록 데스크톱에 UWP 컨트롤을 포함했습니다. 자세한 내용은 [WPF 및 Windows Forms 응용 프로그램의 호스트 UWP 컨트롤](/windows/uwp/xaml-platform/xaml-host-controls)을 참조 하세요.
+> Fluent 디자인 기능을 사용하여 기존 WPF 또는 Windows 애플리케이션의 모양, 느낌 및 기능을 향상시킬 수 있도록 UWP 컨트롤을 데스크톱에 가져옵니다. 자세한 내용은 [WPF 및 Windows Forms 애플리케이션에서 UWP 컨트롤 호스팅](/windows/uwp/xaml-platform/xaml-host-controls)을 참조하세요.
 
 <!-- To apply Fluent Design to your app, follow our guidelines and use UWP (Universal Windows Platform) you can use UWP UI features combined with best practices for creating apps that perform beautifully on all types of Windows-powered devices. -->
 
-디자인 지침 뿐만 아니라 Fluent 디자인 기사도 하는 방법을 보여 발생할 디자인 하는 코드를 작성 합니다. UWP XAML을 쉽게 사용자 인터페이스를 만들 수 있는 태그 기반 언어를 사용 합니다. 예를 들면 다음과 같습니다.
+Fluent 디자인 문서에는 디자인 지침 외에도 디자인을 수행하는 코드를 작성하는 방법이 나와 있습니다. UWP는 사용자 인터페이스를 더 쉽게 만들 수 있는 표시(markup) 기반 언어인 XAML을 사용합니다. 예를 들면 다음과 같습니다.
 
 ```xaml
 <Grid BorderBrush="Blue" BorderThickness="4">
@@ -53,11 +53,11 @@ Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활
 ![](images/xaml-example.png)
 
 
-> UWP 개발을 처음 접하는 경우 확인 하는 [UWP 페이지 시작](https://developer.microsoft.com/windows/apps/getstarted)하세요.
+> UWP 개발을 처음 접하는 경우 [UWP 시작 페이지](https://developer.microsoft.com/windows/apps/getstarted)를 확인하세요.
 
-## <a name="find-a-natural-fit"></a>자연스러운 경험 찾기
+## <a name="find-a-natural-fit"></a>자연스러운 맞춤형 환경 확인
 
-다양한 장치에서 앱이 자연스럽게 보이도록 하려면 어떻게 해야 할까요? 처음부터 특정 장치를 염두에 두고 설계한 것처럼 느끼게 하면 됩니다. 화면 크기에 따라 조정되어 낭비하는 공간이 없고(혼잡하지도 않은) UI 레이아웃에서는 마치 특정 장치를 위해 설계된 것처럼 자연스러운 경험을 느낄 수 있습니다.
+다양한 디바이스에서 앱을 자연스럽게 느끼도록 하려면 어떻게 해야 할까요? 각각의 특정 디바이스를 염두에 두고 설계한 것처럼 느끼게 하는 것입니다. 다양한 화면 크기에 맞게 조정되는 UI 레이아웃은 낭비되는 공간이 없으므로(혼잡하지도 않음) 마치 해당 디바이스를 위해 설계된 것처럼 자연스러운 환경을 느낄 수 있습니다.
 
 :::row:::
     :::column:::
@@ -109,13 +109,13 @@ Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활
         [Learn about inputs and interactions](/windows/uwp/design/input/input-primer)
 :::row-end:::
 
-## <a name="make-it-intuitive"></a>직관적인 확인
+## <a name="make-it-intuitive"></a>직관적 환경 만들기
 
-직관적인 경험은 사용자가 기대 하는 방식으로 동작 하는 경우. 구성된 컨트롤 및 패턴을 사용하는 동시에 접근성과 세계화를 지원하는 플랫폼 기능을 이용할 때 비로소 사용자 생산성을 손쉽게 높일 수 있는 환경이 구현됩니다.
+사용자가 요구하는 방식으로 작동할 때 직관적인 환경이라고 느낍니다. 설정된 컨트롤과 패턴을 사용하고 접근성과 세계화를 지원하는 플랫폼을 활용하면 사용자가 생산성을 높일 수 있는 손쉬운 환경을 만들 수 있습니다.
 
-공감대의 표현은 적절한 시점에 올바른 일을 하는 것입니다.
+적절한 시기에 올바른 작업을 수행할 때 공감을 느끼게 됩니다.
 
-Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하기 때문에 사용자가 예상하는 대로 동작합니다. 또한 광범위한 실제 권한이 있는 사용자라면 누구나 액세스가 가능할 뿐만 아니라 세계화 기능까지 결합되어 전 세계 누구나 사용할 수 있습니다.
+Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하므로 사용자가 예상한 방식으로 작동합니다. Fluent 환경은 광범위한 실제 권한이 있는 사용자가 액세스할 수 있으며, 전 세계 사람들이 사용할 수 있도록 세계화 기능을 통합합니다.
 
 :::row:::
     :::column:::
@@ -164,15 +164,15 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하기 때문에 �
         [Learn about Usability](/windows/uwp/design/usability/)
 :::row-end:::
 
-## <a name="be-engaging-and-immersive"></a>매력적이고 몰입도 높은 환경
+## <a name="be-engaging-and-immersive"></a>매력적이고 몰입도가 높은 환경
 
-흐름 디자인은 현란한 효과에 관한 것이 아닙니다. 사람의 뇌가 정보를 효율적으로 처리할 수 있도록 프로그래밍되는 것처럼 경험을 에뮬레이션하기 때문에 실제로 사용자 경험을 강화할 수 있는 효과가 있습니다.
+Fluent 디자인은 화려한 효과와 관련된 것이 아닙니다. 사람의 뇌가 정보를 효율적으로 처리할 수 있도록 프로그래밍된 경험을 모방하므로 실제로 사용자 환경을 향상시키는 물리적 효과를 통합합니다.
 
-## <a name="use-light"></a>조명 사용
+## <a name="use-light"></a>광선 사용
 
-조명은 이목을 집중시키는 방법 중 하나입니다. 또한 분위기와 공간감을 형성하고 정보를 강조하는 실용적인 도구입니다.
+광선은 주의를 끌 수 있는 한 가지 방법입니다. 분위기와 공간 감성을 창출하고 정보를 조명하는 실용적인 도구입니다.
 
-조명을 UWP 앱에 추가:
+광선을 UWP 앱에 추가하는 방법은 다음과 같습니다.
 
 :::row:::
     :::column:::
@@ -194,11 +194,11 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하기 때문에 �
         [Reveal focus](../style/reveal-focus.md) uses light to call attention to the element that currently has input focus.
 :::row-end:::
 
-## <a name="create-a-sense-of-depth"></a>깊이감 추가하기
+## <a name="create-a-sense-of-depth"></a>깊이 감각 만들기
 
-우리는 3차원 세계에 살고 있습니다. UI에 의도적으로 깊이를 적용함으로써 평면적인 2차원 인터페이스를 입체적인 형태, 즉 시각적 계층 구조를 형성하여 효율적으로 정보와 개념을 제공하는 형태로 바꿉니다. 계층화된 물리적 환경 내에서 사물이 서로 관계 맺는 방식을 새롭게 창조할 수 있습니다.
+현재 3차원 세계에 살고 있습니다. 의도적으로 깊이를 UI에 적용하여 평면적인 2차원 인터페이스를 더 효율적인 것으로 변환합니다. 즉 시각적 계층 구조를 만들어 정보와 개념을 효율적으로 나타냅니다. 계층화된 물리적 환경 내에서 사물이 서로 관계되는 방식을 새롭게 창조할 수 있습니다.
 
-깊이를 UWP 앱에 추가:
+깊이를 UWP 앱에 추가하는 방법은 다음과 같습니다.
 
 :::row:::
     :::column:::
@@ -210,11 +210,11 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하기 때문에 �
         [Parallax](../motion/parallax.md) creates the illusion of depth by making items in the foreground appear to move more quickly than items in the background.
 :::row-end:::
 
-## <a name="incorporate-motion"></a>동작 통합
+## <a name="incorporate-motion"></a>움직임 통합
 
-동영상 같은 동작 디자인이라고 볼 수 있습니다. 매끄러운 전환은 스토리에 대한 집중도를 높이고 생동감 있는 경험을 선사합니다. 이런 느낌을 디자인에 구현하여, 영화를 보듯 편안하게 여러 작업을 이어갈 수 있도록 했습니다.
+움직임 디자인을 영화처럼 생각할 수 있습니다. 매끄러운 전환은 스토리에 대한 집중도를 높이고 생동감 있는 경험을 선사합니다. 이러한 느낌을 디자인에 도입하여 영화처럼 편리하게 한 작업에서 다음 작업으로 이어갈 수 있습니다.
 
-동작을 UWP 앱에 추가:
+움직임을 UWP 앱에 추가하는 방법은 다음과 같습니다.
 
 :::row:::
     :::column:::
@@ -226,11 +226,11 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하기 때문에 �
         [Connected animations](../motion/connected-animation.md) help the user maintain context by creating a seamless transition between scenes.
 :::row-end:::
 
-## <a name="build-it-with-the-right-material"></a>올바른 재료를 사용하는 디자인
+## <a name="build-it-with-the-right-material"></a>올바른 소재를 사용하여 빌드
 
-현실 세계에서 우리를 둘러싼 사물은 감각적이고 생기가 있습니다. 구부러지고, 늘어나고, 튀어 오르고, 부서지고, 미끄러집니다. 이러한 사물의 속성을 디지털 환경에 구현하여, 사람들이 디자인에 손을 뻗어 만지고 싶어하도록 만듭니다.
+실제 세계에서 둘러싸고 있는 사물은 감각적이고 활력을 줍니다. 즉 구부러지고, 늘어나고, 튀어 오르고, 부서지고, 미끄러집니다. 이러한 물질적 특성은 디지털 환경으로 변환되어 사람들이 디자인에 손을 뻗고 만질 수 있게 합니다.
 
-재료를 UWP 앱에 추가:
+소재를 UWP 앱에 추가하는 방법은 다음과 같습니다.
 
 :::row:::
     :::column:::
@@ -244,7 +244,7 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하기 때문에 �
 
 ## <a name="design-toolkits-and-code-samples"></a>디자인 도구 키트 및 코드 샘플
 
-흐름 디자인을 사용해 나만의 앱을 만들어보고 싶으세요? Adobe XD, Adobe Illustrator, Adobe Photoshop, Framer, Sketch 등의 도구 키트가 디자인을 바로 시작할 수 있도록 지원할 뿐만 아니라 코드 샘플은 빠른 코딩에 매우 유용합니다.
+Fluent 디자인을 사용하여 나만의 앱을 만들려고 하는가요? Adobe XD, Adobe Illustrator, Adobe Photoshop, Framer 및 Sketch용 도구 키트는 디자인을 바로 시작하는 데 도움이 되며, 코드 샘플은 빠른 코딩에 유용합니다.
 
 :::row:::
     :::column:::

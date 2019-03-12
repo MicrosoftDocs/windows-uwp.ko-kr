@@ -1,6 +1,6 @@
 ---
 description: 앱을 전 세계 사용자들이 사용하고 액세스할 수 있게 하는 방법을 알아봅니다.
-keywords: UWP 앱 접근성, 세계화, 디자인 포괄 앱, 접근성 앱 요구 사항
+keywords: 'UWP 앱 접근성, 세계화, 디자인 포괄 앱, 접근성 앱 요구 사항'
 title: UWP 앱의 유용성 - Windows 앱 개발
 layout: LandingPage
 template: detail.hbs
@@ -8,12 +8,6 @@ ms.date: 10/18/2017
 ms.topic: landing-page
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
-ms.openlocfilehash: f218df3b4118508049023218b64e6c7321fbbda9
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8937937"
 ---
 # <a name="usability-for-uwp-apps"></a>UWP 앱의 유용성
 
@@ -78,7 +72,7 @@ ms.locfileid: "8937937"
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessibility-in-the-store.md">스토어의 접근성</a></b><br/>UWP 앱을 Microsoft Store에서 접근 가능한 앱으로 선언하기 위한 요구 사항에 대해 설명합니다.</p>
+<p><b><a href="../accessibility/accessibility-in-the-store.md">Store의 접근성</a></b><br/>UWP 앱을 Microsoft Store에서 액세스할 수 있는 앱으로 선언하기 위한 요구 사항에 대해 설명합니다.</p>
                     </div>
                 </div>
             </div>
@@ -100,7 +94,7 @@ ms.locfileid: "8937937"
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/basic-accessibility-information.md">기본적인 접근성 정보 표시</a></b><br/>경우에 따라 기본 접근성 정보는 이름, 역할 및 값으로 분류됩니다. 이 항목에서는 보조 기술이 필요로 하는 기본 정보를 앱에 표시하는 데 도움이 되는 코드에 대해 설명합니다.</p>
+<p><b><a href="../accessibility/basic-accessibility-information.md">기본 접근성 정보 표시</a></b><br/>경우에 따라 기본 접근성 정보는 이름, 역할 및 값으로 분류됩니다. 이 항목에서는 보조 기술이 필요로 하는 기본 정보를 앱에 표시하는 데 도움이 되는 코드에 대해 설명합니다.</p>
                     </div>
                 </div>
             </div>
@@ -144,7 +138,7 @@ ms.locfileid: "8937937"
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/practices-to-avoid.md">피해야 할 접근성 사례</a></b><br/>UWP 앱에 접근성을 구현하려는 경우 피해야 할 사례에 대해 설명합니다.</p>                    
+<p><b><a href="../accessibility/practices-to-avoid.md">접근성 방지 사례</a></b><br/>UWP 앱에 접근성을 구현하려는 경우 피해야 할 사례에 대해 설명합니다.</p>                    
                     </div>
                 </div>
             </div>
@@ -155,7 +149,7 @@ ms.locfileid: "8937937"
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/custom-automation-peers.md">사용자 지정 자동화 피어</a></b><br/>UI 자동화의 자동화 피어 개념과 고유한 사용자 지정 UI 클래스에 대해 자동화 지원을 제공하는 방법을 설명합니다.</p>                    
+<p><b><a href="../accessibility/custom-automation-peers.md">사용자 지정 자동화 피어링</a></b><br/>UI 자동화의 자동화 피어 개념과 고유한 사용자 지정 UI 클래스에 대해 자동화 지원을 제공하는 방법을 설명합니다.</p>                    
                     </div>
                 </div>
             </div>
@@ -177,7 +171,7 @@ ms.locfileid: "8937937"
 
 ## <a name="globalization-and-localization"></a>세계화 및 지역화
 
-Windows는 전 세계에서 언어, 지역, 문화가 다양한 사용자가 사용합니다. 사용자는 다양한 국가와 지역에서 다양한 언어를 사용합니다. 일부 사용자는 2개국어 이상을 사용합니다. 따라서 앱은 언어, 지역 및 문화 시스템 설정이 다양하게 조합된 구성에서 실행됩니다. *세계화* 및 *지역화*를 사용하여 앱을 쉽게 조정할 수 있도록 디자인하면 앱의 잠재 시장을 늘릴 수 있습니다.
+Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용자가 사용합니다. 사용자는 다양한 국가와 지역에서 다양한 언어를 사용합니다. 일부 사용자는 둘 이상의 언어를 사용합니다. 따라서 앱은 언어, 지역 및 문화 시스템 설정이 다양하게 조합된 구성에서 실행됩니다. *세계화* 및 *지역화*를 통해 앱을 쉽게 조정할 수 있도록 설계하여 앱에 대한 잠재적 시장을 넓힙니다.
 
 <a href="../globalizing/globalizing-portal.md">세계화 및 지역화 포털</a>
 
@@ -232,7 +226,7 @@ Windows는 전 세계에서 언어, 지역, 문화가 다양한 사용자가 사
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../in-app-help/instructional-ui.md">UI 사용 안내</a></b><br/>경우에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. In these cases, you need to present instructions to the user through the UI so they can discover and use features they might have missed.</p>
+<p><b><a href="../in-app-help/instructional-ui.md">사용 안내 UI</a></b><br/>경우에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. 이러한 경우 보지 못했을 수 있는 기능을 검색하고 사용할 수 있도록 UI를 통해 사용자에게 지침을 제공해야 합니다.</p>
                     </div>
                 </div>
             </div>

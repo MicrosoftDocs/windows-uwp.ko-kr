@@ -1,98 +1,92 @@
 ---
 title: Xbox Live 개발자 가이드
-description: Xbox Live 서비스를 사용 하 여 게임을 Xbox Live 게임 네트워크에 연결 하는 방법을 알아봅니다.
+description: Xbox Live 서비스를 사용하여 게임을 Xbox Live 게임 네트워크에 연결하는 방법을 알아봅니다.
 ms.date: 08/22/2017
 ms.topic: article
-keywords: windows 10, uwp, 게임, xbox, xbox live
+keywords: 'Windows 10, UWP, 게임, Xbox, Xbox Live'
 ms.localizationpriority: medium
-ms.openlocfilehash: a08105d8ee4c78421d934f991fc4123299c38365
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9044110"
 ---
-# <a name="what-is-xbox-live"></a>Xbox Live란 무엇인가요?
+# <a name="what-is-xbox-live"></a>Xbox Live란?
 
-Xbox Live는 전 세계의 수 백만 게이머들을 연결하는 최상의 게임 네트워크입니다. Xbox Live 기능 및 서비스를 활용 하기 위해 Windows 10 또는 Xbox One 게임에 Xbox Live를 추가할 수 있습니다.
+Xbox Live는 전 세계 수 백만 명의 게이머를 연결하는 최고의 게임 네트워크입니다. Xbox Live 기능과 서비스를 활용하기 위해 Xbox Live를 Windows 10 또는 Xbox One 게임에 추가할 수 있습니다.
 
-Xbox Live 크리에이터 스 프로그램을 사용 하 여 [파트너 센터](https://partner.microsoft.com/dashboard) 계정을 가진 사람은 누구나 Windows 10 Pc와 Xbox One 콘솔에서 실행할 수 있는 Xbox Live가 지원 UWP (유니버설 Windows 플랫폼) 게임을 빌드할 수 있습니다.
+Xbox Live 크리에이터스 프로그램을 사용하면 [파트너 센터](https://partner.microsoft.com/dashboard) 계정이 있는 모든 사용자가 Windows 10 PC와 Xbox One 콘솔 모두에서 실행할 수 있는 Xbox Live 지원 UWP(유니버설 Windows 플랫폼) 게임을 빌드할 수 있습니다.
 
-멀티 플레이어, 도전 과제, 및 기본 Xbox 콘솔 개발을 포함 하 여 전체 Xbox Live 경험을 활용 하고자 하는 게임 개발자에 대 한 추가적인 개발자 프로그램을 [개발자 프로그램 개요](developer-program-overview.md)에 자세히 설명 되어 있습니다.
+멀티플레이, 도전 과제 및 네이티브 Xbox 콘솔 개발을 포함한 전체 Xbox Live 환경을 활용하려는 게임 개발자에게는 [개발자 프로그램 개요](developer-program-overview.md)에서 자세히 설명하는 추가 개발자 프로그램이 있습니다.
 
-다음은 게임에 Xbox Live를 추가 하는 일부의 이유입니다.
+Xbox Live를 게임에 추가해야 하는 몇 가지 이유는 다음과 같습니다.
 
-- Xbox Live 상태로 제공 게이머 Xbox One 및 Windows 10에서 게이머는 친구와 재생 하 고 플레이어의 거 대 한 커뮤니티와 연결할 수 있도록 합니다.
-- Xbox Live 게임 클립 서사적 공유, 게이머 점수, amassing 및 아바타를 늘리는 플레이어를 게임 레거시 잠금 해제 도전 과제를 정의 하 여 빌드할 수 있습니다.
-- Xbox Live 게이머를 재생 하 고 마지막으로 또 다른 Xbox One 또는 다른 장치에서의 모든 저장을 가져오는 PC에서 선택할 수 있습니다.
-- 1 십억 넘는 멀티 플레이 일치 항목 매달 재생, Xbox Live 속도 성능과 안정성에 대 한 기본 제공 합니다.
-- 장치 간 멀티 플레이어를 사용 하 여 게이머는 Xbox One 또는 Windows 10 PC에서 재생 되는 여부에 관계 없이 친구와 재생할 수 있습니다.
+- Xbox Live는 Xbox One과 Windows 10을 통해 게이머를 통합하므로 게이머는 친구와 게임을 하고 대규모 플레이어 커뮤니티에 연결할 수 있습니다.
+- Xbox Live를 통해 플레이어는 도전 과제의 잠금을 해제하고, 멋진 게임 클립을 공유하며, 게이머 점수를 축적하고, 아바타를 완성함으로써 게임 유산을 구축할 수 있습니다.
+- Xbox Live를 사용하면 게이머가 다른 Xbox One 또는 PC에서 중단한 위치에서 재생하거나 정리할 수 있고, 다른 디바이스에서 모든 저장 내용을 가져올 수 있습니다.
+- Xbox Live는 매월 10억 건 이상의 멀티플레이 매치가 진행되며 성능, 속도 및 안정성을 고려하여 빌드되었습니다.
+- 게이머는 디바이스 간 멀티플레이를 통해 Xbox One 또는 Windows 10 PC에서 재생하는지 여부에 관계없이 친구와 게임을 즐길 수 있습니다.
 
 > [!note]
-> 이 항목은 게임에 Xbox Live에 대 한 지원을 추가 하고자 하는 게임 개발자를 위한 합니다. 소비자 정보 Xbox Live 찾고자 하는 경우 [Xbox Live](https://www.xbox.com/live/)참조 하세요.
+> 여기서는 Xbox Live에 대한 지원을 게임에 추가하려는 게임 개발자를 대상으로 합니다. 소비자 Xbox Live 정보를 찾으려면 [Xbox Live](https://www.xbox.com/live/)를 참조하세요.
 
 ## <a name="how-xbox-live-works"></a>Xbox Live의 작동 방식
 
-기술 측면에서 Xbox Live 프로필, 친구 및 현재 상태, 통계, 순위표, 도전 과제, 멀티 플레이어, 및 매치 메이 킹 등의 Xbox Live 기능을 노출 하는 마이크로 서비스의 모음입니다. Xbox Live 데이터 클라우드에 저장 되 고 REST 끝점을 사용 하 여 액세스할 수 및 보안 websocket 클라이언트 쪽 Api의 집합에서 액세스할 수 있는 게임 개발자 용 설계 되었습니다.
+기술 수준에서 Xbox Live는 프로필, 친구 및 존재 여부, 통계, 순위표, 도전 과제, 멀티플레이 및 매치 메이킹과 같은 Xbox Live 기능을 공개하는 마이크로 서비스 모음입니다. Xbox Live 데이터는 클라우드에 저장되며, 게임 개발자를 위해 설계된 일단의 클라이언트 쪽 API에서 액세스할 수 있는 REST 엔드포인트와 보안 WebSocket을 사용하여 액세스할 수 있습니다.
 
-REST Api 외에도는 클라이언트 쪽 나머지 기능을 래핑하는 Api입니다. 자세한 내용은 [Xbox Live Api 소개](introduction-to-xbox-live-apis.md)를 참조 하세요.
+REST API 외에도 REST 기능을 래핑하는 클라이언트 쪽 API가 있습니다. 자세한 내용은 [Xbox Live API 소개](introduction-to-xbox-live-apis.md)를 참조하세요.
 
 ### <a name="get-started-with-xbox-live"></a>Xbox Live 시작
 
-다음 가이드 Xbox Live 개발 시작, UWP 또는 Xbox 인지 여부에 관계 없이 콘솔 개발자는 데 도움이 됩니다.  게임 엔진으로 설정 하는 방법에 대 한 가이드도 있습니다.
+UWP 또는 Xbox 콘솔 개발자인지 여부에 관계없이 다음 가이드를 사용하여 Xbox Live 개발을 시작할 수 있습니다.  게임 엔진에 대한 설정 가이드도 있습니다.
 
 | 항목                                                                                                                                             | 설명                                                                                                   |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
-| [개발자 프로그램 개요](developer-program-overview.md) | Xbox Live 개발을 사용할 수 있는 다양 한 개발자 프로그램에 설명 합니다. |
-| [Xbox Live 크리에이터스 프로그램 시작](get-started-with-creators/get-started-with-xbox-live-creators.md) | Xbox Live Xbox Live 크리에이터 스 프로그램에서 시작 하는 방법. |
-| [Xbox Live 시작는 ID@Xbox 개발자 관리](get-started-with-partner/get-started-with-xbox-live-partner.md) | Xbox live에서 개발자로 시작 하는 방법의 ID@Xbox 프로그램. |
+| [개발자 프로그램 개요](developer-program-overview.md) | Xbox Live 개발을 사용하도록 설정하는 다양한 개발자 프로그램에 대해 설명합니다. |
+| [Xbox Live 크리에이터스 프로그램 시작](get-started-with-creators/get-started-with-xbox-live-creators.md) | Xbox Live 크리에이터스 프로그램에서 Xbox Live를 시작하는 방법입니다. |
+| [관리형 개발자 또는 ID@Xbox로 Xbox Live 시작](get-started-with-partner/get-started-with-xbox-live-partner.md) | ID@Xbox 프로그램에서 Xbox Live를 개발자로 시작하는 방법입니다. |
 
-### <a name="using-xbox-live"></a>Xbox Live를 사용 하 여
+### <a name="using-xbox-live"></a>Xbox Live 사용
 
-한 번 만든 타이틀이 기본 작업,이 섹션에서는 필요한 백그라운드에서 이동 및 코딩을 시작 하기 전에 합니다.
+타이틀이 작성되고 기본 작업이 작동하면 참가하여 코딩을 시작하기 전에 이 섹션에서 필요한 배경을 제공합니다.
 
 | 항목                                                                                                                                             | 설명                                                                                                   |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
-| [Xbox Live를 사용 하 여](using-xbox-live/using-xbox-live.md) | 후 설치 타이틀 Xbox Live SDK 통합을 구현에 로그인 하 고 Xbox Live 프로그래밍에 대 한 자세한 정보를 준비가 됩니다.
-| [Xbox Live를 호출 하기 위한 모범 사례](using-xbox-live/best-practices/best-practices-for-calling-xbox-live.md) | Xbox Live는 호출 패턴에 기본 사항을 잘 이해 및 타이틀 되도록 유용한 제대로 수행 속도 제한 오지 않도록 합니다.
-| [Xbox Live 서비스 API 문제 해결](using-xbox-live/troubleshooting/troubleshooting-the-xbox-live-services-api.md) | 발생할 수 있는 일반적인 문제 및 문제 해결 하는 방법에 제안 합니다.
+| [Xbox Live 사용](using-xbox-live/using-xbox-live.md) | 타이틀이 설정되고 Xbox Live SDK가 통합되면 로그인을 구현하고 Xbox Live 프로그래밍에 대해 자세히 알아볼 수 있습니다.
+| [Xbox Live 호출 모범 사례](using-xbox-live/best-practices/best-practices-for-calling-xbox-live.md) | Xbox Live 호출 패턴 및 모범 사례에 대한 기본 사항을 숙지하여 타이틀이 잘 수행되고 속도가 제한되지 않도록 합니다.
+| [Xbox Live Services API 문제 해결](using-xbox-live/troubleshooting/troubleshooting-the-xbox-live-services-api.md) | 발생할 수 있는 일반적인 문제와 해결 방법에 대한 제안 사항입니다.
 
 ### <a name="xbox-live-social-platform"></a>Xbox Live 소셜 플랫폼
 
-Xbox Live 소셜 기능은 55 백만 넘는 활성 사용자에 게 인지도 확산를 대상으로 확장할 조직적으로 유치 할 수 있습니다.  이 섹션에서는 Xbox Live 소셜 기능으로 시작 하는 방법을 설명 합니다.
+Xbox Live 소셜 네트워크 기능은 5500만이 넘는 활성 사용자에게 인지를 확산시켜 고객을 조직적으로 유치할 수 있습니다.  이 섹션에서는 Xbox Live 소셜 기능을 시작하는 방법에 대해 설명합니다.
 
 | 항목                                                                                                                                             | 설명                                                                                                   |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
-| [Xbox Live 소셜 플랫폼](social-platform/social-platform.md) | 경우 하면 로그인 할 수는 사용자, Xbox Live의 소셜 같은 기능을 활용 하 여 사용자의 소셜 그래프, 다양 한 상태 등을 사용 하 여 시작할 수 합니다. |
+| [Xbox Live 소셜 플랫폼](social-platform/social-platform.md) | 사용자를 등록할 수 있는 경우 사용자의 소셜 그래프, 다양한 상태 등을 활용하여 Xbox Live의 소셜 기능을 사용할 수 있습니다. |
 
 ### <a name="xbox-live-data-platform"></a>Xbox Live 데이터 플랫폼
 
-Xbox Live 데이터 플랫폼 구동 플레이어 통계, 도전 과제 및 순위표로 사용 합니다.  이 일련의 항목을 제목에서이 방법을 사용 하는 방법에 대 한 자세한 정보를 읽습니다.
+Xbox Live 데이터 플랫폼은 플레이어 통계, 도전 과제 및 순위표를 사용할 수 있도록 합니다.  타이틀에서 이 일련의 항목을 사용하는 방법에 대해 자세히 알아보려면 아래의 해당 항목을 참조합니다.
 
 | 항목                                                                                                                                             | 설명                                                                                                   |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
-| [Xbox Live 데이터 플랫폼](data-platform/data-platform.md) | 가장 잘 타이틀과 통계, 순위표 및 도전 과제를 통합 하는 방법에 대 한 지침 뿐만 아니라 데이터 플랫폼에 간략하게 설명 합니다.
-| [플레이어 통계](leaderboards-and-stats-2017/player-stats.md) | 통계는 순위표의 기반이 됩니다.  정의 하 고 여기서 사용 하는 방법을 알아봅니다.
-| [순위표](leaderboards-and-stats-2017/leaderboards.md) | 지능적으로 순위표를 통합 하 여 사용자의 경쟁 면 해 합니다.
-| [도전 과제](achievements-2017/achievements.md) | 도전 과제는 Xbox Live 및 플레이어 참여의 좋은 드라이버에서 가장 잘 알려진 기능 중 하나입니다. 타이틀에서 사용 하는 방법을 알아봅니다.
+| [Xbox Live 데이터 플랫폼](data-platform/data-platform.md) | 데이터 플랫폼에 대한 간략한 개요와 함께 통계, 순위표 및 도전 과제를 타이틀에 가장 잘 통합하는 방법에 대한 지침을 제공합니다.
+| [플레이어 통계](leaderboards-and-stats-2017/player-stats.md) | 통계는 순위표의 기반이 됩니다.  여기서는 이러한 항목을 정의하고 사용하는 방법에 대해 알아봅니다.
+| [순위표](leaderboards-and-stats-2017/leaderboards.md) | 순위표를 지능적으로 통합하여 사용자의 경쟁력을 끌어냅니다.
+| [도전 과제](achievements-2017/achievements.md) | 도전 과제는 Xbox Live에서 가장 잘 알려진 기능 중 하나이며, 플레이어의 참여를 이끌어내는 훌륭한 추진 요인입니다. 타이틀에서 사용하는 방법에 대해 알아봅니다.
 
-### <a name="xbox-live-multiplayer-platform"></a>Xbox Live 멀티 플레이 플랫폼
+### <a name="xbox-live-multiplayer-platform"></a>Xbox Live 멀티플레이 플랫폼
 
-멀티 플레이어 게임 플레이 환경을 최신 상태로 유지 하 고 타이틀의 수명을 연장할 수 있는 좋은 방법입니다.  Xbox Live 멀티 플레이어 및 매치 메이 킹 광범위 한 기능을 제공합니다.  API의 다양 한 수준의 단순성 vs 유연성을 제공 하는 여러 옵션이 있습니다.
-
-| 항목                                                                                                                                             | 설명                                                                                                   |
-|:--------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
-| [Xbox Live 멀티 플레이 플랫폼](multiplayer/multiplayer-intro.md) | Xbox Live 멀티 플레이 개발이 처음인 하거나 멀티 플레이어 관리자 및 Xbox 통합 멀티 플레이어 (XIM)와 같은 새로운 Api에 익숙하지 않은 경우 여기서 시작 합니다. |
-| [멀티 플레이어 시나리오](multiplayer/multiplayer-scenarios.md) | 제안과 어떻게 수 멀티 플레이어에 통합할 타이틀에 대 한 지침입니다. |
-| [Xbox 통합 멀티 플레이어](multiplayer/xbox-integrated-multiplayer.md) | Xbox 통합 멀티 플레이어 (XIM)는 추가 멀티 플레이어, 실시간 네트워킹 및 채팅에 제목에 대 한 쉽게 독립적인된 인터페이스입니다. |
-| [멀티 플레이어 관리자](multiplayer/multiplayer-manager.md) | 멀티 플레이어 관리자는 일반적인 멀티 플레이어 시나리오에 초점을 맞춘 API를 제공 합니다. |
-
-### <a name="xbox-live-storage-platform"></a>Xbox Live 저장소 플랫폼
-
-Xbox Live 저장소 플랫폼 타이틀 저장소와 연결 된 저장소를 제공합니다.  이 두 개의 서로 다르지만 상호 보완적 서비스입니다.  연결 된 저장은 사용자 로그인 위치에 관계 없이 디바이스 간에 로밍 하는 클라우드 게임 저장을 구현할 수 있습니다.  타이틀 저장소 blob 제목 및 공유에서 다른 사용자 또는 사용자 마다 될 수 있는 데이터를 저장할 수 있습니다.
+멀티플레이는 타이틀의 수명을 연장하고 게임 플레이 환경을 최신 상태로 유지하는 좋은 방법입니다.  Xbox Live는 광범위한 멀티플레이 및 매치 메이킹 기능을 제공합니다.  또한 다양한 수준의 단순성과 유연성을 제공하는 몇 가지 API 옵션도 있습니다.
 
 | 항목                                                                                                                                             | 설명                                                                                                   |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
-| [Xbox Live 저장소 플랫폼](storage-platform/storage-platform.md) | 클라우드에서 게임 저장, 인스턴트 재생, 사용자 기본 설정 및 기타 데이터를 저장 하기 위한 Xbox Live 저장소 서비스를 사용 합니다. |
-| [연결된 저장소](storage-platform/connected-storage/connected-storage-technical-overview.md) | 개요 및 연결 된 저장소의 프로그래밍 가이드 |
-| [타이틀 저장소](storage-platform/xbox-live-title-storage/xbox-live-title-storage.md) | 개요 및 타이틀 저장소의 프로그래밍 가이드 |
+| [Xbox Live 멀티플레이 플랫폼](multiplayer/multiplayer-intro.md) | Xbox Live 멀티플레이 개발을 처음 사용하거나 멀티플레이 관리자 및 XIM(Xbox 통합 멀티플레이)과 같은 새 API에 익숙하지 않은 경우 여기서 시작합니다. |
+| [멀티플레이 시나리오](multiplayer/multiplayer-scenarios.md) | 멀티플레이를 타이틀에 통합하는 방법에 대한 제안 사항 및 지침입니다. |
+| [Xbox 통합 멀티플레이](multiplayer/xbox-integrated-multiplayer.md) | XIM(Xbox 통합 멀티플레이)은 멀티플레이, 실시간 네트워킹 및 채팅을 타이틀에 추가할 수 있는 간편한 자체 포함 인터페이스입니다. |
+| [멀티플레이 관리자](multiplayer/multiplayer-manager.md) | 멀티플레이 관리자는 일반적인 멀티플레이 시나리오에 초점을 맞춘 API를 제공합니다. |
+
+### <a name="xbox-live-storage-platform"></a>Xbox Live 스토리지 플랫폼
+
+Xbox Live 스토리지 플랫폼은 타이틀 스토리지와 연결된 스토리지를 모두 제공합니다.  이러한 스토리지는 서로 다르지만 상호 보완적인 서비스입니다.  연결된 스토리지를 사용하면 사용자가 로그인한 위치에 관계없이 디바이스 간에 로밍되는 클라우드에 게임 저장을 구현할 수 있습니다.  타이틀 스토리지를 사용하면 사용자별 또는 타이틀별로 여러 사용자 간에 공유할 수 있는 데이터의 Blob을 저장할 수 있습니다.
+
+| 항목                                                                                                                                             | 설명                                                                                                   |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
+| [Xbox Live 스토리지 플랫폼](storage-platform/storage-platform.md) | Xbox Live 스토리지 서비스를 사용하여 게임 저장, 바로 다시 재생, 사용자 기본 설정 및 기타 데이터를 클라우드에 저장합니다. |
+| [연결된 스토리지](storage-platform/connected-storage/connected-storage-technical-overview.md) | 연결된 스토리지에 대한 개요 및 프로그래밍 가이드입니다. |
+| [타이틀 스토리지](storage-platform/xbox-live-title-storage/xbox-live-title-storage.md) | 타이틀 스토리지에 대한 개요 및 프로그래밍 가이드입니다. |

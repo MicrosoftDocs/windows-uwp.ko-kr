@@ -3,7 +3,7 @@ items:
   href: index.md
 - name: UWP 앱이란 무엇인가요?
   href: ../get-started/universal-application-platform-guide.md
-- name: 설정하기
+- name: 설정
   href: ../get-started/get-set-up.md
   items:
   - name: 디바이스를 개발에 사용하도록 설정
@@ -15,7 +15,7 @@ items:
   items:
   - name: 양식 작성
     href: construct-form-learning-track.md
-  - name: 목록에서 고객 표시
+  - name: 목록에 고객 표시
     href: display-customers-in-list-learning-track.md
   - name: 설정 저장 및 로드
     href: settings-learning-track.md
@@ -35,8 +35,8 @@ items:
 - name: UWP 앱 샘플 다운로드
   href: ../get-started/get-uwp-app-samples.md
 ms.openlocfilehash: 6d2635bec653e5c9f409ff6a5249ee0215276225
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8962445"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583510"
