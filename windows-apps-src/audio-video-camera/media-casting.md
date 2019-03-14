@@ -4,14 +4,14 @@ description: 이 문서에서는 유니버설 Windows 앱에서 원격 디바이
 title: 미디어 캐스팅
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e4b794e560c213e5c3796b11dd1a5fd77a98506
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8930544"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57619948"
 ---
 # <a name="media-casting"></a>미디어 캐스팅
 
@@ -37,7 +37,7 @@ ms.locfileid: "8930544"
 
 단추에 대한 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트 처리기에서 새 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 인스턴스를 만들고, [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850) 컬렉션에 동영상 파일 형식을 추가하고, 시작 위치를 사용자의 비디오 라이브러리로 설정합니다.
 
-[**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275)를 호출하여 파일 선택기 대화 상자를 시작합니다. 이 메서드에서 반환되는 결과는 동영상 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체입니다. 파일이 null이 아닌지 확인합니다(사용자가 선택 작업을 취소하는 경우에 null이 됨). 파일의 [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227221.aspx) 메서드를 호출하여 파일에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)을 가져옵니다. 마지막으로 [**CreateFromStorageFile**](https://msdn.microsoft.com/library/windows/apps/dn930909)을 호출하여 선택된 파일을 통해 새 **MediaSource** 개체를 만들고 이를 **MediaPlayerElement** 개체의 [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.Source) 속성에 할당하여 비디오 파일을 컨트롤의 비디오 원본으로 만듭니다.
+[  **PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275)를 호출하여 파일 선택기 대화 상자를 시작합니다. 이 메서드에서 반환되는 결과는 동영상 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체입니다. 파일이 null이 아닌지 확인합니다(사용자가 선택 작업을 취소하는 경우에 null이 됨). 파일의 [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227221.aspx) 메서드를 호출하여 파일에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)을 가져옵니다. 마지막으로 [**CreateFromStorageFile**](https://msdn.microsoft.com/library/windows/apps/dn930909)을 호출하여 선택된 파일을 통해 새 **MediaSource** 개체를 만들고 이를 **MediaPlayerElement** 개체의 [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.Source) 속성에 할당하여 비디오 파일을 컨트롤의 비디오 원본으로 만듭니다.
 
 [!code-cs[OpenButtonClick](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetOpenButtonClick)]
 
@@ -58,7 +58,7 @@ ms.locfileid: "8930544"
 
 [!code-cs[DeclareCastingPicker](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetDeclareCastingPicker)]
 
-페이지가 초기화되면 캐스팅 선택기의 새 인스턴스를 만들고 [**Filter**](https://msdn.microsoft.com/library/windows/apps/dn972540)를 선택기에 나열된 캐스팅 디바이스가 비디오를 지원한다는 것을 나타내는 [**SupportsVideo**](https://msdn.microsoft.com/library/windows/apps/dn972526) 속성으로 설정합니다. [**CastingDeviceSelected**](https://msdn.microsoft.com/library/windows/apps/dn972539) 이벤트에 대한 처리기를 등록합니다. 이 이벤트는 사용자가 캐스팅을 위해 디바이스를 선택하면 발생합니다.
+페이지가 초기화되면 캐스팅 선택기의 새 인스턴스를 만들고 [**Filter**](https://msdn.microsoft.com/library/windows/apps/dn972540)를 선택기에 나열된 캐스팅 디바이스가 비디오를 지원한다는 것을 나타내는 [**SupportsVideo**](https://msdn.microsoft.com/library/windows/apps/dn972526) 속성으로 설정합니다. [  **CastingDeviceSelected**](https://msdn.microsoft.com/library/windows/apps/dn972539) 이벤트에 대한 처리기를 등록합니다. 이 이벤트는 사용자가 캐스팅을 위해 디바이스를 선택하면 발생합니다.
 
 [!code-cs[InitCastingPicker](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetInitCastingPicker)]
 
@@ -66,11 +66,11 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 [!code-xml[CastPickerButton](./code/MediaCasting_RS1/cs/MainPage.xaml#SnippetCastPickerButton)]
 
-단추에 대한 **Click** 이벤트 처리기에서 [**TransformToVisual**](https://msdn.microsoft.com/library/windows/apps/br208986)을 호출하여 다른 요소에 대해 상대적인 UI 요소의 변환을 가져옵니다. 이 예제에서 변환은 응용 프로그램 창의 시각적 루트에 대해 상대적인 캐스트 선택기 단추의 위치입니다. [**CastingDevicePicker**](https://msdn.microsoft.com/library/windows/apps/dn972525) 개체의 [**Show**](https://msdn.microsoft.com/library/windows/apps/dn972542) 메서드를 호출하여 캐스팅 선택기 대화 상자를 시작합니다. 시스템이 사용자가 누른 단추에서 대화 상자를 펼칠 수 있도록 캐스트 선택기 단추의 크기와 위치를 지정합니다.
+단추에 대한 **Click** 이벤트 처리기에서 [**TransformToVisual**](https://msdn.microsoft.com/library/windows/apps/br208986)을 호출하여 다른 요소에 대해 상대적인 UI 요소의 변환을 가져옵니다. 이 예제에서 변환은 응용 프로그램 창의 시각적 루트에 대해 상대적인 캐스트 선택기 단추의 위치입니다. [  **CastingDevicePicker**](https://msdn.microsoft.com/library/windows/apps/dn972525) 개체의 [**Show**](https://msdn.microsoft.com/library/windows/apps/dn972542) 메서드를 호출하여 캐스팅 선택기 대화 상자를 시작합니다. 시스템이 사용자가 누른 단추에서 대화 상자를 펼칠 수 있도록 캐스트 선택기 단추의 크기와 위치를 지정합니다.
 
 [!code-cs[CastPickerButtonClick](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetCastPickerButtonClick)]
 
-**CastingDeviceSelected** 이벤트 처리기에서 이벤트 인수 중 사용자가 선택한 캐스팅 디바이스를 나타내는 [**SelectedCastingDevice**](https://msdn.microsoft.com/library/windows/apps/dn972546) 속성의 [**CreateCastingConnection**](https://msdn.microsoft.com/library/windows/apps/dn972547) 메서드를 호출합니다. [**ErrorOccurred**](https://msdn.microsoft.com/library/windows/apps/dn972519) 및 [**StateChanged**](https://msdn.microsoft.com/library/windows/apps/dn972523) 이벤트에 대한 처리기를 등록합니다. 마지막으로 [**RequestStartCastingAsync**](https://msdn.microsoft.com/library/windows/apps/dn972520)를 호출하여 캐스팅을 시작하고 **MediaPlayerElement** 컨트롤의 **MediaPlayer** 개체에 대한 [**GetAsCastingSource**](https://msdn.microsoft.com/library/windows/apps/dn920012) 메서드로 결과를 전달하여 캐스팅할 미디어가 **MediaPlayerElement**와 연관된 **MediaPlayer**의 콘텐츠임을 지정합니다.
+**CastingDeviceSelected** 이벤트 처리기에서 이벤트 인수 중 사용자가 선택한 캐스팅 디바이스를 나타내는 [**SelectedCastingDevice**](https://msdn.microsoft.com/library/windows/apps/dn972546) 속성의 [**CreateCastingConnection**](https://msdn.microsoft.com/library/windows/apps/dn972547) 메서드를 호출합니다. [  **ErrorOccurred**](https://msdn.microsoft.com/library/windows/apps/dn972519) 및 [**StateChanged**](https://msdn.microsoft.com/library/windows/apps/dn972523) 이벤트에 대한 처리기를 등록합니다. 마지막으로 [**RequestStartCastingAsync**](https://msdn.microsoft.com/library/windows/apps/dn972520)를 호출하여 캐스팅을 시작하고 **MediaPlayerElement** 컨트롤의 **MediaPlayer** 개체에 대한 [**GetAsCastingSource**](https://msdn.microsoft.com/library/windows/apps/dn920012) 메서드로 결과를 전달하여 캐스팅할 미디어가 **MediaPlayerElement**와 연관된 **MediaPlayer**의 콘텐츠임을 지정합니다.
 
 > [!NOTE] 
 > UI 스레드에서 캐스팅 연결을 시작해야 합니다. **CastingDeviceSelected**는 UI 스레드에서 호출되지 않으므로 이 호출을 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 호출 내에 배치해야 UI 스레드에서 호출될 수 있습니다.
@@ -130,9 +130,9 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 사용자가 목록 상자에서 캐스팅 디바이스 중 하나를 선택하면 [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776) 이벤트가 발생합니다. 캐스팅 연결이 생성되고 캐스팅이 시작되는 것은 이 처리기 내에서 이루어집니다.
 
-먼저, 디바이스 열거가 미디어 캐스팅을 방해하지 않도록 디바이스 감시자가 중지되었는지 확인합니다. 사용자가 선택한 **CastingDevice** 개체에 대해 [**CreateCastingConnection**](https://msdn.microsoft.com/library/windows/apps/dn972547)을 호출하여 캐스팅 연결을 만듭니다. [**StateChanged**](https://msdn.microsoft.com/library/windows/apps/dn972523) 및 [**ErrorOccurred**](https://msdn.microsoft.com/library/windows/apps/dn972519) 이벤트에 대한 이벤트 처리기를 추가합니다.
+먼저, 디바이스 열거가 미디어 캐스팅을 방해하지 않도록 디바이스 감시자가 중지되었는지 확인합니다. 사용자가 선택한 **CastingDevice** 개체에 대해 [**CreateCastingConnection**](https://msdn.microsoft.com/library/windows/apps/dn972547)을 호출하여 캐스팅 연결을 만듭니다. [  **StateChanged**](https://msdn.microsoft.com/library/windows/apps/dn972523) 및 [**ErrorOccurred**](https://msdn.microsoft.com/library/windows/apps/dn972519) 이벤트에 대한 이벤트 처리기를 추가합니다.
 
-[**RequestStartCastingAsync**](https://msdn.microsoft.com/library/windows/apps/dn972520)를 호출하고 **MediaPlayer** 메서드 [**GetAsCastingSource**](https://msdn.microsoft.com/library/windows/apps/dn920012) 호출에서 반환되는 캐스팅 원본을 전달하여 미디어 캐스팅을 시작합니다. 마지막으로, 사용자가 미디어 캐스팅을 중지할 수 있도록 연결 끊기 단추를 표시합니다.
+[  **RequestStartCastingAsync**](https://msdn.microsoft.com/library/windows/apps/dn972520)를 호출하고 **MediaPlayer** 메서드 [**GetAsCastingSource**](https://msdn.microsoft.com/library/windows/apps/dn920012) 호출에서 반환되는 캐스팅 원본을 전달하여 미디어 캐스팅을 시작합니다. 마지막으로, 사용자가 미디어 캐스팅을 중지할 수 있도록 연결 끊기 단추를 표시합니다.
 
 [!code-cs[SelectionChanged](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetSelectionChanged)]
 

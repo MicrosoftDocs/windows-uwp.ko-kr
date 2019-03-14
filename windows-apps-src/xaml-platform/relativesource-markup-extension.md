@@ -4,14 +4,14 @@ title: RelativeSource 태그 확장
 ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 26cde97f82e6962d530721f1e0230138e5917016
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920532"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57617928"
 ---
 # <a name="relativesource-markup-extension"></a>{RelativeSource} 태그 확장
 
@@ -43,7 +43,7 @@ ms.locfileid: "8920532"
 
 ## <a name="remarks"></a>설명
 
-[**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)은 [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831)를 **Binding** 개체 요소의 속성이나 [{Binding} markup extension](binding-markup-extension.md) 내의 구성 요소로 설정할 수 있습니다. 이 때문에 두 가지 XAML 구문이 표시됩니다.
+[  **Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)은 [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831)를 **Binding** 개체 요소의 속성이나 [{Binding} markup extension](binding-markup-extension.md) 내의 구성 요소로 설정할 수 있습니다. 이 때문에 두 가지 XAML 구문이 표시됩니다.
 
 **RelativeSource**는 [{Binding} 태그 확장](binding-markup-extension.md)과 유사하며,  인스턴스를 반환하여 생성자에 인수를 전달하는 문자열 기반 생성을 지원할 수 있는 태그 확장입니다. 이 경우에 전달될 인수는 [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209915) 값입니다.
 
@@ -58,15 +58,15 @@ ms.locfileid: "8920532"
 />
 ```
 
-`RelativeSource={RelativeSource Self}`를 사용하여 개체의 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)를 자체로 설정하는 방법도 있습니다.  예를 들어 이 방법은 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스가 고유한 데이터 바인딩을 위해 즉시 사용 가능한 보기 모델을 이미 제공하고 있는 사용자 지정 속성을 사용하여 확장된 일부 SDK 예제에서 확인할 수 있습니다. 예는 다음과 같습니다. `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
+`RelativeSource={RelativeSource Self}`를 사용하여 개체의 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)를 자체로 설정하는 방법도 있습니다.  예를 들어, 일부 SDK 예제에서이 기술을 표시 될 수 있습니다 위치 합니다 [ **페이지** ](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스는 이미 제공 하는 준비-go 보기 모델 자체 데이터 바인딩에 대 한 사용자 지정 속성을 사용 하 여 확장 되었습니다 와 같은: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
 
-**참고** **RelativeSource** 의 XAML 사용 의도 된 사용만 표시: 바인딩 식의 일부로 [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) xaml에서에 대 한 값을 설정 합니다. 이론적으로, 값이 [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)인 속성을 설정하는 경우 다른 사용이 가능합니다.
+**참고**  The XAML 사용 **RelativeSource** 만 위한는 사용법을 보여 줍니다:에 대 한 값을 설정 [ **Binding.RelativeSource** ](https://msdn.microsoft.com/library/windows/apps/br209831)바인딩 식의 일부로 XAML에서. 이론적으로, 값이 [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)인 속성을 설정하는 경우 다른 사용이 가능합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [XAML 개요](xaml-overview.md)
-* [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)
+* [깊이에서 데이터 바인딩](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [{Binding} 태그 확장](binding-markup-extension.md)
-* [**바인딩**](https://msdn.microsoft.com/library/windows/apps/br209820)
+* [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)
 

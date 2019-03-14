@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6def088b3e7f6410f12d1b2e411bcb547c90a09a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918564"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57613288"
 ---
 # <a name="xphase-attribute"></a>x:Phase 특성
 
@@ -38,7 +38,7 @@ ms.locfileid: "8918564"
 
 단계를 사용하면 콘텐츠의 우선 순위를 지정하여 가장 중요한 요소가 먼저 렌더링되도록 데이터 템플릿의 증분 렌더링이 가능합니다. 이렇게 하면 빠르게 이동할 경우 각 항목에 대한 일부 콘텐츠가 목록에 표시되고 시간이 허용되면 각 템플릿의 더 많은 요소가 렌더링됩니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```xml
 <DataTemplate x:Key="PhasedFileTemplate" x:DataType="model:FileItem">
@@ -71,7 +71,7 @@ ms.locfileid: "8918564"
 
 단계는 [**ListViewBase**](https://msdn.microsoft.com/library/windows/apps/br242879)에서 파생된 컨트롤과 함께 작동하고 데이터 바인딩에 대해 항목 템플릿을 증분적으로 처리하는 [{x:Bind}](x-bind-markup-extension.md)의 기능입니다. 목록 항목을 렌더링할 때 **ListViewBase**는 보기의 모든 항목에 대한 단일 단계를 렌더링한 후 다음 단계로 이동합니다. 렌더링 작업은 목록을 스크롤할 때 필요한 작업을 다시 평가할 수 있도록 시각 조각 일괄 처리로 수행되며, 더 이상 표시되지 않는 항목에 대해서는 수행되지 않습니다.
 
-**x:Phase** 특성은 [{x:Bind}](x-bind-markup-extension.md)를 사용하는 데이터 템플릿의 모든 요소에 지정할 수 있습니다. 요소에 0이 아닌 단계가 있으면 해당 단계가 처리되고 바인딩이 업데이트될 때까지 보기에서 요소가 숨겨집니다(**Visibility**가 아니라 **Opacity**를 통해). [**ListViewBase**](https://msdn.microsoft.com/library/windows/apps/br242879)에서 파생된 컨트롤을 스크롤하면 더 이상 화면에 없는 목록에서 항목 템플릿을 재순환하여 새로 표시된 항목을 렌더링합니다. 템플릿 내의 UI 요소는 다시 데이터 바인딩될 때까지 이전 값을 유지합니다. 단계는 데이터 바인딩 단계를 지연시킬 수 있으므로 UI 요소가 부실한 경우 숨겨야 합니다.
+**x:Phase** 특성은 [{x:Bind}](x-bind-markup-extension.md)를 사용하는 데이터 템플릿의 모든 요소에 지정할 수 있습니다. 요소에 0이 아닌 단계가 있으면 해당 단계가 처리되고 바인딩이 업데이트될 때까지 보기에서 요소가 숨겨집니다(**Visibility**가 아니라 **Opacity**를 통해). [  **ListViewBase**](https://msdn.microsoft.com/library/windows/apps/br242879)에서 파생된 컨트롤을 스크롤하면 더 이상 화면에 없는 목록에서 항목 템플릿을 재순환하여 새로 표시된 항목을 렌더링합니다. 템플릿 내의 UI 요소는 다시 데이터 바인딩될 때까지 이전 값을 유지합니다. 단계는 데이터 바인딩 단계를 지연시킬 수 있으므로 UI 요소가 부실한 경우 숨겨야 합니다.
 
 각 UI 요소에 하나의 단계만 지정할 수 있습니다. 그러면 요소의 모든 바인딩에 적용됩니다. 단계를 지정하지 않으면 단계 0으로 간주됩니다.
 
@@ -79,5 +79,5 @@ ms.locfileid: "8918564"
 
 단계는 [{x:Bind}](x-bind-markup-extension.md) 바인딩에만 영향을 주며, [{Binding}](binding-markup-extension.md) 바인딩에는 영향을 주지 않습니다.
 
-단계를 인식하는 컨트롤을 사용하여 항목 템플릿을 렌더링하는 경우에만 단계가 적용됩니다. Windows10, [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)의미입니다. 다른 항목 컨트롤에서 사용되는 데이터 템플릿이나 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) 또는 [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) 섹션과 같은 다른 시나리오에는 단계가 적용되지 않습니다. 이러한 경우에는 모든 UI 요소가 한 번에 데이터 바인딩됩니다.
+단계를 인식하는 컨트롤을 사용하여 항목 템플릿을 렌더링하는 경우에만 단계가 적용됩니다. Windows 10에 대 한 의미 [ **ListView** ](https://msdn.microsoft.com/library/windows/apps/br242878) 하 고 [ **GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)합니다. 다른 항목 컨트롤에서 사용되는 데이터 템플릿이나 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) 또는 [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) 섹션과 같은 다른 시나리오에는 단계가 적용되지 않습니다. 이러한 경우에는 모든 UI 요소가 한 번에 데이터 바인딩됩니다.
 

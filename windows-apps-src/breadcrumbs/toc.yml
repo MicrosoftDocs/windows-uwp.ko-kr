@@ -1,5 +1,5 @@
 items:
-- name: 문서
+- name: Docs
   tocHref: /
   topicHref: /
   items:
@@ -42,10 +42,10 @@ items:
         - name: 입력 및 조작
           tocHref: /windows/uwp/design/input/
           topicHref: /windows/uwp/design/input/index
-        - name: 기기
+        - name: 장치
           tocHref: /windows/uwp/design/devices/
           topicHref: /windows/uwp/design/devices/index
-        - name: 사용 편의성
+        - name: 유용성
           tocHref: /windows/uwp/design/usability/
           topicHref: /windows/uwp/design/usability/index
           items:
@@ -74,7 +74,7 @@ items:
         - name: 앱 간 통신
           tocHref: /windows/uwp/app-to-app/
           topicHref: /windows/uwp/app-to-app/index
-        - name: 오디오, 비디오 및 카메라
+        - name: 오디오 비디오 및 카메라
           tocHref: /windows/uwp/audio-video-camera/
           topicHref: /windows/uwp/audio-video-camera/index
         - name: 연락처, 내 피플 및 일정
@@ -104,13 +104,13 @@ items:
         - name: 그래픽
           tocHref: /windows/uwp/graphics/
           topicHref: /windows/uwp/graphics/index
-        - name: 호스트된 웹앱
+        - name: 호스팅된 웹앱
           tocHref: /windows/uwp/bridges/
           topicHref: /windows/uwphttps://developer.microsoft.com/en-us/windows/bridges/hosted-web-apps
         - name: 실행, 다시 시작 및 백그라운드 작업
           tocHref: /windows/uwp/launch-resume/
           topicHref: /windows/uwp/launch-resume/index
-        - name: 기계 학습
+        - name: Machine Learning
           tocHref: /windows/uwp/machine-learning/
           topicHref: /windows/uwp/machine-learning/index
         - name: 지도 및 위치
@@ -174,12 +174,12 @@ items:
         - name: Xbox Live
           tocHref: /windows/uwp/xbox-live/
           topicHref: /windows/uwp/xbox-live/index
-      - name: 게시
+      - name: 게시하기
         tocHref: /windows/uwp/publish/
         topicHref: /windows/uwp/publish/index
 ms.openlocfilehash: 1d79038daa4f2a50dd287da879fa8153ca3fb118
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8962505"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583132"

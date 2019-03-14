@@ -1,5 +1,5 @@
 ---
-Description: Explains how to define a ResourceDictionary element and keyed resources, and how XAML resources relate to other resources that you define as part of your app or app package.
+Description: ResourceDictionary 요소와 키 입력 리소스를 정의하는 방법 그리고 앱 또는 앱 패키지의 일부로 정의하는 다른 리소스와 XAML 리소스가 어떻게 관련되는지에 대해 설명합니다.
 MS-HAID: dev\_ctrl\_layout\_txt.resourcedictionary\_and\_xaml\_resource\_references
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -9,14 +9,14 @@ label: ResourceDictionary and XAML resource references
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 51461df47fe92c296fee198a6f2ed1c34e833cd7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939772"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57634928"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary 및 XAML 리소스 참조
 
@@ -26,7 +26,7 @@ XAML을 사용하여 앱의 UI 또는 리소스를 정의할 수 있습니다. �
 
 가장 일반적으로 XAML 리소스로 선언하려고 하는 XAML 요소는 [Style](https://msdn.microsoft.com/library/windows/apps/br208849), [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391), 애니메이션 구성 요소 및 [Brush](/uwp/api/Windows.UI.Xaml.Media.Brush) 서브클래스입니다. 여기에서는 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) 및 키 입력 리소스를 정의하는 방법 그리고 앱 또는 앱 패키지의 일부로 정의하는 다른 리소스와 XAML 리소스가 어떻게 관련되는지에 대해 설명합니다. 또한 [MergedDictionaries](https://msdn.microsoft.com/library/windows/apps/br208801) 및 [ThemeDictionaries](https://msdn.microsoft.com/library/windows/apps/br208807)와 같은 리소스 사전 고급 기능에 대해 설명합니다.
 
-**필수 조건**
+**필수 구성 요소**
 
 사용자가 XAML 태그를 이해하며 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/mt185595)를 읽었다고 가정합니다.
 
@@ -51,9 +51,9 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 
 이 예에는 다음이 해당됩니다.
 
--   `<Page.Resources>…</Page.Resources>` - 리소스 사전을 정의합니다.
--   `<x:String>` - "greeting" 키를 사용하여 리소스를 정의합니다.
--   `{StaticResource greeting}` - [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209676)의 [Text](https://msdn.microsoft.com/library/windows/apps/br209652) 속성에 할당된 "greeting" 키를 사용하여 리소스를 찾습니다.
+-   `<Page.Resources>…</Page.Resources>` -리소스 사전을 정의합니다.
+-   `<x:String>` -"Greeting" 키를 사용 하 여 리소스를 정의합니다.
+-   `{StaticResource greeting}` -조회는 키 "greeting"를 사용 하 여 리소스에 할당 되는 [텍스트](https://msdn.microsoft.com/library/windows/apps/br209676) 의 속성을 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)합니다.
 
 > **참고**&nbsp;&nbsp;[ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) 관련 개념을 **리소스** 빌드 작업, 리소스(.resw) 파일 또는 앱 패키지를 생성하는 코드 프로젝트 구성 컨텍스트에서 설명되는 다른 "리소스"와 혼동하지 마세요.
 
@@ -81,7 +81,7 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 
 -   [Style](https://msdn.microsoft.com/library/windows/apps/br208849) 및 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)에는 **TargetType**이 필요하며 [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787)가 지정되지 않은 경우 **TargetType**을 키로 사용합니다. 이 경우 키는 문자열이 아니라 실제 형식 개체입니다. (아래 예제 참조)
 -   [x:Key](https://msdn.microsoft.com/library/windows/apps/br242348)가 지정되지 않은 경우 **TargetType**이 있는 [DataTemplate](https://msdn.microsoft.com/library/windows/apps/mt204787) 리소스에서는 **TargetType**을 키로 사용합니다. 이 경우 키는 문자열이 아니라 실제 형식 개체입니다.
--   [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204788) 대신 [x:Name](https://msdn.microsoft.com/library/windows/apps/mt204787)을 사용할 수 있습니다. 그러나 x:Name에서는 리소스의 코드 숨김 필드도 생성합니다. x:Name 필드는 페이지를 로드할 때 초기화해야 하므로 x:Key보다 효율성이 떨어집니다.
+-   [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787) 대신 [x:Name](https://msdn.microsoft.com/library/windows/apps/mt204788)을 사용할 수 있습니다. 그러나 x:Name에서는 리소스의 코드 숨김 필드도 생성합니다. x:Name 필드는 페이지를 로드할 때 초기화해야 하므로 x:Key보다 효율성이 떨어집니다.
 
 [StaticResource 태그 확장 기능](../../xaml-platform/staticresource-markup-extension.md)에서는 문자열 이름으로만 자원을 검색할 수 있습니다([x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787) 또는 [x:Name](https://msdn.microsoft.com/library/windows/apps/mt204788)). 그러나 [Style](https://msdn.microsoft.com/library/windows/apps/br208743) 및 [ContentTemplate](https://msdn.microsoft.com/library/windows/apps/br209369) 또는 [ItemTemplate](https://msdn.microsoft.com/library/windows/apps/br242830) 속성이 설정되지 않은 컨트롤에 사용할 스타일과 템플릿을 결정할 때 XAML 프레임워크에서는 암시적 스타일 리소스(x:Key 또는 x:Name이 아니라 **TargetType**을 사용)도 찾습니다.
 
@@ -112,7 +112,7 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 다른 모든 사전과 마찬가지로 리소스 사전의 멤버에 액세스합니다.
 
 > [!WARNING]
-> 코드에 대 한 리소스만에서 리소스 조회를 수행 합니다 `Page.Resources` 사전의 리소스만 확인 됩니다. [StaticResource 태그 확장](../../xaml-platform/staticresource-markup-extension.md)과 달리 코드에서는 첫 번째 사전에서 리소스를 찾을 수 없는 경우 `Application.Resources` 사전으로 대체되지 않습니다.
+> 리소스 조회에는 리소스에만 코드에서 수행 하는 경우는 `Page.Resources` 사전 확인 됩니다. [StaticResource 태그 확장](../../xaml-platform/staticresource-markup-extension.md)과 달리 코드에서는 첫 번째 사전에서 리소스를 찾을 수 없는 경우 `Application.Resources` 사전으로 대체되지 않습니다.
 
  
 
@@ -202,7 +202,7 @@ sealed partial class App : Application
 
 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706)는 컨트롤이 상속하는 기본 클래스이며 [Resources](https://msdn.microsoft.com/library/windows/apps/br208740) 속성이 있습니다. 따라서 모든 **FrameworkElement**에 로컬 리소스 사전을 추가할 수 있습니다.
 
-여기서 [Page](https://msdn.microsoft.com/library/windows/apps/br227503) 및 [Border](https://msdn.microsoft.com/library/windows/apps/br209250)에는 모두 리소스 사전이 있으며 "greeting"이라는 리소스가 있습니다. 'TextBlock2' 라는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) **테두리**안에 이므로 해당 리소스를 찾을 때 **테두리**의 리소스를 **페이지**의 리소스 및 [응용 프로그램](https://msdn.microsoft.com/library/windows/apps/br242324) 리소스를 합니다. **TextBlock** 은 "Hola mundo"입니다.
+여기서 [Page](https://msdn.microsoft.com/library/windows/apps/br227503) 및 [Border](https://msdn.microsoft.com/library/windows/apps/br209250)에는 모두 리소스 사전이 있으며 "greeting"이라는 리소스가 있습니다. [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) 라는 'textBlock2' 내에 **테두리**이므로 해당 리소스 조회는를 먼저 합니다 **테두리**의 리소스는 **페이지**의 리소스를 선택한 다음은 [응용 프로그램](https://msdn.microsoft.com/library/windows/apps/br242324) 리소스입니다. **TextBlock** 은 "Hola mundo"입니다.
 
 코드에서 요소의 리소스에 액세스하려면 해당 요소의 [Resources](https://msdn.microsoft.com/library/windows/apps/br208740) 속성을 사용합니다. XAML이 아니라 코드에서 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706)의 리소스에 액세스하면 부모 요소의 사전이 아니라 해당 사전만 검색합니다.
 
@@ -294,7 +294,7 @@ sealed partial class App : Application
 
 `<ResourceDictionary.MergedDictionaries>…</ResourceDictionary.MergedDictionaries>` 후에 선택적으로 기본 사전에 추가 리소스를 넣을 수 있습니다. 일반 사전과 마찬가지로 병합 대상 사전의 리소스를 사용합니다. 위의 예제에서 `{StaticResource brush}`는 자식/병합된 사전(Dictionary1.xaml)에서 리소스를 찾는 반면 `{StaticResource greeting}`은 기본 페이지 사전에서 리소스를 찾습니다.
 
-리소스 조회 시퀀스에서는 해당 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208801)의 모든 기타 키 입력 리소스를 확인한 후에야 [MergedDictionaries](https://msdn.microsoft.com/library/windows/apps/br208794) 사전을 확인합니다. 해당 수준을 검색한 후 조회가 병합된 사전에 도달하고 **MergedDictionaries**의 각 항목이 확인됩니다. 병합된 사전이 여러 개 있는 경우 **MergedDictionaries** 속성에서 선언된 순서의 반대 순서로 사전을 확인합니다. 다음 예제에서 Dictionary2.xaml와 Dictionary1.xaml에서 동일한 키를 선언한 경우 **MergedDictionaries** 집합에서 마지막이기 때문에 Dictionary2.xaml의 키가 먼저 사용됩니다.
+리소스 조회 시퀀스에서는 해당 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)의 모든 기타 키 입력 리소스를 확인한 후에야 [MergedDictionaries](https://msdn.microsoft.com/library/windows/apps/br208801) 사전을 확인합니다. 해당 수준을 검색한 후 조회가 병합된 사전에 도달하고 **MergedDictionaries**의 각 항목이 확인됩니다. 병합된 사전이 여러 개 있는 경우 **MergedDictionaries** 속성에서 선언된 순서의 반대 순서로 사전을 확인합니다. 다음 예제에서 Dictionary2.xaml와 Dictionary1.xaml에서 동일한 키를 선언한 경우 **MergedDictionaries** 집합에서 마지막이기 때문에 Dictionary2.xaml의 키가 먼저 사용됩니다.
 
 ```XAML
 <Page
@@ -377,7 +377,7 @@ sealed partial class App : Application
 
 테마 사전의 경우, 참조를 만드는 데 [ThemeResource 태그 확장](../../xaml-platform/themeresource-markup-extension.md)이 사용되고 시스템에서 테마 변경을 감지할 때마다 리소스 조회에 사용되는 활성 사전은 동적으로 변경됩니다. 시스템에서 수행된 조회 동작은 특정 테마 사전의 [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787)에 대한 활성 테마 매핑을 기반으로 합니다.
 
-Windows 런타임이 기본적으로 컨트롤에 사용하는 템플릿과 유사한 기본 XAML 디자인 리소스에서 테마 사전이 구성되는 방식을 검토하는 것이 유용할 수 있습니다. 텍스트 편집기 또는 IDE를 사용하여 \\(Program Files)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP\\&lt;SDK 버전&gt;;\\Generic의 XAML 파일을 엽니다. 우선 generic.xaml에서 테마 사전이 정의된 방식을 확인하고 각 테마 사전이 동일한 키를 정의하는 방식을 확인합니다. 이러한 키는 각각 테마 사전의 외부에 있고 XAML에서 나중에 정의되는 다양한 키 입력 요소의 컴퍼지션 요소에서 참조됩니다. 기본 컨트롤 템플릿 없이 테마 리소스와 추가 템플릿만 포함하는 디자인을 위한 별도의 themeresources.xaml 파일도 있습니다. 테마 영역은 generic.xaml에 있는 것과 중복됩니다.
+Windows 런타임이 기본적으로 컨트롤에 사용하는 템플릿과 유사한 기본 XAML 디자인 리소스에서 테마 사전이 구성되는 방식을 검토하는 것이 유용할 수 있습니다. XAML 파일을 엽니다 \\(Program Files)\\Windows 키트\\10\\DesignTime\\CommonConfiguration\\중립\\UAP\\&lt;SDK 버전&gt;\\텍스트 편집기 또는 IDE를 사용 하는 제네릭입니다. 우선 generic.xaml에서 테마 사전이 정의된 방식을 확인하고 각 테마 사전이 동일한 키를 정의하는 방식을 확인합니다. 이러한 키는 각각 테마 사전의 외부에 있고 XAML에서 나중에 정의되는 다양한 키 입력 요소의 컴퍼지션 요소에서 참조됩니다. 기본 컨트롤 템플릿 없이 테마 리소스와 추가 템플릿만 포함하는 디자인을 위한 별도의 themeresources.xaml 파일도 있습니다. 테마 영역은 generic.xaml에 있는 것과 중복됩니다.
 
 XAML 디자인 도구를 사용하여 스타일 및 템플릿 복사본을 편집할 경우 디자인 도구는 XAML 디자인 리소스 사전에서 세션을 추출하여 앱과 프로젝트의 일부인 XAML 사전 요소의 로컬 복사본으로 배치합니다.
 
@@ -423,14 +423,14 @@ XAML 리소스 참조에 대한 조회 동작은 실제 사용이 적용되는 �
 
 일반적으로 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) 및 Windows 런타임 XAML은 공유 가능한 사용을 위해 다음 개체를 지원합니다.
 
--   스타일 및 템플릿([FrameworkTemplate](https://msdn.microsoft.com/library/windows/apps/br208849)에서 파생된 [Style](https://msdn.microsoft.com/library/windows/apps/br208753) 및 클래스)
+-   스타일 및 템플릿([FrameworkTemplate](https://msdn.microsoft.com/library/windows/apps/br208753)에서 파생된 [Style](https://msdn.microsoft.com/library/windows/apps/br208849) 및 클래스)
 -   브러시 및 색([Brush](/uwp/api/Windows.UI.Xaml.Media.Brush)에서 파생된 클래스 및 [Color](https://msdn.microsoft.com/library/windows/apps/hh673723) 값)
 -   [Storyboard](https://msdn.microsoft.com/library/windows/apps/br210490)를 포함한 애니메이션 형식
 -   변형([GeneralTransform](https://msdn.microsoft.com/library/windows/apps/br210034)에서 파생된 클래스)
 -   [Matrix](https://msdn.microsoft.com/library/windows/apps/br210127) 및 [Matrix3D](https://msdn.microsoft.com/library/windows/apps/br243266)
 -   [Point](https://msdn.microsoft.com/library/windows/apps/br225870) 값
 -   [Thickness](https://msdn.microsoft.com/library/windows/apps/br208864) 및 [CornerRadius](https://msdn.microsoft.com/library/windows/apps/br242343) 같은 특정한 다른 UI 관련 구조
--   [XAML 기본 데이터 형식](https://msdn.microsoft.com/library/windows/apps/mt186448)
+-   [XAML 내장 데이터 형식](https://msdn.microsoft.com/library/windows/apps/mt186448)
 
 필요한 구현 패턴을 따를 경우 공유 가능한 리소스로 사용자 지정 형식을 사용할 수도 있습니다. 지원 코드(또는 포함하는 런타임 구성 요소)에서 해당 클래스를 정의한 다음 XAML에서 리소스로 인스턴스화합니다. 개체 데이터 원본과 데이터 바인딩을 위한 [IValueConverter](https://msdn.microsoft.com/library/windows/apps/br209903) 구현을 예로 들 수 있습니다.
 
@@ -449,7 +449,7 @@ XAML 파서가 클래스를 인스턴스화하려면 생성자가 필요하므�
 
 대부분의 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) 시나리오는 XAML에서 배타적으로 처리됩니다. **ResourceDictionary** 컨테이너 및 리소스를 XAML 파일 또는 UI 정의 파일의 XAML 노드 집합으로 선언합니다. 그런 다음, XAML 리소스 참조를 사용하여 XAML의 다른 부분에서 해당 리소스를 요청합니다. 하지만 앱이 실행 중인 동안 실행되는 코드를 사용하여 **ResourceDictionary**의 콘텐츠를 조정하거나 **ResourceDictionary** 콘텐츠를 쿼리하여 리소스가 이미 정의되어 있는지 확인해야 하는 특정 시나리오가 있습니다. 이러한 코드 호출은 **ResourceDictionary** 인스턴스에서 수행되므로 먼저 하나의 항목, 즉 [**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740) 가져오기로 개체 트리에 있는 즉시 실행 ResourceDictionary를 검색하거나 `Application.Current.Resources`를 검색해야 합니다.
 
-C\# 또는 Microsoft Visual Basic 코드에서 인덱서([Item](https://msdn.microsoft.com/library/windows/apps/br208794))를 사용하여 특정 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/jj603134)의 리소스를 참조할 수 있습니다. **ResourceDictionary**는 문자열 키가 입력된 사전이므로 인덱서는 정수 인덱스가 아닌 문자열 키를 사용합니다. VisualC + + 구성 요소 확장에서 (C + + CX) 코드를 [조회](https://msdn.microsoft.com/library/windows/apps/br208800)를 사용 합니다.
+C에서\# 하거나 Microsoft Visual Basic 코드에서 리소스를 참조할 수 있습니다는 주어진 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) 인덱서를 사용 하 여 ([항목](https://msdn.microsoft.com/library/windows/apps/jj603134)). **ResourceDictionary**는 문자열 키가 입력된 사전이므로 인덱서는 정수 인덱스가 아닌 문자열 키를 사용합니다. Visual c + + 구성 요소 확장에서 (C + + /cli CX) 코드를 사용 하 여 [조회](https://msdn.microsoft.com/library/windows/apps/br208800)합니다.
 
 코드를 사용하여 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)를 검사 또는 변경하려는 경우, [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800) 또는 [Item](https://msdn.microsoft.com/library/windows/apps/jj603134)과 같은 API에 대한 동작은 즉시 실행 리소스에서 앱 리소스로 트래버스되지 않습니다. 이는 XAML 페이지가 로드될 때에만 발생하는 XAML 파서 동작입니다. 런타임 시 키에 대한 범위가 당시 사용 중인 **ResourceDictionary** 인스턴스에 자체 포함됩니다. 그러나 그 범위는 [MergedDictionaries](https://msdn.microsoft.com/library/windows/apps/br208801)로 확장되지 않습니다.
 
@@ -457,9 +457,9 @@ C\# 또는 Microsoft Visual Basic 코드에서 인덱서([Item](https://msdn.mic
 
 병합된 리소스 사전은 런타임에 병합된 사전을 참조하는 기본 리소스 사전의 인덱스 범위에 포함됩니다. 다시 말해 기본 사전의 **Item** 또는 [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800)을 사용하여 병합된 사전에 실제로 정의된 모든 개체를 찾을 수 있습니다. 이 경우 조회 동작은 구문 분석 시 XAML 조회 동작을 모방합니다. 각각 동일한 키가 있는 개체가 여러 개 병합된 사전에 있는 경우 마지막으로 추가된 사전의 개체가 반환됩니다.
 
-**Add**(C\# 또는 Visual Basic) 또는 [Insert](https://msdn.microsoft.com/library/windows/apps/br208794)(C++/CX)를 호출하여 기존 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208799)에 항목을 추가할 수 있습니다. 즉시 실행 리소스 또는 앱 리소스에 항목을 추가할 수 있습니다. 이러한 API 호출에는 키가 필요하며 이를 통해 **ResourceDictionary**의 각 항목에 키가 있어야 한다는 요구 사항이 충족됩니다. 그러나 런타임에 **ResourceDictionary**에 추가하는 항목은 XAML 리소스 참조와 관련이 없습니다. XAML 리소스 참조에 대한 필수 조회는 앱 로드 시 XAML이 처음으로 구문 분석되거나 테마 변경이 검색될 때 발생합니다. 런타임에 컬렉션에 추가된 리소스는 당시에 사용할 수 없으며, **ResourceDictionary**를 변경해도 여기서 이미 검색된 리소스는 그 값을 변경하더라도 무효화되지 않습니다.
+기존 항목을 추가할 수 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) 를 호출 하 여 **추가** (C\# 또는 Visual Basic) 또는 [삽입](https://msdn.microsoft.com/library/windows/apps/br208799) (C + + /cli CX). 즉시 실행 리소스 또는 앱 리소스에 항목을 추가할 수 있습니다. 이러한 API 호출에는 키가 필요하며 이를 통해 **ResourceDictionary**의 각 항목에 키가 있어야 한다는 요구 사항이 충족됩니다. 그러나 런타임에 **ResourceDictionary**에 추가하는 항목은 XAML 리소스 참조와 관련이 없습니다. XAML 리소스 참조에 대한 필수 조회는 앱 로드 시 XAML이 처음으로 구문 분석되거나 테마 변경이 검색될 때 발생합니다. 런타임에 컬렉션에 추가된 리소스는 당시에 사용할 수 없으며, **ResourceDictionary**를 변경해도 여기서 이미 검색된 리소스는 그 값을 변경하더라도 무효화되지 않습니다.
 
-런타임에 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)에서 항목을 제거하거나 항목의 일부 또는 전부를 복사할 수 있으며 다른 작업을 수행할 수도 있습니다. **ResourceDictionary** 멤버 목록은 사용 가능한 API를 나타냅니다. **ResourceDictionary**에 기본 컬렉션 인터페이스를 지원하는 예상 API가 있으므로 C\# 또는 Visual Basic 및 C++/CX 사용 여부에 따라 해당 API 옵션이 달라집니다.
+런타임에 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)에서 항목을 제거하거나 항목의 일부 또는 전부를 복사할 수 있으며 다른 작업을 수행할 수도 있습니다. **ResourceDictionary** 멤버 목록은 사용 가능한 API를 나타냅니다. 되므로 **ResourceDictionary** C를 사용 하는 여부에 따라 해당 기본 컬렉션 인터페이스 API 옵션을 지원 하기 위해 예상된 API를 다\# 또는 Visual Basic 및 C + + /cli CX 합니다.
 
 ## <a name="resourcedictionary-and-localization"></a>ResourceDictionary 및 지역화
 
@@ -479,7 +479,7 @@ C\# 또는 Microsoft Visual Basic 코드에서 인덱서([Item](https://msdn.mic
 * [ThemeResource 태그 확장](../../xaml-platform/themeresource-markup-extension.md)
 * [XAML 테마 리소스](xaml-theme-resources.md)
 * [컨트롤 스타일 지정](xaml-styles.md)
-* [x:Key 특성](https://msdn.microsoft.com/library/windows/apps/mt204787)
+* [X:key 특성](https://msdn.microsoft.com/library/windows/apps/mt204787)
 
  
 

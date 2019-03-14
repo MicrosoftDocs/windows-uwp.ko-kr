@@ -1,5 +1,5 @@
 ---
-Description: Learn how to integrate images into your app, including how to use the APIs of the two main XAML classes, Image and ImageBrush.
+Description: 두 가지 주요 XAML 클래스인 Image 및 ImageBrush의 API를 사용하는 방법을 비롯하여 앱에 이미지를 통합하는 방법을 알아봅니다.
 title: 이미지 및 이미지 브러시
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5451e0dd94510873f87b981a817fb55ba2c4f985
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049780"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57622018"
 ---
 # <a name="images-and-image-brushes"></a>이미지 및 이미지 브러시
 
 이미지를 표시하려면 **Image** 개체 또는 **ImageBrush** 개체를 사용할 수 있습니다. Image 개체는 이미지를 렌더링하고 ImageBrush 개체는 이미지에 다른 개체를 그립니다. 
 
-> **중요 API**: [Image 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx), [Source 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx), [ImageBrush 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx), [ImageSource 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)
+> **중요 한 Api**: [클래스를 이미지](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx), [속성을 원본](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)를 [ImageBrush 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx), [ImageSource 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)
 
 ## <a name="are-these-the-right-elements"></a>올바른 요소인가요?
 앱에 독립 실행형 이미지를 표시하려면 **Image** 요소를 사용합니다.
@@ -35,8 +35,8 @@ ms.locfileid: "9049780"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Image">앱을 열고 작동 중인 이미지를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -45,7 +45,7 @@ ms.locfileid: "9049780"
 ## <a name="create-an-image"></a>이미지 만들기
 
 ### <a name="image"></a>이미지
-다음 예에서는 [Image](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx) 개체를 사용하여 이미지를 만드는 방법을 보여 줍니다.
+다음 예제에서는 [Image](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx) 개체를 사용하여 이미지를 만드는 방법을 보여 줍니다.
 
 
 ```XAML
@@ -56,11 +56,11 @@ ms.locfileid: "9049780"
 
 ![Image 요소의 예](images/Image_Licorice.jpg)
 
-다음 예제에서 [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) 속성은 표시할 이미지의 위치를 지정합니다. 절대 URL을 지정 하 여 소스를 설정할 수 있습니다 (예를 들어 http://contoso.com/myPicture.jpg) 앱 패키징 구조에 상대적인 URL을 지정 하 여 합니다. 이 예제에서는 "licorice.jpg" 이미지 파일을 프로젝트의 루트 폴더에 넣고 이 이미지 파일을 내용으로 포함하는 프로젝트 설정을 선언합니다.
+다음 예제에서 [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) 속성은 표시할 이미지의 위치를 지정합니다. 절대 URL을 지정 하 여 소스를 설정할 수 있습니다 (예를 들어 http://contoso.com/myPicture.jpg) 앱 패키징 구조에 상대 URL을 지정 하 여 합니다. 이 예제에서는 "licorice.jpg" 이미지 파일을 프로젝트의 루트 폴더에 넣고 이 이미지 파일을 내용으로 포함하는 프로젝트 설정을 선언합니다.
 
 ### <a name="imagebrush"></a>ImageBrush
 
-[ImageBrush](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx) 개체를 사용하면 [Brush](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx) 개체를 가지는 영역을 이미지로 그릴 수 있습니다. 예를 들어 [Ellipse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx)의 [Fill](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.ellipse.aspx) 속성 또는 [Canvas](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx)의 [Background](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) 속성 값에 ImageBrush를 사용할 수 있습니다.
+[ImageBrush](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx) 개체를 사용하면 [Brush](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx) 개체를 가지는 영역을 이미지로 그릴 수 있습니다. 예를 들어 [Ellipse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.ellipse.aspx)의 [Fill](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx) 속성 또는 [Canvas](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)의 [Background](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx) 속성 값에 ImageBrush를 사용할 수 있습니다.
 
 다음 예제에서는 ImageBrush를 사용하여 Ellipse를 그리는 방법을 보여 줍니다.
 
@@ -80,10 +80,10 @@ ms.locfileid: "9049780"
 
 **Image**의 [Width](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) 또는 [Height](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) 값을 설정하지 않는 경우 이미지는 **Source**에서 지정한 이미지 크기로 표시됩니다. **Width** 및 **Height**를 설정하면 이미지가 표시되는 컨테이너 사각형 영역이 만들어집니다. 이미지가 이 컨테이너 영역을 채우는 방법을 지정하려면 [Stretch](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.stretch.aspx) 속성을 사용합니다. Stretch 속성에는 [Stretch](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx) 열거형에서 정의하는 다음 값을 사용할 수 있습니다.
 
--   **None**: 이미지가 출력 크기를 채우기 위해 확대되지 않습니다. 이 Stretch 설정은 주의해서 사용해야 합니다. 원본 이미지가 컨테이너 영역보다 큰 경우 이미지가 잘립니다. 이는 일반적으로 바람직하지 않은데, 의도적 [Clip](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.clip.aspx)을 사용할 때처럼 뷰포트를 제어할 수 없기 때문입니다.
--   **Uniform**: 이미지가 출력 크기에 맞게 크기 조정됩니다. 콘텐츠의 가로 세로 비율은 유지됩니다. 기본값입니다.
--   **UniformToFill**: 이미지가 원래 가로 세로 비율은 유지하고 출력 영역을 완전히 채우도록 크기 조정됩니다.
--   **Fill**: 이미지가 출력 크기에 맞게 크기 조정됩니다. 콘텐츠의 높이와 너비가 따로 조정되므로 이미지의 원래 가로 세로 비율은 유지될 수 없습니다. 즉, 이미지가 출력 영역을 완전히 채우기 위해 왜곡될 수 있습니다.
+-   **없음**: 이미지 출력 크기를 채우도록 늘어나지 않습니다. 이 Stretch 설정은 주의해서 사용해야 합니다. 원본 이미지가 컨테이너 영역보다 큰 경우 이미지가 잘립니다. 이는 일반적으로 바람직하지 않은데, 의도적 [Clip](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.clip.aspx)을 사용할 때처럼 뷰포트를 제어할 수 없기 때문입니다.
+-   **Uniform**: 이미지 출력 크기에 맞게 크기가 조정 됩니다. 콘텐츠의 가로 세로 비율은 유지됩니다. 기본값입니다.
+-   **UniformToFill**: 이미지를 완전히 출력 영역을 채우는 원래 가로 세로 비율은 유지 하지만 크기가 조정 됩니다.
+-   **입력**: 이미지 출력 크기에 맞게 크기가 조정 됩니다. 콘텐츠의 높이와 너비가 따로 조정되므로 이미지의 원래 가로 세로 비율은 유지될 수 없습니다. 즉, 이미지가 출력 영역을 완전히 채우기 위해 왜곡될 수 있습니다.
 
 ![확대 설정의 예](images/Image_Stretch.jpg)
 
@@ -147,7 +147,7 @@ Windows 10 버전 1607부터 **Image** 요소는 애니메이션 GIF 이미지�
 
 ### <a name="image-sources-and-scaling"></a>이미지 원본 및 크기 조정
 
-여러 가지 권장 크기로 이미지 원본을 만들어 Windows에서 크기를 조정할 때 앱 모양이 멋지게 보이도록 합니다. **Image**에 **Source**를 지정할 때 현재 크기에 적합한 리소스를 자동으로 참조하는 명명 규칙을 사용할 수 있습니다. 명명 규칙의 특성 및 자세한 내용은 [빠른 시작: 파일 또는 이미지 리소스 사용](https://msdn.microsoft.com/library/windows/apps/xaml/hh965325)을 참조하세요.
+여러 가지 권장 크기로 이미지 원본을 만들어 Windows에서 크기를 조정할 때 앱 모양이 멋지게 보이도록 합니다. **Image**에 **Source**를 지정할 때 현재 크기에 적합한 리소스를 자동으로 참조하는 명명 규칙을 사용할 수 있습니다. 명명 규칙 및 자세한 내용은 참조 하세요. [빠른 시작: 파일 또는 이미지 리소스를 사용 하 여](https://msdn.microsoft.com/library/windows/apps/xaml/hh965325)입니다.
 
 크기 조정을 위해 디자인하는 방법에 대한 자세한 내용은 [레이아웃 및 크기 조정에 대한 UX 지침](https://msdn.microsoft.com/library/windows/apps/dn611863)을 참조하세요.
 
@@ -166,6 +166,6 @@ Image 및 ImageBrush 요소는 코드가 아닌 XAML을 사용하여 지정하�
 
 ## <a name="related-articles"></a>관련 문서
 
--   [오디오, 동영상 및 카메라](https://msdn.microsoft.com/windows/uwp/audio-video-camera/index)
+-   [오디오 비디오 및 카메라](https://msdn.microsoft.com/windows/uwp/audio-video-camera/index)
 -   [Image 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
 -   [ImageBrush 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: fe876b362f09eaca68d84516d413d3f458edf0a6
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8920054"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603408"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>카메라 프로필을 사용하여 카메라 기능 검색 및 선택
 
@@ -26,7 +26,7 @@ ms.locfileid: "8920054"
 
 ## <a name="about-camera-profiles"></a>카메라 프로필 정보
 
-여러 다른 디바이스의 카메라는 지원되는 캡처 해상도 집합, 비디오 캡처의 프레임 속도, HDR 또는 가변 프레임 속도 캡처 지원 여부를 비롯한 여러 다른 기능을 지원합니다. UWP(유니버설 Windows 플랫폼) 미디어 캡처 프레임워크는 [**MediaCaptureVideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695)에 이러한 기능 집합을 저장합니다. [**MediaCaptureVideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn926694) 개체로 나타내는 카메라 프로필은 사진 캡처용 1개, 비디오 캡처용 1개, 비디오 미리 보기용 1개로 이루어진 3개의 미디어 설명 컬렉션을 포함합니다.
+여러 다른 디바이스의 카메라는 지원되는 캡처 해상도 집합, 비디오 캡처의 프레임 속도, HDR 또는 가변 프레임 속도 캡처 지원 여부를 비롯한 여러 다른 기능을 지원합니다. UWP(유니버설 Windows 플랫폼) 미디어 캡처 프레임워크는 [**MediaCaptureVideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695)에 이러한 기능 집합을 저장합니다. [  **MediaCaptureVideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn926694) 개체로 나타내는 카메라 프로필은 사진 캡처용 1개, 비디오 캡처용 1개, 비디오 미리 보기용 1개로 이루어진 3개의 미디어 설명 컬렉션을 포함합니다.
 
 [MediaCapture](capture-photos-and-video-with-mediacapture.md) 개체를 초기화하기 전에 현재 디바이스의 캡처 디바이스를 쿼리하여 지원되는 프로필을 확인할 수 있습니다. 지원되는 프로필을 선택하면 캡처 디바이스가 프로필 미디어 설명의 모든 기능을 지원하는지 알 수 있습니다. 이렇게 하면 특정 디바이스에서 지원되는 기능 조합을 파악하기 위해 시행착오를 거칠 필요가 없습니다.
 
@@ -73,7 +73,7 @@ Windows 10, 버전 1803부터 [**MediaFrameSourceGroup**](https://docs.microsoft
 > [!NOTE] 
 > 이 섹션에 설명된 API는 Windows 10, 버전 1803부터 사용되지 않습니다. 이전 섹션 **미디어 프레임 소스 그룹을 사용하여 프로필 가져오기**를 참조하세요.
 
-HDR을 지원하는 프로필을 선택하는 작업은 다른 시나리오의 경우처럼 시작됩니다. 만들기 **MediaCaptureInitializationSettings** 및 문자열로 저장 캡처 장치 id입니다. HDR 동영상 지원 여부를 추적하는 부울 변수를 추가합니다.
+HDR을 지원하는 프로필을 선택하는 작업은 다른 시나리오의 경우처럼 시작됩니다. 만들기는 **MediaCaptureInitializationSettings** 및 캡처 장치 ID를 저장 하는 문자열 HDR 동영상 지원 여부를 추적하는 부울 변수를 추가합니다.
 
 [!code-cs[GetHdrProfileSetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetHdrProfileSetup)]
 
@@ -93,12 +93,12 @@ HDR을 지원하는 프로필을 선택하는 작업은 다른 시나리오의 �
 
 [!code-cs[GetPhotoAndVideoSupport](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPhotoAndVideoSupport)]
 
-이 쿼리를 구체화하여 동시 비디오 녹화 외의 기타 기능이나 특정 해상도를 지원하는 프로필을 찾을 수 있습니다. [**MediaCapture.FindKnownVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926710)를 사용하고 [**BalancedVideoAndPhoto**](https://msdn.microsoft.com/library/windows/apps/dn948843) 값을 지정하여 동시 캡처를 지원하는 프로필을 검색할 수도 있지만 모든 프로필을 쿼리하면 더 완전한 결과가 제공됩니다.
+이 쿼리를 구체화하여 동시 비디오 녹화 외의 기타 기능이나 특정 해상도를 지원하는 프로필을 찾을 수 있습니다. [  **MediaCapture.FindKnownVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926710)를 사용하고 [**BalancedVideoAndPhoto**](https://msdn.microsoft.com/library/windows/apps/dn948843) 값을 지정하여 동시 캡처를 지원하는 프로필을 검색할 수도 있지만 모든 프로필을 쿼리하면 더 완전한 결과가 제공됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 36cd006b4608d82999281ebd407fd32e168ae38b
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8933263"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57650468"
 ---
 # <a name="adaptive-streaming-with-playready"></a>PlayReady를 사용한 적응 스트리밍
 
@@ -63,7 +63,7 @@ private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 
 ## <a name="setting-up-the-mediaprotectionmanager"></a>MediaProtectionManager 설정
 
-PlayReady 콘텐츠 보호를 UWP 앱에 추가하려면 [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040) 개체를 설정해야 합니다. [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912) 개체를 초기화할 때 이 작업을 수행합니다.
+PlayReady 콘텐츠 보호를 UWP 앱에 추가하려면 [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040) 개체를 설정해야 합니다. [  **AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912) 개체를 초기화할 때 이 작업을 수행합니다.
 
 다음 코드는 [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040)를 설정합니다.
 

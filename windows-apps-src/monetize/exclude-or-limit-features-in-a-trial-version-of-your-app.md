@@ -1,5 +1,5 @@
 ---
-Description: If you enable customers to use your app for free during a trial period, you can entice your customers to upgrade to the full version of your app by excluding or limiting some features during the trial period.
+Description: 체험 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 체험 기간 동안 일부 기능을 제외하거나 제한하여 고객이 처음 사용자용 앱 버전으로 업그레이드하도록 유도할 수 있습니다.
 title: 평가판의 기능 제외 또는 제한
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
 keywords: windows 10, uwp, 평가판, 앱에서 바로 구매, IAP, Windows.ApplicationModel.Store
@@ -7,24 +7,24 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 36d7ada6567db95609203f8f163b78631e141b4f
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8943237"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57655568"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>평가판의 기능 제외 또는 제한
 
-평가 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전으로 업그레이드하도록 유도할 수 있습니다. 코딩을 시작하기 전에 제한할 기능을 결정한 다음 정식 라이선스를 구입한 다음에만 해당 기능이 작동하도록 해야 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
+체험 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 체험 기간 동안 일부 기능을 제외하거나 제한하여 고객이 처음 사용자용 앱 버전으로 업그레이드하도록 유도할 수 있습니다. 코딩을 시작하기 전에 제한할 기능을 결정한 다음 정식 라이선스를 구입한 다음에만 해당 기능이 작동하도록 해야 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
 > [!IMPORTANT]
-> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 평가판 기능을 구현하는 방법을 설명합니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. **Windows.Services.Store** 네임 스페이스는 스토어 관리 소모 성 추가 기능 및 구독 등의 최신 추가 기능 유형을 지원 하며 이후 제품 및 파트너 센터 및 스토어에서 지 원하는 기능 유형과 호환 되도록 설계 되었습니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. **Windows.Services.Store** 네임스페이스를 사용하여 평가판 기능을 구현하는 방법에 대한 자세한 내용은 [이 문서](implement-a-trial-version-of-your-app.md)를 참조하세요.
+> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 평가판 기능을 구현하는 방법을 설명합니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. 합니다 **Windows.Services.Store** 네임 스페이스 최신 추가 기능 형식을 사용할 수 있는 추가 기능 저장소 관리 등 구독을 지원 하며 향후 유형의 제품 및 파트너를 지 원하는 기능을 사용 하 여 호환 되도록 설계 되었습니다 센터와 저장소를 제공 합니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. **Windows.Services.Store** 네임스페이스를 사용하여 평가판 기능을 구현하는 방법에 대한 자세한 내용은 [이 문서](implement-a-trial-version-of-your-app.md)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 고객이 구매하는 기능을 추가할 Windows 앱
 
-## <a name="step-1-pick-the-features-you-want-to-enable-or-disable-during-the-trial-period"></a>1단계: 체험 기간 중에 사용하거나 사용하지 않도록 설정할 기능 선택
+## <a name="step-1-pick-the-features-you-want-to-enable-or-disable-during-the-trial-period"></a>1단계: 사용 하도록 설정 하거나 평가판 사용 기간 동안 사용 하지 않도록 설정 하려면 기능 선택
 
 앱의 현재 라이선스 상태는 [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157) 클래스의 속성으로 저장됩니다. 일반적으로 다음 단계의 설명과 같이 라이선스 상태를 사용하는 기능을 조건부 블록에 넣습니다. 이러한 기능을 고려할 때 모든 라이선스 상태에서 작동하도록 구현할 수 있는지 확인하세요.
 
@@ -34,22 +34,22 @@ ms.locfileid: "8943237"
 
 게임이 아닌 대부분의 앱은 사용자가 전체 앱에 대해 잘 알 수 있으므로 만료 날짜 설정이 잘 작동합니다. 다음은 일반적인 만료 시나리오 및 이를 처리하는 옵션입니다.
 
--   **앱이 실행 중일 때 체험 라이선스 만료**
+-   **평가판이 만료 되는 앱이 실행 되는 동안**
 
     앱이 실행 중일 때 체험이 만료되는 경우 앱은 다음을 할 수 있습니다.
 
     -   아무것도 하지 않습니다.
     -   고객에게 메시지를 표시합니다.
-    -   닫힙니다.
+    -   을 닫습니다.
     -   고객에게 앱을 구입할지 묻는 메시지를 표시합니다.
 
     앱을 구매할지 묻는 메시지를 표시하는 것이 좋습니다. 고객이 앱을 구매하면 계속해서 모든 기능을 사용할 수 있습니다. 사용자가 앱을 구매하지 않는 경우 앱을 닫거나 정기적으로 앱을 구매하도록 알립니다.
 
--   **앱을 실행하기 전에 체험 라이선스 만료**
+-   **앱이 시작 되기 전에 평가판 라이선스가 만료**
 
     사용자가 앱을 실행하기 전에 체험이 만료되는 경우 앱은 실행되지 않습니다. 대신 스토어에서 앱을 구입할 수 있는 옵션을 제공하는 대화 상자가 표시됩니다.
 
--   **앱이 실행 중일 때 고객이 앱 구입**
+-   **고객이 실행 중인 앱 구입**
 
     앱이 실행 중일 때 고객이 앱을 구입하는 경우 앱이 수행할 수 있는 몇 가지 작업은 다음과 같습니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "8943237"
 
 앱에서 라이선스 변경을 감지하고 조치를 취하도록 하려면 다음 단계에서 설명하는 대로 이를 위한 이벤트 처리기를 추가해야 합니다.
 
-## <a name="step-2-initialize-the-license-info"></a>2단계: 라이선스 정보 초기화
+## <a name="step-2-initialize-the-license-info"></a>2단계: 라이선스 정보를 초기화 합니다.
 
 앱을 초기화하는 경우 이 예제와 같이 앱의 [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157) 개체를 가져옵니다. **licenseInformation**은 **LicenseInformation** 유형의 전역 변수 또는 필드로 가정됩니다.
 
@@ -68,12 +68,12 @@ ms.locfileid: "8943237"
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTest)]
 
-앱이 실행되는 동안 라이선스가 변경될 경우 알림을 받는 이벤트 처리기를 추가합니다. 예를 들어 체험 기간이 만료되거나 고객이 Microsoft Store를 통해 앱을 구매하면 앱의 라이선스가 변경될 수 있습니다.
+앱이 실행되는 동안 라이선스가 변경될 경우 알림을 받는 이벤트 처리기를 추가합니다. 예를 들어 체험 기간이 만료되거나 고객이 스토어를 통해 앱을 구매하면 앱의 라이선스가 변경될 수 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTestWithEvent)]
 
-## <a name="step-3-code-the-features-in-conditional-blocks"></a>3단계: 조건부 블록에 기능 코딩
+## <a name="step-3-code-the-features-in-conditional-blocks"></a>3단계: 조건부 블록에서 기능 코드
 
 라이선스 변경 이벤트가 발생할 경우 앱이 라이선스 API를 호출하여 체험 상태가 변경되었는지 확인해야 합니다. 이 단계의 코드는 이 이벤트의 처리기를 구성하는 방법을 보여 줍니다. 이때 사용자가 앱을 구매한 경우 라이선스 상태가 변경되었다는 피드백을 사용자에게 제공하는 것이 좋습니다. 코딩 방식에 따라 앱을 다시 시작하라는 메시지를 사용자에게 표시해야 할 수도 있습니다. 그러나 이러한 전환이 가능한 한 매끄럽고 불편 없이 진행되도록 하세요.
 
@@ -82,7 +82,7 @@ ms.locfileid: "8943237"
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#ReloadLicense)]
 
-## <a name="step-4-get-an-apps-trial-expiration-date"></a>4단계: 앱의 체험 만료 날짜 확인
+## <a name="step-4-get-an-apps-trial-expiration-date"></a>4단계: 앱의 평가판이 만료 날짜 가져오기
 
 앱의 체험 만료 날짜를 확인하는 코드를 포함합니다.
 
@@ -91,13 +91,13 @@ ms.locfileid: "8943237"
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#DisplayTrialVersionExpirationTime)]
 
-## <a name="step-5-test-the-features-using-simulated-calls-to-the-license-api"></a>5단계: 라이선스 API 호출을 시뮬레이트하여 기능 테스트
+## <a name="step-5-test-the-features-using-simulated-calls-to-the-license-api"></a>5단계: 시뮬레이션 된 라이선스 API 호출을 사용 하 여 기능 테스트
 
-이제 시뮬레이트된 데이터를 사용하여 앱을 테스트합니다. **CurrentAppSimulator**는 %UserProfile%\\AppData\\local\\packages\\&lt;패키지 이름&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData에 있는 WindowsStoreProxy.xml이라는 XML 파일에서 테스트 관련 라이선스 정보를 가져옵니다. WindowsStoreProxy.xml을 편집하여 앱과 해당 기능에 대해 시뮬레이트된 만료 날짜를 변경할 수 있습니다. 가능한 만료 및 라이선스 구성을 모두 테스트하여 모든 것이 예상대로 작동하는지 확인하세요. 자세한 내용은 [CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy)을 참조하세요.
+이제 시뮬레이트된 데이터를 사용하여 앱을 테스트합니다. **CurrentAppSimulator** 테스트 특정 가져옵니다 % UserProfile %에 WindowsStoreProxy.xml, 라는 XML 파일에서 정보를 라이선스\\AppData\\로컬\\패키지\\ &lt; 패키지 이름&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData 합니다. WindowsStoreProxy.xml을 편집하여 앱과 해당 기능에 대해 시뮬레이트된 만료 날짜를 변경할 수 있습니다. 가능한 만료 및 라이선스 구성을 모두 테스트하여 모든 것이 예상대로 작동하는지 확인하세요. 자세한 내용은 [CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy)을 참조하세요.
 
 이 경로와 파일이 없는 경우 설치 중에 또는 런타임에 만들어야 합니다. 이 특정 위치에 WindowsStoreProxy.xml이 없는 상태에서 [CurrentAppSimulator.LicenseInformation](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.licenseinformation) 속성에 액세스하면 오류가 발생합니다.
 
-## <a name="step-6-replace-the-simulated-license-api-methods-with-the-actual-api"></a>6단계: 시뮬레이트된 라이선스 API 메서드를 실제 API로 바꾸기
+## <a name="step-6-replace-the-simulated-license-api-methods-with-the-actual-api"></a>6단계: 실제 API를 사용 하 여 시뮬레이션 된 라이선스 API 메서드를 대체
 
 시뮬레이트된 라이선스 서버로 앱을 테스트한 후, 인증을 위해 앱을 스토어로 제출하기 전에 다음 코드 샘플과 같이 **CurrentAppSimulator**를 **CurrentApp**으로 바꾸세요.
 
@@ -107,7 +107,7 @@ ms.locfileid: "8943237"
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
 
-## <a name="step-7-describe-how-the-free-trial-works-to-your-customers"></a>7단계: 고객에게 무료 평가판이 작동하는 방식 설명
+## <a name="step-7-describe-how-the-free-trial-works-to-your-customers"></a>7단계: 무료 평가판 고객에 게 작동 하는 방법을 설명 합니다.
 
 고객이 앱의 동작에 놀라지 않도록 무료 체험 기간 동안 및 이후에 앱이 어떻게 동작하는지 고객에게 설명해야 합니다.
 
@@ -115,8 +115,8 @@ ms.locfileid: "8943237"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [스토어 샘플(평가판 및 앱에서 바로 구매 설명)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-* [앱 가격 책정 및 가용성 설정](https://msdn.microsoft.com/library/windows/apps/mt148548)
+* [Store 샘플 (평가판 및 앱 내 구매를 보여 줍니다.)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
+* [설정 앱 가격 책정 및 가용성](https://msdn.microsoft.com/library/windows/apps/mt148548)
 * [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765)
 * [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766)
  

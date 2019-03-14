@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 24b2885597599607ca405e858a9f713f5a6af4c7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938535"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644878"
 ---
 # <a name="display-the-camera-preview"></a>카메라 미리 보기 표시
 
@@ -24,7 +24,7 @@ ms.locfileid: "8938535"
 
 앱에서 디바이스의 카메라에 액세스해야 하는 경우 앱에 *웹캠* 및 *마이크* 디바이스 접근 권한 값이 사용된다고 선언해야 합니다. 
 
-**앱 매니페스트에 접근 권한 값 추가**
+**앱 매니페스트에 기능 추가**
 
 1.  Microsoft Visual Studio의 **솔루션 탐색기**에서 **package.appxmanifest** 항목을 두 번 클릭하여 응용 프로그램 매니페스트 디자이너를 엽니다.
 2.  **접근 권한 값** 탭을 선택합니다.
@@ -32,7 +32,7 @@ ms.locfileid: "8938535"
 
 ## <a name="add-a-captureelement-to-your-page"></a>CaptureElement를 페이지에 추가
 
-[**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278)를 사용하여 XAML 페이지 내의 미리 보기 스트림을 표시합니다.
+[  **CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278)를 사용하여 XAML 페이지 내의 미리 보기 스트림을 표시합니다.
 
 [!code-xml[CaptureElement](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml#SnippetCaptureElement)]
 
@@ -40,7 +40,7 @@ ms.locfileid: "8938535"
 
 ## <a name="use-mediacapture-to-start-the-preview-stream"></a>MediaCapture를 사용하여 미리 보기 스트림 시작
 
-[**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체는 디바이스의 카메라에 대한 앱 인터페이스입니다. 이 클래스는 Windows.Media.Capture 네임스페이스의 멤버입니다. 이 문서의 예제에서는 기본 프로젝트 템플릿에 포함된 API뿐만 아니라 [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) 및 [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx)의 API도 사용합니다.
+[  **MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체는 디바이스의 카메라에 대한 앱 인터페이스입니다. 이 클래스는 Windows.Media.Capture 네임스페이스의 멤버입니다. 이 문서의 예제에서는 기본 프로젝트 템플릿에 포함된 API뿐만 아니라 [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) 및 [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx)의 API도 사용합니다.
 
 using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페이스를 포함합니다.
 
@@ -60,7 +60,7 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 
 **중요** 일부 디바이스 패밀리에서는 앱에 디바이스의 카메라에 대한 액세스가 허용되기 전에 사용자 동의 확인 프롬프트가 사용자에게 표시됩니다. 이러한 이유로 기본 UI 스레드에서만 [**MediaCapture.InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598)를 호출해야 합니다. 다른 스레드에서 카메라를 초기화하려고 하면 초기화 오류가 발생할 수 있습니다.
 
-[**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) 속성을 설정하여 **MediaCapture**를 **CaptureElement**에 연결합니다. [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613)를 호출하여 미리 보기를 시작합니다. 이 이렇게 하면 **FileLoadException** 다른 앱이 캡처 장치의 단독 제어를 가지게 됩니다. 단독 제어의 변경에 대한 정보는 다음 섹션을 참조하세요.
+[  **Source**](https://msdn.microsoft.com/library/windows/apps/br209280) 속성을 설정하여 **MediaCapture**를 **CaptureElement**에 연결합니다. [  **StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613)를 호출하여 미리 보기를 시작합니다. 이 이렇게 하면 **FileLoadException** 다른 앱이 캡처 장치의 단독 제어를 가지게 됩니다. 단독 제어의 변경에 대한 정보는 다음 섹션을 참조하세요.
 
 미리 보기가 실행되는 동안 디바이스가 절전 모드로 전환되지 않도록 [**RequestActive**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestActive)를 호출합니다. 마지막으로 사용자가 디바이스 방향을 변경할 때 UI 및 **CaptureElement**가 회전되지 않도록 [**DisplayInformation.AutoRotationPreferences**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayInformation.AutoRotationPreferences) 속성을 [**Landscape**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayOrientations)로 설정합니다. 디바이스 방향 변경 처리에 대한 자세한 내용은 [**MediaCapture를 사용하여 디바이스 방향 처리**](handle-device-orientation-with-mediacapture.md)를 참조하세요.  
 
@@ -71,7 +71,7 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 
 [!code-cs[ExclusiveControlStatusChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetExclusiveControlStatusChanged)]
 
-## <a name="shut-down-the-preview-stream"></a>미리 보기 스트림 종료
+## <a name="shut-down-the-preview-stream"></a>미리 보기 스트림을 종료합니다.
 
 미리 보기 스트림 사용을 완료했을 때 디바이스의 다른 앱에서 카메라를 사용할 수 있도록 항상 스트림을 종료하고 관련된 리소스를 제대로 해제해야 합니다. 미리 보기 스트림은 다음 단계에 따라 종료해야 합니다.
 
@@ -79,7 +79,7 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 -   **CaptureElement**의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) 속성을 null로 설정합니다. 이 호출이 UI 스레드에서 실행되도록 하려면 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx)를 사용합니다.
 -   **MediaCapture** 개체의 [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) 메서드를 호출하여 해당 개체를 해제합니다. 다시, 이 호출이 UI 스레드에서 실행되도록 하려면 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx)를 사용합니다.
 -   **MediaCapture** 멤버 변수를 null로 설정합니다.
--   비활성 상태일 때 화면이 꺼지도록 하려면 [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestRelease)를 호출합니다.
+-   비활성 상태일 때 화면이 꺼지도록 하려면 [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestRelease)를 호출합니다. 
 
 [!code-cs[CleanupCameraAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetCleanupCameraAsync)]
 
@@ -99,5 +99,5 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [미리 보기 프레임 가져오기](get-a-preview-frame.md)
+* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [미리 보기 프레임을 가져오기](get-a-preview-frame.md)

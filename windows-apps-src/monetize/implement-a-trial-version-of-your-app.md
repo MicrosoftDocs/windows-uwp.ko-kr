@@ -7,15 +7,15 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 796266565965a62d3f168b48893d62e1cdd7df44
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8921196"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646168"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>앱의 평가판 구현
 
-경우 [파트너 센터에서 무료 평가판으로 앱을 구성](../publish/set-app-pricing-and-availability.md#free-trial) 하면 고객 평가 기간 동안 앱을 무료로 사용할 수 있는, 되도록 고객이 제외 하거나 평가 기간 동안 일부 기능을 제한 하 여 앱의 정식 버전으로 업그레이드 하도록 유도할 수 있습니다. 코딩을 시작하기 전에 제한할 기능을 결정한 다음 정식 라이선스를 구입한 다음에만 해당 기능이 작동하도록 해야 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
+경우 있습니다 [파트너 센터에서 무료 평가판으로 앱 구성](../publish/set-app-pricing-and-availability.md#free-trial) 제외 하거나 일부 기능을 제한 하 여 앱의 정식 버전으로 업그레이드 하도록 고객에 게 하도록 유도할 수 고객에 게 평가판 기간 동안 앱을 무료로 사용할 수 있습니다, 평가판 기간입니다. 코딩을 시작하기 전에 제한할 기능을 결정한 다음 정식 라이선스를 구입한 다음에만 해당 기능이 작동하도록 해야 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
 이 문서는 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에서 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 멤버를 사용하여 사용자에게 앱의 평가판 라이선스가 있는지 확인하고 앱이 실행되는 동안 라이선스 상태가 변경되면 알림을 받는 방법을 설명합니다. 
 
@@ -32,22 +32,22 @@ ms.locfileid: "8921196"
 
 게임이 아닌 대부분의 앱은 사용자가 전체 앱에 대해 잘 알 수 있으므로 만료 날짜 설정이 잘 작동합니다. 다음은 일반적인 만료 시나리오 및 이를 처리하는 옵션입니다.
 
--   **앱이 실행 중일 때 체험 라이선스 만료**
+-   **평가판이 만료 되는 앱이 실행 되는 동안**
 
     앱이 실행 중일 때 체험이 만료되는 경우 앱은 다음을 할 수 있습니다.
 
     -   아무것도 하지 않습니다.
     -   고객에게 메시지를 표시합니다.
-    -   닫힙니다.
+    -   을 닫습니다.
     -   고객에게 앱을 구입할지 묻는 메시지를 표시합니다.
 
     앱을 구매할지 묻는 메시지를 표시하는 것이 좋습니다. 고객이 앱을 구매하면 계속해서 모든 기능을 사용할 수 있습니다. 사용자가 앱을 구매하지 않는 경우 앱을 닫거나 정기적으로 앱을 구매하도록 알립니다.
 
--   **앱을 실행하기 전에 체험 라이선스 만료**
+-   **앱이 시작 되기 전에 평가판 라이선스가 만료**
 
     사용자가 앱을 실행하기 전에 체험이 만료되는 경우 앱은 실행되지 않습니다. 대신 스토어에서 앱을 구입할 수 있는 옵션을 제공하는 대화 상자가 표시됩니다.
 
--   **앱이 실행 중일 때 고객이 앱 구입**
+-   **고객이 실행 중인 앱 구입**
 
     앱이 실행 중일 때 고객이 앱을 구입하는 경우 앱이 수행할 수 있는 몇 가지 작업은 다음과 같습니다.
 
@@ -57,11 +57,11 @@ ms.locfileid: "8921196"
 
 고객이 앱의 동작에 놀라지 않도록 무료 체험 기간 동안 및 이후에 앱이 어떻게 동작하는지 고객에게 설명해야 합니다. 앱 설명 지정에 대한 자세한 내용은 [앱 설명 작성](https://msdn.microsoft.com/library/windows/apps/mt148529)을 참조하세요.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 예제의 필수 조건은 다음과 같습니다.
 * **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
-* 시간 제한이 없는 [무료 평가판](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) 으로 구성 된 파트너 센터에서 앱을 만들었으며 하 고이 앱이 Store에 게시 됩니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
+* 으로 구성 된 파트너 센터에서 앱을 만들었으면를 [무료 평가판](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) 시간 제한이 없으며와이 앱 스토어에 게시 됩니다. 테스트하는 동안 Store에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
 
 이 예제의 코드에서는 다음과 같이 가정합니다.
 * 코드는 ```workingProgressRing```이라는 [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx)과 ```textBlock```이라는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)을 포함하는 [페이지](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx)의 컨텍스트에서 실행됩니다. 해당 개체를 사용하여 각각 비동기 작업이 발생함을 나타내고 출력 메시지를 표시합니다.
@@ -80,13 +80,13 @@ ms.locfileid: "8921196"
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[ImplementTrial](./code/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs#ImplementTrial)]
 
-전체 샘플 응용 프로그램은 [Microsoft Store 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)을 참조하세요.
+전체 샘플 응용 프로그램은 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)
-* [앱 및 추가 기능에 대한 제품 정보 가져오기](get-product-info-for-apps-and-add-ons.md)
-* [앱 및 추가 기능에 대한 라이선스 정보 가져오기](get-license-info-for-apps-and-add-ons.md)
-* [앱에서 바로 앱 및 추가 기능 구매 사용](enable-in-app-purchases-of-apps-and-add-ons.md)
-* [소모성 추가 기능 구매 사용](enable-consumable-add-on-purchases.md)
-* [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
+* [앱 및 추가 기능에 대 한 제품 정보 가져오기](get-product-info-for-apps-and-add-ons.md)
+* [앱 및 추가 기능에 대 한 라이선스 정보 가져오기](get-license-info-for-apps-and-add-ons.md)
+* [앱 내 구매는 응용 프로그램 및 추가 기능을 사용 하도록 설정](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [사용할 수 있는 추가 기능 구매를 사용 하도록 설정](enable-consumable-add-on-purchases.md)
+* [Store 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)

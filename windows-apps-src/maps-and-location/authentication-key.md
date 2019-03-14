@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지도 인증 키, 지도 컨트롤
 ms.localizationpriority: medium
 ms.openlocfilehash: 620566036dc5aa9357d10e60ec92067ba0faf130
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046163"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649558"
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 
@@ -22,7 +22,7 @@ ms.locfileid: "9046163"
 
 **팁** 앱에서 지도를 사용하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
 
--   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [유니버설 Windows 플랫폼 (UWP) 맵 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="get-a-key"></a>키 가져오기
 
@@ -31,7 +31,7 @@ ms.locfileid: "9046163"
 
 새 키를 만들려면
 
-1.  브라우저에서 Bing 지도 개발자 센터 이동 ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
+1.  브라우저에서 Bing Maps 개발자 센터로 이동 ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
 
 2.  로그인하라는 메시지가 표시되면 Microsoft 계정을 입력하고 **로그인**을 클릭합니다.
 
@@ -46,9 +46,9 @@ ms.locfileid: "9046163"
 7.  **키 만들기** 양식을 작성한 다음 **만들기**를 클릭합니다.
 
     -   **응용 프로그램 이름:** 응용 프로그램의 이름입니다.
-    -   **응용 프로그램 URL(옵션):** 응용 프로그램의 URL입니다.
-    -   **키 유형:** **기본**또는 **엔터프라이즈**를 선택합니다.
-    -   **응용 프로그램 종류:** 유니버설 Windows 앱에서 사용할 **유니버설 Windows 앱**을 선택합니다.
+    -   **응용 프로그램 URL (선택 사항):** 응용 프로그램의 URL입니다.
+    -   **키 형식:** 선택 **기본적인** 하거나 **Enterprise**합니다.
+    -   **응용 프로그램 형식:** 선택 **유니버설 Windows 앱** 유니버설 Windows 앱에서 사용 합니다.
 
     다음은 양식이 표시되는 모양의 예입니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "9046163"
 
 ### <a name="to-add-the-key-to-a-map-control"></a>지도 컨트롤에 키를 추가하려면
 
-[**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)을 인증하려면 [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036) 속성을 인증 키 값으로 설정합니다. 기본 설정에 따라 코드 또는 XAML 태그에서 이 속성을 설정할 수 있습니다. **MapControl** 사용에 대한 자세한 내용은 [2D, 3D 및 Streetside 뷰로 지도 표시](display-maps.md)를 참조하세요.
+[  **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)을 인증하려면 [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036) 속성을 인증 키 값으로 설정합니다. 기본 설정에 따라 코드 또는 XAML 태그에서 이 속성을 설정할 수 있습니다. **MapControl** 사용에 대한 자세한 내용은 [2D, 3D 및 Streetside 뷰로 지도 표시](display-maps.md)를 참조하세요.
 
 -   이 예제는 **MapServiceToken**을 코드의 인증 키 값으로 설정합니다.
 
@@ -79,7 +79,7 @@ ms.locfileid: "9046163"
 
 ### <a name="to-add-the-key-to-map-services"></a>지도 서비스에 키를 추가하려면
 
-[**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스의 서비스를 사용하려면 [**ServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn636977) 속성을 인증 키 값으로 설정합니다. 지도 서비스 사용에 대한 자세한 내용은 [경로 및 길 찾기 표시](routes-and-directions.md) 및 [지오코딩 및 리버스 지오코딩 수행](geocoding.md)을 참조하세요.
+[  **Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스의 서비스를 사용하려면 [**ServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn636977) 속성을 인증 키 값으로 설정합니다. 지도 서비스 사용에 대한 자세한 내용은 [경로 및 길 찾기 표시](routes-and-directions.md) 및 [지오코딩 및 리버스 지오코딩 수행](geocoding.md)을 참조하세요.
 
 -   이 예제는 **ServiceToken**을 코드의 인증 키 값으로 설정합니다.
 
@@ -89,8 +89,8 @@ ms.locfileid: "9046163"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Bing 맵 개발자 센터](https://www.bingmapsportal.com/)
+* [UWP 맵 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [지도 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [빌드 2015 비디오: 지도 및 위치를 활용 하 여 휴대폰, 태블릿 및 PC에서 Windows 앱에서](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP 트래픽 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)

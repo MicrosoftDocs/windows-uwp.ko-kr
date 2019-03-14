@@ -1,25 +1,25 @@
 ---
 title: 파일에 대한 기본 앱 시작
-description: 파일에 대한 기본 앱 시작 방법을 학습합니다.
+description: 파일에 대한 기본 앱을 시작하는 방법을 알아봅니다.
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
 ms.date: 07/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8e59ae5fb20ce8e1a900f7c1415a699715215e0
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925025"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57594528"
 ---
 # <a name="launch-the-default-app-for-a-file"></a>파일에 대한 기본 앱 시작
 
-**중요 API**
+**중요 한 Api**
 
 -   [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)
 
-파일에 대한 기본 앱 시작 방법을 학습합니다. 앱에서 처리할 수 없는 파일로 작업해야 하는 경우가 많습니다. 예를 들어 메일 앱은 다양한 파일 형식을 받게 되므로 기본 처리기에서 이러한 파일을 시작하는 방법이 필요합니다. 다음 단계에서는 [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) API를 사용하여 앱에서 처리할 수 없는 파일의 기본 처리기를 시작하는 방법을 보여 줍니다.
+파일에 대한 기본 앱을 시작하는 방법을 알아봅니다. 앱에서 처리할 수 없는 파일로 작업해야 하는 경우가 많습니다. 예를 들어 메일 앱은 다양한 파일 형식을 받게 되므로 기본 처리기에서 이러한 파일을 시작하는 방법이 필요합니다. 다음 단계에서는 [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) API를 사용하여 앱에서 처리할 수 없는 파일의 기본 처리기를 시작하는 방법을 보여 줍니다.
 
 ## <a name="get-the-file-object"></a>파일 개체 가져오기
 
@@ -38,7 +38,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 | 기본 시작 | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. |
 | 연결 프로그램 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | 사용자가 연결 프로그램 대화 상자를 통해 처리기를 선택하여 지정된 파일을 시작합니다. |
 | 권장 앱 폴백으로 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 처리기가 시스템에 설치되어 있지 않으면 스토어의 앱을 사용자에게 권장합니다. |
-| 원하는 유지 보기로 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465)(Windows만 해당) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 시작한 후 화면에 유지되도록 기본 설정을 지정하고 특정 창 크기를 요청합니다. [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)는 모바일 디바이스 패밀리에서 지원되지 않습니다. |
+| 원하는 유지 보기로 시작 | [**(IStorageFile, LauncherOptions) LaunchFileAsync** ](https://msdn.microsoft.com/library/windows/apps/hh701465) (Windows 전용) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 시작한 후 화면에 유지되도록 기본 설정을 지정하고 특정 창 크기를 요청합니다. [**LauncherOptions.DesiredRemainingView** ](https://msdn.microsoft.com/library/windows/apps/dn298314) 모바일 장치 제품군에서 지원 되지 않습니다. |
 
 ### <a name="default-launch"></a>기본 시작
 
@@ -287,12 +287,12 @@ void MainPage::DefaultLaunch()
 }
 ```
 
-**권장 앱 폴백으로 시작**
+**대체 (fallback)는 권장 되는 앱 시작**
 
 경우에 따라 사용자는 시작할 파일을 처리하는 앱을 설치하지 않으려 할 수 있습니다. 기본적으로 Windows는 이러한 경우 사용자에게 스토어에서 적절한 앱을 검색할 수 있는 링크를 제공합니다. 이러한 경우 사용자에게 필요한 앱에 대한 특정 권장 지침을 제공하려면 시작할 파일과 함께 이 권장 지침을 전달할 수 있습니다. 이렇게 하려면 [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482)을 스토어에서 권장하려는 앱의 패키지 패밀리 이름으로 설정하여 [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) 메서드를 호출합니다. 그런 다음 [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481)을 해당 앱의 이름으로 설정합니다. Windows에서는 이 정보를 사용하여 스토어에서 앱을 검색하는 일반적인 옵션을 스토어에서 권장 앱을 다운로드하는 특정 옵션으로 바꿉니다.
 
 > [!NOTE]
-> 앱을 권장 하려면 이러한 옵션을 둘 다 설정 해야 합니다. 하나만 설정하면 오류가 발생합니다.
+> 앱을 권장 하는 두이 옵션 모두를 설정 해야 합니다. 하나만 설정하면 오류가 발생합니다.
 
 ![.contoso 파일 실행을 위한 연결 대화 상자. .contoso는 컴퓨터에 설치된 처리기가 없으므로 대화 상자에 스토어 아이콘과 사용자에게 스토어의 올바른 처리기를 안내하는 텍스트가 포함된 옵션이 있습니다. 또한 대화 상자에는 '기타 옵션' 링크가 있습니다.](images/howdoyouwanttoopen.png)
 
@@ -434,12 +434,12 @@ void MainPage::DefaultLaunch()
 
 ### <a name="launch-with-a-desired-remaining-view-windows-only"></a>원하는 유지 보기로 시작(Windows만 해당)
 
-[**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)를 호출하는 원본 앱은 파일이 시작된 후 화면에 유지되도록 요청할 수 있습니다. 기본적으로 Windows는 파일을 처리하는 대상 앱과 원본 앱 사이에 모든 사용 가능한 공간을 동일하게 공유하려고 합니다. 원본 앱은 [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 속성을 사용하여 앱 창이 거의 모든 사용 가능한 공간을 사용하려고 한다는 것을 운영 체제에 나타냅니다. **DesiredRemainingView**를 사용하여 파일이 시작된 후 원본 앱이 화면에서 유지될 필요가 없고 대상 앱으로 완전히 대체될 수 있다는 것을 나타낼 수도 있습니다. 이 속성은 호출 앱의 기본 창 크기만 지정합니다. 화면에 동시에 나타날 수도 있는 다른 앱의 동작은 지정하지 않습니다.
+[  **LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)를 호출하는 원본 앱은 파일이 시작된 후 화면에 유지되도록 요청할 수 있습니다. 기본적으로 Windows는 파일을 처리하는 대상 앱과 원본 앱 사이에 모든 사용 가능한 공간을 동일하게 공유하려고 합니다. 원본 앱은 [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 속성을 사용하여 앱 창이 거의 모든 사용 가능한 공간을 사용하려고 한다는 것을 운영 체제에 나타냅니다. **DesiredRemainingView**를 사용하여 파일이 시작된 후 원본 앱이 화면에서 유지될 필요가 없고 대상 앱으로 완전히 대체될 수 있다는 것을 나타낼 수도 있습니다. 이 속성은 호출 앱의 기본 창 크기만 지정합니다. 화면에 동시에 나타날 수도 있는 다른 앱의 동작은 지정하지 않습니다.
 
 > [!NOTE]
-> Windows 고려 같은 여러 가지 요소 예를 들어 원본 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 화면, 화면 방향 및 등에서 앱의 수입니다. [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 작업 동작이 보장되지 않습니다.
+> Windows는 화면, 화면 방향 및 등 앱 수가 예를 들어 원본 앱의 최종 창 크기를 결정 하는 경우 여러 가지 요인, 원본 앱의 기본 설정을 고려 합니다. [  **DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
 
-**모바일 디바이스 패밀리:** [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 모바일 장치 패밀리에서 지원 되지 않습니다.
+**모바일 장치 패밀리:  **[**LauncherOptions.DesiredRemainingView** ](https://msdn.microsoft.com/library/windows/apps/dn298314) 모바일 장치 제품군에서 지원 되지 않습니다.
 
 ```csharp
 async void DefaultLaunch()
@@ -554,14 +554,14 @@ void MainPage::DefaultLaunch()
 
 ### <a name="tasks"></a>작업
 
-* [URI에 대한 기본 앱 실행](launch-default-app.md)
+* [URI에 대 한 기본 앱 시작](launch-default-app.md)
 * [파일 활성화 처리](handle-file-activation.md)
 
 ### <a name="guidelines"></a>지침
 
-* [파일 형식 및 URI에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321)
+* [파일 형식 및 Uri에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
-### <a name="reference"></a>참조
+### <a name="reference"></a>참고자료
 
 * [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)
 * [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)

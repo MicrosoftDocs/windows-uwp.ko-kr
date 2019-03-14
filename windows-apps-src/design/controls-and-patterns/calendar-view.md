@@ -1,5 +1,5 @@
 ---
-Description: A calendar view lets a user view and interact with a calendar that they can navigate by month, year, or decade.
+Description: 달력 보기를 통해 월, 연도 또는 10년 단위로 이동하면서 달력을 보고 조작할 수 있습니다.
 title: 달력 보기
 ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
 label: Calendar view
@@ -13,17 +13,17 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 9214ec2f2a1e352f94205675f2200920b8a00bd2
-ms.sourcegitcommit: a60ab85e9f2f9690e0141050ec3aa51f18ec61ec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "9037255"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57654518"
 ---
 # <a name="calendar-view"></a>달력 보기
 
 달력 보기를 통해 월, 연도 또는 10년 단위로 이동하면서 달력을 보고 조작할 수 있습니다. 사용자는 단일 날짜 또는 날짜 범위를 선택할 수 있습니다. 선택 화면이 없고 달력이 항상 표시됩니다. 
 
-> **중요 API**:  [CalendarView 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx), [SelectedDatesChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx)
+> **중요 한 Api**:  [CalendarView 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx), [SelectedDatesChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -42,8 +42,8 @@ ms.locfileid: "9037255"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/CalendarView">앱을 열고 작동 중인 CalendarView를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -80,7 +80,7 @@ calendarView1.SelectedDates.Add(new DateTime(1977, 1, 5));
 
 달력 표에서 선택한 날짜를 클릭 또는 탭하여 선택 취소할 수 있습니다.
 
-[SelectedDates](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) 컬렉션이 변경되었을 때 알림을 받도록 [SelectedDatesChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) 이벤트를 처리할 수 있습니다.
+[SelectedDates](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) 컬렉션이 변경되었을 때 알림을 받도록 [SelectedDatesChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) 이벤트를 처리할 수 있습니다.
 
 > [!NOTE]
 > 날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
@@ -134,7 +134,7 @@ calendarView1.MaxDate = new DateTime(2099, 12, 31);
 
 [CalendarViewDayItem.SetDensityColors](https://msdn.microsoft.com/library/windows/apps/xaml/dn890067.aspx) 메서드를 호출하여 하루의 이벤트 밀도에 대한 상황별 정보를 표시할 수 있습니다. 각 날짜에 대해 0에서 10 사이 밀도 막대를 표시하고 각 막대의 색을 설정할 수 있습니다. 
 
-달력의 일부 날짜 항목은 다음과 같습니다. 1일과 2일은 검게 표시됩니다. 2일, 3일 및 4일은 다양한 밀도 막대 집합을 가집니다.
+달력의 일부 날짜 항목은 다음과 같습니다. 1일과 2일이 블랙아웃됩니다. 2일, 3일 및 4일에 다양한 밀도 막대가 설정되었습니다.
 
 ![밀도 막대가 있는 달력 날짜](images/calendar-view-density-bars.png)
 

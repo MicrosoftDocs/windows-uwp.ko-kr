@@ -4,32 +4,32 @@ title: 백그라운드 네트워크 통신
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
 ms.date: 06/14/2018
 ms.topic: article
-keywords: Windows 10, uwp
+keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 20a70263b0e97ce903d2db83f9e70152d8fe3a72
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9046087"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57600218"
 ---
 # <a name="network-communications-in-the-background"></a>백그라운드 네트워크 통신
-네트워크 통신을 포그라운드에 없을 때 계속 해 서 앱 백그라운드 작업 및 이러한 두 옵션 중 하나를 사용할 수 있습니다.
-- 소켓 브로커. 앱 사용 하는 경우 소켓 오랜 기간 연결에 대 한 다음, 포그라운드를 벗어날 때, 시스템 소켓 브로커에 소켓의 소유권을 위임할 수 것입니다. 그런 다음 브로커:; 소켓에 트래픽이 도착 하면 앱을 활성화 합니다. 소유권을 다시 앱입니다. 한 앱에는 다음 도착 하는 트래픽을 처리 합니다.
-- 컨트롤 채널 트리거 합니다. 
+포그라운드에 없을 때 네트워크 통신을 계속 하려면 앱 백그라운드 작업 및 이러한 두 옵션 중 하나를 사용할 수 있습니다.
+- 소켓 브로커. 앱에서는 소켓 장기 연결에 대 한 다음 전경 떠날 때 경우에 시스템 소켓 브로커에 소켓의 소유권을 위임할 수 것. 그런 다음 broker: 소켓;에 트래픽이 도착 하는 경우 앱을 활성화 앱에 다시 소유권을 전송합니다. 앱에는 다음 도착 트래픽을 처리 합니다.
+- 컨트롤 채널 트리거입니다. 
 
 ## <a name="performing-network-operations-in-background-tasks"></a>백그라운드 작업으로 네트워크 작업 수행
-- [SocketActivityTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.socketactivitytrigger)를 사용하여 패킷이 수신되고 지속 시간이 짧은 작업을 수행해야 하는 경우 백그라운드 작업을 활성화합니다. 작업을 수행한 후 전원을 절약 하기 위해 백그라운드 작업을 종료 해야 합니다.
+- [SocketActivityTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.socketactivitytrigger)를 사용하여 패킷이 수신되고 지속 시간이 짧은 작업을 수행해야 하는 경우 백그라운드 작업을 활성화합니다. 작업을 수행한 후 전원을 절약 하기 위해 백그라운드 태스크가 종료 해야 합니다.
 - [ControlChannelTrigger](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)를 사용하여 패킷이 수신되고 지속 시간이 긴 작업을 수행해야 하는 경우 백그라운드 작업을 활성화합니다.
 
 **네트워크 관련 조건 및 플래그**
 
 - 백그라운드 작업에 **InternetAvailable** 조건을 추가[BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)하여 네트워크 스택이 실행될 때까지 백그라운드 작업의 트리거를 지연시킵니다. 네트워크가 가동되어야 백그라운드 작업이 실행되기 때문에 이 조건을 적용하면 전원이 절약됩니다. 이 조건은 실시간 정품 인증을 제공하지 않습니다.
 
-어떤 트리거를 사용하든, 백그라운드 작업에 [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder)를 설정하여 백그라운드 작업이 실행되는 동안 네트워크 가동을 유지해야 합니다. 이렇게 하면 디바이스가 연결된 대기 상태 모드인 경우에도 작업 실행 중 네트워크를 계속 유지하도록 백그라운드 작업 인프라에 지시할 수 있습니다. 백그라운드 작업 **IsNetworkRequested**을 사용 하지 않는 한 다음 백그라운드 작업이 네트워크 연결 된 대기 상태 모드 (예: 휴대폰 화면이 꺼져 있는 경우)에 액세스할 수 없으므로 되지 않습니다.
+어떤 트리거를 사용하든, 백그라운드 작업에 [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder)를 설정하여 백그라운드 작업이 실행되는 동안 네트워크 가동을 유지해야 합니다. 이렇게 하면 디바이스가 연결된 대기 상태 모드인 경우에도 작업 실행 중 네트워크를 계속 유지하도록 백그라운드 작업 인프라에 지시할 수 있습니다. 백그라운드 작업을 사용 하지 않는 경우 **IsNetworkRequested**, 백그라운드 작업 (예: 휴대폰의 화면 해제 된 경우) 연결 된 대기 모드에 있을 때 네트워크에 액세스할 수 없습니다.
 
 ## <a name="socket-broker-and-the-socketactivitytrigger"></a>소켓 브로커 및 SocketActivityTrigger
-앱에서 [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 연결을 사용하는 경우 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) 및 소켓 브로커를 사용하여 앱이 전경에 없을 때 앱에 대한 트래픽이 도착하면 알림을 받도록 해야 합니다.
+앱에서 [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 연결을 사용하는 경우 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) 및 소켓 브로커를 사용하여 앱이 포그라운드에 없을 때 앱에 대한 트래픽이 도착하면 알림을 받도록 해야 합니다.
 
 앱이 활성 상태가 아닐 때 앱이 소켓에서 데이터를 수신하고 수신한 데이터를 처리하도록 하려면 앱은 시작 시 일회성 설정 작업을 수행한 다음 비활성 상태로 전환할 때 소켓 브로커에 소켓 소유권을 이전해야 합니다.
 
@@ -59,9 +59,9 @@ ms.locfileid: "9046087"
 소켓이 올바르게 설정되면 앱이 일시 중단되려고 할 때 소켓에서 **TransferOwnership**을 호출하여 소켓 브로커로 이전합니다. 브로커는 소켓을 모니터링하고 데이터가 수신되면 백그라운드 작업을 활성화합니다. 다음 예제에는 **StreamSocketListener** 소켓에 대해 이전을 수행하는 유틸리티 **TransferOwnership** 함수가 포함되어 있습니다. 여러 유형의 소켓이 각각 고유한 **TransferOwnership** 메서드를 가지고 있으므로 소유권을 이전하는 소켓에 적합한 메서드를 호출해야 합니다.) 코드에는 사용하는 각 소켓 유형에 대해 하나의 구현으로 오버로드된 **TransferOwnership** 도우미가 포함되어 있을 수 있습니다. 따라서 **OnSuspending** 코드는 계속 읽기 쉽게 유지됩니다.
 
 앱에서 소켓의 소유권을 소켓 브로커로 이전하고 다음 메서드 중 적절한 메서드를 사용하여 백그라운드 작업에 대한 ID를 전달합니다.
--   [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256) 메서드 중 하나
--   [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433) 메서드 중 하나
--   [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407) 메서드 중 하나
+-   [  **DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256) 메서드 중 하나
+-   [  **StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433) 메서드 중 하나
+-   [  **StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407) 메서드 중 하나
 
 ```csharp
 
@@ -150,22 +150,22 @@ case SocketActivityTriggerReason.SocketClosed:
   deferral.Complete();
 ```
 
-[**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) 및 소켓 브로커 사용을 보여 주는 전체 샘플은 [SocketActivityStreamSocket 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620606)을 참조하세요. 소켓 초기화는 Scenario1\_Connect.xaml.cs에서 수행되며 백그라운드 작업 구현은 SocketActivityTask.cs에서 수행됩니다.
+[  **SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) 및 소켓 브로커 사용을 보여 주는 전체 샘플은 [SocketActivityStreamSocket 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620606)을 참조하세요. Scenario1에서 소켓의 초기화가 수행\_SocketActivityTask.cs Connect.xaml.cs, 및 백그라운드 작업 구현 중인 합니다.
 
 이 항목에서 설명한 대로 작업을 수행하기 위해 샘플에서는 새 소켓을 만들거나 기존 소켓을 획득하자마자 **OnSuspending** 이벤트 처리기를 사용하는 대신 **TransferOwnership**을 호출합니다. 이는 샘플은 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 설명하는 데 중점을 두고 있으며 실행되는 동안 다른 활동에 대해 소켓을 사용하지 않기 때문입니다. 앱이 더 복잡해질 수 있으며 **OnSuspending**을 호출하는 시기를 결정할 때 **TransferOwnership**을 사용해야 합니다.
 
 ## <a name="control-channel-triggers"></a>컨트롤 채널 트리거
-먼저 CCT(컨트롤 채널 트리거)를 적절하게 사용하고 있는지 확인합니다. [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 연결을 사용 중인 경우 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용 하는 하도록 권장 합니다. **StreamSocket**에 대해 CCT를 사용할 수 있지만 이러한 CCT는 더 많은 리소스를 사용하고 연결된 대기 상태 모드에서 작동하지 않을 수 있습니다.
+먼저 CCT(컨트롤 채널 트리거)를 적절하게 사용하고 있는지 확인합니다. 사용 중인 경우 [ **DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)하십시오 [ **StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882), 또는 [ **StreamSocketListener** ](https://msdn.microsoft.com/library/windows/apps/br226906) 연결, 그런 다음 사용할 것을 권장 [ **SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)합니다. **StreamSocket**에 대해 CCT를 사용할 수 있지만 이러한 CCT는 더 많은 리소스를 사용하고 연결된 대기 상태 모드에서 작동하지 않을 수 있습니다.
 
-WebSockets, [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)또는 [**Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient)를 사용 하는 경우 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)사용 해야 합니다.
+Websocket을 사용 하는 경우 [ **IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)하십시오 [ **System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639), 또는 [  **Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient)를 사용 해야 합니다 [ **ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)합니다.
 
 ## <a name="controlchanneltrigger-with-websockets"></a>ControlChannelTrigger와 WebSockets
-[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. **MessageWebSocket** 또는 **StreamWebSocket**을 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. 또한 이러한 고려 사항은 **StreamWebSocket**에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다. **MessageWebSocket**에서 패킷을 수신하는 요청은 영향을 받지 않습니다.
+[  **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. **MessageWebSocket** 또는 **StreamWebSocket**을 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. 또한 이러한 고려 사항은 **StreamWebSocket**에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다. **MessageWebSocket**에서 패킷을 수신하는 요청은 영향을 받지 않습니다.
 
-[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 때는 다음과 같은 사용 패턴과 모범 사례를 따라야 합니다.
+[  **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 때는 다음과 같은 사용 패턴과 모범 사례를 따라야 합니다.
 
 -   중요한 소켓 수신은 항상 알림으로 전달되어야 합니다. 그래야만 푸시 알림 작업이 발생할 수 있습니다.
--   WebSocket 프로토콜은 keep-alive 메시지에 대한 표준 모델을 정의합니다. [**WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531) 클래스는 클라이언트에서 시작한 WebSocket 프로토콜 keep-alive 메시지를 사용자에게 보낼 수 있습니다. **WebSocketKeepAlive** 클래스는 앱에 의해 KeepAliveTrigger에 대한 TaskEntryPoint로 등록되어야 합니다.
+-   WebSocket 프로토콜은 keep-alive 메시지에 대한 표준 모델을 정의합니다. [  **WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531) 클래스는 클라이언트에서 시작한 WebSocket 프로토콜 keep-alive 메시지를 사용자에게 보낼 수 있습니다. **WebSocketKeepAlive** 클래스는 앱에 의해 KeepAliveTrigger에 대한 TaskEntryPoint로 등록되어야 합니다.
 
 일부 고려 사항은 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다. 특히 **StreamWebSocket**을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 앱은 읽기를 처리하기 위해 C# 및 VB.NET의 **await** 모델이나 C++의 Tasks 대신 원시 비동기 패턴을 사용해야 합니다. 원시 비동기 패턴은 이 섹션의 뒷부분에 나오는 코드 샘플에서 확인할 수 있습니다.
 
@@ -259,9 +259,9 @@ public void OnDataReadCompletion(uint bytesRead, DataReader readPacket)
 
 Websockets에 대한 추가 정보는 keep-alive 처리기입니다. WebSocket 프로토콜은 keep-alive 메시지에 대한 표준 모델을 정의합니다.
 
-[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 사용할 경우 [**WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531) 클래스 인스턴스를 KeepAliveTrigger에 대한 [**TaskEntryPoint**](https://msdn.microsoft.com/library/windows/apps/br224774)로 등록해야 앱이 일시 중단되지 않고 keep-alive 메시지를 주기적으로 서버(원격 끝점)에 전송할 수 있습니다. 이 작업은 패키지 매니페스트에서뿐 아니라 라운드 등록 앱 코드의 일부로도 수행해야 합니다.
+[  **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 사용할 경우 [**WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531) 클래스 인스턴스를 KeepAliveTrigger에 대한 [**TaskEntryPoint**](https://msdn.microsoft.com/library/windows/apps/br224774)로 등록해야 앱이 일시 중단되지 않고 keep-alive 메시지를 주기적으로 서버(원격 끝점)에 전송할 수 있습니다. 이 작업은 패키지 매니페스트에서뿐 아니라 라운드 등록 앱 코드의 일부로도 수행해야 합니다.
 
-[**Windows.Sockets.WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531)의 이 작업 진입점을 다음 두 곳에서 지정해야 합니다.
+[  **Windows.Sockets.WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531)의 이 작업 진입점을 다음 두 곳에서 지정해야 합니다.
 
 -   KeepAliveTrigger 트리거를 만들 때 원본 코드에서(아래 예제 참조)
 -   앱 패키지 매니페스트의 keepalive 백그라운드 작업 선언에서
@@ -425,12 +425,12 @@ async Task<bool> RegisterWithCCTHelper(string serverUri)
 }
 ```
 
-[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [ControlChannelTrigger StreamWebSocket 샘플](https://go.microsoft.com/fwlink/p/?linkid=251232)을 참조하세요.
+[  **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [ControlChannelTrigger StreamWebSocket 샘플](https://go.microsoft.com/fwlink/p/?linkid=251232)을 참조하세요.
 
 ## <a name="controlchanneltrigger-with-httpclient"></a>ControlChannelTrigger와 HttpClient
 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. 또한 이러한 고려 사항은 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다.
 
-**참고** [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) SSL을 사용 하는 네트워크 트리거 기능 및 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)사용 하 여 현재 지원 되지 않습니다.
+**참고** SSL을 사용하는   [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)는 네트워크 트리거 기능 및 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)를 사용하여 현재 지원되지 않습니다.
  
 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 때는 다음과 같은 사용 패턴과 모범 사례를 따라야 합니다.
 
@@ -576,15 +576,15 @@ public string ReadResponse(Task<HttpResponseMessage> httpResponseTask)
 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [ControlChannelTrigger HttpClient 샘플](https://go.microsoft.com/fwlink/p/?linkid=258323)을 참조하세요.
 
 ## <a name="controlchanneltrigger-with-ixmlhttprequest2"></a>ControlChannelTrigger와 IXMLHttpRequest2
-[**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. **IXMLHTTPRequest2**를 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. **ControlChannelTrigger**를 사용하면 **IXMLHTTPRequest2**에서 HTTP 요청을 보내거나 받는 요청이 처리되는 방식에 영향을 주지 않습니다.
+[  **IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. **IXMLHTTPRequest2**를 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. **ControlChannelTrigger**를 사용하면 **IXMLHTTPRequest2**에서 HTTP 요청을 보내거나 받는 요청이 처리되는 방식에 영향을 주지 않습니다.
 
-[**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 사용 패턴 및 모법 사례
+[  **IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 사용 패턴 및 모법 사례
 
--   전송으로 사용될 때 [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) 개체는 하나의 요청/응답 수명 주기만 갖습니다. [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 개체와 함께 사용하면 한 번 **ControlChannelTrigger** 개체를 만들어 설정한 다음 새 **IXMLHTTPRequest2** 개체와 연결될 때마다 [**UsingTransport**](https://msdn.microsoft.com/library/windows/apps/hh701175) 메서드를 반복적으로 호출하는 데 편리합니다. 앱이 할당된 리소스 제한을 초과하지 않으려면 새 **IXMLHTTPRequest2** 개체를 제공하기 전에 이전 **IXMLHTTPRequest2** 개체를 삭제해야 합니다.
+-   전송으로 사용될 때 [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) 개체는 하나의 요청/응답 수명 주기만 갖습니다. [  **ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 개체와 함께 사용하면 한 번 **ControlChannelTrigger** 개체를 만들어 설정한 다음 새 **IXMLHTTPRequest2** 개체와 연결될 때마다 [**UsingTransport**](https://msdn.microsoft.com/library/windows/apps/hh701175) 메서드를 반복적으로 호출하는 데 편리합니다. 앱이 할당된 리소스 제한을 초과하지 않으려면 새 **IXMLHTTPRequest2** 개체를 제공하기 전에 이전 **IXMLHTTPRequest2** 개체를 삭제해야 합니다.
 -   앱은 [**Send**](https://msdn.microsoft.com/library/windows/desktop/hh831164) 메서드를 호출하기 전에 [**SetProperty**](https://msdn.microsoft.com/library/windows/desktop/hh831167) 및 [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/desktop/hh831168) 메서드를 호출하여 HTTP 전송을 설정해야 합니다.
 -   앱은 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 전송을 만들기 전에 초기 [**Send**](https://msdn.microsoft.com/library/windows/desktop/hh831164) 요청을 만들어 전송을 테스트하고 적절하게 설정해야 합니다. 앱에서 전송이 적절히 설정되었다고 판단하면 [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) 개체는 **ControlChannelTrigger**와 함께 사용할 전송 개체로 구성될 수 있습니다. 이 프로세스는 일부 시나리오에서 전송을 통해 설정된 연결이 끊어지는 것을 방지하기 위해 설계되었습니다. SSL 인증서를 사용할 경우, 또는 선택할 수 있는 인증서가 여러 개인 경우 PIN 입력에 사용할 대화 상자가 앱에 필요할 수 있습니다. 또한 프록시 인증 및 서버 인증이 필요할 수 있습니다. 프록시 또는 서버 인증이 만료되면 연결이 닫힙니다. 앱에서 이러한 인증 만료 문제를 처리할 수 있는 방법은 타이머를 설정하는 것입니다. HTTP 리디렉션이 필요한 경우에는 두 번째 연결을 안정적으로 설정할 수 있는지 여부가 확실치 않습니다. 초기 테스트 요청은 **ControlChannelTrigger** 개체와 함께 전송으로서 **IXMLHTTPRequest2** 개체를 사용하기 전에 앱이 가장 최근에 리디렉션된 URL을 사용할 수 있음을 보장합니다.
 
-[**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [IXMLHTTPRequest2와 함께 ControlChannelTrigger 사용 샘플](https://go.microsoft.com/fwlink/p/?linkid=258538)(영문)을 참조하세요.
+[  **IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [IXMLHTTPRequest2와 함께 ControlChannelTrigger 사용 샘플](https://go.microsoft.com/fwlink/p/?linkid=258538)(영문)을 참조하세요.
 
 ## <a name="important-apis"></a>중요 API
 * [SocketActivityTrigger](/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger)

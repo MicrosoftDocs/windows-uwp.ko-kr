@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 208a61b565c0522d3e9ce88f3938f57dfa1fbddd
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8945198"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57644848"
 ---
 # <a name="variable-photo-sequence"></a>가변 사진 시퀀스
 
@@ -40,7 +40,7 @@ HDR 이미지를 캡처하지만 고유한 처리 알고리즘을 구현하지 �
 
 [!code-cs[IsVPSSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetIsVPSSupported)]
 
-가변 사진 시퀀스 컨트롤러에서 [**FrameControlCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652548) 개체를 가져옵니다. 이 개체에는 모든 설정에 대해 사진 시퀀스의 프레임별로 구성할 수 있는 속성이 있습니다. 다음이 포함됩니다.
+가변 사진 시퀀스 컨트롤러에서 [**FrameControlCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652548) 개체를 가져옵니다. 이 개체에는 모든 설정에 대해 사진 시퀀스의 프레임별로 구성할 수 있는 속성이 있습니다. 확인할 수 있습니다.
 
 -   [**Exposure**](https://msdn.microsoft.com/library/windows/apps/dn652552)
 -   [**ExposureCompensation**](https://msdn.microsoft.com/library/windows/apps/dn652560)
@@ -57,7 +57,7 @@ HDR 이미지를 캡처하지만 고유한 처리 알고리즘을 구현하지 �
 
 [!code-cs[InitFrameControllers](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitFrameControllers)]
 
-[**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) 개체를 만들어 캡처된 이미지에 대해 사용하려는 인코딩을 설정합니다. 정적 메서드 [**MediaCapture.PrepareVariablePhotoSequenceCaptureAsync**](https://msdn.microsoft.com/library/windows/apps/dn608097)를 호출하고 인코딩 속성을 전달합니다. 이 메서드는 [**VariablePhotoSequenceCapture**](https://msdn.microsoft.com/library/windows/apps/dn652564) 개체를 반환합니다. 마지막으로, [**PhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/dn652573) 및 [**Stopped**](https://msdn.microsoft.com/library/windows/apps/dn652585) 이벤트에 대한 이벤트 처리기를 등록합니다.
+[  **ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) 개체를 만들어 캡처된 이미지에 대해 사용하려는 인코딩을 설정합니다. 정적 메서드 [**MediaCapture.PrepareVariablePhotoSequenceCaptureAsync**](https://msdn.microsoft.com/library/windows/apps/dn608097)를 호출하고 인코딩 속성을 전달합니다. 이 메서드는 [**VariablePhotoSequenceCapture**](https://msdn.microsoft.com/library/windows/apps/dn652564) 개체를 반환합니다. 마지막으로, [**PhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/dn652573) 및 [**Stopped**](https://msdn.microsoft.com/library/windows/apps/dn652585) 이벤트에 대한 이벤트 처리기를 등록합니다.
 
 [!code-cs[PrepareVPS](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPrepareVPS)]
 
@@ -81,7 +81,7 @@ HDR 이미지를 캡처하지만 고유한 처리 알고리즘을 구현하지 �
 
 ## <a name="update-frame-controllers"></a>프레임 컨트롤러 업데이트
 
-다른 프레임당 설정을 사용하여 다른 가변 사진 시퀀스 캡처를 수행하려는 경우 **VariablePhotoSequenceCapture**를 완전히 다시 초기화할 필요가 없습니다. [**DesiredFrameControllers**](https://msdn.microsoft.com/library/windows/apps/dn640574) 컬렉션을 해제하고 새 프레임 컨트롤러를 추가하거나 기존 프레임 컨트롤러 값을 수정할 수 있습니다. 다음 예제에서는 [**FrameFlashCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652657) 개체를 검사하여 현재 디바이스가 가변 사진 시퀀스 프레임에 대해 플래시 및 플래시 전원을 지원하는지 확인합니다. 지원하는 경우 각 프레임은 100% 전원으로 플래시를 사용하도록 업데이트됩니다. 각 프레임에 대해 이전에 설정된 노출 보정 값은 여전히 활성 상태입니다.
+다른 프레임당 설정을 사용하여 다른 가변 사진 시퀀스 캡처를 수행하려는 경우 **VariablePhotoSequenceCapture**를 완전히 다시 초기화할 필요가 없습니다. [  **DesiredFrameControllers**](https://msdn.microsoft.com/library/windows/apps/dn640574) 컬렉션을 해제하고 새 프레임 컨트롤러를 추가하거나 기존 프레임 컨트롤러 값을 수정할 수 있습니다. 다음 예제에서는 [**FrameFlashCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652657) 개체를 검사하여 현재 디바이스가 가변 사진 시퀀스 프레임에 대해 플래시 및 플래시 전원을 지원하는지 확인합니다. 지원하는 경우 각 프레임은 100% 전원으로 플래시를 사용하도록 업데이트됩니다. 각 프레임에 대해 이전에 설정된 노출 보정 값은 여전히 활성 상태입니다.
 
 [!code-cs[UpdateFrameControllers](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUpdateFrameControllers)]
 
@@ -94,7 +94,7 @@ HDR 이미지를 캡처하지만 고유한 처리 알고리즘을 구현하지 �
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

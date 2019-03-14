@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, xaml 상호 운용성
 ms.localizationpriority: medium
 ms.openlocfilehash: 34fb65ec53f6addccf8723b451d333d602c17908
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9046213"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57604708"
 ---
-# <a name="directx-and-xaml-interop"></a>DirectX 및 XAML 상호 운용성
+# <a name="directx-and-xaml-interop"></a>DirectX 및 XAML interop
 
 
 
@@ -21,13 +21,13 @@ UWP(유니버설 Windows 플랫폼) 게임 또는 앱에서 XAML(Extensible Appl
 
 앱이 주로 2D 렌더링에 중점을 두는 경우 [Win2D](https://github.com/microsoft/win2d) Windows 런타임 라이브러리를 사용하려고 할 수 있습니다. 이 라이브러리는 Microsoft에서 유지 관리하며, 핵심 Direct2D 기술을 기반으로 합니다. 이 라이브러리는 2D 그래픽을 구현하는 사용 패턴을 크게 간소화하며 이 문서에 설명된 기법 중 일부에 대한 유용한 추상화를 포함하고 있습니다. 자세한 내용은 프로젝트 페이지를 참조하세요. 이 문서에서는 Win2D를 사용*하지* 않도록 선택한 앱 개발자를 위한 지침을 다룹니다.
 
-> **참고**DirectX Api는 일반적으로 VisualC + + 구성 요소 확장을 사용 하므로 Windows 런타임 형식으로 정의 되지 않습니다 (C + + CX) DirectX와 상호 운용 되는 XAML UWP 구성 요소를 개발 하는 데 있습니다. 또한 DirectX 호출을 개별 Windows 런타임 메타데이터 파일에 래핑할 경우 DirectX를 사용하는 C# 및 XAML로 UWP 앱을 만들 수 있습니다.
+> **참고**  DirectX Api 정의 되어 있지 않은 Windows 런타임 형식으로 일반적으로 Visual c + + 구성 요소 확장을 사용 하므로 (C + + CX) DirectX를 사용 하 여 상호 운용 되는 XAML UWP 구성 요소를 개발할 수 있습니다. 또한 DirectX 호출을 개별 Windows 런타임 메타데이터 파일에 래핑할 경우 DirectX를 사용하는 C# 및 XAML로 UWP 앱을 만들 수 있습니다.
 
  
 
 ## <a name="xaml-and-directx"></a>XAML 및 DirectX
 
-DirectX는 각각 2D와 3D 그래픽에 대한 강력한 라이브러리인 Direct2D 및 Microsoft Direct3D를 제공합니다. XAML이 기본적인 2D 기능 및 효과, 모델링 및 게임 등의 여러 앱을 제공하지만 보다 복잡한 그래픽 지원이 필요합니다. 따라서 Direct2D 및 Direct3D를 사용하여 그래픽 전체 또는 일부를 렌더링하고 XAML을 사용하여 그 외 모든 작업을 수행할 수 있습니다.
+DirectX는 2D 및 3D 그래픽에 대 한 두 가지 강력한 라이브러리를 제공합니다. Direct2D 및 Microsoft Direct3D 합니다. XAML이 기본적인 2D 기능 및 효과, 모델링 및 게임 등의 여러 앱을 제공하지만 보다 복잡한 그래픽 지원이 필요합니다. 따라서 Direct2D 및 Direct3D를 사용하여 그래픽 전체 또는 일부를 렌더링하고 XAML을 사용하여 그 외 모든 작업을 수행할 수 있습니다.
 
 사용자 지정 XAML 및 DirectX interop을 구현하는 경우 다음의 두 개념에 대해 알고 있어야 합니다.
 
@@ -53,7 +53,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
 1.  [SurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702041) 생성자에 높이와 너비를 전달하여 공유 표면의 크기를 정의합니다. 표면에 알파(불투명도) 지원이 필요한지 여부도 지정할 수 있습니다.
 
-    예를 들면 다음과 같습니다.
+    예를 들어 다음과 같은 가치를 제공해야 합니다.
 
     `SurfaceImageSource^ surfaceImageSource = ref new SurfaceImageSource(400, 300);`
 
@@ -77,7 +77,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
     > [!NOTE]
     > 백그라운드 스레드에서 **SurfaceImageSource**에 그릴 경우 DXGI 디바이스에 다중 스레드 액세스가 활성화되어 있는지도 확인해야 합니다. 이는 백그라운드 스레드에서 그릴 경우에만 성능을 위해 취해야 하는 조치입니다.
 
-    예를 들면 다음과 같습니다.
+    예를 들어 다음과 같은 가치를 제공해야 합니다.
 
     ```cpp
     Microsoft::WRL::ComPtr<ID3D11Device> m_d3dDevice;
@@ -180,7 +180,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
 다음은 코드 숨김으로 [VirtualSurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702050) 개체를 만들고 업데이트하는 기본 프로세스입니다.
 
-1.  원하는 크기로 [VirtualSurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702050)의 인스턴스를 만듭니다. 예제:
+1.  원하는 크기로 [VirtualSurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702050)의 인스턴스를 만듭니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
     ```cpp
     VirtualSurfaceImageSource^ virtualSIS = 
@@ -212,7 +212,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
     > [!NOTE]
     > 백그라운드 스레드에서 **VirtualSurfaceImageSource**에 그릴 경우 DXGI 디바이스에 다중 스레드 액세스가 활성화되어 있는지도 확인해야 합니다. 이는 백그라운드 스레드에서 그릴 경우에만 성능을 위해 취해야 하는 조치입니다.
 
-    예제:
+    예를 들어 다음과 같은 가치를 제공해야 합니다.
 
     ```cpp
     Microsoft::WRL::ComPtr<ID3D11Device> m_d3dDevice;
@@ -369,9 +369,9 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 성능을 보장하기 위해, [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834) 유형에는 특정 제한이 있습니다.
 
 -   앱별 [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834) 인스턴스는 4개 이하입니다.
--   DirectX 스왑 체인의 높이 및 너비를 ([DXGI\_SWAP\_CHAIN\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528)에서) 스왑 체인 요소의 현재 크기로 설정해야 합니다. 그러지 않으면 (**DXGI\_SCALING\_STRETCH**를 사용하여) 디스플레이 콘텐츠의 크기가 조정됩니다.
--   DirectX 스왑 체인의 크기 조정 모드를 ([DXGI\_SWAP\_CHAIN\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528)에서) **DXGI\_SCALING\_STRETCH**로 설정해야 합니다.
--   DirectX 스왑 체인의 알파 모드를 ([DXGI\_SWAP\_CHAIN\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528)에서) **DXGI\_ALPHA\_MODE\_PREMULTIPLIED**로 설정하면 안 됩니다.
+-   DirectX 스왑 체인의 높이 너비를 설정 해야 합니다 (에서 [DXGI\_스왑\_체인\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528)) 스왑 체인 요소의 현재 차원에 있습니다. 콘텐츠 표시는 크기가 조정 하지 않으면 (사용 하 여 **DXGI\_크기 조정\_STRETCH**) 맞지 않습니다.
+-   DirectX 스왑 체인의 크기 조정 모드를 설정 해야 합니다 (에서 [DXGI\_스왑\_체인\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528))를 **DXGI\_배율\_STRETCH**합니다.
+-   DirectX 스왑 체인의 알파 모드를 설정할 수 없습니다 (에서 [DXGI\_스왑\_체인\_DESC1](https://msdn.microsoft.com/library/windows/desktop/hh404528))를 **DXGI\_알파\_모드\_ 미리 곱한**합니다.
 -   [IDXGIFactory2::CreateSwapChainForComposition](https://msdn.microsoft.com/library/windows/desktop/hh404558)을 호출하여 DirectX 스왑 체인을 만들어야 합니다.
 
 앱의 요구 사항에 따라 [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834)을 업데이트합니다. 이때 XAML 프레임워크의 업데이트는 대상이 아닙니다. **SwapChainPanel**의 업데이트를 XAML 프레임워크의 해당 업데이트와 동기화해야 하면 [Windows::UI::Xaml::Media::CompositionTarget::Rendering](https://msdn.microsoft.com/library/windows/apps/br228127) 이벤트를 등록합니다. 그렇지 않을 경우 **SwapChainPanel** 패널을 업데이트하는 스레드가 아닌 스레드에서 XAML 요소를 업데이트하려면 스레드 교차 문제를 고려해야 합니다.
@@ -465,7 +465,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 * [VirtualSurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702050)
 * [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834)
 * [ISwapChainPanelNative](https://msdn.microsoft.com/library/windows/desktop/dn302143)
-* [Direct3D 11의 프로그래밍 지침](https://msdn.microsoft.com/library/windows/desktop/ff476345)
+* [Direct3D 용 프로그래밍 가이드 11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
 
  
 

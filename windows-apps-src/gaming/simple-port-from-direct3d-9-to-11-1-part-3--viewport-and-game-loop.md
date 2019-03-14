@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 포팅, 게임 루프, direct3d 9, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 2087959bc29d2b2b02cdc9a2f373a8b62ea8c25a
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8941636"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627988"
 ---
 # <a name="port-the-game-loop"></a>게임 루프 포팅
 
@@ -19,25 +19,25 @@ ms.locfileid: "8941636"
 
 **요약**
 
--   [1부: Direct3D 11 초기화](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)
--   [2부: 렌더링 프레임워크 변환](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
+-   [1 부: 초기화 Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)
+-   [2 부: 렌더링 프레임 워크를 변환 합니다.](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
 -   3부: 게임 루프 포팅
 
 
-[**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 작성하여 전체 화면 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다. [DirectX 11 및 UWP로 간단한 Direct3D 9 앱 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습의 3부.
+[  **IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 작성하여 전체 화면 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다. [DirectX 11 및 UWP로 간단한 Direct3D 9 앱 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습의 3부.
 
 ## <a name="create-a-window"></a>창 만들기
 
 
 Direct3D 9 뷰포트를 사용하여 바탕 화면 창을 설정하려면 데스크톱 앱에 대한 기존의 앱 프레임 워크를 구현해야 했습니다. HWND를 만들고, 창 크기를 설정하고, 창 처리 콜백을 제공하고, 이 창이 표시되게 하는 등의 작업을 수행해야 했습니다.
 
-UWP 환경에는 훨씬 간단한 시스템이 있습니다. 기존의 창을 설정하는 대신 DirectX를 사용하는 Microsoft Store 게임은 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 구현합니다. DirectX 앱과 게임이 앱 컨테이너 내 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)에서 직접 실행되도록 하기 위해 이 인터페이스가 존재합니다.
+UWP 환경에는 훨씬 간단한 시스템이 있습니다. 기존의 창을 설정하는 대신 DirectX를 사용하는 Microsoft Store 게임은 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 구현합니다. 앱 컨테이너 내 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)에서 직접 실행하도록 DirectX 앱 및 게임에 대한 이 인터페이스가 존재합니다.
 
-> **참고**  Windows는 원본 응용 프로그램 개체 및 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)등의 리소스에 관리 되는 포인터를 제공 합니다. [**개체 연산자 (^)에 대 한 핸들**] 확인https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **참고**    Windows 원본 응용 프로그램 개체와 같은 리소스에 대 한 관리 되는 포인터를 제공 하며 [ **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)합니다. 참조 [**개체 연산자 (^)에 대 한 핸들**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx합니다.
 
  
 
-"기본" 클래스는 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)에서 상속하고 5개 **IFrameworkView** 메서드([**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 및 [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523))를 구현해야 합니다. (기본적으로) 게임에 있는 위치인 **IFrameworkView**를 만들 뿐만 아니라, **IFrameworkView**의 인스턴스를 만드는 팩터리 클래스를 구현해야 합니다. 게임에는 여전히 **main()** 이라는 메서드가 있지만, 기본 클래스가 수행할 수 있는 모든 것은 팩터리를 사용하여 **IFrameworkView** 인스턴스를 만드는 것입니다.
+"Main" 클래스에서 상속 해야 [ **IFrameworkView** ](https://msdn.microsoft.com/library/windows/apps/hh700478) 다섯 가지 구현 **IFrameworkView** 메서드: [**초기화**](https://msdn.microsoft.com/library/windows/apps/hh700495), [ **SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [ **부하**](https://msdn.microsoft.com/library/windows/apps/hh700501)하십시오 [ **실행** ](https://msdn.microsoft.com/library/windows/apps/hh700505), 및 [ **초기화**](https://msdn.microsoft.com/library/windows/apps/hh700523)합니다. (기본적으로) 게임에 있는 위치인 **IFrameworkView**를 만들 뿐만 아니라, **IFrameworkView**의 인스턴스를 만드는 팩터리 클래스를 구현해야 합니다. 게임에는 여전히 **main()** 이라는 메서드가 있지만, 기본 클래스가 수행할 수 있는 모든 것은 팩터리를 사용하여 **IFrameworkView** 인스턴스를 만드는 것입니다.
 
 Main 함수
 
@@ -105,7 +105,7 @@ while(WM_QUIT != msg.message)
 
 게임이 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) 클래스 내에서 작동하기 때문에 게임 루프가 [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드(**main()** 대신)에서 이동합니다.
 
-메시지 처리 프레임워크를 구현하고 [**PeekMessage**](https://msdn.microsoft.com/library/windows/desktop/ms644943)를 호출하는 대신 앱 창의 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)에 내장된 [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) 메서드를 호출할 수 있습니다. 메시지를 분기 및 처리하기 위해 게임 루프가 필요하지 않습니다. **ProcessEvents**를 처리하고 진행하기만 하면 됩니다.
+메시지 처리 프레임워크를 구현하고 [**PeekMessage**](https://msdn.microsoft.com/library/windows/desktop/ms644943)를 호출하는 대신 앱 창의 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)에 내장된 [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) 메서드를 호출할 수 있습니다. 게임 루프가 메시지를 분기하고 처리할 필요가 없습니다. **ProcessEvents**를 호출하고 진행하기만 하면 됩니다.
 
 Direct3D 11 Microsoft Store 게임의 게임 루프
 
@@ -124,18 +124,18 @@ while (true)
 
 이제 같은 기본 그래픽 인프라를 설정하는 UWP 앱이 있고 DirectX 9 예제에서와 같은 다채로운 색상의 큐브를 렌더링합니다.
 
-## <a name="where-do-i-go-from-here"></a>여기에서 이동할 위치
+## <a name="where-do-i-go-from-here"></a>여기에서 어떻게 하나요?
 
 
 [DirectX 11 포팅 FAQ](directx-porting-faq.md)를 책갈피로 지정합니다.
 
-DirectX UWP 템플릿에는 UWP 게임에 사용할 수 있는 강력한 Direct3D 장치 인프라가 포함되어 있습니다. 올바른 템플릿 선택에 대한 지침은 [템플릿에서 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
+DirectX UWP 템플릿에는 UWP 게임에 사용할 수 있는 강력한 Direct3D 장치 인프라가 포함되어 있습니다. 적절한 템플릿 선택에 대한 지침은 [템플릿에서 DirectX 11 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
 
-다음 같이 심층적인 Microsoft Store 게임 개발 문서를 참조 하세요.
+다음 자세한 Microsoft Store 게임 개발 문서를 참조 하세요.
 
--   [연습: DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-uwp-directx-game.md)
--   [게임용 오디오](working-with-audio-in-your-directx-game.md)
--   [게임용 이동-보기 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md)
+-   [연습: 간단한 UWP 게임 DirectX 사용 하 여](tutorial--create-your-first-uwp-directx-game.md)
+-   [게임에 대 한 오디오](working-with-audio-in-your-directx-game.md)
+-   [게임에 대 한 모양을 이동 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md)
 
  
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ea8d387becaef171175fd5e91bfc3a1402e79faa
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8927647"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57616618"
 ---
 # <a name="legacy-background-media-playback"></a>레거시 백그라운드 미디어 재생
 
@@ -19,7 +19,7 @@ ms.locfileid: "8927647"
 이 문서에서는 UWP 앱에 백그라운드 오디오 지원을 추가하기 위한 레거시 두 프로세스 모델을 설명합니다. Windows 10 버전 1607부터 백그라운드 오디오에 대해 더 간단하게 구현할 수 있는 단일 프로세스 모델이 도입되었습니다. 백그라운드 오디오에 대한 현재 권장 사항은 [백그라운드에서 미디어 재생](background-audio.md)을 참조하세요. 이 문서는 레거시 두 프로세스 모델을 사용하여 이미 개발된 앱에 대한 지원을 제공하도록 작성되었습니다.
 
 > [!NOTE]
-> Windows, 버전 1703부터 **BackgroundMediaPlayer** 는 사용 되지 않으며 Windows의 이후 버전에서 사용할 수 없습니다.
+> Windows, 버전 1703부터 **BackgroundMediaPlayer** 사용 되지 않으며 Windows의 향후 버전에서 사용할 수 없습니다.
 
 ## <a name="background-audio-architecture"></a>백그라운드 오디오 아키텍처
 
@@ -30,7 +30,7 @@ ms.locfileid: "8927647"
 ![Windows 10 백그라운드 오디오 아키텍처](images/backround-audio-architecture-win10.png)
 ## <a name="mediaplayer"></a>MediaPlayer
 
-[**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) 네임스페이스는 백그라운드에서 오디오를 재생하는 데 사용되는 API를 포함합니다. 앱마다 재생이 진행되는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652535)의 단일 인스턴스가 있습니다. 백그라운드 오디오 앱은 **MediaPlayer** 클래스에서 현재 트랙 설정, 재생 시작, 일시 중지, 빨리 감기, 되감기 등을 설정하기 위한 메서드를 호출하고 속성을 설정합니다. 미디어 플레이어 개체 인스턴스는 항상 [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528) 속성을 통해 액세스합니다.
+[  **Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) 네임스페이스는 백그라운드에서 오디오를 재생하는 데 사용되는 API를 포함합니다. 앱마다 재생이 진행되는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652535)의 단일 인스턴스가 있습니다. 백그라운드 오디오 앱은 **MediaPlayer** 클래스에서 현재 트랙 설정, 재생 시작, 일시 중지, 빨리 감기, 되감기 등을 설정하기 위한 메서드를 호출하고 속성을 설정합니다. 미디어 플레이어 개체 인스턴스는 항상 [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528) 속성을 통해 액세스합니다.
 
 ## <a name="mediaplayer-proxy-and-stub"></a>MediaPlayer 프록시 및 스텁
 
@@ -56,15 +56,15 @@ ms.locfileid: "8927647"
 
 백그라운드 오디오 앱의 두 프로세스 간에 통신이 필요한 경우가 있습니다. 예를 들어 새 트랙 재생이 시작될 때 백그라운드 작업이 포그라운드 작업에 알림을 보낸 다음 새 노래 제목을 포그라운드 작업에 보내 화면에 표시하도록 할 수 있습니다.
 
-간단한 통신 메커니즘을 사용하여 포그라운드 및 백그라운드 프로세스에서 이벤트를 발생시킬 수 있습니다. [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) 및 [**SendMessageToBackground**](https://msdn.microsoft.com/library/windows/apps/dn652532) 메서드는 각각 해당 프로세스에서 이벤트를 호출합니다. [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) 및 [**MessageReceivedFromForeground**](https://msdn.microsoft.com/library/windows/apps/dn652531) 이벤트를 구독하여 메시지를 받을 수 있습니다.
+간단한 통신 메커니즘을 사용하여 포그라운드 및 백그라운드 프로세스에서 이벤트를 발생시킬 수 있습니다. [  **SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) 및 [**SendMessageToBackground**](https://msdn.microsoft.com/library/windows/apps/dn652532) 메서드는 각각 해당 프로세스에서 이벤트를 호출합니다. [  **MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) 및 [**MessageReceivedFromForeground**](https://msdn.microsoft.com/library/windows/apps/dn652531) 이벤트를 구독하여 메시지를 받을 수 있습니다.
 
-그러면 데이터가 메시지 전송 메서드에 인수로 전달되며, 해당 메시지 전송 메서드가 메시지 수신 이벤트 처리기로 전달될 수 있습니다. [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) 클래스를 사용하여 데이터를 전달합니다. 이 클래스는 문자열을 키로 포함하고 기타 값 형식을 값으로 포함하는 사전입니다. 정수, 문자열 및 부울 같은 간단한 값 형식을 전달할 수 있습니다.
+그러면 데이터가 메시지 전송 메서드에 인수로 전달되며, 해당 메시지 전송 메서드가 메시지 수신 이벤트 처리기로 전달될 수 있습니다. [  **ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) 클래스를 사용하여 데이터를 전달합니다. 이 클래스는 문자열을 키로 포함하고 기타 값 형식을 값으로 포함하는 사전입니다. 정수, 문자열 및 부울 같은 간단한 값 형식을 전달할 수 있습니다.
 
 ## <a name="background-task-life-cycle"></a>백그라운드 작업 수명 주기
 
 백그라운드 작업의 수명은 앱의 현재 재생 상태와 밀접하게 연결됩니다. 예를 들어 사용자가 오디오 재생을 일시 중지하면 시스템에서는 상황에 따라 앱을 종료하거나 취소할 수 있습니다. 오디오를 재생하지 않고 일정 시간이 경과되면 시스템에서 백그라운드 작업이 자동으로 종료됩니다.
 
-[**IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드는 백그라운드 작업은 앱이 포그라운드 앱에서 실행되는 코드의 [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528)에 처음으로 액세스할 때와 [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) 이벤트에 대한 처리기를 등록할 때 중에서 먼저 일어나는 작업 후에 호출됩니다. 포그라운드 앱이 백그라운드 프로세스에서 보낸 메시지를 누락하지 않도록 하기 위해 **BackgroundMediaPlayer.Current**를 처음 호출하기 전에 메시지 수신 처리기를 등록하는 것이 좋습니다.
+[  **IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드는 백그라운드 작업은 앱이 포그라운드 앱에서 실행되는 코드의 [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528)에 처음으로 액세스할 때와 [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) 이벤트에 대한 처리기를 등록할 때 중에서 먼저 일어나는 작업 후에 호출됩니다. 포그라운드 앱이 백그라운드 프로세스에서 보낸 메시지를 누락하지 않도록 하기 위해 **BackgroundMediaPlayer.Current**를 처음 호출하기 전에 메시지 수신 처리기를 등록하는 것이 좋습니다.
 
 백그라운드 작업을 계속 유지하려면 앱이 **Run** 메서드 내에서 [**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499)을 요청하고 작업 인스턴스가 [**Canceled**](https://msdn.microsoft.com/library/windows/apps/br224798) 또는 [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788) 이벤트를 수신할 때 [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504)를 호출해야 합니다. 리소스가 사용되고 앱의 백그라운드 작업이 시스템에 의해 종료될 수 있으므로 **Run** 메서드에서 루핑하거나 기다리지는 마세요.
 
@@ -114,11 +114,11 @@ ms.locfileid: "8927647"
 
 다음 표에는 어떤 정책이 어떤 디바이스 유형에 적용되는지 나와 있습니다.
 
-| 하위 정책             | 바탕 화면  | 모바일   | 기타    |
+| 하위 정책             | 데스크톱  | 모바일   | 기타    |
 |------------------------|----------|----------|----------|
-| **독점**        | 사용 안 함 | 사용  | 사용  |
-| **비활성 시간 제한** | 사용 안 함 | 사용  | 사용 안 함 |
-| **공유 수명**    | 사용  | 사용 안 함 | 사용 안 함 |
+| **독점 성**        | 사용 안 함 | Enabled  | Enabled  |
+| **비활성 시간** | 사용 안 함 | Enabled  | 사용 안 함 |
+| **공유 수명**    | Enabled  | 사용 안 함 | 사용 안 함 |
 
 
  

@@ -7,27 +7,27 @@ ms.topic: article
 keywords: windows 10, uwp, 앱에서 바로 구매, IAP, 추가 기능, 카탈로그, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 2335e09253570d09c33422d2f5ba4179697e4ea7
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8922575"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57637358"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>앱에서 바로 구매 제품의 큰 카탈로그 관리
 
-앱에서 대규모 앱에서 바로 구매 제품 카탈로그를 제공하는 경우 이 항목에 설명된 프로세스를 선택적으로 수행하여 카탈로그를 관리할 수 있습니다. Windows 10 이전 릴리스에서는 개발자 계정별로 200개의 제품 목록을 스토어에 표시하도록 제한되었으며 이 항목에 설명된 프로세스를 사용하여 이 제한 사항 문제를 해결할 수 있습니다. Windows10부터 스토어에 개발자 계정별 제품 목록 수가 제한 되지 않으며이 문서에 설명 된 프로세스는 더 이상 필요 합니다.
+앱에서 대규모 앱에서 바로 구매 제품 카탈로그를 제공하는 경우 이 항목에 설명된 프로세스를 선택적으로 수행하여 카탈로그를 관리할 수 있습니다. Windows 10 이전 릴리스에서는 개발자 계정별로 200개의 제품 목록을 스토어에 표시하도록 제한되었으며 이 항목에 설명된 프로세스를 사용하여 이 제한 사항 문제를 해결할 수 있습니다. Windows 10 부터는 저장소 개발자 계정당 제품 목록 수에 제한이 있고이 문서에서 설명한 프로세스는 더 이상 필요 합니다.
 
 > [!IMPORTANT]
-> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여줍니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. **Windows.Services.Store** 네임 스페이스는 스토어 관리 소모 성 추가 기능 및 구독 등의 최신 추가 기능 유형을 지원 하며 이후 제품 및 파트너 센터 및 스토어에서 지 원하는 기능 유형과 호환 되도록 설계 되었습니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
+> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여줍니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. 합니다 **Windows.Services.Store** 네임 스페이스 최신 추가 기능 형식을 사용할 수 있는 추가 기능 저장소 관리 등 구독을 지원 하며 향후 유형의 제품 및 파트너를 지 원하는 기능을 사용 하 여 호환 되도록 설계 되었습니다 센터와 저장소를 제공 합니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
 
 이 접근 권한 값을 사용하려면 카탈로그 내에서 각각 수백 개의 제품을 나타낼 수 있는 특정 기준 가격에 대한 소수의 제품 항목을 만듭니다. 스토어에 나열된 앱에서 바로 구매 제품과 관련된 앱 정의 제품 서비스를 지정하는 [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) 메서드 오버로드를 사용합니다. 호출하는 동안 앱은 판매와 제품 연결을 지정할 뿐만 아니라 큰 카탈로그 판매 정보를 포함하는 [ProductPurchaseDisplayProperties](https://msdn.microsoft.com/library/windows/apps/dn263384) 개체도 전달해야 합니다. 이러한 세부 정보를 제공하지 않으면 나열된 제품에 대한 세부 정보가 대신 사용됩니다.
 
 스토어는 결과 [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392)에서 구매 요청의 *offerId*만 사용합니다. 이 프로세스는 [스토어에 앱에서 바로 구매 제품을 나열](../publish/add-on-submissions.md)할 때 원래 제공된 정보를 직접 수정하지 않습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 -   이 항목에서는 스토어에 나열된 단일 앱에서 바로 구매 제품을 사용하여 여러 가지 앱에서 바로 판매를 표현하는 스토어 지원에 대해 설명합니다. 앱에서 바로 구매를 잘 모르는 경우 라이선스 정보 및 스토어에 앱에서 바로 구매를 제대로 나열하는 방법을 알아보려면 [앱에서 바로 구매 제품 사용](enable-in-app-product-purchases.md)을 검토하세요.
--   새로운 앱에서 바로 판매를 처음 코딩하고 테스트할 때는 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) 개체 대신 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) 개체를 사용해야 합니다. 이렇게 하면 라이브 서버를 호출하는 대신 라이선스 서버 호출을 시뮬레이트하여 라이선스 논리를 확인할 수 있습니다. 이렇게 하려면 %userprofile%\\AppData\\local\\packages\\&lt;패키지 이름&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData에 있는 WindowsStoreProxy.xml 파일을 사용자 지정해야 합니다. 처음으로 앱이 실행될 때 Microsoft Visual Studio 시뮬레이터에서 이 파일을 만듭니다. 또는 런타임에 사용자 지정 파일을 로드할 수도 있습니다. 자세한 내용은 [CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy)을 참조하세요.
+-   새로운 앱에서 바로 판매를 처음 코딩하고 테스트할 때는 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) 개체 대신 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) 개체를 사용해야 합니다. 이렇게 하면 라이브 서버를 호출하는 대신 라이선스 서버 호출을 시뮬레이트하여 라이선스 논리를 확인할 수 있습니다. 이 작업을 수행 하려면 %userprofile%에서 WindowsStoreProxy.xml 라는 파일을 사용자 지정 해야\\AppData\\로컬\\패키지\\&lt;패키지 이름&gt;\\LocalState\\ Microsoft\\Windows 스토어\\ApiData 합니다. 처음으로 앱이 실행될 때 Microsoft Visual Studio 시뮬레이터에서 이 파일을 만듭니다. 또는 런타임에 사용자 지정 파일을 로드할 수도 있습니다. 자세한 내용은 [CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy)을 참조하세요.
 -   이 항목에서는 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)에 제공된 코드 예제도 참조합니다. 이 샘플은 UWP(유니버설 Windows 플랫폼) 앱에 제공된 다양한 수익 창출 옵션을 실습할 수 있는 좋은 방법입니다.
 
 ## <a name="make-the-purchase-request-for-the-in-app-product"></a>앱에서 바로 구매 제품을 위한 구매 요청 만들기
@@ -51,7 +51,7 @@ ms.locfileid: "8922575"
 ## <a name="related-topics"></a>관련 항목
 
 * [앱에서 바로 제품 구매 사용](enable-in-app-product-purchases.md)
-* [앱에서 바로 구매 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)
-* [스토어 샘플(평가판 및 앱에서 바로 구매 설명)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
+* [앱에서 바로 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)
+* [Store 샘플 (평가판 및 앱 내 구매를 보여 줍니다.)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263382)
 * [ProductPurchaseDisplayProperties](https://msdn.microsoft.com/library/windows/apps/dn263384)

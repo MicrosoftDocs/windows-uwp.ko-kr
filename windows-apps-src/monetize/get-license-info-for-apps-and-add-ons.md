@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 라이선스, 앱, 추가 기능, 앱에서 바로 구매, IAP, Windows.Services.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d7c832907af17436d588f0fac6c5039d4affa82
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8939071"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57641918"
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a>앱 및 추가 기능에 대한 라이선스 정보 가져오기
 
@@ -24,8 +24,8 @@ ms.locfileid: "8939071"
 
 이 예제의 필수 조건은 다음과 같습니다.
 * **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
-* [앱 제출을 만들지](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) 파트너 센터에서 드라이버와이 앱은 스토어에서 게시 합니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
-* 앱에 대 한 추가 기능에 대 한 라이선스 정보를 얻고 싶다면, 해야 [파트너 센터에서 추가 기능을 생성](../publish/add-on-submissions.md)합니다.
+* 있다고 [는 응용 프로그램 제출 생성](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) 파트너 센터에이 앱 스토어에 게시 됩니다. 테스트하는 동안 Store에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
+* 앱에 대 한 추가 기능에 대 한 라이선스 정보를 가져올 원한다 면 작업도 수행 해야 [파트너 센터에서 추가 기능 만들기](../publish/add-on-submissions.md)합니다.
 
 이 예제의 코드에서는 다음과 같이 가정합니다.
 * 코드는 ```workingProgressRing```이라는 [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx)과 ```textBlock```이라는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)을 포함하는 [페이지](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx)의 컨텍스트에서 실행됩니다. 해당 개체를 사용하여 각각 비동기 작업이 발생함을 나타내고 출력 메시지를 표시합니다.
@@ -44,13 +44,13 @@ ms.locfileid: "8939071"
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[GetLicenseInfo](./code/InAppPurchasesAndLicenses_RS1/cs/GetLicenseInfoPage.xaml.cs#GetLicenseInfo)]
 
-전체 샘플 응용 프로그램은 [Microsoft Store 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)을 참조하세요.
+전체 샘플 응용 프로그램은 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)
-* [앱 및 추가 기능에 대한 제품 정보 가져오기](get-product-info-for-apps-and-add-ons.md)
-* [앱에서 바로 앱 및 추가 기능 구매 사용](enable-in-app-purchases-of-apps-and-add-ons.md)
-* [소모성 추가 기능 구매 사용](enable-consumable-add-on-purchases.md)
-* [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)
-* [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
+* [앱 및 추가 기능에 대 한 제품 정보 가져오기](get-product-info-for-apps-and-add-ons.md)
+* [앱 내 구매는 응용 프로그램 및 추가 기능을 사용 하도록 설정](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [사용할 수 있는 추가 기능 구매를 사용 하도록 설정](enable-consumable-add-on-purchases.md)
+* [앱의 평가판 버전을 구현 합니다.](implement-a-trial-version-of-your-app.md)
+* [Store 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)

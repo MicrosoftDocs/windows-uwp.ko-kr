@@ -1,22 +1,16 @@
 ---
 layout: LandingPage
-Description: See how to publish your Windows apps to the Microsoft Store.
+Description: Windows 앱을 Microsoft Store에 게시하는 방법을 살펴봅니다.
 title: Windows 앱 게시
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Windows 10, uwp, 게시, 판매, 배포, Microsoft Store, 대시보드
+keywords: 'Windows 10, UWP, 게시, 판매, 배포, Store, 대시보드'
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b9d78014b2416cae7d387261ec1732b1f8932ad
-ms.sourcegitcommit: 1cf708443d132306e6c99027662de8ec99177de6
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "8980311"
 ---
 # <a name="publish-windows-apps-and-games"></a>Windows 앱 및 게임 게시  
  
-Microsoft Store에 앱 및 게임을 게시 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 를 사용할 수 있습니다. <a href="//developer.microsoft.com/store/register">지금 등록하세요!</a>
+[파트너 센터](https://partner.microsoft.com/dashboard)를 사용하여 앱 및 게임을 Microsoft Store에 게시할 수 있습니다. <a href="//developer.microsoft.com/store/register">지금 등록하세요!</a>
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>
@@ -30,7 +24,7 @@ Microsoft Store에 앱 및 게임을 게시 하려면 [파트너 센터](https:/
                     </div>
                     <div class="cardText">
                         <h3>앱 제출</h3>
-                        <p>제출을 만들고 앱을 인증 받기 위해 해야 할 일을 확인하세요.</p>
+                        <p>제출을 만들고 앱을 인증받기 위해 해야 할 일을 확인하세요.</p>
                         <ul>
                         <li><a href="app-submissions.md">앱 제출 검사 목록</a></li>
                         <li><a href="the-app-certification-process.md">인증 프로세스</a></li>                      
@@ -55,7 +49,7 @@ Microsoft Store에 앱 및 게임을 게시 하려면 [파트너 센터](https:/
                     <p>시장별 가격 책정, 일정 및 가시성 옵션, 할인 가격 등을 사용하여 앱의 가용성을 사용자 지정하세요.</p>
                     <ul>
                         <li><a href="define-pricing-and-market-selection.md">시장 선택</a></li>
-                        <li><a href="set-and-schedule-app-pricing.md">가격 설정 및 예약 </a></li>
+                        <li><a href="set-and-schedule-app-pricing.md">가격 설정 및 예약</a></li>
                         <li><a href="configure-precise-release-scheduling.md">정확한 릴리스 날짜 구성</a></li>
                         <li><a href="set-app-pricing-and-availability.md">사용 가능한 모든 옵션 보기</a></li>
                     </ul>
@@ -74,12 +68,12 @@ Microsoft Store에 앱 및 게임을 게시 하려면 [파트너 센터](https:/
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Microsoft Store 목록 옵션</h3>
+                        <h3>Store 목록 옵션</h3>
                         <p>고객이 앱을 사용해 보고 싶게 만드는 텍스트 및 시각적 자산을 제공합니다.</p>
                         <ul>
                             <li><a href="create-app-store-listings.md">Store 목록 개요</a></li>
                             <li><a href="app-screenshots-and-images.md">스크린샷, 이미지 및 예고편</a></li>
-                              <li><a href="import-and-export-store-listings.md">대량으로 목록 관리 </a></li>
+                              <li><a href="import-and-export-store-listings.md">대량으로 목록 관리</a></li>
                         </ul>
                     </div>
                 </div>
@@ -101,7 +95,7 @@ Microsoft Store에 앱 및 게임을 게시 하려면 [파트너 센터](https:/
                 <div class="cardText">
                     <h3>결제 및 보고</h3>                  
                     <p><a href="getting-paid-apps.md">지급 받기</a></p>
-                    <p><a href="in-app-ads.md">인앱 광고</a></p>
+                    <p><a href="in-app-ads.md">앱 내 광고</a></p>
                     <p><a href="analytics.md">분석 보고서</a></p>                   
                 </div>
             </div>
@@ -118,10 +112,10 @@ Microsoft Store에 앱 및 게임을 게시 하려면 [파트너 센터](https:/
                     </div>
                 </div>
                 <div class="cardText">
-                    <h3>앱 홍보</h3>   
+                    <h3>앱 홍보하기</h3>   
                     <p><a href="create-an-ad-campaign-for-your-app.md">광고 캠페인 만들기</a></p>
                     <p><a href="generate-promotional-codes.md">홍보 코드 생성</a></p>
-                    <p><a href="put-apps-and-add-ons-on-sale.md">할인 판매 제공</a></p>
+                    <p><a href="put-apps-and-add-ons-on-sale.md">판매 가격 책정 제공</a></p>
                 </div>
             </div>
         </div>
@@ -140,7 +134,7 @@ Microsoft Store에 앱 및 게임을 게시 하려면 [파트너 센터](https:/
                     <h3>고객과의 소통</h3>
                     <p><a href="create-customer-groups.md">고객 그룹 만들기</a></p>
                     <p><a href="send-push-notifications-to-your-apps-customers.md">푸시 알림 보내기</a></p>
-                    <p><a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상 제품 만들기</a></p>
+                    <p><a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상 지정된 제안 만들기</a></p>
                 </div>
             </div>
         </div>
@@ -179,7 +173,7 @@ Microsoft Store에 앱 및 게임을 게시 하려면 [파트너 센터](https:/
                     </div>
                 </div>
                 <div class="cardText">
-                    <h3>추가 기능(앱에서 바로 구매 제품)</h3>      
+                    <h3>추가 기능(앱 내 제품)</h3>      
                     <p><a href="add-on-submissions.md">추가 기능 제출</a></p>
                     <p><a href="../monetize/in-app-purchases-and-trials.md">앱의 코드에서 추가 기능 사용</a></p>
                 </div>
@@ -197,11 +191,11 @@ Microsoft Store에 앱 및 게임을 게시 하려면 [파트너 센터](https:/
                     </div>
                 </div>
                 <div class="cardText">
-                    <h3>전략 테스트</h3>
+                    <h3>테스트 전략</h3>
                     <p><a href="beta-testing-and-targeted-distribution.md">베타 테스트 및 대상이 지정된 배포</a></p>
                     <p><a href="choose-visibility-options.md#audience">개인 대상</a></p>
                     <p><a href="package-flights.md">패키지 플라이트</a></p>
-                     <p><a href="gradual-package-rollout.md">점진적 배포</a></p>
+                     <p><a href="gradual-package-rollout.md">점진적 출시</a></p>
                 </div>
             </div>
         </div>

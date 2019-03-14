@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d33a2bf1505618dca4e0e54c2bd9a534f58bcfc
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8938414"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57628208"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>MediaPlayer를 사용하여 오디오 및 비디오 재생
 
-이 문서에서는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) 클래스를 사용하여 유니버설 Windows 앱에서 미디어를 재생하는 방법을 보여 줍니다. Windows10 버전 1607에서는 백그라운드 오디오에 대해 간소화된 단일 프로세스 디자인, SMTC(시스템 미디어 전송 컨트롤)와 자동 통합, 여러 미디어 플레이어를 동기화하는 기능, Windows.UI.Composition 표면 기능 및 콘텐츠에서 미디어 중단을 만들고 예약하는 편리한 인터페이스를 포함하여 미디어 재생 API가 크게 개선되었습니다. 이러한 개선된 기능을 활용하려면 미디어 재생을 위해 **MediaElement** 대신 **MediaPlayer** 클래스를 사용하는 것이 좋습니다. XAML 페이지에서 미디어 콘텐츠를 렌더링할 수 있도록 간단한 XAML 컨트롤인 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)가 도입되었습니다. 이제 **MediaElement**를 통해 제공된 많은 재생 컨트롤 및 상태 API가 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) 개체를 통해 사용 가능합니다. **MediaElement**는 이전 버전과의 호환성을 지원하기 위해 계속 작동되지만 이 클래스에 추가 기능은 제공되지 않습니다.
+이 문서에서는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) 클래스를 사용하여 유니버설 Windows 앱에서 미디어를 재생하는 방법을 보여 줍니다. Windows 10 버전 1607에서는 백그라운드 오디오에 대해 간소화된 단일 프로세스 디자인, SMTC(시스템 미디어 전송 컨트롤)와 자동 통합, 여러 미디어 플레이어를 동기화하는 기능, Windows.UI.Composition 표면 기능 및 콘텐츠에서 미디어 중단을 만들고 예약하는 편리한 인터페이스를 포함하여 미디어 재생 API가 크게 개선되었습니다. 이러한 개선된 기능을 활용하려면 미디어 재생을 위해 **MediaElement** 대신 **MediaPlayer** 클래스를 사용하는 것이 좋습니다. XAML 페이지에서 미디어 콘텐츠를 렌더링할 수 있도록 간단한 XAML 컨트롤인 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)가 도입되었습니다. 이제 **MediaElement**를 통해 제공된 많은 재생 컨트롤 및 상태 API가 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) 개체를 통해 사용 가능합니다. **MediaElement**는 이전 버전과의 호환성을 지원하기 위해 계속 작동되지만 이 클래스에 추가 기능은 제공되지 않습니다.
 
-이 문서에서는 일반적인 미디어 재생 앱에서 사용하는 **MediaPlayer** 기능을 단계별로 안내합니다. **MediaPlayer**는 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource) 클래스를 모든 미디어 항목의 컨테이너로 사용합니다. 이 클래스를 사용하면 로컬 파일, 메모리 스트림 및 네트워크 소스를 비롯한 다양한 소스에서 모두 동일한 인터페이스를 사용하여 미디어를 로드 및 재생할 수 있습니다. [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)과 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList) 등, 재생 목록과 같은 고급 기능과 여러 오디오, 비디오와 미디어 소스를 관리하는 기능 및 메타데이터 추적 기능을 제공하는 **MediaSource**에서 작동하는 상위 수준 클래스도 있습니다. **MediaSource** 및 관련 API에 대한 자세한 내용은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요.
+이 문서에서는 일반적인 미디어 재생 앱에서 사용하는 **MediaPlayer** 기능을 단계별로 안내합니다. **MediaPlayer**는 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource) 클래스를 모든 미디어 항목의 컨테이너로 사용합니다. 이 클래스를 사용하면 로컬 파일, 메모리 스트림 및 네트워크 소스를 비롯한 다양한 소스에서 모두 동일한 인터페이스를 사용하여 미디어를 로드 및 재생할 수 있습니다. [  **MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)과 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList) 등, 재생 목록과 같은 고급 기능과 여러 오디오, 비디오와 미디어 소스를 관리하는 기능 및 메타데이터 추적 기능을 제공하는 **MediaSource**에서 작동하는 상위 수준 클래스도 있습니다. **MediaSource** 및 관련 API에 대한 자세한 내용은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요.
 
 > [!NOTE] 
 > Windows 10 N 및 Windows 10 KN 버전에는 재생을 위해 **MediaPlayer**를 사용하는 데 필요한 미디어 기능이 포함되지 않습니다. 이러한 기능을 수동으로 설치할 수 있습니다. 자세한 내용은 [Windows 10 N 및 Windows 10 KN 버전에 대한 미디어 기능 팩](https://support.microsoft.com/en-us/help/3010081/media-feature-pack-for-windows-10-n-and-windows-10-kn-editions)을 참조하세요.
@@ -25,7 +25,7 @@ ms.locfileid: "8938414"
 ## <a name="play-a-media-file-with-mediaplayer"></a>MediaPlayer를 사용하여 미디어 파일 재생  
 **MediaPlayer**를 사용한 기본 미디어 재생은 매우 간단히 구현할 수 있습니다. 먼저 **MediaPlayer** 클래스의 새 인스턴스를 만듭니다. 앱에는 한 번에 여러 개의 **MediaPlayer** 인스턴스가 활성화될 수 있습니다. 다음으로 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) 또는 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList)와 같이 [**IMediaPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.IMediaPlaybackSource)를 구현하는 개체에 플레이어의 [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) 속성을 설정합니다. 이 예제에서는 앱의 로컬 저장소에 있는 파일에서 **MediaSource**가 생성되고 소스에서 **MediaPlaybackItem**이 생성된 다음 플레이어의 **Source** 속성에 할당됩니다.
 
-**MediaElement**와 달리 **MediaPlayer**는 기본적으로 자동으로 재생을 시작하지 않습니다. [**Play**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play)를 호출하거나 [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AutoPlay) 속성을 true로 설정하여 재생을 시작할 수 있습니다. 또는 기본 제공 미디어 컨트롤을 사용하여 사용자가 재생을 시작할 때까지 기다릴 수 있습니다.
+**MediaElement**와 달리 **MediaPlayer**는 기본적으로 자동으로 재생을 시작하지 않습니다. [  **Play**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play)를 호출하거나 [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AutoPlay) 속성을 true로 설정하여 재생을 시작할 수 있습니다. 또는 기본 제공 미디어 컨트롤을 사용하여 사용자가 재생을 시작할 때까지 기다릴 수 있습니다.
 
 [!code-cs[SimpleFilePlayback](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSimpleFilePlayback)]
 
@@ -38,7 +38,7 @@ XAML에 표시하지 않고 **MediaPlayer**에서 미디어를 재생할 수는 
 
 [!code-xml[MediaPlayerElementXAML](./code/MediaPlayer_RS1/cs/MainPage.xaml#SnippetMediaPlayerElementXAML)]
 
-[**SetMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/mt708764)를 호출하면 요소가 바인딩되는 **MediaPlayer** 인스턴스를 설정할 수 있습니다.
+[  **SetMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/mt708764)를 호출하면 요소가 바인딩되는 **MediaPlayer** 인스턴스를 설정할 수 있습니다.
 
 [!code-cs[SetMediaPlayer](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetMediaPlayer)]
 
@@ -96,7 +96,7 @@ Windows 10 버전 1803부터 **MediaPlayer**에 표시되는 비디오의 회전
 ### <a name="pinch-and-zoom-video"></a>손가락을 모아 비디오 확대/축소
 **MediaPlayer**는 효과적으로 비디오를 확대할 수 있도록 렌더링해야 하는 비디오 콘텐츠 내에서 소스 사각형을 지정할 수 있습니다. 지정하는 사각형은 정규화된 사각형(0,0,1,1)을 기준으로 합니다. 여기서 0,0은 프레임의 왼쪽 상단이고 1,1은 프레임의 전체 너비 및 높이를 가리킵니다. 따라서 예를 들어 비디오의 오른쪽 위 사분면이 렌더링되도록 확대/축소 사각형을 설정하려면 사각형(.5,0,.5,.5)을 지정합니다.  소스 사각형이 정규화된 사각형(0,0,1,1) 내에 있도록 값을 확인하는 것이 중요합니다. 이 범위를 벗어나는 값을 설정하려고 하면 예외가 발생됩니다.
 
-멀티 터치 제스처를 사용하여 손가락을 모아 확대/축소를 구현하려면 먼저 지원하려는 제스처를 지정해야 합니다. 이 예제에서는 크기 조정 및 변환 제스처를 요청합니다. 구독한 제스처 중 하나가 발생하면 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.ManipulationDelta) 이벤트가 발생합니다. [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped) 이벤트는 전체 프레임으로 확대/축소를 다시 설정하는 데 사용됩니다. 
+멀티 터치 제스처를 사용하여 손가락을 모아 확대/축소를 구현하려면 먼저 지원하려는 제스처를 지정해야 합니다. 이 예제에서는 크기 조정 및 변환 제스처를 요청합니다. 구독한 제스처 중 하나가 발생하면 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.ManipulationDelta) 이벤트가 발생합니다. [  **DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped) 이벤트는 전체 프레임으로 확대/축소를 다시 설정하는 데 사용됩니다. 
 
 [!code-cs[RegisterPinchZoomEvents](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetRegisterPinchZoomEvents)]
 
@@ -104,7 +104,7 @@ Windows 10 버전 1803부터 **MediaPlayer**에 표시되는 비디오의 회전
 
 [!code-cs[DeclareSourceRect](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareSourceRect)]
 
-**ManipulationDelta** 처리기는 확대/축소 사각형의 배율 또는 변환을 조정합니다. 델타 배율 값이 1이 아니면 사용자가 축소 제스처를 수행했다는 의미입니다. 값이 1보다 큰 경우 콘텐츠를 확대하려면 소스 사각형을 더 작게 만들어야 합니다. 값이 1보다 작은 경우 소스 사각형을 확대하여 축소해야 합니다. 새 배율 값을 설정하기 전에 결과 사각형을 확인하여 완전히 (0,0,1,1) 한도 내에 있도록 해야 합니다.
+**ManipulationDelta** 처리기는 확대/축소 사각형의 배율 또는 변환을 조정합니다. 델타 배율 값이 1이 아니면 사용자가 축소 제스처를 수행했다는 의미입니다. 값이 1보다 큰 경우 콘텐츠를 확대하려면 소스 사각형을 더 작게 만들어야 합니다. 값이 1보다 작은 경우 축소하려면 소스 사각형을 더 크게 만들어야 합니다. 새 배율 값을 설정하기 전에 결과 사각형이 완전히 (0,0,1,1) 한도 내에 있는지 확인합니다.
 
 배율 값이 1이면 변환 제스처가 처리됩니다. 사각형은 단순히 컨트롤의 너비와 높이로 나눈 제스처의 픽셀 수로 변환됩니다. 마찬가지로 결과 사각형이 (0,0,1,1) 범위 안에 있는지 확인합니다.
 
@@ -112,20 +112,20 @@ Windows 10 버전 1803부터 **MediaPlayer**에 표시되는 비디오의 회전
 
 [!code-cs[ManipulationDelta](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetManipulationDelta)]
 
-[**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped) 이벤트 처리기에서 소스 사각형을 다시 (0,0,1,1)로 설정하면 전체 비디오 프레임이 렌더링됩니다.
+[  **DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped) 이벤트 처리기에서 소스 사각형을 다시 (0,0,1,1)로 설정하면 전체 비디오 프레임이 렌더링됩니다.
 
 [!code-cs[DoubleTapped](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDoubleTapped)]
 
 ### <a name="handling-policy-based-playback-degradation"></a>정책 기반 재생 저하 처리
 
-경우에 따라 시스템은 성능 문제가 아닌 정책에 따라 해상도 축소(압축)와 같은 미디어 항목의 재생을 저하시킬 수 있습니다. 예를 들어 서명되지 않은 비디오 드라이버를 사용하여 비디오를 재생하는 경우 시스템이 비디오를 저하시킬 수 있습니다. [**MediaPlaybackSession.GetOutputDegradationPolicyState**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.getoutputdegradationpolicystate#Windows_Media_Playback_MediaPlaybackSession_GetOutputDegradationPolicyState)를 호출하여 이 정책 기반 저하가 발생하는 경우와 그 이유를 확인하고 사용자에게 경고하고 원격 분석 목적으로 그 이유를 기록할 수 있습니다.
+경우에 따라 시스템은 성능 문제가 아닌 정책에 따라 해상도 축소(압축)와 같은 미디어 항목의 재생을 저하시킬 수 있습니다. 예를 들어 서명되지 않은 비디오 드라이버를 사용하여 비디오를 재생하는 경우 시스템이 비디오를 저하시킬 수 있습니다. [  **MediaPlaybackSession.GetOutputDegradationPolicyState**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.getoutputdegradationpolicystate#Windows_Media_Playback_MediaPlaybackSession_GetOutputDegradationPolicyState)를 호출하여 이 정책 기반 저하가 발생하는 경우와 그 이유를 확인하고 사용자에게 경고하고 원격 분석 목적으로 그 이유를 기록할 수 있습니다.
 
-다음 예제는 플레이어가 새로운 미디어 항목을 열 때 발생하는 **MediaPlayer.MediaOpened** 이벤트에 대한 처리기의 구현을 보여줍니다. **GetOutputDegradationPolicyState**는 처리기로 전달되는 **MediaPlayer**에서 호출됩니다. [**VideoConstrictionReason**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksessionoutputdegradationpolicystate.videoconstrictionreason#Windows_Media_Playback_MediaPlaybackSessionOutputDegradationPolicyState_VideoConstrictionReason)의 값은 비디오가 압축된 정책 이유를 나타냅니다. 이 값이 **None(없음)** 이 아닌 경우 이 예제는 원격 분석 목적으로 저하 이유를 기록합니다. 또한 이 예제는 현재 낮은 대역폭으로 재생되고 있는 **AdaptiveMediaSource**의 비트 전송률 설정을 보여주고 비디오는 압축되어 고해상도로 표시되지 않기 때문에 데이터 사용량이 절약됩니다. **AdaptiveMediaSource** 사용에 대한 자세한 내용은 [Adaptive streaming](adaptive-streaming.md)을 참조하세요.
+다음 예제는 플레이어가 새로운 미디어 항목을 열 때 발생하는 **MediaPlayer.MediaOpened** 이벤트에 대한 처리기의 구현을 보여줍니다. **GetOutputDegradationPolicyState**는 처리기로 전달되는 **MediaPlayer**에서 호출됩니다. [  **VideoConstrictionReason**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksessionoutputdegradationpolicystate.videoconstrictionreason#Windows_Media_Playback_MediaPlaybackSessionOutputDegradationPolicyState_VideoConstrictionReason)의 값은 비디오가 압축된 정책 이유를 나타냅니다. 이 값이 **None(없음)** 이 아닌 경우 이 예제는 원격 분석 목적으로 저하 이유를 기록합니다. 또한 이 예제는 현재 낮은 대역폭으로 재생되고 있는 **AdaptiveMediaSource**의 비트 전송률 설정을 보여주고 비디오는 압축되어 고해상도로 표시되지 않기 때문에 데이터 사용량이 절약됩니다. **AdaptiveMediaSource** 사용에 대한 자세한 내용은 [Adaptive streaming](adaptive-streaming.md)을 참조하세요.
 
 [!code-cs[PolicyDegradation](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetPolicyDegradation)]
         
 ## <a name="use-mediaplayersurface-to-render-video-to-a-windowsuicomposition-surface"></a>MediaPlayerSurface를 사용하여 Windows.UI.Composition 표면에 비디오를 렌더링합니다.
-Windows10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ICompositionSurface)에 비디오를 렌더링할 수 있으며 플레이어가 [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition) 네임스페이스의 API와 상호 작용할 수 있습니다. 컴퍼지션 프레임워크를 사용하면 XAML과 하위 수준 DirectX 그래픽 API 간에 시각적 계층의 그래픽 작업이 가능합니다. 그러면 모든 XAML 컨트롤에 비디오 렌더링과 같은 시나리오를 사용할 수 있습니다. 컴퍼지션 API 사용에 대한 자세한 내용은 [시각적 계층](https://msdn.microsoft.com/windows/uwp/composition/visual-layer)을 참조하세요.
+Windows 10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ICompositionSurface)에 비디오를 렌더링할 수 있으며 플레이어가 [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition) 네임스페이스의 API와 상호 작용할 수 있습니다. 컴퍼지션 프레임워크를 사용하면 XAML과 하위 수준 DirectX 그래픽 API 간에 시각적 계층의 그래픽 작업이 가능합니다. 그러면 모든 XAML 컨트롤에 비디오 렌더링과 같은 시나리오를 사용할 수 있습니다. 컴퍼지션 API 사용에 대한 자세한 내용은 [시각적 계층](https://msdn.microsoft.com/windows/uwp/composition/visual-layer)을 참조하세요.
 
 다음 예제에서는 비디오 플레이어 콘텐츠를 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Canvas) 컨트롤로 렌더링하는 방법을 보여 줍니다. 이 예제에서 미디어 플레이어 관련 호출은 [**SetSurfaceSize**](https://msdn.microsoft.com/library/windows/apps/mt489968) 및 [**GetSurface**](https://msdn.microsoft.com/library/windows/apps/mt489963)입니다. **SetSurfaceSize**는 콘텐츠 렌더링에 할당해야 하는 버퍼의 크기를 시스템에 지시합니다. **GetSurface**는 [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.Compositor)를 인수로 사용하고 [**MediaPlayerSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface) 클래스의 인스턴스를 검색합니다. 이 클래스는 표면을 만드는 데 사용된 **Compositor** 및 **MediaPlayer**에 대한 액세스를 제공하고 [**CompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface.CompositionSurface) 속성을 통해 표면 자체를 노출합니다.
 
@@ -134,7 +134,7 @@ Windows10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSurfa
 [!code-cs[Compositor](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCompositor)]
         
 ## <a name="use-mediatimelinecontroller-to-synchronize-content-across-multiple-players"></a>MediaTimelineController를 사용하여 여러 플레이어에서 콘텐츠 동기화
-이 문서의 앞에서 설명한 대로 앱에는 한 번에 여러 개의 **MediaPlayer** 개체가 활성화되어 있을 수 있습니다. 기본적으로 만든 각 **MediaPlayer**는 독립적으로 작동합니다. 일부 시나리오의 경우 비디오에 대한 설명 트랙 동기화와 같이 여러 플레이어의 재생 속도, 플레이어 상태, 재생 위치를 동기화할 수 있습니다. Windows10 버전 1607부터 [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) 클래스를 사용하여 이 동작을 구현할 수 있습니다.
+이 문서의 앞에서 설명한 대로 앱에는 한 번에 여러 개의 **MediaPlayer** 개체가 활성화되어 있을 수 있습니다. 기본적으로 만든 각 **MediaPlayer**는 독립적으로 작동합니다. 일부 시나리오의 경우 비디오에 대한 설명 트랙 동기화와 같이 여러 플레이어의 재생 속도, 플레이어 상태, 재생 위치를 동기화할 수 있습니다. Windows 10 버전 1607부터 [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) 클래스를 사용하여 이 동작을 구현할 수 있습니다.
 
 ### <a name="implement-playback-controls"></a>재생 컨트롤 구현
 다음 예제는 **MediaTimelineController**를 사용하여 **MediaPlayer**의 두 인스턴스를 제어하는 방법을 보여 줍니다. 먼저 **MediaPlayer**의 각 인스턴스가 인스턴스화되고 **Source**는 미디어 파일로 설정됩니다. 다음 새 **MediaTimelineController**가 만들어집니다. 각 **MediaPlayer**에서 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) 속성을 false로 설정하면 각 플레이어에 연결된 [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager)가 사용할 수 없도록 설정됩니다. 그런 다음 [**TimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.TimelineController) 속성이 타임라인 컨트롤러 개체로 설정됩니다.
@@ -143,7 +143,7 @@ Windows10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSurfa
 
 [!code-cs[SetTimelineController](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetTimelineController)]
 
-**주의** [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager)는 **MediaPlayer**와 SMTC(시스템 미디어 전송 컨트롤) 간에 자동 통합을 제공하지만 이 자동 통합은 **MediaTimelineController**로 제어되는 미디어 플레이어와 함께 사용할 수 없습니다. 따라서 플레이어의 타임라인 컨트롤러를 설정하기 전에 미디어 플레이어에 대한 명령 관리자를 사용하지 않도록 설정해야 합니다. 그러지 않으면 예외가 발생하고 "Attaching Media Timeline Controller is blocked because of the current state of the object(개체의 현재 상태 때문에 미디어 타임라인 컨트롤러의 연결이 차단되었습니다.)" 메시지가 표시됩니다. SMTC와 미디어 플레이어 통합에 대한 자세한 내용은 [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)을 참조하세요. **MediaTimelineController**를 사용 중이면 SMTC를 수동으로 계속 제어할 수 있습니다. 자세한 내용은 [시스템 미디어 전송 컨트롤의 수동 제어](system-media-transport-controls.md)를 참조하세요.
+**주의**[**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager)는 **MediaPlayer**와 SMTC(시스템 미디어 전송 컨트롤) 간에 자동 통합을 제공하지만 이 자동 통합은 **MediaTimelineController**로 제어되는 미디어 플레이어와 함께 사용할 수 없습니다. 따라서 플레이어의 타임라인 컨트롤러를 설정하기 전에 미디어 플레이어에 대한 명령 관리자를 사용하지 않도록 설정해야 합니다. 이렇게 하면 다음 메시지와 함께 예외가 발생 합니다. "미디어 타임 라인 컨트롤러 연결 차단 됩니다 개체의 현재 상태로 인해." SMTC와 미디어 플레이어 통합에 대한 자세한 내용은 [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)을 참조하세요. **MediaTimelineController**를 사용 중이면 SMTC를 수동으로 계속 제어할 수 있습니다. 자세한 내용은 [시스템 미디어 전송 컨트롤의 수동 제어](system-media-transport-controls.md)를 참조하세요.
 
 하나 이상의 미디어 플레이어에 **MediaTimelineController**를 연결한 후 컨트롤러에서 노출하는 메서드를 사용하여 재생 상태를 제어할 수 있습니다. 다음 예제에서는 [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController.Start)를 호출하여 미디어 시작 시 모든 관련 미디어 플레이어의 재생을 시작합니다.
 
@@ -161,7 +161,7 @@ Windows10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSurfa
 
 [!code-cs[CreateSourceWithOpenCompleted](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCreateSourceWithOpenCompleted)]
 
-**OpenOperationCompleted** 처리기는 미디어 소스 콘텐츠의 기간을 검색하는 데 사용됩니다. 기간이 결정되면 **Slider** 컨트롤의 최대값은 미디어 항목의 총 시간(초)으로 설정됩니다. 이 값은 UI 스레드에서 실행되도록 하는 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317)에 대한 호출 내에 설정됩니다.
+**OpenOperationCompleted** 처리기는 미디어 소스 콘텐츠의 기간을 검색하는 데 사용됩니다. 기간이 결정되면 **Slider** 컨트롤의 최대값은 미디어 항목의 총 시간(초)으로 설정됩니다. 값은 UI 스레드에서 실행되도록 하는 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317)에 대한 호출 내에 설정됩니다.
 
 [!code-cs[DeclareDuration](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareDuration)]
 
@@ -226,9 +226,9 @@ Windows 10 버전 1703부터 프레임 서버 모드에서 **MediaPlayer**를 �
 
 [!code-cs[VideoFrameAvailable](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetVideoFrameAvailable)]
 
-Win2D에 대한 자세한 내용은 [Win2D GitHub 리포지토리](https://github.com/Microsoft/Win2D)를 참조하세요. 위의 샘플 코드 사용해 보려면 다음 지침을 사용하여 프로젝트에 Win2D NuGet 패키지를 추가해야 합니다.
+Win2D에 대한 자세한 내용은 [Win2D GitHub 저장소](https://github.com/Microsoft/Win2D)를 참조하세요. 위의 샘플 코드 사용해 보려면 다음 지침을 사용하여 프로젝트에 Win2D NuGet 패키지를 추가해야 합니다.
 
-**효과 프로젝트에 Win2D NuGet 패키지를 추가하려면**
+**결과 프로젝트에 Win2D NuGet 패키지를 추가 하려면**
 
 1.  **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
 2.  창 위쪽에서 **찾아보기** 탭을 선택합니다.
@@ -238,7 +238,7 @@ Win2D에 대한 자세한 내용은 [Win2D GitHub 리포지토리](https://githu
 6.  패키지 라이선스에 동의합니다.
 
 ## <a name="detect-and-respond-to-audio-level-changes-by-the-system"></a>시스템을 통해 오디오 레벨 변경 검색 및 대응
-Windows 10, 버전 1803부터는 시스템이 현재 사용 중인 **MediaPlayer**의 오디오 레벨을 낮추거나 음을 소거하면 앱이 이를 검색할 수 있습니다. 예를 들어 시스템은 알람이 울리는 동안 오디오 재생 수준을 낮추거나 '더킹(duck)'할 수 있습니다. 앱이 앱 매니페스트에서 *backgroundMediaPlayback* 기능을 선언하지 않은 경우 앱이 백그라운드로 전환할 때 앱의 음이 소거됩니다. [**AudioStateMonitor**](https://docs.microsoft.comuwp/api/windows.media.audio.audiostatemonitor) 클래스를 사용하면 시스템이 오디오 스트림의 볼륨을 수정할 때 이벤트를 수신하도록 등록할 수 있습니다. **MediaPlayer**의 **AudioStateMonitor** 속성에 액세스하고 [**SoundLevelChanged**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevelchanged) 이벤트에 대한 처리기를 등록하여 이 **MediaPlayer**에 대한 오디오 레벨을 시스템이 변경하면 이를 알려 줍니다.
+Windows 10, 버전 1803부터는 시스템이 현재 사용 중인 **MediaPlayer**의 오디오 레벨을 낮추거나 음을 소거하면 앱이 이를 검색할 수 있습니다. 예를 들어 시스템은 알람이 울리는 동안 오디오 재생 수준을 낮추거나 '더킹(duck)'할 수 있습니다. 앱이 앱 매니페스트에서 *backgroundMediaPlayback* 기능을 선언하지 않은 경우 앱이 백그라운드로 전환할 때 앱의 음이 소거됩니다. [  **AudioStateMonitor**](https://docs.microsoft.comuwp/api/windows.media.audio.audiostatemonitor) 클래스를 사용하면 시스템이 오디오 스트림의 볼륨을 수정할 때 이벤트를 수신하도록 등록할 수 있습니다. **MediaPlayer**의 **AudioStateMonitor** 속성에 액세스하고 [**SoundLevelChanged**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevelchanged) 이벤트에 대한 처리기를 등록하여 이 **MediaPlayer**에 대한 오디오 레벨을 시스템이 변경하면 이를 알려 줍니다.
 
 [!code-cs[RegisterAudioStateMonitor](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetRegisterAudioStateMonitor)]
 
@@ -258,9 +258,9 @@ Windows 10, 버전 1803부터는 시스템이 현재 사용 중인 **MediaPlayer
 
 ## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)
-* [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)
-* [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)
-* [미디어 중단 만들기, 예약 및 관리](create-schedule-and-manage-media-breaks.md)
+* [미디어 항목, 재생 및 추적](media-playback-with-mediasource.md)
+* [Sytem 미디어 전송 컨트롤을 사용 하 여 통합](integrate-with-systemmediatransportcontrols.md)
+* [만들기, 예약 및 미디어 나누기를 관리 합니다.](create-schedule-and-manage-media-breaks.md)
 * [백그라운드에서 미디어 재생](background-audio.md)
 
 

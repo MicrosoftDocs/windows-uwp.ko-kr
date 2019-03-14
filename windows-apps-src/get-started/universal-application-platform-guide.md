@@ -7,21 +7,21 @@ ms.topic: article
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a43cdd5c16e4ab7ec254c263df75c182ce3faba
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117633"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57618178"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
-![유니버설 Windows 플랫폼 앱 다양 한 장치에서 실행, 적응형 사용자 인터페이스, 자연 스러운 사용자 입력, 하나의 스토어, 파트너 센터 지원 및 클라우드 서비스](images/universalapps-overview.png)
+![유니버설 Windows 플랫폼 앱 적응형 사용자 인터페이스, 자연 스러운 사용자 입력, 하나의 저장소 파트너 센터를 지원 하며 클라우드 서비스는 다양 한 장치에서 실행](images/universalapps-overview.png)
 
 UWP 앱은 다음과 같습니다.
 
-- 보안: UWP 앱은 액세스할 디바이스 리소스와 데이터를 선업합니다. 사용자는 이러한 액세스에 권한을 부여해야 합니다.
+- 보안: UWP 앱에는 어떤 장치 리소스 및 액세스 되는 데이터 선언 합니다. 사용자는 이러한 액세스에 권한을 부여해야 합니다.
 - Windows 10을 실행하는 모든 장치에서 일반적인 API를 사용할 수 있습니다.
-- 디바이스 고유의 기능을 사용하고 서로 다른 디바이스는 화면 크기, 해상도 및 DPI에 맞게 UI를 적용할 수 있습니다.
+- 장치 특정 기능을 사용 하 고 다른 장치 화면 크기, 해상도 및 DPI UI를 적용할 수 있습니다.
 - Windows 10에서 실행되는 모든 디바이스(또는 사용자가 지정하는 항목만)의 Microsoft Store에서 사용할 수 있습니다. Microsoft Store는 앱에서 소득을 올릴 수 있는 다양한 방법을 제공합니다.
 - 시스템에 위험이 되거나 "시스템 rot"이 발생할 위험 없이 설치 및 제거를 수행할 수 있습니다.
 - 참여: 라이브 타일, 푸시 알림, Windows Timeline과 Cortana의 "중단한 위치부터 다시 시작" 기능과 상호 작용하는 사용자 활동을 활용하여 사용자의 참여를 이끌어냅니다.
@@ -35,9 +35,9 @@ UWP 앱은 마이크, 위치, 웹캠, USB 장치, 파일 및 등에 대한 액�
 
 ## <a name="a-common-api-surface-across-all-devices"></a>모든 디바이스에서의 공통 API 표면
 
-Windows 10 유니버설 Windows 플랫폼 (UWP), windows 10을 실행 하는 모든 장치에 공통 앱 플랫폼을 제공 하는 소개 합니다. UWP 핵심 API는 모든 Windows 장치에서 같습니다. 앱이 핵심 Api만 사용 하는 경우 데스크톱 PC, Xbox, 혼합 현실 헤드셋을 대상으로 하 고 등 했는지 여부에 관계 없이 모든 windows 10 장치에서 실행 됩니다.
+Windows 플랫폼 (UWP (유니버설), Windows 10을 실행 하는 모든 장치에서 일반 앱 플랫폼을 제공 하는 Windows 10을 소개 합니다. UWP 핵심 API는 모든 Windows 장치에서 같습니다. 앱이만 핵심 Api를 사용 하는 경우 데스크톱 PC, Xbox, 혼합 현실 헤드셋을 대상으로 하는 여부에 관계 없이 모든 Windows 10 장치에서 실행 하 고 등 합니다.
 
-C++ /WinRT 또는 C++ /CX로 작성된 UWP 앱은 UWP의 일부인 Win32 API에 액세스할 수 있습니다. 이러한 Win32 Api는 모든 windows 10 장치에서 구현 됩니다.
+C++ /WinRT 또는 C++ /CX로 작성된 UWP 앱은 UWP의 일부인 Win32 API에 액세스할 수 있습니다. 이러한 Win32 Api는 모든 Windows 10 장치에 의해 구현 됩니다.
 
 ## <a name="extension-sdks-expose-the-unique-capabilities-of-specific-device-types"></a>확장 SDK는 특정 디바이스 유형의 고유한 기능을 노출
 
@@ -54,7 +54,7 @@ C++ /WinRT 또는 C++ /CX로 작성된 UWP 앱은 UWP의 일부인 Win32 API에 
 
 UI 요소는 레이아웃과 배율을 조정하여 앱이 실행 중인 화면의 크기와 DPI에 응답합니다. UWP 앱은 키보드, 마우스, 터치, 펜 및 Xbox One 컨트롤러 같이 여러 유형의 입력에서 원활하게 작동합니다. 특정한 화면 크기나 디바이스로 UI를 추가적으로 사용자 지정해야 하는 경우에는 앱이 실행되는 다양한 디바이스 및 폼 팩터에 맞게 조정이 가능하도록 UI를 디자인하는 데 새 레이아웃 패널 및 도구가 도움이 됩니다.
 
-![Windows 기반 디바이스](images/1894834-hig-device-primer-01-500.png)
+![Windows 기반 장치](images/1894834-hig-device-primer-01-500.png)
 
 Windows에서는 다음과 같은 기능으로 UI를 여러 장치에 맞게 조정하도록 도와줍니다.
 
@@ -66,7 +66,7 @@ Windows에서는 다음과 같은 기능으로 UI를 여러 장치에 맞게 조
 
 ## <a name="theres-one-store-for-all-devices"></a>모든 디바이스를 위한 하나의 저장소가 있습니다.
 
-통합된 앱 스토어에서는에서 앱을 사용할 수 있는 PC, 태블릿, Xbox, HoloLens, Surface Hub 및 사물 인터넷 (IoT) 디바이스와 같은 windows 10 장치. 앱을 스토어에 제출하고 모든 유형의 디바이스에서, 또는 선택한 디바이스에서 이를 사용하도록 할 수 있습니다. 한 곳에서 모든 Windows 장치용 앱을 제출하고 관리합니다. UWP 기능으로 현대화하고 Microsoft Store에서 판매하고 싶은 C++ 데스크톱 앱이 있나요? 그것도 가능합니다.
+통합된 앱 스토어 사용 가능 앱 PC, 태블릿, Xbox, HoloLens, Surface Hub 및 사물 인터넷 (IoT) 장치와 같은 Windows 10 장치에서. 앱을 스토어에 제출하고 모든 유형의 디바이스에서, 또는 선택한 디바이스에서 이를 사용하도록 할 수 있습니다. 한 곳에서 모든 Windows 장치용 앱을 제출하고 관리합니다. UWP 기능으로 현대화하고 Microsoft Store에서 판매하고 싶은 C++ 데스크톱 앱이 있나요? 그것도 가능합니다.
 
 사용자에 대한 이해를 높이고 앱을 개선하는 데 중요한 도구인 상세 원격 분석용 [Application Insights](https://azure.microsoft.com/services/application-insights/)에 UWP 앱이 통합됩니다.
 
@@ -94,7 +94,7 @@ UWP 앱에서 사용자의 참여도를 높이는 방법은 여러 가지가 있
 - 사용자 활동 덕분에 사용자가 디바이스 전반의 걸쳐 앱을 떠나는 지점을 선택할 수 있습니다.
 - 알림 센터에는 앱에서의 알림이 정리되어 있습니다.
 - 백그라운드 실행 및 트리거는 사용자가 필요할 때만 앱을 실행합니다.
-- 사용자가 전 세계의 사람들과 상호 작용을 하도록 앱에서 음성 및 Bluetooth LE 디바이스를 사용할 수 있습니다.
+- 사용자가 전 세계와 상호 작용하는 데 도움이 되도록 앱에서 음성 및 Bluetooth LE 장치를 사용할 수 있습니다.
 - 앱에 음성 명령 기능을 추가하려면 Cortana를 통합합니다.
 
 ##  <a name="use-a-language-you-already-know"></a>이미 알고 있는 언어 사용
@@ -107,7 +107,7 @@ UWP 앱은 운영 체제에서 제공되는 네이티브 API인 Windows 런타�
 
 ## <a name="links-to-help-you-get-going"></a>실행에 도움이 되는 링크
 
-### <a name="get-set-up"></a>설정하기
+### <a name="get-set-up"></a>설정
 
 [시작하기](get-set-up.md)를 확인하여 앱 생성을 시작하는 데 필요한 도구를 다운로드한 다음, [첫 번째 앱을 작성합니다](your-first-app.md).
 
@@ -115,9 +115,9 @@ UWP 앱은 운영 체제에서 제공되는 네이티브 API인 Windows 런타�
 
 Microsoft의 디자인 시스템을 Fluent라고 합니다. 흐름 디자인 시스템은 혁신적인 UWP 기능이 결집된 구현체로서 모든 유형의 Windows 기반 장치에서 높은 성능을 발휘할 수 있는 앱을 개발하기 위한 모범 사례가 여기에 통합되어 있습니다. Fluent 환경은 태블릿부터 노트북, PC, TV 및 가상 현실 디바이스에 이르기까지 모든 디바이스에 적응하여 자연스러운 경험을 제공합니다. 흐름 디자인에 대한 내용은 [UWP 앱을 위한 흐름 디자인 시스템](https://docs.microsoft.com/windows/uwp/design/fluent-design-system)을 참조하세요.
 
-좋은 [디자인](https://go.microsoft.com/fwlink/?LinkId=258848)이란 모양과 기능 외에도 사용자가 앱과 상호 작용하는 방식을 고려한 것입니다. 사용자 환경은 앱 사용의 즐거움을 결정하는 데 중요한 역할을 하므로 이 단계를 간과해서는 안 됩니다. [디자인 기초](https://developer.microsoft.com/en-us/windows/apps/design)에서는 유니버설 Windows 앱 디자인을 소개합니다. 사용자를 만족시키는 UWP 앱을 디자인하는 방법은 [디자이너를 위한 UWP(유니버설 Windows 플랫폼) 앱 소개](https://msdn.microsoft.com/library/windows/apps/dn958439)를 참조하세요. 코딩을 시작하기 전에 [디바이스 입문](../design/devices/index.md)을 참조하면 대상으로 지정하려는 다양한 폼 팩터에서 앱을 사용하는 조작 환경을 생각하는 데 도움이 됩니다.
+좋은 [디자인](https://go.microsoft.com/fwlink/?LinkId=258848)이란 모양과 기능 외에도 사용자가 앱과 상호 작용하는 방식을 고려한 것입니다. 사용자 환경은 앱 사용의 즐거움을 결정하는 데 중요한 역할을 하므로 이 단계를 간과해서는 안 됩니다. [디자인 기초](https://developer.microsoft.com/en-us/windows/apps/design)에서는 유니버설 Windows 앱 디자인을 소개합니다. 사용자를 즐겁게 해주는 UWP 앱을 디자인하는 방법은 [디자이너용 UWP(유니버설 Windows 플랫폼) 앱 소개](https://msdn.microsoft.com/library/windows/apps/dn958439)를 참조하세요. 코딩을 시작하기 전에 [디바이스 입문](../design/devices/index.md)을 참조하면 대상으로 지정하려는 다양한 폼 팩터에서 앱을 사용하는 조작 환경을 생각하는 데 도움이 됩니다.
 
-다양한 디바이스에서의 조작 외에도 여러 디바이스의 이점을 수용하도록 [앱을 계획](https://msdn.microsoft.com/library/windows/apps/hh465427)해야 합니다. 예를 들어,
+다양한 디바이스에서의 조작 외에도 여러 디바이스의 이점을 수용하도록 [앱을 계획](https://msdn.microsoft.com/library/windows/apps/hh465427)해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 - [UWP 앱의 탐색 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958438)에 따라 모바일, 작은 화면 및 큰 화면 디바이스를 수용하도록 워크플로를 디자인합니다. 다양한 화면 크기와 해상도에 맞게 [사용자 인터페이스를 레이아웃](https://msdn.microsoft.com/library/windows/apps/dn958435)합니다.
 
@@ -132,27 +132,27 @@ Microsoft의 디자인 시스템을 Fluent라고 합니다. 흐름 디자인 시
 
 ### <a name="submit-your-app-to-the-store"></a>스토어에 앱 제출
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하면 관리 하 고 모든 한곳에서 Windows 장치용 앱을 제출할 수 있습니다. [Windows 앱 게시 및 게임](../publish/index.md) Microsoft Store에 게시 하기 위해 앱을 제출 하는 방법을 참조 하세요.
+[파트너 센터](https://partner.microsoft.com/dashboard) 모든 곳의 Windows 장치용 앱을 제출 하 고 관리할 수 있습니다. 참조 [게시할 Windows 앱과 게임](../publish/index.md) Microsoft Store 게시할 앱을 제출 하는 방법을 알아보려면.
 
-새 기능 덕분에 프로세스는 간소화되고 더 세부적으로 제어할 수 있습니다. 자세한 [분석 보고서](https://msdn.microsoft.com/library/windows/apps/mt148522), 통합된 [지급 세부 정보](https://msdn.microsoft.com/library/windows/apps/dn986925), [앱을 홍보하고 고객 참여를 유도](https://msdn.microsoft.com/library/windows/apps/mt148526)하는 방법 등을 알아볼 수 있습니다.
+새 기능 덕분에 프로세스는 간소화되고 더 세부적으로 제어할 수 있습니다. 자세한 [분석 보고서](https://msdn.microsoft.com/library/windows/apps/mt148522), 결합된 [지급 세부 정보](https://msdn.microsoft.com/library/windows/apps/dn986925), [앱을 홍보하고 고객 참여를 유도](https://msdn.microsoft.com/library/windows/apps/mt148526)하는 방법 등을 알아볼 수 있습니다.
 
-자세한 소개 자료를 보려면 [Windows10 디바이스용 Windows 앱 빌드 소개](https://msdn.microsoft.com/magazine/dn973012.aspx)를 참조하세요.
+자세한 소개 자료를 보려면 [Windows 10 디바이스용 Windows 앱 빌드 소개](https://msdn.microsoft.com/magazine/dn973012.aspx)를 참조하세요.
 
 ### <a name="more-advanced-topics"></a>고급 항목
 
 - 앱의 사용자 활동이 Windows 타임라인이나 Cortana의 "중단한 위치부터 다시 시작" 기능에 표시되도록 [사용자 활동](https://blogs.windows.com/buildingapps/2017/12/19/application-engagement-windows-timeline-user-activities/#tHuZ6tLPtCXqYKvw.97)을 사용하는 방법을 알아보세요.
 - [UWP 앱을 위한 타일, 배지 및 알림](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/)을 사용하는 방법을 알아보세요.
-- UWP 앱에 사용할 수 있는 Win32 API의 전체 목록은 [UWP 앱의 API 집합](https://msdn.microsoft.com/library/windows/desktop/mt186421) 및 [UWP 앱의 DII](https://msdn.microsoft.com/library/windows/desktop/mt186422)를 참조하세요.
+- UWP 앱에 사용할 수 있는 Win32 API의 전체 목록은 [UWP 앱의 API 집합](https://msdn.microsoft.com/library/windows/desktop/mt186421) 및 [UWP 앱의 Dll](https://msdn.microsoft.com/library/windows/desktop/mt186422)을 참조하세요.
 - .NET UWP 앱에 대한 개요는 [.NET의 유니버설 Windows 앱](https://blogs.msdn.microsoft.com/dotnet/2015/07/30/universal-windows-apps-in-net)을 참조하세요.
 - UWP 앱에서 사용할 수 있는 .NET 종류의 목록을 보려면 [UWP 앱을 위한 .NET](https://msdn.microsoft.com/library/mt185501.aspx)을 참조하세요.
-- [.NET 네이티브를 사용 하 여 앱을 컴파일](https://docs.microsoft.com/dotnet/framework/net-native/)
+- [.NET 네이티브로 앱 컴파일](https://docs.microsoft.com/dotnet/framework/net-native/)
 - Windows 10 사용자를 위한 최신 환경을 기존 데스크톱 앱에 추가하고 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하여 이를 Microsoft Store에 배포하는 방법을 알아보세요.
 
-## <a name="how-the-universal-windows-platform-relates-to-windows-runtime-apis"></a>Windows 런타임 Api에 유니버설 Windows 플랫폼의 관계
-유니버설 Windows 플랫폼 (UWP) 앱을 빌드할 경우 많은 거리 및 용어 "유니버설 Windows 플랫폼 (UWP)" 및 "Windows 런타임 (WinRT)" 또는 더 동일한 것으로 간주 밖의 편의 얻을 수 있습니다. 하지만 ** 기술의 내부적 모양과 결정 방금 차이 아이디어 간에 수 있습니다. 하는 방법에 대 한 싶은 경우, 다음이 마지막 섹션 적합 합니다.
+## <a name="how-the-universal-windows-platform-relates-to-windows-runtime-apis"></a>유니버설 Windows 플랫폼의 관계를 Windows 런타임 Api
+유니버설 Windows 플랫폼 (UWP) 앱을 빌드하는 주행 거리와 더 많거나 적은 동의어로 "유니버설 Windows 플랫폼 (UWP)" 및 "Windows Runtime (WinRT)" 용어를 처리 하는 방법에서 편리 하 게 많이 얻을 수 있습니다. 하지만 *는* 기술의 내부적으로 살펴보고 확인만 차이 간의 이러한 아이디어를 수 있습니다. 이 대해 궁금한 점이 있으면 인 경우 마지막 섹션 수입니다.
 
-Windows 런타임 및 WinRT Api는 Windows Api의 발전 된 형태입니다. 원래 Windows 평면을 C-스타일 Win32 Api를 통해 프로그래밍 되었습니다. COM Api ([DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) 되는 주요 예제)에 추가 되었습니다. Windows Forms, WPF,.NET 및 관리 되는 언어 가져온 자신만의 Windows 앱 및 API 기술의 자신의 버전을 작성 합니다. Windows 런타임 이면 내부적으로 COM.의 다음 단계 실제 응용 프로그램 이진 인터페이스 (ABI) 계층에서 COM에 표시 됩니다. 하지만 Windows 런타임 여러 다른 프로그래밍 언어로 멋진 범위에서 호출 되도록 설계 되었습니다. 및 해당 언어의 각 더욱 자연스럽 게 되는 방식으로 호출할 수 있습니다. 이 위해 Windows 런타임에 대 한 액세스를 통해 언어 프로젝션 일명 사용할 활성화 됩니다. Windows 런타임 언어 프로젝션에 C#, Visual Basic로, 표준 c + +, JavaScript, 등에 있습니다. 또한 적절 하 게 패키지 한 번 ( [데스크톱 브리지](/windows/uwp/porting/desktop-to-uwp-root)참조)을 멋진 다양 한 응용 프로그램 모델 중 하나에 내장 된 앱에서 WinRT Api를 호출할 수 있습니다: Win32,.NET, WinForms 및 WPF 합니다.
+Windows 런타임 및 WinRT Api는 Windows Api의 진화 합니다. 원래 Windows 플랫, C 스타일 Win32 Api를 통해 프로그래밍 된 합니다. COM Api를 추가 된 것 ([DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) 대표적인 예로 되). Windows Forms, WPF,.NET 및 관리 되는 언어 Windows 앱 및 API 기술의 자체 버전을 작성 하는 고유한 방식으로 제공 합니다. Windows 런타임, 내부적으로 다음 단계는 com 실제 응용 프로그램 이진 인터페이스 (ABI) 계층에서 COM에 표시 됩니다. 하지만 유용한 다양 한 서로 다른 프로그래밍 언어에서에서 호출할 수 있으려면 Windows 런타임 설계 되었습니다. 및 이러한 각 언어에 매우 자연 스러운 방식으로 호출할 수 있습니다. 이 위해 Windows 런타임에 대 한 언어 라는 항목을 통해 제공 됩니다. Windows 런타임 언어 프로젝션에는 C#, Visual Basic로, 표준 c + +로, JavaScript, 및 등입니다. 또한 적절 하 게 패키지 한 번 (참조 [데스크톱 브리지](/windows/uwp/porting/desktop-to-uwp-root)), WinRT Api 응용 프로그램 모델의 뛰어난 범위 중 하나에서 작성 한 앱에서 호출할 수 있습니다. Win32,.NET, WinForms 및 WPF
 
-및 물론, UWP 앱에서 WinRT Api를 호출할 수 있습니다. UWP를 기반으로 Windows 런타임 응용 프로그램 모델입니다. 기술적으로 UWP 응용 프로그램 모델을 기반으로 [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication)하지만 프로그래밍 언어 선택에 따라 세부 정보, 숨겨져 있을 수 있습니다. 값 제안의 관점에서이 항목에 설명 된 대로 UWP를 선택 하면 Microsoft Store에 게시 하 고 수 있는 좋은 다양 한 장치 폼 팩터 중 하나에서 실행 하는 단일 바이너리를 작성 하는 합니다. UWP 앱의 장치 범위를 호출 하는 응용 프로그램을 제한 하는 또는 조건부로 호출 UWP Api의 하위 집합에 따라 달라 집니다.
+및 물론 UWP 앱에서 WinRT Api를 호출할 수 있습니다. UWP는 Windows 런타임 기반으로 구축 된 응용 프로그램 모델입니다. UWP 응용 프로그램 모델의 기반이 되는 기술적으로 보면 [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication)이지만 선택한 프로그래밍 언어에 따라 세부 정보를 숨길 수 있습니다. 이 항목에 설명 된 대로, 값 제안의 관점에서 UWP 수을 Microsoft Store 게시 되며 장치 폼 팩터 뛰어난 범위 중 하나에서 실행 하는 단일 바이너리를 작성 하는 데 적합 합니다. UWP 앱의 장치 연결 앱 호출을 제한 하는 또는 조건부로 호출 하는 UWP Api의 하위 집합에 따라 달라 집니다.
 
-지금까지이 섹션에서는 기본적인 Windows 런타임 Api 및 메커니즘 및 유니버설 Windows 플랫폼의 비즈니스 가치 기술 간의 차이점을 설명 하는 완료 했습니다.
+다행히이 섹션에서는 Windows 런타임 Api, 메커니즘 및 유니버설 Windows 플랫폼의 비즈니스 가치를 기본 기술 간의 차이점을 설명 하는 성공 했습니다.

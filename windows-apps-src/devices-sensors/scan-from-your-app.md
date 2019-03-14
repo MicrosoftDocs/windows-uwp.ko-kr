@@ -1,22 +1,22 @@
 ---
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: 앱에서 스캔
-description: 여기서는 평판, 문서 공급 장치 또는 자동 구성된 스캔 소스를 사용하여 앱에서 콘텐츠를 스캔하는 방법에 대해 알아봅니다.
+description: 여기서는 평판, 문서 공급 디바이스 또는 자동 구성된 스캔 소스를 사용하여 앱에서 콘텐츠를 스캔하는 방법에 대해 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 74c01c21ae65f9e93638e2ce1df604591043a729
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8924199"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57601218"
 ---
 # <a name="scan-from-your-app"></a>앱에서 스캔
 
 
-**중요 API**
+**중요 한 Api**
 
 -   [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)
 -   [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)
@@ -24,7 +24,7 @@ ms.locfileid: "8924199"
 
 여기서는 평판, 문서 공급 디바이스 또는 자동 구성된 스캔 소스를 사용하여 앱에서 콘텐츠를 스캔하는 방법에 대해 알아봅니다.
 
-**중요 한** [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) Api는 데스크톱 [장치 제품군](https://msdn.microsoft.com/library/windows/apps/Dn894631)의 일부입니다. 앱은 Windows10의 데스크톱 버전 에서만 이러한 Api를 사용할 수 있습니다.
+**중요**  는 [ **Windows.Devices.Scanners** ](https://msdn.microsoft.com/library/windows/apps/Dn264250) 데스크톱의 일부인 Api [장치 제품군](https://msdn.microsoft.com/library/windows/apps/Dn894631)합니다. 앱의 Windows 10 데스크톱 버전에 대해서만 이러한 Api를 사용할 수 있습니다.
 
 앱에서 스캔하려면 먼저 새 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 선언하고 [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381) 형식을 가져와서 사용 가능한 스캐너를 나열해야 합니다. WIA 드라이버를 사용하여 로컬로 설치된 스캐너만 나열되고 앱에서 사용할 수 있습니다.
 
@@ -84,7 +84,7 @@ Windows에서는 스캐너를 자동으로 검색하지 않습니다. 앱이 스
     }
 ```
 
-## <a name="scan"></a>스캔
+## <a name="scan"></a>Scan
 
 1.  **ImageScanner 개체 가져오기**
 
@@ -94,22 +94,22 @@ Windows에서는 스캐너를 자동으로 검색하지 않습니다. 앱이 스
     ImageScanner myScanner = await ImageScanner.FromIdAsync(deviceId);
  ```
 
-2.  **스캔만**
+2.  **방금 검색**
 
 기본 설정으로 스캔하려는 경우 앱에서는 [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) 네임스페이스에 의존하여 스캐너를 선택하고 해당 소스에서 스캔합니다. 스캔 설정은 변경되지 않습니다. 사용 가능한 스캐너로는 자동 구성, 평판 또는 공급 장치가 있습니다. 이러한 스캔 유형은 공급 디바이스 대신에 평판을 선택하는 등 잘못된 소스에서 스캔하더라도 스캔이 성공적으로 수행될 가능성이 높습니다.
 
-**참고**사용자가 문서 공급 장치를 스캔할, 스캔 평판에서 대신 합니다. 사용자가 빈 공급 디바이스에서 스캔하려고 하면 스캔된 파일이 생성되지 않습니다.
+**참고**  사용자 공급 장치에 검색 문서 위치 하는 경우 스캐너 검색 평판에서 대신 합니다. 사용자가 빈 공급 디바이스에서 스캔하려고 하면 스캔된 파일이 생성되지 않습니다.
  
 ```csharp
     var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default,
         folder).AsTask(cancellationToken.Token, progress);
 ```
 
-3.  **자동 구성, 평판 또는 공급 장치 소스에서 스캔**
+3.  **자동 구성에서 검색, 평판, 또는 Feeder 원본**
 
 앱에서는 장치의 [자동 구성된 스캔](https://msdn.microsoft.com/library/windows/hardware/Ff539393)을 사용하여 최적의 스캔 설정으로 스캔할 수 있습니다. 이 옵션을 사용하면 스캔되는 콘텐츠에 따라 컬러 모드와 스캔 해상도 같은 최적의 스캔 설정을 장치 자체에서 결정할 수 있습니다. 디바이스는 각각의 새로운 스캔 작업마다 런타임 시 스캔 설정을 선택합니다.
 
-**참고**모든 스캐너 앱 스캐너가이 설정을 사용 하기 전에이 기능을 지원 하는지 확인 해야 하므로이 기능을 지원 합니다.
+**참고**  일부 스캐너 앱 스캐너가이 설정을 사용 하기 전에이 기능을 지원 하는지 확인 해야 하므로이 기능을 지원 합니다.
 
 이 예제에서 앱은 먼저 스캐너가 자동 구성 기능이 있는지 여부를 확인하고 나서 스캔합니다. 평판 스캐너 또는 문서 공급 디바이스 스캐너를 지정하려면 **AutoConfigured**를 **Flatbed** 또는 **Feeder**로 바꾸면 됩니다.
 

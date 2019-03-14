@@ -1,22 +1,22 @@
 ---
 ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
-Description: The TextBox control lets a user enter text into an app.
+Description: TextBox 컨트롤을 사용하면 사용자가 앱에 텍스트를 입력할 수 있습니다.
 title: 입력란
 label: Text box
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: Windows 10 uwp
+keywords: windows 10, uwp
 pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e3faf82ab9786f6ba079e44d79b6ed49394b881
-ms.sourcegitcommit: ff131135248c85a8a2542fc55437099d549cfaa5
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "9117793"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57602688"
 ---
 # <a name="text-box"></a>입력란
 
@@ -24,7 +24,7 @@ TextBox 컨트롤을 사용하면 사용자가 앱에 텍스트를 입력할 수
 
 TextBox에는 텍스트 입력을 간소화할 수 있는 다양한 기능이 있습니다. 텍스트 복사 및 붙여넣기를 지원하는 친숙한 기본 제공 상황에 맞는 메뉴와 함께 제공됩니다. "모두 지우기" 단추를 통해 사용자는 입력된 모든 텍스트를 빠르게 삭제할 수 있습니다. 또한 맞춤법 검사 기능이 기본 제공되며 기본적으로 사용됩니다.
 
-> **중요 API**: [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [Text 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)
+> **중요 한 Api**: [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [Text 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -49,8 +49,8 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/TextBox">앱을 열고 작동 중인 TextBox를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -83,7 +83,7 @@ rootGrid.Children.Add(textBox);
 
 입력란을 사용하여 양식의 데이터 입력을 수락하고 [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) 속성을 사용하여 입력란에서 전체 텍스트 문자열을 가져오는 것이 일반적입니다. 일반적으로 제출 단추 클릭과 같은 이벤트를 사용하여 Text 속성에 액세스하지만, 텍스트가 변경될 때 특정 작업을 수행해야 하는 경우 [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanged.aspx) 또는 [TextChanging](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanging.aspx) 이벤트를 처리할 수 있습니다.
 
-이 예제에서는 텍스트 상자의 현재 콘텐츠를 설정 하는 방법을 보여 줍니다.
+이 예제에서는 가져오기 및 입력란의 현재 콘텐츠를 설정 하는 방법을 보여 줍니다.
 
 ```xaml
 <TextBox name="SampleTextBox" Text="Sample Text"/>
@@ -111,7 +111,7 @@ SampleTextBox.Text = "Sample text retrieved";
 - **AcceptsReturn**이 **true**인 경우
 - **TextWrap**에 **NoWrap** 이외의 값이 있는 경우
 
-이 예제에서는 텍스트 상자의 현재 콘텐츠를 설정 하는 방법을 보여 줍니다.
+이 예제에서는 가져오기 및 입력란의 현재 콘텐츠를 설정 하는 방법을 보여 줍니다.
 
 ```xaml
 <TextBox name="SampleTextBox" Text="Sample Text"/>
@@ -171,7 +171,7 @@ ScrollViewer.SetVerticalScrollBarVisibility(textBox, ScrollBarVisibility.Auto);
 
 입력란 내에서 텍스트를 맞추려면 [TextAlignment](/uwp/api/windows.ui.xaml.controls.textbox.textalignment) 속성을 사용합니다. 페이지 레이아웃 내에서 입력란을 맞추려면 [HorizontalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) 및 [VerticalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) 속성을 사용합니다.
 
-입력란은 서식 없는 텍스트만 지원하지만 입력란에서 텍스트가 표시되는 방식을 브랜딩에 맞게 사용자 지정할 수 있습니다. [FontFamily](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.aspx), [FontSize](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontfamily.aspx), [FontStyle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontsize.aspx), [Background](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontstyle.aspx), [Foreground](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx) 및 [CharacterSpacing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.foreground.aspx)과 같은 표준 [컨트롤](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.characterspacing.aspx) 속성을 설정하여 텍스트의 모양을 변경할 수 있습니다. 이러한 속성은 입력란이 로컬에서 텍스트를 표시하는 방식에만 영향을 줍니다. 예를 들어 서식 있는 텍스트 컨트롤에 텍스트를 복사하여 붙여넣을 경우 서식이 적용되지 않습니다.
+입력란은 서식 없는 텍스트만 지원하지만 입력란에서 텍스트가 표시되는 방식을 브랜딩에 맞게 사용자 지정할 수 있습니다. [FontFamily](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontfamily.aspx), [FontSize](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontsize.aspx), [FontStyle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontstyle.aspx), [Background](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx), [Foreground](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.foreground.aspx) 및 [CharacterSpacing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.characterspacing.aspx)과 같은 표준 [컨트롤](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.aspx) 속성을 설정하여 텍스트의 모양을 변경할 수 있습니다. 이러한 속성은 입력란이 로컬에서 텍스트를 표시하는 방식에만 영향을 줍니다. 예를 들어 서식 있는 텍스트 컨트롤에 텍스트를 복사하여 붙여넣을 경우 서식이 적용되지 않습니다.
 
 이 예제에서는 텍스트 모양을 사용자 지정하기 위해 여러 속성이 설정된 읽기 전용 입력란을 보여 줍니다.
 
@@ -314,9 +314,9 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 ## <a name="related-articles"></a>관련 문서
 
 - [텍스트 컨트롤](text-controls.md)
-- [맞춤법 검사에 대한 지침](text-controls.md)
+- [맞춤법 검사에 대 한 지침](text-controls.md)
 - [검색 추가](https://msdn.microsoft.com/library/windows/apps/hh465231)
-- [텍스트 입력에 대한 지침](text-controls.md)
+- [텍스트 입력에 대 한 지침](text-controls.md)
 - [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
-- [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+- [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

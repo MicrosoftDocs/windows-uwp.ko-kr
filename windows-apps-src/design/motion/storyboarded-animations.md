@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 212ef252e7d123ebf457a6584f77addb04fdfb2c
-ms.sourcegitcommit: a5f5bd724e65ce4a62d28dfd9080afb127886d6e
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "9059994"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57627078"
 ---
 # <a name="storyboarded-animations"></a>스토리보드 애니메이션
 
@@ -74,7 +74,7 @@ Microsoft Silverlight 또는 WPF(Windows Presentation Foundation)에 대해 잘 
 
 경우에 따라 대상 개체의 직접 속성이 아닌 속성을 대상으로 지정해야 하지만 그러면 개체-속성 관계에서 더 깊게 중첩됩니다. 애니메이션 효과를 줄 수 있는 속성 형식([**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870), [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723))을 참조할 때까지 영향을 주는 일련의 개체 및 속성 값으로 드릴다운하려면 이렇게 해야 하는 경우가 종종 있습니다. 이 개념을 *간접 대상*이라고 하고 이 방식으로 속성을 대상 지정하는 구문을 *속성 경로*라고 합니다.
 
-예를 들면 다음과 같습니다. 스토리보드 애니메이션에 대한 일반적인 시나리오 한 가지는 앱 UI 또는 컨트롤 일부의 색상을 변경하여 컨트롤을 특정 상태로 나타내는 것입니다. 예를 들어 빨간색에서 녹색으로 바뀌도록 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)의 [**Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665)에 애니메이션 효과를 주려고 합니다. [**ColorAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243066)이 관련된다고 예상할 것이며 그 예상이 맞습니다. 그러나 개체의 색상에 영향을 주는 UI 요소의 속성이 모두 실제로는 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 형식이 아닙니다. 대신 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 형식입니다. 따라서 실제로 애니메이션의 대상으로 지정해야 하는 항목은 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) 클래스의 [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 속성으로, 이러한 색상 관련 UI 속성에 일반적으로 사용되는 **Brush** 파생 형식입니다. 또한 다음은 애니메이션의 속성 대상 지정을 위한 속성 경로 구성 측면에서 어떻게 표시되는지를 보여 줍니다.
+예를 들면 다음과 같습니다. 스토리보드 애니메이션에 대한 일반적인 시나리오 한 가지는 앱 UI 또는 컨트롤 일부의 색상을 변경하여 컨트롤을 특정 상태로 나타내는 것입니다. 예를 들어 빨간색에서 녹색으로 바뀌도록 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)의 [**Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665)에 애니메이션 효과를 주려고 합니다. [  **ColorAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243066)이 관련된다고 예상할 것이며 그 예상이 맞습니다. 그러나 개체의 색상에 영향을 주는 UI 요소의 속성이 모두 실제로는 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 형식이 아닙니다. 대신 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 형식입니다. 따라서 실제로 애니메이션의 대상으로 지정해야 하는 항목은 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) 클래스의 [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 속성으로, 이러한 색상 관련 UI 속성에 일반적으로 사용되는 **Brush** 파생 형식입니다. 또한 다음은 애니메이션의 속성 대상 지정을 위한 속성 경로 구성 측면에서 어떻게 표시되는지를 보여 줍니다.
 
 ```xaml
 <Storyboard x:Name="myStoryboard">
@@ -93,9 +93,9 @@ Microsoft Silverlight 또는 WPF(Windows Presentation Foundation)에 대해 잘 
 
 다음은 간접 속성 대상 지정 및 사용할 구문과 유사한 몇 가지 속성 경로 문자열을 사용할 수 있는 애니메이션 대상 지정 시나리오 목록입니다.
 
-- [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)에 적용된 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)의 [**X**](https://msdn.microsoft.com/library/windows/apps/BR243029) 값에 애니메이션 효과 적용: `(UIElement.RenderTransform).(TranslateTransform.X)`
-- [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill)에 적용된 [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108)의 [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) 내에 있는 [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color)에 애니메이션 효과 적용: `(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)`
-- [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)에 적용된 [**TransformGroup**](https://msdn.microsoft.com/library/windows/apps/BR243022)에 있는 4가지 변형 중 하나인 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)의 [**X**](https://msdn.microsoft.com/library/windows/apps/BR243029) 값에 애니메이션 효과 적용:`(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)`
+- 애니메이션 효과 적용 합니다 [ **X** ](https://msdn.microsoft.com/library/windows/apps/BR243029) 값을 [ **TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)에 적용 될 때를 [ **RenderTransform** ](https://msdn.microsoft.com/library/windows/apps/BR208980): `(UIElement.RenderTransform).(TranslateTransform.X)`
+- 애니메이션 적용을 [ **색** ](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 내에서 [ **GradientStop** ](https://msdn.microsoft.com/library/windows/apps/BR210078) 의 [ **LinearGradientBrush** ](https://msdn.microsoft.com/library/windows/apps/BR210108)처럼에 적용 된 [ **채우기**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill): `(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)`
+- 애니메이션 효과 적용 합니다 [ **X** ](https://msdn.microsoft.com/library/windows/apps/BR243029) 값을 [ **TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027), 1에서 4 개의 변환를 [  **TransformGroup**](https://msdn.microsoft.com/library/windows/apps/BR243022)처럼에 적용 된 [ **RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980):`(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)`
 
 이러한 예제 중 일부에서 숫자 주위에 대괄호를 사용하는 것을 확인할 수 있습니다. 이는 인덱서이며, 앞에 오는 속성 이름에는 컬렉션이 값으로 포함되며 해당 컬렉션에서 0부터 시작하는 색인으로 식별되는 항목이 필요함을 나타냅니다.
 
@@ -107,9 +107,9 @@ XAML 연결 속성에도 애니메이션 효과를 줄 수 있습니다. 항상 
 
 Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이션에서 적용할 수 있는 세 가지 특정 형식이 있습니다.
 
--   [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) - [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136)으로 애니메이션 효과를 줄 수 있습니다.
--   [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) - [**PointAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210346)으로 애니메이션 효과를 줄 수 있습니다.
--   [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) - [**ColorAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243066)으로 애니메이션 효과를 줄 수 있습니다.
+-   [**이중**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)를 사용 하 여 애니메이션을 적용할 수 있습니다 [ **DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136)
+-   [**지점**](https://msdn.microsoft.com/library/windows/apps/BR225870)를 사용 하 여 애니메이션을 적용할 수 있습니다 [ **PointAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210346)
+-   [**색**](https://msdn.microsoft.com/library/windows/apps/Hh673723)를 사용 하 여 애니메이션을 적용할 수 있습니다 [ **ColorAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243066)
 
 개체 참조 값에 대해 일반화된 [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) 애니메이션 형식도 있으며, 뒷부분에서 설명합니다.
 
@@ -127,7 +127,7 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 
 이전 XAML 예제로 다시 돌아가 **From** 및 **To** 값과 **Duration**을 다시 살펴보겠습니다. 이 예제에서는 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성에 애니메이션 효과를 주며 **Opacity**의 속성 형식은 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)입니다. 따라서 여기서 사용하는 애니메이션은 [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136)입니다.
 
-`From="1.0" To="0.0"` (은)는 애니메이션이 실행될 때 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성이 값 1에서 시작하여 0으로 애니메이션 효과를 주도록 지정합니다. 즉, **Opacity** 속성에 대한 이러한 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 값의 의미와 관련하여 이 애니메이션은 개체가 불투명하게 시작된 다음 투명하게 페이드되도록 합니다.
+`From="1.0" To="0.0"` 애니메이션을 실행 하면 지정 된 [ **불투명도** ](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성 값이 1에서 시작 하 고 0으로 애니메이션 효과 줍니다. 즉, **Opacity** 속성에 대한 이러한 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 값의 의미와 관련하여 이 애니메이션은 개체가 불투명하게 시작된 다음 투명하게 페이드되도록 합니다.
 
 ```xaml
 ...
@@ -140,56 +140,56 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 ...
 ```
 
-`Duration="0:0:1"` (은)는 애니메이션의 지속 시간, 즉 직사각형이 희미해지는 속도를 지정합니다. [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 속성은 *시*:*분*:*초* 형식으로 지정합니다. 이 예제의 기간은 1초입니다.
+`Duration="0:0:1"` 애니메이션 지속, 즉, 사각형 페이드 속도 지정 합니다. [  **Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 속성은 *시*:*분*:*초* 형식으로 지정합니다. 이 예제의 기간은 1초입니다.
 
-[**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) 값 및 XAML 구문에 대한 자세한 내용은 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377)을 참조하세요.
+[  **Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) 값 및 XAML 구문에 대한 자세한 내용은 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377)을 참조하세요.
 
 > [!NOTE]
 > 앞에서 살펴본 예제에서 애니메이션 효과를 줄 개체의 시작 상태에 항상 1인 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)가 있다는 확신이 있는 경우 기본값이나 명시적 설정을 통해 **From** 값을 생략할 수 있으며 애니메이션에서 암시적 시작 값을 사용해도 결과는 동일해집니다.
 
 ### <a name="fromtoby-are-nullable"></a>nullable인 From/To/By
 
-앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 속성의 형식이 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. VisualC + + 구성 요소 확장 (C + + CX)는 **Nullable** 형식 갖고 있지 않으므로 [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) 대신 사용 합니다.
+앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 속성의 형식이 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. Visual c + + 구성 요소 확장 (C + + /cli CX) 없는 **Nullable** 입력을 사용 하 여 [ **IReference** ](https://msdn.microsoft.com/library/windows/apps/BR225864) 대신 합니다.
 
 ### <a name="other-properties-of-an-animation"></a>애니메이션의 다른 속성
 
 이 섹션에서 설명하는 다음 속성은 대부분의 애니메이션에 적합한 기본값이 있다는 점에서 모두 선택 사항입니다.
 
-### **<a name="autoreverse"></a>AutoReverse**
+### <a name="autoreverse"></a>**AutoReverse**
 
 애니메이션에서 [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/BR243202) 또는 [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211)를 지정하지 않으면 해당 애니메이션은 한 번 실행되며 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)으로 지정한 시간 동안 실행됩니다.
 
-[**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/BR243202) 속성은 타임라인이 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)의 끝에 도달한 후 반대로 재생되는지 여부를 지정합니다. **true**로 설정하면 애니메이션이 선언된 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)의 끝에 도달한 후 반대로 실행되어 해당 값을 종료 값(**To**)에서 시작 값(**From**)으로 다시 변경합니다. 즉, 애니메이션이 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 시간의 두 배인 기간 동안 효율적으로 실행된다는 의미입니다.
+[  **AutoReverse**](https://msdn.microsoft.com/library/windows/apps/BR243202) 속성은 타임라인이 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)의 끝에 도달한 후 반대로 재생되는지 여부를 지정합니다. **true**로 설정하면 애니메이션이 선언된 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)의 끝에 도달한 후 반대로 실행되어 해당 값을 종료 값(**To**)에서 시작 값(**From**)으로 다시 변경합니다. 즉, 애니메이션이 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 시간의 두 배인 기간 동안 효율적으로 실행된다는 의미입니다.
 
-### **<a name="repeatbehavior"></a>RepeatBehavior**
+### <a name="repeatbehavior"></a>**RepeatBehavior**
 
-[**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) 속성은 타임라인이 재생되는 횟수 또는 타임라인이 반복되어야 하는 더 큰 기간을 지정합니다. 기본적으로 타임라인에는 "1x"의 반복 횟수가 있으며 해당 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 동안 한 번 재생되고 반복되지 않는다는 의미입니다.
+[  **RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) 속성은 타임라인이 재생되는 횟수 또는 타임라인이 반복되어야 하는 더 큰 기간을 지정합니다. 기본적으로 타임라인에는 "1x"의 반복 횟수가 있으며 해당 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 동안 한 번 재생되고 반복되지 않는다는 의미입니다.
 
 애니메이션이 여러 번 반복하여 재생되도록 할 수 있습니다. 예를 들어, 값이 "3x"이면 애니메이션이 세 번 재생됩니다. 또는 [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211)에 대해 다른 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377)을 지정할 수 있습니다. 효율성을 높이려면 해당 **Duration**이 애니메이션 자체의 **Duration**보다 길어야 합니다. 예를 들어 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)이 "0:0:2"인 애니메이션에 대해 **RepeatBehavior**를 "0:0:10"으로 지정하면 해당 애니메이션은 5번 반복됩니다. 이러한 값이 똑같이 나누어지지 않으면 **RepeatBehavior** 시간에 도달할 때 애니메이션이 잘려 중간까지만 실행될 수 있습니다. 마지막으로 특수한 값 "Forever"를 지정하여 애니메이션이 의도적으로 중지될 때까지 무한 실행되도록 할 수 있습니다.
 
-[**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411) 값 및 XAML 구문에 대한 자세한 내용은 [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411)를 참조하세요.
+[  **RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411) 값 및 XAML 구문에 대한 자세한 내용은 [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411)를 참조하세요.
 
-### **<a name="fillbehaviorstop"></a>FillBehavior="Stop"**
+### <a name="fillbehaviorstop"></a>**FillBehavior="Stop"**
 
 기본적으로 애니메이션이 종료되면 애니메이션은 기간이 초과된 후에도 속성 값을 최종 **To** 또는 수정된 **By** 값으로 유지합니다. 그러나 [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) 속성의 값을 [**FillBehavior.Stop**](https://msdn.microsoft.com/library/windows/apps/BR210306)으로 설정하면 애니메이션 효과를 준 값이 애니메이션이 적용되기 이전에 있던 모든 값이나 보다 정확히 말해 종속성 속성 시스템에 의해 결정된 현재 유효한 값으로 되돌아갑니다. 이 차이점에 대한 자세한 내용은 [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)를 참조하세요.
 
-### **<a name="begintime"></a>BeginTime**
+### <a name="begintime"></a>**BeginTime**
 
 기본적으로 애니메이션의 [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/BR243204)은 "0:0:0"이므로 포함하고 있는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)가 실행되는 즉시 시작됩니다. **Storyboard**에 둘 이상의 애니메이션이 포함된 경우 다른 애니메이션 및 초기 애니메이션의 시작 시간에 시차를 두거나 의도적으로 지연을 짧게 만들려는 경우 이 값을 변경할 수 있습니다.
 
-### **<a name="speedratio"></a>SpeedRatio**
+### <a name="speedratio"></a>**SpeedRatio**
 
-[**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)에 둘 이상의 애니메이션이 있는 경우 **Storyboard**를 기준으로 여러 애니메이션의 시간 속도를 변경할 수 있습니다. 애니메이션이 실행되는 동안 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) 시간이 경과되는 방식을 궁극적으로 제어하는 것은 부모 **Storyboard**입니다. 이 속성이 자주 사용되지는 않습니다. 자세한 내용은 [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/BR243213)를 참조하세요.
+[  **Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)에 둘 이상의 애니메이션이 있는 경우 **Storyboard**를 기준으로 여러 애니메이션의 시간 속도를 변경할 수 있습니다. 애니메이션이 실행되는 동안 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) 시간이 경과되는 방식을 궁극적으로 제어하는 것은 부모 **Storyboard**입니다. 이 속성이 자주 사용되지는 않습니다. 자세한 내용은 [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/BR243213)를 참조하세요.
 
 ## <a name="defining-more-than-one-animation-in-a-storyboard"></a>**Storyboard**에서 둘 이상의 애니메이션 정의
 
-[**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 콘텐츠는 둘 이상의 애니메이션 정의가 될 수 있습니다. 관련 애니메이션을 동일한 대상 개체의 두 속성에 적용하려는 경우 둘 이상의 애니메이션을 사용할 수 있습니다. 예를 들어 UI 요소의 [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)로 사용된 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)의 [**TranslateX**](https://msdn.microsoft.com/library/windows/apps/BR228122) 및 [**TranslateY**](https://msdn.microsoft.com/library/windows/apps/BR228124) 속성을 모두 변경할 수 있습니다. 그러면 요소가 대각선으로 변환됩니다. 이 작업을 수행하려면 두 개의 다른 애니메이션이 필요하지만 이러한 두 애니메이션을 항상 함께 실행하려고 하므로 애니메이션이 동일한 **Storyboard**의 일부가 되도록 할 수 있습니다.
+[  **Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 콘텐츠는 둘 이상의 애니메이션 정의가 될 수 있습니다. 관련 애니메이션을 동일한 대상 개체의 두 속성에 적용하려는 경우 둘 이상의 애니메이션을 사용할 수 있습니다. 예를 들어 UI 요소의 [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)로 사용된 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)의 [**TranslateX**](https://msdn.microsoft.com/library/windows/apps/BR228122) 및 [**TranslateY**](https://msdn.microsoft.com/library/windows/apps/BR228124) 속성을 모두 변경할 수 있습니다. 그러면 요소가 대각선으로 변환됩니다. 이 작업을 수행하려면 두 개의 다른 애니메이션이 필요하지만 이러한 두 애니메이션을 항상 함께 실행하려고 하므로 애니메이션이 동일한 **Storyboard**의 일부가 되도록 할 수 있습니다.
 
 애니메이션이 동일한 형식이거나 동일한 개체를 대상으로 지정할 필요는 없습니다. 다른 기간을 사용할 수 있으며 속성 값을 공유하지 않아도 됩니다.
 
 부모 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)가 실행되면 포함된 각 애니메이션도 실행됩니다.
 
-[**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) 클래스에는 실제로 애니메이션 형식과 동일한 애니메이션 속성이 많이 있는데, 둘 다 [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) 기본 클래스를 공유하기 때문입니다. 따라서 **Storyboard**에는 [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) 또는 [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/BR243204)이 있을 수 있습니다. 포함된 모든 애니메이션이 해당 동작을 갖도록 하려는 경우가 아니라면 일반적으로 **Storyboard**에서 이러한 값을 설정하지 않습니다. 일반적인 규칙으로 **Storyboard**에서 설정된 모든 **Timeline** 속성은 모든 자식 애니메이션에 적용됩니다. 설정 해제되면 **Storyboard**에는 포함된 애니메이션의 가장 긴 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) 값에서 계산되는 암시적 기간이 포함됩니다. 자식 애니메이션보다 짧은 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)이 **Storyboard**에서 명시적으로 설정되면 해당 애니메이션이 잘리게 되며 일반적으로 바람직하지 않습니다.
+[  **Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) 클래스에는 실제로 애니메이션 형식과 동일한 애니메이션 속성이 많이 있는데, 둘 다 [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) 기본 클래스를 공유하기 때문입니다. 따라서 **Storyboard**에는 [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) 또는 [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/BR243204)이 있을 수 있습니다. 포함된 모든 애니메이션이 해당 동작을 갖도록 하려는 경우가 아니라면 일반적으로 **Storyboard**에서 이러한 값을 설정하지 않습니다. 일반적인 규칙으로 **Storyboard**에서 설정된 모든 **Timeline** 속성은 모든 자식 애니메이션에 적용됩니다. 설정 해제되면 **Storyboard**에는 포함된 애니메이션의 가장 긴 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) 값에서 계산되는 암시적 기간이 포함됩니다. 자식 애니메이션보다 짧은 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)이 **Storyboard**에서 명시적으로 설정되면 해당 애니메이션이 잘리게 되며 일반적으로 바람직하지 않습니다.
 
 스토리보드에는 동일한 개체에서 동일한 속성을 대상으로 지정하고 애니메이션 효과를 주려는 두 개의 애니메이션이 포함될 수 없습니다. 그럴 경우 스토리보드가 실행될 때 런타임 오류가 발생합니다. 이 제한 사항은 의도적으로 다르게 설정한 [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/BR243204) 값 및 기간으로 인해 애니메이션 시간이 겹치지 않는 경우에도 적용됩니다. 실제로 보다 복잡한 애니메이션 타임라인을 단일 스토리보드에서 동일한 속성에 적용하려면 키 프레임 애니메이션을 사용합니다. [키 프레임 및 감속/가속 함수 애니메이션](key-frame-and-easing-function-animations.md)을 참조하세요.
 
@@ -197,7 +197,7 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 
 ## <a name="defining-a-storyboard-as-a-resource"></a>스토리보드를 리소스로 정의
 
-[**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)는 애니메이션 개체를 담는 컨테이너입니다. 일반적으로 **Storyboard**는 페이지 수준 [**Resources**](https://msdn.microsoft.com/library/windows/apps/BR208740) 또는 [**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/BR242338)에서 애니메이션 효과를 주려는 개체에서 사용할 수 있는 리소스로 정의합니다.
+[  **Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)는 애니메이션 개체를 담는 컨테이너입니다. 일반적으로 **Storyboard**는 페이지 수준 [**Resources**](https://msdn.microsoft.com/library/windows/apps/BR208740) 또는 [**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/BR242338)에서 애니메이션 효과를 주려는 개체에서 사용할 수 있는 리소스로 정의합니다.
 
 다음 예제에서는 이전 예제 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)가 페이지 수준 [**Resources**](https://msdn.microsoft.com/library/windows/apps/BR208740) 정의에 포함되는 방식을 보여 줍니다. 이때 **Storyboard**는 루트 [**Page**](https://msdn.microsoft.com/library/windows/apps/BR227503)의 키 입력 리소스입니다. [x:Name 특성](https://msdn.microsoft.com/library/windows/apps/Mt204788)을 확인하세요. 이 특성은 **Storyboard**에 대해 변수 이름을 정의하는 방법이므로 코드 및 XAML의 다른 요소에서 나중에 **Storyboard**를 참조할 수 있습니다.
 
@@ -239,7 +239,7 @@ UI 스레드의 속도를 저하시킬 약간의 위험이 있는 것으로 확�
 
 -   애니메이션의 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)이 0초입니다(경고 참조).
 -   애니메이션이 [**UIElement.Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)를 대상으로 합니다.
--   애니메이션이 [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx), [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980), [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection.aspx), [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip) 같은 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) 속성의 하위 속성 값을 대상으로 합니다.
+-   이러한 하위 속성 값을 대상으로 하는 애니메이션 [ **UIElement** ](https://msdn.microsoft.com/library/windows/apps/BR208911) 속성: [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx), [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980), [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection.aspx), [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
 -   애니메이션이 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/Hh759771) 또는 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/Hh759772)을 대상으로 합니다.
 -   애니메이션이 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 값을 대상으로 하고 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 사용하여 해당 [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color)에 애니메이션 효과를 줍니다.
 -   애니메이션이 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)입니다.
@@ -262,10 +262,10 @@ UI 스레드의 속도를 저하시킬 약간의 위험이 있는 것으로 확�
 
 앱 개발자가 종속 애니메이션을 사용하도록 하는 요구 사항은 애니메이션 시스템 및 개발 환경의 의식적인 디자인 측면입니다. 개발자가 UI의 응답성과 관련해서 애니메이션이 성능에 미치는 영향을 인식하도록 하려고 합니다. 애니메이션을 잘못 수행하면 전체 규모 앱에서 분리하고 디버그하기가 어렵습니다. 따라서 앱의 UI 환경에 실제로 필요한 종속 애니메이션만 켜는 것이 좋습니다. 많은 주기를 사용하는 장식 애니메이션으로 인해 앱의 성능이 너무 쉽게 손상되지 않도록 하려고 합니다. 애니메이션의 성능 팁에 대한 자세한 내용은 [애니메이션 및 미디어 최적화](https://msdn.microsoft.com/library/windows/apps/Mt204774)를 참조하세요.
 
-또한 앱 개발자는 종속 애니메이션을 항상 사용하지 않도록 설정하는 앱 수준의 설정을 적용하도록 선택할 수 있으며, **EnableDependentAnimation**이 **true**인 애니메이션에서도 마찬가지입니다. [**Timeline.AllowDependentAnimations**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.allowdependentanimations)을 참조하세요.
+또한 앱 개발자는 종속 애니메이션을 항상 사용하지 않도록 설정하는 앱 수준의 설정을 적용하도록 선택할 수 있으며, **EnableDependentAnimation**이 **true**인 애니메이션에서도 마찬가지입니다. [  **Timeline.AllowDependentAnimations**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.allowdependentanimations)을 참조하세요.
 
 > [!TIP]
-> 시각적 상태 속성에 종속 애니메이션을 적용 하려고 할 때마다 애니메이션 창 Blend for Visual Studio 2017에서에서 사용 하 고, 경우 디자이너에서 경고가 표시 됩니다. 경고 빌드 출력 또는 오류 목록에 표시 되지 않습니다. XAML을 직접 편집 하는 경우 디자이너 경고가 표시 되지 않습니다. 출력 창의 디버그 출력 런타임에 디버그할 때 경고를 표시 하는 애니메이션 독립적 이며 건너뜁니다.
+> 애니메이션 창 Blend for Visual Studio 2017에서에서 visual state 속성에 종속 애니메이션을 적용 하려고 할 때마다를 사용할 경우 경고 디자이너에서 표시 됩니다. 경고는 빌드 출력이 나 오류 목록에 표시 되지 않습니다. XAML을 직접 편집 하는 경우 디자이너에는 경고가 표시 되지 않습니다. 출력 창의 디버그 출력을 디버깅할 때 런타임 시 경고를 표시 애니메이션 독립적 이며 건너뜁니다.
 
 
 ## <a name="starting-and-controlling-an-animation"></a>애니메이션 시작 및 제어
@@ -333,10 +333,10 @@ XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법
 
 * [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185586)
 * [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)
-* [키 프레임 및 감속/가속 함수 애니메이션](key-frame-and-easing-function-animations.md)
-* [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
+* [키 프레임 및 함수 애니메이션 감속/가속](key-frame-and-easing-function-animations.md)
+* [시각적 상태에 대 한 애니메이션 스토리 보드를 만들었습니다](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
 * [컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/Mt210948)
-* [**스토리보드**](https://msdn.microsoft.com/library/windows/apps/BR210490)
+* [**스토리 보드**](https://msdn.microsoft.com/library/windows/apps/BR210490)
 * [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824)
  
 

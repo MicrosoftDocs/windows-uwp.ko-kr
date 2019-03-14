@@ -1,5 +1,5 @@
 ---
-Description: You can encourage your customers to leave feedback by launching Feedback Hub from your app.
+Description: 고객이 앱에서 피드백 허브를 시작하여 피드백을 남기도록 권유할 수 있습니다.
 title: 앱에서 피드백 허브 시작
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 02/08/2017
@@ -7,20 +7,20 @@ ms.topic: article
 keywords: windows 10, uwp, 피드백 허브, 시작
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f5d5c12deed9fffc3d2515529aa5bba5fbffc47
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045276"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57631838"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브 시작
 
-피드백 허브를 시작하는 UWP(유니버설 Windows 플랫폼) 앱에 컨트롤(예: 단추)을 추가하여 피드백을 남기도록 고객을 권유할 수 있습니다. 피드백 허브는 Windows 및 설치된 앱에 대한 피드백을 수집할 단일 위치를 제공하는 사전 설치된 앱입니다. 피드백 허브를 통해 앱에 대 한 제출 되는 모든 고객 피드백 수집 되어 문제, 제안 및 좋아요를 하나의 보고서에서 고객이 제출한 볼 수 있도록 파트너 센터에서 [피드백 보고서](../publish/feedback-report.md) 에서 귀하에 게 제공 합니다.
+피드백 허브를 시작하는 UWP(유니버설 Windows 플랫폼) 앱에 컨트롤(예: 단추)을 추가하여 피드백을 남기도록 고객을 권유할 수 있습니다. 피드백 허브는 Windows 및 설치된 앱에 대한 피드백을 수집할 단일 위치를 제공하는 사전 설치된 앱입니다. 모든 고객의 의견을 통해 피드백 허브 앱 수집 되 고 표시에 대 한 전송 되는 [피드백 보고서](../publish/feedback-report.md) 파트너 센터에서 그래서 문제, 제안 및 고객에 게는 upvotes 단일 보고서에 제출 합니다.
 
 앱에서 피드백 허브를 시작하려면 [Microsoft Store Services SDK](https://aka.ms/store-em-sdk)에서 제공하는 API를 사용합니다. 이 API를 사용하여 디자인 지침을 따르는 앱의 UI 요소에서 피드백 허브를 시작하는 것이 좋습니다.
 
 > [!NOTE]
-> 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families)를 기반으로 하는 Windows10 OS 버전 10.0.14271 이상을 실행하는 장치에서만 사용할 수 있습니다. 사용자 장치에서 피드백 허브를 사용할 수 있는 경우에만 앱에 피드백 컨트롤을 표시하는 것이 좋습니다. 이 항목의 코드는 이 작업을 수행하는 방법을 보여 줍니다.
+> 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families)를 기반으로 하는 Windows 10 OS 버전 10.0.14271 이상을 실행하는 디바이스에서만 사용할 수 있습니다. 사용자 장치에서 피드백 허브를 사용할 수 있는 경우에만 앱에 피드백 컨트롤을 표시하는 것이 좋습니다. 이 항목의 코드는 이 작업을 수행하는 방법을 보여 줍니다.
 
 ## <a name="how-to-launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브를 시작하는 방법
 
@@ -44,7 +44,7 @@ ms.locfileid: "9045276"
     <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
     ```
 
-7. 피드백 컨트롤을 호스트하는 앱 페이지의 초기화 코드에서 [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported) 클래스의 정적 [IsSupported](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 메서드를 사용하여 사용자 장치에서 피드백 허브를 사용할 수 있는지 여부를 확인합니다. 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families)를 기반으로 하는 Windows10 OS 버전 10.0.14271 이상을 실행하는 장치에서만 사용할 수 있습니다.
+7. 피드백 컨트롤을 호스트하는 앱 페이지의 초기화 코드에서 [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 클래스의 정적 [IsSupported](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported) 메서드를 사용하여 사용자 디바이스에서 피드백 허브를 사용할 수 있는지 여부를 확인합니다. 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families)를 기반으로 하는 Windows 10 OS 버전 10.0.14271 이상을 실행하는 디바이스에서만 사용할 수 있습니다.
 
     이 속성이 **true**를 반환하는 경우 컨트롤을 표시되도록 설정합니다. 다음 코드는 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)에 대해 이 작업을 수행하는 방법을 보여 줍니다.
 

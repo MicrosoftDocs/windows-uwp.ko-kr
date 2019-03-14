@@ -11,11 +11,11 @@ template: detail.hbs
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f0bed73a3b0d21329c5195be0772538f3a99bdcd
-ms.sourcegitcommit: e83f30486d899401debc782de891c388ba5fc03b
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "9062465"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57648428"
 ---
 # <a name="xaml-styles"></a>XAML 스타일
 
@@ -66,7 +66,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 스타일을 리소스로 정의할 경우 다음 두 가지 방법으로 스타일을 컨트롤에 적용할 수 있습니다.
 
--   암시적 적용 - [Style](https://msdn.microsoft.com/library/windows/apps/br208857)에 대하여 [TargetType](https://msdn.microsoft.com/library/windows/apps/br208849)만 지정합니다.
+-   암시적 적용 - [Style](https://msdn.microsoft.com/library/windows/apps/br208849)에 대하여 [TargetType](https://msdn.microsoft.com/library/windows/apps/br208857)만 지정합니다.
 -   명시적 적용 - [Style](https://msdn.microsoft.com/library/windows/apps/br208849)에 대해 [TargetType](https://msdn.microsoft.com/library/windows/apps/br208857) 및 [x:Key 특성](../../xaml-platform/x-key-attribute.md) 특성을 지정한 후 명시적 키를 사용하는 [{StaticResource} 태그 확장](https://msdn.microsoft.com/library/windows/apps/mt185588) 참조로 대상 컨트롤의 [Style](https://msdn.microsoft.com/library/windows/apps/br208743) 속성을 설정합니다.
 
 스타일에 [x:Key 특성](../../xaml-platform/x-key-attribute.md)이 포함된 경우, 컨트롤의 [Style](https://msdn.microsoft.com/library/windows/apps/br208743) 속성을 키 입력 스타일로 설정하여 이 특성을 컨트롤에만 적용할 수 있습니다. 이와 달리, x:Key 특성이 없는 스타일은 이 경우 외에는 명시적 스타일 설정이 없는 대상 유형의 모든 컨트롤에 자동으로 적용됩니다.
@@ -165,7 +165,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 </Page.Resources>
 ```
 
-PointerOver(단추 위로 마우스를 가져감), **PointerPressed**(단추가 호출됨) 또는 Disabled(단추가 조작 가능하지 않음)와 같은 상태에 해당합니다. **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled** 등의 끝이 원래의 경량 스타일 이름에 추가됩니다. 해당 브러시도 수정하면 컨트롤 색상이 앱 테마와 일관되게 지정됩니다.
+PointerOver(단추 위로 마우스를 가져감), **PointerPressed**(단추가 호출됨) 또는 Disabled(단추가 조작 가능하지 않음)와 같은 상태에 해당합니다. 이러한 끝 원래 경량 스타일 이름에 추가 됩니다. **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etc. 수정 된 브러시도 게 컨트롤 앱의 테마를 일관 되 게 지정 됩니다.
 
 이러한 브러시 재정의를 **App.Resources** 수준에 배치하면 단일 페이지가 아닌 전체 앱 내의 모든 단추가 변경됩니다.
 
@@ -208,4 +208,4 @@ PointerOver(단추 위로 마우스를 가져감), **PointerPressed**(단추가 
 
 ## <a name="the-template-property"></a>Template 속성
 
-스타일 setter는 Control의 [[Template](https://msdn.microsoft.com/library/windows/apps/br209390)](https://msdn.microsoft.com/library/windows/apps/br209465) 속성에 사용할 수 있으며 사실 대부분의 일반적인 XAML 스타일과 앱의 XAML 리소스를 구성합니다. 이 스타일 setter는 [컨트롤 템플릿](control-templates.md)에서 더 자세히 알아봅니다.
+스타일 setter는 [Control](https://msdn.microsoft.com/library/windows/apps/br209390)의 [Template](https://msdn.microsoft.com/library/windows/apps/br209465) 속성에 사용할 수 있으며 사실 대부분의 일반적인 XAML 스타일과 앱의 XAML 리소스를 구성합니다. 이 스타일 setter는 [컨트롤 템플릿](control-templates.md)에서 더 자세히 알아봅니다.

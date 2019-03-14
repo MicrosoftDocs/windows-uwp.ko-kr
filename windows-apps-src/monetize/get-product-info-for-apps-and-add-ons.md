@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, 앱에서 바로 구매, IAP, 추가 기능, Windows.Services.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b923764c6374e403d2652db715f65a80c48bacf
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8918948"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57623098"
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a>앱 및 추가 기능에 대한 제품 정보 가져오기
 
 이 문서는 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있는 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 메서드를 사용하여 현재 앱 또는 일부 추가 기능에 대한 Store 관련 정보에 액세스하는 방법을 보여줍니다.
 
-전체 샘플 응용 프로그램은 [Store 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)을 참조하세요.
+전체 샘플 응용 프로그램은 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)을 참조하세요.
 
 > [!NOTE]
 > **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 사용해야 합니다. 자세한 내용은 [이 문서](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)를 참조하세요.
@@ -26,8 +26,8 @@ ms.locfileid: "8918948"
 
 이러한 예제의 필수 조건은 다음과 같습니다.
 * **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
-* [앱 제출을 만들지](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) 파트너 센터에서 드라이버와이 앱은 스토어에서 게시 합니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
-* 앱에 대 한 추가 기능에 대 한 제품 정보를 원하는 해야 [파트너 센터에서 추가 기능을 생성](../publish/add-on-submissions.md)합니다.
+* 있다고 [는 응용 프로그램 제출 생성](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) 파트너 센터에이 앱 스토어에 게시 됩니다. 테스트하는 동안 Store에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
+* 앱에 대 한 추가 기능에 대 한 제품 정보를 가져오려는 경우 해야 수도 [파트너 센터에서 추가 기능 만들기](../publish/add-on-submissions.md)합니다.
 
 이러한 예제의 코드에서는 다음과 같이 가정합니다.
 * 코드는 ```workingProgressRing```이라는 [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx)과 ```textBlock```이라는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)을 포함하는 [페이지](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx)의 컨텍스트에서 실행됩니다. 해당 개체를 사용하여 각각 비동기 작업이 발생함을 나타내고 출력 메시지를 표시합니다.
@@ -46,7 +46,7 @@ ms.locfileid: "8918948"
 
 ## <a name="get-info-for-add-ons-with-known-store-ids-that-are-associated-with-the-current-app"></a>현재 앱과 연결된 알려진 Store ID가 있는 추가 기능에 대한 정보 가져오기
 
-현재 앱과 연결된 추가 기능 및 [Store ID](in-app-purchases-and-trials.md#store_ids)를 이미 알고 있는 추가 기능에 대한 Microsoft Store 제품 정보를 가져오려면 [GetStoreProductsAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getstoreproductsasync) 메서드를 사용합니다. 이는 각 추가 기능을 나타내는 [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) 개체 컬렉션을 반환하는 비동기 메서드입니다. Store ID 외에도 추가 기능 유형을 식별하는 문자열 목록을 이 메서드에 전달해야 합니다. 지원되는 문자열 값 목록은 [ProductKind](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.productkind) 속성을 참조하세요.
+현재 앱과 연결된 추가 기능 및 [Store ID](in-app-purchases-and-trials.md#store_ids)를 이미 알고 있는 추가 기능에 대한 Microsoft Store 제품 정보를 가져오려면 [GetStoreProductsAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getstoreproductsasync) 메서드를 사용합니다. 이는 각 추가 기능을 나타내는 [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) 개체 컬렉션을 반환하는 비동기 메서드입니다. 스토어 ID 외에도 추가 기능 유형을 식별하는 문자열 목록을 이 메서드에 전달해야 합니다. 지원되는 문자열 값 목록은 [ProductKind](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.productkind) 속성을 참조하세요.
 
 > [!NOTE]
 > **GetStoreProductsAsync** 메서드는 현재 추가 기능을 구매할 수 있는지 여부에 상관 없이 앱과 연결된 지정된 추가 기능에 대한 제품 정보를 반환합니다. 현재 구매할 수 있는 현재 앱의 모든 추가 기능에 대한 정보를 검색하려면 [다음 섹션](#get-info-for-add-ons-that-are-available-for-purchase-from-the-current-app)에 설명된 대로 **GetAssociatedStoreProductsAsync** 메서드를 대신 사용합니다.
@@ -84,8 +84,8 @@ ms.locfileid: "8918948"
 ## <a name="related-topics"></a>관련 항목
 
 * [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)
-* [앱 및 추가 기능에 대한 라이선스 정보 가져오기](get-license-info-for-apps-and-add-ons.md)
-* [앱에서 바로 앱 및 추가 기능 구매 사용](enable-in-app-purchases-of-apps-and-add-ons.md)
-* [소모성 추가 기능 구매 사용](enable-consumable-add-on-purchases.md)
-* [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)
-* [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
+* [앱 및 추가 기능에 대 한 라이선스 정보 가져오기](get-license-info-for-apps-and-add-ons.md)
+* [앱 내 구매는 응용 프로그램 및 추가 기능을 사용 하도록 설정](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [사용할 수 있는 추가 기능 구매를 사용 하도록 설정](enable-consumable-add-on-purchases.md)
+* [앱의 평가판 버전을 구현 합니다.](implement-a-trial-version-of-your-app.md)
+* [Store 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)

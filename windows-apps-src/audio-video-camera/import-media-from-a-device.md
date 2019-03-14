@@ -7,24 +7,24 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c08612e48eec7989f3b56fba41a17e1c149b2058
-ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "8925708"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603468"
 ---
 # <a name="import-media-from-a-device"></a>디바이스에서 미디어 가져오기
 
 이 문서에서는 사용 가능한 미디어 원본 검색, 비디오, 사진 및 사이드카 파일과 같은 파일 가져오기, 원본 디바이스에서 가져온 파일 삭제 등 디바이스에서 미디어를 가져오는 방법을 설명합니다.
 
 > [!NOTE] 
-> 이 문서의 코드는 [**MediaImport UWP 앱 샘플**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport)에서 조정되었습니다. [**유니버설 Windows 앱 샘플 Git 리포지토리**](https://github.com/Microsoft/Windows-universal-samples)에서 이 샘플을 복제하거나 다운로드하여 컨텍스트에서 코드를 확인하거나 고유한 앱의 시작점으로 사용할 수 있습니다.
+> 이 문서의 코드는 [**MediaImport UWP 앱 샘플**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport)에서 조정되었습니다. [  **유니버설 Windows 앱 샘플 Git 리포지토리**](https://github.com/Microsoft/Windows-universal-samples)에서 이 샘플을 복제하거나 다운로드하여 컨텍스트에서 코드를 확인하거나 고유한 앱의 시작점으로 사용할 수 있습니다.
 
 ## <a name="create-a-simple-media-import-ui"></a>간단한 미디어 가져오기 UI 만들기
 이 문서의 예제에서는 최소한의 UI를 사용하여 핵심 미디어 가져오기 시나리오를 가능하게 합니다. 미디어 가져오기 앱에 사용할 보다 강력한 UI를 만드는 방법은 [**MediaImport 샘플**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport)을 참조하세요. 아래 XAML은 다음과 같은 컨트롤이 있는 스택 패널을 만듭니다.
-* [**Button**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Button) - 미디어를 가져올 수 있는 원본 검색을 시작합니다.
-* [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox) - 발견된 미디어 가져오기 원본을 표시하고 선택합니다.
-* [**ListView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ListView) 컨트롤 - 선택한 가져오기 원본의 미디어 항목을 표시하고 선택합니다.
+* [  **Button**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Button) - 미디어를 가져올 수 있는 원본 검색을 시작합니다.
+* [  **ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox) - 발견된 미디어 가져오기 원본을 표시하고 선택합니다.
+* [  **ListView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ListView) 컨트롤 - 선택한 가져오기 원본의 미디어 항목을 표시하고 선택합니다.
 * **Button** - 선택한 원본에서 미디어 항목 가져오기를 시작합니다.
 * **Button** - 선택한 원본에서 가져온 항목 삭제를 시작합니다.
 * **Button** - 비동기 미디어 가져오기 작업을 취소합니다.
@@ -79,11 +79,11 @@ ms.locfileid: "8925708"
 
 [!code-cs[DeclareImport](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareImport)]
 
-필요한 경우 찾기 작업을 취소하는 데 사용할 수 있도록 **FindItems** 메서드에서 **CancellationTokenSource** 변수를 초기화합니다. **try** 블록 내에서 사용자가 선택한 [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) 개체에 대해 [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession)을 호출하여 새 가져오기 세션을 만듭니다. 새 [**Progress**](https://msdn.microsoft.com/library/hh193692.aspx) 개체를 만들어 찾기 작업의 진행률을 표시할 콜백을 제공합니다. 그런 다음, **[FindItemsAsync](https://docs.microsoft.com/uwp/api/windows.media.import.photoimportsession.finditemsasync)** 을 호출하여 찾기 작업을 시작합니다. [**PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter) 값을 제공하여 사진, 비디오 또는 둘 다를 반환할지 지정합니다. [**PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode) 값을 제공하여 모두 반환할지, 아무것도 반환하지 않을지 또는 해당 [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected) 속성이 true로 설정된 새 미디어 항목만 반환할지를 지정합니다. 이 속성은 ListBox 항목 템플릿에 있는 각 미디어 항목의 확인란에 바인딩되어 있습니다.
+필요한 경우 찾기 작업을 취소하는 데 사용할 수 있도록 **FindItems** 메서드에서 **CancellationTokenSource** 변수를 초기화합니다. **try** 블록 내에서 사용자가 선택한 [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) 개체에 대해 [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession)을 호출하여 새 가져오기 세션을 만듭니다. 새 [**Progress**](https://msdn.microsoft.com/library/hh193692.aspx) 개체를 만들어 찾기 작업의 진행률을 표시할 콜백을 제공합니다. 그런 다음, **[FindItemsAsync](https://docs.microsoft.com/uwp/api/windows.media.import.photoimportsession.finditemsasync)** 을 호출하여 찾기 작업을 시작합니다. [  **PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter) 값을 제공하여 사진, 비디오 또는 둘 다를 반환할지를 지정합니다. [  **PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode) 값을 제공하여 모두 반환할지, 아무것도 반환하지 않을지 또는 해당 [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected) 속성이 true로 설정된 새 미디어 항목만 반환할지를 지정합니다. 이 속성은 ListBox 항목 템플릿에 있는 각 미디어 항목의 확인란에 바인딩되어 있습니다.
 
 **FindItemsAsync**는 [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)를 반환합니다. 확장 메서드 [**AsTask**](https://msdn.microsoft.com/library/hh779750.aspx)는 대기할 수 있고, 취소 토큰을 사용하여 취소할 수 있으며, 지원되는 **Progress** 개체를 사용하여 진행률을 보고하는 작업을 만드는 데 사용됩니다.
 
-데이터 바인딩 도우미 클래스 **GeneratorIncrementalLoadingClass**가 초기화됩니다. 대기 중에서 반환될 때 **FindItemsAsync**는 [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult) 개체를 반환합니다. 이 개체에는 작업 성공, 발견된 각 유형의 미디어 항목 수 등 찾기 작업에 대한 상태 정보가 포함되어 있습니다. [**FoundItems**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.FoundItems) 속성에는 찾은 미디어 항목을 나타내는 [**PhotoImportItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem) 개체 목록이 포함됩니다. **GeneratorIncrementalLoadingClass** 생성자는 증분 방식으로 로드되는 총 항목 수와 필요에 따라 로드할 새 항목을 생성하는 함수를 인수로 사용합니다. 이 경우 제공된 람다 식은 **PhotoImportItem**을 래핑하고 각 항목에 대한 미리 보기를 포함하는 **ImportableItemWrapper**의 새 인스턴스를 만듭니다. 증분 로드 클래스가 초기화되면 UI에 있는 **ListView** 컨트롤의 [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsControl.ItemsSource) 속성으로 설정합니다. 이제 찾은 미디어 항목이 증분 방식으로 로드되고 목록에 표시됩니다.
+데이터 바인딩 도우미 클래스 **GeneratorIncrementalLoadingClass**가 초기화됩니다. 대기 중에서 반환될 때 **FindItemsAsync**는 [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult) 개체를 반환합니다. 이 개체에는 작업 성공, 발견된 각 유형의 미디어 항목 수 등 찾기 작업에 대한 상태 정보가 포함되어 있습니다. [  **FoundItems**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.FoundItems) 속성에는 찾은 미디어 항목을 나타내는 [**PhotoImportItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem) 개체 목록이 포함됩니다. **GeneratorIncrementalLoadingClass** 생성자는 증분 방식으로 로드되는 총 항목 수와 필요에 따라 로드할 새 항목을 생성하는 함수를 인수로 사용합니다. 이 경우 제공된 람다 식은 **PhotoImportItem**을 래핑하고 각 항목에 대한 미리 보기를 포함하는 **ImportableItemWrapper**의 새 인스턴스를 만듭니다. 증분 로드 클래스가 초기화되면 UI에 있는 **ListView** 컨트롤의 [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsControl.ItemsSource) 속성으로 설정합니다. 이제 찾은 미디어 항목이 증분 방식으로 로드되고 목록에 표시됩니다.
 
 찾기 작업의 상태 정보가 출력됩니다. 일반적인 앱은 UI에서 이 정보를 사용자에게 표시하지만 이 예제에서는 단순히 정보를 디버그 콘솔에 출력합니다. 마지막으로, 작업이 완료되었으므로 취소 토큰을 null로 설정합니다.
 
@@ -99,7 +99,7 @@ ms.locfileid: "8925708"
 
 **ListView** 컨트롤에서 선택한 항목이 없는 경우 가져올 항목이 없습니다. 항목을 선택한 경우 [**Progress**](https://msdn.microsoft.com/library/hh193692.aspx) 개체를 초기화하여 진행률 표시줄 컨트롤의 값을 업데이트하는 진행률 콜백을 제공합니다. 찾기 작업에서 반환된 [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult)의 [**ItemImported**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ItemImported) 이벤트 처리기를 등록합니다. 이 이벤트는 항목을 가져올 때마다 발생하며, 이 예제에서는 가져온 각 파일의 이름을 디버그 콘솔에 출력합니다.
 
-[**ImportItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ImportItemsAsync)를 호출하여 가져오기 작업을 시작합니다. 찾기 작업과 마찬가지로, [**AsTask**](https://msdn.microsoft.com/library/hh779750.aspx) 확장 메서드를 사용하여 반환된 작업을 대기할 수 있고 진행률을 보고하며 취소할 수 있는 작업으로 변환합니다.
+[  **ImportItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ImportItemsAsync)를 호출하여 가져오기 작업을 시작합니다. 찾기 작업과 마찬가지로, [**AsTask**](https://msdn.microsoft.com/library/hh779750.aspx) 확장 메서드를 사용하여 반환된 작업을 대기할 수 있고 진행률을 보고하며 취소할 수 있는 작업으로 변환합니다.
 
 가져오기 작업이 완료되면 [**ImportItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ImportItemsAsync)에서 반환된 [**PhotoImportImportItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportImportItemsResult) 개체를 통해 작업 상태를 얻을 수 있습니다. 이 예제에서는 상태 정보를 디버그 콘솔에 출력한 다음 마지막으로, 취소 토큰을 null로 설정합니다.
 

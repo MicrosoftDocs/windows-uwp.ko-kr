@@ -1,5 +1,5 @@
 ---
-Description: Create Universal Windows Platform (UWP) apps with intuitive and distinctive user interaction experiences that are optimized for touch but are functionally consistent across input devices.
+Description: 터치에 최적화된 동시에 입력 디바이스 간에 기능적으로 일관된, 직관적이고 차별화된 사용자 조작 환경을 갖춘 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다.
 title: 터치 조작
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b889fede67c7e32ff48c0e48a516f389afda820a
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9048645"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57649238"
 ---
 # <a name="touch-interactions"></a>터치 조작
 
@@ -22,10 +22,10 @@ ms.locfileid: "9048645"
 
 그러나 터치에 최적화된 UI가 기존 UI보다 항상 나은 것은 아닙니다. 둘 다 기술 및 응용 방식에 고유한 장점과 단점이 있습니다. 터치 우선식 UI로 전환할 경우 터치(터치 패드 포함), 펜/스타일러스, 마우스 및 키보드 입력 간의 주요 차이점을 이해하는 것이 중요합니다.
 
-> **중요 API**: [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994), [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
+> **중요 한 Api**: [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994), [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
 
 
-여러 장치에는 입력으로 하나 이상의 손가락을 사용(또는 터치 접촉)하여 지원하는 멀티 터치 화면이 있습니다. 터치 접촉과 해당 움직임은 터치 제스처 및 조작으로 해석되어 다양한 사용자 조작을 지원합니다.
+여러 디바이스에, 입력으로 하나 이상의 손가락을 사용(또는 터치 접촉)하여 지원하는 멀티 터치 화면이 있습니다. 터치 접촉과 해당 움직임은 터치 제스처 및 조작으로 해석되어 다양한 사용자 조작을 지원합니다.
 
 UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다양한 메커니즘이 많이 포함되어 있으므로, 최종 사용자가 자신 있게 이용할 수 있는 몰입형 환경을 만들 수 있습니다. 본 문서는 UWP 앱에서 터치식 입력을 사용하는 기본 사항을 설명합니다.
 
@@ -33,7 +33,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 -   터치 지원 디스플레이.
 -   해당 디스플레이에 하나 이상의 손가락을 직접 접촉(또는 디스플레이에 근접 센서가 있으며 가리키기 감지를 지원하는 경우 근접).
--   터치 접촉 이동(또는 시간 임계값을 기반으로 하는 접촉 결핍).
+-   터치 접촉 이동(또는 시간 임계값을 기반으로 하는 접촉 결핍)
 
 터치 센서에서 제공하는 입력 데이터에는 다음이 적용됩니다.
 
@@ -74,13 +74,13 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 
 
-**참고**  간접 입력 25 년 이상 미세 혜택 했습니다. 가리키기로 트리거되는 도구 설명과 같은 기능은 터치 패드, 마우스, 펜/스타일러스 및 키보드 입력을 비롯한 UI 탐색 문제를 해결하도록 디자인되었습니다. 이러한 UI 기능은 다른 장치의 사용자 환경을 손상시키지 않고 터치 입력에서 제공하는 풍부한 환경에 맞게 다시 디자인되었습니다.
+**참고**    간접 입력 구체화의 근무 연수가 25 년이 넘는 활용 했습니다. 가리키기로 트리거되는 도구 설명과 같은 기능은 터치 패드, 마우스, 펜/스타일러스 및 키보드 입력을 비롯한 UI 탐색 문제를 해결하도록 디자인되었습니다. 이러한 UI 기능은 다른 장치의 사용자 환경을 손상시키지 않고 터치 입력에서 제공하는 풍부한 환경에 맞게 다시 디자인되었습니다.
 
  
 
 ## <a name="use-touch-feedback"></a>터치 피드백 사용
 
-앱과의 조작 중에 적절 한 시각적 피드백이 사용자 익히고, 앱과는 Windowsplatform 모두에서 조작이 해석 되는 방식이에 적응할 수 있습니다. 시각적 피드백은 성공적인 조작을 알리고, 시스템 상태를 전달하고, 제어 기능을 향상시키고, 오류를 줄이고, 사용자가 시스템 및 입력 장치를 이해하는 데 도움을 주고, 조작을 권장할 수 있습니다.
+앱과 상호 작용 하는 동안 시각적 피드백을 적절 한 사용자 인식, 배우고, 앱 및 Windows 플랫폼 모두에서 상호 작용 해석 하는 방법에 맞게 조정할 수 있습니다. 시각적 피드백은 성공적인 조작을 알리고, 시스템 상태를 전달하고, 제어 기능을 향상시키고, 오류를 줄이고, 사용자가 시스템 및 입력 장치를 이해하는 데 도움을 주고, 조작을 권장할 수 있습니다.
 
 위치에 따라 정확도와 정밀도를 요구하는 활동에 터치식 입력을 사용할 경우 시각적 피드백이 중요합니다. 터치식 입력이 감지될 때마다 피드백을 표시하면 사용자가 앱 및 컨트롤이 정의하는 사용자 지정 대상 지정 규칙을 이해하는 데 도움이 됩니다.
 
@@ -110,7 +110,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 정확하지 않은 조작에 대해 다음을 사용하여 디자인합니다.
 
 -   사용자가 콘텐츠를 조작할 때 원하는 위치에서 쉽게 멈출 수 있는 끌기 지점
--   손이 약간 호를 그리며 움직일 경우에도 가로 또는 세로로 이동하도록 도와주는 방향 "길"입니다. 자세한 내용은 [이동에 대한 지침](guidelines-for-panning.md)을 참조하세요.
+-   손이 약간 호를 그리며 움직일 경우에도 가로 또는 세로로 이동하도록 도와주는 방향 "길" 자세한 내용은 [이동에 대한 지침](guidelines-for-panning.md)을 참조하세요.
 
 ## <a name="occlusion"></a>폐색
 
@@ -151,7 +151,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 -   조작 방식은 복합적인 조작을 지원해야 합니다. 예를 들어, 손가락을 끌어서 이동하는 동안 손가락을 모아 확대/축소할 경우
 -   조작은 시간으로 구분되어서는 안 됩니다. 같은 조작은 수행하는 데 걸린 시간과 상관 없이 결과가 같아야 합니다. 시간 기반 활성화는 사용자를 강제로 지연시키며 직접 조작의 몰입성과 시스템 응답 성능의 인식 능력을 모두 저하시킵니다.
 
-    **참고**학습 및 탐색 (예: 길게 누르기)에 도움이 되도록 특정 시간이 지정 된 상호 작용을 통해는 예외입니다.
+    **참고**  학습 및 탐색 (예, 키를 누른)를 지원 하기 위해 특정 시간된 상호 작용을 사용할는 예외입니다.
 
      
 
@@ -163,7 +163,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 앱 뷰의 이동/스크롤 및 확대/축소 설정을 통해 사용자 조작 환경을 조정할 수 있습니다. 앱 뷰는 사용자가 앱과 해당 콘텐츠를 액세스하고 조작하는 방법을 제어합니다. 뷰는 관성, 콘텐츠 경계 바운스 및 끌기 지점과 같은 동작도 제공합니다.
 
-[**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) 컨트롤의 이동 및 스크롤 설정은 보기의 콘텐츠가 뷰포트 내에 맞지 않을 때 사용자가 단일 보기 내에서 탐색하는 방법을 지정합니다. 예를 들어 단일 보기는 잡지 또는 책의 페이지, 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범일 수 있습니다.
+[  **ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) 컨트롤의 이동 및 스크롤 설정은 보기의 콘텐츠가 뷰포트 내에 맞지 않을 때 사용자가 단일 보기 내에서 탐색하는 방법을 지정합니다. 예를 들어 단일 보기는 잡지 또는 책의 페이지, 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범일 수 있습니다.
 
 확대/축소 설정은 광학 줌([**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) 컨트롤에서 지원) 및 [**Semantic Zoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤에 모두 적용됩니다. 시맨틱 줌은 단일 뷰 내에서 대규모의 관련 데이터 또는 콘텐츠 집합을 제공하고 탐색하기 위한 터치 최적화된 기법입니다. 두 가지 분류 모드 또는 확대/축소 수준을 사용하여 작동합니다. 단일 뷰 내에서 이동 및 스크롤하는 것과 비슷합니다. 이동 및 스크롤을 시맨틱 줌과 함께 사용할 수 있습니다.
 
@@ -180,19 +180,19 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 -   정적 제스처 이벤트는 조작이 완료된 후 트리거됩니다. 제스처 이벤트에는 [**Tapped**](https://msdn.microsoft.com/library/windows/apps/br208985), [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/br208922), [**RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984) 및 [**Holding**](https://msdn.microsoft.com/library/windows/apps/br208928)이 포함됩니다.
 
-    [**IsTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208939), [**IsDoubleTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208931), [**IsRightTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208937) 및 [**IsHoldingEnabled**](https://msdn.microsoft.com/library/windows/apps/br208935)를 **false**로 설정하여 특정 요소에서 제스처 이벤트를 사용하지 않도록 설정할 수 있습니다.
+    [  **IsTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208939), [**IsDoubleTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208931), [**IsRightTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208937) 및 [**IsHoldingEnabled**](https://msdn.microsoft.com/library/windows/apps/br208935)를 **false**로 설정하여 특정 요소에서 제스처 이벤트를 사용하지 않도록 설정할 수 있습니다.
 
--   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 및 [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970)와 같은 포인터 이벤트는 포인터 동작 및 누르기와 놓기 이벤트를 구별하는 기능을 비롯하여 각 터치 접촉에 대한 낮은 수준의 세부 정보를 제공합니다.
+-   [  **PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 및 [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970)와 같은 포인터 이벤트는 포인터 동작 및 누르기와 놓기 이벤트를 구별하는 기능을 비롯하여 각 터치 접촉에 대한 낮은 수준의 세부 정보를 제공합니다.
 
     포인터는 통합 이벤트 메커니즘이 있는 일반 입력 유형입니다. 포인터는 터치, 터치 패드, 마우스 또는 펜 등의 활성 입력 원본에서 화면 위치와 같은 기본 정보를 표시합니다.
 
--   [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950)와 같은 조작 제스처 이벤트는 진행 중인 조작을 나타냅니다. 조작 제스처 이벤트는 사용자가 요소를 터치할 때 발생하기 시작하고, 손가락을 들거나 조작이 취소될 때까지 계속됩니다.
+-   [  **ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950)와 같은 조작 제스처 이벤트는 진행 중인 조작을 나타냅니다. 조작 제스처 이벤트는 사용자가 요소를 터치할 때 발생하기 시작하고, 손가락을 들거나 조작이 취소될 때까지 계속됩니다.
 
     조작 이벤트에는 확대/축소, 이동 또는 회전과 같은 멀티 터치 조작과 끌기처럼 관성과 속도 데이터를 사용하는 조작이 포함됩니다. 조작 이벤트에서 제공하는 정보는 수행된 조작 형식을 확인하지 않고 오히려 위치, 변환 델타 및 속도와 같은 데이터를 포함합니다. 이 터치 데이터를 사용하여 수행되어야 하는 조작 유형을 파악할 수 있습니다.
 
 다음은 UWP에서 지원하는 터치 제스처의 기본 집합입니다.
 
-| 이름           | 유형                 | 설명                                                                            |
+| 이름           | 형식                 | 설명                                                                            |
 |----------------|----------------------|----------------------------------------------------------------------------------------|
 | 탭하기            | 정적 제스처       | 손가락 하나로 화면을 터치하고 뗍니다.                                            |
 | 길게 누르기 | 정적 제스처       | 손가락 하나로 화면을 터치한 다음 누르고 있습니다.                                      |
@@ -286,7 +286,7 @@ Public Sub New()
 End Sub
 ```
 
-마지막으로, [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 이벤트 처리기에서 [**Rectangle**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height)의 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 및 [**Width**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)를 증가시키며, [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 및 [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969) 이벤트 처리기에서는 **Height** 및 **Width**를 다시 해당 시작 값으로 설정합니다.
+마지막으로, [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 이벤트 처리기에서 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 및 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)를 증가시키며, [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 및 [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969) 이벤트 처리기에서는 **Height** 및 **Width**를 다시 해당 시작 값으로 설정합니다.
 
 ```cpp
 // Handler for pointer exited event.
@@ -422,13 +422,13 @@ End Sub
 | [**ManipulationStarted 이벤트**](https://msdn.microsoft.com/library/windows/apps/br208950)                                     | 입력 디바이스가 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)에 대한 조작을 시작할 때 발생합니다.                                            |
 | [**ManipulationDelta 이벤트**](https://msdn.microsoft.com/library/windows/apps/br208946)                                         | 입력 디바이스가 조작 중에 위치를 바꿀 때 발생합니다.                                                                      |
 | [**ManipulationInertiaStarting 이벤트**](https://msdn.microsoft.com/library/windows/apps/hh702425)                | 조작하는 동안 입력 디바이스와 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 개체의 연결이 끊어지고 관성이 시작될 때 발생합니다. |
-| [**ManipulationCompleted 이벤트**](https://msdn.microsoft.com/library/windows/apps/br208945)                                 | [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)에 대한 조작 및 관성이 완료될 때 발생합니다.                                          |
-| [**ManipulationStartingRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702132)               | [**ManipulationStarting**](https://msdn.microsoft.com/library/windows/apps/br208951) 이벤트에 대한 데이터를 제공합니다.                                         |
-| [**ManipulationStartedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702101)                 | [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950) 이벤트에 대한 데이터를 제공합니다.                                           |
-| [**ManipulationDeltaRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702051)                     | [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트에 대한 데이터를 제공합니다.                                               |
-| [**ManipulationInertiaStartingRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702074) | [**ManipulationInertiaStarting**](https://msdn.microsoft.com/library/windows/apps/br208947) 이벤트에 대한 데이터를 제공합니다.                           |
+| [**ManipulationCompleted 이벤트**](https://msdn.microsoft.com/library/windows/apps/br208945)                                 | [  **UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)에 대한 조작 및 관성이 완료될 때 발생합니다.                                          |
+| [**ManipulationStartingRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702132)               | [  **ManipulationStarting**](https://msdn.microsoft.com/library/windows/apps/br208951) 이벤트에 대한 데이터를 제공합니다.                                         |
+| [**ManipulationStartedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702101)                 | [  **ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950) 이벤트에 대한 데이터를 제공합니다.                                           |
+| [**ManipulationDeltaRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702051)                     | [  **ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트에 대한 데이터를 제공합니다.                                               |
+| [**ManipulationInertiaStartingRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702074) | [  **ManipulationInertiaStarting**](https://msdn.microsoft.com/library/windows/apps/br208947) 이벤트에 대한 데이터를 제공합니다.                           |
 | [**ManipulationVelocities**](https://msdn.microsoft.com/library/windows/apps/br242032)                                              | 조작이 발생하는 속도를 설명합니다.                                                                                         |
-| [**ManipulationCompletedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702035)             | [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) 이벤트에 대한 데이터를 제공합니다.                                       |
+| [**ManipulationCompletedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702035)             | [  **ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) 이벤트에 대한 데이터를 제공합니다.                                       |
 
  
 
@@ -436,7 +436,7 @@ End Sub
 
 다음에는 하나 이상의 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트가 발생합니다. 예를 들어 화면을 터치한 후 손가락을 화면에서 끌면 이벤트가 발생합니다. 마지막으로 조작이 완료되면 [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) 이벤트가 발생합니다.
 
-**참고**터치 스크린 모니터가 없는 경우 마우스 및 마우스 휠 인터페이스를 사용 하 여 시뮬레이터에서 조작 이벤트 코드를 테스트할 수 있습니다.
+**참고**  터치 스크린 모니터를 설정 하지 않은 경우 마우스 및 마우스 휠 인터페이스를 사용 하 여 시뮬레이터에서 조작 이벤트 코드를 테스트할 수 있습니다.
 
  
 
@@ -570,7 +570,7 @@ End Sub
 ## <a name="routed-events"></a>라우트된 이벤트
 
 
-여기서 언급한 모든 포인터 이벤트, 제스처 이벤트 및 조작 이벤트는 *라우트된 이벤트*로 구현됩니다. 즉, 원래 이벤트를 발생시킨 개체가 아닌 개체에서 이벤트를 처리할 수 있습니다. [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)의 부모 컨테이너 또는 앱의 루트 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)와 같은 개체 트리의 연속된 부모는 원래 요소가 처리하지 않는 경우에도 이러한 이벤트를 처리하도록 선택할 수 있습니다. 반대로, 이벤트를 처리하는 개체는 더 이상 부모 요소에 도달하지 않도록 이벤트를 처리된 것으로 표시할 수 있습니다. 라우트된 이벤트 개념 및 라우트된 이벤트의 처리기를 작성하는 방법에 미치는 영향에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/hh758286)를 참조하세요.
+여기서 언급한 모든 포인터 이벤트, 제스처 이벤트 및 조작 이벤트는 *라우트된 이벤트*로 구현됩니다. 즉, 원래 이벤트를 발생시킨 개체가 아닌 개체에서 이벤트를 처리할 수 있습니다. [  **UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)의 부모 컨테이너 또는 앱의 루트 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)와 같은 개체 트리의 연속된 부모는 원래 요소가 처리하지 않는 경우에도 이러한 이벤트를 처리하도록 선택할 수 있습니다. 반대로, 이벤트를 처리하는 개체는 더 이상 부모 요소에 도달하지 않도록 이벤트를 처리된 것으로 표시할 수 있습니다. 라우트된 이벤트 개념 및 라우트된 이벤트의 처리기를 작성하는 방법에 미치는 영향에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/hh758286)를 참조하세요.
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
@@ -591,17 +591,17 @@ End Sub
 
 **샘플**
 
-* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
 
-* [입력: 디바이스 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: XAML 사용자 입력 이벤트 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: GestureRecognizer를 사용한 조작 및 제스처](https://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [입력: 제스처와 GestureRecognizer 조작](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
  

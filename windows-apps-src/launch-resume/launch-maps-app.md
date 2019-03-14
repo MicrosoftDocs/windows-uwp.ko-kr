@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 021e3142a4e94f762cc48dbc86905dcf0b658772
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "9045702"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57645238"
 ---
 # <a name="launch-the-windows-maps-app"></a>Windows 지도 앱 실행
 
 
 
 
-앱에서 Windows 지도 앱을 실행하는 방법을 알아봅니다. 이 항목에서는 **bingmaps:, *ms-drive-to:, ms-walk-to:** 및 **ms-settings:** URI(Uniform Resource Identifier) 체계에 대해 설명합니다. 이러한 URI 체계로 Windows 지도 앱을 실행하여 특정 지도, 길 찾기 및 검색 결과를 표시하거나 설정 앱에서 Windows 지도 오프라인 지도를 다운로드할 수 있습니다.
+앱에서 Windows 지도 앱을 실행하는 방법을 알아봅니다. 에 대해 설명 합니다 **bingmaps:, *ms 드라이브-간: ms-워크-를:**  및 **ms 설정:** 균일 한 리소스 식별자 (URI) 스키마입니다. 이러한 URI 체계로 Windows 지도 앱을 실행하여 특정 지도, 길 찾기 및 검색 결과를 표시하거나 설정 앱에서 Windows 지도 오프라인 지도를 다운로드할 수 있습니다.
 
 **팁** 앱에서 Windows 지도 앱을 실행하는 방법을 알아보려면 GitHub의 [Windows-universal-samples repo](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
 
@@ -26,9 +26,9 @@ ms.locfileid: "9045702"
 
 URI 체계를 사용하면 하이퍼링크를 클릭하거나 앱에서 프로그래밍 방식으로 앱을 열 수 있습니다. **mailto:** 를 사용하여 새 메일을 시작하거나 **http:** 를 사용하여 웹 브라우저를 열 수 있는 것처럼 **bingmaps:**, **ms-drive-to:** 및 **ms-walk-to:** 를 사용하여 Windows 지도 앱을 열 수 있습니다.
 
--   **bingmaps:** URI는 위치, 검색 결과, 방향 및 교통 지도 제공합니다.
--   **ms-drive-to:** URI는 현재 위치에서 턴바이턴 운전 경로를 제공합니다.
--   **ms-walk-to:** URI는 현재 위치에서 턴바이턴 도보 길 찾기를 제공합니다.
+-   **bingmaps:** URI 위치, 검색 결과, 방향 및 트래픽 지도 제공합니다.
+-   **ms-드라이브-하려면:** 현재 위치에서 설정 하 여 턴 주행 지침을 제공 하는 URI입니다.
+-   **ms-워크-하려면:** 현재 위치에서 설정 하 여 턴 워크 지침을 제공 하는 URI입니다.
 
 예를 들어 다음 URI는 Windows 지도 앱을 열고 뉴욕시를 중심으로 지도를 표시합니다.
 
@@ -44,14 +44,14 @@ URI 체계에 대한 설명은 다음과 같습니다.
 
 이 URI 체계에서 *query*는 일련의 매개 변수 이름/값 쌍입니다.
 
-**&amp;param1=value1&amp;param2=value2 …**
+**&param1=value1&param2=value2 …**
 
 사용 가능한 매개 변수의 전체 목록은 [bingmaps:](#bingmaps-param-reference), [ms-drive-to:](#ms-drive-to-param-reference) 및 [ms-walk-to:](#ms-walk-to-param-reference) 매개 변수 참조를 참조하세요. 이 항목의 뒷부분에 예제도 있습니다.
 
 ## <a name="launch-a-uri-from-your-app"></a>앱에서 URI 실행
 
 
-앱에서 Windows 지도 앱을 시작하려면 **bingmaps:**, **ms-drive-to:** 또는 **ms-walk-to:** URI를 사용하여 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 호출합니다. 다음 예제에서는 이전 예제와 동일한 URI를 실행합니다. URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 앱 실행](launch-default-app.md)을 참조하세요.
+앱에서 Windows 지도 앱을 시작 하려면 호출을 [ **LaunchUriAsync** ](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 **bingmaps:**, **ms 드라이브-간:**, 또는  **ms-워크-하려면:** URI입니다. 다음 예제에서는 이전 예제와 동일한 URI를 실행합니다. URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 앱 실행](launch-default-app.md)을 참조하세요.
 
 ```cs
 // Center on New York City
@@ -77,14 +77,14 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 | bingmaps:?                                                                 | 지도 앱을 엽니다.                                                                                                                                                                            |
 | bingmaps:?cp=40.726966~-74.006076                                          | 뉴욕시를 중심으로 하는 지도를 표시합니다.                                                                                                                                                    |
 | bingmaps:?cp=40.726966~-74.006076&amp;lvl=10                                   | 확대/축소 수준을 10으로 하여 뉴욕시를 중심으로 하는 지도를 표시합니다.                                                                                                                            |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5                                   | **bb** 인수에 지정된 영역인 뉴욕시의 지도를 표시합니다.                                                                                                           |
+| bingmaps:? bb = 39.719\_-74.52 ~ 41.71\_-73.5                                   | **bb** 인수에 지정된 영역인 뉴욕시의 지도를 표시합니다.                                                                                                           |
 | bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&cp=47~-122                        | 경계 상자 인수에 지정된 영역인 뉴욕시의 지도를 표시합니다. *bb*가 지정되었기 때문에 **cp** 인수에 지정된 시애틀의 중심점이 무시됩니다. |
-| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16 | Caesar's Palace(라스베이거스)라는 지점이 포함된 지도를 표시하고 확대/축소 수준을 16으로 설정합니다.                                                                                                 |
-| bingmaps:?collection=point.40.726966\_-74.006076\_Some%255FBusiness        | Some\_Business(라스베가스)라는 지점이 포함된 지도를 표시합니다.                                                                                                                               |
-| bingmaps:?cp=40.726966~-74.006076&trfc=1&sty=a                             | 교통량을 켜고 항공 지도 스타일로 뉴욕시 지도를 표시합니다.                                                                                                                          |
-| bingmaps:?cp=47.6204~-122.3491&sty=3d                                      | Space Needle의 3D 뷰를 표시합니다.                                                                                                                                                        |
-| bingmaps:?cp=47.6204~-122.3491&amp;sty=3d&amp;rad=200&amp;pit=75&amp;hdg=165               | 200m 반경, 75도 피치 및 165도 방향으로 Space Needle의 3D 뷰를 표시합니다.                                                                             |
-| bingmaps:?cp=47.6204~-122.3491&ss=1                                        | Space Needle의 Streetside 뷰를 표시합니다.                                                                                                                                                |
+| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars %20Palace & lvl = 16 | Caesar's Palace(라스베이거스)라는 지점이 포함된 지도를 표시하고 확대/축소 수준을 16으로 설정합니다.                                                                                                 |
+| bingmaps:?collection=point.40.726966\_-74.006076\_Some%255FBusiness        | 일부 명명 된 지점과 맵을 표시\_(라스베이거스에서 열리는)에서 비즈니스입니다.                                                                                                                               |
+| bingmaps:?cp=40.726966~-74.006076&trfc=1&amp;amp;sty=a                             | 교통량을 켜고 항공 지도 스타일로 뉴욕시 지도를 표시합니다.                                                                                                                          |
+| bingmaps:?cp=47.6204~-122.3491&amp;sty=3d                                      | Space Needle의 3D 뷰를 표시합니다.                                                                                                                                                        |
+| bingmaps:?cp=47.6204~-122.3491&sty=3d&rad=200&pit=75&amp;amp;hdg=165               | 200m 반경, 75도 피치 및 165도 방향으로 Space Needle의 3D 뷰를 표시합니다.                                                                             |
+| bingmaps:?cp=47.6204~-122.3491&amp;ss=1                                        | Space Needle의 Streetside 뷰를 표시합니다.                                                                                                                                                |
 
 
 ## <a name="display-search-results"></a>검색 결과 표시
@@ -95,7 +95,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 | 샘플 URI                                                    | 결과                                                                            |
 |---------------------------------------------------------------|------------------------------------------------------------------------------------|
 | bingmaps:?q=1600%20Pennsylvania%20Ave,%20Washington,%20DC     | 지도를 표시하고 워싱턴 D.C.의 백악관 주소를 검색합니다. |
-| bingmaps:?q=coffee&where=Seattle                              | 시애틀에서 커피를 검색합니다.                                                    |
+| bingmaps:?q=coffee&amp;where=Seattle                              | 시애틀에서 커피를 검색합니다.                                                    |
 | bingmaps:?cp=40.726966~-74.006076&where=New%20York            | 지정된 중심점 근처의 뉴욕을 검색합니다.                             |
 | bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&q=pizza              | 지정된 경계 상자(즉, 뉴욕시) 내부의 피자를 검색합니다.      |
 
@@ -107,11 +107,11 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 
 | 샘플 URI | 결과                                                                                                                   |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace                                                                                                | Caesar's Palace(라스베이거스)를 검색하고 결과를 지도에 최상의 지도 보기로 표시합니다.                         |
-| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&amp;lvl=16                                                                                         | 라스베이거스에 있는 Caesars Palace라는 이름의 고정핀을 표시하고 16 수준으로 확대/축소합니다.                                               |
-| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&amp;lvl=16&amp;cp=36.114902~-115.176669                   | 라스베이거스에 있는 Caesars Palace라는 이름의 고정핀과 The Bellagio라는 이름의 고정핀을 표시하고 16 수준으로 확대/축소합니다.*/              |
-| bingmaps:?collection=point.40.726966\_-74.006076\_Fake%255FBusiness%255Fwith%255FUnderscore                                                                        | Fake\_Business\_with\_Underscore라는 이름의 고정핀이 포함된 뉴욕을 표시합니다.                                                  |
-| bingmaps:?collection=name.Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&amp;lvl=16&amp;cp=36.114902~-115.176669 | Hotel List라는 이름의 목록과 라스베이거스에 있는 Caesars Palace 및 The Bellagio에 대한 두 개의 고정핀을 표시하고 16 수준으로 확대/축소합니다. |
+| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars %20Palace                                                                                                | Caesar's Palace(라스베이거스)를 검색하고 결과를 지도에 최상의 지도 보기로 표시합니다.                         |
+| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars %20Palace & lvl = 16                                                                                         | 라스베이거스에 있는 Caesars Palace라는 이름의 고정핀을 표시하고 16 수준으로 확대/축소합니다.                                               |
+| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_%20Bellagio & lvl = 16 cp 36.114902 = ~-115.176669                   | 라스베이거스에 있는 Caesars Palace라는 이름의 고정핀과 The Bellagio라는 이름의 고정핀을 표시하고 16 수준으로 확대/축소합니다.*/              |
+| bingmaps:?collection=point.40.726966\_-74.006076\_%255FBusiness %255Fwith %255FUnderscore 가짜                                                                        | 뉴욕 Fake 라는 압정으로 표시 됩니다\_비즈니스\_사용 하 여\_밑줄.                                                  |
+| bingmaps:?collection=name.Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669 | Hotel List라는 이름의 목록과 라스베이거스에 있는 Caesars Palace 및 The Bellagio에 대한 두 개의 고정핀을 표시하고 16 수준으로 확대/축소합니다. |
 
  
 
@@ -127,7 +127,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 | bingmaps:?rtp=pos.44.9160\_-110.4158~pos.45.0475\_-109.4187                                                             | 지점 간 길 찾기가 포함된 지도를 표시합니다. *mode*를 지정하지 않았으므로 사용자의 교통 기본 설정 모드를 사용하여 길 찾기가 제공됩니다. |
 | bingmaps:?cp=43.0332~-87.9167&amp;trfc=1                                                                                    | 위스콘신주 밀워키를 중심으로 하는 지도에 교통 정보를 표시합니다.                                                                                                        |
 | bingmaps:?rtp=adr.One Microsoft Way, Redmond, WA 98052~pos.39.0731\_-108.7238                                           | 지정된 주소에서 지정된 위치로의 길 찾기를 포함하는 지도를 표시합니다.                                                                            |
-| bingmaps:?rtp=adr.1%20Microsoft%20Way,%20Redmond,%20WA,%2098052~pos.36.1223\_-111.9495\_Grand%20Canyon%20northern%20rim | 마이크로소프트 웨이(1 Microsoft Way, Redmond, WA, 98052)에서 그랜드 캐니언 북쪽 경계까지의 길 찾기를 표시합니다.                                                                |
+| bingmaps:?rtp=adr.1%20Microsoft%20Way,%20Redmond,%20WA,%2098052~pos.36.1223\_-111.9495\_총합계 %20Canyon %20northern %20rim | 마이크로소프트 웨이(1 Microsoft Way, Redmond, WA, 98052)에서 그랜드 캐니언 북쪽 경계까지의 길 찾기를 표시합니다.                                                                |
 | bingmaps:?rtp=adr.Davenport, CA~adr.Yosemite Village                                                                    | 지정된 위치에서 지정된 랜드마크로의 운전 길 찾기를 포함하는 지도를 표시합니다.                                                                   |
 | bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&amp;mode=d                      | 캘리포니아주 마운틴뷰에서 샌프란시스코 국제공항까지의 운전 길 찾기를 표시합니다.                                                                  |
 | bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&amp;mode=w                      | 캘리포니아주 마운틴뷰에서 샌프란시스코 국제공항까지의 도보 길 찾기를 표시합니다.                                                                  |
@@ -136,21 +136,21 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 ## <a name="display-turn-by-turn-directions"></a>턴바이턴 길 찾기 표시
 
 
-**ms-drive-to:** 및 **ms-walk-to:** URI 체계를 사용하면 경로의 턴바이턴 뷰를 바로 실행할 수 있습니다. 이러한 URI 체계는 사용자의 현재 위치에서의 길 찾기만 제공할 수 있습니다. 사용자의 현재 위치가 포함되지 않은 지점 간 길 찾기를 제공해야 하는 경우 이전 섹션에 설명된 대로 **bingmaps:** URI 체계를 사용하세요. 이러한 URI 체계에 대한 자세한 내용은 [ms-drive-to:](#ms-drive-to-param-reference) 및 [ms-walk-to:](#ms-walk-to-param-reference) 매개 변수 참조를 참조하세요.
+합니다 **ms 드라이브-간:** 및 **ms-워크-하려면:** URI 체계를 사용 하는 경로 설정 하 여 설정 보기에 직접 시작할 수 있습니다. 이러한 URI 체계는 사용자의 현재 위치에서의 길 찾기만 제공할 수 있습니다. 사용 하 여 사용자의 현재 위치를 포함 하지 않는 점 사이의 지침으로 제공 해야 하는 경우는 **bingmaps:** 이전 섹션에 설명 된 대로 URI 체계입니다. 이러한 URI 체계에 대한 자세한 내용은 [ms-drive-to:](#ms-drive-to-param-reference) 및 [ms-walk-to:](#ms-walk-to-param-reference) 매개 변수 참조를 참조하세요.
 
-> **중요**  **ms-drive-to:** 또는 **ms-walk-to:** URI 체계가 시작되면 지도 앱은 장치에 GPS 위치 수정이 적용된 적이 있는지 확인합니다. 이 기능이 적용된 경우 지도 앱은 턴바이턴 길 찾기를 진행합니다. 이 기능이 적용되지 않은 경우 앱은 [길 찾기와 교통량 표시](#display-directions-and-traffic)의 설명대로 경로 개요를 표시합니다.
+> **중요** 때 합니다 **ms 드라이브-간:** 또는 **ms 워크-간:** URI 체계를 시작 하는 맵 앱은 장치를 수정 하는 GPS 위치 한 적이 있으면 참조를 확인 합니다. 이 기능이 적용된 경우 지도 앱은 턴바이턴 길 찾기를 진행합니다. 이 기능이 적용되지 않은 경우 앱은 [길 찾기와 교통량 표시](#display-directions-and-traffic)의 설명대로 경로 개요를 표시합니다.
 
 ![턴바이턴 길 찾기의 예](images/windowsmapsappdirections.png)
 
 | 샘플 URI                                                                                                | 결과                                                                                       |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| ms-drive-to:?destination.latitude=47.680504&amp;destination.longitude=-122.328262&amp;destination.name=Green Lake | 사용자의 현재 위치에 그린 레이크까지의 턴바이턴 운전 길 찾기가 포함된 지도를 표시합니다. |
-| ms-walk-to:?destination.latitude=47.680504&amp;destination.longitude=-122.328262&amp;destination.name=Green Lake  | 사용자의 현재 위치에 그린 레이크까지의 턴바이턴 도보 길 찾기가 포함된 지도를 표시합니다. |
+| ms-drive-to:?destination.latitude=47.680504&destination.longitude=-122.328262&amp;amp;destination.name=Green Lake | 사용자의 현재 위치에 그린 레이크까지의 턴바이턴 운전 길 찾기가 포함된 지도를 표시합니다. |
+| ms-walk-to:?destination.latitude=47.680504&destination.longitude=-122.328262&amp;amp;destination.name=Green Lake  | 사용자의 현재 위치에 그린 레이크까지의 턴바이턴 도보 길 찾기가 포함된 지도를 표시합니다. |
 
 
 ## <a name="download-offline-maps"></a>오프라인 지도 다운로드
 
-**ms-settings:** URI 체계를 사용하면 설정 앱의 특정 페이지를 바로 시작할 수 있습니다. **ms-settings:** URI 체계는 지도 앱을 실행하지 않지만 설정 앱의 오프라인 지도 페이지를 바로 시작할 수 있게 하며, 지도 앱에서 사용하는 오프라인 지도를 다운로드하기 위한 확인 대화 상자를 표시합니다. URI 체계는 위도 및 경도로 지정된 지점을 사용하고 해당 지점을 포함하는 지역에 사용할 수 있는 오프라인 지도가 있는지 여부를 자동으로 확인합니다.  전달된 위도와 경도가 여러 다운로드 지역 내에 해당하는 경우 확인 대화 상자를 통해 사용자가 다운로드할 지역을 선택할 수 있습니다. 해당 지점을 포함하는 지역에 오프라인 지도를 사용할 수 없는 경우 설정 앱의 오프라인 지도 페이지가 오류 대화 상자와 함께 표시됩니다.
+**ms 설정:** URI 체계를 사용 하면 설정 앱의 특정 페이지를 직접 시작할 수 있습니다. 하지만 **ms 설정:** 맵 앱으로 실행 되지 않으면이 URI 체계를 설정 앱에서 오프 라인 맵 페이지에 직접 시작할 수 있습니다 하 고 맵 앱에서 사용 하는 오프 라인 맵을 다운로드 확인 대화 상자를 표시 합니다. URI 체계는 위도 및 경도로 지정된 지점을 사용하고 해당 지점을 포함하는 지역에 사용할 수 있는 오프라인 지도가 있는지 여부를 자동으로 확인합니다.  전달된 위도와 경도가 여러 다운로드 지역 내에 해당하는 경우 확인 대화 상자를 통해 사용자가 다운로드할 지역을 선택할 수 있습니다. 해당 지점을 포함하는 지역에 오프라인 지도를 사용할 수 없는 경우 설정 앱의 오프라인 지도 페이지가 오류 대화 상자와 함께 표시됩니다.
 
 | 샘플 URI  | 결과 |
 |-------------|---------|
@@ -208,7 +208,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>유효한 위도 값은 -90과 90(포함) 사이입니다.</p><p>cp 및 lvl 매개 변수는 경계 상자가 제공된 경우 무시됩니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>각 항목은 다음을 의미합니다.</b></p></td>
+<td align="left"><p><b>where</b></p></td>
 <td align="left"><p>위치</p></td>
 <td align="left"><p>where = "where=" whereval</p>
 <p>whereval = 1 *( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "*" / "+" / "," / ";" / ":" / "@" / "/" / "?")</p>
@@ -241,13 +241,13 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>sty=a</p></td>
 <td align="left"><p>지도 스타일을 정의합니다. 이 매개 변수의 유효한 값은 다음과 같습니다.</p>
 <ul>
-<li>**a**: 지도의 위성뷰를 표시합니다.</li>
-<li>**r**: 지도의 도로 보기를 표시합니다.</li>
-<li>**3d**: 지도의 3D 보기를 표시합니다. **cp** 매개 변수 및 **rad** 매개 변수(옵션)와 함께 사용합니다.</li>
+<li>**a**: Map의 항공 보기를 표시 합니다.</li>
+<li>**r**: 지도의 보기를 표시 합니다.</li>
+<li>**3d**: Map의 3D 뷰를 표시 합니다. **cp** 매개 변수 및 **rad** 매개 변수(옵션)와 함께 사용합니다.</li>
 </ul>
 <p>Windows 10에서는 위성뷰 및 3D 보기 스타일이 같습니다.</p>
 <div class="alert">
-**참고**sty과 동일한 결과가 생성 **sty** 매개 변수를 생략 하면 = r.
+**참고**  Omitting 합니다 **sty** sty와 동일한 결과 생성 하는 매개 변수 = r입니다.
 </div>
 <div>
  
@@ -285,7 +285,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>ss=1</p></td>
 <td align="left"><p><code>ss=1</code>이면 거리 수준 이미지가 표시됩니다. <b>ss</b> 매개 변수를 생략하면 <code>ss=0</code>과 동일한 결과가 생성됩니다. <b>cp</b> 매개 변수와 함께 사용하여 거리 수준 보기의 위치를 지정합니다.</p>
 <div class="alert">
-**참고**일부 지역에서는 거리 수준 이미지를 사용할 수 없습니다.
+**참고**  Street 수준 이미지 모든 지역에서 사용할 수 없는 합니다.
 </div>
 <div>
  
@@ -293,13 +293,13 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 </tr>
 <tr class="odd">
 <td align="left"><p><b>trfc</b></p></td>
-<td align="left"><p>교통량</p></td>
+<td align="left"><p>트래픽</p></td>
 <td align="left"><p>trfc = "trfc=" BIT</p>
 <p>예제:</p>
 <p>trfc=1</p></td>
 <td align="left"><p>지도에 교통 정보가 포함되는지 여부를 지정합니다. trfc 매개 변수를 생략하면 <code>trfc=0</code>과 동일한 결과가 생성됩니다.</p>
 <div class="alert">
-**참고**교통량 데이터는 일부 지역에서는 사용할 수 없습니다.
+**참고**  트래픽 데이터는 모든 지역에서 사용할 수 없습니다.
 </div>
 <div>
  
@@ -328,23 +328,23 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>불완전한 경로를 지정하면 경로 선이 그려지지 않습니다.</p>
 <p>**mode** 매개 변수와 함께 사용하여 교통 모드(운전, 대중교통 또는 도보)를 지정할 수 있습니다. **mode**를 지정하지 않으면 사용자의 교통 기본 설정 모드를 사용하여 길 찾기가 제공됩니다.</p>
 <div class="alert">
-**참고** **pos** 매개 변수 값으로 위치를 지정한 경우 위치에 제목을 사용할 수 있습니다. 위도 및 경도를 표시하는 대신 제목이 표시됩니다.
+**참고**  제목을 경우 사용할 수 있습니다 위치 하 여 지정 된 위치를 **pos** 매개 변수 값입니다. 위도 및 경도를 표시하는 대신 제목이 표시됩니다.
 </div>
 <div>
  
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>모드</b></p></td>
+<td align="left"><p><b>mode</b></p></td>
 <td align="left"><p>교통 모드</p></td>
 <td align="left"><p>mode = "mode=" ("d" / "t" / "w")</p>
 <p>예제:</p>
 <p>mode=d</p></td>
 <td align="left"><p>교통 모드를 정의합니다. 이 매개 변수의 유효한 값은 다음과 같습니다.</p>
 <ul>
-<li>**d**: 운전 길 찾기에 대한 경로 개요 표시</li>
-<li>**t**: 대중교통 길 찾기에 대한 개요 표시</li>
-<li>**w**: 도보 길 찾기에 대한 개요 표시</li>
+<li>**d**: 경로 운전 방향에 대 한 개요 표시</li>
+<li>**t**: 경로 전송 지침에 대 한 개요 표시</li>
+<li>**w**: 경로 방향 탐색에 대 한 개요 표시</li>
 </ul>
 <p>교통 길 찾기에 **rtp** 매개 변수와 함께 사용합니다. **mode**를 지정하지 않으면 사용자의 교통 기본 설정 모드를 사용하여 길 찾기가 제공됩니다. 경로 매개 변수 없이 **mode**를 제공하여 현재 위치에서 해당 모드에 대한 길 찾기 입력을 제공할 수 있습니다.</p></td>
 </tr>
@@ -385,7 +385,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 
  
 
-| 매개 변수 | 정의 | 예제 | 세부 정보 |
+| 매개 변수 | 정의 | 예 | 세부 정보 |
 |------------|-----------|---------|---------|
 | **destination.latitude** | 목적지 위도 | 예: destination.latitude=47.6451413797194 | 목적지의 위도입니다. 유효한 위도 값은 -90과 90(포함) 사이입니다. |
 | **destination.longitude** | 목적지 경도 | 예: destination.longitude=-122.141964733601 | 목적지의 경도입니다. 유효한 경도 값은 -180과 180(포함) 사이입니다. |
@@ -402,7 +402,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 > **참고**  이 URI 체계에서는 시작점을 지정하지 않습니다. 항상 현재 위치가 시작점으로 간주됩니다. 현재 위치와 다른 시작점을 지정해야 하는 경우 [길 찾기 및 교통량 표시](#display-directions-and-traffic)를 참조하세요.
  
 
-| 매개 변수 | 정의 | 예제 | 세부 정보 |
+| 매개 변수 | 정의 | 예 | 세부 정보 |
 |-----------|------------|---------|----------|
 | **destination.latitude** | 목적지 위도 | 예: destination.latitude=47.6451413797194 | 목적지의 위도입니다. 유효한 위도 값은 -90과 90(포함) 사이입니다. |
 | **destination.longitude** | 목적지 경도 | 예: destination.longitude=-122.141964733601 | 목적지의 경도입니다. 유효한 경도 값은 -180과 180(포함) 사이입니다. |
@@ -410,8 +410,8 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 
 ## <a name="ms-settings-parameter-reference"></a>ms-settings: 매개 변수 참조
 
-**ms-settings:** URI 체계에 대한 지도 앱 특정 매개 변수의 구문은 아래에 정의되어 있습니다. **maps-downloadmaps**는 **ms-settings:maps-downloadmaps?** 형태로 **ms-settings:** URI와 함께 지정되어 오프라인 지도 설정 페이지를 나타냅니다. 
+구문에 대 한 앱에 대 한 특정 매개 변수를 매핑하는 **ms 설정:** URI 체계는 아래 정의 되어 있습니다. **maps downloadmaps** 와 함께 지정 되는 **ms 설정:** URI의 형태로 **ms-설정: 맵-downloadmaps?** 오프 라인 맵 설정 페이지를 나타내는입니다. 
 
-| 매개 변수 | 정의 | 예제 | 세부 정보 |
+| 매개 변수 | 정의 | 예 | 세부 정보 |
 |-----------|------------|---------|----------|
 | **latlong** | 오프라인 지도 지역을 정의하는 지점입니다. | 예: latlong=47.6,-122.3 | geopoint는 쉼표로 구분된 위도 및 경도로 지정됩니다. 유효한 위도 값은 -90과 90(포함) 사이입니다. 유효한 경도 값은 -180과 180(포함) 사이입니다. |

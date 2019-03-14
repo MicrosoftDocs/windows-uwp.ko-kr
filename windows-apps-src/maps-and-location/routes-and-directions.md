@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 경로, 지도, 위치, 길 찾기
 ms.localizationpriority: medium
 ms.openlocfilehash: 218ca052a3e525a1f7cfc2ce18542a5a30c61e5e
-ms.sourcegitcommit: bf600a1fb5f7799961914f638061986d55f6ab12
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9049260"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57646688"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>지도에 경로 및 길 찾기 표시
 
@@ -29,15 +29,15 @@ ms.locfileid: "9049260"
 
 다음은 경로 및 길 찾기 클래스의 관계입니다.
 
-* [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) 클래스에는 경로와 길 찾기를 가져오는 메서드가 있습니다. 이러한 메서드는 [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939)를 반환합니다.
+* [  **MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) 클래스에는 경로와 길 찾기를 가져오는 메서드가 있습니다. 이러한 메서드는 [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939)를 반환합니다.
 
-* [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939)에는 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) 개체가 포함되어 있습니다. **MapRouteFinderResult**의 [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) 속성을 통해 이 개체에 액세스합니다.
+* [  **MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939)에는 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) 개체가 포함되어 있습니다. **MapRouteFinderResult**의 [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) 속성을 통해 이 개체에 액세스합니다.
 
-* [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937)에는 [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) 개체 컬렉션이 포함됩니다. **MapRoute**의 [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) 속성을 통해 이 컬렉션에 액세스합니다.
+* [  **MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937)에는 [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) 개체 컬렉션이 포함됩니다. **MapRoute**의 [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) 속성을 통해 이 컬렉션에 액세스합니다.
 
 * 각 [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955)에는 [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961) 개체 컬렉션이 포함됩니다. **MapRouteLeg**의 [**Maneuvers**](https://msdn.microsoft.com/library/windows/apps/dn636959) 속성을 통해 이 컬렉션에 액세스합니다.
 
-[**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) 클래스의 메서드를 호출하여 운전 또는 보행 경로와 길 찾기를 가져옵니다. 예를 들어 [**GetDrivingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636943) 또는 [**GetWalkingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636953)입니다.
+[  **MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) 클래스의 메서드를 호출하여 운전 또는 보행 경로와 길 찾기를 가져옵니다. 예를 들어 [**GetDrivingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636943) 또는 [**GetWalkingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636953)입니다.
 
 경로를 요청할 경우 다음을 지정할 수 있습니다.
 
@@ -53,7 +53,7 @@ ms.locfileid: "9049260"
 
 ## <a name="display-directions"></a>길 찾기 표시
 
-[**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) 개체에는 [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) 속성을 통해 액세스할 수 있는 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) 개체가 포함됩니다.
+[  **MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) 개체에는 [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) 속성을 통해 액세스할 수 있는 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) 개체가 포함됩니다.
 
 계산된 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937)에는 경로를 따라 이동하는 데 소요되는 시간, 경로 길이, 그리고 경로 구간을 포함하는 [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) 개체를 제공하는 속성이 있습니다. 각 **MapRouteLeg** 개체에는 [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961) 개체 컬렉션이 포함됩니다. **MapRouteManeuver** 개체에는 [**InstructionText**](https://msdn.microsoft.com/library/windows/apps/dn636964) 속성을 통해 액세스할 수 있는 길 찾기가 포함됩니다.
 
@@ -192,7 +192,7 @@ private async void ShowRouteOnMap()
 
 다음 예제에서는 **MapWithRoute**라는 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 컨트롤에 다음을 표시합니다.
 
-![경로를 표시하는 지도 컨트롤.](images/routeonmap.png)
+![경로를 표시하는 지도 컨트롤](images/routeonmap.png)
 
 다음은 두 *정지* 웨이포인트 사이에 *경유* 웨이포인트를 사용하는 이 예제의 버전입니다.
 
@@ -241,8 +241,8 @@ private async void ShowRouteOnMap()
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Bing 맵 개발자 센터](https://www.bingmapsportal.com/)
+* [UWP 맵 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [지도 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [빌드 2015 비디오: 지도 및 위치를 활용 하 여 휴대폰, 태블릿 및 PC에서 Windows 앱에서](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP 트래픽 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)

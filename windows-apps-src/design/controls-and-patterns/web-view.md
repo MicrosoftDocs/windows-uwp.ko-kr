@@ -1,5 +1,5 @@
 ---
-Description: A web view control embeds a view into your app that renders web content using the Microsoft Edge rendering engine. Hyperlinks can also appear and function in a web view control.
+Description: 웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
 title: 웹 보기
 ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7af61b7d442fee7eff6399a7a5d143adb53fb560
-ms.sourcegitcommit: b975c8fc8cf0770dd73d8749733ae5636f2ee296
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "9058554"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57610638"
 ---
 # <a name="web-view"></a>웹 보기
  
 
 웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
 
-> **중요 API**: [WebView 클래스](https://msdn.microsoft.com/library/windows/apps/br227702)
+> **중요 한 Api**: [WebView 클래스](https://msdn.microsoft.com/library/windows/apps/br227702)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -28,7 +28,7 @@ ms.locfileid: "9058554"
 
 ## <a name="create-a-web-view"></a>웹 보기 만들기
 
-**웹 보기의 모양 수정**
+**웹 뷰의 모양을 수정 합니다.**
 
 [WebView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx)는 [Control](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.aspx) 하위 클래스가 아니므로 컨트롤 템플릿이 없습니다. 그러나 다양한 속성을 설정하여 웹 보기의 일부 시각적 측면을 제어할 수 있습니다.
 - 표시 영역을 제한하려면 [Width](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) 및 [Height](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) 속성을 설정합니다. 
@@ -36,11 +36,11 @@ ms.locfileid: "9058554"
 - 웹 보기의 불투명도를 제어하려면 [Opacity](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.opacity.aspx) 속성을 설정합니다.
 - HTML 콘텐츠에서 색을 지정하지 않는 경우 웹 페이지 배경으로 사용할 색을 지정하려면 [DefaultBackgroundColor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.defaultbackgroundcolor.aspx) 속성을 설정합니다. 
 
-**웹 페이지 제목 가져오기**
+**웹 페이지 제목**
 
 [DocumentTitle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.documenttitle.aspx) 속성을 사용하여 현재 웹 보기에 표시된 HTML 문서의 제목을 가져올 수 있습니다. 
 
-**입력 이벤트 및 탭 순서**
+**입력된 이벤트와 탭 순서**
 
 WebView는 Control 하위 클래스가 아니지만 키보드 입력 포커스를 받고 탭 순서에 참여합니다. [Focus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.focus.aspx) 메서드와 [GotFocus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.gotfocus.aspx) 및 [LostFocus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.lostfocus.aspx) 이벤트를 제공하지만 탭 관련 속성은 없습니다. 탭 순서상 해당 위치는 XAML 문서 순서상 위치와 같습니다. 탭 순서에는 입력 포커스를 받을 수 있는 웹 보기 콘텐츠의 모든 요소가 포함됩니다. 
 
@@ -48,7 +48,7 @@ WebView는 Control 하위 클래스가 아니지만 키보드 입력 포커스�
 
 ### <a name="navigating-to-content"></a>콘텐츠로 이동
 
-웹 보기는 [GoBack](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goback.aspx), [GoForward](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goforward.aspx), [Stop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.stop.aspx), [Refresh](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.refresh.aspx), [CanGoBack](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoback.aspx), [CanGoForward](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoforward.aspx) 등 기본 탐색을 위한 여러 API를 제공합니다. 이러한 기능을 사용하여 일반적인 웹 검색 기능을 앱에 추가할 수 있습니다. 
+기본 탐색을 위한 여러 Api를 제공 하는 웹 보기: [GoBack](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goback.aspx), [GoForward](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goforward.aspx)를 [중지](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.stop.aspx)를 [새로 고침](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.refresh.aspx)를 [CanGoBack](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoback.aspx), 및 [CanGoForward](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoforward.aspx). 이러한 기능을 사용하여 일반적인 웹 검색 기능을 앱에 추가할 수 있습니다. 
 
 웹 보기의 초기 콘텐츠를 설정하려면 XAML에서 [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.source.aspx) 속성을 설정합니다. XAML 파서는 문자열을 [Uri](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.uri.aspx)로 자동으로 변환합니다. 
 
@@ -71,7 +71,7 @@ WebView는 Control 하위 클래스가 아니지만 키보드 입력 포커스�
 webView1.Navigate("http://www.contoso.com");
 ```
 
-POST 요청과 HTTP 헤더가 포함된 URI로 이동하려면 [NavigateWithHttpRequestMessage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatewithhttprequestmessage.aspx) 메서드를 사용합니다. 이 메서드는 [HttpRequestMessage.Method](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.post.aspx) 속성 값에 대해 [HttpMethod.Post](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.get.aspx) 및 [HttpMethod.Get](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httprequestmessage.method.aspx)만 지원합니다. 
+POST 요청과 HTTP 헤더가 포함된 URI로 이동하려면 [NavigateWithHttpRequestMessage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatewithhttprequestmessage.aspx) 메서드를 사용합니다. 이 메서드는 [HttpRequestMessage.Method](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httprequestmessage.method.aspx) 속성 값에 대해 [HttpMethod.Post](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.post.aspx) 및 [HttpMethod.Get](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.get.aspx)만 지원합니다. 
 
 앱의 [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) 또는 [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) 데이터 저장소에서 압축 및 암호화되지 않은 콘텐츠를 로드하려면 [ms-appdata 체계](/windows/uwp/app-resources/uri-schemes)를 사용하는 **Uri**와 함께 **Navigate** 메서드를 사용합니다. 웹 보기에서 이 체계를 지원하려면 로컬 또는 임시 폴더 아래의 하위 폴더에 콘텐츠를 배치해야 합니다. 이렇게 하면 ms-appdata:///local/*folder*/*file*.html 및 ms-appdata:///temp/*folder*/*file*.html과 같은 URI로 이동할 수 있습니다. 압축 또는 암호화된 파일을 로드하려면 [NavigateToLocalStreamUri](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx)를 참조하세요. 
 
@@ -91,7 +91,7 @@ webView1.Navigate("ms-appx-web:///help/about.html");
 
 ### <a name="responding-to-navigation-events"></a>탐색 이벤트에 응답
 
-웹 보기 컨트롤은 탐색 및 콘텐츠 로드 상태에 응답하는 데 사용할 수 있는 몇 가지 이벤트를 제공합니다. 이벤트는 루트 웹 보기 콘텐츠에 대해 다음 순서로 발생합니다. [NavigationStarting](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationstarting.aspx), [ContentLoading](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.contentloading.aspx), [DOMContentLoaded](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.domcontentloaded.aspx), [NavigationCompleted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationcompleted.aspx)
+웹 보기 컨트롤은 탐색 및 콘텐츠 로드 상태에 응답하는 데 사용할 수 있는 몇 가지 이벤트를 제공합니다. 루트 웹 뷰 콘텐츠를 위한 다음과 같은 순서로 이벤트가 발생 합니다. [NavigationStarting](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationstarting.aspx), [ContentLoading](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.contentloading.aspx), [DOMContentLoaded](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.domcontentloaded.aspx), [NavigationCompleted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationcompleted.aspx)
 
 
 **NavigationStarting** - 웹 보기가 새 콘텐츠로 이동하기 전에 발생합니다. WebViewNavigationStartingEventArgs.Cancel 속성을 true로 설정하여 이 이벤트 처리기에서 탐색을 취소할 수 있습니다. 
@@ -137,7 +137,7 @@ private void webView1_DOMContentLoaded(WebView sender, WebViewDOMContentLoadedEv
 }
 ```
 
-**NavigationCompleted** - 웹 보기가 현재 콘텐츠 로드를 완료했거나 탐색에 실패한 경우에 발생합니다. 탐색에 실패했는지 여부를 확인하려면 [WebViewNavigationCompletedEventArgs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewnavigationcompletedeventargs.issuccess.aspx) 클래스의 [IsSuccess](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewnavigationcompletedeventargs.weberrorstatus.aspx) 및 [WebErrorStatus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewnavigationcompletedeventargs.aspx) 속성을 확인합니다. 
+**NavigationCompleted** - 웹 보기가 현재 콘텐츠 로드를 완료했거나 탐색에 실패한 경우에 발생합니다. 탐색에 실패했는지 여부를 확인하려면 [WebViewNavigationCompletedEventArgs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewnavigationcompletedeventargs.aspx) 클래스의 [IsSuccess](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewnavigationcompletedeventargs.issuccess.aspx) 및 [WebErrorStatus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewnavigationcompletedeventargs.weberrorstatus.aspx) 속성을 확인합니다. 
 
 ```csharp
 webView1.NavigationCompleted += webView1_NavigationCompleted;
@@ -166,7 +166,7 @@ private void webView1_NavigationCompleted(WebView sender, WebViewNavigationCompl
 
 장기 실행 스크립트, 웹 보기에서 로드할 수 없는 콘텐츠, 안전하지 않은 콘텐츠 경고와 같은 잠재적인 콘텐츠 문제에 응답할 수 있습니다. 
 
-스크립트를 실행하는 동안 앱이 응답하지 않는 것처럼 보일 수도 있습니다. [LongRunningScriptDetected](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.longrunningscriptdetected.aspx) 이벤트는 웹 보기에서 JavaScript를 실행하는 동안 정기적으로 발생하며 스크립트를 중단할 수 있는 기회를 제공합니다. 스크립트가 실행된 기간을 확인하려면 [WebViewLongRunningScriptDetectedEventArgs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewlongrunningscriptdetectedeventargs.executiontime.aspx)의 [ExecutionTime](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewlongrunningscriptdetectedeventargs.aspx) 속성을 확인합니다. 스크립트를 중지하려면 이벤트 인수 [StopPageScriptExecution](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewlongrunningscriptdetectedeventargs.stoppagescriptexecution.aspx) 속성을 **true**로 설정합니다. 후속 웹 보기 탐색 중에 다시 로드하지 않을 경우 중지된 스크립트는 다시 실행되지 않습니다. 
+스크립트를 실행하는 동안 앱이 응답하지 않는 것처럼 보일 수도 있습니다. [LongRunningScriptDetected](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.longrunningscriptdetected.aspx) 이벤트는 웹 보기에서 JavaScript를 실행하는 동안 정기적으로 발생하며 스크립트를 중단할 수 있는 기회를 제공합니다. 스크립트가 실행된 기간을 확인하려면 [WebViewLongRunningScriptDetectedEventArgs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewlongrunningscriptdetectedeventargs.aspx)의 [ExecutionTime](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewlongrunningscriptdetectedeventargs.executiontime.aspx) 속성을 확인합니다. 스크립트를 중지하려면 이벤트 인수 [StopPageScriptExecution](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewlongrunningscriptdetectedeventargs.stoppagescriptexecution.aspx) 속성을 **true**로 설정합니다. 후속 웹 보기 탐색 중에 다시 로드하지 않을 경우 중지된 스크립트는 다시 실행되지 않습니다. 
 
 웹 보기 컨트롤은 임의 파일 형식을 호스트할 수 없습니다. 웹 보기에서 호스트할 수 없는 콘텐츠를 로드하려고 하면 [UnviewableContentIdentified](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.unviewablecontentidentified.aspx) 이벤트가 발생합니다. 이 이벤트를 처리하고 사용자에게 알리거나, [Launcher](https://msdn.microsoft.com/library/windows/apps/xaml/windows.system.launcher.aspx) 클래스를 사용하여 파일을 외부 브라우저 또는 다른 앱으로 리디렉션할 수 있습니다.
 
@@ -199,7 +199,7 @@ private void webView_ContainsFullScreenElementChanged(WebView sender, object arg
 
 [NewWindowRequested](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.newwindowrequested.aspx) 이벤트를 사용하여 호스트된 웹 콘텐츠가 팝업 창과 같은 새 창을 표시하도록 요청하는 경우를 처리할 수 있습니다. 다른 WebView 컨트롤을 사용하여 요청된 창의 내용을 표시할 수 있습니다.
 
-특수 기능이 필요한 웹 기능을 사용하도록 설정하려면 [PermissionRequested](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.permissionrequested.aspx) 이벤트를 사용합니다. 현재 이러한 기능에는 지리적 위치, IndexedDB 저장소, 사용자 오디오 및 동영상(예: 마이크 또는 webcam에서 제공)이 포함됩니다. 앱이 사용자 위치나 사용자 미디어에 액세스하는 경우에도 앱 매니페스트에서 이 기능을 선언해야 합니다. 예를 들어, 지리적 위치를 사용하는 앱은 Package.appxmanifest에 최소한 다음과 같은 기능 선언이 있어야 합니다.
+특수 기능이 필요한 웹 기능을 사용하도록 설정하려면 [PermissionRequested](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.permissionrequested.aspx) 이벤트를 사용합니다. 현재 이러한 기능에는 지리적 위치, IndexedDB 저장소, 사용자 오디오 및 동영상(예: 마이크 또는 webcam에서 제공)이 포함됩니다. 앱이 사용자 위치나 사용자 미디어에 액세스하는 경우에도 앱 매니페스트에서 이 기능을 선언해야 합니다. 예를 들어 지리적 위치를 사용하는 앱은 Package.appxmanifest에 최소한 다음과 같은 기능 선언이 있어야 합니다.
 
 ```xml
   <Capabilities>
@@ -226,7 +226,7 @@ private void webView_PermissionRequested(WebView sender, WebViewPermissionReques
 }
 ```
 
-앱이 사용 권한 요청에 응답하기 위해 사용자 입력이나 다른 비동기 작업이 필요한 경우 [WebViewPermissionRequest](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx)의 [Defer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.aspx) 메서드를 사용하여 나중에 작업할 수 있는 [WebViewDeferredPermissionRequest](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewdeferredpermissionrequest.aspx)를 만듭니다. [WebViewPermissionRequest.Defer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx)를 참조하세요. 
+앱이 사용 권한 요청에 응답하기 위해 사용자 입력이나 다른 비동기 작업이 필요한 경우 [WebViewPermissionRequest](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.aspx)의 [Defer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx) 메서드를 사용하여 나중에 작업할 수 있는 [WebViewDeferredPermissionRequest](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewdeferredpermissionrequest.aspx)를 만듭니다. [WebViewPermissionRequest.Defer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx)를 참조하세요. 
 
 사용자가 웹 보기에 호스트된 웹 사이트에서 안전하게 로그아웃해야 하는 경우 또는 보안이 중요한 다른 경우에는 정적 메서드 [ClearTemporaryWebDataAsync](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cleartemporarywebdataasync.aspx)를 호출하여 웹 보기 세션에서 로컬에 캐시된 콘텐츠를 지웁니다. 이렇게 하면 악의적인 사용자가 중요한 데이터에 액세스할 수 없습니다. 
 
@@ -258,13 +258,13 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 웹 보기 콘텐츠의 스크립트는 문자열 매개 변수와 함께 **window.external.notify**를 사용하여 정보를 다시 앱으로 보낼 수 있습니다. 이러한 메시지를 받으려면 [ScriptNotify](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.scriptnotify.aspx) 이벤트를 처리합니다. 
 
-외부 웹 페이지에서 window.external.notify를 호출할 때 **ScriptNotify** 이벤트가 발생하게 하려면 페이지의 URI를 앱 매니페스트의 **ApplicationContentUriRules** 섹션에 포함해야 합니다. 이 작업은 Microsoft Visual Studio의 Package.appxmanifest 디자이너, 콘텐츠 URI 탭에서 수행할 수 있습니다. 이 목록의 URI는 HTTPS를 사용해야 하며 하위 도메인 와일드카드(예: `https://*.microsoft.com`)를 포함할 수 있지만 도메인 와일드카드(예: `https://*.com` 및 `https://*.*`)는 포함할 수 없습니다. 매니페스트 요구 사항은 앱 패키지에서 시작되거나 ms-local-stream:// URI를 사용하거나 [NavigateToString](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetostring.aspx)을 통해 로드되는 콘텐츠에 적용되지 않습니다. 
+외부 웹 페이지에서 window.external.notify를 호출할 때 **ScriptNotify** 이벤트가 발생하게 하려면 페이지의 URI를 앱 매니페스트의 **ApplicationContentUriRules** 섹션에 포함해야 합니다. (이렇게 하려면 Microsoft Visual Studio에서 Package.appxmanifest 디자이너 콘텐츠 Uri 탭 합니다.) 이 목록에는 Uri HTTPS를 사용 해야 하 고 하위 도메인 와일드 카드를 포함할 수 있습니다 (예를 들어 `https://*.microsoft.com`) 도메인 와일드 카드는 사용할 수 없습니다 있지만 (예를 들어 `https://*.com` 및 `https://*.*`). 매니페스트 요구 사항은 앱 패키지에서 시작되거나 ms-local-stream:// URI를 사용하거나 [NavigateToString](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetostring.aspx)을 통해 로드되는 콘텐츠에 적용되지 않습니다. 
 
 ### <a name="accessing-the-windows-runtime-in-a-web-view"></a>웹 보기에서 Windows 런타임 액세스
 
 [AddWebAllowedObject](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.addweballowedobject.aspx) 메서드를 사용하여 Windows 런타임 구성 요소의 네이티브 클래스 인스턴스를 웹 보기의 JavaScript 컨텍스트에 삽입할 수 있습니다. 이렇게 하면 해당 웹 보기의 JavaScript 콘텐츠에서 해당 개체의 네이티브 메서드, 속성 및 이벤트에 모두 액세스할 수 있습니다. 클래스는 [AllowForWeb](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.allowforwebattribute.aspx) 특성으로 데코레이트해야 합니다. 
 
-예를 들어, 이 코드는 Windows 런타임 구성 요소에서 가져온 `MyClass` 인스턴스를 웹 보기에 삽입합니다.
+예를 들어 이 코드는 Windows 런타임 구성 요소에서 가져온 `MyClass` 인스턴스를 웹 보기에 삽입합니다.
 
 ```csharp
 private void webView_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args) 
@@ -296,11 +296,11 @@ private void webView_NavigationStarting(WebView sender, WebViewNavigationStartin
 
 ### <a name="options-for-web-content-hosting"></a>웹 콘텐츠 호스팅 옵션
 
-[WebViewSettings](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.settings.aspx) 형식의 [WebView.Settings](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewsettings.aspx) 속성을 사용하여 JavaScript 및 IndexedDB의 사용 여부를 제어할 수 있습니다. 예를 들어, 웹 보기를 사용하여 엄격한 정적 콘텐츠를 표시하는 경우 최상의 성능을 위해 JavaScript를 사용하지 않도록 설정하는 것이 좋습니다.
+[WebViewSettings](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewsettings.aspx) 형식의 [WebView.Settings](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.settings.aspx) 속성을 사용하여 JavaScript 및 IndexedDB의 사용 여부를 제어할 수 있습니다. 예를 들어 웹 보기를 사용하여 엄격한 정적 콘텐츠를 표시하는 경우 최상의 성능을 위해 JavaScript를 사용하지 않도록 설정하는 것이 좋습니다.
 
 ### <a name="capturing-web-view-content"></a>웹 보기 콘텐츠 캡처
 
-다른 앱과 웹 보기 콘텐츠를 공유할 수 있게 하려면 선택한 콘텐츠를 [DataPackage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.captureselectedcontenttodatapackageasync.aspx)로 반환하는 [CaptureSelectedContentToDataPackageAsync](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.datatransfer.datapackage.aspx) 메서드를 사용합니다. 이 메서드는 비동기식으로 작동하므로 지연을 사용하여 비동기 호출이 완료되기 전에 [DataRequested](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.datatransfer.datatransfermanager.datarequested.aspx) 이벤트 처리기가 반환되지 않도록 해야 합니다. 
+다른 앱과 웹 보기 콘텐츠를 공유할 수 있게 하려면 선택한 콘텐츠를 [DataPackage](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.datatransfer.datapackage.aspx)로 반환하는 [CaptureSelectedContentToDataPackageAsync](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.captureselectedcontenttodatapackageasync.aspx) 메서드를 사용합니다. 이 메서드는 비동기식으로 작동하므로 지연을 사용하여 비동기 호출이 완료되기 전에 [DataRequested](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.datatransfer.datatransfermanager.datarequested.aspx) 이벤트 처리기가 반환되지 않도록 해야 합니다. 
 
 웹 보기의 현재 콘텐츠 미리 보기 이미지를 가져오려면 [CapturePreviewToStreamAsync](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.capturepreviewtostreamasync.aspx) 메서드를 사용합니다. 이 메서드는 현재 콘텐츠의 이미지를 만들고 지정된 스트림에 씁니다. 
 
