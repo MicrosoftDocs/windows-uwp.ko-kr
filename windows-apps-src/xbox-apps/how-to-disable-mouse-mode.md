@@ -14,7 +14,7 @@ ms.lasthandoff: 03/06/2019
 ms.locfileid: "57656628"
 ---
 # <a name="how-to-disable-mouse-mode"></a>마우스 모드를 사용하지 않도록 설정하는 방법
-모든 응용 프로그램은 기본적으로 마우스 모드를 사용합니다. 즉, 옵트아웃(opt out)하지 않은 모든 응용 프로그램은 콘솔의 Edge 브라우저에 있는 것과 유사한 마우스 포인터를 받게 됩니다. 마우스 모드를 끄고 방향 컨트롤러 탐색에 최적화하는 것이 좋습니다.   
+모든 응용 프로그램은 기본적으로 마우스 모드를 사용합니다. 즉, 옵트아웃(opt out)하지 않은 모든 응용 프로그램은 콘솔의 Microsoft Edge 브라우저에 있는 것과 유사한 마우스 포인터를 받게 됩니다. 마우스 모드를 끄고 방향 컨트롤러 탐색에 최적화하는 것이 좋습니다.   
    
 ## <a name="html"></a>HTML   
 JavaScript UWP(유니버설 Windows 플랫폼) 앱에서 방향 컨트롤러 탐색을 켜려면 [TVHelpers 방향 탐색](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation) JavaScript 라이브러리를 사용합니다. 앱 패키지에 방향 탐색 JavaScript 파일을 포함하고 방향 컨트롤러 탐색이 필요한 모든 HTML 페이지에서 다음과 같이 참조를 추가합니다.
