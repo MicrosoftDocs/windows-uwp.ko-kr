@@ -1,11 +1,17 @@
 ---
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
-title: '파일, 폴더 및 라이브러리'
-description: '앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/음악 라이브러리와 같은 특수 샌드박스가 적용된 위치에 대해 알아봅니다.'
+title: 파일, 폴더 및 라이브러리
+description: 앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/음악 라이브러리와 같은 특수 샌드박스가 적용된 위치에 대해 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: 01efd2cfd88143f99bf9058e8140308eb6afe458
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583369"
 ---
  # <a name="files-folders-and-libraries"></a>파일, 폴더 및 라이브러리
 

@@ -1,12 +1,18 @@
 ---
-description: 'UWP 스타일 가이드를 사용하여 색, 입력 체계 및 아이콘을 통해 UWP 앱의 퍼스낼리티를 정의하는 방법을 알아봅니다.'
-keywords: 'UWP 스타일 가이드, 디자인 지침, 입력 체계, 동작, 소리, 동작, 앱 개발'
+description: UWP 스타일 가이드를 사용하여 색, 입력 체계 및 아이콘을 통해 UWP 앱의 퍼스낼리티를 정의하는 방법을 알아봅니다.
+keywords: UWP 스타일 가이드, 디자인 지침, 입력 체계, 동작, 소리, 동작, 앱 개발
 title: UWP 앱의 스타일
 ms.date: 08/10/2017
 ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
+ms.openlocfilehash: 1d313e35b7d1ab3ebe72bd3a073323fe8782098a
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583777"
 ---
 # <a name="style-for-uwp-apps"></a>UWP 앱의 스타일
 

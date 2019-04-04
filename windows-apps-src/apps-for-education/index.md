@@ -1,11 +1,17 @@
 ---
 title: 교육용 앱 개발.
-description: "이 섹션에서는 Windows\_10 플랫폼에 대한 교육용 앱을 작성하는 데 사용할 수 있는 유니버설 Windows 앱 리소스를 설명합니다."
+description: 이 섹션에서는 Windows 10 플랫폼에 대한 교육용 앱을 작성하는 데 사용할 수 있는 유니버설 Windows 앱 리소스를 설명합니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp, 교육'
+keywords: windows 10, uwp, 교육
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
+ms.openlocfilehash: 7696cd785b4a8720f6eefb7bc897d13ffb0c7115
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583427"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>교육용 유니버설 Windows 앱 개발
 ![시험 응시 앱 스크린샷](images/take-a-test-screen-small.png)

@@ -1,6 +1,6 @@
 ---
 description: 앱을 전 세계 사용자들이 사용하고 액세스할 수 있게 하는 방법을 알아봅니다.
-keywords: 'UWP 앱 접근성, 세계화, 디자인 포괄 앱, 접근성 앱 요구 사항'
+keywords: UWP 앱 접근성, 세계화, 디자인 포괄 앱, 접근성 앱 요구 사항
 title: UWP 앱의 유용성 - Windows 앱 개발
 layout: LandingPage
 template: detail.hbs
@@ -8,6 +8,12 @@ ms.date: 10/18/2017
 ms.topic: landing-page
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
+ms.openlocfilehash: f218df3b4118508049023218b64e6c7321fbbda9
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583260"
 ---
 # <a name="usability-for-uwp-apps"></a>UWP 앱의 유용성
 

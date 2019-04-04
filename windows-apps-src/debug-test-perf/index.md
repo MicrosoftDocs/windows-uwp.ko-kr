@@ -1,11 +1,17 @@
 ---
 ms.assetid: 16976d00-1564-49fe-81ad-2568e25e9e41
-title: '디버깅, 테스트 및 성능'
+title: 디버깅, 테스트 및 성능
 description: Microsoft Visual Studio 및 다른 도구를 사용하여 앱을 디버그 및 테스트하고 Microsoft Store 인증 프로세스를 준비합니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: 757de9201d1cb7f753419024271f2be5c1aa67f4
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583324"
 ---
 # <a name="debugging-testing-and-performance"></a>디버깅, 테스트 및 성능
 

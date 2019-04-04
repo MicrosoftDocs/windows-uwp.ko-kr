@@ -1,11 +1,17 @@
 ---
 title: 지도 및 위치 개요
-description: '이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 집합으로 Windows 지도 앱을 시작하는 방법을 보여 줍니다.'
+description: 이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 집합으로 Windows 지도 앱을 시작하는 방법을 보여 줍니다.
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'Windows 10, UWP, 지도, 위치, 지도 서비스'
+keywords: Windows 10, UWP, 지도, 위치, 지도 서비스
 ms.localizationpriority: medium
+ms.openlocfilehash: 3482370719a658f303964204661f1fb5d69ae5b4
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583236"
 ---
 # <a name="maps-and-location-overview"></a>지도 및 위치 개요
 

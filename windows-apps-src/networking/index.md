@@ -4,8 +4,14 @@ description: 네트워크 및 웹 서비스에 액세스하기 위한 기술입�
 title: 네트워킹 및 웹 서비스
 ms.date: 11/26/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: 26324637fdf54b48fa441d28065bf437fbf74b26
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583145"
 ---
 # <a name="networking-and-web-services"></a>네트워킹 및 웹 서비스
 

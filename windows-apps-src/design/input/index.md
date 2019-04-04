@@ -1,7 +1,7 @@
 ---
-description: '펜, Surface Dial 및 기타 입력 유형에 맞게 앱을 최적화합니다.'
+description: 펜, Surface Dial 및 기타 입력 유형에 맞게 앱을 최적화합니다.
 title: 입력 및 조작
-keywords: '앱 입력, UWP 애플리케이션 사용자 지정'
+keywords: 앱 입력, UWP 애플리케이션 사용자 지정
 label: Input and interactions
 layout: LandingPage
 template: detail.hbs
@@ -9,6 +9,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
+ms.openlocfilehash: 4f66d808cafcc6fba89cebde352d191335068925
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583105"
 ---
 # <a name="input-and-interactions"></a>입력 및 조작
 

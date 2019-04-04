@@ -4,8 +4,14 @@ title: 스레딩 및 비동기 프로그래밍
 description: 스레드 및 비동기 프로그래밍을 사용하면 앱이 병렬 스레드에서 비동기식으로 작업할 수 있습니다.
 ms.date: 05/14/2018
 ms.topic: article
-keywords: 'Windows 10, UWP, 비동기, 스레드, 스레딩'
+keywords: Windows 10, UWP, 비동기, 스레드, 스레딩
 ms.localizationpriority: medium
+ms.openlocfilehash: 22c151b90be30b39da7decd9a0ce3109e29b7fb7
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583193"
 ---
 # <a name="threading-and-async-programming"></a>스레딩 및 비동기 프로그래밍
 스레드 및 비동기 프로그래밍을 사용하면 앱이 병렬 스레드에서 비동기식으로 작업할 수 있습니다.

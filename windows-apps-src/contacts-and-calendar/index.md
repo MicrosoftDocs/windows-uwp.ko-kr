@@ -4,8 +4,14 @@ title: 연락처 및 일정
 ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
 ms.date: 05/18/2018
 ms.topic: article
-keywords: 'Windows 10, UWP, 연락처, 일정, 약속, 이메일 메시지'
+keywords: Windows 10, UWP, 연락처, 일정, 약속, 이메일 메시지
 ms.localizationpriority: medium
+ms.openlocfilehash: 239dbaa7799d9991a63223d1cd8706d34445a16b
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583268"
 ---
 # <a name="contacts-my-people-and-calendar"></a>연락처, 내 피플 및 일정
 

@@ -4,8 +4,14 @@ description: 이 로드맵은 Windows 10 및 UWP(유니버설 Windows 플랫폼)
 title: 엔터프라이즈
 ms.date: 08/30/2018
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: fae4d5b57ac5cfb5c47fca1a2f3476cd16a56534
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583201"
 ---
 # <a name="enterprise"></a>엔터프라이즈
 

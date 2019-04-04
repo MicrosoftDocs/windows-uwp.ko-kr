@@ -4,8 +4,14 @@ title: 데이터 바인딩
 description: 데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: eb9283e336cb13d733098c139edc36d1216b2727
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583467"
 ---
 # <a name="data-binding"></a>데이터 바인딩
 

@@ -3,9 +3,15 @@ layout: HubPage
 hide_bc: true
 ms.prod: windows
 title: Windows 설명서
-description: 'Windows 솔루션을 구축 및 유지 관리하는 데 도움이 되는 개발자, 하드웨어 및 IT 전문가용 설명서를 확인할 수 있습니다.'
+description: Windows 솔루션을 구축 및 유지 관리하는 데 도움이 되는 개발자, 하드웨어 및 IT 전문가용 설명서를 확인할 수 있습니다.
 ms.technology: hub
 localizationpriority: medium
+ms.openlocfilehash: 1926f38d4b7772488e086395d4e28545b1f85a81
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583490"
 ---
 <div id="main" class="v2">
   <div class="container">

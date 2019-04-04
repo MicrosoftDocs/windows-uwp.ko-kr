@@ -4,8 +4,14 @@ description: Windows 10에서 UWP(유니버설 Windows 플랫폼) 및 앱 개발
 title: UWP(유니버설 Windows 플랫폼) 시작
 ms.date: 03/23/2018
 ms.topic: article
-keywords: '시작, windows 10, uwp, xaml, c#'
+keywords: 시작, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
+ms.openlocfilehash: a2a1452de6fe602c8fd21e510de070f49d806eec
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583760"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작 
  

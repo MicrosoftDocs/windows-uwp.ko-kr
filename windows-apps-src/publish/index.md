@@ -4,9 +4,15 @@ Description: Windows 앱을 Microsoft Store에 게시하는 방법을 살펴봅�
 title: Windows 앱 게시
 ms.date: 10/31/2018
 ms.topic: article
-keywords: 'Windows 10, UWP, 게시, 판매, 배포, Store, 대시보드'
+keywords: Windows 10, UWP, 게시, 판매, 배포, Store, 대시보드
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
+ms.openlocfilehash: 3b9d78014b2416cae7d387261ec1732b1f8932ad
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583116"
 ---
 # <a name="publish-windows-apps-and-games"></a>Windows 앱 및 게임 게시  
  

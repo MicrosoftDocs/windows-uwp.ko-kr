@@ -4,8 +4,14 @@ title: 앱 패키징
 description: 이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱 패키지에 대한 문서의 링크가 포함되어 있습니다.
 ms.date: 09/30/2018
 ms.topic: article
-keywords: 'windows 10, uwp, 패키징'
+keywords: windows 10, uwp, 패키징
 ms.localizationpriority: medium
+ms.openlocfilehash: 04736c9ac4de5adf162d32191ff30f7a981d6a6f
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583617"
 ---
 # <a name="packaging-apps"></a>앱 패키징
 

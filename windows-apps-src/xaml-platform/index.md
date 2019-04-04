@@ -4,8 +4,14 @@ description: 이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱을 위한 
 title: XAML 플랫폼
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: b725a823f31309c2419bcdc5095a78994d1929c0
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583440"
 ---
 # <a name="xaml-platform"></a>XAML 플랫폼
 

@@ -3,9 +3,15 @@ title: Xbox One의 UWP
 description: Xbox One에서 UWP(유니버설 Windows 플랫폼)용 앱을 빌드하는 방법
 ms.date: 10/25/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
 ms.localizationpriority: medium
+ms.openlocfilehash: c2689218c8e3885815585424901453b9fc07f2d6
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583717"
 ---
 # <a name="uwp-on-xbox-one"></a>Xbox One의 UWP
 

@@ -1,11 +1,17 @@
 ---
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
-title: '디바이스, 센서 및 전원'
+title: 디바이스, 센서 및 전원
 description: 사용자에게 풍부한 환경을 제공하기 위해 외부 디바이스나 센서를 앱에 통합해야 하는 경우가 있습니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: 06dd8355cd0afd3889c0db2c337c93b5fbedf0fa
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583348"
 ---
 # <a name="devices-sensors-and-power"></a>디바이스, 센서 및 전원
 

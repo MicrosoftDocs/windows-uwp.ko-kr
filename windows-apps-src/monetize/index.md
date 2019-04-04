@@ -1,11 +1,17 @@
 ---
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
-description: 'Windows SDK, Microsoft Advertising SDK, Microsoft Store Services SDK 및 Microsoft Store는 앱에서 더 큰 수익을 창출하고 사용자 참여를 통해 고객을 확보할 수 있게 해주는 다양한 기능을 제공합니다.'
-title: '수익 창출, 참여 및 Microsoft Store 서비스'
+description: Windows SDK, Microsoft Advertising SDK, Microsoft Store Services SDK 및 Microsoft Store는 앱에서 더 큰 수익을 창출하고 사용자 참여를 통해 고객을 확보할 수 있게 해주는 다양한 기능을 제공합니다.
+title: 수익 창출, 참여 및 Microsoft Store 서비스
 ms.date: 11/29/2017
 ms.topic: article
-keywords: 'Windows 10, uwp, 수익 창출, 참여, 프로모션, Microsoft Store 서비스'
+keywords: Windows 10, uwp, 수익 창출, 참여, 프로모션, Microsoft Store 서비스
 ms.localizationpriority: medium
+ms.openlocfilehash: 747dbf7951a9db20bb8a1063757b88320fcc3f43
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583400"
 ---
 # <a name="monetization-engagement-and-store-services"></a>수익 창출, 참여 및 Microsoft Store 서비스
 

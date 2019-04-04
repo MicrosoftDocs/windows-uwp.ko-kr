@@ -3,8 +3,14 @@ description: C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinR
 title: C++/WinRT
 ms.date: 05/14/2018
 ms.topic: article
-keywords: 'Windows 10, UWP, 표준, C++, CPP, WinRT, 프로젝션'
+keywords: Windows 10, UWP, 표준, C++, CPP, WinRT, 프로젝션
 ms.localizationpriority: medium
+ms.openlocfilehash: 664fd22fc954403776e1becc31563a06d5fdd15b
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583076"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 

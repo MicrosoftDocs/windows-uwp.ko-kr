@@ -1,11 +1,17 @@
 ---
 ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
-description: '이 섹션에서는 공유 계약, 복사 및 붙여넣기, 끌어서 놓기의 사용 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱 간에 데이터를 공유하는 방법에 대해 설명합니다.'
+description: 이 섹션에서는 공유 계약, 복사 및 붙여넣기, 끌어서 놓기의 사용 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱 간에 데이터를 공유하는 방법에 대해 설명합니다.
 title: 앱 간 통신
 ms.date: 02/08/2017
 ms.topic: article
-keywords: 'windows 10, uwp'
+keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.openlocfilehash: 9dfd86d53805573d002984aaf33ba5f1bf17241c
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57583097"
 ---
 # <a name="app-to-app-communication"></a>앱 간 통신
 
