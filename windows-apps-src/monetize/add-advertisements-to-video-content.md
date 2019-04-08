@@ -152,8 +152,8 @@ ms.locfileid: "57603848"
 
 재생이 사분위 검사점에 도달하면 이 이벤트가 발생합니다. 이 이벤트 처리기(*eventInfo*)의 두 번째 매개 변수는 다음 멤버가 포함된 JSON 개체입니다.
 
-* **progress**: Ad 재생 상태 (중 하나는 **MediaProgress** AdScheduler.js에 정의 된 열거형 값).
-* **clip**: 재생 중인 비디오 클립 합니다. 이 개체는 사용자 코드에서 사용되지 않습니다.
+* **진행률**: Ad 재생 상태 (중 하나는 **MediaProgress** AdScheduler.js에 정의 된 열거형 값).
+* **클립**: 재생 중인 비디오 클립 합니다. 이 개체는 사용자 코드에서 사용되지 않습니다.
 * **adPackage**: 재생 중인 광고에 해당 하는 ad 페이로드 부분을 나타내는 개체입니다. 이 개체는 사용자 코드에서 사용되지 않습니다.
 
 ### <a name="onallcomplete"></a>onAllComplete  

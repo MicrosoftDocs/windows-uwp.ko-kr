@@ -279,7 +279,7 @@ TypedEventHandler를 사용하지 않았다면 이제 로컬 컴퓨터에서 앱
 
 ## <a name="to-generate-guids-for-the-components-interfaces-c-and-other-net-languages"></a>구성 요소의 인터페이스에 대한 GUID를 생성하는 방법 (C# 및 기타 .NET 언어)
 
-메뉴 모음에서 도구 &gt; GUID 만들기를 선택합니다. 대화 상자에서 5를 선택합니다. \[Guid(“xxxxxxxx-xxxx...xxxx)\]. 새 GUID 단추를 선택하고 복사 버튼을 선택합니다.
+메뉴 모음에서 도구 &gt; GUID 만들기를 선택합니다. 대화 상자에서 5를 선택합니다. \[Guid ("xxxxxxxx xxxx... xxxx)\]합니다. 새 GUID 단추를 선택하고 복사 버튼을 선택합니다.
 
 ![GUID 생성기 도구](./images/guidgeneratortool.png)
 
@@ -422,4 +422,4 @@ MIDL_DEFINE_GUID(IID, IID___x_ToasterComponent_CIToaster,0xE976784C,0xAADE,0x4EA
 
 ## <a name="related-topics"></a>관련 항목
 
-* [C + + Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-cpp.md)
+* [C++에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-cpp.md)

@@ -8,7 +8,7 @@ keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: af8e45e13eb89185e346c3c8e8cd5303da399471
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57658738"
@@ -91,18 +91,18 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 ## <a name="related-topics"></a>관련 항목
 
 * [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
-* [만들고 out-of-process-백그라운드 태스크를 등록 합니다.](create-and-register-a-background-task.md)
-* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
-* [취소 된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
-* [백그라운드 작업 진행률 및 완료를 모니터링 합니다.](monitor-background-task-progress-and-completion.md)
+* [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
+* [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
-* [백그라운드 작업과 함께 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
-* [백그라운드 작업을 실행 하기 위한 조건을 설정 합니다.](set-conditions-for-running-a-background-task.md)
-* [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
+* [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
+* [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
+* [백그라운드 작업의 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
-* [타이머에서 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
-* [백그라운드 작업 디버깅](debug-a-background-task.md)
+* [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
+* [백그라운드 작업 디버그](debug-a-background-task.md)
 * [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
  

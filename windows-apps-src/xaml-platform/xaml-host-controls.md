@@ -81,24 +81,24 @@ C + + Win32 응용 프로그램에 있는 경우 사용할 수 있습니다는 *
 
 ### <a name="whats-not-yet-supported"></a>아직 지원되지 않는 사항
 
-:no_entry_sign: 응용 프로그램에서 원활 하 게 작동 하 고 컨트롤을 호스트 하는 내게 필요한 옵션 도구입니다.
+: no_entry_sign: 응용 프로그램에서 원활 하 게 작동 하 고 컨트롤을 호스트 하는 내게 필요한 옵션 도구입니다.
 
-:no_entry_sign: Windows 앱 패키지를 포함 하지 않는 응용 프로그램에 추가한 컨트롤의 지역화 된 콘텐츠입니다.
+: no_entry_sign: Windows 앱 패키지를 포함 하지 않는 응용 프로그램에 추가한 컨트롤의 지역화 된 콘텐츠입니다.
 
-:no_entry_sign: Windows 앱 패키지를 포함 하지 않는 응용 프로그램 내에서 XAML에서 만든 자산 참조 합니다.
+: no_entry_sign: Windows 앱 패키지를 포함 하지 않는 응용 프로그램 내에서 XAML에서 만든 자산 참조 합니다.
 
-:no_entry_sign: 컨트롤을 제대로 DPI 배율에 대 한 변경 내용에 응답 합니다.
+: no_entry_sign: 컨트롤을 제대로 DPI 배율에 대 한 변경 내용에 응답 합니다.
 
-:no_entry_sign: 추가 된 **WebView** 컨트롤을 사용자 지정 사용자 컨트롤 (스레드에, 스레드가 해제 또는 프로시저에서).
+: no_entry_sign: 추가 된 **WebView** 컨트롤을 사용자 지정 사용자 컨트롤 (스레드에, 스레드가 해제 또는 프로시저에서).
 
-:no_entry_sign: 합니다 [표시 강조](https://docs.microsoft.com/windows/uwp/design/style/reveal) Fluent 적용 합니다.
+: no_entry_sign: 합니다 [표시 강조](https://docs.microsoft.com/windows/uwp/design/style/reveal) Fluent 적용 합니다.
 
-:no_entry_sign: 인라인 잉크 @Places, 및 @People 입력된 컨트롤에 대 한 합니다.
+: no_entry_sign: 인라인 잉크 @Places, 및 @People 입력된 컨트롤에 대 한 합니다.
 
-:no_entry_sign: 액셀러레이터 키를 할당 합니다.
+: no_entry_sign: 액셀러레이터 키를 할당 합니다.
 
-:no_entry_sign: C + + 기반 타사 컨트롤입니다.
+: no_entry_sign: C + + 기반 타사 컨트롤입니다.
 
-:no_entry_sign: 사용자 지정 사용자 컨트롤을 호스트 합니다.
+: no_entry_sign: 사용자 지정 사용자 컨트롤을 호스트 합니다.
 
 바탕 화면에 Fluent를 가져오는 환경을 개선하기 위해 이 목록의 항목은 계속해서 변경될 수 있습니다.  

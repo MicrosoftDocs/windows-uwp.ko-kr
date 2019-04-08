@@ -17,7 +17,7 @@ ms.locfileid: "57632498"
 
 이 섹션에서는 기술 세부 정보를 제공합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

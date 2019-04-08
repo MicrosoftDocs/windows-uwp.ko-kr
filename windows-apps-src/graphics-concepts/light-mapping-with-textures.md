@@ -31,7 +31,7 @@ ms.locfileid: "57660028"
 
 조명 매핑을 위해 Direct3D 텍스처 혼합을 사용하는 경우에 대한 정보가 다음 그림에 나와 있습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

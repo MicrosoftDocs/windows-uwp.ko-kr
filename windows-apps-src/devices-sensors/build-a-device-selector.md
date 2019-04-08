@@ -44,20 +44,20 @@ ms.locfileid: "57652498"
 
 | Operator                       | 지원되는 형식                                                             |
 |--------------------------------|-----------------------------------------------------------------------------|
-| **COP\_EQUAL**                 | 문자열, 부울, GUID, UInt16, UInt32                                       |
+| **COP\_같음**                 | 문자열, 부울, GUID, UInt16, UInt32                                       |
 | **COP\_NOTEQUAL**              | 문자열, 부울, GUID, UInt16, UInt32                                       |
 | **COP\_LESSTHAN**              | UInt16, UInt32                                                              |
 | **COP\_GREATERTHAN**           | UInt16, UInt32                                                              |
 | **COP\_LESSTHANOREQUAL**       | UInt16, UInt32                                                              |
 | **COP\_GREATERTHANOREQUAL**    | UInt16, UInt32                                                              |
-| **COP\_VALUE\_CONTAINS**       | 문자열, 문자열 배열, 부울 배열, 배열 GUID, UInt16 배열, UInt32 배열 |
-| **COP\_VALUE\_NOTCONTAINS**    | 문자열, 문자열 배열, 부울 배열, 배열 GUID, UInt16 배열, UInt32 배열 |
-| **COP\_VALUE\_STARTSWITH**     | 문자열                                                                      |
-| **COP\_VALUE\_ENDSWITH**       | 문자열                                                                      |
+| **COP\_값\_포함**       | 문자열, 문자열 배열, 부울 배열, 배열 GUID, UInt16 배열, UInt32 배열 |
+| **COP\_값\_NOTCONTAINS**    | 문자열, 문자열 배열, 부울 배열, 배열 GUID, UInt16 배열, UInt32 배열 |
+| **COP\_값\_STARTSWITH**     | 문자열                                                                      |
+| **COP\_값\_ENDSWITH**       | 문자열                                                                      |
 | **COP\_DOSWILDCARDS**          | 지원되지 않음                                                               |
-| **COP\_WORD\_EQUAL**           | 지원되지 않음                                                               |
+| **COP\_WORD\_같음**           | 지원되지 않음                                                               |
 | **COP\_WORD\_STARTSWITH**      | 지원되지 않음                                                               |
-| **COP\_APPLICATION\_SPECIFIC** | 지원되지 않음                                                               |
+| **COP\_응용 프로그램\_특정** | 지원되지 않음                                                               |
 
 
 > **팁**  지정할 수 있습니다 **NULL** 에 대 한 **COP\_같으면** 하거나 **COP\_NOTEQUAL**합니다. 이는 값을 가지지 않는 속성 또는 값이 존재하지 않는 속성으로 변환됩니다. 지정 AQS 합니다 **NULL** 빈 괄호를 사용 하 여 \[ \]합니다.

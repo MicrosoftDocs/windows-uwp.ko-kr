@@ -23,7 +23,7 @@ ms.locfileid: "57624828"
 
 알림 내에서 진행률 표시줄이 수 없습니다 "비활성화" (특정 값 없음-애니메이션된 점을 나타낼 작업 발생) 또는 "비활성화" (특정 비율의 모음 채워집니다, 60% 등).
 
-> **중요 한 Api**: [NotificationData 클래스](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata)하십시오 [ToastNotifier.Update 메서드](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [ToastNotification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
+> **중요 API**: [NotificationData 클래스](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata)하십시오 [ToastNotifier.Update 메서드](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [ToastNotification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
 
 > [!NOTE]
 > 데스크톱은 알림 메시지에서 진행률 표시줄만을 지원합니다. 다른 디바이스에서는 알림의 진행률 표시줄이 삭제됩니다.
@@ -34,7 +34,7 @@ ms.locfileid: "57624828"
 
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
-| **Title** | 문자열 또는 [BindableString](toast-schema.md#bindablestring) | false | 선택적 제목 문자열을 가져오거나 설정합니다. 데이터 바인딩을 지원합니다. |
+| **제목** | 문자열 또는 [BindableString](toast-schema.md#bindablestring) | false | 선택적 제목 문자열을 가져오거나 설정합니다. 데이터 바인딩을 지원합니다. |
 | **값** | 이중 또는 [AdaptiveProgressBarValue](toast-schema.md#adaptiveprogressbarvalue) 또는 [BindableProgressBarValue](toast-schema.md#bindableprogressbarvalue) | false | 진행률 표시줄의 값을 가져오거나 설정합니다. 데이터 바인딩을 지원합니다. 기본값은 0입니다. 0.0과 1.0, `AdaptiveProgressBarValue.Indeterminate` 또는 `new BindableProgressBarValue("myProgressValue")` 사이에서 이중일 수 있습니다. |
 | **ValueStringOverride** | 문자열 또는 [BindableString](toast-schema.md#bindablestring) | false | 기본 백분율 문자열 대신 표시할 선택적 문자열을 가져오거나 설정합니다. 이것을 제공하지 않는 경우 '70%'와 같은 내용이 표시됩니다. |
 | **상태** | 문자열 또는 [BindableString](toast-schema.md#bindablestring) | true | 왼쪽의 진행률 표시줄 아래에 표시되는 상태 문자열(필수)을 가져오거나 설정합니다. 이 문자열은 '다운로드 중...' 또는 '설치 중...'과 같은 작업의 상태를 반영해야 합니다. |

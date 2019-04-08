@@ -20,7 +20,7 @@ ms.locfileid: "57638528"
 
 UWP(유니버설 Windows 플랫폼) 장치에 연결된 입력 장치를 식별하고 해당 기능 및 특성을 식별합니다.
 
-> **중요 한 Api**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
+> **중요 API**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)하십시오 [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)하십시오 [ **Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 
 ## <a name="retrieve-mouse-properties"></a>마우스 속성 검색
 

@@ -18,7 +18,7 @@ ms.locfileid: "57636798"
 
 
 
-[**DeviceUseTrigger** ](https://msdn.microsoft.com/library/windows/apps/dn297337) 전경 앱이 일시 중지 하는 경우에은 유니버설 Windows 앱 액세스 센서와 백그라운드에서 주변 장치를 수 있습니다. 예를 들어 앱이 실행 중인 위치에 따라 백그라운드 작업을 사용하여 장치와 데이터를 동기화하거나 센서를 모니터링할 수 있습니다. 배터리 수명을 보존하고 적절한 사용자가 동의할 수 있도록 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)에는 이 항목에서 설명하는 정책이 적용됩니다.
+[**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 기기에 액세스할 수 있습니다. 예를 들어 앱이 실행 중인 위치에 따라 백그라운드 작업을 사용하여 장치와 데이터를 동기화하거나 센서를 모니터링할 수 있습니다. 배터리 수명을 보존하고 적절한 사용자가 동의할 수 있도록 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)에는 이 항목에서 설명하는 정책이 적용됩니다.
 
 백그라운드에서 센서나 주변 장치에 액세스하려면 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 만듭니다. PC에서 이 작업을 만드는 방법을 보여 주는 예제는 [사용자 지정 USB 장치 샘플](https://go.microsoft.com/fwlink/p/?LinkId=301975 )을 참조하세요. 휴대전화에 대한 예제는 [백그라운드 센서 샘플](https://go.microsoft.com/fwlink/p/?LinkId=393307)을 참조하세요.
 

@@ -25,7 +25,7 @@ ms.locfileid: "57660898"
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
 ```
 
-## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows-store: URI 체계 참조입니다.
+## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows 스토어: URI 체계 참조입니다.
 
 <table>
 <tr><th>설명</th><th></th><th>URI 스키마</th></tr>

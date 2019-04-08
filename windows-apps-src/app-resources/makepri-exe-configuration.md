@@ -294,7 +294,7 @@ MakePri.exe는 `makepri dump`가 `/dt detailed` 옵션으로 실행되는 경우
 
 ## <a name="related-topics"></a>관련 항목
 
-* [MakePri.exe 사용 하 여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
+* [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
 * [MakePri.exe 명령줄 옵션&mdash;createconfig 명령](makepri-exe-command-options.md#createconfig-command)
-* [언어, 배율, 고대비 등 및 다른 한정자에 대 한 리소스를 조정 합니다.](tailor-resources-lang-scale-contrast.md)
-* [Resource Management System&mdash;ResourceContext](resource-management-system.md#resourcecontext)
+* [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)
+* [리소스 관리 시스템&mdash;ResourceContext](resource-management-system.md#resourcecontext)

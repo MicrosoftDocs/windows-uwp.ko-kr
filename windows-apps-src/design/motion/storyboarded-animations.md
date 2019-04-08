@@ -169,7 +169,7 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 
 [  **RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411) 값 및 XAML 구문에 대한 자세한 내용은 [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411)를 참조하세요.
 
-### <a name="fillbehaviorstop"></a>**FillBehavior="Stop"**
+### <a name="fillbehaviorstop"></a>**FillBehavior = "Stop"**
 
 기본적으로 애니메이션이 종료되면 애니메이션은 기간이 초과된 후에도 속성 값을 최종 **To** 또는 수정된 **By** 값으로 유지합니다. 그러나 [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) 속성의 값을 [**FillBehavior.Stop**](https://msdn.microsoft.com/library/windows/apps/BR210306)으로 설정하면 애니메이션 효과를 준 값이 애니메이션이 적용되기 이전에 있던 모든 값이나 보다 정확히 말해 종속성 속성 시스템에 의해 결정된 현재 유효한 값으로 되돌아갑니다. 이 차이점에 대한 자세한 내용은 [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)를 참조하세요.
 
@@ -239,7 +239,7 @@ UI 스레드의 속도를 저하시킬 약간의 위험이 있는 것으로 확�
 
 -   애니메이션의 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)이 0초입니다(경고 참조).
 -   애니메이션이 [**UIElement.Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)를 대상으로 합니다.
--   이러한 하위 속성 값을 대상으로 하는 애니메이션 [ **UIElement** ](https://msdn.microsoft.com/library/windows/apps/BR208911) 속성: [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx), [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980), [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection.aspx), [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
+-   이러한 하위 속성 값을 대상으로 하는 애니메이션 [ **UIElement** ](https://msdn.microsoft.com/library/windows/apps/BR208911) 속성: [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx)를 [ **RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)하십시오 [ **프로젝션**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection.aspx), [ **클립**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
 -   애니메이션이 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/Hh759771) 또는 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/Hh759772)을 대상으로 합니다.
 -   애니메이션이 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 값을 대상으로 하고 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 사용하여 해당 [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color)에 애니메이션 효과를 줍니다.
 -   애니메이션이 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)입니다.

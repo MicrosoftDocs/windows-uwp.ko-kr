@@ -63,7 +63,7 @@ TS(분할기) 단계는 2개 작업 단계로 작동합니다.
 
     | 분할 유형 | 범위                       |
     |----------------------|-----------------------------|
-    | 소수 자릿수\_홀수      | \[1...63\]                  |
+    | 소수 자릿수\_홀수      | \[1... 63\]                  |
     | 소수 자릿수\_도     | TessFactor 범위: \[2..64\] |
     | 정수              | TessFactor 범위: \[1..64\] |
     | Pow2                 | TessFactor 범위: \[1..64\] |
@@ -83,7 +83,7 @@ TS(분할기) 단계는 2개 작업 단계로 작동합니다.
 
 분할기는 헐 셰이더 단계로부터 전달되는 공간 분할 요소(도메인을 얼마나 세부적으로 공간 분할할지 지정) 및 분할 유형(패치를 분할하는 데 사용할 알고리즘을 지정)을 사용하여 패치당 헌 번 작동합니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
 
 
 분할기는 uv(및 선택적으로 w) 좌표 및 표면 토폴로지를 도메인 셰이더 단계로 출력합니다.

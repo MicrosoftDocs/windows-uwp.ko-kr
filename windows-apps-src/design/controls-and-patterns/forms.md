@@ -110,7 +110,7 @@ ms.locfileid: "57658158"
 ### <a name="text-input"></a>텍스트 입력
 컨트롤 | Windows Server Update Services와 함께 | 예
  - | - | -
-[TextBox](text-box.md) | 하나 또는 여러 줄의 텍스트 캡처 | 이름, 자유 형식 응답 또는 피드백
+[텍스트 상자](text-box.md) | 하나 또는 여러 줄의 텍스트 캡처 | 이름, 자유 형식 응답 또는 피드백
 [PasswordBox](password-box.md) | 다른 문자에서 개인 데이터를 수집 합니다. | 암호, 주민 등록 번호 (SSN) Pin을 신용 카드 정보 
 [AutoSuggestBox](auto-suggest-box.md) | 사용자가 해당 데이터 집합에서 추천 단어 목록을 입력 표시 | 데이터베이스 검색, 메일: 줄을 이전 쿼리
 [RichEditBox](rich-edit-box.md) | 서식 있는 텍스트, 하이퍼링크 및 이미지를 사용 하 여 텍스트 파일 편집 | 파일 업로드, 미리 보기 및 앱에서 편집
@@ -118,8 +118,8 @@ ms.locfileid: "57658158"
 ### <a name="selection"></a>선택
 컨트롤 | Windows Server Update Services와 함께 | 예
 - | - | - 
-| [CheckBox](checkbox.md) | 선택 하거나 하나 이상의 작업 항목을 선택 취소 | 사용 약관에 동의 선택 항목을 추가, 해당 항목 모두 선택
-[RadioButton](radio-button.md) | 두 개 이상 선택 항목 중에서 하나의 옵션을 선택 합니다. | 형식, 메서드 등 전달를 선택 합니다.
+| [확인란](checkbox.md) | 선택 하거나 하나 이상의 작업 항목을 선택 취소 | 사용 약관에 동의 선택 항목을 추가, 해당 항목 모두 선택
+[라디오 단추](radio-button.md) | 두 개 이상 선택 항목 중에서 하나의 옵션을 선택 합니다. | 형식, 메서드 등 전달를 선택 합니다.
 [ToggleSwitch](toggles.md) | 상호 배타적인 두 옵션 중 하나를 선택합니다 | 설정/해제
 
 > **참고**: 5 개 이상의 선택 항목의 경우에 목록 컨트롤을 사용 합니다.
@@ -127,7 +127,7 @@ ms.locfileid: "57658158"
 ### <a name="lists"></a>목록
 컨트롤 | Windows Server Update Services와 함께 | 예
 - | - | -
-[ComboBox](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists.md#drop-down-lists) | Compact 상태에서 시작 하 고 선택 가능한 항목의 목록을 표시 하려면 확장 합니다. | 긴 상태 또는 국가 등의 항목 목록에서 선택
+[콤보 상자](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists.md#drop-down-lists) | Compact 상태에서 시작 하 고 선택 가능한 항목의 목록을 표시 하려면 확장 합니다. | 긴 상태 또는 국가 등의 항목 목록에서 선택
 [ListView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#list-views) | 항목을 분류 및 그룹 헤더를 할당, 항목, 레이 콘텐츠를 끌어서 항목을 다시 정렬 | Rank 옵션
 [GridView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#grid-views) | 정렬 및 이미지 기반 컬렉션 찾아보기 | 사진, 색 선택, 테마를 표시 합니다.
 
@@ -238,4 +238,4 @@ UWP 컨트롤의 전체 목록은 참조 하세요 [기능별 컨트롤의 인�
 
 ## <a name="related-topics"></a>관련 항목
 - [입력된 컨트롤](controls-and-events-intro.md)
-- [Typography](../style/typography.md)
+- [입력 체계](../style/typography.md)

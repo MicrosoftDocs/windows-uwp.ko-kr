@@ -22,7 +22,7 @@ ms.locfileid: "57605458"
 
 끌어서 놓기 애니메이션은 목록 내에서 항목 이동, 다른 항목 위에 항목 놓기 등 사용자가 개체를 이동할 때 사용합니다.
 
-> **중요 한 Api**: [**DragItemThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br243174)
+> **중요 API**: [**DragItemThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br243174)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항

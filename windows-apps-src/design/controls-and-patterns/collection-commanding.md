@@ -25,7 +25,7 @@ ms.locfileid: "57658598"
 
 많은 앱에 사용자가 조작할 수 있는 목록, 표 및 트리 형식의 콘텐츠 컬렉션이 들어 있습니다. 예를 들어, 사용자가 항목을 삭제하거나, 항목의 이름을 바꾸거나, 항목에 플래그를 지정하거나, 항목을 새로 고칠 수 있습니다. 이 문서에서는 상황에 맞는 명령을 사용하여 모든 입력 형식에 대한 최상의 환경을 제공하는 방식으로 이러한 종류의 작업을 구현하는 방법을 보여 줍니다.  
 
-> **중요 한 Api**: [ICommand 인터페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)하십시오 [UIElement.ContextFlyout 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [INotifyPropertyChanged 인터페이스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
+> **중요 API**: [ICommand 인터페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)하십시오 [UIElement.ContextFlyout 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [INotifyPropertyChanged 인터페이스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
 
 ![다양한 입력을 사용하여 즐겨찾기 명령 수행](images/ContextualCommand_AddFavorites.png)
 
@@ -453,7 +453,7 @@ private void SwipeItem_Invoked(SwipeItem sender, SwipeItemInvokedEventArgs args)
 ## <a name="related-topics"></a>관련 항목
 * [ICommand 인터페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)
 * [메뉴 및 상황에 맞는 메뉴](menus.md)
-* [Swipe](swipe.md)
+* [살짝 밀기](swipe.md)
 * [당겨서 새로 고침](pull-to-refresh.md)
 * [펜 및 스타일러스 상호 작용](../input/pen-and-stylus-interactions.md)
 * [Gamepad 및 Xbox 용 앱을 조정](../devices/designing-for-tv.md)

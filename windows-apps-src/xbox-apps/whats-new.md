@@ -42,12 +42,12 @@ Xbox One 앱의 UWP는 이제 이전 앱 탐색을 지원할 수 있습니다. �
 UWP 타이틀 유형을 "앱"과 "게임" 사이에서 전환하여 게임 시나리오를 스토어에 게시하지 않고도 테스트할 수 있습니다. 개발자 홈의 **게임 및 앱** 창에서 앱을 선택하고, 컨트롤러에서 보기 단추를 누르고, **앱 세부 정보**를 선택한 다음 유형을 "앱" 또는 "게임"으로 변경합니다.
 
 ## <a name="see-also"></a>참고 항목
-- [알려진된 문제](known-issues.md)
+- [알려진 문제](known-issues.md)
 - [Xbox One에서 UWP](index.md)
  - 이제 콘솔의 스크린샷을 캡처할 수 있습니다. 스크린샷 작성에 대한 자세한 내용은 [/ext/screenshot](wdp-media-capture-api.md) 참조 항목을 참조하세요.
  - 도구에서 앱의 느슨한 파일 빌드를 배포할 수 있습니다. 느슨한 파일 빌드에 대한 자세한 내용은 [/api/app/packagemanager/register](wdp-loose-folder-register-api.md) 참조 항목을 참조하세요.
  - 개발 PC의 파일 탐색기에서 콘솔의 개발자 파일에 액세스할 수 있습니다. 파일 탐색기를 통해 파일에 액세스하는 방법에 대한 자세한 내용은 [/ext/smb/developerfolder](wdp-smb-api.md) 참조 항목을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
-- [알려진된 문제](known-issues.md)
+- [알려진 문제](known-issues.md)
 - [Xbox One에서 UWP](index.md)

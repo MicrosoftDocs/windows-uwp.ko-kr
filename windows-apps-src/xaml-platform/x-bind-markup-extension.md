@@ -50,9 +50,9 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 |------|-------------|
 | _propertyPath_ | 바인딩의 속성 경로를 지정하는 문자열. 자세한 내용은 [속성 경로](#property-path) 섹션을 참조하세요. |
 | _bindingProperties_ |
-| _propName_=_value_\[, _propName_=_value_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
+| _propName_=_값_\[하십시오 _propName_=_값_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
 | _propName_ | 바인딩 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
-| _value_ | 속성을 설정할 값. 인수 구문은 설정할 속성에 따라 다릅니다. 다음은 값 자체가 태그 확장인 _propName_=_value_ 사용법의 예입니다. `Converter={StaticResource myConverterClass}`. 자세한 내용은 아래의 [{x:Bind}로 설정할 수 있는 속성](#properties-that-you-can-set-with-xbind)을 참조하세요. |
+| _값_ | 속성을 설정할 값. 인수 구문은 설정할 속성에 따라 다릅니다. 다음은 값 자체가 태그 확장인 _propName_=_value_ 사용법의 예입니다. `Converter={StaticResource myConverterClass}`. 자세한 내용은 아래의 [{x:Bind}로 설정할 수 있는 속성](#properties-that-you-can-set-with-xbind)을 참조하세요. |
 
 ## <a name="examples"></a>예
 
@@ -135,14 +135,14 @@ Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리
 
 | 속성 | 설명 |
 |----------|-------------|
-| **Path** | 위의 [속성 경로](#property-path) 섹션을 참조하세요. |
+| **경로** | 위의 [속성 경로](#property-path) 섹션을 참조하세요. |
 | **변환기** | 바인딩 엔진이 호출하는 변환기 개체를 지정합니다. 변환기는 XAML에서 설정할 수 있지만 리소스 사전의 해당 개체에 대한 [{StaticResource} 태그 확장](staticresource-markup-extension.md) 참조에서 할당한 개체 인스턴스를 참조하는 경우에만 설정할 수 있습니다. |
 | **ConverterLanguage** | 변환기가 사용할 문화권을 지정합니다. (설정 하는 경우 **ConverterLanguage** 있습니다 설정도 해야 **변환기**.) 문화권은 표준 기반 식별자로 설정 됩니다. 자세한 내용은 [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880)를 참조하세요. |
-| **ConverterParameter** | 변환기 논리에서 사용될 수 있는 변환기 매개 변수를 지정합니다. (설정 하는 경우 **ConverterParameter** 있습니다 설정도 해야 **변환기**.) 전달된 된 값으로 변환 하려면에서 필요한 모든 정보를 가져오는 간단한 논리를 사용 하는 대부분의 변환기 필요 하지 않습니다는 **ConverterParameter** 값입니다. **ConverterParameter** 매개 변수는 **ConverterParameter**에서 전달되는 내용을 수용하는 여러 논리가 있는 고급 변환기를 구현하기 위한 것입니다. 문자열이 아닌 값을 사용하는 변환기를 작성할 수도 있지만 일반적이지 않습니다. 자세한 내용은 [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827)에서 설명을 참조하세요. |
-| **FallbackValue** | 원본 또는 경로를 확인할 수 없을 때 표시할 값을 지정합니다. |
+| **converterParameter** | 변환기 논리에서 사용될 수 있는 변환기 매개 변수를 지정합니다. (설정 하는 경우 **ConverterParameter** 있습니다 설정도 해야 **변환기**.) 전달된 된 값으로 변환 하려면에서 필요한 모든 정보를 가져오는 간단한 논리를 사용 하는 대부분의 변환기 필요 하지 않습니다는 **ConverterParameter** 값입니다. **ConverterParameter** 매개 변수는 **ConverterParameter**에서 전달되는 내용을 수용하는 여러 논리가 있는 고급 변환기를 구현하기 위한 것입니다. 문자열이 아닌 값을 사용하는 변환기를 작성할 수도 있지만 일반적이지 않습니다. 자세한 내용은 [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827)에서 설명을 참조하세요. |
+| **fallbackValue** | 원본 또는 경로를 확인할 수 없을 때 표시할 값을 지정합니다. |
 | **모드** | 이러한 문자열 중 하나로 바인딩 모드를 지정합니다. "OneTime", "단방향" 또는 "TwoWay"입니다. 기본값은 "OneTime"입니다. 이 값은 **{Binding}** 에 대한 기본값(대부분의 경우 "OneWay"임)과 다릅니다. |
 | **TargetNullValue** | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
-| **BindBack** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. |
+| **하지** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. |
 | **UpdateSourceTrigger** | TwoWay 바인딩에서 컨트롤에서 모델로 변경을 다시 적용하는 시기를 지정합니다. TextBox.Text 제외한 모든 속성의 기본값은 PropertyChanged; TextBox.Text LostFocus입니다.|
 
 > [!NOTE]

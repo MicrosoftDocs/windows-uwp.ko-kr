@@ -20,15 +20,15 @@ ms.locfileid: "57657128"
 
 ## <a name="to-build-the-best-experiences-for-xbox-one"></a>Xbox One을 위한 최상의 환경을 조성하려면
 
-### <a name="do-turn-off-mouse-mode"></a>*Do:* 마우스 모드 끄기
+### <a name="do-turn-off-mouse-mode"></a>*수행 합니다.* 마우스 모드 끄기
 
 Xbox 사용자가 해당 컨트롤러를 선호 합니다. 컨트롤러 입력에 대해 최적화 하기 위해 [마우스 모드 사용 안 함](how-to-disable-mouse-mode.md) 방향 탐색을 사용 하도록 설정 하 고 (라고도 [XY 집중 탐색 및 상호 작용](../design/input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction)). 포커스 및 액세스할 수 없는 UI에 대 한 주의 하십시오.
 
-### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*Do:* 원격 제어 환경에 적절 한 포커스 사각형을 그리려면
+### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*수행 합니다.* 원격 제어 환경에 적절 한 포커스 사각형을 그리려면
 
 대부분의 Xbox 사용자는 거실에서 TV 주위에 앉아 있으므로 표준 포커스 사각형이 10피트를 넘는 일은 거의 없습니다. 입력 포커스가 있는 UI 요소가 항상 사용자에게 명확하게 표시되도록 하려면 [포커스 화면 효과](../design/input/gamepad-and-remote-interactions.md#focus-visual) 지침을 따릅니다. XAML에서는 Xbox에서 앱이 실행될 때 이 동작을 무료로 사용할 수 있지만 HTML 앱에서는 사용자 지정 CSS 스타일을 사용해야 합니다.
 
-### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*Do:* SystemMediaTransportControls 클래스를 사용 하 여 통합
+### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*수행 합니다.* SystemMediaTransportControls 클래스를 사용 하 여 통합
 
 Xbox 사용자는 Xbox 미디어 리모컨, Cortana(특히 "실행" 및 "일시 중지" 음성 명령) 및 Xbox SmartGlass를 사용하여 미디어 앱을 제어하려고 합니다. 이 기능을 무료로 사용하려면 앱에서 Xbox 미디어 컨트롤에 자동으로 포함된 [SystemMediaTransportControls](https://msdn.microsoft.com/library/windows/apps/windows.media.systemmediatransportcontrols.aspx) 클래스를 사용해야 합니다. 앱에 사용자 지정 미디어 컨트롤이 있는 경우 **SystemMediaTransportControls** 클래스와 통합하여 사용자에게 이러한 기능을 제공해야 합니다. 배경 음악 앱을 만드는 경우 Xbox 멀티태스킹 탭에서 배경 음악 컨트롤이 올바르게 작동되도록 **SystemMediaTransportControls** 클래스와 통합합니다.
 
@@ -58,10 +58,10 @@ UWP 앱에 적용된 이러한 사례를 간략하게 보려면 이 동영상을
 
 [Channel 9](https://channel9.msdn.com/)에 대한 다음 문서에서도 Xbox에서 멋진 앱을 빌드하는 방법에 대한 유용한 정보를 제공합니다.
 
-- [Xbox 용 유용한 유니버설 Windows 플랫폼 (UWP) 앱 빌드](https://channel9.msdn.com/Events/Build/2016/B883)
-- [Xbox One 및 TV에 대 한 앱을 조정](https://channel9.msdn.com/Events/Build/2016/T651-R1)
-- [UWP 개발 1: 적응는 UI 구축](https://channel9.msdn.com/Events/Build/2016/L724-R1)
-- [웹 앱 외에 브라우저: 플랫폼 간 충족 간 장치](https://channel9.msdn.com/Events/Build/2016/B888)
+- [Building Great Universal Windows Platform (UWP) Apps for Xbox(멋진 Xbox용 UWP(유니버설 Windows 플랫폼) 앱 빌드)](https://channel9.msdn.com/Events/Build/2016/B883)
+- [Adapt Your App for Xbox One and TV(Xbox One 및 TV에 맞게 앱 조정)](https://channel9.msdn.com/Events/Build/2016/T651-R1)
+- [UWP 개발 1: 적응형 UI 빌드](https://channel9.msdn.com/Events/Build/2016/L724-R1)
+- [Web Apps Beyond the Browser: Cross-Platform Meets Cross Device(브라우저를 뛰어넘는 웹앱: 교차 플랫폼과 교차 디바이스의 만남)](https://channel9.msdn.com/Events/Build/2016/B888)
 
 ## <a name="app-dev-on-xbox"></a>Xbox 응용 프로그램 개발
 
@@ -74,4 +74,4 @@ UWP 앱에 적용된 이러한 사례를 간략하게 보려면 이 동영상을
 
 - [Xbox One에서 UWP](index.md)
 - [Xbox 및 TV용 디자인](../design/devices/designing-for-tv.md)
-- [Xbox One 용 점진적 웹 앱](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/xbox-considerations)
+- [Xbox One용 점진적 웹앱](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/xbox-considerations)

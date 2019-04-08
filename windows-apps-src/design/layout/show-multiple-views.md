@@ -18,7 +18,7 @@ ms.locfileid: "57607628"
 
 개별 창에서 앱의 독립 부분을 볼 수 있도록 하여 사용자의 생산성을 높이는 데 도움을 줍니다. 여러 개의 앱 창을 만드는 경우 각 창이 독립적으로 동작합니다. 작업 표시줄에 각 창이 개별적으로 표시됩니다. 사용자는 앱 창을 독립적으로 이동, 크기 조정, 표시 및 숨길 수 있으며, 별도의 앱인 것처럼 앱 창 간에 전환할 수 있습니다. 각 창은 해당 스레드에서 작동합니다.
 
-> **중요 한 Api**: [**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094), [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)
+> **중요 API**: [**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094)하십시오 [ **CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)
 
 ## <a name="when-should-an-app-use-multiple-views"></a>앱에서 언제 여러 보기를 사용해야 하나요?
 여러 보기를 활용할 수 있는 다양한 시나리오가 있습니다. 다음은 몇 가지 예입니다.

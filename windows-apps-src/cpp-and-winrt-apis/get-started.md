@@ -7,7 +7,7 @@ keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 
 ms.localizationpriority: medium
 ms.openlocfilehash: c0d11a8718f61666d6285d8a1c91b48992044b22
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57602238"
@@ -166,8 +166,8 @@ Visual Studio에 추가할 첫 번째 옵션은 프로젝트 모든 C + + /cli W
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
-* [오류 처리를 C + + /cli WinRT](error-handling.md)
-* [Interop 간에 C + + /cli WinRT 및 C + + /cli CX](interop-winrt-cx.md)
-* [Interop 간에 C + + /cli WinRT 및 ABI](interop-winrt-abi.md)
-* [이동할 C + + /cli WinRT C + + /cli CX](move-to-winrt-from-cx.md)
+* [C++/WinRT를 통한 오류 처리](error-handling.md)
+* [C++/WinRT와 C++/CX 간의 상호 운용성](interop-winrt-cx.md)
+* [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md)
+* [C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md)
 * [문자열 처리 C + + /cli WinRT](strings.md)

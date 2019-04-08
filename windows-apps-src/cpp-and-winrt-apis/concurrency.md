@@ -22,8 +22,8 @@ ms.locfileid: "57611298"
 
 - [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction),
 - [**IAsyncActionWithProgress&lt;TProgress&gt;**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_),
-- [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation_tresult_), and
-- [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_).
+- [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation_tresult_), 및
+- [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)합니다.
 
 각 비동기 작업 형식은 **winrt::Windows::Foundation** C++/WinRT 네임스페이스에서 해당하는 형식으로 프로젝션됩니다. C++/WinRT에는 내부의 await 어댑터 구조체도 포함됩니다. 직접 하지만 해당 구조체 덕분 사용 하지 않는 작성할 수 있습니다는 `co_await` 이러한 비동기 작업 형식 중 하나를 반환 하는 모든 함수의 결과 협조적으로 await 문을 합니다. 또한 이러한 형식을 반환하는 사용자 고유의 코루틴을 작성하는 것도 가능합니다.
 
@@ -751,4 +751,4 @@ int main()
 
 ## <a name="related-topics"></a>관련 항목
 * [C + 대리자를 사용 하 여 이벤트를 처리 + WinRT](handle-events.md)
-* [표준 c + + 데이터 형식 및 C + + /cli WinRT](std-cpp-data-types.md)
+* [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)

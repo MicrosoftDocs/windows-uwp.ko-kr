@@ -110,7 +110,7 @@ ms.locfileid: "57652828"
 </Image>
 ```
 
-**CenterOfRotationY = "0.1"**
+**CenterOfRotationY "0.1" =**
 
 ![CenterOfRotationY가 0.1과 같음](images/3dcenterofrotationy0point1.png)
 

@@ -122,7 +122,7 @@ Authorization: Bearer <your access token>
 |  width   |  정수   |  크리에이티브의 너비입니다.     |  아니오    |     |    예   |       
 |  landingUrl   |  문자열   |  Kochava, AppsFlyer 또는 Tune과 같은 캠페인 추적 서비스를 사용하여 앱에 대한 설치 분석을 측정하는 경우 POST 메서드를 호출할 때 이 필드에 추적 URL을 할당합니다(지정할 경우 이 값은 유효한 URI여야 합니다). 캠페인 추적 서비스를 사용하지 않는 경우 POST 메서드를 호출할 때 이 값을 생략하세요(이 경우 이 URL이 자동으로 생성됩니다).   |  아니오    |     |   예    |       
 |  format   |  문자열   |   광고 형식입니다. 현재는 **Banner** 값만 지원합니다.    |   아니오    |  배너   |  아니오     |       
-|  imageAttributes   | [ImageAttributes](#image-attributes)    |   크리에이티브에 속성을 제공합니다.     |   아니오    |      |   예    |       
+|  imageAttributes   | [imageAttributes](#image-attributes)    |   크리에이티브에 속성을 제공합니다.     |   아니오    |      |   예    |       
 |  storeProductId   |  문자열   |   이 광고 캠페인이 연결된 앱의 [스토어 ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 예시 스토어 ID는 9nblggh42cfd입니다.    |   아니오    |    |  아니오     |   |  
 
 

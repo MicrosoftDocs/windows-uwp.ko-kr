@@ -1,5 +1,5 @@
 ---
-title: 파일에 쓰기에 대 한 모범 사례
+title: 파일 쓰기 모범 사례
 description: FileIO 및 PathIO 클래스의 메서드를 작성 하는 다양 한 파일을 사용 하 여에 대 한 모범 사례에 알아봅니다.
 ms.date: 02/06/2019
 ms.topic: article
@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8bed97e060015f92ff95c9f7d797bbcb83db431
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57605838"
 ---
-# <a name="best-practices-for-writing-to-files"></a>파일에 쓰기에 대 한 모범 사례
+# <a name="best-practices-for-writing-to-files"></a>파일 쓰기 모범 사례
 
 **중요 한 Api**
 
@@ -77,9 +77,9 @@ A [ **StorageFile** ](https://docs.microsoft.com/uwp/api/windows.storage.storage
 |----------------------|---------|----------|-------------|
 |  ERROR_ACCESS_DENIED (0X80070005)  |  5  |  원본 파일은 이전 작업에서 삭제 표시 될 수 있습니다.  |  작업을 다시 시도합니다.</br>파일에 대 한 액세스가 동기화를 확인 합니다.  |
 |  ERROR_SHARING_VIOLATION (0X80070020)  |  5  |  원본 파일을 다른 배타적 쓰기 열려 있습니다.   |  작업을 다시 시도합니다.</br>파일에 대 한 액세스가 동기화를 확인 합니다.  |
-|  ERROR_UNABLE_TO_REMOVE_REPLACED (0X80070497)  |  19-20  |  사용 중이기 때문에 원본 파일 (file.txt)을 대체할 수 있습니다. 다른 프로세스 또는 작업 바꿀 수 전에 파일에 대 한 액세스를 얻은 합니다.  |  작업을 다시 시도합니다.</br>파일에 대 한 액세스가 동기화를 확인 합니다.  |
-|  ERROR_DISK_FULL (0x80070070)  |  7, 14, 16, 20  |  트랜잭션된 모델 추가 파일을 만들고이 추가 저장소를 사용 합니다.  |    |
-|  ERROR_OUTOFMEMORY (0x8007000E)  |  14, 16  |  이 여러 개의 미해결 I/O 작업 또는 파일 크기가 커질으로 인해 발생할 수 있습니다.  |  스트림을 제어 하 여 보다 세분화 된 방법은 오류를 해결할 수 있습니다.  |
+|  ERROR_UNABLE_TO_REMOVE_REPLACED (0X80070497)  |  19 ~ 20  |  사용 중이기 때문에 원본 파일 (file.txt)을 대체할 수 있습니다. 다른 프로세스 또는 작업 바꿀 수 전에 파일에 대 한 액세스를 얻은 합니다.  |  작업을 다시 시도합니다.</br>파일에 대 한 액세스가 동기화를 확인 합니다.  |
+|  ERROR_DISK_FULL (0X80070070)  |  7, 14, 16, 20  |  트랜잭션된 모델 추가 파일을 만들고이 추가 저장소를 사용 합니다.  |    |
+|  ERROR_OUTOFMEMORY (0X8007000E)  |  14, 16  |  이 여러 개의 미해결 I/O 작업 또는 파일 크기가 커질으로 인해 발생할 수 있습니다.  |  스트림을 제어 하 여 보다 세분화 된 방법은 오류를 해결할 수 있습니다.  |
 |  E_FAIL (0X80004005) |  임의  |  기타  |  작업을 다시 시도합니다. 그래도 실패할 경우 플랫폼 오류를 수 있습니다 하 고 일관성이 없는 상태에 있기 때문에 앱을 종료 해야 합니다. |
 
 ## <a name="other-considerations-for-file-states-that-might-lead-to-errors"></a>오류가 발생할 수 있는 파일 상태에 대 한 기타 고려 사항
@@ -194,4 +194,4 @@ else
 
 ## <a name="see-also"></a>참고 항목
 
-* [만들기, 쓰고, 파일 읽기](quickstart-reading-and-writing-files.md)
+* [파일 만들기, 쓰기 및 읽기](quickstart-reading-and-writing-files.md)

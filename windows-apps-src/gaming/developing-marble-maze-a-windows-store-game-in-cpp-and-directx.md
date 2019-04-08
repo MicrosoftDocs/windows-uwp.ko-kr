@@ -43,7 +43,7 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 
 
 -   Windows 10 크리에이터 스 업데이트
--   [Microsoft Visual Studio 2017](https://www.visualstudio.com/downloads/)
+-   [Microsoft Visual Studio 2017](https://www.visualstudio.com/downloads/)
 -   C++ 프로그래밍 지식
 -   DirectX 및 DirectX 용어 숙지
 -   COM에 대한 기본 지식

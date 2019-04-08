@@ -53,7 +53,7 @@ Basic, 기본 제공 MVVM을 사용 하 여 추가 지침을 확인 합니다 [�
 
 ### <a name="topics"></a>항목
 
-[깊이에서 데이터 바인딩](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)  
+[데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)  
 [{X:bind} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)  
 
 ### <a name="samples"></a>샘플

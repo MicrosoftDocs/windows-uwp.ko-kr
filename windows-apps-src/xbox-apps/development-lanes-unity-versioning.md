@@ -100,5 +100,5 @@ UWP 폴더 버전 관리의 일부 추가 예는 [이러한 예제](https://bitb
 ***ScrapyardPhoenix(유니버설 Windows)*** 는 참조를 추가할 프로젝트(예: Xbox Live SDK)입니다.
 
 ## <a name="see-also"></a>참고 항목
-- [기존 게임을 Xbox에 가져오기](development-lanes-landing.md)
+- [기존 게임을 Xbox로 가져오기](development-lanes-landing.md)
 - [Xbox One에서 UWP](index.md)

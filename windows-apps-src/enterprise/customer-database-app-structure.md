@@ -37,7 +37,7 @@ ms.locfileid: "57656618"
 > [!NOTE]
 > 이 앱에는 MainPage 없는 있는지 확인할 수 있습니다. 에 지정 하기 때문에 이것이 **App.xaml.cs** 앱을 시작 해야 하는 **CustomerListPage** 시작 시.
 
-### <a name="viewmodels"></a>ViewModels
+### <a name="viewmodels"></a>Viewmodel
 
 이 앱에는 하나의 보기에 있는 경우는 두 Viewmodel에 있습니다. 이 이유는 무엇입니까?
 

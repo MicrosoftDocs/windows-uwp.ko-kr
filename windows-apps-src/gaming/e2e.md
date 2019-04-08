@@ -8,7 +8,7 @@ keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
 ms.openlocfilehash: 38fc73eb602c1307fdd345d02c621791feb89dc2
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57652328"
@@ -50,7 +50,7 @@ Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작]
     </colgroup>
     <tr>
         <td>Windows 개발자 센터 주 포털</td>
-        <td><a href="https://dev.windows.com">Windows Dev Center</a></td>
+        <td><a href="https://dev.windows.com">Windows 개발자 센터</a></td>
     </tr>
     <tr>
         <td>Windows 앱 개발</td>
@@ -182,11 +182,11 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Direct3D 12 그래픽 샘플</td>
-        <td><a href="https://github.com/Microsoft/DirectX-Graphics-Samples">DirectX-Graphics-Samples</a></td>
+        <td><a href="https://github.com/Microsoft/DirectX-Graphics-Samples">DirectX 그래픽-샘플</a></td>
     </tr>
     <tr>
         <td>Direct3D 11 그래픽 샘플</td>
-        <td><a href="https://github.com/walbourn/directx-sdk-samples">directx-sdk-samples</a></td>
+        <td><a href="https://github.com/walbourn/directx-sdk-samples">directx sdk 샘플</a></td>
     </tr>
     <tr>
         <td>Direct3D 11 1인칭 게임 샘플</td>
@@ -206,11 +206,11 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Xbox 고급 기술 그룹 공개 샘플</td>
-        <td><a href="https://github.com/Microsoft/Xbox-ATG-Samples">Xbox-ATG-Samples</a></td>
+        <td><a href="https://github.com/Microsoft/Xbox-ATG-Samples">Xbox-ATG-샘플</a></td>
     </tr>
     <tr>
         <td>Xbox Live 샘플</td>
-        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox-live-samples</a></td>
+        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox live 샘플</a></td>
     </tr>
     <tr>
         <td>Xbox One 게임 샘플(XGD)</td>
@@ -874,7 +874,7 @@ BabylonJS는 HTML5, WebGL, WebVR 및 웹 오디오를 사용하여 3D 게임을 
     </colgroup>
     <tr>
         <td>Windows 8 앱을 유니버설 Windows 플랫폼 앱으로 포팅</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt238322">이동에서 Windows 런타임 8.x에서 UWP</a></td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt238322">Windows 런타임 8.x에서 UWP로 이동</a></td>
     </tr>
     <tr>
         <td>Windows 8 앱을 유니버설 Windows 플랫폼 앱으로 포팅(동영상)</td>
@@ -910,7 +910,7 @@ BabylonJS는 HTML5, WebGL, WebVR 및 웹 오디오를 사용하여 3D 게임을 
     </tr>
     <tr>
         <td>ANGLE을 사용하여 OpenGL ES에서 Direct3D 11로</td>
-        <td><a href="https://go.microsoft.com/fwlink/p/?linkid=618387">ANGLE</a></td>
+        <td><a href="https://go.microsoft.com/fwlink/p/?linkid=618387">각도</a></td>
     </tr>
     <tr>
         <td>UWP에도 제공되는 클래식 Windows API</td>
@@ -1114,7 +1114,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
     </colgroup>
     <tr>
         <td>입력 체계 가이드</td>
-        <td><a href="https://go.microsoft.com/fwlink/?LinkId=535007">모범 사례: Typography</a></td>
+        <td><a href="https://go.microsoft.com/fwlink/?LinkId=535007">모범 사례: 입력 체계</a></td>
     </tr>
 </table>
  
@@ -1563,7 +1563,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </tr>
     <tr>
         <td>DLC 게임 콘텐츠 같은 선택적 패키지 만들기</td>
-        <td><a href="../packaging/optional-packages.md">선택적 패키지 및 관련된 집합 작성</a></td>
+        <td><a href="../packaging/optional-packages.md">선택형 패키지 및 관련 세트 제작</a></td>
     </tr>
     <tr>
         <td>UWP 게임 패키징</td>

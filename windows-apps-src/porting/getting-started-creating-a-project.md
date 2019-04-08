@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57601448"
 ---
-# <a name="getting-started-creating-a-project"></a>시작 하기: 프로젝트 만들기
+# <a name="getting-started-creating-a-project"></a>시작: 프로젝트 만들기
 
 ## <a name="creating-a-project"></a>프로젝트 만들기
 

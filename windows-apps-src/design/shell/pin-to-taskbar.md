@@ -22,7 +22,7 @@ ms.locfileid: "57604098"
 > [!IMPORTANT]
 > **Fall Creators Update 필요**: SDK 16299 대상으로 해야 합니다 하 고 빌드 16299 이상을 작업 표시줄 Api를 사용 하 여 실행 합니다.
 
-> **중요 한 Api**: [TaskbarManager 클래스](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager) 
+> **중요 API**: [TaskbarManager 클래스](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager) 
 
 
 ## <a name="when-should-you-ask-the-user-to-pin-your-app-to-the-taskbar"></a>언제 사용자에게 앱을 작업 표시줄에 고정하라고 요청해야 할까요? 

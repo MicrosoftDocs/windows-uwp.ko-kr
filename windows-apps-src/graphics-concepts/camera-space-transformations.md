@@ -37,7 +37,7 @@ Lₚ Lₚ = \* vMatrix
 
 방향성 광원에 대한 카메라 공간의 광원 방향은 광원 방향에 뷰 매트릭스를 곱하고, 정규화하고, 결과를 부정하여 계산됩니다.
 
-L<sub>dir</sub> = -norm(L<sub>dir</sub> \* wvMatrix)
+L<sub>dir</sub> =-norm (L<sub>dir</sub> \* wvMatrix)
 
 점 광원과 스포트라이트에 대해 조명 방향은 다음과 같이 계산됩니다.
 

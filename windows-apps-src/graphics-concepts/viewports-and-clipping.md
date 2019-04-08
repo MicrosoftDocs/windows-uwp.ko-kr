@@ -82,7 +82,7 @@ Direct3D는 뷰포트 위치 및 차원을 사용하여 렌더링된 장면이 �
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[좌표계 및 기 하 도형](coordinate-systems-and-geometry.md)
+[좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
 
  
 

@@ -216,7 +216,7 @@ Windows Hello 도우미 디바이스 앱에는 두 가지 구성 요소가 있�
 
 ### <a name="registration-and-de-registration"></a>등록 및 등록 취소
 
-등록에 도우미 인증 서비스에 두 개의 API 호출을 필요합니다. RequestStartRegisteringDeviceAsync and FinishRegisteringDeviceAsync.
+등록에 도우미 인증 서비스에 두 개의 API 호출을 필요합니다. RequestStartRegisteringDeviceAsync 및 FinishRegisteringDeviceAsync 합니다.
 
 이러한 호출을 수행하기 전에 Windows Hello 도우미 디바이스 앱은 Windows Hello 도우미 디바이스를 사용할 수 있는지 확인해야 합니다. Windows Hello 도우미 디바이스가 HMAC 키(인증 및 디바이스 키)를 생성하는 경우 Windows Hello 도우미 디바이스 앱은 위의 두 호출을 수행하기 전에 도우미 디바이스에 키를 생성하도록 요청해야 합니다. Windows Hello 도우미 디바이스 앱이 HMAC 키를 생성하는 경우 위의 두 호출을 수행하기 전에 생성해야 합니다.
 

@@ -25,7 +25,7 @@ ms.locfileid: "57620128"
 
 [  **ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) 및 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 메서드를 구현하고 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) 속성을 사용하는 사용자 지정 [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 클래스에 대한 코드를 작성하는 방법을 알아봅니다. 
 
-> **중요 한 Api**: [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711),[**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 
+> **중요 API**: [**패널**](https://msdn.microsoft.com/library/windows/apps/br227511)하십시오 [ **ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)하십시오[**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 
 
 예제 코드에서는 사용자 지정 패널 구현을 보여 주지만, 각 레이아웃 시나리오에 맞게 패널을 사용자 지정하는 방법에 영향을 주는 레이아웃 개념을 설명하는 데 많은 시간을 할애하지 않습니다. 이러한 레이아웃 개념과 특정 레이아웃 시나리오에 개념을 적용하는 방법에 대한 자세한 내용은 [XAML 사용자 지정 패널 개요](custom-panels-overview.md)를 참조하세요.
 
@@ -225,7 +225,7 @@ if (UseOppositeRCRatio) { aspectratio = 1 / aspectratio;}
 
 * [**FrameworkElement.ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
 * [**FrameworkElement.MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
-* [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)
+* [**패널**](https://msdn.microsoft.com/library/windows/apps/br227511)
 
 **개념**
 

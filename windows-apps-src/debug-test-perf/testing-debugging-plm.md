@@ -84,5 +84,5 @@ plmdebug /enableDebug 279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.0.0_x86__c6sq6kwg
 모든 **/enableDebug** 호출은 나중에 **/disableDebug** 스위치가 포함된 다른 PLMDebug 호출과 결합되어야 합니다. 또한 디버거 경로는 절대 경로여야 합니다(상대 경로는 지원되지 않음).
 
 ## <a name="related-topics"></a>관련 항목
-- [UWP 앱 디버그 및 배포](deploying-and-debugging-uwp-apps.md)
+- [UWP 앱 배포 및 디버깅](deploying-and-debugging-uwp-apps.md)
 - [디버깅, 테스트 및 성능](index.md)

@@ -23,7 +23,7 @@ ms.locfileid: "57618628"
 
 콤보 상자를 닫을 때 현재 선택 영역을 표시 하거나 선택된 된 항목이 없는 경우 비어 있습니다. 콤보 상자를 확장 하는 사용자를 선택할 수 있는 항목 목록이 표시 됩니다.
 
-> **중요 한 Api**: [ComboBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)하십시오 [IsEditable 속성](/uwp/api/windows.ui.xaml.controls.combobox.iseditable)를 [Text 속성](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [TextSubmitted 이벤트](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+> **중요 API**: [ComboBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)하십시오 [IsEditable 속성](/uwp/api/windows.ui.xaml.controls.combobox.iseditable)를 [Text 속성](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [TextSubmitted 이벤트](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
 헤더를 사용 하 여 compact 상태의 콤보 상자입니다.
 
@@ -45,8 +45,8 @@ ms.locfileid: "57618628"
 <td>
     <p>있는 경우는 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하려면 여기를 클릭 <a href="xamlcontrolsgallery:/item/ComboBox">앱을 열고 작업에서 콤보 상자를 참조 하세요.</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -173,13 +173,13 @@ Windows 10, 버전 1809 ([17763 SDK](https://developer.microsoft.com/windows/dow
 
 - SelectedItem = null
 - SelectedValue = null
-- SelectedIndex = -1
+- SelectedIndex =-1
 
 Sdk 17763 이상 SelectedItem 속성의 값 (및 따라서 SelectedValue 및 SelectedIndex) 콤보 상자의 항목 컬렉션에 있이 필요가 없습니다. 설정, 이전 예제를 사용 하 여 `colorComboBox.SelectedItem = "Pink"` 결과:
 
 - SelectedItem Pink =
 - SelectedValue Pink =
-- SelectedIndex = -1
+- SelectedIndex =-1
 
 ### <a name="text-search"></a>텍스트 검색
 
