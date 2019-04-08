@@ -25,7 +25,7 @@ ms.locfileid: "57589928"
 
 슬라이더는 사용자가 트랙을 따라 Thumb 컨트롤을 이동하여 값 범위에서 값을 선택할 수 있도록 하는 컨트롤입니다.
 
-> **중요 한 Api**: [Slider 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx), [속성을 값](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx), [ValueChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)
+> **중요 API**: [Slider 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx), [속성을 값](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx), [ValueChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)
 
 ![슬라이더 컨트롤](images/controls/slider.png)
 
@@ -64,8 +64,8 @@ ms.locfileid: "57589928"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Slider">앱을 열고 작동 중인 슬라이더를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -169,7 +169,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
     -   세로 방향이어서 불필요한 경우가 아니면 슬라이더 범위의 양 끝에 레이블을 지정합니다.
     -   가능하면 한 레이블에 한 단어만 사용합니다.
     -   끝에 문장 부호를 넣지 않습니다.
-    -   다음 레이블들은 설명적이어야 하며 나란히 배치해야 합니다. 예제: Maximum/Minimum, More/Less, Low/High, Soft/Loud.
+    -   다음 레이블들은 설명적이어야 하며 나란히 배치해야 합니다. 예제: 최대/최소 보다 작은지, 낮음/높음, 소프트/클라우드입니다.
 -   **값 레이블**
 
     값 레이블은 슬라이더의 현재 값을 표시합니다.

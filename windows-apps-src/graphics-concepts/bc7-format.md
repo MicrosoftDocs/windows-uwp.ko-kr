@@ -21,14 +21,14 @@ BC7 형식은 RGB 및 RGBA 데이터의 고품질 압축에 사용되는 텍스�
 
 BC7 형식의 블록 모드에 대한 자세한 내용은 [BC7 Format Mode Reference(BC7 형식 모드 참조)](https://msdn.microsoft.com/library/windows/desktop/hh308954)를 참조하세요.
 
-## <a name="span-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanabout-bc7dxgiformatbc7"></a><span id="About-BC7-DXGI-FORMAT-BC7"></span><span id="about-bc7-dxgi-format-bc7"></span><span id="ABOUT-BC7-DXGI-FORMAT-BC7"></span>About BC7/DXGI\_FORMAT\_BC7
+## <a name="span-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanabout-bc7dxgiformatbc7"></a><span id="About-BC7-DXGI-FORMAT-BC7"></span><span id="about-bc7-dxgi-format-bc7"></span><span id="ABOUT-BC7-DXGI-FORMAT-BC7"></span>BC7/DXGI에 대 한\_형식\_BC7
 
 
 다음 DXGI BC7 된\_열거형 값의 서식 지정 합니다.
 
--   **DXGI\_FORMAT\_BC7\_TYPELESS**.
--   **DXGI\_FORMAT\_BC7\_UNORM**.
--   **DXGI\_FORMAT\_BC7\_UNORM\_SRGB**.
+-   **DXGI\_형식\_BC7\_TYPELESS**합니다.
+-   **DXGI\_형식\_BC7\_UNORM**합니다.
+-   **DXGI\_형식\_BC7\_UNORM\_SRGB**합니다.
 
 [Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277)(배열 포함), Texture3D 또는 TextureCube(배열 포함) 텍스처 리소스에 BC7 형식을 사용할 수 있습니다. 마찬가지로 이 형식은 이러한 리소스와 연결된 모든 MIP 맵 표면에 적용됩니다.
 

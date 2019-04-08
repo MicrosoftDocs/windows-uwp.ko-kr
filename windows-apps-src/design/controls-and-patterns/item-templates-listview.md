@@ -7,7 +7,7 @@ ms.topic: article
 keywords: windows 10, uwp, fluent
 ms.openlocfilehash: 397c1d3a1502eaa352bf66b1bbf24e3fa39beff2
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57593058"

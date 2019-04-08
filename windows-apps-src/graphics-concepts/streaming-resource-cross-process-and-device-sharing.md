@@ -21,7 +21,7 @@ ms.locfileid: "57593668"
 
 공유 타일 풀은 크기를 조정할 수 없습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

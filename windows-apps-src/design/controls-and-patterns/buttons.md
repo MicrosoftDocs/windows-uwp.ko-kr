@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: f585d278d9420865c895d4e20fa1730196d9f0cd
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57593028"
@@ -30,7 +30,7 @@ XAML 프레임 워크에는 여러 특수화 된 단추 컨트롤 뿐 아니라 
 
 컨트롤 | 설명
 ------- | -----------
-[Button](/uwp/api/windows.ui.xaml.controls.button) | 즉각적인 작업을 시작합니다. 클릭 이벤트와 명령 바인딩을 사용할 수 있습니다.
+[단추](/uwp/api/windows.ui.xaml.controls.button) | 즉각적인 작업을 시작합니다. 클릭 이벤트와 명령 바인딩을 사용할 수 있습니다.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | 누른 동안 계속 해 서 Click 이벤트를 발생 시키는 단추입니다.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | 단추는 탐색에 사용 되는 하이퍼링크와 같은 스타일이 지정 합니다. 추가 정보는 [하이퍼링크](hyperlinks.md)를 참조하세요.
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | 연결 된 플라이 아웃을 열려면 갈매기형 펼침 단추를 사용 하 여는 단추입니다.
@@ -67,8 +67,8 @@ XAML 프레임 워크에는 여러 특수화 된 단추 컨트롤 뿐 아니라 
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Button">앱을 열고 작동 중인 단추를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

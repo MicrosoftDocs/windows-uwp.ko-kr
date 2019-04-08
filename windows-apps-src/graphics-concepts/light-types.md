@@ -19,7 +19,7 @@ ms.locfileid: "57594698"
 
 조명 유형 속성은 어떤 유형의 광원을 사용할지 정의합니다. Direct3D에는 점 광원, 스포트라이트, 방향성 광원 등 세 종류의 조명이 있습니다. 각각의 유형은 서로 다른 방식으로 장면에서 다양한 수준의 계산 오버헤드로 물체를 비춥니다.
 
-## <a name="span-idpointlightspanspan-idpointlightspanspan-idpointlightspanpoint-light"></a><span id="Point_Light"></span><span id="point_light"></span><span id="POINT_LIGHT"></span>Point Light
+## <a name="span-idpointlightspanspan-idpointlightspanspan-idpointlightspanpoint-light"></a><span id="Point_Light"></span><span id="point_light"></span><span id="POINT_LIGHT"></span>점 광원
 
 
 점 광원은 장면 내에서 색상과 위치가 있지만 단일 방향이 아닙니다. 다음 그림과 같이 모든 방향으로 동일하게 빛을 방출합니다.
@@ -33,7 +33,7 @@ ms.locfileid: "57594698"
 
 방향성 광원에는 색상과 방향이 있지만 위치는 없습니다. 병렬 조명을 방출합니다. 즉 방향성 광원에서 나오는 모든 빛은 한 장면에서 같은 방향으로 비춰집니다. 방향성 광원은 태양처럼 거의 무한대의 거리에 있는 광원과 비슷합니다. 방향성 광원은 감쇠나 범위의 영향을 받지 않기 때문에 사용자가 지정하는 방향과 색상은 Direct3D가 꼭짓점 색상을 계산할 때 고려되는 유일한 요소입니다. 조명을 결정하는 요소의 개수가 적기 때문에 계산을 가장 적게 필요로 하는 조명입니다.
 
-## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>SpotLight
+## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>추천
 
 
 스포트라이트는 색상, 위치, 빛을 방출하는 방향으로 구성됩니다. 스포트라이트에서 방출되는 조명은 밝은 안쪽 원뿔과 큰 바깥쪽 원뿔로 구성됩니다. 빛의 강도는 다음 그림과 같이 이 둘 사이에서 줄어듭니다.

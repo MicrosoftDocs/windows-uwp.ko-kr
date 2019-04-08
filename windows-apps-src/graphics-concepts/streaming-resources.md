@@ -19,9 +19,9 @@ ms.locfileid: "57598238"
 # <a name="streaming-resources"></a>스트리밍 리소스
 
 
-*스트리밍 리소스*는 소량의 실제 메모리를 사용하는 대용량 논리 리소스입니다. 전체 대용량 리소스를 전달하는 대신, 리소스의 일부가 필요에 따라 스트리밍됩니다. 이전에는 스트리밍 리소스를 *타일식 리소스*라고 했습니다.
+*스트리밍 리소스*는 소량의 실제 메모리를 사용하는 대용량 논리 리소스입니다. 전체 큰 리소스를 전달하는 대신 리소스의 작은 부분이 필요에 따라 스트리밍됩니다. 이전에는 스트리밍 리소스를 *타일식 리소스*라고 했습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

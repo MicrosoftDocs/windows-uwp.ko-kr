@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57600898"
 ---
-# <a name="prepare-to-package-a-desktop-application"></a>데스크톱 응용 프로그램 패키지를 준비 합니다.
+# <a name="prepare-to-package-a-desktop-application"></a>데스크톱 애플리케이션 패키지 준비
 
 이 문서에는 데스크톱 앱을 패키지로 만들기 전에 알아야 할 사항이 나열되어 있습니다. 패키징 프로세스에 대 한 응용 프로그램을 준비 하려면 많은 작업을 수행 하지 않아도 되지만 패키징하기 전에 해결 해야 하는 아래 항목 중 하나에 적용 되 면 응용 프로그램. Microsoft Store는 라이선스 및 자동 업데이트를 처리하므로 코드베이스에서 이러한 작업들과 관련된 기능을 자유롭게 제거할 수 있습니다.
 

@@ -1,5 +1,5 @@
 ---
-Description: 리소스를 요청하는 경우 현재 리소스 컨텍스트와 어느 정도 일치하는 몇 가지 후보가 있을 수 있습니다. 리소스 관리 시스템은 모든 후보를 분석하고 반환할 최적의 후보를 결정합니다. 이 항목은 이 프로세스를 자세히 설명하고 예를 제공합니다.
+Description: 리소스를 요청하는 경우 현재 리소스 컨텍스트와 어느 정도 일치하는 몇 가지 후보가 있을 수 있습니다. 리소스 관리 시스템은 모든 후보를 분석하여 반환할 가장 적합한 후보를 결정합니다. 이 항목은 이 프로세스를 자세히 설명하고 예를 제공합니다.
 title: 리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법
 template: detail.hbs
 ms.date: 10/23/2017
@@ -135,4 +135,4 @@ de/images/contrast-standard/logo.jpg
 * [NamedResource.ResolveAll](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live)
 
 ## <a name="related-topics"></a>관련 항목
-* [MakePri.exe 사용 하 여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
+* [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)

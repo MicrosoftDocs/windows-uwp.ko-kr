@@ -23,7 +23,7 @@ ms.locfileid: "57593578"
 
 꼭짓점 버퍼는 유연하기 때문에 변환된 기하 도형의 재사용을 준비하기 위한 가장 이상적인 준비 지점입니다. 꼭짓점 버퍼를 하나 만들고 그 안에서 꼭짓점에 대한 변환, 조명 및 클리핑을 수행할 수 있으며, 인터리브 렌더링 상태가 변하더라도 재변환 없이 필요한 만큼 장면의 모델을 렌더링할 수 있습니다. 이 기능은 여러 텍스처를 사용하는 모델을 렌더링할 때 유용합니다. 기하 도형을 한 번만 변환하면 필요에 따라 그 일부를 렌더링하고 필요한 텍스처 변경 사항을 인터리브할 수 있습니다. 꼭짓점을 처리한 후에 발생한 렌더링 상태 변경 사항은 다음에 꼭짓점을 처리할 때 적용됩니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

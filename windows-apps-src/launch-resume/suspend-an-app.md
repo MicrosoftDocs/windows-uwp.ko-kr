@@ -149,7 +149,7 @@ void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
 ## <a name="related-topics"></a>관련 항목
 
 * [앱 수명 주기](app-lifecycle.md)
-* [앱 활성화를 처리 합니다.](activate-an-app.md)
+* [앱 활성화 처리](activate-an-app.md)
 * [앱 다시 시작 처리](resume-an-app.md)
 * [시작에 대 한 UX 지침을 일시 중단 및 다시 시작](https://msdn.microsoft.com/library/windows/apps/dn611862)
 * [확장된 실행](run-minimized-with-extended-execution.md)

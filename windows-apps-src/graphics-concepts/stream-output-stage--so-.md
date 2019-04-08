@@ -38,7 +38,7 @@ SO(스트림 출력) 단계에서는 이전의 활성 단계에서 하나 이상
 
 이전 셰이더 단계의 꼭짓점 데이터.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
 
 
 SO(스트림 출력) 단계에서는 이전 활성 단계(예: GS(기하 도형 셰이더) 단계)의 꼭짓점 데이터를 하나 이상의 메모리 내 버퍼로 연속적으로 출력(또는 스트리밍)합니다. 기 하 도형 셰이더 (GS) 스테이지 활성 상태인 경우 Stream 출력 (등) 스테이지 꼭 짓 점 데이터 (DS) 도메인 셰이더 단계에서 메모리 (또는 경우 DS 활성화 되어 있지도 꼭 짓 점 셰이더 (VS) 단계에서)의 버퍼를 지속적으로 출력 합니다.

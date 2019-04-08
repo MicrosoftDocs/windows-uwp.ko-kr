@@ -22,7 +22,7 @@ ms.locfileid: "57654478"
 
 색 선택은 색을 찾아보고 선택하는 데 사용됩니다. 색 선택을 사용하면 사용자가 기본적으로 색 스펙트럼에서 색을 탐색하거나 RGB(Red-Green-Blue), HSV(색상 채도 값) 또는 16진수 텍스트 상자에서 색을 지정할 수 있습니다.
 
-> **중요 한 Api**: [ColorPicker 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker)하십시오 [속성 색](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [ColorChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
+> **중요 API**: [ColorPicker 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker)하십시오 [속성 색](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [ColorChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
 
 ![기본 색 선택](images/color-picker-default.png)
 
@@ -42,8 +42,8 @@ ms.locfileid: "57654478"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ColorPicker">앱을 열고 작동 중인 ColorPicker를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

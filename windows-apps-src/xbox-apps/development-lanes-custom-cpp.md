@@ -28,6 +28,6 @@ UWP(유니버설 Windows 플랫폼)에서의 C++ 게임은 렌더링에 DirectX�
 
 
 ## <a name="see-also"></a>참고 항목
-- [기존 게임을 Xbox에 가져오기](development-lanes-landing.md)
+- [기존 게임을 Xbox로 가져오기](development-lanes-landing.md)
 - [Xbox One에서 UWP](index.md)
 

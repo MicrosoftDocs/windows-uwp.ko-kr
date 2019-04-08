@@ -102,6 +102,6 @@ ms.locfileid: "57593988"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [언어, 배율, 고대비 등 및 다른 한정자에 대 한 리소스를 조정 합니다.](tailor-resources-lang-scale-contrast.md)
+* [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)
 * [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [MakePri.exe 사용 하 여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
+* [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)

@@ -210,10 +210,10 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
 ## <a name="related-topics"></a>관련 항목
 * [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [IANA 언어 하위 태그 레지스트리](https://go.microsoft.com/fwlink/p/?linkid=227303)
-* [언어, 배율, 고대비 등 및 다른 한정자에 대 한 리소스를 조정 합니다.](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [지원 되는 언어](../../publish/supported-languages.md)
 * [날짜/시간/숫자 형식을 세계화합니다](use-global-ready-formats.md)
-* [리소스 관리 시스템 언어 태그를 일치 하는 방법](../../app-resources/how-rms-matches-lang-tags.md)
+* [리소스 관리 시스템에서 언어 태그를 일치시키는 방법](../../app-resources/how-rms-matches-lang-tags.md)
 
 ## <a name="samples"></a>샘플
 * [응용 프로그램 리소스 및 지역화 샘플](https://go.microsoft.com/fwlink/p/?linkid=231501)

@@ -135,7 +135,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 </Grid>
 ```
 
-**Efficient**
+**효율적인**
 
 ```xaml
 <Grid Background="Black"/>
@@ -167,7 +167,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 
 아래 _InitialPage.xaml_에서는 _ExampleResourceDictionary.xaml_의 리소스 하나를 사용하므로 시작 시 전체 _ExampleResourceDictionary.xaml_을 구문 분석해야 합니다.
 
-**InitialPage.xaml.**
+**InitialPage.xaml 합니다.**
 
 ```xaml
 <Page x:Class="ExampleNamespace.InitialPage" ...>
@@ -185,7 +185,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 </Page>
 ```
 
-**ExampleResourceDictionary.xaml.**
+**ExampleResourceDictionary.xaml 합니다.**
 
 ```xaml
 <ResourceDictionary>
@@ -212,7 +212,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 </Application>
 ```
 
-**InitialPage.xaml.**
+**InitialPage.xaml 합니다.**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -223,7 +223,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 </Page>
 ```
 
-**SecondPage.xaml.**
+**SecondPage.xaml 합니다.**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->

@@ -125,15 +125,15 @@ XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느�
 
 다음 문법에서 *property*는 설정할 속성의 이름이고 *propertyValueAsObjectElement*는 속성의 값 형식 요구 사항을 충족해야 하는 단일 개체 요소입니다.
 
-`<`*object*`>`
+`<`*개체*`>`
 
-`<`*object*`.`*property*`>`
+`<`*개체*`.`*속성*`>`
 
 *propertyValueAsObjectElement*
 
-`</`*object*`.`*property*`>`
+`</`*개체*`.`*속성*`>`
 
-`</`*object*`>`
+`</`*개체*`>`
 
 다음 예제에서는 속성 요소 구문을 사용하여 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill)을 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) 개체 요소를 통해 설정합니다. (내 합니다 **SolidColorBrush**를 [ **색** ](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 특성으로 설정 됩니다.) 이 XAML 구문 분석 된 결과 설정 하는 XAML 이전 예제와 동일한 **채우기** 특성 구문을 사용 합니다.
 
@@ -151,7 +151,7 @@ XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느�
 
 ### <a name="xaml-vocabularies-and-object-oriented-programming"></a>XAML 용어 모음 및 개체 지향 프로그래밍
 
-Windows 런타임 XAML 형식의 XAML 멤버로 표시되는 속성과 이벤트는 기본 형식에서 상속되는 경우가 많습니다. 다음 예제를 살펴보세요. `<Button Background="Blue" .../>`. [  **Background**](https://msdn.microsoft.com/library/windows/apps/br209395) 속성은 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 클래스에서 직접 선언된 속성이 아닙니다. **Background**는 기본 [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) 클래스에서 상속됩니다. 사실에 대 한 참조 항목을 보면 **단추** 멤버 목록에 각 기본 클래스를 연속의 체인에서 상속 된 멤버를 하나 이상 포함 표시: [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736), [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390), [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911), [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). **속성** 목록에 있는 모든 읽기-쓰기 속성과 컬렉션 속성은 XAML 용어 모음 측면에서 상속됩니다. 이벤트(예: 다양한 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 이벤트)도 상속됩니다.
+Windows 런타임 XAML 형식의 XAML 멤버로 표시되는 속성과 이벤트는 기본 형식에서 상속되는 경우가 많습니다. 다음 예제를 살펴보세요. `<Button Background="Blue" .../>`. [  **Background**](https://msdn.microsoft.com/library/windows/apps/br209395) 속성은 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 클래스에서 직접 선언된 속성이 아닙니다. **Background**는 기본 [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) 클래스에서 상속됩니다. 사실에 대 한 참조 항목을 보면 **단추** 멤버 목록에 각 기본 클래스를 연속의 체인에서 상속 된 멤버를 하나 이상 포함 표시: [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736)를 [ **컨트롤**](https://msdn.microsoft.com/library/windows/apps/br209390)하십시오 [ **FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)를 [  **UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)하십시오 [ **DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)합니다. **속성** 목록에 있는 모든 읽기-쓰기 속성과 컬렉션 속성은 XAML 용어 모음 측면에서 상속됩니다. 이벤트(예: 다양한 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 이벤트)도 상속됩니다.
 
 Windows 런타임 참조의 XAML 지침을 사용하는 경우 구문이나 예제 코드에 표시된 요소 이름은 원래 속성을 정의한 형식과 관련된 경우가 많은데, 이는 참조 항목이 기본 클래스에서 이 형식을 상속할 수 있는 모든 형식에서 공유되기 때문입니다. XML 편집기에서 Visual Studio의 IntelliSense for XAML을 사용하는 경우 XML 편집기, IntelliSense 및 드롭다운은 효율적으로 상속을 통합하고, 클래스 인스턴스에 대한 개체 요소로 시작한 후 설정에 사용할 수 있는 정확한 특성 목록을 제공합니다.
 
@@ -173,7 +173,7 @@ XAML 콘텐츠 속성으로 선언된 속성이 **Object** 형식이거나 **Str
 <TextBlock>Hello!</TextBlock>
 ```
 
-클래스에 대해 XAML 콘텐츠 속성이 있는 경우 "특성" 섹션에서 클래스에 대한 참조 항목을 참조하세요. [  **ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011)의 값을 찾습니다. 이 특성은 명명된 "Name" 필드를 사용합니다. "Name" 값은 XAML 콘텐츠 속성인 해당 클래스의 속성 이름입니다. 예를 들어 합니다 [ **테두리** ](https://msdn.microsoft.com/library/windows/apps/br209250) 참조 페이지를 볼 수 있습니다.: ContentProperty("Name=Child").
+클래스에 대해 XAML 콘텐츠 속성이 있는 경우 "특성" 섹션에서 클래스에 대한 참조 항목을 참조하세요. [  **ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011)의 값을 찾습니다. 이 특성은 명명된 "Name" 필드를 사용합니다. "Name" 값은 XAML 콘텐츠 속성인 해당 클래스의 속성 이름입니다. 예를 들어 합니다 [ **테두리** ](https://msdn.microsoft.com/library/windows/apps/br209250) 참조 페이지를 볼 수 있습니다.: ContentProperty("Name=Child") 합니다.
 
 한 가지 중요한 XAML 구문 규칙은 요소에 설정한 다른 속성 요소와 XAML 콘텐츠 속성을 함께 사용할 수 없다는 것입니다. XAML 콘텐츠 속성을 전체 속성 요소 앞이나 뒤에 설정해야 합니다. 예를 들어 다음은 잘못된 XAML입니다.
 
@@ -256,9 +256,9 @@ XAML에서 *AttachedPropertyProvider*.*PropertyName* 구문을 사용하여 연�
 
 Windows 런타임 XAML에서는 다음 시나리오를 지원하는 연결된 속성이 표시됩니다.
 
--   레이아웃에서 작동 해야 하는 방법을 부모 컨테이너 패널 자식 요소에 알릴 수 있습니다. [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704), [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/br227651).
--   컨트롤 사용 컨트롤 템플릿에서 제공 되는 중요 한 컨트롤 파트의 동작에 영향을 줄 수 있습니다. [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/br227689).
--   서비스 및 사용 하는 클래스 상속을 공유 하지는 관련된 클래스에서 사용할 수 있는 서비스를 사용 합니다. [**Typography**](https://msdn.microsoft.com/library/windows/apps/hh702143), [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021), [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081), [**ToolTipService**](https://msdn.microsoft.com/library/windows/apps/br227609).
+-   레이아웃에서 작동 해야 하는 방법을 부모 컨테이너 패널 자식 요소에 알릴 수 있습니다. [**캔버스**](https://msdn.microsoft.com/library/windows/apps/br209267)를 [ **그리드**](https://msdn.microsoft.com/library/windows/apps/br242704)를 [ **VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/br227651)합니다.
+-   컨트롤 사용 컨트롤 템플릿에서 제공 되는 중요 한 컨트롤 파트의 동작에 영향을 줄 수 있습니다. [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)하십시오 [ **VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/br227689)합니다.
+-   서비스 및 사용 하는 클래스 상속을 공유 하지는 관련된 클래스에서 사용할 수 있는 서비스를 사용 합니다. [**입력 체계**](https://msdn.microsoft.com/library/windows/apps/hh702143)를 [ **VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021)하십시오 [ **AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081), [ **ToolTipService**](https://msdn.microsoft.com/library/windows/apps/br227609)합니다.
 -   애니메이션 대상으로 합니다. [**스토리 보드**](https://msdn.microsoft.com/library/windows/apps/br210490)합니다.
 
 자세한 내용은 [연결된 속성 개요](attached-properties-overview.md)를 참조하세요.
@@ -304,7 +304,7 @@ XAML 사용 섹션은 또한 다양한 범용 자리 표시자를 사용합니�
 -   *개체* *속성*: *개체* *속성* 조합 하는 경우 표시 되는 구문으로 사용할 수 있는 형식에 대 한 구문에 대 한 프로그램 대부분의 속성에 대 한 특성 값입니다. 예를 들어 합니다 **Xaml 특성 사용** 에 대 한 표시 [ **브러시** ](/uwp/api/Windows.UI.Xaml.Media.Brush) 포함 됩니다: <*개체* *속성*= "*predefinedColorName*" / >
 -   *eventhandler*: 이 이벤트 특성에 대해 표시 된 모든 XAML 구문에 대 한 특성 값으로 표시 됩니다. 여기에서 제공하는 것은 이벤트 처리기 함수의 함수 이름입니다. 이 함수는 XAML 페이지의 코드 숨김에서 정의되어야 합니다. 프로그래밍 수준에서 이 함수는 처리 중인 이벤트의 대리자 서명과 일치해야 합니다. 그렇지 않으면 앱 코드가 컴파일되지 않습니다. 그러나 이는 프로그래밍과 관련된 고려 사항이며, XAML과 관련된 고려 사항이 아니므로 XAML 구문에서 대리자 형식에 대한 암시를 주기 위해 노력하지 않습니다. 이벤트에 대해 구현해야 할 대리자에 대해 알고 싶으면 해당 이벤트에 대한 참조 항목의 **이벤트 정보** 섹션에서 **대리자**라는 레이블의 표 행을 확인할 수 있습니다.
 -   *enumMemberName*: 모든 열거형에 대한 특성 구문에 표시됩니다. 열거형 값을 사용하는 속성에 대한 유사한 자리 표시자기 있지만 일반적으로 열거형의 이름을 암시하는 자리 표시자의 앞에 표시됩니다. 예를 들어 [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716)에 대해 표시된 구문은 <*frameworkElement***FlowDirection**="* flowDirectionMemberName*"/>입니다. 이러한 속성 참조 페이지 중 하나를 보고 있는 경우 **속성 값** 섹션에서 **형식:** 텍스트 옆에 나타나는 열거형 형식의 링크를 클릭하세요. 해당 열거형을 사용하는 속성의 특성 값을 보려면 **멤버** 목록의 **멤버** 열에 나열된 문자열을 사용할 수 있습니다.
--   *double*, *int*, *string*, *bool*: 이들은 XAML 언어에 알려진 기본 형식입니다. C# 또는 Visual Basic을 사용하여 프로그래밍하는 경우 이러한 형식은 Microsoft .NET의 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx), [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) 및 [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx) 등의 형식에 투영됩니다. .NET 코드 숨김에서 XAML로 정의된 값으로 작업할 경우 이러한 .NET 형식의 멤버를 사용할 수 있습니다. C++/CX를 사용하여 프로그래밍할 경우 C++ 기본 형식을 사용하지만 [**Platform**](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) 네임스페이스에 의해 정의된 동일한 형식을 고려할 수 있습니다(예: [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx)). 경우에 따라 특정 속성에 대해 추가 값 제한 사항이 있을 수 있습니다. 그러나 이러한 제한 사항은 코드 사용 및 XAML 사용에 모두 적용되므로 XAML 섹션이 아닌 **속성 값** 섹션 또는 '설명' 섹션에 이러한 내용이 표시됩니다.
+-   *이중*, *int*, *문자열*하십시오 *bool*: 이들은 XAML 언어에 알려진 기본 형식입니다. C# 또는 Visual Basic을 사용하여 프로그래밍하는 경우 이러한 형식은 Microsoft .NET의 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx), [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) 및 [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx) 등의 형식에 투영됩니다. .NET 코드 숨김에서 XAML로 정의된 값으로 작업할 경우 이러한 .NET 형식의 멤버를 사용할 수 있습니다. C++/CX를 사용하여 프로그래밍할 경우 C++ 기본 형식을 사용하지만 [**Platform**](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) 네임스페이스에 의해 정의된 동일한 형식을 고려할 수 있습니다(예: [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx)). 경우에 따라 특정 속성에 대해 추가 값 제한 사항이 있을 수 있습니다. 그러나 이러한 제한 사항은 코드 사용 및 XAML 사용에 모두 적용되므로 XAML 섹션이 아닌 **속성 값** 섹션 또는 '설명' 섹션에 이러한 내용이 표시됩니다.
 
 ## <a name="tips-and-tricks-notes-on-style"></a>스타일에 대한 유용한 정보와 팁, 참고 사항
 

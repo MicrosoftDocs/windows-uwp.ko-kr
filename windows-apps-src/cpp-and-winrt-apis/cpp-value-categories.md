@@ -1,5 +1,5 @@
 ---
-description: 이 항목에서는 c + +에 있는 값의 다양 한 범주를 설명 합니다. Lvalue 및 rvalue에 얘기가 여러분은 밖에도 다른 종류 너무 합니다.
+description: C++에 존재하는 값의 다양한 범주에 대해 설명합니다. 분명히 lvalues와 rvalues에 대해 들어 보았을 것이지만, 다른 종류도 있습니다.
 title: 값 범주 및에 대 한 참조
 ms.date: 08/11/2018
 ms.topic: article
@@ -153,7 +153,7 @@ void bar(A&& a) // a is a named rvalue reference; it's an lvalue.
 A&& get_by_rvalue_ref() { ... } // This unnamed rvalue reference is an xvalue.
 ```
 
-### <a name="im"></a>\!i\&\!m
+### <a name="im"></a>\!필자\&\!m
 Id가 없는 것을 이동할 수 없는 값의 종류에는 아직 설명 하지는 하나의 조합입니다. 하지만 해당 범주에는 c + + 언어의 유용한 아이디어를 하지 않기 때문에, 무시 해도 했습니다.
 
 ## <a name="reference-collapsing-rules"></a>참조 축소 규칙
@@ -189,4 +189,4 @@ template <typename _Ty> void bar(_Ty&& ty) { ... }
 - 참조를 전달 하는 이유 (같은 `_Ty&&`) 존재 됩니다 *하지* 최적화를 위해 있지만 있습니다 통과 하는 데 및 투명 하 고 효율적으로 전달 하도록 합니다. 또는 경우에 쓰기 (밀접 하 게 연구) 라이브러리 코드에 대 한 참조를 전달 발생할 가능성이&mdash;예를 들어 팩터리 함수를 생성자 인수에 전달 합니다.
 
 ## <a name="sources"></a>원본
-* \[Stroustrup 2013\] B. Stroustrup: C + + 프로그래밍 언어, Fourth Edition입니다. Addison-Wesley. 2013.
+* \[Stroustrup 2013\] B. Stroustrup: C + + 프로그래밍 언어, Fourth Edition입니다. Addison-Wesley. 2013입니다.

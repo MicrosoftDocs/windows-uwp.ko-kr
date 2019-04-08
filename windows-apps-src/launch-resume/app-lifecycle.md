@@ -77,7 +77,7 @@ Windows 10 버전 1607에서는 두 개의 자세한 앱 모델 상태를 제공
 
 [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797)  
 [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)  
-[**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799)  [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801)  
+[**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799)[**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801)  
 [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336)  
 [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806)
 
@@ -205,9 +205,9 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 ## <a name="key-application-lifecycle-apis"></a>주요 응용 프로그램 수명 주기 API
 
--   [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) namespace
--   [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766) namespace
--   [**Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865) namespace
+-   [**Windows.ApplicationModel** ](https://msdn.microsoft.com/library/windows/apps/br224691) 네임 스페이스
+-   [**Windows.ApplicationModel.Activation** ](https://msdn.microsoft.com/library/windows/apps/br224766) 네임 스페이스
+-   [**Windows.ApplicationModel.Core** ](https://msdn.microsoft.com/library/windows/apps/br205865) 네임 스페이스
 -   [**Windows.UI.Xaml.Application** ](https://msdn.microsoft.com/library/windows/apps/br242324) 클래스 (XAML)
 -   [**Windows.UI.Xaml.Window** ](https://msdn.microsoft.com/library/windows/apps/br209041) 클래스 (XAML)
 
@@ -215,9 +215,9 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 * [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)
 * [일시 중단 하 고 다시 시작 하는 앱에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [핸들 앱 사전 실행](handle-app-prelaunch.md)
-* [앱 활성화를 처리 합니다.](activate-an-app.md)
-* [핸들 앱 일시 중단](suspend-an-app.md)
+* [앱 사전 실행 처리](handle-app-prelaunch.md)
+* [앱 활성화 처리](activate-an-app.md)
+* [앱 일시 중단 처리](suspend-an-app.md)
 * [앱 다시 시작 처리](resume-an-app.md)
 * [단일 프로세스 모델을 사용 하 여 백그라운드 작업](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)
 * [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)

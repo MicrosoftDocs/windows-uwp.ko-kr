@@ -43,7 +43,7 @@ ms.locfileid: "57607358"
 
 페이지 테이블의 초기 내용은 모든 항목에 대해 **NULL**입니다. 또한 응용 프로그램은 표면의 메모리 콘텐츠에 대한 초기 데이터를 전달할 수 없습니다. 왜냐하면 메모리 백업 없이 시작하기 때문입니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

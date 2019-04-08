@@ -74,7 +74,7 @@ sequencevariabledescriptorpreview <br> sequencevariabledescriptorpreview.descrip
 
 tensorvariabledescriptorpreview <br> tensorvariabledescriptorpreview.datatype <br> tensorvariabledescriptorpreview.description <br> tensorvariabledescriptorpreview.modelfeaturekind <br> tensorvariabledescriptorpreview.name <br> tensorvariabledescriptorpreview.shape
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsaimachinelearningpreviewwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsaimachinelearningpreviewwindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview.windows)
 
 windows.ai.machinelearning.preview
 
@@ -130,7 +130,7 @@ tetheringentitlementchecktrigger <br> tetheringentitlementchecktrigger.tethering
 
 phonecalloriginmanager
 
-### <a name="windowsapplicationmodelcallshttpsdocsmicrosoftcomuwpapiwindowsapplicationmodelcalls"></a>[windows.applicationmodel.calls](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls)
+### <a name="windowsapplicationmodelcallshttpsdocsmicrosoftcomuwpapiwindowsapplicationmodelcalls"></a>[이 windows.applicationmodel.calls](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls)
 
 #### <a name="voipcallcoordinatorhttpsdocsmicrosoftcomuwpapiwindowsapplicationmodelcallsvoipcallcoordinator"></a>[voipcallcoordinator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls.voipcallcoordinator)
 
@@ -262,7 +262,7 @@ displaymonitorphysicalconnectorkind
 
 displaymonitorusagekind
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicesdisplaywindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.devices.display.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicesdisplaywindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.devices.display.windows)
 
 windows.devices.display
 
@@ -312,7 +312,7 @@ gazemovedprevieweventargs <br> gazemovedprevieweventargs.currentpoint <br> gazem
 
 gazepointpreview <br> gazepointpreview.eyegazeposition <br> gazepointpreview.headgazeposition <br> gazepointpreview.hidinputreport <br> gazepointpreview.sourcedevice <br> gazepointpreview.timestamp
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicesinputpreviewwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicesinputpreviewwindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.windows)
 
 windows.devices.input.preview
 
@@ -398,7 +398,7 @@ barcodescannertriggerstate
 
 barcodesymbologyattributesbuilder <br> barcodesymbologyattributesbuilder.barcodesymbologyattributesbuilder <br> barcodesymbologyattributesbuilder.createattributes <br> barcodesymbologyattributesbuilder.ischeckdigittransmissionsupported <br> barcodesymbologyattributesbuilder.ischeckdigitvalidationsupported <br> barcodesymbologyattributesbuilder.isdecodelengthsupported
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicespointofserviceproviderwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.provider.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicespointofserviceproviderwindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.provider.windows)
 
 windows.devices.pointofservice.provider
 
@@ -420,7 +420,7 @@ unifiedposerrordata.unifiedposerrordata
 
 ### <a name="windowsfoundationnumericshttpsdocsmicrosoftcomuwpapiwindowsfoundationnumerics"></a>[windows.foundation.numerics](https://docs.microsoft.com/uwp/api/windows.foundation.numerics)
 
-#### <a name="rationalhttpsdocsmicrosoftcomuwpapiwindowsfoundationnumericsrational"></a>[rational](https://docs.microsoft.com/uwp/api/windows.foundation.numerics.rational)
+#### <a name="rationalhttpsdocsmicrosoftcomuwpapiwindowsfoundationnumericsrational"></a>[유리수](https://docs.microsoft.com/uwp/api/windows.foundation.numerics.rational)
 
 rational
 
@@ -464,7 +464,7 @@ graphicscapturepicker <br> graphicscapturepicker.graphicscapturepicker <br> grap
 
 graphicscapturesession <br> graphicscapturesession.close <br> graphicscapturesession.issupported <br> graphicscapturesession.startcapture
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsgraphicscapturewindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.graphics.capture.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsgraphicscapturewindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.graphics.capture.windows)
 
 windows.graphics.capture
 
@@ -650,7 +650,7 @@ previewbuildsmanager <br> previewbuildsmanager.arepreviewbuildsallowed <br> prev
 
 previewbuildsstate <br> previewbuildsstate.properties
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsmanagementupdatewindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.management.update.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsmanagementupdatewindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.management.update.windows)
 
 windows.management.update
 
@@ -1158,7 +1158,7 @@ storeuninstallstorepackagestatus
 
 ### <a name="windowsstoragefilepropertieshttpsdocsmicrosoftcomuwpapiwindowsstoragefileproperties"></a>[windows.storage.fileproperties](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties)
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsstoragefilepropertieswindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsstoragefilepropertieswindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.windows)
 
 windows.storage.fileproperties
 
@@ -1244,7 +1244,7 @@ diagnosticinvoker.rundiagnosticactionfromstringasync
 
 installeddesktopapp <br> installeddesktopapp.displayname <br> installeddesktopapp.displayversion <br> installeddesktopapp.getinventoryasync <br> installeddesktopapp.id <br> installeddesktopapp.publisher <br> installeddesktopapp.tostring
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowssysteminventorywindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.system.inventory.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowssysteminventorywindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.system.inventory.windows)
 
 windows.system.inventory
 
@@ -1320,7 +1320,7 @@ timezonesettings.autoupdatetimezoneasync
 
 compositorcontroller <br> compositorcontroller.close <br> compositorcontroller.commit <br> compositorcontroller.commitneeded <br> compositorcontroller.compositor <br> compositorcontroller.compositorcontroller <br> compositorcontroller.ensurepreviouscommitcompletedasync
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositioncorewindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.core.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositioncorewindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.core.windows)
 
 windows.ui.composition.core
 
@@ -1330,7 +1330,7 @@ windows.ui.composition.core
 
 desktopwindowtarget <br> desktopwindowtarget.istopmost
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositiondesktopwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.desktop.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositiondesktopwindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.desktop.windows)
 
 windows.ui.composition.desktop
 
@@ -1348,7 +1348,7 @@ compositiondebugoverdrawcontentkinds
 
 compositiondebugsettings <br> compositiondebugsettings.heatmaps <br> compositiondebugsettings.trygetsettings
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositiondiagnosticswindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.diagnostics.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositiondiagnosticswindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.diagnostics.windows)
 
 windows.ui.composition.diagnostics
 
@@ -1442,7 +1442,7 @@ compositionstrokelinejoin
 
 compositionviewbox <br> compositionviewbox.horizontalalignmentratio <br> compositionviewbox.offset <br> compositionviewbox.size <br> compositionviewbox.stretch <br> compositionviewbox.verticalalignmentratio
 
-#### <a name="compositorhttpsdocsmicrosoftcomuwpapiwindowsuicompositioncompositor"></a>[compositor](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositor)
+#### <a name="compositorhttpsdocsmicrosoftcomuwpapiwindowsuicompositioncompositor"></a>[작성자](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositor)
 
 compositor.comment <br> compositor.createbouncescalaranimation <br> compositor.createbouncevector2animation <br> compositor.createbouncevector3animation <br> compositor.createcontainershape <br> compositor.createellipsegeometry <br> compositor.createlinegeometry <br> compositor.createpathgeometry <br> compositor.createpathgeometry <br> compositor.createpathkeyframeanimation <br> compositor.createrectanglegeometry <br> compositor.createroundedrectanglegeometry <br> compositor.createshapevisual <br> compositor.createspriteshape <br> compositor.createspriteshape <br> compositor.createviewbox <br> compositor.globalplaybackrate <br> compositor.maxglobalplaybackrate <br> compositor.minglobalplaybackrate <br> compositor.requestcommitasync
 
@@ -1458,7 +1458,7 @@ pointlight.maxattenuationcutoff <br> pointlight.minattenuationcutoff
 
 shapevisual <br> shapevisual.shapes <br> shapevisual.viewbox
 
-#### <a name="spotlighthttpsdocsmicrosoftcomuwpapiwindowsuicompositionspotlight"></a>[spotlight](https://docs.microsoft.com/uwp/api/windows.ui.composition.spotlight)
+#### <a name="spotlighthttpsdocsmicrosoftcomuwpapiwindowsuicompositionspotlight"></a>[추천](https://docs.microsoft.com/uwp/api/windows.ui.composition.spotlight)
 
 spotlight.maxattenuationcutoff <br> spotlight.minattenuationcutoff
 
@@ -1696,7 +1696,7 @@ refreshvisualizerstate
 
 richeditbox.contentlinkbackgroundcolor <br> richeditbox.contentlinkbackgroundcolorproperty <br> richeditbox.contentlinkchanged <br> richeditbox.contentlinkforegroundcolor <br> richeditbox.contentlinkforegroundcolorproperty <br> richeditbox.contentlinkinvoked <br> richeditbox.contentlinkproviders <br> richeditbox.contentlinkprovidersproperty <br> richeditbox.handwritingview <br> richeditbox.handwritingviewproperty <br> richeditbox.ishandwritingviewenabled <br> richeditbox.ishandwritingviewenabledproperty
 
-#### <a name="textboxhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstextbox"></a>[textbox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox)
+#### <a name="textboxhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstextbox"></a>[텍스트 상자](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox)
 
 textbox.handwritingview <br> textbox.handwritingviewproperty <br> textbox.ishandwritingviewenabled <br> textbox.ishandwritingviewenabledproperty
 
@@ -1772,7 +1772,7 @@ placecontentlinkprovider <br> placecontentlinkprovider.placecontentlinkprovider
 
 ### <a name="windowsuixamlinputhttpsdocsmicrosoftcomuwpapiwindowsuixamlinput"></a>[windows.ui.xaml.input](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input)
 
-#### <a name="focusmanagerhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputfocusmanager"></a>[focusmanager](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager)
+#### <a name="focusmanagerhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputfocusmanager"></a>[참조](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager)
 
 focusmanager.tryfocusasync <br> focusmanager.trymovefocusasync <br> focusmanager.trymovefocusasync
 
@@ -1864,7 +1864,7 @@ webviewcontrolprocesscapabilitystate
 
 webviewcontrolprocessoptions <br> webviewcontrolprocessoptions.enterpriseid <br> webviewcontrolprocessoptions.privatenetworkclientservercapability <br> webviewcontrolprocessoptions.webviewcontrolprocessoptions
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowswebuiinteropwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.web.ui.interop.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowswebuiinteropwindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.web.ui.interop.windows)
 
 windows.web.ui.interop
 
@@ -1938,7 +1938,7 @@ webviewcontrolunviewablecontentidentifiedeventargs <br> webviewcontrolunviewable
 
 webviewcontrolwebresourcerequestedeventargs <br> webviewcontrolwebresourcerequestedeventargs.getdeferral <br> webviewcontrolwebresourcerequestedeventargs.request <br> webviewcontrolwebresourcerequestedeventargs.response
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowswebuiwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.web.ui.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowswebuiwindows"></a>[Windows](https://docs.microsoft.com/uwp/api/windows.web.ui.windows)
 
 windows.web.ui
 

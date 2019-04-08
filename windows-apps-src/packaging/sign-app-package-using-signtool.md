@@ -8,7 +8,7 @@ ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a6d39a78ba73dcb598f209ea48c4b131e375ab6
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57594808"
@@ -32,8 +32,8 @@ ms.locfileid: "57594808"
 
 - **SignTool.exe**  
     SDK 설치 경로에 따라 Windows 10 PC에서 **SignTool**이 있는 위치는 다음과 같습니다.
-    - x86: C:\Program Files (x86)\Windows Kits\10\bin\x86\SignTool.exe
-    - x64: C:\Program Files (x86)\Windows Kits\10\bin\x64\SignTool.exe
+    - x86: C:\Program 파일 (x86) \Windows Kits\10\bin\x86\SignTool.exe
+    - x64: C:\Program 파일 (x86) \Windows Kits\10\bin\x64\SignTool.exe
 
 ## <a name="using-signtool"></a>SignTool 사용하기
 
@@ -124,8 +124,8 @@ SignTool sign /debug [options]
 
 내부 오류 0x8007000B는 일반적으로 다음 값 중 하나에 해당합니다.
 
-| **이벤트 ID** | **이벤트 문자열의 예** | **Suggestion** |
+| **이벤트 ID** | **이벤트 문자열의 예** | **제안** |
 |--------------|--------------------------|----------------|
-| 150          | error 0x8007000B: 앱 매니페스트 게시자 이름 (CN = Contoso) 서명 인증서의 주체 이름과 일치 해야 합니다 (CN = Contoso, C = US)입니다. | 앱 매니페스트 게시자 이름이 서명의 주체 이름과 정확히 일치해야 합니다.               |
-| 151          | error 0x8007000B: 서명 해시 방법 지정된 (SHA512) 앱 패키지 블록 맵에 (SHA256)에 사용 된 해시 메서드가 일치 해야 합니다.     | /fd 매개 변수에 지정된 해시 알고리즘이 잘못되었습니다. 앱 패키지 블록 맵(앱 패키지를 만드는 데 사용)과 일치하는 해시 알고리즘을 사용하여 **SignTool**을 다시 실행합니다.  |
-| 152          | error 0x8007000B: 해당 블록 맵에 대 한 앱 패키지 콘텐츠를 확인 해야 합니다.                                                           | 앱 패키지가 손상되었으며 앱 패키지를 다시 빌드하여 새 블록 앱을 생성해야 합니다. 앱 패키지를 만드는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구로 앱 패키지 만들기](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요. |
+| 150          | 0x8007000B 오류: 앱 매니페스트 게시자 이름 (CN = Contoso) 서명 인증서의 주체 이름과 일치 해야 합니다 (CN = Contoso, C = US)입니다. | 앱 매니페스트 게시자 이름이 서명의 주체 이름과 정확히 일치해야 합니다.               |
+| 151          | 0x8007000B 오류: 서명 해시 방법 지정된 (SHA512) 앱 패키지 블록 맵에 (SHA256)에 사용 된 해시 메서드가 일치 해야 합니다.     | /fd 매개 변수에 지정된 해시 알고리즘이 잘못되었습니다. 앱 패키지 블록 맵(앱 패키지를 만드는 데 사용)과 일치하는 해시 알고리즘을 사용하여 **SignTool**을 다시 실행합니다.  |
+| 152          | 0x8007000B 오류: 해당 블록 맵에 대 한 앱 패키지 콘텐츠를 확인 해야 합니다.                                                           | 앱 패키지가 손상되었으며 앱 패키지를 다시 빌드하여 새 블록 앱을 생성해야 합니다. 앱 패키지를 만드는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구로 앱 패키지 만들기](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요. |

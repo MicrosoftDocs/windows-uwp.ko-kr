@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57603278"
 ---
-# <a name="getting-started-what-next"></a>시작 하기: 그 다음에 무엇을 해야 합니까?
+# <a name="getting-started-what-next"></a>시작: 그 다음에 무엇을 해야 합니까?
 
 
 ## <a name="next-steps"></a>다음 단계

@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 72e0941bb42a2a507af652758432ce51212c1042
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57592658"

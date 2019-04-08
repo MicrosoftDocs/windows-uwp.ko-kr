@@ -242,5 +242,5 @@ WinDbg에서 자주 사용하는 명령 중 하나는 다음을 포함하여 현
 모든 WinDbg 명령의 전체 목록은 [디버거 명령](https://msdn.microsoft.com/library/ff540507)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
-- [테스트 및 디버깅 도구에 대 한 관리 PLM (프로세스 수명)](testing-debugging-plm.md)
+- [PLM(프로세스 수명 관리) 테스트 및 디버깅 도구](testing-debugging-plm.md)
 - [디버깅, 테스트 및 성능](index.md)

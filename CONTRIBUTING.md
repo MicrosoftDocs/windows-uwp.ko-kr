@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2089f9fcd54989234b52f95eb3ee9535f9b3ede3
+ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57603118"
+---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>UWP 개념 문서에 기여
 
 UWP(유니버설 Windows 플랫폼) 문서에 대한 관심에 감사 드립니다! 우리의 문서에 대한 피드백, 편집, 및 추가해주셔서 감사합니다.

@@ -152,6 +152,6 @@ ms.locfileid: "57653218"
 
 ## <a name="related-topics"></a>관련 항목
 - [UWP 앱에 대 한 타일](../design/shell/tiles-and-notifications/creating-tiles.md)
-- [Windows 푸시 알림 서비스 (WNS) 개요](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)
+- [WNS(Windows 푸시 알림 서비스) 개요](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)
 - [알림 시각화 도우미 앱](https://www.microsoft.com/store/apps/9nblggh5xsl1)
-- [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | registerNotificationChannelAsync() method](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync)
+- [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | registerNotificationChannelAsync() 메서드](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync)

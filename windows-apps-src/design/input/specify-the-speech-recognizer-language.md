@@ -20,7 +20,7 @@ ms.locfileid: "57593838"
 
 음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다.
 
-> **중요 한 Api**: [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251), [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250), [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804)
+> **중요 API**: [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)하십시오 [ **SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)하십시오 [ **언어**](https://msdn.microsoft.com/library/windows/apps/br206804)
 
 
 여기에서는 시스템에 설치된 언어를 열거하고 기본 언어를 확인하고 인식에 다른 언어를 선택합니다.

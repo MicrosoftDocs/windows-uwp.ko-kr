@@ -42,7 +42,7 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 | 네덜란드     | KPN / Telfort                    |
 | 노르웨이          | Telenor / Talkmore, Telia / OneCall   |
 | 폴란드          | 주황, 재생                     |
-| 싱가포르       | M1 Limited, StarHub              |
+| 싱가포르       | M1 제한 되어 StarHub              |
 | 슬로바키아        | Slovak Telekom                   |
 | 스페인           | Orange                           |
 | 스웨덴          | Telenor, 3                       |

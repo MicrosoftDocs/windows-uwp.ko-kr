@@ -7,7 +7,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 691ce1cc0c49154142a52f329af6f2a1df4ae027
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57591528"
@@ -111,8 +111,8 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 
 패널 컨트롤 | 설명
 --------------|------------
-[**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) | **Canvas**는 유동 UI를 지원하지 않으며 개발자가 자식 요소의 위치 지정 및 크기 조정과 관련한 모든 측면을 제어합니다. 일반적으로 이 컨트롤은 그래픽 만들기와 같은 특수한 경우에 사용하거나 더 큰 적응형 UI의 작은 고정 영역을 정의하는 데 사용합니다. 코드나 시각적 상태를 사용하여 런타임 시 요소의 위치를 변경할 수 있습니다.<li>요소가 Canvas.Top 및 Canvas.Left 연결된 속성을 사용하여 절대 위치의 위치가 지정됩니다.</li><li>계층화는 Canvas.ZIndex 연결된 속성을 사용하여 명시적으로 지정할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 콘텐츠에 맞게 조정됩니다.</li><li>자식 콘텐츠가 패널보다 더 크면 시각적으로 잘리지 않습니다. </li><li>자식 콘텐츠가 패널 범위에 의해 제한되지 않습니다.</li>
-[**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) | **Grid**는 자식 요소의 유동 크기 조정을 지원합니다. 코드나 시각적 상태를 사용하여 요소의 위치를 변경하고 재배치할 수 있습니다.<li>요소가 Grid.Row 및 Grid.Column 연결된 속성을 사용하여 행과 열에 배열됩니다.</li><li>연결 속성인 Grid.RowSpan 및 Grid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 유지됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 늘어나서 그리드 셀의 사용 가능한 공간을 채웁니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
+[**캔버스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) | **Canvas**는 유동 UI를 지원하지 않으며 개발자가 자식 요소의 위치 지정 및 크기 조정과 관련한 모든 측면을 제어합니다. 일반적으로 이 컨트롤은 그래픽 만들기와 같은 특수한 경우에 사용하거나 더 큰 적응형 UI의 작은 고정 영역을 정의하는 데 사용합니다. 코드나 시각적 상태를 사용하여 런타임 시 요소의 위치를 변경할 수 있습니다.<li>요소가 Canvas.Top 및 Canvas.Left 연결된 속성을 사용하여 절대 위치의 위치가 지정됩니다.</li><li>계층화는 Canvas.ZIndex 연결된 속성을 사용하여 명시적으로 지정할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 콘텐츠에 맞게 조정됩니다.</li><li>자식 콘텐츠가 패널보다 더 크면 시각적으로 잘리지 않습니다. </li><li>자식 콘텐츠가 패널 범위에 의해 제한되지 않습니다.</li>
+[**표**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) | **Grid**는 자식 요소의 유동 크기 조정을 지원합니다. 코드나 시각적 상태를 사용하여 요소의 위치를 변경하고 재배치할 수 있습니다.<li>요소가 Grid.Row 및 Grid.Column 연결된 속성을 사용하여 행과 열에 배열됩니다.</li><li>연결 속성인 Grid.RowSpan 및 Grid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 유지됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 늘어나서 그리드 셀의 사용 가능한 공간을 채웁니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
 [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) | <li>요소가 패널 가장자리 또는 중심과 서로를 기준으로 정렬됩니다.</li><li>패널 맞춤, 형제 맞춤 및 형제 위치를 제어하는 다양한 연결된 속성을 사용하여 요소의 위치가 지정됩니다. </li><li>맞춤에 대한 RelativePanel 연결된 속성으로 늘이기가 발생하지 않는 경우(예를 들어 요소가 패널의 오른쪽과 왼쪽 가장자리에 배열되는 경우) HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기가 명시적으로 설정되지 않아 늘어나지 않는 경우에는 콘텐츠에 맞게 조정됩니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) |<li>요소가 세로 또는 가로로 한 줄에 스택 형태로 쌓입니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 Orientation 속성의 반대 방향으로 유지됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 늘려서 사용 가능한 너비(또는 Orientation이 Horizontal인 경우에는 높이)를 채웁니다. Orientation 속성에서 지정된 방향으로 요소가 해당 콘텐츠에 맞게 크기가 조정됩니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 Orientation 속성에서 지정된 방향의 패널 범위에 의해 제한되지 않으므로 스크롤 가능한 콘텐츠가 패널 범위 이상으로 늘어나고 스크롤 막대는 표시하지 않습니다. 스크롤 막대를 표시하려면 자식 콘텐츠의 높이나 너비를 명시적으로 제한해야 합니다.</li>
 [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) |<li>요소가 행이나 열 형태로 배열되며 MaximumRowsOrColumns 값에 도달할 경우 새 행이나 열로 자동 줄 바꿈됩니다.</li><li>요소를 행으로 배치할지 열로 배치할지 여부는 Orientation 속성을 통해 지정됩니다.</li><li>연결 속성인 VariableSizedWrapGrid.RowSpan 및 VariableSizedWrapGrid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기는 ItemHeight 및 ItemWidth 속성에 지정된 대로 조정됩니다. 이러한 속성이 설정되지 않은 경우 첫 번째 셀의 항목이 해당 콘텐츠에 맞게 크기가 조정된 다음 다른 모든 셀은 이 크기를 상속합니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
@@ -356,7 +356,7 @@ MainPage.xaml이라는 파일에 대한 예를 살펴보겠습니다. 태블릿 
 
 **폴더 이름 사용**
 
-폴더를 사용하여 Visual Studio 프로젝트에서 보기를 구성하려면 폴더에 한정자 이름을 사용하면 됩니다. 이렇게 하려면 다음과 같은 폴더 이름: DeviceFamily-*[qualifierString]*. 이 경우 각 XAML 보기 파일의 이름이 같습니다. 파일 이름에는 한정자를 포함하지 마세요.
+폴더를 사용하여 Visual Studio 프로젝트에서 보기를 구성하려면 폴더에 한정자 이름을 사용하면 됩니다. 이렇게 하려면 다음과 같은 폴더 이름: DeviceFamily-*[qualifierString]* 합니다. 이 경우 각 XAML 보기 파일의 이름이 같습니다. 파일 이름에는 한정자를 포함하지 마세요.
 
 다음 예제에서도 MainPage.xaml이라는 파일을 사용합니다. 태블릿 장치에 대한 보기를 만들려면 "DeviceFamily-Tablet"이라는 폴더를 만들고 MainPage.xaml이라는 XAML 보기를 배치합니다. PC 장치에 대한 보기를 만들려면 "DeviceFamily-Desktop"이라는 폴더를 만들고 MainPage.xaml이라는 다른 XAML 보기를 배치합니다. Visual Studio에서 해당 솔루션이 다음과 같이 보입니다.
 

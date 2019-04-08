@@ -21,7 +21,7 @@ ms.locfileid: "57594998"
 
 이 항목은 다음과 같은 섹션으로 구성되어 있습니다.
 
--   [Technologies](#technologies)
+-   [기술](#technologies)
 -   [요구 사항](#requirements)
 -   [뷰 코드 (c + +)](#view-the-code-c)
 

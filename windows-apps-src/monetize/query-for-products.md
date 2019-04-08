@@ -59,7 +59,7 @@ Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클�
 | modifiedAfter     | 날짜/시간     | 지정한 경우 서비스는 이 날짜 이후 수정된 제품만 반환합니다.        | 아니오       |
 | parentProductId   | 문자열       | 지정한 경우 서비스는 지정된 앱에 해당하는 추가 기능만 반환합니다.      | 아니오       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | 지정한 경우 서비스는 제공된 제품/SKU 쌍에 해당하는 제품만 반환합니다. 자세한 내용은 아래 표를 참조하세요.      | 아니오       |
-| productTypes      | list&lt;string&gt;       | 쿼리 결과에 반환할 제품 유형을 지정 합니다. 지원 되는 제품 유형은 **Application**, **Durable**, 및 **UnmanagedConsumable**입니다.     | 예       |
+| productTypes      | 목록&lt;문자열&gt;       | 쿼리 결과에 반환할 제품 유형을 지정 합니다. 지원 되는 제품 유형은 **Application**, **Durable**, 및 **UnmanagedConsumable**입니다.     | 예       |
 | validityType      | 문자열       | **All**로 설정된 경우 만료된 항목을 포함하여 사용자의 모든 제품이 반환됩니다. **Valid**로 설정된 경우 이 시점에 유효한 제품만 반환됩니다(즉, 현재 활성 상태인 제품, 시작 날짜가 &lt;지금 이전인 제품, 종료 날짜가 &gt;지금 이후인 제품이 있습니다). | 아니오       |
 
 

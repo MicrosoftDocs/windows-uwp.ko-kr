@@ -31,7 +31,7 @@ ms.locfileid: "57592138"
 
 > [!NOTE]
 > "근접" 필터 값이 물리적 근접도를 보증하지는 않습니다. 신뢰할 수 있는 물리적 접근성이 필요한 시나리오의 경우 필터에 [**RemoteSystemDiscoveryType.SpatiallyProximal**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemdiscoverytype) 값을 사용합니다. 현재 이 필터는 Bluetooth로 검색되는 장치만 허용합니다. 물리적 근접성을 보증하는 새로운 검색 메커니즘과 프로토콜이 지원됨에 따라 여기에도 이들이 포함됩니다.  
-또한의 속성을 [ **RemoteSystem** ](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) 물리적 근접성 내에서 검색된 된 장치 사실 인지 여부를 나타내는 클래스: [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity).
+또한의 속성을 [ **RemoteSystem** ](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) 물리적 근접성 내에서 검색된 된 장치 사실 인지 여부를 나타내는 클래스: [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity)합니다.
 
 > [!NOTE]
 > (검색 유형 필터 선택에 의해 결정된)로컬 네트워크를 통해 장치를 검색하려는 경우, 네트워크는 "비공개" 또는 "도메인" 프로필을 사용해야 합니다. 디바이스는 "공용" 네트워크를 통해 다른 디바이스를 검색하지 않습니다.

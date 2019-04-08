@@ -32,5 +32,5 @@ Xbox One은 유니버설 Windows 플랫폼에서 실행됩니다. 즉, 다른 Mi
 시작하려면 선택한 엔진을 다운로드하고 Windows 10 앱에 대한 지침을 확인합니다. 또한 [시작 가이드](getting-started.md)를 읽고 콘솔을 개발 키트로 전환하는 방법과 Visual Studio에서 배포하는 방법에 대한 자세한 내용을 파악해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
-- [기존 게임을 Xbox에 가져오기](development-lanes-landing.md)
+- [기존 게임을 Xbox로 가져오기](development-lanes-landing.md)
 - [Xbox One에서 UWP](index.md)

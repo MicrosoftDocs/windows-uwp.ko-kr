@@ -8,7 +8,7 @@ keywords: Windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: 24ec2013735597efae73aee31bb4aee1a8e1413e
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57594988"
@@ -29,7 +29,7 @@ Microsoft Store Services SDK는 현재 UWP 앱에 대해 다음과 같은 시나
 |  시나리오  |  설명   |
 |------------|----------------|
 |  [사용 하 여 UWP 앱에서 실험을 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)    |  UWP(유니버설 Windows 플랫폼) 앱에서 A/B 테스트를 실행하여, 모든 고객에게 기능을 릴리스하기 전에 일부 고객에 대한 기능의 효과를 측정합니다. 파트너 센터에서 실험을 정의한 후 사용 합니다 [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 클래스를 테스트 하는 기능의 동작을 수정 하려면이 데이터를 사용 하는 앱에서 실험에 대 한 변형 가져오려고 하 고 사용 하 여는 [LogForVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) 파트너 센터에 뷰 이벤트 및 변환 이벤트를 보내기 위한 메서드. 마지막으로 결과 보고 실험을 관리 하려면 파트너 센터를 사용 합니다.  |
-|  [UWP 앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)    |  UWP 앱에서 [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 클래스를 사용하여 문제, 제안 및 좋아요를 제출할 수 있는 피드백 허브로 Windows 10 고객을 안내합니다. 그런 다음에서이 피드백을 관리 합니다 [피드백 보고서](../publish/feedback-report.md) 파트너 센터에서. |
+|  [UWP 앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)    |  UWP 앱에서 [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 클래스를 사용하여 문제, 제안 및 좋아요를 제출할 수 있는 피드백 허브로 Windows 10 고객을 안내합니다. 그런 다음, 파트너 센터의 [피드백 보고서](../publish/feedback-report.md)에서 이 피드백을 관리합니다. |
 |  [파트너 센터 푸시 알림을 받도록 UWP 앱 구성](configure-your-app-to-receive-dev-center-notifications.md)    |  사용 된 [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) 파트너 센터를 사용 하 여 고객에 게 전송 하는 대상된 푸시 알림을 받도록 앱을 등록 하 여 UWP 앱의 클래스입니다.  |
 |   [파트너 센터에서 사용 현황 보고서에 대 한 UWP 앱에서 사용자 지정 이벤트 로그](log-custom-events-for-dev-center.md)   |  사용 된 [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 파트너 센터에서 앱과 연결 된 사용자 지정 이벤트를 기록 하 여 UWP 앱의 클래스입니다. 그런 다음 사용자 지정 이벤트에 대 한 총 발생 횟수를 검토 합니다 **사용자 지정 이벤트** 섹션을 [사용 현황 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report) 파트너 센터에서.  |
 
@@ -142,4 +142,4 @@ Microsoft Store Services SDK의 Microsoft.Services.Store.Engagement.dll 라이�
 * [A/B 테스트를 통한 실험 수행](run-app-experiments-with-a-b-testing.md)
 * [앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)
 * [파트너 센터 푸시 알림을 받도록 앱 구성](configure-your-app-to-receive-dev-center-notifications.md)
-* [파트너 센터에 대 한 사용자 지정 이벤트 로그](log-custom-events-for-dev-center.md)
+* [파트너 센터의 사용자 지정 이벤트 로깅](log-custom-events-for-dev-center.md)

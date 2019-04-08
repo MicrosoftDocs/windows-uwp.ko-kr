@@ -85,5 +85,5 @@ ms.locfileid: "57651778"
 이전에 Xbox One 본체가 정품 모드로 되돌아가지 않았으면 [정품 모드로 전환](#switch-to-retail-mode)에 설명된 것처럼 지금 전환합니다.
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox 개발자 모드 활성화](devkit-activation.md)
+- [Xbox One 개발자 모드 활성화](devkit-activation.md)
 - [Xbox One에서 UWP](index.md)

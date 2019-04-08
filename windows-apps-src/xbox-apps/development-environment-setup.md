@@ -121,7 +121,7 @@ Xbox One에 앱을 배포하려면 먼저 사용자가 본체에 로그인되어
 축하합니다. Xbox에서 첫 UWP 앱을 성공적으로 만들고 배포했습니다.
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox 개발자 모드 활성화](devkit-activation.md)  
+- [Xbox One 개발자 모드 활성화](devkit-activation.md)  
 - [Windows 10 용 다운로드 및 도구](https://dev.windows.com/downloads)  
 - [Windows 참가자 프로그램](https://go.microsoft.com/fwlink/?LinkId=780552)  
 - [Xbox One 도구 소개](introduction-to-xbox-tools.md) 

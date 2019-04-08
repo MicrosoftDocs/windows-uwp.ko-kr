@@ -28,7 +28,7 @@ IAB 가시성 지침과 맞추어, 배너 광고 노출은 다음 조건을 충�
 
 가시성은 다음 공식에 따라 계산됩니다.
 
-**Viewability = [Viewed impressions] * 100 / [ Total ad impressions]**
+**가시성 [로 보기 인상] = * 100 / [광고 노출을 총]**
 
 ## <a name="guidelines-to-improve-ad-unit-viewability"></a>광고 단위 가시성을 개선하기 위한 지침
 

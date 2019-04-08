@@ -8,7 +8,7 @@ keywords: windows 10, uwp. 앱에서 바로 구매, IAP, 영수증, Windows.Appl
 ms.localizationpriority: medium
 ms.openlocfilehash: 9449a2dd265128a83f7840872ce4995df05a4e78
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57605728"
@@ -146,8 +146,8 @@ ms.locfileid: "57605728"
 |-------------|-------------------|
 |  **Id**  |    구매를 식별합니다.           |
 |  **AppId**  |     사용자가 구매를 수행한 앱을 식별합니다.           |
-|  **ProductId**  |     구매한 제품을 식별합니다.           |
-|  **ProductType**  |    제품 유형을 결정합니다. 현재 **Durable** 값만 지원합니다.          |  
+|  **productId**  |     구매한 제품을 식별합니다.           |
+|  **productType**  |    제품 유형을 결정합니다. 현재 **Durable** 값만 지원합니다.          |  
 |  **PurchaseDate**  |    구매가 발생한 날짜입니다.          |  |
 
  

@@ -1,7 +1,7 @@
 ---
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: Windows 앱 인증 키트
-description: Microsoft Store 게시 되 고 있는 확률이 앱을 제공 하거나 유효성을 검사 하 고 인증을 위해 제출 하기 전에 로컬로 테스트할 Windows 인증을 받기. 이 항목에서는 Windows 앱 인증 키트를 설치하고 실행하는 방법을 보여 줍니다.
+description: 앱이 Microsoft Store에 게시되거나 Windows Certified를 획득할 수 있는 가장 좋은 기회를 제공하려면 앱을 제출하여 인증을 받기 전에 로컬로 유효성을 검사하고 테스트합니다. 이 항목에서는 Windows 앱 인증 키트를 설치하고 실행하는 방법을 보여 줍니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10 uwp 앱 인증

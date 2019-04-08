@@ -100,10 +100,10 @@ Windows 앱 서비스는 UWP 앱의 다른 유니버설 Windows 앱에 서비스
 
 ## <a name="see-also"></a>참고 항목
 
-[만들기 및 app service를 사용 합니다.](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
+[앱 서비스 만들기 및 사용](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
 [자산 패키지 소개](../packaging/asset-packages.md)  
 [패키지 레이아웃을 사용 하 여 패키지 만들기](../packaging/packaging-layout.md)  
-[선택적 패키지 및 관련된 집합 작성](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)  
+[선택형 패키지 및 관련 세트 제작](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)  
 [자산 패키지 및 패키지 접기를 사용 하 여 개발](../packaging/package-folding.md)  
 [UWP 앱 스트리밍 설치](https://docs.microsoft.com/windows/uwp/packaging/streaming-install)  
 [플랫 번들 앱 패키지](../packaging/flat-bundles.md)  

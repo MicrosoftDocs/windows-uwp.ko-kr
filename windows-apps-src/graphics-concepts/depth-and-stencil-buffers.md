@@ -19,7 +19,7 @@ ms.locfileid: "57662128"
 
 *깊이 버퍼*는 깊이 정보를 저장하여 다각형의 어떤 부분이 시야에서 숨겨지지 않고 렌더링될지 제어합니다. *스텐실 버퍼*는 이미지에서 픽셀을 마스킹하여 합성, 디스케일링, 디졸브, 페이드, 스와이프, 아웃라인과 실루엣, 양면 스텐실 등 특수 효과를 내는 데 사용됩니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

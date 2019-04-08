@@ -58,7 +58,7 @@ ms.locfileid: "57595568"
 </div>
 <div> 
 </div></td>
-<td align="left">ms-people:viewcontact?ContactId=&lt;contactid&gt;&amp;AggregatedId=&lt;aggid&gt;&amp;PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;&amp;Contact=&lt;contactobj&gt;</td>
+<td align="left">ms-사람: viewcontact? ContactId =&lt;contactid&gt;&amp;AggregatedId =&lt;aggid&gt;&amp;PhoneNumber = &lt;phonenum&gt;&amp;전자 메일 =&lt;전자 메일 &gt; &amp;ContactName =&lt;이름&gt;&amp;연락처 =&lt;contactobj&gt;</td>
 </tr>
 <tr class="odd">
 <td align="left">피플 앱 내의 대화 상대 저장 페이지를 실행하여 제공된 전화 번호 또는 메일 주소와 함께 지정된 연락처를 저장합니다.
@@ -133,7 +133,7 @@ ms.locfileid: "57595568"
 <td align="left"><p>ms-people:viewcontact?ContactId={ContactId}</p></td>
 </tr>
 <tr class="even">
-<td align="left"><b>PhoneNumber</b></td>
+<td align="left"><b>전화 번호</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 전화 번호입니다.</p></td>
 <td align="left"><p>ms-people:viewcontact?PhoneNumber=%2014257069326</p></td>
@@ -176,7 +176,7 @@ ms.locfileid: "57595568"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><b>PhoneNumber</b></td>
+<td align="left"><b>전화 번호</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 전화 번호입니다.</p></td>
 <td align="left"><p>ms-people:savetocontact?PhoneNumber=%2014257069326</p></td>
@@ -219,7 +219,7 @@ ms.locfileid: "57595568"
 
 </tr>
 <tr class="even">
-<td align="left"><b>FirstName</b></td>
+<td align="left"><b>firstName</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 이름입니다.</p></td>
 </tr>
@@ -255,7 +255,7 @@ ms.locfileid: "57595568"
 
 </tr>
 <tr class="even">
-<td align="left"><b>HomePhone</b></td>
+<td align="left"><b>homePhone</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 집 전화 번호입니다.</p></td>
 </tr>
@@ -267,13 +267,13 @@ ms.locfileid: "57595568"
 </tr>
 
 <tr class="even">
-<td align="left"><b>LastName</b></td>
+<td align="left"><b>lastName</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 성입니다.</p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><b>MiddleName</b></td>
+<td align="left"><b>middleName</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 중간 이름입니다.</p></td>
 </tr>
@@ -309,13 +309,13 @@ ms.locfileid: "57595568"
 </tr>
 
 <tr class="odd">
-<td align="left"><b>Suffix</b></td>
+<td align="left"><b>접미사</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 호칭입니다.</p></td>
 </tr>
 
 <tr class="even">
-<td align="left"><b>Title</b></td>
+<td align="left"><b>제목</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 직함입니다.</p></td>
 </tr>
@@ -357,13 +357,13 @@ ms.locfileid: "57595568"
 </tr>
 
 <tr class="odd">
-<td align="left"><b>WorkEmail</b></td>
+<td align="left"><b>회사 메일</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 회사 전자 메일입니다.</p></td>
 </tr>
 
 <tr class="even">
-<td align="left"><b>WorkPhone</b></td>
+<td align="left"><b>근무처 전화 번호</b></td>
 <td align="left"><p>선택 사항.</p>
 <p>연락처의 회사 전화 번호입니다.</p></td>
 </tr>

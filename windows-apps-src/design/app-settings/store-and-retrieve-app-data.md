@@ -33,9 +33,9 @@ ms.locfileid: "57602678"
     앱 설정에 사용할 수 있는 데이터 형식은 다음과 같습니다.
 
     -   **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
-    -   **Boolean**
+    -   **부울**
     -   **Char16**, **String**
-    -   [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576), [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996)
+    -   [**날짜/시간**](https://msdn.microsoft.com/library/windows/apps/br206576)하십시오 [ **TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996)
     -   **GUID**, [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)
     -   [**ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588): 직렬화 및 역직렬화를 원자 단위로 해야 하는 관련된 앱 설정의 집합. 상호 의존적인 설정의 원자성 업데이트를 쉽게 처리하려면 복합 설정을 사용합니다. 시스템은 동시 액세스 및 로밍 중에 복합 설정의 무결성을 보장합니다. 복합 설정은 소량의 데이터에 최적화되어 있으며 대규모 데이터 집합에 사용할 경우에는 성능이 저하됩니다.
 -   **파일**

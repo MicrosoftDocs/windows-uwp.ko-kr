@@ -11,7 +11,7 @@ f1_keywords:
 ms.localizationpriority: medium
 ms.openlocfilehash: f2e89490a76c9174c1e938466bf1fbcc9cc13455
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57599138"

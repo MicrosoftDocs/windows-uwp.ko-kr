@@ -36,8 +36,8 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 | 옵션 | 메서드 | 설명 |
 |--------|--------|-------------|
 | 기본 시작 | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. |
-| 연결 프로그램 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | 사용자가 연결 프로그램 대화 상자를 통해 처리기를 선택하여 지정된 파일을 시작합니다. |
-| 권장 앱 폴백으로 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 처리기가 시스템에 설치되어 있지 않으면 스토어의 앱을 사용자에게 권장합니다. |
+| 연결 프로그램 시작 | [**LaunchFileAsync (IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | 사용자가 연결 프로그램 대화 상자를 통해 처리기를 선택하여 지정된 파일을 시작합니다. |
+| 권장 앱 폴백으로 시작 | [**LaunchFileAsync (IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 처리기가 시스템에 설치되어 있지 않으면 스토어의 앱을 사용자에게 권장합니다. |
 | 원하는 유지 보기로 시작 | [**(IStorageFile, LauncherOptions) LaunchFileAsync** ](https://msdn.microsoft.com/library/windows/apps/hh701465) (Windows 전용) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 시작한 후 화면에 유지되도록 기본 설정을 지정하고 특정 창 크기를 요청합니다. [**LauncherOptions.DesiredRemainingView** ](https://msdn.microsoft.com/library/windows/apps/dn298314) 모바일 장치 제품군에서 지원 되지 않습니다. |
 
 ### <a name="default-launch"></a>기본 시작
@@ -554,7 +554,7 @@ void MainPage::DefaultLaunch()
 
 ### <a name="tasks"></a>작업
 
-* [URI에 대 한 기본 앱 시작](launch-default-app.md)
+* [URI에 대한 기본 앱 실행](launch-default-app.md)
 * [파일 활성화 처리](handle-file-activation.md)
 
 ### <a name="guidelines"></a>지침

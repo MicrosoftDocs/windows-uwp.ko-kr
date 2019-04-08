@@ -235,7 +235,7 @@ ms.locfileid: "57590578"
 <td align="left">FLOAT</td>
 <td align="left"><p>특정 고정 소수점 표현이 부동 소수점으로 변환되면 총 24비트의 정보를 포함하지 않으며, 23비트를 넘는 소수 부분이 포함되지 않습니다. i.f 형식(i 비트 정수, f 비트 소수점)인 고정 소수점 숫자 fxp를 가정해 보겠습니다. 부동 소수점으로의 변환은 다음 가상 코드와 유사합니다.</p>
 <p>부동 소수점 결과 = (float)(fxp &gt;&gt; f) + // 정수 추출</p>
-((float)(fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); // extract fraction</td>
+((float) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); / / 분수를 추출</td>
 </tr>
 </tbody>
 </table>

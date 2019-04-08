@@ -95,18 +95,18 @@ Windows.Gaming.Input 네임스페이스에서 지원하는 모든 입력 장치�
 
 | 탐색 명령 | 게임 패드 입력          | 아케이드 스틱 입력 | 레이싱 휠 입력    |
 | ------------------:| ---------------------- | ------------------ | --------------------- |
-|             PageUp | 왼쪽 트리거           | _지원 되지 않음_    | _varies_              |
-|           PageDown | 오른쪽 트리거          | _지원 되지 않음_    | _varies_              |
-|           PageLeft | 왼쪽 범퍼            | _지원 되지 않음_    | _varies_              |
-|          PageRight | 오른쪽 범퍼           | _지원 되지 않음_    | _varies_              |
-|           ScrollUp | 오른쪽 섬스틱(thumbstick) 위쪽    | _지원 되지 않음_    | _varies_              |
-|         ScrollDown | 오른쪽 섬스틱(thumbstick) 아래쪽  | _지원 되지 않음_    | _varies_              |
-|         ScrollLeft | 오른쪽 섬스틱(thumbstick) 왼쪽  | _지원 되지 않음_    | _varies_              |
-|        ScrollRight | 오른쪽 섬스틱(thumbstick) 오른쪽 | _지원 되지 않음_    | _varies_              |
+|             PageUp | 왼쪽 트리거           | _지원 되지 않음_    | _달라 집니다._              |
+|           PageDown | 오른쪽 트리거          | _지원 되지 않음_    | _달라 집니다._              |
+|           PageLeft | 왼쪽 범퍼            | _지원 되지 않음_    | _달라 집니다._              |
+|          PageRight | 오른쪽 범퍼           | _지원 되지 않음_    | _달라 집니다._              |
+|           ScrollUp | 오른쪽 섬스틱(thumbstick) 위쪽    | _지원 되지 않음_    | _달라 집니다._              |
+|         ScrollDown | 오른쪽 섬스틱(thumbstick) 아래쪽  | _지원 되지 않음_    | _달라 집니다._              |
+|         ScrollLeft | 오른쪽 섬스틱(thumbstick) 왼쪽  | _지원 되지 않음_    | _달라 집니다._              |
+|        ScrollRight | 오른쪽 섬스틱(thumbstick) 오른쪽 | _지원 되지 않음_    | _달라 집니다._              |
 |           Context1 | X 버튼               | _지원 되지 않음_    | X 버튼(_일반적_) |
 |           Context2 | Y 버튼               | _지원 되지 않음_    | Y 버튼(_일반적_) |
-|           Context3 | 왼쪽 섬스틱(thumbstick) 누름  | _지원 되지 않음_    | _varies_              |
-|           Context4 | 오른쪽 섬스틱(thumbstick) 누름 | _지원 되지 않음_    | _varies_              |
+|           Context3 | 왼쪽 섬스틱(thumbstick) 누름  | _지원 되지 않음_    | _달라 집니다._              |
+|           Context4 | 오른쪽 섬스틱(thumbstick) 누름 | _지원 되지 않음_    | _달라 집니다._              |
 
 
 ## <a name="detect-and-track-ui-navigation-controllers"></a>UI 탐색 컨트롤러 검색 및 추적

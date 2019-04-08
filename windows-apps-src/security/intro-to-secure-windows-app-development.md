@@ -472,8 +472,8 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 -   [인증서](certificates.md)
 -   [암호화 키](cryptographic-keys.md)
 -   [데이터 보호](data-protection.md)
--   [Mac, 해시 및 서명에](macs-hashes-and-signatures.md)
--   [암호화에 대 한 내보내기 제한](export-restrictions-on-cryptography.md)
+-   [MAC, 해시, 서명](macs-hashes-and-signatures.md)
+-   [암호화에 대한 내보내기 제한](export-restrictions-on-cryptography.md)
 -   [일반적인 암호화 작업](common-cryptography-tasks.md)
 
 ### <a name="62-code-samples"></a>6.2 코드 샘플

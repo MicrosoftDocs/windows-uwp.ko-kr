@@ -40,7 +40,7 @@ ms.locfileid: "57594618"
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[꼭 짓 점 및 인덱스 버퍼](vertex-and-index-buffers.md)
+[꼭짓점 및 인덱스 버퍼](vertex-and-index-buffers.md)
 
  
 

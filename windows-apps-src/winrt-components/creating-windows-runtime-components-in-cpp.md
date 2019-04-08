@@ -1,6 +1,6 @@
 ---
 title: C++로 Windows 런타임 구성 요소 만들기
-description: 이 항목에서는 C + + /CX를 사용 하 여 만든 유니버설 Windows 앱에서 호출할 수 있는 구성 요소인 Windows 런타임 구성 요소를 C#, Visual Basic, c + + 또는 Javascript입니다.
+description: C#, Visual Basic, C++ 또는 Javascript를 사용하여 작성된 유니버설 Windows 앱에서 호출할 수 있는 구성 요소인 Windows 런타임 구성 요소를 만들기 위해 C++/CX를 사용하는 방법을 보여 줍니다.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ms.date: 05/14/2018
 ms.topic: article
@@ -17,7 +17,7 @@ ms.locfileid: "57600868"
 > [!NOTE]
 > 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. C +를 사용 하 여 Windows 런타임 구성 요소를 만드는 방법에 알아보려면 + WinRT, 참조 [작성 이벤트 C + + /cli WinRT](../cpp-and-winrt-apis/author-events.md).
 
-이 항목에서는 C + + /CX를 사용 하 여 만든 유니버설 Windows 앱에서 호출할 수 있는 구성 요소인 Windows 런타임 구성 요소를 C#, Visual Basic, c + + 또는 Javascript입니다.
+C#, Visual Basic, C++ 또는 Javascript를 사용하여 작성된 유니버설 Windows 앱에서 호출할 수 있는 구성 요소인 Windows 런타임 구성 요소를 만들기 위해 C++/CX를 사용하는 방법을 보여 줍니다.
 
 Windows 런타임 구성 요소를 구축 하기 위한 몇 가지 이유가 있습니다.
 - 복잡하거나 많은 계산이 필요한 작업에서 C++의 성능 이점을 얻을 수 있습니다.

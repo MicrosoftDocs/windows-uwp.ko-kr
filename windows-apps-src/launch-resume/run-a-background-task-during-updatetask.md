@@ -95,4 +95,4 @@ Visual Studio 솔루션 탐색기에서 **Package.appxmanifest** 파일을 마�
 
 ## <a name="see-also"></a>참고 항목
 
-[만들고 out-of-process-백그라운드 태스크를 등록 합니다.](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
+[Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)

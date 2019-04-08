@@ -10,7 +10,7 @@ keywords: windows 10, uwp, 추적형 타일, 라이브 타일, 추적형 타일 
 ms.localizationpriority: medium
 ms.openlocfilehash: 90a43ad803ca4cfe4a7403117c268344d1192d74
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57592648"
@@ -24,7 +24,7 @@ ms.locfileid: "57592648"
 > **1 주년 업데이트를 설치 해야**: Chaseable 타일 알림을 사용 하 여 사용 하려면 C#, c + +, 또는 VB 기반 uwp 스토어 앱 SDK 14393 대상으로 지정 해야 하 고 빌드 14393 이상을 실행 합니다. JavaScript 기반 UWP 앱의 경우 SDK 17134를 타겟팅하고 빌드 17134 이상을 실행해야 합니다. 
 
 
-> **중요 한 Api**: [LaunchActivatedEventArgs.TileActivatedInfo property](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [TileActivatedInfo class](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
+> **중요 API**: [LaunchActivatedEventArgs.TileActivatedInfo 속성](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [TileActivatedInfo 클래스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
 
 
 ## <a name="how-it-works"></a>작동 방식
@@ -178,5 +178,5 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 
 ## <a name="related-articles"></a>관련 문서
 
-- [LaunchActivatedEventArgs.TileActivatedInfo property](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs#Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_TileActivatedInfo_)
+- [LaunchActivatedEventArgs.TileActivatedInfo 속성](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs#Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_TileActivatedInfo_)
 - [TileActivatedInfo 클래스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)

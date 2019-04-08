@@ -28,7 +28,7 @@ ms.locfileid: "57602578"
 
 Direct3D 11이 지원하는 버퍼 리소스 유형은 다음과 같습니다.
 
--   [Vertex Buffer](#vertex-buffer)
+-   [꼭 짓 점 버퍼](#vertex-buffer)
 -   [인덱스 버퍼](#index-buffer)
 -   [상수 버퍼](#shader-constant-buffer)
 
@@ -84,7 +84,7 @@ Direct3D 11이 지원하는 버퍼 리소스 유형은 다음과 같습니다.
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[꼭 짓 점 및 인덱스 버퍼](vertex-and-index-buffers.md)
+[꼭짓점 및 인덱스 버퍼](vertex-and-index-buffers.md)
 
  
 

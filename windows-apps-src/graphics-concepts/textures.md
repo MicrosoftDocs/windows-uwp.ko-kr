@@ -21,7 +21,7 @@ ms.locfileid: "57593008"
 
 성능을 높이려면 동적 텍스처를 사용하는 것이 좋습니다. 동적 텍스처는 각 프레임마다 잠그거나, 작성하거나, 잠금 해제할 수 있습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

@@ -111,7 +111,7 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 자세한 내용은 아래 항목을 참조하세요.
 
 -   [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)
--   [로컬 알림 보내기](send-local-toast.md)
+-   [로컬 알림 메시지 보내기](send-local-toast.md)
 -   [유니버설 Windows 플랫폼 (UWP) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 ## <a name="scheduled-notifications"></a>예약된 알림
@@ -152,7 +152,7 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 
 자세한 내용은 다음을 참조하세요.
 
--   [Windows 푸시 알림 서비스 (WNS) 개요](windows-push-notification-services--wns--overview.md)
+-   [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
 -   [푸시 알림에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh761462)
 -   [유니버설 Windows 플랫폼 (UWP) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
@@ -161,11 +161,11 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 
 
 * [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)
-* [로컬 알림 보내기](send-local-toast.md)
+* [로컬 알림 메시지 보내기](send-local-toast.md)
 * [푸시 알림에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh761462)
 * [알림 메시지에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh465391)
 * [정기 알림 개요](periodic-notification-overview.md)
-* [Windows 푸시 알림 서비스 (WNS) 개요](windows-push-notification-services--wns--overview.md)
+* [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
 * [유니버설 Windows 플랫폼 (UWP) 알림을 GitHub의 샘플 코드](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
  
 

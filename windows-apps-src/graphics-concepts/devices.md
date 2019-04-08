@@ -38,7 +38,7 @@ Direct3D는 다음과 같은 두 가지 주요 유형의 Direct3D 디바이스�
 
 Direct3D 9와 함께 제공된 소프트웨어와 참조 디바이스의 동작은 hal 디바이스와 동일하므로, hal 디바이스에서 작동하도록 작성된 응용 프로그램 코드는 수정하지 않고도 소프트웨어 또는 참조 디바이스에서 작동합니다. 제공된 소프트웨어 또는 참조 디바이스의 동작은 hal 디바이스와 동일하지만, 디바이스 기능은 다를 수 있으며, 특정 소프트웨어 디바이스는 훨씬 적은 기능만 구현할 수 있습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

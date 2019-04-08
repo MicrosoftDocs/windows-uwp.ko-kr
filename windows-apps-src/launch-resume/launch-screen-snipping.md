@@ -40,7 +40,7 @@ ms.locfileid: "57595388"
 | sharedAccessToken | 문자열 | 아니요 | 캡처 & 스케치 앱에서 열려는 파일을 식별 하는 토큰입니다. 검색 [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile)합니다. 이 매개 변수를 생략 하면 앱을 열고 파일 없이 시작 됩니다. |
 | secondarySharedAccessToken | 문자열 | 아니요 | 캡처에 대 한 메타 데이터를 사용 하 여 JSON 파일을 식별 하는 문자열입니다. 메타 데이터가 포함 될 수 있습니다는 **clipPoints** x, y 좌표 배열을 사용 하 여 필드 및/또는 [userActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity)합니다. |
 | 소스 | 문자열 | 아니요 | 자유 형식 문자열 URI를 시작 하는 소스를 나타내는입니다. |
-| isTemporary | 부울 | 아니요 | 화면 스케치 True로 설정 됩니다 연 후 파일을 삭제 하려고 합니다. |
+| IsTemporary | 부울 | 아니요 | 화면 스케치 True로 설정 됩니다 연 후 파일을 삭제 하려고 합니다. |
 
 다음 예제에서는 합니다 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) 메서드 캡처 & 스케치를 사용자의 앱에서 이미지를 보냅니다.
 

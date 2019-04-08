@@ -240,8 +240,8 @@ Windows는 푸시 알림에 응답하기 때문에 앱이 실행되지 않을 �
 ## <a name="related-topics"></a>관련 항목
 
 
-* [Windows 푸시 알림 서비스 (WNS) 개요](windows-push-notification-services--wns--overview.md)
-* [원시 알림 개요](raw-notification-overview.md)
+* [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
+* [푸시 알림 개요](raw-notification-overview.md)
 * [Windows에 연결할 Azure 모바일 서비스 (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263160)
 * [Windows에 연결할 Azure 모바일 서비스 (C#/C+ + VB)](https://msdn.microsoft.com/library/windows/apps/xaml/dn263175)
 * [빠른 시작: 모바일 서비스 (JavaScript)에 대 한 푸시 알림 추가](https://msdn.microsoft.com/library/windows/apps/dn263163)

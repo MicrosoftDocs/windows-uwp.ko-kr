@@ -87,7 +87,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
         Minimum="-2"
         Maximum="2" />
     ```
-    **After**
+    **후**
     ```xaml
     <Polygon Grid.Row="2" Stretch="Fill"
                 Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -134,7 +134,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
             Minimum="-1"
             Maximum="1" />
     ```
-    **After**
+    **후**
     ```xaml
     <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -262,7 +262,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
         </Grid.Resources>
     ```
 
-    **After**
+    **후**
     ```XAML
         <Grid.Resources>
             <Style TargetType="Slider">
@@ -302,7 +302,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             </Style>                            
     ```    
 
-    **After**
+    **후**
     ```XAML
             <Style TargetType="TextBlock"
                    x:Key="ValueTextBox">
@@ -325,7 +325,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
                 Text="{x:Bind item.Exposure.ToString('N', culture), Mode=OneWay}" />   
     ```
 
-    **After**
+    **후**
     ```XAML
      <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -646,7 +646,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
         </Grid.RowDefinitions>        
     ```
 
-    **After**
+    **후**
     ```XAML
     <Grid x:Name="HorizontalTemplate" MinHeight="44">
         <Grid.ColumnDefinitions>
@@ -691,7 +691,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
         </Polygon>           
     ```
     
-    **After**
+    **후**
     ```XAML
         <Polygon Grid.Row="0" Grid.RowSpan="3"  Grid.ColumnSpan="3" Stretch="Fill"
                     Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -711,7 +711,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
                     Grid.ColumnSpan="3" />          
     ```
     
-    **After**
+    **후**
     ```XAML
         <Rectangle x:Name="HorizontalTrackRect"
                     Height="{ThemeResource SliderTrackThemeHeight}"
@@ -750,7 +750,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             Template="{StaticResource FancySliderControlTemplate}"/>    
     ```
     
-    **After**
+    **후**
     ```XAML
     <Slider Header="Exposure" 
             Grid.Row="2"  Foreground="Transparent"
@@ -791,7 +791,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             Maximum="1" />
     ```
     
-    **After**
+    **후**
     ```XAML
     <Slider Header="Temperature"
             Grid.Row="3" Foreground="Transparent"
@@ -833,7 +833,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             Maximum="1" />
     ```
     
-    **After**
+    **후**
     ```XAML
     <Slider Header="Tint"
             Grid.Row="4" Foreground="Transparent"

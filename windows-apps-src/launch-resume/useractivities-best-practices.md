@@ -102,6 +102,6 @@ ms.locfileid: "57589908"
 * [사용자 활동 (프로젝트 로마 docs)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Adaptive card](https://docs.microsoft.com/adaptive-cards/)
 * [Adaptive card 시각화 도우미, 샘플](https://adaptivecards.io/)
-* [URI 활성화를 처리 합니다.](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+* [URI 활성화 처리](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 * [Microsoft Graph, 작업 피드 및 Adaptive Card를 사용 하 여 모든 플랫폼에서 고객 참여](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph/)

@@ -24,10 +24,10 @@ Windows 런타임용 XAML이 언어 수준 지원을 제공하는 형식은 다�
 
 | XAML primitive | 설명 |
 |-------|-------------|
-| **x:Boolean**  | CLR 지원의 경우 [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx)에 해당합니다. XAML은 **x:Boolean** 값을 대/소문자 구분 없이 구문 분석합니다. "x:Bool"로 대체할 수 없습니다. |
-| **x:String**   | CLR 지원의 경우 [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx)에 해당합니다. 문자열의 인코딩 기본값은 주위의 XML 인코딩입니다. |
-| **x:Double**   | CLR 지원의 경우 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)에 해당합니다. **x:Double**의 텍스트 구문에는 숫자 값뿐만 아니라 토큰 "NaN"도 허용됩니다. 이 토큰을 사용하면 레이아웃 동작에 대해 "Auto"를 리소스 값으로 저장할 수 있습니다. 토큰은 대/소문자를 구분하여 처리됩니다. 과학적 표기법을 사용할 수 있습니다(예: `1,000,000`에 대해 "1+E06"). |
-| **x:Int32**    | CLR 지원의 경우 [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx)에 해당합니다. **x:Int32**가 기호 지정 값으로 처리되며 음수에 빼기("-") 기호를 포함할 수 있습니다. XAML에서 텍스트 구문에 기호가 없으면 양수 값을 의미합니다. |
+| **x: 부울**  | CLR 지원의 경우 [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx)에 해당합니다. XAML은 **x:Boolean** 값을 대/소문자 구분 없이 구문 분석합니다. "x:Bool"로 대체할 수 없습니다. |
+| **x: 문자열**   | CLR 지원의 경우 [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx)에 해당합니다. 문자열의 인코딩 기본값은 주위의 XML 인코딩입니다. |
+| **x: Double**   | CLR 지원의 경우 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)에 해당합니다. **x:Double**의 텍스트 구문에는 숫자 값뿐만 아니라 토큰 "NaN"도 허용됩니다. 이 토큰을 사용하면 레이아웃 동작에 대해 "Auto"를 리소스 값으로 저장할 수 있습니다. 토큰은 대/소문자를 구분하여 처리됩니다. 과학적 표기법을 사용할 수 있습니다(예: `1,000,000`에 대해 "1+E06"). |
+| **x: Int32**    | CLR 지원의 경우 [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx)에 해당합니다. **x:Int32**가 기호 지정 값으로 처리되며 음수에 빼기("-") 기호를 포함할 수 있습니다. XAML에서 텍스트 구문에 기호가 없으면 양수 값을 의미합니다. |
 
 이러한 XAML 언어 primitive는 대개 사용자 XAML에서 **x:** 접두사가 사용되는 개체 요소를 정의하는 경우에만 사용됩니다. 다른 모든 XAML 언어 기능은 일반적으로 특성 폼에 사용되거나 태그 확장으로 사용됩니다.
 

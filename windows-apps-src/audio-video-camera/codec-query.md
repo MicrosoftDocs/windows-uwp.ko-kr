@@ -46,8 +46,8 @@ CodecQuery API는 **[Windows.Media.Core](https://docs.microsoft.com/uwp/api/wind
 
 * [미디어 재생](media-playback.md)
 * [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [미디어 파일 트랜스 코딩](transcode-media-files.md)
-* [지원 되는 코덱](supported-codecs.md)
+* [미디어 파일 트랜스코딩](transcode-media-files.md)
+* [지원되는 코덱](supported-codecs.md)
  
 
  

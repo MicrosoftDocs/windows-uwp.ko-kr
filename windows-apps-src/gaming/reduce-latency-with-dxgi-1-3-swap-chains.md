@@ -149,7 +149,7 @@ Windows의 다중 스레드 프로그래밍에 대한 자세한 내용은 다음
 
 * [DirectXLatency 샘플](https://go.microsoft.com/fwlink/p/?LinkID=317361)
 * [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://msdn.microsoft.com/library/windows/desktop/dn268309)
-* [**WaitForSingleObjectEx**](https://msdn.microsoft.com/library/windows/desktop/ms687036)
+* [**Waitforsingleobjectex가**](https://msdn.microsoft.com/library/windows/desktop/ms687036)
 * [**Windows.System.Threading**](https://msdn.microsoft.com/library/windows/apps/br229642)
 * [C + +의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187334)
 * [프로세스 및 스레드](https://msdn.microsoft.com/library/windows/desktop/ms684841)

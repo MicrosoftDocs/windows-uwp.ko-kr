@@ -320,7 +320,7 @@ UWP 컨트롤은 기본적으로 화살표 키 탐색을 지원합니다. 사용
       <p><img src="images/keyboard/dialog.png" alt="Dialog buttons"/></p>
       <p><sup>대화 상자 단추</sup></p>
       <p><img src="images/keyboard/radiobutton.png" alt="Radio buttons"/></p>
-      <p><sup>RadioButtons</sup></p>     
+      <p><sup>라디오 단추</sup></p>     
     </td>
     <td>
       <p><img src="images/keyboard/appbar.png" alt="AppBar buttons"/></p>

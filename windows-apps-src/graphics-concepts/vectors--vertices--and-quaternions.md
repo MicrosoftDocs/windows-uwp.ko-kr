@@ -34,7 +34,7 @@ Direct3D 전체에서 꼭짓점은 위치 및 방향을 설명합니다. 기본 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[좌표계 및 기 하 도형](coordinate-systems-and-geometry.md)
+[좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
 
  
 

@@ -46,7 +46,7 @@ VS(꼭짓점 셰이더) 단계에서는 입력 어셈블러에서 꼭짓점을 �
 
 VertexID 및 InstanceID 시스템 생성 값이 있는 단일 꼭짓점. 각 꼭짓점 셰이더 입력 꼭짓점은 최대 16개의 32비트 벡터(각각 최대 4개의 구성 요소)로 구성될 수 있습니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
 
 
 단일 꼭짓점. 각 출력 꼭짓점은 16개의 32비트 4-구성 요소 벡터로 구성될 수 있습니다.

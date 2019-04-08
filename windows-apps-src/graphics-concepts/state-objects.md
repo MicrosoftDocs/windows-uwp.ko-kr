@@ -62,7 +62,7 @@ API가 상태 개체를 사용하도록 설계하면 여러 가지 성능 이점
 
 [그래픽 파이프라인](graphics-pipeline.md)
 
-[레이아웃](views.md)
+[보기](views.md)
 
  
 

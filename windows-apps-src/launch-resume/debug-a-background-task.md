@@ -69,7 +69,7 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 
 2.  매니페스트 디자이너를 사용하여 백그라운드 작업이 패키지 매니페스트에서 올바르게 선언되었는지 확인합니다.
 
-    -   C# 및 C++에서는 진입점 특성이 백그라운드 작업 이름과 클래스 이름과 차례로 일치해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. RuntimeComponent1.MyBackgroundTask.
+    -   C# 및 C++에서는 진입점 특성이 백그라운드 작업 이름과 클래스 이름과 차례로 일치해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. RuntimeComponent1.MyBackgroundTask 합니다.
     -   작업에 사용된 모든 트리거 유형도 지정해야 합니다.
     -   [  **ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 또는 [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543)를 사용하지 않는 경우에는 실행 파일을 지정하면 안 됩니다.
 
@@ -105,11 +105,11 @@ VS를 사용 하 여 백그라운드 작업 디버깅에 대 한 자세한 내�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [만들고 out-of-process-백그라운드 태스크를 등록 합니다.](create-and-register-a-background-task.md)
-* [만들고 프로세스에서 백그라운드 작업을 등록 합니다.](create-and-register-an-inproc-background-task.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
-* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
-* [백그라운드 작업에 대 한 지침](guidelines-for-background-tasks.md)
+* [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
+* [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트 UWP 앱에서](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
 * [Visual Studio 코드 분석을 사용 하 여 UWP 앱의 코드 품질 분석](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
 
