@@ -11,7 +11,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: afda713e4a3d0ae30a4ee1ad9e9308d835062108
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57640028"
@@ -24,7 +24,7 @@ ms.locfileid: "57640028"
 
 ![전송 컨트롤이 포함된 미디어 플레이어 요소](images/controls/mtc_double_video_inprod.png)
 
-> **중요 한 Api**: [MediaPlayerElement 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx), [MediaTransportControls 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediatransportcontrols)
+> **중요 API**: [MediaPlayerElement 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx), [MediaTransportControls 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediatransportcontrols)
 
 
 > [!NOTE]
@@ -43,8 +43,8 @@ ms.locfileid: "57640028"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 작동 중인 <a href="xamlcontrolsgallery:/item/MediaPlayerElement">MediaPlayerElement</a> 또는 <a href="xamlcontrolsgallery:/item/MediaPlayer">MediaPlayer</a>를 확인합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

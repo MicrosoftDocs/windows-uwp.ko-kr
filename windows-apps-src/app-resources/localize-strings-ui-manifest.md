@@ -288,7 +288,7 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 
 ## <a name="related-topics"></a>관련 항목
 * [XAML 및 UI를 이식합니다.](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization)
-* [x:Uid directive](../xaml-platform/x-uid-directive.md)
+* [X:uid 지시문](../xaml-platform/x-uid-directive.md)
 * [연결 된 속성](../xaml-platform/attached-properties-overview.md)
 * [매니페스트 지역화 가능한 항목](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
 * [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)

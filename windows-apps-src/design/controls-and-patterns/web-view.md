@@ -20,7 +20,7 @@ ms.locfileid: "57610638"
 
 웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
 
-> **중요 한 Api**: [WebView 클래스](https://msdn.microsoft.com/library/windows/apps/br227702)
+> **중요 API**: [WebView 클래스](https://msdn.microsoft.com/library/windows/apps/br227702)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -91,7 +91,7 @@ webView1.Navigate("ms-appx-web:///help/about.html");
 
 ### <a name="responding-to-navigation-events"></a>탐색 이벤트에 응답
 
-웹 보기 컨트롤은 탐색 및 콘텐츠 로드 상태에 응답하는 데 사용할 수 있는 몇 가지 이벤트를 제공합니다. 루트 웹 뷰 콘텐츠를 위한 다음과 같은 순서로 이벤트가 발생 합니다. [NavigationStarting](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationstarting.aspx), [ContentLoading](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.contentloading.aspx), [DOMContentLoaded](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.domcontentloaded.aspx), [NavigationCompleted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationcompleted.aspx)
+웹 보기 컨트롤은 탐색 및 콘텐츠 로드 상태에 응답하는 데 사용할 수 있는 몇 가지 이벤트를 제공합니다. 루트 웹 뷰 콘텐츠를 위한 다음과 같은 순서로 이벤트가 발생 합니다. [NavigationStarting](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationstarting.aspx)하십시오 [ContentLoading](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.contentloading.aspx)하십시오 [DOMContentLoaded](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.domcontentloaded.aspx), [NavigationCompleted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationcompleted.aspx)
 
 
 **NavigationStarting** - 웹 보기가 새 콘텐츠로 이동하기 전에 발생합니다. WebViewNavigationStartingEventArgs.Cancel 속성을 true로 설정하여 이 이벤트 처리기에서 탐색을 취소할 수 있습니다. 

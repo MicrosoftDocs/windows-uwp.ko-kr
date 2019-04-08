@@ -25,7 +25,7 @@ ms.locfileid: "57648898"
 
 확인란은 작업 항목을 선택하거나 선택 취소하는 데 사용됩니다. 사용자가 선택할 수 있는 단일 항목이나 여러 항목의 목록에도 사용할 수 있습니다. 컨트롤에는 3개의 선택 상태, 즉 선택되지 않음, 선택됨 및 확정되지 않음이 있습니다. 하위 항목 컬렉션에 선택되지 않음과 선택됨 상태가 둘 다 있는 경우에 확정되지 않은 상태를 사용합니다.
 
-> **중요 한 Api**: [확인란 클래스](https://msdn.microsoft.com/library/windows/apps/br209316), [이벤트 선택된](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [IsChecked 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+> **중요 API**: [확인란 클래스](https://msdn.microsoft.com/library/windows/apps/br209316), [이벤트 선택된](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [IsChecked 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
 
 ![확인란 상태의 예](images/templates-checkbox-states-default.png)
 
@@ -58,8 +58,8 @@ ms.locfileid: "57648898"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/CheckBox">앱을 열고 작동 중인 CheckBox를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

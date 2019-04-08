@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dd4b8c137d65339701b40027bb3230162e2c2456
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57620478"
@@ -43,12 +43,12 @@ ms.locfileid: "57620478"
 
 [  **Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스는 HTTP 콘텐츠를 쿠키가 포함된 HTTP 엔터티 본문 및 헤더로 나타냅니다. HTTP 콘텐츠를 HTTP 요청 또는 HTTP 응답에 연결할 수 있습니다. **Windows.Web.Http** 네임스페이스는 HTTP 컨텐츠를 나타내는 여러 클래스를 제공합니다.
 
--   [**HttpBufferContent**](https://msdn.microsoft.com/library/windows/apps/dn298625). 콘텐츠를 버퍼로
--   [**HttpFormUrlEncodedContent**](https://msdn.microsoft.com/library/windows/apps/dn298685). 콘텐츠를 **application/x-www-form-urlencoded** MIME 형식으로 인코드된 이름/값 튜플로
--   [**HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708). 형식의 콘텐츠를 **다중 파트 /\***  MIME 형식입니다.
--   [**HttpMultipartFormDataContent**](https://msdn.microsoft.com/library/windows/apps/dn279596). **multipart/form-data** MIME 형식으로 인코딩된 콘텐츠
--   [**HttpStreamContent**](https://msdn.microsoft.com/library/windows/apps/dn279649). 콘텐츠를 스트림으로(내부 형식은 HTTP GET 메서드가 데이터를 받고 HTTP POST 메서드가 데이터를 업로드하는 데 사용됨)
--   [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661). 콘텐츠를 문자열로
+-   [**HttpBufferContent**](https://msdn.microsoft.com/library/windows/apps/dn298625)합니다. 콘텐츠를 버퍼로
+-   [**HttpFormUrlEncodedContent**](https://msdn.microsoft.com/library/windows/apps/dn298685)합니다. 콘텐츠를 **application/x-www-form-urlencoded** MIME 형식으로 인코드된 이름/값 튜플로
+-   [**HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708)합니다. 형식의 콘텐츠를 **다중 파트 /\***  MIME 형식입니다.
+-   [**HttpMultipartFormDataContent**](https://msdn.microsoft.com/library/windows/apps/dn279596)합니다. **multipart/form-data** MIME 형식으로 인코딩된 콘텐츠
+-   [**HttpStreamContent**](https://msdn.microsoft.com/library/windows/apps/dn279649)합니다. 콘텐츠를 스트림으로(내부 형식은 HTTP GET 메서드가 데이터를 받고 HTTP POST 메서드가 데이터를 업로드하는 데 사용됨)
+-   [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661)합니다. 콘텐츠를 문자열로
 -   [**IHttpContent** ](https://msdn.microsoft.com/library/windows/apps/dn279684) -자체 콘텐츠 개체를 만드는 개발자를 위한 기본 인터페이스
 
 "HTTP를 통해 간단한 GET 요청 보내기" 섹션의 코드 조각에서는 [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661) 클래스를 사용하여 HTTP GET 요청의 HTTP 응답을 문자열로 나타냅니다.

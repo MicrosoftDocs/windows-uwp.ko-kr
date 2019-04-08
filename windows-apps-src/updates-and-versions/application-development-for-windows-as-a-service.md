@@ -18,7 +18,7 @@ ms.locfileid: "57658638"
 **적용 대상**
 -   Windows 10
 -   Windows 10 Mobile
--   Windows 10 IoT Core 
+-   Windows 10 IoT Core 
 
 오늘날 환경에서 사용자는 종종 장치 중심 환경을 기대하기 때문에 전체 제품 주기는 연 단위가 아닌 월 단위로 측정되어야 합니다. 또한 새 릴리스는 지속적으로 사용 가능하고 사용자에 대한 영향을 최소화하면서 배포할 수 있어야 합니다. Microsoft는 [WaaS(Windows as a Service)](https://docs.microsoft.com/windows/deployment/update/waas-overview)라는 새로운 혁신, 개발, 전달 접근 방식을 구현함으로써 이러한 요구 사항을 충족하도록 Windows 10을 디자인했습니다. Microsoft는 Windows 10 테스트에 대한 혁신적인 커뮤니티 중심 접근 방식을 핵심으로 하여 높은 품질 수준을 유지하면서 제품 주기를 눈에 띄게 줄일 수 있도록 했습니다. Windows 참가자라고 알려진 커뮤니티는 전세계 수백만 사용자로 이루어져 있습니다. Windows 참가자는 커뮤니티에 옵트인(opt in)할 때 제품 주기 과정에서 많은 빌드를 테스트하고 플라이팅이라는 반복적인 방법론을 통해 Microsoft에 피드백을 제공합니다.
 

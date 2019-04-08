@@ -18,7 +18,7 @@ ms.locfileid: "57608568"
 
 **중요 한 Api**
 
--   [**Panel**](https://msdn.microsoft.com/library/windows/apps/BR227511)
+-   [**패널**](https://msdn.microsoft.com/library/windows/apps/BR227511)
 
 레이아웃은 UI의 시각적 구조를 정의하는 프로세스입니다. XAML의 레이아웃을 설명하는 기본 메커니즘은 컨테이너 개체인 패널을 통해서 가능하며 이 패널 내에 UI 요소를 배치 및 정렬할 수 있습니다. 레이아웃은 CPU 사용과 메모리 오버헤드 모두에서 비용이 많이 드는 XAML 앱 요소입니다. 다음은 XAML 앱의 레이아웃 성능 향상을 위해 수행할 수 있는 몇 가지 간단한 절차입니다.
 

@@ -17,7 +17,7 @@ ms.lasthandoff: 03/06/2019
 ms.locfileid: "57619968"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
-.NET Framework 4.5부터, Windows 런타임 형식을 사용자를 만들고 Windows 런타임 구성 요소를 패키지 하거나 관리 되는 코드를 사용할 수 있습니다. 구성 요소를 사용 하 여 c + +, JavaScript, Visual Basic의 경우 기록 되는 유니버설 Windows 플랫폼 (UWP) 앱에서 또는 C#입니다. 이 항목에서는 구성 요소를 만드는 규칙에 대해 간략하게 설명 하 고 Windows 런타임용.NET Framework 지원의 일부 측면을 설명 합니다. 일반적으로 이 지원은 .NET Framework 프로그래머에게 투명하게 디자인되었습니다. 그러나 JavaScript 또는 C++를 사용하는 구성 요소를 만들 때는 이러한 언어와 Windows 런타임을 지원하는 방식의 차이점을 알아야 합니다.
+.NET Framework 4.5부터, Windows 런타임 형식을 사용자를 만들고 Windows 런타임 구성 요소를 패키지 하거나 관리 되는 코드를 사용할 수 있습니다. 구성 요소를 사용 하 여 c + +, JavaScript, Visual Basic의 경우 기록 되는 유니버설 Windows 플랫폼 (UWP) 앱에서 또는 C#입니다. 이 항목에서는 구성 요소 만들기 규칙에 대해 간략히 설명하고, Windows 런타임에 대한 .NET Framework 지원의 몇 가지 측면에 대해 설명합니다. 일반적으로 이 지원은 .NET Framework 프로그래머에게 투명하게 디자인되었습니다. 그러나 JavaScript 또는 C++를 사용하는 구성 요소를 만들 때는 이러한 언어와 Windows 런타임을 지원하는 방식의 차이점을 알아야 합니다.
 
 Visual Basic에서 작성 된 UWP 앱 에서만에서 사용에 대 한 구성 요소를 만드는 경우 또는 C#, UWP 컨트롤을 사용 하는 것을 고려 하세요 구성 요소가 포함 되어 있지 않습니다 합니다 **클래스 라이브러리** 템플릿 대신 합니다 **Windows 런타임 구성 요소** Microsoft Visual Studio 프로젝트 템플릿. 간단한 클래스 라이브러리일수록 제한이 적습니다.
 

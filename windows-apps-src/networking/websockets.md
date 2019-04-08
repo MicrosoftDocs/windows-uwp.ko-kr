@@ -806,7 +806,7 @@ protected:
 
 ## <a name="important-apis"></a>중요 API
 * [DataReader](/uwp/api/Windows.Storage.Streams.DataReader)
-* [DataWriter](/uwp/api/Windows.Storage.Streams.DataWriter)
+* [Datawriter 여부](/uwp/api/Windows.Storage.Streams.DataWriter)
 * [DataWriter.DetachStream](/uwp/api/windows.storage.streams.datawriter.DetachStream)
 * [MessageWebSocket](/uwp/api/windows.networking.sockets.messagewebsocket)
 * [MessageWebSocket.Closed](/uwp/api/Windows.Networking.Sockets.MessageWebSocket.Closed)

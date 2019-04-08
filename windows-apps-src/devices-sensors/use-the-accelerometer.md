@@ -19,7 +19,7 @@ ms.locfileid: "57623708"
 **중요 한 Api**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687)
+-   [**가 속도계**](https://msdn.microsoft.com/library/windows/apps/BR225687)
 
 **샘플**
 

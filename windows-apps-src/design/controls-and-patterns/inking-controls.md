@@ -35,7 +35,7 @@ InkCanvas 컨트롤은 기본 잉크 스트로크 설정 변경 지원을 포함
 
 <img src="images/ink-tools-invoked-toolbar.png" width="300" alt="InkToolbar palette flyout">
 
-> **중요 한 Api**: [InkCanvas 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)하십시오 [InkToolbar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)합니다 [InkPresenter 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **중요 API**: [InkCanvas 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)하십시오 [InkToolbar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)합니다 [InkPresenter 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -58,8 +58,8 @@ InkToolbar와 InkCanvas를 연결하여 잉크 기능을 활성화하고 스트�
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/InkCanvas">앱을 열고 작동 중인 InkCanvas를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

@@ -46,9 +46,9 @@ The BC1, BC2 및 BC3 형식은 Direct3D 9 DXTn 텍스처 압축 형식과 동등
 
 | 블록 압축 형식 | DXGI 형식                                                                           | Direct3D 9에 준하는 형식                               | 4x4 픽셀 블록당 바이트 |
 |--------------------------|---------------------------------------------------------------------------------------|------------------------------------------------------------|---------------------------|
-| BC1                      | DXGI\_FORMAT\_BC1\_UNORM, DXGI\_FORMAT\_BC1\_UNORM\_SRGB, DXGI\_FORMAT\_BC1\_TYPELESS | D3DFMT\_DXT1, FourCC="DXT1"                                | 8                         |
-| BC2                      | DXGI\_FORMAT\_BC2\_UNORM, DXGI\_FORMAT\_BC2\_UNORM\_SRGB, DXGI\_FORMAT\_BC2\_TYPELESS | D3DFMT\_DXT2\*, FourCC="DXT2", D3DFMT\_DXT3, FourCC="DXT3" | 16                        |
-| BC3                      | DXGI\_FORMAT\_BC3\_UNORM, DXGI\_FORMAT\_BC3\_UNORM\_SRGB, DXGI\_FORMAT\_BC3\_TYPELESS | D3DFMT\_DXT4\*, FourCC="DXT4", D3DFMT\_DXT5, FourCC="DXT5" | 16                        |
+| BC1                      | DXGI\_형식\_BC1\_UNORM, DXGI\_형식\_BC1\_UNORM\_SRGB, DXGI\_형식\_BC1\_TYPELESS | D3DFMT\_DXT1, FourCC "DXT1" =                                | 8                         |
+| BC2                      | DXGI\_형식\_BC2\_UNORM, DXGI\_형식\_BC2\_UNORM\_SRGB, DXGI\_형식\_BC2\_TYPELESS | D3DFMT\_DXT2\*, FourCC D3DFMT "DXT2" =\_DXT3, FourCC "DXT3" = | 16                        |
+| BC3                      | DXGI\_형식\_BC3\_UNORM, DXGI\_형식\_BC3\_UNORM\_SRGB, DXGI\_형식\_BC3\_TYPELESS | D3DFMT\_DXT4\*, FourCC D3DFMT "DXT4" =\_DXT5, FourCC "DXT5" = | 16                        |
 
  
 
@@ -59,8 +59,8 @@ The BC1, BC2 및 BC3 형식은 Direct3D 9 DXTn 텍스처 압축 형식과 동등
 
 | 블록 압축 형식 | DXGI 형식                                                                     | Direct3D 9에 준하는 형식 | 4x4 픽셀 블록당 바이트 |
 |--------------------------|---------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC4                      | DXGI\_FORMAT\_BC4\_UNORM, DXGI\_FORMAT\_BC4\_SNORM, DXGI\_FORMAT\_BC4\_TYPELESS | FourCC="ATI1"                | 8                         |
-| BC5                      | DXGI\_FORMAT\_BC5\_UNORM, DXGI\_FORMAT\_BC5\_SNORM, DXGI\_FORMAT\_BC5\_TYPELESS | FourCC="ATI2"                | 16                        |
+| BC4                      | DXGI\_형식\_BC4\_UNORM, DXGI\_형식\_BC4\_SNORM, DXGI\_형식\_BC4\_TYPELESS | FourCC="ATI1"                | 8                         |
+| BC5                      | DXGI\_형식\_BC5\_UNORM, DXGI\_형식\_BC5\_SNORM, DXGI\_형식\_BC5\_TYPELESS | FourCC="ATI2"                | 16                        |
 
  
 
@@ -71,7 +71,7 @@ The BC1, BC2 및 BC3 형식은 Direct3D 9 DXTn 텍스처 압축 형식과 동등
 
 | 블록 압축 형식 | DXGI 형식                                                                      | Direct3D 9에 준하는 형식 | 4x4 픽셀 블록당 바이트 |
 |--------------------------|----------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC6H                     | DXGI\_FORMAT\_BC6H\_UF16, DXGI\_FORMAT\_BC6H\_SF16, DXGI\_FORMAT\_BC6H\_TYPELESS | 해당 없음                          | 16                        |
+| BC6H                     | DXGI\_형식\_BC6H\_UF16, DXGI\_형식\_BC6H\_SF16, DXGI\_형식\_BC6H\_TYPELESS | 해당 없음                          | 16                        |
 
  
 
@@ -84,7 +84,7 @@ BC6H 형식은 4x4 픽셀 블록마다 다른 인코딩 모드를 선택할 수 
 
 | 블록 압축 형식 | DXGI 형식                                                                           | Direct3D 9에 준하는 형식 | 4x4 픽셀 블록당 바이트 |
 |--------------------------|---------------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC7                      | DXGI\_FORMAT\_BC7\_UNORM, DXGI\_FORMAT\_BC7\_UNORM\_SRGB, DXGI\_FORMAT\_BC7\_TYPELESS | 해당 없음                          | 16                        |
+| BC7                      | DXGI\_형식\_BC7\_UNORM, DXGI\_형식\_BC7\_UNORM\_SRGB, DXGI\_형식\_BC7\_TYPELESS | 해당 없음                          | 16                        |
 
  
 

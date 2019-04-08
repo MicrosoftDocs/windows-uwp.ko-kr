@@ -7,7 +7,7 @@ keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트�
 ms.localizationpriority: medium
 ms.openlocfilehash: c3551ebcc59ebfe426b0be8d5bd20f7578517a25
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57649208"
@@ -121,9 +121,9 @@ void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
 이제 프로젝트를 빌드하고 실행합니다. 버튼을 클릭하여 **Click** 이벤트 처리기를 실행합니다. 앞에서 **Append** 구현체가 UI가 컬렉션의 변경 사실을 알 수 있도록 이벤트를 발생시키고, 그러면 **ListBox**가 컬렉션에 대한 쿼리를 다시 실행하여 **Items** 값을 업데이트하는 것을 확인하였습니다. 이와 마찬가지로 책 중 하나의 타이트리 변경되면 해당 타이틀 변경이 버튼과 목록 상자 모두에 반영됩니다.
 
 ## <a name="important-apis"></a>중요 API
-* [IObservableVector&lt;T&gt;::VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
+* [IObservableVector&lt;T&gt;:: VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
 * [winrt::make 함수 템플릿](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>관련 항목
-* [사용 Api을 사용 하 여 C + + /cli WinRT](consume-apis.md)
-* [작성 Api C + + /cli WinRT](author-apis.md)
+* [C++/WinRT를 통한 API 사용](consume-apis.md)
+* [C++/WinRT를 통한 API 작성](author-apis.md)

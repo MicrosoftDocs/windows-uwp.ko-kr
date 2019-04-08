@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57608628"
 ---
-# <a name="getting-started-animation"></a>시작 하기: 애니메이션
+# <a name="getting-started-animation"></a>시작: 애니메이션
 
 
 ## <a name="adding-animations"></a>애니메이션 추가

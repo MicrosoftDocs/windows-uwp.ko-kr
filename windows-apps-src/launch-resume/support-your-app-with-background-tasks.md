@@ -87,7 +87,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 | 실시간 트리거  | 설명 |
 |--------------------|-------------|
 | **컨트롤 채널** | 백그라운드 작업은 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)를 사용하여 연결을 활성 상태로 유지하고 컨트롤 채널에서 메시지를 수신할 수 있습니다. 앱에서 소켓을 수신 대기하는 경우 **ControlChannelTrigger** 대신 소켓 브로커를 사용할 수 있습니다. 소켓 브로커 사용에 대한 자세한 내용은 [SocketActivityTrigger](https://msdn.microsoft.com/library/windows/apps/dn806009)를 참조하세요. **ControlChannelTrigger**는 Windows Phone에서 지원되지 않습니다. |
-| **Timer** | [  **TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)를 사용하여 백그라운드 작업을 자주(15분마다) 실행하거나 특정 시간에 실행하도록 설정할 수 있습니다. 자세한 내용은 [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)을 참조하세요. |
+| **타이머** | [  **TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)를 사용하여 백그라운드 작업을 자주(15분마다) 실행하거나 특정 시간에 실행하도록 설정할 수 있습니다. 자세한 내용은 [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)을 참조하세요. |
 | **푸시 알림** | 백그라운드 작업은 [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543)에 응답하여 원시 푸시 알림을 수신합니다. |
 
 **참고**  
@@ -163,8 +163,8 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 
 백그라운드 작업에서는 이벤트 및 로컬 저장소를 사용하여 진행률, 완료 및 취소를 앱에 보고할 수 있습니다. 또한 앱은 백그라운드 작업에서 발생된 예외를 catch할 수 있으며 앱 업데이트 중 백그라운드 작업 등록을 관리할 수 있습니다. 자세한 내용은 다음을 참조하세요.
 
-[취소 된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)  
-[백그라운드 작업 진행률 및 완료를 모니터링 합니다.](monitor-background-task-progress-and-completion.md)
+[취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)  
+[백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 
 앱 실행 중에 백그라운드 작업 등록을 확인합니다. BackgroundTaskBuilder.AllTasks에 앱의 그룹 해제된 백그라운드 작업이 있는지 확인합니다. 없는 백그라운드 작업을 다시 등록합니다. 더 이상 필요 없는 작업의 등록을 취소합니다. 그러면 앱이 실행될 때마다 모든 백그라운드 작업 등록이 최신 상태로 유지됩니다.
 
@@ -176,24 +176,24 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 
 **관련 된 백그라운드 작업 지침**
 
-* [백그라운드 작업에 대 한 지침](guidelines-for-background-tasks.md)
-* [액세스 센서 및 장치에서 백그라운드 작업](access-sensors-and-devices-from-a-background-task.md)
-* [만들고 프로세스에서 백그라운드 작업을 등록 합니다.](create-and-register-an-inproc-background-task.md)
-* [만들고 out-of-process-백그라운드 태스크를 등록 합니다.](create-and-register-a-background-task.md)
+* [백그라운드 작업 지침](guidelines-for-background-tasks.md)
+* [백그라운드 작업에서 센서 및 디바이스에 액세스](access-sensors-and-devices-from-a-background-task.md)
+* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [Out-of-process-백그라운드 작업을 처리 중인 백그라운드 태스크로 변환](convert-out-of-process-background-task.md)
-* [백그라운드 작업 디버깅](debug-a-background-task.md)
-* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
-* [그룹 백그라운드 작업 등록](group-background-tasks.md)
-* [취소 된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
+* [백그라운드 작업 디버그](debug-a-background-task.md)
+* [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
+* [백그라운드 작업 등록 그룹화](group-background-tasks.md)
+* [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
 * [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio)
-* [백그라운드 작업 진행률 및 완료를 모니터링 합니다.](monitor-background-task-progress-and-completion.md)
+* [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 * [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [백그라운드 작업 등록](register-a-background-task.md)
-* [백그라운드 작업과 함께 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
-* [타이머에서 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
+* [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
+* [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [UWP 앱이 업데이트 될 때 백그라운드 작업 실행](run-a-background-task-during-updatetask.md)
-* [백그라운드에서 무기한으로 실행 합니다.](run-in-the-background-indefinetly.md)
-* [백그라운드 작업을 실행 하기 위한 조건을 설정 합니다.](set-conditions-for-running-a-background-task.md)
+* [백그라운드에서 무기한 실행](run-in-the-background-indefinetly.md)
+* [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
 * [앱에서 백그라운드 작업 트리거](trigger-background-task-from-app.md)
-* [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
+* [백그라운드 작업의 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)

@@ -43,11 +43,11 @@ ms.locfileid: "57620368"
 | 필드 이름                    | 참고                              |   
 |-------------------------------|------------------------------------|
 | [**제품 수명**](enter-add-on-properties.md#product-lifetime)  | 제품 유형이 **지속형**인 경우 필수입니다. 기타 제품 형식에는 적용되지 않습니다. |
-| [**Quantity**](enter-add-on-properties.md#quantity)  | 제품 형식이 **스토어 관리 소모성**인 경우 필요합니다. 기타 제품 형식에는 적용되지 않습니다. |
+| [**수량**](enter-add-on-properties.md#quantity)  | 제품 형식이 **스토어 관리 소모성**인 경우 필요합니다. 기타 제품 형식에는 적용되지 않습니다. |
 | [**구독 기간**](enter-add-on-properties.md#subscription-period)          | 제품 유형이 **구독**인 경우 필수입니다. 기타 제품 형식에는 적용되지 않습니다.       |  
 | [**무료 평가판**](enter-add-on-properties.md#free-trial)          | 제품 유형이 **구독**인 경우 필수입니다. 기타 제품 형식에는 적용되지 않습니다.       |
 | [**콘텐츠 형식**](enter-add-on-properties.md#content-type)          | 필수    |               
-| [**Keywords**](enter-add-on-properties.md#keywords)                  | 선택 사항(키워드 최대 10개, 각각 30자 제한) |
+| [**키워드**](enter-add-on-properties.md#keywords)                  | 선택 사항(키워드 최대 10개, 각각 30자 제한) |
 | [**사용자 지정 개발자 데이터**](enter-add-on-properties.md#custom-developer-data)   | 선택 사항(3,000자 제한)            |
 
 
@@ -68,9 +68,9 @@ ms.locfileid: "57620368"
 
 | 필드 이름                    | 참고                                       |
 |-------------------------------|---------------------------------------------|
-| [**Title**](create-add-on-store-listings.md#title)                    | 필수(100자 제한)           |
+| [**제목**](create-add-on-store-listings.md#title)                    | 필수(100자 제한)           |
 | [**설명**](create-add-on-store-listings.md#description)       | 선택 사항(200자 제한)            |
-| [**Icon**](create-add-on-store-listings.md#icon)                    | 선택 사항(.png, 300 x 300픽셀)            |
+| [**아이콘**](create-add-on-store-listings.md#icon)                    | 선택 사항(.png, 300 x 300픽셀)            |
 
 
 이 정보를 모두 입력했으면 **스토어에 제출**을 클릭합니다. 대부분은 인증 프로세스에 1시간 정도 걸립니다. 그 후에 추가 기능이 스토어에 게시되고 고객이 구매할 준비가 됩니다.

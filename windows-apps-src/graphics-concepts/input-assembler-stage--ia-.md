@@ -35,12 +35,12 @@ IA 단계에 인접 데이터를 출력하라는 요청이 접수된 경우, 입
 
 IA 단계는 메모리: 기본 데이터(점, 선 및/또는 삼각형), 사용자가 채운 버퍼에서 데이터를 읽어 들입니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
 
 
 IA 단계는 데이터를 원형으로 조합하고, 시스템 생성 값을 연결하며, [꼭짓점 셰이더(VS) 단계](vertex-shader-stage--vs-.md) 및 이후 다른 파이프라인 단계에서 사용할 원형으로 출력합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

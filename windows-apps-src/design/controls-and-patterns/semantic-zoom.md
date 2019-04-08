@@ -29,7 +29,7 @@ ms.locfileid: "57627618"
 
 예를 들어 주소록을 볼 때 사용자는 화면을 축소하여 "W" 문자로 신속하게 이동하거나, 화면을 확대하여 해당 문자와 연결된 이름을 확인할 수 있습니다. 
 
-> **중요 한 Api**: [SemanticZoom 클래스](https://msdn.microsoft.com/library/windows/apps/hh702601)하십시오 [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx), [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)
+> **중요 API**: [SemanticZoom 클래스](https://msdn.microsoft.com/library/windows/apps/hh702601)하십시오 [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx), [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)
 
 **기능**:
 
@@ -52,8 +52,8 @@ ms.locfileid: "57627618"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/SemanticZoom">앱을 열고 작동 중인 SemanticZoom을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

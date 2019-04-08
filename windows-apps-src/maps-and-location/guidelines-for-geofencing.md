@@ -127,8 +127,8 @@ GPS가 가장 정확한 위치 정보를 제공할 수 있지만, 지오펜싱�
 ## <a name="related-topics"></a>관련 항목
 
 
-* [한 지역 구분 설정](https://msdn.microsoft.com/library/windows/apps/mt219702)
-* [현재 위치를 가져옵니다.](https://msdn.microsoft.com/library/windows/apps/mt219698)
+* [지오펜스 설정](https://msdn.microsoft.com/library/windows/apps/mt219702)
+* [현재 위치 가져오기](https://msdn.microsoft.com/library/windows/apps/mt219698)
 * [UWP 위치 샘플 (지리적 위치)](https://go.microsoft.com/fwlink/p/?linkid=533278)
  
 

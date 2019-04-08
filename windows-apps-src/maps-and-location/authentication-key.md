@@ -22,7 +22,7 @@ ms.locfileid: "57649558"
 
 **팁** 앱에서 지도를 사용하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
 
--   [유니버설 Windows 플랫폼 (UWP) 맵 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="get-a-key"></a>키 가져오기
 
@@ -89,8 +89,8 @@ ms.locfileid: "57649558"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Bing 맵 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 맵 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [지도 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [빌드 2015 비디오: 지도 및 위치를 활용 하 여 휴대폰, 태블릿 및 PC에서 Windows 앱에서](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 트래픽 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
+* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)

@@ -529,7 +529,7 @@ MyWinRTComponent.Proxies
 
 **링커 > 입력 > 추가 종속성: Rpcrt4.lib;runtimeobject.lib 추가**
 
-**Linker > Windows Metadata > Generate Windows Metadata : "아니요"를 선택 합니다.**
+**링커 > Windows 메타 데이터 > Windows 메타 데이터를 생성 합니다. "아니요"를 선택 합니다.**
 
 **8 단계:** "MyWinRTProxy" 프로젝트를 빌드하십시오.
 

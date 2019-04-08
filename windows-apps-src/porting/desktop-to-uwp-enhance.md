@@ -36,8 +36,8 @@ Windows 런타임 Api를 사용 하 여 실행 되는 Windows 10 사용자에 �
 |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
 |System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
 |System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-|Windows.Foundation.UniversalApiContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\<*sdk version*>\Windows.Foundation.UniversalApiContract\<*version*>|
-|Windows.Foundation.FoundationContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\<*sdk version*>\Windows.Foundation.FoundationContract\<*version*>|
+|Windows.Foundation.UniversalApiContract.winmd|C:\Program 파일 (x86) \Windows Kits\10\References\<*sdk 버전*> \Windows.Foundation.UniversalApiContract\<*버전*>|
+|Windows.Foundation.FoundationContract.winmd|C:\Program 파일 (x86) \Windows Kits\10\References\<*sdk 버전*> \Windows.Foundation.FoundationContract\<*버전*>|
 
 **속성** 창에서 각 *.winmd* 파일의 **로컬 복사** 필드를 **False**로 설정합니다.
 

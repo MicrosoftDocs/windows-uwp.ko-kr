@@ -29,7 +29,7 @@ ms.locfileid: "57617658"
 1. **Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Calendars\Japanese\Eras**로 이동하십시오.
 2. **편집 > 신규 > 문자열 값**을 선택하고, **2019 05 01**이라는 명칭을 부여합니다.
 3. 해당 키를 마우스 오른쪽 버튼으로 클릭하고 **수정**을 선택합니다.
-4. 에 **값 데이터** 필드에 입력 **?？\_？\_??????\_?** (쉽게 수행할 수 있도록 여기에서 복사하여 붙여넣을 수 있습니다).
+4. 에 **값 데이터** 필드에 입력 **??\_?\_?????? \_?** (쉽게 수행할 수 있도록 여기에서 복사하여 붙여넣을 수 있습니다).
 
 이러한 레지스트리 키의 형식에 대한 자세한 설명은 [일본력을 위한 시대 취급](https://docs.microsoft.com/windows/desktop/Intl/era-handling-for-the-japanese-calendar)을 참조하십시오.
 
@@ -69,7 +69,7 @@ ms.locfileid: "57617658"
 
 ## <a name="test-your-application"></a>응용 프로그램 테스트
 
-이제 응용 프로그램이 새 시대를 어떻게 취급하는지를 테스트하십시오. 타임스탬프와 날짜 선택기 같이 날짜가 표시되는 곳을 체크하십시오. 올바른지 확인 하는 연대 5 월 1 2019 년 (헤이세이, 平成) 전과 후 (?？).
+이제 응용 프로그램이 새 시대를 어떻게 취급하는지를 테스트하십시오. 타임스탬프와 날짜 선택기 같이 날짜가 표시되는 곳을 체크하십시오. 올바른지 확인 하는 연대 5 월 1 2019 년 (헤이세이, 平成) 전과 후 (??)입니다.
 
 ### <a name="gannen-"></a>*간넨*(元年)
 
@@ -120,7 +120,7 @@ ms.locfileid: "57617658"
 
 ### <a name="win32"></a>Win32
 
-* [datetimeapi.h header](https://docs.microsoft.com/windows/desktop/api/datetimeapi/)
+* [datetimeapi.h 헤더](https://docs.microsoft.com/windows/desktop/api/datetimeapi/)
     * [GetDateFormatA 함수](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformata)
     * [GetDateFormatEx 함수](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformatex)
     * [GetDateFormatW 함수](https://docs.microsoft.com/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformatw)

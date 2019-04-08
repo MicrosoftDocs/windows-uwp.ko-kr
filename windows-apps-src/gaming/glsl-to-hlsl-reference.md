@@ -133,19 +133,19 @@ GLSL에서는 전역 셰이더 변수 선언에 한정자를 적용하여 셰이
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>uniform</strong></p>
+<td align="left"><p><strong>Uniform</strong></p>
 <p>uniform 변수를 앱 코드에서 꼭짓점 셰이더나 조각 셰이더로 전달하거나 두 셰이더 모두에게 전달합니다. 해당 셰이더로 삼각형을 그리기 전에 모든 uniform의 값을 설정해야 하는데, 이렇게 해야만 해당 값이 삼각형 메시를 그리는 내내 동일하게 유지됩니다. 이러한 값은 uniform입니다. 일부 uniform은 전체 프레임에 대해 설정되며, 나머지 다른 uniform은 하나의 특정 꼭짓점-픽셀 셰이더 쌍에 대해 고유하게 설정됩니다.</p>
 <p>uniform 변수는 다각형별 변수입니다.</p></td>
 <td align="left"><p>상수 버퍼를 사용합니다.</p>
 <p>참조 <a href="https://msdn.microsoft.com/library/windows/desktop/ff476896">방법: 상수 버퍼를 만들</a> 하 고 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509581">셰이더 상수</a>합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>varying</strong></p>
+<td align="left"><p><strong>다양 한</strong></p>
 <p>꼭짓점 셰이더 내부에서 varying 변수를 초기화하여 조각 셰이더 내의 이름이 같은 varying 변수로 전달합니다. 꼭짓점 셰이더는 각 꼭짓점에서 varying 변수의 값을 설정만 하기 때문에, 래스터라이저는 해당 값을 보간하여(관점 수정 방식으로) 조각별 값을 생성하여 조각 셰이더로 전달합니다. 이러한 변수는 각 삼각형에서 달라집니다.</p></td>
 <td align="left">꼭짓점 셰이더에서 픽셀 셰이더에 대한 입력으로 반환하는 구조를 사용합니다. 의미 체계 값이 일치하는지 확인합니다.</td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>attribute</strong></p>
+<td align="left"><p><strong>특성</strong></p>
 <p>attribute는 앱 코드에서 꼭짓점 셰이더로만 전달하는 꼭짓점에 대한 설명의 일부입니다. uniform과 달리, 각 꼭짓점에 대해 attribute의 값을 설정합니다. 그러면 각 꼭짓점이 서로 다른 값을 가질 수 있습니다. attribute 변수는 꼭짓점별 변수입니다.</p></td>
 <td align="left"><p>Direct3D 앱 코드에서 꼭짓점 버퍼를 정의하여 꼭짓점 셰이더에 정의되어 있는 꼭짓점 입력에 일치시킵니다. 선택적으로 인덱스 버퍼를 정의합니다. 참조 <a href="https://msdn.microsoft.com/library/windows/desktop/ff476899">방법: 꼭 짓 점 버퍼를 만들</a> 고 <a href="https://msdn.microsoft.com/library/windows/desktop/ff476897">방법: 인덱스 버퍼를 만들</a>합니다.</p>
 <p>Direct3D 앱 코드에서 입력 레이아웃을 만들고 꼭짓점 입력에서 의미 체계 값을 해당 레이아웃에 일치시킵니다. <a href="https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout">입력 레이아웃 만들기</a>를 참조하세요.</p></td>
@@ -324,7 +324,7 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 <p>예를 들어-float4 색 [4]: SV_Target;</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>gl_FragData[n]</strong></p>
+<td align="left"><p><strong>gl_FragData [n]</strong></p>
 <p>이 변수는 <strong>vec4</strong> 형식입니다.</p>
 <p>색 첨부 n의 조각 색</p></td>
 <td align="left"><p>SV_Target[n]</p>

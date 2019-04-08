@@ -27,7 +27,7 @@ Direct3D는 세 개의 기능 계층에서 스트리밍 리소스를 지원합�
 
 스트리밍 리소스에 대한 하드웨어 및 드라이버 지원 및 계층 수준을 확인할 수 있도록 Direct3D의 버전에서 쿼리 함수를 제공합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

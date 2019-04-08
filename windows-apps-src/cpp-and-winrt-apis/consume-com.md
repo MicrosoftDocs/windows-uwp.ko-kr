@@ -1,5 +1,5 @@
 ---
-description: 이 항목에서는 전체 Direct2D 코드 예제를 사용 하 여 C +를 사용 하는 방법을 + WinRT COM 클래스 및 인터페이스를 사용 하도록 합니다.
+description: 전체 Direct2D 코드 예제를 사용하여 C++/WinRT를 통해 COM 클래스 및 인터페이스를 사용하는 방법을 보여 줍니다.
 title: C++/WinRT로 작성된 COM 구성 요소 사용
 ms.date: 07/23/2018
 ms.topic: article
@@ -7,7 +7,7 @@ keywords: windows 10, uwp, standard, c + +, cpp, winrt, COM 구성 요소, 클�
 ms.localizationpriority: medium
 ms.openlocfilehash: 129477689e12de2634b422a0fc4487b283e3bf03
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57644808"
@@ -485,4 +485,4 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 ## <a name="important-apis"></a>중요 API
 * [winrt::check_hresult 함수](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
-* [winrt::Windows::Foundation::IUnknown struct](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
+* [winrt::Windows::Foundation::IUnknown 구조체](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)

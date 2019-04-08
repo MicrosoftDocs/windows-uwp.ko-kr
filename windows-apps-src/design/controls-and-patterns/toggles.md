@@ -25,7 +25,7 @@ ms.locfileid: "57625468"
 
 토글 스위치 컨트롤을 [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)를 사용합니다.
 
-> **중요 한 Api**: [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)하십시오 [IsOn 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
+> **중요 API**: [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)하십시오 [IsOn 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -46,8 +46,8 @@ ms.locfileid: "57625468"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 작동 중인 <a href="xamlcontrolsgallery:/item/ToggleSwitch">ToggleSwitch</a> 또는 <a href="xamlcontrolsgallery:/item/ToggleButton">ToggleButton</a>을 확인합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

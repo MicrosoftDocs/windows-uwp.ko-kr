@@ -29,7 +29,7 @@ ms.locfileid: "57615368"
 
 타일 내의 데이터 레이아웃은 타일이 리소스에 전체적으로 매핑된 위치에 따라 달라지지 않습니다. 따라서 예를 들어, 타일이 모든 위치에서 일관되게 동작한다면 표면의 다른 위치에서 다시 사용할 수 있습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

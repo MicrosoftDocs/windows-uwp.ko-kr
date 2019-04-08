@@ -24,7 +24,7 @@ ms.locfileid: "57631008"
 
 검색은 사용자가 앱에서 콘텐츠를 찾을 수 있는 최상의 방법 중 하나입니다. 이 문서의 지침에서는 검색 환경의 요소, 검색 범위, 구현 및 상황별 검색 예를 설명합니다.
 
-> **중요 한 Api**: [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/dn633874)
+> **중요 API**: [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/dn633874)
 
 ## <a name="elements-of-the-search-experience"></a>검색 환경의 요소
 

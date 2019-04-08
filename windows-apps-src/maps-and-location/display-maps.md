@@ -454,11 +454,11 @@ private async void display3DLocation()
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Bing 맵 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 맵 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [현재 위치를 가져옵니다.](get-location.md)
-* [위치 인식 앱에 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)
-* [지도 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [빌드 2015 비디오: 지도 및 위치를 활용 하 여 휴대폰, 태블릿 및 PC에서 Windows 앱에서](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 트래픽 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
+* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [현재 위치 가져오기](get-location.md)
+* [위치 인식 앱에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)

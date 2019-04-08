@@ -35,7 +35,7 @@ ms.locfileid: "57646218"
 
 Direct3D는 3D 모델 텍스처링에 사용되는 표면을 압축하는 서비스를 제공합니다. 이 섹션에서는 압축된 텍스처 표면에서 데이터를 만들고 조작하는 방법에 대한 정보를 제공합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

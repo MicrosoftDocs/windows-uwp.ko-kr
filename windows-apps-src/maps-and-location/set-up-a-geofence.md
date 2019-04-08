@@ -22,7 +22,7 @@ ms.locfileid: "57606128"
 
 **팁** 앱에서 위치에 액세스하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
 
--   [유니버설 Windows 플랫폼 (UWP) 맵 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="enable-the-location-capability"></a>위치 접근 권한 값 사용
 
@@ -483,4 +483,4 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 * [UWP 지리적 위치 샘플](https://go.microsoft.com/fwlink/p/?linkid=533278)
 * [지 오 펜싱에 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn631756)
-* [위치 인식 앱에 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [위치 인식 앱에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)

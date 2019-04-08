@@ -41,9 +41,9 @@ ms.locfileid: "57618508"
 | 용어 | 설명 |
 |------|-------------|
 | *propertyPath* | 바인딩의 속성 경로를 지정하는 문자열. 자세한 내용은 [속성 경로](#property-path) 섹션을 참조하세요. |
-| *bindingProperties* | *propName*=*value*\[, *propName*=*value*\]*<br/>이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
+| *bindingProperties* | *propName*=*값*\[하십시오 *propName*=*값*\]*<br/>이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
 | *propName* | [  **Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
-| *value* | 속성을 설정할 값. 인수 구문은 아래 [{Binding}으로 설정할 수 있는 Binding 클래스의 속성](#properties-of-the-binding-class-that-can-be-set-with-binding) 섹션의 속성에 따라 달라집니다. |
+| *값* | 속성을 설정할 값. 인수 구문은 아래 [{Binding}으로 설정할 수 있는 Binding 클래스의 속성](#properties-of-the-binding-class-that-can-be-set-with-binding) 섹션의 속성에 따라 달라집니다. |
 
 ## <a name="property-path"></a>속성 경로
 
@@ -68,15 +68,15 @@ ms.locfileid: "57618508"
 
 | 속성 | 설명 |
 |----------|-------------|
-| [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) | 위의 [속성 경로](#property-path) 섹션을 참조하세요. |
+| [**경로**](https://msdn.microsoft.com/library/windows/apps/br209830) | 위의 [속성 경로](#property-path) 섹션을 참조하세요. |
 | [**변환기**](https://msdn.microsoft.com/library/windows/apps/br209826) | 바인딩 엔진이 호출하는 변환기 개체를 지정합니다. 변환기는 [{StaticResource} 태그 확장](staticresource-markup-extension.md)을 사용하여 리소스 사전의 해당 개체에 대한 참조로 태그에 설정될 수 있습니다. |
 | [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) | 변환기가 사용할 문화권을 지정합니다. (설정 하는 경우 [ **변환기**](https://msdn.microsoft.com/library/windows/apps/br209826).) 문화권은 표준 기반 식별자로 설정 됩니다. 자세한 내용은 [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880)를 참조하세요. |
-| [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827) | 변환기 논리에서 사용될 수 있는 변환기 매개 변수를 지정합니다. (설정 하는 경우 [ **변환기**](https://msdn.microsoft.com/library/windows/apps/br209826).) 전달된 된 값으로 변환 하려면에서 필요한 모든 정보를 가져오는 간단한 논리를 사용 하는 대부분의 변환기 필요 하지 않습니다는 **ConverterParameter** 값입니다. **ConverterParameter** 매개 변수는 **ConverterParameter**에서 전달되는 내용을 수용하는 조건부 논리가 있는 보다 복잡한 변환기를 구현하기 위한 것입니다. 문자열이 아닌 값을 사용하는 변환기를 작성할 수도 있지만 일반적이지 않습니다. 자세한 내용은 **ConverterParameter**에서 설명을 참조하세요. |
-| [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) | **Name** 속성 또는 [x:Name](x-name-attribute.md) 특성이 포함된 동일한 XAML 구성에서 다른 요소를 참조하여 데이터 원본을 지정합니다. 이 방법은 관련 값을 공유하거나 한 UI 요소의 하위 속성을 사용하여 다른 요소에 대한 특정 값을 제공하는 데 사용되기도 합니다(예: XAML 컨트롤 템플릿). |
-| [**FallbackValue**](https://msdn.microsoft.com/library/windows/apps/dn279345) | 원본 또는 경로를 확인할 수 없을 때 표시할 값을 지정합니다. |
-| [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209829) | 이러한 값 중 하나로 바인딩 모드를 지정합니다. "OneTime", "단방향" 또는 "TwoWay"입니다. 이러한 문자열은 [**BindingMode**](https://msdn.microsoft.com/library/windows/apps/br209822) 열거형의 상수 이름에 해당합니다. 기본값은 "OneWay"입니다. 이 값은 **{x:Bind}** 에 대한 기본값("OneTime")과 다릅니다. | 
+| [**converterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827) | 변환기 논리에서 사용될 수 있는 변환기 매개 변수를 지정합니다. (설정 하는 경우 [ **변환기**](https://msdn.microsoft.com/library/windows/apps/br209826).) 전달된 된 값으로 변환 하려면에서 필요한 모든 정보를 가져오는 간단한 논리를 사용 하는 대부분의 변환기 필요 하지 않습니다는 **ConverterParameter** 값입니다. **ConverterParameter** 매개 변수는 **ConverterParameter**에서 전달되는 내용을 수용하는 조건부 논리가 있는 보다 복잡한 변환기를 구현하기 위한 것입니다. 문자열이 아닌 값을 사용하는 변환기를 작성할 수도 있지만 일반적이지 않습니다. 자세한 내용은 **ConverterParameter**에서 설명을 참조하세요. |
+| [**elementName**](https://msdn.microsoft.com/library/windows/apps/br209828) | **Name** 속성 또는 [x:Name](x-name-attribute.md) 특성이 포함된 동일한 XAML 구성에서 다른 요소를 참조하여 데이터 원본을 지정합니다. 이 방법은 관련 값을 공유하거나 한 UI 요소의 하위 속성을 사용하여 다른 요소에 대한 특정 값을 제공하는 데 사용되기도 합니다(예: XAML 컨트롤 템플릿). |
+| [**fallbackValue**](https://msdn.microsoft.com/library/windows/apps/dn279345) | 원본 또는 경로를 확인할 수 없을 때 표시할 값을 지정합니다. |
+| [**모드**](https://msdn.microsoft.com/library/windows/apps/br209829) | 이러한 값 중 하나로 바인딩 모드를 지정합니다. "OneTime", "단방향" 또는 "TwoWay"입니다. 이러한 문자열은 [**BindingMode**](https://msdn.microsoft.com/library/windows/apps/br209822) 열거형의 상수 이름에 해당합니다. 기본값은 "OneWay"입니다. 이 값은 **{x:Bind}** 에 대한 기본값("OneTime")과 다릅니다. | 
 | [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) | 바인딩 대상의 위치에 상대적인 바인딩 소스의 위치를 설명하여 데이터 원본을 지정합니다. 이는 XAML 컨트롤 템플릿 내에서 바인딩에 가장 자주 사용됩니다. [{RelativeSource} 태그 확장](relativesource-markup-extension.md) 설정 |
-| [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) | 개체 데이터 원본을 지정합니다. **Binding** 태그 확장 내에서 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) 속성에는 [{StaticResource} 태그 확장](staticresource-markup-extension.md) 참조와 같은 개체 참조가 필요합니다. 이 속성이 지정되지 않으면 작동하는 데이터 컨텍스트가 원본을 지정합니다. 개별 바인딩에서 Source 값을 지정하지 않고 여러 바인딩에 대해 공유된 **DataContext**를 사용하는 것이 더 일반적인 방법입니다. 자세한 내용은 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.datacontext.aspx) 또는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요. |
+| [**원본**](https://msdn.microsoft.com/library/windows/apps/br209832) | 개체 데이터 원본을 지정합니다. **Binding** 태그 확장 내에서 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) 속성에는 [{StaticResource} 태그 확장](staticresource-markup-extension.md) 참조와 같은 개체 참조가 필요합니다. 이 속성이 지정되지 않으면 작동하는 데이터 컨텍스트가 원본을 지정합니다. 개별 바인딩에서 Source 값을 지정하지 않고 여러 바인딩에 대해 공유된 **DataContext**를 사용하는 것이 더 일반적인 방법입니다. 자세한 내용은 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.datacontext.aspx) 또는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요. |
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | 바인딩 소스 업데이트의 타이밍을 지정합니다. 지정하지 않을 경우 기본값은 **Default**입니다. |
 

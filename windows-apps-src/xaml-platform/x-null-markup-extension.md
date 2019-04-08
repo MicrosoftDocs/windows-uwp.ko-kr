@@ -34,7 +34,7 @@ XAML 태그에는 속성의 **null** 값을 지정합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [**Nullable<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)
+* [**Null 허용<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)
 * [**IReference<T>**](https://msdn.microsoft.com/library/windows/apps/br225864)
  
 

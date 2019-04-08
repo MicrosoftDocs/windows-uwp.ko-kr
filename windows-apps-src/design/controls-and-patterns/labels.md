@@ -24,7 +24,7 @@ ms.locfileid: "57654148"
 
 레이블은 컨트롤 또는 관련 컨트롤 그룹의 이름이나 제목입니다.
 
-> **중요 한 Api**: 헤더 속성 [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/br209652)
+> **중요 API**: 헤더 속성 [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/br209652)
 
 XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우에는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)을 사용할 수 있습니다.
 

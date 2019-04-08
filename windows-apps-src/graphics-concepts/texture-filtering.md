@@ -32,7 +32,7 @@ Direct3D는 복잡한 텍스처 필터링 프로세스를 간소화하였습니�
 
 Direct3D는 다음과 같은 텍스처 필터링 방법을 지원합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

@@ -49,24 +49,24 @@ ms.locfileid: "57613088"
 | 4.3.4.1.  EXT-X-MEDIA |4|7|옵션|지원함|지원함|지원함|
 |&nbsp;&nbsp;&nbsp;  형식|4|7|특성|"AUDIO, VIDEO"|"AUDIO, VIDEO"|"AUDIO, VIDEO, SUBTITLES"|
 |&nbsp;&nbsp;&nbsp;  URI|4|7|특성|지원함|지원함|지원함|
-|&nbsp;&nbsp;&nbsp;  GROUP-ID|4|7|특성|지원함|지원함|지원함|
-|&nbsp;&nbsp;&nbsp;  LANGUAGE|4|7|특성|지원함|지원함|지원함|
-|&nbsp;&nbsp;&nbsp;  ASSOC-LANGUAGE|6|13|특성|지원되지 않음|지원되지 않음|지원되지 않음|
-|&nbsp;&nbsp;&nbsp;  NAME|4|7|특성|지원되지 않음|지원되지 않음|지원함|
-|&nbsp;&nbsp;&nbsp;  DEFAULT|4|7|특성|지원되지 않음|지원되지 않음|지원되지 않음|
-|&nbsp;&nbsp;&nbsp;  AUTOSELECT|4|7|특성|지원되지 않음|지원되지 않음|지원되지 않음|
-|&nbsp;&nbsp;&nbsp;  FORCED|5|9|특성|지원되지 않음|지원되지 않음|지원되지 않음|
-|&nbsp;&nbsp;&nbsp;  INSTREAM-ID|6|12|특성|지원되지 않음|지원되지 않음|지원되지 않음|
-|&nbsp;&nbsp;&nbsp;  CHARACTERISTICS|5|9|특성|지원되지 않음|지원되지 않음|지원되지 않음|
+|&nbsp;&nbsp;&nbsp;  그룹 ID|4|7|특성|지원함|지원함|지원함|
+|&nbsp;&nbsp;&nbsp;  언어|4|7|특성|지원함|지원함|지원함|
+|&nbsp;&nbsp;&nbsp;  ASSOC 언어|6|13|특성|지원되지 않음|지원되지 않음|지원되지 않음|
+|&nbsp;&nbsp;&nbsp;  이름|4|7|특성|지원되지 않음|지원되지 않음|지원함|
+|&nbsp;&nbsp;&nbsp;  기본|4|7|특성|지원되지 않음|지원되지 않음|지원되지 않음|
+|&nbsp;&nbsp;&nbsp;  자동 선택|4|7|특성|지원되지 않음|지원되지 않음|지원되지 않음|
+|&nbsp;&nbsp;&nbsp;  강제 적용|5|9|특성|지원되지 않음|지원되지 않음|지원되지 않음|
+|&nbsp;&nbsp;&nbsp;  INSTREAM ID|6|12|특성|지원되지 않음|지원되지 않음|지원되지 않음|
+|&nbsp;&nbsp;&nbsp;  특성|5|9|특성|지원되지 않음|지원되지 않음|지원되지 않음|
 | 4.3.4.2.  EXT-X-STREAM-INF  |1|0|필수|지원함|지원함|지원함|
-|&nbsp;&nbsp;&nbsp;  BANDWIDTH|1|0|특성|지원함|지원함|지원함|
-|&nbsp;&nbsp;&nbsp;  PROGRAM-ID|1|0|특성|해당 없음|해당 없음|해당 없음|
-|&nbsp;&nbsp;&nbsp;  AVERAGE-BANDWIDTH|7|14|특성|지원되지 않음|지원되지 않음|지원되지 않음|
-|&nbsp;&nbsp;&nbsp;  CODECS|1|0|특성|지원함|지원함|지원함|
-|&nbsp;&nbsp;&nbsp;  RESOLUTION|2|3|특성|지원함|지원함|지원함|
-|&nbsp;&nbsp;&nbsp;  FRAME-RATE|7|15|특성|해당 없음|해당 없음|해당 없음|
-|&nbsp;&nbsp;&nbsp;  AUDIO|4|7|특성|지원함|지원함|지원함|
-|&nbsp;&nbsp;&nbsp;  VIDEO|4|7|특성|지원함|지원함|지원함|
+|&nbsp;&nbsp;&nbsp;  대역폭|1|0|특성|지원함|지원함|지원함|
+|&nbsp;&nbsp;&nbsp;  프로그램 ID|1|0|특성|해당 없음|해당 없음|해당 없음|
+|&nbsp;&nbsp;&nbsp;  평균 대역폭|7|14|특성|지원되지 않음|지원되지 않음|지원되지 않음|
+|&nbsp;&nbsp;&nbsp;  코덱|1|0|특성|지원함|지원함|지원함|
+|&nbsp;&nbsp;&nbsp;  해결 방법|2|3|특성|지원함|지원함|지원함|
+|&nbsp;&nbsp;&nbsp;  프레임 속도|7|15|특성|해당 없음|해당 없음|해당 없음|
+|&nbsp;&nbsp;&nbsp;  오디오|4|7|특성|지원함|지원함|지원함|
+|&nbsp;&nbsp;&nbsp;  비디오|4|7|특성|지원함|지원함|지원함|
 |&nbsp;&nbsp;&nbsp;  자막|5|9|특성|지원되지 않음|지원되지 않음|지원함|
 |&nbsp;&nbsp;&nbsp;  닫힌 캡션|6|12|특성|지원되지 않음|지원되지 않음|지원되지 않음|
 | 4.3.4.3.  EXT-X-I-FRAME-STREAM-INF  |4|7|옵션|지원되지 않음|지원되지 않음|지원되지 않음|
@@ -75,8 +75,8 @@ ms.locfileid: "57613088"
 |4.3.5.  미디어 또는 마스터 재생 목록 태그                  |             |                   |         |             |     |    |
 | 4.3.5.1.  EXT-X-INDEPENDENT-SEGMENTS |6|13|옵션|지원되지 않음|지원함|지원함|
 | 4.3.5.2.  EXT-X-START  |6|12|옵션|지원되지 않음|부분적으로 지원됨|부분적으로 지원됨|
-|&nbsp;&nbsp;&nbsp;  TIME-OFFSET|6|12|특성|지원되지 않음|지원함|지원함|
-|&nbsp;&nbsp;&nbsp;  PRECISE|6|12|특성|지원되지 않음|기본값 "아니요"로 지원됨|기본값 "아니요"로 지원됨|
+|&nbsp;&nbsp;&nbsp;  시간 오프셋|6|12|특성|지원되지 않음|지원함|지원함|
+|&nbsp;&nbsp;&nbsp;  정확한|6|12|특성|지원되지 않음|기본값 "아니요"로 지원됨|기본값 "아니요"로 지원됨|
 
 
 

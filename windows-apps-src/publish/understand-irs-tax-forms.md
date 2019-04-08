@@ -41,8 +41,8 @@ ms.locfileid: "57639288"
 **미국 이외 지역의 시민:**
 <table>
 <tr><th>비즈니스 그룹</th><th>법인</th><th>주소</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Ireland Operations Limited (지불 Microsoft Ireland 통해 Microsoft Corporation에서 Microsoft Corporation에 대 한 정규화 된 중간자 역할)</td><td>Microsoft 위<br>남부&nbsp;군&nbsp;비즈니스&nbsp;Park<br>Leopardstown, Dublin 18 Ireland</td></tr>
-<tr><td>광고 *</td><td>Microsoft Ireland Operations Limited (지불 Microsoft Ireland 통해 Microsoft Online i n c.에서 Microsoft Online Inc.에 대 한 지급 에이전트 역할을)</td><td>Microsoft 위<br>남부&nbsp;군&nbsp;비즈니스&nbsp;Park<br>Leopardstown, Dublin 18 Ireland</td></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Ireland Operations Limited (지불 Microsoft Ireland 통해 Microsoft Corporation에서 Microsoft Corporation에 대 한 정규화 된 중간자 역할)</td><td>Microsoft 위<br>남부&nbsp;군&nbsp;비즈니스&nbsp;Park<br>Leopardstown, 아일랜드 더블린 18</td></tr>
+<tr><td>광고 *</td><td>Microsoft Ireland Operations Limited (지불 Microsoft Ireland 통해 Microsoft Online i n c.에서 Microsoft Online Inc.에 대 한 지급 에이전트 역할을)</td><td>Microsoft 위<br>남부&nbsp;군&nbsp;비즈니스&nbsp;Park<br>Leopardstown, 아일랜드 더블린 18</td></tr>
 <tr><td>광고</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 USA</td></tr>
 <tr><td colspan="3">* Microsoft Ireland Operations Limited를 통해 광고 수익을 획득 하는 다음 국가의 주요 데이터로 저장할은 지급 합니다. 오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, 체코 공화국, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 그리스, 헝가리, 아일랜드, 맨 섬, 이탈리아, 라트비아, 리히텐슈타인, 리투아니아, 룩셈부르크, 몰타, 모나코, 네덜란드, 노르웨이, 폴란드, 포르투갈 루마니아, 슬로바키아, 슬로베니아, 남아프리카 공화국, 스페인, 스웨덴, 스위스, 영국</td></tr>
 </table>
@@ -56,7 +56,7 @@ ms.locfileid: "57639288"
   </tr>
   <tr> 
      <td valign="top">당해 과세 연도를 기준으로 <b>200개가 넘는 앱이 판매</b>되었고 이러한 매출 중 총 구매 금액이 <b>$20,000 USD 이상</b>인 경우(브라질과 중국에서 Microsoft Store on Windows 10을 통해 이루어진 매출은 <b>제외</b>)</td>
-    <td valign="top"><b>1099-K</b>:<br>필터가: Microsoft Corporation<br>EIN: *****4442<br><br><b>중요 한</b>: 폼 1099-K <b>구매 gross</b> 금액,으로 사용자에 게 지불 하지 않습니다.</td>
+    <td valign="top"><b>1099-K</b>:<br>필터가: Microsoft Corporation<br>EIN: * * * 4442<br><br><b>중요 한</b>: 폼 1099-K <b>구매 gross</b> 금액,으로 사용자에 게 지불 하지 않습니다.</td>
   </tr>
   <tr> 
      <td valign="top">(i) 브라질과 중국에서 Microsoft Store on Windows 10을 통해 이루어진 앱 매출 또는 (ii) Minecraft 마켓플레이스의 판매에 대해 <b>$10 이상의 지급금</b>을 받은 경우<br>
@@ -64,7 +64,7 @@ ms.locfileid: "57639288"
 <b>OR</b><br>
 <br>
 당해 과세 연도에 Microsoft로부터 앱 매출과 관련 없는 $600 이상의 지급금을 받은 경우(예: 인센티브 지급금 또는 콘테스트나 프로모션을 통한 지급금)</td>
-    <td valign="top"><b>1099-MISC</b>:<br>지불자: Microsoft Corporation<br>EIN: *****4442<br><br><b>중요 한</b>: 특정 비즈니스 엔터티는 Microsoft에서 받은 지불 금액에 관계 없이 1099 기타 폼을 받지 않습니다.  자세한 정보는 세무 전문가에게 문의하세요.</td>
+    <td valign="top"><b>1099-MISC</b>:<br>지불자: Microsoft Corporation<br>EIN: * * * 4442<br><br><b>중요 한</b>: 특정 비즈니스 엔터티는 Microsoft에서 받은 지불 금액에 관계 없이 1099 기타 폼을 받지 않습니다.  자세한 정보는 세무 전문가에게 문의하세요.</td>
   </tr>
   <tr>
     <td valign="top">해당 사항이 없는 경우</td>
@@ -80,7 +80,7 @@ ms.locfileid: "57639288"
   </tr>
   <tr> 
      <td valign="top">당해 과세 연도에 앱 내 광고를 통해 <b>$600 이상의 지급금</b>을 받은 경우</td>
-    <td valign="top"><b>1099-MISC</b>:<br>지불자: Microsoft Online Inc<br>EIN: *****0505<br><br><b>중요 한</b>: 특정 비즈니스 엔터티는 Microsoft에서 받은 지불 금액에 관계 없이 1099 기타 폼을 받지 않습니다.  자세한 정보는 세무 전문가에게 문의하세요.</td>
+    <td valign="top"><b>1099-MISC</b>:<br>지불자: Microsoft Online Inc<br>EIN: * * * 0505<br><br><b>중요 한</b>: 특정 비즈니스 엔터티는 Microsoft에서 받은 지불 금액에 관계 없이 1099 기타 폼을 받지 않습니다.  자세한 정보는 세무 전문가에게 문의하세요.</td>
   </tr>
   <tr> 
      <td valign="top">당해 과세 연도에 앱 내 광고를 통해 <b>$600 미만의 지급금</b>을 받은 경우</td>

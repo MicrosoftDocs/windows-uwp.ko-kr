@@ -154,7 +154,7 @@ Windows 10 PC에서 Windows 10 디바이스로 앱을 배포할 수 있도록 �
 
 1. 컴퓨터가 인터넷에 연결되어 있는지 확인합니다.
 2. 도메인에 가입된 컴퓨터를 사용하는 경우 네트워크 관리자에게 문의하세요. 모든 주문형 기능처럼 개발자 모드 패키지는 기본적으로 WSUS에서 차단됩니다.
-2.1. 현재 및 이전 릴리스에서 개발자 모드 패키지를 차단 해제 하기 위해 WSUS에서 다음 기술 자료를 허용 합니다. 4016509, 3180030, 3197985  
+2.1. 현재 및 이전 릴리스에서 개발자 모드 패키지를 차단 해제 하기 위해 WSUS에서 다음 기술 자료를 허용 합니다. 4016509, 3180030 3197985  
 3. 설정 > 업데이트 및 보안 > Windows 업데이트에서 Windows 업데이트가 있는지 확인합니다.
 4. 설정 &gt; 시스템 &gt; 앱 및 기능 &gt; 선택적 기능 관리 &gt; 기능 추가에서 Windows 개발자 모드 패키지가 있는지 확인합니다. 없는 경우 Windows는 컴퓨터에 적합한 패키지를 찾을 수 없습니다.
 
@@ -201,20 +201,20 @@ Windows 10 Home을 설치한 경우가 아니라면 gpedit.msc를 사용하여 �
 1.  **regedit**를 실행합니다.
 2.  테스트용 로드를 사용하도록 설정하려면 이 DWORD 값을 1로 설정합니다.
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
+    -   **HKLM\\소프트웨어\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
 
     - 또는 -
 
     개발자 모드를 사용하도록 설정하려면 이 DWORD 값을 1로 설정합니다.
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
+    -   **HKLM\\소프트웨어\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
 
 **PowerShell을 사용 하 여 장치를 사용 하도록 설정 하려면**
 
 1.  관리자 권한으로 PowerShell을 실행합니다.
 2.  테스트용 로드를 사용하도록 설정하려면 다음 명령을 실행합니다.
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"**
+    -   **PS c:\\WINDOWS\\system32&gt; reg 추가 "HKEY\_로컬\_MACHINE\\소프트웨어\\Microsoft\\Windows\\CurrentVersion\\ AppModelUnlock"/t REG\_DWORD /f /v"AllowAllTrustedApps"/d"1"**
 
     - 또는 -
 
@@ -233,7 +233,7 @@ Windows 8.1 장치에서 앱을 만들거나 테스트용으로 로드할 때는
 
 이후에도 이 디바이스에서 계속 개발하려면 이 항목에 설명된 대로 디바이스를 개발용으로 설정해야 합니다. 그러지 않으면 앱을 디버그하거나 앱의 패키지를 만들려고 할 때 오류가 발생할 수 있습니다. 다음은 이러한 오류의 예입니다.
 
-오류: DEP0700 : 앱을 등록 하지 못했습니다.
+오류: DEP0700: 앱을 등록 하지 못했습니다.
 
 ## <a name="see-also"></a>참고 항목
 

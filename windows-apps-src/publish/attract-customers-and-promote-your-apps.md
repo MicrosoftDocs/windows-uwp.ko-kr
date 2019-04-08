@@ -16,7 +16,7 @@ ms.locfileid: "57633918"
 
 Microsoft Store 앱이 있으면 가능한 많은 고객 앞에 가져올 차례입니다. [파트너 센터](https://partner.microsoft.com/dashboard) 도움이 되는 다양 한 기능 제품을 홍보 및 고객에 게 광고 캠페인, 프로 모션 코드, 판매 가격 등을 포함 한 기본 확장을 제공 합니다.
 
--   [프로 모션 코드를 생성 합니다.](generate-promotional-codes.md)
+-   [홍보 코드 생성](generate-promotional-codes.md)
 -   [앱에 대 한는 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
 -   [사용자 지정 앱 프로 모션 캠페인 만들기](create-a-custom-app-promotion-campaign.md)
 -   [Put apps and add-ons on sale](put-apps-and-add-ons-on-sale.md)(앱 및 추가 기능 판매)

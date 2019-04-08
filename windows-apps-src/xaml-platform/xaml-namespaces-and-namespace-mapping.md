@@ -75,7 +75,7 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 
 "local:" 템플릿 기반의 UWP 앱 프로젝트에 대해 XAML 페이지 내에서 자주 매핑되는 접두사입니다. [x:Class 특성](x-class-attribute.md) 및 app.xaml을 비롯한 모든 XAML 파일에 대한 코드를 포함하도록 생성된 동일한 네임스페이스를 참조하도록 매핑되어 있습니다. 이 동일한 네임스페이스에서 XAML에 사용할 사용자 지정 클래스를 정의하는 경우 **local:** 접두사를 사용하여 XAML의 사용자 지정 유형을 참조할 수 있습니다. 템플릿 기반의 UWP 앱 프로젝트에서 가져온 관련 접두사는 **common:** 입니다. 이 접두사는 변환기 및 명령과 같은 유틸리티 클래스를 포함하고 있는 중첩된 "Common" 네임스페이스를 참조하며, 개발자는 **솔루션 탐색기** 보기에서 Common 폴더에 있는 정의를 찾을 수 있습니다.
 
-### <a name="vsm"></a>**vsm:**
+### <a name="vsm"></a>**vsm.**
 
 사용하지 마세요. "vsm:"은 다른 Microsoft 기술에서 가져온 이전 XAML 템플릿에서 볼 수 있는 접두사입니다. 이 네임스페이스는 원래 레거시 네임스페이스 도구 문제를 해결했습니다. Windows 런타임용으로 사용하는 모든 XAML에서 "vsm:"에 대한 XAML 네임스페이스 정의를 삭제하고 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) 및 관련 개체에 대한 접두사 사용을, 기본 XAML 네임스페이스를 대신 사용하도록 변경해야 합니다. XAML 마이그레이션에 대한 자세한 내용은 [Windows 런타임 앱으로 Silverlight 또는 WPF XAML/코드 마이그레이션](https://msdn.microsoft.com/library/windows/apps/br229571)을 참조하세요.
 

@@ -20,7 +20,7 @@ ms.locfileid: "57648818"
 
 앱이 데스크톱 창에서 실행될 때 앱의 퍼스낼리티와 일치하도록 제목 표시줄을 사용자 지정할 수 있습니다. 제목 표시줄 사용자 지정 API를 사용하여 제목 표시줄 요소의 색상을 지정하거나 앱 콘텐츠를 제목 표시줄 영역으로 확장하고 모든 내용을 제어할 수 있습니다.
 
-> **중요 한 Api**: [ApplicationView.TitleBar 속성](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview)하십시오 [ApplicationViewTitleBar 클래스](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [CoreApplicationViewTitleBar 클래스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
+> **중요 API**: [ApplicationView.TitleBar 속성](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview)하십시오 [ApplicationViewTitleBar 클래스](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [CoreApplicationViewTitleBar 클래스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
 
 ## <a name="how-much-to-customize-the-title-bar"></a>제목 표시줄의 사용자 지정 수준
 

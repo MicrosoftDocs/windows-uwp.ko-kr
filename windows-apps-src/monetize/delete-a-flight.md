@@ -8,7 +8,7 @@ keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 삭제
 ms.localizationpriority: medium
 ms.openlocfilehash: fa3fa78c695538ec13dbd20d38a24224c560463e
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57641838"

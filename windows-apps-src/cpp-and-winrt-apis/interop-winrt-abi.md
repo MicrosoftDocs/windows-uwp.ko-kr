@@ -7,7 +7,7 @@ keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이
 ms.localizationpriority: medium
 ms.openlocfilehash: a33a52cd8c18b312dc9e020a4c4ba518c33b0dd9
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57639948"
@@ -248,8 +248,8 @@ int main()
 * [QueryInterface 함수](https://msdn.microsoft.com/library/windows/desktop/ms682521)
 * [winrt::attach_abi 함수](/uwp/cpp-ref-for-winrt/attach-abi)
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
-* [winrt::copy_from_abi function](/uwp/cpp-ref-for-winrt/copy-from-abi)
-* [winrt::copy_to_abi function](/uwp/cpp-ref-for-winrt/copy-to-abi)
+* [winrt::copy_from_abi 함수](/uwp/cpp-ref-for-winrt/copy-from-abi)
+* [winrt::copy_to_abi 함수](/uwp/cpp-ref-for-winrt/copy-to-abi)
 * [winrt::detach_abi 함수](/uwp/cpp-ref-for-winrt/detach-abi)
 * [winrt::get_abi 함수](/uwp/cpp-ref-for-winrt/get-abi)
 * [winrt::Windows::Foundation::IUnknown:: 멤버 함수로](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)

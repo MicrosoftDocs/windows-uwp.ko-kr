@@ -69,12 +69,12 @@ PlayReady DRM 미디어 요소를 사용하면 개발자가 UWP 앱을 만들어
 
 다음과 같은 새 인터페이스, 클래스 및 열거가 PlayReady DRM에 추가되었습니다.
 
--   [**IPlayReadyLicenseAcquisitionServiceRequest**](https://msdn.microsoft.com/library/windows/apps/dn986077) interface
+-   [**IPlayReadyLicenseAcquisitionServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986077) 인터페이스
 -   [**IPlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986080) 인터페이스
--   [**IPlayReadySecureStopServiceRequest**](https://msdn.microsoft.com/library/windows/apps/dn986090) interface
+-   [**IPlayReadySecureStopServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986090) 인터페이스
 -   [**PlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986309) 클래스
--   [**PlayReadySecureStopIterable**](https://msdn.microsoft.com/library/windows/apps/dn986371) class
--   [**PlayReadySecureStopIterator**](https://msdn.microsoft.com/library/windows/apps/dn986375) class
+-   [**PlayReadySecureStopIterable** ](https://msdn.microsoft.com/library/windows/apps/dn986371) 클래스
+-   [**PlayReadySecureStopIterator** ](https://msdn.microsoft.com/library/windows/apps/dn986375) 클래스
 -   [**PlayReadyHardwareDRMFeatures** ](https://msdn.microsoft.com/library/windows/apps/dn986265) 열거자
 
 PlayReady DRM의 새 기능을 사용하는 방법을 설명하기 위해 새 샘플이 생성되었습니다. 샘플은 [https://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](https://go.microsoft.com/fwlink/p/?linkid=331670)에서 다운로드할 수 있습니다.
@@ -89,10 +89,10 @@ PlayReady DRM의 새 기능을 사용하는 방법을 설명하기 위해 새 �
 
 | 오류                                                   | 값      | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |---------------------------------------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ERROR\_GRAPHICS\_OPM\_OUTPUT\_DOES\_NOT\_SUPPORT\_HDCP  | 0xC0262513 | 라이선스의 출력 보호 정책에서는 모니터가 HDCP를 사용해야 하지만 HDCP를 사용할 수 없습니다.                                                                                                                                                                                                                                                                                                                                                                                              |
+| 오류\_그래픽\_OPM\_출력\_않습니다\_하지\_지원\_HDCP  | 0xC0262513 | 라이선스의 출력 보호 정책에서는 모니터가 HDCP를 사용해야 하지만 HDCP를 사용할 수 없습니다.                                                                                                                                                                                                                                                                                                                                                                                              |
 | MF\_E\_정책\_지원 되지 않음                              | 0xC00D7159 | 라이선스의 출력 보호 정책에서는 모니터가 HDCP 유형 1을 사용해야 하지만 HDCP 유형 1을 사용할 수 없습니다.                                                                                                                                                                                                                                                                                                                                                                                |
 | DRM\_E\_TEE\_출력\_PROTECTION\_요구 사항\_하지\_충족 | 0x8004CD22 | 이 오류 코드는 하드웨어 DRM에서 실행할 때만 발생합니다. 라이선스의 출력 보호 정책에서는 모니터가 HDCP를 사용하거나 콘텐츠의 유효 해상도를 줄여야 하지만, HDCP를 사용할 수 없거나 하드웨어 DRM에서 콘텐츠의 해상도 줄이기가 지원되지 않으므로 콘텐츠의 유효 해상도를 줄일 수 없습니다. 소프트웨어 DRM에서 콘텐츠를 재생합니다. [하드웨어 DRM 사용에 대한 앱 고려 사항](hardware-drm.md#considerations-for-using-hardware-drm)을 참조하세요. |
-| ERROR\_GRAPHICS\_OPM\_NOT\_SUPPORTED                    | 0xc0262500 | 그래픽 드라이버에서 출력 보호를 지원하지 않습니다. 예를 들어, 모니터가 VGA로 연결되어 있거나 디지털 출력에 적합한 그래픽 드라이버가 설치되지 않았습니다. 후자의 경우 일반적으로 설치되는 드라이버는 Microsoft 기본 디스플레이 어댑터이며 적절한 그래픽 드라이버를 설치하면 문제가 해결됩니다.                                                                                                                                                  |
+| 오류\_그래픽\_OPM\_하지\_지원 되는                    | 0xc0262500 | 그래픽 드라이버에서 출력 보호를 지원하지 않습니다. 예를 들어, 모니터가 VGA로 연결되어 있거나 디지털 출력에 적합한 그래픽 드라이버가 설치되지 않았습니다. 후자의 경우 일반적으로 설치되는 드라이버는 Microsoft 기본 디스플레이 어댑터이며 적절한 그래픽 드라이버를 설치하면 문제가 해결됩니다.                                                                                                                                                  |
 
 ## <a name="output-protection"></a>출력 보호
 
@@ -327,7 +327,7 @@ PlayReady DRM은 HDCP 2.0 이상이 사용되는 즉시 Miracast 출력을 통�
     <tr>
         <th>아날로그 컴퓨터 모니터</th>
         <td>D783A191-E083-4BAF-B2DA-E69F910B3772</td>
-        <td>연결 된 출력이 됩니다. VGA, DVI&ndash;analog, etc.</td>
+        <td>연결 된 출력이 됩니다. VGA, DVI&ndash;아날로그, 등입니다.</td>
         <td><b>SWDRM:</b> PC 프레임당 520,000 epx 효과적인 해결 제한 되며 콘텐츠를 전달 합니다.</td>
         <td><b>HWDRM:</b> 콘텐츠를 전달하지 않습니다.</td>
     </tr>
@@ -397,7 +397,7 @@ PlayReady DRM은 HDCP 2.0 이상이 사용되는 즉시 Miracast 출력을 통�
 
 PlayReady 보호된 UWP 앱 만들기를 시작하기 전에 다음 소프트웨어를 시스템에 설치해야 합니다.
 
--   Windows 10.
+-   Windows 10입니다.
 -   컴파일하는 경우 샘플 PlayReady DRM에 대 한 UWP 앱 용, 샘플을 컴파일하려면 Microsoft Visual Studio 2015 이상을 사용 해야 합니다. Windows 8.1 스토어 앱에 대 한 PlayReady DRM에서 예제 중 하나를 컴파일하는 데 여전히 Microsoft Visual Studio 2013을 사용할 수 있습니다.
 
 <!--This is no longer available-->

@@ -66,7 +66,7 @@ ms.locfileid: "57633228"
 |-------------|--------|---------------|------|
 | skip  |  int   | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 데이터 집합의 페이지를 탐색합니다. 예를 들어 fetch=10 및 skip=0이면 데이터의 처음 10개 행을 검색하고 top=10 및 skip=10이면 데이터의 다음 10개 행을 검색하는 방식입니다.    |       
 | fetch  |  int   | 요청에서 반환할 데이터의 행의 수입니다.    |       
-| campaignSetSortColumn  |  문자열   | 응답 본문의 [캠페인](#campaign) 개체의 순서를 지정된 필드로 지정합니다. 구문은 <em>CampaignSetSortColumn=field</em>이고 여기서 <em>field</em> 매개 변수는 다음 문자열 중 하나일 수 있습니다.</p><ul><li><strong>id</strong></li><li><strong>createdDateTime</strong></li></ul><p>기본 값은 **createdDateTime**입니다.     |     
+| campaignSetSortColumn  |  문자열   | 응답 본문의 [캠페인](#campaign) 개체의 순서를 지정된 필드로 지정합니다. 구문은 <em>CampaignSetSortColumn=field</em>이고 여기서 <em>field</em> 매개 변수는 다음 문자열 중 하나일 수 있습니다.</p><ul><li><strong>Id</strong></li><li><strong>createdDateTime</strong></li></ul><p>기본 값은 **createdDateTime**입니다.     |     
 | isDescending  |  부울   | 응답 본문의 [캠페인](#campaign) 개체를 내림차순이나 오름차순으로 정렬합니다.   |         
 | storeProductId  |  문자열   | 이 값을 사용해 지정된 [스토어 ID](in-app-purchases-and-trials.md#store-ids)의 앱에 연결된 광고 캠페인만 반환합니다. 제품에 대한 예시 스토어 ID는 9nblggh42cfd입니다.   |         
 | 레이블  |  문자열   | 이 값을 사용해 [캠페인](#campaign) 개체에서 지정된 *레이블*을 포함하는 광고 캠페인만 반환합니다.    |       |    

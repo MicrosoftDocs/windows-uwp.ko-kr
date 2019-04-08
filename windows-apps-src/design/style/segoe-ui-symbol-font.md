@@ -22,7 +22,7 @@ ms.locfileid: "57649058"
 
 이 문서는 Segoe MDL2 자산 글꼴에서 제공하는 아이콘을 나열합니다. 
 
-> **중요 한 Api**: [**열거형 기호**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)하십시오 [ **FontIcon 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
+> **중요 API**: [**열거형 기호**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)하십시오 [ **FontIcon 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
 
 ## <a name="about-segoe-mdl2-assets"></a>Segoe MDL2 자산 정보
 
@@ -3970,7 +3970,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EF31.png" width="32" height="32" alt="TrafficLight" /></td>
   <td>EF31</td>
-  <td>TrafficLight</td>
+  <td>Trafficlight 라고 하며</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EF3B.png" width="32" height="32" alt="Replay" /></td>
   <td>EF3B</td>
@@ -4002,7 +4002,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EF6B.png" width="32" height="32" alt="LandscapeOrientation" /></td>
   <td>EF6B</td>
-  <td>LandscapeOrientation</td>
+  <td>가로 방향</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EFA5.png" width="32" height="32" alt="Touchpad" /></td>
   <td>EFA5</td>

@@ -20,7 +20,7 @@ ms.locfileid: "57627168"
 
 음성 인식기에서 무음 또는 인식할 수 없는 소리(왁자지껄)를 무시하고 계속해서 음성 입력에 대해 수신 대기하는 시간을 설정합니다.
 
-> **중요 한 Api**: [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253), [**SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)
+> **중요 API**: [**시간 제한을**](https://msdn.microsoft.com/library/windows/apps/dn653253)하십시오 [ **SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)
 
 ## <a name="set-a-timeout"></a>시간 제한 설정
 

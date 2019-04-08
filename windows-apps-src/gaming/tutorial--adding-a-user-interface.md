@@ -331,12 +331,12 @@ auto windowBounds = m_deviceResources->GetLogicalSize();
 
 게임 상태 | 상태 set 메서드 | 상태 필드
 :----- | :------- | :---------
-로드 | [GameInfoOverlay::SetGameLoading](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L254-L306) |**Title**</br>리소스 로드 </br>**Body**</br> 증분 방식으로 인쇄 "." 로드 작업을 의미 합니다.
-초기 시작/높은 점수 통계 | [GameInfoOverlay::SetGameStats](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L310-L354) |**Title**</br>최고 점수</br> **Body**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면
-수준 시작 | [GameInfoOverlay::SetLevelStart](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L413-L471) |**Title**</br>수준 #</br>**Body**</br>수준 목표 설명입니다.
-게임이 일시 중지 | [GameInfoOverlay::SetPause](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L475-L502) |**Title**</br>게임이 일시 중지</br>**Body**</br>없음
-게임 종료 | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**Title**</br>게임 오버</br> **Body**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면</br>수준 # 완료</br>높은 # 점수 매기기
-게임-이득 | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**Title**</br>승리 했습니다.</br> **Body**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면</br>수준 # 완료</br>높은 # 점수 매기기
+로드 | [GameInfoOverlay::SetGameLoading](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L254-L306) |**제목**</br>리소스 로드 </br>**본문**</br> 증분 방식으로 인쇄 "." 로드 작업을 의미 합니다.
+초기 시작/높은 점수 통계 | [GameInfoOverlay::SetGameStats](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L310-L354) |**제목**</br>최고 점수</br> **본문**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면
+수준 시작 | [GameInfoOverlay::SetLevelStart](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L413-L471) |**제목**</br>수준 #</br>**본문**</br>수준 목표 설명입니다.
+게임이 일시 중지 | [GameInfoOverlay::SetPause](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L475-L502) |**제목**</br>게임이 일시 중지</br>**본문**</br>없음
+게임 종료 | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**제목**</br>게임 오버</br> **본문**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면</br>수준 # 완료</br>높은 # 점수 매기기
+게임-이득 | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**제목**</br>승리 했습니다.</br> **본문**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면</br>수준 # 완료</br>높은 # 점수 매기기
 
 
 

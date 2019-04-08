@@ -18,7 +18,7 @@ ms.locfileid: "57649118"
 
 **중요 한 Api**
 
--   [**PointofService Printer**](https://msdn.microsoft.com/library/windows/apps/Mt426652)
+-   [**PointofService 프린터**](https://msdn.microsoft.com/library/windows/apps/Mt426652)
 -   [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071)
 
 ESC/POS 명령 언어를 사용하여 서비스 지점 프린터에 대한 텍스트 서식(예: 굵게, 2배 크기)을 지정하는 방법을 알아봅니다.

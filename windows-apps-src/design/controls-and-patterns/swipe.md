@@ -22,7 +22,7 @@ ms.locfileid: "57626658"
 
 살짝 밀기 명령은 사용자가 앱 내에서 상태를 변경하지 않고도 공통 메뉴 작업에 터치로 쉽게 액세스할 수 있게 해주는 컨텍스트 메뉴의 가속화 도구입니다.
 
-> **중요 한 Api**: [SwipeControl](/uwp/api/windows.ui.xaml.controls.swipecontrol)하십시오 [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem), [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView)
+> **중요 API**: [SwipeControl](/uwp/api/windows.ui.xaml.controls.swipecontrol)하십시오 [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem), [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView)
 
 ![실행 및 표시등 테마](images/LightThemeSwipe.png)
 
@@ -46,8 +46,8 @@ ms.locfileid: "57626658"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/SwipeControl">앱을 열고 작동 중인 SwipeControl을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

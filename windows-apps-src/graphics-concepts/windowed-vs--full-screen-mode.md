@@ -26,7 +26,7 @@ Direct3D 응용 프로그램은 창 모드 또는 전체 화면 모드 중 하�
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[장치](devices.md)
+[디바이스](devices.md)
 
  
 

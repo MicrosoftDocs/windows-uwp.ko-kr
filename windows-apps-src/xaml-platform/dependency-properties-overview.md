@@ -203,8 +203,8 @@ Windows 10에는 [**RegisterPropertyChangedCallback**](https://msdn.microsoft.co
 ### <a name="conceptual-material"></a>개념 자료
 
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)
-- [연결 된 속성 개요](attached-properties-overview.md)
-- [깊이에서 데이터 바인딩](https://msdn.microsoft.com/library/windows/apps/mt210946)
+- [연결된 속성 개요](attached-properties-overview.md)
+- [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)
 - [애니메이션 스토리 보드를 만들었습니다](https://msdn.microsoft.com/library/windows/apps/mt187354)
 - [Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 - [XAML 사용자 및 사용자 지정 컨트롤 샘플](https://go.microsoft.com/fwlink/p/?linkid=238581)

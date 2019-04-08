@@ -25,7 +25,7 @@ ms.locfileid: "57613668"
 
 ![도구 설명](images/controls/tool-tip.png)
 
-> **중요 한 Api**: [도구 설명 클래스](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
+> **중요 API**: [도구 설명 클래스](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -63,8 +63,8 @@ ms.locfileid: "57613668"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ToolTip">앱을 열고 작동 중인 ToolTip을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

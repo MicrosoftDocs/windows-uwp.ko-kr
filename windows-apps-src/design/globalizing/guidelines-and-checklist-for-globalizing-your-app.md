@@ -48,7 +48,7 @@ ms.locfileid: "57648248"
 * [사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md)
 * [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [앱 리소스 및 리소스 관리 시스템](../../app-resources/index.md)
-* [리소스 관리 시스템 언어 태그를 일치 하는 방법](../../app-resources/how-rms-matches-lang-tags.md)
+* [리소스 관리 시스템에서 언어 태그를 일치시키는 방법](../../app-resources/how-rms-matches-lang-tags.md)
 * [레이아웃 및 글꼴 조정, RTL 지원](adjust-layout-and-fonts--and-support-rtl.md)
 * [국가별 글꼴](loc-international-fonts.md)
 * [앱을 지역화할 수 확인](prepare-your-app-for-localization.md)

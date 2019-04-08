@@ -25,7 +25,7 @@ ms.locfileid: "57606478"
 
 하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다. XAML 앱에 하이퍼링크를 추가할 수 있는 두 가지 방법(**Hyperlink** 텍스트 요소 및 **HyperlinkButton** 컨트롤)이 있습니다.
 
-> **중요 한 Api**: [하이퍼링크 텍스트 요소](https://msdn.microsoft.com/library/windows/apps/dn279356), [HyperlinkButton 컨트롤](https://msdn.microsoft.com/library/windows/apps/br242739)
+> **중요 API**: [하이퍼링크 텍스트 요소](https://msdn.microsoft.com/library/windows/apps/dn279356), [HyperlinkButton 컨트롤](https://msdn.microsoft.com/library/windows/apps/br242739)
 
 ![하이퍼링크 단추](images/controls/hyperlink-button.png)
 
@@ -49,8 +49,8 @@ ms.locfileid: "57606478"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/HyperlinkButton">앱을 열고 작동 중인 HyperlinkButton을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

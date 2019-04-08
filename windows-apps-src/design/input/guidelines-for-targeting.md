@@ -10,7 +10,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e8425232512650d5c80bf6fee9745b261aee8d9
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57646058"
@@ -20,7 +20,7 @@ ms.locfileid: "57646058"
 
 Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가락의 전체 접촉 영역을 사용합니다. 사용자가 의도했거나 대상이 될 가능성 높은 대상을 결정할 때 정확도를 높이기 위해 디지타이저가 보고하는 좀 더 크고 좀 더 복잡한 입력 데이터 집합이 사용됩니다.
 
-> **중요 한 Api**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **중요 API**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)하십시오 [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)하십시오 [ **Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 UWP 앱에서 타기팅에 대한 모범 사례를 제공합니다.
 

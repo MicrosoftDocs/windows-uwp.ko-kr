@@ -161,6 +161,6 @@ End Sub
 UI에서 실행되고 UI 스레드가 아닌 다른 스레드에서 호출되면 예외를 throw하는 개체의 경우 UI 스레드의 [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029) 개체를 사용하여 호출을 발송할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
-[C#가이드](/dotnet/csharp/)
+[C# 가이드](/dotnet/csharp/)
 
 [Visual Basic 가이드](/dotnet/visual-basic/)

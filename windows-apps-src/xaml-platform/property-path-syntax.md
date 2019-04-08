@@ -111,11 +111,11 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [깊이에서 데이터 바인딩](https://msdn.microsoft.com/library/windows/apps/mt210946)
+* [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [애니메이션 스토리 보드를 만들었습니다](https://msdn.microsoft.com/library/windows/apps/mt187354)
 * [{Binding} 태그 확장](binding-markup-extension.md)
-* [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)
-* [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)
+* [**propertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)
+* [**바인딩**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**바인딩 생성자**](https://msdn.microsoft.com/library/windows/apps/br209825)
 * [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)
 

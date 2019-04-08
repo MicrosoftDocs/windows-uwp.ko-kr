@@ -10,7 +10,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b7eec51044a70b0738e246d3aa516c37643cf68
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57608078"
@@ -20,7 +20,7 @@ ms.locfileid: "57608078"
 
 음성 인식 기능을 사용하여 입력을 제공하고, 동작이나 명령을 지정하고 작업을 수행합니다.
 
-> **중요 한 Api**: [**Windows.Media.SpeechRecognition**](https://msdn.microsoft.com/library/windows/apps/dn653262)
+> **중요 API**: [**Windows.Media.SpeechRecognition**](https://msdn.microsoft.com/library/windows/apps/dn653262)
 
 음성 인식은 음성 런타임, 런타임을 프로그래밍하기 위한 인식 API, 바로 사용할 수 있는 받아쓰기 및 웹 검색 문법, 사용자가 음성 인식 기능을 검색하고 사용하는 데 도움이 되는 기본 시스템 UI로 구성됩니다.
 
@@ -257,7 +257,7 @@ catch (Exception exception)
 }
 ```
 
-See [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446).
+참조 [ **SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)합니다.
 
 ### <a name="programmatic-list-constraints"></a>프로그래밍 방식으로 목록 제약 조건 
 
@@ -271,13 +271,13 @@ See [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/wi
 
 SRGS(Speech Recognition Grammar Specification) 문법은 프로그래밍 방식 목록 제약 조건과 달리 [SRGS 버전 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302)에서 정의한 XML 형식을 사용하는 정적 문서입니다. SRGS 문법을 사용하면 단일 인식에서 여러 시맨틱 의미를 캡처할 수 있으므로 음성 인식 환경을 가장 잘 제어할 수 있습니다.
 
- See [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412).
+ 참조 [ **SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)합니다.
 
 ### <a name="voice-command-constraints"></a>음성 명령 제약 조건
 
 VCD(음성 명령 정의) XML 파일을 사용하여 사용자가 앱을 활성화할 때 동작을 시작하기 위해 말할 수 있는 명령을 정의합니다. 자세한 내용은 [Cortana에서 음성 명령으로 포그라운드 앱 시작](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana)을 참조하세요.
 
-See [**SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220)/
+참조 [ **SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220)/
 
 **참고**  제약 조건 형식을 사용 하면 만들려는 인식 환경의 복잡성에 따라 달라 집니다. 어떤 유형이나 특정 인식 작업에 가장 적합한 선택이 될 수 있으며, 앱에서 모든 제약 조건 유형의 용도를 찾을 수 있습니다.
 제약 조건을 시작하려면 [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md)을 참조하세요.

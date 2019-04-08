@@ -9,7 +9,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9137f7ef46da1b861976dbac680327febf315dac
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57601058"
@@ -41,7 +41,7 @@ HS(헐 셰이더) 단계는 프로그래밍 가능한 셰이더 단계입니다.
 -   헐 셰이더는 [TS(분할기) 단계](tessellator-stage--ts-.md)에서 요구하는 상태를 선언합니다. 여기에는 제어점의 수, 패치 면의 유형, 공간 분할 시 사용하는 분할의 유형 등이 포함됩니다. 이 정보는 일반적으로 셰이더 코드 앞에 선언으로 표시됩니다.
 -   공간 분할 요인은 각 패치를 얼마나 세분화할지 결정합니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
 
 
 패치를 함께 구성하는 1에서 32까지의 출력 제어점.

@@ -32,11 +32,11 @@ ms.locfileid: "57627598"
 
 | 메서드 | 설명   |
 |--------|---------------|
-|[lockDown](#lockDown) | 테스트를 위해 장치를 잠급니다. |
+|[잠금](#lockDown) | 테스트를 위해 장치를 잠급니다. |
 |[isEnvironmentSecure](#isEnvironmentSecure) | 잠금 컨텍스트가 디바이스에 적용되는지 결정합니다. |
 |[getDeviceInfo](#getDeviceInfo) | 테스트 응용 프로그램이 실행되는 플랫폼에 대한 세부 정보를 가져옵니다. |
 |[examineProcessList](#examineProcessList)|실행 중인 사용자 및 시스템 프로세스의 목록을 가져옵니다.|
-|[close](#close) | 브라우저를 닫고 디바이스의 잠금을 해제합니다. |
+|[닫기](#close) | 브라우저를 닫고 디바이스의 잠금을 해제합니다. |
 |[getPermissiveMode](#getPermissiveMode)|허용 모드가 켜져 있는지 아니면 꺼져 있는지 확인합니다.|
 |[setPermissiveMode](#setPermissiveMode)|허용 모드를 켜거나 끕니다.|
 |[emptyClipBoard](#emptyClipBoard)|시스템 클립보드를 지웁니다.|

@@ -35,7 +35,7 @@ CUSTOMVERTEX의 정의는 꼭짓점 버퍼를 만들 때 그래픽 드라이버�
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[레이아웃](views.md)
+[보기](views.md)
 
  
 

@@ -97,9 +97,9 @@ ms.locfileid: "57643288"
 | **스토어 로고**               | 권장 사항(일부 OS 버전에서는 필수 사항) | [스토어 로고](app-screenshots-and-images.md#store-logos)             |
 | **트레일러**                  | 선택 사항                                    | [트레일러](app-screenshots-and-images.md#trailers)                | 
 | **Windows 10 및 Xbox 이미지 (16:9 슈퍼 hero 아트)**     | 권장        | [Windows 10 및 Xbox 이미지 (16:9 슈퍼 hero 아트)
-](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
 | **Xbox 이미지**     | Xbox에 게시 하는 경우 적절 하 게 표시할에 필요한        | [Xbox 이미지
-](app-screenshots-and-images.md#xbox-images) |
+] (#xbox-이미지 앱-스크린샷-및-images.md) |
 | **추가 필드**  | 선택 사항                                    | [추가 필드](create-app-store-listings.md#supplemental-fields) 
 | **검색 용어**              | 선택 사항                                    | [검색 용어](create-app-store-listings.md#search-terms)         |
 | **저작권 및 상표 정보** | 선택 사항                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |

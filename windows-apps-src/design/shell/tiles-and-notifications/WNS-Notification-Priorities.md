@@ -7,7 +7,7 @@ keywords: windows 10, uwp, WinRT API WNS
 localizationpriority: medium
 ms.openlocfilehash: 2c297a04786c6fbf1eb0600e63a04a6d88585864
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57648708"
@@ -70,6 +70,6 @@ POST 요청에 추가 헤더를 통해 수행 됩니다 알림 요청에 우선 
 배터리 절약 모드에서 앱을 제외 하려면 사용자 "배터리 사용 하 여" 설정에서 앱으로 이동 하며 선택 "허용" 앱을 백그라운드 작업 실행 합니다. 사용자 선택이 높은, 보통 및 낮은 우선 순위 알림에 대 한 배터리 절약 모드에서 앱을 제외합니다. 호출할 수도 있습니다 [BackgroundExecutionManager API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccesskindasync#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessKindAsync_Windows_ApplicationModel_Background_BackgroundAccessRequestKind_System_String_) 프로그래밍 방식으로 사용자의 사용 권한을 요청 해야 합니다.  
 
 ## <a name="related-topics"></a>관련 항목
-- [Windows 푸시 알림 서비스 (WNS) 개요](windows-push-notification-services--wns--overview.md)
+- [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
 - [백그라운드에서 실행할 수 있는 권한을 요청 합니다.](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccesskindasync#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessKindAsync_Windows_ApplicationModel_Background_BackgroundAccessRequestKind_System_String_)
 - 

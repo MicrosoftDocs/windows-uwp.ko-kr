@@ -113,8 +113,8 @@ Direct3D의 픽셀 좌표계는 다음 그림과 같이 왼쪽 위 모서리에 
 
 정규화된 좌표의 경우:
 
--   샘플링을 가리킵니다. Texel \# = floor(U \* Width)
--   선형 샘플링 합니다. Left Texel \# = floor(U \* Width), Right Texel \# = Left Texel \# + 1
+-   샘플링을 가리킵니다. 텍셀 \# floor = (U \* 너비)
+-   선형 샘플링 합니다. 왼쪽 텍셀 \# floor = (U \* 너비), 오른쪽 텍셀 \# 왼쪽 텍셀 = \# + 1
 
 배율이 적용된 좌표:
 

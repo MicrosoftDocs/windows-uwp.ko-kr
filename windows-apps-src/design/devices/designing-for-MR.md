@@ -15,7 +15,7 @@ doc-status: ''
 ms.localizationpriority: medium
 ms.openlocfilehash: b988859422a80b31d94a133e36631b078ac7c14e
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57610498"

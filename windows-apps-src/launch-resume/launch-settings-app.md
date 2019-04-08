@@ -80,7 +80,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 회사 또는 학교 계정에 액세스 | ms-settings:workplace |
 | 메일 및 앱 계정  | ms-settings:emailandaccounts |
 | 가족 및 다른 사용자 | ms-settings:otherusers |
-| 키오스크 설정 | ms-settings:assignedaccess |
+| 키오스크 설정 | ms-assignedaccess 설정: |
 | 로그인 옵션 | ms-settings:signinoptions<br>ms-settings:signinoptions-dynamiclock |
 | 설정 동기화 | ms-settings:sync |
 | Windows Hello 설정 | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
@@ -106,7 +106,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 사용 권한 & 기록 | ms-settings:cortana-permissions |
 | 추가 정보 | ms-settings:cortana-moredetails |
 | 내 장치 간에 Cortana 사용으로 이동합니다 | ms-settings:cortana-notifications |
-| Cortana에게 말하기 | ms-settings:cortana-language<br/>ms-settings:cortana<br/>ms-settings:cortana-talktocortana |
+| Cortana에게 말하기 | ms-settings:cortana-language<br/>ms-설정: cortana<br/>ms-설정: cortana-talktocortana |
 
 > [!NOTE] 
 > 이 설정 섹션에서 데스크톱 PC는 Cortana를 현재 사용할 수 없는 경우 또는 Cortana 비활성화 된 지역에 설정 된 경우 검색을 호출 됩니다. Cortana 특정 페이지 (내 장치에서 Cortana) 및 Cortana에 게 문의 여기서 나열 되지 않습니다. 
@@ -135,8 +135,8 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 오디오 | ms-settings:easeofaccess-audio |
 | 자막 | ms-settings:easeofaccess-closedcaptioning |
-| 색 필터 | ms-settings:easeofaccess-colorfilter |
-| 커서 및 포인터 크기 | ms-settings:easeofaccess-cursorandpointersize |
+| 색 필터 | ms-설정: easeofaccess-colorfilter |
+| 커서 및 포인터 크기 | ms-설정: easeofaccess-cursorandpointersize |
 | 표시 | ms-settings:easeofaccess-display |
 | 아이 컨트롤 | ms-settings:easeofaccess-eyecontrol |
 | 글꼴 | ms-settings:fonts |
@@ -188,7 +188,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 모바일 핫스팟 | ms-settings:network-mobilehotspot |
 | NFC | ms-settings:nfctransactions |
 | Proxy (프록시) | ms-settings:network-proxy |
-| 상태 | ms-settings:network-status<br/>ms-settings:network |
+| 상태 | ms-settings:network-status<br/>ms-네트워크 설정: |
 | VPN | ms-settings:network-vpn |
 | Wi-Fi | ms-settings:network-wifi(장치에 wifi 어댑터가 있는 경우에만 사용 가능) |
 | Wi-Fi 통화 | ms-settings:network-wificalling(Wi-Fi 호출이 활성화된 경우에만 사용 가능) |
@@ -199,7 +199,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 배경 | ms-settings:personalization-background |
 | 시작 화면에 표시되는 폴더 선택 | ms-settings:personalization-start-places |
-| 색 | ms-settings:personalization-colors<br/>ms-settings:colors |
+| 색 | ms-settings:personalization-colors<br/>ms-설정: 색 |
 | 한 눈에 보기 | ms-설정: 개인 설정-상태 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 잠금 화면 | ms-settings:lockscreen |
 | 탐색 모음 | ms-설정: 개인 설정-navbar (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
@@ -212,7 +212,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-| 사용자 전화 | ms-settings:mobile-devices<br/>ms-settings:mobile-devices-addphone<br/>ms-설정: mobile-장치-addphone-직접 (열립니다 **Your Phone** 앱) |
+| 사용자 전화 | ms-settings:mobile-devices<br/>ms-설정: mobile-장치-addphone<br/>ms-설정: mobile-장치-addphone-직접 (열립니다 **Your Phone** 앱) |
 
 ## <a name="privacy"></a>개인 정보
 
@@ -267,7 +267,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 배터리 절약 모드 | ms-settings:batterysaver(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 배터리 절약 모드 설정 | ms-settings:batterysaver-settings(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 배터리 사용 | ms-settings:batterysaver-usagedetails(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
-| 클립보드 | ms-settings:clipboard |
+| 클립보드 | ms-클립보드 설정: |
 | 표시 | ms-settings:display |
 | 기본 저장 위치 | ms-settings:savelocations |
 | 표시 | ms-settings:screenrotation |
@@ -288,7 +288,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 원격 데스크톱 | ms-settings:remotedesktop |
 | 전화 | ms-설정: 전화 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 전원 및 절전 | ms-settings:powersleep |
-| 소리 | ms-settings:sound |
+| 소리 | ms-소리 설정: |
 | 저장 공간 | ms-settings:storagesense |
 | 저장 공간 센스 | ms-settings:storagepolicies |
 
@@ -298,7 +298,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 날짜 및 시간 | ms-settings:dateandtime |
 | 일본 IME 설정 | ms-settings:regionlanguage-jpnime(Microsoft 일본 입력기가 설치된 경우 사용 가능) |
-| 외국어 | ms-settings:keyboard<br/>ms-settings:regionlanguage<br/>ms-settings:regionlanguage-bpmfime<br/>ms-settings:regionlanguage-cangjieime<br/>ms-settings:regionlanguage-chsime-pinyin-domainlexicon<br/>ms-settings:regionlanguage-chsime-pinyin-keyconfig<br/>ms-settings:regionlanguage-chsime-pinyin-udp<br/>ms-settings:regionlanguage-chsime-wubi-udp<br/>ms-settings:regionlanguage-quickime |
+| 외국어 | ms-키보드 설정:<br/>ms-settings:regionlanguage<br/>ms-설정: regionlanguage-bpmfime<br/>ms-설정: regionlanguage-cangjieime<br/>ms-설정: regionlanguage-chsime-핀잉-domainlexicon<br/>ms-설정: regionlanguage-chsime-핀잉-keyconfig<br/>ms-설정: regionlanguage-chsime-핀잉-udp<br/>ms-설정: regionlanguage-chsime-wubi-udp<br/>ms-설정: regionlanguage-quickime |
 | Pinyin IME 설정 | ms-settings:regionlanguage-chsime-pinyin(Microsoft 병음 입력기가 설치된 경우 사용 가능) |
 | 음성 명령 | ms-settings:speech |
 | Wubi IME 설정  | ms-settings:regionlanguage-chsime-wubi(Microsoft Wubi 입력기가 설치된 경우 사용 가능) |
@@ -315,7 +315,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 복구 | ms-settings:recovery |
 | 문제 해결 | ms-settings:troubleshoot |
 | Windows 보안 | ms-settings:windowsdefender |
-| Windows 참가자 프로그램 | ms-settings:windowsinsider(사용자가 WIP에 등록한 경우에만 표시)<br/>ms-settings:windowsinsider-optin |
+| Windows 참가자 프로그램 | ms-settings:windowsinsider(사용자가 WIP에 등록한 경우에만 표시)<br/>ms-설정: windowsinsider-optin |
 | Windows 업데이트 | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
 | Windows 업데이트-고급 옵션 | ms-settings:windowsupdate-options |
 | Windows 업데이트-다시 시작 옵션 | ms-settings:windowsupdate-restartoptions |

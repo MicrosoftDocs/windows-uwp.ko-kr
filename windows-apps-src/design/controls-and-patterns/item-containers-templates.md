@@ -14,7 +14,7 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dcf0176e20e498f8c6744a542010b5197689b8a
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57639938"
@@ -25,7 +25,7 @@ ms.locfileid: "57639938"
 
 **ListView** 및 **GridView** 컨트롤은 항목 정렬 방법(가로, 세로, 줄 바꿈 등) 및 사용자가 항목을 조작하는 방법을 관리하지만 개별 항목이 화면에 표시되는 모양은 관리하지 않습니다. 항목 시각화는 항목 컨테이너에 의해 관리됩니다. 항목을 목록 보기에 추가하는 경우 항목이 자동으로 컨테이너에 추가됩니다. ListView에 대한 기본 항목 컨테이너는 [ListViewItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listviewitem.aspx)입니다. GridView의 경우 해당 [GridViewItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridviewitem.aspx)입니다.
 
-> **중요 한 Api**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)하십시오 [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)합니다 [ItemTemplate 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx), [ItemContainerStyle 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx)
+> **중요 API**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)하십시오 [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)합니다 [ItemTemplate 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx), [ItemContainerStyle 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx)
 
 
 > [!NOTE]
@@ -430,13 +430,13 @@ SelectionMode:&nbsp;&nbsp; | Single/Extended | Multiple
 
 상태/브러시 이름 | 인라인 스타일 | 오버레이 스타일
 ------------|--------------|--------------
-<b>보통</b><ul><li><b>CheckBoxBrush="Red"</b></li></ul> | ![인라인 항목 선택 일반](images/listview-item-normal.png) | ![오버레이 항목 선택 일반](images/gridview-item-normal.png)
-<b>PointerOver</b><ul><li><b>PointerOverForeground="DarkOrange"</b></li><li><b>PointerOverBackground="MistyRose"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 포인터 가리키기](images/listview-item-pointerover.png) | ![오버레이 항목 선택 포인터 가리키기](images/gridview-item-pointerover.png)
-<b>누름</b><ul><li><b>PressedBackground="LightCyan"</b></li><li>PointerOverForeground="DarkOrange"</li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 누름](images/listview-item-pressed.png) | ![오버레이 항목 선택 누름](images/gridview-item-pressed.png)
-<b>선택</b><ul><li><b>SelectedForeground="Navy"</b></li><li><b>SelectedBackground="Khaki"</b></li><li><b>CheckBrush="Green"</b></li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 선택됨](images/listview-item-selected.png) | ![오버레이 항목 선택 선택됨](images/gridview-item-selected.png)
-<b>PointerOverSelected</b><ul><li><b>SelectedPointerOverBackground="Lavender"</b></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki"(오버레이만 해당)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 포인터 가리키기 선택됨](images/listview-item-pointeroverselected.png) | ![오버레이 항목 선택 포인터 가리키기 선택됨](images/gridview-item-pointeroverselected.png)
-<b>PressedSelected</b><ul><li><b>SelectedPressedBackground="MediumTurquoise"</b></li></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki"(오버레이만 해당)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 누름 선택됨](images/listview-item-pressedselected.png) | ![오버레이 항목 선택 누름 선택됨](images/gridview-item-pressedselected.png)
-<b>초점을 맞춘</b><ul><li><b>FocusBorderBrush="Crimson"</b></li><li><b>FocusSecondaryBorderBrush="Gold"</b></li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 포커스 있음](images/listview-item-focused.png) | ![오버레이 항목 선택 포커스 있음](images/gridview-item-focused.png)
+<b>보통</b><ul><li><b>CheckBoxBrush = "Red"</b></li></ul> | ![인라인 항목 선택 일반](images/listview-item-normal.png) | ![오버레이 항목 선택 일반](images/gridview-item-normal.png)
+<b>PointerOver</b><ul><li><b>PointerOverForeground "DarkOrange" =</b></li><li><b>PointerOverBackground "MistyRose" =</b></li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 포인터 가리키기](images/listview-item-pointerover.png) | ![오버레이 항목 선택 포인터 가리키기](images/gridview-item-pointerover.png)
+<b>누름</b><ul><li><b>PressedBackground "연한 녹청" =</b></li><li>PointerOverForeground="DarkOrange"</li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 누름](images/listview-item-pressed.png) | ![오버레이 항목 선택 누름](images/gridview-item-pressed.png)
+<b>선택</b><ul><li><b>SelectedForeground "Navy" =</b></li><li><b>SelectedBackground "카키색" =</b></li><li><b>CheckBrush = "Green"</b></li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 선택됨](images/listview-item-selected.png) | ![오버레이 항목 선택 선택됨](images/gridview-item-selected.png)
+<b>PointerOverSelected</b><ul><li><b>SelectedPointerOverBackground "Lavender" =</b></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki"(오버레이만 해당)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 포인터 가리키기 선택됨](images/listview-item-pointeroverselected.png) | ![오버레이 항목 선택 포인터 가리키기 선택됨](images/gridview-item-pointeroverselected.png)
+<b>PressedSelected</b><ul><li><b>SelectedPressedBackground "MediumTurquoise" =</b></li></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki"(오버레이만 해당)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 누름 선택됨](images/listview-item-pressedselected.png) | ![오버레이 항목 선택 누름 선택됨](images/gridview-item-pressedselected.png)
+<b>초점을 맞춘</b><ul><li><b>FocusBorderBrush "Crimson" =</b></li><li><b>FocusSecondaryBorderBrush "골드" =</b></li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 포커스 있음](images/listview-item-focused.png) | ![오버레이 항목 선택 포커스 있음](images/gridview-item-focused.png)
 
 ListViewItemPresenter에는 데이터 자리 표시자 및 끌기 상태에 대한 다른 브러시 속성이 있습니다. 목록 보기에서 증분 로드 또는 끌어서 놓기를 사용하는 경우 이러한 추가 브러시 속성도 수정해야 하는지 고려해야 합니다. 수정할 수 있는 전체 속성 목록은 ListViewItemPresenter 클래스를 참조하세요. 
 

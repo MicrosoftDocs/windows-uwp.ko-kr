@@ -39,8 +39,8 @@ Windows 10 Insider Preview SDK 빌드 17709부터 비 UWP 데스크톱 응용 �
 
 GitHub의 c + + Win32 응용 프로그램에서 호스팅 API는 UWP XAML을 사용 하는 방법을 보여 주는 몇 가지 샘플 가지가 있습니다.
 
-  * [XamlHostingSample](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting). 이 샘플에서는 UWP를 추가 하는 방법을 보여 줍니다 [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)를 [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar), 및 [MediaPlayerElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement) c + + Win32 응용 프로그램에는 컨트롤입니다.
-  * [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32). 이 샘플에는 c + + Win32 응용 프로그램에 몇 가지 기본 UWP 컨트롤을 추가 하 고 DPI 변경 내용을 처리 하는 방법을 보여 줍니다.
+  * [XamlHostingSample](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting)합니다. 이 샘플에서는 UWP를 추가 하는 방법을 보여 줍니다 [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)를 [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar), 및 [MediaPlayerElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement) c + + Win32 응용 프로그램에는 컨트롤입니다.
+  * [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32)합니다. 이 샘플에는 c + + Win32 응용 프로그램에 몇 가지 기본 UWP 컨트롤을 추가 하 고 DPI 변경 내용을 처리 하는 방법을 보여 줍니다.
 
 ### <a name="wpf-and-windows-forms"></a>WPF 및 Windows Forms
 

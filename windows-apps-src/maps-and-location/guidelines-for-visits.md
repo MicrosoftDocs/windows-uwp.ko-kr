@@ -269,6 +269,6 @@ private async void RegisterBackgroundTask(object sender, RoutedEventArgs e) {
 이제 앱에서 방문 처리 백그라운드 작업을 등록할 수 있어야 하며 장치가 방문 관련 상태 변경을 기록할 때마다 이 작업이 활성화되어야 합니다. 이 상태 변경 정보로 수행할 작업을 결정하려면 백그라운드 작업 클래스의 논리를 입력해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목
-* [만들고 out-of-process-백그라운드 태스크를 등록 합니다.](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
-* [사용자의 위치를 가져옵니다.](get-location.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
+* [사용자 위치 가져오기](get-location.md)
 * [Windows.Devices.Geolocation 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.devices.geolocation)

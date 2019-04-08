@@ -9,7 +9,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: aa94eb00058ba3297e7ca7cc4f93581d9281fd1c
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57608018"
@@ -44,7 +44,7 @@ typedef struct tagRECT {
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[좌표계 및 기 하 도형](coordinate-systems-and-geometry.md)
+[좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
 
  
 

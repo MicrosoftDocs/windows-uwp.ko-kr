@@ -25,7 +25,7 @@ ms.locfileid: "57613068"
 
 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력 상자입니다. 암호 상자는 입력란처럼 보이지만 입력된 텍스트 대신 자리 표시자 문자를 렌더링합니다. 자리 표시자 문자는 구성할 수 있습니다.
 
-> **중요 한 Api**: [PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [Password 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx)합니다 [PasswordChar 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx)를 [PasswordRevealMode 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx), [PasswordChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)
+> **중요 API**: [PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [Password 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx)합니다 [PasswordChar 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx)를 [PasswordRevealMode 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx), [PasswordChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)
 
 기본적으로 암호 상자는 사용자가 표시 단추를 누른 채로 자신의 암호를 볼 수 있는 방법을 제공합니다. 표시 단추를 사용하지 않도록 설정하거나 확인란과 같은 암호를 표시하는 대체 메커니즘을 제공할 수 있습니다.
 
@@ -44,8 +44,8 @@ ms.locfileid: "57613068"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/PasswordBox">앱을 열고 작동 중인 PasswordBox를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

@@ -129,7 +129,7 @@ myCheckBox.SetValue(Canvas::TopProperty(), winrt::box_value(75));
 
 ## <a name="related-topics"></a>관련 항목
 
-- [사용자 지정 연결 된 속성](custom-attached-properties.md)
+- [사용자 지정 연결된 속성](custom-attached-properties.md)
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [XAML을 사용하여 레이아웃 정의](https://msdn.microsoft.com/library/windows/apps/mt228350)
 - [빠른 시작: UI 리소스를 변환합니다.](https://msdn.microsoft.com/library/windows/apps/hh943060)

@@ -25,7 +25,7 @@ ms.locfileid: "57656058"
 
 UI가 너무 많아 한 영역에 다 표시할 수 없는 경우 스크롤 뷰어 컨트롤을 사용합니다.
 
-> **중요 한 Api**: [ScrollViewer 클래스](https://msdn.microsoft.com/library/windows/apps/br209527), [ScrollBar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)
+> **중요 API**: [ScrollViewer 클래스](https://msdn.microsoft.com/library/windows/apps/br209527), [ScrollBar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)
 
 스크롤 뷰어를 사용하면 콘텐츠가 뷰포트(표시 영역)의 경계를 넘어 확장될 수 있습니다. 사용자는 마우스 또는 펜 커서를 사용하여 스크롤 뷰어의 스크롤 막대를 조작하거나 터치, 마우스휠, 키보드 또는 게임 패드를 통해 스크롤 뷰어 표면을 조작하여 이 콘텐츠에 도달합니다. 이 이미지는 스크롤 뷰어 컨트롤의 몇 가지 예를 보여 줍니다.
 
@@ -60,8 +60,8 @@ See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ScrollViewer">앱을 열고 작동 중인 ScrollViewer를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

@@ -39,7 +39,7 @@ ms.locfileid: "57625598"
 
 | 필드 | 설명 |
 |-------|-------------|
-| **Logo** | **제어판**의 [기본 프로그램 설정](https://msdn.microsoft.com/library/windows/desktop/cc144154)에서 URI 스키마 이름을 식별하는 데 사용되는 로고를 지정합니다. 로고를 지정하지 않으면 앱의 작은 로고가 사용됩니다. |
+| **로고** | **제어판**의 [기본 프로그램 설정](https://msdn.microsoft.com/library/windows/desktop/cc144154)에서 URI 스키마 이름을 식별하는 데 사용되는 로고를 지정합니다. 로고를 지정하지 않으면 앱의 작은 로고가 사용됩니다. |
 | **표시 이름** | **제어판**의 [기본 프로그램 설정](https://msdn.microsoft.com/library/windows/desktop/cc144154)에서 URI 스키마 이름을 식별하는 표시 이름을 지정합니다. |
 | **이름** | Uri 스키마 이름을 선택합니다. |
 |  | **참고** 이름은 모두 소문자여야 합니다. |
@@ -177,7 +177,7 @@ URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 �
 
 ### <a name="tasks"></a>작업
 
-- [URI에 대 한 기본 앱 시작](launch-default-app.md)
+- [URI에 대한 기본 앱 실행](launch-default-app.md)
 - [파일 활성화 처리](handle-file-activation.md)
 
 ### <a name="guidelines"></a>지침

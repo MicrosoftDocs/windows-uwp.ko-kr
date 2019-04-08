@@ -90,18 +90,18 @@ Native image obj\x86\Release\\R2R\DesktopApp1.exe generated successfully.
 
 ## <a name="faq"></a>FAQ
 
-**Q. 새 이진 파일이.NET Framework 4.7.2에서 작동 하나요?**
+**질문 및 답변 합니다. 새 이진 파일이.NET Framework 4.7.2에서 작동 하나요?**
 
 A. 최적화 된 이진 파일은.NET framework 4.7.2 이상 실행 하는 경우 향상 된 기능에서 도움이 됩니다. 이전.NET framework 버전을 실행 하는 클라이언트 이진 파일에서 최적화 되지 않은 MSIL 코드를 로드 합니다.
 
-**Q. 피드백을 제공 하거나 문제를 보고 수 어떻게 하나요?**
+**질문 및 답변 합니다. 피드백을 제공 하거나 문제를 보고 수 어떻게 하나요?**
 
 A. Visual Studio 2017에서 피드백 도구를 사용 하 여 문제를 보고 합니다. [자세한 내용은](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)합니다.
 
-**Q. 기존 이진 파일에 네이티브 이미지를 추가 하는 영향을 무엇입니까?**
+**질문 및 답변 합니다. 기존 이진 파일에 네이티브 이미지를 추가 하는 영향을 무엇입니까?**
 
 A. 최종 파일이 큰 만들기, 관리 및 네이티브 코드를 포함 하는 최적화 된 이진 파일.
 
-**Q. 이 기술을 사용 하 여 이진 파일을 해제할 수 있나요?**
+**질문 및 답변 합니다. 이 기술을 사용 하 여 이진 파일을 해제할 수 있나요?**
 
 A. 이 버전에는 현재 사용할 수 있는 Go Live 라이선스를 포함 합니다.

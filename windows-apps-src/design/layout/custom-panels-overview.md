@@ -26,7 +26,7 @@ ms.locfileid: "57620348"
 *패널*은 XAML(Extensible Application Markup Language) 레이아웃 시스템이 실행되고 앱 UI가 렌더링될 때 패널에 포함된 자식 요소에 대한 레이아웃 동작을 제공하는 개체입니다. 
 
 
-> **중요 한 Api**: [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711), [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
+> **중요 API**: [**패널**](https://msdn.microsoft.com/library/windows/apps/br227511)하십시오 [ **ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)하십시오 [ **MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
 
 [  **Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 클래스에서 사용자 지정 클래스를 파생시켜 XAML 레이아웃에 대한 사용자 지정 패널을 정의할 수 있습니다. [  **MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 및 [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)를 재정의하고 자식 요소를 측정 및 정렬하는 논리를 제공하여 패널에 대한 동작을 제공합니다.
 
@@ -86,7 +86,7 @@ XAML 파서가 이 태그를 읽을 때 [**Children**](https://msdn.microsoft.co
 -   [**DesiredSize** ](https://msdn.microsoft.com/library/windows/apps/br208921) (실제로 [ **UIElement** ](https://msdn.microsoft.com/library/windows/apps/br208911) 속성)
 -   [**ActualHeight** ](https://msdn.microsoft.com/library/windows/apps/br208707) 하 고 [ **ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)
 -   [**높이** ](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 하 고 [ **너비**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)
--   [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)
+-   [**여백**](https://msdn.microsoft.com/library/windows/apps/br208724)
 -   [**LayoutUpdated** ](https://msdn.microsoft.com/library/windows/apps/br208722) 이벤트
 -   [**HorizontalAlignment** ](https://msdn.microsoft.com/library/windows/apps/br208720) 하 고 [ **VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
 -   [**ArrangeOverride** ](https://msdn.microsoft.com/library/windows/apps/br208711) 하 고 [ **MeasureOverride** ](https://msdn.microsoft.com/library/windows/apps/br208730) 메서드
@@ -195,7 +195,7 @@ protected override Size ArrangeOverride(Size finalSize)
 **참조**
 * [**FrameworkElement.ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
 * [**FrameworkElement.MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
-* [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)
+* [**패널**](https://msdn.microsoft.com/library/windows/apps/br227511)
 
 **개념**
 * [맞춤, 여백 및 안쪽 여백](alignment-margin-padding.md)

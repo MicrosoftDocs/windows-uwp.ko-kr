@@ -30,7 +30,7 @@ ms.locfileid: "57636368"
 
 각 목록 패턴에 대한 디자인 지침, 기능 및 예제가 제공됩니다.
 
-> **중요 한 Api**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/br242878)하십시오 [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/br242705), [ComboBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209348)
+> **중요 API**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/br242878)하십시오 [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/br242705), [ComboBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209348)
 
 
 > <div id="main">

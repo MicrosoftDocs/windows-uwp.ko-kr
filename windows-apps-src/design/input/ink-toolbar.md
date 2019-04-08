@@ -10,7 +10,7 @@ ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
 ms.openlocfilehash: 77bb78fe9509936fec5267162deab382bafffb61
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57650578"
@@ -35,7 +35,7 @@ ms.locfileid: "57650578"
 
   이 항목에서는 InkToolbar에 대해 설명합니다.
 
-> **중요 한 Api**: [**InkCanvas 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)를 [ **InkToolbar 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)하십시오 [ **InkPresenter 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [ **Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **중요 API**: [**InkCanvas 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)를 [ **InkToolbar 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)하십시오 [ **InkPresenter 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [ **Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 ## <a name="default-inktoolbar"></a>기본 InkToolbar
 

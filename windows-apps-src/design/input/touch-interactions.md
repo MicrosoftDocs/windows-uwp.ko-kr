@@ -22,7 +22,7 @@ ms.locfileid: "57649238"
 
 그러나 터치에 최적화된 UI가 기존 UI보다 항상 나은 것은 아닙니다. 둘 다 기술 및 응용 방식에 고유한 장점과 단점이 있습니다. 터치 우선식 UI로 전환할 경우 터치(터치 패드 포함), 펜/스타일러스, 마우스 및 키보드 입력 간의 주요 차이점을 이해하는 것이 중요합니다.
 
-> **중요 한 Api**: [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994), [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
+> **중요 API**: [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)하십시오 [ **Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)하십시오 [ **Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
 
 
 여러 디바이스에, 입력으로 하나 이상의 손가락을 사용(또는 터치 접촉)하여 지원하는 멀티 터치 화면이 있습니다. 터치 접촉과 해당 움직임은 터치 제스처 및 조작으로 해석되어 다양한 사용자 조작을 지원합니다.

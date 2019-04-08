@@ -36,8 +36,8 @@ ms.locfileid: "57603188"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [만들기, 편집 및 비트맵 이미지를 저장 합니다.](imaging.md)
-* [지원 되는 코덱](supported-codecs.md)
+* [비트맵 이미지 만들기, 편집 및 저장](imaging.md)
+* [지원되는 코덱](supported-codecs.md)
 
  
 

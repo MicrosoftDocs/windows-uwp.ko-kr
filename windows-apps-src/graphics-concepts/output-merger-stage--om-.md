@@ -79,7 +79,7 @@ OM(출력 병합기) 단계는 다음과 같은 조합을 사용하여 최종 �
 -   렌더링 대상의 콘텐츠
 -   깊이/스텐실 버퍼의 콘텐츠.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
 
 
 ### <a name="span-idoutput-write-mask-overviewspanspan-idoutput-write-mask-overviewspanspan-idoutput-write-mask-overviewspanoutput-write-mask-overview"></a><span id="Output-write-mask-overview"></span><span id="output-write-mask-overview"></span><span id="OUTPUT-WRITE-MASK-OVERVIEW"></span>출력 쓰기 마스크 개요
@@ -92,7 +92,7 @@ OM(출력 병합기) 단계는 다음과 같은 조합을 사용하여 최종 �
 
 렌더링 대상 슬롯의 어떤 조합도 사용할 수 있습니다(최대 8). 하지만 리소스 보기는 다중 렌더링 대상 슬롯에 동시에 바인딩할 수 없습니다. 리소스를 동시에 사용하지 않는 한 보기는 다시 사용할 수 있습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

@@ -546,8 +546,8 @@ namespace SplashScreenExample
 **참조**
 
 * [Windows.ApplicationModel.Activation 네임 스페이스](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [Windows.ApplicationModel.Activation.SplashScreen class](https://msdn.microsoft.com/library/windows/apps/br224763)
-* [Windows.ApplicationModel.Activation.SplashScreen.ImageLocation property](https://msdn.microsoft.com/library/windows/apps/br224765)
+* [Windows.ApplicationModel.Activation.SplashScreen 클래스](https://msdn.microsoft.com/library/windows/apps/br224763)
+* [Windows.ApplicationModel.Activation.SplashScreen.ImageLocation 속성](https://msdn.microsoft.com/library/windows/apps/br224765)
 * [Windows.ApplicationModel.Core.CoreApplicationView.Activated 이벤트](https://msdn.microsoft.com/library/windows/apps/br225018)
 
  

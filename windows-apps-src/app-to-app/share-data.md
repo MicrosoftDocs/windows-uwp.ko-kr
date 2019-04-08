@@ -96,7 +96,7 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 ## <a name="see-also"></a>참고 항목 
 
 * [앱 간 통신](index.md)
-* [데이터 수신](receive-data.md)
+* [데이터 받기](receive-data.md)
 * [DataPackage](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.aspx)
 * [DataPackagePropertySet](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackagepropertyset.aspx)
 * [DataRequest](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.aspx)

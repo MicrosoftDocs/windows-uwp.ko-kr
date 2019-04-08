@@ -40,10 +40,10 @@ ToastContent는 시각적 개체, 작업 및 오디오를 포함한 알림의 �
 
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
-| **Launch**| 문자열 | false | 알림에 의해 활성화될 때 응용 프로그램에 전달되는 문자열입니다. 이 문자열의 형식과 콘텐츠는 앱에서 앱 용도에 맞게 정의됩니다. 사용자가 알림을 탭하거나 클릭하여 연결된 앱을 시작하면 시작 문자열은 기본 방법으로 앱을 시작하는 대신 사용자에게 알림 콘텐츠에 관련된 뷰를 표시할 수 있도록 하는 앱 컨텍스트를 제공합니다. |
+| **시작**| 문자열 | false | 알림에 의해 활성화될 때 응용 프로그램에 전달되는 문자열입니다. 이 문자열의 형식과 콘텐츠는 앱에서 앱 용도에 맞게 정의됩니다. 사용자가 알림을 탭하거나 클릭하여 연결된 앱을 시작하면 시작 문자열은 기본 방법으로 앱을 시작하는 대신 사용자에게 알림 콘텐츠에 관련된 뷰를 표시할 수 있도록 하는 앱 컨텍스트를 제공합니다. |
 | **Visual** | [ToastVisual](#toastvisual) | true | 알림 메시지의 시각적 개체 부분을 설명합니다. |
 | **작업** | [IToastActions](#itoastactions) | false | 필요에 따라 단추와 입력으로 사용자 지정 작업을 만듭니다. |
-| **Audio** | [ToastAudio](#toastaudio) | false | 알림 메시지의 오디오 부분을 설명합니다. |
+| **오디오** | [ToastAudio](#toastaudio) | false | 알림 메시지의 오디오 부분을 설명합니다. |
 | **ActivationType** | [ToastActivationType](#toastactivationtype) | false | 사용자가 이 알림의 본문을 클릭할 때 사용할 활성화 유형을 지정합니다. |
 | **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | 크리에이터 업데이트 새로운 기능: 알림 메시지의 활성화와 관련 된 추가 옵션입니다. |
 | **시나리오** | [ToastScenario](#toastscenario) | false | 알람 또는 미리 알림과 같이 알림을 사용할 시나리오를 선언합니다. |
@@ -58,7 +58,7 @@ ToastContent는 시각적 개체, 작업 및 오디오를 포함한 알림의 �
 |---|---|
 | **기본** | 일반 알림 동작입니다. |
 | **미리 알림** | 미리 알림입니다. 미리 확장되어 표시되고 해제할 때까지 사용자의 화면에 남아 있습니다. |
-| **Alarm** | 알람 알림입니다. 미리 확장되어 표시되고 해제할 때까지 사용자의 화면에 남아 있습니다. 오디오가 기본적으로 반복되고 알람 오디오를 사용합니다. |
+| **경보** | 알람 알림입니다. 미리 확장되어 표시되고 해제할 때까지 사용자의 화면에 남아 있습니다. 오디오가 기본적으로 반복되고 알람 오디오를 사용합니다. |
 | **IncomingCall** | 수신 전화 알림입니다. 특별한 호출 형식으로 미리 확장되어 표시되고 해제할 때까지 사용자의 화면에 남아 있습니다. 오디오가 기본적으로 반복되고 벨소리 오디오를 사용합니다. |
 
 
@@ -68,7 +68,7 @@ ToastContent는 시각적 개체, 작업 및 오디오를 포함한 알림의 �
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
 | **BindingGeneric** | [ToastBindingGeneric](#toastbindinggeneric) | true | 모든 장치에서 렌더링할 수 있는 일반 알림 바인딩입니다. 이 바인딩은 필수이며 null일 수 없습니다. |
-| **BaseUri** | URI | false | 이미지 소스 특성에 상대 URL과 결합되는 기본 기준 URL입니다. |
+| **baseUri** | URI | false | 이미지 소스 특성에 상대 URL과 결합되는 기본 기준 URL입니다. |
 | **AddImageQuery** | bool? | false | Windows에서 알림 메시지에 제공된 이미지 URL에 쿼리 문자열을 추가할 수 있게 하려면 "true"로 설정합니다. 서버에서 이미지를 호스트하고, 쿼리 문자열을 기반으로 이미지 변형을 검색하거나 쿼리 문자열을 무시하고 쿼리 문자열 없이 지정된 이미지를 반환하여 쿼리 문자열을 처리할 수 있는 경우 이 특성을 사용합니다. 이 쿼리 문자열은 배율, 대비 설정 및 언어를 지정합니다. 예를 들어, 알림에 지정된 "www.website.com/images/hello.png"의 값은 "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us"가 됩니다. |
 | **언어**| 문자열 | false | "en-US" 또는 "fr-FR"과 같이 BCP-47 언어 태그로 지정된 지역화된 리소스를 사용할 때 시각적 페이로드의 대상 로캘입니다. 이 로캘은 바인딩 또는 텍스트에 지정된 로캘로 재정의됩니다. 제공되지 않을 경우 시스템 로캘이 대신 사용됩니다. |
 
@@ -82,7 +82,7 @@ ToastContent는 시각적 개체, 작업 및 오디오를 포함한 알림의 �
 | **AppLogoOverride** | [ToastGenericAppLogo](#toastgenericapplogo) | false | 앱 로고를 재정의하기 위한 선택적 로고입니다. |
 | **HeroImage** | [ToastGenericHeroImage](#toastgenericheroimage) | false | 알림 센터 내와 알림에 표시되는 선택적 추천 "영웅" 이미지입니다. |
 | **Attribution** | [ToastGenericAttributionText](#toastgenericattributiontext) | false | 알림 메시지 아래쪽에 표시되는 선택적 특성 텍스트입니다. |
-| **BaseUri** | URI | false | 이미지 소스 특성에 상대 URL과 결합되는 기본 기준 URL입니다. |
+| **baseUri** | URI | false | 이미지 소스 특성에 상대 URL과 결합되는 기본 기준 URL입니다. |
 | **AddImageQuery** | bool? | false | Windows에서 알림 메시지에 제공된 이미지 URL에 쿼리 문자열을 추가할 수 있게 하려면 "true"로 설정합니다. 서버에서 이미지를 호스트하고, 쿼리 문자열을 기반으로 이미지 변형을 검색하거나 쿼리 문자열을 무시하고 쿼리 문자열 없이 지정된 이미지를 반환하여 쿼리 문자열을 처리할 수 있는 경우 이 특성을 사용합니다. 이 쿼리 문자열은 배율, 대비 설정 및 언어를 지정합니다. 예를 들어, 알림에 지정된 "www.website.com/images/hello.png"의 값은 "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us"가 됩니다. |
 | **언어**| 문자열 | false | "en-US" 또는 "fr-FR"과 같이 BCP-47 언어 태그로 지정된 지역화된 리소스를 사용할 때 시각적 페이로드의 대상 로캘입니다. 이 로캘은 바인딩 또는 텍스트에 지정된 로캘로 재정의됩니다. 제공되지 않을 경우 시스템 로캘이 대신 사용됩니다. |
 
@@ -117,7 +117,7 @@ ToastContent는 시각적 개체, 작업 및 오디오를 포함한 알림의 �
 
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
-| **BindingName** | 문자열 | true | 바인딩 데이터 값에 매핑할 이름을 가져오거나 설정합니다. |
+| **bindingName** | 문자열 | true | 바인딩 데이터 값에 매핑할 이름을 가져오거나 설정합니다. |
 
 
 ### <a name="adaptivetextstyle"></a>AdaptiveTextStyle
@@ -128,16 +128,16 @@ ToastContent는 시각적 개체, 작업 및 오디오를 포함한 알림의 �
 | **기본** | 기본값입니다. 스타일은 렌더러로 결정됩니다. |
 | **캡션** | 단락 글꼴 크기보다 작습니다. |
 | **CaptionSubtle** | Caption과 동일하지만 불투명도가 약합니다. |
-| **Body** | 단락 글꼴 크기입니다. |
+| **본문** | 단락 글꼴 크기입니다. |
 | **BodySubtle** | Body와 동일하지만 불투명도가 약합니다. |
-| **Base** | 단락 글꼴 크기이며 두께는 굵게입니다. 기본적으로 Body의 굵게 버전입니다. |
+| **자료** | 단락 글꼴 크기이며 두께는 굵게입니다. 기본적으로 Body의 굵게 버전입니다. |
 | **BaseSubtle** | Base와 동일하지만 불투명도가 약합니다. |
-| **Subtitle** | H4 글꼴 크기입니다. |
+| **부제목** | H4 글꼴 크기입니다. |
 | **SubtitleSubtle** | Subtitle과 동일하지만 불투명도가 약합니다. |
-| **Title** | H3 글꼴 크기입니다. |
+| **제목** | H3 글꼴 크기입니다. |
 | **TitleSubtle** | Title과 동일하지만 불투명도가 약합니다. |
 | **TitleNumeral** | Title과 동일하지만 안쪽 여백(위쪽/아래쪽)이 제거되었습니다. |
-| **Subheader** | H2 글꼴 크기입니다. |
+| **하기** | H2 글꼴 크기입니다. |
 | **SubheaderSubtle** | Subheader와 동일하지만 불투명도가 약합니다. |
 | **SubheaderNumeral** | Subheader와 동일하지만 안쪽 여백(위쪽/아래쪽)이 제거되었습니다. |
 | **헤더** | H1 글꼴 크기입니다. |
@@ -152,9 +152,9 @@ ToastContent는 시각적 개체, 작업 및 오디오를 포함한 알림의 �
 |---|---|
 | **기본** | 기본값입니다. 맞춤은 렌더러로 자동 결정됩니다. |
 | **자동** | 현재 언어와 문화로 결정된 맞춤입니다. |
-| **Left** | 텍스트를 가로로 왼쪽에 맞춥니다. |
+| **왼쪽** | 텍스트를 가로로 왼쪽에 맞춥니다. |
 | **center** | 텍스트를 가로로 가운데에 맞춥니다. |
-| **Right** | 텍스트를 가로로 오른쪽에 맞춥니다. |
+| **오른쪽** | 텍스트를 가로로 오른쪽에 맞춥니다. |
 
 
 ## <a name="adaptiveimage"></a>AdaptiveImage
@@ -186,10 +186,10 @@ ToastContent는 시각적 개체, 작업 및 오디오를 포함한 알림의 �
 | 값 | 의미 |
 |---|---|
 | **기본** | 기본값입니다. 렌더러로 결정되는 대체 동작입니다. |
-| **Stretch** | 이미지가 사용 가능한 너비(및 이미지가 어디에 배치되었는지에 따라 사용 가능한 높이)를 채우도록 늘어납니다. |
-| **Left** | 이미지를 왼쪽에 맞추고 기본 해상도로 표시합니다. |
+| **스트레치** | 이미지가 사용 가능한 너비(및 이미지가 어디에 배치되었는지에 따라 사용 가능한 높이)를 채우도록 늘어납니다. |
+| **왼쪽** | 이미지를 왼쪽에 맞추고 기본 해상도로 표시합니다. |
 | **center** | 이미지를 가로로 가운데에 맞추고 기본 해상도로 표시합니다. |
-| **Right** | 이미지를 오른쪽에 맞추고 기본 해상도로 표시합니다. |
+| **오른쪽** | 이미지를 오른쪽에 맞추고 기본 해상도로 표시합니다. |
 
 
 ## <a name="adaptivegroup"></a>AdaptiveGroup
@@ -235,7 +235,7 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
-| **Title** | 문자열 또는 [BindableString](#bindablestring) | false | 선택적 제목 문자열을 가져오거나 설정합니다. 데이터 바인딩을 지원합니다. |
+| **제목** | 문자열 또는 [BindableString](#bindablestring) | false | 선택적 제목 문자열을 가져오거나 설정합니다. 데이터 바인딩을 지원합니다. |
 | **값** | 이중 또는 [AdaptiveProgressBarValue](#adaptiveprogressbarvalue) 또는 [BindableProgressBarValue](#bindableprogressbarvalue) | false | 진행률 표시줄의 값을 가져오거나 설정합니다. 데이터 바인딩을 지원합니다. 기본값은 0입니다. |
 | **ValueStringOverride** | 문자열 또는 [BindableString](#bindablestring) | false | 기본 백분율 문자열 대신 표시할 선택적 문자열을 가져오거나 설정합니다. 이것을 제공하지 않는 경우 '70%'와 같은 내용이 표시됩니다. |
 | **상태** | 문자열 또는 [BindableString](#bindablestring) | true | 왼쪽의 진행률 표시줄 아래에 표시되는 상태 문자열(필수)을 가져오거나 설정합니다. 이 문자열은 '다운로드 중...' 또는 '설치 중...'과 같은 작업의 상태를 반영해야 합니다. |
@@ -255,7 +255,7 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
-| **BindingName** | 문자열 | true | 바인딩 데이터 값에 매핑할 이름을 가져오거나 설정합니다. |
+| **bindingName** | 문자열 | true | 바인딩 데이터 값에 매핑할 이름을 가져오거나 설정합니다. |
 
 
 ## <a name="toastgenericapplogo"></a>ToastGenericAppLogo
@@ -329,20 +329,20 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 
 ## <a name="toasttextbox"></a>ToastTextBox
-*Implements [IToastInput](#itoastinput)*
+*구현 [IToastInput](#itoastinput)*
 
 사용자가 텍스트를 입력할 수 있는 텍스트 상자입니다.
 
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
 | **Id** | 문자열 | true | ID는 필수이며 나중에 앱에서 사용하는 ID/값의 키-값 쌍에 사용자가 입력한 텍스트를 매핑하는 데 사용됩니다. |
-| **Title** | 문자열 | false | 텍스트 상자 위에 표시할 제목 텍스트입니다. |
+| **제목** | 문자열 | false | 텍스트 상자 위에 표시할 제목 텍스트입니다. |
 | **PlaceholderContent** | 문자열 | false | 사용자가 아직 아무 텍스트도 입력하지 않았을 때 텍스트 상자에 표시할 자리 표시자 텍스트입니다. |
 | **DefaultInput** | 문자열 | false | 텍스트 상자에 넣을 초기 텍스트입니다. 빈 텍스트 상자의 경우 null로 둡니다. |
 
 
 ## <a name="toastselectionbox"></a>ToastSelectionBox
-*Implements [IToastInput](#itoastinput)*
+*구현 [IToastInput](#itoastinput)*
 
 사용자가 옵션의 드롭다운 목록에서 선택할 수 있게 하는 선택 상자 컨트롤입니다.
 
@@ -358,7 +358,7 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
 | **Id** | 문자열 | true | ID는 필수이며 나중에 앱에서 사용하는 ID/값의 키-값 쌍에 사용자가 입력한 텍스트를 매핑하는 데 사용됩니다. |
-| **Title** | 문자열 | false | 선택 상자 위에 표시할 제목 텍스트입니다. |
+| **제목** | 문자열 | false | 선택 상자 위에 표시할 제목 텍스트입니다. |
 | **DefaultSelectionBoxItemId** | 문자열 | false | 이 컨트롤은 기본적으로 선택되는 항목을 제어하며 [ToastSelectionBoxItem](#toastselectionboxitem)의 ID 속성을 가리킵니다. 이를 제공하지 않을 경우 기본 선택이 비어 있게 됩니다(사용자에게 아무 것도 표시되지 않음). |
 | **항목** | IList<[ToastSelectionBoxItem](#toastselectionboxitem)> | false | 사용자가 이 SelectionBox에서 선택할 수 있는 선택 항목입니다. 5개의 항목만 추가할 수 있습니다. |
 
@@ -393,7 +393,7 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 |---|---|
 | **전경** | 기본값입니다. 포그라운드 앱이 시작됩니다. |
 | **배경** | 모든 것이 설정되었다는 가정하에 해당 배경 작업이 트리거되며, 사용자를 방해하지 않고 사용자의 빠른 응답 메시지를 보내는 것처럼 배경에서 코드를 실행할 수 있습니다. |
-| **Protocol** | 프로토콜 활성화를 사용하여 다른 앱을 시작합니다. |
+| **프로토콜** | 프로토콜 활성화를 사용하여 다른 앱을 시작합니다. |
 
 
 ### <a name="toastactivationoptions"></a>ToastActivationOptions
@@ -460,8 +460,8 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
-| **Src** | uri | false | 기본 소리 대신 재생할 미디어 파일입니다. ms-appx와 ms-appdata만 지원됩니다. |
-| **Loop** | boolean | false | 알림이 표시된 동안 소리를 반복해야 하는 경우 true로 설정하고, 한 번만 재생하려면 false로 설정합니다(기본값). |
+| **src** | uri | false | 기본 소리 대신 재생할 미디어 파일입니다. ms-appx와 ms-appdata만 지원됩니다. |
+| **루프** | boolean | false | 알림이 표시된 동안 소리를 반복해야 하는 경우 true로 설정하고, 한 번만 재생하려면 false로 설정합니다(기본값). |
 | **자동** | boolean | false | 음소거하려면 true로 설정하고, 알림 메시지 소리가 재생되게 하려면 false로 설정합니다(기본값). |
 
 
@@ -471,7 +471,7 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 | 속성 | 형식 | 필수 | 설명 |
 |---|---|---|---|
 | **Id** | 문자열 | true | 개발자가 생성하는 식별자로서 이 헤더를 고유하게 식별합니다. 두 알림의 헤더 ID가 동일할 경우 알림 센터에서 동일한 헤더 아래에 해당 알림이 표시됩니다. |
-| **Title** | 문자열 | true | 헤더의 제목입니다. |
+| **제목** | 문자열 | true | 헤더의 제목입니다. |
 | **인수**| 문자열 | true | 사용자가 이 머리글을 클릭할 때 응용 프로그램에 반환되는 개발자 정의 문자열 인수를 가져오거나 설정합니다. null일 수 없습니다. |
 | **ActivationType** | [ToastActivationType](#toastactivationtype) | false | 클릭 시 이 헤더가 사용할 활성화 유형을 제어합니다. 기본값은 Foreground입니다. 전경 및 프로토콜만이 지원됩니다. |
 | **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | 알림 헤더의 활성화와 관련된 추가 옵션을 가져오거나 설정합니다. |

@@ -19,7 +19,7 @@ ms.locfileid: "57630798"
 
 UWP 앱 개발에서 *컨트롤*은 콘텐츠를 표시하거나 조작을 가능하게 하는 UI 요소입니다. 단추, 입력란, 콤보 상자 등의 컨트롤을 사용하여 데이터를 표시하고 사용자 입력을 받기 위한 앱의 UI를 만듭니다.
 
-> **중요 한 Api**: [Windows.UI.Xaml.Controls 네임 스페이스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+> **중요 API**: [Windows.UI.Xaml.Controls 네임 스페이스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 
 *패턴*은 컨트롤을 수정하거나 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다. 예를 들어, 합니다 [마스터/세부 정보](master-details.md) 패턴은 사용할 수 있는 방식으로 [분할 된 뷰](split-view.md) 앱 탐색에 대 한 제어 합니다. 템플릿을 사용자 지정할 수는 마찬가지로 [NavigationView](navigationview.md) 탭 패턴을 구현 하는 컨트롤입니다.
 

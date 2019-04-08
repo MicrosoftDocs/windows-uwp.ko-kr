@@ -7,7 +7,7 @@ keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝�
 ms.localizationpriority: medium
 ms.openlocfilehash: e4ca6946df327dbe6697a71d1050e6401ed531fe
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57626668"
@@ -394,7 +394,7 @@ MySpecializedToggleButtonAutomationPeer::MySpecializedToggleButtonAutomationPeer
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
-* [winrt::com_ptr::copy_from function](/uwp/cpp-ref-for-winrt/com-ptr#comptrcopyfrom-function)
+* [winrt::com_ptr::copy_from 함수](/uwp/cpp-ref-for-winrt/com-ptr#comptrcopyfrom-function)
 * [winrt::from_abi 함수 템플릿](/uwp/cpp-ref-for-winrt/from-abi)
 * [winrt::get_self 함수 템플릿](/uwp/cpp-ref-for-winrt/get-self)
 * [winrt::implements 구조체 템플릿](/uwp/cpp-ref-for-winrt/implements)
@@ -403,5 +403,5 @@ MySpecializedToggleButtonAutomationPeer::MySpecializedToggleButtonAutomationPeer
 * [winrt::Windows::Foundation::IUnknown:: 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 
 ## <a name="related-topics"></a>관련 항목
-* [사용 Api을 사용 하 여 C + + /cli WinRT](consume-apis.md)
-* [XAML 컨트롤입니다. 바인딩할 C + + /cli WinRT 속성](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)
+* [C++/WinRT를 통한 API 사용](consume-apis.md)
+* [XAML 컨트롤(C++/WinRT 속성에 바인딩)](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)

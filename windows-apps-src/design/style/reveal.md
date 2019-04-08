@@ -23,7 +23,7 @@ ms.locfileid: "57628668"
 
 강조 표시 하는 사용자 가까이 대 한 포인터를 움직이면 명령 모음 같은 대화형 요소를 강조 표시 하는 조명 결과 표시 합니다. 
 
-> **중요 한 Api**: [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush)를 [RevealBorderBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush)하십시오 [RevealBrushHelper 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
+> **중요 API**: [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush)를 [RevealBorderBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush)하십시오 [RevealBrushHelper 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>작동 방식
 포인터가 있으면이 그림과 같이 인접 요소의 컨테이너를 노출 하 여 호출 주의 대화형 요소를 강조 표시를 표시 합니다.
@@ -41,8 +41,8 @@ ms.locfileid: "57628668"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Reveal">앱을 열고 작동 중인 표시를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -63,7 +63,7 @@ ms.locfileid: "57628668"
 - [**TreeView**](../controls-and-patterns/tree-view.md)
 - [**NavigationView**](../controls-and-patterns/navigationview.md)
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
-- [**CommandBar**](../controls-and-patterns/app-bars.md)
+- [**명령 모음**](../controls-and-patterns/app-bars.md)
 
 이러한 그림은 여러 다른 컨트롤에서 강조 표시을 표시합니다.
 

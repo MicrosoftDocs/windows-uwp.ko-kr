@@ -220,7 +220,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
               Margin="{StaticResource LargeItemMargin}">
     ```
     
-    **After**
+    **후**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -312,7 +312,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
             Margin="{StaticResource LargeItemMargin}">
     ```
     
-    **After**
+    **후**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -596,4 +596,4 @@ public string ImageTitle
 이 자습서에서 필요한 모든 정보를 얻을 수 있어야 하지만, 더 많은 지침이 필요하다면 한 번의 클릭으로 데이터 바인딩 문서를 확인할 수 있습니다. 여기에서 시작하세요.
 
 + [{X:bind} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
-+ [깊이에서 데이터 바인딩](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
++ [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)

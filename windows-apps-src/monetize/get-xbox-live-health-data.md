@@ -7,7 +7,7 @@ keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
 ms.openlocfilehash: 3b996d85776cb49d45cc5b699709b4eb107e7086
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57650908"
@@ -55,8 +55,8 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원
 | endDate | date | 검색할 상태 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니오  |
 | top | int | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니오  |
 | skip | int | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 큰 데이터 집합의 페이지를 탐색할 수 있습니다. 예를 들어 top=10000 및 skip=0이면 데이터의 처음 10000개 행을 검색하고 top=10000 및 skip=10000이면 데이터의 다음 10000개 행을 검색하는 방식입니다. |  아니오  |
-| filter | 문자열  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 각 문에는 응답 본문의 필드 이름 및 **eq** 또는 **ne** 연산자와 연결된 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 문자열 값은 *filter* 매개 변수에서 단일 따옴표로 묶여야 합니다. 응답 본문의 다음과 같은 필드를 지정할 수 있습니다.<p/><ul><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>sandboxId</strong></li></ul> | 아니오   |
-| groupby | 문자열 | 지정된 필드에 대한 데이터 집계에만 적용되는 문입니다. 응답 본문의 다음과 같은 필드를 지정할 수 있습니다.<p/><ul><li><strong>date</strong></li><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>sandboxId</strong></li></ul><p/>하나 이상의 *groupby* 필드를 지정하는 경우 응답 본문에서 지정하지 않은 다른 *groupby* 필드의 값은 **All**입니다. |  아니오  |
+| filter | 문자열  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 각 문에는 응답 본문의 필드 이름 및 **eq** 또는 **ne** 연산자와 연결된 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 문자열 값은 *filter* 매개 변수에서 단일 따옴표로 묶여야 합니다. 응답 본문의 다음과 같은 필드를 지정할 수 있습니다.<p/><ul><li><strong>장치 유형</strong></li><li><strong>PackageVersion</strong></li><li><strong>sandboxId</strong></li></ul> | 아니오   |
+| groupby | 문자열 | 지정된 필드에 대한 데이터 집계에만 적용되는 문입니다. 응답 본문의 다음과 같은 필드를 지정할 수 있습니다.<p/><ul><li><strong>날짜</strong></li><li><strong>장치 유형</strong></li><li><strong>PackageVersion</strong></li><li><strong>sandboxId</strong></li></ul><p/>하나 이상의 *groupby* 필드를 지정하는 경우 응답 본문에서 지정하지 않은 다른 *groupby* 필드의 값은 **All**입니다. |  아니오  |
 
 
 ### <a name="request-example"></a>요청 예제

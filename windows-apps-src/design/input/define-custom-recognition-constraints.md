@@ -10,7 +10,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 539acb242cfe6ee70d1311133a3f1a193860541a
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57631728"
@@ -21,7 +21,7 @@ ms.locfileid: "57631728"
 
 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다.
 
-> **중요 한 Api**: [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446), [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421), [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
+> **중요 API**: [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)하십시오 [ **SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)하십시오 [ **SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
 
 
 인식할 수 있는 어휘를 정의하려면 음성 인식에 하나 이상의 제약 조건이 필요합니다. 제약 조건을 지정하지 않으면 유니버설 Windows 앱의 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.

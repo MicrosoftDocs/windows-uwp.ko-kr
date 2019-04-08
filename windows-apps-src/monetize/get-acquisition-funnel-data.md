@@ -61,8 +61,8 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 
 |---------------|-----------------|
 | campaignId | 취득과 연결된 [사용자 지정 앱 프로 모션 캠페인](../publish/create-a-custom-app-promotion-campaign.md)의 ID 문자열입니다. |
 | 출시 | 구입이 발생한 시장의 ISO 3166 국가 코드를 포함하는 문자열입니다. |
-| deviceType | 취득이 발생한 장치 유형을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>홀로그램</strong></li><li><strong>알 수 없음</strong></li></ul> |
-| ageGroup | 취득을 완료한 사용자 연령 그룹을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>0 – 17</strong></li><li><strong>18 – 24</strong></li><li><strong>25 – 34</strong></li><li><strong>35 – 49</strong></li><li><strong>50 개 이상</strong></li><li><strong>알 수 없음</strong></li></ul> |
+| deviceType | 취득이 발생한 장치 유형을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>전화</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>홀로그램</strong></li><li><strong>알 수 없음</strong></li></ul> |
+| ageGroup | 취득을 완료한 사용자 연령 그룹을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>0 ~ 17</strong></li><li><strong>18-24</strong></li><li><strong>25 – 34</strong></li><li><strong>35 – 49</strong></li><li><strong>50 개 이상</strong></li><li><strong>알 수 없음</strong></li></ul> |
 | gender | 취득을 완료한 사용자의 성별을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>M</strong></li><li><strong>F</strong></li><li><strong>알 수 없음</strong></li></ul> |
 
 
@@ -95,7 +95,7 @@ Authorization: Bearer <your access token>
 
 | 값               | 형식   | 설명                           |
 |---------------------|--------|-------------------------------------------|
-| MetricType                | 문자열 | 이 개체에 포함된 [깔때기 데이터 유형](../publish/acquisitions-report.md#acquisition-funnel)을 지정한 다음 문자열 중 하나입니다.<ul><li><strong>PageView</strong></li><li><strong>취득</strong></li><li><strong>설치</strong></li><li><strong>Usage</strong></li></ul> |
+| MetricType                | 문자열 | 이 개체에 포함된 [깔때기 데이터 유형](../publish/acquisitions-report.md#acquisition-funnel)을 지정한 다음 문자열 중 하나입니다.<ul><li><strong>페이지 보기</strong></li><li><strong>취득</strong></li><li><strong>설치</strong></li><li><strong>사용 현황</strong></li></ul> |
 | UserCount       | 문자열 | *MetricType* 값이 지정한 깔때기 단계를 수행할 수 있는 사용자의 수입니다.             |
 
 

@@ -136,7 +136,7 @@ Windows 10 버전 1607부터 비디오 녹화를 일시 중지하고 녹화가 �
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Camera](camera.md) [!code-cs[StopRecording](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStopRecording)]
+* [카메라](camera.md) [!code-cs[StopRecording](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStopRecording)]
 
 **StartAsync** 및 **StopAsync**를 여러 번 호출하여 여러 오디오 파일을 녹음할 수 있습니다. 오디오 캡처를 마쳤으면 [**FinishAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.LowLagMediaRecording.FinishAsync)를 호출하여 캡처 세션을 삭제하고 관련된 리소스를 정리합니다. 이 호출 후에는 **StartAsync** 호출 전에 **PrepareLowLagRecordToStorageFileAsync**를 다시 호출하여 캡처 세션을 다시 초기화해야 합니다.
 
@@ -163,6 +163,6 @@ Windows 10 버전 1803부터는 시스템이 앱의 오디오 캡처 및 오디�
 
 * [Windows 기본 제공 카메라 UI 사용 하 여 사진 및 비디오 캡처](capture-photos-and-video-with-cameracaptureui.md)
 * [장치 방향 MediaCapture 사용 하 여 처리](handle-device-orientation-with-mediacapture.md)
-* [만들기, 편집 및 비트맵 이미지를 저장 합니다.](imaging.md)
+* [비트맵 이미지 만들기, 편집 및 저장](imaging.md)
 * [파일, 폴더 및 라이브러리](https://msdn.microsoft.com/windows/uwp/files/index)
 

@@ -22,11 +22,11 @@ ms.locfileid: "57620558"
 뷰 공급자 개체는 __IFrameworkView__ 인터페이스를 구현하는데, 이 인터페이스는 이 게임 샘플을 생성하기 위해 구성해야 하는 일련의 메서드로 이루어져 있습니다.
 
 앱 단일 항목이 호출하는 이러한 5가지 메서드를 반드시 구현해야 합니다.
-* [__Initialize__](#initialize-the-view-provider)
+* [__초기화__](#initialize-the-view-provider)
 * [__SetWindow__](#configure-the-window-and-display-behaviors)
 * [__부하__](#load-method-of-the-view-provider)
-* [__Run__](#run-method-of-the-view-provider)
-* [__Uninitialize__](#uninitialize-method-of-the-view-provider)
+* [__실행__](#run-method-of-the-view-provider)
+* [__초기화__](#uninitialize-method-of-the-view-provider)
 
 __Initialize__ 메서드는 응용 프로그램 시작 시 호출됩니다. __Initialize__에 이어 __SetWindow__ 메서드가 호출됩니다. 그런 다음 __Load__ 메서드가 호출됩니다. 게임이 실행 중일 때 __Run__ 메시지가 호출됩니다. 게임이 종료되면 __Uninitialize__ 메서드가 호출됩니다. 자세한 내용은 [__IFrameworkView__ API 참조](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview)를 참조하세요. 
 

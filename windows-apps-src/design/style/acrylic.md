@@ -23,7 +23,7 @@ ms.locfileid: "57624198"
 
 못합니다의 형식인 [브러시](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush) 는 반투명 질감을 만듭니다. 앱 표면에 아크릴을 적용하여 깊이를 추가하고 시각적 계층을 설정할 수 있습니다.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
 
-> **중요 한 Api**: [AcrylicBrush 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background)
+> **중요 API**: [AcrylicBrush 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background)
 
 :::row:::
     :::column:::

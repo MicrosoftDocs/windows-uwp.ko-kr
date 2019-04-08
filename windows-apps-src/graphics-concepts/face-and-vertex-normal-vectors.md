@@ -88,7 +88,7 @@ DrawPrimitive 메서드를 사용하여 장면을 렌더링할 경우, 예리한
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[좌표계 및 기 하 도형](coordinate-systems-and-geometry.md)
+[좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
 
  
 

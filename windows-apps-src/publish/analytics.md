@@ -29,7 +29,7 @@ ms.locfileid: "57625448"
 
 -   [취득 보고서](acquisitions-report.md)
 -   [추가 기능 구입 보고서](add-on-acquisitions-report.md)
--   [사용 현황 보고서](usage-report.md)
+-   [사용 보고서](usage-report.md)
 -   [상태 보고서](health-report.md)
 -   [등급 보고서](ratings-report.md)
 -   [리뷰 보고서](reviews-report.md)

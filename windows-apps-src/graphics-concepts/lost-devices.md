@@ -62,7 +62,7 @@ Direct3D를 통해 응용 프로그램은 이전에 작성했거나 만든 이�
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[장치](devices.md)
+[디바이스](devices.md)
 
  
 

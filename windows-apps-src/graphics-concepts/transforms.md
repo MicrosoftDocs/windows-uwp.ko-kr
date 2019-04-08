@@ -19,7 +19,7 @@ ms.locfileid: "57639648"
 
 Direct3D 파트는 고정 함수 기하 도형 파이프라인을 통해 기하 도형을 푸시하는 변환 엔진입니다. 세계 좌표의 모델 및 뷰어를 찾아내고, 표시할 꼭짓점을 화면에 투사하고, 뷰포트에 대한 꼭짓점을 잘라냅니다. 또한 변환 엔진은 조명 계산을 수행하여 각 꼭짓점의 확산 및 반사 구성 요소를 결정합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>
@@ -58,7 +58,7 @@ Direct3D 파트는 고정 함수 기하 도형 파이프라인을 통해 기하 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[좌표계 및 기 하 도형](coordinate-systems-and-geometry.md)
+[좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
 
  
 

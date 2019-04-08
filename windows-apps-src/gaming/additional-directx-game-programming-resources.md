@@ -76,7 +76,7 @@ Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스
 
 
 -   [CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=76627)
--   [GameDev.net](https://go.microsoft.com/fwlink/p/?LinkID=288870)
+-   [방문 하십시오](https://go.microsoft.com/fwlink/p/?LinkID=288870)
 
  
 

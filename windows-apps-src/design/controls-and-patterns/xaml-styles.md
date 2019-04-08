@@ -165,7 +165,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 </Page.Resources>
 ```
 
-PointerOver(단추 위로 마우스를 가져감), **PointerPressed**(단추가 호출됨) 또는 Disabled(단추가 조작 가능하지 않음)와 같은 상태에 해당합니다. 이러한 끝 원래 경량 스타일 이름에 추가 됩니다. **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etc. 수정 된 브러시도 게 컨트롤 앱의 테마를 일관 되 게 지정 됩니다.
+PointerOver(단추 위로 마우스를 가져감), **PointerPressed**(단추가 호출됨) 또는 Disabled(단추가 조작 가능하지 않음)와 같은 상태에 해당합니다. 이러한 끝 원래 경량 스타일 이름에 추가 됩니다. **ButtonBackgroundPointerOver**하십시오 **ButtonForegroundPointerPressed**합니다 **ButtonBorderBrushDisabled**등. 수정 된 브러시도 게 컨트롤 앱의 테마를 일관 되 게 지정 됩니다.
 
 이러한 브러시 재정의를 **App.Resources** 수준에 배치하면 단일 페이지가 아닌 전체 앱 내의 모든 단추가 변경됩니다.
 

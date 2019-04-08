@@ -7,7 +7,7 @@ keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
 ms.openlocfilehash: 883463f291864016ebc32f2d510936452c931366
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57649698"
@@ -124,12 +124,12 @@ C + + WinRT 프로그래밍, 표준 c + + 언어 기능을 사용할 수 있습�
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::hstring 구조체](/uwp/cpp-ref-for-winrt/hstring)
-* [winrt 네임 스페이스](/uwp/cpp-ref-for-winrt/winrt)
+* [winrt 네임스페이스](/uwp/cpp-ref-for-winrt/winrt)
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
 * [C + + /cli WinRT Visual Studio 확장 (VSIX)](https://aka.ms/cppwinrt/vsix)
-* [시작 C + + /cli WinRT](get-started.md)
-* [표준 c + + 데이터 형식 및 C + + /cli WinRT](std-cpp-data-types.md)
+* [C++/WinRT 시작](get-started.md)
+* [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)
 * [문자열 처리 C + + /cli WinRT](strings.md)
 * [Windows UWP Api](https://docs.microsoft.com/uwp/api/)

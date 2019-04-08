@@ -9,7 +9,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 38a65a3532fe401f31fbf0da656aff1a141fa71a
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57636308"
@@ -41,7 +41,7 @@ Global Illumination = Ambient Light + Diffuse Light + Specular Light + Emissive 
 
 월드 매트릭스의 반전을 사용하여 광원의 위치 및 방향을 카메라 위치와 함께 모델 공간으로 변환하는 방법을 통해 모든 조명 계산은 모델 공간에서 이루어집니다. 결과적으로 세계 또는 보기 매트릭스가 비균등 크기 조정을 도입하는 경우, 그 결과로 얻는 조명은 부정확할 수 있습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

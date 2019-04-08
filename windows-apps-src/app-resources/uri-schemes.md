@@ -8,7 +8,7 @@ keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: b449179468d26c357e69ad1d8868004cadd6e2fa
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57632058"
@@ -271,6 +271,6 @@ ms-resource:///Hello%23World/String1
 * [앱 패키징](../packaging/index.md)
 * [XAML 태그 및 코드에서 이미지 또는 다른 자산 참조](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)
-* [UI 및 앱 패키지 매니페스트에 문자열 지역화](localize-strings-ui-manifest.md)
+* [UI 및 앱 패키지 매니페스트의 문자열 지역화](localize-strings-ui-manifest.md)
 * [리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/jj552947)
 * [언어, 배율 및 고대비 대 한 타일 및 알림 알림 지원](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

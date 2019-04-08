@@ -10,7 +10,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9bdd122f438cc9584b5e1eff2236c625adea9c2b
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57633748"
@@ -19,7 +19,7 @@ ms.locfileid: "57633748"
 
 Windows Ink에 내장된 인식 기능을 사용하여 잉크 스트로크 및 셰이프를 변환합니다.
 
-> **중요 한 Api**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **중요 API**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)하십시오 [ **Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
 ## <a name="free-form-recognition-with-ink-analysis"></a>잉크 분석을 통한 자유 형식 인식

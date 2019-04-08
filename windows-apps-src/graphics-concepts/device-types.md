@@ -46,7 +46,7 @@ REF 사용이 필요한 다른 경우는 HAL 디바이스가 이상한 결과를
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[장치](devices.md)
+[디바이스](devices.md)
 
  
 

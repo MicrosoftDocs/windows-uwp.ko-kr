@@ -20,7 +20,7 @@ ms.locfileid: "57644908"
 
 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다.
 
-> **중요 한 Api**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243), [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
+> **중요 API**: [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)하십시오 [ **RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)하십시오 [ **SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
 
 
 ## <a name="assess-audio-input-quality"></a>오디오 입력 품질 평가

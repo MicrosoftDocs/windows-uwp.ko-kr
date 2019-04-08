@@ -1,5 +1,5 @@
 ---
-title: 고객 데이터베이스 응용 프로그램 만들기
+title: 고객 데이터베이스 애플리케이션 만들기
 description: 고객 데이터베이스 응용 프로그램을 만들고 기본 엔터프라이즈 앱 함수를 구현 하는 방법을 알아봅니다.
 keywords: enterprise, 자습서, 고객 데이터를 읽고, 업데이트 delete REST 인증 만들기
 ms.date: 05/07/2018
@@ -7,12 +7,12 @@ ms.topic: article
 ms.localizationpriority: med
 ms.openlocfilehash: 9c09e0fb73e42fd8a3d0c70bbb5396be32624387
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57623248"
 ---
-# <a name="tutorial-create-a-customer-database-application"></a>자습서: 고객 데이터베이스 응용 프로그램 만들기
+# <a name="tutorial-create-a-customer-database-application"></a>자습서: 고객 데이터베이스 애플리케이션 만들기
 
 이 자습서에는 고객 목록을 관리 하기 위한 간단한 앱을 만듭니다. 이 과정에서 다양 한 UWP에서 엔터프라이즈 앱에 대 한 기본 개념을 소개 합니다. 다음에 대한 방법을 알아봅니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "57623248"
 * A **RadDataGrid** 표시 하 고 고객에 게 편집 합니다. 
 * A **StackPanel** 새 고객에 대 한 초기 값을 설정 합니다.
 
-### <a name="viewmodels"></a>ViewModels
+### <a name="viewmodels"></a>Viewmodel
 
 **ViewModels\CustomerListPageViewModel.cs** 앱의 기본 논리입니다. 보기에서 수행 되는 모든 사용자 동작 처리를 위해이 파일에 전달 됩니다. 이 자습서에서는 몇 가지 새 코드를 추가 하 고 다음 메서드를 구현 합니다.
 

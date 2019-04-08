@@ -28,8 +28,8 @@ ms.locfileid: "57634658"
 ## <a name="using-makeappxexe"></a>MakeAppx.exe 사용
 
 SDK 설치 경로에 따라 Windows 10 PC에서 **MakeAppx.exe**가 있는 위치는 다음과 같습니다.
-- x86: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x86\makeappx.exe
-- x64: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x64\makeappx.exe
+- x86: C:\Program 파일 (x86) \Windows Kits\10\bin\\&lt;빌드 번호&gt;\x86\makeappx.exe
+- x64: C:\Program 파일 (x86) \Windows Kits\10\bin\\&lt;빌드 번호&gt;\x64\makeappx.exe
 
 이 도구의 ARM 버전은 없습니다.
 
@@ -268,6 +268,6 @@ MakeAppx.exe decrypt p MyPackage.msix /ep MyEncryptedPackage.emsix /kf MyKeyFile
 이 유효성 검사는 다음을 확인합니다.
 - 패키지 매니페스트에서 참조된 모든 파일이 앱 패키지에 포함되어 있습니다.
 - 응용 프로그램에 두 개의 동일한 키가 없습니다.
-- 이 목록에서 사용할 수 없는 프로토콜에 대 한 응용 프로그램을 등록 하지 않습니다. SMB, FILE, MS-WWA-WEB, MS-WWA.
+- 이 목록에서 사용할 수 없는 프로토콜에 대 한 응용 프로그램을 등록 하지 않습니다. SMB, 파일, MS-WWA-WEB, MS WWA 합니다.
 
 일반적인 오류만 catch하도록 설계되었기 때문에 전체 의미 체계 유효성 검사는 아닙니다. **MakeAppx.exe**에서 빌드된 패키지는 설치 가능한 패키지가 아닐 수도 있습니다.

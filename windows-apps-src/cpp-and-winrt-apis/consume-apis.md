@@ -7,7 +7,7 @@ keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝�
 ms.localizationpriority: medium
 ms.openlocfilehash: 488516f94a53eb26b4a9e2f49927b8399c62bff5
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57645148"
@@ -261,10 +261,10 @@ BankAccountWRC::BankAccount account = factory.ActivateInstance<BankAccountWRC::B
 * [Windows::Foundation::Uri 클래스](/uwp/api/windows.foundation.uri)
 * [winrt::get_activation_factory 함수 템플릿](/uwp/cpp-ref-for-winrt/get-activation-factory)
 * [winrt::make 함수 템플릿](/uwp/cpp-ref-for-winrt/make)
-* [winrt::Windows::Foundation::IUnknown struct](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
+* [winrt::Windows::Foundation::IUnknown 구조체](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
 
 ## <a name="related-topics"></a>관련 항목
 * [작성할 이벤트 C + + /cli WinRT](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component)
-* [Interop 간에 C + + /cli WinRT 및 ABI](interop-winrt-abi.md)
-* [소개 C + + /cli WinRT](intro-to-using-cpp-with-winrt.md)
-* [XAML 컨트롤입니다. 바인딩할 C + + /cli WinRT 속성](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)
+* [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md)
+* [C++/WinRT 소개](intro-to-using-cpp-with-winrt.md)
+* [XAML 컨트롤(C++/WinRT 속성에 바인딩)](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)

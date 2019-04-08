@@ -7,7 +7,7 @@ keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤
 ms.localizationpriority: medium
 ms.openlocfilehash: ace1c276b878d07f5750483740dfe90ed8cb6211
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57644488"
@@ -283,6 +283,6 @@ C +를 이식 하려는 경우 + CX 이벤트 및 대리자 사용 되는 내부
 내부 API를 디자인 하는 경우 이러한 지침 반드시 적용 하는 참고 합니다. 내부 Api 종종 공용 시간이 될 하지만.
 
 ## <a name="related-topics"></a>관련 항목
-* [작성 Api C + + /cli WinRT](author-apis.md)
-* [사용 Api을 사용 하 여 C + + /cli WinRT](consume-apis.md)
+* [C++/WinRT를 통한 API 작성](author-apis.md)
+* [C++/WinRT를 통한 API 사용](consume-apis.md)
 * [C + 대리자를 사용 하 여 이벤트를 처리 + WinRT](handle-events.md)

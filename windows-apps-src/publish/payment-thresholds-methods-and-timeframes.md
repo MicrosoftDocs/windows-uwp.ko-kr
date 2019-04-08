@@ -56,7 +56,7 @@ ms.locfileid: "57610668"
     <th colspan="2">지급 계좌 = PayPal</th>
   </tr>
   <tr>
-    <td><strong>Country/region</strong></td>
+    <td><strong>국가/지역</strong></td>
     <td><strong>결제 임계값</strong></td>
     <td><strong>지불 방법</strong></td>
     <td><strong>결제 임계값</strong></td>
@@ -1118,7 +1118,7 @@ ms.locfileid: "57610668"
     <th colspan="2">지급 계좌 = PayPal</th>
   </tr>
   <tr>
-    <td><strong>Country/region</strong></td>
+    <td><strong>국가/지역</strong></td>
     <td><strong>결제 임계값</strong></td>
     <td><strong>지불 방법</strong></td>
     <td><strong>결제 임계값</strong></td>
@@ -2180,7 +2180,7 @@ ms.locfileid: "57610668"
     <th colspan="2">지급 계좌 = PayPal</th>
   </tr>
   <tr>
-    <td><strong>Country/region</strong></td>
+    <td><strong>국가/지역</strong></td>
     <td><strong>결제 임계값</strong></td>
     <td><strong>지불 방법</strong></td>
     <td><strong>결제 임계값</strong></td>
@@ -3227,7 +3227,7 @@ ms.locfileid: "57610668"
     <th colspan="2">지급 계좌 = PayPal</th>
   </tr>
   <tr>
-    <td><strong>Country/region</strong></td>
+    <td><strong>국가/지역</strong></td>
     <td><strong>결제 임계값</strong></td>
     <td><strong>지불 방법</strong></td>
     <td><strong>결제 임계값</strong></td>

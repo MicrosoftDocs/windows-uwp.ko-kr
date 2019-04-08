@@ -30,7 +30,7 @@ ms.locfileid: "57608848"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="directx-getting-started.md">시작 하기</a></p></td>
+<td align="left"><p><a href="directx-getting-started.md">시작</a></p></td>
 <td align="left"><p>DirectX 프로그래밍을 소개합니다.</p></td>
 </tr>
 <tr class="even">

@@ -67,7 +67,7 @@ Direct3D가 사용하는 삼각형 래스터화 규칙에 대한 설명이 모�
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[장치](devices.md)
+[디바이스](devices.md)
 
 [래스터 라이저 (RS) 단계](rasterizer-stage--rs-.md)
 

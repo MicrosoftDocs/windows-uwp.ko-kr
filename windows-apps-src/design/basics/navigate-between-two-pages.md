@@ -24,7 +24,7 @@ ms.locfileid: "57616208"
 
 앱에서 기본 피어 투 피어 탐색을 할 수 있도록 프레임과 페이지를 사용하는 방법을 알아봅니다. 
 
-> **중요 한 Api**: [**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) class, [**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503) class, [**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300) namespace
+> **중요 API**: [**Windows.UI.Xaml.Controls.Frame** ](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스인 [ **Windows.UI.Xaml.Controls.Page** ](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스 [ **Windows.UI.Xaml.Navigation** ](https://msdn.microsoft.com/library/windows/apps/br243300) 네임 스페이스
 
 ![피어 투 피어 탐색](images/peertopeer.png)
 

@@ -459,6 +459,6 @@ namespace MyAppService
 
 ## <a name="related-topics"></a>관련 항목
 
-* [해당 호스트 응용 프로그램과 동일한 프로세스에서 실행 되도록 app service를 변환 합니다.](convert-app-service-in-process.md)
+* [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-in-process.md)
 * [백그라운드 작업을 사용 하 여 앱을 지원 합니다.](support-your-app-with-background-tasks.md)
 * [앱 서비스 코드 샘플 (C#, c + + 및 VB)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)

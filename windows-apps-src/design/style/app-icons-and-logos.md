@@ -185,7 +185,7 @@ Visual Studio 이미지 파일을 생성 하 고 프로젝트에 추가 합니�
 
 예를 들면
 
-Square150x150Logo-scale-100.png, Square150x150Logo-scale-200.png, Square150x150Logo-scale-400.png
+Square150x150Logo-확장-100.png, Square150x150Logo-확장-200.png Square150x150Logo-확장-400.png
 
 Visual Studio 배지 로고를 기본적으로 생성 하지는 알 수 있습니다. 배지 로고는 고유 하며 아마도 다른 앱 아이콘이 일치 해서는 안 됩니다 때문입니다. 자세한 내용은 참조는 [UWP 앱 문서에 대 한 알림 배지](/windows/uwp/design/shell/tiles-and-notifications/badges)합니다. 
 
@@ -208,11 +208,11 @@ Visual Studio에서 프로젝트에 필요한 모든 앱 아이콘 자산을 생
 
 | 자산 크기 | 파일 이름 예제                  |
 |------------|------------------------------------|
-| 16x16\*    | Square44x44Logo.targetsize-16.png  |
-| 24x24\*    | Square44x44Logo.targetsize-24.png  |
+| 16 x 16\*    | Square44x44Logo.targetsize-16.png  |
+| 24 x 24\*    | Square44x44Logo.targetsize-24.png  |
 | 32x32\*    | Square44x44Logo.targetsize-32.png  |
 | 48x48\*    | Square44x44Logo.targetsize-48.png  |
-| 256x256\*  | Square44x44Logo.targetsize-256.png |
+| 256 x 256\*  | Square44x44Logo.targetsize-256.png |
 | 20x20      | Square44x44Logo.targetsize-20.png  |
 | 30x30      | Square44x44Logo.targetsize-30.png  |
 | 36x36      | Square44x44Logo.targetsize-36.png  |

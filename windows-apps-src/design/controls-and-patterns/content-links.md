@@ -23,7 +23,7 @@ ms.locfileid: "57648538"
 
 사용자가 RichEditBox에서 앰퍼샌드(@) 기호를 항목 앞에 붙이면 항목과 일치되는 사람 및 장소 목록이 표시됩니다. 그런 다음, 예를 들어 사용자가 장소를 선택하면 해당 장소에 대한 ContentLink가 텍스트에 삽입됩니다. 사용자가 RichEditBox에서 콘텐츠 링크를 호출하면 지도 및 이 장소에 대한 추가 정보와 함께 플라이아웃이 표시됩니다.
 
-> **중요 한 Api**: [ContentLink 클래스](/uwp/api/windows.ui.xaml.documents.contentlink)하십시오 [ContentLinkInfo 클래스](/uwp/api/windows.ui.text.contentlinkinfo), [RichEditTextRange 클래스](/uwp/api/windows.ui.text.richedittextrange)
+> **중요 API**: [ContentLink 클래스](/uwp/api/windows.ui.xaml.documents.contentlink)하십시오 [ContentLinkInfo 클래스](/uwp/api/windows.ui.text.contentlinkinfo), [RichEditTextRange 클래스](/uwp/api/windows.ui.text.richedittextrange)
 
 > [!NOTE]
 > 콘텐츠 링크에 대 한 Api는 다음 네임 스페이스에 분산 됩니다. Windows.UI.Xaml.Controls Windows.UI.Xaml.Documents, 하며 Windows.UI.Text 합니다.

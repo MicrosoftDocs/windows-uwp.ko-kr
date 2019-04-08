@@ -17,7 +17,7 @@ ms.locfileid: "57615768"
 # <a name="toast-notification-ux-guidance"></a>토스트 알림 UX 지침
 알림은 최신 수명;의 필수 구성 사용자 생산성과 모든 업데이트를 사용 하 여 최신 뿐만 아니라 앱 및 웹 사이트를 사용 하 여 참여 데 도움이 됩니다. 그러나 알림 overbearing를 유용 하 고 사용자 중심 방식으로 설계 되지 않은 경우 주입에서 신속 하 게 설정할 수 있습니다. 알림은 해제 중에서 하나의 마우스 오른쪽 단추로 클릭 하 고 그럴 가능성은 해제 되 면, 이러한 켜 집니다 다시 합니다.  따라서 사용자 알림은 사용자의 화면 공간 시간과 정직 수 있도록이 engagement 채널 열기 해야 합니다.
 
-> **중요 한 Api**: [Windows 커뮤니티 도구 키트 알림 nuget 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+> **중요 API**: [Windows 커뮤니티 도구 키트 알림 nuget 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 Windows 원격 분석을 뿐만 아니라 다른 첫 번째 및 제 3 자 사례 연구, 유용한 알림 스토리 점에서 주위 4 개의 규칙을 사용 하 여를 분석 한 것입니다.  이러한 규칙은 플랫폼에 관계 없이 보편적으로 적용할 수 있습니다 및 알림을 사용자에 게 긍정적인 영향을 미칠 수 있도록 도와줍니다 확신 합니다.
 

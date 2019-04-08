@@ -28,7 +28,7 @@ ms.locfileid: "57627178"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [장치를 열거 합니다.](../devices-sensors/enumerate-devices.md)
+* [디바이스 열거](../devices-sensors/enumerate-devices.md)
 * [장치 정보 속성](../devices-sensors/device-information-properties.md)
 * [장치 선택기를 빌드](../devices-sensors/build-a-device-selector.md)
 * [미디어 재생](media-playback.md)

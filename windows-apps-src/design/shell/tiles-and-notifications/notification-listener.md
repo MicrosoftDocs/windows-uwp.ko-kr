@@ -23,7 +23,7 @@ ms.locfileid: "57649618"
 > **1 주년 업데이트를 설치 해야**: SDK 14393 대상으로 해야 합니다 하 고 빌드 14393 이상을 알림 수신기를 사용 하 여 실행 합니다.
 
 
-> **중요 한 Api**: [UserNotificationListener 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.Management.UserNotificationListener), [UserNotificationChangedTrigger 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.UserNotificationChangedTrigger)
+> **중요 API**: [UserNotificationListener 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.Management.UserNotificationListener), [UserNotificationChangedTrigger 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.UserNotificationChangedTrigger)
 
 
 ## <a name="enable-the-listener-by-adding-the-user-notification-capability"></a>사용자 알림 기능을 추가하여 수신기 활성화 

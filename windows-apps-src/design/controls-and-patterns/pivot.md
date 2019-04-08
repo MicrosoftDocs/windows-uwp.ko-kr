@@ -21,7 +21,7 @@ ms.locfileid: "57642928"
 
 합니다 [피벗](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) 터치 살짝 소수의 콘텐츠 섹션 간에 컨트롤을 사용 합니다.
 
-> **중요 한 Api**: [클래스를 피벗](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
+> **중요 API**: [클래스를 피벗](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
 ## <a name="examples"></a>예
 
@@ -32,8 +32,8 @@ ms.locfileid: "57642928"
 <td>
     <p>있는 경우는 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하려면 여기를 클릭 <a href="xamlcontrolsgallery:/item/Pivot">앱을 열고 작업 피벗 컨트롤이 표시</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

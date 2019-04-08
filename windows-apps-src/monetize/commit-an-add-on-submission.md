@@ -8,7 +8,7 @@ keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출 커�
 ms.localizationpriority: medium
 ms.openlocfilehash: efab4412486566ae817eb66e78f5407533a30d5b
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57608218"

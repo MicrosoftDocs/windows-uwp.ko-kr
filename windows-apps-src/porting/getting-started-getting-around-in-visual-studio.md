@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57646338"
 ---
-# <a name="getting-started-getting-around-in-visual-studio"></a>시작 하기: Visual Studio 둘러보기
+# <a name="getting-started-getting-around-in-visual-studio"></a>시작: Visual Studio 둘러보기
 
 
 ## <a name="getting-around-in-microsoft-visual-studio"></a>Microsoft Visual Studio 둘러보기

@@ -17,7 +17,7 @@ ms.locfileid: "57630238"
 라이브러리에서 파일 및 속성 목록을 신속하게 수집하고 앱에서 해당 속성을 사용하는 방법에 대해 알아봅니다.  
 
 필수 구성 요소 
-- **유니버설 Windows 플랫폼 (UWP) 앱에 대 한 프로그래밍 비동기**   에서 비동기 앱을 작성 하는 방법을 알아볼 수 있습니다 C# 또는 Visual Basic을 참조 하십시오 [에서 비동기 Api를 호출 C# 또는 Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).     C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요. 
+- **유니버설 Windows 플랫폼 (UWP) 앱에 대 한 프로그래밍 비동기**   에서 비동기 앱을 작성 하는 방법을 알아볼 수 있습니다 C# 또는 Visual Basic을 참조 하십시오 [에서 비동기 Api를 호출 C# 또는 Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요. 
 - **라이브러리에 대 한 사용 권한을 액세스할**   이 예제의 코드를 실행 하려면를 **picturesLibrary** 기능 하지만 현재 파일 위치 필요할 수 없는 기능 또는 다른 기능을 전혀. 자세한 내용은 [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)을 참조하세요. 
 - **간단한 파일 열거형**    사용 하 여이 예제 [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) 몇 가지 고급 열거형 속성을 설정 합니다. 작은 디렉터리에 대한 단순 파일 목록을 가져오는 방법에 대한 자세한 내용은 [파일 및 폴더 열거 및 쿼리](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)를 참조하세요. 
 
@@ -116,7 +116,7 @@ while (images.Count != 0 || index < 10000) 
  
 ## <a name="see-also"></a>참고 항목
 [QueryOptions API 참조](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions)  
-[열거 하 고 쿼리 파일 및 폴더](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
+[파일과 폴더 열거 및 쿼리](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
 [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)  
  
  

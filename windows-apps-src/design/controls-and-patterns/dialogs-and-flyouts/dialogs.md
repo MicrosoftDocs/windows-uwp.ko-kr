@@ -26,7 +26,7 @@ ms.locfileid: "57621838"
 ![대화 상자 예제](../images/dialogs/dialog_RS2_delete_file.png)
 
 
-> **중요 한 Api**: [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
+> **중요 API**: [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -37,14 +37,14 @@ ms.locfileid: "57621838"
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 작동 중인 <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> 또는 <a href="xamlcontrolsgallery:/item/Flyout">플라이아웃</a>을 확인합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML Controls Gallery</strong> 앱이 설치되어 있는 경우 여기를 클릭하여 앱을 열고 <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> 또는 <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a>이 작동되는지 확인합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

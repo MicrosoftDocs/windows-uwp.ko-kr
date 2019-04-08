@@ -39,11 +39,11 @@ Windows 10 버전 1809, 이전 애니메이션에서 UWP 앱 빌드에 2 개의 
 | -- | -- | -- |
 | [불투명도](/uwp/api/windows.ui.xaml.uielement.opacity) | 이중 | 개체의 불투명도 수준 |
 | [번역](/uwp/api/windows.ui.xaml.uielement.translation) | Vector3 | 요소의 X/Y/Z 위치를 이동 합니다. |
-| [TransformMatrix](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | 요소에 적용할 변형 행렬 |
+| [항등](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | 요소에 적용할 변형 행렬 |
 | [배율](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | 가운데에 중심점을 사용 하 여 요소를 확장 합니다. |
 | [회전](/uwp/api/windows.ui.xaml.uielement.rotation) | 부동 | 요소 RotationAxis 및 중심점 회전 |
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | 회전의 축 |
-| [CenterPoint](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | 크기 조정 및 회전 중심점 |
+| [중심점](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | 크기 조정 및 회전 중심점 |
 
 항등 속성 값을 다음 순서 대로 크기 조정, 회전 및 변환 속성을 사용 하 여 결합 됩니다.  항등, 크기 조정, 회전 변환 합니다.
 
@@ -74,7 +74,7 @@ CompositionAnimation를 사용 하 여 애니메이션을 적용할 수 있는 �
 
 - [RenderTransform](/uwp/api/windows.ui.xaml.uielement.rendertransform)
 - [RenderTransformOrigin](/uwp/api/windows.ui.xaml.uielement.rendertransformorigin)
-- [Projection](/uwp/api/windows.ui.xaml.uielement.projection)
+- [프로젝션](/uwp/api/windows.ui.xaml.uielement.projection)
 - [Transform3D](/uwp/api/windows.ui.xaml.uielement.transform3d)
 
 사용자 설정 (또는 애니메이션 효과 주기) 새 속성을 이전 속성을 사용할 수 없습니다. 반대로 사용자 설정 (또는 애니메이션 효과 주기) 이전 속성을 하는 경우에 새 속성을 사용할 수 없습니다.

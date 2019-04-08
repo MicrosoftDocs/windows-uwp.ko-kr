@@ -21,7 +21,7 @@ ms.locfileid: "57616258"
 
 MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오와 비디오 콘텐츠의 컨트롤을 관리하기 위해 사용자 지정 가능한 XAML 전송 컨트롤이 있습니다. 여기에서 MediaTransportControls 템플릿을 사용자 지정하는 방법을 설명합니다. 오버플로 메뉴에 대한 작업을 수행하고 사용자 지정 단추를 추가하며 슬라이더를 수정하는 방법을 살펴보겠습니다.
 
-> **중요 한 Api**: [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx), [MediaPlayerElement.AreTransportControlsEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled.aspx), [MediaTransportControls](https://msdn.microsoft.com/library/windows/apps/dn278677)
+> **중요 API**: [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)하십시오 [MediaPlayerElement.AreTransportControlsEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled.aspx), [MediaTransportControls](https://msdn.microsoft.com/library/windows/apps/dn278677)
 
 시작하기 전에 MediaPlayerElement 및 MediaTransportControls 클래스에 익숙해야 합니다. 자세한 내용은 MediaPlayerElement 컨트롤 가이드를 참조하세요.
 

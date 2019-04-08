@@ -37,7 +37,7 @@ UWP 앱의 주요 측면은 매끄러운 조작입니다. 여기에는 "손가�
 
     -   [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.rendertransform)
     -   [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d)
-    -   [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)
+    -   [**프로젝션**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)
     -   [**클립**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
 
 종속 애니메이션은 레이아웃에 영향을 미치므로 UI 스레드에서 추가 입력이 없으면 계산할 수 없습니다. 종속 애니메이션에는 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width), [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 같은 속성의 수정이 포함됩니다. 기본적으로 종속 애니메이션은 실행되지 않으며 앱 개발자의 옵트인(opt in)이 필요합니다. 종속 애니메이션을 사용하는 경우 UI 스레드가 잠금 해제되어 있으면 매끄럽게 실행되지만 프레임워크나 앱이 UI 스레드에서 다른 작업을 많이 수행할 경우 잠시 멈추는 현상이 시작됩니다.

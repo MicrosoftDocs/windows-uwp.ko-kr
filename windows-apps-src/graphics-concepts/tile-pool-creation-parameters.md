@@ -19,7 +19,7 @@ ms.locfileid: "57622798"
 
 버퍼를 만들 때 이 섹션의 매개 변수를 사용하여 타일 풀을 정의합니다.
 
-<span id="Size"></span><span id="size"></span><span id="SIZE"></span>**Size**  
+<span id="Size"></span><span id="size"></span><span id="SIZE"></span>**크기**  
 할당 크기(64KB의 배수). 0은 나중에 타일 풀의 크기를 조정할 수 있기 때문에 유효합니다.
 
 <span id="Supported_Resource_Misc_Flags"></span><span id="supported_resource_misc_flags"></span><span id="SUPPORTED_RESOURCE_MISC_FLAGS"></span>**지원 되는 리소스 기타 플래그**  

@@ -19,7 +19,7 @@ ms.locfileid: "57648668"
 
 3D *원형*은 단일 3D 엔터티를 구성하는 꼭짓점의 모음입니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>
@@ -62,7 +62,7 @@ ms.locfileid: "57648668"
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[좌표계 및 기 하 도형](coordinate-systems-and-geometry.md)
+[좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
 
  
 

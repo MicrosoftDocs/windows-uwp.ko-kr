@@ -33,14 +33,14 @@ ms.locfileid: "57643978"
 
 기본적으로 인쇄 미리 보기 UI에는 [**ColorMode**](https://msdn.microsoft.com/library/windows/apps/BR226478), [**Copies**](https://msdn.microsoft.com/library/windows/apps/BR226479) 및 [**Orientation**](https://msdn.microsoft.com/library/windows/apps/BR226486) 인쇄 옵션이 표시됩니다. 이외에도 인쇄 미리 보기 UI에 추가할 수 있는 몇 가지 다른 일반 프린터 옵션이 있습니다.
 
--   [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR226476)
+-   [**바인딩**](https://msdn.microsoft.com/library/windows/apps/BR226476)
 -   [**데이터 정렬**](https://msdn.microsoft.com/library/windows/apps/BR226477)
--   [**Duplex**](https://msdn.microsoft.com/library/windows/apps/BR226480)
+-   [**이중**](https://msdn.microsoft.com/library/windows/apps/BR226480)
 -   [**HolePunch**](https://msdn.microsoft.com/library/windows/apps/BR226481)
 -   [**InputBin**](https://msdn.microsoft.com/library/windows/apps/BR226482)
 -   [**MediaSize**](https://msdn.microsoft.com/library/windows/apps/BR226483)
 -   [**MediaType**](https://msdn.microsoft.com/library/windows/apps/BR226484)
--   [**NUp**](https://msdn.microsoft.com/library/windows/apps/BR226485)
+-   [**인쇄 레이아웃**](https://msdn.microsoft.com/library/windows/apps/BR226485)
 -   [**PrintQuality**](https://msdn.microsoft.com/library/windows/apps/BR226487)
 -   [**스테이플링을 수행**](https://msdn.microsoft.com/library/windows/apps/BR226488)
 

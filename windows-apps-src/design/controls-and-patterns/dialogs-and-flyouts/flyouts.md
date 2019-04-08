@@ -24,7 +24,7 @@ ms.locfileid: "57625018"
 
 ![플라이아웃 내에 중첩된 상황에 맞는 메뉴](../images/flyout-nested.png)
 
-> **중요 한 Api**: [플라이 아웃 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+> **중요 API**: [플라이 아웃 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -35,20 +35,20 @@ ms.locfileid: "57625018"
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 작동 중인 <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> 또는 <a href="xamlcontrolsgallery:/item/Flyout">플라이아웃</a>을 확인합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML Controls Gallery</strong> 앱이 설치되어 있는 경우 여기를 클릭하여 앱을 열고 <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> 또는 <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a>이 작동되는지 확인합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-##  <a name="how-to-create-a-flyout"></a>플라이 아웃을 만드는 방법
+##  <a name="how-to-create-a-flyout"></a>플라이아웃을 만드는 방법
 
 
 플라이아웃은 특정 컨트롤에 연결됩니다. 사용할 수는 [배치](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) 플라이 아웃이 표시 되는 위치를 지정 하는 속성: 위쪽, 왼쪽, 아래쪽, 오른쪽 또는 전체. [전체 배치 모드](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode)를 선택하면 앱은 플라이아웃을 확대하고 앱 창 내에서 가운데로 지정합니다. [Button](/uwp/api/Windows.UI.Xaml.Controls.Button)과 같은 일부 컨트롤은 플라이아웃이나 [상황에 맞는 메뉴](../menus.md)를 연결하는 데 사용할 수 있는 [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) 속성을 제공합니다.

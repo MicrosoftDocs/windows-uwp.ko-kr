@@ -475,7 +475,7 @@ VSIS는 고성능의 이동 및 확대/축소를 위해 화면보다 큰 가상 
 * [포인터 입력 처리](handle-pointer-input.md)
 * [입력 디바이스 식별](identify-input-devices.md)
 
-**APIs**
+**Api**
 
 * [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
 * [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)

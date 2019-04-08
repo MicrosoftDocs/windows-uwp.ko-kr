@@ -45,7 +45,7 @@ Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplic
 앱이 시작되지 않는 경우 테스트 플랫폼이 [**ActivateApplication**](https://msdn.microsoft.com/library/windows/desktop/Hh706903)의 필수 조건을 충족하면 활성화 이벤트 로그를 검토하여 문제를 해결할 수 있습니다. 이벤트 로그에서 이러한 항목을 찾으려면
 
 1.  Eventvwr.exe를 열고 응용 프로그램 및 서비스 로그를 이동할\\Microsoft\\Windows\\Immersive 셸 폴더입니다.
-2.  이벤트 Id를 표시 하도록 보기를 필터링 합니다. 5900-6000.
+2.  이벤트 Id를 표시 하도록 보기를 필터링 합니다. 5900-6000 합니다.
 3.  로그 항목에서 앱이 시작되지 않은 이유를 설명하는 정보를 검토합니다.
 
 문제가 있는 파일을 식별하고 문제를 해결합니다. 앱을 다시 빌드하고 다시 테스트하세요. 앱을 디버그하는 데 사용할 수 있는 덤프 파일이 Windows 앱 인증 키트 로그 폴더에 생성되었는지 확인할 수도 있습니다.

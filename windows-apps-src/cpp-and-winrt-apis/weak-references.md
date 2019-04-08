@@ -1,5 +1,5 @@
 ---
-description: Windows 런타임에서 참조 횟수가 계산 시스템입니다. 에 이러한 시스템의 성과 구분 하는 방법에 대 한 알 수는 것이 반드시 강력한 / 취약 한 참조입니다.
+description: Windows 런타임은 참조 계산 시스템입니다. 이러한 시스템에서는 강한 참조와 약한 참조의 중요성과 차이점을 인식해야 합니다.
 title: C++/WinRT의 약한 참조
 ms.date: 10/03/2018
 ms.topic: article
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 507b3cee71819df1d0163380a494e6a15936109f
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57630818"

@@ -112,7 +112,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 -   [소켓을 사용 하 여 연결 (UWP 앱을 사용 하 여 C#, VB 또는 c + + 및 XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh452976)
 -   [Websocket을 사용 하 여 연결 (UWP 앱을 사용 하 여 C#, VB 또는 c + + 및 XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh994396)
 -   [웹 서비스에 연결 (UWP 앱을 사용 하 여 C#, VB 또는 c + + 및 XAML) (Windows)](https://msdn.microsoft.com/library/windows/apps/xaml/hh761504)
--   [네트워킹 기초](https://msdn.microsoft.com/library/windows/apps/mt280233)
+-   [네트워킹 기본 사항](https://msdn.microsoft.com/library/windows/apps/mt280233)
 
 모든 UWP 앱(게임 포함)은 특정 유형의 백그라운드 작업을 사용하여, 앱이 일시 중단된 동안에도 연결을 유지합니다. 게임이 일시 중단된 동안 연결 상태를 유지해야 하는 경우 [네트워킹 기본 사항](https://msdn.microsoft.com/library/windows/apps/mt280233)을 참조하세요.
 
@@ -216,7 +216,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <tr class="odd">
 <td align="left"><p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174373">IDirect3DDevice9:DrawRectPatch</a></p>
 <p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174374">IDirect3DDevice9:DrawTriPatch</a></p>
-<p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174421">IDirect3DDevice9:LightEnable</a></p>
+<p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174421">IDirect3DDevice9: LightEnable</a></p>
 <p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174422">IDirect3DDevice9:MultiplyTransform</a></p>
 <p><a href="https://msdn.microsoft.com/library/windows/desktop/bb205798">IDirect3DDevice9:SetLight</a></p>
 <p><a href="https://msdn.microsoft.com/library/windows/desktop/bb174437">IDirect3DDevice9:SetMaterial</a></p>

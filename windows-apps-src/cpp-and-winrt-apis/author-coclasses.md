@@ -1,5 +1,5 @@
 ---
-description: C + + /cli WinRT Windows 런타임 클래스를 작성 하는 데 도움이 하는 것 처럼 클래식 COM 구성 요소를 작성할 수 있습니다 수 있습니다.
+description: C++/WinRT는 Windows 런타임 클래스를 작성하는 데 도움이 되는 것처럼 클래식 COM 구성 요소를 작성하는 데도 도움이 됩니다.
 title: C++/WinRT으로 COM 구성 요소 작성
 ms.date: 09/06/2018
 ms.topic: article
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: e6b77f8be6c75070336ad48f0c6471fc0a824a4c
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57616568"
@@ -530,6 +530,6 @@ struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows:
 * [winrt::implements 구조체 템플릿](/uwp/cpp-ref-for-winrt/implements)
 
 ## <a name="related-topics"></a>관련 항목
-* [작성 Api C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
-* [C +를 사용 하 여 COM 구성 요소를 사용 + WinRT](consume-com.md)
-* [로컬 알림 보내기](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)
+* [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)
+* [C++/WinRT를 통한 COM 구성 요소 사용](consume-com.md)
+* [로컬 알림 메시지 보내기](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

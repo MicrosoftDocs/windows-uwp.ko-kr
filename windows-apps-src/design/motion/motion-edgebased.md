@@ -23,7 +23,7 @@ ms.locfileid: "57610208"
 
 가장자리 기반 애니메이션은 화면의 가장자리에서 시작되는 UI를 표시하거나 숨깁니다. 표시 및 숨기기 동작은 사용자 또는 앱에서 시작할 수 있습니다. UI는 앱에 오버레이하거나 주 앱 표면의 일부가 될 수 있습니다. UI가 앱 화면의 일부일 경우 나머지 앱 화면은 UI를 포함하도록 크기를 조정해야 합니다.
 
-> **중요 한 Api**: [**EdgeUIThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh702324)
+> **중요 API**: [**EdgeUIThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh702324)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항

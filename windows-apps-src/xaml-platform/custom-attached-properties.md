@@ -48,7 +48,7 @@ ms.locfileid: "57638458"
 
 **Get**_PropertyName_ 접근자의 서명은 다음이어야 합니다.
 
-`public static` _valueType_ **Get**_PropertyName_ `(DependencyObject target)`
+`public static` _valueType_ **가져올**_PropertyName_ `(DependencyObject target)`
 
 Microsoft Visual Basic의 경우 다음과 같습니다.
 
@@ -301,6 +301,6 @@ protected override Size ArrangeOverride(Size finalSize)
 ## <a name="related-topics"></a>관련 항목
 
 * [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833)
-* [연결 된 속성 개요](attached-properties-overview.md)
+* [연결된 속성 개요](attached-properties-overview.md)
 * [사용자 지정 종속성 속성](custom-dependency-properties.md)
 * [XAML 개요](xaml-overview.md)

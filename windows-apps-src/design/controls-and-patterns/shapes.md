@@ -17,7 +17,7 @@ ms.locfileid: "57610678"
 
 타원, 사각형, 다각형, 패스 같은 다양한 셰이프를 그리는 방법에 대해 알아봅니다. [  **Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 클래스를 사용하면 XAML UI에서 매우 복잡한 벡터 기반 그리기 언어를 시각화할 수 있습니다. 예를 들어 베지어 곡선을 그릴 수 있습니다.
 
-> **중요 한 Api**: [Path 클래스](/uwp/api/Windows.UI.Xaml.Shapes.Path)하십시오 [Windows.UI.Xaml.Shapes 네임 스페이스](/uwp/api/Windows.UI.Xaml.Shapes), [Windows.UI.Xaml.Media 네임 스페이스](/uwp/api/Windows.UI.Xaml.Media)
+> **중요 API**: [Path 클래스](/uwp/api/Windows.UI.Xaml.Shapes.Path)하십시오 [Windows.UI.Xaml.Shapes 네임 스페이스](/uwp/api/Windows.UI.Xaml.Shapes), [Windows.UI.Xaml.Media 네임 스페이스](/uwp/api/Windows.UI.Xaml.Media)
 
 
 XAML ui에서 공간의 영역을 정의 하는 두 가지의 클래스 집합: [**셰이프** ](/uwp/api/Windows.UI.Xaml.Shapes.Shape) 클래스와 [ **Geometry** ](/uwp/api/Windows.UI.Xaml.Media.Geometry) 클래스입니다. 이 두 클래스의 주요 차이점은 **Shape**에는 연결된 브러시가 있어 화면으로 렌더링될 수 있고, **Geometry**는 또 다른 UI 속성에 정보를 제공하는 데 도움이 되지 않는 경우 단순히 공간 영역만 정의하고 렌더링되지는 않는다는 점입니다. **Shape**를 **Geometry**에 의해 정의된 경계를 가진 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)로 생각할 수 있습니다. 이 항목에서는 주로 **Shape** 클래스에 대해 설명합니다.

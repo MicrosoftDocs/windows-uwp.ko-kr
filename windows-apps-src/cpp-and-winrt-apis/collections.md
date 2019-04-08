@@ -1,5 +1,5 @@
 ---
-description: C + + /cli WinRT 함수 및 많은 구현 하거나 컬렉션을 전달 하려는 경우 시간과 노력을 절약 하는 기본 클래스를 제공 합니다.
+description: C++/WinRT는 컬렉션을 구현하거나 전달하려는 경우 많은 시간과 노력을 절약할 수 있는 함수와 기본 클래스를 제공합니다.
 title: C++/WinRT로 작성된 컬렉션
 ms.date: 10/03/2018
 ms.topic: article
@@ -342,5 +342,5 @@ private:
 * [winrt::vector_view_base 구조체 템플릿](/uwp/cpp-ref-for-winrt/vector-view-base)
 
 ## <a name="related-topics"></a>관련 항목
-* [값 범주 및에 대 한 참조](cpp-value-categories.md)
-* [XAML 컨트롤; 항목 바인딩할 C + + /cli WinRT 컬렉션](binding-collection.md)
+* [값 범주 및 해당 참조](cpp-value-categories.md)
+* [XAML 항목 컨트롤(C++/WinRT 컬렉션에 바인딩)](binding-collection.md)

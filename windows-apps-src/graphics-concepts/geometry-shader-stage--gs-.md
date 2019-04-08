@@ -59,7 +59,7 @@ GS(기하 도형 셰이더) 단계는 프로그래밍 가능한 셰이더 단계
 
  
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
 
 
 GS(기하 도형 셰이더) 단계는 선택한 단일 토폴로지를 형성하는 여러 꼭짓점을 출력할 수 있습니다. 사용 가능한 기하 도형 셰이더 출력 토폴로지는 **tristrip**, **linestrip** 및 **pointlist**입니다. 내보내는 기본 요소의 숫자는 기하 도형 셰이더 호출마다 자유롭게 변할 수 있으나, 내보낼 수 있는 최대 꼭짓점의 수는 고정적으로 선언될 수 있습니다. 기하 도형 셰이더 호출에서 내보내는 스트립 길이는 임의의 길이가 될 수 있으며, 새 스트립은 [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660) HLSL 함수를 통해 만들 수 있습니다.

@@ -37,7 +37,7 @@ ms.locfileid: "57627588"
 
 고정 함수 RS(래스터라이저) 단계에는 SO(스트림 출력) 단계 및/또는 [기하 도형 셰이더(GS) 단계](geometry-shader-stage--gs-.md) 같은 이전 파이프라인 단계가 제공됩니다. GS가 사용되지 않으면 RS에 [DS(도메인 셰이더) 단계](domain-shader-stage--ds-.md)가 제공됩니다. DS도 사용되지 않으면 RS에 [VS(꼭짓점 셰이더) 단계](vertex-shader-stage--vs-.md)가 제공됩니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
 
 
 PS(픽셀 셰이더) 단계 사용은 선택적입니다. 래스터라이저 단계는 대신 [OS(출력 병합기) 단계](output-merger-stage--om-.md)로 직접 출력할 수 있습니다.

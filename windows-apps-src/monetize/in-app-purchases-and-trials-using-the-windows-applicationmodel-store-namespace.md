@@ -405,13 +405,13 @@ ms.locfileid: "57628538"
 |  **설명**  |    예  |  1   |      이 국가/지역에 대한 앱 설명입니다.       |
 |  **가격**  |    예  |  1   |     이 국가/지역의 앱 가격입니다.        |
 |  **CurrencySymbol**  |    예  |  1   |     이 국가/지역에서 사용되는 통화 기호입니다.        |
-|  **CurrencyCode**  |    아니오  |  0 또는 1      |      이 국가/지역에서 사용되는 통화 코드입니다.         |  |
+|  **currencyCode**  |    아니오  |  0 또는 1      |      이 국가/지역에서 사용되는 통화 코드입니다.         |  |
 
 **MarketData**에는 다음 특성이 있습니다.
 
 |  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **xml:lang**  |    예        |     지역/국가 데이터 정보가 적용되는 국가/지역을 지정합니다.          |  |
+|  **Xml: lang**  |    예        |     지역/국가 데이터 정보가 적용되는 국가/지역을 지정합니다.          |  |
 
 <span id="product-child-of-listinginformation"/>
 
@@ -423,9 +423,9 @@ ms.locfileid: "57628538"
 
 |  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **ProductId**  |    예        |    앱에서 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.           |
+|  **productId**  |    예        |    앱에서 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.           |
 |  **LicenseDuration**  |    아니오        |    항목을 구매한 후 라이선스가 유효한 일수를 나타냅니다. 제품 구매를 통해 생성된 새 라이선스의 만료 날짜는 구매 날짜에 라이선스 기간을 더한 날짜입니다. 이 특성은 **ProductType** 특성이 **Durable**인 경우에만 사용됩니다. 소모성 추가 기능의 경우 이 특성이 무시됩니다.           |
-|  **ProductType**  |    아니오        |    앱에서 바로 구매 제품의 지속성을 식별하는 값을 포함합니다. 지원되는 값은 **Durable**(기본값) 및 **Consumable**입니다. 지속성 유형의 경우 [LicenseInformation](#licenseinformation) 아래의 [Product](#product-child-of-licenseinformation) 요소에서 추가 정보를 설명하고, 소모성 유형의 경우 [ConsumableInformation](#consumableinformation) 아래의 [Product](#product-child-of-consumableinformation) 요소에서 추가 정보를 설명합니다.           |  |
+|  **productType**  |    아니오        |    앱에서 바로 구매 제품의 지속성을 식별하는 값을 포함합니다. 지원되는 값은 **Durable**(기본값) 및 **Consumable**입니다. 지속성 유형의 경우 [LicenseInformation](#licenseinformation) 아래의 [Product](#product-child-of-licenseinformation) 요소에서 추가 정보를 설명하고, 소모성 유형의 경우 [ConsumableInformation](#consumableinformation) 아래의 [Product](#product-child-of-consumableinformation) 요소에서 추가 정보를 설명합니다.           |  |
 
 <span id="marketdata-child-of-product"/>
 
@@ -440,17 +440,17 @@ ms.locfileid: "57628538"
 |  **이름**  |    예   |  1   |   이 국가/지역의 추가 기능 이름입니다.        |
 |  **가격**  |    예  |  1   |     이 국가/지역의 추가 기능 가격입니다.        |
 |  **CurrencySymbol**  |    예  |  1   |     이 국가/지역에서 사용되는 통화 기호입니다.        |
-|  **CurrencyCode**  |    아니오  |  0 또는 1      |      이 국가/지역에서 사용되는 통화 코드입니다.         |  
+|  **currencyCode**  |    아니오  |  0 또는 1      |      이 국가/지역에서 사용되는 통화 코드입니다.         |  
 |  **설명**  |    아니오  |   0 또는 1   |      이 국가/지역에 대한 추가 기능 설명입니다.       |
-|  **Tag**  |    아니오  |   0 또는 1   |      추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(태그라고도 함)입니다.       |
+|  **태그**  |    아니오  |   0 또는 1   |      추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(태그라고도 함)입니다.       |
 |  **키워드**  |    아니오  |   0 또는 1   |      추가 기능에 대한 [키워드](../publish/enter-add-on-properties.md#keywords)가 포함된 **Keyword** 요소를 최대 10개까지 포함합니다.       |
-|  **ImageUri**  |    아니오  |   0 또는 1   |      추가 기능 목록의 [이미지 URI](../publish/create-add-on-store-listings.md#icon)입니다.           |  |
+|  **imageUri**  |    아니오  |   0 또는 1   |      추가 기능 목록의 [이미지 URI](../publish/create-add-on-store-listings.md#icon)입니다.           |  |
 
 **MarketData**에는 다음 특성이 있습니다.
 
 |  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **xml:lang**  |    예        |     지역/국가 데이터 정보가 적용되는 국가/지역을 지정합니다.          |  |
+|  **Xml: lang**  |    예        |     지역/국가 데이터 정보가 적용되는 국가/지역을 지정합니다.          |  |
 
 <span id="licenseinformation"/>
 
@@ -485,7 +485,7 @@ ms.locfileid: "57628538"
 |  요소  |  필수  |  수량  | 설명   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    예   |  1   |    이 앱의 현재 라이선스 상태를 설명합니다. 값이 **true**이면 라이선스가 유효함을 나타냅니다. **false**이면 잘못된 라이선스를 나타냅니다. 일반적으로 이 값은 앱이 평가판 모드인지 여부에 관계없이 **true**입니다.  잘못된 라이선스가 있을 경우 앱의 동작을 테스트하려면 이 값을 **false**로 설정합니다.           |
-|  **IsTrial**  |    예  |  1   |      이 앱의 현재 평가판 상태를 설명합니다. 값이 **true**이면 체험 기간 동안 앱이 사용되고 있음을 나타냅니다. **false**이면 앱을 구매했거나 체험 기간이 만료되어 앱이 평가판 상태가 아님을 나타냅니다.         |
+|  **isTrial**  |    예  |  1   |      이 앱의 현재 평가판 상태를 설명합니다. 값이 **true**이면 체험 기간 동안 앱이 사용되고 있음을 나타냅니다. **false**이면 앱을 구매했거나 체험 기간이 만료되어 앱이 평가판 상태가 아님을 나타냅니다.         |
 |  **ExpirationDate**  |    아니오  |  0 또는 1       |     이 앱의 체험 기간이 만료되는 UTC(협정 세계시) 날짜입니다. 날짜는 yyyy-mm-ddThh:mm:ss.ssZ로 표시되어야 합니다. 예를 들어 2015년 1월 19일 5시는 2015-01-19T05:00:00.00Z로 지정됩니다. **IsTrial**이 **true**이면 이 요소는 필수입니다. 그렇지 않으면 필요하지 않습니다.          |  |
 
 <span id="product-child-of-licenseinformation"/>
@@ -505,7 +505,7 @@ ms.locfileid: "57628538"
 
 |  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **ProductId**  |    예        |   앱에서 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.            |
+|  **productId**  |    예        |   앱에서 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.            |
 |  **OfferId**  |     아니오       |   앱에서 추가 기능이 속하는 범주를 식별하는 데 사용하는 문자열을 포함합니다. [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)에 설명된 대로 큰 항목 카탈로그를 지원합니다.           |
 
 <span id="simulation"/>
@@ -530,7 +530,7 @@ ms.locfileid: "57628538"
 
 |  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **MethodName**  |    예        |   [schema](#schema)의 **StoreMethodName** 형식에 대해 표시되는 열거형 값 중 하나에 이 특성을 할당합니다. 이 열거형 값은 각각 테스트 중에 앱에서 오류 코드 반환 값을 시뮬레이트하려는 **CurrentAppSimulator** 메서드를 나타냅니다. 예를 들어 값이 **RequestAppPurchaseAsync_GetResult**이면 [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.requestapppurchaseasync) 메서드의 오류 코드 반환 값을 시뮬레이트하려는 것입니다.            |
+|  **methodName**  |    예        |   [schema](#schema)의 **StoreMethodName** 형식에 대해 표시되는 열거형 값 중 하나에 이 특성을 할당합니다. 이 열거형 값은 각각 테스트 중에 앱에서 오류 코드 반환 값을 시뮬레이트하려는 **CurrentAppSimulator** 메서드를 나타냅니다. 예를 들어 값이 **RequestAppPurchaseAsync_GetResult**이면 [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.requestapppurchaseasync) 메서드의 오류 코드 반환 값을 시뮬레이트하려는 것입니다.            |
 |  **HResult**  |     예       |   [schema](#schema)의 **ResponseCodes** 형식에 대해 표시되는 열거형 값 중 하나에 이 특성을 할당합니다. 이 열거형 값은 각각 이 **DefaultResponse** 요소의 **MethodName** 특성에 할당된 메서드에 대해 반환하려는 오류 코드를 나타냅니다.           |
 
 <span id="consumableinformation"/>
@@ -549,7 +549,7 @@ ms.locfileid: "57628538"
 
 |  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **ProductId**  |    예        |   앱에서 소모성 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.            |
-|  **TransactionId**  |     예       |   앱에서 이행 프로세스를 통해 소모성의 구매 거래를 추적하는 데 사용하는 GUID(문자열)를 포함합니다. [앱에서 바로 구매 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)을 참조하세요.            |
+|  **productId**  |    예        |   앱에서 소모성 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.            |
+|  **트랜잭션 Id**  |     예       |   앱에서 이행 프로세스를 통해 소모성의 구매 거래를 추적하는 데 사용하는 GUID(문자열)를 포함합니다. [앱에서 바로 구매 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)을 참조하세요.            |
 |  **상태**  |      예      |  앱에서 소모성의 이행 상태를 나타내는 데 사용하는 문자열을 포함합니다. 값은 **Active**, **PurchaseReverted**, **PurchasePending** 또는 **ServerError**일 수 있습니다.             |
 |  **OfferId**  |     아니오       |    앱에서 소모성이 속하는 범주를 식별하는 데 사용하는 문자열을 포함합니다. [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)에 설명된 대로 큰 항목 카탈로그를 지원합니다.           |

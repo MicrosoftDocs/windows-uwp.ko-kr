@@ -689,7 +689,7 @@ if (gameOver)
 
 ![게임 종료](images/monogame-tutorial-4.png)
 
-## <a name="publish-to-the-microsoft-store"></a>Microsoft Store 게시
+## <a name="publish-to-the-microsoft-store"></a>Microsoft Store에 게시
 UWP 앱으로이 게임을 빌드 했습니다 이므로 Microsoft Store이 프로젝트를 게시할 수 있습니다. 몇 가지 단계를 처리해야 합니다.
 
 Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/register)해야 합니다.

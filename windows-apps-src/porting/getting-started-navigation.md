@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57636598"
 ---
-# <a name="getting-started-navigation"></a>시작 하기: 탐색
+# <a name="getting-started-navigation"></a>시작: 탐색
 
 
 ## <a name="adding-navigation"></a>탐색 추가

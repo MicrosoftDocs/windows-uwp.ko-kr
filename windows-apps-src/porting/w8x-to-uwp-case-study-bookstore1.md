@@ -46,9 +46,9 @@ Bookstore1\_Windows Phone 81
 
 Bookstore1\_81 솔루션은 8.1 유니버설 앱 프로젝트 및 이러한 프로젝트를 포함 합니다.
 
--   Bookstore1\_81.Windows. Windows 8.1 대 한 앱 패키지를 빌드하는 프로젝트입니다.
--   Bookstore1\_81.WindowsPhone. Windows Phone 8.1용 앱 패키지를 빌드하는 프로젝트입니다.
--   Bookstore1\_81.Shared. 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
+-   Bookstore1\_81.Windows 합니다. Windows 8.1 대 한 앱 패키지를 빌드하는 프로젝트입니다.
+-   Bookstore1\_81.WindowsPhone 합니다. Windows Phone 8.1용 앱 패키지를 빌드하는 프로젝트입니다.
+-   Bookstore1\_81.Shared 합니다. 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
 
 이 사례 연구를 위해 지원할 장치와 관련하여 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md)에 설명된 일반적인 옵션을 제공합니다. 여기에 의사 결정은 간단한:이 앱은 동일한 기능을 수 있으며 forms는 Windows 8.1 및 Windows Phone 8.1 모두에서 동일한 코드를 사용 하 여 거의 모든 않습니다. 따라서 공유 프로젝트 (및 다른 다른 프로젝트에서 필요한 항목)의 내용을 (하나는 광범위 한 장치에 설치할 수 있는) 범용 장치 제품군을 대상으로 하는 Windows 10에 포트 됩니다 것입니다.
 

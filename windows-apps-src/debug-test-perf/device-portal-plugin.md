@@ -197,6 +197,6 @@ Device Portal 공급자에서 제공되는 정적 콘텐츠는 코어 Device Por
 
 ## <a name="related-topics"></a>관련 항목
 * [Windows Device Portal 개요](device-portal.md)
-* [만들기 및 app service를 사용 합니다.](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
+* [앱 서비스 만들기 및 사용](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
 
 

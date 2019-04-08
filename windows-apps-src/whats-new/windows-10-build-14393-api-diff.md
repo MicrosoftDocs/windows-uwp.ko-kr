@@ -540,7 +540,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeet
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.</br>AppointmentCalendarUpdateMeetingResponseRequestEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.dataprovider.appointmentcalendarupdatemeetingresponserequesteventargs)
+[Windows.ApplicationModel.Appointments.DataProvider 합니다. </br>AppointmentCalendarUpdateMeetingResponseRequestEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.dataprovider.appointmentcalendarupdatemeetingresponserequesteventargs)
 
 **속성**
 

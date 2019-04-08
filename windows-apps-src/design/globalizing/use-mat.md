@@ -8,7 +8,7 @@ keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 74ad832d5516a4fa9bef849c5f691e2909c6c3d4
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57610118"
@@ -162,7 +162,7 @@ Microsoft Store 인증 과정을 시작하기 전에 프로젝트에서 `<projec
 
 ## <a name="related-topics"></a>관련 항목
 
-* [UI 및 앱 패키지 매니페스트에 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
+* [UI 및 앱 패키지 매니페스트의 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
 * [세계화 및 지역화](globalizing-portal.md)
 * [세계화에 대 한 지침](guidelines-and-checklist-for-globalizing-your-app.md)
 * [앱을 지역화할 수 확인](prepare-your-app-for-localization.md)

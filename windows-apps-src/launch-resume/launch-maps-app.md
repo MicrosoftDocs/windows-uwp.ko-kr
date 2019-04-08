@@ -40,11 +40,11 @@ URI 체계를 사용하면 하이퍼링크를 클릭하거나 앱에서 프로�
 
 URI 체계에 대한 설명은 다음과 같습니다.
 
-**bingmaps:?query**
+**bingmaps:? 쿼리**
 
 이 URI 체계에서 *query*는 일련의 매개 변수 이름/값 쌍입니다.
 
-**&param1=value1&param2=value2 …**
+**& param1 value1 param2 = = value2...**
 
 사용 가능한 매개 변수의 전체 목록은 [bingmaps:](#bingmaps-param-reference), [ms-drive-to:](#ms-drive-to-param-reference) 및 [ms-walk-to:](#ms-walk-to-param-reference) 매개 변수 참조를 참조하세요. 이 항목의 뒷부분에 예제도 있습니다.
 
@@ -78,9 +78,9 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 | bingmaps:?cp=40.726966~-74.006076                                          | 뉴욕시를 중심으로 하는 지도를 표시합니다.                                                                                                                                                    |
 | bingmaps:?cp=40.726966~-74.006076&amp;lvl=10                                   | 확대/축소 수준을 10으로 하여 뉴욕시를 중심으로 하는 지도를 표시합니다.                                                                                                                            |
 | bingmaps:? bb = 39.719\_-74.52 ~ 41.71\_-73.5                                   | **bb** 인수에 지정된 영역인 뉴욕시의 지도를 표시합니다.                                                                                                           |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&cp=47~-122                        | 경계 상자 인수에 지정된 영역인 뉴욕시의 지도를 표시합니다. *bb*가 지정되었기 때문에 **cp** 인수에 지정된 시애틀의 중심점이 무시됩니다. |
+| bingmaps:? bb = 39.719\_-74.52 ~ 41.71\_-73.5 & cp 47 = ~-122                        | 경계 상자 인수에 지정된 영역인 뉴욕시의 지도를 표시합니다. *bb*가 지정되었기 때문에 **cp** 인수에 지정된 시애틀의 중심점이 무시됩니다. |
 | bingmaps:?collection=point.36.116584\_-115.176753\_Caesars %20Palace & lvl = 16 | Caesar's Palace(라스베이거스)라는 지점이 포함된 지도를 표시하고 확대/축소 수준을 16으로 설정합니다.                                                                                                 |
-| bingmaps:?collection=point.40.726966\_-74.006076\_Some%255FBusiness        | 일부 명명 된 지점과 맵을 표시\_(라스베이거스에서 열리는)에서 비즈니스입니다.                                                                                                                               |
+| bingmaps:?collection=point.40.726966\_-74.006076\_일부 %255FBusiness        | 일부 명명 된 지점과 맵을 표시\_(라스베이거스에서 열리는)에서 비즈니스입니다.                                                                                                                               |
 | bingmaps:?cp=40.726966~-74.006076&trfc=1&amp;amp;sty=a                             | 교통량을 켜고 항공 지도 스타일로 뉴욕시 지도를 표시합니다.                                                                                                                          |
 | bingmaps:?cp=47.6204~-122.3491&amp;sty=3d                                      | Space Needle의 3D 뷰를 표시합니다.                                                                                                                                                        |
 | bingmaps:?cp=47.6204~-122.3491&sty=3d&rad=200&pit=75&amp;amp;hdg=165               | 200m 반경, 75도 피치 및 165도 방향으로 Space Needle의 3D 뷰를 표시합니다.                                                                             |
@@ -97,7 +97,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 | bingmaps:?q=1600%20Pennsylvania%20Ave,%20Washington,%20DC     | 지도를 표시하고 워싱턴 D.C.의 백악관 주소를 검색합니다. |
 | bingmaps:?q=coffee&amp;where=Seattle                              | 시애틀에서 커피를 검색합니다.                                                    |
 | bingmaps:?cp=40.726966~-74.006076&where=New%20York            | 지정된 중심점 근처의 뉴욕을 검색합니다.                             |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&q=pizza              | 지정된 경계 상자(즉, 뉴욕시) 내부의 피자를 검색합니다.      |
+| bingmaps:? bb = 39.719\_-74.52 ~ 41.71\_-73.5 & q 피자 =              | 지정된 경계 상자(즉, 뉴욕시) 내부의 피자를 검색합니다.      |
 
  
 ## <a name="display-multiple-points"></a>여러 지점 표시
@@ -111,7 +111,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 | bingmaps:?collection=point.36.116584\_-115.176753\_Caesars %20Palace & lvl = 16                                                                                         | 라스베이거스에 있는 Caesars Palace라는 이름의 고정핀을 표시하고 16 수준으로 확대/축소합니다.                                               |
 | bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_%20Bellagio & lvl = 16 cp 36.114902 = ~-115.176669                   | 라스베이거스에 있는 Caesars Palace라는 이름의 고정핀과 The Bellagio라는 이름의 고정핀을 표시하고 16 수준으로 확대/축소합니다.*/              |
 | bingmaps:?collection=point.40.726966\_-74.006076\_%255FBusiness %255Fwith %255FUnderscore 가짜                                                                        | 뉴욕 Fake 라는 압정으로 표시 됩니다\_비즈니스\_사용 하 여\_밑줄.                                                  |
-| bingmaps:?collection=name.Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669 | Hotel List라는 이름의 목록과 라스베이거스에 있는 Caesars Palace 및 The Bellagio에 대한 두 개의 고정핀을 표시하고 16 수준으로 확대/축소합니다. |
+| bingmaps:? 컬렉션 = 이름입니다. Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_%20Bellagio & lvl = 16 cp 36.114902 = ~-115.176669 | Hotel List라는 이름의 목록과 라스베이거스에 있는 Caesars Palace 및 The Bellagio에 대한 두 개의 고정핀을 표시하고 16 수준으로 확대/축소합니다. |
 
  
 
@@ -124,9 +124,9 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 
 | 샘플 URI                                                                                                              | 결과                                                                                                                                                         |
 |-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?rtp=pos.44.9160\_-110.4158~pos.45.0475\_-109.4187                                                             | 지점 간 길 찾기가 포함된 지도를 표시합니다. *mode*를 지정하지 않았으므로 사용자의 교통 기본 설정 모드를 사용하여 길 찾기가 제공됩니다. |
+| bingmaps:?rtp=pos.44.9160\_-110.4158 ~ 45 pos. 0475\_-109.4187                                                             | 지점 간 길 찾기가 포함된 지도를 표시합니다. *mode*를 지정하지 않았으므로 사용자의 교통 기본 설정 모드를 사용하여 길 찾기가 제공됩니다. |
 | bingmaps:?cp=43.0332~-87.9167&amp;trfc=1                                                                                    | 위스콘신주 밀워키를 중심으로 하는 지도에 교통 정보를 표시합니다.                                                                                                        |
-| bingmaps:?rtp=adr.One Microsoft Way, Redmond, WA 98052~pos.39.0731\_-108.7238                                           | 지정된 주소에서 지정된 위치로의 길 찾기를 포함하는 지도를 표시합니다.                                                                            |
+| bingmaps:? rtp adr =. 하나 Microsoft 방식으로, Redmond, WA 98052~pos.39.0731\_-108.7238                                           | 지정된 주소에서 지정된 위치로의 길 찾기를 포함하는 지도를 표시합니다.                                                                            |
 | bingmaps:?rtp=adr.1%20Microsoft%20Way,%20Redmond,%20WA,%2098052~pos.36.1223\_-111.9495\_총합계 %20Canyon %20northern %20rim | 마이크로소프트 웨이(1 Microsoft Way, Redmond, WA, 98052)에서 그랜드 캐니언 북쪽 경계까지의 길 찾기를 표시합니다.                                                                |
 | bingmaps:?rtp=adr.Davenport, CA~adr.Yosemite Village                                                                    | 지정된 위치에서 지정된 랜드마크로의 운전 길 찾기를 포함하는 지도를 표시합니다.                                                                   |
 | bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&amp;mode=d                      | 캘리포니아주 마운틴뷰에서 샌프란시스코 국제공항까지의 운전 길 찾기를 표시합니다.                                                                  |
@@ -208,7 +208,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>유효한 위도 값은 -90과 90(포함) 사이입니다.</p><p>cp 및 lvl 매개 변수는 경계 상자가 제공된 경우 무시됩니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>where</b></p></td>
+<td align="left"><p><b>위치</b></p></td>
 <td align="left"><p>위치</p></td>
 <td align="left"><p>where = "where=" whereval</p>
 <p>whereval = 1 *( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "*" / "+" / "," / ";" / ":" / "@" / "/" / "?")</p>
@@ -217,7 +217,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p>특정 위치, 랜드마크 또는 장소에 대한 검색 용어입니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>q</b></p></td>
+<td align="left"><p><b>Q:</b></p></td>
 <td align="left"><p>쿼리 용어</p></td>
 <td align="left"><p>q = "q="</p>
 <p>whereval</p>
@@ -228,7 +228,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <tr class="odd">
 <td align="left"><p><b>lvl</b></p></td>
 <td align="left"><p>확대/축소 수준</p></td>
-<td align="left"><p>lvl = "lvl=" 1<i>2DIGIT ["." 1</i>2DIGIT]</p>
+<td align="left"><p>lvl = "lvl =" 1<i>2DIGIT ["." 1</i>2DIGIT]</p>
 <p>예제:</p>
 <p>lvl=10.50</p></td>
 <td align="left"><p>지도 보기의 확대/축소 수준을 정의합니다. 유효한 값은 1-20이며 여기서 1이 축소됩니다.</p></td>
@@ -241,8 +241,8 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>sty=a</p></td>
 <td align="left"><p>지도 스타일을 정의합니다. 이 매개 변수의 유효한 값은 다음과 같습니다.</p>
 <ul>
-<li>**a**: Map의 항공 보기를 표시 합니다.</li>
-<li>**r**: 지도의 보기를 표시 합니다.</li>
+<li>****: Map의 항공 보기를 표시 합니다.</li>
+<li>**R**: 지도의 보기를 표시 합니다.</li>
 <li>**3d**: Map의 3D 뷰를 표시 합니다. **cp** 매개 변수 및 **rad** 매개 변수(옵션)와 함께 사용합니다.</li>
 </ul>
 <p>Windows 10에서는 위성뷰 및 3D 보기 스타일이 같습니다.</p>
@@ -335,7 +335,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>mode</b></p></td>
+<td align="left"><p><b>모드</b></p></td>
 <td align="left"><p>교통 모드</p></td>
 <td align="left"><p>mode = "mode=" ("d" / "t" / "w")</p>
 <p>예제:</p>
@@ -350,7 +350,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 </tr>
 
 <tr class="even">
-<td align="left"><p><b>collection</b></p></td>
+<td align="left"><p><b>컬렉션</b></p></td>
 <td align="left"><p>컬렉션</p></td>
 <td align="left"><p>collection = "collection="(name"~"/)point["~"point]</p>
 <p>name = "name." whereval </p>

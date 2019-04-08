@@ -80,10 +80,10 @@ winrt::check_bool(::SetEvent(h.get()));
 
 Windows API가 다양한 반환 값 형식을 사용하여 런타임 오류를 보고하기 때문에 **winrt::check_bool** 외에도 값을 확인하고 예외를 throw하기 위해 유용한 몇 가지 다른 도우미 함수가 있습니다.
 
-- [**winrt::check_hresult**](/uwp/cpp-ref-for-winrt/error-handling/check-hresult). HRESULT 코드가 오류를 나타내는지 여부를 확인합니다. 그러한 경우 **winrt::throw_hresult**를 호출합니다.
-- [**winrt::check_nt**](/uwp/cpp-ref-for-winrt/error-handling/check-nt). 코드가 오류를 나타내는지 여부를 확인합니다. 그러한 경우 **winrt::throw_hresult**를 호출합니다.
-- [**winrt::check_pointer**](/uwp/cpp-ref-for-winrt/error-handling/check-pointer). 포인터가 null인지 여부를 확인합니다. 그러한 경우 **winrt::throw_last_error**를 호출합니다.
-- [**winrt::check_win32**](/uwp/cpp-ref-for-winrt/error-handling/check-win32). 코드가 오류를 나타내는지 여부를 확인합니다. 그러한 경우 **winrt::throw_hresult**를 호출합니다.
+- [**winrt::check_hresult**](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)합니다. HRESULT 코드가 오류를 나타내는지 여부를 확인합니다. 그러한 경우 **winrt::throw_hresult**를 호출합니다.
+- [**winrt::check_nt**](/uwp/cpp-ref-for-winrt/error-handling/check-nt)합니다. 코드가 오류를 나타내는지 여부를 확인합니다. 그러한 경우 **winrt::throw_hresult**를 호출합니다.
+- [**winrt::check_pointer**](/uwp/cpp-ref-for-winrt/error-handling/check-pointer)합니다. 포인터가 null인지 여부를 확인합니다. 그러한 경우 **winrt::throw_last_error**를 호출합니다.
+- [**winrt::check_win32**](/uwp/cpp-ref-for-winrt/error-handling/check-win32)합니다. 코드가 오류를 나타내는지 여부를 확인합니다. 그러한 경우 **winrt::throw_hresult**를 호출합니다.
 
 일반적인 반환 코드 형식에 대해 이러한 도우미 함수를 사용하거나 모든 오류 조건에 응답하여 [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error) 또는 [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult)를 호출할 수 있습니다. 
 

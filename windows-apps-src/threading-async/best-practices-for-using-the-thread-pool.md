@@ -54,4 +54,4 @@ ms.locfileid: "57628048"
 
 * [정기 작업 항목 만들기](create-a-periodic-work-item.md)
 * [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)
-* [타이머를 사용 하 여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
+* [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)

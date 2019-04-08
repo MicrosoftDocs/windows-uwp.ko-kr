@@ -22,7 +22,7 @@ ms.locfileid: "57638938"
 
 인물 사진 컨트롤은 사람의 아바타 이미지가 있는 경우 해당 이미지를 표시하고, 없는 경우 사람의 이니셜이나 일반 글자 모양을 표시합니다. 컨트롤을 사용하여 사람의 연락처 정보를 관리하는 개체인 [Contact 개체](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact)를 표시하거나 수동으로 표시 이름과 프로필 사진 등의 연락처 정보를 제공할 수 있습니다.  
 
-> **중요 한 Api**: [PersonPicture 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.personpicture)하십시오 [클래스에 게 문의](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), [ContactManager 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
+> **중요 API**: [PersonPicture 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.personpicture)하십시오 [클래스에 게 문의](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), [ContactManager 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
 
 이 그림은 사용자 이름을 표시하는 2개의 [텍스트 블록](text-block.md) 요소가 수반되는 인물 사진 컨트롤을 보여줍니다. 
 ![사용자 사진 제어](images/person-picture/person-picture_hero.png)
@@ -47,8 +47,8 @@ ms.locfileid: "57638938"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/PersonPicture">앱을 열고 작동 중인 PersonPicture를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

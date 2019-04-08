@@ -131,5 +131,5 @@ CompositionDropShadowSourcePolicy.InheritFromVisualContent | 높은
 
 ## <a name="additional-resources"></a>추가 리소스
 
-- [Composition DropShadow API](/uwp/api/Windows.UI.Composition.DropShadow)
-- [WindowsUIDevLabs GitHub Repo](https://github.com/Microsoft/WindowsUIDevLabs)
+- [컴퍼지션 DropShadow API](/uwp/api/Windows.UI.Composition.DropShadow)
+- [WindowsUIDevLabs GitHub 리포지토리](https://github.com/Microsoft/WindowsUIDevLabs)

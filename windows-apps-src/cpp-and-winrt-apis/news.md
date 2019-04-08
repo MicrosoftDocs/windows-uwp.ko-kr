@@ -1,5 +1,5 @@
 ---
-description: 뉴스 및 변경 내용을 C + + /cli WinRT 합니다.
+description: C++/WinRT에서 새롭거나 변경된 기능입니다.
 title: 새로운 C + + /cli WinRT
 ms.date: 01/29/2019
 ms.topic: article
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: cb624a93a010dfe9784cf8c26beed12c6cf2f77d
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57639958"

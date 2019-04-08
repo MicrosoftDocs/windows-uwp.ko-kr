@@ -8,7 +8,7 @@ keywords: windows 10, uwp, 게임, 설정, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 252d7ccb8e50e773a19282afaf19bb18d4c5d5a6
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57608708"
@@ -38,7 +38,7 @@ Visual Studio 템플릿은 기본 언어 및 기술을 기반으로 하는 특�
 이 자습서에 사용된 템플릿은  **DirectX 11 앱(유니버설 Windows)** 이라는 템플릿입니다. 
 
 Visual Studio에서 DirectX 11 게임 프로젝트를 만들기 위한 단계:
-1.  선택 **파일...** &gt; **새** &gt; **프로젝트...** 
+1.  선택 **파일...** &gt; **새** &gt; **프로젝트...**
 2.  왼쪽된 창에서 선택 **설치 됨** &gt; **템플릿** &gt; **Visual c + +** &gt; **Windows 유니버설**
 3.  가운데 창에서 **DirectX 11 앱(유니버설 Windows)** 을 선택
 4.  게임 프로젝트에 이름을 지정하고 **확인**을 클릭합니다.

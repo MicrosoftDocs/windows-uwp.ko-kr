@@ -227,7 +227,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 여기에서는 카메라가 PC에 연결될 때 앱을 **자동 실행** 옵션으로 식별하는 방법을 보여 줍니다. 앱에 대 한 처리기로 등록 합니다 **WPD\\ImageSourceAutoPlay** 이벤트입니다. 이는 카메라 및 기타 이미징 장치가 MTP를 사용하는 ImageSource임을 알릴 경우 WPD(Windows 휴대용 장치)에서 발생하는 일반적인 이벤트입니다. 자세한 내용은 [Windows 휴대용 장치](https://msdn.microsoft.com/library/windows/hardware/ff597729)를 참조하세요.
 
-**중요 한**  는 [**Windows.Devices.Portable.StorageDevice** ](https://msdn.microsoft.com/library/windows/apps/br225654) Api가 포함 된 [데스크톱 장치 제품군](https://msdn.microsoft.com/library/windows/apps/dn894631)합니다. 앱은 데스크톱 장치 제품군, Pc 등의 Windows 10 장치에만 이러한 Api를 사용할 수 있습니다.
+**중요 한**  는 [ **Windows.Devices.Portable.StorageDevice** ](https://msdn.microsoft.com/library/windows/apps/br225654) Api가 포함 된 [데스크톱 장치 제품군](https://msdn.microsoft.com/library/windows/apps/dn894631)합니다. 앱은 데스크톱 장치 제품군, Pc 등의 Windows 10 장치에만 이러한 Api를 사용할 수 있습니다.
 
  
 

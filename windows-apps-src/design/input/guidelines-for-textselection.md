@@ -20,7 +20,7 @@ ms.locfileid: "57612508"
 
 이 문서에서는 텍스트, 이미지 및 컨트롤을 선택하고 조작하는 방법을 설명하고 앱에서 이러한 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 
-> **중요 한 Api**: [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
+> **중요 API**: [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)하십시오 [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
  
 
 

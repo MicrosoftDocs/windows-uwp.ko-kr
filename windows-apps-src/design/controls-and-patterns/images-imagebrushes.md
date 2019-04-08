@@ -19,7 +19,7 @@ ms.locfileid: "57622018"
 
 이미지를 표시하려면 **Image** 개체 또는 **ImageBrush** 개체를 사용할 수 있습니다. Image 개체는 이미지를 렌더링하고 ImageBrush 개체는 이미지에 다른 개체를 그립니다. 
 
-> **중요 한 Api**: [클래스를 이미지](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx), [속성을 원본](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)를 [ImageBrush 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx), [ImageSource 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)
+> **중요 API**: [클래스를 이미지](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx), [속성을 원본](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)를 [ImageBrush 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx), [ImageSource 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)
 
 ## <a name="are-these-the-right-elements"></a>올바른 요소인가요?
 앱에 독립 실행형 이미지를 표시하려면 **Image** 요소를 사용합니다.
@@ -35,8 +35,8 @@ ms.locfileid: "57622018"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Image">앱을 열고 작동 중인 이미지를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

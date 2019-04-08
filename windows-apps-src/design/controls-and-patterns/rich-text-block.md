@@ -24,7 +24,7 @@ ms.locfileid: "57610898"
 
 서식 있는 텍스트 블록은 단락, 인라인 UI 요소 또는 복잡한 텍스트 레이아웃에 대한 지원이 필요한 경우 사용할 수 있는 몇 가지 고급 텍스트 레이아웃 기능을 제공합니다.
 
-> **중요 한 Api**: [RichTextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)하십시오 [RichTextBlockOverflow 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx), [클래스를 단락](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx), [입력 체계 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
+> **중요 API**: [RichTextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)하십시오 [RichTextBlockOverflow 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx), [클래스를 단락](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx), [입력 체계 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -43,8 +43,8 @@ ms.locfileid: "57610898"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/RichTextBlock">앱을 열고 작동 중인 RichTextBlock을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

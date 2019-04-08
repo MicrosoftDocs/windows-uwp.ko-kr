@@ -15,7 +15,7 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d2a7d34f00d40429863f08ffe6a9c34222daa32
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57649308"
@@ -24,7 +24,7 @@ ms.locfileid: "57649308"
 
 명령 모음을 통해 앱에서 가장 많이 수행하는 작업에 쉽게 액세스할 수 있습니다. 명령 모음은 앱 수준의 명령이나 페이지 고유의 명령에 액세스할 수 있도록 해주며, 어떠한 탐색 패턴에서도 사용이 가능합니다.
 
-> **중요 한 Api**: [CommandBar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)하십시오 [AppBarButton 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx)합니다 [AppBarToggleButton 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx), [AppBarSeparator 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx)
+> **중요 API**: [CommandBar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)하십시오 [AppBarButton 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx)합니다 [AppBarToggleButton 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx), [AppBarSeparator 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx)
 
 ![아이콘이 있는 명령 모음의 예](images/controls_appbar_icons.png)
 
@@ -44,8 +44,8 @@ CommandBar 컨트롤은 유연하고 가벼운 범용 컨트롤로서 [AppBarBut
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우는 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/CommandBar">앱을 열고 작동 중인 CommandBar를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

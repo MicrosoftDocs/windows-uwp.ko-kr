@@ -51,7 +51,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 -   닫기 명령을 제외한 각 명령 뒤에는 일반적으로 하나 이상의 숫자가 나옵니다.
 -   명령에 대해 숫자가 여러 개인 경우 쉼표나 공백을 사용하여 구분합니다.
 
-**\[**_fillRule_**\]** _moveCommand_ _drawCommand_ **\[**_drawCommand_**\*\]** **\[**_closeCommand_**\]**
+**\[**_fillRule_ **\]** _moveCommand_ _drawCommand_ **\[**  _drawCommand_ **\* \]** **\[** _closeCommand_**\]**
 
 다수의 그리기 명령은 점을 사용하며, 이 점에서 _x,y_ 값을 제공합니다. 표시는 \* _지점_ 자리 표시자를 가정할 수 있습니다에 대 한 두 개의 10 진수 값을 제공 하는 합니다 _x, y_ 요소의 값입니다.
 
@@ -71,11 +71,11 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 구문 |
 |--------|
-| `M ` _startPoint_ <br/>- 또는 -<br/>`m` _startPoint_|
+| `M ` _원호의 시작점_ <br/>- 또는 -<br/>`m` _원호의 시작점_|
 
 | 용어 | 설명 |
 |------|-------------|
-| _startPoint_ | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/>새 그림의 시작점입니다.|
+| _원호의 시작점_ | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/>새 그림의 시작점입니다.|
 
 대문자 **M**은 *startPoint*가 절대 좌표임을 나타내고, 소문자 **m**은 *startPoint*가 이전 점의 오프셋이거나 이전 점이 없는 경우 (0,0)임을 나타냅니다.
 
@@ -95,11 +95,11 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 구문 |
 |--------|
-| `L` _endPoint_ <br/>- 또는 -<br/>`l` _endPoint_ |
+| `L` _끝점_ <br/>- 또는 -<br/>`l` _끝점_ |
 
 | 용어 | 설명 |
 |------|-------------|
-| endPoint | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/>선의 끝점입니다.|
+| endPoint | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/>선의 끝점입니다.|
 
 **수평선 명령**
 
@@ -107,7 +107,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 구문 |
 |--------|
-| `H ` _x_ <br/> - 또는 - <br/>`h ` _x_ |
+| `H ` _X_ <br/> - 또는 - <br/>`h ` _X_ |
 
 | 용어 | 설명 |
 |------|-------------|
@@ -119,11 +119,11 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 구문 |
 |--------|
-| `V ` _y_ <br/> - 또는 - <br/> `v ` _y_ |
+| `V ` _Y_ <br/> - 또는 - <br/> `v ` _Y_ |
 
 | 용어 | 설명 |
 |------|-------------|
-| *y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> 선 끝점의 y 좌표입니다. |
+| *Y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> 선 끝점의 y 좌표입니다. |
 
 **입방 형 3 차원 곡선 명령**
 
@@ -131,13 +131,13 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 구문 |
 |--------|
-| `C ` *controlPoint1* *controlPoint2* *endPoint* <br/> - 또는 - <br/> `c ` *controlPoint1* *controlPoint2* *endPoint* |
+| `C ` *controlPoint1* *controlPoint2* *끝점* <br/> - 또는 - <br/> `c ` *controlPoint1* *controlPoint2* *끝점* |
 
 | 용어 | 설명 |
 |------|-------------|
-| *controlPoint1* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선의 첫 번째 제어점으로, 곡선의 시작 접선을 결정합니다. |
-| *controlPoint2* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선의 두 번째 제어점으로, 곡선의 끝 접선을 결정합니다. |
-| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선을 그려 도달하는 점입니다. | 
+| *controlPoint1* | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선의 첫 번째 제어점으로, 곡선의 시작 접선을 결정합니다. |
+| *controlPoint2* | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선의 두 번째 제어점으로, 곡선의 끝 접선을 결정합니다. |
+| *끝점* | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선을 그려 도달하는 점입니다. | 
 
 **정방형 베 지 어 곡선 명령**
 
@@ -145,12 +145,12 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 구문 |
 |--------|
-| `Q ` *controlPoint endPoint* <br/> - 또는 - <br/> `q ` *controlPoint endPoint* |
+| `Q ` *controlPoint 끝점* <br/> - 또는 - <br/> `q ` *controlPoint 끝점* |
 
 | 용어 | 설명 |
 |------|-------------|
-| *controlPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선의 제어점으로, 곡선의 시작 접선과 끝 접선을 결정합니다. |
-| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> 곡선을 그려 도달하는 점입니다. |
+| *controlPoint* | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선의 제어점으로, 곡선의 시작 접선과 끝 접선을 결정합니다. |
+| *끝점* | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> 곡선을 그려 도달하는 점입니다. |
 
 **부드러운 입방 형 3 차원 큐빅 곡선 명령**
 
@@ -158,12 +158,12 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 구문 |
 |--------|
-| `S` *controlPoint2* *endPoint* <br/> - 또는 - <br/>`s` *controlPoint2 endPoint* |
+| `S` *controlPoint2* *끝점* <br/> - 또는 - <br/>`s` *controlPoint2 끝점* |
 
 | 용어 | 설명 |
 |------|-------------|
-| *controlPoint2* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선의 제어점으로, 곡선의 끝 접선을 결정합니다. |
-| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> 곡선을 그려 도달하는 점입니다. |
+| *controlPoint2* | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선의 제어점으로, 곡선의 끝 접선을 결정합니다. |
+| *끝점* | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> 곡선을 그려 도달하는 점입니다. |
 
 **부드러운 정방형 베 지 어 곡선 명령**
 
@@ -171,12 +171,12 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 구문 |
 |--------|
-| `T` *controlPoint* *endPoint* <br/> - 또는 - <br/> `t` *controlPoint* *endPoint* |
+| `T` *controlPoint* *끝점* <br/> - 또는 - <br/> `t` *controlPoint* *끝점* |
 
 | 용어 | 설명 |
 |------|-------------|
-| *controlPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> 곡선의 제어점으로, 곡선의 시작 및 끝 접선을 결정합니다. |
-| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> 곡선을 그려 도달하는 점입니다. |
+| *controlPoint* | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> 곡선의 제어점으로, 곡선의 시작 및 끝 접선을 결정합니다. |
+| *끝점* | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870)<br/> 곡선을 그려 도달하는 점입니다. |
 
 **타원형 호 명령**
 
@@ -184,15 +184,15 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 구문 |
 |--------|
-| `A ` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> - 또는 - <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
+| `A ` *크기* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *끝점* <br/> - 또는 - <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
 
 | 용어 | 설명 |
 |------|-------------|
-| *size* | [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)<br/>호의 x 반경 및 y 반경입니다. |
+| *크기* | [**크기**](https://msdn.microsoft.com/library/windows/apps/br225995)<br/>호의 x 반경 및 y 반경입니다. |
 | *rotationAngle* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> 타원의 회전(도 단위)입니다. |
 | *isLargeArcFlag* | 호의 각도가 180도 이상이어야 하는 경우 1로 설정하고, 그렇지 않으면 0으로 설정합니다. |
 | *sweepDirectionFlag* | 호가 양수 각도 방향으로 그려지는 경우 1로 설정하고, 그렇지 않으면 0으로 설정합니다. |
-| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 호를 그려 도달하는 점입니다.|
+| *끝점* | [**지점**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 호를 그려 도달하는 점입니다.|
  
 **닫기 명령**
 
@@ -213,7 +213,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 | 용어 | 설명 |
 |------|-------------|
 | *x* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> 점의 x 좌표입니다. |
-| *y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> 점의 y 좌표입니다. |
+| *Y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> 점의 y 좌표입니다. |
 
 **추가 정보**
 

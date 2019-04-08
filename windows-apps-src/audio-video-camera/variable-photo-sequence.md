@@ -42,10 +42,10 @@ HDR 이미지를 캡처하지만 고유한 처리 알고리즘을 구현하지 �
 
 가변 사진 시퀀스 컨트롤러에서 [**FrameControlCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652548) 개체를 가져옵니다. 이 개체에는 모든 설정에 대해 사진 시퀀스의 프레임별로 구성할 수 있는 속성이 있습니다. 확인할 수 있습니다.
 
--   [**Exposure**](https://msdn.microsoft.com/library/windows/apps/dn652552)
+-   [**노출**](https://msdn.microsoft.com/library/windows/apps/dn652552)
 -   [**ExposureCompensation**](https://msdn.microsoft.com/library/windows/apps/dn652560)
--   [**Flash**](https://msdn.microsoft.com/library/windows/apps/dn652566)
--   [**Focus**](https://msdn.microsoft.com/library/windows/apps/dn652570)
+-   [**플래시**](https://msdn.microsoft.com/library/windows/apps/dn652566)
+-   [**포커스**](https://msdn.microsoft.com/library/windows/apps/dn652570)
 -   [**IsoSpeed**](https://msdn.microsoft.com/library/windows/apps/dn652574)
 -   [**PhotoConfirmation**](https://msdn.microsoft.com/library/windows/apps/dn652578)
 

@@ -169,7 +169,7 @@ ms.locfileid: "57634138"
 
 * [달력, 날짜 및 시간 컨트롤](../controls-and-patterns/date-and-time.md)
 * [사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md)
-* [언어, 배율, 고대비 등 및 다른 한정자에 대 한 리소스를 조정 합니다.](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)
 
 ## <a name="samples"></a>샘플
 

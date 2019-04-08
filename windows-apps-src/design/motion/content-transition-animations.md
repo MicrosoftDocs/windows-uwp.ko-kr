@@ -23,7 +23,7 @@ ms.locfileid: "57649808"
 
 콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다.
 
-> **중요 한 Api**: [**ContentThemeTransition 클래스 (XAML)**](https://msdn.microsoft.com/library/windows/apps/br243104)
+> **중요 API**: [**ContentThemeTransition 클래스 (XAML)**](https://msdn.microsoft.com/library/windows/apps/br243104)
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 

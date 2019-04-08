@@ -7,7 +7,7 @@ keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이
 ms.localizationpriority: medium
 ms.openlocfilehash: e81f82fe823ee0fdf81741c89576adf268940d91
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57630748"
@@ -211,9 +211,9 @@ HRESULT __stdcall DllCanUnloadNow(void)
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
-* [winrt::Windows::Foundation::IUnknown struct](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
+* [winrt::Windows::Foundation::IUnknown 구조체](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
 
 ## <a name="related-topics"></a>관련 항목
-* [소개 C + + /cli WinRT](intro-to-using-cpp-with-winrt.md)
-* [이동할 C + + /cli WinRT C + + /cli CX](move-to-winrt-from-cx.md)
-* [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl)
+* [C++/WinRT 소개](intro-to-using-cpp-with-winrt.md)
+* [C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md)
+* [Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl)

@@ -28,7 +28,7 @@ ms.locfileid: "57637098"
 유효한 기본 이미지를 사용하고 있다면 명령에서 ``-Cleanup All``를 사용해 보세요.
 이 명령이 작동하지 않을 경우 converter@microsoft.com에 로그를 보내주시면 조사하는 데 도움이 될 것입니다.
 
-### <a name="new-containernetwork-the-object-already-exists-error"></a>New-ContainerNetwork: 개체가 이미 오류
+### <a name="new-containernetwork-the-object-already-exists-error"></a>New-containernetwork: 개체가 이미 오류
 
 새로운 기본 이미지를 설치할 때 이러한 오류가 발생할 수 있습니다. 이전에 Desktop App Converter를 설치한 개발자 컴퓨터에서 Windows 참가자 플라이트를 수신하는 경우에 이러한 오류가 발생할 수 있습니다.
 
@@ -101,7 +101,7 @@ Windows 업데이트에 대한 세부 정보는 다음 페이지에서 확인할
 
 ## <a name="common-errors-that-can-appear-when-you-sign-your-app"></a>앱에 로그인할 때 나타날 수 있는 일반적인 오류
 
-### <a name="publisher-and-cert-mismatch-causes-signtool-error-error-signersign-failed--21470248850x8007000b"></a>게시자 및 인증서 불일치 하면 Signtool 오류 "오류: SignerSign() Failed" (-2147024885/0x8007000b)
+### <a name="publisher-and-cert-mismatch-causes-signtool-error-error-signersign-failed--21470248850x8007000b"></a>게시자 및 인증서 불일치 하면 Signtool 오류 "오류: SignerSign() 못했습니다"(-2147024885/0x8007000b)
 
 Windows 앱 패키지 매니페스트의 게시자 항목이 서명한 인증서의 주체와 일치해야 합니다.  인증서의 주체를 보려면 다음 방법 중 하나를 사용할 수 있습니다.
 
