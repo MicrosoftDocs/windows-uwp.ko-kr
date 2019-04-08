@@ -9,7 +9,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: bbde90d848d3bc8fb18a5ecf370c85121adc02f6
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57620498"
@@ -35,7 +35,7 @@ DS(도메인 셰이더) 단계 [HS(헐 셰이더) 단계](hull-shader-stage--hs-
     -   공간 분할 요소. 공간 분할 요소는 고정 함수 분할기에서 사용하는 값뿐 아니라 기하 모핑 등에서 사용되는 원시 값(예를 들어 정수 공간 분할로 반올림하기 전)도 포함됩니다.
 -   도메인 셰이더는 [TS(분할기) 단계](tessellator-stage--ts-.md)의 출력 좌표당 한 번씩 호출됩니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
 
 
 -   DS(도메인 셰이더) 단계는 출력 패치의 세분화된 지점의 꼭지점 위치를 출력합니다.

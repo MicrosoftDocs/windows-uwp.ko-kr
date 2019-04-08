@@ -355,6 +355,6 @@ asyncAction.Completed = new AsyncActionCompletedHandler(
 ## <a name="related-topics"></a>관련 항목
 
 * [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)
-* [스레드 풀을 사용 하는 것에 대 한 모범 사례](best-practices-for-using-the-thread-pool.md)
-* [타이머를 사용 하 여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
+* [스레드 풀 사용 모범 사례](best-practices-for-using-the-thread-pool.md)
+* [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
  

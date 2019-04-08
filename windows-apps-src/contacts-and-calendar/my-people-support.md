@@ -53,7 +53,7 @@ ms.locfileid: "57611538"
 
 ```
 
-**After**
+**후**
 
 ```xml
 <Package
@@ -121,7 +121,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 </Applications>
 ```
 
-**After**
+**후**
 
 ```Csharp
 <Applications>
@@ -249,10 +249,10 @@ async Task PinMultipleContacts(Contact[] contacts)
 **참고:** 
 
 ## <a name="see-also"></a>참고 항목
-+ [공유 내 사용자](my-people-sharing.md)
++ [내 피플 공유](my-people-sharing.md)
 + [내 사용자 알림](my-people-notifications.md)
 + [Channel 9 비디오 내 사용자 지원 응용 프로그램에 추가 하는 방법](https://channel9.msdn.com/Events/Build/2017/P4056)
 + [사용자 통합 샘플](https://aka.ms/mypeoplebuild2017)
 + [연락처 카드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
 + [PinnedContactManager 클래스 설명서](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
-+ [연락처 카드에 대 한 작업에 앱 연결](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)
++ [연락처 카드의 작업에 앱 연결](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

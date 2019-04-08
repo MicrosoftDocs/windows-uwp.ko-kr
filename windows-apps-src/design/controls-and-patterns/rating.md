@@ -21,7 +21,7 @@ ms.locfileid: "57644928"
 
 평점 컨트롤은 사용자가 콘텐츠 및 서비스에 대한 만족도를 반영하는 평점을 확인 및 설정할 수 있도록 해줍니다. 사용자는 터치, 펜, 마우스, 게임 패드 또는 키보드에서 평점 컨트롤을 사용할 수 있습니다. 다음 지침은 평점 컨트롤의 기능을 사용하여 유연성과 사용자 지정을 제공하는 방법을 보여줍니다.
 
-> **중요 한 Api**: [RatingControl 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.ratingcontrol)
+> **중요 API**: [RatingControl 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.ratingcontrol)
 
 ![평점 컨트롤의 예](images/rating_rs2_doc_ratings_intro.png)
 
@@ -34,8 +34,8 @@ ms.locfileid: "57644928"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/RatingControl">앱을 열고 작동 중인 RatingControl을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

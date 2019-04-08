@@ -68,7 +68,7 @@ ms.locfileid: "57653188"
 * 플라이아웃은 보조 타일을 추가하기 전에 사용자에게 확인을 요청합니다.
 * 사용자 요청을 통해 프로그래밍 방식으로 잠금 화면에 대해 선택할 수 없습니다. 사용자 PC 설정에서 개인 설정 페이지를 통해 보조 타일을 수동으로 추가 해야 합니다.
 
-알림 보내기의 경우 보조 타일에 사용되는 타일 및 배지 업데이트와 푸시 알림 채널에 대한 특정 메서드가 제공됩니다. 이는 기본 타일에 사용되는 버전과 비슷합니다. 예를 들어 CreateBadgeUpdaterForApplication vs입니다. CreateBadgeUpdaterForSecondaryTile.
+알림 보내기의 경우 보조 타일에 사용되는 타일 및 배지 업데이트와 푸시 알림 채널에 대한 특정 메서드가 제공됩니다. 이는 기본 타일에 사용되는 버전과 비슷합니다. 예를 들어 CreateBadgeUpdaterForApplication vs입니다. CreateBadgeUpdaterForSecondaryTile 합니다.
 
 
 ## <a name="guidance-on-secondary-tiles"></a>보조 타일에 대한 지침

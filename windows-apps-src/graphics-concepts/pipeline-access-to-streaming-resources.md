@@ -23,7 +23,7 @@ ms.locfileid: "57616378"
 
 셰이더의 메모리 액세스 공간 뒤의 모든 타일이 고유의 타일에 매핑되는 경우, 비타일 방식으로 동일한 메모리 콘텐츠를 가진 표면에 대한 모든 구현에서 동작은 동일합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

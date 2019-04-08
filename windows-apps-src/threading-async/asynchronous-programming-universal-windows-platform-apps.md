@@ -70,6 +70,6 @@ Promise 개체는 차후에 수행될 값을 나타냅니다. UWP에서는 facto
 대부분의 경우 비동기 함수 호출은 기본 함수를 호출하는 것만큼 간단합니다. 차이점은 [**then**](https://msdn.microsoft.com/library/windows/apps/BR229728) 또는 [**done**](https://msdn.microsoft.com/library/windows/apps/Hh701079) 메서드를 사용하여 결과나 오류에 대한 처리기를 할당하고 작업을 시작한다는 것입니다.
 
 ## <a name="related-topics"></a>관련 항목
-* [비동기 Api 호출 C# 또는 Visual Basic](call-asynchronous-apis-in-csharp-or-visual-basic.md)
+* [C# 또는 Visual Basic에서 비동기 API 호출](call-asynchronous-apis-in-csharp-or-visual-basic.md)
 * [비동기 비동기를 사용 하 여 프로그래밍 및 Await (C# 및 Visual Basic)](https://msdn.microsoft.com/library/hh191443(vs.110).aspx)
 * [리버시 샘플 기능 시나리오: 비동기 코드](https://msdn.microsoft.com/library/windows/apps/xaml/jj712233.aspx#async)

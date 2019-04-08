@@ -22,7 +22,7 @@ ms.locfileid: "57618198"
 
 연결 된 애니메이션 요소 "계속" 화면에서 새 보기에서 해당 대상에 소스 뷰에서 해당 위치에서 비행 UI 콘텐츠를 변경 하는 동안 두 뷰 간에 표시 됩니다. 이 뷰 간에 공통 콘텐츠를 강조 하 고 전환의 일부로 멋진 및 동적 효과 만듭니다.
 
-> **중요 한 Api**:  [ConnectedAnimation 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimation), [ConnectedAnimationService 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
+> **중요 API**:  [ConnectedAnimation 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimation), [ConnectedAnimationService 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
 
 ## <a name="see-it-in-action"></a>실제 장면 보기
 

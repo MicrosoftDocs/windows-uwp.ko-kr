@@ -8,14 +8,14 @@ keywords: windows 10, uwp, 소매 데모 앱
 ms.localizationpriority: medium
 ms.openlocfilehash: b66435dd7c94762874461b48e19e9a60224f287b
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57596758"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>소매 데모 (RDX) 기능을 앱에 추가
 
-Pc와 매장에서 장치를 사용해 고객의 오른쪽을 이동할 수 있도록 Windows 앱에는 소매 데모 모드를 포함 합니다.
+매장에서 PC 및 디바이스를 사용해 보려는 고객이 바로 시작할 수 있도록 Windows 앱에 소매 데모 모드를 포함하세요.
 
 고객은 소매점에 있는 경우 Pc 및 장치의 데모를 사용해 수 있으려면 하기를 원합니다. 상당한 시간을 통해 앱을 사용 하 여 생길 청크 보내는 경우가 많습니다 합니다 [소매 데모 환경 (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)합니다.
 

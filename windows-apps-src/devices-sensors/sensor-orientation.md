@@ -45,7 +45,7 @@ ms.locfileid: "57623058"
 
 | 방향 | 가로 방향 우선 | 세로 방향 우선 |
 |-------------|-----------------|----------------|
-| **Landscape** | ![Landscape 방향의 가로 방향 우선 디바이스](images/sensor-orientation-0.PNG) | ![Landscape 방향의 세로 방향 우선 디바이스](images/sensor-orientation-1.PNG) |
+| **가로** | ![Landscape 방향의 가로 방향 우선 디바이스](images/sensor-orientation-0.PNG) | ![Landscape 방향의 세로 방향 우선 디바이스](images/sensor-orientation-1.PNG) |
 | **세로** | ![Portrait 방향의 가로 방향 우선 디바이스](images/sensor-orientation-2.PNG) | ![Portrait 방향의 세로 방향 우선 디바이스](images/sensor-orientation-3.PNG) |
 | **LandscapeFlipped** | ![LandscapeFlipped 방향의 가로 방향 우선 디바이스](images/sensor-orientation-4.PNG) | ![LandscapeFlipped 방향의 세로 방향 우선 디바이스](images/sensor-orientation-5.PNG) | 
 | **PortraitFlipped** | ![PortraitFlipped 방향의 가로 방향 우선 디바이스](images/sensor-orientation-6.PNG)| ![PortraitFlipped 방향의 세로 방향 우선 장치](images/sensor-orientation-7.PNG) |
@@ -109,7 +109,7 @@ private void ReadingChanged(object sender, CompassReadingChangedEventArgs e)
 
 | 참조 축        |  X |  Y | Z |
 |-----------------------|----|----|---|
-| **Landscape**         |  X |  Y | Z |
+| **가로**         |  X |  Y | Z |
 | **세로**          |  Y | -X | Z |
 | **LandscapeFlipped**  | -X | -Y | Z |
 | **PortraitFlipped**   | -Y |  X | Z |
@@ -172,8 +172,8 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 | 사용 됩니다.  | Z축을 중심으로 시계 반대 방향 회전 | 참조 사원수(역회전) | 참조 회전 행렬(역회전) | 
 |----------------------|------------------------------------|-----------------------------------------|----------------------------------------------|
-| **Landscape**        | 0                                  | 1 + 0i + 0j + 0k                        | \[1 0 0<br/> 0 1 0<br/> 0 0 1\]               |
+| **가로**        | 0                                  | 1 + 0i + 0j + 0k                        | \[1 0 0<br/> 0 1 0<br/> 0 0 1\]               |
 | **세로**         | 90                                 | cos(-45⁰) + (i + j + k)*sin(-45⁰)       | \[0 1 0<br/>-1 0 0<br/>0 0 1]              |
 | **LandscapeFlipped** | 180                                | 0 - i - j - k                           | \[1 0 0<br/> 0 1 0<br/> 0 0 1]               |
-| **PortraitFlipped**  | 270                                | cos(-135⁰) + (i + j + k)*sin(-135⁰)     | \[0 -1 0<br/> 1 0 0<br/> 0 0 1]             |
+| **PortraitFlipped**  | 270                                | cos(-135⁰) + (i + j + k)*sin(-135⁰)     | \[0-1 0<br/> 1 0 0<br/> 0 0 1]             |
 

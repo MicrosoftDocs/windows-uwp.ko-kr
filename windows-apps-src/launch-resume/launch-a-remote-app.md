@@ -76,5 +76,5 @@ Windows 10 버전 1607부터 UWP 앱은 두 디바이스가 동일한 MSA(Micros
 
 [원격 시스템 API 참조](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
 [연결 된 앱 및 장치 (프로젝트 로마) 개요](connected-apps-and-devices.md)  
-[원격 장치를 검색 합니다.](discover-remote-devices.md)  
+[원격 디바이스 검색](discover-remote-devices.md)  
 [원격 시스템 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)은 원격 시스템을 검색하고, 원격 시스템에서 앱을 실행하고, 앱 서비스를 사용하여 두 시스템에서 실행 중인 앱 간에 메시지를 보내는 방법을 보여 줍니다.

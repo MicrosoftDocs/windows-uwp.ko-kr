@@ -65,8 +65,8 @@ ms.locfileid: "57617928"
 ## <a name="related-topics"></a>관련 항목
 
 * [XAML 개요](xaml-overview.md)
-* [깊이에서 데이터 바인딩](https://msdn.microsoft.com/library/windows/apps/mt210946)
+* [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [{Binding} 태그 확장](binding-markup-extension.md)
-* [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)
+* [**바인딩**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)
 

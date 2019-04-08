@@ -27,7 +27,7 @@ ms.locfileid: "57618248"
 
 이 개념을 CPU 액세스를 위해 Direct3D 리소스를 매핑하는 개념과 혼동하면 안 됩니다. 이름은 같지만 서로 완전히 다른 개념입니다. 표면에 대한 모든 타일을 한 번에 매핑할 필요는 없으므로 필요에 따라 각 타일의 매핑을 개별적으로 정의하고 변경하여 사용 가능한 메모리를 효과적으로 사용할 수 있습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

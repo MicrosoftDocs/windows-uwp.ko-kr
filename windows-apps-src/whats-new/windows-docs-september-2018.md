@@ -30,7 +30,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ![Windows Machine Learning 그래픽](images/winml-graphic.png)
 
-### <a name="windows-ui-library"></a>Windows UI 라이브러리
+### <a name="windows-ui-library"></a>Windows UI Library
 
 [Windows UI 라이브러리](https://aka.ms/winui-docs) 는 UWP 앱에 대 한 컨트롤 및 기타 사용자 인터페이스 요소를 제공 하는 NuGet 패키지의 집합입니다. 앱 사용자가 최신 OS 버전을가지고 있지 하는 경우에 작동 하므로 이러한 패키지를 Windows 10의 이전 버전과 호환 됩니다.
 

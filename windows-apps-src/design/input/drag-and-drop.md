@@ -17,7 +17,7 @@ ms.locfileid: "57634398"
 
 끌어서 놓기는 Windows 바탕화면에 있는 응용 프로그램 내 또는 응용 프로그램 간에 데이터를 전송하는 직관적인 방법입니다. 끌어서 놓기의 표준 제스처(손가락으로 누른 채 이동하기 또는 마우스나 스타일러스로 눌러서 이동하기)를 사용하면 응용 프로그램 간에 또는 응용 프로그램 내에서 데이터를 전송할 수 있습니다.
 
-> **중요 한 Api**: [CanDrag 속성](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag), [AllowDrop 속성](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 
+> **중요 API**: [CanDrag 속성](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag), [AllowDrop 속성](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 
 
 끌기 제스처가 트리거되는 영역 또는 응용 프로그램인 끌기 소스는 텍스트, RTF, HTML, 비트맵, 저장소 항목 또는 사용자 지정 데이터 형식 등의 표준 데이터 형식을 포함할 수 있는 데이터 패키지 개체를 입력함으로써 데이터가 전송되도록 해줍니다. 소스는 또한 복사, 이동 또는 연결 등 지원되는 작업의 종류도 나타냅니다. 마우스 포인터를 놓으면 놓기가 발생합니다. 포인터 아래에 있는 영역이나 응용 프로그램인 놓기 대상은 데이터 패키지를 처리하고 수행된 작업 유형을 반환합니다.
 
@@ -114,7 +114,7 @@ ms.locfileid: "57634398"
 * [앱 간 통신](index.md)
 * [AllowDrop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.allowdrop.aspx)
 * [CanDrag](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.candrag.aspx)
-* [DragOver](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.dragover.aspx)
+* [끌기](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.dragover.aspx)
 * [AcceptedOperation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.acceptedoperation.aspx)
 * [DataView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.dataview.aspx)
 * [DragUIOverride](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.draguioverride.aspx)

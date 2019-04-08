@@ -37,13 +37,13 @@ ARM에서 Windows 10 UWP 앱 외에도 x86 Win32를 실행할 수도 있습니�
 ## <a name="in-this-section"></a>이 섹션의 내용
 |항목 | 설명 |
 |-----|-----|
-|[어떻게 x86 에뮬레이션 ARM에서 작동](apps-on-arm-x86-emulation.md)|x86 앱이 ARM에셔 에뮬레이션되는 방식을 설명하는 개요.|
-|[X86 문제 해결 ARM의 앱](apps-on-arm-troubleshooting-x86.md)|ARM을 기반으로 실행되는 경우 x86 앱 관련 일반적인 문제 및 이를 해결하는 방법. |
+|[ARM에서 x86 에뮬레이션이 작동하는 방식](apps-on-arm-x86-emulation.md)|x86 앱이 ARM에셔 에뮬레이션되는 방식을 설명하는 개요.|
+|[ARM 기반 x86 앱의 문제 해결](apps-on-arm-troubleshooting-x86.md)|ARM을 기반으로 실행되는 경우 x86 앱 관련 일반적인 문제 및 이를 해결하는 방법. |
 |[ARM에서 ARM 앱 문제 해결](apps-on-arm-troubleshooting-arm32.md)|일반적인 문제를 해결 하는 방법과 ARM를 실행 하는 경우 ARM64 및 ARM32 앱. |
-|[ARM에서 프로그램 호환성 문제 해결사](apps-on-arm-program-compat-troubleshooter.md)|앱이 ARM에서 제대로 작동하지 않는 경우 호환성 설정 조정에 대한 지침. |
+|[ARM의 프로그램 호환성 문제 해결사](apps-on-arm-program-compat-troubleshooter.md)|앱이 ARM에서 제대로 작동하지 않는 경우 호환성 설정 조정에 대한 지침. |
 
 ## <a name="related-topics"></a>관련 항목
 |항목 | 설명 |
 |-----|-----|
-|[ARM64 드라이버 WDK 사용 하 여 빌드](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)|ARM64 드라이버를 구축하기 위한 지침. |
+|[WDK를 사용하여 ARM64 드라이버 빌드](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)|ARM64 드라이버를 구축하기 위한 지침. |
 | [디버깅 x86 ARM의 앱](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-arm64) | ARM 기반 x86 앱을 디버깅하기 위한 지침. |

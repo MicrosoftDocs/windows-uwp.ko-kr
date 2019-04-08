@@ -271,7 +271,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 * [Windows.UI.Xaml.Application](https://msdn.microsoft.com/library/windows/apps/br242324)
 
 ## <a name="related-topics"></a>관련 항목
-* [핸들 앱 일시 중단](suspend-an-app.md)
+* [앱 일시 중단 처리](suspend-an-app.md)
 * [앱 다시 시작 처리](resume-an-app.md)
 * [일시 중단 하 고 다시 시작 하는 앱에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh465088)
 * [앱 수명 주기](app-lifecycle.md)

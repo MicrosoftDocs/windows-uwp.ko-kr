@@ -170,7 +170,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
     </Grid>
     ```
 
-    **After**
+    **후**
     ```xaml
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock x:Name="TitleTextBlock"
@@ -301,7 +301,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
     <Grid/>
     ```
 
-    **After**
+    **후**
     ```xaml
     <Grid Height="300"
           Width="300"
@@ -445,7 +445,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
         <Setter Property="Background" Value="{ThemeResource GridViewItemBackground}"/>
     ```
 
-    **After**
+    **후**
     ```xaml
         <Setter Property="Background" Value="Gray"/>
     ```
@@ -457,7 +457,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
         <Setter Property="Margin" Value="0,0,4,4"/>
     ```
 
-    **After**
+    **후**
     ```xaml
         <Setter Property="Margin" Value="8"/>
     ```
@@ -492,7 +492,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
                   ItemContainerStyle="{StaticResource ImageGridView_DefaultItemContainerStyle}"/>
     ```
 
-    **After**
+    **후**
     ```xaml
         <GridView x:Name="ImageGridView"
                   Margin="0,0,0,8"
@@ -533,7 +533,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
     </ItemsPanelTemplate>
     ```
 
-    **After**
+    **후**
     ```xaml
     <ItemsPanelTemplate x:Key="ImageGridView_ItemsPanelTemplate">
         <ItemsWrapGrid Orientation="Horizontal"

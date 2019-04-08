@@ -88,8 +88,8 @@ ms.locfileid: "57601478"
 * [언어, 배율 및 다른 한정자에 대 한 리소스를 조정 합니다.](../../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [타일 및 아이콘 자산에 대한 지침](app-assets.md).
 * [세계화 및 지역화](../../globalizing/globalizing-portal.md)
-* [UI 및 앱 패키지 매니페스트에 문자열 지역화](../../../app-resources/localize-strings-ui-manifest.md)
+* [UI 및 앱 패키지 매니페스트의 문자열 지역화](../../../app-resources/localize-strings-ui-manifest.md)
 * [XAML 태그 및 코드에서 이미지 또는 다른 자산 참조](../../../app-resources/images-tailored-for-scale-theme-contrast.md)
-* [addImageQuery](/uwp/schemas/tiles/tilesschema/element-visual?branch=live)
+* [AddImageQuery](/uwp/schemas/tiles/tilesschema/element-visual?branch=live)
 * [타일 스키마](/uwp/schemas/tiles/tilesschema/schema-root?branch=live)
 * [알림 메시지 스키마](/uwp/schemas/tiles/toastschema/schema-root?branch=live)

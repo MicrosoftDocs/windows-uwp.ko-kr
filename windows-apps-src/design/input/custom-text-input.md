@@ -21,7 +21,7 @@ ms.locfileid: "57638708"
 
 [  **Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) 네임스페이스의 코어 텍스트 API를 통해 UWP(유니버설 Windows 플랫폼) 앱은 Windows 장치에서 지원되는 모든 텍스트 서비스에서 텍스트 입력을 받을 수 있습니다. 이 API는 앱이 텍스트 서비스의 자세한 정보를 알 필요가 없다는 점에서 [텍스트 서비스 프레임워크](https://msdn.microsoft.com/library/windows/desktop/ms629032) API와 유사합니다. 이 API를 통해 앱은 모든 언어로 된 텍스트를 키보드, 음성 또는 펜과 같은 모든 입력 유형에서 받을 수 있습니다.
 
-> **중요 한 Api**: [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238), [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158)
+> **중요 API**: [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238)하십시오 [ **CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158)
 
 ## <a name="why-use-core-text-apis"></a>코어 텍스트 API를 사용하는 이유
 
@@ -56,8 +56,8 @@ ms.locfileid: "57638708"
 
 | 필드                  | 데이터 형식                                                                 | 설명                                                                      |
 |------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| **StartCaretPosition** | **Number** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | 범위의 시작 위치는 첫 번째 문자 바로 앞의 ACP입니다. |
-| **EndCaretPosition**   | **Number** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | 범위의 끝 위치는 마지막 문자 바로 뒤의 ACP입니다.     |
+| **StartCaretPosition** | **번호** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[c + +\] | 범위의 시작 위치는 첫 번째 문자 바로 앞의 ACP입니다. |
+| **EndCaretPosition**   | **번호** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[c + +\] | 범위의 끝 위치는 마지막 문자 바로 뒤의 ACP입니다.     |
 
  
 
@@ -98,8 +98,8 @@ ms.locfileid: "57638708"
 
 ![예제 텍스트 스트림 다이어그램](images/coretext/stream-3.png) 사용자가 "d"는 [ **TextUpdating** ](https://msdn.microsoft.com/library/windows/apps/dn958176) 다음 이벤트가 발생 [ **CoreTextTextUpdatingEventArgs** ](https://msdn.microsoft.com/library/windows/apps/dn958229) 데이터:
 
--   [**Range**](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
--   [**Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
+-   [**범위**](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
+-   [**텍스트** ](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
 -   [**NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
 
 편집 컨트롤에서 지정된 변경 내용을 적용하고 [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235)를 **Succeeded**로 설정합니다. 다음은 변경 내용이 적용된 후 컨트롤의 상태입니다.

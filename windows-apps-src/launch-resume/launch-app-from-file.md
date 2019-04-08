@@ -19,5 +19,5 @@ ms.locfileid: "57598608"
 
 | 항목 | 설명 |
 |-------|-------------|
-| [파일에 대 한 기본 앱 시작](launch-the-default-app-for-a-file.md) | 파일에 대한 기본 앱을 시작하는 방법을 알아봅니다. |
+| [파일에 대한 기본 앱 시작](launch-the-default-app-for-a-file.md) | 파일에 대한 기본 앱을 시작하는 방법을 알아봅니다. |
 | [파일 활성화 처리](handle-file-activation.md) | 앱을 특정 파일 형식의 기본 처리기로 등록하는 방법을 알아봅니다. |

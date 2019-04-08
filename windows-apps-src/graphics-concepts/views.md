@@ -19,7 +19,7 @@ ms.locfileid: "57663298"
 
 "보기"라는 용어는 "필요한 형식의 데이터"를 뜻하는 데 사용됩니다. 예를 들어, CBV(상수 버퍼 보기)는 올바른 형식의 일정한 버퍼 데이터일 것입니다. 이 섹션은 가장 공통적이고 유용한 보기를 설명합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>
@@ -47,7 +47,7 @@ ms.locfileid: "57663298"
 <td align="left"><p>셰이더 리소스 뷰는 일반적으로 셰이더가 텍스처에 액세스할 수 있는 형식으로 텍스처를 래핑합니다. 순서가 지정되지 않은 액세스 뷰는 유사한 기능을 제공하지만, 순서와 상관없이 텍스처(또는 다른 리소스)에 대한 읽기 및 쓰기를 허용합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="sampler.md">Sampler</a></p></td>
+<td align="left"><p><a href="sampler.md">샘플러</a></p></td>
 <td align="left"><p>샘플링은 텍스처 또는 기타 리소스로부터 입력 값을 읽는 프로세스입니다. &quot;샘플러&quot;는 리소스로부터 읽는 객체입니다.</p></td>
 </tr>
 <tr class="odd">

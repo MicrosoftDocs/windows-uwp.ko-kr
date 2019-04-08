@@ -78,7 +78,7 @@ Windows 10 버전 1809부터 사용할 수는 **X:bind** 태그 확장 어디서
 ## <a name="related-topics"></a>관련 항목
 
 * [빠른 시작: 컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
-* [깊이에서 데이터 바인딩](https://msdn.microsoft.com/library/windows/apps/mt210946)
+* [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)
 * [XAML 개요](xaml-overview.md)
 * [종속성 속성 개요](dependency-properties-overview.md)

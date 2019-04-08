@@ -19,16 +19,16 @@ ms.locfileid: "57633098"
 
 BC6H 형식은 원본 데이터의 HDR(High Dynamic Range) 색 공간을 지원하도록 설계된 텍스처 압축 형식입니다.
 
-## <a name="span-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanabout-bc6hdxgiformatbc6h"></a><span id="About-BC6H-DXGI-FORMAT-BC6H"></span><span id="about-bc6h-dxgi-format-bc6h"></span><span id="ABOUT-BC6H-DXGI-FORMAT-BC6H"></span>About BC6H/DXGI\_FORMAT\_BC6H
+## <a name="span-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanabout-bc6hdxgiformatbc6h"></a><span id="About-BC6H-DXGI-FORMAT-BC6H"></span><span id="about-bc6h-dxgi-format-bc6h"></span><span id="ABOUT-BC6H-DXGI-FORMAT-BC6H"></span>BC6H/DXGI에 대 한\_형식\_BC6H
 
 
 BC6H 형식은 값의 각 색 채널에 대한 16비트 값(16:16:16)과 함께 3개의 HDR 색 채널을 사용하는 이미지에 대한 고품질 압축을 제공합니다. 알파 채널은 지원되지 않습니다.
 
 다음 DXGI BC6H 된\_열거형 값의 서식 지정 합니다.
 
--   **DXGI\_FORMAT\_BC6H\_TYPELESS**.
--   **DXGI\_FORMAT\_BC6H\_UF16**. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용하지 않습니다.
--   **DXGI\_FORMAT\_BC6H\_SF16**. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용합니다.
+-   **DXGI\_형식\_BC6H\_TYPELESS**합니다.
+-   **DXGI\_형식\_BC6H\_UF16**합니다. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용하지 않습니다.
+-   **DXGI\_형식\_BC6H\_SF16**합니다. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용합니다.
 
 **참고**    "중간" 부동 소수점 형식으로 16 비트 부동 소수점 형식 색 채널에 대 한 하 라고 합니다. 이 형식의 비트 레이아웃은 다음과 같습니다.
 |                       |                                                 |
@@ -143,18 +143,18 @@ BC6H의 경우 모드에 관계없이 알파 채널이 항상 1.0을 반환합�
 |-------|-------------------|
 | m     | mode              |
 | d     | 셰이프 인덱스       |
-| rw    | endpt\[0\].A\[0\] |
-| rx    | endpt\[0\].B\[0\] |
-| ry    | endpt\[1\].A\[0\] |
-| rz    | endpt\[1\].B\[0\] |
-| gw    | endpt\[0\].A\[1\] |
-| gx    | endpt\[0\].B\[1\] |
-| gy    | endpt\[1\].A\[1\] |
-| gz    | endpt\[1\].B\[1\] |
-| bw    | endpt\[0\].A\[2\] |
-| bx    | endpt\[0\].B\[2\] |
-| 수단    | endpt\[1\].A\[2\] |
-| bz    | endpt\[1\].B\[2\] |
+| rw    | endpt\[0\]합니다. \[0\] |
+| rx    | endpt\[0\]합니다. B\[0\] |
+| ry    | endpt\[1\]합니다. \[0\] |
+| rz    | endpt\[1\]합니다. B\[0\] |
+| gw    | endpt\[0\]합니다. \[1\] |
+| gx    | endpt\[0\]합니다. B\[1\] |
+| gy    | endpt\[1\]합니다. \[1\] |
+| gz    | endpt\[1\]합니다. B\[1\] |
+| bw    | endpt\[0\]합니다. \[2\] |
+| bx    | endpt\[0\]합니다. B\[2\] |
+| 수단    | endpt\[1\]합니다. \[2\] |
+| bz    | endpt\[1\]합니다. B\[2\] |
 
  
 

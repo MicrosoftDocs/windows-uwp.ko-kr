@@ -30,24 +30,24 @@ ms.locfileid: "57634978"
 | 광고 | |
 | **Microsoft.Advertising.Mobile.UI.AdControl** 클래스 | [AdControl](https://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx) 클래스 |
 | 알람, 미리 알림 및 백그라운드 에이전트 | |
-| **Microsoft.Phone.BackgroundAgent** 클래스 | [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) class |
-| **Microsoft.Phone.Scheduler** 네임스페이스 | [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847) namespace |
+| **Microsoft.Phone.BackgroundAgent** 클래스 | [**BackgroundTaskBuilder** ](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스 |
+| **Microsoft.Phone.Scheduler** 네임스페이스 | [**Windows.ApplicationModel.Background** ](https://msdn.microsoft.com/library/windows/apps/br224847) 네임 스페이스 |
 | **Microsoft.Phone.Scheduler.Alarm** 클래스 | [**BackgroundTaskBuilder** ](https://msdn.microsoft.com/library/windows/apps/br224768) 하 고 [ **ToastNotificationManager** ](https://msdn.microsoft.com/library/windows/apps/br208642) 클래스 |
-| **Microsoft.Phone.Scheduler.PeriodicTask**, **ScheduledAction**, **ScheduledActionService**, **ScheduledTask**, **ScheduledTaskAgent** 클래스 | [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) class |
+| **Microsoft.Phone.Scheduler.PeriodicTask**, **ScheduledAction**, **ScheduledActionService**, **ScheduledTask**, **ScheduledTaskAgent** 클래스 | [**BackgroundTaskBuilder** ](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스 |
 | **Microsoft.Phone.Scheduler.Reminder** 클래스 | [**BackgroundTaskBuilder** ](https://msdn.microsoft.com/library/windows/apps/br224768) 하 고 [ **ToastNotificationManager** ](https://msdn.microsoft.com/library/windows/apps/br208642) 클래스 |
 | **Microsoft.Phone.PictureDecoder** 클래스 | [**Bitmapdecoder에서** ](https://msdn.microsoft.com/library/windows/apps/br226176) 클래스 |
-| **Microsoft.Phone.BackgroundAudio** 네임스페이스 | [**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) namespace |
-| **Microsoft.Phone.BackgroundTransfer** 네임스페이스 | [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) namespace |
+| **Microsoft.Phone.BackgroundAudio** 네임스페이스 | [**Windows.Media.Playback** ](https://msdn.microsoft.com/library/windows/apps/dn640562) 네임 스페이스 |
+| **Microsoft.Phone.BackgroundTransfer** 네임스페이스 | [**Windows.Networking.BackgroundTransfer** ](https://msdn.microsoft.com/library/windows/apps/br207242) 네임 스페이스 |
 | 앱 모델 및 환경 | |
 | **System.AppDomain** 클래스 | 직접적으로 해당하는 항목이 없습니다. [  **Application**](https://msdn.microsoft.com/library/windows/apps/br242324), [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016) 클래스를 참조하세요. |
 | **System.Environment** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | **System.ComponentModel.Annotations** 클래스  | 직접적으로 해당하는 항목이 없습니다. |
-| **System.ComponentModel.BackgroundWorker** 클래스 | [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229621) class |
+| **System.ComponentModel.BackgroundWorker** 클래스 | [**ThreadPool** ](https://msdn.microsoft.com/library/windows/apps/br229621) 클래스 |
 | **System.ComponentModel.DesignerProperties** 클래스 | [**서** ](https://msdn.microsoft.com/library/windows/apps/br224664) 클래스 |
-| **System.Threading.Thread**, **System.Threading.ThreadPool** 클래스 | [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229621) class |
+| **System.Threading.Thread**, **System.Threading.ThreadPool** 클래스 | [**ThreadPool** ](https://msdn.microsoft.com/library/windows/apps/br229621) 클래스 |
 | (ST = **System.Threading**) <br/> **ST.Thread.MemoryBarrier** 메서드 | (ST = **System.Threading**) <br/> **ST.Interlocked.MemoryBarrier** 메서드 |
 | (ST = **System.Threading**) <br/> **ST.Thread.ManagedThreadId** 속성 | (S = **System**) <br/> **S.Environment.ManagedThreadId** 속성 |
-| **System.Threading.Timer** 클래스 | [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/br230587) class |
+| **System.Threading.Timer** 클래스 | [**ThreadPoolTimer** ](https://msdn.microsoft.com/library/windows/apps/br230587) 클래스 |
 | (SWT = **System.Windows.Threading**) <br/> **SWT.Dispatcher** 클래스 | [**CoreDispatcher** ](https://msdn.microsoft.com/library/windows/apps/br208211) 클래스 |
 | (SWT = **System.Windows.Threading**) <br/> **SWT.DispatcherTimer** 클래스 | [**DispatcherTimer** ](https://msdn.microsoft.com/library/windows/apps/br244250) 클래스 |
 | Visual Studio용 Blend | |
@@ -60,23 +60,23 @@ ms.locfileid: "57634978"
 | **Microsoft.Expression.Shapes** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
 | (MI = **Microsoft.Internal**) <br/> **MI.IManagedFrameworkInternalHelper** 인터페이스 | 직접적으로 해당하는 항목이 없습니다. |
 | 연락처 및 일정 데이터 | |
-| **Microsoft.Phone.UserData** 네임스페이스 | [**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/br225002), [**Windows.ApplicationModel.Appointments**](https://msdn.microsoft.com/library/windows/apps/dn263359) namespaces |
+| **Microsoft.Phone.UserData** 네임스페이스 | [**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/br225002)하십시오 [ **Windows.ApplicationModel.Appointments** ](https://msdn.microsoft.com/library/windows/apps/dn263359) 네임 스페이스 |
 | (MPU = **Microsoft.Phone.UserData**) <br/> **MPU.Account**, **ContactAddress**, **ContactCompanyInformation**, **ContactEmailAddress**, **ContactPhoneNumber** 클래스 | [**연락처** ](https://msdn.microsoft.com/library/windows/apps/br224849) 클래스 |
 | (MPU = **Microsoft.Phone.UserData**) <br/> **MPU.Appointments** 클래스 | [**AppointmentCalendar** ](https://msdn.microsoft.com/library/windows/apps/dn596134) 클래스 |
 | (MPU = **Microsoft.Phone.UserData**) <br/> **MPU.Contacts** 클래스 | [**ContactStore** ](https://msdn.microsoft.com/library/windows/apps/dn624859) 클래스 |
 | 컨트롤 및 UI 인프라 | |
 | **ControlTiltEffect.TiltEffect** 클래스 | Windows 런타임 애니메이션 라이브러리의 애니메이션은 공용 컨트롤의 기본 스타일로 기본 제공됩니다. [애니메이션](wpsl-to-uwp-porting-xaml-and-ui.md)을 참조하세요. |
-| **Microsoft.Phone.Controls** 네임스페이스 | [**Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227716) namespace |
+| **Microsoft.Phone.Controls** 네임스페이스 | [**Windows.UI.Xaml.Controls** ](https://msdn.microsoft.com/library/windows/apps/br227716) 네임 스페이스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/> **MPC.ContextMenu** 클래스 | [**팝업 메뉴** ](https://msdn.microsoft.com/library/windows/apps/br208693) 클래스 |
-| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.DatePickerPage** 클래스 | [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) class |
-| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.GestureListener** 클래스 | [**GestureRecognizer**](https://msdn.microsoft.com/library/windows/apps/br241937) class |
+| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.DatePickerPage** 클래스 | [**DatePickerFlyout** ](https://msdn.microsoft.com/library/windows/apps/dn625013) 클래스 |
+| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.GestureListener** 클래스 | [**GestureRecognizer** ](https://msdn.microsoft.com/library/windows/apps/br241937) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.LongListSelector** 클래스 | [**SemanticZoom** ](https://msdn.microsoft.com/library/windows/apps/hh702601) 클래스 |
-| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.ObscuredEventArgs** 클래스 | [**SystemProtection**](https://msdn.microsoft.com/library/windows/apps/jj585394), [**WindowActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208377) classes |
+| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.ObscuredEventArgs** 클래스 | [**SystemProtection**](https://msdn.microsoft.com/library/windows/apps/jj585394)하십시오 [ **WindowActivatedEventArgs** ](https://msdn.microsoft.com/library/windows/apps/br208377) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.Panorama** 클래스 | [**허브** ](https://msdn.microsoft.com/library/windows/apps/dn251843) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.PhoneApplicationFrame**,<br/>(SWN = **System.Windows.Navigation**) <br/>**SWN.NavigationService** 클래스 | [**프레임** ](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.PhoneApplicationPage** 클래스 | [**페이지** ](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.TiltEffect** 클래스 | [**PointerDownThemeAnimation** ](https://msdn.microsoft.com/library/windows/apps/hh969164) 클래스 |
-| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.TimePickerPage** 클래스 | [**TimePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn608313) class |
+| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.TimePickerPage** 클래스 | [**TimePickerFlyout** ](https://msdn.microsoft.com/library/windows/apps/dn608313) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.WebBrowser** 클래스 | [**WebView** ](https://msdn.microsoft.com/library/windows/apps/br227702) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.WebBrowserExtensions** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.WrapPanel** 클래스 | 일반 레이아웃용으로 직접 해당하는 항목이 없습니다. [**ItemsWrapGrid** ](https://msdn.microsoft.com/library/windows/apps/dn298849) 하 고 [ **WrapGrid** ](https://msdn.microsoft.com/library/windows/apps/br227717) 항목 컨트롤의 항목 패널 템플릿에서 사용할 수 있습니다. |
@@ -86,20 +86,20 @@ ms.locfileid: "57634978"
 | (MPI = **Microsoft.Phone.Info**) <br/>**MPI.DeviceExtendedProperties**, **DeviceStatus** 클래스 | [**EasClientDeviceInformation**](https://msdn.microsoft.com/library/windows/apps/hh701390)하십시오 [ **MemoryManager** ](https://msdn.microsoft.com/library/windows/apps/dn633831) 클래스입니다. 자세한 내용은 [디바이스 상태](wpsl-to-uwp-input-and-sensors.md)를 참조하세요. |
 | (MPI = **Microsoft.Phone.Info**) <br/>**MPI.MediaCapabilities** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | (MPI = **Microsoft.Phone.Info**) <br/>**MPI.UserExtendedProperties** 클래스 | [**AdvertisingManager** ](https://msdn.microsoft.com/library/windows/apps/dn363391) 클래스 |
-| **System.Windows** 네임스페이스 | [**Windows.UI.Xaml**](https://msdn.microsoft.com/library/windows/apps/br209045) namespace |
-| **System.Windows.Automation** 네임스페이스 | [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/br209179) namespace |
-| **System.Windows.Controls**, **System.Windows.Input** 네임스페이스 | [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227716) namespaces |
-| **System.Windows.Controls.DrawingSurface**, **DrawingSurfaceBackgroundGrid** 클래스 | [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) class |
-| **System.Windows.Controls.RichTextBox** 클래스 | [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548) class |
+| **System.Windows** 네임스페이스 | [**Windows.UI.Xaml** ](https://msdn.microsoft.com/library/windows/apps/br209045) 네임 스페이스 |
+| **System.Windows.Automation** 네임스페이스 | [**Windows.UI.Xaml.Automation** ](https://msdn.microsoft.com/library/windows/apps/br209179) 네임 스페이스 |
+| **System.Windows.Controls**, **System.Windows.Input** 네임스페이스 | [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)하십시오 [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)하십시오 [ **Windows.UI.Xaml.Controls** ](https://msdn.microsoft.com/library/windows/apps/br227716) 네임 스페이스 |
+| **System.Windows.Controls.DrawingSurface**, **DrawingSurfaceBackgroundGrid** 클래스 | [**SwapChainPanel** ](https://msdn.microsoft.com/library/windows/apps/dn252834) 클래스 |
+| **System.Windows.Controls.RichTextBox** 클래스 | [**RichEditBox** ](https://msdn.microsoft.com/library/windows/apps/br227548) 클래스 |
 | **System.Windows.Controls.WrapPanel** 클래스 | 일반 레이아웃용으로 직접 해당하는 항목이 없습니다. [**ItemsWrapGrid** ](https://msdn.microsoft.com/library/windows/apps/dn298849) 하 고 [ **WrapGrid** ](https://msdn.microsoft.com/library/windows/apps/br227717) 항목 컨트롤의 항목 패널 템플릿에서 사용할 수 있습니다. |
-| **System.Windows.Controls.Primitives** 네임스페이스 | [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818) namespace |
-| **System.Windows.Controls.Shapes** 네임스페이스 | [**Windows.UI.Xaml.Controls.Shapes**](/uwp/api/Windows.UI.Xaml.Shapes) namespace |
-| **System.Windows.Data** 네임스페이스 | [**Windows.UI.Xaml.Data**](https://msdn.microsoft.com/library/windows/apps/br209917) namespace |
-| **System.Windows.Documents** 네임스페이스 | [**Windows.UI.Xaml.Documents**](https://msdn.microsoft.com/library/windows/apps/br209984) namespace |
+| **System.Windows.Controls.Primitives** 네임스페이스 | [**Windows.UI.Xaml.Controls.Primitives** ](https://msdn.microsoft.com/library/windows/apps/br209818) 네임 스페이스 |
+| **System.Windows.Controls.Shapes** 네임스페이스 | [**Windows.UI.Xaml.Controls.Shapes** ](/uwp/api/Windows.UI.Xaml.Shapes) 네임 스페이스 |
+| **System.Windows.Data** 네임스페이스 | [**Windows.UI.Xaml.Data** ](https://msdn.microsoft.com/library/windows/apps/br209917) 네임 스페이스 |
+| **System.Windows.Documents** 네임스페이스 | [**Windows.UI.Xaml.Documents** ](https://msdn.microsoft.com/library/windows/apps/br209984) 네임 스페이스 |
 | **System.Windows.Ink** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
-| **System.Windows.Markup** 네임스페이스 | [**Windows.UI.Xaml.Markup**](https://msdn.microsoft.com/library/windows/apps/br228046) namespace | 
-| **System.Windows.Navigation** 네임스페이스 | [**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300) namespace |
-| **System.Windows.UIElement.Tap** 이벤트, **EventHandler&lt;GestureEventArgs&gt;** 대리자 | [**Tapped**](https://msdn.microsoft.com/library/windows/apps/br208985) event, [**TappedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227993) delegate |
+| **System.Windows.Markup** 네임스페이스 | [**Windows.UI.Xaml.Markup** ](https://msdn.microsoft.com/library/windows/apps/br228046) 네임 스페이스 | 
+| **System.Windows.Navigation** 네임스페이스 | [**Windows.UI.Xaml.Navigation** ](https://msdn.microsoft.com/library/windows/apps/br243300) 네임 스페이스 |
+| **System.Windows.UIElement.Tap** 이벤트, **EventHandler&lt;GestureEventArgs&gt;** 대리자 | [**탭** ](https://msdn.microsoft.com/library/windows/apps/br208985) 이벤트 [ **TappedEventHandler** ](https://msdn.microsoft.com/library/windows/apps/br227993) 위임 |
 | 데이터 및 서비스 |  |
 | **System.Data.Linq.DataContext** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | **System.Data.Linq.Mapping.ColumnAttribute** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
@@ -117,30 +117,30 @@ ms.locfileid: "57634978"
 | **Microsoft.Devices.Sensors.Gyroscope** 클래스 | [**회전 계** ](https://msdn.microsoft.com/library/windows/apps/br225718) 클래스 |
 | **Microsoft.Devices.Sensors.Motion** 클래스 | [**경사 계** ](https://msdn.microsoft.com/library/windows/apps/br225766) 클래스 |
 | 세계화 | |
-| **System.Globalization** 네임스페이스 | [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) namespace |
+| **System.Globalization** 네임스페이스 | [**Windows.Globalization** ](https://msdn.microsoft.com/library/windows/apps/br206813) 네임 스페이스 |
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentCulture** 속성 | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentCulture** 속성 |
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentUICulture** 속성 | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentUICulture** 속성 |
 | 그래픽 및 애니메이션 | |
 | **Microsoft.Xna.Framework 합니다. \***  네임 스페이스 [XNA Framework 클래스 라이브러리](https://go.microsoft.com/fwlink/p/?LinkId=263769), [콘텐츠 파이프라인 클래스 라이브러리](https://go.microsoft.com/fwlink/p/?LinkId=263770) | 직접적으로 해당하는 항목이 없습니다. 일반적으로 C++로 작성한 [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)를 사용합니다. [게임 개발](https://msdn.microsoft.com/library/windows/apps/hh452744) 및 [DirectX 및 XAML interop](https://msdn.microsoft.com/library/windows/apps/hh825871)을 참조하세요. |
 | **Microsoft.Xna.Framework.Audio.Microphone** 클래스 | [**MediaCapture** ](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스 |
 | **Microsoft.Xna.Framework.Audio.SoundEffect** 클래스 | [**MediaElement** ](https://msdn.microsoft.com/library/windows/apps/br242926) 클래스 |
-| **Microsoft.Xna.Framework.GamerServices** 네임스페이스 | (WPS = **Windows.Phone.System**) <br/> [**WPS.UserProfile.GameServices.Core**](https://msdn.microsoft.com/library/windows/apps/jj207609) namespace |
+| **Microsoft.Xna.Framework.GamerServices** 네임스페이스 | (WPS = **Windows.Phone.System**) <br/> [**WPS 합니다. UserProfile.GameServices.Core** ](https://msdn.microsoft.com/library/windows/apps/jj207609) 네임 스페이스 |
 | **Microsoft.Xna.Framework.GamerServices.Guide** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | **Microsoft.Xna.Framework.Input.GamePad** 클래스 | [**HardwareButtons** ](https://msdn.microsoft.com/library/windows/apps/jj207557) 클래스 |
-| **Microsoft.Xna.Framework.Input.Touch.TouchPanel** 클래스 | [**GestureRecognizer**](https://msdn.microsoft.com/library/windows/apps/br241937) class |
+| **Microsoft.Xna.Framework.Input.Touch.TouchPanel** 클래스 | [**GestureRecognizer** ](https://msdn.microsoft.com/library/windows/apps/br241937) 클래스 |
 | (MXFM = **Microsoft.Xna.Framework.Media**) <br/> **MXFM.MediaLibrary**, **MXFM.PhoneExtensions.MediaLibraryExtensions** 클래스 | [**KnownFolders** ](https://msdn.microsoft.com/library/windows/apps/br227151) 클래스 |
-| **Microsoft.Xna.Framework.Media.MediaQueue** 클래스 | [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) class |
-| **Microsoft.Xna.Framework.Media.Playlist** 클래스 | [**BackgroundMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652527) class |
-| **System.Windows.Media** 네임스페이스 | [**Windows.UI.Xaml.Media**](/uwp/api/Windows.UI.Xaml.Media) namespace |
+| **Microsoft.Xna.Framework.Media.MediaQueue** 클래스 | [**SystemMediaTransportControls** ](https://msdn.microsoft.com/library/windows/apps/dn278677) 클래스 |
+| **Microsoft.Xna.Framework.Media.Playlist** 클래스 | [**BackgroundMediaPlayer** ](https://msdn.microsoft.com/library/windows/apps/dn652527) 클래스 |
+| **System.Windows.Media** 네임스페이스 | [**Windows.UI.Xaml.Media** ](/uwp/api/Windows.UI.Xaml.Media) 네임 스페이스 |
 | **System.Windows.Media.RadialGradientBrush** 클래스 | 직접적으로 해당하는 항목이 없습니다. [미디어 및 그래픽](wpsl-to-uwp-porting-xaml-and-ui.md)을 참조하세요. |
-| **System.Windows.Media.Animation** 네임스페이스 | [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/br243232) namespace |
+| **System.Windows.Media.Animation** 네임스페이스 | [**Windows.UI.Xaml.Media.Animation** ](https://msdn.microsoft.com/library/windows/apps/br243232) 네임 스페이스 |
 | **System.Windows.Media.Effects** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
-| **System.Windows.Media.Imaging** 네임스페이스 | [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) namespace |
-| **System.Windows.Media.Media3D** 네임스페이스 | [**Windows.UI.Xaml.Media.Media3D**](https://msdn.microsoft.com/library/windows/apps/br243274) namespace |
-| **System.Windows.Shapes** 네임스페이스 | [**Windows.UI.Xaml.Shapes**](/uwp/api/Windows.UI.Xaml.Shapes) namespace |
+| **System.Windows.Media.Imaging** 네임스페이스 | [**Windows.UI.Xaml.Media.Imaging** ](https://msdn.microsoft.com/library/windows/apps/br243258) 네임 스페이스 |
+| **System.Windows.Media.Media3D** 네임스페이스 | [**Windows.UI.Xaml.Media.Media3D** ](https://msdn.microsoft.com/library/windows/apps/br243274) 네임 스페이스 |
+| **System.Windows.Shapes** 네임스페이스 | [**Windows.UI.Xaml.Shapes** ](/uwp/api/Windows.UI.Xaml.Shapes) 네임 스페이스 |
 | 시작 관리자 및 선택자 | |
 | **Microsoft.Phone.Tasks.AddressChooserTask**, **EmailAddressChooserTask**, **PhoneNumberChooserTask** 클래스 | [**ContactPicker** ](https://msdn.microsoft.com/library/windows/apps/br224913) 클래스 |
-| **Microsoft.Phone.Tasks.AddWalletItemTask**, **AddWalletItemResult** 클래스 | [**Windows.ApplicationModel.Wallet**](https://msdn.microsoft.com/library/windows/apps/dn631399) namespace |
+| **Microsoft.Phone.Tasks.AddWalletItemTask**, **AddWalletItemResult** 클래스 | [**Windows.ApplicationModel.Wallet** ](https://msdn.microsoft.com/library/windows/apps/dn631399) 네임 스페이스 |
 | **Microsoft.Phone.Tasks.BingMapsDirectionsTask**, **BingMapsTask** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | **Microsoft.Phone.Tasks.CameraCaptureTask** 클래스 | [**MediaCapture** ](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스입니다. 또한 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 클래스(Windows 전용). |
 | **Microsoft.Phone.Tasks.MarketplaceDetailTask** | [**CurrentApp** ](https://msdn.microsoft.com/library/windows/apps/hh779765) 클래스 ([**RequestAppPurchaseAsync** ](https://msdn.microsoft.com/library/windows/apps/hh967813) 메서드) |
@@ -155,19 +155,19 @@ ms.locfileid: "57634978"
 | **Microsoft.Phone.Tasks.SaveRingtoneTask** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | **Microsoft.Phone.Tasks.ShareLinkTask**, **ShareMediaTask**, **ShareStatusTask** 클래스 | [**DataPackage** ](https://msdn.microsoft.com/library/windows/apps/br205873) 클래스 |
 | 위치 | |
-| **System.Device.Location** 네임스페이스 | [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603) namespace |
+| **System.Device.Location** 네임스페이스 | [**Windows.Devices.Geolocation** ](https://msdn.microsoft.com/library/windows/apps/br225603) 네임 스페이스 |
 | **System.Device.GeoCoordinateWatcher** 클래스 | [**Geolocator** ](https://msdn.microsoft.com/library/windows/apps/br225534) 클래스 |
 | 지도 | |
-| **Microsoft.Phone.Maps** 네임스페이스 | [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) namespace |
-| **Microsoft.Phone.Maps.Controls** 네임스페이스 | [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751) namespace |
+| **Microsoft.Phone.Maps** 네임스페이스 | [**Windows.Services.Maps** ](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임 스페이스 |
+| **Microsoft.Phone.Maps.Controls** 네임스페이스 | [**Windows.UI.Xaml.Controls.Maps** ](https://msdn.microsoft.com/library/windows/apps/dn610751) 네임 스페이스 |
 | **Microsoft.Phone.Maps.Controls.Map** 클래스 | [**MapControl** ](https://msdn.microsoft.com/library/windows/apps/dn637004) 클래스 |
-| **Microsoft.Phone.Maps.Services** 네임스페이스 | [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) namespace |
+| **Microsoft.Phone.Maps.Services** 네임스페이스 | [**Windows.Services.Maps** ](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임 스페이스 |
 | **Microsoft.Phone.Maps.Services.GeocodeQuery**, **ReverseGeocodeQuery** 클래스 | [**MapLocationFinder** ](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스 |
 | **System.Device.Location.GeoCoordinate** 클래스 | [**Geopoint** ](https://msdn.microsoft.com/library/windows/apps/dn263675) 클래스 |
-| **Microsoft.Phone.Maps.Services.Route** 클래스 | [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) class |
+| **Microsoft.Phone.Maps.Services.Route** 클래스 | [**MapRoute** ](https://msdn.microsoft.com/library/windows/apps/dn636937) 클래스 |
 | **Microsoft.Phone.Maps.Services.RouteQuery** 클래스 | [**MapRouteFinder** ](https://msdn.microsoft.com/library/windows/apps/dn636938) 클래스 |
 | 수익 창출 | |
-| **Microsoft.Phone.Marketplace** 네임스페이스 | [**Windows.ApplicationModel.Store**](https://msdn.microsoft.com/library/windows/apps/br225197) namespace |
+| **Microsoft.Phone.Marketplace** 네임스페이스 | [**Windows.ApplicationModel.Store** ](https://msdn.microsoft.com/library/windows/apps/br225197) 네임 스페이스 |
 | 미디어 | |
 | **Microsoft.Phone.Media** 네임스페이스 | [**MediaElement** ](https://msdn.microsoft.com/library/windows/apps/br242926) 클래스 |
 | 네트워킹 | |
@@ -188,7 +188,7 @@ ms.locfileid: "57634978"
 | **System.Net.OpenReadCompletedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [**HttpClient** ](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx)) |
 | **System.Net.Sockets.Socket** 클래스 | 여전히 지원되지만, Close() 대신 Dispose()를 사용합니다. 또는 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스로 포팅합니다. |
 | **System.Net.Sockets.SocketException** 클래스 | 여전히 지원되지만, ErrorCode 대신 SocketErrorCode 속성을 사용합니다. |
-| **System.Net.Sockets.UdpAnySourceMulticastClient**, **UdpSingleSourceMulticastClient** 클래스 | [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319) class |
+| **System.Net.Sockets.UdpAnySourceMulticastClient**, **UdpSingleSourceMulticastClient** 클래스 | [**DatagramSocket** ](https://msdn.microsoft.com/library/windows/apps/br241319) 클래스 |
 | **System.Net.UploadProgressChangedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [**HttpClient** ](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx)) |
 | **System.Net.WebClient** 클래스 | [**HttpClient** ](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx)) |
 | **System.Net.WebRequest** 클래스 | 부분적으로 지원되지만(다른 속성 집합), 권장되는 미래 지향적인 대안은 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)입니다. 이러한 API는 [System.Net.Http.HttpRequestMessage](https://msdn.microsoft.com/library/system.net.http.httprequestmessage.aspx)를 사용하여 HTTP 요청을 나타냅니다. |
@@ -201,9 +201,9 @@ ms.locfileid: "57634978"
 | MPN = **Microsoft.Phone.Notification** <br/> **MPN.HttpNotification** 클래스 | [**TileNotification** ](https://msdn.microsoft.com/library/windows/apps/br208616) 클래스 |
 | MPN = **Microsoft.Phone.Notification** <br/> **MPN.HttpNotificationChannel** 클래스 | [**PushNotificationChannel** ](https://msdn.microsoft.com/library/windows/apps/br241283) 클래스 |
 | 프로그래밍 | |
-| **System** 네임스페이스 | [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021) namespace |
+| **System** 네임스페이스 | [**Windows.Foundation** ](https://msdn.microsoft.com/library/windows/apps/br226021) 네임 스페이스 |
 | **System.Diagnostics.StackFrame**, **StackTrace** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
-| **System.Diagnostics** 네임스페이스 | [**Windows.Foundation.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/br206677) namespace |
+| **System.Diagnostics** 네임스페이스 | [**Windows.Foundation.Diagnostics** ](https://msdn.microsoft.com/library/windows/apps/br206677) 네임 스페이스 |
 | **System.ICloneable** 인터페이스 | 적절한 형식을 반환하는 사용자 지정 메서드입니다. |
 | **System.Reflection.Emit.ILGenerator** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | 반응적 확장 | |
@@ -220,28 +220,28 @@ ms.locfileid: "57634978"
 | (SSC = **System.Security.Cryptography**) <br/> **SSC.HMACSHA256**, **SSC.SHA256** 클래스 | [**HashAlgorithmProvider** ](https://msdn.microsoft.com/library/windows/apps/br241511) 클래스 |
 | (SSC = **System.Security.Cryptography**) <br/> **SSC.ProtectedData** 클래스 | [**DataProtectionProvider** ](https://msdn.microsoft.com/library/windows/apps/br241559) 클래스 |
 | (SSC = **System.Security.Cryptography**) <br/> **SSC.RandomNumberGenerator** 클래스 | [**CryptographicBuffer** ](https://msdn.microsoft.com/library/windows/apps/br227092) 클래스 |
-| (SSC = **System.Security.Cryptography**) <br/> **SSC.X509Certificates.X509Certificate** 클래스 | [**CertificateEnrollmentManager**](https://msdn.microsoft.com/library/windows/apps/br212075) class |
+| (SSC = **System.Security.Cryptography**) <br/> **SSC.X509Certificates.X509Certificate** 클래스 | [**CertificateEnrollmentManager** ](https://msdn.microsoft.com/library/windows/apps/br212075) 클래스 |
 | 셸 | |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.ApplicationBar** 클래스 | [**CommandBar** ](https://msdn.microsoft.com/library/windows/apps/dn279427) 클래스 |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.ApplicationBarIconButton** 클래스 | [**AppBarButton** ](https://msdn.microsoft.com/library/windows/apps/dn279244) 클래스 (내에서 사용 하는 경우를 [ **PrimaryCommands** ](https://msdn.microsoft.com/library/windows/apps/dn279430) 속성) |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.ApplicationBarMenuItem** 클래스 | [**AppBarButton** ](https://msdn.microsoft.com/library/windows/apps/dn279244) 클래스 (내에서 사용 하는 경우를 [ **SecondaryCommands** ](https://msdn.microsoft.com/library/windows/apps/dn279434) 속성) |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.CycleTileData**, **MPSh.FlipTileData**, **MPSh.IconicTileData**, **MPSh.ShellTileData**, **MPSh.StandardTileData** 클래스 | [**TileTemplateType** ](https://msdn.microsoft.com/library/windows/apps/br208621) 클래스 |
-| (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.PhoneApplicationService** 클래스 | [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016), [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816) classes |
-| (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.ProgressIndicator** 클래스 | [**StatusBarProgressIndicator**](https://msdn.microsoft.com/library/windows/apps/dn633865) class |
+| (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.PhoneApplicationService** 클래스 | [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016)하십시오 [ **DisplayRequest** ](https://msdn.microsoft.com/library/windows/apps/br241816) 클래스 |
+| (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.ProgressIndicator** 클래스 | [**StatusBarProgressIndicator** ](https://msdn.microsoft.com/library/windows/apps/dn633865) 클래스 |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.ShellTile** 클래스 | [**SecondaryTile** ](https://msdn.microsoft.com/library/windows/apps/br242183) 클래스 |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.ShellTileSchedule** 클래스 | [**TileUpdater** ](https://msdn.microsoft.com/library/windows/apps/br208628) 클래스 |
-| (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.ShellToast** 클래스 | [**ToastNotificationManager**](https://msdn.microsoft.com/library/windows/apps/br208642) class |
+| (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.ShellToast** 클래스 | [**ToastNotificationManager** ](https://msdn.microsoft.com/library/windows/apps/br208642) 클래스 |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> **MPSh.SystemTray** 클래스 | [**StatusBar** ](https://msdn.microsoft.com/library/windows/apps/dn633864) 클래스 |
 | 저장소 및 I/O | |
 | **Microsoft.Phone.Storage.ExternalStorage**, **ExternalStorageDevice**, **ExternalStorageFile**, **ExternalStorageFolder** 클래스 | [**KnownFolders** ](https://msdn.microsoft.com/library/windows/apps/br227151) 클래스 |
-| **System.IO** 네임스페이스 | [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346), [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/br241791) namespaces |
+| **System.IO** 네임스페이스 | [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346)하십시오 [ **Windows.Storage.Streams** ](https://msdn.microsoft.com/library/windows/apps/br241791) 네임 스페이스 |
 | **System.IO.Directory** 클래스 | [**StorageFolder** ](https://msdn.microsoft.com/library/windows/apps/br227230) 클래스 |
 | **System.IO.File** 클래스 | [**StorageFile** ](https://msdn.microsoft.com/library/windows/apps/br227171) 하 고 [ **PathIO** ](https://msdn.microsoft.com/library/windows/apps/hh701663) 클래스
-| (SII = **System.IO.IsolatedStorage**) <br/> **SII.IsolatedStorageFile** 클래스 |[**ApplicationData.LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621) property |
-| (SII = **System.IO.IsolatedStorage**) <br/> **SII.IsolatedStorageSettings** 클래스 | [**ApplicationData.LocalSettings**](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.localsettings.aspx) property |
+| (SII = **System.IO.IsolatedStorage**) <br/> **SII.IsolatedStorageFile** 클래스 |[**ApplicationData.LocalFolder** ](https://msdn.microsoft.com/library/windows/apps/br241621) 속성 |
+| (SII = **System.IO.IsolatedStorage**) <br/> **SII.IsolatedStorageSettings** 클래스 | [**ApplicationData.LocalSettings** ](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.localsettings.aspx) 속성 |
 | **System.IO.Stream** 클래스 | 아직 지원되긴 하지만 BeginRead()/EndRead() 및 BeginWrite()/EndWrite() 대신 ReadAsync() 및 WriteAsync()를 사용하세요. |
 | 전자지갑 | |
-| **Microsoft.Phone.Wallet** 네임스페이스 | [**Windows.ApplicationModel.Wallet**](https://msdn.microsoft.com/library/windows/apps/dn631399) namespace |
+| **Microsoft.Phone.Wallet** 네임스페이스 | [**Windows.ApplicationModel.Wallet** ](https://msdn.microsoft.com/library/windows/apps/dn631399) 네임 스페이스 |
 | Xml | |
 | (SX = **System.Xml**) | **SX.XmlConvert.ToDateTime** 메서드 |
 | (SX = **System.Xml**) | **SX.XmlConvert.ToDateTimeOffset** 메서드 |

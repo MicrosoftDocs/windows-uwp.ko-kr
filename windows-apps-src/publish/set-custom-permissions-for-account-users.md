@@ -167,7 +167,7 @@ ms.locfileid: "57641038"
     </thead>
     <tbody>
     <tr><td align="left">    <b>획득</b>     </td><td>    제품에 대한 <a href="acquisitions-report.md">구입</a> 및 <a href="add-on-acquisitions-report.md">추가 기능 구입</a> 보고서를 볼 수 있습니다.        </td><td>    해당 없음    </td><td>    해당 없음 (부모 제품에 대 한 설정을 포함 합니다 **추가 기능 구매** 보고서)        </td><td>    해당 없음                         </td></tr>
-    <tr><td align="left">    <b>Usage</b> </td><td>    제품에 대한 <a href="usage-report.md">사용 보고서</a>를 볼 수 있습니다.     </td><td>    해당 없음       </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
+    <tr><td align="left">    <b>사용 현황</b> </td><td>    제품에 대한 <a href="usage-report.md">사용 보고서</a>를 볼 수 있습니다.     </td><td>    해당 없음       </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
     <tr><td align="left">    <b>상태</b> </td><td>    제품에 대한 <a href="health-report.md">상태 보고서</a>를 볼 수 있습니다.    </td><td>    해당 없음     </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
     <tr><td align="left">    <b>고객 의견</b>    </td><td>    제품에 대한 <a href="reviews-report.md">리뷰</a> 및 <a href="feedback-report.md">피드백</a> 보고서를 볼 수 있습니다.       </td><td>    해당 없음(의견 또는 리뷰에 응답하려면 <b>고객에게 문의</b> 권한을 부여받아야 함)   </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
     <tr><td align="left">    <b>Xbox 분석</b> </td><td>    볼 수는 <a href="xbox-analytics-report.md">Xbox 분석 보고서</a> 제품에 대 한 합니다.    </td><td>    해당 없음   </td><td>    해당 없음       </td><td>    해당 없음          </td></tr>

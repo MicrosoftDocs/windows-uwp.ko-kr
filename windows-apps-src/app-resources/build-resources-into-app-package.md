@@ -97,6 +97,6 @@ Visual Studio가 앱 패키지에 리소스를 빌드하도록 구성하는 데�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Visual Studio 사용 하 여 UWP 앱 패키지](../packaging/packaging-uwp-apps.md)
-* [MakePri.exe 사용 하 여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
-* [앱에서 사용 되는 기본 리소스 지정](specify-default-resources-installed.md)
+* [Visual Studio를 사용하여 UWP 앱 패키징](../packaging/packaging-uwp-apps.md)
+* [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
+* [앱에서 사용하는 기본 리소스 지정](specify-default-resources-installed.md)

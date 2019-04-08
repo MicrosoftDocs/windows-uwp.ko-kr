@@ -25,9 +25,9 @@ Microsoft Store에서 앱에 할당 된 고유 id와 관련 된 세부 정보를
 
 패키지 매니페스트에 다음 값을 포함 되어야 합니다. [Microsoft Visual Studio를 사용하여 패키지를 빌드](../packaging/packaging-uwp-apps.md)하고 개발자 계정에 연결된 동일한 Microsoft 계정으로 로그인을 하면 이들 세부 정보가 자동으로 포함됩니다. 패키지를 수동으로 빌드할 경우에는 이들 항목을 반드시 추가해야 합니다.
 
--   **Package/Identity/Name**
--   **Package/Identity/Publisher**
--   **Package/Properties/PublisherDisplayName**
+-   **패키지/Id 이름**
+-   **패키지/Identity/게시자**
+-   **패키지/속성/PublisherDisplayName**
 
 자세한 내용은 [패키지 매니페스트 스키마 참조](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root)에서 [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)를 참조하세요.
 

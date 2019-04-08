@@ -21,7 +21,7 @@ ms.locfileid: "57647728"
 
 위치 변경 애니메이션은 요소를 새 위치로 이동하는 데 사용합니다.
 
-> **중요 한 Api**: [**RepositionThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210421)하십시오 [ **RepositionThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/br210429)
+> **중요 API**: [**RepositionThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210421)하십시오 [ **RepositionThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/br210429)
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 

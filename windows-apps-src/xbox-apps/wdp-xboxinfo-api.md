@@ -7,7 +7,7 @@ keywords: 장치 포털, xbox, uwp, windows 10
 ms.localizationpriority: medium
 ms.openlocfilehash: 85c2c139aa8064e1f0769064b95eeb531086b8c1
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57617498"

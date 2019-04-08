@@ -260,4 +260,4 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
-* [이동할 C + + /cli WinRT C + + /cli CX](move-to-winrt-from-cx.md)
+* [C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md)

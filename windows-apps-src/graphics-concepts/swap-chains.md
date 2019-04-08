@@ -48,7 +48,7 @@ Direct3D는 화면 잘림을 방지하기 위한 두 가지 옵션을 제공합�
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[장치](devices.md)
+[디바이스](devices.md)
 
  
 

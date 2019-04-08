@@ -50,7 +50,7 @@ Direct3D에 의해 지원되는 전체 범위. 스트리밍 리소스는 비 스
 
 타일 풀 메모리의 초기 내용은 정의되지 않습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

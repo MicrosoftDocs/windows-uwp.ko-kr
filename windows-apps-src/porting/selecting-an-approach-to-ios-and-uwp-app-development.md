@@ -68,7 +68,7 @@ Windows 및 iOS는 양상이 매우 다른 거대한 제품으로 보일 수 있
 
     게임 제작 환경입니다.
 
--   [Titanium Studio](https://go.microsoft.com/fwlink/p/?LinkID=320482)
+-   [티타늄 달걀 Studio](https://go.microsoft.com/fwlink/p/?LinkID=320482)
 
     플랫폼 간 제작 환경입니다.
 

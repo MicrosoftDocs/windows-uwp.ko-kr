@@ -183,8 +183,8 @@ ms.locfileid: "57626988"
 ## <a name="related-topics"></a>관련 항목
 
 - [세계화에 대 한 지침](guidelines-and-checklist-for-globalizing-your-app.md)
-- [UI 및 앱 패키지 매니페스트에 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
-- [언어, 배율, 고대비 등 및 다른 한정자에 대 한 리소스를 조정 합니다.](../../app-resources/tailor-resources-lang-scale-contrast.md)
+- [UI 및 앱 패키지 매니페스트의 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
+- [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)
 - [레이아웃 및 글꼴 조정, RTL 지원](adjust-layout-and-fonts--and-support-rtl.md)
 - [한정자 값에 대 한 응답에서 업데이트 이미지 변경 이벤트](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
 

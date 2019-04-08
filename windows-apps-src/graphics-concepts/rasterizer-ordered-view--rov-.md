@@ -24,7 +24,7 @@ ms.locfileid: "57603598"
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[레이아웃](views.md)
+[보기](views.md)
 
  
 

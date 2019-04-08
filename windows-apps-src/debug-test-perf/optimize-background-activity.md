@@ -63,6 +63,6 @@ Windows 10 버전 1607 이상을 실행 중인 데스크톱 및 모바일 디바
 
 ## <a name="related-topics"></a>관련 항목
 
-* [만들고 out-of-process-백그라운드 태스크를 등록 합니다.](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
+* [Out-of-process 백그라운드 작업 만들기 및 등록](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
 * [성능 계획](https://msdn.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
 

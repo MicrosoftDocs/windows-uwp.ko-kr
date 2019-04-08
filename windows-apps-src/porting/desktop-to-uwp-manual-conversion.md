@@ -15,7 +15,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57651178"
 ---
-# <a name="package-a-desktop-application-manually"></a>데스크톱 응용 프로그램을 수동으로 패키지
+# <a name="package-a-desktop-application-manually"></a>수동으로 데스크톱 애플리케이션 패키징
 
 이 항목에서는 Visual Studio 또는 Desktop App Converter (DAC)와 같은 도구를 사용 하지 않고 응용 프로그램을 패키지 하는 방법을 보여 줍니다.
 

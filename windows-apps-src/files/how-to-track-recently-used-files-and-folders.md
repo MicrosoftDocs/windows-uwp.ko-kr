@@ -37,7 +37,7 @@ ms.locfileid: "57601628"
 
     [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
--   [선택기를 사용 하 여 파일 및 폴더를 열으십시오](quickstart-using-file-and-folder-pickers.md)
+-   [선택기를 사용하여 파일 및 폴더 열기](quickstart-using-file-and-folder-pickers.md)
 
     선택한 파일은 종종 사용자가 반복해서 열어 보는 파일과 동일한 파일입니다.
 

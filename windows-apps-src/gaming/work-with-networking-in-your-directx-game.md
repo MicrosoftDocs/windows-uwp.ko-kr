@@ -374,7 +374,7 @@ using namespace Windows::Web::Http;
 * [스트림 소켓을 사용 하 여 네트워크 리소스 연결](https://msdn.microsoft.com/library/windows/apps/xaml/jj150599)
 * [네트워크 서비스에 연결](https://msdn.microsoft.com/library/windows/apps/xaml/hh452976)
 * [웹 서비스에 연결](https://msdn.microsoft.com/library/windows/apps/xaml/hh761504)
-* [네트워킹 기초](https://msdn.microsoft.com/library/windows/apps/mt280233)
+* [네트워킹 기본 사항](https://msdn.microsoft.com/library/windows/apps/mt280233)
 * [네트워크 격리 기능을 구성 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh770532)
 * [루프백을 사용 하도록 설정 하 고 네트워크 격리를 디버그 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh780593)
 

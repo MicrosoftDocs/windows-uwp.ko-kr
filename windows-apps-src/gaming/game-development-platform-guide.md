@@ -8,7 +8,7 @@ keywords: windows 10, uwp, 게임, 기술, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 53616e572be6051d096c095f9587c498b769a6af
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57623308"

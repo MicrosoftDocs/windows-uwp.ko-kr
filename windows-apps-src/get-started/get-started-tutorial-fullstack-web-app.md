@@ -626,7 +626,7 @@ memory\public\stylesheets의 style.css 파일을 Start 폴더의 style.css 파�
 
     작성한 코드를 최종 폴더의 코드와 비교할 수도 있습니다.
 
-4. 명령 프롬프트에서 게임을 중지 합니다. **Ctrl + C**, **Y**. 
+4. 명령 프롬프트에서 게임을 중지 합니다. **Ctrl + C**하십시오 **Y**합니다. 
 
 ### <a name="going-further"></a>더 나아가기
 

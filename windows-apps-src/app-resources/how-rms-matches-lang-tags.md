@@ -188,7 +188,7 @@ Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [리소스 관리 시스템의 일치 및 리소스를 선택 하는 방법](how-rms-matches-and-chooses-resources.md)
+* [리소스 관리 시스템에서 리소스를 일치시키고 선택하는 방법](how-rms-matches-and-chooses-resources.md)
 * [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [사용자 프로필 언어 및 앱 매니페스트 언어 이해](../design/globalizing/manage-language-and-region.md)
 * [매크로 (대륙) 지역, 지리적 하위 지역 및 선택한 경제 및 기타 그룹의 컴퍼지션](https://go.microsoft.com/fwlink/p/?LinkId=247929)

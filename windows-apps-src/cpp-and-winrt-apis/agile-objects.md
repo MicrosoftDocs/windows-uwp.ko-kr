@@ -7,7 +7,7 @@ keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, agile, 개체,
 ms.localizationpriority: medium
 ms.openlocfilehash: 2481396d9348250e14ebfc2d1f940b663b405f77
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57639668"
@@ -122,7 +122,7 @@ winrt::hstring message{ nonagile_obj_again.Message() };
 * [winrt::make_agile 함수 템플릿](/uwp/cpp-ref-for-winrt/make-agile)
 * [winrt::non_agile 표식 구조체](/uwp/cpp-ref-for-winrt/non-agile)
 * [winrt::Windows::Foundation::IUnknown:: 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
-* [winrt::Windows::Foundation::IUnknown::try_as function](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)
+* [winrt::Windows::Foundation::IUnknown::try_as 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)
 
 ## <a name="related-topics"></a>관련 항목
 

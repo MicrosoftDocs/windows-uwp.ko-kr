@@ -7,7 +7,7 @@ keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이
 ms.localizationpriority: medium
 ms.openlocfilehash: fe988bffbf024308fb5d43da7ed538e5330b58de
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57635078"
@@ -282,11 +282,11 @@ C++/CX는 **플랫폼** 네임스페이스에서 몇 가지 데이터 형식을 
 | C++/CX | C++/WinRT |
 | ---- | ---- |
 | **Platform:: agile\^** | [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) |
-| **Platform::Array\^** | 참조 [포트 **platform:: array\^**](#port-platformarray) |
-| **Platform::Exception\^** | [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) |
-| **Platform::InvalidArgumentException\^** | [**winrt::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) |
-| **Platform::Object\^** | **winrt::Windows::Foundation::IInspectable** |
-| **Platform::String\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
+| **Platform:: array\^** | 참조 [포트 **platform:: array\^**](#port-platformarray) |
+| **Platform:: exception\^** | [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) |
+| **Platform:: invalidargumentexception\^** | [**winrt::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) |
+| **Platform:: object\^** | **winrt::Windows::Foundation::IInspectable** |
+| **Platform:: string\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
 
 ### <a name="port-platformagile-to-winrtagileref"></a>포트 **platform:: agile\^**  하려면 **winrt::agile_ref**
 합니다 **platform:: agile\^**  형식 C + + /cli CX 모든 스레드에서 액세스할 수 있는 Windows 런타임 클래스를 나타냅니다. C + + /cli WinRT 표현은 [ **winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref)합니다.
@@ -398,7 +398,7 @@ C++/WinRT 도구 체인이 다음과 같이 사용자를 위해 소스 코드를
 void LogWrapLine(winrt::hstring const& str);
 ```
 
-#### <a name="tostring"></a>ToString()
+#### <a name="tostring"></a>Tostring)
 
 C + + /cli CX 제공 합니다 [object:: tostring](/cpp/cppcx/platform-object-class?view=vs-2017#tostring) 메서드.
 
@@ -418,15 +418,15 @@ auto s{ std::to_wstring(i) }; // s is a std::wstring with value L"2".
 * [winrt::delegate 구조체 템플릿](/uwp/cpp-ref-for-winrt/delegate)
 * [winrt::hresult_error 구조체](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
 * [winrt::hstring 구조체](/uwp/cpp-ref-for-winrt/hstring)
-* [winrt 네임 스페이스](/uwp/cpp-ref-for-winrt/winrt)
+* [winrt 네임스페이스](/uwp/cpp-ref-for-winrt/winrt)
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
 * [작성할 이벤트 C + + /cli WinRT](author-events.md)
 * [동시성 및 비동기 작업을 사용 하 여 C + + /cli WinRT](concurrency.md)
-* [사용 Api을 사용 하 여 C + + /cli WinRT](consume-apis.md)
+* [C++/WinRT를 통한 API 사용](consume-apis.md)
 * [C + 대리자를 사용 하 여 이벤트를 처리 + WinRT](handle-events.md)
-* [Interop 간에 C + + /cli WinRT 및 C + + /cli CX](interop-winrt-cx.md)
+* [C++/WinRT와 C++/CX 간의 상호 운용성](interop-winrt-cx.md)
 * [Microsoft 인터페이스 정의 언어 3.0 참조](/uwp/midl-3)
-* [이동할 C + + /cli에서 WRL WinRT](move-to-winrt-from-wrl.md)
+* [WRL에서 C++/WinRT로 이동](move-to-winrt-from-wrl.md)
 * [문자열 처리 C + + /cli WinRT](strings.md)

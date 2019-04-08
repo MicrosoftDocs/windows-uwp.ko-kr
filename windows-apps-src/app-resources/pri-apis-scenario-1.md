@@ -234,4 +234,4 @@ PRI 파일은 이진 파일이므로 해당 XML 파일에 이진 PRI 파일을 �
 * [패키지 리소스 인덱스 (PRI) 참조](https://msdn.microsoft.com/library/windows/desktop/mt845690)
 
 ## <a name="related-topics"></a>관련 항목
-* [패키지 리소스 인덱스 (PRI) Api 및 사용자 지정 시스템을 구축](pri-apis-custom-build-systems.md)
+* [PRI(패키지 리소스 인덱싱) API 및 사용자 지정 빌드 시스템](pri-apis-custom-build-systems.md)

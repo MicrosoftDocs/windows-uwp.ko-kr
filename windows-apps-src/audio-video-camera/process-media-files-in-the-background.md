@@ -23,7 +23,7 @@ ms.locfileid: "57611908"
 
 이 샘플에서 활용하는 여러 다른 유니버설 Windows 앱 기능에 대한 자세한 내용은 다음을 참조하세요.
 
--   [미디어 파일 트랜스 코딩](transcode-media-files.md)
+-   [미디어 파일 트랜스코딩](transcode-media-files.md)
 -   [다시 시작 및 백그라운드 작업을 시작합니다.](https://msdn.microsoft.com/library/windows/apps/mt227652)
 -   [타일 배지 및 알림](https://msdn.microsoft.com/library/windows/apps/mt185606)
 

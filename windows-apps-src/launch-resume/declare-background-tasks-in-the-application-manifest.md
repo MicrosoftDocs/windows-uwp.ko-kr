@@ -234,6 +234,6 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [백그라운드 작업 디버깅](debug-a-background-task.md)
+* [백그라운드 작업 디버그](debug-a-background-task.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
-* [백그라운드 작업에 대 한 지침](guidelines-for-background-tasks.md)
+* [백그라운드 작업 지침](guidelines-for-background-tasks.md)

@@ -25,7 +25,7 @@ ms.locfileid: "57621428"
 - 읽기 전용 텍스트를 표시하는 컨트롤은 [TextBlock](text-block.md) 및 [RichTextBlock](rich-text-block.md)입니다.
 - 텍스트를 입력 하 고 편집 컨트롤은 같습니다. [TextBox](text-box.md), [RichEditBox](rich-edit-box.md)를 [AutoSuggestBox](auto-suggest-box.md), 및 [PasswordBox](password-box.md)합니다.
 
-> **중요 한 Api**: [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [RichTextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)를 [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)를 [RichEditBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)를 [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
+> **중요 API**: [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [RichTextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)를 [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)를 [RichEditBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)를 [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -79,8 +79,8 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/category/Text">앱을 열고 작동 중인 텍스트 컨트롤을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -107,7 +107,7 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 -   [RichEditBox](rich-edit-box.md)
 -   [RichTextBlock](rich-text-block.md)
 -   [TextBlock](text-block.md)
--   [TextBox](text-box.md)
+-   [텍스트 상자](text-box.md)
 
 ## <a name="font-and-style-guidelines"></a>글꼴 및 스타일 지침
 글꼴 지침은 다음 문서를 참조하세요.
@@ -117,7 +117,7 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 
 ## <a name="pen-input"></a>펜 입력
 
-**적용 대상:** TextBox, RichEditBox, AutoSuggestBox
+**적용 대상:** 텍스트 상자 RichEditBox, AutoSuggestBox
 
 Windows 10 버전 1803부터는 XAML 텍스트 입력 상자에 [Windows Ink](../input/pen-and-stylus-interactions.md)를 사용한 펜 입력 지원이 포함되어 있습니다. 사용자가 Windows 펜을 사용해 텍스트 입력 상자를 터치하면 사용자가 별도의 입력 창을 열지 않고도 펜으로 직접 쓸 수 있도록 텍스트 상자가 변환됩니다.
 
@@ -144,7 +144,7 @@ Windows 10 버전 1803부터는 XAML 텍스트 입력 상자에 [Windows Ink](..
 
 ## <a name="color-fonts"></a>컬러 글꼴
 
-**적용 대상:** TextBlock, RichTextBlock, TextBox, RichEditBox
+**적용 대상:** TextBlock RichTextBlock, 텍스트 상자 RichEditBox
 
 Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 계층을 포함할 수 있습니다. 예를 들어 Segoe UI Emoji 글꼴은 이모티콘 및 기타 이모티콘 문자의 컬러 버전을 정의합니다.
 

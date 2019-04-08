@@ -7,7 +7,7 @@ keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝�
 ms.localizationpriority: medium
 ms.openlocfilehash: 193d821b44722e150f38da7430504f5d528770a4
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57602428"
@@ -240,4 +240,4 @@ winrt::hstring f(ListView listview)
 ## <a name="related-topics"></a>관련 항목
 * [작성할 이벤트 C + + /cli WinRT](author-events.md)
 * [동시성 및 비동기 작업을 사용 하 여 C + + /cli WinRT](concurrency.md)
-* [강력한 / 취약 한 참조를 C + + /cli WinRT](weak-references.md)
+* [C++/WinRT의 강력하고 약한 참조](weak-references.md)

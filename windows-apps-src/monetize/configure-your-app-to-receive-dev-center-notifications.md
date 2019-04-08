@@ -8,7 +8,7 @@ ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
 ms.openlocfilehash: f60780186256e7f78a9596c979c79bfc704ae4c2
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57660168"
@@ -99,7 +99,7 @@ ms.locfileid: "57660168"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [앱의 고객에 게 푸시 알림 보내기](../publish/send-push-notifications-to-your-apps-customers.md)
-* [Windows 푸시 알림 서비스 (WNS) 개요](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview)
+* [앱의 고객에게 푸시 알림 보내기](../publish/send-push-notifications-to-your-apps-customers.md)
+* [WNS(Windows 푸시 알림 서비스) 개요](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview)
 * [요청, 생성 및 알림 채널을 저장 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh868221(v=win.10))
 * [Microsoft Store Services SDK](https://docs.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)

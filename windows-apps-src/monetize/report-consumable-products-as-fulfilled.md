@@ -69,7 +69,7 @@ UserIdentity 개체에는 다음 매개 변수가 포함됩니다.
 |----------------------|--------|-------------------|----------|
 | identityType         | 문자열 | 문자열 값 **b2b**를 지정합니다.    | 예      |
 | identityValue        | 문자열 | 소모성 제품을 처리됨으로 보고할 사용자의 ID를 나타내는 [Microsoft Store ID 키](view-and-grant-products-from-a-service.md#step-4)입니다.      | 예      |
-| localTicketReference | 문자열 | 반환된 응답에 대해 요청된 식별자입니다. 와 같은 값을 사용 하는 것이 좋습니다 합니다 *userId*[클레임](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) Microsoft Store ID 키에서입니다.   | 예      |
+| localTicketReference | 문자열 | 반환된 응답에 대해 요청된 식별자입니다. 와 같은 값을 사용 하는 것이 좋습니다 합니다 *userId*[클레임](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) Microsoft Store ID 키에서입니다. | 예      |
 
 
 ### <a name="request-examples"></a>요청 예제

@@ -21,7 +21,7 @@ ms.locfileid: "57642838"
 
 목록 애니메이션을 사용하면 사진 앨범이나 검색 결과 목록 같은 컬렉션에서 단일 항목이나 여러 항목을 삽입하거나 제거할 수 있습니다.
 
-> **중요 한 Api**: [**AddDeleteThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/br243048)
+> **중요 API**: [**AddDeleteThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/br243048)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항

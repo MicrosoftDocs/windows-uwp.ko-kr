@@ -23,7 +23,7 @@ ms.locfileid: "57646468"
 
 분할 보기 컨트롤에는 확장/축소 가능한 창 및 콘텐츠 영역이 있습니다.
 
-> **중요 한 Api**: [분할 된 뷰 클래스](https://msdn.microsoft.com/library/windows/apps/dn864360)
+> **중요 API**: [분할 된 뷰 클래스](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 다음은 SplitView를 사용하여 허브를 표시하는 Microsoft Edge 앱 예제입니다.
 
@@ -63,8 +63,8 @@ ms.locfileid: "57646468"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/SplitView">앱을 열고 작동 중인 SplitView를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 (Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 (GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>

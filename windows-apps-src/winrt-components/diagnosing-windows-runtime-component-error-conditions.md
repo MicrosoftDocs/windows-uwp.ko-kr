@@ -157,7 +157,7 @@ Windows 런타임 구성 요소의 형식은 네임스페이스와 동일한 이
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>메서드 '{0}'형식의 매개 변수가'{1}' 해당 시그니처의 합니다. 이 제네릭 형식은 올바른 Windows 런타임 형식이 아니지만 해당 형식이나 형식의 제네릭 매개 변수가 올바른 Windows 런타임 형식인 인터페이스를 구현합니다. {2}</p>
-> **참고**  에 대 한 {2}, Winmdexp.exe와 같이 대체 목록을 추가 합니다 "형식을 변경 하는 것이 좋습니다 ' System.Collections.Generic.List&lt;T&gt;' 다음 형식 중 하나에 메서드 시그니처의 대신: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
+> **참고**  에 대 한 {2}, Winmdexp.exe와 같이 대체 목록을 추가 합니다 "형식을 변경 하는 것이 좋습니다 ' System.Collections.Generic.List&lt;T&gt;' 다음 형식 중 하나에 메서드 시그니처의 대신: "System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
 </td>
 </tr>
 <tr class="even">

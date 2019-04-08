@@ -84,7 +84,7 @@ GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 �
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Imaging](imaging.md)
+* [이미징](imaging.md)
  
 
  

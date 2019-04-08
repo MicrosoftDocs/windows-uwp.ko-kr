@@ -49,7 +49,7 @@ ms.locfileid: "57662848"
 | applicationId | 문자열 | 합니다 [Store ID](in-app-purchases-and-trials.md#store-ids) insights 데이터를 검색 하려는 앱입니다. 이 매개 변수를 지정 하지 않으면 하는 경우 응답 본문에는 계정에 등록 된 모든 앱에 대 한 정보 데이터가 포함 됩니다.  |  아니오  |
 | startDate | date | 검색할 insights 데이터의 날짜 범위의 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다. |  아니오  |
 | endDate | date | 검색할 insights 데이터의 날짜 범위의 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니오  |
-| filter | 문자열  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 각 문에는 응답 본문의 필드 이름 및 **eq** 또는 **ne** 연산자와 연결된 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 문자열 값은 *filter* 매개 변수에서 단일 따옴표로 묶여야 합니다. 예를 들어 *필터 dataType eq '구입' =* 합니다. <p/><p/>다음 필터 필드를 지정할 수 있습니다.<p/><ul><li><strong>acquisition</strong></li><li><strong>health</strong></li><li><strong>usage</strong></li></ul> | 아니오   |
+| filter | 문자열  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 각 문에는 응답 본문의 필드 이름 및 **eq** 또는 **ne** 연산자와 연결된 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 문자열 값은 *filter* 매개 변수에서 단일 따옴표로 묶여야 합니다. 예를 들어 *필터 dataType eq '구입' =* 합니다. <p/><p/>다음 필터 필드를 지정할 수 있습니다.<p/><ul><li><strong>취득</strong></li><li><strong>상태</strong></li><li><strong>사용 현황</strong></li></ul> | 아니오   |
 
 ### <a name="request-example"></a>요청 예제
 
@@ -78,7 +78,7 @@ Authorization: Bearer <your access token>
 |---------------------|--------|-------------------------------------------|
 | applicationId       | 문자열 | Insights 데이터를 검색 하는 앱의 Store ID입니다.     |
 | insightDate                | 문자열 | 특정 메트릭이 변경을 식별 하는 날짜입니다. 이 날짜는 상당한 증가 감지 하는 주 끝을 나타내는 또는 이전 주에 비해 메트릭이 감소 합니다. |
-| dataType     | 문자열 | 이 정보를 설명 하는 일반 분석 영역을 지정 하는 다음 문자열 중 하나입니다.<p/><ul><li><strong>acquisition</strong></li><li><strong>health</strong></li><li><strong>usage</strong></li></ul>   |
+| 데이터 형식     | 문자열 | 이 정보를 설명 하는 일반 분석 영역을 지정 하는 다음 문자열 중 하나입니다.<p/><ul><li><strong>취득</strong></li><li><strong>상태</strong></li><li><strong>사용 현황</strong></li></ul>   |
 | insightDetail          | 배열 | 하나 이상의 [InsightDetail 값](#insightdetail-values) 현재 정보에 대 한 세부 정보를 나타냅니다.    |
 
 
@@ -86,7 +86,7 @@ Authorization: Bearer <your access token>
 
 | 값               | 형식   | 설명                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | 문자열 | 에 따라 현재 정보 또는 현재 차원에 설명 하는 메트릭을 표시 하는 다음 값 중 하나는 **dataType** 값입니다.<ul><li>에 대 한 **health**,이 값은 항상 **히트 카운트**합니다.</li><li>에 대 한 **취득**,이 값은 항상 **구매 수량**합니다.</li><li>에 대 한 **사용량**,이 값 다음 문자열 중 하나일 수 있습니다.<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
+| FactName           | 문자열 | 에 따라 현재 정보 또는 현재 차원에 설명 하는 메트릭을 표시 하는 다음 값 중 하나는 **dataType** 값입니다.<ul><li>에 대 한 **health**,이 값은 항상 **히트 카운트**합니다.</li><li>에 대 한 **취득**,이 값은 항상 **구매 수량**합니다.</li><li>에 대 한 **사용량**,이 값 다음 문자열 중 하나일 수 있습니다.<ul><li><strong>dailyActiveUsers</strong></li><li><strong>engagementDurationMinutes</strong></li><li><strong>dailyActiveDevices</strong></li><li><strong>dailyNewUsers</strong></li><li><strong>dailySessionCount</strong></li></ul></ul>  |
 | SubDimensions         | 배열 |  해당 정보에 대 한 단일 메트릭을 설명 하는 하나 이상의 개체입니다.   |
 | PercentChange            | 문자열 |  전체 고객 기반에서 메트릭을 변경 비율입니다.  |
 | DimensionName           | 문자열 |  현재 차원에 설명 된 메트릭의 이름입니다. 예를 들면 **EventType**, **시장**를 **DeviceType**를 **PackageVersion**, **AcquisitionType**하십시오 **연령대** 하 고 **성별**합니다.   |

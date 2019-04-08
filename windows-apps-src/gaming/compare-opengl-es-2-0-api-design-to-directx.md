@@ -21,7 +21,7 @@ ms.locfileid: "57662758"
 **중요 한 Api**
 
 -   [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080)
--   [Visual C++](https://msdn.microsoft.com/library/windows/apps/60k1461a.aspx)
+-   [Visual c + +](https://msdn.microsoft.com/library/windows/apps/60k1461a.aspx)
 
 iOS 또는 Android 플랫폼에서 게임을 포팅하는 경우 OpenGL ES 2.0에 많은 투자를 했을 것입니다. 그래픽 파이프라인 코드베이스를 Direct3D 11 및 Windows 런타임으로 이동할 준비를 할 때에는 시작하기 전에 몇 가지 사항을 고려해야 합니다.
 

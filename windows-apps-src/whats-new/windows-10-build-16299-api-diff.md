@@ -68,7 +68,7 @@ geovisittrigger <br> geovisittrigger.geovisittrigger <br> geovisittrigger.monito
 
 paymentappcanmakepaymenttrigger <br> paymentappcanmakepaymenttrigger.paymentappcanmakepaymenttrigger
 
-### <a name="windowsapplicationmodelcallshttpsdocsmicrosoftcomuwpapiwindowsapplicationmodelcalls"></a>[windows.applicationmodel.calls](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls)
+### <a name="windowsapplicationmodelcallshttpsdocsmicrosoftcomuwpapiwindowsapplicationmodelcalls"></a>[이 windows.applicationmodel.calls](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls)
 
 #### <a name="voipcallcoordinatorhttpsdocsmicrosoftcomuwpapiwindowsapplicationmodelcallsvoipcallcoordinator"></a>[voipcallcoordinator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls.voipcallcoordinator)
 
@@ -228,7 +228,7 @@ useractivityvisualelements <br> useractivityvisualelements.attribution <br> user
 
 ### <a name="windowsapplicationmodelhttpsdocsmicrosoftcomuwpapiwindowsapplicationmodel"></a>[windows.applicationmodel](https://docs.microsoft.com/uwp/api/windows.applicationmodel)
 
-#### <a name="designmodehttpsdocsmicrosoftcomuwpapiwindowsapplicationmodeldesignmode"></a>[designmode](https://docs.microsoft.com/uwp/api/windows.applicationmodel.designmode)
+#### <a name="designmodehttpsdocsmicrosoftcomuwpapiwindowsapplicationmodeldesignmode"></a>[.](https://docs.microsoft.com/uwp/api/windows.applicationmodel.designmode)
 
 designmode.designmode2enabled
 
@@ -370,7 +370,7 @@ customsensorreading.performancecount
 
 ### <a name="windowsdevicessensorshttpsdocsmicrosoftcomuwpapiwindowsdevicessensors"></a>[windows.devices.sensors](https://docs.microsoft.com/uwp/api/windows.devices.sensors)
 
-#### <a name="accelerometerhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsaccelerometer"></a>[accelerometer](https://docs.microsoft.com/uwp/api/windows.devices.sensors.accelerometer)
+#### <a name="accelerometerhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsaccelerometer"></a>[가 속도계](https://docs.microsoft.com/uwp/api/windows.devices.sensors.accelerometer)
 
 accelerometer.fromidasync <br> accelerometer.getdeviceselector
 
@@ -378,7 +378,7 @@ accelerometer.fromidasync <br> accelerometer.getdeviceselector
 
 accelerometerreading.performancecount <br> accelerometerreading.properties
 
-#### <a name="altimeterhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsaltimeter"></a>[altimeter](https://docs.microsoft.com/uwp/api/windows.devices.sensors.altimeter)
+#### <a name="altimeterhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsaltimeter"></a>[Altimeter](https://docs.microsoft.com/uwp/api/windows.devices.sensors.altimeter)
 
 altimeter.maxbatchsize <br> altimeter.reportlatency
 
@@ -386,7 +386,7 @@ altimeter.maxbatchsize <br> altimeter.reportlatency
 
 altimeterreading.performancecount <br> altimeterreading.properties
 
-#### <a name="barometerhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsbarometer"></a>[barometer](https://docs.microsoft.com/uwp/api/windows.devices.sensors.barometer)
+#### <a name="barometerhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsbarometer"></a>[지표](https://docs.microsoft.com/uwp/api/windows.devices.sensors.barometer)
 
 barometer.fromidasync <br> barometer.getdeviceselector <br> barometer.maxbatchsize <br> barometer.reportlatency
 
@@ -394,7 +394,7 @@ barometer.fromidasync <br> barometer.getdeviceselector <br> barometer.maxbatchsi
 
 barometerreading.performancecount <br> barometerreading.properties
 
-#### <a name="compasshttpsdocsmicrosoftcomuwpapiwindowsdevicessensorscompass"></a>[compass](https://docs.microsoft.com/uwp/api/windows.devices.sensors.compass)
+#### <a name="compasshttpsdocsmicrosoftcomuwpapiwindowsdevicessensorscompass"></a>[나침반](https://docs.microsoft.com/uwp/api/windows.devices.sensors.compass)
 
 compass.fromidasync <br> compass.getdeviceselector <br> compass.maxbatchsize <br> compass.reportlatency
 
@@ -402,7 +402,7 @@ compass.fromidasync <br> compass.getdeviceselector <br> compass.maxbatchsize <br
 
 compassreading.performancecount <br> compassreading.properties
 
-#### <a name="gyrometerhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsgyrometer"></a>[gyrometer](https://docs.microsoft.com/uwp/api/windows.devices.sensors.gyrometer)
+#### <a name="gyrometerhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsgyrometer"></a>[회전 계](https://docs.microsoft.com/uwp/api/windows.devices.sensors.gyrometer)
 
 gyrometer.fromidasync <br> gyrometer.getdeviceselector <br> gyrometer.maxbatchsize <br> gyrometer.reportlatency
 
@@ -410,7 +410,7 @@ gyrometer.fromidasync <br> gyrometer.getdeviceselector <br> gyrometer.maxbatchsi
 
 gyrometerreading.performancecount <br> gyrometerreading.properties
 
-#### <a name="inclinometerhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsinclinometer"></a>[inclinometer](https://docs.microsoft.com/uwp/api/windows.devices.sensors.inclinometer)
+#### <a name="inclinometerhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsinclinometer"></a>[경사 계](https://docs.microsoft.com/uwp/api/windows.devices.sensors.inclinometer)
 
 inclinometer.fromidasync <br> inclinometer.getdeviceselector <br> inclinometer.maxbatchsize <br> inclinometer.reportlatency
 
@@ -426,7 +426,7 @@ lightsensor.fromidasync <br> lightsensor.getdeviceselector <br> lightsensor.maxb
 
 lightsensorreading.performancecount <br> lightsensorreading.properties
 
-#### <a name="magnetometerhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsmagnetometer"></a>[magnetometer](https://docs.microsoft.com/uwp/api/windows.devices.sensors.magnetometer)
+#### <a name="magnetometerhttpsdocsmicrosoftcomuwpapiwindowsdevicessensorsmagnetometer"></a>[지자기 센터](https://docs.microsoft.com/uwp/api/windows.devices.sensors.magnetometer)
 
 magnetometer.fromidasync <br> magnetometer.getdeviceselector <br> magnetometer.maxbatchsize <br> magnetometer.reportlatency
 
@@ -484,7 +484,7 @@ rawgamecontroller.displayname <br> rawgamecontroller.nonroamableid <br> rawgamec
 
 ### <a name="windowsgamingpreviewgamesenumerationhttpsdocsmicrosoftcomuwpapiwindowsgamingpreviewgamesenumeration"></a>[windows.gaming.preview.gamesenumeration](https://docs.microsoft.com/uwp/api/windows.gaming.preview.gamesenumeration)
 
-#### <a name="gamelisthttpsdocsmicrosoftcomuwpapiwindowsgamingpreviewgamesenumerationgamelist"></a>[gamelist](https://docs.microsoft.com/uwp/api/windows.gaming.preview.gamesenumeration.gamelist)
+#### <a name="gamelisthttpsdocsmicrosoftcomuwpapiwindowsgamingpreviewgamesenumerationgamelist"></a>[게임 목록](https://docs.microsoft.com/uwp/api/windows.gaming.preview.gamesenumeration.gamelist)
 
 gamelist.mergeentriesasync <br> gamelist.unmergeentryasync
 
@@ -1316,7 +1316,7 @@ interactiontrackervector2inertianaturalmotion <br> interactiontrackervector2iner
 
 ### <a name="windowsuicompositionhttpsdocsmicrosoftcomuwpapiwindowsuicomposition"></a>[windows.ui.composition](https://docs.microsoft.com/uwp/api/windows.ui.composition)
 
-#### <a name="ambientlighthttpsdocsmicrosoftcomuwpapiwindowsuicompositionambientlight"></a>[ambientlight](https://docs.microsoft.com/uwp/api/windows.ui.composition.ambientlight)
+#### <a name="ambientlighthttpsdocsmicrosoftcomuwpapiwindowsuicompositionambientlight"></a>[ambientlight를 함께 사용](https://docs.microsoft.com/uwp/api/windows.ui.composition.ambientlight)
 
 ambientlight.intensity
 
@@ -1356,7 +1356,7 @@ compositionlineargradientbrush <br> compositionlineargradientbrush.endpoint <br>
 
 compositionobject.dispatcherqueue
 
-#### <a name="compositorhttpsdocsmicrosoftcomuwpapiwindowsuicompositioncompositor"></a>[compositor](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositor)
+#### <a name="compositorhttpsdocsmicrosoftcomuwpapiwindowsuicompositioncompositor"></a>[작성자](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositor)
 
 compositor.createcolorgradientstop <br> compositor.createcolorgradientstop <br> compositor.createlineargradientbrush <br> compositor.createspringscalaranimation <br> compositor.createspringvector2animation <br> compositor.createspringvector3animation
 
@@ -1388,7 +1388,7 @@ pointlight.intensity
 
 scalarnaturalmotionanimation <br> scalarnaturalmotionanimation.finalvalue <br> scalarnaturalmotionanimation.initialvalue <br> scalarnaturalmotionanimation.initialvelocity
 
-#### <a name="spotlighthttpsdocsmicrosoftcomuwpapiwindowsuicompositionspotlight"></a>[spotlight](https://docs.microsoft.com/uwp/api/windows.ui.composition.spotlight)
+#### <a name="spotlighthttpsdocsmicrosoftcomuwpapiwindowsuicompositionspotlight"></a>[추천](https://docs.microsoft.com/uwp/api/windows.ui.composition.spotlight)
 
 spotlight.innerconeintensity <br> spotlight.outerconeintensity
 
@@ -1678,7 +1678,7 @@ colorspectrumcomponents
 
 colorspectrumshape
 
-#### <a name="comboboxhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolscombobox"></a>[combobox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox)
+#### <a name="comboboxhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolscombobox"></a>[콤보 상자](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox)
 
 combobox.placeholderforeground <br> combobox.placeholderforegroundproperty
 
@@ -1690,7 +1690,7 @@ contentdialog.showasync
 
 contentdialogplacement
 
-#### <a name="controlhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolscontrol"></a>[control](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control)
+#### <a name="controlhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolscontrol"></a>[컨트롤](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control)
 
 control.oncharacterreceived <br> control.onpreviewkeydown <br> control.onpreviewkeyup
 
@@ -1702,7 +1702,7 @@ disabledformattingaccelerators
 
 fonticonsource <br> fonticonsource.fontfamily <br> fonticonsource.fontfamilyproperty <br> fonticonsource.fonticonsource <br> fonticonsource.fontsize <br> fonticonsource.fontsizeproperty <br> fonticonsource.fontstyle <br> fonticonsource.fontstyleproperty <br> fonticonsource.fontweight <br> fonticonsource.fontweightproperty <br> fonticonsource.glyph <br> fonticonsource.glyphproperty <br> fonticonsource.istextscalefactorenabled <br> fonticonsource.istextscalefactorenabledproperty <br> fonticonsource.mirroredwhenrighttoleft <br> fonticonsource.mirroredwhenrighttoleftproperty
 
-#### <a name="gridhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsgrid"></a>[grid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid)
+#### <a name="gridhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolsgrid"></a>[표](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid)
 
 grid.columnspacing <br> grid.columnspacingproperty <br> grid.rowspacing <br> grid.rowspacingproperty
 
@@ -1810,7 +1810,7 @@ richtextblock.horizontaltextalignment <br> richtextblock.horizontaltextalignment
 
 richtextblockoverflow.istexttrimmed <br> richtextblockoverflow.istexttrimmedchanged <br> richtextblockoverflow.istexttrimmedproperty
 
-#### <a name="splitviewhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolssplitview"></a>[splitview](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
+#### <a name="splitviewhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolssplitview"></a>[분할 된 뷰](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
 
 splitview.paneopened <br> splitview.paneopening
 
@@ -1850,7 +1850,7 @@ symboliconsource <br> symboliconsource.symbol <br> symboliconsource.symboliconso
 
 textblock.horizontaltextalignment <br> textblock.horizontaltextalignmentproperty <br> textblock.istexttrimmed <br> textblock.istexttrimmedchanged <br> textblock.istexttrimmedproperty <br> textblock.texthighlighters
 
-#### <a name="textboxhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstextbox"></a>[textbox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox)
+#### <a name="textboxhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolstextbox"></a>[텍스트 상자](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox)
 
 textbox.beforetextchanging <br> textbox.charactercasing <br> textbox.charactercasingproperty <br> textbox.copyingtoclipboard <br> textbox.cuttingtoclipboard <br> textbox.horizontaltextalignment <br> textbox.horizontaltextalignmentproperty <br> textbox.placeholderforeground <br> textbox.placeholderforegroundproperty
 
@@ -1868,11 +1868,11 @@ textcontrolcuttingtoclipboardeventargs <br> textcontrolcuttingtoclipboardeventar
 
 ### <a name="windowsuixamldocumentshttpsdocsmicrosoftcomuwpapiwindowsuixamldocuments"></a>[windows.ui.xaml.documents](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents)
 
-#### <a name="blockhttpsdocsmicrosoftcomuwpapiwindowsuixamldocumentsblock"></a>[block](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block)
+#### <a name="blockhttpsdocsmicrosoftcomuwpapiwindowsuixamldocumentsblock"></a>[블록](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block)
 
 block.horizontaltextalignment <br> block.horizontaltextalignmentproperty
 
-#### <a name="hyperlinkhttpsdocsmicrosoftcomuwpapiwindowsuixamldocumentshyperlink"></a>[hyperlink](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.hyperlink)
+#### <a name="hyperlinkhttpsdocsmicrosoftcomuwpapiwindowsuixamldocumentshyperlink"></a>[하이퍼링크](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.hyperlink)
 
 hyperlink.istabstop <br> hyperlink.istabstopproperty <br> hyperlink.tabindex <br> hyperlink.tabindexproperty
 

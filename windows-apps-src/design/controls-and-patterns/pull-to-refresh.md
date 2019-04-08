@@ -23,7 +23,7 @@ ms.locfileid: "57659258"
 
 당겨서 새로 고침을 사용하면 터치로 데이터 목록을 아래로 당겨서 더 많은 데이터를 검색할 수 있습니다. 당겨서 새로 고침은 터치 스크린이 장착된 디바이스에서 널리 사용되고 있습니다. 여기 나온 API를 사용하여 앱에서 당겨서 새로 고침을 구현할 수 있습니다.
 
-> **중요 한 Api**: [RefreshContainer](/uwp/api/windows.ui.xaml.controls.refreshcontainer), [RefreshVisualizer](/uwp/api/windows.ui.xaml.controls.refreshvisualizer)
+> **중요 API**: [RefreshContainer](/uwp/api/windows.ui.xaml.controls.refreshcontainer), [RefreshVisualizer](/uwp/api/windows.ui.xaml.controls.refreshvisualizer)
 
 ![당겨서 새로 고침 gif](images/Pull-To-Refresh.gif)
 

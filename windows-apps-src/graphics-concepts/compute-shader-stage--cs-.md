@@ -26,7 +26,7 @@ CS(계산 셰이더) 단계는 일반적인 용도의 고속 계산을 제공하
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 
 
-[파이프라인 계산](compute-pipeline.md)
+[컴퓨팅 파이프라인](compute-pipeline.md)
 
 [그래픽 파이프라인](graphics-pipeline.md)
 

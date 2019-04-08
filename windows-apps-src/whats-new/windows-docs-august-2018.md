@@ -34,7 +34,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 * TreeView를 지원 하도록 향상 되었습니다 [데이터 바인딩, 항목 템플릿, 끌어서 놓습니다.](../design/controls-and-patterns/tree-view.md)
 
-### <a name="package-support-framework"></a>패키지 지원 프레임 워크
+### <a name="package-support-framework"></a>패키지 지원 프레임워크
 
 패키지 지원 프레임 워크 MSIX 컨테이너에서 실행할 수 있도록 소스 코드에 액세스할 수 없을 때 수정 win32 응용 프로그램에 적용 하는 데 도움이 되는 오픈 소스 키트입니다.
 

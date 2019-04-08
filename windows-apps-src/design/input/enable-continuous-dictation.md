@@ -19,7 +19,7 @@ ms.locfileid: "57606258"
 
 긴 형식의 연속 받아쓰기 음성 입력을 캡처 및 인식하는 방법을 알아봅니다.
 
-> **중요 한 Api**: [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896), [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)
+> **중요 API**: [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896)하십시오 [ **ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)
 
 [음성 인식](speech-recognition.md)에서 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 개체의 [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) 또는 [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245) 메서드를 사용하여 상대적으로 짧은 음성 입력을 캡처 및 인식하는 방법을 알아보았습니다. 예를 들어 SMS(Short Message Service) 메시지를 작성하거나 질문을 할 경우입니다.
 

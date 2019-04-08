@@ -36,21 +36,21 @@ ms.locfileid: "57663098"
 | Honeywell     | N3680                          | 2D         | 내부     | 구성 요소    | HID POS 스캐너           |
 | Honeywell     | 궤도 7190 g                    | 2D         | USB          | 프레젠테이션 | HID POS 스캐너           |
 | Honeywell     | Stratos 2700                   | 2D         | USB          | 카운터의   | HID POS 스캐너           |
-| Honeywell     | Voyager 1200g                  | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | Voyager 1202g                  | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | Voyager 1202-bf                | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | 보이저 145Xg                  | 1D / 2D¹   | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | Voyager 1602g                  | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | Xenon 1900g                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | Xenon 1902g                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | Xenon 1902g-bf                 | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | Xenon 1900h                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | Xenon 1902h                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | 보이저 1200 g                  | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | 보이저 1202 g                  | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | 보이저 1202 bf                | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | 보이저 145Xg                  | 1 일/2 D ¹   | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | 보이저 1602 g                  | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | 크 세 논 1900 g                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | 크 세 논 1902 g                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | 크 세 논 1902 g-bf                 | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | 크 세 논 1900 h                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | 크 세 논 1902 h                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
 | HP            | 바코드 스캐너 (HR2150) 값 | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
 | Intermec      | SG20                           | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
 | Socket Mobile | CHS 7Ci                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
 | Socket Mobile | CHS 7Di                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
-| Socket Mobile | CHS 7Mi                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
+| Socket Mobile | CHS 7 Mi                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
 | Socket Mobile | CHS 7Pi                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
 | Socket Mobile | CHS 8Ci                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
 | Socket Mobile | DuraScan D700                  | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
@@ -88,8 +88,8 @@ ms.locfileid: "57663098"
 | Honeywell      | CT50   | Windows Mobile   |
 | Honeywell      | D75e | Windows Mobile   |
 | Janam          | XT2      | Windows Mobile   |
-| Panasonic      | FZ-E1 | Windows Mobile   |
-| Panasonic      | FZ-F1 |Windows Mobile   |
+| Panasonic      | FZ E1 | Windows Mobile   |
+| Panasonic      | FZ F1 |Windows Mobile   |
 | PointMobile    | PM80 | Windows Mobile   |
 | 얼룩말          | TC700j | Windows Mobile   |
 | HP             | 엘리트 X3 Jacket | Windows Mobile   |

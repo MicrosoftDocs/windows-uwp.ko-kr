@@ -63,32 +63,32 @@ Microsoft 매핑 기술을 사용 하 여 _스타일 시트를 매핑할_ maps�
 |------------------------------|---------------------------|------|------|------|------|----------------|
 | version                      | [버전](#version)       |  ✔   |  ✔   |  ✔   |  ✔   | 사용하고자 하는 스타일 시트 버전입니다. |
 | 설정                     | [설정](#settings)     |  ✔   |  ✔   |  ✔   |  ✔   | 전체 스타일 시트에 적용되는 설정입니다. |
-| mapElement                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 지도 항목의 상위 항목입니다. |
-| > baseMapElement             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 사용자가 아닌 모든 항목의 상위 항목입니다. |
-| >> area                      | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Land를 설명 하는 영역을 사용 합니다.  이러한 구조 항목 아래에 실제 건물을 사용 하 여 혼동 하면 안 됩니다. |
-| >>> airport                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 공항을 포함 하는 영역을 선택 합니다. |
-| >>> areaOfInterest           | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 비즈니스 또는 흥미로운 포인트가 집중된 영역입니다. |
-| >>> cemetery                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Cemeteries을 포함 하는 영역을 선택 합니다. |
-| >>> continent                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 대륙 영역 레이블입니다. |
-| >>> education                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 학교와 교육 다른 기능을 포함 하는 영역을 선택 합니다. |
-| >>> indigenousPeoplesReserve | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 토착 행위를 포함 하는 영역을 예약 합니다. |
-| >>> industrial               | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 산업을 위해 사용 되는 영역입니다. |
-| >>> island                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 아일랜드 영역 레이블입니다. |
-| >>> medical                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 의료 목적에 사용 되는 영역 (예: 병원 캠퍼스). |
-| >>> military                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 군 자료를 포함 하거나 군 사용 하는 영역을 선택 합니다. |
-| >>> nautical                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 항해 관련된 목적에 사용 되는 영역입니다. |
-| >>> neighborhood             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 환경 영역 레이블입니다. |
-| >>> runway                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 비행기가는 활주로으로 사용 되는 영역을 선택 합니다. |
-| >>> sand                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 해변과 같은 모래 영역입니다. |
-| >>> shoppingCenter           | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 몰 또는 기타 쇼핑 센터에 대한 땅 영역입니다. |
-| >>> stadium                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 경기장을 포함 하는 영역을 선택 합니다. |
-| >>> underground              | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 지하 영역(예: 지하철역). |
-| >>> vegetation               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 숲, 풀 영역 등입니다. |
-| >>>> forest                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 숲 지역입니다. |
-| >>>> golfCourse              | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 골프 과정을 포함 하는 영역을 선택 합니다. |
-| >>>> park                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 공원을 포함 하는 영역을 선택 합니다. |
-| >>>> playingField            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 야구장 또는 테니스 코트와 같은 추출된 피치입니다. |
-| >>>> reserve                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 특성을 포함 하는 영역을 예약 합니다. |
+| mapElement                   | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 지도 항목의 상위 항목입니다. |
+| > baseMapElement             | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 사용자가 아닌 모든 항목의 상위 항목입니다. |
+| >> area                      | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Land를 설명 하는 영역을 사용 합니다.  이러한 구조 항목 아래에 실제 건물을 사용 하 여 혼동 하면 안 됩니다. |
+| >>> airport                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 공항을 포함 하는 영역을 선택 합니다. |
+| >>> areaOfInterest           | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 비즈니스 또는 흥미로운 포인트가 집중된 영역입니다. |
+| >>> cemetery                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Cemeteries을 포함 하는 영역을 선택 합니다. |
+| >>> continent                | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 대륙 영역 레이블입니다. |
+| >>> education                | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 학교와 교육 다른 기능을 포함 하는 영역을 선택 합니다. |
+| >>> indigenousPeoplesReserve | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 토착 행위를 포함 하는 영역을 예약 합니다. |
+| >>> industrial               | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 산업을 위해 사용 되는 영역입니다. |
+| >>> island                   | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 아일랜드 영역 레이블입니다. |
+| >>> medical                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 의료 목적에 사용 되는 영역 (예: 병원 캠퍼스). |
+| >>> military                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 군 자료를 포함 하거나 군 사용 하는 영역을 선택 합니다. |
+| >>> nautical                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 항해 관련된 목적에 사용 되는 영역입니다. |
+| >>> neighborhood             | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 환경 영역 레이블입니다. |
+| >>> runway                   | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 비행기가는 활주로으로 사용 되는 영역을 선택 합니다. |
+| >>> sand                     | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 해변과 같은 모래 영역입니다. |
+| >>> shoppingCenter           | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 몰 또는 기타 쇼핑 센터에 대한 땅 영역입니다. |
+| >>> stadium                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 경기장을 포함 하는 영역을 선택 합니다. |
+| >>> underground              | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 지하 영역(예: 지하철역). |
+| >>> vegetation               | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 숲, 풀 영역 등입니다. |
+| >>>> forest                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 숲 지역입니다. |
+| >>>> golfCourse              | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 골프 과정을 포함 하는 영역을 선택 합니다. |
+| >>>> park                    | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 공원을 포함 하는 영역을 선택 합니다. |
+| >>>> playingField            | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 야구장 또는 테니스 코트와 같은 추출된 피치입니다. |
+| >>>> reserve                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 특성을 포함 하는 영역을 예약 합니다. |
 | >> point                     | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 일종의 아이콘을 사용 하 여 그린 모든 지점 기능입니다. |
 | >>> address                  | [PointStyle](#pointstyle) |      |      |  ✔   |  ✔   | 숫자 레이블을 해결 합니다. |
 | >>> naturalPoint             | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 자연 스러운 기능을 나타내는 아이콘을 선택 합니다. |
@@ -117,36 +117,36 @@ Microsoft 매핑 기술을 사용 하 여 _스타일 시트를 매핑할_ maps�
 | >>> countryRegion            | [BorderedMapElement](#borderedmapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 국가 지역 테두리 및 레이블입니다. |
 | >>> adminDistrict            | [BorderedMapElement](#borderedmapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 등, 시/도, 상태, Admin1 테두리 및 레이블을 지정 합니다. |
 | >>> district                 | [BorderedMapElement](#borderedmapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Admin2, 군 등 테두리 및 레이블을 지정 합니다. |
-| >> structure                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 및 기타 건물 같은 구조. |
-| >>> building                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 합니다. |
-| >>>> educationBuilding       | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 교육에 사용 합니다. |
-| >>>> medicalBuilding         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 병원과 같이 의료 목적으로 사용 합니다. |
-| >>>> transitBuilding         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 공항 같은 전송에 사용 합니다. |
-| >> transportation            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 교통망의 일부인 줄(예: 도로, 기차, 및 여객선). |
-| >>> road                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 도로를 표시하는 줄. |
-| >>>> controlledAccessHighway | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 큰 제어 된 액세스 권한을 고속도 나타내는 선입니다. |
-| >>>>> highSpeedRamp          | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 일반적으로 연결 하는 고속 램프를 나타내는 선 고속도 액세스를 제어 합니다. |
-| >>>> highway                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 고속도 나타내는 선입니다. |
-| >>>> majorRoad               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 주요도 나타내는 선입니다. |
-| >>>> arterialRoad            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Arterial도 나타내는 선입니다. |
-| >>>> street                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 거리를 나타내는 선입니다. |
-| >>>>> ramp                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 고속도로에 연결 하는 일반적으로 경사를 나타내는 선입니다. |
-| >>>>> unpavedStreet          | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Unpaved 거리를 나타내는 선입니다. |
-| >>>> tollRoad                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 사용에 대 한 비용으로로 나타내는 선입니다. |
-| >>> railway                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 철로길. |
-| >>> trail                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 공원 또는 자국 하이킹 코스 산책로. |
-| >>> 보 행 통로                  | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 관리자 권한 보 행 통로입니다. |
-| >>> waterRoute               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 페리 경로 선. |
-| >> water                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 물처럼 보이는 모든 것. 바다 및 물결이 포함됩니다. |
-| >>> river                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 강, 물결 또는 기타 수로.  선 또는 다각형일 수 있으며 강이 아닌 수공간에 연결될 수 있습니다. |
-| > routeMapElement            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 라우팅 관련된 항목 |
-| >> routeLine                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 선 라우팅 관련 항목입니다. |
-| >>> drivingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 주행 경로 나타내는 선입니다. |
-| >>> scenicRoute              | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Scenic 주행 경로 나타내는 선입니다. |
-| >>> walkingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 줄 경로 탐색을 나타냅니다. |
-| > userMapElement             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 사용자 항목입니다. |
-| >> userBillboard             | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 기본 [MapBillboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard) 인스턴스에 대한 스타일. |
-| >> userLine                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 기본 [MapPolyline](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mappolyline) 인스턴스에 대한 스타일. |
+| >> structure                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 및 기타 건물 같은 구조. |
+| >>> building                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 합니다. |
+| >>>> educationBuilding       | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 교육에 사용 합니다. |
+| >>>> medicalBuilding         | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 병원과 같이 의료 목적으로 사용 합니다. |
+| >>>> transitBuilding         | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 공항 같은 전송에 사용 합니다. |
+| >> transportation            | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 교통망의 일부인 줄(예: 도로, 기차, 및 여객선). |
+| >>> road                     | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 도로를 표시하는 줄. |
+| >>>> controlledAccessHighway | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 큰 제어 된 액세스 권한을 고속도 나타내는 선입니다. |
+| >>>>> highSpeedRamp          | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 일반적으로 연결 하는 고속 램프를 나타내는 선 고속도 액세스를 제어 합니다. |
+| >>>> highway                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 고속도 나타내는 선입니다. |
+| >>>> majorRoad               | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 주요도 나타내는 선입니다. |
+| >>>> arterialRoad            | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Arterial도 나타내는 선입니다. |
+| >>>> street                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 거리를 나타내는 선입니다. |
+| >>>>> ramp                   | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 고속도로에 연결 하는 일반적으로 경사를 나타내는 선입니다. |
+| >>>>> unpavedStreet          | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Unpaved 거리를 나타내는 선입니다. |
+| >>>> tollRoad                | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 사용에 대 한 비용으로로 나타내는 선입니다. |
+| >>> railway                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 철로길. |
+| >>> trail                    | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 공원 또는 자국 하이킹 코스 산책로. |
+| >>> 보 행 통로                  | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 관리자 권한 보 행 통로입니다. |
+| >>> waterRoute               | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 페리 경로 선. |
+| >> water                     | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 물처럼 보이는 모든 것. 바다 및 물결이 포함됩니다. |
+| >>> river                    | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 강, 물결 또는 기타 수로.  선 또는 다각형일 수 있으며 강이 아닌 수공간에 연결될 수 있습니다. |
+| > routeMapElement            | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 라우팅 관련된 항목 |
+| >> routeLine                 | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 선 라우팅 관련 항목입니다. |
+| >>> drivingRoute             | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 주행 경로 나타내는 선입니다. |
+| >>> scenicRoute              | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Scenic 주행 경로 나타내는 선입니다. |
+| >>> walkingRoute             | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 줄 경로 탐색을 나타냅니다. |
+| > userMapElement             | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 사용자 항목입니다. |
+| >> userBillboard             | [mapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 기본 [MapBillboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard) 인스턴스에 대한 스타일. |
+| >> userLine                  | [mapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 기본 [MapPolyline](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mappolyline) 인스턴스에 대한 스타일. |
 | >> userModel3D               | [MapElement3D](#mapelement3d) |      |  ✔   |  ✔   |  ✔   | 기본 [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d) 인스턴스에 대한 스타일.  주로 renderAsSurface 설정에 사용됩니다. |
 | >> userPoint                 | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 기본 [MapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapicon) 인스턴스에 대한 스타일. |
 

@@ -20,7 +20,7 @@ ms.locfileid: "57624478"
 
 **중요 한 Api**
 
--   [**Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603)
+-   [**지리적 위치**](https://msdn.microsoft.com/library/windows/apps/br225603)
 -   [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)
 
 이 항목에서는 사용자 위치에 액세스해야 하는 앱에 대한 성능 지침에 대해 설명합니다.
@@ -161,8 +161,8 @@ ms.locfileid: "57624478"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [한 지역 구분 설정](https://msdn.microsoft.com/library/windows/apps/mt219702)
-* [현재 위치를 가져옵니다.](https://msdn.microsoft.com/library/windows/apps/mt219698)
+* [지오펜스 설정](https://msdn.microsoft.com/library/windows/apps/mt219702)
+* [현재 위치 가져오기](https://msdn.microsoft.com/library/windows/apps/mt219698)
 * [2D 사용 하 여 지도 표시 3D 및 Streetside 뷰](https://msdn.microsoft.com/library/windows/apps/mt219695)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
 * [UWP 위치 샘플 (지리적 위치)](https://go.microsoft.com/fwlink/p/?linkid=533278)

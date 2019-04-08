@@ -20,7 +20,7 @@ ms.locfileid: "57663798"
 사용자가 항목을 탭할 때 사용자에게 시각적 피드백을 제공하려면 포인터 애니메이션을 사용합니다. 포인터 아래로 애니메이션은 눌린 항목을 약간 축소하고 기울이며 항목을 처음 탭할 때 재생됩니다. 포인터 위로 애니메이션은 항목을 원래 위치로 복원하며 사용자가 포인터를 놓을 때 재생됩니다.
 
 
-> **중요 한 Api**: [**PointerUpThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969168)하십시오 [ **PointerDownThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969164)
+> **중요 API**: [**PointerUpThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969168)하십시오 [ **PointerDownThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969164)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항

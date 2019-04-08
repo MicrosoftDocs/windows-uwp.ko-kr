@@ -98,4 +98,4 @@ Direct3D 응용 프로그램은 데칼링을 사용하여 특정 원형 이미�
 
 [그래픽 파이프라인](graphics-pipeline.md)
 
-[Output-Merger Stage](https://msdn.microsoft.com/library/windows/desktop/bb205120)
+[출력 병합기 단계](https://msdn.microsoft.com/library/windows/desktop/bb205120)

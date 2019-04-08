@@ -124,6 +124,6 @@ else
 * [LanguageFont](/uwp/api/Windows.Globalization.Fonts.LanguageFont?branch=live)
 
 ## <a name="related-topics"></a>관련 항목
-* [UI 및 앱 패키지 매니페스트에 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
+* [UI 및 앱 패키지 매니페스트의 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
 * [언어, 배율 및 다른 한정자에 대 한 리소스를 조정 합니다.](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md)

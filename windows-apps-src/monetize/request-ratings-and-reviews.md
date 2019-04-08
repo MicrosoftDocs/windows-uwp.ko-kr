@@ -132,9 +132,9 @@ private async Task PromptUserToRateApp()
 
 | 필드          | 설명                                                                                                                                   |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| *status*       | 고객이 평점 또는 리뷰를 성공적으로 제출했는지 여부를 나타내는 문자열입니다. 지원되는 값은 **success** 및 **aborted**입니다. |
-| *data*         | 이름이 *updated*인 단일 부울 값이 포함된 개체입니다. 이 값은 고객이 기존 평점 또는 리뷰를 업데이트했는지 여부를 나타냅니다. *data* 개체는 성공 응답에만 포함됩니다. |
-| *errorDetails* | 요청에 대한 오류 세부 정보가 있는 문자열입니다.                                                                                     |
+| *상태*       | 고객이 평점 또는 리뷰를 성공적으로 제출했는지 여부를 나타내는 문자열입니다. 지원되는 값은 **success** 및 **aborted**입니다. |
+| *데이터*         | 이름이 *updated*인 단일 부울 값이 포함된 개체입니다. 이 값은 고객이 기존 평점 또는 리뷰를 업데이트했는지 여부를 나타냅니다. *data* 개체는 성공 응답에만 포함됩니다. |
+| *ErrorDetails* | 요청에 대한 오류 세부 정보가 있는 문자열입니다.                                                                                     |
 
 ## <a name="launch-the-rating-and-review-page-for-your-app-in-the-store"></a>Microsoft Store에서 앱의 평점 및 리뷰 페이지 시작
 
@@ -155,5 +155,5 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 ## <a name="related-topics"></a>관련 항목
 
 * [저장소에 요청을 전송 합니다.](send-requests-to-the-store.md)
-* [Microsoft Store 앱 시작](../launch-resume/launch-store-app.md)
+* [Microsoft Store 앱 열기](../launch-resume/launch-store-app.md)
 * [리뷰 보고서](../publish/reviews-report.md)

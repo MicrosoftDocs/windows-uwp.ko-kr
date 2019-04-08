@@ -20,7 +20,7 @@ ms.locfileid: "57625118"
 
 사용자는 이동 또는 스크롤을 통해 단일 보기 내에서 탐색하여 뷰포트 내에 맞지 않는 보기의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서의 라이브러리 또는 사진 앨범이 있습니다.
 
-> **중요 한 Api**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **중요 API**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)하십시오 [ **Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항

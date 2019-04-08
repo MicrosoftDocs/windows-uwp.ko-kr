@@ -21,7 +21,7 @@ ms.locfileid: "57620418"
 
 항목을 보기로 가져오거나 보기 외부로 이동하려면 페이드 애니메이션을 사용합니다. 두 가지의 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
 
-> **중요 한 Api**: [**FadeInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210298)하십시오 [ **FadeOutThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210302)
+> **중요 API**: [**FadeInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210298)하십시오 [ **FadeOutThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210302)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항

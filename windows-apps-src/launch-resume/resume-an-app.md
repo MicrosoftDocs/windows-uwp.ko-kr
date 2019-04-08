@@ -127,5 +127,5 @@ Windows Phone 스토어 앱에서는 앱이 현재 일시 중단되었으며 사
 ## <a name="related-topics"></a>관련 항목
 
 * [앱 수명 주기](app-lifecycle.md)
-* [앱 활성화를 처리 합니다.](activate-an-app.md)
-* [핸들 앱 일시 중단](suspend-an-app.md)
+* [앱 활성화 처리](activate-an-app.md)
+* [앱 일시 중단 처리](suspend-an-app.md)

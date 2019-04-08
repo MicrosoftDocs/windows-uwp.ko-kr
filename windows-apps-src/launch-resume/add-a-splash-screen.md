@@ -53,4 +53,4 @@ Visual Studio 템플릿을 사용하여 앱을 만드는 경우 기본 이미지
 
 * [사용자 지정된 시작 화면 만들기](create-a-customized-splash-screen.md)
 * [패키지 매니페스트 스키마 참조: SplashScreen 요소](https://msdn.microsoft.com/library/windows/apps/br211467)
-* [Windows.ApplicationModel.Activation.SplashScreen class](https://msdn.microsoft.com/library/windows/apps/br224763)
+* [Windows.ApplicationModel.Activation.SplashScreen 클래스](https://msdn.microsoft.com/library/windows/apps/br224763)

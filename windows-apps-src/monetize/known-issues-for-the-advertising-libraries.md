@@ -67,7 +67,7 @@ ms.locfileid: "57641068"
 
 Microsoft Advertising SDK를 사용할 때는 프로젝트의 **어떤 CPU**도 대상으로 지정할 수 없습니다. 프로젝트의 대상이 **모든 CPU** 플랫폼인 경우 다음과 유사한 참조를 추가한 후 경고가 나타날 수 있습니다.
 
-![referenceerror\-solutionexplorer](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
+![referenceerror\-솔루션 탐색기](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
 
 이 경고를 제거하려면 아키텍처별 빌드 출력(예: **x86**)을 사용하도록 프로젝트를 업데이트합니다. **구성 관리자**를 사용하여 디버그 및 릴리스 구성에 대한 플랫폼 대상을 설정합니다.
 

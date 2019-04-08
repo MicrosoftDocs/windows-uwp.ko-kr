@@ -65,7 +65,7 @@ ms.locfileid: "57640278"
 ## <a name="related-topics"></a>관련 항목
 
 * [앱 내 광고](in-app-ads.md)
-* [Microsoft Advertising SDK를 사용 하 여 앱에서 광고를 표시 합니다.](../monetize/display-ads-in-your-app.md)
+* [Microsoft Advertising SDK를 사용하여 앱에 광고 표시](../monetize/display-ads-in-your-app.md)
 * [Ad 단위를 사용 하 여 가시성을 최적화](../monetize/optimize-ad-unit-viewability.md)
 
 

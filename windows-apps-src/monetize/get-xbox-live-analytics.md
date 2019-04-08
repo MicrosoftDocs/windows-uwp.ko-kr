@@ -7,7 +7,7 @@ keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
 ms.openlocfilehash: 74c898630641e8b0d53a181d1874c6df62baaa78
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57637088"
@@ -100,8 +100,8 @@ Authorization: Bearer <your access token>
 |  applicationId               |    문자열     |   분석 데이터를 검색한 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.  |
 |  userCount               |    문자열     |   **ProductData** 개체에서 이 필드는 지난 30일 동안 게임을 플레이한 고객 수를 지정합니다. **XboxwideData** 개체에서 이 필드는 항상 1이며, 이는 모든 Xbox Live 고객의 데이터에 대해 100% 시작 비율을 나타냅니다.   |     
 |  dvrUsageCounts               |   배열      |  게임 플레이를 기록하고 보기 위해 게임 DVR을 사용한 고객 수를 표시하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**dvrName**: 게임 DVR 지정 기능을 사용 합니다. 가능한 값은 **gameClipUploads**, **gameClipViews**, **screenshotUploads** 및 **screenshotViews**입니다.</li><li>**userCount**: 에 **ProductData** 개체를이 필드 지정된 게임 DVR 기능을 사용 하는 게임 고객의 수를 지정 합니다. **XboxwideData** 개체에서 이 필드는 지정된 게임 DVR 기능을 사용한 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>   |     
-|  followerCountPercentiles               |   배열      |  고객의 팔로워 수에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**percentage**: 현재이 값은 항상 50, 팔로 워 데이터 중간 값으로 제공 되도록 나타내는입니다.</li><li>**value**: 에 **ProductData** 개체를이 필드는 게임의 고객에 대 한 팔로 워의 중앙값 숫자를 지정 합니다. **XboxwideData** 개체에서 이 필드는 모든 Xbox Live 고객의 팔로워 수를 중간 값으로 지정합니다.</li></ul>  |   
-|  friendCountPercentiles               |   배열      |  고객의 친구 수에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**percentage**: 현재이 값은 항상 50, 친구 데이터 중간 값으로 제공 되도록 나타내는입니다.</li><li>**value**: 에 **ProductData** 개체를이 필드는 게임 고객을 위한 친구의 중앙값 숫자를 지정 합니다. **XboxwideData** 개체에서 이 필드는 모든 Xbox Live 고객의 친구 수를 중간 값으로 지정합니다.</li></ul>  |     
+|  followerCountPercentiles               |   배열      |  고객의 팔로워 수에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**백분율**: 현재이 값은 항상 50, 팔로 워 데이터 중간 값으로 제공 되도록 나타내는입니다.</li><li>**값**: 에 **ProductData** 개체를이 필드는 게임의 고객에 대 한 팔로 워의 중앙값 숫자를 지정 합니다. **XboxwideData** 개체에서 이 필드는 모든 Xbox Live 고객의 팔로워 수를 중간 값으로 지정합니다.</li></ul>  |   
+|  friendCountPercentiles               |   배열      |  고객의 친구 수에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**백분율**: 현재이 값은 항상 50, 친구 데이터 중간 값으로 제공 되도록 나타내는입니다.</li><li>**값**: 에 **ProductData** 개체를이 필드는 게임 고객을 위한 친구의 중앙값 숫자를 지정 합니다. **XboxwideData** 개체에서 이 필드는 모든 Xbox Live 고객의 친구 수를 중간 값으로 지정합니다.</li></ul>  |     
 |  gamerScoreRangeDistribution               |   배열      |  고객의 게이머 점수 분포에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**scoreRange**: 다음 필드는 사용 현황 데이터를 제공 하는 게임 범위입니다. 예를 들어 **10K-25K**입니다.</li><li>**userCount**: 에 **ProductData** 개체를이 필드는 게임을 재생 한 이러한 모든 게임에 대 한 지정된 된 범위에 있는 게임 고객의 수를 지정 합니다. **XboxwideData** 개체에서 이 필드는 고객이 플레이한 모든 게임에 대해 게이머 점수가 지정된 범위에 포함되는 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>  |
 |  titleGamerScoreRangeDistribution               |   배열      |  게임의 게이머 점수 분포에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**scoreRange**: 다음 필드는 사용 현황 데이터를 제공 하는 게임 범위입니다. 예를 들어 **100-200**입니다.</li><li>**userCount**: 에 **ProductData** 개체를이 필드는 게임 게임에 대 한 지정된 된 범위에 있는 게임 고객의 수를 지정 합니다. **XboxwideData** 개체에서 이 필드는 사용자 게임에 대해 게이머 점수가 지정된 범위에 포함되는 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>   |
 |  socialUsageCounts               |   배열      |  고객의 소셜 사용에 대한 세부 정보를 제공하는 개체가 포함되어 있습니다. 각 개체에는 다음 두 개의 필드가 있습니다. <ul><li>**scName**: 소셜 사용량의 형식입니다. 예를 들어 **gameInvites** 및 **textMessages**입니다.</li><li>**userCount**: 에 **ProductData** 개체를이 필드는 지정 된 소셜 사용 형식에 참가 한 게임 고객 수가 지정 합니다. **XboxwideData** 개체에서 이 필드는 지정된 소셜 사용 유형에 참여한 모든 Xbox Live 고객의 백분율을 지정합니다.</li></ul>   |

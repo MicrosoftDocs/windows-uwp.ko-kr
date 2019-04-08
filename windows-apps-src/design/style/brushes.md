@@ -17,7 +17,7 @@ ms.locfileid: "57634868"
 
 [  **Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 개체를 사용하여 그릴 개체가 UI에 표시되도록 XAML 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그릴 수 있습니다. 사용 가능한 브러시와 이러한 브러시를 사용하는 방법을 살펴보겠습니다.
 
-> **중요 한 Api**:  [Brush 클래스](/uwp/api/Windows.UI.Xaml.Media.Brush)
+> **중요 API**:  [Brush 클래스](/uwp/api/Windows.UI.Xaml.Media.Brush)
 
 ## <a name="introduction-to-brushes"></a>브러시 소개
 

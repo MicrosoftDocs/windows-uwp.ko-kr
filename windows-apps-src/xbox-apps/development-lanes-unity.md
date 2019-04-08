@@ -59,5 +59,5 @@ Unity 게임 프로젝트에서 **파일 -> 빌드 설정**에 있는 **빌드 �
 새롭게 생성된 이 UWP 디렉터리 부분을 버전 제어에 추가해야 하는 몇 가지 일반적인 상황이 있습니다. 예를 들어 새 종속성을 UWP 프로젝트에 추가하는 경우입니다(예: Xbox Live SDK).  이 예제는 [UWP 프로젝트 버전 제어](development-lanes-unity-versioning.md)에서 자세히 살펴봅니다.
 
 ## <a name="see-also"></a>참고 항목
-- [기존 게임을 Xbox에 가져오기](development-lanes-landing.md)
+- [기존 게임을 Xbox로 가져오기](development-lanes-landing.md)
 - [Xbox One에서 UWP](index.md)

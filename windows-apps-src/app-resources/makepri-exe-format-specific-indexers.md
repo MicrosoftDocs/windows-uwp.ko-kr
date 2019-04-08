@@ -8,7 +8,7 @@ keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a245c4ec0280f687cf34e85123960e64fe36a57
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57645878"
@@ -397,7 +397,7 @@ ResW 인덱서는 RESW의 `type` 특성에 의해 식별됩니다. 문자열 리
 
 ## <a name="related-topics"></a>관련 항목
 
-* [MakePri.exe 사용 하 여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
+* [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
 * [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md)
 * [MakePri.exe 구성 파일](makepri-exe-configuration.md)
 * [Application/json 미디어 형식에 대 한 개체 JSON (JavaScript Notation)](https://www.ietf.org/rfc/rfc4627.txt)

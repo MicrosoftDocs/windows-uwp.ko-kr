@@ -7,7 +7,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 075eaf5c02e5bddb4b87d7e4aaf931cbfde53cdd
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57616418"
@@ -107,7 +107,7 @@ PushNotificationChannel webChannel =
 <table>
 
 <tr class="header">
-<th align="left"><b>Type</b></th>
+<th align="left"><b>형식</b></th>
 <th align="left"><b>푸시 알림?</b></th>
 <th align="left"><b>타일/배지 푸시?</b></th>
 <th align="left"><b>원시 알림 푸시?</b></th>

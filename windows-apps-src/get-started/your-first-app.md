@@ -46,7 +46,7 @@ C + + 프로그래밍 지식이 Visual c + + 구성 요소 확장을 사용 하 
 
 여기에서 C++에 대한 자세한 정보를 볼 수 있습니다.
 
-* [C++: 범용 언어 및 라이브러리 빠른 시작](https://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
+* [C + +: 범용 언어 및 라이브러리 빠른 시작](https://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
 * [Microsoft Virtual Academy](https://go.microsoft.com/fwlink/p/?LinkID=389916)
 
 "Hello, World!"보다 약간 더 재미있는 무언가를 시도할 준비가 되었다면, 다음 자습서를 시도해 보세요.

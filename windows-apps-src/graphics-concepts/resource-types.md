@@ -120,7 +120,7 @@ Direct3D에는 셰이더 상수 버퍼 또는 간단히 상수 버퍼라고 하�
 텍스처는 크기를 알 수 있도록 구조화된 리소스로 생성됩니다. 그러나 텍스처가 파이프라인에 바인딩될 때 보기를 사용해 형식이 완전히 지정되면 리소스 생성 시간에 각 텍스처에 형식이 있거나 없을 수 있습니다.
 
 -   [질감 형식](#texture-types)
--   [Subresources](#subresources)
+-   [하위](#subresources)
 -   [강력한 vs입니다. 약한 형식화](#typed)
 
 ### <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspanspan-idtexture-typesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span><span id="texture-types"></span>질감 형식

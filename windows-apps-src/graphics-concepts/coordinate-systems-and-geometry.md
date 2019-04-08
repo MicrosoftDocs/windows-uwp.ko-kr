@@ -19,7 +19,7 @@ ms.locfileid: "57646298"
 
 Direct3D 응용 프로그램을 프로그래밍하려면 3D 기하 도형 원칙 작업에 익숙해야 합니다. 이 섹션에서는 3D 장면을 만드는 데 필요한 가장 중요한 기하 도형 개념을 소개합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션에서
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>

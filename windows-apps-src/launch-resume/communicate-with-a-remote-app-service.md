@@ -88,6 +88,6 @@ URI를 사용하여 원격 디바이스에서 앱을 실행하는 것은 물론 
 
 [연결 된 앱 및 장치 (프로젝트 로마) 개요](connected-apps-and-devices.md)  
 [원격 앱 시작](launch-a-remote-app.md)  
-[만들기 및 app service를 사용 합니다.](how-to-create-and-consume-an-app-service.md)  
+[앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)  
 [원격 시스템 API 참조](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
 [원격 시스템 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)

@@ -51,15 +51,15 @@ experienceType=”shoulderTap”
 
 + **src**
     + 자산의 URI입니다. HTTP/HTTPS 웹 URI, msappx URI 또는 로컬 파일의 경로일 수 있습니다.
-+ **spritesheet-src**
++ **spritesheet src**
     + 자산의 URI입니다. HTTP/HTTPS 웹 URI, msappx URI 또는 로컬 파일의 경로일 수 있습니다. 스프라이트시트 애니메이션에만 필요합니다.
-+ **spritesheet-height**
++ **spritesheet 높이**
     + 프레임 높이(픽셀)입니다. 스프라이트시트 애니메이션에만 필요합니다.
-+ **spritesheet-fps**
++ **spritesheet fps**
     + 초당 프레임(FPS)입니다. 스프라이트시트 애니메이션에만 필요합니다. 1-120 범위의 값만 지원됩니다.
-+ **spritesheet-startingFrame**
++ **spritesheet startingFrame**
     + 애니메이션을 시작하는 프레임 수입니다. 스프라이트시트 애니메이션에만 사용되며 값을 입력하지 않으면 기본값 0이 사용됩니다.
-+ **alt**
++ **Alt**
     + 화면 읽기 프로그램 내레이터에 사용되는 텍스트 문자열입니다.
 
 > [!NOTE]

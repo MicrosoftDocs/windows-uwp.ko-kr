@@ -122,12 +122,12 @@ void App::DeleteWithTasks(String^ fileName)
 | | |
 |--------------------------------------------------------|---------------------|
 | 람다 반환 형식                                     | `.then` 반환 형식 |
-| TResult                                                | task<TResult> |
-| IAsyncOperation<TResult>^                        | task<TResult> |
-| IAsyncOperationWithProgress&lt;TResult, TProgress&gt;^ | task<TResult> |
-|IAsyncAction^                                           | task<void>    |
-| IAsyncActionWithProgress<TProgress>^             |task<void>     |
-| task<TResult>                                    |task<TResult>  |
+| TResult                                                | 작업<TResult> |
+| IAsyncOperation<TResult>^                        | 작업<TResult> |
+| IAsyncOperationWithProgress&lt;TResult, TProgress&gt;^ | 작업<TResult> |
+|IAsyncAction^                                           | 작업<void>    |
+| IAsyncActionWithProgress<TProgress>^             |작업<void>     |
+| 작업<TResult>                                    |작업<TResult>  |
 
 
 ## <a name="canceling-tasks"></a>작업 취소
@@ -292,7 +292,7 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
 * [Visual c + + 언어 참조](https://msdn.microsoft.com/library/windows/apps/hh699871.aspx)
 * [비동기 프로그래밍][AsyncProgramming]
 * [작업 병렬 처리(동시성 런타임)][taskParallelism]
-* [concurrency::task](/cpp/parallel/concrt/reference/task-class)
+* [concurrency:: task](/cpp/parallel/concrt/reference/task-class)
 
 <!-- LINKS -->
 [AsyncProgramming]: <https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps> "AsyncProgramming"

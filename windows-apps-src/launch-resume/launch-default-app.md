@@ -33,12 +33,12 @@ URI 스키마를 사용하면 하이퍼링크를 클릭하여 앱을 열 수 있
 |[bingmaps: ms 드라이브-간,:, 및 ms 워크: ](#maps-app-uri-schemes) | 지도 앱 |
 |[http:](#http-uri-scheme) | 기본 웹 브라우저 |
 |[mailto:](#email-uri-scheme) | 기본 메일 앱 |
-|[ms-call:](#call-app-uri-scheme) |  통화 앱 |
-|[ms-chat:](#messaging-app-uri-scheme) | 메시지 앱 |
-|[ms-people:](#people-app-uri-scheme) | 피플 앱 |
-|[ms-photos:](#photos-app-uri-scheme) | 사진 앱 |
-|[ms-settings:](#settings-app-uri-scheme) | 설정 앱 |
-|[ms-store:](#store-app-uri-scheme)  | 스토어 앱 |
+|[ms 호출 합니다.](#call-app-uri-scheme) |  통화 앱 |
+|[ms-채팅:](#messaging-app-uri-scheme) | 메시지 앱 |
+|[ms-사람:](#people-app-uri-scheme) | 피플 앱 |
+|[ms-사진:](#photos-app-uri-scheme) | 사진 앱 |
+|[ms-설정:](#settings-app-uri-scheme) | 설정 앱 |
+|[ms 스토어:](#store-app-uri-scheme)  | 스토어 앱 |
 |[ms-tonepicker:](#tone-picker-uri-scheme) | 톤 선택기 |
 |[ms-yellowpage:](#nearby-numbers-app-uri-scheme) | 근처 전화 번호 앱 |
 |[msnweather:](#weather-app-uri-scheme) | 날씨 앱 |
@@ -217,7 +217,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 |------------|--------|
 | ms-photos:viewer?fileName={filename} | 사진 앱을 실행하여 지정된 이미지를 봅니다. 여기서, {filename}은 정규화된 경로 이름입니다. 예를 들면 다음과 같습니다. `c:\users\userName\Pictures\ImageToView.jpg` |
 | ms-photos:videoedit?InputToken={input token} | 파일 토큰에 의해 표시되는 파일을 위해 사진 앱을 비디오 편집 모드로 실행합니다. **InputToken**은 필수입니다. [SharedStorageAccessManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager)를 사용하여 파일의 토큰을 가져옵니다. |
-| ms-photos:videoedit?Action={action} | 선택적 매개 변수 Photos 앱은 {action}는 중에 지정 된 비디오 편집 모드에서 열립니다. **SlowMotion**, **FrameExtraction**, **Trim**, **View**, **Ink**. 이를 지정하지 않는 경우 기본값은 **View**입니다. |
+| ms-photos:videoedit?Action={action} | 선택적 매개 변수 Photos 앱은 {action}는 중에 지정 된 비디오 편집 모드에서 열립니다. **SlowMotion**, **FrameExtraction**를 **Trim**를 **보기**를 **잉크**합니다. 이를 지정하지 않는 경우 기본값은 **View**입니다. |
 | ms-photos:videoedit?StartTime={timespan} | 비디오 재생을 시작할 위치를 지정하는 선택적 매개 변수입니다. `{timespan}` 형식에서 이어야 합니다 `"hh:mm:ss.ffff"`합니다. 지정 하지 않으면 기본값은 `00:00:00.0000` |
 
 ### <a name="settings-app-uri-scheme"></a>설정 앱 URI 스키마
@@ -244,4 +244,4 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 | URI 스키마 | 결과 |
 |------------|---------|
-| msnweather://forecast?la=\[latitude\]&lo=\[longitude\] | 위치 지리 좌표를 기준으로 예측 페이지에서 날씨 앱을 시작 합니다.<br>`latitude` 위치의 위도 가리킵니다.<br> `longitude` 위치의 경도 가리킵니다.<br> |
+| msnweather://forecast?la=\[위도\]& lo =\[경도\] | 위치 지리 좌표를 기준으로 예측 페이지에서 날씨 앱을 시작 합니다.<br>`latitude` 위치의 위도 가리킵니다.<br> `longitude` 위치의 경도 가리킵니다.<br> |
