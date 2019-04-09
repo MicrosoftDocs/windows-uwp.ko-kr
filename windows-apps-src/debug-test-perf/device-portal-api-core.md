@@ -2,16 +2,16 @@
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: 디바이스 포털 핵심 API 참조
 description: 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다.
-ms.date: 03/22/2017
+ms.date: 4/8/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f541a27a96b88b37d3f32b98246ba0ccbe2c8cf
-ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.openlocfilehash: 58ae7d83c0889131313d136c13048b83a861f601
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/08/2019
-ms.locfileid: "59067858"
+ms.locfileid: "59244139"
 ---
 # <a name="device-portal-core-api-reference"></a>디바이스 포털 핵심 API 참조
 
@@ -2803,7 +2803,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | SecondayDNS | (**필요** 경우 *PrimaryDNS* null이 아닌) 정적 보조 DNS를 설정 합니다. |
 
 이해를 돕기 위해 serialize에 인터페이스 DHCP를 설정 하려면만 `AdapterName` 통신 중에:
-```
+
+```json
 {
     "AdapterName":"{82F86C1B-2BAE-41E3-B08D-786CA44FEED7}"
 }
