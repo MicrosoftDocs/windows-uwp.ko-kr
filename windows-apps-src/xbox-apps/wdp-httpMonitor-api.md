@@ -4,12 +4,12 @@ description: Xbox의 중심 앱에서 HTTP 트래픽에 액세스하는 방법�
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
-ms.openlocfilehash: 8b8828b060e0401e7938517e497bae20e1234baf
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1e7c07c92c1671cd9051393586e1e8562fa756d0
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244099"
 ---
 # <a name="http-monitor-api-reference"></a>HTTP 모니터 API 참조   
 개발자 홈에 있는 상자를 체크하여 HTTP 모니터를 Xbox 콘솔에서 사용할 수 있는 경우 이 API를 사용하여 중심 앱에 대한 실시간 HTTP 트래픽에 액세스할 수 있습니다.
@@ -22,8 +22,8 @@ HTTP 모니터가 개발자 홈에서 활성화되어 있는지 여부를 가져
 
 메서드      | 요청 URI
 :------     | :-----
-GET | /ext/httpmonitor/sessions
-<br />
+가져오기 | /ext/httpmonitor/sessions
+
 **URI 매개 변수**
 
 - 없음
@@ -52,6 +52,7 @@ HTTP 상태 코드      | 설명
 5XX | 오류 코드
 
 ## <a name="get-http-traffic-from-the-focused-app"></a>중심 앱에서 HTTP 트래픽 가져오기
+
 **요청**
 
 HTTP 모니터가 개발자 홈에서 활성화되어 있는 경우 실시간으로 Xbox의 중심 앱(시스템 앱이 아닌 경우)에서 HTTP 트래픽을 가져옵니다.
@@ -59,7 +60,7 @@ HTTP 모니터가 개발자 홈에서 활성화되어 있는 경우 실시간으
 메서드      | 요청 URI
 :------     | :-----
 Websocket | /ext/httpmonitor/sessions
-<br />
+
 **URI 매개 변수**
 
 - 없음
@@ -98,7 +99,7 @@ HTTP 상태 코드      | 설명
 403 | HTTP 모니터가 비활성화됨, 개발자 홈에서 활성화해야 함
 5XX | 오류 코드
 
-<br />
-**사용 가능한 장치 패밀리**
+
+**사용 가능한 디바이스 패밀리**
 
 * Windows Xbox

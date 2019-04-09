@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e65ad1f4dcb5a83eb7336fc8e1eb794b107dcf01
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7cae075b0d71925eb35ac2362aef291994b29801
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244409"
 ---
 # <a name="xaml-theme-resources"></a>XAML 테마 리소스
 
@@ -65,7 +65,7 @@ XAML 프레임워크는 "밝게" 및 "어둡게" 테마에 맞게 조정된 값�
 
 이 표에서 키, 단순한 이름 및 색의 문자열 표현 (사용 하 여는 \#aarrggbb 형식) XAML 프레임 워크에서 제공 되는 "Light" 및 "어두운" 리소스에 대 한 합니다. 이 키는 앱에서 리소스를 참조하는 데 사용됩니다. "간단한 밝게/어둡게 이름"은 뒷부분에서 설명되는 브러시 이름 지정 규칙의 일부로 사용됩니다.
 
-| 키                             | 간단한 밝게/어둡게 이름 | 밝게      | 어둡게       |
+| Key                             | 간단한 밝게/어둡게 이름 | 밝게      | 어둡게       |
 |---------------------------------|------------------------|------------|------------|
 | SystemAltHighColor              | AltHigh                | \#FFFFFFFF | \#FF000000 |
 | SystemAltLowColor               | AltLow                 | \#33FFFFFF | \#33000000 |
@@ -123,7 +123,7 @@ XAML 프레임워크는 "밝게" 및 "어둡게" 테마에 맞게 조정된 값�
     :::column-end:::
 :::row-end:::
 
-#### <a name="list"></a>List
+#### <a name="list"></a>목록
 
 :::row:::
     :::column:::
@@ -134,7 +134,7 @@ XAML 프레임워크는 "밝게" 및 "어둡게" 테마에 맞게 조정된 값�
     :::column-end:::
 :::row-end:::
 
-#### <a name="chrome"></a>크롬
+#### <a name="chrome"></a>Chrome
 
 :::row:::
     :::column:::
@@ -151,16 +151,16 @@ XAML 프레임워크에서 제공하는 리소스 집합 외에, Windows 시스�
 
 다음 표에서는 XAML이 제공하는 시스템 수준 색을 Windows 시스템 팔레트에서 가져온 리소스 개체로 표시합니다. "접근성 이름" 열에는 Windows 설정 UI에서 색 레이블이 지정되는 방식이 표시됩니다. "간단한 고대비 이름" 열은 일반적인 XAML 컨트롤에서 색이 적용되는 방식을 한 단어로 나타냅니다. 이 설명은 뒷부분에서 설명되는 브러시 이름 지정 규칙의 일부로 사용됩니다. "초기 기본값" 열에는 시스템이 고대비에서 실행 중이 아닐 경우 얻게 되는 값이 표시됩니다.
 
-| 키                           | 접근성 이름            | 단순한 고대비 이름 | 초기 기본값 |
+| Key                           | 접근성 이름            | 단순한 고대비 이름 | 초기 기본값 |
 |-------------------------------|--------------------------------|--------------------------|-----------------|
 | SystemColorButtonFaceColor    | **단추 텍스트**(배경)   | 배경               | \#FFF0F0F0      |
 | SystemColorButtonTextColor    | **단추 텍스트**(전경)   | 전경               | \#FF000000      |
-| SystemColorGrayTextColor      | **비활성된 텍스트**              | 사용 안 함                 | \#FF6D6D6D      |
+| SystemColorGrayTextColor      | **사용 불가 텍스트**              | 사용 안 함                 | \#FF6D6D6D      |
 | SystemColorHighlightColor     | **선택한 텍스트**(배경) | Highlight                | \#FF3399FF      |
 | SystemColorHighlightTextColor | **선택한 텍스트**(전경) | HighlightAlt             | \#FFFFFFFF      |
 | SystemColorHotlightColor      | **하이퍼링크**                 | Hyperlink                | \#FF0066CC      |
 | SystemColorWindowColor        | **배경**                 | PageBackground           | \#FFFFFFFF      |
-| SystemColorWindowTextColor    | **텍스트**                       | PageText                 | \#FF000000      |
+| SystemColorWindowTextColor    | **텍스트 모드**                       | PageText                 | \#FF000000      |
 
 Windows는 다양한 고대비 테마를 제공하고 다음과 같이 사용자가 접근성 센터를 통해 고대비 설정에 특정 색을 설정할 수 있도록 합니다. 따라서 고대비 색 값의 확정된 목록을 제공할 수는 없습니다.
 
@@ -177,7 +177,7 @@ Windows는 다양한 고대비 테마를 제공하고 다음과 같이 사용자
 
 ### <a name="theme-dependent-brushes"></a>테마 종속 브러시
 
-위 섹션에 표시된 색 리소스는 시스템 테마 리소스 사전에서 [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 리소스의 [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 속성을 설정하는 데 사용됩니다. 브러시 리소스를 사용하여 XAML 요소에 색을 적용합니다. 브러시 리소스에 대한 키는 다음 이름 지정 형식을 따릅니다. `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. 예를 들면 `SystemControlBackroundAltHighBrush`입니다.
+위 섹션에 표시된 색 리소스는 시스템 테마 리소스 사전에서 [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 리소스의 [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 속성을 설정하는 데 사용됩니다. 브러시 리소스를 사용하여 XAML 요소에 색을 적용합니다. 브러시 리소스에 대한 키는 다음 이름 지정 형식을 따릅니다. `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. `SystemControlBackroundAltHighBrush`) 을 입력합니다.
 
 런타임에 이 브러시에 대한 색 값이 결정되는 방식을 알아보겠습니다. "밝게" 및 "어둡게" 리소스 사전에서 이 브러시는 다음과 같이 정의됩니다.
 
@@ -240,7 +240,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 <Style x:Key="BaseTextBlockStyle" TargetType="TextBlock">
     <Setter Property="FontFamily" Value="Segoe UI"/>
     <Setter Property="FontWeight" Value="SemiBold"/>
-    <Setter Property="FontSize" Value="15"/>
+    <Setter Property="FontSize" Value="14"/>
     <Setter Property="TextTrimming" Value="None"/>
     <Setter Property="TextWrapping" Value="Wrap"/>
     <Setter Property="LineStackingStrategy" Value="MaxHeight"/>
@@ -318,7 +318,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 <Style x:Key="BodyTextBlockStyle" TargetType="TextBlock" 
        BasedOn="{StaticResource BaseTextBlockStyle}">
     <Setter Property="FontWeight" Value="Normal"/>
-    <Setter Property="FontSize" Value="15"/>
+    <Setter Property="FontSize" Value="14"/>
 </Style>
 ```
 
@@ -352,7 +352,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 <Style x:Key="BaseRichTextBlockStyle" TargetType="RichTextBlock">
     <Setter Property="FontFamily" Value="Segoe UI"/>
     <Setter Property="FontWeight" Value="SemiBold"/>
-    <Setter Property="FontSize" Value="15"/>
+    <Setter Property="FontSize" Value="14"/>
     <Setter Property="TextTrimming" Value="None"/>
     <Setter Property="TextWrapping" Value="Wrap"/>
     <Setter Property="LineStackingStrategy" Value="MaxHeight"/>
@@ -402,7 +402,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 
 ### <a name="navigationbackbuttonnormalstyle"></a>NavigationBackButtonNormalStyle
 
-**TargetType**: [단추](https://msdn.microsoft.com/library/windows/apps/br209265)
+**TargetType**: [Button](https://msdn.microsoft.com/library/windows/apps/br209265)
 
 이 [Style](https://msdn.microsoft.com/library/windows/apps/br208849)은 탐색 앱을 위한 탐색 뒤로 단추가 될 수 있는 [Button](https://msdn.microsoft.com/library/windows/apps/br209265)용 전체 템플릿을 제공합니다. 기본 크기는 40 x 40 픽셀입니다. 스타일을 조정하기 위해 **Button**에 대해 [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height), [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width), [FontSize](https://msdn.microsoft.com/library/windows/apps/br209406) 및 다른 속성을 명시적으로 설정하거나 [BasedOn](https://msdn.microsoft.com/library/windows/apps/br208852)을 사용하여 파생된 스타일을 만들 수 있습니다.
 
@@ -418,7 +418,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 
 ### <a name="navigationbackbuttonsmallstyle"></a>NavigationBackButtonSmallStyle
 
-**TargetType**: [단추](https://msdn.microsoft.com/library/windows/apps/br209265)
+**TargetType**: [Button](https://msdn.microsoft.com/library/windows/apps/br209265)
 
 이 [Style](https://msdn.microsoft.com/library/windows/apps/br208849)은 탐색 앱을 위한 탐색 뒤로 단추가 될 수 있는 [Button](https://msdn.microsoft.com/library/windows/apps/br209265)용 전체 템플릿을 제공합니다. **NavigationBackButtonNormalStyle**과 비슷하지만, 치수가 30 Ⅹ 30 픽셀입니다.
 

@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 1e2c8b7d9fb7bdc61595296a137c4448cadf52d3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: f1cc576bbc7fe7fc326d86072e22b7a385cfeb8b
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57629268"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913953"
 ---
 # <a name="item-templates-for-grid-view"></a>그리드 보기의 항목 템플릿
 
@@ -19,7 +19,7 @@ ms.locfileid: "57629268"
 증상을 보여 주기 위해 이러한 템플릿에 바인딩할 **GridViewItems** 예제에서는 기록 클래스에는 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)합니다.
 
 > [!NOTE] 
-현재 **DataTemplate**에 여러 개의 컨트롤이 포함되어 있는 경우(예: 둘 이상의 **TextBlock**), 화면 읽기 프로그램의 접근 가능한 기본 이름은 해당 항목의 .ToString()에서 가져옵니다. 편의상 **DataTemplate**의 루트 요소에 있는 [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties)을 대신 설정할 수 있습니다. 접근성에 대한 자세한 내용은 [접근성 개요](../accessibility/accessibility-overview.md)를 참조하세요.
+> 현재 **DataTemplate**에 여러 개의 컨트롤이 포함되어 있는 경우(예: 둘 이상의 **TextBlock**), 화면 읽기 프로그램의 접근 가능한 기본 이름은 해당 항목의 .ToString()에서 가져옵니다. 편의상 **DataTemplate**의 루트 요소에 있는 [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties)을 대신 설정할 수 있습니다. 접근성에 대한 자세한 내용은 [접근성 개요](../accessibility/accessibility-overview.md)를 참조하세요.
 
 ## <a name="icon-and-text"></a>아이콘 및 텍스트
 이 템플릿을 사용하여 아이콘과 텍스트가 있는 그리드에 앱 컬렉션을 표시합니다.
@@ -158,6 +158,6 @@ ms.locfileid: "57629268"
 ## <a name="related-articles"></a>관련 문서
 - [GridView 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)
-- [Accessibililty 개요](../accessibility/accessibility-overview.md)
-- [ListView 및 GridView 샘플 (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
+- [접근성 개요](../accessibility/accessibility-overview.md)
+- [ListView 및 GridView 샘플(Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
 - [미리 보기 이미지](../../files/thumbnails.md)

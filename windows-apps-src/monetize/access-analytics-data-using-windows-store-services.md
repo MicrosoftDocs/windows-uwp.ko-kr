@@ -2,17 +2,17 @@
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Microsoft Store 분석 API를 사용 하 여 프로그래밍 방식으로 또는 사용자의 조직에 등록 된 앱에 대 한 분석 데이터를 검색 하려면 ' s Windows 파트너 센터 계정.
 title: 스토어 서비스를 사용하여 분석 데이터에 액세스
-ms.date: 06/04/2018
+ms.date: 03/06/2019
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 72e0941bb42a2a507af652758432ce51212c1042
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: ab3e223c99a13e4520d5bc603454881803a3cb64
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592658"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334861"
 ---
 # <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 
@@ -54,7 +54,7 @@ Microsoft Store 분석 API에서 메서드를 호출하기 전에 먼저 API에 
 
 액세스 토큰을 가져오려면 [클라이언트 자격 증명을 사용한 서비스 간 호출](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/)의 지침에 따라 HTTP POST를 ```https://login.microsoftonline.com/<tenant_id>/oauth2/token``` 끝점에 보냅니다. 다음은 샘플 요청입니다.
 
-```
+```json
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
 Host: login.microsoftonline.com
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -75,13 +75,19 @@ grant_type=client_credentials
 
 Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 준비가 된 것입니다. 액세스 토큰을 각 메서드의 **Authorization** 헤더로 전달해야 합니다.
 
-### <a name="methods-for-uwp-apps"></a>UWP 앱의 메서드
+### <a name="methods-for-uwp-apps-and-games"></a>UWP 앱 및 게임용 메서드
+다음 방법 앱과 게임 획득 및 추가 기능 구매에 사용할 수 있습니다. 
+
+* [게임 및 앱 구매 데이터를 가져오기](acquisitions-data.md)
+* [게임 및 응용 프로그램에 대 한 추가 기능 구매 데이터를 가져오기](add-on-acquisitions-data.md)
+
+### <a name="methods-for-uwp-apps"></a>UWP 앱의 메서드 
 
 다음 analytics 메서드는 파트너 센터에서 UWP 앱에서 사용할 수 있습니다.
 
 | 시나리오       | 메서드      |
 |---------------|--------------------|
-| 합병, 변환, 설치 및 사용 |  <ul><li>[인 앱 구매 가져오기](get-app-acquisitions.md)</li><li>[앱 취득 깔때기 데이터 가져오기](get-acquisition-funnel-data.md)</li><li>[앱 변환 채널에서 가져오기](get-app-conversions-by-channel.md)</li><li>[추가 기능 구매 가져오기](get-in-app-acquisitions.md)</li><li>[추가 기능 구매 구독 가져오기](get-subscription-acquisitions.md)</li><li>[채널에서 추가 기능 변환 가져오기](get-add-on-conversions-by-channel.md)</li><li>[앱 설치 가져오기](get-app-installs.md)</li><li>[앱의 일일 사용량 가져오기](get-app-usage-daily.md)</li><li>[월별 앱 사용량 가져오기](get-app-usage-monthly.md)</li></ul> |
+| 합병, 변환, 설치 및 사용 |  <ul><li>[인 앱 구매 가져오기](get-app-acquisitions.md) (레거시)</li><li>[앱 취득 깔때기 데이터를 가져올](get-acquisition-funnel-data.md) (레거시)</li><li>[앱 변환 채널에서 가져오기](get-app-conversions-by-channel.md)</li><li>[추가 기능 구매 가져오기](get-in-app-acquisitions.md)</li><li>[추가 기능 구매 구독 가져오기](get-subscription-acquisitions.md)</li><li>[채널에서 추가 기능 변환 가져오기](get-add-on-conversions-by-channel.md)</li><li>[앱 설치 가져오기](get-app-installs.md)</li><li>[앱의 일일 사용량 가져오기](get-app-usage-daily.md)</li><li>[월별 앱 사용량 가져오기](get-app-usage-monthly.md)</li></ul> |
 | 앱 오류 | <ul><li>[오류 보고 데이터 가져오기](get-error-reporting-data.md)</li><li>[앱에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)</li><li>[앱에서 오류에 대 한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[앱에서 오류에 대 한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
 | Insights | <ul><li>[앱에 대 한 insights 데이터를 가져오기](get-insights-data-for-your-app.md)</li></ul>  |
 | 평점 및 리뷰 | <ul><li>[앱 등급을 가져와서](get-app-ratings.md)</li><li>[앱 검토를 가져오기](get-app-reviews.md)</li></ul> |
@@ -100,7 +106,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 ### <a name="methods-for-xbox-live-services"></a>Xbox Live 서비스의 메서드
 
-다음 추가 메서드는 [Xbox Live 서비스](../xbox-live/developer-program-overview.md)를 사용하는 게임의 개발자 계정에서 사용할 수 있습니다.
+다음 추가 메서드는 [Xbox Live 서비스](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md)를 사용하는 게임의 개발자 계정에서 사용할 수 있습니다.
 
 | 시나리오       | 메서드      |
 |---------------|--------------------|
@@ -126,7 +132,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 다음 코드 예제는 Azure AD 액세스 토큰을 얻고 C# 콘솔 앱에서 Microsoft Store 분석 API를 호출하는 방법을 보여 줍니다. 이 코드 예제를 사용하려면 시나리오에 맞는 적절한 값을 *tenantId*, *clientId*, *clientSecret* 및 *appID* 변수에 할당합니다. 이 예제에서 Microsoft Store 분석 API가 반환한 JSON 데이터를 역직렬화하려면 Newtonsoft의 [Json.NET 패키지](https://www.newtonsoft.com/json)가 필요합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[AnalyticsApi](./code/StoreServicesExamples_Analytics/cs/Program.cs#AnalyticsApiExample)]
+[!code-csharp[AnalyticsApi](./code/StoreServicesExamples_Analytics/cs/Program.cs#AnalyticsApiExample)]
 
 ## <a name="error-responses"></a>오류 응답
 

@@ -6,19 +6,19 @@ ms.date: 10/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a245c4ec0280f687cf34e85123960e64fe36a57
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: e07c0b2730da258126465fbeea917b32ef9d23e6
+ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645878"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320606"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>MakePri.exe 형식별 인덱서
 
 이 항목에서는 리소스 인덱스를 생성하기 위해 [MakePri.exe](compile-resources-manually-with-makepri.md) 도구에 의해 사용되는 형식별 인덱서에 대해 설명합니다.
 
 > [!NOTE]
-> 확인할 때 MakePri.exe 되어는 **앱을 관리 하는 UWP 용 Windows SDK** Windows 소프트웨어 개발 키트를 설치 하는 동안 옵션입니다. 경로에 설치 되어 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (물론 다른 아키텍처에 대 한 명명 된 폴더). 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
+> 확인할 때 MakePri.exe 되어는 **앱을 관리 하는 UWP 용 Windows SDK** Windows 소프트웨어 개발 키트를 설치 하는 동안 옵션입니다. 경로에 설치 되어 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (물론 다른 아키텍처에 대 한 명명 된 폴더). `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`) 을 입력합니다.
 
 MakePri.exe는 일반적으로 `new`, `versioned`, 또는 `resourcepack` 명령과 함께 사용됩니다. [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md)을 참조하세요. 이러한 경우 원본 파일을 인덱싱하여 리소스 인덱스를 생성합니다. MakePri.exe는 다른 소스 리소스 파일 또는 리소스 컨테이너를 읽기 위해 다양한 개별 인덱서를 사용합니다. 가장 단순한 인덱서는 폴더 인덱서이며 `.jpg`또는 `.png` 이미지 등의 폴더의 콘텐츠를 인덱싱합니다.
 
@@ -28,7 +28,7 @@ MakePri.exe는 일반적으로 `new`, `versioned`, 또는 `resourcepack` 명령�
 
 일반적으로 폴더 또는 파일과 같이 이를 포함하는 엔터티에서 찾을 수 있는 한정자는 해당 폴더 또는 `.resw` 파일 내에 있는 모든 리소스에 적용됩니다. 예를 들면 폴더 내의 파일, 또는 `.resw` 파일 내의 문자열입니다.
 
-## <a name="folder"></a>폴더
+## <a name="folder"></a>Folder
 
 폴더 인덱서는 FOLDER의 `type` 특성에 의해 식별됩니다. 폴더의 콘텐츠를 인덱싱하며 폴더 및 파일 이름에서 리소스 한정자를 결정합니다. 구성 요소는 다음 스키마를 준수합니다.
 
@@ -284,12 +284,14 @@ ResFiles 인덱서는 RESFILES의 `type` 특성에 의해 식별됩니다. `.res
 
 `.resfiles` 파일은 파일 경로의 단순 목록을 포함하는 텍스트 파일입니다. `.resfiles` 파일에는 "//" 설명이 포함될 수 있습니다. 예를 들면 다음과 같습니다.
 
-```
+<blockquote>
+<pre>
 Strings\component1\fr\elements.resjson
 Images\logo.scale-100.png
 Images\logo.scale-140.png
 Images\logo.scale-180.png
-```
+</pre>
+</blockquote>
 
 ## <a name="resjson"></a>ResJSON
 

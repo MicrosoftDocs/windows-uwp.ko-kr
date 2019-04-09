@@ -2,28 +2,31 @@
 ms.assetid: e04ebe3f-479c-4b48-99d8-3dd4bb9bfaf4
 title: 사용자 지정 SSL 인증서로 Device Portal 프로비전
 description: TBD
-ms.date: 07/11/2017
+ms.date: 4/8/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: faef15d523f56b6e45f77e0ccdbb2f5846f7a15a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cbe813a58124b1cd80f352ae11e9dcff59b21da4
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244339"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a>사용자 지정 SSL 인증서로 Device Portal 프로비전
-Windows 10 크리에이터스 업데이트에서 Windows Device Portal은 장치 관리자가 HTTPS 통신에 사용할 사용자 지정 인증서를 설치하는 방법을 추가했습니다. 
+
+Windows 10 크리에이터스 업데이트에서 Windows Device Portal은 장치 관리자가 HTTPS 통신에 사용할 사용자 지정 인증서를 설치하는 방법을 추가했습니다.
 
 자체 PC에서 이 작업을 수행할 수도 있지만, 이 기능은 주로 기존의 인증서 인프라가 있는 기업을 대상으로 합니다.  
 
-예를 들어 회사가 HTTPS를 통해 제공되는 인트라넷 웹 사이트의 인증서에 서명하는 데 사용하는 CA(인증 기관)가 있을 수 있습니다. 이 기능은 해당 인프라의 최상위에 있습니다. 
+예를 들어 회사가 HTTPS를 통해 제공되는 인트라넷 웹 사이트의 인증서에 서명하는 데 사용하는 CA(인증 기관)가 있을 수 있습니다. 이 기능은 해당 인프라의 최상위에 있습니다.
 
 ## <a name="overview"></a>개요
+
 기본적으로 장치 포털 자체 서명 된 루트 CA를 생성 하 고에서 수신 대기 중인 모든 끝점에 대 한 SSL 인증서를 서명 하는. 여기에는 포함 `localhost`, `127.0.0.1` 및 `::1`(IPv6 로컬 호스트)이 포함됩니다.
 
-또한 장치의 호스트 이름(예: `https://LivingRoomPC`)과 장치에 할당된 각 링크 로컬 IP 주소(네트워크 어댑터당 최대 두 개[IPv4, IPv6])가 포함됩니다. Device Portal의 네트워킹 도구를 살펴보면 장치의 링크 로컬 IP 주소를 확인할 수 있습니다. 이는 IPv4에 대해 `10.` 또는 `192.`, IPv6에 대해 `fe80:`으로 시작합니다. 
+또한 장치의 호스트 이름(예: `https://LivingRoomPC`)과 장치에 할당된 각 링크 로컬 IP 주소(네트워크 어댑터당 최대 두 개[IPv4, IPv6])가 포함됩니다.
+Device Portal의 네트워킹 도구를 살펴보면 장치의 링크 로컬 IP 주소를 확인할 수 있습니다. 이는 IPv4에 대해 `10.` 또는 `192.`, IPv6에 대해 `fe80:`으로 시작합니다.
 
 기본 설정에서는 신뢰할 수 없는 루트 CA로 인해 브라우저에 인증서 경고가 표시될 수 있습니다. 특히 Device Portal에서 제공하는 SSL 인증서는 브라우저 또는 PC가 신뢰하지 않는 루트 CA에 의해 서명됩니다. 새 신뢰할 수 있는 루트 CA를 만들어서 이 문제를 해결할 수 있습니다.
 
@@ -42,7 +45,7 @@ $rootCA = New-SelfSignedCertificate -certstorelocation cert:\currentuser\my -Sub
 $rootCAFile = Export-Certificate -Cert $rootCA -FilePath $FilePath
 ```
 
-이 파일이 생성되면 _WdpTestCA.cer_ 파일을 사용하여 SSL 인증서에 서명할 수 있습니다. 
+이 파일이 생성되면 _WdpTestCA.cer_ 파일을 사용하여 SSL 인증서에 서명할 수 있습니다.
 
 ## <a name="create-an-ssl-certificate-with-the-root-ca"></a>루트 CA로 SSL 인증서 만들기
 
@@ -66,18 +69,19 @@ $certFile = Export-PfxCertificate -cert $cert -FilePath $FilePath -Password (Con
 
 여러 장치가 있는 경우 localhost .pfx 파일을 다시 사용할 수 있지만 각 장치에 대한 IP 주소 및 호스트 이름 인증서를 별도로 만들어야 합니다.
 
-.Pfx 파일의 번들 생성 되 면 Windows Device Portal 로드 해야 합니다. 
+.Pfx 파일의 번들 생성 되 면 Windows Device Portal 로드 해야 합니다.
 
 ## <a name="provision-device-portal-with-the-certifications"></a>인증서로 Device Portal 프로비전
 
 장치에 대해 만든 각 .pfx 파일의 경우 관리자 권한 명령 프롬프트에서 다음 명령을 실행해야 합니다.
 
-```
-WebManagement.exe -SetCert <Path to .pfx file> <password for pfx> 
+```cmd
+WebManagement.exe -SetCert <Path to .pfx file> <password for pfx>
 ```
 
 사용 예는 아래를 참조하세요.
-```
+
+```cmd
 WebManagement.exe -SetCert localhost.pfx PickAPassword
 WebManagement.exe -SetCert --1.pfx PickAPassword
 WebManagement.exe -SetCert MyLivingRoomPC.pfx PickAPassword
@@ -85,7 +89,7 @@ WebManagement.exe -SetCert MyLivingRoomPC.pfx PickAPassword
 
 인증서를 설치한 후, 변경 내용이 적용 되도록 서비스를 다시 시작 하면 됩니다.
 
-```
+```cmd
 sc stop webmanagement
 sc start webmanagement
 ```

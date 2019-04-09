@@ -5,16 +5,16 @@ ms.date: 10/20/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, agile, 개체, agility, IAgileObject
 ms.localizationpriority: medium
-ms.openlocfilehash: 2481396d9348250e14ebfc2d1f940b663b405f77
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0b390161a4eb2c4f38fed9bce226c5a5e92c5ad8
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639668"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291782"
 ---
-# <a name="agile-objects-in-cwinrt"></a>Agile 개체 C + + /cli WinRT
+# <a name="agile-objects-in-cwinrt"></a>Agile 개체의 C++/WinRT
 
-대부분의 경우 모든 스레드 (마찬가지로 대부분의 표준 c + + 개체)에서 Windows 런타임 클래스의 인스턴스를 액세스할 수 있습니다. 이러한 Windows 런타임 클래스는 *agile*합니다. 소수의 Windows와 함께 제공 되는 Windows 런타임 클래스는 agile, 하지만 해당 스레딩 모델 및 마샬링 동작을 고려해 야 필요가 하를 사용 하는 경우에 (마샬링은 데이터 전달 아파트 경계를 넘어). Agile, 되도록 모든 Windows 런타임 개체에 대 한 좋은 기본 하므로 고유한 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 형식은 기본적으로 agile 합니다.
+대부분의 경우 Windows 런타임 클래스 인스턴스의 모든 스레드에서 액세스할 수 있습니다 (대부분의 표준와 마찬가지로 C++ 개체 수)입니다. 이러한 Windows 런타임 클래스는 *agile*합니다. 소수의 Windows와 함께 제공 되는 Windows 런타임 클래스는 agile, 하지만 해당 스레딩 모델 및 마샬링 동작을 고려해 야 필요가 하를 사용 하는 경우에 (마샬링은 데이터 전달 아파트 경계를 넘어). Agile, 되도록 모든 Windows 런타임 개체에 대 한 좋은 기본 하므로 고유한 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 형식은 기본적으로 agile 합니다.
 
 하지만 옵트아웃할 수 있습니다. 예를 들어, 지정 된 단일 스레드 아파트에 상주할 형식의 개체를 요구 하는 것이 유리가 있을 수 있습니다. 이는 일반적으로 다시 표시 요구 사항과 관련이 있습니다. 하지만 점차 사용자 인터페이스(UI) API 조차도 Agile 개체를 제공하고 있습니다. 일반적으로 Agility는 가장 간단하면서 성능이 뛰어난 옵션입니다. 또한 활성화 팩터리를 구현할 때 해당하는 런타임 클래스가 Agile하지 않더라도 Agile을 설정해야 합니다.
 
@@ -23,7 +23,7 @@ ms.locfileid: "57639668"
 
 ## <a name="code-examples"></a>코드 예제
 
-설명 하기 위해 런타임 클래스의 예제 구현은 사용해 보겠습니다 어떻게 C + + /cli WinRT 민첩성을 지원 합니다.
+보겠습니다 런타임 클래스의 예제 구현을 설명 하기 위해 사용 하는 방법 C++/WinRT 민첩성을 지원 합니다.
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>
@@ -46,7 +46,7 @@ winrt::com_ptr<MyType> myimpl{ winrt::make_self<MyType>() };
 winrt::com_ptr<IAgileObject> iagileobject{ myimpl.as<IAgileObject>() };
 ```
 
-따라서 예외를 처리하지 않으려면 [**IUnknown::try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)를 호출하는 것이 좋습니다.
+따라서 예외를 처리하지 않으려면 [**IUnknown::try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function)를 호출하는 것이 좋습니다.
 
 ```cppwinrt
 winrt::com_ptr<IAgileObject> iagileobject{ myimpl.try_as<IAgileObject>() };
@@ -111,18 +111,18 @@ NonAgileType nonagile_obj_again{ agile.get() };
 winrt::hstring message{ nonagile_obj_again.Message() };
 ```
 
-[  **agile_ref::get**](/uwp/cpp-ref-for-winrt/agile-ref#agilerefget-function) 호출은 **get**이 호출되는 스레드 컨텍스트에서 안전하게 사용될 수 있도록 프록시를 반환합니다.
+[  **agile_ref::get**](/uwp/cpp-ref-for-winrt/agile-ref#agile_refget-function) 호출은 **get**이 호출되는 스레드 컨텍스트에서 안전하게 사용될 수 있도록 프록시를 반환합니다.
 
 ## <a name="important-apis"></a>중요 API
 
 * [IAgileObject 인터페이스](https://msdn.microsoft.com/library/windows/desktop/hh802476)
-* [IMarshal 인터페이스](https://docs.microsoft.com/previous-versions/windows/embedded/ms887993)
+* [IMarshal 인터페이스](/windows/desktop/api/objidl/nn-objidl-imarshal)
 * [winrt::agile_ref 구조체 템플릿](/uwp/cpp-ref-for-winrt/agile-ref)
 * [winrt::implements 구조체 템플릿](/uwp/cpp-ref-for-winrt/implements)
 * [winrt::make_agile 함수 템플릿](/uwp/cpp-ref-for-winrt/make-agile)
 * [winrt::non_agile 표식 구조체](/uwp/cpp-ref-for-winrt/non-agile)
 * [winrt::Windows::Foundation::IUnknown:: 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
-* [winrt::Windows::Foundation::IUnknown::try_as 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)
+* [winrt::Windows::Foundation::IUnknown::try_as function](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function)
 
 ## <a name="related-topics"></a>관련 항목
 

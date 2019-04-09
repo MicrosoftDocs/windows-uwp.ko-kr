@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 869f0ac2b255c0dee231828f6d9064a917668821
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d17a79c14e981ab0c2c0414074aff17c90a0b478
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646378"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291631"
 ---
 # <a name="line-strips"></a>선 스트립
-
 
 선 스트립은 연결된 선 세그먼트로 구성되는 기본 요소입니다. 응용 프로그램은 닫히지 않은 다각형을 만드는 데 선 스트립을 사용할 수 있습니다. 닫힌 다각형은 마지막 꼭짓점이 선 세그먼트에 의해 첫 번째 꼭짓점에 연결되는 다각형입니다. 응용 프로그램이 선 스트립을 기반으로 다각형을 만들면 꼭짓점이 동일 평면상에 있지 않을 수 있습니다.
 
@@ -28,7 +27,7 @@ ms.locfileid: "57646378"
 
 다음 코드는 이 선 스트립의 꼭짓점을 만드는 방법을 보여줍니다.
 
-```
+```cpp
 struct CUSTOMVERTEX
 {
     float x,y,z;
@@ -47,7 +46,7 @@ CUSTOMVERTEX Vertices[] =
 
 아래의 코드 예제는 Direct3D에서 선 스트립을 렌더링하는 방법을 보여줍니다.
 
-```
+```cpp
 //
 // It is assumed that d3dDevice is a valid
 // pointer to an IDirect3DDevice interface.

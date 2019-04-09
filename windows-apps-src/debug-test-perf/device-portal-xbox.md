@@ -6,12 +6,12 @@ ms.date: 02/12/2017
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 42077756beff4269cc91624502fb9958c580bbc0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9cbf94420b8ed7a2e030ccb2799a8636f56bef2f
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635718"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162929"
 ---
 # <a name="device-portal-for-xbox"></a>Xbox용 디바이스 포털
 
@@ -53,7 +53,7 @@ Xbox 장치 포털은 Winodws 장치 포털에서 사용할 수 있는 것과 �
 
 ### <a name="xbox-live-game-saves"></a>Xbox Live(게임 저장)
 
-Windows 장치 포털과 Xbox 장치 포털 모두에 **Xbox Live** 페이지가 있습니다. 그러나 Xbox 장치 포털에는 Xbox에 설치된 게임 데이터를 저장할 수 있는 **Xbox Live 게임 저장**이라는 고유 섹션이 있습니다. **SCID(서비스 구성 ID)**(자세한 정보는 [Xbox Live 서비스 구성](../xbox-live/xbox-live-service-configuration.md#get-your-ids)을 참조), **Membername (MSA)**, 제목 및 게임 저장과 연결된 **PFN(패키지 패밀리 이름)** 을 입력하고, **Input File (.json or .xml)** 을 찾고, 단추(**다시 설정**, **가져오기**, **내보내기**, **삭제**) 중 하나를 선택해 저장 데이터를 조작합니다.
+Windows 장치 포털과 Xbox 장치 포털 모두에 **Xbox Live** 페이지가 있습니다. 그러나 Xbox 장치 포털에는 Xbox에 설치된 게임 데이터를 저장할 수 있는 **Xbox Live 게임 저장**이라는 고유 섹션이 있습니다. **SCID(서비스 구성 ID)**(자세한 정보는 [Xbox Live 서비스 구성](https://docs.microsoft.com/gaming/xbox-live//xbox-live-service-configuration.md#get-your-ids)을 참조), **Membername (MSA)**, 제목 및 게임 저장과 연결된 **PFN(패키지 패밀리 이름)** 을 입력하고, **Input File (.json or .xml)** 을 찾고, 단추(**다시 설정**, **가져오기**, **내보내기**, **삭제**) 중 하나를 선택해 저장 데이터를 조작합니다.
 
 **생성** 섹션에서 더미 데이터를 생성하고 지정된 입력 파일을 저장할 수 있습니다. **컨테이너(기본값 2)**, **Blob(기본값 3)**, **Blob 크기(기본값 1024)** 를 입력하고 **생성**을 선택합니다.
 
@@ -199,7 +199,7 @@ Kinect 센서를 콘솔에 연결해야 이 설정을 변경할 수 있습니다
 
 ![게임 이벤트 데이터가 있는](images/device-portal-xbox-22.PNG)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 * [Windows Device Portal 개요](device-portal.md)
 * [장치 포털 core API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

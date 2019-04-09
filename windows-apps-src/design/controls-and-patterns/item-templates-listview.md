@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 397c1d3a1502eaa352bf66b1bbf24e3fa39beff2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0a772c0ec6aad2c0d6a099b54eb4c6faa413cc7b
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593058"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913943"
 ---
 # <a name="item-templates-for-list-view"></a>목록 보기의 항목 템플릿
 
@@ -19,13 +19,13 @@ ms.locfileid: "57593058"
 증상을 보여 주기 위해 이러한 템플릿에 바인딩할 **ListViewItems** 예제에서는 기록 클래스에는 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)합니다.
 
 > [!NOTE] 
-현재 **DataTemplate**에 여러 개의 컨트롤이 포함되어 있는 경우(예: 둘 이상의 **TextBlock**), 화면 읽기 프로그램의 접근 가능한 기본 이름은 해당 항목의 .ToString()에서 가져옵니다. 편의상 **DataTemplate**의 루트 요소에 있는 [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties)을 대신 설정할 수 있습니다. 접근성에 대한 자세한 내용은 [접근성 개요](../accessibility/accessibility-overview.md)를 참조하세요.
+> 현재 **DataTemplate**에 여러 개의 컨트롤이 포함되어 있는 경우(예: 둘 이상의 **TextBlock**), 화면 읽기 프로그램의 접근 가능한 기본 이름은 해당 항목의 .ToString()에서 가져옵니다. 편의상 **DataTemplate**의 루트 요소에 있는 [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties)을 대신 설정할 수 있습니다. 접근성에 대한 자세한 내용은 [접근성 개요](../accessibility/accessibility-overview.md)를 참조하세요.
 
 ## <a name="single-line-list-item"></a>한 줄 목록 항목
 이 템플릿을 사용하여 이미지와 한 줄 텍스트가 있는 항목 목록을 표시합니다.
 
 ![한 줄 목록 항목 예제](images/listitems/singlelineexample.png)
-![줄 목록 항목](images/listitems/singlelineicon.png)
+![한 줄 목록 항목](images/listitems/singlelineicon.png)
 ```xaml
 <ListView ItemsSource="{x:Bind ViewModel.Recordings}">
     <ListView.ItemTemplate>
@@ -42,8 +42,8 @@ ms.locfileid: "57593058"
 ## <a name="double-line-list-item"></a>두 줄 목록 항목 
 이 템플릿을 사용하여 이미지와 두 줄 텍스트가 있는 항목 목록을 표시합니다.
 
-![아이콘 예제를 사용 하 여 목록 항목 이중선](images/listitems/doublelineexample.png) 
-![이중선 목록 항목과 아이콘](images/listitems/doublelineicon.png)
+![아이콘이 있는 두 줄 목록 항목 예제](images/listitems/doublelineexample.png) 
+![아이콘이 있는 두 줄 목록 항목](images/listitems/doublelineicon.png)
 
 ```xaml
 <ListView ItemsSource="{x:Bind ViewModel.Recordings}">
@@ -68,8 +68,8 @@ ms.locfileid: "57593058"
 ## <a name="triple-line-list-item"></a>세 줄 목록 항목
 이 템플릿을 사용하여 세 줄 텍스트가 있는 항목 목록을 표시합니다.
 
-![삼중 선 목록 항목 예제](images/listitems/triplelineexample.png)
-![삼중 선 목록 항목](images/listitems/tripleline.png)
+![세 줄 목록 항목 예제](images/listitems/triplelineexample.png)
+![세 줄 목록 항목](images/listitems/tripleline.png)
 
 ```xaml
 <ListView ItemsSource="{x:Bind ViewModel.Recordings}">
@@ -131,6 +131,6 @@ ms.locfileid: "57593058"
 ## <a name="related-articles"></a>관련 문서
 - [ListView 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.listview)
 - [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)
-- [Accessibililty 개요](../accessibility/accessibility-overview.md)
-- [ListView 및 GridView 샘플 (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
+- [접근성 개요](../accessibility/accessibility-overview.md)
+- [ListView 및 GridView 샘플(Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
 - [미리 보기 이미지](../../files/thumbnails.md)

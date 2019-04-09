@@ -1,16 +1,16 @@
 ---
 Description: 패키지를 성공적으로 업로드하면 특정 Windows 10 장치 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지를 등급순으로 나타내는 표가 표시됩니다.
 title: 디바이스 패밀리 가용성
-ms.date: 10/31/2018
+ms.date: 03/21/2019
 ms.topic: article
 keywords: Windows 10, uwp, 패키지, 업로드, 장치 패밀리 가용성
 ms.localizationpriority: medium
-ms.openlocfilehash: 217a6ab9f25ee533a754138db5cf83c2ac81e3e9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 516339b33ac4cf8e29e320f442791402b64c6a94
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605358"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334630"
 ---
 # <a name="device-family-availability"></a>디바이스 패밀리 가용성
 
@@ -34,7 +34,7 @@ Windows.Universal 장치 패밀리를 대상으로 하는 패키지는 모든 Wi
 
 <span id="xbox" />
 
-Windows.Universal 패키지에 대해 기본적으로 선택되지 않은 유일한 Windows 10 장치 패밀리는 **Windows 10 Xbox**입니다. 앱이 게임이 아니거나 또는 게임인데 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 활성화했거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 마쳤고 제출에 Windows 10 SDK 버전 14393 이상을 사용하여 컴파일된 중립 및/또는 x64 UWP 패키지가 포함된 경우 **Windows 10 Xbox** 확인란을 선택하여 Xbox One 고객에게 앱을 제공할 수 있습니다.
+Windows.Universal 패키지에 대해 기본적으로 선택되지 않은 유일한 Windows 10 장치 패밀리는 **Windows 10 Xbox**입니다. 앱이 게임이 아니거나 또는 게임인데 [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators)을 활성화했거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 마쳤고 제출에 Windows 10 SDK 버전 14393 이상을 사용하여 컴파일된 중립 및/또는 x64 UWP 패키지가 포함된 경우 **Windows 10 Xbox** 확인란을 선택하여 Xbox One 고객에게 앱을 제공할 수 있습니다.
 
 > [!IMPORTANT]
 > Xbox 장치에서 앱을 시작하려면 Windows SDK 버전 14393 이상으로 컴파일된 중립 또는 x64 패키지를 포함해야 합니다. 그러나 **Windows 10 Xbox**를 선택한 경우, 이전 버전의 SDK를 사용하여 컴파일된 경우에도 항상 Xbox에서 적용할 수 있는 가장 높은 버전의 패키지(즉, Xbox 또는 유니버설 장치 패밀리를 대상으로 하는 중립 또는 x64 패키지)가 Xbox 고객에게 제공됩니다. 그러므로 Xbox에 적용할 수 있는 가장 높은 버전의 패키지가 Windows SDK 버전 14393 이상을 사용하여 컴파일되었는지 확인하는 것이 중요합니다. 그렇지 않은 경우 Xbox 고객이 앱을 시작할 수 없음을 나타내는 오류 메시지가 표시됩니다. 

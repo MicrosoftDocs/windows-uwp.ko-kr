@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aae797db890c6bee141c3b4a79a6a85a55a6b512
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 53fd2b132fda018030b7555a9cdac718ec1f1cc4
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653748"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291561"
 ---
 # <a name="triangle-lists"></a>삼각형 목록
-
 
 삼각형 목록은 격리된 삼각형의 목록입니다. 격리된 삼각형은 서로 가까울 수도 있고 가깝지 않을 수도 있습니다. 삼각형 목록에는 3개 이상의 꼭짓점이 있어야 하고 꼭짓점의 총수는 3의 배수여야 합니다.
 
@@ -32,7 +31,7 @@ ms.locfileid: "57653748"
 
 다음 코드는 이 삼각형 목록의 꼭짓점을 만드는 방법을 보여 줍니다.
 
-```
+```cpp
 struct CUSTOMVERTEX
 {
     float x,y,z;
@@ -52,7 +51,7 @@ CUSTOMVERTEX Vertices[] =
 
 아래의 코드 예제는 이 삼각형 목록을 Direct3D로 렌더링하는 방법을 보여 줍니다.
 
-```
+```cpp
 //
 // It is assumed that d3dDevice is a valid
 // pointer to a device interface.

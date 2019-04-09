@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트, 패키지 플라이트
 ms.localizationpriority: medium
-ms.openlocfilehash: c7e7ab4db7690cee86b76e39caa30b3c0fb25618
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6f55a218c0cb4f4964fe12eb8e2eeb5b504f6405
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57659878"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334781"
 ---
 # <a name="get-package-flights-for-an-app"></a>앱의 패키지 플라이트 가져오기
 
 Microsoft Store 제출 API 사용 하는이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 패키지 항공편을 나열 합니다. 패키지 플라이트에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -30,23 +30,23 @@ Microsoft Store 제출 API 사용 하는이 메서드를 사용 하 여 파트�
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights``` |
+| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights` |
 
 
 ### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| Authorization | string | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
 |  이름  |  형식  |  설명  |  필수  |
 |------|------|------|------|
-|  applicationId  |  문자열  |  패키지 플라이트를 검색하려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |  예  |
-|  top  |  int  |  요청에 반환할 항목 수(즉, 반환할 패키지 플라이트 수)입니다. 계정에 쿼리에서 지정한 값보다 더 많은 패키지 플라이트가 있을 경우 응답 본문에는 데이터의 다음 페이지를 요청하기 위해 메서드 URI에 추가할 수 있는 상대 URI 경로가 포함됩니다.  |  아니오  |
-|  skip  |  int  |  나머지 항목을 반환하기 전에 쿼리에서 바이패스할 항목 수입니다. 이 매개 변수를 사용하여 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10이고 skip=0이면 1-10 항목을 검색하고 top=10이고 skip=10이면 11-20 항목을 검색합니다.  |  아니오  |
+|  applicationId  |  string  |  패키지 플라이트를 검색하려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |  예  |
+|  top  |  ssNoversion  |  요청에 반환할 항목 수(즉, 반환할 패키지 플라이트 수)입니다. 계정에 쿼리에서 지정한 값보다 더 많은 패키지 플라이트가 있을 경우 응답 본문에는 데이터의 다음 페이지를 요청하기 위해 메서드 URI에 추가할 수 있는 상대 URI 경로가 포함됩니다.  |  아니요  |
+|  skip  |  ssNoversion  |  나머지 항목을 반환하기 전에 쿼리에서 바이패스할 항목 수입니다. 이 매개 변수를 사용하여 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10이고 skip=0이면 1-10 항목을 검색하고 top=10이고 skip=10이면 11-20 항목을 검색합니다.  |  아니요  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -57,14 +57,14 @@ Microsoft Store 제출 API 사용 하는이 메서드를 사용 하 여 파트�
 
 다음 예제에서는 앱의 모든 패키지 플라이트를 나열하는 방법을 보여 줍니다.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listflights HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
 다음 예제에서는 앱의 처음 패키지 플라이트를 나열하는 방법을 보여 줍니다.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listflights?top=1 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -101,9 +101,9 @@ Authorization: Bearer <your access token>
 
 | 값      | 형식   | 설명       |
 |------------|--------|---------------------|
-| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 2로 설정되어 있지만 앱의 패키지 플라이트가 4개인 경우 응답 본문에는 ```applications/{applicationid}/listflights/?skip=2&top=2```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2```를 호출하여 다음 2개의 패키지 플라이트를 호출할 수 있음을 나타냅니다. |
+| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 `https://manage.devcenter.microsoft.com/v1.0/my/` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 2로 설정되어 있지만 앱의 패키지 플라이트가 4개인 경우 응답 본문에는 `applications/{applicationid}/listflights/?skip=2&top=2`의 @nextLink 값이 포함되며 이는 `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2`를 호출하여 다음 2개의 패키지 플라이트를 호출할 수 있음을 나타냅니다. |
 | value      | 배열  | 지정된 앱의 패키지 플라이트에 대한 정보를 제공하는 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 [플라이트 리소스](get-app-data.md#flight-object)를 참조하세요.               |
-| totalCount | int    | 쿼리에 대한 데이터 결과의 총 행 수(즉, 지정한 앱의 총 패키지 플라이트 수)입니다.   |
+| totalCount | ssNoversion    | 쿼리에 대한 데이터 결과의 총 행 수(즉, 지정한 앱의 총 패키지 플라이트 수)입니다.   |
 
 
 ## <a name="error-codes"></a>오류 코드

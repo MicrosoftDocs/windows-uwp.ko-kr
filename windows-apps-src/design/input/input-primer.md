@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 80c834257e883d3aeb8594001344abd6ef14682c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: bae6e5b21369c30c8ed067fe7283c0a116d220b8
+ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596568"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343292"
 ---
 # <a name="interaction-primer"></a>조작 입문서
 
@@ -82,11 +82,11 @@ Windows 10에서 **Cortana** 확장성을 사용 하면 사용자의 음성 명�
 
 음성 명령은 **Cortana**를 통해 설치된 앱에 대한 VCD(음성 명령 정의) 파일에 정의된 한 번의 말하기입니다. 조작의 수준 및 복잡성에 따라 앱은 포그라운드 또는 백그라운드에서 시작될 수 있습니다. 예를 들어 추가 컨텍스트 또는 사용자 입력을 요구하는 음성 명령은 포그라운드에서 가장 잘 처리되는 반면, 기본 명령은 백그라운드에서 처리될 수 있습니다.
 
-앱의 기본 기능을 통합하고 사용자가 앱을 직접 열지 않고도 대부분의 작업을 수행할 수 있는 중앙 진입점을 제공하면 **Cortana**가 앱과 사용자 간의 연락을 담당하는 역할을 할 수 있습니다. 많은 경우 이렇게 하면 사용자의 시간과 노력을 상당히 줄일 수 있습니다. 자세한 내용은 [Cortana 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn974233)을 참조하세요.
+앱의 기본 기능을 통합하고 사용자가 앱을 직접 열지 않고도 대부분의 작업을 수행할 수 있는 중앙 진입점을 제공하면 **Cortana**가 앱과 사용자 간의 연락을 담당하는 역할을 할 수 있습니다. 많은 경우 이렇게 하면 사용자의 시간과 노력을 상당히 줄일 수 있습니다. 자세한 내용은 [Cortana 디자인 지침](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines)을 참조하세요.
 
 ### <a name="more-info"></a>추가 정보
 
-[Cortana 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn974233)
+[Cortana 디자인 지침](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines)
  
 
 ## <a name="speech"></a>음성 명령

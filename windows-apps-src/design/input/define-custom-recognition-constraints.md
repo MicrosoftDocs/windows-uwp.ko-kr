@@ -8,35 +8,30 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 539acb242cfe6ee70d1311133a3f1a193860541a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a83cbc547ede1977f0222298bf451611905fad50
+ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631728"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343262"
 ---
 # <a name="define-custom-recognition-constraints"></a>사용자 지정 인식 제약 조건 정의
 
-
-
 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다.
 
-> **중요 API**: [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)하십시오 [ **SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)하십시오 [ **SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
-
+> **중요 API**: [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446), [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421), [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
 
 인식할 수 있는 어휘를 정의하려면 음성 인식에 하나 이상의 제약 조건이 필요합니다. 제약 조건을 지정하지 않으면 유니버설 Windows 앱의 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
 
-
 ## <a name="add-constraints"></a>제약 조건 추가
-
 
 [  **SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 속성을 사용하여 음성 인식기에 제약 조건을 추가합니다.
 
-여기서는 앱 내에서 사용되는 세 종류의 음성 인식 제약 조건에 대해 설명합니다. 음성 명령 제약 조건에 대한 자세한 내용은 [Cortana에서 음성 명령으로 포그라운드 앱 시작](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana)을 참조하세요.
+여기서는 앱 내에서 사용되는 세 종류의 음성 인식 제약 조건에 대해 설명합니다. (Cortana 음성 명령 제약 조건 참조 [Cortana에서 음성 명령 사용 하 여 포그라운드 앱을 시작](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana).)
 
--   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)-미리 정의 된 문법 (받아쓰기 또는 웹 검색)를 기반으로 제약 조건입니다.
--   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)-단어 또는 문구의 목록에 따라 제약 조건입니다.
--   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)-음성 인식 문법 Specification (SRGS) 파일에 정의 된 제약 조건입니다.
+- [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)-미리 정의 된 문법 (받아쓰기 또는 웹 검색)를 기반으로 제약 조건입니다.
+- [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)-단어 또는 문구의 목록에 따라 제약 조건입니다.
+- [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)-음성 인식 문법 Specification (SRGS) 파일에 정의 된 제약 조건입니다.
 
 각 음성 인식기에 하나의 제약 조건 컬렉션을 사용할 수 있습니다. 다음과 같은 제약 조건 조합만 유효합니다.
 
@@ -88,13 +83,12 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 ## <a name="specify-a-programmatic-list-constraint-speechrecognitionlistconstraint"></a>프로그래밍 방식으로 목록 제약 조건(SpeechRecognitionListConstraint) 지정
 
-
 음성 인식기의 제약 조건 컬렉션에 목록 제약 조건을 추가해야 합니다.
 
 다음 사항을 기억하세요.
 
--   제약 조건 컬렉션에 여러 목록 제약 조건을 추가할 수 있습니다.
--   문자열 값에 대한 **IIterable&lt;String&gt;** 을 구현하는 모든 컬렉션을 사용할 수 있습니다.
+- 제약 조건 컬렉션에 여러 목록 제약 조건을 추가할 수 있습니다.
+- 문자열 값에 대한 **IIterable&lt;String&gt;** 을 구현하는 모든 컬렉션을 사용할 수 있습니다.
 
 여기서는 프로그래밍 방식으로 단어 배열을 목록 제약 조건으로 지정하고 음성 인식기의 제약 조건 컬렉션에 추가합니다.
 
@@ -128,28 +122,27 @@ private async void YesOrNo_Click(object sender, RoutedEventArgs e)
 
 ## <a name="specify-an-srgs-grammar-constraint-speechrecognitiongrammarfileconstraint"></a>SRGS 문법 제약 조건(SpeechRecognitionGrammarFileConstraint) 지정
 
-
 음성 인식기의 제약 조건 컬렉션에 SRGS 문법 파일을 추가해야 합니다.
 
 SRGS 버전 1.0은 음성 인식에 대한 XML 형식 문법을 만들기 위한 산업 표준 생성 언어입니다. 유니버설 Windows 앱에서는 음성 인식 문법을 만들 때 SRGS 외에 다른 방법을 사용할 수도 있지만, 특히 더 복잡한 음성 인식 시나리오의 경우 SRGS를 사용하여 문법을 만드는 방법이 최상의 결과를 생성한다는 것을 알 수 있습니다.
 
 SRGS 문법은 앱에 대한 복잡한 음성 조작을 구성하는 데 도움이 되는 전체 기능 집합을 제공합니다. 예를 들어 SRGS 문법을 사용하여 다음을 수행할 수 있습니다.
 
--   인식되는 단어와 구문을 말해야 하는 순서를 지정합니다.
--   인식되는 여러 목록과 구문의 단어를 조합합니다.
--   다른 문법에 연결합니다.
--   대체 단어나 구문에 가중치를 할당하여 음성 입력과 일치하는 데 사용될 가능성을 높이거나 낮춥니다.
--   선택적 단어나 구문을 포함합니다.
--   문법과 일치하지 않는 임의 음성이나 백그라운드 노이즈와 같은 지정되지 않거나 예상하지 못한 입력을 필터링하는 데 도움이 되는 특수 규칙을 사용합니다.
--   의미 체계를 사용하여 음성 인식이 앱에 어떤 의미인지를 정의합니다.
--   문법 또는 lexicon 링크를 통해 인라인으로 발음을 지정합니다.
+- 인식되는 단어와 구문을 말해야 하는 순서를 지정합니다.
+- 인식되는 여러 목록과 구문의 단어를 조합합니다.
+- 다른 문법에 연결합니다.
+- 대체 단어나 구문에 가중치를 할당하여 음성 입력과 일치하는 데 사용될 가능성을 높이거나 낮춥니다.
+- 선택적 단어나 구문을 포함합니다.
+- 문법과 일치하지 않는 임의 음성이나 백그라운드 노이즈와 같은 지정되지 않거나 예상하지 못한 입력을 필터링하는 데 도움이 되는 특수 규칙을 사용합니다.
+- 의미 체계를 사용하여 음성 인식이 앱에 어떤 의미인지를 정의합니다.
+- 문법 또는 lexicon 링크를 통해 인라인으로 발음을 지정합니다.
 
 SRGS 요소 및 특성에 대한 자세한 내용은 [SRGS 문법 XML 참고](https://go.microsoft.com/fwlink/p/?LinkID=269886)를 참조하세요. SRGS 문법 만들기를 시작하려면 [기본 XML 문법을 만드는 방법](https://go.microsoft.com/fwlink/p/?LinkID=269887)을 참조하세요.
 
 다음 사항을 기억하세요.
 
--   제약 조건 컬렉션에 여러 문법 파일 제약 조건을 추가할 수 있습니다.
--   SRGS 규칙을 준수하는 XML 기반 문법 문서에 .grxml 파일 확장명을 사용합니다.
+- 제약 조건 컬렉션에 여러 문법 파일 제약 조건을 추가할 수 있습니다.
+- SRGS 규칙을 준수하는 XML 기반 문법 문서에 .grxml 파일 확장명을 사용합니다.
 
 이 예제에서는 srgs.grxml이라는 파일에 정의된 SRGS 문법을 사용합니다(나중에 설명). 파일 속성에서 **패키지 동작**은 **콘텐츠**로 설정되고 **출력 디렉터리로 복사**는 **항상 복사**로 설정됩니다.
 
@@ -219,7 +212,6 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 
 ## <a name="manage-constraints"></a>제약 조건 관리
 
-
 인식에 대한 제약 조건 컬렉션이 로드된 후 앱은 제약 조건의 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402) 속성을 **true** 또는 **false**로 설정하여 인식 작업에 어떤 제약 조건을 사용할지 관리할 수 있습니다. 기본 설정은 **true**입니다.
 
 일반적으로 인식 작업별로 제약 조건을 로드, 언로드 및 컴파일하는 것이 아니라 제약 조건을 한 번 로드한 다음 필요에 따라 사용하거나 사용하지 않도록 설정하는 것이 더 효율적입니다. 필요한 경우 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402) 속성을 사용합니다.
@@ -232,15 +224,8 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 
 ## <a name="related-articles"></a>관련 문서
 
+- [음성 조작](speech-interactions.md)
 
-* [음성 조작](speech-interactions.md)
+### <a name="samples"></a>샘플
 
-**샘플**
-* [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
-
- 
-
-
-
-
+- [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897)

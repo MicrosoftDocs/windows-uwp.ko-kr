@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: efdf4214-9738-4df6-bf1f-ed7141696ef6
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bf4d62f390a5d324952ef2852a76803f4619fdc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6e1a6d2e0c408d37195f5a4764f71c2acc932ab5
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240011"
 ---
 # <a name="register-an-app-in-a-loose-folder"></a>느슨한 폴더에 앱 등록  
 
@@ -21,8 +21,8 @@ ms.locfileid: "57593808"
 
 메서드      | 요청 URI
 :------     | :------
-POST | /api/app/packagemanager/register
-<br />
+올리기 | /api/app/packagemanager/register
+
 **URI 매개 변수**
 
 요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
@@ -30,7 +30,6 @@ POST | /api/app/packagemanager/register
 URI 매개 변수      | 설명
 :------     | :-----
 폴더(필수) | 등록할 패키지의 대상 폴더 이름입니다. 이 폴더는 콘솔에서 d:\developmentfiles\LooseApps 아래에 있어야 합니다. 폴더가 LooseApps 아래의 하위 폴더인 경우 경로 구분 기호를 포함할 수 있으므로 이 폴더 이름은 base64로 인코딩되어야 합니다.
-<br />
 
 **요청 헤더**
 
@@ -51,12 +50,12 @@ HTTP 상태 코드      | 설명
 200 | 수락되어 처리 중인 요청 배포
 4XX | 오류 코드
 5XX | 오류 코드
-<br />
-**사용 가능한 장치 패밀리**
+
+**사용 가능한 디바이스 패밀리**
 
 * Windows Xbox
 
-**참고 사항**
+**참고**
 
 콘솔의 원하는 폴더에 느슨한 앱을 가져오는 세 가지 이상의 방법이 있습니다. SMB 통해 파일 복사 하는 방법이 가장 쉬운 \\< IP_Address > \DevelopmentFiles\LooseApps 합니다. 이 경우 [/ext/smb/developerfolder](wdp-smb-api.md)를 통해 가져올 수 있는 UWA 키트에 사용자 이름과 암호가 있어야 합니다. 
 

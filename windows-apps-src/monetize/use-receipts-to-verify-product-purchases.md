@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp. 앱에서 바로 구매, IAP, 영수증, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 9449a2dd265128a83f7840872ce4995df05a4e78
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6cae88e57a61e6d4e982f1eac7e65582861ef5d2
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605728"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335011"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>확인 메일을 사용하여 제품 구매 검증
 
@@ -92,7 +92,7 @@ ms.locfileid: "57605728"
 다음은 해당 유효성 검사 프로세스 예입니다. 이 코드는 **System.Security** 어셈블리에 대한 참조를 포함하는 .NET Framework 콘솔 응용 프로그램에서 실행됩니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
+[!code-csharp[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
 
 <span id="receipt-descriptions" />
 
@@ -106,15 +106,15 @@ ms.locfileid: "57605728"
 
 |  요소  |  필수  |  수량  |  설명   |
 |-------------|------------|--------|--------|
-|  [AppReceipt](#appreceipt)  |    아니오        |  0 또는 1  |  현재 앱에 대한 구매 정보를 포함합니다.            |
-|  [ProductReceipt](#productreceipt)  |     아니오       |  0개 이상    |   현재 앱에 대한 앱에서 바로 구매 정보를 포함합니다.     |
+|  [AppReceipt](#appreceipt)  |    아니요        |  0 또는 1  |  현재 앱에 대한 구매 정보를 포함합니다.            |
+|  [ProductReceipt](#productreceipt)  |     아니요       |  0개 이상    |   현재 앱에 대한 앱에서 바로 구매 정보를 포함합니다.     |
 |  서명  |      예      |  1   |   이 요소는 표준 [DSIG XML 구문](https://go.microsoft.com/fwlink/p/?linkid=251093)입니다. 영수증 유효성 검사에 사용할 수 있는 서명이 포함된 **SignatureValue** 요소와 **SignedInfo** 요소를 포함합니다.      |
 
 **Receipt**에는 다음 특성이 있습니다.
 
-|  특성  |  설명   |
+|  attribute  |  설명   |
 |-------------|-------------------|
-|  **버전**  |    영수증의 버전 번호입니다.            |
+|  **버전(Version)**  |    영수증의 버전 번호입니다.            |
 |  **CertificateId**  |     영수증에 서명하는 데 사용된 인증서 지문입니다.          |
 |  **ReceiptDate**  |    영수증이 서명되고 다운로드된 날짜입니다.           |  
 |  **ReceiptDeviceId**  |   이 영수증을 요청하는 데 사용된 디바이스를 식별합니다.         |  |
@@ -127,7 +127,7 @@ ms.locfileid: "57605728"
 
 **AppReceipt**에는 다음 특성이 있습니다.
 
-|  특성  |  설명   |
+|  attribute  |  설명   |
 |-------------|-------------------|
 |  **Id**  |    구매를 식별합니다.           |
 |  **AppId**  |     OS에서 앱에 사용하는 패키지 패밀리 이름 값입니다.           |
@@ -142,12 +142,12 @@ ms.locfileid: "57605728"
 
 **ProductReceipt**에는 다음 특성이 있습니다.
 
-|  특성  |  설명   |
+|  attribute  |  설명   |
 |-------------|-------------------|
 |  **Id**  |    구매를 식별합니다.           |
 |  **AppId**  |     사용자가 구매를 수행한 앱을 식별합니다.           |
-|  **productId**  |     구매한 제품을 식별합니다.           |
-|  **productType**  |    제품 유형을 결정합니다. 현재 **Durable** 값만 지원합니다.          |  
+|  **ProductId**  |     구매한 제품을 식별합니다.           |
+|  **ProductType**  |    제품 유형을 결정합니다. 현재 **Durable** 값만 지원합니다.          |  
 |  **PurchaseDate**  |    구매가 발생한 날짜입니다.          |  |
 
  

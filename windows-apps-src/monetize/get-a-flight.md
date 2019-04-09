@@ -6,18 +6,18 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트, 패키지 플라이트
 ms.localizationpriority: medium
-ms.openlocfilehash: c4ff6c929a7264b5dece0057701c8348fe5d39be
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: e4f96d503d52abe71cff6fcdd1295c862e551e09
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646038"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334391"
 ---
 # <a name="get-a-package-flight"></a>패키지 플라이트 가져오기
 
 Microsoft Store 제출 API 사용 하 여이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 패키지 항공편에 대 한 데이터를 가져오려고 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -30,22 +30,22 @@ Microsoft Store 제출 API 사용 하 여이 메서드를 사용 하 여 파트�
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}``` |
+| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}` |
 
 
 ### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| Authorization | string | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
 | 이름        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | 문자열 | 필수. 가져올 패키지 플라이트가 포함된 앱의 스토어 ID입니다. 파트너 센터에서 앱에 대 한 Store ID 제공 됩니다.  |
-| flightId | 문자열 | 필수. 가져올 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 파트너 센터에서 생성 된 비행이이 ID 파트너 센터에서 비행 페이지의 URL에서 사용할 수 있는 이기도 합니다.  |
+| applicationId | string | 필수. 가져올 패키지 플라이트가 포함된 앱의 스토어 ID입니다. 파트너 센터에서 앱에 대 한 Store ID 제공 됩니다.  |
+| flightId | string | 필수. 가져올 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 파트너 센터에서 생성 된 비행이이 ID 파트너 센터에서 비행 페이지의 URL에서 사용할 수 있는 이기도 합니다.  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -56,7 +56,7 @@ Microsoft Store 제출 API 사용 하 여이 메서드를 사용 하 여 파트�
 
 다음 예제에서는 스토어 ID 값이 9WZDNCRD91MD인 앱의 ID가 43e448df-97c9-4a43-a0bc-2a445e736bcd인 패키지 플라이트에 대한 정보를 검색하는 방법을 보여 줍니다.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights/43e448df-97c9-4a43-a0bc-2a445e736bcd HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -88,12 +88,12 @@ Authorization: Bearer <your access token>
 
 | 값      | 형식   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightId            | 문자열  | 패키지 플라이트의 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.  |
-| FriendlyName           | 문자열  | 개발자가 지정한 패키지 플라이트 이름입니다.   |  
-| lastPublishedFlightSubmission       | object | 패키지 플라이트의 마지막 게시된 제출에 대한 정보를 제공하는 개체입니다. 자세한 내용은 아래의 [제출 개체](#submission_object) 섹션을 참조하세요.  |
-| pendingFlightSubmission        | object  |  패키지 플라이트의 현재 보류 중인 제출에 대한 정보를 제공하는 개체입니다. 자세한 내용은 아래의 [제출 개체](#submission_object) 섹션을 참조하세요.  |   
+| flightId            | string  | 패키지 플라이트의 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.  |
+| FriendlyName           | string  | 개발자가 지정한 패키지 플라이트 이름입니다.   |  
+| lastPublishedFlightSubmission       | 개체(object) | 패키지 플라이트의 마지막 게시된 제출에 대한 정보를 제공하는 개체입니다. 자세한 내용은 아래의 [제출 개체](#submission_object) 섹션을 참조하세요.  |
+| pendingFlightSubmission        | 개체(object)  |  패키지 플라이트의 현재 보류 중인 제출에 대한 정보를 제공하는 개체입니다. 자세한 내용은 아래의 [제출 개체](#submission_object) 섹션을 참조하세요.  |   
 | groupIds           | 배열  | 패키지 플라이트와 연결된 플라이트 그룹의 ID가 포함된 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.   |
-| rankHigherThan           | 문자열  | 현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |
+| rankHigherThan           | string  | 현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |
 
 
 <span id="submission_object" />
@@ -104,8 +104,8 @@ Authorization: Bearer <your access token>
 
 | 값           | 형식    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id            | 문자열  | 제출의 ID입니다.    |
-| resourceLocation   | 문자열  | 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 제출에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다.               |
+| id            | string  | 제출의 ID입니다.    |
+| resourceLocation   | string  | 기본 `https://manage.devcenter.microsoft.com/v1.0/my/` 요청 URI에 추가하여 제출에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다.               |
 
 
 ## <a name="error-codes"></a>오류 코드

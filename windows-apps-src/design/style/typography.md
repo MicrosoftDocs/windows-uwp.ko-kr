@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0943273dab239669be75b30070222d698246aa41
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 76196add0829dcfa0aa638a2d8ae6995fafce69e
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610028"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244389"
 ---
 # <a name="typography"></a>입력 체계
 
@@ -19,7 +19,7 @@ ms.locfileid: "57610028"
 
 언어의 시각적인 표현으로서 입력 체계의 주요 목적은 정보를 전달하는 것입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 이 문서에서는 사용자가 콘텐츠를 쉽고 효율적으로 이해할 수 있도록 UWP 앱에서 입력 체계 스타일을 지정하는 방법에 대해 설명합니다.
 
-## <a name="font"></a>Font
+## <a name="font"></a>글꼴
 
 앱의 UI 전체에서 글꼴 하나를 사용해야 하며 UWP 앱의 기본 글꼴은 **Segoe UI**를 사용하는 것이 좋습니다. 크기와 픽셀 밀도에 따라 최적의 가독성을 유지하도록 설계되었으며 시스템의 콘텐츠를 보완하는 깔끔하고 가볍고 개방적인 디자인을 제공합니다.
 
@@ -72,7 +72,7 @@ UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니�
 
 UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를 수립하여 사용자가 콘텐츠를 쉽게 읽도록 해줍니다. 모든 크기는 유효 픽셀이고 모든 디바이스에서 실행되는 UWP 앱에 최적화되어 있습니다.
 
-![유형 램프](images/type/type-ramp.svg)
+![유형 램프](images/type/type-ramp.png)
 
 ### <a name="using-the-type-ramp"></a>유형 램프 사용
 
@@ -272,7 +272,7 @@ Sans-serif 글꼴은 제목 및 UI 요소에 적합합니다.
 <tr class="even">
 <td style="font-family: Selawik;">Selawik</td>
 <td align="left">보통, Semilight, 가늘게, 굵게, Semibold</td>
-<td align="left">Segoe UI와 계측적으로 호환되는 오픈 소스 글꼴이며 Segoe UI를 번들로 만들지 않으려는 다른 플랫폼의 앱을 위한 글꼴입니다. <a href="https://github.com/Microsoft/Selawik">GitHub에서 Selawik를 가져옵니다.</a></td>
+<td align="left">Segoe UI와 계측적으로 호환되는 오픈 소스 글꼴이며 Segoe UI를 번들로 만들지 않으려는 다른 플랫폼의 앱을 위한 글꼴입니다. <a href="https://github.com/Microsoft/Selawik">Github에서 Selawik를 가져옵니다.</a></td>
 </tr>
 
 </tbody>

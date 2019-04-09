@@ -4,17 +4,17 @@ title: 결제 요청 API로 결제를 간단하게
 ms.date: 09/26/2017
 ms.topic: article
 keywords: windows 10, uwp, 지불 요청
-ms.openlocfilehash: e5fb5cead7833b8cc213c6633cae6cee0da3466b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 36078c65d6762c8ed477a3a1342f3b6a0acaaa6f
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607868"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334591"
 ---
 # <a name="simplify-payments-with-the-payment-request-api"></a>결제 요청 API로 결제를 간단하게
 UWP 앱에 대 한 지불 요청 API 기반으로 합니다 [W3C 지불 요청 API 사양](https://w3c.github.io/browser-payment-api/)합니다. UWP 앱에서 체크 아웃 프로세스를 간소화 하는 기능 제공. 사용자가 체크 아웃을 통해 지불 옵션을 사용 하 고 이미 Microsoft 계정으로 저장 하는 주소를 전달 하 여 단축할 수 있습니다. 전환율을 높일 수 있으며 결제 정보를 토큰화 있으므로 데이터 침해 위험을 줄일 수 있습니다. Windows 10 크리에이터 스 업데이트부터, 사용자는 해당 저장 된 지불 옵션 UWP 앱에서 환경을 통해 쉽게 비용을 지불 사용할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 지불 요청 API를 사용 하 여 시작 하기 전에 수행 하거나 주의 해야 하는 몇 가지 있습니다.
 
 ### <a name="getting-a-merchant-id"></a>가맹점 ID를 가져오는 중
@@ -30,37 +30,37 @@ UWP 앱에 대 한 지불 요청 API 기반으로 합니다 [W3C 지불 요청 A
 > [!Note]
 > 대체는 **seller 포털에서 가맹점 id** 판매 업체를 사용 하 여 텍스트 ID 판매자 센터에서 받은 것입니다.
 
-[!code-cs[SnippetEnumerate](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetEnumerate)]
+[!code-csharp[SnippetEnumerate](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetEnumerate)]
 
 ### <a name="2-pull-the-payment-details-together"></a>2. 지불 정보를 함께 가져오기. 
 
 이러한 세부 정보는 지불 앱에서 사용자에 게 표시 됩니다. 
 
-[!code-cs[SnippetDisplayItems](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetDisplayItems)]
+[!code-csharp[SnippetDisplayItems](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetDisplayItems)]
 
 ### <a name="3-include-the-sales-tax"></a>3. 판매세가 포함 되어 있습니다. 
 
 > [!Important]
 > API 항목을 추가 하지 않거나를 판매 세금을 계산 합니다. 세율 관할지 다를 기억 합니다. 이해를 돕기 위해 가상 9.5% 세율을 사용합니다.
 
-[!code-cs[SnippetTaxes](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetTaxes)]
+[!code-csharp[SnippetTaxes](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetTaxes)]
 
 ### <a name="4-optional--add-discounts-or-other-modifiers-to-the-total"></a>4. (선택 사항)  총 할인 또는 다른 한정자를 추가 합니다. 
 
 표시 항목에 특정 Contoso 신용 카드를 사용 하 여에 대 한 할인을 추가 하는 예는 다음과 같습니다. (*Contoso* 가상의 이름입니다.)
 
-[!code-cs[SnippetDiscountRate](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetDiscountRate)]
+[!code-csharp[SnippetDiscountRate](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetDiscountRate)]
 
 ### <a name="5-assemble-all-the-payment-details"></a>5. 모든 payment 세부 정보를 조합 합니다.
 
-[!code-cs[SnippetAggregate](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetAggregate)]
-[!code-cs[SnippetPaymentOptions](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetPaymentOptions)]
+[!code-csharp[SnippetAggregate](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetAggregate)]
+[!code-csharp[SnippetPaymentOptions](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetPaymentOptions)]
 
 ### <a name="6-submit-the-payment-request"></a>6. 지불 요청을 제출 합니다. 
 
 호출 된 **SubmitPaymentRequestAsync** 지불 요청을 제출 하는 방법입니다. 그러면 사용 가능한 지불 옵션을 보여 주는 결제 앱.
 
-[!code-cs[SnippetSubmit](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetSubmit)]
+[!code-csharp[SnippetSubmit](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetSubmit)]
 
 사용자는 Microsoft 계정으로 로그인 하 라는 메시지가 표시 됩니다.
 
@@ -70,13 +70,13 @@ UWP 앱에 대 한 지불 요청 API 기반으로 합니다 [W3C 지불 요청 A
 
 앱을 탭 하 여 사용자에 대 한 대기 **지불**, 다음 순서를 완료 합니다.
 
-[!code-cs[SnippetComplete](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetComplete)]
+[!code-csharp[SnippetComplete](./code/PaymentsApiSample/PaymentsApiSample/MainPage.xaml.cs#SnippetComplete)]
 
 결제를 완료 한 후 사용자가 사용 하 여 표시 됩니다는 **순서 확인** 화면.
 
 ![확인 순서](./images/44.png "순서 확인 ")
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [Windows.ApplicationModel.Payments 참조 설명서](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.payments)
 - [GitHub의 UWP 쇼핑 앱 샘플](https://github.com/Microsoft/Windows-appsample-shopping)
 - [W3C 지불 요청 API 사양](https://www.w3.org/TR/payment-request/)

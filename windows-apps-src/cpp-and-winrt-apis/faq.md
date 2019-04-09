@@ -5,36 +5,36 @@ ms.date: 10/26/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 9dd051ffe3af9e18370666f5c6c772b7f188e54a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 70aedf4034ce433b0aa529375799cf45a18ca3e0
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635578"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291891"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT 질문과 대답
-작성 하 고 사용 하 여 Windows 런타임 Api를 사용 하는 방법에 대 한 있을 수 있는 질문에 답변 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)합니다.
+작성 하 고 사용 하 여 Windows 런타임 Api를 사용 하는 방법에 대 한 있을 수 있는 질문에 답변 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)합니다.
 
 > [!NOTE]
 > 표시된 오류 메시지에 대한 질문이 있는 경우 [C++/WinRT 문제 해결](troubleshooting.md) 항목도 참조하세요.
 
-## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>어떻게 대상을 수행 그리고 C + + /cli WinRT 프로젝트는 Windows SDK의 최신 버전으로?
-참조 [대상을 C + + /cli WinRT 프로젝트는 Windows SDK의 최신 버전으로](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)입니다.
+## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>대상을 수행 하는 방법을 내 C++Windows SDK의 최신 버전으로 /WinRT 프로젝트?
+참조 [대상을 다시 지정 하는 방법에 C++Windows SDK의 최신 버전으로 /WinRT 프로젝트](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)합니다.
 
 ## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>내 새 프로젝트 컴파일되지 이유는? Visual Studio 2017을 사용 하 고 (15.8.0 버전 이상), 및 SDK 버전 17134
-Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상), Windows SDK 버전 (Windows 10, 버전 1803) 10.0.17134.0 다음 새로 만든 C +를 대상으로 하 고 + WinRT 프로젝트는 오류가 발생 하 여 컴파일하는 데 실패할 수 있습니다 "*오류 C3861: 'from_abi'. 식별자를 찾을 수 없습니다*", 및에서 발생 하는 다른 오류로 *base.h*합니다. 두 대상에는 솔루션을 이상 (더 부합) 버전의 Windows SDK 또는 프로젝트 속성 설정 **C/c + +** > **언어** > **준수 모드: 더** (또한 경우 **/ permissive-** 프로젝트 속성에 표시 됩니다 **C/c + +** > **명령줄** 아래 **추가 옵션** , 삭제).
+Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상), 한 다음 새로 만든된 Windows SDK (Windows 10, 버전 1803) 10.0.17134.0 버전을 대상으로 하 고 C++WinRT 프로젝트는 오류가 발생 하 여 컴파일하는 데 실패할 수 있습니다 / "*오류 C3861: 'from_abi': 식별자를 찾을 수 없습니다*", 및에서 발생 하는 다른 오류로 *base.h*합니다. 두 대상에는 솔루션을 이상 (더 부합) 버전의 Windows SDK 또는 프로젝트 속성 설정 **C /C++** > **언어**  >   **준수 모드: 더** (또한 경우 **/ permissive-** 프로젝트 속성에 표시 됩니다 **C /C++** > **명령줄** 아래 **추가 옵션**, 삭제).
 
-## <a name="how-do-i-resolve-the-build-error-the-cwinrt-vsix-no-longer-provides-project-build-support--please-add-a-project-reference-to-the-microsoftwindowscppwinrt-nuget-package"></a>빌드 오류를 해결 하는 방법 "C + + /cli WinRT VSIX 프로젝트 빌드 지원을 제공 하지 않습니다.  Microsoft.Windows.CppWinRT Nuget 패키지에 프로젝트 참조를 추가 하십시오 "?
+## <a name="how-do-i-resolve-the-build-error-the-cwinrt-vsix-no-longer-provides-project-build-support--please-add-a-project-reference-to-the-microsoftwindowscppwinrt-nuget-package"></a>빌드 오류를 해결 하는 방법 "을 C++WinRT VSIX 프로젝트 빌드 지원을 제공 하지 않습니다.  Microsoft.Windows.CppWinRT Nuget 패키지에 프로젝트 참조를 추가 하십시오 "?
 설치 합니다 **Microsoft.Windows.CppWinRT** 프로젝트에 NuGet 패키지. 자세한 내용은 참조 하세요 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)합니다.
 
 ## <a name="what-are-the-requirements-for-the-cwinrt-visual-studio-extension-vsix"></a>C +에 대 한 요구 사항은 무엇입니까 + WinRT Visual Studio 확장 (VSIX)?
-버전에 대해서 1.0.190128.4 VSIX 확장의 이상 [Visual Studio 지원 C + + /cli WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다. 다른 버전 참조 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)합니다.
+버전에 대해서 1.0.190128.4 VSIX 확장의 이상 [Visual Studio 지원에 대 한 C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다. 다른 버전 참조 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)합니다.
 
 ## <a name="whats-a-runtime-class"></a>*런타임 클래스*가 무엇입니까?
 런타임 클래스란 일반적으로 실행 가능한 경계에서 최신 COM 인터페이스를 통해 활성화 및 사용되는 형식을 말합니다. 하지만 이 형식을 구현하는 컴파일 단위 내에서도 런타임 클래스를 사용할 수 있습니다. 런타임 클래스는 IDL로 선언하며, C++/WinRT를 사용하여 표준 C++에서 구현할 수 있습니다.
 
 ## <a name="what-do-the-projected-type-and-the-implementation-type-mean"></a>*프로젝션된 형식*과 *구현체 형식*이란 무엇을 의미합니까?
-오직 Windows 런타임 클래스만 *사용하는* 경우에는 *프로젝션된 형식*만 배타적으로 처리합니다. C++/WinRT는 *언어 프로젝션*이기 때문에 프로젝션된 형식이란 C++/WinRT를 사용해 C++로 *프로젝션되는* Windows 런타임의 표면 중 일부를 말합니다. 자세한 내용은 참조 하세요. [사용 Api을 사용 하 여 C + + /cli WinRT](consume-apis.md).
+오직 Windows 런타임 클래스만 *사용하는* 경우에는 *프로젝션된 형식*만 배타적으로 처리합니다. C++/WinRT는 *언어 프로젝션*이기 때문에 프로젝션된 형식이란 C++/WinRT를 사용해 C++로 *프로젝션되는* Windows 런타임의 표면 중 일부를 말합니다. 자세한 내용은 참조 하세요. [사용 하 여 Api 사용 C++/WinRT](consume-apis.md)합니다.
 
 *구현체 형식*에는 런타임 클래스의 구현체가 포함됩니다. 따라서 런타임 클래스를 구현하는 프로젝트에서만 사용할 수 있습니다. 런타임 클래스를 구현하는 프로젝트(Windows 런타임 구성 요소 프로젝트, 또는 XAML UI를 사용하는 프로젝트)를 작업 중일 때는 런타임 클래스의 구현체 형식과 C++/WinRT로 표시되는 런타임 클래스를 나타내는, 프로젝션된 형식 사이를 쉽게 구분할 수 있도록 하는 것이 중요합니다. 자세한 내용은 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
@@ -63,7 +63,7 @@ C++/WinRT에 LLVM 및 Clang 도구 체인은 지원되지 않지만 C++/WinRT의
 
 [LLVM 다운로드 페이지](https://releases.llvm.org/download.html)로 이동하여 **LLVM 6.0.0 다운로드** > **사전 작성된 바이너리**를 찾고 **Windows용 Clang(64비트)** 을 다운로드합니다. 설치하는 동안 명령 프롬프트에서 호출할 수 있도록 LLVM을 PATH 시스템 변수에 추가할 수 있습니다. 이 실험의 목적을 위해 모든 "MSBuild 도구 디렉터리를 찾지 못했습니다." 또는 "MSVC 통합을 설치하지 못했습니다." 오류가 표시되는 경우 무시할 수 있습니다. LLVM/Clang을 호출하는 방법은 여러 가지가 있습니다. 아래의 예제는 이 중 한 가지 방법을 보여 줍니다.
 
-```
+```cmd
 C:\ExperimentWithLLVMClang>type main.cpp
 // main.cpp
 #pragma comment(lib, "windowsapp")
@@ -90,7 +90,7 @@ windows.com
 
 C++/WinRT가 C++17 표준의 기능을 사용하기 때문에 해당 지원을 얻기 위해 아무 컴파일러 플래그를 사용해야 합니다. 그러한 플래그는 컴파일러에 따라 다릅니다.
 
-Visual Studio는 C++/WinRT를 지원하고 추천하는 개발 도구입니다. 참조 [Visual Studio 지원 C + + /cli WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
+Visual Studio는 C++/WinRT를 지원하고 추천하는 개발 도구입니다. 참조 [Visual Studio 지원에 대 한 C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
 
 ## <a name="why-doesnt-the-generated-implementation-function-for-a-read-only-property-have-the-const-qualifier"></a>읽기 전용 속성에 대해 생성 된 구현을 함수 없는 이유는 `const` 한정자?
 읽기 전용 속성을 선언 하는 경우 [MIDL 3.0](/uwp/midl-3/)를 예상할 수는 `cppwinrt.exe` 구현 하는 함수를 생성할 수 있는 도구 `const`-정규화 된 (const 함수 처리는 *이* const로 포인터).
@@ -119,15 +119,15 @@ int main()
 }
 ```
 
-에 대 한 호출에 대 한 **ToString** 위의 합니다 **선언으로 이동** Visual Studio에서 명령에 따르면 Windows 런타임의 프로젝션 **IStringable::ToString** 에 C + + WinRT는 다음과 같습니다.
+에 대 한 호출에 대 한 **ToString** 위의 합니다 **선언으로 이동** Visual Studio에서 명령에 따르면 Windows 런타임의 프로젝션 **IStringable::ToString** C++/WinRT 다음과 같이 표시 됩니다.
 
-```
+```cppwinrt
 winrt::hstring ToString() const;
 ```
 
 프로젝션에는 함수는 해당 구현 되려면 선택 하는 방법에 관계 없이 상수입니다. 내부적으로 프로젝션 응용 프로그램 이진 인터페이스 ABI ()에 COM 인터페이스 포인터를 통해 호출 하는 금액을 호출합니다. 유일한 상태를 **ToString** 상호 작용 하는 COM 인터페이스 포인터 이며 있고 확실히 함수 const 이므로 해당 포인터를 수정할 필요가 없습니다. 이렇게 하면 모든 항목에 대 한 변경 되지 않는 확인을 갖고 합니다 **IStringable** 참조를 통해 호출 하는 호출할 수 있음을 보장 **ToString** 는에대한const참조를사용하더라도 **IStringable**합니다.
 
-이해 하는 이러한 예가 `const` 구현 세부 사항은 C + + /cli WinRT 프로젝션 및 구현의 혜택에 대 한 코드 관리를 구성 합니다. 문제는 `const` COM 또는 Windows 런타임 ABI (예: 멤버 함수)에 있습니다.
+이해 하는 이러한 예가 `const` 의 구현 세부 정보는 C++/WinRT 프로젝션 및 구현의 혜택에 대 한 코드 관리를 구성 합니다. 문제는 `const` COM 또는 Windows 런타임 ABI (예: 멤버 함수)에 있습니다.
 
 ## <a name="do-you-have-any-recommendations-for-decreasing-the-code-size-for-cwinrt-binaries"></a>C +에 대 한 코드 크기를 줄이기 위해 권장 사항을 해야 + WinRT 이진?
 Windows 런타임 개체에서 작업할 때 응용 프로그램에 부정적인 영향을 생성 하는 데 필요한 것 보다 많은 이진 코드를 발생 시켜 가질 수 있으므로 아래 표시 된 코딩 패턴을 피해 야 합니다.
@@ -147,10 +147,10 @@ a.e();
 a.f();
 ```
 
-위에 표시 된 권장된 패턴을 적용할 뿐 아니라 C + + /cli WinRT 하지만 모든 Windows 런타임 언어 프로젝션 합니다.
+위에 표시 된 권장된 패턴 적용만 없습니다 C++/WinRT 모든 Windows 런타임 언어 프로젝션 하도록 합니다.
 
 ## <a name="how-do-i-turn-a-string-into-a-typemdashfor-navigation-for-example"></a>켜는 방법 문자열 형식으로&mdash;예제에 대 한 탐색을 위한?
-끝에 [탐색 보기 코드 예제에서는](/windows/uwp/design/controls-and-patterns/navigationview#code-example) (대부분에 C#)는 C + +이 작업을 수행 하는 방법을 보여주는 WinRT 코드 조각입니다.
+끝에 [탐색 보기 코드 예제에서는](/windows/uwp/design/controls-and-patterns/navigationview#code-example) (대부분에 C#)는 C++이 작업을 수행 하는 방법을 보여주는 /WinRT 코드 조각입니다.
 
 > [!NOTE]
-> 이 항목에서는 질문, 대답 하지 않은 경우 방문 하 여 도움말을 볼 수 있습니다는 [Visual Studio c + + 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html), 또는 사용 하 여 합니다 [ `c++-winrt` Stack Overflow에서 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)합니다.
+> 이 항목에서는 질문, 대답 하지 않은 경우 방문 하 여 도움말을 볼 수 있습니다 합니다 [Visual Studio C++ 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html), 또는 사용 하 여는 [ `c++-winrt` Stack Overflow에서 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

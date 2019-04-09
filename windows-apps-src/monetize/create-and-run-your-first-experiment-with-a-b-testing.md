@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10 uwp, Microsoft Store Services SDK A/B 테스트, 실험
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dba9095326c01029e14742c98c1c368b896dfb8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 463eb17d341ccad494058861b2e6d1cfd276005e
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660218"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334681"
 ---
 # <a name="create-and-run-your-first-experiment"></a>첫 번째 실험 만들기 및 실행
 
@@ -24,7 +24,7 @@ ms.locfileid: "57660218"
 
 A에 대 한 개요 참조 파트너 센터를 사용 하 여 B 테스트 [A를 사용 하 여 앱 실험 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 수행 하려면 파트너 센터 계정이 있어야 하 고 개발 컴퓨터에 설명 된 대로 구성 해야 합니다 [A를 사용 하 여 앱 실험 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)합니다.
 
@@ -52,7 +52,7 @@ A에 대 한 개요 참조 파트너 센터를 사용 하 여 B 테스트 [A를 
 6. **도구 상자**에서 페이지로 **단추**를 끌어다 놓습니다.
 7. 디자이너에서 단추를 두 번 클릭하여 코드 파일을 열고 **Click** 이벤트에 대한 이벤트 처리기를 추가합니다.  
 8. 코드 파일의 전체 내용을 다음 코드로 바꿉니다. 할당 합니다 ```projectId``` 변수를 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 이전 섹션에서 파트너 센터에서 얻은 값.
-    [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
+    [!code-csharp[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
 9. 코드 파일을 저장하고 프로젝트를 빌드합니다.
 

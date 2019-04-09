@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
-ms.openlocfilehash: f60f3fc8678208f694a9ffabde06fa60de759a45
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 4cbdae1084f96901e90f8237d71bd59bf2d4c592
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240021"
 ---
 # <a name="fiddler-settings-api-reference"></a>Fiddler 설정 API 참조   
 REST API를 사용하여 devkit에서 Fiddler 네트워크 추적을 사용하거나 사용하지 않을 수 있습니다.
@@ -24,8 +24,9 @@ REST API를 사용하여 devkit에서 Fiddler 네트워크 추적을 사용하�
 
 메서드      | 요청 URI
 :------     | :-----
-GET | /ext/fiddler
-<br />
+가져오기 | /ext/fiddler
+
+
 **URI 매개 변수**
 
 - 없음
@@ -60,8 +61,8 @@ HTTP 상태 코드      | 설명
 
 메서드      | 요청 URI
 :------     | :-----
-POST | /ext/fiddler
-<br />
+올리기 | /ext/fiddler
+
 **URI 매개 변수**
 
 요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
@@ -71,7 +72,7 @@ POST | /ext/fiddler
 | proxyAddress       | Fiddler를 실행하는 디바이스의 IP 주소 또는 호스트 이름입니다. |
 | proxyPort          | Fiddler에서 트래픽을 모니터링하는 데 사용하는 포트입니다. 기본값은 8888입니다. |
 | updateCert(옵션)| 루트 Fiddler 인증서가 제공되었는지 여부를 나타내는 부울 값입니다. Fiddler가 이 devkit에 구성되지 않았거나 다른 호스트에 대해 구성된 경우 이 값은 true여야 합니다.  |
-<br>
+
 
 **요청 헤더**
 
@@ -103,8 +104,8 @@ HTTP 상태 코드      | 설명
 
 메서드      | 요청 URI
 :------     | :-----
-DELETE | /ext/fiddler
-<br />
+Delete | /ext/fiddler
+
 **URI 매개 변수**
 
 - 없음
@@ -131,11 +132,11 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 
-<br />
-**사용 가능한 장치 패밀리**
+
+**사용 가능한 디바이스 패밀리**
 
 * Windows Xbox
 
-## <a name="see-also"></a>참고 항목
-- [Xbox에서 UWP 용 Fiddler를 구성합니다.](uwp-fiddler.md)
+## <a name="see-also"></a>참조
+- [Xbox에서 UWP용 Fiddler 구성](uwp-fiddler.md)
 

@@ -6,23 +6,23 @@ ms.date: 10/23/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f4feff88507ae5f84bccf044aa9ab6711d6b8bb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c6674fc38d41e3a18709dcb81edc95d164f9f86c
+ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645768"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320596"
 ---
 # <a name="compile-resources-manually-with-makepriexe"></a>MakePri.exe를 사용하여 수동으로 리소스 컴파일
 
 MakePri.exe는 PRI 파일을 만들고 덤프하는 데 사용할 수 있는 명령줄 도구입니다. Microsoft Visual Studio 내에 MSBuild의 일부로 통합되어 있지만 수동으로 또는 사용자 지정 빌드 시스템으로 패키지를 만드는 데 도움이 될 수 있습니다.
 
 > [!NOTE]
-> 확인할 때 MakePri.exe 되어는 **앱을 관리 하는 UWP 용 Windows SDK** Windows 소프트웨어 개발 키트를 설치 하는 동안 옵션입니다. 경로에 설치 되어 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (물론 다른 아키텍처에 대 한 명명 된 폴더). 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
+> 확인할 때 MakePri.exe 되어는 **앱을 관리 하는 UWP 용 Windows SDK** Windows 소프트웨어 개발 키트를 설치 하는 동안 옵션입니다. 경로에 설치 되어 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (물론 다른 아키텍처에 대 한 명명 된 폴더). `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`) 을 입력합니다.
 
 PRI 파일의 크기 제한은 64킬로바이트입니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>단원 내용
 |항목|설명|
 |-|-|
 | [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md) | MakePri.exe에는 `createconfig`, `dump`, `new`, `resourcepack` 및 `versioned` 명령 집합이 있습니다. 이 항목에서는 이들의 사용에 대한 명령줄 옵션을 자세히 설명합니다. |
@@ -43,17 +43,13 @@ MakePri.exe는 일반적으로 `new`, `versioned`, `resourcepack` 옵션과 함�
 
 ## <a name="makepriexe-warnings-and-error-messages"></a>MakePri.exe 경고 및 오류 메시지
 
-```
-Resources found for language(s) '<language(s)>' but no resources found for default language(s): '<language(s)>'. Change the default language or qualify resources with the default language.
-```
+### <a name="resources-found-for-languages-languages-but-no-resources-found-for-default-languages-languages-change-the-default-language-or-qualify-resources-with-the-default-language"></a>'< 언어 >' 언어에 대 한 리소스 이지만 없는 리소스에 대 한 기본 언어: '< 언어 >'입니다. 기본 언어를 변경 하거나 기본 언어를 사용 하 여 리소스를 한정 합니다.
 
-MakePri.exe 또는 MSBuild가 언어 한정자가 있는 것으로 표시되지만 기본 언어에 대한 후보를 찾을 수 없는 지정된 명명된 리소스에 대한 파일 또는 문자열 리소스를 발견했을 때 위의 경고가 표시됩니다. 파일 및 폴더 이름에 한정자를 사용하는 프로세스는 [언어, 규모 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)에 설명되어 있습니다. 파일 또는 폴더에는 언어 이름이 있을 수 있지만 정확한 기본 언어에 대해 정규화된 리소스가 검색되지 않습니다. 예를 들어 프로젝트가 "en-US"를 기본 언어로 사용하고 "de/logo.png"라는 파일이 있지만 기본 언어인 "en-US"가 표시된 파일이 없는 경우 이 경고가 표시됩니다. 이 경고를 제거하기 위해 파일 또는 문자열 리소스를 기본 언어로 정규화하거나 기본 언어를 변경해야 합니다. 기본 언어를 변경하려면 Visual Studio에서 솔루션을 연 채로 `Package.appxmanifest`를 엽니다. 응용 프로그램 탭에서 기본 언어가 제대로 설정되어 있는지 확인합니다(예: "en" 또는 "en-US").
+MakePri.exe 또는 MSBuild 파일 또는 언어 한정자로 표시 해야 표시 되는 지정된 된 명명 된 리소스에 대 한 문자열 리소스를 검색 하면이 경고가 표시 하는데 없습니다 후보는 기본 언어에 대 한 합니다. 파일 및 폴더 이름에 한정자를 사용하는 프로세스는 [언어, 규모 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)에 설명되어 있습니다. 파일 또는 폴더에는 언어 이름이 있을 수 있지만 정확한 기본 언어에 대해 정규화된 리소스가 검색되지 않습니다. 예를 들어 프로젝트가 "en-US"를 기본 언어로 사용하고 "de/logo.png"라는 파일이 있지만 기본 언어인 "en-US"가 표시된 파일이 없는 경우 이 경고가 표시됩니다. 이 경고를 제거하기 위해 파일 또는 문자열 리소스를 기본 언어로 정규화하거나 기본 언어를 변경해야 합니다. 기본 언어를 변경하려면 Visual Studio에서 솔루션을 연 채로 `Package.appxmanifest`를 엽니다. 응용 프로그램 탭에서 기본 언어가 제대로 설정되어 있는지 확인합니다(예: "en" 또는 "en-US").
 
-```
-No default or neutral resource given for '<resource identifier>'. The application may throw an exception for certain user configurations when retrieving the resources.
-```
+### <a name="no-default-or-neutral-resource-given-for-resource-identifier-the-application-may-throw-an-exception-for-certain-user-configurations-when-retrieving-the-resources"></a>기본값 또는 중립 리소스에 대해 지정 된 '<resource identifier>'. 응용 프로그램 수 때 예외를 throw 특정 사용자 구성 리소스를 검색 합니다.
 
-MakePri.exe 또는 MSBuild가 리소스가 명확하지 않은 언어 한정자가 표시된 것으로 보이는 파일 또는 리소스를 발견했을 때 위의 경고가 표시됩니다. 한정자가 있지만 실행 시 특정 리소스 후보가 해당 리소스 식별자에 대해 반환될 수 있다는 보장이 없습니다. 특정 언어, 소속 지역, 또는 그 외 한정자에 대해 기본값이거나 사용자의 컨텍스트에 항상 일치하는 리소스 후보를 찾을 수 없는 경우 이 경고가 표시됩니다. 런타임 시 사용자의 언어 기본 설정 또는 홈 위치와 같은 특정 사용자 구성에 대해(**설정** > **시간 및 언어** > **지역 및 언어**), 리소스를 검색하기 위해 사용되는 API는 예기치 않은 예외가 발생할 수 있습니다. 이 경고를 제거하려면 프로젝트의 기본 언어 또는 전 세계 소속 지역(homeregion-001)의 리소스와 같은 기본 리소스가 제공되어야 합니다.
+MakePri.exe 또는 MSBuild 파일 또는 리소스의 선택을 취소 하지 않습니다 언어 한정자로 표시 해야 표시 되는 리소스를 검색 하는 경우이 경고가 표시 됩니다. 한정자가 있지만 실행 시 특정 리소스 후보가 해당 리소스 식별자에 대해 반환될 수 있다는 보장이 없습니다. 특정 언어, 소속 지역, 또는 그 외 한정자에 대해 기본값이거나 사용자의 컨텍스트에 항상 일치하는 리소스 후보를 찾을 수 없는 경우 이 경고가 표시됩니다. 런타임 시 사용자의 언어 기본 설정 또는 홈 위치와 같은 특정 사용자 구성에 대해(**설정** > **시간 및 언어** > **지역 및 언어**), 리소스를 검색하기 위해 사용되는 API는 예기치 않은 예외가 발생할 수 있습니다. 이 경고를 제거하려면 프로젝트의 기본 언어 또는 전 세계 소속 지역(homeregion-001)의 리소스와 같은 기본 리소스가 제공되어야 합니다.
 
 ## <a name="using-makepriexe-in-a-build-system"></a>빌드 시스템에서 MakePri.exe 사용
 

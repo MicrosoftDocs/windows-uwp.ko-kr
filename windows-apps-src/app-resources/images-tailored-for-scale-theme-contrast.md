@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f4749b8560624ed58f43b33fe3373d909919347
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 57f8d7d57c016c015d01e80b07fc0e2c0260ef7f
+ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592028"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320616"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>배율, 테마, 고대비 등에 맞춘 이미지 및 자산 로드
 앱은 [디스플레이 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), 테마, 고대비 및 기타 런타임 컨텍스트에 맞게 조정된 이미지 리소스 파일(또는 기타 자산 파일)을 로드할 수 있습니다. 이러한 이미지는 명령적 코드 또는 XAML 태그에서 참조할 수 있으며 예를 들어 **이미지**의 **Source** 속성입니다. 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest`의 파일)에 표시될 수도 있습니다. 예를 들면 Visual Studio 매니페스트 디자이너의 시각적 자산 탭에 앱 아이콘으로 또는 타일 또는 알림에 표시됩니다. 이미지의 파일 이름에 한정자를 사용하고 선택적으로 이를 [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)를 사용하여 동적으로 로드하여 디스플레이 배율, 테마, 고대비, 언어 및 다른 컨텍스트에 대한 사용자의 런타임 설정과 가장 적합한 가장 적절한 이미지 파일이 로드되도록 할 수 있습니다.
@@ -23,21 +23,27 @@ ms.locfileid: "57592028"
 ## <a name="qualify-an-image-resource-for-scale-theme-and-contrast"></a>배율, 테마, 대비에 대한 이미지 리소스 인증
 `scale` 한정자의 기본값은 `scale-100`입니다. 따라서 이러한 두 변형은 동일합니다(둘 다 이미지를 배율 100 또는 배율 인수 1로 제공).
 
-```
+<blockquote>
+<pre>
 \Assets\Images\logo.png
 \Assets\Images\logo.scale-100.png
-```
+</pre>
+</blockquote>
+
 
 파일 이름 대신 폴더 이름에서 한정자를 사용할 수 있습니다. 한정자별로 여러 자산 파일을 가지는 것이 좋은 전략일 것입니다. 설명을 위해 이 두 변형은 위의 두 변형과 동일합니다.
 
-```
+<blockquote>
+<pre>
 \Assets\Images\logo.png
 \Assets\Images\scale-100\logo.png
-```
+</pre>
+</blockquote>
 
 다음은 디스플레이 배율, 테마 및 고대비의 다른 설정에 대해 `/Assets/Images/logo.png`라는 이미지 리소스의 변형을 제공하는 방법의 예입니다. 이 예에서는 폴더 이름 지정을 사용합니다.
 
-```
+<blockquote>
+<pre>
 \Assets\Images\contrast-standard\theme-dark
     \scale-100\logo.png
     \scale-200\logo.png
@@ -47,7 +53,8 @@ ms.locfileid: "57592028"
 \Assets\Images\contrast-high
     \scale-100\logo.png
     \scale-200\logo.png
-```
+</pre>
+</blockquote>
 
 ## <a name="reference-an-image-or-other-asset-from-xaml-markup-and-code"></a>XAML 태그와 코드에서 이미지 또는 다른 자산 참조
 리소스 이미지의 이름&mdash;또는&mdash;식별자는 모든 한정자가 제거된 경로 및 파일 이름입니다. 폴더 및/또는 파일의 이름을 이전 섹션의 예와 같이 지정하는 경우 단일 이미지 리소스를 가지며 이름(절대 경로로서)은 `/Assets/Images/logo.png`입니다. 다음은 XAML 태그에서 해당 이름을 사용하는 방법입니다.
@@ -83,7 +90,8 @@ this.myXAMLWebViewElement.Source = new Uri("ms-appx-web:///Pages/default.html");
 
 이 예 URI에서 스키마("`ms-appx`" 또는 "`ms-appx-web`") 다음에 "`://`"로 시작하는 절대 경로가 나오는 것을 확인하세요. 절대 경로에서 처음 "`/`"는 패키지 루트에서 경로를 해석하도록 합니다.
 
-**참고**`ms-resource`([문자열 리소스](localize-strings-ui-manifest.md)에 대해) 및 `ms-appx(-web)`(이미지 및 기타 자산에 대해) URI 스키마는 자동 한정자 일치를 수행하여 현재 컨택스트에 가장 적합한 리소스를 찾을 수 있습니다. `ms-appdata` URI 스키마(앱 데이터를 로드하는 데 사용됨)는 모든 이러한 자동 일치를 수행하지 않지만 [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)의 콘텐츠에 응답할 수 있으며 URI에 전체 실제 파일 이름을 사용하는 앱 데이터에서 명시적으로 적절한 자산을 로드할 수 있습니다. 앱 데이터에 대한 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)을 참조하세요. 웹 URI 스키마(`http`, `https`, `ftp` 등)는 자동 일치를 수행하지 않습니다. 이 경우 수행할 작업에 대한 정보는 [클라우드에 이미지 호스팅 및 로드](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud)를 참조하세요.
+> [!NOTE]
+> 합니다 `ms-resource` (에 대 한 [문자열 리소스](localize-strings-ui-manifest.md)) 및 `ms-appx(-web)` URI 체계 (에 대 한 이미지 및 기타 자산) 현재 컨텍스트에 대해 가장 적절 한 리소스를 찾는 데 자동 한정자 일치를 수행 합니다. `ms-appdata` URI 스키마(앱 데이터를 로드하는 데 사용됨)는 모든 이러한 자동 일치를 수행하지 않지만 [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)의 콘텐츠에 응답할 수 있으며 URI에 전체 실제 파일 이름을 사용하는 앱 데이터에서 명시적으로 적절한 자산을 로드할 수 있습니다. 앱 데이터에 대한 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)을 참조하세요. 웹 URI 스키마(`http`, `https`, `ftp` 등)는 자동 일치를 수행하지 않습니다. 이 경우 수행할 작업에 대한 정보는 [클라우드에 이미지 호스팅 및 로드](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud)를 참조하세요.
 
 이미지 파일이 프로젝트 구조의 위치에 있는 경우 절대 경로가 좋은 선택입니다. 이미지 파일을 이동하려고 하지만 참조 XAML 태그 파일과 관련된 동일한 위치에 있도록 하고자 하는 경우 절대 경로 대신 포함하는 태그 파일과 관련된 경로를 사용하고자 할 수 있습니다. 이렇게 하면 URI 스키마를 사용하지 않아도 됩니다. 이 경우 XAML 태그에서 상대 경로 사용하기 때문에 자동 한정자 일치를 여전히 사용할 수 있습니다.
 
@@ -96,23 +104,29 @@ this.myXAMLWebViewElement.Source = new Uri("ms-appx-web:///Pages/default.html");
 ## <a name="qualify-an-image-resource-for-targetsize"></a>targetsize에 대한 이미지 리소스 인증
 동일한 이미지 리소스의 여러 변형에 `scale`및 `targetsize` 한정자를 사용할 수 있지만 리소스의 단일 변형에 둘 다를 사용할 수는 없습니다. 또한 `TargetSize` 한정자 없이 하나 이상의 변형을 정의해야 합니다. 해당 변형은 `scale`에 대한 값을 정의하거나 기본값 `scale-100`을 가져야 합니다. 따라서 `/Assets/Square44x44Logo.png` 리소스의 이러한 두 변형은 유효합니다.
 
-```
+<blockquote>
+<pre>
 \Assets\Square44x44Logo.scale-200.png
 \Assets\Square44x44Logo.targetsize-24.png
-```
+</pre>
+</blockquote>
 
 그리고 이 두 변형은 유효합니다. 
 
-```
+<blockquote>
+<pre>
 \Assets\Square44x44Logo.png // defaults to scale-100
 \Assets\Square44x44Logo.targetsize-24.png
-```
+</pre>
+</blockquote>
 
 하지만 이 변형은 잘못되었습니다.
 
-```
+<blockquote>
+<pre>
 \Assets\Square44x44Logo.scale-200_targetsize-24.png
-```
+</pre>
+</blockquote>
 
 ## <a name="refer-to-an-image-file-from-your-app-package-manifest"></a>앱 패키지 매니페스트에서 이미지 파일 참조
 폴더 및/또는 파일의 이름을 이전 섹션의 유효한 두 예 중 하나와 같이 지정하는 경우 단일 앱 아이콘 이미지 리소스를 가지며 이름(상대 경로로서)은 `Assets\Square44x44Logo.png`입니다. 앱 패키지 매니페스트에서 이름으로 리소스를 참조합니다. 모든 URI 스키마를 사용하지 않아도 됩니다.

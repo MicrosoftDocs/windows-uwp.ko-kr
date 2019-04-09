@@ -5,26 +5,26 @@ ms.date: 07/18/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: ace1c276b878d07f5750483740dfe90ed8cb6211
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5c410d209972a0221928548901f79bd599c67eae
+ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644488"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921699"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
 이번 항목에서는 차변 발생 시 이벤트가 발생하는 은행 계좌 런타임 클래스를 포함해 Windows 런타임 구성 요소를 작성하는 방법에 대해서 설명합니다. 또한 은행 계좌 런타임 클래스를 사용하면서 함수를 호출하여 잔액을 조정하거나, 발생하는 이벤트를 처리하는 주요 앱에 대해서도 설명합니다.
 
 > [!NOTE]
-> 설치 및 사용에 대 한 정보를 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) VSIX Visual Studio Extension () (지원을 제공 하는 프로젝트 템플릿)를 참조 하세요 [Visual Studio 지원 C + + WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
+> 설치 및 사용에 대 한 정보를 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio 확장 (VSIX) 및 (있으며 함께 프로젝트 템플릿을 제공 지원도) NuGet 패키지를 참조 하십시오 [Visual Studio 지원에 대 한 C++/ WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
 
 > [!IMPORTANT]
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Windows 런타임 구성 요소(BankAccountWRC) 만들기
 
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. 만들기는 **Visual c + +** > **Windows 범용** > **Windows 런타임 구성 요소 (C + + /cli WinRT)** 프로젝트를 만들고 이름을  *BankAccountWRC* ("은행 계좌 Windows 런타임 구성 요소")에 대 한 합니다.
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. 만들기는 **시각적 C++**   >  **Windows 범용** > **Windows 런타임 구성 요소 (C++/WinRT)** 프로젝트를 마우스 이름을 *BankAccountWRC* ("은행 계좌 Windows 런타임 구성 요소")에 대 한 합니다.
 
 새로 만든 프로젝트에는 `Class.idl`이라는 이름의 파일이 포함되어 있습니다. 해당 파일의 이름을 바꿀 `BankAccount.idl` (이름 바꾸기는 `.idl` 파일에는 자동으로 종속 바뀝니다 `.h` 및 `.cpp` 파일을 너무). 내용을 바꿉니다 `BankAccount.idl` 아래 목록과 함께 합니다.
 
@@ -93,11 +93,11 @@ namespace winrt::BankAccountWRC::implementation
 
 잔액이 마이너스가 될 경우 **AdjustBalance** 함수의 구현체에서 **AccountIsInDebit** 이벤트가 발생하는 시나리오는 위에서 확인할 수 있습니다.
 
-모든 경고 있습니다 빌드에서를 방지 하는 경우 다음 해결 또는 프로젝트 속성 설정 **C/c + +** > **일반** > **경고를 오류로 처리** 하 **아니요 (/ WX-)**, 프로젝트를 다시 빌드합니다.
+모든 경고 있습니다 빌드에서를 방지 하는 경우 다음 해결 또는 프로젝트 속성 설정 **C /C++** > **일반** > **경고를 오류로 처리**  하 **아니요 (/ WX-)**, 프로젝트를 다시 빌드합니다.
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>주요 앱(BankAccountCoreApp)을 만들어 Windows 런타임 구성 요소 테스트
 
-이제 새 프로젝트를 만듭니다(`BankAccountWRC` 솔루션에서, 혹은 새로운 솔루션에서). 만들기는 **Visual c + +** > **Windows 범용** > **Core 앱 (C + + /cli WinRT)** 프로젝트를 만들고 이름을 *BankAccountCoreApp* .
+이제 새 프로젝트를 만듭니다(`BankAccountWRC` 솔루션에서, 혹은 새로운 솔루션에서). 만들기는 **시각적 C++**   >  **Windows 범용** > **Core 앱 (C++/WinRT)** 프로젝트를 만들고 이름을  *BankAccountCoreApp*합니다.
 
 참조를 추가 하 고 이동 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (또는 두 프로젝트가 동일한 솔루션의 경우 프로젝트 간 참조를 추가). **추가**와 **확인**을 차례대로 클릭합니다. 이제 BankAccountCoreApp을 빌드합니다. 예기치 않은 오류를 표시 하는 이벤트가 있는 페이로드 파일 `readme.txt` 하지 존재 Windows 런타임 구성 요소 프로젝트에서 해당 파일을 제외, 다시 빌드합니다 차례로 BankAccountCoreApp 다시 작성 합니다.
 
@@ -244,7 +244,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 
 ## <a name="parameterized-delegates-simple-signals-and-callbacks-within-a-project"></a>매개 변수가 있는 대리자, 간단한 신호 및 프로젝트 내에서 콜백
 
-이벤트 내부적 으로만 사용 되는 경우 C + + 계속 사용 합니다 (이진), 전체가 아닌 WinRT 프로젝트를 [ **winrt::event** ](/uwp/cpp-ref-for-winrt/event) 있지만 구조체 템플릿 매개 변수 C + + /cli WinRT의 비-Windows-Runtime [ **winrt::delegate&lt;... T&gt;**  ](/uwp/cpp-ref-for-winrt/delegate) 구조체 템플릿을 효율적이 고 참조 횟수가 계산 대리자입니다. 임의 개수의 매개 변수를 지원 하며 Windows 런타임 형식으로 제한 되지 않습니다.
+이벤트에서 내부적 으로만 사용 되는 경우에 C++여전히 사용 하 여 /WinRT (이진), 전체가 아닌 프로젝트의 [ **winrt::event** ](/uwp/cpp-ref-for-winrt/event) 사용 하 여 매개 변수화 하지만 구조체 템플릿을 C++/WinRT의 비-Windows-Runtime [ **winrt::delegate&lt;... T&gt;**  ](/uwp/cpp-ref-for-winrt/delegate) 구조체 템플릿을 효율적이 고 참조 횟수가 계산 대리자입니다. 임의 개수의 매개 변수를 지원 하며 Windows 런타임 형식으로 제한 되지 않습니다.
 
 아래 예제에서는 먼저 서명 매개 변수 (기본적으로 간단한 신호)를 갖지 않는 한 후 문자열을 사용 하는 대리자를 표시 합니다.
 
@@ -285,4 +285,4 @@ C +를 이식 하려는 경우 + CX 이벤트 및 대리자 사용 되는 내부
 ## <a name="related-topics"></a>관련 항목
 * [C++/WinRT를 통한 API 작성](author-apis.md)
 * [C++/WinRT를 통한 API 사용](consume-apis.md)
-* [C + 대리자를 사용 하 여 이벤트를 처리 + WinRT](handle-events.md)
+* [C++/WinRT의 대리자를 사용한 이벤트 처리](handle-events.md)

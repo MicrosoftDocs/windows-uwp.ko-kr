@@ -5,16 +5,16 @@ ms.date: 01/10/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: e4ca6946df327dbe6697a71d1050e6401ed531fe
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 05997549b5f1c0d13b12d47e0bb180d54617dcf2
+ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626668"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921719"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 통한 API 작성
 
-이 항목에서는 작성 하는 방법을 보여 줍니다 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Api를 사용 하 여 합니다 [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) 직접 또는 간접적으로 구조체를 기본입니다. 이번 문서의 맥락에 따라 *작성*이라는 표현은 *생성* 또는 *구현*과 동의어로 사용됩니다. 이번 항목에서는 다음 시나리오의 순서대로 C++/WinRT 형식으로 API를 구현하는 방법에 대해서 설명합니다.
+이 항목에서는 작성 하는 방법을 보여 줍니다 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Api를 사용 하 여는 [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) 직접 또는 간접적으로 구조체를 기본입니다. 이번 문서의 맥락에 따라 *작성*이라는 표현은 *생성* 또는 *구현*과 동의어로 사용됩니다. 이번 항목에서는 다음 시나리오의 순서대로 C++/WinRT 형식으로 API를 구현하는 방법에 대해서 설명합니다.
 
 - Windows 런타임 클래스(이하 런타임 클래스)를 *작성하지 않습니다*. 단지 앱에서 로컬 사용을 위해 Windows 런타임 인터페이스를 1개 이상 구현하려고 합니다. 이 경우에는 **winrt::implements**에서 직접 파생시켜 함수를 구현합니다.
 - 런타임 클래스를 *작성합니다*. 앱에서 사용할 구성 요소를 작성할 수도 있습니다. 혹은 XAML 사용자 인터페이스(UI)에서 사용할 형식을 작성할 수도 있습니다. 이 경우에는 동일한 컴파일 단위 내에서 런타임 클래스를 구현하고 사용하게 됩니다. 어쨌든 두 경우 모두 도구를 사용해 **winrt::implements**에서 파생되는 클래스를 생성할 수 있습니다.
@@ -28,9 +28,9 @@ ms.locfileid: "57626668"
 가장 간단한 시나리오는 로컬 사용을 목적으로 Windows 런타임 인터페이스를 구현하는 경우입니다. 이때는 런타임 클래스는 필요 없고 일반적인 C++ 클래스만 있으면 됩니다. 예를 들어, [**CoreApplication**](/uwp/api/windows.applicationmodel.core.coreapplication)을 기반으로 앱을 개발할 수도 있습니다.
 
 > [!NOTE]
-> 설치 및 C +를 사용 하는 방법에 대 한 정보에 대 한 + WinRT VSIX Visual Studio Extension () (지원을 제공 하는 프로젝트 템플릿)를 참조 하세요 [Visual Studio 지원 C + + /cli WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
+> 설치 및 사용에 대 한 정보는 C++WinRT Visual Studio 확장 (VSIX) 및 (있으며 함께 프로젝트 템플릿을 제공 지원도) NuGet 패키지를 참조 하세요 [Visual Studio 지원에 대 한 C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
 
-Visual Studio에서의 **Visual c + +** > **Windows 유니버설** > **Core 앱 (C + + /cli WinRT)** 프로젝트 템플릿에 보여줍니다**CoreApplication** 패턴입니다. 이 패턴은 [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) 구현체를 [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run)으로 전달하는 것부터 시작됩니다.
+Visual Studio에서의 **시각적 C++**   >  **Windows 유니버설** > **Core 앱 (C++/WinRT)** 프로젝트 템플릿을 보여 줍니다. 합니다 **CoreApplication** 패턴입니다. 이 패턴은 [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) 구현체를 [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run)으로 전달하는 것부터 시작됩니다.
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -258,7 +258,7 @@ IStringable istringable = winrt::make<MyType>();
 > [!NOTE]
 > 하지만 XAML UI에서 형식을 참조하는 경우에는 구현체 형식과 프로젝션된 형식이 모두 동일한 프로젝트에 위치합니다. 이 경우 **있도록** 프로젝션 형식의 인스턴스를 반환 합니다. 해당 시나리오의 코드 예제는 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요.
 
-**IStringable** 인터페이스의 멤버를 호출할 때는 `istringable`(위의 코드 예제에서)만 사용할 수 있습니다. 하지만 C++/WinRT 인터페이스(프로젝션된 인터페이스)는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 호출할 수 있습니다 [ **IUnknown::as** ](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (또는 [ **IUnknown::try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) 다른 프로젝션 된 형식 또는 수 있는 인터페이스를 쿼리 하는 데 또한 사용 하거나 반환 합니다.
+**IStringable** 인터페이스의 멤버를 호출할 때는 `istringable`(위의 코드 예제에서)만 사용할 수 있습니다. 하지만 C++/WinRT 인터페이스(프로젝션된 인터페이스)는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 호출할 수 있습니다 [ **IUnknown::as** ](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (또는 [ **IUnknown::try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function)) 다른 프로젝션 된 형식 또는 수 있는 인터페이스를 쿼리 하는 데 또한 사용 하거나 반환 합니다.
 
 ```cppwinrt
 istringable.ToString();
@@ -294,7 +294,7 @@ void ImplFromIClosable(IClosable const& from)
 }
 ```
 
-하지만 원래 인터페이스 개체만 참조를 계속 유지합니다. *사용자*가 참조를 계속 유지하려면 [**com_ptr::copy_from**](/uwp/cpp-ref-for-winrt/com-ptr#comptrcopyfrom-function)을 호출하면 됩니다.
+하지만 원래 인터페이스 개체만 참조를 계속 유지합니다. *사용자*가 참조를 계속 유지하려면 [**com_ptr::copy_from**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcopy_from-function)을 호출하면 됩니다.
 
 ```cppwinrt
 winrt::com_ptr<MyType> impl;
@@ -394,14 +394,14 @@ MySpecializedToggleButtonAutomationPeer::MySpecializedToggleButtonAutomationPeer
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
-* [winrt::com_ptr::copy_from 함수](/uwp/cpp-ref-for-winrt/com-ptr#comptrcopyfrom-function)
+* [winrt::com_ptr::copy_from 함수](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcopy_from-function)
 * [winrt::from_abi 함수 템플릿](/uwp/cpp-ref-for-winrt/from-abi)
 * [winrt::get_self 함수 템플릿](/uwp/cpp-ref-for-winrt/get-self)
 * [winrt::implements 구조체 템플릿](/uwp/cpp-ref-for-winrt/implements)
 * [winrt::make 함수 템플릿](/uwp/cpp-ref-for-winrt/make)
 * [winrt::make_self 함수 템플릿](/uwp/cpp-ref-for-winrt/make-self)
-* [winrt::Windows::Foundation::IUnknown:: 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
+* [winrt::Windows::Foundation::IUnknown::as 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/WinRT를 통한 API 사용](consume-apis.md)
-* [XAML 컨트롤(C++/WinRT 속성에 바인딩)](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)
+* [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)

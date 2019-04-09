@@ -2,19 +2,19 @@
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: UWP 앱 패키징
 description: UWP 앱을 배포 또는 판매하려면, 여기에 대한 앱 패키지를 만들어야 합니다.
-ms.date: 01/02/2019
+ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: f2e89490a76c9174c1e938466bf1fbcc9cc13455
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d5ed75cb79488eb994135dcfef74483ec078a32e
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599138"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58173029"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
@@ -149,12 +149,12 @@ UWP 앱 패키지를 사용 하 여 데스크톱 앱의 경우 처럼 앱을 장
 
 ### <a name="sideload-your-app-package-on-windows-10-anniversary-update-or-later"></a>Windows 10 1 주년 업데이트 이상 테스트용 로드 앱 패키지
 
-Windows 10 1주년 업데이트에 도입된 앱 패키지는 앱 패지 파일을 두 번 클릭하여 설치할 수 있습니다. 이 사용 하려면 앱 패키지 또는 앱 번들 파일을 이동 하 고 두 번 클릭 합니다. 앱 설치 관리가 시작되고, 기본 앱 정보, 설치 단추, 설치 진행 막대, 기타 관련 오류 메시지를 제공합니다.
+Windows 10 1 주년 업데이트 (Windows 10, 버전 1607)에 도입 된, 앱 패키지를 앱 패키지 파일을 두 번 클릭 하 여 설치할 수 있습니다. 이 사용 하려면 앱 패키지 또는 앱 번들 파일을 이동 하 고 두 번 클릭 합니다. [앱 설치 관리자](https://docs.microsoft.com/windows/msix/app-installer/app-installer-root) 시작 하 고 설치 단추를, 설치 진행률 표시줄 및 모든 관련 오류 메시지 뿐만 아니라 기본 앱 정보를 제공 합니다.
 
 ![앱 설치 관리자에 샘플 앱인 Contoso 설치가 표시됩니다.](images/appinstaller-screen.png)
 
 > [!NOTE]
-> 앱 설치 관리자는 장치가 앱을 신뢰하는 것으로 간주합니다. 개발자나 기업용 앱을 사이드로드하는 경우, 장치의 신뢰할 수 있는 사람 또는 신뢰할 수 있는 판매자 인증 기관 Microsoft Store에 서명 인증서를 설치해야 합니다. 방법을 모를 경우 [테스트 인증서 설치](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates)를 참조하세요.
+> 앱 설치 관리자 앱은 장치에서 신뢰할 수 있는 것을 가정 합니다. 개발자나 기업용 앱을 사이드로드하는 경우, 장치의 신뢰할 수 있는 사람 또는 신뢰할 수 있는 판매자 인증 기관 Microsoft Store에 서명 인증서를 설치해야 합니다. 방법을 모를 경우 [테스트 인증서 설치](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates)를 참조하세요.
 
 ### <a name="sideload-your-app-package-on-previous-versions-of-windows"></a>이전 버전의 Windows 앱 패키지를 테스트용으로 로드
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f144ef398fc55e79d2f0190c61214cdf1aa93b68
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f503910a46254f4e885dd2ded1d43b975d78f84e
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607658"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244319"
 ---
 # <a name="manual-camera-controls-for-video-capture"></a>비디오 캡처를 위한 수동 카메라 컨트롤
 
@@ -55,7 +55,7 @@ Windows 10, 버전 1803부터는 비디오를 지원하는 장치에서 비디�
 
 다음 예제에서는 간단한 UI를 사용하여 사용자가 다른 디노이징 모드로 전환할 수 있는 라디오 버튼을 제공합니다.
 
-[!code-cs[SnippetDenoiseXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetDenoiseXAML)]
+[!code-xml[SnippetDenoiseXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetDenoiseXAML)]
 
 다음 메서드에서 [**VideoTemporalDenoisingControl.Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol.supported) 속성을 확인하여 임시 디노이징이 현재 디바이스에서 지원되고 있는지 확인할 수 있습니다. 지원되는 경우, **Off** 및 **Auto** 또는 **On**이 지원되는지 확인하고 이 경우에 라디오 단추가 표시되는지도 확인합니다. 그 다음 이 메서드가 지원되면 **Auto** 및 **On** 단추가 표시되도록 합니다.
 
@@ -87,8 +87,8 @@ Windows 10, 버전 1803부터는 비디오를 지원하는 장치에서 비디�
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [MediaFrameReader 사용 하 여 미디어 처리 프레임](process-media-frames-with-mediaframereader.md)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaFrameReader를 사용하여 미디어 프레임 처리](process-media-frames-with-mediaframereader.md)
 *  [**VideoTemporalDenoisingControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol)
  
 

@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 신규, Windows 10, 1709, 10�
 ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e0749ba30dc4c4e8d2791aa2d6699581b48fb8e5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5179b4615d1b7ada40e064c21991fee3d9dbb60e
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626518"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162698"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>개발자용 Windows 10 빌드 16299의 새로운 기능
 
@@ -43,7 +43,7 @@ UI 컨트롤 | 이러한 새 컨트롤은 멋진 UI를 신속하고 손쉽게 �
 게임 모드 | UWP(유니버설 Windows 플랫폼)을 위한 [게임 모드](https://msdn.microsoft.com/library/windows/desktop/mt808808) API를 사용하여 Windows 10의 게임 모드가 제공하는 장점을 활용하여 가장 최적화된 게임 환경을 만들 수 있습니다. 이러한 API는 **&lt;expandedresources.h&gt;** 헤더에 있습니다.
 게임 모니터 | [GameMonitor 클래스](https://docs.microsoft.com/uwp/api/windows.gaming.ui.gamemonitor)를 통해 앱이 디바이스의 게임 모니터 권한 상태를 가져오고 사용자에게 게임 모니터링을 사용하도록 설정하라는 메시지를 표시할 수 있습니다.
 TruePlay | [TruePlay](https://aka.ms/trueplay)는 개발자에게 PC 게임 내 부정 행위에 대처하기 위한 새로운 도구 집합을 제공합니다. TruePlay에 등록한 게임은 일반적인 공격의 클래스를 완화하는 보호된 프로세스에서 실행됩니다. 유니버설 Windows 플랫폼(UWP)에 대한 TruePlay API를 통해 Windows 10 PC에서 게임 및 게임 모니터링 시스템 간의 상호 작용을 제한할 수 있습니다. 이러한 API는 **&lt;gamemonitor.h&gt;** 헤더에 있습니다.
-Xbox Live | UWP 및 XDK(Xbox 개발자 키트) 게임 모두에 대한 Xbox Live 개발자를 위한 문서를 추가했습니다. </br>* Xbox Live API를 사용하여 게임을 Xbox Live 소셜 게임 네트워크에 연결하는 방법은 [Xbox Live 개발자 가이드](../xbox-live/index.md)를 참조하세요. </br>* [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 사용하면 모든 UWP 게임 개발자가 PC와 Xbox One에 모두에 Xbox Live 지원 게임을 게시할 수 있습니다. </br>* Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 자세한 내용은 [Xbox Live 개발자 프로그램 개요](../xbox-live/developer-program-overview.md)를 참조하세요.
+Xbox Live | UWP 및 XDK(Xbox 개발자 키트) 게임 모두에 대한 Xbox Live 개발자를 위한 문서를 추가했습니다. </br>* Xbox Live API를 사용하여 게임을 Xbox Live 소셜 게임 네트워크에 연결하는 방법은 [Xbox Live 개발자 가이드](https://docs.microsoft.com/gaming/xbox-live//index.md)를 참조하세요. </br>* [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md)을 사용하면 모든 UWP 게임 개발자가 PC와 Xbox One에 모두에 Xbox Live 지원 게임을 게시할 수 있습니다. </br>* Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 자세한 내용은 [Xbox Live 개발자 프로그램 개요](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md)를 참조하세요.
 
 ## <a name="develop-windows-apps"></a>Windows 앱 개발
 

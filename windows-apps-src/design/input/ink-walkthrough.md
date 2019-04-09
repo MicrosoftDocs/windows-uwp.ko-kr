@@ -6,12 +6,12 @@ keywords: 잉크, 잉크 입력, 자습서
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bc28a4b1cb8afd70ef68a2e297b51ad0a5a0fc5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: be7005e64a431d65006315fbee551e5c6c3a2a6f
+ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661918"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343282"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>자습서: UWP 앱에서 잉크 지원
 
@@ -27,13 +27,13 @@ ms.locfileid: "57661918"
 * 기본 모양 인식 지원
 * 잉크 저장 및 로드
 
-이러한 기능을 구현하는 것에 대한 자세한 내용은 [UWP 앱에서 펜 상호 작용 및 Windows Ink](https://docs.microsoft.com/windows/uwp/input/pen-and-stylus-interactions)를 참조하세요.
+이러한 기능을 구현하는 것에 대한 자세한 내용은 [UWP 앱에서 펜 상호 작용 및 Windows Ink](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions)를 참조하세요.
 
 ## <a name="introduction"></a>소개
 
 Windows Ink를 사용하면 상상할 수 있는 거의 모든 펜과 종이 환경과 동일한 디지털 환경을 고객에게 제공할 수 있습니다. 이를 통해 빠른 필기 노트, 화이트보드 데모에 주석 추가, 건축 및 엔지니어링 도면에서 개인 작품에 이르기까지 모든 것을 적고 그릴 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * Windows 10 최신 버전을 실행하는 Windows 컴퓨터(또는 가상 컴퓨터)
 * [Visual Studio 2017 및는 RS2 SDK](https://developer.microsoft.com/windows/downloads)
@@ -119,7 +119,7 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
     <InkCanvas x:Name="inkCanvas" />
 ```
 
-간단하죠. 
+정말 간단하죠. 
 
 이제 앱을 다시 실행합니다. 낙서하거나, 이름을 쓰거나, 거울이 있거나 기억력이 좋다면 자신의 얼굴을 그려 보십시오.
 
@@ -335,7 +335,7 @@ Windows Ink는 Windows에서 지원하는 많은 언어에 대한 문자 인식�
 - 평행 사변형
 - 오각형
 - 사변형
-- 사각형
+- 직사각형
 - 직각 삼각형
 - 정사각형
 - 사다리꼴
@@ -475,7 +475,7 @@ Windows Ink는 잉크 스트로크를 클립보드에 복사하고 붙여넣는 
 * [(기본) 하는 도구 모음 위치와 방향을 샘플 잉크](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)
 * [잉크 도구 모음 위치와 방향을 샘플 (동적)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)
 * [간단한 잉크 샘플 (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [복잡 한 잉크 샘플 (c + +)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [복잡 한 잉크 샘플 (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
 * [잉크 샘플 (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [자습서 시작 하기: UWP 앱에서 잉크를 지원 합니다.](https://aka.ms/appsample-ink)
 * [색 지정 책 샘플](https://aka.ms/cpubsample-coloringbook)

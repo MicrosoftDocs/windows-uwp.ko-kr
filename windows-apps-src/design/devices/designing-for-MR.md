@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: b988859422a80b31d94a133e36631b078ac7c14e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: df81348dee781d1c329562d558ed8df30fd40bc5
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244119"
 ---
 # <a name="designing-for-mixed-reality"></a>혼합 현실을 위한 디자인
 
@@ -151,7 +151,7 @@ bool isViewingInMR = Windows.ApplicationModel.Preview.Holographic.HolographicApp
             {
                 // Running on desktop
                 textBlock.Text = "I'm running on the desktop.";
-                textBlock.FontSize = 16;
+                textBlock.FontSize = 14;
             }
 
 ```
@@ -163,8 +163,8 @@ bool isViewingInMR = Windows.ApplicationModel.Preview.Holographic.HolographicApp
 ## <a name="related-articles"></a>관련 문서
 
 
-* [셸에서 Api를 사용 하 여 앱에 대 한 현재 제한 사항](https://developer.microsoft.com/windows/mixed-reality/current_limitations_for_apps_using_apis_from_the_shell)
-* [2D 앱 빌드](https://developer.microsoft.com/windows/mixed-reality/building_2d_apps)
+* [현재 앱이 셸에서 API를 사용하는 데 따른 제약](https://developer.microsoft.com/windows/mixed-reality/current_limitations_for_apps_using_apis_from_the_shell)
+* [2D 앱 개발](https://developer.microsoft.com/windows/mixed-reality/building_2d_apps)
 * [HoloLens: Microsoft HoloLens 용 UWP 2D 앱 빌드](https://channel9.msdn.com/Events/Build/2016/B854)
 * [조건부 XAML](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/conditional-xaml)
 

@@ -3,15 +3,15 @@ ms.assetid: ''
 title: UWP 앱에서 Surface Dial(및 기타 휠 장치) 지원
 description: UWP 앱에 Surface Dial(및 기타 휠 장치)에 대한 지원을 추가하는 단계별 자습서입니다.
 keywords: 다이얼, 방사형, 자습서
-ms.date: 01/25/2018
+ms.date: 03/11/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d8729826c2f372b3d3b5607ce828aaf515e47f3d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1c8042bbe3ad8a37802b592e4e638a7c42e79a6d
+ms.sourcegitcommit: 99271798fe53d9768fc52b21366de05268cadcb0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643988"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221469"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>자습서: UWP 앱에서 Surface Dial(및 기타 휠 장치) 지원
 
@@ -38,7 +38,7 @@ Surface Dial은 펜, 터치, 마우스와 같은 기본 입력 디바이스와 �
 - 메뉴가 활성화된 경우 회전시켜 메뉴 항목을 강조 표시하거나 메뉴가 활성화되지 않은 경우 앱에서 현재 작업을 수정합니다.
 - 메뉴가 활성화된 경우 클릭하여 강조 표시된 메뉴 항목을 선택하거나 메뉴가 활성화되지 않은 경우 앱의 명령을 호출합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * Windows 10 크리에이터 업데이트 이상을 실행하는 컴퓨터(또는 가상 컴퓨터)
 * [Visual Studio 2017 (10.0.15063.0)](https://developer.microsoft.com/windows/downloads)
@@ -612,3 +612,35 @@ Surface Dial을 Surface Studio와 함께 사용하면 더 고유한 사용자 �
 ## <a name="summary"></a>요약
 
 축, 완료 된 *시작 자습서: UWP 앱에서 Surface Dial (및 다른 휠 장치)를 지 원하는*! UWP 앱에서 휠 디바이스를 지원하기 위해 필요한 기본 코드를 소개하고, **RadialController** API가 지원하는 풍부한 사용자 환경의 일부를 제공하는 방법을 알아보았습니다.
+
+## <a name="related-articles"></a>관련 문서
+
+[Surface Dial 상호 작용](windows-wheel-interactions.md)
+
+### <a name="api-reference"></a>API 참조
+
+- [**RadialController** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController)
+- [**RadialControllerButtonClickedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
+- [**RadialControllerConfiguration** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerConfiguration) 
+- [**RadialControllerControlAcquiredEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerControlAcquiredEventArgs) 
+- [**RadialControllerMenu** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenu) 
+- [**RadialControllerMenuItem** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuItem) 
+- [**RadialControllerRotationChangedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerRotationChangedEventArgs) 
+- [**RadialControllerScreenContact** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContact) 
+- [**RadialControllerScreenContactContinuedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs) 
+- [**RadialControllerScreenContactStartedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactStartedEventArgs)
+- [**RadialControllerMenuKnownIcon** 열거형](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuKnownIcon) 
+- [**RadialControllerSystemMenuItemKind** enum](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
+
+### <a name="samples"></a>샘플
+
+#### <a name="topic-samples"></a>항목 샘플
+
+[RadialController 사용자 지정](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
+
+#### <a name="other-samples"></a>기타 샘플
+[색 지정 책 샘플](https://github.com/Microsoft/Windows-appsample-coloringbook)
+
+[유니버설 Windows 플랫폼 샘플 (C# 및 C++)](https://go.microsoft.com/fwlink/?linkid=832713)
+
+[Windows 클래식 데스크톱 샘플](https://aka.ms/radialcontrollerclassicsample)

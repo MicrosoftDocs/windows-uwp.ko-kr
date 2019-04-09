@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, 접근성, 게임
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e1d9d25fc63dd2fbb8d258fdaee692ccdfdc911
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 38060d0a6bead360ef8a682902a433670c79b495
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592938"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162781"
 ---
 #  <a name="making-games-accessible"></a>접근성 높은 게임 만들기
 
@@ -196,7 +196,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 마이크가 게임 디바이스에 연결되어 있지 않은 플레이어도 여전히 누군가와 음성 대화를 할 수 있습니다. 채팅 창에 문자를 입력하고 이러한 문자 메시지를 음성으로 변환할 수 있습니다. 또한 음성이 잘 들리지 않으면 음성 채팅 중인 상대방으로부터 온 기록된 문자 메시지를 읽을 수 있습니다.
 
-ID@Xbox 및 관리 파트너 프로그램의 개발자들을 위해 텍스트-음성 및 음성-텍스트 변환 기능이 Xbox Live 서비스에서 [Game Chat 2 접근성 기능](../xbox-live/multiplayer/chat/using-game-chat-2.md#accessibility)의 일부로 제공되고 있습니다. 자세한 내용은 [Game Chat 2 개요](../xbox-live/multiplayer/chat/game-chat-2-overview.md)를 참조하세요.
+ID@Xbox 및 관리 파트너 프로그램의 개발자들을 위해 텍스트-음성 및 음성-텍스트 변환 기능이 Xbox Live 서비스에서 [Game Chat 2 접근성 기능](https://docs.microsoft.com/gaming/xbox-live//multiplayer/chat/using-game-chat-2.md#accessibility)의 일부로 제공되고 있습니다. 자세한 내용은 [Game Chat 2 개요](https://docs.microsoft.com/gaming/xbox-live//multiplayer/chat/game-chat-2-overview.md)를 참조하세요.
 
 ### <a name="sound-feedback"></a>소리 피드백
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, 이벤트 기록
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
-ms.openlocfilehash: d7b338fd3b34d530ad365b0377d6b6c6c65398b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 368e2fb7b3c6d78f68235b829e088d79b5673cf2
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604238"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334761"
 ---
 # <a name="log-custom-events-for-partner-center"></a>파트너 센터에 대해 사용자 지정 이벤트 로깅
 
@@ -22,7 +22,7 @@ ms.locfileid: "57604238"
 > [!NOTE]
 > 파트너 센터에 로그인 하는 사용자 지정 이벤트는 관련이 [Windows 이벤트](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx), 및에 표시 되지 않습니다 **이벤트 뷰어**합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 사용자 지정 로깅 이벤트를 검토할 수 전에 합니다 **사용 현황 보고서** 파트너 센터에서 앱에 대 한 앱 스토어에 게시 해야 합니다.
 
@@ -39,10 +39,10 @@ ms.locfileid: "57604238"
 5. SDK 목록에서 **Microsoft Engagement Framework**(Microsoft 참여 프레임워크) 옆의 확인란을 클릭하고 **확인**을 클릭합니다.
 
 6. 사용자 지정 이벤트를 기록할 각 코드 파일의 맨 위에 다음 문을 추가합니다.
-    [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#EngagementNamespace)]
+    [!code-csharp[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#EngagementNamespace)]
 
 7. 사용자 지정 이벤트를 기록할 각 코드 섹션에서 [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 개체를 가져온 다음 [Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 메서드를 호출합니다. 사용자 지정 이벤트 문자열을 메서드에 전달합니다.
-    [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#Log)]
+    [!code-csharp[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#Log)]
 
     > [!NOTE]
     > 앱 로그에 이름이 긴 사용자 지정 이벤트가 많을 경우 [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report)를 로드하는 데 시간이 오래 걸릴 수 있습니다. 사용자 지정 이벤트에 간략한 이름을 사용하는 것이 좋습니다. 

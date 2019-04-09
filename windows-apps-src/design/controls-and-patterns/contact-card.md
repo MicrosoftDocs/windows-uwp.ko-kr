@@ -9,18 +9,18 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 71a3108e21455086e2742987db1d7125c733f6e2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 4c227629ace1f3fdbb2af8582401f9273cf11c2e
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57638828"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913983"
 ---
 # <a name="contact-card"></a>연락처 카드
 
-연락처 카드는 [문의](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)(UWP가 사용자와 회사를 나타내기 위해 사용하는 메커니즘)에 이름, 전화 번호, 주소 등의 연락처 정보를 표시합니다.  또한 연락처 카드는 사용자가 연락처 정보를 편집할 수 있도록 해줍니다. 간략한 연락처 카드를 표시할 것인지, 추가 정보가 포함된 전체 연락처 카드를 표시할 것인지 선택할 수 있습니다.
+연락처 카드는 [문의](/uwp/api/Windows.ApplicationModel.Contacts.Contact)(UWP가 사용자와 회사를 나타내기 위해 사용하는 메커니즘)에 이름, 전화 번호, 주소 등의 연락처 정보를 표시합니다.  또한 연락처 카드는 사용자가 연락처 정보를 편집할 수 있도록 해줍니다. 간략한 연락처 카드를 표시할 것인지, 추가 정보가 포함된 전체 연락처 카드를 표시할 것인지 선택할 수 있습니다.
 
-> **중요 API**: [ShowContactCard 메서드](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard)하십시오 [ShowFullContactCard 메서드](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_)를 [IsShowContactCardSupported 메서드](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [클래스에 게 문의](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
+> **중요 API**: [ShowContactCard 메서드](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard)하십시오 [ShowFullContactCard 메서드](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard)를 [IsShowContactCardSupported 메서드](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [클래스에 게 문의](/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
 
 연락처 카드를 표시하는 방법은 두 가지가 있습니다.  
 * 플라이아웃에 표시되는 표준 연락처 카드는 신속 처리가 가능하기 때문에 사용자가 플라이아웃 밖을 클릭하면 바로 사라집니다. 
@@ -146,7 +146,7 @@ private void OnUserClickShowContactCard(object sender, RoutedEventArgs e)
 
 ## <a name="show-a-full-contact-card"></a>전체 연락처 카드 표시
 
-전체 연락처 카드를 표시하려면 [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard)가 아닌 [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_) 메서드를 호출합니다.
+전체 연락처 카드를 표시하려면 [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard)가 아닌 [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard) 메서드를 호출합니다.
 
 ```csharp
 private void onUserClickShowContactCard() 
@@ -181,5 +181,5 @@ private void onUserClickShowContactCard()
 
 ## <a name="related-articles"></a>관련 문서
 - [연락처 및 일정](/windows/uwp/contacts-and-calendar/)
-- [대화 상대 카드 샘플](https://go.microsoft.com/fwlink/p/?LinkId=624040)
-- [사용자 지정 컨트롤](/windows/uwp/controls-and-patterns/person-picture/)
+- [연락처 카드 샘플](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+- [인물 사진 컨트롤](/windows/uwp/controls-and-patterns/person-picture/)

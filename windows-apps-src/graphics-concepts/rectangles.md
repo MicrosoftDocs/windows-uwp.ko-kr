@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aa94eb00058ba3297e7ca7cc4f93581d9281fd1c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6ce91b47d2846f945a0e4a15f705491ab22e9dea
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608018"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291671"
 ---
 # <a name="rectangles"></a>사각형
-
 
 Direct3D 및 Windows 프로그래밍 전체에서 경계 사각형을 사용하여 화면의 개체를 참조합니다. 경계 사각형의 면은 항상 화면의 면에 평행이므로 왼쪽 위 모퉁이와 오른쪽 아래 모퉁이, 이렇게 두 점으로 사각형을 설명할 수 있습니다.
 
@@ -24,7 +23,7 @@ Direct3D 및 Windows 프로그래밍 전체에서 경계 사각형을 사용하�
 
 대부분의 응용 프로그램은 [**RECT**](https://msdn.microsoft.com/library/windows/desktop/dd162897) 구조(또는 그 typedef된 별칭)를 사용하여 화면으로 블리팅할 때 또는 히트 감지를 수행할 때 사용할 경계 사각형에 대한 정보를 운반합니다. C++에서 **RECT** 구조의 정의는 다음과 같습니다.
 
-```
+```cpp
 typedef struct tagRECT { 
     LONG    left;    // This is the upper-left corner x-coordinate.
     LONG    top;     // The upper-left corner y-coordinate.

@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 강력 하 고, 약한 참조
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 507b3cee71819df1d0163380a494e6a15936109f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0e2e40daaf777e36094b698d058f21840b1804c8
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630818"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291831"
 ---
-# <a name="strong-and-weak-references-in-cwinrt"></a>강력한 / 취약 한 참조를 C + + /cli WinRT
+# <a name="strong-and-weak-references-in-cwinrt"></a>강력한 / 취약 한 참조에서 C++/WinRT
 
-Windows 런타임에서 참조 횟수가 계산 시스템입니다. 에 이러한 시스템의 성과 구분 하는 방법에 대 한 알 수는 것이 반드시 강력한 / 취약 한 참조 (및 참조를 모두 같은 암시적 *이* 포인터). 이 항목에서 살펴보겠지만 이러한 참조를 올바르게 관리 하는 방법을 알면 원활 하 게 실행 하는 신뢰할 수 있는 시스템 및 지거나 충돌 하는 것의 차이 의미할 수 있습니다. 언어 프로젝션에 대 한 심층 지원이 있는 도우미 함수를 제공 하 여 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 간단 하 고 올바르게 더 복잡 한 시스템을 구축 하는 작업의 중간 사항을 충족 합니다.
+Windows 런타임에서 참조 횟수가 계산 시스템입니다. 에 이러한 시스템의 성과 구분 하는 방법에 대 한 알 수는 것이 반드시 강력한 / 취약 한 참조 (및 참조를 모두 같은 암시적 *이* 포인터). 이 항목에서 살펴보겠지만 이러한 참조를 올바르게 관리 하는 방법을 알면 원활 하 게 실행 하는 신뢰할 수 있는 시스템 및 지거나 충돌 하는 것의 차이 의미할 수 있습니다. 언어 프로젝션에 대 한 심층 지원이 있는 도우미 함수를 제공 하 여 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 간단 하 고 올바르게 더 복잡 한 시스템을 구축 하는 작업의 중간 사항을 충족 합니다.
 
 ## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>안전 하 게 액세스 하는 *이* 클래스 멤버 코 루틴에서 포인터
 
@@ -57,7 +57,7 @@ int main()
 }
 ```
 
-**MyClass::RetrieveValueAsync** 동안 작동 다음 결국 해당 복사본을 반환 하 고는 `MyClass::m_value` 데이터 멤버입니다. 호출 **RetrieveValueAsync** 이 인해 생성 되는 비동기 개체가 및 해당 개체에는 암시적 *이* 포인터 (결국는 `m_value` 액세스).
+**MyClass::RetrieveValueAsync** 일부 시간 작업 하는 데 소비 하 고 결국의 복사본을 반환 합니다는 `MyClass::m_value` 데이터 멤버입니다. 호출 **RetrieveValueAsync** 이 인해 생성 되는 비동기 개체가 및 해당 개체에는 암시적 *이* 포인터 (결국는 `m_value` 액세스).
 
 이벤트의 전체 시퀀스는 다음과 같습니다.
 
@@ -101,11 +101,11 @@ IAsyncOperation<winrt::hstring> RetrieveValueAsync()
 }
 ```
 
-때문에 C + +에서 파생 직접 또는 간접적으로 WinRT 개체를 [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) 템플릿, C + + /cli WinRT 개체를 호출할 수 해당 [ **implements.get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function) 보호 된 멤버 함수에 대 한 강력한 참조를 검색 하는 해당 *이* 포인터입니다. 실제로 사용 하지 않아도 있다는 점에 주의 합니다 `strong_this` 변수; 호출 **get_strong** 에 참조 횟수를 증가 시키고에 암시적 유지 *이* 유효한 포인터입니다.
+때문에 C++에서 파생 직접 또는 간접적으로 WinRT 개체/합니다 [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) 템플릿을 C++WinRT 개체를 호출할 수/해당 [  **implements.get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) 보호 된 멤버 함수에 대 한 강력한 참조를 검색 하는 해당 *이* 포인터입니다. 실제로 사용 하지 않아도 있다는 점에 주의 합니다 `strong_this` 변수; 호출 **get_strong** 에 참조 횟수를 증가 시키고에 암시적 유지 *이* 유효한 포인터입니다.
 
 이 사용 했던 이전에 가져온 4 단계를 수행 하는 경우 문제를 해결 합니다. 클래스 인스턴스를 다른 모든 참조 사라지는 경우에는 코 루틴 종속은 안정적인 보장 예방 조치를 수행 했습니다.
 
-강력한 참조를 적절 하 게 없는 경우 대신 호출할 수 있습니다 [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function) 에 대 한 약한 참조를 검색할 *이*합니다. 에 액세스 하기 전에 강력한 참조를 검색할 수 있도록 방금 확인 *이*합니다.
+강력한 참조를 적절 하 게 없는 경우 대신 호출할 수 있습니다 [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) 에 대 한 약한 참조를 검색할 *이*합니다. 에 액세스 하기 전에 강력한 참조를 검색할 수 있도록 방금 확인 *이*합니다.
 
 ```cppwinrt
 IAsyncOperation<winrt::hstring> RetrieveValueAsync()
@@ -243,7 +243,7 @@ event_source.Event([this](auto&& ...)
 
 ### <a name="the-solution"></a>솔루션
 
-솔루션은 강력한 참조를 캡처합니다. 강력한 참조 *않습니다* 고 참조 횟수를 증가 *않습니다* 현재 개체를 유지 합니다. 방금 캡처 변수를 선언 하면 (호출 `strong_this` 이 예에서)에 대 한 호출을 사용 하 여 초기화 [ **implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function)에 대 한 강력한 참조를 검색 하는 우리의  *이* 포인터입니다.
+솔루션은 강력한 참조를 캡처합니다. 강력한 참조 *않습니다* 고 참조 횟수를 증가 *않습니다* 현재 개체를 유지 합니다. 방금 캡처 변수를 선언 하면 (호출 `strong_this` 이 예에서)에 대 한 호출을 사용 하 여 초기화 [ **implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)에 대 한 강력한 참조를 검색 하는 우리의  *이* 포인터입니다.
 
 ```cppwinrt
 event_source.Event([this, strong_this { get_strong()}](auto&& ...)
@@ -261,7 +261,7 @@ event_source.Event([strong_this { get_strong()}](auto&& ...)
 });
 ```
 
-강력한 참조를 적절 하 게 없는 경우 대신 호출할 수 있습니다 [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function) 에 대 한 약한 참조를 검색할 *이*합니다. 만 검색할 수 있도록 여전히 강력한 참조에서 멤버에 액세스 하기 전에 확인 합니다.
+강력한 참조를 적절 하 게 없는 경우 대신 호출할 수 있습니다 [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) 에 대 한 약한 참조를 검색할 *이*합니다. 만 검색할 수 있도록 여전히 강력한 참조에서 멤버에 액세스 하기 전에 확인 합니다.
 
 ```cppwinrt
 event_source.Event([weak_this{ get_weak() }](auto&& ...)
@@ -296,13 +296,13 @@ struct EventRecipient : winrt::implements<EventRecipient, IInspectable>
 
 이 방법이 표준, 기존 개체 및 해당 멤버 함수를 가리킵니다. 안전 하 게이 수 있습니다&mdash;Windows SDK의 버전 (Windows 10, 버전 1809) 10.0.17763.0&mdash;강력한 또는 처리기 등록 되어 있는 지점에 대 한 약한 참조를 설정 합니다. 이때 이벤트 받는 사람 개체 여전히 활성화 상태인 것으로 알려져 있습니다.
 
-강력한 참조의 경우 호출할 [ **get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function) 원시 대신 *이* 포인터입니다. C + + /cli WinRT 결과 대리자를 현재 개체에 대 한 강력한 참조를 소유 하 고 있음을 확인 합니다.
+강력한 참조의 경우 호출할 [ **get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) 원시 대신 *이* 포인터입니다. C++/ WinRT는 결과 대리자를 현재 개체에 대 한 강력한 참조를 보유 하는 것을 확인 합니다.
 
 ```cppwinrt
 event_source.Event({ get_strong(), &EventRecipient::OnEvent });
 ```
 
-약한 참조를 호출 [ **get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)합니다. C + + /cli WinRT는 결과로 얻은 대리자가 약한 참조를 저장 하는 확인 합니다. 마지막 단계에 및 백그라운드 대리자 강력한 단일에 대 한 약한 참조를 확인 하려고 시도 및 성공한 경우에 멤버 함수를 호출 합니다.
+약한 참조를 호출 [ **get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)합니다. C++/ WinRT는 결과로 얻은 대리자가 약한 참조를 저장 하는 것을 확인 합니다. 마지막 단계에 및 백그라운드 대리자 강력한 단일에 대 한 약한 참조를 확인 하려고 시도 및 성공한 경우에 멤버 함수를 호출 합니다.
 
 ```cppwinrt
 event_source.Event({ get_weak(), &EventRecipient::OnEvent });
@@ -340,7 +340,7 @@ void OnCompositionScaleChanged(Windows::UI::Xaml::Controls::SwapChainPanel const
 
 ## <a name="weak-references-in-cwinrt"></a>C++/WinRT의 약한 참조
 
-위의 사용 되는 약한 참조를 살펴보았습니다. 일반적으로 순환 참조가 손상에 대 한 일입니다. XAML 기반 UI 프레임 워크의 네이티브 구현에 대 한 예를 들어&mdash;프레임 워크의 기록 디자인으로 인해&mdash;약한 참조 메커니즘 C + + /cli WinRT는 순환 참조가 처리 하는 데 필요한 합니다. XAML을 외부 그러나 가능성이 않아도 약한 참조를 사용 하 여 (아무 것도 not에 대 한 XAML 관련 기본적으로). 대신, 더 경우가 수 있어야 디자인 C + + /cli 약한 참조 및 순환 참조가 필요 하지 않도록 하는 방식에서 WinRT Api. 
+위의 사용 되는 약한 참조를 살펴보았습니다. 일반적으로 순환 참조가 손상에 대 한 일입니다. XAML 기반 UI 프레임 워크의 네이티브 구현에 대 한 예를 들어&mdash;프레임 워크의 기록 디자인으로 인해&mdash;약한 참조 메커니즘에 C++WinRT는 순환 참조가 처리 하는 데 필요한 합니다. XAML을 외부 그러나 가능성이 않아도 약한 참조를 사용 하 여 (아무 것도 not에 대 한 XAML 관련 기본적으로). 대신, 더 경우가 수 있어야 사용자 고유의 디자인 C++약한 참조 및 순환 참조가 필요 하지 않도록 하는 방식에서 WinRT Api. 
 
 어떤 유형을 선언하든 약한 참조의 필요 여부 또는 시기는 C++/WinRT에게 확연히 드러나지 않습니다. 따라서 C++/WinRT는 구조 템플릿 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements)에서 약한 참조 지원을 자동으로 제공합니다. 그 결과 사용자 고유의 C++/WinRT 유형이 이 구조체 템플릿에서 직/간접적으로 파생됩니다. 또한 개체가 실제로 [**IWeakReferenceSource**](/windows/desktop/api/weakreference/nn-weakreference-iweakreferencesource)에 대해 쿼리를 실행하는 경우에만 비용이 발생한다는 점에서 대가성입니다. 또한 명시적으로 [해당 지원을 사용하지 않도록](#opting-out-of-weak-reference-support) 옵트 아웃을 선택할 수도 있습니다.
 
@@ -368,7 +368,7 @@ if (Class strong = weak.get())
 }
 ```
 
-그 밖에 일부 강한 참조가 계속해서 존재하는 경우에 한해 [**weak_ref::get**](/uwp/cpp-ref-for-winrt/weak-ref#weakrefget-function) 호출이 참조 수를 일정량씩 늘려 강한 참조를 호출자에게 반환합니다.
+그 밖에 일부 강한 참조가 계속해서 존재하는 경우에 한해 [**weak_ref::get**](/uwp/cpp-ref-for-winrt/weak-ref#weak_refget-function) 호출이 참조 수를 일정량씩 늘려 강한 참조를 호출자에게 반환합니다.
 
 ### <a name="opting-out-of-weak-reference-support"></a>약한 참조를 사용하지 않도록 옵트아웃
 약한 참조 지원은 자동입니다. 하지만 [**winrt::no_weak_ref**](/uwp/cpp-ref-for-winrt/no-weak-ref) 마커 구조체를 템플릿 인수로 기본 클래스에 전달하여 명시적으로 지원을 사용하지 않도록 옵트아웃을 선택할 수 있습니다.
@@ -394,7 +394,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, no_weak_ref>
 variadic 매개 변수 팩에서 마커 구조체가 표시되는 경우는 중요하지 않습니다. 약한 참조의 옵트아웃을 요청하는 경우에는 컴파일러가 "*This is only for weak ref support*"를 통해 옵트아웃할 수 있도록 지원합니다.
 
 ## <a name="important-apis"></a>중요 API
-* [implements::get_weak 함수](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
+* [implements::get_weak 함수](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)
 * [winrt::make_weak 함수 템플릿](/uwp/cpp-ref-for-winrt/make-weak)
 * [winrt::no_weak_ref 표식 구조체](/uwp/cpp-ref-for-winrt/no-weak-ref)
 * [winrt::weak_ref 구조체 템플릿](/uwp/cpp-ref-for-winrt/weak-ref)

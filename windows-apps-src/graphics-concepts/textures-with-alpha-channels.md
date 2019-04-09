@@ -7,26 +7,23 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 88d150383d2be219e7f382e0e690771acbc9d2ee
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1a75c854d413f4681960c890691d99dd2529cc97
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651478"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291691"
 ---
 # <a name="textures-with-alpha-channels"></a>알파 채널을 사용하는 텍스처
-
 
 투명도 복잡성이 더욱 큰 텍스처 맵을 인코딩하는 방법은 두 가지입니다. 각 경우에서 투명성을 설명하는 블록이 이미 설명된 64비트 블록 앞에 옵니다. 투명도는 픽셀당 4비트(명시적 인코딩)이거나, 혹은 비트 수가 더 적을 뿐만 아니라 선형 보간이 색상 인코딩에 사용되는 것과 유사한 4x4 비트맵으로 표현됩니다.
 
 투명도 블록과 색상 블록은 다음 표와 같이 정렬됩니다.
 
-| 워드 주소 | 64비트 블록                      |
+| 워드 주소 | 64 비트 블록                      |
 |--------------|-----------------------------------|
 | 3:0          | 투명도 블록                |
 | 7:4          | 앞에서 설명한 64비트 블록 |
-
- 
 
 ## <a name="span-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanexplicit-texture-encoding"></a><span id="Explicit-Texture-Encoding"></span><span id="explicit-texture-encoding"></span><span id="EXPLICIT-TEXTURE-ENCODING"></span>명시적 질감 인코딩
 
@@ -98,7 +95,7 @@ BC3 형식의 투명도 인코딩은 색상에 사용되는 선형 인코딩과 
 
 다음은 이 알고리즘을 나타내는 코드 예제입니다.
 
-```
+```cpp
 // 8-alpha or 6-alpha block?    
 if (alpha_0 > alpha_1) {    
     // 8-alpha block:  derive the other six alphas.    
@@ -128,12 +125,12 @@ else {
 |------|----------------------------------------------------------------|
 | 0    | 알파\_0                                                       |
 | 1    | 알파\_1                                                       |
-| 2    | \[0\]\[2\] (2 MSBs) \[0\]\[1\]하십시오 \[0\]\[0\]                    |
-| 3    | \[1\]\[1\] (1 MSB) \[1\]\[0\]하십시오 \[0\]\[3\], \[0\] \[2\] (1에서 LSB) |
-| 4    | \[1\]\[3\]하십시오 \[1\]\[2\]하십시오 \[1\]\[1\] (2 LSBs)                    |
-| 5    | \[2\]\[2\] (2 MSBs) \[2\]\[1\]하십시오 \[2\]\[0\]                    |
+| 2    | \[0\]\[2\] (2 MSBs), \[0\]\[1\], \[0\]\[0\]                    |
+| 3    | \[1\]\[1\] (1 MSB), \[1\]\[0\], \[0\]\[3\], \[0\]\[2\] (1 LSB) |
+| 4    | \[1\]\[3\], \[1\]\[2\], \[1\]\[1\] (2 LSBs)                    |
+| 5    | \[2\]\[2\] (2 MSBs), \[2\]\[1\], \[2\]\[0\]                    |
 | 6    | \[3\]\[1\] (1 MSB) \[3\]\[0\]하십시오 \[2\]\[3\], \[2\] \[2\] (1에서 LSB) |
-| 7    | \[3\]\[3\]하십시오 \[3\]\[2\]하십시오 \[3\]\[1\] (2 LSBs)                    |
+| 7    | \[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSBs)                    |
 
  
 

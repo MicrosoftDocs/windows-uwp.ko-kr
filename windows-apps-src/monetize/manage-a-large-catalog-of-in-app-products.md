@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱에서 바로 구매, IAP, 추가 기능, 카탈로그, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 2335e09253570d09c33422d2f5ba4179697e4ea7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6b6c799c0bbf05e113bfc3d28816c6600d678f18
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57637358"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334721"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>앱에서 바로 구매 제품의 큰 카탈로그 관리
 
@@ -24,7 +24,7 @@ ms.locfileid: "57637358"
 
 스토어는 결과 [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392)에서 구매 요청의 *offerId*만 사용합니다. 이 프로세스는 [스토어에 앱에서 바로 구매 제품을 나열](../publish/add-on-submissions.md)할 때 원래 제공된 정보를 직접 수정하지 않습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 -   이 항목에서는 스토어에 나열된 단일 앱에서 바로 구매 제품을 사용하여 여러 가지 앱에서 바로 판매를 표현하는 스토어 지원에 대해 설명합니다. 앱에서 바로 구매를 잘 모르는 경우 라이선스 정보 및 스토어에 앱에서 바로 구매를 제대로 나열하는 방법을 알아보려면 [앱에서 바로 구매 제품 사용](enable-in-app-product-purchases.md)을 검토하세요.
 -   새로운 앱에서 바로 판매를 처음 코딩하고 테스트할 때는 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) 개체 대신 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) 개체를 사용해야 합니다. 이렇게 하면 라이브 서버를 호출하는 대신 라이선스 서버 호출을 시뮬레이트하여 라이선스 논리를 확인할 수 있습니다. 이 작업을 수행 하려면 %userprofile%에서 WindowsStoreProxy.xml 라는 파일을 사용자 지정 해야\\AppData\\로컬\\패키지\\&lt;패키지 이름&gt;\\LocalState\\ Microsoft\\Windows 스토어\\ApiData 합니다. 처음으로 앱이 실행될 때 Microsoft Visual Studio 시뮬레이터에서 이 파일을 만듭니다. 또는 런타임에 사용자 지정 파일을 로드할 수도 있습니다. 자세한 내용은 [CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy)을 참조하세요.
@@ -35,7 +35,7 @@ ms.locfileid: "57637358"
 큰 카탈로그 내의 특정 제품에 대한 구매 요청은 앱 내에서의 다른 모든 구매 요청과 거의 동일한 방식으로 처리됩니다. 앱은 새로운 [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) 메서드 오버로드를 호출할 때 *OfferId*와 앱에서 바로 구매 제품 이름으로 채워진 [ProductPurchaseDisplayProperties](https://msdn.microsoft.com/library/windows/apps/dn263390) 개체를 둘 다 제공합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#MakePurchaseRequest)]
+[!code-csharp[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#MakePurchaseRequest)]
 
 ## <a name="report-fulfillment-of-the-in-app-offer"></a>앱에서 바로 판매의 이행 보고
 
@@ -46,7 +46,7 @@ ms.locfileid: "57637358"
 다음 코드에서는 이행 호출과 특정 판매 정보가 삽입된 UI 메시지 패턴을 보여 줍니다. 특정 제품 정보가 없을 경우 예제에서는 제품 [ListingInformation](https://msdn.microsoft.com/library/windows/apps/br225163)의 정보를 사용합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#ReportFulfillment)]
+[!code-csharp[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#ReportFulfillment)]
 
 ## <a name="related-topics"></a>관련 항목
 

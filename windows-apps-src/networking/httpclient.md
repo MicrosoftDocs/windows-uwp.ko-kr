@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dd4b8c137d65339701b40027bb3230162e2c2456
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 304c023251a15995ce15f5b3d846c662797661cd
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244329"
 ---
 # <a name="httpclient"></a>HttpClient
 
-**중요 한 Api**
+**중요 API**
 
 -   [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)
 -   [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)
@@ -43,12 +43,12 @@ ms.locfileid: "57620478"
 
 [  **Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스는 HTTP 콘텐츠를 쿠키가 포함된 HTTP 엔터티 본문 및 헤더로 나타냅니다. HTTP 콘텐츠를 HTTP 요청 또는 HTTP 응답에 연결할 수 있습니다. **Windows.Web.Http** 네임스페이스는 HTTP 컨텐츠를 나타내는 여러 클래스를 제공합니다.
 
--   [**HttpBufferContent**](https://msdn.microsoft.com/library/windows/apps/dn298625)합니다. 콘텐츠를 버퍼로
--   [**HttpFormUrlEncodedContent**](https://msdn.microsoft.com/library/windows/apps/dn298685)합니다. 콘텐츠를 **application/x-www-form-urlencoded** MIME 형식으로 인코드된 이름/값 튜플로
--   [**HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708)합니다. 형식의 콘텐츠를 **다중 파트 /\***  MIME 형식입니다.
--   [**HttpMultipartFormDataContent**](https://msdn.microsoft.com/library/windows/apps/dn279596)합니다. **multipart/form-data** MIME 형식으로 인코딩된 콘텐츠
--   [**HttpStreamContent**](https://msdn.microsoft.com/library/windows/apps/dn279649)합니다. 콘텐츠를 스트림으로(내부 형식은 HTTP GET 메서드가 데이터를 받고 HTTP POST 메서드가 데이터를 업로드하는 데 사용됨)
--   [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661)합니다. 콘텐츠를 문자열로
+-   [**HttpBufferContent**](https://msdn.microsoft.com/library/windows/apps/dn298625). 콘텐츠를 버퍼로
+-   [**HttpFormUrlEncodedContent**](https://msdn.microsoft.com/library/windows/apps/dn298685). 콘텐츠를 **application/x-www-form-urlencoded** MIME 형식으로 인코드된 이름/값 튜플로
+-   [**HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708). 형식의 콘텐츠를 **다중 파트 /\***  MIME 형식입니다.
+-   [**HttpMultipartFormDataContent**](https://msdn.microsoft.com/library/windows/apps/dn279596). **multipart/form-data** MIME 형식으로 인코딩된 콘텐츠
+-   [**HttpStreamContent**](https://msdn.microsoft.com/library/windows/apps/dn279649). 콘텐츠를 스트림으로(내부 형식은 HTTP GET 메서드가 데이터를 받고 HTTP POST 메서드가 데이터를 업로드하는 데 사용됨)
+-   [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661). 콘텐츠를 문자열로
 -   [**IHttpContent** ](https://msdn.microsoft.com/library/windows/apps/dn279684) -자체 콘텐츠 개체를 만드는 개발자를 위한 기본 인터페이스
 
 "HTTP를 통해 간단한 GET 요청 보내기" 섹션의 코드 조각에서는 [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661) 클래스를 사용하여 HTTP GET 요청의 HTTP 응답을 문자열로 나타냅니다.
@@ -158,10 +158,10 @@ int main()
 
 ## <a name="post-binary-data-over-http"></a>HTTP 통해 게시 이진 데이터
 
-합니다 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis) 아래 코드 예제에서는 양식 데이터 및 POST 요청을 사용 하 여 웹 서버에 적은 양의 이진 데이터 파일 업로드로 전송 하는 방법을 보여 줍니다. 코드를 사용 하는 [ **HttpBufferContent** ](/uwp/api/windows.web.http.httpbuffercontent) 이진 데이터를 나타내는 클래스 및 [ **HttpMultipartFormDataContent** ](/uwp/api/windows.web.http.httpmultipartformdatacontent) 클래스 다중 파트 양식 데이터를 나타냅니다.
+합니다 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis) 아래 코드 예제에서는 양식 데이터 및 POST 요청을 사용 하 여 웹 서버에 적은 양의 이진 데이터 파일 업로드로 전송 하는 방법을 보여 줍니다. 코드를 사용 하는 [ **HttpBufferContent** ](/uwp/api/windows.web.http.httpbuffercontent) 이진 데이터를 나타내는 클래스 및 [ **HttpMultipartFormDataContent** ](/uwp/api/windows.web.http.httpmultipartformdatacontent) 클래스 다중 파트 양식 데이터를 나타냅니다.
 
 > [!NOTE]
-> 호출 **가져올** (아래 코드 예제에 표시)으로 UI 스레드에 대 한 적절 한 없습니다. 이 경우 사용 하는 올바른 기법을 참조 하세요 [동시성 및 비동기 작업을 사용 하 여 C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)합니다.
+> 호출 **가져올** (아래 코드 예제에 표시)으로 UI 스레드에 대 한 적절 한 없습니다. 이 경우 사용 하는 올바른 기법을 참조 하세요 [동시성 및 비동기 작업을 C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)합니다.
 
 ```cppwinrt
 // pch.h
@@ -183,19 +183,6 @@ int main()
 {
     init_apartment();
 
-    Windows::Web::Http::HttpClient httpClient;
-
-    Uri requestUri{ L"https://www.contoso.com/post" };
-
-    Windows::Web::Http::HttpMultipartFormDataContent postContent;
-    Windows::Web::Http::Headers::HttpContentDispositionHeaderValue disposition{ L"form-data" };
-    postContent.Headers().ContentDisposition(disposition);
-    // The 'name' directive contains the name of the form field representing the data.
-    disposition.Name(L"fileForUpload");
-    // Here, the 'filename' directive is used to indicate to the server a file name
-    // to use to save the uploaded data.
-    disposition.FileName(L"file.dat");
-
     auto buffer{
         Windows::Security::Cryptography::CryptographicBuffer::ConvertStringToBinary(
             L"A sentence of text to encode into binary to serve as sample data.",
@@ -207,6 +194,15 @@ int main()
     // it's not necessarily an image file.
     binaryContent.Headers().Append(L"Content-Type", L"image/jpeg");
 
+    Windows::Web::Http::Headers::HttpContentDispositionHeaderValue disposition{ L"form-data" };
+    binaryContent.Headers().ContentDisposition(disposition);
+    // The 'name' directive contains the name of the form field representing the data.
+    disposition.Name(L"fileForUpload");
+    // Here, the 'filename' directive is used to indicate to the server a file name
+    // to use to save the uploaded data.
+    disposition.FileName(L"file.dat");
+
+    Windows::Web::Http::HttpMultipartFormDataContent postContent;
     postContent.Add(binaryContent); // Add the binary data content as a part of the form data content.
 
     // Send the POST request asynchronously, and retrieve the response as a string.
@@ -216,6 +212,8 @@ int main()
     try
     {
         // Send the POST request.
+        Uri requestUri{ L"https://www.contoso.com/post" };
+        Windows::Web::Http::HttpClient httpClient;
         httpResponseMessage = httpClient.PostAsync(requestUri, postContent).get();
         httpResponseMessage.EnsureSuccessStatusCode();
         httpResponseBody = httpResponseMessage.Content().ReadAsStringAsync().get();

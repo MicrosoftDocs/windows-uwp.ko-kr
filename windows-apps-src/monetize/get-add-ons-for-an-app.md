@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: ec065eef5d411e35515837b169fd57d71e4ef6ac
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 8211d65f04b7487aeca6f683375fe87b80d1b9a9
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594558"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335001"
 ---
 # <a name="get-add-ons-for-an-app"></a>앱에 대한 추가 기능 가져오기
 
 Microsoft Store 제출 API 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능을 나열 하려면이 메서드를 사용 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -30,14 +30,14 @@ Microsoft Store 제출 API 사용 하 여 파트너 센터 계정에 등록 된 
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts``` |
+| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` |
 
 
 ### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| Authorization | string | 필수 사항입니다. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
@@ -45,9 +45,9 @@ Microsoft Store 제출 API 사용 하 여 파트너 센터 계정에 등록 된 
 
 |  이름  |  형식  |  설명  |  필수  |
 |------|------|------|------|
-|  applicationId  |  문자열  |  추가 기능을 검색하려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |  예  |
-|  top  |  int  |  요청에 반환할 항목 수(즉, 반환할 추가 기능 수)입니다. 앱에 쿼리에서 지정한 값보다 더 많은 추가 기능이 있을 경우 응답 본문에는 데이터의 다음 페이지를 요청하기 위해 메서드 URI에 추가할 수 있는 상대 URI 경로가 포함됩니다.  |  아니오  |
-|  skip |  int  | 나머지 항목을 반환하기 전에 쿼리에서 바이패스할 항목 수입니다. 이 매개 변수를 사용하여 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10이고 skip=0이면 1-10 항목을 검색하고 top=10이고 skip=10이면 11-20 항목을 검색합니다.   |  아니오  |
+|  applicationId  |  string  |  추가 기능을 검색하려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |  예  |
+|  top  |  ssNoversion  |  요청에 반환할 항목 수(즉, 반환할 추가 기능 수)입니다. 앱에 쿼리에서 지정한 값보다 더 많은 추가 기능이 있을 경우 응답 본문에는 데이터의 다음 페이지를 요청하기 위해 메서드 URI에 추가할 수 있는 상대 URI 경로가 포함됩니다.  |  아니요  |
+|  skip |  ssNoversion  | 나머지 항목을 반환하기 전에 쿼리에서 바이패스할 항목 수입니다. 이 매개 변수를 사용하여 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10이고 skip=0이면 1-10 항목을 검색하고 top=10이고 skip=10이면 11-20 항목을 검색합니다.   |  아니요  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -58,14 +58,14 @@ Microsoft Store 제출 API 사용 하 여 파트너 센터 계정에 등록 된 
 
 다음 예제에서는 앱의 모든 추가 기능을 나열하는 방법을 보여 줍니다.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listinappproducts HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
 다음 예제에서는 앱의 처음 10개의 추가 기능을 나열하는 방법을 보여 줍니다.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listinappproducts?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -97,9 +97,9 @@ Authorization: Bearer <your access token>
 
 | 값      | 형식   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 10으로 설정되어 있지만 앱의 추가 기능이 50개인 경우 응답 본문에는 ```applications/{applicationid}/listinappproducts/?skip=10&top=10```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10```을 호출하여 다음 10개의 추가 기능을 호출할 수 있음을 나타냅니다. |
+| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 `https://manage.devcenter.microsoft.com/v1.0/my/` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 10으로 설정되어 있지만 앱의 추가 기능이 50개인 경우 응답 본문에는 `applications/{applicationid}/listinappproducts/?skip=10&top=10`의 @nextLink 값이 포함되며 이는 `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10`을 호출하여 다음 10개의 추가 기능을 호출할 수 있음을 나타냅니다. |
 | value      | 배열  | 지정한 앱에 대한 각 추가 기능의 스토어 ID를 나열하는 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 [추가 기능 리소스](get-app-data.md#add-on-object)를 참조하세요.                                                                                                                           |
-| totalCount | int    | 쿼리에 대한 데이터 결과의 총 행 수(즉, 지정한 앱에 대한 추가 기능의 총 수)입니다.    |
+| totalCount | ssNoversion    | 쿼리에 대한 데이터 결과의 총 행 수(즉, 지정한 앱에 대한 추가 기능의 총 수)입니다.    |
 
 
 ## <a name="error-codes"></a>오류 코드

@@ -6,12 +6,12 @@ keywords: windows 10, uwp, 평가판, 앱에서 바로 구매, IAP, Windows.Appl
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 36d7ada6567db95609203f8f163b78631e141b4f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 38590282a95e29ab240486e9c4a3f9cb9afe229c
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57655568"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335101"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>평가판의 기능 제외 또는 제한
 
@@ -20,7 +20,7 @@ ms.locfileid: "57655568"
 > [!IMPORTANT]
 > 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 평가판 기능을 구현하는 방법을 설명합니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. 합니다 **Windows.Services.Store** 네임 스페이스 최신 추가 기능 형식을 사용할 수 있는 추가 기능 저장소 관리 등 구독을 지원 하며 향후 유형의 제품 및 파트너를 지 원하는 기능을 사용 하 여 호환 되도록 설계 되었습니다 센터와 저장소를 제공 합니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. **Windows.Services.Store** 네임스페이스를 사용하여 평가판 기능을 구현하는 방법에 대한 자세한 내용은 [이 문서](implement-a-trial-version-of-your-app.md)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 고객이 구매하는 기능을 추가할 Windows 앱
 
@@ -66,12 +66,12 @@ ms.locfileid: "57655568"
 지금은 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) 대신 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766)를 사용하여 시뮬레이트된 라이선스 정보를 가져옵니다. 앱의 릴리스 버전을 **스토어**에 제출하기 전에 코드에서 모든 **CurrentAppSimulator** 참조를 **CurrentApp**으로 바꾸어야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTest)]
+[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTest)]
 
 앱이 실행되는 동안 라이선스가 변경될 경우 알림을 받는 이벤트 처리기를 추가합니다. 예를 들어 체험 기간이 만료되거나 고객이 스토어를 통해 앱을 구매하면 앱의 라이선스가 변경될 수 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTestWithEvent)]
+[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTestWithEvent)]
 
 ## <a name="step-3-code-the-features-in-conditional-blocks"></a>3단계: 조건부 블록에서 기능 코드
 
@@ -80,7 +80,7 @@ ms.locfileid: "57655568"
 이 예제에서는 앱의 라이선스 상태를 평가하고, 그에 따라 앱의 기능을 사용하거나 사용하지 않도록 설정할 수 있는 방법을 보여 줍니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#ReloadLicense)]
+[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#ReloadLicense)]
 
 ## <a name="step-4-get-an-apps-trial-expiration-date"></a>4단계: 앱의 평가판이 만료 날짜 가져오기
 
@@ -89,7 +89,7 @@ ms.locfileid: "57655568"
 이 예의 코드는 앱 체험 라이선스의 만료 날짜를 가져오는 함수를 정의합니다. 라이선스가 유효하면 만료 날짜가 체험 만료 시까지 남은 일수와 함께 표시됩니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#DisplayTrialVersionExpirationTime)]
+[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#DisplayTrialVersionExpirationTime)]
 
 ## <a name="step-5-test-the-features-using-simulated-calls-to-the-license-api"></a>5단계: 시뮬레이션 된 라이선스 API 호출을 사용 하 여 기능 테스트
 
@@ -105,7 +105,7 @@ ms.locfileid: "57655568"
 > 앱을 Microsoft Store에 제출할 때 앱에서 **CurrentApp** 개체를 사용해야 합니다. 그러지 않으면 앱 인증에 실패합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
+[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
 
 ## <a name="step-7-describe-how-the-free-trial-works-to-your-customers"></a>7단계: 무료 평가판 고객에 게 작동 하는 방법을 설명 합니다.
 

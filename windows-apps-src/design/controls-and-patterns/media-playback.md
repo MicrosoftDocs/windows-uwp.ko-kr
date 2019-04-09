@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: afda713e4a3d0ae30a4ee1ad9e9308d835062108
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a39faf77237596179486eb6c1a0a59a40049155c
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640028"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58914013"
 ---
 # <a name="media-player"></a>미디어 플레이어
 
@@ -43,8 +43,8 @@ ms.locfileid: "57640028"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 작동 중인 <a href="xamlcontrolsgallery:/item/MediaPlayerElement">MediaPlayerElement</a> 또는 <a href="xamlcontrolsgallery:/item/MediaPlayer">MediaPlayer</a>를 확인합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -87,7 +87,7 @@ XAML에서 [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/
 
 ![휴대폰에 이중 행으로 표시되는 MTC 컨트롤의 예](images/controls/mtc_double_inprod.png)
 
-**시스템 미디어 컨트롤 전송**
+**시스템 미디어 전송 컨트롤**
 
 [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)는 시스템 미디어 전송 컨트롤과 자동으로 통합됩니다. 시스템 미디어 전송 컨트롤은 키보드의 미디어 단추 등 하드웨어 미디어 키를 누를 때 팝업되는 컨트롤입니다. 자세한 내용은 [SystemMediaTransportControls](https://msdn.microsoft.com/library/windows/apps/dn278677)를 참조하세요.
 
@@ -173,7 +173,7 @@ private void LoadEmbeddedAppFile()
 
 사용자가 어떤 파일에 액세스할지 완전히 제어하므로 [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/br207847)에는 사용자의 **음악** 또는 **동영상** 폴더 등 로컬 파일 시스템에 있는 파일에 액세스하기 위해 특별한 접근 권한 값이 필요하지 않습니다. 보안 및 개인 정보 보호의 관점에서 볼 때 앱이 사용하는 접근 권한 값 수를 최소화하는 것이 가장 좋습니다.
 
-**FileOpenPicker를 사용 하 여 로컬 미디어를 열려면**
+**FileOpenPicker를 사용하여 로컬 미디어를 열려면**
 
 1.  [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/br207847)를 호출하면 사용자가 미디어 파일을 선택할 수 있습니다.
 
@@ -246,7 +246,7 @@ async private System.Threading.Tasks.Task SetLocalMedia()
 
 > **참고**&nbsp;&nbsp;[MediaPlayerElement.IsFullWindow](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.IsFullWindow.aspx)가 true로 설정되고 미디어가 재생 중인 경우 디스플레이의 비활성화가 자동으로 금지됩니다.
 
-**화면을 활성 상태로 유지 하려면**
+**화면을 활성 상태로 유지하려면**
 
 1.  전역 [DisplayRequest](https://msdn.microsoft.com/library/windows/apps/br241816) 변수를 만듭니다. 이 변수를 null로 초기화합니다.
 ```csharp
@@ -259,8 +259,9 @@ private DisplayRequest appDisplayRequest = null;
 3.  동영상 재생이 재생 오류로 인해 중지, 일시 중지 또는 중단될 경우 디스플레이 요청을 해제하려면 [RequestRelease](https://msdn.microsoft.com/library/windows/apps/br241819)를 호출합니다. 앱에 활성 디스플레이 요청이 더 이상 없으면 Windows는 장치가 사용되지 않을 때 디스플레이를 흐리게 하고 결국에는 꺼서 배터리 사용 시간을 절약합니다.
 
     각 [MediaPlayerElement.MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx)에는 [PlaybackRate](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackrate.aspx), [PlaybackState](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstate.aspx) 및 [Position](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx) 등 미디어 재생의 다양한 면을 제어하는 [MediaPlaybackSession](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.aspx) 형식의 [PlaybackSession](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx)이 있습니다. 여기서는 [MediaPlayer.PlaybackSession](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx)에서 [PlaybackStateChanged](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstatechanged.aspx) 이벤트를 사용하여 디스플레이 요청을 해제해야 하는 상황을 감지합니다. 그런 다음 [NaturalVideoHeight](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.naturalvideoheight.aspx) 속성을 사용하여 오디오 또는 비디오 파일의 재생 여부를 결정하고 비디오가 재생되는 경우에만 화면을 활성 상태로 유지합니다.
+
     ```xaml
-<MediaPlayerElement x:Name="mpe" Source="Media/video1.mp4"/>
+    <MediaPlayerElement x:Name="mpe" Source="Media/video1.mp4"/>
     ```
 
     ```csharp
@@ -395,5 +396,5 @@ mp.MediaPlayer.RealTimePlayback = true;
 
 ## <a name="related-articles"></a>관련 문서
 
-- [UWP 앱에 대 한 명령 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958433)
-- [UWP 앱 용 콘텐츠 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958434)
+- [UWP 앱의 명령 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958433)
+- [UWP 앱의 콘텐츠 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958434)

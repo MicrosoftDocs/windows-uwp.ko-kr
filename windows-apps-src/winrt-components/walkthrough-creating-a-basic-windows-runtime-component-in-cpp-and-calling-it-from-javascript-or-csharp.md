@@ -6,16 +6,16 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fce4ed3f32c0207e55b37a765b4d48d234343e38
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: f1f147d98b8d88e912cc9fec40d5e29c34748167
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625038"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291901"
 ---
 # <a name="walkthrough-creating-a-windows-runtime-component-in-ccx-and-calling-it-from-javascript-or-c"></a>연습: C++/CX로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출
 > [!NOTE]
-> 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. C +를 사용 하 여 Windows 런타임 구성 요소를 만드는 방법에 알아보려면 + WinRT, 참조 [작성 이벤트 C + + /cli WinRT](../cpp-and-winrt-apis/author-events.md).
+> 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. 사용 하 여 Windows 런타임 구성 요소를 만드는 방법에 알아보려면 C++/WinRT를 참조 하세요 [에서 이벤트를 작성 C++/WinRT](../cpp-and-winrt-apis/author-events.md)합니다.
 
 이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다. 이 연습을 시작하기 전에 쉽게 ref 클래스를 사용할 수 있게 해주는 ABI(추상 이진 인터페이스), ref 클래스, Visual C++ 구성 요소 확장 등의 개념을 이해해야 합니다. 자세한 내용은 [C++로 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-cpp.md) 및 [Visual C++ 언어 참조(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx)를 참조하세요.
 
@@ -24,7 +24,7 @@ ms.locfileid: "57625038"
 
 구성 요소의 기본 클래스에는 속성 및 메서드 정의의 예와 이벤트 선언이 포함되어 있습니다. 이러한 항목은 작업 방식을 보여 주기 위해서만 제공됩니다. 필수는 아니며, 이 예제에서는 생성된 코드를 고유한 코드로 바꿀 것입니다.
 
-### <a name="to-create-the-c-component-project"></a>**C + + 구성 요소 프로젝트를 만들려면**
+### <a name="to-create-the-c-component-project"></a>**만들려는 합니다 C++ 구성 요소 프로젝트**
 1. Visual Studio 메뉴 모음에서 **파일, 새로 만들기, 프로젝트**를 선택합니다.
 
 2. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C++** 를 확장하고 유니버설 Windows 앱에 대한 노드를 선택합니다.
@@ -421,7 +421,7 @@ function ButtonClear_Click() {
 }
 ```
 
-default.js의 app.onactivated에서 WinJS.UI.processAll에 대한 기존 호출을 then 블록에서 이벤트 등록을 구현하는 다음 코드로 대체하여 이벤트 수신기를 추가하는 코드를 추가합니다. 자세한 내용은 "Hello World" 앱 만들기(JS)를 참조하세요.
+default.js의 app.onactivated에서 WinJS.UI.processAll에 대한 기존 호출을 then 블록에서 이벤트 등록을 구현하는 다음 코드로 대체하여 이벤트 수신기를 추가하는 코드를 추가합니다. 자세한 설명은이 대해서 ["Hello, World" 앱 (JS) 만들기](/windows/uwp/get-started/create-a-hello-world-app-js-uwp)합니다.
 
 ```JavaScript
 args.setPromise(WinJS.UI.processAll().then( function completed() {

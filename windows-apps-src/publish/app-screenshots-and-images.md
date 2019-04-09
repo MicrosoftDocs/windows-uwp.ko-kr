@@ -2,16 +2,16 @@
 Description: 앱의 스토어 목록에 포함시킬 스크린샷, 로고, 기타 자료(예고편과 홍보 이미지 등)를 선택할 수 있습니다.
 title: 앱 스크린샷, 이미지 및 예고편
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
-ms.date: 10/31/2018
+ms.date: 03/07/2019
 ms.topic: article
 keywords: Windows 10, UWP, 예고편, 동영상, 스크린샷, 이미지, 아이콘, Store 목록, Store 목록 이미지
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ae5b68d73a3776adf6250dbb96de827a106a6c5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a27763d76d2be65c7e0d2c6ccaeb0cd13123bdae
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244314"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>앱 스크린샷, 이미지 및 예고편
 
@@ -128,7 +128,7 @@ Store 목록에 최대 15개의 예고편을 추가할 수 있습니다. 아래 
 
 또 아래의 요구 사항을 적용해야 합니다.
 
-**추가 하려면 트레일러의 고객 명단:**
+**예고편을 사용자 목록에 추가합니다.**
 1. 표시된 상자에 예고편 **비디오 파일**을 업로드합니다. 이미 업로드 한 예고편을 다시 사용하기 원할 경우 드롭다운 상자가 표시됩니다(다른 언어의 Microsoft Store 목록 등).
 2. 예고편을 업로드 한 후, 여기에 해당되는 **미리 보기 이미지** 를 업로드해야 합니다. 1920x1080 픽셀의 .png 파일이어야 합니다. 일반적으로 예고편의 정지 이미지를 사용합니다.
 3. 연필 모양 아이콘을 클릭해 예고편 **제목**을 추가하세요(255자 이하).
@@ -144,7 +144,7 @@ Store 목록에 최대 15개의 예고편을 추가할 수 있습니다. 아래 
 
 예고편을 제공할 때, 다음 요구 사항을 준수해야 합니다.
 
-- 비디오 형식은 MOV 또는 MP4입니다. 
+- 비디오 형식은 MOV 또는 MP4입니다. 4k 비디오를 업로드 하는 경우에 MP4만 지원 됩니다.
 - 비디오 길이는 60초를 초과할 수 없습니다.
 - 예고편 파일 크기는 2GB 이하입니다. 
 - 비디오 해상도는 1920 x 1080 픽셀 또는 3840 x 2160 픽셀이어야 합니다.
@@ -158,61 +158,19 @@ Microsoft Store 목록 페이지의 다른 필드와 마찬가지로, 승인을 
 
 #### <a name="mov"></a>MOV
 
-<table>
-<tr>
-<td>
+| 비디오 | 오디오 | 
+| --- | --- | 
+| <ul><li>1080p ProRes (HQ, 필요한 경우)</li><li>기본 프레임 속도; 29.97 기본 설정 프레임 속도</li></ul> | <ul><li>스테레오 요구</li><li>권장 오디오 레벨:-16 LKFS/LUFS</li></ul> |
 
-**비디오:**
-
-<ul>
-<li>1080p ProRes (HQ, 필요한 경우)</li>
-<li>기본 프레임 속도; 29.97 기본 설정 프레임 속도</li>
-</ul>
-</td>
-<td>
-
-**오디오:**
-
-<ul>
-<li>스테레오 요구</li>
-<li>권장 오디오 레벨:-16 LKFS/LUFS</li>
-</ul> 
-</td>
-</tr>
-</table>
 
 #### <a name="mp4"></a>MP4
 
-<table>
-<tr>
-<td>
+| 비디오 | 오디오 |
+| --- | --- |
+| <ul><li>코덱: [H.264](https://docs.microsoft.com/en-us/windows/desktop/DirectShow/h-264-video-types) (AVC1)  </li><li>프로그레시브 스캔 (인터레이스 없음)</li><li>High Profile</li><li>2개의 연속 B 프레임</li><li>Closed GOP. 절반 프레임 속도의 GOP</li><li>CABAC</li><li>50 MB/s </li><li>색 공간: 4.2.0</li></ul> | <ul><li>코덱: AAC-LC</li><li>채널: 스테레오 또는 서라운드 사운드</li><li>샘플 속도: 48 kHz</li><li>오디오 비트 전송률: 384 KB/s에 대 한 스테레오, 서라운드 사운드에 대 한 512 KB/s</li></ul> |
 
-**비디오:**
-
-<ul>
-<li>코덱: H.264</li>
-<li>프로그레시브 스캔 (인터레이스 없음)</li>
-<li>High Profile</li>
-<li>2개의 연속 B 프레임</li>
-<li>Closed GOP. 절반 프레임 속도의 GOP</li>
-<li>CABAC</li>
-<li>50 MB/s </li>
-<li>색 공간: 4.2.0</li>
-</ul>
-</td>
-<td>
-
-**오디오:**
-
-<ul>
-<li>코덱: AAC-LC</li>
-<li>채널: 스테레오 또는 서라운드 사운드</li>
-<li>샘플 속도: 48 kHz</li>
-<li>오디오 비트 전송률: 384 KB/s에 대 한 스테레오, 서라운드 사운드에 대 한 512 KB/s</li>
-</ul>
-</td>
-</tr>
-</table>
+> [!WARNING]
+> 고객은 AVC1 이외의 코덱을 사용 하 여 인코드된 MP4 파일에 대 한 오디오를 통신할 수 없는 경우.
 
 H.264 Mezzanine 파일은 다음을 권장합니다.
 - 컨테이너: MP4

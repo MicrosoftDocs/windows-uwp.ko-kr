@@ -5,12 +5,12 @@ keywords: windows 10, uwp, 구독, 추가 기능, 앱 내 구매, IAP, Windows.S
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cda22488f613c508b2c753c6b530b2b34b10909d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: b937ca61110452e233061179c398cae0d047686e
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589988"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335061"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>앱에 구독 추가 기능을 사용하도록 설정
 
@@ -88,14 +88,14 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 4. 마지막으로 코드는 [**RequestPurchaseAsync**](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.RequestPurchaseAsync) 메서드를 사용하여 구독을 구매하도록 요청합니다. 구독에 평가판을 사용할 수 있는 경우 평가판은 구매를 위해 고객에게 제공됩니다. 그렇지 않으면 구매를 위해 전체 구독이 제공됩니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[Subscriptions](./code/InAppPurchasesAndLicenses_RS1/cs/PurchaseSubscriptionAddOnTrialPage.xaml.cs#PurchaseTrialSubscription)]
+[!code-csharp[Subscriptions](./code/InAppPurchasesAndLicenses_RS1/cs/PurchaseSubscriptionAddOnTrialPage.xaml.cs#PurchaseTrialSubscription)]
 
 ### <a name="get-info-about-subscription-add-ons-for-the-current-app"></a>현재 앱에 사용할 수 있는 구독 추가 기능에 대한 정보 가져오기
 
 이 코드 예제는 앱에서 사용할 수 있는 모든 구독 추가 기능에 대한 정보를 가져오는 방법을 보여 줍니다. 이 정보를 가져오려면, 먼저 [**GetAssociatedStoreProductsAsync**](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StoreContext.GetAssociatedStoreProductsAsync) 메서드를 사용해 앱에서 사용할 수 있는 추가 기능 각각을 나타내는 [**StoreProduct**](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StoreProduct) 개체 컬렉션을 가져옵니다. 그런 다음 각 제품에 대한 [**StoreSku**](https://docs.microsoft.com/uwp/api/windows.services.store.storesku)를 가져오고, [**IsSubscription**](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.IsSubscription) 및 [**SubscriptionInfo**](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.SubscriptionInfo) 속성을 사용해 구독 정보에 액세스 할 수 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[Subscriptions](./code/InAppPurchasesAndLicenses_RS1/cs/GetSubscriptionAddOnsPage.xaml.cs#GetSubscriptions)]
+[!code-csharp[Subscriptions](./code/InAppPurchasesAndLicenses_RS1/cs/GetSubscriptionAddOnsPage.xaml.cs#GetSubscriptions)]
 
 <span id="manage-subscriptions" />
 

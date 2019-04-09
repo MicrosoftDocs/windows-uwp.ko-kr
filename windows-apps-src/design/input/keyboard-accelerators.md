@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e898b0552a9485cd15079a37940a2151e4bc9f9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9cc696746de837c4883ae4a9ee8ebcf42cb78b12
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57590738"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57822888"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -251,7 +251,7 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
 
 ## <a name="override-default-keyboard-behavior"></a>기본 키보드 동작을 재정의
 
-경우에 따라 백스페이스 키 또는 Enter 키와 같은 특정 키의 기본 동작을 재정의 해야 합니다. 예를 들면 
+경우에 따라 백스페이스 키 또는 Enter 키와 같은 특정 키의 기본 동작을 재정의 해야 합니다. 예: 
 
 ## <a name="disable-a-keyboard-accelerator"></a>키보드 가속기 비활성화 
 
@@ -332,7 +332,7 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 | 선택한 항목 삭제(실행 취소 불포함) | Shift + Del |
 | Bold | Ctrl + B |
 | Underline | Ctrl + U |
-| Italic | Ctrl + I |
+| 기울임꼴 | Ctrl + I |
 
 | **탐색** | |
 | ------------- | ----------------------------------- |
@@ -347,7 +347,7 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 | 축소 | Ctrl + - | 
 | 기본 보기로 확대/축소 | Ctrl + 0 | 
 | 저장 | Ctrl + S | 
-| Close | Ctrl + W | 
+| 닫습니다 | Ctrl + W | 
 | 인쇄 | Ctrl + P | 
 
 일부 조합은 Windows의 지역화된 버전에 유효하지 않습니다. 예를 들어, 스페인어 버전의 Windows에서는 '굵게'에 대해 Ctrl+N이 Ctrl+B 대신 사용됩니다. 앱이 지역화되어 있는 경우 지역화된 바로 가기 키를 제공하는 것이 좋습니다.
@@ -618,12 +618,9 @@ public class MyListView : ListView
 
 ## <a name="related-articles"></a>관련 문서
 
-* [키보드 상호 작용](keyboard-interactions.md)
-* [액세스 키](access-keys.md)
+- [키보드 상호 작용](keyboard-interactions.md)
+- [액세스 키](access-keys.md)
 
-**샘플**
-* [XAML 컨트롤 갤러리 (즉, XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+### <a name="samples"></a>샘플
 
-
- 
-
+- [XAML 컨트롤 갤러리](https://github.com/Microsoft/Xaml-Controls-Gallery)

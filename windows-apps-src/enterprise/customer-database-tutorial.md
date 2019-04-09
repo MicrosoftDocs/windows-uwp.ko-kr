@@ -5,12 +5,12 @@ keywords: enterprise, 자습서, 고객 데이터를 읽고, 업데이트 delete
 ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: med
-ms.openlocfilehash: 9c09e0fb73e42fd8a3d0c70bbb5396be32624387
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7bd3a180762c3ef06d7c24ae001fb2c7fb7fc55e
+ms.sourcegitcommit: 6df46d7d5b5522805eab11a9c0e07754f28673c6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623248"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808301"
 ---
 # <a name="tutorial-create-a-customer-database-application"></a>자습서: 고객 데이터베이스 애플리케이션 만들기
 
@@ -24,7 +24,7 @@ ms.locfileid: "57623248"
 
 ![작업 중인 앱의 기본 페이지](images/customer-database-tutorial/customer-list.png)
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 
 * [Visual Studio 및 Windows 10 SDK의 최신 버전 확인](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * [복제 또는 고객 데이터베이스 자습서 샘플 다운로드](https://aka.ms/customer-database-tutorial)
@@ -34,18 +34,18 @@ ms.locfileid: "57623248"
 > [!NOTE]
 > 체크 아웃 합니다 [전체 고객 주문 데이터베이스 샘플](https://github.com/Microsoft/Windows-appsample-customers-orders-database) 이 자습서를 기반으로 앱을 봅니다.
 
-## <a name="part-1-code-of-interest"></a>1부: 관심 코드
+## <a name="part-1-code-of-interest"></a>1단계: 관심 코드
 
 를 연 후에 즉시 앱을 실행 하는 경우 빈 화면 맨 위에 있는 단추를 몇 개 표시 됩니다. 볼 수 있지 않더라도 앱 몇 가지 테스트 고객과 프로 비전 된 로컬 SQLite 데이터베이스를 이미 포함 되어 있습니다. 여기에서 해당 고객에 게 표시 하는 UI 컨트롤을 구현 하 여 시작 하 고 데이터베이스에 대 한 작업에 추가 하 이동 합니다 수 있습니다. 시작 하기 전에 같습니다. 여기서 사용 하 게 됩니다.
 
-### <a name="views"></a>보기
+### <a name="views"></a>뷰
 
 **CustomerListPage.xaml** 는이 자습서에는 단일 페이지에 대 한 UI를 정의 하는 앱의 보기입니다. 추가 하거나 ui에서 시각적 요소를 변경 하려면 언제 든 지 작업을이 파일에 있습니다. 이 자습서 이러한 요소를 추가 하는 과정을 안내 합니다.
 
 * A **RadDataGrid** 표시 하 고 고객에 게 편집 합니다. 
 * A **StackPanel** 새 고객에 대 한 초기 값을 설정 합니다.
 
-### <a name="viewmodels"></a>Viewmodel
+### <a name="viewmodels"></a>ViewModels
 
 **ViewModels\CustomerListPageViewModel.cs** 앱의 기본 논리입니다. 보기에서 수행 되는 모든 사용자 동작 처리를 위해이 파일에 전달 됩니다. 이 자습서에서는 몇 가지 새 코드를 추가 하 고 다음 메서드를 구현 합니다.
 
@@ -247,7 +247,7 @@ ms.locfileid: "57623248"
         get => _newCustomer;
         set
         {
-            if {_newCustomer != value}
+            if (_newCustomer != value)
             {
                 _newCustomer = value;
                 OnPropertyChanged();
@@ -447,7 +447,7 @@ ms.locfileid: "57623248"
 * Microsoft Store 사용 하 여 앱을 연결 합니다.
 * 복사 합니다 [서비스 프로젝트](https://github.com/Microsoft/Windows-appsample-customers-orders-database/tree/master/ContosoService) 를 앱에 Azure에 배포 합니다.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>인증
 
 인증 시퀀스 및 팝업 또는 사용자의 정보를 수집 하는 별도 페이지를 시작 하려면 단추를 만들려면 해야 합니다. 하는 작업을 만든 후에 사용자의 정보를 요청 하 고 액세스 토큰을 획득 하는 데 사용 하는 코드를 제공 해야 합니다. 고객 주문 데이터베이스 샘플 사용 하 여 Microsoft Graph 호출을 래핑하는 **WebAccountManager** 토큰을 획득 하 고 AAD 계정에 대 한 인증을 처리 하는 라이브러리입니다.
 

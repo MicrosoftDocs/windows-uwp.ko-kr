@@ -5,16 +5,16 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 데이터, 형식
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b0b529bbf397b76acb1eb589095a84f5c85745c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 44de7b61264f8e0e04d1de6d2b1101844656f28b
+ms.sourcegitcommit: 99271798fe53d9768fc52b21366de05268cadcb0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654288"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221459"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>표준 C++ 데이터 형식 및 C++/WinRT
 
-사용 하 여 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 일부 c + + 표준 라이브러리 데이터 형식을 비롯 한 표준 c + + 데이터 형식을 사용 하 여 Windows 런타임 Api를 호출할 수 있습니다. Api에 표준 문자열을 전달할 수 있습니다 (참조 [문자열 처리 C + + WinRT](strings.md)), 목록 및 표준 컨테이너 의미상 동등한 컬렉션을 필요로 하는 Api를 이니셜라이저를 전달할 수 있습니다.
+사용 하 여 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 표준을 사용 하 여 Windows 런타임 Api를 호출할 수 있습니다 C++ 데이터 형식에 일부를 포함 하 여 C++ 표준 라이브러리 데이터 형식입니다. Api에 표준 문자열을 전달할 수 있습니다 (참조 [처리 하는 문자열 C++/WinRT](strings.md)), 목록 및 표준 컨테이너 의미상 동등한 컬렉션을 필요로 하는 Api를 이니셜라이저를 전달할 수 있습니다.
 
 ## <a name="standard-initializer-lists"></a>표준 이니셜라이저 목록
 이니셜라이저 목록(**std::initializer_list**)은 C++ 표준 라이브러리 구문을 말합니다. 이니셜라이저 목록은 일부 Windows 런타임 생성자와 메서드를 호출할 때 사용할 수 있습니다. 예를 들어, 목록 하나로 [**DataWriter::WriteBytes**](/uwp/api/windows.storage.streams.datawriter.writebytes)를 호출할 수 있습니다.
@@ -30,25 +30,25 @@ int main()
 
     InMemoryRandomAccessStream stream;
     DataWriter dataWriter{stream};
-    dataWriter.WriteBytes({ 99, 98, 97 }); // the initializer list is converted to an array_view before being passed to WriteBytes.
+    dataWriter.WriteBytes({ 99, 98, 97 }); // the initializer list is converted to a winrt::array_view before being passed to WriteBytes.
 }
 ```
 
 이 작업에는 두 가지 메서드가 있습니다. 첫 번째인 **DataWriter::WriteBytes** 메서드는 [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view) 형식의 매개 변수를 갖습니다.
 
 ```cppwinrt
-void WriteBytes(array_view<uint8_t const> value) const
+void WriteBytes(winrt::array_view<uint8_t const> value) const
 ```
 
- 여기에서 **array_view**는 사용자 지정 C++/WinRT 형식으로서 인접하여 연속되는 값을 나타냅니다(연속되는 값은 C++/WinRT 기본 라이브러리인 `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`에 정의되어 있음).
+**winrt::array_view** 사용자 지정 C++연속 된 일련의 값을 안전 하 게 나타내는 /WinRT 형식 (에 정의 되어는 C++인 /WinRT 기본 라이브러리 `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`).
 
-두 번째인 **array_view**에는 이니셜라이저 목록 생성자가 있습니다.
+두 번째로 **winrt::array_view** 이니셜라이저 목록 생성자가 있습니다.
 
 ```cppwinrt
-template <typename T> array_view(std::initializer_list<T> value) noexcept
+template <typename T> winrt::array_view(std::initializer_list<T> value) noexcept
 ```
 
-대부분 경우 프로그래밍할 때 **array_view**의 인식 여부를 선택할 수 있습니다. 인식하지 *않도록* 선택하면 C++ 표준 라이브러리에 해당하는 형식이 표시되더라도 어떤 코드도 변경할 필요 없습니다.
+대부분의 경우에서 인식 될 것인지 여부를 선택할 수 있습니다 **winrt::array_view** 프로그래밍에서. 인식하지 *않도록* 선택하면 C++ 표준 라이브러리에 해당하는 형식이 표시되더라도 어떤 코드도 변경할 필요 없습니다.
 
 이니셜라이저 목록은 컬렉션 매개 변수가 필요한 Windows 런타임 API에게 전달할 수 있습니다. **StorageItemContentProperties::RetrievePropertiesAsync**를 예로 들어보겠습니다.
 
@@ -65,28 +65,28 @@ IAsyncAction retrieve_properties_async(StorageFile const& storageFile)
 }
 ```
 
-여기에서는 두 가지 요인이 작용합니다. 첫째, 호출 수신자가 이니셜라이저 목록에서 **std::vector**를 생성합니다(이 수신자는 비동기식이기 때문에 해당 개체를 반드시 가지고 있어야 합니다). 둘째, C++/WinRT가 투명하게(그리고 복사본을 사용하지 않고) **std::vector**를 Windows 런타임 컬렉션 매개 변수로 바인딩합니다.
+여기에서는 두 가지 요인이 작용합니다. 먼저 호출 수신자가 생성 한 **std:: vector** 이니셜라이저 목록 (이 호출 수신자는 비동기 해야 하는 해당 개체를 소유 하는 일을 할 것 이므로 됨)에서. 둘째, C++/WinRT가 투명하게(그리고 복사본을 사용하지 않고) **std::vector**를 Windows 런타임 컬렉션 매개 변수로 바인딩합니다.
 
 ## <a name="standard-arrays-and-vectors"></a>표준 배열 및 벡터
-**array_view** 역시 **std::vector** 및 **std::array**에서 변환 생성자를 갖습니다.
+[**winrt::array_view** ](/uwp/cpp-ref-for-winrt/array-view) 에서 변환 생성자 역시 **std:: vector** 하 고 **std:: array**합니다.
 
 ```cppwinrt
-template <typename C, size_type N> array_view(std::array<C, N>& value) noexcept
-template <typename C> array_view(std::vector<C>& vectorValue) noexcept
+template <typename C, size_type N> winrt::array_view(std::array<C, N>& value) noexcept
+template <typename C> winrt::array_view(std::vector<C>& vectorValue) noexcept
 ```
 
 따라서 **std::vector**를 사용하여 **DataWriter::WriteBytes**를 호출할 수 있습니다.
 
 ```cppwinrt
 std::vector<byte> theVector{ 99, 98, 97 };
-dataWriter.WriteBytes(theVector); // theVector is converted to an array_view before being passed to WriteBytes.
+dataWriter.WriteBytes(theVector); // theVector is converted to a winrt::array_view before being passed to WriteBytes.
 ```
 
 또는 **std::array**를 사용하는 것도 가능합니다.
 
 ```cppwinrt
 std::array<byte, 3> theArray{ 99, 98, 97 };
-dataWriter.WriteBytes(theArray); // theArray is converted to an array_view before being passed to WriteBytes.
+dataWriter.WriteBytes(theArray); // theArray is converted to a winrt::array_view before being passed to WriteBytes.
 ```
 
 C++/WinRT는 **std::vector**를 Windows 런타임 컬렉션 매개 변수로 바인딩합니다. 따라서 **std::vector&lt;winrt::hstring&gt;** 을 전달할 수 있으며, 이후 **winrt::hstring**의 Windows 런타임 컬렉션으로 적절하게 변환됩니다. 호출 수신자가 비동기 경우 기억해 야 할 추가 세부 정보는 있습니다. 이런 경우의 구현 세부 정보로 인해를 복사 또는 이동 벡터의 제공 해야 합니다는 rvalue를 제공 해야 합니다. 아래 코드 예제에서는 이동 벡터의 소유권 비동기 호출 수신자가 허용 매개 변수 형식의 개체입니다 (하 고 다음에 액세스 하지 않도록 주의 `vecH` 다시 이동 후). Rvalue에 대 한 자세한 내용을 원한다 면 참조 [값 범주 및 해당 참조가](cpp-value-categories.md)합니다.
@@ -108,23 +108,23 @@ IAsyncAction retrieve_properties_async(StorageFile const& storageFile, std::vect
 ```
 
 ## <a name="raw-arrays-and-pointer-ranges"></a>원시 배열 및 포인터 범위
-앞으로 동등한 형식이 C++ 표준 라이브러리에 존재할 수 있다는 점을 감안하면 원할 때나 필요할 때 **array_view**를 사용해 직접 작업할 수 있습니다.
+나중에 해당 하는 형식을 존재할 수는 주의 염두 합니다 C++ 표준 라이브러리를 사용할 수도 있습니다와 직접 **winrt::array_view** 를 선택 하거나 해야 합니다.
 
-**array_view** 에 원시 배열에서 다양 한 변환 생성자가 **T&ast;**  (요소 형식에 대 한 포인터).
+**winrt::array_view** 에 원시 배열에서 다양 한 변환 생성자가 **T&ast;**  (요소 형식에 대 한 포인터).
 
 ```cppwinrt
 using namespace winrt;
 ...
 byte theRawArray[]{ 99, 98, 97 };
 array_view<byte const> fromRawArray{ theRawArray };
-dataWriter.WriteBytes(fromRawArray); // the array_view is passed to WriteBytes.
+dataWriter.WriteBytes(fromRawArray); // the winrt::array_view is passed to WriteBytes.
 
 array_view<byte const> fromRange{ theArray.data(), theArray.data() + 2 }; // just the first two elements.
-dataWriter.WriteBytes(fromRange); // the array_view is passed to WriteBytes.
+dataWriter.WriteBytes(fromRange); // the winrt::array_view is passed to WriteBytes.
 ```
 
 ## <a name="winrtarrayview-functions-and-operators"></a>winrt::array_view 함수와 연산자
-**array_view**일 때는 다양한 생성자, 연산자, 함수 및 반복기가 구현됩니다. **array_view**는 범위이기 때문에 범위 기반 `for`와 함께, 혹은 **std::for_each**와 함께 사용할 수 있습니다.
+생성자, 연산자, 함수 및 반복기의 호스트에 대 한 구현 됩니다 **winrt::array_view**합니다. A **winrt::array_view** 은 범위를 사용 하 여 범위를 기준으로 사용할 수 있도록 `for`, 또는 **std:: for_each**합니다.
 
 더 많은 예제와 정보를 보려면 [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view) API 참조 항목을 참조하세요.
 
@@ -149,12 +149,12 @@ void PrintFeed(SyndicationFeed const& syndicationFeed)
 }
 ```
 
-## <a name="c-coroutines-with-asynchronous-windows-runtime-apis"></a>비동기 Windows 런타임 Api를 사용 하 여 c + + 코 루틴
-계속 사용할 수 있습니다 합니다 [라이브러리 PPL (병렬 패턴)](/cpp/parallel/concrt/parallel-patterns-library-ppl) 비동기 Windows 런타임 Api를 호출할 때. 그러나 대부분의 경우 c + + 코 루틴 비동기 개체 상호 작용 하기 위한 효율적이 고 더 쉽게 코딩 된 방법이 제공 합니다. 자세한 내용은 및 코드 예제를 참조 하세요 [동시성 및 비동기 작업을 사용 하 여 C + + /cli WinRT](concurrency.md)합니다.
+## <a name="c-coroutines-with-asynchronous-windows-runtime-apis"></a>C++비동기 Windows 런타임 Api를 사용 하 여 코 루틴
+계속 사용할 수 있습니다 합니다 [라이브러리 PPL (병렬 패턴)](/cpp/parallel/concrt/parallel-patterns-library-ppl) 비동기 Windows 런타임 Api를 호출할 때. 그러나 대부분의 경우 C++ 코 루틴 비동기 개체 상호 작용 하기 위한 효율적이 고 더 쉽게 코딩 된 방법이 제공 됩니다. 자세한 내용은 및 코드 예제를 참조 하세요 [동시성 및 비동기 작업을 C++/WinRT](concurrency.md)합니다.
 
 ## <a name="important-apis"></a>중요 API
 * [IVector&lt;T&gt; 인터페이스](/uwp/api/windows.foundation.collections.ivector_t_)
 * [winrt::array_view 구조체 템플릿](/uwp/cpp-ref-for-winrt/array-view)
 
 ## <a name="related-topics"></a>관련 항목
-* [문자열 처리 C + + /cli WinRT](strings.md)
+* [처리 하는 문자열 C++/WinRT](strings.md)

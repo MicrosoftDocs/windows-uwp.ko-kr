@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 설정, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 252d7ccb8e50e773a19282afaf19bb18d4c5d5a6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 789b235220e5d22b85f7b3038d5d468729439501
+ms.sourcegitcommit: 7a3d28472901edbe4ecdde7e1a01a505ee5bc028
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608708"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658769"
 ---
 # <a name="set-up-the-game-project"></a>게임 프로젝트 설정
 
@@ -39,7 +39,7 @@ Visual Studio 템플릿은 기본 언어 및 기술을 기반으로 하는 특�
 
 Visual Studio에서 DirectX 11 게임 프로젝트를 만들기 위한 단계:
 1.  선택 **파일...** &gt; **새** &gt; **프로젝트...**
-2.  왼쪽된 창에서 선택 **설치 됨** &gt; **템플릿** &gt; **Visual c + +** &gt; **Windows 유니버설**
+2.  왼쪽된 창에서 선택 **설치 됨** &gt; **템플릿** &gt; **시각적 C++**  &gt; **Windows 유니버설**
 3.  가운데 창에서 **DirectX 11 앱(유니버설 Windows)** 을 선택
 4.  게임 프로젝트에 이름을 지정하고 **확인**을 클릭합니다.
 
@@ -89,7 +89,7 @@ int main(Platform::Array<Platform::String^>^)
 }
 ```
 
-이 메서드에서 뷰 공급자 팩터리(**App.h**에 정의된**Direct3DApplicationSource**)에서 Direct3D 뷰 공급자의 인스턴스를 만들고 ([**CoreApplication::Run**](https://msdn.microsoft.com/library/windows/apps/hh700469))을 호출하여 이를 앱 단일 항목에 전달합니다. 즉, 게임의 시작 지점은 구현된 [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드의 본문에 있습니다(이 경우 **App::Run**). 
+이 메서드는 보기 공급자 팩터리에서 Direct3D 보기 공급자의 인스턴스를 만듭니다 (**Direct3DApplicationSource**에 정의 된 `App.h`)를 호출 하 여 앱 singleton 전달 [  **CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run)합니다. Framework 보기의 메서드 (되는 **앱** 이 예제의 클래스) 순서로 호출 됩니다 **초기화**-**SetWindow** - **부하**-**OnActivated**-**실행**-**초기화**합니다. 호출 **CoreApplication::Run** 해당 lifycycle를 시작 합니다. 게임의 기본 루프 본문의 구현에 상주 합니다 [ **IFrameworkView::Run** 메서드](/uwp/api/windows.applicationmodel.core.iframeworkview.run), 있고이 경우에 **App::Run**.
 
 스크롤하여 **App.cpp**에서 **App::Run** 메서드를 찾습니다. 코드는 다음과 같습니다.
 

@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b94f14b32c5dd74e0aefb9b9a99f64bbd905a05d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 18208986d7d07e4d437e52dce844deecc03cf1f6
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240031"
 ---
 # <a name="composition-animations"></a>컴퍼지션 애니메이션
 
@@ -37,7 +37,7 @@ Windows UI 플랫폼의 기본 빌딩 블록으로 CompositionAnimations 응용 
 
 ## <a name="using-compositionanimations-to-create-motion"></a>CompositionAnimations를 사용 하 여 동작을 만들려면
 
-Ui에서 동작을 생성 하려면 개발자는 XAML (연결 대상 스토리 보드 여기) 또는 시각적 계층에서 애니메이션 액세스할 수 있습니다. 시각적 계층에서 애니메이션 개발자에 게 다양 한 혜택을 제공합니다.
+개발자는 UI에서 동작을 생성 하려면 XAML 또는 시각적 계층에서 애니메이션 액세스할 수 있습니다. 시각적 계층에서 애니메이션 개발자에 게 다양 한 혜택을 제공합니다.
 
 - 성능-기존 UI 스레드에 바인딩된 애니메이션 Windows UI 플랫폼에서 애니메이션 하는 대신 60 FPS를 원활한 이동의 환경을 사용할 수 있는 독립 스레드에서 작동 합니다.
 - 템플릿 모델 – Windows UI 계층의 애니메이션은 템플릿, 의미 여러 개체에 단일 애니메이션을 사용 하 고 속성을 조정 하거나의 이전 방해 없이 매개 변수를 사용 합니다.

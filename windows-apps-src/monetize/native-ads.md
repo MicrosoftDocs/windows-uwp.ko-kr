@@ -5,12 +5,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 광고 관리, 기본 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 89e9df87cd214d3d03f25c674ec80a73fedf53d6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 4cb77f7f2622a06334ee35ec61e18b3b01f98bdb
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57628068"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58335021"
 ---
 # <a name="native-ads"></a>기본 광고
 
@@ -21,7 +21,7 @@ ms.locfileid: "57628068"
 > [!NOTE]
 > 현재 Windows 10용 XAML 기반 UWP 앱에서만 기본 광고를 지원하고 있습니다. HTML과 JavaScript를 사용해 작성한 UWP 앱은 향후 Microsoft Advertising SK 릴리스에서 지원할 예정입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 설치합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조하세요.
 
@@ -43,21 +43,21 @@ ms.locfileid: "57628068"
 
 4. 앱의 적절한 코드 파일(예: MainPage.xaml.cs 또는 다른 페이지의 코드 파일)에 다음 네임스페이스 참조를 추가합니다.
 
-    [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Namespaces)]
+    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Namespaces)]
 
 5.  앱의 적절한 위치(예: ```MainPage``` 또는 다른 페이지)에서 [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) 개체를 비롯하여 중간 광고 응용 프로그램 ID 및 광고 단위 ID를 나타내는 여러 문자열 필드를 선언합니다. 다음 코드 예제에서는 `myAppId` 및 `myAdUnitId` 필드를 기본 광고에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)에 할당합니다.
     > [!NOTE]
     > 모든 **NativeAdsManagerV2**에는 컨트롤할 기본 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 앱 스토어에 게시 하기 전에 수행 해야 합니다 [대체 이러한 실시간 값을 사용 하 여 값을 테스트](#release) 파트너 센터에서.
 
-    [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Variables)]
+    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Variables)]
 
 6.  시작할 때 실행되는 코드에서(예를 들면 해당 페이지에 대한 생성자에서), **NativeAdsManagerV2** 개체를 인스턴스화하고, 개체 **AdReady** 및 **ErrorOccurred** 이벤트에 이벤트 처리기를 연결합니다.
 
-    [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#ConfigureNativeAd)]
+    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#ConfigureNativeAd)]
 
 7.  기본 광고를 표시할 준비가 되면 광고를 가져올 **RequestAd** 메서드를 호출합니다.
 
-    [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#RequestAd)]
+    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#RequestAd)]
 
 8.  앱에 기본 광고가 준비되면, [AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.adready) 이벤트 처리기를 호출하고, 기본 광고를 표시하는 [NativeAdV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) 개체를 *e* 매개 변수로 전달합니다. **NativeAdV2** 속성을 사용해 기본 광고의 각 요소를 가져오고, 이 요소들을 페이지에 표시합니다. 기본 광고의 컨테이너로 동작하는 UI 요소를 등록하기 위해 **RegisterAdContainer** 메서드를 호출해야 합니다. 광고 노출과 클릭을 올바르게 추적하기 위해 필요합니다.
     > [!NOTE]
@@ -93,11 +93,11 @@ ms.locfileid: "57628068"
 
     다음 코드 예제는 **StackPanel**의 컨트롤에서 각 기본 광고 요소를 표시하고, **StackPanel**을 등록하기 위해 **RegisterAdContainer**를 호출하는 **AdReady** 이벤트 처리기에 대해 설명합니다. 이 코드는 **StackPanel**이 포함된 페이지의 코드 백그라운드 파일에서 실행된다고 가정합니다.
 
-    [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#AdReady)]
+    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#AdReady)]
 
 9.  **ErrorOccurred** 이벤트에 대한 이벤트 처리기를 정의해 기본 광고와 관련이 있는 오류를 처리합니다. 다음 예제는 테스트 동안 오류 정보를 Visual Studio **출력** 창에 씁니다.
 
-    [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#ErrorOccurred)]
+    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#ErrorOccurred)]
 
 10.  앱을 컴파일하고 실행하여 테스트 광고와 함께 표시합니다.
 

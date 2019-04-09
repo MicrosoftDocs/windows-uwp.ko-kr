@@ -1,23 +1,23 @@
 ---
 Description: 파트너 센터에서 Xbox 분석 보고서는 Xbox 기능을 사용 하 여 제품에 고객에 게는 참여 하는 방법에 대 한 통계를 보여 줍니다.
 title: Xbox 분석 보고서
-ms.date: 10/31/2018
+ms.date: 03/21/2019
 ms.topic: article
 keywords: Windows 10, uwp, xbox 분석, xbox live 분석, xbox 통계
 ms.localizationpriority: medium
-ms.openlocfilehash: ae9bacd88f957954c5cd1d3f6ccd6d3c04a568a2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: fe44c4bc8a4e2843d0158bfce730f322a67cbfa7
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607448"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334851"
 ---
 # <a name="xbox-analytics-report"></a>Xbox 분석 보고서
 
 합니다 **Xbox analytics** 보고서 [파트너 센터](https://partner.microsoft.com/dashboard) 고객에 게 게임에 Xbox 기능으로 조작 하는 방법에 대 한 통계를 보여 줍니다. 또한 클라이언트 오류를 해결하는 데 도움이 되는 서비스 상태 정보를 제공합니다.
 
 > [!IMPORTANT]
-> Xbox용 게임이나 Xbox Live 서비스를 사용하는 게임을 게시하는 경우에만 이 보고서가 표시됩니다. 이 위해 수행 해야 합니다는 [개념 승인 프로세스](../gaming/concept-approval.md), 게임에서 게시를 포함 하는 [Microsoft 파트너](../xbox-live/developer-program-overview.md#microsoft-partners) 및 게임을 통해 제출 합니다 [ ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id). 게임을 통해 게시 합니다 [Xbox Live 크리에이터 스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 현재이 보고서에 표시 되지 않습니다.
+> Xbox용 게임이나 Xbox Live 서비스를 사용하는 게임을 게시하는 경우에만 이 보고서가 표시됩니다. 이 위해 수행 해야 합니다는 [개념 승인 프로세스](../gaming/concept-approval.md), 게임에서 게시를 포함 하는 [Microsoft 파트너](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview#microsoft-partners) 및 게임을 통해 제출 합니다 [ ID@Xbox 프로그램](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview#id). 게임을 통해 게시 합니다 [Xbox Live 크리에이터 스 프로그램](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) 현재이 보고서에 표시 되지 않습니다.
 
 볼 수 있습니다 합니다 **Xbox analytics** 를 확장 하 여 게임의 왼쪽된 탐색 메뉴에서 보고서 **분석** 선택 하 고 **Xbox analytics**합니다.  파트너 센터에서이 데이터를 볼 수 있습니다 또는 [보고서 다운로드](download-analytic-reports.md) 오프 라인으로 볼 수 있습니다.
 

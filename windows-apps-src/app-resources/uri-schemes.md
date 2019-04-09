@@ -6,12 +6,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: b449179468d26c357e69ad1d8868004cadd6e2fa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5d66d717d77d2797e8a483871b8d3369befb5b6b
+ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632058"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320586"
 ---
 # <a name="uri-schemes"></a>URI 스키마
 
@@ -98,9 +98,11 @@ ms-appx:///images/logo.png
 
 위의 URI은 다음 실제 파일 이름의 현재 앱의 패키지 내에서 파일을 실제로 검색할 수도 있습니다.
 
-```
+<blockquote>
+<pre>
 \Images\fr-FR\logo.scale-100_contrast-white.png
-```
+</blockquote>
+</pre>
 
 물론 전체 이름을 직접 참조하여 동일한 실제 파일을 검색할 수도 있습니다.
 

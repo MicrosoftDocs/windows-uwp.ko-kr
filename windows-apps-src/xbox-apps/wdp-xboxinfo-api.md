@@ -5,26 +5,26 @@ ms.date: 11/072017
 ms.topic: article
 keywords: 장치 포털, xbox, uwp, windows 10
 ms.localizationpriority: medium
-ms.openlocfilehash: 85c2c139aa8064e1f0769064b95eeb531086b8c1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7aa8b11bc439266d36fbb27a7eaa7b07e924a17c
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244039"
 ---
 # <a name="xbox-info-api-reference"></a>Xbox 정보 API 참조   
 이 API를 사용하여 Xbox One 디바이스 정보에 액세스할 수 있습니다.
 
 ## <a name="get-xbox-one-device-information"></a>Xbox One 디바이스 정보 가져오기
 
-**요청**
+## <a name="request"></a>요청
 
 Xbox One에 대한 디바이스 정보를 가져올 수 있습니다.
 
 메서드      | 요청 URI
 :------     | :-----
-GET | /ext/xbox/info
-<br />
+가져오기 | /ext/xbox/info
+
 **URI 매개 변수**
 
 - 없음
@@ -37,7 +37,7 @@ GET | /ext/xbox/info
 
 - 없음
 
-**응답**   
+## <a name="response"></a>응답
 다음 필드가 있는 JSON 개체입니다.
 
 * OsVersion - (문자열) OS 버전입니다.
@@ -59,7 +59,6 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 
-<br />
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Xbox

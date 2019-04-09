@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: bcdb8ca6843d126bc245e48f0b50209890740819
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 3456742c4dbb3ca2ab146217763e8f7475c79df2
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639618"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57822928"
 ---
 # <a name="surface-dial-interactions"></a>Surface Dial 조작
 
@@ -85,7 +85,7 @@ Surface Dial 사용자 환경을 사용자 지정할 때 항상 정 기능 또�
 
 다음에서는 Surface Dial 메뉴에 노출되는 도구를 사용자 지정하기 위한 UX 및 개발자 지침을 알아봅니다.
 
-### <a name="ux-guidance"></a>UX 지침
+### <a name="ux-guidance-for-custom-tools"></a>사용자 지정 도구에 대 한 UX 지침
 
 **도구가 현재 상황에 맞는지 확인** 도구가 수행하는 작업과 Surface Dial 조작이 작동하는 방식을 명확히 이해하면 사용자들이 더 빠르게 배우고 작업에 집중하도록 도와줄 수 있습니다.
 
@@ -132,6 +132,8 @@ Surface Dial 메뉴 항목은 비활성된 상태를 지원하지 않기 때문�
 앞서 설명한 대로 기본 Surface Dial 메뉴는 광범위한 기본 시스템 기능(시스템 볼륨, 시스템 밝기, 스크롤, 확대/축소, 실행 취소, 시스템이 진행 중인 오디오 또는 비디오 재생을 감지할 때의 미디어 컨트롤)을 포함하는 기본 제공 도구 모음으로 미리 채워집니다. 그러나 이러한 기본 도구가 앱에 필요한 기능을 제공하지 않을 수도 있습니다. 
 
 다음 섹션에서는 Surface Dial 메뉴에 사용자 지정 도구를 추가하고 노출되는 기본 제공 도구를 지정하는 방법을 설명합니다.
+
+이 샘플의 보다 강력한 버전을 다운로드 [RadialController 사용자 지정](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)합니다.
 
 **사용자 지정 도구 추가**
 
@@ -298,7 +300,7 @@ Surface Dial은 아날로그 값 또는 컨트롤을 점진적으로 원활하�
 > [!NOTE]
 > 촉각 피드백은 **Windows 설정 -&gt; 디바이스 -&gt; 휠** 페이지에서 사용하지 않도록 설정할 수 있습니다.
 
-#### <a name="ux-guidance"></a>UX 지침
+#### <a name="ux-guidance-for-custom-interactions"></a>사용자 지정 상호 작용을 위한 UX 지침
 
 **연속 또는 높은 회전 민감도 사용 하 여 도구 햅 틱 피드백을 사용 하지 않도록 설정 해야 합니다.**
 
@@ -316,14 +318,14 @@ Surface Dial은 어느 쪽 손을 사용하고 있는지 감지할 수 없으나
 
 |   |   |   |
 | --- | --- | --- |
-| 왼쪽<br/>위쪽<br/>바깥쪽 | ![Surface Dial 이미지](images/windows-wheel/surface-dial-rotate.png) | 오른쪽<br/>아래쪽<br/>안쪽 |
+| 왼쪽<br/>위쪽<br/>바깥쪽 | ![Surface Dial 이미지](images/windows-wheel/surface-dial-rotate.png) | 오른쪽<br/>아래쪽<br/>입력 |
 |   |   |   |
 
 | 개념적 방향 | Surface Dial에 매핑 | 시계 방향 회전 | 시계 반대 방향 회전 |
 | --- | --- | --- | --- |
-| 수평 | Surface Dial 위쪽 기준으로 왼쪽 및 오른쪽 매핑 | 오른쪽 | 왼쪽 |
-| 수직 | Surface Dial 왼쪽 기준으로 위쪽 및 아래쪽 매핑 | 아래쪽 | 위쪽 |
-| Z축 | 위쪽/오른쪽에 안쪽으로(또는 가깝게) 매핑<br/>아래쪽/왼쪽에 바깥쪽으로(또는 멀게) 매핑 | 안쪽 | 바깥쪽 |
+| 가로 | Surface Dial 위쪽 기준으로 왼쪽 및 오른쪽 매핑 | 오른쪽 | 왼쪽 |
+| 세로 | Surface Dial 왼쪽 기준으로 위쪽 및 아래쪽 매핑 | 아래쪽 | 위쪽 |
+| Z축 | 위쪽/오른쪽에 안쪽으로(또는 가깝게) 매핑<br/>아래쪽/왼쪽에 바깥쪽으로(또는 멀게) 매핑 | 입력 | 바깥쪽 |
 
 #### <a name="developer-guidance"></a>개발자 참고 자료
 
@@ -364,7 +366,7 @@ private void MyController_ButtonClicked(RadialController sender,
 }
 ```
 
-### <a name="click"></a>그룹에 타일을 추가하려면
+### <a name="click"></a>클릭
 
 Surface Dial을 클릭하는 것은 왼쪽 마우스 단추를 클릭하는 것과 같습니다(디바이스의 회전 상태가 이 작업에는 영향을 미치지 않음).
 
@@ -391,12 +393,13 @@ Surface Dial을 클릭하면 [**RadialController.ButtonClicked**](https://msdn.m
 앞에서 설명한 대로 Surface Dial을 Surface Studio와 함께 사용하여 Surface Dial을 특별한 화면 내부 모드로 표시할 수 있습니다. 
 
 이 모드에서는 Dial 조작 환경을 앱 이벤트에 통합하고 추가로 사용자 지정할 수 있습니다. Surface Dial 및 Surface Studio에서만 가능한 고유한 환경 예제로는 다음이 있습니다.
+
 - Surface Dial의 위치에 따라 상황에 따른 도구(예: 색상표)를 표시하여 보다 쉽게 찾아서 사용하도록 지원
 - Surface Dial을 놓은 UI에 따라 활성 도구 설정
 - Surface Dial의 위치에 따라 화면 영역 확대
 - 화면 위치에 따라 고유한 게임 조작
 
-#### <a name="ux-guidance"></a>UX 지침
+#### <a name="ux-guidance-for-on-screen-interactions"></a>UX 지침에 대 한 화면에 나타나는 상호 작용
 
 **Surface Dial 화면의 검색 되 면 앱이 응답 해야**
 
@@ -408,7 +411,7 @@ Surface Dial을 클릭하면 [**RadialController.ButtonClicked**](https://msdn.m
 
 **사용자 상호 작용에 따라 Surface Dial 관련 UI를 조정 합니다.**
 
-하드웨어 폐색 외에도 디바이스를 사용할 때 사용자의 손과 팔이 화면 일부를 폐색할 수도 있습니다. 
+하드웨어 폐색 외에도 디바이스를 사용할 때 사용자의 손과 팔이 화면 일부를 폐색할 수도 있습니다.
 
 폐색된 영역은 디바이스에서 어떤 손을 사용하는지에 따라 다릅니다. 디바이스는 주요 손이 아닌 다른 손으로 주로 사용되도록 디자인되므로 Surface Dial 관련 UI는 사용자가 지정한 반대쪽 손에 맞게 조정되어야 합니다(**Windows 설정 &gt; 디바이스 &gt; 펜 및 Windows Ink &gt; 글을 쓸 때 사용하는 손 선택** 설정).
 
@@ -645,23 +648,35 @@ private void ActivateGridAtLocation(Point Location)
 
 ## <a name="related-articles"></a>관련 문서
 
+[자습서: UWP 앱에서 Surface Dial (및 다른 휠 장치)를 지원 합니다.](radialcontroller-walkthrough.md)
+
 ### <a name="api-reference"></a>API 참조
 
 - [**RadialController** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController)
-- [**RadialControllerButtonClickedEventArgs** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
+- [**RadialControllerButtonClickedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
 - [**RadialControllerConfiguration** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerConfiguration) 
-- [**RadialControllerControlAcquiredEventArgs** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerControlAcquiredEventArgs) 
+- [**RadialControllerControlAcquiredEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerControlAcquiredEventArgs) 
 - [**RadialControllerMenu** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenu) 
 - [**RadialControllerMenuItem** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuItem) 
-- [**RadialControllerRotationChangedEventArgs** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerRotationChangedEventArgs) 
+- [**RadialControllerRotationChangedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerRotationChangedEventArgs) 
 - [**RadialControllerScreenContact** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContact) 
-- [**RadialControllerScreenContactContinuedEventArgs** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs) 
-- [**RadialControllerScreenContactStartedEventArgs** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactStartedEventArgs)
+- [**RadialControllerScreenContactContinuedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs) 
+- [**RadialControllerScreenContactStartedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactStartedEventArgs)
 - [**RadialControllerMenuKnownIcon** 열거형](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuKnownIcon) 
-- [**RadialControllerSystemMenuItemKind** 열거형](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
+- [**RadialControllerSystemMenuItemKind** enum](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
 
 ### <a name="samples"></a>샘플
 
-[유니버설 Windows 플랫폼 샘플 (C# 및 c + +)](https://go.microsoft.com/fwlink/?linkid=832713)
+#### <a name="topic-samples"></a>항목 샘플
+
+[RadialController 사용자 지정](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
+
+#### <a name="other-samples"></a>기타 샘플
+
+[색 지정 책 샘플](https://github.com/Microsoft/Windows-appsample-coloringbook)
+
+[자습서 시작 하기: UWP 앱에서 Surface Dial (및 다른 휠 장치)를 지원 합니다.](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-RadialController)
+
+[유니버설 Windows 플랫폼 샘플 (C# 및 C++)](https://go.microsoft.com/fwlink/?linkid=832713)
 
 [Windows 클래식 데스크톱 샘플](https://aka.ms/radialcontrollerclassicsample)

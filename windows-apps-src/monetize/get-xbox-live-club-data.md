@@ -5,21 +5,21 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 클럽
 ms.localizationpriority: medium
-ms.openlocfilehash: dbf9d06f96632237c10de0fe3b6c4723a2501254
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: aef7f17a2c6371a13a2eeb57b5f3dc4ee4889435
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633178"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162677"
 ---
 # <a name="get-xbox-live-club-data"></a>Xbox Live 클럽 데이터 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원 게임](../xbox-live/index.md)의 클럽 데이터를 가져옵니다. 이 정보를 사용할 수 있습니다 합니다 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 파트너 센터에서.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원 게임](https://docs.microsoft.com/gaming/xbox-live//index.md)의 클럽 데이터를 가져옵니다. 이 정보를 사용할 수 있습니다 합니다 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 파트너 센터에서.
 
 > [!IMPORTANT]
-> 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](../xbox-live/developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
+> 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -33,14 +33,14 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원
 
 | 메서드 | 요청 URI       |
 |--------|----------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
+| 가져오기    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
 
 
 ### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| Authorization | string | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
@@ -48,12 +48,12 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원
 
 | 매개 변수        | 형식   |  설명      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | 문자열 | Xbox Live 클럽 데이터를 검색하려는 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.  |  예  |
-| metricType | 문자열 | 검색할 Xbox Live 분석 데이터의 유형을 지정하는 문자열입니다. 이 메서드의 경우 값 **communitymanagerclub**을 지정합니다.  |  예  |
-| startDate | date | 검색할 클럽 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다. |  아니오  |
-| endDate | date | 검색할 클럽 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니오  |
-| top | int | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니오  |
-| skip | int | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 큰 데이터 집합의 페이지를 탐색할 수 있습니다. 예를 들어 top=10000 및 skip=0이면 데이터의 처음 10000개 행을 검색하고 top=10000 및 skip=10000이면 데이터의 다음 10000개 행을 검색하는 방식입니다. |  아니오  |
+| applicationId | string | Xbox Live 클럽 데이터를 검색하려는 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.  |  예  |
+| metricType | string | 검색할 Xbox Live 분석 데이터의 유형을 지정하는 문자열입니다. 이 메서드의 경우 값 **communitymanagerclub**을 지정합니다.  |  예  |
+| startDate | date | 검색할 클럽 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다. |  아니요  |
+| endDate | date | 검색할 클럽 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
+| top | ssNoversion | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니요  |
+| skip | ssNoversion | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 큰 데이터 집합의 페이지를 탐색할 수 있습니다. 예를 들어 top=10000 및 skip=0이면 데이터의 처음 10000개 행을 검색하고 top=10000 및 skip=10000이면 데이터의 다음 10000개 행을 검색하는 방식입니다. |  아니요  |
 
 
 ### <a name="request-example"></a>요청 예제
@@ -70,8 +70,8 @@ Authorization: Bearer <your access token>
 | 값      | 형식   | 설명                  |
 |------------|--------|-------------------------------------------------------|
 | 값      | 배열  | 사용자 게임과 관련된 클럽 데이터가 있는 1개의 [ProductData](#productdata) 개체가 포함되고 모든 Xbox Live 고객의 클럽 데이터가 있는 1개의 [XboxwideData](#xboxwidedata) 개체가 포함된 배열입니다. 이 데이터는 사용자 게임 데이터와 비교하기 위해 포함됩니다.  |
-| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10000으로 설정되어 있지만 쿼리에 대한 데이터의 행이 10000개보다 많은 경우 이 값이 반환됩니다. |
-| TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다. |
+| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10000으로 설정되어 있지만 쿼리에 대한 데이터의 행이 10000개보다 많은 경우 이 값이 반환됩니다. |
+| TotalCount | ssNoversion    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다. |
 
 
 ### <a name="productdata"></a>ProductData
@@ -80,10 +80,10 @@ Authorization: Bearer <your access token>
 
 | 값           | 형식    | 설명        |
 |-----------------|---------|------|
-| date            |  문자열 |   클럽 데이터의 날짜입니다.   |
-|  applicationId               |    문자열     |  클럽 데이터를 검색한 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.   |
-|  clubsWithTitleActivity               |    int     |  소셜에서 사용자 게임에 참여하는 클럽 수입니다.   |     
-|  clubsExclusiveToGame               |   int      |  소셜에서 사용자 게임에만 참여하는 클럽 수입니다.   |     
+| date            |  string |   클럽 데이터의 날짜입니다.   |
+|  applicationId               |    string     |  클럽 데이터를 검색한 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.   |
+|  clubsWithTitleActivity               |    ssNoversion     |  소셜에서 사용자 게임에 참여하는 클럽 수입니다.   |     
+|  clubsExclusiveToGame               |   ssNoversion      |  소셜에서 사용자 게임에만 참여하는 클럽 수입니다.   |     
 |  clubFacts               |   배열      |   소셜에서 사용자 게임에 참여하는 각 클럽에 대한 하나 이상의 [ClubFacts](#clubfacts) 개체를 포함합니다.   |
 
 
@@ -93,11 +93,11 @@ Authorization: Bearer <your access token>
 
 | 값           | 형식    | 설명        |
 |-----------------|---------|------|
-| date            |  문자열 |   클럽 데이터의 날짜입니다.   |
-|  applicationId  |    문자열     |   **XboxwideData** 개체에서 이 문자열은 항상 값 **XBOXWIDE**입니다.  |
-|  clubsWithTitleActivity               |   int     |  소셜에서 Xbox Live 지원 게임에 참여하는 고객의 평균 클럽 수입니다.    |     
-|  clubsExclusiveToGame               |   int      |  소셜에서 Xbox Live 지원 게임에만 참여하는 평균 클럽 수입니다.   |     
-|  clubFacts               |   object      |  한 [ClubFacts](#clubfacts) 개체를 포함합니다. 이 개체는 **XboxwideData** 개체의 컨텍스트에서는 의미가 없으며 기본값을 가집니다.  |
+| date            |  string |   클럽 데이터의 날짜입니다.   |
+|  applicationId  |    string     |   **XboxwideData** 개체에서 이 문자열은 항상 값 **XBOXWIDE**입니다.  |
+|  clubsWithTitleActivity               |   ssNoversion     |  소셜에서 Xbox Live 지원 게임에 참여하는 고객의 평균 클럽 수입니다.    |     
+|  clubsExclusiveToGame               |   ssNoversion      |  소셜에서 Xbox Live 지원 게임에만 참여하는 평균 클럽 수입니다.   |     
+|  clubFacts               |   개체(object)      |  한 [ClubFacts](#clubfacts) 개체를 포함합니다. 이 개체는 **XboxwideData** 개체의 컨텍스트에서는 의미가 없으며 기본값을 가집니다.  |
 
 
 ### <a name="clubfacts"></a>ClubFacts
@@ -106,10 +106,10 @@ Authorization: Bearer <your access token>
 
 | 값           | 형식    | 설명        |
 |-----------------|---------|--------------------|
-|  name            |  문자열  |   **ProductData** 개체에서 이 문자열은 클럽 이름입니다. **XboxwideData** 개체에서 이 문자열은 항상 값 **XBOXWIDE**입니다.           |
-|  memberCount               |    int     | **ProductData** 개체에서 이 수는 클럽을 방문하기만 한 구성원이 아닌 사용자를 제외한 클럽의 구성원 수입니다. **XboxwideData** 개체에서 이 수는 항상 0입니다.    |
-|  titleSocialActionsCount               |    int     |  **ProductData** 개체에서 이 수는 클럽의 구성원이 사용자 게임과 관련하여 수행한 소셜 작업 수입니다. **XboxwideData** 개체에서 이 수는 항상 0입니다.   |
-|  isExclusiveToGame               |    부울     |  **ProductData** 개체에서 이는 소셜에서 현재 클럽이 사용자 게임에만 참여하는지 여부를 표시합니다. **XboxwideData** 개체에서 이는 항상 true입니다.  |
+|  NAME            |  string  |   **ProductData** 개체에서 이 문자열은 클럽 이름입니다. **XboxwideData** 개체에서 이 문자열은 항상 값 **XBOXWIDE**입니다.           |
+|  memberCount               |    ssNoversion     | **ProductData** 개체에서 이 수는 클럽을 방문하기만 한 구성원이 아닌 사용자를 제외한 클럽의 구성원 수입니다. **XboxwideData** 개체에서 이 수는 항상 0입니다.    |
+|  titleSocialActionsCount               |    ssNoversion     |  **ProductData** 개체에서 이 수는 클럽의 구성원이 사용자 게임과 관련하여 수행한 소셜 작업 수입니다. **XboxwideData** 개체에서 이 수는 항상 0입니다.   |
+|  isExclusiveToGame               |    Boolean     |  **ProductData** 개체에서 이는 소셜에서 현재 클럽이 사용자 게임에만 참여하는지 여부를 표시합니다. **XboxwideData** 개체에서 이는 항상 true입니다.  |
 
 
 ### <a name="response-example"></a>응답 예제

@@ -7,20 +7,18 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a420ed5ed8f498eb9c900cbacb1b766c4a01214
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 62ad93fa480f0515c4ed6df2d73a745454197ac6
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599288"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291641"
 ---
 # <a name="triangle-strips"></a>삼각형 스트립
-
 
 삼각형 스트립은 일련의 연결된 삼각형입니다. 삼각형이 연결되었기 때문에 응용 프로그램에서 각 삼각형의 세 꼭짓점을 반복해서 지정할 필요가 없습니다. 예를 들어 다음 삼각형 스트립을 정의하려면 꼭짓점 7개만 있으면 됩니다.
 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>예제
-
 
 ![꼭짓점 7개가 포함된 삼각형 스트립 그림](images/tristrip.png)
 
@@ -34,7 +32,7 @@ ms.locfileid: "57599288"
 
 다음 코드는 이 삼각형 스트립의 꼭짓점을 만드는 방법을 보여 줍니다.
 
-```
+```cpp
 struct CUSTOMVERTEX
 {
 float x,y,z;
@@ -53,7 +51,7 @@ CUSTOMVERTEX Vertices[] =
 
 아래의 코드 예제는 이 삼각형 스트립을 Direct3D로 렌더링하는 방법을 보여 줍니다.
 
-```
+```cpp
 //
 // It is assumed that d3dDevice is a valid
 // pointer to a device interface.

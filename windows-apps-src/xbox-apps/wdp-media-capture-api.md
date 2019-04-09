@@ -6,23 +6,23 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 3f92c8fd-4096-4972-97da-01ae5db6423c
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a27d13f7ceedd14a84d5b4b4aa1233445037a1f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 7dcd4c6c39a983ab11bfacd391bfa78942601258
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244059"
 ---
 # <a name="media-capture-api-reference"></a>미디어 캡처 API 참조 #
 
-**요청**
+## <a name="request"></a>요청
 
 다음 요청 형식을 사용하여 현재 화면의 PNG 표현을 캡처할 수 있습니다.
 
 | 메서드        | 요청 URI     | 
 | ------------- |-----------------|
-| GET           | /ext/screenshot |
-<br>
+| 가져오기           | /ext/screenshot |
+
 
 **URI 매개 변수**
 
@@ -32,7 +32,6 @@ ms.locfileid: "57640768"
 | URI 매개 변수      | 설명     | 
 | ------------------ |-----------------|
 | 다운로드(선택 사항)| 브라우저에서 렌더링하는 대신 호스트 브라우저가 스크린샷을 첨부 파일로 다운로드해야 함을 나타내는 HTTP 응답 헤더를 설정해야 하는지 여부를 나타내는 부울 값입니다.  |
-<br>
 
 **요청 헤더**
 
@@ -42,7 +41,7 @@ ms.locfileid: "57640768"
 
 * 없음
 
-###<a name="response"></a>응답 # # #
+## <a name="response"></a>응답
 
 **상태 코드**
 
@@ -54,7 +53,7 @@ ms.locfileid: "57640768"
 | 5XX                | 예기치 않은 오류에 대한 오류 코드 |
 <br>
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Xbox
 

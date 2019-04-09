@@ -2,16 +2,16 @@
 Description: 패키지 플라이트를 사용하여 제한된 테스트 그룹에만 지정된 패키지를 배포할 수 있습니다.
 title: 패키지 플라이트
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
-ms.date: 10/31/2018
+ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, 플라이팅
 ms.localizationpriority: medium
-ms.openlocfilehash: 568fbff28d6c57acb6214bf274becc9cbc7f8830
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 2070d1312df8f840c2368600197ca2bd7c506cdc
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244299"
 ---
 # <a name="package-flights"></a>패키지 플라이트
 
@@ -70,7 +70,7 @@ ms.locfileid: "57610168"
 
 ## <a name="configure-additional-package-flight-options"></a>추가 패키지 플라이트 옵션 구성
 
-기본적으로 패키지 플라이트는 인증 프로세스가 완료되는 즉시 게시되고 플라이트 그룹에 제공됩니다. **플라이트 옵션** 섹션에서 [게시 날짜](set-app-pricing-and-availability.md#publish-date)를 변경하거나 [인증에 대한 참고 사항](notes-for-certification.md)을 추가할 수 있습니다. **저장**을 클릭하여 패키지 플라이트 개요 페이지로 돌아갑니다. 
+기본적으로 패키지 플라이트는 인증 프로세스가 완료되는 즉시 게시되고 플라이트 그룹에 제공됩니다. 변경 하려는 경우는 [게시 날짜](set-app-pricing-and-availability.md#publish-date)에서 수행할 수 있습니다 합니다 **비행 옵션** 섹션입니다. **저장**을 클릭하여 패키지 플라이트 개요 페이지로 돌아갑니다. 
 
 
 ## <a name="submit-your-package-flight-to-the-store"></a>스토어에 패키지 플라이트 제출

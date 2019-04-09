@@ -6,15 +6,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b6be8ee8aa67196581907087d99e0324d741a00
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a01814729e38668e05201b4b7c8876dc150c488e
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640148"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291771"
 ---
 # <a name="transform-overview"></a>변형 개요
-
 
 매트릭스 변환은 수많은 하위 수준의 3D 그래픽 연산을 처리합니다.
 
@@ -63,7 +62,7 @@ ms.locfileid: "57640148"
 
 C++에서 Direct3D는 매트릭스 구조를 사용하여 매트릭스를 2차원 배열로 선언합니다. 다음은 균등 크기 조정 매트릭스(배율 인수 "s")의 역할을 수행하도록 [**D3DMATRIX**](https://msdn.microsoft.com/library/windows/desktop/bb172573) 구조를 초기화하는 방법을 보여주는 예제입니다.
 
-```
+```cpp
 D3DMATRIX scale = {
     5.0f,            0.0f,            0.0f,            0.0f,
     0.0f,            5.0f,            0.0f,            0.0f,
@@ -81,7 +80,7 @@ D3DMATRIX scale = {
 
 C++에서 좌표 이동 매트릭스를 수동으로 만들 수 있습니다. 다음 예제는 꼭짓점의 좌표를 이동하는 매트릭스를 만드는 함수의 소스 코드입니다.
 
-```
+```cpp
 D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
     D3DXMATRIX ret;
 
@@ -121,7 +120,7 @@ D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
 
 다음 코드는 X축에 대한 회전을 처리하는 함수를 보여 줍니다.
 
-```
+```cpp
     // Inputs are a pointer to a matrix (pOut) and an angle in radians.
     float sin, cos;
     sincosf(angle, &sin, &cos);  // Determine sin and cos of angle

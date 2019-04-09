@@ -5,12 +5,12 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f8bed97e060015f92ff95c9f7d797bbcb83db431
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: e0fcb903bd272bd10d434a27d41e6e4558a624ea
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605838"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334901"
 ---
 # <a name="best-practices-for-writing-to-files"></a>파일 쓰기 모범 사례
 
@@ -21,7 +21,9 @@ ms.locfileid: "57605838"
 
 경우에 따라 사용 하는 경우 일반적인 문제의 집합으로 실행 하는 개발자는 **작성** 의 메서드는 [ **FileIO** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) 고 [ **PathIO** ](https://docs.microsoft.com/uwp/api/windows.storage.pathio) 파일 시스템 I/O 작업을 수행 하는 클래스입니다. 예를 들어, 일반적인 문제 다음과 같습니다.
 
-• 파일은 • 앱 예외가 발생 하는 방법 중 하나를 호출 하는 경우 부분적으로 기록 됩니다. • 작업 뒤에 둡니다. 대상 파일 이름에 비슷한 파일 이름의 TMP 파일입니다.
+* 파일을 부분적으로 기록 됩니다.
+* 메서드 중 하나를 호출 하는 경우 앱에서 예외가 발생 합니다.
+* 작업에 둡니다. 대상 파일 이름에 비슷한 파일 이름의 TMP 파일입니다.
 
 **작성** 의 메서드는 [ **FileIO** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) 및 [ **PathIO** ](https://docs.microsoft.com/uwp/api/windows.storage.pathio) 클래스는 다음과 같습니다.
 
@@ -35,7 +37,7 @@ ms.locfileid: "57605838"
 > [!NOTE]
 > 이 문서에 중점을 둡니다 합니다 **FileIO** 메서드 예제 및 토론입니다. 그러나 합니다 **PathIO** 메서드는 유사한 패턴을 따르며이 문서의 지침은 대부분 너무 해당 메서드에 적용 됩니다. 
 
-## <a name="conveience-vs-control"></a>컨트롤 및 Conveience
+## <a name="convenience-vs-control"></a>편의 컨트롤 비교
 
 A [ **StorageFile** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) 개체가 네이티브 Win32 프로그래밍 모델과 같이 파일 핸들을 아닙니다. 대신에 [ **StorageFile** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) 해당 콘텐츠를 조작 하는 메서드를 사용 하 여 파일의 표현입니다.
 
@@ -77,10 +79,10 @@ A [ **StorageFile** ](https://docs.microsoft.com/uwp/api/windows.storage.storage
 |----------------------|---------|----------|-------------|
 |  ERROR_ACCESS_DENIED (0X80070005)  |  5  |  원본 파일은 이전 작업에서 삭제 표시 될 수 있습니다.  |  작업을 다시 시도합니다.</br>파일에 대 한 액세스가 동기화를 확인 합니다.  |
 |  ERROR_SHARING_VIOLATION (0X80070020)  |  5  |  원본 파일을 다른 배타적 쓰기 열려 있습니다.   |  작업을 다시 시도합니다.</br>파일에 대 한 액세스가 동기화를 확인 합니다.  |
-|  ERROR_UNABLE_TO_REMOVE_REPLACED (0X80070497)  |  19 ~ 20  |  사용 중이기 때문에 원본 파일 (file.txt)을 대체할 수 있습니다. 다른 프로세스 또는 작업 바꿀 수 전에 파일에 대 한 액세스를 얻은 합니다.  |  작업을 다시 시도합니다.</br>파일에 대 한 액세스가 동기화를 확인 합니다.  |
-|  ERROR_DISK_FULL (0X80070070)  |  7, 14, 16, 20  |  트랜잭션된 모델 추가 파일을 만들고이 추가 저장소를 사용 합니다.  |    |
-|  ERROR_OUTOFMEMORY (0X8007000E)  |  14, 16  |  이 여러 개의 미해결 I/O 작업 또는 파일 크기가 커질으로 인해 발생할 수 있습니다.  |  스트림을 제어 하 여 보다 세분화 된 방법은 오류를 해결할 수 있습니다.  |
-|  E_FAIL (0X80004005) |  임의  |  기타  |  작업을 다시 시도합니다. 그래도 실패할 경우 플랫폼 오류를 수 있습니다 하 고 일관성이 없는 상태에 있기 때문에 앱을 종료 해야 합니다. |
+|  ERROR_UNABLE_TO_REMOVE_REPLACED (0X80070497)  |  19-20  |  사용 중이기 때문에 원본 파일 (file.txt)을 대체할 수 있습니다. 다른 프로세스 또는 작업 바꿀 수 전에 파일에 대 한 액세스를 얻은 합니다.  |  작업을 다시 시도합니다.</br>파일에 대 한 액세스가 동기화를 확인 합니다.  |
+|  ERROR_DISK_FULL (0x80070070)  |  7, 14, 16, 20  |  트랜잭션된 모델 추가 파일을 만들고이 추가 저장소를 사용 합니다.  |    |
+|  ERROR_OUTOFMEMORY (0x8007000E)  |  14, 16  |  이 여러 개의 미해결 I/O 작업 또는 파일 크기가 커질으로 인해 발생할 수 있습니다.  |  스트림을 제어 하 여 보다 세분화 된 방법은 오류를 해결할 수 있습니다.  |
+|  E_FAIL (0X80004005) |  임의의 값  |  기타  |  작업을 다시 시도합니다. 그래도 실패할 경우 플랫폼 오류를 수 있습니다 하 고 일관성이 없는 상태에 있기 때문에 앱을 종료 해야 합니다. |
 
 ## <a name="other-considerations-for-file-states-that-might-lead-to-errors"></a>오류가 발생할 수 있는 파일 상태에 대 한 기타 고려 사항
 
@@ -192,6 +194,6 @@ else
 
 합니다 [.NET 블로그에서 병렬 프로그래밍에](https://blogs.msdn.microsoft.com/pfxteam/) 병렬 프로그래밍에 대 한 지침에 대 한 중요 한 리소스입니다. 특히 합니다 [AsyncReaderWriterLock에 대 한 게시](https://blogs.msdn.microsoft.com/pfxteam/2012/02/12/building-async-coordination-primitives-part-7-asyncreaderwriterlock/) 동시 읽기 액세스를 허용 하는 동시 쓰기에 대 한 파일에 대 한 단독 액세스를 유지 하는 방법에 설명 합니다. 염두 I/O 영향을 줍니다 해당 직렬화 성능.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 * [파일 만들기, 쓰기 및 읽기](quickstart-reading-and-writing-files.md)

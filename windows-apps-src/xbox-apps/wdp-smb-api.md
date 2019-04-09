@@ -6,27 +6,29 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 1f0eb76e-fe3e-4674-a27e-229beec7e63d
 ms.localizationpriority: medium
-ms.openlocfilehash: e248a6ff666efe7dca262daa81a21ab44a4dc5aa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: a1040ec91af767d9472842b5ba656d347e7782d0
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244069"
 ---
-# <a name="developer-folder-api-reference"></a>개발자 폴더 API 참조   
+# <a name="developer-folder-api-reference"></a>개발자 폴더 API 참조
+
 표준 파일 탐색기를 사용하여 Xbox One의 개발 관련 파일에 액세스할 수 있습니다. 이렇게 하면 PC에서 쉽게 파일을 보고 콘솔로 이동할 수 있습니다.
 
 **요청**
 
-다음 요청을 사용하여 개발자 폴더에 액세스할 수 있습니다. 요청은 다음을 반환합니다.    
+다음 요청을 사용하여 개발자 폴더에 액세스할 수 있습니다. 요청은 다음을 반환합니다.
+
 * 파일 공유 위치. 이 위치를 파일 탐색기의 주소 표시줄에 입력할 수 있습니다.
 * 파일 공유에 액세스하는 사용자 이름
 * 파일 공유에 액세스하는 암호
 
 메서드      | 요청 URI
 :------     | :-----
-GET | /ext/smb/developerfolder
-<br />
+가져오기 | /ext/smb/developerfolder
+
 **URI 매개 변수**
 
 - 없음
@@ -53,7 +55,7 @@ HTTP 상태 코드      | 설명
 200 | 파일 공유의 자격 증명에 대한 액세스 요청이 허가되었습니다.
 4XX | 오류 코드
 5XX | 오류 코드
-<br />
-**사용 가능한 장치 패밀리**
+
+**사용 가능한 디바이스 패밀리**
 
 * Windows Xbox

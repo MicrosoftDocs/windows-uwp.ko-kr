@@ -1,23 +1,23 @@
 ---
 description: 이 항목에서는 C++/WinRT를 사용해 이벤트 처리 대리자를 등록하거나 취소하는 방법에 대해서 설명합니다.
 title: C++/WinRT의 대리자를 사용한 이벤트 처리
-ms.date: 05/07/2018
+ms.date: 03/04/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: 193d821b44722e150f38da7430504f5d528770a4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: c647168f44ffbfc4d753700a87825b5ca7b28544
+ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602428"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921679"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
-이 항목에서는 등록 및 사용 하 여 이벤트 처리 대리자를 취소 하는 방법을 보여 줍니다 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)합니다. 표준 C++ 함수와 같은 개체를 사용해 이벤트를 처리할 수 있습니다.
+이 항목에서는 등록 및 사용 하 여 이벤트 처리 대리자를 취소 하는 방법을 보여 줍니다 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)합니다. 표준 C++ 함수와 같은 개체를 사용해 이벤트를 처리할 수 있습니다.
 
 > [!NOTE]
-> 설치 및 C +를 사용 하는 방법에 대 한 정보에 대 한 + WinRT Visual Studio 확장 (VSIX) (제공 프로젝트 템플릿 지원 뿐만 아니라 C + + WinRT MSBuild 속성 및 대상을) 참조 하세요 [Visual Studio 지원 C + + WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
+> 설치 및 사용에 대 한 정보는 C++WinRT Visual Studio 확장 (VSIX) 및 (있으며 함께 프로젝트 템플릿을 제공 지원도) NuGet 패키지를 참조 하세요 [Visual Studio 지원에 대 한 C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
 
 ## <a name="register-a-delegate-to-handle-an-event"></a>이벤트 처리를 위한 대리자 등록
 
@@ -49,9 +49,9 @@ MainPage::MainPage()
 ```
 
 > [!IMPORTANT]
-> 대리자를 등록 하는 경우에 위의 코드 예제는 원시 전달 *이* 포인터 (현재 개체를 가리키는). 강력한 또는 약한 참조를 현재 개체를 설정 하는 방법에 알아보려면 참조를 **대리자로 멤버 함수를 사용 하는 경우** 섹션의 하위 섹션 [안전 하 게 액세스를 *이* 포인터 이벤트 처리 대리자를 사용 하 여](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)입니다.
+> 위의 코드 예제는 원시 전달 된 대리자를 등록할 때 *이* 포인터 (현재 개체를 가리키는). 강력한 또는 약한 참조를 현재 개체를 설정 하는 방법에 알아보려면 참조를 **대리자로 멤버 함수를 사용 하는 경우** 섹션의 하위 섹션 [안전 하 게 액세스를 *이* 포인터 이벤트 처리 대리자를 사용 하 여](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)입니다.
 
-**RoutedEventHandler**를 생성하는 다른 방법도 있습니다. 아래는 [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) 문서 항목에서 가져온 구문 블록입니다(페이지의 **언어** 드롭다운에서 *C++/WinRT* 선택). 아래 예제를 보면 다양한 생성자가 있습니다. 하나는 람다 함수를, 다른 하나는 프리 함수를, 그리고 나머지 하나(위에서 사용한 것)는 개체와 포인터-멤버 함수를 갖습니다.
+**RoutedEventHandler**를 생성하는 다른 방법도 있습니다. 구문 블록에 대 한 설명서 항목에서 가져온 다음과 같습니다 [ **RoutedEventHandler** ](/uwp/api/windows.ui.xaml.routedeventhandler) (선택  *C++/WinRT* 에서 **언어** 웹 페이지의 오른쪽 위 모서리에 있는 드롭다운). 아래 예제를 보면 다양한 생성자가 있습니다. 하나는 람다 함수를, 다른 하나는 프리 함수를, 그리고 나머지 하나(위에서 사용한 것)는 개체와 포인터-멤버 함수를 갖습니다.
 
 ```cppwinrt
 struct RoutedEventHandler : winrt::Windows::Foundation::IUnknown
@@ -67,7 +67,25 @@ struct RoutedEventHandler : winrt::Windows::Foundation::IUnknown
 
 함수 호출 연산자의 구문 역시 알아두는 것이 좋습니다. 대리자의 매개 변수로 무엇을 사용해야 할지 알 수 있기 때문입니다. 보다시피 이 경우에는 함수 호출 연산자 구문이 **MainPage::ClickHandler**의 매개 변수와 일치합니다.
 
-이벤트 처리기의 작업이 많지 않다면 멤버 함수가 아닌 람다 함수를 사용하는 것도 좋습니다. 한 번 더 아래 코드 예제에서는 쉽게 알 수 없지만 **RoutedEventHandler** 대리자가 람다 함수에서 생성되고 있으며, 이 람다 함수는 마찬가지로 함수 호출 연산자의 구문과 일치해야 합니다.
+> [!NOTE]
+> 지정 된 모든 이벤트에 대 한 해당 대리자 및 해당 대리자의 매개 변수 세부 정보를 파악 하려면 첫 번째 항목으로 이동 설명서 이벤트 자체에 대 한 합니다. 살펴보겠습니다 합니다 [UIElement.KeyDown 이벤트](/uwp/api/windows.ui.xaml.uielement.keydown) 예입니다. 해당 항목을 방문 하 고 선택  *C++/WinRT* 에서 합니다 **언어** 드롭다운 목록입니다. 구문 블록의 시작 부분에서 항목의이 표시 됩니다.
+> 
+> ```cppwinrt
+> // Register
+> event_token KeyDown(KeyEventHandler const& handler) const;
+> ```
+>
+> 정보를 알려줍니다.는 **UIElement.KeyDown** (우리는 항목) 이벤트의 대리자 형식이 **KeyEventHandler**이 종류의 이벤트를 사용 하 여 대리자를 등록할 때 전달 하는 형식 이므로, 합니다. 따라서 이제 링크를 따라 이동 항목을 [KeyEventHandler 대리자](/uwp/api/windows.ui.xaml.input.keyeventhandler) 형식입니다. 여기, 구문 블록 함수 호출 연산자를 포함합니다. 및 위에서 설명한 대로 알리는 수 해야 하는 대리자의 매개 변수입니다.
+> 
+> ```cppwinrt
+> void operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
+> ```
+>
+>  대리자를 선언 해야 알 수 있듯이 **IInspectable** 발신자의 경우와 인스턴스를 [KeyRoutedEventArgs 클래스](/uwp/api/windows.ui.xaml.input.keyroutedeventargs) 인수도 합니다.
+>
+> 또 다른 예로 살펴보겠습니다 합니다 [Popup.Closed 이벤트](/uwp/api/windows.ui.xaml.controls.primitives.popup.closed)합니다. 대리자 형식인 [EventHandler\<IInspectable\>](/uwp/api/windows.foundation.eventhandler)합니다. 대리자 걸립니다 따라서를 **IInspectable** 발신자의 경우와 **IInspectable** (때문에를 **EventHandler**의 형식 매개 변수)는 args입니다.
+
+이벤트 처리기의 작업이 많지 않다면 멤버 함수가 아닌 람다 함수를 사용하는 것도 좋습니다. 다음 코드 예제에서 확실히 알지 못할 다시 하지만 **RoutedEventHandler** 다시, 위에서 설명한 함수 호출 연산자의 구문과 일치 해야 하는 람다 함수에서 생성 되는 대리자입니다.
 
 ```cppwinrt
 MainPage::MainPage()
@@ -122,7 +140,7 @@ private:
 };
 ```
 
-위의 예제와 같이 강력한 참조 하는 대신 단추에 대 한 약한 참조를 저장할 수 있습니다 (참조 [강력 하 고 약한 참조를 C + + /cli WinRT](weak-references.md)).
+위의 예제와 같이 강력한 참조 하는 대신 단추에 대 한 약한 참조를 저장할 수 있습니다 (참조 [강력 하 고 약한 참조 C++/WinRT](weak-references.md)).
 
 또는 대리자를 등록 하면 지정할 수 있습니다 **winrt::auto_revoke** (형식의 값인 [ **winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)) (이벤트 revoker를 요청 하려면 형식 [ **winrt::event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker)). 이벤트 revoker를 이벤트 소스 (이벤트를 발생 시키는 개체)에 대 한 약한 참조를 보유 합니다. **event_revoker::revoke** 멤버 함수를 호출하여 수동으로 취소할 수 있지만 함수가 범위를 벗어나면 이벤트 취소자는 자동으로 그 함수를 호출합니다. **취소** 함수는 이벤트 소스가 여전히 존재하는지 확인합니다. 존재하는 경우 대리인을 취소합니다. 이번 예제에서는 이벤트 소스를 저장할 필요도 없고, 소멸자도 필요 없습니다.
 
@@ -230,14 +248,14 @@ winrt::hstring f(ListView listview)
 
 ## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>안전 하 게 액세스 하는 *이* 이벤트 처리 대리자를 사용 하 여 포인터
 
-개체의 멤버 함수를 사용 하 여 이벤트를 처리 하거나에서 개체의 멤버 함수 내에서 람다 함수 내에서 다음을 검토 해야 이벤트 수신자 (이벤트를 처리 하는 개체), 이벤트 소스 (개체의 상대 수명에 대 한 경우 이벤트를 발생 시키는). 자세한 내용은 및 코드 예제를 참조 하세요 [강력 하 고 약한 참조를 C + + /cli WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)합니다.
+개체의 멤버 함수를 사용 하 여 이벤트를 처리 하거나에서 개체의 멤버 함수 내에서 람다 함수 내에서 다음을 검토 해야 이벤트 수신자 (이벤트를 처리 하는 개체), 이벤트 소스 (개체의 상대 수명에 대 한 경우 이벤트를 발생 시키는). 자세한 내용은 및 코드 예제를 참조 하세요 [강력 하 고 약한 참조 C++/WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)합니다.
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::auto_revoke_t 표식 구조체](/uwp/cpp-ref-for-winrt/auto-revoke-t)
-* [winrt::implements::get_weak 함수](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
-* [winrt::implements::get_strong 함수](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function)
+* [winrt::implements::get_weak 함수](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)
+* [winrt::implements::get_strong 함수](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)
 
 ## <a name="related-topics"></a>관련 항목
-* [작성할 이벤트 C + + /cli WinRT](author-events.md)
-* [동시성 및 비동기 작업을 사용 하 여 C + + /cli WinRT](concurrency.md)
-* [C++/WinRT의 강력하고 약한 참조](weak-references.md)
+* [C++/WinRT의 이벤트 작성](author-events.md)
+* [C++/WinRT로 동시성 및 비동기 작업](concurrency.md)
+* [강력한 / 취약 한 참조에서 C++/WinRT](weak-references.md)

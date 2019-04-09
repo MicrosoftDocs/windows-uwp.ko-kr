@@ -2,16 +2,16 @@
 Description: 스토어 목록 부분 앱 제출 프로세스 텍스트 및 고객에 게 표시할 볼 때 Microsoft Store 앱 나열의 이미지를 제공 하는 합니다.
 title: 앱 스토어 목록 만들기
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
-ms.date: 10/31/2018
+ms.date: 03/13/2019
 ms.topic: article
 keywords: Windows 10, UWP, 목록, 설명, Microsoft Store 페이지, 릴리스 노트, 제목
 ms.localizationpriority: medium
-ms.openlocfilehash: a913c522450a8d28c03066c922df2e3e2972f92f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: cc0c257be2343244872945de17d8c90a23d736ae
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601858"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57977456"
 ---
 # <a name="create-app-store-listings"></a>앱 스토어 목록 만들기
 
@@ -130,7 +130,7 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 게임의 경우 Xbox One의 게임 허브의 정보 섹션에도 간단한 설명이 나타날 수 있습니다.
 
-최상의 결과 대 한 짧은 설명 아래 270 문자 유지 합니다. 필드는 500 자로 제한 되었지만 일부 보기에서는 먼저 270 자만 표시 됩니다 (링크를 간단한 설명의 나머지 부분을 볼 수 있습니다).
+최상의 결과 대 한 짧은 설명 아래 270 문자 유지 합니다. 필드는 1000 자로 제한 되었지만 일부 보기에서는 먼저 270 자만 표시 됩니다 (링크를 간단한 설명의 나머지 부분을 볼 수 있습니다).
 
 
 ### <a name="additional-system-requirements"></a>추가 시스템 요구 사항

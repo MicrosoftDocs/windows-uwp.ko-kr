@@ -5,12 +5,12 @@ ms.date: 01/10/2017
 ms.topic: article
 keywords: windows 10, uwp, WinRT API WNS
 localizationpriority: medium
-ms.openlocfilehash: ba8630a2e877345adeac7eb443dd3e418d3ed277
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: bf224b6c0997ce8af86ab2919a1d0513f619a8a3
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639528"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59067828"
 ---
 # <a name="alternate-push-channels-using-webpush-and-vapid-in-uwp"></a>UWP의 Webpush 및 VAPID를 사용 하 여 대체 푸시 채널 
 부터는 Fall Creators Update에 UWP 앱 수 사용 하 여 웹 푸시 VAPID 인증을 사용 하 여 푸시 알림을 보내도록 합니다.  
@@ -45,7 +45,7 @@ private async void AppCreateVAPIDChannelAsync(string appChannelId, IBuffer appli
     //               The resulting key is an uncompressed point in ANSI X9.62 format             
     // ChannelId is an app provided value for it to identify the channel later.  
     // case of this app it is from the set { "Football", "News", "Baseball" } 
-    PushNotificationChannel webChannel = await PushNotificationChannelManager.Current.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(applicationServerKey, appChannelId); 
+    PushNotificationChannel webChannel = await PushNotificationChannelManager.GetDefault().CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(applicationServerKey, appChannelId); 
  
     //Save the channel  
     AppUpdateChannelMapping(appChannelId, webChannel); 
@@ -106,8 +106,8 @@ Note는 알림을 기본 채널에서 들어오는 경우 다음 채널 ID 설�
 다른 형태의 암호화를 사용 하려는 경우 키는 원시 사용 합니다. 헤더 속성입니다. 모든 푸시 서버로 POST 요청에 포함 된 암호화 헤더 포함 합니다. 여기에서 앱 메시지를 해독 하려면 키를 사용할 수 있습니다.  
 
 ## <a name="related-topics"></a>관련 항목
-- [알림 채널 형식입니다.](channel-types.md)
-- [Windows 푸시 알림 서비스 (WNS)](windows-push-notification-services--wns--overview.md)
+- [알림 채널 유형](channel-types.md)
+- [WNS(Windows 푸시 알림 서비스)](windows-push-notification-services--wns--overview.md)
 - [PushNotificationChannel 클래스](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannel)
 - [PushNotificationChannelManager 클래스](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager)
 

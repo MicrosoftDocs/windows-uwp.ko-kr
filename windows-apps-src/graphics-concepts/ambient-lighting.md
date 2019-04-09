@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 558d7e655a54b22f1fc74591a718a7180d90366f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: ac958a93fcafbb33a9025196b49398e2e3269e55
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57663648"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291841"
 ---
 # <a name="ambient-lighting"></a>주변 조명
-
 
 주변 조명은 장면에 일정한 조명을 제공합니다. 또한 꼭짓점 법선, 조명 방향, 조명 위치 또는 감쇠를 비롯한 다른 조명 요소의 영향을 받지 않기 때문에 모든 개체 꼭짓점을 동일하게 비춥니다. 주변 조명은 모든 방향에서 일정하며 개체의 모든 픽셀에 동일한 색을 지정합니다. 따라서 계산이 빠르지만 개체가 편평해 보이고 사실성이 떨어집니다.
 
@@ -25,7 +24,7 @@ ms.locfileid: "57663648"
 
 주변 조명 = Cₐ\*\[Gₐ + sum (Atten<sub>있나요</sub>\*스폿<sub>있나요</sub>\*L<sub>ai</sub>)\]
 
-여기서 각 값은 다음과 같습니다.
+각 항목이 나타내는 의미는 다음과 같습니다.
 
 | 매개 변수         | 기본값 | 형식          | 설명                                                                                                       |
 |-------------------|---------------|---------------|-------------------------------------------------------------------------------------------------------------------|
@@ -33,7 +32,7 @@ ms.locfileid: "57663648"
 | Gₐ                | (0,0,0,0)     | D3DCOLORVALUE | 전역 주변 색                                                                                              |
 | Atten<sub>i</sub> | (0,0,0,0)     | D3DCOLORVALUE | i번째 조명의 조명 감쇠. [감쇠 및 스포트라이트 계수](attenuation-and-spotlight-factor.md)를 참조하세요. |
 | Spot<sub>i</sub>  | (0,0,0,0)     | D3DVECTOR     | i번째 조명의 스포트라이트 계수. [감쇠 및 스포트라이트 계수](attenuation-and-spotlight-factor.md)를 참조하세요.  |
-| sum               | 해당 없음           | 해당 없음           | 주변 조명의 합                                                                                          |
+| sum               | 해당 사항 없음           | 해당 사항 없음           | 주변 조명의 합                                                                                          |
 | L<sub>ai</sub>    | (0,0,0,0)     | D3DVECTOR     | i번째 조명의 조명 주변 색                                                                              |
 
  
@@ -59,7 +58,7 @@ L<sub>ai</sub>는 장면에 있는 i번째 조명의 주변 색입니다. 각 Di
 
 이 예제에서는 장면 주변 조명과 재질 주변 색이 개체에 지정됩니다.
 
-```
+```cpp
 #define GRAY_COLOR  0x00bfbfbf
 
 Ambient.r = 0.75f;

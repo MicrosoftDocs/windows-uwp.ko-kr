@@ -5,24 +5,24 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
-ms.openlocfilehash: c934a88dd1825fb0111083d71eb25e477956d79c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 71c47767cf026b962f682fb30ca93758dbd5e227
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244079"
 ---
 #<a name="xbox-live-user-management"></a>Xbox Live 사용자 관리 #
 
-**요청**
+## <a name="request"></a>요청
 
 콘솔에서 사용자 목록을 가져오거나 기존 사용자 추가, 제거, 로그인, 로그아웃, 수정 등 목록을 업데이트할 수 있습니다.
 
 | 메서드        | 요청 URI     | 
 | ------------- |-----------------|
-| GET           | /ext/user |
+| 가져오기           | /ext/user |
 | PUT           | /ext/user |
-<br>
+
 
 **URI 매개 변수**
 
@@ -45,7 +45,7 @@ PUT 호출에는 다음 구조를 사용하는 JSON 배열이 포함되어야 �
   * SponsoredUser(선택 사항): 보증된 사용자를 추가할지 여부를 지정하는 부울입니다.
   * Delete (선택 사항): 콘솔에서이 사용자를 삭제 하려면 지정 하는 부울
 
-###<a name="response"></a>응답 # # #
+## <a name="response"></a>응답
 
 **응답 본문**
 
@@ -70,6 +70,3 @@ GET 호출은 다음 속성이 있는 JSON 배열을 반환합니다.
 | 204                | PUT 호출 성공 및 콘솔의 사용자가 업데이트됨 |
 | 4XX                | 잘못된 요청 데이터 또는 형식에 대한 다양한 오류 |
 | 5XX                | 예기치 않은 오류에 대한 오류 코드 |
-<br>
-
-

@@ -2,16 +2,16 @@
 Description: 올바른 범주와 하위 범주에 앱을 나열하면 고객이 앱을 찾고 자세히 파악하는 데 도움이 됩니다.
 title: 범주 및 하위 범주 테이블
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
-ms.date: 10/31/2018
+ms.date: 03/21/2019
 ms.topic: article
 keywords: Windows 10, UWP, 범주, 하위 범주, 장르, 범주, 장르
 ms.localizationpriority: medium
-ms.openlocfilehash: f8c28db9b0ca4437579e98ae156392c7b7b383ea
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 4ff9cf72ce293c81065659472652715669eeeecd
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653648"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334791"
 ---
 # <a name="category-and-subcategory-table"></a>범주 및 하위 범주 테이블
 
@@ -20,7 +20,7 @@ ms.locfileid: "57653648"
 
 앱을 가장 잘 설명하는 범주를 선택해야 합니다. 원할 경우 하위 범주를 선택합니다(사용 가능한 경우). 사용할 범주 또는 하위 범주가 확실하지 않거나 정확하게 일치하는 범주 또는 하위 범주를 찾을 수 없는 경우, 고객이 개발자의 앱과 같은 앱을 찾으려고 할 때 확인할 가능성이 큰 범주 또는 하위 범주를 선택합니다.
 
-선택 하면 **게임** 필요한 하나 이상의 하위 범주를 선택 하 여 범주에 대 한 (호출 *장르* 게임에 대 한). 게임에 적절한 개수만큼 장르를 선택할 수 있습니다. Xbox에서 고객에게 게임을 게시하려면 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 사용하도록 설정하거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 거쳐야 합니다. 
+선택 하면 **게임** 필요한 하나 이상의 하위 범주를 선택 하 여 범주에 대 한 (호출 *장르* 게임에 대 한). 게임에 적절한 개수만큼 장르를 선택할 수 있습니다. Xbox에서 고객에게 게임을 게시하려면 [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators)을 사용하도록 설정하거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 거쳐야 합니다. 
 
 > [!IMPORTANT] 
 > **게임** 범주에 앱을 게시하는 경우, 새로 제출할 때 다른 범주를 선택할 수 없습니다. 계속 **게임** 범주로 게시해야 합니다(단, 새로 제출할 때 장르 선택 항목은 변경할 수 있음). 마찬가지로, 이전에 다른 범주에 게시한 앱을 업데이트할 때 **게임** 범주를 선택할 수 없습니다.
@@ -43,7 +43,7 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
     <tbody>
 <tr>
     <td>책 + 참고자료</td>
-    <td>전자 책 리더 <br> 픽션 <br> 논픽션 <br> 참고자료</td>
+    <td>전자 책 리더 <br> 픽션 <br> 논픽션 <br> 참조</td>
   </tr>
   <tr>
     <td>Business</td>
@@ -54,8 +54,8 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
     <td>데이터베이스 <br> 디자인 도구 <br> 개발자 키트 <br> 네트워킹 <br> 참고자료 + 교육 <br> 서버 <br> 유틸리티 <br> 웹 호스팅</td>
   </tr>
   <tr>
-    <td>교육</td>
-    <td>책 + 참고자료 <br> 조기 학습 <br> 교육용 도구 <br> 외국어 <br> 학습 도우미</td>
+    <td>Education</td>
+    <td>책 + 참고자료 <br> 조기 학습 <br> 교육용 도구 <br> 언어 <br> 학습 도우미</td>
   </tr>
   <tr>
     <td>엔터테인먼트</td>
@@ -67,7 +67,7 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
   </tr>
   <tr>
     <td>게임</td>
-    <td>액션 + 어드벤처 <br> 카드 + 보드 <br> 카지노 <br> 클래식 <br> 교육 <br> 가족 + 어린이 <br> 격투 <br> 멀티 플레이어 온라인 배틀 아레나 <br> 음악 <br> 기타 <br> 플랫포머 <br> 퍼즐 + 퀴즈 <br> 레이싱 + 비행 <br> 롤플레잉 <br> 사격 <br> Simulation <br> 스포츠 <br> 전략 <br> 도구 <br> Word</td>
+    <td>액션 + 어드벤처 <br> 카드 + 보드 <br> 카지노 <br> 클래식 <br> 교육 <br> 가족 + 어린이 <br> 격투 <br> 멀티 플레이어 온라인 배틀 아레나 <br> 음악 <br> 기타 <br> 플랫포머 <br> 퍼즐 + 퀴즈 <br> 레이싱 + 비행 <br> 롤플레잉 <br> 사격 <br> Simulation <br> 스포츠 <br> 전략 <br> Tools <br> Word</td>
   </tr>
   <tr>
     <td>정부 + 정치</td>

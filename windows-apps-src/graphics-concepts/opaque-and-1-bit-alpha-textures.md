@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4227a3ad77eadaa40e47420a5fdab6d65c875da5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 74768202554a3eb49c0df8ee5f17a4fe5f979be8
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594008"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291811"
 ---
 # <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>불투명 및 1 비트 알파 질감
-
 
 텍스처 형식 BC1은 불투명 텍스처나 단일 투명 색의 텍스처용입니다.
 
@@ -29,7 +28,7 @@ ms.locfileid: "57594008"
 
 다음 코드 예시에서는 3색 또는 4색 인코딩 선택 여부를 결정하는 알고리즘을 보여줍니다.
 
-```
+```cpp
 if (color_0 > color_1) 
 {
     // Four-color block: derive the other two colors. 
@@ -63,7 +62,7 @@ else
 |--------------|----------------|
 | 0            | 색\_0       |
 | 1            | 색\_1       |
-| 2            | Word 비트맵\_0 |
+| 2            | Bitmap Word\_0 |
 | 3            | Word 비트맵\_1 |
 
  
@@ -117,7 +116,7 @@ Word 비트맵\_1 다음과 같이 배치 합니다.
 
 불투명 인코딩 예로, 빨간색과 검은색이 극단에 있다고 가정합시다. 빨간색 색인\_0이 고 검정색은 색\_1입니다. 이들 사이에 균등하게 분산된 그라데이션을 이루는 보간된 색이 4가지입니다. 4x4 비트맵에 대한 값을 확인하려면 다음과 같이 계산하면 됩니다.
 
-```
+```cpp
 00 ? color_0
 01 ? color_1
 10 ? 2/3 color_0 + 1/3 color_1
@@ -149,7 +148,7 @@ Word 비트맵\_1 다음과 같이 배치 합니다.
 
 색 및 투명도의 비트맵 인코딩은 다음과 같이 계산하여 결정합니다.
 
-```
+```cpp
 00 ? color_0
 01 ? color_1
 10 ? 1/2 color_0 + 1/2 color_1

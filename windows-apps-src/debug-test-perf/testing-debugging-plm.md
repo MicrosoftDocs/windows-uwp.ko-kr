@@ -1,17 +1,17 @@
 ---
 description: 프로세스 수명 관리에서 앱의 작동 방식을 디버깅 및 테스트하기 위한 도구와 기술입니다.
 title: PLM(프로세스 수명 관리) 테스트 및 디버깅 도구
-ms.date: 02/08/2017
+ms.date: 4/8/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b3e37d4de3a346e0f29909727a46d3b31f9d59d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 94cbad6e497ea2f5b36a07a6b039bfc293175c4c
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244349"
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>PLM(프로세스 수명 관리) 테스트 및 디버깅 도구
 
@@ -25,11 +25,11 @@ Visual Studio 2015의 기본 제공 디버거는 UWP 전용 기능을 사용하�
 
 ## <a name="the-plmdebug-tool"></a>PLMDebug 도구
 
-PLMDebug.exe는 응용 프로그램 패키지의 PLM 상태를 제어할 수 있도록 하며 Windows SDK의 일부로 제공되는 명령줄 도구입니다. 이 도구는 설치된 후 기본적으로 *C:\Program Files (x86)\Windows Kits\10\Debuggers\x64*에 있습니다. 
+PLMDebug.exe는 응용 프로그램 패키지의 PLM 상태를 제어할 수 있도록 하며 Windows SDK의 일부로 제공되는 명령줄 도구입니다. 이 도구는 설치된 후 기본적으로 *C:\Program Files (x86)\Windows Kits\10\Debuggers\x64*에 있습니다.
 
 또한 PLMDebug를 사용하면 설치된 앱 패키지에 대해 PLM을 사용하지 않도록 설정할 수 있습니다. 이 작업은 일부 디버거에 필요합니다. PLM을 사용하지 않도록 설정하면 디버그하기 전에 런타임 브로커 서비스가 앱을 종료하지 못하도록 차단됩니다. PLM을 사용하지 않도록 설정하려면 **/enableDebug** 스위치, UWP 앱의 *전체 패키지 이름*을 차례로 사용합니다(패키지의 짧은 이름, 패키지 패밀리 이름 또는 AUMID는 작동하지 않음).
 
-```
+```cmd
 plmdebug /enableDebug [PackageFullName]
 ```
 
@@ -41,7 +41,7 @@ Visual Studio에서 UWP 앱을 배포한 후 전체 패키지 이름이 출력 �
 
 게임의 프로세스를 식별하는 스크립트 또는 도구를 작성하면 이 제한을 해결할 수 있으며, 셸이 UWP 앱의 PID를 전달하여 VSJITDebugger.exe를 실행합니다. 다음 C# 코드 샘플은 이 작업을 수행하는 간단한 방법을 보여 줍니다.
 
-```
+```cs
 using System.Diagnostics;
 
 namespace VSJITLauncher
@@ -76,13 +76,15 @@ namespace VSJITLauncher
 
 PLMDebug에서 이 샘플의 사용 예
 
-```
+```cmd
 plmdebug /enableDebug 279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.0.0_x86__c6sq6kwgxxfcg "\"C:\VSJITLauncher.exe\" Game"
 ```
+
 여기서 `Game`은 프로세스 이름이고 `279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.0.0_x86__c6sq6kwgxxfcg`는 예제 UWP 앱 패키지의 전체 패키지 이름입니다.
 
 모든 **/enableDebug** 호출은 나중에 **/disableDebug** 스위치가 포함된 다른 PLMDebug 호출과 결합되어야 합니다. 또한 디버거 경로는 절대 경로여야 합니다(상대 경로는 지원되지 않음).
 
 ## <a name="related-topics"></a>관련 항목
-- [UWP 앱 배포 및 디버깅](deploying-and-debugging-uwp-apps.md)
+
+- [UWP 앱 배포 및 디버그](deploying-and-debugging-uwp-apps.md)
 - [디버깅, 테스트 및 성능](index.md)

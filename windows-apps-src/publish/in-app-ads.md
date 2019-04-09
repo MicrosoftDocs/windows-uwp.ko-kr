@@ -2,16 +2,16 @@
 Description: Microsoft Advertising SDK를 사용 하 여 광고를 표시 하는 앱을 파트너 센터의 앱 내 광고 페이지를 사용 하 여 광고의 사용을 관리 합니다.
 title: 인앱 광고
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
-ms.date: 10/31/2018
+ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cfdc4bd81a96d3bbdb2dd369cbdd0444ca22ea4c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 4b8fc913818d5abe3317582cc18d5cb676a7a2fe
+ms.sourcegitcommit: 9f23bc9265c13f7ccedbc826261ceed2aff5ab83
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658028"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417059"
 ---
 # <a name="in-app-ads"></a>인앱 광고
 
@@ -117,7 +117,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 | Outbrain |  [Outbrain](https://www.outbrain.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너, 배너 중간 광고  |
 | Revcontent |  [Revcontent](https://www.revcontent.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  기본 배너  |
 | Smaato |  [Smaato](https://www.smaato.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
-| smartclip |  [smartclip](https://www.smartclip.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  동영상 중간 광고  |
+| smartclip |  [smartclip](http://www.smartclip.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  동영상 중간 광고  |
 | SpotX |  [SpotX](https://www.spotx.tv/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  동영상 중간 광고  |
 | Taboola |  [Taboola](https://www.taboola.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
 | Undertone | 광고를 제공 하려면이 옵션을 선택 [Undertone](https://www.undertone.com/)합니다. | 중간 배너 |

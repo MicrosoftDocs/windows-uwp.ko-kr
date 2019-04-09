@@ -7,22 +7,21 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 38a65a3532fe401f31fbf0da656aff1a141fa71a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d21f60694c55edacc7a5723e7ed470c37af992ab
+ms.sourcegitcommit: 9031a51f9731f0b675769e097aa4d914b4854e9e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636308"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618430"
 ---
 # <a name="mathematics-of-lighting"></a>조명의 수학
-
 
 Direct3D 조명 모델은 주변, 확산, 반사 및 발광 조명을 포함합니다. 따라서 광범위한 조명 상황을 해결하기에 충분한 유연성이 있습니다. 한 장면에 비치는 빛의 총량을 *전역 조명*이라고 합니다.
 
 전역 조명은 다음과 같이 계산합니다.
 
-```
-Global Illumination = Ambient Light + Diffuse Light + Specular Light + Emissive Light 
+```cpp
+global_illumination = ambient_lighting + diffuse_lighting + specular_lighting + emissive_lighting;
 ```
 
 [주변 조명](ambient-lighting.md)은 일정한 조명입니다. 주변 조명은 모든 방향에서 일정하며 개체의 모든 픽셀에 동일한 색을 지정합니다. 따라서 계산이 빠르지만 개체가 편평해 보이고 사실성이 떨어집니다.

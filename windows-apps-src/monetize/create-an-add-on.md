@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 만들기, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8465dc7a42961a20fcd33ba8d43c71e2d73727ff
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: b358eecd1799e76573cf6d254a80e7a7971bc123
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651038"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334171"
 ---
 # <a name="create-an-add-on"></a>추가 기능 만들기
 
@@ -20,7 +20,7 @@ ms.locfileid: "57651038"
 > [!NOTE]
 > 이 메서드는 제출 없이 추가 기능을 만듭니다. 추가 기능에 대한 제출을 만들려면 [추가 기능 제출 관리](manage-add-on-submissions.md)의 메서드를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -33,14 +33,14 @@ ms.locfileid: "57651038"
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` |
+| 올리기    | `https://manage.devcenter.microsoft.com/v1.0/my/inappproducts` |
 
 
 ### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| Authorization | string | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -50,15 +50,15 @@ ms.locfileid: "57651038"
 |  매개 변수  |  형식  |  설명  |  필수  |
 |------|------|------|------|
 |  applicationIds  |  배열  |  이 추가 기능이 연결된 앱의 스토어 ID가 포함된 배열입니다. 이 배열에서는 한 개의 항목만 지원됩니다.   |  예  |
-|  productId  |  문자열  |  추가 기능의 제품 ID입니다. 코드에서 추가 기능을 참조하는 데 사용할 수 있는 식별자입니다. 자세한 내용은 [제품 유형 및 제품 ID 설정](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id)을 참조하세요.  |  예  |
-|  productType  |  문자열  |  추가 기능의 제품 유형입니다. 다음 값이 지원 됩니다. **영 속** 하 고 **읽은**합니다.  |  예  |
+|  productId  |  string  |  추가 기능의 제품 ID입니다. 코드에서 추가 기능을 참조하는 데 사용할 수 있는 식별자입니다. 자세한 내용은 [제품 유형 및 제품 ID 설정](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id)을 참조하세요.  |  예  |
+|  productType  |  string  |  추가 기능의 제품 유형입니다. 다음 값이 지원 됩니다. **영 속** 하 고 **읽은**합니다.  |  예  |
 
 
 ### <a name="request-example"></a>요청 예제
 
 다음 예제에는 앱에 대한 새 소모성 추가 기능을 만드는 방법을 보여 줍니다.
 
-```syntax
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1Q...
 Content-Type: application/json

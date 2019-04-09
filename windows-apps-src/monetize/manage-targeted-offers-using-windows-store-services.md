@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 대상 제품 API, 대상 제품
 ms.localizationpriority: medium
-ms.openlocfilehash: bcf270bd56d17936ef404adbc3663034b58e7a2c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 3ea4adac82692e80d652523d05a7ba0b901db300
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615688"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334401"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>스토어 서비스를 사용하여 대상 제품 관리
 
@@ -33,7 +33,7 @@ ms.locfileid: "57615688"
 
 MSA 토큰을 가져오려면 [WebAuthenticationCoreManager](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager) 클래스를 사용하여 ```devcenter_implicit.basic,wl.basic``` 범위를 사용하는 토큰을 요청합니다. 다음 예에서는 이 작업을 수행하는 방법을 보여 줍니다. [완전한 예제](#code-example)에서 발췌한 예제입니다. 완전한 예제에서 제공되는 **using** 문이 필요합니다.
 
-[!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetMSAToken)]
+[!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetMSAToken)]
 
 MSA 토큰을 가져오는 방법에 대한 자세한 내용은 [웹 계정 관리자](../security/web-account-manager.md)를 참조하세요.
 
@@ -47,7 +47,7 @@ MSA 토큰을 가져오는 방법에 대한 자세한 내용은 [웹 계정 관�
 
 다음 예제는 현재 사용자에게 대상 제품을 제시하는 방법을 보여 줍니다. 이 예제는 [완전한 예제](#code-example)에서 발췌했습니다. Newtonsoft의 [Json.NET](https://www.newtonsoft.com/json) 라이브러리와 추가 클래스, 완전한 예제에서 제공되는 **using** 문이 필요합니다.
 
-[!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffers)]
+[!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffers)]
 
 <span id="code-example" />
 
@@ -61,7 +61,7 @@ MSA 토큰을 가져오는 방법에 대한 자세한 내용은 [웹 계정 관�
 
 이 예제는 Newtonsoft의 [Json.NET](https://www.newtonsoft.com/json) 라이브러리가 필요합니다. 이 예에서는 이 라이브러리를 사용하여 JSON 형식의 데이터를 직렬화 및 역직렬화합니다.
 
-[!code-cs[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffersSample)]
+[!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffersSample)]
 
 ## <a name="related-topics"></a>관련 항목
 

@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: windows 10, uwp, 추적형 타일, 라이브 타일, 추적형 타일 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: 90a43ad803ca4cfe4a7403117c268344d1192d74
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 6e27dec0e7256cfc035ecc3150bd976f69743fe3
+ms.sourcegitcommit: f15cf141c299bde9cb19965d8be5198d7f85adf8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592648"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358618"
 ---
 # <a name="chaseable-tile-notifications"></a>추적 가능한 타일 알림
 
@@ -21,13 +21,13 @@ ms.locfileid: "57592648"
 예를 들어 뉴스 앱은 이 기능을 사용하여 사용자가 앱을 시작했을 때 라이브 타일이 어떤 뉴스 스토리를 표시했는지 확인할 수 있습니다. 해당 스토리를 눈에 띄게 표시해 사용자가 쉽게 찾도록 할 수 있습니다. 
 
 > [!IMPORTANT]
-> **1 주년 업데이트를 설치 해야**: Chaseable 타일 알림을 사용 하 여 사용 하려면 C#, c + +, 또는 VB 기반 uwp 스토어 앱 SDK 14393 대상으로 지정 해야 하 고 빌드 14393 이상을 실행 합니다. JavaScript 기반 UWP 앱의 경우 SDK 17134를 타겟팅하고 빌드 17134 이상을 실행해야 합니다. 
+> **1 주년 업데이트를 설치 해야**: Chaseable 타일 알림을 사용 하 여 사용 하려면 C#, C++, 또는 VB 기반 uwp 스토어 앱에서 SDK 14393 대상으로 지정 해야 하 고 빌드 14393 이상을 실행 합니다. JavaScript 기반 UWP 앱의 경우 SDK 17134를 타겟팅하고 빌드 17134 이상을 실행해야 합니다. 
 
 
-> **중요 API**: [LaunchActivatedEventArgs.TileActivatedInfo 속성](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [TileActivatedInfo 클래스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
+> **중요 API**: [LaunchActivatedEventArgs.TileActivatedInfo property](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [TileActivatedInfo class](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
 
 
-## <a name="how-it-works"></a>작동 방식
+## <a name="how-it-works"></a>작동 방법
 
 추적형 타일 알림을 사용하려면 알림 메시지 페이로드의 실행 속성과 비슷하게 타일 알림 페이로드의 **Arguments** 속성을 사용하여 타일 알림의 콘텐츠에 대한 정보를 포함시킵니다.
 
@@ -140,6 +140,49 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 ```
 
 
+### <a name="accessing-onlaunched-from-desktop-applications"></a>OnLaunched 데스크톱 응용 프로그램에서 액세스
+
+데스크톱 앱 (WPF, Win32 같은 등)를 사용 하는 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop), 너무 chaseable 타일을 사용할 수 있습니다! 유일한 차이점 OnLaunched 인수에 액세스 합니다. 먼저 따라야 하는 참고 [데스크톱 브리지를 사용 하 여 앱 패키지](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)합니다.
+
+> [!IMPORTANT]
+> **2018 년 10 월 업데이트 필요**: 사용 하는 `AppInstance.GetActivatedEventArgs()` API, SDK 17763 대상으로 지정 해야 하 고 빌드 17763 이상을 실행 합니다.
+
+데스크톱 응용 프로그램에 대 한 시작 인수에 액세스 하려면 다음을 수행 하는 중...
+
+```csharp
+
+static void Main()
+{
+    Application.EnableVisualStyles();
+    Application.SetCompatibleTextRenderingDefault(false);
+
+    // API only available on build 17763 or higher
+    var args = AppInstance.GetActivatedEventArgs();
+    switch (args.Kind)
+    {
+        case ActivationKind.Launch:
+
+            var launchArgs = args as LaunchActivatedEventArgs;
+
+            // If clicked on from tile
+            if (launchArgs.TileActivatedInfo != null)
+            {
+                // If tile notification(s) were present
+                if (launchArgs.TileActivatedInfo.RecentlyShownNotifications.Count > 0)
+                {
+                    // Get arguments from the notifications that were recently displayed
+                    string[] allTileArgs = launchArgs.TileActivatedInfo.RecentlyShownNotifications
+                    .Select(i => i.Arguments)
+                    .ToArray();
+     
+                    // TODO: Highlight each story in the app
+                }
+            }
+    
+            break;
+```
+
+
 ## <a name="raw-xml-example"></a>원시 XML의 예
 
 알림 라이브러리 대신 원시 XML을 사용하는 경우 여기에 XML이 있습니다.
@@ -178,5 +221,5 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 
 ## <a name="related-articles"></a>관련 문서
 
-- [LaunchActivatedEventArgs.TileActivatedInfo 속성](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs#Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_TileActivatedInfo_)
+- [LaunchActivatedEventArgs.TileActivatedInfo property](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs#Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_TileActivatedInfo_)
 - [TileActivatedInfo 클래스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)

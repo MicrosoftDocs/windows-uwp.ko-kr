@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 285e4a70062c57c957530aa1e548c22c4cf7711e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: bd59c1d32b4f09b58b7e78281e468fbb00a777d9
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57629468"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291881"
 ---
 # <a name="stencil-buffers"></a>스텐실 버퍼
-
 
 *스텐실 버퍼*는 특수 효과를 생성하기 위해 이미지의 마스크 픽셀에 사용됩니다. 마스크 픽셀은 픽셀을 그릴지 여부를 제어합니다. 이러한 특수 효과에는 합성, 데칼, 디졸브, 페이드, 스와이프, 아웃라인과 실루엣, 양면 스텐실이 포함됩니다. 몇 가지 보다 일반적인 효과는 다음과 같습니다.
 
@@ -25,7 +24,6 @@ ms.locfileid: "57629468"
 
 ## <a name="span-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanspan-idhowthestencilbufferworksspanhow-the-stencil-buffer-works"></a><span id="How_the_Stencil_Buffer_Works"></span><span id="how_the_stencil_buffer_works"></span><span id="HOW_THE_STENCIL_BUFFER_WORKS"></span>스텐실 버퍼의 작동 원리
 
-
 Direct3D는 픽셀 단위로 스텐실 버퍼의 내용을 테스트합니다. 대상 표면의 각 픽셀에 대해, 스텐실 버퍼 내 해당 값, 스텐실 참조 값, 스텐실 마스크 값을 사용하여 테스트를 수행합니다. 테스트가 통과하면 Direct3D가 작업을 수행합니다. 테스트는 다음 단계를 사용하여 수행됩니다.
 
 1.  스텐실 참조 값과 스텐실 마스크에 대해 비트 AND 연산을 수행합니다.
@@ -34,7 +32,7 @@ Direct3D는 픽셀 단위로 스텐실 버퍼의 내용을 테스트합니다. �
 
 위 단계는 다음 코드 줄에 나와 있습니다.
 
-```
+```cpp
 (StencilRef & StencilMask) CompFunc (StencilBufferValue & StencilMask)
 ```
 

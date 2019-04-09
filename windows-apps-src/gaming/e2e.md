@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: 38fc73eb602c1307fdd345d02c621791feb89dc2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: ca3ed91d7250425b9a77fb09820a53952c8f3cfc
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57652328"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162738"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows 10 게임 개발 가이드
 
@@ -86,7 +86,7 @@ Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작]
     </tr>
     <tr>
         <td>Xbox Live 설명서</td>
-        <td><a href="../xbox-live/index.md">Xbox Live 개발자 가이드</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/">Xbox Live 개발자 가이드</a></td>
     </tr>
     <tr>
         <td>Xbox One 개발 설명서(XGD)</td>
@@ -182,11 +182,11 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Direct3D 12 그래픽 샘플</td>
-        <td><a href="https://github.com/Microsoft/DirectX-Graphics-Samples">DirectX 그래픽-샘플</a></td>
+        <td><a href="https://github.com/Microsoft/DirectX-Graphics-Samples">DirectX-Graphics-Samples</a></td>
     </tr>
     <tr>
         <td>Direct3D 11 그래픽 샘플</td>
-        <td><a href="https://github.com/walbourn/directx-sdk-samples">directx sdk 샘플</a></td>
+        <td><a href="https://github.com/walbourn/directx-sdk-samples">directx-sdk-samples</a></td>
     </tr>
     <tr>
         <td>Direct3D 11 1인칭 게임 샘플</td>
@@ -206,11 +206,11 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Xbox 고급 기술 그룹 공개 샘플</td>
-        <td><a href="https://github.com/Microsoft/Xbox-ATG-Samples">Xbox-ATG-샘플</a></td>
+        <td><a href="https://github.com/Microsoft/Xbox-ATG-Samples">Xbox-ATG-Samples</a></td>
     </tr>
     <tr>
         <td>Xbox Live 샘플</td>
-        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox live 샘플</a></td>
+        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox-live-samples</a></td>
     </tr>
     <tr>
         <td>Xbox One 게임 샘플(XGD)</td>
@@ -322,7 +322,7 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Visual C++ 도구 팀 블로그</td>
-        <td><a href="https://blogs.msdn.com/b/vcblog/">Visual c + + 팀 블로그</a></td>
+        <td><a href="https://blogs.msdn.com/b/vcblog/">Visual C++ 팀 블로그</a></td>
     </tr>
     <tr>
         <td>PIX 팀 블로그</td>
@@ -517,11 +517,11 @@ C++/CX는 속도, 호환성 및 플랫폼 액세스의 강력한 조합을 제�
     </colgroup>
     <tr>
         <td>C++/CX 참조 및 개요</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/hh699871.aspx">Visual c + + 언어 참조 (C + + /cli CX)</a></td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/hh699871.aspx">Visual C++ 언어 참조 (C++/CX)</a></td>
     </tr>
     <tr>
         <td>Visual C++ 프로그래밍 가이드 및 참조</td>
-        <td><a href="https://docs.microsoft.com/cpp/visual-cpp-in-visual-studio">Visual Studio 2017에서 visual c + +</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/visual-cpp-in-visual-studio">Visual C++ Visual Studio 2017에서</a></td>
     </tr>
 </table>
  
@@ -910,7 +910,7 @@ BabylonJS는 HTML5, WebGL, WebVR 및 웹 오디오를 사용하여 3D 게임을 
     </tr>
     <tr>
         <td>ANGLE을 사용하여 OpenGL ES에서 Direct3D 11로</td>
-        <td><a href="https://go.microsoft.com/fwlink/p/?linkid=618387">각도</a></td>
+        <td><a href="https://go.microsoft.com/fwlink/p/?linkid=618387">ANGLE</a></td>
     </tr>
     <tr>
         <td>UWP에도 제공되는 클래식 Windows API</td>
@@ -1018,7 +1018,7 @@ Windows 데스크톱 게임을 UWP로 이동하는 데 도움이 되는 몇 가�
     </colgroup>
     <tr>
         <td>UWP 게임 개발에 기존 C++ 코드 사용</td>
-        <td><a href="https://docs.microsoft.com/cpp/porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app">방법: UWP 앱에서 기존 c + + 코드 사용</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app">방법: 기존 항목 사용 C++ UWP 앱에서 코드</a></td>
     </tr>
     <tr>
         <td>Win32 및 COM API용 UWP API</td>
@@ -1114,7 +1114,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
     </colgroup>
     <tr>
         <td>입력 체계 가이드</td>
-        <td><a href="https://go.microsoft.com/fwlink/?LinkId=535007">모범 사례: 입력 체계</a></td>
+        <td><a href="https://go.microsoft.com/fwlink/?LinkId=535007">모범 사례: Typography</a></td>
     </tr>
 </table>
  
@@ -1311,7 +1311,7 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
 </table>
 
 
-## <a name="production"></a>프로덕션
+## <a name="production"></a>Production
 
 
 이제 팀 전체에 작업이 배포되면서 스튜디오가 완전히 참여하고 프로덕션 주기로 이동합니다. 프로토타입을 다듬고 리팩터링하고 확장하면서 전체 게임으로 만들어갑니다.
@@ -1742,7 +1742,7 @@ Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원�
 Xbox Live는 전 세계의 수 백만 게이머들을 연결하는 최상의 게임 네트워크입니다. 개발자들은 Xbox Live 프레전스, 리더보드, 클라우드 서비스, 게임 허브, 클럽, 파티 채팅, 게임 DVR을 포함하여 게임 청중들을 조직적으로 유치할 수 있는 Xbox Live 기능에 액세스할 수 있습니다.
 
 > [!Note]
-> Xbox Live가 지원되는 타이틀을 개발하고 싶다면 몇 가지 옵션을 사용할 수 있습니다. 다양한 프로그램에 대한 내용은 [개발자 프로그램 개요](../xbox-live/developer-program-overview.md)를 참조하세요.
+> Xbox Live가 지원되는 타이틀을 개발하고 싶다면 몇 가지 옵션을 사용할 수 있습니다. 다양한 프로그램에 대한 내용은 [개발자 프로그램 개요](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview)를 참조하세요.
 
 <table>
     <colgroup>
@@ -1751,19 +1751,19 @@ Xbox Live는 전 세계의 수 백만 게이머들을 연결하는 최상의 게
     </colgroup>
     <tr>
         <td>Xbox Live 개요</td>
-        <td><a href="../xbox-live/index.md">Xbox Live 개발자 가이드</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/index.md">Xbox Live 개발자 가이드</a></td>
     </tr>
     <tr>
         <td>프로그램에 따라 사용할 수 있는 기능 알아보기</td>
-        <td><a href="../xbox-live/developer-program-overview.md#feature-table">개발자 프로그램 개요: 기능 테이블</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#feature-table">개발자 프로그램 개요: 기능 테이블</a></td>
     </tr>
     <tr>
         <td>Xbox Live 게임을 개발하는데 유용한 리소스에 대한 링크</td>
-        <td><a href="../xbox-live/xbox-live-resources.md">Xbox Live 리소스</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/xbox-live-resources.md">Xbox Live 리소스</a></td>
     </tr>
     <tr>
         <td>Xbox Live 서비스에서 정보를 얻는 방법 알아보기</td>
-        <td><a href="../xbox-live/introduction-to-xbox-live-apis.md">Xbox Live Api 소개</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/introduction-to-xbox-live-apis.md">Xbox Live Api 소개</a></td>
     </tr>
 </table>
 
@@ -1777,23 +1777,23 @@ Xbox Live는 전 세계의 수 백만 게이머들을 연결하는 최상의 게
     </colgroup>
     <tr>
         <td>개요</td>
-        <td><a href="../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md">Xbox Live 크리에이터 스 프로그램 시작</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md">Xbox Live 크리에이터 스 프로그램 시작</a></td>
     </tr>
     <tr>
         <td>게임에 Xbox Live 추가</td>
-        <td><a href="../xbox-live/get-started-with-creators/creators-step-by-step-guide.md">Xbox Live 크리에이터 스 프로그램을 통합 하 단계별 가이드</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/creators-step-by-step-guide.md">Xbox Live 크리에이터 스 프로그램을 통합 하 단계별 가이드</a></td>
     </tr>
     <tr>
         <td>Unity를 사용하여 만든 UWP 게임에 Xbox Live 추가</td>
-        <td><a href="../xbox-live/get-started-with-creators/develop-creators-title-with-unity.md">Xbox Live 크리에이터 스 프로그램 제목 Unity 게임 엔진을 사용 하 여 개발 시작</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/develop-creators-title-with-unity.md">Xbox Live 크리에이터 스 프로그램 제목 Unity 게임 엔진을 사용 하 여 개발 시작</a></td>
     </tr>
     <tr>
         <td>개발 샌드박스 설정</td>
-        <td><a href="../xbox-live/get-started-with-creators/xbox-live-sandboxes-creators.md">Xbox Live 샌드박스 소개</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/xbox-live-sandboxes-creators.md">Xbox Live 샌드박스 소개</a></td>
     </tr>
     <tr>
         <td>테스트를 위한 계정 설정</td>
-        <td><a href="../xbox-live/get-started-with-creators/authorize-xbox-live-accounts.md">테스트 환경에서 Xbox Live 계정에 권한 부여</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/authorize-xbox-live-accounts.md">테스트 환경에서 Xbox Live 계정에 권한 부여</a></td>
     </tr>
     <tr>
         <td>Xbox Live 크리에이터스 프로그램 샘플</td>
@@ -1814,19 +1814,19 @@ Xbox Live는 전 세계의 수 백만 게이머들을 연결하는 최상의 게
     </colgroup>
     <tr>
         <td>개요</td>
-        <td><a href="../xbox-live/get-started-with-partner/get-started-with-xbox-live-partner.md">관리 되는 파트너 또는 ID 개발자는 Xbox Live를 사용한 시작</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/get-started-with-partner/get-started-with-xbox-live-partner.md">관리 되는 파트너 또는 ID 개발자는 Xbox Live를 사용한 시작</a></td>
     </tr>
     <tr>
         <td>게임에 Xbox Live 추가</td>
-        <td><a href="../xbox-live/get-started-with-partner/partners-step-by-step-guide.md">Xbox Live를 통합 하는 관리 되는 파트너와 ID 멤버에 대 한 단계별 가이드</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/get-started-with-partner/partners-step-by-step-guide.md">Xbox Live를 통합 하는 관리 되는 파트너와 ID 멤버에 대 한 단계별 가이드</a></td>
     </tr>
     <tr>
         <td>Unity를 사용하여 만든 UWP 게임에 Xbox Live 추가</td>
-        <td><a href="../xbox-live/get-started-with-partner/partner-unity-uwp-il2cpp.md">Xbox Live 지원을 추가 하려면 Unity로 UWP 용 IL2CPP 스크립팅 백 엔드를 사용 하 여 ID 및 관리 되는 파트너</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/get-started-with-partner/partner-unity-uwp-il2cpp.md">Xbox Live 지원을 추가 하려면 Unity로 UWP 용 IL2CPP 스크립팅 백 엔드를 사용 하 여 ID 및 관리 되는 파트너</a></td>
     </tr>
     <tr>
         <td>개발 샌드박스 설정</td>
-        <td><a href="../xbox-live/get-started-with-partner/advanced-xbox-live-sandboxes.md">고급 Xbox Live 샌드박스</a></td>
+        <td><a href="https://docs.microsoft.com/gaming/xbox-live/get-started-with-partner/advanced-xbox-live-sandboxes.md">고급 Xbox Live 샌드박스</a></td>
     </tr>
     <tr>
         <td>Xbox Live를 사용하는 게임에 대한 요구 사항(GDN)</td>
@@ -1855,7 +1855,7 @@ Xbox Live는 전 세계의 수 백만 게이머들을 연결하는 최상의 게
 </table>
 
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 <table>
     <colgroup>

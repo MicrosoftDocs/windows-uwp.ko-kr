@@ -2,16 +2,16 @@
 Description: 관리 및 관련 된 각 파트너 센터에서 앱의 세부 정보 보기는 같은 서비스 구성 / B 테스트 및 매핑합니다.
 title: 앱 관리 및 서비스
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
-ms.date: 10/31/2018
+ms.date: 03/21/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d6261a7cce86c82b4865d7ca1d68c082cba9ccca
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: ba28fb49accc213f570e470142e259c08122b704
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610008"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334581"
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
@@ -27,7 +27,7 @@ ms.locfileid: "57610008"
 
 설정할 수 있습니다. 게임을 게시 하는 경우는 [Xbox Live 크리에이터 스 프로그램](https://xbox.com/developers/creators-program) 페이지입니다. 이렇게 하면 구성 및 테스트 Xbox Live 기능을 시작 하 고 최종적으로 게임에 Xbox Live 크리에이터 스 프로그램을 게시할 수 있습니다.
 
-자세한 내용은 참조 하세요. [Xbox Live 크리에이터 스 프로그램 시작](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 하 고 [새 Xbox Live 크리에이터 스 프로그램 제목을 만들기 및 테스트 환경에 게시](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md)합니다.
+자세한 내용은 참조 하세요. [Xbox Live 크리에이터 스 프로그램 시작](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) 하 고 [새 Xbox Live 크리에이터 스 프로그램 제목을 만들기 및 테스트 환경에 게시](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/create-and-test-a-new-creators-title)합니다.
 
 ## <a name="experimentation"></a>실험
 
@@ -35,7 +35,7 @@ ms.locfileid: "57610008"
 
 자세한 내용은 [A/B 테스트로 앱 실험 실행](../monetize/run-app-experiments-with-a-b-testing.md)을 참조하세요.
 
-## <a name="maps"></a>지도
+## <a name="maps"></a>맵
 
 Windows 10 또는 Windows 8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](https://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. Bing 맵 개발자 센터에서 지도 인증 키를 요청 하 고 앱에 추가 하는 방법에 대 한 정보를 참조 하세요 [지도 인증 키를 요청](../maps-and-location/authentication-key.md) 자세한 정보에 대 한 합니다. 
 

@@ -2,16 +2,16 @@
 Description: 앱에 추가 기능 (앱에서 제품)에 대 한 결제가 수신 및 수입 광고에 대해 알아봅니다.
 title: 지급 받기
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
-ms.date: 10/31/2018
+ms.date: 03/05/2019
 ms.topic: article
 keywords: Windows 10, uwp, 결제, 앱 판매, 앱 수익, 지급액, Microsoft Store 요금, 지급 보류, 백분율
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d59519e23955b53b32d2178e37e75f195fd54eb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 293f24122129e56fbb1521a0d3dd7e2ff51e4923
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244109"
 ---
 # <a name="getting-paid"></a>지급 받기
 앱, 추가 기능 및 광고 수입에 대 한 지불을 수신 하는 방법에 대 한 몇 가지 중요 한 정보는 다음과 같습니다.
@@ -23,7 +23,7 @@ ms.locfileid: "57596498"
 
 [개발자 계정에 등록](https://go.microsoft.com/fwlink/p/?LinkID=615100)할 때 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 동의합니다. 이 계약에서는 Microsoft에서 각 판매에 대해 청구하는 스토어 수수료를 포함하여 Microsoft Store에서 앱을 판매할 때 적용되는 개발자와 Microsoft 간의 관계에 대해 설명합니다.
 
-대부분의 경우 스토어 수수료는 30%입니다. 수수료는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 공식적으로 정의됩니다. 질문이 있으면 항상 해당 문서를 검토하세요.
+수수료는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 공식적으로 정의됩니다. 질문이 있으면 항상 해당 문서를 검토하세요.
 
 Microsoft Store 수수료는 추가 기능을 포함하여 Microsoft Store가 수금하는 모든 앱 매출에 적용됩니다.
 

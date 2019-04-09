@@ -6,15 +6,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출 만들기, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: fcc98252efb1157bc539b68656c96f7afec7104a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: cbb093576badf5cd84b132cfb139db9da7d31991
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661708"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334931"
 ---
 # <a name="create-an-add-on-submission"></a>추가 기능 제출 만들기
-
 
 파트너 센터 계정에 등록 된 앱에 대 한 새 추가 기능 (라고도 앱에서 제품 또는 IAP) 제출을 만들려면 Microsoft Store 제출 API 사용 하 여이 메서드를 사용 합니다. 이 메서드를 사용하여 새 제출을 성공적으로 만든 후 [제출을 업데이트](update-an-add-on-submission.md)하여 제출 데이터에 필요한 변경을 수행한 다음 수집 및 게시를 위해 [제출을 커밋](commit-an-add-on-submission.md)합니다.
 
@@ -23,7 +22,7 @@ ms.locfileid: "57661708"
 > [!NOTE]
 > 이 메서드는 기존 추가 기능에 대한 제출을 만듭니다. 추가 기능을 만들려면 [추가 기능 만들기](create-an-add-on.md) 메서드를 사용합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -37,22 +36,19 @@ ms.locfileid: "57661708"
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions``` |
-
+| 올리기    | `https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions` |
 
 ### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
-
+| Authorization | string | 필수 사항입니다. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
 | 이름        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | 문자열 | 필수. 제출을 만들려는 추가 기능의 스토어 ID입니다. 파트너 센터에서 Store ID 사용할 수 있으며 응답 데이터에 대 한 요청에 포함 됩니다 [추가 기능을 만듭니다](create-an-add-on.md) 또는 [추가 기능 세부 정보 가져오기](get-all-add-ons.md)합니다.  |
-
+| inAppProductId | string | 필수. 제출을 만들려는 추가 기능의 스토어 ID입니다. 파트너 센터에서 Store ID 사용할 수 있으며 응답 데이터에 대 한 요청에 포함 됩니다 [추가 기능을 만듭니다](create-an-add-on.md) 또는 [추가 기능 세부 정보 가져오기](get-all-add-ons.md)합니다.  |
 
 ### <a name="request-body"></a>요청 본문
 
@@ -62,7 +58,7 @@ ms.locfileid: "57661708"
 
 다음 예제에서는 추가 기능에 대한 새 제출을 만드는 방법을 보여 줍니다.
 
-```
+```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP/submissions HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -152,7 +148,6 @@ Authorization: Bearer <your access token>
 |--------|------------------|
 | 400  | 요청이 잘못되어 제출을 만들 수 없습니다. |
 | 409  | 파트너 센터 기능을 사용 하는 앱 또는 앱의 현재 상태로 인해 제출을 만들 수 없습니다 [현재 Microsoft Store 전송 API에 의해 지원 되지 않습니다](create-and-manage-submissions-using-windows-store-services.md#not_supported)합니다. |   
-
 
 ## <a name="related-topics"></a>관련 항목
 

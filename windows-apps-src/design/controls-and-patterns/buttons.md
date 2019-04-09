@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f585d278d9420865c895d4e20fa1730196d9f0cd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 286b278d0c41edfbc5c008f31e5a8e28fa30f93a
+ms.sourcegitcommit: aeebfe35330aa471d22121957d9b510f6ebacbcf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593028"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58901641"
 ---
 # <a name="buttons"></a>단추
 
@@ -37,7 +37,7 @@ XAML 프레임 워크에는 여러 특수화 된 단추 컨트롤 뿐 아니라 
 [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | 두 변을 사용 하 여는 단추입니다. 한 쪽의 작업을 시작 하 고 다른 쪽 메뉴를 엽니다.
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | 양쪽으로 설정/해제 단추입니다. 한쪽 켜기/끄기 전환 하 고 다른 쪽 메뉴를 엽니다.
 
-| **Windows UI 라이브러리 가져오기** |
+| **Windows UI Library 가져오기** |
 | - |
 | DropDownButton, SplitButton, 및 ToggleSplitButton는 Windows UI 라이브러리, 새로운 컨트롤 및 UWP 앱 용 UI 기능을 포함 하는 NuGet 패키지의 일부로 포함 합니다. 설치 지침을 비롯 한 자세한 내용은 참조는 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)합니다. |
 
@@ -67,8 +67,8 @@ XAML 프레임 워크에는 여러 특수화 된 단추 컨트롤 뿐 아니라 
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Button">앱을 열고 작동 중인 단추를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -140,7 +140,7 @@ private async void SubscribeButton_Click(object sender, RoutedEventArgs e)
 
 <table>
 <tr>
-<td> <b>문제를 해결 하려면 필요 합니다.</b><br> 오버플로 텍스트가 포함된 단추 </td>
+<td> <b>다음 문제를 해결해야 합니다.</b><br> 오버플로 텍스트가 포함된 단추 </td>
 <td> <img src="images/button-wraptext.png"/> </td>
 </tr>
 <tr>
@@ -211,7 +211,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 A [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) 자세한 옵션을 포함 하는 연결 된 플라이 아웃에 시각적 표시기로 갈매기형 펼침 단추를 보여 주는 단추입니다. 플라이 아웃;를 사용 하 여 표준 단추와 동일한 동작에 모양에만 다릅니다.
 
-드롭다운 단추의 Click 이벤트를 상속 하지만 일반적으로 사용 하지 않는 것입니다. 대신, 플라이 아웃 속성을 사용 하 여 플라이 아웃을 연결을 플라이 아웃에서 메뉴 옵션을 사용 하 여 작업을 호출 합니다. 플라이 아웃 단추를 클릭할 때 자동으로 열립니다.
+드롭다운 단추의 Click 이벤트를 상속 하지만 일반적으로 사용 하지 않는 것입니다. 대신, 플라이 아웃 속성을 사용 하 여 플라이 아웃을 연결을 플라이 아웃에서 메뉴 옵션을 사용 하 여 작업을 호출 합니다. 플라이 아웃 단추를 클릭할 때 자동으로 열립니다. 지정 해야 합니다 [배치](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) 단추와 관련 하 여 원하는 위치를 확인 하 여 플라이 아웃의 속성입니다. 기본 배치 알고리즘에는 모든 상황에서 의도 한 배치를 생성할 수 없습니다.
 
 > [!TIP]
 > 플라이 아웃에 대 한 자세한 내용은 참조 하세요. [메뉴 및 상황에 맞는 메뉴](menus.md)합니다.
@@ -224,7 +224,7 @@ A [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) 자세한 �
 
 ```xaml
 <DropDownButton ToolTipService.ToolTip="Alignment">
-    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="16" Text="&#xE8E4;"/>
+    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="14" Text="&#xE8E4;"/>
     <DropDownButton.Flyout>
         <MenuFlyout Placement="BottomEdgeAlignedLeft">
             <MenuFlyoutItem Text="Left" Icon="AlignLeft" Tag="left"
@@ -284,6 +284,7 @@ A [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) 개별적으로 �
 ### <a name="example---split-button"></a>예제-분할 단추
 
 이 예제는 RichEditBox에서 선택한 텍스트의 전경색을 변경 하는 데 사용 되는 분할 단추를 만드는 방법을 보여 줍니다. (자세한 정보 및 코드를 참조 하세요 [서식 있는 편집 상자](rich-edit-box.md)).
+단추의 플라이 아웃 사용 하 여 분할 [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode) 의 기본값으로 해당 [배치](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) 속성입니다. 이 값을 재정의할 수 없습니다.
 
 ![전경색을 선택 하기 위한 분할 단추](images/split-button-rtb.png)
 
@@ -292,7 +293,7 @@ A [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) 개별적으로 �
              Click="BrushButtonClick">
     <Border x:Name="SelectedColorBorder" Width="20" Height="20"/>
     <SplitButton.Flyout>
-        <Flyout x:Name="BrushFlyout" Placement="BottomEdgeAlignedLeft">
+        <Flyout x:Name="BrushFlyout">
             <!-- Set SingleSelectionFollowsFocus="False"
                  so that keyboard navigation works correctly. -->
             <GridView ItemsSource="{x:Bind ColorOptions}" 
@@ -380,7 +381,7 @@ A [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) 개�
 설정/해제 분할 단추 기능에 사용자가 선택할 수 있는 여러 옵션 기능을 사용할지를 일반적으로 사용 됩니다. 예를 들어, 문서 편집기에이 사용할 수 있습니다를 켜거나 목록 해제 드롭다운 목록의 스타일을 선택 하는 동안.
 
 > [!NOTE]
-> 터치를 사용 하 여 호출 되 면 분할 단추 드롭다운 단추가 작동 합니다. 입력의 다른 메서드를 사용 하 여 사용자에서 단추 중 절반을 개별적으로 호출할 수 있습니다. 터치를 사용 하 여 단추의 두 절반 플라이 아웃을 호출합니다. 따라서 플라이 아웃 콘텐츠에 단추를 켜기 또는 끄기로 전환 하는 옵션을 포함 해야 합니다.
+> 터치를 사용 하 여 호출 되 면 설정/해제 분할 단추 드롭다운 단추가 작동 합니다. 입력의 다른 메서드를 사용 하 여 사용자 설정/해제 하 고 단추의 반을 별도로 호출할 수 있습니다. 터치를 사용 하 여 단추의 두 절반 플라이 아웃을 호출합니다. 따라서 플라이 아웃 콘텐츠에 단추를 켜기 또는 끄기로 전환 하는 옵션을 포함 해야 합니다.
 
 ### <a name="differences-with-togglebutton"></a>토글 단추를 사용 하 여 차이점
 
@@ -393,6 +394,7 @@ A [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) 개�
 ### <a name="example---toggle-split-button"></a>예-설정/해제 분할 단추
 
 다음 예제에서는 방법을 보여 줍니다 분할 단추를 토글 목록 서식 설정 / 해제 하는 데 사용할 수는 RichEditBox, 목록의 스타일 변경. (자세한 정보 및 코드를 참조 하세요 [서식 있는 편집 상자](rich-edit-box.md)).
+설정/해제 단추의 플라이 아웃 사용 하 여 분할 [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode) 의 기본값으로 해당 [배치](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) 속성입니다. 이 값을 재정의할 수 없습니다.
 
 ![목록 스타일을 선택 하기 위한 설정/해제 분할 단추](images/toggle-split-button-open.png)
 
@@ -401,9 +403,9 @@ A [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) 개�
                    ToolTipService.ToolTip="List style"
                    Click="ListButton_Click"
                    IsCheckedChanged="ListStyleButton_IsCheckedChanged">
-    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="16" Text="&#xE8FD;"/>
+    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="14" Text="&#xE8FD;"/>
     <ToggleSplitButton.Flyout>
-        <Flyout Placement="BottomEdgeAlignedLeft">
+        <Flyout>
             <ListView x:Name="ListStylesListView"
                       SelectionChanged="ListStylesListView_SelectionChanged" 
                       SingleSelectionFollowsFocus="False">
@@ -503,7 +505,7 @@ private void ApplyListStyle(string listStyle)
 - 확인 대화 상자 등에서 동일한 결정에 대한 단추가 여러 개 있을 경우에는 다음과 같은 순서로 커밋 단추를 표시하세요. 여기에서 [그렇게 함] 및 [그렇게 하지 않음]은 기본 지침에 대한 구체적인 응답입니다.
     - 확인/[그렇게 함]/예
     - [그렇게 하지 않음]/아니요
-    - Cancel
+    - 취소
 - 사용자에게 단추를 한 번에 한두 개(예: 수락 및 취소)만 표시합니다. 사용자에게 더 많은 작업을 표시해야 하는 경우 사용자가 하나의 명령 단추로 작업을 선택하여 트리거할 수 있도록 [확인란](checkbox.md) 또는 [라디오 단추](radio-button.md)를 사용하는 것이 좋습니다.
 - 앱 내의 여러 페이지에서 작업을 사용할 수 있어야 하는 경우 단추를 여러 페이지에 복제하는 대신 [하단 앱 바](app-bars.md)를 사용하는 것이 좋습니다.
 
@@ -536,4 +538,4 @@ private void ApplyListStyle(string listStyle)
 - [Button 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
 - [라디오 단추](radio-button.md)
 - [확인란](checkbox.md)
-- [설정/해제 스위치](toggles.md)
+- [토글 스위치](toggles.md)

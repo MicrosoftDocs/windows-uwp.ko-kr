@@ -6,14 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 ms.localizationpriority: medium
-ms.openlocfilehash: 402d535bf6ff9ced24bc642c17d13b2d48d79681
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 54a15be26adf0da97105f15f3a44f26ee7bfc96d
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240041"
 ---
-# <a name="developer-settings-api-reference"></a>개발자 설정 API 참조   
+# <a name="developer-settings-api-reference"></a>개발자 설정 API 참조
+
 이 API를 사용하여 개발에 유용한 Xbox One 설정에 액세스할 수 있습니다.
 
 ## <a name="get-all-developer-settings-at-once"></a>한 번에 모든 개발자 설정 가져오기
@@ -24,8 +25,8 @@ ms.locfileid: "57598648"
 
 메서드      | 요청 URI
 :------     | :-----
-GET | /ext/settings
-<br />
+가져오기 | /ext/settings
+
 **URI 매개 변수**
 
 - 없음
@@ -49,10 +50,12 @@ GET | /ext/settings
 * 유형 - ("텍스트" | "숫자" | "부울" | "선택") 이 필드는 설정의 유형(텍스트 입력, 부울 값("true" 또는 "false"), 최소값 및 최대값이 포함된 숫자 또는 특정 값 목록이 있는 선택)을 나타냅니다.
 
 설정을 숫자로 경우:
+
 * 분-(숫자)이이 필드는 설정의 최소 숫자 값을 나타냅니다.
 * 최대-(숫자)이이 필드 설정의 최대 숫자 값을 나타냅니다.
 
 설정이 다음을 선택 합니다.
+
 * OptionsVariable-("Yes" | "No")이이 필드 옵션 설정 변수인 되는지 여부를 유효한 옵션은 다시 부팅 하지 않고 변경할 수 있으면 나타냅니다.
 * 옵션 - 유효한 선택 옵션을 문자열로 포함하고 있는 JSON 배열입니다.
 
@@ -67,6 +70,7 @@ HTTP 상태 코드      | 설명
 5XX | 오류 코드
 
 ## <a name="get-settings-one-at-a-time"></a>한 번에 하나씩 설정 가져오기
+
 설정을 개별적으로 검색할 수도 있습니다.
 
 **요청**
@@ -75,8 +79,8 @@ HTTP 상태 코드      | 설명
 
 메서드      | 요청 URI
 :------     | :-----
-GET | /ext/settings/\<설정 이름\>
-<br />
+가져오기 | /ext/settings/\<설정 이름\>
+
 **URI 매개 변수**
 
 - 없음
@@ -100,10 +104,12 @@ GET | /ext/settings/\<설정 이름\>
 * 유형 - ("텍스트" | "숫자" | "부울" | "선택") 이 필드는 설정의 유형(텍스트 입력, 부울 값("true" 또는 "false"), 최소값 및 최대값이 포함된 숫자 또는 특정 값 목록이 있는 선택)을 나타냅니다.
 
 설정을 숫자로 경우:
+
 * 분-(숫자)이이 필드는 설정의 최소 숫자 값을 나타냅니다.
 * 최대-(숫자)이이 필드 설정의 최대 숫자 값을 나타냅니다.
 
 설정이 다음을 선택 합니다.
+
 * OptionsVariable-("Yes" | "No")이이 필드 옵션 설정 변수인 되는지 여부를 유효한 옵션은 다시 부팅 하지 않고 변경할 수 있으면 나타냅니다.
 * 옵션 - 유효한 선택 옵션을 문자열로 포함하고 있는 JSON 배열입니다.
 
@@ -118,6 +124,7 @@ HTTP 상태 코드      | 설명
 5XX | 오류 코드
 
 ## <a name="set-the-value-of-a-setting"></a>설정값 설정
+
 설정값을 설정할 수 있습니다.
 
 **요청**
@@ -127,7 +134,7 @@ HTTP 상태 코드      | 설명
 메서드      | 요청 URI
 :------     | :-----
 PUT | /ext/settings/\<설정 이름\>
-<br />
+
 **URI 매개 변수**
 
 - 없음
@@ -154,7 +161,6 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 
-<br />
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Xbox

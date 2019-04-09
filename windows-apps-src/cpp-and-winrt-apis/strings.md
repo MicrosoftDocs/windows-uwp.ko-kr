@@ -5,16 +5,16 @@ ms.date: 10/03/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문자열
 ms.localizationpriority: medium
-ms.openlocfilehash: 9572d9ba8b96d245b783535e159acbae9043ea3e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: b6f1e12b82ec3ee41cdacc86fcc5f41d664262be
+ms.sourcegitcommit: 9031a51f9731f0b675769e097aa4d914b4854e9e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649638"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618400"
 ---
 # <a name="string-handling-in-cwinrt"></a>C++/WinRT의 문자열 처리
 
-사용 하 여 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)와 같은 c + + 표준 라이브러리 와이드 문자열 형식을 사용 하 여 Windows 런타임 Api를 호출할 수 있습니다 **std:: wstring** (참고: 좁은와 문자열 형식 같은 **std:: string**). C++/WinRT에는 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)이라고 불리는 사용자 지정 문자열 형식이 없습니다(C++/WinRT 기본 라이브러리인 `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`에 정의됨). 또한 Windows 런타임 생성자, 함수 및 속성이 실제로 가져와 반환하는 문자열 형식이기도 합니다. 하지만 대부분 경우 **hstring**의 변환 생성자와 변환 연산자 덕분에 클라이언트 코드의 **hstring** 인식 여부를 선택할 수 있습니다. API를 직접 *작성하는* 경우에는 **hstring**에 대해 알아둘 필요가 더욱 많습니다.
+사용 하 여 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), Windows 런타임 Api를 사용 하 여 호출할 수 있습니다 C++ 등의 표준 라이브러리 와이드 문자열 형식은 **std:: wstring** (참고: 좁은와 문자열 형식 등 **std:: 문자열**). C++/WinRT에는 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)이라고 불리는 사용자 지정 문자열 형식이 없습니다(C++/WinRT 기본 라이브러리인 `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`에 정의됨). 또한 Windows 런타임 생성자, 함수 및 속성이 실제로 가져와 반환하는 문자열 형식이기도 합니다. 하지만 대부분 경우 **hstring**의 변환 생성자와 변환 연산자 덕분에 클라이언트 코드의 **hstring** 인식 여부를 선택할 수 있습니다. API를 직접 *작성하는* 경우에는 **hstring**에 대해 알아둘 필요가 더욱 많습니다.
 
 C++에는 문자열 형식이 많습니다. 또한 C++ 표준 라이브러리의 **std::basic_string** 외에도 변형된 형식이 여러 라이브러리에 존재합니다. C++17에는 다양한 문자열 변환 유틸리티를 비롯해 **std::basic_string_view**도 있기 때문에 모든 문자열 형식의 차이를 좁힐 수 있습니다.  [**winrt::hstring** ](/uwp/cpp-ref-for-winrt/hstring) 사용 하 여 가능성을 제공 **std::wstring_view** 상호 운용성을 제공 하는 **std::basic_string_view** 에 대 한 설계 되었습니다.
 
@@ -26,7 +26,7 @@ public:
     Uri(winrt::hstring uri) const;
 ```
 
-하지만 **hstring**에는 [변환 생성자](/uwp/api/windows.foundation.uri#hstringhstring-constructor)가 있기 때문에 잘 모르더라도 작업하는 데 문제가 없습니다. 다음은 전각 문자열 리터럴에서, 전각 문자열 뷰에서, 그리고 **std::wstring**에서 **Uri**를 생성하는 방법을 나타낸 코드 예제입니다.
+하지만 **hstring**에는 [변환 생성자](/uwp/cpp-ref-for-winrt/hstring#hstringhstring-constructor)가 있기 때문에 잘 모르더라도 작업하는 데 문제가 없습니다. 다음은 전각 문자열 리터럴에서, 전각 문자열 뷰에서, 그리고 **std::wstring**에서 **Uri**를 생성하는 방법을 나타낸 코드 예제입니다.
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>
@@ -60,7 +60,7 @@ public:
     winrt::hstring Domain();
 ```
 
-다시 얘기하지만 **hstring**에는 [**std::wstring_view**로 변환할 수 있는 연산자](/uwp/api/hstring#hstringoperator-stdwstringview)가 있기 때문에 세부 정보를 반드시 알아야 하는 것은 아닙니다.
+다시 얘기하지만 **hstring**에는 [**std::wstring_view**로 변환할 수 있는 연산자](/uwp/cpp-ref-for-winrt/hstring#hstringoperator-stdwstring_view)가 있기 때문에 세부 정보를 반드시 알아야 하는 것은 아닙니다.
 
 ```cppwinrt
 // Access a property of type hstring, via a conversion operator to a standard type.
@@ -91,7 +91,7 @@ hstring tostringHstring{ contosoUri.ToString() }; // L"http://www.contoso.com/"
 tostringHstring = awUri.ToString(); // L"http://www.adventure-works.com/"
 ```
 
-[  **hstring::c_str 함수**](/uwp/api/windows.foundation.uri#hstringcstr-function)를 사용하여 표준 전각 함수를 **hstring**에서 가져올 수 있습니다(**std::wstring**에서 가져오는 방식과 동일).
+[  **hstring::c_str 함수**](/uwp/cpp-ref-for-winrt/hstring#hstringc_str-function)를 사용하여 표준 전각 함수를 **hstring**에서 가져올 수 있습니다(**std::wstring**에서 가져오는 방식과 동일).
 
 ```cppwinrt
 #include <iostream>
@@ -156,7 +156,7 @@ Windows 런타임은 **wchar_t** 문자와 관련하여 구현되지만 Windows 
 
 결론적으로 Windows 런타임 문자열 관리를 위한 고유 정보는 대부분 무시하고 알고 있는 정보만으로도 효율적으로 작업할 수 있습니다. 문자열이 Windows 런타임에서 얼마나 많이 사용되는지 생각해보면 이는 매우 중요합니다.
 
-# <a name="formatting-strings"></a>문자열 형식 지정
+## <a name="formatting-strings"></a>문자열 형식 지정
 문자열 형식을 지정하는 한 가지 옵션은 **std::wstringstream**입니다. 다음은 간단한 디버그 추적 메시지의 형식을 지정하여 표시하는 예제입니다.
 
 ```cppwinrt

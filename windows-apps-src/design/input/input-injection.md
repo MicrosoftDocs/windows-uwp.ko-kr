@@ -7,12 +7,12 @@ keywords: 장치, 디지타이저, 입력, 조작, 삽입
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: de3f0b1377d4f4209dc012ff56adb2de9c68625f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 2699917beed9330dd2044704f19b3c25256c3ca8
+ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602328"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343242"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>입력 삽입을 통해 사용자 입력 시뮬레이트
 
@@ -26,7 +26,7 @@ UWP 응용 프로그램의 키보드, 마우스, 터치, 펜 및 게임 패드 �
 
 입력 삽입은 접근성, 테스트(임시, 자동), 그리고 원격 액세스 및 지원 기능을 포함하는 기능을 제공해야 하는 UWP 앱 및 도구에 유용합니다.
 
-## <a name="setup"></a>설치
+## <a name="setup"></a>설치 프로그램
 
 UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음을 추가해야 합니다.
 
@@ -169,11 +169,11 @@ UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음
     
     이 조각에서 전역 개체를 선언하고 버튼 클릭 이벤트로 처리된 것으로 표시할 수 있는 마우스 입력 영역 내에서 포인터 이벤트([AddHandler](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler))에 해단 수신기를 선언합니다.
 
-    [InputInjector](https://docs.microsoft.com/api/windows.ui.input.preview.injection.inputinjector) 개체는 입력 데이터 전송에 대한 가상 입력 장치를 나타냅니다.
+    [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체는 입력 데이터 전송에 대한 가상 입력 장치를 나타냅니다.
 
     `ContainerInput_PointerPressed` 처리기에서 터치 삽입 함수를 호출합니다.
 
-    `ContainerInput_PointerReleased` 처리기에서 UninitializeTouchInjection을 호출하여 [InputInjector](https://docs.microsoft.com/api/windows.ui.input.preview.injection.inputinjector) 개체를 종료합니다.
+    `ContainerInput_PointerReleased` 처리기에서 UninitializeTouchInjection을 호출하여 [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체를 종료합니다.
 
     ```csharp
     public sealed partial class MainPage : Page
@@ -250,7 +250,7 @@ UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음
     ```
 3. 터치 입력 삽입 함수는 다음과 같습니다.
 
-    먼저 [TryCreate](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.trycreate)를 호출하여 [InputInjector](https://docs.microsoft.com/api/windows.ui.input.preview.injection.inputinjector) 개체를 인스턴스화합니다.
+    먼저 [TryCreate](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.trycreate)를 호출하여 [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체를 인스턴스화합니다.
 
     그 다음 [InitializeTouchInjection](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.initializetouchinjection)을 `Default`의 [InjectedInputVisualizationMode](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputvisualizationmode)로 호출합니다.
 
@@ -360,7 +360,7 @@ UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음
 
 4. 마지막으로, 입력 삽입 지역의 모든 버튼 [클릭](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase) 라우트된 이벤트를 처리하고 클릭한 버튼의 이름으로 UI를 업데이트합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 ### <a name="topic-samples"></a>항목 샘플
 

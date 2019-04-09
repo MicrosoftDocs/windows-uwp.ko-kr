@@ -2,7 +2,7 @@
 title: Out-of-process 백그라운드 작업 만들기 및 등록
 description: Out-of-process 백그라운드 작업 클래스를 만든 다음 앱이 포그라운드에 없는 경우 실행하도록 등록합니다.
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
-ms.date: 07/02/2018
+ms.date: 2/27/2019
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
@@ -10,16 +10,16 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 9df6eef44d45db37e17610d6a5333f3a387b5cf6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 1420b41ef48123e302b546c45669a75545927d89
+ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240051"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Out-of-process 백그라운드 작업 만들기 및 등록
 
-**중요 한 Api**
+**중요 API**
 
 -   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
 -   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
@@ -37,7 +37,7 @@ ms.locfileid: "57592168"
 다음 단계에서는 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) 인터페이스를 구현하는 새 클래스를 작성하는 방법을 보여 줍니다.
 
 1.  백그라운드 작업에 대한 새 프로젝트를 만들고 솔루션에 추가합니다. 이렇게 하려면 마우스 오른쪽 단추로 클릭에서 솔루션 노드를 **솔루션 탐색기** 선택한 **추가** \> **새 프로젝트**합니다. 선택한 합니다 **Windows 런타임 구성 요소** 형식 프로젝트에서 프로젝트 이름을 하 고, 확인을 클릭 합니다.
-2.  UWP(유니버설 Windows 플랫폼) 앱 프로젝트에서 백그라운드 작업 프로젝트를 참조합니다. 에 대 한는 C# 앱 프로젝트에서 c + + 앱을 마우스 오른쪽 단추로 클릭 하거나 **참조가** 선택한 **새 참조 추가**합니다. **솔루션** 아래에서 **프로젝트**를 선택하고 백그라운드 작업 프로젝트의 이름을 선택한 후 **확인**을 클릭합니다.
+2.  UWP(유니버설 Windows 플랫폼) 앱 프로젝트에서 백그라운드 작업 프로젝트를 참조합니다. 에 대 한는 C# 또는 C++ 앱을 앱 프로젝트를 마우스 오른쪽 단추로 클릭 **참조가** 선택한 **새 참조 추가**. **솔루션** 아래에서 **프로젝트**를 선택하고 백그라운드 작업 프로젝트의 이름을 선택한 후 **확인**을 클릭합니다.
 3.  백그라운드 작업 프로젝트에 구현 하는 새 클래스를 추가 합니다 [ **IBackgroundTask** ](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 인터페이스입니다. 합니다 [ **IBackgroundTask.Run** ](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드는 지정된 된 이벤트가 트리거될 때 호출 되는 필수 진입점;이 메서드는 모든 백그라운드 작업에 필요 합니다.
 
 > [!NOTE]
@@ -150,7 +150,7 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 BackgroundTaskDeferral _deferral; // Note: defined at class scope so that we can mark it complete inside the OnCancel() callback if we choose to support cancellation
 public async void Run(IBackgroundTaskInstance taskInstance)
 {
-    _deferral = taskInstance.GetDeferral()
+    _deferral = taskInstance.GetDeferral();
     //
     // TODO: Insert code to start one or more asynchronous methods using the
     //       await keyword, for example:
@@ -200,7 +200,7 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 ```
 
 > [!NOTE]
-> C#에서는 **async/await** 키워드를 사용하여 백그라운드 작업의 비동기 메서드를 호출할 수 있습니다. C + + /CX에서는 비슷한 결과 작업 체인을 사용 하 여 수행할 수 있습니다.
+> C#에서는 **async/await** 키워드를 사용하여 백그라운드 작업의 비동기 메서드를 호출할 수 있습니다. C++/CX, 비슷한 결과 작업 체인을 사용 하 여 수행할 수 있습니다.
 
 비동기 패턴에 대한 자세한 내용은 [비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187335)을 참조하세요. deferral을 사용하여 백그라운드 작업이 일찍 중지되지 않도록 하는 방법의 추가 예제를 보려면 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)을 참조하세요.
 
@@ -455,13 +455,13 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
-* [Out-of-process-백그라운드 작업을 처리 중인 백그라운드 태스크로 변환](convert-out-of-process-background-task.md)  
+* [Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 변환](convert-out-of-process-background-task.md)  
 
 **백그라운드 작업 지침**
 
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
 **백그라운드 작업 API 참조**
 

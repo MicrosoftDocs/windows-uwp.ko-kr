@@ -7,15 +7,14 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9137f7ef46da1b861976dbac680327febf315dac
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: ec132ccb3099f7b5c9f4763a2b276bf6270da859
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601058"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291651"
 ---
 # <a name="hull-shader-hs-stage"></a>HS(헐 셰이더) 단계
-
 
 HS(헐 셰이더) 단계는 공간 분할 단계 중 하나로, 모델의 한 표면을 효율적으로 많은 삼각형으로 나눕니다. HS(헐 셰이더) 단계는 각 입력 패치(사각형, 삼각형 또는 선)에 해당하는 기하 도형 패치(및 패치 상수)를 생성합니다. 헐 셰이더는 패치당 한 번 호출되고, 하위 표면을 정의하는 입력 제어점을 패치를 만드는 제어점으로 변환합니다. 또한 [TS(분할기) 단계](tessellator-stage--ts-.md) 및 [DS(도메인 셰이더) 단계](domain-shader-stage--ds-.md)에 데이터를 제공하기 위한 일부 패치별 계산도 수행합니다.
 
@@ -41,7 +40,7 @@ HS(헐 셰이더) 단계는 프로그래밍 가능한 셰이더 단계입니다.
 -   헐 셰이더는 [TS(분할기) 단계](tessellator-stage--ts-.md)에서 요구하는 상태를 선언합니다. 여기에는 제어점의 수, 패치 면의 유형, 공간 분할 시 사용하는 분할의 유형 등이 포함됩니다. 이 정보는 일반적으로 셰이더 코드 앞에 선언으로 표시됩니다.
 -   공간 분할 요인은 각 패치를 얼마나 세분화할지 결정합니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
 
 
 패치를 함께 구성하는 1에서 32까지의 출력 제어점.
@@ -52,7 +51,7 @@ HS(헐 셰이더) 단계는 프로그래밍 가능한 셰이더 단계입니다.
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>예제
 
 
-```
+```hlsl
 [patchsize(12)]
 [patchconstantfunc(MyPatchConstantFunc)]
 MyOutPoint main(uint Id : SV_ControlPointID,

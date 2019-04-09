@@ -6,12 +6,12 @@ keywords: uwp, 추가 기능, 앱에서 바로 구매, IAP, Windows.ApplicationM
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a203ef79fc6ebb45107cd9ac9d79cadf330f7a5d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9be40d78e00e583988ba8c6b318e7a8941d7f971
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604368"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334981"
 ---
 # <a name="enable-in-app-product-purchases"></a>앱에서 바로 구매 제품 사용
 
@@ -23,7 +23,7 @@ ms.locfileid: "57604368"
 > [!NOTE]
 > 앱의 평가판에서는 앱에서 바로 구매 제품을 제공할 수 없습니다. 앱 평가판을 사용하는 고객은 처음 사용자용 앱 버전을 구매한 경우에만 앱에서 바로 구매 제품을 구입할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 -   고객이 구매하는 기능을 추가할 Windows 앱
 -   새로운 앱에서 바로 구매 제품을 처음 코딩하고 테스트할 때는 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) 개체 대신 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) 개체를 사용해야 합니다. 이렇게 하면 라이브 서버를 호출하는 대신 라이선스 서버 호출을 시뮬레이트하여 라이선스 논리를 확인할 수 있습니다. 이 작업을 수행 하려면 %userprofile%에서 WindowsStoreProxy.xml 라는 파일을 사용자 지정 해야\\AppData\\로컬\\패키지\\&lt;패키지 이름&gt;\\LocalState\\ Microsoft\\Windows 스토어\\ApiData 합니다. 처음으로 앱이 실행될 때 Microsoft Visual Studio 시뮬레이터에서 이 파일을 만듭니다. 또는 런타임에 사용자 지정 파일을 로드할 수도 있습니다. 자세한 내용은 [CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy)을 참조하세요.
@@ -34,7 +34,7 @@ ms.locfileid: "57604368"
 앱이 초기화되는 중이면 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) 또는 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) 초기화를 통해 앱에 대한 [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157) 개체를 가져와 앱에서 바로 구매 제품 구매를 사용하도록 설정합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#InitializeLicenseTest)]
+[!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#InitializeLicenseTest)]
 
 ## <a name="step-2-add-the-in-app-offers-to-your-app"></a>2단계: 앱에 앱 제공 추가
 
@@ -61,7 +61,7 @@ ms.locfileid: "57604368"
     다음 예제에서는 라이선스별 조건부 블록에 **featureName**이라는 제품 기능을 코딩하는 방법을 보여 줍니다. **featureName** 문자열은 앱에서 이 제품을 고유하게 식별하고 스토어에서 앱을 식별하는 데도 사용되는 토큰입니다.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#CodeFeature)]
+    [!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#CodeFeature)]
 
 3.  **이 기능에 대 한 구매 UI를 추가 합니다.**
 
@@ -70,7 +70,7 @@ ms.locfileid: "57604368"
     고객이 이미 앱에서 바로 구매 제품을 소유하고 있는지 테스트하고, 없는 경우 구매할 수 있도록 구매 대화 상자를 표시하는 방법은 다음과 같습니다. "show the purchase dialog" 주석을 구매 대화 상자(예: 친숙한 "앱 구매!" 단추가 있는 페이지)의 사용자 지정 코드로 바꾸세요.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#BuyFeature)]
+    [!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#BuyFeature)]
 
 ## <a name="step-3-change-the-test-code-to-the-final-calls"></a>3단계: 마지막 호출에 테스트 코드를 변경 합니다.
 

@@ -5,16 +5,16 @@ ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
 op-migration-status: ready
-ms.date: 12/1/2017
+ms.date: 12/01/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b2d85d97fa704b4fb79e93cf95fdd1bfcc41f8ca
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0e5b46223ea7dfa5e43b5a50a04a4c3f31307d49
+ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594588"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913963"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>UWP 앱의 콘텐츠 디자인 기본 사항
 
@@ -45,7 +45,7 @@ ms.locfileid: "57594588"
 
 [마스터/세부 정보](../controls-and-patterns/master-details.md) 모델은 목록 보기(마스터) 및 콘텐츠 보기(세부 정보)로 구성되어 있습니다. 두 창은 고정되어 있고 세로 스크롤을 갖고 있습니다. 목록 보기와 콘텐츠 보기는 관계가 명확합니다. 마스터 보기의 항목을 선택하면 세부 정보 목록이 여기에 맞게 업데이트됩니다. 세부 정보 보기에 대한 탐색을 제공하는 것에 더해, 마스터 보기를 추가 및 제거할 수 있습니다.
 
-### <a name="details"></a>세부 정보
+### <a name="details"></a>설명
 
 ![여러 보기](images/multi-view.png)
 
@@ -105,7 +105,7 @@ ms.locfileid: "57594588"
 </td>
 </tr>
 <tr class="odd">
-<td align="left">지도<br/><br/>
+<td align="left">맵<br/><br/>
     <img src="images/content-basics/mapcontrol.png" alt="map control" /></td>
 <td align="left"><a href="../../maps-and-location/display-maps.md">MapControl</a></td>
 <td align="left">지구의 기호 또는 사진 효과 지도를 표시합니다.</td>

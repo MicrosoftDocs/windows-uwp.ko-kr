@@ -6,17 +6,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b177a7741cae0fe786d095c26a6be08ec598bcbb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 450b1721f24d53fa1503551c40feda793af4155c
+ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604478"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58291921"
 ---
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>연습: 간단한 Windows 런타임 구성 요소를 만들고 JavaScript에서 호출
-
-
-
 
 이 연습에서는 Visual Basic 또는 C#과 함께 .NET Framework를 사용하여 Windows 런타임 구성 요소로 패키지된 고유한 Windows 런타임 형식을 만드는 방법 및 JavaScript를 사용하여 Windows용으로 빌드된 유니버설 Windows 앱에서 구성 요소를 호출하는 방법을 보여 줍니다.
 
@@ -32,7 +29,6 @@ Visual Studio에서는 쉽게 C# 또는 Visual Basic으로 작성된 Windows 런
 -   Microsoft Visual Studio 2015 또는 Microsoft Visual Studio Community 2015
 
 ## <a name="creating-a-simple-windows-runtime-class"></a>간단한 Windows 런타임 클래스 만들기
-
 
 이 섹션에서는 JavaScript를 사용하여 Windows용으로 빌드된 유니버설 Windows 앱을 만들고 Visual Basic 또는 C# Windows 런타임 구성 요소 프로젝트를 추가합니다. 관리되는 Windows 런타임 형식을 정의하고 JavaScript에서 형식의 인스턴스를 만들고 정적 및 인스턴스 멤버를 호출하는 방법을 보여 줍니다. 예제 앱의 시각적 표시는 구성 요소에 포커스를 유지하기 위해 의도적으로 흐릿하게 설정됩니다. 자유롭게 표시를 개선할 수 있습니다.
 
@@ -71,7 +67,6 @@ Visual Studio에서는 쉽게 C# 또는 Visual Basic으로 작성된 Windows 런
 
 ## <a name="call-the-component-from-javascript"></a>JavaScript에서 구성 요소 호출
 
-
 JavaScript에서 Windows 런타임 형식을 사용하려면 Visual Studio 템플릿에서 제공하는 프로젝트 js 폴더의 default.js 파일에서 익명 함수에 다음 코드를 추가합니다. app.oncheckpoint 이벤트 처리기 뒤, app.start 호출 앞에 와야 합니다.
 
 ```javascript
@@ -100,7 +95,6 @@ function basics2() {
 유사한 방식으로, .NET Framework는 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 지원합니다. 문서에서이 문서의 후속 섹션에 설명 되어 [Creating Windows Runtime Components in C# 및 Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) 하 고 [UWP 앱 및 Windows 런타임용.NETFramework지원](https://msdn.microsoft.com/library/hh694558.aspx).
 
 ## <a name="create-a-simple-user-interface"></a>간단한 사용자 인터페이스 만들기
-
 
 JavaScript 프로젝트에서 default.html 파일을 열고 다음 코드에 표시된 대로 본문을 업데이트합니다. 이 코드는 예제 앱에 대한 전체 컨트롤 집합을 포함하며 클릭 이벤트에 대한 함수 이름을 지정합니다.
 
@@ -161,10 +155,9 @@ args.setPromise(WinJS.UI.processAll().then(function () {
 }));
 ```
 
-HTML에서 직접 클릭 이벤트 처리기를 추가하는 것보다 이 방법으로 HTML 컨트롤에 이벤트를 추가하는 것이 더 낫습니다. ["Hello World" 앱 만들기(JS)](https://msdn.microsoft.com/library/windows/apps/mt280216)를 참조하세요.
+HTML에서 직접 클릭 이벤트 처리기를 추가하는 것보다 이 방법으로 HTML 컨트롤에 이벤트를 추가하는 것이 더 낫습니다. 참조 ["Hello, World" 앱 (JS) 만들기](/windows/uwp/get-started/create-a-hello-world-app-js-uwp)합니다.
 
 ## <a name="build-and-run-the-app"></a>앱 빌드 및 실행
-
 
 빌드하기 전에 컴퓨터에 적절하게 모든 프로젝트의 대상 플랫폼을 ARM, x64 또는 x86으로 변경합니다.
 
@@ -183,18 +176,13 @@ Basics 2 단추를 선택하여 SampleProperty 속성 값을 증분하고 출력
 
 > **참고**  기본적으로 JavaScript 코드에만 중단점을 설정할 수 있습니다. Visual Basic 또는 C# 코드를 디버그하려면 C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기를 참조하세요.
 
- 
-
 디버깅을 중지하고 앱을 닫으려면 앱에서 Visual Studio로 전환하고 Shift+F5를 선택합니다.
 
 ## <a name="using-the-windows-runtime-from-javascript-and-managed-code"></a>JavaScript와 관리 코드에서 Windows 런타임 사용
 
-
 JavaScript 또는 관리 코드에서 Windows 런타임을 호출할 수 있습니다. 둘 간에 Windows 런타임 개체를 전달할 수 있으며, 어느 한 쪽에서 이벤트를 처리할 수 있습니다. 그러나 JavaScript 및 .NET Framework는 Windows 런타임을 다르게 지원하므로 두 환경에서 Windows 런타임 형식을 사용하는 방법이 일부 세부 정보에서 서로 다릅니다. 다음 예제에서는 [Windows.Foundation.Collections.PropertySet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.propertyset.aspx) 클래스를 사용하여 이러한 차이를 보여 줍니다. 이 예제에서는 관리 코드에서 PropertySet 컬렉션의 인스턴스를 만들고 이벤트 처리기를 등록하여 컬렉션의 변경 내용을 추적합니다. 그런 다음 컬렉션을 가져오고 자체 이벤트 처리기를 등록한 다음 컬렉션을 사용하는 JavaScript 코드를 추가합니다. 마지막으로, 관리 코드에서 컬렉션을 변경하고 관리되는 예외를 처리하는 JavaScript를 표시하는 메서드를 추가합니다.
 
 > **중요**  이 예제에서는 이벤트 발생 중인 UI 스레드에서 합니다. 백그라운드 스레드(예: 비동기 호출)에서 이벤트가 발생하는 경우 JavaScript에서 이벤트를 처리하려면 몇 가지 추가 작업을 수행해야 합니다. 자세한 내용은 [Windows 런타임 구성 요소에서 이벤트 발생](raising-events-in-windows-runtime-components.md)을 참조하세요.
-
- 
 
 SampleComponent 프로젝트에서 PropertySetStats라는 새 **public sealed** 클래스(Visual Basic의 경우 **Public NotInheritable** 클래스)를 추가합니다. 클래스는 PropertySet 컬렉션을 래핑하고 해당 MapChanged 이벤트를 처리합니다. 이벤트 처리기가 발생하는 각 종류의 변경 내용 수를 추적하고, DisplayStats 메서드는 html로 형식이 지정된 보고서를 생성합니다. 추가 **using** 문(Visual Basic의 경우 **Imports** 문)을 확인합니다. 덮어쓰는 대신 기존 **using** 문에 이 문을 추가해야 합니다.
 
@@ -378,7 +366,6 @@ runtimeButton2.addEventListener("click", runtime2, false);
 반면, JavaScript에서 중복 키를 사용하여 insert 메서드를 호출한 경우 항목의 값이 변경되었습니다. 이러한 동작의 차이는 [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)에 설명된 대로 JavaScript 및 .NET Framework에서 Windows 런타임을 지원하는 방법이 서로 다르기 때문입니다.
 
 ## <a name="returning-managed-types-from-your-component"></a>구성 요소에서 관리되는 형식 반환
-
 
 앞에서 설명한 대로 JavaScript 코드와 C# 또는 Visual Basic 코드 간에 자유롭게 네이티브 Windows 런타임 형식을 전달할 수 있습니다. 대체로 형식 이름 및 멤버 이름은 두 경우에서 동일합니다(JavaScript에서는 멤버 이름이 소문자로 시작된다는 점 제외). 그러나 이전 섹션에서 PropertySet 클래스는 관리 코드에서 다른 멤버를 갖는 것으로 표시되었습니다. (예를 들어 JavaScript insert 메서드를 호출 하 고 추가 메서드를 호출 하면.NET Framework 코드에서) 이 섹션에서는 방식으로 이러한 차이점이 JavaScript에 전달 되는.NET Framework 형식에 영향을 줍니다.
 

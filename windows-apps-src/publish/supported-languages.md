@@ -2,16 +2,16 @@
 Description: 100 개 이상의 언어로 Microsoft Store 앱을 제출할 수 있습니다.
 title: 지원되는 언어
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
-ms.date: 02/20/2019
+ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 02a68cd325823bf671f7e0a99c64a899b17caddd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 716a6e86e03feb6edcbc5cde5aa37d0282df6aca
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57657758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244289"
 ---
 # <a name="supported-languages"></a>지원되는 언어
 
@@ -34,8 +34,8 @@ Microsoft Store 지 원하는 언어는 다음과 같습니다. 앱에 하나 �
 | 알바니아어              | sq, sq-al                                                                                                                                                                                             |
 | 암하라어               | am, am-et                                                                                                                                                                                             |
 | 아르메니아어              | hy, hy-am                                                                                                                                                                                             |
-| 아샘어              | as, as-in                                                                                                                                                                                             |
-| 아제르바이잔어           | az, az-arab, az-arab-az, az-cyrl, az-cyrl-az, az-latn, az-latn-az                                                                                                                                     |
+| Assamese              | as, as-in                                                                                                                                                                                             |
+| 아제르바이잔어           | az-arab, az-arab-az, az-cyrl, az-cyrl-az, az-latn, az-latn-az                                                                                                                                     |
 | 바스크어(바스크)       | eu, eu-es                                                                                                                                                                                             |
 | 벨로루시어            | be, be-by                                                                                                                                                                                             |
 | 벵골어                | bn, bn-bd, bn-in                                                                                                                                                                                      |
@@ -43,12 +43,12 @@ Microsoft Store 지 원하는 언어는 다음과 같습니다. 앱에 하나 �
 | 불가리아어             | bg, bg-bg                                                                                                                                                                                             |
 | 카탈로니아어               | ca, ca-es, ca-es-valencia                                                                                                                                                                             |
 | 체로키어              | chr-cher, chr-cher-us, chr-latn                                                                                                                                                                       |
-| 중국어(간체)  | Zh-hans, zh cn, zh-hans-cn, zh sg, zh hans sg                                                                                                                                                     |
+| 중국어(간체)  | zh-Hans, zh-cn, zh-hans-cn, zh-sg, zh-hans-sg                                                                                                                                                     |
 | 중국어(번체) | zh-Hant, zh-hk, zh-mo, zh-tw, zh-hant-hk, zh-hant-mo, zh-hant-tw                                                                                                                                      |
 | 크로아티아어              | hr, hr-hr, hr-ba                                                                                                                                                                                      |
 | 체코어                 | cs, cs-cz                                                                                                                                                                                             |
 | 덴마크어                | da, da-dk                                                                                                                                                                                             |
-| 다리어                  | prs, prs-af, prs-arab                                                                                                                                                                                 |
+| Dari                  | prs, prs-af, prs-arab                                                                                                                                                                                 |
 | 네덜란드어                 | nl, nl-nl, nl-be                                                                                                                                                                                      |
 | 영어               | en, en-au, en-ca, en-gb, en-ie, en-in, en-nz, en-sg, en-us, en-za, en-bz, en-hk, en-id, en-jm, en-kz, en-mt, en-my, en-ph, en-pk, en-tt, en-vn, en-zw, en-053, en-021, en-029, en-011, en-018, en-014 |
 | 에스토니아어              | et, et-ee                                                                                                                                                                                             |
@@ -83,7 +83,7 @@ Microsoft Store 지 원하는 언어는 다음과 같습니다. 앱에 하나 �
 | 한국어                | ko, ko-kr                                                                                                                                                                                             |
 | 쿠르드어               | ku-arab, ku-arab-iq                                                                                                                                                                                   |
 | 키르기스어                | ky-kg, ky-cyrl                                                                                                                                                                                        |
-| 라오스어                   | lo, lo-la                                                                                                                                                                                             |
+| 라오어                   | lo, lo-la                                                                                                                                                                                             |
 | 라트비아어               | lv, lv-lv                                                                                                                                                                                             |
 | 리투아니아어            | lt, lt-lt                                                                                                                                                                                             |
 | 룩셈부르크어         | lb, lb-lu                                                                                                                                                                                             |
@@ -97,7 +97,7 @@ Microsoft Store 지 원하는 언어는 다음과 같습니다. 앱에 하나 �
 | 네팔어                | ne, ne-np                                                                                                                                                                                             |
 | 노르웨이어             | nb, nb-no, nn, nn-no, no, no-no,                                                                                                                                                                      |
 | 오디아어                  | or, or-in                                                                                                                                                                                             |
-| 이란어               | fa, fa-ir                                                                                                                                                                                             |
+| 페르시아어               | fa, fa-ir                                                                                                                                                                                             |
 | 폴란드어                | pl, pl-pl                                                                                                                                                                                             |
 | 포르투갈어(브라질)   | pt-br                                                                                                                                                                                                 |
 | 포르투갈어(포르투갈) | pt, pt-pt                                                                                                                                                                                             |
@@ -111,7 +111,7 @@ Microsoft Store 지 원하는 언어는 다음과 같습니다. 앱에 하나 �
 | 북부 소토어      | nso, nso-za                                                                                                                                                                                           |
 | 세츠와나어              | tn, tn-bw, tn-za                                                                                                                                                                                      |
 | 신디어                | sd-arab, sd-arab-pk, sd-deva                                                                                                                                                                          |
-| 싱할라어               | si, si-lk                                                                                                                                                                                             |
+| 스리랑카어               | si, si-lk                                                                                                                                                                                             |
 | 슬로바키아어                | sk, sk-sk                                                                                                                                                                                             |
 | 슬로베니아어             | sl, sl-si                                                                                                                                                                                             |
 | 스페인어               | es, es-cl, es-co, es-es, es-mx, es-ar, es-bo, es-cr, es-do, es-ec, es-gt, es-hn, es-ni, es-pa, es-pe, es-pr, es-py, es-sv, es-us, es-uy, es-ve, es-019, es-419                                        |

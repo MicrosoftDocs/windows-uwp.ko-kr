@@ -1,51 +1,48 @@
 ---
 title: 카메라 바코드 스캐너 구성
 description: 카메라 바코드 스캐너 활성화 또는 비활성화
-ms.date: 05/02/2018
+ms.date: 4/8/2019
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 3db54caa5be88559aa44f9a99273e9d8d5d6a00d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: da0379109dcf56de505f2a56317258e0ab597f94
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244369"
 ---
 # <a name="enable-or-disable-the-software-decoder-that-ships-with-windows"></a>Windows와 함께 배송된 소프트웨어 디코더를 활성화 또는 비활성화
+
 Windows 10 버전 1803에서는 기본적으로 소프트웨어 디코더가 설치 및 활성화됩니다.  카메라 바코드 스캐너를 사용하고 싶지 않거나 Windows.Devices.PointOfService.BarcodeScanner API에서 작동하는 타사 디코더를 구입했고 둘 모두를 사용하고 싶지 않은 경우에는 Windows와 함께 배송된 소프트웨어 디코더를 비활성화할 수 있습니다.
 
 ## <a name="enable-or-disable-using-the-system-registry"></a>시스템 레지스트리 활성화 또는 비활성화
+
 *HKLM\Software\Microsoft\PointOfService\BarcodeScanner* 아래의 레지스트리 키를 추가하고 *Enable* 아래의 *InboxDecoder* 값을 아래 설명과 같이 설정하여 시스템 레지스트를 통해 Windows와 함께 배송된 소프트웨어 디코더를 활성화 또는 비활성화할 수 있습니다.
 
-| 값 이름  | 값 유형 | 값 | 상태 |
+| 값 이름  | 값 형식 | 값 | 상태 |
 | ----------- | --------- | -------|--------|
 | 사용      | DWORD     | 1(기본값)<br/>0 |  Windows와 함께 배송된 소프트웨어 디코더 활성화 <br/> Windows와 함께 배송된 소프트웨어 디코더 비활성화 |
 
-
 Windows와 함께 배송된 소프트웨어 디코더를 **비활성화**하는 데 사용할 수 있는 레지스트리 파일의 예는 다음과 같습니다.
 
-```
+```text
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PointOfService\BarcodeScanner\InboxDecoder]
 "Enable"=dword:0000000
-
-
 ```  
-    
+
 이 예제 레지스트리 파일을 사용하여 Windows와 함께 배송된 소프트웨어 디코더를 **활성화**합니다.
 
-```
+```text
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PointOfService\BarcodeScanner\InboxDecoder]
 "Enable"=dword:0000001
-
-
 ```  
 
-> [!Warning] 
+> [!Warning]
 > 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다.  보호를 강화하기 위해 수정 전에 레지스트리를 백업합니다.  그러면 문제가 발생했을 때 레지스트리를 복원할 수 있습니다.  레지스트리를 백업 및 복원하는 방법에 대한 자세한 내용은 다음 문서 번호를 클릭하여 Microsoft 기술 자료의 문서를 확인하세요. <br/><br/> [322756](https://support.microsoft.com/kb/322756) Windows에서 레지스트리를 백업 및 복원하는 방법입니다.
 
 > [!NOTE]

@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bba6d42e6ce494c0655c6b6c60db91c1e2e006e8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 3d516343798b7d8c221a5af12210a4897a3124a9
+ms.sourcegitcommit: 358abe22243da4592c30e18d6fc322778f091c8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636098"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58362953"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>UWP 앱의 탐색 디자인 기본 사항
 
@@ -53,7 +53,7 @@ ms.locfileid: "57636098"
 - **간편함:** 필요한 것 보다 더 수행 하지 마십시오.
 - **쉽게 구별할 수 있도록 합니다.** 지우기 경로 및 옵션을 제공 합니다.
 
-### <a name="consistency"></a>Consistency
+### <a name="consistency"></a>일관성
 
 탐색은 사용자 경험과 일관되어야 합니다. 사용 하 여 [표준 컨트롤](#use-the-right-controls) 사용자가 아이콘을 위치에 대 한 표준 규칙을 사용 하 여 친숙 하 고 다음을 스타일은 탐색할 수 있도록 예측 하기 쉽고 직관적인 사용자에 대 한 합니다.
 
@@ -197,6 +197,21 @@ ms.locfileid: "57636098"
 
 :::row:::
     :::column:::
+         ![tabs and pivot image](images/nav/thumbnail-tabs-pivot.svg)
+    :::column-end:::
+        :::column span="2":::
+    [**Pivot**](../controls-and-patterns/pivot.md)
+    
+    비슷합니다 [탐색 보기](../controls-and-patterns/navigationview.md), 하지만 약간 다른 탐색 동작과 터치에 대 한 추가 지원 합니다.
+    
+    pivot을 사용할 경우:-앱 범주 간의 터치 살짝 허용 하려는
+        - 탐색 옵션을 만들어서 캐 러셀 infintely 원합니다
+        - 범주 간의 탐색 동작을 제어할 필요가 없습니다.
+
+:::row-end:::
+
+:::row:::
+    :::column:::
         ![navview image](images/nav/thumbnail-navview.svg)
     :::column-end:::
     :::column span="2":::
@@ -207,9 +222,9 @@ ms.locfileid: "57636098"
         - 페이지는 최상위 수준에 있습니다.
         - 여러 항목이 탐색 (5 개)
         - 사용자가 페이지 간을 자주 전환할 것으로 예상되지 않습니다.
-        
-:::row-end:::
 
+:::row-end:::
+        
 :::row:::
     :::column:::
         ![Master details image](images/nav/thumbnail-master-detail.svg)

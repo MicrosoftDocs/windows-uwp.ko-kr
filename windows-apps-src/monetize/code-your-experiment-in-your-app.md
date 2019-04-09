@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10 uwp, Microsoft Store Services SDK A/B 테스트, 실험
 ms.localizationpriority: medium
-ms.openlocfilehash: edd0fbcf841dc9d8fa43873da95dc08b276a5418
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 2e00c3f8d7f1f41d6b44743ebb663b09575fb21a
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636748"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334951"
 ---
 # <a name="code-your-app-for-experimentation"></a>실험용 앱 코딩
 
@@ -46,43 +46,43 @@ ms.locfileid: "57636748"
 
 필요한 특정 코드는 앱에 따라 달라지긴 하지만 다음 예제에서는 기본 프로세스를 보여 줍니다. 전체 코드 예제를 보려면 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
-[!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#ExperimentCodeSample)]
+[!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#ExperimentCodeSample)]
 
 다음 단계에서는 이 프로세스에서 중요한 부분을 자세히 설명합니다.
 
 1. 선언 된 [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 현재 variation 할당을 나타내는 개체 및 [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger) 로그 보기 및 변환 하는 데 사용할 수 있는 개체 파트너 센터에는 이벤트입니다.
 
-    [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet1)]
+    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet1)]
 
 2. 검색할 실험의 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms)에 할당되는 문자열 변수를 선언합니다.
     > [!NOTE]
     > 프로젝트를 가져올 때 ID 있습니다 [파트너 센터에서 프로젝트를 만들](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)합니다. 아래 표시된 프로젝트 ID는 예제용으로만 사용됩니다.
 
-    [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet2)]
+    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet2)]
 
 3. 정적 [GetCachedVariationAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getcachedvariationasync) 메서드를 호출하여 실험에 대해 현재 캐시된 변형 할당을 가져오고 실험의 프로젝트 ID를 메서드에 전달합니다. 이 메서드는 [ExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariationresult.experimentvariation) 속성을 통해 변형 할당에 액세스할 수 있는 [StoreServicesExperimentVariationResult](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariationresult) 개체를 반환합니다.
 
-    [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet3)]
+    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet3)]
 
 4. [IsStale](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.isstale) 속성을 검사하여 캐시된 변형 할당을 서버의 원격 변형 할당으로 새로 고쳐야 할지 여부를 확인합니다. 새로 고쳐야 하는 경우 서버에서 업데이트된 변형 할당을 확인하는 정적 [GetRefreshedVariationAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getrefreshedvariationasync) 메서드를 호출하고 로컬에 캐시된 변형을 새로 고칩니다.
 
-    [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet4)]
+    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet4)]
 
 5. [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 개체의 [GetBoolean](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getboolean), [GetDouble](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getdouble), [GetInt32](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getint32) 또는 [GetString](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) 메서드를 사용하여 변형 할당 값을 가져올 수 있습니다. 각 메서드의 경우 첫 번째 매개 변수는 검색 하려는 변형의 이름 (이 이름은 동일한 파트너 센터에 입력 하는 변형의). 두 번째 매개 변수 값은 기본값 (예를 들어 네트워크 연결이 없는 경우), 파트너 센터에서 지정된 된 값을 검색할 수 없는 경우 메서드를 반환 하 고 변형의 캐시 된 버전을 사용할 수 없는 합니다.
 
     다음 예제에서는 [GetString](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring)을 사용하여 *buttonText*라는 변수를 가져오고 기본 변수 값인 **Grey Button**을 지정합니다.
 
-    [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet5)]
+    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet5)]
 
 6. 코드에서 변수 값을 사용하여 테스트할 기능의 동작을 수정합니다. 예를 들어 다음 코드는 앱에서 *buttonText* 값을 단추의 콘텐츠에 할당합니다. 이 예제에서는 프로젝트의 다른 위치에서 이 단추를 이미 정의했다고 가정합니다.
 
-    [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet6)]
+    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet6)]
 
 7. 마지막으로 로그인 합니다 [뷰 이벤트](run-app-experiments-with-a-b-testing.md#terms) a 실험에 대 한 / B 파트너 센터에서 서비스를 테스트 합니다. ```logger``` 필드를 [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger) 개체로 초기화하고 [LogForVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) 메서드를 호출합니다. 전달 된 [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 현재 variation 할당 (이 개체가 파트너 센터에는 이벤트에 대 한 컨텍스트를 제공 하는 데 사용) 및 실험에 대 한 이벤트 보기의 이름을 나타내는 개체입니다. 이 파트너 센터에서 실험에 대 한 입력 하는 뷰 이벤트 이름을 일치 해야 합니다. 사용자가 실험의 일부인 변형을 보기 시작하는 경우 코드에 보기 이벤트를 기록해야 합니다.
 
     다음 예제에서는 이름이 **userViewedButton**인 보기 이벤트를 기록하는 방법을 보여 줍니다. 이 예제에서 실험 목표는 사용자가 앱에서 단추를 클릭하여 앱이 변형 데이터(이 경우 단추 텍스트)를 검색하고 해당 데이터를 단추 콘텐츠에 할당한 후에 보기 이벤트가 기록되도록 하는 것입니다.
 
-    [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet7)]
+    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet7)]
 
 ## <a name="log-conversion-events-to-partner-center"></a>파트너 센터에 변환 이벤트를 기록 합니다.
 
@@ -92,7 +92,7 @@ ms.locfileid: "57636748"
 
     다음 예제에서는 단추에 대한 **Click** 이벤트 처리기에서 이름이 **userClickedButton**인 전환 이벤트를 기록합니다. 이 예제에서 실험 목표는 사용자가 단추를 클릭하도록 하는 것입니다.
 
-    [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet8)]
+    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet8)]
 
 ## <a name="next-steps"></a>다음 단계
 

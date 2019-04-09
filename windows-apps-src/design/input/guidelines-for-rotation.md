@@ -8,19 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f631f3178b4af4fe1c1d2d8b27e8ae6ac25c6ad1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: d58587c8a7e391c51dc3267dd6ebb069170604a4
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244279"
 ---
 # <a name="rotation"></a>회전
 
 
 이 문서에서는 새로운 회전 Windows UI에 대해 설명하고 UWP 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 
-> **중요 API**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)하십시오 [ **Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **중요 API**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
@@ -38,7 +38,7 @@ ms.locfileid: "57617208"
 -   선택한 개체의 회전 위치 조정 막대를 이동하려는 경우 마우스 또는 액티브 펜/스타일러스
 -   회전 동작을 사용하여 원하는 방향으로 개체를 돌리려는 경우 터치식 또는 패시브 펜/스타일러스
 
-**회전을 사용 하는 경우**
+**회전을 사용하는 경우**
 
 사용자들이 UI 요소를 직접 회전하는 데 도움을 주려는 경우 회전을 사용합니다. 다음 다이어그램은 회전 조작 시 지원되는 손가락 위치를 보여 줍니다.
 
@@ -48,20 +48,20 @@ ms.locfileid: "57617208"
 
 첫 번째 그림은 엄지손가락과 집게손가락의 터치 지점을 보여 줍니다. 집게손가락은 나무를 터치하고 엄지손가락은 통나무를 터치하고 있습니다.
 
-![이미지 회전 제스처에 대 한 두 개의 초기 터치 포인트를 표시 합니다.](images/ux-rotate-points1.png)
+![회전 제스처의 초기 터치 지점 2개를 보여 주는 이미지](images/ux-rotate-points1.png)
 두 번째 그림에서는 초기(엄지 손가락) 터치 지점에 대해 회전이 수행되었습니다. 회전 후에 검지 손가락은 여전히 나무 줄기를 터치하고 있고 엄지 손가락도 여전히 통나무(회전 지점)를 터치하고 있습니다.
 
-![이미지 회전 지점과 회전된 그림을 보여 주는 두 초기 터치 지점 중 하나에 제한 합니다.](images/ux-rotate-points2.png)
+![회전 지점이 두 개의 초기 터치 지점 중 하나로 제한되어 회전된 그림을 보여 주는 이미지](images/ux-rotate-points2.png)
 세 번째 그립에서는 회전 중심이 응용 프로그램에 의해(또는 사용자가 설정) 그림의 중심점으로 정의되었습니다. 회전한 후에 그림은 손가락 중 하나로 인해 회전되지 않았으므로 직접 조작했다는 착시 효과가 깨집니다(사용자가 이 설정을 선택하지 않은 경우).
 
-![회전 지점과 회전된 그림을 보여 주는 이미지 가운데 부분을 보다는 두 개의 초기 터치 지점 중 하나를 제한 합니다.](images/ux-rotate-points3.png)
+![회전 지점이 두 개의 초기 터치 지점 중 하나가 아닌 그림의 중심으로 제한되어 회전된 그림을 보여 주는 이미지](images/ux-rotate-points3.png)
 마지막 그립에서는 회전 중심이 응용 프로그램에 의해(또는 사용자가 설정) 그림 왼쪽 가장자리 중앙에 있는 지점으로 정의되었습니다. 마찬가지로 사용자가 이 설정을 선택한 것이 아니므로 직접 조작했다는 착시 효과가 깨집니다.
 
 ![회전 지점이 두 개의 초기 터치 지점 중 하나가 아닌 그림의 맨 왼쪽 중심으로 제한되어 회전된 그림을 보여 주는 이미지](images/ux-rotate-points4.png)
 
  
 
-Windows 8은 세 가지 유형의 회전을 지원 합니다: 무료이 고, 제한 된 결합 합니다.
+Windows 10에서는 회전: 무료, 제한, 및 결합 합니다.
 
 <table>
 <colgroup>
@@ -103,20 +103,20 @@ Windows 8은 세 가지 유형의 회전을 지원 합니다: 무료이 고, 제
 
 
 **샘플**
-* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
 * [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
 * [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: 터치 적중된 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
 * [입력: 제스처와 GestureRecognizer 조작](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처 (c + +) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [입력: 조작 및 제스처 (C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [DirectX 터치 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

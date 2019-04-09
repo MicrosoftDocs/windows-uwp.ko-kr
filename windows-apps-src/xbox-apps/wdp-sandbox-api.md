@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
 ms.localizationpriority: medium
-ms.openlocfilehash: d05528ecf4408a7e7483b909b75722037c6528b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 8f04514962cf0684daa99ee75d4c4da73c785735
+ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59244089"
 ---
 # <a name="xbox-live-sandbox-api-reference"></a>Xbox Live 샌드박스 API 참조   
 이 REST API를 사용하여 Xbox Live 샌드박스를 가져오고 설정할 수 있습니다.
@@ -24,8 +24,8 @@ ms.locfileid: "57645698"
 
 메서드      | 요청 URI
 :------     | :-----
-GET | /ext/xboxlive/sandbox
-<br />
+가져오기 | /ext/xboxlive/sandbox
+
 **URI 매개 변수**
 
 - 없음
@@ -61,7 +61,7 @@ HTTP 상태 코드      | 설명
 메서드      | 요청 URI
 :------     | :-----
 PUT | /ext/xboxlive/sandbox
-<br />
+
 **URI 매개 변수**
 
 - 없음
@@ -87,8 +87,7 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 
-<br />
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Xbox
 

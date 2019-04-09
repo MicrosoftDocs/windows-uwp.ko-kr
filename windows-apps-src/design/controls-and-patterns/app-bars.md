@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d2a7d34f00d40429863f08ffe6a9c34222daa32
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 461d6d135838a5141e6606d4c77ce21972a45fe1
+ms.sourcegitcommit: aeebfe35330aa471d22121957d9b510f6ebacbcf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649308"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58901651"
 ---
 # <a name="command-bar"></a>명령 모음
 
@@ -44,8 +44,8 @@ CommandBar 컨트롤은 유연하고 가벼운 범용 컨트롤로서 [AppBarBut
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우는 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/CommandBar">앱을 열고 작동 중인 CommandBar를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -121,8 +121,8 @@ Windows Phone의 Outlook 일정 명령 모음입니다.
 
 필요에 따라 PrimaryCommands와 SecondaryCommands 사이의 명령을 프로그래밍 방식으로 이동할 수 있습니다.
 
-- *페이지에 걸쳐 일관 되 게 나타날 수 있는 명령을 있으면 해당 명령 일관 된 위치에 적합 합니다.*
-- *예, Accept를 배치 하는 것이 좋습니다 및 왼쪽에 확인 명령을 아니요, 거부 및 취소 합니다. 일관성 안심 시스템 사이 이동 하 고 사용자에 게 제공 및 앱 탐색에 대 한 지식을 앱에서 전송 하는 데 도움이 됩니다.*
+- *여러 페이지에서 일관되게 표시되는 명령이 있는 경우 해당 명령을 일관된 위치에 유지하는 것이 가장 좋습니다.*
+- *수락, 예 및 확인 명령은 거부, 아니요, 취소 명령 왼쪽에 배치하는 것이 좋습니다. 일관성은 사용자에게 신뢰감을 주어 시스템을 둘러보도록 유도하며, 앱 탐색과 관련된 지식을 앱 간에 적용하는 데 도움이 됩니다.*
 
 ### <a name="app-bar-buttons"></a>앱 바 단추
 
@@ -177,7 +177,8 @@ AppBarButton [IsCompact](https://docs.microsoft.com/uwp/api/windows.ui.xaml.cont
 
 ## <a name="open-and-closed-states"></a>열림 및 닫힘 상태
 
-명령 모음은 열거나 닫을 수 있습니다. 기본 명령 단추는 열릴 때 텍스트 레이블로 표시되고, 보조 명령이 있는 경우에는 오버플로 메뉴가 열립니다.
+명령 모음은 열거나 닫을 수 있습니다. 열려 있으면 기본 명령 단추가 텍스트 레이블과 함께 표시 하 고 (보조 명령이 있는 경우) 오버플로 메뉴를 엽니다.
+명령 모음 오버플로 메뉴 위쪽 (위의 기본 명령)를 엽니다. 또는 아래쪽 (아래 기본 명령). 기본 방향, 이지만 위쪽으로 오버플로 메뉴를 열고 충분 한 공간이 없는 경우 명령 모음 엽니다 아래쪽으로 합니다. 
 
 사용자는 "참조"를 눌러 이러한 상태 간에 전환할 수 있습니다 \[•\] 단추입니다. [IsOpen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.isopen.aspx) 속성을 설정하여 프로그래밍 방식으로 이 상태 간에 전환할 수 있습니다. 
 
@@ -216,7 +217,7 @@ private void CommandBar_Closing(object sender, object e)
 
 명령 모음이 열린 상태에서 사용자가 앱의 다른 부분과 상호 작용을 하면 명령 모음이 자동으로 닫힙니다. 이를 *빠른 해제*라고 합니다. [IsSticky](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.issticky.aspx) 속성을 설정하여 빠른 해제 동작을 제어할 수 있습니다. 때 `IsSticky="true"`, 막대는 "참조"를 누를 때까지 열려 \[•\] 단추 또는 오버플로 메뉴에서 항목을 선택 합니다. 
 
-고정 명령 모음은 빠른 해제에 대한 사용자의 기대를 준수하지 않으므로 사용하지 않는 것이 좋습니다.
+에 대 한 사용자의 기대를 준수 하지 때문에 고정 명령 모음을 방지 하는 것이 좋습니다 [light 해제 하 고 키보드 포커스 동작](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus#light-dismiss)합니다.
 
 ### <a name="display-mode"></a>디스플레이 모드
 
@@ -277,9 +278,9 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
-- [샘플 XAML 명령](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+- [XAML 명령 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ## <a name="related-articles"></a>관련 문서
 
-* [UWP 앱에 대 한 명령 디자인 기본 사항](../basics/commanding-basics.md)
+* [UWP 앱의 명령 디자인 기본 사항](../basics/commanding-basics.md)
 * [CommandBar 클래스](https://msdn.microsoft.com/library/windows/apps/dn279427)

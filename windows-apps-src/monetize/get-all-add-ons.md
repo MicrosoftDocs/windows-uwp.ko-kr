@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 50733bc0617d56b7e6b8596b661aff8056961f18
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 84b55ea8bc62955e3556fcff4e8d608738eb59ce
+ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599908"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58334431"
 ---
 # <a name="get-all-add-ons"></a>모든 추가 기능 가져오기
 
 파트너 센터 계정에 등록 된 모든 앱에 대 한 모든 추가 기능에 대 한 데이터를 검색할 Microsoft Store 제출 API에서에서이 메서드를 사용 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -30,14 +30,14 @@ ms.locfileid: "57599908"
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` |
+| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/inappproducts` |
 
 
 ### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| Authorization | string | 필수 사항입니다. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
@@ -46,8 +46,8 @@ ms.locfileid: "57599908"
 
 |  매개 변수  |  형식  |  설명  |  필수  |
 |------|------|------|------|
-|  top  |  int  |  요청에 반환할 항목 수(즉, 반환할 추가 기능 수)입니다. 계정에 쿼리에서 지정한 값보다 더 많은 추가 기능이 있을 경우 응답 본문에는 데이터의 다음 페이지를 요청하기 위해 메서드 URI에 추가할 수 있는 상대 URI 경로가 포함됩니다.  |  아니오  |
-|  skip  |  int  |  나머지 항목을 반환하기 전에 쿼리에서 바이패스할 항목 수입니다. 이 매개 변수를 사용하여 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10이고 skip=0이면 1-10 항목을 검색하고 top=10이고 skip=10이면 11-20 항목을 검색합니다.  |  아니오  |
+|  top  |  ssNoversion  |  요청에 반환할 항목 수(즉, 반환할 추가 기능 수)입니다. 계정에 쿼리에서 지정한 값보다 더 많은 추가 기능이 있을 경우 응답 본문에는 데이터의 다음 페이지를 요청하기 위해 메서드 URI에 추가할 수 있는 상대 URI 경로가 포함됩니다.  |  아니요  |
+|  skip  |  ssNoversion  |  나머지 항목을 반환하기 전에 쿼리에서 바이패스할 항목 수입니다. 이 매개 변수를 사용하여 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10이고 skip=0이면 1-10 항목을 검색하고 top=10이고 skip=10이면 11-20 항목을 검색합니다.  |  아니요  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -58,14 +58,14 @@ ms.locfileid: "57599908"
 
 다음 예제에서는 계정에 등록된 모든 앱의 모든 추가 기능 데이터를 검색하는 방법을 보여 줍니다.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
 다음 예제에서는 처음 10개의 추가 기능만 검색하는 방법을 보여 줍니다.
 
-```
+```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
@@ -133,9 +133,9 @@ Authorization: Bearer <your access token>
 
 | 값      | 형식   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 10으로 설정되어 있지만 계정에 등록된 추가 기능이 100개인 경우 응답 본문에는 ```inappproducts?skip=10&top=10```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?skip=10&top=10```을 호출하여 다음 10개의 추가 기능을 호출할 수 있음을 나타냅니다. |
+| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 `https://manage.devcenter.microsoft.com/v1.0/my/` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 10으로 설정되어 있지만 계정에 등록된 추가 기능이 100개인 경우 응답 본문에는 `inappproducts?skip=10&top=10`의 @nextLink 값이 포함되며 이는 `https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?skip=10&top=10`을 호출하여 다음 10개의 추가 기능을 호출할 수 있음을 나타냅니다. |
 | value            | 배열  |  각 추가 기능에 대한 정보를 제공하는 개체가 들어 있는 배열입니다. 자세한 내용은 [추가 기능 리소스](manage-add-ons.md#add-on-object)를 참조하세요.   |
-| totalCount   | int  | 응답 본문의 *value* 배열에서 앱 개체의 수입니다.     |
+| totalCount   | ssNoversion  | 응답 본문의 *value* 배열에서 앱 개체의 수입니다.     |
 
 
 ## <a name="error-codes"></a>오류 코드

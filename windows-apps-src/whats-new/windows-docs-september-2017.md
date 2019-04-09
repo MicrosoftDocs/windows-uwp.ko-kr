@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a296cc877279292f73b591a86ede9136b0d9758
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 0ae5001e907d7d38cbf05fd6863b192337fe365f
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645198"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162889"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>2017년 9월 Windows 개발자 문서의 새로운 내용
 
@@ -24,7 +24,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ### <a name="xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램
 
-이제 Xbox Live 크리에이터스 프로그램이 공개되었으니, Windows 10 PC와 Xbox One 콘솔에서 모두 실행할 수 있는 UWP 게임을 쉽게 빌드하고 게시할 수 있습니다. 자세한 내용은 [Xbox Live 크리에이터스 프로그램 시작](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 참조하세요.
+이제 Xbox Live 크리에이터스 프로그램이 공개되었으니, Windows 10 PC와 Xbox One 콘솔에서 모두 실행할 수 있는 UWP 게임을 쉽게 빌드하고 게시할 수 있습니다. 자세한 내용은 [Xbox Live 크리에이터스 프로그램 시작](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md)을 참조하세요.
 
 ## <a name="developer-guidance"></a>개발자 지침
 
