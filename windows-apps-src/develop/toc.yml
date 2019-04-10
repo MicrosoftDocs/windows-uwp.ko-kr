@@ -1,4 +1,6 @@
 items:
+- name: 개요
+  href: index.md
 - name: 앱 유형
   items:
   - name: 교육용 앱
@@ -482,15 +484,19 @@ items:
       - name: 분석 데이터 액세스
         href: ../monetize/access-analytics-data-using-windows-store-services.md
         items:
+        - name: 게임 및 앱에 대한 취득 데이터 가져오기
+          href: ../monetize/acquisitions-data.md
+        - name: 게임 및 앱에 대한 추가 기능 취득 데이터 가져오기
+          href: ../monetize/add-on-acquisitions-data.md
         - name: UWP 앱
           items:
           - name: 취득 및 설치 데이터 가져오기
             items:
-            - name: 앱 사용 권한 가져오기
+            - name: 앱 취득 가져오기(레거시)
               href: ../monetize/get-app-acquisitions.md
             - name: 앱 설치 가져오기
               href: ../monetize/get-app-installs.md
-            - name: 앱 취득 깔때기 데이터 가져오기
+            - name: 앱 취득 깔때기 데이터 가져오기(레거시)
               href: ../monetize/get-acquisition-funnel-data.md
             - name: 채널별 앱 변환 가져오기
               href: ../monetize/get-app-conversions-by-channel.md
@@ -762,23 +768,6 @@ items:
       items:
       - name: 실행 가능한 코드가 있는 옵션 패키지
         href: ../packaging/optional-packages-with-executable-code.md
-    - name: 앱 설치 관리자를 사용하여 UWP 앱 설치
-      href: ../packaging/appinstaller-root.md
-      items:
-      - name: Visual Studio를 사용하여 앱 설치 관리자 파일 만들기
-        href: ../packaging/create-appinstallerfile-vs.md
-      - name: 웹 페이지에서 UWP 앱 설치
-        href: ../packaging/installing-UWP-apps-web.md
-      - name: 앱 설치 관리자 파일을 사용하여 관련 세트 설치
-        href: ../packaging/install-related-set.md
-      - name: 앱 설치 관리자 파일 관련 설치 문제 해결
-        href: ../packaging/troubleshoot-appinstaller-issues.md
-      - name: Azure 웹앱에서 UWP 앱 설치
-        href: ../packaging/web-install-azure.md
-      - name: IIS 서버에서 UWP 앱 설치
-        href: ../packaging/web-install-iis.md
-      - name: 웹 설치용 UWP 앱 패키지를 AWS에 호스팅
-        href: ../packaging/web-install-aws.md
     - name: WinAppDeployCmd.exe 도구를 사용하여 앱 설치
       href: ../packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md
     - name: 앱 접근 권한 값 선언
@@ -949,11 +938,20 @@ items:
       href: ../composition/composition-native-interop.md
     - name: UI 조정
       href: ../composition/composition-tailoring.md
-    - name: XAML 사용
+    - name: UWP XAML 사용
       href: ../composition/using-the-visual-layer-with-xaml.md
       items:
       - name: XAML 조명
         href: ../composition/xaml-lighting.md
+    - name: 데스크톱 앱 현대화
+      href: ../composition/visual-layer-in-desktop-apps.md
+      items:
+      - name: WPF 사용
+        href: ../composition/using-the-visual-layer-with-wpf.md
+      - name: Windows Forms 사용
+        href: ../composition/using-the-visual-layer-with-windows-forms.md
+      - name: Win32 사용
+        href: ../composition/using-the-visual-layer-with-win32.md
   - name: Windows as a Service
     href: ../updates-and-versions/application-development-for-windows-as-a-service.md
   - name: Windows 런타임 구성 요소
@@ -1515,9 +1513,9 @@ items:
       href: ../threading-async/use-a-timer-to-submit-a-work-item.md
     - name: 다중 스레드 환경에서 Windows 런타임 개체 사용
       href: ../threading-async/using-windows-runtime-objects-in-a-multithreaded-environment.md
-ms.openlocfilehash: e9c39734eb066058d549ed8c36ad73b2c2c6a5e1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 36d2fba58373cd35321c7787856b782b1291b12d
+ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583700"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57822938"

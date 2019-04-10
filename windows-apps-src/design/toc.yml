@@ -43,7 +43,7 @@ items:
     href: layout/show-multiple-views.md
   - name: 맞춤, 여백 및 안쪽 여백
     href: layout/alignment-margin-padding.md
-  - name: 레이아웃 패널
+  - name: 패널
     items:
     - name: 개요
       href: layout/layout-panels.md
@@ -55,6 +55,8 @@ items:
       href: layout/custom-panels-overview.md
     - name: '사용자 지정 패널 예제: BoxPanel'
       href: layout/boxpanel-example-custom-panel.md
+  - name: 연결된 레이아웃
+    href: layout/attached-layouts.md
   - name: 변형
     items:
     - name: 개요
@@ -93,8 +95,14 @@ items:
     items:
     - name: 개요
       href: controls-and-patterns/lists.md
+    - name: 수집 명령
+      href: controls-and-patterns/collection-commanding.md
+    - name: 사용자 지정 컬렉션 뷰
+      href: controls-and-patterns/items-repeater.md
     - name: 보기 대칭 이동
       href: controls-and-patterns/flipview.md
+    - name: 반전된 목록
+      href: controls-and-patterns/inverted-lists.md
     - name: 목록 보기 및 그리드 보기
       href: controls-and-patterns/listview-and-gridview.md
       items:
@@ -104,14 +112,10 @@ items:
         href: controls-and-patterns/item-templates-listview.md
       - name: 그리드 보기의 항목 템플릿
         href: controls-and-patterns/item-templates-gridview.md
-    - name: 반전된 목록
-      href: controls-and-patterns/inverted-lists.md
-    - name: 당겨서 새로 고침
-      href: controls-and-patterns/pull-to-refresh.md
     - name: 중첩된 UI
       href: controls-and-patterns/nested-ui.md
-    - name: 수집 명령
-      href: controls-and-patterns/collection-commanding.md
+    - name: 당겨서 새로 고침
+      href: controls-and-patterns/pull-to-refresh.md
     - name: 살짝 밀기
       href: controls-and-patterns/swipe.md
     - name: 트리 보기
@@ -124,6 +128,8 @@ items:
       href: controls-and-patterns/dialogs-and-flyouts/dialogs.md
     - name: 플라이아웃
       href: controls-and-patterns/dialogs-and-flyouts/flyouts.md
+    - name: 교육 팁
+      href: controls-and-patterns/dialogs-and-flyouts/teaching-tip.md
   - name: 양식
     href: controls-and-patterns/forms.md
   - name: 미디어, 그래픽 및 셰이프
@@ -236,6 +242,8 @@ items:
     href: style/reveal-focus.md
   - name: 소리
     href: style/sound.md
+  - name: 간격
+    href: style/spacing.md
   - name: 쓰기 스타일
     href: style/writing-style.md
   - name: XAML 브러시
@@ -564,9 +572,9 @@ items:
       href: in-app-help/external-help.md
 - name: 디자인 도구 키트
   href: downloads/index.md
-ms.openlocfilehash: b6430ee5f121d672282513fa524a50e7788f404c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: af847479fb2f9e8e2f9f033a7b63cdad750a903f
+ms.sourcegitcommit: 7a1d5198345d114c58287d8a047eadc4fe10f012
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59247201"
