@@ -98,7 +98,7 @@ Windows 프로그래밍 [파트너 센터](https://partner.microsoft.com/dashboa
 |  중국 | 116 CNY | 600 CNY | 은행에 USD로 지급 | 예* | 
 |  콜롬비아 | 36543 COP | 180000 COP | 은행에 USD로 지급 | 아니오 | 
 |  코모로 | 19 USD | 99 USD | 은행에 USD로 지급 | 아니오 | 
-|  콩고 | 19 USD | 99 USD | 은행에 XAF로 지급 | 아니오 | 
+|  콩고 공화국 | 19 USD | 99 USD | 은행에 XAF로 지급 | 아니오 | 
 |  콩고 민주 공화국 | 19 USD | 99 USD | 은행에 USD로 지급 | 아니오 | 
 |  코스타리카 | 9578 CRC | 49725 CRC | 은행에 CRC로 지급 | 아니오 | 
 |  코트디부아르 | 19 USD | 99 USD | 은행에 XOF로 지급 | 아니오 | 
