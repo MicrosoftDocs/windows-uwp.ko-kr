@@ -8,7 +8,7 @@ keywords: windows 10, 게임, 캡처, 오디오, 비디오, 메타데이터
 ms.localizationpriority: medium
 ms.openlocfilehash: c4d4d764395d7f383e9cefcb9d8b1121db098780
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57601938"
@@ -97,7 +97,7 @@ UWP 앱에서 게임 플레이를 캡처하는 방법은 두 가지가 있습니
 [!code-cpp[CallRecordTimeSpanToFile](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetCallRecordTimeSpanToFile)]
 
 ## <a name="save-screenshot-images-to-files"></a>파일에 스크린샷 이미지 저장
-앱은 하나의 이미지 파일이나 다른 이미지 인코딩의 여러 이미지 파일에 앱의 창 현재 내용을 저장하는 스크린샷 캡처를 시작할 수 있습니다. 사용하려는 이미지 인코딩을 지정하려면 각각 이미지 종류를 나타내는 문자열 목록을 만듭니다.  **[ImageEncodingSubtypes](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingsubtypes)** 의 속성은 **MediaEncodingSubtypes.Png** 또는 **MediaEncodingSubtypes.JpegXr** 같은 각 지원되는 이미지 유형에 대한 올바른 문자열을 제공합니다.
+앱은 하나의 이미지 파일이나 다른 이미지 인코딩의 여러 이미지 파일에 앱의 창 현재 내용을 저장하는 스크린샷 캡처를 시작할 수 있습니다. 사용하려는 이미지 인코딩을 지정하려면 각각 이미지 종류를 나타내는 문자열 목록을 만듭니다. **[ImageEncodingSubtypes](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingsubtypes)** 의 속성은 **MediaEncodingSubtypes.Png** 또는 **MediaEncodingSubtypes.JpegXr** 같은 각 지원되는 이미지 유형에 대한 올바른 문자열을 제공합니다.
 
 **AppRecordingManager** 개체의 **[SaveScreenshotToFilesAsync](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.savescreenshottofilesasync)** 메서드를 호출하여 화면 캡처를 시작합니다. 이 메서드에 대한 첫 번째 매개 변수는 이미지 파일이 저장되는 **StorageFolder**입니다. 두 번째 매개 변수는 시스템이 ".png"와 같은 각 이미지 종류별로 확장을 추가하는 파일 이름 접두사입니다.
 
