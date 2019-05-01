@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 비즈니스용 Store, 교육용 Store, 조직, 볼륨 라이선싱, 엔터프라이즈, 교육 Store, 비즈니스 Store, 대량 구매, 대량
 localizationpriority: high
-ms.openlocfilehash: 4babaa9bca13fe1861d5772ba70ec5998cd06285
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b7f0ecc1eb7faec39eaad925ccd6c9d501d39749
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57600978"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63788400"
 ---
 # <a name="organizational-licensing-options"></a>조직 라이선스 옵션
 

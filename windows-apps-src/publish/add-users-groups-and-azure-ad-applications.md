@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, azure ad 응용 프로그램, aad, 사용자, 그룹, 여러 사용자, 다중 사용자
 ms.localizationpriority: medium
-ms.openlocfilehash: 326bb547ac5b0d31f5112d7d5737ddad0d592dd5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ddbe47d94e17db0d272aedcff56df95fccf3434d
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610128"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63787285"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-partner-center-account"></a>사용자, 그룹 및 파트너 센터 계정에 Azure AD 응용 프로그램 추가
 
@@ -48,7 +48,7 @@ ms.locfileid: "57610128"
     > 파트너 센터 계정에 추가 하려면 둘 이상의 사용자를 선택 하면 동일한 역할 또는 사용자 지정 사용 권한 집합을 할당 해야 합니다. 역할/권한이 서로 다른 사용자를 여러 명 추가하려면 각 역할 또는 사용자 지정 권한 집합에 대해 다음 단계를 반복합니다.
 4.  사용자 선택이 완료되면 **선택된 항목 추가**를 클릭합니다.
 5.  **역할** 섹션에서 선택한 사용자에 대한 [역할 또는 사용자 지정 권한 집합](set-custom-permissions-for-account-users.md) 을 지정합니다.
-6.  **Save**을 클릭합니다.
+6.  **저장**을 클릭합니다.
 
 ### <a name="additional-methods-for-adding-users"></a>사용자를 추가하는 추가 방법
 
@@ -71,7 +71,7 @@ ms.locfileid: "57610128"
 4.  **Azure AD에서 이 사용자를 전역 관리자로 지정** 확인란을 선택한 경우 사용자가 암호를 복구해야 하는 경우 사용할 수 있는 메일 주소를 입력합니다.
 5.  **그룹 구성원** 섹션에서 새 사용자가 속하게 될 그룹을 선택합니다.
 6.  **역할** 섹션에서 해당 사용자에 대한 [역할 또는 사용자 지정 권한](set-custom-permissions-for-account-users.md) 을 지정합니다.
-7.  **Save**을 클릭합니다.
+7.  **저장**을 클릭합니다.
 8.  확인 페이지에 임시 암호를 비롯하여 새 사용자의 로그인 정보가 표시됩니다. 이 페이지를 나간 후에는 임시 암호에 액세스할 수 없으므로 이 정보를 메모하고 새 사용자에게 제공해야 합니다.
 
 
@@ -85,7 +85,7 @@ ms.locfileid: "57610128"
 1.  **사용자** 페이지 (아래 **계정 설정**)을 선택 **사용자를 추가**를 선택한 **전자 메일을 통해 사용자를 초대**합니다.
 1.  하나 이상의 메일 주소(최대 10개)를 쉼표나 세미콜론으로 구분하여 입력합니다.
 2.  **역할** 섹션에서 해당 사용자에 대한 [역할 또는 사용자 지정 권한](set-custom-permissions-for-account-users.md) 을 지정합니다.
-3.  **Save**을 클릭합니다.
+3.  **저장**을 클릭합니다.
 
 초대한 사용자가 계정에 가입하라는 메일 초대장을 받으면 Azure AD 테넌트에서 새로운 [게스트 사용자](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) 계정이 생성됩니다. 각 사용자는 계정에 액세스하려면 먼저 초대를 수락해야 합니다.
 
@@ -122,7 +122,7 @@ ms.locfileid: "57610128"
 
 3.  그룹 선택이 완료되면 **선택된 항목 추가**를 클릭합니다.
 4.  **역할** 섹션에서 선택한 그룹(들)에 대한 [역할 또는 사용자 지정 권한](set-custom-permissions-for-account-users.md)을 지정합니다. 그룹의 모든 멤버는 역할/연관 된 사용 권한을 개별 계정에 관계 없이 그룹에 적용할 권한 사용 하 여 파트너 센터 계정에 액세스할 수 없게 됩니다.
-5.  **Save**을 클릭합니다.
+5.  **저장**을 클릭합니다.
 
 
 ### <a name="create-a-new-group-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account"></a>조직의 디렉터리에서 새 그룹 계정을 만들고 파트너 센터 계정에 추가
@@ -135,7 +135,7 @@ ms.locfileid: "57610128"
 4.  그룹에[역할 또는 사용자 지정 권한](set-custom-permissions-for-account-users.md)을 지정합니다. 그룹의 모든 멤버는 역할/연관 된 사용 권한을 개별 계정에 관계 없이 그룹에 적용할 권한 사용 하 여 파트너 센터 계정에 액세스할 수 없게 됩니다.
 5.  목록이 나타나면 새 그룹에 할당할 사용자를 선택합니다. 검색 상자를 사용하여 특정 사용자를 검색할 수 있습니다.
 6.  사용자 선택이 완료되면 **선택된 항목 추가**를 클릭하여 새 그룹에 사용자를 추가합니다.
-7.  **Save**을 클릭합니다.
+7.  **저장**을 클릭합니다.
 
 
 <span id="azure-ad-applications" />
@@ -155,7 +155,7 @@ ms.locfileid: "57610128"
 
 4.  Azure AD 응용 프로그램 선택이 완료되면 **선택된 항목 추가**를 클릭합니다.
 5.  **역할** 섹션에서 선택한 Azure AD 응용 프로그램에 대한 [역할 또는 사용자 지정 권한](set-custom-permissions-for-account-users.md)을 지정합니다.
-6.  **Save**을 클릭합니다.
+6.  **저장**을 클릭합니다.
 
 
 ### <a name="create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account"></a>새 Azure AD 응용 프로그램에서 조직 디렉터리의 계정 및 파트너 센터 계정에 추가
@@ -170,7 +170,7 @@ ms.locfileid: "57610128"
 3.  새 Azure AD 응용 프로그램에 대한 **회신 URL**을 입력합니다. 이 URL를 통해 사용자가 Azure AD 응용 프로그램에 로그인하고 이를 사용할 수 있습니다(앱 URL 또는 로그온 URL이라고도 함). **회신 URL**은 256자 이내여야 하고 디렉터리 내에서 고유해야 합니다.
 4.  새 Azure AD 응용 프로그램에 대한 **앱 ID URI**를 입력합니다. 이 URI는 Azure AD에 Single Sign-On 요청을 보낼 때 제공되는 Azure AD 응용 프로그램의 논리적 식별자입니다. 디렉터리에서 각 Azure AD 응용 프로그램에 대한 **앱 ID URI**는 고유해야 하고 256자 이내여야 합니다. **앱 ID URI**에 대한 자세한 내용은 [응용 프로그램과 Azure Active Directory 통합](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#changing-the-application-registration-to-support-multi-tenant)을 참조하세요.
 5.  **역할** 섹션에서 Azure AD 응용 프로그램에 대한 [역할 또는 사용자 지정 권한](set-custom-permissions-for-account-users.md)을 지정합니다.
-6.  **Save**을 클릭합니다.
+6.  **저장**을 클릭합니다.
 
 Azure AD 응용 프로그램을 추가하거나 만든 후 **사용자** 섹션으로 돌아가 응용 프로그램 이름을 선택하면 테넌트 ID, 클라이언트 ID, 회신 URL 및 앱 ID URI를 비롯한 응용 프로그램의 설정을 검토할 수 있습니다.
 
@@ -210,7 +210,7 @@ Azure AD 응용 프로그램이 Microsoft Azure AD에서 데이터를 읽고 쓸
     -   **Azure AD 응용 프로그램**에서 **회신 URL** 또는 **앱 ID URI**에 대한 새로운 값을 입력할 수 있습니다.
     조직의 디렉터리에도 파트너 센터 계정에서 이러한 변경 된 내용이 기억 합니다.
 3.  파트너 센터 액세스와 관련 된 변경 내용에 대 한 선택 하거나 역할을 적용 하거나 선택 취소 **사용 권한 사용자 지정** 원하는 변경 내용을 확인 합니다. 이러한 변경 내용은 파트너 센터에만 영향을 줄에 액세스 하 고 조직의 Azure AD 테 넌 트 내에서 모든 사용 권한을 변경 되지 것입니다.
-3.  **Save**을 클릭합니다.
+3.  **저장**을 클릭합니다.
 
 
 ## <a name="view-history-for-account-users"></a>계정 사용자의 기록 보기

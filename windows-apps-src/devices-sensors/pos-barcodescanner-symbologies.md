@@ -5,12 +5,12 @@ ms.date: 08/29/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 690b6b8ee688f62dcae375ed48e07797c921bf43
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ee78ffbc49fdcb7f8e87844dea1e2ce29297e9f3
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57637598"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63816689"
 ---
 # <a name="working-with-symbologies"></a>기호 처리
 [바코드 기호](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies)는 특정한 바코드 형식으로 데이터를 매핑한 것입니다. 몇 가지 일반적인 symbologies UPC, 코드 128, QR 코드 및 등을 포함 합니다.  유니버설 Windows 플랫폼 바코드 스캐너 Api 스캐너 스캐너를 수동으로 구성 하지 않고도 이러한 symbologies를 처리 하는 방법을 제어 하는 응용 프로그램을 허용 합니다. 
@@ -158,7 +158,7 @@ private async Task<bool> SetCheckDigitValidation(ClaimedBarcodeScanner scanner, 
 
 [!INCLUDE [feedback](./includes/pos-feedback.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 * [바코드 스캐너](pos-barcodescanner.md)
 * [BarcodeSymbologies 클래스](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies)

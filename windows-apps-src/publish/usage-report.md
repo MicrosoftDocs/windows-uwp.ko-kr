@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 사용, 사용자 지정 이벤트, 보고서, 원격 분석, 사용자 세션
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d0be1399ebc00ffda57ecf27a72be994fa994ce
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b8f368e5af13628d5330ab96ab3b7675de410505
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610908"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63788204"
 ---
 # <a name="usage-report"></a>사용 보고서
 
@@ -35,7 +35,7 @@ ms.locfileid: "57610908"
 > 이 보고서에는 원격 분석 정보 제공을 거부하지 않은 Windows 10(Xbox 포함) 고객의 사용 데이터가 포함되어 있습니다. 고객이 Xbox Live에 로그인했는지 여부에 상관 없이 Xbox 게임에 대한 사용 현황 데이터가 여기에 포함됩니다. 
 
 
-## <a name="usage"></a>용도
+## <a name="usage"></a>사용법
 
 **사용** 차트는 고객이 선택된 기간 동안 앱을 어떻게 사용하고 있는지에 대한 세부 정보를 보여줍니다. 이 차트는 앱 고유의 사용자나 고유한 사용자 세션을 추적하지 않습니다. 즉, 이 차트에서는 고객이 앱을 한 번 또는 여러 번 사용했는지를 나타냅니다.
 

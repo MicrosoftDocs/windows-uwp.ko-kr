@@ -2,16 +2,17 @@
 ms.assetid: F8A741B4-7A6A-4160-8C5D-6B92E267E6EA
 title: 디바이스 페어링
 description: 일부 디바이스는 페어링해야 사용할 수 있습니다. Windows.Devices.Enumeration 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다.
-ms.date: 02/08/2017
+ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bb5c156dc29f8229db9e4cb215fe462b4be6af6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.custom: 19H1
+ms.openlocfilehash: 6f59a23f08abbd5edeb9d68be476fb29bd8aab2e
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653388"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63813624"
 ---
 # <a name="pair-devices"></a>디바이스 페어링
 
@@ -57,6 +58,8 @@ ms.locfileid: "57653388"
 사용자 지정 페어링을 지원하려면 [**PairingRequested**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationcustompairing.pairingrequested.aspx) 이벤트에 대한 처리기를 만들어야 합니다. 이 처리기가 사용자 지정 페어링 시나리오에서 사용할 수 있는 여러 가지의 모든 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808)를 고려하도록 확인합니다. 수행할 적절한 작업은 이벤트 인수의 일부로 제공되는 **DevicePairingKinds**에 따라 달라집니다.
 
 사용자 지정 페어링이 항상 시스템 수준 작업이라는 것을 인식해야 합니다. 이 때문에 데스크톱 또는 Windows Phone에서 작업할 때 페어링이 발생할 경우 시스템 대화 상자가 사용자에게 항상 표시됩니다. 이는 해당하는 두 플랫폼이 모두 사용자 동의가 필요한 사용자 환경을 보유하기 때문입니다. 대화 상자가 자동으로 생성되므로 이러한 플랫폼에서 작업하는 경우 **ConfirmOnly**의 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808)를 선택할 때 고유한 대화 상자를 만들지 않아도 됩니다. 다른 **DevicePairingKinds**의 경우 특정 **DevicePairingKinds** 값에 따라 어떤 특별한 처리를 수행해야 합니다. 다른 **DevicePairingKinds** 값에 대해 사용자 지정 페어링을 처리하는 방법의 예제는 샘플을 참조하세요.
+
+Windows 10, 버전 1903, 새부터 **DevicePairingKinds** 지원 됩니다 **ProvidePasswordCredential**합니다. 이 값에는 앱에서에서 요청 해야 사용자 이름과 암호를 사용자 쌍으로 연결 된 장치를 사용 하 여 인증 하기 위해 의미 합니다. 이 사례를 처리 하려면 호출을 [ **AcceptWithPasswordCredential** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepairingrequestedeventargs.acceptwithpasswordcredential?branch=release-19h1#Windows_Devices_Enumeration_DevicePairingRequestedEventArgs_AcceptWithPasswordCredential_Windows_Security_Credentials_PasswordCredential_) 의 이벤트 인수는 메서드를 **PairingRequested** 페어링을 허용 하도록 이벤트 처리기입니다. 전달 된 [ **PasswordCredential** ](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordcredential) 사용자 이름 및 암호 매개 변수를 캡슐화 하는 개체입니다. 사용자 이름 및 원격 장치에 대 한 암호는 구별 및 종종 동일 하지는 않습니다에서 로컬로 로그온 한 사용자의 자격 증명입니다.
 
 ## <a name="unpairing"></a>언페어링
 

@@ -5,12 +5,12 @@ ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 518529fecff9f25a83a03847b1623bf9f09a8145
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d059f0e33f7343fa0ac9919a243008ed486e31ff
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661158"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63772731"
 ---
 # <a name="getting-started-with-point-of-service"></a>서비스 지점 시작하기
 
@@ -207,7 +207,7 @@ if (claimedBarcodeScanner != null)
 > [!NOTE]
 > 클레임된 서비스 지점 디바이스 클래스와 클레임이 해제된 서비스 지점 디바이스 클래스는 모두 [IClosable 인터페이스](https://docs.microsoft.com/uwp/api/windows.foundation.iclosable)를 구현합니다. 디바이스가 네트워크 또는 Bluetooth를 통해 앱에 연결된 경우, 클레임된 개체와 클레임 해제된 개체 모두 삭제해야 다른 앱이 연결할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 + [바코드 스캐너 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
 + [현금 서랍 샘플]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
 + [줄 표시 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)

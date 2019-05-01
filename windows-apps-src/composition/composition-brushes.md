@@ -1,17 +1,18 @@
 ---
 ms.assetid: 03dd256f-78c0-e1b1-3d9f-7b3afab29b2f
 title: 컴퍼지션 브러시
-description: 브러시는 해당 출력으로 Visual 영역을 그립니다. 각 브러시의 출력 유형은 서로 다릅니다.
-ms.date: 02/08/2017
+description: 브러시는 해당 출력으로 Visual 영역을 그립니다. 다른 브러시는 다른 유형의 출력 합니다.
+ms.date: 04/19/2019
 ms.topic: article
+ms.custom: 19H1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eb0d48cee4fe6698ec371c882c913affa5af7729
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d51bc945c721ae15889dece8f84959f9a78192bc
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644888"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63790519"
 ---
 # <a name="composition-brushes"></a>컴퍼지션 브러시
 UWP 응용 프로그램에서 화면에 보이는 모든 것은 브러쉬로 그려졌기 때문에 볼 수 있습니다. 브러쉬를 사용하면 단순한 단색이나 이미지 또는 그림, 복잡한 효과 체인 등 다양한 콘텐츠로 사용자 인터페이스(UI) 개체를 그릴 수 있습니다. 이 항목에서는 CompositionBrush를 이용한 그리기 작업의 개념을 소개합니다.
@@ -23,7 +24,8 @@ XAML UWP 앱에서 작업하는 경우 [XAML Brush](/windows/uwp/design/style/br
 -   [필수 구성 요소](./composition-brushes.md#prerequisites)
 -   [CompositionBrush 사용 하 여 그리기](./composition-brushes.md#paint-with-a-compositionbrush)
     -   [단색으로 그리기](./composition-brushes.md#paint-with-a-solid-color)
-    -   [선형 그라데이션으로 그리기](./composition-brushes.md#paint-with-a-linear-gradient)
+    -   [선형 그라데이션으로 그리기](./composition-brushes.md#paint-with-a-linear-gradient) 
+    -   [방사형 그라데이션으로 그리기](./composition-brushes.md#paint-with-a-radial-gradient)
     -   [이미지로 그리기](./composition-brushes.md#paint-with-an-image)
     -   [사용자 지정 그리기로 그리기](./composition-brushes.md#paint-with-a-custom-drawing)
     -   [비디오로 그리기](./composition-brushes.md#paint-with-a-video)
@@ -33,24 +35,25 @@ XAML UWP 앱에서 작업하는 경우 [XAML Brush](/windows/uwp/design/style/br
     -   [배경 픽셀을 사용 하 여 그리기](./composition-brushes.md#paint-using-background-pixels)
 -   [CompositionBrushes 결합](./composition-brushes.md#combining-compositionbrushes)
 -   [XAML 브러시 vs를 사용합니다. CompositionBrush](./composition-brushes.md#using-a-xaml-brush-vs-compositionbrush)
--   [관련된 항목](./composition-brushes.md#related-topics)
+-   [관련 항목](./composition-brushes.md#related-topics)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 이 개요에서는 [시각적 계층 개요](visual-layer.md)에 설명된 기본 컴퍼지션 응용 프로그램 구조에 익숙하다는 것을 전제로 합니다.
 
 ## <a name="paint-with-a-compositionbrush"></a>CompositionBrush로 그리기
 
-[CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush)는 출력으로 영역을 "그립니다". 각 브러시의 출력 유형은 서로 다릅니다. 어떤 브러시는 단색으로 영역을 그리고, 또 어떤 브러시는 그라데이션, 이미지, 사용자 지정 그림 또는 효과를 사용합니다. 다른 브러시의 동작을 수정하는 특수 브러시도 있습니다. 예를 들어 불투명 마스크를 사용하여 CompositionBrush가 어떤 영역을 그릴지 제어하거나, 9개 모눈을 사용하여 영역을 그릴 때 CompositionBrush에 적용되는 확장을 제어할 수 있습니다. CompositionBrush는 다음 유형 중 하나일 수 있습니다.
+[CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush)는 출력으로 영역을 "그립니다". 다른 브러시는 다른 유형의 출력 합니다. 어떤 브러시는 단색으로 영역을 그리고, 또 어떤 브러시는 그라데이션, 이미지, 사용자 지정 그림 또는 효과를 사용합니다. 다른 브러시의 동작을 수정하는 특수 브러시도 있습니다. 예를 들어 불투명 마스크를 사용하여 CompositionBrush가 어떤 영역을 그릴지 제어하거나, 9개 모눈을 사용하여 영역을 그릴 때 CompositionBrush에 적용되는 확장을 제어할 수 있습니다. CompositionBrush는 다음 유형 중 하나일 수 있습니다.
 
-|클래스                                   |세부 정보                                         |도입된 위치|
+|클래스                                   |설명                                         |도입된 위치|
 |-------------------------------------|---------------------------------------------------------|--------------------------------------|
-|[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush)         |단색으로 영역 그리기                        |Windows 10 11 월 업데이트 (SDK 10586)|
-|[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush)       |[ICompositionSurface](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.ICompositionSurface)의 콘텐츠로 영역 그리기|Windows 10 11 월 업데이트 (SDK 10586)|
-|[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)        |컴퍼지션 효과의 콘텐츠로 영역 그리기 |Windows 10 11 월 업데이트 (SDK 10586)|
-|[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)          |불투명 마스크와 CompositionBrush로 시각 항목 그리기 |Windows 10 1 주년 업데이트 (SDK 14393)
-|[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)      |9개 모눈 확장을 이용해 CompositionBrush로 영역 그리기 |Windows 10 1 주년 업데이트 SDK (14393)
-|[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)|선형 그라데이션으로 영역 그리기                    |Windows 10 Fall Creators Update(Insider Preview SDK)
-|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |응용 프로그램 또는 데스크톱의 응용 프로그램 창 바로 뒤에 있는 픽셀에서 배경 픽셀을 샘플링하여 영역을 그립니다. CompositionEffectBrush처럼 다른 CompositionBrush에 대한 입력으로 사용됨 | Windows 10 1주년 업데이트(SDK 14393)
+|[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush)         |단색으로 영역 그리기                        |Windows 10 버전 1511 (SDK 10586)|
+|[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush)       |[ICompositionSurface](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.ICompositionSurface)의 콘텐츠로 영역 그리기|Windows 10 버전 1511 (SDK 10586)|
+|[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)        |컴퍼지션 효과의 콘텐츠로 영역 그리기 |Windows 10 버전 1511 (SDK 10586)|
+|[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)          |불투명 마스크와 CompositionBrush로 시각 항목 그리기 |Windows 10 버전 1607 (SDK 14393)
+|[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)      |9개 모눈 확장을 이용해 CompositionBrush로 영역 그리기 |Windows 10 버전 1607 (SDK 14393)
+|[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)|선형 그라데이션으로 영역 그리기                    |Windows 10 버전 1709 (SDK 16299)
+|[CompositionRadialGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionradialgradientbrush)|방사형 그라데이션으로 영역을 그립니다.                    |Windows 10 버전 1903 (Insider Preview SDK)
+|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |응용 프로그램 또는 데스크톱의 응용 프로그램 창 바로 뒤에 있는 픽셀에서 배경 픽셀을 샘플링하여 영역을 그립니다. CompositionEffectBrush처럼 다른 CompositionBrush에 대한 입력으로 사용됨 | Windows 10 버전 1607 (SDK 14393)
 
 ### <a name="paint-with-a-solid-color"></a>단색으로 그리기
 
@@ -105,6 +108,29 @@ _redyellowBrush.ColorStops.Add(_compositor.CreateColorGradientStop(1, Colors.Yel
 _gradientVisual = _compositor.CreateSpriteVisual();
 _gradientVisual.Brush = _redyellowBrush;
 _gradientVisual.Size = new Vector2(156, 156);
+```
+
+### <a name="paint-with-a-radial-gradient"></a>방사형 그라데이션으로 그리기
+
+A [CompositionRadialGradientBrush](/uwp/api/windows.ui.composition.compositionradialgradientbrush) 방사형 그라데이션으로 영역을 그립니다. 방사형 그라데이션의 그라데이션 타원의 가운데에서 시작 및 종료 타원의 반지름을 사용 하 여 두 개 이상의 색을 혼합 합니다. GradientStop 개체의에서 색 및 해당 위치를 정의 하려면 사용 됩니다.
+
+다음 그림 및 코드 2 GradientStops 사용 하 여 RadialGradientBrush를 사용 하 여 그린 SpriteVisual를 보여 줍니다.
+
+![CompositionRadialGradientBrush](images/radial-gradient-brush.png)
+
+```cs
+Compositor _compositor;
+SpriteVisual _gradientVisual;
+CompositionRadialGradientBrush RGBrush;
+
+_compositor = Window.Current.Compositor;
+
+RGBrush = _compositor.CreateRadialGradientBrush();
+RGBrush.ColorStops.Add(_compositor.CreateColorGradientStop(0, Colors.Aquamarine));
+RGBrush.ColorStops.Add(_compositor.CreateColorGradientStop(1, Colors.DeepPink));
+_gradientVisual = _compositor.CreateSpriteVisual();
+_gradientVisual.Brush = RGBrush;
+_gradientVisual.Size = new Vector2(200, 200);
 ```
 
 ### <a name="paint-with-an-image"></a>이미지로 그리기
@@ -439,7 +465,7 @@ _containerVisual.Children.InsertAtTop(_backdropVisual);
 |정적 그라데이션으로 영역 그리기                                       |[LinearGradientBrush](https://msdn.microsoft.com/library/windows/apps/BR210108)                            |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
 |애니메이션 적용된 그라데이션 스톱으로 영역 그리기                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)                                                                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
 |이미지로 영역 그리기                                                |[ImageBrush](https://msdn.microsoft.com/library/windows/apps/BR210101)                                     |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)
-|웹 페이지로 영역 그리기                                               |[WebViewBrush](https://msdn.microsoft.com/library/windows/apps/BR227703)                                   |해당 없음
+|웹 페이지로 영역 그리기                                               |[WebViewBrush](https://msdn.microsoft.com/library/windows/apps/BR227703)                                   |해당 사항 없음
 |9개 모눈 확장을 이용해 이미지로 영역 그리기                         |[이미지 컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image)                   |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
 |애니메이션 적용된 9개 모눈 확장으로 영역 그리기                               |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)                                                                                       |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
 |스왑 체인으로 영역 그리기                                             |[SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)                                                                                                 |스왑 체인 상호 운용성 포함 [CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)

@@ -5,12 +5,12 @@ ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5154593065ce40c5ac67a4873d58b2aac913d1f8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 865c95fe5453a038a73b397fdcf32f77f9e8defb
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57663098"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63828073"
 ---
 # <a name="supported-point-of-service-peripherals"></a>지원되는 서비스 지점 주변 장치
 
@@ -23,7 +23,7 @@ ms.locfileid: "57663098"
 |
 
 
-| 제조업체  | 모델                          | 기능 | 연결    | 형식         | 모드                      |
+| 제조업체  | Model                          | 기능 | 연결    | 형식         | 모드                      |
 |---------------|--------------------------------|------------|--------------|--------------|---------------------------|
 | 코드          | Reader™ 950                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
 | 코드          | 1021 Reader™                   | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
@@ -36,21 +36,21 @@ ms.locfileid: "57663098"
 | Honeywell     | N3680                          | 2D         | 내부     | 구성 요소    | HID POS 스캐너           |
 | Honeywell     | 궤도 7190 g                    | 2D         | USB          | 프레젠테이션 | HID POS 스캐너           |
 | Honeywell     | Stratos 2700                   | 2D         | USB          | 카운터의   | HID POS 스캐너           |
-| Honeywell     | 보이저 1200 g                  | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | 보이저 1202 g                  | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | 보이저 1202 bf                | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | 보이저 145Xg                  | 1 일/2 D ¹   | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | 보이저 1602 g                  | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | 크 세 논 1900 g                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | 크 세 논 1902 g                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | 크 세 논 1902 g-bf                 | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | 크 세 논 1900 h                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Honeywell     | 크 세 논 1902 h                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Voyager 1200g                  | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Voyager 1202g                  | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Voyager 1202-bf                | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | 보이저 145Xg                  | 1D / 2D¹   | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Voyager 1602g                  | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Xenon 1900g                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Xenon 1902g                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Xenon 1902g-bf                 | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Xenon 1900h                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Xenon 1902h                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
 | HP            | 바코드 스캐너 (HR2150) 값 | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
 | Intermec      | SG20                           | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
 | Socket Mobile | CHS 7Ci                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
 | Socket Mobile | CHS 7Di                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
-| Socket Mobile | CHS 7 Mi                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
+| Socket Mobile | CHS 7Mi                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
 | Socket Mobile | CHS 7Pi                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
 | Socket Mobile | CHS 8Ci                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
 | Socket Mobile | DuraScan D700                  | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 SPP) |
@@ -75,12 +75,12 @@ ms.locfileid: "57663098"
 <hr>
 
 ### <a name="windows-devices-with-built-in-barcode-scanner"></a>기본 제공 바코드 스캐너를 사용 하 여 Windows 장치
-| 제조업체   | 모델 | 운영 체제 |
+| 제조업체   | Model | 운영 체제 |
 |----------------|-------|------------------|
 | Innowi         | ChecOut-M | Windows 10   |
 
 ### <a name="windows-mobile-devices-with-built-in-barcode-scanner"></a>기본 제공 바코드 스캐너를 사용 하 여 Windows Mobile 장치
-| 제조업체   | 모델 | 운영 체제 |
+| 제조업체   | Model | 운영 체제 |
 |----------------|-------|------------------|
 | Bluebird       | EF400 | Windows Mobile   |
 | Bluebird       | EF500 | Windows Mobile   |
@@ -88,8 +88,8 @@ ms.locfileid: "57663098"
 | Honeywell      | CT50   | Windows Mobile   |
 | Honeywell      | D75e | Windows Mobile   |
 | Janam          | XT2      | Windows Mobile   |
-| Panasonic      | FZ E1 | Windows Mobile   |
-| Panasonic      | FZ F1 |Windows Mobile   |
+| Panasonic      | FZ-E1 | Windows Mobile   |
+| Panasonic      | FZ-F1 |Windows Mobile   |
 | PointMobile    | PM80 | Windows Mobile   |
 | 얼룩말          | TC700j | Windows Mobile   |
 | HP             | 엘리트 X3 Jacket | Windows Mobile   |

@@ -2,16 +2,17 @@
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
 title: 네트워크를 통해 디바이스 열거
 description: 로컬로 연결된 디바이스를 검색하는 것 외에 Windows.Devices.Enumeration API를 사용하여 무선 및 네트워크 프로토콜을 통해 디바이스를 열거할 수 있습니다.
-ms.date: 02/08/2017
+ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e80d16b3338291c756b543018812e9db1370a4ac
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.custom: 19H1
+ms.openlocfilehash: 2011bf0ed1e0f1536c0863729ee99415059641a6
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630418"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63772772"
 ---
 # <a name="enumerate-devices-over-a-network"></a>네트워크를 통해 디바이스 열거
 
@@ -46,6 +47,7 @@ ms.locfileid: "57630418"
 | HP 프린터용 Wi-Fi 프로비저닝           | **{c85ef710-f344-4792-bb6d-85a4346f1e69}** |
 | Bluetooth                                    | **{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}** |
 | Bluetooth LE                                 | **{bb7bb05e-5972-42b5-94fc-76eaa7084d49}** |
+| 네트워크 카메라                               | **{b8238652-b500-41eb-b4f3-4234f7f5ae99}** |
 
  
 

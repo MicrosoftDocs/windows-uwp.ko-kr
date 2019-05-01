@@ -2,19 +2,19 @@
 title: Windows 설정 앱 실행
 description: 앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
-ms.date: 01/08/2019
+ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 87074e9871fae6be32e2862fc547097898baede8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.custom: 19H1
+ms.openlocfilehash: fb0e5aee9e7b3e57ebf0ebeaf3d035180e52c65b
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646958"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63817507"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
-
 
 **중요 한 Api**
 
@@ -64,7 +64,6 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 <!-- TODO: 
 * ms-settings:controlcenter
-* ms-settings:cortana-windowssearch
 * ms-settings:holographic
 * ms-settings:keyboard-advanced
 * ms-settings:regionlanguage-adddisplaylanguage (crashed)
@@ -80,7 +79,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 회사 또는 학교 계정에 액세스 | ms-settings:workplace |
 | 메일 및 앱 계정  | ms-settings:emailandaccounts |
 | 가족 및 다른 사용자 | ms-settings:otherusers |
-| 키오스크 설정 | ms-assignedaccess 설정: |
+| 키오스크 설정 | ms-settings:assignedaccess |
 | 로그인 옵션 | ms-settings:signinoptions<br>ms-settings:signinoptions-dynamiclock |
 | 설정 동기화 | ms-settings:sync |
 | Windows Hello 설정 | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
@@ -103,10 +102,11 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-| 사용 권한 & 기록 | ms-settings:cortana-permissions |
-| 추가 정보 | ms-settings:cortana-moredetails |
 | 내 장치 간에 Cortana 사용으로 이동합니다 | ms-settings:cortana-notifications |
-| Cortana에게 말하기 | ms-settings:cortana-language<br/>ms-설정: cortana<br/>ms-설정: cortana-talktocortana |
+| 추가 정보 | ms-settings:cortana-moredetails |
+| 사용 권한 & 기록 | ms-settings:cortana-permissions |
+| Windows 검색 | ms-settings:cortana-windowssearch |
+| Cortana에게 말하기 | ms-settings:cortana-language<br/>ms-settings:cortana<br/>ms-settings:cortana-talktocortana |
 
 > [!NOTE] 
 > 이 설정 섹션에서 데스크톱 PC는 Cortana를 현재 사용할 수 없는 경우 또는 Cortana 비활성화 된 지역에 설정 된 경우 검색을 호출 됩니다. Cortana 특정 페이지 (내 장치에서 Cortana) 및 Cortana에 게 문의 여기서 나열 되지 않습니다. 
@@ -115,7 +115,6 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-| 오디오 및 음성 | ms-settings:holographic-audio(Mixed Reality 포털 앱이 설치된 경우에만 사용 가능 - Microsoft Store에서 사용 가능) |
 | 자동 실행 | ms-settings:autoplay |
 | Bluetooth | ms-settings:bluetooth |
 | 연결 장치 | ms-settings:connecteddevices |
@@ -135,13 +134,12 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 오디오 | ms-settings:easeofaccess-audio |
 | 자막 | ms-settings:easeofaccess-closedcaptioning |
-| 색 필터 | ms-설정: easeofaccess-colorfilter |
-| 커서 및 포인터 크기 | ms-설정: easeofaccess-cursorandpointersize |
+| 색 필터 | ms-settings:easeofaccess-colorfilter |
+| 커서 및 포인터 크기 | ms-settings:easeofaccess-cursorandpointersize |
 | 표시 | ms-settings:easeofaccess-display |
 | 아이 컨트롤 | ms-settings:easeofaccess-eyecontrol |
 | 글꼴 | ms-settings:fonts |
 | 고대비 | ms-settings:easeofaccess-highcontrast |
-| 홀로그램 헤드셋 | ms-settings:holographic-headset(홀로그램 하드웨어 필요) |
 | 키보드 | ms-settings:easeofaccess-keyboard |
 | 돋보기 | ms-settings:easeofaccess-magnifier |
 | 마우스 | ms-settings:easeofaccess-mouse |
@@ -173,6 +171,17 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 설정 홈페이지 | ms-settings: |
 
+## <a name="mixed-reality"></a>혼합 현실
+
+> [!NOTE]
+> 이러한 설정은 혼합 현실 포털 앱이 설치 되어 제공 됩니다.
+
+| 설정 페이지 | URI |
+|---------------|-----|
+| 오디오 및 음성 | ms-settings:holographic-audio |
+| 환경 | ms-settings:privacy-holographic-environment |
+| 헤드셋 표시 | ms-settings:holographic-headset |
+| Uninstall | ms-settings:holographic-management |
 
 ## <a name="network--internet"></a>네트워크 및 인터넷
 
@@ -188,7 +197,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 모바일 핫스팟 | ms-settings:network-mobilehotspot |
 | NFC | ms-settings:nfctransactions |
 | Proxy (프록시) | ms-settings:network-proxy |
-| 상태 | ms-settings:network-status<br/>ms-네트워크 설정: |
+| 상태 | ms-settings:network-status<br/>ms-settings:network |
 | VPN | ms-settings:network-vpn |
 | Wi-Fi | ms-settings:network-wifi(장치에 wifi 어댑터가 있는 경우에만 사용 가능) |
 | Wi-Fi 통화 | ms-settings:network-wificalling(Wi-Fi 호출이 활성화된 경우에만 사용 가능) |
@@ -199,7 +208,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 배경 | ms-settings:personalization-background |
 | 시작 화면에 표시되는 폴더 선택 | ms-settings:personalization-start-places |
-| 색 | ms-settings:personalization-colors<br/>ms-설정: 색 |
+| 색 | ms-settings:personalization-colors<br/>ms-settings:colors |
 | 한 눈에 보기 | ms-설정: 개인 설정-상태 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 잠금 화면 | ms-settings:lockscreen |
 | 탐색 모음 | ms-설정: 개인 설정-navbar (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
@@ -212,7 +221,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-| 사용자 전화 | ms-settings:mobile-devices<br/>ms-설정: mobile-장치-addphone<br/>ms-설정: mobile-장치-addphone-직접 (열립니다 **Your Phone** 앱) |
+| 사용자 전화 | ms-settings:mobile-devices<br/>ms-settings:mobile-devices-addphone<br/>ms-설정: mobile-장치-addphone-직접 (열립니다 **Your Phone** 앱) |
 
 ## <a name="privacy"></a>개인 정보
 
@@ -225,18 +234,18 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 나타납니다 | ms-settings:privacy-appdiagnostics |
 | 자동 파일 다운로드 | ms-settings:privacy-automaticfiledownloads |
 | 배경 앱 | ms-settings:privacy-backgroundapps |
-| 일정 | ms-settings:privacy-calendar |
+| 달력 | ms-settings:privacy-calendar |
 | 통화 기록 | ms-settings:privacy-callhistory |
 | 카메라 | ms-settings:privacy-webcam |
 | 연락처 | ms-settings:privacy-contacts |
 | 문서 | ms-settings:privacy-documents |
-| 메일 | ms-settings:privacy-email |
+| EMail | ms-settings:privacy-email |
 | 아이 트래커 | ms-settings:privacy-eyetracker(eyetracker 하드웨어 필요) |
 | 피드백 및 진단 | ms-settings:privacy-feedback |
 | 파일 시스템 | ms-settings:privacy-broadfilesystemaccess |
-| 일반 사항 | ms-settings:privacy-general |
-| 위치 | ms-settings:privacy-location |
-| 메시지 | ms-settings:privacy-messaging |
+| 일반 | ms-settings:privacy-general |
+| Location | ms-settings:privacy-location |
+| Messaging(메시징) | ms-settings:privacy-messaging |
 | 마이크 | ms-settings:privacy-microphone |
 | 동작 | ms-settings:privacy-motion |
 | 알림 | ms-settings:privacy-notifications |
@@ -245,8 +254,9 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 전화 통화 | ms-설정: 개인 정보-전화 통화 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 무선 | ms-settings:privacy-radios |
 | 음성, 수동 입력 및 입력 |ms-settings:privacy-speechtyping |
-| 작업 | ms-settings:privacy-tasks |
+| 태스크 | ms-settings:privacy-tasks |
 | 비디오 | ms-settings:privacy-videos |
+| 음성 활성화 | ms-settings:privacy-voiceactivation |
 
 ## <a name="surface-hub"></a>Surface Hub
 
@@ -258,16 +268,17 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 팀 장치 관리 | ms-settings:surfacehub-devicemanagenent |
 | 시작 화면 | ms-settings:surfacehub-welcome |
 
-## <a name="system"></a>System
+## <a name="system"></a>시스템
 
 |설정 페이지| URI |
 |-------------|-----|
 | 정보 | ms-settings:about |
 | 고급 디스플레이 설정 | ms-settings:display-advanced(고급 디스플레이 옵션을 지원하는 장치에서만 사용 가능) |
+| 앱 볼륨 및 장치 기본 설정 | ms-settings:apps-volume |
 | 배터리 절약 모드 | ms-settings:batterysaver(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 배터리 절약 모드 설정 | ms-settings:batterysaver-settings(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 배터리 사용 | ms-settings:batterysaver-usagedetails(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
-| 클립보드 | ms-클립보드 설정: |
+| 클립보드 | ms-settings:clipboard |
 | 표시 | ms-settings:display |
 | 기본 저장 위치 | ms-settings:savelocations |
 | 표시 | ms-settings:screenrotation |
@@ -276,7 +287,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 암호화 | ms-settings:deviceencryption |
 | 집중 지원 | ms-settings:quiethours <br> ms-settings:quietmomentshome |
 | 그래픽 설정 | ms-settings:display-advancedgraphics(고급 그래픽 옵션을 지원하는 장치에서만 사용 가능) |
-| 메시지 | ms-settings:messaging |
+| Messaging(메시징) | ms-settings:messaging |
 | 멀티태스킹 | ms-settings:multitasking |
 | 야간 설정 | ms-settings:nightlight |
 | 전화 | ms-settings:phone-defaultapps |
@@ -288,8 +299,8 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 원격 데스크톱 | ms-settings:remotedesktop |
 | 전화 | ms-설정: 전화 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 전원 및 절전 | ms-settings:powersleep |
-| 소리 | ms-소리 설정: |
-| 저장 공간 | ms-settings:storagesense |
+| 소리 | ms-settings:sound |
+| 스토리지 | ms-settings:storagesense |
 | 저장 공간 센스 | ms-settings:storagepolicies |
 
 ## <a name="time-and-language"></a>시간 및 언어
@@ -298,7 +309,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 날짜 및 시간 | ms-settings:dateandtime |
 | 일본 IME 설정 | ms-settings:regionlanguage-jpnime(Microsoft 일본 입력기가 설치된 경우 사용 가능) |
-| 외국어 | ms-키보드 설정:<br/>ms-settings:regionlanguage<br/>ms-설정: regionlanguage-bpmfime<br/>ms-설정: regionlanguage-cangjieime<br/>ms-설정: regionlanguage-chsime-핀잉-domainlexicon<br/>ms-설정: regionlanguage-chsime-핀잉-keyconfig<br/>ms-설정: regionlanguage-chsime-핀잉-udp<br/>ms-설정: regionlanguage-chsime-wubi-udp<br/>ms-설정: regionlanguage-quickime |
+| 언어 | ms-settings:keyboard<br/>ms-settings:regionlanguage<br/>ms-settings:regionlanguage-bpmfime<br/>ms-settings:regionlanguage-cangjieime<br/>ms-settings:regionlanguage-chsime-pinyin-domainlexicon<br/>ms-settings:regionlanguage-chsime-pinyin-keyconfig<br/>ms-settings:regionlanguage-chsime-pinyin-udp<br/>ms-settings:regionlanguage-chsime-wubi-udp<br/>ms-settings:regionlanguage-quickime |
 | Pinyin IME 설정 | ms-settings:regionlanguage-chsime-pinyin(Microsoft 병음 입력기가 설치된 경우 사용 가능) |
 | 음성 명령 | ms-settings:speech |
 | Wubi IME 설정  | ms-settings:regionlanguage-chsime-wubi(Microsoft Wubi 입력기가 설치된 경우 사용 가능) |
@@ -315,7 +326,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 복구 | ms-settings:recovery |
 | 문제 해결 | ms-settings:troubleshoot |
 | Windows 보안 | ms-settings:windowsdefender |
-| Windows 참가자 프로그램 | ms-settings:windowsinsider(사용자가 WIP에 등록한 경우에만 표시)<br/>ms-설정: windowsinsider-optin |
+| Windows 참가자 프로그램 | ms-settings:windowsinsider(사용자가 WIP에 등록한 경우에만 표시)<br/>ms-settings:windowsinsider-optin |
 | Windows 업데이트 | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
 | Windows 업데이트-고급 옵션 | ms-settings:windowsupdate-options |
 | Windows 업데이트-다시 시작 옵션 | ms-settings:windowsupdate-restartoptions |

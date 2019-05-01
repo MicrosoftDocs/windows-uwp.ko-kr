@@ -2,16 +2,17 @@
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: 디바이스 포털 핵심 API 참조
 description: 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다.
-ms.date: 4/8/2019
+ms.custom: 19H1
+ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 58ae7d83c0889131313d136c13048b83a861f601
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 910e3108009704d444fb81b195f9dd9eae3daa9d
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244139"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63798182"
 ---
 # <a name="device-portal-core-api-reference"></a>디바이스 포털 핵심 API 참조
 
@@ -58,7 +59,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -67,7 +68,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 관련 세트 설치
+
+### <a name="install-a-related-set"></a>관련 세트 설치
 
 **요청**
 
@@ -106,7 +108,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -115,7 +117,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 느슨한 폴더에 앱 등록
+
+### <a name="register-an-app-in-a-loose-folder"></a>느슨한 폴더에 앱 등록
 
 **요청**
 
@@ -158,7 +161,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * Xbox
@@ -166,7 +169,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 느슨한 파일 폴더에 관련 세트 등록
+
+### <a name="register-a-related-set-in-loose-file-folders"></a>느슨한 파일 폴더에 관련 세트 등록
 
 **요청**
 
@@ -218,7 +222,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * Xbox
@@ -226,7 +230,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 앱 설치 상태 가져오기
+
+### <a name="get-app-installation-status"></a>앱 설치 상태 가져오기
 
 **요청**
 
@@ -260,7 +265,7 @@ ms.locfileid: "59244139"
 | 204 | 설치가 진행 중임 |
 | 404 | 설치 작업을 찾을 수 없음 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -269,7 +274,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 앱 제거
+
+### <a name="uninstall-an-app"></a>앱 제거
 
 **요청**
 
@@ -305,7 +311,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -314,7 +320,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 설치된 앱 가져오기
+
+### <a name="get-installed-apps"></a>설치된 앱 가져오기
 
 **요청**
 
@@ -374,7 +381,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -383,7 +390,9 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-## Bluetooth
+
+## <a name="bluetooth"></a>Bluetooth
+
 <hr>
 
 ### <a name="get-the-bluetooth-radios-on-the-machine"></a>컴퓨터에 Bluetooth 송수신 장치 가져오기
@@ -436,14 +445,15 @@ ms.locfileid: "59244139"
 | 4XX              | 오류 코드 |
 | 5XX              | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 <hr>
-### Bluetooth 송수신 장치 켜기 또는 끄기
+
+### <a name="turn-the-bluetooth-radio-on-or-off"></a>Bluetooth 송수신 장치 켜기 또는 끄기
 
 **요청**
 
@@ -482,16 +492,178 @@ ms.locfileid: "59244139"
 | 4XX              | 오류 코드 |
 | 5XX              | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * HoloLens
 * IoT
 
+---
+### <a name="get-a-list-of-paired-bluetooth-devices"></a>페어링된 Bluetooth 장치 목록을 가져오려면
+
+**요청**
+
+다음 요청 형식을 사용 하 여 현재 페어링된 Bluetooth 장치의 목록을 가져올 수 있습니다. 이 동일한 JSON 데이터를 사용 하 여 WebSocket 연결으로 업그레이드할 수 있습니다. 장치 목록에는 WebSocket 연결의 수명 동안 변경할 수 있습니다. 장치의 전체 목록은 업데이트 될 때마다 WebSocket 연결을 통해 전송 됩니다.
+
+| 메서드        | 요청 URI       |
+| :---          | :---              |
+| 가져오기           | /api/bt/getpaired |
+| GET/WebSocket | /api/bt/getpaired |
+
+**URI 매개 변수**
+
+- 없음
+
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+현재 되는 Bluetooth 장치의 JSON 배열을 포함 하는 응답 합니다.
+```json
+{"PairedDevices": [
+    {
+        "Name" : string,
+        "ID" : string,
+        "AudioConnectionStatus" : string
+    },...
+]}
+```
+합니다 *AudioConnectionStatus* 필드는이 시스템에는 오디오 장치를 사용할 수 있는 경우에 표시 됩니다. (선택적 구성 요소 및 정책 영향을 줄 수이 있습니다.) *AudioConnectionStatus* "연결 됨" 또는 "Disconnected"이 됩니다.
+
+---
+### <a name="get-a-list-of-available-bluetooth-devices"></a>사용 가능한 Bluetooth 장치 목록을 가져오려면
+
+**요청**
+
+다음 요청 형식을 사용 하 여 연결에 대 한 사용 가능한 Bluetooth 장치 목록을 가져올 수 있습니다. 이 동일한 JSON 데이터를 사용 하 여 WebSocket 연결으로 업그레이드할 수 있습니다. 장치 목록에는 WebSocket 연결의 수명 동안 변경할 수 있습니다. 장치의 전체 목록은 업데이트 될 때마다 WebSocket 연결을 통해 전송 됩니다.
+
+| 메서드        | 요청 URI          |
+| :---          | :---                 |
+| 가져오기           | /api/bt/getavailable |
+| GET/WebSocket | /api/bt/getavailable |
+
+**URI 매개 변수**
+
+- 없음
+
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+응답은 Bluetooth 장치 쌍에 대 한 현재 사용할 수 있는 JSON 배열을 포함 합니다.
+```json
+{"AvailableDevices": [
+    {
+        "Name" : string,
+        "ID" : string
+    },...
+]}
+```
+
+---
+### <a name="connect-a-bluetooth-device"></a>Bluetooth 장치 연결
+
+**요청**
+
+이 시스템에는 오디오 장치를 사용할 수 있는 경우에 장치에 연결 됩니다. (선택적 구성 요소 및 정책 영향을 줄 수이 있습니다.)
+
+| 메서드       | 요청 URI           |
+| :---         | :---                  |
+| 올리기         | /api/bt/connectdevice |
+
+**URI 매개 변수**
+
+| URI 매개 변수 | 설명 |
+| :---          | :--- |
+| ID            | (**필요한**) Bluetooth 장치에 대 한 연결 끝점 ID는 Base64로 인코딩된 여야 합니다. |
+
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+**상태 코드**
+
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
+
+| HTTP 상태 코드 | 설명 |
+| :---             | :--- |
+| 200              | 확인 |
+| 4XX              | 오류 코드 |
+| 5XX              | 오류 코드 |
+
+**사용 가능한 장치 패밀리**
+
+* Windows 데스크톱
+* HoloLens
+* IoT
+
+
+---
+### <a name="disconnect-a-bluetooth-device"></a>Bluetooth 장치 연결 끊기
+
+**요청**
+
+이 시스템에는 오디오 장치를 사용할 수 있는 경우 장치를 끊어집니다. (선택적 구성 요소 및 정책 영향을 줄 수이 있습니다.)
+
+| 메서드       | 요청 URI              |
+| :---         | :---                     |
+| 올리기         | /api/bt/disconnectdevice |
+
+**URI 매개 변수**
+
+| URI 매개 변수 | 설명 |
+| :---          | :--- |
+| ID            | (**필요한**) Bluetooth 장치에 대 한 연결 끝점 ID는 Base64로 인코딩된 여야 합니다. |
+
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+**상태 코드**
+
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
+
+| HTTP 상태 코드 | 설명 |
+| :---             | :--- |
+| 200              | 확인 |
+| 4XX              | 오류 코드 |
+| 5XX              | 오류 코드 |
+
+**사용 가능한 장치 패밀리**
+
+* Windows 데스크톱
+* HoloLens
+* IoT
+
+---
+## <a name="device-manager"></a>디바이스 관리자
 <hr>
-## 디바이스 관리자
-<hr>
-### 컴퓨터에 설치된 디바이스 가져오기
+
+### <a name="get-the-installed-devices-on-the-machine"></a>컴퓨터에 설치된 디바이스 가져오기
 
 **요청**
 
@@ -540,14 +712,15 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 연결된 USB 장치/허브에서 데이터 가져오기
+
+### <a name="get-data-on-connected-usb-deviceshubs"></a>연결된 USB 장치/허브에서 데이터 가져오기
 
 **요청**
 
@@ -589,7 +762,7 @@ ms.locfileid: "59244139"
 }
 ```
 
-**샘플 반환 데이터**
+**데이터를 반환 하는 샘플**
 ```json
 {
     "DeviceList": [{
@@ -625,15 +798,18 @@ ms.locfileid: "59244139"
 |  200 | 확인 | 
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-## 덤프 컬렉션
+
+## <a name="dump-collection"></a>덤프 컬렉션
+
 <hr>
-### 앱에 대한 모든 크래시 덤프 목록 가져오기
+
+### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>앱에 대한 모든 크래시 덤프 목록 가져오기
 
 **요청**
 
@@ -670,7 +846,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -678,7 +854,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 앱의 크래시 덤프 컬렉션 설정 가져오기
+
+### <a name="get-the-crash-dump-collection-settings-for-an-app"></a>앱의 크래시 덤프 컬렉션 설정 가져오기
 
 **요청**
 
@@ -722,7 +899,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -730,7 +907,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 테스트용으로 로드된 앱의 크래시 덤프 삭제
+
+### <a name="delete-a-crash-dump-for-a-sideloaded-app"></a>테스트용으로 로드된 앱의 크래시 덤프 삭제
 
 **요청**
 
@@ -770,7 +948,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -778,7 +956,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 테스트용으로 로드된 앱의 크래시 덤프 사용 안 함
+
+### <a name="disable-crash-dumps-for-a-sideloaded-app"></a>테스트용으로 로드된 앱의 크래시 덤프 사용 안 함
 
 **요청**
 
@@ -817,7 +996,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -825,7 +1004,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 테스트용으로 로드된 앱의 크래시 덤프 다운로드
+
+### <a name="download-the-crash-dump-for-a-sideloaded-app"></a>테스트용으로 로드된 앱의 크래시 덤프 다운로드
 
 **요청**
 
@@ -867,7 +1047,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -875,7 +1055,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 테스트용으로 로드된 앱의 크래시 덤프 사용
+
+### <a name="enable-crash-dumps-for-a-sideloaded-app"></a>테스트용으로 로드된 앱의 크래시 덤프 사용
 
 **요청**
 
@@ -912,7 +1093,7 @@ ms.locfileid: "59244139"
 | :------     | :----- |
 |  200 | 확인 | 
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -920,7 +1101,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 오류 검사 파일 목록 가져오기
+
+### <a name="get-the-list-of-bugcheck-files"></a>오류 검사 파일 목록 가져오기
 
 **요청**
 
@@ -963,13 +1145,14 @@ ms.locfileid: "59244139"
 | :------     | :----- |
 |  200 | 확인 | 
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 오류 검사 덤프 파일 다운로드
+
+### <a name="download-a-bugcheck-dump-file"></a>오류 검사 덤프 파일 다운로드
 
 **요청**
 
@@ -1011,13 +1194,14 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 오류 검사 크래시 제어 설정 가져오기
+
+### <a name="get-the-bugcheck-crash-control-settings"></a>오류 검사 크래시 제어 설정 가져오기
 
 **요청**
 
@@ -1052,7 +1236,7 @@ ms.locfileid: "59244139"
 }
 ```
 
-**덤프 유형**
+**형식 덤프**
 
 0: 사용 안 함
 
@@ -1072,13 +1256,14 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 라이브 커널 덤프 가져오기
+
+### <a name="get-a-live-kernel-dump"></a>라이브 커널 덤프 가져오기
 
 **요청**
 
@@ -1115,13 +1300,14 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 라이브 사용자 프로세스에서 덤프 가져오기
+
+### <a name="get-a-dump-from-a-live-user-process"></a>라이브 사용자 프로세스에서 덤프 가져오기
 
 **요청**
 
@@ -1162,13 +1348,14 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 오류 검사 크래시 제어 설정 지정
+
+### <a name="set-the-bugcheck-crash-control-settings"></a>오류 검사 크래시 제어 설정 지정
 
 **요청**
 
@@ -1210,15 +1397,18 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-## ETW
+
+## <a name="etw"></a>ETW
+
 <hr>
-### Websocket을 통해 실시간 ETW 세션 만들기
+
+### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Websocket을 통해 실시간 ETW 세션 만들기
 
 **요청**
 
@@ -1255,7 +1445,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1312,7 +1502,8 @@ ms.locfileid: "59244139"
 ```
 
 <hr>
-### 등록된 ETW 공급자 열거
+
+### <a name="enumerate-the-registered-etw-providers"></a>등록된 ETW 공급자 열거
 
 **요청**
 
@@ -1355,7 +1546,7 @@ ms.locfileid: "59244139"
 | :------     | :----- |
 |  200 | 확인 | 
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1363,7 +1554,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 플랫폼에 의해 노출된 사용자 지정 ETW 공급자 열거
+
+### <a name="enumerate-the-custom-etw-providers-exposed-by-the-platform"></a>플랫폼에 의해 노출된 사용자 지정 ETW 공급자 열거
 
 **요청**
 
@@ -1403,7 +1595,7 @@ ms.locfileid: "59244139"
 
 - 표준 상태 코드입니다.
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1411,7 +1603,9 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-## 위치
+
+## <a name="location"></a>Location
+
 <hr>
 
 ### <a name="get-location-override-mode"></a>위치 재정의 모드 가져오기
@@ -1455,7 +1649,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1506,7 +1700,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1558,7 +1752,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1615,7 +1809,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1624,9 +1818,12 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-## OS 정보
+
+## <a name="os-information"></a>OS 정보
+
 <hr>
-### 컴퓨터 이름 가져오기
+
+### <a name="get-the-machine-name"></a>컴퓨터 이름 가져오기
 
 **요청**
 
@@ -1667,7 +1864,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1676,7 +1873,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 운영 체제 정보 가져오기
+
+### <a name="get-the-operating-system-information"></a>운영 체제 정보 가져오기
 
 **요청**
 
@@ -1723,7 +1921,7 @@ ms.locfileid: "59244139"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1732,7 +1930,8 @@ ms.locfileid: "59244139"
 * IoT
 
 <hr>
-### 디바이스 패밀리 가져오기 
+
+### <a name="get-the-device-family"></a>디바이스 패밀리 가져오기 
 
 **요청**
 
@@ -1777,7 +1976,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1786,7 +1985,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-### 컴퓨터 이름 설정
+
+### <a name="set-the-machine-name"></a>컴퓨터 이름 설정
 
 **요청**
 
@@ -1803,7 +2003,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| NAME | (**필수**) 컴퓨터의 새 이름입니다. |
+| name | (**필수**) 컴퓨터의 새 이름입니다. |
 
 **요청 헤더**
 
@@ -1823,7 +2023,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------     | :----- |
 | 200 | 확인 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1832,9 +2032,12 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-## 사용자 정보
+
+## <a name="user-information"></a>사용자 정보
+
 <hr>
-### 활성 사용자 받기
+
+### <a name="get-the-active-user"></a>활성 사용자 받기
 
 **요청**
 
@@ -1888,16 +2091,19 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 <hr>
-## 성능 데이터
+
+## <a name="performance-data"></a>성능 데이터
+
 <hr>
-### 실행 중인 프로세스 목록 가져오기
+
+### <a name="get-the-list-of-running-processes"></a>실행 중인 프로세스 목록 가져오기
 
 **요청**
 
@@ -1950,7 +2156,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1958,7 +2164,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-### 시스템 성능 통계 가져오기
+
+### <a name="get-the-system-performance-statistics"></a>시스템 성능 통계 가져오기
 
 **요청**
 
@@ -2028,7 +2235,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2037,9 +2244,12 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-## Power
+
+## <a name="power"></a>Power
+
 <hr>
-### 현재 배터리 상태 가져오기
+
+### <a name="get-the-current-battery-state"></a>현재 배터리 상태 가져오기
 
 **요청**
 
@@ -2088,7 +2298,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2096,7 +2306,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-### 현재 전원 구성표 가져오기
+
+### <a name="get-the-active-power-scheme"></a>현재 전원 구성표 가져오기
 
 **요청**
 
@@ -2136,13 +2347,14 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 전원 구성표에 대한 하위 값 가져오기
+
+### <a name="get-the-sub-value-for-a-power-scheme"></a>전원 구성표에 대한 하위 값 가져오기
 
 **요청**
 
@@ -2179,13 +2391,14 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 시스템의 전원 상태 가져오기
+
+### <a name="get-the-power-state-of-the-system"></a>시스템의 전원 상태 가져오기
 
 **요청**
 
@@ -2225,14 +2438,15 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 <hr>
-### 현재 전원 구성표 설정
+
+### <a name="set-the-active-power-scheme"></a>현재 전원 구성표 설정
 
 **요청**
 
@@ -2271,13 +2485,14 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 전원 구성표의 하위 값 설정
+
+### <a name="set-the-sub-value-for-a-power-scheme"></a>전원 구성표의 하위 값 설정
 
 **요청**
 
@@ -2315,13 +2530,14 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------     | :----- |
 | 200 | 확인 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 절전 연구 보고서 가져오기
+
+### <a name="get-a-sleep-study-report"></a>절전 연구 보고서 가져오기
 
 **요청**
 
@@ -2358,13 +2574,14 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 사용 가능한 절전 연구 보고서 열거
+
+### <a name="enumerate-the-available-sleep-study-reports"></a>사용 가능한 절전 연구 보고서 열거
 
 **요청**
 
@@ -2409,13 +2626,14 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-### 절전 연구 변환 가져오기
+
+### <a name="get-the-sleep-study-transform"></a>절전 연구 변환 가져오기
 
 **요청**
 
@@ -2452,15 +2670,18 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
-## 원격 제어
+
+## <a name="remote-control"></a>원격 제어
+
 <hr>
-### 대상 컴퓨터 다시 시작
+
+### <a name="restart-the-target-computer"></a>대상 컴퓨터 다시 시작
 
 **요청**
 
@@ -2493,7 +2714,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------     | :----- |
 | 200 | 확인 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2502,7 +2723,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-### 대상 컴퓨터 종료
+
+### <a name="shut-down-the-target-computer"></a>대상 컴퓨터 종료
 
 **요청**
 
@@ -2537,7 +2759,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2546,9 +2768,12 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-## 작업 관리자
+
+## <a name="task-manager"></a>작업 관리자
+
 <hr>
-### 최신 앱 시작
+
+### <a name="start-a-modern-app"></a>최신 앱 시작
 
 **요청**
 
@@ -2588,7 +2813,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2597,7 +2822,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-### 최신 앱 중지
+
+### <a name="stop-a-modern-app"></a>최신 앱 중지
 
 **요청**
 
@@ -2637,7 +2863,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2646,7 +2872,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-### PID를 사용하여 프로세스를 중단
+
+### <a name="kill-process-by-pid"></a>PID를 사용하여 프로세스를 중단
 
 **요청**
 
@@ -2685,16 +2912,19 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 <hr>
-## 네트워킹
+
+## <a name="networking"></a>네트워킹
+
 <hr>
-### 현재 IP 구성 가져오기
+
+### <a name="get-the-current-ip-configuration"></a>현재 IP 구성 가져오기
 
 **요청**
 
@@ -2771,7 +3001,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2780,7 +3010,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-### 고정 IP 주소 (IPV4 구성)를 설정 합니다.
+
+### <a name="set-a-static-ip-address-ipv4-configuration"></a>고정 IP 주소 (IPV4 구성)를 설정 합니다.
 
 **요청**
 
@@ -2830,15 +3061,17 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
 * Xbox
 * HoloLens
 * IoT
+
 <hr>
-### 무선 네트워크 인터페이스 열거
+
+### <a name="enumerate-wireless-network-interfaces"></a>무선 네트워크 인터페이스 열거
 
 **요청**
 
@@ -2891,7 +3124,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2900,7 +3133,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-### 무선 네트워크 열거
+
+### <a name="enumerate-wireless-networks"></a>무선 네트워크 열거
 
 **요청**
 
@@ -2961,7 +3195,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2970,7 +3204,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-### Wi-Fi 네트워크에 연결 및 연결 해제
+
+### <a name="connect-and-disconnect-to-a-wi-fi-network"></a>Wi-Fi 네트워크에 연결 및 연결 해제
 
 **요청**
 
@@ -3011,7 +3246,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------     | :----- |
 | 200 | 확인 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3020,7 +3255,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-### Wi-Fi 프로필 삭제
+
+### <a name="delete-a-wi-fi-profile"></a>Wi-Fi 프로필 삭제
 
 **요청**
 
@@ -3058,7 +3294,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------     | :----- |
 | 200 | 확인 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3067,9 +3303,12 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 * IoT
 
 <hr>
-## WER(Windows 오류 보고)
+
+## <a name="windows-error-reporting-wer"></a>WER(Windows 오류 보고)
+
 <hr>
-### WER(Windows 오류 보고) 파일 다운로드
+
+### <a name="download-a-windows-error-reporting-wer-file"></a>WER(Windows 오류 보고) 파일 다운로드
 
 **요청**
 
@@ -3087,8 +3326,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
 | 사용자   | (**필수**) 보고서와 연결된 사용자 이름입니다. |
-| 유형   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
-| NAME   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
+| type   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
+| name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
 | 파일   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다. Base64 인코드되어야 합니다. |
 
 **요청 헤더**
@@ -3113,14 +3352,15 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 <hr>
-### WER(Windows 오류 보고) 보고서에 파일 열거
+
+### <a name="enumerate-files-in-a-windows-error-reporting-wer-report"></a>WER(Windows 오류 보고) 보고서에 파일 열거
 
 **요청**
 
@@ -3138,8 +3378,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
 | 사용자   | (**필수**) 보고서와 연결된 사용자입니다. |
-| 유형   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
-| NAME   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
+| type   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
+| name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
 
 **요청 헤더**
 
@@ -3168,14 +3408,15 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 <hr>
-### WER(Windows 오류 보고) 보고서 나열
+
+### <a name="list-the-windows-error-reporting-wer-reports"></a>WER(Windows 오류 보고) 보고서 나열
 
 **요청**
 
@@ -3226,16 +3467,19 @@ WER 보고서 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 <hr>
-## WPR(Windows Performance Recorder) 
+
+## <a name="windows-performance-recorder-wpr"></a>WPR(Windows Performance Recorder) 
+
 <hr>
-### 사용자 지정 프로필을 사용하여 추적 시작
+
+### <a name="start-tracing-with-a-custom-profile"></a>사용자 지정 프로필을 사용하여 추적 시작
 
 **요청**
 
@@ -3279,7 +3523,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3287,7 +3531,8 @@ WPR 세션 상태 형식은 다음과 같습니다.
 * IoT
 
 <hr>
-### 부팅 성능 추적 세션 시작
+
+### <a name="start-a-boot-performance-tracing-session"></a>부팅 성능 추적 세션 시작
 
 **요청**
 
@@ -3335,7 +3580,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3343,7 +3588,8 @@ WPR 세션 상태 형식은 다음과 같습니다.
 * IoT
 
 <hr>
-### 부팅 성능 추적 세션 중지
+
+### <a name="stop-a-boot-performance-tracing-session"></a>부팅 성능 추적 세션 중지
 
 **요청**
 
@@ -3380,7 +3626,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3388,7 +3634,8 @@ WPR 세션 상태 형식은 다음과 같습니다.
 * IoT
 
 <hr>
-### 성능 추적 세션 시작
+
+### <a name="start-a-performance-tracing-session"></a>성능 추적 세션 시작
 
 **요청**
 
@@ -3436,7 +3683,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3444,7 +3691,8 @@ WPR 세션 상태 형식은 다음과 같습니다.
 * IoT
 
 <hr>
-### 성능 추적 세션 중지
+
+### <a name="stop-a-performance-tracing-session"></a>성능 추적 세션 중지
 
 **요청**
 
@@ -3481,7 +3729,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3489,7 +3737,8 @@ WPR 세션 상태 형식은 다음과 같습니다.
 * IoT
 
 <hr>
-### 추적 세션의 상태 검색
+
+### <a name="retrieve-the-status-of-a-tracing-session"></a>추적 세션의 상태 검색
 
 **요청**
 
@@ -3533,7 +3782,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3541,7 +3790,8 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 * IoT
 
 <hr>
-### 완료된 추적 세션(ETL) 나열
+
+### <a name="list-completed-tracing-sessions-etls"></a>완료된 추적 세션(ETL) 나열
 
 **요청**
 
@@ -3590,7 +3840,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3598,7 +3848,8 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 * IoT
 
 <hr>
-### 추적 세션(ETL) 다운로드
+
+### <a name="download-a-tracing-session-etl"></a>추적 세션(ETL) 다운로드
 
 **요청**
 
@@ -3639,7 +3890,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3647,7 +3898,8 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 * IoT
 
 <hr>
-### 추적 세션(ETL) 삭제
+
+### <a name="delete-a-tracing-session-etl"></a>추적 세션(ETL) 삭제
 
 **요청**
 
@@ -3688,7 +3940,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3696,9 +3948,12 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 * IoT
 
 <hr>
-## DNS-SD 태그 
+
+## <a name="dns-sd-tags"></a>DNS-SD 태그 
+
 <hr>
-### 태그 보기
+
+### <a name="view-tags"></a>태그 보기
 
 **요청**
 
@@ -3742,7 +3997,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 | 5XX | 서버 오류 |
 
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3751,7 +4006,8 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 * IoT
 
 <hr>
-### 태그 삭제
+
+### <a name="delete-tags"></a>태그 삭제
 
 **요청**
 
@@ -3787,7 +4043,7 @@ DNS-SD에 의해 현재 알려진 모든 태그를 삭제합니다.
 | 5XX | 서버 오류 |
 
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3796,7 +4052,8 @@ DNS-SD에 의해 현재 알려진 모든 태그를 삭제합니다.
 * IoT
 
 <hr>
-### 태그 삭제
+
+### <a name="delete-tag"></a>태그 삭제
 
 **요청**
 
@@ -3833,7 +4090,7 @@ DNS-SD에 의해 현재 알려진 태그를 삭제합니다.
 | 200 | 확인 |
 
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3842,7 +4099,8 @@ DNS-SD에 의해 현재 알려진 태그를 삭제합니다.
 * IoT
  
 <hr>
-### 태그 추가
+
+### <a name="add-a-tag"></a>태그 추가
 
 **요청**
 
@@ -3880,7 +4138,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 401 | 태그 공간 오버플로.  제안된 태그가 생성되는 DNS-SD 서비스 레코드에 너무 긴 경우의 결과입니다. |
 
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3891,7 +4149,8 @@ DNS-SD 알림에 태그를 추가합니다.
 ## <a name="app-file-explorer"></a>앱 파일 탐색기
 
 <hr>
-### 알려진 폴더 가져오기
+
+### <a name="get-known-folders"></a>알려진 폴더 가져오기
 
 **요청**
 
@@ -3932,7 +4191,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 5XX | 오류 코드 |
 
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3941,7 +4200,8 @@ DNS-SD 알림에 태그를 추가합니다.
 * IoT
 
 <hr>
-### 파일 가져오기
+
+### <a name="get-files"></a>파일 가져오기
 
 **요청**
 
@@ -3992,7 +4252,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4001,7 +4261,8 @@ DNS-SD 알림에 태그를 추가합니다.
 * IoT
 
 <hr>
-### 파일 다운로드
+
+### <a name="download-a-file"></a>파일 다운로드
 
 **요청**
 
@@ -4040,7 +4301,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 404 | 파일을 찾을 수 없습니다. |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4049,7 +4310,8 @@ DNS-SD 알림에 태그를 추가합니다.
 * IoT
 
 <hr>
-### 파일 이름 바꾸기
+
+### <a name="rename-a-file"></a>파일 이름 바꾸기
 
 **요청**
 
@@ -4092,7 +4354,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 404 | 파일을 찾을 수 없습니다. |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4101,7 +4363,8 @@ DNS-SD 알림에 태그를 추가합니다.
 * IoT
 
 <hr>
-### 파일 삭제
+
+### <a name="delete-a-file"></a>파일 삭제
 
 **요청**
 
@@ -4142,7 +4405,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 404 | 파일을 찾을 수 없습니다. |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4151,7 +4414,8 @@ DNS-SD 알림에 태그를 추가합니다.
 * IoT
 
 <hr>
-### 파일 업로드
+
+### <a name="upload-a-file"></a>파일 업로드
 
 **요청**
 
@@ -4189,7 +4453,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 디바이스 패밀리**
+**사용 가능한 장치 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱

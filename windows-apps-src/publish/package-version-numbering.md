@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a8ce14094733ef5598c510198f4268744cb581e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bf71e5f6dd77da025a50866d32caca2870d3525b
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621878"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63788428"
 ---
 # <a name="package-version-numbering"></a>패키지 버전 번호
 
@@ -36,13 +36,13 @@ UWP 패키지에서 게시 된 제출물을 선택할 때 Microsoft Store 고객
 
 다음 예제에서는 여러 제출을 통해 고객에게 의도된 패키지를 전달하기 위해 버전 번호를 관리하는 방법을 보여 줍니다.
 
-### <a name="example-moving-to-a-single-package-over-multiple-submissions"></a>예제: 여러 전송을 통해 단일 패키지 이동
+### <a name="example-moving-to-a-single-package-over-multiple-submissions"></a>예: 여러 전송을 통해 단일 패키지 이동
 
 Windows 10 작성할 수 있게 단일 코드 베이스를 어디에 나를 실행 하는 합니다. 이를 통해 새 플랫폼 간 프로젝트를 훨씬 쉽게 시작할 수 있습니다. 그러나 여러 가지 이유로, 기존 코드베이스를 병합한 단일 프로젝트를 바로 만들지 않을 수 있습니다.
 
 이동할 점진적으로 고객에 게 유니버설 장치 제품군에 대 한 단일 패키지 (Windows 10 Api를 활용 하는 것 포함)는 특정 장치 제품군에 대 한 중간 업데이트 횟수를 전달 하는 동안 패키지 버전 관리 규칙을 사용할 수 있습니다. 아래 예제에서는 동일한 규칙을 일련의 동일한 앱에 대 한 서브 미션을 통해 일관 되 게 적용 되는 방법을 보여 줍니다.
 
-| 제출 | 콘텐츠                                                  | 고객 환경                                                                                                                                                                             |
+| 제출 | 내용                                                  | 고객 환경                                                                                                                                                                             |
 |------------|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1          | 패키지 버전: 1.1.10.0 <br> 장치 패밀리: Windows.Desktop, minVersion 10.0.10240.0 <br> <br> 패키지 버전: 1.1.0.0 <br> 장치 패밀리: Windows.Mobile, minVersion 10.0.10240.0     | -   Windows 10 Desktop 빌드 10.0.10240.0 이상의 장치는 1.1.10.0을 가져옴 <br> -   Windows 10 Mobile 빌드 10.0.10240.0 이상의 장치는 1.1.0.0을 가져옴 <br> -   다른 장치 패밀리는 앱을 구매하여 설치할 수 없음 |
 | 2          | 패키지 버전: 1.1.10.0 <br> 장치 패밀리: Windows.Desktop, minVersion 10.0.10240.0 <br> <br> 패키지 버전: 1.1.0.0 <br> 장치 패밀리: Windows.Mobile, minVersion 10.0.10240.0 <br> <br> 패키지 버전: 1.0.0.0 <br> 장치 패밀리: Windows.Universal, minVersion 10.0.10240.0    | -   Windows 10 Desktop 빌드 10.0.10240.0 이상의 장치는 1.1.10.0을 가져옴 <br> -   Windows 10 Mobile 빌드 10.0.10240.0 이상의 장치는 1.1.0.0을 가져옴 <br> -   다른(비 데스크톱, 비 모바일) 장치 패밀리는 도입된 경우 1.0.0.0을 가져옴 <br> -   앱을 이미 설치한 데스크톱 및 모바일 장치에는 업데이트가 표시되지 않음(이미 최상의 버전이 있기 때문, 1.1.10.0과 1.1.0.0은 둘 다 1.0.0.0보다 높음) |

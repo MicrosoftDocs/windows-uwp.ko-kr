@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 시장, 국가, 지역
 ms.localizationpriority: medium
-ms.openlocfilehash: 980dc41303a2689c0f86415beb6ba9adb44fe39c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3621e9c6af0daa84a9762989a14c79f35471b73c
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646248"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63787115"
 ---
 # <a name="define-market-selection"></a>시장 선택 정의
 
@@ -58,7 +58,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
     <td>알제리</td>
   </tr>
   <tr>
-    <td>미국령 사모아</td>
+    <td>아메리칸 사모아</td>
     <td>안도라</td>
     <td>앙골라</td>
     <td>앵귈라</td>
@@ -428,7 +428,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 
 &nbsp;
 
-| 국가/ 지역       | 결제 방법  | 상거래 확장 조정 | 적용 날짜 |
+| 국가/지역       | 결제 방법  | 상거래 확장 조정 | 적용 날짜 |
 |----------------------|-----------------|-------------------------------|----------------|
 | 아르헨티나            | 기프트 카드       | 2.24%                         | 2016년 3월     |
 | 오스트레일리아            | 기프트 카드       | 2.24%                         | 2016년 3월     |
@@ -468,7 +468,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 | 스위스          | 기프트 카드       | 2.24%                         | 2016년 3월     |
 | 대만               | 기프트 카드       | 2.24%                         | 2016년 3월     |
 | 터키               | 기프트 카드       | 2.24%                         | 2016년 3월     |
-| 아랍에미리트 | 기프트 카드       | 2.24%                         | 2016년 3월     |
+| 아랍 에미리트 연합국 | 기프트 카드       | 2.24%                         | 2016년 3월     |
 | 영국       | 기프트 카드       | 2.24%                         | 2016년 3월     |
 | 미국        | 기프트 카드       | 2.24%                         | 2016년 3월     |
 
@@ -487,7 +487,7 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
     <td>아프가니스탄</td>
     <td>올란드 제도</td>
     <td>알바니아</td>
-    <td>미국령 사모아</td>
+    <td>아메리칸 사모아</td>
   </tr>
   <tr>
     <td>안도라</td>

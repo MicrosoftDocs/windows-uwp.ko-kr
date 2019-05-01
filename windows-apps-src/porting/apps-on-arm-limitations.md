@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10 s, 항상 연결, 제한, ARM 기반 Windows 10
 ms.localizationpriority: medium
 redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
-ms.openlocfilehash: 42a2866642d11d1d97cc7b0b663486723499a5cf
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b282cda4e77533f5cf946e0d73121dffb1bcfd48
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633458"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63814993"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>ARM의 앱 및 환경 제한
 ARM 기반 Windows 10은 다음과 같은 필수 제한 사항이 있습니다.
@@ -30,7 +30,7 @@ ARM 기반 Windows 10은 다음과 같은 필수 제한 사항이 있습니다.
 
 다음 표에서 몇 가지 일반적인 문제를 설명하고 이를 해결하는 방법에 대해 제안합니다.
 
-|문제|솔루션|
+|문제점|해결 방법|
 |-----|--------|
 | 앱은 ARM용으로 고안되지 않은 드라이버를 사용합니다. | x86 드라이버를 ARM64에 다시 컴파일합니다. [WDK를 사용하여 ARM64 드라이버 빌드](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)를 참조하세요. |
 | 앱은 x64에서만 사용할 수 있습니다. | Microsoft Store용으로 개발하는 경우 앱의 ARM 버전을 제출하세요. 자세한 내용은 [앱 패키지 아키텍처](../packaging/device-architecture.md)를 참조하세요. Win32 개발자는 경우 앱의 x86 버전을 배포합니다. |

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, 대상 알림, 푸시 알림, 알림, 타일
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
-ms.openlocfilehash: 9858665eaf36f5cd261dd1098b23aeecccf9179c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1c9a2f4a7dfd7af1eb0e0f74496e71f738b65b63
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653218"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63788297"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>앱의 고객에게 알림 보내기
 
@@ -154,4 +154,4 @@ ms.locfileid: "57653218"
 - [UWP 앱에 대 한 타일](../design/shell/tiles-and-notifications/creating-tiles.md)
 - [WNS(Windows 푸시 알림 서비스) 개요](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)
 - [알림 시각화 도우미 앱](https://www.microsoft.com/store/apps/9nblggh5xsl1)
-- [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | registerNotificationChannelAsync() 메서드](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync)
+- [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | registerNotificationChannelAsync() method](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync)

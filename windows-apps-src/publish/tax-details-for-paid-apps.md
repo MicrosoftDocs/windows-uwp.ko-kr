@@ -6,12 +6,12 @@ ms.date: 03/05/2019
 ms.topic: article
 keywords: Windows 10, uwp, 세금, 앱 세금, 세금 요구 사항, 상거래 확장, 세율
 ms.localizationpriority: medium
-ms.openlocfilehash: b0dca42fdc9229cf9d235fbb810f92774ec6f4de
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 82f10abe57d9d5542286183180012b26478f88cf
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58136661"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63788159"
 ---
 # <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Windows 응용 프로그램/게임 개발자와 Azure Marketplace 게시자에 대 한 세금 세부 정보
 
@@ -34,7 +34,7 @@ ms.locfileid: "58136661"
 | 아프가니스탄                      | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
 | 알바니아                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
 | 알제리                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
-| 미국령 사모아                   | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
+| 아메리칸 사모아                   | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
 | 안도라                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
 | 앵귈라                         | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
 | 앙골라                           | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
@@ -80,7 +80,7 @@ ms.locfileid: "58136661"
 | 코코스 제도          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
 | 콜롬비아                         | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.  | 저장소 요금 빼기 가격                 | Developer          |
 | 코모로                          | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
-| 콩고                            | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
+| 콩고 공화국                            | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
 | 콩고 민주 공화국                      | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
 | 쿡 제도                     | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 저장소 요금 빼기 가격                 | Developer          |
 | 코스타리카                       | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.  | 저장소 요금 빼기 가격                 | Developer          |

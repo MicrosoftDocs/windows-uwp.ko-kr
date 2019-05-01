@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
-ms.openlocfilehash: 17025282aec18da01f14431996a3942ffdd90312
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 59c7e5b2c9ceea534f530bc6880b32a808c91e70
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57629678"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63787041"
 ---
 # <a name="enter-add-on-properties"></a>추가 기능 속성 입력
 
@@ -53,7 +53,7 @@ ms.locfileid: "57629678"
 > 추가 기능을 게시한 후에는 선택한 **무료 평가판**을 변경할 수 없습니다.
 
 
-## <a name="content-type"></a>콘텐츠 유형
+## <a name="content-type"></a>콘텐츠 형식
 
 추가 기능의 제품 유형과 관계없이 제공할 콘텐츠 유형도 표시해야 합니다. 대부분의 추가 기능에 대한 콘텐츠 형식은 **전자 소프트웨어 다운로드**여야 합니다. 목록의 다른 옵션이 추가 기능을 더 잘 설명하는 경우(예를 들어 음악 다운로드 또는 전자책을 제공하는 경우) 해당 옵션을 대신 선택합니다.
 

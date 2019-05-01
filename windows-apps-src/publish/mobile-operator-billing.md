@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, uwp, 통신사, 모바일 청구, 통신사 청구
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f23e40abfb269e2b52e9dc5b66c2486da071c9b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 760c7ea7929d287c241ddcba48bc6687e9bc2b51
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57591838"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63827658"
 ---
 # <a name="mobile-operator-billing"></a>통신사 청구
 
@@ -25,33 +25,33 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 
 통신사 청구는 현재 다음 통신사에서 지원하고 있습니다.
 
-| 국가/ 지역  | 통신사                 |
-|-----------------|----------------------------------|
-| 오스트레일리아       | Optus                            |
-| 오스트리아         | Hutchison 3G Austria, A1 Telekom, T-Mobile / tele.ring  |
-| 벨기에         | Base, Proximus                   |
-| 캐나다          | Telus                            |
-| 체코  | T-Mobile                         |
-| 덴마크         | 3, TDC / YouSee, Telenor, Telia  |
-| 핀란드         | DNA, Elisa                       |
-| 프랑스          | Orange                           |
-| 독일         | O2, Telekom Deutschland          |
-| 헝가리         | Telenor                          |
-| 이탈리아           | Wind, Tre                        |
-| 말레이시아        | Digi                             |
-| 네덜란드     | KPN / Telfort                    |
-| 노르웨이          | Telenor / Talkmore, Telia / OneCall   |
-| 폴란드          | 주황, 재생                     |
-| 싱가포르       | M1 제한 되어 StarHub              |
-| 슬로바키아        | Slovak Telekom                   |
-| 스페인           | Orange                           |
-| 스웨덴          | Telenor, 3                       |
-| 스위스     | Swisscom, Sunrise                |
-| 대만          | FarEasTone                       |
-| 터키          | Turkcell                         |
-| 아랍에미리트 | Etisalat                    |
-| 미국   | Sprint, Verizon                  |
-| 영국  | O2, 3 UK, EE                     |
+| 국가/지역       | 통신사                                        |
+|----------------------|---------------------------------------------------------|
+| 오스트레일리아            | Optus                                                   |
+| 오스트리아              | Hutchison 3G Austria, A1 Telekom, T-Mobile / tele.ring  |
+| 벨기에              | Base, Proximus                                          |
+| 캐나다               | Telus                                                   |
+| 체코       | T-Mobile                                                |
+| 덴마크              | 3, TDC / YouSee, Telenor, Telia                         |
+| 핀란드              | DNA, Elisa                                              |
+| 프랑스               | Orange                                                  |
+| 독일              | O2 Telekom Deutschland Vodafone                       |
+| 헝가리              | Telenor                                                 |
+| 이탈리아                | Wind, Tre                                               |
+| 말레이시아             | Digi                                                    |
+| 네덜란드          | KPN / Telfort                                           |
+| 노르웨이               | Telenor / Talkmore, Telia / OneCall                     |
+| 폴란드               | 주황, 재생                                            |
+| 싱가포르            | M1 Limited, StarHub                                     |
+| 슬로바키아             | Slovak Telekom                                          |
+| 스페인                | Orange                                                  |
+| 스웨덴               | Telenor, 3                                              |
+| 스위스          | Swisscom, Sunrise                                       |
+| 대만               | FarEasTone                                              |
+| 터키               | Turkcell                                                |
+| 아랍 에미리트 연합국 | Etisalat                                                |
+| 미국        | Sprint, Verizon                                         |
+| 영국       | O2, 3 UK, EE                                            |
 
  
 

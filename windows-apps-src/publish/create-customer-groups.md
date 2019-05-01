@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, 고객 그룹, 세그먼트, 플라이트 그룹, 알려진 사용자 그룹
 ms.assetid: ad1a5a02-71aa-47d9-8d03-2d85f4941442
 ms.localizationpriority: medium
-ms.openlocfilehash: b757c304398c60bd539eb3c023892b68138880db
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d4e9f0742a5b478468320991f5689ee95ca13a0c
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605298"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63811980"
 ---
 # <a name="create-customer-groups"></a>고객 그룹 만들기
 

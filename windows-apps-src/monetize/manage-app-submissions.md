@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: fa5b5a62348a36f7758468a86e19b744cdde8754
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 474abc2ec43b7f8eab408bd75cca33653d27d932
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335089"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63789674"
 ---
 # <a name="manage-app-submissions"></a>앱 제출 관리
 
@@ -394,7 +394,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 형식    | 설명    |
 |-----------------|---------|------|
-|  NAME               |    string     |   판매의 이름입니다.    |     
+|  name               |    string     |   판매의 이름입니다.    |     
 |  basePriceId               |   string      |  판매의 기본 가격으로 사용할 [기준 가격](#price-tiers)입니다.    |     
 |  startDate               |   string      |   판매의 시작 날짜(ISO 8601 형식)입니다.  |     
 |  endDate               |   string      |  판매의 종료 날짜(ISO 8601 형식)입니다.      |     
@@ -499,7 +499,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  localCooperativeMaxPlayers               |   ssNoversion      |   게임이 로컬 협동 게임에서 지원하는 플레이어의 최대 수를 지정합니다.  |     
 |  isBroadcastingPrivilegeGranted               |   boolean      |  게임이 브로드캐스팅을 지원하는지 나타냅니다.   |     
 |  isCrossPlayEnabled               |   boolean      |   게임이 Windows 10 PC와 Xbox 플레이어 간 멀티플레이어 세션을 지원하는지 나타냅니다.  |     
-|  kinectDataForExternal               |   string      |  다음 문자열 값은 게임이 Kinect 데이터를 수집해 외부 서비스로 전송할 수 있는지 나타냅니다. <ul><li>NotSet</li><li>알 수 없음</li><li>설정</li><li>사용 안 함</li></ul>   |
+|  kinectDataForExternal               |   string      |  다음 문자열 값은 게임이 Kinect 데이터를 수집해 외부 서비스로 전송할 수 있는지 나타냅니다. <ul><li>NotSet</li><li>알 수 없음</li><li>Enabled</li><li>사용 안 함</li></ul>   |
 
 > [!NOTE]
 > Microsoft Store 제출 API를 개발자에게 처음 출시한 후 2017년 5월에 *gamingOptions* 리소스가 추가되었습니다. 이 리소스가 도입되기 전에 제출 API를 통해 앱 제출을 생성했고, 이 제출이 아직 진행 중이라면 제출을 성공적으로 커밋하거나 삭제하기 전에 이 리소스는 앱 제출에 대해 널 상태가 됩니다. 앱 제출에 *gamingOptions* 리소스를 사용할 수 없는 경우 [앱 가져오기](get-an-app.md) 메서드에서 반환된 [응용 프로그램 리소스](get-app-data.md#application_object)의 *hasAdvancedListingPermission* 필드는 false입니다.

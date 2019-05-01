@@ -6,12 +6,12 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e108d603a623e3b9e41d7ced3c0fafc80f006b8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: acc39dfecaf4360f9f5b7db9f3c1fe34021f35c0
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610818"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63788226"
 ---
 # <a name="view-app-identity-details"></a>앱 ID 세부 정보 보기
 
@@ -25,9 +25,9 @@ Microsoft Store에서 앱에 할당 된 고유 id와 관련 된 세부 정보를
 
 패키지 매니페스트에 다음 값을 포함 되어야 합니다. [Microsoft Visual Studio를 사용하여 패키지를 빌드](../packaging/packaging-uwp-apps.md)하고 개발자 계정에 연결된 동일한 Microsoft 계정으로 로그인을 하면 이들 세부 정보가 자동으로 포함됩니다. 패키지를 수동으로 빌드할 경우에는 이들 항목을 반드시 추가해야 합니다.
 
--   **패키지/Id 이름**
--   **패키지/Identity/게시자**
--   **패키지/속성/PublisherDisplayName**
+-   **Package/Identity/Name**
+-   **Package/Identity/Publisher**
+-   **Package/Properties/PublisherDisplayName**
 
 자세한 내용은 [패키지 매니페스트 스키마 참조](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root)에서 [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)를 참조하세요.
 

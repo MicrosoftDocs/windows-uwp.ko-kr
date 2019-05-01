@@ -2,16 +2,17 @@
 ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: 앱 접근 권한 값 선언
 description: '사진, 음악 또는 디바이스(예: 카메라 또는 마이크)와 같은 특정 리소스 및 API에 액세스하려면 UWP(유니버설 Windows 플랫폼) 앱의 패키지 매니페스트에서 접근 권한 값을 선언해야 합니다.'
-ms.date: 11/26/2018
+ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 58609ed1b3b2e178c735f3ebf042a98587ce6cb9
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.custom: 19H1
+ms.openlocfilehash: 3c126b17e8ba9b66bc5e7c4fccd0142cd63ab7e9
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57822948"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63777910"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -155,7 +156,7 @@ ms.locfileid: "57822948"
 | **시스템 수준 약속 액세스** | **appointmentsSystem** 제한된 접근 권한 값을 통해 앱은 사용자 일정의 모든 약속을 읽고 수정할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Appointment**](https://msdn.microsoft.com/library/windows/apps/Dn263359) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
 | **시스템 수준 채팅 메시지 액세스**\* | **chatSystem** 제한된 접근 권한 값을 통해 앱은 모든 SMS 및 MMS 메시지를 읽고 쓸 수 있습니다.<br />이 접근 권한 값은 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/Dn642321) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
 | **시스템 수준 연락처 액세스** | **contactsSystem** 제한된 접근 권한 값을 통해 앱은 제한되거나 중요하다고 지정된 연락처 정보를 읽고 기존 연락처 정보를 수정할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/Dn642321) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
-| **메일 액세스*** | **email** 제한된 접근 권한 값을 통해 앱은 사용자 메일을 읽고, 심사하고, 보낼 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Email**](https://msdn.microsoft.com/library/windows/apps/Dn631285) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
+| **메일 액세스** | **email** 제한된 접근 권한 값을 통해 앱은 사용자 메일을 읽고, 심사하고, 보낼 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Email**](https://msdn.microsoft.com/library/windows/apps/Dn631285) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
 | **시스템 수준 메일 액세스**| **emailSystem** 제한된 접근 권한 값을 통해 앱은 사용자가 제한하거나 중요한 메일을 읽고, 심사하고, 보낼 수 있습니다. <br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Email**](https://msdn.microsoft.com/library/windows/apps/Dn631285) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
 | **시스템 수준 통화 기록 액세스** | **phoneCallHistorySystem** 제한된 접근 권한 값을 통해 앱은 기존 항목을 변경하고 새 항목을 작성하여 통화 기록을 완전히 수정할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Calls**](https://msdn.microsoft.com/library/windows/apps/Dn297266) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
 | **문자 메시지 보내기**\* | **smsSend** 제한된 접근 권한 값을 통해 앱은 SMS 및 MMS 메시지를 보낼 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/Dn642321) 네임스페이스의 API를 사용하는 데 필요합니다. |
@@ -213,7 +214,14 @@ ms.locfileid: "57822948"
 | **Windows Team 장치 자격 증명** | 합니다 **teamEditionDeviceCredential** 제한 된 기능은 Windows 10 버전 1703 이상이 실행 Surface Hub 장치의 장치 계정 자격 증명을 요청 하는 Api에 액세스 하는 앱을 허용 합니다.<br/><br/>Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
 | **Windows 팀 응용 프로그램 보기** | 합니다 **teamEditionView** 제한 된 기능은 Windows 10 버전 1703 이상이 실행 Surface Hub 장치 응용 프로그램 보기를 호스트 하기 위한 Api에 액세스 하는 앱을 허용 합니다.<br/><br/>Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
 | **카메라 처리 확장 프로그램** | 합니다 **cameraProcessingExtension** 제한 된 기능을 사용 하면 앱을 직접 카메라 컨트롤 없이 카메라에서 캡처된 이미지를 처리 합니다.<br /><br />이 기능에서 Api를 호출 해야 합니다 [Windows.Devices.PointOfService.Provider](/uwp/api/windows.devices.pointofservice.provider) 네임 스페이스입니다.<br /><br />스토어 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다. |
-| **데이터 사용량 관리*** | 합니다 **networkDataUsageManagement** 제한 된 기능에는 앱 네트워크 데이터 사용량 정보를 수집할 수 있도록 허용 합니다.<br /><br />이 기능은 호출 해야 합니다. [GetAttributedNetworkUsageAsync](/uwp/api/windows.networking.connectivity.connectionprofile.getattributednetworkusageasync)합니다.<br /><br />스토어 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다. |
+| **데이터 사용량 관리** | 합니다 **networkDataUsageManagement** 제한 된 기능에는 앱 네트워크 데이터 사용량 정보를 수집할 수 있도록 허용 합니다.<br /><br />이 기능은 호출 해야 합니다. [GetAttributedNetworkUsageAsync](/uwp/api/windows.networking.connectivity.connectionprofile.getattributednetworkusageasync)합니다.<br /><br />스토어 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다. |
+| **Phone 줄 연결 관리** | 합니다 **phoneLineTransportManagement** 기능 phone 줄 연결을 담당 하는 시스템 장치를 관리 하는 앱을 허용 합니다.<br /><br />이 기능은 PhoneLineTransportDevice Api를 사용 해야 합니다 [이 Windows.ApplicationModel.Calls](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls) 네임 스페이스입니다. |
+| **Unvirtualized 리소스** | **unvirtualizedResources** 제한 된 기능을 사용 하면 응용 프로그램을 선언 합니다 [RegistryWriteVirtualization](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-registrywritevirtualization) 하 고 [FileSystemWriteVirtualization](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-filesystemwritevirtualization) 레지스트리 및 파일 시스템에 대해 가상화를 사용 하지 않도록 설정 하려면 패키지 매니페스트에서 요소입니다. 이러한 선언을 HKEY_CURRENT_USER로 또는 사용자의 AppData 폴더에 모든 쓰기를 각각 가상화 시스템을 방지 합니다. 여기서 응용 프로그램의 필요를 읽거나 응용 프로그램과 동일한 레지스트리 또는 파일 시스템 항목을 쓰는 다른 응용 프로그램 시나리오에서 유용 합니다.<br /><br />이 기능은 특정 유형의 Microsoft 및 파트너에서 게시 하는 데스크톱 PC 게임을 위한 것입니다. 것은 아닙니다 다른 시나리오에 사용 되는 완전히 제거 하는 시스템의 기능을 손상 시킬 수 것 때문입니다. |
+| **수정할 수 있는 앱** | **modifiableApp** 제한 된 기능을 사용 하면 응용 프로그램을 선언 합니다 [windows.mutablePackageDirectories](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-package-extension) 패키지 매니페스트에서 확장 합니다. 이 옵션을 사용 하면 응용 프로그램의 필요를 폴더의 이름을 수정 하거나 추가 파일을 찾을 수를 제공할 수 있습니다. OS를이 폴더를 만들고 대신 (또는 외에)이이 폴더에 파일을 사용 하도록 응용 프로그램을 사용 하도록 설정 원래 응용 프로그램에서 설치 되는 파일입니다.<br /><br />이 기능은 특정 유형의 Microsoft 및 파트너에서 게시 하는 데스크톱 PC 게임을 위한 것입니다. 서명 되지 않은 코드 실행을 허용할 수 있으므로 다른 시나리오에 대 한 부여 됩니다. |
+| **패키지 쓰기 리디렉션 호환성 Shim** | 합니다 **packageWriteRedirectionCompatibilityShim** 사용자별 위치에 모든 새 파일을 만들려면 응용 프로그램을 구성 하는 제한 된 기능입니다. 쓰기에 대 한 열려 있는 모든 기존 파일은 사용자별 위치로 먼저 복사 및 수정 오류가 발생 하는 해당 위치에 있는 파일입니다. 이 기능은 만들거나 해당 설치 폴더에서 파일을 수정 하는 응용 프로그램에 유용 합니다.<br /><br />이 기능은 특정 유형의 Microsoft 및 파트너에서 게시 하는 데스크톱 PC 게임을 위한 것입니다. 그러나이 수도 경우도 다른 앱에 적용할 수 있습니다. |
+| **사용자 지정 설치 작업** | 합니다 **customInstallActions** 제한 된 기능을 사용 하면 응용 프로그램을 선언 합니다 [windows.customInstall](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-package-extension) 하나를 지정할 수 있도록 매니페스트 또는 더 추가 하 고 패키지에는 확장 설치 관리자 파일 (.exe 또는.msi) 응용 프로그램으로 실행 됩니다. 표준 배포 시나리오 중 하나에 대 한 사용자 지정 작업을 지정할 수 있습니다: 설치, 업데이트, 복구 또는 제거 합니다. 예를 들어, 응용 프로그램 번들을 타사 재배포 가능 구성 요소에 대해 유용 합니다.<br /><br />이 기능은 특정 유형의 Microsoft 및 파트너에서 게시 하는 데스크톱 PC 게임을 위한 것입니다. 다른 시나리오에 대 한 부여 되지 않습니다. |
+| **패키지 서비스** | 합니다 **packagedServices** 제한 된 기능을 선언 하는 Microsoft 파트너와 기업에서 만들어진 응용 프로그램을 통해 합니다 [windows.service](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-extension) 있도록 해당 패키지에서 확장 매니페스트 한다는 앱과 함께 하나 이상의 서비스를 설치할 수 있습니다. 이러한 서비스는 로컬 서비스, 네트워크 서비스 또는 로컬 시스템 계정으로 실행 되도록 구성할 수 있습니다. Local Service 및 Network Service 서비스에만 필요 합니다 **packagedServices** 기능입니다. 로컬 시스템 서비스는 둘 다 있어야 합니다 **packagedServices** 하 고 **localSystemServices** 기능입니다.<br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다.  |
+| **로컬 시스템 서비스** | 합니다 **localSystemServices** 제한 된 기능을 사용 하면 Microsoft 파트너 및 엔터프라이즈 앱과 함께 하나 이상의 로컬 시스템 서비스를 설치 하 여 만든 응용 프로그램 (즉, 응용 프로그램이 선언할 수는 StartAccount 서비스용 LocalSystem 되도록). 이 시나리오 에서도 필요 합니다 **packagesServices** 기능입니다. <br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. 
 
 ## <a name="custom-capabilities"></a>사용자 지정 기능
 

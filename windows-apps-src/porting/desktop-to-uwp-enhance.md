@@ -2,16 +2,17 @@
 Description: 유니버설 Windows 플랫폼 (UWP) Api를 사용 하 여 Windows 10 사용자를 위한 데스크톱 응용 프로그램을 향상 합니다.
 Search.Product: eADQiWindows 10XVcnh
 title: Windows 10용 데스크톱 응용 프로그램 개선
-ms.date: 10/15/2018
+ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e06de7d33604981e0055d9d57f774d280753db2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.custom: 19H1
+ms.openlocfilehash: 55e91c96b7a978f0c90365073aa655553d4a658a
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57628038"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63805687"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Windows 10용 데스크톱 응용 프로그램 개선
 
@@ -31,21 +32,22 @@ Windows 런타임 Api를 사용 하 여 실행 되는 Windows 10 사용자에 �
 
 그리고 이러한 파일에 참조를 추가합니다.
 
-|파일|위치|
+|파일|Location|
 |--|--|
 |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
 |System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
 |System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-|Windows.Foundation.UniversalApiContract.winmd|C:\Program 파일 (x86) \Windows Kits\10\References\<*sdk 버전*> \Windows.Foundation.UniversalApiContract\<*버전*>|
-|Windows.Foundation.FoundationContract.winmd|C:\Program 파일 (x86) \Windows Kits\10\References\<*sdk 버전*> \Windows.Foundation.FoundationContract\<*버전*>|
+|windows.winmd|C:\Program Files (x86)\Windows Kits\10\UnionMetadata\\<*sdk version*>\Facade|
+|Windows.Foundation.UniversalApiContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\\<*sdk version*>\Windows.Foundation.UniversalApiContract\<*version*>|
+|Windows.Foundation.FoundationContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\\<*sdk version*>\Windows.Foundation.FoundationContract\<*version*>|
 
 **속성** 창에서 각 *.winmd* 파일의 **로컬 복사** 필드를 **False**로 설정합니다.
 
 ![copy-local-field](images/desktop-to-uwp/copy-local-field.png)
 
-### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Windows 런타임 Api를 사용 하는 c + + 프로젝트를 수정 합니다.
+### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>수정 된 C++ Windows 런타임 Api를 사용 하도록 프로젝트
 
-사용 하 여 [C + + /cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) Windows 런타임 Api를 사용 하도록 합니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다.
+사용 하 여 [ C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) Windows 런타임 Api를 사용 하도록 합니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다.
 
 C +에 대 한 프로젝트를 구성 하려면 + WinRT, 참조 [추가할 C + Windows 데스크톱 응용 프로그램 프로젝트를 수정 + WinRT 지원](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support)합니다.
 

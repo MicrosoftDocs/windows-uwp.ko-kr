@@ -4,12 +4,12 @@ title: 결제 요청 API로 결제를 간단하게
 ms.date: 09/26/2017
 ms.topic: article
 keywords: windows 10, uwp, 지불 요청
-ms.openlocfilehash: 36078c65d6762c8ed477a3a1342f3b6a0acaaa6f
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: a40b8265e3445319bd7baa530df0f9e9eaae0f31
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334591"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63804492"
 ---
 # <a name="simplify-payments-with-the-payment-request-api"></a>결제 요청 API로 결제를 간단하게
 UWP 앱에 대 한 지불 요청 API 기반으로 합니다 [W3C 지불 요청 API 사양](https://w3c.github.io/browser-payment-api/)합니다. UWP 앱에서 체크 아웃 프로세스를 간소화 하는 기능 제공. 사용자가 체크 아웃을 통해 지불 옵션을 사용 하 고 이미 Microsoft 계정으로 저장 하는 주소를 전달 하 여 단축할 수 있습니다. 전환율을 높일 수 있으며 결제 정보를 토큰화 있으므로 데이터 침해 위험을 줄일 수 있습니다. Windows 10 크리에이터 스 업데이트부터, 사용자는 해당 저장 된 지불 옵션 UWP 앱에서 환경을 통해 쉽게 비용을 지불 사용할 수 있습니다.

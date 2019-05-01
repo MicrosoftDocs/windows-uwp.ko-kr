@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 표시 여부, 개인 대상, 사용 가능, 검색 가능
 ms.localizationpriority: medium
-ms.openlocfilehash: a002037e85f179e4a2dbe3dfdaf4bc3579e110e4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8c78b8c7a84c6bdaedb58055d8b36883c6a61607
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601738"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63787154"
 ---
 # <a name="choose-visibility-options"></a>표시 여부 옵션 선택
 
@@ -71,7 +71,7 @@ ms.locfileid: "57601738"
 
 ### <a name="make-this-product-available-and-discoverable-in-the-store"></a>Store에서 사용할 수 있지만 검색되지 않는 제품으로 설정
 
-이는 기본 옵션입니다. 선택한 앱을 스토어 앱의 직접 링크를 통해 및/또는 큐 레이트 목록의 검색, 찾아보기 및 포함을 비롯 한 다른 메서드에서 찾기에 표시 하려는 경우이 옵션을 그대로 둡니다. 
+이 옵션이 기본 옵션입니다. 선택한 앱을 스토어 앱의 직접 링크를 통해 및/또는 큐 레이트 목록의 검색, 찾아보기 및 포함을 비롯 한 다른 메서드에서 찾기에 표시 하려는 경우이 옵션을 그대로 둡니다. 
 
 ### <a name="make-this-product-available-but-not-discoverable-in-the-store"></a>Store에서 사용할 수 있지만 검색되지 않는 제품으로 설정
 

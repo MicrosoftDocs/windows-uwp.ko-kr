@@ -1,17 +1,18 @@
 ---
 ms.assetid: e04ebe3f-479c-4b48-99d8-3dd4bb9bfaf4
 title: 사용자 지정 SSL 인증서로 Device Portal 프로비전
-description: TBD
-ms.date: 4/8/2019
+description: Windows Device Portal HTTPS 통신에 사용할 사용자 지정 인증서를 사용 하 여 프로 비전 하는 방법에 알아봅니다.
+ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: cbe813a58124b1cd80f352ae11e9dcff59b21da4
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.custom: 19H1
+ms.openlocfilehash: ce4e45bc23f4efb636618bb4891b9d6e9d207490
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244339"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63774148"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a>사용자 지정 SSL 인증서로 Device Portal 프로비전
 

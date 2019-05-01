@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a8b32abae4938081610db2cfc2ded25adadab95d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 43782a1a5d26ba84fe53f6c164a944fa357edfb1
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57650958"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63787029"
 ---
 # <a name="create-add-on-store-listings"></a>추가 기능 저장소 목록 만들기
 
@@ -33,7 +33,7 @@ ms.locfileid: "57650958"
 
 Store 목록을 편집하려면 추가 기능 제출 개요 페이지에서 언어 이름을 클릭합니다. 각 언어에 대해 입력할 수 있는 정보는 아래에서 설명합니다.
 
-## <a name="title"></a>제목
+## <a name="title"></a>Title
 
 이 추가 기능에 대해 고객에게 표시될 이름인 제목을 여기에 제공해야 합니다. 제목은 최대 100자까지 입력할 수 있습니다.
 

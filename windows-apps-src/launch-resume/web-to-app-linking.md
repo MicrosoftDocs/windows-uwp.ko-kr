@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 66284538c97aee1a11c27beaa483dcfe109b6615
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 176009cb3a2fb14eb5071d48d59a0b807d4c81d6
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641078"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63770364"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>앱 URI 처리기를 사용하여 웹 사이트에 대해 앱 활성화
 
@@ -46,7 +46,7 @@ ms.locfileid: "57641078"
 </Applications>
 ```
 
-위의 선언은 지정된 호스트의 링크를 처리하도록 앱을 등록합니다. 웹 사이트의 주소가 여러 개인 경우(예: m.example.com, www.example.com 및 example.com) 각 주소에 대해 `<uap3:AppUriHandler>` 내에 `<uap3:Host Name=... />` 항목을 별도로 추가합니다.
+위의 선언은 지정된 호스트의 링크를 처리하도록 앱을 등록합니다. 웹 사이트에 여러 개의 주소가 하는 경우 (예를 들어: m.example.com, www\.example.com, 및 example.com) 추가한 다음 별도 `<uap3:Host Name=... />` 내부의 항목은 `<uap3:AppUriHandler>` 각 주소에 대 한 합니다.
 
 ## <a name="associate-your-app-and-website-with-a-json-file"></a>JSON 파일을 사용하여 앱과 웹 사이트 연결
 
@@ -55,7 +55,7 @@ ms.locfileid: "57641078"
 >[!Important]
 > JSON 파일에는 .json 파일 접미사가 없어야 합니다.
 
-**windows-app-web-link**라는 JSON 파일을(.json 파일 확장명 없이) 만들고 앱의 패키지 패밀리 이름을 제공합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+**windows-app-web-link**라는 JSON 파일을(.json 파일 확장명 없이) 만들고 앱의 패키지 패밀리 이름을 제공합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ``` JSON
 [{
@@ -71,7 +71,7 @@ Windows는 웹 사이트에 https로 연결하여 웹 서버에서 해당 JSON �
 
 위의 JSON 파일 예제에서는 와일드카드를 사용하는 방법을 보여 줍니다. 와일드카드를 사용하면 더 적은 줄의 코드로 다양한 링크를 지원할 수 있습니다. 웹과 앱 연결은 JSON 파일에서 두 가지 유형의 와일드카드를 지원합니다.
 
-| **와일드 카드** | **설명**               |
+| **Wildcard** | **설명**               |
 |--------------|-------------------------------|
 | **\***       | 모든 하위 문자열을 나타냅니다.      |
 | **?**        | 단일 문자를 나타냅니다. |
@@ -186,14 +186,14 @@ AppModel\SystemAppData\YourApp\AppUriHandlers`
 ## <a name="appurihandlers-tips"></a>AppUriHandlers 팁:
 
 - 앱에서 처리할 수 있는 링크만 지정해야 합니다.
-- 지원하는 모든 호스트를 나열합니다.  www.example.com과 example.com은 서로 다른 호스트입니다.
+- 지원하는 모든 호스트를 나열합니다.  참고는 www\.example.com example.com와 서로 다른 호스트 합니다.
 - 설정에서 웹 사이트를 처리하려는 앱을 선택할 수 있습니다.
 - JSON 파일은 https 서버에 업로드해야 합니다.
 - 지원하려는 경로를 변경해야 하는 경우 앱을 다시 게시하지 않고 JSON 파일을 다시 게시할 수 있습니다. 사용자는 1-8일 내에 변경 사항을 확인할 수 있습니다.
 - AppUriHandlers를 사용하여 테스트용으로 로드된 모든 앱에는 설치 시 호스트에 대해 유효성이 검사된 링크가 있습니다. 기능을 테스트하기 위해 JSON 파일을 업로드할 필요는 없습니다.
 - 이 기능은 [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx)를 사용하여 UWP 앱을 시작하거나 [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx)를 사용하여 Windows 데스크톱 앱을 시작할 때마다 작동합니다. 등록된 앱 URI 처리기에 해당하는 URL의 경우 브라우저 대신 앱이 시작됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [웹-앱 예제 프로젝트](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
 [windows.protocol registration](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
