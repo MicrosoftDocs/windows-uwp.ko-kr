@@ -7,12 +7,12 @@ keywords: 장치, 디지타이저, 입력, 조작, 삽입
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2699917beed9330dd2044704f19b3c25256c3ca8
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: 2ff3150d4c1ed713451669b8918906141daa9659
+ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343242"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65065239"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>입력 삽입을 통해 사용자 입력 시뮬레이트
 
@@ -50,7 +50,8 @@ UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음
 1. 먼저 UI(MainPage.xaml)를 설정합니다.
 
     각각 네 개의 버튼이 있는 두 개의 그리드 영역(하나는 마우스 입력용, 다른 하나는 삽입된 터치식 입력용)이 있습니다.
-       > [!NOTE] The Grid background must be assigned a value (`Transparent`, in this case), otherwise pointer events are not detected.
+      > [!NOTE] 
+      > 그리드 배경 값을 할당 해야 합니다 (`Transparent`,이 경우), 그렇지 않으면 포인터 이벤트가 검색 되지 않습니다.
 
     입력 지역에서 마우스 클릭이 발견될 경우 해당 터치 이벤트가 입력 삽입 영역에 삽입됩니다. 삽입 입력으로 인한 버튼 클릭은 제목 영역에 보고됩니다.
 

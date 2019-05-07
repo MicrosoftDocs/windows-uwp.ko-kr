@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eb9283e336cb13d733098c139edc36d1216b2727
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ccc0f6841334e1eee9dd83d19944d7ce18bbaed4
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583467"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63795685"
 ---
 # <a name="data-binding"></a>데이터 바인딩
 
