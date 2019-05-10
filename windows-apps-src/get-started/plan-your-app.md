@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4f4c80ca1d031c69f5f70cdf85e90ea1d5887830
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57605668"
@@ -46,7 +46,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 -   제 운동 앱은 친구들이 운동 진행 상태를 추적하고 달성한 결과를 공유하는 데 매우 적합합니다.
 -   제 장보기 앱은 가족들이 빠뜨리거나 중복으로 구입하는 물건이 없도록 주별로 장보기를 적절히 계획하는 데 매우 적합합니다.
 
-![공동 작업 도구 디자인](images/ux-collaboration-tabphone-700.png)
+![협업 도구 디자인](images/ux-collaboration-tabphone-700.png)
 
 앱의 "특성"을 설명하는 이와 같은 문장을 염두에 두고, 앱을 빌드할 때 여러 디자인 의사 결정을 내리고 양자택일 상황을 해결할 수 있습니다. 앱에서 사용자가 경험하게 하려는 시나리오에 중점을 두고 이 설명을 기능 목록으로 바꾸지 않도록 주의하세요. 앱이 제공하는 기능이 아니라 사용자가 할 수 있는 작업과 관련된 것이어야 합니다.
 
