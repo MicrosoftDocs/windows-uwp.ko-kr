@@ -11,16 +11,31 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5b9a0719e4967f9d527d2b2565818a0dea1be0a6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b736a10a7284e3cc9aa193e082dc654e908afe40
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645268"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444177"
 ---
 # <a name="timing-and-easing"></a>타이밍 및 감속
 
-움직임은 실제 세계를 기반으로 하지만 속도와 성능에 대한 기대와 함께 제공되는 디지털 미디어이기도 합니다. 
+움직임은 실제 세계를 기반으로 하지만 속도와 성능에 대한 기대와 함께 제공되는 디지털 미디어이기도 합니다.
+
+## <a name="examples"></a>예
+
+<table>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>있는 경우는 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하려면 여기를 클릭 <a href="xamlcontrolsgallery:/item/EasingFunction">앱을 열고 실행 중인 감속/가속 함수를 참조 하세요.</a>합니다.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="how-fluent-motion-uses-time"></a>Fluent 움직임이 시간을 사용하는 방법
 
@@ -40,8 +55,8 @@ Fluent의 움직임 타이밍은 사용자가 순간으로 인식하는 최대 �
 
 :::row:::
     :::column:::
-        Use for objects or pages that are exiting the scene or closing.
-        Allows for very quick directional feedback of exiting UI where timing does not impede upon framerate to achieve a smooth animation.
+개체 또는 장면을 종료 되거나 닫는 되는 페이지에 사용 됩니다.
+원활한 애니메이션을 위해 타이밍이 프레임 속도에 영향을 주지 않는 기존 UI의 매우 빠른 방향에 대한 피드백을 허용합니다.
     :::column-end:::
     :::column:::
         ![150ms motion](images/150msAlt.gif)
@@ -52,8 +67,8 @@ Fluent의 움직임 타이밍은 사용자가 순간으로 인식하는 최대 �
 
 :::row:::
     :::column:::
-        Use for objects or pages that are entering the scene or opening.
-        Allows a reasonable amount of time to celebrate content as it enters the scene.
+개체 또는 장면을 입력 되거나 열기 되는 페이지에 사용 됩니다.
+적절한 시간 동안 장면에 들어오는 콘텐츠를 볼 수 있도록 합니다.
     :::column-end:::
     :::column:::
         ![300ms motion](images/300ms.gif)
@@ -64,7 +79,7 @@ Fluent의 움직임 타이밍은 사용자가 순간으로 인식하는 최대 �
 
 :::row:::
     :::column:::
-        Use for objects which are translating across a single scene or multiple scenes. 
+단일 장면 또는 여러 장면에서 번역 하는 개체에 사용 됩니다. 
     :::column-end:::
     :::column:::
         ![500ms motion](images/500ms.gif)
@@ -87,10 +102,10 @@ Fluent의 움직임 타이밍은 사용자가 순간으로 인식하는 최대 �
 
 :::row:::
     :::column:::
-        Use for UI or objects that are exiting the scene.
+UI 또는 장면 종료 되는 개체에 사용 됩니다.
 
-        Objects become powered and gain momentum until they reach escape velocity.
-        The resulting feel is that the object is trying its hardest to get out of the user's way and make room for new content to come in.
+개체 제공 되 고 이스케이프 속도 도달할 때까지 모멘텀.
+결과 느낌 개체 사용자의 방식으로 최대한의 새로운 콘텐츠에 대 한 공간을 확보 하는 가장 어려운 시도 하는입니다.
     :::column-end:::
     :::column:::
         ![accelerate easing](images/accelEase.gif)
@@ -126,12 +141,12 @@ _exitAnimation.Duration = TimeSpan.FromMilliseconds(150);
 
 :::row:::
     :::column:::
-        Use for objects or UI entering the scene, either navigating or spawning.
+개체 또는 UI 장면 입력 탐색 또는 생성에 사용 됩니다.
 
-        Once on-scene, the object is met with extreme friction, which slows the object to rest.
-        The resulting feel is that the object traveled from a long distance away and entered at an extreme velocity, or is quickly returning to a rest state.
+일단 장면에 개체 느려지는 rest 개체는 극단적인 마찰을 사용 하 여 충족 됩니다.
+결과 느낌 개체 먼 곳에서 이동한 속도로 극단적인, 입력 또는 rest 상태로 신속 하 게 반환 되는 경우
 
-        Even if it's preceded by a moment of unresponsiveness, the velocity of the incoming object has the effect of feeling fast and responsive.
+무응답의 잠시 오는, 경우에 들어오는 개체의 속도 빠르고 응답성이 뛰어난 생각의 효과 가집니다.
     :::column-end:::
     :::column:::
         ![decelerate easing](images/decelEase.gif)
@@ -167,10 +182,10 @@ _enterAnimation.Duration = TimeSpan.FromMilliseconds(300);
 
 :::row:::
     :::column:::
-        This is the baseline easing for any animated parameter change inside of the system.
-        Use standard easing for objects that change from state to state on-screen, such as a simple position change. Also, use it for objects morphing in-scene, like an object that grows.
+시스템 내에서 모든 애니메이션이 적용 된 매개 변수 변경에 대 한 감속/가속 기준입니다.
+간단한 위치 변경 등 화면의 상태별로 변하는 개체에 대한 표준 감속을 사용합니다. 또한, 증가하는 개체와 같이 화면 내에 모핑하는 개체에 사용합니다.
 
-        The resulting feel is that objects changing state from A to B are overcoming, and taken over by, natural forces.
+결과 느낌 A에서 B로 상태를 변경 하는 개체를 극복 하는 자연 강제로 수행한 조치에 있다는 것입니다.
     :::column-end:::
     :::column:::
         ![standard easing](images/standardEase.gif)

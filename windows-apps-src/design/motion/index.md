@@ -12,18 +12,33 @@ design-contact: jeffarn
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2701844ccefdc5a535fa8fc20086c550cb7bc29e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1096bdab340c3f0fef24b5815423f72b0f5c8219
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583450"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444161"
 ---
 # <a name="motion-for-uwp-apps"></a>UWP 앱의 동작
 
-![영웅 이미지](images/header-motion2.svg)
+![동작 아이콘](../images/motion-2x.png)
 
 Fluent 움직임은 앱에서 목적에 맞게 작동합니다. 사용자의 동작을 기반으로 인텔리전트 피드백을 제공하고, UI를 살아있는 느낌이 들도록 유지하고, 사용자의 앱 탐색을 안내합니다. Fluent 움직임은 사용자와 디지털 환경 간의 정신적 연결을 끌어냅니다. 사용자가 실제 세계에서 이미 이해하고 있는 자연의 움직임을 기반으로 빌드하고, 거기에서 시스템을 확장합니다.
+
+## <a name="examples"></a>예
+
+<table>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p><strong style="font-weight: semi-bold">XAML Controls Gallery</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/category/Motion">앱을 열고 작동 중인 모션을 확인</a>합니다.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="fluent-motion-principles"></a>Fluent 움직임 원칙
 
@@ -53,7 +68,7 @@ Fluent 움직임은 앱에서 목적에 맞게 작동합니다. 사용자의 동
 인텔리전트한 움직임은 사용자의 UI 조작 방식에 맞는 방법으로 사용자에게 피드백을 제공합니다. 상호 작용은 사용자를 중심으로 이루어집니다. 움직임이 폼 팩터와 잘 어울리고 시나리오에 맞게 설계된 듯한 느낌을 줍니다. 움직임은 각 사용자에게 편안해야 합니다.
 
 ![상황에 맞는 움직임의 UI 예](images/Contextual.gif)
-> 애니메이션은 사용자 상호 작용에 다시 연결해야 합니다. 상황에 맞는 메뉴는 사용자가 활성화한 지점에서 배포됩니다. 
+> 애니메이션은 사용자 상호 작용에 다시 연결해야 합니다. 상황에 맞는 메뉴는 사용자가 활성화한 지점에서 배포됩니다.
 
 ## <a name="motion-articles"></a>움직임 문서
 

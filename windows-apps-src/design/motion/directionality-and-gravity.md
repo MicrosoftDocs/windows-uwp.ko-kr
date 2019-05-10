@@ -11,18 +11,33 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4bb6f0ba60e89720a6daa37604cbe93696fb2bb7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ef005ffd018bf52d70067cdfedbb9c98b079bd89
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603078"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444210"
 ---
 # <a name="directionality-and-gravity"></a>방향 및 무게
 
 방향 신호는 환경 전반에서 사용자의 멘탈 모델 여정을 구체화하는 데 도움이 됩니다. 모든 동작의 방향이 공간의 연속성 및 공간에서 개체의 무결성을 모두 지원하는지 여부는 중요합니다.
 
 동작 방향은 무게 등의 힘의 영향을 받습니다. 동작에 이러한 힘을 적용하면 동작의 느낌이 보다 자연스러워집니다.
+
+## <a name="examples"></a>예
+
+<table>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>있는 경우는 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하려면 여기를 클릭 <a href="xamlcontrolsgallery:/category/Motion">앱을 열고 작업의 동작을 참조 하세요.</a>합니다.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="direction-of-movement"></a>동작 방향
 

@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a205fb151d1c9e6614dc97ccde639e43720aa8a9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 901aa1fa5c37c18a815e5e70becdf15001ed74c4
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618198"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444236"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>UWP 앱에 대한 연결된 애니메이션
 
@@ -24,7 +24,22 @@ ms.locfileid: "57618198"
 
 > **중요 API**:  [ConnectedAnimation 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimation), [ConnectedAnimationService 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
 
-## <a name="see-it-in-action"></a>실제 장면 보기
+
+## <a name="examples"></a>예
+
+<table>
+<th align="left">XAML 컨트롤 갤러리<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>있는 경우는 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하려면 여기를 클릭 <a href="xamlcontrolsgallery:/item/ConnectedAnimation">앱을 열고 작업에 연결 된 애니메이션을 참조 하세요.</a>합니다.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 이 짧은 비디오에서는 앱의 다음 페이지 헤더의 일부로 "계속" 항목 이미지를 애니메이션 효과를 주는 연결 된 애니메이션을 사용 합니다. 이 효과는 전환 시 사용자 컨텍스트를 유지하는 데 도움이 됩니다.
 
@@ -83,11 +98,11 @@ ConnectedAnimation에서 구성 속성을 설정 하 여 애니메이션 구성�
 
 다양 한 효과 달성 하려면 일부 구성 ConnectedAnimationService에서 이러한 속성을 무시 하 고 고유한 값을이 테이블에 설명 된 대로 사용 합니다.
 
-| 구성 | 측면 DefaultDuration? | 측면 DefaultEasingFunction? |
+| Configuration | 측면 DefaultDuration? | 측면 DefaultEasingFunction? |
 | - | - | - |
 | 무게 | 예 | 예* <br/> **A에서 B에 대 한 기본 변환을이 감속/가속 함수를 사용 하지만 "중력 dip" 자체 감속/가속 함수입니다.*  |
 | 직접 | 아니오 <br/> *개 150ms 애니메이션 효과 줍니다.*| 아니오 <br/> *감속/가속 함수 감속을 사용 합니다.* |
-| 기본 | 예 | 예 |
+| Basic | 예 | 예 |
 
 ## <a name="how-to-implement-connected-animation"></a>연결 된 애니메이션을 구현 하는 방법
 
@@ -318,10 +333,6 @@ void OnNavigatedTo(NavigationEventArgs e)
 - 사용 하 여 [DirectConnectedAnimationConfiguration](/uwp/api/windows.ui.xaml.media.animation.directconnectedanimationconfiguration) 다시 탐색 합니다.
 - 네트워크 요청 또는 다른 장기 실행 비동기 작업 준비 및 연결 된 애니메이션을 시작 사이 대기 하지 마십시오. 필요한 정보를 미리 로드하여 전환을 미리 실행하거나, 대상 보기에 고해상도 이미지가 로드되는 동안 저해상도 자리 표시자 이미지를 사용해야 할 수도 있습니다.
 - 사용 하 여 [SuppressNavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) 에서 전환 애니메이션을 방지 하기 위해를 **프레임** 사용 하는 경우 **ConnectedAnimationService**, 연결 된 애니메이션 이후 기본 탐색 전환을 사용 하 여 동시에 사용할 수 하려는 되지 않습니다. 탐색 전환을 사용하는 방법에 대한 자세한 내용은 [NavigationThemeTransition](/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition)을 참조하세요.
-
-## <a name="download-the-code-samples"></a>코드 샘플 다운로드
-
-[WindowsUIDevLabs](https://github.com/Microsoft/WindowsUIDevLabs) 샘플 갤러리의 [연결된 애니메이션 샘플](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2014393/ConnectedAnimationSample)을 참조하세요.
 
 ## <a name="related-articles"></a>관련 문서
 

@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6eafbfd965d2783c0f72e75c91a04e5ac1cb119f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7272abca9862eaf5ed7ceb161e433849497369a2
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599408"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444218"
 ---
 # <a name="bringing-it-together"></a>통합
 
@@ -78,10 +78,24 @@ ms.locfileid: "57599408"
     :::column-end:::
 :::row-end:::
 
+## <a name="examples"></a>예
+
+<table>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>있는 경우는 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하려면 여기를 클릭 <a href="xamlcontrolsgallery:/item/ImplicitTransition">앱을 열고 암시적 전환 중인 참조</a>합니다.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
+
 ## <a name="implicit-animations"></a>암시적 애니메이션
 
 > 암시적 애니메이션 필요한 Windows 10 버전 1809 ([17763 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상.
-
 
 암시적 애니메이션은 매개 변수를 변경 하는 동안 이전 및 새 값을 자동으로 보간하여 Fluent 동작을 달성 하는 간단한 방법입니다.
 
@@ -90,7 +104,7 @@ ms.locfileid: "57599408"
 - [UIElement](/uwp/api/windows.ui.xaml.uielement)
   - **불투명도**
   - **회전**
-  - **배율**
+  - **소수 자릿수**
   - **번역**
 
 - [테두리](/uwp/api/windows.ui.xaml.controls.border)하십시오 [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter), 또는 [패널](/uwp/api/windows.ui.xaml.controls.panel)

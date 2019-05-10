@@ -12,12 +12,12 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 719a150c6750116a368d59fff9600fcf65bf8f61
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 953a92cdb8cc3168a2cbeae9a1f3610f771c6339
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57590688"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444182"
 ---
 # <a name="parallax"></a>시차
 
@@ -30,7 +30,7 @@ ms.locfileid: "57590688"
 <table>
 <th align="left">XAML 컨트롤 갤러리<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ParallaxView">앱을 열고 작동 중인 ParallaxView를 확인</a>합니다.</p>
     <ul>
@@ -47,7 +47,7 @@ ms.locfileid: "57590688"
 
 ## <a name="how-it-works-in-a-user-interface"></a>사용자 인터페이스에서 작동하는 방식
 
-UI에서 UI가 스크롤하거나 이동할 때 여러 개체를 서로 다른 속도로 움직여서 시차 효과를 만들 수 있습니다. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> 을 보여 주기 위해 살펴보겠습니다 콘텐츠, 목록 및 배경 이미지의 두 계층.  목록은 배경 이미지 맨 위에 있으며 이미 목록이 뷰어와 좀 더 가까이 있는 것 같은 착시 효과를 줍니다.  이제 시차 효과를 얻기 위해 가까이에 있는 개체를 멀리 있는 개체보다 “빠르게” 움직여야 합니다.  사용자가 인터페이스를 스크롤할 때 목록이 배경 이미지보다 빠르게 움직이며, 이로 인해 깊이감이 생성됩니다.
+UI에서 UI가 스크롤하거나 이동할 때 여러 개체를 서로 다른 속도로 움직여서 시차 효과를 만들 수 있습니다. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> 시험을 보이기 위해 콘텐츠의 두 계층인 목록과 배경 이미지를 살펴보겠습니다.  목록은 배경 이미지 맨 위에 있으며 이미 목록이 뷰어와 좀 더 가까이 있는 것 같은 착시 효과를 줍니다.  이제 시차 효과를 얻기 위해 가까이에 있는 개체를 멀리 있는 개체보다 “빠르게” 움직여야 합니다.  사용자가 인터페이스를 스크롤할 때 목록이 배경 이미지보다 빠르게 움직이며, 이로 인해 깊이감이 생성됩니다.
 
  ![목록 및 배경 이미지를 사용한 시차의 예](images/_Parallax_v2.gif)
 
@@ -118,10 +118,6 @@ VerticalShift 및 HorizontalShift 속성을 사용하여 시차 효과의 수준
 - 배경 이미지가 포함된 목록에는 시차 사용
 - ListViewItems에 이미지가 있는 경우 ListViewItems에 시차 사용을 고려
 - 아무 곳에나 사용하지 말 것. 시차를 지나치게 많이 사용하면 효과가 반감될 수 있음
-
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
-
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 

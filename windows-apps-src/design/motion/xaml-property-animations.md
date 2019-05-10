@@ -8,12 +8,12 @@ pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 81da1e769ab171e47a4f4046e8ec7e7c84ecf2d1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 183a5433553ff6fdfcb09f6960f6a642f2c8bc08
+ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630358"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65444158"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>컴퍼지션 애니메이션을 사용 하 여 XAML 요소에 애니메이션 적용
 
@@ -31,19 +31,35 @@ Windows 10 버전 1809, 이전 애니메이션에서 UWP 앱 빌드에 2 개의 
 > [!NOTE]
 > UIElement에서 이러한 속성을 사용 하려면 UWP 프로젝트 대상 버전 1809 이상 이어야 합니다. 프로젝트 버전을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [적응 응용 프로그램 버전](../../debug-test-perf/version-adaptive-apps.md)합니다.
 
+## <a name="examples"></a>예
+
+<table>
+<th align="left">XAML 컨트롤 갤러리<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td>
+    <p>있는 경우는 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하려면 여기를 클릭 <a href="xamlcontrolsgallery:/item/XamlCompInterop">앱을 열고 실행 중인 애니메이션 interop 참조</a>합니다.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
+
 ## <a name="new-rendering-properties-replace-old-rendering-properties"></a>이전 렌더링 속성을 대체 하는 새 렌더링 속성
 
 이 표에서 UIElement 사용 하 여 애니메이션도 수 있는 렌더링을 수정 하 여 속성을 [CompositionAnimation](/uwp/api/windows.ui.composition.compositionanimation)합니다.
 
 | 속성 | 형식 | 설명 |
 | -- | -- | -- |
-| [불투명도](/uwp/api/windows.ui.xaml.uielement.opacity) | 이중 | 개체의 불투명도 수준 |
+| [불투명도](/uwp/api/windows.ui.xaml.uielement.opacity) | Double | 개체의 불투명도 수준 |
 | [번역](/uwp/api/windows.ui.xaml.uielement.translation) | Vector3 | 요소의 X/Y/Z 위치를 이동 합니다. |
-| [항등](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | 요소에 적용할 변형 행렬 |
-| [배율](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | 가운데에 중심점을 사용 하 여 요소를 확장 합니다. |
+| [TransformMatrix](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | 요소에 적용할 변형 행렬 |
+| [소수 자릿수](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | 가운데에 중심점을 사용 하 여 요소를 확장 합니다. |
 | [회전](/uwp/api/windows.ui.xaml.uielement.rotation) | 부동 | 요소 RotationAxis 및 중심점 회전 |
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | 회전의 축 |
-| [중심점](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | 크기 조정 및 회전 중심점 |
+| [CenterPoint](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | 크기 조정 및 회전 중심점 |
 
 항등 속성 값을 다음 순서 대로 크기 조정, 회전 및 변환 속성을 사용 하 여 결합 됩니다.  항등, 크기 조정, 회전 변환 합니다.
 
@@ -51,7 +67,7 @@ Windows 10 버전 1809, 이전 애니메이션에서 UWP 앱 빌드에 2 개의 
 
 이러한 속성 값에 컴퍼지션에 같은 이름의 속성으로 동일한 목적 및 동작 [Visual](/uwp/api/windows.ui.composition.visual) 클래스 (시각적 개체에 없는 번역) 제외 합니다.
 
-### <a name="example-setting-the-scale-property"></a>예제: 확장 속성을 설정
+### <a name="example-setting-the-scale-property"></a>예: 확장 속성을 설정
 
 이 예제에서는 단추에 확장 속성을 설정 하는 방법을 보여 줍니다.
 
@@ -74,7 +90,7 @@ CompositionAnimation를 사용 하 여 애니메이션을 적용할 수 있는 �
 
 - [RenderTransform](/uwp/api/windows.ui.xaml.uielement.rendertransform)
 - [RenderTransformOrigin](/uwp/api/windows.ui.xaml.uielement.rendertransformorigin)
-- [프로젝션](/uwp/api/windows.ui.xaml.uielement.projection)
+- [Projection](/uwp/api/windows.ui.xaml.uielement.projection)
 - [Transform3D](/uwp/api/windows.ui.xaml.uielement.transform3d)
 
 사용자 설정 (또는 애니메이션 효과 주기) 새 속성을 이전 속성을 사용할 수 없습니다. 반대로 사용자 설정 (또는 애니메이션 효과 주기) 이전 속성을 하는 경우에 새 속성을 사용할 수 없습니다.
@@ -95,7 +111,7 @@ CompositionAnimation 테이블에 나열 된 렌더링 속성 애니메이션을
 
 사용 합니다 [StartAnimation](/uwp/api/windows.ui.xaml.uielement.startanimation) 하 고 [StopAnimation](/uwp/api/windows.ui.xaml.uielement.stopanimation) UIElement 속성에 애니메이션 효과를 UIElement 메서드.
 
-### <a name="example-animating-the-scale-property-with-a-vector3keyframeanimation"></a>예제: 확장 속성에는 Vector3KeyFrameAnimation 사용 하 여 애니메이션
+### <a name="example-animating-the-scale-property-with-a-vector3keyframeanimation"></a>예: 확장 속성에는 Vector3KeyFrameAnimation 사용 하 여 애니메이션
 
 이 예제에서는 단추의 크기에 애니메이션을 적용 하는 방법을 보여 줍니다.
 
@@ -110,7 +126,7 @@ animation.Target = "Scale";
 button.StartAnimation(animation);
 ```
 
-### <a name="example-animating-the-scale-property-with-an-expressionanimation"></a>예제: 확장 속성에는 ExpressionAnimation 사용 하 여 애니메이션
+### <a name="example-animating-the-scale-property-with-an-expressionanimation"></a>예: 확장 속성에는 ExpressionAnimation 사용 하 여 애니메이션
 
 페이지에는 두 개의 단추가 있습니다. 두 번째 단추 애니메이션을 적용 클 두 번 (배율)를 통해 첫 번째 단추입니다.
 
