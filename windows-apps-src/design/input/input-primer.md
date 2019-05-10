@@ -10,7 +10,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bae6e5b21369c30c8ed067fe7283c0a116d220b8
 ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/22/2019
 ms.locfileid: "58343292"
@@ -197,7 +197,7 @@ Surface Hub 장치는 100개의 고유한 동시 터치 접촉을 인식합니�
 
 일반적으로 터치는 다음 특징이 있습니다.
 
--   공동 작업이 강조되는 Surface Hub와 같은 Microsoft Team 장치와 함께 사용되지 않는 한 단일 사용자입니다.
+-   협업이 강조되는 Surface Hub와 같은 Microsoft Team 장치와 함께 사용되지 않는 한 단일 사용자입니다.
 -   장치 방향으로 제한되지 않습니다.
 -   텍스트 입력(터치 키보드) 및 수동 입력(앱 구성)을 포함하여 모든 조작에 사용됩니다.
 
