@@ -1,580 +1,577 @@
-items:
+- name: 개요
+  href: index.md
 - name: 디자인 기본 사항
   items:
-  - name: 개요
-    href: basics/index.md
-  - name: 앱 디자인 소개
-    href: basics/design-and-ui-intro.md
-  - name: Fluent 디자인 시스템
-    href: fluent-design-system/index.md
-  - name: 탐색 기본 사항
-    items:
     - name: 개요
-      href: basics/navigation-basics.md
-    - name: 기본 탐색 구현
-      href: basics/navigate-between-two-pages.md
-    - name: 탐색 기록 및 뒤로 탐색
-      href: basics/navigation-history-and-backwards-navigation.md
-  - name: 명령 기본 사항
-    href: basics/commanding-basics.md
-  - name: 콘텐츠 기본 사항
-    href: basics/content-basics.md
-  - name: 자습서
-    items:
-    - name: 사용자 인터페이스 만들기
-      href: basics/xaml-basics-ui.md
-    - name: 적응형 레이아웃 만들기
-      href: basics/xaml-basics-adaptive-layout.md
-    - name: 컨트롤 스타일 지정
-      href: basics/xaml-basics-style.md
+      href: basics/index.md
+    - name: 앱 디자인 소개
+      href: basics/design-and-ui-intro.md
+    - name: Fluent 디자인 시스템
+      href: fluent-design-system/index.md
+    - name: 탐색 기본 사항
+      items:
+        - name: 개요
+          href: basics/navigation-basics.md
+        - name: 기본 탐색 구현
+          href: basics/navigate-between-two-pages.md
+        - name: 탐색 기록 및 뒤로 탐색
+          href: basics/navigation-history-and-backwards-navigation.md
+    - name: 명령 기본 사항
+      href: basics/commanding-basics.md
+    - name: 콘텐츠 기본 사항
+      href: basics/content-basics.md
+    - name: 자습서
+      items:
+        - name: 사용자 인터페이스 만들기
+          href: basics/xaml-basics-ui.md
+        - name: 적응형 레이아웃 만들기
+          href: basics/xaml-basics-adaptive-layout.md
+        - name: 컨트롤 스타일 지정
+          href: basics/xaml-basics-style.md
 - name: 레이아웃
   items:
-  - name: 개요
-    href: layout/index.md
-  - name: 페이지 레이아웃
-    href: layout/page-layout.md
-  - name: 화면 크기 및 중단점
-    href: layout/screen-sizes-and-breakpoints-for-responsive-design.md
-  - name: 반응형 디자인 기술
-    href: layout/responsive-design.md
-  - name: XAML 사용한 레이아웃
-    href: layout/layouts-with-xaml.md
-  - name: 여러 보기 표시
-    href: layout/show-multiple-views.md
-  - name: 맞춤, 여백 및 안쪽 여백
-    href: layout/alignment-margin-padding.md
-  - name: 패널
-    items:
     - name: 개요
-      href: layout/layout-panels.md
-    - name: '자습서: 레이아웃 패널 사용'
-      href: layout/grid-tutorial.md
-    - name: 분할 보기
-      href: controls-and-patterns/split-view.md
-    - name: 사용자 지정 패널
-      href: layout/custom-panels-overview.md
-    - name: '사용자 지정 패널 예제: BoxPanel'
-      href: layout/boxpanel-example-custom-panel.md
-  - name: 연결된 레이아웃
-    href: layout/attached-layouts.md
-  - name: 변형
-    items:
-    - name: 개요
-      href: layout/transforms.md
-    - name: 3D 원근감 효과
-      href: layout/3-d-perspective-effects.md
+      href: layout/index.md
+    - name: 페이지 레이아웃
+      href: layout/page-layout.md
+    - name: 화면 크기 및 중단점
+      href: layout/screen-sizes-and-breakpoints-for-responsive-design.md
+    - name: 반응형 디자인 기술
+      href: layout/responsive-design.md
+    - name: XAML 사용한 레이아웃
+      href: layout/layouts-with-xaml.md
+    - name: 여러 보기 표시
+      href: layout/show-multiple-views.md
+    - name: '맞춤, 여백 및 안쪽 여백'
+      href: layout/alignment-margin-padding.md
+    - name: 패널
+      items:
+        - name: 개요
+          href: layout/layout-panels.md
+        - name: '자습서: 레이아웃 패널 사용'
+          href: layout/grid-tutorial.md
+        - name: 분할 보기
+          href: controls-and-patterns/split-view.md
+        - name: 사용자 지정 패널
+          href: layout/custom-panels-overview.md
+        - name: '사용자 지정 패널 예제: BoxPanel'
+          href: layout/boxpanel-example-custom-panel.md
+    - name: 연결된 레이아웃
+      href: layout/attached-layouts.md
+    - name: 변형
+      items:
+        - name: 개요
+          href: layout/transforms.md
+        - name: 3D 원근감 효과
+          href: layout/3-d-perspective-effects.md
+    - name: Z-깊이 및 그림자
+      href: layout/depth-shadow.md
 - name: 컨트롤
   items:
-  - name: 개요
-    href: controls-and-patterns/index.md
-  - name: 컨트롤 및 이벤트 소개
-    href: controls-and-patterns/controls-and-events-intro.md
-  - name: 명령 소개
-    href: controls-and-patterns/commanding.md
-  - name: 기능별 컨트롤 인덱스
-    href: controls-and-patterns/controls-by-function.md
-  - name: 기본 입력
-    items:
-    - name: 단추
-      href: controls-and-patterns/buttons.md
-    - name: 확인란
-      href: controls-and-patterns/checkbox.md
-    - name: 콤보 상자
-      href: controls-and-patterns/combo-box.md
-    - name: 하이퍼링크
-      href: controls-and-patterns/hyperlinks.md
-    - name: 라디오 단추
-      href: controls-and-patterns/radio-button.md
-    - name: 평점 컨트롤
-      href: controls-and-patterns/rating.md
-    - name: 슬라이더
-      href: controls-and-patterns/slider.md
-    - name: Toggle
-      href: controls-and-patterns/toggles.md
-  - name: 컬렉션
-    items:
     - name: 개요
-      href: controls-and-patterns/lists.md
-    - name: 수집 명령
-      href: controls-and-patterns/collection-commanding.md
-    - name: 사용자 지정 컬렉션 뷰
-      href: controls-and-patterns/items-repeater.md
-    - name: 보기 대칭 이동
-      href: controls-and-patterns/flipview.md
-    - name: 반전된 목록
-      href: controls-and-patterns/inverted-lists.md
-    - name: 목록 보기 및 그리드 보기
-      href: controls-and-patterns/listview-and-gridview.md
+      href: controls-and-patterns/index.md
+    - name: 컨트롤 및 이벤트 소개
+      href: controls-and-patterns/controls-and-events-intro.md
+    - name: 명령 소개
+      href: controls-and-patterns/commanding.md
+    - name: 기능별 컨트롤 인덱스
+      href: controls-and-patterns/controls-by-function.md
+    - name: 기본 입력
       items:
-      - name: 항목 컨테이너 및 템플릿
-        href: controls-and-patterns/item-containers-templates.md
-      - name: 목록 보기의 항목 템플릿
-        href: controls-and-patterns/item-templates-listview.md
-      - name: 그리드 보기의 항목 템플릿
-        href: controls-and-patterns/item-templates-gridview.md
-    - name: 중첩된 UI
-      href: controls-and-patterns/nested-ui.md
-    - name: 당겨서 새로 고침
-      href: controls-and-patterns/pull-to-refresh.md
-    - name: 살짝 밀기
-      href: controls-and-patterns/swipe.md
-    - name: 트리 보기
-      href: controls-and-patterns/tree-view.md
-  - name: 대화 상자 및 플라이아웃
-    items:
-    - name: 개요
-      href: controls-and-patterns/dialogs-and-flyouts/index.md
-    - name: 대화 상자
-      href: controls-and-patterns/dialogs-and-flyouts/dialogs.md
-    - name: 플라이아웃
-      href: controls-and-patterns/dialogs-and-flyouts/flyouts.md
-    - name: 교육 팁
-      href: controls-and-patterns/dialogs-and-flyouts/teaching-tip.md
-  - name: 양식
-    href: controls-and-patterns/forms.md
-  - name: 미디어, 그래픽 및 셰이프
-    items:
-    - name: 이미지 및 이미지 브러시
-      href: controls-and-patterns/images-imagebrushes.md
-    - name: 잉크
-      href: controls-and-patterns/inking-controls.md
-    - name: 미디어 재생
-      href: controls-and-patterns/media-playback.md
-    - name: 사용자 지정 전송 컨트롤
-      href: controls-and-patterns/custom-transport-controls.md
-    - name: 셰이프
-      href: controls-and-patterns/shapes.md
-    - name: 웹 보기
-      href: controls-and-patterns/web-view.md
-  - name: 메뉴 및 도구 모음
-    items:
-    - name: 앱 바 및 명령 모음
-      href: controls-and-patterns/app-bars.md
-    - name: 명령 모음 플라이아웃
-      href: controls-and-patterns/command-bar-flyout.md
-    - name: 메뉴 및 상황에 맞는 메뉴
-      href: controls-and-patterns/menus.md
-  - name: 탐색
-    items:
-    - name: 마스터/세부
-      href: controls-and-patterns/master-details.md
-    - name: 탐색 보기
-      href: controls-and-patterns/navigationview.md
-    - name: Pivot
-      href: controls-and-patterns/pivot.md
-  - name: 피플
-    items:
-    - name: 연락처 카드
-      href: controls-and-patterns/contact-card.md
-    - name: 인물 사진
-      href: controls-and-patterns/person-picture.md
-  - name: 선택기
-    items:
-    - name: 색 선택기
-      href: controls-and-patterns/color-picker.md
-    - name: 날짜 및 시간 컨트롤
-      href: controls-and-patterns/date-and-time.md
-    - name: 달력 날짜 선택
-      href: controls-and-patterns/calendar-date-picker.md
-    - name: 달력 보기
-      href: controls-and-patterns/calendar-view.md
-    - name: 날짜 선택기
-      href: controls-and-patterns/date-picker.md
-    - name: 시간 선택기
-      href: controls-and-patterns/time-picker.md
-  - name: 스크롤
-    items:
-    - name: 컨트롤 스크롤 및 이동
-      href: controls-and-patterns/scroll-controls.md
-    - name: 시맨틱 줌
-      href: controls-and-patterns/semantic-zoom.md
-  - name: 검색
-    href: controls-and-patterns/search.md
-  - name: 상태 및 정보
-    items:
-    - name: 진행률
-      href: controls-and-patterns/progress-controls.md
-    - name: Tooltip
-      href: controls-and-patterns/tooltips.md
-  - name: 텍스트
-    items:
-    - name: 개요
-      href: controls-and-patterns/text-controls.md
-    - name: 자동 제안 상자
-      href: controls-and-patterns/auto-suggest-box.md
-    - name: 텍스트 블록
-      href: controls-and-patterns/text-block.md
-    - name: 서식 있는 텍스트 블록
-      href: controls-and-patterns/rich-text-block.md
-    - name: 입력란
-      href: controls-and-patterns/text-box.md
-    - name: 서식 있는 편집 상자
-      href: controls-and-patterns/rich-edit-box.md
-    - name: 비밀번호 상자
-      href: controls-and-patterns/password-box.md
-    - name: Labels(레이블)
-      href: controls-and-patterns/labels.md
-    - name: 콘텐츠 링크
-      href: controls-and-patterns/content-links.md
-    - name: 필기 보기
-      href: controls-and-patterns/text-handwriting-view.md
+        - name: 단추
+          href: controls-and-patterns/buttons.md
+        - name: 확인란
+          href: controls-and-patterns/checkbox.md
+        - name: 콤보 상자
+          href: controls-and-patterns/combo-box.md
+        - name: 하이퍼링크
+          href: controls-and-patterns/hyperlinks.md
+        - name: 라디오 단추
+          href: controls-and-patterns/radio-button.md
+        - name: 평점 컨트롤
+          href: controls-and-patterns/rating.md
+        - name: 슬라이더
+          href: controls-and-patterns/slider.md
+        - name: Toggle
+          href: controls-and-patterns/toggles.md
+    - name: 컬렉션
+      items:
+        - name: 개요
+          href: controls-and-patterns/lists.md
+        - name: 수집 명령
+          href: controls-and-patterns/collection-commanding.md
+        - name: 사용자 지정 컬렉션 뷰
+          href: controls-and-patterns/items-repeater.md
+        - name: 보기 대칭 이동
+          href: controls-and-patterns/flipview.md
+        - name: 반전된 목록
+          href: controls-and-patterns/inverted-lists.md
+        - name: 목록 보기 및 그리드 보기
+          href: controls-and-patterns/listview-and-gridview.md
+          items:
+            - name: 항목 컨테이너 및 템플릿
+              href: controls-and-patterns/item-containers-templates.md
+            - name: 목록 보기의 항목 템플릿
+              href: controls-and-patterns/item-templates-listview.md
+            - name: 그리드 보기의 항목 템플릿
+              href: controls-and-patterns/item-templates-gridview.md
+        - name: 중첩된 UI
+          href: controls-and-patterns/nested-ui.md
+        - name: 당겨서 새로 고침
+          href: controls-and-patterns/pull-to-refresh.md
+        - name: 살짝 밀기
+          href: controls-and-patterns/swipe.md
+        - name: 트리 보기
+          href: controls-and-patterns/tree-view.md
+    - name: 대화 상자 및 플라이아웃
+      items:
+        - name: 개요
+          href: controls-and-patterns/dialogs-and-flyouts/index.md
+        - name: 대화 상자
+          href: controls-and-patterns/dialogs-and-flyouts/dialogs.md
+        - name: 플라이아웃
+          href: controls-and-patterns/dialogs-and-flyouts/flyouts.md
+        - name: 교육 팁
+          href: controls-and-patterns/dialogs-and-flyouts/teaching-tip.md
+    - name: 양식
+      href: controls-and-patterns/forms.md
+    - name: '미디어, 그래픽 및 셰이프'
+      items:
+        - name: 이미지 및 이미지 브러시
+          href: controls-and-patterns/images-imagebrushes.md
+        - name: 잉크
+          href: controls-and-patterns/inking-controls.md
+        - name: 미디어 재생
+          href: controls-and-patterns/media-playback.md
+        - name: 사용자 지정 전송 컨트롤
+          href: controls-and-patterns/custom-transport-controls.md
+        - name: 셰이프
+          href: controls-and-patterns/shapes.md
+        - name: 웹 보기
+          href: controls-and-patterns/web-view.md
+    - name: 메뉴 및 도구 모음
+      items:
+        - name: 앱 바 및 명령 모음
+          href: controls-and-patterns/app-bars.md
+        - name: 명령 모음 플라이아웃
+          href: controls-and-patterns/command-bar-flyout.md
+        - name: 메뉴 및 상황에 맞는 메뉴
+          href: controls-and-patterns/menus.md
+    - name: 탐색
+      items:
+        - name: 마스터/세부
+          href: controls-and-patterns/master-details.md
+        - name: 탐색 보기
+          href: controls-and-patterns/navigationview.md
+        - name: Pivot
+          href: controls-and-patterns/pivot.md
+    - name: 피플
+      items:
+        - name: 연락처 카드
+          href: controls-and-patterns/contact-card.md
+        - name: 인물 사진
+          href: controls-and-patterns/person-picture.md
+    - name: 선택기
+      items:
+        - name: 색 선택기
+          href: controls-and-patterns/color-picker.md
+        - name: 날짜 및 시간 컨트롤
+          href: controls-and-patterns/date-and-time.md
+        - name: 달력 날짜 선택
+          href: controls-and-patterns/calendar-date-picker.md
+        - name: 달력 보기
+          href: controls-and-patterns/calendar-view.md
+        - name: 날짜 선택기
+          href: controls-and-patterns/date-picker.md
+        - name: 시간 선택기
+          href: controls-and-patterns/time-picker.md
+    - name: 스크롤
+      items:
+        - name: 컨트롤 스크롤 및 이동
+          href: controls-and-patterns/scroll-controls.md
+        - name: 시맨틱 줌
+          href: controls-and-patterns/semantic-zoom.md
+    - name: 검색
+      href: controls-and-patterns/search.md
+    - name: 상태 및 정보
+      items:
+        - name: 진행률
+          href: controls-and-patterns/progress-controls.md
+        - name: Tooltip
+          href: controls-and-patterns/tooltips.md
+    - name: 텍스트
+      items:
+        - name: 개요
+          href: controls-and-patterns/text-controls.md
+        - name: 자동 제안 상자
+          href: controls-and-patterns/auto-suggest-box.md
+        - name: 텍스트 블록
+          href: controls-and-patterns/text-block.md
+        - name: 서식 있는 텍스트 블록
+          href: controls-and-patterns/rich-text-block.md
+        - name: 입력란
+          href: controls-and-patterns/text-box.md
+        - name: 서식 있는 편집 상자
+          href: controls-and-patterns/rich-edit-box.md
+        - name: 비밀번호 상자
+          href: controls-and-patterns/password-box.md
+        - name: Labels(레이블)
+          href: controls-and-patterns/labels.md
+        - name: 콘텐츠 링크
+          href: controls-and-patterns/content-links.md
+        - name: 필기 보기
+          href: controls-and-patterns/text-handwriting-view.md
 - name: 스타일
   items:
-  - name: 개요
-    href: style/index.md
-  - name: 색
-    href: style/color.md
-  - name: 입력 체계
-    href: style/typography.md
-  - name: 아이콘
-    items:
     - name: 개요
-      href: style/icons.md
-    - name: 앱 아이콘 및 로고
-      href: style/app-icons-and-logos.md
-    - name: Segoe MDL2 아이콘
-      href: style/segoe-ui-symbol-font.md
-  - name: 아크릴
-    href: style/acrylic.md
-  - name: 강조 표시
-    href: style/reveal.md
-  - name: 포커스 표시
-    href: style/reveal-focus.md
-  - name: 소리
-    href: style/sound.md
-  - name: 간격
-    href: style/spacing.md
-  - name: 쓰기 스타일
-    href: style/writing-style.md
-  - name: XAML 브러시
-    href: style/brushes.md
-  - name: XAML 스타일
-    href: controls-and-patterns/xaml-styles.md
-    items:
-    - name: XAML 컨트롤 템플릿
-      href: controls-and-patterns/control-templates.md
-    - name: ResourceDictionary 및 XAML 리소스 참조
-      href: controls-and-patterns/resourcedictionary-and-xaml-resource-references.md
-    - name: XAML 테마 리소스
-      href: controls-and-patterns/xaml-theme-resources.md
+      href: style/index.md
+    - name: 색
+      href: style/color.md
+    - name: 입력 체계
+      href: style/typography.md
+    - name: 아이콘
+      items:
+        - name: 개요
+          href: style/icons.md
+        - name: 앱 아이콘 및 로고
+          href: style/app-icons-and-logos.md
+        - name: Segoe MDL2 아이콘
+          href: style/segoe-ui-symbol-font.md
+    - name: 아크릴
+      href: style/acrylic.md
+    - name: 강조 표시
+      href: style/reveal.md
+    - name: 포커스 표시
+      href: style/reveal-focus.md
+    - name: 소리
+      href: style/sound.md
+    - name: 간격
+      href: style/spacing.md
+    - name: 쓰기 스타일
+      href: style/writing-style.md
+    - name: XAML 브러시
+      href: style/brushes.md
+    - name: XAML 스타일
+      href: controls-and-patterns/xaml-styles.md
+      items:
+        - name: XAML 컨트롤 템플릿
+          href: controls-and-patterns/control-templates.md
+        - name: ResourceDictionary 및 XAML 리소스 참조
+          href: controls-and-patterns/resourcedictionary-and-xaml-resource-references.md
+        - name: XAML 테마 리소스
+          href: controls-and-patterns/xaml-theme-resources.md
 - name: 동작
   items:
-  - name: 개요
-    href: motion/index.md
-  - name: 타이밍 및 감속
-    href: motion/timing-and-easing.md
-  - name: 방향 및 무게
-    href: motion/directionality-and-gravity.md
-  - name: 실제 움직임
-    href: motion/motion-in-practice.md
-  - name: 페이지 전환
-    href: motion/page-transitions.md
-  - name: 연결된 애니메이션
-    href: motion/connected-animation.md
-  - name: 시차
-    href: motion/parallax.md
-  - name: XAML의 애니메이션
-    href: motion/xaml-animation.md
-    items:
-    - name: 속성 애니메이션
-      href: motion/xaml-property-animations.md
-    - name: 스토리보드 애니메이션
-      href: motion/storyboarded-animations.md
-    - name: 키 프레임 및 감속/가속 함수 애니메이션
-      href: motion/key-frame-and-easing-function-animations.md
+    - name: 개요
+      href: motion/index.md
+    - name: 타이밍 및 감속
+      href: motion/timing-and-easing.md
+    - name: 방향 및 무게
+      href: motion/directionality-and-gravity.md
+    - name: 실제 움직임
+      href: motion/motion-in-practice.md
+    - name: 페이지 전환
+      href: motion/page-transitions.md
+    - name: 연결된 애니메이션
+      href: motion/connected-animation.md
+    - name: 시차
+      href: motion/parallax.md
+    - name: XAML의 애니메이션
+      href: motion/xaml-animation.md
+      items:
+        - name: 속성 애니메이션
+          href: motion/xaml-property-animations.md
+        - name: 스토리보드 애니메이션
+          href: motion/storyboarded-animations.md
+        - name: 키 프레임 및 감속/가속 함수 애니메이션
+          href: motion/key-frame-and-easing-function-animations.md
 - name: 셸
   items:
-  - name: 타일
-    href: shell/tiles-and-notifications/creating-tiles.md
-    items:
-    - name: 보조 타일
-      href: shell/tiles-and-notifications/secondary-tiles.md
+    - name: 타일
+      href: shell/tiles-and-notifications/creating-tiles.md
       items:
-      - name: 지침
-        href: shell/tiles-and-notifications/secondary-tiles-guidance.md
-      - name: 시작 화면에 고정
-        href: shell/tiles-and-notifications/secondary-tiles-pinning.md
-      - name: 작업 표시줄에 고정
-        href: shell/tiles-and-notifications/secondary-tiles-pin-to-taskbar.md
-      - name: 데스크톱 응용 프로그램
-        href: shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md
-    - name: 타일 콘텐츠
-      href: shell/tiles-and-notifications/create-adaptive-tiles.md
-    - name: 타일 콘텐츠 스키마
-      href: shell/tiles-and-notifications/tile-schema.md
-    - name: 특수 타일 템플릿
-      href: shell/tiles-and-notifications/special-tile-templates-catalog.md
-    - name: 로컬 타일 알림 보내기
-      href: shell/tiles-and-notifications/sending-a-local-tile-notification.md
-    - name: 추적 가능한 타일 알림
-      href: shell/tiles-and-notifications/chaseable-tile-notifications.md
-    - name: 기본 타일 API
-      href: shell/tiles-and-notifications/primary-tile-apis.md
-    - name: 언어, 배율, 대비에 대한 타일, 알림 메시지 지원
-      href: shell/tiles-and-notifications/tile-toast-language-scale-contrast.md
-  - name: 작업 표시줄에 앱 고정
-    href: shell/pin-to-taskbar.md
-  - name: 제목 표시줄 사용자 지정
-    href: shell/title-bar.md
-  - name: 알림
-    items:
-    - name: 알림 메시지
-      items:
-      - name: UX 지침
-        href: shell/tiles-and-notifications/toast-ux-guidance.md
-      - name: 알림 콘텐츠
-        href: shell/tiles-and-notifications/adaptive-interactive-toasts.md
-      - name: 알림 콘텐츠 스키마
-        href: shell/tiles-and-notifications/toast-schema.md
-      - name: 로컬 알림 메시지 보내기
-        href: shell/tiles-and-notifications/send-local-toast.md
-        items:
-        - name: 데스크톱 앱
-          href: shell/tiles-and-notifications/toast-desktop-apps.md
+        - name: 보조 타일
+          href: shell/tiles-and-notifications/secondary-tiles.md
           items:
-          - name: C# 앱
-            href: shell/tiles-and-notifications/send-local-toast-desktop.md
-          - name: C++ WRL 앱
-            href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
-      - name: 사용자 지정 오디오
-        href: shell/tiles-and-notifications/custom-audio-on-toasts.md
-      - name: 진행률 표시줄
-        href: shell/tiles-and-notifications/toast-progress-bar.md
-      - name: 보류 중인 업데이트
-        href: shell/tiles-and-notifications/toast-pending-update.md
-      - name: 사용자 지정 타임스탬프
-        href: shell/tiles-and-notifications/custom-timestamps-on-toasts.md
-      - name: 컬렉션
-        href: shell/tiles-and-notifications/toast-collections.md
-      - name: 헤더
-        href: shell/tiles-and-notifications/toast-headers.md
-      - name: 알림 수신기
-        href: shell/tiles-and-notifications/notification-listener.md
-      - name: 알림 미러링
-        href: shell/tiles-and-notifications/notification-mirroring.md
-      - name: 유니버설 해제
-        href: shell/tiles-and-notifications/universal-dismiss.md
-    - name: 배지 알림
-      href: shell/tiles-and-notifications/badges.md
-    - name: 알림 시각화 도우미
-      href: shell/tiles-and-notifications/notifications-visualizer.md
-    - name: 알림 전달 방법
-      href: shell/tiles-and-notifications/choosing-a-notification-delivery-method.md
+            - name: 지침
+              href: shell/tiles-and-notifications/secondary-tiles-guidance.md
+            - name: 시작 화면에 고정
+              href: shell/tiles-and-notifications/secondary-tiles-pinning.md
+            - name: 작업 표시줄에 고정
+              href: shell/tiles-and-notifications/secondary-tiles-pin-to-taskbar.md
+            - name: 데스크톱 응용 프로그램
+              href: shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md
+        - name: 타일 콘텐츠
+          href: shell/tiles-and-notifications/create-adaptive-tiles.md
+        - name: 타일 콘텐츠 스키마
+          href: shell/tiles-and-notifications/tile-schema.md
+        - name: 특수 타일 템플릿
+          href: shell/tiles-and-notifications/special-tile-templates-catalog.md
+        - name: 로컬 타일 알림 보내기
+          href: shell/tiles-and-notifications/sending-a-local-tile-notification.md
+        - name: 추적 가능한 타일 알림
+          href: shell/tiles-and-notifications/chaseable-tile-notifications.md
+        - name: 기본 타일 API
+          href: shell/tiles-and-notifications/primary-tile-apis.md
+        - name: '언어, 배율, 대비에 대한 타일, 알림 메시지 지원'
+          href: shell/tiles-and-notifications/tile-toast-language-scale-contrast.md
+    - name: 작업 표시줄에 앱 고정
+      href: shell/pin-to-taskbar.md
+    - name: 제목 표시줄 사용자 지정
+      href: shell/title-bar.md
+    - name: 알림
       items:
-      - name: 알림 채널 유형
-        href: shell/tiles-and-notifications/channel-types.md
-      - name: Webpush 및 VAPID 대체 채널
-        href: shell/tiles-and-notifications/alternate-channel-vapid-webpush.md
-      - name: 정기 알림
-        href: shell/tiles-and-notifications/periodic-notification-overview.md
-    - name: WNS(Windows 푸시 알림 서비스)
-      href: shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md
-      items:
-      - name: WNS 우선 순위
-        href: shell/tiles-and-notifications/wns-notification-priorities.md
-      - name: 푸시 알림 마법사에서 생성된 코드
-        href: shell/tiles-and-notifications/the-code-generated-by-the-push-notification-wizard.md
-    - name: 원시 알림
-      href: shell/tiles-and-notifications/raw-notification-overview.md
+        - name: 알림 메시지
+          items:
+            - name: UX 지침
+              href: shell/tiles-and-notifications/toast-ux-guidance.md
+            - name: 알림 콘텐츠
+              href: shell/tiles-and-notifications/adaptive-interactive-toasts.md
+            - name: 알림 콘텐츠 스키마
+              href: shell/tiles-and-notifications/toast-schema.md
+            - name: 로컬 알림 메시지 보내기
+              href: shell/tiles-and-notifications/send-local-toast.md
+              items:
+                - name: 데스크톱 앱
+                  href: shell/tiles-and-notifications/toast-desktop-apps.md
+                  items:
+                    - name: 'C# 앱'
+                      href: shell/tiles-and-notifications/send-local-toast-desktop.md
+                    - name: C++ WRL 앱
+                      href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
+            - name: 사용자 지정 오디오
+              href: shell/tiles-and-notifications/custom-audio-on-toasts.md
+            - name: 진행률 표시줄
+              href: shell/tiles-and-notifications/toast-progress-bar.md
+            - name: 보류 중인 업데이트
+              href: shell/tiles-and-notifications/toast-pending-update.md
+            - name: 사용자 지정 타임스탬프
+              href: shell/tiles-and-notifications/custom-timestamps-on-toasts.md
+            - name: 컬렉션
+              href: shell/tiles-and-notifications/toast-collections.md
+            - name: 헤더
+              href: shell/tiles-and-notifications/toast-headers.md
+            - name: 알림 수신기
+              href: shell/tiles-and-notifications/notification-listener.md
+            - name: 알림 미러링
+              href: shell/tiles-and-notifications/notification-mirroring.md
+            - name: 유니버설 해제
+              href: shell/tiles-and-notifications/universal-dismiss.md
+        - name: 배지 알림
+          href: shell/tiles-and-notifications/badges.md
+        - name: 알림 시각화 도우미
+          href: shell/tiles-and-notifications/notifications-visualizer.md
+        - name: 알림 전달 방법
+          href: shell/tiles-and-notifications/choosing-a-notification-delivery-method.md
+          items:
+            - name: 알림 채널 유형
+              href: shell/tiles-and-notifications/channel-types.md
+            - name: Webpush 및 VAPID 대체 채널
+              href: shell/tiles-and-notifications/alternate-channel-vapid-webpush.md
+            - name: 정기 알림
+              href: shell/tiles-and-notifications/periodic-notification-overview.md
+        - name: WNS(Windows 푸시 알림 서비스)
+          href: shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md
+          items:
+            - name: WNS 우선 순위
+              href: shell/tiles-and-notifications/wns-notification-priorities.md
+            - name: 푸시 알림 마법사에서 생성된 코드
+              href: shell/tiles-and-notifications/the-code-generated-by-the-push-notification-wizard.md
+        - name: 원시 알림
+          href: shell/tiles-and-notifications/raw-notification-overview.md
 - name: 입력 및 조작
   items:
-  - name: 개요
-    href: input/index.md
-  - name: 입력 지침서
-    href: input/input-primer.md
-  - name: 포인터 입력
-    href: input/handle-pointer-input.md
-  - name: 응시
-    href: input/gaze-interactions.md
-  - name: 펜 및 Windows Ink
-    href: input/pen-and-stylus-interactions.md
-    items:
-    - name: '자습서: 앱에 잉크 입력 지원 추가'
-      href: input/ink-walkthrough.md
-    - name: 잉크 스트로크 인식
-      href: input/convert-ink-to-text.md
-    - name: 잉크 스트로크 저장 및 검색
-      href: input/save-and-load-ink.md
-    - name: InkToolbar 추가
-      href: input/ink-toolbar.md
-  - name: 터치
-    href: input/touch-interactions.md
-  - name: 마우스
-    href: input/mouse-interactions.md
-  - name: 키보드
-    href: input/keyboard-interactions.md
-    items:
-    - name: 선택키
-      href: input/access-keys.md
-    - name: 바로 가기 키
-      href: input/keyboard-accelerators.md
-    - name: 키보드, 게임 패드, 리모컨 및 접근성 도구를 사용하여 포커스 탐색
-      href: input/focus-navigation.md
-    - name: 프로그래밍 방식 포커스 탐색
-      href: input/focus-navigation-programmatic.md
-    - name: 키보드 이벤트
-      href: input/keyboard-events.md
-    - name: 터치 키보드의 현재 상태에 응답
-      href: input/respond-to-the-presence-of-the-touch-keyboard.md
-    - name: 입력 범위를 사용하여 터치 키보드 변경
-      href: input/use-input-scope-to-change-the-touch-keyboard.md
-  - name: 게임 패드 및 리모컨
-    href: input/gamepad-and-remote-interactions.md
-  - name: 터치 패드
-    href: input/touchpad-interactions.md
-  - name: Surface Dial
-    href: input/windows-wheel-interactions.md
-    items:
-    - name: '자습서: 앱에 Surface Dial 지원 추가'
-      href: input/radialcontroller-walkthrough.md
-  - name: 음성 조작
-    href: input/speech-interactions.md
-    items:
-    - name: 음성 인식
-      href: input/speech-recognition.md
-    - name: 음성 인식기 언어 지정
-      href: input/specify-the-speech-recognizer-language.md
-    - name: 사용자 지정 인식 제약 조건 정의
-      href: input/define-custom-recognition-constraints.md
-    - name: 연속 받아쓰기
-      href: input/enable-continuous-dictation.md
-    - name: 오디오 입력 문제
-      href: input/manage-issues-with-audio-input.md
-    - name: 음성 인식 시간 제한 설정
-      href: input/set-speech-recognition-timeouts.md
-  - name: Cortana
-    href: input/cortana-interactions.md
-    items:
-    - name: 디자인 지침
-      href: https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines
-    - name: 포그라운드 앱 활성화
-      href: https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana
-    - name: VCD 구 목록 수정
-      href: https://docs.microsoft.com/cortana/voice-commands/dynamically-modify-voice-command-definition-vcd-phrase-lists
-    - name: 백그라운드 앱 시작
-      href: https://docs.microsoft.com/cortana/voice-commands/launch-a-background-app-with-voice-commands-in-cortana
-    - name: 백그라운드 앱 조작
-      href: https://docs.microsoft.com/cortana/voice-commands/interact-with-a-background-app-in-cortana
-    - name: 백그라운드 앱에서 딥 링크
-      href: https://docs.microsoft.com/cortana/voice-commands/deep-link-into-your-app-from-cortana
-    - name: 자연어 음성 명령 지원
-      href: https://docs.microsoft.com/cortana/voice-commands/support-natural-language-voice-commands-in-cortana
-  - name: 여러 입력
-    href: input/multiple-input-design-guidelines.md
-  - name: 입력 주입
-    href: input/input-injection.md
-  - name: 입력 장치 식별
-    href: input/identify-input-devices.md
-  - name: 사용자 지정 텍스트 입력
-    href: input/custom-text-input.md
-  - name: 텍스트 크기 조정
-    href: input/text-scaling.md
-  - name: 끌어서 놓기
-    href: input/drag-and-drop.md
-  - name: 광학 줌 및 크기 조정
-    href: input/guidelines-for-optical-zoom.md
-  - name: 이동
-    href: input/guidelines-for-panning.md
-  - name: 회전
-    href: input/guidelines-for-rotation.md
-  - name: 텍스트 및 이미지 선택
-    href: input/guidelines-for-textselection.md
-  - name: 대상 지정
-    href: input/guidelines-for-targeting.md
-  - name: 시각적 피드백
-    href: input/guidelines-for-visualfeedback.md
+    - name: 개요
+      href: input/index.md
+    - name: 입력 지침서
+      href: input/input-primer.md
+    - name: 포인터 입력
+      href: input/handle-pointer-input.md
+    - name: 응시
+      href: input/gaze-interactions.md
+    - name: 펜 및 Windows Ink
+      href: input/pen-and-stylus-interactions.md
+      items:
+        - name: '자습서: 앱에 잉크 입력 지원 추가'
+          href: input/ink-walkthrough.md
+        - name: 잉크 스트로크 인식
+          href: input/convert-ink-to-text.md
+        - name: 잉크 스트로크 저장 및 검색
+          href: input/save-and-load-ink.md
+        - name: InkToolbar 추가
+          href: input/ink-toolbar.md
+    - name: 터치
+      href: input/touch-interactions.md
+    - name: 마우스
+      href: input/mouse-interactions.md
+    - name: 키보드
+      href: input/keyboard-interactions.md
+      items:
+        - name: 선택키
+          href: input/access-keys.md
+        - name: 바로 가기 키
+          href: input/keyboard-accelerators.md
+        - name: '키보드, 게임 패드, 리모컨 및 접근성 도구를 사용하여 포커스 탐색'
+          href: input/focus-navigation.md
+        - name: 프로그래밍 방식 포커스 탐색
+          href: input/focus-navigation-programmatic.md
+        - name: 키보드 이벤트
+          href: input/keyboard-events.md
+        - name: 터치 키보드의 현재 상태에 응답
+          href: input/respond-to-the-presence-of-the-touch-keyboard.md
+        - name: 입력 범위를 사용하여 터치 키보드 변경
+          href: input/use-input-scope-to-change-the-touch-keyboard.md
+    - name: 게임 패드 및 리모컨
+      href: input/gamepad-and-remote-interactions.md
+    - name: 터치 패드
+      href: input/touchpad-interactions.md
+    - name: Surface Dial
+      href: input/windows-wheel-interactions.md
+      items:
+        - name: '자습서: 앱에 Surface Dial 지원 추가'
+          href: input/radialcontroller-walkthrough.md
+    - name: 음성 조작
+      href: input/speech-interactions.md
+      items:
+        - name: 음성 인식
+          href: input/speech-recognition.md
+        - name: 음성 인식기 언어 지정
+          href: input/specify-the-speech-recognizer-language.md
+        - name: 사용자 지정 인식 제약 조건 정의
+          href: input/define-custom-recognition-constraints.md
+        - name: 연속 받아쓰기
+          href: input/enable-continuous-dictation.md
+        - name: 오디오 입력 문제
+          href: input/manage-issues-with-audio-input.md
+        - name: 음성 인식 시간 제한 설정
+          href: input/set-speech-recognition-timeouts.md
+    - name: Cortana
+      href: input/cortana-interactions.md
+      items:
+        - name: 디자인 지침
+          href: 'https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines'
+        - name: 포그라운드 앱 활성화
+          href: 'https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana'
+        - name: VCD 구 목록 수정
+          href: 'https://docs.microsoft.com/cortana/voice-commands/dynamically-modify-voice-command-definition-vcd-phrase-lists'
+        - name: 백그라운드 앱 시작
+          href: 'https://docs.microsoft.com/cortana/voice-commands/launch-a-background-app-with-voice-commands-in-cortana'
+        - name: 백그라운드 앱 조작
+          href: 'https://docs.microsoft.com/cortana/voice-commands/interact-with-a-background-app-in-cortana'
+        - name: 백그라운드 앱에서 딥 링크
+          href: 'https://docs.microsoft.com/cortana/voice-commands/deep-link-into-your-app-from-cortana'
+        - name: 자연어 음성 명령 지원
+          href: 'https://docs.microsoft.com/cortana/voice-commands/support-natural-language-voice-commands-in-cortana'
+    - name: 여러 입력
+      href: input/multiple-input-design-guidelines.md
+    - name: 입력 주입
+      href: input/input-injection.md
+    - name: 입력 장치 식별
+      href: input/identify-input-devices.md
+    - name: 사용자 지정 텍스트 입력
+      href: input/custom-text-input.md
+    - name: 텍스트 크기 조정
+      href: input/text-scaling.md
+    - name: 끌어서 놓기
+      href: input/drag-and-drop.md
+    - name: 광학 줌 및 크기 조정
+      href: input/guidelines-for-optical-zoom.md
+    - name: 이동
+      href: input/guidelines-for-panning.md
+    - name: 회전
+      href: input/guidelines-for-rotation.md
+    - name: 텍스트 및 이미지 선택
+      href: input/guidelines-for-textselection.md
+    - name: 대상 지정
+      href: input/guidelines-for-targeting.md
+    - name: 시각적 피드백
+      href: input/guidelines-for-visualfeedback.md
 - name: 장치
   items:
-  - name: 개요
-    href: devices/index.md
-  - name: Xbox 및 TV용 디자인
-    href: devices/designing-for-tv.md
-  - name: 혼합 현실
-    href: devices/designing-for-MR.md
+    - name: 개요
+      href: devices/index.md
+    - name: Xbox 및 TV용 디자인
+      href: devices/designing-for-tv.md
+    - name: 혼합 현실
+      href: devices/designing-for-MR.md
 - name: 유용성
   items:
-  - name: 개요
-    href: usability/index.md
-  - name: 접근성
-    href: accessibility/accessibility.md
-    items:
     - name: 개요
-      href: accessibility/accessibility-overview.md
-    - name: 포괄 소프트웨어 디자인
-      href: accessibility/designing-inclusive-software.md
-    - name: 포괄 Windows 앱 개발
-      href: accessibility/developing-inclusive-windows-apps.md
-    - name: 접근성 테스트
-      href: accessibility/accessibility-testing.md
-    - name: 스토어의 접근성
-      href: accessibility/accessibility-in-the-store.md
-    - name: 접근성 검사 목록
-      href: accessibility/accessibility-checklist.md
-    - name: 기본적인 접근성 정보 표시
-      href: accessibility/basic-accessibility-information.md
-    - name: 키보드 접근성
-      href: accessibility/keyboard-accessibility.md
-    - name: 랜드마크 및 머리글
-      href: accessibility/landmarks-and-headings.md
-    - name: 고대비 테마
-      href: accessibility/high-contrast-themes.md
-    - name: 접근성 있는 텍스트 요구 사항
-      href: accessibility/accessible-text-requirements.md
-    - name: 피해야 할 접근성 사례
-      href: accessibility/practices-to-avoid.md
-    - name: 사용자 지정 자동화 피어
-      href: accessibility/custom-automation-peers.md
+      href: usability/index.md
+    - name: 접근성
+      href: accessibility/accessibility.md
       items:
-      - name: 컨트롤 패턴 및 인터페이스
-        href: accessibility/control-patterns-and-interfaces.md
-  - name: 앱 설정
-    href: app-settings/app-settings-and-data.md
-    items:
-    - name: 지침
-      href: app-settings/guidelines-for-app-settings.md
-    - name: 앱 설정과 데이터 저장 및 검색
-      href: app-settings/store-and-retrieve-app-data.md
-  - name: 세계화 및 지역화
-    href: globalizing/globalizing-portal.md
-    items:
-    - name: 세계화 지침
-      href: globalizing/guidelines-and-checklist-for-globalizing-your-app.md
-    - name: 사용자 프로필 및 앱 매니페스트 언어 이해
-      href: globalizing/manage-language-and-region.md
-    - name: 날짜/시간/숫자 형식 세계화
-      href: globalizing/use-global-ready-formats.md
-    - name: 날짜 및 시간 형식을 지정하는 템플릿 및 패턴 사용
-      href: globalizing/use-patterns-to-format-dates-and-times.md
-    - name: 레이아웃 및 글꼴 조정, RTL 지원
-      href: globalizing/adjust-layout-and-fonts--and-support-rtl.md
-    - name: NumeralSystem 값
-      href: globalizing/glob-numeralsystem-values.md
-    - name: 앱을 현지화 가능하게 만들기
-      href: globalizing/prepare-your-app-for-localization.md
-    - name: 국가별 글꼴
-      href: globalizing/loc-international-fonts.md
-    - name: 양방향 텍스트를 위한 앱 디자인
-      href: globalizing/design-for-bidi-text.md
-    - name: 다국어 앱 도구 키트 4.0 사용
-      href: globalizing/use-mat.md
-    - name: 다국어 앱 도구 키트 4.0 FAQ 및 문제 해결
-      href: globalizing/mat-faq-troubleshooting.md
-    - name: 일본의 시대 변경을 대비한 애플리케이션 준비
-      href: globalizing/japanese-era-change.md
-  - name: 앱 도움말에 대한 지침
-    href: in-app-help/guidelines-for-app-help.md
-    items:
-    - name: UI 사용 안내
-      href: in-app-help/instructional-ui.md
-    - name: 앱 내 도움말
-      href: in-app-help/in-app-help.md
-    - name: 외부 도움말
-      href: in-app-help/external-help.md
+        - name: 개요
+          href: accessibility/accessibility-overview.md
+        - name: 포괄 소프트웨어 디자인
+          href: accessibility/designing-inclusive-software.md
+        - name: 포괄 Windows 앱 개발
+          href: accessibility/developing-inclusive-windows-apps.md
+        - name: 접근성 테스트
+          href: accessibility/accessibility-testing.md
+        - name: 스토어의 접근성
+          href: accessibility/accessibility-in-the-store.md
+        - name: 접근성 검사 목록
+          href: accessibility/accessibility-checklist.md
+        - name: 기본적인 접근성 정보 표시
+          href: accessibility/basic-accessibility-information.md
+        - name: 키보드 접근성
+          href: accessibility/keyboard-accessibility.md
+        - name: 랜드마크 및 머리글
+          href: accessibility/landmarks-and-headings.md
+        - name: 고대비 테마
+          href: accessibility/high-contrast-themes.md
+        - name: 접근성 있는 텍스트 요구 사항
+          href: accessibility/accessible-text-requirements.md
+        - name: 피해야 할 접근성 사례
+          href: accessibility/practices-to-avoid.md
+        - name: 사용자 지정 자동화 피어
+          href: accessibility/custom-automation-peers.md
+          items:
+            - name: 컨트롤 패턴 및 인터페이스
+              href: accessibility/control-patterns-and-interfaces.md
+    - name: 앱 설정
+      href: app-settings/app-settings-and-data.md
+      items:
+        - name: 지침
+          href: app-settings/guidelines-for-app-settings.md
+        - name: 앱 설정과 데이터 저장 및 검색
+          href: app-settings/store-and-retrieve-app-data.md
+    - name: 세계화 및 지역화
+      href: globalizing/globalizing-portal.md
+      items:
+        - name: 세계화 지침
+          href: globalizing/guidelines-and-checklist-for-globalizing-your-app.md
+        - name: 사용자 프로필 및 앱 매니페스트 언어 이해
+          href: globalizing/manage-language-and-region.md
+        - name: 날짜/시간/숫자 형식 세계화
+          href: globalizing/use-global-ready-formats.md
+        - name: 날짜 및 시간 형식을 지정하는 템플릿 및 패턴 사용
+          href: globalizing/use-patterns-to-format-dates-and-times.md
+        - name: '레이아웃 및 글꼴 조정, RTL 지원'
+          href: globalizing/adjust-layout-and-fonts--and-support-rtl.md
+        - name: NumeralSystem 값
+          href: globalizing/glob-numeralsystem-values.md
+        - name: 앱을 현지화 가능하게 만들기
+          href: globalizing/prepare-your-app-for-localization.md
+        - name: 국가별 글꼴
+          href: globalizing/loc-international-fonts.md
+        - name: 양방향 텍스트를 위한 앱 디자인
+          href: globalizing/design-for-bidi-text.md
+        - name: 다국어 앱 도구 키트 4.0 사용
+          href: globalizing/use-mat.md
+        - name: 다국어 앱 도구 키트 4.0 FAQ 및 문제 해결
+          href: globalizing/mat-faq-troubleshooting.md
+        - name: 일본의 시대 변경을 대비한 애플리케이션 준비
+          href: globalizing/japanese-era-change.md
+    - name: 앱 도움말에 대한 지침
+      href: in-app-help/guidelines-for-app-help.md
+      items:
+        - name: UI 사용 안내
+          href: in-app-help/instructional-ui.md
+        - name: 앱 내 도움말
+          href: in-app-help/in-app-help.md
+        - name: 외부 도움말
+          href: in-app-help/external-help.md
 - name: 디자인 도구 키트
   href: downloads/index.md
-ms.openlocfilehash: af847479fb2f9e8e2f9f033a7b63cdad750a903f
-ms.sourcegitcommit: 7a1d5198345d114c58287d8a047eadc4fe10f012
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59247201"

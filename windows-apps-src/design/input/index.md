@@ -9,13 +9,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f66d808cafcc6fba89cebde352d191335068925
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 12ca16eea1bb3b5ced72add427333e7e5988f876
+ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583105"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65065297"
 ---
+![입력 아이콘](../images/inputs-2x.png)
 # <a name="input-and-interactions"></a>입력 및 조작
 
 <!-- <div>

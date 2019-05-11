@@ -6,16 +6,16 @@ ms.date: 03/07/2018
 ms.topic: article
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
 ms.localizationpriority: medium
-ms.openlocfilehash: 49b223c53e0bd2dd52aafac82df1719e8bdecaf0
-ms.sourcegitcommit: 99271798fe53d9768fc52b21366de05268cadcb0
+ms.openlocfilehash: 33bb7aa6a5a244f1d7b9dcd178b036ac571032f8
+ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221399"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65065275"
 ---
 # <a name="layout"></a>레이아웃
 
-![영웅 이미지](images/header-layout2.jpg)
+![레이아웃 아이콘](../images/layout-2x.png)
 
 아래 문서는 다양한 화면 크기, 창 크기, 해상도 및 방향에서 멋지게 보이는 유연한 UI를 만드는 데 도움이 됩니다.
 

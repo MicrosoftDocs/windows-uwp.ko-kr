@@ -7,16 +7,16 @@ ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1d313e35b7d1ab3ebe72bd3a073323fe8782098a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7d5da19fc9fdab324db2c162a3cb6792fa91f120
+ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583777"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65065365"
 ---
 # <a name="style-for-uwp-apps"></a>UWP 앱의 스타일
 
-![영웅 이미지](images/header-style.svg)
+![스타일 아이콘](../images/style-2x.png)
 
 스타일은 앱을 돋보이게 만듭니다. 이 섹션의 스타일 지침은 색상, 입력 체계, 그리고 아크릴 재질이나 표시 같은 새로운 기능을 통해 Fluent Design을 만드는 데 도움이 됩니다.
 

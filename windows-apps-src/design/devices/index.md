@@ -1,6 +1,6 @@
 ---
 Description: UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다.
-title: UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서
+title: UWP 디바이스에 대한 UI 고려 사항
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
@@ -8,20 +8,22 @@ keywords: 디바이스, 입력, 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 127c01321c0341e7125e8c6da955c789c4c65f2f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6333345a79d92394539d337f1f2390118cff1153
+ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583550"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65065337"
 ---
-#  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서
+#  <a name="ui-considerations-for-uwp-devices"></a>UWP 디바이스에 대한 UI 고려 사항
 
+![장치](../images/devices-2x.png)
 
+UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다.
 
 ![Windows 기반 디바이스](images/device-primer/device-primer-ramp.png)
 
-UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다. 특정 장치를 디자인할 때의 주요 고려 사항은 해당 장치에 앱이 표시되는 방법, 해당 장치에서 앱이 사용되는 위치, 시간 및 방법, 사용자가 해당 장치를 조작하는 방법 등입니다.
+ 특정 장치를 디자인할 때의 주요 고려 사항은 해당 장치에 앱이 표시되는 방법, 해당 장치에서 앱이 사용되는 위치, 시간 및 방법, 사용자가 해당 장치를 조작하는 방법 등입니다.
 
 ## <a name="pcs-and-laptops"></a>PC와 노트북
 
