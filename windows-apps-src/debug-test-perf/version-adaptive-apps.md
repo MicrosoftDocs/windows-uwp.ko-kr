@@ -1,16 +1,16 @@
 ---
 title: 버전 적응 앱
 description: 이전 버전과 호환성을 유지하면서 새로운 API를 활용하는 방법을 알아봅니다.
-ms.date: 09/17/2018
+ms.date: 05/17/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 435bbdbfaaf1bec90fa1ee2d598b4a3fe78d3789
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 579f92cc51ed5f9eeea522d81cfdb030f85ef0da
+ms.sourcegitcommit: f282c906cddf0d57217484e61a5cbd2fe8469421
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631658"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65852271"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>적응 응용 프로그램 버전: 이전 버전과 호환성을 유지 하면서 새 Api를 사용 하 여
 
@@ -57,6 +57,7 @@ Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상
 | Fall Creators Update | 1709 | 16299 |
 | 2018년 4월 업데이트 | 1803 | 17134 |
 | 2018 년 10 월 업데이트 | 1809 | 17763 |
+| 2019 년 5 월 업데이트 | 1903 | 18362 |
 
 출시된 모든 버전의 SDK는 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/downloads/sdk-archive)에서 다운로드할 수 있습니다. 최신 Windows Insider Preview SDK는 [Windows 참가자](https://insider.windows.com/Home/BuildWithWindows) 사이트의 개발자 섹션에서 다운로드할 수 있습니다.
 

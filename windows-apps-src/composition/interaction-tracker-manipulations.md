@@ -5,18 +5,18 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d2c965bcfbf81efe73ce8aff93cdb8b31163fbd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 89b393120657b7c02ccfe10ce6aca16be80118aa
+ms.sourcegitcommit: f282c906cddf0d57217484e61a5cbd2fe8469421
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653848"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65852267"
 ---
 # <a name="custom-manipulation-experiences-with-interactiontracker"></a>InteractionTracker를 사용한 사용자 지정 조작 경험
 
 이 문서에서는 InteractionTracker를 사용하여 사용자 지정 조작 경험을 만드는 방법을 설명합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 여기에서는 여러분이 이 문서에서 다룬 개념에 익숙하다고 가정합니다.
 
@@ -61,9 +61,9 @@ InteractionTracker는 Windows.UI.Composition.Interactions 네임스페이스 105
 
 이전에 설명한 대로 InteractionTracker는 다른 네 가지 상태 중 하나로 전환할 수 있으며 각 – 4 상태를 사용 하 여 상태 시스템. (InteractionTracker가 이러한 상태 사이에서 전환하는 방식에 대한 자세한 내용은 [InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker) 클래스 설명서를 참조하세요.)
 
-| 상태 | 설명 |
+| State | 설명 |
 |-------|-------------|
-| 유휴 상태 | 구동해야 하는 활성 애니메이션 없음 |
+| Idle | 구동해야 하는 활성 애니메이션 없음 |
 | 상호 작용 중 | 활성 사용자 입력이 검색됨 |
 | 관성 | 활성 입력 또는 프로그래밍된 속도에서 비롯된 활성 동작 |
 | CustomAnimation | 사용자 지정 애니메이션에서 비롯된 활성 동작 |
@@ -151,7 +151,7 @@ private void InteractionTrackerSetup(Compositor compositor, Visual hitTestRoot)
     tracker.MinPosition = new Vector3(-1000f);
     tracker.MaxPosition = new Vector3(1000f);
 
-    // #3 Setup the VisualInteractionSourc
+    // #3 Setup the VisualInteractionSource
     var source = VisualInteractionSource.Create(hitTestRoot);
 
     // #4 Set the properties for the VisualInteractionSource
