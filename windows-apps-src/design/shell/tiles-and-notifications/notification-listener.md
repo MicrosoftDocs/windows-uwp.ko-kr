@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows 10, uwp, 알림 수신기, usernotificationlistener, 설명서, 액세스 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: de1032eb3d0d364a62beff0a1af8f84240c11d87
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d6c18740cbba0ea037440300edbe2d7ba4fd116e
+ms.sourcegitcommit: 1d04910a6bbfcaa985d2074caf8f898c35eab7ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649618"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933165"
 ---
 # <a name="notification-listener-access-all-notifications"></a>알림 수신기: 모든 알림 액세스
 
@@ -277,17 +277,17 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>추가/해제된 알림의 포그라운드 이벤트
 
 > [!IMPORTANT] 
-> 알려진된 문제: 전경 이벤트를 발생 합니다 CPU 루프에서 최신 버전의 Windows 이전에 이전에 작동 하지 않았습니다. 전경 이벤트를 사용 하지 마세요. Windows, 향후 업데이트에서 수정할 됩니다.
+> 알려진된 문제: 빌드에서 17763 빌드 전 / 2018 년 10 월 업데이트 버전 1809 전경 이벤트 CPU 루프 하면 및/또는 작동 하지 않음 /. 이러한 이전 빌드에 대 한 지원이 필요한 경우 백그라운드 작업을 대신 사용 합니다.
 
-전경 이벤트를 사용 하는 대신 사용에 대 한 앞의 코드를 [단일 프로세스 모델](../../../launch-resume/create-and-register-an-inproc-background-task.md) 백그라운드 작업입니다. 백그라운드 태스크는 변경 이벤트 알림의 받을 두 앱 종료 되거나 실행 중일 수 있습니다.
+또한 메모리에 이벤트 처리기에서 알림을 수신할 수 있습니다...
 
 ```csharp
-// Subscribe to foreground event (DON'T USE THIS)
+// Subscribe to foreground event
 listener.NotificationChanged += Listener_NotificationChanged;
  
 private void Listener_NotificationChanged(UserNotificationListener sender, UserNotificationChangedEventArgs args)
 {
-    // NOTE: This event WILL CAUSE CPU LOOPS, DO NOT USE. Use the background task instead.
+    // Your code for handling the notification
 }
 ```
 

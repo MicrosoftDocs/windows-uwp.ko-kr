@@ -1,5 +1,5 @@
 ---
-Description: WRL Win32 c + + 앱 수 로컬 알림을 보낼 하 고 알림을 클릭 하는 사용자를 처리 하는 방법에 대해 알아봅니다.
+Description: 에 대해 알아봅니다 어떻게 Win32 C++ WRL 앱 로컬 알림을 보내고 사용자 알림을 클릭을 처리 합니다.
 title: 데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 label: Send a local toast notification from desktop C++ WRL apps
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 03/07/2018
 ms.topic: article
 keywords: Windows 10, uwp, win32, 데스크톱, 알림 메시지, 알림 보내기, 로컬 알림 보내기, 데스크톱 브리지, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: 82de349009350c970fce923a2aa503df0801c3b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: af6c4392d97bdbf06c3e185b8a1c0235225bfe5a
+ms.sourcegitcommit: 81021b7930905beb67383a08b09520cf95c68fd9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57609848"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940308"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 
@@ -62,7 +62,7 @@ using namespace Microsoft::WRL;
 
 ## <a name="step-4-implement-the-activator"></a>4단계: 활성기를 구현 합니다.
 
-알림 활성화를 위해 처리기를 구현해야하므로 사용자가 알림을 클릭할 때 앱에서 작업을 수행할 수 있습니다. 이때 알림을 알림 센터에서 지속해야 합니다(앱을 종료하고 나서 며칠 후 알림을 클릭할 수 있기 때문). 이 클래스는 프로젝트의 어느 위치에나 배치할 수 있습니다.
+사용자가 사용자 알림 메시지를 클릭 하면 앱 할 수 있도록 알림 활성화에 대 한 처리기를 구현 해야 합니다. 이때 알림을 알림 센터에서 지속해야 합니다(앱을 종료하고 나서 며칠 후 알림을 클릭할 수 있기 때문). 이 클래스는 프로젝트의 어느 위치에나 배치할 수 있습니다.
 
 UUID를 포함하여 아래에 표시된 대로 **INotificationActivationCallback** 인터페이스를 구현하고, **CoCreatableClass**를 호출하여 COM 생성 가능 클래스로 플래그를 지정합니다. UUID의 경우 많은 온라인 GUID 생성기 중 하나를 사용하여 고유한 GUID를 만듭니다. 이 GUID CLSID(클래스 식별자)는 알림 센터가 COM에 활성화해야 하는 COM에 대한 클래스를 인식하는 방법입니다.
 
@@ -420,9 +420,9 @@ Windows 8은 알림 메시지를 도입했지만, ToastText01과 같은 [레거�
 
 | OS | ToastGeneric | COM 활성자 | 레거시 알림 템플릿 |
 | -- | ------------ | ------------- | ---------------------- |
-| Windows 10 | 지원함 | 지원함 | 지원(하지만 COM 서버 활성화 제외) |
-| Windows 8.1/8 | 해당 없음 | 해당 없음 | 지원함 |
-| Windows 7 이하 | 해당 없음 | 해당 없음 | 해당 없음 |
+| Windows 10 | 지원됨 | 지원됨 | 지원(하지만 COM 서버 활성화 제외) |
+| Windows 8.1/8 | 해당 사항 없음 | 해당 사항 없음 | 지원됨 |
+| Windows 7 이하 | 해당 사항 없음 | 해당 사항 없음 | 해당 사항 없음 |
 
 Windows 10을 실행하고 있는지 확인하려면, `<VersionHelpers.h>` 헤더를 포함하고 **IsWindows10OrGreater** 메서드를 확인합니다. true를 반환하면 계속해서 이 설명서 나오는 모든 메서드를 호출합니다! 
 

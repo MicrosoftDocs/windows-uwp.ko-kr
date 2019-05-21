@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 3c126b17e8ba9b66bc5e7c4fccd0142cd63ab7e9
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: d004f3e735328fb23b7dab6c062d046b005563c2
+ms.sourcegitcommit: a4ea618279448a3099fee4c94dcfc560d00ffdd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63777910"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65922406"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -196,7 +196,7 @@ ms.locfileid: "63777910"
 | **백그라운드 미디어 기록** | **backgroundMediaRecording** 와 같은 미디어 관련 Api의 동작을 변경 하는 기능을 [ **MediaCapture** ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture) 하 고 [  **AudioGraph** ](https://msdn.microsoft.com/library/windows/apps/windows.media.audio.audiograph.aspx) 앱 백그라운드에서 실행 되는 동안 기록 된 미디어를 사용 하도록 설정 하는 클래스입니다. |
 |**Ink 작업 영역 미리 보기**| **previewInkWorkspace** 접근 권한 값을 통해 앱은 잉크 작업 영역 내에 호스트된 미리 보기 잉크 네임스페이스에 액세스할 수 있습니다. 일반적으로 이는 디바이스에서 화이트보드 응용 프로그램을 교체하기 위해 OEM에서 사용됩니다.<br /> <br />이 접근 권한 값은 [**Windows.ApplicationModel.Preview.InkWorkspace**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.preview.inkworkspace) 네임스페이스의 API에 필요합니다. |
 |**시작 화면 관리**| **startScreenManagement** 접근 권한 값을 통해 앱은 타일을 시작 화면으로 자동으로 고정합니다. 또한 앱은 백그라운드에서 고정할 수 있습니다. **startScreenManagement** 접근 권한 값을 가지고 있지 않으면 어떤 API도 차단되지 않으며, **startScreenManagement**를 사용하면 앱이 핀 API를 사용할 때 셸에 어떤 UI도 표시되지 않습니다. |
-|**Cortana 사용 권한**| **cortanaPermissions** 접근 권한 값을 통해 앱은 사용자가 디바이스에서 Cortana에 부여한 사용 권한을 열거합니다. 이 접근 권한 값을 통해 앱은 디바이스에서 Cortana 사용 권한을 부여 및 호출할 수 있습니다. **cortanaPermissions** 사용하기 위해서는 사용 권한을 부여하기 전에 디바이스가 법적 텍스트를 표시해야 합니다. 따라서 앱은 사용 권한 변경의 법적 결과를 사용자에게 알릴 책임이 있습니다.<br /> <br /><br />이 기능에 대 한 읽기 액세스 해야 합니다 **HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search\(*)** 레지스트리 설정 합니다.<br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
+|**Cortana 사용 권한**| **cortanaPermissions** 접근 권한 값을 통해 앱은 사용자가 디바이스에서 Cortana에 부여한 사용 권한을 열거합니다. 이 접근 권한 값을 통해 앱은 디바이스에서 Cortana 사용 권한을 부여 및 호출할 수 있습니다. **cortanaPermissions** 사용하기 위해서는 사용 권한을 부여하기 전에 디바이스가 법적 텍스트를 표시해야 합니다. 따라서 앱은 사용 권한 변경의 법적 결과를 사용자에게 알릴 책임이 있습니다.<br /> <br /><br />이 기능에 대 한 읽기 액세스 해야 합니다 **HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search** 레지스트리 설정 합니다.<br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
 |**모든 앱 Mods**| **allAppMods** 접근 권한 값을 통해 앱은 모든 앱에서 AppMods 폴더에 액세스할 수 있습니다. Mod 관리 유틸리티는 **allAppMods**를 사용해 이를 사용하는 게임 또는 앱 외 Mod를 관리합니다. |
 |**확장 된 리소스**| **expandedResources** 접근 권한 값을 통해 앱은 게임 모드 리소스에 액세스할 수 있습니다. 충분한 바를 충족하는 Xbox와 PC에서 게임 모드 리소스는 앱의 단독 사용을 위해 예약된 가용 CPU 코어의 일부를 나타냅니다. 또한 Xbox에서 앱은 최소 4GB의 메모리 파티션을 단독으로 사용합니다.<br /><br />이 접근 권한 값은 위에 정의된 대로 CPU 및 메모리 리소스의 단독 사용권을 얻는 데 필요합니다. |
 |**보호 된 앱**| **protectedApp** 접근 권한 값을 통해 앱은 Microsoft Store에서 보호된 프로세스로 로드가 될 수 있습니다. 앱이 Microsoft Store에 수집되면 Microsoft Store가 실행 파일에 BLOB을 추가합니다. Microsoft Store는 Microsoft 키를 통해 실행 파일에 로그인하기도 합니다. BLOB에서 Microsoft 서명이 필요하기 때문에 프로세스 로더는 보호된 프로세스를 적용하기 위해 접근 권한 값 대신에 이 BLOB을 확인합니다.<br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
@@ -221,7 +221,8 @@ ms.locfileid: "63777910"
 | **패키지 쓰기 리디렉션 호환성 Shim** | 합니다 **packageWriteRedirectionCompatibilityShim** 사용자별 위치에 모든 새 파일을 만들려면 응용 프로그램을 구성 하는 제한 된 기능입니다. 쓰기에 대 한 열려 있는 모든 기존 파일은 사용자별 위치로 먼저 복사 및 수정 오류가 발생 하는 해당 위치에 있는 파일입니다. 이 기능은 만들거나 해당 설치 폴더에서 파일을 수정 하는 응용 프로그램에 유용 합니다.<br /><br />이 기능은 특정 유형의 Microsoft 및 파트너에서 게시 하는 데스크톱 PC 게임을 위한 것입니다. 그러나이 수도 경우도 다른 앱에 적용할 수 있습니다. |
 | **사용자 지정 설치 작업** | 합니다 **customInstallActions** 제한 된 기능을 사용 하면 응용 프로그램을 선언 합니다 [windows.customInstall](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-package-extension) 하나를 지정할 수 있도록 매니페스트 또는 더 추가 하 고 패키지에는 확장 설치 관리자 파일 (.exe 또는.msi) 응용 프로그램으로 실행 됩니다. 표준 배포 시나리오 중 하나에 대 한 사용자 지정 작업을 지정할 수 있습니다: 설치, 업데이트, 복구 또는 제거 합니다. 예를 들어, 응용 프로그램 번들을 타사 재배포 가능 구성 요소에 대해 유용 합니다.<br /><br />이 기능은 특정 유형의 Microsoft 및 파트너에서 게시 하는 데스크톱 PC 게임을 위한 것입니다. 다른 시나리오에 대 한 부여 되지 않습니다. |
 | **패키지 서비스** | 합니다 **packagedServices** 제한 된 기능을 선언 하는 Microsoft 파트너와 기업에서 만들어진 응용 프로그램을 통해 합니다 [windows.service](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-extension) 있도록 해당 패키지에서 확장 매니페스트 한다는 앱과 함께 하나 이상의 서비스를 설치할 수 있습니다. 이러한 서비스는 로컬 서비스, 네트워크 서비스 또는 로컬 시스템 계정으로 실행 되도록 구성할 수 있습니다. Local Service 및 Network Service 서비스에만 필요 합니다 **packagedServices** 기능입니다. 로컬 시스템 서비스는 둘 다 있어야 합니다 **packagedServices** 하 고 **localSystemServices** 기능입니다.<br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다.  |
-| **로컬 시스템 서비스** | 합니다 **localSystemServices** 제한 된 기능을 사용 하면 Microsoft 파트너 및 엔터프라이즈 앱과 함께 하나 이상의 로컬 시스템 서비스를 설치 하 여 만든 응용 프로그램 (즉, 응용 프로그램이 선언할 수는 StartAccount 서비스용 LocalSystem 되도록). 이 시나리오 에서도 필요 합니다 **packagesServices** 기능입니다. <br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. 
+| **로컬 시스템 서비스** | 합니다 **localSystemServices** 제한 된 기능을 사용 하면 Microsoft 파트너 및 엔터프라이즈 앱과 함께 하나 이상의 로컬 시스템 서비스를 설치 하 여 만든 응용 프로그램 (즉, 응용 프로그램이 선언할 수는 StartAccount 서비스용 LocalSystem 되도록). 이 시나리오 에서도 필요 합니다 **packagesServices** 기능입니다. <br /><br />Microsoft Store 제출 하는 응용 프로그램에서이 기능을 선언 하는 권장 되지 않습니다. 대부분의 경우에서이 기능을 사용 하 여 승인 되지 않습니다. |
+| **백그라운드 공간 인식** | 합니다 **backgroundSpatialPerception** 제한 기능 덕분에 응용 프로그램이 앱이 백그라운드에서 실행 되는 동안 사용자의 head, 실습, 동작 컨트롤러 및 기타 추적 된 개체를 액세스할 수 있습니다. |
 
 ## <a name="custom-capabilities"></a>사용자 지정 기능
 
