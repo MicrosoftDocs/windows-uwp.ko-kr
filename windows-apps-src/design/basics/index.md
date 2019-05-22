@@ -5,12 +5,12 @@ keywords: UWP 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, �
 ms.date: 03/07/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 03e30aa091a04e16ee84f38832dc962d34659e1b
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 78462d5d29ebcc31792aa46da7657c57fb960e13
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065437"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984107"
 ---
 # <a name="design-basics-for-uwp-apps"></a>UWP 앱에 대한 디자인 기본 사항
 
@@ -24,7 +24,7 @@ UWP(유니버설 Windows 플랫폼) 디자인 지침은 세련되고 아름다�
 
 모든 유형의 Windows 기반 디바이스에서 멋지게 크기 조정되는 앱을 만드는 모범 사례와 결합된 UWP 기능을 소개합니다.
 
-[**Fluent 디자인 시스템**](../fluent-design-system/index.md)
+[**Fluent 디자인 시스템**](/windows/apps/fluent-design-system)
 
 Fluent 디자인 시스템은 아름답고 공감할 수 있는 적응형 사용자 인터페이스를 만들기 위한 목표와 원칙을 제시합니다.
 

@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 28c21b3d3b3e53def2181e96a58b53998ee0f04a
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57660728"
@@ -72,7 +72,7 @@ Windows 10 버전 1607에는 두 개의 새 응용 프로그램 수명 주기 �
 
 [!code-cs[MainPageUnloaded](./code/ReduceMemory/cs/App.xaml.cs#SnippetMainPageUnloaded)]
 
-[  **LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) 이벤트 처리기에서 추적 변수(`isInBackgroundMode`)를 설정하여 앱이 더 이상 백그라운드에서 실행되지 않음을 나타내야 합니다. 그런 다음 현재 창의 [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content)가 `null`인지 확인합니다. 백그라운드에서 실행하는 동안 메모리를 지우기 위해 앱 보기를 삭제한 경우 null이 됩니다. 창 콘텐츠가 `null`이면 앱 보기를 다시 작성합니다. 이 예제에서는 창 콘텐츠가 도우미 메서드 **CreateRootFrame**에서 만들어집니다.
+[**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) 이벤트 처리기에서 추적 변수(`isInBackgroundMode`)를 설정하여 앱이 더 이상 백그라운드에서 실행되지 않음을 나타내야 합니다. 그런 다음 현재 창의 [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content)가 `null`인지 확인합니다. 백그라운드에서 실행하는 동안 메모리를 지우기 위해 앱 보기를 삭제한 경우 null이 됩니다. 창 콘텐츠가 `null`이면 앱 보기를 다시 작성합니다. 이 예제에서는 창 콘텐츠가 도우미 메서드 **CreateRootFrame**에서 만들어집니다.
 
 [!code-cs[LeavingBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetLeavingBackground)]
 
@@ -88,10 +88,10 @@ Windows 10 버전 1607에는 두 개의 새 응용 프로그램 수명 주기 �
 
 앱이 포그라운드에서 백그라운드로 이동할 때 앱에서는 **EnteredBackground** 이벤트와 **AppMemoryUsageLimitChanging** 이벤트를 차례로 가져옵니다.
 
-- **작업****EnteredBackground** 이벤트를 사용하여 앱이 백그라운드에서 실행되는 동안 필요하지 않은 UI 리소스를 해제합니다. 예를 들어 노래의 커버 아트 이미지를 지울 수 있습니다.
-- **작업****AppMemoryUsageLimitChanging** 이벤트를 사용하여 앱이 새 백그라운드 제한보다 낮은 메모리를 사용 중인지 확인합니다. 그렇지 않은 경우 리소스를 해제해야 합니다. 그러지 않으면 디바이스 정책에 따라 앱이 일시 중단되거나 종료될 수 있습니다.
-- **작업****AppMemoryUsageLimitChanging** 이벤트가 발생할 때 앱이 새 메모리 제한을 초과하는 경우 가비지 수집기를 수동으로 호출합니다.
-- **작업****AppMemoryUsageIncreased** 이벤트를 사용하여 앱이 백그라운드에서 실행되는 동안 메모리 사용량을 계속 모니터링합니다. **AppMemoryUsageLevel**이 **High** 또는 **OverLimit**인 경우 리소스를 해제해야 합니다.
+- **작업** **EnteredBackground** 이벤트를 사용하여 앱이 백그라운드에서 실행되는 동안 필요하지 않은 UI 리소스를 해제합니다. 예를 들어 노래의 커버 아트 이미지를 지울 수 있습니다.
+- **작업** **AppMemoryUsageLimitChanging** 이벤트를 사용하여 앱이 새 백그라운드 제한보다 낮은 메모리를 사용 중인지 확인합니다. 그렇지 않은 경우 리소스를 해제해야 합니다. 그러지 않으면 디바이스 정책에 따라 앱이 일시 중단되거나 종료될 수 있습니다.
+- **작업** **AppMemoryUsageLimitChanging** 이벤트가 발생할 때 앱이 새 메모리 제한을 초과하는 경우 가비지 수집기를 수동으로 호출합니다.
+- **작업** **AppMemoryUsageIncreased** 이벤트를 사용하여 앱이 백그라운드에서 실행되는 동안 메모리 사용량을 계속 모니터링합니다. **AppMemoryUsageLevel**이 **High** 또는 **OverLimit**인 경우 리소스를 해제해야 합니다.
 - **고려 사항** 성능 최적화로 **EnteredBackground** 처리기 대신 **AppMemoryUsageLimitChanging** 이벤트 처리기에서 UI 리소스를 해제합니다. **EnteredBackground/LeavingBackground** 이벤트 처리기에 설정된 부울 값을 사용하여 앱이 백그라운드 또는 포그라운드에서 실행 중인지 추적합니다. 그런 다음 **AppMemoryUsageLimitChanging** 이벤트 처리기에서 **AppMemoryUsage**가 제한을 초과하고 앱이 백그라운드에서 실행되는 경우(부울 값 기준) UI 리소스를 해제할 수 있습니다.
 - **작업** 응용 프로그램 간의 전환 속도가 사용자에게 느리게 보일 수 있으므로 **EnteredBackground** 이벤트에서 장기 실행 작업을 수행하면 안 됩니다.
 
@@ -99,7 +99,7 @@ Windows 10 버전 1607에는 두 개의 새 응용 프로그램 수명 주기 �
 
 앱이 백그라운드에서 포그라운드로 이동할 때 앱에서는 **AppMemoryUsageLimitChanging** 이벤트와 **LeavingBackground** 이벤트를 차례로 가져옵니다.
 
-- **작업****LeavingBackground** 이벤트를 사용하여 백그라운드로 이동할 때 앱에서 취소한 UI 리소스를 다시 만듭니다.
+- **작업** **LeavingBackground** 이벤트를 사용하여 백그라운드로 이동할 때 앱에서 취소한 UI 리소스를 다시 만듭니다.
 
 ## <a name="related-topics"></a>관련 항목
 

@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 901aa1fa5c37c18a815e5e70becdf15001ed74c4
-ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
+ms.openlocfilehash: 21e7c026d336507b1a82badba770ac3bb50e19f8
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65444236"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984125"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>UWP 앱에 대한 연결된 애니메이션
 
@@ -55,7 +55,7 @@ ms.locfileid: "65444236"
 
 ## <a name="connected-animation-and-the-fluent-design-system"></a>연결된 애니메이션 및 Fluent 디자인 시스템
 
- Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 연결된 애니메이션은 앱에 동작을 추가하는 Fluent 디자인 시스템 구성 요소입니다. 자세히 알아보려면 [UWP용 Fluent 디자인 개요](../fluent-design-system/index.md)를 확인하십시오.
+ Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 연결된 애니메이션은 앱에 동작을 추가하는 Fluent 디자인 시스템 구성 요소입니다. 자세히 알아보려면 [UWP용 Fluent 디자인 개요](/windows/apps/fluent-design-system)를 확인하십시오.
 
 ## <a name="why-connected-animation"></a>연결된 애니메이션을 사용하는 이유
 
@@ -101,7 +101,7 @@ ConnectedAnimation에서 구성 속성을 설정 하 여 애니메이션 구성�
 | Configuration | 측면 DefaultDuration? | 측면 DefaultEasingFunction? |
 | - | - | - |
 | 무게 | 예 | 예* <br/> **A에서 B에 대 한 기본 변환을이 감속/가속 함수를 사용 하지만 "중력 dip" 자체 감속/가속 함수입니다.*  |
-| 직접 | 아니오 <br/> *개 150ms 애니메이션 효과 줍니다.*| 아니오 <br/> *감속/가속 함수 감속을 사용 합니다.* |
+| 직접 | 아니요 <br/> *개 150ms 애니메이션 효과 줍니다.*| 아니오 <br/> *감속/가속 함수 감속을 사용 합니다.* |
 | Basic | 예 | 예 |
 
 ## <a name="how-to-implement-connected-animation"></a>연결 된 애니메이션을 구현 하는 방법

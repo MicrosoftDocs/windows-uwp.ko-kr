@@ -1,18 +1,17 @@
 ---
 Description: iOS, Android, Windows 10 간의 플랫폼 기능을 비교합니다.
-Search.Product: eADQiWindows 10XVcnh
 title: Android 및 iOS 개발자용 Windows 앱 개념 매핑
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d4739442414b02358f3afea8967b0fc404ff7f9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 737e169e2502076f370eaed91658eae59be84a0b
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641338"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984248"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
 
@@ -181,7 +180,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </tr>
 </tbody>
 </table>
-<h2 id="data">데이터</h2>
+<h2 id="data">data</h2>
 <table style="width:100%">
 <colgroup>
 <col width="20%" />
@@ -235,7 +234,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"> <strong><a href="https://msdn.microsoft.com/library/windows/apps/br241319">DatagramSocket</a></strong> 클래스를 사용하여 UDP 데이터그램 소켓을 통해 통신하고 <strong><a href="https://msdn.microsoft.com/library/windows/apps/br226882">StreamSocket</a></strong> 클래스를 사용하여 TCP 또는 Bluetooth RFCOMM을 통해 통신할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt280233.aspx">네트워킹 기본 사항</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt280235.aspx">네트워킹 기술 선택</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt280234.aspx">소켓 개요</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>Websocket입니다.</strong> <br><br>실시간 데이터 전송을 위해 클라이언트와 서버 간에 양방향 통신을 제공합니다.</td>
+<td align="left"><strong>WebSockets.</strong> <br><br>실시간 데이터 전송을 위해 클라이언트와 서버 간에 양방향 통신을 제공합니다.</td>
 <td align="left">Android에는 기본 제공 WebSockets 라이브러리가 없습니다.</td>
 <td align="left">iOS에는 기본 제공 WebSockets 라이브러리가 없습니다.</td>
 <td align="left">수신 알림 기능이 있는 적은 메시지에 대해 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.messagewebsocket.aspx">MessageWebSocket</a></strong> 클래스를 사용하고, 섹션에서 읽을 수 있는 대용량 이진 파일 전송에 대해 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamwebsocket.aspx">StreamWebSocket</a></strong>을 사용하여 WebSockets를 지원하는 서버에 대한 연결을 보호합니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt280233.aspx">네트워킹 기본 사항</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt280235.aspx">네트워킹 기술 선택</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt186447.aspx">Websocket 개요</a></td>
@@ -266,7 +265,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </thead>
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>IDE입니다.</strong> <br><br>앱을 만드는 데 사용되는 도구 집합입니다.</td>
+<td align="left"><strong>IDE.</strong> <br><br>앱을 만드는 데 사용되는 도구 집합입니다.</td>
 <td align="left"><strong>Android Studio</strong> 및 <strong>Eclipse</strong>, Google에서는 개발자에게 Android Studio를 사용하도록 권장합니다.</td>
 <td align="left"><strong>Xcode</strong></td>
 <td align="left"><strong><a href="https://www.visualstudio.com/features/universal-windows-platform-vs.aspx">Visual Studio</a></strong>  하 고 <strong><a href="https://msdn.microsoft.com/library/jj171012.aspx">Blend for Visual Studio</a></strong> 코드, 디자인, 연결, 디버그, 분석, 최적화 및 UWP 앱을 테스트 하는 데 필요한 모든 도구에 있습니다. Visual Studio에서는 Windows 10 디바이스용 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt188754.aspx">에뮬레이터</a></strong>를 제공하므로 다양한 에뮬레이트 디바이스에서 앱을 테스트할 수 있습니다.<br/><br/><a href="https://dev.windows.com/downloads">UWP 용 다운로드 및 도구</a></td>

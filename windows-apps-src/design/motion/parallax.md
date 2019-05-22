@@ -12,12 +12,12 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 953a92cdb8cc3168a2cbeae9a1f3610f771c6339
-ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
+ms.openlocfilehash: 5feea95245a7e3ff6deefe73617b050f89243a90
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65444182"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984135"
 ---
 # <a name="parallax"></a>시차
 
@@ -43,7 +43,7 @@ ms.locfileid: "65444182"
 
 ## <a name="parallax-and-the-fluent-design-system"></a>시차 및 Fluent 디자인 시스템
 
- Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 시차는 앱에 동작, 깊이, 배율을 추가하는 Fluent 디자인 시스템 구성 요소입니다. 자세히 알아보려면 [UWP용 Fluent 디자인 개요](../fluent-design-system/index.md)를 확인하십시오.
+ Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 시차는 앱에 동작, 깊이, 배율을 추가하는 Fluent 디자인 시스템 구성 요소입니다. 자세히 알아보려면 [UWP용 Fluent 디자인 개요](/windows/apps/fluent-design-system)를 확인하십시오.
 
 ## <a name="how-it-works-in-a-user-interface"></a>사용자 인터페이스에서 작동하는 방식
 
@@ -122,5 +122,5 @@ VerticalShift 및 HorizontalShift 속성을 사용하여 시차 효과의 수준
 ## <a name="related-articles"></a>관련 문서
 
 - [ParallaxView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 
-- [UWP 용 Fluent 디자인](../fluent-design-system/index.md)
+- [UWP 용 Fluent 디자인](/windows/apps/fluent-design-system)
 - [시스템의 과학: Fluent 디자인 및 깊이](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)

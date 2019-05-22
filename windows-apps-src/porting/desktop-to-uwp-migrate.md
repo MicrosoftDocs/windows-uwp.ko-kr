@@ -1,31 +1,46 @@
 ---
 Description: 데스크톱 응용 프로그램 및 UWP 앱 간에 코드 공유
-Search.Product: eADQiWindows 10XVcnh
 title: 데스크톱 응용 프로그램 및 UWP 앱 간에 코드 공유
 ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 151584f15013c9d4ab7d9566e175b957a7a84149
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 16b75226d6b79b19978ddf7e37231b15ac7a4e3e
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644348"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984174"
 ---
-# <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>데스크톱 응용 프로그램 및 UWP 앱 간에 코드 공유
+# <a name="move-from-a-desktop-application-to-uwp"></a>UWP 응용 프로그램을 데스크톱에서 이동
 
-코드를 .NET Standard 라이브러리로 옮기고 모든 Windows 10 장치에 연결할 수 있는 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다. 데스크톱 응용 프로그램을 UWP 앱으로 변환할 수 있는 도구는 없지만, 수많은 기존 코드를 재사용할 수 있으며 이를 통해 빌드 비용을 낮출 수 있습니다. 이 가이드에서는 이 작업을 수행하는 방법을 보여 줍니다.
+WPF 및 Windows Forms 등.NET Framework를 사용 하 여 빌드된 기존 데스크톱 응용 프로그램이 있는 경우 또는 C++ Win32 Api를 몇 가지 옵션이 있습니다 Windows 10 및 유니버설 Windows 플랫폼 (UWP)에 이동 합니다.
 
-## <a name="share-code-in-a-net-standard-20-library"></a>.NET Standard 2.0 라이브러리에 있는 코드 공유
+## <a name="package-your-desktop-application-in-an-msix-package"></a>MSIX 패키지에서 데스크톱 응용 프로그램 패키지
 
-.NET Standard 2.0 클래스 라이브러리에 가능한 한 많은 코드를 배치합니다.  코드가 표준에 정의된 API를 사용하는 한 UWP 앱에서 해당 코드를 다시 사용할 수 있습니다. .NET Standard 2.0에 훨씬 많은 API가 포함되어 있기 때문에 이는 .NET Standard 라이브러리에 코드를 공유하는 것보다 쉽습니다.
+많은 Windows 10 기능에 대 한 액세스를 가져오려고 MSIX 패키지에서 데스크톱 응용 프로그램을 패키징할 수 있습니다. MSIX는 UWP, WPF, Windows Forms 및 Win32 앱을 비롯 한 모든 Windows 앱에 대해 유니버설 패키징 환경을 제공 하는 최신 Windows 앱 패키지 형식입니다. 강력한 설치에 대 한 액세스를 가져옵니다 MSIX 패키지에서 데스크톱 Windows 앱 패키징 및 유연한 기능 system, Microsoft Store, 엔터프라이즈 관리 및 여러 사용자 지정에 대 한 지원을 사용 하 여 관리 되는 보안 모델 환경 업데이트 배포 모델입니다. 소스 코드를 사용 해야 할지 여부를 또는 기존 설치 관리자 파일 (예: MSI 또는 App-v 설치 관리자)만 있는 경우 응용 프로그램을 패키징할 수 있습니다. 응용 프로그램을 패키지 한 후에 패키지 확장 및 기타 UWP 구성 요소와 같은 UWP 기능을 통합할 수 있습니다.
 
-이러한 방법에 대해 자세히 알려 주는 좋은 동영상이 있습니다.
-&nbsp;
+자세한 내용은 [데스크톱 응용 프로그램 (데스크톱 브리지) 패키지](/windows/msix/desktop/desktop-to-uwp-root) 하 고 [패키지 id를 요구 하는 기능](/windows/apps/desktop/modernize/modernize-packaged-apps)합니다.
+
+## <a name="use-uwp-apis"></a>UWP Api를 사용 합니다.
+
+WPF에서 Windows Forms에서 직접 여러 UWP Api를 호출할 수 있습니다 또는 C++ Win32 데스크톱 응용 프로그램 등록 Windows 10 사용자는 간단한 최신 환경을 통합 합니다. 예를 들어, 데스크톱 앱에 알림 메시지를 추가 하는 UWP Api를 호출할 수 있습니다.
+
+자세한 내용은 [데스크톱 앱에서 사용 하 여 UWP Api](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)합니다.
+
+## <a name="migrate-a-net-framework-app-to-a-uwp-app"></a>마이그레이션하는.NET Framework 앱을 UWP 앱
+
+응용 프로그램을.NET Framework에서 실행 하는 경우.NET Standard 2.0을 활용 하 여 UWP 앱으로 마이그레이션할 수 있습니다. 많은 코드를.NET 표준 2.0 클래스 라이브러리로 만든 다음.NET Standard 2.0 라이브러리를 참조 하는 UWP 앱으로 이동 합니다. 
+
+### <a name="share-code-in-a-net-standard-20-library"></a>.NET Standard 2.0 라이브러리에 있는 코드 공유
+
+응용 프로그램을.NET Framework에서 실행 하는 경우 있습니다 수.NET 표준 2.0 클래스 라이브러리에 따라 많은 코드를 배치 합니다. 코드가 표준에 정의된 API를 사용하는 한 UWP 앱에서 해당 코드를 다시 사용할 수 있습니다. .NET Standard 2.0에 훨씬 많은 API가 포함되어 있기 때문에 이는 .NET Standard 라이브러리에 코드를 공유하는 것보다 쉽습니다.
+
+자세한 내용을 알려 주는 비디오는 다음과 같습니다.
+
 > [!VIDEO https://www.youtube-nocookie.com/embed/YI4MurjfMn8?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=1]
 
-### <a name="add-net-standard-libraries"></a>.NET Standard 라이브러리에 추가
+#### <a name="add-net-standard-libraries"></a>.NET Standard 라이브러리에 추가
 
 먼저 하나 이상의 .NET Standard 클래스 라이브러리를 솔루션에 추가합니다.  
 
@@ -45,7 +60,7 @@ ms.locfileid: "57644348"
 
 그런 다음 도구를 사용하여 표준에 맞는 코드의 양을 확인합니다. 이렇게 하면 코드를 라이브러리로 옮기기 전에 재사용할 수 있는 부분, 최소한의 수정이 필요한 부분 및 응용 프로그램에 따라 달라질 부분을 결정할 수 있습니다.
 
-### <a name="check-library-and-code-compatibility"></a>라이브러리 및 코드 호환성 검사
+#### <a name="check-library-and-code-compatibility"></a>라이브러리 및 코드 호환성 검사
 
 타사에서 얻은 NuGet 패키지 및 기타 dll 파일부터 시작합니다.
 
@@ -61,7 +76,7 @@ ms.locfileid: "57644348"
 
 일부 코드는 플랫폼에 따라 다르며 데스크톱 응용 프로그램 프로젝트에 남아 있어야 합니다.
 
-### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>예제: .NET Standard 2.0 라이브러리에 데이터 액세스 코드 마이그레이션
+#### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>예: .NET Standard 2.0 라이브러리에 데이터 액세스 코드 마이그레이션
 
 Northwind 샘플 데이터베이스에서 고객에 게 보여 주는 기본적인 Windows Forms 응용 프로그램을 있다고 가정해 보겠습니다.
 
@@ -151,7 +166,7 @@ public partial class Customers : Form
 }
 ```
 
-## <a name="reach-all-windows-devices"></a>모든 Windows 장치에 연결
+### <a name="create-a-uwp-app"></a>UWP 앱 만들기
 
 이제 솔루션에 UWP 앱을 추가할 준비가 되었습니다.
 
@@ -163,7 +178,7 @@ XAML에서 UI 페이지를 디자인하고 장치 또는 플랫폼 관련 코드
 
 이는 UWP와 함께 제공되는 몇 가지 장점일 뿐입니다. 자세히 알아보려면 [Windows를 사용한 멋진 환경 만들기](https://developer.microsoft.com/windows/why-build-for-uwp)를 참조하세요.
 
-### <a name="add-a-uwp-project"></a>UWP 프로젝트 추가
+#### <a name="add-a-uwp-project"></a>UWP 프로젝트 추가
 
 먼저 솔루션에 UWP 프로젝트를 추가합니다.
 
@@ -173,7 +188,7 @@ XAML에서 UI 페이지를 디자인하고 장치 또는 플랫폼 관련 코드
 
 ![클래스 라이브러리 참조](images/desktop-to-uwp/class-library-reference2.png)
 
-### <a name="build-your-pages"></a>페이지 빌드
+#### <a name="build-your-pages"></a>페이지 빌드
 
 .NET Standard 2.0 라이브러리에서 XAML 페이지를 추가하고 코드를 호출합니다.
 
@@ -201,10 +216,9 @@ public sealed partial class MainPage : Page
 }
 ```
 
-
 UWP를 사용하려면 [유니버설 Windows 플랫폼 개요](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)를 참조하세요.
 
-## <a name="reach-ios-and-android-devices"></a>iOS 및 Android 장치에 연결
+### <a name="reach-ios-and-android-devices"></a>iOS 및 Android 장치에 연결
 
 Xamarin 프로젝트를 추가하여 Android 및 iOS 장치에 연결할 수 있습니다.  
 
@@ -216,7 +230,7 @@ Xamarin 프로젝트를 추가하여 Android 및 iOS 장치에 연결할 수 있
 
 UWP와 마찬가지로 .NET Standard 2.0 클래스 라이브러리에서 비즈니스 논리를 재사용할 수 있으므로 Android 또는 iOS 앱을 추가하는 데 드는 비용은 더 낮습니다. XAML에서 UI 페이지를 디자인하고 장치 또는 플랫폼별 코드를 작성해야 합니다.
 
-### <a name="add-a-xamarin-project"></a>Xamarin 프로젝트 추가
+#### <a name="add-a-xamarin-project"></a>Xamarin 프로젝트 추가
 
 먼저 **Android**, **iOS** 또는 **크로스 플랫폼** 프로젝트를 솔루션에 추가합니다.
 
@@ -231,7 +245,7 @@ UWP와 마찬가지로 .NET Standard 2.0 클래스 라이브러리에서 비즈�
 
 ![클래스 라이브러리 참조](images/desktop-to-uwp/class-library-reference3.png)
 
-### <a name="build-your-pages"></a>페이지 빌드
+#### <a name="build-your-pages"></a>페이지 빌드
 
 이 예에서는 Android 앱의 고객 목록을 보여 줍니다.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 599c2625bffff40a30f26bfb40f7cce9c97acdd1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4607280fd031fa556bfc5d1c719f4b4e1aeb928e
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626408"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984097"
 ---
 # <a name="visual-layer"></a>시각적 계층
 
@@ -62,7 +62,13 @@ XAML 프레임워크에서 생성한 시각을 가져와 [**Windows.UI.Xaml.Host
 
 자세한 내용은 [XAML로 시각 계층 사용](using-the-visual-layer-with-xaml.md) 개요를 참조하세요.
 
-## <a name="additional-resources"></a>추가 리소스
+### <a name="working-with-your-desktop-app"></a>데스크톱 앱 사용
+
+시각적 계층을 사용 하 여 모양, 느낌 및 WPF에서 Windows Forms의 기능 향상 및 C++ Win32 데스크톱 응용 프로그램입니다. 시각적 계층을 사용 하 여 기존 프레임 워크에서 UI의 나머지 부분을 유지 하는 콘텐츠를 마이그레이션할 수 있습니다. 이에 허용 되는 중요 한 업데이트 및 향상 된 응용 프로그램 UI 기존 코드에 대 한 광범위 한 변경 하지 않고도 기본을 의미 합니다.
+
+자세한 내용은 [시각적 계층을 사용 하 여 데스크톱 앱을 현대화](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps)합니다.
+
+## <a name="additional-resources"></a>추가 자료
 
 * [**API에 대 한 전체 참조 설명서**](https://msdn.microsoft.com/library/windows/apps/Dn706878)
 * [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)의 고급 UI 및 Composition 샘플
