@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: aeba4dbd734ea4b521033726968e90c232c154cb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0f6a4fef72206058874edf845d5fbbe0768c53ec
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57628668"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984219"
 ---
 # <a name="reveal-highlight"></a>강조 표시
 
@@ -25,7 +25,7 @@ ms.locfileid: "57628668"
 
 > **중요 API**: [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush)를 [RevealBorderBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush)하십시오 [RevealBrushHelper 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
-## <a name="how-it-works"></a>작동 방식
+## <a name="how-it-works"></a>작동 방법
 포인터가 있으면이 그림과 같이 인접 요소의 컨테이너를 노출 하 여 호출 주의 대화형 요소를 강조 표시를 표시 합니다.
 
 ![Visual 표시](images/Nav_Reveal_Animation.gif)
@@ -63,7 +63,7 @@ ms.locfileid: "57628668"
 - [**TreeView**](../controls-and-patterns/tree-view.md)
 - [**NavigationView**](../controls-and-patterns/navigationview.md)
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
-- [**명령 모음**](../controls-and-patterns/app-bars.md)
+- [**CommandBar**](../controls-and-patterns/app-bars.md)
 
 이러한 그림은 여러 다른 컨트롤에서 강조 표시을 표시합니다.
 
@@ -78,7 +78,7 @@ ms.locfileid: "57628668"
 
 | 컨트롤 이름   | Resource Name |
 |----------|:-------------:|
-| Button |  ButtonRevealStyle |
+| 단추 |  ButtonRevealStyle |
 | ToggleButton | ToggleButtonRevealStyle |
 | RepeatButton | RepeatButtonRevealStyle |
 | AppBarButton | AppBarButtonRevealStyle |
@@ -282,13 +282,13 @@ ms.locfileid: "57628668"
 
 ## <a name="reveal-and-the-fluent-design-system"></a>표시 및 Fluent 디자인 시스템
 
- Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 표시는 앱에 조명을 추가하는 Fluent 디자인 시스템 구성 요소입니다. 자세히 알아보려면 [UWP용 Fluent 디자인 개요](../fluent-design-system/index.md)를 확인하십시오.
+ Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 표시는 앱에 조명을 추가하는 Fluent 디자인 시스템 구성 요소입니다. 자세히 알아보려면 [UWP용 Fluent 디자인 개요](/windows/apps/fluent-design-system)를 확인하십시오.
 
 ## <a name="related-articles"></a>관련 문서
 
 - [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
 - [못](acrylic.md)
 - [컴퍼지션 효과](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
-- [UWP 용 Fluent 디자인](../fluent-design-system/index.md)
+- [UWP 용 Fluent 디자인](/windows/apps/fluent-design-system)
 - [시스템의 과학: Fluent 디자인 및 깊이](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [시스템의 과학: Fluent 디자인 및 Light](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

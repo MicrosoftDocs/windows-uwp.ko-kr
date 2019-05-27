@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eefebbd7087070f85ead09e562f154f43ed49e37
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3d8805f03f8476bcae8404395c27d9d78952f782
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583417"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984234"
 ---
 # <a name="porting-apps-to-windows10"></a>Windows 10으로 앱 포팅
 
@@ -24,11 +24,11 @@ WinRT(Windows 런타임)는 UWP(유니버설 Windows 플랫폼) 앱을 빌드할
 
 | 항목 | 설명 |
 |-------|-------------|
-| [Windows Phone Silverlight에서 UWP로 이동](wpsl-to-uwp-root.md) | Windows Phone Silverlight 앱을 사용하는 개발자는 Windows 10으로 이동하는 과정에서 자신의 기술과 소스 코드를 최대한 활용할 수 있습니다. Windows 10을 사용하면 모든 종류의 디바이스에 설치할 수 있는 단일 앱 패키지인 UWP 앱을 만들 수 있습니다. |
+| [데스크톱에서 UWP로 이동](desktop-to-uwp-migrate.md) | Win32 및 .NET 데스크톱 애플리케이션으로 UWP 환경을 가져오는 몇 가지 옵션 중 하나를 선택합니다. |
 | [Windows 런타임 8.x에서 UWP로 이동](w8x-to-uwp-root.md) | Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관계없이 유니버설 8.1 앱이 있는 경우 소스 코드 및 기술이 Windows 10으로 원활하게 포팅되는지 확인합니다. Windows 10을 사용하면 모든 종류의 디바이스에 설치할 수 있는 단일 앱 패키지인 UWP 앱을 만들 수 있습니다. |
 | [Android 및 iOS 개발자용 Windows 앱 개념 매핑](android-ios-uwp-map.md) | Android 또는 iOS 기술이나 코드를 사용하는 개발자로, Windows 10 및 유니버설 Windows 플랫폼으로 이동하려는 경우 이 리소스에는 세 가지 플랫폼 간에 플랫폼 기능과 지식을 매핑하는 데 필요한 모든 정보가 들어 있습니다. |
 | [iOS에서 UWP로 이동](ios-to-uwp-root.md) | iOS 개발자로, Windows 10 및 UWP를 이동하는 방법이 궁금한가요? 생각만큼 겁내지 않아도 됩니다. iOS 디바이스에서와 마찬가지로 Windows에서도 원활하게 작동하는 멋진 앱을 만드는 데 필요한 도구, 기술 및 정보를 갖추었습니다. 이제 더 멋진 앱을 만들 수 있습니다. |
-| [데스크톱에서 UWP로 이동](desktop-to-uwp-root.md) | Win32 및.NET 4.6.1 데스크톱 응용 프로그램을 UWP(유니버설 Windows 플랫폼) 앱으로 변환합니다. |
+| [Windows Phone Silverlight에서 UWP로 이동](wpsl-to-uwp-root.md) | Windows Phone Silverlight 앱을 사용하는 개발자는 Windows 10으로 이동하는 과정에서 자신의 기술과 소스 코드를 최대한 활용할 수 있습니다. Windows 10을 사용하면 모든 종류의 디바이스에 설치할 수 있는 단일 앱 패키지인 UWP 앱을 만들 수 있습니다. |
 | [웹앱을 PWA로 변환](https://docs.microsoft.com/microsoft-edge/progressive-web-apps) | 이제 UWP를 비롯한 모든 플랫폼에서 웹앱을 점진적 웹앱(PWA)으로 변환할 수 있습니다. [PWA Builder 도구](https://www.pwabuilder.com)는 필요한 매니페스트를 생성합니다. 이 매니페스트는 호스팅된 웹앱(HWA) 브리지를 대체합니다. |
 
 ## <a name="related-topics"></a>관련 항목

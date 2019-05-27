@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4ba3a45701d82ad0b43591469bf390190ec18db0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1a396377eb332052ae7f238a23865f2b7dc0aa16
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642228"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984177"
 ---
 # <a name="navigation-view"></a>탐색 보기
 
@@ -624,7 +624,7 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 }
 ```
 
-다음은 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/index) 버전의를 **NavView_ItemInvoked** 에서 처리기를 C# 위의 코드 예제. 기술을 C + + WinRT 처리기를 포함 하면 먼저 저장 (태그에는 [ **NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)) 이동 하려면 페이지의 전체 형식 이름. 처리기에서 해당 값을 unbox 하면,이 설정에 [ **Windows::UI::Xaml::Interop::TypeName** ](/uwp/api/windows.ui.xaml.interop.typename) 개체를 사용 하는 대상 페이지로 이동 합니다. 라는 매핑 변수의 하지 않아도 됩니다 `_pages` 에 표시 되는 C# 예를 들어; 유효한 형식의 태그 내에서 값으로 확인 하는 단위 테스트를 만들 수 있게 됩니다. 도 참조 하세요 [Boxing 및 unboxing 스칼라 값 IInspectable C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/boxing)합니다.
+다음은 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) 버전의를 **NavView_ItemInvoked** 에서 처리기를 C# 위의 코드 예제. 기술은 C++WinRT 처리기를 포함 하면/먼저 저장 (태그에는 [ **NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)) 이동 하려면 페이지의 전체 형식 이름입니다. 처리기에서 해당 값을 unbox 하면,이 설정에 [ **Windows::UI::Xaml::Interop::TypeName** ](/uwp/api/windows.ui.xaml.interop.typename) 개체를 사용 하는 대상 페이지로 이동 합니다. 라는 매핑 변수의 하지 않아도 됩니다 `_pages` 에 표시 되는 C# 예를 들어; 유효한 형식의 태그 내에서 값으로 확인 하는 단위 테스트를 만들 수 있게 됩니다. 도 참조 하세요 [Boxing 및 unboxing 스칼라 값을 사용 하 여 IInspectable C++/WinRT](/windows/uwp/cpp-and-winrt-apis/boxing)합니다.
 
 ```cppwinrt
 void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* sender */, Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs const & args)
@@ -715,4 +715,4 @@ void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* 
 - [NavigationView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 - [마스터/세부](master-details.md)
 - [탐색 기본 사항](../basics/navigation-basics.md)
-- [Fluent 디자인에 대 한 UWP 개요](../fluent-design-system/index.md)
+- [Fluent 디자인에 대 한 UWP 개요](/windows/apps/fluent-design-system)

@@ -1,16 +1,16 @@
 ---
 description: 이 항목에서는 **winrt::implements** 기본 구조체를 직/간접적으로 사용하여 C++/WinRT API를 작성하는 방법에 대해서 설명합니다.
 title: C++/WinRT를 통한 API 작성
-ms.date: 01/10/2019
+ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: 05997549b5f1c0d13b12d47e0bb180d54617dcf2
-ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.openlocfilehash: 526c6fba76539a5d43231c29479621478b2dde59
+ms.sourcegitcommit: 6c7e1aa3bd396a1ad714e8b77c0800759dc2d8e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921719"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821083"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 통한 API 작성
 
@@ -116,7 +116,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 using namespace Windows::ApplicationModel::Core;
 int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 {
-    CoreApplication::Run(App{});
+    CoreApplication::Run(winrt::make<App>());
 }
 ```
 
@@ -155,8 +155,8 @@ namespace winrt::MyProject::implementation
     {
         MyRuntimeClass() = default;
 
-        hstring Name();
-        void Name(hstring const& value);
+        winrt::hstring Name();
+        void Name(winrt::hstring const& value);
     };
 }
 
@@ -394,14 +394,14 @@ MySpecializedToggleButtonAutomationPeer::MySpecializedToggleButtonAutomationPeer
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
-* [winrt::com_ptr::copy_from 함수](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcopy_from-function)
+* [winrt::com_ptr::copy_from function](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcopy_from-function)
 * [winrt::from_abi 함수 템플릿](/uwp/cpp-ref-for-winrt/from-abi)
 * [winrt::get_self 함수 템플릿](/uwp/cpp-ref-for-winrt/get-self)
 * [winrt::implements 구조체 템플릿](/uwp/cpp-ref-for-winrt/implements)
 * [winrt::make 함수 템플릿](/uwp/cpp-ref-for-winrt/make)
 * [winrt::make_self 함수 템플릿](/uwp/cpp-ref-for-winrt/make-self)
-* [winrt::Windows::Foundation::IUnknown::as 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
+* [winrt::Windows::Foundation::IUnknown:: 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/WinRT를 통한 API 사용](consume-apis.md)
-* [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)
+* [XAML 컨트롤(C++/WinRT 속성에 바인딩)](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)

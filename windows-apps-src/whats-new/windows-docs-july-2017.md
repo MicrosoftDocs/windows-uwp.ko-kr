@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10
 ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1875fecbdfa6b97cdc30413c8afa6cc58d3251ef
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 03bc41ca76f6c6b20f06c98b0e71e2bc5a361992
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595038"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984198"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>2017년 7월 Windows 개발자 문서의 새로운 내용
 
@@ -112,7 +112,7 @@ docs.microsoft.com의 [UWP 개념](../get-started/universal-application-platform
 
 ### <a name="test-your-windows-app-for-windows-10-s"></a>Windows 10 S용 Windows 앱 테스트
 
-Windows S를 실행하는 디바이스에서 Windows 앱이 제대로 작동하는지 테스트합니다. [이 새로운 가이드](../porting/desktop-to-uwp-test-windows-s.md)에서 방법을 알아보세요. 
+Windows S를 실행하는 디바이스에서 Windows 앱이 제대로 작동하는지 테스트합니다. [이 새로운 가이드](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-test-windows-s)에서 방법을 알아보세요.
 
 ## <a name="samples"></a>샘플
 
@@ -130,7 +130,7 @@ Windows S를 실행하는 디바이스에서 Windows 앱이 제대로 작동하�
 
 ## <a name="videos"></a>비디오
 
-### <a name="accessibility"></a>접근성
+### <a name="accessibility"></a>액세스 가능성
 
 앱에 접근성 기능을 추가하여 더 많은 사용자가 사용할 수 있도록 합니다. [동영상을 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Developing-Apps-for-Accessibility)하고 [접근성용 앱 개발](https://developer.microsoft.com/en-us/windows/accessible-apps)에 대해 자세히 알아보세요.
 

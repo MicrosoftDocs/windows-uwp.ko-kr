@@ -6,12 +6,14 @@ ms.date: 03/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 850f721d69eafc0f730abd85093f0cb028f62254
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.author: mcleans
+author: mcleanbyron
+ms.openlocfilehash: 63e0cf18c2df28db22e79a057761996f9e8d679b
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984943"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215185"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Windows 앱 작성자용 Fluent 디자인 시스템
 

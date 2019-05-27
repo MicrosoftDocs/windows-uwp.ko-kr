@@ -8,7 +8,7 @@ keywords: windows 10, uwp, 현지화 가능성, 현지화, 일본, 시대
 ms.localizationpriority: high
 ms.openlocfilehash: 0d5de4c1713ab80afcdf2e028d39340aebcc018b
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57617658"
@@ -73,7 +73,7 @@ ms.locfileid: "57617658"
 
 ### <a name="gannen-"></a>*간넨*(元年)
 
-일본식 달력 형식은 일반적으로  **&lt;연대 이름이&gt; &lt;연대 연도의&gt;** 합니다. 예컨대 2018년은 **헤이세이 30년**(平成30年)입니다.  단, 시대의 첫 번째 해는 특별합니다; **&lt;시대 명칭&gt; 1년 대신에****&lt;시대 명칭&gt; 元年**(*간넨*)입니다. 따라서 헤이세이 시대의 첫 번째 해는 平成元年(*헤이세이 간넨*)입니다. 응용 프로그램이 새로운 시대의 첫 해를 올바르게 처리 하 고 출력 올바르게 되었는지 확인 하려면?? 元年 합니다.
+일본식 달력 형식은 일반적으로  **&lt;연대 이름이&gt; &lt;연대 연도의&gt;** 합니다. 예컨대 2018년은 **헤이세이 30년**(平成30年)입니다.  단, 시대의 첫 번째 해는 특별합니다; **&lt;시대 명칭&gt; 1년 대신에** **&lt;시대 명칭&gt; 元年**(*간넨*)입니다. 따라서 헤이세이 시대의 첫 번째 해는 平成元年(*헤이세이 간넨*)입니다. 응용 프로그램이 새로운 시대의 첫 해를 올바르게 처리 하 고 출력 올바르게 되었는지 확인 하려면?? 元年 합니다.
 
 ## <a name="related-apis"></a>관련된 API
 

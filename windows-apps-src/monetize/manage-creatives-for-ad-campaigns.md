@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 41c11ee9c5decffff57a2d443e1385398ce40d89
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3411ee4c947d809009c2185389f5513a49afce98
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658468"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215039"
 ---
 # <a name="manage-creatives"></a>크리에이티브 관리
 
@@ -22,7 +22,7 @@ Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 �
 > [!NOTE]
 > 이 API를 사용하여 직접 만든 크리에이티브를 업로드할 때 크리에이티브에 허용되는 최대 크기는 40KB입니다. 이보다 큰 크리에이티브 파일을 제출하면 이 API에서 오류를 반환하지는 않지만 캠페인이 성공적으로 생성되지 않습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 먼저 다음 작업을 완료해야 합니다.
 
@@ -36,8 +36,8 @@ Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 �
 
 | 메서드 유형 | 요청 URI     |  설명  |
 |--------|-----------------------------|---------------|
-| POST   | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative``` |  새 크리에이티브를 만듭니다.  |
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative/{creativeId}``` |  *creativeId*에서 지정한 크리에이티브를 가져옵니다.  |
+| 올리기   | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative``` |  새 크리에이티브를 만듭니다.  |
+| 가져오기    | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative/{creativeId}``` |  *creativeId*에서 지정한 크리에이티브를 가져옵니다.  |
 
 > [!NOTE]
 > 이 API는 현재 PUT 메서드를 지원하지 않습니다.
@@ -47,8 +47,8 @@ Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 �
 
 | 헤더        | 형식   | 설명         |
 |---------------|--------|---------------------|
-| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
-| 추적 ID   | GUID   | 선택 사항. 호출 흐름을 추적하는 ID입니다.                                  |
+| Authorization | string | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| 추적 ID   | GUID   | (선택 사항) 호출 흐름을 추적하는 ID입니다.                                  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -115,15 +115,15 @@ Authorization: Bearer <your access token>
 
 | 필드        | 형식   |  설명      |  읽기 전용  | 기본값  |  POST에 필요한지 여부 |  
 |--------------|--------|---------------|------|-------------|------------|
-|  id   |  정수   |  크리에이티브의 ID입니다.     |   예    |      |    아니오   |       
-|  name   |  문자열   |   크리에이티브의 이름입니다.    |    아니오   |      |  예     |       
-|  콘텐츠   |  문자열   |  Base64 인코딩 형식의 크리에이티브 이미지 콘텐츠입니다.<br/><br/>**참고**&nbsp;&nbsp;크리에이티브에 허용되는 최대 크기는 40KB입니다. 이보다 큰 크리에이티브 파일을 제출하면 이 API에서 오류를 반환하지는 않지만 캠페인이 성공적으로 생성되지 않습니다.     |  아니오     |      |   예    |       
-|  height   |  정수   |   크리에이티브의 높이입니다.    |    아니오    |      |   예    |       
-|  width   |  정수   |  크리에이티브의 너비입니다.     |  아니오    |     |    예   |       
-|  landingUrl   |  문자열   |  Kochava, AppsFlyer 또는 Tune과 같은 캠페인 추적 서비스를 사용하여 앱에 대한 설치 분석을 측정하는 경우 POST 메서드를 호출할 때 이 필드에 추적 URL을 할당합니다(지정할 경우 이 값은 유효한 URI여야 합니다). 캠페인 추적 서비스를 사용하지 않는 경우 POST 메서드를 호출할 때 이 값을 생략하세요(이 경우 이 URL이 자동으로 생성됩니다).   |  아니오    |     |   예    |       
-|  format   |  문자열   |   광고 형식입니다. 현재는 **Banner** 값만 지원합니다.    |   아니오    |  배너   |  아니오     |       
-|  imageAttributes   | [imageAttributes](#image-attributes)    |   크리에이티브에 속성을 제공합니다.     |   아니오    |      |   예    |       
-|  storeProductId   |  문자열   |   이 광고 캠페인이 연결된 앱의 [스토어 ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 예시 스토어 ID는 9nblggh42cfd입니다.    |   아니오    |    |  아니오     |   |  
+|  id   |  integer   |  크리에이티브의 ID입니다.     |   예    |      |    아니요   |       
+|  name   |  string   |   크리에이티브의 이름입니다.    |    아니요   |      |  예     |       
+|  콘텐츠   |  string   |  Base64 인코딩 형식의 크리에이티브 이미지 콘텐츠입니다.<br/><br/>**참고**&nbsp;&nbsp;크리에이티브에 허용되는 최대 크기는 40KB입니다. 이보다 큰 크리에이티브 파일을 제출하면 이 API에서 오류를 반환하지는 않지만 캠페인이 성공적으로 생성되지 않습니다.     |  아니요     |      |   예    |       
+|  height   |  integer   |   크리에이티브의 높이입니다.    |    아니오    |      |   예    |       
+|  width   |  integer   |  크리에이티브의 너비입니다.     |  아니오    |     |    예   |       
+|  landingUrl   |  string   |  추적 서비스 AppsFlyer, Kochava, 조정, Vungle 등 캠페인을 앱에 대 한 설치 분석을 측정 하를 사용 하는 경우 POST 메서드를 호출 하면 추적 URL이이 필드에 할당 (지정 하는 경우이 값이 유효한 URI 여야) 합니다. 캠페인 추적 서비스를 사용하지 않는 경우 POST 메서드를 호출할 때 이 값을 생략하세요(이 경우 이 URL이 자동으로 생성됩니다).   |  아니오    |     |   예    |
+|  format   |  string   |   광고 형식입니다. 현재는 **Banner** 값만 지원합니다.    |   아니오    |  배너   |  아니요     |       
+|  imageAttributes   | [ImageAttributes](#image-attributes)    |   크리에이티브에 속성을 제공합니다.     |   아니요    |      |   예    |       
+|  storeProductId   |  string   |   이 광고 캠페인이 연결된 앱의 [스토어 ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 예시 스토어 ID는 9nblggh42cfd입니다.    |   아니요    |    |  아니요     |   |  
 
 
 <span id="image-attributes"/>
@@ -132,7 +132,7 @@ Authorization: Bearer <your access token>
 
 | 필드        | 형식   |  설명      |  읽기 전용  | 기본값  | POST에 필요한지 여부 |  
 |--------------|--------|---------------|------|-------------|------------|
-|  imageExtension   |   문자열  |   다음 값 중 하나입니다. **PNG** 나 **JPG**합니다.    |    아니오   |      |   예    |       |
+|  imageExtension   |   string  |   다음 값 중 하나입니다. **PNG** 나 **JPG**합니다.    |    아니요   |      |   예    |       |
 
 
 ## <a name="related-topics"></a>관련 항목

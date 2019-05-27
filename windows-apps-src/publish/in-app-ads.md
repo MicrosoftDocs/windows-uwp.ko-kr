@@ -6,12 +6,12 @@ ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 355cff08c6ab98b0837b8cc95f2480aa1fb17bd4
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: bdcb8132052cd12444c192c93170fb2f8e94113a
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63784723"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215221"
 ---
 # <a name="in-app-ads"></a>인앱 광고
 
@@ -40,7 +40,7 @@ ms.locfileid: "63784723"
     * 앱에서 중간 비디오 ad 또는 중간 배너 광고를 표시 하는, 하는 경우 선택 **중간 비디오** 또는 **배너 중간** (해야 유형에 대 한 적절 한 옵션을 선택 합니다. 중간 광고 표시)입니다.
     * 기본 ad를 앱에서 표시 하는 경우 선택 **네이티브**합니다.
 
-5. **장치 패밀리** 드롭다운 목록에서 광고 단위가 사용될 앱의 대상이 되는 장치 패밀리를 선택합니다. 사용 가능한 옵션은 다음과 같습니다. **UWP (Windows 10)**, **(Windows 8.1)에 대 한 PC/Tablet**, 또는 **Mobile (Windows Phone 8.x 하는 데 사용)** 합니다.
+5. **장치 패밀리** 드롭다운 목록에서 광고 단위가 사용될 앱의 대상이 되는 장치 패밀리를 선택합니다. 사용 가능한 옵션은 다음과 같습니다. **UWP (Windows 10)** , **(Windows 8.1)에 대 한 PC/Tablet**, 또는 **Mobile (Windows Phone 8.x 하는 데 사용)** 합니다.
 
 6. 필요에 따라 다음과 같은 추가 설정을 구성합니다.
 
@@ -120,6 +120,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 | smartclip |  [smartclip](http://www.smartclip.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  동영상 중간 광고  |
 | SpotX |  [SpotX](https://www.spotx.tv/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  동영상 중간 광고  |
 | Taboola |  [Taboola](https://www.taboola.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
+| Vungle | 광고를 제공 하려면이 옵션을 선택 [Vungle](https://vungle.com/) | 동영상 중간 광고 |
 | Undertone | 광고를 제공 하려면이 옵션을 선택 [Undertone](https://www.undertone.com/)합니다. | 중간 배너 |
 
 

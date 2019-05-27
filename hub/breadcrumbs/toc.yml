@@ -1,0 +1,18 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+    - name: Windows
+      tocHref: /windows/
+      topicHref: /windows/
+      items:
+        - name: 앱
+          tocHref: /windows/apps/
+          topicHref: /windows/apps/
+          items:
+            - name: 데스크톱 앱 빌드
+              tocHref: /windows/apps/desktop/
+              topicHref: /windows/apps/desktop/
+            - name: 데스크톱 앱 현대화
+              tocHref: /windows/apps/desktop/modernize/
+              topicHref: /windows/apps/desktop/modernize/

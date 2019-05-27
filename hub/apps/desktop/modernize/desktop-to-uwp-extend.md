@@ -4,13 +4,15 @@ title: Windows UI와 구성 요소로 데스크톱 응용 프로그램 확장
 ms.date: 06/08/2018
 ms.topic: article
 keywords: windows 10, uwp
+ms.author: mcleans
+author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: ff87990341b3936b5f2e02b8ff8b119a23188e92
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 10ad54dd485d7dbf5e7f4cb119c7700c09056017
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984433"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215128"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>최신 UWP 구성 요소를 사용 하 여 데스크톱 앱 확장
 

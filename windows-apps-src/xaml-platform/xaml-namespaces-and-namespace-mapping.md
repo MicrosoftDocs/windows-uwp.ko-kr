@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4332bd0b19d381937e477efc472634d6d81afd58
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b7e8be3a2c2f3d6d4ecf3ade708741fa323167fc
+ms.sourcegitcommit: 13fe5d04bdb43c75d0fc4de18c2c3d4ae58ff982
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651088"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66221036"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>XAML 네임스페이스 및 네임스페이스 매핑
 
@@ -49,6 +49,33 @@ XAML을 UI 정의 태그 형식으로 사용하는 여러 이전 Microsoft 기�
 
 XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 XAML 네임스페이스에 대해 작동하는 XAML 프로세서 구현을 통해 액세스할 수 있어야 합니다. 프로젝트 템플릿, 샘플 코드 및 언어 기능 설명서는 XAML 언어 XAML 네임스페이스의 "x:" 매핑 규칙을 따릅니다. XAML 언어 네임스페이스는 공통으로 사용되는 여러 기능을 정의합니다. 이러한 기능은 C++, C# 또는 Visual Basic으로 작성된 기본 Windows 런타임 앱에도 필요합니다. 예를 들어 partial 클래스를 통해 코드 숨김을 XAML 파일에 조인하려면 먼저 관련 XAML 파일의 루트 요소에서 해당 클래스를 [x:Class 특성](x-class-attribute.md)으로 명명해야 합니다. 또는 XAML 페이지에 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)의 키 입력 리소스로 정의된 모든 요소는 해당 개체 요소에서 [x:Key 특성](x-key-attribute.md)이 설정되어 있어야 합니다.
 
+## <a name="code-namespaces-that-map-to-the-default-xaml-namespace"></a>기본 XAML 네임 스페이스에 매핑되는 코드 네임 스페이스
+
+다음에는 현재 기본 XAML 네임 스페이스에 매핑되는 코드 네임 스페이스의 목록입니다.
+
+* Windows.UI
+* Windows.UI.Xaml
+* Windows.UI.Xaml.Automation
+* Windows.UI.Xaml.Automation.Peers
+* Windows.UI.Xaml.Automation.Provider
+* Windows.UI.Xaml.Automation.Text
+* Windows.UI.Xaml.Controls
+* Windows.UI.Xaml.Controls.Primitives
+* Windows.UI.Xaml.Data
+* Windows.UI.Xaml.Documents
+* Windows.UI.Xaml.Input
+* Windows.UI.Xaml.Interop
+* Windows.UI.Xaml.Markup
+* Windows.UI.Xaml.Media
+* Windows.UI.Xaml.Media.Animation
+* Windows.UI.Xaml.Media.Imaging
+* Windows.UI.Xaml.Media.Media3D
+* Windows.UI.Xaml.Navigation
+* Windows.UI.Xaml.Resources
+* Windows.UI.Xaml.Shapes
+* Windows.UI.Xaml.Threading
+* Windows.UI.Text
+
 <span id="other-XAML-namespaces"/>
 
 ## <a name="other-xaml-namespaces"></a>다른 XAML 네임스페이스
@@ -75,9 +102,9 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 
 "local:" 템플릿 기반의 UWP 앱 프로젝트에 대해 XAML 페이지 내에서 자주 매핑되는 접두사입니다. [x:Class 특성](x-class-attribute.md) 및 app.xaml을 비롯한 모든 XAML 파일에 대한 코드를 포함하도록 생성된 동일한 네임스페이스를 참조하도록 매핑되어 있습니다. 이 동일한 네임스페이스에서 XAML에 사용할 사용자 지정 클래스를 정의하는 경우 **local:** 접두사를 사용하여 XAML의 사용자 지정 유형을 참조할 수 있습니다. 템플릿 기반의 UWP 앱 프로젝트에서 가져온 관련 접두사는 **common:** 입니다. 이 접두사는 변환기 및 명령과 같은 유틸리티 클래스를 포함하고 있는 중첩된 "Common" 네임스페이스를 참조하며, 개발자는 **솔루션 탐색기** 보기에서 Common 폴더에 있는 정의를 찾을 수 있습니다.
 
-### <a name="vsm"></a>**vsm.**
+### <a name="vsm"></a>**vsm:**
 
-사용하지 마세요. "vsm:"은 다른 Microsoft 기술에서 가져온 이전 XAML 템플릿에서 볼 수 있는 접두사입니다. 이 네임스페이스는 원래 레거시 네임스페이스 도구 문제를 해결했습니다. Windows 런타임용으로 사용하는 모든 XAML에서 "vsm:"에 대한 XAML 네임스페이스 정의를 삭제하고 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) 및 관련 개체에 대한 접두사 사용을, 기본 XAML 네임스페이스를 대신 사용하도록 변경해야 합니다. XAML 마이그레이션에 대한 자세한 내용은 [Windows 런타임 앱으로 Silverlight 또는 WPF XAML/코드 마이그레이션](https://msdn.microsoft.com/library/windows/apps/br229571)을 참조하세요.
+사용하지 마십시오. "vsm:"은 다른 Microsoft 기술에서 가져온 이전 XAML 템플릿에서 볼 수 있는 접두사입니다. 이 네임스페이스는 원래 레거시 네임스페이스 도구 문제를 해결했습니다. Windows 런타임용으로 사용하는 모든 XAML에서 "vsm:"에 대한 XAML 네임스페이스 정의를 삭제하고 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) 및 관련 개체에 대한 접두사 사용을, 기본 XAML 네임스페이스를 대신 사용하도록 변경해야 합니다. XAML 마이그레이션에 대한 자세한 내용은 [Windows 런타임 앱으로 Silverlight 또는 WPF XAML/코드 마이그레이션](https://msdn.microsoft.com/library/windows/apps/br229571)을 참조하세요.
 
 ## <a name="mapping-custom-types-to-xaml-namespaces-and-prefixes"></a>XAML 네임스페이스 및 접두사에 사용자 지정 유형 매핑
 
@@ -103,7 +130,7 @@ XAML 네임스페이스에 대한 지원 유형을 정의하는 어셈블리 이
 
 기본 앱의 응용 프로그램 정의 또는 페이지 정의에서 사용자 지정 유형을 참조하는 경우 추가 종속 어셈블리 구성 없이 해당 유형을 사용할 수 있으나 여전히 해당 유형이 포함된 코드 네임스페이스를 매핑해야 합니다. 일반적인 규칙은 지정된 XAML 페이지의 기본 코드 네임스페이스에 대해 "local" 접두사를 매핑하는 것입니다. 이 규칙은 XAML 프로젝트의 시작 프로젝트 템플릿에 포함되는 경우가 많습니다.
 
-## <a name="attached-properties"></a>연결된 속성
+## <a name="attached-properties"></a>연결 된 속성
 
 연결된 속성을 참조하는 경우 연결된 속성 이름이 소유자 형식 부분은 기본 XAML 네임스페이스로 사용되거나 접두사를 붙일 수 있습니다. 특성 요소와 별개로 특정에 접두사를 붙이는 경우는 드물지만 가끔 필요할 때, 특히 사용자 지정 연결된 속성의 경우에는 접두사를 붙입니다. 자세한 내용은 [사용자 지정 연결된 속성](custom-attached-properties.md)을 참조하세요.
 
@@ -112,7 +139,7 @@ XAML 네임스페이스에 대한 지원 유형을 정의하는 어셈블리 이
 * [XAML 개요](xaml-overview.md)
 * [XAML 구문 가이드](xaml-syntax-guide.md)
 * [Windows 런타임 구성 요소 만들기 C# 및 Visual Basic](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-* [C#VB 및 c + + Windows 런타임 앱에 대 한 템플릿 프로젝트](https://msdn.microsoft.com/library/windows/apps/hh768232)
+* [C#VB 및 C++ Windows 런타임 앱에 대 한 프로젝트 템플릿](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [마이그레이션 Silverlight 또는 WPF XAML/Windows 런타임 앱에 코드](https://msdn.microsoft.com/library/windows/apps/br229571)
  
 

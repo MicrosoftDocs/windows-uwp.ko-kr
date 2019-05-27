@@ -1,16 +1,16 @@
 ---
 description: XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 항목에서는 관찰 가능한 속성을 구현하여 사용하는 방법과 XAML 컨트롤에 바인딩하는 방법에 대해서 설명합니다.
 title: XAML 컨트롤, C++/WinRT 속성 바인딩
-ms.date: 08/21/2018
+ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: 9bdbfef54b799f8dff23ad739007cec9fef98af8
-ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.openlocfilehash: 2fe5c03eebd2b68e98ae908ea4624471fbd2b3d2
+ms.sourcegitcommit: d23dab1533893b7fe0f01ca6eb273edfac4705e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921729"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65627664"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>XAML 컨트롤, C++/WinRT 속성 바인딩
 XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 아이디어는 *관찰자 패턴*이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이 항목에서는에서 관측 가능한 속성을 구현 하는 방법을 보여 줍니다 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 및 XAML 컨트롤에 바인딩하는 방법입니다.
@@ -27,7 +27,7 @@ XAML 텍스트 요소, 즉 컨트롤은 업데이트된 값을 가져와 새로�
 > 설치 및 사용에 대 한 정보는 C++WinRT Visual Studio 확장 (VSIX) 및 (있으며 함께 프로젝트 템플릿을 제공 지원도) NuGet 패키지를 참조 하세요 [Visual Studio 지원에 대 한 C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)합니다.
 
 ## <a name="create-a-blank-app-bookstore"></a>비어 있는 앱(Bookstore) 만들기
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. 만들기는 **시각적 C++**   >  **Windows 범용** > **비어 있는 앱 (C++/WinRT)** 프로젝트를 만들고 이름을  *Bookstore*합니다.
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. 만들기는 **비어 있는 앱 (C++/WinRT)** 프로젝트를 만들고 이름을 *Bookstore*합니다.
 
 지금부터 관찰 가능한 타이틀 속성을 갖는 동시에 책을 표현할 새로운 클래스를 작성하려고 합니다. 또한 동일한 컴파일 단위 내에서 클래스를 작성하고 사용할 계획입니다. 하지만 XAML에서 이 클래스에 바인딩할 수 있어야 하므로 결국 런타임 클래스가 될 것입니다. 그 밖에도 런타임 클래스를 작성하고 사용하는 데 모두 C++/WinRT를 사용합니다.
 
@@ -61,7 +61,6 @@ namespace Bookstore
 ```cppwinrt
 // BookSku.h
 #pragma once
-
 #include "BookSku.g.h"
 
 namespace winrt::Bookstore::implementation
@@ -89,6 +88,7 @@ namespace winrt::Bookstore::implementation
 // BookSku.cpp
 #include "pch.h"
 #include "BookSku.h"
+#include "BookSku.g.cpp"
 
 namespace winrt::Bookstore::implementation
 {
@@ -142,18 +142,17 @@ namespace Bookstore
 }
 ```
 
-저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`를 `Generated Files` 폴더에서 프로젝트 폴더로 복사한 후 프로젝트에 추가합니다. 해당 파일을 열고 아래와 같이 런타임 클래스를 구현 합니다. 참고 하는 방법의 `BookstoreViewModel.h`에 포함 되 고 `BookSku.h`, 구현 유형을 선언 하는 (**winrt::Bookstore::implementation::BookSku**). 기본 생성자를 제거 하 여 복원 하는 것을 `= delete`입니다.
+저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`를 `Generated Files\sources` 폴더에서 프로젝트 폴더로 복사한 후 프로젝트에 추가합니다. 해당 파일을 열고 아래와 같이 런타임 클래스를 구현 합니다. 참고 하는 방법, `BookstoreViewModel.h`, 포함 되 고 `BookSku.h`에 대 한 구현 유형을 선언 하는 **BookSku** (되 **winrt::Bookstore::implementation::BookSku**). 및에서는 제거 중인 `= default` 기본 생성자에서.
 
 ```cppwinrt
 // BookstoreViewModel.h
 #pragma once
-
 #include "BookstoreViewModel.g.h"
 #include "BookSku.h"
 
 namespace winrt::Bookstore::implementation
 {
-    struct BookstoreViewModel final : BookstoreViewModelT<BookstoreViewModel>
+    struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
     {
         BookstoreViewModel();
 
@@ -169,6 +168,7 @@ namespace winrt::Bookstore::implementation
 // BookstoreViewModel.cpp
 #include "pch.h"
 #include "BookstoreViewModel.h"
+#include "BookstoreViewModel.g.cpp"
 
 namespace winrt::Bookstore::implementation
 {
@@ -208,9 +208,9 @@ namespace Bookstore
 
 포함을 생략 하면 `BookstoreViewModel.idl` (목록을 참조 하세요 `MainPage.idl` 위에), 오류가 표시 됩니다 **예상 \< "MainViewModel" 근처**합니다. 동일한 네임 스페이스에 모든 형식을 그대로 둘 수 있는지 확인 하 여: 코드 샘플에 표시 되는 네임 스페이스입니다.
 
-것으로 예상 하는 오류를 해결 하려면 이제 해야 한 접근자 스텁이 자동으로 복사 합니다 **MainViewModel** 생성 된 파일 속성 (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`) 및 `\Bookstore\Bookstore\MainPage.h` 및 `MainPage.cpp`합니다.
+것으로 예상 하는 오류를 해결 하려면 이제 해야 한 접근자 스텁이 자동으로 복사 합니다 **MainViewModel** 생성 된 파일 속성 (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`) 및 `\Bookstore\Bookstore\MainPage.h` 및 `MainPage.cpp`합니다. 작업을 수행 하는 단계는 다음과 같습니다.
 
-`\Bookstore\Bookstore\MainPage.h`를 포함 `BookstoreViewModel.h`를 구현 유형을 선언 하는 (**winrt::Bookstore::implementation::BookstoreViewModel**). 뷰 모델을 저장 하려면 private 멤버를 추가 합니다. 단, 속성 접근자 함수(및 m_mainViewModel 멤버)는 프로젝션된 형식인 **Bookstore::BookstoreViewModel**과 관련하여 구현됩니다. 구현 형식 이므로 동일한 프로젝트 (컴파일 단위)에 응용 프로그램과 생성자 오버 로드를 통해 m_mainViewModel 생성 `nullptr_t`합니다. 도 제거 합니다 **MyProperty** 속성입니다.
+`\Bookstore\Bookstore\MainPage.h`를 포함 `BookstoreViewModel.h`에 대 한 구현 유형을 선언 하는 **BookstoreViewModel** (되 **winrt::Bookstore::implementation::BookstoreViewModel**). 뷰 모델을 저장 하려면 private 멤버를 추가 합니다. 속성 접근자 함수 (및 멤버 m_mainViewModel)에 대 한 예상된 형식 측면에서 구현 됩니다 **BookstoreViewModel** (즉 **Bookstore::BookstoreViewModel**). 구현 형식 이므로 동일한 프로젝트 (컴파일 단위)에 응용 프로그램과 생성자 오버 로드를 통해 m_mainViewModel 생성 `nullptr_t`합니다. 도 제거 합니다 **MyProperty** 속성입니다.
 
 ```cppwinrt
 // MainPage.h
@@ -240,6 +240,7 @@ namespace winrt::Bookstore::implementation
 // MainPage.cpp
 #include "pch.h"
 #include "MainPage.h"
+#include "MainPage.g.cpp"
 
 using namespace winrt;
 using namespace Windows::UI::Xaml;

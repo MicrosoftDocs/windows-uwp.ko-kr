@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d07a90ce34e9b4613eed6782338cbd889d7935c9
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 53a69393d945be1640f733b47410f88631fc7714
+ms.sourcegitcommit: 13fe5d04bdb43c75d0fc4de18c2c3d4ae58ff982
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58081875"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66221043"
 ---
 # <a name="responsive-layouts-with-xaml"></a>XAML을 사용한 반응형 레이아웃
 
@@ -27,7 +27,7 @@ XAML 레이아웃 시스템은 고정 레이아웃과 가변 레이아웃을 모
 여기서는 XAML 속성 및 레이아웃 패널을 사용하여 유동 레이아웃을 만드는 방법을 살펴봅니다.
 
 ### <a name="layout-properties"></a>레이아웃 속성
-레이아웃 속성은 요소의 크기 및 위치를 제어합니다. 유동 레이아웃을 만들려면 요소에 대해 자동 또는 가변 크기 조정을 사용하고 레이아웃 패널에서 필요에 따라 자식의 위치를 지정하도록 허용합니다. 
+레이아웃 속성은 요소의 크기 및 위치를 제어합니다. 유연한 레이아웃을 만들 하려면 요소에 대 한 비례 또는 자동 크기 조정을 사용 하 고 필요에 따라 해당 자식 항목을 배치 하려면 레이아웃 패널을 허용 합니다. 
 
 다음은 몇 가지 공통 레이아웃 속성과 이러한 속성을 사용하여 유동 레이아웃을 만드는 방법입니다.
 
@@ -348,7 +348,7 @@ XAML 보기를 사용하여 동일한 코드 숨김을 공유하는 다른 UI �
 
 **파일 이름 사용**
 
-파일에 한정자 이름을 사용하려면 *[pageName]*.DeviceFamily-*[qualifierString]*.xaml 형식을 사용합니다.
+파일에 한정자 이름을 사용하려면 *[pageName]* .DeviceFamily- *[qualifierString]* .xaml 형식을 사용합니다.
 
 MainPage.xaml이라는 파일에 대한 예를 살펴보겠습니다. 태블릿 장치에 대한 보기를 만들려면 XAML 보기의 이름을 MainPage.DeviceFamily-Tablet.xaml로 지정합니다. PC 장치에 대한 보기를 만들려면 보기의 이름을 MainPage.DeviceFamily-Desktop.xaml로 지정합니다. Microsoft Visual Studio에서 해당 솔루션이 다음과 같이 보입니다.
 
@@ -356,7 +356,7 @@ MainPage.xaml이라는 파일에 대한 예를 살펴보겠습니다. 태블릿 
 
 **폴더 이름 사용**
 
-폴더를 사용하여 Visual Studio 프로젝트에서 보기를 구성하려면 폴더에 한정자 이름을 사용하면 됩니다. 이렇게 하려면 다음과 같은 폴더 이름: DeviceFamily-*[qualifierString]*. 이 경우 각 XAML 보기 파일의 이름이 같습니다. 파일 이름에는 한정자를 포함하지 마세요.
+폴더를 사용하여 Visual Studio 프로젝트에서 보기를 구성하려면 폴더에 한정자 이름을 사용하면 됩니다. 이렇게 하려면 다음과 같은 폴더 이름: DeviceFamily- *[qualifierString]* . 이 경우 각 XAML 보기 파일의 이름이 같습니다. 파일 이름에는 한정자를 포함하지 마세요.
 
 다음 예제에서도 MainPage.xaml이라는 파일을 사용합니다. 태블릿 장치에 대한 보기를 만들려면 "DeviceFamily-Tablet"이라는 폴더를 만들고 MainPage.xaml이라는 XAML 보기를 배치합니다. PC 장치에 대한 보기를 만들려면 "DeviceFamily-Desktop"이라는 폴더를 만들고 MainPage.xaml이라는 다른 XAML 보기를 배치합니다. Visual Studio에서 해당 솔루션이 다음과 같이 보입니다.
 

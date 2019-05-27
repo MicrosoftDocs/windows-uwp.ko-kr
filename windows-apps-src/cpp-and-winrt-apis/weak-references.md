@@ -1,17 +1,17 @@
 ---
 description: Windows 런타임은 참조 계산 시스템입니다. 이러한 시스템에서는 강한 참조와 약한 참조의 중요성과 차이점을 인식해야 합니다.
 title: C++/WinRT의 약한 참조
-ms.date: 10/03/2018
+ms.date: 05/16/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 강력 하 고, 약한 참조
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0e2e40daaf777e36094b698d058f21840b1804c8
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: c9fb112c6f83fa7bd9a3612916efd2527d821c29
+ms.sourcegitcommit: 6c7e1aa3bd396a1ad714e8b77c0800759dc2d8e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291831"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821077"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>강력한 / 취약 한 참조에서 C++/WinRT
 
@@ -19,12 +19,13 @@ Windows 런타임에서 참조 횟수가 계산 시스템입니다. 에 이러�
 
 ## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>안전 하 게 액세스 하는 *이* 클래스 멤버 코 루틴에서 포인터
 
-아래 코드 목록에 클래스의 멤버 함수는 코 루틴의 일반적인 예제를 보여 줍니다.
+아래 코드 목록에 클래스의 멤버 함수는 코 루틴의 일반적인 예제를 보여 줍니다. 복사-붙여 넣을 수 있습니다이 예제에서는 지정된 된 파일에 새 **Windows 콘솔 응용 프로그램 (C++/WinRT)** 프로젝트입니다.
 
 ```cppwinrt
 // pch.h
 #pragma once
 #include <iostream>
+#include <winrt/coroutine.h>
 #include <winrt/Windows.Foundation.h>
 
 // main.cpp : Defines the entry point for the console application.
@@ -101,11 +102,14 @@ IAsyncOperation<winrt::hstring> RetrieveValueAsync()
 }
 ```
 
-때문에 C++에서 파생 직접 또는 간접적으로 WinRT 개체/합니다 [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) 템플릿을 C++WinRT 개체를 호출할 수/해당 [  **implements.get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) 보호 된 멤버 함수에 대 한 강력한 참조를 검색 하는 해당 *이* 포인터입니다. 실제로 사용 하지 않아도 있다는 점에 주의 합니다 `strong_this` 변수; 호출 **get_strong** 에 참조 횟수를 증가 시키고에 암시적 유지 *이* 유효한 포인터입니다.
+C++에서 파생 직접 또는 간접적으로 WinRT 클래스/합니다 [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) 템플릿. 따라서는 C++WinRT 개체를 호출할 수/해당 [ **implements.get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) 보호 된 멤버 함수에 대 한 강력한 참조를 검색 하는 해당 *이* 대 한 포인터입니다. 실제로 사용 하지 않아도 있다는 점에 주의 합니다 `strong_this` 위의 코드 예제에서 변수; 호출 **get_strong** 증가 C++/WinRT 개체의 참조 횟수 및 해당 암시적 유지 *이* 포인터가 잘못 되었습니다.
+
+> [!IMPORTANT]
+> 때문에 **get_strong** 는의 멤버 함수는 **winrt::implements** 구조체 템플릿을 호출할 수 있습니다에서 직접 또는 간접적으로 파생 된 클래스 에서만에서 **winrt::implements**, 예를 C++/WinRT 클래스입니다. 파생 하는 방법에 대 한 자세한 내용은 **winrt::implements**, 및 예제를 참조 하십시오 [사용 하 여 만든 Api C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)합니다.
 
 이 사용 했던 이전에 가져온 4 단계를 수행 하는 경우 문제를 해결 합니다. 클래스 인스턴스를 다른 모든 참조 사라지는 경우에는 코 루틴 종속은 안정적인 보장 예방 조치를 수행 했습니다.
 
-강력한 참조를 적절 하 게 없는 경우 대신 호출할 수 있습니다 [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) 에 대 한 약한 참조를 검색할 *이*합니다. 에 액세스 하기 전에 강력한 참조를 검색할 수 있도록 방금 확인 *이*합니다.
+강력한 참조를 적절 하 게 없는 경우 대신 호출할 수 있습니다 [ **implements::get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) 에 대 한 약한 참조를 검색할 *이*합니다. 에 액세스 하기 전에 강력한 참조를 검색할 수 있도록 방금 확인 *이*합니다. 마찬가지로 **get_weak** 는의 멤버 함수는 **winrt::implements** 구조체 템플릿.
 
 ```cppwinrt
 IAsyncOperation<winrt::hstring> RetrieveValueAsync()
@@ -244,6 +248,9 @@ event_source.Event([this](auto&& ...)
 ### <a name="the-solution"></a>솔루션
 
 솔루션은 강력한 참조를 캡처합니다. 강력한 참조 *않습니다* 고 참조 횟수를 증가 *않습니다* 현재 개체를 유지 합니다. 방금 캡처 변수를 선언 하면 (호출 `strong_this` 이 예에서)에 대 한 호출을 사용 하 여 초기화 [ **implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)에 대 한 강력한 참조를 검색 하는 우리의  *이* 포인터입니다.
+
+> [!IMPORTANT]
+> 때문에 **get_strong** 는의 멤버 함수는 **winrt::implements** 구조체 템플릿을 호출할 수 있습니다에서 직접 또는 간접적으로 파생 된 클래스 에서만에서 **winrt::implements**, 예를 C++/WinRT 클래스입니다. 파생 하는 방법에 대 한 자세한 내용은 **winrt::implements**, 및 예제를 참조 하십시오 [사용 하 여 만든 Api C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)합니다.
 
 ```cppwinrt
 event_source.Event([this, strong_this { get_strong()}](auto&& ...)

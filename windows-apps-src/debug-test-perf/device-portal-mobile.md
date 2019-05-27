@@ -8,7 +8,7 @@ keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 879f4b9fd8806565eedeabda95f0c24c5b7931d7
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57597228"
@@ -73,7 +73,7 @@ Windows Mobile Device Portal에는 임의 프로세스를 종료하는 기능이
 모바일 디바이스에서 디바이스 포털은 표준 페이지 집합을 제공합니다. 자세한 설명은 [Windows Device Portal 개요](device-portal.md)를 참조하세요.
 
 - 앱 관리자
-- 앱 파일 탐색기(격리된 저장소 탐색기)
+- 앱 파일 탐색기(격리된 Storage Explorer)
 - 프로세스
 - 성능 차트
 - ETW(Windows용 이벤트 추적)

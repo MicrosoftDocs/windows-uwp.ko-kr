@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2089f9fcd54989234b52f95eb3ee9535f9b3ede3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f8e74688d0f7048276b12680237b85663d7e2b81
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603118"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66214742"
 ---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>UWP 개념 문서에 기여
 
@@ -34,7 +34,7 @@ UWP(유니버설 Windows 플랫폼) 문서에 대한 관심에 감사 드립니�
 
 ## <a name="internal-contributions"></a>내부 기 고물
 
-통해 기여할 수 있는 Microsoft 직원이 라면 합니다 [개인 콘텐츠 리포지토리에서](https://cpubwin.visualstudio.com/_git/windows-uwp)합니다. 이 리포지토리를 사용 하 여에 대 한 지침을 찾을 수 있습니다 합니다 [Windows 제작 가이드](https://review.docs.microsoft.com/windows-authoring-guide/uwp/?branch=master)합니다. 예정 된 기능에 대 한 설명서만 개인 리포지토리를 통해 제공 되어야 합니다.
+통해 기여할 수 있는 Microsoft 직원이 라면 합니다 [개인 콘텐츠 리포지토리에서](https://github.com/microsoftdocs/windows-uwp-pr)합니다. 이 리포지토리를 사용 하 여에 대 한 지침을 찾을 수 있습니다 합니다 [Windows 제작 가이드](https://review.docs.microsoft.com/windows-authoring-guide/uwp/?branch=master)합니다. 예정 된 기능에 대 한 설명서만 개인 리포지토리를 통해 제공 되어야 합니다.
 
 ### <a name="editing-a-file"></a>파일 편집
 

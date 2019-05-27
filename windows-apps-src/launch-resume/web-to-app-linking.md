@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 176009cb3a2fb14eb5071d48d59a0b807d4c81d6
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 464aa35aa8362049042ad23a6816c4de21b25634
+ms.sourcegitcommit: 559d3387d5929431212d147d9e085895e162916a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63770364"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66184523"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>앱 URI 처리기를 사용하여 웹 사이트에 대해 앱 활성화
 
@@ -55,7 +55,7 @@ ms.locfileid: "63770364"
 >[!Important]
 > JSON 파일에는 .json 파일 접미사가 없어야 합니다.
 
-**windows-app-web-link**라는 JSON 파일을(.json 파일 확장명 없이) 만들고 앱의 패키지 패밀리 이름을 제공합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+**windows-app-web-link**라는 JSON 파일을(.json 파일 확장명 없이) 만들고 앱의 패키지 패밀리 이름을 제공합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ``` JSON
 [{
@@ -76,7 +76,7 @@ Windows는 웹 사이트에 https로 연결하여 웹 서버에서 해당 JSON �
 | **\***       | 모든 하위 문자열을 나타냅니다.      |
 | **?**        | 단일 문자를 나타냅니다. |
 
-예를 들어, 위의 예제에서처럼 `"excludePaths" : [ "/news/*", "/blog/*" ]`를 지정하면 앱은 `/news/` 및 `/blog/` 아래의 경로를 **제외**하고 웹 사이트의 주소(예: msn.com)로 시작하는 모든 경로를 지원합니다. 즉 **msn.com/weather.html**은 지원되지만 ****msn.com/news/topnews.html****은 지원되지 않습니다.
+예를 들어, 위의 예제에서처럼 `"excludePaths" : [ "/news/*", "/blog/*" ]`를 지정하면 앱은 `/news/` 및 `/blog/` 아래의 경로를 **제외**하고 웹 사이트의 주소(예: msn.com)로 시작하는 모든 경로를 지원합니다. **msn.com/weather.html** 제외한 지원 될 예정 **msn.com/news/topnews.html**합니다.
 
 ### <a name="multiple-apps"></a>여러 앱
 

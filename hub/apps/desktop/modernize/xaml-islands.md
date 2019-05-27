@@ -4,14 +4,16 @@ title: 데스크톱 앱에서 UWP 컨트롤
 ms.date: 04/16/2019
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도
+ms.author: mcleans
+author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: fd4f92e543b224e617e1990e5761d534c87ce6fb
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 62dc89b9e17f1ae9c2394629100e0bd54606594b
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984933"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215121"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱 (XAML 제도)에서 호스트 UWP XAML 컨트롤
 

@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 32838e2c3369535928c9e9311f62654eba54e4e0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 25dc7118fcb7d9c6e997fae458ef7846777b1262
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611758"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983923"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 
@@ -20,7 +20,7 @@ ms.locfileid: "57611758"
 
 유니버설 Windows 플랫폼(UWP) 디자인 지침은 세련되고 아름다운 앱을 디자인 및 빌드하기 위한 리소스입니다.
 
-규범적인 규칙 목록이 아닙니다. 발전하는 [흐름 디자인 시스템](../fluent-design-system/index.md)과 앱 빌드 커뮤니티의 필요 사항에 맞춰 적응할 수 있도록 고안된 살아있는 문서입니다.
+규범적인 규칙 목록이 아닙니다. 발전하는 [흐름 디자인 시스템](/windows/apps/fluent-design-system)과 앱 빌드 커뮤니티의 필요 사항에 맞춰 적응할 수 있도록 고안된 살아있는 문서입니다.
 
 소개에서는 모든 UWP 앱에 포함된 유니버설 디자인 기능에 대한 개요 및 여러 장치에 걸쳐 확장되는 UI(사용자 인터페이스)를 빌드하기 위해 문서를 사용할 수 있는 방법을 설명합니다.
 
@@ -98,7 +98,7 @@ Visual Studio에서 [Windows Template Studio](https://github.com/Microsoft/Windo
 
 ## <a name="controls"></a>컨트롤
 
-UWP의 디자인 플랫폼은 모든 Windows 기반 장치에서 제대로 작동하도록 보장되고 [흐름 디자인 시스템](../fluent-design-system/index.md) 원칙을 준수하는 공용 컨트롤의 집합을 제공합니다. 이러한 컨트롤에는 단추와 텍스트 요소 같은 단순한 컨트롤부터 데이터 및 템플릿 세트에서 목록을 생성할 수 있는 정교한 컨트롤까지 모든 것이 포함되어 있습니다.
+UWP의 디자인 플랫폼은 모든 Windows 기반 장치에서 제대로 작동하도록 보장되고 [흐름 디자인 시스템](/windows/apps/fluent-design-system) 원칙을 준수하는 공용 컨트롤의 집합을 제공합니다. 이러한 컨트롤에는 단추와 텍스트 요소 같은 단순한 컨트롤부터 데이터 및 템플릿 세트에서 목록을 생성할 수 있는 정교한 컨트롤까지 모든 것이 포함되어 있습니다.
 
 ![UWP 컨트롤](../style/images/color/windows-controls.svg)
 
@@ -172,10 +172,10 @@ UWP의 디자인 플랫폼은 모든 Windows 기반 장치에서 제대로 작�
 
 ## <a name="next-fluent-design-system"></a>다음: Fluent 디자인 시스템
 
-흐름 디자인(Microsoft의 디자인 시스템)의 기반이 되는 원칙에 대해 학습하고, UWP 앱에 포함시킬 수 있는 더 많은 기능에 대해 알아보고 싶다면 계속해서 [흐름 디자인 시스템](../fluent-design-system/index.md)에 대해 알아보세요.
+흐름 디자인(Microsoft의 디자인 시스템)의 기반이 되는 원칙에 대해 학습하고, UWP 앱에 포함시킬 수 있는 더 많은 기능에 대해 알아보고 싶다면 계속해서 [흐름 디자인 시스템](/windows/apps/fluent-design-system)에 대해 알아보세요.
 
 ## <a name="related-articles"></a>관련 문서
 
 - [UWP 앱이란 무엇인가요?](../../get-started/universal-application-platform-guide.md)
-- [흐름 디자인 시스템](../fluent-design-system/index.md)
+- [흐름 디자인 시스템](/windows/apps/fluent-design-system)
 - [XAML 플랫폼 개요](../../xaml-platform/index.md)

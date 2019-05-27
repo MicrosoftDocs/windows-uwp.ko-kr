@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 캠페인, 홍보
 ms.localizationpriority: medium
-ms.openlocfilehash: d442792cb2b4175294ea8da053784ef0a99d18e2
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 0d38d47c1b5e228e984faa4657cd12735e98bcf9
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63811840"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215230"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>앱 광고 캠페인 만들기
 
@@ -20,7 +20,7 @@ ms.locfileid: "63811840"
 [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과한 앱을 위한 광고 캠페인만 만들 수 있습니다.
 
 > [!NOTE]
-> 설명서의이 섹션에서는 파트너 센터에서 광고 캠페인을 만드는 방법을 설명 합니다. 또는 [Microsoft Store 홍보 API](../monetize/run-ad-campaigns-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 광고 캠페인을 만들고 관리할 수 있습니다.
+> 설명서의이 섹션에서는 파트너 센터에서 광고 캠페인을 만드는 방법을 설명 합니다. 다른 캠페인을 만들고 광고 캠페인을 프로그래밍 방식으로 관리 하는 옵션이 [Vungle](https://vungle.com/) 하며 [Microsoft Store 프로 모션 API](../monetize/run-ad-campaigns-using-windows-store-services.md)합니다.
 
 ## <a name="instructions"></a>지침
 
@@ -90,7 +90,7 @@ ms.locfileid: "63811840"
 
 12.  [프리미엄 계정](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign)이 있는 경우 **대상 URL** 상자를 사용하여 고객이 광고를 클릭할 때 발생하는 상황을 제어할 수 있습니다.
     * 상자를 비워 두면 고객이 광고를 클릭할 때 앱의 스토어 목록이 표시됩니다.
-    * Kochava 또는 Tune을 사용하여 앱에 대한 설치 분석을 측정하는 경우 Kochava 또는 Tune에서 설치 추적 URL을 입력합니다. 캠페인을 저장할 때 추적 URL이 Microsoft Store의 앱 목록 페이지로 확인되는지 검사하기 위해 추적 URL의 유효성이 검사됩니다. Kochava 및 Tune을 사용한 설치 추적에 대한 자세한 내용은 [Kochava](https://support.kochava.com/) 및 [Tune](https://help.tune.com/) 설명서를 참조하세요.
+    * 조정, Kochava, 조정, 또는 Vungle를 사용 하 여 앱에 대 한 설치 분석을 측정 하는, 하는 경우 설치 추적 URL을 입력 합니다. 캠페인을 저장할 때 추적 URL이 Microsoft Store의 앱 목록 페이지로 확인되는지 검사하기 위해 추적 URL의 유효성이 검사됩니다. 이러한 서비스를 사용 하 여 설치 추적에 대 한 자세한 내용은 참조는 [조정](https://docs.adjust.com/en/), [Kochava](https://support.kochava.com/)를 [조정](https://help.tune.com/), 및 [Vungle](https://support.vungle.com/) 설명서 .
     * 캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 [딥 링크 URI](../launch-resume/handle-uri-activation.md)를 지정하여 선택한 고객층을 앱 내의 특정 페이지로 리디렉션할 수 있습니다.
     * 앱 설명 페이지 또는 앱 내부 페이지가 아닌 대상을 지정하면 캠페인이 자동으로 일시 중지됩니다.
 

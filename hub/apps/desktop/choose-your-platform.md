@@ -4,12 +4,15 @@ ms.assetid: 82705644-F1F0-40F3-99B1-7A97BFB32831
 title: 앱 플랫폼 선택
 ms.topic: article
 ms.date: 03/18/2019
-ms.openlocfilehash: 960dda5e4cb7e8edc1edf7ce2e81da8306555f1c
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.author: mcleans
+author: mcleanbyron
+ms.localizationpriority: medium
+ms.openlocfilehash: 5ece6c5eea6cc05a966a7eae4cd16958dddee4d4
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984493"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215046"
 ---
 # <a name="choose-your-app-platform"></a>앱 플랫폼 선택
 

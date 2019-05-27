@@ -4,20 +4,22 @@ title: 패키지에 포함 된 데스크톱 앱을 현대화
 ms.date: 04/22/2019
 ms.topic: article
 keywords: windows 10, uwp
+ms.author: mcleans
+author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6d71233bc7b96af9d9b261406d6b149f36f65f29
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 191a8b8a007a866f37780a7c52cd40047dc9817f
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65985293"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215206"
 ---
-# <a name="features-that-require-package-identity"></a>패키지 id를 요구 하는 기능
+# <a name="features-that-require-package-identity"></a>패키지 ID가 필요한 기능
 
 사용 하 여 데스크톱 앱을 업데이트 하려는 경우 [최신 Windows 10 환경용](index.md), 많은 기능은 MSIX 패키지에 패키지 된 데스크톱 앱 에서만 사용할 수 있습니다.
 
-MSIX 모든 Windows 앱, WPF, Windows Forms 및 Win32 앱에 대 한 유니버설 패키징 환경을 제공 하는 최신 Windows 앱 패키지 형식입니다. 데스크톱 Windows 앱 패키지를 사용 하면 앱 라이브 타일 및 알림 같은 최신 Windows 10 환경을 통합할 수 있습니다. 또한 강력한 설치 및 업데이트 환경, Microsoft Store, 엔터프라이즈 관리 및 기타 사용자 지정 배포 모델에 대 한 지원 시스템을 유연한 기능을 사용 하 여 관리 되는 보안 모델에 대 한 액세스를 가져옵니다. 자세한 내용은 [데스크톱 응용 프로그램 패키지](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) MSIX 설명서에서.
+MSIX 모든 Windows 앱, WPF, Windows Forms 및 Win32 앱에 대 한 유니버설 패키징 환경을 제공 하는 최신 Windows 앱 패키지 형식입니다. 데스크톱 Windows 앱 패키지를 사용 하면 앱 라이브 타일 및 알림 같은 최신 Windows 10 환경을 통합할 수 있습니다. 또한 강력한 설치 및 업데이트 환경, Microsoft Store, 엔터프라이즈 관리 및 기타 사용자 지정 배포 모델에 대 한 지원 시스템을 유연한 기능을 사용 하 여 관리 되는 보안 모델에 대 한 액세스를 가져옵니다. 자세한 내용은 MSIX 설명서의 [데스크톱 애플리케이션 패키지](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)를 참조하세요.
 
 데스크톱 앱을 패키지 하는 경우에 패키지 id, 패키지 확장명 및 패키지 된 앱에서 UWP 구성 요소를 필요로 하는 UWP Api를 사용 합니다. 자세한 내용은 다음이 문서를 참조 하세요.
 
@@ -27,13 +29,13 @@ MSIX 모든 Windows 앱, WPF, Windows Forms 및 Win32 앱에 대 한 유니버�
 
 자세한 내용은 [Api에서이 목록은](desktop-to-uwp-supported-api.md#list-of-apis)합니다.
 
-## <a name="integrate-with-package-extensions"></a>확장 패키지를 사용 하 여 통합
+## <a name="integrate-with-package-extensions"></a>확장 패키지와 통합
 
 응용 프로그램이 시스템과 통합 해야 하는 경우 (예: 방화벽 규칙을 설정), 응용 프로그램의 패키지 매니페스트에 해당 항목을 설명 하 고 시스템은 나머지를 수행 합니다. 이런 작업 대부분에서 코드를 작성할 필요가 없습니다. 매니페스트에서 XML의 비트를 사용 하 여 수행할 수 있습니다, 사용자가 로그온 할 때 프로세스를 시작 하 고, 파일 탐색기에 응용 프로그램을 통합 하 고, 응용 프로그램을 추가 하는 등 다른 앱에서 표시 되는 인쇄 대상 목록입니다.
 
 자세한 내용은 [데스크톱 앱의 패키지 확장을 사용 하 여 통합](desktop-to-uwp-extensions.md)합니다.
 
-## <a name="extend-with-uwp-components"></a>UWP 구성 요소를 사용 하 여 확장
+## <a name="extend-with-uwp-components"></a>UWP 구성 요소를 사용하여 확장
 
 일부 Windows 10 환경(예, 터치 구현 UI 페이지)은 최신 앱 컨테이너 내부에서 실행해야 합니다. 일반적으로 먼저 결정 해야 하는지 여부를 하 여 체험을 추가할 수 있습니다 [향상](desktop-to-uwp-enhance.md) UWP Api를 사용 하 여 기존 데스크톱 응용 프로그램입니다. 경험을 얻는 UWP 구성 요소를 사용 해야 할 경우 UWP 프로젝트를 솔루션에 추가 및 앱 서비스를 사용 하 여 데스크톱 응용 프로그램 및 UWP 구성 요소 간 통신을 수 있습니다.
 

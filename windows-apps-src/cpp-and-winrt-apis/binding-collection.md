@@ -1,22 +1,22 @@
 ---
 description: XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* 컬렉션으로 알려져 있습니다. 이 항목에서는 관찰 가능한 컬렉션을 구현하여 사용하는 방법과 XAML 항목에 바인딩하는 방법에 대해서 설명합니다.
 title: XAML 항목 컨트롤, C++/WinRT 컬렉션 바인딩
-ms.date: 10/03/2018
+ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: c4bf1805b16d869e7a29c49e8fe53c01cf469132
-ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.openlocfilehash: 7669c6536f28d5f979567f5b433dbf614800bec3
+ms.sourcegitcommit: d23dab1533893b7fe0f01ca6eb273edfac4705e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921669"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65627674"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>XAML 항목 컨트롤, C++/WinRT 컬렉션 바인딩
 
 XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* 컬렉션으로 알려져 있습니다. 이 아이디어는 *관찰자 패턴*이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이 항목의 관찰 가능한 컬렉션을 구현 하는 방법을 보여 줍니다 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 및 XAML을 바인딩하는 방법 항목에 컨트롤입니다.
 
-이번 연습은 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md)에서 생성된 프로젝트에 바탕을 두고 있으며, 또한 해당 항목에서 설명한 개념에 추가하여 진행됩니다.
+이 항목을 따라 하려는 경우는 먼저 프로젝트를 만든에서 설명 하는 것이 좋습니다 [XAML 컨트롤; 바인딩할를 C++/WinRT 속성](binding-property.md)합니다. 이 항목에서는 해당 프로젝트에 더 많은 코드를 추가 하 고 해당 항목에서 설명 하는 개념에 추가 합니다.
 
 > [!IMPORTANT]
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
@@ -30,9 +30,6 @@ XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* �
 ## <a name="add-a-bookskus-collection-to-bookstoreviewmodel"></a>**BookSkus** 컬렉션을 **BookstoreViewModel**에 추가
 
 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md)에서는 **BookSku** 형식의 속성을 기본 보기 모델에 추가하였습니다. 이 단계에서는 사용 합니다 [ **winrt::single_threaded_observable_vector** ](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) 팩터리 함수 템플릿을 관찰 가능한 컬렉션을 구현 하는 데 도움이 **BookSku** 에 동일한 뷰 모델입니다.
-
-> [!NOTE]
-> Windows SDK (Windows 10, 버전 1809) 10.0.17763.0 버전을 설치 하지 않은 또는 나중에 다음 참조 하는 경우 [Windows SDK의 이전 버전이 있는 경우](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector#if-you-have-an-older-version-of-the-windows-sdk) 대신사용할수있는observable벡터템플릿의목록은**winrt::single_threaded_observable_vector**합니다.
 
 새로운 속성을 `BookstoreViewModel.idl`로 선언합니다.
 
@@ -50,7 +47,7 @@ runtimeclass BookstoreViewModel
 > [!IMPORTANT]
 > MIDL 3.0를 나열 하는 위의 형식의 합니다 **BookSkus** 속성은 [ **IObservableVector** ](/uwp/api/windows.foundation.collections.ivector_t_) 의 [ **IInspectable** ](/windows/desktop/api/inspectable/nn-inspectable-iinspectable). 이 항목의 다음 섹션에서는 우리가에서는 바인딩 항목 원인을 [ **ListBox** ](/uwp/api/windows.ui.xaml.controls.listbox) 하 **BookSkus**합니다. 목록 상자는 항목 컨트롤에 올바르게 설정 하 고는 [ **ItemsControl.ItemsSource** ](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 형식의 값으로 설정 해야 하는 속성을 **IObservableVector** (또는 **IVector**)의 **IInspectable**, 또는와 같은 상호 운용성 형식의 [ **IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector)합니다.
 
-저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`의 접근자 스텁을 `Generated Files` 폴더에 복사하여 구현합니다.
+저장 후 빌드합니다. 접근자 스텁 복사 `BookstoreViewModel.h` 및 `BookstoreViewModel.cpp` 에 `\Bookstore\Bookstore\Generated Files\sources` 폴더 (대 한 자세한 내용은 이전 항목을 참조 [XAML 컨트롤; 바인딩할를 C++/WinRT 속성](binding-property.md)). 다음과 같이 해당 접근자 스텁 구현 합니다.
 
 ```cppwinrt
 // BookstoreViewModel.h

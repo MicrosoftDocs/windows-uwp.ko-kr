@@ -5,283 +5,237 @@ description: UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, 
 title: UWP 설명서 - UWP 앱 개발자 | Microsoft Docs
 ms.topic: landing-page
 ms.author: mijacobs
-ms.date: 08/4/2017
+ms.date: 08/04/2017
 keywords: windows uwp, 유니버설 windows 플랫폼, Windows 런타임 API, windows api, windows api 참조, winrt api, windows api 참조, uwp api, uwp api 참조, uwp 개발, uwp 설계, uwp 게시
 ms.localizationpriority: medium
 ms.technology: uwp-conceptual-docs
-ms.openlocfilehash: 21e6b168ccd656a15fc8efa70e8cded3f12916d4
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: ebc8d3c8602a5a67816f0817af0d2f7851a82d68
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162628"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984149"
 ---
 # <a name="universal-windows-platform-documentation"></a>유니버설 Windows 플랫폼 설명서
-UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, HoloLens 등 모든 Windows 장치용 앱을 빌드하고 Microsoft Store에 게시할 수 있습니다.
 
-<ul class="panelContent cardsF">
+UWP(유니버설 Windows 플랫폼)를 사용하여 PC, Xbox One, HoloLens 등 모든 Windows 10 디바이스용 앱을 빌드하고 Microsoft Store에 게시할 수 있습니다.
+
+<ul class="cardsK panelContent">
     <li>
+      <a href="https://docs.microsoft.com/windows/uwp/whats-new/windows-10-version-latest">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_whats-new.svg" alt="What's new icon" />
+                        <div class="cardImage bgdAccent1">
+                            <img src="/media/illustrations/ms365enterprise-partner-news-2.svg?branch=master" alt="What's new illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>새로운 기능</h3>
-                        <p>
-                            <a href="whats-new/windows-10-version-latest.md">새로운 API 및 기능</a>
-                        </p>
-                        <p>
-                            <a href="whats-new/windows-docs-latest.md">문서의 새 소식</a>
-                        </p>
-                        <p>
-                            <a href="whats-new/experimental-apis.md">실험적 API</a>
-                        </p>
+                        <p></p>최신 Windows 10 버전의 새 UWP API 및 기능에 대해 알아봅니다.</p>
                     </div>
                 </div>
             </div>
         </div>
+      </a>
     </li>
     <li>
+      <a href="get-started/index.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="Get started icon" />
+                        <div class="cardImage bgdAccent1">
+                            <img src="/media/illustrations/biztalk-get-started-get-started.svg?branch=master" alt="Get started illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>시작</h3>
-                        <p>
-                            <a href="get-started/universal-application-platform-guide.md">UWP 앱이란?</a>
-                        </p>
-                        <p>
-                            <a href="get-started/sign-up.md">개발자 계정 가입</a>
-                        </p>
-                        <p>
-                            <a href="get-started/get-set-up.md">설정</a>
-                        </p>
-                        <p>
-                            <a href="get-started/your-first-app.md">첫 번째 앱 만들기</a>
-                        </p>
+                        <p></p>핵심 개념에 대해 알아보고 앱 빌드를 시작하도록 컴퓨터를 설정합니다.</p>
                     </div>
                 </div>
             </div>
         </div>
+      </a>
     </li>
     <li>
+      <a href="design/index.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_management.svg" alt="Design icon" />
+                        <div class="cardImage bgdAccent1">
+                            <img src="/media/illustrations/sql-database-develop.svg?branch=master" alt="Design illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>디자인 및 UI</h3>
-                        <p>
-                            <a href="design/basics/design-and-ui-intro.md">디자인 기본 사항</a>
-                        </p>
-                         <p>
-                            <a href="design/fluent-design-system/index.md">Fluent Design System</a>
-                        </p>
-                        <p>
-                            <a href="design/controls-and-patterns/index.md">컨트롤 및 패턴</a>
-                        </p>
-                        <p>
-                            <a href="design/downloads/index.md">디자인 도구 키트</a>
-                        </p>                      
-                    </div>
+                    <h3>디자인</h3>
+                    <p>Fluent Design System을 사용하여 앱용 사용자 인터페이스를 디자인하고 코딩하는 방법을 알아봅니다.</p>
+                  </div>
                 </div>
             </div>
         </div>
+      </a>
     </li>
+</ul>
+<ul class="cardsK panelContent">
     <li>
+      <a href="develop/index.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_code-edit.svg" alt="Develop icon" />
+                        <div class="cardImage bgdAccent1">
+                            <img src="/media/illustrations/dynamics-training.svg?branch=master" alt="Develop apps illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>앱 개발</h3>
-                        <p>
-                            <a href="enterprise/index.md">엔터프라이즈 앱</a>
-                        </p>
-                        <p>
-                            <a href="packaging/index.md">앱 패키징</a>
-                        </p>
-                        <p>
-                            <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows 커뮤니티 도구 키트</a>
-                        </p>
-                        <p>
-                            <a href="porting/index.md">Windows 10으로 앱 포팅</a>
-                        </p>
-                        <p>
-                            <a href="winrt-components/index.md">Windows 런타임 구성 요소</a>
-                        </p>
-                        <p>
-                            <a href="apps-for-education/index.md">교육용 앱</a>
-                        </p>
-                        <p>
-                            <a href="porting/apps-on-arm.md">ARM 기반 Windows 10</a>
-                        </p>
+                        <p></p>Windows 10용 UWP 앱을 만드는 방법 문서와 코드를 찾아봅니다.</p>
                     </div>
                 </div>
             </div>
         </div>
+      </a>
     </li>
     <li>
+      <a href="gaming/getting-started.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_build.svg" alt="Develop Games icon" />
+                        <div class="cardImage bgdAccent1">
+                            <img src="/media/illustrations/biztalk-get-started-scenarios.svg?branch=master" alt="Develop games illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>게임 개발</h3>
-                        <p>
-                            <a href="gaming/e2e.md">Windows 10 게임 개발 가이드</a>
-                        </p>
-                        <p>
-                            <a href="gaming/index.md">게임 프로그래밍</a>
-                        </p>
-                        <p>
-                            <a href="gaming/directx-programming.md">DirectX 프로그래밍</a>
-                        </p>
-                        <p>
-                            <a href="xbox-apps/index.md">Xbox One의 UWP</a>
-                        </p>
-                        <p>
-                            <a href="https://docs.microsoft.com/gaming/xbox-live">Xbox Live</a>
-                        </p>
+                        <p></p>Xbox 및 Windows 10용 UWP 게임을 빌드하는 방법을 알아봅니다.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </li>    
+      </a>
+    </li>
     <li>
+      <a href="publish/index.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_upgrade.svg" alt="Publish icon" />
+                        <div class="cardImage bgdAccent1">
+                            <img src="/media/illustrations/teams-fast-track.svg?branch=master" alt="Publish illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>게시하기</h3>
-                        <p>
-                            <a href="publish/app-submissions.md">앱 제출</a>
-                        </p>
-                        <p>
-                            <a href="publish/the-app-certification-process.md">앱 인증 프로세스</a>
-                        </p>
-                        <p>
-                            <a href="publish/upload-app-packages.md">앱 패키지 업로드</a>
-                        </p>
-                        <p>
-                            <a href="publish/create-your-app-by-reserving-a-name.md">이름 예약</a>
-                        </p>
-                        <p>
-                            <a href="publish/set-app-pricing-and-availability.md">앱 가격 책정 및 가용성 설정</a>
-                        </p>
-                    </div>
+                    <h3>게시하기</h3>
+                    <p>파트너 센터를 사용하여 앱 및 게임을 Microsoft Store에 게시합니다.</p>
+                  </div>
                 </div>
             </div>
         </div>
+      </a>
     </li>
+</ul>
+    <ul class="cardsY panelContent featuredContent">
+       <li>
+            <a href="https://docs.microsoft.com/uwp/">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="/media/common/i_api-reference.svg?branch=master" src="/media/common/i_api-reference.svg?branch=master" alt="API reference icon" />
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>API 참조</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+       <li>
+            <a href="https://developer.microsoft.com/windows/samples">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="/media/common/i_code-samples.svg?branch=master" src="/media/common/i_code-samples.svg?branch=master" alt="Samples icon" />
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>코드 샘플</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.microsoft.com/windows/downloads">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="/media/common/i_tools.svg?branch=master" src="/media/common/i_tools.svg?branch=master" alt="Tools icon" />
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>도구 및 다운로드</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<hr />
+<ul class="panelContent cardsW">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_api-reference.svg" alt="API Ref icon" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>API 참조</h3>
-                        <p>
-                            <a href="//docs.microsoft.com/uwp/">유니버설 Windows 플랫폼 API</a>
-                        </p>
-                        <p>
-                            <a href="//docs.microsoft.com/uwp/API">Windows UWP 네임스페이스</a>
-                        </p>
-                        <p>
-                            <a href="//docs.microsoft.com/uwp/extension-sdks">확장 SDK</a>
-                        </p>
-                        <p>
-                            <a href="//docs.microsoft.com/uwp/schemas">스키마</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_multi-connect.svg" alt="Related links icon" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>관련 링크</h3>
-                        <p>
-                            <a href="//docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps">UWP 앱용 Win32 및 COM API</a>
-                        </p>
-                        <p>
-                            <a href="//msdn.microsoft.com/library/windows/apps/mt185501.aspx">UWP 앱용 .NET</a>
-                        </p>
-                        <p>
-                            <a href="//msdn.microsoft.com/library/windows/apps/mt691886.aspx">Microsoft Store Services SDK API</a>
-                        </p>
-                        <p>
-                            <a href="//docs.microsoft.com/uwp/extension-sdks">디바이스 패밀리 확장 SDK 및 API 계약</a>
-                        </p>
-                        <p>
-                            <a href="//docs.microsoft.com/uwp/schemas/">UWP 앱의 파일 및 XML 스키마 사양</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_support.svg" alt=" " />
-                        </div>
-                    </div>
                     <div class="cardText">
                         <h3>커뮤니티 및 지원</h3>
-                        <p>
-                            <a href="https://twitter.com/WindowsDocs">Twitter의 @WindowsDocs</a>
-                        </p>
-                        <p>
-                            <a href="https://aka.ms/OneDevMinute">YouTube의 OneDevMinute</a>
-                        </p>
-                        <p>
-                            <a href="https://developer.microsoft.com/windows/support">Windows 개발자 지원</a>
-                        </p>
+                        <p><a href="https://twitter.com/WindowsDocs">Twitter의 @WindowsDocs</a></p>
+                        <p><a href="https://aka.ms/OneDevMinute">YouTube의 OneDevMinute</a></p>
+                        <p><a href="https://developer.microsoft.com/windows/support">Windows 개발자 지원</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>개발이 처음인가요?</h3>
+                        <p><a href="//mva.microsoft.com/training-topics/c-app-development">Microsoft Virtual Academy</a></p>
+                        <p><a href="//www.linkedin.com/learning/learning-universal-windows-app-development/welcome">LinkedIn Learning</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>관련 문서</h3>
+                        <p><a href="/windows/msix/desktop/desktop-to-uwp-root">MSIX 패키징 및 배포</a></p>
+                        <p><a href="https://docs.microsoft.com/dotnet/csharp/index">C# 가이드</a></p>
+                        <p><a href="https://docs.microsoft.com/visualstudio/ide/">Visual Studio</a></p>
                     </div>
                 </div>
             </div>
         </div>
-    </li>    
+    </li>
 </ul>

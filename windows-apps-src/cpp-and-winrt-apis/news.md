@@ -1,17 +1,17 @@
 ---
 description: C++/WinRT에서 새롭거나 변경된 기능입니다.
 title: 새로운 기능 C++/WinRT
-ms.date: 04/02/2019
+ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c + +, cpp, winrt, 프로젝션, 뉴스 항목의 새,
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8ee10450a7a346c1ae032240aaecc65e7f87822d
-ms.sourcegitcommit: 940645c705865ba9635ccae2da9d917420faf608
+ms.openlocfilehash: b84736e41e039d350a849c55fead008cbab5fdea
+ms.sourcegitcommit: bc64db47b6ff326f15cac15fc2cfd709fa7f877b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58812612"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626218"
 ---
 # <a name="whats-new-in-cwinrt"></a>새로운 기능 C++/WinRT
 
@@ -28,7 +28,7 @@ ms.locfileid: "58812612"
 
 - `cppwinrt.exe` 도구 이제 Microsoft.Windows.CppWinRT NuGet 패키지에 포함 되었으며 도구는 필요에 따라 각 프로젝트에 대 한 플랫폼 프로젝션 헤더를 생성 합니다. 결과적으로 `cppwinrt.exe` 도구 더 이상 종속 Windows SDK (있지만, 여전히 도구 호환성을 위해 SDK와 함께 제공 됩니다).
 - `cppwinrt.exe` 이제 각 플랫폼/구성 관련 중간 폴더 ($IntDir) 병렬 빌드를 사용 하도록 설정 하려면 아래 프로젝션 헤더를 생성 합니다.
-- C++/WinRT 빌드 지원 (속성/대상이)는 이제 완벽 하 게 문서화 되어 수동으로 프로젝트 파일 사용자 지정 하려는 경우. 참조 [Microsoft.Windows.CppWinRT NuGet 패키지](https://github.com/Microsoft/xlang/tree/user/sjones/cppwinrt_nuget/src/package/nuget)합니다.
+- C++/WinRT 빌드 지원 (속성/대상이)는 이제 완벽 하 게 문서화 되어 수동으로 프로젝트 파일 사용자 지정 하려는 경우. 참조 [Microsoft.Windows.CppWinRT NuGet 패키지](https://github.com/Microsoft/xlang/blob/master/src/package/cppwinrt/nuget/readme.md)합니다.
 - 수많은 버그 수정 내용이 적용 되었습니다.
 
 ### <a name="changes-to-cwinrt-for-version-20"></a>변경 C++버전 2.0에 대 한 /WinRT
@@ -261,7 +261,7 @@ struct MainPage : PageT<MainPage>
 
 ## <a name="news-and-changes-in-windows-sdk-version-100177630-windows-10-version-1809"></a>뉴스 및 변경 내용을 Windows sdk 버전 10.0.17763.0 (Windows 10, 버전 1809)
 
-아래 표에서 뉴스가 포함 및 변경 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 10.0.17763.0 (Windows 10, 버전 1809)는 Windows SDK의 최신 일반 공급 버전입니다. 이러한 변경 내용은 이후 SDK Insider Preview 버전 수도 있습니다.
+아래 표에서 뉴스를 포함 하 고 변경에 대 한 C++Windows sdk 버전 10.0.17763.0 /WinRT (Windows 10, 버전 1809).
 
 | 새롭거나 변경 된 기능 | 추가 정보 |
 | - | - |

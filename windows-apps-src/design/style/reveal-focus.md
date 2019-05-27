@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bcceb8d44b6d92cab05a9c077531b3fe1b05c79
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5de4b51687e152ef5d25a583f949cdd108f2f029
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651758"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984213"
 ---
 # <a name="reveal-focus"></a>포커스를 표시 합니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "57651758"
 
 > **중요 API**: [Application.FocusVisualKind 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.FocusVisualKind)하십시오 [FocusVisualKind 열거형](https://docs.microsoft.com/uwp/api/windows.ui.xaml.focusvisualkind), [Control.UseSystemFocusVisuals 속성](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals)
 
-## <a name="how-it-works"></a>작동 방식
+## <a name="how-it-works"></a>작동 방법
 애니메이션된 광선 요소의 테두리를 추가 하 여 포커스가 있는 요소에 초점 호출을 표시 합니다.
 
 ![Visual 표시](images/traveling-focus-fullscreen-light-rf.gif)
@@ -168,7 +168,7 @@ ms.locfileid: "57651758"
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>포커스 및 Fluent Design System 표시
 
-포커스가 light 앱에 추가 하는 Fluent Design System 구성 요소를 표시 합니다. Fluent 디자인 시스템 및 기타 구성 요소에 대한 자세한 내용은 [UWP용 Fluent 디자인 개요](../fluent-design-system/index.md)를 참조하세요.
+포커스가 light 앱에 추가 하는 Fluent Design System 구성 요소를 표시 합니다. Fluent 디자인 시스템 및 기타 구성 요소에 대한 자세한 내용은 [UWP용 Fluent 디자인 개요](/windows/apps/fluent-design-system)를 참조하세요.
 
 ## <a name="related-articles"></a>관련 문서
 

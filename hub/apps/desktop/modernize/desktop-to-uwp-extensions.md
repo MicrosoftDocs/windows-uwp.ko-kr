@@ -5,13 +5,15 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
+ms.author: mcleans
+author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: a7815639c8dafa555be6d4f0eac0eb07b43dba98
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 063106362a36aa32d0874be15dd589b5fb573409
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984453"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66214944"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Windows 10 및 UWP 패키지에 포함 된 데스크톱 앱 통합
 
@@ -408,7 +410,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 해당 폴더를 식별하기 위해 확장을 사용합니다. 이렇게 시스템은 사용자가 안에 배치한 파일을 찾아 로드할 수 있습니다. 이를 _%PATH%_ 환경 변수를 대체하는 확장으로 생각하세요.
 
-이 확장을 사용하지 않는 경우 시스템은 프로세스의 패키지 종속성 그래프, 패키지 루트 폴더, 그리고 시스템 디렉터리(_%SystemRoot%\system32_)를 순서대로 검색합니다. 자세한 내용은 [Windows 앱의 검색 순서](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx#_search_order_for_windows_store_apps)를 참조하세요.
+이 확장을 사용하지 않는 경우 시스템은 프로세스의 패키지 종속성 그래프, 패키지 루트 폴더, 그리고 시스템 디렉터리( _%SystemRoot%\system32_)를 순서대로 검색합니다. 자세한 내용은 [Windows 앱의 검색 순서](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx#_search_order_for_windows_store_apps)를 참조하세요.
 
 각 패키지에는 이 확장 중 하나만 포함될 수 있습니다. 따라서 이 중 하나를 주 패키지에 추가한 다음 하나를 각 [선택적 패키지 및 관련 집합](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)에 추가할 수 있습니다.
 

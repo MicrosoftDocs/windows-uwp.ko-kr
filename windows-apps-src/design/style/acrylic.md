@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0600e66c672a28683befdb7b0090f5455a28c948
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4731ab089189a8a03656281d1a9a6da6e4d24e89
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624198"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984257"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
@@ -38,7 +38,7 @@ ms.locfileid: "57624198"
 
 ## <a name="acrylic-and-the-fluent-design-system"></a>아크릴 및 Fluent 디자인 시스템
 
- Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 아크릴은 앱에 물리적 텍스처(소재)과 깊이를 추가하는 Fluent 디자인 시스템 구성 요소입니다. 자세히 알아보려면 [UWP용 Fluent 디자인 개요](../fluent-design-system/index.md)를 확인하십시오.
+ Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 아크릴은 앱에 물리적 텍스처(소재)과 깊이를 추가하는 Fluent 디자인 시스템 구성 요소입니다. 자세히 알아보려면 [UWP용 Fluent 디자인 개요](/windows/apps/fluent-design-system)를 확인하십시오.
 
  ## <a name="video-summary"></a>비디오 요약
 
@@ -48,14 +48,14 @@ ms.locfileid: "57624198"
 
 :::row:::
     :::column span:::
-        ![Some image](images/XAML-controls-gallery-app-icon.png)
+![일부 이미지](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
     :::column span="2":::
-        **XAML Controls Gallery**<br>
-        If you have the XAML Controls Gallery app installed, click <a href="xamlcontrolsgallery:/item/Acrylic">here</a> to open the app and see acrylic in action.
+**XAML 컨트롤 갤러리**<br>
+XAML 컨트롤 갤러리 앱이 설치에 있는 경우 클릭 <a href="xamlcontrolsgallery:/item/Acrylic">여기</a> 앱을 열고 실행 중인 못합니다를 참조 하세요.
 
-        <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
-        <a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Get the source code (GitHub)</a>
+<a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a><br>
+<a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a>
     :::column-end:::
 :::row-end:::
 
@@ -73,7 +73,7 @@ ms.locfileid: "57624198"
 ## <a name="when-to-use-acrylic"></a>아크릴을 사용하는 경우
 
 * 스크롤 또는 상호 작용할 때 콘텐츠를 겹칠 수 있는 표면에서와 같은 UI를 지원 하기 위해 앱에서 못합니다를 사용 합니다.
-* 상황에 맞는 메뉴, 플라이 아웃, light dimsissable UI 등 일시적인 UI 요소에 대 한 백그라운드 못합니다를 사용 합니다.<br />못합니다 일시적인 시나리오에서 사용 하 여 일시적인 UI를 트리거한 콘텐츠로 visual 관계를 유지 관리 하는 데 도움이 됩니다.
+* 상황에 맞는 메뉴, 플라이 아웃, 광원을 닫을 수 있는 UI 등 일시적인 UI 요소에 대 한 백그라운드 못합니다를 사용 합니다.<br />못합니다 일시적인 시나리오에서 사용 하 여 일시적인 UI를 트리거한 콘텐츠로 visual 관계를 유지 관리 하는 데 도움이 됩니다.
 
 앱에서 못합니다 탐색 화면에서를 사용 하는 경우에 앱에서 흐름을 개선 하기 위해 아크릴 창 아래에 있는 콘텐츠를 확장 하는 것이 좋습니다. NavigationView를 사용 하 여에서는이를 자동으로 수행 합니다. 그러나 스트라이프 효과 만들지 않도록 여러 가지 아크릴 edge-에 지-배치 해를 흐리게 표시 된 두 화면 사이 원치 않는 이음새를 만들 수이 있습니다. 못합니다 visual 조화 디자인을 전환 하는 도구 이지만 사용 하는 경우 올바르게 지저분한 발생할 수 있습니다.
 
@@ -98,7 +98,7 @@ ms.locfileid: "57624198"
 
 ![정보는 플라이 아웃을 사용 하 여 메일 앱 패턴](images/Mail_TransientContextMenu.png)
 
-이 컨트롤은 대부분 못합니다는 기본적으로 사용 합니다. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box)합니다 [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) light dimiss 팝업을 사용 하 여 유사한 컨트롤은 모두 사용 하 여 일시적인 못합니다 호출 될 때.
+이 컨트롤은 대부분 못합니다는 기본적으로 사용 합니다. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box)를 [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) 팝업 사용 하 여 유사한 컨트롤 light-해제 하 고 모두 사용 합니다. 일시적인 못합니다 호출 될 때입니다.
 
 > [!Note]
 > GPU가 많이 사용, 장치 전원 사용이 증가 하 고 배터리 수명을 줄일 수 있는 아크릴 화면을 렌더링 합니다. 아크릴 효과 선택 하는 경우 자동으로 장치에 배터리 절약 모드 모드로 전환 하 고 사용자는 모든 앱에 대해 아크릴 효과 비활성화할 수 비활성화.
@@ -319,7 +319,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 * 탐색 창처럼 기본이 아닌 앱 표면의 배경 소재로 아크릴을 사용하세요.
 * 앱 주변과 살짝 혼합하여 원활한 환경을 제공할 수 있도록 아크릴을 앱 가장자리 중 하나 이상으로 확장하세요.
-* 앱의 큰 배경 화면에서 데스크톱 arylic을 넣지 마세요-이 일시적인 표면에 주로 사용 중인 못합니다의 멘 탈 모델을 중단 합니다.
+* 앱의 큰 배경 화면에서 데스크톱 못합니다를 넣지 마세요-이 일시적인 표면에 주로 사용 중인 못합니다의 멘 탈 모델을 중단 합니다.
 * 경계선에 시각적 긴장감이 발생하지 않도록 인앱 아크릴과 배경 아크릴을 바로 인접하게 배치하지 마세요.
 * 색조와 불투명도가 동일한 여러 아크릴 창을 나란히 배치하면 원치 않는 시각적 경계선이 생기므로 이렇게 배치하지 마세요.
 * 아크릴 표면 위에 테마 컬러 텍스트를 배치하지 마세요.

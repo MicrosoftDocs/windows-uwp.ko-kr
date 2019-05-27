@@ -3,13 +3,16 @@ title: Windows 10의에서 내게 필요한 옵션
 description: 이 페이지에 액세스할 수 있는 Windows 앱 개발을 시작 하는 정보를 제공 합니다.
 ms.topic: article
 ms.date: 04/03/2019
+ms.localizationpriority: medium
+ms.author: kbridge
+author: Karl-Bridge-Microsoft
 keywords: Windows 10에서 내게 필요한 옵션을 구축 액세스할 수 있는 WPF 앱에 액세스할 수 있는 WinForms 앱을 빌드하기 액세스할 UWP 앱 빌드에 액세스할 수 있는 win32 앱을 빌드하는 접근성
-ms.openlocfilehash: 2b9a6ad9157d08a802e589368a9baba592356437
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: b818b99ebf896b2d2de219d2eedbfd101f3a5caa
+ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984523"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66214991"
 ---
 # <a name="accessibility-in-windows-10"></a>Windows 10의에서 내게 필요한 옵션
 

@@ -9,12 +9,12 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: d5ed75cb79488eb994135dcfef74483ec078a32e
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 8a7a34846cbadfa9e133976695239b98294a0dd2
+ms.sourcegitcommit: 559d3387d5929431212d147d9e085895e162916a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58173029"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66184585"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
@@ -99,9 +99,10 @@ Microsoft Store 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.msix)
 6.  **패키지 선택 및 구성** 대화 상자에서 세 개의 아키텍처 구성(x86, x64, ARM)을 모두 선택했는지 확인하여 앱이 가장 넓은 범위의 장치에 배포될 수 있는지 확인합니다. **Generate app bundle** 목록 상자에서 **Always**를 선택합니다. 앱 번들 (.appxbundle 또는.msixbundle) 이므로 기본 단일 앱 패키지 파일을 통해 각 유형의 프로세서 아키텍처에 대해 구성 된 앱 패키지의 컬렉션을 포함 합니다. 앱 번들을 생성 하려는 경우 앱 번들 최종 앱 패키지 업로드 (.appxupload 또는.msixupload) 파일에 디버깅 및 분석 충돌 정보와 함께 포함 됩니다. 어떤 아키텍처를 선택할지 잘 모르겠거나 다양한 디바이스에서 사용되는 아키텍처에 대한 자세한 내용을 보려면 [앱 패키지 아키텍처](https://docs.microsoft.com/windows/uwp/packaging/device-architecture)를 참조하세요.  
     ![표시 된 패키지 구성을 사용 하 여 앱 패키지 창 만들기](images/packaging-screen5.jpg)
 7.  전체 PDB 기호 파일 포함 [앱 성능 분석](https://docs.microsoft.com/windows/uwp/publish/analytics) 앱이 게시 된 후에 파트너 센터에서. 버전 번호 또는 패키지 출력 위치 등 추가 세부 정보를 구성합니다.
-9.  **만들기**를 클릭하여 앱 패키지를 만듭니다. 중 하나를 선택한 경우 합니다 **Microsoft Store 업로드할 패키지를 만들고** 옵션에서 3 단계 및 파트너 센터 제출용 패키지를 만드는, 마법사가 패키지 업로드 (.appxupload 또는.msixupload) 파일을 만듭니다. 선택한 경우 **테스트용 로드에 대 한 패키지를 만들고** 3 단계에서 마법사가 단일 앱 패키지 또는 6 단계에서 선택한 항목에 따라 앱 번들을 만듭니다.
-10. 앱은 성공적으로 패키지 하는 경우이 대화 상자가 표시 됩니다 하 고 지정된 된 출력 위치에서 앱 패키지 업로드 파일을 검색할 수 있습니다. 이 시점에서 수 있습니다 [로컬 컴퓨터 또는 원격 컴퓨터에서 앱 패키지의 유효성을 검사](#validate-your-app-package)합니다.
+8.  **만들기**를 클릭하여 앱 패키지를 만듭니다. 중 하나를 선택한 경우 합니다 **Microsoft Store 업로드할 패키지를 만들고** 옵션에서 3 단계 및 파트너 센터 제출용 패키지를 만드는, 마법사가 패키지 업로드 (.appxupload 또는.msixupload) 파일을 만듭니다. 선택한 경우 **테스트용 로드에 대 한 패키지를 만들고** 3 단계에서 마법사가 단일 앱 패키지 또는 6 단계에서 선택한 항목에 따라 앱 번들을 만듭니다.
+9. 앱은 성공적으로 패키지 하는 경우이 대화 상자가 표시 됩니다 하 고 지정된 된 출력 위치에서 앱 패키지 업로드 파일을 검색할 수 있습니다. 이 시점에서 수 있습니다 [로컬 컴퓨터 또는 원격 컴퓨터에서 앱 패키지의 유효성을 검사](#validate-your-app-package) 및 [스토어 제출 자동화](#automate-store-submission)합니다.
     ![패키지 만들기 완료 표시 된 유효성 검사 옵션 창](images/packaging-screen6.jpg)
+
 
 ### <a name="to-create-your-app-package-upload-file-manually"></a>앱 패키지 업로드 파일을 수동으로 만들려면
 
@@ -138,6 +139,23 @@ Microsoft Store 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.msix)
 5.  서브넷 내부에서 디바이스 양식을 지정하거나 서브넷 외부 디바이스의 DNS(도메인 이름 서버) 이름 또는 IP 주소를 제공합니다.
 6.  디바이스에서 Windows 자격 증명을 사용해 로그온하도록 요구하지 않는 경우 **Authentication Mode** 목록에서 **None**을 선택합니다.
 7.  **Select** 단추를 선택한 다음 **Launch Windows App Certification Kit** 단추를 선택합니다. 해당 디바이스에서 원격 도구가 실행 중인 경우 Visual Studio는 디바이스에 연결한 다음 유효성 검사 테스트를 수행합니다. [Windows 앱 인증 키트 테스트](https://msdn.microsoft.com/library/windows/apps/mt186450)를 참조하세요.
+
+### <a name="automate-store-submission"></a>스토어 제출 자동화
+
+Visual Studio 2019 년부터 제출할 수 있습니다 생성 된.appxupload 파일을 Microsoft Store IDE에서 직접 선택 하 여 합니다 **자동으로 Windows 앱 인증 키트 유효성 검사 후 Microsoft Store 제출** 옵션입니다. 전송에 사용 되는 자격 증명을 지정 해야 합니다. 이러한 자격 증명은 세 부분으로 구성 됩니다: 합니다 **Azure 테 넌 트 ID**의 **클라이언트 ID** 하며 **클라이언트 암호**. 얻을 수 있는 다음이 단계를 수행 합니다.
+
+1. 파트너 센터에서로 이동 하 **개발자 설정을**, 클릭 **사용자**, 조직의 Azure AD 디렉터리를 사용 하 여 조직의 개발자 센터 계정을 연결 합니다. 자세한 내용은 [계정 사용자 관리](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users)를 참조하세요.
+2. 에 **사용자** 페이지에서 클릭 **Azure AD 응용 프로그램을 추가**, 앱을 나타내는 Azure AD 응용 프로그램을 추가 또는 서브 미션에 개발자 센터 계정에 대 한 액세스 할당을 사용 하는 서비스는 관리자 역할입니다. 이 응용 프로그램이 이미 Azure AD 디렉터리에 있는 경우에 개발자 센터 계정에 추가할 추가 Azure AD 응용 프로그램 페이지에서 선택할 수 있습니다. 그러지 않으면 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [사용자, 그룹 및 파트너 센터 계정에 Azure AD 응용 프로그램 추가](/windows/uwp/publish/add-users-groups-and-azure-ad-applications)합니다.
+3. 돌아갑니다 합니다 **사용자 관리** 페이지에서 응용 프로그램 설정 및 복사로 Azure AD 응용 프로그램의 이름을 클릭 합니다 **테 넌 트 ID** 및 **클라이언트 ID** 값.
+4. **새 키 추가**를 클릭합니다. 다음 화면에서 클라이언트 암호에 해당 하는 키 값을 복사 합니다. 이 페이지를 나간 후 다시이 정보에 액세스할 수 없습니다 손실 되지 해야 합니다. 자세한 내용은에서 키를 관리 하는 방법에 대 한 정보를 참조 하세요 [사용자, 그룹 및 파트너 센터 계정에 Azure AD 응용 프로그램 추가](/windows/uwp/publish/add-users-groups-and-azure-ad-applications)합니다.
+    ![확인 하 고 진행률 게시](images/packaging-screen8.jpg)
+    > [!Important] 
+    > 이후 전송에서 사용할 프로필에 자격 증명을 저장할 수 있습니다.
+5. **확인**을 클릭합니다.
+
+제출은 WACK 테스트 완료 후에 시작 됩니다. 전송 진행률을 추적할 수 있습니다 합니다 **확인 및 게시** 창입니다.
+
+![확인 하 고 진행률 게시](images/packaging-screen9.jpg)
 
 ## <a name="sideload-your-app-package"></a>테스트용으로 앱 패키지 로드
 

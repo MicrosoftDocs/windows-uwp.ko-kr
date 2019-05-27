@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 신규, Windows 10, 1709, 10�
 ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5179b4615d1b7ada40e064c21991fee3d9dbb60e
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 2d2a4e657d9fe574131625b2ab2374700dc59cdf
+ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162698"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65984136"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>개발자용 Windows 10 빌드 16299의 새로운 기능
 
@@ -54,7 +54,7 @@ UWP 앱 정품 인증 | 다음과 같은 새로운 기능을 사용할 수 있�
 앱 서비스 및 확장 | 사용자가 Microsoft Store에서 설치할 수 있는 패키지를 통해 앱을 확장할 수 있는 UWP(유니버설 Windows 플랫폼) 추가 앱 정보를 작성하고 호스팅하는 것을 돕는 새로운 [앱 확장 만들기 및 사용](../launch-resume/how-to-create-an-extension.md) 가이드가 추가되었습니다. </br></br> 앱을 확장 및 구성 요소화하는 데 사용할 수 있는 Windows 10의 다른 기술을 분류하는 새로운 [서비스, 확장 및 패키지로 앱 확장](../launch-resume/extend-your-app-with-services-extensions-packages.md) 가이드가 추가되었습니다.
 백그라운드 작업 | 백그라운드 작업을 활용하는 데 도움이 되는 세 개의 가이드를 추가했습니다.</br></br> * [백그라운드에서 무기한 실행](../launch-resume/run-in-the-background-indefinetly.md) 백그라운드 또는 확장 된 실행 제하지 없이 장치에서 사용할 수 있는 모든 리소스를 사용 하도록 합니다. 이는 엔터프라이즈 UWP 앱 및 Microsoft Store에 전송되지 않는 UWP 앱에 적용됩니다. </br></br> * [앱 내에서 백그라운드 작업 트리거](../launch-resume/trigger-background-task-from-app.md) 앱 내에서 백그라운드 작업을 활성화 합니다. </br></br>* [UWP 앱이 업데이트 될 때 백그라운드 작업을 실행할](../launch-resume/run-a-background-task-during-updatetask.md) UWP 앱이 업데이트 될 때 실행 되는 백그라운드 작업을 만들려고 합니다.
 Cortana | [Cortana 기술 키트](https://docs.microsoft.com/cortana/skills/overview)를 사용하여 Cortana의 자연스러운 기능을 확장하고 사용자의 앱 및 서비스와 상호 작용하는 기술을 추가하고 테스트합니다.
-데스크톱 브리지 | Windows 10 에서 데스크톱 응용 프로그램에 최신 환경을 추가하는 데 도움이 되는 세 개의 가이드를 추가했습니다. </br>* [Windows 10 용 데스크톱 응용 프로그램을 향상](../porting/desktop-to-uwp-enhance.md) 찾기 및 올바른 파일을 참조 하는 지침 및 다음 사용자가 Windows 10 UWP 환경을 명확 하 게 코드를 작성 합니다. </br></br>* [최신 UWP 구성 요소를 사용 하 여 데스크톱 응용 프로그램을 확장할](../porting/desktop-to-uwp-extend.md) 최신 XAML Ui 및 UWP 앱 컨테이너에서 실행 해야 하는 다른 UWP 환경을 통합 합니다. </br></br>* [유니버설 Windows 플랫폼 응용 프로그램을 마이그레이션하려면](../porting/desktop-to-uwp-migrate.md) WPF, Windows Forms, UWP, Android 및 iOS 응용 프로그램 간에 코드를 공유 합니다.
+데스크톱 브리지 | Windows 10 에서 데스크톱 응용 프로그램에 최신 환경을 추가하는 데 도움이 되는 세 개의 가이드를 추가했습니다. </br>* [Windows 10 용 데스크톱 응용 프로그램을 향상](/windows/apps/desktop/modernize/desktop-to-uwp-enhance) 찾기 및 올바른 파일을 참조 하는 지침 및 다음 사용자가 Windows 10 UWP 환경을 명확 하 게 코드를 작성 합니다. </br></br>* [최신 UWP 구성 요소를 사용 하 여 데스크톱 응용 프로그램을 확장할](/windows/apps/desktop/modernize/desktop-to-uwp-extend) 최신 XAML Ui 및 UWP 앱 컨테이너에서 실행 해야 하는 다른 UWP 환경을 통합 합니다. </br></br>* [유니버설 Windows 플랫폼 응용 프로그램을 마이그레이션하려면](/windows/apps/desktop/modernize/desktop-to-uwp-migrate) WPF, Windows Forms, UWP, Android 및 iOS 응용 프로그램 간에 코드를 공유 합니다.
 데스크톱 브리지 패키지 | Visual Studio에 전체 신뢰 데스크톱 응용 프로그램을 패키징하는 데 필수적이었던 수동 단계를 모두 제거하는 새 [패키지 프로젝트](../porting/desktop-to-uwp-packaging-dot-net.md)가 도입되었습니다. 패키징 프로젝트를 추가하고 데스크톱 프로젝트를 참조한 다음 F5 키를 눌러 앱을 디버깅하면 됩니다. 수동 조정이 필요하지 않습니다. 이 새로운 간소화된 환경은 이전 버전의 Visual Studio에서 사용할 수 있는 환경에 대해 상당히 향상되었습니다.
 진단 및 스레딩 | 새로운 진단 API는 실행 중인 앱에 대한 정보를 제공합니다. </br></br>* [AppMemoryReport](https://docs.microsoft.com/uwp/api/Windows.System.AppMemoryReport) 클래스는 앱에서 예상되는 총 커밋 제한, 개인 커밋 사용량 등에 대한 정보를 제공합니다. </br>* [AppDiagnosticInfo](https://docs.microsoft.com/uwp/api/windows.system.appdiagnosticinfo) 클래스는 이제 앱 또는 작업의 실행 상태를 모니터링하고 실행 상태가 변경되는 경우 알림을 제공합니다. </br>* [MemoryManager](https://docs.microsoft.com/uwp/api/windows.system.memorymanager) 클래스에 앱 메모리 사용량 제한을 설정하고 예상되는 앱 메모리 사용량 제한을 보고하는 새로운 방법을 제공합니다. </br></br>작업을 우선 순위대로 정렬하고 이를 [DispatcherQueue](https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueue) 클래스로 다른 스레드에서 실행되도록 할 수 있습니다. 이 기능은 [CreateDispatcherQueueController](https://msdn.microsoft.com/library/windows/desktop/mt826210.aspx) 기능을 통해 Win32에서도 사용할 수 있습니다.
 EdgeHTML 16 | Microsoft Edge 및 JS 기반 유니버설 Windows 플랫폼 앱을 지원하는 웹 플랫폼이 EdgeHTML 16으로 업데이트되었으며, 이제 F12 개발자 도구에 대한 주요 개선, CSS 그리드 레이아웃에 대한 지원, 그리고 기타 중요한 기능이 포함되었습니다. </br></br> * [CSS 그리드 레이아웃](https://docs.microsoft.com/microsoft-edge/dev-guide/css/grid-layout)이 이제 Microsoft Edge에서 지원됩니다. 그리드 레이아웃은 부동 또는 스크립트를 사용하여 위치 지정으로 가능한 것보다 많은 레이아웃 가변성을 가능하게 하는 2차원 그리드 기반 레이아웃 시스템을 정의합니다.</br></br> * [Microsoft Edge F12 개발자 도구 문서](https://docs.microsoft.com/microsoft-edge/f12-devtools-guide)가 향상된 안정성 및 성능에 대해 업데이트되었습니다. 또한 개발 환경을 최적화하기 위해 새로운 기능들이 추가되었습니다. </br></br>* Microsoft Edge 내에서만 [WebVR](https://docs.microsoft.com/microsoft-edge/webvr/)에 [동작 컨트롤러](https://docs.microsoft.com/microsoft-edge/webvr/input#controller-buttons) 및 다양한 [Windows Mixed Reality 헤드셋](https://docs.microsoft.com/microsoft-edge/webvr/hardware)에 대한 지원이 추가되었습니다. 초당 프레임 수 90까지 지원하기 위해 WebVR도 최적화되었습니다. </br></br> 변경 사항 및 새로 지원되는 API의 전체 목록은 [Microsoft Edge 개발자 가이드](https://docs.microsoft.com/microsoft-edge/dev-guide)를 참조하세요.
