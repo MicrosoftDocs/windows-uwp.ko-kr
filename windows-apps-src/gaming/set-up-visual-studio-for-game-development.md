@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, visual studio, 도구, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a3938f486d52942031944b1184a711ddbc579db
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f4ff471ae4c45761a1c1dad5819e97c8245746a1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653478"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368130"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>게임 프로그래밍용 Visual Studio 도구
 
@@ -43,7 +43,7 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 
 [사용자 지정 빌드 파일](#build-customizations-for-3d-assets)을 만들어 빌드 시 이러한 파일을 .dds 파일로 변환합니다.
 
-자세한 내용은 [텍스처 및 이미지 작업](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx)을 참조하세요.
+자세한 내용은 [텍스처 및 이미지 작업](https://docs.microsoft.com/visualstudio/designers/working-with-textures-and-images?view=vs-2015)을 참조하세요.
 
 > **참고**  The 이미지 편집기는 전체 기능 이미지 편집 앱을 대체할 수 없습니다 하지만 많은 단순 보기 및 편집 시나리오에 적합 합니다.
 
@@ -62,7 +62,7 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 
 ![주전자](images/modeleditor.png)
 
-자세한 내용은 [3D 모델 작업](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx)을 참조하세요.
+자세한 내용은 [3D 모델 작업](https://docs.microsoft.com/visualstudio/designers/working-with-3-d-models?view=vs-2015)을 참조하세요.
 
 > **참고**  The 모델 편집기 앱을 편집 하는 전체 기능 모델을 대체할 수 없습니다 있지만 많은 단순 보기 및 편집 시나리오에 적합 합니다.
 
@@ -109,7 +109,7 @@ float3 LambertLighting(
 }
 ```
 
-자세한 내용은 [셰이더 작업](https://msdn.microsoft.com/library/windows/apps/hh873117.aspx)을 참조하세요.
+자세한 내용은 [셰이더 작업](https://docs.microsoft.com/visualstudio/designers/working-with-shaders?view=vs-2015)을 참조하세요.
 
 ## <a name="build-customizations-for-3d-assets"></a>3D 자산에 대한 사용자 지정 빌드
 
@@ -122,7 +122,7 @@ Visual Studio가 리소스를 사용할 수 있는 형식으로 변환하도록 
 -   메시 콘텐츠 파이프라인은 메시 파일(.fbx)을 가져오고 .cmo 메시 파일을 출력합니다.
 -   셰이더 콘텐츠 파이프라인은 Visual Studio 셰이더 편집기에서 비주얼 셰이더 그래프(.dgsl)를 가져오고 컴파일된 셰이더 출력(.cso) 파일을 출력합니다.
 
-자세한 내용은 [게임 또는 앱에서 3D 자산 사용](https://msdn.microsoft.com/library/windows/apps/hh972446.aspx)을 참조하세요.
+자세한 내용은 [게임 또는 앱에서 3D 자산 사용](https://docs.microsoft.com/visualstudio/designers/using-3-d-assets-in-your-game-or-app?view=vs-2015)을 참조하세요.
 
 ## <a name="debugging-directx-graphics"></a>DirectX 그래픽 디버깅
 
@@ -139,7 +139,7 @@ Visual Studio는 그래픽 관련 디버깅 도구를 제공합니다. 이러한
 -   제한된 Direct2D 지원
 -   운영 체제 및 SDK 요구 사항
 
-자세한 내용은 [DirectX 그래픽 디버깅](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx)을 참조하세요.
+자세한 내용은 [DirectX 그래픽 디버깅](https://docs.microsoft.com/visualstudio/debugger/visual-studio-graphics-diagnostics?view=vs-2015)을 참조하세요.
 
 
  

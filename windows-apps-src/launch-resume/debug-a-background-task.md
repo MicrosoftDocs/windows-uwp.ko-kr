@@ -6,23 +6,23 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: e0ae12bbb2bad1fbcd663f5be8f26656d640afc8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 11ebd180ebc3bc08b418f3b22ebed190bf73c18d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599208"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366202"
 ---
 # <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 
 
 **중요 한 Api**
--   [Windows.ApplicationModel.Background](https://msdn.microsoft.com/library/windows/apps/br224847)
+-   [Windows.ApplicationModel.Background](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
 Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다.
 
 ## <a name="debugging-out-of-process-vs-in-process-background-tasks"></a>Out-of-process 및 In-process 백그라운드 작업 디버그
-이 항목에서는 호스트 앱이 아닌 별도 프로세스에서 실행되는 백그라운드 작업을 주로 설명합니다. In-process 백그라운드 작업을 디버그하는 경우 별도 백그라운드 작업 프로젝트가 없으며 **OnBackgroundActivated()**(In-process 프로세스 백그라운드 코드가 실행되는 위치)에 중단점을 설정할 수 있습니다. 실행할 백그라운드 코드를 트리거하는 방법에 대한 자세한 내용은 아래의 [백그라운드 작업을 수동으로 트리거하여 백그라운드 작업 코드 디버그](#trigger-background-tasks-manually-to-debug-background-task-code)에서 2단계를 참조하세요.
+이 항목에서는 호스트 앱이 아닌 별도 프로세스에서 실행되는 백그라운드 작업을 주로 설명합니다. In-process 백그라운드 작업을 디버그하는 경우 별도 백그라운드 작업 프로젝트가 없으며 **OnBackgroundActivated()** (In-process 프로세스 백그라운드 코드가 실행되는 위치)에 중단점을 설정할 수 있습니다. 실행할 백그라운드 코드를 트리거하는 방법에 대한 자세한 내용은 아래의 [백그라운드 작업을 수동으로 트리거하여 백그라운드 작업 코드 디버그](#trigger-background-tasks-manually-to-debug-background-task-code)에서 2단계를 참조하세요.
 
 ## <a name="make-sure-the-background-task-project-is-set-up-correctly"></a>백그라운드 작업 프로젝트가 올바르게 설정되어 있는지 확인합니다.
 
@@ -36,16 +36,16 @@ Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 �
 
 Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리거할 수 있습니다. 그런 다음 코드를 단계별로 실행하여 디버그할 수 있습니다.
 
-1.  C#에서는 백그라운드 클래스의 Run 메서드에 중단점을 삽입(In-process 프로세스 백그라운드 작업의 경우 App.OnBackgroundActivated()에 중단점 삽입)하거나 [**System.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/xaml/hh441592.aspx)를 사용하여 디버깅 출력을 씁니다.
+1.  C#에서는 백그라운드 클래스의 Run 메서드에 중단점을 삽입(In-process 프로세스 백그라운드 작업의 경우 App.OnBackgroundActivated()에 중단점 삽입)하거나 [**System.Diagnostics**](https://docs.microsoft.com/dotnet/api/system.diagnostics?view=netframework-4.7.2)를 사용하여 디버깅 출력을 씁니다.
 
-    C++에서는 백그라운드 클래스의 Run 함수에 중단점을 삽입(In-process 백그라운드 작업의 경우 App.OnBackgroundActivated()에 중단점 삽입)하거나 [**OutputDebugString**](https://msdn.microsoft.com/library/windows/desktop/aa363362)를 사용하여 디버깅 출력을 씁니다.
+    C++에서는 백그라운드 클래스의 Run 함수에 중단점을 삽입(In-process 백그라운드 작업의 경우 App.OnBackgroundActivated()에 중단점 삽입)하거나 [**OutputDebugString**](https://docs.microsoft.com/windows/desktop/api/debugapi/nf-debugapi-outputdebugstringw)를 사용하여 디버깅 출력을 씁니다.
 
 2.  디버거에서 응용 프로그램을 실행한 다음 **수명 주기 이벤트** 도구 모음을 사용하여 백그라운드 작업을 트리거합니다. 이 드롭다운에는 Visual Studio에서 활성화할 수 있는 백그라운드 작업의 이름이 표시됩니다.
 
     이를 위해서는 백그라운드 작업이 이미 등록되어 있고 여전히 트리거를 대기하고 있어야 합니다. 예를 들어 백그라운드 작업이 원샷 TimeTrigger로 등록되었고 Visual Studio를 통해 작업을 실행해도 아무런 효과가 없습니다.
 
 > [!Note]
-> 이 방식으로 백그라운드 작업 트리거를 사용 하 여 활성화할 수 없습니다. [**응용 프로그램 트리거**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.applicationtrigger.aspx)를 [ **MediaProcessing 트리거**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.mediaprocessingtrigger.aspx)하십시오 [ **ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), [ **PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), 및를 사용 하 여 백그라운드 작업을 [ **SystemTrigger** ](https://msdn.microsoft.com/library/windows/apps/br224838) 사용 하 여 합니다 [  **SmsReceived** ](https://msdn.microsoft.com/library/windows/apps/br224839) 유형을 트리거.  
+> 이 방식으로 백그라운드 작업 트리거를 사용 하 여 활성화할 수 없습니다. [**응용 프로그램 트리거**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtrigger)를 [ **MediaProcessing 트리거**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger)하십시오 [ **ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), [ **PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger), 및를 사용 하 여 백그라운드 작업을 [ **SystemTrigger** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) 사용 하 여 합니다 [  **SmsReceived** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 유형을 트리거.  
 > 코드에서 `trigger.RequestAsync()`를 사용하여 **Application 트리거** 및 **MediaProcessingTrigger**에 수동으로 신호를 보낼 수 있습니다.
 
 ![백그라운드 작업 디버그](images/debugging-activation.png)
@@ -69,9 +69,9 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 
 2.  매니페스트 디자이너를 사용하여 백그라운드 작업이 패키지 매니페스트에서 올바르게 선언되었는지 확인합니다.
 
-    -   C# 및 C++에서는 진입점 특성이 백그라운드 작업 이름과 클래스 이름과 차례로 일치해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. RuntimeComponent1.MyBackgroundTask 합니다.
+    -   C# 및 C++에서는 진입점 특성이 백그라운드 작업 이름과 클래스 이름과 차례로 일치해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. RuntimeComponent1.MyBackgroundTask.
     -   작업에 사용된 모든 트리거 유형도 지정해야 합니다.
-    -   [  **ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 또는 [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543)를 사용하지 않는 경우에는 실행 파일을 지정하면 안 됩니다.
+    -   [  **ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger) 또는 [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger)를 사용하지 않는 경우에는 실행 파일을 지정하면 안 됩니다.
 
 3.  Windows에만 해당합니다. Windows에서 백그라운드 작업을 활성화하는 데 사용한 진입점을 확인하려면 디버그 추적을 사용하도록 설정하고 Windows 이벤트 로그를 사용합니다.
 
@@ -101,7 +101,7 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 -   백그라운드 작업에서 잠금 화면에 액세스해야 하는 경우 백그라운드 작업을 디버그하기 전에 앱을 잠금 화면에 배치해야 합니다. 잠금 화면 지원 앱에 대한 매니페스트 옵션을 지정하는 방법은 [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)을 참조하세요.
 -   백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
 
-VS를 사용 하 여 백그라운드 작업 디버깅에 대 한 자세한 내용은 참조 하세요 [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트 UWP 앱에서](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)합니다.
+VS를 사용 하 여 백그라운드 작업 디버깅에 대 한 자세한 내용은 참조 하세요 [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트 UWP 앱에서](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -110,8 +110,8 @@ VS를 사용 하 여 백그라운드 작업 디버깅에 대 한 자세한 내�
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트 UWP 앱에서](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
-* [Visual Studio 코드 분석을 사용 하 여 UWP 앱의 코드 품질 분석](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
+* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트 UWP 앱에서](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)
+* [Visual Studio 코드 분석을 사용 하 여 UWP 앱의 코드 품질 분석](https://docs.microsoft.com/visualstudio/test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis?view=vs-2015)
 
  
 

@@ -6,12 +6,12 @@ keywords: 다이얼, 방사형, 자습서
 ms.date: 03/11/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c8042bbe3ad8a37802b592e4e638a7c42e79a6d
-ms.sourcegitcommit: 99271798fe53d9768fc52b21366de05268cadcb0
+ms.openlocfilehash: a16b455d692eaf9f73b7dc90200bd0f021025e52
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221469"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365655"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>자습서: UWP 앱에서 Surface Dial(및 기타 휠 장치) 지원
 
@@ -87,8 +87,8 @@ Surface Dial은 펜, 터치, 마우스와 같은 기본 입력 디바이스와 �
 
 | 구성 요소 | 설명 |
 | --- | --- |
-| [**RadialController** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController) 및 관련 | 휠 입력 디바이스 또는 Surface Dial과 같은 액세서리를 나타냅니다. |
-| [**IRadialControllerConfigurationInterop**](https://msdn.microsoft.com/library/windows/desktop/mt790709) / [**IRadialControllerInterop**](https://msdn.microsoft.com/library/windows/desktop/mt790711)<br/>여기서는 이 기능을 다루지 않습니다. 자세한 내용은 [Windows 클래식 데스크톱 샘플](https://aka.ms/radialcontrollerclassicsample)을 참조하세요. | UWP 앱과의 상호 운용성을 가능하게 합니다. |
+| [**RadialController** 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController) 및 관련 | 휠 입력 디바이스 또는 Surface Dial과 같은 액세서리를 나타냅니다. |
+| [**IRadialControllerConfigurationInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop) / [**IRadialControllerInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerinterop)<br/>여기서는 이 기능을 다루지 않습니다. 자세한 내용은 [Windows 클래식 데스크톱 샘플](https://aka.ms/radialcontrollerclassicsample)을 참조하세요. | UWP 앱과의 상호 운용성을 가능하게 합니다. |
 
 ## <a name="step-1-run-the-sample"></a>1단계: 샘플 실행
 
@@ -108,7 +108,7 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
 
 ## <a name="step-2-basic-radialcontroller-functionality"></a>2단계: 기본 RadialController 기능
 
-앱을 실행하여 포그라운드에 있을 때, Surface Dial을 길게 눌러 **RadialController** 메뉴를 표시합니다.
+실행 중인 앱을 사용 하 여 및 포그라운드에 키를 누른 표시할 Surface Dial 합니다 **RadialController** 메뉴.
 
 아직 앱에 아무런 사용자 지정을 하지 않았으므로, 메뉴에는 상황에 맞는 도구의 기본 집합이 포함되어 있습니다. 
 
@@ -559,7 +559,7 @@ Surface Dial 및 기타 휠 디바이스는 현재 상호 작용에 해당하는
             }
         }
         ```
-    - 마지막으로, 촉각 피드백에 대한 요청된 **[파형](https://docs.microsoft.com/uwp/api/windows.devices.haptics.simplehapticscontrollerfeedback.Waveform)**(지원되는 경우)을 가져옵니다. 
+    - 마지막으로, 촉각 피드백에 대한 요청된 **[파형](https://docs.microsoft.com/uwp/api/windows.devices.haptics.simplehapticscontrollerfeedback.Waveform)** (지원되는 경우)을 가져옵니다. 
 
         ```csharp
         // Get the requested waveform.
@@ -619,18 +619,18 @@ Surface Dial을 Surface Studio와 함께 사용하면 더 고유한 사용자 �
 
 ### <a name="api-reference"></a>API 참조
 
-- [**RadialController** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController)
-- [**RadialControllerButtonClickedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
-- [**RadialControllerConfiguration** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerConfiguration) 
-- [**RadialControllerControlAcquiredEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerControlAcquiredEventArgs) 
-- [**RadialControllerMenu** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenu) 
-- [**RadialControllerMenuItem** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuItem) 
-- [**RadialControllerRotationChangedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerRotationChangedEventArgs) 
-- [**RadialControllerScreenContact** 클래스](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContact) 
-- [**RadialControllerScreenContactContinuedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs) 
-- [**RadialControllerScreenContactStartedEventArgs** class](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContactStartedEventArgs)
-- [**RadialControllerMenuKnownIcon** 열거형](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuKnownIcon) 
-- [**RadialControllerSystemMenuItemKind** enum](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
+- [**RadialController** 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController)
+- [**RadialControllerButtonClickedEventArgs** class](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
+- [**RadialControllerConfiguration** 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerConfiguration) 
+- [**RadialControllerControlAcquiredEventArgs** class](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerControlAcquiredEventArgs) 
+- [**RadialControllerMenu** 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerMenu) 
+- [**RadialControllerMenuItem** 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerMenuItem) 
+- [**RadialControllerRotationChangedEventArgs** class](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerRotationChangedEventArgs) 
+- [**RadialControllerScreenContact** 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerScreenContact) 
+- [**RadialControllerScreenContactContinuedEventArgs** class](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs) 
+- [**RadialControllerScreenContactStartedEventArgs** class](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerScreenContactStartedEventArgs)
+- [**RadialControllerMenuKnownIcon** 열거형](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerMenuKnownIcon) 
+- [**RadialControllerSystemMenuItemKind** enum](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
 
 ### <a name="samples"></a>샘플
 

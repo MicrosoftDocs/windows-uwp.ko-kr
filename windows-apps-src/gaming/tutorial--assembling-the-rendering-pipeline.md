@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c16f1fbb55374b1d04c9fc9f5f7eae72ad19b00
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0eeb515f07d9bc2e48ba97f6ef4d71afd0226ace
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604858"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367728"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>렌더링 프레임 워크 i: 렌더링 소개
 
@@ -75,7 +75,7 @@ void App::Initialize(
 
 간단한 흐름은 다음과 같습니다.
 1. __업데이트__
-2. __렌더링__
+2. __Render__
 3. __현재__
 
 ### <a name="gamemainrun-method"></a>GameMain::Run 메서드
@@ -122,7 +122,7 @@ void GameMain::Run()
 }
 ```
 
-### <a name="update"></a>업데이트
+### <a name="update"></a>Update
 
 [  __App::Update__ and __GameMain::Update__](tutorial-game-flow-management.md#appupdate-method) 메서드에서 게임 상태를 업데이트하는 방법에 대한 자세한 내용은 [게임 흐름 관리](tutorial-game-flow-management.md) 문서를 참조하세요.
 
@@ -425,7 +425,7 @@ void MeshObject::Render(\_In\_ ID3D11DeviceContext *context)
 }
 ```
 
-### <a name="present"></a>표시
+### <a name="present"></a>있음
 
 __DX::DeviceResources::Present__ 메서드를 호출하여 배치한 콘텐츠를 버퍼에 저장하고 이를 표시합니다.
 
@@ -496,11 +496,11 @@ void DX::DeviceResources::Present()
 * [셰이더 단계](#shader-stages)
 * [다양 한 셰이더 파일 형식](#various-shader-file-formats)
 
-자세한 내용은 [Direct3D 11 렌더링 파이프라인 이해](https://msdn.microsoft.com/library/windows/desktop/dn643746.aspx) 및 [그래픽 파이프라인](https://msdn.microsoft.com/library/windows/desktop/ff476882.aspx)을 참조하세요.
+자세한 내용은 [Direct3D 11 렌더링 파이프라인 이해](https://docs.microsoft.com/windows/desktop/direct3dgetstarted/understand-the-directx-11-2-graphics-pipeline) 및 [그래픽 파이프라인](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-graphics-pipeline)을 참조하세요.
 
 #### <a name="hlsl"></a>HLSL
 
-HLSL은 DirectX를 위한 상위 수준 셰이딩 언어입니다. HLSL를 사용하여 Direct3D 파이프라인을 위해 C 스타일의 프로그래밍 셰이더를 만들 수 있습니다. 자세한 내용은 [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561.aspx)를 참조하세요.
+HLSL은 DirectX를 위한 상위 수준 셰이딩 언어입니다. HLSL를 사용하여 Direct3D 파이프라인을 위해 C 스타일의 프로그래밍 셰이더를 만들 수 있습니다. 자세한 내용은 [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl)를 참조하세요.
 
 #### <a name="shaders"></a>셰이더
 
@@ -516,7 +516,7 @@ Direct3D 9 셰이더는 셰이더 모델 1, 셰이더 모델 2 및 셰이더 모
 
 #### <a name="shader-stages"></a>셰이더 단계
 
-이러한 원형 스트림을 처리하도록 정의된 다양한 셰이더 시퀀스를 렌더링 파이프라인에서는 셰이더 단계라고 부릅니다. 실제 단계는 Direct3D의 버전에 따라 다르지만, 일반적으로 꼭지점, 기하 도형 및 픽셀 단계가 포함되어 있습니다. 공간 분할을 위한 헐(hull) 및 도메인 셰이더나 컴퓨팅 셰이더 등 다른 단계들도 있습니다. 이러한 모든 단계는 [HLSL])(#hlsl)을 사용해 완전히 프로그래밍이 가능합니다. 자세한 내용은 [그래픽 파이프라인](https://msdn.microsoft.com/library/windows/desktop/ff476882.aspx)을 참조하세요.
+이러한 원형 스트림을 처리하도록 정의된 다양한 셰이더 시퀀스를 렌더링 파이프라인에서는 셰이더 단계라고 부릅니다. 실제 단계는 Direct3D의 버전에 따라 다르지만, 일반적으로 꼭지점, 기하 도형 및 픽셀 단계가 포함되어 있습니다. 공간 분할을 위한 헐(hull) 및 도메인 셰이더나 컴퓨팅 셰이더 등 다른 단계들도 있습니다. 이러한 모든 단계는 [HLSL])(#hlsl)을 사용해 완전히 프로그래밍이 가능합니다. 자세한 내용은 [그래픽 파이프라인](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-graphics-pipeline)을 참조하세요.
 
 #### <a name="various-shader-file-formats"></a>다양한 셰이더 파일 형식
 
@@ -533,11 +533,11 @@ Direct3D 9 셰이더는 셰이더 모델 1, 셰이더 모델 2 및 셰이더 모
 
 Direct3D 11은 게임 같이 그래픽 집약적이어서 집약적 연산을 처리할 수 있는 뛰어난 그래픽 카드가 요구되는 응용 프로그램에서 그래픽을 생성하도록 도와주는 API 집합입니다. 이 섹션에는 리소스, 하위 리소스, 디바이스, 디바이스 컨텍스트와 같은 Direct3D 11 그래픽 프로그램 개념에 대해 간략하게 설명되어 있습니다.
 
-#### <a name="resource"></a>리소스
+#### <a name="resource"></a>Resource
 
 이 개념을 처음 접하는 사람들은 리소스(디바이스 리소스라고도 함)를 텍스처, 위치, 색상 같은 개체를 렌더링하는 방법에 대한 정보로 생각할 수 있습니다. 리소스는 파이프라인에 정보를 제공하고 장면에서 렌더링되는 내용을 정의합니다. 리소스는 게임 미디어에서 로드하거나 실행 시 동적으로 생성할 수 있습니다.
 
-실제로 리소스는 Direct3D [파이프라인](#rendering-pipeline)에서 액세스할 수 있는 메모리의 영역을 뜻합니다. 파이프라인에서 메모리에 효율적으로 액세스하려면 파이프라인에 제공된 데이터(입력 기하 도형, 셰이더 리소스, 텍스처 등)를 리소스에 저장해야 합니다. 모든 Direct3D 리소스가 파생되는 두 가지 리소스 종류는 버퍼와 질감입니다. 각 파이프라인 단계에 최대 128개 리소스를 활성화할 수 있습니다. 자세한 내용은 [리소스](../graphics-concepts/resources.md)를 참조하세요.
+실제로 리소스는 Direct3D [파이프라인](#rendering-pipeline)에서 액세스할 수 있는 메모리의 영역을 뜻합니다. 파이프라인에서 메모리에 효율적으로 액세스하려면 파이프라인에 제공된 데이터(입력 기하 도형, 셰이더 리소스, 텍스처 등)를 리소스에 저장해야 합니다. 모든 Direct3D 리소스가 파생되는 두 가지 리소스 종류는 버퍼와 질감입니다. 각 파이프라인 단계에 최대 128개 리소스를 활성화할 수 있습니다. 자세한 내용은 [Resources](../graphics-concepts/resources.md)를 참조하세요.
 
 #### <a name="subresource"></a>하위 리소스
 
@@ -545,17 +545,17 @@ Direct3D 11은 게임 같이 그래픽 집약적이어서 집약적 연산을 �
 
 #### <a name="depth-stencil"></a>깊이 - 스텐실
 
-깊이 - 스텐실 리소스에는 깊이와 스텐실 정보를 보유하는 형식 및 버퍼가 포함되어 있습니다. 이 리소스는 텍스터 리소스를 사용해 만들 수 있습니다. 깊이 - 스텐실 리소를 만드는 방법에 대한 자세한 내용은 [깊이 - 스텐실 기능 구성](https://msdn.microsoft.com/library/windows/desktop/bb205074.aspx)을 참조하세요. [ID3D11DepthStencilView](https://msdn.microsoft.com/library/windows/desktop/ff476377.aspx) 인터페이스를 사용해 구현된 깊이 - 스텐실 보기를 통해 깊이 - 스텐실 리소스에 액세스합니다.
+깊이 - 스텐실 리소스에는 깊이와 스텐실 정보를 보유하는 형식 및 버퍼가 포함되어 있습니다. 이 리소스는 텍스터 리소스를 사용해 만들 수 있습니다. 깊이 - 스텐실 리소를 만드는 방법에 대한 자세한 내용은 [깊이 - 스텐실 기능 구성](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-depth-stencil)을 참조하세요. [ID3D11DepthStencilView](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11depthstencilview) 인터페이스를 사용해 구현된 깊이 - 스텐실 보기를 통해 깊이 - 스텐실 리소스에 액세스합니다.
 
 깊이 정보는 다각형의 어떤 영역이 보기에서 숨겨지지 않고 렌더링되는지를 알려줍니다. 스텐실 정보는 어떤 픽셀이 마스킹되는지 알려줍니다. 이 정보는 픽셀이 그려져 있는지 여부를 판단하여 1 또는 0으로 설정하기 때문에 특수 효과를 내는 데 사용할 수 있습니다. 
 
-자세한 내용은 다음을 참조하세요. [깊이 스텐실 뷰](../graphics-concepts/depth-stencil-view--dsv-.md)하십시오 [깊이 버퍼](../graphics-concepts/depth-buffers.md), 및 [스텐실 버퍼](../graphics-concepts/stencil-buffers.md)합니다.
+참조 항목: [깊이 스텐실 뷰](../graphics-concepts/depth-stencil-view--dsv-.md)하십시오 [깊이 버퍼](../graphics-concepts/depth-buffers.md), 및 [스텐실 버퍼](../graphics-concepts/stencil-buffers.md)합니다.
 
 #### <a name="render-target"></a>렌더링 대상
 
-렌더링 대상은 렌더링 패스가 끝날 때 기록이 가능한 리소스입니다. 보통은 [ID3D11Device::CreateRenderTargetView](https://msdn.microsoft.com/library/windows/desktop/ff476517.aspx) 메서드에서 스왑 체인 백 버퍼(이 역시 리소스)를 입력 파라미터로 사용하여 생성됩니다. 
+렌더링 대상은 렌더링 패스가 끝날 때 기록이 가능한 리소스입니다. 보통은 [ID3D11Device::CreateRenderTargetView](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createrendertargetview) 메서드에서 스왑 체인 백 버퍼(이 역시 리소스)를 입력 파라미터로 사용하여 생성됩니다. 
 
-각 렌더링 대상은 해당되는 깊이 - 스텐실 보기를 가지고 있어야 합니다. 왜냐하면 사용에 앞서 [OMSetRenderTargets](https://msdn.microsoft.com/library/windows/desktop/ff476464.aspx)를 통해 렌더링 대상을 설정할 때 깊이 - 스텐실 보기가 필요할 수도 있기 때문입니다. [ID3D11RenderTargetView](https://msdn.microsoft.com/library/windows/desktop/ff476582.aspx) 인터페이스를 사용해 구현되는 렌더링 대상 보기를 통해 렌더링 대상 리소스에 액세스합니다. 
+각 렌더링 대상은 해당되는 깊이 - 스텐실 보기를 가지고 있어야 합니다. 왜냐하면 사용에 앞서 [OMSetRenderTargets](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-omsetrendertargets)를 통해 렌더링 대상을 설정할 때 깊이 - 스텐실 보기가 필요할 수도 있기 때문입니다. [ID3D11RenderTargetView](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) 인터페이스를 사용해 구현되는 렌더링 대상 보기를 통해 렌더링 대상 리소스에 액세스합니다. 
 
 #### <a name="device"></a>장치
 
@@ -563,25 +563,25 @@ Direct3D 11이 처음인 사용자는 개체를 할당 및 삭제하고 원형�
 
 보다 정확하게 설명하자면 Direct3D 디바이스는 Direct3D의 렌더링 구성 요소입니다. 디바이스는 렌더링 상태를 캡슐화하여 저장하고, 변환 및 조명 작업을 수행하며, 이미지를 표면에 래스터화합니다. 자세한 내용은 [디바이스](../graphics-concepts/devices.md)를 참조하세요.
 
-디바이스는 [ID3D11Device](https://msdn.microsoft.com/library/windows/desktop/ff476379.aspx) 인터페이스를 통해 표시됩니다. 즉, ID3D11Device 인터페이스는 가상 디스플레이 어댑터를 나타내고 디바이스가 소유하는 리소스를 생성하는 데 사용됩니다. 
+디바이스는 [ID3D11Device](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device) 인터페이스를 통해 표시됩니다. 즉, ID3D11Device 인터페이스는 가상 디스플레이 어댑터를 나타내고 디바이스가 소유하는 리소스를 생성하는 데 사용됩니다. 
 
-다양한 버전의 ID3D11Device가 있으며, [ID3D11Device5](https://msdn.microsoft.com/library/windows/desktop/mt492478.aspx)는 ID3D11Device4에 새 메서드를 추가한 최신 버전입니다. Direct3D가 기반 하드웨어와 어떻게 통신하는지에 대한 자세한 내용은 [Windows 장치 드라이버 모델(WDDM) 아키텍처](https://docs.microsoft.com/windows-hardware/drivers/display/windows-vista-and-later-display-driver-model-architecture)를 참조하세요.
+다양한 버전의 ID3D11Device가 있으며, [ID3D11Device5](https://docs.microsoft.com/windows/desktop/api/d3d11_4/nn-d3d11_4-id3d11device5)는 ID3D11Device4에 새 메서드를 추가한 최신 버전입니다. Direct3D가 기반 하드웨어와 어떻게 통신하는지에 대한 자세한 내용은 [Windows 장치 드라이버 모델(WDDM) 아키텍처](https://docs.microsoft.com/windows-hardware/drivers/display/windows-vista-and-later-display-driver-model-architecture)를 참조하세요.
 
-각 응용 프로그램에는 최소 하나의 디바이스가 있어야 하고, 대부분의 응용 프로그램은 오직 하나의 디바이스만 생성합니다. 호출 하 여 컴퓨터에 설치 되어 하드웨어 드라이버 중 하나에 대 한 장치를 만드는 __D3D11CreateDevice__ 하거나 __D3D11CreateDeviceAndSwapChain__ D3D를 사용 하 여 드라이버 종류를 지정 하 고\_ 드라이버\_형식 플래그. 각 디바이스는 원하는 기능에 따라 디바이스 컨텍스트를 하나 이상 사용할 수 있습니다. 자세한 내용은 [D3D11CreateDevice 함수](https://msdn.microsoft.com/library/windows/desktop/ff476082.aspx)를 참조하세요.
+각 응용 프로그램에는 최소 하나의 디바이스가 있어야 하고, 대부분의 응용 프로그램은 오직 하나의 디바이스만 생성합니다. 호출 하 여 컴퓨터에 설치 되어 하드웨어 드라이버 중 하나에 대 한 장치를 만드는 __D3D11CreateDevice__ 하거나 __D3D11CreateDeviceAndSwapChain__ D3D를 사용 하 여 드라이버 종류를 지정 하 고\_ 드라이버\_형식 플래그. 각 디바이스는 원하는 기능에 따라 디바이스 컨텍스트를 하나 이상 사용할 수 있습니다. 자세한 내용은 [D3D11CreateDevice 함수](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)를 참조하세요.
 
 #### <a name="device-context"></a>디바이스 컨텍스트
 
 디바이스 컨텍스트는 [파이프라인](#rendering-pipeline) 상태를 설정하고 [디바이스](#device)가 소유하는 [리소스](#resource)를 사용해 렌더링 명령을 생성합니다. 
 
-Direct3D 11은 두 가지 유형의 디바이스 컨텍스트를 구현하는데, 하나는 즉각적인 렌더링을 위한 것이고 다른 하나는 지연된 렌더링을 위한 것입니다. 두 컨텍스트 모두 [ID3D11DeviceContext](https://msdn.microsoft.com/library/windows/desktop/ff476385.aspx) 인터페이스를 통해 표시됩니다.  
+Direct3D 11은 두 가지 유형의 디바이스 컨텍스트를 구현하는데, 하나는 즉각적인 렌더링을 위한 것이고 다른 하나는 지연된 렌더링을 위한 것입니다. 두 컨텍스트 모두 [ID3D11DeviceContext](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) 인터페이스를 통해 표시됩니다.  
 
 __ID3D11DeviceContext__ 인터페이스는 다양한 버전이 있으며, __ID3D11DeviceContext4__는 __ID3D11DeviceContext3__에 새 메서드를 추가한 버전입니다.
 
-참고: __ID3D11DeviceContext4__ 의 최신 버전 이며 Windows 10 크리에이터 스 업데이트에서 도입 된 합니다 __ID3D11DeviceContext__ 인터페이스입니다. Windows 10 크리에이터스 업데이트를 대상으로 하는 응용 프로그램은 이전 버전이 아니라 이 버전의 인터페이스를 사용해야 합니다. 자세한 내용은 [ID3D11DeviceContext4](https://msdn.microsoft.com/library/windows/desktop/mt492481.aspx)를 참조하세요.
+참고: __ID3D11DeviceContext4__ 의 최신 버전 이며 Windows 10 크리에이터 스 업데이트에서 도입 된 합니다 __ID3D11DeviceContext__ 인터페이스입니다. Windows 10 크리에이터스 업데이트를 대상으로 하는 응용 프로그램은 이전 버전이 아니라 이 버전의 인터페이스를 사용해야 합니다. 자세한 내용은 [ID3D11DeviceContext4](https://docs.microsoft.com/windows/desktop/api/d3d11_3/nn-d3d11_3-id3d11devicecontext4)를 참조하세요.
 
 #### <a name="dxdeviceresources"></a>DX::DeviceResources
 
-__DX::DeviceResources__ 클래스는 __DeviceResources.cpp__/__.h__ 파일에 존재하며 모든 DirectX 디바이스 리소스를 제어합니다. 샘플 게임 프로젝트와 DirectX 11 앱 템플릿 프로젝트에서는 이러한 파일들이 __Commons__ 폴더에 있습니다. Visual Studio 2015 이상에서 DirectX 11 앱 템플릿 프로젝트를 새로 만들 때 이러한 파일의 최신 버전을 얻을 수 있습니다.
+__DX::DeviceResources__ 클래스는 __DeviceResources.cpp__/ __.h__ 파일에 존재하며 모든 DirectX 디바이스 리소스를 제어합니다. 샘플 게임 프로젝트와 DirectX 11 앱 템플릿 프로젝트에서는 이러한 파일들이 __Commons__ 폴더에 있습니다. Visual Studio 2015 이상에서 DirectX 11 앱 템플릿 프로젝트를 새로 만들 때 이러한 파일의 최신 버전을 얻을 수 있습니다.
 
 ### <a name="buffer"></a>버퍼
 
@@ -612,11 +612,11 @@ __ID3D11Buffer__ 인터페이스에서 모든 버퍼 형식이 캡슐화되므�
     * __ID3D11DeviceContext::SOSetTargets__를 호출하여 스트림 - 출력 단계에 바인딩
     * __ID3D11DeviceContext::VSSetConstantBuffers__ 같은 셰이더 메서드를 호출하여 셰이더 단계에 바인딩
 
-자세한 내용은 [Direct3D 11의 버퍼 소개](https://msdn.microsoft.com/library/windows/desktop/ff476898.aspx)를 참조하세요.
+자세한 내용은 [Direct3D 11의 버퍼 소개](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-intro)를 참조하세요.
 
 ### <a name="dxgi"></a>DXGI
 
-Microsoft DirectX 그래픽 인프라 (DXGI)는 일부의 Direct3D 10에 필요한 하위 수준 작업을 캡슐화 하는 Windows vista에 도입 된 새로운 하위 시스템을 10.1, 11 및 11.1 합니다. 교착 상태가 발생하지 않도록 하려면 다중 스레딩된 응용 프로그램에서 DXGI를 사용할 때 특히 주의를 기울여야 합니다. 자세한 내용은 참조 하세요. [DirectX 그래픽 인프라 (DXGI): 모범 사례-다중 스레딩](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
+Microsoft DirectX 그래픽 인프라 (DXGI)는 일부의 Direct3D 10에 필요한 하위 수준 작업을 캡슐화 하는 Windows vista에 도입 된 새로운 하위 시스템을 10.1, 11 및 11.1 합니다. 교착 상태가 발생하지 않도록 하려면 다중 스레딩된 응용 프로그램에서 DXGI를 사용할 때 특히 주의를 기울여야 합니다. 자세한 내용은 참조 하세요. [DirectX 그래픽 인프라 (DXGI): 모범 사례-다중 스레딩](https://docs.microsoft.com/windows/desktop/direct3darticles/dxgi-best-practices)
 
 ### <a name="feature-level"></a>기능 수준
 
@@ -624,9 +624,9 @@ Microsoft DirectX 그래픽 인프라 (DXGI)는 일부의 Direct3D 10에 필요�
 
 각 비디오 카드는 설치된 GPU에 따라 특정 수준의 DirectX 기능을 구현합니다. Microsoft Direct3D의 이전 버전에서는 비디오 카드에 구현된 Direct3D 버전을 찾아서 그에 따라 응용 프로그램을 프로그래밍할 수 있었습니다. 
 
-기능 수준을 사용하면 디바이스를 만들 때 요청하고자 하는 기능 수준에 맞게 디바이스를 생성하려고 시도할 있습니다. 디바이스 생성이 진행되면 기능 수준이 지원되는 것이고, 그렇지 않으면 하드웨어에서 기능 수준이 지원되지 않는 것입니다. 더 낮은 기능 수준에서 디바이스를 다시 생성해 보거나 응용 프로그램을 종료하는 방법을 선택할 수 있습니다. 예를 들어 12\_Direct3D 11.3 및 Direct3D 12에서 셰이더 모델 5.1 0 기능 수준이 필요 합니다. 자세한 내용은 참조 하세요. [Direct3D 기능 수준: 각 기능 수준에 대 한 개요](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview)합니다.
+기능 수준을 사용하면 디바이스를 만들 때 요청하고자 하는 기능 수준에 맞게 디바이스를 생성하려고 시도할 있습니다. 디바이스 생성이 진행되면 기능 수준이 지원되는 것이고, 그렇지 않으면 하드웨어에서 기능 수준이 지원되지 않는 것입니다. 더 낮은 기능 수준에서 디바이스를 다시 생성해 보거나 응용 프로그램을 종료하는 방법을 선택할 수 있습니다. 예를 들어 12\_Direct3D 11.3 및 Direct3D 12에서 셰이더 모델 5.1 0 기능 수준이 필요 합니다. 자세한 내용은 참조 하세요. [Direct3D 기능 수준: 각 기능 수준에 대 한 개요](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)합니다.
 
-기능 수준을 사용 하 여, Direct3D 9, Microsoft Direct3D 10 또는 Direct3D 11에 대 한 응용 프로그램을 개발할 수 있으며 다음 9, 10 또는 11 하드웨어 (몇 가지 예외 포함)에서 실행 수도 있습니다. 자세한 내용은 [Direct3D 기능 수준](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx)을 참조하세요.
+기능 수준을 사용 하 여, Direct3D 9, Microsoft Direct3D 10 또는 Direct3D 11에 대 한 응용 프로그램을 개발할 수 있으며 다음 9, 10 또는 11 하드웨어 (몇 가지 예외 포함)에서 실행 수도 있습니다. 자세한 내용은 [Direct3D 기능 수준](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)을 참조하세요.
 
 ### <a name="stereo-rendering"></a>스테레오 렌더링
 
@@ -646,7 +646,7 @@ Microsoft DirectX 그래픽 인프라 (DXGI)는 일부의 Direct3D 10에 필요�
 
 V(디바이스) = V(모델) x M(모델 - 월드) x M(월드 - 보기) x M(보기 - 디바이스)
 
-여기서 
+각 항목이 나타내는 의미는 다음과 같습니다. 
 * M(모델 - 월드)은 모델 좌표를 월드 좌표로 변환하는 매트릭스로, [월드 변환 매트릭스](#world-transform-matrix)라고도 합니다. 이 매트릭스는 원형에서 제공합니다.
 * M(월드 - 보기)는 월드 좌표를 보기 좌표로 변환하는 매트릭스로, [보기 변환 매트릭스](#view-transform-matrix)라고도 합니다.
     * 이 매트릭스는 카메라의 보기 매트릭스에서 제공합니다. 보기 벡터(카메라에서 장면을 직접 가리키는 "정면 보기" 벡터 및 카메라와 수직으로 위쪽을 가리키는 "위 보기" 벡터)와 함께 카메라의 위치에 의해 정의됩니다.

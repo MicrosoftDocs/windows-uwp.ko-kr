@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 템플릿
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a4491fe9a3bb97a73652c40a2968f2f53c377b5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5eb36b66cc067111e2749ebd51a05994a011ba01
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634248"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367469"
 ---
 # <a name="directx-game-project-templates"></a>DirectX 게임 프로젝트 템플릿
 
@@ -19,7 +19,7 @@ ms.locfileid: "57634248"
 
 DirectX 및 UWP(유니버설 Windows 플랫폼) 템플릿을 사용하여 게임의 시작 지점으로 프로젝트를 신속하게 만들 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 프로젝트를 만들려면 다음을 수행해야 합니다.
@@ -33,7 +33,7 @@ Visual Studio 2015에는 세 가지 DirectX 및 UWP 템플릿이 포함 되어 �
 
 -   DirectX 11 앱(유니버설 Windows) - DirectX 11 앱(유니버설 Windows) 템플릿은 DirectX 11을 사용하여 앱 창에 직접 렌더링되는 UWP 프로젝트를 만듭니다.
 -   DirectX 12 앱(유니버설 Windows) - DirectX 12 앱(유니버설 Windows) 템플릿은 DirectX 12를 사용하여 앱 창에 직접 렌더링되는 UWP 프로젝트를 만듭니다.
--   DirectX 11 및 XAML 앱(유니버설 Windows) - DirectX 11 및 XAML 앱(유니버설 Windows) 템플릿은 DirectX 11을 사용하여 XAML 컨트롤 내에 렌더링되는 UWP 프로젝트를 만듭니다. 이 템플릿에서는 XAML UI 컨트롤을 사용할 수 있도록 [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)을 사용합니다. 따라서 사용자 인터페이스 요소를 더 쉽게 추가할 수 있지만, XAML 템플릿을 사용하면 성능이 저하될 수 있습니다.
+-   DirectX 11 및 XAML 앱(유니버설 Windows) - DirectX 11 및 XAML 앱(유니버설 Windows) 템플릿은 DirectX 11을 사용하여 XAML 컨트롤 내에 렌더링되는 UWP 프로젝트를 만듭니다. 이 템플릿에서는 XAML UI 컨트롤을 사용할 수 있도록 [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)을 사용합니다. 따라서 사용자 인터페이스 요소를 더 쉽게 추가할 수 있지만, XAML 템플릿을 사용하면 성능이 저하될 수 있습니다.
 
 어떤 템플릿을 선택할지는 성능과 사용하려는 기술에 따라 다릅니다.
 
@@ -76,4 +76,4 @@ DirectX 유니버설 Windows 템플릿은 다음 파일을 포함합니다.
 DirectX 게임을 새로 만드는 경우 다음 항목을 참조하세요.
 
 -   [DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-uwp-directx-game.md)
--   [C + + 및 DirectX에서 유니버설 Windows 플랫폼 게임 Marble Maze 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+-   [유니버설 Windows 플랫폼 게임 Marble Maze 개발 C++ 와 DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)

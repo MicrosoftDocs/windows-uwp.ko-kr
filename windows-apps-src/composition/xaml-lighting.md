@@ -10,18 +10,18 @@ dev_langs:
 - vb
 - cppcx
 - cppwinrt
-ms.openlocfilehash: 7d66eaa77f86deffd59ebc81360ccb8183afd7d6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9e13138ca634c075eba0c9b1331f6af4176de1eb
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654538"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360425"
 ---
 # <a name="xaml-lighting"></a>XAML 조명
 
 [**CompositionLight** ](/uwp/api/Windows.UI.Composition.CompositionLight) 개체와 함께에서 사용 됩니다 [ **SceneLightingEffect** ](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) 동적 조명 및 반사를 시뮬레이션할 수 있습니다.
 
-[  **시각 효과**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 및 XAML [**UIElements**](/uwp/api/Windows.UI.Xaml.UIElement)에 조명을 적용할 수 있습니다.
+[  **시각 효과**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual) 및 XAML [**UIElements**](/uwp/api/Windows.UI.Xaml.UIElement)에 조명을 적용할 수 있습니다.
 
 ## <a name="applying-lights-to-xaml-uielements"></a>XAML UIElements에 조명 적용
 
@@ -460,7 +460,7 @@ Platform::String^ OrangeSpotLight::GetId()
 다음 XAML ui 요소 또는 브러시에 명확 하 게이 빛을 적용할 수 있습니다. 이 예제에서는 다른 잠재적인 사용법을 보여 줍니다.
 
 > [!Important]
-> 에 대 한 [C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 두 개를 제거 `local:OrangeSpotLight.IsTarget="True"` 태그 아래에서. 연결 된 속성은 이미 코드 숨김에 설정 됩니다.
+> 에 대 한 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 두 개를 제거 `local:OrangeSpotLight.IsTarget="True"` 태그 아래에서. 연결 된 속성은 이미 코드 숨김에 설정 됩니다.
 
 ```xaml
 <StackPanel Width="100">

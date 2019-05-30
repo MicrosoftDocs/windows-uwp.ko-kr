@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 85d1c41fc10f509f3872fb1e4a0af5fa1e1e7c30
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0b7a60b3eba8545eeeea4cf477a40e044578c166
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631398"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371240"
 ---
 # <a name="primitive-topologies"></a>기본 토폴로지
 
@@ -58,7 +58,7 @@ Direct3D는 여러 개의 기본 토폴로지를 지원하는데, 이 토폴로�
 
 앞 그림의 기호는 다음 표에 설명되어 있습니다.
 
-| Symbol                                                                                   | 이름              | 설명                                                                         |
+| 기호                                                                                   | 이름              | 설명                                                                         |
 |------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------|
 | ![꼭짓점 기호](images/d3d10-primitive-topologies-vertex.png)                     | 꼭짓점            | 3D 공간의 점.                                                                |
 | ![권선 방향 기호](images/d3d10-primitive-topologies-winding-direction.png) | 권선 방향 | 기본 요소 조합 시 꼭짓점 순서. 시계 방향 또는 반시계 방향일 수 있습니다. |
@@ -69,7 +69,7 @@ Direct3D는 여러 개의 기본 토폴로지를 지원하는데, 이 토폴로�
 ## <a name="span-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspangenerating-multiple-strips"></a><span id="Generating_Multiple_Strips"></span><span id="generating_multiple_strips"></span><span id="GENERATING_MULTIPLE_STRIPS"></span>여러 줄무늬를 생성합니다.
 
 
-스트립 자르기를 통해 여러 개의 스트립을 생성할 수 있습니다. 명시적으로 [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660) HLSL 함수를 호출하거나 특수 인덱스 값을 인덱스 버퍼에 삽입하여 스트립 자르기를 수행할 수 있습니다. 이 값은 -1로서 32비트 인덱스의 경우에는 0xffffffff, 16비트 인덱스의 경우에는 0xffff입니다.
+스트립 자르기를 통해 여러 개의 스트립을 생성할 수 있습니다. 명시적으로 [RestartStrip](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-so-restartstrip) HLSL 함수를 호출하거나 특수 인덱스 값을 인덱스 버퍼에 삽입하여 스트립 자르기를 수행할 수 있습니다. 이 값은 -1로서 32비트 인덱스의 경우에는 0xffffffff, 16비트 인덱스의 경우에는 0xffff입니다.
 
 인덱스 –1은 현재 스트립의 명시적 '잘라내기' 또는 '다시 시작'을 나타냅니다. 이전 인덱스는 이전 기본 요소 또는 스트립을 완성하며, 다음 인덱스는 새 기본 요소 또는 스트립을 시작합니다.
 

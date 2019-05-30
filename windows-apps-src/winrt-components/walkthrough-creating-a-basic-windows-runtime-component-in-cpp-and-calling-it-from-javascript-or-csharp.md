@@ -6,18 +6,18 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1f147d98b8d88e912cc9fec40d5e29c34748167
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: 4bed6858998fe20a5dddf709cac1d2436f001c08
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291901"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363201"
 ---
 # <a name="walkthrough-creating-a-windows-runtime-component-in-ccx-and-calling-it-from-javascript-or-c"></a>연습: C++/CX로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출
 > [!NOTE]
 > 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. 사용 하 여 Windows 런타임 구성 요소를 만드는 방법에 알아보려면 C++/WinRT를 참조 하세요 [에서 이벤트를 작성 C++/WinRT](../cpp-and-winrt-apis/author-events.md)합니다.
 
-이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다. 이 연습을 시작하기 전에 쉽게 ref 클래스를 사용할 수 있게 해주는 ABI(추상 이진 인터페이스), ref 클래스, Visual C++ 구성 요소 확장 등의 개념을 이해해야 합니다. 자세한 내용은 [C++로 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-cpp.md) 및 [Visual C++ 언어 참조(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx)를 참조하세요.
+이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다. 이 연습을 시작하기 전에 쉽게 ref 클래스를 사용할 수 있게 해주는 ABI(추상 이진 인터페이스), ref 클래스, Visual C++ 구성 요소 확장 등의 개념을 이해해야 합니다. 자세한 내용은 [C++로 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-cpp.md) 및 [Visual C++ 언어 참조(C++/CX)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)를 참조하세요.
 
 ## <a name="creating-the-c-component-dll"></a>C++ 구성 요소 DLL 만들기
 이 예제에서는 구성 요소 프로젝트를 먼저 만들지만 JavaScript 프로젝트를 먼저 만들 수도 있습니다. 순서는 중요하지 않습니다.
@@ -34,7 +34,7 @@ ms.locfileid: "58291901"
 4. **확인** 단추를 선택합니다.
 
 ## <a name="to-add-an-activatable-class-to-the-component"></a>**구성 요소에 활성화 가능한 클래스를 추가 하려면**
-활성화 가능 클래스는 **new** 식(Visual Basic의 **New** 또는 C++의 **ref new**)을 사용하여 클라이언트 코드에서 만들 수 있는 클래스입니다. 구성 요소에서 **public ref class sealed**로 선언합니다. 실제로 Class1.h 및 .cpp 파일에는 이미 ref 클래스가 있습니다. 이름을 변경할 수 있지만 이 예제에서는 기본 이름인 Class1을 사용합니다. 필요한 경우 구성 요소에서 추가 ref 클래스 또는 일반 클래스를 정의할 수 있습니다. ref 클래스에 대한 자세한 내용은 [형식 시스템(C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx)을 참조하세요.
+활성화 가능 클래스는 **new** 식(Visual Basic의 **New** 또는 C++의 **ref new**)을 사용하여 클라이언트 코드에서 만들 수 있는 클래스입니다. 구성 요소에서 **public ref class sealed**로 선언합니다. 실제로 Class1.h 및 .cpp 파일에는 이미 ref 클래스가 있습니다. 이름을 변경할 수 있지만 이 예제에서는 기본 이름인 Class1을 사용합니다. 필요한 경우 구성 요소에서 추가 ref 클래스 또는 일반 클래스를 정의할 수 있습니다. ref 클래스에 대한 자세한 내용은 [형식 시스템(C++/CX)](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx)을 참조하세요.
 
 이러한 추가 \#include 지시문을 Class1.h:
 

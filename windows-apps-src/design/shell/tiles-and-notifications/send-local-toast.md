@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 410e8121aecfe13805586c9287f62444f80a1b1b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4c8def5d1a220fe0458dd5c244d875b991b2b76c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605928"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365936"
 ---
 # <a name="send-a-local-toast-notification"></a>로컬 알림 메시지 보내기
 
@@ -42,7 +42,7 @@ ms.locfileid: "57605928"
 > **중요 API**: [ToastNotification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification), [ToastNotificationActivatedEventArgs 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 다음은 이 문서의 내용을 완전히 이해하는 데 도움이 되는 항목입니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "57605928"
 > Windows 8/8.1과 달리 이제 앱에서 알림 메시지를 표시할 수 있음을 앱의 매니페스트에 선언할 필요가 없습니다. 모든 앱에서 알림 메시지를 보내고 표시할 수 있습니다.
 
 > [!NOTE]
-> **Windows 8/8.1 앱**: 사용 하십시오 합니다 [설명서를 보관](https://msdn.microsoft.com/library/windows/apps/xaml/hh868254.aspx)합니다.
+> **Windows 8/8.1 앱**: 사용 하십시오 합니다 [설명서를 보관](https://docs.microsoft.com/previous-versions/windows/apps/hh868254(v=win.10))합니다.
 
 
 ## <a name="install-nuget-packages"></a>NuGet 패키지 설치
@@ -238,7 +238,7 @@ toast.ExpirationTime = DateTime.Now.AddDays(2);
 
 보내는 알림을 프로그래밍 방식으로 제거하거나 바꾸려면 Tag 속성과 Group 속성(옵션)을 사용하여 알림에 대한 기본 키를 제공해야 합니다. 그런 다음 나중에 이 기본 키를 사용하여 알림을 제거하거나 바꿀 수 있습니다.
 
-대체/를 제거 하는 이미 자세한 알림 메시지 배달를 참조 하세요 [빠른 시작: 관리 센터 (XAML)에서 알림 관리](https://msdn.microsoft.com/library/windows/apps/xaml/dn631260.aspx)합니다.
+대체/를 제거 하는 이미 자세한 알림 메시지 배달를 참조 하세요 [빠른 시작: 관리 센터 (XAML)에서 알림 관리](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10))합니다.
 
 결합된 Tag와 Group은 복합 기본 키 역할을 합니다. 그룹은 "wallPosts", "messages", "friendRequests" 등과 같은 그룹을 할당할 수 있는 보다 일반적인 식별자입니다. 다음 태그는 고유 하 게 식별 그룹 내에서 자체 알림. 그러면 일반 그룹을 사용하여 [RemoveGroup API](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_)로 해당 그룹에서 모든 알림을 제거할 수 있습니다.
 
@@ -270,7 +270,7 @@ UWP 앱은 자체 알림을 제거하고 지우는 역할을 합니다. 앱이 �
 3. 앱에서 대화를 열고 해당 대화에 대한 앱 제공 그룹에 [RemoveGroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_)을 사용하여 해당 대화에 대한 모든 알림을 지웁니다.
 4. 이제 알림 센터에 남은 대화에 대한 오래된 알림이 없으므로 사용자의 알림 센터에 알림 상태가 적절히 반영됩니다.
 
-특정 알림을 제거 하거나 모든 알림을 해제 하는 방법에 대 한 자세한 참조 [빠른 시작: 관리 센터 (XAML)에서 알림 관리](https://msdn.microsoft.com/library/windows/apps/xaml/dn631260.aspx)합니다.
+특정 알림을 제거 하거나 모든 알림을 해제 하는 방법에 대 한 자세한 참조 [빠른 시작: 관리 센터 (XAML)에서 알림 관리](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10))합니다.
 
 
 ## <a name="handling-activation"></a>활성화 처리

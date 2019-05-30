@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 렌더링, 장면, 깊이 테스트, direct3d, 그림자
 ms.localizationpriority: medium
-ms.openlocfilehash: 237da82ef51466ae2460c3be27486091bf4066f3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d1c2c4e5d45b28c318085f4ce257b587f23f1426
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630458"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368104"
 ---
 # <a name="render-the-scene-with-depth-testing"></a>깊이 테스트로 장면 렌더링
 
@@ -67,7 +67,7 @@ PixelShaderInput main(VertexShaderInput input)
 ## <a name="test-whether-the-position-is-in-the-light-frustum"></a>위치가 광원 절두체에 있는지 여부 테스트
 
 
-먼저 X 및 Y 좌표를 정규화하여 픽셀이 광원의 보기 절두체에 있는지 확인합니다. 범위 내에서 둘 다 하는 경우 \[0, 1\] 섀도에 픽셀의 가능성이 있습니다. 그렇지 않으면 깊이 테스트를 건너뛸 수 있습니다. 셰이더는 [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231)를 호출하고 원래 값과 결과를 비교하여 빠르게 이를 테스트할 수 있습니다.
+먼저 X 및 Y 좌표를 정규화하여 픽셀이 광원의 보기 절두체에 있는지 확인합니다. 범위 내에서 둘 다 하는 경우 \[0, 1\] 섀도에 픽셀의 가능성이 있습니다. 그렇지 않으면 깊이 테스트를 건너뛸 수 있습니다. 셰이더는 [Saturate](https://docs.microsoft.com/windows/desktop/direct3dhlsl/saturate)를 호출하고 원래 값과 결과를 비교하여 빠르게 이를 테스트할 수 있습니다.
 
 ```cpp
 // Compute texture coordinates for the current point's location on the shadow map.
@@ -89,7 +89,7 @@ if ((saturate(shadowTexCoords.x) == shadowTexCoords.x) &&
 ## <a name="depth-test-against-the-shadow-map"></a>그림자 맵에 대한 깊이 테스트
 
 
-샘플 비교 함수([SampleCmp](https://msdn.microsoft.com/library/windows/desktop/bb509696) 또는 [SampleCmpLevelZero](https://msdn.microsoft.com/library/windows/desktop/bb509697))를 사용하여 깊이 맵에 대해 광원 공간에서 픽셀의 깊이를 테스트합니다. `z / w`를 사용하여 정규화된 광원 공간 깊이 값을 계산하고 값을 비교 함수에 전달합니다. 여기서는 샘플러에 대해 LessOrEqual 비교 테스트를 사용하므로 비교 테스트에 통과하면 내장 함수에서 0을 반환하며, 이는 픽셀이 그림자에 있다는 것을 나타냅니다.
+샘플 비교 함수([SampleCmp](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmp) 또는 [SampleCmpLevelZero](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmplevelzero))를 사용하여 깊이 맵에 대해 광원 공간에서 픽셀의 깊이를 테스트합니다. `z / w`를 사용하여 정규화된 광원 공간 깊이 값을 계산하고 값을 비교 함수에 전달합니다. 여기서는 샘플러에 대해 LessOrEqual 비교 테스트를 사용하므로 비교 테스트에 통과하면 내장 함수에서 0을 반환하며, 이는 픽셀이 그림자에 있다는 것을 나타냅니다.
 
 ```cpp
 // Use an offset value to mitigate shadow artifacts due to imprecise 

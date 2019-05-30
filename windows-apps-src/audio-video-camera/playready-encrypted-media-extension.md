@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c598868610e42e0f2ad64ef2d4fedfb48c4d91e9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ad304d22fd1c519f7364ac69882eeaac9fa1a5c7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598618"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360707"
 ---
 # <a name="playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장
 
@@ -72,7 +72,7 @@ PlayReady 하드웨어 DRM을 사용하려면 JavaScript 웹앱에서 키 시스
 경우에 따라 일부 콘텐츠는 하드웨어 DRM에서 지원되지 않습니다. Cocktail 콘텐츠는 하드웨어 DRM에서 지원되지 않습니다. Cocktail 콘텐츠를 재생해야 하는 경우 하드웨어 DRM을 옵트아웃(opt out)해야 합니다. HEVC를 지원하는 하드웨어 DRM도 있고 지원하지 않는 하드웨어 DRM도 있습니다. HEVC 콘텐츠를 재생하려는 경우 DRM에서 HEVC 콘텐츠를 지원하지 않으면 역시 하드웨어 DRM을 옵트아웃(opt out)할 수 있습니다.
 
 > [!NOTE]
-> HEVC 콘텐츠가 지원되는지를 확인하려면 `com.microsoft.playready`를 인스턴스화한 후 [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) 메서드를 사용하세요.
+> HEVC 콘텐츠가 지원되는지를 확인하려면 `com.microsoft.playready`를 인스턴스화한 후 [**PlayReadyStatics.CheckSupportedHardware**](https://docs.microsoft.com/uwp/api/windows.media.protection.playready.playreadystatics.checksupportedhardware) 메서드를 사용하세요.
 
 ## <a name="add-secure-stop-to-your-web-app"></a>웹앱에 보안 중지 추가
 
@@ -298,7 +298,7 @@ function foo() {
 
 자세한 내용은 [샘플 응용 프로그램](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [PlayReady DRM](playready-client-sdk.md)
 
 

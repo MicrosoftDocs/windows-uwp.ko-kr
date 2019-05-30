@@ -8,18 +8,18 @@ keywords: 시각적 피드백, 포커스 피드백, 터치 피드백, 접촉 시
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b043ec71eb7d5883a1b22c4f0d8f43824034d454
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1f716b930a4d8b96a55a5741e5a520be624526fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640788"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363535"
 ---
 # <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 
 시각적 피드백을 사용하여 조작이 감지, 해석 및 처리될 때 사용자에게 표시할 수 있습니다. 시각적 피드백은 조작 의지를 북돋아 사용자에게 도움이 될 수 있습니다. 시각적 피드백은 조작이 성공했음을 표시하여 사용자의 제어 감각을 향상합니다. 또한 시스템 상태를 전달하고 오류를 줄여 줍니다.
 
-> **중요 API**:  [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)하십시오 [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)하십시오 [ **Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
+> **중요 API**:  [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
 
 ## <a name="recommendations"></a>권장 사항
 
@@ -27,7 +27,7 @@ ms.locfileid: "57640788"
     - 시각적 상태 속성을 비롯한 컨트롤 속성 사용자 지정에 대한 추가 정보는 [XAML 스타일](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles)을 참조하세요.
     - 컨트롤 템플릿 변경한 대한 자세한 내용은 [UserControl 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)를 참조하세요.
     - 템플릿 컨트롤에 중요한 변경을 하려는 경우 사용자 지정 템플릿의 컨트롤을 만드는 것이 좋습니다. 사용자 지정 템플릿의 컨트롤의 예는 [사용자 지정 편집 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl)을 참조합니다.
-- 앱 사용에 방해가 될 수 있는 경우에는 터치 시각화를 사용하지 마세요. 자세한 내용은 [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969)를 참조하세요.
+- 앱 사용에 방해가 될 수 있는 경우에는 터치 시각화를 사용하지 마세요. 자세한 내용은 [**ShowGestureFeedback**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback)를 참조하세요.
 - 반드시 필요한 경우가 아니면 피드백을 표시하지 마세요. 다른 곳에서 제공되지 않는 가치를 추가하는 경우가 아니면 시각적 피드백을 표시하지 않고 UI를 깔끔하고 간결하게 유지합니다.
 - 기본 제공 Windows 제스처의 시각적 피드백 동작을 과도하게 사용자 지정하지 마세요. 사용자 지정하면 일관되지 않고 혼란을 주는 사용자 환경이 생성될 수 있습니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "57640788"
 
 시각적 피드백은 일반적으로 입력 디바이스(터치, 터치 패드, 마우스, 펜/스타일러스, 키보드 등)에 따라 달라집니다. 예를 들어 마우스에 대한 기본 제공 피드백은 대체로 커서 이동 및 변경인 반면 터치와 펜에는 접촉 시각화가 필요하고 키보드 입력 및 탐색은 포커스 사각형과 강조 표시를 사용합니다.
 
-[  **ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969)을 사용하여 플랫폼 제스처에 대한 피드백 동작을 설정합니다.
+[  **ShowGestureFeedback**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback)을 사용하여 플랫폼 제스처에 대한 피드백 동작을 설정합니다.
 
 피드백 UI를 사용자 지정하는 경우 모든 입력 모드를 지원하고 모든 입력 모드에 적합한 피드백을 제공해야 합니다.
 
@@ -73,7 +73,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 ```
 ![높은 가시성 포커스 화면 효과 여백 두께](images/FocusMargin.png)
 
-여백은 [**Thickness**](https://msdn.microsoft.com/library/system.windows.thickness) 형식의 속성이므로 컨트롤의 특정 측면에만 표시되도록 사용자 지정할 수 있습니다. 아래 내용을 참조하세요. ![높은 가시성 포커스 시각적 여백 두께 아래쪽만](images/FocusThicknessSide.png)
+여백은 [**Thickness**](https://docs.microsoft.com/dotnet/api/system.windows.thickness?redirectedfrom=MSDN) 형식의 속성이므로 컨트롤의 특정 측면에만 표시되도록 사용자 지정할 수 있습니다. 아래 내용을 참조하세요. ![높은 가시성 포커스 시각적 여백 두께 아래쪽만](images/FocusThicknessSide.png)
 
 여백은 컨트롤의 시각적 범위와 포커스 화면 효과 *보조 테두리* 시작 부분 사이의 간격입니다. 기본 여백은 컨트롤 범위에서 **1px**입니다. **FocusVisualMargin** 속성을 변경하여 컨트롤별로 이 여백을 편집할 수 있습니다.
 ```XAML
@@ -112,7 +112,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 * [이동에 대 한 지침](guidelines-for-panning.md)
 
 **개발자를 위한**
-* [사용자 지정 사용자 상호 작용](https://msdn.microsoft.com/library/windows/apps/mt185599)
+* [사용자 지정 사용자 상호 작용](https://developer.microsoft.com/windows/design/inputs-devices)
 
 **샘플**
 * [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
@@ -127,7 +127,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 * [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
 * [입력: Windows 8 제스처 샘플](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처 (c + +) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [입력: 조작 및 제스처 (C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
 * [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 

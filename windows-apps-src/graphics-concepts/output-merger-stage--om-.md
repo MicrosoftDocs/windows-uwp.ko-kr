@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a77048bed3ad27f2040a672d93380d0250f9aa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 177d5a8fed47396fa694bd8fb88baea8d8b7bbb3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641098"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371180"
 ---
 # <a name="output-merger-om-stage"></a>OM(출력 병합기) 단계
 
@@ -37,7 +37,7 @@ OM 단계는 다음과 같은 조합을 사용하여 최종 렌더링된 픽셀 
 
 ![데이터 혼합 작동 방식 다이어그램](images/d3d10-blend-state.png)
 
-개념상 이 순서도가 출력 병합기 단계에서 두 번 구현되는 것으로 시각화할 수 있는데, 첫 번째는 RGB 데이터를 혼합하며 이와 동시에 두 번째가 알파 데이터를 혼합합니다. API를 사용하여 혼합 상태를 만들고 설정하는 방법은 [혼합 기능 구성](https://msdn.microsoft.com/library/windows/desktop/bb205072)을 참조하세요.
+개념상 이 순서도가 출력 병합기 단계에서 두 번 구현되는 것으로 시각화할 수 있는데, 첫 번째는 RGB 데이터를 혼합하며 이와 동시에 두 번째가 알파 데이터를 혼합합니다. API를 사용하여 혼합 상태를 만들고 설정하는 방법은 [혼합 기능 구성](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-blend-state)을 참조하세요.
 
 고정 함수 blend는 각 렌더링 대상에 대해 독립적으로 활성화할 수 있습니다. 그러나 blend 컨트롤 세트가 하나뿐이므로 혼합이 활성화된 모든 RenderTarget에 동일한 blend가 적용됩니다. Blend 값(BlendFactor 포함)은 항상 혼합 전에 렌더링-대상 형식 범위에 고정됩니다. 고정은 렌더링 대상별로 이루어지며, 렌더링 대상 유형을 사용합니다. 유일한 예외는 고정되지 않는 float16, float11 또는 float10 형식으로서 이 형식들의 혼합 연산은 출력 형식과 적어도 동일한 정확도/범위로 수행될 수 있습니다. 모든 경우(0.0 blend weight 포함)에 NaN과 서명된 0이 전파됩니다.
 
@@ -79,7 +79,7 @@ OM(출력 병합기) 단계는 다음과 같은 조합을 사용하여 최종 �
 -   렌더링 대상의 콘텐츠
 -   깊이/스텐실 버퍼의 콘텐츠.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
 
 
 ### <a name="span-idoutput-write-mask-overviewspanspan-idoutput-write-mask-overviewspanspan-idoutput-write-mask-overviewspanoutput-write-mask-overview"></a><span id="Output-write-mask-overview"></span><span id="output-write-mask-overview"></span><span id="OUTPUT-WRITE-MASK-OVERVIEW"></span>출력 쓰기 마스크 개요

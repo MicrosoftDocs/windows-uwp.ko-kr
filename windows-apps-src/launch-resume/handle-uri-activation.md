@@ -6,23 +6,23 @@ ms.date: 07/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d8cbb3d7e245b747a7637726df9559f5fa87a6d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 568863969dc4b5bc028301d37a02c64b25244cde
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625598"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371520"
 ---
 # <a name="handle-uri-activation"></a>URI 활성화 처리
 
 **중요 한 Api**
 
--   [**Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742)
--   [**Windows.UI.Xaml.Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)
+-   [**Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs)
+-   [**Windows.UI.Xaml.Application.OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated)
 
 앱을 URI(Uniform Resource Identifier) 체계 이름의 기본 처리기로 등록하는 방법을 알아봅니다. Windows 데스크톱 앱과 UWP(유니버설 Windows 플랫폼) 앱 모두 URI 스키마 이름의 기본 처리기로 등록할 수 있습니다. 사용자가 앱을 URI 스키마 이름의 기본 처리기로 선택하면 해당 형식의 URI를 시작할 때마다 앱이 활성화됩니다.
 
-해당 형식의 URI 스키마에 대해 모든 URI 시작을 처리하려는 경우에만 URI 스키마 이름을 등록하는 것이 좋습니다. URI 스키마 이름을 등록할 경우에는 앱이 해당 URI 스키마에 대해 활성화될 때 기대되는 기능을 최종 사용자에게 제공해야 합니다. 예를 들어, 앱을 등록 mailto: 사용자는 새 전자 메일을 구성할 수 있도록 URI 구성표 이름을 새 전자 메일 메시지를 열어야 합니다. URI 연결에 대한 자세한 내용은 [파일 형식 및 URI에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh700321)을 참조하세요.
+해당 형식의 URI 스키마에 대해 모든 URI 시작을 처리하려는 경우에만 URI 스키마 이름을 등록하는 것이 좋습니다. URI 스키마 이름을 등록할 경우에는 앱이 해당 URI 스키마에 대해 활성화될 때 기대되는 기능을 최종 사용자에게 제공해야 합니다. 예를 들어, 앱을 등록 mailto: 사용자는 새 전자 메일을 구성할 수 있도록 URI 구성표 이름을 새 전자 메일 메시지를 열어야 합니다. URI 연결에 대한 자세한 내용은 [파일 형식 및 URI에 대한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/files/index)을 참조하세요.
 
 다음 단계에서는 사용자 지정 URI 스키마 이름인 `alsdk://`를 등록하는 방법 및 사용자가 `alsdk://` URI를 시작할 때 앱을 활성화하는 방법을 보여 줍니다.
 
@@ -35,12 +35,12 @@ ms.locfileid: "57625598"
 
 1. **솔루션 탐색기**에서 package.appxmanifest를 두 번 클릭하여 매니페스트 디자이너를 엽니다. **선언** 탭을 선택하고 **사용 가능한 선언** 드롭다운 목록에서 **프로토콜**을 선택한 다음 **추가**를 클릭합니다.
 
-    다음은 프로토콜에 대한 매니페스트 디자이너에서 입력할 수 있는 각 필드에 대한 간략한 설명입니다(자세한 내용은 [**AppX Package Manifest**](https://msdn.microsoft.com/library/windows/apps/dn934791) 참조).
+    다음은 프로토콜에 대한 매니페스트 디자이너에서 입력할 수 있는 각 필드에 대한 간략한 설명입니다(자세한 내용은 [**AppX Package Manifest**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-extension) 참조).
 
 | 필드 | 설명 |
 |-------|-------------|
-| **로고** | **제어판**의 [기본 프로그램 설정](https://msdn.microsoft.com/library/windows/desktop/cc144154)에서 URI 스키마 이름을 식별하는 데 사용되는 로고를 지정합니다. 로고를 지정하지 않으면 앱의 작은 로고가 사용됩니다. |
-| **표시 이름** | **제어판**의 [기본 프로그램 설정](https://msdn.microsoft.com/library/windows/desktop/cc144154)에서 URI 스키마 이름을 식별하는 표시 이름을 지정합니다. |
+| **Logo** | **제어판**의 [기본 프로그램 설정](https://docs.microsoft.com/windows/desktop/shell/default-programs)에서 URI 스키마 이름을 식별하는 데 사용되는 로고를 지정합니다. 로고를 지정하지 않으면 앱의 작은 로고가 사용됩니다. |
+| **표시 이름** | **제어판**의 [기본 프로그램 설정](https://docs.microsoft.com/windows/desktop/shell/default-programs)에서 URI 스키마 이름을 식별하는 표시 이름을 지정합니다. |
 | **이름** | Uri 스키마 이름을 선택합니다. |
 |  | **참고** 이름은 모두 소문자여야 합니다. |
 |  | **예약되거나 금지된 파일 형식** 예약되거나 금지되어 UWP 앱에 등록할 수 없는 URI 체계의 사전순 목록은 [예약된 URI 체계 이름 및 파일 형식](reserved-uri-scheme-names.md)을 참조하세요. |
@@ -55,7 +55,7 @@ ms.locfileid: "57625598"
 4. **이름**으로 `alsdk`를 입력합니다.
 5. Ctrl+S를 눌러 package.appxmanifest에 변경 사항을 저장합니다.
 
-    이렇게 하면 이와 같은 [**Extension**](https://msdn.microsoft.com/library/windows/apps/br211400) 요소가 패키지 매니페스트에 추가됩니다. **windows.protocol** 범주는 앱이 `alsdk` URI 체계 이름을 처리함을 나타냅니다.
+    이렇게 하면 이와 같은 [**Extension**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-extension) 요소가 패키지 매니페스트에 추가됩니다. **windows.protocol** 범주는 앱이 `alsdk` URI 체계 이름을 처리함을 나타냅니다.
 
 ```xml
     <Applications>
@@ -75,11 +75,11 @@ ms.locfileid: "57625598"
 
 ## <a name="step-2-add-the-proper-icons"></a>2단계: 적절 한 아이콘 추가
 
-URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양한 위치(예: 기본 프로그램 제어판)에 표시되는 아이콘이 있습니다. 이 목적을 위해 프로젝트에 44x44 아이콘을 포함합니다. 앱 타일 로고의 모양을 일치시키고 아이콘을 투명으로 설정하는 대신 앱의 배경색을 사용합니다. 로고를 안쪽 여백 없이 가장자리로 확장합니다. 흰색 배경에서 아이콘을 테스트합니다. 아이콘에 대한 자세한 내용은 [타일 및 아이콘 자산에 대한 지침](https://docs.microsoft.com/windows/uwp/shell/tiles-and-notifications/app-assets)을 참조하세요.
+URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양한 위치(예: 기본 프로그램 제어판)에 표시되는 아이콘이 있습니다. 이 목적을 위해 프로젝트에 44x44 아이콘을 포함합니다. 앱 타일 로고의 모양을 일치시키고 아이콘을 투명으로 설정하는 대신 앱의 배경색을 사용합니다. 로고를 안쪽 여백 없이 가장자리로 확장합니다. 흰색 배경에서 아이콘을 테스트합니다. 참조 [앱 아이콘 및 로고](https://docs.microsoft.com/windows/uwp/design/style/app-icons-and-logos) 아이콘에 대 한 자세한 내용은 합니다.
 
 ## <a name="step-3-handle-the-activated-event"></a>3단계: 활성화 된 이벤트를 처리 합니다.
 
-[  **OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 이벤트 처리기는 모든 활성화 이벤트를 받습니다. **Kind** 속성은 활성화 이벤트의 형식을 나타냅니다. 이 예제는 [**Protocol**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.activation.activationkind.aspx#Protocol) 활성화 이벤트를 처리하도록 설정되었습니다.
+[  **OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) 이벤트 처리기는 모든 활성화 이벤트를 받습니다. **Kind** 속성은 활성화 이벤트의 형식을 나타냅니다. 이 예제는 [**Protocol**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind) 활성화 이벤트를 처리하도록 설정되었습니다.
 
 ```csharp
 public partial class App
@@ -146,7 +146,7 @@ void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs
 
 URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 앱 실행](launch-default-app.md)을 참조하세요.
 
-앱이 새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML **Frame**에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다. 시작 및 파일 계약에 단일 XAML **Frame**을 사용하도록 결정한 앱은 새 페이지를 탐색하기 전에 **Frame**의 탐색 저널에서 페이지를 지워야 합니다.
+앱이 새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML **Frame**에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다. 시작 및 파일 계약에 단일 XAML **Frame**을 사용하도록 결정한 앱은 새 페이지를 탐색하기 전에 **Frame**의 탐색 저널에서 페이지를 지워야 합니다.
 
 프로토콜 활성화를 통해 시작된 경우 앱은 사용자가 앱의 최상위 페이지로 다시 이동할 수 있도록 하는 UI를 포함해야 합니다.
 
@@ -160,9 +160,9 @@ URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 �
 > [!NOTE]
 > 프로토콜 계약을 통해 시작 되 면 해당 뒤로 단추는 사용자 다시 앱의 이전 내용 아닌 앱을 시작 하는 화면에 있는지 확인 합니다.
 
-앱이 새 URI 대상을 여는 각 활성화 이벤트에 대해 새 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML **Frame**에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다.
+앱이 새 URI 대상을 여는 각 활성화 이벤트에 대해 새 XAML [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML **Frame**에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다.
 
-앱에서 시작 및 프로토콜 계약에 단일 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 사용하도록 결정하는 경우 새 페이지를 탐색하기 전에 **Frame**의 탐색 저널에서 페이지를 지워야 합니다. 프로토콜 계약을 통해 시작된 경우 사용자가 앱의 맨 위로 다시 이동할 수 있도록 하는 UI를 앱에 포함하는 것이 좋습니다.
+앱에서 시작 및 프로토콜 계약에 단일 XAML [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)을 사용하도록 결정하는 경우 새 페이지를 탐색하기 전에 **Frame**의 탐색 저널에서 페이지를 지워야 합니다. 프로토콜 계약을 통해 시작된 경우 사용자가 앱의 맨 위로 다시 이동할 수 있도록 하는 UI를 앱에 포함하는 것이 좋습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -172,20 +172,20 @@ URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 �
 
 ### <a name="concepts"></a>개념
 
-- [기본 프로그램](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-- [파일 형식 및 URI 연결 모델](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+- [기본 프로그램](https://docs.microsoft.com/windows/desktop/shell/default-programs)
+- [파일 형식 및 URI 연결 모델](https://docs.microsoft.com/windows/desktop/w8cookbook/file-type-and-protocol-associations-model)
 
-### <a name="tasks"></a>작업
+### <a name="tasks"></a>태스크
 
 - [URI에 대한 기본 앱 실행](launch-default-app.md)
 - [파일 활성화 처리](handle-file-activation.md)
 
 ### <a name="guidelines"></a>지침
 
-- [파일 형식 및 Uri에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321)
+- [파일 형식 및 Uri에 대 한 지침](https://docs.microsoft.com/windows/uwp/files/index)
 
-### <a name="reference"></a>참고자료
+### <a name="reference"></a>참조
 
-- [AppX 패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/dn934791)
-- [Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/br224742)
-- [Windows.UI.Xaml.Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330)
+- [AppX 패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-extension)
+- [Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs)
+- [Windows.UI.Xaml.Application.OnActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated)

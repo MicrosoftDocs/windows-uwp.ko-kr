@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, 
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c12e5cb7012ba9ff9a4ed383427e37b79835983
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7eb7f085c5e4daa46cfa6c256ec3938be3c13d82
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645848"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365352"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Windows Ink 스트로크 데이터 저장 및 검색
 
@@ -23,17 +23,17 @@ Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 �
 > [!NOTE]
 > ISF는 잉크 데이터를 가장 많이 압축한 영구적 표시입니다. GIF 파일과 같은 이진 문서 형식에 포함하거나 클립보드에 직접 배치할 수 있습니다.
 
-> **중요 API**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)하십시오 [ **Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **중요 API**: [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas), [**Windows.UI.Input.Inking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
 
 ## <a name="save-ink-strokes-to-a-file"></a>파일에 잉크 스트로크 저장
 
-여기서는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에 그려진 잉크 스트로크를 저장하는 방법을 설명합니다.
+여기서는 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤에 그려진 잉크 스트로크를 저장하는 방법을 설명합니다.
 
 **이 샘플을 다운로드할 [저장 하 고 잉크 스트로크 잉크 직렬화 형식 (ISF) 파일에서 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  먼저 UI를 설정합니다.
 
-    UI에는 "저장", "로드" 및 "지우기" 단추와 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)가 포함됩니다.
+    UI에는 "저장", "로드" 및 "지우기" 단추와 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)가 포함됩니다.
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -63,7 +63,7 @@ Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 �
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
+    [  **InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
 ```csharp
 public MainPage()
     {
@@ -85,11 +85,11 @@ public MainPage()
 
 3.  마지막으로, **저장** 단추의 클릭 이벤트 처리기에 잉크를 저장합니다.
 
-    [  **FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하면 잉크 데이터가 저장되는 파일과 위치를 모두 사용자가 선택할 수 있습니다.
+    [  **FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker)를 사용하면 잉크 데이터가 저장되는 파일과 위치를 모두 사용자가 선택할 수 있습니다.
 
-    파일을 선택한 후 [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241731)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241635) 스트림 설정을 엽니다.
+    파일을 선택한 후 [**ReadWrite**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IRandomAccessStream)에 대한 [**IRandomAccessStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode) 스트림 설정을 엽니다.
 
-    그런 다음, [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/br242114)를 호출하여 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)로 관리되는 잉크 스트로크를 스트림으로 직렬화합니다.
+    그런 다음, [**SaveAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.iinkstrokecontainer.saveasync)를 호출하여 [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer)로 관리되는 잉크 스트로크를 스트림으로 직렬화합니다.
 
 ```csharp
 // Save ink data to a file.
@@ -155,17 +155,17 @@ public MainPage()
 ```
 
 > [!NOTE]
-> GIF는 잉크 데이터를 저장할 수 있는 유일한 파일 형식입니다. 그러나 [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) 메서드(다음 섹션에서 설명)는 이전 버전과의 호환성을 위해 추가 형식을 지원합니다.
+> GIF는 잉크 데이터를 저장할 수 있는 유일한 파일 형식입니다. 그러나 [**LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.loadasync) 메서드(다음 섹션에서 설명)는 이전 버전과의 호환성을 위해 추가 형식을 지원합니다.
 
 ## <a name="load-ink-strokes-from-a-file"></a>파일에서 잉크 스트로크 로드
 
-다음은 파일에서 잉크 스트로크를 로드하고 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에서 해당 잉크 스트로크를 렌더링하는 방법을 설명합니다.
+다음은 파일에서 잉크 스트로크를 로드하고 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤에서 해당 잉크 스트로크를 렌더링하는 방법을 설명합니다.
 
 **이 샘플을 다운로드할 [저장 하 고 잉크 스트로크 잉크 직렬화 형식 (ISF) 파일에서 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  먼저 UI를 설정합니다.
 
-    UI에는 "저장", "로드" 및 "지우기" 단추와 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)가 포함됩니다.
+    UI에는 "저장", "로드" 및 "지우기" 단추와 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)가 포함됩니다.
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -195,7 +195,7 @@ public MainPage()
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
+    [  **InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
 ```csharp
 public MainPage()
     {
@@ -217,11 +217,11 @@ public MainPage()
 
 3.  마지막으로, **로드** 단추의 클릭 이벤트 처리기에서 잉크를 로드합니다.
 
-    [  **FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하면 저장된 잉크 데이터를 검색할 파일과 위치를 모두 사용자가 선택할 수 있습니다.
+    [  **FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker)를 사용하면 저장된 잉크 데이터를 검색할 파일과 위치를 모두 사용자가 선택할 수 있습니다.
 
-    파일을 선택한 후 [**Read**](https://msdn.microsoft.com/library/windows/apps/br241731)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241635) 스트림 설정을 엽니다.
+    파일을 선택한 후 [**Read**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IRandomAccessStream)에 대한 [**IRandomAccessStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode) 스트림 설정을 엽니다.
 
-    그런 다음, [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607)를 호출하여 저장된 잉크 스트로크를 읽고, 역직렬화하고, [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)에 로드합니다. 스트로크를 **InkStrokeContainer**에 로드하면 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)가 해당 스트로크를 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)로 즉시 렌더링합니다.
+    그런 다음, [**LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.loadasync)를 호출하여 저장된 잉크 스트로크를 읽고, 역직렬화하고, [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer)에 로드합니다. 스트로크를 **InkStrokeContainer**에 로드하면 [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)가 해당 스트로크를 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)로 즉시 렌더링합니다.
 
     > [!NOTE]
     > InkStrokeContainer의 모든 기존 스트로크는 새 스트로크가 로드되기 전에 지워집니다.
@@ -260,7 +260,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 ```
 
 > [!NOTE]
-> GIF는 잉크 데이터를 저장할 수 있는 유일한 파일 형식입니다. 그러나 [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) 메서드는 이전 버전과의 호환성을 위해 다음 형식을 지원합니다.
+> GIF는 잉크 데이터를 저장할 수 있는 유일한 파일 형식입니다. 그러나 [**LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.loadasync) 메서드는 이전 버전과의 호환성을 위해 다음 형식을 지원합니다.
 
 | 형식                    | 설명 |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -273,7 +273,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 
 다음은 클립보드를 사용하여 앱 간에 잉크 스트로크를 전송하는 방법을 설명합니다.
 
-기본 제공 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) 잘라내기 및 복사 명령에서 클립보드 기능을 지원하려면 먼저 잉크 스트로크를 하나 이상 선택해야 합니다.
+기본 제공 [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) 잘라내기 및 복사 명령에서 클립보드 기능을 지원하려면 먼저 잉크 스트로크를 하나 이상 선택해야 합니다.
 
 이 예제에서는 펜 단추(또는 마우스 오른쪽 단추)를 사용하여 입력을 수정할 때 스트로크 선택을 사용합니다. 스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 고급 처리를 위한 통과 입력을 참조하세요.
 
@@ -281,7 +281,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 
 1.  먼저 UI를 설정합니다.
 
-    UI에는 "잘라내기", "복사", "붙여넣기" 및 "지우기" 단추와 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 및 선택 캔버스가 포함됩니다.
+    UI에는 "잘라내기", "복사", "붙여넣기" 및 "지우기" 단추와 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 및 선택 캔버스가 포함됩니다.
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -317,7 +317,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [  **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 선택 기능에 대한 포인터 및 스트로크 이벤트뿐만 아니라 단추의 클릭 이벤트에 대한 수신기도 여기서 선언합니다.
+    [  **InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)). 선택 기능에 대한 포인터 및 스트로크 이벤트뿐만 아니라 단추의 클릭 이벤트에 대한 수신기도 여기서 선언합니다.
 
     스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 고급 처리를 위한 통과 입력을 참조하세요.
 ```csharp
@@ -367,9 +367,9 @@ public MainPage()
 
 3.  마지막으로, 스트로크 선택 지원을 추가한 후 **잘라내기**, **복사** 및 **붙여넣기** 단추의 클릭 이벤트 처리기에서 클립보드 기능을 구현합니다.
 
-    잘라내기의 경우 먼저, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/br244232)의 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)에서 [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/dn922011)를 호출합니다.
+    잘라내기의 경우 먼저, [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.copyselectedtoclipboard)의 [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer)에서 [**CopySelectedToClipboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter)를 호출합니다.
 
-    그런 다음, [**DeleteSelected**](https://msdn.microsoft.com/library/windows/apps/br244233)를 호출하여 잉크 캔버스에서 스트로크를 제거합니다.
+    그런 다음, [**DeleteSelected**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.deleteselected)를 호출하여 잉크 캔버스에서 스트로크를 제거합니다.
 
     마지막으로, 선택 캔버스에서 선택 스트로크를 모두 삭제합니다.
     
@@ -403,7 +403,7 @@ private void btnCut_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-복사의 경우, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)의 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)에서 [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/br244232)를 호출하면 됩니다.
+복사의 경우, [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter)의 [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer)에서 [**CopySelectedToClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.copyselectedtoclipboard)를 호출하면 됩니다.
 
 
 ```csharp
@@ -413,9 +413,9 @@ private void btnCopy_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-붙여넣기의 경우, 클립보드의 내용이 잉크 캔버스에 붙여 넣어지도록 하기 위해 [**CanPasteFromClipboard**](https://msdn.microsoft.com/library/windows/apps/br208495)를 호출합니다.
+붙여넣기의 경우, 클립보드의 내용이 잉크 캔버스에 붙여 넣어지도록 하기 위해 [**CanPasteFromClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.canpastefromclipboard)를 호출합니다.
 
-그러한 경우, [**PasteFromClipboard**](https://msdn.microsoft.com/library/windows/apps/br208503)를 호출하여 클립보드 잉크 스트로크를 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)의 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)에 삽입합니다. 그러면 스트로크가 잉크 캔버스에 렌더링됩니다.
+그러한 경우, [**PasteFromClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.pastefromclipboard)를 호출하여 클립보드 잉크 스트로크를 [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter)의 [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer)에 삽입합니다. 그러면 스트로크가 잉크 캔버스에 렌더링됩니다.
 
 ```csharp
 private void btnPaste_Click(object sender, RoutedEventArgs e)
@@ -442,7 +442,7 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 **다른 샘플**
 * [간단한 잉크 샘플 (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [복잡 한 잉크 샘플 (c + +)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [복잡 한 잉크 샘플 (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
 * [잉크 샘플 (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [자습서 시작 하기: UWP 앱에서 잉크를 지원 합니다.](https://aka.ms/appsample-ink)
 * [색 지정 책 샘플](https://aka.ms/cpubsample-coloringbook)

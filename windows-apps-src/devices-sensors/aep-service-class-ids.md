@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08a186e0a8e7293b139f756b69966cd8d4b49c92
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1e4b4c89fff2854c36bd76cc680197fad1aa8dff
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598218"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370400"
 ---
 # <a name="aep-service-class-ids"></a>AEP 서비스 클래스 ID
 
@@ -23,7 +23,7 @@ ms.locfileid: "57598218"
 
 AEP(연결 끝점) 서비스는 디바이스에서 지정된 프로토콜을 통해 지원하는 서비스에 대한 프로그래밍 계약을 제공합니다. 이러한 서비스 중 일부에는 참조할 때 사용해야 하는 식별자가 설정되어 있습니다. 이러한 계약은 **System.Devices.AepService.ServiceClassId** 속성으로 식별됩니다. 이 항목에서는 널리 알려진 몇 가지 AEP 서비스 클래스 ID를 설명합니다. AEP 서비스 클래스 ID는 사용자 지정 클래스 ID를 사용하는 프로토콜에도 적용됩니다.
 
-앱 개발자는 클래스 ID를 기반으로 하는 AQS(고급 쿼리 구문) 필터를 사용하여 해당 쿼리를 사용하려는 AEP 서비스로 제한해야 합니다. 이는 쿼리 결과를 관련 서비스로 제한하며, 디바이스의 성능, 배터리 수명 및 서비스 품질을 크게 증가시킵니다. 예를 들어 응용 프로그램에서는 이러한 서비스 클래스 ID를 사용하여 디바이스를 Miracast 동기화 또는 DLNA DMR(디지털 미디어 렌더러)로 사용할 수 있습니다. 디바이스와 서비스가 상호 작용하는 방식에 대한 자세한 내용은 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)를 참조하세요.
+앱 개발자는 클래스 ID를 기반으로 하는 AQS(고급 쿼리 구문) 필터를 사용하여 해당 쿼리를 사용하려는 AEP 서비스로 제한해야 합니다. 이는 쿼리 결과를 관련 서비스로 제한하며, 디바이스의 성능, 배터리 수명 및 서비스 품질을 크게 증가시킵니다. 예를 들어 응용 프로그램에서는 이러한 서비스 클래스 ID를 사용하여 디바이스를 Miracast 동기화 또는 DLNA DMR(디지털 미디어 렌더러)로 사용할 수 있습니다. 디바이스와 서비스가 상호 작용하는 방식에 대한 자세한 내용은 [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind)를 참조하세요.
 
 ## <a name="bluetooth-and-bluetooth-le-services"></a>Bluetooth 및 Bluetooth LE 서비스
 
@@ -72,7 +72,7 @@ Bluetooth 프로토콜은 여러 서비스를 지원하며, 모두 동일한 기
 
  
 
-사용 가능한 Bluetooth 서비스의 전체 목록은 Bluetooth의 프로토콜 및 서비스 페이지([여기](https://go.microsoft.com/fwlink/p/?LinkID=619586) 및 [여기](https://go.microsoft.com/fwlink/p/?LinkID=619587))를 참조하세요. [  **GattServiceUuids**](https://msdn.microsoft.com/library/windows/apps/Dn297571) API를 사용하여 몇 가지 일반적인 GATT 서비스를 가져올 수도 있습니다.
+사용 가능한 Bluetooth 서비스의 전체 목록은 Bluetooth의 프로토콜 및 서비스 페이지([여기](https://go.microsoft.com/fwlink/p/?LinkID=619586) 및 [여기](https://go.microsoft.com/fwlink/p/?LinkID=619587))를 참조하세요. [  **GattServiceUuids**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids) API를 사용하여 몇 가지 일반적인 GATT 서비스를 가져올 수도 있습니다.
 
 ## <a name="custom-bluetooth-le-services"></a>사용자 지정 Bluetooth LE 서비스
 
@@ -118,7 +118,7 @@ WSD 서비스는 프로토콜 식별자 {782232aa-a2f9-4993-971b-aedc551346b0}�
 
 ## <a name="aqs-sample"></a>AQS 샘플
 
-이 AQS는 DIAL을 지원하는 모든 UPnP **AssociationEndpointService** 개체를 필터링합니다. 이 경우 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)는 **AsssociationEndpointService**로 설정됩니다.
+이 AQS는 DIAL을 지원하는 모든 UPnP **AssociationEndpointService** 개체를 필터링합니다. 이 경우 [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind)는 **AsssociationEndpointService**로 설정됩니다.
 
 ``` syntax
 System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND

@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: eb9c600e58be04d8ce967eb119777d6746507fbe
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a574ff858f8eab3fa1984ecd883a786fa0e0f19c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636368"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364718"
 ---
 # <a name="lists"></a>목록
 
@@ -30,7 +30,7 @@ ms.locfileid: "57636368"
 
 각 목록 패턴에 대한 디자인 지침, 기능 및 예제가 제공됩니다.
 
-> **중요 API**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/br242878)하십시오 [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/br242705), [ComboBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209348)
+> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)하십시오 [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [ComboBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
 
 > <div id="main">
@@ -265,11 +265,11 @@ ms.locfileid: "57636368"
 - [마스터/세부](master-details.md)
 - [탐색 창](navigationview.md)
 - [시맨틱 줌](semantic-zoom.md)
-- [끌어서 놓기](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
+- [끌어서 놓기](https://docs.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 - [미리 보기 이미지](../../files/thumbnails.md)
 
 **개발자를 위한**
-- [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/br242878)
-- [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/br242705)
-- [ComboBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209348)
-- [ListBox 클래스](https://msdn.microsoft.com/library/windows/apps/br242868)
+- [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
+- [ComboBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+- [ListBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)

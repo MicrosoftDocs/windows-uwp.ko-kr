@@ -3,15 +3,15 @@ ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: 디바이스를 개발에 사용하도록 설정
 description: 개발 및 디버깅을 위해 Windows 10 디바이스를 구성합니다.
 keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 디바이스 활성화
-ms.date: 05/30/2018
+ms.date: 4/9/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 90ff8e8c0d11e58d251e9c2f5bfb00f3b8aedf1a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f927d8bce1e59ba9a8ed9b0f3f08ce3575c6d7bd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618958"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367026"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -93,11 +93,11 @@ ms.locfileid: "57618958"
 디바이스 포털에 대한 자세한 내용은 [Windows Device Portal 개요](../debug-test-perf/device-portal.md)를 참조하세요.
 
 디바이스별 설치 지침은 다음을 참조하세요.
-- [데스크톱에 대 한 장치 포털](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
+- [데스크톱에 대 한 장치 포털](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
 - [HoloLens 장치 포털](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
 - [Iot 장치 포털](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [모바일 장치 포털](../debug-test-perf/device-portal-mobile.md)
-- [Xbox 용 장치 포털](../debug-test-perf/device-portal-xbox.md)
+- [Xbox 용 장치 포털](../xbox-apps/device-portal-xbox.md)
 
 개발자 모드 또는 디바이스 포털을 사용하도록 설정하는 데 문제가 있는 경우 [알려진 문제](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) 포럼에서 이 문제에 대한 해결 방법을 찾아보거나 [개발자 모드 패키지 설치 실패](#failure-to-install-developer-mode-package)를 방문하여 추가 세부 정보를 살펴보고 개발자 모드 패키지의 차단을 해제하려면 어떤 WSUS KB를 허용해야 하는지 확인하세요.
 
@@ -133,7 +133,7 @@ Windows 10 Mobile의 초기 버전에서 크래시 덤프 옵션은 개발자 �
 
 Windows 10 PC에서 Windows 10 디바이스로 앱을 배포할 수 있도록 해주는 몇 가지 도구가 있습니다. 두 장치는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다. 나열된 두 방법 모두 앱 패키지(.appx/.appxbundle)만 설치하고 인증서는 설치하지 않습니다.
 
--   Windows 10 응용 프로그램 배포(WinAppDeployCmd) 도구를 사용합니다. 자세한 내용은 [the WinAppDeployCmd 도구](https://msdn.microsoft.com/library/windows/apps/mt203806.aspx)를 참조하세요.
+-   Windows 10 응용 프로그램 배포(WinAppDeployCmd) 도구를 사용합니다. 자세한 내용은 [the WinAppDeployCmd 도구](https://docs.microsoft.com/previous-versions/windows/apps/mt203806(v=vs.140))를 참조하세요.
 -   [장치 포털](../debug-test-perf/device-portal.md)을 사용하면 브라우저에서 Windows 10, 버전 1511 이상을 실행하는 모바일 디바이스로 배포할 수 있습니다. Device Portal의 **[앱](../debug-test-perf/device-portal.md#apps-manager)** 페이지를 사용하여 앱 패키지(.appx)를 업로드하고 디바이스에 설치할 수 있습니다.
 
 ## <a name="failure-to-install-developer-mode-package"></a>개발자 모드 패키지 설치 실패
@@ -154,7 +154,7 @@ Windows 10 PC에서 Windows 10 디바이스로 앱을 배포할 수 있도록 �
 
 1. 컴퓨터가 인터넷에 연결되어 있는지 확인합니다.
 2. 도메인에 가입된 컴퓨터를 사용하는 경우 네트워크 관리자에게 문의하세요. 모든 주문형 기능처럼 개발자 모드 패키지는 기본적으로 WSUS에서 차단됩니다.
-2.1. 현재 및 이전 릴리스에서 개발자 모드 패키지를 차단 해제 하기 위해 WSUS에서 다음 기술 자료를 허용 합니다. 4016509, 3180030 3197985  
+2.1. 현재 및 이전 릴리스에서 개발자 모드 패키지를 차단 해제 하기 위해 WSUS에서 다음 기술 자료를 허용 합니다. 4016509, 3180030, 3197985  
 3. 설정 > 업데이트 및 보안 > Windows 업데이트에서 Windows 업데이트가 있는지 확인합니다.
 4. 설정 &gt; 시스템 &gt; 앱 및 기능 &gt; 선택적 기능 관리 &gt; 기능 추가에서 Windows 개발자 모드 패키지가 있는지 확인합니다. 없는 경우 Windows는 컴퓨터에 적합한 패키지를 찾을 수 없습니다.
 
@@ -201,20 +201,20 @@ Windows 10 Home을 설치한 경우가 아니라면 gpedit.msc를 사용하여 �
 1.  **regedit**를 실행합니다.
 2.  테스트용 로드를 사용하도록 설정하려면 이 DWORD 값을 1로 설정합니다.
 
-    -   **HKLM\\소프트웨어\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
+    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
 
     - 또는 -
 
     개발자 모드를 사용하도록 설정하려면 이 DWORD 값을 1로 설정합니다.
 
-    -   **HKLM\\소프트웨어\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
+    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
 
 **PowerShell을 사용 하 여 장치를 사용 하도록 설정 하려면**
 
 1.  관리자 권한으로 PowerShell을 실행합니다.
 2.  테스트용 로드를 사용하도록 설정하려면 다음 명령을 실행합니다.
 
-    -   **PS c:\\WINDOWS\\system32&gt; reg 추가 "HKEY\_로컬\_MACHINE\\소프트웨어\\Microsoft\\Windows\\CurrentVersion\\ AppModelUnlock"/t REG\_DWORD /f /v"AllowAllTrustedApps"/d"1"**
+    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"**
 
     - 또는 -
 
@@ -233,9 +233,9 @@ Windows 8.1 장치에서 앱을 만들거나 테스트용으로 로드할 때는
 
 이후에도 이 디바이스에서 계속 개발하려면 이 항목에 설명된 대로 디바이스를 개발용으로 설정해야 합니다. 그러지 않으면 앱을 디버그하거나 앱의 패키지를 만들려고 할 때 오류가 발생할 수 있습니다. 다음은 이러한 오류의 예입니다.
 
-오류: DEP0700: 앱을 등록 하지 못했습니다.
+오류: DEP0700 : 앱을 등록 하지 못했습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 * [첫 번째 앱](your-first-app.md)
 * [UWP 앱 게시](https://developer.microsoft.com/store/publish-apps)

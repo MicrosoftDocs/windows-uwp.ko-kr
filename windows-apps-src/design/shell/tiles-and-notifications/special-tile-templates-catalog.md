@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 09647347134463c8dd2d93f6b869796c8def44e2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 739abc139eabc9f773938f55c15d3e18aaf562ce
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57619808"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365960"
 ---
 # <a name="special-tile-templates"></a>특수 타일 템플릿
  
@@ -54,11 +54,11 @@ ms.locfileid: "57619808"
 
 ![배지가 있거나 없는 정사각형이 아닌 자산 크기 조정](images/assetguidance26b.png)
 
-**2 단계: 기본 타일 만들기**
+**2단계: 기본 타일 만들기**
 
 기본 타일과 보조 타일 둘 다에서 아이콘 템플릿을 사용할 수 있습니다. 보조 타일에서 사용하는 경우 먼저 보조 타일을 만들거나 이미 고정된 보조 타일을 사용해야 합니다. 기본 타일은 암시적으로 고정되어 있으며 항상 알림을 받을 수 있습니다.
 
-**3 단계: 타일 알림 보내기**
+**3단계: 타일 알림 보내기**
 
 이 단계는 알림이 로컬로 전송되는지, 서버 푸시 통해 전송되는지에 따라 다를 수 있지만 보내는 XML 페이로드는 동일합니다. 로컬 타일 알림을 보내려면 타일(기본 타일 또는 보조 타일)에 대한 [**TileUpdater**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater)를 만든 다음 아래와 같이 아이콘 타일 템플릿을 사용하는 타일에 알림을 보냅니다. 이상적일 경우 [적응형 타일 템플릿](create-adaptive-tiles.md)을 사용하여 와이드 타일 및 큰 타일 크기에 대한 바인딩도 포함해야 합니다.
 
@@ -82,7 +82,7 @@ XML 페이로드에 대한 샘플 코드는 다음과 같습니다.
 
 이 아이콘 타일 템플릿 XML 페이로드는 1단계에서 만든 이미지를 가리키는 이미지 요소를 사용합니다. 이제 타일이 아이콘 옆에 배지를 표시할 준비가 되었습니다. 배지 알림을 보내기만 하면 됩니다.
 
-**4 단계: 타일에 배지 알림 보내기**
+**4단계: 타일에 배지 알림 보내기**
 
 3단계와 마찬가지로, 이 단계는 알림이 로컬로 전송되는지, 서버 푸시 통해 전송되는지에 따라 다를 수 있지만 보내는 XML 페이로드는 동일합니다. 로컬 배지 알림을 보내려면 타일(기본 타일 또는 보조 타일)에 대한 [**BadgeUpdater**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater)를 만든 다음 원하는 값이 포함된 배지 알림을 보내거나 배지를 지웁니다.
 
@@ -96,7 +96,7 @@ XML 페이로드에 대한 샘플 코드는 다음과 같습니다.
 
 **5단계: 전체 과정**
 
-다음 이미지는 다양한 API 및 페이로드가 아이콘 타일 템플릿의 각 측면과 연결되는 방식을 보여 줍니다. &lt;binding&gt; 요소를 포함하는 [타일 알림](https://msdn.microsoft.com/library/windows/apps/hh779724)은 아이콘 템플릿과 이미지 자산을 지정하는 데 사용되고, [배지 알림](https://msdn.microsoft.com/library/windows/apps/hh779719)은 숫자 값을 지정합니다. 타일 속성은 타일의 표시 이름, 색 등을 제어합니다.
+다음 이미지는 다양한 API 및 페이로드가 아이콘 타일 템플릿의 각 측면과 연결되는 방식을 보여 줍니다. &lt;binding&gt; 요소를 포함하는 [타일 알림](https://docs.microsoft.com/previous-versions/windows/apps/hh779724(v=win.10))은 아이콘 템플릿과 이미지 자산을 지정하는 데 사용되고, [배지 알림](https://docs.microsoft.com/previous-versions/windows/apps/hh779719(v=win.10))은 숫자 값을 지정합니다. 타일 속성은 타일의 표시 이름, 색 등을 제어합니다.
 
 ![아이콘 타일 템플릿과 연결된 API 및 페이로드](images/iconic-template-properties-info.png)
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 이동-보기, 컨트롤
 ms.localizationpriority: medium
-ms.openlocfilehash: 222f46bbda165442003aecea0bbd138bcb844a3b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f1516ada043ac5e9d5c059f7cd2b91cb69a5eab1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604378"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367851"
 ---
 # <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>게임에 대 한 모양을 이동 컨트롤
 
@@ -178,11 +178,11 @@ internal:
 
 마지막으로 이러한 메서드 및 속성을 사용하여 컨트롤러의 상태 정보를 초기화, 액세스 및 업데이트합니다.
 
--   **Initialize**. 앱에서 이 이벤트 처리기를 호출하여 컨트롤을 초기화하고 디스플레이 창에 대해 설명하는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체에 연결합니다.
+-   **Initialize**. 앱에서 이 이벤트 처리기를 호출하여 컨트롤을 초기화하고 디스플레이 창에 대해 설명하는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 개체에 연결합니다.
 -   **SetPosition**. 앱에서 이 메서드를 호출하여 장면 공간에서 컨트롤의 x, y 및 z 좌표를 설정합니다.
 -   **SetOrientation**. 앱에서 이 메서드를 호출하여 카메라의 피치 및 요를 설정합니다.
 -   **가져올\_위치**합니다. 앱에서 이 속성에 액세스하여 장면 공간에서 카메라의 현재 위치를 가져옵니다. 앱에 현재 카메라 위치를 전달하는 방법으로 이 속성을 사용합니다.
--   **가져올\_LookPoint**합니다. 앱에서 이 속성에 액세스하여 컨트롤러 카메라가 향하고 있는 현재 점을 가져옵니다.
+-   **get\_LookPoint**. 앱에서 이 속성에 액세스하여 컨트롤러 카메라가 향하고 있는 현재 점을 가져옵니다.
 -   **Update**. 이동 및 보기 컨트롤러의 상태를 읽고 카메라 위치를 업데이트합니다. 앱의 주 루프에서 이 메서드를 계속 호출하여 장면 공간에서 카메라 컨트롤러 데이터 및 카메라 위치를 새로 고칩니다.
 
 이제 이동-보기 컨트롤을 구현하는 데 필요한 모든 구성 요소가 있습니다. 따라서 이러한 요소를 함께 연결해 보겠습니다.
@@ -192,17 +192,17 @@ internal:
 
 Windows 런타임 이벤트 디스패처는 다음과 같이 클래스의 인스턴스를 처리할 이벤트 5개를 제공합니다.**MoveLookController**
 
--   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)
--   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)
--   [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)
--   [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271)
--   [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270)
+-   [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed)
+-   [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved)
+-   [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased)
+-   [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keyup)
+-   [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keydown)
 
-이러한 이벤트는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 유형에 구현됩니다. 이때 사용할 **CoreWindow** 개체가 있다고 가정합니다. 개체를 얻는 방법을 모르는 경우 [DirectX 보기를 표시하도록 UWP(유니버설 Windows 플랫폼) C++ 앱을 설정하는 방법](https://msdn.microsoft.com/library/windows/apps/hh465077)을 참조하세요.
+이러한 이벤트는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 유형에 구현됩니다. 이때 사용할 **CoreWindow** 개체가 있다고 가정합니다. 개체를 얻는 방법을 모르는 경우 [DirectX 보기를 표시하도록 UWP(유니버설 Windows 플랫폼) C++ 앱을 설정하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465077(v=win.10))을 참조하세요.
 
 앱이 실행되는 동안 이러한 이벤트가 발생하면 처리기에서 private 필드에 정의된 컨트롤러의 상태 정보를 업데이트합니다.
 
-먼저 마우스 및 터치 포인터 이벤트 처리기를 채워 보겠습니다. 첫 번째 이벤트 처리기 **OnPointerPressed()** 에서 포인터의 x-y 좌표를 사용자가 보기 컨트롤러 영역에서 마우스를 클릭하거나 화면을 터치할 때 디스플레이를 관리하는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)에서 가져옵니다.
+먼저 마우스 및 터치 포인터 이벤트 처리기를 채워 보겠습니다. 첫 번째 이벤트 처리기 **OnPointerPressed()** 에서 포인터의 x-y 좌표를 사용자가 보기 컨트롤러 영역에서 마우스를 클릭하거나 화면을 터치할 때 디스플레이를 관리하는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow)에서 가져옵니다.
 
 **OnPointerPressed**
 
@@ -299,11 +299,11 @@ void MoveLookController::OnPointerMoved(
 
 **OnPointerMoved** 이벤트 처리기는 포인터가 이동할 때마다(이 경우 터치 스크린 포인터를 끌거나 왼쪽 단추를 누른 상태로 마우스 포인터를 이동) 실행됩니다. 포인터 ID가 이동 컨트롤러 포인터의 ID와 동일하면 이동 포인터이고, 그렇지 않으면 활성 포인터인 보기 컨트롤러인지 확인합니다.
 
-이동 컨트롤러일 경우 포인터 위치만 업데이트합니다. **OnPointerPressed** 이벤트 처리기에서 캡처한 첫 번째 위치와 최종 위치를 비교하려고 하므로 [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 이벤트가 계속 실행되는 한 계속 업데이트합니다.
+이동 컨트롤러일 경우 포인터 위치만 업데이트합니다. **OnPointerPressed** 이벤트 처리기에서 캡처한 첫 번째 위치와 최종 위치를 비교하려고 하므로 [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) 이벤트가 계속 실행되는 한 계속 업데이트합니다.
 
 보기 컨트롤러일 경우 약간 더 복잡할 수 있습니다. 새로운 보기 지점을 계산하고 카메라를 중심에 배치해야 합니다. 따라서 마지막 보기 지점과 현재 화면 위치 간의 델타를 계산한 다음 배율 인수를 곱하면 화면 이동 거리를 기준으로 보기 이동을 더 작거나 더 크게 만들 수 있습니다. 해당 값을 사용하여 피치 및 요를 계산합니다.
 
-마지막으로 플레이어가 마우스 이동이나 화면 터치를 중지하면 이동 또는 보기 컨트롤러 동작을 비활성화해야 합니다. 사용 하 여 **OnPointerReleased**, 경우 라고 하는 [ **PointerReleased** ](https://msdn.microsoft.com/library/windows/apps/br208279) 설정 하는 발생 **m\_moveInUse** 또는**m\_lookInUse** FALSE 카메라 이동 이동 해제 하 고 포인터 ID 영구
+마지막으로 플레이어가 마우스 이동이나 화면 터치를 중지하면 이동 또는 보기 컨트롤러 동작을 비활성화해야 합니다. 사용 하 여 **OnPointerReleased**, 경우 라고 하는 [ **PointerReleased** ](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) 설정 하는 발생 **m\_moveInUse** 또는**m\_lookInUse** FALSE 카메라 이동 이동 해제 하 고 포인터 ID 영구
 
 **OnPointerReleased**
 
@@ -424,7 +424,7 @@ void MoveLookController::Initialize( _In_ CoreWindow^ window )
 }
 ```
 
-**Initialize**에서는 앱의 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 인스턴스에 대한 참조를 매개 변수로 사용하고 개발한 인벤트 처리기를 해당 **CoreWindow**의 적합한 이벤트에 등록합니다. 또한 이동 및 보기 포인터의 ID를 초기화하고, 터치 스크린 이동 컨트롤러 구현에 대한 명령 벡터를 0으로 설정하며, 앱이 시작될 때 카메라가 똑바로 앞을 보도록 설정합니다.
+**Initialize**에서는 앱의 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 인스턴스에 대한 참조를 매개 변수로 사용하고 개발한 인벤트 처리기를 해당 **CoreWindow**의 적합한 이벤트에 등록합니다. 또한 이동 및 보기 포인터의 ID를 초기화하고, 터치 스크린 이동 컨트롤러 구현에 대한 명령 벡터를 0으로 설정하며, 앱이 시작될 때 카메라가 똑바로 앞을 보도록 설정합니다.
 
 ## <a name="getting-and-setting-the-position-and-orientation-of-the-camera"></a>카메라의 위치/방향 가져오기 및 설정
 

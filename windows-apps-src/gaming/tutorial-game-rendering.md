@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
-ms.openlocfilehash: 108e9bf21b0552ac7f88721bf4b1ee72ca2a5e2c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2b44558232247de969f22d5767a16d921cfbf252
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610508"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367575"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>렌더링 프레임 워크 II: 게임 렌더링
 
@@ -37,7 +37,7 @@ ms.locfileid: "57610508"
 렌더러는 게임 시각 효과를 생성하는 데 사용되는 모든 D3D11 및 D2D 개체를 만들고 관리합니다. __GameRenderer__ 클래스는 이 샘플 게임의 렌더러이며 게임의 렌더링 요구를 충족하도록 설계되었습니다.
 
 다음은 게임에 대한 렌더러를 디자인하는 데 도움이 되는 몇 가지 개념입니다.
-* Direct3D 11 API는 [COM](https://msdn.microsoft.com/library/windows/desktop/ms694363.aspx) API로 정의되므로 이러한 API가 정의하는 개체에 대한 [ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) 참조를 제공해야 합니다. 앱이 종료될 때 마지막 참조가 범위를 벗어나면 이러한 개체가 자동으로 해제됩니다. 자세한 내용은 [ComPtr](https://github.com/Microsoft/DirectXTK/wiki/ComPtr)를 참조하세요. 이러한 개체의 예로는 상수 버퍼, 셰이더 개체- [꼭짓점 셰이더](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders), [픽셀 셰이더](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders), 셰이더 리소스 개체가 있습니다.
+* Direct3D 11 API는 [COM](https://docs.microsoft.com/windows/desktop/com/the-component-object-model) API로 정의되므로 이러한 API가 정의하는 개체에 대한 [ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) 참조를 제공해야 합니다. 앱이 종료될 때 마지막 참조가 범위를 벗어나면 이러한 개체가 자동으로 해제됩니다. 자세한 내용은 [ComPtr](https://github.com/Microsoft/DirectXTK/wiki/ComPtr)를 참조하세요. 이러한 개체의 예로는 상수 버퍼, 셰이더 개체- [꼭짓점 셰이더](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders), [픽셀 셰이더](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders), 셰이더 리소스 개체가 있습니다.
 * 렌더링을 위해 필요한 다양한 데이터를 저장하기 위해 상수 버퍼가 이 클래스에서 정의됩니다.
     * 각각 빈도가 다른 여러 상수 버퍼를 사용하면 프레임당 GPU로 전송해야 하는 데이터 양이 감소합니다. 이 샘플에서는 업데이트해야 하는 빈도를 기준으로 상수를 각기 다른 버퍼로 구분합니다. 이 방법은 Direct3D 프로그래밍의 모범 사례입니다. 
     * 이 게임 샘플에서 4 상수 버퍼가 정의됩니다.
@@ -46,7 +46,7 @@ ms.locfileid: "57610508"
         3. __m\_constantBufferChangesEveryFrame__ 뷰 매트릭스를 포함 합니다. 이 행렬은 카메라 위치와 보기 방향(프로젝션에 수직)에 따라 달라지며 __Render__ 메서드에서 프레임당 한 번 변경됩니다. 이전에 설명한이 __렌더링 프레임 워크 i: 렌더링에 대 한 소개__아래에 있는 합니다 [ __GameRenderer::Render__ 메서드](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method)합니다.
         4. __m\_constantBufferChangesEveryPrim__ 각 기본 형식의 모델 행렬 및 재질 속성을 포함 합니다. 모델 행렬은 로컬 좌표에서 월드 좌표로 꼭짓점을 변환합니다. 이러한 상수는 각 기본 요소와 관련이 있으며 그리기 호출 시마다 업데이트됩니다. 이전에 설명한이 __렌더링 프레임 워크 i: 렌더링에 대 한 소개__아래에 있는 합니다 [기본 렌더링](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering)합니다.
 * 이 클래스에서 원형의 텍스처를 포함하는 셰이더 리소스 개체도 정의됩니다.
-    * 일부 텍스처는 미리 정의됩니다.([DDS](https://msdn.microsoft.com/library/windows/desktop/bb943991.aspx)는 압축되거나 압축되지 않은 텍스처를 저장하기 위해 사용할 수 있는 파일 형식입니다. DDS 텍스처는 월드의 벽과 마루, 탄약 구형에 사용됩니다.
+    * 일부 텍스처는 미리 정의됩니다.([DDS](https://docs.microsoft.com/windows/desktop/direct3ddds/dx-graphics-dds-pguide)는 압축되거나 압축되지 않은 텍스처를 저장하기 위해 사용할 수 있는 파일 형식입니다. DDS 텍스처는 월드의 벽과 마루, 탄약 구형에 사용됩니다.
     * 이 게임 샘플에서 셰이더 리소스 개체는: __m\_sphereTexture__를 __m\_cylinderTexture__하십시오 __m\_ceilingTexture__하십시오 __m\_floorTexture__하십시오 __m\_wallsTexture__합니다.
 * 이 클래스의 셰이더 개체가 원형 및 텍스처를 계산하기 위해 정의됩니다. 
     * 이 게임 샘플 셰이더 개체는 __m\_vertexShader__하십시오 __m\_vertexShaderFlat__, 및 __m\_pixelShader__, __m\_pixelShaderFlat__합니다.

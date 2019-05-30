@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 대기 시간, dxgi, 스왑 체인, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: acb5c58eebafa53fe140442550356f7eb7534efe
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dbf4935abc543b1c11fbbee32812a7702298cd79
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594918"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368178"
 ---
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a>DXGI 1.3 스왑 체인으로 대기 시간 단축
 
@@ -22,20 +22,20 @@ DXGI 1.3을 사용하여 스왑 체인이 새로운 프레임 렌더링을 시�
 ## <a name="how-does-waiting-on-the-back-buffer-reduce-latency"></a>백 버퍼에서 대기할 때 대기 시간을 어떻게 줄입니까?
 
 
-전환 모델 스왑 체인을 사용하면 게임에서 [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576)를 호출할 때마다 백 버퍼 "전환"이 대기 중입니다. 렌더링 루프에서 Present()를 호출하면 시스템에서 이전 프레임을 제공할 때까지 스레드를 차단하여 실제로 제공되기 전에 새 프레임을 대기할 공간을 만듭니다. 따라서 게임에서 프레임을 그리는 시간과 시스템에서 해당 프레임을 표시할 수 있는 시간 사이에 추가 대기 시간이 발생합니다. 대부분의 경우 시스템이 안정적인 평형 상태에 도달하여 게임이 렌더링하는 시간과 각 프레임을 제공하는 시간 사이에서 거의 모든 추가 프레임을 항상 대기합니다. 시스템이 새 프레임을 허용할 준비가 될 때까지 대기한 다음 현재 데이터에 따라 프레임을 렌더링하고 프레임을 바로 대기하는 것이 좋습니다.
+전환 모델 스왑 체인을 사용하면 게임에서 [**IDXGISwapChain::Present**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-present)를 호출할 때마다 백 버퍼 "전환"이 대기 중입니다. 렌더링 루프에서 Present()를 호출하면 시스템에서 이전 프레임을 제공할 때까지 스레드를 차단하여 실제로 제공되기 전에 새 프레임을 대기할 공간을 만듭니다. 따라서 게임에서 프레임을 그리는 시간과 시스템에서 해당 프레임을 표시할 수 있는 시간 사이에 추가 대기 시간이 발생합니다. 대부분의 경우 시스템이 안정적인 평형 상태에 도달하여 게임이 렌더링하는 시간과 각 프레임을 제공하는 시간 사이에서 거의 모든 추가 프레임을 항상 대기합니다. 시스템이 새 프레임을 허용할 준비가 될 때까지 대기한 다음 현재 데이터에 따라 프레임을 렌더링하고 프레임을 바로 대기하는 것이 좋습니다.
 
-사용 하 여 대기 가능 스왑 체인을 만들 합니다 [ **DXGI\_스왑\_체인\_플래그\_프레임\_대기 시간\_WAITABLE\_개체** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) 플래그입니다. 이 방법으로 만든 스왑 체인은 시스템이 실제로 새 프레임을 허용할 준비가 되면 렌더링 루프에 알릴 수 있습니다. 그러면 게임에서 현재 데이터에 따라 렌더링한 다음 결과를 현재 대기열에 바로 넣을 수 있습니다.
+사용 하 여 대기 가능 스왑 체인을 만들 합니다 [ **DXGI\_스왑\_체인\_플래그\_프레임\_대기 시간\_WAITABLE\_개체** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) 플래그입니다. 이 방법으로 만든 스왑 체인은 시스템이 실제로 새 프레임을 허용할 준비가 되면 렌더링 루프에 알릴 수 있습니다. 그러면 게임에서 현재 데이터에 따라 렌더링한 다음 결과를 현재 대기열에 바로 넣을 수 있습니다.
 
 ## <a name="step-1-create-a-waitable-swap-chain"></a>1단계: 대기 가능 스왑 체인 만들기
 
 
-지정 된 [ **DXGI\_교환\_체인\_플래그\_프레임\_대기 시간\_WAITABLE\_개체** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) 호출할 때 플래그 [ **CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559)합니다.
+지정 된 [ **DXGI\_교환\_체인\_플래그\_프레임\_대기 시간\_WAITABLE\_개체** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) 호출할 때 플래그 [ **CreateSwapChainForCoreWindow**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)합니다.
 
 ```cpp
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
 ```
 
-> **참고**    일부 플래그와 달리이 플래그를 추가할 수 없습니다 또는 사용 하 여 제거할 [ **ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577)합니다. 이 플래그가 스왑 체인을 만들 때와 다르게 설정되면 DXGI에서 오류 코드를 반환합니다.
+> **참고**    일부 플래그와 달리이 플래그를 추가할 수 없습니다 또는 사용 하 여 제거할 [ **ResizeBuffers**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-resizebuffers)합니다. 이 플래그가 스왑 체인을 만들 때와 다르게 설정되면 DXGI에서 오류 코드를 반환합니다.
 
  
 
@@ -53,7 +53,7 @@ HRESULT hr = m_swapChain->ResizeBuffers(
 ## <a name="step-2-set-the-frame-latency"></a>2단계: 프레임 대기 시간 설정
 
 
-[  **IDXGIDevice1::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/ff471334)를 호출하는 대신 [**IDXGISwapChain2::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/dn268313) API를 사용하여 프레임 지연을 설정합니다.
+[  **IDXGIDevice1::SetMaximumFrameLatency**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgidevice1-setmaximumframelatency)를 호출하는 대신 [**IDXGISwapChain2::SetMaximumFrameLatency**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-setmaximumframelatency) API를 사용하여 프레임 지연을 설정합니다.
 
 기본적으로 대기 가능 스왑 체인의 프레임 지연은 1로 설정되어 대기 시간이 최대한 적을 뿐만 아니라 CPU GPU 병렬 처리도 줄어듭니다. 60FPS를 얻기 위해 향상된 CPU-GPU 병렬 처리가 필요한 경우 즉, CPU 및 GPU가 각각 렌더링 작업을 처리하는 데 프레임당 16.7ms보다 적게 걸리지만 합계가 16.7ms보다 큰 경우 프레임 지연을 2로 설정합니다. 따라서 GPU는 이전 프레임 중에 CPU에서 대기한 작업을 처리할 수 있으며, 동시에 CPU에서 현재 프레임에 대해 독립적으로 렌더링 명령을 제출하도록 할 수 있습니다.
 
@@ -71,7 +71,7 @@ HRESULT hr = m_swapChain->ResizeBuffers(
 ## <a name="step-3-get-the-waitable-object-from-the-swap-chain"></a>3단계: 스왑 체인에서 대기 가능 개체를 가져옵니다.
 
 
-[  **IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://msdn.microsoft.com/library/windows/desktop/dn268309)를 호출하여 대기 핸들을 검색합니다. 대기 핸들은 대기 가능 개체에 대한 포인터입니다. 이 핸들을 렌더링 루프에서 사용하도록 저장합니다.
+[  **IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getframelatencywaitableobject)를 호출하여 대기 핸들을 검색합니다. 대기 핸들은 대기 가능 개체에 대한 포인터입니다. 이 핸들을 렌더링 루프에서 사용하도록 저장합니다.
 
 ```cpp
 // Get the frame latency waitable object, which is used by the WaitOnSwapChain method. This
@@ -83,7 +83,7 @@ m_frameLatencyWaitableObject = swapChain2->GetFrameLatencyWaitableObject();
 ## <a name="step-4-wait-before-rendering-each-frame"></a>4단계: 각 프레임을 렌더링 하기 전에 대기 합니다.
 
 
-렌더링 루프는 스왑 체인이 대기 가능 개체를 통해 신호를 보낼 때까지 대기한 후 모든 프레임의 렌더링을 시작해야 합니다. 여기에는 스왑 체인으로 렌더링된 첫 번째 프레임이 포함됩니다. [  **WaitForSingleObjectEx**](https://msdn.microsoft.com/library/windows/desktop/ms687036)를 사용하여 2단계에서 검색된 대기 핸들을 제공하고 각 프레임의 시작에 신호를 보냅니다.
+렌더링 루프는 스왑 체인이 대기 가능 개체를 통해 신호를 보낼 때까지 대기한 후 모든 프레임의 렌더링을 시작해야 합니다. 여기에는 스왑 체인으로 렌더링된 첫 번째 프레임이 포함됩니다. [  **WaitForSingleObjectEx**](https://docs.microsoft.com/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex)를 사용하여 2단계에서 검색된 대기 핸들을 제공하고 각 프레임의 시작에 신호를 보냅니다.
 
 다음 예제에서는 DirectXLatency 샘플의 렌더링 루프를 보여 줍니다.
 
@@ -148,13 +148,13 @@ Windows의 다중 스레드 프로그래밍에 대한 자세한 내용은 다음
 
 
 * [DirectXLatency 샘플](https://go.microsoft.com/fwlink/p/?LinkID=317361)
-* [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://msdn.microsoft.com/library/windows/desktop/dn268309)
-* [**Waitforsingleobjectex가**](https://msdn.microsoft.com/library/windows/desktop/ms687036)
-* [**Windows.System.Threading**](https://msdn.microsoft.com/library/windows/apps/br229642)
-* [C + +의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187334)
-* [프로세스 및 스레드](https://msdn.microsoft.com/library/windows/desktop/ms684841)
-* [동기화](https://msdn.microsoft.com/library/windows/desktop/ms686353)
-* [이벤트 개체 (Windows)를 사용 하 여](https://msdn.microsoft.com/library/windows/desktop/ms686915)
+* [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getframelatencywaitableobject)
+* [**WaitForSingleObjectEx**](https://docs.microsoft.com/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex)
+* [**Windows.System.Threading**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
+* [비동기 프로그래밍C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)
+* [프로세스 및 스레드](https://docs.microsoft.com/windows/desktop/ProcThread/processes-and-threads)
+* [동기화](https://docs.microsoft.com/windows/desktop/Sync/synchronization)
+* [이벤트 개체 (Windows)를 사용 하 여](https://docs.microsoft.com/windows/desktop/Sync/using-event-objects)
 
  
 

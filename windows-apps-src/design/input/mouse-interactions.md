@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: feef520614e1cc6076e6abc388fe419fe61d3a92
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: a02d562b73f61094f820e74a213614d80c4fb5e1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343252"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365842"
 ---
 # <a name="mouse-interactions"></a>마우스 조작
 
@@ -145,7 +145,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 마우스 포인터에 일련의 표준 커서를 사용할 수 있습니다. 이러한 커서는 요소의 기본 동작을 나타내는 데 사용됩니다.
 
-각 표준 커서에는 해당 기본 이미지가 연결되어 있습니다. 사용자나 앱은 언제든지 표준 커서와 연결된 기본 이미지를 바꿀 수 있습니다. [  **PointerCursor**](https://msdn.microsoft.com/library/windows/apps/br208273) 함수를 통해 커서 이미지를 지정합니다.
+각 표준 커서에는 해당 기본 이미지가 연결되어 있습니다. 사용자나 앱은 언제든지 표준 커서와 연결된 기본 이미지를 바꿀 수 있습니다. [  **PointerCursor**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor) 함수를 통해 커서 이미지를 지정합니다.
 
 마우스 커서를 사용자 지정해야 하는 경우
 

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b9535cd8c2dd82b0c209919080df9a88bb80ccc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 33244391ca9f2ffcba21adacccebf2e9b1d73419
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612778"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363357"
 ---
 # <a name="toast-content-xml-schema"></a>알림 콘텐츠 XML 스키마
 
@@ -79,15 +79,15 @@ scenario?
 
 lang?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual)를 참조하세요.
 
 baseUri?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual)를 참조하세요.
 
 addImageQuery?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual)를 참조하세요.
 
 **특성 &lt;바인딩&gt;**
 
@@ -99,27 +99,27 @@ template?
 
 lang?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual)를 참조하세요.
 
 baseUri?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual)를 참조하세요.
 
 addImageQuery?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual)를 참조하세요.
 
 **특성 &lt;텍스트&gt;**
 
 lang?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual)를 참조하세요.
 
 **특성 &lt;이미지&gt;**
 
 src
 
--   이 필수 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230844)를 참조하세요.
+-   이 필수 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-image)를 참조하세요.
 
 placement?
 
@@ -131,11 +131,11 @@ placement?
 
 alt?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230844)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-image)를 참조하세요.
 
 addImageQuery?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230844)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-image)를 참조하세요.
 
 hint-crop?
 
@@ -148,15 +148,15 @@ hint-crop?
 
 src?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230842)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-audio)를 참조하세요.
 
 loop?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230842)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-audio)를 참조하세요.
 
 silent?
 
--   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230842)를 참조하세요.
+-   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-audio)를 참조하세요.
 
 ## <a name="schemas-ltactiongt"></a>스키마: &lt;action&gt;
 
@@ -182,13 +182,13 @@ silent?
 id
 
 -   id = string
--   이 특성은 필수입니다.
+-   필수 특성입니다.
 -   id 특성은 필수이고 앱이 포그라운드 또는 백그라운드에서 활성화된 후 개발자가 사용자 입력을 검색하는 데 사용됩니다.
 
-유형
+type
 
 -   type = "text | selection"
--   이 특성은 필수입니다.
+-   필수 특성입니다.
 -   텍스트 입력 및 미리 정의된 선택 목록의 입력을 지정하는 데 사용됩니다.
 -   모바일 및 데스크톱에서 이 특성은 텍스트 상자 입력 또는 목록 상자 입력을 원하는지 지정합니다.
 
@@ -214,11 +214,11 @@ defaultInput?
 
 id
 
--   이 특성은 필수입니다. 사용자 선택을 식별하는 데 사용됩니다. id가 앱에 반환됩니다.
+-   필수 특성입니다. 사용자 선택을 식별하는 데 사용됩니다. id가 앱에 반환됩니다.
 
 콘텐츠
 
--   이 특성은 필수입니다. 이 선택 요소에 대해 표시할 문자열을 제공합니다.
+-   필수 특성입니다. 이 선택 요소에 대해 표시할 문자열을 제공합니다.
 
 **특성 &lt;작업&gt;**
 

@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 29645500f8a3d1b953c24921c32a59f283bd5db3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5660e2e75bbad7d5c2ee1f9c31ed4538ac55fe75
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613278"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370440"
 ---
 # <a name="compute-shader-cs-stage"></a>CS(계산 셰이더) 단계
 
@@ -21,7 +21,7 @@ CS(계산 셰이더) 단계는 일반적인 용도의 고속 계산을 제공하
 
 여러 스레드에서 병렬로 계산 셰이더를 실행할 수 있습니다.
 
-계산 셰이더는 [DirectCompute](https://go.microsoft.com/fwlink/p/?linkid=209544) 기술을 사용하여 Direct3D를 그래픽 프로그래밍 이상으로 확장하는 [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561) 프로그래밍 가능 셰이더 단계입니다.
+계산 셰이더는 [DirectCompute](https://go.microsoft.com/fwlink/p/?linkid=209544) 기술을 사용하여 Direct3D를 그래픽 프로그래밍 이상으로 확장하는 [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl) 프로그래밍 가능 셰이더 단계입니다.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
 

@@ -6,24 +6,24 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c7a40d81171113656a39dda2fe02e0701fdd8ba4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fac31b773c2326f8a9e0ed50cdf876552fee5689
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596658"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372248"
 ---
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Windows 런타임 8.x 프로젝트를 UWP 프로젝트로 포팅
 
 
 
-포팅 프로세스를 시작할 경우 두 가지 옵션이 있습니다. 하나는 앱 패키지 매니페스트를 비롯하여 기존 프로젝트 파일의 복사본을 편집하는 옵션입니다(해당 옵션은 [UWP(유니버설 Windows 플랫폼)으로 앱 마이그레이션](https://msdn.microsoft.com/library/mt148501.aspx)에서 프로젝트 파일을 업데이트하는 방법에 대한 정보 참조). 다른 옵션은 Visual Studio에서 새 Windows 10 프로젝트를 만들고 파일에 복사 하는 것입니다. 이 항목의 첫 번째 섹션에서는 두 번째 옵션에 관해 설명하지만, 항목의 나머지 부분에는 두 옵션 모두에 해당하는 추가 정보가 나와 있습니다. 기존 프로젝트와 동일한 솔루션에서 새 Windows 10 프로젝트를 유지 하 여 공유 된 프로젝트를 사용 하 여 소스 코드 파일을 공유할 수도 있습니다. 또는 자체 솔루션에 새 프로젝트를 유지하고 Visual Studio에서 연결된 파일 기능을 사용하여 소스 코드 파일을 공유할 수 있습니다.
+포팅 프로세스를 시작할 경우 두 가지 옵션이 있습니다. 하나는 앱 패키지 매니페스트를 비롯하여 기존 프로젝트 파일의 복사본을 편집하는 옵션입니다(해당 옵션은 [UWP(유니버설 Windows 플랫폼)으로 앱 마이그레이션](https://docs.microsoft.com/visualstudio/misc/migrate-apps-to-the-universal-windows-platform-uwp?view=vs-2015)에서 프로젝트 파일을 업데이트하는 방법에 대한 정보 참조). 다른 옵션은 Visual Studio에서 새 Windows 10 프로젝트를 만들고 파일에 복사 하는 것입니다. 이 항목의 첫 번째 섹션에서는 두 번째 옵션에 관해 설명하지만, 항목의 나머지 부분에는 두 옵션 모두에 해당하는 추가 정보가 나와 있습니다. 기존 프로젝트와 동일한 솔루션에서 새 Windows 10 프로젝트를 유지 하 여 공유 된 프로젝트를 사용 하 여 소스 코드 파일을 공유할 수도 있습니다. 또는 자체 솔루션에 새 프로젝트를 유지하고 Visual Studio에서 연결된 파일 기능을 사용하여 소스 코드 파일을 공유할 수 있습니다.
 
 ## <a name="create-the-project-and-copy-files-to-it"></a>프로젝트를 만들고 파일을 프로젝트에 복사
 
 이러한 단계는 Visual Studio에서 새 Windows 10 프로젝트를 만들고 파일에 복사 하는 옵션에 집중 합니다. 만들 프로젝트의 수 및 복사할 파일에 관한 몇 가지 세부 사항은 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md) 및 이후 섹션에 설명된 요인 및 결정에 따라 달라집니다. 이 단계에서는 가장 간단한 경우를 가정합니다.
 
-1.  Microsoft Visual Studio 2015를 시작 하 고 새 빈 응용 프로그램 (Windows 유니버설) 프로젝트를 만듭니다. 자세한 내용은 참조 하세요. [빠른 시작에 Windows 런타임 8.x 앱 템플릿을 사용 하 여 (C#, c + +, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)합니다. 새 프로젝트에서는 모든 디바이스 패밀리에서 실행될 앱 패키지(appx 파일)를 빌드합니다.
+1.  Microsoft Visual Studio 2015를 시작 하 고 새 빈 응용 프로그램 (Windows 유니버설) 프로젝트를 만듭니다. 자세한 내용은 참조 하세요. [빠른 시작에 Windows 런타임 8.x 앱 템플릿을 사용 하 여 (C#, C++, Visual Basic)](https://docs.microsoft.com/previous-versions/windows/apps/hh768232(v=win.10))합니다. 새 프로젝트에서는 모든 디바이스 패밀리에서 실행될 앱 패키지(appx 파일)를 빌드합니다.
 2.  유니버설 8.1 앱 프로젝트에서 다시 사용할 모든 소스 코드 파일 및 시각적 자산 파일을 식별합니다. 파일 탐색기를 사용하여 다시 사용할 데이터 모델, 보기 모델, 시각적 자산, 리소스 사전, 폴더 구조 등을 새 프로젝트에 복사합니다. 필요한 경우 디스크에서 하위 폴더를 복사하거나 만듭니다.
 3.  또한 보기(예제: MainPage.xaml 및 MainPage.xaml.cs)를 새 프로젝트에 복사합니다. 필요한 경우 새 하위 폴더를 만들고 기존 보기를 프로젝트에서 제거합니다. 하지만 Visual Studio에서 생성된 보기를 덮어쓰거나 제거하기 전에 나중에 유용하게 참조할 수 있도록 복사본을 유지하세요. 유니버설 8.1 앱을 포팅하는 첫 단계에서는 한 디바이스 패밀리에서 앱이 제대로 표시되고 잘 작동하도록 하는 데 중점을 둡니다. 나중에 보기가 모든 폼 팩터에 제대로 어울리도록 조정하고 선택적으로 적응 코드를 추가하여 특정 디바이스 패밀리를 최대한 활용하도록 하는 데 집중할 수 있습니다.
 4.  **솔루션 탐색기**에서 **모든 파일 표시**가 설정되어 있는지 확인합니다. 복사한 파일을 선택하여 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 클릭합니다. 그러면 포함하는 폴더가 자동으로 포함됩니다. 원하는 경우 **모든 파일 표시**를 해제할 수 있습니다. 원하는 경우 대체 워크플로로 **기존 항목 추가** 명령을 사용하여 Visual Studio **솔루션 탐색기**에서 필요한 하위 폴더를 만듭니다. 시각적 자산에서 **빌드 작업**이 **콘텐츠**로 설정되어 있고 **출력 디렉터리로 복사**가 **복사 안 함**으로 설정되어 있는지 다시 확인합니다.
@@ -39,7 +39,7 @@ ms.locfileid: "57596658"
 -   Windows 10을 지원 해야 하는 경우 조건부 컴파일 지시문의 많은 유니버설 8.1 앱의 소스 코드에서 제거할 수 있어야 합니다. 이 항목의 [조건부 컴파일 및 적응 코드](#conditional-compilation-and-adaptive-code)를 참조하세요.
 -   모든 디바이스 패밀리(예: 프린터, 스캐너 또는 카메라 단추)에서 사용할 수 없는 기능을 사용하기 위해 적응 코드를 작성할 수 있습니다. 이 항목의 [조건부 컴파일 및 적응 코드](#conditional-compilation-and-adaptive-code)에서 세 번째 예제를 참조하세요.
 -   Windows 8.1, Windows Phone 8.1 및 Windows 10을 지원 하려는 경우 동일한 솔루션에 세 개의 프로젝트를 유지 및 공유 프로젝트와 코드를 공유할 수 있습니다. 또는 프로젝트 간에 소스 코드 파일을 공유할 수 있습니다. 방법: Visual Studio의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **기존 항목 추가**를 선택하고, 공유할 파일을 선택하고, **링크로 추가**를 클릭합니다. 소스 코드 파일에 연결하는 프로젝트에서 해당 파일을 볼 수 있도록 소스 코드 파일을 파일 시스템의 공통 폴더에 저장합니다. 또한 소스 코드 파일을 소스 컨트롤에 추가해야 합니다.
--   소스 코드 수준이 아닌 이진 수준에서 재사용하려면 [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/br230301.aspx)를 참조하세요. Windows 8.1, Windows Phone 8.1 및 Windows 10 앱 (.NET Core)에 대 한.NET Framework 및.NET Framework 전체에서 사용할 수 있는.NET Api의 하위 집합을 지원 하는 이식 가능한 클래스 라이브러리도 있습니다. 포팅 가능한 클래스 라이브러리 어셈블리는 이러한 플랫폼 모두와 이진 호환됩니다. Visual Studio를 사용하여 포팅 가능한 클래스 라이브러리를 대상으로 하는 프로젝트를 만듭니다. [포팅 가능한 클래스 라이브러리를 사용한 플랫폼 간 개발](https://msdn.microsoft.com/library/gg597391.aspx)을 참조하세요.
+-   소스 코드 수준이 아닌 이진 수준에서 재사용하려면 [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](https://docs.microsoft.com/previous-versions/windows/apps/br230301(v=vs.140))를 참조하세요. Windows 8.1, Windows Phone 8.1 및 Windows 10 앱 (.NET Core)에 대 한.NET Framework 및.NET Framework 전체에서 사용할 수 있는.NET Api의 하위 집합을 지원 하는 이식 가능한 클래스 라이브러리도 있습니다. 포팅 가능한 클래스 라이브러리 어셈블리는 이러한 플랫폼 모두와 이진 호환됩니다. Visual Studio를 사용하여 포팅 가능한 클래스 라이브러리를 대상으로 하는 프로젝트를 만듭니다. [포팅 가능한 클래스 라이브러리를 사용한 플랫폼 간 개발](https://docs.microsoft.com/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)을 참조하세요.
 
 ## <a name="extension-sdks"></a>확장 SDK
 
@@ -63,7 +63,7 @@ ms.locfileid: "57596658"
 
 `\Program Files (x86)\Windows Kits\10\Extension SDKs\WindowsMobile\10.0.x.y`
 
-앱이 API를 구현한 디바이스 패밀리를 대상으로 하지 않는 한 [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) 클래스를 사용하여 API가 있는지 테스트한 후 호출해야 합니다(적응 코드라고 함). 그러면 앱이 실행되는 모든 장치에서 이 조건이 평가되지만, API가 있어 호출에 사용할 수 있는 장치에 대해서만 true로 평가합니다. 먼저 범용 API가 있는지를 확인한 후 확장 SDK 및 적응 코드만 사용합니다. 아래 섹션에 몇 가지 예제가 나와 있습니다.
+앱이 API를 구현한 디바이스 패밀리를 대상으로 하지 않는 한 [**ApiInformation**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.ApiInformation) 클래스를 사용하여 API가 있는지 테스트한 후 호출해야 합니다(적응 코드라고 함). 그러면 앱이 실행되는 모든 장치에서 이 조건이 평가되지만, API가 있어 호출에 사용할 수 있는 장치에 대해서만 true로 평가합니다. 먼저 범용 API가 있는지를 확인한 후 확장 SDK 및 적응 코드만 사용합니다. 아래 섹션에 몇 가지 예제가 나와 있습니다.
 
 또한 [앱 패키지 매니페스트](#app-package-manifest)를 참조하세요.
 
@@ -83,7 +83,7 @@ ms.locfileid: "57596658"
 #endif // WINDOWS_APP
 ```
 
-Windows 10에 수렴 합니다 [ **PickSingleFileAsync** ](https://msdn.microsoft.com/library/windows/apps/jj635275) 이 코드를 간소화 하므로 API:
+Windows 10에 수렴 합니다 [ **PickSingleFileAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync) 이 코드를 간소화 하므로 API:
 
 ```csharp
     // Use Windows.Storage.Pickers.FileOpenPicker.PickSingleFileAsync
@@ -106,7 +106,7 @@ Windows 10에 수렴 합니다 [ **PickSingleFileAsync** ](https://msdn.microsof
 #endif // WINDOWS_PHONE_APP
 ```
 
-Windows 10에서 뒤로 단추 이벤트 세계적인 개념입니다. 하드웨어에서 구현한 뒤로 단추 또는 소프트웨어에서 구현한 뒤로 단추는 모두 [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트를 발생시킵니다. 즉, 처리할 이벤트입니다.
+Windows 10에서 뒤로 단추 이벤트 세계적인 개념입니다. 하드웨어에서 구현한 뒤로 단추 또는 소프트웨어에서 구현한 뒤로 단추는 모두 [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.backrequested) 이벤트를 발생시킵니다. 즉, 처리할 이벤트입니다.
 
 ```csharp
     Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
@@ -137,7 +137,7 @@ void HardwareButtons_CameraPressed(object sender, Windows.Phone.UI.Input.CameraE
 #endif // WINDOWS_PHONE_APP
 ```
 
-Windows 10에서 하드웨어 카메라 단추는 모바일 장치 제품군에 특정 개념입니다. 한 앱 패키지를 모든 장치에서 실행하므로 적응 코드를 사용하여 컴파일 시간 조건을 런타임 조건으로 변경합니다. 이러한 작업을 수행하기 위해 [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) 클래스를 사용하여 런타임 시 [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557) 클래스가 있는지 쿼리합니다. **HardwareButtons**는 모바일 확장 SDK에서 정의되므로 이 코드를 컴파일할 프로젝트에 해당 SDK에 대한 참조를 추가해야 합니다. 그러나 처리기는 모바일 확장 SDK에서 정의한 형식을 구현하는 디바이스이면서 모바일 디바이스 패밀리인 디바이스에서만 실행됩니다. 따라서 이 코드는 다른 방식으로 구현하기는 하지만 존재하는 기능만 사용하도록 주의한다는 점에서 유니버설 8.1 코드와 원칙적으로 같습니다.
+Windows 10에서 하드웨어 카메라 단추는 모바일 장치 제품군에 특정 개념입니다. 한 앱 패키지를 모든 장치에서 실행하므로 적응 코드를 사용하여 컴파일 시간 조건을 런타임 조건으로 변경합니다. 이러한 작업을 수행하기 위해 [**ApiInformation**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.ApiInformation) 클래스를 사용하여 런타임 시 [**HardwareButtons**](https://docs.microsoft.com/uwp/api/Windows.Phone.UI.Input.HardwareButtons) 클래스가 있는지 쿼리합니다. **HardwareButtons**는 모바일 확장 SDK에서 정의되므로 이 코드를 컴파일할 프로젝트에 해당 SDK에 대한 참조를 추가해야 합니다. 그러나 처리기는 모바일 확장 SDK에서 정의한 형식을 구현하는 디바이스이면서 모바일 디바이스 패밀리인 디바이스에서만 실행됩니다. 따라서 이 코드는 다른 방식으로 구현하기는 하지만 존재하는 기능만 사용하도록 주의한다는 점에서 유니버설 8.1 코드와 원칙적으로 같습니다.
 
 ```csharp
     // Note: Cache the value instead of querying it more than once.
@@ -162,9 +162,9 @@ private void HardwareButtons_CameraPressed(object sender, Windows.Phone.UI.Input
 
 ## <a name="app-package-manifest"></a>앱 패키지 매니페스트
 
-합니다 [Windows 10에서 변경 된 내용](https://msdn.microsoft.com/library/windows/apps/dn705793) 항목 추가, 제거 및 변경 하는 요소를 포함 하 여 Windows 10에 대 한 변경 내용을 패키지 매니페스트 스키마 참조를 나열 합니다. 스키마의 모든 요소, 특성 및 유형에 대한 참조 정보는 [요소 계층 구조](https://msdn.microsoft.com/library/windows/apps/dn934819)를 참조하세요. Windows Phone 스토어 앱을 포팅하거나 Windows Phone 스토어에서 앱을 업데이트하는 경우 **pm:PhoneIdentity** 요소가 이전 앱의 앱 매니페스트에 있는 항목과 일치하는지 확인합니다(스토어에서 앱에 할당한 것과 동일한 GUID 사용). 이렇게 하면 Windows 10으로 업그레이드하는 앱 사용자가 새로운 앱을 중복이 아닌 업데이트로 수신합니다. 자세한 내용은 [**pm:PhoneIdentity**](https://msdn.microsoft.com/library/windows/apps/dn934763) 참조 항목을 참조하세요.
+합니다 [Windows 10에서 변경 된 내용](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/what-s-changed-in-windows-10) 항목 추가, 제거 및 변경 하는 요소를 포함 하 여 Windows 10에 대 한 변경 내용을 패키지 매니페스트 스키마 참조를 나열 합니다. 스키마의 모든 요소, 특성 및 유형에 대한 참조 정보는 [요소 계층 구조](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/root-elements)를 참조하세요. Windows Phone 스토어 앱을 포팅하거나 Windows Phone 스토어에서 앱을 업데이트하는 경우 **pm:PhoneIdentity** 요소가 이전 앱의 앱 매니페스트에 있는 항목과 일치하는지 확인합니다(스토어에서 앱에 할당한 것과 동일한 GUID 사용). 이렇게 하면 Windows 10으로 업그레이드하는 앱 사용자가 새로운 앱을 중복이 아닌 업데이트로 수신합니다. 자세한 내용은 [**pm:PhoneIdentity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-pm-phoneidentity) 참조 항목을 참조하세요.
 
-모든 확장 SDK 참조를 비롯하여 프로젝트의 설정은 앱에서 호출할 수 있는 API 노출 영역을 결정합니다. 하지만 앱 패키지 매니페스트는 고객이 스토어에서 앱을 설치할 수 있는 장치의 실제 집합을 결정합니다. 자세한 내용은 [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903)의 예제를 참조하세요.
+모든 확장 SDK 참조를 비롯하여 프로젝트의 설정은 앱에서 호출할 수 있는 API 노출 영역을 결정합니다. 하지만 앱 패키지 매니페스트는 고객이 스토어에서 앱을 설치할 수 있는 장치의 실제 집합을 결정합니다. 자세한 내용은 [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily)의 예제를 참조하세요.
 
 앱 패키지 매니페스트를 편집하여 다양한 선언, 접근 권한 값 및 일부 기능에 필요한 기타 설정을 설정할 수 있습니다. Visual Studio 앱 패키지 매니페스트 편집기를 사용하여 앱 패키지 매니페스트를 편집할 수 있습니다. **솔루션 탐색기**가 표시되지 않는 경우 **보기** 메뉴에서 선택합니다. **Package.appxmanifest**를 두 번 클릭합니다. 매니페스트 편집기 창이 열립니다. 적절한 탭을 선택하여 변경한 다음 저장합니다.
 
@@ -172,8 +172,8 @@ private void HardwareButtons_CameraPressed(object sender, Windows.Phone.UI.Input
 
 ## <a name="related-topics"></a>관련 항목
 
-* [유니버설 Windows 플랫폼용 앱 개발](https://msdn.microsoft.com/library/dn975273.aspx)
-* [빠른 시작에 Windows 런타임 8.x 앱 템플릿을 사용 하 여 (C#, c + +, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)
-* [Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-* [이식 가능한 클래스 라이브러리를 사용 하 여 플랫폼 간 개발](https://msdn.microsoft.com/library/gg597391.aspx)
+* [유니버설 Windows 플랫폼용 앱 개발](https://docs.microsoft.com/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp?view=vs-2015)
+* [빠른 시작에 Windows 런타임 8.x 앱 템플릿을 사용 하 여 (C#, C++, Visual Basic)](https://docs.microsoft.com/previous-versions/windows/apps/hh768232(v=win.10))
+* [Windows 런타임 구성 요소 만들기](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
+* [이식 가능한 클래스 라이브러리를 사용 하 여 플랫폼 간 개발](https://docs.microsoft.com/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)
 

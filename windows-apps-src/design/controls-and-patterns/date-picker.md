@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a51705b1e74508d89328ce5ace3d7fd869aa0940
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1b8e03683d38b382d74bd6defbf7732578878960
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606398"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362836"
 ---
 # <a name="date-picker"></a>날짜 선택기
 
@@ -26,7 +26,7 @@ ms.locfileid: "57606398"
 
 날짜 선택은 사용자가 터치, 마우스 또는 키보드 입력을 사용하여 지역화된 날짜 값을 선택할 수 있는 표준화된 방법을 제공합니다. 
 
-> **중요 API**: [DatePicker 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx), [날짜 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.date.aspx)
+> **중요 API**: [DatePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.DatePicker), [날짜 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepicker.date)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?

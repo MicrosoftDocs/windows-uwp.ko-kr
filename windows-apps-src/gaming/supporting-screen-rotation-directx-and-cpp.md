@@ -6,22 +6,22 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 화면 방향, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e2cf915e510c3d6e3d702417b72c097a293f03c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8cb741e8eb87987c51324c5f4e5f2d0f0da23f74
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632218"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368017"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>화면 방향 지원(DirectX 및 C++)
 
 
 
-[  **DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리할 때 UWP(유니버설 Windows 플랫폼) 앱은 여러 화면 방향을 지원할 수 있습니다. 여기에서 설명 하겠습니다 UWP DirectX 앱에서 화면 회전을 처리 하기 위한 모범 사례를 효율적으로 Windows 10 장치의 그래픽 하드웨어 사용 되도록 합니다.
+[  **DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged) 이벤트를 처리할 때 UWP(유니버설 Windows 플랫폼) 앱은 여러 화면 방향을 지원할 수 있습니다. 여기에서 설명 하겠습니다 UWP DirectX 앱에서 화면 회전을 처리 하기 위한 모범 사례를 효율적으로 Windows 10 장치의 그래픽 하드웨어 사용 되도록 합니다.
 
 시작하기 전에 그래픽 하드웨어는 장치 방향에 관계없이 항상 같은 방향으로 픽셀 데이터를 출력한다는 점을 기억해 두세요. Windows 10 장치 (일종의 센서를 사용 하 여 또는 소프트웨어 토글을 사용 하 여) 자신의 현재 디스플레이 방향 확인 하 고 사용자가 디스플레이 설정을 변경할 수 수 있습니다. 이 때문에 자체 Windows 10 되도록 "수직" 장치 방향에 따라 이미지의 회전을 처리 합니다. 기본적으로 앱은 방향에서 달라진 점(예: 창 크기)이 있다는 알림을 받게 됩니다. 이 경우 Windows 10 최종 표시 이미지를 즉시 회전 합니다. 네 개의 특정 화면 방향 (뒷부분에서 설명) 중 세 개에 대 한 Windows 10 최종 이미지를 표시 하려면 추가 그래픽 리소스 및 계산 사용 합니다.
 
-UWP DirectX 앱에서 [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/dn264258) 개체는 앱이 쿼리할 수 있는 기본 디스플레이 방향 데이터를 제공합니다. 기본 방향은 디스플레이의 픽셀 너비가 높이보다 큰 *가로*이고, 대체 방향은 디스플레이가 한쪽 방향으로 90도 회전하여 너비가 높이보다 작아지는 *세로*입니다.
+UWP DirectX 앱에서 [**DisplayInformation**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayInformation) 개체는 앱이 쿼리할 수 있는 기본 디스플레이 방향 데이터를 제공합니다. 기본 방향은 디스플레이의 픽셀 너비가 높이보다 큰 *가로*이고, 대체 방향은 디스플레이가 한쪽 방향으로 90도 회전하여 너비가 높이보다 작아지는 *세로*입니다.
 
 Windows 10에는 네 개의 특정 표시 방향 모드 정의합니다.
 
@@ -37,7 +37,7 @@ Windows 10에는 네 개의 특정 표시 방향 모드 정의합니다.
 화면 방향의 변화를 처리하는 일반적인 프로세스는 다음과 같습니다.
 
 1.  창 경계 값과 디스플레이 방향 데이터를 조합해서 사용하여 장치의 기본 디스플레이 방향에 스왑 체인을 맞춥니다.
-2.  방향 사용 하 여 스왑 체인의 Windows 10에 게 알립니다 [ **IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801)합니다.
+2.  방향 사용 하 여 스왑 체인의 Windows 10에 게 알립니다 [ **IDXGISwapChain1::SetRotation**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-setrotation)합니다.
 3.  렌더링 코드를 변경하여 장치의 사용자 방향에 맞는 이미지를 생성합니다.
 
 ## <a name="resizing-the-swap-chain-and-pre-rotating-its-contents"></a>스왑 체인의 크기 조정 및 내용 미리 회전
@@ -45,18 +45,18 @@ Windows 10에는 네 개의 특정 표시 방향 모드 정의합니다.
 
 UWP DirectX 앱에서 기본 디스플레이 크기를 조정하고 내용을 미리 회전하려면 다음 단계를 구현하세요.
 
-1.  [  **DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리합니다.
+1.  [  **DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged) 이벤트를 처리합니다.
 2.  스왑 체인의 크기를 창의 새 크기로 조정합니다.
-3.  [  **IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801)을 호출하여 스왑 체인 방향을 설정합니다.
+3.  [  **IDXGISwapChain1::SetRotation**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-setrotation)을 호출하여 스왑 체인 방향을 설정합니다.
 4.  렌더링 대상 및 기타 픽셀 데이터 버퍼와 같은 창 크기 종속 리소스를 다시 만듭니다.
 
 이제 각 단계를 좀더 자세히 살펴보겠습니다.
 
-첫 번째 단계는 [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트에 대한 처리기를 등록하는 것입니다. 이 이벤트는 화면 방향이 변경될 때마다(예: 디스플레이가 회전될 때) 앱에서 발생합니다.
+첫 번째 단계는 [**DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged) 이벤트에 대한 처리기를 등록하는 것입니다. 이 이벤트는 화면 방향이 변경될 때마다(예: 디스플레이가 회전될 때) 앱에서 발생합니다.
 
-[**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리하려면 뷰 공급자가 구현해야 하는 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) 인터페이스의 메서드 중 하나인 필수 [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509) 메서드에서 **DisplayInformation::OrientationChanged**에 대한 처리기를 연결합니다.
+[**DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged) 이벤트를 처리하려면 뷰 공급자가 구현해야 하는 [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) 인터페이스의 메서드 중 하나인 필수 [**SetWindow**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.setwindow) 메서드에서 **DisplayInformation::OrientationChanged**에 대한 처리기를 연결합니다.
 
-이 코드 예제에서 [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)에 대한 이벤트 처리기는 **OnOrientationChanged**라는 메서드입니다. **DisplayInformation::OrientationChanged**가 발생하면 **SetCurrentOrientation**이라는 메서드가 호출되고, 이 메서드가 **CreateWindowSizeDependentResources**를 호출합니다.
+이 코드 예제에서 [**DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged)에 대한 이벤트 처리기는 **OnOrientationChanged**라는 메서드입니다. **DisplayInformation::OrientationChanged**가 발생하면 **SetCurrentOrientation**이라는 메서드가 호출되고, 이 메서드가 **CreateWindowSizeDependentResources**를 호출합니다.
 
 ```cpp
 void App::SetWindow(CoreWindow^ window)
@@ -330,13 +330,13 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 
 0.5f를 추가하여 가장 가까운 정수 값으로 반올림합니다.
 
-부연하지만 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 좌표는 항상 DIP로 정의됩니다. Windows 10 및 Windows의 이전 버전에 대 한 DIP를 1/96 인치, 및의 OS의 정의에 맞춤으로 정의 됩니다 *등록*합니다. 디스플레이 방향이 세로 모드로 회전되면 앱은 **CoreWindow**의 너비와 높이를 대칭 이동하며 렌더링 대상 크기(경계)가 그에 따라 변경되어야 합니다. Direct3D의 좌표는 항상 물리적 픽셀로 되어 있으므로 이러한 값을 Direct3D에 전달하여 스왑 체인을 설정하기 전에 **CoreWindow**의 DIP 값을 정수 픽셀 값으로 변환해야 합니다.
+부연하지만 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 좌표는 항상 DIP로 정의됩니다. Windows 10 및 Windows의 이전 버전에 대 한 DIP를 1/96 인치, 및의 OS의 정의에 맞춤으로 정의 됩니다 *등록*합니다. 디스플레이 방향이 세로 모드로 회전되면 앱은 **CoreWindow**의 너비와 높이를 대칭 이동하며 렌더링 대상 크기(경계)가 그에 따라 변경되어야 합니다. Direct3D의 좌표는 항상 물리적 픽셀로 되어 있으므로 이러한 값을 Direct3D에 전달하여 스왑 체인을 설정하기 전에 **CoreWindow**의 DIP 값을 정수 픽셀 값으로 변환해야 합니다.
 
 프로세스 측면에서 볼 때 단순히 스왑 체인 크기를 조정하는 경우보다 좀 더 많은 작업을 수행하게 됩니다. 즉, 표시를 위해 이미지를 작성하기 전에 이미지의 Direct2D 및 Direct3D 구성 요소를 실제로 회전하고 결과를 새 방향으로 렌더링했음을 스왑 체인에 알립니다. 다음에서는 **DX::DeviceResources::CreateWindowSizeDependentResources**에 대한 코드 예제에 표시된 대로 이 프로세스를 보다 자세히 설명합니다.
 
 -   디스플레이의 새 방향을 결정합니다. 디스플레이가 가로에서 세로로 대칭 이동되었거나 그 반대로 대칭 이동되었으면 디스플레이 경계에 대한 높이 및 너비 값을 바꿉니다(DIP 값이 픽셀로 변경됨).
 
--   그런 후 스왑 체인이 만들어졌는지 확인합니다. 아직 만들어지지 않았으면 [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559)를 호출하여 만듭니다. 그렇지 않은 경우 [**IDXGISwapchain:ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577)를 호출하여 기존 스왑 체인의 버퍼 크기를 새 디스플레이 크기로 조정합니다. 렌더링 파이프라인에 의해 이미 콘텐츠가 회전되었으므로 회전 이벤트에 대한 스왑 체인 크기는 조정할 필요가 없지만 크기 조정이 필요한 끌기 및 채우기 이벤트와 같은 다른 크기 변경 이벤트가 있을 수 있습니다.
+-   그런 후 스왑 체인이 만들어졌는지 확인합니다. 아직 만들어지지 않았으면 [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)를 호출하여 만듭니다. 그렇지 않은 경우 [**IDXGISwapchain:ResizeBuffers**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-resizebuffers)를 호출하여 기존 스왑 체인의 버퍼 크기를 새 디스플레이 크기로 조정합니다. 렌더링 파이프라인에 의해 이미 콘텐츠가 회전되었으므로 회전 이벤트에 대한 스왑 체인 크기는 조정할 필요가 없지만 크기 조정이 필요한 끌기 및 채우기 이벤트와 같은 다른 크기 변경 이벤트가 있을 수 있습니다.
 
 -   그런 다음 스왑 체인으로 렌더링할 때 그래픽 파이프라인의 픽셀 또는 꼭짓점에 각각 적용할 2차원 또는 3차원 행렬 변환을 설정합니다. 회전 행렬은 다음 네 가지가 가능합니다.
 
@@ -345,32 +345,32 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
     -   환경에 대칭 이동 (DXGI\_모드\_회전\_ROTATE180)
     -   세로, 대칭 이동 (DXGI\_모드\_회전\_ROTATE90)
 
-    Windows 10에서 제공 되는 데이터에 따라 올바른 행렬이 선택 되어 (의 결과 같은 [ **DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)) 표시를 확인 하기 위한 방향 하며 됩니다 효과적으로 회전 시킬 화면 방향에 맞게 각 (Direct2D) 픽셀 또는 꼭 짓 점 (Direct3D) 장면에서의 좌표를 곱합니다. (Direct2D에서는 화면 원점이 왼쪽 위 구석으로 정의되지만 Direct3D에서는 원점이 창의 논리적 중심으로 정의됩니다.)
+    Windows 10에서 제공 되는 데이터에 따라 올바른 행렬이 선택 되어 (의 결과 같은 [ **DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged)) 표시를 확인 하기 위한 방향 하며 됩니다 효과적으로 회전 시킬 화면 방향에 맞게 각 (Direct2D) 픽셀 또는 꼭 짓 점 (Direct3D) 장면에서의 좌표를 곱합니다. (Direct2D에서는 화면 원점이 왼쪽 위 구석으로 정의되지만 Direct3D에서는 원점이 창의 논리적 중심으로 정의됩니다.)
 
 > **참고**    회전 및 정의 하는 방법에 사용 되는 2 차원 변환에 대 한 자세한 내용은 참조 하세요. [행렬 화면 회전 (2-d)에 대 한 정의](#appendix-a-applying-matrices-for-screen-rotation-2-d)합니다. 회전에 사용되는 3차원 변환에 대한 자세한 내용은 [화면 회전을 위한 행렬 정의(3차원)](#appendix-b-applying-matrices-for-screen-rotation-3-d)를 참조하세요.
 
  
 
-이제 [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801)을 호출한 후 업데이트된 회전 행렬을 제공해야 합니다. 이 과정은 중요합니다.
+이제 [**IDXGISwapChain1::SetRotation**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-setrotation)을 호출한 후 업데이트된 회전 행렬을 제공해야 합니다. 이 과정은 중요합니다.
 
 `m_swapChain->SetRotation(rotation);`
 
 또한 렌더 메서드가 새 프로젝션을 계산할 때 가져올 수 있는 선택된 회전 행렬을 저장합니다. 이 행렬은 최종 3차원 프로젝션을 렌더링하거나 최종 2차원 레이아웃을 작성할 때 사용합니다. (자동으로 적용되지는 않습니다.)
 
-그런 다음 회전된 3차원 보기에 대한 새로운 렌더링 대상과 보기에 대한 새 깊이 스텐실 버퍼를 만듭니다. [  **ID3D11DeviceContext:RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480)를 호출하여 회전된 화면에 대한 3차원 렌더링 뷰포트를 설정합니다.
+그런 다음 회전된 3차원 보기에 대한 새로운 렌더링 대상과 보기에 대한 새 깊이 스텐실 버퍼를 만듭니다. [  **ID3D11DeviceContext:RSSetViewports**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports)를 호출하여 회전된 화면에 대한 3차원 렌더링 뷰포트를 설정합니다.
 
-마지막으로 회전하거나 배치할 2차원 이미지가 있는 경우 [**ID2D1DeviceContext::CreateBitmapFromDxgiSurface**](https://msdn.microsoft.com/library/windows/desktop/hh404482)를 사용하여 2차원 렌더링 대상을 크기 조정된 스왑 체인에 대한 쓰기 가능 비트맵으로 만들고 업데이트된 방향에 대한 새 레이아웃을 작성합니다. 앤티앨리어싱 모드와 같이 렌더링 대상에 대해 필요한 속성을 설정합니다(코드 예제 참조).
+마지막으로 회전하거나 배치할 2차원 이미지가 있는 경우 [**ID2D1DeviceContext::CreateBitmapFromDxgiSurface**](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-createbitmapfromdxgisurface(idxgisurface_constd2d1_bitmap_properties1__id2d1bitmap1))를 사용하여 2차원 렌더링 대상을 크기 조정된 스왑 체인에 대한 쓰기 가능 비트맵으로 만들고 업데이트된 방향에 대한 새 레이아웃을 작성합니다. 앤티앨리어싱 모드와 같이 렌더링 대상에 대해 필요한 속성을 설정합니다(코드 예제 참조).
 
 이제 스왑 체인을 표시합니다.
 
 ## <a name="reduce-the-rotation-delay-by-using-corewindowresizemanager"></a>CoreWindowResizeManager를 사용하여 회전 지연 단축
 
 
-기본적으로 Windows 10 짧지만 눈에 띄는 앱 모델 또는 이미지의 회전을 완료 하려면 언어에 관계 없이 모든 앱에 대 한 시간 기간을 제공 합니다. 그러나 앱이 여기에 설명된 기법 중 하나를 사용하여 회전 계산을 수행하면 이 기간이 끝나기 전에 작업을 끝낼 수 있을 것입니다. 여러분은 이 시간을 다시 얻고 회전 애니메이션을 완료하려고 할 것입니다. [  **CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603)를 통해 이러한 결과를 얻을 수 있습니다.
+기본적으로 Windows 10 짧지만 눈에 띄는 앱 모델 또는 이미지의 회전을 완료 하려면 언어에 관계 없이 모든 앱에 대 한 시간 기간을 제공 합니다. 그러나 앱이 여기에 설명된 기법 중 하나를 사용하여 회전 계산을 수행하면 이 기간이 끝나기 전에 작업을 끝낼 수 있을 것입니다. 여러분은 이 시간을 다시 얻고 회전 애니메이션을 완료하려고 할 것입니다. [  **CoreWindowResizeManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindowResizeManager)를 통해 이러한 결과를 얻을 수 있습니다.
 
-다음은 [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603)의 사용 방법입니다. [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트가 발생하면 이벤트에 대한 처리기 내에서 [**CoreWindowResizeManager::GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/hh404170)를 호출하여 **CoreWindowResizeManager**의 인스턴스를 획득하고, 새 방향의 레이아웃이 완료되고 표시되면 [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605)를 호출하여 회전 애니메이션을 완료하고 앱 화면을 표시할 수 있음을 Windows에 알립니다.
+다음은 [**CoreWindowResizeManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindowResizeManager)의 사용 방법입니다. [**DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged) 이벤트가 발생하면 이벤트에 대한 처리기 내에서 [**CoreWindowResizeManager::GetForCurrentView**](https://docs.microsoft.com/previous-versions//hh404170(v=vs.85))를 호출하여 **CoreWindowResizeManager**의 인스턴스를 획득하고, 새 방향의 레이아웃이 완료되고 표시되면 [**NotifyLayoutCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindowresizemanager.notifylayoutcompleted)를 호출하여 회전 애니메이션을 완료하고 앱 화면을 표시할 수 있음을 Windows에 알립니다.
 
-[  **DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)에 대한 이벤트 처리기의 코드는 다음과 유사할 수 있습니다.
+[  **DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged)에 대한 이벤트 처리기의 코드는 다음과 유사할 수 있습니다.
 
 ```cpp
 CoreWindowResizeManager^ resizeManager = Windows::UI::Core::CoreWindowResizeManager::GetForCurrentView();
@@ -386,7 +386,7 @@ resizeManager->NotifyLayoutCompleted();
 -   Windows 10의 새 레이아웃을 다시 작성 하는 데 걸리는 시간에 대 한 이미지를 보유 합니다. 앱에는 이러한 시간이 필요하지 않으므로 사용자는 이 시간을 단축하려고 할 것입니다.
 -   레이아웃 시간이 만료되거나 레이아웃 완료 알림이 수신되면 Windows는 이미지를 회전한 다음 새 방향으로 크로스페이드하면서 확대/축소합니다.
 
-세 번째 글머리 기호에서 앱을 호출할 때 추천 [ **NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605), Windows 10 제한 시간 중지 회전 애니메이션을 완료 하 고 컨트롤 그리기 이제는 앱에 반환 합니다. 새 방향을 표시 합니다. 전체적으로 앱은 약간 더 유연해지고 더 빠르게 응답하는 것처럼 느껴지고 좀 더 효율적으로 작동하는 효과를 얻게 됩니다.
+세 번째 글머리 기호에서 앱을 호출할 때 추천 [ **NotifyLayoutCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindowresizemanager.notifylayoutcompleted), Windows 10 제한 시간 중지 회전 애니메이션을 완료 하 고 컨트롤 그리기 이제는 앱에 반환 합니다. 새 방향을 표시 합니다. 전체적으로 앱은 약간 더 유연해지고 더 빠르게 응답하는 것처럼 느껴지고 좀 더 효율적으로 작동하는 효과를 얻게 됩니다.
 
 ## <a name="appendix-a-applying-matrices-for-screen-rotation-2-d"></a>부록 a: 화면 회전 (2-d)에 대 한 매트릭스를 적용합니다.
 
@@ -395,13 +395,13 @@ resizeManager->NotifyLayoutCompleted();
 
 Direct2D 콘텐츠와 Direct3D 콘텐츠에 동일한 회전 행렬을 적용할 수 없는 이유에는 두 가지가 있습니다.
 
--   첫째, 두 콘텐츠는 다른 카티전 좌표 모델을 사용합니다. Direct2D는 y 좌표의 양수 값이 원점에서 위로 커지는 오른손잡이 규칙 을 사용합니다. 그러나 Direct3D는 y 좌표의 양수 값이 원점에서 오른쪽으로 커지는 왼손잡이 규칙을 사용합니다. 결과적으로 Direct2D의 경우 화면 좌표의 원점이 왼쪽 위에 있고 Direct3D의 경우 화면의 원점(프로젝션 평명)이 왼쪽 아래에 있게 됩니다. (자세한 내용은 [3차원 좌표계](https://msdn.microsoft.com/library/windows/apps/bb324490.aspx)를 참조하세요.)
+-   첫째, 두 콘텐츠는 다른 카티전 좌표 모델을 사용합니다. Direct2D는 y 좌표의 양수 값이 원점에서 위로 커지는 오른손잡이 규칙 을 사용합니다. 그러나 Direct3D는 y 좌표의 양수 값이 원점에서 오른쪽으로 커지는 왼손잡이 규칙을 사용합니다. 결과적으로 Direct2D의 경우 화면 좌표의 원점이 왼쪽 위에 있고 Direct3D의 경우 화면의 원점(프로젝션 평명)이 왼쪽 아래에 있게 됩니다. (자세한 내용은 [3차원 좌표계](https://docs.microsoft.com/previous-versions/windows/desktop/bb324490(v=vs.85))를 참조하세요.)
 
     ![Direct3D 좌표계](images/direct3d-origin.png)![Direct2D 좌표계](images/direct2d-origin.png)
 
 -   반올림 오차를 피하려면 2개의 3차원 회전 행렬을 명시적으로 지정해야 합니다.
 
-스왑 체인은 원점이 왼쪽 아래에 있다고 간주하므로 오른손잡이용 Direct2D 좌표계를 스왑 체인에 사용되는 왼손잡이용 Direct2D 좌표계에 맞추기 위해 회전을 수행해야 합니다. 특히 회전 행렬에 회전된 좌표계 원점에 대한 변환 행렬을 곱하여 새로운 왼손잡이용 방향으로 이미지를 다시 배치하고 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)의 좌표 영역에서 스왑 체인의 좌표 영역으로 이미지를 변환합니다. 또한 앱은 Direct2D 렌더링 대상이 스왑 체인에 연결되어 있을 때 이러한 변환을 일관되게 적용해야 합니다. 그러나 앱이 스왑 체인과 직접적으로 연결되어 있지 않은 중간 화면에 그리는 경우에는 이 좌표 영역 변환을 적용하지 마세요.
+스왑 체인은 원점이 왼쪽 아래에 있다고 간주하므로 오른손잡이용 Direct2D 좌표계를 스왑 체인에 사용되는 왼손잡이용 Direct2D 좌표계에 맞추기 위해 회전을 수행해야 합니다. 특히 회전 행렬에 회전된 좌표계 원점에 대한 변환 행렬을 곱하여 새로운 왼손잡이용 방향으로 이미지를 다시 배치하고 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow)의 좌표 영역에서 스왑 체인의 좌표 영역으로 이미지를 변환합니다. 또한 앱은 Direct2D 렌더링 대상이 스왑 체인에 연결되어 있을 때 이러한 변환을 일관되게 적용해야 합니다. 그러나 앱이 스왑 체인과 직접적으로 연결되어 있지 않은 중간 화면에 그리는 경우에는 이 좌표 영역 변환을 적용하지 마세요.
 
 네 가지 가능한 회전 중에서 올바른 행렬을 선택하는 코드는 다음과 같습니다(새 좌표계 원점으로 전환).
 
@@ -447,9 +447,9 @@ default:
     
 ```
 
-2차원 이미지에 대해 올바른 회전 행렬과 원점이 지정되면 [**ID2D1DeviceContext::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371768) 및 [**ID2D1DeviceContext::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371924) 호출 중에서 [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) 호출을 사용하여 설정합니다.
+2차원 이미지에 대해 올바른 회전 행렬과 원점이 지정되면 [**ID2D1DeviceContext::BeginDraw**](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) 및 [**ID2D1DeviceContext::EndDraw**](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) 호출 중에서 [**ID2D1DeviceContext::SetTransform**](https://docs.microsoft.com/windows/desktop/Direct2D/id2d1rendertarget-settransform) 호출을 사용하여 설정합니다.
 
-**경고**    Direct2D 변환 스택 없습니다. 앱이 그리기 코드의 일부로 [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857)도 사용하는 경우 나중에 적용한 다른 변환을 이 행렬에 곱해야 합니다.
+**경고**    Direct2D 변환 스택 없습니다. 앱이 그리기 코드의 일부로 [**ID2D1DeviceContext::SetTransform**](https://docs.microsoft.com/windows/desktop/Direct2D/id2d1rendertarget-settransform)도 사용하는 경우 나중에 적용한 다른 변환을 이 행렬에 곱해야 합니다.
 
  
 
@@ -528,7 +528,7 @@ static const XMFLOAT4X4 Rotation270(
     }
 ```
 
-다음과 같이 [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801)을 호출하여 스왑 체인에 대한 회전 유형을 설정합니다.
+다음과 같이 [**IDXGISwapChain1::SetRotation**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-setrotation)을 호출하여 스왑 체인에 대한 회전 유형을 설정합니다.
 
 `   m_swapChain->SetRotation(rotation);`
 

@@ -5,12 +5,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: 3eee6b75d3ea86c183293ffc27289e9cae2929ce
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: a1745f9ad98ed8dac2e54e17d18467981eafdcec
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291681"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360233"
 ---
 # <a name="interop-between-cwinrt-and-the-abi"></a>C++/WinRT와 ABI 사이의 상호 운용성
 
@@ -104,7 +104,7 @@ int main()
 }
 ```
 
-**as** 함수의 구현체가 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 호출합니다. [  **AddRef**](https://msdn.microsoft.com/library/windows/desktop/ms691379)만 호출하는 하위 수준의 변환을 원한다면 도우미 함수로 [**winrt::copy_to_abi**](/uwp/cpp-ref-for-winrt/copy-to-abi)와 [**winrt::copy_from_abi**](/uwp/cpp-ref-for-winrt/copy-from-abi)를 사용할 수 있습니다. 다음 코드 예제에서는 이러한 하위 수준 변환을 위의 코드 예제에 추가합니다.
+**as** 함수의 구현체가 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))를 호출합니다. [  **AddRef**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)만 호출하는 하위 수준의 변환을 원한다면 도우미 함수로 [**winrt::copy_to_abi**](/uwp/cpp-ref-for-winrt/copy-to-abi)와 [**winrt::copy_from_abi**](/uwp/cpp-ref-for-winrt/copy-from-abi)를 사용할 수 있습니다. 다음 코드 예제에서는 이러한 하위 수준 변환을 위의 코드 예제에 추가합니다.
 
 ```cppwinrt
 int main()
@@ -173,7 +173,7 @@ T convert_from_abi(::IUnknown* from)
 }
 ```
 
-이 함수는 단순하게 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 호출하여 요청된 C++/WinRT 형식의 기본 인터페이스에 대해 쿼리를 실행합니다.
+이 함수는 단순하게 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))를 호출하여 요청된 C++/WinRT 형식의 기본 인터페이스에 대해 쿼리를 실행합니다.
 
 앞에서 본 것처럼 C++/WinRT 개체를 상응하는 ABI 인터페이스 포인터로 변환할 때는 도우미 함수가 필요하지 않습니다. 단순히 [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)(또는 [**try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function)) 멤버 함수를 사용하여 요청된 인터페이스에 대해 쿼리를 실행하면 됩니다. **as** 및 **try_as** 함수는 요청된 ABI 형식을 래핑하는 [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) 개체를 반환합니다.
 
@@ -244,8 +244,8 @@ int main()
 ```
 
 ## <a name="important-apis"></a>중요 API
-* [AddRef 함수](https://msdn.microsoft.com/library/windows/desktop/ms691379)
-* [QueryInterface 함수](https://msdn.microsoft.com/library/windows/desktop/ms682521)
+* [AddRef 함수](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)
+* [QueryInterface 함수](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
 * [winrt::attach_abi 함수](/uwp/cpp-ref-for-winrt/attach-abi)
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
 * [winrt::copy_from_abi function](/uwp/cpp-ref-for-winrt/copy-from-abi)

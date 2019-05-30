@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 503f7baad0d91f4e7c29010145ecb162f98bc81c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b1ea41a509b1673b7c4f5812d34db93dd6b0c93e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606288"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365941"
 ---
 # <a name="choose-a-notification-delivery-method"></a>알림 전달 방법 선택
 
@@ -150,10 +150,10 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 
 기본적으로 푸시 알림은 디바이스에 수신된 시간부터 3일 내에 만료됩니다. 필요한 경우 이 기본값을 명시적 만료 시간으로 재정의할 수 있습니다(알림의 최대값은 3일).
 
-자세한 내용은 다음을 참조하세요.
+참조 항목:
 
 -   [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
--   [푸시 알림에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh761462)
+-   [푸시 알림에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
 -   [유니버설 Windows 플랫폼 (UWP) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
@@ -162,8 +162,8 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 
 * [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)
 * [로컬 알림 메시지 보내기](send-local-toast.md)
-* [푸시 알림에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh761462)
-* [알림 메시지에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh465391)
+* [푸시 알림에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [알림 메시지에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-badges-notifications)
 * [정기 알림 개요](periodic-notification-overview.md)
 * [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
 * [유니버설 Windows 플랫폼 (UWP) 알림을 GitHub의 샘플 코드](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)

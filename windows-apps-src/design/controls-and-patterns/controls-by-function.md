@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a0a267385668a276fc776c5f5d495b27ae72a2b3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6de5e9d8899a7f270d30438a0563b879ccdab898
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611518"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363136"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -43,14 +43,14 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 ### <a name="app-bar"></a>앱 바
 응용 프로그램 관련 명령을 표시하는 도구 모음입니다. 명령 모음을 참조하세요.
 
-참조: [AppBar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.aspx) 
+참조: [AppBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBar) 
 
 ### <a name="app-bar-button"></a>앱 바 단추
 앱 바 스타일을 사용하여 명령을 표시하는 단추입니다.
 
 ![앱 바 단추 아이콘](images/controls/app-bar-buttons.png) 
 
-참조: [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx), [SymbolIcon](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.symbolicon.aspx)를 [BitmapIcon](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.bitmapicon.aspx)하십시오 [FontIcon](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.fonticon.aspx), [PathIcon](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pathicon.aspx) 
+참조: [AppBarButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton), [SymbolIcon](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SymbolIcon), [BitmapIcon](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.BitmapIcon), [FontIcon](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FontIcon), [PathIcon](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PathIcon) 
 
 디자인 및 방법: [앱 바 및 명령 모음 제어 가이드](app-bars.md) 
 
@@ -59,14 +59,14 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 ### <a name="app-bar-separator"></a>앱 바 구분 기호
 명령 모음의 명령 그룹을 시각적으로 구분합니다.
 
-참조: [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx) 
+참조: [AppBarSeparator](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator) 
 
 샘플 코드: [샘플 XAML 명령](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ### <a name="app-bar-toggle-button"></a>앱 바 토글 단추
 명령 모음에서 명령을 표시하거나 숨기는 단추입니다.
 
-참조: [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx) 
+참조: [AppBarToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton) 
 
 샘플 코드: [샘플 XAML 명령](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
@@ -82,7 +82,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
     <AppBarButton Icon="Play" Label="Play" Click="AppBarButton_Click"/>
 </CommandBar>
 ```
-참조: [명령 모음](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx) 
+참조: [CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar) 
 
 디자인 및 방법: [앱 바 및 명령 모음 제어 가이드](app-bars.md)
 
@@ -90,7 +90,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 ## <a name="buttons"></a>단추
 
-### <a name="button"></a>Button
+### <a name="button"></a>단추
 사용자 입력에 응답하고 **Click** 이벤트를 발생시키는 컨트롤입니다.
 
 ![표준 단추](images/controls/button.png)
@@ -100,7 +100,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
         Click="Button_Click" />
 ```
 
-참조: [단추](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.button.aspx) 
+참조: [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 
 
 디자인 및 방법: [단추 컨트롤 가이드](buttons.md) 
 
@@ -117,7 +117,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
                  NavigateUri="https://www.microsoft.com"/>
 ```
 
-참조: [HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.hyperlinkbutton.aspx) 
+참조: [HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 
 
 디자인 및 방법: [하이퍼링크 컨트롤 가이드](hyperlinks.md)
 
@@ -131,7 +131,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
               Click="RepeatButton_Click" />
 ```
 
-참조: [RepeatButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.repeatbutton.aspx) 
+참조: [RepeatButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.RepeatButton) 
 
 디자인 및 방법: [단추 컨트롤 가이드](buttons.md) 
 
@@ -148,7 +148,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </FlipView>
 ```
 
-참조: [FlipView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flipview.aspx) 
+참조: [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) 
 
 디자인 및 방법: [가이드 보기 컨트롤을 대칭 이동](flipview.md) 
 
@@ -162,7 +162,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </GridView>
 ```
 
-참조: [GridView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx) 
+참조: [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) 
 
 디자인 및 방법: [목록](lists.md) 
 
@@ -175,7 +175,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 <ItemsControl/>
 ```
 
-참조: [ItemsControl](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx) 
+참조: [ItemsControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) 
 
 ### <a name="list-view"></a>목록 뷰
 가로로 스크롤할 수 있는 목록 형태로 항목 컬렉션을 제공하는 컨트롤입니다.
@@ -187,7 +187,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </ListView>
 ```
 
-참조: [ListView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx) 
+참조: [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 
 
 디자인 및 방법: [목록](lists.md) 
 
@@ -204,7 +204,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 <CalendarDatePicker/>
 ```
 
-참조: [CalendarDatePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx) 
+참조: [CalendarDatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker) 
 
 디자인 및 방법: [달력, 날짜 및 시간 컨트롤](date-and-time.md)
  
@@ -215,7 +215,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 <CalendarView/>
 ```
 
-참조: [CalendarView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx) 
+참조: [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView) 
 
 디자인 및 방법: [달력, 날짜 및 시간 컨트롤](date-and-time.md) 
 
@@ -228,7 +228,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 <DatePicker Header="Arrival Date"/>
 ```
 
-참조: [DatePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx) 
+참조: [DatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.DatePicker) 
 
 디자인 및 방법: [달력, 날짜 및 시간 컨트롤](date-and-time.md)
  
@@ -241,7 +241,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 <TimePicker Header="Arrival Time"/>
 ```
 
-참조: [TimePicker](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx) 
+참조: [TimePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TimePicker) 
 
 디자인 및 방법: [달력, 날짜 및 시간 컨트롤](date-and-time.md)
 
@@ -264,7 +264,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </Flyout>
 ```
 
-참조: [플라이 아웃](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
+참조: [Flyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout) 
 
 디자인 및 방법: [플라이 아웃](dialogs-and-flyouts/flyouts.md) 
 
@@ -284,7 +284,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </MenuFlyout>
 ```
 
-참조: [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyout.aspx)하십시오 [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx)하십시오 [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) 
+참조: [MenuFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyout), [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem), [MenuFlyoutSeparator](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutSeparator), [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToggleMenuFlyoutItem) 
 
 디자인 및 방법: [메뉴 및 상황에 맞는 메뉴](menus.md) 
 
@@ -293,7 +293,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 ### <a name="popup-menu"></a>팝업 메뉴
 지정한 명령을 표시하는 사용자 지정 메뉴입니다.
 
-참조: [팝업 메뉴](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
+참조: [PopupMenu](https://docs.microsoft.com/uwp/api/Windows.UI.Popups.PopupMenu) 
 
 디자인 및 방법: [대화 상자](dialogs-and-flyouts/dialogs.md) 
 
@@ -307,20 +307,20 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
         ToolTipService.ToolTip="Click to perform action" />
 ```
 
-참조: [도구 설명](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltip.aspx), [ToolTipService](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.tooltipservice.aspx) 
+참조: [ToolTip](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTipService) 
 
 디자인 및 방법: 도구 설명에 대한 지침 
 
 ## <a name="images"></a>이미지
 
-### <a name="image"></a>이미지
+### <a name="image"></a>Image
 이미지를 제공하는 컨트롤입니다.
 
 ```xaml
 <Image Source="Assets/Logo.png" />
 ```
 
-참조: [이미지](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx) 
+참조: [이미지](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) 
 
 디자인 및 방법: [이미지 및 ImageBrush](images-imagebrushes.md) 
 
@@ -335,7 +335,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 <InkCanvas/>
 ```
 
-참조: [InkCanvas](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.inkcanvas.aspx) 
+참조: [InkCanvas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 
 
 ### <a name="shapes"></a>셰이프
 줄임표, 사각형, 선. 베지어 패스 등과 같이 표시할 수 있는 다양한 유지 모드 그래픽 개체입니다.
@@ -349,7 +349,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 <Rectangle/>
 ```
 
-참조: [셰이프](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.aspx) 
+참조: [셰이프](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Shapes.Shape) 
 
 방법: [도형 그리기](../../graphics/drawing-shapes.md) 
 
@@ -373,7 +373,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </Border>
 ```
 
-참조: [테두리](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.border.aspx)
+참조: [테두리](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border)
 
 ### <a name="canvas"></a>캔버스
 캔버스의 왼쪽 위 모서리에 상대적인 자식 요소의 절대 위치 지정을 지원하는 레이아웃 패널입니다.
@@ -389,9 +389,9 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </Canvas>
 ```
 
-참조: [캔버스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)
+참조: [캔버스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas)
  
-### <a name="grid"></a>그리드
+### <a name="grid"></a>표 형태
 자식 요소에 대한 열과 행 형태의 배열을 지원하는 레이아웃 패널입니다.
 
 ![그리드 레이아웃 패널](images/controls/grid.png) 
@@ -413,7 +413,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </Grid>
 ```
 
-참조: [표](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)
+참조: [눈금](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)
  
 ### <a name="panning-scroll-viewer"></a>이동 스크롤 뷰어
 스크롤 뷰어를 참조하세요.
@@ -430,12 +430,12 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </RelativePanel>
 ```
 
-참조: [RelativePanel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx)
+참조: [RelativePanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel)
 
 ### <a name="scroll-bar"></a>스크롤 막대
 스크롤 뷰어를 참조하세요. (ScrollBar는 ScrollViewer의 요소입니다. 일반적으로 독립 실행형 컨트롤로 사용하지 않습니다.
 
-참조: [스크롤 막대](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.scrollbar.aspx)
+참조: [ScrollBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ScrollBar)
  
 ### <a name="scroll-viewer"></a>스크롤 뷰어
 사용자가 내용을 이동 및 확대/축소할 수 있도록 하는 컨테이너 컨트롤입니다.
@@ -449,7 +449,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </ScrollViewer>
 ```
 
-참조: [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx)
+참조: [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)
 
 디자인 및 방법: [스크롤 및 이동을 컨트롤 가이드](scroll-controls.md) 
 
@@ -469,7 +469,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </StackPanel>
 ```
 
-참조: [StackPanel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)
+참조: [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel)
  
 ### <a name="variablesizedwrapgrid"></a>VariableSizedWrapGrid
 자식 요소에 대한 열과 행 형태의 배열을 지원하는 레이아웃 패널입니다. 각 자식 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.
@@ -489,7 +489,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </VariableSizedWrapGrid>
 ```
 
-참조: [VariableSizedWrapGrid](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx)
+참조: [VariableSizedWrapGrid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VariableSizedWrapGrid)
 
 ### <a name="viewbox"></a>Viewbox
 내용의 크기를 지정된 크기로 조정된 컨테이너 컨트롤입니다.
@@ -508,7 +508,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 </Viewbox>
 ```
 
-참조: [Viewbox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.viewbox.aspx)
+참조: [Viewbox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Viewbox)
  
 ### <a name="zooming-scroll-viewer"></a>확대/축소 스크롤 뷰어
 스크롤 뷰어를 참조하세요.
@@ -525,7 +525,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 <MediaElement x:Name="myMediaElement"/>
 ```
 
-참조: [MediaElement](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediaelement.aspx) 
+참조: [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 
 
 디자인 및 방법: [미디어 요소 control 가이드](media-playback.md)
 
@@ -538,7 +538,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 <MediaTransportControls MediaElement="myMediaElement"/>
 ```
 
-참조: [MediaTransportControls](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 
+참조: [MediaTransportControls](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 
 
 디자인 및 방법: [미디어 요소 control 가이드](media-playback.md) 
 
@@ -574,7 +574,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 </SplitView>
 ```
 
-참조: [분할 된 뷰](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) 
+참조: [SplitView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SplitView) 
 
 디자인 및 방법: [분할 뷰 컨트롤 가이드](split-view.md)
 
@@ -587,7 +587,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
          Height="400" Width="800"/>
 ```
 
-참조: [WebView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx) 
+참조: [웹 보기](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) 
 
 디자인 및 방법: 웹 보기에 대 한 지침 
 
@@ -608,7 +608,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 </SemanticZoom>
 ```
 
-참조: [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.aspx) 
+참조: [SemanticZoom](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom) 
 
 디자인 및 방법: [의미 체계 확대/축소 컨트롤 가이드](semantic-zoom.md)
 
@@ -635,7 +635,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 <ProgressBar x:Name="indeterminateProgressBar1" IsIndeterminate="True" Width="100"/>
 ```
 
-참조: [ProgressBar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx) 
+참조: [ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar) 
 
 디자인 및 방법: [진행률 컨트롤 가이드](progress-controls.md) 
 
@@ -648,7 +648,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 <ProgressRing x:Name="progressRing1" IsActive="True"/>
 ```
 
-참조: [ProgressRing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx) 
+참조: [ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing) 
 
 디자인 및 방법: [진행률 컨트롤 가이드](progress-controls.md) 
 
@@ -659,7 +659,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 ![검색을 위한 자동 제안 상자](images/controls/auto-suggest-box.png) 
 
-참조: [AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
+참조: [AutoSuggestBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [autosuggest box control 가이드](auto-suggest-box.md)
 
@@ -678,7 +678,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
              PasswordChanged="PasswordBox_PasswordChanged" />
 ```
 
-참조: [PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx) 
+참조: [PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox) 
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [암호 상자 컨트롤 가이드](password-box.md) 
 
@@ -691,7 +691,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 <RichEditBox />
 ```
 
-참조: [RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) 
+참조: [RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox) 
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [Rich edit box control 가이드](rich-edit-box.md)
 
@@ -715,7 +715,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 <TextBlock x:Name="textBlock1" Text="I am a TextBlock"/>
 ```
 
-참조: [TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx) 
+참조: [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) 
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md)하십시오 [텍스트 블록 컨트롤 가이드](text-block.md), [서식 있는 텍스트 블록 컨트롤 가이드](rich-text-block.md)
 
@@ -731,7 +731,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
          TextChanged="TextBox_TextChanged"/>
 ```
 
-참조: [텍스트 상자](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) 
+참조: [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [텍스트 상자 컨트롤 가이드](text-box.md) 
 
@@ -749,7 +749,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
           Checked="CheckBox_Checked"/>
 ```
 
-참조: [확인란](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.checkbox.aspx) 
+참조: [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 
 
 디자인 및 방법: [확인란 컨트롤 가이드](checkbox.md) 
 
@@ -767,7 +767,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 </ComboBox>
 ```
 
-참조: [콤보 상자](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.combobox.aspx) 
+참조: [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox) 
 
 디자인 및 방법: [목록](lists.md) 
 
@@ -785,7 +785,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 </ListBox>
 ```
 
-참조: [목록 상자](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listbox.aspx) 
+참조: [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox) 
 
 디자인 및 방법: [목록](lists.md) 
 
@@ -803,7 +803,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
              Checked="RadioButton_Checked"/>
 ```
 
-참조: [라디오 단추](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.radiobutton.aspx) 
+참조: [RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton) 
 
 디자인 및 방법: [라디오 단추 컨트롤 가이드](radio-button.md)
  
@@ -816,7 +816,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 <Slider x:Name="slider1" Width="100" ValueChanged="Slider_ValueChanged" />
 ```
 
-참조: [슬라이더](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx) 
+참조: [슬라이더](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) 
 
 디자인 및 방법: [슬라이더 컨트롤 가이드](slider.md) 
 
@@ -828,7 +828,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
               Checked="ToggleButton_Checked"/>
 ```
 
-참조: [토글 단추](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.togglebutton.aspx)
+참조: [ToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton)
 
 디자인 및 방법: [토글 컨트롤 가이드](toggles.md) 
 
@@ -843,6 +843,6 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
               Toggled="ToggleSwitch_Toggled"/>
 ```
 
-참조: [ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.toggleswitch.aspx) 
+참조: [ToggleSwitch](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToggleSwitch) 
 
 디자인 및 방법: [토글 컨트롤 가이드](toggles.md) 

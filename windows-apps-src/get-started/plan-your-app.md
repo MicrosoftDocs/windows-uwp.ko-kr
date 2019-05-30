@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f4c80ca1d031c69f5f70cdf85e90ea1d5887830
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 43423bc1475e446fcc0c6ab3f0d65b5a844d19d2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605668"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370685"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>복잡한 UWP(유니버설 Windows 플랫폼) 앱 빌드
 
@@ -128,7 +128,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 -   **재생**  사용자에 게 오디오, 비디오 또는 자신의 홈 네트워크에 다른 장치에 앱에서 스트리밍되는 이미지를 이용할 수 있습니다.
 -   **파일 선택 하 고 파일 선택기 확장명**   사용자 로드 하 고 로컬 파일 시스템, 연결 된 저장소 장치, 홈 그룹 또는 다른 앱에서 해당 파일을 저장할 수 있도록 합니다. 다른 앱에서 사용자 앱의 콘텐츠를 로드할 수 있도록 파일 선택기 확장을 제공할 수도 있습니다.
 
-자세한 내용은 [앱 계약 및 확장](https://msdn.microsoft.com/library/windows/apps/hh464906)을 참조하세요.
+자세한 내용은 [앱 계약 및 확장](https://docs.microsoft.com/previous-versions/windows/apps/hh464906(v=win.10))을 참조하세요.
 <!-- Win 8 page. Should have replacement. -->
 
 **서로 다른 뷰, 폼 팩터 및 하드웨어 구성을**  Windows 요금 및 forefront에서 앱에 사용자를 넣습니다. 사용자가 해당 앱을 사용하기로 결정한 어떤 디바이스에서든, 어떤 입력 모드를 사용하든, 어떤 방향으로든, 어떤 하드웨어 구성에서든, 어떤 환경에서든 앱 UI가 두드러지게 하고 싶을 것입니다.
@@ -148,15 +148,15 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 **개인 설정**
 
 -   **설정을**  사용자 앱 설정을 저장 하 여 원하는 환경을 만들 수 있습니다. 모든 설정을 하나의 화면에 통합하고 사용자가 이미 익숙한 일반 메커니즘을 통해 앱을 구성할 수 있도록 합니다. [앱 설정 추가](../design/app-settings/app-settings-and-data.md)에 대해 자세히 알아보세요.
--   **로밍**  로밍 데이터에 마지막으로 작업 권한을 선택할 수 있도록 관심 가장을 사용 하는 장치에 관계 없이 UX를 유지 하 여 장치에서 연속 환경을 만들고 있습니다. 로밍을 통해 설정 및 상태를 유지 관리하여 부엌에 있는 가족용 PC, 회사 PC, 개인용 태블릿, 기타 폼 팩터 등 어디에서든 앱을 쉽게 사용할 수 있게 합니다. [응용 프로그램 데이터 관리](../design/app-settings/store-and-retrieve-app-data.md)에 대해 살펴보고, [로밍 중인 응용 프로그램 데이터에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465094)을 참조하세요.
+-   **로밍**  로밍 데이터에 마지막으로 작업 권한을 선택할 수 있도록 관심 가장을 사용 하는 장치에 관계 없이 UX를 유지 하 여 장치에서 연속 환경을 만들고 있습니다. 로밍을 통해 설정 및 상태를 유지 관리하여 부엌에 있는 가족용 PC, 회사 PC, 개인용 태블릿, 기타 폼 팩터 등 어디에서든 앱을 쉽게 사용할 수 있게 합니다. [응용 프로그램 데이터 관리](../design/app-settings/store-and-retrieve-app-data.md)에 대해 살펴보고, [로밍 중인 응용 프로그램 데이터에 대한 지침](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data)을 참조하세요.
 -   **사용자 타일**    확인 사용자 타일 이미지를 로드 하 여 사용자에 게 앱을 더욱 개인적 또는 전체 Windows에서 해당 개인 타일로 앱에서 콘텐츠를 설정할 수 있습니다.
 
 **장치 기능**  앱이 오늘날의 장치의 기능을 완전히 활용 해야 합니다.
 
--   **근접 제스처**  사용자가 다른 사용자는 물리적으로 가까운 근접성에 물리적으로 장치를 함께 탭 하 여 (멀티 플레이 게임)를 사용 하 여 장치를 연결 합니다. [근접 연결 및 탭하기](https://msdn.microsoft.com/library/windows/apps/hh465229)에 대해 자세히 알아보세요.
--   **카메라 및 외부 저장 장치**  채팅 및 회의 vlogs를 프로필 pics, 문서화, 주변 세계 수행 기록에 대 한 해당 기본 제공 또는 연결에서 카메라에 사용자를 연결 하거나 어떤 작업 앱 유용합니다. [이동식 저장소의 콘텐츠 액세스](https://msdn.microsoft.com/library/windows/apps/hh465189)에 대해 자세히 알아보세요.
+-   **근접 제스처**  사용자가 다른 사용자는 물리적으로 가까운 근접성에 물리적으로 장치를 함께 탭 하 여 (멀티 플레이 게임)를 사용 하 여 장치를 연결 합니다. [근접 연결 및 탭하기](https://docs.microsoft.com/previous-versions/windows/apps/hh465229(v=win.10))에 대해 자세히 알아보세요.
+-   **카메라 및 외부 저장 장치**  채팅 및 회의 vlogs를 프로필 pics, 문서화, 주변 세계 수행 기록에 대 한 해당 기본 제공 또는 연결에서 카메라에 사용자를 연결 하거나 어떤 작업 앱 유용합니다. [이동식 저장소의 콘텐츠 액세스](https://docs.microsoft.com/previous-versions/windows/apps/hh465189(v=win.10))에 대해 자세히 알아보세요.
 -   **가 속도계 및 다양 한 센서**     장치 오늘날의 여러 센서를 사용 하 여 제공 합니다. 앱은 주변 광원에 따라 디스플레이를 흐리게 하거나 밝게 하고, 사용자가 디스플레이를 돌릴 경우 UI를 재배치하며, 물리적 이동에 반응할 수 있습니다. [센서](../devices-sensors/sensors.md)에 대해 자세히 알아보세요.
--   **지리적 위치**  표준 웹 데이터 또는 지리적 위치 센서에서 지리적 위치 정보를 사용 하 여 사용자가 해결할 지도에서는 해당 위치를 찾을 또는 주변 사람, 작업 및 대상에 대 한 알림을 받기. [지리적 위치](https://msdn.microsoft.com/library/windows/apps/hh465139)에 대해 자세히 알아보세요.
+-   **지리적 위치**  표준 웹 데이터 또는 지리적 위치 센서에서 지리적 위치 정보를 사용 하 여 사용자가 해결할 지도에서는 해당 위치를 찾을 또는 주변 사람, 작업 및 대상에 대 한 알림을 받기. [지리적 위치](https://docs.microsoft.com/previous-versions/windows/apps/hh465139(v=win.10))에 대해 자세히 알아보세요.
 
 여행 앱 예를 다시 살펴보겠습니다. 친구들이 그룹 여행에 맞는 여행 일정표를 협력해서 만드는 데 도움을 줄 수 있는 앱을 만들기 위해서는 다음과 같은 기능을 사용할 수 있습니다.
 
@@ -203,7 +203,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 
 이 프로세스 동안 만들어야 하는 UI와 결정해야 하는 추가 세부 사항(예제: 아직 해당 앱을 사용하고 있지 않은 친구를 위한 표준 메일 상용구 초안 작성)을 확인합니다. 불필요한 단계를 제거할 수도 있습니다. 예를 들어 공유하기 전에는 사용자가 여행 세부 사항을 볼 필요가 없을 수 있습니다. 흐름이 명확할수록 사용하기 편리해집니다.
 
-여러 화면의 사용 방법에 대한 자세한 내용은 <!--[Command design basics](../design/basics/commanding-basics.md)-->을 참조하세요.
+다른 화면을 사용 하는 방법에 대 한 자세한 내용은에서 시청 <!--[Command design basics](../design/basics/commanding-basics.md)-->.
 
 **흐름 등 무엇을 해야 생각 하십니까?** 사용자가 수행할 단계를 정의하고 나면 해당 흐름을 성능 목표로 전환할 수 있습니다. 자세한 내용은 [성능 계획](../debug-test-perf/planning-and-measuring-performance.md)을 참조하세요.
 
@@ -212,9 +212,9 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 -   **항상 콘텐츠를 사용 하려고 합니다.**    가능한 경우 사용자 들은 앱의 캔버스에서 콘텐츠를 직접 조작 하지 않고 콘텐츠에 대해 작동 하는 명령을 추가 합니다. 예를 들어 사용자가 여행 앱에서 활동을 선택하고 위쪽 또는 아래쪽 명령 단추를 사용하기보다 캔버스의 목록에 활동을 끌어다 놓아 여행 일정표를 다시 짤 수 있도록 합니다.
 -   **경우 콘텐츠를 사용할 수 없습니다.** 다음 UI 화면 중 하나에 명령을 배치합니다.
 
-    -   에 [명령 모음](https://msdn.microsoft.com/library/windows/apps/hh465302): 표시 되도록 사용자가 누를 때까지 일반적으로 숨겨져 있는 명령 모음에서 대부분의 명령은 두어야 합니다.
+    -   에 [명령 모음](https://docs.microsoft.com/windows/uwp/controls-and-patterns/app-bars): 표시 되도록 사용자가 누를 때까지 일반적으로 숨겨져 있는 명령 모음에서 대부분의 명령은 두어야 합니다.
     -   앱의 캔버스에서: 사용자가 페이지 또는 단일 용도가 있는 보기의 경우 캔버스에서 직접 해당 용도로 명령을 제공할 수 있습니다. 이러한 명령은 일부에 불과합니다.
-    -   에 [상황에 맞는 메뉴](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/menus): 클립보드 작업 (예: 잘라내기, 복사 및 붙여넣기)에 대 한 상황에 맞는 메뉴를 사용할 수 있습니다 또는 적용 되는 명령에 대 한 콘텐츠는 선택할 수 없습니다 (예: 위치를 지도에 압정을 추가).
+    -   에 [상황에 맞는 메뉴](https://docs.microsoft.com/windows/uwp/controls-and-patterns/menus): 클립보드 작업 (예: 잘라내기, 복사 및 붙여넣기)에 대 한 상황에 맞는 메뉴를 사용할 수 있습니다 또는 적용 되는 명령에 대 한 콘텐츠는 선택할 수 없습니다 (예: 위치를 지도에 압정을 추가).
 
 **각 보기에서 앱을 레이아웃 하는 방법을 결정 합니다.**    가로 및 세로 방향 및 어떤 너비는 최소 너비를 전체 화면에서 앱 크기 조정 지원 Windows 지원 합니다. 모든 크기의 모든 화면에서 두 방향으로 모두 제대로 표시 및 작동하는 앱을 만들려고 합니다. 즉, 각 크기와 보기에 대한 UI 요소의 레이아웃을 계획해야 합니다. 이렇게 하면 사용자의 요구 및 기본 설정에 맞게 앱 UI가 유연하게 바뀝니다.
 
@@ -238,4 +238,4 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 
 앱 개발을 많이 진행하기 전에 지침, 사용자 인상 및 요구 사항을 기준으로 디자인 또는 프로토타입의 유효성을 검사하여 나중에 다시 작업하는 일이 없도록 합니다. 각 기능에 앱을 폴란드어 도움이 UX 지침 집합이 및 Microsoft Store 앱을 게시 하려면 충족 해야 하는 저장소 요구 사항 집합이 있습니다. [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit)를 사용하여 기술 사양이 스토어 요구 사항에 맞는지 테스트할 수 있습니다. Microsoft Visual Studio의 성능 도구를 사용하여 모든 시나리오에서 최상의 환경을 사용자에게 제공하도록 설정할 수도 있습니다.
 
-[UWP 앱에 대한 자세한 UX 지침](https://msdn.microsoft.com/library/windows/apps/hh465424)을 사용하여 중요한 기능에 집중할 수 있습니다. [Visual Studio 성능 도구](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx)를 사용하여 각 앱의 시나리오 성능을 분석할 수 있습니다.
+[UWP 앱에 대한 자세한 UX 지침](https://developer.microsoft.com/windows/design)을 사용하여 중요한 기능에 집중할 수 있습니다. [Visual Studio 성능 도구](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015)를 사용하여 각 앱의 시나리오 성능을 분석할 수 있습니다.

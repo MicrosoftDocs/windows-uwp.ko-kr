@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 포트, 꼭짓점 버퍼, 데이터, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c961a8852fb1e03e4e86209f62bda821b980f8c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8445339d442fb740e9e2aba5e9d1cb0388c746ef
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592818"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368240"
 ---
 # <a name="port-the-vertex-buffers-and-data"></a>꼭짓점 버퍼 및 데이터 포팅
 
@@ -20,9 +20,9 @@ ms.locfileid: "57592818"
 
 **중요 한 Api**
 
--   [**ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)
--   [**ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456)
--   [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588)
+-   [**ID3DDevice::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer)
+-   [**ID3DDeviceContext::IASetVertexBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers)
+-   [**ID3D11DeviceContext::IASetIndexBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-iasetindexbuffer)
 
 이 단계에서는 메시를 포함하는 꼭짓점 버퍼 및 셰이더가 꼭짓점을 지정된 순서로 트래버스할 수 있게 하는 인덱스 버퍼를 정의합니다.
 
@@ -130,7 +130,7 @@ typedef struct
 
 Direct3D에서 기하 도형을 그리기 전에 대신 버퍼를 만들 때 꼭짓점 버퍼에 있는 꼭짓점 데이터의 구조를 설명하기 위해 입력 레이아웃을 제공해야 합니다. 이렇게 하려면 메모리에서 개별 꼭짓점에 대한 데이터의 레이아웃에 해당하는 입력 레이아웃을 사용합니다. 이를 정확하게 지정하는 것이 매우 중요합니다!
 
-배열로 입력된 설명을 작성 하는 이때 [ **D3D11\_입력\_요소\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조입니다.
+배열로 입력된 설명을 작성 하는 이때 [ **D3D11\_입력\_요소\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_input_element_desc) 구조입니다.
 
 Direct3D: 입력된 레이아웃에 대 한 설명을 정의 합니다.
 
@@ -151,11 +151,11 @@ const D3D11_INPUT_ELEMENT_DESC vertexDesc[] =
 
 ```
 
-이 입력 설명은 2개의 3 좌표 벡터 쌍으로 꼭짓점을 정의합니다. 하나는 모델 좌표에서 꼭짓점의 위치를 저장할 3D 벡터이고 다른 하나는 꼭짓점과 연결된 RGB 색상 값을 저장할 3D 벡터입니다. 이 경우 3x32비트 부동 소수점 형식을 사용합니다. 이 형식의 요소는 코드에서 `XMFLOAT3(X.Xf, X.Xf, X.Xf)`으로 표시됩니다. 셰이더에서 사용할 데이터를 처리할 때마다 [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/ee415574) 라이브러리의 형식을 사용해야 합니다. 그러면 해당 데이터가 적절하게 압축되고 정렬됩니다. 예를 들어 벡터 데이터에는 [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475) 또는 [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608)를 사용하고 행렬에는 [**XMFLOAT4X4**](https://msdn.microsoft.com/library/windows/desktop/ee419621)를 사용합니다.
+이 입력 설명은 2개의 3 좌표 벡터 쌍으로 꼭짓점을 정의합니다. 하나는 모델 좌표에서 꼭짓점의 위치를 저장할 3D 벡터이고 다른 하나는 꼭짓점과 연결된 RGB 색상 값을 저장할 3D 벡터입니다. 이 경우 3x32비트 부동 소수점 형식을 사용합니다. 이 형식의 요소는 코드에서 `XMFLOAT3(X.Xf, X.Xf, X.Xf)`으로 표시됩니다. 셰이더에서 사용할 데이터를 처리할 때마다 [DirectXMath](https://docs.microsoft.com/windows/desktop/dxmath/ovw-xnamath-reference) 라이브러리의 형식을 사용해야 합니다. 그러면 해당 데이터가 적절하게 압축되고 정렬됩니다. 예를 들어 벡터 데이터에는 [**XMFLOAT3**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat3) 또는 [**XMFLOAT4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4)를 사용하고 행렬에는 [**XMFLOAT4X4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4x4)를 사용합니다.
 
-모든 가능한 형식 형식의 목록, 참조 [ **DXGI\_형식**](https://msdn.microsoft.com/library/windows/desktop/bb173059)합니다.
+모든 가능한 형식 형식의 목록, 참조 [ **DXGI\_형식**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)합니다.
 
-정의된 꼭짓점별 입력 레이아웃을 사용하여 레이아웃 개체를 만듭니다. 다음 코드를 작성 하도록 **m\_inputLayout**, 형식 변수의 **ComPtr** (형식의 개체를 가리키는 [ **ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)). **fileData**에는 이전 단계 [셰이더 포팅](port-the-shader-config.md)의 컴파일된 꼭짓점 셰이더 개체가 포함되어 있습니다.
+정의된 꼭짓점별 입력 레이아웃을 사용하여 레이아웃 개체를 만듭니다. 다음 코드를 작성 하도록 **m\_inputLayout**, 형식 변수의 **ComPtr** (형식의 개체를 가리키는 [ **ID3D11InputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11inputlayout)). **fileData**에는 이전 단계 [셰이더 포팅](port-the-shader-config.md)의 컴파일된 꼭짓점 셰이더 개체가 포함되어 있습니다.
 
 Direct3D: 꼭 짓 점 버퍼에서 사용 하는 입력된 레이아웃을 만듭니다.
 
@@ -188,11 +188,11 @@ glBindBuffer(GL_ARRAY_BUFFER, renderer->vertexBuffer);
 glBufferData(GL_ARRAY_BUFFER, sizeof(VERTEX) * CUBE_VERTICES, renderer->vertices, GL_STATIC_DRAW);   
 ```
 
-Direct3d에서 셰이더를 액세스할 수 있는 버퍼도 표시 됩니다 [ **D3D11\_SUBRESOURCE\_DATA** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조입니다. 이 버퍼의 위치를 셰이더 개체에 바인딩하려면는 CD3D11 만들 필요가\_버퍼\_DESC 구조를 사용 하 여 각 버퍼 [ **ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 설정한 후 set 메서드를 같은 버퍼 형식에 특정 호출 하 여 Direct3D 장치 컨텍스트의 버퍼 [ **ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456)합니다.
+Direct3d에서 셰이더를 액세스할 수 있는 버퍼도 표시 됩니다 [ **D3D11\_SUBRESOURCE\_DATA** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) 구조입니다. 이 버퍼의 위치를 셰이더 개체에 바인딩하려면는 CD3D11 만들 필요가\_버퍼\_DESC 구조를 사용 하 여 각 버퍼 [ **ID3DDevice::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer)를 설정한 후 set 메서드를 같은 버퍼 형식에 특정 호출 하 여 Direct3D 장치 컨텍스트의 버퍼 [ **ID3DDeviceContext::IASetVertexBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers)합니다.
 
 버퍼를 설정하는 경우 버퍼의 시작 부분의 오프셋(여기서 실제로 꼭짓점 데이터 배열이 시작함)뿐만 아니라 stride(개별 꼭짓점에 대한 데이터 요소 크기)를 설정해야 합니다.
 
-에 대 한 포인터를 할당 하는 것을 알 수 있습니다는 **vertexIndices** 배열을 합니다 **pSysMem** 필드를 [ **D3D11\_SUBRESOURCE\_데이터** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조입니다. 올바르지 않으면 메시가 손상되거나 비게 됩니다!
+에 대 한 포인터를 할당 하는 것을 알 수 있습니다는 **vertexIndices** 배열을 합니다 **pSysMem** 필드를 [ **D3D11\_SUBRESOURCE\_데이터** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) 구조입니다. 올바르지 않으면 메시가 손상되거나 비게 됩니다!
 
 Direct3D: 만들고 꼭 짓 점 버퍼를 설정 합니다.
 
@@ -248,7 +248,7 @@ glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderer->indexBuffer);
 glDrawElements (GL_TRIANGLES, renderer->numIndices, GL_UNSIGNED_INT, 0);
 ```
 
-약간 더 훈시적이긴 하지만 Direct3D에서 매우 비슷한 프로세스입니다. Direct3D 하위 리소스로 인덱스 버퍼를 Direct3D를 구성할 때 만든 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)에 제공합니다. 다음과 같이 인덱스 배열에 대한 구성된 하위 리소스를 사용하여 [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588)를 호출하여 이 작업을 수행합니다. (다시에 대 한 포인터를 할당 하는 것을 알 수 있습니다는 **cubeIndices** 배열을 합니다 **pSysMem** 필드를 [ **D3D11\_SUBRESOURCE\_데이터** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조입니다.)
+약간 더 훈시적이긴 하지만 Direct3D에서 매우 비슷한 프로세스입니다. Direct3D 하위 리소스로 인덱스 버퍼를 Direct3D를 구성할 때 만든 [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)에 제공합니다. 다음과 같이 인덱스 배열에 대한 구성된 하위 리소스를 사용하여 [**ID3D11DeviceContext::IASetIndexBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-iasetindexbuffer)를 호출하여 이 작업을 수행합니다. (다시에 대 한 포인터를 할당 하는 것을 알 수 있습니다는 **cubeIndices** 배열을 합니다 **pSysMem** 필드를 [ **D3D11\_SUBRESOURCE\_데이터** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) 구조입니다.)
 
 Direct3D: 인덱스 버퍼를 만듭니다.
 
@@ -274,7 +274,7 @@ m_d3dContext->IASetIndexBuffer(
   0);
 ```
 
-나중에, 다음과 같이 [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409)(또는 인덱싱되지 않은 꼭짓점에 대한 [**ID3D11DeviceContext::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407))에 대한 호출을 사용하여 삼각형을 그립니다. (자세한 내용은 [화면에 그리기](draw-to-the-screen.md)를 참조하세요.)
+나중에, 다음과 같이 [**ID3D11DeviceContext::DrawIndexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed)(또는 인덱싱되지 않은 꼭짓점에 대한 [**ID3D11DeviceContext::Draw**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw))에 대한 호출을 사용하여 삼각형을 그립니다. (자세한 내용은 [화면에 그리기](draw-to-the-screen.md)를 참조하세요.)
 
 Direct3D: 인덱싱된 꼭 짓 점을 그립니다.
 
@@ -301,7 +301,7 @@ m_d3dContext->DrawIndexed(
 
 ## <a name="remarks"></a>설명
 
-Direct3D를 구성할 때 디바이스 리소스를 다시 만들어야 할 때마다 호출하는 메서드로 [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)에 대한 메서드를 호출하는 코드를 구분합니다. (Direct3D 프로젝트 템플릿에서 이 코드는 렌더러 개체의 **CreateDeviceResource** 메서드에 있습니다.) 반면에 이는 실제로 셰이더 단계를 구성하고 데이터를 바인딩하는 위치이기 때문에 디바이스 컨텍스트([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385))를 업데이트하는 코드가 **Render** 메서드에 배치됩니다. .
+Direct3D를 구성할 때 디바이스 리소스를 다시 만들어야 할 때마다 호출하는 메서드로 [**ID3D11Device**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device)에 대한 메서드를 호출하는 코드를 구분합니다. (Direct3D 프로젝트 템플릿에서 이 코드는 렌더러 개체의 **CreateDeviceResource** 메서드에 있습니다.) 반면에 이는 실제로 셰이더 단계를 구성하고 데이터를 바인딩하는 위치이기 때문에 디바이스 컨텍스트([**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext))를 업데이트하는 코드가 **Render** 메서드에 배치됩니다. .
 
 ## <a name="related-topics"></a>관련 항목
 

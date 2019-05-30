@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 37deaabe2586391b0f0c93359133f10830558539
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4e4d8f43893b5f2a9a58c2eb6209ecb7d8dd1c21
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608858"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367579"
 ---
 # <a name="game-flow-management"></a>게임 흐름 관리
 
@@ -283,13 +283,13 @@ void GameMain::SetGameInfoOverlay(GameInfoOverlayState state)
 <tbody>
 <tr class="odd">
 <td align="left">OnActivated</td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/br225018">  <strong>CoreApplicationView::Activated</strong></a>를 처리합니다. 게임 앱이 전경으로 전환되었음으로 주 창이 활성화됩니다.</td>
+<td align="left"><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.activated">  <strong>CoreApplicationView::Activated</strong></a>를 처리합니다. 게임 앱이 전경으로 전환되었음으로 주 창이 활성화됩니다.</td>
 </tr>
 <tr class="even">
 <td align="left">OnDpiChanged</td>
 <td align="left"><a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DpiChanged">  <strong>Graphics::Display::DisplayInformation::DpiChanged</strong></a>를 처리합니다. 디스플레이의 DPI가 변경되었으며 게임이 해당 리소스를 적절하게 조정합니다.
 <div class="alert">
-<strong>참고</strong> <a href="https://msdn.microsoft.com/library/windows/desktop/hh404559"><strong>CoreWindow</strong> </a> 좌표가 Dip (장치 독립적 픽셀)에 대 한 <a href="https://msdn.microsoft.com/library/windows/desktop/dd370987">Direct2D</a>합니다. 따라서 2D 자산이나 기본 요소를 올바르게 표시하려면 Direct2D에 DPI 변경을 알려야 합니다.
+<strong>참고</strong> <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow"><strong>CoreWindow</strong> </a> 좌표가 Dip (장치 독립적 픽셀)에 대 한 <a href="https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-overview">Direct2D</a>합니다. 따라서 2D 자산이나 기본 요소를 올바르게 표시하려면 Direct2D에 DPI 변경을 알려야 합니다.
 </div>
 <div>
 </div></td>
@@ -304,27 +304,27 @@ void GameMain::SetGameInfoOverlay(GameInfoOverlayState state)
 </tr>
 <tr class="odd">
 <td align="left">OnResuming</td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/br205859">  <strong>CoreApplication::Resuming</strong></a>을 처리합니다. 게임 앱이 일시 중단 상태에서 게임을 복원합니다.</td>
+<td align="left"><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.resuming">  <strong>CoreApplication::Resuming</strong></a>을 처리합니다. 게임 앱이 일시 중단 상태에서 게임을 복원합니다.</td>
 </tr>
 <tr class="even">
 <td align="left">OnSuspending</td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/br205860">  <strong>CoreApplication::Suspending</strong></a>을 처리합니다. 게임 앱에서 해당 상태를 디스크에 저장합니다. 상태를 저장소에 저장하려면 5초가 필요합니다.</td>
+<td align="left"><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.suspending">  <strong>CoreApplication::Suspending</strong></a>을 처리합니다. 게임 앱에서 해당 상태를 디스크에 저장합니다. 상태를 저장소에 저장하려면 5초가 필요합니다.</td>
 </tr>
 <tr class="odd">
 <td align="left">OnVisibilityChanged</td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/hh701591">  <strong>CoreWindow::VisibilityChanged</strong></a>를 처리합니다. 게임 앱의 가시성이 변경되어 표시되는 것으로 변환되거나 표시되지 않고 다른 앱 표시로 전환되었습니다.</td>
+<td align="left"><a href="https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.visibilitychanged">  <strong>CoreWindow::VisibilityChanged</strong></a>를 처리합니다. 게임 앱의 가시성이 변경되어 표시되는 것으로 변환되거나 표시되지 않고 다른 앱 표시로 전환되었습니다.</td>
 </tr>
 <tr class="even">
 <td align="left">OnWindowActivationChanged</td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/br208255">  <strong>CoreWindow::Activated</strong></a>를 처리합니다. 게임 앱의 주 창이 비활성화되거나 활성화되어 포커스를 제거하고 게임을 일시 중지하거나 포커스를 다시 얻어야 합니다. 두 경우 모두 오버레이에는 게임이 일시 중지된 것으로 표시됩니다.</td>
+<td align="left"><a href="https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.activated">  <strong>CoreWindow::Activated</strong></a>를 처리합니다. 게임 앱의 주 창이 비활성화되거나 활성화되어 포커스를 제거하고 게임을 일시 중지하거나 포커스를 다시 얻어야 합니다. 두 경우 모두 오버레이에는 게임이 일시 중지된 것으로 표시됩니다.</td>
 </tr>
 <tr class="odd">
 <td align="left">OnWindowClosed</td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/br208261">  <strong>CoreWindow::Closed</strong></a>를 처리합니다. 게임 앱에서 주 창을 닫고 게임을 일시 중단합니다.</td>
+<td align="left"><a href="https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.closed">  <strong>CoreWindow::Closed</strong></a>를 처리합니다. 게임 앱에서 주 창을 닫고 게임을 일시 중단합니다.</td>
 </tr>
 <tr class="even">
 <td align="left">OnWindowSizeChanged</td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/br208283">  <strong>CoreWindow::SizeChanged</strong></a>를 처리합니다. 게임 앱에서 크기 변경을 수용하도록 그래픽 리소스 및 오버레이를 다시 할당한 다음 렌더링 대상을 업데이트합니다.</td>
+<td align="left"><a href="https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.sizechanged">  <strong>CoreWindow::SizeChanged</strong></a>를 처리합니다. 게임 앱에서 크기 변경을 수용하도록 그래픽 리소스 및 오버레이를 다시 할당한 다음 렌더링 대상을 업데이트합니다.</td>
 </tr>
 </tbody>
 </table>

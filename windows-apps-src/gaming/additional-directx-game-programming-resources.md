@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 프로그래밍
 ms.localizationpriority: medium
-ms.openlocfilehash: 84d5068c2f474af22d789dea6428f911087f9ff0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b855bc9adc79b3ae5dd5ab7128be7035a78a4aa0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639218"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369103"
 ---
 # <a name="game-programming-resources"></a>게임 프로그래밍 리소스
 
@@ -23,13 +23,13 @@ Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스
 ## <a name="game-programming-reference"></a>게임 프로그래밍 참조
 
 
--   [그래픽 및 게임](https://msdn.microsoft.com/library/windows/desktop/ee663279)
+-   [그래픽 및 게임](https://docs.microsoft.com/windows/desktop/graphics-and-multimedia)
 -   [OpenGL 참조](https://go.microsoft.com/fwlink/p/?LinkID=288875)
 
 ## <a name="game-design-guidance"></a>게임 디자인 지침
 
 
--   [UWP 앱에 대 한 인덱스의 UX 지침](https://msdn.microsoft.com/library/windows/apps/hh465424)
+-   [UWP 앱에 대 한 인덱스의 UX 지침](https://developer.microsoft.com/windows/design)
 
 ## <a name="blogs"></a>블로그
 
@@ -43,7 +43,7 @@ Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스
 
 -   [DirectX 도구 키트](  https://go.microsoft.com/fwlink/p/?LinkID=248929)
 -   [DirectXTex 텍스처 처리 라이브러리](  https://go.microsoft.com/fwlink/p/?LinkID=248926)
--   Microsoft Visual Studio [그래픽 진단](https://msdn.microsoft.com/library/windows/apps/hh873207.aspx)
+-   Microsoft Visual Studio [그래픽 진단](https://docs.microsoft.com/visualstudio/debugger/overview-of-visual-studio-graphics-diagnostics?view=vs-2015)
 -   [Win2D](https://github.com/Microsoft/Win2D) - GPU 가속으로 렌더링하는 직접 실행 모드 2D 그래픽에 사용하기 쉬운 Windows 런타임 API입니다.
 -   [Microsoft Store 대 한 각도](https://go.microsoft.com/fwlink/p/?linkid=618387) -OpenGL ES API를 변환 하 여 Windows에서 실행 OpenGL ES 콘텐츠 DirectX 11 API 호출을 호출 합니다.
 
@@ -76,7 +76,7 @@ Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스
 
 
 -   [CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=76627)
--   [방문 하십시오](https://go.microsoft.com/fwlink/p/?LinkID=288870)
+-   [GameDev.net](https://go.microsoft.com/fwlink/p/?LinkID=288870)
 
  
 

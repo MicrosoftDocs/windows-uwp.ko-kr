@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d3fee78f3608466f588a79d2811f1464e27a0ab
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3d8642e911a3ad4275e0a7a0f147ca9d70f415b0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620418"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366794"
 ---
 # <a name="fade-animations"></a>페이드 애니메이션
 
@@ -21,7 +21,7 @@ ms.locfileid: "57620418"
 
 항목을 보기로 가져오거나 보기 외부로 이동하려면 페이드 애니메이션을 사용합니다. 두 가지의 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
 
-> **중요 API**: [**FadeInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210298)하십시오 [ **FadeOutThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210302)
+> **중요 API**: [**FadeInThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation)하십시오 [ **FadeOutThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -34,11 +34,11 @@ ms.locfileid: "57620418"
 -   페이드 아웃은 요소를 제거하는 적절한 방법입니다.
 ## <a name="related-articles"></a>관련 문서
 
-* [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [페이드 애니메이션 적용](https://msdn.microsoft.com/library/windows/apps/xaml/jj649429)
-* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
-* [**FadeInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210298)
-* [**FadeOutThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210302)
+* [애니메이션 개요](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
+* [페이드 애니메이션 적용](https://docs.microsoft.com/previous-versions/windows/apps/jj649429(v=win.10))
+* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
+* [**FadeInThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation)
+* [**FadeOutThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)
 
  
 

@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c622c037f878d1ad34cdadf897dde10683532832
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 28376f6e96cc490c7c44f4ed60093591e873300e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660868"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371003"
 ---
 # <a name="rasterization-rules"></a>래스터화 규칙
 
@@ -26,7 +26,7 @@ ms.locfileid: "57660868"
 
 삼각형 안의 모든 픽셀 중심이 그려집니다. 픽셀이 상단 왼쪽 규칙을 통과하는 경우, 내부에 있는 것으로 간주됩니다. 상단 왼쪽 규칙이란 삼각형의 상단 가장자리 또는 왼쪽 가장자리에 놓여 있는 픽셀 중심은 삼각형 내부에 있는 것으로 정의된다는 규칙입니다.
 
-여기서
+각 항목이 나타내는 의미는 다음과 같습니다.
 
 -   상단 가장자리는 다른 가장자리들에 정확히 수평이며 그 위에 있는 가장자리입니다.
 -   왼쪽 가장자리는 삼각형의 왼쪽에 정확히 수평하지 않으면서 그 위에 있는 가장자리입니다. 삼각형에는 하나 또는 두 개의 왼쪽 가장자리가 있을 수 있습니다.
@@ -97,7 +97,7 @@ srcColor \* srcAlpha + destColor \* (1-srcAlpha)
 
 -   점의 경우, 각 샘플 위치(픽셀 중심이 아님)에 대해 커버리지 테스트가 수행됩니다.
 
-[load](https://msdn.microsoft.com/library/windows/desktop/bb509694)를 사용하여 셰이더로 다시 읽어올 수 있는 렌더링 대상에 다중 샘플링 형식을 사용할 수 있습니다. 셰이더가 액세스하는 개별 샘플에는 resolve가 필요하지 않기 때문입니다. 다중 샘플 리소스에는 깊이 형식이 지원되지 않으므로 깊이 형식은 렌더링 대상으로만 제한됩니다.
+[load](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-load)를 사용하여 셰이더로 다시 읽어올 수 있는 렌더링 대상에 다중 샘플링 형식을 사용할 수 있습니다. 셰이더가 액세스하는 개별 샘플에는 resolve가 필요하지 않기 때문입니다. 다중 샘플 리소스에는 깊이 형식이 지원되지 않으므로 깊이 형식은 렌더링 대상으로만 제한됩니다.
 
 유형 없는 형식은 다중 샘플링을 지원하여 리소스 뷰가 데이터를 다른 방식으로 해석할 수 있습니다. 예를 들어 R8G8B8A8를 사용 하 여 다중 샘플 리소스를 만들 수 있습니다\_TYPELESS는 R8G8B8A8를 사용 하 여 렌더링 대상 뷰 리소스를 사용 하 여 렌더링\_UINT는 R8G8B8A8 사용 하 여 다른 리소스 내용을 확인 한 다음 형식으로\_UNORM 데이터 형식입니다.
 

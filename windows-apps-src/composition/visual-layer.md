@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4607280fd031fa556bfc5d1c719f4b4e1aeb928e
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 7c61f6580039b9fe3da915491acd84c939088370
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984097"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361392"
 ---
 # <a name="visual-layer"></a>시각적 계층
 
@@ -38,7 +38,7 @@ Windows UWP 앱은 이미 UI 프레임 워크 중 하나를 통해 시각적 계
 
 ### <a name="content"></a>콘텐츠
 
-시각을 사용하여 애니메이션 및 효과가 사용할 수 있도록 콘텐츠는 호스팅 및 변환됩니다. 클래스 계층의 기반에는 작성자에서 시각 상태에 대한 앱 프로세스의 가벼운 스레드 민첩 프록시인 [**시각**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 클래스가 있습니다. 시각적 개체의 하위 클래스 포함  [**ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) 자식 시각적 개체의 트리를 만들 수 있도록 하 고 [ **SpriteVisual** ](https://msdn.microsoft.com/library/windows/apps/Mt589433) 는 콘텐츠를 포함 하 고 두 단색, 사용자 지정 그려지는 콘텐츠 또는 시각적 효과 사용 하 여 그릴 수 있습니다. 함께 이러한 시각 유형은 2D UI에 대한 시각적 트리 구조 및 대부분의 XAML FrameworkElements를 차지합니다.
+시각을 사용하여 애니메이션 및 효과가 사용할 수 있도록 콘텐츠는 호스팅 및 변환됩니다. 클래스 계층의 기반에는 작성자에서 시각 상태에 대한 앱 프로세스의 가벼운 스레드 민첩 프록시인 [**시각**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual) 클래스가 있습니다. 시각적 개체의 하위 클래스 포함  [**ContainerVisual** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ContainerVisual) 자식 시각적 개체의 트리를 만들 수 있도록 하 고 [ **SpriteVisual** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual) 는 콘텐츠를 포함 하 고 두 단색, 사용자 지정 그려지는 콘텐츠 또는 시각적 효과 사용 하 여 그릴 수 있습니다. 함께 이러한 시각 유형은 2D UI에 대한 시각적 트리 구조 및 대부분의 XAML FrameworkElements를 차지합니다.
 
 자세한 내용은 [컴퍼지션 시각](composition-visual-tree.md) 개요를 참조하세요.
 
@@ -58,7 +58,7 @@ Windows UWP 앱은 이미 UI 프레임 워크 중 하나를 통해 시각적 계
 
 ### <a name="working-with-your-xaml-uwp-app"></a>XAML UWP 앱 사용
 
-XAML 프레임워크에서 생성한 시각을 가져와 [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908)에서 [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976) 클래스를 사용하여 시각적 FrameworkElement를 백업할 수 있습니다. 프레임워크에서 사용자를 위해 만든 시각 효과는 사용자 지정에 제한이 있을 수 있습니다. 이는 프레임워크가 오프셋, 변환 및 수명을 관리하기 때문입니다. 하지만 직접 시각 효과를 만들고 ElementCompositionPreview를 통해 또는 시각 트리 구조의 어딘가에 있는 기존 ContainerVisual에 추가하여 기존 XAML 요소에 이를 연결할 수 있습니다.
+XAML 프레임워크에서 생성한 시각을 가져와 [**Windows.UI.Xaml.Hosting**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting)에서 [**ElementCompositionPreview**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) 클래스를 사용하여 시각적 FrameworkElement를 백업할 수 있습니다. 프레임워크에서 사용자를 위해 만든 시각 효과는 사용자 지정에 제한이 있을 수 있습니다. 이는 프레임워크가 오프셋, 변환 및 수명을 관리하기 때문입니다. 하지만 직접 시각 효과를 만들고 ElementCompositionPreview를 통해 또는 시각 트리 구조의 어딘가에 있는 기존 ContainerVisual에 추가하여 기존 XAML 요소에 이를 연결할 수 있습니다.
 
 자세한 내용은 [XAML로 시각 계층 사용](using-the-visual-layer-with-xaml.md) 개요를 참조하세요.
 
@@ -66,11 +66,11 @@ XAML 프레임워크에서 생성한 시각을 가져와 [**Windows.UI.Xaml.Host
 
 시각적 계층을 사용 하 여 모양, 느낌 및 WPF에서 Windows Forms의 기능 향상 및 C++ Win32 데스크톱 응용 프로그램입니다. 시각적 계층을 사용 하 여 기존 프레임 워크에서 UI의 나머지 부분을 유지 하는 콘텐츠를 마이그레이션할 수 있습니다. 이에 허용 되는 중요 한 업데이트 및 향상 된 응용 프로그램 UI 기존 코드에 대 한 광범위 한 변경 하지 않고도 기본을 의미 합니다.
 
-자세한 내용은 [시각적 계층을 사용 하 여 데스크톱 앱을 현대화](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps)합니다.
+자세한 내용은 [시각적 계층을 사용하여 데스크톱 앱 현대화](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps)를 참조하세요.
 
 ## <a name="additional-resources"></a>추가 자료
 
-* [**API에 대 한 전체 참조 설명서**](https://msdn.microsoft.com/library/windows/apps/Dn706878)
+* [**API에 대 한 전체 참조 설명서**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
 * [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)의 고급 UI 및 Composition 샘플
 * [Windows.UI.Composition 샘플 갤러리](https://aka.ms/winuiapp)
 * [@windowsui Twitter 피드 ](https://twitter.com/windowsui)

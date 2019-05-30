@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d10dbf52f0ed01d46f9e5cba83cd14d48bfc88d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9d4910a514c9fc1f16c29056319043393506a9e2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639178"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366912"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>JavaScript로 UWP 게임 만들기
 
@@ -51,7 +51,7 @@ Microsoft Store 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 앱
 
 ![리포지토리 복제](images/JS2D_2.png)
 
-프로젝트를 zip 파일로 다운로드하거나 다른 표준 방법으로 [GitHub 프로젝트](https://msdn.microsoft.com/en-us/windows/uwp/get-started/get-uwp-app-samples)를 작업할 수도 있습니다.
+프로젝트를 zip 파일로 다운로드하거나 다른 표준 방법으로 [GitHub 프로젝트](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)를 작업할 수도 있습니다.
 
 솔루션이 Visual Studio에 로드되면 다음을 포함한 여러 파일이 표시됩니다.
 
@@ -261,8 +261,8 @@ Gamestate는 게임에 일반적으로 사용되는 디자인 패턴입니다. �
 몇 가지 단계를 처리해야 합니다.
 
 1. Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/register)해야 합니다.
-2. 앱 제출 [검사 목록](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
-3. 앱을 제출하여 [인증](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
+2. 앱 제출 [검사 목록](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
+3. 앱을 제출하여 [인증](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
 자세한 내용은 참조 하세요. [UWP 앱을 게시](https://developer.microsoft.com/en-us/store/publish-apps)합니다.
 

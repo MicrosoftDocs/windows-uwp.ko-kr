@@ -10,12 +10,12 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: a984e30bbdc569522b04d328087775aa9e8ce2bc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3fc54662b29255b73e972bcfb0fa4b6bb2dcf968
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648538"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363054"
 ---
 # <a name="content-links-in-text-controls"></a>텍스트 컨트롤의 콘텐츠 링크
 
@@ -46,8 +46,8 @@ ms.locfileid: "57648538"
 
 | 기능   | RichEditBox | 텍스트 블록 |
 | --------- | ----------- | ---------- |
-| 용도 | ContentLinkInfo 인스턴스 | ContentLink 텍스트 요소 |
-| 커서 | 콘텐츠 링크의 유형에 따라 결정되며 변경이 불가능 | 커서 속성에 의해 결정되며 기본값은 **null** |
+| 사용법 | ContentLinkInfo 인스턴스 | ContentLink 텍스트 요소 |
+| Cursor | 콘텐츠 링크의 유형에 따라 결정되며 변경이 불가능 | 커서 속성에 의해 결정되며 기본값은 **null** |
 | ToolTip | 렌더링 되지 않음 | 보조 텍스트 표시 |
 
 ## <a name="enable-content-links-in-a-richeditbox"></a>RichEditBox에서 콘텐츠 링크 활성화
@@ -303,7 +303,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 ```
 
 > [!TIP]
-> 텍스트 컨트롤에서 XAML의 다른 텍스트 요소와 함께 ContentLink를 사용할 때는 [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) 컨테이너에 콘텐츠를 배치하고 `xml:space="preserve"` 속성을 Span에 적용하여 ContentLink와 기타 요소 간에 공백을 유지합니다.
+> 텍스트 컨트롤에서 XAML의 다른 텍스트 요소와 함께 ContentLink를 사용할 때는 [Span](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span) 컨테이너에 콘텐츠를 배치하고 `xml:space="preserve"` 속성을 Span에 적용하여 ContentLink와 기타 요소 간에 공백을 유지합니다.
 
 ## <a name="examples"></a>예
 

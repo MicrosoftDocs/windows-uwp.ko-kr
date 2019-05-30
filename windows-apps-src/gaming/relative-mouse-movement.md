@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 마우스, 입력
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 ms.localizationpriority: medium
-ms.openlocfilehash: 71985841e6c0fa764201c179fb12408581823e5e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1d36d81aa3f4e0124f79cf8c736b715eb91590d0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639658"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368191"
 ---
 # <a name="relative-mouse-movement-and-corewindow"></a>상대 마우스 이동 및 CoreWindow
 
@@ -39,7 +39,7 @@ ms.locfileid: "57639658"
 ## <a name="handling-relative-mouse-movement"></a>상대 마우스 이동 처리
 
 
-상대 마우스 델타 값에 액세스하려면 여기에 표시된 대로 [MouseDevice::MouseMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mousedevice.mousemoved.aspx) 이벤트를 등록합니다.
+상대 마우스 델타 값에 액세스하려면 여기에 표시된 대로 [MouseDevice::MouseMoved](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) 이벤트를 등록합니다.
 
 
 ```cpp
@@ -85,13 +85,13 @@ void MoveLookController::OnMouseMoved(
 
 ```
 
-이 코드 예제의 이벤트 처리기인 **OnMouseMoved**는 마우스 이동을 기준으로 뷰를 렌더링합니다. 마우스 포인터의 위치가 처리기에 [MouseEventArgs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mouseeventargs.aspx) 개체로 전달됩니다. 
+이 코드 예제의 이벤트 처리기인 **OnMouseMoved**는 마우스 이동을 기준으로 뷰를 렌더링합니다. 마우스 포인터의 위치가 처리기에 [MouseEventArgs](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseEventArgs) 개체로 전달됩니다. 
 
-앱이 상대 마우스 이동 값 처리로 변경되면 [CoreWindow::PointerMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointermoved.aspx) 이벤트에서 절대 마우스 데이터 처리를 건너뜁니다. 하지만 터치 입력과 반대로 마우스 입력의 결과로 **CoreWindow::PointerMoved** 이벤트가 발생한 경우에만 이 입력을 건너뜁니다. [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx)를 **nullptr**로 설정하면 커서가 숨겨집니다. 
+앱이 상대 마우스 이동 값 처리로 변경되면 [CoreWindow::PointerMoved](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) 이벤트에서 절대 마우스 데이터 처리를 건너뜁니다. 하지만 터치 입력과 반대로 마우스 입력의 결과로 **CoreWindow::PointerMoved** 이벤트가 발생한 경우에만 이 입력을 건너뜁니다. [CoreWindow::PointerCursor](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor)를 **nullptr**로 설정하면 커서가 숨겨집니다. 
 
 ## <a name="returning-to-absolute-mouse-movement"></a>절대 마우스 이동으로 되돌리기
 
-앱이 3D 개체 또는 장면 조작 모드를 끝내고 더 이상 상대 마우스 이동을 사용하지 않는 경우(메뉴 화면으로 돌아가는 경우 등) 일반적인 절대 마우스 이동 처리로 돌아갑니다. 이때 상대 마우스 데이터 읽기를 중지하고, 표준 마우스(및 포인터) 이벤트 처리를 다시 시작한 다음 [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx)를 null이 아닌 값으로 설정합니다. 
+앱이 3D 개체 또는 장면 조작 모드를 끝내고 더 이상 상대 마우스 이동을 사용하지 않는 경우(메뉴 화면으로 돌아가는 경우 등) 일반적인 절대 마우스 이동 처리로 돌아갑니다. 이때 상대 마우스 데이터 읽기를 중지하고, 표준 마우스(및 포인터) 이벤트 처리를 다시 시작한 다음 [CoreWindow::PointerCursor](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor)를 null이 아닌 값으로 설정합니다. 
 
 > **참고**  
 앱이 3D 개체/장면 조작 모드(커서를 끄고 상대 마우스 이동 처리)에 있는 경우 마우스에서 참 메뉴, 백 스택 또는 앱 바 같은 에지 UI를 호출할 수 없습니다. 따라서 자주 사용하는 **Esc** 키 등 이 특정 모드를 끝내는 메커니즘을 제공하는 것이 중요합니다.

@@ -5,20 +5,20 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cc8aaef2b26af88234efe62bf7cf1cb998e19bc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4aaa71c431a9dac6ad6650d05f71df897f0884fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57659898"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372680"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스크톱 응용 프로그램 프로그램](https://msdn.microsoft.com/library/windows/desktop/mt826504)에 추가한 데스크톱 응용 프로그램의 오류에 대한 스택 추적을 가져옵니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 스택 추적만 다운로드할 수 있습니다. 스택 추적에 사용할 수도 있습니다는 [상태 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504) 파트너 센터에서 데스크톱 응용 프로그램에 대 한 합니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스크톱 응용 프로그램 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)에 추가한 데스크톱 응용 프로그램의 오류에 대한 스택 추적을 가져옵니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 스택 추적만 다운로드할 수 있습니다. 스택 추적에 사용할 수도 있습니다는 [상태 보고서](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) 파트너 센터에서 데스크톱 응용 프로그램에 대 한 합니다.
 
 이 메서드를 사용하려면 먼저 [데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md) 메서드를 통해 스택 추적을 검색하려는 오류와 연결된 CAB 파일의 ID 해시를 검색해야 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
@@ -34,22 +34,22 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스�
 
 | 메서드 | 요청 URI                                                          |
 |--------|----------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/stacktrace``` |
+| 가져오기    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/stacktrace``` |
 
 
 ### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| Authorization | string | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
  
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
 | 매개 변수        | 형식   |  설명      |  필수  |
 |---------------|--------|---------------|------|
-| applicationId | 문자열 | 스택 추적을 가져올 데스크톱 응용 프로그램의 제품 ID입니다. 열 데스크톱 응용 프로그램의 제품 ID를 가져오려면 [파트너 센터에서 데스크톱 응용 프로그램에 대 한 분석 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504) (같은 합니다 **상태 보고서**) URL에서 제품 ID를 검색 합니다. |  예  |
-| cabIdHash | 문자열 | 스택 추적을 검색하려는 오류와 연결된 CAB 파일의 고유 ID 해시입니다. 이 값을 가져오려면 [데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md) 메서드를 사용하여 응용 프로그램에서 특정 오류에 대한 세부 정보를 검색하고 해당 메서드의 응답 본문에 **cabIdHash** 값을 사용합니다. |  예  |
+| applicationId | string | 스택 추적을 가져올 데스크톱 응용 프로그램의 제품 ID입니다. 열 데스크톱 응용 프로그램의 제품 ID를 가져오려면 [파트너 센터에서 데스크톱 응용 프로그램에 대 한 분석 보고서](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) (같은 합니다 **상태 보고서**) URL에서 제품 ID를 검색 합니다. |  예  |
+| cabIdHash | string | 스택 추적을 검색하려는 오류와 연결된 CAB 파일의 고유 ID 해시입니다. 이 값을 가져오려면 [데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md) 메서드를 사용하여 응용 프로그램에서 특정 오류에 대한 세부 정보를 검색하고 해당 메서드의 응답 본문에 **cabIdHash** 값을 사용합니다. |  예  |
 
  
 ### <a name="request-example"></a>요청 예제
@@ -69,8 +69,8 @@ Authorization: Bearer <your access token>
 | 값      | 형식    | 설명                  |
 |------------|---------|--------------------------------|
 | 값      | 배열   | 각각 스택 추적 데이터의 한 프레임을 포함하는 개체 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [스택 추적 값](#stack-trace-values) 섹션을 참조하세요. |
-| @nextLink  | 문자열  | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10으로 설정되어 있지만 쿼리에 대한 오류의 행이 10개보다 많은 경우 이 값이 반환됩니다. |
-| TotalCount | 정수 | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.          |
+| @nextLink  | string  | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10으로 설정되어 있지만 쿼리에 대한 오류의 행이 10개보다 많은 경우 이 값이 반환됩니다. |
+| TotalCount | integer | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.          |
 
 
 ### <a name="stack-trace-values"></a>스택 추적 값
@@ -79,10 +79,10 @@ Authorization: Bearer <your access token>
 
 | 값           | 형식    | 설명      |
 |-----------------|---------|----------------|
-| level            | 문자열  |  호출 스택에서 이 요소가 나타내는 프레임 번호입니다.  |
-| image   | 문자열  |   이 스택 프레임에서 호출되는 함수를 포함하는 실행 파일 또는 라이브러리 이미지의 이름입니다.           |
-| function | 문자열  |  이 스택 프레임에서 호출된 함수 이름입니다. 이 함수는 앱에 실행 파일 또는 라이브러리의 기호가 포함된 경우에만 사용할 수 있습니다.              |
-| 오프셋     | 문자열  |  함수의 시작 부분을 기준으로 현재 명령의 바이트 오프셋입니다.      |
+| 수준(level)            | string  |  호출 스택에서 이 요소가 나타내는 프레임 번호입니다.  |
+| image   | string  |   이 스택 프레임에서 호출되는 함수를 포함하는 실행 파일 또는 라이브러리 이미지의 이름입니다.           |
+| function | string  |  이 스택 프레임에서 호출된 함수 이름입니다. 이 함수는 앱에 실행 파일 또는 라이브러리의 기호가 포함된 경우에만 사용할 수 있습니다.              |
+| 오프셋     | string  |  함수의 시작 부분을 기준으로 현재 명령의 바이트 오프셋입니다.      |
 
 
 ### <a name="response-example"></a>응답 예제

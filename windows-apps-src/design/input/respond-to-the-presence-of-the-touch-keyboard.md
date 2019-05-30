@@ -7,12 +7,12 @@ template: detail.hbs
 keywords: 키보드, 손쉬운 사용, 탐색, 포커스, 텍스트, 입력, 사용자 조작
 ms.date: 07/13/2018
 ms.topic: article
-ms.openlocfilehash: e44b7cf5a61a795e52490f6d603aea0bcf87bea2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 192c016dfa61f39074d99bccf58ff9371f16d16f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658298"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365425"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>터치 키보드의 현재 상태에 응답
 
@@ -33,7 +33,7 @@ ms.locfileid: "57658298"
 
 이 지원이 사용자 지정 컨트롤에 추가되고 나면 터치 키보드의 존재에 적절하게 응답할 수 있습니다.
 
-**필수 조건:**
+**사전 요구 사항:**
 
 이 항목은 [키보드 조작](keyboard-interactions.md)을 기반으로 합니다.
 
@@ -211,8 +211,8 @@ void Scenario2_ShowHideEvents::OnHiding(InputPane^ /*sender*/, InputPaneVisibili
 ## <a name="related-articles"></a>관련 문서
 
 - [키보드 상호 작용](keyboard-interactions.md)
-- [키보드 접근성](https://msdn.microsoft.com/library/windows/apps/mt244347)
-- [사용자 지정 자동화 피어](https://msdn.microsoft.com/library/windows/apps/mt297667)
+- [키보드 접근성](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
+- [사용자 지정 자동화 피어](https://docs.microsoft.com/windows/uwp/accessibility/custom-automation-peers)
 
 **샘플**
 

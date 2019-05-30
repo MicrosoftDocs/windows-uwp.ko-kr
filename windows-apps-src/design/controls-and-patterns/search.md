@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: caf0e8e63716f6ba140ef9346257687f0e7293bb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5c6eb22fbe0488fa9a36160ce9e704d10727e4c9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631008"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364479"
 ---
 # <a name="search-and-find-in-page"></a>검색 및 페이지에서 찾기
 
@@ -24,7 +24,7 @@ ms.locfileid: "57631008"
 
 검색은 사용자가 앱에서 콘텐츠를 찾을 수 있는 최상의 방법 중 하나입니다. 이 문서의 지침에서는 검색 환경의 요소, 검색 범위, 구현 및 상황별 검색 예를 설명합니다.
 
-> **중요 API**: [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/dn633874)
+> **중요 API**: [AutoSuggestBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)
 
 ## <a name="elements-of-the-search-experience"></a>검색 환경의 요소
 
@@ -107,7 +107,7 @@ ms.locfileid: "57631008"
 
 0 입력 및 쿼리 형식화 기능은 문맥 검색/검색 구체화에 대한 옵션으로, 사용할 경우 목록이 사용자 입력에 따라 실시간으로 필터링됩니다. 쿼리 형식 지정 제안을 사용할 수 있는 경우는 예외입니다. 받은 편지함 필터링 옵션(받는 사람: &lt;입력 문자열&gt;, 보낸 사람: &lt;입력 문자열&gt;, 제목: &lt;입력 문자열&gt; 등)을 예로 들 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 
 이 섹션의 예는 문맥에 배치된 검색을 보여 줍니다.

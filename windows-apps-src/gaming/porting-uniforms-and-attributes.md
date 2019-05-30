@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d, 버퍼, 유니폼, 꼭짓점 특성
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a1db1890e47257412a7e2ee8e08c40164d0d927
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9d79a4573438aec49d4aa1b828c90e72c04150de
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57656248"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368151"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교
 
@@ -20,9 +20,9 @@ ms.locfileid: "57656248"
 
 **중요 한 Api**
 
--   [**ID3D11Device1::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/hh404575)
--   [**ID3D11Device1::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512)
--   [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)
+-   [**ID3D11Device1::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1)
+-   [**ID3D11Device1::CreateInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout)
+-   [**ID3D11DeviceContext1::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout)
 
 OpenGL ES 2.0에서 Direct3D 11로 포팅하는 프로세스 중에 앱과 셰이더 프로그램 사이에 데이터를 전달하기 위한 구문 및 API 동작을 변경해야 합니다.
 
@@ -33,10 +33,10 @@ OpenGL ES 2.0 데이터는 네 가지 방법으로 셰이더 프로그램 간에
 | OpenGL ES 2.0             | Direct3D 11                                                                                                                                                                         |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | uniform                   | 상수 버퍼(**cbuffer**) 필드.                                                                                                                                                |
-| 특성                 | 입력 레이아웃에서 지정하고 특정 HLSL 의미 체계로 표시된 꼭짓점 버퍼 요소 필드.                                                                                |
-| 버퍼 개체             | 버퍼 참조 [ **D3D11\_SUBRESOURCE\_DATA** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) 고 [ **D3D11\_버퍼\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092)및 일반 용도의 버퍼 정의 대 한 합니다. |
-| 프레임 버퍼 개체(FBO) | 렌더링 대상. [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) 및 [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)를 참조하세요.                                       |
-| 백 버퍼               | "백 버퍼" 화면이 있는 스왑 체인. 연결된 [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343)과 함께 [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)을 참조하세요.                       |
+| attribute                 | 입력 레이아웃에서 지정하고 특정 HLSL 의미 체계로 표시된 꼭짓점 버퍼 요소 필드.                                                                                |
+| 버퍼 개체             | 버퍼 참조 [ **D3D11\_SUBRESOURCE\_DATA** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) 고 [ **D3D11\_버퍼\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc)및 일반 용도의 버퍼 정의 대 한 합니다. |
+| 프레임 버퍼 개체(FBO) | 렌더링 대상. [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) 및 [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d)를 참조하세요.                                       |
+| 백 버퍼               | "백 버퍼" 화면이 있는 스왑 체인. 연결된 [**IDXGISurface1**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface1)과 함께 [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1)을 참조하세요.                       |
 
  
 
@@ -73,9 +73,9 @@ glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(int) * CUBE_INDICES, renderer->vert
 
 Direct3D 11에서 버퍼 데이터 요소는 "하위 리소스"로 간주되며 개별 꼭짓점 데이터 요소에서 MIP-map 텍스처까지 포함할 수 있습니다.
 
--   채우기는 [ **D3D11\_SUBRESOURCE\_DATA** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) 버퍼 데이터 요소에 대 한 구성 사용 하 여 구조입니다.
--   채우기는 [ **D3D11\_버퍼\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) 버퍼 형식 뿐만 아니라 버퍼에 있는 개별 요소의 크기를 사용 하 여 구조입니다.
--   이 두 구조로 [**ID3D11Device1::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/hh404575)를 호출합니다.
+-   채우기는 [ **D3D11\_SUBRESOURCE\_DATA** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) 버퍼 데이터 요소에 대 한 구성 사용 하 여 구조입니다.
+-   채우기는 [ **D3D11\_버퍼\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) 버퍼 형식 뿐만 아니라 버퍼에 있는 개별 요소의 크기를 사용 하 여 구조입니다.
+-   이 두 구조로 [**ID3D11Device1::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1)를 호출합니다.
 
 Direct3D 11: 만들기 및 꼭 짓 점 버퍼 및 인덱스 버퍼 채우기입니다.
 
@@ -106,7 +106,7 @@ m_d3dDevice->CreateBuffer(
     
 ```
 
-프레임 버퍼와 같은 쓰기 가능한 픽셀 버퍼 또는 맵은 [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635) 개체로 만들 수 있습니다. 이러한 항목은 [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) 또는 [**ID3D11ShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476628)에 리소스로 바인딩될 수 있으며, 그린 다음에는 각각 연결된 스왑 체인과 함께 표시되거나 셰이더로 전달될 수 있습니다.
+프레임 버퍼와 같은 쓰기 가능한 픽셀 버퍼 또는 맵은 [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) 개체로 만들 수 있습니다. 이러한 항목은 [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) 또는 [**ID3D11ShaderResourceView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11shaderresourceview)에 리소스로 바인딩될 수 있으며, 그린 다음에는 각각 연결된 스왑 체인과 함께 표시되거나 셰이더로 전달될 수 있습니다.
 
 Direct3D 11: 프레임 버퍼 개체를 만드는 중입니다.
 
@@ -147,7 +147,7 @@ GL ES 2.0을 엽니다. GLSL uniform 선언
 uniform mat4 u_mvpMatrix;
 ```
 
-Direct3D는 uniform과 같이 개별 셰이더에 제공된 상수 데이터가 포함된 "상수 버퍼"로 uniform 데이터를 지정합니다. uniform 버퍼에서와 같이, 셰이더가 해석하는 방법과 동일하게 메모리에서 상수 버퍼 데이터를 압축하는 것이 중요합니다. DirectXMath 형식을 사용 하 여 (같은 [ **XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608)) 플랫폼 형식 대신 (같은 **float\***  하거나 **float\[4\]** ) 적절 한 데이터 요소의 맞춤을 보장 합니다.
+Direct3D는 uniform과 같이 개별 셰이더에 제공된 상수 데이터가 포함된 "상수 버퍼"로 uniform 데이터를 지정합니다. uniform 버퍼에서와 같이, 셰이더가 해석하는 방법과 동일하게 메모리에서 상수 버퍼 데이터를 압축하는 것이 중요합니다. DirectXMath 형식을 사용 하 여 (같은 [ **XMFLOAT4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4)) 플랫폼 형식 대신 (같은 **float\***  하거나 **float\[4\]** ) 적절 한 데이터 요소의 맞춤을 보장 합니다.
 
 상수 버퍼에는 GPU에서 해당 데이터를 참조하는 데 사용되는 연결된 GPU 레지스터가 있어야 합니다. 데이터는 버퍼의 레이아웃으로 표시된 대로 레지스터 위치에 압축됩니다.
 
@@ -224,7 +224,7 @@ attribute vec4 a_position;
 attribute vec4 a_color;                     
 ```
 
-어떤 면에서 Direct3D에 대해 같은 프로세스가 있습니다. 특성 대신 꼭짓점 데이터가 입력 버퍼에서 제공됩니다. 이러한 버퍼에는 꼭짓점 버퍼 및 해당 인덱스 버퍼가 포함됩니다. 그러나 Direct3D에는 "특성" 선언이 없으므로, 꼭짓점 셰이더로 구성 요소가 해석되는 위치와 방법을 나타내는 HLSL 의미 체계 및 꼭짓점 버퍼에서 데이터 요소의 개별 구성 요소를 선언하는 입력 레이아웃을 지정해야 합니다. HLSL 의미 체계를 사용하려면 용도에 따라 셰이더 엔진에 알려주는 특정 문자열을 사용하여 각 구성 요소의 사용법을 정의해야 합니다. 예를 들어, 꼭짓점 위치 데이터는 POSITION으로 표시되며, 법선 데이터는 NORMAL로 표시되고, 꼭짓점 색상 데이터는 COLOR로 표시됩니다. (다른 셰이더 단계는 또한 특정 의미 체계가 필요한 및 해당 의미 체계는 셰이더 단계에 따라 서로 다른 해석 합니다.) HLSL 의미 체계에 대 한 자세한 내용은 참조 하세요 [셰이더 파이프라인 포트](change-your-shader-loading-code.md) 하 고 [HLSL 의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb205574)합니다.
+어떤 면에서 Direct3D에 대해 같은 프로세스가 있습니다. 특성 대신 꼭짓점 데이터가 입력 버퍼에서 제공됩니다. 이러한 버퍼에는 꼭짓점 버퍼 및 해당 인덱스 버퍼가 포함됩니다. 그러나 Direct3D에는 "특성" 선언이 없으므로, 꼭짓점 셰이더로 구성 요소가 해석되는 위치와 방법을 나타내는 HLSL 의미 체계 및 꼭짓점 버퍼에서 데이터 요소의 개별 구성 요소를 선언하는 입력 레이아웃을 지정해야 합니다. HLSL 의미 체계를 사용하려면 용도에 따라 셰이더 엔진에 알려주는 특정 문자열을 사용하여 각 구성 요소의 사용법을 정의해야 합니다. 예를 들어, 꼭짓점 위치 데이터는 POSITION으로 표시되며, 법선 데이터는 NORMAL로 표시되고, 꼭짓점 색상 데이터는 COLOR로 표시됩니다. (다른 셰이더 단계는 또한 특정 의미 체계가 필요한 및 해당 의미 체계는 셰이더 단계에 따라 서로 다른 해석 합니다.) HLSL 의미 체계에 대 한 자세한 내용은 참조 하세요 [셰이더 파이프라인 포트](change-your-shader-loading-code.md) 하 고 [HLSL 의미 체계](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps)합니다.
 
 통칭하여, 꼭짓점 및 인덱스 버퍼를 설정하고 입력 레이아웃을 설정하는 프로세스를 Direct3D 그래픽 파이프라인의 "입력 어셈블리"(IA) 단계라고 합니다.
 
@@ -255,7 +255,7 @@ m_d3dContext->IASetInputLayout(m_inputLayout.Get());
 -   (x, y, z) 좌표에 대한 3개의 32비트 부동 소수점 값의 정렬된 배열인 XMFLOAT3로 주 메모리에 표시되는 꼭짓점 위치 좌표.
 -   색상(RGBA)에 대한 4개의 32비트 부동 소수점 값의 정렬된 배열인 XMFLOAT4로 표시되는 꼭짓점 색상 값.
 
-형식 유형뿐만 아니라 각각에 대해 시맨틱을 할당합니다. 그런 다음 [**ID3D11Device1::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512)에 설명을 전달합니다. 렌더링 메서드 중 입력 어셈블리를 설정할 때 [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)을 호출하는 경우 입력 레이아웃이 사용됩니다.
+형식 유형뿐만 아니라 각각에 대해 시맨틱을 할당합니다. 그런 다음 [**ID3D11Device1::CreateInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout)에 설명을 전달합니다. 렌더링 메서드 중 입력 어셈블리를 설정할 때 [**ID3D11DeviceContext1::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout)을 호출하는 경우 입력 레이아웃이 사용됩니다.
 
 Direct3D 11: 특정 의미 체계를 사용 하 여 입력된 레이아웃을 설명 하는
 

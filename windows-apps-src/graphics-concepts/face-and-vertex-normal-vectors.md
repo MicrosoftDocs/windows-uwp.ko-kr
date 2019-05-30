@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2347efc5d68abd53442f52ecabdc060393ee561b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7146fe6489d61c641b7104e8c7c25728550c1c54
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636558"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370661"
 ---
 # <a name="face-and-vertex-normal-vectors"></a>면 및 꼭짓점 법선 벡터
 
@@ -31,7 +31,7 @@ ms.locfileid: "57636558"
 ## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>얼굴 다시 고르기
 
 
-앞면이 아닌 모든 면은 뒷면입니다. Direct3D는 뒷면을 렌더링하지 않습니다. 뒷면은 컬링된다고 합니다. 뒷면 컬링은 렌더링에서 뒷면을 제거하는 것을 의미합니다. 원하는 경우 뒷면을 렌더링하도록 컬링 모드를 변경할 수 있습니다. 자세한 내용은 [컬링 상태](https://msdn.microsoft.com/library/windows/desktop/bb204882)를 참조하세요.
+앞면이 아닌 모든 면은 뒷면입니다. Direct3D는 뒷면을 렌더링하지 않습니다. 뒷면은 컬링된다고 합니다. 뒷면 컬링은 렌더링에서 뒷면을 제거하는 것을 의미합니다. 원하는 경우 뒷면을 렌더링하도록 컬링 모드를 변경할 수 있습니다. 자세한 내용은 [컬링 상태](https://docs.microsoft.com/windows/desktop/direct3d9/culling-state)를 참조하세요.
 
 ## <a name="span-idvertexunitnormalsspanspan-idvertexunitnormalsspanspan-idvertexunitnormalsspanvertex-unit-normals"></a><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>꼭 짓 점 단위 법선
 

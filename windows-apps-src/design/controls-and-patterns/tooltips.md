@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 80591abb1e3130540ea94bc1f8d2602b90edc590
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1dabfee25df08d933fc892c3ed6e46f3cc6f4513
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613668"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364028"
 ---
 # <a name="tooltips"></a>도구 설명
 
@@ -25,7 +25,7 @@ ms.locfileid: "57613668"
 
 ![도구 설명](images/controls/tool-tip.png)
 
-> **중요 API**: [도구 설명 클래스](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
+> **중요 API**: [도구 설명 클래스](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -54,7 +54,7 @@ ms.locfileid: "57613668"
 - **사용자 찾기 성가 시 거 나 방해 팁**
     그렇다면 다른 해결 방법을 생각해 보세요. 아무것도 하지 않는 방법도 있습니다. 주의가 산만해질 수 있는 곳에 도구 설명을 사용하고 있다면 사용자가 끌 수 있도록 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 <table>
 <th align="left">XAML 컨트롤 갤러리<th>
@@ -153,4 +153,4 @@ ToolTipService.SetToolTip(submitButton, toolTip);
 
 ## <a name="related-articles"></a>관련 문서
 
-- [도구 설명 클래스](https://msdn.microsoft.com/library/windows/apps/br227608)
+- [도구 설명 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip)

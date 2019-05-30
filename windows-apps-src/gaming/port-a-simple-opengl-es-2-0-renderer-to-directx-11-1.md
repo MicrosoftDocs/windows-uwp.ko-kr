@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d 11, 포트
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b6d06ff168f778c87e46fa399775492a3cebcaa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3c17e0b8ceb5938b7ca224f4a67198929a37a7f4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594218"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368365"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅
 
@@ -27,7 +27,7 @@ ms.locfileid: "57594218"
 
 새 DirectX 11 프로젝트를 만든 후 이 항목을 시작합니다. 새 DirectX 11 프로젝트를 만드는 방법을 알아보려면 [UWP(유니버설 Windows 플랫폼)용 새 DirectX 11 프로젝트 만들기](user-interface.md)를 참조하세요.
 
-이러한 링크 중 하나에서 만든 프로젝트에는 준비된 [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476345) 인프라에 대한 모든 코드가 있으며 Open GL ES 2.0에서 Direct3D 11로 렌더러를 포팅하는 프로세스를 즉시 시작할 수 있습니다.
+이러한 링크 중 하나에서 만든 프로젝트에는 준비된 [Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews) 인프라에 대한 모든 코드가 있으며 Open GL ES 2.0에서 Direct3D 11로 렌더러를 포팅하는 프로세스를 즉시 시작할 수 있습니다.
 
 이 항목에서는 동일한 기본 그래픽 작업(창에 회전하는 꼭짓점 음영 큐브 표시)을 수행하는 두 가지 코드 경로를 살펴봅니다. 두 경우 모두 코드에 다음 프로세스가 포함됩니다.
 
@@ -89,12 +89,12 @@ typedef struct
 
 ### <a name="technologies"></a>기술
 
--   [Microsoft Visual c + +](https://msdn.microsoft.com/library/vstudio/60k1461a.aspx)
+-   [Microsoft Visual C++](https://docs.microsoft.com/previous-versions/60k1461a(v=vs.140))
 -   OpenGL ES 2.0
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 
--   선택 사항. [DXGI 및 Direct3D로 EGL 코드 포팅](moving-from-egl-to-dxgi.md)을 검토하세요. DirectX에서 제공하는 그래픽 인터페이스를 더 잘 이해할 수 있도록 이 항목을 확인하세요.
+-   (선택 사항) [DXGI 및 Direct3D로 EGL 코드 포팅](moving-from-egl-to-dxgi.md)을 검토하세요. DirectX에서 제공하는 그래픽 인터페이스를 더 잘 이해할 수 있도록 이 항목을 확인하세요.
 
 ## <a name="span-idkeylinksstepsheadingspansteps"></a><span id="keylinks_steps_heading"></span>단계
 

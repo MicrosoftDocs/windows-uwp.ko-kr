@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
 ms.localizationpriority: medium
-ms.openlocfilehash: 23dfb8843ed8e70fc6f979bd778a517d0c30327a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 585289fdc66b8730036f3d14faeafce8c22c09a7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613878"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371366"
 ---
 # <a name="bring-custom-c-games-to-uwp-on-xbox"></a>Xbox의 UWP에 사용자 지정 C++ 게임 가져오기
 
@@ -19,7 +19,7 @@ ms.locfileid: "57613878"
 
 UWP(유니버설 Windows 플랫폼)에서의 C++ 게임은 렌더링에 DirectX를 사용합니다. 자세한 내용은 [DirectX 그래픽 및 게임](https://msdn.microsoft.com/library/windows/desktop/ee663274(v=vs.85).aspx)에서 알아보세요.
 
-[C++ with Component Extensions](https://msdn.microsoft.com/library/windows/apps/hh699871.aspx)(C++/CX) 또는 [표준 C++](https://msdn.microsoft.com/library/windows/apps/mt592904.aspx)(Win32 및 COM)를 작성할 수 있습니다.
+[C++ with Component Extensions](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)(C++/CX) 또는 [표준 C++](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps)(Win32 및 COM)를 작성할 수 있습니다.
 
 콘솔을 개발 키트로 전환하는 방법과 Visual Studio에서 배포하는 방법을 알아보려면 [게임 및 DirectX](../gaming/index.md)와 [시작](getting-started.md) 가이드를 참조하세요.
 
@@ -27,7 +27,7 @@ UWP(유니버설 Windows 플랫폼)에서의 C++ 게임은 렌더링에 DirectX�
 > Xbox One은 현재 DirectX 12를 지원하지 않습니다.
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [기존 게임을 Xbox로 가져오기](development-lanes-landing.md)
 - [Xbox One에서 UWP](index.md)
 

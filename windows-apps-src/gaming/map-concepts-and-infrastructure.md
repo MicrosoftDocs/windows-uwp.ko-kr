@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d, 포팅
 ms.localizationpriority: medium
-ms.openlocfilehash: e09dcb1830e62d17983f564771b4808d132179a0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 525b97700b1362bb19a1b328183f3cbf9da3b006
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640828"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368520"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Direct3D 11에 OpenGL ES 2.0 매핑
 
@@ -45,7 +45,7 @@ ms.locfileid: "57640828"
 </tr>
 <tr class="even">
 <td align="left"><p><a href="change-your-shader-loading-code.md">OpenGL ES 2.0 셰이더 파이프라인 direct3d 비교</a></p></td>
-<td align="left"><p>개념적으로 Direct3D 11 셰이더 파이프라인은 OpenGL ES 2.0의 셰이더 파이프라인과 매우 유사합니다. 그러나 API 디자인의 관점에서 셰이더 단계를 만들고 관리하기 위한 주요 구성 요소는 두 가지 주 인터페이스 <a href="https://msdn.microsoft.com/library/windows/desktop/hh404575"><strong>ID3D11Device1</strong></a> 및 <a href="https://msdn.microsoft.com/library/windows/desktop/hh404598"><strong>ID3D11DeviceContext1</strong></a>의 일부입니다. 이 항목에서는 일반적인 OpenGL ES 2.0 셰이더 파이프라인 API 패턴을 이러한 인터페이스의 Direct3D 11 셰이더 파이프라인 API 패턴에 매핑하려고 합니다.</p></td>
+<td align="left"><p>개념적으로 Direct3D 11 셰이더 파이프라인은 OpenGL ES 2.0의 셰이더 파이프라인과 매우 유사합니다. 그러나 API 디자인의 관점에서 셰이더 단계를 만들고 관리하기 위한 주요 구성 요소는 두 가지 주 인터페이스 <a href="https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1"><strong>ID3D11Device1</strong></a> 및 <a href="https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1"><strong>ID3D11DeviceContext1</strong></a>의 일부입니다. 이 항목에서는 일반적인 OpenGL ES 2.0 셰이더 파이프라인 API 패턴을 이러한 인터페이스의 Direct3D 11 셰이더 파이프라인 API 패턴에 매핑하려고 합니다.</p></td>
 </tr>
 </tbody>
 </table>

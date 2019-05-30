@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 93be1b0b947be84e795a29774b4b26cb888f5f1a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 54da5ea68dad0bbd2c7f00ae5fc4128f14d1ce43
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660278"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362879"
 ---
 # <a name="calendar-date-and-time-controls"></a>달력, 날짜 및 시간 컨트롤
 
@@ -25,7 +25,7 @@ ms.locfileid: "57660278"
 
 날짜 및 시간 컨트롤은 사용자가 앱에서 날짜 및 시간 값을 보고 설정할 수 있는 표준적이고 지역화된 방법을 제공합니다. 이 문서는 디자인 지침을 제공하며, 올바른 컨트롤을 선택하는 데 도움이 됩니다.
 
-> **중요 API**: [CalendarView 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx)하십시오 [CalendarDatePicker 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx)합니다 [DatePicker 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx), [TimePicker 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)
+> **중요 API**: [CalendarView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView)하십시오 [CalendarDatePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker)합니다 [DatePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.DatePicker), [TimePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TimePicker)
 
 <table>
 <th align="left">XAML 컨트롤 갤러리<th>
@@ -104,22 +104,22 @@ ms.locfileid: "57660278"
 - [날짜 선택기](date-picker.md)
 - [시간 선택](time-picker.md)
 
-### <a name="globalization"></a>세계화
+### <a name="globalization"></a>전역화
 
-XAML 날짜 컨트롤은 Windows에서 지원하는 각 일정 시스템을 지원합니다. 이러한 일정은 [Windows.Globalization.CalendarIdentifiers](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendaridentifiers.aspx) 클래스에서 지정됩니다. 각 컨트롤에서 앱의 기본 언어에 대한 올바른 일정 시스템이 사용되거나 **CalendarIdentifier** 속성을 설정하여 특정 일정 시스템을 사용할 수 있습니다.
+XAML 날짜 컨트롤은 Windows에서 지원하는 각 일정 시스템을 지원합니다. 이러한 일정은 [Windows.Globalization.CalendarIdentifiers](https://docs.microsoft.com/uwp/api/Windows.Globalization.CalendarIdentifiers) 클래스에서 지정됩니다. 각 컨트롤에서 앱의 기본 언어에 대한 올바른 일정 시스템이 사용되거나 **CalendarIdentifier** 속성을 설정하여 특정 일정 시스템을 사용할 수 있습니다.
 
-시간 선택 컨트롤은 [Windows.Globalization.ClockIdentifiers](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.clockidentifiers.aspx) 클래스에 지정된 각 시계 시스템을 지원합니다. [ClockIdentifier](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.clockidentifier.aspx) 속성을 설정하여 12시간제 시계 또는 24시간제 시계를 사용할 수 있습니다. 속성의 형식이 문자열이지만 ClockIdentifiers 클래스의 정적 문자열 속성에 해당하는 값을 사용해야 합니다. 옵션은 다음과 같습니다. TwelveHour ("12HourClock" 문자열) 및 TwentyFourHour ("24HourClock" 문자열)입니다. "12HourClock"이 기본값입니다.
+시간 선택 컨트롤은 [Windows.Globalization.ClockIdentifiers](https://docs.microsoft.com/uwp/api/Windows.Globalization.ClockIdentifiers) 클래스에 지정된 각 시계 시스템을 지원합니다. [ClockIdentifier](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepicker.clockidentifier) 속성을 설정하여 12시간제 시계 또는 24시간제 시계를 사용할 수 있습니다. 속성의 형식이 문자열이지만 ClockIdentifiers 클래스의 정적 문자열 속성에 해당하는 값을 사용해야 합니다. 이러한 항목은 다음과 같습니다. TwelveHour ("12HourClock" 문자열) 및 TwentyFourHour ("24HourClock" 문자열)입니다. "12HourClock"이 기본값입니다.
 
 
 ### <a name="datetime-and-calendar-values"></a>DateTime 및 Calendar 값
 
 XAML 날짜 및 시간 컨트롤에 사용된 날짜 개체는 프로그래밍 언어에 따라 서로 다른 구조를 가집니다. 
-- C# 및 Visual Basic은 .NET의 일부인 [System.DateTimeOffset](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx) 구조를 사용합니다. 
-- C++/CX는 [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/xaml/br205770.aspx) 구조를 사용합니다. 
+- C# 및 Visual Basic은 .NET의 일부인 [System.DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset?redirectedfrom=MSDN) 구조를 사용합니다. 
+- C++/CX는 [Windows::Foundation::DateTime](https://docs.microsoft.com/windows/desktop/api/windows.foundation/ns-windows-foundation-datetime) 구조를 사용합니다. 
 
-관련 개념은 날짜가 컨텍스트에서 해석되는 방식에 영향을 주는 Calendar 클래스입니다. 모든 Windows 런타임 앱은 [Windows.Globalization.Calendar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendar.aspx) 클래스를 사용할 수 있습니다. C# 및 Visual Basic 앱은 매우 유사한 기능을 가진 [System.Globalization.Calendar](https://msdn.microsoft.com/library/windows/apps/xaml/system.globalization.calendar.aspx) 클래스를 사용할 수도 있습니다. (Windows 런타임 앱은 기본 .NET Calendar 클래스를 사용할 수 있으나 GregorianCalendar와 같은 특정 구현은 사용할 수 없습니다.)
+관련 개념은 날짜가 컨텍스트에서 해석되는 방식에 영향을 주는 Calendar 클래스입니다. 모든 Windows 런타임 앱은 [Windows.Globalization.Calendar](https://docs.microsoft.com/uwp/api/Windows.Globalization.Calendar) 클래스를 사용할 수 있습니다. C# 및 Visual Basic 앱은 매우 유사한 기능을 가진 [System.Globalization.Calendar](https://docs.microsoft.com/dotnet/api/system.globalization.calendar?redirectedfrom=MSDN) 클래스를 사용할 수도 있습니다. (Windows 런타임 앱은 기본 .NET Calendar 클래스를 사용할 수 있으나 GregorianCalendar와 같은 특정 구현은 사용할 수 없습니다.)
 
-.NET은 또한 암시적으로 [DateTimeOffset](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx)으로 변환될 수 있는 [DateTime](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx)이라는 형식을 지원합니다. 따라서 실제로 DateTimeOffset인 값을 설정하는 데 사용되는 .NET 코드에서 "DateTime" 형식이 사용되는 것을 볼 수 있습니다. DateTime과 DateTimeOffset 간의 차이점에 대한 자세한 내용은 [DateTimeOffset](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx) 클래스의 설명을 참조하세요.
+.NET은 또한 암시적으로 [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset?redirectedfrom=MSDN)으로 변환될 수 있는 [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?redirectedfrom=MSDN)이라는 형식을 지원합니다. 따라서 실제로 DateTimeOffset인 값을 설정하는 데 사용되는 .NET 코드에서 "DateTime" 형식이 사용되는 것을 볼 수 있습니다. DateTime과 DateTimeOffset 간의 차이점에 대한 자세한 내용은 [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset?redirectedfrom=MSDN) 클래스의 설명을 참조하세요.
 
 > **참고**&nbsp;&nbsp;Windows 런타임 XAML 파서에는 문자열을 DateTime/DateTimeOffset 개체인 날짜로 변환하는 변환 논리가 없기 때문에 날짜 개체를 사용하는 속성은 XAML 특성 문자열로 설정할 수 없습니다. 일반적으로 코드에서 이러한 값을 설정합니다. 또 다른 가능한 방법은 데이터 개체 또는 데이터 컨텍스트를 사용할 수는 다음을 참조 하는 XAML 특성으로 속성을 설정 하는 날짜를 정의 하는 [ \{바인딩\} 태그 확장](../../xaml-platform/binding-markup-extension.md) 식 날짜 데이터를 액세스할 수 있습니다.
 
@@ -130,7 +130,7 @@ XAML 날짜 및 시간 컨트롤에 사용된 날짜 개체는 프로그래밍 �
 ## <a name="related-topics"></a>관련 항목
 
 **개발자 (XAML)**
-- [CalendarView 클래스](https://msdn.microsoft.com/library/windows/apps/dn890052)
-- [CalendarDatePicker 클래스](https://msdn.microsoft.com/library/windows/apps/dn950083)
-- [DatePicker 클래스](https://msdn.microsoft.com/library/windows/apps/dn298584)
-- [TimePicker 클래스](https://msdn.microsoft.com/library/windows/apps/dn299280)
+- [CalendarView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView)
+- [CalendarDatePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker)
+- [DatePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.DatePicker)
+- [TimePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TimePicker)

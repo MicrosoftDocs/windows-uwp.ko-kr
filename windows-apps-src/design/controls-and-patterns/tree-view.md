@@ -3,7 +3,7 @@ description: ItemsSource 계층적 데이터 소스에 바인딩하여는 확장
 title: 트리 보기
 label: Tree view
 template: detail.hbs
-ms.date: 01/03/2019
+ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 pm-contact: predavid
@@ -13,13 +13,13 @@ doc-status: Published
 dev_langs:
 - csharp
 - vb
-ms.custom: RS5
-ms.openlocfilehash: 7c666d417fb980cab72165681583ac83e9eaca00
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.custom: RS5, 19H1
+ms.openlocfilehash: d9f0396558186008430ccf1454e48f5e2194ee0e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57628518"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363996"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -85,7 +85,7 @@ TreeView API는 다음과 같은 기능을 지원합니다.
 > [!IMPORTANT]
 > ItemsSource 및 관련된 Api에는 Windows 10 버전 1809 필요 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상, 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)합니다.
 >
-> ItemsSource는 TreeView.RootNodes TreeView 컨트롤에 내용을 입력에 대 한 대체 메커니즘을 합니다. ItemsSource 및 RootNodes를 모두 동시에 설정할 수 없습니다. ItemsSource를 사용 하면 노드를 만들고 TreeView.RootNodes 속성에서 액세스할 수 있습니다.
+> ItemsSource는 TreeView.RootNodes TreeView 컨트롤에 내용을 입력에 대 한 대체 메커니즘을 합니다. ItemsSource 및 RootNodes를 모두 동시에 설정할 수 없습니다. ItemsSource를 사용 하는 경우, 노드가 만들어지고 TreeView.RootNodes 속성에서 액세스할 수 있습니다.
 
 다음은 XAML에 선언된 간단한 트리 보기의 예입니다. 사용자는 일반적으로 코드에 노드를 추가하지만, 여기서는 XAML 계층을 보여주고자 합니다. 왜냐하면 노드의 계층이 생성되는 방법을 시각화하는 데 도움이 될 수 있기 때문입니다.
 
@@ -339,7 +339,7 @@ End Sub
 > [!NOTE]
 > [IsItemClickEnabled](/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) 속성을 가지고 있는 ListView와 달리, 항목 호출은 트리 보기에서 항상 활성화되어 있습니다. 여전히 이벤트 처리 여부를 선택할 수 있습니다.
 
-**[TreeViewItemInvokedEventArgs](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs) 클래스**
+**[TreeViewItemInvokedEventArgs](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs) class**
 
 ItemInvoked eventargs 호출된 항목에 액세스할 수 있습니다. [InvokedItem](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs.invokeditem) 속성은 호출된 노드를 가지고 있습니다. TreeViewNode로 이를 캐스팅하고 TreeViewNode.Content 속성에서 데이터 항목을 가져올 수 있습니다.
 
@@ -932,5 +932,5 @@ End Sub
 ## <a name="related-articles"></a>관련 문서
 
 - [TreeView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview)
-- [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)
+- [ListView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)
 - [ListView 및 GridView](listview-and-gridview.md)

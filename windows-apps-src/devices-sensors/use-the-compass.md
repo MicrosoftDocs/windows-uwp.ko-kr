@@ -6,20 +6,20 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f8c1cc6e17d95f55cc97af7695c12b374edcaaa8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2c7fadaf902b4aa543234bc8d43fbc1595a54219
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632888"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369681"
 ---
 # <a name="use-the-compass"></a>나침반 사용
 
 
 **중요 한 Api**
 
--   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**나침반**](https://msdn.microsoft.com/library/windows/apps/BR225705)
+-   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**나침반**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Compass)
 
 **샘플**
 
@@ -29,7 +29,7 @@ ms.locfileid: "57632888"
 
 앱은 자북 또는 실제 북쪽을 기준으로 현재 전면부를 검색할 수 있습니다. 탐색 앱은 나침반을 사용하여 장치가 향하고 있는 방향을 판단한 다음 그에 따라 지도의 방위치를 확정합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 사용 하 여 Extensible Application Markup Language (XAML), Microsoft Visual 친숙 해야 C#, 및 이벤트입니다.
 

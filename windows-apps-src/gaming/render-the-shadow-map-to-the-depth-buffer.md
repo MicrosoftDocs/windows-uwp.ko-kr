@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 렌더링, 그림자 지도, 깊이 버퍼, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 27cd535dc51a330937c345acf352677a42c652eb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a8ae67df457d4abafc8fb689a747139f62ca0e0e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621338"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368070"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>그림자 맵을 깊이 버퍼로 렌더링
 
@@ -37,7 +37,7 @@ context->ClearDepthStencilView(m_shadowDepthView.Get(), D3D11_CLEAR_DEPTH | D3D1
 
 광원 뷰포트, 꼭짓점 셰이더를 지정하고 광원 공간 상수 버퍼를 설정합니다. 이 단계에 대해 전면 컬링을 사용하여 그림자 버퍼에 배치된 깊이 값을 최적화합니다.
 
-대부분의 장치에서 픽셀 셰이더에 대한 nullptr을 지정합니다. 또는 완전히 픽셀 셰이더 지정을 건너뜁니다. 하지만 null 픽셀 셰이더 집합을 사용하여 Direct3D 장치를 그리는 경우 일부 드라이버는 예외를 throw할 수 있습니다. 이 예외를 방지하려면 그림자 렌더링 단계에 대한 최소한의 픽셀 셰이더를 설정할 수 있습니다. 이 셰이더의 출력이 throw됩니다. 모든 픽셀에서 [**discard**](https://msdn.microsoft.com/library/windows/desktop/bb943995)를 호출할 수 있습니다.
+대부분의 장치에서 픽셀 셰이더에 대한 nullptr을 지정합니다. 또는 완전히 픽셀 셰이더 지정을 건너뜁니다. 하지만 null 픽셀 셰이더 집합을 사용하여 Direct3D 장치를 그리는 경우 일부 드라이버는 예외를 throw할 수 있습니다. 이 예외를 방지하려면 그림자 렌더링 단계에 대한 최소한의 픽셀 셰이더를 설정할 수 있습니다. 이 셰이더의 출력이 throw됩니다. 모든 픽셀에서 [**discard**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-discard)를 호출할 수 있습니다.
 
 그림자를 캐스팅할 수 있는 개체를 렌더링하지만 그림자를 캐스팅할 수 없는 기하 도형(예: 방의 바닥 또는 최적화상의 이유로 그림자 단계에서 제거된 개체)을 렌더링할 필요는 없습니다.
 
@@ -125,7 +125,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-**하면 보기 프러스텀을 최적화 합니다.**  깊이 버퍼에서 가장 정밀도 받을 수 있도록 구현 꼭지점이 절을 긴밀 하 게 보기 두 체를 계산 해야 합니다. 그림자 기술에 대한 자세한 팁은 [그림자 깊이 맵 향상을 위한 일반 기술](https://msdn.microsoft.com/library/windows/desktop/ee416324)을 참조하세요.
+**하면 보기 프러스텀을 최적화 합니다.**  깊이 버퍼에서 가장 정밀도 받을 수 있도록 구현 꼭지점이 절을 긴밀 하 게 보기 두 체를 계산 해야 합니다. 그림자 기술에 대한 자세한 팁은 [그림자 깊이 맵 향상을 위한 일반 기술](https://docs.microsoft.com/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps)을 참조하세요.
 
 ## <a name="vertex-shader-for-shadow-pass"></a>그림자 단계의 꼭짓점 셰이더
 

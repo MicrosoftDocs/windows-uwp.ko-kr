@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 21a6c698fa0e07587e2c25ae827dc6654a8ced9d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 297b907191dfa07084e5e4ada0e3468733e47090
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618628"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363126"
 ---
 # <a name="combo-box"></a>콤보 상자
 
@@ -173,13 +173,13 @@ Windows 10, 버전 1809 ([17763 SDK](https://developer.microsoft.com/windows/dow
 
 - SelectedItem = null
 - SelectedValue = null
-- SelectedIndex =-1
+- SelectedIndex = -1
 
 Sdk 17763 이상 SelectedItem 속성의 값 (및 따라서 SelectedValue 및 SelectedIndex) 콤보 상자의 항목 컬렉션에 있이 필요가 없습니다. 설정, 이전 예제를 사용 하 여 `colorComboBox.SelectedItem = "Pink"` 결과:
 
 - SelectedItem Pink =
 - SelectedValue Pink =
-- SelectedIndex =-1
+- SelectedIndex = -1
 
 ### <a name="text-search"></a>텍스트 검색
 
@@ -305,6 +305,6 @@ bool IsValid(string Text)
 - [텍스트 컨트롤](text-controls.md)
 - [맞춤법 검사](text-controls.md)
 - [검색](search.md)
-- [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
-- [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length.aspx)
+- [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+- [String.Length 속성이](https://docs.microsoft.com/dotnet/api/system.string.length?redirectedfrom=MSDN#System_String_Length)

@@ -6,20 +6,20 @@ ms.date: 06/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cdad8f3405420e0548974c734ad23bfd44f2c6b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8278e02de4d0f9a0efa301051a57bf59bce8d520
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648828"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363297"
 ---
 # <a name="sockets"></a>소켓
 소켓은 많은 네트워킹 프로토콜이 구현되는 하위 수준 데이터 전송 기술입니다. UWP는 지속 시간이 긴 연결이든 설정된 연결이 필요하지 않든 클라이언트와 서버 간 또는 피어 투 피어 응용 프로그램에 대한 UDP 및 TCP 소켓 클래스를 제공합니다.
 
-이 항목에서는 [**Windows.Networking.Sockets**](/uwp/api/Windows.Networking.Sockets) 네임스페이스에 있는 UWP(유니버설 Windows 플랫폼) 소켓 클래스를 사용하는 방법을 다룹니다. 하지만 UWP 앱에서 [Windows 소켓 2(Winsock)](https://msdn.microsoft.com/library/windows/desktop/ms740673)도 사용할 수 있습니다.
+이 항목에서는 [**Windows.Networking.Sockets**](/uwp/api/Windows.Networking.Sockets) 네임스페이스에 있는 UWP(유니버설 Windows 플랫폼) 소켓 클래스를 사용하는 방법을 다룹니다. 하지만 UWP 앱에서 [Windows 소켓 2(Winsock)](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)도 사용할 수 있습니다.
 
 > [!NOTE]
-> [네트워크 격리](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx)의 결과로 Windows는 로컬 루프백 주소(127.0.0.0)를 통해서나 로컬 IP 주소를 명시적으로 지정하여 동일한 시스템에서 실행 중인 UWP 앱 두 개 사이의 소켓 연결(소켓 또는 WinSock) 설정을 허용하지 않습니다. UWP 앱이 서로 통신할 수 있도록 하는 메커니즘에 대한 자세한 내용은 [앱 간 통신](/windows/uwp/app-to-app/index)을 참조하세요.
+> [네트워크 격리](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))의 결과로 Windows는 로컬 루프백 주소(127.0.0.0)를 통해서나 로컬 IP 주소를 명시적으로 지정하여 동일한 시스템에서 실행 중인 UWP 앱 두 개 사이의 소켓 연결(소켓 또는 WinSock) 설정을 허용하지 않습니다. UWP 앱이 서로 통신할 수 있도록 하는 메커니즘에 대한 자세한 내용은 [앱 간 통신](/windows/uwp/app-to-app/index)을 참조하세요.
 
 ## <a name="build-a-basic-tcp-socket-client-and-server"></a>기본 TCP 소켓 클라이언트 및 서버 빌드
 TCP(Transmission Control Protocol) 소켓은 지속 시간이 긴 연결에 대해 각 방향으로 하위 수준 네트워크 데이터 전송을 제공합니다. TCP 소켓은 인터넷에서 사용되는 대부분의 네트워크 프로토콜에서 사용하는 기본 기능입니다. 기본 TCP 작업을 설명하기 위해 아래의 예제 코드는 에코 클라이언트 및 서버를 형성하기 위해 TCP를 통해 데이터를 주고 받는 [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) 및 [**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener)를 보여줍니다.
@@ -1379,9 +1379,9 @@ Concurrency::create_task(Windows::Security::Cryptography::Certificates::Certific
 
 ## <a name="related-topics"></a>관련 항목
 * [앱 간 통신](/windows/uwp/app-to-app/index)
-* [동시성 및 비동기 작업을 사용 하 여 C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)
-* [네트워크 기능을 설정 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx)
-* [Windows 소켓 (Winsock) 2](https://msdn.microsoft.com/library/windows/desktop/ms740673)
+* [동시성 및 비동기 작업을 C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)
+* [네트워크 기능을 설정 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+* [Windows 소켓 (Winsock) 2](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)
 
 ## <a name="samples"></a>샘플
 * [StreamSocket 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620609)

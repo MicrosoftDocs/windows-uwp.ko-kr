@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: windows 10 uwp 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 42ec5c1e91fbeebcaad68f346f317893fdfb2e1c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3f979edbd49699447040880964dd1378bc7c94c0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606888"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362079"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 
@@ -110,7 +110,7 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 **정정 작업**  
 다음 표를 가이드로 따르세요.
 
-오류 메시지 | 설명
+오류 메시지 | 주석
 --------------|---------
 {image name} 이미지에서 Scale 및 TargetSize 한정자를 정의합니다. 한정자는 한 번에 하나만 정의할 수 있습니다. | 서로 다른 해상도로 이미지를 사용자 지정할 수 있습니다. 실제 메시지에서는 {image name}에 오류가 있는 이미지 이름이 포함됩니다. 각 이미지에서 Scale 또는 TargetSize를 한정자로 정의하는지 확인하세요. 
 {image name} 이미지에서 크기 제한에 실패했습니다.  | 모든 앱 이미지가 적절한 크기 제한을 준수하는지 확인하세요. 실제 메시지에서는 {image name}에 오류가 있는 이미지 이름이 포함됩니다. 
@@ -118,7 +118,7 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 {image name} 이미지가 유효한 이미지 파일이 아닙니다.  | 모든 앱 이미지가 적절한 파일 형식 유형 제한을 준수하는지 확인하세요. 실제 메시지에서는 {image name}에 유효하지 않은 이미지 이름이 포함됩니다. 
 "BadgeLogo" 이미지의 (x, y) 위치에 유효하지 않은 ABGR 값 {value}이(가) 있습니다. 픽셀은 흰색(##FFFFFF) 또는 투명(00######)이어야 합니다.  | 배지 로고는 잠금 화면에서 앱을 식별하기 위해 배지 알림 옆에 표시되는 이미지입니다. 이 이미지는 단색이어야 합니다. 즉, 흰색 및 투명 픽셀만 포함할 수 있습니다. 실제 메시지에서는 {value}에 유효하지 않은 이미지 색 값이 포함됩니다. 
 "BadgeLogo" 이미지의 (x, y) 위치에 고대비 흰색 이미지에 유효하지 않은 ABGR 값 {value}이(가) 있습니다. 픽셀은 (##2A2A2A)보다 어둡거나 투명(00######)이어야 합니다.  | 배지 로고는 잠금 화면에서 앱을 식별하기 위해 배지 알림 옆에 표시되는 이미지입니다. 배지 로고는 흰색 배경에 표시되므로 고대비 흰색일 경우 일반적인 배지 로고의 어두운 버전이어야 합니다. 고대비 흰색에서 배지 로고에는 (##2A2A2A)보다 어둡거나 투명인 픽셀만 포함될 수 있습니다. 실제 메시지에서는 {value}에 유효하지 않은 이미지 색 값이 포함됩니다. 
-이미지에서 TargetSize 한정자를 사용하지 않고 둘 이상의 변형을 정의해야 합니다. 이미지에서 Scale 한정자를 정의하거나 Scale 및 TargetSize를 지정하지 않은 상태로 유지하여 기본값 Scale-100으로 설정해야 합니다.  | 자세한 정보는 [반응형 디자인](https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx) 및 [앱 리소스](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data)에 대한 가이드를 참조하세요. 
+이미지에서 TargetSize 한정자를 사용하지 않고 둘 이상의 변형을 정의해야 합니다. 이미지에서 Scale 한정자를 정의하거나 Scale 및 TargetSize를 지정하지 않은 상태로 유지하여 기본값 Scale-100으로 설정해야 합니다.  | 자세한 정보는 [반응형 디자인](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) 및 [앱 리소스](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data)에 대한 가이드를 참조하세요. 
 패키지에 "resources.pri" 파일이 없습니다.  | 앱 매니페스트에 지역화 가능한 콘텐츠가 있는 경우 앱 패키지에 유효한 resources.pri 파일이 있는지 확인하세요. 
 "resources.pri" 파일에는 패키지 이름 {package full name}과(와) 일치하는 이름을 사용하는 리소스 맵이 있어야 합니다.  | 매니페스트가 변경되어 resources.pri의 리소스 맵 이름이 매니페스트의 패키지 이름과 더 이상 일치하지 않는 경우 이 오류가 발생할 수 있습니다. 실제 메시지에서는 resources.pri에 포함되어야 하는 패키지 이름이 {package full name}에 포함됩니다. 이 오류를 해결하려면 resources.pri를 다시 빌드해야 하며 앱 패키지를 다시 빌드하면 이 작업을 가장 간단하게 수행할 수 있습니다. 
 "resources.pri" 파일에서 자동 병합을 사용할 수 있도록 설정해서는 안 됩니다.  | MakePRI.exe는 AutoMerge라는 옵션을 지원합니다. AutoMerge의 기본값은 off입니다. 이 옵션을 사용하면 AutoMerge에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. Microsoft Store 통해 배포 하려는 앱에 대 한이 권장 하지 않습니다. Microsoft Store 통해 배포 되는 앱의 resources.pri 앱의 패키지의 루트에 하 고 앱을 지 원하는 모든 언어 참조를 포함 해야 합니다. 
@@ -156,7 +156,7 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 * **프레임 워크 종속성 규칙**  
 이 테스트에서는 앱이 UWP에 적절하게 종속되는 요구 사항을 선언합니다. 부적절한 종속성이 있으면 이 테스트가 실패합니다. 앱의 대상인 OS 버전과 프레임워크 종속성 간에 불일치가 있으면 테스트가 실패합니다. 또한 앱이 프레임워크 dll의 "미리 보기" 버전을 참조하는 경우에도 테스트가 실패합니다.
 * **프로세스 간 통신 (IPC) 확인**  
-이 테스트에서는 데스크톱 브리지 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신하지 않는 요구 사항을 적용합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. `DesktopApplicationPath`와 동일한 이름으로 [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414)를 지정하는 앱은 이 테스트에 실패합니다.  
+이 테스트에서는 데스크톱 브리지 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신하지 않는 요구 사항을 적용합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. `DesktopApplicationPath`와 동일한 이름으로 [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)를 지정하는 앱은 이 테스트에 실패합니다.  
 
 **정정 작업**  
 앱의 매니페스트가 [앱 패키지 요구 사항](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements)에 설명된 요구 사항에 맞는지 검토합니다.
@@ -217,10 +217,10 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 앱이 디버그 빌드가 아닌 릴리스 빌드로 컴파일된 것을 확인하여 수정할 수 있습니다. 
 
 > [!NOTE]
-> 앱의 디버그 빌드를이 테스트는 앱만 사용 하는 경우에 실패 [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)합니다. UWP 앱 용 API 허용된 되지 않는 있는 API를 식별 하는 오류 메시지를 검토 합니다. 
+> 앱의 디버그 빌드를이 테스트는 앱만 사용 하는 경우에 실패 [UWP 앱 용 Api](https://docs.microsoft.com/uwp/)합니다. UWP 앱 용 API 허용된 되지 않는 있는 API를 식별 하는 오류 메시지를 검토 합니다. 
 
 > [!NOTE]
-> 디버그 구성에서 만든 c + + 앱 구성만 UWP 앱 용 Windows SDK에서 Api를 사용 하는 경우에이 테스트를 실패 합니다. 참조 [UWP 앱에서 Windows Api에 대 한 대안](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) 자세한 내용은 합니다.
+> C++디버그 구성에 기본 제공 되는 앱 구성만 UWP 앱 용 Windows SDK에서 Api를 사용 하는 경우에이 테스트를 실패 합니다. 참조 [UWP 앱에서 Windows Api에 대 한 대안](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps) 자세한 내용은 합니다.
 
 ### <a name="6-user-account-control-uac-test"></a>6. 사용자 계정 컨트롤 (UAC) 테스트  
 
@@ -246,7 +246,7 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 UWP 클래스가 다른 클래스에 ExclusiveTo로 표시된 인터페이스를 구현하지 않는지 확인합니다.
 * **일반 메타 데이터 수정**  
 사용 중인 형식을 생성하는 컴파일러가 최신 UWP 사양으로 업데이트되었는지 확인합니다.
-* **속성**  
+* **Properties**  
 UWP 클래스의 모든 속성이 `get` 메서드를 지니는지 확인합니다(`set` 메서드는 선택 사항입니다). 모든 속성에 대해 `get` 메서드가 반환하는 형식이 `set` 메서드 입력 매개 변수 형식과 일치하는지 확인합니다.
 * **위치 유형**  
 모든 UWP 형식에 대한 메타데이터가 앱 패키지에서 네임스페이스와 일치하는 가장 긴 이름을 가진 winmd 파일에 있는지 확인합니다.
@@ -286,4 +286,4 @@ Windows 앱 인증 키트에서 금지된 파일 검사는 현재 다음 파일�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)

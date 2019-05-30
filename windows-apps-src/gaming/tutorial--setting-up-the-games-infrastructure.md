@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 설정, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 789b235220e5d22b85f7b3038d5d468729439501
-ms.sourcegitcommit: 7a3d28472901edbe4ecdde7e1a01a505ee5bc028
+ms.openlocfilehash: ca91926ec374015eeb88be6d89d3e1741d8b9c6d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658769"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367682"
 ---
 # <a name="set-up-the-game-project"></a>게임 프로젝트 설정
 
@@ -53,7 +53,7 @@ Visual Studio에서 DirectX 11 게임 프로젝트를 만들기 위한 단계:
 
 ### <a name="inspect-apph"></a>**App.h**를 검사합니다.
 
-보겠습니다에서 5 개의 메서드를 신속 하 게 살펴볼 **App.h** &mdash; [ **초기화**](https://msdn.microsoft.com/library/windows/apps/hh700495)하십시오 [ **SetWindow** ](https://msdn.microsoft.com/library/windows/apps/hh700509), [ **부하**](https://msdn.microsoft.com/library/windows/apps/hh700501)합니다 [ **실행**](https://msdn.microsoft.com/library/windows/apps/hh700505), 및 [ **초기화** ](https://msdn.microsoft.com/library/windows/apps/hh700523) 구현 하는 경우는 [ **IFrameworkView** ](https://msdn.microsoft.com/library/windows/apps/hh700469) 보기 공급자를 정의 하는 인터페이스입니다. 이러한 메서드는 게임이 시작될 때 만들어지는 앱 단일 항목에서 실행되며 앱의 모든 리소스를 로드할 뿐만 아니라 적절한 이벤트 처리기를 연결합니다.
+보겠습니다에서 5 개의 메서드를 신속 하 게 살펴볼 **App.h** &mdash; [ **초기화**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.initialize)하십시오 [ **SetWindow** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.setwindow), [ **부하**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.load)합니다 [ **실행**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run), 및 [ **초기화** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.uninitialize) 구현 하는 경우는 [ **IFrameworkView** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.run) 보기 공급자를 정의 하는 인터페이스입니다. 이러한 메서드는 게임이 시작될 때 만들어지는 앱 단일 항목에서 실행되며 앱의 모든 리소스를 로드할 뿐만 아니라 적절한 이벤트 처리기를 연결합니다.
 
 ```cpp
     // Main entry point for our app. Connects the app with the Windows shell and handle application lifecycle events.
@@ -129,7 +129,7 @@ void App::Run()
 
 ![package.appx 매니페스트 편집기의 스크린샷입니다.](images/simple-dx-game-setup-app-manifest.png)
 
-**package.appxmanifest** 파일 및 패키징에 대한 자세한 내용은 [매니페스트 디자이너](https://msdn.microsoft.com/library/windows/apps/br230259.aspx)를 참조하세요. 이제 **기능** 탭을 살펴보고 제공된 옵션을 살펴봅니다.
+**package.appxmanifest** 파일 및 패키징에 대한 자세한 내용은 [매니페스트 디자이너](https://docs.microsoft.com/previous-versions/br230259(v=vs.140))를 참조하세요. 이제 **기능** 탭을 살펴보고 제공된 옵션을 살펴봅니다.
 
 ![Direct3D 앱의 기본 기능에 대한 스크린샷입니다.](images/simple-dx-game-setup-capabilities.png)
 

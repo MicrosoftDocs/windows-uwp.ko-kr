@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 포팅, 게임 루프, direct3d 9, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 2087959bc29d2b2b02cdc9a2f373a8b62ea8c25a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bd6a17b5e1684fbee21965158295dba123737bd6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627988"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367909"
 ---
 # <a name="port-the-game-loop"></a>게임 루프 포팅
 
@@ -24,20 +24,20 @@ ms.locfileid: "57627988"
 -   3부: 게임 루프 포팅
 
 
-[  **IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 작성하여 전체 화면 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다. [DirectX 11 및 UWP로 간단한 Direct3D 9 앱 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습의 3부.
+[  **IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView)를 작성하여 전체 화면 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow)를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다. [DirectX 11 및 UWP로 간단한 Direct3D 9 앱 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습의 3부.
 
 ## <a name="create-a-window"></a>창 만들기
 
 
 Direct3D 9 뷰포트를 사용하여 바탕 화면 창을 설정하려면 데스크톱 앱에 대한 기존의 앱 프레임 워크를 구현해야 했습니다. HWND를 만들고, 창 크기를 설정하고, 창 처리 콜백을 제공하고, 이 창이 표시되게 하는 등의 작업을 수행해야 했습니다.
 
-UWP 환경에는 훨씬 간단한 시스템이 있습니다. 기존의 창을 설정하는 대신 DirectX를 사용하는 Microsoft Store 게임은 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 구현합니다. 앱 컨테이너 내 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)에서 직접 실행하도록 DirectX 앱 및 게임에 대한 이 인터페이스가 존재합니다.
+UWP 환경에는 훨씬 간단한 시스템이 있습니다. 기존의 창을 설정하는 대신 DirectX를 사용하는 Microsoft Store 게임은 [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView)를 구현합니다. 앱 컨테이너 내 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow)에서 직접 실행하도록 DirectX 앱 및 게임에 대한 이 인터페이스가 존재합니다.
 
-> **참고**    Windows 원본 응용 프로그램 개체와 같은 리소스에 대 한 관리 되는 포인터를 제공 하며 [ **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)합니다. 참조 [**개체 연산자 (^)에 대 한 핸들**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx합니다.
+> **참고**    Windows 원본 응용 프로그램 개체와 같은 리소스에 대 한 관리 되는 포인터를 제공 하며 [ **CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow)합니다. 참조 [**개체 연산자 (^)에 대 한 핸들**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx합니다.
 
  
 
-"Main" 클래스에서 상속 해야 [ **IFrameworkView** ](https://msdn.microsoft.com/library/windows/apps/hh700478) 다섯 가지 구현 **IFrameworkView** 메서드: [**초기화**](https://msdn.microsoft.com/library/windows/apps/hh700495), [ **SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [ **부하**](https://msdn.microsoft.com/library/windows/apps/hh700501)하십시오 [ **실행** ](https://msdn.microsoft.com/library/windows/apps/hh700505), 및 [ **초기화**](https://msdn.microsoft.com/library/windows/apps/hh700523)합니다. (기본적으로) 게임에 있는 위치인 **IFrameworkView**를 만들 뿐만 아니라, **IFrameworkView**의 인스턴스를 만드는 팩터리 클래스를 구현해야 합니다. 게임에는 여전히 **main()** 이라는 메서드가 있지만, 기본 클래스가 수행할 수 있는 모든 것은 팩터리를 사용하여 **IFrameworkView** 인스턴스를 만드는 것입니다.
+"Main" 클래스에서 상속 해야 [ **IFrameworkView** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) 다섯 가지 구현 **IFrameworkView** 메서드: [**초기화**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.initialize), [ **SetWindow**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.setwindow), [ **부하**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.load)하십시오 [ **실행** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run), 및 [ **초기화**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.uninitialize)합니다. (기본적으로) 게임에 있는 위치인 **IFrameworkView**를 만들 뿐만 아니라, **IFrameworkView**의 인스턴스를 만드는 팩터리 클래스를 구현해야 합니다. 게임에는 여전히 **main()** 이라는 메서드가 있지만, 기본 클래스가 수행할 수 있는 모든 것은 팩터리를 사용하여 **IFrameworkView** 인스턴스를 만드는 것입니다.
 
 Main 함수
 
@@ -103,9 +103,9 @@ while(WM_QUIT != msg.message)
 
 게임 루프는 비슷하지만 UWP 버전의 해당 게임에서 더 간편합니다.
 
-게임이 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) 클래스 내에서 작동하기 때문에 게임 루프가 [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드(**main()** 대신)에서 이동합니다.
+게임이 [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) 클래스 내에서 작동하기 때문에 게임 루프가 [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run) 메서드(**main()** 대신)에서 이동합니다.
 
-메시지 처리 프레임워크를 구현하고 [**PeekMessage**](https://msdn.microsoft.com/library/windows/desktop/ms644943)를 호출하는 대신 앱 창의 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)에 내장된 [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) 메서드를 호출할 수 있습니다. 게임 루프가 메시지를 분기하고 처리할 필요가 없습니다. **ProcessEvents**를 호출하고 진행하기만 하면 됩니다.
+메시지 처리 프레임워크를 구현하고 [**PeekMessage**](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-peekmessagea)를 호출하는 대신 앱 창의 [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher)에 내장된 [**ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) 메서드를 호출할 수 있습니다. 게임 루프가 메시지를 분기하고 처리할 필요가 없습니다. **ProcessEvents**를 호출하고 진행하기만 하면 됩니다.
 
 Direct3D 11 Microsoft Store 게임의 게임 루프
 

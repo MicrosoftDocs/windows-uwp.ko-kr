@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: WNS, windows 10, uwp, windows 알림 서비스, 알림, windows, 방화벽 문제 해결, IP, 트래픽, enterprise, 네트워크, 공용 IP 주소, FQDN, VIP, IPv4
 ms.localizationpriority: medium
-ms.openlocfilehash: 466463bfc984707af4cb30618f9cbfa47d78703c
-ms.sourcegitcommit: fd7d358aad3a5b7112f5a587bb6ea86805dc8a4d
+ms.openlocfilehash: 9ed4ad6ed828abda9d487ef96beca9b655c92421
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976253"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366676"
 ---
 # <a name="allowing-windows-notification-traffic-through-enterprise-firewalls"></a>엔터프라이즈 방화벽을 통해 Windows 알림 트래픽을 허용
 
@@ -78,10 +78,10 @@ MPNS 레거시 알림 서비스를 사용 하는 경우 IP 주소 범위를 허�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [빠른 시작: 푸시 알림 보내기](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)
-* [요청, 생성 및 알림 채널을 저장 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh465412)
-* [응용 프로그램을 실행 하는 것에 대 한 알림을 차단 하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/jj709907.aspx)
-* [WNS와 함께 Windows 푸시 알림 서비스 ()를 인증 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh465407)
-* [푸시 알림 서비스 요청 및 응답 헤더](https://msdn.microsoft.com/library/windows/apps/hh465435)
-* [지침 및 푸시 알림에 대 한 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh761462)
+* [빠른 시작: 푸시 알림 보내기](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
+* [요청, 생성 및 알림 채널을 저장 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
+* [응용 프로그램을 실행 하는 것에 대 한 알림을 차단 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
+* [WNS와 함께 Windows 푸시 알림 서비스 ()를 인증 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [푸시 알림 서비스 요청 및 응답 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
+* [지침 및 푸시 알림에 대 한 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
  

@@ -10,31 +10,31 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 1420b41ef48123e302b546c45669a75545927d89
-ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.openlocfilehash: 61edeaae7006d1ed2dd8b77c20c2b6b611c8687a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240051"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366256"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Out-of-process 백그라운드 작업 만들기 및 등록
 
-**중요 API**
+**중요 한 Api**
 
--   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
--   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
--   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
+-   [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+-   [**BackgroundTaskCompletedEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcompletedeventhandler)
 
 백그라운드 작업 클래스를 만든 다음 앱이 포그라운드에 없는 경우 실행하도록 등록합니다. 이 항목에서는 앱 프로세스가 아닌 별도 프로세스에서 실행되는 백그라운드 작업을 만들고 등록하는 방법을 보여 줍니다. 포그라운드 응용 프로그램에서 직접 백그라운드 작업을 수행하려면 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요.
 
 > [!NOTE]
-> 백그라운드 작업을 사용하여 백그라운드에서 미디어를 재생하는 경우 이 작업을 훨씬 용이하게 하는 Windows 10 버전 1607의 향상된 기능에 대한 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
+> 백그라운드 작업을 사용하여 백그라운드에서 미디어를 재생하는 경우 이 작업을 훨씬 용이하게 하는 Windows 10 버전 1607의 향상된 기능에 대한 자세한 내용은 [백그라운드에서 미디어 재생](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
 
 ## <a name="create-the-background-task-class"></a>백그라운드 작업 클래스 만들기
 
-[  **IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) 인터페이스를 구현하는 클래스를 작성하여 백그라운드로 코드를 실행할 수 있습니다. 이 코드는 특정 이벤트를 사용 하 여 예를 들어 트리거될 때 실행 됩니다 [ **SystemTrigger** ](https://msdn.microsoft.com/library/windows/apps/br224839) 하거나 [ **MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517)합니다.
+[  **IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 인터페이스를 구현하는 클래스를 작성하여 백그라운드로 코드를 실행할 수 있습니다. 이 코드는 특정 이벤트를 사용 하 여 예를 들어 트리거될 때 실행 됩니다 [ **SystemTrigger** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 하거나 [ **MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger)합니다.
 
-다음 단계에서는 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) 인터페이스를 구현하는 새 클래스를 작성하는 방법을 보여 줍니다.
+다음 단계에서는 [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 인터페이스를 구현하는 새 클래스를 작성하는 방법을 보여 줍니다.
 
 1.  백그라운드 작업에 대한 새 프로젝트를 만들고 솔루션에 추가합니다. 이렇게 하려면 마우스 오른쪽 단추로 클릭에서 솔루션 노드를 **솔루션 탐색기** 선택한 **추가** \> **새 프로젝트**합니다. 선택한 합니다 **Windows 런타임 구성 요소** 형식 프로젝트에서 프로젝트 이름을 하 고, 확인을 클릭 합니다.
 2.  UWP(유니버설 Windows 플랫폼) 앱 프로젝트에서 백그라운드 작업 프로젝트를 참조합니다. 에 대 한는 C# 또는 C++ 앱을 앱 프로젝트를 마우스 오른쪽 단추로 클릭 **참조가** 선택한 **새 참조 추가**. **솔루션** 아래에서 **프로젝트**를 선택하고 백그라운드 작업 프로젝트의 이름을 선택한 후 **확인**을 클릭합니다.
@@ -202,7 +202,7 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 > [!NOTE]
 > C#에서는 **async/await** 키워드를 사용하여 백그라운드 작업의 비동기 메서드를 호출할 수 있습니다. C++/CX, 비슷한 결과 작업 체인을 사용 하 여 수행할 수 있습니다.
 
-비동기 패턴에 대한 자세한 내용은 [비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187335)을 참조하세요. deferral을 사용하여 백그라운드 작업이 일찍 중지되지 않도록 하는 방법의 추가 예제를 보려면 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)을 참조하세요.
+비동기 패턴에 대한 자세한 내용은 [비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps)을 참조하세요. deferral을 사용하여 백그라운드 작업이 일찍 중지되지 않도록 하는 방법의 추가 예제를 보려면 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)을 참조하세요.
 
 다음 단계는 앱 클래스 중 하나(예제: MainPage.xaml.cs)에서만 완료합니다.
 
@@ -211,7 +211,7 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 
 ## <a name="register-the-background-task-to-run"></a>실행할 백그라운드 작업 등록
 
-1.  백그라운드 작업을 반복 하 여 이미 등록 되어 있는지 여부를 확인 합니다 [ **BackgroundTaskRegistration.AllTasks** ](https://msdn.microsoft.com/library/windows/apps/br224787) 속성입니다. 이 단계는 중요합니다. 앱이 기존 백그라운드 작업 등록을 확인하지 않는 경우 작업을 여러 번 등록하기 쉬우므로 성능에 문제가 발생하거나 작업이 완료되기 전에 작업의 가용 CPU 시간을 모두 사용할 수 있습니다.
+1.  백그라운드 작업을 반복 하 여 이미 등록 되어 있는지 여부를 확인 합니다 [ **BackgroundTaskRegistration.AllTasks** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.alltasks) 속성입니다. 이 단계는 중요합니다. 앱이 기존 백그라운드 작업 등록을 확인하지 않는 경우 작업을 여러 번 등록하기 쉬우므로 성능에 문제가 발생하거나 작업이 완료되기 전에 작업의 가용 CPU 시간을 모두 사용할 수 있습니다.
 
 다음 예제에서는 반복에 **AllTasks** 속성 플래그 변수로 작업이 이미 등록 되어 있으면 true로 설정 합니다.
 
@@ -268,9 +268,9 @@ while (hascur)
 }
 ```
 
-2.  백그라운드 작업이 아직 등록되지 않은 경우 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)를 사용하여 백그라운드 작업의 인스턴스를 만듭니다. 작업 진입점이 네임스페이스가 앞에 오는 백그라운드 작업 클래스의 이름이어야 합니다.
+2.  백그라운드 작업이 아직 등록되지 않은 경우 [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)를 사용하여 백그라운드 작업의 인스턴스를 만듭니다. 작업 진입점이 네임스페이스가 앞에 오는 백그라운드 작업 클래스의 이름이어야 합니다.
 
-백그라운드 작업 트리거는 백그라운드 작업이 실행되는 시간을 제어합니다. 가능한 트리거 목록은 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839)를 참조하세요.
+백그라운드 작업 트리거는 백그라운드 작업이 실행되는 시간을 제어합니다. 가능한 트리거 목록은 [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType)를 참조하세요.
 
 예를 들어이 코드 새 백그라운드 작업을 만들고 때 실행 하도록 설정 합니다 **TimeZoneChanged** 트리거가 발생 합니다.
 
@@ -302,7 +302,7 @@ builder->TaskEntryPoint = "Tasks.ExampleBackgroundTask";
 builder->SetTrigger(ref new SystemTrigger(SystemTriggerType::TimeZoneChange, false));
 ```
 
-3.  트리거 이벤트가 발생한 후 작업이 실행될 시간을 제어하는 조건을 추가할 수도 있습니다(옵션). 예를 들어 사용자가 있을 때까지 작업이 실행되지 않게 하려면 **UserPresent** 조건을 사용합니다. 가능한 조건 목록은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
+3.  트리거 이벤트가 발생한 후 작업이 실행될 시간을 제어하는 조건을 추가할 수도 있습니다(옵션). 예를 들어 사용자가 있을 때까지 작업이 실행되지 않게 하려면 **UserPresent** 조건을 사용합니다. 가능한 조건 목록은 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)을 참조하세요.
 
 다음 샘플 코드에서는 사용자가 있어야 하는 조건을 할당합니다.
 
@@ -319,7 +319,7 @@ builder.AddCondition(Windows::ApplicationModel::Background::SystemCondition{ Win
 builder->AddCondition(ref new SystemCondition(SystemConditionType::UserPresent));
 ```
 
-4.  [  **BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체에 대해 Register 메서드를 호출하여 백그라운드 작업을 등록합니다. [  **BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) 결과를 다음 단계에서 사용할 수 있도록 저장합니다.
+4.  [  **BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 개체에 대해 Register 메서드를 호출하여 백그라운드 작업을 등록합니다. [  **BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) 결과를 다음 단계에서 사용할 수 있도록 저장합니다.
 
 다음 코드는 백그라운드 작업을 등록하고 결과를 저장합니다.
 
@@ -336,15 +336,15 @@ BackgroundTaskRegistration^ task = builder->Register();
 ```
 
 > [!NOTE]
-> 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다.
+> 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 호출해야 합니다.
 
-업데이트를 릴리스한 후에 유니버설 Windows 앱이 계속 제대로 실행되도록 하려면 **ServicingComplete**([SystemTriggerType](https://msdn.microsoft.com/library/windows/apps/br224839) 참조) 트리거를 사용하여 앱의 데이터베이스를 마이그레이션하고 백그라운드 작업을 등록하는 등 사후 업데이트 구성 변경을 수행합니다. 이때 이전 버전의 앱과 관련된 백그라운드 작업의 등록을 취소([**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 참조)하고 새로운 버전의 앱에 대한 백그라운드 작업을 등록([**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) 참조)하는 것이 가장 좋습니다.
+업데이트를 릴리스한 후에 유니버설 Windows 앱이 계속 제대로 실행되도록 하려면 **ServicingComplete**([SystemTriggerType](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 참조) 트리거를 사용하여 앱의 데이터베이스를 마이그레이션하고 백그라운드 작업을 등록하는 등 사후 업데이트 구성 변경을 수행합니다. 이때 이전 버전의 앱과 관련된 백그라운드 작업의 등록을 취소([**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) 참조)하고 새로운 버전의 앱에 대한 백그라운드 작업을 등록([**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) 참조)하는 것이 가장 좋습니다.
 
 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
 
 ## <a name="handle-background-task-completion-using-event-handlers"></a>이벤트 처리기를 사용하여 백그라운드 작업 완료 처리
 
-앱에서 백그라운드 작업의 결과를 가져올 수 있도록 [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)를 사용하여 메서드를 등록해야 합니다. 앱을 시작 하거나 다시 시작할 때 앱이 포그라운드에서 된 마지막 시간 이후 백그라운드 태스크를 완료 하는 경우 표시 된 메서드 호출 됩니다. 앱이 포그라운드에서 현재 실행 중인 경우에는 백그라운드 작업이 완료되면 OnCompleted 메서드가 즉시 호출됩니다.
+앱에서 백그라운드 작업의 결과를 가져올 수 있도록 [**BackgroundTaskCompletedEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcompletedeventhandler)를 사용하여 메서드를 등록해야 합니다. 앱을 시작 하거나 다시 시작할 때 앱이 포그라운드에서 된 마지막 시간 이후 백그라운드 태스크를 완료 하는 경우 표시 된 메서드 호출 됩니다. 앱이 포그라운드에서 현재 실행 중인 경우에는 백그라운드 작업이 완료되면 OnCompleted 메서드가 즉시 호출됩니다.
 
 1.  백그라운드 작업 완료를 처리하는 OnCompleted 메서드를 씁니다. 예를 들어 백그라운드 작업의 결과로 UI가 업데이트될 수 있습니다. 이 예제에서는 *args* 매개 변수를 사용하지 않지만 여기에 표시된 메서드 공간은 OnCompleted 이벤트 처리기 메서드에 필요합니다.
 
@@ -395,9 +395,9 @@ void MainPage::OnCompleted(BackgroundTaskRegistration^ task, BackgroundTaskCompl
 > [!NOTE]
 > UI 스레드가 중지되는 것을 방지하려면 UI 업데이트를 비동기적으로 수행해야 합니다. 예제를 보려면 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)의 UpdateUI 메서드를 참조하세요.
 
-2.  백그라운드 작업을 등록한 위치로 돌아갑니다. 해당 코드 줄 뒤에 새 [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781) 개체를 추가합니다. OnCompleted 메서드를 **BackgroundTaskCompletedEventHandler** 생성자에 대한 매개 변수로 제공합니다.
+2.  백그라운드 작업을 등록한 위치로 돌아갑니다. 해당 코드 줄 뒤에 새 [**BackgroundTaskCompletedEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcompletedeventhandler) 개체를 추가합니다. OnCompleted 메서드를 **BackgroundTaskCompletedEventHandler** 생성자에 대한 매개 변수로 제공합니다.
 
-다음 샘플 코드에서는 [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)를 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)에 추가합니다.
+다음 샘플 코드에서는 [**BackgroundTaskCompletedEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcompletedeventhandler)를 [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration)에 추가합니다.
 
 ```csharp
 task.Completed += new BackgroundTaskCompletedEventHandler(OnCompleted);
@@ -455,14 +455,14 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
-* [Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 변환](convert-out-of-process-background-task.md)  
+* [Out-of-process-백그라운드 작업을 처리 중인 백그라운드 태스크로 변환](convert-out-of-process-background-task.md)  
 
 **백그라운드 작업 지침**
 
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)
 
 **백그라운드 작업 API 참조**
 
-* [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
+* [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)

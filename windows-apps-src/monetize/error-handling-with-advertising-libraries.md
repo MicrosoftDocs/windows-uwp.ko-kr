@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, javascript, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: d0e2e1c019497fc22e8d922ba5f0a02a30034b65
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e7b98dc583b8f7d77aa582b4c69b87c726a83129
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617758"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371808"
 ---
 # <a name="handle-ad-errors"></a>광고 오류 처리
 
@@ -67,9 +67,9 @@ JavaScript 앱에서 **ErrorOccur** 오류를 처리하려면
 </div>
 ```
 
-오류 처리 함수는 선언적이며 [markSupportedForProcessing](https://msdn.microsoft.com/library/windows/apps/Hh967819.aspx) 함수로 묶어야 합니다.
+오류 처리 함수는 선언적이며 [markSupportedForProcessing](https://docs.microsoft.com/previous-versions/windows/apps/hh967819(v=win.10)) 함수로 묶어야 합니다.
 
-오류 처리기는 오류가 발생할 때 JavaScript 오류 개체를 검색합니다. Error 개체는 오류 처리기에 두 개의 인수를 제공합니다. 자세한 내용은 [비동기 Windows 런타임 메서드의 특정 오류 속성](https://msdn.microsoft.com/library/windows/apps/hh994690.aspx)을 참조하세요.
+오류 처리기는 오류가 발생할 때 JavaScript 오류 개체를 검색합니다. Error 개체는 오류 처리기에 두 개의 인수를 제공합니다. 자세한 내용은 [비동기 Windows 런타임 메서드의 특정 오류 속성](https://docs.microsoft.com/scripting/jswinrt/special-error-properties-from-asynchronous-windows-runtime-methods)을 참조하세요.
 
 다음은 **onErrorOccurred** 이벤트를 처리하는 오류 처리 함수 **errorLogger** 예제입니다.
 

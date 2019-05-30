@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: df03c6f10f106868213fe812b2f303d7675c567b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6850a5d2458c29c81bacc195106af697b37dd23b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626898"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359899"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -41,7 +41,7 @@ RAM
 -   64비트
 -   Pro 버전 이상
 
-BIOS 요구 사항을 확인하려면 [Windows Phone 8용 에뮬레이터에 Hyper-V를 사용하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/jj863509.aspx)을 참조하세요.
+BIOS 요구 사항을 확인하려면 [Windows Phone 8용 에뮬레이터에 Hyper-V를 사용하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/jj863509(v=vs.105))을 참조하세요.
 
 RAM 및 운영 체제 요구 사항을 확인하려면 제어판에서 **시스템 및 보안**을 선택한 다음 **시스템**을 선택합니다.
 
@@ -96,7 +96,7 @@ Windows 10 Mobile K용 Microsoft 에뮬레이터를 제거할 때 에뮬레이�
 
 -   **응용 프로그램 수명 주기 및 삭제 표시**. 프로젝트 속성의 **디버그** 페이지에서 **디버깅 중 비활성화되면 삭제 표시** 옵션 값을 변경하여 앱이 비활성화되거나 삭제 표시될 때 앱의 동작을 테스트합니다.
 
--   **로컬 폴더 저장소(이전에는 격리된 저장소라고도 함)**. 격리된 저장소의 데이터는 에뮬레이터가 실행 중인 동안에는 지속되지만 에뮬레이터가 닫히고 나면 손실됩니다.
+-   **로컬 폴더 저장소(이전에는 격리된 저장소라고도 함)** . 격리된 저장소의 데이터는 에뮬레이터가 실행 중인 동안에는 지속되지만 에뮬레이터가 닫히고 나면 손실됩니다.
 
 -   **마이크**. 호스트 컴퓨터에서는 마이크가 필요하며 마이크를 사용합니다.
 
@@ -148,14 +148,14 @@ Windows PC에서 실제 마우스 또는 트랙 패드를 사용하고 에뮬레
 --------------------- | ------------------------- | ----------------------------- | -----
 F1 | WIN + ESC | 뒤로 | 길게 누르기가 예상대로 작동합니다.
 F2 | WIN + F2 | 시작 | 길게 누르기가 예상대로 작동합니다.
-F3 | WIN + F3 | 검색 |  
+F3 | WIN + F3 | SEARCH |  
 F4 | F4(변경 없음) | 로컬 컴퓨터 키보드를 사용할지 또는 사용하지 않을지 전환합니다. | 
 F6 | WIN + F6 | 카메라 절반 | 절반만 누른 전용 카메라 버튼입니다.
 F7 | WIN + F7 | 카메라 전체 | 전용 카메라 버튼입니다.
 F9 | WIN + F9 | 음량 크게 | 
 F10 | WIN + F10 | 음량 작게 | 
-F12 | WIN + F12 | 전원 | F12 키를 두 번 눌러 잠금 화면을 사용하도록 설정합니다. 길게 누르기가 예상대로 작동합니다.
-ESC 키 | WIN + ESC | 뒤로 | 길게 누르기가 예상대로 작동합니다.
+F12 | WIN + F12 | POWER | F12 키를 두 번 눌러 잠금 화면을 사용하도록 설정합니다. 길게 누르기가 예상대로 작동합니다.
+Esc 키 | WIN + ESC | 뒤로 | 길게 누르기가 예상대로 작동합니다.
  
 
 
@@ -215,7 +215,7 @@ NFC 탭은 다음의 세 가지 모드를 지원합니다.
 -   NDEF:URI
 -   NDEF:wkt.U
 
-파일에서 **페이로드** 창을 편집하거나 제공하여 이러한 메시지를 만들 수 있습니다. 이러한 유형 및 그 사용 방법에 대한 자세한 내용은 [**ProximityDevice.PublishBinaryMessage**](https://msdn.microsoft.com/library/windows/apps/Hh701129) 참조 페이지의 설명 섹션을 참조하세요.
+파일에서 **페이로드** 창을 편집하거나 제공하여 이러한 메시지를 만들 수 있습니다. 이러한 유형 및 그 사용 방법에 대한 자세한 내용은 [**ProximityDevice.PublishBinaryMessage**](https://docs.microsoft.com/uwp/api/windows.networking.proximity.proximitydevice.publishbinarymessage) 참조 페이지의 설명 섹션을 참조하세요.
 
 WDK(Windows 8 드라이버 키트)에는 Windows Phone 8 에뮬레이터와 동일한 프로토콜을 표시하는 드라이버 샘플이 포함되어 있습니다. Windows 8 디바이스에 DDK를 다운로드하고 해당 샘플 드라이버를 빌드하고 설치한 후 Windows 8 디바이스의 IP 주소 또는 호스트 이름을 디바이스 목록에 추가하고 다른 Windows 8 디바이스 또는 Windows Phone 8 에뮬레이터와 함께 탭해야 합니다.
 
@@ -268,7 +268,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 ### <a name="smart-card-reader-mode"></a>스마트 카드 판독기 모드
 
-에뮬레이터를 호스트 컴퓨터의 스마트 카드 판독기 디바이스에 연결할 수 있습니다. 이렇게 스마트 카드를 삽입하거나 탭하면 휴대폰 응용 프로그램에 표시되고 [**Windows.Devices.SmartCards.SmartCardConnection**](https://msdn.microsoft.com/library/windows/apps/Dn608002) 클래스를 사용하여 APDU와 통신할 수 있습니다. 이렇게 하려면 호환되는 스마트 카드 판독기 디바이스를 컴퓨터에 연결해야 합니다. USB 스마트 카드 판독기(NFC/비접촉 및 삽입/접촉)는 폭넓게 사용할 수 있습니다. 에뮬레이터가 연결된 스마트 카드 판독기를 작동하려면 먼저 **카드 판독기** 모드를 선택하여 호스트 시스템에 연결된 호환되는 모든 스마트 카드 판독기를 나열하는 드롭다운 상자를 표시한 다음 드롭다운 메뉴에서 연결할 스마트 카드 판독기 디바이스를 선택합니다.
+에뮬레이터를 호스트 컴퓨터의 스마트 카드 판독기 디바이스에 연결할 수 있습니다. 이렇게 스마트 카드를 삽입하거나 탭하면 휴대폰 응용 프로그램에 표시되고 [**Windows.Devices.SmartCards.SmartCardConnection**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardConnection) 클래스를 사용하여 APDU와 통신할 수 있습니다. 이렇게 하려면 호환되는 스마트 카드 판독기 디바이스를 컴퓨터에 연결해야 합니다. USB 스마트 카드 판독기(NFC/비접촉 및 삽입/접촉)는 폭넓게 사용할 수 있습니다. 에뮬레이터가 연결된 스마트 카드 판독기를 작동하려면 먼저 **카드 판독기** 모드를 선택하여 호스트 시스템에 연결된 호환되는 모든 스마트 카드 판독기를 나열하는 드롭다운 상자를 표시한 다음 드롭다운 메뉴에서 연결할 스마트 카드 판독기 디바이스를 선택합니다.
 
 일부 NFC 지원 스마트 카드 판독기는 몇 가지 NFC 카드 유형을 지원하지 않으며 일부는 표준 PC/SC 저장소 카드 APDU 명령을 지원하지 않습니다.
 
@@ -319,7 +319,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 여러 다른 정확도 프로필을 사용하여 서로 다른 속도로 한 위치에서 다른 위치로의 이동을 시뮬레이트하는 동안 앱을 테스트할 수 있습니다. 위치 시뮬레이터를 사용하면 위치 API 사용의 변화를 알 수 있으므로 사용자 환경이 향상됩니다. 예를 들어, 이 도구를 사용하면 여러 다른 시나리오에서 성공적으로 지오펜스를 검색하기 위해 크기 또는 체류 시간과 같은 지오펜스 매개 변수를 조정해야 하는지를 알 수 있습니다.
 
-**위치** 탭은 세 가지 모드를 지원합니다. 모든 모드에서 에뮬레이터가 새 위치를 받으면 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/BR225540) 이벤트를 트리거하거나 위치 인식 앱에서 [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/Hh973536) 호출에 응답하는 데 이 위치를 사용할 수 있습니다.
+**위치** 탭은 세 가지 모드를 지원합니다. 모든 모드에서 에뮬레이터가 새 위치를 받으면 [**PositionChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.positionchanged) 이벤트를 트리거하거나 위치 인식 앱에서 [**GetGeopositionAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync) 호출에 응답하는 데 이 위치를 사용할 수 있습니다.
 
 -   **핀** 모드에서 지도에 고정핀을 둡니다. **모든 지점 재생**을 클릭하면 위치 시뮬레이터가 **핀당 초** 텍스트 상자에 지정된 간격으로 각 핀의 위치를 에뮬레이터에 차례대로 보냅니다.
 
@@ -335,7 +335,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 -   현재 데이터 지점 집합을 XML 파일에 저장하고 나중에 파일을 다시 로드하여 동일한 데이터 지점을 다시 사용할 수 있습니다.
 
--   **고정핀 모드를 켜거나 끄고****모든 지점을 지울 수** 있습니다.
+-   **고정핀 모드를 켜거나 끄고** **모든 지점을 지울 수** 있습니다.
 
 핀 및 경로 모드에서 다음도 수행할 수 있습니다.
 
@@ -362,7 +362,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 | 프로필 | 시간당 속도               | 초당 속도 | 설명 | 
 |---------|------------------------------|------------------|-------------|
-| 속도 제한 | 경로의 속도 제한 | 해당 없음   | 게시된 제한 속도로 경로를 횡단합니다. |
+| 속도 제한 | 경로의 속도 제한 | 해당 사항 없음   | 게시된 제한 속도로 경로를 횡단합니다. |
 | 보행     | 5km/h                   | 1.39 m           | 5km/h의 자연스러운 보행 속도로 경로를 횡단합니다. |
 | 자전거      | 25 km/h                  | 6.94 m           | 25km/h의 자연스러운 자전거 속도로 경로를 횡단합니다. |
 | 빠름        |                          |                  |게시된 제한 속도보다 빠르게 경로를 횡단합니다. | 
@@ -563,10 +563,10 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 | 기능            | Windows Phone 8.0 카메라 | Windows Phone 8.1 카메라  |
 |--------------------|--------------------------|---------------------------|
-| 해상도         | 640 x 480(VGA)          | 640 x 480(VGA) 이상 |
+| 해결 방법         | 640 x 480(VGA)          | 640 x 480(VGA) 이상 |
 | 자동 초점          | 예                      | 예                       |
-| Flash              | 아니오                       | 예                       |
-| Zoom               | 2x(디지털 또는 광학)  | 2x(디지털 또는 광학)   |
+| Flash              | 아니요                       | 예                       |
+| 확대/축소               | 2x(디지털 또는 광학)  | 2x(디지털 또는 광학)   |
 | 비디오 해상도   | 640 x 480(VGA)          | 640 x 480(VGA) 이상 |
 | 미리 보기 해상도 | 640 x 480(VGA)          | 640 x 480(VGA)           |
 
@@ -660,7 +660,7 @@ Windows 10 도구를 사용하여 작업을 시작할 때 해답을 찾아 문�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [에뮬레이터에서 Windows Phone 앱 실행](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
+* [에뮬레이터에서 Windows Phone 앱 실행](https://docs.microsoft.com/visualstudio/debugger/run-windows-phone-apps-in-the-emulator?view=vs-2015)
 * [Windows 및 Windows Phone SDK 아카이브](https://dev.windows.com/downloads/sdk-archive)
  
 

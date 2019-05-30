@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cae075b0d71925eb35ac2362aef291994b29801
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 9544988837d44f42d963b268a2ce3d37cce83952
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244409"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364104"
 ---
 # <a name="xaml-theme-resources"></a>XAML 테마 리소스
 
@@ -42,13 +42,13 @@ Windows 런타임은 런타임 조회를 위해 이러한 물리적 파일을 �
 
 자체적으로 사용자 지정 테마 리소스를 정의하여 사용할 때 이러한 지침을 따릅니다.
 
-- "고대비" 사전 외에 "밝게" 및 "어둡게" 둘 다에 대해서도 테마 사전을 지정하세요. "기본값"을 키로 사용하여 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)를 만들 수도 있지만 명시적으로 "밝게", "어둡게" 및 "고대비"를 대신 사용하는 것이 좋습니다.
+- "고대비" 사전 외에 "밝게" 및 "어둡게" 둘 다에 대해서도 테마 사전을 지정하세요. "기본값"을 키로 사용하여 [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)를 만들 수도 있지만 명시적으로 "밝게", "어둡게" 및 "고대비"를 대신 사용하는 것이 좋습니다.
 
 - 사용 된 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md) 에서: 스타일, Setter, 템플릿, 속성 setter 및 애니메이션을 제어 합니다.
 
-- [ThemeDictionaries](https://msdn.microsoft.com/library/windows/apps/br208807) 내의 리소스 정의에는 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md)을 사용하지 마세요. 대신 [{StaticResource} 태그 확장](../../xaml-platform/staticresource-markup-extension.md)을 사용하세요.
+- [ThemeDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries) 내의 리소스 정의에는 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md)을 사용하지 마세요. 대신 [{StaticResource} 태그 확장](../../xaml-platform/staticresource-markup-extension.md)을 사용하세요.
 
-    예외: 사용할 수는 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md) 하 여 앱 테마를 알 수 없는 참조 리소스에 사용자 [ThemeDictionaries](https://msdn.microsoft.com/library/windows/apps/br208807)합니다. 이러한 리소스의 예로는 `SystemAccentColor`와 같은 테마 컬러 리소스 또는 일반적으로 "SystemColor"로 접두사가 지정된 시스템 색 리소스(예: `SystemColorButtonFaceColor`)가 있습니다.
+    예외: 사용할 수는 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md) 하 여 앱 테마를 알 수 없는 참조 리소스에 사용자 [ThemeDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries)합니다. 이러한 리소스의 예로는 `SystemAccentColor`와 같은 테마 컬러 리소스 또는 일반적으로 "SystemColor"로 접두사가 지정된 시스템 색 리소스(예: `SystemColorButtonFaceColor`)가 있습니다.
 
 > [!CAUTION]
 > 다음 지침을 따르지 않으면 앱에서 테마와 관련된 예기치 않은 동작이 발생할 수 있습니다. 자세한 내용은 [테마 리소스 문제 해결](#troubleshooting-theme-resources) 섹션을 참조하세요.
@@ -155,7 +155,7 @@ XAML 프레임워크에서 제공하는 리소스 집합 외에, Windows 시스�
 |-------------------------------|--------------------------------|--------------------------|-----------------|
 | SystemColorButtonFaceColor    | **단추 텍스트**(배경)   | 배경               | \#FFF0F0F0      |
 | SystemColorButtonTextColor    | **단추 텍스트**(전경)   | 전경               | \#FF000000      |
-| SystemColorGrayTextColor      | **사용 불가 텍스트**              | 사용 안 함                 | \#FF6D6D6D      |
+| SystemColorGrayTextColor      | **비활성된 텍스트**              | 사용 안 함                 | \#FF6D6D6D      |
 | SystemColorHighlightColor     | **선택한 텍스트**(배경) | Highlight                | \#FF3399FF      |
 | SystemColorHighlightTextColor | **선택한 텍스트**(전경) | HighlightAlt             | \#FFFFFFFF      |
 | SystemColorHotlightColor      | **하이퍼링크**                 | Hyperlink                | \#FF0066CC      |
@@ -166,7 +166,7 @@ Windows는 다양한 고대비 테마를 제공하고 다음과 같이 사용자
 
 ![Windows 고대비 설정 UI](images/high-contrast-settings.png)
 
-고대비 테마 지원에 대한 자세한 내용은 [고대비 테마](https://msdn.microsoft.com/library/windows/apps/mt244346)를 참조하세요.
+고대비 테마 지원에 대한 자세한 내용은 [고대비 테마](https://docs.microsoft.com/windows/uwp/accessibility/high-contrast-themes)를 참조하세요.
 
 ### <a name="system-accent-color"></a>시스템 테마 컬러
 
@@ -206,11 +206,11 @@ For many examples of how the brushes are used in the XAML control templates, see
 
 ## <a name="the-xaml-type-ramp"></a>XAML 유형 램프
 
-themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) 또는 [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565)에 적용할 수 있는 [Style](https://msdn.microsoft.com/library/windows/apps/br208849)을 정의하는 몇 가지 리소스를 정의합니다. 이것은 기본 암시적 스타일이 아닙니다. [글꼴에 대한 지침](../style/typography.md)에 지정된 *Windows 유형 램프*와 일치하는 XAML UI 정의를 좀 더 쉽게 만들 수 있도록 하기 위해 제공됩니다.
+themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 또는 [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock)에 적용할 수 있는 [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)을 정의하는 몇 가지 리소스를 정의합니다. 이것은 기본 암시적 스타일이 아닙니다. [글꼴에 대한 지침](../style/typography.md)에 지정된 *Windows 유형 램프*와 일치하는 XAML UI 정의를 좀 더 쉽게 만들 수 있도록 하기 위해 제공됩니다.
 
-이런 스타일은 전체 텍스트 컨테이너에 적용하려는 텍스트 특성과 관련됩니다. 텍스트의 일부에만 스타일을 적용하려는 경우에는 컨테이너 내부 텍스트 요소에, 예를 들어 [TextBlock.Inlines](https://msdn.microsoft.com/library/windows/apps/br209668)의 [Run](https://msdn.microsoft.com/library/windows/apps/br209959) 또는 [RichTextBlock.Blocks](https://msdn.microsoft.com/library/windows/apps/br244347)의 [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503)에 대해 특성을 설정합니다.
+이런 스타일은 전체 텍스트 컨테이너에 적용하려는 텍스트 특성과 관련됩니다. 텍스트의 일부에만 스타일을 적용하려는 경우에는 컨테이너 내부 텍스트 요소에, 예를 들어 [TextBlock.Inlines](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.inlines)의 [Run](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Run) 또는 [RichTextBlock.Blocks](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.blocks)의 [Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph)에 대해 특성을 설정합니다.
 
-스타일은 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)에 적용될 때 다음과 같이 표시됩니다.
+스타일은 [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)에 적용될 때 다음과 같이 표시됩니다.
 
 ![텍스트 블록 스타일](../style/images/type/text-block-type-ramp.svg)
 
@@ -228,9 +228,9 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 
 ### <a name="basetextblockstyle"></a>BaseTextBlockStyle
 
-**TargetType**: [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)
+**TargetType**: [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
-다른 모든 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) 컨테이너 스타일에 대한 일반 속성을 제공합니다.
+다른 모든 [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 컨테이너 스타일에 대한 일반 속성을 제공합니다.
 
 ```XAML
 <!-- Usage -->
@@ -338,9 +338,9 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 
 ### <a name="baserichtextblockstyle"></a>BaseRichTextBlockStyle
 
-**TargetType**: [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565)
+**TargetType**: [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock)
 
-다른 모든 [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) 컨테이너 스타일에 대한 일반 속성을 제공합니다.
+다른 모든 [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) 컨테이너 스타일에 대한 일반 속성을 제공합니다.
 
 ```XAML
 <!-- Usage -->
@@ -375,21 +375,21 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 </Style>
 ```
 
-**참고**:  합니다 [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) 스타일에는 모든 텍스트가 없는 진입 하는 스타일 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) 는 블록 기반 문서 개체에 대 한 모델 때문에 주로 **RichTextBlock** 있도록 쉽게 개별 텍스트 요소에서 특성을 설정 합니다. 또한 XAML 콘텐츠 속성을 사용하여 [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676)를 설정하면 스타일 지정할 텍스트 요소가 없어서 컨테이너의 스타일을 지정해야 하는 상황이 발생합니다. 이는 **RichTextBlock**의 경우 문제가 아닙니다. 왜냐하면 해당 텍스트 콘텐츠가 항상 페이지 머리글, 페이지 하위 머리글 및 비슷한 텍스트 램프 정의에 대해 XAML 스타일을 적용하는 [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503) 같은 특정 텍스트 요소여야 하기 때문입니다.
+**참고**:  합니다 [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) 스타일에는 모든 텍스트가 없는 진입 하는 스타일 [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 는 블록 기반 문서 개체에 대 한 모델 때문에 주로 **RichTextBlock** 있도록 쉽게 개별 텍스트 요소에서 특성을 설정 합니다. 또한 XAML 콘텐츠 속성을 사용하여 [TextBlock.Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text)를 설정하면 스타일 지정할 텍스트 요소가 없어서 컨테이너의 스타일을 지정해야 하는 상황이 발생합니다. 이는 **RichTextBlock**의 경우 문제가 아닙니다. 왜냐하면 해당 텍스트 콘텐츠가 항상 페이지 머리글, 페이지 하위 머리글 및 비슷한 텍스트 램프 정의에 대해 XAML 스타일을 적용하는 [Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph) 같은 특정 텍스트 요소여야 하기 때문입니다.
 
 ## <a name="miscellaneous-named-styles"></a>기타 명명된 스타일
 
-기본 암시적 스타일과는 다르게 [Button](https://msdn.microsoft.com/library/windows/apps/br209265) 스타일을 지정하기 위해 적용할 수 있는 추가적인 키 입력 [Style](https://msdn.microsoft.com/library/windows/apps/br208849) 정의 집합이 있습니다.
+기본 암시적 스타일과는 다르게 [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 스타일을 지정하기 위해 적용할 수 있는 추가적인 키 입력 [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) 정의 집합이 있습니다.
 
 ### <a name="textblockbuttonstyle"></a>TextBlockButtonStyle
 
-**TargetType**: [ButtonBase](https://msdn.microsoft.com/library/windows/apps/br227736)
+**TargetType**: [ButtonBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase)
 
-작업을 수행하기 위해 클릭할 수 있는 텍스트를 표시해야 할 경우 이 스타일을 [Button](https://msdn.microsoft.com/library/windows/apps/br209265)에 적용합니다. 텍스트는 대화형으로 구분하기 위해 현재 테마 컬러를 사용하여 스타일이 지정되며, 텍스트에 잘 맞는 초점 사각형을 포함합니다. [HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/br242739)의 암시적 스타일과 달리 **TextBlockButtonStyle**에서는 텍스트에 밑줄을 표시하지 않습니다.
+작업을 수행하기 위해 클릭할 수 있는 텍스트를 표시해야 할 경우 이 스타일을 [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)에 적용합니다. 텍스트는 대화형으로 구분하기 위해 현재 테마 컬러를 사용하여 스타일이 지정되며, 텍스트에 잘 맞는 초점 사각형을 포함합니다. [HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)의 암시적 스타일과 달리 **TextBlockButtonStyle**에서는 텍스트에 밑줄을 표시하지 않습니다.
 
 이 템플릿은 또한 표현된 텍스트가 **SystemControlHyperlinkBaseMediumBrush**("PointerOver" 상태의 경우), **SystemControlHighlightBaseMediumLowBrush**("Pressed" 상태의 경우) 및 **SystemControlDisabledBaseLowBrush**("Disabled" 상태의 경우)를 사용하도록 스타일 지정합니다.
 
-다음은 **TextBlockButtonStyle** 리소스가 적용된 [Button](https://msdn.microsoft.com/library/windows/apps/br209265)입니다.
+다음은 **TextBlockButtonStyle** 리소스가 적용된 [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)입니다.
 
 ```XAML
 <Button Content="Clickable text" Style="{StaticResource TextBlockButtonStyle}"
@@ -402,11 +402,11 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 
 ### <a name="navigationbackbuttonnormalstyle"></a>NavigationBackButtonNormalStyle
 
-**TargetType**: [Button](https://msdn.microsoft.com/library/windows/apps/br209265)
+**TargetType**: [단추](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
 
-이 [Style](https://msdn.microsoft.com/library/windows/apps/br208849)은 탐색 앱을 위한 탐색 뒤로 단추가 될 수 있는 [Button](https://msdn.microsoft.com/library/windows/apps/br209265)용 전체 템플릿을 제공합니다. 기본 크기는 40 x 40 픽셀입니다. 스타일을 조정하기 위해 **Button**에 대해 [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height), [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width), [FontSize](https://msdn.microsoft.com/library/windows/apps/br209406) 및 다른 속성을 명시적으로 설정하거나 [BasedOn](https://msdn.microsoft.com/library/windows/apps/br208852)을 사용하여 파생된 스타일을 만들 수 있습니다.
+이 [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)은 탐색 앱을 위한 탐색 뒤로 단추가 될 수 있는 [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)용 전체 템플릿을 제공합니다. 기본 크기는 40 x 40 픽셀입니다. 스타일을 조정하기 위해 **Button**에 대해 [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height), [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width), [FontSize](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.fontsize) 및 다른 속성을 명시적으로 설정하거나 [BasedOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.basedon)을 사용하여 파생된 스타일을 만들 수 있습니다.
 
-다음은 **NavigationBackButtonNormalStyle** 리소스가 적용된 [Button](https://msdn.microsoft.com/library/windows/apps/br209265)입니다.
+다음은 **NavigationBackButtonNormalStyle** 리소스가 적용된 [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)입니다.
 
 ```XAML
 <Button Style="{StaticResource NavigationBackButtonNormalStyle}" />
@@ -418,11 +418,11 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 
 ### <a name="navigationbackbuttonsmallstyle"></a>NavigationBackButtonSmallStyle
 
-**TargetType**: [Button](https://msdn.microsoft.com/library/windows/apps/br209265)
+**TargetType**: [단추](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
 
-이 [Style](https://msdn.microsoft.com/library/windows/apps/br208849)은 탐색 앱을 위한 탐색 뒤로 단추가 될 수 있는 [Button](https://msdn.microsoft.com/library/windows/apps/br209265)용 전체 템플릿을 제공합니다. **NavigationBackButtonNormalStyle**과 비슷하지만, 치수가 30 Ⅹ 30 픽셀입니다.
+이 [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)은 탐색 앱을 위한 탐색 뒤로 단추가 될 수 있는 [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)용 전체 템플릿을 제공합니다. **NavigationBackButtonNormalStyle**과 비슷하지만, 치수가 30 Ⅹ 30 픽셀입니다.
 
-다음은 **NavigationBackButtonSmallStyle** 리소스가 적용된 [단추](https://msdn.microsoft.com/library/windows/apps/br209265)입니다.
+다음은 **NavigationBackButtonSmallStyle** 리소스가 적용된 [단추](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)입니다.
 
 ```XAML
 <Button Style="{StaticResource NavigationBackButtonSmallStyle}" />
@@ -452,7 +452,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 </ResourceDictionary>
 ```
 
-간단히 말해서 이 정의는 올바른 것처럼 보입니다. 고대비 상태에서는 `myBrush`가 가리키는 색으로 변경하지만, 고대비 상태가 아닐 때는 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md)을 사용하여 `myBrush`가 테마에 적절한 색을 가리키도록 합니다. 앱에서 해당 시각적 트리 내의 요소에 [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/dn298515)가 설정되지 않은 경우 일반적으로 예상 대로 작동합니다. 그러나 시각적 트리의 다른 부분에 대해 테마를 다시 시작하려고 하는 즉시, 앱에 문제가 발생합니다.
+간단히 말해서 이 정의는 올바른 것처럼 보입니다. 고대비 상태에서는 `myBrush`가 가리키는 색으로 변경하지만, 고대비 상태가 아닐 때는 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md)을 사용하여 `myBrush`가 테마에 적절한 색을 가리키도록 합니다. 앱에서 해당 시각적 트리 내의 요소에 [FrameworkElement.RequestedTheme](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.requestedtheme)가 설정되지 않은 경우 일반적으로 예상 대로 작동합니다. 그러나 시각적 트리의 다른 부분에 대해 테마를 다시 시작하려고 하는 즉시, 앱에 문제가 발생합니다.
 
 이 문제는 다른 대부분의 XAML 형식과 달리 브러시는 공유 리소스이기 때문입니다. XAML 하위 트리에 동일한 브러시 리소스를 참조하지만 테마는 다른 2개의 요소가 있는 경우 프레임워크가 각 하위 트리를 따라 이동하면서 해당 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md) 식을 업데이트할 때 공유 브러시 리소스의 변경 내용이 의도한 결과와 달리 다른 하위 트리에도 반영됩니다.
 
@@ -475,7 +475,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 </ResourceDictionary>
 ```
 
-그러나 이러한 리소스가 [Foreground](https://msdn.microsoft.com/library/windows/apps/br209414)와 같은 상속된 속성에서 참조되는 경우에 여전히 문제가 발생합니다. 사용자 지정 컨트롤 템플릿은 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md)을 사용하여 요소의 전경색을 지정할 수 있지만 프레임워크는 상속된 값을 자식 요소에 전파할 때 {ThemeResource} 태그 확장 식에서 확인된 리소스에 대한 직접 참조를 제공합니다. 이로 인해 프레임워크가 컨트롤의 시각적 트리를 따라 테마 변경 내용을 처리할 때 문제가 발생합니다. 프레임워크는 {ThemeResource} 태그 확장 식을 다시 평가하여 새 브러시 리소스를 가져오지만, 아직 컨트롤의 자식으로 이 참조를 전파하지는 않습니다. 이 작업은 나중에, 예를 들면 다음 측정 단계 도중에 발생합니다.
+그러나 이러한 리소스가 [Foreground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.foreground)와 같은 상속된 속성에서 참조되는 경우에 여전히 문제가 발생합니다. 사용자 지정 컨트롤 템플릿은 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md)을 사용하여 요소의 전경색을 지정할 수 있지만 프레임워크는 상속된 값을 자식 요소에 전파할 때 {ThemeResource} 태그 확장 식에서 확인된 리소스에 대한 직접 참조를 제공합니다. 이로 인해 프레임워크가 컨트롤의 시각적 트리를 따라 테마 변경 내용을 처리할 때 문제가 발생합니다. 프레임워크는 {ThemeResource} 태그 확장 식을 다시 평가하여 새 브러시 리소스를 가져오지만, 아직 컨트롤의 자식으로 이 참조를 전파하지는 않습니다. 이 작업은 나중에, 예를 들면 다음 측정 단계 도중에 발생합니다.
 
 결과적으로 프레임워크는 테마 변경에 대한 응답으로 컨트롤의 시각적 트리를 따라 자식 요소로 이동한 후 해당 요소에 설정된 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md) 식 또는 속성에 대해 설정된 개체를 업데이트합니다. 여기에서 문제가 발생합니다. 프레임워크는 브러시 리소스를 따라 이동하며, {ThemeResource} 태그 확장을 사용하여 색을 지정하므로 다시 평가됩니다.
 

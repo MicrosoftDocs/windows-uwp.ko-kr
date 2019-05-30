@@ -4,12 +4,12 @@ description: 개발자는 프로토콜 활성화 및 시작 활성화를 사용�
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
-ms.openlocfilehash: fb68b4bbd1b751591e9f336efe5dad3c22b3bf92
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f61fcfcef549295b8f3c9004572a74043a2917a2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618308"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365825"
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Windows 10 UWP 앱 시작 자동화
 
@@ -48,9 +48,9 @@ ms.locfileid: "57618308"
   scheme://username:password@host:port/path.extension?query#fragment
   ```
 
-Uri 개체에는 다음 형식으로 URI 문자열을 구문 분석하는 메서드가 있습니다. 자세한 내용은 [URI 클래스(MSDN)](https://msdn.microsoft.com/library/windows/apps/windows.foundation.uri.aspx)를 참조하세요. 
+Uri 개체에는 다음 형식으로 URI 문자열을 구문 분석하는 메서드가 있습니다. 자세한 내용은 [URI 클래스(MSDN)](https://docs.microsoft.com/uwp/api/windows.foundation.uri)를 참조하세요. 
 
-예제:
+예를 들면 다음과 같습니다.
 
   ```
   >start bingnews:
@@ -210,6 +210,6 @@ void OnActivated(IActivatedEventArgs^ args)
 ## <a name="summary"></a>요약
 다양한 방법으로 UWP 앱을 시작할 수 있습니다. 요구 사항 및 사용 사례에 따라 좀 더 적절한 방법을 사용하는 것이 좋습니다. 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [Xbox One에서 UWP](index.md)
 

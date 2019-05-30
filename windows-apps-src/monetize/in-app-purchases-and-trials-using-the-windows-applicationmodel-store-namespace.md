@@ -6,27 +6,27 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: uwp, 앱에서 바로 구매, IAP, 추가 기능, 평가판, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 96260b0fb2aa0818dd6df52f88bd0c63d56c35b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7053f75ee4081de18fe004d4af905afe5e00587b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57628538"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361895"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판
 
-앱으로 수익을 창출할 수 있도록 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 UWP(유니버설 Windows 플랫폼) 앱에 앱에서 바로 구매 및 평가판 기능을 추가할 수 있습니다. 이러한 API를 통해 앱에 대한 라이선스 정보에 액세스할 수도 있습니다.
+앱으로 수익을 창출할 수 있도록 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스의 멤버를 사용하여 UWP(유니버설 Windows 플랫폼) 앱에 앱에서 바로 구매 및 평가판 기능을 추가할 수 있습니다. 이러한 API를 통해 앱에 대한 라이선스 정보에 액세스할 수도 있습니다.
 
 이 섹션의 문서에서는 몇 가지 일반적인 시나리오에서 **Windows.ApplicationModel.Store** 네임스페이스의 멤버를 사용하기 위한 자세한 지침과 코드 예제를 제공합니다. UWP 앱의 앱에서 바로 구매와 관련된 기본 개념의 개요를 보려면 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요. **Windows.ApplicationModel.Store** 네임스페이스를 사용하여 평가판 및 앱에서 바로 구매를 구현하는 방법을 보여 주는 전체 샘플은 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)을 참조하세요.
 
 > [!IMPORTANT]
-> **Windows.ApplicationModel.Store** 네임스페이스는 새 기능에서 더 이상 업데이트되지 않습니다. 프로젝트가 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우(즉, Windows 10, 버전 1607 이상을 대상으로 함), [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials)을 참조하세요. 합니다 **Windows.ApplicationModel.Store** 네임 스페이스를 사용 하는 Windows 데스크톱 응용 프로그램에서 지원 되지 않습니다 합니다 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop) 앱 또는 게임 개발 샌드박스가 (파트너 센터에서 사용 하는 예제에서는 이것이 게임을 Xbox Live와 통합 되는 경우)입니다. 해당 제품은 **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판을 구현해야 합니다.
+> **Windows.ApplicationModel.Store** 네임스페이스는 새 기능에서 더 이상 업데이트되지 않습니다. 프로젝트가 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우(즉, Windows 10, 버전 1607 이상을 대상으로 함), [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스를 대신 사용하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](https://docs.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials)을 참조하세요. 합니다 **Windows.ApplicationModel.Store** 네임 스페이스를 사용 하는 Windows 데스크톱 응용 프로그램에서 지원 되지 않습니다 합니다 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop) 앱 또는 게임 개발 샌드박스가 (파트너 센터에서 사용 하는 예제에서는 이것이 게임을 Xbox Live와 통합 되는 경우)입니다. 해당 제품은 **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판을 구현해야 합니다.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>CurrentApp 및 CurrentAppSimulator 클래스 시작
 
-**Windows.ApplicationModel.Store** 네임스페이스의 기본 진입점은 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) 클래스입니다. 이 클래스는 현재 앱과 사용 가능한 추가 기능에 대한 정보 가져오기, 현재 앱 또는 추가 기능에 대한 라이선스 정보 가져오기, 현재 사용자를 위한 앱 또는 추가 기능 구매 및 기타 작업에 사용할 수 있는 고정 속성 메서드를 제공합니다.
+**Windows.ApplicationModel.Store** 네임스페이스의 기본 진입점은 [CurrentApp](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp) 클래스입니다. 이 클래스는 현재 앱과 사용 가능한 추가 기능에 대한 정보 가져오기, 현재 앱 또는 추가 기능에 대한 라이선스 정보 가져오기, 현재 사용자를 위한 앱 또는 추가 기능 구매 및 기타 작업에 사용할 수 있는 고정 속성 메서드를 제공합니다.
 
-[CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) 클래스는 Microsoft Store에서 해당 데이터를 가져오므로 개발자 계정이 있고 앱을 Microsoft Store에 게시해야 앱에서 이 클래스를 성공적으로 사용할 수 있습니다. 스토어에 앱을 제출하기 전에 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx)라는 이 클래스의 시뮬레이트된 버전을 사용하여 코드를 테스트할 수 있습니다. 앱을 테스트한 후 Microsoft Store에 제출하기 전에 **CurrentAppSimulator** 인스턴스를 **CurrentApp**으로 바꾸어야 합니다. 앱이 **CurrentAppSimulator**를 사용하는 경우 인증에 실패합니다.
+[CurrentApp](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp) 클래스는 Microsoft Store에서 해당 데이터를 가져오므로 개발자 계정이 있고 앱을 Microsoft Store에 게시해야 앱에서 이 클래스를 성공적으로 사용할 수 있습니다. 스토어에 앱을 제출하기 전에 [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator)라는 이 클래스의 시뮬레이트된 버전을 사용하여 코드를 테스트할 수 있습니다. 앱을 테스트한 후 Microsoft Store에 제출하기 전에 **CurrentAppSimulator** 인스턴스를 **CurrentApp**으로 바꾸어야 합니다. 앱이 **CurrentAppSimulator**를 사용하는 경우 인증에 실패합니다.
 
 **CurrentAppSimulator**를 사용하는 경우 앱 라이선싱 및 앱에서 바로 구매 제품의 초기 상태는 WindowsStoreProxy.xml이라는 개발 컴퓨터의 로컬 파일에서 설명됩니다. 이 파일에 대한 자세한 내용은 [CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용](#proxy)을 참조하세요.
 
@@ -155,7 +155,7 @@ ms.locfileid: "57628538"
 5. Visual Studio에서 WindowsStoreProxy.xml 파일로 전환합니다.
 6. **XML** 메뉴에서 **스키마**를 클릭한 다음 목록에서 WindowsStoreProxy.xsd 파일의 행을 찾습니다. 파일 위치가 원하는 위치가 아닌 경우(예: 임시 파일이 여전히 표시되는 경우) **추가**를 클릭합니다. 올바른 파일을 찾은 다음 **확인**을 클릭합니다. 이제 해당 파일이 목록에 표시됩니다. 해당 스키마에 대한 **사용** 열에 확인 표시가 있는지 확인합니다.
 
-이 작업을 완료하면 WindowsStoreProxy.xml에서 편집하는 내용에 스키마가 적용됩니다. 자세한 내용은 참조 하세요. [방법: 사용 하 여 XML 스키마 선택](https://go.microsoft.com/fwlink/p/?LinkId=403014)합니다.
+이 작업을 완료하면 WindowsStoreProxy.xml에서 편집하는 내용에 스키마가 적용됩니다. 자세한 내용은 [방법: 사용 하 여 XML 스키마 선택](https://go.microsoft.com/fwlink/p/?LinkId=403014)합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -360,7 +360,7 @@ ms.locfileid: "57628538"
 |  [ListingInformation](#listinginformation)  |    예        |  1  |  앱 목록의 데이터를 포함합니다.            |
 |  [LicenseInformation](#licenseinformation)  |     예       |   1    |   이 앱과 지속형 추가 기능에 사용할 수 있는 라이선스를 설명합니다.     |
 |  [ConsumableInformation](#consumableinformation)  |      아니오      |   0 또는 1   |   이 앱에 사용할 수 있는 소모성 추가 기능을 설명합니다.      |
-|  [시뮬레이션](#simulation)  |     아니오       |      0 또는 1      |   테스트 중에 다양한 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx) 메서드 호출이 앱에서 작동하는 방식을 설명합니다.    |
+|  [시뮬레이션](#simulation)  |     아니요       |      0 또는 1      |   테스트 중에 다양한 [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator) 메서드 호출이 앱에서 작동하는 방식을 설명합니다.    |
 
 <span id="listinginformation" />
 
@@ -373,7 +373,7 @@ ms.locfileid: "57628538"
 |  요소  |  필수  |  수량  |  설명   |
 |-------------|------------|--------|--------|
 |  [앱](#app-child-of-listinginformation)  |    예   |  1   |    앱에 대한 데이터를 제공합니다.         |
-|  [제품](#product-child-of-listinginformation)  |    아니오  |  0개 이상   |      앱용 추가 기능을 설명합니다.     |     |
+|  [Product](#product-child-of-listinginformation)  |    아니요  |  0개 이상   |      앱용 추가 기능을 설명합니다.     |     |
 
 <span id="app-child-of-listinginformation"/>
 
@@ -405,13 +405,13 @@ ms.locfileid: "57628538"
 |  **설명**  |    예  |  1   |      이 국가/지역에 대한 앱 설명입니다.       |
 |  **가격**  |    예  |  1   |     이 국가/지역의 앱 가격입니다.        |
 |  **CurrencySymbol**  |    예  |  1   |     이 국가/지역에서 사용되는 통화 기호입니다.        |
-|  **currencyCode**  |    아니오  |  0 또는 1      |      이 국가/지역에서 사용되는 통화 코드입니다.         |  |
+|  **CurrencyCode**  |    아니오  |  0 또는 1      |      이 국가/지역에서 사용되는 통화 코드입니다.         |  |
 
 **MarketData**에는 다음 특성이 있습니다.
 
-|  특성  |  필수  |  설명   |
+|  attribute  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **Xml: lang**  |    예        |     지역/국가 데이터 정보가 적용되는 국가/지역을 지정합니다.          |  |
+|  **xml:lang**  |    예        |     지역/국가 데이터 정보가 적용되는 국가/지역을 지정합니다.          |  |
 
 <span id="product-child-of-listinginformation"/>
 
@@ -421,11 +421,11 @@ ms.locfileid: "57628538"
 
 **Product**에는 다음 특성이 있습니다.
 
-|  특성  |  필수  |  설명   |
+|  attribute  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **productId**  |    예        |    앱에서 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.           |
+|  **ProductId**  |    예        |    앱에서 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.           |
 |  **LicenseDuration**  |    아니오        |    항목을 구매한 후 라이선스가 유효한 일수를 나타냅니다. 제품 구매를 통해 생성된 새 라이선스의 만료 날짜는 구매 날짜에 라이선스 기간을 더한 날짜입니다. 이 특성은 **ProductType** 특성이 **Durable**인 경우에만 사용됩니다. 소모성 추가 기능의 경우 이 특성이 무시됩니다.           |
-|  **productType**  |    아니오        |    앱에서 바로 구매 제품의 지속성을 식별하는 값을 포함합니다. 지원되는 값은 **Durable**(기본값) 및 **Consumable**입니다. 지속성 유형의 경우 [LicenseInformation](#licenseinformation) 아래의 [Product](#product-child-of-licenseinformation) 요소에서 추가 정보를 설명하고, 소모성 유형의 경우 [ConsumableInformation](#consumableinformation) 아래의 [Product](#product-child-of-consumableinformation) 요소에서 추가 정보를 설명합니다.           |  |
+|  **ProductType**  |    아니요        |    앱에서 바로 구매 제품의 지속성을 식별하는 값을 포함합니다. 지원되는 값은 **Durable**(기본값) 및 **Consumable**입니다. 지속성 유형의 경우 [LicenseInformation](#licenseinformation) 아래의 [Product](#product-child-of-licenseinformation) 요소에서 추가 정보를 설명하고, 소모성 유형의 경우 [ConsumableInformation](#consumableinformation) 아래의 [Product](#product-child-of-consumableinformation) 요소에서 추가 정보를 설명합니다.           |  |
 
 <span id="marketdata-child-of-product"/>
 
@@ -440,17 +440,17 @@ ms.locfileid: "57628538"
 |  **이름**  |    예   |  1   |   이 국가/지역의 추가 기능 이름입니다.        |
 |  **가격**  |    예  |  1   |     이 국가/지역의 추가 기능 가격입니다.        |
 |  **CurrencySymbol**  |    예  |  1   |     이 국가/지역에서 사용되는 통화 기호입니다.        |
-|  **currencyCode**  |    아니오  |  0 또는 1      |      이 국가/지역에서 사용되는 통화 코드입니다.         |  
-|  **설명**  |    아니오  |   0 또는 1   |      이 국가/지역에 대한 추가 기능 설명입니다.       |
-|  **태그**  |    아니오  |   0 또는 1   |      추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(태그라고도 함)입니다.       |
-|  **키워드**  |    아니오  |   0 또는 1   |      추가 기능에 대한 [키워드](../publish/enter-add-on-properties.md#keywords)가 포함된 **Keyword** 요소를 최대 10개까지 포함합니다.       |
-|  **imageUri**  |    아니오  |   0 또는 1   |      추가 기능 목록의 [이미지 URI](../publish/create-add-on-store-listings.md#icon)입니다.           |  |
+|  **CurrencyCode**  |    아니오  |  0 또는 1      |      이 국가/지역에서 사용되는 통화 코드입니다.         |  
+|  **설명**  |    아니요  |   0 또는 1   |      이 국가/지역에 대한 추가 기능 설명입니다.       |
+|  **Tag**  |    아니요  |   0 또는 1   |      추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(태그라고도 함)입니다.       |
+|  **키워드**  |    아니요  |   0 또는 1   |      추가 기능에 대한 [키워드](../publish/enter-add-on-properties.md#keywords)가 포함된 **Keyword** 요소를 최대 10개까지 포함합니다.       |
+|  **ImageUri**  |    아니요  |   0 또는 1   |      추가 기능 목록의 [이미지 URI](../publish/create-add-on-store-listings.md#icon)입니다.           |  |
 
 **MarketData**에는 다음 특성이 있습니다.
 
-|  특성  |  필수  |  설명   |
+|  attribute  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **Xml: lang**  |    예        |     지역/국가 데이터 정보가 적용되는 국가/지역을 지정합니다.          |  |
+|  **xml:lang**  |    예        |     지역/국가 데이터 정보가 적용되는 국가/지역을 지정합니다.          |  |
 
 <span id="licenseinformation"/>
 
@@ -463,7 +463,7 @@ ms.locfileid: "57628538"
 |  요소  |  필수  |  수량  | 설명   |
 |-------------|------------|--------|--------|
 |  [앱](#app-child-of-licenseinformation)  |    예   |  1   |    앱의 라이선스를 설명합니다.         |
-|  [제품](#product-child-of-licenseinformation)  |    아니오  |  0개 이상   |      앱에서 지속형 추가 기능의 라이선스 상태를 설명합니다.         |   |
+|  [Product](#product-child-of-licenseinformation)  |    아니요  |  0개 이상   |      앱에서 지속형 추가 기능의 라이선스 상태를 설명합니다.         |   |
 
 다음 표에서는 **App** 및 **Product** 요소 아래의 값을 결합하여 몇 가지 일반적인 조건을 시뮬레이트하는 방법을 보여 줍니다.
 
@@ -485,7 +485,7 @@ ms.locfileid: "57628538"
 |  요소  |  필수  |  수량  | 설명   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    예   |  1   |    이 앱의 현재 라이선스 상태를 설명합니다. 값이 **true**이면 라이선스가 유효함을 나타냅니다. **false**이면 잘못된 라이선스를 나타냅니다. 일반적으로 이 값은 앱이 평가판 모드인지 여부에 관계없이 **true**입니다.  잘못된 라이선스가 있을 경우 앱의 동작을 테스트하려면 이 값을 **false**로 설정합니다.           |
-|  **isTrial**  |    예  |  1   |      이 앱의 현재 평가판 상태를 설명합니다. 값이 **true**이면 체험 기간 동안 앱이 사용되고 있음을 나타냅니다. **false**이면 앱을 구매했거나 체험 기간이 만료되어 앱이 평가판 상태가 아님을 나타냅니다.         |
+|  **IsTrial**  |    예  |  1   |      이 앱의 현재 평가판 상태를 설명합니다. 값이 **true**이면 체험 기간 동안 앱이 사용되고 있음을 나타냅니다. **false**이면 앱을 구매했거나 체험 기간이 만료되어 앱이 평가판 상태가 아님을 나타냅니다.         |
 |  **ExpirationDate**  |    아니오  |  0 또는 1       |     이 앱의 체험 기간이 만료되는 UTC(협정 세계시) 날짜입니다. 날짜는 yyyy-mm-ddThh:mm:ss.ssZ로 표시되어야 합니다. 예를 들어 2015년 1월 19일 5시는 2015-01-19T05:00:00.00Z로 지정됩니다. **IsTrial**이 **true**이면 이 요소는 필수입니다. 그렇지 않으면 필요하지 않습니다.          |  |
 
 <span id="product-child-of-licenseinformation"/>
@@ -499,24 +499,24 @@ ms.locfileid: "57628538"
 |  요소  |  필수  |  수량  | 설명   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    예   |  1     |    이 추가 기능의 현재 라이선스 상태를 설명합니다. 값이 **true**이면 추가 기능을 사용할 수 있음을 나타냅니다. **false**이면 추가 기능을 사용할 수 없거나 구매하지 않았음을 나타냅니다.           |
-|  **ExpirationDate**  |    아니오   |  0 또는 1     |     추가 기능이 만료되는 UTC(협정 세계시) 날짜입니다. 날짜는 yyyy-mm-ddThh:mm:ss.ssZ로 표시되어야 합니다. 예를 들어 2015년 1월 19일 5시는 2015-01-19T05:00:00.00Z로 지정됩니다. 이 요소가 있으면 추가 기능에 만료 날짜가 있습니다. 이 요소가 없으면 추가 기능이 만료되지 않습니다.  |  
+|  **ExpirationDate**  |    아니요   |  0 또는 1     |     추가 기능이 만료되는 UTC(협정 세계시) 날짜입니다. 날짜는 yyyy-mm-ddThh:mm:ss.ssZ로 표시되어야 합니다. 예를 들어 2015년 1월 19일 5시는 2015-01-19T05:00:00.00Z로 지정됩니다. 이 요소가 있으면 추가 기능에 만료 날짜가 있습니다. 이 요소가 없으면 추가 기능이 만료되지 않습니다.  |  
 
 **Product**에는 다음 특성이 있습니다.
 
-|  특성  |  필수  |  설명   |
+|  attribute  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **productId**  |    예        |   앱에서 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.            |
+|  **ProductId**  |    예        |   앱에서 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.            |
 |  **OfferId**  |     아니오       |   앱에서 추가 기능이 속하는 범주를 식별하는 데 사용하는 문자열을 포함합니다. [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)에 설명된 대로 큰 항목 카탈로그를 지원합니다.           |
 
 <span id="simulation"/>
 
 #### <a name="simulation-element"></a>Simulation 요소
 
-이 요소는 테스트 중에 다양한 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx) 메서드 호출이 앱에서 작동하는 방식을 설명합니다. **Simulation**은 **CurrentApp**의 선택적 자식이며 [DefaultResponse](#defaultresponse) 요소를 0개 이상 포함합니다.
+이 요소는 테스트 중에 다양한 [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator) 메서드 호출이 앱에서 작동하는 방식을 설명합니다. **Simulation**은 **CurrentApp**의 선택적 자식이며 [DefaultResponse](#defaultresponse) 요소를 0개 이상 포함합니다.
 
 **Simulation**에는 다음 특성이 있습니다.
 
-|  특성  |  필수  |  설명   |
+|  attribute  |  필수  |  설명   |
 |-------------|------------|----------------|
 |  **SimulationMode**  |    아니오        |      값은 **Interactive** 또는 **Automatic**일 수 있습니다. 이 특성이 **Automatic**으로 설정된 경우 메서드가 지정된 HRESULT 오류 코드를 자동으로 반환합니다. 자동화된 테스트 사례를 실행할 때 사용할 수 있습니다.       |
 
@@ -528,9 +528,9 @@ ms.locfileid: "57628538"
 
 **DefaultResponse**에는 다음 특성이 있습니다.
 
-|  특성  |  필수  |  설명   |
+|  attribute  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **methodName**  |    예        |   [schema](#schema)의 **StoreMethodName** 형식에 대해 표시되는 열거형 값 중 하나에 이 특성을 할당합니다. 이 열거형 값은 각각 테스트 중에 앱에서 오류 코드 반환 값을 시뮬레이트하려는 **CurrentAppSimulator** 메서드를 나타냅니다. 예를 들어 값이 **RequestAppPurchaseAsync_GetResult**이면 [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.requestapppurchaseasync) 메서드의 오류 코드 반환 값을 시뮬레이트하려는 것입니다.            |
+|  **MethodName**  |    예        |   [schema](#schema)의 **StoreMethodName** 형식에 대해 표시되는 열거형 값 중 하나에 이 특성을 할당합니다. 이 열거형 값은 각각 테스트 중에 앱에서 오류 코드 반환 값을 시뮬레이트하려는 **CurrentAppSimulator** 메서드를 나타냅니다. 예를 들어 값이 **RequestAppPurchaseAsync_GetResult**이면 [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.requestapppurchaseasync) 메서드의 오류 코드 반환 값을 시뮬레이트하려는 것입니다.            |
 |  **HResult**  |     예       |   [schema](#schema)의 **ResponseCodes** 형식에 대해 표시되는 열거형 값 중 하나에 이 특성을 할당합니다. 이 열거형 값은 각각 이 **DefaultResponse** 요소의 **MethodName** 특성에 할당된 메서드에 대해 반환하려는 오류 코드를 나타냅니다.           |
 
 <span id="consumableinformation"/>
@@ -547,9 +547,9 @@ ms.locfileid: "57628538"
 
 **Product**에는 다음 특성이 있습니다.
 
-|  특성  |  필수  |  설명   |
+|  attribute  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **productId**  |    예        |   앱에서 소모성 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.            |
-|  **트랜잭션 Id**  |     예       |   앱에서 이행 프로세스를 통해 소모성의 구매 거래를 추적하는 데 사용하는 GUID(문자열)를 포함합니다. [앱에서 바로 구매 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)을 참조하세요.            |
+|  **ProductId**  |    예        |   앱에서 소모성 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.            |
+|  **TransactionId**  |     예       |   앱에서 이행 프로세스를 통해 소모성의 구매 거래를 추적하는 데 사용하는 GUID(문자열)를 포함합니다. [앱에서 바로 구매 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)을 참조하세요.            |
 |  **상태**  |      예      |  앱에서 소모성의 이행 상태를 나타내는 데 사용하는 문자열을 포함합니다. 값은 **Active**, **PurchaseReverted**, **PurchasePending** 또는 **ServerError**일 수 있습니다.             |
-|  **OfferId**  |     아니오       |    앱에서 소모성이 속하는 범주를 식별하는 데 사용하는 문자열을 포함합니다. [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)에 설명된 대로 큰 항목 카탈로그를 지원합니다.           |
+|  **OfferId**  |     아니요       |    앱에서 소모성이 속하는 범주를 식별하는 데 사용하는 문자열을 포함합니다. [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)에 설명된 대로 큰 항목 카탈로그를 지원합니다.           |

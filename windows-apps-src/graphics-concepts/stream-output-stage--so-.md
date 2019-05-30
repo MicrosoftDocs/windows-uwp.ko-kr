@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 87eb6562c6ee66ca1d409d3748e688861d5f3920
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e3614b7bde3a87c8f5fa6fdc0eada560fd7bbcdc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605048"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370960"
 ---
 # <a name="stream-output-so-stage"></a>SO(스트림 출력) 단계
 
@@ -31,14 +31,14 @@ SO(스트림 출력) 단계에서는 이전의 활성 단계에서 하나 이상
 파이프라인에 스트림 출력 데이터를 공급하는 방법은 두 가지가 있습니다.
 
 -   스트림 출력 데이터를 IA(입력 어셈블러) 단계로 피드백할 수 있습니다.
--   스트림 출력 데이터를 프로그래밍 가능 셰이더가 [Load](https://msdn.microsoft.com/library/windows/desktop/bb509694) 함수를 사용하여 읽을 수 있습니다.
+-   스트림 출력 데이터를 프로그래밍 가능 셰이더가 [Load](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-load) 함수를 사용하여 읽을 수 있습니다.
 
 ## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>입력
 
 
 이전 셰이더 단계의 꼭짓점 데이터.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
 
 
 SO(스트림 출력) 단계에서는 이전 활성 단계(예: GS(기하 도형 셰이더) 단계)의 꼭짓점 데이터를 하나 이상의 메모리 내 버퍼로 연속적으로 출력(또는 스트리밍)합니다. 기 하 도형 셰이더 (GS) 스테이지 활성 상태인 경우 Stream 출력 (등) 스테이지 꼭 짓 점 데이터 (DS) 도메인 셰이더 단계에서 메모리 (또는 경우 DS 활성화 되어 있지도 꼭 짓 점 셰이더 (VS) 단계에서)의 버퍼를 지속적으로 출력 합니다.

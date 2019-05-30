@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, glsl, 포트
 ms.localizationpriority: medium
-ms.openlocfilehash: 809440f9e77af19c01f4a050eee3b6f8d1c709b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 210f98476a06b88e7d3d543006a6d4ec886cfd45
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621378"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368248"
 ---
 # <a name="port-the-glsl"></a>GLSL 포팅
 
@@ -20,18 +20,18 @@ ms.locfileid: "57621378"
 
 **중요 한 Api**
 
--   [HLSL 의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb205574)
--   [셰이더 상수 (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581)
+-   [HLSL 의미 체계](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps)
+-   [셰이더 상수 (HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants)
 
 버퍼 및 셰이더 개체를 만들고 구성하는 코드를 이동한 후에는 해당 셰이더 내에서 코드를 OpenGL ES 2.0 GLSL(GL Shader Language)에서 Direct3D 11 HLSL(High Level Shader Language)로 포팅할 차례입니다.
 
 OpenGL ES 2.0에서 셰이더와 같은 내장 함수를 사용 하 여 실행 한 후 데이터를 반환 **gl\_위치**하십시오 **gl\_FragColor**, 또는 **gl\_FragData \[n\]**  (여기서 n은 특정 렌더링 대상에 대 한 인덱스). Direct3D에서는 특정 내장 함수가 없으며 셰이더는 각 main() 함수의 반환 형식으로 데이터를 반환합니다.
 
-꼭짓점 위치 또는 일반 등 셰이더 단계 간에 보간하려는 데이터는 **varying** 선언 사용을 통해 처리됩니다. 그러나, Direct3D는 이 선언을 사용할 수 없습니다. 셰이더 단계 간에 전달하려는 모든 데이터는 [HLSL 의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb205574)로 표시해야 합니다. 선택한 특정 의미 체계는 데이터의 용도를 나타내며 다음과 같습니다. 예를 들어, 조각 셰이더 간의 보간하려는 꼭짓점 데이터를 다음과 같이 선언합니다.
+꼭짓점 위치 또는 일반 등 셰이더 단계 간에 보간하려는 데이터는 **varying** 선언 사용을 통해 처리됩니다. 그러나, Direct3D는 이 선언을 사용할 수 없습니다. 셰이더 단계 간에 전달하려는 모든 데이터는 [HLSL 의미 체계](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps)로 표시해야 합니다. 선택한 특정 의미 체계는 데이터의 용도를 나타내며 다음과 같습니다. 예를 들어, 조각 셰이더 간의 보간하려는 꼭짓점 데이터를 다음과 같이 선언합니다.
 
 `float4 vertPos : POSITION;`
 
-또는
+로 구분하거나 여러
 
 `float4 vertColor : COLOR;`
 
@@ -54,7 +54,7 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 };
 ```
 
-여기서 상수 버퍼는 레지스터 b0을 사용하여 압축된 버퍼를 유지합니다. B 형태로 모든 레지스터 라고\#합니다. 상수 버퍼, 레지스터, 데이터 압축의 HLSL 구현에 대한 자세한 내용은 [셰이더 상수(HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581)를 참조하세요.
+여기서 상수 버퍼는 레지스터 b0을 사용하여 압축된 버퍼를 유지합니다. B 형태로 모든 레지스터 라고\#합니다. 상수 버퍼, 레지스터, 데이터 압축의 HLSL 구현에 대한 자세한 내용은 [셰이더 상수(HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants)를 참조하세요.
 
 <a name="instructions"></a>지침
 ------------
@@ -159,10 +159,10 @@ float4 main(PixelShaderInput input) : SV_TARGET
 ---------
 [화면에 그리기](draw-to-the-screen.md) 설명
 -------
-HLSL 의미 체계 및 상수 버퍼 압축을 이해하면 약간의 디버깅 문제를 해결하고 최적화 기회를 이용할 수 있습니다. 통해 읽을 수 있는 기회를 받게 되 면 [변수 구문 (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Direct3D 11의 버퍼에 대 한 소개](https://msdn.microsoft.com/library/windows/desktop/ff476898), 및 [방법: 상수 버퍼를 만들](https://msdn.microsoft.com/library/windows/desktop/ff476896)합니다. 그렇지 않은 경우 의미 체계 및 상수 버퍼에 대해 고려할 몇 가지 시작 팁이 있습니다.
+HLSL 의미 체계 및 상수 버퍼 압축을 이해하면 약간의 디버깅 문제를 해결하고 최적화 기회를 이용할 수 있습니다. 통해 읽을 수 있는 기회를 받게 되 면 [변수 구문 (HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-variable-syntax), [Direct3D 11의 버퍼에 대 한 소개](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-intro), 및 [방법: 상수 버퍼를 만들](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-constant-how-to)합니다. 그렇지 않은 경우 의미 체계 및 상수 버퍼에 대해 고려할 몇 가지 시작 팁이 있습니다.
 
 -   항상 렌더러의 Direct3D 구성 코드를 다시 확인하여 상수 버퍼의 구조가 HLSL의 상수 구조체 선언과 일치하고, 구성 요소 스칼라가 두 선언에서 일치하는지 확인합니다.
--   렌더러의 C++ 코드에서는 상수 버퍼 선언에 [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833) 유형을 사용하여 올바른 데이터 압축을 보장합니다.
+-   렌더러의 C++ 코드에서는 상수 버퍼 선언에 [DirectXMath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal) 유형을 사용하여 올바른 데이터 압축을 보장합니다.
 -   상수 버퍼를 효율적으로 사용하는 가장 좋은 방법은 해당 업데이트 빈도에 따라 상수 버퍼에 셰이더 변수를 구성하는 것입니다. 예를 들어, 프레임마다 업데이트되는 일부 유니폼 데이터가 있고 카메라가 이동할 때만 업데이트되는 다른 유니폼 데이터가 있는 경우 두 개의 별도 상수 버퍼에 해당 데이터를 구분하는 것을 고려하세요.
 -   잊어버리고 적용하지 않거나 잘못 적용한 의미 체계가 셰이더 컴파일(FXC) 오류의 최초 소스입니다. 다시 확인하세요! 여러 이전 페이지 및 샘플이 Direct3D 11 이하 HLSL 의미 체계의 다른 버전을 참조하므로 문서가 약간 혼동스러울 수 있습니다.
 -   각 셰이더를 대상으로 하는 Direct3D 기능 수준을 알아야 합니다. 기능에 대 한 의미 체계 수준 9\_ \* 11에 대 한 다른\_1입니다.

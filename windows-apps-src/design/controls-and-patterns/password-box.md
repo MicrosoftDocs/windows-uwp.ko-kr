@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 43639ac22c07501da89e29419a226a8a3ce8af48
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d41590914fb66cb8061298f77f24e5efcdd03bf5
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613068"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364633"
 ---
 # <a name="password-box"></a>비밀번호 상자
 
@@ -25,7 +25,7 @@ ms.locfileid: "57613068"
 
 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력 상자입니다. 암호 상자는 입력란처럼 보이지만 입력된 텍스트 대신 자리 표시자 문자를 렌더링합니다. 자리 표시자 문자는 구성할 수 있습니다.
 
-> **중요 API**: [PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [Password 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx)합니다 [PasswordChar 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx)를 [PasswordRevealMode 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx), [PasswordChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)
+> **중요 API**: [PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [Password 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.password)합니다 [PasswordChar 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar)를 [PasswordRevealMode 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode), [PasswordChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
 
 기본적으로 암호 상자는 사용자가 표시 단추를 누른 채로 자신의 암호를 볼 수 있는 방법을 제공합니다. 표시 단추를 사용하지 않도록 설정하거나 확인란과 같은 암호를 표시하는 대체 메커니즘을 제공할 수 있습니다.
 
@@ -67,7 +67,7 @@ ms.locfileid: "57613068"
 
 ## <a name="create-a-password-box"></a>암호 상자 만들기
 
-[Password](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx) 속성을 사용하여 PasswordBox의 콘텐츠를 가져오거나 설정합니다. 사용자가 암호를 입력하는 동안 [PasswordChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx) 이벤트의 처리기에서 이 작업을 수행하여 유효성을 검사합니다. 또는 [Click](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 단추와 같은 기타 이벤트를 사용하여 사용자가 텍스트 입력을 완료한 후에 유효성 검사를 수행합니다.
+[Password](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.password) 속성을 사용하여 PasswordBox의 콘텐츠를 가져오거나 설정합니다. 사용자가 암호를 입력하는 동안 [PasswordChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged) 이벤트의 처리기에서 이 작업을 수행하여 유효성을 검사합니다. 또는 [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 단추와 같은 기타 이벤트를 사용하여 사용자가 텍스트 입력을 완료한 후에 유효성 검사를 수행합니다.
 
 다음은 PasswordBox의 기본 보기를 보여주는 암호 상자 컨트롤에 대한 XAML입니다. 사용자가 암호를 입력하면 암호가 리터럴 값 "Password"인지 확인합니다. 맞으면 사용자에게 메시지를 표시합니다.
 
@@ -99,7 +99,7 @@ private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
 
 ### <a name="password-character"></a>암호 문자
 
-[PasswordChar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx) 속성을 설정하여 암호를 가리는 데 사용되는 문자를 변경할 수 있습니다. 여기서는 기본 글머리 기호가 별표로 바뀝니다.
+[PasswordChar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar) 속성을 설정하여 암호를 가리는 데 사용되는 문자를 변경할 수 있습니다. 여기서는 기본 글머리 기호가 별표로 바뀝니다.
 
 ```xaml
 <PasswordBox x:Name="passwordBox" Width="200" PasswordChar="*"/>
@@ -111,7 +111,7 @@ private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
 
 ### <a name="headers-and-placeholder-text"></a>헤더 및 개체 틀 텍스트
 
-[Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.header.aspx) 및 [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.placeholdertext.aspx) 속성을 사용하여 PasswordBox에 대한 컨텍스트를 제공할 수 있습니다. 암호를 변경하기 위한 양식과 같이 상자가 여러 개 있을 때 특히 유용합니다.
+[Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.header) 및 [PlaceholderText](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.placeholdertext) 속성을 사용하여 PasswordBox에 대한 컨텍스트를 제공할 수 있습니다. 암호를 변경하기 위한 양식과 같이 상자가 여러 개 있을 때 특히 유용합니다.
 
 ```xaml
 <PasswordBox x:Name="passwordBox" Width="200" Header="Password" PlaceholderText="Enter your password"/>
@@ -121,7 +121,7 @@ private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
 
 ### <a name="maximum-length"></a>최대 길이
 
-사용자가 [MaxLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.maxlength.aspx) 속성을 설정하여 입력할 수 있는 문자의 최대 수를 지정합니다. 최소 길이를 지정하는 속성은 없지만 암호 길이를 확인하고 앱 코드에서 다른 유효성 검사를 수행할 수 있습니다.
+사용자가 [MaxLength](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.maxlength) 속성을 설정하여 입력할 수 있는 문자의 최대 수를 지정합니다. 최소 길이를 지정하는 속성은 없지만 암호 길이를 확인하고 앱 코드에서 다른 유효성 검사를 수행할 수 있습니다.
 
 ## <a name="password-reveal-mode"></a>암호 표시 모드
 
@@ -133,19 +133,19 @@ PasswordBox에는 사용자가 암호 텍스트를 표시하기 위해 터치하
 
 기본적으로 암호 표시 단추(또는 "미리 보기" 단추)가 표시됩니다. 사용자는 암호를 보기 위해 단추를 계속 눌러야 하므로 높은 수준의 보안이 유지됩니다.
 
-[PasswordRevealMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx) 속성의 값이 암호 표시 단추가 사용자에게 표시되는지 여부를 결정하는 유일한 요소는 아닙니다. 기타 요소로는 컨트롤이 최소 너비보다 큰지 여부, PasswordBox에 포커스가 있는지 여부, 텍스트 입력 필드에서 하나 이상의 문자가 포함되어 있는지 여부 등이 있습니다. 암호 표시 단추는 PasswordBox에 처음 포커스가 배치되고 문자를 입력하는 경우에만 표시됩니다. PasswordBox가 포커스를 잃었다가 다시 얻으면 암호를 지우고 문자 입력을 다시 시작해야만 표시 단추가 다시 표시됩니다.
+[PasswordRevealMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode) 속성의 값이 암호 표시 단추가 사용자에게 표시되는지 여부를 결정하는 유일한 요소는 아닙니다. 기타 요소로는 컨트롤이 최소 너비보다 큰지 여부, PasswordBox에 포커스가 있는지 여부, 텍스트 입력 필드에서 하나 이상의 문자가 포함되어 있는지 여부 등이 있습니다. 암호 표시 단추는 PasswordBox에 처음 포커스가 배치되고 문자를 입력하는 경우에만 표시됩니다. PasswordBox가 포커스를 잃었다가 다시 얻으면 암호를 지우고 문자 입력을 다시 시작해야만 표시 단추가 다시 표시됩니다.
 
 > **주의**&nbsp;&nbsp;Windows 10 이전에는 기본적으로 암호 표시 단추가 표시되지 않았습니다. 앱 보안 정책에 따라 암호를 항상 가려야 하는 경우 PasswordRevealMode를 Hidden으로 설정하세요.
 
 ### <a name="hidden-and-visible-modes"></a>숨김 및 표시 모드
 
-다른 [PasswordRevealMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordrevealmode.aspx) 열거형 값 **Hidden** 및 **Visible**는 암호 표시 단추를 숨기고 암호가 가려지는지 여부를 프로그래밍 방식으로 관리할 수 있도록 합니다.
+다른 [PasswordRevealMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordRevealMode) 열거형 값 **Hidden** 및 **Visible**는 암호 표시 단추를 숨기고 암호가 가려지는지 여부를 프로그래밍 방식으로 관리할 수 있도록 합니다.
 
 암호를 항상 가리려면 PasswordRevealMode를 Hidden으로 설정합니다. 암호를 항상 가릴 필요가 없으면 사용자 지정 UI를 제공하여 사용자가 Hidden 및 Visible 간에 PasswordRevealMode를 전환할 수 있도록 합니다.
 
-이전 버전의 Windows Phone에서 PasswordBox는 확인란을 사용하여 암호를 가릴지 여부를 전환합니다. 다음 예제에 표시된 대로 앱에 대한 유사한 UI를 만들 수 있습니다. [ToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.togglebutton.aspx)과 같은 기타 컨트롤을 사용하여 사용자가 모드 간을 전환하도록 할 수도 있습니다.
+이전 버전의 Windows Phone에서 PasswordBox는 확인란을 사용하여 암호를 가릴지 여부를 전환합니다. 다음 예제에 표시된 대로 앱에 대한 유사한 UI를 만들 수 있습니다. [ToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton)과 같은 기타 컨트롤을 사용하여 사용자가 모드 간을 전환하도록 할 수도 있습니다.
 
-이 예제에서는 [CheckBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.checkbox.aspx)를 사용하여 사용자가 PasswordBox의 표시 모드를 전환하는 방법을 보여 줍니다.
+이 예제에서는 [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox)를 사용하여 사용자가 PasswordBox의 표시 모드를 전환하는 방법을 보여 줍니다.
 
 ```xaml
 <StackPanel Width="200">
@@ -179,7 +179,7 @@ private void CheckBox_Changed(object sender, RoutedEventArgs e)
 
 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 터치 키보드나 SIP(Soft Input Panel)를 사용한 데이터 입력을 도울 수 있습니다. PasswordBox는 **Password** 및 **NumericPin** 입력 범위 값만 지원합니다. 다른 값이 무시됩니다.
 
-입력 범위를 사용하는 방법에 대한 자세한 내용은 [입력 범위를 사용하여 터치 키보드를 변경](https://msdn.microsoft.com/library/windows/apps/mt280229)을 참조하세요.
+입력 범위를 사용하는 방법에 대한 자세한 내용은 [입력 범위를 사용하여 터치 키보드를 변경](https://docs.microsoft.com/windows/uwp/design/input/use-input-scope-to-change-the-touch-keyboard)을 참조하세요.
 
 ## <a name="recommendations"></a>권장 사항
 
@@ -199,8 +199,8 @@ private void CheckBox_Changed(object sender, RoutedEventArgs e)
 [텍스트 컨트롤](text-controls.md)
 
 - [맞춤법 검사에 대 한 지침](text-controls.md)
-- [검색 추가](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [검색 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
 - [텍스트 입력에 대 한 지침](text-controls.md)
-- [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
 - [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

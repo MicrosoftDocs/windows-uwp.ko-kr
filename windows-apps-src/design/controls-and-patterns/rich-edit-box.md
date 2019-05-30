@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: fea636f78f4430d5bf8917c1ed720faeac7c4017
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 78f6fe36fb8955b6234cdf3cb42e4db02a602f4a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651738"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364351"
 ---
 # <a name="rich-edit-box"></a>서식 있는 편집 상자
 
@@ -24,7 +24,7 @@ ms.locfileid: "57651738"
 
 RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 및 이미지를 포함하는 서식 있는 텍스트 문서를 입력하고 편집할 수 있습니다. IsReadOnly 속성을 **true**로 설정하여 RichEditBox를 읽기 전용으로 만들 수 있습니다.
 
-> **중요 API**: [RichEditBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)하십시오 [문서 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx)를 [IsReadOnly 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx), [IsSpellCheckEnabled 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx)
+> **중요 API**: [RichEditBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)하십시오 [문서 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document)를 [IsReadOnly 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [IsSpellCheckEnabled 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -58,9 +58,9 @@ RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 �
 
 ## <a name="create-a-rich-edit-box"></a>서식 있는 편집 상자 만들기
 
-기본적으로 RichEditBox는 맞춤법 검사를 지원합니다. 맞춤법 검사기를 사용하지 않도록 설정하려면 [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx) 속성을 **false**로 설정합니다. 자세한 내용은 [맞춤법 검사에 대한 지침](text-controls.md) 문서를 참조하세요.
+기본적으로 RichEditBox는 맞춤법 검사를 지원합니다. 맞춤법 검사기를 사용하지 않도록 설정하려면 [IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled) 속성을 **false**로 설정합니다. 자세한 내용은 [맞춤법 검사에 대한 지침](text-controls.md) 문서를 참조하세요.
 
-RichEditBox의 [Document](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx) 속성을 사용하여 콘텐츠를 가져옵니다. [Windows.UI.Xaml.Documents.Block](https://msdn.microsoft.com/library/windows/apps/xaml/bb774052.aspx) 개체를 해당 콘텐츠로 사용하는 RichTextBlock 컨트롤과 달리 RichEditBox의 콘텐츠는 [Windows.UI.Text.ITextDocument](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.block.aspx) 개체입니다. ITextDocument 인터페이스는 문서를 로드하여 스트림에 저장, 텍스트 범위 검색, 활성 선택 영역 가져오기, 변경 내용 실행 취소 및 다시 실행, 기본 서식 특성 설정 등을 수행하는 방법을 제공합니다.
+RichEditBox의 [Document](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document) 속성을 사용하여 콘텐츠를 가져옵니다. [Windows.UI.Xaml.Documents.Block](https://docs.microsoft.com/windows/desktop/api/tom/nn-tom-itextdocument) 개체를 해당 콘텐츠로 사용하는 RichTextBlock 컨트롤과 달리 RichEditBox의 콘텐츠는 [Windows.UI.Text.ITextDocument](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Block) 개체입니다. ITextDocument 인터페이스는 문서를 로드하여 스트림에 저장, 텍스트 범위 검색, 활성 선택 영역 가져오기, 변경 내용 실행 취소 및 다시 실행, 기본 서식 특성 설정 등을 수행하는 방법을 제공합니다.
 
 다음 예제에서는 RichEditBox에서 서식 있는 텍스트 형식(.rtf) 파일을 편집, 로드 및 저장하는 방법을 보여 줍니다.
 
@@ -205,7 +205,7 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 
 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 터치 키보드나 SIP(Soft Input Panel)를 사용한 데이터 입력을 도울 수 있습니다. 일반적으로 기본 자판 배열은 서식 있는 텍스트 문서 작업에 적합합니다.
 
-입력 범위를 사용하는 방법에 대한 자세한 내용은 [입력 범위를 사용하여 터치 키보드를 변경](https://msdn.microsoft.com/library/windows/apps/mt280229)을 참조하세요.
+입력 범위를 사용하는 방법에 대한 자세한 내용은 [입력 범위를 사용하여 터치 키보드를 변경](https://docs.microsoft.com/windows/uwp/design/input/use-input-scope-to-change-the-touch-keyboard)을 참조하세요.
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
@@ -226,5 +226,5 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 - [맞춤법 검사에 대 한 지침](text-controls.md)
 - [검색 추가](search.md)
 - [텍스트 입력에 대 한 지침](text-controls.md)
-- [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)

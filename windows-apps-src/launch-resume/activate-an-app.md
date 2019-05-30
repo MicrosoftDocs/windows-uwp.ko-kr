@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: a75136f26aa6cfa330e4118e6709b0b4d4be4054
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 622fc4246c0ce8051135feab07295034b55a82e4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626598"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370818"
 ---
 # <a name="handle-app-activation"></a>앱 활성화 처리
 
@@ -24,9 +24,9 @@ ms.locfileid: "57626598"
 
 ## <a name="override-the-launch-handler"></a>실행 처리기 재정의
 
-어떤 이유로 응용 프로그램이 활성화 될 때 시스템은 보냅니다 합니다 [ **CoreApplicationView.Activated** ](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) 이벤트입니다. 활성화 유형 목록을 보려면 [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) 열거형을 참조하세요.
+어떤 이유로 응용 프로그램이 활성화 될 때 시스템은 보냅니다 합니다 [ **CoreApplicationView.Activated** ](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) 이벤트입니다. 활성화 유형 목록을 보려면 [**ActivationKind**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind) 열거형을 참조하세요.
 
-[  **Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) 클래스는 다양한 활성화 유형을 처리하기 위해 재정의할 수 있는 메서드를 정의합니다. 몇 가지 활성화 유형에는 재정의 가능한 특정 메서드가 있습니다. 기타 활성화 유형의 경우 [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 메서드를 재정의합니다.
+[  **Windows.UI.Xaml.Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) 클래스는 다양한 활성화 유형을 처리하기 위해 재정의할 수 있는 메서드를 정의합니다. 몇 가지 활성화 유형에는 재정의 가능한 특정 메서드가 있습니다. 기타 활성화 유형의 경우 [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) 메서드를 재정의합니다.
 
 응용 프로그램용 클래스를 정의합니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "57626598"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 ```
 
-[  **OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드를 재정의합니다. 사용자가 앱을 실행하면 이 메서드가 호출됩니다. [  **LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) 매개 변수는 이전 앱 상태 및 활성화 인수를 포함합니다.
+[  **OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 메서드를 재정의합니다. 사용자가 앱을 실행하면 이 메서드가 호출됩니다. [  **LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) 매개 변수는 이전 앱 상태 및 활성화 인수를 포함합니다.
 
 > [!NOTE]
 > Windows, 시작 타일 또는 앱 목록에서 일시 중단 된 앱을 시작 하거나이 메서드를 호출 하지 않습니다.
@@ -187,7 +187,7 @@ void App::EnsurePageCreatedAndActivate()
 
 ## <a name="restore-application-data-if-app-was-suspended-then-terminated"></a>앱이 일시 중단된 후 종료된 경우 응용 프로그램 데이터 복원
 
-사용자가 종료된 앱으로 전환하면 시스템은 [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728)를 **Launch**로, [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729)를 **Terminated** 또는 **ClosedByUser**로 설정하여 [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) 이벤트를 전송합니다. 앱은 저장된 응용 프로그램 데이터를 로드하고 표시 콘텐츠를 새로 고쳐야 합니다.
+사용자가 종료된 앱으로 전환하면 시스템은 [**Kind**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind)를 **Launch**로, [**PreviousExecutionState**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate)를 **Terminated** 또는 **ClosedByUser**로 설정하여 [**Activated**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) 이벤트를 전송합니다. 앱은 저장된 응용 프로그램 데이터를 로드하고 표시 콘텐츠를 새로 고쳐야 합니다.
 
 ```csharp
 async protected override void OnLaunched(LaunchActivatedEventArgs args)
@@ -259,19 +259,19 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 }
 ```
 
-[  **PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729)의 값이 **NotRunning**이면, 앱에서 응용 프로그램 데이터를 저장하지 못하며 마치 처음 실행하는 것처럼 앱이 다시 시작됩니다.
+[  **PreviousExecutionState**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate)의 값이 **NotRunning**이면, 앱에서 응용 프로그램 데이터를 저장하지 못하며 마치 처음 실행하는 것처럼 앱이 다시 시작됩니다.
 
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
-> 현재 창에 이미 설정된 콘텐츠가 있는 경우 앱에서 초기화를 건너뛸 수 있습니다. 확인할 수 있습니다 합니다 [ **LaunchActivatedEventArgs.TileId** ](https://msdn.microsoft.com/library/windows/apps/br224736) 속성 있는지 여부를 앱에서 기본 또는 보조 타일이 시작 되었으며, 해당 정보를 기반으로 결정을 해야 하는지 여부를 결정 에 새로 표시 하거나 앱 환경을 다시 시작 합니다.
+> 현재 창에 이미 설정된 콘텐츠가 있는 경우 앱에서 초기화를 건너뛸 수 있습니다. 확인할 수 있습니다 합니다 [ **LaunchActivatedEventArgs.TileId** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.tileid) 속성 있는지 여부를 앱에서 기본 또는 보조 타일이 시작 되었으며, 해당 정보를 기반으로 결정을 해야 하는지 여부를 결정 에 새로 표시 하거나 앱 환경을 다시 시작 합니다.
 
 ## <a name="important-apis"></a>중요 API
-* [Windows.ApplicationModel.Activation](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [Windows.UI.Xaml.Application](https://msdn.microsoft.com/library/windows/apps/br242324)
+* [Windows.ApplicationModel.Activation](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation)
+* [Windows.UI.Xaml.Application](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application)
 
 ## <a name="related-topics"></a>관련 항목
 * [앱 일시 중단 처리](suspend-an-app.md)
 * [앱 다시 시작 처리](resume-an-app.md)
-* [일시 중단 하 고 다시 시작 하는 앱에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [일시 중단 하 고 다시 시작 하는 앱에 대 한 지침](https://docs.microsoft.com/windows/uwp/launch-resume/index)
 * [앱 수명 주기](app-lifecycle.md)

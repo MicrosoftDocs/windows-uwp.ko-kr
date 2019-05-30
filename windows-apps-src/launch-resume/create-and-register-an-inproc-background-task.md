@@ -6,36 +6,36 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
-ms.openlocfilehash: 50e818059436cf7653bf7ac7b2203b0761b93377
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f37ffe21795fc68ff72b4e6f1de591c96d2f8b90
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615798"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366208"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>In-process 백그라운드 작업 만들기 및 등록
 
 **중요 한 Api**
 
--   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
--   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
--   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
+-   [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+-   [**BackgroundTaskCompletedEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcompletedeventhandler)
 
 이 항목에서는 앱과 같은 프로세스에서 실행되는 백그라운드 작업을 만들고 등록하는 방법을 보여 줍니다.
 
-In-process 백그라운드 작업은 Out-of-process 백그라운드 작업보다 구현하기가 더 쉽습니다. 그러나 복원 가능성이 더 낮습니다. In-process 백그라운드 작업에서 실행되는 코드가 중지되면 앱이 중단됩니다. 또한 [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) 및 **IoTStartupTask**는 In-process 모델에서 사용할 수 없습니다. 응용 프로그램 내에서 VoIP 백그라운드 작업 활성화도 가능하지 않습니다. 이러한 트리거 및 작업은 Out-of-process 백그라운드 작업 모델을 사용하여 계속 지원됩니다.
+In-process 백그라운드 작업은 Out-of-process 백그라운드 작업보다 구현하기가 더 쉽습니다. 그러나 복원 가능성이 더 낮습니다. In-process 백그라운드 작업에서 실행되는 코드가 중지되면 앱이 중단됩니다. 또한 [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceusetrigger), [DeviceServicingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceservicingtrigger) 및 **IoTStartupTask**는 In-process 모델에서 사용할 수 없습니다. 응용 프로그램 내에서 VoIP 백그라운드 작업 활성화도 가능하지 않습니다. 이러한 트리거 및 작업은 Out-of-process 백그라운드 작업 모델을 사용하여 계속 지원됩니다.
 
 백그라운드 작업은 실행 시간 제한을 초과하여 실행되는 경우 앱의 포그라운드 프로세스 내에서 실행 중인 경우에도 종료될 수 있습니다. 몇 가지 용도로 작업을 별도 프로세스에서 실행되는 백그라운드 작업으로 구분하는 복원력은 계속 유용합니다. 백그라운드 작업을 포그라운드 응용 프로그램에서 분리된 작업으로 유지하는 것이 포그라운드 응용 프로그램과의 통신이 필요하지 않은 작업에 대한 가장 적합한 옵션일 수 있습니다.
 
 ## <a name="fundamentals"></a>기본 사항
 
-In-process 모델은 앱이 포그라운드 또는 백그라운드에 있는 때를 더 잘 알려줌으로써 응용 프로그램 수명 주기를 향상시킵니다. 두 개의 새 이벤트가 이러한 전환에 대 한 응용 프로그램 개체에서 사용할 수 있습니다. [**EnteredBackground** ](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) 하 고 [ **LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground)합니다. 이러한 이벤트는 응용 프로그램의 표시 상태를 기반하는 응용 프로그램 수명 주기에 맞습니다. [앱 수명 주기](app-lifecycle.md)에서 이러한 이벤트에 대한 내용과 이러한 이벤트가 응용 프로그램의 수명 주기에 어떻게 영향을 미치는지를 참조하세요.
+In-process 모델은 앱이 포그라운드 또는 백그라운드에 있는 때를 더 잘 알려줌으로써 응용 프로그램 수명 주기를 향상시킵니다. 두 개의 새 이벤트가 이러한 전환에 대 한 응용 프로그램 개체에서 사용할 수 있습니다. [**EnteredBackground** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) 하 고 [ **LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground)합니다. 이러한 이벤트는 응용 프로그램의 표시 상태를 기반하는 응용 프로그램 수명 주기에 맞습니다. [앱 수명 주기](app-lifecycle.md)에서 이러한 이벤트에 대한 내용과 이러한 이벤트가 응용 프로그램의 수명 주기에 어떻게 영향을 미치는지를 참조하세요.
 
 개략적으로 **EnteredBackground** 이벤트를 처리하여 앱이 백그라운드에서 실행되는 동안 실행할 코드를 실행하고 **LeavingBackground**를 처리하여 앱이 포그라운드로 이동한 때를 알게 됩니다.
 
 ## <a name="register-your-background-task-trigger"></a>백그라운드 작업 트리거 등록
 
-In-process 백그라운드 작업은 Out-of-process 백그라운드 작업과 거의 동일하게 등록됩니다. 모든 백그라운드 트리거는 [BackgroundTaskBuilder](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.aspx?f=255&MSPPError=-2147217396)를 사용하여 등록을 시작합니다. 빌더를 사용하면 필요한 모든 값을 하나의 위치에서 설정하여 백그라운드 작업을 등록하기가 쉽습니다.
+In-process 백그라운드 작업은 Out-of-process 백그라운드 작업과 거의 동일하게 등록됩니다. 모든 백그라운드 트리거는 [BackgroundTaskBuilder](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder?f=255&MSPPError=-2147217396)를 사용하여 등록을 시작합니다. 빌더를 사용하면 필요한 모든 값을 하나의 위치에서 설정하여 백그라운드 작업을 등록하기가 쉽습니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -48,16 +48,16 @@ In-process 백그라운드 작업은 Out-of-process 백그라운드 작업과 �
 > ```
 
 > [!NOTE]
-> 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다.
-> 업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 및 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
+> 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 호출해야 합니다.
+> 업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) 및 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
 
-In-process 백그라운드 작업의 경우 `TaskEntryPoint.`를 설정하지 않습니다. 빈 상태로 두면 기본 진입점, [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx)라는 응용 프로그램 개체의 새 보호된 메서드를 사용할 수 있습니다.
+In-process 백그라운드 작업의 경우 `TaskEntryPoint.`를 설정하지 않습니다. 빈 상태로 두면 기본 진입점, [OnBackgroundActivated()](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated)라는 응용 프로그램 개체의 새 보호된 메서드를 사용할 수 있습니다.
 
-트리거가 등록되면 [SetTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.settrigger.aspx) 메서드에 설정된 트리거 유형에 따라 발생합니다. 위 예제에서는 등록된 시간부터 15분 후 발생하는 [TimeTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.timetrigger.aspx)가 사용됩니다.
+트리거가 등록되면 [SetTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.settrigger) 메서드에 설정된 트리거 유형에 따라 발생합니다. 위 예제에서는 등록된 시간부터 15분 후 발생하는 [TimeTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.timetrigger)가 사용됩니다.
 
 ## <a name="add-a-condition-to-control-when-your-task-will-run-optional"></a>작업 실행 시간을 제어하는 조건 추가(옵션)
 
-트리거 이벤트가 발생한 후 작업이 실행될 시간을 제어하는 조건을 추가할 수도 있습니다. 예를 들어 사용자가 있을 때까지 작업이 실행되지 않게 하려면 **UserPresent** 조건을 사용합니다. 가능한 조건 목록은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
+트리거 이벤트가 발생한 후 작업이 실행될 시간을 제어하는 조건을 추가할 수도 있습니다. 예를 들어 사용자가 있을 때까지 작업이 실행되지 않게 하려면 **UserPresent** 조건을 사용합니다. 가능한 조건 목록은 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)을 참조하세요.
 
 다음 샘플 코드에서는 사용자가 있어야 하는 조건을 할당합니다.
 
@@ -68,7 +68,7 @@ In-process 백그라운드 작업의 경우 `TaskEntryPoint.`를 설정하지 �
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>OnBackgroundActivated()에서 백그라운드 작업 코드 배치
 
-에 백그라운드 작업 코드를 입력 [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 발생 하면 백그라운드 트리거가 응답할 수 있습니다. [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396)과 똑같이 **OnBackgroundActivated**를 처리할 수 있습니다. 메서드가 [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) 모든 항목이 포함 된 매개 변수는 합니다 **실행** 메서드 제공 합니다. App.xaml.cs에서 예를 들어:
+에 백그라운드 작업 코드를 입력 [OnBackgroundActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated) 발생 하면 백그라운드 트리거가 응답할 수 있습니다. [IBackgroundTask.Run](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run?f=255&MSPPError=-2147217396)과 똑같이 **OnBackgroundActivated**를 처리할 수 있습니다. 메서드가 [BackgroundActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.backgroundactivatedeventargs) 모든 항목이 포함 된 매개 변수는 합니다 **실행** 메서드 제공 합니다. App.xaml.cs에서 예를 들어:
 
 ``` cs
 using Windows.ApplicationModel.Background;
@@ -114,7 +114,7 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 
 * [Out-of-process-백그라운드 작업을 처리 중인 백그라운드 태스크로 변환](convert-out-of-process-background-task.md)
 * [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
-* [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
+* [백그라운드에서 미디어 재생](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
@@ -131,4 +131,4 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 
 **백그라운드 작업 API 참조**
 
-* [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
+* [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)

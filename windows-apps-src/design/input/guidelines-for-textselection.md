@@ -8,19 +8,19 @@ keywords: 키보드, 텍스트, 입력, 사용자 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9679e6e658e7fa1eb50b41331e7e59ec2115fc14
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fc227904e57577a30eb2d171a060fb69d39b71f0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612508"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363495"
 ---
 # <a name="selecting-text-and-images"></a>텍스트 및 이미지 선택
 
 
 이 문서에서는 텍스트, 이미지 및 컨트롤을 선택하고 조작하는 방법을 설명하고 앱에서 이러한 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 
-> **중요 API**: [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)하십시오 [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
+> **중요 API**: [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
  
 
 
@@ -109,7 +109,7 @@ Windows 선택 상호 작용, 편집 가능한과 편집 불가능 상태를 인
 
 
 **개발자를 위한**
-* [사용자 지정 사용자 상호 작용](https://msdn.microsoft.com/library/windows/apps/mt185599)
+* [사용자 지정 사용자 상호 작용](https://developer.microsoft.com/windows/design/inputs-devices)
 
 **샘플**
 * [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
@@ -124,7 +124,7 @@ Windows 선택 상호 작용, 편집 가능한과 편집 불가능 상태를 인
 * [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
 * [입력: Windows 8 제스처 샘플](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처 (c + +) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [입력: 조작 및 제스처 (C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
 * [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 

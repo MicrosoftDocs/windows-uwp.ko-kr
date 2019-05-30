@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b6ea9fdf2e504e1ceee71658eab308751e1745c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 32366289d51944c3ff30a77dc84602473a3fba45
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601448"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372859"
 ---
 # <a name="getting-started-creating-a-project"></a>시작: 프로젝트 만들기
 
@@ -25,7 +25,7 @@ Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다.
 
 또한 이 [Windows용 앱 빌드 블로그 게시물](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/)은 매우 유용합니다.
 
-(보다 형식적으로 유니버설 Windows 플랫폼 (UWP) 앱 이라고 함)는 Windows 10 용 앱을 만드는 비슷합니다 대신 스토리 보드를 사용 하 여 iOS 앱을 만드는 방법. Windows 10 앱은 종종 생성 여러 페이지를 통해 웹 사이트와 같은 사용자 인터페이스의 다른 부분을 포함 하는 각 페이지. 각 페이지에는 주로 두 개의 연결된 소스 파일이 있습니다. 하나는 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/mt185595) 형식의 사용자 인터페이스를 저장하고, 다른 하나는 소스 코드(대개 C#)를 포함합니다. 사용자가 앱을 조작하면 이러한 페이지 간을 탐색합니다. 이 연습에서는 페이지가 두 개인 앱을 만듭니다.
+(보다 형식적으로 유니버설 Windows 플랫폼 (UWP) 앱 이라고 함)는 Windows 10 용 앱을 만드는 비슷합니다 대신 스토리 보드를 사용 하 여 iOS 앱을 만드는 방법. Windows 10 앱은 종종 생성 여러 페이지를 통해 웹 사이트와 같은 사용자 인터페이스의 다른 부분을 포함 하는 각 페이지. 각 페이지에는 주로 두 개의 연결된 소스 파일이 있습니다. 하나는 [XAML 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview) 형식의 사용자 인터페이스를 저장하고, 다른 하나는 소스 코드(대개 C#)를 포함합니다. 사용자가 앱을 조작하면 이러한 페이지 간을 탐색합니다. 이 연습에서는 페이지가 두 개인 앱을 만듭니다.
 
 **참고**  Windows 10 앱의 중요 한 기능은 동일한 소스 코드와 동일한 API 집합은 플랫폼에 관계 없이 사용할 수 있습니다. iPhone 및 iPad용 유니버설 iOS 앱을 작성할 때는 런타임에 앱이 실행되는 플랫폼을 확인하여 적절히 조치할 수 있습니다. 유사한 방식으로 Windows 10 앱에 알 수, 런타임, 실행 중인 장치입니다. UWP 앱을 사용 하 여는 사용 하지 않아도 \#데스크톱 및 휴대폰을 만들려면 소스 코드에서 ifdef 빌드합니다. Windows 10 앱이 장치에 따라 해당 사용자 인터페이스 컨트롤 지능적으로 사용 하는 편리 하 게 합니다: 예를 들어, 앱 날짜 선택 컨트롤을 참조할 수 있습니다 및 컨트롤은 자동으로 확인 하 고 있는지에 따라 다르게 함수 데스크톱 또는 전화 화면에서 실행 합니다. 그러나 소스 코드는 동일합니다.
 

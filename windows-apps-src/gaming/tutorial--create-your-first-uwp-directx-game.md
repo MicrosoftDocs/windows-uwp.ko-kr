@@ -6,12 +6,12 @@ keywords: DirectX 게임 샘플, 게임 샘플, UWP(유니버설 Windows 플랫�
 ms.date: 12/01/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: dc602e2dd29231c1e6554d7ef55e9666a373fa31
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c2ee2795410c083a6dd460a8537115dc8d20de31
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642868"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367702"
 ---
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>DirectX로 작성된 간단한 UWP(유니버설 Windows 플랫폼) 게임 만들기
 
@@ -32,7 +32,7 @@ UWP DirectX 게임의 기본 개념 및 구성 요소를 사용하고 DirectX로
 -   기본 선형 대수 및 뉴턴 물리학 개념
 -   기본 그래픽 프로그래밍 용어
 -   기본 Windows 프로그래밍 개념
--   [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) 및 [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh404569) API에 대한 기본적인 지식
+-   [Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) 및 [Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/how-to-use-direct3d-11) API에 대한 기본적인 지식
 
 ##  <a name="direct3d-uwp-shooting-game-sample"></a>Direct3D UWP 슈팅 게임 샘플
 
@@ -61,5 +61,5 @@ UWP DirectX 게임의 기본 개념 및 구성 요소를 사용하고 DirectX로
 | [렌더링 프레임 워크 II: 게임 렌더링](tutorial-game-rendering.md) | 렌더링 항목의 두 번째 파트에서는 렌더링 수행 전에 필요한 데이터를 준비하는 방법을 알아봅니다. |
 | [사용자 인터페이스를 추가 합니다.](tutorial--adding-a-user-interface.md) | 간단한 메뉴 옵션과 HUD(주의 표시) 구성 요소를 추가하여 플레이어에게 피드백을 제공합니다. |
 | [컨트롤 추가](tutorial--adding-controls.md) | 게임&mdash; 기본 터치, 마우스 및 게임 컨트롤러 컨트롤에 이동 보기 컨트롤을 추가합니다. |
-| [소리를 추가 합니다.](tutorial--adding-sound.md) | [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) API를 사용하여 게임에 대한 소리를 만드는 방법을 자세히 알아보세요. |
+| [소리를 추가 합니다.](tutorial--adding-sound.md) | [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-introduction) API를 사용하여 게임에 대한 소리를 만드는 방법을 자세히 알아보세요. |
 | [게임 샘플 확장](tutorial-resources.md) | XAML을 사용한 오버레이 생성을 포함해 DirectX 게임 개발에 대한 정보를 넓힐 수 있는 리소스입니다. |

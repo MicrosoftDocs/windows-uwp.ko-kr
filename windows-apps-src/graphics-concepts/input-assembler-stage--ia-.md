@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c5e1c294da2b4ef24ff8f62b686890cb8c69c06
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 70957cbce10da25943b3c6347ccbbc81aafb5739
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646288"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370771"
 ---
 # <a name="input-assembler-ia-stage"></a>IA(입력 어셈블러) 단계
 
@@ -22,7 +22,7 @@ IA(입력 어셈블러) 단계는 의미 체계 ID를 포함해 삼각형, 직�
 ## <a name="span-idpurpose-and-usesspanspan-idpurpose-and-usesspanspan-idpurpose-and-usesspanpurpose-and-uses"></a><span id="Purpose-and-uses"></span><span id="purpose-and-uses"></span><span id="PURPOSE-AND-USES"></span>용도 사용
 
 
-IA(입력 어셈블러) 단계를 사용하는 이유는 사용자가 채운 버퍼에서 기본 데이터(점, 직선 및 삼각형)를 읽고 다른 파이프라인 단계에서 사용할 원형에 조합하거나 [시스템 생성 값 ](https://msdn.microsoft.com/library/windows/desktop/bb509647)을 연결하여 셰이더의 효율을 높이는 것입니다. 시스템 생성 값은 의미 체계라고도 하는 텍스트 문자열입니니다. 프로그래밍 가능한 셰이더 단계는 시스템 생성 값(기본 ID, 인스턴스 ID 또는 꼭짓점 ID 등)을 사용하는 공통 셰이더 핵심으로부터 구성되므로, 셰이더 단계는 아직 처리되지 않은 원형, 인스턴스 또는 꼭짓점만 처리할 수 있습니다.
+IA(입력 어셈블러) 단계를 사용하는 이유는 사용자가 채운 버퍼에서 기본 데이터(점, 직선 및 삼각형)를 읽고 다른 파이프라인 단계에서 사용할 원형에 조합하거나 [시스템 생성 값 ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics)을 연결하여 셰이더의 효율을 높이는 것입니다. 시스템 생성 값은 의미 체계라고도 하는 텍스트 문자열입니니다. 프로그래밍 가능한 셰이더 단계는 시스템 생성 값(기본 ID, 인스턴스 ID 또는 꼭짓점 ID 등)을 사용하는 공통 셰이더 핵심으로부터 구성되므로, 셰이더 단계는 아직 처리되지 않은 원형, 인스턴스 또는 꼭짓점만 처리할 수 있습니다.
 
 IA 단계는 여러 [기본 형식](primitive-topologies.md)(선 목록, 삼각형 스트립 또는 인접한 원형 등)에 꼭짓점을 조합할 수 있습니다. 인접한 삼각형 목록, 인접한 선 목록 등의 기본 형식은 [GS(기하 도형 셰이더) 단계](geometry-shader-stage--gs-.md)를 지원합니다.
 
@@ -35,7 +35,7 @@ IA 단계에 인접 데이터를 출력하라는 요청이 접수된 경우, 입
 
 IA 단계는 메모리: 기본 데이터(점, 선 및/또는 삼각형), 사용자가 채운 버퍼에서 데이터를 읽어 들입니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
 
 
 IA 단계는 데이터를 원형으로 조합하고, 시스템 생성 값을 연결하며, [꼭짓점 셰이더(VS) 단계](vertex-shader-stage--vs-.md) 및 이후 다른 파이프라인 단계에서 사용할 원형으로 출력합니다.
@@ -61,7 +61,7 @@ IA 단계는 데이터를 원형으로 조합하고, 시스템 생성 값을 연
 </tr>
 <tr class="even">
 <td align="left"><p><a href="using-system-generated-values.md">시스템에서 생성 된 값을 사용 하 여</a></p></td>
-<td align="left"><p>시스템 생성 값은 셰이더 작업에서 어느 정도의 효율성을 허용하기 위해 IA(입력 어셈블러) 단계(사용자가 제공한 입력 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509647">의미 체계</a> 기반)에서 생성됩니다. 후속 셰이더 단계에서는 인스턴스 ID(<a href="vertex-shader-stage--vs-.md">VS(꼭짓점 셰이더) 단계</a>에 표시), 꼭짓점 ID(VS에 표시) 또는 기본 ID(<a href="geometry-shader-stage--gs-.md">GS(기하 도형 셰이더) 단계</a>/<a href="pixel-shader-stage--ps-.md">PS(픽셀 셰이더) 단계</a>에 표시)와 같은 데이터를 연결하여 해당 단계에서 처리를 최적화하는 시스템 값을 찾을 수 있습니다.</p></td>
+<td align="left"><p>시스템 생성 값은 셰이더 작업에서 어느 정도의 효율성을 허용하기 위해 IA(입력 어셈블러) 단계(사용자가 제공한 입력 <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics">의미 체계</a> 기반)에서 생성됩니다. 후속 셰이더 단계에서는 인스턴스 ID(<a href="vertex-shader-stage--vs-.md">VS(꼭짓점 셰이더) 단계</a>에 표시), 꼭짓점 ID(VS에 표시) 또는 기본 ID(<a href="geometry-shader-stage--gs-.md">GS(기하 도형 셰이더) 단계</a>/<a href="pixel-shader-stage--ps-.md">PS(픽셀 셰이더) 단계</a>에 표시)와 같은 데이터를 연결하여 해당 단계에서 처리를 최적화하는 시스템 값을 찾을 수 있습니다.</p></td>
 </tr>
 </tbody>
 </table>

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b30cd39a4440a1ade1ea0dda5a35d3f7c15f963
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 471c2851f72027c364fdd0c9c295c8c9babe17c5
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615678"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366178"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>응용 프로그램 매니페스트에서 백그라운드 작업 선언
 
@@ -20,8 +20,8 @@ ms.locfileid: "57615678"
 
 **중요 한 Api**
 
--   [**BackgroundTasks 스키마**](https://msdn.microsoft.com/library/windows/apps/br224794)
--   [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
+-   [**BackgroundTasks 스키마**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다.
 
@@ -90,7 +90,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 2.  Task Type 특성 목록을 변경하여 이 백그라운드 작업과 함께 사용된 작업 등록 유형을 나타냅니다. 백그라운드 작업을 여러 트리거 유형과 함께 등록할 경우 유형별로 다른 Task 요소 및 Type 특성을 추가합니다.
 
-    **참고**  있는지 각 트리거 유형에 나열 하려면 사용 중인 또는 백그라운드 작업 선언 되지 않은 트리거 형식을 사용 하 여 등록 되지 것입니다 (합니다 [ **등록** ](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드는 실패 및 예외를 throw) 합니다.
+    **참고**  있는지 각 트리거 유형에 나열 하려면 사용 중인 또는 백그라운드 작업 선언 되지 않은 트리거 형식을 사용 하 여 등록 되지 것입니다 (합니다 [ **등록** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) 메서드는 실패 및 예외를 throw) 합니다.
 
     이 조각 예에서는 시스템 이벤트 트리거 및 푸시 알림 사용을 나타냅니다.
 
@@ -171,7 +171,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 </Extensions>
 ```
 
-**EntryPoint**를 지정하면 응용 프로그램에서 트리거가 실행될 때 지정된 메서드에 대한 콜백을 받습니다. **EntryPoint**를 지정하지 않으면 응용 프로그램에서 [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx)를 통해 콜백을 받습니다.  자세한 내용은 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요.
+**EntryPoint**를 지정하면 응용 프로그램에서 트리거가 실행될 때 지정된 메서드에 대한 콜백을 받습니다. **EntryPoint**를 지정하지 않으면 응용 프로그램에서 [OnBackgroundActivated()](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated)를 통해 콜백을 받습니다.  자세한 내용은 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요.
 
 ### <a name="specify-where-your-background-task-runs-with-the-resourcegroup-attribute"></a>어디에서 ResourceGroup 특성을 사용하여 백그라운드 작업을 실행할지 지정합니다.
 

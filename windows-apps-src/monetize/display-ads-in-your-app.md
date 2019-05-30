@@ -6,12 +6,12 @@ ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 배너, 광고 관리, 중간 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 84ed7f5f1eb65f06a47e92de962777ca9d3c50c7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0ef3050e2583674bf6cd5a601dbde1500f6b457e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658498"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372549"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 
@@ -48,7 +48,7 @@ Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫
     <br/>
     <a href="best-practices-for-ads-in-apps.md">모범 사례</a>
     <br/>
-    <a href="https://msdn.microsoft.com/en-us/library/windows/apps/mt691884.aspx">API 참조</a>
+    <a href="https://docs.microsoft.com/uwp/api/overview/advertising">API 참조</a>
     </td>
 </tr>
 </tbody>
@@ -108,7 +108,7 @@ UWP 앱의 광고 조정을 사용하기 시작하려면, 광고 단위의 [광�
 
 Microsoft Advertising SDK 사용에 대한 추가 도움말은 다음 리소스를 사용하세요.
 
-|  작업    | 리소스 |               
+|  태스크    | Resource |               
 |----------|-------|
 | 버그 보고 또는 광고 지원 받기     | [지원 페이지](https://developer.microsoft.com/en-us/windows/support)를 방문하여 **인앱 광고**를 선택합니다.        |
 | 커뮤니티 지원 받기     | [포럼](https://go.microsoft.com/fwlink/p/?LinkId=401266)을 방문하세요.       |

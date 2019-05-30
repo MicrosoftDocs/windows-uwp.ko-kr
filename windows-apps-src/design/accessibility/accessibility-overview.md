@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d0c3bea228cae8d9482a8e0cb24c958e36992848
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 001f7cb641b7bb210897ef9406c2324bbc20a2bd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649738"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362073"
 ---
 # <a name="accessibility-overview"></a>접근성 개요  
 
@@ -44,7 +44,7 @@ XAML용 컨트롤은 기본적으로 키보드를 지원할 뿐만 아니라 및
 <span id="UI_AUTOMATION"/>
 
 ## <a name="ui-automation"></a>UI 자동화  
-접근성 지원은 주로 Microsoft UI 자동화 프레임워크에 대한 통합 지원에서 제공됩니다. 이 지원은 기본 클래스, 컨트롤 형식에 대한 클래스 구현의 기본 제공 동작, UI 자동화 공급자 API의 인터페이스 표현 등을 통해 제공됩니다. 각 컨트롤 클래스에서는 컨트롤의 역할 및 콘텐츠를 UI 자동화 클라이언트에 보고하는 자동화 피어 및 자동화 패턴이라는 UI 자동화 개념을 사용합니다. 이 앱은 UI 자동화에서 최상위 창으로 처리되며, UI 자동화 프레임워크를 통해 해당 앱 창에 포함된 모든 접근성 관련 콘텐츠를 UI 자동화 클라이언트에서 사용할 수 있습니다. UI 자동화에 대한 자세한 내용은 [UI 자동화 개요](https://msdn.microsoft.com/library/windows/desktop/Ee684076)를 참조하세요.
+접근성 지원은 주로 Microsoft UI 자동화 프레임워크에 대한 통합 지원에서 제공됩니다. 이 지원은 기본 클래스, 컨트롤 형식에 대한 클래스 구현의 기본 제공 동작, UI 자동화 공급자 API의 인터페이스 표현 등을 통해 제공됩니다. 각 컨트롤 클래스에서는 컨트롤의 역할 및 콘텐츠를 UI 자동화 클라이언트에 보고하는 자동화 피어 및 자동화 패턴이라는 UI 자동화 개념을 사용합니다. 이 앱은 UI 자동화에서 최상위 창으로 처리되며, UI 자동화 프레임워크를 통해 해당 앱 창에 포함된 모든 접근성 관련 콘텐츠를 UI 자동화 클라이언트에서 사용할 수 있습니다. UI 자동화에 대한 자세한 내용은 [UI 자동화 개요](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-uiautomationoverview)를 참조하세요.
 
 <span id="Assistive_technology"/>
 <span id="assistive_technology"/>
@@ -83,7 +83,7 @@ XAML용 컨트롤은 기본적으로 키보드를 지원할 뿐만 아니라 및
 <span id="KEYBOARD_SUPPORT"/>
 
 ## <a name="keyboard-support"></a>키보드 지원  
-우수한 키보드 지원을 구현하려면 응용 프로그램의 각 부분을 키보드로 사용할 수 있어야 합니다. 앱에서 대부분 표준 컨트롤을 사용하고 사용자 지정 컨트롤을 사용하지 않는 경우 이미 최적의 접근성 환경을 구현하고 있는 것입니다. 기본 XAML 컨트롤 모델은 탭 탐색, 텍스트 입력 및 컨트롤별 지원을 비롯한 키보드 지원을 기본적으로 제공합니다. 레이아웃 컨테이너(예: 패널)로 사용되는 요소는 레이아웃 순서를 사용하여 기본 탭 순서를 설정합니다. 종종 해당 순서는 UI의 접근성 있는 표현에 사용할 올바른 탭 순서가 됩니다. 데이터를 표시하는 데 [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) 컨트롤을 사용하는 경우 화살표 키 탐색이 기본 제공됩니다. 또는 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) 컨트롤을 사용하는 경우 이 컨트롤에서 단추 활성화를 위해 스페이스바나 Enter 키를 이미 처리합니다.
+우수한 키보드 지원을 구현하려면 응용 프로그램의 각 부분을 키보드로 사용할 수 있어야 합니다. 앱에서 대부분 표준 컨트롤을 사용하고 사용자 지정 컨트롤을 사용하지 않는 경우 이미 최적의 접근성 환경을 구현하고 있는 것입니다. 기본 XAML 컨트롤 모델은 탭 탐색, 텍스트 입력 및 컨트롤별 지원을 비롯한 키보드 지원을 기본적으로 제공합니다. 레이아웃 컨테이너(예: 패널)로 사용되는 요소는 레이아웃 순서를 사용하여 기본 탭 순서를 설정합니다. 종종 해당 순서는 UI의 접근성 있는 표현에 사용할 올바른 탭 순서가 됩니다. 데이터를 표시하는 데 [**ListBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox) 및 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) 컨트롤을 사용하는 경우 화살표 키 탐색이 기본 제공됩니다. 또는 [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 컨트롤을 사용하는 경우 이 컨트롤에서 단추 활성화를 위해 스페이스바나 Enter 키를 이미 처리합니다.
 
 탭 순서 및 키 기반 활성화 또는 탐색을 포함하여 키보드 지원의 모든 측면에 대한 자세한 내용은 [키보드 접근성](keyboard-accessibility.md)을 참조하세요.
 
@@ -92,7 +92,7 @@ XAML용 컨트롤은 기본적으로 키보드를 지원할 뿐만 아니라 및
 <span id="MEDIA_AND_CAPTIONING"/>
 
 ## <a name="media-and-captioning"></a>미디어 및 캡션  
-일반적으로 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) 개체를 통해 시청각 미디어를 표시합니다. **MediaElement** API를 사용하여 미디어 재생을 제어할 수 있습니다. 접근성을 목적으로 하는 경우 사용자가 필요에 맞게 미디어를 재생, 일시 중지, 중지할 수 있도록 하는 컨트롤을 제공합니다. 경우에 따라 미디어에는 자막이나 내레이터 설명을 포함하는 대체 오디오 트랙과 같이 접근성을 위한 추가 구성 요소가 포함됩니다.
+일반적으로 [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 개체를 통해 시청각 미디어를 표시합니다. **MediaElement** API를 사용하여 미디어 재생을 제어할 수 있습니다. 접근성을 목적으로 하는 경우 사용자가 필요에 맞게 미디어를 재생, 일시 중지, 중지할 수 있도록 하는 컨트롤을 제공합니다. 경우에 따라 미디어에는 자막이나 내레이터 설명을 포함하는 대체 오디오 트랙과 같이 접근성을 위한 추가 구성 요소가 포함됩니다.
 
 <span id="Accessible_text"/>
 <span id="accessible_text"/>
@@ -121,7 +121,7 @@ UI 컨트롤에서는 테마의 XAML 리소스 사전 일부로 정의되는 시
 
 대부분의 경우 사용자층의 폭을 넓히기 위해 여러 가지 기술을 사용하여 필요한 정보를 전달할 수 있습니다. 예를 들어 색맹인 사용자에게는 아이콘과 색 정보를 함께 사용하여 정보를 강조 표시할 수 있고, 청각 장애가 있는 사용자에게는 소리 효과와 함께 시각 경고를 표시할 수 있습니다.
 
-원할 경우 필요하지 않은 요소와 애니메이션이 완전히 제거된 접근성 있는 대체 사용자 인터페이스 요소를 제공할 수 있고, 사용자 환경을 간소화할 수 있도록 다른 단순 기능을 제공할 수 있습니다. 다음 코드 예제에서는 사용자 설정에 따라 한 [**UserControl**](https://msdn.microsoft.com/library/windows/apps/BR227647) 인스턴스를 다른 인스턴스를 대신하여 표시하는 방법을 보여 줍니다.
+원할 경우 필요하지 않은 요소와 애니메이션이 완전히 제거된 접근성 있는 대체 사용자 인터페이스 요소를 제공할 수 있고, 사용자 환경을 간소화할 수 있도록 다른 단순 기능을 제공할 수 있습니다. 다음 코드 예제에서는 사용자 설정에 따라 한 [**UserControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) 인스턴스를 다른 인스턴스를 대신하여 표시하는 방법을 보여 줍니다.
 
 XAML
 ```xml
@@ -181,18 +181,18 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_CUSTOM_CONTROLS"/>
 
 ## <a name="assistive-technology-support-in-custom-controls"></a>사용자 지정 컨트롤의 보조 기술 지원  
-사용자 지정 컨트롤을 만들 때 접근성을 지원하기 위해서는 [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) 하위 클래스도 하나 이상 구현하거나 확장하는 것이 좋습니다. 이 경우 기본 컨트롤 클래스에서 사용된 것과 동일한 피어 클래스를 사용하기만 하면 파생 클래스에 대한 기본 수준의 자동화 지원이 적절합니다. 그러나 실제로 테스트해야 하며, 피어가 새 컨트롤 클래스의 클래스 이름을 올바르게 보고할 수 있도록 피어를 구현하는 것이 좋습니다. 사용자 지정 자동화 피어 구현은 몇 단계로 이루어집니다. 자세한 내용은 [사용자 지정 자동화 피어](custom-automation-peers.md)를 참조하세요.
+사용자 지정 컨트롤을 만들 때 접근성을 지원하기 위해서는 [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 하위 클래스도 하나 이상 구현하거나 확장하는 것이 좋습니다. 이 경우 기본 컨트롤 클래스에서 사용된 것과 동일한 피어 클래스를 사용하기만 하면 파생 클래스에 대한 기본 수준의 자동화 지원이 적절합니다. 그러나 실제로 테스트해야 하며, 피어가 새 컨트롤 클래스의 클래스 이름을 올바르게 보고할 수 있도록 피어를 구현하는 것이 좋습니다. 사용자 지정 자동화 피어 구현은 몇 단계로 이루어집니다. 자세한 내용은 [사용자 지정 자동화 피어](custom-automation-peers.md)를 참조하세요.
 
 <span id="Assistive_technology_support_in_apps_that_support_XAML___Microsoft_DirectX_interop"/>
 <span id="assistive_technology_support_in_apps_that_support_xaml___microsoft_directx_interop"/>
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_APPS_THAT_SUPPORT_XAML___MICROSOFT_DIRECTX_INTEROP"/>
 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>XAML/Microsoft DirectX interop를 지원하는 앱의 보조 기술 지원  
-XAML UI([**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn252834) 또는 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/Hh702041) 사용)에서 호스트되는 Microsoft DirectX 콘텐츠에는 기본적으로 액세스할 수 없습니다. [XAML SwapChainPanel DirectX interop 샘플](https://go.microsoft.com/fwlink/p/?LinkID=309155)에서는 호스트된 DirectX 콘텐츠에 대한 UI 자동화 피어를 만드는 방법을 보여 줍니다. 이 방법을 사용하면 UI 자동화를 통해 호스트된 콘텐츠에 액세스할 수 있습니다.
+XAML UI([**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 또는 [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) 사용)에서 호스트되는 Microsoft DirectX 콘텐츠에는 기본적으로 액세스할 수 없습니다. [XAML SwapChainPanel DirectX interop 샘플](https://go.microsoft.com/fwlink/p/?LinkID=309155)에서는 호스트된 DirectX 콘텐츠에 대한 UI 자동화 피어를 만드는 방법을 보여 줍니다. 이 방법을 사용하면 UI 자동화를 통해 호스트된 콘텐츠에 액세스할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목  
-* [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
-* [내게 필요한 옵션에 대 한 디자인](https://msdn.microsoft.com/library/windows/apps/Hh700407)
+* [**Windows.UI.Xaml.Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
+* [내게 필요한 옵션에 대 한 디자인](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
 * [XAML 액세스 가능성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
-* [접근성](accessibility.md)
+* [액세스 가능성](accessibility.md)
 * [내레이터를 사용 하 여 시작](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

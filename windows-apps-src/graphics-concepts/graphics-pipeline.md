@@ -8,19 +8,19 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 55621cec768e0aac680c3a84fd803e591459a97d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1b931268dc20f40c1bc1d7c700f346d29d6aa9d6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605438"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370608"
 ---
 # <a name="graphics-pipeline"></a>그래픽 파이프라인
 
 
 Direct3D 그래픽 파이프라인은 실시간 게임 응용 프로그램의 그래픽을 생성하도록 설계되었습니다. 데이터는 각각의 구성 가능하거나 프로그래밍 가능한 단계를 통해 입력에서 출력으로 흐릅니다.
 
-모든 단계는 Direct3D API를 사용하여 구성할 수 있습니다. 공통 셰이더 코어(모서리가 둥근 사각형 블록)를 사용하는 단계는 [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561) 프로그래밍 언어를 사용하여 프로그래밍할 수 있습니다. 이를 통해 파이프라인이 매우 유연하고 적응력이 높아집니다.
+모든 단계는 Direct3D API를 사용하여 구성할 수 있습니다. 공통 셰이더 코어(모서리가 둥근 사각형 블록)를 사용하는 단계는 [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl) 프로그래밍 언어를 사용하여 프로그래밍할 수 있습니다. 이를 통해 파이프라인이 매우 유연하고 적응력이 높아집니다.
 
 가장 일반적으로 사용되는 것은 VS(꼭짓점 셰이더)와 PS(픽셀 셰이더) 단계입니다. 이러한 셰이더 단계를 제공하지 않으면 기본 무동작, 통과 꼭짓점 및 픽셀 셰이더가 사용됩니다.
 
@@ -48,7 +48,7 @@ Direct3D 그래픽 파이프라인은 실시간 게임 응용 프로그램의 �
 
 ## <a name="geometry-shader-stage"></a>기하 도형 셰이더 단계
 
-|-|-| |목적|[GS(기하 도형 셰이더) 단계](geometry-shader-stage--gs-.md)는 기본 요소인 삼각형, 선, 점 전체를 인접한 꼭짓점과 함께 처리합니다. 이 단계는 기하 도형 확장 및 축소를 지원합니다. 이는 점 스프라이트 확장, 동적 입자 시스템, 털/핀 생성, 섀도 볼륨 생성, 단일 패스 큐브맵으로 렌더링, 기본 요소별 재질 바꾸기, 기본 요소별 재질 설정을 포함한 알고리즘에 유용합니다. 여기에는 무게 중심 좌표를 기본 요소 데이터로 생성하는 기능이 포함되어 있어 픽셀 셰이더가 사용자 지정 특성 보간을 수행할 수 있습니다. | |입력|한 꼭짓점에서만 작동하는 꼭짓점 셰이더와 달리, 기하 도형 셰이더의 입력은 전체 기본 요소에 대한 꼭짓점(삼각형의 세 꼭짓점, 선의 두 꼭짓점, 점의 한 꼭짓점)입니다.| |출력|GS(기하 도형 셰이더) 단계는 선택한 단일 토폴로지를 형성하는 여러 꼭짓점을 출력할 수 있습니다. 사용 가능한 기하 도형 셰이더 출력 토폴로지는 <strong>tristrip</strong>, <strong>linestrip</strong> 및 <strong>pointlist</strong>입니다. 내보내는 기본 요소의 숫자는 기하 도형 셰이더 호출마다 자유롭게 변할 수 있으나, 내보낼 수 있는 최대 꼭짓점의 수는 고정적으로 선언될 수 있습니다. 기하 도형 셰이더 호출에서 내보내는 스트립 길이는 임의의 길이가 될 수 있으며, 새 스트립은 [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660) HLSL 함수를 통해 만들 수 있습니다.|
+|-|-| |목적|[GS(기하 도형 셰이더) 단계](geometry-shader-stage--gs-.md)는 기본 요소인 삼각형, 선, 점 전체를 인접한 꼭짓점과 함께 처리합니다. 이 단계는 기하 도형 확장 및 축소를 지원합니다. 이는 점 스프라이트 확장, 동적 입자 시스템, 털/핀 생성, 섀도 볼륨 생성, 단일 패스 큐브맵으로 렌더링, 기본 요소별 재질 바꾸기, 기본 요소별 재질 설정을 포함한 알고리즘에 유용합니다. 여기에는 무게 중심 좌표를 기본 요소 데이터로 생성하는 기능이 포함되어 있어 픽셀 셰이더가 사용자 지정 특성 보간을 수행할 수 있습니다. | |입력|한 꼭짓점에서만 작동하는 꼭짓점 셰이더와 달리, 기하 도형 셰이더의 입력은 전체 기본 요소에 대한 꼭짓점(삼각형의 세 꼭짓점, 선의 두 꼭짓점, 점의 한 꼭짓점)입니다.| |출력|GS(기하 도형 셰이더) 단계는 선택한 단일 토폴로지를 형성하는 여러 꼭짓점을 출력할 수 있습니다. 사용 가능한 기하 도형 셰이더 출력 토폴로지는 <strong>tristrip</strong>, <strong>linestrip</strong> 및 <strong>pointlist</strong>입니다. 내보내는 기본 요소의 숫자는 기하 도형 셰이더 호출마다 자유롭게 변할 수 있으나, 내보낼 수 있는 최대 꼭짓점의 수는 고정적으로 선언될 수 있습니다. 기하 도형 셰이더 호출에서 내보내는 스트립 길이는 임의의 길이가 될 수 있으며, 새 스트립은 [RestartStrip](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-so-restartstrip) HLSL 함수를 통해 만들 수 있습니다.|
 
 ## <a name="stream-output-stage"></a>스트림 출력 단계
 

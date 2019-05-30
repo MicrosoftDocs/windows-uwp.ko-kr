@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 그림자 맵, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: d0e661065f86ac173a6ce323281c80fc964d0a4c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1087a063fa19bea716b86143c10097711cef9205
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646368"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367904"
 ---
 # <a name="support-shadow-maps-on-a-range-of-hardware"></a>다양한 하드웨어에서 그림자 맵 지원
 
@@ -108,7 +108,7 @@ return float4(input.color * (light + shadow), 1.f);
 ## <a name="shadow-buffer-size"></a>그림자 버퍼 크기
 
 
-더 큰 그림자 맵은 농담이 고르지 않게 보이지 않지만 그래픽 메모리에서 공간을 더 차지합니다. 게임에서 여러 그림자 맵 크기로 실험하고 여러 형식의 장치 및 여러 표시 크기의 결과를 확인합니다. 그래픽 메모리를 더 적게 사용하면서 더 나은 결과를 내는 중첩된 그림자 맵과 같은 최적화를 고려하세요. [그림자 깊이 맵을 향상시키기 위한 일반적인 기법](https://msdn.microsoft.com/library/windows/desktop/ee416324)을 참조하세요.
+더 큰 그림자 맵은 농담이 고르지 않게 보이지 않지만 그래픽 메모리에서 공간을 더 차지합니다. 게임에서 여러 그림자 맵 크기로 실험하고 여러 형식의 장치 및 여러 표시 크기의 결과를 확인합니다. 그래픽 메모리를 더 적게 사용하면서 더 나은 결과를 내는 중첩된 그림자 맵과 같은 최적화를 고려하세요. [그림자 깊이 맵을 향상시키기 위한 일반적인 기법](https://docs.microsoft.com/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps)을 참조하세요.
 
 ## <a name="shadow-buffer-depth"></a>그림자 버퍼 깊이
 

@@ -6,32 +6,32 @@ ms.date: 02/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bed81def33eedb79619b49ff698a3f45f31bdb62
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bbc0c7c695a99354ee389118087773440b60fb20
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615898"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366278"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>시작 화면을 더 오래 표시
 
 **중요 한 Api**
 
--   [SplashScreen 클래스](https://msdn.microsoft.com/library/windows/apps/br224763)
--   [Window.SizeChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/br209055)
--   [Application.OnLaunched 메서드](https://msdn.microsoft.com/library/windows/apps/br242335)
+-   [SplashScreen 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen)
+-   [Window.SizeChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.sizechanged)
+-   [Application.OnLaunched 메서드](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched)
 
 앱의 연장된 시작 화면을 만들어 시작 화면을 더 오랫동안 표시합니다. 이 연장된 화면은 앱을 시작할 때 표시되는 시작 화면을 모방하지만 사용자 지정할 수 있습니다. 실시간 로드 정보를 표시할지 또는 앱에 초기 UI를 준비할 추가 시간을 제공할지에 관계없이 연장된 시작 화면을 사용하여 시작 환경을 정의할 수 있습니다.
 
 > [!NOTE]
-> 이 항목의 "확장된 시작 화면" 문구를 오랜된 기간에 대 한 화면에 있는 시작 화면을 가리킵니다. [SplashScreen](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스에서 파생되는 하위 클래스를 의미하는 것은 아닙니다.
+> 이 항목의 "확장된 시작 화면" 문구를 오랜된 기간에 대 한 화면에 있는 시작 화면을 가리킵니다. [SplashScreen](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) 클래스에서 파생되는 하위 클래스를 의미하는 것은 아닙니다.
 
 이러한 권장 사항을 따라 연장된 시작 화면이 기본 시작 화면을 정확하게 모방하도록 합니다.
 
 -   연장된 시작 화면 페이지가 앱 매니페스트의 시작 화면에 대해 지정된 이미지(앱 시작 화면 이미지)와 일치하는 620 x 300 픽셀 이미지를 사용해야 합니다. Microsoft Visual Studio 2015 시작 화면 설정에 저장 됩니다는 **시작 화면** 섹션을 **시각적 자산** 앱 매니페스트 (Package.appxmanifest 파일)의 탭 합니다.
 -   연장된 시작 화면은 앱 매니페스트에서 시작 화면에 대해 지정된 배경색(앱 시작 화면 배경)과 일치하는 배경색을 사용해야 합니다.
--   코드에서 [SplashScreen](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스를 사용하여 기본 시작 화면과 동일한 화면 좌표에 앱 시작 화면 이미지를 배치해야 합니다.
--   [SplashScreen](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스를 통해 연장된 시작 화면의 항목 위치를 변경하여 코드에서 화면이 회전되거나 앱이 화면의 다른 앱으로 이동되는 경우 등의 창 크기 조정 이벤트에 응답해야 합니다.
+-   코드에서 [SplashScreen](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) 클래스를 사용하여 기본 시작 화면과 동일한 화면 좌표에 앱 시작 화면 이미지를 배치해야 합니다.
+-   [SplashScreen](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) 클래스를 통해 연장된 시작 화면의 항목 위치를 변경하여 코드에서 화면이 회전되거나 앱이 화면의 다른 앱으로 이동되는 경우 등의 창 크기 조정 이벤트에 응답해야 합니다.
 
 기본 시작 화면을 효과적으로 모방하는 연장된 시작 화면을 만들려면 다음 단계를 수행합니다.
 
@@ -53,12 +53,12 @@ ms.locfileid: "57615898"
 
 ExtendedSplash.xaml 파일에서 다음을 수행합니다.
 
--   변경 된 [백그라운드](https://msdn.microsoft.com/library/windows/apps/br209396) 기본값의 속성 [표](https://msdn.microsoft.com/library/windows/apps/br242704) 앱 매니페스트에 앱의 시작 화면에 대해 설정한 배경색과 일치 하는 요소 (에서 **시각적 자산**Package.appxmanifest 파일의 섹션). 기본 시작 화면 색상은 연한 회색 (16 진수 값 \#464646). 이 **Grid** 요소는 기본적으로 새로운 **빈 페이지**를 만들 때 제공됩니다. **Grid**를 사용하지 않아도 됩니다. 연장된 시작 화면을 빌드하기 위해 편의상 사용된 것입니다.
--   [Grid](https://msdn.microsoft.com/library/windows/apps/br242704)에 [Canvas](https://msdn.microsoft.com/library/windows/apps/br209267) 요소를 추가합니다. 이 **Canvas**를 사용하여 연장된 시작 화면 이미지를 배치합니다.
--   [Canvas](https://msdn.microsoft.com/library/windows/apps/br209267)에 [Image](https://msdn.microsoft.com/library/windows/apps/br242752) 요소를 추가합니다. 기본 시작 화면에 대해 선택한 것과 동일한 600x320 픽셀 이미지를 연장된 시작 화면에 사용합니다.
--   (옵션) 진행률 컨트롤을 추가하여 사용자에게 앱이 로드되고 있음을 표시합니다. 이 항목에서는 확정되었거나 확정되지 않은 [ProgressBar](https://msdn.microsoft.com/library/windows/apps/br227529) 대신 [ProgressRing](https://msdn.microsoft.com/library/windows/apps/br227538)을 추가합니다.
+-   변경 된 [백그라운드](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.backgroundproperty) 기본값의 속성 [표](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 앱 매니페스트에 앱의 시작 화면에 대해 설정한 배경색과 일치 하는 요소 (에서 **시각적 자산**Package.appxmanifest 파일의 섹션). 기본 시작 화면 색상은 연한 회색 (16 진수 값 \#464646). 이 **Grid** 요소는 기본적으로 새로운 **빈 페이지**를 만들 때 제공됩니다. **Grid**를 사용하지 않아도 됩니다. 연장된 시작 화면을 빌드하기 위해 편의상 사용된 것입니다.
+-   [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)에 [Canvas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 요소를 추가합니다. 이 **Canvas**를 사용하여 연장된 시작 화면 이미지를 배치합니다.
+-   [Canvas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas)에 [Image](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) 요소를 추가합니다. 기본 시작 화면에 대해 선택한 것과 동일한 600x320 픽셀 이미지를 연장된 시작 화면에 사용합니다.
+-   (옵션) 진행률 컨트롤을 추가하여 사용자에게 앱이 로드되고 있음을 표시합니다. 이 항목에서는 확정되었거나 확정되지 않은 [ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar) 대신 [ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing)을 추가합니다.
 
-다음 예제는 [그리드](https://msdn.microsoft.com/library/windows/apps/br242704) 이러한 추가 기능 및 변경 합니다.
+다음 예제는 [그리드](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 이러한 추가 기능 및 변경 합니다.
 
 ```xaml
     <Grid Background="#464646">
@@ -70,7 +70,7 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
 ```
 
 > [!NOTE]
-> 너비를 설정 하는이 예제는 [ProgressRing](https://msdn.microsoft.com/library/windows/apps/br227538) 20입니다. 수동으로 너비를 앱에 적합한 값으로 설정할 수 있지만 20픽셀 미만의 너비에서는 컨트롤이 렌더링되지 않습니다.
+> 너비를 설정 하는이 예제는 [ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing) 20입니다. 수동으로 너비를 앱에 적합한 값으로 설정할 수 있지만 20픽셀 미만의 너비에서는 컨트롤이 렌더링되지 않습니다.
 
 ## <a name="essential-code-for-an-extended-splash-screen-class"></a>연장된 시작 화면 클래스의 필수 코드
 
@@ -81,7 +81,7 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
 
 1.  **필요한 네임 스페이스를 추가 합니다.**
 
-    다음 네임 스페이스를 추가 해야 **ExtendedSplash.xaml.cs** 액세스 하는 [SplashScreen](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스를 [Rect](https://docs.microsoft.com/uwp/api/windows.foundation.rect) 구조체 및 [ Window.SizeChanged](https://msdn.microsoft.com/library/windows/apps/br209055) 이벤트입니다.
+    다음 네임 스페이스를 추가 해야 **ExtendedSplash.xaml.cs** 액세스 하는 [SplashScreen](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) 클래스를 [Rect](https://docs.microsoft.com/uwp/api/windows.foundation.rect) 구조체 및 [ Window.SizeChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.sizechanged) 이벤트입니다.
 
     ```cs
     using Windows.ApplicationModel.Activation;
@@ -105,7 +105,7 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
     }
     ```
 
-    다음 클래스 변수는 여러 메서드에서 사용됩니다. `splashImageRect` 변수는 시스템이 앱의 시작 화면 이미지를 표시한 좌표를 저장합니다. `splash` 변수는 [SplashScreen](https://msdn.microsoft.com/library/windows/apps/br224763) 개체를 저장하고 `dismissed` 변수는 시스템에 표시되는 시작 화면이 해제되었는지 여부를 추적합니다.
+    다음 클래스 변수는 여러 메서드에서 사용됩니다. `splashImageRect` 변수는 시스템이 앱의 시작 화면 이미지를 표시한 좌표를 저장합니다. `splash` 변수는 [SplashScreen](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) 개체를 저장하고 `dismissed` 변수는 시스템에 표시되는 시작 화면이 해제되었는지 여부를 추적합니다.
 
 3.  **이미지를 올바르게 배치 하는 클래스에 대 한 생성자를 정의 합니다.**
 
@@ -139,7 +139,7 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
     }
     ```
 
-    앱이 연장된 시작 화면에 이미지를 올바르게 배치하도록 클래스 생성자에 [Window.SizeChanged](https://msdn.microsoft.com/library/windows/apps/br209055) 처리기(예제의 `ExtendedSplash_OnResize`)를 록해야 합니다.
+    앱이 연장된 시작 화면에 이미지를 올바르게 배치하도록 클래스 생성자에 [Window.SizeChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.sizechanged) 처리기(예제의 `ExtendedSplash_OnResize`)를 록해야 합니다.
 
 4.  **확장된 시작 화면에서 이미지를 배치 하는 클래스 메서드를 정의 합니다.**
 
@@ -157,7 +157,7 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
 
 5.  **(선택 사항) 확장된 시작 화면에서 진행률 컨트롤을 배치 하는 클래스 메서드를 정의 합니다.**
 
-    연장된 시작 화면에 [ProgressRing](https://msdn.microsoft.com/library/windows/apps/br227538)을 추가하는 경우 시작 화면 이미지를 기준으로 배치합니다. ExtendedSplash.xaml.cs에 다음 코드를 추가하여 **ProgressRing**의 중심을 이미지보다 32픽셀 아래로 지정합니다.
+    연장된 시작 화면에 [ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing)을 추가하는 경우 시작 화면 이미지를 기준으로 배치합니다. ExtendedSplash.xaml.cs에 다음 코드를 추가하여 **ProgressRing**의 중심을 이미지보다 32픽셀 아래로 지정합니다.
 
     ```cs
     void PositionRing()
@@ -169,7 +169,7 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
 
 6.  **클래스 내 해제 됨 이벤트 처리기를 정의 합니다.**
 
-    ExtendedSplash.xaml.cs에서 `dismissed` 클래스 변수를 true로 설정하여 [SplashScreen.Dismissed](https://msdn.microsoft.com/library/windows/apps/br224764) 이벤트가 발생할 때 응답합니다. 앱에 설치 작업이 있는 경우 이 이벤트 처리기에 추가합니다.
+    ExtendedSplash.xaml.cs에서 `dismissed` 클래스 변수를 true로 설정하여 [SplashScreen.Dismissed](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.splashscreen.dismissed) 이벤트가 발생할 때 응답합니다. 앱에 설치 작업이 있는 경우 이 이벤트 처리기에 추가합니다.
 
     ```cs
     // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application's first view).
@@ -195,7 +195,7 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
 
 7.  **클래스 내 Window.SizeChanged 이벤트 처리기를 정의 합니다.**
 
-    사용자가 창 크기를 조정할 경우 해당 요소의 위치를 변경하도록 연장된 시작 화면을 준비합니다. 이 코드에서는 새로운 좌표를 캡처하고 이미지 위치를 변경하여 [Window.SizeChanged](https://msdn.microsoft.com/library/windows/apps/br209055) 이벤트가 발생할 때 응답합니다. 연장된 시작 화면에 진행률 컨트롤을 추가한 경우에도 이 이벤트 처리기 내에서 위치를 변경합니다.
+    사용자가 창 크기를 조정할 경우 해당 요소의 위치를 변경하도록 연장된 시작 화면을 준비합니다. 이 코드에서는 새로운 좌표를 캡처하고 이미지 위치를 변경하여 [Window.SizeChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.sizechanged) 이벤트가 발생할 때 응답합니다. 연장된 시작 화면에 진행률 컨트롤을 추가한 경우에도 이 이벤트 처리기 내에서 위치를 변경합니다.
 
     ```cs
     void ExtendedSplash_OnResize(Object sender, WindowSizeChangedEventArgs e)
@@ -214,13 +214,13 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
     ```
 
     > [!NOTE]
-    > 가져오려고 시도 하기 전에 이미지 위치 했는지 클래스 변수 (`splash`) 유효한 포함 [SplashScreen](https://msdn.microsoft.com/library/windows/apps/br224763) 예제 에서처럼 개체입니다.
+    > 가져오려고 시도 하기 전에 이미지 위치 했는지 클래스 변수 (`splash`) 유효한 포함 [SplashScreen](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) 예제 에서처럼 개체입니다.
 
      
 
 8.  **(선택 사항) 저장 된 세션 상태를 복원 하는 클래스 메서드 추가**
 
-    에 추가한 코드를 [OnLaunched](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드 4 단계: [시작 정품 인증 처리기를 수정](#modify-the-launch-activation-handler) 이면 앱이 시작할 때 확장된 시작 화면을 표시 합니다. 앱 시작 확장된 시작 화면 클래스에서와 관련 된 모든 메서드를 통합 하려면 앱의 상태를 복원 하기 위해 ExtendedSplash.xaml.cs 파일에 메서드를 추가 하는 것을 고려할 수 있습니다.
+    에 추가한 코드를 [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 메서드 4 단계: [시작 정품 인증 처리기를 수정](#modify-the-launch-activation-handler) 이면 앱이 시작할 때 확장된 시작 화면을 표시 합니다. 앱 시작 확장된 시작 화면 클래스에서와 관련 된 모든 메서드를 통합 하려면 앱의 상태를 복원 하기 위해 ExtendedSplash.xaml.cs 파일에 메서드를 추가 하는 것을 고려할 수 있습니다.
 
     ```cs
     void RestoreState(bool loadState)
@@ -232,14 +232,14 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
     }
     ```
 
-    설정 또한 App.xaml.cs에서 시작 정품 인증 처리기를 수정 하면 `loadstate` true가 이전 [ApplicationExecutionState](https://msdn.microsoft.com/library/windows/apps/br224694) 앱 되었습니다 **Terminated**합니다. 그러면 `RestoreState` 메서드가 앱을 이전 상태로 복원합니다. 앱 실행, 일시 중단 및 종료에 대한 개요는 [앱 수명 주기](app-lifecycle.md)를 참조하세요.
+    설정 또한 App.xaml.cs에서 시작 정품 인증 처리기를 수정 하면 `loadstate` true가 이전 [ApplicationExecutionState](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ApplicationExecutionState) 앱 되었습니다 **Terminated**합니다. 그러면 `RestoreState` 메서드가 앱을 이전 상태로 복원합니다. 앱 실행, 일시 중단 및 종료에 대한 개요는 [앱 수명 주기](app-lifecycle.md)를 참조하세요.
 
 ## <a name="modify-the-launch-activation-handler"></a>시작 활성화 처리기 수정
 
 
-앱이 시작되면 시스템은 앱의 시작 활성화 이벤트 처리기에 시작 화면 정보를 전달합니다. 이 정보를 사용하여 연장된 시작 화면 페이지에 이미지를 정확히 배치할 수 있습니다. 이러한 시작 화면 정보를 앱의 [OnLaunched](https://msdn.microsoft.com/library/windows/apps/br242335) 처리기에 전달되는 활성화 이벤트 인수에서 가져올 수 있습니다(다음 코드의 `args` 변수 참조).
+앱이 시작되면 시스템은 앱의 시작 활성화 이벤트 처리기에 시작 화면 정보를 전달합니다. 이 정보를 사용하여 연장된 시작 화면 페이지에 이미지를 정확히 배치할 수 있습니다. 이러한 시작 화면 정보를 앱의 [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 처리기에 전달되는 활성화 이벤트 인수에서 가져올 수 있습니다(다음 코드의 `args` 변수 참조).
 
-이미 재정의 하지 않은 경우는 [OnLaunched](https://msdn.microsoft.com/library/windows/apps/br242335) 앱에 대 한 처리기 참조 [앱 수명 주기](app-lifecycle.md) 활성화 이벤트를 처리 하는 방법.
+이미 재정의 하지 않은 경우는 [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 앱에 대 한 처리기 참조 [앱 수명 주기](app-lifecycle.md) 활성화 이벤트를 처리 하는 방법.
 
 App.xaml.cs에서 다음 코드를 추가하여 연장된 시작 화면을 만들고 표시합니다.
 
@@ -261,7 +261,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 
 다음 코드는 이전 단계에서 표시 된 코드 조각에서 약간 다릅니다.
 -   ExtendedSplash.xaml에는 `DismissSplash` 단추가 포함되어 있습니다. 이 단추를 클릭하면 이벤트 처리기 `DismissSplashButton_Click`에서 `DismissExtendedSplash` 메서드를 호출합니다. 앱이 리소스 로드 또는 UI 초기화를 완료하면 앱에서 `DismissExtendedSplash`를 호출합니다.
--   또한 이 앱은 [Frame](https://msdn.microsoft.com/library/windows/apps/br242682) 탐색이 사용되는 UWP 앱 프로젝트 템플릿을 사용합니다. 따라서 App.xaml.cs에서 시작 활성화 처리기([OnLaunched](https://msdn.microsoft.com/library/windows/apps/br242335))는 `rootFrame`을 정의하고 사용하여 앱 창의 콘텐츠를 설정합니다.
+-   또한 이 앱은 [Frame](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) 탐색이 사용되는 UWP 앱 프로젝트 템플릿을 사용합니다. 따라서 App.xaml.cs에서 시작 활성화 처리기([OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched))는 `rootFrame`을 정의하고 사용하여 앱 창의 콘텐츠를 설정합니다.
 
 ### <a name="extendedsplashxaml"></a>ExtendedSplash.xaml
 
@@ -421,7 +421,7 @@ namespace SplashScreenExample
 
 UWP 앱을 사용 하 여이 프로젝트를 만든 **빈 앱 (XAML)** Visual Studio에서 프로젝트 템플릿. `OnNavigationFailed` 및 `OnSuspending` 이벤트 처리기가 모두 자동으로 생성되며 연장된 시작 화면을 구현하기 위해 변경할 필요가 없습니다. 이 항목에서는 `OnLaunched`만 수정합니다.
 
-앱에 대 한 프로젝트 템플릿을 사용 하지 않은, 경우 4 단계를 참조 하세요. [시작 정품 인증 처리기를 수정](#modify-the-launch-activation-handler) 수정한의 예로 `OnLaunched` 는 사용 하지 [프레임](https://msdn.microsoft.com/library/windows/apps/br242682) 탐색 합니다.
+앱에 대 한 프로젝트 템플릿을 사용 하지 않은, 경우 4 단계를 참조 하세요. [시작 정품 인증 처리기를 수정](#modify-the-launch-activation-handler) 수정한의 예로 `OnLaunched` 는 사용 하지 [프레임](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) 탐색 합니다.
 
 ```cs
 using System;
@@ -545,10 +545,10 @@ namespace SplashScreenExample
 
 **참조**
 
-* [Windows.ApplicationModel.Activation 네임 스페이스](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [Windows.ApplicationModel.Activation.SplashScreen 클래스](https://msdn.microsoft.com/library/windows/apps/br224763)
-* [Windows.ApplicationModel.Activation.SplashScreen.ImageLocation 속성](https://msdn.microsoft.com/library/windows/apps/br224765)
-* [Windows.ApplicationModel.Core.CoreApplicationView.Activated 이벤트](https://msdn.microsoft.com/library/windows/apps/br225018)
+* [Windows.ApplicationModel.Activation 네임 스페이스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation)
+* [Windows.ApplicationModel.Activation.SplashScreen class](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen)
+* [Windows.ApplicationModel.Activation.SplashScreen.ImageLocation property](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.splashscreen.imagelocation)
+* [Windows.ApplicationModel.Core.CoreApplicationView.Activated 이벤트](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.activated)
 
  
 

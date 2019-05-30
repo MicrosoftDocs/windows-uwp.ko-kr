@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5752a7bf18d785121258ea3fe75afe8383be2aff
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4a6b61463204b4ae60fbb853cd00a10c7185a084
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636108"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362697"
 ---
 # <a name="send-a-local-tile-notification"></a>로컬 타일 알림 보내기
  
@@ -204,7 +204,7 @@ TileUpdateManager.CreateTileUpdaterForApplication().Clear();
 
 **알림 큐를 사용 하 여**
 
-지금까지 첫 번째 타일 업데이트를 수행했으며 [알림 큐](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)를 사용하도록 설정하여 타일 기능을 확장할 수 있습니다.
+지금까지 첫 번째 타일 업데이트를 수행했으며 [알림 큐](https://docs.microsoft.com/previous-versions/windows/apps/hh868234(v=win.10))를 사용하도록 설정하여 타일 기능을 확장할 수 있습니다.
 
 **다른 알림 배달 방법**
 
@@ -291,7 +291,7 @@ var notification = new TileNotification(doc);
 * [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 * [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-sending-local-tile-win10)
 * [**Windows.UI.Notifications 네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications)
-* [알림 큐 (XAML)을 사용 하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
+* [알림 큐 (XAML)을 사용 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh868234(v=win.10))
 * [알림 배달](choosing-a-notification-delivery-method.md)
  
 

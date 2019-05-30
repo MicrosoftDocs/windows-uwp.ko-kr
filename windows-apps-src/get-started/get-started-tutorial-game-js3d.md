@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c7d40765e0d12e3543f198aebd5acd15ed3aff3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2e1eba68d1046892a67d779d353fd9b2e6bf224e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595498"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366938"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>three.js를 사용하여 3D JavaScript 게임 만들기
 
@@ -1075,7 +1075,7 @@ function lockChange() {
 
 ---
 
-간단하죠. 긴 여정 끝에 드디어 **three.js**로 작성된 게임이 완성되었습니다.
+정말 간단하죠. 긴 여정 끝에 드디어 **three.js**로 작성된 게임이 완성되었습니다.
 
 페이지 맨 위로 돌아가서 [최종 CodePen](#introduction)을 살펴보세요!
 
@@ -1084,7 +1084,7 @@ function lockChange() {
 (먼저 개선 가정)! Microsoft Store 게시할 수는 UWP 앱을 만들었으므로 몇 가지 단계를 처리해야 합니다.
 
 1.  Windows 개발자로 [등록](https://developer.microsoft.com/store/register)해야 합니다.
-2.  앱 제출 [검사 목록](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
-3.  앱을 제출하여 [인증](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
+2.  앱 제출 [검사 목록](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
+3.  앱을 제출하여 [인증](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 자세한 내용은 참조 하세요. [UWP 앱을 게시](https://developer.microsoft.com/store/publish-apps)합니다.
 

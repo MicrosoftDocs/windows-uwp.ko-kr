@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 21e7c026d336507b1a82badba770ac3bb50e19f8
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: d1d459ab10614ddf9186275b1a6b66e8fa5703ec
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984125"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364955"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>UWP 앱에 대한 연결된 애니메이션
 
@@ -63,7 +63,7 @@ ms.locfileid: "65984125"
 
 ## <a name="when-to-use-connected-animation"></a>연결된 애니메이션을 사용하는 시기
 
-연결된 애니메이션은 UI의 콘텐츠를 변경하고 사용자로 하여금 컨텍스트를 유지하게 하려는 모든 환경에 적용할 수 있지만 일반적으로 페이지를 변경할 때 사용됩니다. 원본 보기와 대상 보기 사이에 공유되는 이미지 또는 기타 UI 부분이 있을 때에는 [드릴인 탐색 전환](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.navigationthemetransition.aspx) 대신 연결된 애니메이션을 사용하는 방안을 고려해야 합니다.
+연결된 애니메이션은 UI의 콘텐츠를 변경하고 사용자로 하여금 컨텍스트를 유지하게 하려는 모든 환경에 적용할 수 있지만 일반적으로 페이지를 변경할 때 사용됩니다. 원본 보기와 대상 보기 사이에 공유되는 이미지 또는 기타 UI 부분이 있을 때에는 [드릴인 탐색 전환](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) 대신 연결된 애니메이션을 사용하는 방안을 고려해야 합니다.
 
 ## <a name="configure-connected-animation"></a>연결 된 애니메이션을 구성 합니다.
 
@@ -102,7 +102,7 @@ ConnectedAnimation에서 구성 속성을 설정 하 여 애니메이션 구성�
 | - | - | - |
 | 무게 | 예 | 예* <br/> **A에서 B에 대 한 기본 변환을이 감속/가속 함수를 사용 하지만 "중력 dip" 자체 감속/가속 함수입니다.*  |
 | 직접 | 아니요 <br/> *개 150ms 애니메이션 효과 줍니다.*| 아니오 <br/> *감속/가속 함수 감속을 사용 합니다.* |
-| Basic | 예 | 예 |
+| 기본 | 예 | 예 |
 
 ## <a name="how-to-implement-connected-animation"></a>연결 된 애니메이션을 구현 하는 방법
 

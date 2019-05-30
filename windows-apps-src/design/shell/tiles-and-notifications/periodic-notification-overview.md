@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a3bf2ce69105787b7ca9e83c7f7fe5db8ae1038
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 14f5fa06cfa0a6a7e393f3e2d513af0898d1f822
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624858"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360935"
 ---
 # <a name="periodic-notification-overview"></a>정기 알림 개요
  
@@ -29,19 +29,19 @@ ms.locfileid: "57624858"
 
  
 
-## <a name="how-it-works"></a>작동 방식
+## <a name="how-it-works"></a>작동 방법
 
 
 정기 알림을 사용하기 위해서는 앱이 클라우드 서비스를 호스트해야 합니다. 이 서비스는 앱을 설치한 모든 사용자가 정기적으로 폴링합니다. 각 폴링 간격(예: 한 시간에 한 번)에 Windows는 URI에 HTTP GET 요청을 보내고, 요청에 응답하여 제공되는 요청된 타일 또는 배지 콘텐츠를 XML로 다운로드하고, 콘텐츠를 앱의 타일에 표시합니다.
 
-알림 메시지에는 정기 업데이트를 사용할 수 없습니다. 알림은 [예약](https://msdn.microsoft.com/library/windows/apps/hh465417) 또는 [푸시](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252) 알림을 통해 가장 잘 전달됩니다.
+알림 메시지에는 정기 업데이트를 사용할 수 없습니다. 알림은 [예약](https://docs.microsoft.com/previous-versions/windows/apps/hh465417(v=win.10)) 또는 [푸시](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10)) 알림을 통해 가장 잘 전달됩니다.
 
 ## <a name="uri-location-and-xml-content"></a>URI 위치 및 XML 콘텐츠
 
 
 모든 유효한 HTTP 또는 HTTPS 웹 주소를 폴링할 URI로 사용할 수 있습니다.
 
-클라우드 서버의 응답에는 다운로드된 콘텐츠가 포함됩니다. URI에서 반환된 콘텐츠는 [타일](adaptive-tiles-schema.md) 또는 [배지](https://msdn.microsoft.com/library/windows/apps/br212851) XML 스키마 사양에 맞아야 하며 UTF-8로 인코딩되어야 합니다. 정의된 HTTP 헤더를 사용하여 알림에 대한 [만료 시간](#expiration-of-tile-and-badge-notifications) 또는 태그를 지정할 수 있습니다.
+클라우드 서버의 응답에는 다운로드된 콘텐츠가 포함됩니다. URI에서 반환된 콘텐츠는 [타일](adaptive-tiles-schema.md) 또는 [배지](https://docs.microsoft.com/uwp/schemas/tiles/badgeschema/schema-root) XML 스키마 사양에 맞아야 하며 UTF-8로 인코딩되어야 합니다. 정의된 HTTP 헤더를 사용하여 알림에 대한 [만료 시간](#expiration-of-tile-and-badge-notifications) 또는 태그를 지정할 수 있습니다.
 
 ## <a name="polling-behavior"></a>폴링 동작
 
@@ -84,13 +84,13 @@ URI는 장치가 온라인 상태인 경우에만 폴링됩니다. 네트워크�
 ## <a name="periodic-notifications-in-the-notification-queue"></a>알림 큐의 정기 알림
 
 
-[알림 순환](https://msdn.microsoft.com/library/windows/apps/hh781199)에서 정기 타일 업데이트를 사용할 수 있습니다. 기본적으로 시작 화면의 타일은 새 알림이 현재 알림을 대체할 때까지 단일 알림 콘텐츠를 표시합니다. 순환을 사용하도록 설정하면 최대 5개의 알림이 큐에서 유지되고 타일에서 알림이 순환됩니다.
+[알림 순환](https://docs.microsoft.com/previous-versions/windows/apps/hh781199(v=win.10))에서 정기 타일 업데이트를 사용할 수 있습니다. 기본적으로 시작 화면의 타일은 새 알림이 현재 알림을 대체할 때까지 단일 알림 콘텐츠를 표시합니다. 순환을 사용하도록 설정하면 최대 5개의 알림이 큐에서 유지되고 타일에서 알림이 순환됩니다.
 
-큐에서 5개 알림 용량에 도달하면 큐에 새로 들어오는 다음 알림이 가장 오래된 알림을 대체합니다. 알림에 태그를 설정하여 큐의 대체 정책에 영향을 줄 수 있습니다. 태그는 응답 페이로드의 [X-WNS-Tag](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_tag) HTTP 헤더에 지정된 대/소문자를 구분하지 않는 최대 16개 영숫자 문자로 이루어진 문자열로, 앱과 관련이 있습니다. Windows는 들어오는 알림의 태그를 큐에 이미 있는 모든 알림의 태그와 비교합니다. 일치하는 항목이 발견되면 새 알림이 태그가 동일한 대기 중인 태그를 대체합니다. 일치하는 항목이 없으면 기본 대체 규칙이 적용되어 새 알림이 큐에서 가장 오래된 알림을 대체합니다.
+큐에서 5개 알림 용량에 도달하면 큐에 새로 들어오는 다음 알림이 가장 오래된 알림을 대체합니다. 알림에 태그를 설정하여 큐의 대체 정책에 영향을 줄 수 있습니다. 태그는 응답 페이로드의 [X-WNS-Tag](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) HTTP 헤더에 지정된 대/소문자를 구분하지 않는 최대 16개 영숫자 문자로 이루어진 문자열로, 앱과 관련이 있습니다. Windows는 들어오는 알림의 태그를 큐에 이미 있는 모든 알림의 태그와 비교합니다. 일치하는 항목이 발견되면 새 알림이 태그가 동일한 대기 중인 태그를 대체합니다. 일치하는 항목이 없으면 기본 대체 규칙이 적용되어 새 알림이 큐에서 가장 오래된 알림을 대체합니다.
 
 알림 큐와 태그 지정을 사용하여 다양한 알림 시나리오를 구현할 수 있습니다. 예를 들어 주식 앱에서 각각 서로 다른 주식과 관련 있고 주식 이름 태그가 지정된 5개의 알림을 보낼 수 있습니다. 이렇게 하면 큐에서 오래된 알림을 제거하여 동일한 주식에 대한 알림이 두 번 포함되는 것을 방지할 수 있습니다.
 
-자세한 내용은 [알림 큐 사용](https://msdn.microsoft.com/library/windows/apps/hh781199)을 참조하세요.
+자세한 내용은 [알림 큐 사용](https://docs.microsoft.com/previous-versions/windows/apps/hh781199(v=win.10))을 참조하세요.
 
 ### <a name="enabling-the-notification-queue"></a>알림 큐 사용
 
@@ -103,7 +103,7 @@ Windows가 타일에 대해 다운로드할 각 알림의 고유한 URI를 제�
 ## <a name="related-topics"></a>관련 항목
 
 
-* [정기 알림에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh761461)
-* [배지에 대 한 정기 알림을 설정 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh761476)
-* [타일에 대 한 정기 알림을 설정 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh761476)
+* [정기 알림에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-periodic-notification-overview)
+* [배지에 대 한 정기 알림을 설정 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
+* [타일에 대 한 정기 알림을 설정 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
  

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e07ac565fe2e223b2fb33573ad083edfdfbc888a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fd7071092a66f46a81095a5cb6aff8b623a774a5
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610208"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366619"
 ---
 # <a name="edge-based-ui-animations"></a>가장자리 기반 UI 애니메이션
 
@@ -23,7 +23,7 @@ ms.locfileid: "57610208"
 
 가장자리 기반 애니메이션은 화면의 가장자리에서 시작되는 UI를 표시하거나 숨깁니다. 표시 및 숨기기 동작은 사용자 또는 앱에서 시작할 수 있습니다. UI는 앱에 오버레이하거나 주 앱 표면의 일부가 될 수 있습니다. UI가 앱 화면의 일부일 경우 나머지 앱 화면은 UI를 포함하도록 크기를 조정해야 합니다.
 
-> **중요 API**: [**EdgeUIThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh702324)
+> **중요 API**: [**EdgeUIThemeTransition 클래스**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -45,13 +45,13 @@ ms.locfileid: "57610208"
 
 
 **개발자를 위한**
-* [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Edge 기반 UI에 애니메이션 적용](https://msdn.microsoft.com/library/windows/apps/xaml/jj649428)
-* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
-* [**EdgeUIThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh702324)
-* [**PaneThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969160)
-* [페이드 애니메이션 적용](https://msdn.microsoft.com/library/windows/apps/xaml/jj649429)
-* [위치를 변경에 애니메이션 적용](https://msdn.microsoft.com/library/windows/apps/xaml/jj649434)
+* [애니메이션 개요](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
+* [Edge 기반 UI에 애니메이션 적용](https://docs.microsoft.com/previous-versions/windows/apps/jj649428(v=win.10))
+* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
+* [**EdgeUIThemeTransition 클래스**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition)
+* [**PaneThemeTransition 클래스**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PaneThemeTransition)
+* [페이드 애니메이션 적용](https://docs.microsoft.com/previous-versions/windows/apps/jj649429(v=win.10))
+* [위치를 변경에 애니메이션 적용](https://docs.microsoft.com/previous-versions/windows/apps/jj649434(v=win.10))
 
  
 

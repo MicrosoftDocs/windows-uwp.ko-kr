@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 섀도 볼륨, 깊이 버퍼, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 2feecb3080efefb2f9625fd8b66c5b722ad02a45
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2ce0cbd310ea89c5fa7b5c68033402f559768a24
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57622278"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368517"
 ---
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>연습: Direct3D 11에서 깊이 버퍼를 사용 하 여 구현 섀도 볼륨
 
@@ -65,7 +65,7 @@ Windows 8 adde d 깊이 비교 기능을 기능 수준 9\_1에서 9\_3입니다.
 
 이 연습을 완료 하면 Direct3D 11 기능 수준 9와 호환 되는 기본 호환 섀도 볼륨 기술을 구현 하는 방법을 잘 알고 있어야\_1 이상입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 [UWP(유니버설 Windows 플랫폼) DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 템플릿을 아직 필요는 없지만이 연습에 대 한 코드 샘플을 빌드하려면 Microsoft Visual Studio 2015를 해야 합니다.
@@ -75,13 +75,13 @@ Windows 8 adde d 깊이 비교 기능을 기능 수준 9\_1에서 9\_3입니다.
 
 **Direct3D**
 
-* [Direct3D에서 HLSL 셰이더 작성 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [Direct3D에서 HLSL 셰이더 작성 9](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-writing-shaders-9)
 * [UWP 용 새 DirectX 11 프로젝트를 만들려면](user-interface.md)
 
 **기술 문서 매핑 섀도**
 
-* [섀도 깊이 지도 개선 하는 일반적인 기술](https://msdn.microsoft.com/library/windows/desktop/ee416324)
-* [연계 섀도 맵](https://msdn.microsoft.com/library/windows/desktop/ee416307)
+* [섀도 깊이 지도 개선 하는 일반적인 기술](https://docs.microsoft.com/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps)
+* [연계 섀도 맵](https://docs.microsoft.com/windows/desktop/DxTechArts/cascaded-shadow-maps)
 
  
 

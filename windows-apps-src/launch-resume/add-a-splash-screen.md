@@ -6,12 +6,12 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 882ee548754b9fa498697a8d75a12a23f86fc9de
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 956e4050e3077ac827cf8107470698b42878a5e1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616888"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370871"
 ---
 # <a name="add-a-splash-screen"></a>시작 화면 추가
 
@@ -29,7 +29,7 @@ Visual Studio 템플릿을 사용하여 앱을 만드는 경우 기본 이미지
 
     ![Visual Studio 2017의 "Package.appxmanifest" 창 스크린샷](images/appmanifest.png)
 
-    텍스트 편집기에서 "Package.appxmanifest"를 열면 [**SplashScreen 요소**](https://msdn.microsoft.com/library/windows/apps/br211467)가 [**VisualElements 요소**](https://msdn.microsoft.com/library/windows/apps/br211471)의 자식 요소로 표시됩니다. 매니페스트 파일의 기본 시작 화면 태그는 텍스트 편집기에서 다음과 같이 나타납니다.
+    텍스트 편집기에서 "Package.appxmanifest"를 열면 [**SplashScreen 요소**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-splashscreen)가 [**VisualElements 요소**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements)의 자식 요소로 표시됩니다. 매니페스트 파일의 기본 시작 화면 태그는 텍스트 편집기에서 다음과 같이 나타납니다.
 
     ```xml
     <uap:SplashScreen Image="Assets\SplashScreen.png" />
@@ -43,7 +43,7 @@ Visual Studio 템플릿을 사용하여 앱을 만드는 경우 기본 이미지
 
     **중요**  선택 하면 시작 화면 이미지 여야 합니다 1152 x 1920 픽셀 비율 크기 조정 x 2.4에 대 한 올바른 크기는 합니다. 이 자산이 사용자가 제공하는 유일한 자산인 경우, 1.4 및 1배율 인수로 축소됩니다.
 
-6. **시작 화면** 섹션의 **배경색** 필드에서 시작 화면 이미지와 함께 표시할 배경색을 설정합니다. 색 이름을 입력할 수 있습니다 또는 '\#' 및 색의 16 진수 값입니다. 사용 가능한 색 이름 목록은 [**SplashScreen element**](https://msdn.microsoft.com/library/windows/apps/br211467)를 참조하세요. 시작 화면의 배경색을 설정하는 것은 선택적인 작업입니다. 시작 화면 배경색을 밝은 회색 기본값으로 UWP 앱에 대 한 색을 지정 하지 않으면, (16 진수 값 \#464646). 이 색은 기본 **타일** 배경색과 같습니다(**시각적 자산** 탭에 있는 **타일 이미지 및 로고** 섹션의 **배경색** 필드 참조). Windows Phone의 색을 지정하지 않거나 "투명"으로 설정하면 시작 화면 배경색이 투명하게 됩니다.
+6. **시작 화면** 섹션의 **배경색** 필드에서 시작 화면 이미지와 함께 표시할 배경색을 설정합니다. 색 이름을 입력할 수 있습니다 또는 '\#' 및 색의 16 진수 값입니다. 사용 가능한 색 이름 목록은 [**SplashScreen element**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-splashscreen)를 참조하세요. 시작 화면의 배경색을 설정하는 것은 선택적인 작업입니다. 시작 화면 배경색을 밝은 회색 기본값으로 UWP 앱에 대 한 색을 지정 하지 않으면, (16 진수 값 \#464646). 이 색은 기본 **타일** 배경색과 같습니다(**시각적 자산** 탭에 있는 **타일 이미지 및 로고** 섹션의 **배경색** 필드 참조). Windows Phone의 색을 지정하지 않거나 "투명"으로 설정하면 시작 화면 배경색이 투명하게 됩니다.
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
@@ -52,5 +52,5 @@ Visual Studio 템플릿을 사용하여 앱을 만드는 경우 기본 이미지
 ## <a name="related-topics"></a>관련 항목
 
 * [사용자 지정된 시작 화면 만들기](create-a-customized-splash-screen.md)
-* [패키지 매니페스트 스키마 참조: SplashScreen 요소](https://msdn.microsoft.com/library/windows/apps/br211467)
-* [Windows.ApplicationModel.Activation.SplashScreen 클래스](https://msdn.microsoft.com/library/windows/apps/br224763)
+* [패키지 매니페스트 스키마 참조: SplashScreen 요소](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-splashscreen)
+* [Windows.ApplicationModel.Activation.SplashScreen class](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen)

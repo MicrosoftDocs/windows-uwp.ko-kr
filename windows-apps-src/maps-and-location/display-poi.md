@@ -6,12 +6,12 @@ ms.date: 08/11/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 고정핀
 ms.localizationpriority: medium
-ms.openlocfilehash: bfb307093889c5a40a452d2d406f02224ab5eab1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2aca8f4daea39a190af4dd1007a6b961198994dd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57659278"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370540"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>지도에 관심 지점 표시
 
@@ -19,22 +19,22 @@ ms.locfileid: "57659278"
 
 앱에서 POI를 표시 하는 방법에 대 한 자세한 내용은에서 다음 샘플을 다운로드 합니다 [Windows 유니버설 샘플 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979) GitHub에서: [유니버설 Windows 플랫폼 (UWP) 맵 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)합니다.
 
-[  **MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077), [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard),  [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) 및 [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) 개체를 [**MapElementsLayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelementslayer) 개체의 **MapElements** 컬렉션에 추가하여 고정핀, 이미지 및 셰이프를 표시합니다. 그런 다음 해당 계층 개체를 지도 컨트롤의 **계층** 컬렉션에 추가합니다.
+[  **MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon), [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard),  [**MapPolygon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolygon) 및 [**MapPolyline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolyline) 개체를 [**MapElementsLayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelementslayer) 개체의 **MapElements** 컬렉션에 추가하여 고정핀, 이미지 및 셰이프를 표시합니다. 그런 다음 해당 계층 개체를 지도 컨트롤의 **계층** 컬렉션에 추가합니다.
 
 >[!NOTE]
 > 이전 릴리스의 가이드에서는 지도 요소를 [**MapElements**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.MapElements) 컬렉션에 추가하는 방법을 설명했습니다. 이 방법을 아직 사용할 수는 있지만 새 지도 계층 모델의 이점을 활용하지 못하게 됩니다. 자세한 내용은 이 가이드의 [계층 작업](#layers) 섹션을 참조하세요.
 
-[  **Button**](https://msdn.microsoft.com/library/windows/apps/br209265), a [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 또는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)과 같은 XAML 사용자 인터페이스 요소를 [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094)에 또는 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008)으로 추가하여 지도에서 이와 같은 XAML 사용자 인터페이스 요소를 표시할 수도 있습니다.
+[  **Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button), a [**HyperlinkButton**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 또는 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)과 같은 XAML 사용자 인터페이스 요소를 [**MapItemsControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapItemsControl)에 또는 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)의 [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.children)으로 추가하여 지도에서 이와 같은 XAML 사용자 인터페이스 요소를 표시할 수도 있습니다.
 
 지도에 배치할 요소가 많은 경우 [바둑판식 이미지를 지도에 오버레이](overlay-tiled-images.md)하는 것이 좋습니다. 지도에 도로를 표시하려면 [경로 및 길 찾기를 표시](routes-and-directions.md)합니다.
 
 ## <a name="add-a-pushpin"></a>고정핀 추가
 
-[  **MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) 클래스를 사용하여 텍스트가 있거나 없는 고정핀 등과 같은 이미지를 표시합니다. 기본 이미지를 적용하거나 [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078) 속성을 사용하여 사용자 지정 이미지를 제공할 수 있습니다. 다음 이미지는 [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088) 속성에 대해 지정된 값이 없고, 짧은 제목, 긴 제목 및 매우 긴 제목을 가진 **MapIcon**에 대한 기본 이미지를 표시합니다.
+[  **MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon) 클래스를 사용하여 텍스트가 있거나 없는 고정핀 등과 같은 이미지를 표시합니다. 기본 이미지를 적용하거나 [**Image**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapicon.image) 속성을 사용하여 사용자 지정 이미지를 제공할 수 있습니다. 다음 이미지는 [**Title**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapicon.title) 속성에 대해 지정된 값이 없고, 짧은 제목, 긴 제목 및 매우 긴 제목을 가진 **MapIcon**에 대한 기본 이미지를 표시합니다.
 
 ![다양한 길이의 제목을 가진 샘플 mapicon](images/mapctrl-mapicons.png)
 
-다음 예제에서는 시애틀시 지도를 표시하고 기본 이미지 및 제목(옵션)과 함께 [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)을 추가하여 스페이스 니들(Space Needle)의 위치를 나타냅니다. 또한 아이콘 위에 지도의 중심을 지정하고 확대합니다. 지도 컨트롤을 사용하는 방법에 대한 일반적인 정보는 [2D, 3D 및 Streetside 뷰로 지도 표시](display-maps.md)를 참조하세요.
+다음 예제에서는 시애틀시 지도를 표시하고 기본 이미지 및 제목(옵션)과 함께 [**MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon)을 추가하여 스페이스 니들(Space Needle)의 위치를 나타냅니다. 또한 아이콘 위에 지도의 중심을 지정하고 확대합니다. 지도 컨트롤을 사용하는 방법에 대한 일반적인 정보는 [2D, 3D 및 Streetside 뷰로 지도 표시](display-maps.md)를 참조하세요.
 
 ```csharp
 public void AddSpaceNeedleIcon()
@@ -72,23 +72,23 @@ public void AddSpaceNeedleIcon()
 
 ![mapicon이 있는 지도](images/displaypoidefault.png)
 
-다음 코드 줄은 프로젝트의 Assets 폴더에 저장된 사용자 지정 이미지를 사용하여 [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)을 표시합니다. **MapIcon**의 [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078) 속성에는 [**RandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701813) 형식의 값이 필요합니다. 이 형식에는 [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/br241791) 네임스페이스용 **using** 문이 필요합니다.
+다음 코드 줄은 프로젝트의 Assets 폴더에 저장된 사용자 지정 이미지를 사용하여 [**MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon)을 표시합니다. **MapIcon**의 [**Image**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapicon.image) 속성에는 [**RandomAccessStreamReference**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.RandomAccessStreamReference) 형식의 값이 필요합니다. 이 형식에는 [**Windows.Storage.Streams**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams) 네임스페이스용 **using** 문이 필요합니다.
 
 >[!NOTE]
->여러 지도 아이콘에 같은 이미지를 사용할 경우 최상의 성능을 위해 페이지 또는 앱 수준에서 [**RandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701813)를 선언합니다.
+>여러 지도 아이콘에 같은 이미지를 사용할 경우 최상의 성능을 위해 페이지 또는 앱 수준에서 [**RandomAccessStreamReference**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.RandomAccessStreamReference)를 선언합니다.
 
 ```csharp
     MapIcon1.Image =
         RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/customicon.png"));
 ```
 
-[  **MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) 클래스로 작업할 때 고려해야 할 사항은 다음과 같습니다.
+[  **MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon) 클래스로 작업할 때 고려해야 할 사항은 다음과 같습니다.
 
--   [  **Image**](https://msdn.microsoft.com/library/windows/apps/dn637078) 속성은 최대 2048×2048 픽셀의 이미지 크기를 지원합니다.
--   기본적으로 지도 아이콘의 이미지는 표시되지 않을 수도 있습니다. 지도에 있는 다른 요소나 레이블을 가릴 경우 MapIcon이 숨겨질 수도 있습니다. 표시된 상태로 유지하려면 지도 아이콘의 [**CollisionBehaviorDesired**](https://msdn.microsoft.com/library/windows/apps/dn974327) 속성을 [**MapElementCollisionBehavior.RemainVisible**](https://msdn.microsoft.com/library/windows/apps/dn974314)로 설정합니다.
--   [  **MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637088)의 [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637077)(옵션)이(가) 표시되지 않을 수도 있습니다. 텍스트가 보이지 않으면 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637068)의 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637004) 속성에 대한 값을 낮춰서 축소합니다.
--   지도에 있는 특정 위치를 가리키는 [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) 이미지(예제: 고정핀이나 화살표)를 표시할 경우 [**NormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637082) 속성의 값을 이미지에 표시되는 포인터의 대략적인 위치로 설정해 보세요. **NormalizedAnchorPoint** 값을 이미지의 오른쪽 위 모서리를 나타내는 기본값인 (0, 0)으로 유지하면 지도의 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068)을 변경할 경우 이미지가 다른 위치를 가리킬 수 있습니다.
--   [Altitude](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.basicgeoposition) 및 [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.AltitudeReferenceSystem)을 명시적으로 설정하지 않으면 표면에 [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)이 놓입니다.
+-   [  **Image**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapicon.image) 속성은 최대 2048×2048 픽셀의 이미지 크기를 지원합니다.
+-   기본적으로 지도 아이콘의 이미지는 표시되지 않을 수도 있습니다. 지도에 있는 다른 요소나 레이블을 가릴 경우 MapIcon이 숨겨질 수도 있습니다. 표시된 상태로 유지하려면 지도 아이콘의 [**CollisionBehaviorDesired**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapicon.collisionbehaviordesired) 속성을 [**MapElementCollisionBehavior.RemainVisible**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapElementCollisionBehavior)로 설정합니다.
+-   [  **MapIcon**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapicon.title)의 [**Title**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon)(옵션)이(가) 표시되지 않을 수도 있습니다. 텍스트가 보이지 않으면 [**MapControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.zoomlevel)의 [**ZoomLevel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 속성에 대한 값을 낮춰서 축소합니다.
+-   지도에 있는 특정 위치를 가리키는 [**MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon) 이미지(예제: 고정핀이나 화살표)를 표시할 경우 [**NormalizedAnchorPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapicon.normalizedanchorpoint) 속성의 값을 이미지에 표시되는 포인터의 대략적인 위치로 설정해 보세요. **NormalizedAnchorPoint** 값을 이미지의 오른쪽 위 모서리를 나타내는 기본값인 (0, 0)으로 유지하면 지도의 [**ZoomLevel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.zoomlevel)을 변경할 경우 이미지가 다른 위치를 가리킬 수 있습니다.
+-   [Altitude](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.basicgeoposition) 및 [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.AltitudeReferenceSystem)을 명시적으로 설정하지 않으면 표면에 [**MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon)이 놓입니다.
 
 ## <a name="add-a-3d-pushpin"></a>3D 고정핀 추가
 
@@ -126,7 +126,7 @@ public async void Add3DMapModel()
 
 ## <a name="add-an-image"></a>이미지 추가
 
-식당이나 랜드마크 사진 같은 지도 위치와 관련된 큰 이미지를 표시합니다. 사용자가 축소하면, 사용자가 지도의 더 많은 부분을 볼 수 있도록 이미지 크기가 비례해 축소됩니다. 이는 일반적으로 작고, 사용자가 지도를 축소 또는 확대했을 떄 동일한 크기를 유지하고, 특정 위치를 표시한 [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)과 다릅니다.
+식당이나 랜드마크 사진 같은 지도 위치와 관련된 큰 이미지를 표시합니다. 사용자가 축소하면, 사용자가 지도의 더 많은 부분을 볼 수 있도록 이미지 크기가 비례해 축소됩니다. 이는 일반적으로 작고, 사용자가 지도를 축소 또는 확대했을 떄 동일한 크기를 유지하고, 특정 위치를 표시한 [**MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon)과 다릅니다.
 
 ![MapBillboard 이미지](images/map-billboard.png)
 
@@ -165,12 +165,12 @@ public void AddLandmarkPhoto()
 
 더 자세히 알아 보는이 코드의 세 부분이 포함 되어 있습니다. 이미지, 참조 카메라와 [ **NormalizedAnchorPoint** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.NormalizedAnchorPoint) 속성입니다.
 
-### <a name="image"></a>이미지
+### <a name="image"></a>Image
 
-프로젝트의 **Assets** 폴더에 저장된 사용자 지정 이미지를 표시하는 예제입니다. [  **MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard)의 [**이미지**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.Image) 속성은 [**RandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701813) 유형의 값이 필요합니다. 이 형식에는 [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/br241791) 네임스페이스용 **using** 문이 필요합니다.
+프로젝트의 **Assets** 폴더에 저장된 사용자 지정 이미지를 표시하는 예제입니다. [  **MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard)의 [**이미지**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.Image) 속성은 [**RandomAccessStreamReference**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.RandomAccessStreamReference) 유형의 값이 필요합니다. 이 형식에는 [**Windows.Storage.Streams**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams) 네임스페이스용 **using** 문이 필요합니다.
 
 >[!NOTE]
->여러 지도 아이콘에 같은 이미지를 사용할 경우 최상의 성능을 위해 페이지 또는 앱 수준에서 [**RandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701813)를 선언합니다.
+>여러 지도 아이콘에 같은 이미지를 사용할 경우 최상의 성능을 위해 페이지 또는 앱 수준에서 [**RandomAccessStreamReference**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.RandomAccessStreamReference)를 선언합니다.
 
 ### <a name="reference-camera"></a>참조 카메라
 
@@ -186,7 +186,7 @@ public void AddLandmarkPhoto()
 
 ## <a name="add-a-shape"></a>셰이프 추가
 
-[  **MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) 클래스를 사용하여 지도에 다중 지점 셰이프를 표시할 수 있습니다. 다음 예제에서는 [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)에서 파란색 테두리가 있는 빨간색 상자를 지도에 표시합니다.
+[  **MapPolygon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolygon) 클래스를 사용하여 지도에 다중 지점 셰이프를 표시할 수 있습니다. 다음 예제에서는 [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)에서 파란색 테두리가 있는 빨간색 상자를 지도에 표시합니다.
 
 ```csharp
 public void HighlightArea()
@@ -229,7 +229,7 @@ public void HighlightArea()
 ## <a name="add-a-line"></a>선 추가
 
 
-[  **MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) 클래스를 사용하여 지도에 선을 표시합니다. 다음 예제에서는 [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)에서 파선을 지도에 표시합니다.
+[  **MapPolyline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolyline) 클래스를 사용하여 지도에 선을 표시합니다. 다음 예제에서는 [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)에서 파선을 지도에 표시합니다.
 
 ```csharp
 public void DrawLineOnMap()
@@ -270,10 +270,10 @@ public void DrawLineOnMap()
 
 XAML을 사용하여 지도에 사용자 지정 UI 요소를 표시할 수 있습니다. XAML의 위치 및 정규화된 앵커 지점을 지정하여 XAML을 지도에 배치합니다.
 
--   [  **SetLocation**](https://msdn.microsoft.com/library/windows/desktop/ms704369)을 호출하여 지도에서 XAML이 배치되는 위치를 설정합니다.
--   [  **SetNormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637050)를 호출하여 XAML에서 지정된 위치에 해당하는 상대적 위치를 설정하려면 합니다.
+-   [  **SetLocation**](https://docs.microsoft.com/windows/desktop/tablet/icontextnode-setlocation)을 호출하여 지도에서 XAML이 배치되는 위치를 설정합니다.
+-   [  **SetNormalizedAnchorPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.setnormalizedanchorpoint)를 호출하여 XAML에서 지정된 위치에 해당하는 상대적 위치를 설정하려면 합니다.
 
-다음 예제에서는 시애틀시 지도를 표시하고 XAML [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) 컨트롤을 추가하여 Space Needle의 위치를 나타냅니다. 또한 영역 위에 지도의 중심을 지정하고 확대합니다. 지도 컨트롤을 사용하는 방법에 대한 일반적인 정보는 [2D, 3D 및 Streetside 뷰로 지도 표시](display-maps.md)를 참조하세요.
+다음 예제에서는 시애틀시 지도를 표시하고 XAML [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) 컨트롤을 추가하여 Space Needle의 위치를 나타냅니다. 또한 영역 위에 지도의 중심을 지정하고 확대합니다. 지도 컨트롤을 사용하는 방법에 대한 일반적인 정보는 [2D, 3D 및 Streetside 뷰로 지도 표시](display-maps.md)를 참조하세요.
 
 ```csharp
 private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
@@ -306,9 +306,9 @@ private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
 
 ![지도상의 관심 지점에 표시된 xaml의 스크린샷](images/displaypoixaml.png)
 
-다음 예제에서는 데이터 바인딩을 사용하여 페이지의 XAML 태그에 직접 XAML UI 요소를 추가하는 방법을 보여 줍니다. 콘텐츠를 표시하는 다른 XAML 요소와 마찬가지로, [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008)은 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 기본 콘텐츠 속성이므로 XAML 태그에서 명시적으로 지정할 필요가 없습니다.
+다음 예제에서는 데이터 바인딩을 사용하여 페이지의 XAML 태그에 직접 XAML UI 요소를 추가하는 방법을 보여 줍니다. 콘텐츠를 표시하는 다른 XAML 요소와 마찬가지로, [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.children)은 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)의 기본 콘텐츠 속성이므로 XAML 태그에서 명시적으로 지정할 필요가 없습니다.
 
-다음 예제에서는 두 XAML 컨트롤을 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 암시적 자식으로 표시하는 방법을 보여 줍니다. 이러한 컨트롤은 지도에서 데이터가 바인딩된 위치에 표시됩니다.
+다음 예제에서는 두 XAML 컨트롤을 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)의 암시적 자식으로 표시하는 방법을 보여 줍니다. 이러한 컨트롤은 지도에서 데이터가 바인딩된 위치에 표시됩니다.
 
 ```xml
 <maps:MapControl>
@@ -324,7 +324,7 @@ public Geopoint SeattleLocation { get; set; }
 public Geopoint BellevueLocation { get; set; }
 ```
 
-이 예제에서는 [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094)에 포함된 두 XAML 컨트롤을 표시하는 방법을 보여 줍니다. 이러한 컨트롤은 지도에서 데이터가 바인딩된 위치에 표시됩니다.
+이 예제에서는 [**MapItemsControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapItemsControl)에 포함된 두 XAML 컨트롤을 표시하는 방법을 보여 줍니다. 이러한 컨트롤은 지도에서 데이터가 바인딩된 위치에 표시됩니다.
 
 ```xml
 <maps:MapControl>
@@ -335,7 +335,7 @@ public Geopoint BellevueLocation { get; set; }
 </maps:MapControl>
 ```
 
-다음 예제에서는 [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094)에 바인딩된 XAML 요소의 컬렉션을 표시합니다.
+다음 예제에서는 [**MapItemsControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapItemsControl)에 바인딩된 XAML 요소의 컬렉션을 표시합니다.
 
 ```xml
 <maps:MapControl x:Name="MapControl" MapTapped="MapTapped" MapDoubleTapped="MapTapped" MapHolding="MapTapped">
@@ -475,9 +475,9 @@ XAML 페이지에서 계층을 반환하는 뷰 모델 클래스의 속성에 �
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [지도에 대한 디자인 지침](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
 * [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
-* [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)
-* [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103)
-* [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114)
+* [**MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon)
+* [**MapPolygon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolygon)
+* [**MapPolyline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolyline)

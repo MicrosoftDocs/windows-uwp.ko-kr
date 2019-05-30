@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
-ms.openlocfilehash: c785e6d2a8021148f572df88a6d9e6ba07c4a457
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ae9229378f75adeb215a881bdaf955b010cd7806
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601178"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366371"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>연결된 앱 및 장치(프로젝트 로마)
 
@@ -19,7 +19,7 @@ ms.locfileid: "57601178"
 
 대부분의 사용자는 여러 디바이스를 가지고 있으며 한 디바이스에서 작업을 시작한 후 다른 디바이스에서 완료하는 경우도 많습니다. 이러한 경우를 처리하려면 앱이 여러 디바이스와 플랫폼을 포괄해야 합니다. 프로젝트 로마 원격 장치를 검색, 원격 장치에서 앱을 시작 및 원격 장치에서 app service와 통신할 수 있습니다.
 
-Windows 10 버전 1607에서 도입된 [원격 시스템 API](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)를 통해 사용자가 한 디바이스에서 작업을 시작하고 다른 디바이스에서 완료할 수 있도록 하는 앱을 작성할 수 있습니다. 작업에 중앙 포커스가 유지되며, 사용자는 가장 편리한 디바이스에서 해당 작업을 수행할 수 있습니다. 예를 들어 사용자는 자동차에서 휴대폰을 통해 라디오를 듣지만 집에 도착하면 홈 스테레오 시스템에 연결된 Xbox One으로 재생을 전송할 수 있습니다.
+Windows 10 버전 1607에서 도입된 [원격 시스템 API](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems)를 통해 사용자가 한 디바이스에서 작업을 시작하고 다른 디바이스에서 완료할 수 있도록 하는 앱을 작성할 수 있습니다. 작업에 중앙 포커스가 유지되며, 사용자는 가장 편리한 디바이스에서 해당 작업을 수행할 수 있습니다. 예를 들어 사용자는 자동차에서 휴대폰을 통해 라디오를 듣지만 집에 도착하면 홈 스테레오 시스템에 연결된 Xbox One으로 재생을 전송할 수 있습니다.
 
 도우미 장치나 원격 제어 시나리오에서 프로젝트 로마를 사용할 수도 있습니다. 앱 서비스 메시지 API를 사용하여 두 장치 간에 사용자 지정 메시지를 주고받을 앱 채널을 만들 수 있습니다. 예를 들어 TV의 재생을 제어하는 휴대폰용 앱이나 다른 앱에서 시청 중인 TV 프로그램의 등장 인물에 대한 정보를 제공하는 도우미 앱을 작성할 수 있습니다.  
 

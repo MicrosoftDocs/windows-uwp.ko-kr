@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: ca3ed91d7250425b9a77fb09820a53952c8f3cfc
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 6729711a424bfdcf9af2da92d60f12a066500256
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162738"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368781"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows 10 게임 개발 가이드
 
@@ -58,7 +58,7 @@ Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작]
     </tr>
     <tr>
         <td>유니버설 Windows 플랫폼 앱 개발</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt244352">Windows 10 앱에 대 한 방법 가이드</a></td>
+        <td><a href="https://developer.microsoft.com/windows/apps/">Windows 10 앱에 대 한 방법 가이드</a></td>
     </tr>
     <tr>
         <td>UWP 게임 사용 방법 가이드</td>
@@ -66,7 +66,7 @@ Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작]
     </tr>
     <tr>
         <td>DirectX 참조 및 개요</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/ee663274">DirectX 그래픽 및 게임</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/directx">DirectX 그래픽 및 게임</a></td>
     </tr>
     <tr>
         <td>게임용 Azure</td>
@@ -78,7 +78,7 @@ Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작]
     </tr>
     <tr>
         <td>Xbox One의 UWP</td>
-        <td><a href="https://msdn.microsoft.com/windows/uwp/xbox-apps/index">Xbox One에서 UWP 앱 빌드</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/xbox-apps/index">Xbox One에서 UWP 앱 빌드</a></td>
     </tr>
     <tr>
         <td>HoloLens의 UWP</td>
@@ -115,7 +115,7 @@ Microsoft는 Windows 게임을 개발하고 게시하는 데 도움이 되도록
 
 #### <a name="xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램
 
-Xbox Live 크리에이터스 프로그램을 통해 누구든지 Xbox Live를 타이틀과 통합하고 Xbox One 및 Windows 10에 게시할 수 있습니다. 간소화된 인증 프로세스 덕분에 표준 [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx)을 벗어난 개념 승인이 필요하지 않습니다.
+Xbox Live 크리에이터스 프로그램을 통해 누구든지 Xbox Live를 타이틀과 통합하고 Xbox One 및 Windows 10에 게시할 수 있습니다. 간소화된 인증 프로세스 덕분에 표준 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)을 벗어난 개념 승인이 필요하지 않습니다.
 
 전용 개발 키트 없이도 오직 소매 하드웨어를 사용하여 크리에이터스 프로그램에 게임을 배포, 디자인 및 게시할 수 있습니다. 시작하려면 Xbox One에서 [개발자 모드 정품 인증 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/devkit-activation)을 다운로드합니다.
 
@@ -302,31 +302,31 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Visual Studio 엔지니어링 팀 블로그</td>
-        <td><a href="https://blogs.msdn.com/b/visualstudio/">Visual Studio 블로그</a></td>
+        <td><a href="https://devblogs.microsoft.com/visualstudio/">Visual Studio 블로그</a></td>
     </tr>
     <tr>
         <td>Visual Studio 개발자 도구 블로그</td>
-        <td><a href="https://blogs.msdn.com/b/developer-tools/">개발자 도구 블로그</a></td>
+        <td><a href="https://devblogs.microsoft.com/">개발자 도구 블로그</a></td>
     </tr>
     <tr>
         <td>Somasegar의 개발자 도구 블로그</td>
-        <td><a href="https://blogs.msdn.com/b/somasegar/">Somasegar의 블로그</a></td>
+        <td><a href="https://devblogs.microsoft.com/somasegar/">Somasegar의 블로그</a></td>
     </tr>
     <tr>
         <td>DirectX 개발자 블로그</td>
-        <td><a href="https://blogs.msdn.com/b/directx">DirectX 개발자 블로그</a></td>
+        <td><a href="https://devblogs.microsoft.com/directx/">DirectX 개발자 블로그</a></td>
     </tr>
     <tr>
         <td>DirectX 12 소개(블로그 게시물)</td>
-        <td><a href="https://blogs.msdn.com/b/directx/archive/2014/03/20/directx-12.aspx">DirectX 12</a></td>
+        <td><a href="https://devblogs.microsoft.com/directx/directx-12/">DirectX 12</a></td>
     </tr>
     <tr>
         <td>Visual C++ 도구 팀 블로그</td>
-        <td><a href="https://blogs.msdn.com/b/vcblog/">Visual C++ 팀 블로그</a></td>
+        <td><a href="https://devblogs.microsoft.com/cppblog/">Visual C++ 팀 블로그</a></td>
     </tr>
     <tr>
         <td>PIX 팀 블로그</td>
-        <td><a href="https://blogs.msdn.microsoft.com/pix/">Windows 및 Xbox에서 DirectX 12 게임에 대 한 디버깅 및 성능 튜닝</a></td>
+        <td><a href="https://devblogs.microsoft.com/pix/">Windows 및 Xbox에서 DirectX 12 게임에 대 한 디버깅 및 성능 튜닝</a></td>
     </tr>
     <tr>
         <td>유니버설 Windows 앱 배포 팀 블로그</td>
@@ -390,15 +390,15 @@ UWP 게임 개발을 시작할 때 그래픽, 입력, 오디오, 네트워킹, �
     </colgroup>
     <tr>
         <td>게임에 접근성 구현</td>
-        <td><a href="https://msdn.microsoft.com/windows/uwp/gaming/accessibility-for-games">게임에 대 한 내게 필요한 옵션</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/gaming/accessibility-for-games">게임에 대 한 내게 필요한 옵션</a></td>
     </tr>
     <tr>
         <td>클라우드를 사용한 게임 빌드</td>
-        <td><a href="https://msdn.microsoft.com/windows/uwp/gaming/cloud-for-games">게임을 위한 클라우드</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/gaming/cloud-for-games">게임을 위한 클라우드</a></td>
     </tr>
     <tr>
         <td>게임에서 수익 창출</td>
-        <td><a href="https://msdn.microsoft.com/windows/uwp/gaming/monetization-for-games">게임에 대 한 수익 화</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/gaming/monetization-for-games">게임에 대 한 수익 화</a></td>
     </tr>
 </table>
 
@@ -433,11 +433,11 @@ DirectX의 폭넓은 기능과 심층적인 플랫폼 통합은 가장 까다로
     </tr>
     <tr>
         <td>DirectX 개요 및 참조</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/ee663274">DirectX 그래픽 및 게임</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/directx">DirectX 그래픽 및 게임</a></td>
     </tr>
     <tr>
         <td>Direct3D 12 프로그래밍 가이드 및 참조</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn903821">Direct3D 12 그래픽</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/direct3d-12-graphics">Direct3D 12 그래픽</a></td>
     </tr>
     <tr>
         <td>그래픽 및 DirectX 12 개발 동영상(YouTube 채널)</td>
@@ -457,11 +457,11 @@ XAML은 애니메이션, 스토리보드, 데이터 바인딩, 확장 가능한 
     </colgroup>
     <tr>
         <td>XAML 플랫폼 개요</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt228259">XAML 플랫폼</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/xaml-platform/index">XAML 플랫폼</a></td>
     </tr>
     <tr>
         <td>XAML UI 및 컨트롤</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt228348">컨트롤, 레이아웃 및 텍스트</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/design/basics/">컨트롤, 레이아웃 및 텍스트</a></td>
     </tr>
 </table>
  
@@ -477,7 +477,7 @@ HTML(HyperText Markup Language)은 웹 페이지, 앱 및 리치 클라이언트
     </colgroup>
     <tr>
         <td>HTML5 및 문서 개체 모델 정보</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/br212882.aspx">HTML 및 DOM 참조</a></td>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Web">HTML 및 DOM 참조</a></td>
     </tr>
     <tr>
         <td>HTML5 W3C 권장 사항</td>
@@ -497,7 +497,7 @@ Microsoft DXGI(DirectX Graphic Infrastructure)는 여러 그래픽 기술 간에
     </colgroup>
     <tr>
         <td>DirectX Graphic Infrastructure 프로그래밍 가이드 및 참조</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/hh404534">DXGI</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dx-graphics-dxgi">DXGI</a></td>
     </tr>
     <tr>
         <td>DirectX 및 XAML 결합</td>
@@ -517,7 +517,7 @@ C++/CX는 속도, 호환성 및 플랫폼 액세스의 강력한 조합을 제�
     </colgroup>
     <tr>
         <td>C++/CX 참조 및 개요</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/hh699871.aspx">Visual C++ 언어 참조 (C++/CX)</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx">Visual C++ 언어 참조 (C++/CX)</a></td>
     </tr>
     <tr>
         <td>Visual C++ 프로그래밍 가이드 및 참조</td>
@@ -537,7 +537,7 @@ C#("C 샤프"라고 발음)는 혁신적인 최신 언어로, 단순하고 강�
     </colgroup>
     <tr>
         <td>C# 프로그래밍 가이드 및 참조</td>
-        <td><a href="https://msdn.microsoft.com/library/kx37x362.aspx">C# 언어 참조</a></td>
+        <td><a href="https://docs.microsoft.com/dotnet/articles/csharp/csharp">C# 언어 참조</a></td>
     </tr>
 </table>
  
@@ -555,7 +555,7 @@ Windows JavaScript 앱은 개체 지향 JavaScript 클래스의 메서드 및 �
     </colgroup>
     <tr>
         <td>JavaScript 및 Windows 런타임 참조</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/jj613794">JavaScript 참조</a></td>
+        <td><a href="https://docs.microsoft.com/scripting/javascript/javascript-language-reference">JavaScript 참조</a></td>
     </tr>
 </table>
 
@@ -591,15 +591,15 @@ Direct3D 11.3은 익숙한 Direct3D 프로그래밍 모델을 사용하며 GPU �
     </colgroup>
     <tr>
         <td>선택 Direct3D 12, Direct3D 11</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899228">Direct3D 12 란?</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/what-is-directx-12-">Direct3D 12 란?</a></td>
     </tr>
     <tr>
         <td>개요 Direct3D 11</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/ff476080">Direct3D 11 그래픽</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11">Direct3D 11 그래픽</a></td>
     </tr>
     <tr>
         <td>12에서 Direct3D 11 개요</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn913195">Direct3D 11 12</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/direct3d-11-on-12">Direct3D 11 12</a></td>
     </tr>
 </table>
 
@@ -874,7 +874,7 @@ BabylonJS는 HTML5, WebGL, WebVR 및 웹 오디오를 사용하여 3D 게임을 
     </colgroup>
     <tr>
         <td>Windows 8 앱을 유니버설 Windows 플랫폼 앱으로 포팅</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt238322">Windows 런타임 8.x에서 UWP로 이동</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/porting/w8x-to-uwp-root">Windows 런타임 8.x에서 UWP로 이동</a></td>
     </tr>
     <tr>
         <td>Windows 8 앱을 유니버설 Windows 플랫폼 앱으로 포팅(동영상)</td>
@@ -882,11 +882,11 @@ BabylonJS는 HTML5, WebGL, WebVR 및 웹 오디오를 사용하여 3D 게임을 
     </tr>
     <tr>
         <td>iOS 앱을 유니버설 Windows 플랫폼 앱으로 포팅</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt238320">iOS에서 UWP로 이동</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/porting/ios-to-uwp-root">iOS에서 UWP로 이동</a></td>
     </tr>
     <tr>
         <td>Silverlight 앱을 유니버설 Windows 플랫폼 앱으로 포팅</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt238323">Windows Phone Silverlight에서 UWP로 이동</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/porting/wpsl-to-uwp-root">Windows Phone Silverlight에서 UWP로 이동</a></td>
     </tr>
     <tr>
         <td>XAML 또는 Silverlight에서 유니버설 Windows 플랫폼 앱으로 포팅(동영상)</td>
@@ -902,7 +902,7 @@ BabylonJS는 HTML5, WebGL, WebVR 및 웹 오디오를 사용하여 3D 게임을 
     </tr>
     <tr>
         <td>Direct3D 11에서 Direct3D 12로 포팅</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/mt431709">Direct3D에서 이식 direct3d 11 12</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/porting-from-direct3d-11-to-direct3d-12">Direct3D에서 이식 direct3d 11 12</a></td>
     </tr>
     <tr>
         <td>OpenGL ES에서 Direct3D 11로 포팅</td>
@@ -914,7 +914,7 @@ BabylonJS는 HTML5, WebGL, WebVR 및 웹 오디오를 사용하여 3D 게임을 
     </tr>
     <tr>
         <td>UWP에도 제공되는 클래식 Windows API</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/hh464945">Windows 유니버설 Windows Api에 대 한 대안 플랫폼 (UWP) 앱</a></td>
+        <td><a href="https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps">Windows 유니버설 Windows Api에 대 한 대안 플랫폼 (UWP) 앱</a></td>
     </tr>
 </table>
 
@@ -937,11 +937,11 @@ Windows 10에서는 Windows 10 디바이스에서 공통 API 플랫폼을 제�
     </colgroup>
     <tr>
         <td>유니버설 Windows 플랫폼 소개</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/dn726767">새로운 유니버설 Windows 플랫폼 앱?</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/get-started/whats-a-uwp">새로운 유니버설 Windows 플랫폼 앱?</a></td>
     </tr>
     <tr>
         <td>UWP의 개요</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/dn894631">UWP 앱 가이드</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">UWP 앱 가이드</a></td>
     </tr>
 </table>
  
@@ -961,7 +961,7 @@ Windows 10에서는 Windows 10 디바이스에서 공통 API 플랫폼을 제�
     </tr>
     <tr>
         <td>UWP 개발 설정</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/dn726766">설정하기</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/get-started/get-set-up">설정하기</a></td>
     </tr>
 </table>
 
@@ -995,7 +995,7 @@ UWP 프로그래밍에 "완전 초보자"이고 게임에서 XAML 사용을 고�
     </tr>
     <tr>
         <td>UWP의 네트워크 프로그래밍 개요</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt280378">네트워킹 및 웹 서비스</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/networking/index">네트워킹 및 웹 서비스</a></td>
     </tr>
     <tr>
         <td>게임에서 Windows.Web.HTTP 및 Windows.Networking.Sockets 사용</td>
@@ -1003,7 +1003,7 @@ UWP 프로그래밍에 "완전 초보자"이고 게임에서 XAML 사용을 고�
     </tr>
     <tr>
         <td>UWP의 비동기 프로그래밍 개념</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt187335">비동기 프로그래밍</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps">비동기 프로그래밍</a></td>
     </tr>
 </table>
 
@@ -1026,11 +1026,11 @@ Windows 데스크톱 게임을 UWP로 이동하는 데 도움이 되는 몇 가�
     </tr>
     <tr>
         <td>UWP에서 지원하지 않는 CRT 기능</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/jj606124.aspx">유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다 CRT 함수</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/cppcx/crt-functions-not-supported-in-universal-windows-platform-apps">유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다 CRT 함수</a></td>
     </tr>
     <tr>
         <td>Windows API에 대한 대안</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt592894.aspx">Windows 유니버설 Windows Api에 대 한 대안 플랫폼 (UWP) 앱</a></td>
+        <td><a href="https://docs.microsoft.com/uwp/win32-and-com/alternatives-to-windows-apis-uwp">Windows 유니버설 Windows Api에 대 한 대안 플랫폼 (UWP) 앱</a></td>
     </tr>
 </table>
  
@@ -1046,11 +1046,11 @@ Windows 데스크톱 게임을 UWP로 이동하는 데 도움이 되는 몇 가�
     </colgroup>
     <tr>
         <td>앱 수명 주기 전환 처리</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt243287">앱 수명 주기</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle">앱 수명 주기</a></td>
     </tr>
     <tr>
         <td>Microsoft Visual Studio를 사용하여 앱 전환 트리거</td>
-        <td><a href="https://msdn.microsoft.com/library/hh974425.aspx">트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트를 Visual Studio에서 UWP 앱</a></td>
+        <td><a href="https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015">트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트를 Visual Studio에서 UWP 앱</a></td>
     </tr>
 </table>
  
@@ -1074,7 +1074,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
     </tr>
     <tr>
         <td>앱 수명 주기 상태에 대한 디자인</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/dn611862">시작에 대 한 UX 지침을 일시 중단 및 다시 시작</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/launch-resume/index">시작에 대 한 UX 지침을 일시 중단 및 다시 시작</a></td>
     </tr>
     <tr>
         <td>Xbox One 및 텔레비젼 화면용 UWP 앱 디자인</td>
@@ -1145,11 +1145,11 @@ XAudio2, XAPO 및 Windows Sonic을 사용하여 게임 내 오디오를 구현�
     </colgroup>
     <tr>
         <td>XAudio2 API</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/hh405049.aspx">프로그래밍 가이드 및 XAudio2에 대 한 API 참조</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-apis-portal">프로그래밍 가이드 및 XAudio2에 대 한 API 참조</a></td>
     </tr>
     <tr>
         <td>플랫폼 간 오디오 처리 개체 만들기</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/ee415735.aspx">XAPO 개요</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/xaudio2/xapo-overview">XAPO 개요</a></td>
     </tr>
     <tr>
         <td>오디오 개념 소개</td>
@@ -1157,7 +1157,7 @@ XAudio2, XAPO 및 Windows Sonic을 사용하여 게임 내 오디오를 구현�
     </tr>
     <tr>
         <td>Windows Sonic 개요</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/mt807491.aspx">소리 공간</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/CoreAudio/spatial-sound">공간 음향</a></td>
     </tr>
     <tr>
         <td>Windows Sonic 공간 음향 샘플</td>
@@ -1196,11 +1196,11 @@ DirectX 게임 개발에 대한 가이드 및 참조입니다.
     </tr>
     <tr>
         <td>DirectX 개요 및 참조</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/ee663274">DirectX 그래픽 및 게임</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/directx">DirectX 그래픽 및 게임</a></td>
     </tr>
     <tr>
         <td>Direct3D 12 프로그래밍 가이드 및 참조</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn903821">Direct3D 12 그래픽</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/direct3d-12-graphics">Direct3D 12 그래픽</a></td>
     </tr>
     <tr>
         <td>DirectX 12 기본 사항(동영상)</td>
@@ -1219,27 +1219,27 @@ Direct3D 12의 변경 사항 및 Direct3D 12를 사용하여 프로그래밍을 
     </colgroup>
     <tr>
         <td>프로그래밍 환경 설정</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899120.aspx">Direct3D 12 프로그래밍 환경 설정</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directx-12-programming-environment-set-up">Direct3D 12 프로그래밍 환경 설정</a></td>
     </tr>
     <tr>
         <td>기본 구성 요소를 만드는 방법</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn859356.aspx">기본 Direct3D 12 구성 요소 만들기</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/creating-a-basic-direct3d-12-component">기본 Direct3D 12 구성 요소 만들기</a></td>
     </tr>
     <tr>
         <td>Direct3D 12의 변경 사항</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899194.aspx">Direct3D 11에서 Direct3D 12로 마이그레이션하는 주요 변경 내용</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/important-changes-from-directx-11-to-directx-12">Direct3D 11에서 Direct3D 12로 마이그레이션하는 주요 변경 내용</a></td>
     </tr>
     <tr>
         <td>Direct3D 11에서 Direct3D 12로 포팅하는 방법</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/mt431709.aspx">Direct3D에서 이식 direct3d 11 12</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/porting-from-direct3d-11-to-direct3d-12">Direct3D에서 이식 direct3d 11 12</a></td>
     </tr>
     <tr>
         <td>리소스 바인딩 개념(설명자, 설명자 테이블, 설명자 힙 및 루트 서명 설명) </td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899206.aspx">Direct3D 12에서 리소스 바인딩</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/resource-binding">Direct3D 12에서 리소스 바인딩</a></td>
     </tr>
     <tr>
         <td>메모리 관리</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899198.aspx">Direct3D 12에서 메모리 관리</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/memory-management">Direct3D 12에서 메모리 관리</a></td>
     </tr>
 </table>
  
@@ -1327,7 +1327,7 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
     </colgroup>
     <tr>
         <td>타일 및 배지 개발</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt185606">타일, 배지 및 알림</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-badges-notifications">타일, 배지 및 알림</a></td>
     </tr>
     <tr>
         <td>라이브 타일 및 알림을 보여 주는 샘플</td>
@@ -1335,11 +1335,11 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
     </tr>
     <tr>
         <td>적응형 타일 템플릿(블로그 게시물)</td>
-        <td><a href="https://blogs.msdn.com/b/tiles_and_toasts/archive/2015/06/30/adaptive-tile-templates-schema-and-documentation.aspx">적응 타일 템플릿-스키마 및 설명서</a></td>
+        <td><a href="https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/06/30/adaptive-tile-templates-schema-and-documentation/">적응 타일 템플릿-스키마 및 설명서</a></td>
     </tr>
     <tr>
         <td>타일 및 배지 디자인</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/hh465403">타일 및 배지에 대 한 지침</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles">타일 및 배지에 대 한 지침</a></td>
     </tr>
     <tr>
         <td>라이브 타일 템플릿을 대화형으로 개발하기 위한 Windows 10 앱</td>
@@ -1347,7 +1347,7 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
     </tr>
     <tr>
         <td>Visual Studio의 UWP 타일 생성기 확장</td>
-        <td><a href="https://visualstudiogallery.msdn.microsoft.com/09611e90-f3e8-44b7-9c83-18dba8275bb2">단일 이미지를 사용 하 여 필요한 모든 타일을 만들기 위한 도구</a></td>
+        <td><a href="https://marketplace.visualstudio.com/vsgallery/09611e90-f3e8-44b7-9c83-18dba8275bb2">단일 이미지를 사용 하 여 필요한 모든 타일을 만들기 위한 도구</a></td>
     </tr>
     <tr>
         <td>Visual Studio의 UWP 타일 생성기 확장(블로그 게시물)</td>
@@ -1367,19 +1367,19 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
     </colgroup>
     <tr>
         <td>지 속성 기능</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt219684">앱에서 바로 제품 구매 사용</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-product-purchases">앱에서 바로 제품 구매 사용</a></td>
     </tr>
     <tr>
         <td>사용할 수 있는 추가 기능</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt219683">앱에서 바로 소모성 제품 구매 사용</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/monetize/enable-consumable-in-app-product-purchases">앱에서 바로 소모성 제품 구매 사용</a></td>
     </tr>
     <tr>
         <td>추가 기능 세부 정보 및 제출</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148551">추가 기능 제출</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/publish/iap-submissions">추가 기능 제출</a></td>
     </tr>
     <tr>
         <td>추가 기능 sales 및 게임에 대 한 인구 통계를 모니터링 합니다.</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148538">추가 기능 구입 보고서</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/publish/iap-acquisitions-report">추가 기능 구입 보고서</a></td>
     </tr>
 </table>
  
@@ -1401,11 +1401,11 @@ Windows Performance Toolkit(WPT)은 Windows 운영 체제 및 응용 프로그�
     </tr>
     <tr>
         <td>게임 디바이스 정보를 사용하여 Xbox 콘솔 형식 파악</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/mt825235">게임 장치 정보</a></td>
+        <td><a href="https://docs.microsoft.com/previous-versions/windows/desktop/gamingdvcinfo/gaming-device-information-portal">게임 장치 정보</a></td>
     </tr>
     <tr>
         <td>게임 모드 API를 통해 하드웨어 리소스에 독점적 또는 우선적으로 액세스하여 성능 개선</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/mt808808">게임 모드</a></td>
+        <td><a href="https://docs.microsoft.com/previous-versions/windows/desktop/gamemode/game-mode-portal">게임 모드</a></td>
     </tr>
     <tr>
         <td>Windows 10 SDK에서 Windows Performance Toolkit(WPT) 가져오기</td>
@@ -1444,7 +1444,7 @@ DirectX 개발의 일부는 미묘하고 복잡할 수 있습니다. 프로덕�
     </colgroup>
     <tr>
         <td>Windows의 PIX</td>
-        <td><a href="https://blogs.msdn.microsoft.com/pix/2017/01/17/introducing-pix-on-windows-beta/">성능 튜닝 및 Windows에서 DirectX 12에 대 한 디버깅 도구</a></td>
+        <td><a href="https://devblogs.microsoft.com/pix/introducing-pix-on-windows-beta/">성능 튜닝 및 Windows에서 DirectX 12에 대 한 디버깅 도구</a></td>
     </tr>
     <tr>
         <td>D3D12 개발을 위한 디버깅 및 유효성 검사 도구(동영상)</td>
@@ -1464,7 +1464,7 @@ DirectX 개발의 일부는 미묘하고 복잡할 수 있습니다. 프로덕�
     </tr>
     <tr>
         <td>Direct3D 12 프로그래밍 가이드</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn903821">Direct3D 12 프로그래밍 가이드</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/direct3d-12-graphics">Direct3D 12 프로그래밍 가이드</a></td>
     </tr>
     <tr>
         <td>DirectX 및 XAML 결합</td>
@@ -1507,7 +1507,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </colgroup>
     <tr>
         <td>글로벌 시장을 겨냥한 게임 준비</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt186453.aspx">전 세계에 대 한 개발 시 지침</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/globalizing/globalizing-portal">전 세계에 대 한 개발 시 지침</a></td>
     </tr>
     <tr>
         <td>언어, 문화 및 기술 브리징</td>
@@ -1583,11 +1583,11 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </tr>
     <tr>
         <td>SignTool을 사용하여 파일에 디지털 서명</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/aa387764">파일에 서명 하 고 SignTool을 사용 하 여 파일의 서명을 확인합니다</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/SecCrypto/signtool">파일에 서명 하 고 SignTool을 사용 하 여 파일의 서명을 확인합니다</a></td>
     </tr>    
     <tr>
         <td>게임 업로드 및 버전 관리</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148542">앱 패키지 업로드</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/publish/upload-app-packages">앱 패키지 업로드</a></td>
     </tr>
 </table>
 
@@ -1603,15 +1603,15 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </colgroup>
     <tr>
         <td>Microsoft Store 앱 개발자 계약</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/hh694058">앱 개발자 계약</a></td>
+        <td><a href="https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement">앱 개발자 계약</a></td>
     </tr>
     <tr>
         <td>Microsoft Store에 앱을 게시하기 위한 정책</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/dn764944">Microsoft Store 정책</a></td>
+        <td><a href="https://docs.microsoft.com/legal/windows/agreements/store-policies">Microsoft Store 정책</a></td>
     </tr>
     <tr>
         <td>몇 가지 일반적인 앱 인증 문제를 방지하는 방법</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/jj657968">일반적인 인증 오류를 방지 합니다.</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/publish/avoid-common-certification-failures">일반적인 인증 오류를 방지 합니다.</a></td>
     </tr>
 </table>
  
@@ -1627,7 +1627,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </colgroup>
     <tr>
         <td>스토어 매니페스트 스키마</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt617335">StoreManifest 스키마 (Windows 10)</a></td>
+        <td><a href="https://docs.microsoft.com/uwp/schemas/storemanifest/storemanifestschema2015/schema-root">StoreManifest 스키마 (Windows 10)</a></td>
     </tr>
 </table>
  
@@ -1646,7 +1646,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </colgroup>
     <tr>
         <td>파트너 센터 분석</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148522">앱 성능 분석</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/publish/analytics">앱 성능 분석</a></td>
     </tr>
     <tr>
         <td>고객들이 Xbox 기능으로 몰입감 높은 게임을 즐길 수 있는 방법 확인</td>
@@ -1654,7 +1654,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </tr>
     <tr>
         <td>고객 리뷰에 응답</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148546">고객 리뷰에 응답</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/publish/respond-to-customer-reviews">고객 리뷰에 응답</a></td>
     </tr>
     <tr>
         <td>게임 홍보 방법</td>
@@ -1728,11 +1728,11 @@ Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원�
     </colgroup>
     <tr>
         <td>게임 업데이트 및 버전 관리</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt188602">패키지 버전 번호 매기기</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/publish/package-version-numbering">패키지 버전 번호 매기기</a></td>
     </tr>
     <tr>
         <td>게임 패키지 관리 지침</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt188602">앱 패키지 관리에 대 한 지침</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/publish/package-version-numbering">앱 패키지 관리에 대 한 지침</a></td>
     </tr>
 </table>
 

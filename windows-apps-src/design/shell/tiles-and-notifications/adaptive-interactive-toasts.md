@@ -8,12 +8,12 @@ ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, uwp, 알림 메시지, 대화형 알림, 적응형 알림, 알림 콘텐츠, 알림 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: a75e39dfcddbef5bb5c37c2a253a46a7b9cc9577
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 75e5ea7e83a1a274b90b14588f7d809a4aa91269
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596828"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366872"
 ---
 # <a name="toast-content"></a>알림 콘텐츠
 
@@ -22,7 +22,7 @@ ms.locfileid: "57596828"
 > **중요 API**: [UWP 커뮤니티 도구 키트 알림 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 > [!NOTE]
-> Windows 8.1 및 Windows Phone 8.1에서 레거시 템플릿, 참조를 [레거시 알림 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761494)합니다.
+> Windows 8.1 및 Windows Phone 8.1에서 레거시 템플릿, 참조를 [레거시 알림 템플릿 카탈로그](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10))합니다.
 
 
 ## <a name="getting-started"></a>시작
@@ -42,10 +42,10 @@ ms.locfileid: "57596828"
 알림 메시지는 알림 식별에 사용할 수 있는 Tag/Group과 같은 몇 가지 데이터 속성과 *알림 콘텐츠*의 조합입니다.
 
 알림 콘텐츠의 주요 구성 요소는 다음과 같습니다.
-* **시작**: 이 인수를 클릭할 때 사용자 알림 메시지 알림에 표시 된 올바른 내용에 딥 링크에 있습니다 앱으로 다시 전달 됩니다 것을 정의 합니다. 자세한 내용은 [Send local toast(로컬 알림 보내기)](send-local-toast.md)를 참조하세요.
+* **launch**: 이 인수를 클릭할 때 사용자 알림 메시지 알림에 표시 된 올바른 내용에 딥 링크에 있습니다 앱으로 다시 전달 됩니다 것을 정의 합니다. 자세한 내용은 [Send local toast(로컬 알림 보내기)](send-local-toast.md)를 참조하세요.
 * **visual**: 알림의 시각적 부분에서는 텍스트 및 이미지 포함 제네릭 바인딩을 포함 합니다.
 * **작업**: 입력 하 고 작업을 포함 하는 알림의 대화형 부분입니다.
-* **오디오**: 컨트롤 알림을 사용자에 게 표시 되 면 오디오 재생 합니다.
+* **audio**: 컨트롤 알림을 사용자에 게 표시 되 면 오디오 재생 합니다.
 
 알림 콘텐츠를 원시 XML에 정의되지만 [NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용하여 알림 콘텐츠 생성을 위한 C# 또는 C++ 개체 모델을 구할 수 있습니다. 알림 콘텐츠 내의 모든 것이 이 문서에 설명되어 있습니다.
 

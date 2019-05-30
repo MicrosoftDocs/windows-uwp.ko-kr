@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 포트, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: c7569c6b2f041f5535e0eabe934a91da86b60b9a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5d4aef73b9b28d631a492436ff90761541134220
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634228"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367421"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>연습: DirectX 11 및 Windows 플랫폼 (UWP (유니버설) 하기 위한 간단한 Direct3D 9 앱 포트
 
@@ -41,7 +41,7 @@ ms.locfileid: "57634228"
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md">게임 루프 포트</a></p></td>
-<td align="left"><p>풀 스크린 <a href="https://msdn.microsoft.com/library/windows/apps/br208225"><strong>CoreWindow</strong></a>를 제어하기 위해 <a href="https://msdn.microsoft.com/library/windows/apps/hh700478"><strong>IFrameworkView</strong></a>를 빌드하는 방법을 포함하여 UWP 게임을 위한 창을 구현하는 방법과 게임 루프를 가져오는 방법을 보여줍니다.</p></td>
+<td align="left"><p>풀 스크린 <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow"><strong>CoreWindow</strong></a>를 제어하기 위해 <a href="https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView"><strong>IFrameworkView</strong></a>를 빌드하는 방법을 포함하여 UWP 게임을 위한 창을 구현하는 방법과 게임 루프를 가져오는 방법을 보여줍니다.</p></td>
 </tr>
 </tbody>
 </table>
@@ -61,11 +61,11 @@ ms.locfileid: "57634228"
 -   장치, 디바이스 컨텍스트 및 그래픽 인프라 구분
 -   셰이더를 컴파일하고, 런타임에 셰이더 바이트코드를 로드하는 프로세스
 -   IA(입력 어셈블러) 단계에 대해 꼭짓점별 데이터를 구성하는 방법.
--   [  **IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 사용하여 CoreWindow 뷰를 만드는 방법
+-   [  **IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView)를 사용하여 CoreWindow 뷰를 만드는 방법
 
-이 연습에서는 간소하게 하기 위해 XAML 상호 운용성이 지원되지 않는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 사용합니다.
+이 연습에서는 간소하게 하기 위해 XAML 상호 운용성이 지원되지 않는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow)를 사용합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 [UWP DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 템플릿을 아직 필요는 없지만이 연습에 대 한 코드 샘플을 로드 하려면 Microsoft Visual Studio 2015를 해야 합니다.
@@ -76,11 +76,11 @@ ms.locfileid: "57634228"
 
 **Direct3D**
 
-* [Direct3D에서 HLSL 셰이더 작성 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [Direct3D에서 HLSL 셰이더 작성 9](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-writing-shaders-9)
 * [DirectX 게임 프로젝트 템플릿](user-interface.md)
 
 **Microsoft 스토어**
 
-* [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
-* [**개체 연산자 (^)에 대 한 핸들**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)
+* [**Microsoft::WRL::ComPtr**](https://docs.microsoft.com/cpp/windows/comptr-class)
+* [**개체 연산자 (^)에 대 한 핸들**](https://docs.microsoft.com/cpp/windows/handle-to-object-operator-hat-cpp-component-extensions)
 

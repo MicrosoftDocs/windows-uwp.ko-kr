@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b221220d417df5b70927984ac65eff93fae54a4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2ad32f67dc8cfaf90b96523429bb0ac4b6722abb
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646538"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365083"
 ---
 # <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>자습서: 표 및 StackPanel 간단한 날씨 앱 만들기를 사용 하 여
 
@@ -20,13 +20,13 @@ XAML을 사용하여 **Grid** 및 **StackPanel** 요소로 간단한 날씨 앱�
 
 > **중요 API**: [Grid 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid), [StackPanel 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.stackpanel)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 - Windows 10 및 Microsoft Visual Studio 2015 이상. (최신 Visual Studio 업데이트 현재 개발 및 보안에 대 한 권장) [Visual Studio를 사용 하 여 설정 하는 방법을 알아보려면 여기를 클릭 하십시오.](../../get-started/get-set-up.md)합니다.
-- XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 아직 살펴보지 않았다면 [여기를 클릭하여 "Hellow World" 앱을 만드는 방법을 알아보세요](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
+- XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 아직 살펴보지 않았다면 [여기를 클릭하여 "Hellow World" 앱을 만드는 방법을 알아보세요](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="step-1-create-a-blank-app"></a>1단계: 빈 앱 만들기
 1. Visual Studio 메뉴에서 **파일** > **새 프로젝트**를 선택합니다.
-2. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C#** > **Windows** > **유니버설** 또는 **Visual C++** > **Windows** > **유니버설**을 선택합니다.
+2. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C#**  > **Windows** > **유니버설** 또는 **Visual C++**  > **Windows** > **유니버설**을 선택합니다.
 3. 가운데 창에서 **빈 앱**을 선택합니다.
 4. **이름** 상자에 **WeatherPanel**을 입력하고 **확인**을 선택합니다.
 5. 프로그램을 실행하려면 메뉴에서 **디버그** > **디버깅 시작**을 선택하거나 F5 키를 선택합니다.
@@ -51,7 +51,7 @@ XAML에서 **Grid**는 일련의 행과 열로 이루어집니다. **Grid** 내�
 
 새 **Grid**는 앱 인터페이스의 레이아웃을 정의하는 두 개의 행과 열 집합을 만듭니다. 첫 번째 열에는 **너비** 의 "3\*" 반면 두 번째 "5\*", 비율은 3: 5에서 두 열 간에 가로 간격을 구분 합니다. 두 개의 행에 같은 방법으로는 **높이** 의 "2\*"및"\*" 각각 하므로 **표** 두 번째의 경우 첫 번째 행에 두 배의 공간을 할당 ("\*"동일" 1\*"). 이러한 비율은 창 크기를 조정하거나 디바이스를 변경하는 경우에도 유지됩니다.
 
-행과 열의 크기를 조정하는 다른 방법을 알아보려면 [XAML을 사용하여 레이아웃 정의](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml#layout-properties)를 참조하세요.
+행과 열의 크기를 조정하는 다른 방법을 알아보려면 [XAML을 사용하여 레이아웃 정의](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)를 참조하세요.
 
 지금 응용 프로그램을 실행하면 **Grid** 영역에 콘텐츠가 없으므로 빈 페이지만 표시됩니다. **Grid**를 표시하기 위해 색을 지정하겠습니다.
 
@@ -120,6 +120,6 @@ XAML에서 **Grid**는 일련의 행과 열로 이루어집니다. **Grid** 내�
 원하는 경우 위의 레이아웃을 실험해보고, 날씨 데이터를 표시할 수 있는 다양한 방법을 살펴보세요.
 
 ## <a name="related-articles"></a>관련 문서
-UWP 앱 레이아웃 디자인 소개를 보려면 [UWP 앱 디자인 소개](https://msdn.microsoft.com/windows/uwp/layout/design-and-ui-intro)를 참조하세요.
+UWP 앱 레이아웃 디자인 소개를 보려면 [UWP 앱 디자인 소개](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro)를 참조하세요.
 
-다양한 화면 크기에 맞게 조정되는 반응형 레이아웃을 만드는 방법에 대한 자세한 내용은 [XAML을 사용하여 페이지 레이아웃 정의](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml)를 참조하세요.
+다양한 화면 크기에 맞게 조정되는 반응형 레이아웃을 만드는 방법에 대한 자세한 내용은 [XAML을 사용하여 페이지 레이아웃 정의](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)를 참조하세요.

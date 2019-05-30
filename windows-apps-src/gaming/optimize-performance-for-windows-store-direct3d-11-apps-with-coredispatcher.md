@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 입력 대기 시간
 ms.localizationpriority: medium
-ms.openlocfilehash: 537dd6e9d3f300666a0692b66f422ce00dd68460
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a74e2e24810dee058aa166800091af91d55cdef4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601748"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368452"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임에 대한 입력 대기 시간 최적화
 
@@ -65,7 +65,7 @@ DirectX 게임의 콘텐츠가 렌더링되고 화면에 표시할 준비가 되
 
 퍼즐 게임의 첫 번째 반복에서는 사용자가 퍼즐 조각을 이동할 때만 화면을 업데이트합니다. 사용자는 퍼즐 조각을 원하는 위치로 끌거나 퍼즐 조각을 선택한 다음 정확한 목적지를 터치하여 제자리에 맞출 수 있습니다. 두 번째 경우에는 퍼즐 조각이 애니메이션 또는 효과 없이 목적지로 이동합니다.
 
-코드에서 **CoreProcessEventsOption::ProcessOneAndAllPending**을 사용하는 [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드 내에 단일 스레드 게임 루프가 있습니다. 이 옵션을 사용하면 큐에서 현재 사용 가능한 모든 이벤트가 디스패치됩니다. 대기 중인 이벤트가 없을 경우 이벤트가 나타날 때까지 게임 루프가 기다립니다.
+코드에서 **CoreProcessEventsOption::ProcessOneAndAllPending**을 사용하는 [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run) 메서드 내에 단일 스레드 게임 루프가 있습니다. 이 옵션을 사용하면 큐에서 현재 사용 가능한 모든 이벤트가 디스패치됩니다. 대기 중인 이벤트가 없을 경우 이벤트가 나타날 때까지 게임 루프가 기다립니다.
 
 ``` syntax
 void App::Run()
@@ -96,7 +96,7 @@ void App::Run()
 
 두 번째 반복에서는 사용자가 퍼즐 조각을 선택한 다음 해당 조각의 올바른 목적지를 터치할 때 목적지에 도착할 때까지 화면에서 애니메이트되도록 게임이 수정됩니다.
 
-이전과 마찬가지로, 코드에 **ProcessOneAndAllPending**을 사용하여 큐의 입력 이벤트를 디스패치하는 단일 스레드 게임 루프가 있습니다. 여기서는 애니메이션 중 루프가 **CoreProcessEventsOption::ProcessAllIfPresent**를 사용하도록 변경되어 새 입력 이벤트를 기다리지 않는 차이가 있습니다. 대기 중인 이벤트가 없을 경우 [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215)가 즉시 반환되어 앱이 애니메이션의 다음 프레임을 표시할 수 있도록 합니다. 애니메이션이 완료되면 루프가 **ProcessOneAndAllPending**으로 다시 전환되어 화면 업데이트를 제한합니다.
+이전과 마찬가지로, 코드에 **ProcessOneAndAllPending**을 사용하여 큐의 입력 이벤트를 디스패치하는 단일 스레드 게임 루프가 있습니다. 여기서는 애니메이션 중 루프가 **CoreProcessEventsOption::ProcessAllIfPresent**를 사용하도록 변경되어 새 입력 이벤트를 기다리지 않는 차이가 있습니다. 대기 중인 이벤트가 없을 경우 [**ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents)가 즉시 반환되어 앱이 애니메이션의 다음 프레임을 표시할 수 있도록 합니다. 애니메이션이 완료되면 루프가 **ProcessOneAndAllPending**으로 다시 전환되어 화면 업데이트를 제한합니다.
 
 ``` syntax
 void App::Run()
@@ -182,7 +182,7 @@ void App::Run()
 
 일부 게임은 시나리오 3의 입력 대기 시간 증가를 무시하거나 보상할 수 있습니다. 그러나 짧은 입력 대기 시간이 게임 환경과 플레이어 피드백에 중요한 경우 초당 60프레임을 렌더링하는 게임이 별도 스레드에서 입력을 처리해야 합니다.
 
-퍼즐 게임의 네 번째 반복은 시나리오 3을 기반으로 하며, 게임 루프의 입력 처리와 그래픽 렌더링을 별도 스레드로 분할합니다. 각각 별도 스레드를 사용하면 입력이 그래픽 출력으로 인해 지연되지 않지만, 그 결과로 코드가 더 복잡해집니다. 시나리오 4에서 입력 스레드는 [**CoreProcessEventsOption::ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217)로 [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215)를 호출하며, 새 이벤트를 기다리고 사용 가능한 모든 이벤트를 디스패치합니다. 창이 닫히거나 게임이 [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows/apps/br208260)를 호출할 때까지 이 동작을 계속합니다.
+퍼즐 게임의 네 번째 반복은 시나리오 3을 기반으로 하며, 게임 루프의 입력 처리와 그래픽 렌더링을 별도 스레드로 분할합니다. 각각 별도 스레드를 사용하면 입력이 그래픽 출력으로 인해 지연되지 않지만, 그 결과로 코드가 더 복잡해집니다. 시나리오 4에서 입력 스레드는 [**CoreProcessEventsOption::ProcessUntilQuit**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreProcessEventsOption)로 [**ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents)를 호출하며, 새 이벤트를 기다리고 사용 가능한 모든 이벤트를 디스패치합니다. 창이 닫히거나 게임이 [**CoreWindow::Close**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.close)를 호출할 때까지 이 동작을 계속합니다.
 
 ``` syntax
 void App::Run()
@@ -233,7 +233,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-**DirectX 11 및 XAML 앱 (유니버설 Windows)** Microsoft Visual Studio 2015에서 템플릿 비슷한 방식으로 여러 스레드를 게임 루프를 분할 합니다. [  **Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) 개체를 사용하여 입력 처리 전용 스레드를 시작하고 XAML UI 스레드와 독립적인 렌더링 스레드도 만듭니다. 이러한 템플릿에 대한 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
+**DirectX 11 및 XAML 앱 (유니버설 Windows)** Microsoft Visual Studio 2015에서 템플릿 비슷한 방식으로 여러 스레드를 게임 루프를 분할 합니다. [  **Windows::UI::Core::CoreIndependentInputSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreIndependentInputSource) 개체를 사용하여 입력 처리 전용 스레드를 시작하고 XAML UI 스레드와 독립적인 렌더링 스레드도 만듭니다. 이러한 템플릿에 대한 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>입력 대기 시간을 줄이는 추가 방법
 

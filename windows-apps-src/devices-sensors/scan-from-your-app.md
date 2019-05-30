@@ -6,33 +6,33 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 74c01c21ae65f9e93638e2ce1df604591043a729
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1a314d0acdc3df1e0b53b1d78445b6ab1b71bf92
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601218"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369742"
 ---
 # <a name="scan-from-your-app"></a>앱에서 스캔
 
 
 **중요 한 Api**
 
--   [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)
--   [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)
--   [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381)
+-   [**Windows.Devices.Scanners**](https://docs.microsoft.com/uwp/api/Windows.Devices.Scanners)
+-   [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation)
+-   [**DeviceClass**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceClass)
 
 여기서는 평판, 문서 공급 디바이스 또는 자동 구성된 스캔 소스를 사용하여 앱에서 콘텐츠를 스캔하는 방법에 대해 알아봅니다.
 
-**중요**  는 [ **Windows.Devices.Scanners** ](https://msdn.microsoft.com/library/windows/apps/Dn264250) 데스크톱의 일부인 Api [장치 제품군](https://msdn.microsoft.com/library/windows/apps/Dn894631)합니다. 앱의 Windows 10 데스크톱 버전에 대해서만 이러한 Api를 사용할 수 있습니다.
+**중요**  는 [ **Windows.Devices.Scanners** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Scanners) 데스크톱의 일부인 Api [장치 제품군](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)합니다. 앱의 Windows 10 데스크톱 버전에 대해서만 이러한 Api를 사용할 수 있습니다.
 
-앱에서 스캔하려면 먼저 새 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 선언하고 [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381) 형식을 가져와서 사용 가능한 스캐너를 나열해야 합니다. WIA 드라이버를 사용하여 로컬로 설치된 스캐너만 나열되고 앱에서 사용할 수 있습니다.
+앱에서 스캔하려면 먼저 새 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 선언하고 [**DeviceClass**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceClass) 형식을 가져와서 사용 가능한 스캐너를 나열해야 합니다. WIA 드라이버를 사용하여 로컬로 설치된 스캐너만 나열되고 앱에서 사용할 수 있습니다.
 
-앱에서 사용 가능한 스캐너가 나열된 후에는 스캐너 형식에 따라 자동 구성된 스캔 설정을 사용하거나, 사용 가능한 평판 또는 문서 공급 장치 스캔 소스를 사용하여 스캔할 수 있습니다. 자동 구성된 설정을 사용하려면 스캐너에서 자동 구성이 지원되어야 하며 평판 스캐너와 문서 공급 장치 스캐너 중 하나만 장착되어 있어야 합니다. 자세한 내용은 [자동 구성된 스캔](https://msdn.microsoft.com/library/windows/hardware/Ff539393)을 참조하세요.
+앱에서 사용 가능한 스캐너가 나열된 후에는 스캐너 형식에 따라 자동 구성된 스캔 설정을 사용하거나, 사용 가능한 평판 또는 문서 공급 장치 스캔 소스를 사용하여 스캔할 수 있습니다. 자동 구성된 설정을 사용하려면 스캐너에서 자동 구성이 지원되어야 하며 평판 스캐너와 문서 공급 장치 스캐너 중 하나만 장착되어 있어야 합니다. 자세한 내용은 [자동 구성된 스캔](https://docs.microsoft.com/windows-hardware/drivers/image/auto-configured-scanning)을 참조하세요.
 
 ## <a name="enumerate-available-scanners"></a>사용할 수 있는 스캐너 열거
 
-Windows에서는 스캐너를 자동으로 검색하지 않습니다. 앱이 스캐너와 통신하려면 이 단계를 수행해야 합니다. 이 예제에서는 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) 네임스페이스를 사용하여 스캐너 장치를 열거합니다.
+Windows에서는 스캐너를 자동으로 검색하지 않습니다. 앱이 스캐너와 통신하려면 이 단계를 수행해야 합니다. 이 예제에서는 [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) 네임스페이스를 사용하여 스캐너 장치를 열거합니다.
 
 1.  먼저 다음과 같은 using 문을 클래스 정의 파일에 추가합니다.
 
@@ -88,7 +88,7 @@ Windows에서는 스캐너를 자동으로 검색하지 않습니다. 앱이 스
 
 1.  **ImageScanner 개체 가져오기**
 
-각 [**ImageScannerScanSource**](https://msdn.microsoft.com/library/windows/apps/Dn264238) 열거 형식(**Default**, **AutoConfigured**, **Flatbed** 또는 **Feeder**)에 대해 먼저 다음과 같이 [**ImageScanner.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.scanners.imagescanner.fromidasync) 메서드를 호출하여 [**ImageScanner**](https://msdn.microsoft.com/library/windows/apps/Dn263806) 개체를 만들어야 합니다.
+각 [**ImageScannerScanSource**](https://docs.microsoft.com/uwp/api/Windows.Devices.Scanners.ImageScannerScanSource) 열거 형식(**Default**, **AutoConfigured**, **Flatbed** 또는 **Feeder**)에 대해 먼저 다음과 같이 [**ImageScanner.FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.scanners.imagescanner.fromidasync) 메서드를 호출하여 [**ImageScanner**](https://docs.microsoft.com/uwp/api/Windows.Devices.Scanners.ImageScanner) 개체를 만들어야 합니다.
 
  ```csharp
     ImageScanner myScanner = await ImageScanner.FromIdAsync(deviceId);
@@ -96,7 +96,7 @@ Windows에서는 스캐너를 자동으로 검색하지 않습니다. 앱이 스
 
 2.  **방금 검색**
 
-기본 설정으로 스캔하려는 경우 앱에서는 [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) 네임스페이스에 의존하여 스캐너를 선택하고 해당 소스에서 스캔합니다. 스캔 설정은 변경되지 않습니다. 사용 가능한 스캐너로는 자동 구성, 평판 또는 공급 장치가 있습니다. 이러한 스캔 유형은 공급 디바이스 대신에 평판을 선택하는 등 잘못된 소스에서 스캔하더라도 스캔이 성공적으로 수행될 가능성이 높습니다.
+기본 설정으로 스캔하려는 경우 앱에서는 [**Windows.Devices.Scanners**](https://docs.microsoft.com/uwp/api/Windows.Devices.Scanners) 네임스페이스에 의존하여 스캐너를 선택하고 해당 소스에서 스캔합니다. 스캔 설정은 변경되지 않습니다. 사용 가능한 스캐너로는 자동 구성, 평판 또는 공급 장치가 있습니다. 이러한 스캔 유형은 공급 디바이스 대신에 평판을 선택하는 등 잘못된 소스에서 스캔하더라도 스캔이 성공적으로 수행될 가능성이 높습니다.
 
 **참고**  사용자 공급 장치에 검색 문서 위치 하는 경우 스캐너 검색 평판에서 대신 합니다. 사용자가 빈 공급 디바이스에서 스캔하려고 하면 스캔된 파일이 생성되지 않습니다.
  
@@ -107,7 +107,7 @@ Windows에서는 스캐너를 자동으로 검색하지 않습니다. 앱이 스
 
 3.  **자동 구성에서 검색, 평판, 또는 Feeder 원본**
 
-앱에서는 장치의 [자동 구성된 스캔](https://msdn.microsoft.com/library/windows/hardware/Ff539393)을 사용하여 최적의 스캔 설정으로 스캔할 수 있습니다. 이 옵션을 사용하면 스캔되는 콘텐츠에 따라 컬러 모드와 스캔 해상도 같은 최적의 스캔 설정을 장치 자체에서 결정할 수 있습니다. 디바이스는 각각의 새로운 스캔 작업마다 런타임 시 스캔 설정을 선택합니다.
+앱에서는 장치의 [자동 구성된 스캔](https://docs.microsoft.com/windows-hardware/drivers/image/auto-configured-scanning)을 사용하여 최적의 스캔 설정으로 스캔할 수 있습니다. 이 옵션을 사용하면 스캔되는 콘텐츠에 따라 컬러 모드와 스캔 해상도 같은 최적의 스캔 설정을 장치 자체에서 결정할 수 있습니다. 디바이스는 각각의 새로운 스캔 작업마다 런타임 시 스캔 설정을 선택합니다.
 
 **참고**  일부 스캐너 앱 스캐너가이 설정을 사용 하기 전에이 기능을 지원 하는지 확인 해야 하므로이 기능을 지원 합니다.
 
@@ -174,4 +174,4 @@ cancellationToken = new CancellationTokenSource();
 
 ## <a name="scanning-to-the-pictures-library"></a>사진 라이브러리로 스캔
 
-사용자는 [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/BR207881) 클래스를 사용하여 동적으로 폴더로 스캔할 수 있지만, 사용자가 해당 폴더로 스캔할 수 있도록 하려면 매니페스트에 *사진 라이브러리* 기능을 선언해야 합니다. 앱 기능에 대한 자세한 내용은 [앱 기능 선언](https://msdn.microsoft.com/library/windows/apps/Mt270968)을 참조하세요.
+사용자는 [**FolderPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FolderPicker) 클래스를 사용하여 동적으로 폴더로 스캔할 수 있지만, 사용자가 해당 폴더로 스캔할 수 있도록 하려면 매니페스트에 *사진 라이브러리* 기능을 선언해야 합니다. 앱 기능에 대한 자세한 내용은 [앱 기능 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.

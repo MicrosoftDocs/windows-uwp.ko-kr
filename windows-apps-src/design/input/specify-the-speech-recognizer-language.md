@@ -8,24 +8,24 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e23cb9c01178640bfa1519d8df369ec76ed2a6c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 778aa04861fa7704f4235763a429bb77f92a8b65
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593838"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365333"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>음성 인식기 언어 지정
 
 
 음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다.
 
-> **중요 API**: [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)하십시오 [ **SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)하십시오 [ **언어**](https://msdn.microsoft.com/library/windows/apps/br206804)
+> **중요 API**: [**SupportedTopicLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedtopiclanguages), [**SupportedGrammarLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedgrammarlanguages), [**Language**](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language)
 
 
 여기에서는 시스템에 설치된 언어를 열거하고 기본 언어를 확인하고 인식에 다른 언어를 선택합니다.
 
-**필수 조건:**
+**사전 요구 사항:**
 
 이 항목은 [음성 인식](speech-recognition.md)을 기반으로 합니다.
 
@@ -33,19 +33,19 @@ ms.locfileid: "57593838"
 
 UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항목을 검토하여 여기서 설명하는 기술에 대해 알아보세요.
 
--   [첫 번째 앱 만들기](https://msdn.microsoft.com/library/windows/apps/bg124288)
--   이벤트에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
+-   [첫 번째 앱 만들기](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
+-   이벤트에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)를 참조하세요.
 
 **사용자 환경 지침:**
 
-유용하고 매력적인 음성 사용 앱 디자인에 도움이 되는 팁은 [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)을 참조하세요.
+유용하고 매력적인 음성 사용 앱 디자인에 도움이 되는 팁은 [음성 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)을 참조하세요.
 
 ## <a name="identify-the-default-language"></a>기본 언어 확인
 
 
 음성 인식기는 해당 기본 인식 언어로 시스템 음성 언어를 사용합니다. 이 언어는 사용자가 장치의 설정 &gt; 시스템 &gt; 음성 &gt; 음성 언어 화면에서 설정합니다.
 
-[  **SystemSpeechLanguage**](https://msdn.microsoft.com/library/windows/apps/dn653252) 정적 속성을 확인하여 기본 언어를 식별합니다.
+[  **SystemSpeechLanguage**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.systemspeechlanguage) 정적 속성을 확인하여 기본 언어를 식별합니다.
 
 ```CSharp
 var language = SpeechRecognizer.SystemSpeechLanguage; 
@@ -60,16 +60,16 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
  
 
-[  **SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 클래스의 다음 두 정적 속성 중 하나를 확인하여 장치에서 지원되는 언어를 확인합니다.
+[  **SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 클래스의 다음 두 정적 속성 중 하나를 확인하여 장치에서 지원되는 언어를 확인합니다.
 
--   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)-컬렉션인 [ **언어** ](https://msdn.microsoft.com/library/windows/apps/br206804) 미리 정의 된 받아쓰기 및 웹 검색 문법을 사용 하 여 사용 되는 개체입니다.
+-   [**SupportedTopicLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedtopiclanguages)-컬렉션인 [ **언어** ](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language) 미리 정의 된 받아쓰기 및 웹 검색 문법을 사용 하 여 사용 되는 개체입니다.
 
--   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)-컬렉션인 [ **언어** ](https://msdn.microsoft.com/library/windows/apps/br206804) 목록 제약 조건 또는 음성 인식 문법 Specification (SRGS) 파일을 사용 하 여 사용 되는 개체입니다.
+-   [**SupportedGrammarLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedgrammarlanguages)-컬렉션인 [ **언어** ](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language) 목록 제약 조건 또는 음성 인식 문법 Specification (SRGS) 파일을 사용 하 여 사용 되는 개체입니다.
 
 ## <a name="specify-a-language"></a>언어 지정
 
 
-언어를 지정하려면 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/br206804) 생성자의 [**Language**](https://msdn.microsoft.com/library/windows/apps/dn653226) 개체를 전달합니다.
+언어를 지정하려면 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language) 생성자의 [**Language**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 개체를 전달합니다.
 
 여기에서는 인식 언어로 "en-US"를 지정합니다.
 
@@ -82,11 +82,11 @@ var recognizer = new SpeechRecognizer(language);
 ## <a name="remarks"></a>설명
 
 
-항목 제약 조건은 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn631446)의 [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 컬렉션에 [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653226)를 추가한 후 [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)를 호출하여 구성할 수 있습니다. 인식기가 지원되는 항목 언어와 함께 초기화되지 않은 경우 **TopicLanguageNotSupported**의 [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433)가 반환됩니다.
+항목 제약 조건은 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint)의 [**Constraints**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.constraints) 컬렉션에 [**SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer)를 추가한 후 [**CompileConstraintsAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync)를 호출하여 구성할 수 있습니다. 인식기가 지원되는 항목 언어와 함께 초기화되지 않은 경우 **TopicLanguageNotSupported**의 [**SpeechRecognitionResultStatus**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus)가 반환됩니다.
 
-목록 제약 조건은 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn631421)의 [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 컬렉션에 [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653226)를 추가한 후 [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)를 호출하여 구성합니다. 사용자 지정 목록의 언어를 직접 지정할 수 없습니다. 대신 목록은 인식기의 언어를 사용하여 처리됩니다.
+목록 제약 조건은 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint)의 [**Constraints**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.constraints) 컬렉션에 [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer)를 추가한 후 [**CompileConstraintsAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync)를 호출하여 구성합니다. 사용자 지정 목록의 언어를 직접 지정할 수 없습니다. 대신 목록은 인식기의 언어를 사용하여 처리됩니다.
 
-SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412) 클래스에서 나타내는 개방형 표준 XML 형식입니다. 사용자 지정 목록과 달리 SRGS 태그에서 문법의 언어를 지정할 수 있습니다. [**CompileConstraintsAsync** ](https://msdn.microsoft.com/library/windows/apps/dn653240) 실패 한 [ **SpeechRecognitionResultStatus** ](https://msdn.microsoft.com/library/windows/apps/dn631433) 의 **TopicLanguageNotSupported** 경우 인식기 SRGS 태그와 같은 언어로에 초기화 되지 않았습니다.
+SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint) 클래스에서 나타내는 개방형 표준 XML 형식입니다. 사용자 지정 목록과 달리 SRGS 태그에서 문법의 언어를 지정할 수 있습니다. [**CompileConstraintsAsync** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync) 실패 한 [ **SpeechRecognitionResultStatus** ](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus) 의 **TopicLanguageNotSupported** 경우 인식기 SRGS 태그와 같은 언어로에 초기화 되지 않았습니다.
 
 ## <a name="related-articles"></a>관련 문서
 
@@ -96,7 +96,7 @@ SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microso
 
 **디자이너**
 
-* [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)
+* [음성 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
 
 **샘플**
 

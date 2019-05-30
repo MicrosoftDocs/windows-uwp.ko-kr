@@ -6,12 +6,12 @@ ms.date: 06/23/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 개요, 프로그래밍, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 83ac401892761e1e6433d337babbce00dc559b98
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 56da2fabbe0e3e6ae49ebb817a6f57e4d62d7ae9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608848"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368807"
 ---
 # <a name="directx-programming"></a>DirectX 프로그래밍
 
@@ -61,7 +61,7 @@ ms.locfileid: "57608848"
 </table>
 
 
-DirectX 참고자료 및 프로그래밍 가이드는 [Direct3D 11 그래픽](https://msdn.microsoft.com/library/windows/desktop/ff476080.aspx) 및 [Direct3D 12 그래픽](https://msdn.microsoft.com/library/windows/desktop/dn903821.aspx)을 참조하세요.
+DirectX 참고자료 및 프로그래밍 가이드는 [Direct3D 11 그래픽](https://docs.microsoft.com/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11) 및 [Direct3D 12 그래픽](https://docs.microsoft.com/windows/desktop/direct3d12/direct3d-12-graphics)을 참조하세요.
  
 
 

@@ -7,12 +7,12 @@ ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 910e3108009704d444fb81b195f9dd9eae3daa9d
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: b2e1e2dfdb1dd52e1dd07a146badd78a6bb809fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63798182"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359926"
 ---
 # <a name="device-portal-core-api-reference"></a>디바이스 포털 핵심 API 참조
 
@@ -283,7 +283,7 @@ ms.locfileid: "63798182"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| Delete | /api/app/packagemanager/package |
+| DELETE | /api/app/packagemanager/package |
 
 **URI 매개 변수**
 
@@ -916,7 +916,7 @@ ms.locfileid: "63798182"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| Delete | /api/debug/dump/usermode/crashdump |
+| DELETE | /api/debug/dump/usermode/crashdump |
 
 
 **URI 매개 변수**
@@ -965,7 +965,7 @@ ms.locfileid: "63798182"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| Delete | /api/debug/dump/usermode/crashcontrol |
+| DELETE | /api/debug/dump/usermode/crashcontrol |
 
 
 **URI 매개 변수**
@@ -1373,7 +1373,7 @@ ms.locfileid: "63798182"
 | URI 매개 변수 | 설명 |
 | :---          | :--- |
 | autoreboot   | (**선택**) True 또는 false입니다. 실패 또는 잠긴 후 시스템을 자동으로 다시 시작하는지 여부를 나타냅니다. |
-| dumptype   | (**선택**) 덤프 유형입니다. 지원되는 값은 [CrashDumpType 열거](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx)를 참조하세요.|
+| dumptype   | (**선택**) 덤프 유형입니다. 지원되는 값은 [CrashDumpType 열거](https://docs.microsoft.com/previous-versions/azure/reference/dn802457(v=azure.100))를 참조하세요.|
 | maxdumpcount   | (**선택**) 저장할 최대 덤프 수입니다. |
 | overwrite   | (**선택**) True 또는 false입니다. *maxdumpcount*에 의해 지정된 덤프 카운터 한도에 도달한 경우 이전 덤프를 덮어쓸지 여부를 나타냅니다. |
 
@@ -1457,8 +1457,8 @@ ms.locfileid: "63798182"
 
 | Command | 설명 |
 | :----- | :----- |
-| provider *{guid}* enable *{level}* | 지정된 수준에서 *{guid}*(괄호 없음)로 표시된 공급자를 사용하도록 설정합니다. 여기서 *{level}* 은 1(가장 대략적인 정보)부터 5(자세한 정보)까지의 **int**입니다. |
-| provider *{guid}* disable | *{guid}*(괄호 없음)로 표시된 공급자를 사용하지 않도록 설정합니다. |
+| provider *{guid}* enable *{level}* | 지정된 수준에서 *{guid}* (괄호 없음)로 표시된 공급자를 사용하도록 설정합니다. 여기서 *{level}* 은 1(가장 대략적인 정보)부터 5(자세한 정보)까지의 **int**입니다. |
+| provider *{guid}* disable | *{guid}* (괄호 없음)로 표시된 공급자를 사용하지 않도록 설정합니다. |
 
 이 응답은 서버에서 클라이언트로 전송됩니다. 텍스트로 전송되며 JSON을 구문 분석하여 다음 형식을 가져옵니다.
 ```json
@@ -1604,7 +1604,7 @@ ms.locfileid: "63798182"
 
 <hr>
 
-## <a name="location"></a>Location
+## <a name="location"></a>위치
 
 <hr>
 
@@ -2245,7 +2245,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 <hr>
 
-## <a name="power"></a>Power
+## <a name="power"></a>전원
 
 <hr>
 
@@ -2362,7 +2362,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/power/cfg/*<power scheme path>* |
+| 가져오기 | /api/power/cfg/ *<power scheme path>* |
 
 옵션:
 - SCHEME_CURRENT
@@ -2500,7 +2500,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/power/cfg/*<power scheme path>* |
+| 올리기 | /api/power/cfg/ *<power scheme path>* |
 
 
 **URI 매개 변수**
@@ -2831,7 +2831,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| Delete | /api/taskmanager/app |
+| DELETE | /api/taskmanager/app |
 
 
 **URI 매개 변수**
@@ -2881,7 +2881,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| Delete | /api/taskmanager/process |
+| DELETE | /api/taskmanager/process |
 
 
 **URI 매개 변수**
@@ -3224,8 +3224,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------          | :------ |
 | 인터페이스   | (**필수**) 네트워크 연결에 사용할 네트워크 인터페이스에 대한 GUID입니다. |
 | op   | (**필수**) 수행할 작업을 나타냅니다. 가능한 값은 connect 또는 disconnect입니다.|
-| ssid   | (***op* == connect인 경우 필수**) 연결할 SSID입니다. |
-| Key   | (***op* == connect이고 네트워크에 인증이 필요한 경우 필수**) 공유 키입니다. |
+| ssid   | ( ***op* == connect인 경우 필수**) 연결할 SSID입니다. |
+| Key   | ( ***op* == connect이고 네트워크에 인증이 필요한 경우 필수**) 공유 키입니다. |
 | createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. **예** 또는 **아니요**일 수 있습니다. |
 
 **요청 헤더**
@@ -3264,7 +3264,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| Delete | /api/wifi/profile |
+| DELETE | /api/wifi/profile |
 
 
 **URI 매개 변수**
@@ -3907,7 +3907,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| Delete | /api/wpr/tracefile |
+| DELETE | /api/wpr/tracefile |
 
 
 **URI 매개 변수**
@@ -4015,7 +4015,7 @@ DNS-SD에 의해 현재 알려진 모든 태그를 삭제합니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| Delete | /api/dns-sd/tags |
+| DELETE | /api/dns-sd/tags |
 
 
 **URI 매개 변수**
@@ -4061,7 +4061,7 @@ DNS-SD에 의해 현재 알려진 태그를 삭제합니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| Delete | /api/dns-sd/tag |
+| DELETE | /api/dns-sd/tag |
 
 
 **URI 매개 변수**
@@ -4217,7 +4217,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | URI 매개 변수 | 설명 |
 | :------     | :----- |
 | knownfolderid | (**필수**) 원하는 파일 목록이 있는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
-| packagefullname | (***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
+| packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
 | path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 
 **요청 헤더**
@@ -4278,7 +4278,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | :------     | :----- |
 | knownfolderid | (**필수**) 파일을 다운로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
 | 파일 이름 | (**필수**) 다운로드할 파일의 이름입니다. |
-| packagefullname | (***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 패키지 전체 이름입니다. |
+| packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 패키지 전체 이름입니다. |
 | path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 
 **요청 헤더**
@@ -4329,7 +4329,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | knownfolderid | (**필수**) 파일이 위치한 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
 | 파일 이름 | (**필수**) 이름을 변경할 원래 파일의 이름입니다. |
 | newfilename | (**필수**) 파일의 새 이름입니다.|
-| packagefullname | (***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
+| packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
 | path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 
 **요청 헤더**
@@ -4372,7 +4372,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| Delete | /api/filesystem/apps/file |
+| DELETE | /api/filesystem/apps/file |
 
 **URI 매개 변수**
 
@@ -4380,7 +4380,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | :------     | :----- |
 | knownfolderid | (**필수**) 파일을 삭제하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
 | 파일 이름 | (**필수**) 삭제할 파일의 이름입니다. |
-| packagefullname | (***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
+| packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
 | path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 
 **요청 헤더**
@@ -4430,7 +4430,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | URI 매개 변수 | 설명 |
 | :------     | :----- |
 | knownfolderid | (**필수**) 파일을 업로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
-| packagefullname | (***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
+| packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
 | path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 
 **요청 헤더**

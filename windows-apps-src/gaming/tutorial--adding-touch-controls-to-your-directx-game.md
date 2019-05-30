@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 터치, 컨트롤, directx, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: e8892219b485d320bb77f90ac0d172e8e2403392
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b1f683f2d357057e33f3daa613e1b027a83776af
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618738"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367763"
 ---
 # <a name="touch-controls-for-games"></a>게임용 터치 컨트롤
 
@@ -119,7 +119,7 @@ private 필드에는 카메라 컨트롤러의 현재 상태가 포함되어 있
 
 마지막으로 다음과 같은 메서드 및 속성을 사용하여 카메라 컨트롤러 상태 정보를 초기화하고 액세스하며 업데이트합니다.
 
--   **Initialize**는 컨트롤을 초기화하고 디스플레이 창을 설명하는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체에 연결하기 위해 앱에서 호출하는 이벤트 처리기입니다.
+-   **Initialize**는 컨트롤을 초기화하고 디스플레이 창을 설명하는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 개체에 연결하기 위해 앱에서 호출하는 이벤트 처리기입니다.
 -   **SetPosition**은 장면 공간에서 컨트롤의 좌표(x, y 및 z)를 설정하기 위해 앱에서 호출하는 메서드입니다. z-좌표는 이 자습서 전체에서 0입니다.
 -   **가져올\_위치** 장면 공간에서 카메라의 현재 위치를 가져오는 앱에 액세스 하는 속성입니다. 이 속성은 현재 카메라 위치를 앱에 전달하는 방법으로 사용합니다.
 -   **가져올\_FixedLookPoint** 요점을 현재 있는 방향에 있는 컨트롤러 카메라는 연결을 앱에 액세스 하는 속성입니다. 이 예에서는 x-y 평면에 직각으로 잠겨 있습니다.
@@ -134,15 +134,15 @@ private 필드에는 카메라 컨트롤러의 현재 상태가 포함되어 있
 
 Windows 런타임 이벤트 디스패처에서는 다음과 같이 앱에서 처리할 3개의 이벤트를 제공합니다.
 
--   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)
--   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)
--   [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)
+-   [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed)
+-   [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved)
+-   [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased)
 
-이러한 이벤트는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 유형에 구현됩니다. 이때 사용할 **CoreWindow** 개체가 있다고 가정합니다. 자세한 내용은 [DirectX 보기를 표시하도록 UWP C++ 앱을 설정하는 방법](https://msdn.microsoft.com/library/windows/apps/hh465077)을 참조하세요.
+이러한 이벤트는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 유형에 구현됩니다. 이때 사용할 **CoreWindow** 개체가 있다고 가정합니다. 자세한 내용은 [DirectX 보기를 표시하도록 UWP C++ 앱을 설정하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465077(v=win.10))을 참조하세요.
 
 이러한 이벤트는 앱이 실행되는 동안 발생하므로 처리기에서 private 필드에 정의된 카메라 컨트롤러 상태 정보를 업데이트합니다.
 
-먼저 터치 포인터 이벤트 처리기를 채워보겠습니다. 첫 번째 이벤트 처리기 **OnPointerPressed**에서는 사용자가 화면을 터치하거나 마우스를 클릭할 때 디스플레이를 관리하는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)에서 포인터의 x-y 좌표를 가져옵니다.
+먼저 터치 포인터 이벤트 처리기를 채워보겠습니다. 첫 번째 이벤트 처리기 **OnPointerPressed**에서는 사용자가 화면을 터치하거나 마우스를 클릭할 때 디스플레이를 관리하는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow)에서 포인터의 x-y 좌표를 가져옵니다.
 
 **OnPointerPressed**
 
@@ -190,7 +190,7 @@ void CameraPanController::OnPointerMoved(
 }
 ```
 
-마지막으로 플레이어가 화면 터치를 중지하면 카메라 이동 동작을 비활성화해야 합니다. 사용 하 여 **OnPointerReleased**를 호출한 경우 [ **PointerReleased** ](https://msdn.microsoft.com/library/windows/apps/br208279) 설정 하는 발생 **m\_panInUse** false 및 카메라 이동 이동 끄고 포인터 ID 0으로 설정 합니다.
+마지막으로 플레이어가 화면 터치를 중지하면 카메라 이동 동작을 비활성화해야 합니다. 사용 하 여 **OnPointerReleased**를 호출한 경우 [ **PointerReleased** ](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) 설정 하는 발생 **m\_panInUse** false 및 카메라 이동 이동 끄고 포인터 ID 0으로 설정 합니다.
 
 **OnPointerReleased**
 
@@ -239,7 +239,7 @@ void CameraPanController::Initialize( _In_ CoreWindow^ window )
 }
 ```
 
-**Initialize**에서는 앱의 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 인스턴스에 대한 참조를 매개 변수로 사용하고 개발한 인벤트 처리기를 해당 **CoreWindow**의 적합한 이벤트에 등록합니다.
+**Initialize**에서는 앱의 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 인스턴스에 대한 참조를 매개 변수로 사용하고 개발한 인벤트 처리기를 해당 **CoreWindow**의 적합한 이벤트에 등록합니다.
 
 ## <a name="getting-and-setting-the-position-of-the-camera-controller"></a>카메라 컨트롤러의 위치 가져오기 및 설정
 
