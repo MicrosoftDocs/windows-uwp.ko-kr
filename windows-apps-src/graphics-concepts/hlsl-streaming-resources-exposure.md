@@ -7,35 +7,35 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 00d6c16ecaa64abf7d83154fdb864671dbff3eae
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: db8a368f6cd9e0b6d38fb16d81dbc31a0f8a615f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643488"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370606"
 ---
 # <a name="hlsl-streaming-resources-exposure"></a>HLSL 스트리밍 리소스 노출
 
 
-[셰이더 모델 5](https://msdn.microsoft.com/library/windows/desktop/ff471356)에서 스트리밍 리소스를 지원하려면 특정 Microsoft HLSL(High Level Shader Language) 구문이 필요합니다.
+[셰이더 모델 5](https://docs.microsoft.com/windows/desktop/direct3dhlsl/d3d11-graphics-reference-sm5)에서 스트리밍 리소스를 지원하려면 특정 Microsoft HLSL(High Level Shader Language) 구문이 필요합니다.
 
 셰이더 모델 5용 HLSL 구문은 스트리밍 리소스를 지원하는 디바이스에서만 허용됩니다. 다음 표의 스트리밍 리소스용 각 관련 HLSL 메서드는 하나(피드백) 또는 두 개(순서대로 클램프, 피드백)의 선택적 추가 매개 변수를 받습니다. 예를 들어 **Sample** 메서드는 다음과 같습니다.
 
 **샘플 (샘플러, 위치 \[, 오프셋 \[에 고정 \[, 피드백\] \] \])**
 
-**Sample** 메서드의 예는 [**Texture2D.Sample(S,float,int,float,uint)**](https://msdn.microsoft.com/library/windows/desktop/dn393787)입니다.
+**Sample** 메서드의 예는 [**Texture2D.Sample(S,float,int,float,uint)** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/t2darray-sample-s-float-int-float-uint-)입니다.
 
 오프셋, 클램프 및 피드백 매개 변수는 선택 사항입니다. 하나만 필요하더라도 선택적 매개 변수를 모두 지정해야 하며, 기본 함수 인수에 대한 C++ 규칙을 지켜야 합니다. 예를 들어, 피드백 상태가 필요한 경우 논리적으로 필요하지 않더라도 오프셋 및 클램프 매개 변수도 **Sample**에 지정해야 합니다.
 
 클램프 매개 변수는 스칼라 부동 소수점 값입니다. 클램프의 리터럴 값은 0.0f로, 클램프 작업이 수행되지 않음을 나타냅니다.
 
-피드백 매개 변수는 메모리 액세스 쿼리 내장 함수 [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083)에 제공할 수 있는 **uint** 변수입니다. 피드백 매개 변수의 값을 수정하거나 해석해서는 안 되지만, 컴파일러는 값이 수정되었는지 감지할 수 있는 고급 분석 및 진단 기능을 제공하지는 않습니다.
+피드백 매개 변수는 메모리 액세스 쿼리 내장 함수 [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped)에 제공할 수 있는 **uint** 변수입니다. 피드백 매개 변수의 값을 수정하거나 해석해서는 안 되지만, 컴파일러는 값이 수정되었는지 감지할 수 있는 고급 분석 및 진단 기능을 제공하지는 않습니다.
 
-[  **CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083)의 구문은 다음과 같습니다.
+[  **CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped)의 구문은 다음과 같습니다.
 
 **bool CheckAccessFullyMapped (에: uint FeedbackVar);**
 
-[**CheckAccessFullyMapped** ](https://msdn.microsoft.com/library/windows/desktop/dn292083) 의 값을 해석 *FeedbackVar* 액세스 하는 모든 데이터가 고, 그렇지 않으면 리소스에 매핑된 경우 true를 반환 하 고 **CheckAccessFullyMapped**는 false를 반환 합니다.
+[**CheckAccessFullyMapped** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) 의 값을 해석 *FeedbackVar* 액세스 하는 모든 데이터가 고, 그렇지 않으면 리소스에 매핑된 경우 true를 반환 하 고 **CheckAccessFullyMapped**는 false를 반환 합니다.
 
 클램프 또는 피드백 매개 변수가 있으면 컴파일러는 기본 명령을 변형하여 반환합니다. 예를 들어, 스트리밍 리소스의 샘플은 `sample_cl_s` 명령을 생성합니다.
 
@@ -56,7 +56,7 @@ HLSL 컴파일러가 클램프를 0.0f으로, 피드백이 사용되지 않는 �
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><a href="https://msdn.microsoft.com/library/windows/desktop/ff471359">HLSL 개체</a> </th>
+<th align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/d3d11-graphics-reference-sm5-objects">HLSL 개체</a> </th>
 <th align="left">피드백 옵션이 있는 기본 메서드(*) - 클램프 옵션이 있음</th>
 </tr>
 </thead>

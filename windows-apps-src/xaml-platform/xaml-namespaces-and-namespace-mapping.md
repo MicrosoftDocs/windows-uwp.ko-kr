@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b7e8be3a2c2f3d6d4ecf3ade708741fa323167fc
-ms.sourcegitcommit: 13fe5d04bdb43c75d0fc4de18c2c3d4ae58ff982
+ms.openlocfilehash: 7a8a9a4e5b79950cb15b5d364598c72b8a190d8c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66221036"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366641"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>XAML 네임스페이스 및 네임스페이스 매핑
 
@@ -47,7 +47,7 @@ XAML을 UI 정의 태그 형식으로 사용하는 여러 이전 Microsoft 기�
 
 이러한 선언 사이의 관계를 보면, XAML은 언어 정의이며 Windows 런타임은 XAML을 언어로 사용하고 해당 유형이 XAML에서 참조되는 특정 용어 모음을 정의하는 하나의 구현입니다.
 
-XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 XAML 네임스페이스에 대해 작동하는 XAML 프로세서 구현을 통해 액세스할 수 있어야 합니다. 프로젝트 템플릿, 샘플 코드 및 언어 기능 설명서는 XAML 언어 XAML 네임스페이스의 "x:" 매핑 규칙을 따릅니다. XAML 언어 네임스페이스는 공통으로 사용되는 여러 기능을 정의합니다. 이러한 기능은 C++, C# 또는 Visual Basic으로 작성된 기본 Windows 런타임 앱에도 필요합니다. 예를 들어 partial 클래스를 통해 코드 숨김을 XAML 파일에 조인하려면 먼저 관련 XAML 파일의 루트 요소에서 해당 클래스를 [x:Class 특성](x-class-attribute.md)으로 명명해야 합니다. 또는 XAML 페이지에 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)의 키 입력 리소스로 정의된 모든 요소는 해당 개체 요소에서 [x:Key 특성](x-key-attribute.md)이 설정되어 있어야 합니다.
+XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 XAML 네임스페이스에 대해 작동하는 XAML 프로세서 구현을 통해 액세스할 수 있어야 합니다. 프로젝트 템플릿, 샘플 코드 및 언어 기능 설명서는 XAML 언어 XAML 네임스페이스의 "x:" 매핑 규칙을 따릅니다. XAML 언어 네임스페이스는 공통으로 사용되는 여러 기능을 정의합니다. 이러한 기능은 C++, C# 또는 Visual Basic으로 작성된 기본 Windows 런타임 앱에도 필요합니다. 예를 들어 partial 클래스를 통해 코드 숨김을 XAML 파일에 조인하려면 먼저 관련 XAML 파일의 루트 요소에서 해당 클래스를 [x:Class 특성](x-class-attribute.md)으로 명명해야 합니다. 또는 XAML 페이지에 [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references)의 키 입력 리소스로 정의된 모든 요소는 해당 개체 요소에서 [x:Key 특성](x-key-attribute.md)이 설정되어 있어야 합니다.
 
 ## <a name="code-namespaces-that-map-to-the-default-xaml-namespace"></a>기본 XAML 네임 스페이스에 매핑되는 코드 네임 스페이스
 
@@ -86,13 +86,13 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 
 "D:" XAML 네임 스페이스는 Microsoft Visual Studio의 XAML 디자인 화면에서 디자이너 지 원하는 디자이너 지원에 대 한 것입니다. "D" XAML 네임 스페이스에는 디자이너 또는 XAML 요소에 디자인 타임 특성 수 있습니다. 이러한 디자이너 특성은 XAML 작동 방식의 디자인 측면에만 영향을 줍니다. 앱 실행 시 Windows 런타임 XAML 파서에 동일한 XAML이 로드되면 디자이너 특성은 무시됩니다. 일반적으로 디자이너 특성은 모든 XAML 요소에서 유효하지만 실제로 디자이너 특성 적용이 적절한 시나리오는 한정되어 있습니다. 특히 많은 디자이너 특성이 데이터 바인딩을 사용하는 코드와 XAML을 개발하는 동안 데이터 컨텍스트와 데이터 원본 조작 환경을 향상시키기 위한 것입니다.
 
--   **d:DesignHeight 및 d:DesignWidth 특성:** 이러한 특성 Visual Studio 또는 다른 XAML 디자이너 화면을 만듭니다는 XAML 파일의 루트에 따라 적용 됩니다. 예를 들어 앱 프로젝트에 새 **UserControl**을 추가할 경우 만들어지는 XAML의 [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) 루트에 이 특성이 설정됩니다. 두 특성을 사용하여 XAML 콘텐츠 컴퍼지션을 쉽게 디자인할 수 있으므로 XAML 콘텐츠를 컨트롤 인스턴스나 큰 UI 페이지의 다른 부분에 사용할 경우 발생할 수 있는 레이아웃 제약 조건을 어느 정도 예상할 수 있습니다.
+-   **d:DesignHeight 및 d:DesignWidth 특성:** 이러한 특성 Visual Studio 또는 다른 XAML 디자이너 화면을 만듭니다는 XAML 파일의 루트에 따라 적용 됩니다. 예를 들어 앱 프로젝트에 새 **UserControl**을 추가할 경우 만들어지는 XAML의 [**UserControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) 루트에 이 특성이 설정됩니다. 두 특성을 사용하여 XAML 콘텐츠 컴퍼지션을 쉽게 디자인할 수 있으므로 XAML 콘텐츠를 컨트롤 인스턴스나 큰 UI 페이지의 다른 부분에 사용할 경우 발생할 수 있는 레이아웃 제약 조건을 어느 정도 예상할 수 있습니다.
 
    **참고**  Microsoft Silverlight에서 XAML을 마이그레이션하려는 경우 전체 UI 페이지를 나타내는 루트 요소에서 이러한 특성을 할 수 있습니다. 이 경우 특성을 제거하는 것이 좋습니다. 시뮬레이터 같은 XAML 디자이너의 다른 기능은 **d:DesignHeight** 및 **d:DesignWidth**를 사용한 고정 크기 페이지 레이아웃보다 크기 조정 및 보기 상태를 처리하는 페이지 레이아웃 디자인에 더 유용합니다.
 
--   **d:DataContext 특성:** 모든 명시적 또는 상속 된 페이지 루트 또는 재정의 하기 위한 컨트롤에서이 특성을 설정할 수 있습니다 [ **DataContext** ](https://msdn.microsoft.com/library/windows/apps/br208713) 그렇지 않은 경우 해당 개체에 있습니다.
--   **d:DesignSource 특성:** 에 대 한 디자인 타임 데이터 소스를 지정 된 [ **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833)재정의 [ **소스**](https://msdn.microsoft.com/library/windows/apps/br209835)합니다.
--   **d:DesignInstance 및 d:DesignData 태그 확장:** 이러한 태그 확장에 대 한 디자인 타임 데이터 리소스를 제공 하 되 **d:DataContext** 하거나 **d:DesignSource**합니다. 디자인 타임 데이터 리소스를 사용하는 방법에 대해서는 여기서 자세히 설명하지 않습니다. 자세한 내용은 [디자인 타임 특성](https://go.microsoft.com/fwlink/p/?LinkId=272504)을 참조하세요. 일부 사용 예제는 [디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터](https://msdn.microsoft.com/library/windows/apps/mt517866)를 참조하세요.
+-   **d:DataContext 특성:** 모든 명시적 또는 상속 된 페이지 루트 또는 재정의 하기 위한 컨트롤에서이 특성을 설정할 수 있습니다 [ **DataContext** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 그렇지 않은 경우 해당 개체에 있습니다.
+-   **d:DesignSource 특성:** 에 대 한 디자인 타임 데이터 소스를 지정 된 [ **CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)재정의 [ **소스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.collectionviewsource.source)합니다.
+-   **d:DesignInstance 및 d:DesignData 태그 확장:** 이러한 태그 확장에 대 한 디자인 타임 데이터 리소스를 제공 하 되 **d:DataContext** 하거나 **d:DesignSource**합니다. 디자인 타임 데이터 리소스를 사용하는 방법에 대해서는 여기서 자세히 설명하지 않습니다. 자세한 내용은 [디자인 타임 특성](https://go.microsoft.com/fwlink/p/?LinkId=272504)을 참조하세요. 일부 사용 예제는 [디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터](https://docs.microsoft.com/windows/uwp/data-binding/displaying-data-in-the-designer)를 참조하세요.
 
 ### <a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>**mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
@@ -104,7 +104,7 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 
 ### <a name="vsm"></a>**vsm:**
 
-사용하지 마십시오. "vsm:"은 다른 Microsoft 기술에서 가져온 이전 XAML 템플릿에서 볼 수 있는 접두사입니다. 이 네임스페이스는 원래 레거시 네임스페이스 도구 문제를 해결했습니다. Windows 런타임용으로 사용하는 모든 XAML에서 "vsm:"에 대한 XAML 네임스페이스 정의를 삭제하고 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) 및 관련 개체에 대한 접두사 사용을, 기본 XAML 네임스페이스를 대신 사용하도록 변경해야 합니다. XAML 마이그레이션에 대한 자세한 내용은 [Windows 런타임 앱으로 Silverlight 또는 WPF XAML/코드 마이그레이션](https://msdn.microsoft.com/library/windows/apps/br229571)을 참조하세요.
+사용하지 마십시오. "vsm:"은 다른 Microsoft 기술에서 가져온 이전 XAML 템플릿에서 볼 수 있는 접두사입니다. 이 네임스페이스는 원래 레거시 네임스페이스 도구 문제를 해결했습니다. Windows 런타임용으로 사용하는 모든 XAML에서 "vsm:"에 대한 XAML 네임스페이스 정의를 삭제하고 [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState), [**VisualStateGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateGroup) 및 관련 개체에 대한 접두사 사용을, 기본 XAML 네임스페이스를 대신 사용하도록 변경해야 합니다. XAML 마이그레이션에 대한 자세한 내용은 [Windows 런타임 앱으로 Silverlight 또는 WPF XAML/코드 마이그레이션](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10))을 참조하세요.
 
 ## <a name="mapping-custom-types-to-xaml-namespaces-and-prefixes"></a>XAML 네임스페이스 및 접두사에 사용자 지정 유형 매핑
 
@@ -126,7 +126,7 @@ XAML에서 사용할 코드를 정의할 때 중첩 유형(예: 클래스 내에
 
 ## <a name="custom-types-and-assemblies"></a>사용자 지정 유형 및 어셈블리
 
-XAML 네임스페이스에 대한 지원 유형을 정의하는 어셈블리 이름은 매핑에서 지정되지 않습니다. 사용 가능한 어셈블리에 대한 논리는 앱 정의 수준에서 제어되며 기본 앱 배포 및 보안 원칙의 일부입니다. XAML에 대한 코드 정의 소스로 포함시키려는 모든 어셈블리를 프로젝트 설정의 종속 어셈블리로 선언하세요. 자세한 내용은 [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)를 참조하세요.
+XAML 네임스페이스에 대한 지원 유형을 정의하는 어셈블리 이름은 매핑에서 지정되지 않습니다. 사용 가능한 어셈블리에 대한 논리는 앱 정의 수준에서 제어되며 기본 앱 배포 및 보안 원칙의 일부입니다. XAML에 대한 코드 정의 소스로 포함시키려는 모든 어셈블리를 프로젝트 설정의 종속 어셈블리로 선언하세요. 자세한 내용은 [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))를 참조하세요.
 
 기본 앱의 응용 프로그램 정의 또는 페이지 정의에서 사용자 지정 유형을 참조하는 경우 추가 종속 어셈블리 구성 없이 해당 유형을 사용할 수 있으나 여전히 해당 유형이 포함된 코드 네임스페이스를 매핑해야 합니다. 일반적인 규칙은 지정된 XAML 페이지의 기본 코드 네임스페이스에 대해 "local" 접두사를 매핑하는 것입니다. 이 규칙은 XAML 프로젝트의 시작 프로젝트 템플릿에 포함되는 경우가 많습니다.
 
@@ -138,8 +138,8 @@ XAML 네임스페이스에 대한 지원 유형을 정의하는 어셈블리 이
 
 * [XAML 개요](xaml-overview.md)
 * [XAML 구문 가이드](xaml-syntax-guide.md)
-* [Windows 런타임 구성 요소 만들기 C# 및 Visual Basic](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-* [C#VB 및 C++ Windows 런타임 앱에 대 한 프로젝트 템플릿](https://msdn.microsoft.com/library/windows/apps/hh768232)
-* [마이그레이션 Silverlight 또는 WPF XAML/Windows 런타임 앱에 코드](https://msdn.microsoft.com/library/windows/apps/br229571)
+* [Windows 런타임 구성 요소 만들기 C# 및 Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
+* [C#VB 및 C++ Windows 런타임 앱에 대 한 프로젝트 템플릿](https://docs.microsoft.com/previous-versions/windows/apps/hh768232(v=win.10))
+* [마이그레이션 Silverlight 또는 WPF XAML/Windows 런타임 앱에 코드](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10))
  
 

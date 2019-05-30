@@ -6,12 +6,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
-ms.openlocfilehash: 433536673efb9d2f17d822599051030b219ed02f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d9a7f0302dfdc9f9fa980f0fe93a3371328f9e5c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642158"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367430"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
 
@@ -19,7 +19,7 @@ ms.locfileid: "57642158"
 
 여기에서는 다음에 대한 방법을 알아봅니다.
 
--   새 **Visual Studio 2017** 대상으로 하는 프로젝트 **Windows 10** 하며 **UWP**합니다.
+-   새 **Visual Studio** 대상으로 하는 프로젝트 **Windows 10** 하며 **UWP**합니다.
 -   시작 페이지에서 UI를 변경하는 XAML을 작성합니다.
 -   Visual Studio의 로컬 데스크톱에서 프로젝트를 실행합니다.
 -   SpeechSynthesizer를 사용하여 단추를 누를 때 앱이 말하게 합니다.
@@ -42,7 +42,7 @@ ms.locfileid: "57642158"
 
 ## <a name="step-1-create-a-new-project-in-visual-studio"></a>1단계: Visual Studio에서 새 프로젝트를 만듭니다.
 
-1.  Visual Studio 2017을 시작합니다.
+1.  Visual Studio를 시작합니다.
 
 2.  **파일** 메뉴에서 **새로 만들기 > 프로젝트** 열려는 합니다 *새 프로젝트* 대화 합니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "57642158"
 
 프로젝트의 파일을 보고 편집하려면 **솔루션 탐색기**에서 해당 파일을 두 번 클릭합니다. 폴더와 같이 XAML 파일을 확장하여 관련 코드 파일을 봅니다. XAML 파일은 디자인 화면과 XAML 편집기가 모두 표시되는 분할 보기로 열립니다.
 > [!NOTE]
-> XAML이란? XAML(Extensible Application Markup Language)은 앱의 사용자 인터페이스를 정의하는 데 사용되는 언어입니다. 수동으로 입력하거나 Visual Studio 디자인 도구를 사용하여 만들 수 있습니다. .xaml 파일에는 논리가 포함된 .xaml.cs 코드 숨김 파일이 있습니다. XAML은 코드 숨김과 함께 완전한 클래스를 만듭니다. 자세한 내용은 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/Mt185595)를 참조하세요.
+> XAML이란? XAML(Extensible Application Markup Language)은 앱의 사용자 인터페이스를 정의하는 데 사용되는 언어입니다. 수동으로 입력하거나 Visual Studio 디자인 도구를 사용하여 만들 수 있습니다. .xaml 파일에는 논리가 포함된 .xaml.cs 코드 숨김 파일이 있습니다. XAML은 코드 숨김과 함께 완전한 클래스를 만듭니다. 자세한 내용은 [XAML 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview)를 참조하세요.
 
 *App.xaml 및 App.xaml.cs*
 
@@ -89,7 +89,7 @@ ms.locfileid: "57642158"
 
 -   MainPage.xaml에서는 앱의 UI를 정의합니다. XAML 마크업을 사용하여 직접 요소를 추가하거나 Visual Studio에서 제공하는 디자인 도구를 사용할 수 있습니다.
 -   MainPage.xaml.cs는 MainPage.xaml의 코드 숨김 페이지입니다. 여기에서 앱 논리와 이벤트 처리기를 추가합니다.
--   이러한 두 파일은 `HelloWorld` 네임스페이스의 [**Page**](https://msdn.microsoft.com/library/windows/apps/BR227503)에서 상속되는 `MainPage`이라는 새 클래스를 함께 정의합니다.
+-   이러한 두 파일은 `HelloWorld` 네임스페이스의 [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page)에서 상속되는 `MainPage`이라는 새 클래스를 함께 정의합니다.
 
 *Package.appxmanifest*
 -   이름, 설명, 타일, 시작 페이지 등 앱을 설명하는 매니페스트 파일입니다.
@@ -226,7 +226,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 ### <a name="what-did-we-just-do"></a>방금 어떤 작업을 수행했나요?
 
-이 코드는 일부 Windows API를 사용하여 음성 합성 개체를 만든 다음 여기에 말할 텍스트를 제공합니다. SpeechSynthesis 사용에 대한 자세한 내용은 [SpeechSynthesis 네임스페이스](https://msdn.microsoft.com/library/windows/apps/windows.media.speechsynthesis.aspx) 문서를 참조하세요.
+이 코드는 일부 Windows API를 사용하여 음성 합성 개체를 만든 다음 여기에 말할 텍스트를 제공합니다. SpeechSynthesis 사용에 대한 자세한 내용은 [SpeechSynthesis 네임스페이스](https://docs.microsoft.com/uwp/api/windows.media.speechsynthesis) 문서를 참조하세요.
 
 앱을 실행하고 단추를 클릭하면 컴퓨터(또는 휴대폰)가 문자 그대로 "Hello, World!"라고 말합니다.
 
@@ -237,7 +237,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 XAML을 통해 앱에서 사용할 컨트롤을 배치하는 방법을 알아보려면 [표 자습서](../design/layout/grid-tutorial.md)를 살펴보거나 [다음 단계](learn-more.md)로 바로 이동하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 * [첫 번째 앱](your-first-app.md)
 * [UWP 앱 게시](https://developer.microsoft.com/store/publish-apps)

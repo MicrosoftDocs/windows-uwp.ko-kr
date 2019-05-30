@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, 접근성, 게임
 ms.localizationpriority: medium
-ms.openlocfilehash: 38060d0a6bead360ef8a682902a433670c79b495
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: a3ef82db2d0ddb7883179279fd7e48c1acf38dd3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162781"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369171"
 ---
 #  <a name="making-games-accessible"></a>접근성 높은 게임 만들기
 
@@ -35,7 +35,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 뛰어난 게임을 만들었지만 너무 복잡하거나 난해해서 소수의 사람만 플레이할 수 있다면 매출이 제한됩니다. 마찬가지로, 신체, 감각 또는 인지 장애가 있는 사람이 플레이할 수 없는 게임을 만들면 그만큼 잠재적 매출 기회를 잃게 됩니다. 예를 들어 [미국 국민의 19%가 어떤 형태로든 신체 장애를 가지고 있고](https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), [미국 성인의 14% 정도가 난독증을 가지고 있으며](https://nces.ed.gov/naal/estimates/overview.aspx)[남성의 10%는 색각 이상증을 앓고 있고 있다](https://www.aao.org/eye-health/diseases/color-blindness-risk)는 점을 고려해 볼 때, 접근성 높은 게임을 개발하면 매출이 크게 증가할 수 있습니다. 
 
-비즈니스 근거에 대한 자세한 내용은 [접근성 높은 비디오 게임 만들기](https://msdn.microsoft.com/library/windows/desktop/ee415219)를 참조하세요.
+비즈니스 근거에 대한 자세한 내용은 [접근성 높은 비디오 게임 만들기](https://docs.microsoft.com/windows/desktop/DxTechArts/accessibility-best-practices)를 참조하세요.
 
 ### <a name="better-games"></a>게임 향상
 
@@ -185,7 +185,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 *   읽을 수 있는 단순한 글꼴을 선택합니다.
 *   충분히 큰 글꼴 크기를 선택하거나 유연성을 높이기 위해 조정 가능한 글꼴 크기 옵션을 제공합니다. 적합한 글꼴 크기는 화면 크기, 화면에서 떨어진 시청 거리 등에 따라 다릅니다.
-*   배경색과 글꼴 색 간에 고대비를 만듭니다. 텍스트에 대해 강한 윤곽과 그림자를 사용합니다. 선택 자막에 대해 어두운 배경 오버레이를 사용하고 이를 켜거나 끌 수 있는 옵션을 제공해야 합니다 자세한 내용은 [명암비 정보](https://msdn.microsoft.com/windows/uwp/accessibility/accessible-text-requirements)를 참조하세요.
+*   배경색과 글꼴 색 간에 고대비를 만듭니다. 텍스트에 대해 강한 윤곽과 그림자를 사용합니다. 선택 자막에 대해 어두운 배경 오버레이를 사용하고 이를 켜거나 끌 수 있는 옵션을 제공해야 합니다 자세한 내용은 [명암비 정보](https://docs.microsoft.com/windows/uwp/accessibility/accessible-text-requirements)를 참조하세요.
 * 화면 상에 짧은 문장(한 줄에 최대 38자, 한 번에 최대 2 ~ 3줄)을 표시합니다. 이벤트가 발생하기 전에 텍스트를 표시하여 게임이 노출되지 않도록 하세요.
 *   소리를 내는 물체와 말하는 사람을 구별합니다. (예: "Daniel: 안녕하세요! ")
 *   선택 자막과 자막을 켜고 끄는 옵션을 제공합니다. (추가 기능: 사운드 정보의 양을 표시는 선택 하는 기능 중요도에 따라 합니다.)
@@ -271,5 +271,5 @@ Windows, Xbox One 등의 다양한 게임 시스템에서 사용할 수 있는 �
 ## <a name="related-links"></a>관련 링크
 * [포괄 디자인](https://www.microsoft.com/design/inclusive)
 * [Microsoft Accessibility Developer Hub](https://developer.microsoft.com/windows/accessible-apps)
-* [액세스 가능한 UWP 앱 개발](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)
+* [액세스 가능한 UWP 앱 개발](https://docs.microsoft.com/windows/uwp/accessibility/accessibility)
 * [엔지니어링 소프트웨어에 대 한 내게 필요한 옵션 전자책](https://www.microsoft.com/download/details.aspx?id=19262)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
 ms.localizationpriority: medium
-ms.openlocfilehash: b56140f9a71c8233d2832c2b0da6ed927b5a19ac
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0b6c3303950c29ffb88d13fb9bcecff4d43e304a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607718"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372096"
 ---
 # <a name="introduction-to-multi-user-applications"></a>다중 사용자 응용 프로그램 소개
 
@@ -44,11 +44,11 @@ UWP 게임은 Xbox One 다중 사용자 모델에 옵트인(opt in)하도록 선
 개발자는 KeyUp 및 KeyDown 라우트된 이벤트에서 사용되는 KeyRoutedEventArgs.DeviceId를 사용하여 다른 입력에서 생성된 이벤트를 차별화할 수 있습니다.
 Windows.System.UserDeviceAssociation.FindUserFromDeviceId 메서드를 사용하면 특정 입력과 연결된 사용자를 식별할 수 있습니다.
 
-자세한 내용은 [KeyRoutedEventArgs.DeviceId](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.keyroutedeventargs.deviceid) 항목을 참조하세요.
+자세한 내용은 [KeyRoutedEventArgs.DeviceId](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.deviceid) 항목을 참조하세요.
 
 
 ## <a name="guidance-on-which-model-to-choose"></a>선택할 모델에 대한 지침
 모든 UWP 앱과 대다수 단일 사용자 게임은 SUA로 작성할 수 있습니다. 협력적인 멀티 플레이어 게임의 경우에만 Xbox One 다중 사용자 모델을 옵트인(opt in)하는 것이 좋습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [Xbox One에서 UWP](index.md)

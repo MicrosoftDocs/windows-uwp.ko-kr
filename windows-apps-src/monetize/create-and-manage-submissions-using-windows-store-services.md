@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API
 ms.localizationpriority: medium
-ms.openlocfilehash: c2f2638e93ecbe346cc5dccb503d94d926ddcdae
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: e8e7653174eaf31f11341a5c8e21b69ec54a6189
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335151"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371287"
 ---
 # <a name="create-and-manage-submissions"></a>제출 만들기 및 관리
 
@@ -46,15 +46,15 @@ Microsoft Store 제출 API를 호출하는 코드 작성을 시작하기 전에 
 
 * Microsoft Store 제출 API에서 사용하도록 앱을 준비합니다.
 
-  * 파트너 센터에 아직 존재 하지 않는 앱 해야 [파트너 센터에서 해당 이름을 예약 하 여 앱 만들기](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)합니다. 파트너 센터에서 앱을 만드는 Microsoft Store 제출 API를 사용할 수 없습니다. 만들려면 파트너 센터에서 작업 해야 하 고 그 후 사용할 수 있습니다 API 앱에 액세스 하 여 프로그래밍 방식으로 해당 서브 미션을 만들 합니다. 그러나 해당 제출을 만들기 전에 API를 사용하여 프로그래밍 방식으로 추가 기능 및 패키지 플라이트를 만들 수 있습니다.
+  * 파트너 센터에 아직 존재 하지 않는 앱 해야 [파트너 센터에서 해당 이름을 예약 하 여 앱 만들기](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)합니다. 파트너 센터에서 앱을 만드는 Microsoft Store 제출 API를 사용할 수 없습니다. 만들려면 파트너 센터에서 작업 해야 하 고 그 후 사용할 수 있습니다 API 앱에 액세스 하 여 프로그래밍 방식으로 해당 서브 미션을 만들 합니다. 그러나 해당 제출을 만들기 전에 API를 사용하여 프로그래밍 방식으로 추가 기능 및 패키지 플라이트를 만들 수 있습니다.
 
-  * 이 API를 사용 하 여 지정된 된 앱에 대 한 제출을 만들기 전에 먼저 [파트너 센터에서 앱에 대 한 하나의 제출을 만들기](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), 응답을 포함 하는 [등급 age](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 설문지. 이 작업을 수행한 후 API를 사용하여 프로그래밍 방식으로 이 앱에 대한 새 제출을 만들 수 있습니다. 이러한 유형의 제출에 대해 API를 사용하기 전에 추가 기능 제출 또는 패키지 플라이트 제출을 만들 필요는 없습니다.
+  * 이 API를 사용 하 여 지정된 된 앱에 대 한 제출을 만들기 전에 먼저 [파트너 센터에서 앱에 대 한 하나의 제출을 만들기](https://docs.microsoft.com/windows/uwp/publish/app-submissions), 응답을 포함 하는 [등급 age](https://docs.microsoft.com/windows/uwp/publish/age-ratings) 설문지. 이 작업을 수행한 후 API를 사용하여 프로그래밍 방식으로 이 앱에 대한 새 제출을 만들 수 있습니다. 이러한 유형의 제출에 대해 API를 사용하기 전에 추가 기능 제출 또는 패키지 플라이트 제출을 만들 필요는 없습니다.
 
-  * 앱 제출을 만들거나 업데이트하는 중이고 앱 패키지를 포함해야 하는 경우 [앱 패키지를 준비합니다](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements).
+  * 앱 제출을 만들거나 업데이트하는 중이고 앱 패키지를 포함해야 하는 경우 [앱 패키지를 준비합니다](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
 
-  * 앱 제출을 만들거나 업데이트하는 중이고 스토어 목록에 대한 스크린샷 또는 이미지를 포함해야 할 경우 [앱 스크린샷 및 이미지를 준비합니다](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images).
+  * 앱 제출을 만들거나 업데이트하는 중이고 스토어 목록에 대한 스크린샷 또는 이미지를 포함해야 할 경우 [앱 스크린샷 및 이미지를 준비합니다](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images).
 
-  * 추가 기능 제출을 만들거나 업데이트하는 중이고 아이콘을 포함해야 할 경우 [아이콘을 준비합니다](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon).
+  * 추가 기능 제출을 만들거나 업데이트하는 중이고 아이콘을 포함해야 할 경우 [아이콘을 준비합니다](https://docs.microsoft.com/windows/uwp/publish/create-iap-descriptions).
 
 <span id="associate-an-azure-ad-application-with-your-windows-partner-center-account" />
 

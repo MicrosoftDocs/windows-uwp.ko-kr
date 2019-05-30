@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 기술, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c5c6bb9bc2dadc89811c18c0aa844b899e52cf1
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: ba15a4f965dc582a8bd4eaeca211367ea1fcb5cb
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162708"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368696"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>UWP 앱용 게임 기술
 
@@ -47,7 +47,7 @@ UWP 용 게임을 만들려면 Visual Studio 2015 이상 설치 하 여 개발 �
 ## <a name="getting-started-with-directx-game-project-templates"></a>DirectX 게임 프로젝트 템플릿 시작
 
 
-개발 환경을 설정한 후에는 DirectX 관련 프로젝트 템플릿 중 하나를 사용하여 UWP DirectX 게임을 만들 수 있습니다. Visual Studio 2015에는 새 UWP DirectX 프로젝트를 만들 수 있는 세 가지 템플릿이 있습니다(**DirectX 11 앱(유니버설 Windows)**, **DirectX 12 앱(유니버설 Windows)**, **DirectX 11 및 XAML 앱(유니버설 Windows)**). 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
+개발 환경을 설정한 후에는 DirectX 관련 프로젝트 템플릿 중 하나를 사용하여 UWP DirectX 게임을 만들 수 있습니다. Visual Studio 2015에는 새 UWP DirectX 프로젝트를 만들 수 있는 세 가지 템플릿이 있습니다(**DirectX 11 앱(유니버설 Windows)** , **DirectX 12 앱(유니버설 Windows)** , **DirectX 11 및 XAML 앱(유니버설 Windows)** ). 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
 
 ## <a name="windows-10-apis"></a>Windows 10 API
 
@@ -58,7 +58,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
 
 ![게임 플랫폼 기술](images/gameplatformtechnologies.png)
 
--   3D 그래픽 - Windows 10에서는 두 가지 3D 그래픽 API 집합, 즉 Direct3D 11과 [Direct3D 12](https://msdn.microsoft.com/library/windows/desktop/dn899121)를 지원합니다. 이러한 API는 둘 다 3D 및 2D 그래픽을 만들 수 있는 기능을 제공합니다. Direct3D 11과 Direct3D 12는 함께 사용되지 않지만 2D 그래픽 및 UI 그룹의 모든 API와 함께 사용될 수 있습니다. 게임에서 그래픽 API를 사용하는 방법에 대한 자세한 내용은 [DirectX 게임의 기본 3D 그래픽](an-introduction-to-3d-graphics-with-directx.md)을 참조하세요.
+-   3D 그래픽 - Windows 10에서는 두 가지 3D 그래픽 API 집합, 즉 Direct3D 11과 [Direct3D 12](https://docs.microsoft.com/windows/desktop/direct3d12/directx-12-programming-guide)를 지원합니다. 이러한 API는 둘 다 3D 및 2D 그래픽을 만들 수 있는 기능을 제공합니다. Direct3D 11과 Direct3D 12는 함께 사용되지 않지만 2D 그래픽 및 UI 그룹의 모든 API와 함께 사용될 수 있습니다. 게임에서 그래픽 API를 사용하는 방법에 대한 자세한 내용은 [DirectX 게임의 기본 3D 그래픽](an-introduction-to-3d-graphics-with-directx.md)을 참조하세요.
 
     <table>
     <colgroup>
@@ -78,7 +78,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p><strong>사용 하는 경우</strong></p>
     <p>게임의 성능을 최대화해야 하고 게임이 CPU에 바인딩된 경우 Direct3D 12를 사용합니다.</p>
     <p><strong>자세한 내용은</strong></p>
-    <p><a href="https://msdn.microsoft.com/library/windows/desktop/dn899121">Direct3d 12</a> 설명서를 참조하세요.</p></td>
+    <p><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directx-12-programming-guide">Direct3d 12</a> 설명서를 참조하세요.</p></td>
     </tr>
     <tr class="even">
     <td align="left">Direct3D 11</td>
@@ -86,7 +86,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p><strong>사용 하는 경우</strong></p>
     <p>기존 Direct3D 11 코드가 있거나, 게임이 CPU에 바인딩되지 않았거나, 리소스를 자동으로 관리하려는 경우에 Direct3D 11을 사용합니다.</p>
     <p><strong>자세한 내용은</strong></p>
-    <p><a href="https://msdn.microsoft.com/library/windows/desktop/ff476080">Direct3D 11</a> 설명서를 참조하세요.</p></td>
+    <p><a href="https://docs.microsoft.com/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11">Direct3D 11</a> 설명서를 참조하세요.</p></td>
     </tr>
     </tbody>
     </table>
@@ -113,7 +113,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p><strong>사용 하는 경우</strong></p>
     <p>Direct2D 횡스크롤 또는 보드 게임과 같은 순수 2D 게임용 그래픽을 제공하려는 경우 Direct3D 대신 사용할 수 있으며, 3D 게임에서 사용자 인터페이스 또는 HUD(헤드업 디스플레이)와 같은 2D 그래픽 만들기를 간소화하려는 경우 Direct3D와 함께 사용할 수 있습니다.</p>
     <p><strong>자세한 내용은</strong></p>
-    <p><a href="https://msdn.microsoft.com/library/windows/desktop/dd370990">Direct2D</a> 설명서를 참조하세요.</p></td>
+    <p><a href="https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal">Direct2D</a> 설명서를 참조하세요.</p></td>
     </tr>
     <tr class="even">
     <td align="left">DirectWrite</td>
@@ -121,7 +121,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p><strong>사용 하는 경우</strong></p>
     <p></p>
     <p><strong>자세한 내용은</strong></p>
-    <p><a href="https://msdn.microsoft.com/library/windows/desktop/dd368038">DirectWrite</a> 설명서를 참조하세요.</p></td>
+    <p><a href="https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal">DirectWrite</a> 설명서를 참조하세요.</p></td>
     </tr>
     <tr class="odd">
     <td align="left">DirectComposition</td>
@@ -129,7 +129,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p><strong>사용 하는 경우</strong></p>
     <p>DirectComposition은 시각 효과 컴퍼지션 및 애니메이션 전환 생성 프로세스를 간소화하도록 설계되었습니다. 게임에 복잡한 사용자 인터페이스가 필요한 경우 DirectComposition를 사용하여 UI 만들기 및 관리를 간소화할 수 있습니다.</p>
     <p><strong>자세한 내용은</strong></p>
-    <p><a href="https://msdn.microsoft.com/library/windows/desktop/hh437371">DirectComposition</a> 설명서를 참조하세요.</p></td>
+    <p><a href="https://docs.microsoft.com/windows/desktop/directcomp/directcomposition-portal">DirectComposition</a> 설명서를 참조하세요.</p></td>
     </tr>
     </tbody>
     </table>
@@ -156,7 +156,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p><strong>사용 하는 경우</strong></p>
     <p>게임에서 최소한의 오버헤드 및 지연으로 소리를 재생해야 하는 경우 XAudio2를 사용합니다.</p>
     <p><strong>자세한 내용은</strong></p>
-    <p><a href="https://msdn.microsoft.com/library/windows/desktop/hh405049">XAudio2</a> 설명서를 참조하세요.</p></td>
+    <p><a href="https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-apis-portal">XAudio2</a> 설명서를 참조하세요.</p></td>
     </tr>
     <tr class="even">
     <td align="left">미디어 파운데이션</td>
@@ -164,7 +164,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p><strong>사용 하는 경우</strong></p>
     <p>미디어 파운데이션은 영화 장면이나 게임의 대화형이 아닌 구성 요소에 특히 유용합니다. 또한 XAudio2를 사용한 재생을 위해 오디오 파일을 디코딩하는 데에도 유용합니다.</p>
     <p><strong>자세한 내용은</strong></p>
-    <p><a href="https://msdn.microsoft.com/library/windows/desktop/ms694197">Microsoft 미디어 파운데이션</a> 개요를 참조하세요.</p></td>
+    <p><a href="https://docs.microsoft.com/windows/desktop/medfound/microsoft-media-foundation-sdk">Microsoft 미디어 파운데이션</a> 개요를 참조하세요.</p></td>
     </tr>
     </tbody>
     </table>
@@ -191,7 +191,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p><strong>사용 하는 경우</strong></p>
     <p>게임에서 게임 패드 입력을 지원해야 하는 경우 기존 XInput 코드가 있으면 XInput을 계속 사용할 수 있습니다. XInput은 UWP용 Windows.Gaming.Input으로 대체되었으므로 새 입력 코드를 작성하는 경우 XInput 대신 Windows.Gaming.Input을 사용해야 합니다.</p>
     <p><strong>자세한 내용은</strong></p>
-    <p><a href="https://msdn.microsoft.com/library/windows/desktop/hh405053">XInput</a> 설명서를 참조하세요.</p></td>
+    <p><a href="https://docs.microsoft.com/windows/desktop/xinput/xinput-game-controller-apis-portal">XInput</a> 설명서를 참조하세요.</p></td>
     </tr>
     <tr class="even">
     <td align="left">Windows.Gaming.Input</td>
@@ -207,7 +207,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p><strong>사용 하는 경우</strong></p>
     <p>게임에서 게임 패드 입력을 지원해야 하지만 기존 XInput 코드가 없거나 위에 나열된 이점 중 하나가 필요한 경우 Windows.Gaming.Input을 사용해야 합니다.</p>
     <p><strong>자세한 내용은</strong></p>
-    <p><a href="https://msdn.microsoft.com/library/windows/apps/dn707817">Windows.Gaming.Input</a> 설명서를 참조하세요.</p></td>
+    <p><a href="https://docs.microsoft.com/uwp/api/Windows.Gaming.Input">Windows.Gaming.Input</a> 설명서를 참조하세요.</p></td>
     </tr>
     <tr class="odd">
     <td align="left">Windows.UI.Core.CoreWindow</td>
@@ -242,7 +242,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p><strong>사용 하는 경우</strong></p>
     <p>DirectXMath의 사용은 옵션이며, 일반적인 수학 연산을 간소화합니다.</p>
     <p><strong>자세한 내용은</strong></p>
-    <p><a href="https://msdn.microsoft.com/library/windows/desktop/hh437833">DirectXMath</a> 설명서를 참조하세요.</p></td>
+    <p><a href="https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal">DirectXMath</a> 설명서를 참조하세요.</p></td>
     </tr>
     </tbody>
     </table>

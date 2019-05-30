@@ -5,12 +5,12 @@ ms.date: 04/21/2017
 ms.topic: article
 keywords: windows 10, uwp, 업데이트, 백그라운드 작업, updatetask, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cd7d4494340d1c5e617361f2e3d750b35ebabb9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3683595926f20fdd9f9af5929db65396b0001bcc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603528"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371483"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>UWP 앱 업데이트 시 백그라운드 작업을 실행합니다.
 
@@ -22,12 +22,12 @@ UWP 스토어 앱 업데이트 후 실행되는 백그라운드 작업을 작성
 
 ## <a name="step-1-create-the-background-task-class"></a>1단계: 백그라운드 작업 클래스 만들기
 
-다른 유형의 백그라운드 작업과 마찬가지로 Windows 런타임 구성 요소로 업데이트 작업 백그라운드 작업을 구현합니다. 이 구성 요소를 만들려면 [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)의 **백그라운드 작업 클래스 만들기** 섹션의 단계를 따르세요. 다음과 같은 단계가 포함됩니다.
+다른 유형의 백그라운드 작업과 마찬가지로 Windows 런타임 구성 요소로 업데이트 작업 백그라운드 작업을 구현합니다. 이 구성 요소를 만들려면 [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)의 **백그라운드 작업 클래스 만들기** 섹션의 단계를 따르세요. 이 단계는 다음과 같습니다.
 
 - 솔루션에 Windows 런타임 구성 요소 개체 추가
 - 엡에서 구성 요소로의 참조 만들기
-- [  **IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)를 구현하는 구성 요소에 public sealed 클래스 만들기
-- 업데이트 작업 실행 시 호출되는 필수 진입점인 [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드 구현 백그라운드 작업에서 비동기 호출을 만들려는 경우 [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)에 **Run** 메서드에 지연을 사용하는 방법이 나와 있습니다.
+- [  **IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)를 구현하는 구성 요소에 public sealed 클래스 만들기
+- 업데이트 작업 실행 시 호출되는 필수 진입점인 [**Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.) 메서드 구현 백그라운드 작업에서 비동기 호출을 만들려는 경우 [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)에 **Run** 메서드에 지연을 사용하는 방법이 나와 있습니다.
 
 업데이트 작업을 사용하기 위해 이 백그라운드 작업을 등록할 필요가 없습니다(**Out-of-process 백그라운드 작업 만들기 및 등록** 항목의 "실행할 백그라운드 작업 등록" 섹션 참조). 바로 이것이 업데이트 작업을 사용하는 주된 이유입니다. 백그라운드 작업을 등록하기 위해 업데이트 전에 앱을 한 번 이상 실행할 필요가 없으며 작업 등록을 위해 앱에 코드를 추가할 필요가 없기 때문입니다.
 
@@ -68,7 +68,7 @@ Visual Studio 솔루션 탐색기에서 **Package.appxmanifest** 파일을 마�
 </Package>
 ```
 
-위의 XML에서 `EntryPoint` 특성이 업데이트 작업 클래스의 namespace.class 이름으로 설정되어 있는지 확인합니다. 이름은 대/소문자를 구분합니다.
+위의 XML에서 `EntryPoint` 특성이 업데이트 작업 클래스의 namespace.class 이름으로 설정되어 있는지 확인합니다. 이름은 대/소문자 구분입니다.
 
 ## <a name="step-3-debugtest-your-update-task"></a>3단계: 업데이트 작업을 디버그 테스트 합니다.
 
@@ -93,6 +93,6 @@ Visual Studio 솔루션 탐색기에서 **Package.appxmanifest** 파일을 마�
 > [!NOTE]
 > Visual Studio 2015 사용자: 위의 단계는 Visual Studio 2017에 적용 됩니다. Visual Studio 2015를 사용하는 경우 동일할 기술을 사용하여 UpdateTask를 트리거하고 테스트할 수 있습니다. 단, Visual Studio가 연결되지 않습니다. VS 2015에서 대체 절차는 UpdateTask를 진입점으로 설정하는 [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app)를 설정하고 포그라운드 앱에서 바로 실행을 트리거하는 것입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)

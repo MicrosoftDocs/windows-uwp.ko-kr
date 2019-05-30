@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 그래픽
 ms.localizationpriority: medium
-ms.openlocfilehash: 5dbdf6072f57d12d424f0787cfa2e8993a1624af
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 556c5c74e5c8284e56047b4b8a9b2c2bf9c0155c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621798"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369071"
 ---
 # <a name="basic-3d-graphics-for-directx-games"></a>DirectX 게임용 기본 3D 그래픽
 
@@ -21,7 +21,7 @@ DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하�
 
 **목표:** 3D 그래픽 앱을 프로그래밍 하는 방법을 알아봅니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 사용자가 C++에 익숙하다고 가정합니다. 그래픽 프로그래밍 개념에 대한 기본 경험도 필요합니다.
@@ -31,15 +31,15 @@ DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하�
 ## <a name="where-to-go-from-here"></a>여기에서 이동할 위치
 
 
-DirectX 및 c + +를 사용 하 여 3D 그래픽을 개발 하는 방법에 대 한 이야기 여기서\\Cx 합니다. 이 5개의 부분으로 구성된 자습서에서는 [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) API와 많은 다른 DirectX 샘플에서도 사용된 개념 및 코드에 대해 소개합니다. 각 부분은 UWP C++ 앱용 DirectX 구성에서 기본 형식의 텍스처 설정 및 효과 추가에 이르기까지 서로를 기반으로 구성됩니다.
+DirectX 사용 하 여 3D 그래픽을 개발 하는 방법에 대 한 이야기 여기와 C++ \\Cx 합니다. 이 5개의 부분으로 구성된 자습서에서는 [Direct3D](https://docs.microsoft.com/windows/desktop/direct3d) API와 많은 다른 DirectX 샘플에서도 사용된 개념 및 코드에 대해 소개합니다. 각 부분은 UWP C++ 앱용 DirectX 구성에서 기본 형식의 텍스처 설정 및 효과 추가에 이르기까지 서로를 기반으로 구성됩니다.
 
-> **참고**  이 자습서에서는 열 벡터는 오른손 좌표계를 사용 합니다. 대다수의 DirectX 샘플 및 앱에서는 왼손용 행 벡터 좌표계를 사용합니다. 왼손용 열 벡터 좌표계를 지원하는 보다 완벽한 그래픽 수학 솔루션에는 [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833)를 사용하는 것이 좋습니다. 자세한 내용은 [DirectXMath와 Direct3D 사용](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D)을 참조하세요.
+> **참고**  이 자습서에서는 열 벡터는 오른손 좌표계를 사용 합니다. 대다수의 DirectX 샘플 및 앱에서는 왼손용 행 벡터 좌표계를 사용합니다. 왼손용 열 벡터 좌표계를 지원하는 보다 완벽한 그래픽 수학 솔루션에는 [DirectXMath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal)를 사용하는 것이 좋습니다. 자세한 내용은 [DirectXMath와 Direct3D 사용](https://docs.microsoft.com/windows/desktop/dxmath/pg-xnamath-migration-d3dx)을 참조하세요.
 
  
 
 다음 작업 방법을 보여 줍니다.
 
--   Windows 런타임을 사용해 [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) 인터페이스 초기화
+-   Windows 런타임을 사용해 [Direct3D](https://docs.microsoft.com/windows/desktop/direct3d) 인터페이스 초기화
 -   꼭짓점별 셰이더 작업 적용 방법
 -   기하 도형 설정 방법
 -   장면 래스터화(3D 장면을 2D 투영으로 평면화) 방법
@@ -56,9 +56,9 @@ DirectX 및 c + +를 사용 하 여 3D 그래픽을 개발 하는 방법에 대 
 ## <a name="related-topics"></a>관련 항목
 
 
-* [Direct3D 11 그래픽](https://msdn.microsoft.com/library/windows/desktop/ff476080)
-* [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)
-* [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561)
+* [Direct3D 11 그래픽](https://docs.microsoft.com/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11)
+* [DXGI](https://docs.microsoft.com/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
+* [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl)
 
  
 

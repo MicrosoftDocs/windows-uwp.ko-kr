@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ee96628fd90ec9eea998abf312c5da11bff3826
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 28419df1a37ff640db7246b54e50da5bfce9fedb
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624358"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372627"
 ---
 # <a name="intro-to-certificates"></a>인증서 소개
 
@@ -53,7 +53,7 @@ X.509 공개 키 인증서 표준은 긴 시간에 걸쳐 개정되어 왔습니
 
 ![X.509 인증서 버전 1, 2 및 3](images/x509certificateversions.png)
 
-개발자가 [**CertificateRequestProperties**](https://msdn.microsoft.com/library/windows/apps/br212079) 클래스를 사용하여 인증서 요청을 만들 때 이러한 필드와 확장 중 일부는 직접 지정할 수 있으나, 대부분은 지정이 불가능합니다. 이러한 필드는 발급 기관이 입력하거나 공란으로 둘 수 있습니다. 필드에 대한 자세한 내용은 다음 섹션을 참조하세요.
+개발자가 [**CertificateRequestProperties**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates.CertificateRequestProperties) 클래스를 사용하여 인증서 요청을 만들 때 이러한 필드와 확장 중 일부는 직접 지정할 수 있으나, 대부분은 지정이 불가능합니다. 이러한 필드는 발급 기관이 입력하거나 공란으로 둘 수 있습니다. 필드에 대한 자세한 내용은 다음 섹션을 참조하세요.
 
 ### <a name="version-1-fields"></a>버전 1 필드
 
@@ -64,7 +64,7 @@ X.509 공개 키 인증서 표준은 긴 시간에 걸쳐 개정되어 왔습니
 | 서명 알고리즘 | CA에서 인증서를 서명하는 데 사용된 알고리즘을 지정하는 OID(개체 식별자)를 포함합니다. 예를 들어, 1.2.840.113549.1.1.5는 RSA Laboratories의 RSA 암호화 알고리즘과 결합된 RSA SHA-1 해시 알고리즘을 지정합니다. |
 | 발급자 | 인증서를 만들고 서명한 CA의 X&gt;500 DN(고유 이름)을 포함합니다. |
 | 유효 기간 | 인증서의 유효 기간을 지정합니다. 2049년이 끝인 날짜는 협정 세계시(그리니치 표준시) 형식(yymmddhhmmssz)을 사용합니다. 2050년 1월 1일부터 시작하는 날짜는 일반적인 시간 형식(yyyymmddhhmmssz)을 사용합니다. |
-| 주체 | 인증서에 포함된 공개 키와 연결된 엔터티의 X.500 DN을 포함합니다. |
+| Subject | 인증서에 포함된 공개 키와 연결된 엔터티의 X.500 DN을 포함합니다. |
 | 공개 키 | 공개 키 및 연결된 알고리즘 정보를 포함합니다. |
 
 ### <a name="version-2-fields"></a>버전 2 필드

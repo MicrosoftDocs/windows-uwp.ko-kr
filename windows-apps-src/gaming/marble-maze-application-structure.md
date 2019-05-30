@@ -6,19 +6,19 @@ ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 구조
 ms.localizationpriority: medium
-ms.openlocfilehash: 55b933db7f9b26de2caa3877bde445f96c08d561
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a04e6714772d9b17c281f81ad93582d1fb691c9b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653728"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368499"
 ---
 # <a name="marble-maze-application-structure"></a>Marble Maze 응용 프로그램 구조
 
 
 
 
-DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스크톱 응용 프로그램 구조와 다릅니다. [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751)와 같은 핸들 형식과 [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)와 같은 함수로 작업하는 대신 Windows 런타임은 보다 현대적이고 개체 지향적인 방식으로 UWP 앱을 개발할 수 있도록 [Windows::UI::Core::ICoreWindow](https://msdn.microsoft.com/library/windows/apps/br208296)와 같은 인터페이스를 제공합니다. 이 설명서 섹션에서는 Marble Maze 앱 코드가 구성된 방식을 보여 줍니다.
+DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스크톱 응용 프로그램 구조와 다릅니다. [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types)와 같은 핸들 형식과 [CreateWindow](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-createwindowa)와 같은 함수로 작업하는 대신 Windows 런타임은 보다 현대적이고 개체 지향적인 방식으로 UWP 앱을 개발할 수 있도록 [Windows::UI::Core::ICoreWindow](https://docs.microsoft.com/uwp/api/Windows.UI.Core.ICoreWindow)와 같은 인터페이스를 제공합니다. 이 설명서 섹션에서는 Marble Maze 앱 코드가 구성된 방식을 보여 줍니다.
 
 > [!NOTE]
 > 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](https://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
@@ -79,7 +79,7 @@ HLSL 셰이더는 다른 디자인 타임 및 런타임 형식을 사용하는 �
 ##  <a name="application-life-cycle"></a>응용 프로그램 수명 주기
 
 
-Marble Maze는 일반적인 UWP 앱의 수명 주기를 따릅니다. UWP 앱의 수명 주기에 대한 자세한 내용은 [앱 수명 주기](https://msdn.microsoft.com/library/windows/apps/mt243287)를 참조하세요.
+Marble Maze는 일반적인 UWP 앱의 수명 주기를 따릅니다. UWP 앱의 수명 주기에 대한 자세한 내용은 [앱 수명 주기](https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle)를 참조하세요.
 
 UWP 게임은 초기화될 때 일반적으로 Direct3D, Direct2D, 사용하는 모든 입력, 오디오 또는 물리학 라이브러리 등의 런타임 구성 요소를 초기화합니다. 또한 게임이 시작되기 전에 필요한 게임 관련 리소스를 로드합니다. 이 초기화는 게임 세션 중에 한 번 발생합니다.
 
@@ -240,7 +240,7 @@ Marble Maze는 일시 중단 및 다시 시작을 지원하기 위해 다음 작
 -   상태를 영구적 저장소에 저장하여 일시 중단 알림에 응답합니다.
 -   영구적 저장소에서 상태를 로드하여 다시 시작 알림에 응답합니다. 또한 시작 중에 이전 상태를 로드합니다.
 
-일시 중단 및 다시 시작을 지원하기 위해 Marble Maze는 **PersistentState** 클래스를 정의합니다. **PersistentState.h** 및 **PersistentState.cpp**를 참조하세요. 이 클래스는 [Windows::Foundation::Collections::IPropertySet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IPropertySet) 인터페이스를 사용하여 속성을 읽고 씁니다. **PersistentState** 클래스는 백업 저장소에서 기본 데이터 형식(**bool**, **int**, **float**, [XMFLOAT3](https://msdn.microsoft.com/library/windows/desktop/ee419475) 및 [Platform::String](https://docs.microsoft.com/cpp/cppcx/platform-string-class))을 읽고 쓰는 메서드를 제공합니다.
+일시 중단 및 다시 시작을 지원하기 위해 Marble Maze는 **PersistentState** 클래스를 정의합니다. **PersistentState.h** 및 **PersistentState.cpp**를 참조하세요. 이 클래스는 [Windows::Foundation::Collections::IPropertySet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IPropertySet) 인터페이스를 사용하여 속성을 읽고 씁니다. **PersistentState** 클래스는 백업 저장소에서 기본 데이터 형식(**bool**, **int**, **float**, [XMFLOAT3](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat3) 및 [Platform::String](https://docs.microsoft.com/cpp/cppcx/platform-string-class))을 읽고 쓰는 메서드를 제공합니다.
 
 ```cpp
 ref class PersistentState
@@ -414,7 +414,7 @@ void MarbleMazeMain::LoadState()
 > [!IMPORTANT]
 > Marble Maze는 콜드 시작(이전 일시 중단 이벤트 없이 처음부터 시작)과 일시 중단 상태에서 다시 시작을 구분하지 않습니다. 이것이 모든 UWP 앱에 대해 권장되는 디자인입니다.
 
-응용 프로그램 데이터에 대한 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](https://msdn.microsoft.com/library/windows/apps/mt299098)을 참조하세요.
+응용 프로그램 데이터에 대한 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)을 참조하세요.
 
 ##  <a name="next-steps"></a>다음 단계
 
@@ -425,7 +425,7 @@ void MarbleMazeMain::LoadState()
 
 * [Marble Maze 샘플에 시각적 콘텐츠 추가](adding-visual-content-to-the-marble-maze-sample.md)
 * [Marble Maze 샘플 기본 사항](marble-maze-sample-fundamentals.md)
-* [C + + 및 DirectX에서 UWP 게임, Marble Maze 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* [UWP 게임 Marble Maze 개발 C++ 와 DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

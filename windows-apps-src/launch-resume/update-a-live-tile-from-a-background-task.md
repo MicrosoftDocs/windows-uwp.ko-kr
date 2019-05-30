@@ -7,19 +7,19 @@ ms.date: 01/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 0148be96d9c5994d2fe16e7a0adedee16c8469de
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 280f2253fda7de816ee753798dcab754d58ae847
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63816886"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370548"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>백그라운드 작업에서 라이브 타일 업데이트
 
 **중요 한 Api**
 
--   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
--   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
+-   [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 
 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "63816886"
 ## <a name="implement-the-background-task"></a>백그라운드 작업 구현
 
 
-앱의 라이브 타일을 업데이트하는 클래스를 만드는 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) 인터페이스를 구현합니다. 백그라운드 작업은 Run 메서드에 포함됩니다. 이 경우 작업이 MSDN 블로그에 대한 배포 피드를 가져옵니다. 비동기 코드가 실행되는 동안 작업이 중간에 닫히지 않도록 하려면 지연을 가져옵니다.
+앱의 라이브 타일을 업데이트하는 클래스를 만드는 [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 인터페이스를 구현합니다. 백그라운드 작업은 Run 메서드에 포함됩니다. 이 경우 작업이 MSDN 블로그에 대한 배포 피드를 가져옵니다. 비동기 코드가 실행되는 동안 작업이 중간에 닫히지 않도록 하려면 지연을 가져옵니다.
 
 1.  솔루션 탐색기에서 자동으로 생성된 파일 Class1.cs의 이름을 BlogFeedBackgroundTask.cs로 바꿉니다.
 2.  BlogFeedBackgroundTask.cs에서 자동으로 생성된 코드를 **BlogFeedBackgroundTask** 클래스의 스텁 코드로 바꿉니다.
@@ -159,7 +159,7 @@ namespace BackgroundTasks
 ## <a name="register-the-background-task"></a>백그라운드 작업 등록
 
 
-작업을 등록할 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)를 만듭니다.
+작업을 등록할 [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)를 만듭니다.
 
 > **참고**  Windows 8.1 백그라운드 작업에 대 한 등록 매개 변수 유효성을 검사는 당시에 등록 합니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱에서 시나리오를 처리할 수 있어야 합니다. 예를 들어 조건문을 사용하여 등록 오류를 확인한 다음 다른 매개 변수 값을 사용하여 실패한 등록을 다시 시도해야 합니다.
  
@@ -256,11 +256,11 @@ namespace ContosoApp
 ## <a name="related-topics"></a>관련 항목
 
 
-* [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
-* [**TileUpdateManager**](https://msdn.microsoft.com/library/windows/apps/br208622)
-* [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616)
+* [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+* [**TileUpdateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdateManager)
+* [**TileNotification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileNotification)
 * [백그라운드 작업을 사용 하 여 앱을 지원 합니다.](support-your-app-with-background-tasks.md)
-* [지침 및 타일 및 배지에 대 한 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh465403)
+* [지침 및 타일 및 배지에 대 한 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)
 
  
 

@@ -5,12 +5,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fa0f12779ad56d57c92f667443644851dc3d5e5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d85051aabdb7631c5bdb84e08d6d10a0f70d6ede
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57629368"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372291"
 ---
 # <a name="xload-attribute"></a>x:Load 특성
 
@@ -36,16 +36,16 @@ XAML 프레임워크에서 지연된 요소를 추적하면 자리 표시자를 
 요소를 로드하는 여러 가지 방법이 있습니다.
 
 - [x:Bind](x-bind-markup-extension.md) 식을 사용해 로드 상태를 지정합니다. 식은 요소를 로드하려면 **true**를, 언로드하려면 **false**를 반환해야 합니다.
-- 요소에 정의된 이름을 사용하여 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)을 호출합니다.
-- 요소에 정의된 이름을 사용하여 [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/br209416)를 호출합니다.
-- [  **VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007)에서 x:Load 요소를 대상으로 하는 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 또는 **Storyboard** 애니메이션을 사용합니다.
+- 요소에 정의된 이름을 사용하여 [**FindName**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.findname)을 호출합니다.
+- 요소에 정의된 이름을 사용하여 [**GetTemplateChild**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.gettemplatechild)를 호출합니다.
+- [  **VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState)에서 x:Load 요소를 대상으로 하는 [**Setter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) 또는 **Storyboard** 애니메이션을 사용합니다.
 - 모든 **Storyboard**에서 언로드된 요소를 대상으로 합니다.
 
 > 참고: 요소의 인스턴스화 시작 된 후 UI 끊길 경우 너무 많은 동시에 생성 됩니다 될 수 있도록 UI 스레드에서 만들어집니다.
 
 위에 나열된 방법 중 하나에 의해 지연된 요소가 만들어진 경우 몇 가지 사항이 발생합니다.
 
-- 요소의 [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) 이벤트가 발생합니다.
+- 요소의 [**Loaded**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.loaded) 이벤트가 발생합니다.
 - x:Name에 대한 필드가 설정됩니다.
 - 요소에 대한 모든 x:Bind 바인딩이 평가됩니다.
 - 지연된 요소를 포함하는 특성에 대한 특성 변경 알림을 받도록 등록된 경우 알림이 발생합니다.
@@ -62,30 +62,30 @@ XAML 프레임워크에서 지연된 요소를 추적하면 자리 표시자를 
 
 요소가 언로드되면 요소와 관련된 모든 상태가 삭제되기 때문에 x:Load를 최적화된 버전의 Visibility로 사용하는 경우에는 모든 상태가 바인딩을 통해 적용되었는지, 아니면 Loaded 이벤트가 발생할 때 코드에 의해 다시 적용되었는지 확인합니다.
 
-## <a name="restrictions"></a>제한 사항
+## <a name="restrictions"></a>Restrictions
 
 **x:Load** 사용에 대한 제한 사항은 다음과 같습니다.
 
 - 정의 해야 합니다는 [X:name](x-name-attribute.md) 요소 만큼 해야 나중에 요소를 찾을 수 있습니다.
-- [  **UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 또는 [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249)에서 파생된 형식에서만 x:Load를 사용할 수 있습니다.
-- [  **Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)의 루트 요소에서는 x:Load를 사용할 수 없습니다.
-- [  **ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 요소에서는 x:Load를 사용할 수 없습니다.
-- [  **XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)를 통해 로드된 느슨한 XAML에서는 x:Load를 사용할 수 없습니다.
+- [  **UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 또는 [**FlyoutBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase)에서 파생된 형식에서만 x:Load를 사용할 수 있습니다.
+- [  **Page**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page), [**UserControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) 또는 [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)의 루트 요소에서는 x:Load를 사용할 수 없습니다.
+- [  **ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)의 요소에서는 x:Load를 사용할 수 없습니다.
+- [  **XamlReader.Load**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.markup.xamlreader.load)를 통해 로드된 느슨한 XAML에서는 x:Load를 사용할 수 없습니다.
 - 부모 요소를 이동하면 로드되지 않은 모든 요소가 지워집니다.
 
 ## <a name="remarks"></a>설명
 
 중첩된 요소에서 x:Load를 사용할 수 있지만, 가장 바깥쪽 요소에서 실현해야 합니다.  부모 요소를 실현하기 전에 자식 요소를 실현하려고 하면 예외가 발생합니다.
 
-일반적으로 첫 번째 프레임에서 볼 수 없는 요소를 지연시키는 것이 좋습니다. 지연할 후보를 찾으려면 축소된 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992)로 만들려는 요소를 찾는 것이 좋습니다. 또한 사용자 조작에 의해 트리거되는 UI도 지연시킬 수 있는 요소를 찾기에 좋은 위치입니다.
+일반적으로 첫 번째 프레임에서 볼 수 없는 요소를 지연시키는 것이 좋습니다. 지연할 후보를 찾으려면 축소된 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility)로 만들려는 요소를 찾는 것이 좋습니다. 또한 사용자 조작에 의해 트리거되는 UI도 지연시킬 수 있는 요소를 찾기에 좋은 위치입니다.
 
-[  **ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)에서는 요소 지연에 조심해야 하는데, 시작 시간이 단축되지만 만드는 항목에 따라 이동 성능이 저하될 수 있기 때문입니다. 이동 성능을 향상시키려면 [{x:Bind} markup extension](x-bind-markup-extension.md) 및 [x:Phase attribute](x-phase-attribute.md) 설명서를 참조하세요.
+[  **ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)에서는 요소 지연에 조심해야 하는데, 시작 시간이 단축되지만 만드는 항목에 따라 이동 성능이 저하될 수 있기 때문입니다. 이동 성능을 향상시키려면 [{x:Bind} markup extension](x-bind-markup-extension.md) 및 [x:Phase attribute](x-phase-attribute.md) 설명서를 참조하세요.
 
-[x:Phase attribute](x-phase-attribute.md)가 **x:Load**와 함께 사용되는 경우, 요소 또는 요소 트리가 실현되면 바인딩이 현재 단계까지 적용됩니다. **x:Phase**에 지정된 단계는 요소의 로드 상태에 영향을 미치거나 제어하지 않습니다. 목록 항목이 이동의 한 부분으로 재활용되면 실현된 요소는 다른 활성 요소와 같은 방식으로 동작하고, 컴파일된 바인딩(**{x:Bind}** 바인딩)은 단계를 포함하여 동일한 규칙을 사용해 처리됩니다.
+[x:Phase attribute](x-phase-attribute.md)가 **x:Load**와 함께 사용되는 경우, 요소 또는 요소 트리가 실현되면 바인딩이 현재 단계까지 적용됩니다. **x:Phase**에 지정된 단계는 요소의 로드 상태에 영향을 미치거나 제어하지 않습니다. 목록 항목이 이동의 한 부분으로 재활용되면 실현된 요소는 다른 활성 요소와 같은 방식으로 동작하고, 컴파일된 바인딩( **{x:Bind}** 바인딩)은 단계를 포함하여 동일한 규칙을 사용해 처리됩니다.
 
 일반적인 지침은 이전과 이후에 앱의 성능을 측정하여 원하는 성능을 얻었는지 확인하기 위한 것입니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```xml
 <StackPanel>

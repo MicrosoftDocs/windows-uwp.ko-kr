@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도 인증 키, 지도 컨트롤
 ms.localizationpriority: medium
-ms.openlocfilehash: 620566036dc5aa9357d10e60ec92067ba0faf130
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8f62ecfab5bd8d09092e5264831327b8c63666bc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649558"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370509"
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 
 
 
 
-[**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스를 사용하려면 먼저 [유니버설 Windows 앱](https://msdn.microsoft.com/library/windows/apps/dn894631)을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 항목에서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하고 이를 앱에 추가하는 방법을 설명합니다.
+[**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) 네임스페이스에서 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 지도 서비스를 사용하려면 먼저 [유니버설 Windows 앱](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 항목에서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하고 이를 앱에 추가하는 방법을 설명합니다.
 
 **팁** 앱에서 지도를 사용하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
 
@@ -59,11 +59,11 @@ ms.locfileid: "57649558"
 ## <a name="add-the-key-to-your-app"></a>앱에 키 추가
 
 
-유니버설 Windows 앱에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스([**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979))를 사용하려면 지도 인증 키가 필요합니다. 지도 컨트롤에 인증 키를 추가하고 해당하는 경우 서비스 개체를 매핑합니다.
+유니버설 Windows 앱에서 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 지도 서비스([**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps))를 사용하려면 지도 인증 키가 필요합니다. 지도 컨트롤에 인증 키를 추가하고 해당하는 경우 서비스 개체를 매핑합니다.
 
 ### <a name="to-add-the-key-to-a-map-control"></a>지도 컨트롤에 키를 추가하려면
 
-[  **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)을 인증하려면 [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036) 속성을 인증 키 값으로 설정합니다. 기본 설정에 따라 코드 또는 XAML 태그에서 이 속성을 설정할 수 있습니다. **MapControl** 사용에 대한 자세한 내용은 [2D, 3D 및 Streetside 뷰로 지도 표시](display-maps.md)를 참조하세요.
+[  **MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)을 인증하려면 [**MapServiceToken**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken) 속성을 인증 키 값으로 설정합니다. 기본 설정에 따라 코드 또는 XAML 태그에서 이 속성을 설정할 수 있습니다. **MapControl** 사용에 대한 자세한 내용은 [2D, 3D 및 Streetside 뷰로 지도 표시](display-maps.md)를 참조하세요.
 
 -   이 예제는 **MapServiceToken**을 코드의 인증 키 값으로 설정합니다.
 
@@ -79,7 +79,7 @@ ms.locfileid: "57649558"
 
 ### <a name="to-add-the-key-to-map-services"></a>지도 서비스에 키를 추가하려면
 
-[  **Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스의 서비스를 사용하려면 [**ServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn636977) 속성을 인증 키 값으로 설정합니다. 지도 서비스 사용에 대한 자세한 내용은 [경로 및 길 찾기 표시](routes-and-directions.md) 및 [지오코딩 및 리버스 지오코딩 수행](geocoding.md)을 참조하세요.
+[  **Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) 네임스페이스의 서비스를 사용하려면 [**ServiceToken**](https://docs.microsoft.com/uwp/api/windows.services.maps.mapservice.servicetoken) 속성을 인증 키 값으로 설정합니다. 지도 서비스 사용에 대한 자세한 내용은 [경로 및 길 찾기 표시](routes-and-directions.md) 및 [지오코딩 및 리버스 지오코딩 수행](geocoding.md)을 참조하세요.
 
 -   이 예제는 **ServiceToken**을 코드의 인증 키 값으로 설정합니다.
 
@@ -91,6 +91,6 @@ ms.locfileid: "57649558"
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [지도에 대한 디자인 지침](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
 * [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)

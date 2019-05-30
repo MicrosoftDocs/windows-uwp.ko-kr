@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: a0a16ac9a2d810f7f4cbe2be403713b5cec4997b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f20179b03461f2b7746cc6d0f4330bbf45c10427
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641028"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371951"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
@@ -76,7 +76,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 시스템은 UI 셸만 제공하므로 창으 비어 있습니다. 프로그래밍 방식을 사용하여 ID 공급자로 창을 채우는 것은 개발자의 책임입니다. 
 
 > [!TIP]
-> 사용할 수 있습니다 **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** 대신  **[표시](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)** 를 반환 하는 프로그램  **[ IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)**, 작업의 상태를 쿼리해야 합니다. 
+> 사용할 수 있습니다 **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** 대신  **[표시](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)** 를 반환 하는 프로그램  **[ IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)** , 작업의 상태를 쿼리해야 합니다. 
 
 ## <a name="register-for-accountcommandsrequested"></a>AccountCommandsRequested 등록
 
@@ -174,7 +174,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 이 예제에서는 문자열 "wl.basic"을 _scope_ 매개 변수에 전달합니다. 범위는 제공 서비스로부터 요청하는 정보 유형을 특정 사용자에 나타냅니다. 특정 범위에서는 이름 및 이메일 주소와 같은 사용자의 기본 정보에만 액세스할 수 있지만 다른 범위에서는 사용자의 사진이나 이메일 받은 편지함과 같은 중요한 정보에 대한 액세스를 허용할 수 있습니다. 일반적으로 앱은 해당 기능을 수행하는 데 필요한 최소 허용 범위를 사용해야 합니다. 서비스 공급자는 서비스에 사용할 토큰을 가져오는 데 필요한 범위에 대한 설명서를 제공합니다. 
 
-* Office 365 및 Outlook.com 범위의 경우 [v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증](https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2)을 참조하세요. 
+* Office 365 및 Outlook.com 범위의 경우 [v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증](https://developer.microsoft.com/graph/docs/concepts/auth_overview)을 참조하세요. 
 * OneDrive 범위의 경우 [OneDrive 인증 및 로그인](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes)을 참조하세요. 
 
 > [!TIP]
@@ -214,7 +214,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 > [!NOTE]
 > 토큰을 요청할 때 오류가 발생하면 1단계에서 설명한 대로 앱을 스토어에 연결했는지 확인합니다. 이 단계를 건너뛰면 앱은 토큰을 가져올 수 없습니다. 
 
-토큰이 있으면 토큰을 사용하여 공급자의 API를 호출할 수 있습니다. 아래 코드에서는 [user info Microsoft Live API](https://msdn.microsoft.com/library/hh826533.aspx)를 호출하여 사용자에 대한 기본 정보를 얻고 UI에 표시합니다. 그러나 대부분의 경우 이렇게 얻은 토큰을 저장한 다음 이를 다른 메서드에 사용하는 것이 좋습니다.
+토큰이 있으면 토큰을 사용하여 공급자의 API를 호출할 수 있습니다. 아래 코드에서는 [user info Microsoft Live API](https://docs.microsoft.com/office/)를 호출하여 사용자에 대한 기본 정보를 얻고 UI에 표시합니다. 그러나 대부분의 경우 이렇게 얻은 토큰을 저장한 다음 이를 다른 메서드에 사용하는 것이 좋습니다.
 
 ```csharp
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
@@ -420,13 +420,13 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 이론적으로는 모든 경우에 설정 명령을 사용할 수 있습니다. 그러나 위에 설명된 것과 같은 계정과 관련된 직관적인 시나리오로 사용을 제한하는 것이 좋습니다. 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[Windows.Security.Authentication.Web.Core 네임 스페이스](https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.web.core.aspx)
+[Windows.Security.Authentication.Web.Core 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
 
-[Windows.Security.Credentials 네임 스페이스](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.aspx)
+[Windows.Security.Credentials 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.security.credentials)
 
-[AccountsSettingsPane 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.applicationsettings.accountssettingspane)
+[AccountsSettingsPane 클래스](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane)
 
 [웹 인증 브로커](web-authentication-broker.md)
 

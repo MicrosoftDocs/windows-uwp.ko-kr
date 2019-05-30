@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f9f9a69c0e30459929d1e31084ea88b3f7ebbd0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c48b02de34bd37acced8ef65859708f31fd78ca2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612888"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370865"
 ---
 # <a name="tier-2"></a>계층 2
 
@@ -42,7 +42,7 @@ ms.locfileid: "57612888"
 
 **NULL** 및 비**NULL** 타일을 공간에 배치하는 텍스처 필터링은 **NULL** 타일의 텍셀일 경우 0(누락된 형식 요소의 기본값)을 전체 필터 연산에 지정합니다. 일부 초기의 하드웨어는 이러한 요건을 충족하지 못하고 어떤 텍셀(0이 아닌 가중치)이든 **NULL** 타일에 해당하면 전체 필터 결과로 0(누락된 형식 요소의 기본값)을 반환합니다. 그 밖에 다른 하드웨어는 필터 연산에 0이 아닌 가중치의 모든 텍셀을 포함해야 하는 요건을 반드시 충족해야 합니다.
 
-**NULL** 텍셀 액세스는 상태 피드백에 대한 [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083) 연산에서 텍스처 읽기가 false를 반환하는 원인이 됩니다. 이는 셰이더에서 텍스처 액세스 결과의 쓰기 마스킹 방식과 텍스처 형식의 요소 수(텍스처 액세스가 필요 없어 보이는 조합)와 상관없습니다.
+**NULL** 텍셀 액세스는 상태 피드백에 대한 [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) 연산에서 텍스처 읽기가 false를 반환하는 원인이 됩니다. 이는 셰이더에서 텍스처 액세스 결과의 쓰기 마스킹 방식과 텍스처 형식의 요소 수(텍스처 액세스가 필요 없어 보이는 조합)와 상관없습니다.
 
 ## <a name="span-idalignmentconstraintsspanspan-idalignmentconstraintsspanspan-idalignmentconstraintsspanalignment-constraints"></a><span id="Alignment_constraints"></span><span id="alignment_constraints"></span><span id="ALIGNMENT_CONSTRAINTS"></span>맞춤 제약 조건
 

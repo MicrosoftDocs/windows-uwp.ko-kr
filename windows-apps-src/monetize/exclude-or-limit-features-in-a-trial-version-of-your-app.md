@@ -6,19 +6,19 @@ keywords: windows 10, uwp, 평가판, 앱에서 바로 구매, IAP, Windows.Appl
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 38590282a95e29ab240486e9c4a3f9cb9afe229c
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 868f9f5742122df861f5c7c62bc147372307033f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335101"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371801"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>평가판의 기능 제외 또는 제한
 
 체험 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 체험 기간 동안 일부 기능을 제외하거나 제한하여 고객이 처음 사용자용 앱 버전으로 업그레이드하도록 유도할 수 있습니다. 코딩을 시작하기 전에 제한할 기능을 결정한 다음 정식 라이선스를 구입한 다음에만 해당 기능이 작동하도록 해야 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
 > [!IMPORTANT]
-> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 평가판 기능을 구현하는 방법을 설명합니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. 합니다 **Windows.Services.Store** 네임 스페이스 최신 추가 기능 형식을 사용할 수 있는 추가 기능 저장소 관리 등 구독을 지원 하며 향후 유형의 제품 및 파트너를 지 원하는 기능을 사용 하 여 호환 되도록 설계 되었습니다 센터와 저장소를 제공 합니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. **Windows.Services.Store** 네임스페이스를 사용하여 평가판 기능을 구현하는 방법에 대한 자세한 내용은 [이 문서](implement-a-trial-version-of-your-app.md)를 참조하세요.
+> 이 문서에서는 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스의 멤버를 사용하여 평가판 기능을 구현하는 방법을 설명합니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스를 대신 사용하는 것이 좋습니다. 합니다 **Windows.Services.Store** 네임 스페이스 최신 추가 기능 형식을 사용할 수 있는 추가 기능 저장소 관리 등 구독을 지원 하며 향후 유형의 제품 및 파트너를 지 원하는 기능을 사용 하 여 호환 되도록 설계 되었습니다 센터와 저장소를 제공 합니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. **Windows.Services.Store** 네임스페이스를 사용하여 평가판 기능을 구현하는 방법에 대한 자세한 내용은 [이 문서](implement-a-trial-version-of-your-app.md)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -26,7 +26,7 @@ ms.locfileid: "58335101"
 
 ## <a name="step-1-pick-the-features-you-want-to-enable-or-disable-during-the-trial-period"></a>1단계: 사용 하도록 설정 하거나 평가판 사용 기간 동안 사용 하지 않도록 설정 하려면 기능 선택
 
-앱의 현재 라이선스 상태는 [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157) 클래스의 속성으로 저장됩니다. 일반적으로 다음 단계의 설명과 같이 라이선스 상태를 사용하는 기능을 조건부 블록에 넣습니다. 이러한 기능을 고려할 때 모든 라이선스 상태에서 작동하도록 구현할 수 있는지 확인하세요.
+앱의 현재 라이선스 상태는 [LicenseInformation](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.LicenseInformation) 클래스의 속성으로 저장됩니다. 일반적으로 다음 단계의 설명과 같이 라이선스 상태를 사용하는 기능을 조건부 블록에 넣습니다. 이러한 기능을 고려할 때 모든 라이선스 상태에서 작동하도록 구현할 수 있는지 확인하세요.
 
 또한 앱이 실행되는 동안 앱의 라이선스 변경을 처리하는 방법을 결정하세요. 체험 앱에서 전체 기능을 제공할 수 있지만 구매한 버전에는 없는 앱에서 바로 구매 광고 배너가 있습니다. 또는 체험 앱에서 특정 기능을 사용하지 않도록 설정하거나 사용자에게 구매를 권유하는 메시지를 주기적으로 표시할 수 있습니다.
 
@@ -61,9 +61,9 @@ ms.locfileid: "58335101"
 
 ## <a name="step-2-initialize-the-license-info"></a>2단계: 라이선스 정보를 초기화 합니다.
 
-앱을 초기화하는 경우 이 예제와 같이 앱의 [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157) 개체를 가져옵니다. **licenseInformation**은 **LicenseInformation** 유형의 전역 변수 또는 필드로 가정됩니다.
+앱을 초기화하는 경우 이 예제와 같이 앱의 [LicenseInformation](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.LicenseInformation) 개체를 가져옵니다. **licenseInformation**은 **LicenseInformation** 유형의 전역 변수 또는 필드로 가정됩니다.
 
-지금은 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) 대신 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766)를 사용하여 시뮬레이트된 라이선스 정보를 가져옵니다. 앱의 릴리스 버전을 **스토어**에 제출하기 전에 코드에서 모든 **CurrentAppSimulator** 참조를 **CurrentApp**으로 바꾸어야 합니다.
+지금은 [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 대신 [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator)를 사용하여 시뮬레이트된 라이선스 정보를 가져옵니다. 앱의 릴리스 버전을 **스토어**에 제출하기 전에 코드에서 모든 **CurrentAppSimulator** 참조를 **CurrentApp**으로 바꾸어야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTest)]
@@ -111,14 +111,14 @@ ms.locfileid: "58335101"
 
 고객이 앱의 동작에 놀라지 않도록 무료 체험 기간 동안 및 이후에 앱이 어떻게 동작하는지 고객에게 설명해야 합니다.
 
-앱 설명 지정에 대한 자세한 내용은 [앱 설명 작성](https://msdn.microsoft.com/library/windows/apps/mt148529)을 참조하세요.
+앱 설명 지정에 대한 자세한 내용은 [앱 설명 작성](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [Store 샘플 (평가판 및 앱 내 구매를 보여 줍니다.)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-* [설정 앱 가격 책정 및 가용성](https://msdn.microsoft.com/library/windows/apps/mt148548)
-* [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765)
-* [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766)
+* [설정 앱 가격 책정 및 가용성](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)
+* [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp)
+* [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator)
  
 
  

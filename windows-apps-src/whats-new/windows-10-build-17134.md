@@ -5,12 +5,12 @@ keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능
 ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d880b2167e718b1ff66aa349c32329e6c19e5b5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9b7fe830e07c1daf95928ab747259cb57aaa7a9f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592988"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371345"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>개발자를 위한 Windows 10 빌드 17134의 새로운 기능
 
@@ -42,7 +42,7 @@ Fluent 디자인 업데이트 | 새로운 정보 및 지침으로 많은 Fluent 
 기능 | 설명
  :------ | :------
 게임 개발 시작 | Windows 10 게임 개발에 흥미가 있으신가요? 새로운 [게임 개발 시작](../gaming/getting-started.md) 페이지는 앱과 게임을 스스로 설정 및 등록하고 제출하기 위해 수행해야 할 작업에 대한 전체 개요를 제공 합니다.
-그래픽 어댑터 | 그래픽 어댑터 기본 설정 및 제거와 관련된 다음 DXGI API가 추가되었습니다. </br> * [IDXGIFactory6](https://msdn.microsoft.com/library/windows/desktop/mt814823) 인터페이스는 지정된 GPU 기본 설정에 따라 그래픽 어댑터를 열거하는 단일 메서드를 사용합니다. </br> * [DXGIDeclareAdapterRemovalSupport](https://msdn.microsoft.com/library/windows/desktop/mt814821) 함수는 프로세스에서 제거되는 모든 그래픽 디바이스를 복원할 수 있음을 나타냅니다. </br> * [DXGI_GPU_PREFERENCE](https://msdn.microsoft.com/library/windows/desktop/mt814822) 열거는 실행할 앱에 대한 GPU의 기본 설정을 설명합니다.
+그래픽 어댑터 | 그래픽 어댑터 기본 설정 및 제거와 관련된 다음 DXGI API가 추가되었습니다. </br> * [IDXGIFactory6](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/nn-dxgi1_6-idxgifactory6) 인터페이스는 지정된 GPU 기본 설정에 따라 그래픽 어댑터를 열거하는 단일 메서드를 사용합니다. </br> * [DXGIDeclareAdapterRemovalSupport](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/nf-dxgi1_6-dxgideclareadapterremovalsupport) 함수는 프로세스에서 제거되는 모든 그래픽 디바이스를 복원할 수 있음을 나타냅니다. </br> * [DXGI_GPU_PREFERENCE](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/ne-dxgi1_6-dxgi_gpu_preference) 열거는 실행할 앱에 대한 GPU의 기본 설정을 설명합니다.
 
 ## <a name="develop-windows-apps"></a>Windows 앱 개발
 
@@ -114,7 +114,7 @@ Xbox Live 크리에이터스 프로그램을 사용하면 개발자가 Xbox One 
 
 ### <a name="one-dev-question---why-was-docments-and-settings-renamed-users"></a>개발자 질문 - 문서 및 설정을 왜 사용자로 이름을 바꾸었나요?
 
-문서 및 설정 디렉토리의 이름을 바꾼 이유는 무엇인가요? [Raymond Chen이 해당 이름이 어디에서 유래되었는지와 변경된 이유에 대해 설명합니다](https://www.youtube.com/watch?v=4vDHQewVmM8&index=1&list=PLWs4_NfqMtoxjy3LrIdf2oamq1coolpZ7). Windows 및 해당 기록에 대한 자세한 개발 내용은 [Raymond의 블로그](https://blogs.msdn.microsoft.com/oldnewthing/)를 확인해보세요.
+문서 및 설정 디렉토리의 이름을 바꾼 이유는 무엇인가요? [Raymond Chen이 해당 이름이 어디에서 유래되었는지와 변경된 이유에 대해 설명합니다](https://www.youtube.com/watch?v=4vDHQewVmM8&index=1&list=PLWs4_NfqMtoxjy3LrIdf2oamq1coolpZ7). Windows 및 해당 기록에 대한 자세한 개발 내용은 [Raymond의 블로그](https://devblogs.microsoft.com/oldnewthing/)를 확인해보세요.
 
 
 ## <a name="samples"></a>샘플

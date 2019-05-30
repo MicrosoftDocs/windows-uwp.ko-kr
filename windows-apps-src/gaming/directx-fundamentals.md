@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 로드, 래스터화, 메시, 비트맵, 2D, 3D
 ms.localizationpriority: medium
-ms.openlocfilehash: afd08d62182bd0980f43ce1c4578c1181f8a6d2f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 942a775fca262903b1ee72831b4eae6612d25786
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613748"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368861"
 ---
 # <a name="fundamentals-of-directx-programming"></a>DirectX 프로그래밍의 기본 사항
 
@@ -42,7 +42,7 @@ DirectX 게임에 리소스 로드 항목에서는 로컬 저장소 또는 기�
 <td align="left"><p>DirectX를 사용하여 2D 그래픽을 만듭니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/windows/uwp/graphics-concepts/index">Direct3D 그래픽 학습 가이드</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/uwp/graphics-concepts/index">Direct3D 그래픽 학습 가이드</a></p></td>
 <td align="left"><p>Direct3D 그래픽 개념을 이해합니다.</p></td>
 </tr>
 <tr class="odd">

@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: edf81f0474855c868ea1fb50afa683523aedcd07
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 53bd11950d30e3924d6d196e911fa05208d0f5ec
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57614868"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371912"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>2017년 8월 Windows 개발자 문서의 새로운 내용
 
@@ -32,7 +32,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ### <a name="game-mode"></a>게임 모드
 
-UWP(유니버설 Windows 플랫폼)을 위한 [게임 모드](https://msdn.microsoft.com/library/windows/desktop/mt808808) API를 사용하여 Windows 10의 게임 모드가 제공하는 장점을 활용하여 가장 최적화된 게임 환경을 만들 수 있습니다. 이러한 API는 **&lt;expandedresources.h&gt;** 헤더에 있습니다.
+UWP(유니버설 Windows 플랫폼)을 위한 [게임 모드](https://docs.microsoft.com/previous-versions/windows/desktop/gamemode/game-mode-portal) API를 사용하여 Windows 10의 게임 모드가 제공하는 장점을 활용하여 가장 최적화된 게임 환경을 만들 수 있습니다. 이러한 API는 **&lt;expandedresources.h&gt;** 헤더에 있습니다.
 
 ![게임 모드](images/game-mode.png)
 
@@ -45,7 +45,7 @@ UWP(유니버설 Windows 플랫폼)을 위한 [게임 모드](https://msdn.micro
 
 ### <a name="data-schemas-for-store-products"></a>스토어 제품용 데이터 스키마
 
-[스토어 제품용 데이터 스키마](../monetize/data-schemas-for-store-products.md) 문서가 추가되었습니다. 이 문서는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct), [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense)를 포함하여 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 몇 가지 개체에 사용할 수 있는 스토어 관련 데이터에 대한 스키마를 제공합니다.
+[스토어 제품용 데이터 스키마](../monetize/data-schemas-for-store-products.md) 문서가 추가되었습니다. 이 문서는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct), [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense)를 포함하여 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 몇 가지 개체에 사용할 수 있는 스토어 관련 데이터에 대한 스키마를 제공합니다.
 
 ### <a name="desktop-bridge"></a>데스크톱 브리지
 

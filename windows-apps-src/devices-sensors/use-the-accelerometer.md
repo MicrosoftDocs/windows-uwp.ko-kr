@@ -6,20 +6,20 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 77ee3191bc41fca672a055a708523578390860b4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b2fe6fe4c7fe22d71e2154be2db082bb43cc4ed1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623708"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369688"
 ---
 # <a name="use-the-accelerometer"></a>가속도계 사용
 
 
 **중요 한 Api**
 
--   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**가 속도계**](https://msdn.microsoft.com/library/windows/apps/BR225687)
+-   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**Accelerometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer)
 
 **샘플**
 
@@ -29,7 +29,7 @@ ms.locfileid: "57623708"
 
 단순 게임 앱은 가속도계와 같은 센서 하나를 입력 장치로 사용합니다. 이러한 앱은 일반적으로 입력에 축을 하나나 두 개만 사용하지만 흔들기 이벤트를 또 다른 입력 소스로 사용할 수도 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 사용 하 여 Extensible Application Markup Language (XAML), Microsoft Visual 친숙 해야 C#, 및 이벤트입니다.
 

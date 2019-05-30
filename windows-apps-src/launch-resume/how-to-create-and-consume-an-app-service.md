@@ -6,12 +6,12 @@ keywords: 앱에 통신, IPC, 메시징, 백그라운드 통신을 앱에 app se
 ms.date: 01/16/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 96ecad8494ad82dc4927b3675ad322f07a8ca7f3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 21e1b409406cf03d83ff10b04d96d7ff9f0413dd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643578"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370742"
 ---
 # <a name="create-and-consume-an-app-service"></a>앱 서비스 만들기 및 사용
 
@@ -133,7 +133,7 @@ Windows 10 버전 1607부터 호스트 앱과 같은 프로세스에서 실행�
     * 호출자가 전경, 앱 서비스 수명 호출자에 게 동일 합니다.
     * 호출자에 게 백그라운드에서 경우 app service를 실행 하는 데 30 초를 가져옵니다. 지연을 사용하면 일회에 한해 5초가 추가로 제공됩니다.
 
-    **OnTaskCanceled** 작업이 취소 될 때 호출 됩니다. 클라이언트 앱을 삭제 하는 경우 작업이 취소 되는 [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/dn921704), 클라이언트 앱이 일시 중단, OS 종료 되거나 절전 또는 운영 체제 태스크를 실행 하는 리소스 부족 합니다.
+    **OnTaskCanceled** 작업이 취소 될 때 호출 됩니다. 클라이언트 앱을 삭제 하는 경우 작업이 취소 되는 [AppServiceConnection](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService.AppServiceConnection), 클라이언트 앱이 일시 중단, OS 종료 되거나 절전 또는 운영 체제 태스크를 실행 하는 리소스 부족 합니다.
 
 ## <a name="write-the-code-for-the-app-service"></a>앱 서비스의 코드 작성
 
@@ -202,15 +202,15 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 }
 ```
 
-사실은 **OnRequestReceived** 됩니다 **비동기** 있도록 하는 awaitable 메서드를 호출 하기 때문에 [SendResponseAsync](https://msdn.microsoft.com/library/windows/apps/dn921722) 이 예제.
+사실은 **OnRequestReceived** 됩니다 **비동기** 있도록 하는 awaitable 메서드를 호출 하기 때문에 [SendResponseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appservicerequest.sendresponseasync) 이 예제.
 
-지연은 서비스를 사용할 수 있도록 만들어진 **비동기** 메서드는 **OnRequestReceived** 처리기입니다. 메시지 처리를 완료할 때까지 **OnRequestReceived**에 대한 호출이 완료되지 않게 합니다.  [SendResponseAsync](https://msdn.microsoft.com/library/windows/apps/dn921722) 호출자에 게 결과 보냅니다. **SendResponseAsync**에서는 호출이 완료되어도 신호를 보내지 않습니다. 신호를 보내는 지연 완료 것 [SendMessageAsync](https://msdn.microsoft.com/library/windows/apps/dn921712) 하는 **OnRequestReceived** 완료 합니다. 에 대 한 호출 **SendResponseAsync** 경우에도 지연을 완료 해야 하기 때문에 try/finally 블록에 래핑됩니다 **SendResponseAsync** 예외를 throw 합니다.
+지연은 서비스를 사용할 수 있도록 만들어진 **비동기** 메서드는 **OnRequestReceived** 처리기입니다. 메시지 처리를 완료할 때까지 **OnRequestReceived**에 대한 호출이 완료되지 않게 합니다.  [SendResponseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appservicerequest.sendresponseasync) 호출자에 게 결과 보냅니다. **SendResponseAsync**에서는 호출이 완료되어도 신호를 보내지 않습니다. 신호를 보내는 지연 완료 것 [SendMessageAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appserviceconnection.sendmessageasync) 하는 **OnRequestReceived** 완료 합니다. 에 대 한 호출 **SendResponseAsync** 경우에도 지연을 완료 해야 하기 때문에 try/finally 블록에 래핑됩니다 **SendResponseAsync** 예외를 throw 합니다.
 
-앱 서비스 사용 [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131) 정보를 교환 하는 개체입니다. 전달할 수 있는 데이터의 크기는 시스템 리소스를 통해서만 제한될 수 있습니다. **ValueSet**에서 사용할 사전 정의된 키가 없습니다. 앱 서비스의 프로토콜을 정의하는 데 사용할 키 값을 결정해야 합니다. 이 프로토콜을 염두에 두고 호출자를 작성해야 합니다. 이 예제에서는 `Command`라는 키를 선택했습니다. 이 키의 값을 통해 앱 서비스에서 인벤토리 항목의 이름을 제공할지 아니면 값을 제공할지를 나타냅니다. 인벤토리 이름의 색인은 `ID` 키에 저장됩니다. 반환 값은 `Result` 키에 저장됩니다.
+앱 서비스 사용 [ValueSet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet) 정보를 교환 하는 개체입니다. 전달할 수 있는 데이터의 크기는 시스템 리소스를 통해서만 제한될 수 있습니다. **ValueSet**에서 사용할 사전 정의된 키가 없습니다. 앱 서비스의 프로토콜을 정의하는 데 사용할 키 값을 결정해야 합니다. 이 프로토콜을 염두에 두고 호출자를 작성해야 합니다. 이 예제에서는 `Command`라는 키를 선택했습니다. 이 키의 값을 통해 앱 서비스에서 인벤토리 항목의 이름을 제공할지 아니면 값을 제공할지를 나타냅니다. 인벤토리 이름의 색인은 `ID` 키에 저장됩니다. 반환 값은 `Result` 키에 저장됩니다.
 
-앱 서비스에 대한 호출의 성공 여부를 표시하기 위해 [AppServiceClosedStatus](https://msdn.microsoft.com/library/windows/apps/dn921703) enum이 호출자에게 반환됩니다. 앱 서비스 호출이 실패할 수 있는 예로는 리소스가 초과되어 OS에서 서비스 끝점을 중단하는 경우를 들 수 있습니다. [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131)를 통해 추가 오류 정보를 반환할 수 있습니다. 이 예제에서는 `Status`라는 키를 사용하여 호출자에게 자세한 오류 정보를 반환합니다.
+앱 서비스에 대한 호출의 성공 여부를 표시하기 위해 [AppServiceClosedStatus](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService.AppServiceClosedStatus) enum이 호출자에게 반환됩니다. 앱 서비스 호출이 실패할 수 있는 예로는 리소스가 초과되어 OS에서 서비스 끝점을 중단하는 경우를 들 수 있습니다. [ValueSet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet)를 통해 추가 오류 정보를 반환할 수 있습니다. 이 예제에서는 `Status`라는 키를 사용하여 호출자에게 자세한 오류 정보를 반환합니다.
 
-[SendResponseAsync](https://msdn.microsoft.com/library/windows/apps/dn921722)에 대한 호출을 통해 호출자에게 [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131)를 반환합니다.
+[SendResponseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appservicerequest.sendresponseasync)에 대한 호출을 통해 호출자에게 [ValueSet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet)를 반환합니다.
 
 ## <a name="deploy-the-service-app-and-get-the-package-family-name"></a>서비스 앱 배포 및 패키지 패밀리 이름 가져오기
 
@@ -302,9 +302,9 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
     코드는 먼저 앱 서비스와 연결합니다. 연결은 `this.inventoryService`를 삭제할 때까지 열린 상태로 유지됩니다. App service 이름 일치 해야 합니다는 `AppService` 요소의 `Name` 특성에 추가 합니다 **AppServiceProvider** 프로젝트의 **Package.appxmanifest** 파일입니다. 이 예제에서는 `<uap3:AppService Name="com.microsoft.inventory"/>`입니다.
 
-    A [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131) 라는 `message` app service에 전송 하려는 명령을 지정 하려면 만들어집니다. 예제 앱 서비스에서는 명령을 사용하여 수행할 두 가지 작업이 나타나게 됩니다. 클라이언트 앱에서 텍스트 상자에서 인덱스를 가져올 하 고 사용 하 여 서비스 호출을 `Item` 명령 항목의 설명을 가져옵니다. 그런 다음 항목 가격을 가져오도록 `Price` 명령을 사용하여 호출합니다. 단추 텍스트는 결과로 설정됩니다.
+    A [ValueSet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet) 라는 `message` app service에 전송 하려는 명령을 지정 하려면 만들어집니다. 예제 앱 서비스에서는 명령을 사용하여 수행할 두 가지 작업이 나타나게 됩니다. 클라이언트 앱에서 텍스트 상자에서 인덱스를 가져올 하 고 사용 하 여 서비스 호출을 `Item` 명령 항목의 설명을 가져옵니다. 그런 다음 항목 가격을 가져오도록 `Price` 명령을 사용하여 호출합니다. 단추 텍스트는 결과로 설정됩니다.
 
-    때문에 [AppServiceResponseStatus](https://msdn.microsoft.com/library/windows/apps/dn921724) 만 운영 체제 연결할 app service에 대 한 호출을 확인 했는지를 나타내는 합니다 `Status` 키를 [ValueSet](https://msdn.microsoft.com/library/windows/apps/dn636131) 앱에서 수신 서비스 요청을 수행할 수 있음을 확인입니다.
+    때문에 [AppServiceResponseStatus](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService.AppServiceResponseStatus) 만 운영 체제 연결할 app service에 대 한 호출을 확인 했는지를 나타내는 합니다 `Status` 키를 [ValueSet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet) 앱에서 수신 서비스 요청을 수행할 수 있음을 확인입니다.
 
 6. 설정 합니다 **ClientApp** 프로젝트를 시작 프로젝트로 (에서 마우스 오른쪽 단추로 클릭 합니다 **솔루션 탐색기** > **시작 프로젝트로 설정**) 솔루션 및 실행 합니다. 입력란에 숫자 1을 입력하고 단추를 클릭합니다. 가져와야 "Chair: 가격 = 88.99"서비스에서 다시 합니다.
 
@@ -359,7 +359,7 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 * 추가 된 `windows.appService` 앱 서비스 공급자의 확장 **Package.appxmanifest** 파일입니다.
 * 클라이언트 앱에서에 연결할 수 있도록 app service 공급자의 패키지 패밀리 이름을 가져옵니다.
 * 응용 프로그램 서비스 공급자 프로젝트에서 응용 프로그램 서비스 프로젝트에 대 한 프로젝트 간 참조를 추가 합니다.
-* 사용 하 여 [Windows.ApplicationModel.AppService.AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/dn921704) 서비스를 호출 합니다.
+* 사용 하 여 [Windows.ApplicationModel.AppService.AppServiceConnection](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService.AppServiceConnection) 서비스를 호출 합니다.
 
 ## <a name="full-code-for-myappservice"></a>MyAppService의 전체 코드
 
@@ -461,4 +461,4 @@ namespace MyAppService
 
 * [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-in-process.md)
 * [백그라운드 작업을 사용 하 여 앱을 지원 합니다.](support-your-app-with-background-tasks.md)
-* [앱 서비스 코드 샘플 (C#, c + + 및 VB)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)
+* [앱 서비스 코드 샘플 (C#, C++, 및 VB)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)

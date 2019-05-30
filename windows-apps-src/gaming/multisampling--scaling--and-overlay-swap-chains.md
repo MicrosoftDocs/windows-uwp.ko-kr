@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 스왑 체인 크기 조정, 오버레이, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 12aede6c4af61c4b86d1f1090a2ec3d0e5ecce68
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 77e5dac007654449fcfbe2053fda65b123e073fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644198"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368343"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>스왑 체인 확장 및 오버레이
 
@@ -119,7 +119,7 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
 ## <a name="create-a-hardware-overlay-swap-chain-for-ui-elements"></a>UI 요소에 대한 하드웨어 오버레이 스왑 체인 만들기
 
 
-스왑 체인 크기 조정을 사용하는 경우 UI 크기도 축소되어 흐리게 표시되므로 사용하기 어려울 수 있다는 단점이 내재되어 있습니다. 하드웨어가 오버레이 스왑 체인을 지원하는 장치에서 이 문제는 실시간 게임 콘텐츠와 구분되는 UI를 스왑 체인에서 기본 해상도로 렌더링하면 완전히 해결됩니다. 이 기술은 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 스왑 체인에만 적용되며 XAML interop에서는 사용할 수 없습니다.
+스왑 체인 크기 조정을 사용하는 경우 UI 크기도 축소되어 흐리게 표시되므로 사용하기 어려울 수 있다는 단점이 내재되어 있습니다. 하드웨어가 오버레이 스왑 체인을 지원하는 장치에서 이 문제는 실시간 게임 콘텐츠와 구분되는 UI를 스왑 체인에서 기본 해상도로 렌더링하면 완전히 해결됩니다. 이 기술은 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 스왑 체인에만 적용되며 XAML interop에서는 사용할 수 없습니다.
 
 다음 단계를 사용하여 하드웨어 오버레이 기능을 사용하는 포그라운드 스왑 체인을 만듭니다. 이러한 단계는 위에서 설명한 실시간 게임 콘텐츠에 대한 스왑 체인을 먼저 만든 후에 수행합니다.
 
@@ -142,7 +142,7 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
         );
     ```
 
-    DXGI 어댑터는 출력 어댑터가 [**SupportsOverlays**](https://msdn.microsoft.com/library/windows/desktop/dn280411)에 대해 True를 반환하는 경우 오버레이를 지원합니다.
+    DXGI 어댑터는 출력 어댑터가 [**SupportsOverlays**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgioutput2-supportsoverlays)에 대해 True를 반환하는 경우 오버레이를 지원합니다.
 
     ```cpp
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
@@ -152,11 +152,11 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
 
      
 
-2.  [  **IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559)로 포그라운드 스왑 체인을 만듭니다. 다음 옵션을 설정 해야 합니다는 [ **DXGI\_교환\_체인\_DESC1** ](https://msdn.microsoft.com/library/windows/desktop/hh404528) 제공 합니다 *pDesc* 매개 변수:
+2.  [  **IDXGIFactory2::CreateSwapChainForCoreWindow**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)로 포그라운드 스왑 체인을 만듭니다. 다음 옵션을 설정 해야 합니다는 [ **DXGI\_교환\_체인\_DESC1** ](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1) 제공 합니다 *pDesc* 매개 변수:
 
-    -   지정 합니다 [ **DXGI\_스왑\_체인\_플래그\_포그라운드\_계층** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) 전경 스왑 체인을 나타내기 위해 체인 플래그를 교환 합니다.
-    -   사용 된 [ **DXGI\_알파\_모드\_사전 다중화** ](https://msdn.microsoft.com/library/windows/desktop/hh404496) 알파 모드 플래그입니다. 포그라운드 스왑 체인은 항상 프리멀티플라이됩니다.
-    -   설정 된 [ **DXGI\_크기 조정\_NONE** ](https://msdn.microsoft.com/library/windows/desktop/hh404526) 플래그입니다. 포그라운드 스왑 체인은 항상 기본 해상도에서 실행됩니다.
+    -   지정 합니다 [ **DXGI\_스왑\_체인\_플래그\_포그라운드\_계층** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) 전경 스왑 체인을 나타내기 위해 체인 플래그를 교환 합니다.
+    -   사용 된 [ **DXGI\_알파\_모드\_사전 다중화** ](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ne-dxgi1_2-dxgi_alpha_mode) 알파 모드 플래그입니다. 포그라운드 스왑 체인은 항상 프리멀티플라이됩니다.
+    -   설정 된 [ **DXGI\_크기 조정\_NONE** ](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ne-dxgi1_2-dxgi_scaling) 플래그입니다. 포그라운드 스왑 체인은 항상 기본 해상도에서 실행됩니다.
 
     ```cpp
      foregroundSwapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FOREGROUND_LAYER;
@@ -164,7 +164,7 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
      foregroundSwapChainDesc.AlphaMode = DXGI_ALPHA_MODE_PREMULTIPLIED; // Foreground swap chain alpha values must be premultiplied.
     ```
 
-    > **참고**    설정 된 [ **DXGI\_교환\_체인\_플래그\_전경\_계층** ](https://msdn.microsoft.com/library/windows/desktop/bb173076) 다시 모든 스왑 체인의 크기를 조정 하는 시간입니다.
+    > **참고**    설정 된 [ **DXGI\_교환\_체인\_플래그\_전경\_계층** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) 다시 모든 스왑 체인의 크기를 조정 하는 시간입니다.
 
     ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(
@@ -199,7 +199,7 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
 
 4.  포그라운드 스왑 체인은 항상 프리멀티플라이된 알파를 사용합니다. 각 픽셀의 색 값은 프레임을 표시하기 전에 이미 알파 값이 곱해져 있어야 합니다. 예를 들어 50% 알파의 100% 흰색 BGRA 픽셀은 (0.5, 0.5, 0.5, 0.5)로 설정됩니다.
 
-    알파 premultiplication 단계는 응용 프로그램 혼합 상태를 적용 하 여 출력 병합기 단계에서 수행할 수 있습니다 (참조 [ **ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476349))으로 [ **D3D11\_ 렌더링\_대상\_BLEND\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476200) 구조의 **SrcBlend** 로 설정 된 필드 **D3D11\_SRC\_알파**합니다. 프리멀티플라이된 알파 값이 있는 자산을 사용할 수도 있습니다.
+    알파 premultiplication 단계는 응용 프로그램 혼합 상태를 적용 하 여 출력 병합기 단계에서 수행할 수 있습니다 (참조 [ **ID3D11BlendState**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11blendstate))으로 [ **D3D11\_ 렌더링\_대상\_BLEND\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_render_target_blend_desc) 구조의 **SrcBlend** 로 설정 된 필드 **D3D11\_SRC\_알파**합니다. 프리멀티플라이된 알파 값이 있는 자산을 사용할 수도 있습니다.
 
     알파 미리 곱하기 단계를 수행하지 않으면 포그라운드 스왑 체인의 색이 예상보다 밝아집니다.
 

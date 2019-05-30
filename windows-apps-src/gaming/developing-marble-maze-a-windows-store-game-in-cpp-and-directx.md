@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 39f915ad9cf200a5c2c762976ab3c39c2ef85410
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f287110584c02a5d7822f6b1d84cd332d4d6199d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662468"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368909"
 ---
 # <a name="developing-marble-maze-a-uwp-game-in-c-and-directx"></a>C++ 및 DirectX로 UWP 게임 Marble Maze 개발
 
@@ -39,11 +39,11 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 
 ![Marble Maze 게임의 스크린샷](images/marblemaze-2.png)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 -   Windows 10 크리에이터 스 업데이트
--   [Microsoft Visual Studio 2017](https://www.visualstudio.com/downloads/)
+-   [Microsoft Visual Studio 2017](https://www.visualstudio.com/downloads/)
 -   C++ 프로그래밍 지식
 -   DirectX 및 DirectX 용어 숙지
 -   COM에 대한 기본 지식
@@ -61,9 +61,9 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 이 설명서에서는 다음을 수행하는 방법을 설명합니다.
 
 -   Windows 런타임 API와 DirectX를 사용하여 UWP 게임을 만듭니다.
--   [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476080) 및 [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990)를 사용하여 모델, 텍스처, 꼭짓점 및 픽셀 셰이더, 2D 오버레이 등의 시각적 콘텐츠 작업을 합니다.
+-   [Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11) 및 [Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal)를 사용하여 모델, 텍스처, 꼭짓점 및 픽셀 셰이더, 2D 오버레이 등의 시각적 콘텐츠 작업을 합니다.
 -   터치, 가속도계, Xbox One 컨트롤러 등의 입력 메커니즘을 통합합니다.
--   [XAudio2](https://msdn.microsoft.com/library/windows/desktop/hh405049)를 사용하여 음악 및 소리 효과를 통합합니다.
+-   [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-apis-portal)를 사용하여 음악 및 소리 효과를 통합합니다.
 
 ## <a name="what-this-documentation-does-not-cover"></a>이 설명서에서 다루지 않는 내용
 
@@ -77,7 +77,7 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 -   다른 세계 지역에서 사용하기 위해 게임을 준비하는 방법
 -   게임을 인증하고 Microsoft Store에 게시하는 방법
 
-또한 Marble Maze는 [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833) 라이브러리를 사용하여 3D 기하 도형 작업을 하고 충돌 등의 물리학 계산을 수행합니다. DirectXMath는 이 섹션에서 자세히 다루지 않습니다. Marble Maze에서 DirectXMath를 사용하는 방법에 대한 자세한 내용은 소스 코드를 참조하세요.
+또한 Marble Maze는 [DirectXMath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal) 라이브러리를 사용하여 3D 기하 도형 작업을 하고 충돌 등의 물리학 계산을 수행합니다. DirectXMath는 이 섹션에서 자세히 다루지 않습니다. Marble Maze에서 DirectXMath를 사용하는 방법에 대한 자세한 내용은 소스 코드를 참조하세요.
 
 Marble Maze는 많은 재사용 가능 구성 요소를 제공하지만 전체 게임 개발 프레임워크는 아닙니다. Marble Maze 구성 요소가 게임에 재사용 가능한 경우 설명서에서 강조됩니다.
 
@@ -86,10 +86,10 @@ Marble Maze는 많은 재사용 가능 구성 요소를 제공하지만 전체 �
 
 [Marble Maze 샘플 기본 사항](marble-maze-sample-fundamentals.md)부터 시작하여 Marble Maze 소스 코드가 따르는 코딩 및 스타일 지침과 Marble Maze 구조에 대해 알아볼 것을 권장합니다. 다음 표에서는 더 쉽게 참조할 수 있도록 이 섹션의 문서에 대해 간단히 설명합니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>단원 내용
 
 
-| 제목                                                                                                                    | 설명                                                                                                                                                                                                                                        |
+| Title                                                                                                                    | 설명                                                                                                                                                                                                                                        |
 |--------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Marble Maze 샘플 기본 사항](marble-maze-sample-fundamentals.md)                                                   | 소스 코드가 따르는 코딩 및 스타일 지침과 게임 구조의 개요를 제공합니다.                                                                                                                                 |
 | [Marble Maze 응용 프로그램 구조](marble-maze-application-structure.md)                                               | Marble Maze 응용 프로그램 코드가 구성된 방식 및 DirectX UWP 앱의 구조와 일반적인 데스크톱 응용 프로그램 구조 간의 차이점에 대해 설명합니다.                                                                                    |

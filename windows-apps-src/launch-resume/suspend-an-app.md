@@ -11,24 +11,24 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: e440812861cf853810f9fee597c807b439dda426
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6d1b97e76dc1bf15bded6f44c38a67f40babf7b6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599048"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370531"
 ---
 # <a name="handle-app-suspend"></a>앱 일시 중단 처리
 
 **중요 한 Api**
 
-- [**일시 중단**](https://msdn.microsoft.com/library/windows/apps/br242341)
+- [**일시 중단**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending)
 
-시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 배웁니다. 아래의 예제에서는 [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) 이벤트용 이벤트 처리기를 등록하고 문자열을 파일에 저장합니다.
+시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 배웁니다. 아래의 예제에서는 [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending) 이벤트용 이벤트 처리기를 등록하고 문자열을 파일에 저장합니다.
 
 ## <a name="register-the-suspending-event-handler"></a>suspending 이벤트 처리기 등록
 
-시스템이 앱을 일시 중단하기 전에 앱에서 응용 프로그램 데이터를 저장해야 함을 나타내는 [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) 이벤트를 처리하도록 등록합니다.
+시스템이 앱을 일시 중단하기 전에 앱에서 응용 프로그램 데이터를 저장해야 함을 나타내는 [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending) 이벤트를 처리하도록 등록합니다.
 
 ```csharp
 using System;
@@ -82,7 +82,7 @@ MainPage::MainPage()
 
 ## <a name="save-application-data-before-suspension"></a>일시 중단 전에 응용 프로그램 데이터 저장
 
-앱에서 [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) 이벤트를 처리하면, 처리기 함수에서 중요한 응용 프로그램 데이터를 저장할 기회가 생깁니다. 간단한 응용 프로그램 데이터를 동기적으로 저장하기 위해 앱에서 [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) 저장소 API를 사용해야 합니다.
+앱에서 [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending) 이벤트를 처리하면, 처리기 함수에서 중요한 응용 프로그램 데이터를 저장할 기회가 생깁니다. 간단한 응용 프로그램 데이터를 동기적으로 저장하기 위해 앱에서 [**LocalSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localsettings) 저장소 API를 사용해야 합니다.
 
 ```csharp
 partial class MainPage
@@ -133,11 +133,11 @@ void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
 
 사용자가 다른 앱이나 데스크톱 또는 시작 화면으로 전환할 때마다 시스템에서 앱을 일시 중단합니다. 사용자가 다시 돌아올 때마다 시스템에서 앱을 다시 시작합니다. 시스템에서 앱을 다시 시작할 때, 변수와 데이터 구조의 콘텐츠는 시스템에서 앱을 일시 중단하기 전과 동일합니다. 앱은 중단되었던 곳에서 정확히 복원되므로, 사용자에게는 앱이 배경에서 실행되고 있었던 것처럼 보입니다.
 
-앱이 일시 중단된 동안 시스템은 앱과 데이터를 메모리에 유지하려고 합니다. 그러나 앱을 메모리에 유지할 리소스가 없으면 시스템은 앱을 종료합니다. 사용자가 일시 중단 후 종료된 앱으로 다시 돌아오면, 시스템은 [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) 이벤트를 전송하며 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드에서 응용 프로그램 데이터를 복원해야 합니다.
+앱이 일시 중단된 동안 시스템은 앱과 데이터를 메모리에 유지하려고 합니다. 그러나 앱을 메모리에 유지할 리소스가 없으면 시스템은 앱을 종료합니다. 사용자가 일시 중단 후 종료된 앱으로 다시 돌아오면, 시스템은 [**Activated**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) 이벤트를 전송하며 [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 메서드에서 응용 프로그램 데이터를 복원해야 합니다.
 
 시스템은 앱 종료 시 앱에 알리지 않으므로, 앱은 일시 중단될 때 응용 프로그램 데이터를 저장하고 단독 리소스와 파일 핸들을 해제하며 앱이 종료 후 활성화될 때 이 리소스와 파일 핸들을 복원해야 합니다.
 
-처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) 개체의 [**GetDeferral**](https://aka.ms/Kt66iv) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) 개체에서 [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
+처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) 개체의 [**GetDeferral**](https://aka.ms/Kt66iv) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral) 개체에서 [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
 
 지연을 사용해도 앱이 종료되기 전에 코드를 실행할 수 있는 시간이 증가하지는 않습니다. 단지 지연의 *Complete* 메서드 호출이나 기한 경과 중 *더 빠른 시간*까지 종료가 지연됩니다. 일시 중단 상태에서 시간을 연장하려면 [**ExtendedExecutionSession**](run-minimized-with-extended-execution.md)을 사용합니다.
 
@@ -151,7 +151,7 @@ void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
 * [앱 수명 주기](app-lifecycle.md)
 * [앱 활성화 처리](activate-an-app.md)
 * [앱 다시 시작 처리](resume-an-app.md)
-* [시작에 대 한 UX 지침을 일시 중단 및 다시 시작](https://msdn.microsoft.com/library/windows/apps/dn611862)
+* [시작에 대 한 UX 지침을 일시 중단 및 다시 시작](https://docs.microsoft.com/windows/uwp/launch-resume/index)
 * [확장된 실행](run-minimized-with-extended-execution.md)
 
  

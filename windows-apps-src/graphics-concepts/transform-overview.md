@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a01814729e38668e05201b4b7c8876dc150c488e
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: fe97d689711202511dcfec023b718cd1ba9b0b1d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291771"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370929"
 ---
 # <a name="transform-overview"></a>변형 개요
 
@@ -60,7 +60,7 @@ ms.locfileid: "58291771"
 
 ![균등 크기 조정을 위한 매트릭스 수식](images/matrix.png)
 
-C++에서 Direct3D는 매트릭스 구조를 사용하여 매트릭스를 2차원 배열로 선언합니다. 다음은 균등 크기 조정 매트릭스(배율 인수 "s")의 역할을 수행하도록 [**D3DMATRIX**](https://msdn.microsoft.com/library/windows/desktop/bb172573) 구조를 초기화하는 방법을 보여주는 예제입니다.
+C++에서 Direct3D는 매트릭스 구조를 사용하여 매트릭스를 2차원 배열로 선언합니다. 다음은 균등 크기 조정 매트릭스(배율 인수 "s")의 역할을 수행하도록 [**D3DMATRIX**](https://docs.microsoft.com/windows/desktop/direct3d9/d3dmatrix) 구조를 초기화하는 방법을 보여주는 예제입니다.
 
 ```cpp
 D3DMATRIX scale = {

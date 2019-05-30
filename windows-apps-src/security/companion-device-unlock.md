@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: fb1ff6431b3ccf609b7362db819569c2f6cebc48
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0ddadde2502e8512ba38dc30c6ac24d22631d62c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57657018"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372640"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Windows Hello 도우미(IoT) 디바이스에서 Windows 잠금 해제
 
@@ -50,7 +50,7 @@ Windows Hello 도우미 디바이스 프레임워크는 Windows에서 실행되�
 
 Windows Hello 도우미 디바이스 프레임워크와 통합하려면 다음 사항이 필요합니다.
 
-- Windows 앱 스토어에서 다운로드한 Windows Hello 도우미 디바이스용 [UWP(유니버설 Windows 플랫폼)](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) 도우미 디바이스 앱 
+- Windows 앱 스토어에서 다운로드한 Windows Hello 도우미 디바이스용 [UWP(유니버설 Windows 플랫폼)](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) 도우미 디바이스 앱 
 - Windows Hello 도우미 디바이스에 256비트 HMAC 키 두 개를 만들고 SHA-256을 사용하여 해당 키로 HMAC를 생성하는 기능
 - 제대로 구성된 Windows 10 데스크톱의 보안 설정 도우미 인증 서비스를 사용하려면 Windows Hello 도우미 디바이스를 연결하기 전에 이 PIN을 설정해야 합니다. 사용자는 설정 &gt; 계정 &gt; 로그인 옵션을 통해 PIN을 설정해야 합니다.
 
@@ -216,7 +216,7 @@ Windows Hello 도우미 디바이스 앱에는 두 가지 구성 요소가 있�
 
 ### <a name="registration-and-de-registration"></a>등록 및 등록 취소
 
-등록에 도우미 인증 서비스에 두 개의 API 호출을 필요합니다. RequestStartRegisteringDeviceAsync 및 FinishRegisteringDeviceAsync 합니다.
+등록에 도우미 인증 서비스에 두 개의 API 호출을 필요합니다. RequestStartRegisteringDeviceAsync and FinishRegisteringDeviceAsync.
 
 이러한 호출을 수행하기 전에 Windows Hello 도우미 디바이스 앱은 Windows Hello 도우미 디바이스를 사용할 수 있는지 확인해야 합니다. Windows Hello 도우미 디바이스가 HMAC 키(인증 및 디바이스 키)를 생성하는 경우 Windows Hello 도우미 디바이스 앱은 위의 두 호출을 수행하기 전에 도우미 디바이스에 키를 생성하도록 요청해야 합니다. Windows Hello 도우미 디바이스 앱이 HMAC 키를 생성하는 경우 위의 두 호출을 수행하기 전에 생성해야 합니다.
 
@@ -346,7 +346,7 @@ namespace SecondaryAuthFactorSample
 }
 ```
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>인증
 
 인증은 도우미 인증 서비스에 두 개의 API 호출이 필요합니다. StartAuthenticationAsync 및 FinishAuthencationAsync 합니다.
 
@@ -383,7 +383,7 @@ Windows Hello 도우미 디바이스 프레임워크는 인증 흐름에서 현�
 
 이러한 각 상태의 세부 정보는 다음과 같습니다.
 
-| 상태                         | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| State                         | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |----------------------------   |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    |
 | WaitingForUserConfirmation    | 이 상태 변경 알림 이벤트는 잠금 화면이 해제된 경우(예: 사용자가 Windows+L을 누른 경우)에 발생합니다. 이 상태의 디바이스를 찾는 문제와 관련된 오류 메시지는 요청하지 않는 것이 좋습니다. 일반적으로 의도 신호를 사용할 수 있는 경우에만 메시지를 표시하는 것이 좋습니다. Windows Hello 도우미 디바이스 앱은 도우미 디바이스에서 의도 신호(예: NFC 리더에 탭하기, 도우미 디바이스에서 단추 누르기 또는 박수와 같은 특정 제스처)를 수집하고 도우미 디바이스 앱 백그라운드 작업이 Windows Hello 도우미 디바이스에서 의도 신호가 검색되었다는 표시를 받은 경우에 이 상태의 인증에 대한 첫 번째 API 호출을 해야 합니다. 그렇지 않고 Windows Hello 도우미 디바이스 앱이 PC를 사용하여 인증 흐름을 시작하는 경우(사용자가 잠금 화면을 위로 살짝 밀거나 스페이스바를 누름) Windows Hello 도우미 디바이스 앱은 다음 상태(CollectingCredential)까지 대기해야 합니다.     |
 | CollectingCredential          | 이 상태 변경 알림 이벤트는 사용자가 노트북 덮개를 열거나, 키보드에서 아무 키나 누르거나, 잠금 화면을 위로 살짝 미는 경우에 발생합니다. Windows Hello 도우미 디바이스가 위의 작업을 사용하여 의도 신호 수집을 시작하는 경우 Windows Hello 도우미 디바이스 앱이 수집을 시작해야 합니다(예: 사용자가 PC의 잠금을 해제하려는지 여부를 묻는 팝업을 도우미 디바이스에 표시). Windows Hello 도우미 디바이스 앱에서 사용자가 Windows Hello 도우미 디바이스에 사용자 현재 상태를 제공하도록 요구하는 경우 이때 오류 사례를 제공하는 것이 좋습니다.                                                                                                                                                                                                                                                                                                                                            |

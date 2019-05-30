@@ -6,28 +6,28 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
-ms.openlocfilehash: 7748ff7d5acf8a94c92e2b51953299131910d63e
-ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.openlocfilehash: 71544129480cb55432c222a0481c2a49934cb658
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320576"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372340"
 ---
 # <a name="sign-an-app-package-using-signtool"></a>SignTool을 사용하여 앱 패키지에 서명
 
 **SignTool**은 인증서를 사용하여 디지털 방식으로 앱 패키지 또는 번들에 서명하는 데 사용되는 명령줄 도구입니다. 인증서는 사용자가 만들거나(테스트용) 회사가 발급할 수 있습니다(배포용). 앱 패키지 서명은 사용자에게 서명 이후 앱 데이터가 수정되지 않았다는 확인을 제공하는 동시에 앱 패키지에 서명한 사용자 또는 회사의 신원도 확인합니다. **SignTool**은 암호화되었거나 암호화되지 않은 앱 패키지 및 번들에 서명할 수 있습니다.
 
 > [!IMPORTANT] 
-> Visual Studio를 사용하여 앱을 개발하는 경우 Visual Studio 마법사를 사용하여 앱 패키지를 만들고 서명하는 것이 좋습니다. 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)을 참조하세요.
+> Visual Studio를 사용하여 앱을 개발하는 경우 Visual Studio 마법사를 사용하여 앱 패키지를 만들고 서명하는 것이 좋습니다. 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)을 참조하세요.
 
-코드 서명 및 인증서 전반에 대한 자세한 내용은 [코드 서명 소개](https://msdn.microsoft.com/library/windows/desktop/aa380259.aspx#introduction_to_code_signing)를 참조하세요.
+코드 서명 및 인증서 전반에 대한 자세한 내용은 [코드 서명 소개](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 - **패키지 된 앱**  
-    수동으로 앱 패키지를 만드는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구로 앱 패키지 만들기](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요. 
+    수동으로 앱 패키지를 만드는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구로 앱 패키지 만들기](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요. 
 
 - **유효한 서명 인증서**  
-    유효한 서명 인증서를 만들거나 가져오는 방법에 대한 자세한 내용은 [패키지 서명용 인증서 만들기 또는 가져오기](https://msdn.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)를 참조하세요.
+    유효한 서명 인증서를 만들거나 가져오는 방법에 대한 자세한 내용은 [패키지 서명용 인증서 만들기 또는 가져오기](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)를 참조하세요.
 
 - **SignTool.exe**  
     SDK 설치 경로에 따라 Windows 10 PC에서 **SignTool**이 있는 위치는 다음과 같습니다.
@@ -36,12 +36,12 @@ ms.locfileid: "58320576"
 
 ## <a name="using-signtool"></a>SignTool 사용하기
 
-**SignTool**을 사용하여 파일에 서명하거나, 서명 또는 타임스탬프를 확인하거나, 서명을 제거하는 등의 작업을 할 수 있습니다. 앱 패키지 서명을 위해 여기서는 **sign** 명령을 중심으로 설명하겠습니다. **SignTool**에 대한 전체 정보는 [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx) 참조 페이지를 참조하세요. 
+**SignTool**을 사용하여 파일에 서명하거나, 서명 또는 타임스탬프를 확인하거나, 서명을 제거하는 등의 작업을 할 수 있습니다. 앱 패키지 서명을 위해 여기서는 **sign** 명령을 중심으로 설명하겠습니다. **SignTool**에 대한 전체 정보는 [SignTool](https://docs.microsoft.com/windows/desktop/SecCrypto/signtool) 참조 페이지를 참조하세요. 
 
 ### <a name="determine-the-hash-algorithm"></a>해시 알고리즘 결정
 **SignTool**을 사용하여 앱 패키지 또는 번들에 서명하는 경우 **SignTool**에서 사용하는 해시 알고리즘이 앱을 패키징하는 데 사용한 알고리즘과 동일해야 합니다. 예를 들어 **MakeAppx.exe**를 사용하여 본 설정으로 앱 패키지를 만든 경우 **SignTool**을 사용할 때 SHA256을 지정해야 합니다. 이것이 **MakeAppx.exe**가 사용하는 기본 알고리즘이기 때문입니다.
 
-앱을 패키징할 때 사용된 해시 알고리즘을 확인하려면 앱 패키지의 내용을 추출하여 AppxBlockMap.xml 파일을 검사합니다. 앱 패키지를 압축 해제/추출하는 방법을 알아보려면 [패키지나 번들에서 파일 추출](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool#extract-files-from-a-package-or-bundle)을 참조하세요. 해시 매서드는 BlockMap 요소에 있으며 형식은 다음과 같습니다.
+앱을 패키징할 때 사용된 해시 알고리즘을 확인하려면 앱 패키지의 내용을 추출하여 AppxBlockMap.xml 파일을 검사합니다. 앱 패키지를 압축 해제/추출하는 방법을 알아보려면 [패키지나 번들에서 파일 추출](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)을 참조하세요. 해시 매서드는 BlockMap 요소에 있으며 형식은 다음과 같습니다.
 
 ```xml
 <BlockMap xmlns="http://schemas.microsoft.com/appx/2010/blockmap" 
@@ -106,7 +106,7 @@ SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.msix
 
 일부 인증서는 비밀 번호를 사용하지 않습니다. 인증서에 비밀 번호가 없는 경우 샘플 명령에서 "/p &lt;Your Password&gt;"를 생략합니다.
 
-유효한 인증서를 사용하여 앱 패키지에 서명하면 패키지를 Microsoft Store에 업로드할 준비가 된 것입니다. Microsoft Store에 앱을 업로드 및 제출하는 방법에 대한 자세한 지침은 [앱 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 참조하세요.
+유효한 인증서를 사용하여 앱 패키지에 서명하면 패키지를 Microsoft Store에 업로드할 준비가 된 것입니다. Microsoft Store에 앱을 업로드 및 제출하는 방법에 대한 자세한 지침은 [앱 제출](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 참조하세요.
 
 ## <a name="common-errors-and-troubleshooting"></a>일반 오류 및 문제 해결
 **SignTool** 사용 시 가장 일반적인 유형의 오류는 내부 오류이며 일반적으로 다음과 같습니다.
@@ -137,4 +137,4 @@ SignTool sign /debug [options]
 |--------------|--------------------------|----------------|
 | 150          | error 0x8007000B: 앱 매니페스트 게시자 이름 (CN = Contoso) 서명 인증서의 주체 이름과 일치 해야 합니다 (CN = Contoso, C = US)입니다. | 앱 매니페스트 게시자 이름이 서명의 주체 이름과 정확히 일치해야 합니다.               |
 | 151          | error 0x8007000B: 서명 해시 방법 지정된 (SHA512) 앱 패키지 블록 맵에 (SHA256)에 사용 된 해시 메서드가 일치 해야 합니다.     | /fd 매개 변수에 지정된 해시 알고리즘이 잘못되었습니다. 앱 패키지 블록 맵(앱 패키지를 만드는 데 사용)과 일치하는 해시 알고리즘을 사용하여 **SignTool**을 다시 실행합니다.  |
-| 152          | error 0x8007000B: 해당 블록 맵에 대 한 앱 패키지 콘텐츠를 확인 해야 합니다.                                                           | 앱 패키지가 손상되었으며 앱 패키지를 다시 빌드하여 새 블록 앱을 생성해야 합니다. 앱 패키지를 만드는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구로 앱 패키지 만들기](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요. |
+| 152          | error 0x8007000B: 해당 블록 맵에 대 한 앱 패키지 콘텐츠를 확인 해야 합니다.                                                           | 앱 패키지가 손상되었으며 앱 패키지를 다시 빌드하여 새 블록 앱을 생성해야 합니다. 앱 패키지를 만드는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구로 앱 패키지 만들기](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요. |

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 인쇄, 3dprinting, 3d 인쇄
 ms.localizationpriority: medium
-ms.openlocfilehash: 99272c4e9ffd461901b4b2f2d2aa93b416a1b100
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 763fbc1c3cb7e969b2e932ded7cf32d7447a6e98
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605618"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369816"
 ---
 # <a name="printing-and-scanning"></a>인쇄 및 스캔
 
@@ -27,7 +27,7 @@ ms.locfileid: "57605618"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [인쇄에 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/Hh868178)
+* [인쇄에 대 한 디자인 지침](https://docs.microsoft.com/windows/uwp/devices-sensors/printing-and-scanning)
 * [빌드 2015 비디오: Windows 10에서 인쇄 하는 앱 개발](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [UWP 인쇄 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619984)
  

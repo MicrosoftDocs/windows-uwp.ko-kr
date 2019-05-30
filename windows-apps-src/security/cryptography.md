@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 156c4cc62e1997f5d647c06c87e226fe519de168
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: abe151bd78a0340b91aa1600ad34282b94b6d216
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57650368"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372589"
 ---
 # <a name="cryptography"></a>암호화
 
@@ -34,10 +34,10 @@ ms.locfileid: "57650368"
 | 해시                     | 가변 길이 데이터를 고정 길이(일반적으로 더 작은) 값으로 변환하는 프로세스입니다. 해시를 비교하여 두 개 이상의 데이터가 동일한지 적절히 평가할 수 있습니다.            |
 | 서명                   | 디지털 데이터의 암호화된 해시로, 일반적으로 데이터의 보낸 사람을 인증하거나 전송 중 데이터가 변조되지 않았는지 검증하는 데 사용됩니다.                                               |
 | 알고리즘                   | 데이터를 암호화하는 단계별 절차입니다.                                                                                                                                                         |
-| 키                         | 데이터를 암호화 및 암호 해독하는 암호화 알고리즘의 입력으로 사용되는 임의의 숫자나 의사 난수입니다.                                                                                               |
+| Key                         | 데이터를 암호화 및 암호 해독하는 암호화 알고리즘의 입력으로 사용되는 임의의 숫자나 의사 난수입니다.                                                                                               |
 | 대칭 키 암호화  | 암호화와 암호 해독에 동일한 키를 사용하는 암호화입니다. 비밀 키 암호화라고도 합니다.                                                                                      |
 | 비대칭 키 암호화 | 암호화와 암호 해독에 서로 다르지만 수치적으로 관련 있는 키를 사용하는 암호화입니다. 공개 키 암호화라고도 합니다.                                                          |
-| Encoding                    | 네트워크를 통해 전송하기 위해 인증서를 비롯한 디지털 메시지를 인코딩하는 프로세스입니다.                                                                                                     |
+| 인코딩                    | 네트워크를 통해 전송하기 위해 인증서를 비롯한 디지털 메시지를 인코딩하는 프로세스입니다.                                                                                                     |
 | 알고리즘 공급자          | 암호화 알고리즘을 구현하는 DLL입니다.                                                                                                                                                      |
 | 키 저장소 공급자        | 키 자료를 저장하기 위한 컨테이너입니다. 현재 키는 소프트웨어, 스마트 카드 또는 TPM(신뢰할 수 있는 플랫폼 모듈)에 저장할 수 있습니다.                                                                   |
 | X.509 인증서           | 주로 인증 기관이 발급하는 디지털 문서로, 개인, 시스템 또는 엔터티의 ID를 다른 관련 당사자에게 검증하는 데 사용됩니다.                                            |
@@ -93,7 +93,7 @@ ms.locfileid: "57650368"
 
 ### <a name="cryptography-support"></a>암호화 지원
 
-다음 암호화 작업을 수행할 수 있습니다. 자세한 내용은 [**Windows.Security.Cryptography.Core**](https://msdn.microsoft.com/library/windows/apps/br241547) 네임스페이스를 참조하세요.
+다음 암호화 작업을 수행할 수 있습니다. 자세한 내용은 [**Windows.Security.Cryptography.Core**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core) 네임스페이스를 참조하세요.
 
 -   대칭 키 만들기
 -   대칭형 암호화 수행
@@ -104,18 +104,18 @@ ms.locfileid: "57650368"
 -   해시 콘텐츠
 -   콘텐츠에 디지털 서명
 
-SDK는 암호 기반 데이터 보호를 위한 간소화된 인터페이스도 제공합니다. 이 인터페이스를 사용하여 다음 작업을 수행할 수 있습니다. 자세한 내용은 [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) 네임스페이스를 참조하세요.
+SDK는 암호 기반 데이터 보호를 위한 간소화된 인터페이스도 제공합니다. 이 인터페이스를 사용하여 다음 작업을 수행할 수 있습니다. 자세한 내용은 [**Windows.Security.Cryptography.DataProtection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection) 네임스페이스를 참조하세요.
 
 -   정적 데이터에 대한 비동기 보호
 -   데이터 스트림에 대한 비동기 보호
 
 ### <a name="encoding-support"></a>인코딩 지원
 
-앱은 네트워크를 통해 전송할 암호화 데이터를 인코딩하고 네트워크 소스에서 받은 데이터를 디코딩할 수 있습니다. 자세한 내용은 [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404) 네임스페이스에서 사용 가능한 정적 메서드를 참조하세요.
+앱은 네트워크를 통해 전송할 암호화 데이터를 인코딩하고 네트워크 소스에서 받은 데이터를 디코딩할 수 있습니다. 자세한 내용은 [**Windows.Security.Cryptography**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography) 네임스페이스에서 사용 가능한 정적 메서드를 참조하세요.
 
 ### <a name="pki-support"></a>PKI 지원
 
-앱은 다음과 같은 PKI 작업을 수행할 수 있습니다. 자세한 내용은 [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476) 네임스페이스를 참조하세요.
+앱은 다음과 같은 PKI 작업을 수행할 수 있습니다. 자세한 내용은 [**Windows.Security.Cryptography.Certificates**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates) 네임스페이스를 참조하세요.
 
 -   인증서 만들기
 -   자체 서명된 인증서 만들기
@@ -143,7 +143,7 @@ SDK는 암호 기반 데이터 보호를 위한 간소화된 인터페이스도 
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [인증서](certificates.md)                                               | 이 문서에서는 UWP 앱의 인증서 사용에 대해 설명합니다. 디지털 인증서는 공개 키를 개인, 컴퓨터 또는 조직에 바인딩하는 공개 키 암호화에 사용됩니다. 바인딩 ID는 한 대상을 다른 대상에 인증하는 데 가장 많이 사용됩니다. 예를 들면, 웹 서버를 사용자에게 인증하거나 사용자를 웹 서버에 인증하는 데 사용됩니다. 인증서 요청을 만들고 발급된 인증서를 설치하거나 가져올 수 있습니다. 또한 인증서 계층에 인증서를 등록할 수도 있습니다. |
 | [암호화 키](cryptographic-keys.md)                                   | 이 문서에서는 표준 키 파생 함수를 사용하여 키를 파생하는 방법과 대칭 및 비대칭 키를 사용하여 콘텐츠를 암호화하는 방법을 보여 줍니다.                                                                                                                                                                                                                                                                                                                                                                             |
-| [데이터 보호](data-protection.md)                                         | 이 문서에서는 [Windows.Security.Cryptography.DataProtection](https://msdn.microsoft.com/library/windows/apps/br241585) 네임스페이스의 [DataProtectionProvider](https://msdn.microsoft.com/library/windows/apps/br241559) 클래스를 사용하여 UWP 앱에서 디지털 데이터를 암호화 및 해독하는 방법을 설명합니다.                                                                                                                                                                                                                  |
+| [데이터 보호](data-protection.md)                                         | 이 문서에서는 [Windows.Security.Cryptography.DataProtection](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection) 네임스페이스의 [DataProtectionProvider](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) 클래스를 사용하여 UWP 앱에서 디지털 데이터를 암호화 및 해독하는 방법을 설명합니다.                                                                                                                                                                                                                  |
 | [MAC, 해시, 서명](macs-hashes-and-signatures.md)               | 이 문서에서는 UWP 앱에서 MAC(메시지 인증 코드), 해시 및 서명을 사용하여 메시지 변조를 감지하는 방법을 설명합니다.                                                                                                                                                                                                                                                                                                                                                                                |
 | [암호화에 대한 내보내기 제한](export-restrictions-on-cryptography.md) | 이 정보를 사용하여 앱이 Microsoft Store에 나열될 수 없는 방식으로 암호화를 사용하는지 확인할 수 있습니다.                                                                                                                                                                                                                                                                                                                                                                                            |
 | [일반적인 암호화 작업](common-cryptography-tasks.md)                     | 이러한 문서에서는 난수 만들기, 버퍼 비교, 문자열과 이진 데이터 간 변환, 바이트 배열에서 복사 및 데이터 인코딩 및 디코딩 등의 일반적인 UWP 암호화 작업에 대한 예제 코드를 제공합니다.                                                                                                                                                                                                                                                                                    |

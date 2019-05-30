@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 1caa7361011b535a0dd63da53e0aba2eadff72be
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3fe9a6fe94fa388c35f181341972211b9ed6c03f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654778"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371918"
 ---
 # <a name="share-certificates-between-apps"></a>앱 간에 공유 인증서
 
@@ -35,7 +35,7 @@ ms.locfileid: "57654778"
 ## <a name="create-and-publish-a-secured-web-service"></a>보안 웹 서비스 만들기 및 게시
 
 
-1.  관리자 권한으로 Microsoft Visual Studio를 실행하고 시작 페이지에서 **새 프로젝트**를 선택합니다. IIS 서버에 웹 서비스를 게시하려면 관리자 액세스 권한이 필요합니다. 새 프로젝트 대화 상자에서 프레임워크를 **.NET Framework 3.5**로 변경합니다. 선택 **시각적 C#**   - &gt; **Web**  - &gt; **Visual Studio**  - &gt; **ASP.NET 웹 서비스 응용 프로그램**합니다. 응용 프로그램 이름을 "FirstContosoBank"로 지정합니다. **확인**을 클릭하여 프로젝트를 만듭니다.
+1.  관리자 권한으로 Microsoft Visual Studio를 실행하고 시작 페이지에서 **새 프로젝트**를 선택합니다. IIS 서버에 웹 서비스를 게시하려면 관리자 액세스 권한이 필요합니다. 새 프로젝트 대화 상자에서 프레임워크를 **.NET Framework 3.5**로 변경합니다. 선택 **시각적 C#**   - &gt; **Web**  - &gt; **Visual Studio**  - &gt; **ASP.NET 웹 서비스 응용 프로그램**합니다. 응용 프로그램 이름을 "FirstContosoBank"로 지정합니다. **확인**을 클릭해 프로젝트를 만듭니다.
 2.  **Service1.asmx.cs** 파일에서 기본 **HelloWorld** 웹 메서드를 다음 "Login" 메서드로 바꿉니다.
     ```cs
             [WebMethod]
@@ -51,7 +51,7 @@ ms.locfileid: "57654778"
 
 3.  **Service1.asmx.cs** 파일을 저장합니다.
 4.  **솔루션 탐색기**에서 "FirstContosoBank" 앱을 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
-5.  **웹 게시** 대화 상자에서 새 프로필을 만들고 이름을 "ContosoProfile"로 지정합니다. **다음**을 클릭합니다.
+5.  **웹 게시** 대화 상자에서 새 프로필을 만들고 이름을 "ContosoProfile"로 지정합니다. **다음.**
 6.  다음 페이지에서 IIS 서버의 서버 이름을 입력하고 사이트 이름을 "Default Web Site/FirstContosoBank"로 지정합니다. **게시**를 클릭하여 웹 서비스를 게시합니다.
 
 ## <a name="configure-your-web-service-to-use-client-certificate-authentication"></a>클라이언트 인증서 인증을 사용하도록 웹 서비스 구성
@@ -70,11 +70,11 @@ ms.locfileid: "57654778"
 ## <a name="create-a-uwp-app-that-uses-certificate-authentication"></a>인증서 인증을 사용하는 UWP 앱 만들기
 
 
-이제 보안 웹 서비스가 하나 이상 있으므로 앱에서 인증서를 사용하여 해당 웹 서비스에 인증할 수 있습니다. [  **HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 개체를 사용하여 인증된 웹 서비스를 요청하는 경우 초기 요청에는 클라이언트 인증서가 포함되지 않습니다. 인증된 웹 서비스에서 클라이언트 인증 요청으로 응답합니다. 그러면 Windows 클라이언트가 인증서 저장소에서 사용 가능한 클라이언트 인증서를 자동으로 쿼리합니다. 사용자는 이러한 인증서 중에서 웹 서비스에 인증할 인증서를 선택할 수 있습니다. 일부 인증서는 암호로 보호되어 있으므로 인증서 암호를 입력하는 방법을 사용자에게 제공해야 합니다.
+이제 보안 웹 서비스가 하나 이상 있으므로 앱에서 인증서를 사용하여 해당 웹 서비스에 인증할 수 있습니다. [  **HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 개체를 사용하여 인증된 웹 서비스를 요청하는 경우 초기 요청에는 클라이언트 인증서가 포함되지 않습니다. 인증된 웹 서비스에서 클라이언트 인증 요청으로 응답합니다. 그러면 Windows 클라이언트가 인증서 저장소에서 사용 가능한 클라이언트 인증서를 자동으로 쿼리합니다. 사용자는 이러한 인증서 중에서 웹 서비스에 인증할 인증서를 선택할 수 있습니다. 일부 인증서는 암호로 보호되어 있으므로 인증서 암호를 입력하는 방법을 사용자에게 제공해야 합니다.
 
 사용 가능한 클라이언트 인증서가 없으면 사용자가 인증서 저장소에 인증서를 추가 해야 합니다. 사용자가 클라이언트 인증서를 포함하는 PFX 파일을 선택하고 해당 인증서를 클라이언트 인증서 저장소로 가져올 수 있도록 하는 코드를 앱에 포함할 수 있습니다.
 
-**팁**  makecert.exe를 사용 하 여이 빠른 시작을 사용 하는 PFX 파일을 만들 수 있습니다. makecert.exe 사용에 대한 자세한 내용은 [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968)를 참조하세요.
+**팁**  makecert.exe를 사용 하 여이 빠른 시작을 사용 하는 PFX 파일을 만들 수 있습니다. makecert.exe 사용에 대한 자세한 내용은 [MakeCert](https://docs.microsoft.com/windows/desktop/SecCrypto/makecert)를 참조하세요.
 
  
 

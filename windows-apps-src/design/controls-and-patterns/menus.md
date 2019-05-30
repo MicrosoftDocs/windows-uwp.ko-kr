@@ -3,8 +3,9 @@ Description: 메뉴 및 상황에 맞는 메뉴는 사용자 요청에 따라 �
 title: 메뉴 및 상황에 맞는 메뉴
 label: Menus and context menus
 template: detail.hbs
-ms.date: 01/08/2019
+ms.date: 04/19/2019
 ms.topic: article
+ms.custom: RS5, 19H1
 keywords: windows 10, uwp
 ms.assetid: 0327d8c1-8329-4be2-84e3-66e1e9a0aa60
 pm-contact: yulikl
@@ -12,13 +13,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.custom: RS5
-ms.openlocfilehash: d3ea8e2bff2455340a1183dbe5c1840fdb599d46
-ms.sourcegitcommit: 7a1d5198345d114c58287d8a047eadc4fe10f012
+ms.openlocfilehash: 10e91e8098f232d2875c802567674c9feacb2af9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59247191"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364616"
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
@@ -26,13 +26,13 @@ ms.locfileid: "59247191"
 
 ![일반적인 상황에 맞는 메뉴 예제](images/contextmenu_rs2_icons.png)
 
-| **Windows UI Library 가져오기** |
+| **Windows UI 라이브러리 가져오기** |
 | - |
 | 이 컨트롤은 Windows UI 라이브러리, 새로운 컨트롤 및 UWP 앱 용 UI 기능을 포함 하는 NuGet 패키지의 일부로 포함 합니다. 설치 지침을 비롯 한 자세한 내용은 참조는 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)합니다. |
 
 | **플랫폼 Api** | **Windows UI 라이브러리 Api** |
 | - | - |
-| [MenuFlyout 클래스](/uwp/api/windows.ui.xaml.controls.menuflyout)하십시오 [MenuBar 클래스](/uwp/api/windows.ui.xaml.controls.menubar)를 [ContextFlyout 속성](/uwp/api/windows.ui.xaml.uielement.contextflyout), [FlyoutBase.AttachedFlyout 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) | [메뉴 모음 클래스](/uwp/api/microsoft.ui.xaml.controls.menubar) |
+| [MenuFlyout 클래스](/uwp/api/windows.ui.xaml.controls.menuflyout)하십시오 [MenuBar 클래스](/uwp/api/windows.ui.xaml.controls.menubar)를 [ContextFlyout 속성](/uwp/api/windows.ui.xaml.uielement.contextflyout), [FlyoutBase.AttachedFlyout 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [메뉴 모음 클래스](/uwp/api/microsoft.ui.xaml.controls.menubar) |
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -61,8 +61,8 @@ ms.locfileid: "59247191"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/MenuFlyout">앱을 열고 작동 중인 MenuFlyout을 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -70,7 +70,7 @@ ms.locfileid: "59247191"
 
 ## <a name="menus-vs-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
-메뉴 및 상황에 맞는 메뉴에 표시 되는 방식을 포함할 수 있는 비슷합니다. 실제로 같은 컨트롤을 사용할 수 있습니다 [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030)를 만듭니다. 차이점은 사용자가 액세스할 수 있도록 하는 방법.
+메뉴 및 상황에 맞는 메뉴에 표시 되는 방식을 포함할 수 있는 비슷합니다. 실제로 같은 컨트롤을 사용할 수 있습니다 [MenuFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyout)를 만듭니다. 차이점은 사용자가 액세스할 수 있도록 하는 방법.
 
 메뉴 또는 상황에 맞는 메뉴는 언제 사용해야 하나요?
 
@@ -90,13 +90,13 @@ ms.locfileid: "59247191"
 - 단일 진입점(예: 화면의 맨 위에 있는 파일 메뉴)이 항상 표시되도록 합니다.
 - 일반적으로 단추 또는 부모 메뉴 항목에 연결됩니다.
 - 마우스 왼쪽 단추로 클릭하거나 이와 동등한 작업(예: 손가락으로 탭)을 통해 호출됩니다.
-- 통해 요소를 사용 하 여 연결 된 해당 [플라이 아웃](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) 또는 [FlyoutBase.AttachedFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) 속성 또는 앱 창의 맨 위에 있는 메뉴 모음에서 그룹화 합니다.
+- 통해 요소를 사용 하 여 연결 된 해당 [플라이 아웃](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button.flyout) 또는 [FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) 속성 또는 앱 창의 맨 위에 있는 메뉴 모음에서 그룹화 합니다.
 
 ### <a name="context-menus"></a>상황에 맞는 메뉴
 
 - 단일 요소에 연결되고 보조 명령을 표시합니다.
 - 마우스 오른쪽 단추로 클릭하거나 이와 동등한 작업(예: 손가락으로 길게 누르기)을 통해 호출됩니다.
-- 해당 [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) 속성을 통해 요소와 연결됩니다.
+- 해당 [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) 속성을 통해 요소와 연결됩니다.
 
 ## <a name="icons"></a>아이콘
 
@@ -140,7 +140,7 @@ ms.locfileid: "59247191"
 - [RadioMenuFlyoutItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.radiomenuflyoutitem)-상호 배타적인 메뉴 항목을 전환 합니다.
 - [MenuFlyoutSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyoutseparator)—메뉴 항목을 시각적으로 구분
 
-이 예제에서는 [MenuFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyout) 사용 하는 [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) 속성, 속성 상황에 맞는 메뉴로 MenuFlyout 표시할 대부분의 컨트롤에 사용할 수 있습니다.
+이 예제에서는 [MenuFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyout) 사용 하는 [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) 속성, 속성 상황에 맞는 메뉴로 MenuFlyout 표시할 대부분의 컨트롤에 사용할 수 있습니다.
 
 ````xaml
 <Rectangle
@@ -171,7 +171,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 }
 ````
 
-다음 예제는 거의 동일하지만 [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) 속성을 사용하여 [MenuFlyout 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyout)를 상황에 맞는 메뉴로 표시하는 대신 [FlyoutBase.ShowAttachedFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.showattachedflyout) 속성을 사용하여 메뉴로 표시합니다.
+다음 예제는 거의 동일하지만 [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) 속성을 사용하여 [MenuFlyout 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyout)를 상황에 맞는 메뉴로 표시하는 대신 [FlyoutBase.ShowAttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showattachedflyout) 속성을 사용하여 메뉴로 표시합니다.
 
 ````xaml
 <Rectangle
@@ -210,7 +210,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 
 ### <a name="light-dismiss"></a>Light 해제
 
-Light 다른 플라이 아웃 메뉴와 상황에 맞는 메뉴 컨트롤을 해제, 키보드 및 gamepad 포커스 해제 될 때까지 일시적인 UI 내에서 트랩 됩니다. 이 동작에 대한 시각 신호를 제공하기 위해 Xbox의 빠른 해제 컨트롤은 범위를 벗어난 UI를 흐리게 표시하는 오버레이를 그립니다. 이 동작은 [LightDismissOverlayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx) 속성으로 수정할 수 있습니다. 기본적으로 일시적인 Ui는 밝은 해제 오버레이에 그리기 Xbox (**자동**) 하지만 다른 장치 제품군에 없습니다. 항상 오버레이 강제 적용 하도록 선택할 수 있습니다 **대** 또는 always **해제**합니다.
+Light 다른 플라이 아웃 메뉴와 상황에 맞는 메뉴 컨트롤을 해제, 키보드 및 gamepad 포커스 해제 될 때까지 일시적인 UI 내에서 트랩 됩니다. 이 동작에 대한 시각 신호를 제공하기 위해 Xbox의 빠른 해제 컨트롤은 범위를 벗어난 UI를 흐리게 표시하는 오버레이를 그립니다. 이 동작은 [LightDismissOverlayMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode) 속성으로 수정할 수 있습니다. 기본적으로 일시적인 Ui는 밝은 해제 오버레이에 그리기 Xbox (**자동**) 하지만 다른 장치 제품군에 없습니다. 항상 오버레이 강제 적용 하도록 선택할 수 있습니다 **대** 또는 always **해제**합니다.
 
 ```xaml
 <MenuFlyout LightDismissOverlayMode="Off" />

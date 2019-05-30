@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ab3e223c99a13e4520d5bc603454881803a3cb64
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 14a1b73a2c82beea746d40c25bfa18ddf6171203
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334861"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372007"
 ---
 # <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 
@@ -95,7 +95,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 ### <a name="methods-for-desktop-applications"></a>데스크톱 응용 프로그램의 메서드
 
-[Windows 데스크톱 응용 프로그램 프로그램](https://msdn.microsoft.com/library/windows/desktop/mt826504)에 속하는 개발자 계정으로 다음과 같은 분석 메서드를 사용할 수 있습니다.
+[Windows 데스크톱 응용 프로그램 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)에 속하는 개발자 계정으로 다음과 같은 분석 메서드를 사용할 수 있습니다.
 
 | 시나리오       | 메서드      |
 |---------------|--------------------|
@@ -125,7 +125,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 ### <a name="methods-for-hardware-and-drivers"></a>하드웨어 및 드라이버의 메서드
 
-개발자 계정에 속하는 합니다 [Windows 하드웨어 대시보드 프로그램](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) 추가 하드웨어 및 드라이버에 대 한 분석 데이터를 검색 하는 메서드 집합에 대 한 액세스 권한이 있습니다. 자세한 내용은 [Hardware dashboard API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api)합니다.
+개발자 계정에 속하는 합니다 [Windows 하드웨어 대시보드 프로그램](https://docs.microsoft.com/windows-hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) 추가 하드웨어 및 드라이버에 대 한 분석 데이터를 검색 하는 메서드 집합에 대 한 액세스 권한이 있습니다. 자세한 내용은 [Hardware dashboard API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api)합니다.
 
 ## <a name="code-example"></a>코드 예제
 

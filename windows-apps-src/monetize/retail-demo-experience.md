@@ -6,12 +6,12 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 소매 데모 앱
 ms.localizationpriority: medium
-ms.openlocfilehash: 39b1323f048c1b420a2cf0b239cd9f1a9fb63ff7
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 4c9f31da8e2509c41715a13fbc0bb0322782340a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334881"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366535"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>소매 데모 (RDX) 기능을 앱에 추가
 
@@ -49,7 +49,7 @@ RDX 인식 앱의 이러한 중요 한 요구 사항을 충족 하지 않는 모
 
 * **오류가 없는 환경을**합니다. 앱이 오류 없이 실행되어야 합니다. 또한 소매 데모 장치를 사용하는 고객에게 오류나 알림이 표시되어서는 안 됩니다. 오류 자체, 브랜드, 장치의 브랜드, 장치 제조업체의 브랜드 및 Microsoft의 브랜드가 앱의 부정적인 반영합니다.
 
-* **유료 앱 평가 모드 있어야**합니다. 앱을 무료 또는 포함 하거나 해야는 [평가 모드](https://msdn.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app)합니다. 고객은 소매점에서 사용하는 앱에 대해 비용을 부담하려고 하지 않습니다.
+* **유료 앱 평가 모드 있어야**합니다. 앱을 무료 또는 포함 하거나 해야는 [평가 모드](https://docs.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app)합니다. 고객은 소매점에서 사용하는 앱에 대해 비용을 부담하려고 하지 않습니다.
 
 ### <a name="high-priority-requirements"></a>우선 순위가 높은 요구 사항
 
@@ -359,7 +359,7 @@ namespace MyCompany.MyApp
 
 ## <a name="related-links"></a>관련 링크
 
-* [앱 데이터 저장 및 검색](https://msdn.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
-* [만들기 및 app service를 사용 하는 방법](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
-* [앱 콘텐츠 지역화](https://msdn.microsoft.com/windows/uwp/globalizing/globalizing-portal)
+* [앱 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
+* [만들기 및 app service를 사용 하는 방법](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
+* [앱 콘텐츠 지역화](https://docs.microsoft.com/windows/uwp/globalizing/globalizing-portal)
 * [소매 데모 환경 (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)

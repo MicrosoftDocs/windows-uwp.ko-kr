@@ -5,12 +5,12 @@ ms.date: 01/10/2017
 ms.topic: article
 keywords: windows 10, uwp, WinRT API 인덱서 검색
 localizationpriority: medium
-ms.openlocfilehash: b2ac43c9aa2d27f8745e9075abc13d8feaba2370
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2a77bfc37d853efd28bde9bc3043d072888822f2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592688"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369261"
 ---
 # <a name="using-supplemental-properties"></a>보조 속성을 사용 하 여  
 
@@ -27,7 +27,7 @@ ms.locfileid: "57592688"
 에서는 지난 수십 년간 Windows에 빠른 검색에 대 한 솔루션, 인덱서가 되었으며 크리에이터 스 업데이트에서 업데이트 된 이러한 새로운 시나리오를 지원 하기 위해. 앱은 이제 시스템에서 추출 되는 것 이상의 추가 속성을 사용 하 여 태그 파일 수 있습니다. 이러한 속성은 첫 번째 클래스 시민으로 처리 됩니다.  
 
 ## <a name="windows-properties"></a>Windows 속성 
-합니다 [Windows 속성 시스템](https://msdn.microsoft.com/library/windows/desktop/ff728898) 오랫동안 파일을 사용 하 여 상호 작용의 핵심 부분 되었습니다. 앱을에서 모든 다른 파일 형식 또는 파일에 있을 수 있습니다 하는 언어의 내부 구조를 이해 하지 않고도 파일에서 속성을 읽을 수 있습니다. 모든 추상화를 개발자로 서는 수행 해야 하는 모든 목록을 요청 하 고 오름차순 또는 내림차순을 지정 합니다.  
+합니다 [Windows 속성 시스템](https://docs.microsoft.com/windows/desktop/properties/windows-properties-system) 오랫동안 파일을 사용 하 여 상호 작용의 핵심 부분 되었습니다. 앱을에서 모든 다른 파일 형식 또는 파일에 있을 수 있습니다 하는 언어의 내부 구조를 이해 하지 않고도 파일에서 속성을 읽을 수 있습니다. 모든 추상화를 개발자로 서는 수행 해야 하는 모든 목록을 요청 하 고 오름차순 또는 내림차순을 지정 합니다.  
 
 Windows 인덱서를 사용 하 여 속성 시스템 밀접 – 속성을 해당 범위 내에서 파일에서 읽고 저장 합니다. 나중에 때 앱 요청 목록을 수정 된 날짜를 정렬할 수 폴더의 모든.docx 인덱서 John Smith가 작성 제외 하 고 반환할 수 있습니다 목록 즉시.  
 

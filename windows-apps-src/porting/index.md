@@ -6,21 +6,21 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d8805f03f8476bcae8404395c27d9d78952f782
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 937d165d9305a3f4909383e872f49fcf08a3115c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984234"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371596"
 ---
 # <a name="porting-apps-to-windows10"></a>Windows 10으로 앱 포팅
 
 
 이 섹션에서는 고객이 모든 유형의 디바이스에 설치할 수 있는 단일 Windows 10 앱 패키지를 만들 수 있는 UWP(유니버설 Windows 플랫폼)로 기존 앱을 포팅하는 방법을 설명합니다. 앱은 흥미로운 새 하드웨어, 엄청난 수익 창출 기회, 최신 API 집합, 적응 UI 컨트롤, 마우스/키보드, 터치 및 음성을 포함하여 다양한 입력 양식을 활용할 수 있습니다.
 
-WinRT(Windows 런타임)는 UWP(유니버설 Windows 플랫폼) 앱을 빌드할 수 있는 기술입니다. WinRT 및 UWP 앱에 대한 배경 정보는 [UWP(유니버설 Windows 플랫폼) 앱이란?](https://msdn.microsoft.com/library/windows/apps/dn726767)을 참조할 수 있습니다.
+WinRT(Windows 런타임)는 UWP(유니버설 Windows 플랫폼) 앱을 빌드할 수 있는 기술입니다. WinRT 및 UWP 앱에 대한 배경 정보는 [UWP(유니버설 Windows 플랫폼) 앱이란?](https://docs.microsoft.com/windows/uwp/get-started/whats-a-uwp)을 참조할 수 있습니다.
 
-이 포팅 가이드에서는 현재 앱 기술과 UWP(유니버설 Windows 플랫폼)의 차이점에 대해 설명합니다. 기술 간의 진행 경로를 이해한 후 UWP 앱을 개발하는 데 중요한 자료가 되는 개발자 센터의 나머지 부분을 살펴볼 수 있습니다. 그러기 위해서는 [스토어 앱 개발 방법](https://msdn.microsoft.com/library/windows/apps/dn726537)을 시작하는 것이 좋습니다.
+이 포팅 가이드에서는 현재 앱 기술과 UWP(유니버설 Windows 플랫폼)의 차이점에 대해 설명합니다. 기술 간의 진행 경로를 이해한 후 UWP 앱을 개발하는 데 중요한 자료가 되는 개발자 센터의 나머지 부분을 살펴볼 수 있습니다. 그러기 위해서는 [스토어 앱 개발 방법](https://docs.microsoft.com/previous-versions/windows/apps/dn726537(v=win.10))을 시작하는 것이 좋습니다.
 
 | 항목 | 설명 |
 |-------|-------------|
@@ -33,6 +33,6 @@ WinRT(Windows 런타임)는 UWP(유니버설 Windows 플랫폼) 앱을 빌드할
 
 ## <a name="related-topics"></a>관련 항목
 
-* [WPF 및 Silverlight에서 WinRT로 이동](https://msdn.microsoft.com/library/windows/apps/dn263237)
-* [Android에서 WinRT로 이동](https://msdn.microsoft.com/library/windows/apps/jj945421)
-* [웹에서 WinRT로 이동](https://msdn.microsoft.com/library/windows/apps/hh465151)
+* [WPF 및 Silverlight에서 WinRT로 이동](https://docs.microsoft.com/previous-versions/windows/apps/dn263237(v=win.10))
+* [Android에서 WinRT로 이동](https://docs.microsoft.com/previous-versions/windows/apps/jj945421(v=win.10))
+* [웹에서 WinRT로 이동](https://docs.microsoft.com/previous-versions/windows/apps/hh465151(v=win.10))

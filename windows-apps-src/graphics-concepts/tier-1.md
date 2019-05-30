@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ae76111f6feefa0bb63fd18516e033050cc06fc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3aeb30fca8e9fbad21f274162aab3106afcf2e45
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589888"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370846"
 ---
 # <a name="tier-1"></a>계층 1
 
@@ -52,7 +52,7 @@ LOD 및 매핑된 상태 피드백을 고정할 수 있는 셰이더 명령어�
 
 통해 타일 풀에 대 한 타일 참조 간에 전환 하려면를 [버퍼](introduction-to-buffers.md) 리소스를 통해 동일한 타일을 참조 하는 [질감](introduction-to-textures.md) 리소스 또는 그 반대로, 가장 최근의 타일 매핑 업데이트 또는 복사 이러한 타일에 매핑을 정의 하는 타일 매핑의 동일한 리소스 차원에 대 한 풀 타일 해야 (버퍼와 질감\*) 타일에 액세스 하는 데 사용할 리소스 차원으로 합니다. 그렇지 않으면 장치 재설정을 포함하여 어떻게 동작할지 알 수 없습니다.
 
-예를 들어 타일 매핑을 업데이트하여 버퍼에 대한 타일 매핑을 정의하고, [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) 리소스를 통해 타일 풀의 동일한 타일에 대한 타일 매핑을 업데이트한 다음 버퍼를 통해 타일에 액세스하는 것은 잘못입니다. 이를 해결하려면 버퍼 및 텍스처 공유 타일을 서로 전환할 때 리소스에 대한 타일 매핑을 재정의하거나, 혹은 버퍼 리소스와 텍스처 리소스 사이에 타일 풀의 타일을 절대로 공유하지 않는 것이 좋습니다.
+예를 들어 타일 매핑을 업데이트하여 버퍼에 대한 타일 매핑을 정의하고, [**Texture2D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d) 리소스를 통해 타일 풀의 동일한 타일에 대한 타일 매핑을 업데이트한 다음 버퍼를 통해 타일에 액세스하는 것은 잘못입니다. 이를 해결하려면 버퍼 및 텍스처 공유 타일을 서로 전환할 때 리소스에 대한 타일 매핑을 재정의하거나, 혹은 버퍼 리소스와 텍스처 리소스 사이에 타일 풀의 타일을 절대로 공유하지 않는 것이 좋습니다.
 
 ### <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>최소/최대 감소 필터링
 

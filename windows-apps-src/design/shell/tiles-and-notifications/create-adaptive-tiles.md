@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 524cc15dbb7a3264d8476210f727508ea41ace87
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 08a7ca0b08a9df57d3c496f33f963fcd9d0ebfe2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639608"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367277"
 ---
 # <a name="create-adaptive-tiles"></a>적응형 타일 만들기
 
 적응 타일 템플릿은 다양 한 화면 밀도에 맞게 조정 되는 단순 하 고 유연한 태그 언어를 사용 하 여 사용자 고유의 타일 알림 콘텐츠를 설계할 수 있도록 Windows 10의 새로운 기능입니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. 적응형 요소 및 특성의 전체 목록은 [적응형 타일 스키마](../tiles-and-notifications/tile-schema.md)를 참조하세요.
 
-(원하는 경우에서 미리 설정 된 템플릿을 계속 사용할 수 있습니다 합니다 [Windows 8 타일 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761491) Windows 10에 대 한 알림을 디자인 하는 경우입니다.)
+(원하는 경우에서 미리 설정 된 템플릿을 계속 사용할 수 있습니다 합니다 [Windows 8 타일 템플릿 카탈로그](https://docs.microsoft.com/previous-versions/windows/apps/hh761491(v=win.10)) Windows 10에 대 한 알림을 디자인 하는 경우입니다.)
 
 
 ## <a name="getting-started"></a>시작
@@ -284,7 +284,7 @@ TileContent content = new TileContent()
 
  
 
-## <a name="display-name"></a>표시 이름
+## <a name="display-name"></a>Display name
 
 
 **displayName** 특성에 원하는 텍스트 문자열을 입력하여 알림의 표시 이름을 재정의할 수 있습니다. 브랜딩과 마찬가지로 표시 이름은 전체 알림 페이로드에 적용되는 [TileVisual](../tiles-and-notifications/tile-schema.md#tilevisual) 요소나 개별 타일에만 적용되는 [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding) 요소에 지정할 수 있습니다.
@@ -335,7 +335,7 @@ TileContent content = new TileContent()
 
 ![적응형 타일 표시 이름](images/adaptive-tiles-displayname.png)
 
-## <a name="text"></a>텍스트
+## <a name="text"></a>텍스트 모드
 
 
 [AdaptiveText](../tiles-and-notifications/tile-schema.md#adaptivetext) 요소는 텍스트를 표시하는 데 사용됩니다. 힌트를 사용하여 텍스트가 표시되는 방식을 수정할 수 있습니다.
@@ -414,14 +414,14 @@ new AdaptiveText()
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;텍스트 힌트-style = "\*" /&gt; | 글꼴 높이               | 글꼴 두께 |
+| &lt;text hint-style="\*" /&gt; | 글꼴 높이               | 글꼴 두께 |
 | 자막                        | 12epx(유효 픽셀) | Regular     |
 | 본문                           | 15epx                    | Regular     |
 | 하단                           | 15epx                    | Semibold    |
 | 부제목                       | 20epx                    | Regular     |
 | title                          | 24epx                    | Semilight   |
 | 하위 머리글                      | 34epx                    | 밝게       |
-| 머리글                         | 46epx                    | 밝게       |
+| 헤더                         | 46epx                    | 밝게       |
 
  
 

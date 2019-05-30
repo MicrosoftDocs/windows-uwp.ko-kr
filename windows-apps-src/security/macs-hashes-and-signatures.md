@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 6517241826d06b63fd88b45237552acffbdc62da
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 78b14023f61dd3f8c27bc31f5876407ff0ed0366
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651238"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371201"
 ---
 # <a name="macs-hashes-and-signatures"></a>MAC, 해시, 서명
 
@@ -23,7 +23,7 @@ ms.locfileid: "57651238"
 ## <a name="message-authentication-codes-macs"></a>MAC(메시지 인증 코드)
 
 
-암호화는 권한이 없는 개인이 메시지를 읽지 못하도록 할 수는 있지만 메시지를 변조하는 것을 막을 수는 없습니다. 변조한 결과가 무의미한 내용에 불과하더라도 변조된 메시지로 인해 손실이 발생할 수 있습니다. MAC(메시지 인증 코드)를 사용하면 메시지 변조를 막는 데 도움이 됩니다. 예를 들어, 다음 시나리오를 가정해 봅시다.
+암호화는 권한이 없는 개인이 메시지를 읽지 못하도록 할 수는 있지만 메시지를 변조하는 것을 막을 수는 없습니다. 변조한 결과가 무의미한 내용에 불과하더라도 변조된 메시지로 인해 손실이 발생할 수 있습니다. MAC(메시지 인증 코드)를 사용하면 메시지 변조를 막는 데 도움이 됩니다. 예를 들어 다음 시나리오를 고려할 수 있습니다.
 
 -   Bob과 Alice는 비밀 키를 공유하고 MAC 기능을 사용하는 데 동의합니다.
 -   Bob은 메시지를 작성하고 메시지와 비밀 키를 MAC 기능에 입력하여 MAC 값을 검색합니다.
@@ -34,11 +34,11 @@ Bob과 Alice의 대화를 엿들은 제3자 Eve는 사실상 메시지를 조작
 
 MAC 코드 만들기는 원래 메시지가 변경되지 않았고, 공유 비밀 키가 사용되었고, 해당 개인 키에 액세스할 수 있는 누군가가 메시지 해시에 서명했다는 점만 보장합니다.
 
-[  **MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530)를 사용하여 사용 가능한 MAC 알고리즘을 열거하고 대칭 키를 생성할 수 있습니다. [  **CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) 클래스에서 정적 메서드를 사용하여 MAC 값을 만드는 필요한 암호화를 수행할 수 있습니다.
+[  **MacAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider)를 사용하여 사용 가능한 MAC 알고리즘을 열거하고 대칭 키를 생성할 수 있습니다. [  **CryptographicEngine**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicEngine) 클래스에서 정적 메서드를 사용하여 MAC 값을 만드는 필요한 암호화를 수행할 수 있습니다.
 
 디지털 서명은 개인 키 MAC(메시지 인증 코드)와 동일한 공개 키입니다. MAC는 메시지 수신자가 해당 메시지가 전송 중에 변경되지 않았음을 확인하는 데 개인 키를 사용하는 반면, 서명은 개인/공개 키 쌍을 사용합니다.
 
-다음 예제 코드에서는 [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) 클래스를 사용하여 HMAC(해시된 메시지 인증 코드)를 만드는 방법을 보여 줍니다.
+다음 예제 코드에서는 [**MacAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider) 클래스를 사용하여 HMAC(해시된 메시지 인증 코드)를 만드는 방법을 보여 줍니다.
 
 ```cs
 using Windows.Security.Cryptography;
@@ -137,11 +137,11 @@ namespace SampleMacAlgorithmProvider
 
 Alice는 암호화되지 않은 메시지를 보냈고, 해시만 암호화되었다는 점에 유의하세요. 이 절차는 원래 메시지가 변경되지 않았고, Alice의 공개 키가 사용되었고, Alice의 개인 키에 액세스할 수 있는 누군가(아마도 Alice)가 메시지 해시에 서명했다는 점만 보장합니다.
 
-[  **HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) 클래스를 사용하여 사용 가능한 해시 알고리즘을 열거하고 [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 값을 만들 수 있습니다.
+[  **HashAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.HashAlgorithmProvider) 클래스를 사용하여 사용 가능한 해시 알고리즘을 열거하고 [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) 값을 만들 수 있습니다.
 
 디지털 서명은 개인 키 MAC(메시지 인증 코드)와 동일한 공개 키입니다. MAC는 메시지 수신자가 해당 메시지가 전송 중에 변경되지 않았음을 확인하는 데 개인 키를 사용하는 반면, 서명은 개인/공개 키 쌍을 사용합니다.
 
-[  **CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 개체를 사용하면 사용할 때마다 개체를 다시 만들지 않고도 여러 데이터를 반복적으로 해시할 수 있습니다. [  **Append**](https://msdn.microsoft.com/library/windows/apps/br241499) 메서드는 해시할 새 데이터를 버퍼에 추가합니다. [  **GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) 메서드는 데이터를 해시하고 개체를 또 사용하기 위해 초기화합니다. 이 메서드는 다음 예제에 나와 있습니다.
+[  **CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) 개체를 사용하면 사용할 때마다 개체를 다시 만들지 않고도 여러 데이터를 반복적으로 해시할 수 있습니다. [  **Append**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.core.cryptographichash.append) 메서드는 해시할 새 데이터를 버퍼에 추가합니다. [  **GetValueAndReset**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.core.cryptographichash.getvalueandreset) 메서드는 데이터를 해시하고 개체를 또 사용하기 위해 초기화합니다. 이 메서드는 다음 예제에 나와 있습니다.
 
 ```cs
 public void SampleReusableHash()
@@ -191,4 +191,4 @@ public void SampleReusableHash()
 
 서명은 원래 메시지가 변경되지 않았고, 발신자의 공개 키가 사용되었고, 개인 키에 액세스할 수 있는 누군가가 메시지 해시에 서명했다는 점만 보장합니다.
 
-[  **AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) 개체를 사용하면 사용 가능한 서명 알고리즘을 열거하고 키 쌍을 생성하거나 가져올 수 있습니다. [  **CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 클래스에서 정적 메서드를 사용하면 메시지에 서명하거나 서명을 확인할 수 있습니다.
+[  **AsymmetricKeyAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider) 개체를 사용하면 사용 가능한 서명 알고리즘을 열거하고 키 쌍을 생성하거나 가져올 수 있습니다. [  **CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) 클래스에서 정적 메서드를 사용하면 메시지에 서명하거나 서명을 확인할 수 있습니다.

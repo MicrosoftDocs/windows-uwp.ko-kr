@@ -5,12 +5,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e273b1b3bb84929005cfbe4a205397fa298ea1c8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3c1a67936a403edc718ca5a38e7bcb8af02e042f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57657128"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372080"
 ---
 # <a name="xbox-best-practices"></a>Xbox 모범 사례
 
@@ -20,17 +20,17 @@ ms.locfileid: "57657128"
 
 ## <a name="to-build-the-best-experiences-for-xbox-one"></a>Xbox One을 위한 최상의 환경을 조성하려면
 
-### <a name="do-turn-off-mouse-mode"></a>*수행 합니다.* 마우스 모드 끄기
+### <a name="do-turn-off-mouse-mode"></a>*Do:* 마우스 모드 끄기
 
 Xbox 사용자가 해당 컨트롤러를 선호 합니다. 컨트롤러 입력에 대해 최적화 하기 위해 [마우스 모드 사용 안 함](how-to-disable-mouse-mode.md) 방향 탐색을 사용 하도록 설정 하 고 (라고도 [XY 집중 탐색 및 상호 작용](../design/input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction)). 포커스 및 액세스할 수 없는 UI에 대 한 주의 하십시오.
 
-### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*수행 합니다.* 원격 제어 환경에 적절 한 포커스 사각형을 그리려면
+### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*Do:* 원격 제어 환경에 적절 한 포커스 사각형을 그리려면
 
 대부분의 Xbox 사용자는 거실에서 TV 주위에 앉아 있으므로 표준 포커스 사각형이 10피트를 넘는 일은 거의 없습니다. 입력 포커스가 있는 UI 요소가 항상 사용자에게 명확하게 표시되도록 하려면 [포커스 화면 효과](../design/input/gamepad-and-remote-interactions.md#focus-visual) 지침을 따릅니다. XAML에서는 Xbox에서 앱이 실행될 때 이 동작을 무료로 사용할 수 있지만 HTML 앱에서는 사용자 지정 CSS 스타일을 사용해야 합니다.
 
-### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*수행 합니다.* SystemMediaTransportControls 클래스를 사용 하 여 통합
+### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*Do:* SystemMediaTransportControls 클래스를 사용 하 여 통합
 
-Xbox 사용자는 Xbox 미디어 리모컨, Cortana(특히 "실행" 및 "일시 중지" 음성 명령) 및 Xbox SmartGlass를 사용하여 미디어 앱을 제어하려고 합니다. 이 기능을 무료로 사용하려면 앱에서 Xbox 미디어 컨트롤에 자동으로 포함된 [SystemMediaTransportControls](https://msdn.microsoft.com/library/windows/apps/windows.media.systemmediatransportcontrols.aspx) 클래스를 사용해야 합니다. 앱에 사용자 지정 미디어 컨트롤이 있는 경우 **SystemMediaTransportControls** 클래스와 통합하여 사용자에게 이러한 기능을 제공해야 합니다. 배경 음악 앱을 만드는 경우 Xbox 멀티태스킹 탭에서 배경 음악 컨트롤이 올바르게 작동되도록 **SystemMediaTransportControls** 클래스와 통합합니다.
+Xbox 사용자는 Xbox 미디어 리모컨, Cortana(특히 "실행" 및 "일시 중지" 음성 명령) 및 Xbox SmartGlass를 사용하여 미디어 앱을 제어하려고 합니다. 이 기능을 무료로 사용하려면 앱에서 Xbox 미디어 컨트롤에 자동으로 포함된 [SystemMediaTransportControls](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols) 클래스를 사용해야 합니다. 앱에 사용자 지정 미디어 컨트롤이 있는 경우 **SystemMediaTransportControls** 클래스와 통합하여 사용자에게 이러한 기능을 제공해야 합니다. 배경 음악 앱을 만드는 경우 Xbox 멀티태스킹 탭에서 배경 음악 컨트롤이 올바르게 작동되도록 **SystemMediaTransportControls** 클래스와 통합합니다.
 
 <!-- ### *Do:* Use adaptive UI to account for snapped apps
 One of the unique features of Xbox One is that users can snap apps such as Cortana next to any other app, so your app should respond gracefully when it runs in *fill mode*. Implement [adaptive UI](../get-started/universal-application-platform-guide.md#design-adaptive-ui-with-adaptive-panels) and make sure to test your app during development by snapping an app next to it. -->
@@ -70,7 +70,7 @@ UWP 앱에 적용된 이러한 사례를 간략하게 보려면 이 동영상을
 * [녹화 된 세션 보기](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
 * [블로그 게시물 읽기](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Xbox One에서 UWP](index.md)
 - [Xbox 및 TV용 디자인](../design/devices/designing-for-tv.md)

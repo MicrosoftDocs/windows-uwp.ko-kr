@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c004feabf561c5a94fadba858762bf683c9ff0e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a498f685e7a810d19e2f1eb63ae112dd02587b84
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57628048"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370691"
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a>스레드 풀을 사용하기 위한 모범 사례
 
@@ -26,9 +26,9 @@ ms.locfileid: "57628048"
 
 -   오래가지 않고 독립적인 작업 항목을 만듭니다. 작업 항목은 비동기적으로 실행되며 순서에 관계없이 큐에서 풀로 제출될 수 있습니다.
 
--   [  **Windows.UI.Core.CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211)를 사용하여 업데이트를 UI 스레드로 디스패치합니다.
+-   [  **Windows.UI.Core.CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher)를 사용하여 업데이트를 UI 스레드로 디스패치합니다.
 
--   **Sleep** 함수 대신 [**ThreadPoolTimer.CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921)를 사용합니다.
+-   **Sleep** 함수 대신 [**ThreadPoolTimer.CreateTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer)를 사용합니다.
 
 -   고유한 스레드 관리 시스템을 만드는 대신 스레드 풀을 사용합니다. 스레드 풀은 고급 접근 권한 값을 사용하여 OS 수준에서 실행되며 디바이스 리소스 및 활동에 따라 시스템 전체와 프로세스 내에서 동적으로 조정되도록 최적화되어 있습니다.
 
@@ -43,7 +43,7 @@ ms.locfileid: "57628048"
 
 -   *period* 매개 변수에 지정한 시간보다 완료하는 데 더 오래 걸리는 주기적 작업 항목을 제출하지 마세요.
 
--   백그라운드 작업에서 디스패치된 작업 항목에서 알림 이외의 UI 업데이트를 보내지 마세요. 대신 백그라운드 작업 진행률 및 완료 처리기를 사용합니다(예: [**IBackgroundTaskInstance.Progress**](https://msdn.microsoft.com/library/windows/apps/BR224800)).
+-   백그라운드 작업에서 디스패치된 작업 항목에서 알림 이외의 UI 업데이트를 보내지 마세요. 대신 백그라운드 작업 진행률 및 완료 처리기를 사용합니다(예: [**IBackgroundTaskInstance.Progress**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress)).
 
 -   **async** 키워드를 사용하는 작업 항목 처리기를 사용하는 경우에는, 처리기의 모든 코드가 실행되기 전에 스레드 풀 작업 항목이 완료 상태가 될 수 있습니다. 처리기 내에서 **await** 키워드 뒤에 오는 코드는 작업 항목이 완료 상태로 설정된 후에 실행될 수 있습니다.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 비동기 프로그래밍, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 8551a49512d4b17ab1bab704596d9e5389de3eb6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3fc2722c8db40aaabd4313dac60f676b93478d69
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616158"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369047"
 ---
 # <a name="asynchronous-programming-directx-and-c"></a>비동기 프로그래밍(DirectX 및 C++)
 
@@ -34,7 +34,7 @@ DirectX를 처음 배우는 사용자인 경우 또는 숙련된 사용자라도
 -   컨트롤
 -   XAML 기반 UI 구성 요소
 
-앱은 여러 동시 스레드에서 이러한 구성 요소를 처리할 수 있습니다. 수 메가바이트(또는 수백 메가바이트)의 자산을 로드하거나 스트리밍하는 동안 게임 또는 앱이 대화형 상태일 수 있으므로 파일 I/O, 특히 자산 로드에는 비동기 로드가 큰 도움이 됩니다. 이러한 스레드를 만들고 관리하는 가장 쉬운 방법은 PPLTasks.h에 정의된 **concurrency** 네임스페이스에 포함된 대로 [병렬 패턴 라이브러리](https://msdn.microsoft.com/library/dd492418.aspx)와 **task** 패턴을 사용하는 것입니다. [병렬 패턴 라이브러리](https://msdn.microsoft.com/library/dd492418.aspx)를 사용하면 여러 코어 및 하이퍼 스레드 CPU가 직접 활용되며 인식된 로드 시간에서 CPU 계산이나 네트워크 처리가 많아서 발생하는 지연 및 문제에 이르기까지 모든 기능이 향상될 수 있습니다.
+앱은 여러 동시 스레드에서 이러한 구성 요소를 처리할 수 있습니다. 수 메가바이트(또는 수백 메가바이트)의 자산을 로드하거나 스트리밍하는 동안 게임 또는 앱이 대화형 상태일 수 있으므로 파일 I/O, 특히 자산 로드에는 비동기 로드가 큰 도움이 됩니다. 이러한 스레드를 만들고 관리하는 가장 쉬운 방법은 PPLTasks.h에 정의된 **concurrency** 네임스페이스에 포함된 대로 [병렬 패턴 라이브러리](https://docs.microsoft.com/cpp/parallel/concrt/parallel-patterns-library-ppl)와 **task** 패턴을 사용하는 것입니다. [병렬 패턴 라이브러리](https://docs.microsoft.com/cpp/parallel/concrt/parallel-patterns-library-ppl)를 사용하면 여러 코어 및 하이퍼 스레드 CPU가 직접 활용되며 인식된 로드 시간에서 CPU 계산이나 네트워크 처리가 많아서 발생하는 지연 및 문제에 이르기까지 모든 기능이 향상될 수 있습니다.
 
 > **참고**    에 유니버설 Windows 플랫폼 (UWP) 앱 사용자 인터페이스 (STA) 단일 스레드 아파트에서 완전히 실행 합니다. [XAML interop](directx-and-xaml-interop.md)를 사용하여 DirectX 게임에 대한 UI를 만드는 경우 STA를 사용하여 컨트롤에만 액세스할 수 있습니다.
 
@@ -43,23 +43,23 @@ DirectX를 처음 배우는 사용자인 경우 또는 숙련된 사용자라도
 ## <a name="multithreading-with-direct3d-devices"></a>Direct3D 장치를 사용한 다중 스레딩
 
 
-장치 컨텍스트에 대 한 다중 스레딩은 Direct3D 기능 수준의 11 지 원하는 그래픽 장치에서 사용할 수 있습니다만\_0 이상입니다. 하지만 전용 게임 플랫폼 등의 많은 플랫폼에서 강력한 GPU 사용을 최대화하는 것이 좋습니다. 가장 간단한 사례에서는 HUD(헤즈업 표시) 오버레이의 렌더링을 3D 장면 렌더링 및 프로젝션에서 분리하고 두 구성 요소가 모두 별개의 병렬 파이프라인을 사용하도록 하는 것이 좋습니다. 두 스레드는 동일한 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)를 사용하여 단일 스레드이고, 안전하게 액세스하기 위해 일종의 동기화 메커니즘(예: 임계 영역)을 구현해야 하는 리소스 개체(텍스처, 메시, 셰이더 및 기타 자산)를 만들고 관리해야 합니다. 또한 지연 렌더링을 위해 각 스레드에 디바이스 컨텍스트에 대한 별도의 명령 목록을 만들 수 있지만 동일한 **ID3D11DeviceContext** 인스턴스에서 이러한 명령 목록을 동시에 재생할 수는 없습니다.
+장치 컨텍스트에 대 한 다중 스레딩은 Direct3D 기능 수준의 11 지 원하는 그래픽 장치에서 사용할 수 있습니다만\_0 이상입니다. 하지만 전용 게임 플랫폼 등의 많은 플랫폼에서 강력한 GPU 사용을 최대화하는 것이 좋습니다. 가장 간단한 사례에서는 HUD(헤즈업 표시) 오버레이의 렌더링을 3D 장면 렌더링 및 프로젝션에서 분리하고 두 구성 요소가 모두 별개의 병렬 파이프라인을 사용하도록 하는 것이 좋습니다. 두 스레드는 동일한 [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)를 사용하여 단일 스레드이고, 안전하게 액세스하기 위해 일종의 동기화 메커니즘(예: 임계 영역)을 구현해야 하는 리소스 개체(텍스처, 메시, 셰이더 및 기타 자산)를 만들고 관리해야 합니다. 또한 지연 렌더링을 위해 각 스레드에 디바이스 컨텍스트에 대한 별도의 명령 목록을 만들 수 있지만 동일한 **ID3D11DeviceContext** 인스턴스에서 이러한 명령 목록을 동시에 재생할 수는 없습니다.
 
-이제 앱에서 다중 스레딩에 안전한 [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)를 사용하여 리소스 개체를 만들 수도 있습니다. 따라서 항상 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) 대신 **ID3D11Device**를 사용해 보세요. 현재 다중 스레딩에 대한 드라이버 지원은 일부 그래픽 인터페이스에 사용할 수 없습니다. 장치를 쿼리하고 다중 스레딩을 지원하는지 확인할 수도 있지만 가장 광범위한 사용자에 도달하려는 경우 단일 스레드 **ID3D11DeviceContext**를 리소스 개체 관리에 사용하는 것이 좋습니다. 즉, 그래픽 장치 드라이버가 다중 스레딩 또는 명령 목록을 지원하지 않는 경우 Direct3D 11은 디바이스 컨텍스트에 대한 동기화된 액세스를 내부적으로 처리하며, 명령 목록이 지원되지 않는 경우 소프트웨어 구현을 제공합니다. 따라서 다중 스레드 디바이스 컨텍스트 액세스에 대한 드라이버 지원이 없는 그래픽 인터페이스가 있는 플랫폼에서 실행될 다중 스레드 코드를 작성할 수 있습니다.
+이제 앱에서 다중 스레딩에 안전한 [**ID3D11Device**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device)를 사용하여 리소스 개체를 만들 수도 있습니다. 따라서 항상 [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) 대신 **ID3D11Device**를 사용해 보세요. 현재 다중 스레딩에 대한 드라이버 지원은 일부 그래픽 인터페이스에 사용할 수 없습니다. 장치를 쿼리하고 다중 스레딩을 지원하는지 확인할 수도 있지만 가장 광범위한 사용자에 도달하려는 경우 단일 스레드 **ID3D11DeviceContext**를 리소스 개체 관리에 사용하는 것이 좋습니다. 즉, 그래픽 장치 드라이버가 다중 스레딩 또는 명령 목록을 지원하지 않는 경우 Direct3D 11은 디바이스 컨텍스트에 대한 동기화된 액세스를 내부적으로 처리하며, 명령 목록이 지원되지 않는 경우 소프트웨어 구현을 제공합니다. 따라서 다중 스레드 디바이스 컨텍스트 액세스에 대한 드라이버 지원이 없는 그래픽 인터페이스가 있는 플랫폼에서 실행될 다중 스레드 코드를 작성할 수 있습니다.
 
-앱에서 명령 목록을 처리하고 프레임을 표시하는 별개의 스레드를 지원하는 경우 GPU를 활성 상태로 유지하고, 인식할 수 있는 스터터나 지연 없이 프레임을 적시에 표시하는 동시에 명령 목록을 처리하는 것이 좋습니다. 이 경우 별도 사용할 수 있습니다 [ **ID3D11DeviceContext** ](https://msdn.microsoft.com/library/windows/desktop/ff476385) 각 스레드에 대해 및 리소스 (예: 질감)는 D3D11로 만들어 공유할\_리소스\_기타 \_공유 플래그입니다. 이 시나리오에서는 리소스 개체의 처리 결과를 표시 스레드에 표시하기 전에 처리 스레드에서 [**ID3D11DeviceContext::Flush**](https://msdn.microsoft.com/library/windows/desktop/ff476425)를 호출하여 명령 목록의 실행을 완료해야 합니다.
+앱에서 명령 목록을 처리하고 프레임을 표시하는 별개의 스레드를 지원하는 경우 GPU를 활성 상태로 유지하고, 인식할 수 있는 스터터나 지연 없이 프레임을 적시에 표시하는 동시에 명령 목록을 처리하는 것이 좋습니다. 이 경우 별도 사용할 수 있습니다 [ **ID3D11DeviceContext** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) 각 스레드에 대해 및 리소스 (예: 질감)는 D3D11로 만들어 공유할\_리소스\_기타 \_공유 플래그입니다. 이 시나리오에서는 리소스 개체의 처리 결과를 표시 스레드에 표시하기 전에 처리 스레드에서 [**ID3D11DeviceContext::Flush**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-flush)를 호출하여 명령 목록의 실행을 완료해야 합니다.
 
 ## <a name="deferred-rendering"></a>지연 렌더링
 
 
 지연 렌더링은 다른 시간에 재생할 수 있도록 명령 목록에 그래픽 명령을 기록하며 한 스레드에서 렌더링을 지원하는 동시에 추가 스레드에서 렌더링할 명령을 기록합니다. 이러한 명령은 완료된 후 최종 표시 개체(프레임 버퍼, 텍스처 또는 다른 그래픽 출력)를 생성하는 스레드에서 실행할 수 있습니다.
 
-즉각적인 컨텍스트를 만드는 [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) 또는 [**D3D11CreateDeviceAndSwapChain**](https://msdn.microsoft.com/library/windows/desktop/ff476083) 대신 [**ID3D11Device::CreateDeferredContext**](https://msdn.microsoft.com/library/windows/desktop/ff476505)를 사용하여 지연 컨텍스트를 만듭니다. 자세한 내용은 [즉시 및 지연 렌더링](https://msdn.microsoft.com/library/windows/desktop/ff476892)을 참조하세요.
+즉각적인 컨텍스트를 만드는 [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 또는 [**D3D11CreateDeviceAndSwapChain**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdeviceandswapchain) 대신 [**ID3D11Device::CreateDeferredContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createdeferredcontext)를 사용하여 지연 컨텍스트를 만듭니다. 자세한 내용은 [즉시 및 지연 렌더링](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-render-multi-thread-render)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
 
-* [소개 Direct3D의 다중 스레딩에 11](https://msdn.microsoft.com/library/windows/desktop/ff476891)
+* [소개 Direct3D의 다중 스레딩에 11](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-render-multi-thread-intro)
 
  
 

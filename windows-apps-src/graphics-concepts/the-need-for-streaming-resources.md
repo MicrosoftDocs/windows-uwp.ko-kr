@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e0354b0e727e84d562bf63779e74be72f87198f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f5b44e60e3490f39a91724bf038aa8066de11bf0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632178"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370896"
 ---
 # <a name="the-need-for-streaming-resources"></a>스트리밍 리소스 필요
 
@@ -33,7 +33,7 @@ ms.locfileid: "57632178"
 
 [버퍼](introduction-to-buffers.md)에서는 전체 버퍼가 하위 리소스가 됩니다.
 
-[텍스처](textures.md)(예: [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525))에서는 각 Mip 수준이 하위 리소스이고, 텍스처 배열(예: [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526))의 경우에는 일정한 배열 부분의 각 Mip 수준이 하위 리소스입니다. 그래픽 시스템은 이러한 하위 리소스의 세분화 수준에서 메모리 할당 매핑을 관리할 수밖에 없습니다. 스트리밍 리소스의 관점에서 보면 여기에서 "매핑"이란 데이터가 GPU에 보이도록 만드는 것을 의미합니다.
+[텍스처](textures.md)(예: [**Texture2D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d))에서는 각 Mip 수준이 하위 리소스이고, 텍스처 배열(예: [**Texture2DArray**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2darray))의 경우에는 일정한 배열 부분의 각 Mip 수준이 하위 리소스입니다. 그래픽 시스템은 이러한 하위 리소스의 세분화 수준에서 메모리 할당 매핑을 관리할 수밖에 없습니다. 스트리밍 리소스의 관점에서 보면 여기에서 "매핑"이란 데이터가 GPU에 보이도록 만드는 것을 의미합니다.
 
 ## <a name="span-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanspan-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanspan-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanwithout-tiling-cant-access-only-a-small-portion-of-mipmap-chain"></a><span id="Without_tiling__can_t_access_only_a_small_portion_of_mipmap_chain"></span><span id="without_tiling__can_t_access_only_a_small_portion_of_mipmap_chain"></span><span id="WITHOUT_TILING__CAN_T_ACCESS_ONLY_A_SMALL_PORTION_OF_MIPMAP_CHAIN"></span>바둑판식 배열 없이 mip 맵 체인의 작은 부분만 액세스할 수 없습니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "57632178"
 
 소프트웨어 페이징은 하드웨어가 처리할 수 있을 만큼 적은 수의 타일로 표면을 세분화하는 데 사용됩니다.
 
-Direct3D는 한쪽 면에 최대 16,384 픽셀을 생성할 수 있는 [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) 표면을 지원합니다. 픽셀 수가 16384x16384이고 픽셀당 4바이트인 이미지는 1GB의 비디오 메모리를 소모합니다(Mipmap이 추가되면 소모량은 2배로 늘어납니다). 실제로 단일 렌더링 연산에서 1GB를 모두 참조할 필요는 거의 없습니다.
+Direct3D는 한쪽 면에 최대 16,384 픽셀을 생성할 수 있는 [**Texture2D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d) 표면을 지원합니다. 픽셀 수가 16384x16384이고 픽셀당 4바이트인 이미지는 1GB의 비디오 메모리를 소모합니다(Mipmap이 추가되면 소모량은 2배로 늘어납니다). 실제로 단일 렌더링 연산에서 1GB를 모두 참조할 필요는 거의 없습니다.
 
 일부 게임 개발자들은 최대 128k x 128k의 크기로 지형 표면을 모델링합니다. 기존 GPU에서 이렇게 모델링할 수 있는 방법은 하드웨어에서 처리할 수 있을 만큼 적은 수의 타일로 표면을 세분화하는 것입니다. 응용 프로그램은 먼저 어떤 타일이 필요한지 판단한 후 타일을 소프트웨어 페이징 시스템인 GPU의 텍스처 캐시에 로드합니다.
 

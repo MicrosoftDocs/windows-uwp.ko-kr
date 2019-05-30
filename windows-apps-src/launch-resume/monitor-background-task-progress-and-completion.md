@@ -10,20 +10,20 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 5417a2cded6dab98747569acc4e6e92356361482
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d8e4a84b0e927be8e1b89e6189e80acd2d3e4266
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595818"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371314"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>백그라운드 작업 진행 및 완료 모니터링
 
 **중요 한 Api**
 
-- [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)
-- [**BackgroundTaskProgressEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224785)
-- [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
+- [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration)
+- [**BackgroundTaskProgressEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskprogresseventhandler)
+- [**BackgroundTaskCompletedEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcompletedeventhandler)
 
 out-of-process로 실행되는 백그라운드 작업이 보고하는 진행 및 완료를 앱에서 인식하는 방법에 대해 알아봅니다. in-process 백그라운드 작업의 경우 공유 변수를 설정하여 진행 및 완료를 나타낼 수 있습니다.
 
@@ -34,7 +34,7 @@ out-of-process로 실행되는 백그라운드 작업이 보고하는 진행 및
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>완료된 백그라운드 작업을 처리하는 이벤트 처리기를 만듭니다.
 
 ### <a name="step-1"></a>1단계
-완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드를 사용 하는 특정 공간을 수행 해야 하는 [ **IBackgroundTaskRegistration** ](https://msdn.microsoft.com/library/windows/apps/br224803) 개체와 [ **BackgroundTaskCompletedEventArgs** ](https://msdn.microsoft.com/library/windows/apps/br224778) 개체입니다.
+완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드를 사용 하는 특정 공간을 수행 해야 하는 [ **IBackgroundTaskRegistration** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskRegistration) 개체와 [ **BackgroundTaskCompletedEventArgs** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs) 개체입니다.
 
 에 대 한 다음 필요한 공간을 사용 합니다 **OnCompleted** 백그라운드 작업 이벤트 처리기 메서드.
 
@@ -92,7 +92,7 @@ auto completed = [this](BackgroundTaskRegistration^ task, BackgroundTaskComplete
 ## <a name="create-an-event-handler-function-to-handle-background-task-progress"></a>백그라운드 작업 진행률을 처리하는 이벤트 처리기 함수를 만듭니다.
 
 ### <a name="step-1"></a>1단계
-완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드는 [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) 및 [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782) 개체에서 사용되는 특정 공간을 따라야 합니다.
+완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드는 [**IBackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskRegistration) 및 [**BackgroundTaskProgressEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs) 개체에서 사용되는 특정 공간을 따라야 합니다.
 
 OnProgress 백그라운드 작업 이벤트 처리기 메서드에 대해 다음 공간을 사용합니다.
 
@@ -215,7 +215,7 @@ void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskReg
 ```
 
 ### <a name="step-2"></a>2단계
-앱은 시작되거나 백그라운드 작업 상태와 관련된 새 페이지로 이동할 때 현재 등록된 백그라운드 작업의 목록을 가져와서 진행 및 완료 이벤트 처리기 함수에 연결합니다. 응용 프로그램에 의해 현재 등록된 백그라운드 작업 목록은 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).[**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 속성에 보관됩니다.
+앱은 시작되거나 백그라운드 작업 상태와 관련된 새 페이지로 이동할 때 현재 등록된 백그라운드 작업의 목록을 가져와서 진행 및 완료 이벤트 처리기 함수에 연결합니다. 응용 프로그램에 의해 현재 등록된 백그라운드 작업 목록은 [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration).[**AllTasks**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.alltasks) 속성에 보관됩니다.
 
 예를 들어 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 SampleBackgroundTask 페이지로 이동할 때 다음 코드를 사용하여 이벤트 처리기를 연결합니다.
 

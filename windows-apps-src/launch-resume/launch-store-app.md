@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cda37ee9964a3e7e02f4e4ce3829a8b55e823692
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fd0e7137f31a8f1620f7937b52efe1ca84a6b99a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660898"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370780"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Microsoft Store 앱 열기
 
 
 
-이 항목에 설명 합니다 **ms-windows-스토어:** URI 체계입니다. 앱이 URI 체계를 사용 하 여 사용 하 여 저장소의 특정 페이지에 Microsoft Store 앱을 시작 하려면 수는 [ **LaunchUriAsync** ](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드.
+이 항목에 설명 합니다 **ms-windows-스토어:** URI 체계입니다. 앱이 URI 체계를 사용 하 여 사용 하 여 저장소의 특정 페이지에 Microsoft Store 앱을 시작 하려면 수는 [ **LaunchUriAsync** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드.
 
 다음 예는 게임에 연결되는 Store 페이지를 여는 방법을 보여줍니다.
 
@@ -25,7 +25,7 @@ ms.locfileid: "57660898"
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
 ```
 
-## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows 스토어: URI 체계 참조입니다.
+## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows-store: URI 체계 참조입니다.
 
 <table>
 <tr><th>설명</th><th></th><th>URI 스키마</th></tr>
@@ -41,10 +41,10 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">제품에 대한 PDP(제품 세부 정보 페이지)를 실행합니다. <p>Store ID Windows 10에서 고객에 게 권장 되 고 모든 OS 버전 있지만 그렇게 하는 이전 가지 작동 (예: PFN) 계속 지원 됩니다.</p>
-<p>이러한 값을 찾을 수 있습니다 <a href="https://partner.microsoft.com/dashboard">파트너 센터</a> 에 <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">앱 id</a> 페이지의 각 앱에 대 한 앱 관리 섹션입니다.</p>
+<p>이러한 값을 찾을 수 있습니다 <a href="https://partner.microsoft.com/dashboard">파트너 센터</a> 에 <a href="https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details">앱 id</a> 페이지의 각 앱에 대 한 앱 관리 섹션입니다.</p>
 </td>
 <td>
-Store ID <p>(권장)</p>
+Store ID <p>좋습니다.</p>
 </td>
 <td>
 <p>ms-windows-store://pdp/?ProductId=9WZDNCRFHVJL</p>
@@ -66,7 +66,7 @@ Store ID <p>(권장)</p>
 </tr>
 <tr>
 <td rowspan="4">제품에 대한 리뷰 작성 환경을 실행합니다.</td>
-<td>Store ID <p>(권장)</p></td>
+<td>Store ID <p>좋습니다.</p></td>
 <td>ms-windows-store://review/?ProductId=9WZDNCRFHVJL </td>
 </tr>
 <tr>

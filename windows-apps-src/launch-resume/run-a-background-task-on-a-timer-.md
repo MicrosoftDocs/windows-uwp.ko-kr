@@ -6,16 +6,16 @@ ms.date: 07/06/2018
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 46d2b5704fa8a9bf53534ded98647ce57da0f520
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 08f163fb660ad158694f925467711e4d62bf8217
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661898"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371449"
 ---
 # <a name="run-a-background-task-on-a-timer"></a>타이머에 따라 백그라운드 작업 실행
 
-[  **TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)를 사용하여 일회성 백그라운드 작업을 예약하거나 정기적 백그라운드 작업을 실행하는 방법을 알아봅니다.
+[  **TimeTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.TimeTrigger)를 사용하여 일회성 백그라운드 작업을 예약하거나 정기적 백그라운드 작업을 실행하는 방법을 알아봅니다.
 
 이 항목에서 설명하는 시간으로 트리거되는 백그라운드 작업을 구현하는 방법의 예는 [백그라운드 활성화 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundActivation)의 **Scenario4**를 참조하세요.
 
@@ -23,7 +23,7 @@ ms.locfileid: "57661898"
 
 ## <a name="create-a-time-trigger"></a>시간 트리거 만들기
 
-새 [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)를 만듭니다. 두 번째 매개 변수인 *OneShot*은 백그라운드 작업을 한 번만 실행할지, 아니면 정기적으로 계속 실행할지를 지정합니다. *OneShot*이 true로 설정된 경우 첫 번째 매개 변수(*FreshnessTime*)는 백그라운드 작업을 예약하기 전에 대기할 시간(분)을 지정합니다. *OneShot*이 false로 설정된 경우 *FreshnessTime*은 백그라운드 작업의 실행 빈도를 지정합니다.
+새 [**TimeTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.TimeTrigger)를 만듭니다. 두 번째 매개 변수인 *OneShot*은 백그라운드 작업을 한 번만 실행할지, 아니면 정기적으로 계속 실행할지를 지정합니다. *OneShot*이 true로 설정된 경우 첫 번째 매개 변수(*FreshnessTime*)는 백그라운드 작업을 예약하기 전에 대기할 시간(분)을 지정합니다. *OneShot*이 false로 설정된 경우 *FreshnessTime*은 백그라운드 작업의 실행 빈도를 지정합니다.
 
 데스크톱 또는 모바일 장치 패밀리를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 기본 제공 타이머는 15분 간격으로 백그라운드 작업을 실행합니다. (TimerTriggers를 요청한 앱의 절전 모드를 해제하기 위해 15분마다 한 번씩만 시스템의 절전 모드가 해제되도록 타이머가 15분 간격으로 실행되어 전기가 절약됩니다.)
 
@@ -52,7 +52,7 @@ TimeTrigger ^ hourlyTrigger = ref new TimeTrigger(60, false);
 
 작업이 실행되는 시간을 제어하는 백그라운드 작업 조건을 만들 수 있습니다. 조건이 맞을 때까지 조건이 백그라운드 작업 실행을 막습니다. 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)을 참조하세요.
 
-이 예제에서는 트리거되면 사용자가 활성 상태일 때만 작업이 실행되도록 조건을 **UserPresent**로 설정합니다. 가능한 조건 목록은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
+이 예제에서는 트리거되면 사용자가 활성 상태일 때만 작업이 실행되도록 조건을 **UserPresent**로 설정합니다. 가능한 조건 목록은 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)을 참조하세요.
 
 ```cs
 SystemCondition userCondition = new SystemCondition(SystemConditionType.UserPresent);
@@ -71,7 +71,7 @@ SystemCondition ^ userCondition = ref new SystemCondition(SystemConditionType::U
 
 ##  <a name="call-requestaccessasync"></a>RequestAccessAsync() 호출
 
-사용자가 앱에 대한 백그라운드 작업을 비활성화했을 수 있으므로 **ApplicationTrigger** 백그라운드 작업을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494)를 호출하여 사용자가 허용하는 백그라운드 작업 수준을 결정합니다. 사용자가 백그라운드 작업에 대한 설정을 제어하는 방법은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)를 참조하세요.
+사용자가 앱에 대한 백그라운드 작업을 비활성화했을 수 있으므로 **ApplicationTrigger** 백그라운드 작업을 등록하기 전에 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 호출하여 사용자가 허용하는 백그라운드 작업 수준을 결정합니다. 사용자가 백그라운드 작업에 대한 설정을 제어하는 방법은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)를 참조하세요.
 
 ```cs
 var requestStatus = await Windows.ApplicationModel.Background.BackgroundExecutionManager.RequestAccessAsync();
@@ -115,9 +115,9 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 
 ## <a name="manage-resources-for-your-background-task"></a>백그라운드 작업에 대한 리소스 관리
 
-[BackgroundExecutionManager.RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx)를 사용하면 사용자가 앱의 백그라운드 작업을 제한하기로 결정했는지 확인할 수 있습니다. 배터리 사용 정보를 파악하고 사용자가 원하는 작업을 완료해야 하는 경우에 백그라운드에서만 실행해야 합니다. 사용자가 백그라운드 작업에 대한 설정을 제어하는 방법은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)를 참조하세요.
+[BackgroundExecutionManager.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager)를 사용하면 사용자가 앱의 백그라운드 작업을 제한하기로 결정했는지 확인할 수 있습니다. 배터리 사용 정보를 파악하고 사용자가 원하는 작업을 완료해야 하는 경우에 백그라운드에서만 실행해야 합니다. 사용자가 백그라운드 작업에 대한 설정을 제어하는 방법은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)를 참조하세요.
 
-- 메모리: 앱의 메모리 및 에너지 사용 하 여 튜닝는 운영 체제를 실행 하 여 백그라운드 작업을 사용할 수 있음을 보장 하는 키입니다. [메모리 관리 API](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx)를 사용하면 백그라운드 작업에서 사용 중인 메모리의 양을 확인할 수 있습니다. 백그라운드 작업이 사용하는 메모리가 많을수록 다른 앱이 포그라운드에 있을 때 OS에서 백그라운드 작업을 계속 실행하기 어렵습니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.  
+- 메모리: 앱의 메모리 및 에너지 사용 하 여 튜닝는 운영 체제를 실행 하 여 백그라운드 작업을 사용할 수 있음을 보장 하는 키입니다. [메모리 관리 API](https://docs.microsoft.com/uwp/api/windows.system.memorymanager)를 사용하면 백그라운드 작업에서 사용 중인 메모리의 양을 확인할 수 있습니다. 백그라운드 작업이 사용하는 메모리가 많을수록 다른 앱이 포그라운드에 있을 때 OS에서 백그라운드 작업을 계속 실행하기 어렵습니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.  
 - CPU 시간: 백그라운드 작업 트리거 형식에 따라 가져오기는 벽 시계 사용 기간으로 제한 됩니다.
 
 백그라운드 작업에 적용되는 리소스 제약 조건은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
@@ -126,7 +126,7 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 
 Windows 10 부터는 더 이상 필요는 백그라운드 작업을 사용 하려면 잠금 화면에 앱을 추가 하려면 사용자에 대 한.
 
-백그라운드 작업은 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 먼저 호출한 경우에만 **TimeTrigger**를 사용하여 실행됩니다.
+백그라운드 작업은 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 먼저 호출한 경우에만 **TimeTrigger**를 사용하여 실행됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 

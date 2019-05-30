@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 63c678f4b2dde1a5e35c0131b5154493c9703951
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0ea3e7ec73b042eeef560af3d88754afdfa5b441
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623378"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370467"
 ---
 # <a name="geometry-shader-gs-stage"></a>GS(기하 도형 셰이더) 단계
 
@@ -28,7 +28,7 @@ GS(기하 도형 셰이더) 단계는 기본 요소인 삼각형, 선, 점 전�
 
 기하 도형 셰이더는 제한된 기하 도형 확장 및 축소도 지원합니다. 입력 기본 요소가 지정되면, 기하 도형 셰이더는 기본 요소를 삭제하거나 하나 이상의 새 기본 요소를 추가할 수 있습니다.
 
-GS(기하 도형 셰이더) 단계는 프로그래밍 가능한 셰이더 단계로, [그래픽 파이프라인](graphics-pipeline.md) 다이어그램에서 모서리가 둥근 블록으로 표시되어 있습니다. 이 셰이더 단계는 셰이더 모델([공통 셰이더 코어](https://msdn.microsoft.com/library/windows/desktop/bb509580) 참조)을 기반으로 구축된 고유의 자체 기능을 제공합니다.
+GS(기하 도형 셰이더) 단계는 프로그래밍 가능한 셰이더 단계로, [그래픽 파이프라인](graphics-pipeline.md) 다이어그램에서 모서리가 둥근 블록으로 표시되어 있습니다. 이 셰이더 단계는 셰이더 모델([공통 셰이더 코어](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-common-core) 참조)을 기반으로 구축된 고유의 자체 기능을 제공합니다.
 
 기하 도형 셰이더 단계는 다음을 포함한 알고리즘에 적합합니다.
 
@@ -59,10 +59,10 @@ GS(기하 도형 셰이더) 단계는 프로그래밍 가능한 셰이더 단계
 
  
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
 
 
-GS(기하 도형 셰이더) 단계는 선택한 단일 토폴로지를 형성하는 여러 꼭짓점을 출력할 수 있습니다. 사용 가능한 기하 도형 셰이더 출력 토폴로지는 **tristrip**, **linestrip** 및 **pointlist**입니다. 내보내는 기본 요소의 숫자는 기하 도형 셰이더 호출마다 자유롭게 변할 수 있으나, 내보낼 수 있는 최대 꼭짓점의 수는 고정적으로 선언될 수 있습니다. 기하 도형 셰이더 호출에서 내보내는 스트립 길이는 임의의 길이가 될 수 있으며, 새 스트립은 [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660) HLSL 함수를 통해 만들 수 있습니다.
+GS(기하 도형 셰이더) 단계는 선택한 단일 토폴로지를 형성하는 여러 꼭짓점을 출력할 수 있습니다. 사용 가능한 기하 도형 셰이더 출력 토폴로지는 **tristrip**, **linestrip** 및 **pointlist**입니다. 내보내는 기본 요소의 숫자는 기하 도형 셰이더 호출마다 자유롭게 변할 수 있으나, 내보낼 수 있는 최대 꼭짓점의 수는 고정적으로 선언될 수 있습니다. 기하 도형 셰이더 호출에서 내보내는 스트립 길이는 임의의 길이가 될 수 있으며, 새 스트립은 [RestartStrip](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-so-restartstrip) HLSL 함수를 통해 만들 수 있습니다.
 
 기하 도형 셰이더 인스턴스의 실행은 스트림에 추가된 데이터가 직렬인 경우를 제외하고 다른 호출과 별개입니다. 기하 도형 셰이더의 지정된 출력은 다른 호출에 독립적(순서는 존중됨)입니다. 삼각형 스트립을 생성하는 기하 도형 셰이더는 모든 호출 시 새 스트립을 시작합니다.
 

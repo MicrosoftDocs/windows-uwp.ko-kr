@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 포트, 셰이더, direct3d, opengl
 ms.localizationpriority: medium
-ms.openlocfilehash: f061d31ca779cb4c6cbe76f163e190996a6985cb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b800a32149011376e1d97e0da44d32c733ddfb93
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618748"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368231"
 ---
 # <a name="port-the-shader-objects"></a>셰이더 개체 포팅
 
@@ -20,8 +20,8 @@ ms.locfileid: "57618748"
 
 **중요 한 Api**
 
--   [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)
--   [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)
+-   [**ID3D11Device**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device)
+-   [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)
 
 OpenGL ES 2.0에서 간단한 렌더러를 포팅하는 경우 첫 번째 단계는 Direct3D 11에서 해당하는 꼭짓점 및 조각 셰이더 개체를 설정하고 주 프로그램이 셰이더 개체가 컴파일된 후 이 셰이더 개체와 통신할 수 있는지 확인하는 것입니다.
 
@@ -29,7 +29,7 @@ OpenGL ES 2.0에서 간단한 렌더러를 포팅하는 경우 첫 번째 단계
 
  
 
-OpenGL ES 2.0과 매우 유사한 Direct3D의 컴파일된 셰이더는 그리기 컨텍스트에 연결되어야 합니다. 그러나 Direct3D에는 셰이더 프로그램 개체의 개념 자체가 없습니다. 대신 셰이더를 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)에 직접 할당해야 합니다. 이 단계는 셰이더 개체 만들기 및 바인딩에 대한 OpenGL ES 2.0 프로세스를 따르고 Direct3D에서 해당 API 동작을 제공합니다.
+OpenGL ES 2.0과 매우 유사한 Direct3D의 컴파일된 셰이더는 그리기 컨텍스트에 연결되어야 합니다. 그러나 Direct3D에는 셰이더 프로그램 개체의 개념 자체가 없습니다. 대신 셰이더를 [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)에 직접 할당해야 합니다. 이 단계는 셰이더 개체 만들기 및 바인딩에 대한 OpenGL ES 2.0 프로세스를 따르고 Direct3D에서 해당 API 동작을 제공합니다.
 
 <a name="instructions"></a>지침
 ------------
@@ -168,7 +168,7 @@ GLuint __cdecl LoadShaderProgram (const char *vertShaderSrcStr, const char *frag
 glUseProgram(renderer->programObject);
 ```
 
-Direct3D에는 셰이더 프로그램 개체의 개념이 없습니다. 대신 [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) 인터페이스(예:[**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) 또는 [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513))에서 셰이더 만들기 메서드 중 하나를 호출하면 셰이더가 만들어집니다. 현재 그리기 텍스트에 대한 셰이더를 설정하기 위해 꼭짓점 셰이더의 [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) 또는 조각 셰이더의 [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) 등 집합 셰이더 메서드와 함께 해당 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)에 이러한 셰이더를 제공합니다.
+Direct3D에는 셰이더 프로그램 개체의 개념이 없습니다. 대신 [**ID3D11Device**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device) 인터페이스(예:[**ID3D11Device::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader) 또는 [**ID3D11Device::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader))에서 셰이더 만들기 메서드 중 하나를 호출하면 셰이더가 만들어집니다. 현재 그리기 텍스트에 대한 셰이더를 설정하기 위해 꼭짓점 셰이더의 [**ID3D11DeviceContext::VSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetshader) 또는 조각 셰이더의 [**ID3D11DeviceContext::PSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader) 등 집합 셰이더 메서드와 함께 해당 [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)에 이러한 셰이더를 제공합니다.
 
 Direct3D 11: 그래픽 장치 그리기 컨텍스트에 대 한 셰이더를 설정 합니다.
 
@@ -193,7 +193,7 @@ OpenGL ES 2.0 예제에는 셰이더 파이프라인에 대해 선언하기 위�
 그리고 **attribute** 꼭짓점 데이터에 대한 두 가지 값:
 
 -   **\_위치**: 꼭 짓 점 모델 좌표에 대 한 4 float 벡터입니다.
--   **\_color**: 꼭 짓 점이 연관 된 RGBA 색 값에 대 한 4 float 벡터입니다.
+-   **a\_color**: 꼭 짓 점이 연관 된 RGBA 색 값에 대 한 4 float 벡터입니다.
 
 GL ES 2.0을 엽니다. GLSL 정의 uniforms 및 특성
 
@@ -227,7 +227,7 @@ renderer->mvpLoc = glGetUniformLocation(renderer->programObject, "u_mvpMatrix");
 
 Direct3D에는 같은 의미의 "특성" 또는 "유니폼"의 개념이 없습니다(또는 적어도 이 구문을 공유하지 않음). 대신, Direct3D 하위 리소스(주 프로그램 및 셰이더 프로그램 간에 공유되는 리소스)로 나타내는 상수 버퍼가 있습니다. 꼭짓점 위치 및 색상 등 이러한 하위 리소스 중 일부는 HLSL 의미 체계로 설명합니다. OpenGL ES 2.0 개념과 관련이 있으므로 상수 버퍼 및 HLSL 의미 체계에 자세한 내용은 [프레임 버퍼 개체, 유니폼 및 특성 포팅](porting-uniforms-and-attributes.md)을 참조하세요.
 
-Direct3D로 이 프로세스를 이동할 때 해당 유니폼을 Direct3D 상수 버퍼(cbuffer)로 변환하고 **register** HLSL 의미 체계에서 조회를 위해 이 버퍼에 레지스터를 할당합니다. 두 꼭짓점 특성은 셰이더 파이프라인 단계에 대한 입력 요소로 처리되고, 또한 셰이더에 알려주는 할당된 [HLSL 의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb205574)(POSITION 및 COLOR0)입니다. 픽셀 셰이더는는 SV\_SV 사용 하 여 위치\_ 접두사는 GPU에서 생성 하는 시스템 값 임을 나타냅니다. (이 경우에 검색 변환 중에 생성 된 픽셀 위치) 전자는 꼭 짓 점 버퍼 정의에 사용할 수 있으므로 상수를 버퍼링 하는 대로 VertexShaderInput 및 PixelShaderInput 선언 되지 않습니다 (참조 [꼭 짓 점 버퍼 및 데이터 포트](port-the-vertex-buffers-and-data-config.md)), 후자에 대 한 데이터가 결과로 생성 되 고는 이 경우 꼭 짓 점 셰이더는 파이프라인에서 이전 단계입니다.
+Direct3D로 이 프로세스를 이동할 때 해당 유니폼을 Direct3D 상수 버퍼(cbuffer)로 변환하고 **register** HLSL 의미 체계에서 조회를 위해 이 버퍼에 레지스터를 할당합니다. 두 꼭짓점 특성은 셰이더 파이프라인 단계에 대한 입력 요소로 처리되고, 또한 셰이더에 알려주는 할당된 [HLSL 의미 체계](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps)(POSITION 및 COLOR0)입니다. 픽셀 셰이더는는 SV\_SV 사용 하 여 위치\_ 접두사는 GPU에서 생성 하는 시스템 값 임을 나타냅니다. (이 경우에 검색 변환 중에 생성 된 픽셀 위치) 전자는 꼭 짓 점 버퍼 정의에 사용할 수 있으므로 상수를 버퍼링 하는 대로 VertexShaderInput 및 PixelShaderInput 선언 되지 않습니다 (참조 [꼭 짓 점 버퍼 및 데이터 포트](port-the-vertex-buffers-and-data-config.md)), 후자에 대 한 데이터가 결과로 생성 되 고는 이 경우 꼭 짓 점 셰이더는 파이프라인에서 이전 단계입니다.
 
 Direct3D: 상수 버퍼 및 꼭 짓 점 데이터에 대 한 HLSL 정의
 
@@ -275,7 +275,7 @@ struct VertexPositionColor
 
 DirectXMath XM을 사용 하 여\* 셰이더 파이프라인으로 보낼 때 적절 한 압축 및 내용에 맞춤 제공 하므로 프로그램 상수에 대 한 형식 요소를 버퍼링 합니다. 표준 Windows 플랫폼 float 형식 및 배열을 사용하는 경우 압축 및 맞춤은 직접 수행해야 합니다.
 
-상수 버퍼를 바인딩하려면으로 레이아웃 설명을 작성 한 [ **CD3D11\_버퍼\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/jj151620) 구조체를 전달 합니다 [ **ID3DDevice:: CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)합니다. 그런 다음 해당 렌더링 메서드에서 그리기 전에 상수 버퍼를 [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486)에 전달합니다.
+상수 버퍼를 바인딩하려면으로 레이아웃 설명을 작성 한 [ **CD3D11\_버퍼\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-cd3d11_buffer_desc) 구조체를 전달 합니다 [ **ID3DDevice:: CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer)합니다. 그런 다음 해당 렌더링 메서드에서 그리기 전에 상수 버퍼를 [**ID3D11DeviceContext::UpdateSubresource**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-updatesubresource)에 전달합니다.
 
 Direct3D 11: 상수 버퍼를 바인딩
 

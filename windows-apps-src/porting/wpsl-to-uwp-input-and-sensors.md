@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2235e8781d8a795145c7080bfd846c58b6253629
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a62fcb4a208a52fd77be2a9913e265b12bf31f43
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634168"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372181"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>I/O, 장치 및 앱 모델에 대 한 Windows Phone Silverlight UWP에 이식
 
@@ -28,25 +28,25 @@ Windows Phone Silverlight 앱에 저장 하 고 삭제 표시 된 고 이후에 
 
 "디바운스 기간"이란 비활성화되는 앱과 일시 중단 이벤트를 발생시키는 시스템 사이의 기간입니다. UWP 앱의 경우 디바운스 기간이 없습니다. 즉, 앱이 비활성화되는 즉시 일시 중단 이벤트가 발생합니다.
 
-자세한 내용은 [앱 수명 주기](https://msdn.microsoft.com/library/windows/apps/mt243287)를 참조하세요.
+자세한 내용은 [앱 수명 주기](https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle)를 참조하세요.
 
 ## <a name="camera"></a>카메라
 
-Windows Phone Silverlight 카메라 캡처 코드를 사용 합니다 **Microsoft.Devices.Camera**를 **Microsoft.Devices.PhotoCamera**, 또는 **Microsoft.Phone.Tasks.CameraCaptureTask**클래스입니다. 해당 코드를 UWP(유니버설 Windows 플랫폼)로 포팅하기 위해 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스를 사용할 수 있습니다. 코드 예제는 [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836) 항목을 참조하세요. 이 방법을 사용하여 사진을 저장소 파일에 캡처할 수 있습니다. 이렇게 하려면 앱 패키지 매니페스트에서 **마이크** 및 **webcam** [**디바이스 기능**](https://msdn.microsoft.com/library/windows/apps/dn934747)을 설정해야 합니다.
+Windows Phone Silverlight 카메라 캡처 코드를 사용 합니다 **Microsoft.Devices.Camera**를 **Microsoft.Devices.PhotoCamera**, 또는 **Microsoft.Phone.Tasks.CameraCaptureTask**클래스입니다. 해당 코드를 UWP(유니버설 Windows 플랫폼)로 포팅하기 위해 [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) 클래스를 사용할 수 있습니다. 코드 예제는 [**CapturePhotoToStorageFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.capturephototostoragefileasync) 항목을 참조하세요. 이 방법을 사용하여 사진을 저장소 파일에 캡처할 수 있습니다. 이렇게 하려면 앱 패키지 매니페스트에서 **마이크** 및 **webcam** [**디바이스 기능**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-devicecapability)을 설정해야 합니다.
 
-다른 옵션으로는 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 클래스가 있으며, 이 클래스도 **마이크** 및 **webcam** [**디바이스 기능**](https://msdn.microsoft.com/library/windows/apps/dn934747)이 필요합니다.
+다른 옵션으로는 [**CameraCaptureUI**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CameraCaptureUI) 클래스가 있으며, 이 클래스도 **마이크** 및 **webcam** [**디바이스 기능**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-devicecapability)이 필요합니다.
 
 필터 앱은 UWP 앱에 대해 지원되지 않습니다.
 
 ## <a name="detecting-the-platform-your-app-is-running-on"></a>앱이 실행되고 있는 플랫폼 검색
 
-Windows 10을 사용 하 여 앱을 대상으로 변경 하는 방법에 대 한 생각 하는 방법입니다. 새로운 개념적 모델에서는 앱이 UWP(유니버설 Windows 플랫폼)를 대상으로 하고 모든 Windows 디바이스에서 실행됩니다. 그런 다음 특정 디바이스 패밀리에 독점적으로 사용되는 기능을 돋보이도록 선택할 수 있습니다. 또한 필요한 경우 앱에는 특별히 하나 이상의 디바이스 패밀리를 대상으로 하도록 자체적으로 제한하는 옵션도 있습니다. 디바이스 패밀리와 대상으로 할 디바이스 패밀리를 결정하는 방법에 대한 자세한 내용은 [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
+Windows 10을 사용 하 여 앱을 대상으로 변경 하는 방법에 대 한 생각 하는 방법입니다. 새로운 개념적 모델에서는 앱이 UWP(유니버설 Windows 플랫폼)를 대상으로 하고 모든 Windows 디바이스에서 실행됩니다. 그런 다음 특정 디바이스 패밀리에 독점적으로 사용되는 기능을 돋보이도록 선택할 수 있습니다. 또한 필요한 경우 앱에는 특별히 하나 이상의 디바이스 패밀리를 대상으로 하도록 자체적으로 제한하는 옵션도 있습니다. 디바이스 패밀리와 대상으로 할 디바이스 패밀리를 결정하는 방법에 대한 자세한 내용은 [UWP 앱 지침](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)을 참조하세요.
 
 **참고**    없습니다 사용 하는 운영 체제 또는 장치 제품군 기능의 현재 상태를 검색 하는 것이 좋습니다. 일반적으로 현재 운영 체제 또는 디바이스 패밀리를 식별하는 방법이 특정 운영 체제 또는 디바이스 패밀리 기능이 있는지 확인하는 가장 좋은 방법은 아닙니다. 운영 체제 또는 디바이스 패밀리(및 버전 번호)를 검색하는 대신 기능 자체의 존재에 대해 테스트합니다([조건부 컴파일 및 적응 코드](wpsl-to-uwp-porting-to-a-uwp-project.md) 참조). 특정 운영 체제 또는 디바이스 패밀리가 필요한 경우 해당 버전에 대한 테스트를 디자인하지 않고 해당 버전을 지원되는 최소 버전으로 사용해야 합니다.
 
-앱의 UI를 서로 다른 디바이스에 맞게 구성하는 데 권장되는 여러 기술이 있습니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 유효 픽셀(이전의 보기 픽셀)로 크기를 사용하므로 다른 해상도 및 배율에 맞게 UI를 조정할 수 있습니다([보기/유효 픽셀, 가시거리 및 배율 인수](wpsl-to-uwp-porting-xaml-and-ui.md) 참조). Visual State Manager의 적응 트리거 및 setter를 사용하여 창 크기에 맞게 UI를 조정할 수 있습니다([UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631) 참조).
+앱의 UI를 서로 다른 디바이스에 맞게 구성하는 데 권장되는 여러 기술이 있습니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 유효 픽셀(이전의 보기 픽셀)로 크기를 사용하므로 다른 해상도 및 배율에 맞게 UI를 조정할 수 있습니다([보기/유효 픽셀, 가시거리 및 배율 인수](wpsl-to-uwp-porting-xaml-and-ui.md) 참조). Visual State Manager의 적응 트리거 및 setter를 사용하여 창 크기에 맞게 UI를 조정할 수 있습니다([UWP 앱 지침](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) 참조).
 
-그러나 디바이스 패밀리 검색이 반드시 필요한 경우에는 검색을 수행할 수 있습니다. 이 예제에서는 [**AnalyticsVersionInfo**](https://msdn.microsoft.com/library/windows/apps/dn960165) 클래스를 사용하여 적절한 경우 디바이스 패밀리에 맞게 조정된 페이지를 탐색하고 그렇지 않은 경우 다시 기본 페이지를 사용할 수 있는지 확인합니다.
+그러나 디바이스 패밀리 검색이 반드시 필요한 경우에는 검색을 수행할 수 있습니다. 이 예제에서는 [**AnalyticsVersionInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.AnalyticsVersionInfo) 클래스를 사용하여 적절한 경우 디바이스 패밀리에 맞게 조정된 페이지를 탐색하고 그렇지 않은 경우 다시 기본 페이지를 사용할 수 있는지 확인합니다.
 
 ```csharp
    if (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Mobile")
@@ -55,7 +55,7 @@ Windows 10을 사용 하 여 앱을 대상으로 변경 하는 방법에 대 한
         rootFrame.Navigate(typeof(MainPage), e.Arguments);
 ```
 
-또한 앱이 적용되는 리소스 선택 요소에서 실행되고 있는 디바이스 패밀리를 결정할 수도 있습니다. 아래 예제는 명령을 통해 이를 수행하는 방법을 보여 주며, [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/br206071) 항목에서는 디바이스 패밀리 요소에 따라 디바이스 패밀리별 리소스를 로드하는 데 있어 클래스의 일반적인 사용 사례에 관해 설명합니다.
+또한 앱이 적용되는 리소스 선택 요소에서 실행되고 있는 디바이스 패밀리를 결정할 수도 있습니다. 아래 예제는 명령을 통해 이를 수행하는 방법을 보여 주며, [**ResourceContext.QualifierValues**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues) 항목에서는 디바이스 패밀리 요소에 따라 디바이스 패밀리별 리소스를 로드하는 데 있어 클래스의 일반적인 사용 사례에 관해 설명합니다.
 
 ```csharp
 var qualifiers = Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView().QualifierValues;
@@ -71,18 +71,18 @@ Windows Phone Silverlight 앱을 사용할 수는 **Microsoft.Phone.Info.DeviceS
 
 | Windows Phone Silverlight                                                               | UWP                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ApplicationCurrentMemoryUsage** 및 **ApplicationCurrentMemoryUsageLimit** 속성 | [**MemoryManager.AppMemoryUsage** ](https://msdn.microsoft.com/library/windows/apps/dn633832) 하 고 [ **AppMemoryUsageLimit** ](https://msdn.microsoft.com/library/windows/apps/dn633836) 속성                                                                                                                                    |
-| **ApplicationPeakMemoryUsage** 속성                                                 | Visual Studio에서 메모리 프로파일링 도구를 사용합니다. 자세한 내용은 [메모리 사용 분석](https://msdn.microsoft.com/library/windows/apps/dn645469.aspx)을 참조하세요.                                                                                                                                                                          |
-| **DeviceFirmwareVersion** 속성                                                      | [**EasClientDeviceInformation.SystemFirmwareVersion** ](https://msdn.microsoft.com/library/windows/apps/dn608144) 속성 (데스크톱 장치 제품군에만 해당)                                                                                                                                                                             |
-| **DeviceHardwareVersion** 속성                                                      | [**EasClientDeviceInformation.SystemHardwareVersion** ](https://msdn.microsoft.com/library/windows/apps/dn608145) 속성 (데스크톱 장치 제품군에만 해당)                                                                                                                                                                             |
-| **DeviceManufacturer** 속성                                                         | [**EasClientDeviceInformation.SystemManufacturer** ](https://msdn.microsoft.com/library/windows/apps/hh701398) 속성 (데스크톱 장치 제품군에만 해당)                                                                                                                                                                                |
-| **DeviceName** 속성                                                                 | [**EasClientDeviceInformation.SystemProductName** ](https://msdn.microsoft.com/library/windows/apps/hh701401) 속성 (데스크톱 장치 제품군에만 해당)                                                                                                                                                                                 |
+| **ApplicationCurrentMemoryUsage** 및 **ApplicationCurrentMemoryUsageLimit** 속성 | [**MemoryManager.AppMemoryUsage** ](https://docs.microsoft.com/uwp/api/windows.system.memorymanager.appmemoryusage) 하 고 [ **AppMemoryUsageLimit** ](https://docs.microsoft.com/uwp/api/windows.system.memorymanager.appmemoryusagelimit) 속성                                                                                                                                    |
+| **ApplicationPeakMemoryUsage** 속성                                                 | Visual Studio에서 메모리 프로파일링 도구를 사용합니다. 자세한 내용은 [메모리 사용 분석](https://docs.microsoft.com/visualstudio/welcome-to-visual-studio-2015?view=vs-2015)을 참조하세요.                                                                                                                                                                          |
+| **DeviceFirmwareVersion** 속성                                                      | [**EasClientDeviceInformation.SystemFirmwareVersion** ](https://docs.microsoft.com/uwp/api/windows.security.exchangeactivesyncprovisioning.easclientdeviceinformation.systemfirmwareversion) 속성 (데스크톱 장치 제품군에만 해당)                                                                                                                                                                             |
+| **DeviceHardwareVersion** 속성                                                      | [**EasClientDeviceInformation.SystemHardwareVersion** ](https://docs.microsoft.com/uwp/api/windows.security.exchangeactivesyncprovisioning.easclientdeviceinformation.systemhardwareversion) 속성 (데스크톱 장치 제품군에만 해당)                                                                                                                                                                             |
+| **DeviceManufacturer** 속성                                                         | [**EasClientDeviceInformation.SystemManufacturer** ](https://docs.microsoft.com/uwp/api/windows.security.exchangeactivesyncprovisioning.easclientdeviceinformation.systemmanufacturer) 속성 (데스크톱 장치 제품군에만 해당)                                                                                                                                                                                |
+| **DeviceName** 속성                                                                 | [**EasClientDeviceInformation.SystemProductName** ](https://docs.microsoft.com/uwp/api/windows.security.exchangeactivesyncprovisioning.easclientdeviceinformation.systemproductname) 속성 (데스크톱 장치 제품군에만 해당)                                                                                                                                                                                 |
 | **DeviceTotalMemory** 속성                                                          | 해당 속성 없음                                                                                                                                                                                                                                                                                                                      |
 | **IsKeyboardDeployed** 속성                                                         | 해당하는 속성이 없습니다. 이 속성은 일반적으로 사용되지 않는 모바일 디바이스의 하드웨어 키보드에 대한 정보를 제공합니다.                                                                                                                                                                                                        |
 | **IsKeyboardPresent** 속성                                                          | 해당하는 속성이 없습니다. 이 속성은 일반적으로 사용되지 않는 모바일 디바이스의 하드웨어 키보드에 대한 정보를 제공합니다.                                                                                                                                                                                                        |
 | **KeyboardDeployedChanged** 이벤트                                                       | 해당하는 속성이 없습니다. 이 속성은 일반적으로 사용되지 않는 모바일 디바이스의 하드웨어 키보드에 대한 정보를 제공합니다.                                                                                                                                                                                                        |
 | **PowerSource** 속성                                                                | 해당 속성 없음                                                                                                                                                                                                                                                                                                                      |
-| **PowerSourceChanged** 이벤트                                                            | [  **RemainingChargePercentChanged**](https://msdn.microsoft.com/library/windows/apps/jj207240) 이벤트를 처리합니다(모바일 디바이스 패밀리에만 해당). 이 이벤트는 [**RemainingChargePercent**](https://msdn.microsoft.com/library/windows/apps/jj207239) 속성(모바일 디바이스 패밀리에만 해당) 값이 1%씩 감소할 때 발생합니다. |
+| **PowerSourceChanged** 이벤트                                                            | [  **RemainingChargePercentChanged**](https://docs.microsoft.com/uwp/api/windows.phone.devices.power.battery.remainingchargepercentchanged) 이벤트를 처리합니다(모바일 디바이스 패밀리에만 해당). 이 이벤트는 [**RemainingChargePercent**](https://docs.microsoft.com/uwp/api/windows.phone.devices.power.battery.remainingchargepercent) 속성(모바일 디바이스 패밀리에만 해당) 값이 1%씩 감소할 때 발생합니다. |
 
 ## <a name="location"></a>위치
 
@@ -90,7 +90,7 @@ Windows Phone Silverlight 앱을 사용할 수는 **Microsoft.Phone.Info.DeviceS
 
 ## <a name="orientation"></a>방향
 
-UWP 앱에서 **PhoneApplicationPage.SupportedOrientations** 및 **Orientation** 속성은 앱 패키지 매니페스트의 [**uap:InitialRotationPreference**](https://msdn.microsoft.com/library/windows/apps/dn934798) 요소에 해당합니다. 아직 선택하지 않은 경우 **응용 프로그램** 탭을 선택하고 **지원되는 회전**에서 하나 이상의 확인란을 선택하여 기본 설정을 기록하세요.
+UWP 앱에서 **PhoneApplicationPage.SupportedOrientations** 및 **Orientation** 속성은 앱 패키지 매니페스트의 [**uap:InitialRotationPreference**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-splashscreen) 요소에 해당합니다. 아직 선택하지 않은 경우 **응용 프로그램** 탭을 선택하고 **지원되는 회전**에서 하나 이상의 확인란을 선택하여 기본 설정을 기록하세요.
 
 디바이스 방향과 화면 크기와 상관없이 UWP 앱의 UI를 보기 좋게 디자인하는 것이 좋습니다. 자세한 내용은 다음 항목인 [폼 팩터 및 사용자 환경에 대한 포팅](wpsl-to-uwp-form-factors-and-ux.md)을 참조하세요.
 

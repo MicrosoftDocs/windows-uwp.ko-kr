@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 464aa35aa8362049042ad23a6816c4de21b25634
-ms.sourcegitcommit: 559d3387d5929431212d147d9e085895e162916a
+ms.openlocfilehash: c638eb843528cc17a3f02233ef5f238264eb58a0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66184523"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370524"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>앱 URI 처리기를 사용하여 웹 사이트에 대해 앱 활성화
 
@@ -179,7 +179,7 @@ AppModel\SystemAppData\YourApp\AppUriHandlers`
 
 앱이 닫혀 있는지 확인합니다. **Windows 키+R**을 눌러 **실행** 대화 상자를 열고 창에 링크를 붙여넣습니다. 웹 브라우저 대신 앱이 실행되어야 합니다.
 
-또한 [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) API를 사용하여 다른 앱에서 앱을 시작하여 테스트할 수 있습니다. 휴대폰에서도 이 API를 사용하여 테스트할 수 있습니다.
+또한 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) API를 사용하여 다른 앱에서 앱을 시작하여 테스트할 수 있습니다. 휴대폰에서도 이 API를 사용하여 테스트할 수 있습니다.
 
 프로토콜 활성화 논리를 수행하려면 **OnActivated** 이벤트 처리기에 중단점을 설정합니다.
 
@@ -191,11 +191,11 @@ AppModel\SystemAppData\YourApp\AppUriHandlers`
 - JSON 파일은 https 서버에 업로드해야 합니다.
 - 지원하려는 경로를 변경해야 하는 경우 앱을 다시 게시하지 않고 JSON 파일을 다시 게시할 수 있습니다. 사용자는 1-8일 내에 변경 사항을 확인할 수 있습니다.
 - AppUriHandlers를 사용하여 테스트용으로 로드된 모든 앱에는 설치 시 호스트에 대해 유효성이 검사된 링크가 있습니다. 기능을 테스트하기 위해 JSON 파일을 업로드할 필요는 없습니다.
-- 이 기능은 [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx)를 사용하여 UWP 앱을 시작하거나 [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx)를 사용하여 Windows 데스크톱 앱을 시작할 때마다 작동합니다. 등록된 앱 URI 처리기에 해당하는 URL의 경우 브라우저 대신 앱이 시작됩니다.
+- 이 기능은 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)를 사용하여 UWP 앱을 시작하거나 [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx)를 사용하여 Windows 데스크톱 앱을 시작할 때마다 작동합니다. 등록된 앱 URI 처리기에 해당하는 URL의 경우 브라우저 대신 앱이 시작됩니다.
 
 ## <a name="see-also"></a>참조
 
 [웹-앱 예제 프로젝트](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
-[windows.protocol registration](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
-[URI 활성화 처리](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+[windows.protocol registration](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-protocol)
+[URI 활성화 처리](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 [연결 시작 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)은 LaunchUriAsync() API 사용 방법을 보여줍니다.

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, games, directx, 2d, 그래픽
 ms.localizationpriority: medium
-ms.openlocfilehash: 1154abc4305307d87f15fbe0c0e5461e3a15e27e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7e3a843c00d28d83157cf35a0bd9527be8c6b62f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632658"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367351"
 ---
 # <a name="2d-graphics-for-directx-games"></a>DirectX 게임용 2D 그래픽
 
@@ -21,7 +21,7 @@ ms.locfileid: "57632658"
 
 2D 그래픽은 2D 원형 또는 비트맵을 처리하는 3D 그래픽의 하위 집합입니다. 좀더 일반적으로 말하자면 게임 플레이가 일반적으로 x-y 평면으로 제한되기 때문에 3D 게임에서 수행할 수 있는 방식에서 z 좌표를 사용하지 않는 것입니다. 경우에 따라 3D 그래픽 기술을 사용하여 화면 효과 구성 요소를 만들기도 하지만 일반적으로 개발하는 것이 더 간단합니다. 게임이 처음인 경우 2D 게임에서 시작하는 것이 좋으며 2D 그래픽 개발은 DirectX에 대한 핸들을 가져올 수 있는 좋은 방법이 될 수 있습니다.
 
-Direct2D나 Direct3D 또는 몇 가지 조합을 사용하여 DirectX에서 2D 게임 그래픽을 개발할 수 있습니다. [  **Sprite**](https://msdn.microsoft.com/library/windows/desktop/bb205601) 클래스와 같이 2D 게임 개발에 보다 유용한 클래스 대부분은 Direct3D에 있습니다. Direct2D는 기본적으로 그리기 원형(예: 원, 선 및 평면 다각형 도형)에 대한 지원이 필요한 사용자 인터페이스 및 앱을 대상으로 하는 API 집합입니다. 이러한 점을 고려하여 특히 게임 오버레이, 인터페이스 및 HUD(주의 표시)를 만드는 경우처럼 게임 그래픽을 만들거나 간단한 게임부터 보다 세부적인 게임까지 다양한 2D 게임을 만들 수 있는 강력하고 성능이 우수한 클래스 및 메서드 집합을 제공합니다. 2D 게임을 만들 때 가장 효과적인 접근 방식은 라이브러리의 요소와 이 항목에서 2D 그래픽 개발에 접근하는 방식을 사용하는 것입니다.
+Direct2D나 Direct3D 또는 몇 가지 조합을 사용하여 DirectX에서 2D 게임 그래픽을 개발할 수 있습니다. [  **Sprite**](https://docs.microsoft.com/windows/desktop/direct3d10/id3dx10sprite) 클래스와 같이 2D 게임 개발에 보다 유용한 클래스 대부분은 Direct3D에 있습니다. Direct2D는 기본적으로 그리기 원형(예: 원, 선 및 평면 다각형 도형)에 대한 지원이 필요한 사용자 인터페이스 및 앱을 대상으로 하는 API 집합입니다. 이러한 점을 고려하여 특히 게임 오버레이, 인터페이스 및 HUD(주의 표시)를 만드는 경우처럼 게임 그래픽을 만들거나 간단한 게임부터 보다 세부적인 게임까지 다양한 2D 게임을 만들 수 있는 강력하고 성능이 우수한 클래스 및 메서드 집합을 제공합니다. 2D 게임을 만들 때 가장 효과적인 접근 방식은 라이브러리의 요소와 이 항목에서 2D 그래픽 개발에 접근하는 방식을 사용하는 것입니다.
 
 ## <a name="concepts-at-a-glance"></a>개념 개요
 
@@ -53,9 +53,9 @@ DirectX에서 2D 그래픽은 3D 파이프라인의 일부입니다. 훨씬 더 
 
 멋진 아트 작업은 화면 효과와 관련하여 가장 귀중한 자산이 됩니다. 비트맵 그래픽에는 최신 셰이더 모델 기능을 사용하는 사실적인 3D 화면 효과가 부족할 수 있지만 뛰어난 고해상도 아트 작업으로 성능 저하는 훨씬 더 줄이면서 더 많은 스타일 및 개성을 전달할 수도 있습니다.
 
-## <a name="reference"></a>참고자료
+## <a name="reference"></a>참조
 
 
--   [Direct2D 개요](https://msdn.microsoft.com/library/windows/desktop/dd370987)
--   [Direct2D 퀵 스타트](https://msdn.microsoft.com/library/windows/desktop/dd535473)
--   [Direct2D 및 Direct3D 상호 운용성 개요](https://msdn.microsoft.com/library/windows/desktop/dd370966)
+-   [Direct2D 개요](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-overview)
+-   [Direct2D 퀵 스타트](https://docs.microsoft.com/windows/desktop/Direct2D/getting-started-with-direct2d)
+-   [Direct2D 및 Direct3D 상호 운용성 개요](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-and-direct3d-interoperation-overview)

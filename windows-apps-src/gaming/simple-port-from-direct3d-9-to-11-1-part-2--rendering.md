@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 렌더링 프레임 워크, 변환, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: aba723a5ee2443664d6d640adc124b991ff0da7e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6629ba035a7fb0085e28f3fa033e58a1c1105ccf
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608828"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368021"
 ---
 # <a name="convert-the-rendering-framework"></a>렌더링 프레임워크 변환
 
@@ -93,7 +93,7 @@ technique RenderSceneSimple
 }
 ```
 
-Direct3D 11에서는 HLSL 셰이더를 계속 사용할 수 있습니다. 각 셰이더를 자체 HLSL 파일에 넣어 Visual Studio가 별도 파일로 컴파일하게 하고 나중에 별도의 Direct3D 리소스로 로드할 것입니다. 대상 수준을 설정 [셰이더 모델 4 수준 9\_1 (4 /\_0\_수준\_9\_1)](https://msdn.microsoft.com/library/windows/desktop/ff476876) 이러한 셰이더 DirectX 9.1 Gpu에 대 한 기록 되기 때문에 있습니다.
+Direct3D 11에서는 HLSL 셰이더를 계속 사용할 수 있습니다. 각 셰이더를 자체 HLSL 파일에 넣어 Visual Studio가 별도 파일로 컴파일하게 하고 나중에 별도의 Direct3D 리소스로 로드할 것입니다. 대상 수준을 설정 [셰이더 모델 4 수준 9\_1 (4 /\_0\_수준\_9\_1)](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro) 이러한 셰이더 DirectX 9.1 Gpu에 대 한 기록 되기 때문에 있습니다.
 
 입력 레이아웃을 정의했을 때 시스템 메모리와 GPU 메모리에서 꼭짓점별 데이터를 저장하는 데 사용하는 동일한 데이터 구조를 나타내는지 확인했습니다. 마찬가지로 꼭짓점 셰이더의 출력은 픽셀 셰이더에 대한 입력으로 사용되는 구조와 일치해야 합니다. 규칙은 C++에서의 한 함수에서 다른 함수로 데이터 전달과 동일 하지 않습니다. 구조의 끝에서 사용하지 않는 변수를 생략할 수 있습니다. 하지만 순서를 다시 정렬할 수 없으며 데이터 구조의 가운데에서 콘텐츠를 건너뛸 수 없습니다.
 
@@ -101,7 +101,7 @@ Direct3D 11에서는 HLSL 셰이더를 계속 사용할 수 있습니다. 각 �
 
  
 
-HLSL 파일 이전 구문을 사용 하 여 셰이더 의미 체계-예를 들어, SV 대신 색 수\_대상입니다. 그러한 경우 HLSL 호환성 모드(/Gec 컴파일러 옵션)를 사용하거나 셰이더 [의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb509647)를 현재 구문으로 업데이트해야 합니다. 이 예제의 꼭짓점 셰이더는 현재 구문으로 업데이트되었습니다.
+HLSL 파일 이전 구문을 사용 하 여 셰이더 의미 체계-예를 들어, SV 대신 색 수\_대상입니다. 그러한 경우 HLSL 호환성 모드(/Gec 컴파일러 옵션)를 사용하거나 셰이더 [의미 체계](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics)를 현재 구문으로 업데이트해야 합니다. 이 예제의 꼭짓점 셰이더는 현재 구문으로 업데이트되었습니다.
 
 하드웨어 변환 꼭짓점 셰이더는 다음과 같습니다. 이번에는 고유한 파일에 정의되어 있습니다.
 
@@ -185,7 +185,7 @@ PS_OUTPUT main(PS_INPUT In)
 ## <a name="compile-and-load-shaders"></a>셰이더 컴파일 및 로드
 
 
-Direct3D 9 게임은 프로그래밍 가능한 파이프라인을 구현하는 편리한 방법으로 효과 라이브러리를 종종 사용합니다. 효과는 런타임에서 [**D3DXCreateEffectFromFile function**](https://msdn.microsoft.com/library/windows/desktop/bb172768) 메서드를 사용하여 컴파일할 수 있습니다.
+Direct3D 9 게임은 프로그래밍 가능한 파이프라인을 구현하는 편리한 방법으로 효과 라이브러리를 종종 사용합니다. 효과는 런타임에서 [**D3DXCreateEffectFromFile function**](https://docs.microsoft.com/windows/desktop/direct3d9/d3dxcreateeffectfromfile) 메서드를 사용하여 컴파일할 수 있습니다.
 
 Direct3D 9에서 효과 로드
 
@@ -234,7 +234,7 @@ m_d3dDevice->CreateVertexShader(
     );
 ```
 
-셰이더 바이트 코드를 컴파일된 앱 패키지에 포함하려면 HLSL 파일을 Visual Studio 프로젝트에 추가하기만 하면 됩니다. Visual Studio는 [효과 컴파일러 도구](https://msdn.microsoft.com/library/windows/desktop/bb232919)(FXC)를 사용하여 HLSL 파일을 컴파일된 셰이더 개체(.CSO 파일)로 컴파일하여 앱 패키지에 포함합니다.
+셰이더 바이트 코드를 컴파일된 앱 패키지에 포함하려면 HLSL 파일을 Visual Studio 프로젝트에 추가하기만 하면 됩니다. Visual Studio는 [효과 컴파일러 도구](https://docs.microsoft.com/windows/desktop/direct3dtools/fxc)(FXC)를 사용하여 HLSL 파일을 컴파일된 셰이더 개체(.CSO 파일)로 컴파일하여 앱 패키지에 포함합니다.
 
 > **참고**    HLSL 컴파일러에 대 한 올바른 대상 기능 수준을 설정 해야 합니다., Visual Studio에서 HLSL 소스 파일을 마우스 오른쪽 단추로 클릭 하 고, 속성을 선택 하 고, 변경 합니다 **셰이더 모델** 설정을**HLSL 컴파일러&gt; 일반**합니다. 앱이 Direct3D 셰이더 자원을 만들 때 Direct3D는 하드웨어 기능에 대해 이 속성을 확인합니다.
 
@@ -242,11 +242,11 @@ m_d3dDevice->CreateVertexShader(
 
 ![HLSL 셰이더 속성](images/hlslshaderpropertiesmenu.png)![HLSL 셰이더 유형](images/hlslshadertypeproperties.png)
 
-Direct3D 9에서 꼭짓점 스트림 선언에 해당하는 입력 레이아웃을 만들기 데 좋은 위치입니다. 꼭짓점별 데이터 구조는 꼭짓점 셰이더가 사용하는 것과 일치해야 합니다. Direct3D 11에는 입력 레이아웃에 대한 추가 컨트롤이 있습니다. 부동 소수점 벡터의 배열 크기 및 비트 길이를 정의하고 꼭짓점 셰이더의 의미 체계를 지정할 수 있습니다. 만듭니다는 [ **D3D11\_입력\_요소\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조체이 고 사용 하 여 Direct3D를 알리기 위해 꼭 짓 점별 데이터 모양을 합니다. API가 꼭짓점 셰이더 리소스에 대해 입력 레이아웃을 확인하므로 입력 레이아웃을 정의하기 위해 꼭짓점 셰이더를 로드할 때까지 대기했습니다. 입력 레이아웃이 호환되지 않는 경우 Direct3D가 예외를 throw합니다.
+Direct3D 9에서 꼭짓점 스트림 선언에 해당하는 입력 레이아웃을 만들기 데 좋은 위치입니다. 꼭짓점별 데이터 구조는 꼭짓점 셰이더가 사용하는 것과 일치해야 합니다. Direct3D 11에는 입력 레이아웃에 대한 추가 컨트롤이 있습니다. 부동 소수점 벡터의 배열 크기 및 비트 길이를 정의하고 꼭짓점 셰이더의 의미 체계를 지정할 수 있습니다. 만듭니다는 [ **D3D11\_입력\_요소\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_input_element_desc) 구조체이 고 사용 하 여 Direct3D를 알리기 위해 꼭 짓 점별 데이터 모양을 합니다. API가 꼭짓점 셰이더 리소스에 대해 입력 레이아웃을 확인하므로 입력 레이아웃을 정의하기 위해 꼭짓점 셰이더를 로드할 때까지 대기했습니다. 입력 레이아웃이 호환되지 않는 경우 Direct3D가 예외를 throw합니다.
 
-꼭짓점별 데이터는 시스템 메모리에서 호환되는 형식으로 저장해야 합니다. 데이터 형식 DirectXMath 도움이; 예를 들어, DXGI\_형식\_R32G32B32\_에 해당 하는 FLOAT [ **XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475)합니다.
+꼭짓점별 데이터는 시스템 메모리에서 호환되는 형식으로 저장해야 합니다. 데이터 형식 DirectXMath 도움이; 예를 들어, DXGI\_형식\_R32G32B32\_에 해당 하는 FLOAT [ **XMFLOAT3**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat3)합니다.
 
-> **참고**    상수 버퍼에 한 번에 4 개의 부동 소수점 숫자를 정렬 하는 고정된 입력된 레이아웃을 사용 합니다. [**XMFLOAT4** ](https://msdn.microsoft.com/library/windows/desktop/ee419608) (및 해당 파생 항목)는 상수 버퍼 데이터에 대 한 것이 좋습니다.
+> **참고**    상수 버퍼에 한 번에 4 개의 부동 소수점 숫자를 정렬 하는 고정된 입력된 레이아웃을 사용 합니다. [**XMFLOAT4** ](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4) (및 해당 파생 항목)는 상수 버퍼 데이터에 대 한 것이 좋습니다.
 
  
 
@@ -483,7 +483,7 @@ DirectX 11을 사용하여 화면에 프레임 표시
 m_swapChain->Present(1, 0);
 ```
 
-방금 만든 렌더링 체인은 [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드에서 구현되는 게임 루프에서 호출됩니다. 이 확인할 [3 부: 뷰포트 및 게임 루프](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)합니다.
+방금 만든 렌더링 체인은 [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run) 메서드에서 구현되는 게임 루프에서 호출됩니다. 이 확인할 [3 부: 뷰포트 및 게임 루프](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)합니다.
 
  
 

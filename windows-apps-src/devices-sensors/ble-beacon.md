@@ -6,19 +6,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: b1c8271c8066304dce355cf50afd4509173eed3e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3deb5aca27b4f33d0492bae9fd4ddbce4f52d065
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653268"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370367"
 ---
 # <a name="bluetooth-le-advertisements"></a>Bluetooth LE 광고
 
 
 **중요 한 Api**
 
--   [**Windows.Devices.Bluetooth.Advertisement**](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.aspx)
+-   [**Windows.Devices.Bluetooth.Advertisement**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement)
 
 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱용 Bluetooth LE(저에너지) 광고 비콘의 개요를 제공합니다.  
 
@@ -26,8 +26,8 @@ ms.locfileid: "57653268"
 
 개발자가 LE 광고 API를 사용하여 수행할 수 있는 두 가지 주요 기능은 다음과 같습니다.
 
--   [광고 감시자](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): 근처의 신호를 수신하고 페이로드 또는 근접성을 기준으로 필터링합니다.  
--   [광고 게시자](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): Windows에서 개발자 대신 광고를 수행하기 위한 페이로드를 정의합니다.  
+-   [광고 감시자](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher): 근처의 신호를 수신하고 페이로드 또는 근접성을 기준으로 필터링합니다.  
+-   [광고 게시자](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher): Windows에서 개발자 대신 광고를 수행하기 위한 페이로드를 정의합니다.  
 
 전체 샘플 코드는 [Bluetooth 광고 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619990)에서 찾을 수 있습니다.
 
@@ -43,7 +43,7 @@ ms.locfileid: "57653268"
 
 Bluetooth LE 광고를 사용하면 디바이스가 광고라는 특정 페이로드 비콘을 지속적으로 보낼 수 있습니다. 이 특정 광고를 수신 대기하도록 설정된 경우 근처의 모든 Bluetooth LE 지원 디바이스에서 이 광고를 볼 수 있습니다.
 
-> **참고**: 사용자 개인 정보에 대 한 앱의 보급 알림의 수명이 연결 됩니다. BluetoothLEAdvertisementPublisher를 만들고 광고에 대한 백그라운드 작업에서 Start를 호출할 수 있습니다. 백그라운드 작업에 대한 자세한 내용은 [실행, 다시 시작 및 백그라운드 작업](https://msdn.microsoft.com/windows/uwp/launch-resume/index)을 참조하세요.
+> **참고**: 사용자 개인 정보에 대 한 앱의 보급 알림의 수명이 연결 됩니다. BluetoothLEAdvertisementPublisher를 만들고 광고에 대한 백그라운드 작업에서 Start를 호출할 수 있습니다. 백그라운드 작업에 대한 자세한 내용은 [실행, 다시 시작 및 백그라운드 작업](https://docs.microsoft.com/windows/uwp/launch-resume/index)을 참조하세요.
 
 ### <a name="basic-publishing"></a>기본 게시
 

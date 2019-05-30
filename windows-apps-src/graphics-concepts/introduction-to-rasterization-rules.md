@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d1907be029254d99be9e6158c93c179baea1fb0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c635d0efad627734e0305c687e015ad183764717
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641088"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371051"
 ---
 # <a name="introduction-to-rasterization-rules"></a>래스터화 규칙 소개
 
@@ -57,7 +57,7 @@ Direct3D가 사용하는 삼각형 래스터화 규칙에 대한 설명이 모�
 
 점은 점 스프라이트와 동일하게 렌더링됩니다. 즉, 두 가지 모두 화면 정렬 사변형으로 렌더링되기 때문에 다각형 렌더링과 같은 규칙을 준수합니다.
 
-안티앨리어싱되지 않은 선 렌더링 규칙은 [GDI 선](https://msdn.microsoft.com/library/windows/desktop/dd145027)의 규칙과 정확히 동일합니다.
+안티앨리어싱되지 않은 선 렌더링 규칙은 [GDI 선](https://docs.microsoft.com/windows/desktop/gdi/lines)의 규칙과 정확히 동일합니다.
 
 ## <a name="span-idpointspriterulesspanspan-idpointspriterulesspanspan-idpointspriterulesspanpoint-sprite-rules"></a><span id="Point_Sprite_Rules"></span><span id="point_sprite_rules"></span><span id="POINT_SPRITE_RULES"></span>포인트 스프라이트 규칙
 

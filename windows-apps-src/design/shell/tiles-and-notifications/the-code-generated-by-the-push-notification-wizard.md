@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ac5ca785eab39612bb3a9c6ccd58779c6241059
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e30140a60906cb350940cc5ebd87347878845986
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596868"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365881"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>푸시 알림 마법사에서 생성된 코드
  
@@ -216,20 +216,20 @@ SendNotifications 함수는 단일 알림을 알림 메시지로 보냅니다. �
 
 Windows에서는 푸시 알림이 아닌 알림을 지원합니다. 알림에 대한 일반적인 내용은 [알림 전달 방법 선택](choosing-a-notification-delivery-method.md)을 참조하세요.
 
-알림 메시지는 사용이 간단하며, 생성된 채널 테이블에 대한 Insert.js 코드에서 예제를 검토할 수 있습니다. 타일 또는 배지 알림을 사용하려는 경우 타일 및 배지에 대한 XML 템플릿을 만들고 템플릿에 패키지된 정보의 인코딩을 지정해야 합니다. [타일, 배지 및 알림 메시지 작업](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259)을 참조하세요.
+알림 메시지는 사용이 간단하며, 생성된 채널 테이블에 대한 Insert.js 코드에서 예제를 검토할 수 있습니다. 타일 또는 배지 알림을 사용하려는 경우 타일 및 배지에 대한 XML 템플릿을 만들고 템플릿에 패키지된 정보의 인코딩을 지정해야 합니다. [타일, 배지 및 알림 메시지 작업](https://docs.microsoft.com/previous-versions/windows/apps/hh868259(v=win.10))을 참조하세요.
 
 Windows는 푸시 알림에 응답하기 때문에 앱이 실행되지 않을 때 이러한 알림을 대부분 처리할 수 있습니다. 예를 들어 푸시 알림을 통해 사용자는 로컬 메일 앱이 실행되지 않을 때도 새 메일 메시지가 도착한 것을 알 수 있습니다. Windows는 텍스트 메시지의 첫째 줄과 같은 메시지를 표시하여 알림 메시지를 처리합니다. 또한 새 메일 메시지 수가 반영되도록 앱의 라이브 타일을 업데이트하여 타일 또는 배지 알림을 처리합니다. 이런 방식으로 앱의 사용자에게 새 정보를 확인하라는 메시지를 표시할 수 있습니다. 앱이 실행되고 있으면 원시 알림을 받을 수 있으며, 원시 알림을 사용하여 데이터를 앱에 보낼 수 있습니다. 앱이 실행되고 있지 않으면 푸시 알림을 모니터링하도록 백그라운드 작업을 설정할 수 있습니다.
 
-이러한 알림은 사용자 리소스를 사용하며, 과도하게 사용할 경우 방해가 될 수 있으므로 UWP(유니버설 Windows 플랫폼) 앱에 대한 지침에 따라 푸시 알림을 사용해야 합니다. [푸시 알림에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh761462)을 참조하세요.
+이러한 알림은 사용자 리소스를 사용하며, 과도하게 사용할 경우 방해가 될 수 있으므로 UWP(유니버설 Windows 플랫폼) 앱에 대한 지침에 따라 푸시 알림을 사용해야 합니다. [푸시 알림에 대한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)을 참조하세요.
 
-푸시 알림으로 라이브 타일을 업데이트하는 경우 [타일 및 배지에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh465403)도 따라야 합니다.
+푸시 알림으로 라이브 타일을 업데이트하는 경우 [타일 및 배지에 대한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)도 따라야 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
 
 ### <a name="using-the-windows-push-notification-services-wns"></a>WNS(Windows 푸시 알림 서비스) 사용
 
-모바일 서비스에서 충분한 유연성을 제공하지 않는 경우, C# 또는 Visual Basic으로 서버 코드를 작성하려는 경우 또는 클라우드 서비스가 이미 있으며 해당 서비스에서 푸시 알림을 보내려는 경우 WNS(Windows 푸시 알림 서비스)를 직접 호출할 수 있습니다. WNS를 직접 호출하면 데이터베이스 또는 다른 웹 서비스의 데이터를 모니터링하는 작업자 역할과 같은 고유한 클라우드 서비스에서 푸시 알림을 보낼 수 있습니다. 클라우드 서비스에서 푸시 알림을 앱에 보내려면 WNS에 인증해야 합니다. [Windows 푸시 알림 서비스에 인증하는 방법(JavaScript)](https://msdn.microsoft.com/library/windows/apps/hh465407) 또는 [(C#/C++/VB)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868206)을 참조하세요.
+모바일 서비스에서 충분한 유연성을 제공하지 않는 경우, C# 또는 Visual Basic으로 서버 코드를 작성하려는 경우 또는 클라우드 서비스가 이미 있으며 해당 서비스에서 푸시 알림을 보내려는 경우 WNS(Windows 푸시 알림 서비스)를 직접 호출할 수 있습니다. WNS를 직접 호출하면 데이터베이스 또는 다른 웹 서비스의 데이터를 모니터링하는 작업자 역할과 같은 고유한 클라우드 서비스에서 푸시 알림을 보낼 수 있습니다. 클라우드 서비스에서 푸시 알림을 앱에 보내려면 WNS에 인증해야 합니다. [Windows 푸시 알림 서비스에 인증하는 방법(JavaScript)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10)) 또는 [(C#/C++/VB)](https://docs.microsoft.com/previous-versions/windows/apps/hh868206(v=win.10))을 참조하세요.
 
 모바일 서비스에서 예약된 작업을 실행하여 푸시 알림을 보낼 수도 있습니다. [모바일 서비스에서 되풀이 작업 예약](https://go.microsoft.com/fwlink/p/?linkid=301694)을 참조하세요.
 
@@ -242,9 +242,9 @@ Windows는 푸시 알림에 응답하기 때문에 앱이 실행되지 않을 �
 
 * [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
 * [푸시 알림 개요](raw-notification-overview.md)
-* [Windows에 연결할 Azure 모바일 서비스 (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263160)
-* [Windows에 연결할 Azure 모바일 서비스 (C#/C+ + VB)](https://msdn.microsoft.com/library/windows/apps/xaml/dn263175)
-* [빠른 시작: 모바일 서비스 (JavaScript)에 대 한 푸시 알림 추가](https://msdn.microsoft.com/library/windows/apps/dn263163)
+* [Windows에 연결할 Azure 모바일 서비스 (JavaScript)](https://docs.microsoft.com/previous-versions/windows/apps/dn263160(v=win.10))
+* [Windows에 연결할 Azure 모바일 서비스 (C#/C+ + VB)](https://docs.microsoft.com/previous-versions/windows/apps/dn263175(v=win.10))
+* [빠른 시작: 모바일 서비스 (JavaScript)에 대 한 푸시 알림 추가](https://docs.microsoft.com/previous-versions/windows/apps/dn263163(v=win.10))
  
 
  

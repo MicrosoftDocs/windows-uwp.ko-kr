@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 474abc2ec43b7f8eab408bd75cca33653d27d932
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 65e8599a73a196ebb72fe3cc45ea984f82057741
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63789674"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371504"
 ---
 # <a name="manage-app-submissions"></a>앱 제출 관리
 
@@ -70,7 +70,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
 <td align="left"><a href="commit-an-app-submission.md">커밋 새롭거나 업데이트 된 앱 제출</a></td>
 </tr>
 <tr>
-<td align="left">Delete</td>
+<td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}</td>
 <td align="left"><a href="delete-an-app-submission.md">삭제는 앱 제출</a></td>
 </tr>
@@ -85,7 +85,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
 
 1. 아직 완료하지 않은 경우 Microsoft Store 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
     > [!NOTE]
-    > 앱에 [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 정보가 완료된 제출이 이미 하나 이상 있어야 합니다.
+    > 앱에 [연령별 등급](https://docs.microsoft.com/windows/uwp/publish/age-ratings) 정보가 완료된 제출이 이미 하나 이상 있어야 합니다.
 
 2. [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Microsoft Store 제출 API의 메서드에 이 액세스 토큰을 전달해야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
@@ -100,7 +100,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
     > [!NOTE]
     > SAS URI는 계정 키를 요구하지 않고 Azure Storage의 보안 리소스에 대한 액세스를 제공합니다. SAS Uri 및 Azure Blob storage 사용 하 여 용도 대 한 배경 정보를 참조 하세요. [공유 액세스 서명, 1 부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) 고 [공유 액세스 서명, 2 부: 만들기 및 SAS를 사용 하 여 Blob storage를 사용 하 여](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)입니다.
 
-4. 제출에 대한 새 패키지, 목록 이미지, 예고편 파일을 추가하려면 [앱 패키지를 준비](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements)하고 [앱 스크린샷 및 이미지, 예고편을 준비](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images)합니다. ZIP 보관 파일에 이러한 파일을 모두 추가합니다.
+4. 제출에 대한 새 패키지, 목록 이미지, 예고편 파일을 추가하려면 [앱 패키지를 준비](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)하고 [앱 스크린샷 및 이미지, 예고편을 준비](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images)합니다. ZIP 보관 파일에 이러한 파일을 모두 추가합니다.
 
 5. 새 제출에 필요한 변경 사항으로 [앱 제출](#app-submission-object) 데이터를 수정하고, 다음 메서드를 실행하여 [앱 제출을 업데이트](update-an-app-submission.md) 합니다.
 
@@ -116,7 +116,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
     * [Java 용 azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
     * [Python 용 azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
-    다음 C# 코드 예제는 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) 클래스를 사용하여 Azure Blob Storage에 ZIP 보관 파일을 업로드하는 방법을 보여 줍니다. 이 예제에서는 ZIP 보관 파일이 이미 스트림 개체에 기록되어 있다고 가정합니다.
+    다음 C# 코드 예제는 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob?redirectedfrom=MSDN) 클래스를 사용하여 Azure Blob Storage에 ZIP 보관 파일을 업로드하는 방법을 보여 줍니다. 이 예제에서는 ZIP 보관 파일이 이미 스트림 개체에 기록되어 있다고 가정합니다.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -338,28 +338,28 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | 값      | 형식   | 설명      |
 |------------|--------|-------------------|
 | id            | string  | 제출의 ID입니다. 이 ID는 [앱 제출 만들기](create-an-app-submission.md), [모든 앱 가져오기](get-all-apps.md) 및 [앱 가져오기](get-an-app.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대 한이 ID의 파트너 센터에서 제출 페이지의 URL을 사용할 수도 있습니다.  |
-| applicationCategory           | string  |   앱에 대한 [범주 및/또는 하위 범주](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table)를 지정하는 문자열입니다. 범주와 하위 범주는 **BooksAndReference_EReader**처럼 밑줄(_) 문자를 사용하여 단일 문자열로 연결합니다.      |  
+| applicationCategory           | string  |   앱에 대한 [범주 및/또는 하위 범주](https://docs.microsoft.com/windows/uwp/publish/category-and-subcategory-table)를 지정하는 문자열입니다. 범주와 하위 범주는 **BooksAndReference_EReader**처럼 밑줄(_) 문자를 사용하여 단일 문자열로 연결합니다.      |  
 | pricing           |  개체(object)  | 앱에 대한 가격 정보를 포함하는 [가격 리소스](#pricing-object)입니다.        |   
 | visibility           |  string  |  앱의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>숨김</li><li>Public</li><li>개인 정보 보호</li><li>NotSet</li></ul>       |   
 | targetPublishMode           | string  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |  
 | listings           |   개체(object)  |  키와 값 쌍의 사전입니다. 여기서 각 키는 국가 코드이며 각 값은 앱에 대한 목록 정보를 포함하는 [목록 리소스](#listing-object)입니다.       |   
-| hardwarePreferences           |  배열  |   앱에 대한 [하드웨어 기본 설정](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences)을 정의하는 문자열의 배열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>터치</li><li>키보드</li><li>마우스</li><li>카메라</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telephony</li></ul>     |   
-| automaticBackupEnabled           |  boolean  |   Windows에서 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.   |   
-| canInstallOnRemovableMedia           |  boolean  |   고객이 이동식 저장소에 앱을 설치할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.     |   
+| hardwarePreferences           |  배열  |   앱에 대한 [하드웨어 기본 설정](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties)을 정의하는 문자열의 배열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>터치</li><li>키보드</li><li>마우스</li><li>카메라</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telephony</li></ul>     |   
+| automaticBackupEnabled           |  boolean  |   Windows에서 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://docs.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.   |   
+| canInstallOnRemovableMedia           |  boolean  |   고객이 이동식 저장소에 앱을 설치할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://docs.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.     |   
 | isGameDvrEnabled           |  boolean |   앱에 대한 게임 DVR을 사용할지 여부를 나타냅니다.    |   
 | gamingOptions           |  배열 |   앱에 대한 게임 관련 설정을 정의하는 [게임 옵션 리소스](#gaming-options-object)가 포함된 배열입니다     |   
-| hasExternalInAppProducts           |     boolean          |   Microsoft Store 상거래 시스템 밖에서 사용자가 이 앱을 구매할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.     |   
-| meetAccessibilityGuidelines           |    boolean           |  이 앱이 접근성 지침을 준수하도록 테스트되었는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.      |   
-| notesForCertification           |  string  |   앱의 [인증에 대한 참고 사항](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification)이 포함됩니다.    |    
+| hasExternalInAppProducts           |     boolean          |   Microsoft Store 상거래 시스템 밖에서 사용자가 이 앱을 구매할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://docs.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.     |   
+| meetAccessibilityGuidelines           |    boolean           |  이 앱이 접근성 지침을 준수하도록 테스트되었는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://docs.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.      |   
+| notesForCertification           |  string  |   앱의 [인증에 대한 참고 사항](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification)이 포함됩니다.    |    
 | 상태           |   string  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   개체(object)  | 오류에 대한 정보를 비롯하여 제출 상태에 대한 추가 세부 정보가 포함된 [상태 세부 정보 리소스](#status-details-object)입니다.       |    
 | fileUploadUrl           |   string  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지, 목록 이미지, 예고편 파일을 추가하는 경우 패키지 및 이미지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [앱 제출 만들기](#create-an-app-submission)를 참조하세요.       |    
 | applicationPackages           |   배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 [응용 프로그램 패키지 리소스](#application-package-object) 배열입니다. |    
 | packageDeliveryOptions    | 개체(object)  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함하는 [패키지 전송 옵션 리소스](#package-delivery-options-object)입니다.  |
 | enterpriseLicensing           |  string  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](#enterprise-licensing) 값 중 하나입니다.  |    
-| allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows 10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
-| allowTargetFutureDeviceFamilies           | 개체(object)   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows 10 장치 패밀리](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families)이며 각 값은 앱이 지정된 장치 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
+| allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows 10 디바이스 패밀리에 앱을 제공하도록](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) 허용할지 여부를 나타냅니다.    |    
+| allowTargetFutureDeviceFamilies           | 개체(object)   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows 10 장치 패밀리](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)이며 각 값은 앱이 지정된 장치 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
 | FriendlyName           |   string  |  파트너 센터에 표시 된 대로 제출의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.       |  
 | trailers           |  배열 |   앱 목록에 대한 비디오 예고편을 나타내는 최대 15개의 [예고편 리소스](#trailer-object) 가 포함된 배열입니다.<br/><br/>   |  
 
@@ -373,9 +373,9 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | 값           | 형식    | 설명        |
 |-----------------|---------|------|
 |  trialPeriod               |    string     |  앱에 대한 평가 기간을 지정하는 문자열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
-|  marketSpecificPricings               |    개체(object)     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.      |     
+|  marketSpecificPricings               |    개체(object)     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.      |     
 |  sales               |   배열      |  **사용되지 않음**. 앱에 대한 판매 정보를 포함하는 [판매 리소스](#sale-object) 배열입니다.   |     
-|  priceId               |   string      |  앱에 대한 [기본 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price)을 지정하는 [기준 가격](#price-tiers)입니다.   |     
+|  priceId               |   string      |  앱에 대한 [기본 가격](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)을 지정하는 [기준 가격](#price-tiers)입니다.   |     
 |  isAdvancedPricingModel               |   boolean      |  **true**인 경우, 개발자 계정은 .99 USD에서 1999.99 USD까지의 확장된 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. **false**인 경우, 개발자 계정은 .99 USD에서 999.99 USD까지의 원래 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. 여러 계층에 대한 자세한 내용은 [기준 가격](#price-tiers)을 참조하세요.<br/><br/>**참고**&nbsp;&nbsp;이 필드는 읽기 전용입니다.   |
 
 
@@ -398,7 +398,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  basePriceId               |   string      |  판매의 기본 가격으로 사용할 [기준 가격](#price-tiers)입니다.    |     
 |  startDate               |   string      |   판매의 시작 날짜(ISO 8601 형식)입니다.  |     
 |  endDate               |   string      |  판매의 종료 날짜(ISO 8601 형식)입니다.      |     
-|  marketSpecificPricings               |   개체(object)      |   키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *basePriceId* 값으로 지정된 기본 가격을 재정의합니다.    |
+|  marketSpecificPricings               |   개체(object)      |   키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *basePriceId* 값으로 지정된 기본 가격을 재정의합니다.    |
 
 
 <span id="listing-object" />
@@ -420,15 +420,15 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 형식    | 설명       |
 |-----------------|---------|------|
-|  copyrightAndTrademarkInfo                |   string      |  선택적 [저작권 및/또는 상표 정보](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info)입니다.  |
-|  키워드                |  배열       |  검색 결과에 앱을 표시하는 데 도움이 되는 [키워드](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords)의 배열입니다.    |
-|  licenseTerms                |    string     | 앱에 대한 선택적 [사용 조건](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms)입니다.     |
+|  copyrightAndTrademarkInfo                |   string      |  선택적 [저작권 및/또는 상표 정보](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)입니다.  |
+|  키워드                |  배열       |  검색 결과에 앱을 표시하는 데 도움이 되는 [키워드](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)의 배열입니다.    |
+|  licenseTerms                |    string     | 앱에 대한 선택적 [사용 조건](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)입니다.     |
 |  privacyPolicy                |   string      |   이 값은 사용 되지 않습니다. 을 설정 하거나 앱에 대 한 개인정보 처리 방침 URL을 변경 하려면 이렇게 해야에 [속성](../publish/enter-app-properties.md#privacy-policy-url) 파트너 센터의 페이지입니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.       |
 |  supportContact                |   string      |  이 값은 사용 되지 않습니다. 을 설정 하거나 앱에 대 한는 지원 연락처 URL 또는 전자 메일 주소를 변경 하려면 이렇게 해야에 [속성](../publish/enter-app-properties.md#support-contact-info) 파트너 센터의 페이지입니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.        |
 |  websiteUrl                |   string      |  이 값은 사용 되지 않습니다. 을 설정 하거나 앱에 대 한 웹 페이지의 URL을 변경 하려면 이렇게 해야에 [속성](../publish/enter-app-properties.md#website) 파트너 센터의 페이지입니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.      |    
-|  description               |    string     |   앱 목록에 대한 [설명](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description)입니다.   |     
-|  기능               |    배열     |  앱의 [기능](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features)을 나열하는 최대 20개 문자열의 배열입니다.     |
-|  releaseNotes               |  string       |  앱의 [릴리스 정보](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes)입니다.    |
+|  description               |    string     |   앱 목록에 대한 [설명](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)입니다.   |     
+|  기능               |    배열     |  앱의 [기능](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)을 나열하는 최대 20개 문자열의 배열입니다.     |
+|  releaseNotes               |  string       |  앱의 [릴리스 정보](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)입니다.    |
 |  이미지               |   배열      |  앱 목록의 [이미지 및 아이콘](#image-object) 리소스의 배열입니다.  |
 |  recommendedHardware               |   배열      |  앱의 [권장되는 하드웨어 구성](../publish/create-app-store-listings.md#additional-information)을 나열하는 최대 11개 문자열의 배열입니다.     |
 |  minimumHardware               |     string    |  앱의 [최소 하드웨어 구성](../publish/create-app-store-listings.md#additional-information)을 나열하는 최대 11개 문자열의 배열입니다.    |  
@@ -572,10 +572,10 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | fileName   |   string      |  패키지의 이름입니다.    |  
 | fileStatus    | string    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
 | id    |  string   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.   |     
-| version    |  string   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
+| version    |  string   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
 | architecture    |  string   |  패키지의 아키텍처(예: ARM)입니다.   |     
-| languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
-| capabilities    |  배열   |  패키지에 필요한 접근 권한 값의 배열입니다. 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.   |     
+| languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원 언어](https://docs.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
+| capabilities    |  배열   |  패키지에 필요한 접근 권한 값의 배열입니다. 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.   |     
 | minimumDirectXVersion    |  string   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. 이는 Windows 8.x를 대상으로 하는 앱에서만 설정할 수 있습니다. 다른 OS 버전을 대상으로 하는 앱의 경우 이 값은 [앱 제출 업데이트](update-an-app-submission.md) 메서드를 호출할 때 있어야 하지만 지정한 값이 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
 | minimumSystemRam    | string    |  앱 패키지에 필요한 최소 RAM입니다. 이는 Windows 8.x를 대상으로 하는 앱에서만 설정할 수 있습니다. 다른 OS 버전을 대상으로 하는 앱의 경우 이 값은 [앱 제출 업데이트](update-an-app-submission.md) 메서드를 호출할 때 있어야 하지만 지정한 값이 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Memory2GB</li></ul>   |       
 | targetDeviceFamilies    | 배열    |  패키지가 대상으로 하는 장치 패밀리를 나타내는 문자열의 배열입니다. 이 값은 Windows 10을 대상으로 하는 패키지에만 사용되며 이전 릴리스를 대상으로 하는 패키지의 경우 이 값은 **None** 값을 갖습니다. 다음 장치 패밀리 문자열은 현재 Windows 10 패키지에 지원됩니다. 여기서 *{0}* 은 10.0.10240.0, 10.0.10586.0 또는 10.0.14393.0과 같은 Windows 10 버전 문자열입니다. <ul><li>Windows.Universal 최소 버전 *{0}*</li><li>Windows.Desktop 최소 버전 *{0}*</li><li>Windows.Mobile 최소 버전 *{0}*</li><li>Windows.Xbox 최소 버전 *{0}*</li><li>Windows.Holographic 최소 버전 *{0}*</li></ul>   |    
@@ -678,7 +678,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  id               |    string     |   예고편 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.   |
 |  videoFileName               |    string     |    제출용 파일이 든 ZIP 보관 파일의 예고편 비디오 파일 이름입니다.    |     
 |  videoFileId               |   string      |  예고편 비디오 파일 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.   |     
-|  trailerAssets               |   개체(object)      |  키와 값 쌍의 사전입니다. 여기서 각 키는 언어 코드이며 각 값은 예고편에 대한 지역에 특정적인 추가 자산이 포함된 [예고편 자산 리소스](#trailer-assets-object)입니다. 지원 언어 코드에 대한 자세한 내용은 [지원 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
+|  trailerAssets               |   개체(object)      |  키와 값 쌍의 사전입니다. 여기서 각 키는 언어 코드이며 각 값은 예고편에 대한 지역에 특정적인 추가 자산이 포함된 [예고편 자산 리소스](#trailer-assets-object)입니다. 지원 언어 코드에 대한 자세한 내용은 [지원 언어](https://docs.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
 
 > [!NOTE]
 > Microsoft Store 제출 API를 개발자에게 처음 출시한 후 2017년 5월에 *예고편* 리소스가 추가되었습니다. 이 리소스가 도입되기 전에 제출 API를 통해 앱 제출을 생성했고, 이 제출이 아직 진행 중이라면 제출을 성공적으로 커밋하거나 삭제하기 전에 이 리소스는 앱 제출에 대해 널 상태가 됩니다. 앱 제출에 *예고편* 리소스를 사용할 수 없는 경우 [앱 가져오기](get-an-app.md) 메서드에서 반환된 [응용 프로그램 리소스](get-app-data.md#application_object)의 *hasAdvancedListingPermission* 필드는 false입니다.
@@ -731,7 +731,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 ### <a name="enterprise-licensing-values"></a>엔터프라이즈 라이선스 값
 
-다음 값은 앱에 대한 조직 라이선스 동작을 나타냅니다. 이러한 옵션에 대한 자세한 내용은 [조직 라이선스 옵션](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing)을 참조하세요.
+다음 값은 앱에 대한 조직 라이선스 동작을 나타냅니다. 이러한 옵션에 대한 자세한 내용은 [조직 라이선스 옵션](https://docs.microsoft.com/windows/uwp/publish/organizational-licensing)을 참조하세요.
 
 > [!NOTE]
 > 제출 API를 통한 앱 제출에 대해 조직 라이선스 옵션을 구성할 수 있지만 [비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 대량 구매](../publish/organizational-licensing.md)를 위한 제출을 게시하는 데 이 API를 사용할 수는 없습니다. 비즈니스용 Microsoft Store 및 교육용 Microsoft Store 대 한 전송에 게시 하려면 파트너 센터를 사용 해야 합니다.
@@ -773,4 +773,4 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 * [Microsoft Store 서비스를 사용 하 여 서브 미션을 만들고 설정 합니다.](create-and-manage-submissions-using-windows-store-services.md)
 * [Microsoft Store 제출 API를 사용 하 여 앱 데이터를 가져오기](get-app-data.md)
-* [파트너 센터에서 응용 프로그램 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
+* [파트너 센터에서 응용 프로그램 제출](https://docs.microsoft.com/windows/uwp/publish/app-submissions)

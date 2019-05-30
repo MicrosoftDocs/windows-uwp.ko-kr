@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, 처리, 소모성
 ms.localizationpriority: medium
-ms.openlocfilehash: cea8937af3df0ad1e80434d649f431d188521667
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 994113abc34a0a5f7905bff00aa77c6785409927
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615808"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372768"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>소모성 제품을 처리됨으로 보고
 
@@ -22,7 +22,7 @@ Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 지정된 고�
 * 소모성 제품의 항목 ID와([제품에 대한 쿼리](query-for-products.md)의 **itemId** 매개 변수에 반환된 ID) 고유한 추적 ID를 제공합니다. 동일한 추적 ID가 여러 번 사용되는 경우 항목이 이미 사용된 경우에도 동일한 결과가 반환됩니다. 사용 요청이 성공했는지 확실하지 않으면, 서비스에서 동일한 추적 ID를 사용하여 사용 요청을 다시 제출해야 합니다. 추적 ID는 항상 사용 요청과 연결되며 무제한으로 다시 제출할 수 있습니다.
 * 제품 ID([제품에 대한 쿼리](query-for-products.md)의 **productId** 매개 변수에 반환된 ID) 및 아래 요청 본문 섹션의 **transactionId** 매개 변수에 대한 설명에 나열된 소스 중 하나에서 가져온 트랜잭션 ID를 제공합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 이 메서드를 사용하려면 다음이 필요합니다.
@@ -39,17 +39,17 @@ Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 지정된 고�
 
 | 메서드 | 요청 URI                                                   |
 |--------|---------------------------------------------------------------|
-| POST   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
+| 올리기   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
 
 
 ### <a name="request-header"></a>요청 헤더
 
 | 헤더         | 형식   | 설명                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| 권한 부여  | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다.                           |
-| 호스트           | 문자열 | **collections.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
-| Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
-| Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
+| Authorization  | string | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다.                           |
+| Host           | string | **collections.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
+| Content-Length | number | 요청 본문의 길이입니다.                                                                       |
+| 콘텐츠 형식   | string | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -57,19 +57,19 @@ Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 지정된 고�
 | 매개 변수     | 형식         | 설명         | 필수 |
 |---------------|--------------|---------------------|----------|
 | beneficiary   | UserIdentity | 이 항목을 사용 중인 사용자입니다. 자세한 내용은 다음 표를 참조하세요.        | 예      |
-| itemId        | 문자열       | [제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *itemId* 값. 이 매개 변수를 *trackingId*에 사용하지 마세요.      | 아니오       |
-| trackingId    | guid         | 개발자가 제공하는 고유한 추적 ID입니다. 이 매개 변수를 *itemId*에 사용하지 마세요.         | 아니오       |
-| productId     | 문자열       | [제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *productId* 값. 이 매개 변수를 *transactionId*에 사용하지 마세요.   | 아니오       |
-| transactionId | guid         | 다음 소스 중 하나에서 가져온 트랜잭션 ID 값입니다. 이 매개 변수를 *productId*에 사용하지 마세요.<ul><li>[PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392) 클래스의 [TransactionID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.purchaseresults.transactionid) 속성.</li><li>[RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) 또는 [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync)에서 반환되는 앱 또는 제품 영수증입니다.</li><li>[제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *transactionId* 매개 변수.</li></ul>   | 아니오       |
+| itemId        | string       | [제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *itemId* 값. 이 매개 변수를 *trackingId*에 사용하지 마세요.      | 아니요       |
+| trackingId    | guid         | 개발자가 제공하는 고유한 추적 ID입니다. 이 매개 변수를 *itemId*에 사용하지 마세요.         | 아니요       |
+| productId     | string       | [제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *productId* 값. 이 매개 변수를 *transactionId*에 사용하지 마세요.   | 아니요       |
+| transactionId | guid         | 다음 소스 중 하나에서 가져온 트랜잭션 ID 값입니다. 이 매개 변수를 *productId*에 사용하지 마세요.<ul><li>[PurchaseResults](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.PurchaseResults) 클래스의 [TransactionID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.purchaseresults.transactionid) 속성.</li><li>[RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) 또는 [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync)에서 반환되는 앱 또는 제품 영수증입니다.</li><li>[제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *transactionId* 매개 변수.</li></ul>   | 아니요       |
 
 
 UserIdentity 개체에는 다음 매개 변수가 포함됩니다.
 
 | 매개 변수            | 형식   | 설명       | 필수 |
 |----------------------|--------|-------------------|----------|
-| identityType         | 문자열 | 문자열 값 **b2b**를 지정합니다.    | 예      |
-| identityValue        | 문자열 | 소모성 제품을 처리됨으로 보고할 사용자의 ID를 나타내는 [Microsoft Store ID 키](view-and-grant-products-from-a-service.md#step-4)입니다.      | 예      |
-| localTicketReference | 문자열 | 반환된 응답에 대해 요청된 식별자입니다. 와 같은 값을 사용 하는 것이 좋습니다 합니다 *userId*[클레임](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) Microsoft Store ID 키에서입니다. | 예      |
+| identityType         | string | 문자열 값 **b2b**를 지정합니다.    | 예      |
+| identityValue        | string | 소모성 제품을 처리됨으로 보고할 사용자의 ID를 나타내는 [Microsoft Store ID 키](view-and-grant-products-from-a-service.md#step-4)입니다.      | 예      |
+| localTicketReference | string | 반환된 응답에 대해 요청된 식별자입니다. 와 같은 값을 사용 하는 것이 좋습니다 합니다 *userId*[클레임](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) Microsoft Store ID 키에서입니다. | 예      |
 
 
 ### <a name="request-examples"></a>요청 예제
@@ -134,7 +134,7 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 ## <a name="error-codes"></a>오류 코드
 
 
-| 코드 | 오류        | 내부 오류 코드           | 설명           |
+| 코드 | Error        | 내부 오류 코드           | 설명           |
 |------|--------------|----------------------------|-----------------------|
 | 401  | 권한 없음 | AuthenticationTokenInvalid | Azure AD 액세스 토큰이 잘못되었습니다. ServiceError의 세부 정보에 토큰이 만료되거나 *appid* 클레임이 누락되는 경우와 같은 자세한 정보가 포함되는 경우도 있습니다. |
 | 401  | 권한 없음 | PartnerAadTicketRequired   | Azure AD 액세스 토큰이 권한 부여 헤더의 서비스에 전달되지 않았습니다.                                                                                                   |

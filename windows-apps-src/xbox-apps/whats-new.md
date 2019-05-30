@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
 ms.localizationpriority: medium
-ms.openlocfilehash: aff65e5f1b4771cbb33bc8b8219224042b7bf7e2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 27810fb850a54b70e620f06ea033b7c362792bfc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660688"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372967"
 ---
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>개발자를 위한 Xbox One의 UWP 최신 업데이트의 새로운 기능
 
@@ -21,7 +21,7 @@ Xbox One의 UWP(유니버설 Windows 플랫폼) 최신 업데이트에는 다음
 Xbox는 이제 x86 앱 개발이나 x86 Microsoft Store로의 앱 전송을 지원하지 않습니다.
 
 ## <a name="apps-can-now-support-navigating-back-to-the-previous-app"></a>이제 앱에서 이전 앱 탐색을 지원할 수 있음 
-Xbox One 앱의 UWP는 이제 이전 앱 탐색을 지원할 수 있습니다. 이렇게 하려면 [**Windows.UI.Core.SystemNavigationManager.BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893595) 이벤트를 구독하고 이벤트 처리기에서 **Handled** 속성을 **false**로 설정합니다.
+Xbox One 앱의 UWP는 이제 이전 앱 탐색을 지원할 수 있습니다. 이렇게 하려면 [**Windows.UI.Core.SystemNavigationManager.BackRequested**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager) 이벤트를 구독하고 이벤트 처리기에서 **Handled** 속성을 **false**로 설정합니다.
 
 > [!NOTE]
 > 호환성 때문에 이 기능은 Xbox One의 가장 최신 UWP 릴리스에 기본 제공되는 앱에서만 사용할 수 있습니다. 
@@ -41,13 +41,13 @@ Xbox One 앱의 UWP는 이제 이전 앱 탐색을 지원할 수 있습니다. �
 ## <a name="you-can-now-switch-the-type-of-your-uwp-title-between-app-and-game"></a>이제 UWP 타이틀 유형을 "앱"과 "게임" 사이에서 전환할 수 있습니다.
 UWP 타이틀 유형을 "앱"과 "게임" 사이에서 전환하여 게임 시나리오를 스토어에 게시하지 않고도 테스트할 수 있습니다. 개발자 홈의 **게임 및 앱** 창에서 앱을 선택하고, 컨트롤러에서 보기 단추를 누르고, **앱 세부 정보**를 선택한 다음 유형을 "앱" 또는 "게임"으로 변경합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [알려진 문제](known-issues.md)
 - [Xbox One에서 UWP](index.md)
  - 이제 콘솔의 스크린샷을 캡처할 수 있습니다. 스크린샷 작성에 대한 자세한 내용은 [/ext/screenshot](wdp-media-capture-api.md) 참조 항목을 참조하세요.
  - 도구에서 앱의 느슨한 파일 빌드를 배포할 수 있습니다. 느슨한 파일 빌드에 대한 자세한 내용은 [/api/app/packagemanager/register](wdp-loose-folder-register-api.md) 참조 항목을 참조하세요.
  - 개발 PC의 파일 탐색기에서 콘솔의 개발자 파일에 액세스할 수 있습니다. 파일 탐색기를 통해 파일에 액세스하는 방법에 대한 자세한 내용은 [/ext/smb/developerfolder](wdp-smb-api.md) 참조 항목을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [알려진 문제](known-issues.md)
 - [Xbox One에서 UWP](index.md)

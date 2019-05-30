@@ -6,19 +6,19 @@ keywords: uwp, 소모성, 추가 기능, 앱에서 바로 구매, IAP, Windows.A
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e3673db795e3edc2a7c9d83a3ba1036ad8feb659
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 81c37e915b0efa320b1a2f359c873356ed83b6ba
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334571"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371819"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>앱에서 바로 소모성 제품 구매 사용
 
 스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품(구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목)을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다. 이 기능은 구매한 후 특정 회복 아이템을 구매하는 데 사용할 수 있는 게임 내 통화(금, 동전 등) 등에 특히 유용합니다.
 
 > [!IMPORTANT]
-> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 앱에서 바로 소모성 제품을 구매할 수 있도록 만드는 방법을 설명합니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. 합니다 **Windows.Services.Store** 네임 스페이스 최신 추가 기능 형식을 사용할 수 있는 추가 기능 저장소 관리 등 구독을 지원 하며 향후 유형의 제품 및 파트너를 지 원하는 기능을 사용 하 여 호환 되도록 설계 되었습니다 센터와 저장소를 제공 합니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 소모성 제품을 구매할 수 있도록 하는 방법에 대한 자세한 내용은 [이 문서](enable-consumable-add-on-purchases.md)를 참조하세요.
+> 이 문서에서는 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스의 멤버를 사용하여 앱에서 바로 소모성 제품을 구매할 수 있도록 만드는 방법을 설명합니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스를 대신 사용하는 것이 좋습니다. 합니다 **Windows.Services.Store** 네임 스페이스 최신 추가 기능 형식을 사용할 수 있는 추가 기능 저장소 관리 등 구독을 지원 하며 향후 유형의 제품 및 파트너를 지 원하는 기능을 사용 하 여 호환 되도록 설계 되었습니다 센터와 저장소를 제공 합니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 소모성 제품을 구매할 수 있도록 하는 방법에 대한 자세한 내용은 [이 문서](enable-consumable-add-on-purchases.md)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -42,7 +42,7 @@ ms.locfileid: "58334571"
 > [!IMPORTANT]
 > 앱은 스토어에 이행을 정확하게 보고할 책임이 있습니다. 이 단계는 고객을 위해 공정하고 믿을 만한 구매 환경을 유지하는 데 필요합니다.
 
-다음 예제에서는 이전 단계에서 수행한 [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) 호출의 [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392) 속성을 사용하여 이행할 구매한 제품을 확인하는 방법을 보여 줍니다. 컬렉션은 나중에 로컬 이행이 성공했는지 확인하기 위해 참조할 수 있는 위치에 제품 정보를 저장하는 데 사용됩니다.
+다음 예제에서는 이전 단계에서 수행한 [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) 호출의 [PurchaseResults](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.PurchaseResults) 속성을 사용하여 이행할 구매한 제품을 확인하는 방법을 보여 줍니다. 컬렉션은 나중에 로컬 이행이 성공했는지 확인하기 위해 참조할 수 있는 위치에 제품 정보를 저장하는 데 사용됩니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#GrantFeatureLocally)]
@@ -78,7 +78,7 @@ ms.locfileid: "58334571"
 
 * [앱에서 바로 제품 구매 사용](enable-in-app-product-purchases.md)
 * [Store 샘플 (평가판 및 앱 내 구매를 보여 줍니다.)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-* [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/br225197)
+* [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)
  
 
  

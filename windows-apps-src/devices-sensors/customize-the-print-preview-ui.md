@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
-ms.openlocfilehash: 3783105c054e5d956ab64aabe9971bb952d6cae6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 68f8f990209a66a8677afbd1913c95bfd2fce187
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643978"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370288"
 ---
 # <a name="customize-the-print-preview-ui"></a>인쇄 미리 보기 UI 사용자 지정
 
@@ -19,9 +19,9 @@ ms.locfileid: "57643978"
 
 **중요 한 Api**
 
--   [**Windows.Graphics.Printing**](https://msdn.microsoft.com/library/windows/apps/BR226489)
--   [**Windows.UI.Xaml.Printing**](https://msdn.microsoft.com/library/windows/apps/BR243325)
--   [**PrintManager**](https://msdn.microsoft.com/library/windows/apps/BR226426)
+-   [**Windows.Graphics.Printing**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing)
+-   [**Windows.UI.Xaml.Printing**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Printing)
+-   [**PrintManager**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.PrintManager)
 
 이 섹션에서는 인쇄 옵션 및 인쇄 미리 보기 UI의 설정을 사용자 지정하는 방법을 설명합니다. 인쇄에 대한 자세한 내용은 [앱에서 인쇄](print-from-your-app.md)를 참조하세요.
 
@@ -31,20 +31,20 @@ ms.locfileid: "57643978"
 
 ## <a name="customize-print-options"></a>인쇄 옵션 사용자 지정
 
-기본적으로 인쇄 미리 보기 UI에는 [**ColorMode**](https://msdn.microsoft.com/library/windows/apps/BR226478), [**Copies**](https://msdn.microsoft.com/library/windows/apps/BR226479) 및 [**Orientation**](https://msdn.microsoft.com/library/windows/apps/BR226486) 인쇄 옵션이 표시됩니다. 이외에도 인쇄 미리 보기 UI에 추가할 수 있는 몇 가지 다른 일반 프린터 옵션이 있습니다.
+기본적으로 인쇄 미리 보기 UI에는 [**ColorMode**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.colormode), [**Copies**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.copies) 및 [**Orientation**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.orientation) 인쇄 옵션이 표시됩니다. 이외에도 인쇄 미리 보기 UI에 추가할 수 있는 몇 가지 다른 일반 프린터 옵션이 있습니다.
 
--   [**바인딩**](https://msdn.microsoft.com/library/windows/apps/BR226476)
--   [**데이터 정렬**](https://msdn.microsoft.com/library/windows/apps/BR226477)
--   [**이중**](https://msdn.microsoft.com/library/windows/apps/BR226480)
--   [**HolePunch**](https://msdn.microsoft.com/library/windows/apps/BR226481)
--   [**InputBin**](https://msdn.microsoft.com/library/windows/apps/BR226482)
--   [**MediaSize**](https://msdn.microsoft.com/library/windows/apps/BR226483)
--   [**MediaType**](https://msdn.microsoft.com/library/windows/apps/BR226484)
--   [**인쇄 레이아웃**](https://msdn.microsoft.com/library/windows/apps/BR226485)
--   [**PrintQuality**](https://msdn.microsoft.com/library/windows/apps/BR226487)
--   [**스테이플링을 수행**](https://msdn.microsoft.com/library/windows/apps/BR226488)
+-   [**Binding**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.binding)
+-   [**데이터 정렬**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.collation)
+-   [**Duplex**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.duplex)
+-   [**HolePunch**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.holepunch)
+-   [**InputBin**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.inputbin)
+-   [**MediaSize**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.mediasize)
+-   [**MediaType**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.mediatype)
+-   [**NUp**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.nup)
+-   [**PrintQuality**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.printquality)
+-   [**스테이플링을 수행**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.staple)
 
-이러한 옵션은 [**StandardPrintTaskOptions**](https://msdn.microsoft.com/library/windows/apps/BR226475) 클래스에 정의되어 있습니다. 인쇄 미리 보기 UI에 표시되는 옵션 목록에서 옵션을 추가하거나 제거할 수 있습니다. 또한 옵션이 표시되는 순서를 변경하고 사용자에게 표시되는 기본 설정을 지정할 수도 있습니다.
+이러한 옵션은 [**StandardPrintTaskOptions**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.StandardPrintTaskOptions) 클래스에 정의되어 있습니다. 인쇄 미리 보기 UI에 표시되는 옵션 목록에서 옵션을 추가하거나 제거할 수 있습니다. 또한 옵션이 표시되는 순서를 변경하고 사용자에게 표시되는 기본 설정을 지정할 수도 있습니다.
 
 단, 이 메서드를 사용하여 수정한 사항은 인쇄 미리 보기 UI에만 적용됩니다. 사용자는 인쇄 미리 보기 UI에서 **기타 설정**을 탭하여 프린터에서 지원하는 모든 옵션에 항상 액세스할 수 있습니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "57643978"
 
 앱의 화면이 로드되면 앱이 인쇄 계약을 등록합니다. 등록 과정에 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기를 정의하는 것이 포함됩니다. 인쇄 미리 보기 UI에 표시되는 옵션을 사용자 지정할 코드가 **PrintTaskRequested** 이벤트 처리기에 추가됩니다.
 
-[  **PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기가 [**printTask.options**](https://msdn.microsoft.com/library/windows/apps/BR226469) 지시문을 포함하도록 수정합니다. 이 지시문은 인쇄 미리 보기 UI에 표시할 인쇄 설정을 구성합니다. 인쇄 옵션의 사용자 지정된 목록을 표시할 앱 화면에 대해서는 이 화면이 인쇄될 때 표시할 옵션을 지정하는 코드를 포함하도록 기본 클래스에서 **PrintTaskRequested** 이벤트 처리기를 재정의합니다.
+[  **PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기가 [**printTask.options**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtask.options) 지시문을 포함하도록 수정합니다. 이 지시문은 인쇄 미리 보기 UI에 표시할 인쇄 설정을 구성합니다. 인쇄 옵션의 사용자 지정된 목록을 표시할 앱 화면에 대해서는 이 화면이 인쇄될 때 표시할 옵션을 지정하는 코드를 포함하도록 기본 클래스에서 **PrintTaskRequested** 이벤트 처리기를 재정의합니다.
 
 ``` csharp
 protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs e)
@@ -96,11 +96,11 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**중요**  호출 [ **displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)() 인쇄 미리 보기 UI에서에서 모든 인쇄 옵션을 제거 등의 **더 많은 설정을** 링크. 인쇄 미리 보기 UI에 표시할 옵션을 추가해야 합니다.
+**중요**  호출 [ **displayedOptions.clear**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtaskoptions.displayedoptions)() 인쇄 미리 보기 UI에서에서 모든 인쇄 옵션을 제거 등의 **더 많은 설정을** 링크. 인쇄 미리 보기 UI에 표시할 옵션을 추가해야 합니다.
 
 ### <a name="specify-default-options"></a>기본 옵션 지정
 
-또한 인쇄 미리 보기 UI에서 옵션의 기본값을 설정할 수 있습니다. 이전 예제에서 가져온 다음 코드 줄은 [**MediaSize**](https://msdn.microsoft.com/library/windows/apps/BR226483) 옵션의 기본값을 설정합니다.
+또한 인쇄 미리 보기 UI에서 옵션의 기본값을 설정할 수 있습니다. 이전 예제에서 가져온 다음 코드 줄은 [**MediaSize**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions.mediasize) 옵션의 기본값을 설정합니다.
 
 ``` csharp
          // Preset the default value of the printer option
@@ -111,7 +111,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 
 이 섹션에서는 새 인쇄 옵션을 만들고, 옵션이 지원하는 값 목록을 정의한 다음 이 옵션을 인쇄 미리 보기에 추가하는 방법을 보여 줍니다. 이전 섹션과 마찬가지로 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기에서 새 인쇄 옵션을 추가합니다.
 
-먼저 [**PrintTaskOptionDetails**](https://msdn.microsoft.com/library/windows/apps/Hh701256) 개체를 가져옵니다. 이 개체는 새 인쇄 옵션을 인쇄 미리 보기 UI에 추가하는 데 사용됩니다. 그런 다음 인쇄 미리 보기 UI에 표시된 옵션 목록을 지우고 사용자가 앱에서 인쇄를 하고자 할 때 표시할 옵션을 추가합니다. 이제 새 인쇄 옵션을 만들고 옵션 값 목록을 초기화합니다. 마지막으로, 새 옵션을 추가하고 **OptionChanged** 이벤트에 대한 처리기를 할당합니다.
+먼저 [**PrintTaskOptionDetails**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails) 개체를 가져옵니다. 이 개체는 새 인쇄 옵션을 인쇄 미리 보기 UI에 추가하는 데 사용됩니다. 그런 다음 인쇄 미리 보기 UI에 표시된 옵션 목록을 지우고 사용자가 앱에서 인쇄를 하고자 할 때 표시할 옵션을 추가합니다. 이제 새 인쇄 옵션을 만들고 옵션 값 목록을 초기화합니다. 마지막으로, 새 옵션을 추가하고 **OptionChanged** 이벤트에 대한 처리기를 할당합니다.
 
 ``` csharp
 protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs e)
@@ -161,7 +161,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 
 추가된 순서대로 첫 번째 옵션이 창의 맨 위에 오도록 인쇄 미리 보기 UI에 옵션이 표시됩니다. 이 예제에서는 사용자 지정 옵션이 옵션 목록의 맨 아래에 나타나도록 마지막에 추가됩니다. 그러나 사용자 지정 인쇄 옵션은 마지막에 추가할 필요가 없으며 목록에서 원하는 곳에 배치할 수 있습니다.
 
-사용자가 개발자의 사용자 지정 옵션에서 선택한 옵션을 변경하는 경우 인쇄 미리 보기 이미지를 업데이트합니다. [  **InvalidatePreview**](https://msdn.microsoft.com/library/windows/apps/Hh702146) 메서드를 호출하여 아래 그림과 같이 인쇄 미리 보기 UI에서 이미지를 다시 그립니다.
+사용자가 개발자의 사용자 지정 옵션에서 선택한 옵션을 변경하는 경우 인쇄 미리 보기 이미지를 업데이트합니다. [  **InvalidatePreview**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.printing.printdocument.invalidatepreview) 메서드를 호출하여 아래 그림과 같이 인쇄 미리 보기 UI에서 이미지를 다시 그립니다.
 
 ``` csharp
 async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, PrintTaskOptionChangedEventArgs args)
@@ -185,6 +185,6 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 ## <a name="related-topics"></a>관련 항목
 
-* [인쇄에 대 한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/Hh868178)
+* [인쇄에 대 한 디자인 지침](https://docs.microsoft.com/windows/uwp/devices-sensors/printing-and-scanning)
 * [빌드 2015 비디오: Windows 10에서 인쇄 하는 앱 개발](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [UWP 인쇄 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619984)

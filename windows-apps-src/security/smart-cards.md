@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 47a4ceef2603d7b0178431c93fb6c271b24c506a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5498480e0dbe2c8be96d92df766b15676a3e6b7b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599228"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371930"
 ---
 # <a name="smart-cards"></a>스마트 카드
 
@@ -28,7 +28,7 @@ ms.locfileid: "57599228"
 ## <a name="access-connected-card-readers-and-smart-cards"></a>연결된 카드 판독기 및 스마트 카드 액세스
 
 
-[  **DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)에 지정된 디바이스 ID를 [**SmartCardReader.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn263890) 메서드에 전달하여 판독기 및 연결된 스마트 카드를 쿼리할 수 있습니다. 현재 반환된 판독기 디바이스에 연결된 스마트 카드에 액세스하려면 [**SmartCardReader.FindAllCardsAsync**](https://msdn.microsoft.com/library/windows/apps/dn263887)를 호출합니다.
+[  **DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation)에 지정된 디바이스 ID를 [**SmartCardReader.FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardreader.fromidasync) 메서드에 전달하여 판독기 및 연결된 스마트 카드를 쿼리할 수 있습니다. 현재 반환된 판독기 디바이스에 연결된 스마트 카드에 액세스하려면 [**SmartCardReader.FindAllCardsAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardreader.findallcardsasync)를 호출합니다.
 
 ```cs
 string selector = SmartCardReader.GetDeviceSelector();
@@ -48,7 +48,7 @@ foreach (DeviceInformation device in devices)
 }
 ```
 
-또한 카드 삽입 시의 앱 동작을 처리하는 메서드를 구현하여 앱이 [**CardAdded**](https://msdn.microsoft.com/library/windows/apps/dn263866) 이벤트를 관찰할 수 있도록 해야 합니다.
+또한 카드 삽입 시의 앱 동작을 처리하는 메서드를 구현하여 앱이 [**CardAdded**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardreader.cardadded) 이벤트를 관찰할 수 있도록 해야 합니다.
 
 ```cs
 private void reader_CardAdded(SmartCardReader sender, CardAddedEventArgs args)
@@ -57,16 +57,16 @@ private void reader_CardAdded(SmartCardReader sender, CardAddedEventArgs args)
 }
 ```
 
-그런 다음 반환된 각 [**SmartCard**](https://msdn.microsoft.com/library/windows/apps/dn297565) 개체를 [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801)에 전달하여 앱이 해당 구성을 액세스하고 사용자 지정할 수 있도록 하는 메서드에 액세스할 수 있습니다.
+그런 다음 반환된 각 [**SmartCard**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCard) 개체를 [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning)에 전달하여 앱이 해당 구성을 액세스하고 사용자 지정할 수 있도록 하는 메서드에 액세스할 수 있습니다.
 
 ## <a name="create-a-virtual-smart-card"></a>가상 스마트 카드 만들기
 
 
-[  **SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801)을 사용하여 가상 스마트 카드를 만들려면 앱에서 먼저 이름, 관리자 키 및 [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642)를 제공해야 합니다. 이름은 일반적으로 앱에 제공되지만, 앱이 3개 값을 모두 [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830)에 전달하기 전에 관리자 키를 제공하고 현재 **SmartCardPinPolicy**의 인스턴스를 생성해야 합니다.
+[  **SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning)을 사용하여 가상 스마트 카드를 만들려면 앱에서 먼저 이름, 관리자 키 및 [**SmartCardPinPolicy**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardPinPolicy)를 제공해야 합니다. 이름은 일반적으로 앱에 제공되지만, 앱이 3개 값을 모두 [**RequestVirtualSmartCardCreationAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcardcreationasync)에 전달하기 전에 관리자 키를 제공하고 현재 **SmartCardPinPolicy**의 인스턴스를 생성해야 합니다.
 
-1.  새 [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642) 인스턴스 만들기
-2.  서비스 또는 관리 도구에서 제공한 관리자 키 값에 대해 [**CryptographicBuffer.GenerateRandom**](https://msdn.microsoft.com/library/windows/apps/br241392)을 호출하여 관리자 키 값을 생성합니다.
-3.  이러한 값을 *FriendlyNameText* 문자열과 함께 [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830)에 전달합니다.
+1.  새 [**SmartCardPinPolicy**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardPinPolicy) 인스턴스 만들기
+2.  서비스 또는 관리 도구에서 제공한 관리자 키 값에 대해 [**CryptographicBuffer.GenerateRandom**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.cryptographicbuffer.generaterandom)을 호출하여 관리자 키 값을 생성합니다.
+3.  이러한 값을 *FriendlyNameText* 문자열과 함께 [**RequestVirtualSmartCardCreationAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcardcreationasync)에 전달합니다.
 
 ```cs
 SmartCardPinPolicy pinPolicy = new SmartCardPinPolicy();
@@ -81,7 +81,7 @@ SmartCardProvisioning provisioning = await
           pinPolicy);
 ```
 
-[  **RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830)에서 연결된 [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) 개체를 반환하면 가상 스마트 카드가 프로비전되고 사용할 준비가 됩니다.
+[  **RequestVirtualSmartCardCreationAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcardcreationasync)에서 연결된 [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) 개체를 반환하면 가상 스마트 카드가 프로비전되고 사용할 준비가 됩니다.
 
 ## <a name="handle-authentication-challenges"></a>인증 질문 처리
 
@@ -115,11 +115,11 @@ static class ChallengeResponseAlgorithm
 
 이제 인증 질문에 대한 논리가 정의되었으므로 판독기와 통신하여 인증을 위해 스마트 카드 또는 가상 스마트 카드에 액세스할 수 있습니다.
 
-1.  질문을 시작하려면 스마트 카드와 연결된 [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) 개체에서 [**GetChallengeContextAsync**](https://msdn.microsoft.com/library/windows/apps/dn263811)를 호출합니다. 그러면 카드의 [**Challenge**](https://msdn.microsoft.com/library/windows/apps/dn297578) 값이 포함된 [**SmartCardChallengeContext**](https://msdn.microsoft.com/library/windows/apps/dn297570) 인스턴스가 생성됩니다.
+1.  질문을 시작하려면 스마트 카드와 연결된 [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) 개체에서 [**GetChallengeContextAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.getchallengecontextasync)를 호출합니다. 그러면 카드의 [**Challenge**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardchallengecontext.challenge) 값이 포함된 [**SmartCardChallengeContext**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardChallengeContext) 인스턴스가 생성됩니다.
 
 2.  카드의 질문 값과 서비스 또는 관리 도구에서 제공한 관리자 키를 이전 예제에서 정의한 **ChallengeResponseAlgorithm**에 전달합니다.
 
-3.  [**VerifyResponseAsync** ](https://msdn.microsoft.com/library/windows/apps/dn297627) 돌아갑니다 **true** 인증이 성공 하는 경우.
+3.  [**VerifyResponseAsync** ](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardchallengecontext.verifyresponseasync) 돌아갑니다 **true** 인증이 성공 하는 경우.
 
 ```cs
 bool verifyResult = false;
@@ -143,8 +143,8 @@ using (SmartCardChallengeContext context =
 
 스마트 카드와 연결된 PIN을 변경하려면
 
-1.  카드에 액세스하고 연결된 [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) 개체를 생성합니다.
-2.  [  **RequestPinChangeAsync**](https://msdn.microsoft.com/library/windows/apps/dn263823)를 호출하여 이 작업을 완료하는 UI를 사용자에게 표시합니다.
+1.  카드에 액세스하고 연결된 [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) 개체를 생성합니다.
+2.  [  **RequestPinChangeAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestpinchangeasync)를 호출하여 이 작업을 완료하는 UI를 사용자에게 표시합니다.
 3.  PIN이 변경되었으면 호출에서 **true**를 반환합니다.
 
 ```cs
@@ -156,10 +156,10 @@ bool result = await provisioning.RequestPinChangeAsync();
 
 PIN 초기화를 요청하려면
 
-1.  [  **RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825)를 호출하여 작업을 시작합니다. 이 호출에는 스마트 카드와 PIN 초기화 요청을 나타내는 [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) 메서드가 포함되어 있습니다.
-2.  [**SmartCardPinResetHandler** ](https://msdn.microsoft.com/library/windows/apps/dn297701) 정보를 제공 하는 우리의 **ChallengeResponseAlgorithm**에서 래핑된를 [ **SmartCardPinResetDeferral** ](https://msdn.microsoft.com/library/windows/apps/dn297693) 를 호출 하 고 카드의 챌린지 값 및 요청을 인증 하는 서비스 또는 관리 도구에서 제공 하는 관리자 키를 비교 하는 데 사용 합니다.
+1.  [  **RequestPinResetAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestpinresetasync)를 호출하여 작업을 시작합니다. 이 호출에는 스마트 카드와 PIN 초기화 요청을 나타내는 [**SmartCardPinResetHandler**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardpinresethandler) 메서드가 포함되어 있습니다.
+2.  [**SmartCardPinResetHandler** ](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardpinresethandler) 정보를 제공 하는 우리의 **ChallengeResponseAlgorithm**에서 래핑된를 [ **SmartCardPinResetDeferral** ](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardPinResetDeferral) 를 호출 하 고 카드의 챌린지 값 및 요청을 인증 하는 서비스 또는 관리 도구에서 제공 하는 관리자 키를 비교 하는 데 사용 합니다.
 
-3.  질문에 성공하면 [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) 호출이 완료되고, PIN이 초기화되었으면 **true**를 반환합니다.
+3.  질문에 성공하면 [**RequestPinResetAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestpinresetasync) 호출이 완료되고, PIN이 초기화되었으면 **true**를 반환합니다.
 
 ```cs
 SmartCardProvisioning provisioning =
@@ -190,7 +190,7 @@ bool result = await provisioning.RequestPinResetAsync(
 ## <a name="remove-a-smart-card-or-virtual-smart-card"></a>스마트 카드 또는 가상 스마트 카드 제거
 
 
-물리적 스마트 카드를 제거하는 경우 카드를 삭제할 때 [**CardRemoved**](https://msdn.microsoft.com/library/windows/apps/dn263875) 이벤트가 발생합니다.
+물리적 스마트 카드를 제거하는 경우 카드를 삭제할 때 [**CardRemoved**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardreader.cardremoved) 이벤트가 발생합니다.
 
 카드 또는 판독기 제거 시의 앱 동작을 이벤트 처리기로 정의하는 메서드를 사용하여 이 이벤트 발생을 카드 판독기와 연결합니다. 이 동작은 카드가 제거되었다는 알림을 사용자에게 제공하는 것처럼 간단할 수 있습니다.
 
@@ -199,7 +199,7 @@ reader = card.Reader;
 reader.CardRemoved += HandleCardRemoved;
 ```
 
-가상 스마트 카드 제거는 카드를 먼저 검색한 다음 [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) 반환 개체에서 [**RequestVirtualSmartCardDeletionAsync**](https://msdn.microsoft.com/library/windows/apps/dn263850)를 호출하여 프로그래밍 방식으로 처리됩니다.
+가상 스마트 카드 제거는 카드를 먼저 검색한 다음 [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) 반환 개체에서 [**RequestVirtualSmartCardDeletionAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcarddeletionasync)를 호출하여 프로그래밍 방식으로 처리됩니다.
 
 ```cs
 bool result = await SmartCardProvisioning

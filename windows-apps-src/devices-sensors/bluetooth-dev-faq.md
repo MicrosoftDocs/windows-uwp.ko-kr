@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cc1bafb90b20083d55a622873dea7be5efbf5b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 72e45f8ef0f5684b3a712056eb367975f8e6103a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633488"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370356"
 ---
 # <a name="bluetooth-developer-faq"></a>Bluetooth 개발자 FAQ
 
@@ -63,7 +63,7 @@ Windows 10 릴리스 1511부터 개발자가 페어링을 제어할 수 있습�
 
 Bluetooth RFCOMM(클래식) 디바이스의 경우에는 페어링할 필요가 없습니다. Windows 10 릴리스 1607부터 주변 디바이스를 쿼리하고 연결하기만 하면 됩니다. 업데이트된 [RFCOMM 채팅 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BluetoothRfcommChat)에서 이 기능을 보여 줍니다. 
 
-**(14393 및 이하)** Bluetooth 저에너지(GATT 클라이언트)에는 이 기능을 사용할 수 없으므로 이러한 디바이스에 액세스하려면 설정 페이지를 통해 또는 [Windows.Devices.Enumeration](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.aspx) API를 사용하여 페어링해야 합니다.
+**(14393 및 이하)** Bluetooth 저에너지(GATT 클라이언트)에는 이 기능을 사용할 수 없으므로 이러한 디바이스에 액세스하려면 설정 페이지를 통해 또는 [Windows.Devices.Enumeration](https://docs.microsoft.com/uwp/api/windows.devices.enumeration) API를 사용하여 페어링해야 합니다.
 
 **(15030 및 이상)** Bluetooth 디바이스 페어링이 더 이상 필요 없습니다. GetGattServicesAsync 및 GetCharacteristicsAsync 같은 새로운 Async API를 사용하여 원격 디바이스의 현재 상태를 쿼리할 수 있습니다. 자세한 내용은 [클라이언트 문서](gatt-client.md)를 참조하세요. 
 
@@ -82,5 +82,5 @@ Bluetooth RFCOMM(클래식) 디바이스의 경우에는 페어링할 필요가 
 **Bluetooth LE**: 예, 모든 기능이 OneCore 이며 작동 Bluetooth LE 스택 통한 가장 최근의 장치에서 사용할 수 있어야 합니다. 
 > 주의 사항: 주변 역할 하드웨어 종속 되며 몇 가지 Windows Server 버전에서 Bluetooth를 지원 하지 않습니다. 
 
-**Bluetooth b R/EDR (클래식)**: 몇 가지 변형이 존재 하지만 전반적으로 매우 유사 프로필 수준 지원. [RFCOMM](send-or-receive-files-with-rfcomm.md)의 문서와 [PC](https://support.microsoft.com/en-us/help/10568/windows-10-supported-bluetooth-profiles) 및 [휴대폰](https://support.microsoft.com/en-us/help/10569/windows-10-mobile-supported-bluetooth-profiles)에서 지원되는 이러한 지원되는 프로필을 참조하세요.
+**Bluetooth b R/EDR (클래식)** : 몇 가지 변형이 존재 하지만 전반적으로 매우 유사 프로필 수준 지원. [RFCOMM](send-or-receive-files-with-rfcomm.md)의 문서와 [PC](https://support.microsoft.com/en-us/help/10568/windows-10-supported-bluetooth-profiles) 및 [휴대폰](https://support.microsoft.com/en-us/help/10569/windows-10-mobile-supported-bluetooth-profiles)에서 지원되는 이러한 지원되는 프로필을 참조하세요.
 

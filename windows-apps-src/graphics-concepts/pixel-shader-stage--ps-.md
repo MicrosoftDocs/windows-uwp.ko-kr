@@ -7,19 +7,19 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e1f7e787f2ee80a3168d38a9afd9a249dc0e6de0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 81b2bc5e78087b19d8829df4dab4b03e4db76467
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603068"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370982"
 ---
 # <a name="pixel-shader-ps-stage"></a>PS(픽셀 셰이더) 단계
 
 
 PS(픽셀 셰이더) 단계는 기본 요소에 대한 보간된 데이터를 받아 픽셀별 데이터(예: 색)를 생성합니다.
 
-이것은 프로그램 가능 셰이더 단계로서 [그래픽 파이프라인](graphics-pipeline.md) 다이어그램에서 둥근 블록으로 표시됩니다. 이 셰이더 단계는 셰이더 모델 4.0 [공통 셰이더 코어](https://msdn.microsoft.com/library/windows/desktop/bb509580)에 기반하는 고유의 기능을 노출합니다.
+이것은 프로그램 가능 셰이더 단계로서 [그래픽 파이프라인](graphics-pipeline.md) 다이어그램에서 둥근 블록으로 표시됩니다. 이 셰이더 단계는 셰이더 모델 4.0 [공통 셰이더 코어](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-common-core)에 기반하는 고유의 기능을 노출합니다.
 
 PS(픽셀 셰이더) 단계로 픽셀별 조명과 후처리 같은 풍부한 음영 기술을 사용할 수 있습니다. 픽셀 셰이더는 상수, 텍스처 데이터, 보간된 꼭짓점별 값 및 기타 데이터를 조합하여 픽셀별 출력을 산출하는 프로그램입니다. [RS(래스터라이저) 단계](rasterizer-stage--rs-.md)는 기본 요소에 포함된 각 픽셀에 대해 픽셀 셰이더를 한 번 호출하지만 **NULL** 셰이더를 지정하면 셰이더 실행을 방지할 수 있습니다.
 
@@ -34,9 +34,9 @@ PS(픽셀 셰이더) 단계로 픽셀별 조명과 후처리 같은 풍부한 �
 
 픽셀 셰이더 입력 데이터는 꼭짓점 특성(원근 수정을 포함하거나 원근 수정 없이 보간 가능)을 포함하거나 기본 요소별 상수로 취급할 수 있습니다. 픽셀 셰이더 입력은 선언된 보간 모드에 따라 래스터화되는 기본 요소의 꼭짓점 특성으로부터 보간됩니다. 래스터화 전에 기본 요소가 잘리는 경우, 클리핑 프로세스 도중에도 보간 모드가 적용됩니다.
 
-꼭짓점 특성은 픽셀 셰이더 중앙 위치에서 보간(또는 평가)됩니다. 픽셀 셰이더 속성 보간 모드는 [인수](https://msdn.microsoft.com/library/windows/desktop/bb509606) 또는 [입력 구조](https://msdn.microsoft.com/library/windows/desktop/bb509668)로 입력 등록 선언에서 요소별로 선언됩니다. 속성은 선형적으로 또는 중심 샘플링을 사용하여 보간할 수 있습니다. [래스터화 규칙](rasterization-rules.md)의 "다중 샘플 앤티앨리어싱 시 속성의 중심 샘플링" 섹션을 참조하세요. 중심 평가는 기본 요소에 픽셀이 포함되지만 픽셀 중심은 포함되지 않을 수 있는 경우를 포함하기 위해 다중 샘플링 도중에만 관련됩니다. 중심 평가는 (비포함) 픽셀 중심에 최대한 가까이서 이루어집니다.
+꼭짓점 특성은 픽셀 셰이더 중앙 위치에서 보간(또는 평가)됩니다. 픽셀 셰이더 속성 보간 모드는 [인수](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-function-parameters) 또는 [입력 구조](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-struct)로 입력 등록 선언에서 요소별로 선언됩니다. 속성은 선형적으로 또는 중심 샘플링을 사용하여 보간할 수 있습니다. [래스터화 규칙](rasterization-rules.md)의 "다중 샘플 앤티앨리어싱 시 속성의 중심 샘플링" 섹션을 참조하세요. 중심 평가는 기본 요소에 픽셀이 포함되지만 픽셀 중심은 포함되지 않을 수 있는 경우를 포함하기 위해 다중 샘플링 도중에만 관련됩니다. 중심 평가는 (비포함) 픽셀 중심에 최대한 가까이서 이루어집니다.
 
-입력은 다른 파이프라인 단계에서 사용되는 매개 변수를 표시하는 [시스템 값 시맨틱](https://msdn.microsoft.com/library/windows/desktop/bb509647)을 사용하여 선언될 수도 있습니다. 예를 들어 픽셀 위치를 표시 해야 SV\_위치 의미 체계. 합니다 [입력 어셈블러 (IA) 스테이지](input-assembler-stage--ia-.md) 픽셀 셰이더에 대 한 하나의 스칼라를 생성할 수 있습니다 (SV를 사용 하 여\_PrimitiveID), [래스터 라이저 (RS) 단계](rasterizer-stage--rs-.md) 픽셀 셰이더 (SV사용에대한하나의스칼라를생성할수도있습니다\_ IsFrontFace)입니다.
+입력은 다른 파이프라인 단계에서 사용되는 매개 변수를 표시하는 [시스템 값 시맨틱](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics)을 사용하여 선언될 수도 있습니다. 예를 들어 픽셀 위치를 표시 해야 SV\_위치 의미 체계. 합니다 [입력 어셈블러 (IA) 스테이지](input-assembler-stage--ia-.md) 픽셀 셰이더에 대 한 하나의 스칼라를 생성할 수 있습니다 (SV를 사용 하 여\_PrimitiveID), [래스터 라이저 (RS) 단계](rasterizer-stage--rs-.md) 픽셀 셰이더 (SV사용에대한하나의스칼라를생성할수도있습니다\_ IsFrontFace)입니다.
 
 ## <a name="span-idoutputsspanspan-idoutputsspanspan-idoutputsspanoutputs"></a><span id="Outputs"></span><span id="outputs"></span><span id="OUTPUTS"></span>출력
 

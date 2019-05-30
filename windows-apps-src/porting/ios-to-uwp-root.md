@@ -7,12 +7,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ddcb64aed8205f18b17706e987cbd9981bb8044
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5d3f72e563f6463d55af40acae74d061b5030aa9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57655468"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371613"
 ---
 # <a name="move-from-ios-to-uwp"></a>iOS에서 UWP로 이동
 
@@ -34,4 +34,4 @@ Windows 10 및 UWP(유니버설 Windows 플랫폼)가 포함될 수 있도록 �
 
 **디자이너 및 개발자를 위한**
 * [모든 Windows 장치에 대 한 유니버설 Windows 앱 빌드](https://go.microsoft.com/fwlink/p/?LinkID=397871)
-* [UWP 앱에 대 한 디자인 자산 다운로드](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
+* [UWP 앱에 대 한 디자인 자산 다운로드](https://dev.windows.com/design/assets)

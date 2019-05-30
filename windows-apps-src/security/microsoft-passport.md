@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: aacce5710f8ed0066e5efdfb5e0344473f718f9b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1026bd153f43d5e956fbacdcc33728d890f34e34
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651548"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371977"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
@@ -115,16 +115,16 @@ if (!keyCredentialAvailable)
 
 이 시나리오에서는 메일 주소를 사용자의 고유 식별자로 사용합니다. 사용자가 등록되면 주소가 유효한지 확인하기 위해 유효성 검사 메일을 보내는 것이 좋습니다. 그러면 필요한 경우 계정을 재설정하는 메커니즘이 제공됩니다.
 
-사용자가 자신의 PIN을 설정한 경우 앱은 사용자의 [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만듭니다. 앱은 또한 키가 TPM에서 생성되었음을 입증하는 암호화된 증거를 제공하는 키 증명 정보를 가져올 수도 있습니다. 사용 중인 디바이스를 등록하도록, 생성된 공개 키와 (선택적으로) 증명 정보가 백 엔드 서버로 전송됩니다. 모든 디바이스에서 생성된 모든 키 쌍은 고유합니다.
+사용자가 자신의 PIN을 설정한 경우 앱은 사용자의 [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential)을 만듭니다. 앱은 또한 키가 TPM에서 생성되었음을 입증하는 암호화된 증거를 제공하는 키 증명 정보를 가져올 수도 있습니다. 사용 중인 디바이스를 등록하도록, 생성된 공개 키와 (선택적으로) 증명 정보가 백 엔드 서버로 전송됩니다. 모든 디바이스에서 생성된 모든 키 쌍은 고유합니다.
 
-[  **KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만드는 코드는 다음과 같습니다.
+[  **KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential)을 만드는 코드는 다음과 같습니다.
 
 ```csharp
 var keyCreationResult = await KeyCredentialManager.RequestCreateAsync(
     AccountId, KeyCredentialCreationOption.ReplaceExisting);
 ```
 
-[  **RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048)는 공개 키 및 개인 키를 만드는 부분입니다. 디바이스에 적절한 TPM 칩이 있는 경우 API는 개인 키와 공개 키를 만들어 그 결과를 저장하도록 이 TPM 칩에 요청합니다. 이러한 TPM 칩이 없으면 OS에서 코드에 키 쌍이 만들어집니다. 생성된 개인 키에 대해 앱에서 직접 액세스하는 방법은 없습니다. 키 쌍 생성의 일부분이 결과 증명 정보이기도 합니다. 증명에 대한 자세한 내용은 다음 섹션을 참조하세요.
+[  **RequestCreateAsync**](https://docs.microsoft.com/previous-versions/windows/dn973048(v=win.10))는 공개 키 및 개인 키를 만드는 부분입니다. 디바이스에 적절한 TPM 칩이 있는 경우 API는 개인 키와 공개 키를 만들어 그 결과를 저장하도록 이 TPM 칩에 요청합니다. 이러한 TPM 칩이 없으면 OS에서 코드에 키 쌍이 만들어집니다. 생성된 개인 키에 대해 앱에서 직접 액세스하는 방법은 없습니다. 키 쌍 생성의 일부분이 결과 증명 정보이기도 합니다. 증명에 대한 자세한 내용은 다음 섹션을 참조하세요.
 
 디바이스에서 키 쌍과 증명 정보가 만들어지면 공개 키, (선택적으로) 증명 정보, 고유 식별자(예: 메일 주소) 등을 백 엔드 등록 서비스로 전송하여 백 엔드에 저장해야 합니다.
 
@@ -208,8 +208,8 @@ static async void RegisterUser(string AccountId)
 - AIK 인증서의 시간이 유효합니다.
 - 체인 내 모든 발급 CA 인증서의 시간이 유효하며 인증서가 해지되지 않았습니다.
 - 증명서의 형식이 올바릅니다.
-- [  **KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) BLOB에 대한 서명에 AIK 공개 키를 사용합니다.
-- [  **KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) BLOB에 포함된 공개 키가 클라이언트에서 증명서와 함께 전송한 공개 RSA 키와 일치합니다.
+- [  **KeyAttestation**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates.KeyAttestationHelper) BLOB에 대한 서명에 AIK 공개 키를 사용합니다.
+- [  **KeyAttestation**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates.KeyAttestationHelper) BLOB에 포함된 공개 키가 클라이언트에서 증명서와 함께 전송한 공개 RSA 키와 일치합니다.
 
 이러한 조건에 따라 앱은 사용자에게 다른 권한 부여 수준을 할당할 수도 있습니다. 예를 들어, 이러한 검사 중 하나에 실패 하는 경우 사용자를 등록하지 않거나 사용자가 수행할 수 있는 것을 제한할 수도 있습니다.
 
@@ -219,7 +219,7 @@ static async void RegisterUser(string AccountId)
 
 ### <a name="33-force-the-user-to-sign-in-again"></a>3.3 사용자에게 다시 로그인하도록 강제
 
-일부 시나리오에서는 앱에 액세스하기 전에 또는 앱 내에서 특정 작업을 수행하기 전에 사용자가 현재 로그인한 사용자가 맞는지 입증하기를 원할 수도 있습니다. 예를 들어, 뱅킹 앱이 서버에 전송 금액 명령을 전송하기 전에 트랜잭션을 시도하는 로그인한 디바이스를 찾은 사용자가 아닌 사용자인지 확인할 수도 있습니다. 이 경우 [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134) 클래스를 사용하면 사용자에게 앱에 다시 로그인하도록 강제할 수 있습니다. 다음 코드 줄은 사용자에게 자격 증명을 입력하도록 강제합니다.
+일부 시나리오에서는 앱에 액세스하기 전에 또는 앱 내에서 특정 작업을 수행하기 전에 사용자가 현재 로그인한 사용자가 맞는지 입증하기를 원할 수도 있습니다. 예를 들어, 뱅킹 앱이 서버에 전송 금액 명령을 전송하기 전에 트랜잭션을 시도하는 로그인한 디바이스를 찾은 사용자가 아닌 사용자인지 확인할 수도 있습니다. 이 경우 [**UserConsentVerifier**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier) 클래스를 사용하면 사용자에게 앱에 다시 로그인하도록 강제할 수 있습니다. 다음 코드 줄은 사용자에게 자격 증명을 입력하도록 강제합니다.
 
 다음 코드 줄은 사용자에게 자격 증명을 입력하도록 강제합니다.
 
@@ -267,7 +267,7 @@ if (openKeyResult.Status == KeyCredentialStatus.Success)
 }
 ```
 
-첫 번째 줄 [**KeyCredentialManager.OpenAsync**](https://msdn.microsoft.com/library/windows/apps/dn973046)에서는 키 핸들을 열도록 OS에 요청합니다. 이 과정이 완료되면 [**KeyCredential.RequestSignAsync**](https://msdn.microsoft.com/library/windows/apps/dn973058) 메서드를 사용하여 시도 메시지에 서명할 수 있으며, 이 경우 Windows Hello를 통해 OS에서 사용자 PIN 또는 생체 인식 정보를 요청합니다. 개발자는 절대로 사용자의 개인 키에 액세스할 수 없습니다. API를 통해 모두 안전하게 보관됩니다.
+첫 번째 줄 [**KeyCredentialManager.OpenAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredentialmanager.openasync)에서는 키 핸들을 열도록 OS에 요청합니다. 이 과정이 완료되면 [**KeyCredential.RequestSignAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredential.requestsignasync) 메서드를 사용하여 시도 메시지에 서명할 수 있으며, 이 경우 Windows Hello를 통해 OS에서 사용자 PIN 또는 생체 인식 정보를 요청합니다. 개발자는 절대로 사용자의 개인 키에 액세스할 수 없습니다. API를 통해 모두 안전하게 보관됩니다.
 
 API는 개인 키를 사용해 시도에 서명하도록 OS에 요청하며, 그러면 시스템은 사용자에게 PIN 코드나 구성된 생체 인식 로그온을 요구합니다. 올바른 정보가 입력되면 시스템은 암호화 기능을 수행하고 시도에 서명하도록 TPM 칩에 요청합니다. TPM을 사용할 수 없는 경우에는 대체 소프트웨어 솔루션을 사용할 수 있습니다. 클라이언트는 서명된 시도를 다시 서버에 전송해야 합니다.
 
@@ -387,9 +387,9 @@ UI는 다음과 같습니다.
 
 ![Windows Hello UI](images/passport-ui.png)
 
-사용자가 Windows Hello를 사용하기로 한 경우, 앞의 설명대로 [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만듭니다. 백 엔드 등록 서버에서는 데이터베이스에 공개 키와 (선택적으로) 증명서를 추가합니다. 사용자가 이미 사용자 이름 및 암호를 사용하여 인증되었기 때문에 서버에서는 새 자격 증명을 데이터베이스에 있는 현재 사용자 정보에 연결할 수 있습니다. 데이터베이스 모델은 앞에서 설명한 예제와 동일한 것일 수 있습니다.
+사용자가 Windows Hello를 사용하기로 한 경우, 앞의 설명대로 [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential)을 만듭니다. 백 엔드 등록 서버에서는 데이터베이스에 공개 키와 (선택적으로) 증명서를 추가합니다. 사용자가 이미 사용자 이름 및 암호를 사용하여 인증되었기 때문에 서버에서는 새 자격 증명을 데이터베이스에 있는 현재 사용자 정보에 연결할 수 있습니다. 데이터베이스 모델은 앞에서 설명한 예제와 동일한 것일 수 있습니다.
 
-앱에서 사용자 [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만든 경우 이 사용자 ID를 격리된 저장소에 저장하여 앱 재시작 시 사용자가 목록에서 이 계정을 선택할 수 있도록 합니다. 이 시점부터는 이전 장에서 설명한 예제와 흐름이 정확히 동일합니다.
+앱에서 사용자 [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential)을 만든 경우 이 사용자 ID를 격리된 저장소에 저장하여 앱 재시작 시 사용자가 목록에서 이 계정을 선택할 수 있도록 합니다. 이 시점부터는 이전 장에서 설명한 예제와 흐름이 정확히 동일합니다.
 
 전체 Windows Hello로 마이그레이션하는 시나리오에서 마지막 단계는 앱에서 로그온 이름 및 암호 옵션을 사용하지 않도록 설정한 후 저장해 둔 해시 암호를 데이터베이스에서 제거하는 것입니다.
 
@@ -408,7 +408,7 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 ### <a name="61-articles-and-sample-code"></a>6.1 문서 및 샘플 코드
 
 - [Windows Hello 개요](https://windows.microsoft.com/windows-10/getstarted-what-is-hello)
-- [Windows Hello에 대 한 구현 세부 정보](https://msdn.microsoft.com/library/mt589441)
+- [Windows Hello에 대 한 구현 세부 정보](https://technet.microsoft.com/itpro/windows/keep-secure/microsoft-passport-guide)
 - [Windows Hello GitHub의 코드 샘플](https://go.microsoft.com/fwlink/?LinkID=717812)
 
 ### <a name="62-terminology"></a>6.2 용어

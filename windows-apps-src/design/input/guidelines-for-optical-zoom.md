@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fcbaa0a3db826ef971878acd6a553dd7a836508
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b63c9191489ecae54b17cb75b8aa1af32f09fcb8
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594968"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363597"
 ---
 # <a name="optical-zoom-and-resizing"></a>광학 줌 및 크기 조정
 
@@ -21,7 +21,7 @@ ms.locfileid: "57594968"
 
 이 문서에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘 사용하는 방법에 대한 사용자 환경 지침을 제공합니다.
 
-> **중요 API**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)하십시오 [ **입력 (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **중요 API**: [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)하십시오 [ **입력 (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
 광학 줌을 사용하면 콘텐츠 영역 내에서 콘텐츠 보기를 확대할 수 있지만(콘텐츠 영역 자체에 대해 수행) 크기 조정을 사용하면 콘텐츠 영역 보기는 바뀌지 않으면서 콘텐츠 영역 내에서 하나 이상 개체의 상대 크기를 변경할 수 있습니다(콘텐츠 영역 내 개체에 대해 수행).
 
@@ -49,13 +49,13 @@ ms.locfileid: "57594968"
 -   최대 및 최소 크기 제약 조건이나 경계가 정의된 경우 사용자가 해당 경계에 도달하면 표시할 시각적 피드백을 사용합니다.
 -   끌기 지점을 사용하여 조작을 중지할 논리 지점을 제공함으로써 확대/축소 및 크기 조정 동작에 영향을 주고 특정 콘텐츠 부분이 뷰포트에 표시되도록 합니다. 사용자가 확대/축소 수준 또는 논리적 보기를 보다 쉽게 선택할 수 있도록 해당 수준에 대해 끌기 지점을 제공합니다. 예를 들어 사진 앱은 크기 조정 끌기 지점을 100%로 제공할 수 있고, 지도 앱의 경우 시/군/구, 시/도 및 국가 보기에서 끌기 지점이 유용할 수 있습니다.
 
-    끌기 지점은 부정확한 측면이 있지만 목표에 도달할 수 있도록 합니다. XAML을 사용하는 경우 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)의 끌기 지점 속성을 참조하세요. JavaScript 및 HTML의 경우 [**-ms-content-zoom-snap-points**](https://msdn.microsoft.com/library/hh771895)를 참조하세요.
+    끌기 지점은 부정확한 측면이 있지만 목표에 도달할 수 있도록 합니다. XAML을 사용하는 경우 [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)의 끌기 지점 속성을 참조하세요. JavaScript 및 HTML의 경우 [ **-ms-content-zoom-snap-points**](https://msdn.microsoft.com/library/hh771895)를 참조하세요.
 
     다음 두 가지 끌기 지점 유형이 있습니다.
 
     -   근접 - 접촉을 뗀 후 끌기 지점의 거리 임계값 내에서 관성이 멈추면 끌기 지점이 선택됩니다. 근접 끌기 지점을 사용할 경우 끌기 지점 사이에서 확대/축소 또는 크기 조정을 끝낼 수 있습니다.
     -   필수 - 제스처의 방향과 속도에 따라 접촉을 떼기 전에 마지막으로 교차한 끌기 지점 바로 앞이나 뒤에 있는 끌기 지점이 선택됩니다. 필수 끌기 지점에서 조작을 끝내야 합니다.
--   관성 물리학을 사용합니다. 예를 들면 다음과 같습니다.
+-   관성 물리학을 사용합니다. 여기에는 다음과 같은 옵션이 포함됩니다.
     -   감속: 밀기 또는 늘이기 중지할 때 발생 합니다. 이 동작은 매끄러운 표면을 미끄러지다가 멈추는 것과 비슷합니다.
     -   반송: 경계는 전달 또는 때 크기 제약 조건 약간 백 바운스 효과 발생 합니다.
 -   [타기팅에 대한 지침](guidelines-for-targeting.md)에 따라 컨트롤 간격을 조정합니다.
@@ -85,7 +85,7 @@ ms.locfileid: "57594968"
 * [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
 * [입력: Windows 8 제스처 샘플](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처 (c + +) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [입력: 조작 및 제스처 (C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
 * [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 

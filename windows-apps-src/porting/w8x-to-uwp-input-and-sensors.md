@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5847553bed563b724bb142f7abe62403fa8ec097
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d30554c22fbd40a555f51b25011b128072a16165
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645188"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372228"
 ---
 # <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>I/O, 디바이스 및 앱 모델에 대해 Windows 런타임 8.x를 UWP로 포팅
 
@@ -27,17 +27,17 @@ ms.locfileid: "57645188"
 
 유니버설 8.1 앱의 경우 비활성화되는 앱과 일시 중단 이벤트를 발생시키는 시스템 간에 2초의 "디바운스 기간"이 있습니다. 일시 중단 상태에 대한 추가 시간으로 이 디바운스 기간을 사용하는 것은 안전하지 않으며 UWP(유니버설 Windows 플랫폼) 앱의 경우 디바운스 기간이 없습니다. 즉, 앱이 비활성화되는 즉시 일시 중단 이벤트가 발생합니다.
 
-자세한 내용은 [앱 수명 주기](https://msdn.microsoft.com/library/windows/apps/mt243287)를 참조하세요.
+자세한 내용은 [앱 수명 주기](https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle)를 참조하세요.
 
 ## <a name="background-audio"></a>백그라운드 오디오
 
 
-에 대 한 합니다 [ **MediaElement.AudioCategory** ](https://msdn.microsoft.com/library/windows/apps/br227352) 속성인 **ForegroundOnlyMedia** 하 고 **BackgroundCapableMedia** 에 대 한 사용 되지 않습니다 Windows 10 앱입니다. Windows Phone 스토어 앱 모델을 대신 사용합니다. 자세한 내용은 [배경 오디오](https://msdn.microsoft.com/library/windows/apps/mt282140)를 참조하세요.
+에 대 한 합니다 [ **MediaElement.AudioCategory** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaelement.audiocategory) 속성인 **ForegroundOnlyMedia** 하 고 **BackgroundCapableMedia** 에 대 한 사용 되지 않습니다 Windows 10 앱입니다. Windows Phone 스토어 앱 모델을 대신 사용합니다. 자세한 내용은 [배경 오디오](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)를 참조하세요.
 
 ## <a name="detecting-the-platform-your-app-is-running-on"></a>앱이 실행되고 있는 플랫폼 검색
 
 
-Windows 10을 사용 하 여 앱을 대상으로 변경 하는 방법에 대 한 생각 하는 방법입니다. 새로운 개념적 모델에서는 앱이 UWP(유니버설 Windows 플랫폼)를 대상으로 하고 모든 Windows 디바이스에서 실행됩니다. 그런 다음 특정 디바이스 패밀리에 독점적으로 사용되는 기능을 돋보이도록 선택할 수 있습니다. 또한 필요한 경우 앱에는 특별히 하나 이상의 디바이스 패밀리를 대상으로 하도록 자체적으로 제한하는 옵션도 있습니다. 디바이스 패밀리와 대상으로 할 디바이스 패밀리를 결정하는 방법에 대한 자세한 내용은 [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
+Windows 10을 사용 하 여 앱을 대상으로 변경 하는 방법에 대 한 생각 하는 방법입니다. 새로운 개념적 모델에서는 앱이 UWP(유니버설 Windows 플랫폼)를 대상으로 하고 모든 Windows 디바이스에서 실행됩니다. 그런 다음 특정 디바이스 패밀리에 독점적으로 사용되는 기능을 돋보이도록 선택할 수 있습니다. 또한 필요한 경우 앱에는 특별히 하나 이상의 디바이스 패밀리를 대상으로 하도록 자체적으로 제한하는 옵션도 있습니다. 디바이스 패밀리와 대상으로 할 디바이스 패밀리를 결정하는 방법에 대한 자세한 내용은 [UWP 앱 지침](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)을 참조하세요.
 
 실행되고 있는 운영 체제를 검색하는 유니버설 8.1 앱의 코드가 있다면 논리에 대한 원인에 따라 코드를 변경해야 할 수 있습니다. 앱이 값에 대해 작업하지 않고 통과시킨다면 계속해서 운영 체제 정보를 수집할 수 있습니다.
 
@@ -45,9 +45,9 @@ Windows 10을 사용 하 여 앱을 대상으로 변경 하는 방법에 대 한
 
  
 
-앱의 UI를 서로 다른 디바이스에 맞게 구성하는 데 권장되는 여러 기술이 있습니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 유효 픽셀(이전의 보기 픽셀)로 크기를 사용하므로 다른 해상도 및 배율에 맞게 UI를 조정할 수 있습니다(참조 [유효 픽셀, 가시거리 및 배율 인수](w8x-to-uwp-porting-xaml-and-ui.md) 참조). Visual State Manager의 적응 트리거 및 setter를 사용하여 창 크기에 맞게 UI를 조정할 수 있습니다([UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631) 참조).
+앱의 UI를 서로 다른 디바이스에 맞게 구성하는 데 권장되는 여러 기술이 있습니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 유효 픽셀(이전의 보기 픽셀)로 크기를 사용하므로 다른 해상도 및 배율에 맞게 UI를 조정할 수 있습니다(참조 [유효 픽셀, 가시거리 및 배율 인수](w8x-to-uwp-porting-xaml-and-ui.md) 참조). Visual State Manager의 적응 트리거 및 setter를 사용하여 창 크기에 맞게 UI를 조정할 수 있습니다([UWP 앱 지침](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) 참조).
 
-그러나 디바이스 패밀리 검색이 반드시 필요한 경우에는 검색을 수행할 수 있습니다. 이 예제에서는 [**AnalyticsVersionInfo**](https://msdn.microsoft.com/library/windows/apps/dn960165) 클래스를 사용하여 적절한 경우 디바이스 패밀리에 맞게 조정된 페이지를 탐색하고 그렇지 않은 경우 다시 기본 페이지를 사용할 수 있는지 확인합니다.
+그러나 디바이스 패밀리 검색이 반드시 필요한 경우에는 검색을 수행할 수 있습니다. 이 예제에서는 [**AnalyticsVersionInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.AnalyticsVersionInfo) 클래스를 사용하여 적절한 경우 디바이스 패밀리에 맞게 조정된 페이지를 탐색하고 그렇지 않은 경우 다시 기본 페이지를 사용할 수 있는지 확인합니다.
 
 ```csharp
    if (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Mobile")
@@ -56,7 +56,7 @@ Windows 10을 사용 하 여 앱을 대상으로 변경 하는 방법에 대 한
         rootFrame.Navigate(typeof(MainPage), e.Arguments);
 ```
 
-또한 앱이 적용되는 리소스 선택 요소에서 실행되고 있는 디바이스 패밀리를 결정할 수도 있습니다. 아래 예제는 명령을 통해 이를 수행하는 방법을 보여 주며, [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/br206071) 항목에서는 디바이스 패밀리 요소에 따라 디바이스 패밀리별 리소스를 로드하는 데 있어 클래스의 일반적인 사용 사례에 관해 설명합니다.
+또한 앱이 적용되는 리소스 선택 요소에서 실행되고 있는 디바이스 패밀리를 결정할 수도 있습니다. 아래 예제는 명령을 통해 이를 수행하는 방법을 보여 주며, [**ResourceContext.QualifierValues**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues) 항목에서는 디바이스 패밀리 요소에 따라 디바이스 패밀리별 리소스를 로드하는 데 있어 클래스의 일반적인 사용 사례에 관해 설명합니다.
 
 ```csharp
 var qualifiers = Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView().QualifierValues;

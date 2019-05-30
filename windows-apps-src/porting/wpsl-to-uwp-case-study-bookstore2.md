@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ae1b0c272af5939deba73ff7a07797207d7caaa4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e3b6ab53e5e9f0b36e6bdeb047b48766cda7a2a5
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651008"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372397"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore2"></a>Windows Phone Silverlight UWP 사례 연구: Bookstore2
 
@@ -58,7 +58,7 @@ MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
 -   나머지 네임스페이스 접두사 선언에서 ‘clr 네임스페이스’를 ‘사용’으로 변경합니다.
 -   `SupportedOrientations="Portrait"` 및 `Orientation="Portrait"`를 삭제하고 새 프로젝트의 앱 패키지 매니페스트에서 **세로**를 구성합니다.
 -   `shell:SystemTray.IsVisible="True"`을(를) 삭제합니다.
--   점프 목록 항목 변환기 유형(태그에서 리소스로 존재)이 [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818) 네임스페이스로 이동했습니다. 따라서 네임 스페이스 접두사 선언만 Windows를 추가\_UI\_Xaml\_컨트롤\_기본형 매핑합니다 **Windows.UI.Xaml.Controls.Primitives**합니다. 점프 목록의 항목 변환기 리소스에서 접두사를 `phone:`에서 `Windows_UI_Xaml_Controls_Primitives:`(으)로 변경합니다.
+-   점프 목록 항목 변환기 유형(태그에서 리소스로 존재)이 [**Windows.UI.Xaml.Controls.Primitives**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives) 네임스페이스로 이동했습니다. 따라서 네임 스페이스 접두사 선언만 Windows를 추가\_UI\_Xaml\_컨트롤\_기본형 매핑합니다 **Windows.UI.Xaml.Controls.Primitives**합니다. 점프 목록의 항목 변환기 리소스에서 접두사를 `phone:`에서 `Windows_UI_Xaml_Controls_Primitives:`(으)로 변경합니다.
 -   [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)의 경우에서 그랬던 것처럼, `PhoneTextExtraLargeStyle` **TextBlock** 스타일에 대한 모든 참조를 `SubtitleTextBlockStyle`에 대한 참조로 바꾸고, `PhoneTextSubtleStyle`은(는) `SubtitleTextBlockStyle`(으)로, `PhoneTextNormalStyle`은(는) `CaptionTextBlockStyle`(으)로, `PhoneTextTitle1Style`은(는) `HeaderTextBlockStyle`(으)로 바꿉니다.
 -   `BookTemplate`의 한 가지 예외가 있습니다. 두 번째 **TextBlock**의 스타일은 `CaptionTextBlockStyle`을 참조해야 합니다.
 -   `AuthorGroupHeaderTemplate` 내부의 **TextBlock**에서 FontFamily 특성을 제거하고, **Border**의 Background가 `PhoneAccentBrush` 대신 `SystemControlBackgroundAccentBrush`를 참조하도록 설정합니다.
@@ -67,7 +67,7 @@ MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
 ## <a name="replacing-the-longlistselector"></a>LongListSelector 교체
 
 
-**LongListSelector**를 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤로 바꾸는 과정은 여러 단계가 필요합니다. 이제 시작하겠습니다. **LongListSelector**는 그룹화된 데이터 원본에 직접 바인딩하지만 **SemanticZoom**은 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) 컨트롤을 포함합니다. 후자의 경우 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) 어댑터를 통해 데이터로 간접적으로 바인딩합니다. **CollectionViewSource**는 태그의 리소스로 존재해야 하기 때문에 먼저 `<Page.Resources>` 내 MainPage.xaml의 태그에 추가하겠습니다.
+**LongListSelector**를 [**SemanticZoom**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom) 컨트롤로 바꾸는 과정은 여러 단계가 필요합니다. 이제 시작하겠습니다. **LongListSelector**는 그룹화된 데이터 원본에 직접 바인딩하지만 **SemanticZoom**은 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 또는 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) 컨트롤을 포함합니다. 후자의 경우 [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) 어댑터를 통해 데이터로 간접적으로 바인딩합니다. **CollectionViewSource**는 태그의 리소스로 존재해야 하기 때문에 먼저 `<Page.Resources>` 내 MainPage.xaml의 태그에 추가하겠습니다.
 
 ```xml
     <CollectionViewSource
@@ -142,7 +142,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
 
 적응 Visual State Manager 기능을 사용하기 전에 먼저 넓은 상태를 디자인해야 합니다. 즉, 새로운 몇몇 시각적 요소 및 템플릿을 태그에 추가합니다. 다음 단계에서 이 작업을 수행하는 방법을 설명합니다. 시각적 요소 및 템플릿의 명명 규칙을 통해 넓은 상태에 적합한 요소 또는 템플릿의 이름에 "wide"라는 단어를 포함합니다. 요소 또는 템플릿에 "wide"라는 단어가 포함되어 있지 않으면 요소 또는 템플릿이 좁은 상태에 적합하며 좁은 상태가 기본 상태이고 해당 속성 값이 페이지에서 시각적 요소의 로컬 값으로 설정되었다고 가정할 수 있습니다. 넓은 상태의 속성 값만 태그의 실제 시각적 상태를 통해 설정됩니다.
 
--   태그에서 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤의 복사본을 만들고 복사본에서 `x:Name="narrowSeZo"`를 설정합니다. 원본에서 `x:Name="wideSeZo"`를 설정하고 기본적으로 넓은 보기가 표시되지 않도록 `Visibility="Collapsed"`도 설정합니다.
+-   태그에서 [**SemanticZoom**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom) 컨트롤의 복사본을 만들고 복사본에서 `x:Name="narrowSeZo"`를 설정합니다. 원본에서 `x:Name="wideSeZo"`를 설정하고 기본적으로 넓은 보기가 표시되지 않도록 `Visibility="Collapsed"`도 설정합니다.
 -   `wideSeZo`에서 확대 보기와 축소 보기 둘 다의 **ListView**를 **GridView**로 변경합니다.
 -   세 가지 리소스 즉, `AuthorGroupHeaderTemplate`, `ZoomedOutAuthorTemplate` 및 `BookTemplate`의 복사본을 만들고 `Wide`라는 단어를 복사본의 키에 추가합니다. 또한 `wideSeZo`도 업데이트하여 이러한 새 리소스의 키를 참조하도록 합니다.
 -   `AuthorGroupHeaderTemplateWide`의 내용을 `<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Text="{Binding Name}"/>`으로 바꿉니다.
@@ -220,7 +220,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
 
 -   `AuthorGroupHeaderTemplate`에서, 모바일 디바이스 패밀리에서 실행될 때 올바르게 표시되도록 **TextBlock**에서 `Foreground="White"`를 설정합니다.
 -   `FontWeight="SemiBold"`를 `AuthorGroupHeaderTemplate`과 `ZoomedOutAuthorTemplate` 둘 다의 **TextBlock**에 추가합니다.
--   `narrowSeZo`에서 축소 보기의 그룹 헤더와 저자는 확대되지 않고 왼쪽 맞춤 정렬됩니다. 이제 시작해보겠습니다. [  **HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/br209417)가 `Stretch`로 설정된 확대 보기의 [**HeaderContainerStyle**](https://msdn.microsoft.com/library/windows/apps/dn251841)을 생성합니다. 또한 동일한 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817)를 포함하고 있는 축소 보기의 [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/br242817)을 생성합니다. 다음과 같이 표시됩니다.
+-   `narrowSeZo`에서 축소 보기의 그룹 헤더와 저자는 확대되지 않고 왼쪽 맞춤 정렬됩니다. 이제 시작해보겠습니다. [  **HorizontalContentAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.horizontalcontentalignment)가 `Stretch`로 설정된 확대 보기의 [**HeaderContainerStyle**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.groupstyle.headercontainerstyle)을 생성합니다. 또한 동일한 [**Setter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter)를 포함하고 있는 축소 보기의 [**ItemContainerStyle**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)을 생성합니다. 다음과 같이 표시됩니다.
 
 ```xml
    <Style x:Key="AuthorGroupHeaderContainerStyle" TargetType="ListViewHeaderItem">

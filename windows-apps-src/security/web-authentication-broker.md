@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 473b7ef9f4efacbbe78e1fdb5563695f8211bca8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c8130c6a8e4d8441fdf8ff60c702bd1ae30bae6e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606748"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372261"
 ---
 # <a name="web-authentication-broker"></a>웹 인증 브로커
 
 
 
 
-이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱을 OpenID 또는 OAuth 인증 프로토콜을 사용하는 온라인 ID 공급자(예: Facebook, Twitter, Flickr, Instagram 등)에 연결하는 방법을 설명합니다. [  **AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 메서드는 온라인 ID 공급자로 요청을 보내고 앱이 액세스할 수 있는 공급자 리소스에 대해 설명하는 액세스 토큰을 다시 가져옵니다.
+이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱을 OpenID 또는 OAuth 인증 프로토콜을 사용하는 온라인 ID 공급자(예: Facebook, Twitter, Flickr, Instagram 등)에 연결하는 방법을 설명합니다. [  **AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) 메서드는 온라인 ID 공급자로 요청을 보내고 앱이 액세스할 수 있는 공급자 리소스에 대해 설명하는 액세스 토큰을 다시 가져옵니다.
 
 >[!NOTE]
 >완전한 코드 샘플을 사용하려면 [GitHub의 WebAuthenticationBroker 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=620622)를 복제하세요.
@@ -35,7 +35,7 @@ ms.locfileid: "57606748"
 
 요청 URI는 앱 ID 또는 암호, 인증 완료 후 사용자에게 전송되는 리디렉션 URI 및 예상 응답 유형과 같은 기타 필수 정보가 추가된 인증 요청을 온라인 공급자에 보내는 주소로 구성됩니다. 필요한 매개 변수는 공급자에서 확인할 수 있습니다.
 
-요청 URI는 [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 메서드의 *requestUri* 매개 변수로 전송됩니다. `https://`로 시작하는 보안 주소여야 합니다.
+요청 URI는 [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) 메서드의 *requestUri* 매개 변수로 전송됩니다. `https://`로 시작하는 보안 주소여야 합니다.
 
 다음 예에서는 요청 URI를 작성하는 방법을 보여 줍니다.
 
@@ -50,7 +50,7 @@ System.Uri endURI = new System.Uri(endURL);
 ## <a name="connect-to-the-online-provider"></a>온라인 공급자에 연결
 
 
-[  **AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 메서드를 호출하여 온라인 ID 공급자에 연결하고 액세스 토큰을 가져옵니다. 메서드는 이전 단계에서 구성된 URI*requestUri* 매개 변수로 사용하고 사용자를 리디렉션할 URI를 *callbackUri* 매개 변수로 사용합니다.
+[  **AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) 메서드를 호출하여 온라인 ID 공급자에 연결하고 액세스 토큰을 가져옵니다. 메서드는 이전 단계에서 구성된 URI*requestUri* 매개 변수로 사용하고 사용자를 리디렉션할 URI를 *callbackUri* 매개 변수로 사용합니다.
 
 ```cs
 string result;
@@ -87,14 +87,14 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->[  **AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 외에 [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) 네임스페이스는 [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425) 메서드를 포함합니다. 이 메서드를 호출하지 마세요. Windows Phone 8.1에만 대상으로 하는 앱에 대 한 설계 되었으며 Windows 10을 사용 하 여 시작 하는 사용 되지 않습니다.
+>[  **AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) 외에 [**Windows.Security.Authentication.Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web) 네임스페이스는 [**AuthenticateAndContinue**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationBroker#methods) 메서드를 포함합니다. 이 메서드를 호출 하지 마세요. Windows Phone 8.1에만 대상으로 하는 앱에 대 한 설계 되었으며 Windows 10을 사용 하 여 시작 하는 사용 되지 않습니다.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>SSO(Single Sign-On)로 연결
 
 
-기본적으로 웹 인증 브로커는 쿠키가 유지되는 것을 허용하지 않습니다. 따라서 앱 사용자가 계속 로그인한 상태로 유지하고 있음을 표시(예: 공급자의 로그인 대화 상자에서 확인란 선택)해도 해당 공급자에 대한 리소스에 액세스할 때마다 로그인해야 합니다. SSO로 로그인하려면 온라인 ID 공급자는 웹 인증 브로커에 SSO를 사용하도록 설정해야 하며 앱은 *callbackUri* 매개 변수를 사용하지 않는 [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212068)의 오버로드를 호출해야 합니다. 이렇게 하면 웹 인증 브로커가 영구적 쿠키를 저장할 수 있기 때문에 향후 같은 앱에서 인증을 호출할 때 사용자가 반복적으로 로그인을 할 필요가 없습니다(액세스 토큰이 만료될 때까지 사용자가 효과적으로 "로그인").
+기본적으로 웹 인증 브로커는 쿠키가 유지되는 것을 허용하지 않습니다. 따라서 앱 사용자가 계속 로그인한 상태로 유지하고 있음을 표시(예: 공급자의 로그인 대화 상자에서 확인란 선택)해도 해당 공급자에 대한 리소스에 액세스할 때마다 로그인해야 합니다. SSO로 로그인하려면 온라인 ID 공급자는 웹 인증 브로커에 SSO를 사용하도록 설정해야 하며 앱은 *callbackUri* 매개 변수를 사용하지 않는 [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync)의 오버로드를 호출해야 합니다. 이렇게 하면 웹 인증 브로커가 영구적 쿠키를 저장할 수 있기 때문에 향후 같은 앱에서 인증을 호출할 때 사용자가 반복적으로 로그인을 할 필요가 없습니다(액세스 토큰이 만료될 때까지 사용자가 효과적으로 "로그인").
 
-SSO를 지원하려면 온라인 공급자가 `ms-app://<appSID>` 형식의 리디렉션 URI 등록할 수 있도록 허용해야 합니다. 여기서 `<appSID>`는 앱의 SID입니다. 앱의 SID는 앱의 앱 개발자 페이지에서나 [**GetCurrentApplicationCallbackUri**](https://msdn.microsoft.com/library/windows/apps/br212069) 메서드를 호출하여 확인할 수 있습니다.
+SSO를 지원하려면 온라인 공급자가 `ms-app://<appSID>` 형식의 리디렉션 URI 등록할 수 있도록 허용해야 합니다. 여기서 `<appSID>`는 앱의 SID입니다. 앱의 SID는 앱의 앱 개발자 페이지에서나 [**GetCurrentApplicationCallbackUri**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.getcurrentapplicationcallbackuri) 메서드를 호출하여 확인할 수 있습니다.
 
 ```cs
 string result;

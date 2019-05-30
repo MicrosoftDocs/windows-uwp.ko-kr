@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 175009773f7969adbaf36a036e733443f593467f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 940de8c00dc2639785ae82e87d63f4994b1b6b2e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620558"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367744"
 ---
 #  <a name="define-the-uwp-app-framework"></a>UWP 앱 프레임워크 정의
 
@@ -22,11 +22,11 @@ ms.locfileid: "57620558"
 뷰 공급자 개체는 __IFrameworkView__ 인터페이스를 구현하는데, 이 인터페이스는 이 게임 샘플을 생성하기 위해 구성해야 하는 일련의 메서드로 이루어져 있습니다.
 
 앱 단일 항목이 호출하는 이러한 5가지 메서드를 반드시 구현해야 합니다.
-* [__초기화__](#initialize-the-view-provider)
+* [__Initialize__](#initialize-the-view-provider)
 * [__SetWindow__](#configure-the-window-and-display-behaviors)
 * [__부하__](#load-method-of-the-view-provider)
-* [__실행__](#run-method-of-the-view-provider)
-* [__초기화__](#uninitialize-method-of-the-view-provider)
+* [__Run__](#run-method-of-the-view-provider)
+* [__Uninitialize__](#uninitialize-method-of-the-view-provider)
 
 __Initialize__ 메서드는 응용 프로그램 시작 시 호출됩니다. __Initialize__에 이어 __SetWindow__ 메서드가 호출됩니다. 그런 다음 __Load__ 메서드가 호출됩니다. 게임이 실행 중일 때 __Run__ 메시지가 호출됩니다. 게임이 종료되면 __Uninitialize__ 메서드가 호출됩니다. 자세한 내용은 [__IFrameworkView__ API 참조](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview)를 참조하세요. 
 
@@ -71,7 +71,7 @@ IFrameworkView^ DirectXApplicationSource::CreateView()
 
 ## <a name="initialize-the-view-provider"></a>뷰 공급자 초기화
 
-뷰 공급자 개체가 생성되고 나면 응용 프로그램 시작 시 앱 단일 항목이 [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495) 메서드를 호출합니다. 따라서 주 창의 활성화를 처리하고 게임에서 갑작스러운 일시 중단(및 나중에 다시 시작 가능) 이벤트를 처리하도록 하는 등 UWP 게임의 기본 동작 대부분을 이 메서드에서 처리한다는 점은 매우 중요합니다.
+뷰 공급자 개체가 생성되고 나면 응용 프로그램 시작 시 앱 단일 항목이 [**Initialize**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.initialize) 메서드를 호출합니다. 따라서 주 창의 활성화를 처리하고 게임에서 갑작스러운 일시 중단(및 나중에 다시 시작 가능) 이벤트를 처리하도록 하는 등 UWP 게임의 기본 동작 대부분을 이 메서드에서 처리한다는 점은 매우 중요합니다.
 
 이제 게임 앱은 일시 중지(또는 재개) 메시지를 처리할 수 있습니다. 그러나 여전히 작업할 창이 없고 게임이 초기화되지 않습니다. 따라서 몇 가지 작업을 더 수행해야 합니다.
 
@@ -105,11 +105,11 @@ void App::Initialize(
 
 ## <a name="configure-the-window-and-display-behaviors"></a>창과 디스플레이 동작 구성
 
-이제 [__SetWindow__](https://msdn.microsoft.com/library/windows/apps/hh700509) 구현에 대해 살펴보겠습니다. __SetWindow__ 메서드에서 창과 디스플레이 동작을 구성합니다.
+이제 [__SetWindow__](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.setwindow) 구현에 대해 살펴보겠습니다. __SetWindow__ 메서드에서 창과 디스플레이 동작을 구성합니다.
 
 ### <a name="appsetwindow-method"></a>App::SetWindow 메서드
 
-앱 단일 항목은 게임의 주 창을 표시하고 리소스와 이벤트를 게임에서 사용할 수 있도록 해주는 [__CoreWindow__](https://msdn.microsoft.com/library/windows/apps/br208225) 개체를 제공합니다. 이제 작업할 수 있는 창이 생겼기 때문에 게임의 기본적인 UI 구성 요소 및 이벤트에서 추가를 시작할 수 있습니다.
+앱 단일 항목은 게임의 주 창을 표시하고 리소스와 이벤트를 게임에서 사용할 수 있도록 해주는 [__CoreWindow__](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 개체를 제공합니다. 이제 작업할 수 있는 창이 생겼기 때문에 게임의 기본적인 UI 구성 요소 및 이벤트에서 추가를 시작할 수 있습니다.
 
 그런 다음, 마우스 컨트롤과 터치 컨트롤 모두에서 사용할 수 있는 __CoreCursor__ 메서드를 사용하여 포인터를 생성합니다.
 
@@ -162,7 +162,7 @@ void App::SetWindow(
 
 ## <a name="load-method-of-the-view-provider"></a>뷰 공급자의 Load 메서드
 
-주 창이 설정되면 앱 단일 항목에서 [__Load__](https://msdn.microsoft.com/library/windows/apps/hh700501)를 호출합니다. 이 메서드에서는 일련의 비동기 작업을 사용하여 게임 개체를 생성하고 그래픽 리소스를 로드하며 게임의 상태 시스템을 초기화합니다. 게임 데이터나 자산을 미리 가져오려면 **SetWindow**나 **Initialize**가 아닌 이 메서드를 사용하는 것이 좋습니다. 
+주 창이 설정되면 앱 단일 항목에서 [__Load__](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.load)를 호출합니다. 이 메서드에서는 일련의 비동기 작업을 사용하여 게임 개체를 생성하고 그래픽 리소스를 로드하며 게임의 상태 시스템을 초기화합니다. 게임 데이터나 자산을 미리 가져오려면 **SetWindow**나 **Initialize**가 아닌 이 메서드를 사용하는 것이 좋습니다. 
 
 Windows는 비동기 작업 패턴을 사용하여 입력 처리를 시작하기 앞서 게임을 할 수 있는 시간에 제한을 두기 때문에 __Load__ 메서드가 신속하게 완료되어 입력 처리를 시작할 수 있도록 설계해야 합니다. 리소스가 많아서 로드에 많은 시간이 걸리는 경우, 정기적으로 업데이트되는 진행률 표시줄을 사용자에게 제공합니다. 이 메서드는 게임 시작에 앞서 시작 상태나 전역 값을 설정하는 등 필요한 준비를 수행하는 데도 사용됩니다.
 
@@ -308,9 +308,9 @@ GameMain::GameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) 
     * __비활성화__: 게임 창이 비활성화(포커스를 잃음)되거나 사이드 창이 됩니다. 이 경우 게임이 이벤트 처리를 일시 중단하고 창이 포커스를 얻거나 비사이드될 때까지 기다립니다.
     * __TooSmall__: 게임에서 자신의 상태를 업데이트 하 고 표시할 그래픽을 렌더링 합니다.
 
-게임에 포커스가 있으면 메시지가 도착할 때 메시지 큐의 모든 이벤트를 처리해야 하므로 **ProcessAllIfPresent** 옵션을 사용하여 [**CoreWindowDispatch.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215)를 호출해야 합니다. 다른 옵션을 사용하면 메시지 이벤트 처리가 지연되어 게임이 응답하지 않는 것처럼 보이거나 터치 동작이 느리고 "고정"되지 않는 것처럼 느끼게 됩니다.
+게임에 포커스가 있으면 메시지가 도착할 때 메시지 큐의 모든 이벤트를 처리해야 하므로 **ProcessAllIfPresent** 옵션을 사용하여 [**CoreWindowDispatch.ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents)를 호출해야 합니다. 다른 옵션을 사용하면 메시지 이벤트 처리가 지연되어 게임이 응답하지 않는 것처럼 보이거나 터치 동작이 느리고 "고정"되지 않는 것처럼 느끼게 됩니다.
 
-게임이 표시되지 않거나, 일시 중단되거나, 사이드 상태가 된 경우에는 도착하지 않는 메시지를 계속 디스패치하느라 리소스가 소비되는 일이 없어야 합니다. 이 경우에는 게임에서 **ProcessOneAndAllPending**을 사용하여 이벤트를 받을 때까지 차단하고, 해당 이벤트와 첫 번째 이벤트 처리 중 프로세스 큐에 도착하는 다른 이벤트를 처리합니다. [**ProcessEvents** ](https://msdn.microsoft.com/library/windows/apps/br208215) 큐 처리 된 후 다음 즉시 반환 합니다.
+게임이 표시되지 않거나, 일시 중단되거나, 사이드 상태가 된 경우에는 도착하지 않는 메시지를 계속 디스패치하느라 리소스가 소비되는 일이 없어야 합니다. 이 경우에는 게임에서 **ProcessOneAndAllPending**을 사용하여 이벤트를 받을 때까지 차단하고, 해당 이벤트와 첫 번째 이벤트 처리 중 프로세스 큐에 도착하는 다른 이벤트를 처리합니다. [**ProcessEvents** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) 큐 처리 된 후 다음 즉시 반환 합니다.
 
 ```cpp
 void App::Run()

@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 만들기
 ms.localizationpriority: medium
-ms.openlocfilehash: af5ffe0dd72f0c3aae21a2dc522b469358626bab
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0c71dfc05bf2f283652087620848396b731871cd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603458"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371959"
 ---
 # <a name="create-a-package-flight"></a>패키지 플라이트 만들기
 
@@ -20,7 +20,7 @@ ms.locfileid: "57603458"
 > [!NOTE]
 > 이 메서드는 제출 없이 패키지 플라이트를 만듭니다. 패키지 플라이트에 대한 제출을 만들려면 [패키지 플라이트 제출 관리](manage-flight-submissions.md)의 메서드를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -33,21 +33,21 @@ ms.locfileid: "57603458"
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights``` |
+| 올리기    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights``` |
 
 
 ### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| Authorization | string | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
 | 이름        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | 문자열 | 필수. 패키지 플라이트를 만들려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
+| applicationId | string | 필수. 패키지 플라이트를 만들려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -56,9 +56,9 @@ ms.locfileid: "57603458"
 
 |  매개 변수  |  형식  |  설명  |  필수  |
 |------|------|------|------|
-|  FriendlyName  |  문자열  |  개발자가 지정한 패키지 플라이트 이름입니다.  |  아니오  |
-|  groupIds  |  배열  |  패키지 플라이트와 연결된 플라이트 그룹의 ID가 포함된 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |  아니오  |
-|  rankHigherThan  |  문자열  |  현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 이 매개 변수를 설정하지 않으면 새 패키지 플라이트에 모든 패키지 플라이트 중 가장 높은 순위가 지정됩니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.    |  아니오  |
+|  FriendlyName  |  string  |  개발자가 지정한 패키지 플라이트 이름입니다.  |  아니요  |
+|  groupIds  |  배열  |  패키지 플라이트와 연결된 플라이트 그룹의 ID가 포함된 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://docs.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |  아니요  |
+|  rankHigherThan  |  string  |  현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 이 매개 변수를 설정하지 않으면 새 패키지 플라이트에 모든 패키지 플라이트 중 가장 높은 순위가 지정됩니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://docs.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.    |  아니요  |
 
 
 ### <a name="request-example"></a>요청 예제
@@ -98,10 +98,10 @@ Content-Type: application/json
 
 | 값      | 형식   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightId            | 문자열  | 패키지 플라이트의 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.  |
-| FriendlyName           | 문자열  | 요청에 지정된 대로의 패키지 플라이트 이름입니다.   |  
-| groupIds           | 배열  | 요청에 지정된 대로 패키지 플라이트와 연결된 플라이트 그룹의 ID를 포함하는 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.   |
-| rankHigherThan           | 문자열  | 요청에 지정된 대로 현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |
+| flightId            | string  | 패키지 플라이트의 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.  |
+| FriendlyName           | string  | 요청에 지정된 대로의 패키지 플라이트 이름입니다.   |  
+| groupIds           | 배열  | 요청에 지정된 대로 패키지 플라이트와 연결된 플라이트 그룹의 ID를 포함하는 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://docs.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.   |
+| rankHigherThan           | string  | 요청에 지정된 대로 현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://docs.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |
 
 
 ## <a name="error-codes"></a>오류 코드

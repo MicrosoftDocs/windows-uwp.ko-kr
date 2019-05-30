@@ -6,16 +6,16 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 사운드
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d5a976ef65bee5efc3329afc98bf198d094b037
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 945270247b8a288554e1910ac1c6f8e5c1ec1619
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589938"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367839"
 ---
 # <a name="add-sound"></a>소리 추가
 
-이 항목에서는 간단한 사운드 엔진을 만듭니다 [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) Api. 처음 사용 하는 경우 __XAudio2__, 아래 짧은 소개 포함 했습니다 [오디오 개념](#audio-concepts)합니다.
+이 항목에서는 간단한 사운드 엔진을 만듭니다 [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-introduction) Api. 처음 사용 하는 경우 __XAudio2__, 아래 짧은 소개 포함 했습니다 [오디오 개념](#audio-concepts)합니다.
 
 >[!Note]
 >이 샘플의 최신 게임 코드를 다운로드하지 않은 경우 [Direct3D 게임 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동합니다. 이 샘플은 UWP 기능 샘플의 큰 컬렉션의 일부입니다. 샘플을 다운로드하는 방법에 대한 지침은 [GitHub에서 UWP 샘플 가져오기](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)를 참조하세요.
@@ -129,10 +129,10 @@ void Simple3DGame::Initialize(
 
 ## <a name="create-and-initialize-the-audio-resources"></a>만들기 및 오디오 리소스를 초기화 합니다.
 
-* 사용 하 여 [XAudio2Create](https://msdn.microsoft.com/library/windows/desktop/ee419212), XAudio2 API 음악 및 소리 효과 엔진을 정의 하는 두 새 XAudio2 개체를 만듭니다. 이 메서드는 개체에 대 한 포인터를 반환 [IXAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415908) 모든 오디오 엔진을 관리 하는 인터페이스 상태, 오디오, 스레드, 음성 그래프 등을 처리 합니다.
-* 엔진에서 인스턴스화된 후 사용 하 여 [IXAudio2::CreateMasteringVoice](https://msdn.microsoft.com/library/windows/desktop/hh405048) 각 사운드 엔진 개체에 대 한 마스터 음성을 만들려고 합니다.
+* 사용 하 여 [XAudio2Create](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-xaudio2create), XAudio2 API 음악 및 소리 효과 엔진을 정의 하는 두 새 XAudio2 개체를 만듭니다. 이 메서드는 개체에 대 한 포인터를 반환 [IXAudio2](https://docs.microsoft.com/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2) 모든 오디오 엔진을 관리 하는 인터페이스 상태, 오디오, 스레드, 음성 그래프 등을 처리 합니다.
+* 엔진에서 인스턴스화된 후 사용 하 여 [IXAudio2::CreateMasteringVoice](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2-createmasteringvoice) 각 사운드 엔진 개체에 대 한 마스터 음성을 만들려고 합니다.
 
-자세한 내용은 이동 [방법: XAudio2 초기화](https://msdn.microsoft.com/library/windows/desktop/ee415779.aspx)합니다.
+자세한 내용은 이동 [방법: XAudio2 초기화](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--initialize-xaudio2)합니다.
 
 ### <a name="audiocreatedeviceindependentresources-method"></a>Audio::CreateDeviceIndependentResources 메서드
 
@@ -172,29 +172,29 @@ void Audio::CreateDeviceIndependentResources()
 
 ### <a name="mediareaderloadmedia-method"></a>MediaReader::LoadMedia 메서드
 
-이 메서드는 [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) API를 사용하여 .wav 오디오 파일을 PCM(Pulse Code Modulation) 버퍼로 읽습니다.
+이 메서드는 [Media Foundation](https://docs.microsoft.com/windows/desktop/medfound/microsoft-media-foundation-sdk) API를 사용하여 .wav 오디오 파일을 PCM(Pulse Code Modulation) 버퍼로 읽습니다.
 
 #### <a name="set-up-the-source-reader"></a>원본 판독기 설정
 
-1. 사용 하 여 [MFCreateSourceReaderFromURL](https://msdn.microsoft.com/library/windows/desktop/dd388110) 미디어 원본 판독기를 만들려면 ([IMFSourceReader](https://msdn.microsoft.com/library/windows/desktop/dd374655)).
-2. 사용 하 여 [MFCreateMediaType](https://msdn.microsoft.com/library/windows/desktop/ms693861) 미디어 형식을 만들려면 ([IMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms704850)) 개체 (_mediaType_). 미디어 형식에 대 한 설명을 나타냅니다. 
+1. 사용 하 여 [MFCreateSourceReaderFromURL](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesourcereaderfromurl) 미디어 원본 판독기를 만들려면 ([IMFSourceReader](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsourcereader)).
+2. 사용 하 여 [MFCreateMediaType](https://docs.microsoft.com/windows/desktop/api/mfapi/nf-mfapi-mfcreatemediatype) 미디어 형식을 만들려면 ([IMFMediaType](https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)) 개체 (_mediaType_). 미디어 형식에 대 한 설명을 나타냅니다. 
 3. 지정 합니다 _mediaType_의 디코딩된 출력은 오디오 PCM 오디오를 입력 하는 __XAudio2__ 사용할 수 있습니다.
-4. 호출 하 여 원본 판독기에 대 한 디코딩된 출력 미디어 유형 집합 [IMFSourceReader::SetCurrentMediaType](https://msdn.microsoft.com/library/windows/desktop/dd374667.aspx)합니다.
+4. 호출 하 여 원본 판독기에 대 한 디코딩된 출력 미디어 유형 집합 [IMFSourceReader::SetCurrentMediaType](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-setcurrentmediatype)합니다.
 
-에 대 한 자세한 내용은 원본 판독기를 사용 하는 이유,로 이동 [원본 판독기](https://msdn.microsoft.com/library/windows/desktop/dd940436.aspx)합니다.
+에 대 한 자세한 내용은 원본 판독기를 사용 하는 이유,로 이동 [원본 판독기](https://docs.microsoft.com/windows/desktop/medfound/source-reader)합니다.
 
 #### <a name="describe-the-data-format-of-the-audio-stream"></a>데이터 형식의 오디오 스트림 설명
 
-1. 사용 하 여 [IMFSourceReader::GetCurrentMediaType](https://msdn.microsoft.com/library/windows/desktop/dd374660) 스트림에 대 한 현재 미디어 형식을 가져오려고 합니다.
-2. 사용 하 여 [IMFMediaType::MFCreateWaveFormatExFromMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms702177) 변환할 현재 오디오 미디어 유형입니다는 [WAVEFORMATEX](https://msdn.microsoft.com/library/windows/hardware/ff538799) 버퍼를 입력으로 이전 작업의 결과 사용 합니다. 이 구조는 웨이브 오디오 스트림을 오디오 로드 된 후에 사용 되는 데이터 형식을 지정 합니다. 
+1. 사용 하 여 [IMFSourceReader::GetCurrentMediaType](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-getcurrentmediatype) 스트림에 대 한 현재 미디어 형식을 가져오려고 합니다.
+2. 사용 하 여 [IMFMediaType::MFCreateWaveFormatExFromMFMediaType](https://docs.microsoft.com/windows/desktop/api/mfapi/nf-mfapi-mfcreatewaveformatexfrommfmediatype) 변환할 현재 오디오 미디어 유형입니다는 [WAVEFORMATEX](https://docs.microsoft.com/windows/desktop/api/mmreg/ns-mmreg-twaveformatex) 버퍼를 입력으로 이전 작업의 결과 사용 합니다. 이 구조는 웨이브 오디오 스트림을 오디오 로드 된 후에 사용 되는 데이터 형식을 지정 합니다. 
 
-합니다 __WAVEFORMATEX__ 형식은 PCM 버퍼를 설명 하기 위해 사용할 수 있습니다. 비교 했을 때를 [WAVEFORMATEXTENSIBLE](https://msdn.microsoft.com/library/windows/hardware/ff538802) 구조를 사용할 수 있습니다만 오디오 wave 형식의 하위 집합을 설명 합니다. 간의 차이점에 대 한 자세한 내용은 __WAVEFORMATEX__ 및 __WAVEFORMATEXTENSIBLE__를 참조 하십시오 [확장할 수 있는 웨이브 형식 설명자](https://docs.microsoft.com/windows-hardware/drivers/audio/extensible-wave-format-descriptors)합니다.
+합니다 __WAVEFORMATEX__ 형식은 PCM 버퍼를 설명 하기 위해 사용할 수 있습니다. 비교 했을 때를 [WAVEFORMATEXTENSIBLE](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ksmedia/ns-ksmedia-waveformatextensible) 구조를 사용할 수 있습니다만 오디오 wave 형식의 하위 집합을 설명 합니다. 간의 차이점에 대 한 자세한 내용은 __WAVEFORMATEX__ 및 __WAVEFORMATEXTENSIBLE__를 참조 하십시오 [확장할 수 있는 웨이브 형식 설명자](https://docs.microsoft.com/windows-hardware/drivers/audio/extensible-wave-format-descriptors)합니다.
 
 #### <a name="read-the-audio-stream"></a>오디오 스트림에서 읽기
 
-1.  가져오기는 기간 (초)를 호출 하 여 오디오 스트림의 [IMFSourceReader::GetPresentationAttribute](https://msdn.microsoft.com/library/windows/desktop/dd374662) 바이트를 지속 시간을 변환 합니다.
-2.  오디오 파일을 호출 하 여 스트림으로 읽는 [IMFSourceReader::ReadSample](https://msdn.microsoft.com/library/windows/desktop/dd374665)합니다. __ReadSample__ 미디어 소스에서 다음 샘플을 읽습니다.
-3.  사용 하 여 [IMFSample::ConvertToContiguousBuffer](https://msdn.microsoft.com/library/windows/desktop/ms698917.aspx) 오디오 샘플 버퍼의 내용을 복사할 (_샘플_)을 배열로 (_mediaBuffer_).
+1.  가져오기는 기간 (초)를 호출 하 여 오디오 스트림의 [IMFSourceReader::GetPresentationAttribute](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-getpresentationattribute) 바이트를 지속 시간을 변환 합니다.
+2.  오디오 파일을 호출 하 여 스트림으로 읽는 [IMFSourceReader::ReadSample](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample)합니다. __ReadSample__ 미디어 소스에서 다음 샘플을 읽습니다.
+3.  사용 하 여 [IMFSample::ConvertToContiguousBuffer](https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-converttocontiguousbuffer) 오디오 샘플 버퍼의 내용을 복사할 (_샘플_)을 배열로 (_mediaBuffer_).
 
 ```cpp
 Platform::Array<byte>^ MediaReader::LoadMedia(_In_ Platform::String^ filename)
@@ -342,8 +342,8 @@ void SoundEffect::Initialize(
 ### <a name="soundeffectplaysound-method"></a>SoundEffect::PlaySound 메서드
 
 * 원본 음성 개체를 사용 하 여 **m\_sourceVoice** 사운드 데이터 버퍼의 재생을 시작 하 **m\_soundData**
-* 만듭니다는 [XAUDIO2\_버퍼](https://msdn.microsoft.com/library/windows/desktop/ee419228)하는 사운드 데이터 버퍼에 대 한 참조를 제공 하 고 다음에 대 한 호출을 사용 하 여 전송 [IXAudio2SourceVoice::SubmitSourceBuffer](https://msdn.microsoft.com/library/windows/desktop/ee418473)합니다. 
-* 사운드 데이터로 대기 **SoundEffect::PlaySound** 시작 호출 하 여 재생 [IXAudio2SourceVoice::Start](https://msdn.microsoft.com/library/windows/desktop/ee418471)합니다.
+* 만듭니다는 [XAUDIO2\_버퍼](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer)하는 사운드 데이터 버퍼에 대 한 참조를 제공 하 고 다음에 대 한 호출을 사용 하 여 전송 [IXAudio2SourceVoice::SubmitSourceBuffer](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-submitsourcebuffer)합니다. 
+* 사운드 데이터로 대기 **SoundEffect::PlaySound** 시작 호출 하 여 재생 [IXAudio2SourceVoice::Start](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-start)합니다.
 
 ```cpp
 void SoundEffect::PlaySound(_In_ float volume)
@@ -457,9 +457,9 @@ UWP 프레임 워크, 그래픽, 컨트롤, 사용자 인터페이스 및 Window
 
 ## <a name="audio-concepts"></a>오디오 개념
 
-Windows 10 게임 개발을 위한 XAudio2 버전 2.9를 사용 합니다. 이 버전은 Windows 10과 함께 제공 됩니다. 자세한 내용은 이동 [XAudio2 버전](https://msdn.microsoft.com/library/windows/desktop/ee415802.aspx)합니다.
+Windows 10 게임 개발을 위한 XAudio2 버전 2.9를 사용 합니다. 이 버전은 Windows 10과 함께 제공 됩니다. 자세한 내용은 이동 [XAudio2 버전](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-versions)합니다.
 
-__AudioX2__ 는 신호 처리 및 foundation 혼합 제공 하는 하위 수준 API. 자세한 내용은 참조 하세요. [XAudio2 주요 개념](https://msdn.microsoft.com/library/windows/desktop/ee415764.aspx)합니다.
+__AudioX2__ 는 신호 처리 및 foundation 혼합 제공 하는 하위 수준 API. 자세한 내용은 참조 하세요. [XAudio2 주요 개념](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-key-concepts)합니다.
 
 ### <a name="xaudio2-voices"></a>XAudio2 음성
 
@@ -473,13 +473,13 @@ XAudio2 음성 개체의 세 가지 종류가 있습니다: 원본를 및 음성
 
 ### <a name="audio-graph"></a>오디오 그래프
 
-오디오 그래프의 컬렉션인 [XAudio2 음성](/windows/desktop/xaudio2/xaudio2-voices)합니다. 오디오 소스 음성의 오디오 그래프의 한 쪽에서 시작 하 고, 필요에 따라 하나 이상의 믹스 음성 통과, 마스터 음성에서 끝납니다. 각 현재 재생 중인 소리를 0 개 이상의 믹스 음성에 대 한 원본 음성 및 하나의 마스터 음성 오디오 그래프를 포함 됩니다. 가장 간단한 오디오 그래프 및 XAudio2에 노이즈를 확인 하는 데 필요한 최소 마스터 음성에 직접 출력을 단일 소스 음성입니다. 자세한 내용은 이동 [오디오 그래프](https://msdn.microsoft.com/library/windows/desktop/ee415739.aspx)합니다.
+오디오 그래프의 컬렉션인 [XAudio2 음성](/windows/desktop/xaudio2/xaudio2-voices)합니다. 오디오 소스 음성의 오디오 그래프의 한 쪽에서 시작 하 고, 필요에 따라 하나 이상의 믹스 음성 통과, 마스터 음성에서 끝납니다. 각 현재 재생 중인 소리를 0 개 이상의 믹스 음성에 대 한 원본 음성 및 하나의 마스터 음성 오디오 그래프를 포함 됩니다. 가장 간단한 오디오 그래프 및 XAudio2에 노이즈를 확인 하는 데 필요한 최소 마스터 음성에 직접 출력을 단일 소스 음성입니다. 자세한 내용은 이동 [오디오 그래프](https://docs.microsoft.com/windows/desktop/xaudio2/audio-graphs)합니다.
 
-### <a name="additional-reading"></a>더 보기
+### <a name="additional-reading"></a>추가 참조 항목
 
-* [방법: XAudio2 초기화](https://msdn.microsoft.com/library/windows/desktop/ee415779.aspx)
+* [방법: XAudio2 초기화](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--initialize-xaudio2)
 * [방법: XAudio2의 오디오 데이터 파일 로드](https://msdn.microsoft.com/library/windows/desktop/ee415781(v=vs.85).aspx)
-* [방법: XAudio2 사용 하 여 소리 재생](https://msdn.microsoft.com/library/windows/desktop/ee415787.aspx)
+* [방법: XAudio2 사용 하 여 소리 재생](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--play-a-sound-with-xaudio2)
 
 ## <a name="key-audio-h-files"></a>키 오디오.h 파일
 

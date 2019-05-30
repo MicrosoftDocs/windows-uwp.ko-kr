@@ -5,12 +5,12 @@ keywords: 호스트된 웹앱, HWA, REST API, 단일 페이지 앱, SPA
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c76f0da8c3ac1d50ccd2d328dd321df9aa9bd3e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c38a7182cd27abcfb0de66c721f0e06b95b695d5
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624628"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366981"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>REST API 백 엔드를 사용하는 단일 페이지 생성
 
@@ -22,7 +22,7 @@ ms.locfileid: "57624628"
 
 몇 가지 가장 인기 있는 웹 기술을 사용할 것입니다. 여기에는 [Node.js](https://nodejs.org/en/) 런타임, 서버 쪽 개발을 위한 [Express](https://expressjs.com/), [부트스크랩](https://getbootstrap.com/) UI 프레임워크, [Pug](https://www.npmjs.com/package/pug) 템플릿 엔진, RESTful API 작성을 위한 [Swagger](https://swagger.io/tools/)가 포함됩니다. 클라우드 호스팅을 위한 [Azure Portal](https://ms.portal.azure.com/) 사용과 [Visual Studio Code](https://code.visualstudio.com/) 편집기 사용 경험도 쌓을 것입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 컴퓨터에 이러한 리소스가 아직 없다면, 아래 다운로드 링크를 따라 다운로드하십시오.
 
@@ -115,7 +115,7 @@ Azure 부분을 생략하거나 연기하려면, Azure 호스팅과 Microsoft St
 
 1. 새 폴더(예를 들어 로컬 *GitHub* 디렉터리에)를 만들고, 기억력 게임 API 정의를 포함한 [**api.json**](https://raw.githubusercontent.com/Microsoft/Windows-tutorials-web/master/Single-Page-App-with-REST-API/backend/api.json?token=ACEfklXAHTeLkHYaI5plV20QCGuqC31cks5ZFhVIwA%3D%3D) 파일을 다운로드합니다. 폴더 이름에 공백이 없는지 확인합니다.
 
-2. 해당 폴더에 대해 즐겨찾는 셸([또는 Visual Studio Code의 통합된 터미널 사용](https://code.visualstudio.com/docs/editor/integrated-terminal))을 열고, [Yeoman](https://yeoman.io/)(yo) 코드 기반 도구와 글로벌(**-g**) 노드 환경을 위한 Swagger 생성기를 설치하기 위해 다음 NPM(노드 패키지 관리자) 명령을 실행합니다.
+2. 해당 폴더에 대해 즐겨찾는 셸([또는 Visual Studio Code의 통합된 터미널 사용](https://code.visualstudio.com/docs/editor/integrated-terminal))을 열고, [Yeoman](https://yeoman.io/)(yo) 코드 기반 도구와 글로벌( **-g**) 노드 환경을 위한 Swagger 생성기를 설치하기 위해 다음 NPM(노드 패키지 관리자) 명령을 실행합니다.
 
     ```
     npm install -g yo
@@ -278,7 +278,7 @@ Azure 문서는 다음 내용을 설명합니다.
  - [API 앱을 위한 Git 배포 설정](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
  - [Azure API 앱 코드 배포](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
 
-앱을 등록할 때 *앱 이름*을 차별화하세요(*http://memorygameapi.azurewebsites.net* URL에서 다른 사용자의 변형 요청으로 인해 명명 충돌이 발생하지 않도록 하기 위해).
+앱을 등록할 때 *앱 이름*을 차별화하세요( *http://memorygameapi.azurewebsites.net* URL에서 다른 사용자의 변형 요청으로 인해 명명 충돌이 발생하지 않도록 하기 위해).
 
 지금까지 진행했다면 Azure가 이제 swagger UI를 서비스하게 됩니다. 기억력 게임 백 엔드까지는 한 단계가 남았습니다. [Azure Portal](https://portal.azure.com)에서 새로 만든 *앱 서비스*를 선택하고 **CORS**(원본 간 리소스 공유) 옵션을 선택하거나 찾습니다. **허용된 원본** 아래에서 별표(`*`)를 추가하고 **저장**을 클릭합니다. 이렇게 하면 로컬 컴퓨터에서 개발하는 동안 기억력 게임 프런트 엔드의 API 서비스에서 원본 간 호출을 할 수 있습니다. 기억력 게임 프런트 엔드를 마무리하고 Azure에 배포하면, 이 항목을 웹앱의 특정 URL로 대체할 수 있습니다.
 
@@ -626,7 +626,7 @@ memory\public\stylesheets의 style.css 파일을 Start 폴더의 style.css 파�
 
     작성한 코드를 최종 폴더의 코드와 비교할 수도 있습니다.
 
-4. 명령 프롬프트에서 게임을 중지 합니다. **Ctrl + C**하십시오 **Y**합니다. 
+4. 명령 프롬프트에서 게임을 중지 합니다. **Ctrl + C**, **Y**. 
 
 ### <a name="going-further"></a>더 나아가기
 
@@ -636,7 +636,7 @@ Microsoft Store에 게시하는 기본 단계는 다음과 같습니다.
 
  1. [Windows 개발자](https://developer.microsoft.com/en-us/store/register) 계정을 만듭니다.
  2. 앱 제출 [검사 목록](https://docs.microsoft.com/en-us/windows/uwp/publish/app-submissions)을 사용합니다.
- 3. [인증](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process)을 위해 앱을 제출합니다.
+ 3. [인증](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)을 위해 앱을 제출합니다.
 
 더 발전시키기 위한 유용한 몇 가지 리소스는 다음과 같습니다.
 

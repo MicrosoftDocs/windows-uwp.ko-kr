@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: d3bf92e308d42b9dd93539ebbe44525067f23b6f
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: e6e75483ca6c01958a4b8bda2c5c3bb60e764eff
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335131"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372486"
 ---
 # <a name="manage-add-on-submissions"></a>추가 기능 제출 관리
 
@@ -66,7 +66,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 <td align="left"><a href="commit-an-add-on-submission.md">새롭거나 업데이트 된 추가 기능 제출 커밋</a></td>
 </tr>
 <tr>
-<td align="left">Delete</td>
+<td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
 <td align="left"><a href="delete-an-add-on-submission.md">추가 기능 제출 삭제</a></td>
 </tr>
@@ -94,7 +94,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
     > [!NOTE]
     > SAS URI는 계정 키를 요구하지 않고 Azure Storage의 보안 리소스에 대한 액세스를 제공합니다. SAS Uri 및 Azure Blob storage 사용 하 여 용도 대 한 배경 정보를 참조 하세요. [공유 액세스 서명, 1 부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) 고 [공유 액세스 서명, 2 부: 만들기 및 SAS를 사용 하 여 Blob storage를 사용 하 여](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)입니다.
 
-4. 제출에 대한 새 아이콘을 추가하는 경우 [아이콘을 준비](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon)하고 ZIP 보관 파일에 추가합니다.
+4. 제출에 대한 새 아이콘을 추가하는 경우 [아이콘을 준비](https://docs.microsoft.com/windows/uwp/publish/create-iap-descriptions)하고 ZIP 보관 파일에 추가합니다.
 
 5. 새 제출에 대해 필요한 변경 사항으로 [추가 기능 제출](#add-on-submission-object) 데이터를 업데이트하고 다음 메서드를 실행하여 제출을 업데이트합니다. 자세한 내용은 [추가 기능 제출 업데이트](update-an-add-on-submission.md)를 참조하세요.
 
@@ -110,7 +110,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
     * [Java 용 azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
     * [Python 용 azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
-    다음 C# 코드 예제는 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) 클래스를 사용하여 Azure Blob Storage에 ZIP 보관 파일을 업로드하는 방법을 보여 줍니다. 이 예제에서는 ZIP 보관 파일이 이미 스트림 개체에 기록되어 있다고 가정합니다.
+    다음 C# 코드 예제는 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob?redirectedfrom=MSDN) 클래스를 사용하여 Azure Blob Storage에 ZIP 보관 파일을 업로드하는 방법을 보여 줍니다. 이 예제에서는 ZIP 보관 파일이 이미 스트림 개체에 기록되어 있다고 가정합니다.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -276,9 +276,9 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 형식    | 설명    |
 |-----------------|---------|------|
-|  marketSpecificPricings               |    개체(object)     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 추가 기능에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.     |     
+|  marketSpecificPricings               |    개체(object)     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 추가 기능에 대한 사용자 지정 가격](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.     |     
 |  sales               |   배열      |  **사용되지 않음**. 추가 기능에 대한 판매 정보를 포함하는 [판매 리소스](#sale-object) 배열입니다.     |     
-|  priceId               |   string      |  추가 기능에 대한 [기본 가격](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price)을 지정하는 [기준 가격](#price-tiers)입니다.    |    
+|  priceId               |   string      |  추가 기능에 대한 [기본 가격](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability)을 지정하는 [기준 가격](#price-tiers)입니다.    |    
 |  isAdvancedPricingModel               |   boolean      |  **true**인 경우, 개발자 계정은 .99 USD에서 1999.99 USD까지의 확장된 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. **false**인 경우, 개발자 계정은 .99 USD에서 999.99 USD까지의 원래 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. 여러 계층에 대한 자세한 내용은 [기준 가격](#price-tiers)을 참조하세요.<br/><br/>**참고**&nbsp;&nbsp;이 필드는 읽기 전용입니다.   |
 
 
@@ -297,11 +297,11 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 형식    | 설명           |
 |-----------------|---------|------|
-|  NAME               |    string     |   판매의 이름입니다.    |     
+|  name               |    string     |   판매의 이름입니다.    |     
 |  basePriceId               |   string      |  판매의 기본 가격으로 사용할 [기준 가격](#price-tiers)입니다.    |     
 |  startDate               |   string      |   판매의 시작 날짜(ISO 8601 형식)입니다.  |     
 |  endDate               |   string      |  판매의 종료 날짜(ISO 8601 형식)입니다.      |     
-|  marketSpecificPricings               |   개체(object)      |   키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 추가 기능에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-pricess)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *basePriceId* 값으로 지정된 기본 가격을 재정의합니다.    |
+|  marketSpecificPricings               |   개체(object)      |   키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 추가 기능에 대한 사용자 지정 가격](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *basePriceId* 값으로 지정된 기본 가격을 재정의합니다.    |
 
 <span id="status-details-object" />
 
@@ -383,4 +383,4 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 * [Microsoft Store 서비스를 사용 하 여 서브 미션을 만들고 설정 합니다.](create-and-manage-submissions-using-windows-store-services.md)
 * [Microsoft Store 제출 API를 사용 하 여 추가 기능 관리](manage-add-ons.md)
-* [파트너 센터에서 추가 기능 제출](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)
+* [파트너 센터에서 추가 기능 제출](https://docs.microsoft.com/windows/uwp/publish/iap-submissions)

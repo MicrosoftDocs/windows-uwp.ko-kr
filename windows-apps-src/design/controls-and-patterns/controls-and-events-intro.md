@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ff3f89887235fc9c8d9d7afbbdea3d79bace810
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 671f33cf106eabf11b317b00d5c2a6cd9abcf3d0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630798"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363041"
 ---
 # <a name="intro-to-controls-and-patterns"></a>컨트롤 및 패턴 소개
 
 UWP 앱 개발에서 *컨트롤*은 콘텐츠를 표시하거나 조작을 가능하게 하는 UI 요소입니다. 단추, 입력란, 콤보 상자 등의 컨트롤을 사용하여 데이터를 표시하고 사용자 입력을 받기 위한 앱의 UI를 만듭니다.
 
-> **중요 API**: [Windows.UI.Xaml.Controls 네임 스페이스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+> **중요 API**: [Windows.UI.Xaml.Controls 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
 
 *패턴*은 컨트롤을 수정하거나 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다. 예를 들어, 합니다 [마스터/세부 정보](master-details.md) 패턴은 사용할 수 있는 방식으로 [분할 된 뷰](split-view.md) 앱 탐색에 대 한 제어 합니다. 템플릿을 사용자 지정할 수는 마찬가지로 [NavigationView](navigationview.md) 탭 패턴을 구현 하는 컨트롤입니다.
 
@@ -144,7 +144,7 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 ## <a name="related-topics"></a>관련 항목
 
 -   [기능별 컨트롤 인덱스](controls-by-function.md)
--   [Windows.UI.Xaml.Controls 네임 스페이스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+-   [Windows.UI.Xaml.Controls 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
 -   [레이아웃](../layout/index.md)
 -   [스타일](../style/index.md)
 -   [유용성](../usability/index.md)

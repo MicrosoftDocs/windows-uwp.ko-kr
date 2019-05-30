@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 43ffd28c-c4df-405c-bf5c-29c94e0d142b
 keywords: windows 10, uwp, 타이머, 스레드
 ms.localizationpriority: medium
-ms.openlocfilehash: f11207a774b1ffcebde95e316634592020e6ed49
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3afa1720ede9728e9cc25af434a431300faf26d6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631218"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371214"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>다중 스레드 환경에서 Windows 런타임 개체 사용
 이 문서에서는 .NET Framework가 C# 및 Visual Basic 코드에서 Windows 런타임 또는 Windows 런타임 구성 요소에서 제공하는 개체로의 호출을 처리하는 방식을 설명합니다.
@@ -20,7 +20,7 @@ ms.locfileid: "57631218"
 
 가능한 경우 CLR(공용 언어 런타임)은 Windows 런타임 같은 다른 원본의 개체를 마치 .NET Framework 개체인 것처럼 처리합니다.
 
-- 개체가 [IAgileObject](https://msdn.microsoft.com/library/Hh802476.aspx) 인터페이스를 구현하거나 [MarshalingType.Agile](https://go.microsoft.com/fwlink/p/?LinkId=256023)인 [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) 특성을 갖고 있는 경우 CLR은 이 개체를 Agile로 처리합니다.
+- 개체가 [IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject) 인터페이스를 구현하거나 [MarshalingType.Agile](https://go.microsoft.com/fwlink/p/?LinkId=256023)인 [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) 특성을 갖고 있는 경우 CLR은 이 개체를 Agile로 처리합니다.
 
 - CLR은 대상 개체의 스레딩 컨텍스트에 대해 만들어진 스레드의 호출을 마샬링할 수 있는 경우 마샬링을 투명하게 수행합니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "57631218"
 > [!NOTE]
 >  Agile이 스레드 안전을 의미하는 것은 아닙니다. 스레드 안전에는 성능 저하가 수반되며 여러 스레드에서 액세스하는 개체가 별로 없기 때문에 Windows 런타임 및 .NET Framework에서 대부분 클래스는 스레드로부터 안전하게 보호되지 않습니다. 필요할 때만 개별 개체에 대한 액세스를 동기화(또는 스레드 안전 클래스 사용)하는 것이 보다 효율적입니다.
 
-Windows 런타임 구성 요소를 작성할 때 기본값을 무시할 수 있습니다. [ICustomQueryInterface](/dotnet/api/system.runtime.interopservices.icustomqueryinterface) 인터페이스 및 [IAgileObject](https://msdn.microsoft.com/library/Hh802476.aspx) 인터페이스를 참조하세요.
+Windows 런타임 구성 요소를 작성할 때 기본값을 무시할 수 있습니다. [ICustomQueryInterface](/dotnet/api/system.runtime.interopservices.icustomqueryinterface) 인터페이스 및 [IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject) 인터페이스를 참조하세요.
 
 ## <a name="objects-from-the-windows-runtime"></a>Windows 런타임의 개체
 대부분의 Windows 런타임 클래스는 Agile이며, CLR은 이러한 클래스를 Agile로 처리합니다. 이러한 클래스에 대한 설명서에는 클래스 특성 중 "MarshalingBehaviorAttribute(Agile)"이 나열되어 있습니다. 그러나 이러한 Agile 클래스 구성원 중 일부는(예: XAML 컨트롤) UI 스레드에서 호출되지 않으면 예외를 throw합니다. 예를 들어 다음 코드는 배경 스레드를 사용하여 클릭된 단추의 속성을 설정하려고 시도합니다. 단추의 [콘텐츠](https://go.microsoft.com/fwlink/p/?LinkId=256025) 속성에서 예외를 throw합니다.
@@ -160,7 +160,7 @@ End Sub
 
 UI에서 실행되고 UI 스레드가 아닌 다른 스레드에서 호출되면 예외를 throw하는 개체의 경우 UI 스레드의 [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029) 개체를 사용하여 호출을 발송할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 [C# 가이드](/dotnet/csharp/)
 
 [Visual Basic 가이드](/dotnet/visual-basic/)

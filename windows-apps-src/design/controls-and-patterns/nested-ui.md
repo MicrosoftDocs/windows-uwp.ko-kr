@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8edb38b8ae91d836e283a8eb37830850bf504db4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: aa672c99dc83e7955c4d4f91b5bc34620c48ed01
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661308"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364547"
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 
@@ -26,9 +26,9 @@ ms.locfileid: "57661308"
 
 중첩된 UI를 사용하여 중요 작업 실행을 가속화하는 추가 옵션을 사용자에게 제공할 수 있습니다. 그러나 표시하는 작업이 많을수록 UI가 복잡해집니다. 이 UI 패턴을 사용할 경우 더 많은 주의가 필요합니다. 이 문서에서는 특정 UI에 가장 적합한 작업 과정을 결정하는 지침을 제공합니다.
 
-> **중요 API**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
+> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [GridView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview)
 
-이 문서에서는 [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 및 [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) 항목에서 중첩된 UI를 생성하는 방법에 대해 설명합니다. 이 섹션에서는 다른 중첩 UI 사례에 대해 다루지 않지만 이러한 개념에 대해서는 설명합니다. 시작하기 전에 UI에 있는 ListView 또는 GridView 컨트롤 사용에 대한 일반 지침을 잘 알고 있어야 합니다. 이에 대한 내용은 [목록](lists.md) 및 [ListView 및 GridView](listview-and-gridview.md) 문서를 참조하세요.
+이 문서에서는 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) 및 [GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview) 항목에서 중첩된 UI를 생성하는 방법에 대해 설명합니다. 이 섹션에서는 다른 중첩 UI 사례에 대해 다루지 않지만 이러한 개념에 대해서는 설명합니다. 시작하기 전에 UI에 있는 ListView 또는 GridView 컨트롤 사용에 대한 일반 지침을 잘 알고 있어야 합니다. 이에 대한 내용은 [목록](lists.md) 및 [ListView 및 GridView](listview-and-gridview.md) 문서를 참조하세요.
 
 이 문서에서 사용되는 용어인 *목록*, *목록 항목* 및 *중첩된 UI*의 정의는 다음과 같습니다.
 - *목록*은 목록 보기 또는 그리드 보기에 포함된 항목의 컬렉션을 의미합니다.
@@ -37,7 +37,7 @@ ms.locfileid: "57661308"
 
 ![중첩된 UI 부분](images/nested-ui-example-1.png)
 
-> 참고&nbsp;&nbsp; ListView 및 GridView 모두 [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
+> 참고&nbsp;&nbsp; ListView 및 GridView 모두 [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
 
 ## <a name="primary-and-secondary-actions"></a>기본 및 보조 작업
 
@@ -137,7 +137,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 - 목록 항목 왼쪽에 있는 UI 요소에서 Tab 키를 누르면 포커스가 **A**로 이동합니다.
 - 목록 항목 오른쪽에 있는 UI 요소에서 Shift+Tab을 누르면 포커스가 **C**로 이동합니다.
 
-이 UI를 구현하려면 목록에서 [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx)를 **true**로 설정합니다. [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx)는 임의의 값으로 설정할 수 있습니다.
+이 UI를 구현하려면 목록에서 [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled)를 **true**로 설정합니다. [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode)는 임의의 값으로 설정할 수 있습니다.
 
 이를 구현하는 코드에 대해서는 이 문서의 [예제](#example) 섹션을 참조하세요.
 
@@ -151,9 +151,9 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 
 
 이 UI를 구현하려면 목록에서 다음 속성을 설정합니다.
-- [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx)를 **None**으로 설정합니다.
-- [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx)를 **false**로 설정합니다.
-- [IsFocusEngagementEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isfocusengagementenabled.aspx)를 **true**로 설정합니다.
+- [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode)를 **None**으로 설정합니다.
+- [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled)를 **false**로 설정합니다.
+- [IsFocusEngagementEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isfocusengagementenabled)를 **true**로 설정합니다.
 
 ```xaml
 <ListView SelectionMode="None" IsItemClickEnabled="False" >
@@ -186,7 +186,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 - 중첩된 UI 항목 중 하나에서 Tab 키를 누르면 탭 순서에 따라 중첩된 UI 항목 사이를 이동합니다.  중첩된 UI 항목 사이를 모두 이동한 후에는 탭 순서상 ListView 다음인 컨트롤로 포커스가 이동합니다.
 - Shift+Tab을 누르면 탭 동작이 반대 방향으로 수행됩니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 [목록 항목이 작업을 수행하는 중첩된 UI](#nested-ui-where-list-items-perform-an-action)를 구현하는 방법을 보여 줍니다.
 

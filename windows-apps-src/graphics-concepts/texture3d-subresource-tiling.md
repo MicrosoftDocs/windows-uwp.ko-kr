@@ -7,21 +7,21 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c9c232bc60bbbb3cccc16618d82ec23452c58ee8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5b63fdeeffd4b95afab6556b6f0318732ff988b0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645958"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370900"
 ---
 # <a name="texture3d-subresource-tiling"></a>Texture3D 하위 리소스 타일링
 
 
-다음은 [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) 하위 리소스 타일 방식을 나타낸 표입니다. 표에 표기된 값에 꼬리 MIP 압축은 포함되지 않았습니다.
+다음은 [**Texture3D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture3d) 하위 리소스 타일 방식을 나타낸 표입니다. 표에 표기된 값에 꼬리 MIP 압축은 포함되지 않았습니다.
 
-이 표는 [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) 타일을 가져와서 x/y 크기를 각각 4로 나눈 다음 16개의 깊이 레이어를 더한 것입니다. 첫 번째 평면(첫 번째 16개의 깊이 레이어를 정의하는 타일이 2D 평면)의 모든 타일이 후속 평면 이전에 표시됩니다.
+이 표는 [**Texture2D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d) 타일을 가져와서 x/y 크기를 각각 4로 나눈 다음 16개의 깊이 레이어를 더한 것입니다. 첫 번째 평면(첫 번째 16개의 깊이 레이어를 정의하는 타일이 2D 평면)의 모든 타일이 후속 평면 이전에 표시됩니다.
 
-**참고**  스트리밍 리소스의 초기 구현 시   [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562)가 스트리밍 리소스에서 지원되지는 않지만 향후 리소스에서 지원할 수 있도록 원하는 타일 모양이 여기에 나열됩니다.
+**참고**  스트리밍 리소스의 초기 구현 시   [**Texture3D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture3d)가 스트리밍 리소스에서 지원되지는 않지만 향후 리소스에서 지원할 수 있도록 원하는 타일 모양이 여기에 나열됩니다.
 
  
 

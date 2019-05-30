@@ -12,12 +12,12 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a162d992390e8fc7d05d52303ec292fcf8e920a9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a409c4b940ad0e194428981f536823d880e56302
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634428"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364486"
 ---
 # <a name="progress-controls"></a>진행률 컨트롤
 
@@ -25,7 +25,7 @@ ms.locfileid: "57634428"
 
 진행률 컨트롤은 긴 작업을 진행 중인 사용자에게 피드백을 제공합니다. 이는 진행률 표시기가 표시될 때 사용자가 앱을 조작할 수 없다는 의미이며 사용되는 표시기에 따라 대기 시간을 예측할 수도 있다는 의미입니다.
 
-> **중요 API**: [ProgressBar 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx)하십시오 [IsIndeterminate 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx)합니다 [ProgressRing 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx), [IsActive 속성이](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx)
+> **중요 API**: [ProgressBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar)하십시오 [IsIndeterminate 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate)합니다 [ProgressRing 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [IsActive 속성이](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive)
 
 ## <a name="types-of-progress"></a>진행률 유형
 
@@ -187,9 +187,9 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 
 ## <a name="related-articles"></a>관련 문서
 
-- [ProgressBar 클래스](https://msdn.microsoft.com/library/windows/apps/br227529)
-- [ProgressRing 클래스](https://msdn.microsoft.com/library/windows/apps/br227538)
+- [ProgressBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar)
+- [ProgressRing 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing)
 
 **개발자 (XAML)**
-- [진행률 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651)
+- [진행률 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh780651(v=win.10))
 - [Windows Phone 대 한 사용자 지정 부정형 진행률 표시줄을 만드는 방법](https://go.microsoft.com/fwlink/p/?LinkID=392426)

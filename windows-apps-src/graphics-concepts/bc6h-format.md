@@ -7,28 +7,28 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f147f4c30d2a662806df5928fc79178522b9b6a6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 50c8fa623130412688f14307fa46540c81f38554
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633098"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370480"
 ---
 # <a name="bc6h-format"></a>BC6H 형식
 
 
 BC6H 형식은 원본 데이터의 HDR(High Dynamic Range) 색 공간을 지원하도록 설계된 텍스처 압축 형식입니다.
 
-## <a name="span-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanabout-bc6hdxgiformatbc6h"></a><span id="About-BC6H-DXGI-FORMAT-BC6H"></span><span id="about-bc6h-dxgi-format-bc6h"></span><span id="ABOUT-BC6H-DXGI-FORMAT-BC6H"></span>BC6H/DXGI에 대 한\_형식\_BC6H
+## <a name="span-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanabout-bc6hdxgiformatbc6h"></a><span id="About-BC6H-DXGI-FORMAT-BC6H"></span><span id="about-bc6h-dxgi-format-bc6h"></span><span id="ABOUT-BC6H-DXGI-FORMAT-BC6H"></span>About BC6H/DXGI\_FORMAT\_BC6H
 
 
 BC6H 형식은 값의 각 색 채널에 대한 16비트 값(16:16:16)과 함께 3개의 HDR 색 채널을 사용하는 이미지에 대한 고품질 압축을 제공합니다. 알파 채널은 지원되지 않습니다.
 
 다음 DXGI BC6H 된\_열거형 값의 서식 지정 합니다.
 
--   **DXGI\_형식\_BC6H\_TYPELESS**합니다.
--   **DXGI\_형식\_BC6H\_UF16**합니다. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용하지 않습니다.
--   **DXGI\_형식\_BC6H\_SF16**합니다. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용합니다.
+-   **DXGI\_FORMAT\_BC6H\_TYPELESS**.
+-   **DXGI\_FORMAT\_BC6H\_UF16**. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용하지 않습니다.
+-   **DXGI\_FORMAT\_BC6H\_SF16**. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용합니다.
 
 **참고**    "중간" 부동 소수점 형식으로 16 비트 부동 소수점 형식 색 채널에 대 한 하 라고 합니다. 이 형식의 비트 레이아웃은 다음과 같습니다.
 |                       |                                                 |
@@ -40,7 +40,7 @@ BC6H 형식은 값의 각 색 채널에 대한 16비트 값(16:16:16)과 함께 
 
  
 
-[Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277)(배열 포함), Texture3D 또는 TextureCube(배열 포함) 텍스처 리소스에 BC6H 형식을 사용할 수 있습니다. 마찬가지로 이 형식은 이러한 리소스와 연결된 모든 MIP 맵 표면에 적용됩니다.
+[Texture2D](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-reference-resource-structures)(배열 포함), Texture3D 또는 TextureCube(배열 포함) 텍스처 리소스에 BC6H 형식을 사용할 수 있습니다. 마찬가지로 이 형식은 이러한 리소스와 연결된 모든 MIP 맵 표면에 적용됩니다.
 
 BC6H는 16바이트(128비트)의 고정 블록 크기와 4x4 텍셀의 고정 타일 크기를 사용합니다. 이전 BC 형식과 마찬가지로 지원되는 타일 크기(4x4)보다 큰 텍스처 이미지는 여러 블록을 사용하여 압축됩니다. 이 주소 지정 ID는 3차원 이미지, MIP 맵, 큐브 맵 및 텍스처 배열에도 적용됩니다. 모든 이미지 타일이 동일한 형식이어야 합니다.
 
@@ -141,20 +141,20 @@ BC6H의 경우 모드에 관계없이 알파 채널이 항상 1.0을 반환합�
 
 | 필드 | 변수          |
 |-------|-------------------|
-| m     | mode              |
+| 분     | mode              |
 | d     | 셰이프 인덱스       |
-| rw    | endpt\[0\]합니다. \[0\] |
-| rx    | endpt\[0\]합니다. B\[0\] |
-| ry    | endpt\[1\]합니다. \[0\] |
-| rz    | endpt\[1\]합니다. B\[0\] |
-| gw    | endpt\[0\]합니다. \[1\] |
-| gx    | endpt\[0\]합니다. B\[1\] |
-| gy    | endpt\[1\]합니다. \[1\] |
-| gz    | endpt\[1\]합니다. B\[1\] |
-| bw    | endpt\[0\]합니다. \[2\] |
-| bx    | endpt\[0\]합니다. B\[2\] |
-| 수단    | endpt\[1\]합니다. \[2\] |
-| bz    | endpt\[1\]합니다. B\[2\] |
+| rw    | endpt\[0\].A\[0\] |
+| rx    | endpt\[0\].B\[0\] |
+| ry    | endpt\[1\].A\[0\] |
+| rz    | endpt\[1\].B\[0\] |
+| gw    | endpt\[0\].A\[1\] |
+| gx    | endpt\[0\].B\[1\] |
+| gy    | endpt\[1\].A\[1\] |
+| gz    | endpt\[1\].B\[1\] |
+| bw    | endpt\[0\].A\[2\] |
+| bx    | endpt\[0\].B\[2\] |
+| 수단    | endpt\[1\].A\[2\] |
+| bz    | endpt\[1\].B\[2\] |
 
  
 

@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 컨트롤, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: 369aa076184f79aa1e43c3aac11706982a6be268
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0ff7088ec4062973d0b9d1ff6d20d7992e4135c3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595418"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367951"
 ---
 # <a name="add-controls"></a>컨트롤 추가
 
@@ -43,11 +43,11 @@ ms.locfileid: "57595418"
 
 이벤트 | 설명
 :------ | :-------
-[**CoreWindow::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) | 마우스 왼쪽 또는 오른쪽 단추를 누르고 있거나 터치 표면을 터치했습니다.
-[**CoreWindow::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) |마우스를 이동하거나 터치 표면에서 끌기 작업을 수행했습니다.
-[**CoreWindow::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) |마우스 왼쪽 단추를 놓았거나 터치 표면에 닿는 개체를 들어 올렸습니다.
-[**CoreWindow::PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208275) |포인터를 주 창 밖으로 이동했습니다.
-[**Windows::Devices::Input::MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356) | 마우스를 특정 거리만큼 이동했습니다. 마우스 이동 델타 값에만 관심이 있고 현재 X-Y 위치는 표시하지 않습니다.
+[**CoreWindow::PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed) | 마우스 왼쪽 또는 오른쪽 단추를 누르고 있거나 터치 표면을 터치했습니다.
+[**CoreWindow::PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) |마우스를 이동하거나 터치 표면에서 끌기 작업을 수행했습니다.
+[**CoreWindow::PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) |마우스 왼쪽 단추를 놓았거나 터치 표면에 닿는 개체를 들어 올렸습니다.
+[**CoreWindow::PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerexited) |포인터를 주 창 밖으로 이동했습니다.
+[**Windows::Devices::Input::MouseMoved**](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) | 마우스를 특정 거리만큼 이동했습니다. 마우스 이동 델타 값에만 관심이 있고 현재 X-Y 위치는 표시하지 않습니다.
 
 
 이러한 이벤트 처리기는 응용 프로그램 창에서 **MoveLookController**가 초기화되는 즉시 사용자 입력을 수신하기 시작하도록 설정되어 있습니다.
@@ -82,11 +82,11 @@ void MoveLookController::InitWindow(_In_ CoreWindow^ window)
 
 게임이 특정 입력을 반드시 수신해야 하는 경우를 판단할 수 있도록 **MoveLookController** 클래스는 컨트롤러 유형에 관계 없이 3개의 컨트롤러 관련 상태를 가집니다.
 
-상태 | 설명
+State | 설명
 :----- | :-------
 **없음** | 컨트롤러의 초기화된 상태입니다. 게임에서 어떤 컨트롤러 입력도 예상되지 않기 때문에 모든 입력이 무시됩니다.
 **WaitForInput** | 컨트롤러는 왼쪽 마우스 클릭, 터치 이벤트 또는 게임 패드의 메뉴 단추를 사용하여 플레이어가 게임에서 메시지를 승인하는 동안 기다립니다.
-**Active** | 컨트롤러는 활성 게임 플레이 모드에 있습니다.
+**활성** | 컨트롤러는 활성 게임 플레이 모드에 있습니다.
 
 
 
@@ -105,7 +105,7 @@ void MoveLookController::InitWindow(_In_ CoreWindow^ window)
 
 
 모든 포인터 입력은 **활성** 상태에서 추적되며 포인터 작업에 따라 서로 다른 포인터 ID를 사용합니다.
-[  **PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) 이벤트를 받으면 **MoveLookController**는 창에서 만든 포인터 ID 값을 가져옵니다. 포인터 ID는 특정 유형의 입력을 나타냅니다. 예를 들어 멀티 터치 장치에는 여러 가지 다른 활성 입력이 동시에 있을 수 있습니다. 이 ID는 플레이어가 사용하는 입력을 추적하는 데 사용됩니다. 한 이벤트가 터치 스크린의 이동 사각형에 있으면 포인터 ID가 할당되어 이동 사각형의 모든 포인터 이벤트를 추적합니다. 실행 사각형의 다른 포인터 이벤트는 별도의 포인터 ID를 사용하여 별도로 추적됩니다.
+[  **PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed) 이벤트를 받으면 **MoveLookController**는 창에서 만든 포인터 ID 값을 가져옵니다. 포인터 ID는 특정 유형의 입력을 나타냅니다. 예를 들어 멀티 터치 장치에는 여러 가지 다른 활성 입력이 동시에 있을 수 있습니다. 이 ID는 플레이어가 사용하는 입력을 추적하는 데 사용됩니다. 한 이벤트가 터치 스크린의 이동 사각형에 있으면 포인터 ID가 할당되어 이동 사각형의 모든 포인터 이벤트를 추적합니다. 실행 사각형의 다른 포인터 이벤트는 별도의 포인터 ID를 사용하여 별도로 추적됩니다.
 
 
 > [!NOTE]
@@ -160,7 +160,7 @@ bool MoveLookController::IsFiring()
 
 마우스 이동이 감지되면 해당 이동을 사용하여 카메라의 새 피치와 요를 결정할 수 있습니다. 이를 위해 상대 마우스 컨트롤을 구현합니다. 여기서는 이동의 절대 x-y 픽셀 좌표 기록과 반대로 마우스가 이동한 상태 거리(이동의 시작과 정지 사이의 델타)를 처리합니다.
 
-이를 구현하기 위해 [**MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356) 이벤트에서 반환된 [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://msdn.microsoft.com/library/windows/apps/hh758358) 인수 개체의 [**MouseDelta::X**](https://msdn.microsoft.com/library/windows/apps/hh758353) 및 **MouseDelta::Y** 필드를 검토하여 X(가로 이동) 및 Y(세로 이동) 좌표의 변경을 확인합니다.
+이를 구현하기 위해 [**MouseMoved**](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) 이벤트에서 반환된 [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://docs.microsoft.com/uwp/api/windows.devices.input.mouseeventargs.mousedelta) 인수 개체의 [**MouseDelta::X**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDelta) 및 **MouseDelta::Y** 필드를 검토하여 X(가로 이동) 및 Y(세로 이동) 좌표의 변경을 확인합니다.
 
 ```cpp
 void MoveLookController::OnMouseMoved(
@@ -220,8 +220,8 @@ void MoveLookController::OnMouseMoved(
 
 **MoveLookController**는 포인터 ID를 검사하여 이벤트가 발생한 위치를 확인하고 다음 작업 중 하나를 수행합니다.
 
--   [  **PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 이벤트가이동 또는 발생 사각형에서 발생한 경우 컨트롤러의 포인터 위치를 업데이트합니다.
--   [  **PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 이벤트가 화면의 나머지 영역에서 발생한 경우(보기 컨트롤로 정의됨) 보기 방향 벡터의 피치와 요 변화를 계산합니다.
+-   [  **PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) 이벤트가이동 또는 발생 사각형에서 발생한 경우 컨트롤러의 포인터 위치를 업데이트합니다.
+-   [  **PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) 이벤트가 화면의 나머지 영역에서 발생한 경우(보기 컨트롤로 정의됨) 보기 방향 벡터의 피치와 요 변화를 계산합니다.
 
 
 일단 터치 스크롤이 구현되면 이전에 Direct2D를 사용해 그렸던 사각형이 이동, 실행 및 모양 영역이 어디인지를 플레이어에게 나타냅니다.
@@ -401,7 +401,7 @@ window->PointerReleased +=
 
 여기에서 **MoveLookController**는 이벤트를 실행한 포인터의 포인터 ID를 보기 영역에 해당되는 특정 변수에 할당합니다. 터치 모양 지역에서 발생 하는 경우는 **m\_lookPointerID** 변수가 이벤트를 발생 시킨 포인터 ID로 설정 됩니다. 부울 변수인 **m\_lookInUse**는 또한 컨트롤 하지에 있음을 나타내는 아직 출시 합니다.
 
-이제 게임 샘플에서 [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 터치 스크린 이벤트를 처리하는 방법을 살펴보겠습니다.
+이제 게임 샘플에서 [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) 터치 스크린 이벤트를 처리하는 방법을 살펴보겠습니다.
 
 
 **MoveLookController::OnPointerMoved** 메서드 내에서 어떤 종류의 포인터 ID가 이벤트에 할당되었는지 확인합니다. **m_lookPointerID**의 경우에는 포인터의 위치에서 변경을 계산합니다.
@@ -435,9 +435,9 @@ window->PointerReleased +=
 
 
 
-마지막으로 게임 샘플이 [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) 터치 스크린 이벤트를 어떻게 처리하는지 살펴보겠습니다.
+마지막으로 게임 샘플이 [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) 터치 스크린 이벤트를 어떻게 처리하는지 살펴보겠습니다.
 사용자가 터치 제스처를 완료하고 화면에서 손을 떼면 [**MoveLookController::OnPointerReleased**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L441-L500)가 시작됩니다.
-[  **PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) 이벤트를 실행한 포인터의 ID가 이전에 기록된 이동 포인터의 ID이면 플레이어가 보기 영역에 대한 터치를 중지한 것이기 때문에 **MoveLookController**에서 속도가 `0`으로 설정됩니다.
+[  **PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) 이벤트를 실행한 포인터의 ID가 이전에 기록된 이동 포인터의 ID이면 플레이어가 보기 영역에 대한 터치를 중지한 것이기 때문에 **MoveLookController**에서 속도가 `0`으로 설정됩니다.
 
 ```cpp
     else if (pointerID == m_lookPointerID)
@@ -459,9 +459,9 @@ window->PointerReleased +=
 사용자 입력 | 작업
 :------- | :--------
 W | 플레이어를 앞으로 이동
-A | 플레이어를 왼쪽으로 이동
+변수를 잠그기 위한 | 플레이어를 왼쪽으로 이동
 S | 플레이어를 뒤로 이동
-D | 플레이어를 오른쪽으로 이동
+d | 플레이어를 오른쪽으로 이동
 X | 보기를 위로 이동
 스페이스바 | 보기를 아래로 이동
 P | 게임을 일시 중지
@@ -469,7 +469,7 @@ P | 게임을 일시 중지
 왼쪽 마우스 단추 | 구 실행
 
 
-키보드를 사용하기 위해 게임 샘플은 [**MoveLookController::InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L84-L88) 메서드 내에 2개의 새로운 이벤트([**CoreWindow::KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271) 및 [**CoreWindow::KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270))를 등록합니다. 이러한 이벤트는 키 누름과 해제를 처리합니다.
+키보드를 사용하기 위해 게임 샘플은 [**MoveLookController::InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L84-L88) 메서드 내에 2개의 새로운 이벤트([**CoreWindow::KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keyup) 및 [**CoreWindow::KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keydown))를 등록합니다. 이러한 이벤트는 키 누름과 해제를 처리합니다.
 
 ```cpp
 window->KeyDown +=

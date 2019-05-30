@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc5e107fd343798698f5957c26d87a0d3ffe6625
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b30f2e9d08fd36686045523c54180829570cbd2d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608628"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372870"
 ---
 # <a name="getting-started-animation"></a>시작: 애니메이션
 
@@ -124,9 +124,9 @@ MainPage.xaml 파일을 열면 **XAML** 보기에 디자이너에서 작업할 �
 ...
 ```
 
-이 XAML을 수동으로 편집하거나 Blend로 돌아가 작업을 계속할 수 있습니다. Blend를 사용하면 흥미로운 사용자 인터페이스를 재미있게 만들 수 있으며, 그래픽 도구를 사용하여 이를 애니메이션하는 기능으로 개발 시간을 크게 단축할 수 있습니다. 애니메이션에 대한 자세한 내용은 [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)를 참조하세요.
+이 XAML을 수동으로 편집하거나 Blend로 돌아가 작업을 계속할 수 있습니다. Blend를 사용하면 흥미로운 사용자 인터페이스를 재미있게 만들 수 있으며, 그래픽 도구를 사용하여 이를 애니메이션하는 기능으로 개발 시간을 크게 단축할 수 있습니다. 애니메이션에 대한 자세한 내용은 [애니메이션 개요](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)를 참조하세요.
 
-**참고**  에 대 한 애니메이션에 대 한 정보에 대 한 <span class="legacy-term">JavaScript 및 HTML을 사용 하 여 UWP 앱</span>를 참조 하세요 [UI (HTML) 애니메이션](https://msdn.microsoft.com/library/windows/apps/hh465165)합니다.
+**참고**  에 대 한 애니메이션에 대 한 정보에 대 한 <span class="legacy-term">JavaScript 및 HTML을 사용 하 여 UWP 앱</span>를 참조 하세요 [UI (HTML) 애니메이션](https://docs.microsoft.com/previous-versions/windows/apps/hh465165(v=win.10))합니다.
 
 ### <a name="next-step"></a>다음 단계
 

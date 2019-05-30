@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9efa6cae8994c12ce742aac0a6301346d6eae0d1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: efd024838194876532dc3a1925f9c43430513cda
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57622068"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370732"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>폼 팩터 및 UX에 대 한 Windows Phone Silverlight UWP에 이식
 
@@ -48,15 +48,15 @@ Windows 앱은 PC, 모바일 디바이스 및 기타 여러 종류의 디바이�
 
 책 목록에 가장 적합한 가로 세로 비율이 세로 방향이므로 모바일 버전이 세로 전용 방향으로 제약되며, 텍스트 페이지에 대해서도 모바일 디바이스에서 단일 열로 유지하는 것이 가장 좋으므로 세로 전용 방향으로 제약합니다. 하지만 PC 및 태블릿 화면은 방향과 상관없이 모두 크므로 큰 장치에서는 모바일 장치처럼 제약할 필요가 없습니다.
 
-모바일 버전처럼 보이도록 앱을 광학적으로 확대하면 장치 및 추가 공간을 활용할 수 없을 뿐만 아니라 사용자에게도 도움이 되지 않습니다. 동일한 콘텐츠를 더 크게 표시하는 것보다 더 많은 콘텐츠를 표시하는 것을 고려해야 합니다. 패블릿에서도 더 많은 행의 콘텐츠를 표시할 수 있습니다. 추가 공간을 사용하여 광고 등과 같은 다른 콘텐츠를 표시하거나, 목록 상자를 목록 보기로 변경하고 항목을 여러 열로 줄 바꿈(가능한 경우)하여 공간을 그런 식으로 사용할 수 있습니다. [목록 및 그리드 보기 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/mt186889)을 참조하세요.
+모바일 버전처럼 보이도록 앱을 광학적으로 확대하면 장치 및 추가 공간을 활용할 수 없을 뿐만 아니라 사용자에게도 도움이 되지 않습니다. 동일한 콘텐츠를 더 크게 표시하는 것보다 더 많은 콘텐츠를 표시하는 것을 고려해야 합니다. 패블릿에서도 더 많은 행의 콘텐츠를 표시할 수 있습니다. 추가 공간을 사용하여 광고 등과 같은 다른 콘텐츠를 표시하거나, 목록 상자를 목록 보기로 변경하고 항목을 여러 열로 줄 바꿈(가능한 경우)하여 공간을 그런 식으로 사용할 수 있습니다. [목록 및 그리드 보기 컨트롤에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists)을 참조하세요.
 
-목록 보기 및 그리드 보기와 같은 새 컨트롤 외에도 Windows Phone Silverlight에서 설정 된 레이아웃 형식의 대부분 유니버설 Windows 플랫폼 (UWP)에 해당 하는 항목을 갖고 있습니다. 예를 들어 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) 및 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)입니다. 이러한 형식을 사용하는 대부분의 UI는 쉽게 포팅할 수 있지만, 항상 다른 크기의 장치에서 자동으로 크기를 조정하고 다시 배치하도록 이러한 레이아웃 패널의 동적 레이아웃 기능 활용 방법을 찾아야 합니다.
+목록 보기 및 그리드 보기와 같은 새 컨트롤 외에도 Windows Phone Silverlight에서 설정 된 레이아웃 형식의 대부분 유니버설 Windows 플랫폼 (UWP)에 해당 하는 항목을 갖고 있습니다. 예를 들어 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 및 [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel)입니다. 이러한 형식을 사용하는 대부분의 UI는 쉽게 포팅할 수 있지만, 항상 다른 크기의 장치에서 자동으로 크기를 조정하고 다시 배치하도록 이러한 레이아웃 패널의 동적 레이아웃 기능 활용 방법을 찾아야 합니다.
 
 시스템 컨트롤 및 레이아웃 패널에 기본 제공 동적 레이아웃을 넘어 사용할 수 있습니다 라는 새 Windows 10 기능 [적응 Visual State Manager](wpsl-to-uwp-porting-xaml-and-ui.md)합니다.
 
 ## <a name="input-modalities"></a>입력 형식
 
-Windows Phone Silverlight 인터페이스는 터치 다릅니다. 포팅된 앱의 인터페이스도 터치를 지원해야 하지만 마우스, 키보드 등과 같은 다른 입력 형식을 지원하도록 선택할 수도 있습니다. UWP에서는 마우스, 펜 및 터치식 입력이 *포인터 입력*으로 통합됩니다. 자세한 내용은 [포인터 입력 처리](https://msdn.microsoft.com/library/windows/apps/mt404610) 및 [키보드 조작](https://msdn.microsoft.com/library/windows/apps/mt185607)을 참조하세요.
+Windows Phone Silverlight 인터페이스는 터치 다릅니다. 포팅된 앱의 인터페이스도 터치를 지원해야 하지만 마우스, 키보드 등과 같은 다른 입력 형식을 지원하도록 선택할 수도 있습니다. UWP에서는 마우스, 펜 및 터치식 입력이 *포인터 입력*으로 통합됩니다. 자세한 내용은 [포인터 입력 처리](https://docs.microsoft.com/windows/uwp/input-and-devices/handle-pointer-input) 및 [키보드 조작](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)을 참조하세요.
 
 ## <a name="maximizing-markup-and-code-re-use"></a>태그 및 코드 재사용 최대화
 
@@ -65,8 +65,8 @@ Windows Phone Silverlight 인터페이스는 터치 다릅니다. 포팅된 앱�
 ## <a name="more-info-and-design-guidelines"></a>추가 정보 및 디자인 지침
 
 -   [UWP 앱 디자인](https://developer.microsoft.com/en-us/windows/apps/design)
--   [글꼴에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh700394)
--   [다른 폼 팩터로 배포에 대 한 계획](https://msdn.microsoft.com/library/windows/apps/dn958435)
+-   [글꼴에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts)
+-   [다른 폼 팩터로 배포에 대 한 계획](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design)
 
 ## <a name="related-topics"></a>관련 항목
 

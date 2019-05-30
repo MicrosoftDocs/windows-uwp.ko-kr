@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 사용자 인터페이스, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 09005eb12997126a9cad68c388beb0473b19fda3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ef966901534302c505ddad37bd277d9141b512a1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57609058"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367859"
 ---
 # <a name="add-a-user-interface"></a>사용자 인터페이스 추가
 
@@ -31,7 +31,7 @@ Direct2D를 사용 하 여 포함 하는 UWP DirectX 게임에 다양 한 사용
 ## <a name="the-user-interface-overlay"></a>사용자 인터페이스 오버레이
 
 
-여러 가지 방법을 사용 하 여 DirectX 게임에서 텍스트 및 사용자 인터페이스 요소를 표시할 수 있습니다, 있지만 하겠습니다 포커스를 사용 하 여 [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx)합니다. 또한 사용할 것 [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) 텍스트 요소에 대 한 합니다.
+여러 가지 방법을 사용 하 여 DirectX 게임에서 텍스트 및 사용자 인터페이스 요소를 표시할 수 있습니다, 있지만 하겠습니다 포커스를 사용 하 여 [Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal)합니다. 또한 사용할 것 [DirectWrite](https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal) 텍스트 요소에 대 한 합니다.
 
 
 Direct2D 픽셀 기반 기본 형식 및 효과 그리는 데 사용 되는 2D 그리기 Api 집합입니다. Direct2D를 사용 하 여 시작을 하는 경우 간단 하 게 유지 하는 것이 좋습니다. 복잡한 레이아웃 및 인터페이스 동작에는 시간과 계획이 필요합니다. 게임 시뮬레이션 및 전략 게임에서 복잡 한 사용자 인터페이스를 요구 하는 경우에 대신 XAML을 사용 하는 것이 좋습니다.
@@ -53,7 +53,7 @@ Direct2D는 사용자 인터페이스 또는 HTML 및 XAML와 같은 레이아�
 ![게임 오버레이의 스크린샷](images/simple-dx-game-ui-overlay.png)
 
 오버레이 다음 기본 기본 형식으로 구성 됩니다.
-- [**DirectWrite** ](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368038) 의 플레이어에 게 알려 주는 오른쪽 위 모서리에 있는 텍스트 
+- [**DirectWrite** ](https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal) 의 플레이어에 게 알려 주는 오른쪽 위 모서리에 있는 텍스트 
     - 성공적인 적중 횟수
     - 플레이어 했습니다 샷 수
     - 수준에 남은 시간
@@ -64,12 +64,12 @@ Direct2D는 사용자 인터페이스 또는 HTML 및 XAML와 같은 레이아�
 
 게임에 헤 즈 업 디스플레이 상태의 오버레이 그릴지를 [ **GameHud::Render** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.cpp#L234-L358) 메서드를 [ **GameHud** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.h) 클래스. 이 메서드 내에서 UI를 나타내는 Direct2D 오버레이 적중 횟수, 시간, 남은 및 수준 번호 수의 변경 내용을 반영 하도록 업데이트 됩니다.
 
-게임 초기화 된 경우 추가 `TotalHits()`, `TotalShots()`, 및 `TimeRemaining()` 에 [ **swprintf_s** ](https://docs.microsoft.com/cpp/c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l) 버퍼링 하 고 인쇄 형식을 지정 합니다. 사용 하 여 다음 내릴 수 있습니다 합니다 [ **DrawText** ](https://msdn.microsoft.com/en-us/library/windows/desktop/dd742848) 메서드. 에서는 동일한 작업을 수행 현재 수준 표시기에 대 한 그리기 ➀를 같은 완료 되지 않은 수준을 표시 합니다. 빈 번호 및 특정 수준 완료 되었음을 표시할 ➊ 같은 채워진된 숫자입니다.
+게임 초기화 된 경우 추가 `TotalHits()`, `TotalShots()`, 및 `TimeRemaining()` 에 [ **swprintf_s** ](https://docs.microsoft.com/cpp/c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l) 버퍼링 하 고 인쇄 형식을 지정 합니다. 사용 하 여 다음 내릴 수 있습니다 합니다 [ **DrawText** ](https://docs.microsoft.com/windows/desktop/Direct2D/id2d1rendertarget-drawtext) 메서드. 에서는 동일한 작업을 수행 현재 수준 표시기에 대 한 그리기 ➀를 같은 완료 되지 않은 수준을 표시 합니다. 빈 번호 및 특정 수준 완료 되었음을 표시할 ➊ 같은 채워진된 숫자입니다.
 
 
 다음 코드는 과정을 안내 합니다 **GameHud::Render** 메서드의 프로세스 
-- 사용 하 여 비트맵 [* * ID2D1RenderTarget::DrawBitmap * *](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371880)
-- 사용 하 여 사각형 UI 영역 해제 단면 [ **D2D1::RectF**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368184)
+- 사용 하 여 비트맵 [* * ID2D1RenderTarget::DrawBitmap * *](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-drawbitmap(id2d1bitmap_constd2d1_rect_f__float_d2d1_bitmap_interpolation_mode_constd2d1_rect_f_))
+- 사용 하 여 사각형 UI 영역 해제 단면 [ **D2D1::RectF**](https://docs.microsoft.com/windows/desktop/api/dcommon/ns-dcommon-d2d_rect_f)
 - 사용 하 여 **DrawText** 텍스트 요소를 확인 합니다.
 
 ```cpp
@@ -171,7 +171,7 @@ void GameHud::Render(_In_ Simple3DGame^ game)
 }
 ```
 
-이 부분은 더 아래로 메서드 주요 합니다 [ **GameHud::Render** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.cpp#L320-L358) 메서드 이동 하는 과정을 그리는 데 사용 하 여 사각형을 실행 합니다. [ **ID2D1RenderTarget::DrawRectangle** ](https://msdn.microsoft.com/library/windows/desktop/dd371902), 및에 대 한 두 호출을 사용 하 여 십자 [ **ID2D1RenderTarget::DrawLine**](https://msdn.microsoft.com/library/windows/desktop/dd371895)합니다.
+이 부분은 더 아래로 메서드 주요 합니다 [ **GameHud::Render** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.cpp#L320-L358) 메서드 이동 하는 과정을 그리는 데 사용 하 여 사각형을 실행 합니다. [ **ID2D1RenderTarget::DrawRectangle** ](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-drawrectangle(constd2d1_rect_f__id2d1brush_float_id2d1strokestyle)), 및에 대 한 두 호출을 사용 하 여 십자 [ **ID2D1RenderTarget::DrawLine**](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-drawline)합니다.
 
 ```cpp
         // Check if game is playing
@@ -219,7 +219,7 @@ void GameHud::Render(_In_ Simple3DGame^ game)
 auto windowBounds = m_deviceResources->GetLogicalSize();
 ```
 
- 게임 창 크기를 가져오는 UI 프로그래밍에 대 한 필수적입니다. 창의 크기는 DIP를 1/96 인치로 정의 되어 있는 Dip (장치 독립적 픽셀) 라는 측정 단위로 제공 됩니다. Direct2D 조정 실제 픽셀 그리기 단위 그리기 경우 Windows에 대 한 인치당 dpi 설정 사용 하 여 이렇게 합니다. 마찬가지로, 그릴 때 사용 하 여 텍스트 [ **DirectWrite**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368038), 글꼴의 포인트 크기 보다는 Dip를 지정 합니다. DIP는 부동 소수점 수로 표현됩니다.
+ 게임 창 크기를 가져오는 UI 프로그래밍에 대 한 필수적입니다. 창의 크기는 DIP를 1/96 인치로 정의 되어 있는 Dip (장치 독립적 픽셀) 라는 측정 단위로 제공 됩니다. Direct2D 조정 실제 픽셀 그리기 단위 그리기 경우 Windows에 대 한 인치당 dpi 설정 사용 하 여 이렇게 합니다. 마찬가지로, 그릴 때 사용 하 여 텍스트 [ **DirectWrite**](https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal), 글꼴의 포인트 크기 보다는 Dip를 지정 합니다. DIP는 부동 소수점 수로 표현됩니다.
 
  
 
@@ -271,11 +271,11 @@ auto windowBounds = m_deviceResources->GetLogicalSize();
  
 
 #### <a name="gameinfooverlaygameinfooverlay"></a>GameInfoOverlay::GameInfoOverlay
-합니다 [ **GameInfoOverlay::GameInfoOverlay** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L30-L78) 생성자에서 플레이어에 게 정보를 표시를 사용 하는 비트맵 표면을 유지 오버레이 초기화 합니다. 생성자에서 팩터리를 가져옵니다 합니다 [ **ID2D1Device** ](https://msdn.microsoft.com/library/windows/desktop/hh404478) 만드는 데 사용 하기에 전달 된 개체를 [ **ID2D1DeviceContext** ](https://msdn.microsoft.com/library/windows/desktop/hh404479) 오버레이 개체 자체를 그릴 수 있습니다. [IDWriteFactory::CreateTextFormat](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368203) 
+합니다 [ **GameInfoOverlay::GameInfoOverlay** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L30-L78) 생성자에서 플레이어에 게 정보를 표시를 사용 하는 비트맵 표면을 유지 오버레이 초기화 합니다. 생성자에서 팩터리를 가져옵니다 합니다 [ **ID2D1Device** ](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1device) 만드는 데 사용 하기에 전달 된 개체를 [ **ID2D1DeviceContext** ](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) 오버레이 개체 자체를 그릴 수 있습니다. [IDWriteFactory::CreateTextFormat](https://docs.microsoft.com/windows/desktop/api/dwrite/nf-dwrite-idwritefactory-createtextformat) 
 
 
 #### <a name="gameinfooverlaycreatedevicedependentresources"></a>GameInfoOverlay::CreateDeviceDependentResources
-[**GameInfoOverlay::CreateDeviceDependentResources** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L82-L104) 는 브러시를 만드는 데 사용할 텍스트를 그리는 메서드입니다. 구한이 작업을 수행 하는 [ **ID2D1DeviceContext2** ](https://msdn.microsoft.com/en-us/library/windows/desktop/dn890789) 개체를 만들 수 있으며 메시 잉크 및 그라데이션 같은 기능 및 기 하 도형 그리기 렌더링 합니다. 그런 다음 일련의 색이 지정 된 브러시를 사용 하 여 만듭니다 [ **ID2D1SolidColorBrush** ](https://msdn.microsoft.com/en-us/library/windows/desktop/dd372207) folling UI 요소를 그립니다.
+[**GameInfoOverlay::CreateDeviceDependentResources** ](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L82-L104) 는 브러시를 만드는 데 사용할 텍스트를 그리는 메서드입니다. 구한이 작업을 수행 하는 [ **ID2D1DeviceContext2** ](https://docs.microsoft.com/windows/desktop/api/d2d1_3/nn-d2d1_3-id2d1devicecontext2) 개체를 만들 수 있으며 메시 잉크 및 그라데이션 같은 기능 및 기 하 도형 그리기 렌더링 합니다. 그런 다음 일련의 색이 지정 된 브러시를 사용 하 여 만듭니다 [ **ID2D1SolidColorBrush** ](https://docs.microsoft.com/windows/desktop/api/d2d1/nn-d2d1-id2d1solidcolorbrush) folling UI 요소를 그립니다.
 - 사각형 배경에 대 한 검정 브러시
 - 흰색 브러시로 상태 텍스트
 - 작업 텍스트 주황색 브러시
@@ -309,9 +309,9 @@ auto windowBounds = m_deviceResources->GetLogicalSize();
     ```
 
 - 비트맵 라는 생성 됩니다 `m_levelBitmap`를 사용 하 여 계정을 현재 DPI 고려 **CreateBitmap**합니다.
-- `m_levelBitmap` 사용 하 여 2D 렌더링 대상으로 설정 됩니다 [ **ID2D1DeviceContext::SetTarget**](https://msdn.microsoft.com/en-us/library/windows/desktop/hh404533)합니다.
-- 사용 하 여 검정을 수행 하는 모든 픽셀을 사용 하 여 비트맵 지워집니다 [ **ID2D1RenderTarget::Clear**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371772)합니다.
-- [**ID2D1RenderTarget::BeginDraw** ](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371768) 그리기를 시작 하기 위해 호출 됩니다. 
+- `m_levelBitmap` 사용 하 여 2D 렌더링 대상으로 설정 됩니다 [ **ID2D1DeviceContext::SetTarget**](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-settarget)합니다.
+- 사용 하 여 검정을 수행 하는 모든 픽셀을 사용 하 여 비트맵 지워집니다 [ **ID2D1RenderTarget::Clear**](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-clear)합니다.
+- [**ID2D1RenderTarget::BeginDraw** ](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) 그리기를 시작 하기 위해 호출 됩니다. 
 - **DrawText** 에 저장 된 텍스트를 그리기 위해 호출 됩니다 `m_titleString`, `m_bodyString`, 및 `m_actionString` 해당를 사용 하 여 approperiate 사각형에서 **ID2D1SolidColorBrush**합니다.
 - [**ID2D1RenderTarget::EndDraw** ](ID2D1RenderTarget::EndDraw) 에서 모든 그리기 작업을 중지 하 라고 `m_levelBitmap`합니다.
 - 사용 하 여 다른 비트 멥 만들어집니다 **CreateBitmap** 라는 `m_tooSmallBitmap` 표시 구성은 게임에 비해 너무 작은 경우에 표시에서 대체 방법으로 사용 하도록 합니다.
@@ -331,12 +331,12 @@ auto windowBounds = m_deviceResources->GetLogicalSize();
 
 게임 상태 | 상태 set 메서드 | 상태 필드
 :----- | :------- | :---------
-로드 | [GameInfoOverlay::SetGameLoading](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L254-L306) |**제목**</br>리소스 로드 </br>**본문**</br> 증분 방식으로 인쇄 "." 로드 작업을 의미 합니다.
-초기 시작/높은 점수 통계 | [GameInfoOverlay::SetGameStats](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L310-L354) |**제목**</br>최고 점수</br> **본문**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면
-수준 시작 | [GameInfoOverlay::SetLevelStart](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L413-L471) |**제목**</br>수준 #</br>**본문**</br>수준 목표 설명입니다.
-게임이 일시 중지 | [GameInfoOverlay::SetPause](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L475-L502) |**제목**</br>게임이 일시 중지</br>**본문**</br>없음
-게임 종료 | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**제목**</br>게임 오버</br> **본문**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면</br>수준 # 완료</br>높은 # 점수 매기기
-게임-이득 | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**제목**</br>승리 했습니다.</br> **본문**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면</br>수준 # 완료</br>높은 # 점수 매기기
+로드 | [GameInfoOverlay::SetGameLoading](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L254-L306) |**Title**</br>리소스 로드 </br>**Body**</br> 증분 방식으로 인쇄 "." 로드 작업을 의미 합니다.
+초기 시작/높은 점수 통계 | [GameInfoOverlay::SetGameStats](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L310-L354) |**Title**</br>최고 점수</br> **Body**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면
+수준 시작 | [GameInfoOverlay::SetLevelStart](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L413-L471) |**Title**</br>수준 #</br>**Body**</br>수준 목표 설명입니다.
+게임이 일시 중지 | [GameInfoOverlay::SetPause](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L475-L502) |**Title**</br>게임이 일시 중지</br>**Body**</br>없음
+게임 종료 | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**Title**</br>게임 오버</br> **Body**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면</br>수준 # 완료</br>높은 # 점수 매기기
+게임-이득 | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**Title**</br>승리 했습니다.</br> **Body**</br> 수준 # 완료 </br>Total # 요소</br>Total # 장면</br>수준 # 완료</br>높은 # 점수 매기기
 
 
 

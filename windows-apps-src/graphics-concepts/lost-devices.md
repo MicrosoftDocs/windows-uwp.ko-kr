@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f0b42a10c2cdd61aef84e08d6bd4f6408a978c3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8a280d07ab7d715adaa7da941be641cd54e24443
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617318"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371012"
 ---
 # <a name="lost-devices"></a>분실한 디바이스
 
@@ -21,7 +21,7 @@ Direct3D 디바이스는 작동 상태이거나 손실 상태일 수 있습니�
 
 설계상 장치 분실을 일으킬 가능성이 있는 전체 시나리오 집합은 지정되지 않았습니다. 사용자가 ALT+TAB을 누르거나 시스템 대화 상자가 초기화된 경우 등 포커스를 잃어버리는 경우가 대표적인 예입니다. 전원 관리 이벤트가 발생하거나 다른 응용 프로그램이 전체 화면 작업을 가정할 때도 장치를 분실할 수 있습니다. 또한 장치 재설정으로 인한 오류 발생 시 장치가 분실 상태가 됩니다.
 
-[  **IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)에서 파생된 모든 메서드는 장치 분실 후에도 작동합니다. 장치 분실 후 각 기능에는 일반적으로 다음 세 가지 옵션이 있습니다.
+[  **IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)에서 파생된 모든 메서드는 장치 분실 후에도 작동합니다. 장치 분실 후 각 기능에는 일반적으로 다음 세 가지 옵션이 있습니다.
 
 -   "장치 분실" 오류로 실패 - 즉 응용 프로그램이 장치 분실을 인식하여 예상 대로 작동하지 않음을 파악해야 한다는 뜻입니다.
 -   자동으로 실패 반환 S\_확인 또는 기타 반환 코드-함수가 자동으로 실패 하는 경우 응용 프로그램 일반적으로 구별할 수 없습니다: "success"의 결과 "자동 오류입니다."

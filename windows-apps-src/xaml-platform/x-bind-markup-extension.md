@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 625c48e2f0fc57a4e9fd3a98acc505e01e2eb42c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c32fee5d9cbe5d40b9fe324eb8d6bad6d87eb9b3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658618"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371087"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
-**참고**  사용 하 여 앱에서 데이터 바인딩 사용에 대 한 일반 정보에 대 한 **{0} X:bind}** (및 사이의 모든 비교 **{0} X:bind}** 및 **{Binding}**)를 참조 하세요 [깊이의 데이터 바인딩](https://msdn.microsoft.com/library/windows/apps/mt210946)합니다.
+**참고**  사용 하 여 앱에서 데이터 바인딩 사용에 대 한 일반 정보에 대 한 **{0} X:bind}** (및 사이의 모든 비교 **{0} X:bind}** 및 **{Binding}** )를 참조 하세요 [깊이의 데이터 바인딩](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)합니다.
 
 합니다 **{X:bind}** 태그 확장-Windows 10의 새로운 기능-하지 않아도 됩니다 **{Binding}** 합니다. **{x: 바인딩}**  실행 시간에서 및 메모리는 덜 **{Binding}** 디버깅 향상을 지원 합니다.
 
@@ -50,9 +50,9 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 |------|-------------|
 | _propertyPath_ | 바인딩의 속성 경로를 지정하는 문자열. 자세한 내용은 [속성 경로](#property-path) 섹션을 참조하세요. |
 | _bindingProperties_ |
-| _propName_=_값_\[하십시오 _propName_=_값_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
+| _propName_=_value_\[, _propName_=_value_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
 | _propName_ | 바인딩 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
-| _값_ | 속성을 설정할 값. 인수 구문은 설정할 속성에 따라 다릅니다. 다음은 값 자체가 태그 확장인 _propName_=_value_ 사용법의 예입니다. `Converter={StaticResource myConverterClass}`. 자세한 내용은 아래의 [{x:Bind}로 설정할 수 있는 속성](#properties-that-you-can-set-with-xbind)을 참조하세요. |
+| _value_ | 속성을 설정할 값. 인수 구문은 설정할 속성에 따라 다릅니다. 다음은 값 자체가 태그 확장인 _propName_=_value_ 사용법의 예입니다. `Converter={StaticResource myConverterClass}`. 자세한 내용은 아래의 [{x:Bind}로 설정할 수 있는 속성](#properties-that-you-can-set-with-xbind)을 참조하세요. |
 
 ## <a name="examples"></a>예
 
@@ -75,7 +75,7 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 
 ## <a name="property-path"></a>속성 경로
 
-*PropertyPath*는 **{x:Bind}** 식에 대한 **Path**를 설정합니다. **Path**는 소스에 바인딩할 속성, 하위 속성, 필드 또는 메서드의 값을 지정하는 속성 경로입니다. **Path** 속성 이름을 명시적으로 지정하거나(`{Binding Path=...}`) 생략할 수 있습니다(`{Binding ...}`).
+*PropertyPath*는 **{x:Bind}** 식에 대한 **Path**를 설정합니다. **Path**는 소스에 바인딩할 속성, 하위 속성, 필드 또는 메서드의 값을 지정하는 속성 경로입니다. **Path** 속성 이름을 명시적으로 지정하거나(`{x:Bind Path=...}`) 생략할 수 있습니다(`{x:Bind ...}`).
 
 ### <a name="property-path-resolution"></a>속성 경로 확인
 
@@ -92,9 +92,9 @@ C++/CX의 경우 **{x:Bind}** 는 페이지 또는 데이터 모델의 전용 �
 
 데이터 원본이 컬렉션인 경우 속성 패치가 컬렉션에서 위치 또는 색인별로 항목을 지정할 수 있습니다. 예를 들어, "팀\[0\]합니다. 플레이어"위치 리터럴"\[\]""0 "을 둘러싸는 인덱스가 0 인 컬렉션의 첫 번째 항목을 요청 하는 합니다.
 
-인덱서를 사용하려면 메서드에서 인덱싱할 속성 형식에 대해 **IList&lt;T&gt;** 또는 **IVector&lt;T&gt;** 를 구현해야 합니다. 인덱싱된 속성 형식이 **INotifyCollectionChanged** 또는 **IObservableVector**를 지원하는 경우 바인딩이 OneWay 또는 TwoWay이면 해당 인터페이스에 대한 변경 알림을 등록하고 수신합니다. 변경 내용 검색 논리는 인덱싱된 특정 값에 영향을 주지 않는 경우에도 모든 컬렉션 변경 내용에 따라 업데이트됩니다.습니다 하는 경우에 모든 컬렉션 변경 내용에 따라 합니다. 이는 수신 대기 논리가 컬렉션의 모든 인스턴스에서 공통적이기 때문입니다.
+인덱서를 사용하려면 메서드에서 인덱싱할 속성 형식에 대해 **IList&lt;T&gt;** 또는 **IVector&lt;T&gt;** 를 구현해야 합니다. (참고 해당 IReadOnlyList&lt;T&gt; 고 IVectorView&lt;T&gt; 인덱서 구문을 지원 하지 않습니다.) 인덱싱된 속성 형식이 **INotifyCollectionChanged** 또는 **IObservableVector**를 지원하는 경우 바인딩이 OneWay 또는 TwoWay이면 해당 인터페이스에 대한 변경 알림을 등록하고 수신합니다. 변경 내용 검색 논리는 인덱싱된 특정 값에 영향을 주지 않는 경우에도 모든 컬렉션 변경 내용에 따라 업데이트됩니다.습니다 하는 경우에 모든 컬렉션 변경 내용에 따라 합니다. 이는 수신 대기 논리가 컬렉션의 모든 인스턴스에서 공통적이기 때문입니다.
 
-데이터 원본이 사전 또는 맵인 경우 문자열 이름을 기준으로 속성 경로에서 컬렉션의 항목을 지정할 수 있습니다. 예를 들어 **&lt;TextBlock 텍스트 = "{X:bind 플레이어\[' John Smith'\]" /&gt;** "John Smith" 라는 사전의 항목에 대 한 표시 됩니다. 이름은 따옴표로 묶어야 하며 작은따옴표 또는 큰따옴표를 사용할 수 있습니다. 문자열에서 따옴표를 이스케이프할 때는 캐럿(^)을 사용할 수 있습니다. 일반적으로 XAML 특성에 대해 사용하지 않는 따옴표를 사용하는 것이 가장 쉽습니다.
+데이터 원본이 사전 또는 맵인 경우 문자열 이름을 기준으로 속성 경로에서 컬렉션의 항목을 지정할 수 있습니다. 예를 들어 **&lt;TextBlock 텍스트 = "{X:bind 플레이어\[' John Smith'\]" /&gt;** "John Smith" 라는 사전의 항목에 대 한 표시 됩니다. 이름은 따옴표로 묶어야 하며 작은따옴표 또는 큰따옴표를 사용할 수 있습니다. 문자열에서 따옴표를 이스케이프할 때는 캐럿(^)을 사용할 수 있습니다. 일반적으로 XAML 특성에 대해 사용하지 않는 따옴표를 사용하는 것이 가장 쉽습니다. (참고 해당 IReadOnlyDictionary&lt;T&gt; 고 IMapView&lt;T&gt; 인덱서 구문을 지원 하지 않습니다.)
 
 문자열 인덱서를 사용하려면 모델에서 인덱싱할 속성 형식에 대해 **IDictionary&lt;string, T&gt;** 또는 **IMap&lt;string, T&gt;** 를 구현해야 합니다. 인덱싱된 속성 형식이 **IObservableMap**을 지원하는 경우 바인딩이 OneWay 또는 TwoWay이면 해당 인터페이스에 대한 변경 알림을 등록하고 수신합니다. 변경 내용 검색 논리는 인덱싱된 특정 값에 영향을 주지 않는 경우에도 모든 컬렉션 변경 내용에 따라 업데이트됩니다.습니다 하는 경우에 모든 컬렉션 변경 내용에 따라 합니다. 이는 수신 대기 논리가 컬렉션의 모든 인스턴스에서 공통적이기 때문입니다.
 
@@ -125,24 +125,24 @@ Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리
 
 생성된 코드 숨김에서 컴파일된 바인딩은 이벤트를 처리하여 모델의 메서드로 라우트합니다. 이를 통해 이벤트가 발생한 경우 바인딩 식의 경로를 평가합니다. 즉, 속성 바인딩과 달리 모델의 변경 내용을 추적하지 않습니다.
 
-속성 경로의 문자열 구문에 대한 자세한 내용은 [Property-path 구문](property-path-syntax.md)을 참조하세요(**{x:Bind}** 에 대해 여기에 설명된 차이점에 유의).
+속성 경로의 문자열 구문에 대한 자세한 내용은 [Property-path 구문](property-path-syntax.md)을 참조하세요( **{x:Bind}** 에 대해 여기에 설명된 차이점에 유의).
 
 ## <a name="properties-that-you-can-set-with-xbind"></a>{x:Bind}로 설정할 수 있는 속성
 
 태그 확장에서 설정될 수 있는 읽기/쓰기 속성이 여러 개이므로 **{x:Bind}** 은 *bindingProperties* 자리 표시자 구문을 통해 설명됩니다. 쉼표로 구분된 *propName*=*value* 쌍으로 순서에 상관없이 속성을 설정할 수 있습니다. 바인딩 식에는 줄바꿈을 포함할 수 없습니다. 일부 속성에는 형식 변환이 없는 형식이 필요하므로 해당 태그 확장이 **{x:Bind}** 에 중첩되어야 합니다.
 
-이러한 속성은 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스의 속성과 거의 동일한 방식으로 작동합니다.
+이러한 속성은 [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding) 클래스의 속성과 거의 동일한 방식으로 작동합니다.
 
 | 속성 | 설명 |
 |----------|-------------|
 | **경로** | 위의 [속성 경로](#property-path) 섹션을 참조하세요. |
 | **변환기** | 바인딩 엔진이 호출하는 변환기 개체를 지정합니다. 변환기는 XAML에서 설정할 수 있지만 리소스 사전의 해당 개체에 대한 [{StaticResource} 태그 확장](staticresource-markup-extension.md) 참조에서 할당한 개체 인스턴스를 참조하는 경우에만 설정할 수 있습니다. |
-| **ConverterLanguage** | 변환기가 사용할 문화권을 지정합니다. (설정 하는 경우 **ConverterLanguage** 있습니다 설정도 해야 **변환기**.) 문화권은 표준 기반 식별자로 설정 됩니다. 자세한 내용은 [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880)를 참조하세요. |
-| **converterParameter** | 변환기 논리에서 사용될 수 있는 변환기 매개 변수를 지정합니다. (설정 하는 경우 **ConverterParameter** 있습니다 설정도 해야 **변환기**.) 전달된 된 값으로 변환 하려면에서 필요한 모든 정보를 가져오는 간단한 논리를 사용 하는 대부분의 변환기 필요 하지 않습니다는 **ConverterParameter** 값입니다. **ConverterParameter** 매개 변수는 **ConverterParameter**에서 전달되는 내용을 수용하는 여러 논리가 있는 고급 변환기를 구현하기 위한 것입니다. 문자열이 아닌 값을 사용하는 변환기를 작성할 수도 있지만 일반적이지 않습니다. 자세한 내용은 [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827)에서 설명을 참조하세요. |
-| **fallbackValue** | 원본 또는 경로를 확인할 수 없을 때 표시할 값을 지정합니다. |
+| **ConverterLanguage** | 변환기가 사용할 문화권을 지정합니다. (설정 하는 경우 **ConverterLanguage** 있습니다 설정도 해야 **변환기**.) 문화권은 표준 기반 식별자로 설정 됩니다. 자세한 내용은 [**ConverterLanguage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterlanguage)를 참조하세요. |
+| **ConverterParameter** | 변환기 논리에서 사용될 수 있는 변환기 매개 변수를 지정합니다. (설정 하는 경우 **ConverterParameter** 있습니다 설정도 해야 **변환기**.) 전달된 된 값으로 변환 하려면에서 필요한 모든 정보를 가져오는 간단한 논리를 사용 하는 대부분의 변환기 필요 하지 않습니다는 **ConverterParameter** 값입니다. **ConverterParameter** 매개 변수는 **ConverterParameter**에서 전달되는 내용을 수용하는 여러 논리가 있는 고급 변환기를 구현하기 위한 것입니다. 문자열이 아닌 값을 사용하는 변환기를 작성할 수도 있지만 일반적이지 않습니다. 자세한 내용은 [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter)에서 설명을 참조하세요. |
+| **FallbackValue** | 원본 또는 경로를 확인할 수 없을 때 표시할 값을 지정합니다. |
 | **모드** | 이러한 문자열 중 하나로 바인딩 모드를 지정합니다. "OneTime", "단방향" 또는 "TwoWay"입니다. 기본값은 "OneTime"입니다. 이 값은 **{Binding}** 에 대한 기본값(대부분의 경우 "OneWay"임)과 다릅니다. |
 | **TargetNullValue** | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
-| **하지** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. |
+| **BindBack** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. |
 | **UpdateSourceTrigger** | TwoWay 바인딩에서 컨트롤에서 모델로 변경을 다시 적용하는 시기를 지정합니다. TextBox.Text 제외한 모든 속성의 기본값은 PropertyChanged; TextBox.Text LostFocus입니다.|
 
 > [!NOTE]
@@ -165,11 +165,11 @@ Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리
 - **StopTracking()** - 단방향 및 양방향 바인딩을 위해 만들어진 모든 리스너의 연결이 해제됩니다. Update() 메서드를 사용하여 다시 초기화할 수 있습니다.
 
 > [!NOTE]
-> Windows 10 버전 1607부터 XAML 프레임워크는 기본 제공 부울-표시 변환기를 제공합니다. 변환기는 **Visible** 열거형 값에 **true**를, **Collapsed**에 **false**를 매핑하므로 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 이는 함수 바인딩이 아닌 속성 바인딩의 기능입니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
+> Windows 10 버전 1607부터 XAML 프레임워크는 기본 제공 부울-표시 변환기를 제공합니다. 변환기는 **Visible** 열거형 값에 **true**를, **Collapsed**에 **false**를 매핑하므로 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 이는 함수 바인딩이 아닌 속성 바인딩의 기능입니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
 
-**팁**    와 같은 값을 단일 중괄호로 지정 하는 경우 [ **경로** ](https://msdn.microsoft.com/library/windows/apps/br209830) 하거나 [ **ConverterParameter** ](https://msdn.microsoft.com/library/windows/apps/br209827)를 앞에 백슬래시: `\{`합니다. 또는 보조 따옴표 집합에서 이스케이프해야 하는 괄호가 포함된 전체 문자열을 다음과 같이 묶습니다. `ConverterParameter='{Mix}'`.
+**팁**    와 같은 값을 단일 중괄호로 지정 하는 경우 [ **경로** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) 하거나 [ **ConverterParameter** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter)를 앞에 백슬래시: `\{`합니다. 또는 보조 따옴표 집합에서 이스케이프해야 하는 괄호가 포함된 전체 문자열을 다음과 같이 묶습니다. `ConverterParameter='{Mix}'`.
 
-[**변환기**](https://msdn.microsoft.com/library/windows/apps/br209826)를 [ **ConverterLanguage** ](https://msdn.microsoft.com/library/windows/apps/hh701880) 고 **ConverterLanguage** 는 모든 시나리오와 관련 된 값을 변환 하거나에서 입력 합니다 바인딩 소스를 유형 또는 바인딩 대상 속성에 호환 되는 값입니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)의 "데이터 변환" 섹션을 참조하세요.
+[**변환기**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converter)를 [ **ConverterLanguage** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterlanguage) 고 **ConverterLanguage** 는 모든 시나리오와 관련 된 값을 변환 하거나에서 입력 합니다 바인딩 소스를 유형 또는 바인딩 대상 속성에 호환 되는 값입니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)의 "데이터 변환" 섹션을 참조하세요.
 
 **{x:Bind}** 는 태그 확장일 뿐이므로 이러한 바인딩을 프로그래밍 방식으로 만들거나 조작할 방법이 없습니다. 태그 확장에 대한 자세한 내용은 [XAML 개요](xaml-overview.md)를 참조하세요.
 

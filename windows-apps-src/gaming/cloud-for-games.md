@@ -6,12 +6,12 @@ ms.date: 03/27/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 클라우드 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: 5781d8f8606f68360018cfa17d5cfe5719ed31a6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 15a7e3bed746a31ce2d8f458045cdd1126b71b8c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57637688"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368988"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>UWP 게임에 클라우드 서비스 사용
 
@@ -48,7 +48,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
     <col width="30%" />
     </colgroup>
     <tr class="header" align="left">
-        <th>개발자</th>
+        <th>Developer</th>
         <th>설명</th>
         <th>주요 게임 시나리오</th>
         <th>자세한 내용</th>
@@ -91,7 +91,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
             <ul>
                 <li><a href="https://channel9.msdn.com/Shows/Cloud+Cover/Episode-228-Building-Games-with-Service-Fabric#time=06m52s">Service Fabric을 사용 하 여 게임을 개발 합니다. 어센더 MMO 게임 (비디오)의 보존 기간</a>
                 <li><a href="https://channel9.msdn.com/Events/Build/2016/KEY02#time=57m20s">Azure Service Fabric (비디오)를 사용 하 여 마이크로 서비스로 게임 구성 요소를 관리 합니다.</a> 
-                <li><a href="https://channel9.msdn.com/Shows/Azure-Friday/Age-of-Ascent-from-Illyriad-Powered-by-Azure-Service-Fabric-and-ASPNET">Age of Ascent 개발자 (비디오)와 인터뷰</a>
+                <li><a href="/Blogs/Azure/Age-of-Ascent-from-Illyriad-Powered-by-Azure-Service-Fabric-and-ASPNET">Age of Ascent 개발자 (비디오)와 인터뷰</a>
             </ul>
         </td>
     </tr>
@@ -163,13 +163,13 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
 |-----------------------------------|-----------------------------------------------|---------------------------------------|----------------------------------------------------|
 | 클라우드에서 도메인 호스트     | 효율적으로 DNS 쿼리에 응답            | [Azure DNS](https://azure.microsoft.com/services/dns/) | 고성능 및 가용성을 사용하여 도메인 호스트  |
 | 로그인, ID 확인      | 게이머 로그인 및 게이머 ID가 인증됩니다.  | [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) | 다단계 인증을 사용하여 클라우드 및 온-프레미스 웹앱에 대한 Single Sign-On            | 
-| IaaS(Infrastructure as a Service) 모델을 사용하는 게임      | 게임이 클라우드의 가상 컴퓨터에 호스트됩니다.       | [Azure Vm](https://azure.microsoft.com/services/virtual-machines/) | 기본 제공 가상 네트워킹 및 부하 분산을 사용하여 1개에서 수천 개의 가상 컴퓨터 인스턴스까지 게임 서버로 확장, 온-프레미스 시스템을 사용한 하이브리드 일관성           |
+| IaaS(Infrastructure as a Service) 모델을 사용하는 게임      | 게임이 클라우드의 가상 컴퓨터에 호스트됩니다.       | [Azure VMs](https://azure.microsoft.com/services/virtual-machines/) | 기본 제공 가상 네트워킹 및 부하 분산을 사용하여 1개에서 수천 개의 가상 컴퓨터 인스턴스까지 게임 서버로 확장, 온-프레미스 시스템을 사용한 하이브리드 일관성           |
 | PaaS(Platform as a Service) 모델을 사용하는 웹 또는 모바일 게임            | 게임이 관리되는 플랫폼에서 호스트됩니다.                | [Azure App Service](https://azure.microsoft.com/services/app-service/) | 웹 사이트 또는 모바일 게임에 대한 PaaS(미들웨어/개발 도구/BI/DB 관리 및 Azure VM)   |
-| OS(PaaS)를 더 효과적으로 제어할 수 있는 확장 가능한 고가용성 N단계 클라우드 게임        | 게임이 관리되는 플랫폼에서 호스트됩니다.                | [Azure 클라우드 서비스](https://azure.microsoft.com/services/app-service/) | 확장성 및 신뢰성이 있고 운영 비용이 낮은 응용 프로그램을 지원하도록 설계된 PaaS   |
+| OS(PaaS)를 더 효과적으로 제어할 수 있는 확장 가능한 고가용성 N단계 클라우드 게임        | 게임이 관리되는 플랫폼에서 호스트됩니다.                | [Azure Cloud Service](https://azure.microsoft.com/services/app-service/) | 확장성 및 신뢰성이 있고 운영 비용이 낮은 응용 프로그램을 지원하도록 설계된 PaaS   |
 | 보다 나은 성능 및 가용성을 위해 여러 지역에 걸친 부하 분산 | 들어오는 게임 요청을 라우팅합니다. 첫 번째 수준의 부하 분산과 같은 역할을 할 수 있습니다.       | [Azure Traffic Manager](https://azure.microsoft.com/en-us/services/traffic-manager/) | 여러 자동 장애 조치(failover) 옵션 및 트래픽을 동일하게 또는 가중치 값으로 분산하는 기능을 제공합니다. 온-프레미스 및 클라우드 시스템을 완벽하게 결합할 수 있습니다. |
 | 게임 데이터에 대한 클라우드 저장소       | 최신 게임 데이터가 클라우드에 저장되고 클라이언트 디바이스로 전송됩니다. | [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/)| 저장할 수 있는 파일 종류에 제한이 없습니다. 이미지, 오디오, 동영상 등 다량의 구조화되지 않은 데이터에 대한 개체 저장소입니다.  |
 | 임시 데이터 저장소 테이블| 게임 트랜잭션(게임 상태 변화)이 일시적으로 테이블에 저장됩니다. | [Azure Table Storage](https://azure.microsoft.com/services/storage/tables/)| 게임의 요구에 따라 유연한 스키마에 게임 데이터를 저장할 수 있습니다. |
-| 게임 트랜잭션/요청 큐| 게임 트랜잭션이 큐의 형태로 처리됩니다. | [Azure 큐 저장소](https://azure.microsoft.com/services/storage/queues/)| 큐는 예기치 않은 트래픽 급증을 흡수하고 서버가 게임 중 갑작스러운 요청 증가로 과부하되지 않도록 방지할 수 있습니다.   |
+| 게임 트랜잭션/요청 큐| 게임 트랜잭션이 큐의 형태로 처리됩니다. | [Azure Queue Storage](https://azure.microsoft.com/services/storage/queues/)| 큐는 예기치 않은 트래픽 급증을 흡수하고 서버가 게임 중 갑작스러운 요청 증가로 과부하되지 않도록 방지할 수 있습니다.   |
 | 확장 가능한 관계형 게임 데이터베이스| 데이터베이스에 대한 게임 내 트랜잭션과 같은 관계형 데이터의 구조화된 저장소 | [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)| 서비스로 제공되는 SQL 데이터베이스([VM의 SQL과 비교](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/))  |
 | 대기 시간이 짧은 확장 가능한 분산 게임 데이터베이스| 스키마 유연성을 사용하여 게임 및 플레이어 데이터의 빠른 읽기, 쓰기 및 쿼리 | [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)| 서비스로 제공되는 대기 시간이 짧은 NoSQL 문서 데이터베이스   |
 | Azure 서비스와 함께 고유한 데이터 센터 사용 | 고유한 데이터 센터에서 게임이 검색되고 클라이언트 디바이스로 전송됩니다. | [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) | 보다 효율적인 작업을 위해 조직이 고유한 데이터 센터에서 Azure 서비스를 제공할 수 있도록 합니다.  |
@@ -179,7 +179,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
 | 디바이스에서 초당 수백만 개의 이벤트 수집 가능                         | 디바이스에서 초당 수백만 개의 이벤트 기록 | [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/) | 게임, 웹 사이트, 앱 및 디바이스에서 클라우드 규모의 원격 분석 수집  |
 | 실시간 게임 데이터 처리  | 실시간 게이머 데이터 분석을 통해 게임 플레이 향상| [Azure Stream Analytics](https://azure.microsoft.com/services/stream-analytics/) | 클라우드에서 실시간 스트림 처리  |
 | 예측 게임 플레이 개발         | 게이머 데이터에 따라 사용자 지정 동적 게임 플레이 만들기  | [Azure Machine Learning](https://azure.microsoft.com/services/machine-learning/) | 예측 분석 솔루션을 쉽게 빌드, 배포 및 공유할 수 있도록 하는 완전히 관리되는 클라우드 서비스  |
-| 게임 데이터 수집 및 분석| 관계형 및 비관계형 데이터베이스의 대량 병렬 처리 데이터 | [Azure 데이터 웨어하우스](https://azure.microsoft.com/services/sql-data-warehouse/)| 서비스로 제공되는 엔터프라이즈급 기능을 갖춘 탄력적인 데이터 웨어하우스   |
+| 게임 데이터 수집 및 분석| 관계형 및 비관계형 데이터베이스의 대량 병렬 처리 데이터 | [Azure Data Warehouse](https://azure.microsoft.com/services/sql-data-warehouse/)| 서비스로 제공되는 엔터프라이즈급 기능을 갖춘 탄력적인 데이터 웨어하우스   |
 | 사용자의 사용 및 보존 증가| 백 엔드에서 임의의 플랫폼에 대상 푸시 알림을 보내 관심을 생성하고 특정 게임 작업 권장 | [Azure Notification Hubs](https://azure.microsoft.com/services/notification-hubs/)| 모든 주요 플랫폼 &mdash; iOS, Android, Windows, Kindle, Baidu 등에서 수백만의 모바일 디바이스에 빠르게 브로드캐스트합니다. 모든 백 엔드 &mdash; 클라우드 또는 온-프레미스에서 게임을 호스트할 수 있습니다.|
 | 콘텐츠를 보호하면서 지역 및 전 세계 시청자에게 미디어 콘텐츠 스트리밍| 브로드캐스트 품질의 게임 예고편과 영화 클립을 모든 디바이스에서 볼 수 있습니다.| [Azure Media Services](https://azure.microsoft.com/services/media-services/)| 통합 CDN(콘텐츠 배달 네트워크) 기능을 통한 주문형 및 라이브 동영상 스트리밍. 콘텐츠 보호 및 암호화를 포함하여 모든 재생 요구 사항에 대해 하나의 플레이어만 사용합니다.| 
 | 모바일 앱 개발, 배포 및 베타 테스트 | 모바일 앱을 테스트하고 배포합니다. 앱 성능 및 사용자 경험 관리. | [HockeyApp](https://azure.microsoft.com/services/hockeyapp/)| 충돌 보고 및 사용자 메트릭을 앱 배포 및 사용자 피드백 플랫폼과 통합합니다. Android, Cordova, iOS, OS X, Unity, Windows 및 Xamarin 앱을 지원합니다. 또한 고려해 야 [Visual Studio Mobile Center](https://www.visualstudio.com/vs/mobile-center/) &mdash; 관제 풍부한 분석을 결합 하는 앱 충돌 보고에 대 한 푸시 알림, 앱 배포 및 더 합니다. |
@@ -198,8 +198,8 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
 
 ## <a name="learning-resources"></a>학습 리소스
 
-* 빌드 2016: [CodeLabs &mdash; Unity에서 게임 점수를 저장 하려면 백 엔드를 사용 하 여 Microsoft Azure App Service 및 Microsoft SQL Azure](https://github.com/Microsoft-Build-2016/CodeLabs-GameDev-6-Azure)
-* 빌드 2017: [세계적 수준의 게임을 제공 하는 Microsoft Azure를 사용 하 여 환경을: Halo, Hitman, 및 Walking Dead (비디오)와 비슷한 직함에서 교훈](https://channel9.msdn.com/Events/Build/2017/P4062)
+* //build 2016: [CodeLabs &mdash; Unity에서 게임 점수를 저장 하려면 백 엔드를 사용 하 여 Microsoft Azure App Service 및 Microsoft SQL Azure](https://github.com/Microsoft-Build-2016/CodeLabs-GameDev-6-Azure)
+* //build 2017: [세계적 수준의 게임을 제공 하는 Microsoft Azure를 사용 하 여 환경을: Halo, Hitman, 및 Walking Dead (비디오)와 비슷한 직함에서 교훈](https://channel9.msdn.com/Events/Build/2017/P4062)
 * 재사용 가능한 집합 구성 요소, 프로젝트, 서비스 및 Azure를 사용 하 여 GitHub에서 일반적인 게임 워크 로드를 지원 하도록 설계 된 모범 사례: [Azure에서 게임에 대 한 구성 요소](https://github.com/MicrosoftDX/nether)
 * [(비디오) Azure에서 게임 서비스](https://channel9.msdn.com/Series/Gaming-Services-on-Azure)
 
@@ -221,7 +221,7 @@ Microsoft는 꾸준한 혁신을 통해 새로운 기능을 추가하고 있습�
 
 ## <a name="related-links"></a>관련 링크
 
-* [Windows 10 게임 개발 가이드](https://msdn.microsoft.com/windows/uwp/gaming/e2e)
+* [Windows 10 게임 개발 가이드](https://docs.microsoft.com/windows/uwp/gaming/e2e)
 * [게임용 azure](https://azure.microsoft.com/solutions/gaming/)
 * [Playfab](https://playfab.com/)
 * [Microsoft for Startups](https://startups.microsoft.com)

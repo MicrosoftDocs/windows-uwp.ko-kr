@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 다시 시작, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: f0aa60061ae9fc14392bfe4beb0693ba50fda0df
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b1506351dd06563386154ac35938cbd17f5ced32
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601608"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368611"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>앱 다시 시작 방법(DirectX 및 C++)
 
@@ -22,9 +22,9 @@ ms.locfileid: "57601608"
 ## <a name="register-the-resuming-event-handler"></a>resuming 이벤트 처리기 등록
 
 
-사용자가 앱에서 다른 곳으로 전환했다가 돌아왔음을 나타내는 [**CoreApplication::Resuming**](https://msdn.microsoft.com/library/windows/apps/br205859) 이벤트를 처리하도록 등록합니다.
+사용자가 앱에서 다른 곳으로 전환했다가 돌아왔음을 나타내는 [**CoreApplication::Resuming**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.resuming) 이벤트를 처리하도록 등록합니다.
 
-뷰 공급자의 [**IFrameworkView::Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495) 메서드 구현에 다음 코드를 추가합니다.
+뷰 공급자의 [**IFrameworkView::Initialize**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.initialize) 메서드 구현에 다음 코드를 추가합니다.
 
 ```cpp
 // The first method is called when the IFrameworkView is being created.
@@ -43,7 +43,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## <a name="refresh-displayed-content-after-suspension"></a>일시 중단 후 표시 콘텐츠 새로 고침
 
 
-앱에서 Resuming 이벤트를 처리하면 표시 콘텐츠를 새로 고칠 기회가 생깁니다. [  **CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860)에 대한 처리기를 사용하여 저장한 앱을 복원하고 처리를 다시 시작합니다. 게임 개발: 오디오 엔진을 일시 중단한 경우 이제 다시 시작합니다.
+앱에서 Resuming 이벤트를 처리하면 표시 콘텐츠를 새로 고칠 기회가 생깁니다. [  **CoreApplication::Suspending**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.suspending)에 대한 처리기를 사용하여 저장한 앱을 복원하고 처리를 다시 시작합니다. 게임 개발: 오디오 엔진을 일시 중단한 경우 이제 다시 시작합니다.
 
 ```cpp
 void App::OnResuming(Platform::Object^ sender, Platform::Object^ args)
@@ -56,7 +56,7 @@ void App::OnResuming(Platform::Object^ sender, Platform::Object^ args)
 }
 ```
 
-앱 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)의 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)가 이벤트 메시지를 처리할 때 이 콜백이 발생합니다. 앱의 주 루프(뷰 공급자의 [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드에 구현)에서 [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215)를 호출해야만 이 콜백이 호출됩니다.
+앱 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow)의 [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher)가 이벤트 메시지를 처리할 때 이 콜백이 발생합니다. 앱의 주 루프(뷰 공급자의 [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run) 메서드에 구현)에서 [**CoreDispatcher::ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents)를 호출해야만 이 콜백이 호출됩니다.
 
 ``` syntax
 // This method is called after the window becomes active.
@@ -90,8 +90,8 @@ void App::Run()
 
 ## <a name="related-topics"></a>관련 항목
 
-* [(DirectX 및 c + +) 앱을 중지 하는 방법](how-to-suspend-an-app-directx-and-cpp.md)
-* [(DirectX 및 c + +) 앱을 활성화 하는 방법](how-to-activate-an-app-directx-and-cpp.md)
+* [앱을 중지 하는 방법 (DirectX 및 C++)](how-to-suspend-an-app-directx-and-cpp.md)
+* [앱을 활성화 하는 방법 (DirectX 및 C++)](how-to-activate-an-app-directx-and-cpp.md)
 
  
 

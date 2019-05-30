@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4138fd7275f7e1f9addb7685ff0846e756701003
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9712b4498b03460568d20d4c8e27172ad5c14360
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661988"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362212"
 ---
 # <a name="resource-types"></a>리소스 종류
 
@@ -110,17 +110,17 @@ Direct3D에는 셰이더 상수 버퍼 또는 간단히 상수 버퍼라고 하�
 
 상수 버퍼를 사용해 스트림 출력 단계의 결과를 저장합니다.
 
-셰이더에서 상수 버퍼를 선언하는 예는 [셰이더 상수(DirectX HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581)를 참조하세요.
+셰이더에서 상수 버퍼를 선언하는 예는 [셰이더 상수(DirectX HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants)를 참조하세요.
 
 ## <a name="span-idtextureresourcesspanspan-idtextureresourcesspanspan-idtextureresourcesspanspan-idtexture-resourcesspantexture-resources"></a><span id="Texture_Resources"></span><span id="texture_resources"></span><span id="TEXTURE_RESOURCES"></span><span id="texture-resources"></span>질감 리소스
 
 
-텍스처 리소스는 텍셀을 저장하도록 구조화된 데이터 모음입니다. 버퍼와 달리 텍스처는 셰이더 단위에서 읽으므로 텍스처 샘플러에서 필터링할 수 있습니다. 텍스처의 유형은 텍스처의 필터링 방식에 영향을 미칩니다. 텍셀은 파이프라인에서 읽거나 쓸 수 있는 텍스처의 최소 단위를 나타냅니다. DXGI 형식 중 하나로 정렬, 1 ~ 4 구성 요소를 포함 하는 각 텍셀 (참조 [ **DXGI\_형식**](https://msdn.microsoft.com/library/windows/desktop/bb173059)).
+텍스처 리소스는 텍셀을 저장하도록 구조화된 데이터 모음입니다. 버퍼와 달리 텍스처는 셰이더 단위에서 읽으므로 텍스처 샘플러에서 필터링할 수 있습니다. 텍스처의 유형은 텍스처의 필터링 방식에 영향을 미칩니다. 텍셀은 파이프라인에서 읽거나 쓸 수 있는 텍스처의 최소 단위를 나타냅니다. DXGI 형식 중 하나로 정렬, 1 ~ 4 구성 요소를 포함 하는 각 텍셀 (참조 [ **DXGI\_형식**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)).
 
 텍스처는 크기를 알 수 있도록 구조화된 리소스로 생성됩니다. 그러나 텍스처가 파이프라인에 바인딩될 때 보기를 사용해 형식이 완전히 지정되면 리소스 생성 시간에 각 텍스처에 형식이 있거나 없을 수 있습니다.
 
 -   [질감 형식](#texture-types)
--   [하위](#subresources)
+-   [Subresources](#subresources)
 -   [강력한 vs입니다. 약한 형식화](#typed)
 
 ### <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspanspan-idtexture-typesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span><span id="texture-types"></span>질감 형식

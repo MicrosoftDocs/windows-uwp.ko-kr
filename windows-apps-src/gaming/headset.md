@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 헤드셋
 ms.localizationpriority: medium
-ms.openlocfilehash: b3de68cc59c9928a52eba5caeb840e9e825eecf0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 73815fb3f1b732537e9f08932639a1eccd7ed1b0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627958"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368622"
 ---
 # <a name="headset"></a>헤드셋
 
@@ -65,7 +65,7 @@ inputDevice.HeadsetDisconnected += ref new TypedEventHandler<IGameController^, H
 
 [헤드셋][] 클래스는 XAudio 끝점 ID를 나타내는 2개의 문자열로 구성됩니다. 하나는 오디오 캡처(헤드셋 마이크에서 녹음) 용도이고 다른 하나는 오디오 렌더링(헤드셋 이어폰을 통해 재생) 용도입니다.
 
-XAudio 사용에 대한 세부 내용은 여기에서 다루지 않습니다. 자세한 정보는 [XAudio2 프로그래밍 가이드](https://msdn.microsoft.com/library/windows/desktop/ee415737.aspx) 및 [XAudio2 API 참조](https://msdn.microsoft.com/library/windows/desktop/ee415899.aspx)에서 확인할 수 있습니다.
+XAudio 사용에 대한 세부 내용은 여기에서 다루지 않습니다. 자세한 정보는 [XAudio2 프로그래밍 가이드](https://docs.microsoft.com/windows/desktop/xaudio2/programming-guide) 및 [XAudio2 API 참조](https://docs.microsoft.com/windows/desktop/xaudio2/programming-reference)에서 확인할 수 있습니다.
 
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx

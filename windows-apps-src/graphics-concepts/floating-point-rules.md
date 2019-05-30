@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4de5ba146c8241598527dd268d604fcc9bb97d6d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a29fbe49e45b819ddf4ffc3172445996d3622360
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662358"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370624"
 ---
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>부동 소수점 규칙
 
@@ -37,7 +37,7 @@ Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소
     예외는 -0입니다. sqrt(-0)은 -0이며 rsq(-0)은 -INF가 됩니다.
 -   INF - INF = NaN
 -   (+/-)INF / (+/-)INF = NaN
--   (+/-) INF \* 0 = NaN
+-   (+/-)INF \* 0 = NaN
 -   NaN (모든 연산자) 모든 값 = NaN
 -   한 피연산자 또는 두 피연산자가 NaN일 경우 EQ, GT, GE, LT, LE 비교는 **FALSE**를 반환합니다.
 -   비교는 0의 부호를 무시합니다. 따라서 +0은 -0과 같습니다.
@@ -82,13 +82,13 @@ Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소
 -   x +/- 0.0f의 결과는 항상 x입니다(비정규화 값이 플러시되는 경우는 제외). 하지만 -0 + 0 = +0입니다.
 -   혼합 연산(예: mad, dp3)은 연산의 비혼합 확장이 가질 수 있는 가장 최악의 직렬 배열보다는 정확한 결과를 생성합니다. 최악의 배열의 정의는 허용 오차의 목적에서 지정된 혼합 연산을 위한 고정된 정의가 아닙니다. 이는 입력의 특정 값에 따라 달라집니다. 비혼합 확장의 개별 단계는 각각 1의 ULP 허용 오차가 허용됩니다. 또는 특정 명령에 Direct3D가 1 ULP보다 더 유연한 허용 오차를 사용하는 경우 더 유연한 허용 오차가 허용됩니다.
 -   혼합 연산은 비혼합 연산과 동일한 NaN 규칙을 따릅니다.
--   sqrt와 rcp의 허용 오차는 1 ULP입니다. 셰이더 역수와 역수 제곱근 명령인 [**rcp**](https://msdn.microsoft.com/library/windows/desktop/hh447205)와 [**rsq**](https://msdn.microsoft.com/library/windows/desktop/hh447221)에는 자체적인 별도의 완화된 정밀도 요구 사항이 있습니다.
+-   sqrt와 rcp의 허용 오차는 1 ULP입니다. 셰이더 역수와 역수 제곱근 명령인 [**rcp**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/hh447205(v=vs.85))와 [**rsq**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/rsq--sm4---asm-)에는 자체적인 별도의 완화된 정밀도 요구 사항이 있습니다.
 -   곱하기와 나누기는 각각 32비트 부동 소수점 정밀도 수준에서 계산됩니다(곱하기의 정밀도는 0.5 ULP, 역의 경우 1.0 ULP). x/y를 바로 구현하는 경우, 결과는 두 단계 방법보다 높거나 같은 정확도를 가져야 합니다.
 
 ## <a name="span-iddoubleprec64bitspanspan-iddoubleprec64bitspan64-bit-double-precision-floating-point-rules"></a><span id="double_prec_64_bit"></span><span id="DOUBLE_PREC_64_BIT"></span>64 비트 (배정밀도) 점 규칙 부동
 
 
-하드웨어 및 디스플레이 드라이버는 선택적으로 배정밀도 부동 소수점을 지원합니다. 호출 하는 경우 지원을 나타내려면 [ **ID3D11Device::CheckFeatureSupport** ](https://msdn.microsoft.com/library/windows/desktop/ff476497) 사용 하 여 [ **D3D11\_기능\_DOUBLE** ](https://msdn.microsoft.com/library/windows/desktop/ff476124#d3d11-feature-doubles), 드라이버 집합 **DoublePrecisionFloatShaderOps** 의 [ **D3D11\_기능\_DATA\_DOUBLE** ](https://msdn.microsoft.com/library/windows/desktop/ff476127) TRUE로 합니다. 그러면 드라이버와 하드웨어는 모든 배정밀도 부동 소수점 명령을 지원해야 합니다.
+하드웨어 및 디스플레이 드라이버는 선택적으로 배정밀도 부동 소수점을 지원합니다. 호출 하는 경우 지원을 나타내려면 [ **ID3D11Device::CheckFeatureSupport** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) 사용 하 여 [ **D3D11\_기능\_DOUBLE** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ne-d3d11-d3d11_feature), 드라이버 집합 **DoublePrecisionFloatShaderOps** 의 [ **D3D11\_기능\_DATA\_DOUBLE** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_doubles) TRUE로 합니다. 그러면 드라이버와 하드웨어는 모든 배정밀도 부동 소수점 명령을 지원해야 합니다.
 
 배정밀도 명령은 IEEE 754R 동작 요구 사항을 따릅니다.
 
@@ -148,9 +148,9 @@ float11/float10 값(v)은 다음 규칙을 따릅니다.
 
 [부록](appendix.md)
 
-[리소스](https://msdn.microsoft.com/library/windows/desktop/ff476894)
+[리소스](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources)
 
-[질감](https://msdn.microsoft.com/library/windows/desktop/ff476902)
+[질감](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-textures)
 
  
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 27ea422982ce991de20e67649bc0925a60547cd8
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635408"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368312"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지
 
@@ -22,7 +22,7 @@ ms.locfileid: "57635408"
 -   앱 팩에는 플랫폼별 실행 파일과 라이브러리가 포함됩니다. 일반적으로 UWP 게임에는 x86, x64 및 ARM CPU 아키텍처에 대해 각각 하나씩, 최대 3개의 앱 팩이 포함될 수 있습니다. 해당 하드웨어 플랫폼과 관련된 모든 코드 및 데이터가 앱 팩에 포함되어야 합니다. 또한 앱 팩에는 기준 수준의 충실도와 성능으로 게임을 실행하기 위한 모든 핵심 자산이 포함되어야 합니다.
 -   리소스 팩에는 게임 자산(텍스처, 메시, 사운드, 텍스트) 등 플랫폼에 종속되지 않는 선택적 또는 확장 데이터가 포함됩니다. UWP 게임에는 HD 자산 또는 텍스처를 위한 리소스 팩, DirectX 기능 수준 11+ 리소스 또는 언어별 자산 및 리소스를 포함하여 리소스 팩이 하나 이상 있을 수 있습니다.
 
-앱 번들과 앱 팩에 대한 자세한 내용은 [앱 리소스 정의](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321)를 참조하세요.
+앱 번들과 앱 팩에 대한 자세한 내용은 [앱 리소스 정의](https://docs.microsoft.com/previous-versions/windows/apps/hh965321(v=win.10))를 참조하세요.
 
 모든 콘텐츠를 앱 팩에 포함할 수 있지만 이것은 비효율적이고 중복됩니다. 동일한 큰 텍스처 파일을 각 플랫폼, 특히 이 파일이 사용되지 않는 ARM 플랫폼을 위해 3번 중복해서 포함할 이유가 있을까요? 바람직한 목표는 고객이 더 빨리 게임 플레이를 시작하고, 장치의 공간을 절약하고, 발생 가능한 요금제 대역폭 비용을 피할 수 있도록 다운로드해야 하는 콘텐츠를 최소화하는 것입니다.
 
@@ -83,7 +83,7 @@ UWP 앱 설치 관리자의 이 기능을 사용하려면 도구 및 소스가 �
 
      
 
--   [  **Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) 및 [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 앱의 로캘별 리소스를 지정하고 로드할 수 있습니다. 또한 이러한 API는 사용자 설정에 따라 올바른 로캘을 결정한 다음 사용자에 맞는 리소스를 검색하기 때문에 특정 로캘을 포함하지 않는 자산 참조를 사용합니다.
+-   [  **Windows.ApplicationModel.Resources**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources) 및 [**Windows.ApplicationModel.Resources.Core**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core)의 API를 사용하여 앱의 로캘별 리소스를 지정하고 로드할 수 있습니다. 또한 이러한 API는 사용자 설정에 따라 올바른 로캘을 결정한 다음 사용자에 맞는 리소스를 검색하기 때문에 특정 로캘을 포함하지 않는 자산 참조를 사용합니다.
 -   Microsoft Visual Studio 2015에서 **프로젝트 저장소-> 응용 프로그램 패키지 만들기->...**  패키지를 만듭니다.
 
 ## <a name="defining-scaling-factor-resource-packs"></a>배율 인수 리소스 팩 정의
@@ -100,7 +100,7 @@ Windows 10에서는 세 가지 사용자 인터페이스 확장 요소를 제공
 
      
 
--   [  **Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 자산을 로드할 수 있습니다. 특정 배율 변형을 제외하여 자산 참조를 일반화(접미사 없음)해야 합니다. 시스템이 디스플레이 및 사용자 설정에 적합한 배율 자산을 검색합니다.
+-   [  **Windows.ApplicationModel.Resources.Core**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core)의 API를 사용하여 자산을 로드할 수 있습니다. 특정 배율 변형을 제외하여 자산 참조를 일반화(접미사 없음)해야 합니다. 시스템이 디스플레이 및 사용자 설정에 적합한 배율 자산을 검색합니다.
 -   Visual Studio 2015에서 **프로젝트 저장소-> 응용 프로그램 패키지 만들기->...**  패키지를 만듭니다.
 
 ## <a name="defining-directx-feature-level-resource-packs"></a>DirectX 기능 수준 리소스 팩 정의
@@ -110,7 +110,7 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
 
 사용자 기준 앱 팩 기준 질감 압축 형식을 사용 해야 합니다. BC1, BC2 또는 BC3 합니다. 이러한 형식은 저급 ARM 플랫폼에서 전용 다중 GPU 워크스테이션 및 미디어 컴퓨터에 이르기까지 모든 UWP 장치에서 사용할 수 있습니다.
 
-로컬 디스크 공간 및 다운로드 대역폭을 절약하려면 DirectX 기능 수준 10 이상의 텍스처 형식 지원을 리소스 팩에 추가해야 합니다. 그러면 BC6H 및 BC7과 같은 11용 고급 압축 구성표를 사용할 수 있습니다. (자세한 내용은 참조 하세요. [Direct3D 11에서 질감 블록 압축](https://msdn.microsoft.com/library/windows/desktop/hh308955).) 이러한 형식은 최신 Gpu에서 지 원하는 고해상도 질감 자산에 대 한 효율적이 고, 성능 및 고급 플랫폼에서 게임의 공간 요구 사항을 개선 사용 합니다.
+로컬 디스크 공간 및 다운로드 대역폭을 절약하려면 DirectX 기능 수준 10 이상의 텍스처 형식 지원을 리소스 팩에 추가해야 합니다. 그러면 BC6H 및 BC7과 같은 11용 고급 압축 구성표를 사용할 수 있습니다. (자세한 내용은 참조 하세요. [Direct3D 11에서 질감 블록 압축](https://docs.microsoft.com/windows/desktop/direct3d11/texture-block-compression-in-direct3d-11).) 이러한 형식은 최신 Gpu에서 지 원하는 고해상도 질감 자산에 대 한 효율적이 고, 성능 및 고급 플랫폼에서 게임의 공간 요구 사항을 개선 사용 합니다.
 
 | DirectX 기능 수준 | 지원되는 텍스처 압축 |
 |-----------------------|-------------------------------|
@@ -163,7 +163,7 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
     );
     ```
 
--   [  **Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 리소스를 로드할 수 있습니다. 기능 수준을 제외하여 자산 참조를 일반화(접미사 없음)해야 합니다. 그러나 언어 및 배율과 달리 시스템이 지정된 디스플레이에 적합한 기능 수준을 자동으로 결정하지 않으며, 사용자가 코드 논리에 따라 결정해야 합니다. 결정한 후 API를 사용하여 OS에 기본 기능 수준을 알립니다. 그러면 시스템이 해당 기본 설정에 따라 올바른 자산을 검색할 수 있습니다. 다음은 플랫폼의 현재 DirectX 기능 수준을 앱에 알리는 방법을 보여 주는 코드 샘플입니다.
+-   [  **Windows.ApplicationModel.Resources.Core**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core)의 API를 사용하여 리소스를 로드할 수 있습니다. 기능 수준을 제외하여 자산 참조를 일반화(접미사 없음)해야 합니다. 그러나 언어 및 배율과 달리 시스템이 지정된 디스플레이에 적합한 기능 수준을 자동으로 결정하지 않으며, 사용자가 코드 논리에 따라 결정해야 합니다. 결정한 후 API를 사용하여 OS에 기본 기능 수준을 알립니다. 그러면 시스템이 해당 기본 설정에 따라 올바른 자산을 검색할 수 있습니다. 다음은 플랫폼의 현재 DirectX 기능 수준을 앱에 알리는 방법을 보여 주는 코드 샘플입니다.
     
     ```cpp
     // Set the current UI thread's MRT ResourceContext's DXFeatureLevel with the right DXFL. 
@@ -191,7 +191,7 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
 
      
 
--   이제 [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/br206078)를 사용하여 현재 DirectX 기능 수준과 일치하는 파일을 찾습니다. **ResourceManager**는 [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/br206089)을 반환하며, [**ResourceMap::GetValue**](https://msdn.microsoft.com/library/windows/apps/br206098)(또는 [**ResourceMap::TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj655438)) 및 제공된 [**ResourceContext**](https://msdn.microsoft.com/library/windows/apps/br206064)로 쿼리합니다. 그러면 [**SetGlobalQualifierValue**](https://msdn.microsoft.com/library/windows/apps/mt622101)를 호출하여 지정된 DirectX 기능 수준과 가장 일치하는 [**ResourceCandidate**](https://msdn.microsoft.com/library/windows/apps/br206051)가 반환됩니다.
+-   이제 [**ResourceManager**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager)를 사용하여 현재 DirectX 기능 수준과 일치하는 파일을 찾습니다. **ResourceManager**는 [**ResourceMap**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap)을 반환하며, [**ResourceMap::GetValue**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcemap.getvalue)(또는 [**ResourceMap::TryGetValue**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcemap.trygetvalue)) 및 제공된 [**ResourceContext**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceContext)로 쿼리합니다. 그러면 [**SetGlobalQualifierValue**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue)를 호출하여 지정된 DirectX 기능 수준과 가장 일치하는 [**ResourceCandidate**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceCandidate)가 반환됩니다.
     
     ```cpp
     // An explicit ResourceContext is needed to match the DirectX feature level for the display on which the current view is presented.
@@ -216,9 +216,9 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
 ## <a name="related-topics"></a>관련 항목
 
 
-* [앱 리소스 정의](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321)
-* [앱 패키징](https://msdn.microsoft.com/library/windows/apps/mt270969)
-* [앱 패키지 (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767)
+* [앱 리소스 정의](https://docs.microsoft.com/previous-versions/windows/apps/hh965321(v=win.10))
+* [앱 패키징](https://docs.microsoft.com/windows/uwp/packaging/index)
+* [앱 패키지 (MakeAppx.exe)](https://docs.microsoft.com/windows/desktop/appxpkg/make-appx-package--makeappx-exe-)
 
  
 

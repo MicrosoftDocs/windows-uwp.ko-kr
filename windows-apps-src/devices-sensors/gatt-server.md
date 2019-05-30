@@ -5,19 +5,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 551f8b925ffd56950ba893da7b81fefb4579f558
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f59ae45486ee72f9d901898f6b03674e6b3e299c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635138"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370097"
 ---
 # <a name="bluetooth-gatt-server"></a>Bluetooth GATT 서버
 
 
 **중요 한 Api**
-- [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/Dn263413)
-- [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685)
+- [**Windows.Devices.Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
+- [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
 
 
 이 문서에서는 일반적인 GATT 서버 작업에 대한 샘플 코드 함께 UWP(유니버설 Windows 플랫폼) 앱용 Bluetooth GATT(일반 특성 프로필) 서버 API에 대해 설명합니다. 
@@ -40,7 +40,7 @@ Windows는 일반적으로 클라이언트 역할로 작동합니다. 그러나 
 각 서비스, 특성 및 설명자는 128비트 UUID로 정의됩니다.
 > 모든 Windows API는 GUID 용어를 사용하지만 Bluetooth 표준은 이를 UUID로 정의합니다. 목적을 위해 이 두 용어는 상호 변경 가능하므로 계속해서 UUID라는 용어를 사용합니다. 
 
-특성이 표준이며 Bluetooth SIG 정의에 정의된 경우 해당하는 약식 16비트 ID 또한 가질 수 있습니다(예: 배터리 수준 UUID는 0000**2A19**-0000-1000-8000-00805F9B34FB이며 약식 ID는 0x2A19임). 이러한 표준 UUID는 [GattServiceUuids](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids.aspx) 및 [GattCharacteristicUuids](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids.aspx)에서 볼 수 있습니다.
+특성이 표준이며 Bluetooth SIG 정의에 정의된 경우 해당하는 약식 16비트 ID 또한 가질 수 있습니다(예: 배터리 수준 UUID는 0000**2A19**-0000-1000-8000-00805F9B34FB이며 약식 ID는 0x2A19임). 이러한 표준 UUID는 [GattServiceUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids) 및 [GattCharacteristicUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids)에서 볼 수 있습니다.
 
 앱에서 고유사용자 지정 서비스를 구현하는 경우 사용자 지정 UUID를 생성해야 합니다. 이는 Visual Studio에서 Tools -> CreateGuid("xxxxxxxx-xxxx-... xxxx" 형식에서 이를 얻으려면 옵션 5를 사용)를 사용하여 쉽게 완료할 수 있습니다. 이제 이 UUID를 사용하여 새 로컬 서비스, 특성 또는 설명자를 선언할 수 있습니다.
 
@@ -154,7 +154,7 @@ serviceProvider.StartAdvertising(advParameters);
 ## <a name="respond-to-read-and-write-requests"></a>읽기 및 쓰기 요청에 응답
 위에서 설명한 것처럼 필요한 특성을 선언할 때 GattLocalCharacteristics는 ReadRequested, WriteRequested 및 SubscribedClientsChanged의 3가지 유형의 이벤트를 갖게 됩니다.
 
-### <a name="read"></a>Read
+### <a name="read"></a>읽기
 원격 디바이스에서 특성 값을 읽으려 할 때(상수 값이 아닌 경우), ReadRequested 이벤트가 호출됩니다. 인수(원격 장치에 대한 정보를 포함)와 함께 읽기가 호출된 특성이 대리자에게 전달됩니다. 
 
 ```csharp
@@ -177,7 +177,7 @@ async void ReadCharacteristic_ReadRequested(GattLocalCharacteristic sender, Gatt
 }
 ``` 
 
-### <a name="write"></a>쓰기
+### <a name="write"></a>Write
 원격 디바이스가 특성에 대한 값을 쓰려고 할 때 특성이 쓰여지는 값 자체 등 원격 장치에 대한 정보와 함께 WriteRequested 이벤트가 호출됩니다. 
 
 ```csharp

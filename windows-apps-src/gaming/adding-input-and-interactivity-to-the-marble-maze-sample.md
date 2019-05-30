@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 샘플
 ms.localizationpriority: medium
-ms.openlocfilehash: d545f696a93bfa8416e1a772ecc015867a3615c2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8daada2424dfc7a1bbe0a227449911f1fbb3b34d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611818"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369179"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Marble Maze 샘플에 입력 및 대화형 작업 추가
 
@@ -28,7 +28,7 @@ ms.locfileid: "57611818"
 
 -   가능한 경우 게임이 고객의 광범위한 기본 설정과 기능을 수용할 수 있도록 여러 입력 장치를 지원합니다. 게임 컨트롤러 및 센서 사용은 선택 사항이지만 플레이어 환경을 향상시키기 위해 사용하는 것이 좋습니다. 이러한 입력 장치를 더 쉽게 통합할 수 있도록 게임 컨트롤러 및 센서 API를 디자인했습니다.
 
--   터치를 초기화하려면 포인터가 활성화, 해제 및 이동되는 경우 등의 창 이벤트를 등록해야 합니다. 가속도계를 초기화하려면 응용 프로그램을 초기화할 때 [Windows::Devices::Sensors::Accelerometer](https://msdn.microsoft.com/library/windows/apps/br225687) 개체를 만듭니다. Xbox 컨트롤러는 초기화가 필요하지 않습니다.
+-   터치를 초기화하려면 포인터가 활성화, 해제 및 이동되는 경우 등의 창 이벤트를 등록해야 합니다. 가속도계를 초기화하려면 응용 프로그램을 초기화할 때 [Windows::Devices::Sensors::Accelerometer](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer) 개체를 만듭니다. Xbox 컨트롤러는 초기화가 필요하지 않습니다.
 
 -   싱글 플레이어 게임의 경우 가능한 모든 Xbox 컨트롤러의 입력을 결합할지 여부를 고려합니다. 이렇게 하면 어떤 입력이 어떤 컨트롤러에서 제공되었는지 추적할 필요가 없습니다. 또는 이 샘플에서와 마찬가지로 가장 최근에 추가된 컨트롤러의 입력만 추적합니다.
 
@@ -56,7 +56,7 @@ Marble Maze는 Xbox 컨트롤러, 마우스 및 터치를 통한 메뉴 항목 �
 ## <a name="initializing-input-devices"></a>입력 장치 초기화
 
 
-Xbox 컨트롤러는 초기화가 필요하지 않습니다. 터치를 초기화하려면 포인터가 활성화(예: 플레이어가 마우스 단추를 누르거나 화면 터치), 해제 및 이동되는 경우 등의 창 이벤트를 등록해야 합니다. 가속도계를 초기화하려면 응용 프로그램을 초기화할 때 [Windows::Devices::Sensors::Accelerometer](https://msdn.microsoft.com/library/windows/apps/br225687) 개체를 만들어야 합니다.
+Xbox 컨트롤러는 초기화가 필요하지 않습니다. 터치를 초기화하려면 포인터가 활성화(예: 플레이어가 마우스 단추를 누르거나 화면 터치), 해제 및 이동되는 경우 등의 창 이벤트를 등록해야 합니다. 가속도계를 초기화하려면 응용 프로그램을 초기화할 때 [Windows::Devices::Sensors::Accelerometer](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer) 개체를 만들어야 합니다.
 
 다음 예제에서는 **App::SetWindow** 메서드가 [Windows::UI::Core::CoreWindow::PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.PointerPressed), [Windows::UI::Core::CoreWindow::PointerReleased](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.PointerReleased) 및 [Windows::UI::Core::CoreWindow::PointerMoved](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.PointerMoved) 포인터 이벤트를 등록하는 방법을 보여줍니다. 이러한 이벤트는 응용 프로그램이 초기화되는 동안, 그리고 게임 루프가 시작되기 전에 등록됩니다.
 
@@ -490,7 +490,7 @@ for (TouchMap::const_iterator iter = m_touches.cbegin();
 
 ### <a name="processing-accelerometer-input"></a>가속도계 입력 처리
 
-가속도계 입력을 처리하기 위해 **MarbleMazeMain::Update** 메서드는 [Windows::Devices::Sensors::Accelerometer::GetCurrentReading](https://msdn.microsoft.com/library/windows/apps/br225699) 메서드를 호출합니다. 이 메서드는 가속도계 읽기를 나타내는 [Windows::Devices::Sensors::AccelerometerReading](https://msdn.microsoft.com/library/windows/apps/br225688) 개체를 반환합니다. **Windows::Devices::Sensors::AccelerometerReading::AccelerationX** 및 **Windows::Devices::Sensors::AccelerometerReading::AccelerationY** 속성은 각각 X축과 Y축을 따라 g-force 가속을 유지합니다.
+가속도계 입력을 처리하기 위해 **MarbleMazeMain::Update** 메서드는 [Windows::Devices::Sensors::Accelerometer::GetCurrentReading](https://docs.microsoft.com/uwp/api/windows.devices.sensors.accelerometer.getcurrentreading) 메서드를 호출합니다. 이 메서드는 가속도계 읽기를 나타내는 [Windows::Devices::Sensors::AccelerometerReading](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.AccelerometerReading) 개체를 반환합니다. **Windows::Devices::Sensors::AccelerometerReading::AccelerationX** 및 **Windows::Devices::Sensors::AccelerometerReading::AccelerationY** 속성은 각각 X축과 Y축을 따라 g-force 가속을 유지합니다.
 
 다음 예제에서는 **MarbleMazeMain::Update** 메서드가 가속도계를 폴링하고 결합된 입력 값을 업데이트하는 방법을 보여줍니다. 장치를 기울이면 중력으로 인해 구슬이 더 빨리 이동합니다.
 
@@ -548,7 +548,7 @@ if ((oppositeSquared + adjacentSquared) > m_deadzoneSquared)
 
  
 
-**MarbleMazeMain::Update** 메서드는 입력을 처리한 후, 미로의 기울기가 구슬에 미치는 영향을 나타내는 벡터를 만듭니다. 다음 예제에서는 Marble Maze가 [XMVector3Normalize](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.geometric.xmvector3normalize) 함수를 사용하여 정규화된 중력 벡터를 만드는 방법을 보여 줍니다. **maxTilt** 변수는 미로 기울기 양을 제한하고 미로가 옆으로 서지 않도록 합니다.
+**MarbleMazeMain::Update** 메서드는 입력을 처리한 후, 미로의 기울기가 구슬에 미치는 영향을 나타내는 벡터를 만듭니다. 다음 예제에서는 Marble Maze가 [XMVector3Normalize](https://docs.microsoft.com/windows/desktop/api/directxmath/nf-directxmath-xmvector3normalize) 함수를 사용하여 정규화된 중력 벡터를 만드는 방법을 보여 줍니다. **maxTilt** 변수는 미로 기울기 양을 제한하고 미로가 옆으로 서지 않도록 합니다.
 
 ```cpp
 const float maxTilt = 1.0f / 8.0f;
@@ -615,7 +615,7 @@ if (marblePosition.z >= resetDepth)
 
 * [Marble Maze 샘플에 오디오를 추가](adding-audio-to-the-marble-maze-sample.md)
 * [Marble Maze 샘플에 시각적 콘텐츠 추가](adding-visual-content-to-the-marble-maze-sample.md)
-* [C + + 및 DirectX에서 UWP 게임, Marble Maze 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* [UWP 게임 Marble Maze 개발 C++ 와 DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

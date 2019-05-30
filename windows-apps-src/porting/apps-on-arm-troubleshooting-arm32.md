@@ -5,12 +5,12 @@ ms.date: 01/03/2019
 ms.topic: article
 keywords: windows 10 s, 항상 연결, ARM 기반 ARM32 앱, ARM 기반 Windows 10, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 3431b12fc6f6b6ba2d870400ec4f6684f8290a61
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: ddf28627838ebc8cb2df620c398f3803c026cb17
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63815276"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366830"
 ---
 # <a name="troubleshooting-arm-uwp-apps"></a>UWP 앱이 ARM 문제 해결
 
@@ -33,7 +33,7 @@ UWP (유니버설 Windows 플랫폼) 앱에서 Visual Studio 및 UWP SDK를 사�
 
 이러한 문제를 해결할 수 있습니다: 사용할 수 없는 종속성을 제거 하 고 최신 Microsoft Visual Studio 및 UWP SDK 버전을 사용 하 여 앱을 다시 작성 또는 Microsoft Store ARM 앱 제거, 최후의 수단으로 있도록 x86 버전의 앱 (있는 경우) 사용자의 Pc에 다운로드 됩니다.
 
-UWP 앱에 사용할 수 있는 .NET API에 대한 자세한 내용은 [UWP 앱용 .NET](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)을 참조하세요.
+UWP 앱에 사용할 수 있는 .NET API에 대한 자세한 내용은 [UWP 앱용 .NET](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0)을 참조하세요.
 
 ### <a name="compiling-an-app-with-an-older-version-of-visual-studio-and-sdk"></a>이전 버전의 Visual Studio 및 SDK로 앱 컴파일
 문제가 발생한 경우 앱을 컴파일하는 데 최신 버전의 Microsoft Visual Studio 및 Windows SDK를 사용하도록 해야 합니다. 이전 버전의 Visual Studio및 SDK를 사용하여 컴파일한 앱에는 이후 버전에서 수정된 문제가 있을 수 있습니다.

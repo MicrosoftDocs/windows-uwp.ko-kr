@@ -7,17 +7,17 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6efe7aa27721f519ba93052abf2d0e8189f58941
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 87d4be69d9a7869f5331d30225e93a22ad9e959c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57622318"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371248"
 ---
 # <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>시스템에서 생성 된 값을 사용 하 여
 
 
-시스템 생성 값은 셰이더 작업에서 어느 정도의 효율성을 허용하기 위해 [IA(입력 어셈블러) 단계](input-assembler-stage--ia-.md)(사용자가 제공한 입력 [의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb509647) 기반)에서 생성됩니다. 후속 셰이더 단계에서는 인스턴스 ID([VS(꼭짓점 셰이더) 단계](vertex-shader-stage--vs-.md)에 표시), 꼭짓점 ID(VS에 표시) 또는 기본 ID([GS(기하 도형 셰이더) 단계](geometry-shader-stage--gs-.md)/[PS(픽셀 셰이더) 단계](pixel-shader-stage--ps-.md)에 표시)와 같은 데이터를 연결하여 해당 단계에서 처리를 최적화하는 시스템 값을 찾을 수 있습니다.
+시스템 생성 값은 셰이더 작업에서 어느 정도의 효율성을 허용하기 위해 [IA(입력 어셈블러) 단계](input-assembler-stage--ia-.md)(사용자가 제공한 입력 [의미 체계](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics) 기반)에서 생성됩니다. 후속 셰이더 단계에서는 인스턴스 ID([VS(꼭짓점 셰이더) 단계](vertex-shader-stage--vs-.md)에 표시), 꼭짓점 ID(VS에 표시) 또는 기본 ID([GS(기하 도형 셰이더) 단계](geometry-shader-stage--gs-.md)/[PS(픽셀 셰이더) 단계](pixel-shader-stage--ps-.md)에 표시)와 같은 데이터를 연결하여 해당 단계에서 처리를 최적화하는 시스템 값을 찾을 수 있습니다.
 
 예를 들어 VS 단계에서는 인스턴스 ID를 찾아 셰이더에 대한 추가 꼭짓점별 데이터를 확인하거나 다른 작업을 수행할 수 있고, GS 및 PS 단계에서는 같은 방법으로 기본 ID를 사용하여 기본 형식별 데이터를 확인할 수 있습니다.
 

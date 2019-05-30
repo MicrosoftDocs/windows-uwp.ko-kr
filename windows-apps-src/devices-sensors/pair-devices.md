@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 6f59a23f08abbd5edeb9d68be476fb29bd8aab2e
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 84835449c7c259c45423a93716b4fbc85fa0a7ab
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63813624"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369950"
 ---
 # <a name="pair-devices"></a>디바이스 페어링
 
@@ -22,7 +22,7 @@ ms.locfileid: "63813624"
 
 - [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
-일부 디바이스는 페어링해야 사용할 수 있습니다. [  **Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다.
+일부 디바이스는 페어링해야 사용할 수 있습니다. [  **Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다.
 
 -   자동 페어링
 -   기본 페어링
@@ -42,22 +42,22 @@ ms.locfileid: "63813624"
 ## <a name="basic-pairing"></a>기본 페어링
 
 
-기본 페어링은 응용 프로그램에서 장치를 쌍으로 연결하기 위해 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용하는 것입니다. 이 시나리오에서는 Windows에서 페어링 프로세스를 시도하고 처리하도록 합니다. 사용자 작업이 필요한 경우에는 Windows에서 처리됩니다. 장치와 쌍으로 연결해야 하지만 자동 페어링을 시도할 관련 장치 API가 없는 경우 기본 페어링을 사용합니다. 장치를 사용할 수 있어야 하며 먼저 장치와 쌍으로 연결해야 합니다.
+기본 페어링은 응용 프로그램에서 장치를 쌍으로 연결하기 위해 [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API를 사용하는 것입니다. 이 시나리오에서는 Windows에서 페어링 프로세스를 시도하고 처리하도록 합니다. 사용자 작업이 필요한 경우에는 Windows에서 처리됩니다. 장치와 쌍으로 연결해야 하지만 자동 페어링을 시도할 관련 장치 API가 없는 경우 기본 페어링을 사용합니다. 장치를 사용할 수 있어야 하며 먼저 장치와 쌍으로 연결해야 합니다.
 
-기본 페어링을 시도하려면 먼저 관심 있는 디바이스에 대한 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 가져와야 합니다. 해당 개체를 받으면 [**DeviceInformation.Pairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx) 속성을 조작합니다. 이제 [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx) 개체입니다. 페어링을 시도하려면 [**DeviceInformationPairing.PairAsync**](https://msdn.microsoft.com/library/windows/apps/mt608800)를 호출하면 됩니다. 페어링 작업을 완료할 시간을 앱에 제공하려면 결과를 **await**해야 합니다. 페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 페어링됩니다.
+기본 페어링을 시도하려면 먼저 관심 있는 디바이스에 대한 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 가져와야 합니다. 해당 개체를 받으면 [**DeviceInformation.Pairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) 속성을 조작합니다. 이제 [**DeviceInformationPairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) 개체입니다. 페어링을 시도하려면 [**DeviceInformationPairing.PairAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationpairing.pairasync)를 호출하면 됩니다. 페어링 작업을 완료할 시간을 앱에 제공하려면 결과를 **await**해야 합니다. 페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 페어링됩니다.
 
-기본 페어링을 사용하는 경우 장치의 페어링 상태에 대한 추가 정보에도 액세스할 수 있습니다. 예를 들어 페어링 상태([**IsPaired**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.IsPaired)) 및 디바이스를 페어링할 수 있는지 여부([**CanPair**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.CanPair))를 알 수 있습니다. 이러한 두 가지는 모두 [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx) 개체의 속성입니다. 자동 페어링을 사용하는 경우 관련 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 가져오지 않는 한 이 정보에 액세스하지 못할 수도 있습니다.
+기본 페어링을 사용하는 경우 장치의 페어링 상태에 대한 추가 정보에도 액세스할 수 있습니다. 예를 들어 페어링 상태([**IsPaired**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.IsPaired)) 및 디바이스를 페어링할 수 있는지 여부([**CanPair**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.CanPair))를 알 수 있습니다. 이러한 두 가지는 모두 [**DeviceInformationPairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) 개체의 속성입니다. 자동 페어링을 사용하는 경우 관련 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 가져오지 않는 한 이 정보에 액세스하지 못할 수도 있습니다.
 
 ## <a name="custom-pairing"></a>사용자 지정 페어링
 
 
-사용자 지정 페어링을 통해 앱에서 페어링 프로세스에 참여할 수 있습니다. 이 경우 앱에서 페어링 프로세스에 대해 지원되는 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808)를 지정할 수 있습니다. 필요에 따라 사용자와 상호 작용하기 위한 고유 사용자 인터페이스를 만들어야 할 수도 있습니다. 앱에서 페어링 프로세스가 진행되는 방식에 좀 더 많은 영향을 주려는 경우 또는 고유한 페어링 사용자 인터페이스를 표시하려는 경우 사용자 지정 페어링을 사용합니다.
+사용자 지정 페어링을 통해 앱에서 페어링 프로세스에 참여할 수 있습니다. 이 경우 앱에서 페어링 프로세스에 대해 지원되는 [**DevicePairingKinds**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePairingKinds)를 지정할 수 있습니다. 필요에 따라 사용자와 상호 작용하기 위한 고유 사용자 인터페이스를 만들어야 할 수도 있습니다. 앱에서 페어링 프로세스가 진행되는 방식에 좀 더 많은 영향을 주려는 경우 또는 고유한 페어링 사용자 인터페이스를 표시하려는 경우 사용자 지정 페어링을 사용합니다.
 
-사용자 지정 페어링을 구현하려면 기본 페어링과 마찬가지로 관심 있는 디바이스에 대한 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 가져와야 합니다. 그러나 관심 있는 특정 속성은 [**DeviceInformation.Pairing.Custom**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationpairing.custom.aspx)입니다. 그러면 [**DeviceInformationCustomPairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationcustompairing.aspx) 개체가 제공됩니다. 모든 [**DeviceInformationCustomPairing.PairAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationcustompairing.pairasync.aspx) 메서드에는 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808) 매개 변수가 포함되어야 합니다. 이는 사용자가 디바이스를 페어링하기 위해 수행해야 하는 작업을 나타냅니다. 여러 종류 및 사용자가 수행해야 하는 작업에 대한 자세한 내용은 **DevicePairingKinds** 참조 페이지를 참조하세요. 기본 페어링과 마찬가지로 페어링 작업을 완료할 시간을 앱에 제공하려면 결과를 **await**해야 합니다. 페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 페어링됩니다.
+사용자 지정 페어링을 구현하려면 기본 페어링과 마찬가지로 관심 있는 디바이스에 대한 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 가져와야 합니다. 그러나 관심 있는 특정 속성은 [**DeviceInformation.Pairing.Custom**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationpairing.custom)입니다. 그러면 [**DeviceInformationCustomPairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationcustompairing) 개체가 제공됩니다. 모든 [**DeviceInformationCustomPairing.PairAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationcustompairing.pairasync) 메서드에는 [**DevicePairingKinds**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePairingKinds) 매개 변수가 포함되어야 합니다. 이는 사용자가 디바이스를 페어링하기 위해 수행해야 하는 작업을 나타냅니다. 여러 종류 및 사용자가 수행해야 하는 작업에 대한 자세한 내용은 **DevicePairingKinds** 참조 페이지를 참조하세요. 기본 페어링과 마찬가지로 페어링 작업을 완료할 시간을 앱에 제공하려면 결과를 **await**해야 합니다. 페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 페어링됩니다.
 
-사용자 지정 페어링을 지원하려면 [**PairingRequested**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationcustompairing.pairingrequested.aspx) 이벤트에 대한 처리기를 만들어야 합니다. 이 처리기가 사용자 지정 페어링 시나리오에서 사용할 수 있는 여러 가지의 모든 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808)를 고려하도록 확인합니다. 수행할 적절한 작업은 이벤트 인수의 일부로 제공되는 **DevicePairingKinds**에 따라 달라집니다.
+사용자 지정 페어링을 지원하려면 [**PairingRequested**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationcustompairing.pairingrequested) 이벤트에 대한 처리기를 만들어야 합니다. 이 처리기가 사용자 지정 페어링 시나리오에서 사용할 수 있는 여러 가지의 모든 [**DevicePairingKinds**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePairingKinds)를 고려하도록 확인합니다. 수행할 적절한 작업은 이벤트 인수의 일부로 제공되는 **DevicePairingKinds**에 따라 달라집니다.
 
-사용자 지정 페어링이 항상 시스템 수준 작업이라는 것을 인식해야 합니다. 이 때문에 데스크톱 또는 Windows Phone에서 작업할 때 페어링이 발생할 경우 시스템 대화 상자가 사용자에게 항상 표시됩니다. 이는 해당하는 두 플랫폼이 모두 사용자 동의가 필요한 사용자 환경을 보유하기 때문입니다. 대화 상자가 자동으로 생성되므로 이러한 플랫폼에서 작업하는 경우 **ConfirmOnly**의 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808)를 선택할 때 고유한 대화 상자를 만들지 않아도 됩니다. 다른 **DevicePairingKinds**의 경우 특정 **DevicePairingKinds** 값에 따라 어떤 특별한 처리를 수행해야 합니다. 다른 **DevicePairingKinds** 값에 대해 사용자 지정 페어링을 처리하는 방법의 예제는 샘플을 참조하세요.
+사용자 지정 페어링이 항상 시스템 수준 작업이라는 것을 인식해야 합니다. 이 때문에 데스크톱 또는 Windows Phone에서 작업할 때 페어링이 발생할 경우 시스템 대화 상자가 사용자에게 항상 표시됩니다. 이는 해당하는 두 플랫폼이 모두 사용자 동의가 필요한 사용자 환경을 보유하기 때문입니다. 대화 상자가 자동으로 생성되므로 이러한 플랫폼에서 작업하는 경우 **ConfirmOnly**의 [**DevicePairingKinds**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePairingKinds)를 선택할 때 고유한 대화 상자를 만들지 않아도 됩니다. 다른 **DevicePairingKinds**의 경우 특정 **DevicePairingKinds** 값에 따라 어떤 특별한 처리를 수행해야 합니다. 다른 **DevicePairingKinds** 값에 대해 사용자 지정 페어링을 처리하는 방법의 예제는 샘플을 참조하세요.
 
 Windows 10, 버전 1903, 새부터 **DevicePairingKinds** 지원 됩니다 **ProvidePasswordCredential**합니다. 이 값에는 앱에서에서 요청 해야 사용자 이름과 암호를 사용자 쌍으로 연결 된 장치를 사용 하 여 인증 하기 위해 의미 합니다. 이 사례를 처리 하려면 호출을 [ **AcceptWithPasswordCredential** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepairingrequestedeventargs.acceptwithpasswordcredential?branch=release-19h1#Windows_Devices_Enumeration_DevicePairingRequestedEventArgs_AcceptWithPasswordCredential_Windows_Security_Credentials_PasswordCredential_) 의 이벤트 인수는 메서드를 **PairingRequested** 페어링을 허용 하도록 이벤트 처리기입니다. 전달 된 [ **PasswordCredential** ](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordcredential) 사용자 이름 및 암호 매개 변수를 캡슐화 하는 개체입니다. 사용자 이름 및 원격 장치에 대 한 암호는 구별 및 종종 동일 하지는 않습니다에서 로컬로 로그온 한 사용자의 자격 증명입니다.
 
@@ -66,12 +66,12 @@ Windows 10, 버전 1903, 새부터 **DevicePairingKinds** 지원 됩니다 **Pro
 
 장치 언페어링은 위에서 설명한 기본 페어링 또는 사용자 지정 페어링 시나리오에만 관련이 있습니다. 자동 페어링을 사용하는 경우 앱이 여전히 장치의 페어링 상태를 인식하지 못하므로 언페어링할 필요가 없습니다. 장치를 언페어링하기로 선택한 경우 기본 페어링과 사용자 지정 페어링 모두에 대해 프로세스가 동일합니다. 이는 언페어링 프로세스에 추가 정보를 제공하거나 조작할 필요가 없기 때문입니다.
 
-디바이스를 언페어링하는 첫 번째 단계는 언페어링하려는 디바이스의 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 가져오는 것입니다. 그런 다음 [**DeviceInformation.Pairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx) 속성을 검색하고 [**DeviceInformationPairing.UnpairAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationpairing.unpairasync)를 호출해야 합니다. 페어링과 마찬가지로 결과를 **await**합니다. 언페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 언페어링됩니다.
+디바이스를 언페어링하는 첫 번째 단계는 언페어링하려는 디바이스의 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 가져오는 것입니다. 그런 다음 [**DeviceInformation.Pairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) 속성을 검색하고 [**DeviceInformationPairing.UnpairAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationpairing.unpairasync)를 호출해야 합니다. 페어링과 마찬가지로 결과를 **await**합니다. 언페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 언페어링됩니다.
 
 ## <a name="sample"></a>샘플
 
 
-[  **Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](https://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
+[  **Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](https://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
 
  
 

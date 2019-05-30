@@ -7,30 +7,30 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c55a12dfa7757a48874b6857c95af592e818c2b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 25ee9960e55100eaf743d73d7007e9bcf51342ee
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57590768"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370720"
 ---
 # <a name="bc7-format"></a>BC7 형식
 
 
 BC7 형식은 RGB 및 RGBA 데이터의 고품질 압축에 사용되는 텍스처 압축 형식입니다.
 
-BC7 형식의 블록 모드에 대한 자세한 내용은 [BC7 Format Mode Reference(BC7 형식 모드 참조)](https://msdn.microsoft.com/library/windows/desktop/hh308954)를 참조하세요.
+BC7 형식의 블록 모드에 대한 자세한 내용은 [BC7 Format Mode Reference(BC7 형식 모드 참조)](https://docs.microsoft.com/windows/desktop/direct3d11/bc7-format-mode-reference)를 참조하세요.
 
-## <a name="span-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanabout-bc7dxgiformatbc7"></a><span id="About-BC7-DXGI-FORMAT-BC7"></span><span id="about-bc7-dxgi-format-bc7"></span><span id="ABOUT-BC7-DXGI-FORMAT-BC7"></span>BC7/DXGI에 대 한\_형식\_BC7
+## <a name="span-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanspan-idabout-bc7-dxgi-format-bc7spanabout-bc7dxgiformatbc7"></a><span id="About-BC7-DXGI-FORMAT-BC7"></span><span id="about-bc7-dxgi-format-bc7"></span><span id="ABOUT-BC7-DXGI-FORMAT-BC7"></span>About BC7/DXGI\_FORMAT\_BC7
 
 
 다음 DXGI BC7 된\_열거형 값의 서식 지정 합니다.
 
--   **DXGI\_형식\_BC7\_TYPELESS**합니다.
--   **DXGI\_형식\_BC7\_UNORM**합니다.
--   **DXGI\_형식\_BC7\_UNORM\_SRGB**합니다.
+-   **DXGI\_FORMAT\_BC7\_TYPELESS**.
+-   **DXGI\_FORMAT\_BC7\_UNORM**.
+-   **DXGI\_FORMAT\_BC7\_UNORM\_SRGB**.
 
-[Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277)(배열 포함), Texture3D 또는 TextureCube(배열 포함) 텍스처 리소스에 BC7 형식을 사용할 수 있습니다. 마찬가지로 이 형식은 이러한 리소스와 연결된 모든 MIP 맵 표면에 적용됩니다.
+[Texture2D](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-reference-resource-structures)(배열 포함), Texture3D 또는 TextureCube(배열 포함) 텍스처 리소스에 BC7 형식을 사용할 수 있습니다. 마찬가지로 이 형식은 이러한 리소스와 연결된 모든 MIP 맵 표면에 적용됩니다.
 
 BC7은 16바이트(128비트)의 고정 블록 크기와 4x4 텍셀의 고정 타일 크기를 사용합니다. 이전 BC 형식과 마찬가지로 지원되는 타일 크기(4x4)보다 큰 텍스처 이미지는 여러 블록을 사용하여 압축됩니다. 이 주소 ID는 3차원 이미지, MIP 맵, 큐브 맵 및 텍스처 배열에도 적용됩니다. 모든 이미지 타일이 동일한 형식이어야 합니다.
 
@@ -57,9 +57,9 @@ BC7 블록에 여러 끝점 쌍이 포함될 수 있습니다. 끝점 쌍에 해
 
 | BC7 블록 내용     | 모드 비트 | 회전 비트 | 인덱스 선택기 비트 | 파티션 비트 | 압축된 끝점 | P 비트    | 압축된 인덱스 |
 |---------------------------|-----------|---------------|--------------------|----------------|----------------------|----------|--------------------|
-| 색 구성 요소만     | 필수  | 해당 없음           | 해당 없음                | 필수       | 필수             | 선택적 | 필수           |
-| 색 및 알파 결합    | 필수  | 해당 없음           | 해당 없음                | 선택적       | 필수             | 선택적 | 필수           |
-| 색 및 알파 분리 | 필수  | 필수      | 선택적           | 해당 없음            | 필수             | 해당 없음      | 필수           |
+| 색 구성 요소만     | 필수  | 해당 사항 없음           | 해당 사항 없음                | 필수       | 필수             | 선택적 | 필수           |
+| 색 및 알파 결합    | 필수  | 해당 사항 없음           | 해당 사항 없음                | 선택적       | 필수             | 선택적 | 필수           |
+| 색 및 알파 분리 | 필수  | 필수      | 선택적           | 해당 사항 없음            | 필수             | 해당 사항 없음      | 필수           |
 
  
 

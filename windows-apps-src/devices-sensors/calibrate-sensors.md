@@ -6,30 +6,30 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a93d59a00630c240e74049a9fd98d50f285b0dd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 21e902daac01d8ed2645625320dec27bf7805fba
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634678"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370310"
 ---
 # <a name="calibrate-sensors"></a>센서 보정
 
 
 **중요 한 Api**
 
--   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Windows.Devices.Sensors.Custom**](https://msdn.microsoft.com/library/windows/apps/Dn895032)
+-   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**Windows.Devices.Sensors.Custom**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Custom)
 
-나침반, 경사계 방향 센서 같이 자력계를 기반으로 한 디바이스의 센서는 환경 요인으로 인해 보정이 필요해질 수 있습니다. [  **MagnetometerAccuracy**](https://msdn.microsoft.com/library/windows/apps/Dn297552) 열거형은 디바이스에 보정이 필요한 경우 작업 과정을 결정하는 데 도움이 될 수 있습니다.
+나침반, 경사계 방향 센서 같이 자력계를 기반으로 한 디바이스의 센서는 환경 요인으로 인해 보정이 필요해질 수 있습니다. [  **MagnetometerAccuracy**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.MagnetometerAccuracy) 열거형은 디바이스에 보정이 필요한 경우 작업 과정을 결정하는 데 도움이 될 수 있습니다.
 
 ## <a name="when-to-calibrate-the-magnetometer"></a>자력계를 보정하는 경우
 
-[  **MagnetometerAccuracy**](https://msdn.microsoft.com/library/windows/apps/Dn297552) 열거형에는 앱이 실행 중인 디바이스를 보정해야 할지 결정하는 데 도움이 되는 값 네 개가 있습니다. 디바이스를 보정해야 하는 경우 사용자에게 보정이 필요하다는 것을 알려야 합니다. 그러나 사용자에게 너무 자주 보정하도록 메시지를 표시하지 않아야 합니다. 10분마다 한 번을 넘지 않는 것이 좋습니다.
+[  **MagnetometerAccuracy**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.MagnetometerAccuracy) 열거형에는 앱이 실행 중인 디바이스를 보정해야 할지 결정하는 데 도움이 되는 값 네 개가 있습니다. 디바이스를 보정해야 하는 경우 사용자에게 보정이 필요하다는 것을 알려야 합니다. 그러나 사용자에게 너무 자주 보정하도록 메시지를 표시하지 않아야 합니다. 10분마다 한 번을 넘지 않는 것이 좋습니다.
 
 | 값           | 설명    |
 | ----------------- | ------------------- |
 | **알 수 없음**     | 센서 드라이버가 현재 정확도를 보고하지 못했습니다. 이 문제가 반드시 디바이스가 보정 범위를 벗어났음을 의미하는 것은 아닙니다. **Unknown**이 반환될 경우 앱이 가장 적합한 작업 과정을 결정합니다. 앱이 정확한 센서 판독에 의존하는 경우 사용자에게 디바이스를 보정하라는 메시지를 표시할 수 있습니다. |
-| **신뢰할 수 없는**  | 현재 자력계의 부정확도가 높습니다. 이 값이 처음 반환될 경우 앱은 항상 사용자에게 보정을 요청해야 합니다. |
+| **Unreliable**  | 현재 자력계의 부정확도가 높습니다. 이 값이 처음 반환될 경우 앱은 항상 사용자에게 보정을 요청해야 합니다. |
 | **근사치** | 데이터가 일부 응용 프로그램에 대해 충분히 정확합니다. 사용자가 디바이스를 위/아래 또는 왼쪽/오른쪽으로 이동했는지 여부만을 인식해야 하는 가상 현실 앱은 보정 없이 계속 사용할 수 있습니다. 방향을 제공하기 위해 주행하고 있는 방향을 인식해야 하는 내비게이션 앱 같은 절대 진행 방향이 필요한 앱은 보정을 요청해야 합니다. |
 | **고가용성**        | 데이터가 정확합니다. 증강 현실이나 내비게이션 앱 같이 절대 진행 방향을 인식해야 하는 앱의 경우에도 보정이 필요하지 않습니다. |

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
-ms.openlocfilehash: a382fd879ce656a81e1de4ae2d91180f622cd730
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 40cf41df4ccf15206e5855f989bc46c599baa473
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334749"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372073"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스
 
@@ -23,7 +23,7 @@ Xbox One에서 실행되는 UWP 앱은 시스템 및 다른 앱과 리소스를 
 
 백그라운드에서 실행되는 앱에서 사용할 수 있는 최대 메모리는 128MB입니다. 백그라운드 모드는 백그라운드 음악 플레이어와 같은 동시 응용 프로그램에만 적용됩니다.  게임이 중단되고 백그라운드에서 종료됩니다.
 
-이러한 제한을 초과하면 메모리 할당 오류가 발생합니다. 메모리 사용 모니터링에 대한 자세한 내용은 [MemoryManager 클래스](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx) 참조를 참조하세요.
+이러한 제한을 초과하면 메모리 할당 오류가 발생합니다. 메모리 사용 모니터링에 대한 자세한 내용은 [MemoryManager 클래스](https://docs.microsoft.com/uwp/api/windows.system.memorymanager) 참조를 참조하세요.
     
     > [!NOTE]
     > When running your app or game from the Visual Studio debugger, these memory constraints do not apply. This limit is only applicable when not running in debugging mode.
@@ -55,5 +55,5 @@ Xbox One의 UWP 앱에 대한 시스템 리소스에 대해 자세한 내용은 
 ## <a name="see-also"></a>참조
 - [Xbox One에서 UWP](index.md)
 - [Xbox Live 크리에이터 스 프로그램 시작](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/creators-program)
-- [DirectX 및 Xbox One에서 UWP](https://blogs.msdn.microsoft.com/chuckw/2017/12/15/directx-and-uwp-on-xbox-one/)
+- [DirectX 및 Xbox One에서 UWP](https://walbourn.github.io/)
 

@@ -5,20 +5,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ae656b473a4dd5999588057b0ec970645703eec
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 35488417497ac157969ff2641fbeaa0d4bb02591
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635088"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370126"
 ---
 # <a name="bluetooth-gatt-client"></a>Bluetooth GATT 클라이언트
 
 
 **중요 한 Api**
 
--   [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/Dn263413)
--   [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685)
+-   [**Windows.Devices.Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
+-   [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
 
 이 문서를 일반적인 GATT 클라이언트 작업에 대한 샘플 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱용 Bluetooth GATT(일반 특성 프로필) 클라이언트 API의 사용을 설명합니다.
 - 주변 장치에 대한 쿼리
@@ -28,10 +28,10 @@ ms.locfileid: "57635088"
 - 특성 값이 변경될 때 알림 구독
 
 ## <a name="overview"></a>개요
-개발자는 [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) 네임스페이스의 API를 사용하여 Bluetooth LE 디바이스에 액세스할 수 있습니다. Bluetooth LE 장치는 다음 컬렉션을 통해 장치의 기능을 표시합니다.
+개발자는 [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile) 네임스페이스의 API를 사용하여 Bluetooth LE 디바이스에 액세스할 수 있습니다. Bluetooth LE 장치는 다음 컬렉션을 통해 장치의 기능을 표시합니다.
 
 -   서비스
--   특성
+-   특징
 -   설명자
 
 서비스는 LE 장치의 기능 계약을 정의하고 서비스를 정의하는 특성 컬렉션을 포함합니다. 그리고 이러한 특성에는 특성을 설명하는 설명자가 포함됩니다. 이 3개의 용어는 일반적으로 디바이스의 특성이라고 합니다.
@@ -51,9 +51,9 @@ Bluetooth LE GATT API는 원시 전송에 대한 액세스보다는 개체와 �
 - Windows.Devices.Enumeration의 DeviceWatcher
 - Windows.Devices.Bluetooth.Advertisement의 AdvertisementWatcher
 
-두 번째 방법은 [알림](ble-beacon.md) 문서에서 자세히 다루므로 여기에서는 자세히 다루지 않지만 기본 개념은 특정 [알림 필터](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.advertisementfilter.aspx)를 충족하는 근접 장치의 Bluetooth 주소를 찾는 것입니다. 주소를 가져오면 [BluetoothLEDevice.FromBluetoothAddressAsync](https://msdn.microsoft.com/en-us/library/windows/apps/mt608819.aspx)를 호출하여 장치에 참조를 가져올 수 있습니다. 
+두 번째 방법은 [알림](ble-beacon.md) 문서에서 자세히 다루므로 여기에서는 자세히 다루지 않지만 기본 개념은 특정 [알림 필터](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.advertisementfilter)를 충족하는 근접 장치의 Bluetooth 주소를 찾는 것입니다. 주소를 가져오면 [BluetoothLEDevice.FromBluetoothAddressAsync](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.bluetoothledevice.frombluetoothaddressasync)를 호출하여 장치에 참조를 가져올 수 있습니다. 
 
-이제 DeviceWatcher 메서드로 돌아가겠습니다. Bluetooth LE 디바이스는 Windows의 다른 디바이스와 유사하며 [열거형 API](https://msdn.microsoft.com/library/windows/apps/BR225459)를 사용하여 쿼리할 수 있습니다. [DeviceWatcher](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.devicewatcher) 클래스를 사용하고 디바이스를 지정하는 쿼리 문자열을 전달하여 다음을 찾습니다. 
+이제 DeviceWatcher 메서드로 돌아가겠습니다. Bluetooth LE 디바이스는 Windows의 다른 디바이스와 유사하며 [열거형 API](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)를 사용하여 쿼리할 수 있습니다. [DeviceWatcher](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher) 클래스를 사용하고 디바이스를 지정하는 쿼리 문자열을 전달하여 다음을 찾습니다. 
 
 ```csharp
 // Query for extra properties you want returned
@@ -78,10 +78,10 @@ deviceWatcher.Stopped += DeviceWatcher_Stopped;
 // Start the watcher.
 deviceWatcher.Start();
 ```
-DeviceWatcher를 시작하면 의심스러운 장치에 대해 [추가된](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.devicewatcher.added) 이벤트에 대해 처리기에서 쿼리를 충족하는 각 장치에 대한 [DeviceInformation](https://msdn.microsoft.com/library/windows/apps/br225393) 알림을 받습니다. DeviceWatcher에 대한 더 자세한 내용은 [Github에 대한](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing) 완전한 샘플을 참조하세요. 
+DeviceWatcher를 시작하면 의심스러운 장치에 대해 [추가된](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added) 이벤트에 대해 처리기에서 쿼리를 충족하는 각 장치에 대한 [DeviceInformation](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 알림을 받습니다. DeviceWatcher에 대한 더 자세한 내용은 [Github에 대한](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing) 완전한 샘플을 참조하세요. 
 
 ## <a name="connecting-to-the-device"></a>디바이스에 연결
-원하는 디바이스를 검색한 후 [DeviceInformation.Id](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.id)를 사용하여 의심스러운 디바이스에 대한 Bluetooth LE 디바이스 개체를 가져옵니다. 
+원하는 디바이스를 검색한 후 [DeviceInformation.Id](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id)를 사용하여 의심스러운 디바이스에 대한 Bluetooth LE 디바이스 개체를 가져옵니다. 
 
 ```csharp
 async void ConnectDevice(DeviceInformation deviceInfo)
@@ -168,7 +168,7 @@ if (result.Status == GattCommunicationStatus.Success)
     // Successfully wrote to device
 }
 ```
-> **팁**: 사용 하 여 익숙해지는 [DataReader](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.streams.datareader.aspx) 하 고 [DataWriter](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.streams.datawriter.aspx)합니다. 해당 기능은 Bluetooth API에서 상당수 가져온 원시 버퍼로 작업할 때 필요합니다. 
+> **팁**: 사용 하 여 익숙해지는 [DataReader](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader) 하 고 [DataWriter](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter)합니다. 해당 기능은 Bluetooth API에서 상당수 가져온 원시 버퍼로 작업할 때 필요합니다. 
 ## <a name="subscribing-for-notifications"></a>알림 구독
 
 특성이 표시 또는 알림을 지원하는지 확인합니다(확실하게 하기 위해 특성 속성 확인). 
@@ -179,7 +179,7 @@ if (result.Status == GattCommunicationStatus.Success)
 - 클라이언트 특성 구성 설명자(CCCD)에 쓰기
 - Characteristic.ValueChanged 이벤트 처리
 
-CCCD에 대한 쓰기는 특정 특성 값을 변경할 때마다 이 클라이언트에서 알림을 받기 원한다는 것을 서버 장치에 알려줍니다. 이렇게 하려면 다음을 수행합니다. 
+CCCD에 대한 쓰기는 특정 특성 값을 변경할 때마다 이 클라이언트에서 알림을 받기 원한다는 것을 서버 장치에 알려줍니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면 
 
 ```csharp
 GattCommunicationStatus status = await selectedCharacteristic.WriteClientCharacteristicConfigurationDescriptorAsync(

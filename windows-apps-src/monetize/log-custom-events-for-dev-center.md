@@ -6,21 +6,21 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, 이벤트 기록
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
-ms.openlocfilehash: 368e2fb7b3c6d78f68235b829e088d79b5673cf2
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: e45b14daf6951142cb0d0ed8714e981eb6a55628
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334761"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371045"
 ---
 # <a name="log-custom-events-for-partner-center"></a>파트너 센터에 대해 사용자 지정 이벤트 로깅
 
-합니다 [사용 현황 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report) 에서 유니버설 Windows 플랫폼 (UWP) 앱에서 정의한 사용자 지정 이벤트에 대 한 정보를 가져올 수는 파트너 센터 있습니다. 사용자 지정 이벤트는 앱의 이벤트 또는 활동을 나타내는 임의의 문자열입니다. 예를 들어, 게임에서 *firstLevelPassed*, *secondLevelPassed* 등과 같이 사용자 지정 이벤트를 정의할 수 있어 사용자가 게임 단계를 통과할 때마다 기록됩니다.
+합니다 [사용 현황 보고서](https://docs.microsoft.com/windows/uwp/publish/usage-report) 에서 유니버설 Windows 플랫폼 (UWP) 앱에서 정의한 사용자 지정 이벤트에 대 한 정보를 가져올 수는 파트너 센터 있습니다. 사용자 지정 이벤트는 앱의 이벤트 또는 활동을 나타내는 임의의 문자열입니다. 예를 들어, 게임에서 *firstLevelPassed*, *secondLevelPassed* 등과 같이 사용자 지정 이벤트를 정의할 수 있어 사용자가 게임 단계를 통과할 때마다 기록됩니다.
 
-앱에서 사용자 지정 이벤트를 기록하려면 Microsoft Store Services SDK에서 제공한 [로그](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 메서드에 사용자 지정 이벤트 문자열을 전달합니다. 사용자 지정 이벤트에 대 한 총 발생 횟수를 검토할 수 있습니다는 **사용자 지정 이벤트** 섹션을 [사용량 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report) 파트너 센터에서.
+앱에서 사용자 지정 이벤트를 기록하려면 Microsoft Store Services SDK에서 제공한 [로그](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 메서드에 사용자 지정 이벤트 문자열을 전달합니다. 사용자 지정 이벤트에 대 한 총 발생 횟수를 검토할 수 있습니다는 **사용자 지정 이벤트** 섹션을 [사용량 보고서](https://docs.microsoft.com/windows/uwp/publish/usage-report) 파트너 센터에서.
 
 > [!NOTE]
-> 파트너 센터에 로그인 하는 사용자 지정 이벤트는 관련이 [Windows 이벤트](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx), 및에 표시 되지 않습니다 **이벤트 뷰어**합니다.
+> 파트너 센터에 로그인 하는 사용자 지정 이벤트는 관련이 [Windows 이벤트](https://docs.microsoft.com/windows/desktop/Events/windows-events), 및에 표시 되지 않습니다 **이벤트 뷰어**합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -45,10 +45,10 @@ ms.locfileid: "58334761"
     [!code-csharp[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#Log)]
 
     > [!NOTE]
-    > 앱 로그에 이름이 긴 사용자 지정 이벤트가 많을 경우 [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report)를 로드하는 데 시간이 오래 걸릴 수 있습니다. 사용자 지정 이벤트에 간략한 이름을 사용하는 것이 좋습니다. 
+    > 앱 로그에 이름이 긴 사용자 지정 이벤트가 많을 경우 [사용 보고서](https://docs.microsoft.com/windows/uwp/publish/usage-report)를 로드하는 데 시간이 오래 걸릴 수 있습니다. 사용자 지정 이벤트에 간략한 이름을 사용하는 것이 좋습니다. 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report)
+* [사용 보고서](https://docs.microsoft.com/windows/uwp/publish/usage-report)
 * [Log 메서드](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log)
-* [Microsoft Store Services SDK](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)
+* [Microsoft Store Services SDK](https://docs.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)

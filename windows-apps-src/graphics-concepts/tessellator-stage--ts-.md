@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7768d63405281d3155affc6c9f09c62568761718
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b8960d9723460fcbb8cec71da0998958cac8a6e8
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607398"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370939"
 ---
 # <a name="tessellator-ts-stage"></a>TS(분할기) 단계
 
@@ -52,7 +52,7 @@ Direct3D 런타임은 GPU에서 저 세부도 분할 표면을 상위 세부도 
 
 Direct3D 그래픽 파이프라인은 하드웨어에서 공간 분할을 구현하여 작업을 CPU에서 GPU로 분산합니다. 그러므로 응용 프로그램이 많은 수의 모프 대상 및/또는 보다 정교한 스킨 지정/변형 모델을 구현하는 경우 성능이 현저히 개선될 수 있습니다.
 
-분할기는 [헐 셰이더](hull-shader-stage--hs-.md)를 파이프라인에 바인딩하여 초기화되는 고정 함수 단계입니다. (참조 [방법: Tessellator 단계 초기화](https://msdn.microsoft.com/library/windows/desktop/ff476341)). 분할기 단계의 목적은 도메인(사각형, 삼각형 또는 선)을 여러 개의 더 작은 개체(삼각형, 점 또는 선)로 세분화하는 것입니다. 분할기는 정규(0~1) 좌표계에서 정식 도메인을 타일링합니다. 예를 들어 사각형 도메인은 단위 정사각형으로 공간 분할됩니다.
+분할기는 [헐 셰이더](hull-shader-stage--hs-.md)를 파이프라인에 바인딩하여 초기화되는 고정 함수 단계입니다. (참조 [방법: Tessellator 단계 초기화](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-advanced-stages-tessellator-initialize)). 분할기 단계의 목적은 도메인(사각형, 삼각형 또는 선)을 여러 개의 더 작은 개체(삼각형, 점 또는 선)로 세분화하는 것입니다. 분할기는 정규(0~1) 좌표계에서 정식 도메인을 타일링합니다. 예를 들어 사각형 도메인은 단위 정사각형으로 공간 분할됩니다.
 
 ### <a name="span-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanphases-in-the-tessellator-ts-stage"></a><span id="Phases_in_the_Tessellator__TS__stage"></span><span id="phases_in_the_tessellator__ts__stage"></span><span id="PHASES_IN_THE_TESSELLATOR__TS__STAGE"></span>Tessellator (TS) 스테이지의 단계
 
@@ -63,7 +63,7 @@ TS(분할기) 단계는 2개 작업 단계로 작동합니다.
 
     | 분할 유형 | 범위                       |
     |----------------------|-----------------------------|
-    | 소수 자릿수\_홀수      | \[1... 63\]                  |
+    | 소수 자릿수\_홀수      | \[1...63\]                  |
     | 소수 자릿수\_도     | TessFactor 범위: \[2..64\] |
     | 정수              | TessFactor 범위: \[1..64\] |
     | Pow2                 | TessFactor 범위: \[1..64\] |
@@ -83,7 +83,7 @@ TS(분할기) 단계는 2개 작업 단계로 작동합니다.
 
 분할기는 헐 셰이더 단계로부터 전달되는 공간 분할 요소(도메인을 얼마나 세부적으로 공간 분할할지 지정) 및 분할 유형(패치를 분할하는 데 사용할 알고리즘을 지정)을 사용하여 패치당 헌 번 작동합니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
 
 
 분할기는 uv(및 선택적으로 w) 좌표 및 표면 토폴로지를 도메인 셰이더 단계로 출력합니다.

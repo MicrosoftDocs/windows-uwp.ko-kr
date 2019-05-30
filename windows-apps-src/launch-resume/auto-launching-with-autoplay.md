@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f49d70ceadad8309419846aa26cb9f97df1c82ff
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d1f139ca4cf134ff8515a4da1134da16c338a4a8
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620898"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371331"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>자동 실행을 사용 하 여 자동으로 시작
 
@@ -225,9 +225,9 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 앱을 **자동 실행** 장치 이벤트에 대한 옵션으로 등록할 수 있습니다. **자동 실행** 장치 이벤트는 장치가 PC에 연결될 때 발생합니다.
 
-여기에서는 카메라가 PC에 연결될 때 앱을 **자동 실행** 옵션으로 식별하는 방법을 보여 줍니다. 앱에 대 한 처리기로 등록 합니다 **WPD\\ImageSourceAutoPlay** 이벤트입니다. 이는 카메라 및 기타 이미징 장치가 MTP를 사용하는 ImageSource임을 알릴 경우 WPD(Windows 휴대용 장치)에서 발생하는 일반적인 이벤트입니다. 자세한 내용은 [Windows 휴대용 장치](https://msdn.microsoft.com/library/windows/hardware/ff597729)를 참조하세요.
+여기에서는 카메라가 PC에 연결될 때 앱을 **자동 실행** 옵션으로 식별하는 방법을 보여 줍니다. 앱에 대 한 처리기로 등록 합니다 **WPD\\ImageSourceAutoPlay** 이벤트입니다. 이는 카메라 및 기타 이미징 장치가 MTP를 사용하는 ImageSource임을 알릴 경우 WPD(Windows 휴대용 장치)에서 발생하는 일반적인 이벤트입니다. 자세한 내용은 [Windows 휴대용 장치](https://docs.microsoft.com/previous-versions//ff597729(v=vs.85))를 참조하세요.
 
-**중요 한**  는 [ **Windows.Devices.Portable.StorageDevice** ](https://msdn.microsoft.com/library/windows/apps/br225654) Api가 포함 된 [데스크톱 장치 제품군](https://msdn.microsoft.com/library/windows/apps/dn894631)합니다. 앱은 데스크톱 장치 제품군, Pc 등의 Windows 10 장치에만 이러한 Api를 사용할 수 있습니다.
+**중요 한**  는 [ **Windows.Devices.Portable.StorageDevice** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice) Api가 포함 된 [데스크톱 장치 제품군](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)합니다. 앱은 데스크톱 장치 제품군, Pc 등의 Windows 10 장치에만 이러한 Api를 사용할 수 있습니다.
 
  
 
@@ -250,7 +250,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 ### <a name="step-2-add-assembly-reference-for-the-desktop-extensions"></a>2단계: 데스크톱 확장에 대 한 어셈블리 참조를 추가 합니다.
 
-Windows 휴대용 장치의 저장소에 액세스하는 데 필요한 API인 [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654)는 [데스크톱 디바이스 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)의 일부입니다. 이는 API를 사용하려면 특수 어셈블리가 필요하고 해당 호출은 PC와 같은 데스크톱 디바이스 패밀리의 장치에서만 작동한다는 것입니다.
+Windows 휴대용 장치의 저장소에 액세스하는 데 필요한 API인 [**Windows.Devices.Portable.StorageDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice)는 [데스크톱 디바이스 패밀리](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)의 일부입니다. 이는 API를 사용하려면 특수 어셈블리가 필요하고 해당 호출은 PC와 같은 데스크톱 디바이스 패밀리의 장치에서만 작동한다는 것입니다.
 
 1.  **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가...** 를 클릭합니다.
 2.  **유니버설 Windows**를 확장하고 **확장**을 클릭합니다.
@@ -286,7 +286,7 @@ MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; 섹션에 추�
 
 ### <a name="step-4-add-activation-code"></a>4단계: 활성화 코드를 추가 합니다.
 
-이 단계의 코드는 카메라의 장치 정보 ID를 [**FromId**](https://msdn.microsoft.com/library/windows/apps/br225655) 메서드에 전달하여 카메라를 [**StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654)로 참조합니다. 카메라의 장치 정보 ID는 먼저 이벤트 인수를 [**DeviceActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224710)로 캐스팅한 다음 [**DeviceInformationId**](https://msdn.microsoft.com/library/windows/apps/br224711) 속성에서 값을 가져와 얻을 수 있습니다.
+이 단계의 코드는 카메라의 장치 정보 ID를 [**FromId**](https://docs.microsoft.com/uwp/api/windows.devices.portable.storagedevice.fromid) 메서드에 전달하여 카메라를 [**StorageDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice)로 참조합니다. 카메라의 장치 정보 ID는 먼저 이벤트 인수를 [**DeviceActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.DeviceActivatedEventArgs)로 캐스팅한 다음 [**DeviceInformationId**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.deviceactivatedeventargs.deviceinformationid) 속성에서 값을 가져와 얻을 수 있습니다.
 
 App.xaml.cs 파일을 열고 다음 코드를 **App** 클래스에 추가합니다.
 
@@ -340,7 +340,7 @@ protected override void OnActivated(IActivatedEventArgs args)
 
 ### <a name="step-5-add-code-to-display-device-information"></a>5단계: 장치 정보를 표시 하는 코드를 추가 합니다.
 
-[  **StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) 클래스의 속성에서 카메라에 대한 정보를 가져올 수 있습니다. 이 단계의 코드는 앱이 실행될 때 장치 이름 및 기타 정보를 사용자에게 표시합니다. 그런 후 다음 단계에서 추가할 GetImageList 및 GetThumbnail 메서드를 호출하여 카메라에 저장된 이미지의 미리 보기를 표시합니다.
+[  **StorageDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice) 클래스의 속성에서 카메라에 대한 정보를 가져올 수 있습니다. 이 단계의 코드는 앱이 실행될 때 장치 이름 및 기타 정보를 사용자에게 표시합니다. 그런 후 다음 단계에서 추가할 GetImageList 및 GetThumbnail 메서드를 호출하여 카메라에 저장된 이미지의 미리 보기를 표시합니다.
 
 MainPage.xaml.cs 파일에서 **MainPage** 클래스에 다음 코드를 추가합니다.
 
@@ -415,7 +415,7 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 
 여기서는 볼륨 장치를 **자동 실행** 장치로 식별하는 방법을 보여 줍니다.
 
-볼륨 디바이스를 **자동 실행** 디바이스로 식별하려면 디바이스의 루트 드라이브에 autorun.inf 파일을 추가합니다. autorun.inf 파일에서 **CustomEvent** 키를 **AutoRun** 섹션에 추가합니다. 볼륨 디바이스가 PC에 연결되면 **자동 실행**에서 autorun.inf 파일을 찾고 볼륨을 디바이스로 처리합니다. **자동 실행**에서 **CustomEvent** 키에 제공한 이름을 사용하여 **자동 실행** 이벤트를 만듭니다. 그런 다음 앱을 만들고 해당 **자동 실행** 이벤트에 대한 처리기로 등록할 수 있습니다. 장치가 PC에 연결되면 **자동 실행**에서 앱을 볼륨 장치에 대한 처리기로 표시합니다. autorun.inf 파일에 대한 자세한 내용은 [autorun.inf 항목](https://msdn.microsoft.com/library/windows/desktop/cc144200)을 참조하세요.
+볼륨 디바이스를 **자동 실행** 디바이스로 식별하려면 디바이스의 루트 드라이브에 autorun.inf 파일을 추가합니다. autorun.inf 파일에서 **CustomEvent** 키를 **AutoRun** 섹션에 추가합니다. 볼륨 디바이스가 PC에 연결되면 **자동 실행**에서 autorun.inf 파일을 찾고 볼륨을 디바이스로 처리합니다. **자동 실행**에서 **CustomEvent** 키에 제공한 이름을 사용하여 **자동 실행** 이벤트를 만듭니다. 그런 다음 앱을 만들고 해당 **자동 실행** 이벤트에 대한 처리기로 등록할 수 있습니다. 장치가 PC에 연결되면 **자동 실행**에서 앱을 볼륨 장치에 대한 처리기로 표시합니다. autorun.inf 파일에 대한 자세한 내용은 [autorun.inf 항목](https://docs.microsoft.com/windows/desktop/shell/autorun-cmds)을 참조하세요.
 
 ### <a name="step-1-create-an-autoruninf-file"></a>1단계: Autorun.inf 파일 만들기
 
@@ -534,9 +534,9 @@ internal async System.Threading.Tasks.Task<IReadOnlyList<Windows.Storage.Storage
 | 쓰기 가능 광 디스크 처리                                     | **HandleCDBurningOnArrival** <br />**HandleDVDBurningOnArrival** <br />**HandleBDBurningOnArrival** | 광학 드라이브에 디스크를 삽입하면 자동 실행에서 파일을 검사하여 콘텐츠 종류를 확인합니다. 쓰기 가능한 디스크가 발견되면 광 디스크 종류에 해당하는 이벤트가 발생합니다. |
 | 다른 장치 또는 볼륨 연결 처리                       | **UnknownContentOnArrival**        | 콘텐츠 자동 실행 이벤트와 일치하지 않는 콘텐츠가 발견되는 경우 모든 이벤트에 대해 발생합니다. 이 이벤트는 사용하지 않는 것이 좋습니다. 응용 프로그램이 처리할 수 있는 특정 자동 실행 이벤트에 대해서만 응용 프로그램을 등록해야 합니다. |
 
-자동 실행이 볼륨의 autorun.inf 파일에 있는 **CustomEvent** 항목을 사용하여 사용자 지정 콘텐츠 자동 실행 이벤트를 발생시키도록 지정할 수 있습니다. 자세한 내용은 [Autorun.inf 항목](https://msdn.microsoft.com/library/windows/desktop/cc144200)을 참조하세요.
+자동 실행이 볼륨의 autorun.inf 파일에 있는 **CustomEvent** 항목을 사용하여 사용자 지정 콘텐츠 자동 실행 이벤트를 발생시키도록 지정할 수 있습니다. 자세한 내용은 [Autorun.inf 항목](https://docs.microsoft.com/windows/desktop/shell/autorun-cmds)을 참조하세요.
 
-앱의 package.appxmanifest 파일에 확장명을 추가하여 앱을 콘텐츠 자동 실행 또는 장치 자동 실행 이벤트 처리기로 등록할 수 있습니다. Visual Studio를 사용하는 경우 **선언** 탭에서 **콘텐츠 자동 실행** 또는 **장치 자동 실행** 선언을 추가할 수 있습니다. 앱의 package.appxmanifest 파일을 직접 편집하는 경우 **windows.autoPlayContent** 또는 **windows.autoPlayDevice**를 **Category**로 지정하는 패키지 매니페스트에 [**Extension**](https://msdn.microsoft.com/library/windows/apps/br211400) 요소를 추가합니다. 예를 들어 패키지 매니페스트의 다음 항목은 **콘텐츠 자동 실행** 확장명을 추가하여 앱을 **ShowPicturesOnArrival** 이벤트에 대한 처리기로 등록합니다.
+앱의 package.appxmanifest 파일에 확장명을 추가하여 앱을 콘텐츠 자동 실행 또는 장치 자동 실행 이벤트 처리기로 등록할 수 있습니다. Visual Studio를 사용하는 경우 **선언** 탭에서 **콘텐츠 자동 실행** 또는 **장치 자동 실행** 선언을 추가할 수 있습니다. 앱의 package.appxmanifest 파일을 직접 편집하는 경우 **windows.autoPlayContent** 또는 **windows.autoPlayDevice**를 **Category**로 지정하는 패키지 매니페스트에 [**Extension**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-extension) 요소를 추가합니다. 예를 들어 패키지 매니페스트의 다음 항목은 **콘텐츠 자동 실행** 확장명을 추가하여 앱을 **ShowPicturesOnArrival** 이벤트에 대한 처리기로 등록합니다.
 
 ```xml
   <Applications>

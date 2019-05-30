@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 메시, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: d3b6717c0b2d9d85e9c81e78fcaa1df1abbea23b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9b5aa00b5beb7c80a903fbf17d432f73f16561a2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595648"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368983"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>기본 메시 만들기 및 표시
 
@@ -28,9 +28,9 @@ ms.locfileid: "57595648"
 
 ### <a name="technologies"></a>기술
 
--   [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh769064)
+-   [Direct3D](https://docs.microsoft.com/windows/desktop/getting-started-with-direct3d)
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 
 -   선형 대수 및 3D 좌표계에 대한 기본 지식
 -   Visual Studio 2015 또는 이후 Direct3D 템플릿
@@ -77,7 +77,7 @@ SimpleCubeVertex cubeVertices[] =
 
 ### <a name="step-2-set-up-the-input-layout"></a>2단계: 입력된 레이아웃 설정
 
-이제 메모리에 꼭짓점 데이터가 있습니다. 그러나 그래픽 장치에는 자체 메모리가 있으므로 Direct3D를 사용하여 꼭짓점 데이터에 액세스합니다. 꼭짓점 데이터를 처리하기 위해 그래픽 장치로 가져오려면 그 방식을 분명히 해야 합니다. 즉, 그래픽 장치가 게임에서 꼭짓점 데이터를 가져올 때 이를 해석할 수 있도록 꼭짓점 데이터가 배치되는 방식을 선언해야 합니다. 이를 위해 [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)를 사용합니다.
+이제 메모리에 꼭짓점 데이터가 있습니다. 그러나 그래픽 장치에는 자체 메모리가 있으므로 Direct3D를 사용하여 꼭짓점 데이터에 액세스합니다. 꼭짓점 데이터를 처리하기 위해 그래픽 장치로 가져오려면 그 방식을 분명히 해야 합니다. 즉, 그래픽 장치가 게임에서 꼭짓점 데이터를 가져올 때 이를 해석할 수 있도록 꼭짓점 데이터가 배치되는 방식을 선언해야 합니다. 이를 위해 [**ID3D11InputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11inputlayout)를 사용합니다.
 
 꼭짓점 버퍼에 대한 입력 레이아웃을 선언하고 설정합니다.
 
@@ -106,21 +106,21 @@ m_d3dDevice->CreateInputLayout(
 
     "그런데 열거 값이 XYZ가 아니라 RGB를 나타냅니다!" 란 사실을 알아차리셨나요? 색 데이터와 좌표 데이터의 경우 모두 일반적으로 3개 또는 4개의 구성 요소 값을 사용하는데 왜 동일한 형식을 사용하지 않을까요? 셰이더가 데이터를 처리하는 방식을 나타내는 것은 형식 이름이 아니라 HLSL 시맨틱입니다.
 
--   **색**: 이 색 데이터에 대 한 의미 체계는 HLSL입니다. **POSITION**과 마찬가지로, 이는 3개의 32비트 부동 소수점 값(DirectX::XMFLOAT3)으로 구성됩니다. 각 값은 0에서 1 사이의 부동 숫자로 표현된 색 구성 요소인 빨강(r), 파랑(b) 또는 녹색(g)을 포함합니다.
+-   **COLOR**: 이 색 데이터에 대 한 의미 체계는 HLSL입니다. **POSITION**과 마찬가지로, 이는 3개의 32비트 부동 소수점 값(DirectX::XMFLOAT3)으로 구성됩니다. 각 값은 0에서 1 사이의 부동 숫자로 표현된 색 구성 요소인 빨강(r), 파랑(b) 또는 녹색(g)을 포함합니다.
 
     **COLOR** 값은 대개 셰이더 파이프라인의 끝에 4-구성 요소 RGBA로 반환됩니다. 이 예제의 경우 모든 픽셀에 대한 셰이더 파이프라인에서 "A" 알파 값은 1.0(최대 불투명도)으로 설정하게 됩니다.
 
-형식의 전체 목록은 참조 하세요 [ **DXGI\_형식**](https://msdn.microsoft.com/library/windows/desktop/bb173059)합니다. 전체 HLSL 시맨틱 목록을 보려면 [시맨틱](https://msdn.microsoft.com/library/windows/desktop/bb509647)을 참조하세요.
+형식의 전체 목록은 참조 하세요 [ **DXGI\_형식**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)합니다. 전체 HLSL 시맨틱 목록을 보려면 [시맨틱](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics)을 참조하세요.
 
-Direct3D 장치에서 [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512)을 호출하고 입력 레이아웃을 만듭니다. 이제 실제로 데이터를 보유할 수 있는 버퍼를 만들어야 합니다.
+Direct3D 장치에서 [**ID3D11Device::CreateInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout)을 호출하고 입력 레이아웃을 만듭니다. 이제 실제로 데이터를 보유할 수 있는 버퍼를 만들어야 합니다.
 
 ### <a name="step-3-populate-the-vertex-buffers"></a>3단계: 꼭 짓 점 버퍼 채우기
 
 꼭짓점 버퍼는 메시에 있는 각 삼각형의 꼭짓점 목록을 포함합니다. 이 목록에서 모든 꼭짓점은 고유해야 합니다. 이 예제에서는 큐브에 대한 8개의 꼭짓점이 있습니다. 꼭짓점 셰이더는 그래픽 장치에서 실행되어 꼭짓점 버퍼에서 읽고, 이전 단계에서 지정한 입력 레이아웃을 기반으로 데이터를 해석합니다.
 
-다음 예제에서는 꼭짓점 데이터의 실제 매핑 및 그래픽 장치의 메모리에서 이를 처리하는 방식에 관해 많은 정보를 Direct3D에 알려 주는 버퍼에 대한 설명과 하위 리소스를 제공합니다. 포함 항목이 없을 수도 있는 일반 [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351)를 사용하므로 이 과정이 필요합니다. 합니다 [ **D3D11\_버퍼\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) 고 [ **D3D11\_SUBRESOURCE\_데이터** ](https://msdn.microsoft.com/library/windows/desktop/ff476220)구조는 꼭 짓 점 목록의 최대 크기를 비롯 하 여 버퍼에 각 꼭 짓 점 요소의 크기를 포함 하 여 버퍼의 실제 메모리 레이아웃을 이해 하는 Direct3D 되도록 제공 됩니다. 여기서 버퍼 메모리에 대한 액세스 및 버퍼 메모리가 이동하는 방법도 제어할 수 있지만 이 내용은 이 자습서의 범위를 벗어납니다.
+다음 예제에서는 꼭짓점 데이터의 실제 매핑 및 그래픽 장치의 메모리에서 이를 처리하는 방식에 관해 많은 정보를 Direct3D에 알려 주는 버퍼에 대한 설명과 하위 리소스를 제공합니다. 포함 항목이 없을 수도 있는 일반 [**ID3D11Buffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11buffer)를 사용하므로 이 과정이 필요합니다. 합니다 [ **D3D11\_버퍼\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) 고 [ **D3D11\_SUBRESOURCE\_데이터** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data)구조는 꼭 짓 점 목록의 최대 크기를 비롯 하 여 버퍼에 각 꼭 짓 점 요소의 크기를 포함 하 여 버퍼의 실제 메모리 레이아웃을 이해 하는 Direct3D 되도록 제공 됩니다. 여기서 버퍼 메모리에 대한 액세스 및 버퍼 메모리가 이동하는 방법도 제어할 수 있지만 이 내용은 이 자습서의 범위를 벗어납니다.
 
-버퍼를 구성한 후 [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 호출하여 실제로 버퍼를 만듭니다. 개체가 둘 이상이면 각 고유 모델별로 버퍼를 만듭니다.
+버퍼를 구성한 후 [**ID3D11Device::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer)를 호출하여 실제로 버퍼를 만듭니다. 개체가 둘 이상이면 각 고유 모델별로 버퍼를 만듭니다.
 
 꼭짓점 버퍼를 선언하고 만듭니다.
 
@@ -187,9 +187,9 @@ unsigned short cubeIndices[] =
     0, 4, 7 };
 ```
 
-8개의 꼭짓점만 있으면 버퍼에서 36개의 인덱스 요소가 많이 중복됩니다. 특정을 제공 하는 경우 해당 형식을 지정 해야는 중복성의 일부를 제거 하 고 줄무늬가 그려지는 지 또는 팬와 같은 다른 꼭 짓 점 목록 형식을 사용 하려는 경우 [ **D3D11\_기본\_토폴로지** ](https://msdn.microsoft.com/library/windows/desktop/ff476189) 값을 [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) 메서드.
+8개의 꼭짓점만 있으면 버퍼에서 36개의 인덱스 요소가 많이 중복됩니다. 특정을 제공 하는 경우 해당 형식을 지정 해야는 중복성의 일부를 제거 하 고 줄무늬가 그려지는 지 또는 팬와 같은 다른 꼭 짓 점 목록 형식을 사용 하려는 경우 [ **D3D11\_기본\_토폴로지** ](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ff476189(v=vs.85)) 값을 [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology) 메서드.
 
-다른 인덱스 목록 기술에 대한 자세한 내용은 [Primitive 토폴로지](https://msdn.microsoft.com/library/windows/desktop/bb205124)를 참조하세요.
+다른 인덱스 목록 기술에 대한 자세한 내용은 [Primitive 토폴로지](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-primitive-topologies)를 참조하세요.
 
 ### <a name="step-5-create-a-constant-buffer-for-your-transformation-matrices"></a>5단계: 변환 행렬에 대 한 상수 버퍼를 만들려면
 
@@ -289,7 +289,7 @@ m_constantBufferData.projection = DirectX::XMFLOAT4X4(
             );
 ```
 
-여기서는 [ID3D11DeviceContext](https://msdn.microsoft.com/library/windows/desktop/ff476149)에 꼭짓점과 인덱스 버퍼, 사용 중인 토폴로지를 설정합니다.
+여기서는 [ID3D11DeviceContext](https://docs.microsoft.com/windows/desktop/direct3d11/d3d11-graphics-reference-10level9-context)에 꼭짓점과 인덱스 버퍼, 사용 중인 토폴로지를 설정합니다.
 
 ```cpp
 // Set the vertex and index buffers, and specify the way they define geometry.
@@ -412,7 +412,7 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 
 ### <a name="step-8-rasterizing-and-displaying-the-mesh"></a>8단계: 래스터화 및 메시를 표시 합니다.
 
-파이프라인을 실행하겠습니다. [  **ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565)를 호출하기만 하면 되므로 쉽습니다.
+파이프라인을 실행하겠습니다. [  **ID3D11DeviceContext::DrawIndexed**](https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-drawindexed)를 호출하기만 하면 되므로 쉽습니다.
 
 큐브를 그리세요.
 

@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b9f8de488ad0baea1de9aea5c911f2519385d25
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 02337d02472b7215f0fb9be47419caf52420e0f2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653868"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372413"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore1"></a>Windows Phone Silverlight UWP 사례 연구: Bookstore1
 
 
-이 항목에서는 Windows 10 유니버설 Windows 플랫폼 (UWP) 앱을 매우 간단한 Windows Phone Silverlight 앱을 포팅 사례 연구를 제공 합니다. Windows 10을 사용 하 여 만들 수 있습니다 단일 앱 패키지는 고객에 게 다양 한 장치에 설치할 수 있으며이 사례 연구에서 수행할입니다. [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
+이 항목에서는 Windows 10 유니버설 Windows 플랫폼 (UWP) 앱을 매우 간단한 Windows Phone Silverlight 앱을 포팅 사례 연구를 제공 합니다. Windows 10을 사용 하 여 만들 수 있습니다 단일 앱 패키지는 고객에 게 다양 한 장치에 설치할 수 있으며이 사례 연구에서 수행할입니다. [UWP 앱 지침](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)을 참조하세요.
 
 포팅할 앱은 보기 모델에 바인딩되는 **ListBox**로 구성됩니다. 보기 모델에는 제목, 저자 및 책 표지를 보여주는 책 목록이 있습니다. 책 표지 이미지에는 **빌드 작업**이 **콘텐츠**로 설정되어 있고 **출력 디렉터리로 복사**가 **복사 안 함**으로 설정되어 있습니다.
 
@@ -104,7 +104,7 @@ Bookstore1WPSL8에서 다음과 같이 했습니다.
     return new BitmapImage(new Uri(this.CoverImagePath, UriKind.Relative));
 ```
 
-Bookstore1Universal에서 ms-appx [URI 스키마](https://msdn.microsoft.com/library/windows/apps/jj655406)를 사용합니다. 코드의 나머지 부분을 동일하게 유지할 수 있도록 **System.Uri** 생성자의 다른 오버로드를 사용하여 ms-appx URI 스키마를 기본 URI에 삽입하고 나머지 경로를 URI에 추가합니다. 다음과 같습니다.
+Bookstore1Universal에서 ms-appx [URI 스키마](https://docs.microsoft.com/previous-versions/windows/apps/jj655406(v=win.10))를 사용합니다. 코드의 나머지 부분을 동일하게 유지할 수 있도록 **System.Uri** 생성자의 다른 오버로드를 사용하여 ms-appx URI 스키마를 기본 URI에 삽입하고 나머지 경로를 URI에 추가합니다. 다음과 같습니다.
 
 ```csharp
     // this.BookCoverImagePath contains a path of the form "/Assets/CoverImages/one.png".

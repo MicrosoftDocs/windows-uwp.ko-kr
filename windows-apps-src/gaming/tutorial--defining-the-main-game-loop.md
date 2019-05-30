@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 주 개체
 ms.localizationpriority: medium
-ms.openlocfilehash: 96aefc8b053dd7490f47910ca5bb79989855e1a3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a3c47f3c22c41e7ca73c8a8b5d4e26dc27fab343
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651498"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367657"
 ---
 # <a name="define-the-main-game-object"></a>주 게임 개체 정의
 
@@ -54,7 +54,7 @@ ms.locfileid: "57651498"
 
 * 새 오디오 재생 개체를 만듭니다.
 * 레벨 기본 요소, 탄환 및 장애물 배열을 비롯한 게임의 그래픽 기본 요소에 대한 배열을 만듭니다.
-* 게임 상태 데이터를 저장할 위치(*Game*)를 만들고 [**ApplicationData::Current**](https://msdn.microsoft.com/library/windows/apps/br241619)에 지정된 앱 데이터 설정 저장 위치에 배치합니다.
+* 게임 상태 데이터를 저장할 위치(*Game*)를 만들고 [**ApplicationData::Current**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.current)에 지정된 앱 데이터 설정 저장 위치에 배치합니다.
 * 게임 타이머와 초기 게임 내 오버레이 비트맵을 만듭니다.
 * 특정 보기 및 특정 투영 매개 변수 집합을 사용하여 새 카메라를 만듭니다.
 * 입력 장치(컨트롤러)가 카메라와 동일한 시작 피치 및 요로 설정되어 플레이어의 시작 제어 위치와 카메라 위치 간에 1대1 대응이 되도록 합니다.
@@ -245,8 +245,8 @@ void GameRenderer::Render()
 
 -   **초기화**: 전역 변수의 시작 값을 설정하고 게임 개체를 초기화합니다. 설명 합니다 [초기화 하 고 게임 시작](#initialize-and-start-the-game) 섹션입니다.
 -   **LoadGame**: 새 레벨을 초기화하고 로드를 시작합니다.
--   **LoadLevelAsync**: 비동기 작업을 시작 (비동기 작업을 사용 하 여 잘 모르는 경우 [병렬 패턴 라이브러리](https://docs.microsoft.com/cpp/parallel/concrt/parallel-patterns-library-ppl)) 수준을 초기화 하 고 다음 장치 특정 수준 리소스를 로드 하는 렌더러의 비동기 작업을 호출 하 합니다. 이 메서드는 별도의 스레드에서 실행되므로 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) 메서드가 아니라 [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) 메서드만 이 스레드에서 호출할 수 있습니다. 모든 디바이스 컨텍스트 메서드는 **FinalizeLoadLevel** 메서드에서 호출합니다.
--   **FinalizeLoadLevel**: 주 스레드에서 수행해야 하는 수준 로드를 위한 모든 작업을 완료합니다. 여기에는 Direct3D 11 디바이스 컨텍스트([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) 메서드 호출이 포함됩니다.
+-   **LoadLevelAsync**: 비동기 작업을 시작 (비동기 작업을 사용 하 여 잘 모르는 경우 [병렬 패턴 라이브러리](https://docs.microsoft.com/cpp/parallel/concrt/parallel-patterns-library-ppl)) 수준을 초기화 하 고 다음 장치 특정 수준 리소스를 로드 하는 렌더러의 비동기 작업을 호출 하 합니다. 이 메서드는 별도의 스레드에서 실행되므로 [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) 메서드가 아니라 [**ID3D11Device**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device) 메서드만 이 스레드에서 호출할 수 있습니다. 모든 디바이스 컨텍스트 메서드는 **FinalizeLoadLevel** 메서드에서 호출합니다.
+-   **FinalizeLoadLevel**: 주 스레드에서 수행해야 하는 수준 로드를 위한 모든 작업을 완료합니다. 여기에는 Direct3D 11 디바이스 컨텍스트([**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)) 메서드 호출이 포함됩니다.
 -   **StartLevel**: 새 레벨에 대한 게임 플레이를 시작합니다.
 -   **PauseGame**: 게임을 일시 중지합니다.
 -   **RunGame**: 게임 루프의 반복을 실행합니다. 이 메서드는 게임 상태가 **Active**인 경우 게임 루프가 반복될 때마다 한 번 **App::Update**에서 호출됩니다.
@@ -261,7 +261,7 @@ private 메서드:
 
 다른 public 메서드는 게임 플레이 및 오버레이 관련 정보를 앱 프레임워크에 반환하여 표시하는 속성 getter입니다.
 
-### <a name="data"></a>데이터
+### <a name="data"></a>data
 
 코드 예제의 맨 위에는 게임 루프가 실행될 때 인스턴스가 업데이트되는 4개 개체가 있습니다.
 

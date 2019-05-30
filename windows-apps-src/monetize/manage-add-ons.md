@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 51c940fffde3c770f397999e566570410528a1e8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8e06f8e915466f116692c63df5c53c2a0f97447f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617828"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372491"
 ---
 # <a name="manage-add-ons"></a>추가 기능 관리
 
@@ -34,17 +34,17 @@ Microsoft Store 제출 API에서 다음 메서드를 사용하여 앱의 추가 
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">가져오기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts</td>
 <td align="left"><a href="get-all-add-ons.md">앱에 대 한 모든 추가 기능 얻기</a></td>
 </tr>
 <tr>
-<td align="left">GET</td>
+<td align="left">가져오기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}</td>
 <td align="left"><a href="get-an-add-on.md">특정 추가 기능 가져오기</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">올리기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts</td>
 <td align="left"><a href="create-an-add-on.md">추가 기능 만들기</a></td>
 </tr>
@@ -56,7 +56,7 @@ Microsoft Store 제출 API에서 다음 메서드를 사용하여 앱의 추가 
 </tbody>
 </table>
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 아직 완료하지 않은 경우 이러한 메서드를 사용하기 전에 Microsoft Store 제출 API에 대한 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 모두 완료합니다.
 
@@ -100,11 +100,11 @@ Microsoft Store 제출 API에서 다음 메서드를 사용하여 앱의 추가 
 | 값      | 형식   | 설명        |
 |------------|--------|--------------|
 | 응용 프로그램      | 배열  | 이 추가 기능이 연결된 앱을 나타내는 하나의 [응용 프로그램 리소스](#application-object)가 포함된 배열입니다. 이 배열에서는 한 개의 항목만 지원됩니다.  |
-| id | 문자열  | 추가 기능의 스토어 ID입니다. 이 값은 스토어에서 제공됩니다. 예를 들어 스토어 ID는 9NBLGGH4TNMP입니다.  |
-| productId | 문자열  | 추가 기능의 제품 ID입니다. 이 ID는 추가 기능을 만들 때 개발자가 제공한 ID입니다. 자세한 내용은 [제품 유형 및 제품 ID 설정](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id)을 참조하세요. |
-| productType | 문자열  | 추가 기능의 제품 유형입니다. 다음 값이 지원 됩니다. **영 속** 하 고 **읽은**합니다.  |
-| lastPublishedInAppProductSubmission       | object | 추가 기능의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission-object)입니다.         |
-| pendingInAppProductSubmission        | object  |  추가 기능의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission-object)입니다.  |   |
+| id | string  | 추가 기능의 스토어 ID입니다. 이 값은 스토어에서 제공됩니다. 예를 들어 스토어 ID는 9NBLGGH4TNMP입니다.  |
+| productId | string  | 추가 기능의 제품 ID입니다. 이 ID는 추가 기능을 만들 때 개발자가 제공한 ID입니다. 자세한 내용은 [제품 유형 및 제품 ID 설정](https://docs.microsoft.com/windows/uwp/publish/set-your-iap-product-id)을 참조하세요. |
+| productType | string  | 추가 기능의 제품 유형입니다. 다음 값이 지원 됩니다. **영 속** 하 고 **읽은**합니다.  |
+| lastPublishedInAppProductSubmission       | 개체(object) | 추가 기능의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission-object)입니다.         |
+| pendingInAppProductSubmission        | 개체(object)  |  추가 기능의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission-object)입니다.  |   |
 
 <span id="application-object" />
 
@@ -130,8 +130,8 @@ Microsoft Store 제출 API에서 다음 메서드를 사용하여 앱의 추가 
 
 | 값           | 형식    | 설명        |
 |-----------------|---------|-----------|
-| value            | object  |  다음 값을 포함하는 개체입니다. <br/><br/> <ul><li>*id*. 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.</li><li>*resourceLocation*. 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 앱에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다.</li></ul>   |
-| totalCount   | int  | 응답 본문의 *applications* 배열에서 앱 개체의 수입니다.                                                                                                                                                 |
+| value            | 개체(object)  |  다음 값을 포함하는 개체입니다. <br/><br/> <ul><li>*id*. 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.</li><li>*resourceLocation*. 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 앱에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다.</li></ul>   |
+| totalCount   | ssNoversion  | 응답 본문의 *applications* 배열에서 앱 개체의 수입니다.                                                                                                                                                 |
 
 <span id="submission-object" />
 
@@ -152,8 +152,8 @@ Microsoft Store 제출 API에서 다음 메서드를 사용하여 앱의 추가 
 
 | 값           | 형식    | 설명     |
 |-----------------|---------|------------------|
-| id            | 문자열  | 제출의 ID입니다.    |
-| resourceLocation   | 문자열  | 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 제출에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다.     |
+| id            | string  | 제출의 ID입니다.    |
+| resourceLocation   | string  | 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 제출에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다.     |
  
 <span/>
 

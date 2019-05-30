@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a0474345e21161e76fbfeebe0086e5d433b2d219
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a68623b0a61672426c9b6eef85cb7d1ddc990a19
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57607358"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370996"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>타일 풀에 대한 매핑
 
@@ -31,13 +31,13 @@ ms.locfileid: "57607358"
 
 각 페이지 테이블 항목이 64비트라고 가정합시다.
 
-최악의 페이지 테이블에 대 한 스트리밍 리소스를 만든 128 비트-요소별 형식 (예를 들어 RGBA float의 경우)를 사용 하 여 따라서 64KB 타일 가정 Direct3D 11에서 리소스 한도 지정 된 단일 화면을 적중 하는 크기는 4096만 픽셀을 포함 합니다. 지원 되는 최대 [ **Texture2DArray** ](https://msdn.microsoft.com/library/windows/desktop/ff471526) 16384 크기인\*16384\*완전히 채워진 경우 (하지만 단일 mip 맵만을 사용 하 여) 2048 약 1GB 페이지 테이블의 저장소 필요 (제외한, mip 맵을) 64 비트 테이블 항목을 사용합니다. mipmap을 추가하면 완전히 매핑된(최악의 경우) 페이지 테이블 저장소가 1/3 정도, 즉 1.3GB까지 증가합니다.
+최악의 페이지 테이블에 대 한 스트리밍 리소스를 만든 128 비트-요소별 형식 (예를 들어 RGBA float의 경우)를 사용 하 여 따라서 64KB 타일 가정 Direct3D 11에서 리소스 한도 지정 된 단일 화면을 적중 하는 크기는 4096만 픽셀을 포함 합니다. 지원 되는 최대 [ **Texture2DArray** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2darray) 16384 크기인\*16384\*완전히 채워진 경우 (하지만 단일 mip 맵만을 사용 하 여) 2048 약 1GB 페이지 테이블의 저장소 필요 (제외한, mip 맵을) 64 비트 테이블 항목을 사용합니다. mipmap을 추가하면 완전히 매핑된(최악의 경우) 페이지 테이블 저장소가 1/3 정도, 즉 1.3GB까지 증가합니다.
 
 이 경우 약 10.6 테라바이트의 주소 지정 가능 메모리에 액세스할 수 있습니다. 그러나 주소 지정 가능 메모리의 크기에 제한을 두어 테라바이트 범위 정도로 그 공간을 줄일 수 있습니다.
 
-고려해 야 할 또 다른 경우는 단일 [ **Texture2D** ](https://msdn.microsoft.com/library/windows/desktop/ff471525) 16384의 리소스를 스트리밍\*16384 mip 맵을 포함 하는 32 비트-요소별 형식 사용 합니다. 완전히 채운 페이지 테이블에 필요한 공간은 64비트 테이블 항목을 포함해 대략 170KB입니다.
+고려해 야 할 또 다른 경우는 단일 [ **Texture2D** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d) 16384의 리소스를 스트리밍\*16384 mip 맵을 포함 하는 32 비트-요소별 형식 사용 합니다. 완전히 채운 페이지 테이블에 필요한 공간은 64비트 테이블 항목을 포함해 대략 170KB입니다.
 
-끝으로 BC 형식을 사용하는 예, 즉 4x4 픽셀 타일당 128비트인 BC7의 경우를 생각해봅시다. 이는 픽셀당 1 바이트입니다. A [ **Texture2DArray** ](https://msdn.microsoft.com/library/windows/desktop/ff471526) 16384\*16384\*2048 mip 맵을 포함 하 여 약 85 (mb)가이 메모리 페이지 테이블의 전체 채우기 해야 합니다. 이 경우 스트리밍 리소스 하나가 550기가픽셀(이 경우에는 512GB의 메모리)을 차지하도록 허용하는 것을 고려하면 나쁜 것은 아닙니다.
+끝으로 BC 형식을 사용하는 예, 즉 4x4 픽셀 타일당 128비트인 BC7의 경우를 생각해봅시다. 이는 픽셀당 1 바이트입니다. A [ **Texture2DArray** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2darray) 16384\*16384\*2048 mip 맵을 포함 하 여 약 85 (mb)가이 메모리 페이지 테이블의 전체 채우기 해야 합니다. 이 경우 스트리밍 리소스 하나가 550기가픽셀(이 경우에는 512GB의 메모리)을 차지하도록 허용하는 것을 고려하면 나쁜 것은 아닙니다.
 
 실제로는, 사용할 수 있는 물리적 메모리의 양이 한 번에 매핑 및 참조될 만큼의 양과는 거리가 먼 조건에서 이러한 전체 매핑을 정의하는 것은 합당하지 않은 일입니다. 그러나 타일 풀을 사용하면 응용 프로그램이 타일 풀(즉 페이지 테이블 매핑)을 메모리 압축 도구로 활용하여 타일을 다시 사용할 수 있습니다(간단한 예로, 이미지의 넓은 검은색 영역에 "검정색" 타일을 다시 사용).
 

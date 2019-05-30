@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, direct3d, 깊이 버퍼
 ms.localizationpriority: medium
-ms.openlocfilehash: f5ce1ec522a194111e175e41f82c4275cda4fbf5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dfd45f620addcf7a3f6292ed2257bdfccc862cd3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613698"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368888"
 ---
 # <a name="create-depth-buffer-device-resources"></a>깊이 버퍼 디바이스 리소스 만들기
 
@@ -38,7 +38,7 @@ ms.locfileid: "57613698"
 ## <a name="check-feature-support"></a>기능 지원 확인
 
 
-깊이 지도 만들기 전에 호출 된 [ **CheckFeatureSupport** ](https://msdn.microsoft.com/library/windows/desktop/ff476497) 메서드는 Direct3D 장치에서 요청 **D3D11\_기능\_D3D9\_ 섀도\_지원**를 제공 하 고는 [ **D3D11\_기능\_데이터\_D3D9\_섀도\_지원** ](https://msdn.microsoft.com/library/windows/desktop/jj247569) 구조입니다.
+깊이 지도 만들기 전에 호출 된 [ **CheckFeatureSupport** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) 메서드는 Direct3D 장치에서 요청 **D3D11\_기능\_D3D9\_ 섀도\_지원**를 제공 하 고는 [ **D3D11\_기능\_데이터\_D3D9\_섀도\_지원** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_d3d9_shadow_support) 구조입니다.
 
 ```cpp
 D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT isD3D9ShadowSupported;
@@ -82,7 +82,7 @@ HRESULT hr = pD3DDevice->CreateTexture2D(
     );
 ```
 
-그런 다음 리소스 보기를 만듭니다. 깊이 스텐실 보기에서 MIP 조각을 0으로 설정하고, 셰이더 리소스 보기에서 MIP 수준을 1로 설정합니다. 둘 다 TEXTURE2D, 질감 차원의 있고 둘 다 일치 하는 데 필요한 [ **DXGI\_형식**](https://msdn.microsoft.com/library/windows/desktop/bb173059)합니다.
+그런 다음 리소스 보기를 만듭니다. 깊이 스텐실 보기에서 MIP 조각을 0으로 설정하고, 셰이더 리소스 보기에서 MIP 수준을 1로 설정합니다. 둘 다 TEXTURE2D, 질감 차원의 있고 둘 다 일치 하는 데 필요한 [ **DXGI\_형식**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)합니다.
 
 ```cpp
 D3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc;

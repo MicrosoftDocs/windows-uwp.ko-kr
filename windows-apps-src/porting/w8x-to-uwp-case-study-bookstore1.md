@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0b8ffbebdca920bc6cc584dd735062a364d1d9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fad621eb9b6ef9ef863240644ae0fa46d41baacc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627938"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371601"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Windows 런타임 8.x UWP 사례 연구: Bookstore1
 
 
-이 항목에서는 Windows 10 유니버설 Windows 플랫폼 (UWP) 앱을 매우 간단한 유니버설 8.1 앱을 포팅 사례 연구를 제공 합니다. 유니버설 8.1 앱을 Windows 8.1 대 한 하나의 앱 패키지 및 Windows Phone 8.1에 대 한 다양 한 앱 패키지를 작성 하는 하나입니다. Windows 10을 사용 하 여 만들 수 있습니다 단일 앱 패키지는 고객에 게 다양 한 장치에 설치할 수 있으며이 사례 연구에서 수행할입니다. [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
+이 항목에서는 Windows 10 유니버설 Windows 플랫폼 (UWP) 앱을 매우 간단한 유니버설 8.1 앱을 포팅 사례 연구를 제공 합니다. 유니버설 8.1 앱을 Windows 8.1 대 한 하나의 앱 패키지 및 Windows Phone 8.1에 대 한 다양 한 앱 패키지를 작성 하는 하나입니다. Windows 10을 사용 하 여 만들 수 있습니다 단일 앱 패키지는 고객에 게 다양 한 장치에 설치할 수 있으며이 사례 연구에서 수행할입니다. [UWP 앱 지침](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)을 참조하세요.
 
 포팅할 앱은 보기 모델에 바인딩되는 **ListBox**로 구성됩니다. 보기 모델에는 제목, 저자 및 책 표지를 보여주는 책 목록이 있습니다. 책 표지 이미지에는 **빌드 작업**이 **콘텐츠**로 설정되어 있고 **출력 디렉터리로 복사**가 **복사 안 함**으로 설정되어 있습니다.
 
@@ -46,9 +46,9 @@ Bookstore1\_Windows Phone 81
 
 Bookstore1\_81 솔루션은 8.1 유니버설 앱 프로젝트 및 이러한 프로젝트를 포함 합니다.
 
--   Bookstore1\_81.Windows 합니다. Windows 8.1 대 한 앱 패키지를 빌드하는 프로젝트입니다.
--   Bookstore1\_81.WindowsPhone 합니다. Windows Phone 8.1용 앱 패키지를 빌드하는 프로젝트입니다.
--   Bookstore1\_81.Shared 합니다. 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
+-   Bookstore1\_81.Windows. Windows 8.1 대 한 앱 패키지를 빌드하는 프로젝트입니다.
+-   Bookstore1\_81.WindowsPhone. Windows Phone 8.1용 앱 패키지를 빌드하는 프로젝트입니다.
+-   Bookstore1\_81.Shared. 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
 
 이 사례 연구를 위해 지원할 장치와 관련하여 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md)에 설명된 일반적인 옵션을 제공합니다. 여기에 의사 결정은 간단한:이 앱은 동일한 기능을 수 있으며 forms는 Windows 8.1 및 Windows Phone 8.1 모두에서 동일한 코드를 사용 하 여 거의 모든 않습니다. 따라서 공유 프로젝트 (및 다른 다른 프로젝트에서 필요한 항목)의 내용을 (하나는 광범위 한 장치에 설치할 수 있는) 범용 장치 제품군을 대상으로 하는 Windows 10에 포트 됩니다 것입니다.
 

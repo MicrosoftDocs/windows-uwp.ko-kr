@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ca3b5e230270b46b7cb2709d4bfa06c4c51d0224
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5893719e43314eb15c684948a31de5a025a926fc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598158"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370834"
 ---
 # <a name="vertex-shader-vs-stage"></a>VS(꼭짓점 셰이더) 단계
 
@@ -29,7 +29,7 @@ VS(꼭짓점 셰이더) 단계는 다음과 같은 개별 꼭짓점을 처리하
 -   모핑
 -   꼭짓점별 조명
 
-꼭짓점 셰이더 단계는 프로그래밍 셰이더 단계로써 [그래픽 파이프라인](graphics-pipeline.md) 다이어그램에서 둥근 블록으로 표시됩니다. 이 셰이더 단계는 셰이더 모델 4.0[공통 셰이더 핵심](https://msdn.microsoft.com/library/windows/desktop/bb509580)을 사용합니다.
+꼭짓점 셰이더 단계는 프로그래밍 셰이더 단계로써 [그래픽 파이프라인](graphics-pipeline.md) 다이어그램에서 둥근 블록으로 표시됩니다. 이 셰이더 단계는 셰이더 모델 4.0[공통 셰이더 핵심](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-common-core)을 사용합니다.
 
 VS(꼭짓점 셰이더) 단계에서는 입력 어셈블러에서 꼭짓점을 처리합니다. 꼭짓점 셰이더는 항상 단일 입력 꼭짓점에서 작동하여 단일 출력 꼭짓점을 생성합니다. 파이프라인이 실행되도록 꼭짓점 셰이더 단계는 항상 활성 상태여야 합니다. 꼭짓점 수정이나 변환이 필요하지 않은 경우 통과 꼭짓점 셰이더를 작성하고 파이프라인으로 설정해야 합니다.
 
@@ -39,14 +39,14 @@ VS(꼭짓점 셰이더) 단계에서는 입력 어셈블러에서 꼭짓점을 �
 
 꼭짓점 셰이더는 항상 인접한 입력 기본 토폴로지의 인접 꼭짓점을 비롯한 모든 꼭짓점에서 실행됩니다. 꼭짓점 셰이더가 실행된 횟수는 VSInvocations 파이프라인 통계를 사용하여 CPU에서 쿼리할 수 있습니다.
 
-꼭 짓 점 셰이더 수 부하 및 작업을 수행할 텍스처 샘플링 화면 공간 파생형 필요 하지 않습니다 (HLSL 내장 함수를 사용 하 여: [샘플 (DirectX HLSL 텍스처 개체)](https://msdn.microsoft.com/library/windows/desktop/bb509695)하십시오 [SampleCmpLevelZero (DirectX HLSL 텍스처 개체)](https://msdn.microsoft.com/library/windows/desktop/bb509697), 및 [SampleGrad (DirectX HLSL 텍스처 개체)](https://msdn.microsoft.com/library/windows/desktop/bb509698)).
+꼭 짓 점 셰이더 수 부하 및 작업을 수행할 텍스처 샘플링 화면 공간 파생형 필요 하지 않습니다 (HLSL 내장 함수를 사용 하 여: [샘플 (DirectX HLSL 텍스처 개체)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-sample)하십시오 [SampleCmpLevelZero (DirectX HLSL 텍스처 개체)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmplevelzero), 및 [SampleGrad (DirectX HLSL 텍스처 개체)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplegrad)).
 
 ## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>입력
 
 
 VertexID 및 InstanceID 시스템 생성 값이 있는 단일 꼭짓점. 각 꼭짓점 셰이더 입력 꼭짓점은 최대 16개의 32비트 벡터(각각 최대 4개의 구성 요소)로 구성될 수 있습니다.
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output
 
 
 단일 꼭짓점. 각 출력 꼭짓점은 16개의 32비트 4-구성 요소 벡터로 구성될 수 있습니다.

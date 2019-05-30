@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 깊이, 효과, 기본 형식, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 02911338da858e3718235736cee7969a7bdebae2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 63af04475e897dfade3afec91b2a0fa0d9790f84
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646588"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367499"
 ---
 # <a name="use-depth-and-effects-on-primitives"></a>기본 요소에 깊이 및 효과 사용
 
@@ -21,7 +21,7 @@ ms.locfileid: "57646588"
 
 **목표:** 3D 개체를 만들고 기본 꼭 짓 점 조명 및에 색 지정을 적용 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 사용자가 C++에 익숙하다고 가정합니다. 그래픽 프로그래밍 개념에 대한 기본 경험도 필요합니다.
@@ -34,7 +34,7 @@ ms.locfileid: "57646588"
 ------------
 ### <a name="1-defining-cube-variables"></a>1. 큐브 변수 정의
 
-먼저 큐브에 대해 **SimpleCubeVertex** 및 **ConstantBuffer** 구조를 정의해야 합니다. 이러한 구조는 큐브에 대한 꼭짓점 위치와 색을 지정하고 큐브를 보는 방법도 지정합니다. [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)을 사용하여 [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) 및 [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351)를 선언하고 **ConstantBuffer**의 인스턴스를 선언합니다.
+먼저 큐브에 대해 **SimpleCubeVertex** 및 **ConstantBuffer** 구조를 정의해야 합니다. 이러한 구조는 큐브에 대한 꼭짓점 위치와 색을 지정하고 큐브를 보는 방법도 지정합니다. [**ComPtr**](https://docs.microsoft.com/cpp/windows/comptr-class)을 사용하여 [**ID3D11DepthStencilView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11depthstencilview) 및 [**ID3D11Buffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11buffer)를 선언하고 **ConstantBuffer**의 인스턴스를 선언합니다.
 
 ```cpp
 struct SimpleCubeVertex
@@ -66,7 +66,7 @@ private:
 
 ### <a name="2-creating-a-depth-stencil-view"></a>2. 깊이 스텐실 뷰 만들기
 
-렌더링-대상 보기를 만드는 것 외에도 깊이-스텐실 보기를 만듭니다. 깊이-스텐실 보기를 만들면 Direct3D는 카메라에 더 가까운 개체를 카메라에서 더 먼 개체 앞에 효과적으로 렌더링할 수 있습니다. 깊이-스텐실 버퍼에 대한 보기를 만들기 전에 깊이-스텐실 버퍼를 만들어야 합니다. 채우기는 [ **D3D11\_TEXTURE2D\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476253) 깊이 스텐실 버퍼에 설명 하 호출 [ **ID3D11Device::CreateTexture2D**  ](https://msdn.microsoft.com/library/windows/desktop/ff476521) 깊이 스텐실 버퍼를 만들려고 합니다. 깊이 스텐실 뷰를 만들려면 채웁니다를 [ **D3D11\_깊이\_스텐실\_뷰\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476112) 깊이 스텐실 뷰를 설명 및 전달 깊이 스텐실 뷰 설명 및 깊이 스텐실 버퍼 [ **ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507)합니다.
+렌더링-대상 보기를 만드는 것 외에도 깊이-스텐실 보기를 만듭니다. 깊이-스텐실 보기를 만들면 Direct3D는 카메라에 더 가까운 개체를 카메라에서 더 먼 개체 앞에 효과적으로 렌더링할 수 있습니다. 깊이-스텐실 버퍼에 대한 보기를 만들기 전에 깊이-스텐실 버퍼를 만들어야 합니다. 채우기는 [ **D3D11\_TEXTURE2D\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_texture2d_desc) 깊이 스텐실 버퍼에 설명 하 호출 [ **ID3D11Device::CreateTexture2D**  ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createtexture2d) 깊이 스텐실 버퍼를 만들려고 합니다. 깊이 스텐실 뷰를 만들려면 채웁니다를 [ **D3D11\_깊이\_스텐실\_뷰\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_depth_stencil_view_desc) 깊이 스텐실 뷰를 설명 및 전달 깊이 스텐실 뷰 설명 및 깊이 스텐실 버퍼 [ **ID3D11Device::CreateDepthStencilView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createdepthstencilview)합니다.
 
 ```cpp
         // Once the render target view is created, create a depth stencil view.  This
@@ -148,15 +148,15 @@ private:
 
 이 앱에서는 이전 자습서인 [셰이더 및 그리기 원형 만들기](creating-shaders-and-drawing-primitives.md)에서 설명한 것보다 좀 더 복잡한 꼭짓점 및 픽셀 셰이더를 만듭니다. 앱의 꼭짓점 셰이더는 각 꼭짓점 위치를 투영 공간으로 변환하고 꼭짓점 색을 픽셀 셰이더에 전달합니다.
 
-앱의 배열을 [ **D3D11\_입력\_요소\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조 꼭 짓 점 셰이더 코드의 레이아웃을 설명 하는 두 개의 요소가 레이아웃: 하나의 요소 꼭 짓 점 위치를 정의 하 고 다른 요소 색을 정의 합니다.
+앱의 배열을 [ **D3D11\_입력\_요소\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_input_element_desc) 구조 꼭 짓 점 셰이더 코드의 레이아웃을 설명 하는 두 개의 요소가 레이아웃: 하나의 요소 꼭 짓 점 위치를 정의 하 고 다른 요소 색을 정의 합니다.
 
 선회하는 큐브를 정의하기 위해 꼭짓점, 인덱스 및 상수 버퍼를 만듭니다.
 
 **궤도 큐브를 정의 하려면**
 
 1.  먼저 큐브를 정의합니다. 각 꼭짓점에 위치 외에 색도 할당합니다. 이렇게 하면 각 면을 구분할 수 있도록 픽셀 셰이더에서 각 면에 서로 다른 색을 적용할 수 있습니다.
-2.  꼭 짓 점 및 인덱스 버퍼를 설명한 다음으로 ([**D3D11\_버퍼\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) 고 [ **D3D11\_SUBRESOURCE\_데이터**](https://msdn.microsoft.com/library/windows/desktop/ff476220)) 큐브 정의 사용 하 여 합니다. 각 버퍼에 대해 [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 한 번 호출합니다.
-3.  다음으로, 상수 버퍼를 만듭니다 ([**D3D11\_버퍼\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)) 꼭 짓 점 셰이더를 모델, 뷰 및 투영 행렬을 전달 합니다. 나중에 상수 버퍼를 사용하여 큐브를 회전하고 큐브에 원근 투영을 적용할 수 있습니다. [  **ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 호출하여 상수 버퍼를 만듭니다.
+2.  꼭 짓 점 및 인덱스 버퍼를 설명한 다음으로 ([**D3D11\_버퍼\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) 고 [ **D3D11\_SUBRESOURCE\_데이터**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data)) 큐브 정의 사용 하 여 합니다. 각 버퍼에 대해 [**ID3D11Device::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer)를 한 번 호출합니다.
+3.  다음으로, 상수 버퍼를 만듭니다 ([**D3D11\_버퍼\_DESC**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc)) 꼭 짓 점 셰이더를 모델, 뷰 및 투영 행렬을 전달 합니다. 나중에 상수 버퍼를 사용하여 큐브를 회전하고 큐브에 원근 투영을 적용할 수 있습니다. [  **ID3D11Device::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer)를 호출하여 상수 버퍼를 만듭니다.
 4.  X = 0, Y = 1, Z = 2의 카메라 위치에 해당하는 보기 변환을 지정합니다.
 5.  마지막으로 모든 프레임을 회전하여 큐브 애니메이션을 만드는 데 사용할 *degree* 변수를 선언합니다.
 
@@ -336,20 +336,20 @@ private:
 
 ### <a name="5-rotating-and-drawing-the-cube-and-presenting-the-rendered-image"></a>5. 회전 큐브를 그리기 및 렌더링 되는 이미지를 표시 합니다.
 
-장면을 계속해서 렌더링 및 표시하기 위해 무한 루프를 입력합니다. 회전 양과 함께 **rotationY** 인라인 함수(BasicMath.h)를 호출하여 Y축을 중심으로 큐브의 모델 행렬을 회전할 값을 설정합니다. [  **ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486)를 호출하여 상수 버퍼를 업데이트하고 큐브 모델을 회전합니다. [  **ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464)를 호출하여 렌더링 대상을 출력 대상으로 지정합니다. 이 **OMSetRenderTargets** 호출의 경우 깊이-스텐실 보기를 전달합니다. [  **ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388)를 호출하여 렌더링 대상을 파란색 단색으로 지우고 [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387)를 호출하여 깊이 버퍼를 지웁니다.
+장면을 계속해서 렌더링 및 표시하기 위해 무한 루프를 입력합니다. 회전 양과 함께 **rotationY** 인라인 함수(BasicMath.h)를 호출하여 Y축을 중심으로 큐브의 모델 행렬을 회전할 값을 설정합니다. [  **ID3D11DeviceContext::UpdateSubresource**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-updatesubresource)를 호출하여 상수 버퍼를 업데이트하고 큐브 모델을 회전합니다. [  **ID3D11DeviceContext::OMSetRenderTargets**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-omsetrendertargets)를 호출하여 렌더링 대상을 출력 대상으로 지정합니다. 이 **OMSetRenderTargets** 호출의 경우 깊이-스텐실 보기를 전달합니다. [  **ID3D11DeviceContext::ClearRenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-clearrendertargetview)를 호출하여 렌더링 대상을 파란색 단색으로 지우고 [**ID3D11DeviceContext::ClearDepthStencilView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-cleardepthstencilview)를 호출하여 깊이 버퍼를 지웁니다.
 
 무한 루프에서, 파란색 표면에 큐브도 그립니다.
 
 **큐브를 그리려면**
 
-1.  먼저 [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)을 호출하여 꼭짓점 버퍼 데이터를 입력-어셈블러 단계로 스트리밍하는 방법을 설명합니다.
-2.  [  **ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) 및 [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453)를 호출하여 꼭짓점 및 인덱스 버퍼를 입력-어셈블러 단계로 바인딩합니다.
-3.  다음으로 호출 [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) 사용 하 여 합니다 [ **D3D11\_기본\_토폴로지\_ TRIANGLESTRIP** ](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) 삼각형 스트립으로 꼭 짓 점 데이터를 해석 하는 입력 어셈블러 단계에 대해 지정 하는 값입니다.
-4.  [  **ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493)를 호출하여 꼭짓점 셰이더 단계를 꼭짓점 셰이더 코드로 초기화하고, [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472)를 호출하여 픽셀 셰이더 단계를 픽셀 셰이더 코드로 초기화합니다.
-5.  [  **ID3D11DeviceContext::VSSetConstantBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476491)를 호출하여 꼭짓점 셰이더 파이프라인 단계에서 사용되는 상수 버퍼를 설정합니다.
-6.  마지막으로 [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409)를 호출하여 큐브를 그린 후 렌더링 파이프라인에 제출합니다.
+1.  먼저 [**ID3D11DeviceContext::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout)을 호출하여 꼭짓점 버퍼 데이터를 입력-어셈블러 단계로 스트리밍하는 방법을 설명합니다.
+2.  [  **ID3D11DeviceContext::IASetVertexBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers) 및 [**ID3D11DeviceContext::IASetIndexBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetindexbuffer)를 호출하여 꼭짓점 및 인덱스 버퍼를 입력-어셈블러 단계로 바인딩합니다.
+3.  다음으로 호출 [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology) 사용 하 여 합니다 [ **D3D11\_기본\_토폴로지\_ TRIANGLESTRIP** ](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ff476189(v=vs.85)) 삼각형 스트립으로 꼭 짓 점 데이터를 해석 하는 입력 어셈블러 단계에 대해 지정 하는 값입니다.
+4.  [  **ID3D11DeviceContext::VSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetshader)를 호출하여 꼭짓점 셰이더 단계를 꼭짓점 셰이더 코드로 초기화하고, [**ID3D11DeviceContext::PSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader)를 호출하여 픽셀 셰이더 단계를 픽셀 셰이더 코드로 초기화합니다.
+5.  [  **ID3D11DeviceContext::VSSetConstantBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetconstantbuffers)를 호출하여 꼭짓점 셰이더 파이프라인 단계에서 사용되는 상수 버퍼를 설정합니다.
+6.  마지막으로 [**ID3D11DeviceContext::DrawIndexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed)를 호출하여 큐브를 그린 후 렌더링 파이프라인에 제출합니다.
 
-[  **IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576)를 호출하여 렌더링된 이미지를 창에 표시합니다.
+[  **IDXGISwapChain::Present**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-present)를 호출하여 렌더링된 이미지를 창에 표시합니다.
 
 ```cpp
             // Update the constant buffer to rotate the cube model.

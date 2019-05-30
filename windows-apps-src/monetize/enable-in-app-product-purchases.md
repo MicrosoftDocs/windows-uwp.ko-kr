@@ -6,19 +6,19 @@ keywords: uwp, 추가 기능, 앱에서 바로 구매, IAP, Windows.ApplicationM
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9be40d78e00e583988ba8c6b318e7a8941d7f971
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 44cc0674e98c2fdf1bf8ecd2fbf6f859dfe25e62
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334981"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371853"
 ---
 # <a name="enable-in-app-product-purchases"></a>앱에서 바로 구매 제품 사용
 
 앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠, 기타 앱 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다. 여기서는 앱에서 이러한 제품을 사용하도록 설정하는 방법을 보여 줍니다.
 
 > [!IMPORTANT]
-> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 앱 내 구매를 할 수 있도록 만드는 방법을 설명합니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. 합니다 **Windows.Services.Store** 네임 스페이스 최신 추가 기능 형식을 사용할 수 있는 추가 기능 저장소 관리 등 구독을 지원 하며 향후 유형의 제품 및 파트너를 지 원하는 기능을 사용 하 여 호환 되도록 설계 되었습니다 센터와 저장소를 제공 합니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 제품을 구매할 수 있도록 하는 방법에 대한 자세한 내용은 [이 문서](enable-in-app-purchases-of-apps-and-add-ons.md)를 참조하세요.
+> 이 문서에서는 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스의 멤버를 사용하여 앱 내 구매를 할 수 있도록 만드는 방법을 설명합니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스를 대신 사용하는 것이 좋습니다. 합니다 **Windows.Services.Store** 네임 스페이스 최신 추가 기능 형식을 사용할 수 있는 추가 기능 저장소 관리 등 구독을 지원 하며 향후 유형의 제품 및 파트너를 지 원하는 기능을 사용 하 여 호환 되도록 설계 되었습니다 센터와 저장소를 제공 합니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 제품을 구매할 수 있도록 하는 방법에 대한 자세한 내용은 [이 문서](enable-in-app-purchases-of-apps-and-add-ons.md)를 참조하세요.
 
 > [!NOTE]
 > 앱의 평가판에서는 앱에서 바로 구매 제품을 제공할 수 없습니다. 앱 평가판을 사용하는 고객은 처음 사용자용 앱 버전을 구매한 경우에만 앱에서 바로 구매 제품을 구입할 수 있습니다.
@@ -26,12 +26,12 @@ ms.locfileid: "58334981"
 ## <a name="prerequisites"></a>사전 요구 사항
 
 -   고객이 구매하는 기능을 추가할 Windows 앱
--   새로운 앱에서 바로 구매 제품을 처음 코딩하고 테스트할 때는 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) 개체 대신 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) 개체를 사용해야 합니다. 이렇게 하면 라이브 서버를 호출하는 대신 라이선스 서버 호출을 시뮬레이트하여 라이선스 논리를 확인할 수 있습니다. 이 작업을 수행 하려면 %userprofile%에서 WindowsStoreProxy.xml 라는 파일을 사용자 지정 해야\\AppData\\로컬\\패키지\\&lt;패키지 이름&gt;\\LocalState\\ Microsoft\\Windows 스토어\\ApiData 합니다. 처음으로 앱이 실행될 때 Microsoft Visual Studio 시뮬레이터에서 이 파일을 만듭니다. 또는 런타임에 사용자 지정 파일을 로드할 수도 있습니다. 자세한 내용은 [CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy)을 참조하세요.
+-   새로운 앱에서 바로 구매 제품을 처음 코딩하고 테스트할 때는 [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 개체 대신 [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) 개체를 사용해야 합니다. 이렇게 하면 라이브 서버를 호출하는 대신 라이선스 서버 호출을 시뮬레이트하여 라이선스 논리를 확인할 수 있습니다. 이 작업을 수행 하려면 %userprofile%에서 WindowsStoreProxy.xml 라는 파일을 사용자 지정 해야\\AppData\\로컬\\패키지\\&lt;패키지 이름&gt;\\LocalState\\ Microsoft\\Windows 스토어\\ApiData 합니다. 처음으로 앱이 실행될 때 Microsoft Visual Studio 시뮬레이터에서 이 파일을 만듭니다. 또는 런타임에 사용자 지정 파일을 로드할 수도 있습니다. 자세한 내용은 [CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy)을 참조하세요.
 -   이 항목에서는 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)에 제공된 코드 예제도 참조합니다. 이 샘플은 UWP(유니버설 Windows 플랫폼) 앱에 제공된 다양한 수익 창출 옵션을 실습할 수 있는 좋은 방법입니다.
 
 ## <a name="step-1-initialize-the-license-info-for-your-app"></a>1단계: 앱에 대 한 라이선스 정보를 초기화 합니다.
 
-앱이 초기화되는 중이면 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) 또는 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) 초기화를 통해 앱에 대한 [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157) 개체를 가져와 앱에서 바로 구매 제품 구매를 사용하도록 설정합니다.
+앱이 초기화되는 중이면 [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 또는 [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) 초기화를 통해 앱에 대한 [LicenseInformation](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.LicenseInformation) 개체를 가져와 앱에서 바로 구매 제품 구매를 사용하도록 설정합니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#InitializeLicenseTest)]
@@ -74,7 +74,7 @@ ms.locfileid: "58334981"
 
 ## <a name="step-3-change-the-test-code-to-the-final-calls"></a>3단계: 마지막 호출에 테스트 코드를 변경 합니다.
 
-이 단계에서는 앱 코드의 모든 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) 참조를 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765)으로 변경합니다. WindowsStoreProxy.xml 파일은 더 이상 제공할 필요가 없으므로 앱 경로에서 제거하세요. 다음 단계에서 앱에서 바로 판매를 구성할 때 참조하기 위해 저장해 둘 수도 있습니다.
+이 단계에서는 앱 코드의 모든 [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) 참조를 [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp)으로 변경합니다. WindowsStoreProxy.xml 파일은 더 이상 제공할 필요가 없으므로 앱 경로에서 제거하세요. 다음 단계에서 앱에서 바로 판매를 구성할 때 참조하기 위해 저장해 둘 수도 있습니다.
 
 ## <a name="step-4-configure-the-in-app-product-offer-in-the-store"></a>4단계: 스토어에서 앱 내 제품 제품 구성
 

@@ -6,12 +6,12 @@ ms.date: 02/21/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, .net, unity
 ms.localizationpriority: medium
-ms.openlocfilehash: 247761f47b578099bf8672d9e1b2469e6506682e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 878a598c8a0b71e4ee394f7f98c215e5462b44e7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641788"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368428"
 ---
 # <a name="missing-net-apis-in-unity-and-uwp"></a>Unity 및 UWP에서 누락된 .NET API
 
@@ -19,7 +19,7 @@ ms.locfileid: "57641788"
 
 또한 일부 게임 엔진은 Unity의 Mono와 같은 UWP용 .NET과 완전히 호환되지 않는 다른 형식을 사용합니다. 따라서 게임을 작성 하는 경우 모든 항목이 작동 제대로 편집기에서 하지만 UWP에 대 한 빌드 하려는 경우 다음과 같은 오류가 발생할 수 있습니다.: **형식 또는 네임 스페이스 '포맷터' 'System.Runtime.Serialization' 네임 스페이스에 존재 하지 않습니다 (되는 어셈블리 참조가?)**
 
-Unity 확장 메서드 및 설명 하는 대체 형식으로 이러한 누락 된 Api의 일부으로 제공 되는 다행 스럽게도 [유니버설 Windows 플랫폼: .NET 백 엔드 스크립트에서.NET 형식 누락](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)합니다. 그러나 필요한 기능이 없는 경우 [Windows 8.x 앱용 .NET 개요](https://msdn.microsoft.com/library/windows/apps/br230302)에서 WinRT 또는 UWP용 .NET API를 사용하기 위한 코드를 변환할 수 있는 방법에 대해 설명합니다. (Windows 8을 다루고 있지만 Windows 10 UWP 앱에도 적용할 수 있습니다.)
+Unity 확장 메서드 및 설명 하는 대체 형식으로 이러한 누락 된 Api의 일부으로 제공 되는 다행 스럽게도 [유니버설 Windows 플랫폼: .NET 백 엔드 스크립트에서.NET 형식 누락](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)합니다. 그러나 필요한 기능이 없는 경우 [Windows 8.x 앱용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))에서 WinRT 또는 UWP용 .NET API를 사용하기 위한 코드를 변환할 수 있는 방법에 대해 설명합니다. (Windows 8을 다루고 있지만 Windows 10 UWP 앱에도 적용할 수 있습니다.)
 
 ## <a name="net-standard"></a>.NET Standard
 
@@ -115,7 +115,7 @@ private void UsingThreads()
 
 ### <a name="security"></a>보안
 
-[System.Security.Cryptography.X509Certificates](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates?view=netstandard-2.0) 같은 일부 **System.Security.*** 네임스페이스는 UWP용 Unity 게임을 빌드할 때 사용할 수 없습니다. 이러한 경우, 동일한 기능의 상당 부분을 포함하는 **Windows.Security.*** API를 사용합니다.
+[System.Security.Cryptography.X509Certificates](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates?view=netstandard-2.0) 같은 일부 **System.Security.** * 네임스페이스는 UWP용 Unity 게임을 빌드할 때 사용할 수 없습니다. 이러한 경우, 동일한 기능의 상당 부분을 포함하는 **Windows.Security.** * API를 사용합니다.
 
 다음 예제에서는 지정된 이름을 가진 인증서 저장소에서 인증서를 가져옵니다.
 
@@ -138,12 +138,12 @@ WinRT 보안 API를 사용하는 방법에 대한 자세한 내용은 [보안](h
 
 ### <a name="networking"></a>네트워킹
 
-[System.Net.Mail](https://docs.microsoft.com/dotnet/api/system.net.mail?view=netstandard-2.0) 같은 일부 **System&period;Net.*** 네임스페이스 역시 UWP용 Unity 게임을 빌드할 때 사용할 수 없습니다. 이러한 API 중 대부분에서는 해당되는 **Windows.Networking.*** 및 **Windows.Web.*** WinRT API를 사용하여 비슷한 기능을 가져옵니다. 자세한 내용은 [네트워킹 및 웹 서비스](https://docs.microsoft.com/windows/uwp/networking/)를 참조하세요.
+[System.Net.Mail](https://docs.microsoft.com/dotnet/api/system.net.mail?view=netstandard-2.0) 같은 일부 **System&period;Net.** * 네임스페이스 역시 UWP용 Unity 게임을 빌드할 때 사용할 수 없습니다. 이러한 API 중 대부분에서는 해당되는 **Windows.Networking.** * 및 **Windows.Web.** * WinRT API를 사용하여 비슷한 기능을 가져옵니다. 자세한 내용은 [네트워킹 및 웹 서비스](https://docs.microsoft.com/windows/uwp/networking/)를 참조하세요.
 
 **System.Net.Mail**의 경우에는 [Windows.ApplicationModel.Email](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email) 네임슾이스를 사용합니다. 자세한 내용은 [이메일 전송](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 * [유니버설 Windows 플랫폼: 백 엔드를 스크립팅 하는.NET에서 누락 된.NET 형식](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)
-* [.NET에 대 한 UWP 앱 개요](https://msdn.microsoft.com/library/windows/apps/br230302)
+* [.NET에 대 한 UWP 앱 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))
 * [Unity UWP 포팅 가이드](https://unity3d.com/partners/microsoft/porting-guides)

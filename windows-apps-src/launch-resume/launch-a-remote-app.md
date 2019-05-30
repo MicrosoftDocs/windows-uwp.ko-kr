@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
-ms.openlocfilehash: 26a67816195105572d9f690599b9a880ece90c98
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ac4a5783250f3bd21cb8a3b96a579715830e687d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658418"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371709"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>원격 장치에서 앱 시작
 
@@ -62,7 +62,7 @@ Windows 10 버전 1607부터 UWP 앱은 두 디바이스가 동일한 MSA(Micros
 
 ## <a name="launch-an-app-on-a-remote-device"></a>원격 장치에서 앱 시작
 
-[  **RemoteLauncher.LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/windows.system.remotelauncher.launchuriasync.aspx) API와 연결하려는 디바이스를 전달하여 원격으로 앱을 시작합니다. 이 메서드에 대한 오버로드는 세 가지가 있습니다. 가장 간단한 오버로드는 이 예제처럼 원격 디바이스에서 앱을 활성화하는 URI를 지정합니다. 이 예제에서는 URI가 Space Needle의 3D 뷰를 사용하여 원격 컴퓨터에서 지도 앱을 엽니다.
+[  **RemoteLauncher.LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotelauncher.launchuriasync) API와 연결하려는 디바이스를 전달하여 원격으로 앱을 시작합니다. 이 메서드에 대한 오버로드는 세 가지가 있습니다. 가장 간단한 오버로드는 이 예제처럼 원격 디바이스에서 앱을 활성화하는 URI를 지정합니다. 이 예제에서는 URI가 Space Needle의 3D 뷰를 사용하여 원격 컴퓨터에서 지도 앱을 엽니다.
 
 다른 **RemoteLauncher.LaunchUriAsync** 오버로드를 사용하면 적절한 앱을 원격 디바이스에서 시작할 수 없는 경우 표시할 웹 사이트의 URI 및 원격 디바이스에서 URI를 시작하는 데 사용할 수 있는 패키지 패밀리 이름의 선택적 목록과 같은 옵션을 지정할 수 있습니다. 키/값 쌍의 형식으로 데이터를 제공할 수도 있습니다. 활성화 중인 앱에 데이터를 전달하여 디바이스 간에 재생을 전달할 때 재생할 곡 이름 및 현재 재생 위치 등의 컨텍스트를 원격 앱에 제공할 수 있습니다.
 
@@ -70,11 +70,11 @@ Windows 10 버전 1607부터 UWP 앱은 두 디바이스가 동일한 MSA(Micros
 
 [!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetRemoteUriLaunch)]
 
-**RemoteLauncher.LaunchUriAsync()** 에서 반환되는 [**RemoteLaunchUriStatus**](https://msdn.microsoft.com/library/windows/apps/windows.system.remotelaunchuristatus.aspx) 개체는 원격 시작의 성공 여부와 실패한 경우 그 이유에 대한 정보를 제공합니다.
+**RemoteLauncher.LaunchUriAsync()** 에서 반환되는 [**RemoteLaunchUriStatus**](https://docs.microsoft.com/uwp/api/windows.system.remotelaunchuristatus) 개체는 원격 시작의 성공 여부와 실패한 경우 그 이유에 대한 정보를 제공합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-[원격 시스템 API 참조](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
+[원격 시스템 API 참조](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems)  
 [연결 된 앱 및 장치 (프로젝트 로마) 개요](connected-apps-and-devices.md)  
 [원격 디바이스 검색](discover-remote-devices.md)  
 [원격 시스템 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)은 원격 시스템을 검색하고, 원격 시스템에서 앱을 실행하고, 앱 서비스를 사용하여 두 시스템에서 실행 중인 앱 간에 메시지를 보내는 방법을 보여 줍니다.

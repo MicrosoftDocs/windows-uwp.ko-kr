@@ -9,33 +9,33 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a3615dac98c5bc8469c8c8ebc47ef718c0131844
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f7cc27df92329157f2987d8d02eb59039534d166
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653398"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370102"
 ---
 # <a name="generate-a-3mf-package"></a>3MF 패키지 생성
 
 **중요 한 Api**
 
--   [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx)
+-   [**Windows.Graphics.Printing3D**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d)
 
-이 가이드에서는 3D 제조 형식 문서의 구조와 [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) API를 사용하여 이 구조를 만들고 조작하는 방법을 설명합니다.
+이 가이드에서는 3D 제조 형식 문서의 구조와 [**Windows.Graphics.Printing3D**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d) API를 사용하여 이 구조를 만들고 조작하는 방법을 설명합니다.
 
 ## <a name="what-is-3mf"></a>3MF란?
 
 3D 제조 형식은 제조(3D 인쇄)를 위한 용도로 XML을 사용하여 3D 모델의 모양과 구조를 설명하는 규칙 집합입니다. 3D 제조 디바이스에 필요한 모든 정보를 제공하려는 목표로 부분 집합(일부는 필수이고 일부는 선택임)과 해당하는 관계를 정의합니다. 3D 제조 형식을 준수하는 데이터 집합은 .3mf 확장명의 파일로 저장할 수 있습니다.
 
-Windows 10에는 [ **Printing3D3MFPackage** ](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) 클래스를 **Windows.Graphics.Printing3D** 네임 스페이스는 단일.3mf 파일과 기타 클래스 매핑 비슷합니다는 파일에서 특정 XML 요소입니다. 이 가이드에서는 3MF 문서의 주요 부분을 각각 만들고 프로그래밍 방식으로 설정하는 방법과 3MF 재료 확장을 활용하는 방법 그리고 **Printing3D3MFPackage** 개체를 변환하고 .3mf 파일로 저장할 수 있는 방법을 설명합니다. 3MF 또는 3MF 재료 확장의 표준에 대한 자세한 내용은 [3MF 사양](https://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요.
+Windows 10에는 [ **Printing3D3MFPackage** ](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3d3mfpackage) 클래스를 **Windows.Graphics.Printing3D** 네임 스페이스는 단일.3mf 파일과 기타 클래스 매핑 비슷합니다는 파일에서 특정 XML 요소입니다. 이 가이드에서는 3MF 문서의 주요 부분을 각각 만들고 프로그래밍 방식으로 설정하는 방법과 3MF 재료 확장을 활용하는 방법 그리고 **Printing3D3MFPackage** 개체를 변환하고 .3mf 파일로 저장할 수 있는 방법을 설명합니다. 3MF 또는 3MF 재료 확장의 표준에 대한 자세한 내용은 [3MF 사양](https://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요.
 
 <!-- >**Note** This guide describes how to construct a 3MF document from scratch. If you wish to make changes to an already existing 3MF document provided in the form of a .3mf file, you simply need to convert it to a **Printing3D3MFPackage** and alter the contained classes/properties in the same way (see [link]) below). -->
 
 
 ## <a name="core-classes-in-the-3mf-structure"></a>3MF 구조의 핵심 클래스
 
-**Printing3D3MFPackage** 클래스는 전체 3MF 문서를 나타내며 3MF 문서의 핵심에 [**Printing3DModel**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dmodel.aspx) 클래스로 표시되는 모델 부분이 있습니다. 3D 모델에 대해 지정하려는 대부분의 정보는 **Printing3DModel** 클래스의 속성과 해당하는 기본 클래스의 속성을 설정하여 저장합니다.
+**Printing3D3MFPackage** 클래스는 전체 3MF 문서를 나타내며 3MF 문서의 핵심에 [**Printing3DModel**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3dmodel) 클래스로 표시되는 모델 부분이 있습니다. 3D 모델에 대해 지정하려는 대부분의 정보는 **Printing3DModel** 클래스의 속성과 해당하는 기본 클래스의 속성을 설정하여 저장합니다.
 
 [!code-cs[InitClasses](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetInitClasses)]
 
@@ -49,7 +49,7 @@ Windows 10에는 [ **Printing3D3MFPackage** ](https://msdn.microsoft.com/library
 
 ## <a name="mesh-data"></a>메시 데이터
 
-이 가이드의 컨텍스트에서 메시는 단일 꼭짓점 집합에서 생성된 3D 기하 도형의 본체입니다(단일 입체로 표시할 필요 없음). 메시 부분은 [**Printing3DMesh**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dmesh.aspx) 클래스에 의해 표시됩니다. 유효한 메시 개체에는 모든 꼭짓점과 특정 꼭짓점의 집합 사이에 있는 삼각형의 모든 면의 위치에 대한 정보가 포함되어야 합니다.
+이 가이드의 컨텍스트에서 메시는 단일 꼭짓점 집합에서 생성된 3D 기하 도형의 본체입니다(단일 입체로 표시할 필요 없음). 메시 부분은 [**Printing3DMesh**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3dmesh) 클래스에 의해 표시됩니다. 유효한 메시 개체에는 모든 꼭짓점과 특정 꼭짓점의 집합 사이에 있는 삼각형의 모든 면의 위치에 대한 정보가 포함되어야 합니다.
 
 다음 메서드는 메시에 꼭짓점을 추가한 다음 3D 공간에서 위치를 지정합니다.
 
@@ -118,7 +118,7 @@ Printing3DMesh 개체가 유효한 꼭짓점 및 삼각형의 집합을 포함�
 
 ## <a name="components-and-build"></a>구성 요소 및 빌드
 
-구성 요소 구조를 통해 인쇄 가능한 3D 모델에서 둘 이상의 메시 개체를 배치할 수 있습니다. [  **Printing3DComponent**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponent.aspx) 개체에는 단일 메시 및 다른 구성 요소에 대한 참조 목록이 포함되어 있습니다. 이는 실제로 [**Printing3DComponentWithMatrix**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponentwithmatrix.aspx) 개체의 목록입니다. 각 **Printing3DComponentWithMatrix** 개체에는 **Printing3DComponent**가 포함되며 중요하게는 메시 및 언급한 **Printing3DComponent**의 포함된 구성 요소에 적용되는 변형 매트릭스가 포함됩니다.
+구성 요소 구조를 통해 인쇄 가능한 3D 모델에서 둘 이상의 메시 개체를 배치할 수 있습니다. [  **Printing3DComponent**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3dcomponent) 개체에는 단일 메시 및 다른 구성 요소에 대한 참조 목록이 포함되어 있습니다. 이는 실제로 [**Printing3DComponentWithMatrix**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3dcomponentwithmatrix) 개체의 목록입니다. 각 **Printing3DComponentWithMatrix** 개체에는 **Printing3DComponent**가 포함되며 중요하게는 메시 및 언급한 **Printing3DComponent**의 포함된 구성 요소에 적용되는 변형 매트릭스가 포함됩니다.
 
 예를 들어 자동차의 모델은 해당 자동차의 본체용 메시를 보유하고 있는 "본체" **Printing3DComponent**로 구성될 수 있습니다. "본체" 구성 요소는 4개의 서로 다른 **Printing3DComponentWithMatrix** 개체에 대한 참조를 포함할 수 있으며 모두 "바퀴" 메시와 동일한 **Printing3DComponent**를 참조하고 4개의 다양한 변형 매트릭스를 포함합니다(자동차 본체에서 바퀴를 4개의 서로 다른 위치에 매핑함). 이 시나리오에서 최종 제품은 총 5개의 메시를 특징으로 하지만 "본체" 메시와 "바퀴" 메시는 각각 한 번만 저장하면 됩니다.
 
@@ -131,7 +131,7 @@ Printing3DMesh 개체가 유효한 꼭짓점 및 삼각형의 집합을 포함�
 
 [!code-cs[SavePackage](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetSavePackage)]
 
-여기에서 인쇄 작업을 앱 내에서 시작하거나([앱에서 3D 인쇄](https://msdn.microsoft.com/library/windows/apps/mt204541.aspx) 참조) 이 **Printing3D3MFPackage**를 .3mf 파일로 저장할 수 있습니다.
+여기에서 인쇄 작업을 앱 내에서 시작하거나([앱에서 3D 인쇄](https://docs.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app) 참조) 이 **Printing3D3MFPackage**를 .3mf 파일로 저장할 수 있습니다.
 
 다음 메서드는 완료된 **Printing3D3MFPackage**를 사용하고 .3mf 파일에 데이터를 저장합니다.
 
@@ -139,7 +139,7 @@ Printing3DMesh 개체가 유효한 꼭짓점 및 삼각형의 집합을 포함�
 
 ## <a name="related-topics"></a>관련 항목
 
-[앱에서 3D 인쇄](https://msdn.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
+[앱에서 3D 인쇄](https://docs.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
 [3D 인쇄 UWP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
  
 

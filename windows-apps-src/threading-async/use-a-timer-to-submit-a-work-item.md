@@ -6,28 +6,28 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 타이머, 스레드
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ee5142997e3d4824152adf6d0b26bccb8a30f7f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7a1a7a161734a142b5f1399798394494d05c6a49
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613308"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371517"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>타이머를 사용하여 작업 항목 제출
 
 
 <b>중요 한 Api</b>
 
--   [**Windows.UI.Core 네임 스페이스**](https://msdn.microsoft.com/library/windows/apps/BR208383)
--   [**Windows.System.Threading 네임 스페이스**](https://msdn.microsoft.com/library/windows/apps/BR229642)
+-   [**Windows.UI.Core 네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
+-   [**Windows.System.Threading 네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
 
 타이머가 경과된 후 실행되는 작업 항목을 만드는 방법을 알아봅니다.
 
 ## <a name="create-a-single-shot-timer"></a>일회성 타이머 만들기
 
-[  **CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) 메서드를 사용하여 작업 항목에 대한 타이머를 만듭니다. 작업을 수행하는 람다를 제공하고 *delay* 매개 변수를 사용하여 스레드 풀이 사용 가능한 스레드에 작업 항목을 할당하기 전에 대기해야 하는 시간을 지정합니다. 이 지연은 [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996) 구조를 사용하여 지정합니다.
+[  **CreateTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) 메서드를 사용하여 작업 항목에 대한 타이머를 만듭니다. 작업을 수행하는 람다를 제공하고 *delay* 매개 변수를 사용하여 스레드 풀이 사용 가능한 스레드에 작업 항목을 할당하기 전에 대기해야 하는 시간을 지정합니다. 이 지연은 [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan) 구조를 사용하여 지정합니다.
 
-> **참고**  사용할 수 있습니다 [ **CoreDispatcher.RunAsync** ](https://msdn.microsoft.com/library/windows/apps/Hh750317) UI에 액세스 하 여 작업 항목에서 진행률을 표시 합니다.
+> **참고**  사용할 수 있습니다 [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) UI에 액세스 하 여 작업 항목에서 진행률을 표시 합니다.
 
 다음 예제에서는 3분 후에 실행되는 작업 항목을 만듭니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "57613308"
 
 ## <a name="provide-a-completion-handler"></a>완료 처리기 제공
 
-필요한 경우 [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)를 사용하여 작업 항목의 취소와 완료를 처리합니다. [  **CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) 오버로드를 사용하여 추가 람다를 제공합니다. 이 람다는 타이머가 취소되거나 작업 항목이 완료될 때 실행됩니다.
+필요한 경우 [**TimerDestroyedHandler**](https://docs.microsoft.com/uwp/api/windows.system.threading.timerdestroyedhandler)를 사용하여 작업 항목의 취소와 완료를 처리합니다. [  **CreateTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) 오버로드를 사용하여 추가 람다를 제공합니다. 이 람다는 타이머가 취소되거나 작업 항목이 완료될 때 실행됩니다.
 
 다음 예제에서는 작업 항목을 제출하는 타이머를 만들고, 작업 항목이 완료되거나 타이머가 취소되면 메서드를 호출합니다.
 
@@ -207,7 +207,7 @@ ms.locfileid: "57613308"
 
 ## <a name="cancel-the-timer"></a>타이머 취소
 
-타이머가 여전히 카운트다운되고 있지만 작업 항목이 더 이상 필요하지 않은 경우 [**Cancel**](https://msdn.microsoft.com/library/windows/apps/BR230588)을 호출합니다. 타이머가 취소되고 작업 항목이 스레드 풀에 제출되지 않습니다.
+타이머가 여전히 카운트다운되고 있지만 작업 항목이 더 이상 필요하지 않은 경우 [**Cancel**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.cancel)을 호출합니다. 타이머가 취소되고 작업 항목이 스레드 풀에 제출되지 않습니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -219,7 +219,7 @@ ms.locfileid: "57613308"
 
 ## <a name="remarks"></a>설명
 
-**Thread.Sleep**은 UI 스레드를 차단할 수 있으므로 UWP(유니버설 Windows 플랫폼) 앱에서 사용할 수 없습니다. 대신 [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587)를 사용하여 작업 항목을 만들 수 있습니다. 이 메서드는 UI 스레드를 차단하지 않고 작업 항목이 수행하는 작업을 지연합니다.
+**Thread.Sleep**은 UI 스레드를 차단할 수 있으므로 UWP(유니버설 Windows 플랫폼) 앱에서 사용할 수 없습니다. 대신 [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer)를 사용하여 작업 항목을 만들 수 있습니다. 이 메서드는 UI 스레드를 차단하지 않고 작업 항목이 수행하는 작업을 지연합니다.
 
 작업 항목, 타이머 작업 항목 및 주기적 작업 항목을 보여 주는 전체 코드 샘플은 [스레드 풀 샘플](https://go.microsoft.com/fwlink/p/?linkid=255387)을 참조하세요. Windows 8.1 대 한 코드 샘플을 쓰 였 하지만 코드는 Windows 10에서 다시 사용할 수 있습니다.
 

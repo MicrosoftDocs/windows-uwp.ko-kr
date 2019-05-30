@@ -5,12 +5,12 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e0fcb903bd272bd10d434a27d41e6e4558a624ea
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: a6a1d93b1deaad084ff25db946199b678b35703c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334901"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369517"
 ---
 # <a name="best-practices-for-writing-to-files"></a>파일 쓰기 모범 사례
 
@@ -192,7 +192,7 @@ else
 
 ### <a name="synchronize-access-to-the-file"></a>파일에 대 한 액세스를 동기화 합니다.
 
-합니다 [.NET 블로그에서 병렬 프로그래밍에](https://blogs.msdn.microsoft.com/pfxteam/) 병렬 프로그래밍에 대 한 지침에 대 한 중요 한 리소스입니다. 특히 합니다 [AsyncReaderWriterLock에 대 한 게시](https://blogs.msdn.microsoft.com/pfxteam/2012/02/12/building-async-coordination-primitives-part-7-asyncreaderwriterlock/) 동시 읽기 액세스를 허용 하는 동시 쓰기에 대 한 파일에 대 한 단독 액세스를 유지 하는 방법에 설명 합니다. 염두 I/O 영향을 줍니다 해당 직렬화 성능.
+합니다 [.NET 블로그에서 병렬 프로그래밍에](https://devblogs.microsoft.com/pfxteam/) 병렬 프로그래밍에 대 한 지침에 대 한 중요 한 리소스입니다. 특히 합니다 [AsyncReaderWriterLock에 대 한 게시](https://devblogs.microsoft.com/pfxteam/building-async-coordination-primitives-part-7-asyncreaderwriterlock/) 동시 읽기 액세스를 허용 하는 동시 쓰기에 대 한 파일에 대 한 단독 액세스를 유지 하는 방법에 설명 합니다. 염두 I/O 영향을 줍니다 해당 직렬화 성능.
 
 ## <a name="see-also"></a>참조
 

@@ -7,24 +7,24 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: fb0e5aee9e7b3e57ebf0ebeaf3d035180e52c65b
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 1a0c632089c8c4cf84ecf6df99935671423b51a6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63817507"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370813"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
 **중요 한 Api**
 
--   [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)
--   [**PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482)
--   [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)
+-   [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)
+-   [**PreferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
+-   [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)
 
 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에 설명 합니다 **ms 설정:** URI 체계입니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
 
-설정 앱 실행은 개인 정보 인식 앱 작성의 중요한 부분입니다. 앱에서 중요한 리소스에 액세스할 수 없는 경우 사용자에게 해당 리소스의 개인 정보 설정에 대한 편리한 링크를 제공하는 것이 좋습니다. 자세한 내용은 [개인 정보 인식 앱에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh768223)을 참조하세요.
+설정 앱 실행은 개인 정보 인식 앱 작성의 중요한 부분입니다. 앱에서 중요한 리소스에 액세스할 수 없는 경우 사용자에게 해당 리소스의 개인 정보 설정에 대한 편리한 링크를 제공하는 것이 좋습니다. 자세한 내용은 [개인 정보 인식 앱에 대한 지침](https://docs.microsoft.com/windows/uwp/security/index)을 참조하세요.
 
 ## <a name="how-to-launch-the-settings-app"></a>설정 앱을 실행하는 방법
 
@@ -44,7 +44,7 @@ Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에 설�
 </TextBlock>
 ```
 
-또는 앱이 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 호출하여 **설정** 앱을 시작할 수 있습니다. 이 예제에서는 `ms-settings:privacy-webcam` URI를 사용하여 카메라에 대한 개인 설정 페이지를 시작하는 방법을 보여 줍니다.
+또는 앱이 [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출하여 **설정** 앱을 시작할 수 있습니다. 이 예제에서는 `ms-settings:privacy-webcam` URI를 사용하여 카메라에 대한 개인 설정 페이지를 시작하는 방법을 보여 줍니다.
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-webcam"));
@@ -244,7 +244,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 피드백 및 진단 | ms-settings:privacy-feedback |
 | 파일 시스템 | ms-settings:privacy-broadfilesystemaccess |
 | 일반 | ms-settings:privacy-general |
-| Location | ms-settings:privacy-location |
+| 위치 | ms-settings:privacy-location |
 | Messaging(메시징) | ms-settings:privacy-messaging |
 | 마이크 | ms-settings:privacy-microphone |
 | 동작 | ms-settings:privacy-motion |
@@ -300,7 +300,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 전화 | ms-설정: 전화 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 전원 및 절전 | ms-settings:powersleep |
 | 소리 | ms-settings:sound |
-| 스토리지 | ms-settings:storagesense |
+| 저장 공간 | ms-settings:storagesense |
 | 저장 공간 센스 | ms-settings:storagepolicies |
 
 ## <a name="time-and-language"></a>시간 및 언어

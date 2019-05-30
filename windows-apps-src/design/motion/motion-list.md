@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c7ca332b73aba067c2ae003d458e8d0d97c7a7e3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 228fec1571ab3f9c01b4a8dd4084e19bc28dbfe7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642838"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366739"
 ---
 # <a name="add-and-delete-animations"></a>추가 및 삭제 애니메이션
 
@@ -21,7 +21,7 @@ ms.locfileid: "57642838"
 
 목록 애니메이션을 사용하면 사진 앨범이나 검색 결과 목록 같은 컬렉션에서 단일 항목이나 여러 항목을 삽입하거나 제거할 수 있습니다.
 
-> **중요 API**: [**AddDeleteThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/br243048)
+> **중요 API**: [**AddDeleteThemeTransition 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition.)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -38,10 +38,10 @@ ms.locfileid: "57642838"
 
 ## <a name="related-articles"></a>관련 문서
 
-* [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [애니메이션 목록 추가 및 삭제](https://msdn.microsoft.com/library/windows/apps/xaml/jj649430)
-* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
-* [**AddDeleteThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/br243048)
+* [애니메이션 개요](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
+* [애니메이션 목록 추가 및 삭제](https://docs.microsoft.com/previous-versions/windows/apps/jj649430(v=win.10))
+* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
+* [**AddDeleteThemeTransition 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition.)
 
  
 

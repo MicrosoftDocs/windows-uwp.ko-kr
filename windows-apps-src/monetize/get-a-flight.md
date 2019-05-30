@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트, 패키지 플라이트
 ms.localizationpriority: medium
-ms.openlocfilehash: e4f96d503d52abe71cff6fcdd1295c862e551e09
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 3a02a299682610cd516067acefc795df9512a268
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334391"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371750"
 ---
 # <a name="get-a-package-flight"></a>패키지 플라이트 가져오기
 
@@ -92,8 +92,8 @@ Authorization: Bearer <your access token>
 | FriendlyName           | string  | 개발자가 지정한 패키지 플라이트 이름입니다.   |  
 | lastPublishedFlightSubmission       | 개체(object) | 패키지 플라이트의 마지막 게시된 제출에 대한 정보를 제공하는 개체입니다. 자세한 내용은 아래의 [제출 개체](#submission_object) 섹션을 참조하세요.  |
 | pendingFlightSubmission        | 개체(object)  |  패키지 플라이트의 현재 보류 중인 제출에 대한 정보를 제공하는 개체입니다. 자세한 내용은 아래의 [제출 개체](#submission_object) 섹션을 참조하세요.  |   
-| groupIds           | 배열  | 패키지 플라이트와 연결된 플라이트 그룹의 ID가 포함된 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.   |
-| rankHigherThan           | string  | 현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |
+| groupIds           | 배열  | 패키지 플라이트와 연결된 플라이트 그룹의 ID가 포함된 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://docs.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.   |
+| rankHigherThan           | string  | 현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://docs.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |
 
 
 <span id="submission_object" />

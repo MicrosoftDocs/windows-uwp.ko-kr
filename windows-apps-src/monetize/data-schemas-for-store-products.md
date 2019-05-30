@@ -5,18 +5,18 @@ ms.date: 09/26/2017
 ms.topic: article
 keywords: windows 10, uwp, ExtendedJsonData, Microsoft Store 제품, 스키마
 ms.localizationpriority: medium
-ms.openlocfilehash: 344052c18178a121fd9c8d133bdd1abe5a4ad886
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 77f63ce409a576b3c873d95df0d2e8d0f0933808
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334843"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372530"
 ---
 # <a name="data-schemas-for-store-products"></a>스토어 제품용 데이터 스키마
 
-스토어에 앱이나 추가 기능 같은 제품을 제출할 때, 스토어는 제품과 라이선스에 대한 종합적인 데이터 세트를 유지합니다. 앱 코드에서 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 속성을 사용, 프로그래밍 방식으로 이런 데이터에 액세스할 수 있습니다. 예를 들어, [StoreProduct.Description](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Description) 및 [StoreProduct.Price](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Price) 속성을 사용, 해당 앱과 앱 추가 기능의 가격, 설명을 검색할 수 있습니다.
+스토어에 앱이나 추가 기능 같은 제품을 제출할 때, 스토어는 제품과 라이선스에 대한 종합적인 데이터 세트를 유지합니다. 앱 코드에서 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 속성을 사용, 프로그래밍 방식으로 이런 데이터에 액세스할 수 있습니다. 예를 들어, [StoreProduct.Description](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Description) 및 [StoreProduct.Price](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Price) 속성을 사용, 해당 앱과 앱 추가 기능의 가격, 설명을 검색할 수 있습니다.
 
-그러나 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 미리 정의된 속성들이 스토어 제품의 데이터를 많이 노출하지 않습니다. 코드에서 제품 데이터에 완전하게 액세스하기 위해, 대신 다음 일반 속성을 사용할 수 있습니다.
+그러나 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 미리 정의된 속성들이 스토어 제품의 데이터를 많이 노출하지 않습니다. 코드에서 제품 데이터에 완전하게 액세스하기 위해, 대신 다음 일반 속성을 사용할 수 있습니다.
 
 * [StoreProduct.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.ExtendedJsonData)
 * [StoreSku.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.ExtendedJsonData)

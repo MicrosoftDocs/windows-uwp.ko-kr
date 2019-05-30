@@ -6,25 +6,25 @@ keywords: windows 10, uwp, 평가판, 앱 내 구매, IAP, Windows.Services.Stor
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 49d57f32961726507c0114aed648787dd7f6bd1f
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 47affd7e54bcaad21949cb56916de27dd3bf260b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334711"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371058"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>앱의 평가판 구현
 
 경우 있습니다 [파트너 센터에서 무료 평가판으로 앱 구성](../publish/set-app-pricing-and-availability.md#free-trial) 제외 하거나 일부 기능을 제한 하 여 앱의 정식 버전으로 업그레이드 하도록 고객에 게 하도록 유도할 수 고객에 게 평가판 기간 동안 앱을 무료로 사용할 수 있습니다, 평가판 기간입니다. 코딩을 시작하기 전에 제한할 기능을 결정한 다음 정식 라이선스를 구입한 다음에만 해당 기능이 작동하도록 해야 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
-이 문서는 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에서 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 멤버를 사용하여 사용자에게 앱의 평가판 라이선스가 있는지 확인하고 앱이 실행되는 동안 라이선스 상태가 변경되면 알림을 받는 방법을 설명합니다. 
+이 문서는 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스에서 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스의 멤버를 사용하여 사용자에게 앱의 평가판 라이선스가 있는지 확인하고 앱이 실행되는 동안 라이선스 상태가 변경되면 알림을 받는 방법을 설명합니다. 
 
 > [!NOTE]
-> **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 사용해야 합니다. 자세한 내용은 [이 문서](exclude-or-limit-features-in-a-trial-version-of-your-app.md)를 참조하세요.
+> **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스를 사용해야 합니다. 자세한 내용은 [이 문서](exclude-or-limit-features-in-a-trial-version-of-your-app.md)를 참조하세요.
 
 ## <a name="guidelines-for-implementing-a-trial-version"></a>평가판 구현 지침
 
-앱의 현재 라이선스 상태는 [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx) 클래스의 속성으로 저장됩니다. 일반적으로 다음 단계의 설명과 같이 라이선스 상태를 사용하는 기능을 조건부 블록에 넣습니다. 이러한 기능을 고려할 때 모든 라이선스 상태에서 작동하도록 구현할 수 있는지 확인하세요.
+앱의 현재 라이선스 상태는 [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense) 클래스의 속성으로 저장됩니다. 일반적으로 다음 단계의 설명과 같이 라이선스 상태를 사용하는 기능을 조건부 블록에 넣습니다. 이러한 기능을 고려할 때 모든 라이선스 상태에서 작동하도록 구현할 수 있는지 확인하세요.
 
 또한 앱이 실행되는 동안 앱의 라이선스 변경을 처리하는 방법을 결정하세요. 체험 앱에서 전체 기능을 제공할 수 있지만 구매한 버전에는 없는 앱에서 바로 구매 광고 배너가 있습니다. 또는 체험 앱에서 특정 기능을 사용하지 않도록 설정하거나 사용자에게 구매를 권유하는 메시지를 주기적으로 표시할 수 있습니다.
 
@@ -55,25 +55,25 @@ ms.locfileid: "58334711"
     -   구매에 대한 감사 인사를 표시하거나 메시지를 표시합니다.
     -   정식 라이선스에서 사용 가능한 기능을 자동으로 사용하도록 설정하거나 체험 버전 전용 알림을 사용하지 않도록 설정합니다.
 
-고객이 앱의 동작에 놀라지 않도록 무료 체험 기간 동안 및 이후에 앱이 어떻게 동작하는지 고객에게 설명해야 합니다. 앱 설명 지정에 대한 자세한 내용은 [앱 설명 작성](https://msdn.microsoft.com/library/windows/apps/mt148529)을 참조하세요.
+고객이 앱의 동작에 놀라지 않도록 무료 체험 기간 동안 및 이후에 앱이 어떻게 동작하는지 고객에게 설명해야 합니다. 앱 설명 지정에 대한 자세한 내용은 [앱 설명 작성](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)을 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 이 예제의 필수 조건은 다음과 같습니다.
 * **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
-* 으로 구성 된 파트너 센터에서 앱을 만들었으면를 [무료 평가판](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) 시간 제한이 없으며와이 앱 스토어에 게시 됩니다. 테스트하는 동안 Store에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
+* 으로 구성 된 파트너 센터에서 앱을 만들었으면를 [무료 평가판](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) 시간 제한이 없으며와이 앱 스토어에 게시 됩니다. 테스트하는 동안 Store에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
 
 이 예제의 코드에서는 다음과 같이 가정합니다.
-* 코드는 ```workingProgressRing```이라는 [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx)과 ```textBlock```이라는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)을 포함하는 [페이지](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx)의 컨텍스트에서 실행됩니다. 해당 개체를 사용하여 각각 비동기 작업이 발생함을 나타내고 출력 메시지를 표시합니다.
+* 코드는 ```workingProgressRing```이라는 [ProgressRing](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring)과 ```textBlock```이라는 [TextBlock](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock)을 포함하는 [페이지](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page)의 컨텍스트에서 실행됩니다. 해당 개체를 사용하여 각각 비동기 작업이 발생함을 나타내고 출력 메시지를 표시합니다.
 * 코드 파일에는 **Windows.Services.Store** 네임스페이스에 대한 **using** 문이 있습니다.
 * 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md#api_intro)을 참조하세요.
 
 > [!NOTE]
-> [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 데스크톱 응용 프로그램이 있는 경우 이 예에서 표시되지 않는 별도의 코드를 추가하여 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 구성해야 할 수도 있습니다. 자세한 내용은 [데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 StoreContext 클래스 사용](in-app-purchases-and-trials.md#desktop)을 참조하세요.
+> [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 데스크톱 응용 프로그램이 있는 경우 이 예에서 표시되지 않는 별도의 코드를 추가하여 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 개체를 구성해야 할 수도 있습니다. 자세한 내용은 [데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 StoreContext 클래스 사용](in-app-purchases-and-trials.md#desktop)을 참조하세요.
 
 ## <a name="code-example"></a>코드 예제
 
-앱을 초기화하는 경우 앱의 [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx) 개체를 가져와서 [OfflineLicensesChanged](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.offlinelicenseschanged) 이벤트를 처리하여 앱을 실행하는 동안 라이선스가 변경되면 알림을 받습니다. 예를 들어 체험 기간이 만료되거나 고객이 스토어를 통해 앱을 구매하면 앱의 라이선스가 변경될 수 있습니다. 라이선스가 변경될 경우 새 라이선스를 가져와서 앱의 기능을 사용 또는 사용 안 함으로 적절하게 설정합니다.
+앱을 초기화하는 경우 앱의 [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense) 개체를 가져와서 [OfflineLicensesChanged](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.offlinelicenseschanged) 이벤트를 처리하여 앱을 실행하는 동안 라이선스가 변경되면 알림을 받습니다. 예를 들어 체험 기간이 만료되거나 고객이 스토어를 통해 앱을 구매하면 앱의 라이선스가 변경될 수 있습니다. 라이선스가 변경될 경우 새 라이선스를 가져와서 앱의 기능을 사용 또는 사용 안 함으로 적절하게 설정합니다.
 
 이때 사용자가 앱을 구매한 경우 라이선스 상태가 변경되었다는 피드백을 사용자에게 제공하는 것이 좋습니다. 코딩 방식에 따라 앱을 다시 시작하라는 메시지를 사용자에게 표시해야 할 수도 있습니다. 그러나 이러한 전환이 가능한 한 매끄럽고 불편 없이 진행되도록 하세요.
 

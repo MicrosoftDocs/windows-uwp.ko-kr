@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f8c723dee8e943351d268ac678c8acc77efcbf4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: abce9127b44249c3f021858b68784de79a18b197
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57659558"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371130"
 ---
 # <a name="staticresource-markup-extension"></a>{StaticResource} 태그 확장
 
 
-이미 정의된 리소스에 대한 참조를 평가하여 모든 XAML 특성에 대한 값을 제공합니다. 리소스는 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에 정의되며 **StaticResource** 사용은 **ResourceDictionary**의 리소스 키를 참조합니다.
+이미 정의된 리소스에 대한 참조를 평가하여 모든 XAML 특성에 대한 값을 제공합니다. 리소스는 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 정의되며 **StaticResource** 사용은 **ResourceDictionary**의 리소스 키를 참조합니다.
 
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
@@ -28,7 +28,7 @@ ms.locfileid: "57659558"
 
 | 용어 | 설명 |
 |------|-------------|
-| 키 | 요청된 리소스에 대한 키입니다. 이 키는 처음에 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에 의해 할당됩니다. 리소스 키는 XamlName 문법에 정의된 문자열일 수 있습니다. |
+| Key | 요청한 리소스의 키입니다. 이 키는 처음에 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 의해 할당됩니다. 리소스 키는 XamlName 문법에 정의된 문자열일 수 있습니다. |
 
 ## <a name="remarks"></a>설명
 
@@ -36,13 +36,13 @@ ms.locfileid: "57659558"
 
 **StaticResource**는 요청된 리소스의 키를 지정하는 인수 하나를 사용합니다. Windows 런타임 XAML에서 리소스 키는 항상 문자열입니다. 초기에 리소스 키를 지정하는 방법에 대한 자세한 내용은 [x:Key 특성](x-key-attribute.md)을 참조하세요.
 
-**StaticResource**가 리소스 사전의 항목으로 확인하는 규칙은 이 항목에서 설명하지 않습니다. 이 규칙은 참조 및 리소스가 모두 템플릿에 있는지, 병합된 리소스 사전이 사용되는지 등에 따라 다릅니다. 리소스 정의 방법과 샘플 코드를 포함한 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 적절한 사용 방법에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
+**StaticResource**가 리소스 사전의 항목으로 확인하는 규칙은 이 항목에서 설명하지 않습니다. 이 규칙은 참조 및 리소스가 모두 템플릿에 있는지, 병합된 리소스 사전이 사용되는지 등에 따라 다릅니다. 리소스 정의 방법과 샘플 코드를 포함한 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)의 적절한 사용 방법에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references)를 확인하세요.
 
 **중요**    A **StaticResource** 정의 된 리소스에 대 한 전방 참조를 확인 시도 하지 않아야 어휘 적으로 XAML 파일에 추가 합니다. 이러한 시도는 지원되지 않습니다. 전방 참조가 실패하지 않더라도 전방 참조를 만들려고 하면 성능이 저하됩니다. 최상의 결과를 얻으려면 전방 참조를 피할 수 있도록 리소스 사전의 컴퍼지션을 조정하세요.
 
 확인할 수 없는 키에 **StaticResource**를 지정하려고 하면 런타임에 XAML 구문 분석 예외가 발생합니다. 디자인 도구에서 경고나 오류를 제공할 수도 있습니다.
 
-Windows 런타임 XAML 프로세서 구현에는 **StaticResource** 기능을 위한 지원 클래스 표현이 없습니다. **StaticResource**는 XAML에서만 사용됩니다. 가장 근접하게 코드에 상당하는 방법은 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 컬렉션 API를 사용하는 것입니다(예: [**Contains**](https://msdn.microsoft.com/library/windows/apps/jj635925) 또는 [**TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj603139) 호출).
+Windows 런타임 XAML 프로세서 구현에는 **StaticResource** 기능을 위한 지원 클래스 표현이 없습니다. **StaticResource**는 XAML에서만 사용됩니다. 가장 근접하게 코드에 상당하는 방법은 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)의 컬렉션 API를 사용하는 것입니다(예: [**Contains**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.contains) 또는 [**TryGetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.trygetvalue) 호출).
 
 [{ThemeResource} 태그 확장](themeresource-markup-extension.md)은 다른 위치에 있는 명명된 리소스를 참조하는 비슷한 태그 확장입니다. 차이점은 {ThemeResource} 태그 확장에는 현재 시스템 테마에 따라 여러 다른 리소스를 반환하는 기능이 있다는 점입니다. 자세한 내용은 [{ThemeResource} 태그 확장](themeresource-markup-extension.md)을 참조하세요.
 
@@ -67,7 +67,7 @@ Windows 런타임 XAML 프로세서 구현에는 **StaticResource** 기능을 �
 </StackPanel> 
 ```
 
-이 특정 예제에서는 사용자 지정 클래스가 지원하는 개체를 만들고 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에서 이 개체를 리소스로 만듭니다. 유효한 리소스가 되려면 이 `local:S2Formatter` 요소에 **x:Key** 특성 값도 있어야 합니다. 특성 값은 "GradeConverter"로 설정되었습니다.
+이 특정 예제에서는 사용자 지정 클래스가 지원하는 개체를 만들고 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)에서 이 개체를 리소스로 만듭니다. 유효한 리소스가 되려면 이 `local:S2Formatter` 요소에 **x:Key** 특성 값도 있어야 합니다. 특성 값은 "GradeConverter"로 설정되었습니다.
 
 그런 다음 XAML에서 `{StaticResource GradeConverter}`가 표시되는 위치까지 리소스가 요청됩니다.
 
@@ -75,14 +75,14 @@ Windows 런타임 XAML 프로세서 구현에는 **StaticResource** 기능을 �
 
 ## <a name="design-time-tools-support-for-the-staticresource-markup-extension"></a>**{StaticResource}** 태그 확장을 위한 디자인 타임 도구 지원
 
-사용 하는 경우 Microsoft Visual Studio 2013 Microsoft IntelliSense 드롭다운에 사용할 수 있는 키 값 포함할 수는 **{StaticResource}** XAML 페이지의 태그 확장 합니다. 예를 들어 "{StaticResource"를 입력하기 시작하면 즉시 현재 조회 범위의 리소스 키가 IntelliSense 드롭다운에 표시됩니다. 페이지 수준([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) 및 앱 수준([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338))에 있는 일반적인 리소스 외에, [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274) 및 프로젝트에서 사용 중인 확장의 리소스도 표시됩니다.
+사용 하는 경우 Microsoft Visual Studio 2013 Microsoft IntelliSense 드롭다운에 사용할 수 있는 키 값 포함할 수는 **{StaticResource}** XAML 페이지의 태그 확장 합니다. 예를 들어 "{StaticResource"를 입력하기 시작하면 즉시 현재 조회 범위의 리소스 키가 IntelliSense 드롭다운에 표시됩니다. 페이지 수준([**FrameworkElement.Resources**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.resources)) 및 앱 수준([**Application.Resources**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resources))에 있는 일반적인 리소스 외에, [XAML 테마 리소스](https://docs.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources) 및 프로젝트에서 사용 중인 확장의 리소스도 표시됩니다.
 
 리소스 키가 **{StaticResource}** 에서 일부로 사용되어 존재하는 경우 **정의로 이동**(F12) 기능이 해당 리소스를 확인하고 리소스가 정의되어 있는 사전을 표시할 수 있습니다. 테마 리소스의 경우에는 디자인 타임의 generic.xaml에 적용됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)
-* [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
+* [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
+* [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)
 * [X:key 특성](x-key-attribute.md)
 * [{ThemeResource} 태그 확장](themeresource-markup-extension.md)
 

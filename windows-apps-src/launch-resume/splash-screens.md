@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: df3fc8f54a4174006fd28f319d7cab09142a81fd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 09eadb8467725cbf40f3fb54d32741960fc89321
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630198"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371865"
 ---
 # <a name="splash-screens"></a>시작 화면
 
@@ -27,7 +27,7 @@ ms.locfileid: "57630198"
 
 배경색이 있는 간단한 이미지는 앱을 실행 중인 디바이스에 관계없이 제대로 표시됩니다. 다양한 화면 크기에 맞게 배경의 크기만 변경됩니다. 이미지는 항상 원래대로 유지됩니다.
 
-또한 [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스를 사용하여 앱의 시작 환경을 사용자 지정할 수 있습니다. 사용자가 만든 연장된 시작 화면을 배치하여 앱에 앱 UI 준비나 네트워킹 작업 완료와 같은 추가 작업을 완료할 수 있는 시간을 제공할 수 있습니다. **SplashScreen** 클래스를 사용하여 시작 화면이 해제될 때 사용자에게 알려 개시 애니메이션을 시작하도록 할 수도 있습니다.
+또한 [**SplashScreen**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) 클래스를 사용하여 앱의 시작 환경을 사용자 지정할 수 있습니다. 사용자가 만든 연장된 시작 화면을 배치하여 앱에 앱 UI 준비나 네트워킹 작업 완료와 같은 추가 작업을 완료할 수 있는 시간을 제공할 수 있습니다. **SplashScreen** 클래스를 사용하여 시작 화면이 해제될 때 사용자에게 알려 개시 애니메이션을 시작하도록 할 수도 있습니다.
 
 | 항목 | 설명 |
 |-------|-------------|

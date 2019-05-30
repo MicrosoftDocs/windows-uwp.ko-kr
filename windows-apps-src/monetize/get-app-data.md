@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 데이터
 ms.localizationpriority: medium
-ms.openlocfilehash: 23e392e2064a2a48089d1efadd1461c146e0d343
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cfbe8df46f51b41ccdd840f609caf2c593735e1f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598898"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372141"
 ---
 # <a name="get-app-data"></a>앱 데이터 가져오기
 
@@ -21,12 +21,12 @@ Microsoft Store 제출 API 사용 하 여 다음 메서드를 사용 하 여 파
 
 | 메서드 | URI                                                                                             | 설명                                                 |
 |------- |------------------------------------------------------------------------------------------------ |------------------------------------------------------------ |
-| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [모든 앱에 대 한 데이터 가져오기](get-all-apps.md)               |
-| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [특정 앱에 대 한 데이터 가져오기](get-an-app.md)                |
-| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [앱에 대 한 추가 기능 얻기](get-add-ons-for-an-app.md)         |
-| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [앱에 대 한 패키지 항공편을 가져오기](get-flights-for-an-app.md) |
+| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [모든 앱에 대 한 데이터 가져오기](get-all-apps.md)               |
+| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [특정 앱에 대 한 데이터 가져오기](get-an-app.md)                |
+| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [앱에 대 한 추가 기능 얻기](get-add-ons-for-an-app.md)         |
+| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [앱에 대 한 패키지 항공편을 가져오기](get-flights-for-an-app.md) |
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 아직 완료하지 않은 경우 이러한 메서드를 사용하기 전에 Microsoft Store 제출 API에 대한 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 모두 완료합니다.
 
@@ -64,14 +64,14 @@ Microsoft Store 제출 API 사용 하 여 다음 메서드를 사용 하 여 파
 
 | 값           | 형식    | 설명       |
 |-----------------|---------|---------------------|
-| id            | 문자열  | 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.   |
-| primaryName   | 문자열  | 앱의 기본 이름입니다.      |
-| packageFamilyName | 문자열  | 앱의 패키지 패밀리 이름입니다.      |
-| packageIdentityName          | 문자열  | 앱의 패키지 ID 이름입니다.                       |
-| publisherName       | 문자열  | 앱과 연결된 Windows 게시자 ID입니다. 이에 해당 합니다 **패키지/Identity/게시자** 에 표시 되는 값을 [앱 id](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) 파트너 센터에서 앱에 대 한 페이지입니다.       |
-| firstPublishedDate      | 문자열  | ISO 8601 형식으로 앱이 처음 게시된 날짜입니다.   |
-| lastPublishedApplicationSubmission       | object | 앱의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.    |
-| pendingApplicationSubmission        | object  |  앱의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.   |   
+| id            | string  | 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.   |
+| primaryName   | string  | 앱의 기본 이름입니다.      |
+| packageFamilyName | string  | 앱의 패키지 패밀리 이름입니다.      |
+| packageIdentityName          | string  | 앱의 패키지 ID 이름입니다.                       |
+| publisherName       | string  | 앱과 연결된 Windows 게시자 ID입니다. 이에 해당 합니다 **패키지/Identity/게시자** 에 표시 되는 값을 [앱 id](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details) 파트너 센터에서 앱에 대 한 페이지입니다.       |
+| firstPublishedDate      | string  | ISO 8601 형식으로 앱이 처음 게시된 날짜입니다.   |
+| lastPublishedApplicationSubmission       | 개체(object) | 앱의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.    |
+| pendingApplicationSubmission        | 개체(object)  |  앱의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.   |   
 | hasAdvancedListingPermission        | boolean  |  앱 제출에서 [gamingOptions](manage-app-submissions.md#gaming-options-object)이나 [예고편](manage-app-submissions.md#trailer-object)을 구성할 수 있는지 알려줍니다 2017년 5월 이후에 만든 제출의 경우 이 값은 true입니다. |  |
 
 
@@ -91,7 +91,7 @@ Microsoft Store 제출 API 사용 하 여 다음 메서드를 사용 하 여 파
 
 | 값           | 형식    | 설명         |
 |-----------------|---------|----------------------|
-| inAppProductId            | 문자열  | 추가 기능의 스토어 ID입니다. 이 값은 스토어에서 제공됩니다. 예를 들어 스토어 ID는 9NBLGGH4TNMP입니다.   |
+| inAppProductId            | string  | 추가 기능의 스토어 ID입니다. 이 값은 스토어에서 제공됩니다. 예를 들어 스토어 ID는 9NBLGGH4TNMP입니다.   |
 
 
 <span id="flight-object" />
@@ -123,12 +123,12 @@ Microsoft Store 제출 API 사용 하 여 다음 메서드를 사용 하 여 파
 
 | 값           | 형식    | 설명           |
 |-----------------|---------|------------------------|
-| flightId            | 문자열  | 패키지 플라이트의 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.  |
-| FriendlyName           | 문자열  | 개발자가 지정한 패키지 플라이트 이름입니다.   |
-| lastPublishedFlightSubmission       | object | 패키지 플라이트의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.   |
-| pendingFlightSubmission        | object  |  패키지 플라이트의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.  |    
-| groupIds           | 배열  | 패키지 플라이트와 연결된 플라이트 그룹의 ID가 포함된 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.   |
-| rankHigherThan           | 문자열  | 현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |
+| flightId            | string  | 패키지 플라이트의 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.  |
+| FriendlyName           | string  | 개발자가 지정한 패키지 플라이트 이름입니다.   |
+| lastPublishedFlightSubmission       | 개체(object) | 패키지 플라이트의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.   |
+| pendingFlightSubmission        | 개체(object)  |  패키지 플라이트의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.  |    
+| groupIds           | 배열  | 패키지 플라이트와 연결된 플라이트 그룹의 ID가 포함된 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://docs.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.   |
+| rankHigherThan           | string  | 현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://docs.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |
 
 
 <span id="submission_object" />
@@ -150,8 +150,8 @@ Microsoft Store 제출 API 사용 하 여 다음 메서드를 사용 하 여 파
 
 | 값              | 형식   | 설명               |
 |--------------------|--------|---------------------------|
-| id                 | 문자열 | 제출의 ID입니다. |
-| resourceLocation   | 문자열 | 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 제출에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다. |
+| id                 | string | 제출의 ID입니다. |
+| resourceLocation   | string | 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 제출에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다. |
 
  
 ## <a name="related-topics"></a>관련 항목

@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 98cb6c62248fbf273a9d7ca1ef0d1d82293122eb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cd23938387b40c8ce268c65209d1fb11d5da529c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57656188"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370636"
 ---
 # <a name="span-iddirect3dconceptsconfiguringdepth-stencilfunctionalityspanconfiguring-depth-stencil-functionality"></a><span id="direct3dconcepts.configuring_depth-stencil_functionality"></span>깊이 스텐실 기능 구성
 
@@ -24,7 +24,7 @@ ms.locfileid: "57656188"
 ## <a name="span-idcreatedepthstencilstatespanspan-idcreatedepthstencilstatespanspan-idcreatedepthstencilstatespancreate-depth-stencil-state"></a><span id="Create_Depth_Stencil_State"></span><span id="create_depth_stencil_state"></span><span id="CREATE_DEPTH_STENCIL_STATE"></span>깊이 스텐실 상태 만들기
 
 
-깊이 스텐실 상태는 출력 병합기 단계에 [depth-stencil test(깊이 스텐실 테스트)](https://msdn.microsoft.com/library/windows/desktop/bb205120)를 수행하는 방법을 알려줍니다. 깊이 스텐실 테스트를 통해 지정된 픽셀을 그려야 하는지 여부가 결정됩니다.
+깊이 스텐실 상태는 출력 병합기 단계에 [depth-stencil test(깊이 스텐실 테스트)](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-merger-stage)를 수행하는 방법을 알려줍니다. 깊이 스텐실 테스트를 통해 지정된 픽셀을 그려야 하는지 여부가 결정됩니다.
 
 ## <a name="span-idbinddepthstenciltotheomstagespanspan-idbinddepthstenciltotheomstagespanspan-idbinddepthstenciltotheomstagespanbind-depth-stencil-data-to-the-om-stage"></a><span id="Bind_Depth_Stencil_to_the_OM_Stage"></span><span id="bind_depth_stencil_to_the_om_stage"></span><span id="BIND_DEPTH_STENCIL_TO_THE_OM_STAGE"></span>OM 단계로 깊이 스텐실 데이터 바인딩
 
@@ -77,7 +77,7 @@ Direct3D 응용 프로그램은 데칼링을 사용하여 특정 원형 이미�
 
 스텐실 마스크가 렌더링하는 원형과 동일한 크기 및 형태인 경우 결과 이미지는 원형이 위치해야 할 구멍을 포함합니다. 그러면 응용 프로그램이 구멍을 검은색으로 채워 원형의 실루엣을 생성할 수 있습니다.
 
-### <a name="span-idtwosidedstencilspanspan-idtwosidedstencilspanspan-idtwosidedstencilspantwo-sided-stencil"></a><span id="Two_Sided_Stencil"></span><span id="two_sided_stencil"></span><span id="TWO_SIDED_STENCIL"></span>양면 스텐실
+### <a name="span-idtwosidedstencilspanspan-idtwosidedstencilspanspan-idtwosidedstencilspanspan-idtwo-sided-stenciltwo-sided-stencil"></a><span id="Two_Sided_Stencil"></span><span id="two_sided_stencil"></span><span id="TWO_SIDED_STENCIL"></span><span id="two-sided-stencil">양면 스텐실
 
 스텐실 버퍼를 사용하여 그림자를 그리는 데 섀도 볼륨이 사용됩니다. 응용 프로그램은 실루엣 가장자리를 계산하고 이들을 조명에서 3D 볼륨 집합으로 밀어내는 방식으로 기하 도형을 폐색하여 형성된 섀도 볼륨을 계산합니다. 이러한 볼륨이 스텐실 버퍼로 두 번 렌더링됩니다.
 
@@ -98,4 +98,4 @@ Direct3D 응용 프로그램은 데칼링을 사용하여 특정 원형 이미�
 
 [그래픽 파이프라인](graphics-pipeline.md)
 
-[출력 병합기 단계](https://msdn.microsoft.com/library/windows/desktop/bb205120)
+[Output-Merger Stage](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-merger-stage)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 26cde97f82e6962d530721f1e0230138e5917016
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 716ca61fc9925846377157d215ca3326191915b7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617928"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371142"
 ---
 # <a name="relativesource-markup-extension"></a>{RelativeSource} 태그 확장
 
@@ -38,18 +38,18 @@ ms.locfileid: "57617928"
 
 | 용어 | 설명 |
 |------|-------------|
-| {RelativeSource Self} | <strong>Self</strong>의 [<strong>Mode</strong>](https://msdn.microsoft.com/library/windows/apps/br209915) 값을 생성합니다. 대상 요소가 이 바인딩의 원본으로 사용되어야 합니다. 요소의 한 속성을 동일한 요소의 다른 속성에 바인딩하는 데 유용합니다. |
-| {RelativeSource TemplatedParent} | 이 바인딩의 원본으로 적용되는 [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391)을 생성합니다. 템플릿 수준에서 런타임 정보를 바인딩에 적용하는 데 유용합니다. | 
+| {RelativeSource Self} | <strong>Self</strong>의 [<strong>Mode</strong>](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.relativesource.mode) 값을 생성합니다. 대상 요소가 이 바인딩의 원본으로 사용되어야 합니다. 요소의 한 속성을 동일한 요소의 다른 속성에 바인딩하는 데 유용합니다. |
+| {RelativeSource TemplatedParent} | 이 바인딩의 원본으로 적용되는 [<strong>ControlTemplate</strong>](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate)을 생성합니다. 템플릿 수준에서 런타임 정보를 바인딩에 적용하는 데 유용합니다. | 
 
 ## <a name="remarks"></a>설명
 
-[  **Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)은 [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831)를 **Binding** 개체 요소의 속성이나 [{Binding} markup extension](binding-markup-extension.md) 내의 구성 요소로 설정할 수 있습니다. 이 때문에 두 가지 XAML 구문이 표시됩니다.
+[  **Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding)은 [**Binding.RelativeSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.relativesource)를 **Binding** 개체 요소의 속성이나 [{Binding} markup extension](binding-markup-extension.md) 내의 구성 요소로 설정할 수 있습니다. 이 때문에 두 가지 XAML 구문이 표시됩니다.
 
-**RelativeSource**는 [{Binding} 태그 확장](binding-markup-extension.md)과 유사하며,  인스턴스를 반환하여 생성자에 인수를 전달하는 문자열 기반 생성을 지원할 수 있는 태그 확장입니다. 이 경우에 전달될 인수는 [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209915) 값입니다.
+**RelativeSource**는 [{Binding} 태그 확장](binding-markup-extension.md)과 유사하며,  인스턴스를 반환하여 생성자에 인수를 전달하는 문자열 기반 생성을 지원할 수 있는 태그 확장입니다. 이 경우에 전달될 인수는 [**Mode**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.relativesource.mode) 값입니다.
 
-**Self** 모드는 요소의 한 속성을 동일한 요소의 다른 속성에 바인딩하는 데 유용하며, [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) 바인딩에 대한 변형이지만 요소의 명명과 자체 참조가 필요하지 않습니다. 요소의 한 속성을 동일한 요소의 다른 속성에 바인딩하는 경우 속성이 동일한 속성 형식을 사용해야 하거나, 사용자가 바인딩에 대해 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826)를 사용하여 값을 변환해야 합니다. 예를 들어 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height)를 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)의 원본으로 사용하는 경우 변환하지 않아도 되지만 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419)를 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br209006)의 원본으로 사용하려면 변환기가 필요합니다.
+**Self** 모드는 요소의 한 속성을 동일한 요소의 다른 속성에 바인딩하는 데 유용하며, [**ElementName**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.elementname) 바인딩에 대한 변형이지만 요소의 명명과 자체 참조가 필요하지 않습니다. 요소의 한 속성을 동일한 요소의 다른 속성에 바인딩하는 경우 속성이 동일한 속성 형식을 사용해야 하거나, 사용자가 바인딩에 대해 [**Converter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converter)를 사용하여 값을 변환해야 합니다. 예를 들어 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height)를 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)의 원본으로 사용하는 경우 변환하지 않아도 되지만 [**IsEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled)를 [**Visibility**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Visibility)의 원본으로 사용하려면 변환기가 필요합니다.
 
-예를 들면 다음과 같습니다. 이 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)은 해당 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 및 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)가 항상 같고 자체가 정사각형으로 렌더링되도록 [{Binding} 태그 확장](binding-markup-extension.md)을 사용합니다. 높이만 고정 값으로 설정됩니다. 이 **Rectangle**의 경우 기본 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)는 **null**이며 **this**가 아닙니다. 따라서 데이터 컨텍스트 원본이 개체 자체가 되도록 설정하고 다른 속성에 대한 바인딩을 지원할 수 있도록 {Binding} 태그 확장 사용법에서 `RelativeSource={RelativeSource Self}` 인수를 사용합니다.
+예를 들면 다음과 같습니다. 이 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)은 해당 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 및 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)가 항상 같고 자체가 정사각형으로 렌더링되도록 [{Binding} 태그 확장](binding-markup-extension.md)을 사용합니다. 높이만 고정 값으로 설정됩니다. 이 **Rectangle**의 경우 기본 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)는 **null**이며 **this**가 아닙니다. 따라서 데이터 컨텍스트 원본이 개체 자체가 되도록 설정하고 다른 속성에 대한 바인딩을 지원할 수 있도록 {Binding} 태그 확장 사용법에서 `RelativeSource={RelativeSource Self}` 인수를 사용합니다.
 
 ```XML
 <Rectangle
@@ -58,15 +58,15 @@ ms.locfileid: "57617928"
 />
 ```
 
-`RelativeSource={RelativeSource Self}`를 사용하여 개체의 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)를 자체로 설정하는 방법도 있습니다.  예를 들어, 일부 SDK 예제에서이 기술을 표시 될 수 있습니다 위치 합니다 [ **페이지** ](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스는 이미 제공 하는 준비-go 보기 모델 자체 데이터 바인딩에 대 한 사용자 지정 속성을 사용 하 여 확장 되었습니다 와 같은: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
+`RelativeSource={RelativeSource Self}`를 사용하여 개체의 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)를 자체로 설정하는 방법도 있습니다.  예를 들어, 일부 SDK 예제에서이 기술을 표시 될 수 있습니다 위치 합니다 [ **페이지** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) 클래스는 이미 제공 하는 준비-go 보기 모델 자체 데이터 바인딩에 대 한 사용자 지정 속성을 사용 하 여 확장 되었습니다 와 같은: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
 
-**참고**  The XAML 사용 **RelativeSource** 만 위한는 사용법을 보여 줍니다:에 대 한 값을 설정 [ **Binding.RelativeSource** ](https://msdn.microsoft.com/library/windows/apps/br209831)바인딩 식의 일부로 XAML에서. 이론적으로, 값이 [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)인 속성을 설정하는 경우 다른 사용이 가능합니다.
+**참고**  The XAML 사용 **RelativeSource** 만 위한는 사용법을 보여 줍니다:에 대 한 값을 설정 [ **Binding.RelativeSource** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.relativesource)바인딩 식의 일부로 XAML에서. 이론적으로, 값이 [**RelativeSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.RelativeSource)인 속성을 설정하는 경우 다른 사용이 가능합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [XAML 개요](xaml-overview.md)
-* [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)
+* [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
 * [{Binding} 태그 확장](binding-markup-extension.md)
-* [**바인딩**](https://msdn.microsoft.com/library/windows/apps/br209820)
-* [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)
+* [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding)
+* [**RelativeSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.RelativeSource)
 
