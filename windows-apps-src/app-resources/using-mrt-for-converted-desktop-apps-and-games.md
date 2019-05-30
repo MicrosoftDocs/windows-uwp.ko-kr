@@ -5,18 +5,18 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. 리소스, 게임, centennial, Desktop App Converter, mui, 위성 어셈블리
 ms.localizationpriority: medium
-ms.openlocfilehash: b17dffec37a5cadb450e93ea15508becfd7b9233
-ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.openlocfilehash: 82050c92311ce8bb7457637a486943a5fed3e334
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320636"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359324"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>레거시 앱 또는 게임에서 Windows 10 리소스 관리 시스템 사용
 
 .NET 및 Win32 응용 프로그램 및 게임은 종종 다른 언어로 지역화되어 전체 대상 시장을 확장합니다. 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요. .NET 또는 Win32 응용 프로그램이 나 게임이 MSIX 또는 AppX 패키지로 패키징 하면 런타임에 컨텍스트에 맞는 앱 리소스를 로드 하는 리소스 관리 시스템을 활용할 수 있습니다. 이 항목에서는 그 기술에 대해 자세히 설명합니다.
 
-레거시 Win32 응용 프로그램을 지역화하는 방법은 여러 가지가 있지만 Windows 8에는 여러 프로그래밍 언어와 응용 프로그램 유형에서 사용할 수 있으며 간편한 지역화 이상의 기능을 제공하는 [새로운 리소스 관리 시스템](https://msdn.microsoft.com/en-us/library/windows/apps/jj552947.aspx)이 도입되었습니다. 이 시스템은 이 항목에서 "MRT"라고 부르겠습니다. 이는 지금까지 "최신 리소스 기술"이라고 불렀지만 "최신"이라는 용어는 이제 사용되지 않습니다. 리소스 관리자는 MRM(최신 리소스 관리자) 또는 PRI(패키지 리소스 인덱스)라고도 알려져 있습니다.
+레거시 Win32 응용 프로그램을 지역화하는 방법은 여러 가지가 있지만 Windows 8에는 여러 프로그래밍 언어와 응용 프로그램 유형에서 사용할 수 있으며 간편한 지역화 이상의 기능을 제공하는 [새로운 리소스 관리 시스템](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10))이 도입되었습니다. 이 시스템은 이 항목에서 "MRT"라고 부르겠습니다. 이는 지금까지 "최신 리소스 기술"이라고 불렀지만 "최신"이라는 용어는 이제 사용되지 않습니다. 리소스 관리자는 MRM(최신 리소스 관리자) 또는 PRI(패키지 리소스 인덱스)라고도 알려져 있습니다.
 
 (예: Microsoft Store)에서 MSIX 또는 AppX 기반 배포와 함께 MRT 자동으로 지정된 된 사용자에 대 한 대부분 해당 리소스 / 다운로드를 최소화 하 고 응용 프로그램의 크기를 설치 하는 장치입니다. 이 크기 감소는 지역화된 콘텐츠가 포함된 응용 프로그램에 매우 큰 것으로, AAA 게임의 경우 *기가바이트*의 자릿수가 변경되는 수준입니다. MRT의 추가 장점에는 Windows 셸과 Microsoft Store의 지역화된 목록, 사용자의 원하는 언어가 사용할 수 있는 리소스가 일치하지 않을 때 자동 대체 논리 등이 포함됩니다.
 
@@ -66,7 +66,7 @@ ms.locfileid: "58320636"
 
 이 그래픽에서 응용 프로그램 코드는 세 개의 논리 리소스 이름을 참조합니다. 런타임에서 `GetResource` 의사 함수는 MRT를 사용하여 리소스 테이블(PRI 파일)에서 리소스 이름을 조회하고 사용자의 언어와 디스플레이의 배율 인수와 같은 주변 조건에 따라 가장 적합한 후보를 찾습니다. 레이블의 경우 문자열이 직접 사용됩니다. 로고 이미지의 경우 문자열이 파일 이름으로 해석되고 파일을 디스크에서 읽습니다. 
 
-MRT 대체 (fallback) 규칙의 집합을 기반으로 "가장 가까운" 일치 하는 후보 사용자 독일어로 이루어지기 이외의 언어로 강연 되었거나 300% 또는 100% 이외의 표시 배율 인수는, 하는 경우 선택 (참조 [리소스 관리 시스템](https://msdn.microsoft.com/en-us/library/windows/apps/jj552947.aspx) 자세한 배경)입니다.
+MRT 대체 (fallback) 규칙의 집합을 기반으로 "가장 가까운" 일치 하는 후보 사용자 독일어로 이루어지기 이외의 언어로 강연 되었거나 300% 또는 100% 이외의 표시 배율 인수는, 하는 경우 선택 (참조 [리소스 관리 시스템](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)) 자세한 배경)입니다.
 
 참고 MRT 로고 이미지도 지역화 해야 하는 포함 된 텍스트를 포함 하는 경우 예를 들어 둘 이상의 한정자-에 맞게 조정 되는 리소스를 지원 하는지, 로고 네 후보 해야 합니다. 100/확장-EN, DE/확장-100, EN/확장-300 및 DE/확장-300입니다.
 
@@ -150,7 +150,7 @@ MRT 대체 (fallback) 규칙의 집합을 기반으로 "가장 가까운" 일치
 
 패키지 레이아웃 확인 하 고 패키지 매니페스트 파일에 대 한 자세한 내용은 참조 하세요. [앱 패키지 매니페스트](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appx-package-manifest)합니다.
 
-마지막으로, Visual Studio를 사용 하 여 새 프로젝트를 만들고 기존 코드에서 마이그레이션에, 참조 [만들기를 "Hello, world" 앱](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)합니다. 새 프로젝트에 기존 코드를 포함할 수 있습니다 하지만 순수 UWP 앱으로 실행 하려면 (특히 사용자 인터페이스)에서 중요 한 코드 변경 가능성이 해야 합니다. 이러한 변경 내용은 이 문서의 범위를 벗어납니다.
+마지막으로, Visual Studio를 사용 하 여 새 프로젝트를 만들고 기존 코드에서 마이그레이션에, 참조 [만들기를 "Hello, world" 앱](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)합니다. 새 프로젝트에 기존 코드를 포함할 수 있습니다 하지만 순수 UWP 앱으로 실행 하려면 (특히 사용자 인터페이스)에서 중요 한 코드 변경 가능성이 해야 합니다. 이러한 변경 내용은 이 문서의 범위를 벗어납니다.
 
 ## <a name="phase-1-localize-the-manifest"></a>1단계: 매니페스트 지역화
 

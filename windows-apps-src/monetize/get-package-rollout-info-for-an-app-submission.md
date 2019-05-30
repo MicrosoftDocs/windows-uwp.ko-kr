@@ -6,19 +6,19 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 앱 제출
 ms.assetid: 9ada5ac3-a86e-4bb6-8ebc-915ba9649e3c
 ms.localizationpriority: medium
-ms.openlocfilehash: 301973fd231570f0fe63b8838971906c25e2d55c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3ca8fc759d123a25a58c8126426fb41066d5f1b4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594398"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66358874"
 ---
 # <a name="get-rollout-info-for-an-app-submission"></a>앱 제출에 대한 출시 정보 가져오기
 
 
 Microsoft Store 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출에 대한 [패키지 출시](../publish/gradual-package-rollout.md) 정보를 받습니다. Microsoft Store 제출 API를 사용하여 앱 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -32,22 +32,22 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 패키지 플라�
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| GET   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout   ``` |
+| 가져오기   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout   ``` |
 
 
 ### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| Authorization | string | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
 | 이름        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | 문자열 | 필수. 가져올 패키지 출시 정보가 있는 제출을 포함하는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
-| submissionId | 문자열 | 필수. 가져올 패키지 출시 정보가 있는 제출 ID입니다. 이 ID는 [앱 제출 만들기](create-an-app-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대 한이 ID의 파트너 센터에서 제출 페이지의 URL을 사용할 수도 있습니다.  |
+| applicationId | string | 필수. 가져올 패키지 출시 정보가 있는 제출을 포함하는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
+| submissionId | string | 필수. 가져올 패키지 출시 정보가 있는 제출 ID입니다. 이 ID는 [앱 제출 만들기](create-an-app-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대 한이 ID의 파트너 센터에서 제출 페이지의 URL을 사용할 수도 있습니다.  |
 
 
 ### <a name="request-body"></a>요청 본문

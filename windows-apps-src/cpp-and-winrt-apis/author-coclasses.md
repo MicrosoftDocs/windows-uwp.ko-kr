@@ -1,21 +1,21 @@
 ---
 description: C++/WinRT는 Windows 런타임 클래스를 작성하는 데 도움이 되는 것처럼 클래식 COM 구성 요소를 작성하는 데도 도움이 됩니다.
 title: C++/WinRT으로 COM 구성 요소 작성
-ms.date: 09/06/2018
+ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c + +, cpp, winrt, 프로젝션, 작성자, COM, 구성 요소
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 27c55e94a4e11bbbf550c21fd61ee384c8b21f9c
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 3badcd59155bc4bb5ef8d9e29271b853c245c24e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244359"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360320"
 ---
 # <a name="author-com-components-with-cwinrt"></a>C++/WinRT으로 COM 구성 요소 작성
 
-[C++/ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Windows 런타임 클래스를 작성 하는 데 도움이 하는 것 처럼 클래식 COM 구성 요소 개체 모델 () 구성 요소 (또는 coclass)를 작성 하는 데 도움이 됩니다. 에 코드를 붙여 넣는 경우 테스트할 수 있는 간단한 그림은 다음과 같습니다 합니다 `pch.h` 및 `main.cpp` 새 **시각적 C++**   >  **Windows Desktop**  >  **Windows 콘솔 응용 프로그램 (C++/WinRT)** 프로젝트입니다.
+[C++/ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Windows 런타임 클래스를 작성 하는 데 도움이 하는 것 처럼 클래식 COM 구성 요소 개체 모델 () 구성 요소 (또는 coclass)를 작성 하는 데 도움이 됩니다. 다음은 코드를 붙여 넣는 경우 테스트할 수 있는 간단한 보여 줍니다는 `pch.h` 하 고 `main.cpp` 새 **Windows 콘솔 응용 프로그램 (C++/WinRT)** 프로젝트.
 
 ```cppwinrt
 // pch.h
@@ -74,7 +74,7 @@ int main()
 
 ## <a name="create-a-windows-console-application-project-toastandcallback"></a>Windows 콘솔 응용 프로그램 프로젝트 (ToastAndCallback) 만들기
 
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. 만들기는 **시각적 C++**   >  **Windows 바탕 화면** > **Windows 콘솔 응용 프로그램 (C++/WinRT)** 프로젝트를 마우스 이름을 *ToastAndCallback*합니다.
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. 만들기는 **Windows 콘솔 응용 프로그램 (C++/WinRT)** 프로젝트를 만들고 이름을 *ToastAndCallback*합니다.
 
 열기 `pch.h`를 추가한 `#include <unknwn.h>` 하기 전에에 대 한 포함 되어 있습니다 C++/WinRT 헤더입니다. 다음은 결과가 됩니다. 콘텐츠를 바꿀 수 있습니다 프로그램 `pch.h` 이 목록을 사용 하 여 합니다.
 
@@ -89,7 +89,6 @@ int main()
 
 ```cppwinrt
 // main.cpp : Defines the entry point for the console application.
-//
 
 #include "pch.h"
 
@@ -173,7 +172,7 @@ struct callback_factory : implements<callback_factory, IClassFactory>
 };
 ```
 
-위의 coclass의 구현에 설명 된 동일한 패턴을 따릅니다 [사용 하 여 만든 Api C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class)합니다. 따라서 Windows 런타임 인터페이스 뿐만 아니라 COM 인터페이스를 구현 하는 동일한 기법을 사용할 수 있습니다. COM 구성 요소 및 Windows 런타임 클래스 인터페이스를 통해 해당 기능을 노출합니다. 모든 COM 인터페이스에서 궁극적으로 파생 되는 [ **IUnknown 인터페이스** ](https://msdn.microsoft.com/library/windows/desktop/ms680509) 인터페이스입니다. COM 기반 Windows 런타임&mdash;하나의 구분 되는 궁극적으로 Windows 런타임 인터페이스에서 파생 된 [ **IInspectable 인터페이스** ](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (및 **IInspectable**  에서 파생 되 **IUnknown**).
+위의 coclass의 구현에 설명 된 동일한 패턴을 따릅니다 [사용 하 여 만든 Api C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class)합니다. 따라서 Windows 런타임 인터페이스 뿐만 아니라 COM 인터페이스를 구현 하는 동일한 기법을 사용할 수 있습니다. COM 구성 요소 및 Windows 런타임 클래스 인터페이스를 통해 해당 기능을 노출합니다. 모든 COM 인터페이스에서 궁극적으로 파생 되는 [ **IUnknown 인터페이스** ](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) 인터페이스입니다. COM 기반 Windows 런타임&mdash;하나의 구분 되는 궁극적으로 Windows 런타임 인터페이스에서 파생 된 [ **IInspectable 인터페이스** ](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (및 **IInspectable**  에서 파생 되 **IUnknown**).
 
 구현에서는 위의 코드에서 coclass를는 **INotificationActivationCallback::Activate** 메서드는 알림 메시지 통지 콜백 단추를 클릭할 때 호출 되는 함수입니다. 하지만 해당 함수를 호출할 수 있습니다, 전에 coclass 인스턴스를 만들 수 해야 하는 경우의 작업이 그 해답이 며 합니다 **IClassFactory::CreateInstance** 함수입니다.
 
@@ -540,10 +539,10 @@ struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows:
 
 ## <a name="important-apis"></a>중요 API
 * [IInspectable 인터페이스](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
-* [IUnknown 인터페이스](https://msdn.microsoft.com/library/windows/desktop/ms680509)
+* [IUnknown 인터페이스](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 * [winrt::implements 구조체 템플릿](/uwp/cpp-ref-for-winrt/implements)
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)
-* [C++/WinRT로 작성된 COM 구성 요소 사용](consume-com.md)
+* [C++/WinRT를 통한 COM 구성 요소 사용](consume-com.md)
 * [로컬 알림 메시지 보내기](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

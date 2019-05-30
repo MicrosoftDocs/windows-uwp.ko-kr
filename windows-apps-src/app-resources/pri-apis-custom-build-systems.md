@@ -6,15 +6,15 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 617812415d3dcd00ec24d5f55971ae311265b61d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b300630ff4a9b6735cb7891444da4333532735c1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598518"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359375"
 ---
 # <a name="package-resource-indexing-pri-apis-and-custom-build-systems"></a>패키지 리소스 인덱싱(PRI) API 및 사용자 지정 빌드 시스템
-[패키지 리소스 인덱싱(PRI) API](https://msdn.microsoft.com/library/windows/desktop/mt845690)를 사용하여 UWP 앱 리소스에 대한 사용자 지정 빌드 시스템을 개발할 수 있습니다. 빌드 시스템은 UWP 앱에 필요한 복잡도 수준에 상관없이 PRI(패키지 리소스 인덱스) 파일을 만들고 버전화하고 덤프할 수 있습니다(XML로). 현재 MakePri.exe 명령줄 도구를 사용하는 사용자 지정 빌드 시스템이 있는 경우([MakePri.exe를 사용하여 수동으로 리소스 컴파일](makepri-exe-command-options.md)), 성능을 높이고 제어권을 강화하기 위해 MakePri.exe를 호출하는 대신 PRI API를 호출하는 것이 좋습니다.
+[패키지 리소스 인덱싱(PRI) API](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference)를 사용하여 UWP 앱 리소스에 대한 사용자 지정 빌드 시스템을 개발할 수 있습니다. 빌드 시스템은 UWP 앱에 필요한 복잡도 수준에 상관없이 PRI(패키지 리소스 인덱스) 파일을 만들고 버전화하고 덤프할 수 있습니다(XML로). 현재 MakePri.exe 명령줄 도구를 사용하는 사용자 지정 빌드 시스템이 있는 경우([MakePri.exe를 사용하여 수동으로 리소스 컴파일](makepri-exe-command-options.md)), 성능을 높이고 제어권을 강화하기 위해 MakePri.exe를 호출하는 대신 PRI API를 호출하는 것이 좋습니다.
 
 PRI API는 Windows 10 버전 1803용 Windows SDK에서 도입되었습니다. API는 Win32 Windows API의 형식을 취합니다. 이는 호출 방법이 여러 가지가 있음을 의미합니다. Win32 앱에서 바로 호출할 수도 있고, .NET 앱이나 UWP 앱으로부터도 [플랫폼 호출](/dotnet/framework/interop/consuming-unmanaged-dll-functions?branch=live)을 통해 호출할 수도 있습니다.
 
@@ -31,7 +31,7 @@ PRI 파일의 크기 제한은 64킬로바이트입니다.
 |[시나리오 1: 문자열 리소스 및 자산 파일에서 PRI 파일을 생성 합니다.](pri-apis-scenario-1.md)|이 시나리오에서는 사용자 지정 빌드 시스템을 표시하는 새로운 앱을 만듭니다. 리소스 인덱서를 만들고 문자열 및 다른 종류의 리소스를 여기에 추가합니다. 그런 다음 PRI 파일을 생성하고 덤프합니다.|
 
 ## <a name="important-apis"></a>중요 API
-* [패키지 리소스 인덱스 (PRI) 참조](https://msdn.microsoft.com/library/windows/desktop/mt845690)
+* [패키지 리소스 인덱스 (PRI) 참조](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference)
 
 ## <a name="related-topics"></a>관련 항목
 * [MakePri.exe를 사용하여 수동으로 리소스 컴파일](makepri-exe-command-options.md)

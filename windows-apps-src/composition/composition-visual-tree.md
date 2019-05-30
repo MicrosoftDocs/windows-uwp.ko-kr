@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b1c0b78ca45d98428f38518b337b5889f595c49
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d6d150f2f882348bffb36dd2918f0f61ea1586c7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602438"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360493"
 ---
 # <a name="composition-visual"></a>컴퍼지션 시각
 
@@ -21,11 +21,11 @@ ms.locfileid: "57602438"
 
 시각적 트리 구조는 세 가지 시각적 개체 형식과, 시각적 개체 콘텐츠에 영향을 주는 여러 하위 클래스가 있는 기본 브러시 클래스로 구성됩니다.
 
-- [**Visual** ](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기본 속성의 대부분은 여기서 및 다른 시각적 개체에서 상속 된 개체입니다.
-- [**ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) –에서 파생 되 [ **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에서 자식을 만드는 기능을 추가 합니다.
-- [**SpriteVisual** ](https://msdn.microsoft.com/library/windows/apps/Mt589433) –에서 파생 되 [ **ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) 단색 브러시 픽셀 이미지를 포함 하는 비주얼이 렌더링할 수 있도록 효과 연결 하는 기능을 추가 하 고 색.
+- [**Visual** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual) – 기본 속성의 대부분은 여기서 및 다른 시각적 개체에서 상속 된 개체입니다.
+- [**ContainerVisual** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ContainerVisual) –에서 파생 되 [ **Visual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual)에서 자식을 만드는 기능을 추가 합니다.
+- [**SpriteVisual** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual) –에서 파생 되 [ **ContainerVisual** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ContainerVisual) 단색 브러시 픽셀 이미지를 포함 하는 비주얼이 렌더링할 수 있도록 효과 연결 하는 기능을 추가 하 고 색.
 
-[  **CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) 및 [**CompositionColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush), [**CompositionSurfaceBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush), [**CompositionEffectBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush) 등의 하위 클래스를 사용하여 SpriteVisuals에 콘텐츠 및 효과를 적용할 수 있습니다. 브러시에 대한 자세한 내용을 보려면 [**CompositionBrush 개요**](https://docs.microsoft.com/windows/uwp/composition/composition-brushes)를 참조하세요.
+[  **CompositionBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush) 및 [**CompositionColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush), [**CompositionSurfaceBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush), [**CompositionEffectBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush) 등의 하위 클래스를 사용하여 SpriteVisuals에 콘텐츠 및 효과를 적용할 수 있습니다. 브러시에 대한 자세한 내용을 보려면 [**CompositionBrush 개요**](https://docs.microsoft.com/windows/uwp/composition/composition-brushes)를 참조하세요.
 
 ## <a name="the-compositionvisual-sample"></a>CompositionVisual 샘플
 
@@ -44,7 +44,7 @@ ms.locfileid: "57602438"
 
 ## <a name="creating-a-compositor"></a>작성자 만들기
 
-팩터리로 사용하기 위해 [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)를 만들고 변수에 저장하는 작업은 매우 간단합니다. 다음 코드 조각은 새 **Compositor**를 만드는 방법을 보여 줍니다.
+팩터리로 사용하기 위해 [**Compositor**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Compositor)를 만들고 변수에 저장하는 작업은 매우 간단합니다. 다음 코드 조각은 새 **Compositor**를 만드는 방법을 보여 줍니다.
 
 ```cs
 _compositor = new Compositor();
@@ -52,18 +52,18 @@ _compositor = new Compositor();
 
 ## <a name="creating-a-spritevisual-and-colorbrush"></a>SpriteVisual 및 ColorBrush 만들기
 
-[  **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)를 사용하면 필요할 때마다 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) 및 [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) 등의 개체를 쉽게 만들 수 있습니다.
+[  **Compositor**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Compositor)를 사용하면 필요할 때마다 [**SpriteVisual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual) 및 [**CompositionColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush) 등의 개체를 쉽게 만들 수 있습니다.
 
 ```cs
 var visual = _compositor.CreateSpriteVisual();
 visual.Brush = _compositor.CreateColorBrush(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xFF));
 ```
 
-코드 몇 줄만 상태인 동안에 강력한 개념을 보여 줍니다. [**SpriteVisual** ](https://msdn.microsoft.com/library/windows/apps/Mt589433) 개체는 작업이 시스템의 핵심입니다. **SpriteVisual**은 뛰어난 유연성을 제공하며 색, 이미지 및 효과 생성의 상호 작용을 허용합니다. **SpriteVisual**은 브러시(이 경우 단색)로 2D 사각형을 채울 수 있는 단일 시각적 개체 형식입니다.
+코드 몇 줄만 상태인 동안에 강력한 개념을 보여 줍니다. [**SpriteVisual** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual) 개체는 작업이 시스템의 핵심입니다. **SpriteVisual**은 뛰어난 유연성을 제공하며 색, 이미지 및 효과 생성의 상호 작용을 허용합니다. **SpriteVisual**은 브러시(이 경우 단색)로 2D 사각형을 채울 수 있는 단일 시각적 개체 형식입니다.
 
 ## <a name="clipping-a-visual"></a>시각적 개체 클리핑
 
-[  **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)는 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에 대한 클립을 만드는 데도 사용할 수 있습니다. 다음은 샘플에서 [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825)을 사용하여 시각적 개체의 각 면을 트리밍하는 예제입니다.
+[  **Compositor**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Compositor)는 [**Visual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual)에 대한 클립을 만드는 데도 사용할 수 있습니다. 다음은 샘플에서 [**InsetClip**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.InsetClip)을 사용하여 시각적 개체의 각 면을 트리밍하는 예제입니다.
 
 ```cs
 var clip = _compositor.CreateInsetClip();
@@ -74,11 +74,11 @@ clip.BottomInset = 1.0f;
 _currentVisual.Clip = clip;
 ```
 
-API의 다른 개체와 마찬가지로 [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825)은 속성에 애니메이션을 적용할 수 있습니다.
+API의 다른 개체와 마찬가지로 [**InsetClip**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.InsetClip)은 속성에 애니메이션을 적용할 수 있습니다.
 
 ## <a name="span-idrotatingaclipspanspan-idrotatingaclipspanspan-idrotatingaclipspanrotating-a-clip"></a><span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>클립을 회전
 
-회전을 통해 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)를 변환할 수 있습니다. 이때 [**RotationAngle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.rotationangle)은 라디안과 각도를 모두 지원합니다. 기본값은 라디안이지만 다음 코드 조각에서처럼 쉽게 각도를 지정할 수 있습니다.
+회전을 통해 [**Visual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual)를 변환할 수 있습니다. 이때 [**RotationAngle**](https://docs.microsoft.com/uwp/api/windows.ui.composition.visual.rotationangle)은 라디안과 각도를 모두 지원합니다. 기본값은 라디안이지만 다음 코드 조각에서처럼 쉽게 각도를 지정할 수 있습니다.
 
 ```cs
 child.RotationAngleInDegrees = 45.0f;
@@ -94,13 +94,13 @@ child.RotationAngleInDegrees = 45.0f;
 visual.Opacity = 0.8f;
 ```
 
-회전과 마찬가지로 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.opacity) 속성에 애니메이션을 적용할 수 있습니다.
+회전과 마찬가지로 [**Opacity**](https://docs.microsoft.com/uwp/api/windows.ui.composition.visual.opacity) 속성에 애니메이션을 적용할 수 있습니다.
 
 ## <a name="changing-the-visuals-position-in-the-collection"></a>컬렉션에서 시각적 개체의 위치 변경
 
-컴퍼지션 API는 [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection)의 시각적 개체 위치를 여러 가지 방법으로 변경할 수 있습니다. [  **InsertAbove**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertabove)를 사용하여 다른 시각적 개체 위에 배치할 수도 있고, [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertbelow)를 사용하여 아래에 배치할 수도 있고, [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertattop)을 사용하여 맨 위로 이동할 수도 있고, [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertatbottom)을 사용하여 맨 아래에 배치할 수도 있습니다.
+컴퍼지션 API는 [**VisualCollection**](https://docs.microsoft.com/uwp/api/windows.ui.composition.visualcollection)의 시각적 개체 위치를 여러 가지 방법으로 변경할 수 있습니다. [  **InsertAbove**](https://docs.microsoft.com/uwp/api/windows.ui.composition.visualcollection.insertabove)를 사용하여 다른 시각적 개체 위에 배치할 수도 있고, [**InsertBelow**](https://docs.microsoft.com/uwp/api/windows.ui.composition.visualcollection.insertbelow)를 사용하여 아래에 배치할 수도 있고, [**InsertAtTop**](https://docs.microsoft.com/uwp/api/windows.ui.composition.visualcollection.insertattop)을 사용하여 맨 위로 이동할 수도 있고, [**InsertAtBottom**](https://docs.microsoft.com/uwp/api/windows.ui.composition.visualcollection.insertatbottom)을 사용하여 맨 아래에 배치할 수도 있습니다.
 
-이 샘플에서 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)을 클릭하면 맨 위로 정렬됩니다.
+이 샘플에서 [**Visual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual)을 클릭하면 맨 위로 정렬됩니다.
 
 ```cs
 parent.Children.InsertAtTop(_currentVisual);
@@ -108,7 +108,7 @@ parent.Children.InsertAtTop(_currentVisual);
 
 ## <a name="full-example"></a>전체 예제
 
-전체 샘플에서는 위의 모든 개념이 함께 사용되어 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 개체의 간단한 트리를 구성하여 XAML, WWA 또는 DirectX를 사용하지 않고 불투명도를 변경합니다. 이 샘플에서는 자식 **Visual** 개체를 만들고 추가하고 속성을 변경하는 방법을 보여 줍니다.
+전체 샘플에서는 위의 모든 개념이 함께 사용되어 [**Visual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual) 개체의 간단한 트리를 구성하여 XAML, WWA 또는 DirectX를 사용하지 않고 불투명도를 변경합니다. 이 샘플에서는 자식 **Visual** 개체를 만들고 추가하고 속성을 변경하는 방법을 보여 줍니다.
 
 ```cs
 using System;

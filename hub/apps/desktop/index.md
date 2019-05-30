@@ -8,12 +8,12 @@ keywords: windows win32, 데스크톱 개발
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 437ee2352eceb8776b79f05f77867ccffdea6521
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: c69c744684d05c3ad64d98fbda30a3ccfdc91080
+ms.sourcegitcommit: f167775291cbc566b72b0859ae6b426d848c5c89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215023"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266420"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Windows PC용 데스크톱 앱 빌드
 
@@ -30,7 +30,7 @@ ms.locfileid: "66215023"
                     </div>
                     <div class="cardText">
                         <h3>플랫폼 선택</h3>
-                        <p></p>UWP, WPF, Windows Forms 및 Win32를 포함하는 데스크톱 Windows 앱용 앱 플랫폼에 대해 알아봅니다.</p>
+                        <p></p>앱 플랫폼을 선택하여 새 데스크톱 앱 빌드 시작: UWP, WPF, Windows Forms 또는 Win32.</p>
                     </div>
                 </div>
             </div>
@@ -76,19 +76,19 @@ ms.locfileid: "66215023"
       </a>
     </li>
 </ul>
-    <ul class="cardsY panelContent featuredContent">
+<ul class="cardsY panelContent featuredContent">
        <li>
-            <a href="/windows/desktop/appxpkg/windows-desktop-application-program">
+            <a href="https://developer.microsoft.com/windows/downloads">
                 <div class="cardSize">
                     <div class="cardPadding">
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img data-hoverimage="/media/common/i_code-performance.svg?branch=master" src="/media/common/i_code-performance.svg?branch=master" alt="Performance icon" />
+                                    <img data-hoverimage="/media/common/i_tools.svg?branch=master" src="/media/common/i_tools.svg?branch=master" alt="Tools icon" />
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>Windows 데스크톱 애플리케이션 프로그램</h3>
+                                <h3>도구 다운로드</h3>
                             </div>
                         </div>
                     </div>
@@ -96,17 +96,17 @@ ms.locfileid: "66215023"
             </a>
         </li>
         <li>
-            <a href="https://developer.microsoft.com/windows/desktop/app-compatibility">
+            <a href="https://developer.microsoft.com/windows/samples">
                 <div class="cardSize">
                     <div class="cardPadding">
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img data-hoverimage="/media/common/i_code-quality.svg?branch=master" src="/media/common/i_code-quality.svg?branch=master" alt="App compatibility icon" />
+                                    <img data-hoverimage="/media/common/i_code-samples.svg?branch=master" src="/media/common/i_code-samples.svg?branch=master" alt="Samples icon" />
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>Windows 10과 호환성 유지하기</h3>
+                                <h3>샘플</h3>
                             </div>
                         </div>
                     </div>
@@ -114,24 +114,24 @@ ms.locfileid: "66215023"
             </a>
         </li>
        <li>
-            <a href="https://developer.microsoft.com/windows/enterprise">
+            <a href="/windows/desktop/apiindex/api-index-portal">
                 <div class="cardSize">
                     <div class="cardPadding">
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img data-hoverimage="/media/common/i_form.svg?branch=master" src="/media/common/i_form.svg?branch=master" alt="Enterprise icon" />
+                                    <img data-hoverimage="/media/common/i_api-reference.svg?branch=master" src="/media/common/i_api-reference.svg?branch=master" alt="API index icon" />
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>엔터프라이즈 애플리케이션</h3>
+                                <h3>API 인덱스</h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
         </li>
-    </ul>
+</ul>
 <hr />
 <h2>플랫폼 및 기능</h2>
 <ul class="cardsK panelContent">
@@ -249,6 +249,62 @@ ms.locfileid: "66215023"
         </div>
       </a>
     </li>
+</ul>
+<ul class="cardsY panelContent featuredContent">
+       <li>
+            <a href="/windows/desktop/appxpkg/windows-desktop-application-program">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="/media/common/i_code-performance.svg?branch=master" src="/media/common/i_code-performance.svg?branch=master" alt="Performance icon" />
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Windows 데스크톱 애플리케이션 프로그램</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.microsoft.com/windows/desktop/app-compatibility">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="/media/common/i_code-quality.svg?branch=master" src="/media/common/i_code-quality.svg?branch=master" alt="App compatibility icon" />
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Windows 10과 호환성 유지하기</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+       <li>
+            <a href="https://developer.microsoft.com/windows/enterprise">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="/media/common/i_form.svg?branch=master" src="/media/common/i_form.svg?branch=master" alt="Enterprise icon" />
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>엔터프라이즈 애플리케이션</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
 </ul>
 <hr/>
 </div>

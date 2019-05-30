@@ -5,21 +5,21 @@ ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 558f3fa75e7dd599927a9d2ace256bf1feb98e77
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5394443b4832864e5b46bfbf917c04f0af6d8a19
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621648"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360214"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 사이의 상호 운용성
 
-점진적으로 코드를 이식 하는 것에 대 한 전략에 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트가 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 에 설명 되어 [이동할 C + + WinRT C + + CX](move-to-winrt-from-cx.md).
+전략의 코드를 점차적으로 이식 하 [ C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트를 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 에 설명 되어 [이동 C++에서 /WinRT C++/CX](move-to-winrt-from-cx.md).
 
-이 항목에서는 C + 간에 변환 하는 데 사용할 수 있는 두 도우미 함수를 보여 줍니다. + /CX 및 C + + /cli 동일한 프로젝트 내의 WinRT 개체입니다. 두 언어 프로젝션을 사용 하는 코드 간의 상호 운용성을 사용할 수 있습니다 또는 C +에서 코드를 포트에 함수를 사용할 수 + /CX를 C + + /cli WinRT 합니다.
+이 항목에서는 변환에 사용할 수 있는 두 도우미 함수 C++/CX 및 C++동일한 프로젝트 내의 /WinRT 개체입니다. 두 언어 프로젝션을 사용 하는 코드 간의 상호 운용성을 사용할 수 있습니다 하거나에서 코드를 함수를 사용할 수 있습니다 C++를 /CX C++/WinRT 합니다.
 
 ## <a name="fromcx-and-tocx-functions"></a>from_cx 함수와 to_cx 함수
-아래 도우미 함수는 C++/CX 개체를 상응하는 C++/WinRT 개체로 변환합니다. 이 함수는 C++/CX 개체를 기본 [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) 인터페이스 포인터로 캐스팅합니다. 그런 다음 해당 포인터에 대한 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 호출하여 C++/WinRT 개체의 기본 인터페이스에 대해 쿼리를 실행합니다. **QueryInterface**는 C++/CX safe_cast 확장에 상응하는 Windows 런타임 응용 프로그램 이진 인터페이스(ABI)입니다. 그러면 [**winrt::put_abi**](/uwp/cpp-ref-for-winrt/put-abi) 함수가 C++/WinRT 개체의 기본 **IUnknown** 인터페이스 포인터 주소를 다른 값으로 설정할 수 있도록 가져옵니다.
+아래 도우미 함수는 C++/CX 개체를 상응하는 C++/WinRT 개체로 변환합니다. 이 함수는 C++/CX 개체를 기본 [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) 인터페이스 포인터로 캐스팅합니다. 그런 다음 해당 포인터에 대한 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))를 호출하여 C++/WinRT 개체의 기본 인터페이스에 대해 쿼리를 실행합니다. **QueryInterface**는 C++/CX safe_cast 확장에 상응하는 Windows 런타임 응용 프로그램 이진 인터페이스(ABI)입니다. 그러면 [**winrt::put_abi**](/uwp/cpp-ref-for-winrt/put-abi) 함수가 C++/WinRT 개체의 기본 **IUnknown** 인터페이스 포인터 주소를 다른 값으로 설정할 수 있도록 가져옵니다.
 
 ```cppwinrt
 template <typename T>
@@ -47,12 +47,12 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 
 ## <a name="example-project-showing-the-two-helper-functions-in-use"></a>사용 중인 두 도우미 함수를 보여 주는 예제 프로젝트
 
-간단한 방식으로 점진적으로 C + 코드를 이식 하는 시나리오를 재현 하려면 + CX 프로젝트 C + + /cli WinRT, C + 중 하나를 사용 하 여 Visual Studio에서 새 프로젝트를 만들어 시작할 수 있습니다 + WinRT 프로젝트 템플릿 (참조 [Visual Studio 지원 C + + WinRT ](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)).
+간단한 방식으로 코드를 점차적으로 이식 하는 시나리오를 재현 하려면는 C++/CX 프로젝트를 C++중 하나를 사용 하 여 Visual Studio에서 새 프로젝트를 만들어 시작할 수 WinRT, / 합니다 C++/WinRT 프로젝트 템플릿 (참조 [Visual Studio 에 대 한 지원 C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)).
 
-이 예제 프로젝트 수도, 그렇지 않으면 잠재적인 네임 스페이스 충돌은 C +를 사용 하 여 처리 하기 위해 코드의 다른 아일랜드에 대 한 네임 스페이스 별칭을 사용 하는 방법을 보여 줍니다 + WinRT 프로젝션 및 C + + /cli CX 프로젝션 합니다.
+이 예제 프로젝트 수도, 그렇지 않으면 잠재적인 네임 스페이스 충돌을 처리 하기 위해 코드의 다른 아일랜드에 대 한 네임 스페이스 별칭을 사용 하는 방법을 보여 줍니다는 C++/WinRT 프로젝션 및 C++/CX 프로젝션 합니다.
 
-- 만들기를 **Visual c + +** \> **Windows 범용** > **Core 앱 (C + + /cli WinRT)** 프로젝트.
-- 프로젝트 속성에서 **C/c + +** \> **일반** \> **Windows 런타임 확장 사용** \> **예 (/ZW)** . 이 설정 프로젝트 지원 C + + /cli CX 합니다.
+- 만들기는 **시각적 C++**  \> **Windows 유니버설** > **Core 앱 (C++/WinRT)** 프로젝트입니다.
+- 프로젝트 속성에서 **C /C++**  \> **일반** \> **Windows 런타임 확장 사용** \>  **예 (/ZW)** 합니다. 이 설정에 대 한 프로젝트 지원 C++/CX입니다.
 - 내용을 바꿉니다 `App.cpp` 아래 나열 된 코드를 사용 하 여 합니다.
 
 ```cppwinrt
@@ -253,8 +253,8 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 ```
 
 ## <a name="important-apis"></a>중요 API
-* [IUnknown 인터페이스](https://msdn.microsoft.com/library/windows/desktop/ms680509)
-* [QueryInterface 함수](https://msdn.microsoft.com/library/windows/desktop/ms682521)
+* [IUnknown 인터페이스](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)
+* [QueryInterface 함수](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
 * [winrt::get_abi 함수](/uwp/cpp-ref-for-winrt/get-abi)
 * [winrt::put_abi 함수](/uwp/cpp-ref-for-winrt/put-abi)
 

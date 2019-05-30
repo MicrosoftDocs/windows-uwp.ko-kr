@@ -1,16 +1,16 @@
 ---
 description: Agile 개체란 어떤 스레드에서든지 액세스할 수 있는 개체를 말합니다. C++/WinRT 형식은 기본적으로 Agile이지만 옵트아웃으로 선택하지 않을 수도 있습니다.
 title: C++/WinRT의 Agile 개체
-ms.date: 10/20/2018
+ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, agile, 개체, agility, IAgileObject
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b390161a4eb2c4f38fed9bce226c5a5e92c5ad8
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: 82dff619e6fa3934f69b93090bee90de6359ca07
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291782"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360328"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Agile 개체의 C++/WinRT
 
@@ -19,7 +19,7 @@ ms.locfileid: "58291782"
 하지만 옵트아웃할 수 있습니다. 예를 들어, 지정 된 단일 스레드 아파트에 상주할 형식의 개체를 요구 하는 것이 유리가 있을 수 있습니다. 이는 일반적으로 다시 표시 요구 사항과 관련이 있습니다. 하지만 점차 사용자 인터페이스(UI) API 조차도 Agile 개체를 제공하고 있습니다. 일반적으로 Agility는 가장 간단하면서 성능이 뛰어난 옵션입니다. 또한 활성화 팩터리를 구현할 때 해당하는 런타임 클래스가 Agile하지 않더라도 Agile을 설정해야 합니다.
 
 > [!NOTE]
-> Windows 런타임은 COM을 기반으로 합니다. COM 용어로 Agile 클래스는 `ThreadingModel` = *Both*로 등록됩니다. COM 스레딩 모델 및 아파트에 대 한 자세한 내용은 참조 하세요. [이해와 Using COM Threading Models](https://msdn.microsoft.com/library/ms809971)합니다.
+> Windows 런타임은 COM을 기반으로 합니다. COM 용어로 Agile 클래스는 `ThreadingModel` = *Both*로 등록됩니다. COM 스레딩 모델 및 아파트에 대 한 자세한 내용은 참조 하세요. [이해와 Using COM Threading Models](/previous-versions/ms809971(v=msdn.10))합니다.
 
 ## <a name="code-examples"></a>코드 예제
 
@@ -37,7 +37,7 @@ struct MyType : winrt::implements<MyType, IStringable>
 };
 ```
 
-옵트아웃을 설정하지 않았기 때문에 이 구현체는 Agile입니다. [  **winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체는 [**IAgileObject**](https://msdn.microsoft.com/library/windows/desktop/hh802476)와 [**IMarshal**](/windows/desktop/api/objidl/nn-objidl-imarshal)을 구현합니다. **IAgileObject**를 모르는 레거시 코드일 때는 **IMarshal** 구현체가 **CoCreateFreeThreadedMarshaler**를 사용하여 정확하게 처리합니다.
+옵트아웃을 설정하지 않았기 때문에 이 구현체는 Agile입니다. [  **winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체는 [**IAgileObject**](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject)와 [**IMarshal**](/windows/desktop/api/objidl/nn-objidl-imarshal)을 구현합니다. **IAgileObject**를 모르는 레거시 코드일 때는 **IMarshal** 구현체가 **CoCreateFreeThreadedMarshaler**를 사용하여 정확하게 처리합니다.
 
 이 코드는 개체의 Agility 여부를 확인합니다. [  **IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) 호출은 `myimpl`이 Agile이 아닐 경우 예외를 발생시킵니다.
 
@@ -115,7 +115,7 @@ winrt::hstring message{ nonagile_obj_again.Message() };
 
 ## <a name="important-apis"></a>중요 API
 
-* [IAgileObject 인터페이스](https://msdn.microsoft.com/library/windows/desktop/hh802476)
+* [IAgileObject 인터페이스](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject)
 * [IMarshal 인터페이스](/windows/desktop/api/objidl/nn-objidl-imarshal)
 * [winrt::agile_ref 구조체 템플릿](/uwp/cpp-ref-for-winrt/agile-ref)
 * [winrt::implements 구조체 템플릿](/uwp/cpp-ref-for-winrt/implements)
@@ -126,4 +126,4 @@ winrt::hstring message{ nonagile_obj_again.Message() };
 
 ## <a name="related-topics"></a>관련 항목
 
-* [이해 하 고 COM 스레딩 모델을 사용 하 여](https://msdn.microsoft.com/library/ms809971)
+* [이해 하 고 COM 스레딩 모델을 사용 하 여](/previous-versions/ms809971(v=msdn.10))

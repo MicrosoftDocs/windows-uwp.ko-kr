@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 keywords: windows win32, 데스크톱 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cb104d873e810a9c5bedaa68675fd346cb3f33d
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 31d1c81bbc5af932435860b55ebe5651a789eb6e
+ms.sourcegitcommit: f167775291cbc566b72b0859ae6b426d848c5c89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215053"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266424"
 ---
 # <a name="build-apps-for-windows"></a>Windows용 앱 빌드
 
@@ -120,6 +120,25 @@ Windows 10용 새 앱을 빌드하거나 최신 Windows 기능을 사용하도�
       </a>
     </li>
     <li>
+      <a href="/windows/msix/">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage bgdAccent1">
+                            <img src="/media/illustrations/sql-get-started-download.svg?branch=master" alt="MSIX packaging illustration" data-linktype="external" class="x-hidden-focus">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                    <h3>MSIX 패키징 및 배포</h3>
+                    <p>안전하고 안정적이며 신뢰할 수 있는 유니버설 패키징 환경에서 모든 Windows 앱을 패키징 및 배포합니다.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </a>
+    </li>
+    <li>
       <a href="fluent-design-system.md">
         <div class="cardSize">
             <div class="cardPadding">
@@ -132,6 +151,25 @@ Windows 10용 새 앱을 빌드하거나 최신 Windows 기능을 사용하도�
                     <div class="cardText">
                     <h3>Fluent 디자인 시스템</h3>
                     <p>Fluent Design System을 사용하여 Windows 앱용 사용자 인터페이스를 디자인하고 코딩하는 방법을 알아봅니다.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="/uwp/toolkits/winui/">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage bgdAccent1">
+                            <img src="/media/illustrations/virtualization-containers-samples.svg?branch=master" alt="Design illustration" data-linktype="external" class="x-hidden-focus">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                    <h3>Windows UI Library</h3>
+                    <p>이전 버전의 Windows 10용 앱에서 네이티브 Windows UI 컨트롤 및 기타 사용자 인터페이스 요소를 사용합니다.</p>
                   </div>
                 </div>
             </div>

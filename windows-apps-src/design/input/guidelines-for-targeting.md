@@ -8,12 +8,12 @@ ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c05b6686d31606a9510b1433339dc8829a52893
-ms.sourcegitcommit: 7a1d5198345d114c58287d8a047eadc4fe10f012
+ms.openlocfilehash: 34f8d15b971cc9ed286471010a21d1b44b84af13
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59247181"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363466"
 ---
 # <a name="guidelines-for-touch-targets"></a>터치 대상에 대 한 지침
 
@@ -25,7 +25,7 @@ ms.locfileid: "59247181"
 
 이 항목에서는 (해야 앱 해야) 플랫폼 컨트롤 및 사용자 지정 컨트롤을 모두 사용 하는 최대 유용성에 대 한 앱을 디자인할 수 있도록 이러한 기본 동작 설명 합니다.
 
-> **중요 API**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **중요 API**: [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
 ## <a name="fluent-standard-sizing"></a>Fluent 표준 크기 조정
 
@@ -83,18 +83,18 @@ Compact 크기 조정 페이지 또는 표 수준에서 적용할 수 있습니�
 
 ### <a name="samples"></a>샘플
 
-- [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-- [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-- [사용자 조작 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-- [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+- [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+- [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+- [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 ### <a name="archive-samples"></a>보관 샘플
 
 - [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
 - [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
 - [입력: 터치 적중된 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
-- [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
+- [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
 - [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
 - [입력: Windows 8 제스처 샘플](https://go.microsoft.com/fwlink/p/?LinkId=264995)
 - [입력: 조작 및 제스처 (C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
-- [DirectX 터치 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+- [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)

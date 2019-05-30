@@ -1,16 +1,16 @@
 ---
 description: 이 항목에서는 Windows, 외부 구성 요소 공급업체 또는 사용자 자신 중 어디에서 구현되었든 상관없이 C++/WinRT API를 사용하는 방법에 대해서 설명합니다.
 title: C++/WinRT를 통한 API 사용
-ms.date: 05/08/2018
+ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: 545ce8c5e18a9cc1016f4bf09e5d062b5b31b5a6
-ms.sourcegitcommit: c315ec3e17489aeee19f5095ec4af613ad2837e1
+ms.openlocfilehash: e6bf1e7fb32533aa9d7b865ac7c8afc374290e54
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921709"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360347"
 ---
 # <a name="consume-apis-with-cwinrt"></a>C++/WinRT를 통한 API 사용
 
@@ -19,9 +19,10 @@ ms.locfileid: "58921709"
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>API가 Windows 네임스페이스에 있는 경우
 이는 Windows 런타임 API를 가장 흔하게 사용하는 경우입니다. 메타데이터에서 정의된 Windows 네임스페이스의 모든 형식에 대해, C++/WinRT는 C++ 친화적인 등가(*프로젝션된 형식*이라고 함)를 정의합니다. 프로젝션된 형식은 Windows 형식과 동일한 정규화된 이름을 가지지만 C++ 구문을 사용하여 C++ **winrt** 네임스페이스에 배치됩니다. 예를 들어, [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri)는 C++/WinRT에 **winrt::Windows::Foundation::Uri**로 프로젝션됩니다.
 
-다음은 간단한 코드 예제입니다.
+다음은 간단한 코드 예제입니다. 다음 코드 예제에서는의 주 소스 코드 파일에 직접 복사-붙여넣기를 하려는 경우는 **Windows 콘솔 응용 프로그램 (C++/WinRT)** 프로젝트 다음 첫 번째 집합 **미리 컴파일된 헤더 사용 안 함** 프로젝트 속성입니다.
 
 ```cppwinrt
+// main.cpp
 #include <winrt/Windows.Foundation.h>
 
 using namespace winrt;
@@ -40,9 +41,9 @@ int main()
 > [!TIP]
 > Windows 네임스페이스의 형식을 사용할 때마다 해당 네임스페이스와 일치하는 C++/WinRT 헤더를 추가하세요. `using namespace` 지시문은 선택 사항이지만 편리합니다.
 
-위의 코드 예제에서는 C++/WinRT를 초기화한 후 공개적으로 기록되는 생성자(이번 예제에서는 [**Uri(문자열)**](/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_)) 중 하나를 통해 프로젝션된 형식인 **winrt::Windows::Foundation::Uri**의 값을 스택 할당합니다. 이러한 이유로 가장 공통적인 사용 사례이며, 일반적으로 더 이상은 할 것이 없습니다. C++/WinRT 프로젝션된 형식 값이 있으면 모든 동일한 구성원을 가지므로 이를 실제 Windows 런타임 형식의 인스턴스처럼 처리할 수 있습니다.
+위의 코드 예제에서는 C++/WinRT를 초기화한 후 공개적으로 기록되는 생성자(이번 예제에서는 [**Uri(문자열)** ](/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_)) 중 하나를 통해 프로젝션된 형식인 **winrt::Windows::Foundation::Uri**의 값을 스택 할당합니다. 이러한 이유로 가장 공통적인 사용 사례이며, 일반적으로 더 이상은 할 것이 없습니다. C++/WinRT 프로젝션된 형식 값이 있으면 모든 동일한 구성원을 가지므로 이를 실제 Windows 런타임 형식의 인스턴스처럼 처리할 수 있습니다.
 
-사실, 그 프로젝션된 값은 프록시입니다. 기본적으로 지원 개체에 대한 스마트 포인터인 것입니다. 프로젝션된 값은 생성자는 [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646)를 호출하여 Windows 런타임 클래스(이 경우 **Windows.Foundation.Uri**)를 지원하는 인스턴스를 만들고 해당 개체의 기본 인터페이스를 새 프로젝션된 값 내에 저장합니다. 아래와 같이 프로젝션 된 값은 멤버 호출이 실제로 대리자 백업 개체에는 스마트 포인터를 통해 상태 변경을 수행 하는 위치입니다.
+사실, 그 프로젝션된 값은 프록시입니다. 기본적으로 지원 개체에 대한 스마트 포인터인 것입니다. 프로젝션된 값은 생성자는 [**RoActivateInstance**](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance)를 호출하여 Windows 런타임 클래스(이 경우 **Windows.Foundation.Uri**)를 지원하는 인스턴스를 만들고 해당 개체의 기본 인터페이스를 새 프로젝션된 값 내에 저장합니다. 아래와 같이 프로젝션 된 값은 멤버 호출이 실제로 대리자 백업 개체에는 스마트 포인터를 통해 상태 변경을 수행 하는 위치입니다.
 
 ![프로젝션된 Windows::Foundation::Uri 형식](images/uri.png)
 
@@ -86,6 +87,7 @@ WINRT_ASSERT(contosoUri.ToString() == L"http://www.contoso.com/"); // QueryInter
 이 편리는 적절한 인터페이스에 대한 쿼리를 통해 수행됩니다. 하지만 여러분은 항상 이를 제어할 수 있습니다. IStringable을 직접 검색하고 이를 직접 사용하여 약간의 성능을 위해 편의성을 양보할 수 있습니다. 아래 코드 예제에서 일회성 쿼리를 통해 런타임 시 실제 IStringable 인터페이스 포인터를 가져옵니다. 이후 **ToString**에 대한 호출은 직접적이며 더 이상 **QueryInterface**에 대한 호출을 방지합니다.
 
 ```cppwinrt
+...
 IStringable stringable = contosoUri; // One-off QueryInterface.
 WINRT_ASSERT(stringable.ToString() == L"http://www.contoso.com/");
 ```
@@ -95,10 +97,21 @@ WINRT_ASSERT(stringable.ToString() == L"http://www.contoso.com/");
 참고로, ABI 수준에서 구성원에 액세스하려는 경우 할 수 있습니다. 아래의 예제는 방법과 추가 세부 정보, [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md)의 코드 예제를 보여 줍니다.
 
 ```cppwinrt
-int port = contosoUri.Port(); // Access the Port "property" accessor via C++/WinRT.
+#include <Windows.Foundation.h>
+#include <unknwn.h>
+#include <winrt/Windows.Foundation.h>
+using namespace winrt::Windows::Foundation;
 
-winrt::com_ptr<ABI::Windows::Foundation::IUriRuntimeClass> abiUri = contosoUri.as<ABI::Windows::Foundation::IUriRuntimeClass>();
-HRESULT hr = abiUri->get_Port(&port); // Access the get_Port ABI function.
+int main()
+{
+    winrt::init_apartment();
+    Uri contosoUri{ L"http://www.contoso.com" };
+
+    int port = contosoUri.Port(); // Access the Port "property" accessor via C++/WinRT.
+
+    winrt::com_ptr<ABI::Windows::Foundation::IUriRuntimeClass> abiUri = contosoUri.as<ABI::Windows::Foundation::IUriRuntimeClass>();
+    HRESULT hr = abiUri->get_Port(&port); // Access the get_Port ABI function.
+}
 ```
 
 ## <a name="delayed-initialization"></a>지연된 초기화
@@ -107,6 +120,8 @@ HRESULT hr = abiUri->get_Port(&port); // Access the get_Port ABI function.
 ```cppwinrt
 #include <winrt/Windows.Storage.Streams.h>
 using namespace winrt::Windows::Storage::Streams;
+
+#define MAX_IMAGE_SIZE 1024
 
 struct Sample
 {
@@ -119,11 +134,19 @@ struct Sample
 private:
     Buffer m_gamerPicBuffer{ nullptr };
 };
+
+int main()
+{
+    winrt::init_apartment();
+    Sample s;
+    // ...
+    s.DelayedInit();
+}
 ```
 
 `nullptr_t` 생성자를 *제외한* 프로젝션된 형식의 모든 생성자는 지원하는 Windows 런타임 개체를 만들 수 있습니다. `nullptr_t` 생성자는 기본적으로 작동하지 않습니다. 다음 번에 초기화할 프로젝션된 개체를 필요로 합니다. 따라서 런타임 클래스에 기본 생성자가 있는지 여부에 상관없이 효율적인 지연된 초기화에 대한 이 방법을 사용할 수 있습니다.
 
-이 고려 사항은 벡터 및 지도 같은 기본 생성자를 호출 하는 여기서 다른 위치를 영향을 줍니다. 이 코드 예제를 것이 좋습니다.
+이 고려 사항은 벡터 및 지도 같은 기본 생성자를 호출 하는 여기서 다른 위치를 영향을 줍니다. 이 코드 예제에서는 해야 하는 것이 좋습니다는 **비어 있는 앱 (C++/WinRT)** 프로젝트입니다.
 
 ```cppwinrt
 std::map<int, TextBlock> lookup;
@@ -145,7 +168,7 @@ lookup.insert_or_assign(2, value);
 
 응용 프로그램 프로젝트에서 Windows 런타임 구성 요소의 Windows 런타임 메타데이터(`.winmd`) 파일을 참조하여 빌드합니다. 빌드 도중 `cppwinrt.exe` 도구가 구성 요소의 API 표면을 완전하게 설명하거나 *프로젝션*하는 표준 C++ 라이브러리를 생성합니다. 다시 말해서 생성된 라이브러리에는 구성 요소에 프로젝션된 형식이 포함됩니다.
 
-그런 다음 Windows 네임스페이스 형식과 마찬가지로 헤더를 추가한 다음 생성자 중 하나를 통해 프로젝션된 형식을 생성합니다. 응용 프로그램 프로젝트의 시작 코드가 런타임 클래스를 등록하고, 프로젝션된 형식의 생성자는 [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646)를 호출하여 참조된 구성 요소의 런타임 클래스를 활성화합니다.
+그런 다음 Windows 네임스페이스 형식과 마찬가지로 헤더를 추가한 다음 생성자 중 하나를 통해 프로젝션된 형식을 생성합니다. 응용 프로그램 프로젝트의 시작 코드가 런타임 클래스를 등록하고, 프로젝션된 형식의 생성자는 [**RoActivateInstance**](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance)를 호출하여 참조된 구성 요소의 런타임 클래스를 활성화합니다.
 
 ```cppwinrt
 #include <winrt/BankAccountWRC.h>
@@ -163,6 +186,8 @@ Windows 런타임 구성 요소에서 구현된 API의 사용에 대한 자세�
 XAML UI에서 사용되는 형식은 XAML과 동일한 프로젝트에 있다고 해도 런타임 클래스이어야 합니다.
 
 이러한 시나리오에서는 프로젝션된 형식을 런타임 클래스의 Windows 런타임 메타데이터(`.winmd`)에서 생성합니다. 한 번 더 헤더를 추가하지만 이번에는 프로젝션된 형식을 `nullptr` 생성자를 통해 생성합니다. 생성자는 초기화를 수행하지 않기 대문에 다음에는 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 도우미 함수를 통해 값을 인스턴스에 할당하여 필요한 생성자 인수를 전달해야 합니다. 사용하는 코드와 동일한 프로젝트에서 구현되는 런타임 클래스는 등록하거나, 혹은 Windows 런타임/COM 활성화를 통해 인스턴스화할 필요도 없습니다.
+
+필요는 **비어 있는 앱 (C++/WinRT)** 이 코드 예제에 대 한 프로젝트입니다.
 
 ```cppwinrt
 // MainPage.h
@@ -211,7 +236,7 @@ myrc2 = winrt::make<MyProject::implementation::MyRuntimeClass>();
 
 - 프로젝션된 형식의 모든 인터페이스에 속한 멤버에 액세스할 수 있습니다.
 - 프로젝션된 형식을 호출자에게 반환할 수 있습니다.
-- 프로젝션된 형식과 인터페이스는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 프로젝션된 형식 또는 인터페이스에 대해 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)를 호출하여 다른 프로젝션된 인터페이스에 대한 쿼리를 실행할 수 있으며, 다른 프로젝션된 인터페이스 역시 사용하거나 호출자에게 반환할 수 있습니다. **as** 구성원 함수는 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)와 같이 작용합니다.
+- 프로젝션된 형식과 인터페이스는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 프로젝션된 형식 또는 인터페이스에 대해 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)를 호출하여 다른 프로젝션된 인터페이스에 대한 쿼리를 실행할 수 있으며, 다른 프로젝션된 인터페이스 역시 사용하거나 호출자에게 반환할 수 있습니다. **as** 구성원 함수는 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))와 같이 작용합니다.
 
 ```cppwinrt
 void f(MyProject::MyRuntimeClass const& myrc)
@@ -256,15 +281,15 @@ BankAccountWRC::BankAccount account = factory.ActivateInstance<BankAccountWRC::B
 ```
 
 ## <a name="important-apis"></a>중요 API
-* [QueryInterface 인터페이스](https://msdn.microsoft.com/library/windows/desktop/ms682521)
-* [RoActivateInstance 함수](https://msdn.microsoft.com/library/br224646)
-* [Windows::Foundation::Uri class](/uwp/api/windows.foundation.uri)
+* [QueryInterface 인터페이스](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
+* [RoActivateInstance 함수](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance)
+* [Windows::Foundation::Uri 클래스](/uwp/api/windows.foundation.uri)
 * [winrt::get_activation_factory 함수 템플릿](/uwp/cpp-ref-for-winrt/get-activation-factory)
 * [winrt::make 함수 템플릿](/uwp/cpp-ref-for-winrt/make)
-* [winrt::Windows::Foundation::IUnknown 구조체](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
+* [winrt::Windows::Foundation::IUnknown struct](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
 
 ## <a name="related-topics"></a>관련 항목
-* [C++/WinRT의 이벤트 작성](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component)
+* [이벤트를 작성 C++/WinRT](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component)
 * [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md)
 * [C++/WinRT 소개](intro-to-using-cpp-with-winrt.md)
-* [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)
+* [XAML 컨트롤(C++/WinRT 속성에 바인딩)](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)

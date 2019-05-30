@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ebac70d56fcdf1bf717d763daf4ac1bd9c06d4b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a9b6c6fc7a7e3ddfab70fe289a41bb4d436e9722
+ms.sourcegitcommit: ea15237291ae3ade0bf22e38bd292c3a23947a03
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640088"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377309"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>테스트용으로 로드하는 UWP 앱의 조정된 Windows 런타임 구성 요소
 
@@ -19,7 +19,7 @@ ms.locfileid: "57640088"
 
 ## <a name="introduction"></a>소개
 
->**참고**  에 대 한이 백서와 함께 제공 되는 샘플 코드를 다운로드할 수 있습니다 [Visual Studio 2015 및 2017](https://aka.ms/brokeredsample)합니다. 조정 된 Windows 런타임 구성 요소를 작성 하려면 Microsoft Visual Studio 템플릿 여기에서 다운로드할 수 있습니다. [Windows 10 용 유니버설 Windows 앱을 대상으로 하는 visual Studio 2015 템플릿](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
+>**참고**  에 대 한이 백서와 함께 제공 되는 샘플 코드를 다운로드할 수 있습니다 [Visual Studio 2015 및 2017](https://aka.ms/brokeredsample)합니다. 조정 된 Windows 런타임 구성 요소를 작성 하려면 Microsoft Visual Studio 템플릿 여기에서 다운로드할 수 있습니다. [Windows 10 용 유니버설 Windows 앱을 대상으로 하는 visual Studio 2015 템플릿](https://marketplace.visualstudio.com/vsgallery/10be07b3-67ef-4e02-9243-01b78cd27935)
 
 Windows 라는 새로운 기능이 포함 되어 있습니다 *조정 된 Windows 런타임 구성 요소 테스트용으로 로드 된 응용 프로그램에 대 한*합니다. Microsoft는 하나의 프로세스에서 기존 데스크톱 소프트웨어 자산(데스크톱 구성 요소)을 실행하는 한편, UWP 앱에서 이 코드를 조작하는 기능을 설명하는 데 IPC(프로세스 간 통신)라는 용어를 사용합니다. 데이터베이스 응용 프로그램과 Windows에서 NT 서비스를 활용하는 응용 프로그램이 유사한 다중 프로세스 아키텍처를 공유하므로, 이것은 기업 개발자에게 친숙한 모델입니다.
 
@@ -44,7 +44,7 @@ Windows 라는 새로운 기능이 포함 되어 있습니다 *조정 된 Windo
 
 **계약**
 
-테스트용으로 로드하는 응용 프로그램과 데스크톱 구성 요소 간의 계약은 UWP 형식 시스템의 사용 조건에 설명되어 있습니다. 여기에 하나 이상의 C 선언\# UWP를 나타낼 수 있는 클래스입니다. MSDN 항목을 참조 하세요 [Creating Windows Runtime Components in C\# 및 Visual Basic](https://msdn.microsoft.com/library/br230301.aspx) C를 사용 하 여 Windows 런타임 클래스를 만드는 특정 요구 사항에 대해\#합니다.
+테스트용으로 로드하는 응용 프로그램과 데스크톱 구성 요소 간의 계약은 UWP 형식 시스템의 사용 조건에 설명되어 있습니다. 여기에 하나 이상의 C 선언\# UWP를 나타낼 수 있는 클래스입니다. MSDN 항목을 참조 하세요 [Creating Windows Runtime Components in C\# 및 Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br230301(v=vs.140)) C를 사용 하 여 Windows 런타임 클래스를 만드는 특정 요구 사항에 대해\#합니다.
 
 >**참고**  열거형 데스크톱 구성 요소 및 지금은 테스트용으로 로드 된 응용 프로그램 간의 Windows 런타임 구성 요소 계약에서 지원 되지 않습니다.
 
@@ -161,7 +161,7 @@ Visual Studio에서 이 작업을 수행하려면 새로 만든 프로젝트를 
     rem erase "$(TargetPath)"
 ```
 
-참조를 한 번 **winmd** 만들어집니다 ("참조" 프로젝트의 대상 폴더 아래에 있는 폴더)에서는 직접 사용 중인 각 테스트용으로 로드 된 응용 프로그램 프로젝트 (복사)를 수행 하 고 참조 합니다. 이 내용은 다음 섹션에서 자세히 설명하겠습니다. 위의 빌드 규칙에 포함 된 프로젝트 구조 되도록 구현 및 참조 **winmd** 혼동을 피하기 위해 빌드 계층에 명확 하 게 분리 된 디렉터리에 있습니다.
+프로젝트 Target 폴더 아래의 “reference” 폴더에 참조 **winmd**가 만들어지면 이 참조를 사용하는 테스트용으로 로드하는 각 응용 프로그램 프로젝트에 직접 옮겨져(복사) 참조됩니다. 이 내용은 다음 섹션에서 자세히 설명하겠습니다. 위의 빌드 규칙에 포함된 프로젝트 구조에서는 구현 및 참조 **winmd**가 빌드 계층 구조에서 명확하게 분리된 디렉터리에 위치하여 혼동을 피할 수 있습니다.
 
 ## <a name="side-loaded-applications-in-detail"></a>테스트용으로 로드하는 응용 프로그램 세부 정보
 앞에서 설명했듯이, 테스트용으로 로드하는 응용 프로그램은 다른 UWP 앱처럼 빌드됩니다. 하지만 한 가지 추가 사항이 있습니다. 즉, 테스트용으로 로드하는 응용 프로그램의 매니페스트에서 RuntimeClass의 가용성을 선언합니다. 그러면 응용 프로그램이 간단하게 새 값을 작성하여 데스크톱 구성 요소의 해당 기능에 액세스할 수 있습니다. <Extension> 섹션의 새 매니페스트 항목은 데스크톱 구성 요소에서 구현된 RuntimeClass 및 해당 위치에 대한 정보를 설명합니다. 응용 프로그램 매니페스트의 이러한 선언 콘텐츠는 Windows 10을 대상으로 하는 앱에서도 동일합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
@@ -181,7 +181,7 @@ Visual Studio에서 이 작업을 수행하려면 새로 만든 프로젝트를 
 
 <ActivatableClass> 섹션은 앱 패키지의 Windows 런타임 구성 요소에서 기본으로 사용되는 실제 In-Process RuntimeClass와 동일합니다. <ActivatableClassAttribute> 새 요소 및 특성 이름 형식과 "DesktopApplicationPath" = = "string"은 필수 및 고정 합니다. Value 특성은 데스크톱 구성 요소의 구현 winmd가 상주하는 위치를 가리킵니다(자세한 내용은 다음 섹션 참고). 데스크톱 구성 요소에서 기본으로 사용하는 각 RuntimeClass에는 고유한 <ActivatableClass> 요소 트리가 있어야 합니다. ActivatableClassId는 RuntimeClass의 네임스페이스로 정규화된 이름과 일치해야 합니다.
 
-"계약 정의" 섹션의 설명대로, 데스크톱 구성 요소의 참조 winmd를 프로젝트에서 참조해야 합니다. Visual Studio 프로젝트 시스템은 일반적으로 이름이 같은 2개 수준의 디렉터리 구조를 만듭니다. 이 샘플에서는 EnterpriseIPCApplication\\EnterpriseIPCApplication 합니다. 참조가 **winmd** 이 두 번째 수준 디렉터리와 다음 대화 상자를 사용 하 여 프로젝트 참조에 수동으로 복사 됩니다 (클릭을 **찾아보기... **  단추)를 찾아이 참조할 **winmd**합니다. 그러면 데스크톱 구성 요소의 최상위 수준 네임스페이스(예제: Fabrikam)가 프로젝트의 참조 부분에서 최상위 수준 노드로 나타납니다.
+"계약 정의" 섹션의 설명대로, 데스크톱 구성 요소의 참조 winmd를 프로젝트에서 참조해야 합니다. Visual Studio 프로젝트 시스템은 일반적으로 이름이 같은 2개 수준의 디렉터리 구조를 만듭니다. 이 샘플에서는 EnterpriseIPCApplication\\EnterpriseIPCApplication 합니다. 참조가 **winmd** 이 두 번째 수준 디렉터리와 다음 대화 상자를 사용 하 여 프로젝트 참조에 수동으로 복사 됩니다 (클릭을 **찾아보기...**  단추)를 찾아이 참조할 **winmd**합니다. 그러면 데스크톱 구성 요소의 최상위 수준 네임스페이스(예제: Fabrikam)가 프로젝트의 참조 부분에서 최상위 수준 노드로 나타납니다.
 
 >**참고** 사용 하는 것이 반드시 합니다 **참조 winmd** 테스트용으로 로드 된 응용 프로그램에서. 실수로 전달 하는 경우는 **구현 winmd** 테스트용 로드 앱 디렉터리에 대 한 참조를 가능성이 받게 "IStringable를 찾을 수 없습니다"와 관련 된 오류가 있습니다. 이것이 하나 있는지 확인 하는 로그인 잘못 **winmd** 참조 되었습니다. IPC 서버 앱에서 (다음 섹션에 자세히 설명) 신중 하 게 빌드 후 규칙 분리 이러한 두 **winmd** 별도 디렉터리에 있습니다.
 
@@ -406,7 +406,7 @@ Visual Studio에서 이 작업을 수행하려면 새로 만든 프로젝트를 
 
 위의 참조는 이 하이브리드 서버의 정상적인 작동에 중요한 참조가 세심하게 혼합된 것입니다. 프로토콜은 프로젝트 OutputType을 편집하는 방법에서 설명한 대로 .csproj 파일을 열고 필요에 따라 이러한 참조를 추가하는 것입니다.
 
-참조가 제대로 구성되면 다음 작업은 서버의 기능을 구현하는 것입니다. MSDN 항목을 참조 하세요 [모범 사례에 대 한 Windows 런타임 구성 요소와의 상호 운용성 (C를 사용 하 여 UWP 앱\#, VB 또는 c + + 및 XAML)](https://msdn.microsoft.com/library/windows/apps/hh750311.aspx)합니다.
+참조가 제대로 구성되면 다음 작업은 서버의 기능을 구현하는 것입니다. MSDN 항목을 참조 하세요 [모범 사례에 대 한 Windows 런타임 구성 요소와의 상호 운용성 (C를 사용 하 여 UWP 앱\#/VB/C++ 및 XAML)](https://docs.microsoft.com/previous-versions/windows/apps/hh750311(v=win.10))합니다.
 구현의 일환으로 데스크톱 코드를 호출할 수 있는 Windows 런타임 구성 요소 dll을 만드는 작업입니다. 함께 제공되는 샘플에는 Windows 런타임에서 사용되는 다음과 같은 주요 패턴이 있습니다.
 
 -   메서드 호출
@@ -476,12 +476,12 @@ IPC 방법에서는 두 프로세스 사이에 Windows 런타임 인터페이스
 
 **Visual Studio에서 프록시 만들기**
 
-프로세스 만들기 및 등록 프록시 및 스텁을 일반 UWP 앱 패키지 내에서 사용할 항목에 나와 [Windows 런타임 구성 요소에서 이벤트 발생 시키기](https://msdn.microsoft.com/library/windows/apps/dn169426.aspx)합니다.
+프로세스 만들기 및 등록 프록시 및 스텁을 일반 UWP 앱 패키지 내에서 사용할 항목에 나와 [Windows 런타임 구성 요소에서 이벤트 발생 시키기](https://docs.microsoft.com/previous-versions/windows/apps/dn169426(v=vs.140))합니다.
 이 문서에서 설명하는 단계는 아래에서 설명하는 프로세스보다 더 복잡합니다. 전역으로 등록하는 것이 아니라, 응용 프로그램 패키지 내부에서 프록시/스텁을 등록해야 하기 때문입니다.
 
 **1 단계:** Visual Studio에서 프록시/스텁 프로젝트를 만들 데스크톱 구성 요소 프로젝트에 대 한 솔루션을 사용 합니다.
 
-**솔루션 > 추가 > 프로젝트 > Visual c + + > Win32 콘솔 DLL 선택 옵션입니다.**
+**솔루션 > 추가 > 프로젝트 > Visual C++ > Win32 콘솔 DLL 선택 옵션입니다.**
 
 아래 단계에 대 한 서버 구성 요소 라고 가정 **MyWinRTComponent**합니다.
 
@@ -519,25 +519,25 @@ DllUnregisterServer PRIVATE
 
 MyWinRTComponent.Proxies
 
-**C/c + + > 전처리기 정의 > 추가**
+**C /C++ > 전처리기 정의 > 추가**
 
 "WIN32; \_인식 합니다. 등록할\_프록시\_DLL "
 
-**C/c + + > 미리 컴파일된 헤더: "미리 컴파일된 헤더 사용 하지" 선택**
+**C /C++ > 미리 컴파일된 헤더: "미리 컴파일된 헤더 사용 하지" 선택**
 
 **링커 > 일반 > 가져오기 라이브러리 무시: "예" 선택**
 
 **링커 > 입력 > 추가 종속성: Rpcrt4.lib;runtimeobject.lib 추가**
 
-**링커 > Windows 메타 데이터 > Windows 메타 데이터를 생성 합니다. "아니요"를 선택 합니다.**
+**Linker > Windows Metadata > Generate Windows Metadata : "아니요"를 선택 합니다.**
 
 **8 단계:** "MyWinRTProxy" 프로젝트를 빌드하십시오.
 
 **프록시 배포**
 
-프록시를 전역으로 등록해야 합니다. 이를 위한 가장 간단한 방법은 설치 프로세스에서 프록시 dll의 DllRegisterServer를 호출하도록 만드는 것입니다. 이 기능은 x86용으로 빌드된 서버만 지원하므로(즉, 64비트 지원 없음), 가장 간단한 구성은 32비트 서버, 32비트 프록시 및 32비트 테스트용으로 로드하는 응용 프로그램을 사용하는 것입니다. 프록시는 일반적으로 구현와 함께 배치 **winmd** 데스크톱 구성 요소에 대 한 합니다.
+프록시를 전역으로 등록해야 합니다. 이를 위한 가장 간단한 방법은 설치 프로세스에서 프록시 dll의 DllRegisterServer를 호출하도록 만드는 것입니다. 이 기능은 x86용으로 빌드된 서버만 지원하므로(즉, 64비트 지원 없음), 가장 간단한 구성은 32비트 서버, 32비트 프록시 및 32비트 테스트용으로 로드하는 응용 프로그램을 사용하는 것입니다. 프록시는 일반적으로 데스크톱 구성 요소의 구현 **winmd**와 함께 배치됩니다.
 
-한 가지 추가 구성 단계를 수행해야 합니다. 테스트용 로드 프로세스에서 프록시를 로드하고 실행할 수 있게 하려면 디렉터리에 ALL_APPLICATION_PACKAGES에 대한 "읽기 / 실행"을 표시해야 합니다. 통해 이렇게 합니다 **icacls.exe** 명령줄 도구입니다. 디렉터리에서이 명령을 실행 해야 여기서 구현을 **winmd** 상주 하는 프록시/스텁 dll 및:
+한 가지 추가 구성 단계를 수행해야 합니다. 테스트용 로드 프로세스에서 프록시를 로드하고 실행할 수 있게 하려면 디렉터리에 ALL_APPLICATION_PACKAGES에 대한 "읽기 / 실행"을 표시해야 합니다. **icacls.exe**명령줄 도구를 통해 이를 수행합니다. 이 명령은 구현 **winmd** 및 프록시/스텁 dll이 상주하는 디렉터리에서 실행됩니다.
 
 *icacls 합니다. /T /grant \*S-1-15-2-1:RX*
 
@@ -553,7 +553,7 @@ MyWinRTComponent.Proxies
 
 -   결과를 대량 전송하면 크로스 프로세스 활성도가 줄어듭니다. 일반적으로 Windows 런타임 배열 구문을 사용하여 수행됩니다.
 
--   반환 *목록을<T>* 여기서 *T* 는 비동기 작업 또는 속성 페치에서 개체, 프로세스 간 데이터 전송량을 많이 발생 합니다. 예를 들어, 반환 하는*목록을&lt;사람들이&gt;* 개체입니다. 각 반복 단계가 크로스 프로세스 호출이 됩니다. 각 *사람들* 반환 되는 개체의 프록시 및 각 메서드에 대 한 호출으로 표현 됩니다 또는 해당 개별 개체에 크로스 프로세스 호출 됩니다. 따라서 "바뀌었으며" *목록&lt;사람&gt;* 개체 위치 *개수* 큽니다 많은 느린 호출 하면 합니다. 배열의 구조체를 대량으로 전송하면 더 높은 성능을 보입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+-   반환 *목록을<T>*  여기서 *T* 는 비동기 작업 또는 속성 페치에서 개체, 프로세스 간 데이터 전송량을 많이 발생 합니다. 예를 들어, 반환 하는*목록을&lt;사람들이&gt;*  개체입니다. 각 반복 단계가 크로스 프로세스 호출이 됩니다. 각 *사람들* 반환 되는 개체의 프록시 및 각 메서드에 대 한 호출으로 표현 됩니다 또는 해당 개별 개체에 크로스 프로세스 호출 됩니다. 따라서 "바뀌었으며" *목록&lt;사람&gt;*  개체 위치 *개수* 큽니다 많은 느린 호출 하면 합니다. 배열의 구조체를 대량으로 전송하면 더 높은 성능을 보입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```csharp
 struct PersonStruct
@@ -565,10 +565,10 @@ struct PersonStruct
 }
 ```
 
-돌아와서* PersonStruct\[\]* of *목록&lt;PersonObject&gt;* 합니다.
+그런 다음 반환 * PersonStruct\[\]* 대신 *목록&lt;PersonObject&gt;* 합니다.
 그러면 한 번의 크로스 프로세스 "홉"에서 모든 데이터를 전달합니다.
 
-모든 성능 고려 사항의 경우처럼, 측정과 테스트가 중요합니다. 원칙적으로, 걸리는 시간을 결정하기 위해 다양한 작업에 원격 분석을 삽입해야 합니다. 범위 전체에서 측정 한 것: 예를 들어이 실제로 얼마 모두를 *사람들* 테스트용으로 로드 된 응용 프로그램에서 특정 쿼리에 대 한 개체?
+모든 성능 고려 사항의 경우처럼, 측정과 테스트가 중요합니다. 원칙적으로, 걸리는 시간을 결정하기 위해 다양한 작업에 원격 분석을 삽입해야 합니다. 범위 전체에서 측정하는 것이 중요합니다. 예를 들어 테스트용으로 로드하는 응용 프로그램의 특정 쿼리가 모든 *피플* 개체를 사용하는 데 실제로 걸리는 시간을 측정합니다.
 
 또 하나의 기술은 가변 부하 테스트입니다. 가변 지연 로드를 서버 처리에 도입하는 응용 프로그램에 성능 테스트 후크를 배치하여 수행할 수 있습니다. 그러면 다양한 종류의 부하와 다양한 서버 성능에 대한 응용 프로그램의 반응을 시뮬레이션할 수 있습니다.
 샘플은 적합한 비동기 기술을 사용하여 시간 지연을 코드에 배치하는 방법을 보여 줍니다. 주입할 정확한 지연 시간 및 인위적인 부하에 배치할 불규칙화 범위는 응용 프로그램 디자인 및 응용 프로그램 실행 예상 환경에 따라 달라집니다.
@@ -580,7 +580,7 @@ struct PersonStruct
 작업 관리자 또는 다른 타사 앱을 사용하여 서버 프로세스를 찾아서 중단할 수 있습니다. 명령줄 도구 **TaskList.exe **도 포함 있고 유연한 구문 예를 들어:
 
   
- | **명령** | **작업** |
+ | **Command** | **동작** |
  | ------------| ---------- |
  | tasklist | 실행 중인 모든 프로세스를 대략적인 생성 시간 순으로 나열합니다. 가장 최근에 만든 프로세스가 아래쪽에 나열됩니다. |
  | tasklist /FI "IMAGENAME eq dllhost.exe" /M | 모든 dllhost.exe 인스턴스에 대한 정보를 나열합니다. /M 스위치는 로드한 모듈을 나열합니다. |
@@ -590,15 +590,15 @@ struct PersonStruct
 
 ## <a name="resources"></a>리소스
 
--   [Windows 10 및 VS 2015에 대 한 조정 된 WinRT 구성 요소 프로젝트 템플릿](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
+-   [Windows 10 및 VS 2015에 대 한 조정 된 WinRT 구성 요소 프로젝트 템플릿](https://marketplace.visualstudio.com/vsgallery/10be07b3-67ef-4e02-9243-01b78cd27935)
 
 -   [NorthwindRT 조정 된 WinRT 구성 요소 예제](https://go.microsoft.com/fwlink/p/?LinkID=397349)
 
 -   [안정적이 고 신뢰할 수 있는 Microsoft Store 앱 제공](https://go.microsoft.com/fwlink/p/?LinkID=393644)
 
--   [앱 계약 및 확장명 (Windows 스토어 앱)](https://msdn.microsoft.com/library/windows/apps/hh464906.aspx)
+-   [앱 계약 및 확장명 (Windows 스토어 앱)](https://docs.microsoft.com/previous-versions/windows/apps/hh464906(v=win.10))
 
--   [Windows 10에서 앱을 테스트용으로 로드 하는 방법](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#GroupPolicy)
+-   [Windows 10에서 앱을 테스트용으로 로드 하는 방법](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
 
 -   [기업에 UWP 앱 배포](https://go.microsoft.com/fwlink/p/?LinkID=264770)
 

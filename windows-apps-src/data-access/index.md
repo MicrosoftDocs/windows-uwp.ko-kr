@@ -6,12 +6,12 @@ ms.date: 11/13/2017
 ms.topic: article
 keywords: Windows 10, UWP, 데이터, 데이터베이스, 관계형, 테이블, SQLite
 ms.localizationpriority: medium
-ms.openlocfilehash: eb5adbdd3ae12d039d934e8d0cbe468ae5c1187c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8ce2bbb1b72eaa33001e86c9aa81b334e338cb53
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583308"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362605"
 ---
 # <a name="data-access"></a>데이터 액세스
 
@@ -20,7 +20,7 @@ SQLite 데이터베이스를 사용하여 데이터를 사용자의 디바이스
 | 항목 | 설명|
 |-------|------------|
 | [UWP 앱에서 SQLite 데이터베이스 사용](sqlite-databases.md) | SQLite를 사용하여 사용자 디바이스의 경량 데이터베이스에 데이터를 저장하고 검색하는 방법을 보여 줍니다. SQLite는 서버 없는 포함된 데이터베이스 엔진입니다. |
-| [UWP 앱에서 SQL Server 데이터베이스 사용](sql-server-databases.md) | [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) 네임스페이스의 클래스를 사용하여 앱을 SQL Server 데이터베이스에 직접 연결한 다음, 데이터를 저장하고 검색하는 방법을 보여 줍니다. 서비스 계층은 필요하지 않습니다. |
+| [UWP 앱에서 SQL Server 데이터베이스 사용](sql-server-databases.md) | [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN) 네임스페이스의 클래스를 사용하여 앱을 SQL Server 데이터베이스에 직접 연결한 다음, 데이터를 저장하고 검색하는 방법을 보여 줍니다. 서비스 계층은 필요하지 않습니다. |
 
 ## <a name="related-topics"></a>관련 항목
 

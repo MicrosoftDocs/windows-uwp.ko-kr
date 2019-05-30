@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ec88af01e46788ea9f24760af7f9a3b81281ba8d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7e177f4715d549ce3ef64534e0fc28d2fc3a9fe0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593128"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359946"
 ---
 # <a name="optimize-your-xaml-markup"></a>XAML 태그 최적화
 
@@ -124,7 +124,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 
 ### <a name="use-layout-panel-properties"></a>레이아웃 패널 속성 사용
 
-레이아웃 패널에는 [Background](https://msdn.microsoft.com/library/windows/apps/BR227512) 속성이 있으므로 색을 지정하기 위해 패널 앞에 [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 둘 필요가 없습니다.
+레이아웃 패널에는 [Background](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.background) 속성이 있으므로 색을 지정하기 위해 패널 앞에 [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 둘 필요가 없습니다.
 
 **비효율적인**
 
@@ -135,7 +135,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 </Grid>
 ```
 
-**효율적인**
+**Efficient**
 
 ```xaml
 <Grid Background="Black"/>
@@ -167,7 +167,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 
 아래 _InitialPage.xaml_에서는 _ExampleResourceDictionary.xaml_의 리소스 하나를 사용하므로 시작 시 전체 _ExampleResourceDictionary.xaml_을 구문 분석해야 합니다.
 
-**InitialPage.xaml 합니다.**
+**InitialPage.xaml.**
 
 ```xaml
 <Page x:Class="ExampleNamespace.InitialPage" ...>
@@ -185,7 +185,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 </Page>
 ```
 
-**ExampleResourceDictionary.xaml 합니다.**
+**ExampleResourceDictionary.xaml.**
 
 ```xaml
 <ResourceDictionary>
@@ -212,7 +212,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 </Application>
 ```
 
-**InitialPage.xaml 합니다.**
+**InitialPage.xaml.**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -223,7 +223,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 </Page>
 ```
 
-**SecondPage.xaml 합니다.**
+**SecondPage.xaml.**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -238,7 +238,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 
 ### <a name="consolidate-multiple-brushes-that-look-the-same-into-one-resource"></a>같은 모양의 여러 브러시를 하나의 리소스에 통합
 
-XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시 사용할 수 있도록 캐시하려고 합니다. 그러나 XAML은 하나의 태그 조각에 선언된 브러시가 다른 태그 조각에 선언된 브러시와 동일한지 쉽게 구별할 수 없습니다. 다음 예제에서는 보여 주기 위해 [SolidColorBrush](https://msdn.microsoft.com/library/windows/apps/BR242962)를 사용하지만 [GradientBrush](https://msdn.microsoft.com/library/windows/apps/BR210068)를 사용하는 것이 더 중요하고 더 일반적입니다. 미리 정의된 색을 사용하는 브러시를 확인합니다. 예를 들어 `"Orange"`와 `"#FFFFA500"`은 같은 색입니다.
+XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시 사용할 수 있도록 캐시하려고 합니다. 그러나 XAML은 하나의 태그 조각에 선언된 브러시가 다른 태그 조각에 선언된 브러시와 동일한지 쉽게 구별할 수 없습니다. 다음 예제에서는 보여 주기 위해 [SolidColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)를 사용하지만 [GradientBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.GradientBrush)를 사용하는 것이 더 중요하고 더 일반적입니다. 미리 정의된 색을 사용하는 브러시를 확인합니다. 예를 들어 `"Orange"`와 `"#FFFFA500"`은 같은 색입니다.
 
 **비효율적입니다.**
 
@@ -281,15 +281,15 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 
 과도한 그리기는 둘 이상의 개체가 동일한 화면 픽셀에 그려지는 경우에 발생합니다. 이 지침과 요소 수 최소화 간에는 간혹 상충 관계가 있습니다.
 
-[  **DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/Hh701823)를 시각적 진단으로 사용합니다. 장면에서 있는지 모르는 개체가 그려지는 경우가 있을 수 있습니다.
+[  **DebugSettings.IsOverdrawHeatMapEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.debugsettings.isoverdrawheatmapenabled)를 시각적 진단으로 사용합니다. 장면에서 있는지 모르는 개체가 그려지는 경우가 있을 수 있습니다.
 
 ### <a name="transparent-or-hidden-elements"></a>투명 또는 숨겨진 요소
 
-요소가 투명하거나 다른 요소 뒤에 숨겨져 있어 보이지 않고 레이아웃에 참여하지 않는 경우 해당 요소를 삭제합니다. 요소가 초기 시각적 상태에서는 보이지 않지만 다른 시각적 상태에서는 보이는 경우 x:Load를 사용하여 상태를 제어하거나 요소 자체에 대한 [Visibility](https://msdn.microsoft.com/library/windows/apps/BR208992)를 **Collapsed**로 설정하고 적절한 상태에서 값을 **Visible**로 변경합니다. 이 추론에 대한 예외가 있습니다. 일반적으로 대부분의 시각적 상태에서는 속성 값을 요소에서 로컬로 설정하는 것이 가장 좋습니다.
+요소가 투명하거나 다른 요소 뒤에 숨겨져 있어 보이지 않고 레이아웃에 참여하지 않는 경우 해당 요소를 삭제합니다. 요소가 초기 시각적 상태에서는 보이지 않지만 다른 시각적 상태에서는 보이는 경우 x:Load를 사용하여 상태를 제어하거나 요소 자체에 대한 [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility)를 **Collapsed**로 설정하고 적절한 상태에서 값을 **Visible**로 변경합니다. 이 추론에 대한 예외가 있습니다. 일반적으로 대부분의 시각적 상태에서는 속성 값을 요소에서 로컬로 설정하는 것이 가장 좋습니다.
 
 ### <a name="composite-elements"></a>복합 요소
 
-여러 요소를 계층화하는 대신 복합 요소를 사용하여 효과를 만듭니다. 이 예제에서는 위쪽 절반은 검은색([Grid](https://msdn.microsoft.com/library/windows/apps/BR242704)의 배경에서)이고 아래쪽 절반은 회색(**Grid**의 검은색 배경 위에 알파 혼합된 반투명 흰색의 [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)에서)인 두 가지 색조의 모양이 만들어집니다. 여기에서는 결과를 달성하는 데 필요한 픽셀의 150%가 채워집니다.
+여러 요소를 계층화하는 대신 복합 요소를 사용하여 효과를 만듭니다. 이 예제에서는 위쪽 절반은 검은색([Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)의 배경에서)이고 아래쪽 절반은 회색(**Grid**의 검은색 배경 위에 알파 혼합된 반투명 흰색의 [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)에서)인 두 가지 색조의 모양이 만들어집니다. 여기에서는 결과를 달성하는 데 필요한 픽셀의 150%가 채워집니다.
 
 **비효율적입니다.**
 
@@ -346,11 +346,11 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 </GridView>
 ```
 
-[Grid](https://msdn.microsoft.com/library/windows/apps/BR242704)가 적중 횟수를 테스트할 수 있어야 하는 경우 그 위에 투명한 배경색을 설정합니다.
+[Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)가 적중 횟수를 테스트할 수 있어야 하는 경우 그 위에 투명한 배경색을 설정합니다.
 
 ### <a name="borders"></a>테두리
 
-[Border](https://msdn.microsoft.com/library/windows/apps/BR209253) 요소를 사용하여 개체 주위의 테두리를 그립니다. 이 예제에서는 [Grid](https://msdn.microsoft.com/library/windows/apps/BR242704)를 [TextBox](https://msdn.microsoft.com/library/windows/apps/BR209683) 주위의 임시 테두리로 사용합니다. 그러나 가운데 셀에 있는 모든 픽셀은 과도하게 그려집니다.
+[Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.) 요소를 사용하여 개체 주위의 테두리를 그립니다. 이 예제에서는 [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)를 [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 주위의 임시 테두리로 사용합니다. 그러나 가운데 셀에 있는 모든 픽셀은 과도하게 그려집니다.
 
 **비효율적입니다.**
 
@@ -385,7 +385,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 
 ### <a name="cache-static-content"></a>정적 콘텐츠 캐시
 
-과도한 그리기의 또 다른 원인은 하나의 모양이 겹쳐진 여러 요소에서 만들어지는 경우입니다. 복합 모양이 포함된 [UIElement](https://msdn.microsoft.com/library/windows/apps/BR208911)에서 [CacheMode](https://msdn.microsoft.com/library/windows/apps/BR228084)를 **BitmapCache**로 설정한 경우 플랫폼은 요소를 비트맵으로 렌더링한 다음 각 프레임에서 과도한 그리기 대신 해당 비트맵을 사용합니다.
+과도한 그리기의 또 다른 원인은 하나의 모양이 겹쳐진 여러 요소에서 만들어지는 경우입니다. 복합 모양이 포함된 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에서 [CacheMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.CacheMode)를 **BitmapCache**로 설정한 경우 플랫폼은 요소를 비트맵으로 렌더링한 다음 각 프레임에서 과도한 그리기 대신 해당 비트맵을 사용합니다.
 
 **비효율적입니다.**
 
@@ -413,7 +413,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 </Canvas>
 ```
 
-[CacheMode](https://msdn.microsoft.com/library/windows/apps/BR228084)의 사용에 주의합니다. 하위 모양을 애니메이션하는 경우 모든 프레임에서 비트맵 캐시를 다시 생성해야 할 수 있으므로 이 기술을 사용해서는 안 됩니다.
+[CacheMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.CacheMode)의 사용에 주의합니다. 하위 모양을 애니메이션하는 경우 모든 프레임에서 비트맵 캐시를 다시 생성해야 할 수 있으므로 이 기술을 사용해서는 안 됩니다.
 
 ## <a name="use-xbf2"></a>XBF2 사용
 

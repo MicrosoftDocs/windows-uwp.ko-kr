@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e17b9ddd5833899a83e24d24c74f9c620a28f5c8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bfd84d5e0e41f07b53be0c0afce4b881a8a75d59
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617638"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359214"
 ---
 # <a name="receive-data"></a>데이터 수신
 
@@ -57,7 +57,7 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 } 
 ```
 
-사용자가 공유하려는 데이터는 [**ShareOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation) 개체에 포함되어 있습니다. 이 개체를 사용하여 포함된 데이터의 형식을 확인할 수 있습니다.
+사용자가 공유하려는 데이터는 [**ShareOperation**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation) 개체에 포함되어 있습니다. 이 개체를 사용하여 포함된 데이터의 형식을 확인할 수 있습니다.
 
 ```cs
 ShareOperation shareOperation = args.ShareOperation;
@@ -79,7 +79,7 @@ if (shareOperation.Data.Contains(StandardDataFormats.Text))
 shareOperation.ReportStarted(); 
 ```
 
-[  **ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted)를 호출한 후에는 앱과의 사용자 상호 작용이 더 이상 필요하지 않습니다. 따라서 사용자가 앱을 종료해도 되는 경우에만 이 메서드를 호출해야 합니다.
+[  **ReportStarted**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted)를 호출한 후에는 앱과의 사용자 상호 작용이 더 이상 필요하지 않습니다. 따라서 사용자가 앱을 종료해도 되는 경우에만 이 메서드를 호출해야 합니다.
 
 확장 공유에서는 앱이 DataPackage 개체로부터 모든 데이터를 가져오기 전에 사용자가 원본 앱을 해제할 수 있습니다. 따라서 앱에서 필요한 데이터 가져오기를 완료한 경우 이를 시스템에서 알 수 있도록 하는 것이 좋습니다. 그러면 시스템에서 필요에 따라 원본 앱을 일시 중단하거나 종료할 수 있습니다.
 
@@ -93,21 +93,21 @@ shareOperation.ReportSubmittedBackgroundTask();
 shareOperation.ReportError("Could not reach the server! Try again later."); 
 ```
 
-앱에서 공유 콘텐츠를 성공적으로 처리하면 [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted)를 호출하여 시스템에 알려야 합니다.
+앱에서 공유 콘텐츠를 성공적으로 처리하면 [**ReportCompleted**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportcompleted)를 호출하여 시스템에 알려야 합니다.
 
 ```cs
 shareOperation.ReportCompleted();
 ```
 
-이러한 메서드를 사용할 때는 일반적으로 설명된 순서대로 메서드를 호출하고 두 번 이상 호출하지 않습니다. 그러나 대상 앱이 [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted) 전에 [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved)를 호출할 수 있는 경우가 있습니다. 예를 들어 앱은 활성화 처리기의 작업의 일부로 데이터를 검색할 수 있지만 사용자가 **공유** 단추를 선택할 때까지 **ReportStarted**를 호출하지 않습니다.
+이러한 메서드를 사용할 때는 일반적으로 설명된 순서대로 메서드를 호출하고 두 번 이상 호출하지 않습니다. 그러나 대상 앱이 [**ReportStarted**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted) 전에 [**ReportDataRetrieved**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportdataretrieved)를 호출할 수 있는 경우가 있습니다. 예를 들어 앱은 활성화 처리기의 작업의 일부로 데이터를 검색할 수 있지만 사용자가 **공유** 단추를 선택할 때까지 **ReportStarted**를 호출하지 않습니다.
 
 ## <a name="return-a-quicklink-if-sharing-was-successful"></a>공유가 성공한 경우 QuickLink 반환
 
-사용자가 콘텐츠를 받기 위해 앱을 선택한 경우 [**QuickLink**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink)를 만드는 것이 좋습니다. **QuickLink**는 사용자가 앱과 정보를 쉽게 공유할 수 있도록 해주는 바로 가기와 비슷합니다. 예를 들어 친구의 메일 주소로 미리 구성된 새 메일 메시지를 여는 **QuickLink**를 만들 수 있습니다.
+사용자가 콘텐츠를 받기 위해 앱을 선택한 경우 [**QuickLink**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink)를 만드는 것이 좋습니다. **QuickLink**는 사용자가 앱과 정보를 쉽게 공유할 수 있도록 해주는 바로 가기와 비슷합니다. 예를 들어 친구의 메일 주소로 미리 구성된 새 메일 메시지를 여는 **QuickLink**를 만들 수 있습니다.
 
-**QuickLink**에는 제목, 아이콘 및 ID가 있어야 합니다. 사용자가 공유 참을 탭하면 제목(예: "엄마의 메일")과 아이콘이 나타납니다. ID는 앱에서 메일 주소, 로그인 자격 증명 등과 같은 사용자 지정 정보에 액세스하는 데 사용됩니다. 앱에서 **QuickLink**를 만들 때 [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted)를 호출하여 **QuickLink**를 시스템에 반환합니다.
+**QuickLink**에는 제목, 아이콘 및 ID가 있어야 합니다. 사용자가 공유 참을 탭하면 제목(예: "엄마의 메일")과 아이콘이 나타납니다. ID는 앱에서 메일 주소, 로그인 자격 증명 등과 같은 사용자 지정 정보에 액세스하는 데 사용됩니다. 앱에서 **QuickLink**를 만들 때 [**ReportCompleted**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportcompleted)를 호출하여 **QuickLink**를 시스템에 반환합니다.
 
-**QuickLink**에서는 실제로 데이터를 저장하지 않습니다. 대신 선택한 경우에 앱으로 전송되는 식별자를 포함합니다. 앱에서 **QuickLink**의 ID와 해당 사용자 데이터를 저장해야 합니다. 사용자가 **QuickLink**를 탭할 때 [**QuickLinkId**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.QuickLinkId) 속성을 통해 해당 ID를 가져올 수 있습니다.
+**QuickLink**에서는 실제로 데이터를 저장하지 않습니다. 대신 선택한 경우에 앱으로 전송되는 식별자를 포함합니다. 앱에서 **QuickLink**의 ID와 해당 사용자 데이터를 저장해야 합니다. 사용자가 **QuickLink**를 탭할 때 [**QuickLinkId**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.quicklinkid) 속성을 통해 해당 ID를 가져올 수 있습니다.
 
 ```cs
 async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, string quickLinkTitle)
@@ -131,15 +131,15 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 }
 ```
 
-## <a name="see-also"></a>참고 항목 
+## <a name="see-also"></a>참조 
 
 * [앱 간 통신](index.md)
 * [데이터 공유](share-data.md)
-* [OnShareTargetActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onsharetargetactivated.aspx)
-* [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
-* [ReportError](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reporterror.aspx)
-* [ReportCompleted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportcompleted.aspx)
-* [ReportDataRetrieved](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportdataretrieved.aspx)
-* [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
-* [빠른 연결](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.aspx)
-* [QuickLInkId](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.id.aspx)
+* [OnShareTargetActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsharetargetactivated)
+* [ReportStarted](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted)
+* [ReportError](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reporterror)
+* [ReportCompleted](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportcompleted)
+* [ReportDataRetrieved](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportdataretrieved)
+* [ReportStarted](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted)
+* [QuickLink](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.quicklink)
+* [QuickLInkId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.quicklink.id)

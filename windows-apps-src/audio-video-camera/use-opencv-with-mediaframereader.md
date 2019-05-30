@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: d72a8d3fcaf337973f585ab19370140cd80f3826
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 5aee0ed5969d87cd5a9d8ef7a621b383d4078d38
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640178"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360590"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>MediaFrameReader와 OpenCV(오픈 소스 컴퓨터 비전 라이브러리) 사용
 
-이 문서에서는 여러 소스에서 미디어 프레임을 동시에 읽을 수 있는 [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) 클래스와 함께 다양한 이미지 처리 알고리즘을 제공하는 네이티브 코드 라이브러리인 OpenCV(오픈 소스 컴퓨터 비전 라이브러리)를 사용하는 방법을 설명합니다. 이 문서의 예제 코드는 컬러 센서에서 프레임을 가져와서 OpenCV 라이브러리를 이용해 각 프레임을 흐리게 처리한 다음, 처리된 이미지를 XAML **이미지** 컨트롤로 표시하는 간단한 앱을 만드는 과정을 안내합니다. 
+이 문서에서는 여러 소스에서 미디어 프레임을 동시에 읽을 수 있는 [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) 클래스와 함께 다양한 이미지 처리 알고리즘을 제공하는 네이티브 코드 라이브러리인 OpenCV(오픈 소스 컴퓨터 비전 라이브러리)를 사용하는 방법을 설명합니다. 이 문서의 예제 코드는 컬러 센서에서 프레임을 가져와서 OpenCV 라이브러리를 이용해 각 프레임을 흐리게 처리한 다음, 처리된 이미지를 XAML **이미지** 컨트롤로 표시하는 간단한 앱을 만드는 과정을 안내합니다. 
 
 >[!NOTE]
 >OpenCV.Win.Core 및 OpenCV.Win.ImgProc는 정기적으로 업데이트되지 않지만 이 페이지의 설명대로 OpenCVHelper를 만드는 데 계속 권장됩니다.
@@ -50,7 +50,7 @@ ms.locfileid: "57640178"
 [!code-cs[OpenCVInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVInitMediaCapture)]
 
 ## <a name="initialize-the-mediaframereader"></a>MediaFrameReader 초기화
-그런 다음, 이전 단계에서 검색한 RGB 프레임 소스에 대한 [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader)를 생성합니다. 효과적인 프레임 속도를 유지하려면 센서의 해상도보다 낮은 해상도의 프레임을 처리해야 할 수 있습니다. 이 예제는 **[MediaCapture.CreateFrameReaderAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync)** 메서드에 옵션 **[BitmapSize](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapsize)** 인수를 제공하여, 프레임 읽기 프로그램이 제공하는 프레임 크기를 640 x 480픽셀로 조정할 것을 요청합니다.
+그런 다음, 이전 단계에서 검색한 RGB 프레임 소스에 대한 [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader)를 생성합니다. 효과적인 프레임 속도를 유지하려면 센서의 해상도보다 낮은 해상도의 프레임을 처리해야 할 수 있습니다. 이 예제는 **[MediaCapture.CreateFrameReaderAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync)** 메서드에 옵션 **[BitmapSize](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapsize)** 인수를 제공하여, 프레임 읽기 프로그램이 제공하는 프레임 크기를 640 x 480픽셀로 조정할 것을 요청합니다.
 
 프레임 읽기 프로그램을 만든 후 **[FrameArrived](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.FrameArrived)** 이벤트에 처리기를 등록합니다. 그런 다음, **FrameRenderer** 도우미 클래스가 처리된 이미지를 제공하는 데 사용할 새 **[SoftwareBitmapSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource)** 개체를 만듭니다. 그리고 **FrameRenderer**에 대한 생성자를 호출합니다. OpenCVBridge Windows 런타임 구성 요소에 정의된 **OpenCVHelper** 클래스의 인스턴스를 초기화합니다. 이 도우미 클래스는 각 프레임을 처리할 **FrameArrived** 처리기에 사용됩니다. 마지막으로, **[StartAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.StartAsync)** 를 호출하여 프레임 읽기 프로그램을 시작합니다.
 

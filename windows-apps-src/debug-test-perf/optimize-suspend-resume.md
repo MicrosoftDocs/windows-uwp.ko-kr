@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 06af6241bdd75efdd3ff71e02f74252d60540669
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f94fcdf33267ab352f5cdc274e07373952b0939b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653658"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362159"
 ---
 # <a name="optimize-suspendresume"></a>일시 중단/다시 시작 최적화
 
@@ -54,17 +54,17 @@ UWP 프로세스 수명 시스템에서는 다양한 이유로 앱을 일시 중
 
 ### <a name="serialize-only-when-necessary"></a>필요한 경우에만 직렬화
 
-많은 앱에서 일시 중단 시 모든 데이터를 직렬화합니다. 그러나 적은 양의 앱 설정 데이터만 저장해야 하는 경우에는 데이터를 직렬화하지 않고 [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/BR241622) 저장소를 사용해야 합니다. 많은 양의 데이터 및 설정이 아닌 데이터에 대해 직렬화를 사용하세요.
+많은 앱에서 일시 중단 시 모든 데이터를 직렬화합니다. 그러나 적은 양의 앱 설정 데이터만 저장해야 하는 경우에는 데이터를 직렬화하지 않고 [**LocalSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localsettings) 저장소를 사용해야 합니다. 많은 양의 데이터 및 설정이 아닌 데이터에 대해 직렬화를 사용하세요.
 
 데이터를 직렬화하는 경우에는 변경되지 않았으면 다시 직렬화하지 않아야 합니다. 데이터를 직렬화하고 저장하는 시간 그리고 앱이 다시 활성화될 때 데이터를 읽고 역직렬화하는 추가 시간이 소요됩니다. 그보다는 앱에서 실제로 상태가 변경되었는지 확인한 다음 변경된 데이터만 직렬화하고 역직렬화하는 것이 좋습니다. 이렇게 하는 좋은 방법은 데이터가 변경된 후 데이터를 정기적으로 백그라운드에서 직렬화하는 것입니다. 이 방법을 사용하면 일시 중단 시 직렬화해야 하는 모든 항목이 이미 저장되었으므로 수행할 작업이 없고 앱이 빠르게 일시 중단됩니다.
 
 ### <a name="serializing-data-in-c-and-visual-basic"></a>C# 및 Visual Basic에서 데이터 직렬화
 
-.NET 앱에 대해 선택할 수 잇는 직렬화 기술은 [**System.Xml.Serialization.XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx), [**System.Runtime.Serialization.DataContractSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) 및 [**System.Runtime.Serialization.Json.DataContractJsonSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.json.datacontractjsonserializer.aspx) 클래스입니다.
+.NET 앱에 대해 선택할 수 잇는 직렬화 기술은 [**System.Xml.Serialization.XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer?redirectedfrom=MSDN), [**System.Runtime.Serialization.DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer?redirectedfrom=MSDN) 및 [**System.Runtime.Serialization.Json.DataContractJsonSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json.datacontractjsonserializer?redirectedfrom=MSDN) 클래스입니다.
 
-성능적 관점에서 [**XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx) 클래스를 사용하는 것이 좋습니다. **XmlSerializer**의 경우 직렬화 및 역직렬화 시간이 가장 짧고 메모리 사용 공간을 적게 유지합니다. **XmlSerializer**의 경우 일부 .NET Framework에 종속되므로 다른 직렬화 기술에 비해 **XmlSerializer**를 사용하기 위해 앱으로 로드해야 하는 모듈 수가 더 적습니다.
+성능적 관점에서 [**XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer?redirectedfrom=MSDN) 클래스를 사용하는 것이 좋습니다. **XmlSerializer**의 경우 직렬화 및 역직렬화 시간이 가장 짧고 메모리 사용 공간을 적게 유지합니다. **XmlSerializer**의 경우 일부 .NET Framework에 종속되므로 다른 직렬화 기술에 비해 **XmlSerializer**를 사용하기 위해 앱으로 로드해야 하는 모듈 수가 더 적습니다.
 
-[**DataContractSerializer** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) 쉽게 사용자 지정 클래스를 serialize 하지만 보다 성능에 큰 영향 **XmlSerializer**합니다. 향상된 성능이 필요한 경우 전환을 고려하세요. 일반적으로 직렬 변환기를 2개 이상 로드하지 않아야 하며 다른 직렬 변환기의 기능이 필요하지 않은 경우 **XmlSerializer**를 사용하는 것이 좋습니다.
+[**DataContractSerializer** ](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer?redirectedfrom=MSDN) 쉽게 사용자 지정 클래스를 serialize 하지만 보다 성능에 큰 영향 **XmlSerializer**합니다. 향상된 성능이 필요한 경우 전환을 고려하세요. 일반적으로 직렬 변환기를 2개 이상 로드하지 않아야 하며 다른 직렬 변환기의 기능이 필요하지 않은 경우 **XmlSerializer**를 사용하는 것이 좋습니다.
 
 ### <a name="reduce-memory-footprint"></a>메모리 사용 공간 감소
 
@@ -81,11 +81,11 @@ UWP 프로세스 수명 시스템에서는 다양한 이유로 앱을 일시 중
 
 일시 중단된 앱은 사용자가 포그라운드로 가져오거나 시스템의 절전 상태가 해제될 때 다시 시작할 수 있습니다. 일시 중단된 앱이 다시 시작하면 일시 중단되었을 때의 지점부터 시작합니다. 앱이 오랜 시간 동안 일시 중단된 경우에도 메모리에 저장되어 있으므로 앱 데이터가 손실되지 않습니다.
 
-대부분의 앱에서 [**Resuming**](https://msdn.microsoft.com/library/windows/apps/BR205859) 이벤트를 처리할 필요가 없습니다. 앱이 다시 시작할 때 변수 및 개체는 일시 중단되었을 시점과 정확하게 동일한 상태가 됩니다. 앱이 일시 중단된 시점과 다시 시작한 시점의 사이에 변경되었을 데이터 또는 개체(예: 업데이트 피드 데이터와 같은 오래된 콘텐츠나 네트워크 연결)를 업데이트해야 하는 경우 또는 webcam과 같은 디바이스에 대한 액세스 권한을 다시 얻어야 하는 경우에만 **Resuming** 이벤트를 처리하세요.
+대부분의 앱에서 [**Resuming**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.resuming) 이벤트를 처리할 필요가 없습니다. 앱이 다시 시작할 때 변수 및 개체는 일시 중단되었을 시점과 정확하게 동일한 상태가 됩니다. 앱이 일시 중단된 시점과 다시 시작한 시점의 사이에 변경되었을 데이터 또는 개체(예: 업데이트 피드 데이터와 같은 오래된 콘텐츠나 네트워크 연결)를 업데이트해야 하는 경우 또는 webcam과 같은 디바이스에 대한 액세스 권한을 다시 얻어야 하는 경우에만 **Resuming** 이벤트를 처리하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [일시 중단 하 고 다시 시작 하는 앱에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/Hh465088)
+* [일시 중단 하 고 다시 시작 하는 앱에 대 한 지침](https://docs.microsoft.com/windows/uwp/launch-resume/index)
  
 
  

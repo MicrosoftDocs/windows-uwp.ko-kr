@@ -1,19 +1,19 @@
 ---
 title: UWP 앱에서 SQL Server 데이터베이스 사용
 description: UWP 앱에서 SQL Server 데이터베이스 사용.
-ms.date: 11/13/2017
+ms.date: 3/28/2019
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fe215a593293ff91afb7f71a830512ac365093f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f8986f14872d4e5de2c45bba264de6619ef07141
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621158"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360145"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>UWP 앱에서 SQL Server 데이터베이스 사용
-앱을 SQL Server 데이터베이스에 직접 연결한 후, [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) 네임스페이스를 사용해 데이터를 저장 및 검색할 수 있습니다.
+앱을 SQL Server 데이터베이스에 직접 연결한 후, [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN) 네임스페이스를 사용해 데이터를 저장 및 검색할 수 있습니다.
 
 이 가이드에서 그 방법 중 하나를 살펴보겠습니다. SQL Server 인스턴스에 [Northwind](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) 샘플 데이터베이스를 설치한 후 코드 조각을 사용하면, 기본 UI가 Northwind 샘플 데이터베이스의 제품들을 보여줍니다.
 
@@ -50,7 +50,7 @@ ms.locfileid: "57621158"
 : 5: 제품을 사용 하 여 UI를 채웁니다.
 
 >[!NOTE]
-> 이 섹션에서는 데이터 액세스 코드를 구성하는 방법 중 하나를 설명합니다. SQL Server 데이터베이스에서 데이터를 저장 및 검색하기 위해 [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)를 사용하는 방법에 대한 예만 제공합니다. 응용 프로그램 디자인에 가장 적합한 방식으로 코드를 구성할 수 있습니다.
+> 이 섹션에서는 데이터 액세스 코드를 구성하는 방법 중 하나를 설명합니다. SQL Server 데이터베이스에서 데이터를 저장 및 검색하기 위해 [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN)를 사용하는 방법에 대한 예만 제공합니다. 응용 프로그램 디자인에 가장 적합한 방식으로 코드를 구성할 수 있습니다.
 
 ### <a name="add-a-connection-string"></a>연결 스트링 추가
 
@@ -77,7 +77,7 @@ sealed partial class App : Application
 
 ### <a name="create-a-class-to-hold-product-data"></a>제품 데이터를 저장할 클래스 만들기
 
-[INotifyPropertyChanged](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged.aspx) 이벤트를 구현하는 클래스를 만들어 XAML UI 특성을 이 클래스의 속성에 바인딩 시킵니다.
+[INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN) 이벤트를 구현하는 클래스를 만들어 XAML UI 특성을 이 클래스의 속성에 바인딩 시킵니다.
 
 ```csharp
 public class Product : INotifyPropertyChanged
@@ -106,7 +106,7 @@ public class Product : INotifyPropertyChanged
 
 ### <a name="retrieve-products-from-the-sql-server-database"></a>SQL Server 데이터베이스에서 제품 검색
 
-Northwind 샘플 데이터베이스에서 제품을 가져오고, 이를 ``Product`` 인스턴스의 [ObservableCollection](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx) 컬렉션으로 반환하는 메서드를 만듭니다.
+Northwind 샘플 데이터베이스에서 제품을 가져오고, 이를 ``Product`` 인스턴스의 [ObservableCollection](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1?redirectedfrom=MSDN) 컬렉션으로 반환하는 메서드를 만듭니다.
 
 ```csharp
 public ObservableCollection<Product> GetProducts(string connectionString)
@@ -208,7 +208,7 @@ public ObservableCollection<Product> GetProducts(string connectionString)
 
 ### <a name="show-products-in-the-listview"></a>ListView에 제품 표시
 
-**MainPage.xaml.cs** 파일을 열고 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)의 **ItemSource** 속성을 ``Product`` 인스턴스의 [ObservableCollection](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx)으로 설정하는 ``MainPage`` 클래스 생성자에 코드를 추가합니다.
+**MainPage.xaml.cs** 파일을 열고 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)의 **ItemSource** 속성을 ``Product`` 인스턴스의 [ObservableCollection](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1?redirectedfrom=MSDN)으로 설정하는 ``MainPage`` 클래스 생성자에 코드를 추가합니다.
 
 ```csharp
 public MainPage()
@@ -222,7 +222,7 @@ public MainPage()
 
 ![Northwind 제품](images/products-northwind.png)
 
-[System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) 네임스페이스를 확인해 SQL Server 데이터베이스에서 할 수 있는 다른 작업을 확인합니다.
+[System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN) 네임스페이스를 확인해 SQL Server 데이터베이스에서 할 수 있는 다른 작업을 확인합니다.
 
 ## <a name="trouble-connecting-to-your-database"></a>데이터베이스에 연결하는 데 문제가 있나요?
 

@@ -6,20 +6,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10 uwp 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: b480e96621e143e283a2556bdbef394aaf7dbc07
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ea84d57fbfba9666a2553500dc94275bd8b4d209
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597438"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359744"
 ---
 # <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 
 
 
-앱을 가져오려면 [Windows 인증](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 에 대 한 준비 또는 [Microsoft Store 게시](https://msdn.microsoft.com/library/windows/apps/Hh694062), 유효성을 검사 해야 하 고 로컬로 테스트 먼저 합니다. 이 항목에서는 설치 하 고 실행 하는 방법을 보여 줍니다.는 [Windows 앱 인증 키트](https://go.microsoft.com/fwlink/p/?LinkID=309666) 앱이 안전 하 고 효율적인 되도록 합니다.
+앱을 가져오려면 [Windows 인증](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 에 대 한 준비 또는 [Microsoft Store 게시](https://docs.microsoft.com/windows/uwp/publish/app-submissions), 유효성을 검사 해야 하 고 로컬로 테스트 먼저 합니다. 이 항목에서는 설치 하 고 실행 하는 방법을 보여 줍니다.는 [Windows 앱 인증 키트](https://go.microsoft.com/fwlink/p/?LinkID=309666) 앱이 안전 하 고 효율적인 되도록 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 유니버설 Windows 앱을 테스트하기 위한 필수 구성 요소:
 
@@ -52,7 +52,7 @@ ms.locfileid: "57597438"
 
 6.  보고서 파일을 열고 테스트 결과를 검토합니다.
 
-**참고**  Visual Studio를 사용 하는 경우 앱 패키지를 만들 때 Windows 앱 인증 키트를 실행할 수 있습니다. 방법을 알아보려면 [UWP 앱 패키징](https://msdn.microsoft.com/library/windows/apps/Mt627715)을 참조하세요.
+**참고**  Visual Studio를 사용 하는 경우 앱 패키지를 만들 때 Windows 앱 인증 키트를 실행할 수 있습니다. 방법을 알아보려면 [UWP 앱 패키징](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)을 참조하세요.
 
  
 
@@ -86,14 +86,14 @@ ms.locfileid: "57597438"
 
 Windows 앱 인증 키트의 성능 테스트 임계값은 절전 컴퓨터의 성능을 기반으로 합니다.
 
-테스트를 수행하는 컴퓨터의 특성이 테스트 결과에 영향을 줄 수 있습니다. 앱의 성능에 만족 하는지 확인 하려면 합니다 [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944), 화면 해상도 1366x768 (이상)를 사용 하 여 Intel Atom 프로세서 기반 컴퓨터와 같이 성능이 낮은 컴퓨터에서 앱을 테스트 하는 것이 좋습니다 및 하드 드라이브 (반도체 드라이브)와 반대로 합니다.
+테스트를 수행하는 컴퓨터의 특성이 테스트 결과에 영향을 줄 수 있습니다. 앱의 성능에 만족 하는지 확인 하려면 합니다 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies), 화면 해상도 1366x768 (이상)를 사용 하 여 Intel Atom 프로세서 기반 컴퓨터와 같이 성능이 낮은 컴퓨터에서 앱을 테스트 하는 것이 좋습니다 및 하드 드라이브 (반도체 드라이브)와 반대로 합니다.
 
-저성능 컴퓨터가 발전함에 따라 시간이 지나면 성능 특성이 변할 수도 있습니다. 최신 가리킵니다 [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944) 및 최신 앱 최신 성능 요구 사항을 준수 하는지 확인 하려면 Windows 앱 인증 키트를 사용 하 여 앱을 테스트 합니다.
+저성능 컴퓨터가 발전함에 따라 시간이 지나면 성능 특성이 변할 수도 있습니다. 최신 가리킵니다 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies) 및 최신 앱 최신 성능 요구 사항을 준수 하는지 확인 하려면 Windows 앱 인증 키트를 사용 하 여 앱을 테스트 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [Windows 앱 인증 키트 테스트](windows-app-certification-kit-tests.md)
-* [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)
  
 
  

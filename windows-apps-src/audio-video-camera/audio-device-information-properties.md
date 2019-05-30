@@ -6,24 +6,24 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 443bcc3c0280aca85de31d8c9f3704302432cb76
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 97b6bd0c3567c00902a9528d54e6417f41ac66ed
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627178"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359103"
 ---
 # <a name="audio-device-information-properties"></a>오디오 디바이스 정보 속성
 
-이 문서에는 오디오 디바이스와 관련된 디바이스 정보 속성이 나열되어 있습니다. Windows에서 각 하드웨어 디바이스에는 디바이스에 대한 특정 정보가 필요하거나 디바이스 선택기를 빌드할 때 사용할 수 있는 디바이스에 대한 자세한 정보를 제공하는 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 속성이 연결되어 있습니다. Windows에서 디바이스를 열거하는 방법에 대한 일반적인 내용은 [디바이스 열거](../devices-sensors/enumerate-devices.md) 및 [디바이스 정보 속성](../devices-sensors/device-information-properties.md)을 참조하세요.
+이 문서에는 오디오 디바이스와 관련된 디바이스 정보 속성이 나열되어 있습니다. Windows에서 각 하드웨어 디바이스에는 디바이스에 대한 특정 정보가 필요하거나 디바이스 선택기를 빌드할 때 사용할 수 있는 디바이스에 대한 자세한 정보를 제공하는 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 속성이 연결되어 있습니다. Windows에서 디바이스를 열거하는 방법에 대한 일반적인 내용은 [디바이스 열거](../devices-sensors/enumerate-devices.md) 및 [디바이스 정보 속성](../devices-sensors/device-information-properties.md)을 참조하세요.
 
 
 |이름|형식|설명|
 |------------------------------------------------------------|------------|------------------------------------------------------|
-|**System.Devices.AudioDevice.Microphone.SensitivityInDbfs**|이중|마이크 민감도를 전체 범위(dBFS) 단위를 기준으로 데시벨로 지정합니다.|
-|**System.Devices.AudioDevice.Microphone.SignalToNoiseRatioInDb**|이중|데시벨(dB) 단위로 측정되는 마이크 SNR(신호-잡음 비율)을 지정합니다.|
-|**System.Devices.AudioDevice.SpeechProcessingSupported**|부울|오디오 디바이스가 음성 처리를 지원하는지 여부를 나타냅니다.|
-|**System.Devices.AudioDevice.RawProcessingSupported**|부울|오디오 디바이스가 원시 처리를 지원하는지 여부를 나타냅니다.|
+|**System.Devices.AudioDevice.Microphone.SensitivityInDbfs**|Double|마이크 민감도를 전체 범위(dBFS) 단위를 기준으로 데시벨로 지정합니다.|
+|**System.Devices.AudioDevice.Microphone.SignalToNoiseRatioInDb**|Double|데시벨(dB) 단위로 측정되는 마이크 SNR(신호-잡음 비율)을 지정합니다.|
+|**System.Devices.AudioDevice.SpeechProcessingSupported**|Boolean|오디오 디바이스가 음성 처리를 지원하는지 여부를 나타냅니다.|
+|**System.Devices.AudioDevice.RawProcessingSupported**|Boolean|오디오 디바이스가 원시 처리를 지원하는지 여부를 나타냅니다.|
 |**System.Devices.MicrophoneArray.Geometry**|부호 없는 문자[]|마이크 배열에 대한 기하 도형 데이터입니다.|
 
 ## <a name="related-topics"></a>관련 항목

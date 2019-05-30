@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, 데스크톱 브리지, 보조 타일, 고정, 고정하기, 빠른 시작, 코드 샘플, 예, 보조타일, 데스크톱 응용 프로그램, win32, winforms, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e713f37cd5e5fbf4b2771e76fb7e132b5976629
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7ca6471122ee1870a94ef0834a5eed8f83a4d4a7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57609628"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362617"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>데스크톱 응용 프로그램에서 보조 타일 고정
 
@@ -34,7 +34,7 @@ WPF 또는 WinForms 응용 프로그램에서 보조 타일을 추가하는 방�
 
 ## <a name="enable-access-to-iinitializewithwindow-interface"></a>IInitializeWithWindow 인터페이스에 대한 액세스 사용
 
-응용 프로그램이 C# 또는 Visual Basic 등 관리되는 언어로 작성된 경우 앱 코드의 IInitializeWithWindow 인터페이스를 다음 C# 예제에 나타나는 [ComImport](https://msdn.microsoft.com/library/system.runtime.interopservices.comimportattribute.aspx) 및 Guid 특성을 사용하여 선언합니다. 이 예제에서는 System.Runtime.InteropServices 네임스페이스에 대한 코드 파일에 using 문이 있다고 가정합니다.
+응용 프로그램이 C# 또는 Visual Basic 등 관리되는 언어로 작성된 경우 앱 코드의 IInitializeWithWindow 인터페이스를 다음 C# 예제에 나타나는 [ComImport](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute?redirectedfrom=MSDN) 및 Guid 특성을 사용하여 선언합니다. 이 예제에서는 System.Runtime.InteropServices 네임스페이스에 대한 코드 파일에 using 문이 있다고 가정합니다.
 
 ```csharp
 [ComImport]
@@ -66,7 +66,7 @@ SecondaryTile tile = new SecondaryTile(
 
 ## <a name="assign-the-window-handle"></a>창 핸들 할당
 
-데스크톱 응용 프로그램의 핵심 단계입니다. 개체를 [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx) 개체로 캐스트합니다. 그런 다음 [IInitializeWithWindow.Initialize](https://msdn.microsoft.com/library/windows/desktop/hh706982.aspx) 메서드를 호출하고, 모달 대화 상자의 소유자가 되려는 창의 핸들을 전달합니다. 다음 C# 예제에서는 앱 주 창의 핸들을 메서드에 전달하는 방법을 보여 줍니다.
+데스크톱 응용 프로그램의 핵심 단계입니다. 개체를 [IInitializeWithWindow](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow) 개체로 캐스트합니다. 그런 다음 [IInitializeWithWindow.Initialize](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) 메서드를 호출하고, 모달 대화 상자의 소유자가 되려는 창의 핸들을 전달합니다. 다음 C# 예제에서는 앱 주 창의 핸들을 메서드에 전달하는 방법을 보여 줍니다.
 
 ```csharp
 // Assign the window handle

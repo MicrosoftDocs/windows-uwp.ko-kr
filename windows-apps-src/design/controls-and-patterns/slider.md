@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f01aec2a0dc6010eab53122d69e64c57fe4f5c3d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 841903f9bc998af5ead2a3486c500487cb070855
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589928"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364298"
 ---
 # <a name="sliders"></a>슬라이더
 
@@ -25,7 +25,7 @@ ms.locfileid: "57589928"
 
 슬라이더는 사용자가 트랙을 따라 Thumb 컨트롤을 이동하여 값 범위에서 값을 선택할 수 있도록 하는 컨트롤입니다.
 
-> **중요 API**: [Slider 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx), [속성을 값](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx), [ValueChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)
+> **중요 API**: [Slider 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider), [속성을 값](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [ValueChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
 
 ![슬라이더 컨트롤](images/controls/slider.png)
 
@@ -100,7 +100,7 @@ volumeSlider.ValueChanged += Slider_ValueChanged;
 stackPanel1.Children.Add(volumeSlider);
 ```
 
-[Value](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx) 속성에서 슬라이더 값을 가져오고 설정합니다. 값 변경에 응답하기 위해 데이터 바인딩을 사용하여 Value 속성에 바인딩하거나 [ValueChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx) 이벤트를 처리할 수 있습니다.
+[Value](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value) 속성에서 슬라이더 값을 가져오고 설정합니다. 값 변경에 응답하기 위해 데이터 바인딩을 사용하여 Value 속성에 바인딩하거나 [ValueChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) 이벤트를 처리할 수 있습니다.
 
 ```csharp
 private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -169,7 +169,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
     -   세로 방향이어서 불필요한 경우가 아니면 슬라이더 범위의 양 끝에 레이블을 지정합니다.
     -   가능하면 한 레이블에 한 단어만 사용합니다.
     -   끝에 문장 부호를 넣지 않습니다.
-    -   다음 레이블들은 설명적이어야 하며 나란히 배치해야 합니다. 예제: 최대/최소 보다 작은지, 낮음/높음, 소프트/클라우드입니다.
+    -   다음 레이블들은 설명적이어야 하며 나란히 배치해야 합니다. 예를 들면 다음과 같습니다. Maximum/Minimum, More/Less, Low/High, Soft/Loud.
 -   **값 레이블**
 
     값 레이블은 슬라이더의 현재 값을 표시합니다.
@@ -192,4 +192,4 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 ## <a name="related-topics"></a>관련 항목
 - [설정/해제 스위치](toggles.md)
-- [Slider 클래스](https://msdn.microsoft.com/library/windows/apps/br209614)
+- [Slider 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider)

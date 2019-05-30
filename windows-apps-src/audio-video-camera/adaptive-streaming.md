@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 66618d79166e06f6ee2696ed3c9f193a310b6ae9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9ee2f8fd670da6bf843962e6b4dcac7a4b0c516d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617878"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359138"
 ---
 # <a name="adaptive-streaming"></a>적응 스트리밍
 
@@ -27,17 +27,17 @@ ms.locfileid: "57617878"
 
 ## <a name="simple-adaptive-streaming-with-mediaplayer-and-mediaplayerelement"></a>MediaPlayer 및 MediaPlayerElement의 간단한 적응 스트리밍
 
-UWP 앱에서 적응 스트리밍 미디어를 재생하려면 DASH 또는 HLS 매니페스트 파일을 가리키는 **Uri** 개체를 만듭니다. [  **MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) 클래스의 인스턴스를 만듭니다. [  **MediaSource.CreateFromUri**](https://msdn.microsoft.com/library/windows/apps/dn930912)를 호출하여 새 **MediaSource** 개체를 만들고 **MediaPlayer**의 [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) 속성으로 설정합니다. [  **Play**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play)를 호출하여 미디어 콘텐츠 재생을 시작합니다.
+UWP 앱에서 적응 스트리밍 미디어를 재생하려면 DASH 또는 HLS 매니페스트 파일을 가리키는 **Uri** 개체를 만듭니다. [  **MediaPlayer**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer) 클래스의 인스턴스를 만듭니다. [  **MediaSource.CreateFromUri**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfromuri)를 호출하여 새 **MediaSource** 개체를 만들고 **MediaPlayer**의 [**Source**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.source) 속성으로 설정합니다. [  **Play**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.play)를 호출하여 미디어 콘텐츠 재생을 시작합니다.
 
 [!code-cs[DeclareMediaPlayer](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetDeclareMediaPlayer)]
 
 [!code-cs[ManifestSourceNoUI](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetManifestSourceNoUI)]
 
-위의 예제는 미디어 콘텐츠의 오디오를 재생하지만 UI에서 콘텐츠를 자동으로 렌더링하지는 않습니다. 비디오 콘텐츠를 재생하는 대부분의 앱은 XAML 페이지의 콘텐츠를 렌더링하려고 합니다.  이렇게 하려면 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) 컨트롤을 XAML 페이지에 추가합니다.
+위의 예제는 미디어 콘텐츠의 오디오를 재생하지만 UI에서 콘텐츠를 자동으로 렌더링하지는 않습니다. 비디오 콘텐츠를 재생하는 대부분의 앱은 XAML 페이지의 콘텐츠를 렌더링하려고 합니다.  이렇게 하려면 [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement) 컨트롤을 XAML 페이지에 추가합니다.
 
 [!code-xml[MediaPlayerElementXAML](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml#SnippetMediaPlayerElementXAML)]
 
-[  **MediaSource.CreateFromUri**](https://msdn.microsoft.com/library/windows/apps/dn930912)를 호출하여 DASH 또는 HLS 매니페스트 파일의 URI에서 **MediaSource**를 만듭니다. 그런 다음 **MediaPlayerElement**의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br227420) 속성을 설정합니다. **MediaPlayerElement**에서 자동으로 콘텐츠의 새 **MediaPlayer** 개체를 만듭니다. **MediaPlayer**에서 **Play**를 호출하여 콘텐츠 재생을 시작할 수 있습니다.
+[  **MediaSource.CreateFromUri**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfromuri)를 호출하여 DASH 또는 HLS 매니페스트 파일의 URI에서 **MediaSource**를 만듭니다. 그런 다음 **MediaPlayerElement**의 [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaelement.sourceproperty) 속성을 설정합니다. **MediaPlayerElement**에서 자동으로 콘텐츠의 새 **MediaPlayer** 개체를 만듭니다. **MediaPlayer**에서 **Play**를 호출하여 콘텐츠 재생을 시작할 수 있습니다.
 
 [!code-cs[ManifestSource](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetManifestSource)]
 
@@ -48,35 +48,35 @@ UWP 앱에서 적응 스트리밍 미디어를 재생하려면 DASH 또는 HLS �
 
 사용자 지정 HTTP 헤더를 제공하거나, 현재 다운로드 및 재생 비트 전송률을 모니터링하거나, 시스템이 적응 스트리밍의 비트 전송률을 전환할 때 확인할 비율을 조정하는 등의 추가적인 고급 적응 스트리밍 기능이 앱에 필요하면 **[AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource)** 개체를 사용합니다.
 
-적응 스트리밍 API는 [**Windows.Media.Streaming.Adaptive**](https://msdn.microsoft.com/library/windows/apps/dn931279) 네임스페이스에 있습니다. 이 문서의 예제는 다음 네임스페이스의 API를 사용합니다.
+적응 스트리밍 API는 [**Windows.Media.Streaming.Adaptive**](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive) 네임스페이스에 있습니다. 이 문서의 예제는 다음 네임스페이스의 API를 사용합니다.
 
 [!code-cs[AdaptiveStreamingUsing](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetAdaptiveStreamingUsing)]
 
 ## <a name="initialize-an-adaptivemediasource-from-a-uri"></a>URI에서 AdaptiveMediaSource를 초기화합니다.
 
-[  **CreateFromUriAsync**](https://msdn.microsoft.com/library/windows/apps/dn931261)를 호출하여 적응 스트리밍 매니페스트 파일의 URI를 통해 **AdaptiveMediaSource**를 초기화합니다. 이 메서드에서 반환된 [**AdaptiveMediaSourceCreationStatus**](https://msdn.microsoft.com/library/windows/apps/dn946917) 값을 통해 미디어 원본이 성공적으로 생성되었는지 알 수 있습니다. 이럴 경우, [**MediaSource.CreateFromAdaptiveMediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaSource.AdaptiveMediaSource)를 호출하고 이를 미디어 플레이어의 [**Source**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Source) 속성에 할당하여 **MediaSource** 개체를 만드는 방식으로 개체를 **MediaPlayer**의 스트림 원본으로 설정할 수 있습니다. 이 예제에서는 [**AvailableBitrates**](https://msdn.microsoft.com/library/windows/apps/dn931257) 속성을 쿼리하여 이 스트림에 지원되는 최대 비트 전송률을 확인하고 해당 값을 초기 비트 전송률로 설정합니다. 이 예제는 이 문서에서 나중에 설명할 여러 **AdaptiveMediaSource** 이벤트에 대한 처리기 또한 등록합니다.
+[  **CreateFromUriAsync**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasource.createfromuriasync)를 호출하여 적응 스트리밍 매니페스트 파일의 URI를 통해 **AdaptiveMediaSource**를 초기화합니다. 이 메서드에서 반환된 [**AdaptiveMediaSourceCreationStatus**](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus) 값을 통해 미디어 원본이 성공적으로 생성되었는지 알 수 있습니다. 이럴 경우, [**MediaSource.CreateFromAdaptiveMediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaSource.AdaptiveMediaSource)를 호출하고 이를 미디어 플레이어의 [**Source**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Source) 속성에 할당하여 **MediaSource** 개체를 만드는 방식으로 개체를 **MediaPlayer**의 스트림 원본으로 설정할 수 있습니다. 이 예제에서는 [**AvailableBitrates**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasource.availablebitrates) 속성을 쿼리하여 이 스트림에 지원되는 최대 비트 전송률을 확인하고 해당 값을 초기 비트 전송률로 설정합니다. 이 예제는 이 문서에서 나중에 설명할 여러 **AdaptiveMediaSource** 이벤트에 대한 처리기 또한 등록합니다.
 
 [!code-cs[InitializeAMS](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetInitializeAMS)]
 
 ## <a name="initialize-an-adaptivemediasource-using-httpclient"></a>HttpClient를 사용하는 AdaptiveMediaSource 초기화
 
-매니페스트 파일을 가져오기 위해 사용자 지정 HTTP 헤더를 설정해야 하면 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 개체를 만들고, 원하는 헤더를 설정하고, 개체를 **CreateFromUriAsync**의 오버로드에 전달합니다.
+매니페스트 파일을 가져오기 위해 사용자 지정 HTTP 헤더를 설정해야 하면 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 개체를 만들고, 원하는 헤더를 설정하고, 개체를 **CreateFromUriAsync**의 오버로드에 전달합니다.
 
 [!code-cs[InitializeAMSWithHttpClient](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetInitializeAMSWithHttpClient)]
 
-시스템이 서버에서 리소스를 검색하려고 하면 [**DownloadRequested**](https://msdn.microsoft.com/library/windows/apps/dn931272) 이벤트가 발생합니다. 이벤트 처리기에 전달된 [**AdaptiveMediaSourceDownloadRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn946935)는 리소스 형식 및 URI 같은 요청되는 리소스에 대한 정보를 제공하는 속성을 표시합니다.
+시스템이 서버에서 리소스를 검색하려고 하면 [**DownloadRequested**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasource.downloadrequested) 이벤트가 발생합니다. 이벤트 처리기에 전달된 [**AdaptiveMediaSourceDownloadRequestedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs)는 리소스 형식 및 URI 같은 요청되는 리소스에 대한 정보를 제공하는 속성을 표시합니다.
 
 ## <a name="modify-resource-request-properties-using-the-downloadrequested-event"></a>DownloadRequested 이벤트를 사용하여 리소스 요청 속성 수정
 
-**DownloadRequested** 이벤트 처리기를 사용하여 이벤트 인수에서 제공된 [**AdaptiveMediaSourceDownloadResult**](https://msdn.microsoft.com/library/windows/apps/dn946942) 개체의 속성을 업데이트하는 방식으로 리소스 요청을 수정할 수 있습니다. 아래 예제에서 리소스가 검색되는 원본 URI는 결과 개체의 [**ResourceUri**](https://msdn.microsoft.com/library/windows/apps/dn931250) 속성을 업데이트해서 수정합니다. 또한 바이트 범위 오프셋 및 미디어 세그먼트의 길이를 다시 작성하거나 아래의 예제에서와 같이 리소스 URI를 변경하여 전체 리소스를 다운로드하고 바이트 범위 오프셋 및 길이를 null로 설정할 수 있습니다.
+**DownloadRequested** 이벤트 처리기를 사용하여 이벤트 인수에서 제공된 [**AdaptiveMediaSourceDownloadResult**](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult) 개체의 속성을 업데이트하는 방식으로 리소스 요청을 수정할 수 있습니다. 아래 예제에서 리소스가 검색되는 원본 URI는 결과 개체의 [**ResourceUri**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcedownloadresult.resourceuri) 속성을 업데이트해서 수정합니다. 또한 바이트 범위 오프셋 및 미디어 세그먼트의 길이를 다시 작성하거나 아래의 예제에서와 같이 리소스 URI를 변경하여 전체 리소스를 다운로드하고 바이트 범위 오프셋 및 길이를 null로 설정할 수 있습니다.
 
-결과 개체의 [**Buffer**](https://msdn.microsoft.com/library/windows/apps/dn946943) 또는 [**InputStream**](https://msdn.microsoft.com/library/windows/apps/dn931249) 속성을 설정하여 요청된 리소스의 콘텐츠를 재정의할 수 있습니다. 아래 예제에서 매니페스트 리소스의 콘텐츠는 **Buffer** 속성을 설정해서 바꿉니다. 원격 서버의 데이터 검색 또는 비동기 사용자 인증과 같이 비동기적으로 가져온 데이터를 사용하여 리소스 요청을 업데이트할 경우 [**AdaptiveMediaSourceDownloadRequestedEventArgs.GetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn946936)을 호출하여 지연을 가져오고, 작업이 완료되면 [**Complete**](https://msdn.microsoft.com/library/windows/apps/dn946934)를 호출하여 다운로드 요청 작업이 계속될 수 있음을 시스템에 알려야 합니다.
+결과 개체의 [**Buffer**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcedownloadresult.buffer) 또는 [**InputStream**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcedownloadresult.inputstream) 속성을 설정하여 요청된 리소스의 콘텐츠를 재정의할 수 있습니다. 아래 예제에서 매니페스트 리소스의 콘텐츠는 **Buffer** 속성을 설정해서 바꿉니다. 원격 서버의 데이터 검색 또는 비동기 사용자 인증과 같이 비동기적으로 가져온 데이터를 사용하여 리소스 요청을 업데이트할 경우 [**AdaptiveMediaSourceDownloadRequestedEventArgs.GetDeferral**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcedownloadrequestedeventargs.getdeferral)을 호출하여 지연을 가져오고, 작업이 완료되면 [**Complete**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasourcedownloadrequesteddeferral.complete)를 호출하여 다운로드 요청 작업이 계속될 수 있음을 시스템에 알려야 합니다.
 
 [!code-cs[AMSDownloadRequested](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetAMSDownloadRequested)]
 
 ## <a name="use-bitrate-events-to-manage-and-respond-to-bitrate-changes"></a>비트 전송률 이벤트를 사용하여 비트 전송률 변경 관리 및 응답
 
-**AdaptiveMediaSource** 개체는 다운로드나 재생 비트 전송률이 변경될 때 대응할 수 있는 이벤트를 제공합니다. 이 예제에서 현재 비트 전송률은 간단히 UI에서 업데이트됩니다. 시스템이 적응형 스트림의 비트 전송률을 전환할 때 확인할 비율을 수정할 수 있습니다. 자세한 내용은 [**AdvancedSettings**](https://msdn.microsoft.com/library/windows/apps/mt628697) 속성을 참조하세요.
+**AdaptiveMediaSource** 개체는 다운로드나 재생 비트 전송률이 변경될 때 대응할 수 있는 이벤트를 제공합니다. 이 예제에서 현재 비트 전송률은 간단히 UI에서 업데이트됩니다. 시스템이 적응형 스트림의 비트 전송률을 전환할 때 확인할 비율을 수정할 수 있습니다. 자세한 내용은 [**AdvancedSettings**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasource.advancedsettings) 속성을 참조하세요.
 
 [!code-cs[AMSBitrateEvents](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetAMSBitrateEvents)]
 
@@ -100,7 +100,7 @@ UWP 앱에서 적응 스트리밍 미디어를 재생하려면 DASH 또는 HLS �
 [!code-cs[AMSDiagnosticAvailable](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetAMSDiagnosticAvailable)]
 
 ## <a name="defer-binding-of-adaptive-streaming-content-for-items-in-a-playback-list-by-using-mediabinder"></a>MediaBinder를 사용하여 재생 목록의 항목에 대한 적응 스트리밍 콘텐츠 바인딩 연기
-[  **MediaBinder**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaBinder) 클래스로 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)의 미디어 바인딩을 연기할 수 있습니다. Windows 10 버전 1703부터 [**AdaptiveMediaSource**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasource)를 바인딩된 콘텐츠로 제공할 수 있습니다. 적응 미디어 소스의 연기된 바인딩 프로세스는 대체로 다른 종류의 미디어 바인딩과 동일하며 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)에 설명되어 있습니다. 
+[  **MediaBinder**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaBinder) 클래스로 [**MediaPlaybackList**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackList)의 미디어 바인딩을 연기할 수 있습니다. Windows 10 버전 1703부터 [**AdaptiveMediaSource**](https://docs.microsoft.com/uwp/api/windows.media.streaming.adaptive.adaptivemediasource)를 바인딩된 콘텐츠로 제공할 수 있습니다. 적응 미디어 소스의 연기된 바인딩 프로세스는 대체로 다른 종류의 미디어 바인딩과 동일하며 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)에 설명되어 있습니다. 
 
 **MediaBinder** 인스턴스를 만들고 앱 정의 [**토큰**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaBinder.Token) 문자열을 설정하여 바인딩할 콘텐츠를 식별하고 [**바인딩**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaBinder.Binding) 이벤트를 등록할 수 있습니다. [  **MediaSource.CreateFromMediaBinder**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfrommediabinder)를 호출하여 **바인더**에서 **MediaSource**를 만듭니다. 그런 다음 **MediaSource**에서 **MediaPlaybackItem**을 만들고 재생 목록에 추가합니다.
 

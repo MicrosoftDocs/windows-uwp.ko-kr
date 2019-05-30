@@ -7,19 +7,19 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 267e6e1cf9a004b6703e000b694274b802220f60
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cf538e6b7c66bfc61574295d5b040db82122e78a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611928"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363353"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요
  
 
 타사 개발자는 WNS(Windows 푸시 알림 서비스)를 사용하여 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다.
 
-## <a name="how-it-works"></a>작동 방식
+## <a name="how-it-works"></a>작동 방법
 
 
 다음 다이어그램은 푸시 알림 보내기를 위한 전체 데이터 흐름을 보여 줍니다. 이 작업은 다음 단계로 이루어져 있습니다.
@@ -40,12 +40,12 @@ WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱�
 
 각 앱에는 해당 클라우드 서비스에 사용할 고유 자격 증명 집합이 있습니다. 이 자격 증명은 다른 앱에 알림을 보내는 데 사용할 수 없습니다.
 
-앱 등록 방법에 대한 자세한 내용은 [WNS(Windows 알림 서비스)를 사용하여 인증하는 방법](https://msdn.microsoft.com/library/windows/apps/hh465407)을 참조하세요.
+앱 등록 방법에 대한 자세한 내용은 [WNS(Windows 알림 서비스)를 사용하여 인증하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))을 참조하세요.
 
 ## <a name="requesting-a-notification-channel"></a>알림 채널 요청
 
 
-푸시 알림을 받을 수 있는 앱이 실행되면 먼저 [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager#Windows_Networking_PushNotifications_PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsync_System_String_)를 통해 알림 채널을 요청해야 합니다. 전체 설명 및 코드 예는 [알림 채널을 요청, 생성 및 저장하는 방법](https://msdn.microsoft.com/library/windows/apps/hh465412)을 참조하세요. 이 API는 호출 응용 프로그램 및 해당 타일과 고유하게 연결되어 모든 알림 형식이 이를 통해 전송될 수 있는 채널 URI를 반환합니다.
+푸시 알림을 받을 수 있는 앱이 실행되면 먼저 [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager#Windows_Networking_PushNotifications_PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsync_System_String_)를 통해 알림 채널을 요청해야 합니다. 전체 설명 및 코드 예는 [알림 채널을 요청, 생성 및 저장하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))을 참조하세요. 이 API는 호출 응용 프로그램 및 해당 타일과 고유하게 연결되어 모든 알림 형식이 이를 통해 전송될 수 있는 채널 URI를 반환합니다.
 
 앱이 채널 URI를 만든 후에는 이 URI와 관련되어야 하는 모든 앱 특정 메타데이터와 함께 채널 URI를 해당 클라우드 서비스로 보냅니다.
 
@@ -54,7 +54,7 @@ WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱�
 -   앱의 알림 채널 URI가 항상 동일하게 유지된다고 보장하지 않습니다. 앱이 실행될 때마다 새 채널을 요청하고 URI 변경 시 해당 서비스를 업데이트하는 것이 좋습니다. 개발자는 채널 URI를 수정하지 않아야 하며 블랙 박스 문자열로 간주해야 합니다. 이때 채널 URI는 30일이 경과하면 만료됩니다. Windows 10 앱 백그라운드에서 해당 채널을 주기적으로 갱신 됩니다 경우 다운로드할 수 있습니다 합니다 [푸시 및 정기 알림 사용 샘플](https://go.microsoft.com/fwlink/p/?linkid=231476) Windows 8.1 및 다시 사용에 대 한 소스 코드 및/또는 패턴을 보여 줍니다.
 -   클라우드 서비스와 클라이언트 앱 간의 인터페이스는 개발자가 구현합니다. 앱은 고유 서비스를 사용하여 인증 프로세스를 거치고 HTTPS 같은 보안 프로토콜을 통해 데이터를 전송하는 것이 좋습니다.
 -   클라우드 서비스는 항상 채널 URI가 "notify.windows.com" 도메인을 사용하는지 확인합니다. 다른 도메인에서는 이 서비스가 알림을 채널로 푸시하지 않아야 합니다. 앱에 대한 콜백이 손상되는 경우 악의적인 공격자가 채널 URI를 제출하여 WNS를 스푸핑할 수 있습니다. 도메인을 검사하지 않으면 클라우드 서비스에서 자신도 모르게 이러한 공격자에게 정보를 공개할 수도 있습니다.
--   클라우드 서비스에서 만료된 채널에 알림을 전달하려고 시도하면 WNS에서 [응답 코드 410](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#WNSResponseCodes)을 반환합니다. 이 코드에 대처하려면 서비스에서 해당 URI에 더 이상 알림을 보내려고 시도하지 않아야 합니다.
+-   클라우드 서비스에서 만료된 채널에 알림을 전달하려고 시도하면 WNS에서 [응답 코드 410](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))을 반환합니다. 이 코드에 대처하려면 서비스에서 해당 URI에 더 이상 알림을 보내려고 시도하지 않아야 합니다.
 
 ## <a name="authenticating-your-cloud-service"></a>클라우드 서비스 인증
 
@@ -70,7 +70,7 @@ WNS 인증 체계는 [OAuth 2.0](https://go.microsoft.com/fwlink/p/?linkid=22678
 
 ![클라우드 서비스 인증에 대한 WNS 다이어그램](images/wns-diagram-02.png)
 
-WNS를 통한 인증에서는 클라우드 서비스가 SSL(Secure Sockets Layer)을 통해 HTTP 요청을 제출합니다. 매개 변수는 "application/x-www-for-urlencoded" 형식으로 제공됩니다. 패키지 SID를 사용 하 여 제공의 "클라이언트\_id"에 필드 및 비밀 키를 "클라이언트\_비밀" 필드. 구문 정보는 [액세스 토큰 요청](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#access_token_request) 참조를 확인하세요.
+WNS를 통한 인증에서는 클라우드 서비스가 SSL(Secure Sockets Layer)을 통해 HTTP 요청을 제출합니다. 매개 변수는 "application/x-www-for-urlencoded" 형식으로 제공됩니다. 패키지 SID를 사용 하 여 제공의 "클라이언트\_id"에 필드 및 비밀 키를 "클라이언트\_비밀" 필드. 구문 정보는 [액세스 토큰 요청](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) 참조를 확인하세요.
 
 **참고**  는 예제는 사용자 고유의 코드에서 성공적으로 사용할 수 있는 없습니다 잘라내기 및 붙여넣기 코드 뿐입니다.
 
@@ -87,7 +87,7 @@ WNS를 통한 인증에서는 클라우드 서비스가 SSL(Secure Sockets Layer
 
 WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" 응답을 보냅니다. "application/json" 미디어 형식을 사용하여 HTTP 응답 본문에 포함된 매개 변수에 액세스 토큰이 반환됩니다. 서비스에서 액세스 토큰을 받으면 알림을 보낼 준비가 완료됩니다.
 
-다음은 액세스 토큰을 포함하여 성공적인 인증 응답을 보여 주는 예입니다. 구문 정보는 [푸시 알림 서비스 요청 및 응답 헤더](https://msdn.microsoft.com/library/windows/apps/hh465435)를 참조하세요.
+다음은 액세스 토큰을 포함하여 성공적인 인증 응답을 보여 주는 예입니다. 구문 정보는 [푸시 알림 서비스 요청 및 응답 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))를 참조하세요.
 
 ``` http
  HTTP/1.1 200 OK   
@@ -113,13 +113,13 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
 
 클라우드 서비스는 채널 URI를 사용하여 사용자용 업데이트가 있을 때마다 알림을 보낼 수 있습니다.
 
-위에 설명된 액세스 토큰은 여러 알림 요청에 재사용할 수 있습니다. 클라우드 서버는 알림마다 새 액세스 토큰을 요청할 필요가 없습니다. 액세스 토큰이 만료되면 알림 요청이 오류를 반환합니다. 액세스 토큰이 거부되는 경우 알림을 두 번 이상 다시 보내려고 시도하지 않는 것이 좋습니다. 이러한 오류가 발생하면 새 액세스 토큰을 요청하여 알림을 다시 보내야 합니다. 정확한 오류 코드는 [푸시 알림 응답 코드](https://msdn.microsoft.com/library/windows/apps/hh465435)를 참조하세요.
+위에 설명된 액세스 토큰은 여러 알림 요청에 재사용할 수 있습니다. 클라우드 서버는 알림마다 새 액세스 토큰을 요청할 필요가 없습니다. 액세스 토큰이 만료되면 알림 요청이 오류를 반환합니다. 액세스 토큰이 거부되는 경우 알림을 두 번 이상 다시 보내려고 시도하지 않는 것이 좋습니다. 이러한 오류가 발생하면 새 액세스 토큰을 요청하여 알림을 다시 보내야 합니다. 정확한 오류 코드는 [푸시 알림 응답 코드](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))를 참조하세요.
 
 1.  클라우드 서비스는 채널 URI로 HTTP POST를 수행합니다. 이러한 요청은 SSL을 통해 수행되어야 하며 필요한 헤더 및 알림 페이로드가 요청에 포함됩니다. 인증 헤더에는 인증을 위해 획득한 액세스 토큰이 포함되어야 합니다.
 
-    요청 예는 다음과 같습니다. 구문 정보는 [푸시 알림 응답 코드](https://msdn.microsoft.com/library/windows/apps/hh465435)를 참조하세요.
+    요청 예는 다음과 같습니다. 구문 정보는 [푸시 알림 응답 코드](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))를 참조하세요.
 
-    알림 페이로드를 작성에 대 한 세부 정보를 참조 하세요. [빠른 시작: 푸시 알림을 보낼](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)합니다. 타일, 알림 메시지 또는 배지 푸시 알림의 페이로드는 정의된 해당 [적응형 타일 스키마](adaptive-tiles-schema.md) 또는 [레거시 타일 스키마](https://msdn.microsoft.com/library/windows/apps/br212853)를 따르는 XML 콘텐츠로 제공됩니다. 원시 알림의 페이로드에는 지정된 구조가 없습니다. 푸시 알림의 페이로드는 오로지 앱에서 정의됩니다.
+    알림 페이로드를 작성에 대 한 세부 정보를 참조 하세요. [빠른 시작: 푸시 알림을 보낼](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))합니다. 타일, 알림 메시지 또는 배지 푸시 알림의 페이로드는 정의된 해당 [적응형 타일 스키마](adaptive-tiles-schema.md) 또는 [레거시 타일 스키마](https://docs.microsoft.com/uwp/schemas/tiles/tiles-xml-schema-portal)를 따르는 XML 콘텐츠로 제공됩니다. 원시 알림의 페이로드에는 지정된 구조가 없습니다. 푸시 알림의 페이로드는 오로지 앱에서 정의됩니다.
 
     ``` http
      POST https://cloud.notify.windows.com/?token=AQE%bU%2fSjZOCvRjjpILow%3d%3d HTTP/1.1
@@ -145,7 +145,7 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
 -   알림에는 비밀 또는 중요한 데이터가 포함되지 않아야 합니다.
 -   알림을 보내려면 클라우드 서비스는 먼저 WNS를 사용하여 인증하고 액세스 토큰을 받아야 합니다.
 -   클라우드 서비스는 하나의 액세스 토큰을 사용하여 해당 토큰이 만들어진 대상인 하나의 앱으로만 알림을 보낼 수 있습니다. 하나의 액세스 토큰을 사용하여 여러 앱으로 알림을 보낼 수는 없습니다. 따라서 클라우드 서비스가 여러 앱을 지원하는 경우 각 채널 URI에 알림을 푸시할 때 해당 앱의 올바른 액세스 토큰을 제공해야 합니다.
--   디바이스가 오프라인이면 기본적으로 WNS는 각 채널 URI마다 최대 5개의 타일 알림(큐를 사용하는 경우, 사용하지 않는 경우에는 1개의 타일 알림)과 하나의 배지 알림을 저장하며 원시 알림은 저장하지 않습니다. 이 기본 캐싱 동작은 [X-WNS-Cache-Policy 헤더](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_cache)를 통해 변경할 수 있습니다. 디바이스가 오프라인일 때는 알림 메시지가 저장되지 않습니다.
+-   디바이스가 오프라인이면 기본적으로 WNS는 각 채널 URI마다 최대 5개의 타일 알림(큐를 사용하는 경우, 사용하지 않는 경우에는 1개의 타일 알림)과 하나의 배지 알림을 저장하며 원시 알림은 저장하지 않습니다. 이 기본 캐싱 동작은 [X-WNS-Cache-Policy 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))를 통해 변경할 수 있습니다. 디바이스가 오프라인일 때는 알림 메시지가 저장되지 않습니다.
 -   알림 콘텐츠가 해당 사용자에 맞게 개인 설정되어 있는 시나리오에서는 클라우드 서비스가 업데이트를 받는 즉시 보내도록 WNS에서 권장합니다. 이러한 시나리오의 예로는 소셜 미디어 피드 업데이트, 인스턴트 커뮤니케이션 초대, 새 메시지 알림 또는 경고가 있습니다. 또는 날씨, 주식, 뉴스 업데이트 같이 동일한 일반 업데이트가 대규모 사용자 하위 집합에 자주 전달되는 시나리오가 있을 수 있습니다. WNS 지침에는 이러한 업데이트의 빈도가 최대 30분마다 하나인 것으로 지정되어 있습니다. 최종 사용자 또는 WNS는 루틴 업데이트가 더 자주 사용되도록 정할 수 있습니다.
 
 ## <a name="expiration-of-tile-and-badge-notifications"></a>타일 및 배지 알림의 만료
@@ -153,7 +153,7 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
 
 기본적으로 타일 및 배지 알림은 다운로드된 후 3일이 경과하면 만료됩니다. 알림이 만료되면 콘텐츠가 타일 또는 큐에서 제거되고 더 이상 사용자에게 표시되지 않습니다. 앱에 적절한 시간을 사용하여 모든 타일 및 배지 알림에 대한 만료를 설정함으로써 타일의 콘텐츠를 관련이 있을 때까지만 유지하는 것이 좋습니다. 명시적 만료 시간은 수명이 정의되어 있는 콘텐츠에 필수적입니다. 이를 지정하면 클라우드 서비스에서 알림 보내기를 중지할 경우나 사용자의 네트워크 연결이 장기간 끊길 경우에 부실 콘텐츠도 제거됩니다.
 
-클라우드 서비스는 X-WNS-TTL HTTP 헤더를 설정하여 알림의 전송 후 유효 기간을 지정함으로써 각 알림에 대해 만료를 설정할 수 있습니다. 자세한 내용은 [푸시 알림 서비스 요청 및 응답 헤더](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_ttl)를 참조하세요.
+클라우드 서비스는 X-WNS-TTL HTTP 헤더를 설정하여 알림의 전송 후 유효 기간을 지정함으로써 각 알림에 대해 만료를 설정할 수 있습니다. 자세한 내용은 [푸시 알림 서비스 요청 및 응답 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))를 참조하세요.
 
 예를 들어 주식시장 거래일 중에 주가 업데이트 만료를 보내기 간격의 두 배(예제: 30분마다 알림을 보낼 경우 접수 1시간 후)로 설정할 수 있습니다. 다른 예로 뉴스 앱에서는 일간 뉴스 타일 업데이트에 적절한 만료 시간을 1일로 결정할 수 있습니다.
 
@@ -244,14 +244,14 @@ async public void CheckForEnergySaving()
 
 
 * [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)
-* [빠른 시작: 푸시 알림 보내기](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)
-* [푸시 알림을 통해 배지를 업데이트 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh465450)
-* [요청, 생성 및 알림 채널을 저장 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh465412)
-* [응용 프로그램을 실행 하는 것에 대 한 알림을 차단 하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/jj709907.aspx)
-* [WNS와 함께 Windows 푸시 알림 서비스 ()를 인증 하는 방법](https://msdn.microsoft.com/library/windows/apps/hh465407)
-* [푸시 알림 서비스 요청 및 응답 헤더](https://msdn.microsoft.com/library/windows/apps/hh465435)
-* [지침 및 푸시 알림에 대 한 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh761462)
-* [원시 알림](https://msdn.microsoft.com/library/windows/apps/hh761488)
+* [빠른 시작: 푸시 알림 보내기](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
+* [푸시 알림을 통해 배지를 업데이트 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
+* [요청, 생성 및 알림 채널을 저장 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
+* [응용 프로그램을 실행 하는 것에 대 한 알림을 차단 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
+* [WNS와 함께 Windows 푸시 알림 서비스 ()를 인증 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [푸시 알림 서비스 요청 및 응답 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
+* [지침 및 푸시 알림에 대 한 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [원시 알림](https://docs.microsoft.com/previous-versions/windows/apps/hh761488(v=win.10))
  
 
  

@@ -6,12 +6,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d66d717d77d2797e8a483871b8d3369befb5b6b
-ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.openlocfilehash: f199d70fc9194f211533820a7b23e20de929752d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320586"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359338"
 ---
 # <a name="uri-schemes"></a>URI 스키마
 
@@ -249,11 +249,11 @@ ms-resource://john:password@contoso.myapp:8080/Resources/String1
 
 ### <a name="path-ms-resource"></a>경로(ms-resource)
 
-경로는 [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live) 하위 트리의 계층 구조 위치([리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/jj552947) 참조) 및 그 안의 [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live)를 식별합니다. 일반적으로 이는 리소스 파일(.resw)의 파일 이름(확장명 제외)과 그 안의 문자열 리소스의 식별자에 해당합니다.
+경로는 [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live) 하위 트리의 계층 구조 위치([리소스 관리 시스템](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)) 참조) 및 그 안의 [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live)를 식별합니다. 일반적으로 이는 리소스 파일(.resw)의 파일 이름(확장명 제외)과 그 안의 문자열 리소스의 식별자에 해당합니다.
 
 자세한 내용과 예는 [UI 및 앱 패키지 매니페스트의 문자열 지역화](localize-strings-ui-manifest.md) 및 [언어, 배율, 고대비에 대한 타일 및 알림 메시지](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)를 참조하세요.
 
-`ms-resource`의 경로 구성 요소는 일반 URI와 같이 대/소문자를 구분합니다. 그러나 기본 검색에는 [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) 사용 하 여 *ignoreCase* 로 `true`합니다.
+`ms-resource`의 경로 구성 요소는 일반 URI와 같이 대/소문자를 구분합니다. 그러나 기본 검색에는 [CompareStringOrdinal](https://docs.microsoft.com/windows/desktop/api/winstring/nf-winstring-windowscomparestringordinal) 사용 하 여 *ignoreCase* 로 `true`합니다.
 
 URI의 표준화된 형태는 대소문자와 퍼센트 디코드(두자리 16진수가 따르는 "%" 기호) RFC 3986 예약되지 않은 문자를 유지합니다. 문자 "?", "#", "/", "*", '”'(큰따옴표)는 파일 또는 폴더 이름 같은 데이터를 나타내는 경로에 %로 인코딩되어야 합니다. 검색하기 전에 모든 퍼센트로 인코딩된 문자를 디코딩합니다. 따라서 리소스 파일에서 문자열 리소스를 검색 하 라는 `Hello#World.resw`,이 URI를 사용 합니다.
 
@@ -274,5 +274,5 @@ ms-resource:///Hello%23World/String1
 * [XAML 태그 및 코드에서 이미지 또는 다른 자산 참조](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)
 * [UI 및 앱 패키지 매니페스트의 문자열 지역화](localize-strings-ui-manifest.md)
-* [리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/jj552947)
+* [리소스 관리 시스템](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10))
 * [언어, 배율 및 고대비 대 한 타일 및 알림 알림 지원](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

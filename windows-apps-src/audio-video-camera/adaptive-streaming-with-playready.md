@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 36cd006b4608d82999281ebd407fd32e168ae38b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f87ecf0c3c90976295d85c1a995f1de091491974
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57650468"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359181"
 ---
 # <a name="adaptive-streaming-with-playready"></a>PlayReady를 사용한 적응 스트리밍
 
@@ -63,9 +63,9 @@ private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 
 ## <a name="setting-up-the-mediaprotectionmanager"></a>MediaProtectionManager 설정
 
-PlayReady 콘텐츠 보호를 UWP 앱에 추가하려면 [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040) 개체를 설정해야 합니다. [  **AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912) 개체를 초기화할 때 이 작업을 수행합니다.
+PlayReady 콘텐츠 보호를 UWP 앱에 추가하려면 [MediaProtectionManager](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.MediaProtectionManager) 개체를 설정해야 합니다. [  **AdaptiveMediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource) 개체를 초기화할 때 이 작업을 수행합니다.
 
-다음 코드는 [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040)를 설정합니다.
+다음 코드는 [MediaProtectionManager](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.MediaProtectionManager)를 설정합니다.
 
 ```csharp
 private void SetUpProtectionManager(ref MediaElement mediaElement)
@@ -100,7 +100,7 @@ private void SetUpProtectionManager(ref MediaElement mediaElement)
 
 이 코드를 앱에 복사하여 필수 작업인 콘텐츠 보호를 간단하게 설정할 수 있습니다.
 
-[ComponentLoadFailed](https://msdn.microsoft.com/library/windows/apps/br207041) 이벤트는 이진 데이터를 로드하지 못했을 때 발생합니다. 로드가 완료되지 않았음을 알리는 이벤트 처리기를 추가하여 이 문제를 처리해야 합니다.
+[ComponentLoadFailed](https://docs.microsoft.com/uwp/api/windows.media.protection.mediaprotectionmanager.componentloadfailed) 이벤트는 이진 데이터를 로드하지 못했을 때 발생합니다. 로드가 완료되지 않았음을 알리는 이벤트 처리기를 추가하여 이 문제를 처리해야 합니다.
 
 ```csharp
 private void ProtectionManager_ComponentLoadFailed(
@@ -111,7 +111,7 @@ private void ProtectionManager_ComponentLoadFailed(
 }
 ```
 
-마찬가지로 서비스가 요청될 때 발생하는 [ServiceRequested](https://msdn.microsoft.com/library/windows/apps/br207045) 이벤트에 대한 이벤트 처리기를 추가해야 합니다. 이 코드는 서비스의 요청 종류를 확인하고 적절하게 응답합니다.
+마찬가지로 서비스가 요청될 때 발생하는 [ServiceRequested](https://docs.microsoft.com/uwp/api/windows.media.protection.mediaprotectionmanager.servicerequested) 이벤트에 대한 이벤트 처리기를 추가해야 합니다. 이 코드는 서비스의 요청 종류를 확인하고 적절하게 응답합니다.
 
 ```csharp
 private async void ProtectionManager_ServiceRequested(
@@ -192,7 +192,7 @@ async void ProActiveIndivRequest()
 
 ## <a name="license-acquisition-service-requests"></a>라이선스 취득 서비스 요청
 
-요청이 [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285)인 경우에는 다음 함수를 호출하여 PlayReady 라이선스를 요청하고 취득합니다. 요청이 성공했는지 여부를 전달했다고 **MediaProtectionServiceCompletion** 개체에 알리고 요청을 완료합니다.
+요청이 [PlayReadyLicenseAcquisitionServiceRequest](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest)인 경우에는 다음 함수를 호출하여 PlayReady 라이선스를 요청하고 취득합니다. 요청이 성공했는지 여부를 전달했다고 **MediaProtectionServiceCompletion** 개체에 알리고 요청을 완료합니다.
 
 ```csharp
 async void LicenseAcquisitionRequest(
@@ -274,7 +274,7 @@ async void LicenseAcquisitionRequest(
 
 ## <a name="initializing-the-adaptivemediasource"></a>AdaptiveMediaSource 초기화
 
-마지막으로, 지정된 [Uri](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) 및 [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926)에서 만든 [AdaptiveMediaSource](https://msdn.microsoft.com/library/windows/apps/dn946912)를 초기화하는 함수가 필요합니다. **Uri**는 미디어 파일(HLS 또는 DASH)에 대한 링크여야 하며 **MediaElement**는 XAML에 정의되어야 합니다.
+마지막으로, 지정된 [Uri](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) 및 [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)에서 만든 [AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource)를 초기화하는 함수가 필요합니다. **Uri**는 미디어 파일(HLS 또는 DASH)에 대한 링크여야 하며 **MediaElement**는 XAML에 정의되어야 합니다.
 
 ```csharp
 async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
@@ -295,7 +295,7 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 
 적응 스트리밍의 시작을 처리하는 모든 이벤트(예: 단추 Click 이벤트)에서 이 기능을 호출할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [PlayReady DRM](playready-client-sdk.md)
 
 

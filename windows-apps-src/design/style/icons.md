@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fb97f69ccdffcec86dfdaf5fa6c5f817644ebd61
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5e464251200812e79474d05d9d0a680b49167871
+ms.sourcegitcommit: 7da28cf4f4e8390bc9a21a9488b03af39271cbbe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612448"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64564540"
 ---
 # <a name="icons-for-uwp-apps"></a>UWP 앱의 아이콘
 
@@ -31,13 +31,13 @@ ms.locfileid: "57612448"
         **Icons inside the app**
 
         ![icons inside the app](images/icons/inside-icons.png)
-        Inside your app, you use icons to represent an action, such as copying text or navigating to the settings page.
+앱 내에서 텍스트를 복사 하거나 설정 페이지로 이동 하는 등의 작업을 나타내는 아이콘을 사용 합니다.
     :::column-end:::
     :::column:::
-        **Icons outside the app**
+**앱 외부 아이콘**
 
         ![icons outside the app](images/icons/outside-icons.jpg)
-         Outside your app, Windows uses an icon to represent your app in the start menu and in the taskbar. If the user chooses to pin your app to the start menu, your app's start tile can feature your app's icon. Your app's icon appears in the title bar and you can choose to create a splash screen with your app's logo.
+앱 외부 Windows 작업 표시줄 및 시작 메뉴에서 앱을 나타내는 아이콘을 사용 합니다. 사용자 시작 메뉴에 앱 고정을 선택 하면 앱의 시작 타일 앱의 아이콘을 기능 수 있습니다. 제목 표시줄에 표시 되는 앱의 아이콘 및 앱의 로고를 사용 하 여 시작 화면을 만들 수 있습니다.
     :::column-end:::
 :::row-end:::
 
@@ -52,13 +52,13 @@ ms.locfileid: "57612448"
         ![do](images/do.svg)
         ![icons standard image](images/icons/icons-standard.svg)<br>
 
-        Use an icon for actions, like cut, copy, paste, and save, or for navigation items in a navigation menu.
+작업의 경우 같은 잘라내기, 복사, 붙여넣기 및 저장, 탐색 메뉴에 있는 탐색 항목에 대 한 아이콘을 사용 합니다.
     :::column-end:::
     :::column:::
         ![don't](images/dont.svg)
         ![icons concept image](images/icons/icons-concept.svg)<br>
 
-        Use an icon if one already exists for the concept you want to represent. (To see whether an icon exists, check the Segoe icon list.)
+표시 하려는 개념에 대해 이미 있을 경우 아이콘을 사용 합니다. (아이콘 있는지를 확인 하려면 Segoe 아이콘 목록을 확인 합니다.)
     :::column-end:::
 :::row-end:::
 
@@ -67,13 +67,13 @@ ms.locfileid: "57612448"
         ![do](images/do.svg)
         ![icon shopping cart](images/icons/icon-shopping-cart.svg)<br>
 
-        Use an icon if it's easy for the user to understand what the icon means and it's simple enough to be clear at small sizes.
+아이콘의 의미를 이해 하기 쉽습니다 및 간단 충분히 작은 크기의 선택을 취소 되도록 하는 경우 아이콘을 사용 합니다.
     :::column-end:::
     :::column:::
         ![dont](images/dont.svg)
         ![icons concept image](images/icons/icon-bad-example.png)<br>
 
-        Don't use an icon if its meaning isn't clear, or if making it clear requires a complex shape.
+또는 복잡 한 도형이 필요한 명확 하 게 만드는 해당 의미를 명확 하지 않습니다 하는 경우에 아이콘을 사용 하지 마세요.
     :::column-end:::
 :::row-end:::
 
@@ -86,7 +86,7 @@ ms.locfileid: "57612448"
 ### <a name="use-a-predefined-icon"></a>미리 정의된 아이콘을 사용합니다.
 :::row:::
     :::column:::
-        Microsoft provides over 1000 icons in the form of the Segoe MDL2 Assets font. It might not be intuitive to get an icon from a font, but our font display technology means these icons will look crisp and sharp on any display, at any resolution, and at any size. 
+Microsoft는 1천 개가 넘는 아이콘 Segoe MDL2 자산 글꼴의 형태로 제공합니다. 글꼴에서 아이콘을 가져오는 것이 직관적이지는 않을 수 있지만 Microsoft의 글꼴 표시 기술은 이러한 아이콘이 모든 디스플레이, 모든 해상도 및 크기에서 선명하고 날카롭게 보이게 합니다. 자세한 내용은 [Segoe MDL2 아이콘](segoe-ui-symbol-font.md)합니다.
     :::column-end:::
     :::column:::
         ![pre-defined icon image](images/icons/predefined-icon.png)
@@ -96,7 +96,7 @@ ms.locfileid: "57612448"
 ### <a name="use-a-font"></a>글꼴을 사용합니다.
 :::row:::
     :::column:::
-        You don't have to use the Segoe MDL2 Assets font--you can use any font the user has installed on their system, such as Wingdings or Webdings.
+-Segoe MDL2 자산 글꼴을 사용 하지 않아도 Wingdings Webdings 등 해당 시스템에서 사용자가 설치한 모든 글꼴을 사용할 수 있습니다.
     :::column-end:::
     :::column:::
         ![wingdings image](images/icons/wingdings.png)
@@ -106,7 +106,7 @@ ms.locfileid: "57612448"
 ### <a name="use-a-scalable-vector-graphics-svg-file"></a>SVG(확장 가능한 벡터 그래픽) 파일을 사용합니다.
 :::row:::
     :::column:::
-        SVG resources are ideal for icons, because they always look sharp at any size or resolution. Most drawing applications can export to SVG. 
+SVG 리소스 항상 모든 크기 또는 해상도 날카로운 모양이 때문에 아이콘, 가장 적합 합니다. 대부분의 그리기 응용 프로그램은 SVG로 내보낼 수 있습니다. 자세한 내용은 [SVGImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.svgimagesource)합니다.
     :::column-end:::
     :::column:::
         ![SVG image](images/icons/icon-scale.gif)
@@ -116,7 +116,7 @@ ms.locfileid: "57612448"
 ### <a name="use-geometry-objects"></a>기하 도형 개체를 사용합니다.
 :::row:::
     :::column:::
-        Like SVG files, geometries are a vector-based resource, so they always look sharp. However, creating a geometry is complicated because you have to individually specify each point and curve. It's really only a good choice if you need to modify the icon while your app is running (to animate it, for example). For instructions, see [Move and draw commands for geometries](../../xaml-platform/move-draw-commands-syntax.md). 
+SVG 파일을 같은 기 하 도형 되므로 벡터 기반 리소스에 항상 선명 하 게 보입니다. 그러나 각 지점과 곡선을 개별적으로 지정해야 하므로 기하 도형 만들기는 복잡합니다. 앱을 실행(예: 애니메이션)하는 동안 아이콘을 수정하는 경우에만 좋은 선택입니다. 지침은 [기하 도형용 명령 이동 및 그리기](../../xaml-platform/move-draw-commands-syntax.md)를 참조하세요. 
     :::column-end:::
     :::column:::
         ![Geometry objects image](images/icons/geometry-objects.png)
@@ -126,7 +126,7 @@ ms.locfileid: "57612448"
 ### <a name="you-can-also-use-a-bitmap-image-such-as-png-gif-or-jpeg-although-we-dont-recommend-it"></a>PNG, GIF, 또는 JPEG와 같은 비트맵 이미지를 사용할 수도 있지만 권장하지 않습니다.
 :::row:::
     :::column:::
-        Bitmap images are created at a specific size, so they have to be scaled up or down depending on how large you want the icon to be and the resolution of the screen. When the image is scaled down (shrunk), it can appear blurry; when it's scaled up, it can appear blocky and pixelated. If you have to use a bitmap image we recommend using a PNG or GIF over a JPEG. 
+비트맵 이미지 위로 또는 아래로 아이콘을 표시할 크기 및 화면 해상도 따라 조정할 수 있어 특정 크기에 만들어집니다. 이미지가 크기가 축소되면 흐릿하게 나타날 수 있습니다. 크기가 확장되면 일그러지고 모자이크처럼 나타날 수 있습니다. 비트맵 이미지를 사용하는 경우 JPEG보다 PNG 또는 GIF를 이용하는 것이 좋습니다. 
     :::column-end:::
     :::column:::
         ![don't](images/dont.svg)
@@ -149,7 +149,7 @@ ms.locfileid: "57612448"
 :::row:::
     :::column span="2":::
         <b>Step 1</b><br>
-        Set the button's font family to `Segoe MDL2 Assets` and its content property to the unicode value of the glyph you want to use:
+단추의 글꼴 패밀리로 `Segoe MDL2 Assets` 및 해당 콘텐츠 속성을 사용 하려는 기호의 유니코드 값:
     :::column-end:::
     :::column:::
         ![Create an icon button step 1](images/icons/create-icon-step-1.svg)
@@ -163,10 +163,7 @@ ms.locfileid: "57612448"
 :::row:::
     :::column span="2":::
         <b>Step 2</b><br>
-        You can use one of the icon element objects: [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon),
-        [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon), 
-        [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon), or
-        [SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon). This gives you more types of icons to choose from, and enables you to combine icons and other types of content, such as text, if you want:
+아이콘 요소 개체 중 하나를 사용할 수 있습니다. [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon)하십시오 [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon), [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon), 또는 [SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon)합니다. 더 다양 한 유형의 아이콘을 사용 하면 하 고 싶다면 아이콘 및 다른 형식의 텍스트와 같은 콘텐츠를 결합할 수 있습니다.
     :::column-end:::
     :::column:::
         ![Create an icon button step 2](images/icons/icon-text-step-2.svg)
@@ -186,7 +183,7 @@ ms.locfileid: "57612448"
 
 :::row:::
     :::column span:::
-        When you have a series of commands that go together, such as cut/copy/paste or a set of drawing commands for a photo-editing program, put them together in a [command bar](../controls-and-patterns/app-bars.md). A command bar takes one or more app bar buttons or app bar toggle buttons, each of which represents an action. Each button has an [Icon](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) property you use to control which icon it displays. There are a variety of ways to specify the icon. 
+잘라내기/복사/붙여넣기 또는 그리기 사진 편집 프로그램에 대 한 명령 집합에 배치 합니다 같은 일련의 함께 이동 하는 명령이 있는 경우는 [명령 모음](../controls-and-patterns/app-bars.md)합니다. 명령 모음에는 각각 작업을 나타내는 하나 이상의 앱 바 단추 또는 앱 바 토글 단추가 있습니다. 각 단추에는 표시하는 아이콘을 제어하는 데 사용하는 [아이콘](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) 속성이 있습니다. 아이콘의 색을 지정하는 다양한 방법이 있습니다. 
     :::column-end:::
     :::column:::
         ![Example of a command bar with icons](images/icons/create-icon-command-bar.svg)

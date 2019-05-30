@@ -7,12 +7,12 @@ ms.date: 10/20/2017
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: a5af904c099b92e399f169221cae3122f358be19
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f40a68b6e07a90bcb1ce1d646bdfc0dfb4553495
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583009"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359417"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a>앱 리소스 및 리소스 관리 시스템
 
@@ -36,7 +36,7 @@ ms.locfileid: "57583009"
 | [URI 체계](uri-schemes.md) | 앱의 패키지, 앱의 데이터 폴더 또는 클라우드에서 제공하는 파일을 참조하는 데 사용할 수 있는 몇 가지 URI(Uniform Resource Identifier) 체계가 있습니다. URI 체계를 사용하여 앱의 리소스 파일(.resw)에서 로드되는 문자열을 참조할 수도 있습니다. |
 | [앱에서 사용하는 기본 리소스 지정](specify-default-resources-installed.md) | 앱에 고객 디바이스의 특정 설정과 일치하는 리소스가 없으면 앱의 기본 리소스가 사용됩니다. 이 문서에서는 이러한 기본 리소스를 지정하는 방법에 대해 설명합니다. |
 | [리소스 팩 대신 앱 패키지에 리소스 빌드](build-resources-into-app-package.md) | 몇 가지 종류의 앱(다국어 사전, 번역 도구 등)은 앱 번들의 기본 동작을 재정의하고, 리소스를 별도의 리소스 패키지에 포함하지 않고 앱 패키지에 빌드해야 합니다. 이 문서에서는 이러한 작업을 수행하는 방법에 대해 설명합니다. |
-| [PRI(패키지 리소스 인덱싱) API 및 사용자 지정 빌드 시스템](pri-apis-custom-build-systems.md) | [PRI(패키지 리소스 인덱싱) API](https://msdn.microsoft.com/library/windows/desktop/mt845690)를 사용하여 UWP 앱의 리소스에 대한 사용자 지정 빌드 시스템을 개발할 수 있습니다. 빌드 시스템은 UWP 앱에 필요한 복잡도 수준에 관계없이 PRI(패키지 리소스 인덱스) 파일을 만들고, 버전 관리하고, 덤프할 수 있습니다(XML로). |
+| [PRI(패키지 리소스 인덱싱) API 및 사용자 지정 빌드 시스템](pri-apis-custom-build-systems.md) | [PRI(패키지 리소스 인덱싱) API](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference)를 사용하여 UWP 앱의 리소스에 대한 사용자 지정 빌드 시스템을 개발할 수 있습니다. 빌드 시스템은 UWP 앱에 필요한 복잡도 수준에 관계없이 PRI(패키지 리소스 인덱스) 파일을 만들고, 버전 관리하고, 덤프할 수 있습니다(XML로). |
 | [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md) | MakePri.exe는 PRI 파일을 만들고 덤프하는 데 사용할 수 있는 명령줄 도구입니다. Microsoft Visual Studio 내에서 MSBuild의 일부로 통합되었지만 패키지를 수동으로 또는 사용자 지정 빌드 시스템을 통해 만드는 데 유용할 수 있습니다. |
 | [레거시 앱 또는 게임에서 Windows 10 리소스 관리 시스템 사용](using-mrt-for-converted-desktop-apps-and-games.md) | .NET 또는 Win32 앱 또는 게임을 AppX 패키지로 패키지하면 리소스 관리 시스템을 활용하여 런타임 컨텍스트에 맞는 앱 리소스를 로드할 수 있습니다. 이 문서에서는 해당 기술에 대해 자세히 설명합니다. |
 

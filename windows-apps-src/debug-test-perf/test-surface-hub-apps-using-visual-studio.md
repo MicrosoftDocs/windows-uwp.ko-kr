@@ -6,12 +6,12 @@ ms.date: 10/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: db481fac1bdcb9e79762f52aee48574e987c4cbb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8a846aab77fad6f087057fe930d11ac781ed7171
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601018"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362194"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Visual Studio를 사용하여 Surface Hub 앱 테스트
 Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을 포함하여 UWP(유니버설 Windows 플랫폼) 앱을 디자인, 개발, 디버그 및 테스트할 수 있는 환경을 제공합니다. 시뮬레이터 Surface Hub와 같은 사용자 인터페이스를 사용 하지 않지만 앱의 모양과 Surface Hub의 화면 크기 및 해상도 사용 하 여 동작을 테스트 하는 데 유용 합니다.
@@ -90,7 +90,7 @@ Surface Hub에 앱을 수동으로 배포 하는 것은 간단 합니다.
 3. **개발자 모드**를 선택하고 경고 프롬프트를 수락합니다.
 
 ### <a name="deploy-your-app-from-visual-studio"></a>Visual Studio에서 앱 배포
-배포 프로세스에 대 한 자세한 내용은 일반적으로 참조 [배포 및 UWP 앱을 디버깅](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps)합니다.
+배포 프로세스에 대 한 자세한 내용은 일반적으로 참조 [배포 및 UWP 앱을 디버깅](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps)합니다.
 
    > [!NOTE]
    > 하지만이 기능은 최신 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다 Visual Studio 2015 업데이트 1 이상 필요 합니다. 최신 Visual Studio 인스턴스는 모든 최신 개발 하 고 보안 업데이트 gibe 됩니다.

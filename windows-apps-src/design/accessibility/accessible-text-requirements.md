@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f474ec0c3017c3834d3eadb6f1caa989fc188a7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8dda866c877eb166c38949cfff5cec504103fd30
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653338"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359600"
 ---
 # <a name="accessible-text-requirements"></a>접근성 있는 텍스트 요구 사항  
 
@@ -46,21 +46,21 @@ ms.locfileid: "57653338"
 ## <a name="text-element-roles"></a>텍스트 요소 역할  
 UWP 앱은 다음과 같은 기본 요소(일반적으로 *텍스트 요소* 또는 *textedit 컨트롤*이라고 함)를 사용할 수 있습니다.
 
-* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652): 역할은 [ **텍스트**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683): 역할은 [ **편집**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [**RichTextBlock** ](https://msdn.microsoft.com/library/windows/apps/BR227565) (및 클래스 overflow [ **RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): 역할은 [ **텍스트**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/BR227548): 역할은 [ **편집**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock): 역할은 [ **텍스트**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox): 역할은 [ **편집**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**RichTextBlock** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) (및 클래스 overflow [ **RichTextBlockOverflow**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblockoverflow)): 역할은 [ **텍스트**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**RichEditBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox): 역할은 [ **편집**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
 
-컨트롤에 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182) 역할이 있는 것으로 보고되면 보조 기술에서는 사용자가 값을 변경할 방법이 있는 것으로 가정합니다. 따라서 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)에 정적 텍스트를 입력하면 역할을 잘못 보고하여 앱의 구조를 접근성 사용자에게 잘못 보고할 수 있습니다.
+컨트롤에 [**Edit**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) 역할이 있는 것으로 보고되면 보조 기술에서는 사용자가 값을 변경할 방법이 있는 것으로 가정합니다. 따라서 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)에 정적 텍스트를 입력하면 역할을 잘못 보고하여 앱의 구조를 접근성 사용자에게 잘못 보고할 수 있습니다.
 
-XAML의 텍스트 모델에는 정적 텍스트에 주로 사용되는 두 요소, 즉 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) 및 [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)이 있습니다. 이 요소는 [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) 하위 클래스가 아니므로 키보드 포커스가 불가능하고 탭 순서로 표시할 수 없습니다. 하지만 보조 기술에서 이를 읽을 수 없거나 읽지 않는다는 의미는 아닙니다. 화면 읽기 프로그램은 일반적으로 "가상 커서"처럼 포커스 및 탭 순서를 벗어난 탐색 패턴이나 읽기 전용 모드를 포함하여 앱의 콘텐츠를 읽는 다양한 모드를 지원하도록 설계되었습니다. 따라서 탭 순서에 따라 사용자가 도달하도록 정적 텍스트를 포커스 가능 컨테이너에 배치하지 마세요. 보조 기술 사용자는 탭 순서 내의 항목이 대화형이기를 기대하므로 정적 텍스트를 발견할 경우 도움이 되기보다는 오히려 혼동을 줍니다. 내레이터로 직접 테스트하여 화면 읽기 프로그램을 사용해 앱의 정적 텍스트를 검사할 때 앱의 사용자 환경이 어떤지 확인해야 합니다.
+XAML의 텍스트 모델에는 정적 텍스트에 주로 사용되는 두 요소, 즉 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 및 [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock)이 있습니다. 이 요소는 [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 하위 클래스가 아니므로 키보드 포커스가 불가능하고 탭 순서로 표시할 수 없습니다. 하지만 보조 기술에서 이를 읽을 수 없거나 읽지 않는다는 의미는 아닙니다. 화면 읽기 프로그램은 일반적으로 "가상 커서"처럼 포커스 및 탭 순서를 벗어난 탐색 패턴이나 읽기 전용 모드를 포함하여 앱의 콘텐츠를 읽는 다양한 모드를 지원하도록 설계되었습니다. 따라서 탭 순서에 따라 사용자가 도달하도록 정적 텍스트를 포커스 가능 컨테이너에 배치하지 마세요. 보조 기술 사용자는 탭 순서 내의 항목이 대화형이기를 기대하므로 정적 텍스트를 발견할 경우 도움이 되기보다는 오히려 혼동을 줍니다. 내레이터로 직접 테스트하여 화면 읽기 프로그램을 사용해 앱의 정적 텍스트를 검사할 때 앱의 사용자 환경이 어떤지 확인해야 합니다.
 
 <span id="Auto-suggest_accessibility"/>
 <span id="auto-suggest_accessibility"/>
 <span id="AUTO-SUGGEST_ACCESSIBILITY"/>
 
 ## <a name="auto-suggest-accessibility"></a>자동 제안 접근성  
-사용자가 입력 필드에 입력하고 잠재적인 제안 목록이 나타날 경우 이러한 유형의 시나리오를 자동 제안이라고 합니다. 이 시나리오는 메일 필드의 **받는 사람:** 줄, Windows의 Cortana 검색 상자, Microsoft Edge의 URL 입력 필드, 날씨 앱의 위치 입력 필드 등에서 일반적으로 사용됩니다. XAML [**AutosuggestBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.autosuggestbox) 또는 HTML 내장 컨트롤을 사용하는 경우 이 환경이 기본적으로 이미 연결되어 있습니다. 이 환경에 액세스할 수 있게 하려면 입력 필드와 목록을 연결해야 합니다. 이 내용은 [자동 제안 구현](#implementing_auto-suggest) 섹션에서 설명합니다.
+사용자가 입력 필드에 입력하고 잠재적인 제안 목록이 나타날 경우 이러한 유형의 시나리오를 자동 제안이라고 합니다. 이 시나리오는 메일 필드의 **받는 사람:** 줄, Windows의 Cortana 검색 상자, Microsoft Edge의 URL 입력 필드, 날씨 앱의 위치 입력 필드 등에서 일반적으로 사용됩니다. XAML [**AutosuggestBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox) 또는 HTML 내장 컨트롤을 사용하는 경우 이 환경이 기본적으로 이미 연결되어 있습니다. 이 환경에 액세스할 수 있게 하려면 입력 필드와 목록을 연결해야 합니다. 이 내용은 [자동 제안 구현](#implementing_auto-suggest) 섹션에서 설명합니다.
 
 특수 제안 모드로 이러한 유형의 환경에 액세스할 수 있도록 내레이터가 업데이트되었습니다. 상위 수준에서 편집 필드와 목록이 제대로 연결된 경우 최종 사용자에게 다음과 같은 이점이 있습니다.
 
@@ -78,24 +78,24 @@ _제안 목록 예제_
 <span id="IMPLEMENTING_AUTO-SUGGEST"/>
 
 ### <a name="implementing-auto-suggest"></a>자동 제안 구현  
-이 환경에 액세스할 수 있게 하려면 UIA 트리에서 입력 필드와 목록을 연결해야 합니다. 이 연결은 데스크톱 앱의 [UIA_ControllerForPropertyId](https://msdn.microsoft.com/windows/desktop/ee684017) 속성 또는 UWP 앱의 [ControlledPeers](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 속성을 통해 수행됩니다.
+이 환경에 액세스할 수 있게 하려면 UIA 트리에서 입력 필드와 목록을 연결해야 합니다. 이 연결은 데스크톱 앱의 [UIA_ControllerForPropertyId](https://msdn.microsoft.com/windows/desktop/ee684017) 속성 또는 UWP 앱의 [ControlledPeers](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 속성을 통해 수행됩니다.
 
 상위 수준에는 두 가지 유형의 자동 제안 환경이 있습니다.
 
 **기본적으로 선택**  
-목록에서 기본 선택을 수행하는 경우 내레이터가 데스크톱 앱에서 [**UIA_SelectionItem_ElementSelectedEventId**](https://msdn.microsoft.com/library/windows/desktop/ee671223) 이벤트를 찾거나, UWP 앱에서 [**AutomationEvents.SelectionItemPatternOnElementSelected**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) 이벤트가 발생합니다. 선택이 변경될 때마다, 사용자가 다른 문자를 입력하고 제안이 업데이트될 때 또는 사용자가 목록을 통해 탐색할 때 **ElementSelected** 이벤트가 발생해야 합니다.
+목록에서 기본 선택을 수행하는 경우 내레이터가 데스크톱 앱에서 [**UIA_SelectionItem_ElementSelectedEventId**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-event-ids) 이벤트를 찾거나, UWP 앱에서 [**AutomationEvents.SelectionItemPatternOnElementSelected**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트가 발생합니다. 선택이 변경될 때마다, 사용자가 다른 문자를 입력하고 제안이 업데이트될 때 또는 사용자가 목록을 통해 탐색할 때 **ElementSelected** 이벤트가 발생해야 합니다.
 
 ![기본적으로 선택 된 목록](images/autosuggest-default-selection.png)<br/>
 _예제는 기본적으로 선택 하는 경우_
 
 **기본 선택**  
-날씨 앱의 위치 상자와 같이 기본 선택이 없는 경우 내레이터가 데스크톱 [**UIA_LayoutInvalidatedEventId**](https://msdn.microsoft.com/library/windows/desktop/ee671223 ) 이벤트를 찾거나, 목록이 업데이트될 때마다 목록에서 UWP [**LayoutInvalidated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) 이벤트가 발생합니다.
+날씨 앱의 위치 상자와 같이 기본 선택이 없는 경우 내레이터가 데스크톱 [**UIA_LayoutInvalidatedEventId**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-event-ids) 이벤트를 찾거나, 목록이 업데이트될 때마다 목록에서 UWP [**LayoutInvalidated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트가 발생합니다.
 
 ![선택 영역이 없는 기본 목록](images/autosuggest-no-default-selection.png)<br/>
 _예제에서는 기본 선택 영역이 없는 경우_
 
 ### <a name="xaml-implementation"></a>XAML 구현  
-기본 XAML [**AutosuggestBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.autosuggestbox)를 사용하는 경우 모든 항목이 이미 연결되어 있습니다. [  **TextBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox)와 목록을 사용하여 고유한 자동 제안 환경을 만드는 경우 **TextBox**에서 목록을 [**AutomationProperties.ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers)로 설정해야 합니다. 이 속성을 추가하거나 제거할 때마다 [**ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 속성에 대한 **AutomationPropertyChanged** 이벤트를 발생하거나, 이 문서의 앞부분에서 설명한 시나리오 유형에 따라 고유한 [**SelectionItemPatternOnElementSelected**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) 이벤트 또는 [**LayoutInvalidated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) 이벤트를 발생해야 합니다.
+기본 XAML [**AutosuggestBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)를 사용하는 경우 모든 항목이 이미 연결되어 있습니다. [  **TextBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox)와 목록을 사용하여 고유한 자동 제안 환경을 만드는 경우 **TextBox**에서 목록을 [**AutomationProperties.ControlledPeers**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers)로 설정해야 합니다. 이 속성을 추가하거나 제거할 때마다 [**ControlledPeers**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 속성에 대한 **AutomationPropertyChanged** 이벤트를 발생하거나, 이 문서의 앞부분에서 설명한 시나리오 유형에 따라 고유한 [**SelectionItemPatternOnElementSelected**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트 또는 [**LayoutInvalidated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트를 발생해야 합니다.
 
 ### <a name="html-implementation"></a>HTML 구현  
 HTML에서 내장 컨트롤을 사용하는 경우 UIA 구현이 이미 매핑되어 있습니다. 다음은 이미 연결되어 있는 구현의 예입니다.
@@ -116,7 +116,7 @@ HTML에서 내장 컨트롤을 사용하는 경우 UIA 구현이 이미 매핑�
 
 ## <a name="text-in-graphics"></a>그래픽의 텍스트
 
-가능하면 그래픽에 텍스트를 포함하지 마세요. 예를 들어 앱에서 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) 요소로 표시되는 이미지 원본 파일에 포함하는 텍스트는 보조 기술에서 자동으로 접근하거나 읽을 수 없습니다. 그래픽에 텍스트를 사용해야 하는 경우 "alt 텍스트"의 값으로 제공하는 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) 값에 해당 텍스트나 해당 텍스트의 의미에 대한 요약이 포함되도록 합니다. 텍스트 문자를 벡터에서 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)의 일부로 만들거나 [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921)를 사용하여 만드는 경우에도 유사한 고려 사항이 적용됩니다.
+가능하면 그래픽에 텍스트를 포함하지 마세요. 예를 들어 앱에서 [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) 요소로 표시되는 이미지 원본 파일에 포함하는 텍스트는 보조 기술에서 자동으로 접근하거나 읽을 수 없습니다. 그래픽에 텍스트를 사용해야 하는 경우 "alt 텍스트"의 값으로 제공하는 [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name?view=netframework-4.8) 값에 해당 텍스트나 해당 텍스트의 의미에 대한 요약이 포함되도록 합니다. 텍스트 문자를 벡터에서 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)의 일부로 만들거나 [**Glyphs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Glyphs)를 사용하여 만드는 경우에도 유사한 고려 사항이 적용됩니다.
 
 <span id="Text_font_size"/>
 <span id="text_font_size"/>
@@ -126,7 +126,7 @@ HTML에서 내장 컨트롤을 사용하는 경우 UIA 구현이 이미 매핑�
 
 사용자가 어려울 수 있습니다 단순히 하는 글꼴 사용 하는 경우 앱에서 텍스트를 읽어 너무 작게 하므로 반드시 응용 프로그램에서 모든 텍스트를 적정 크기로 애초에 있습니다.
 
-명백한 완료 했으면, Windows 다양 한 내게 필요한 옵션 도구 및 사용자를 활용 하 고 자신의 요구 사항 및 텍스트를 읽기 위한 환경 설정에 맞게 조정 수 있는 설정에도 포함 되어 있습니다. 확인할 수 있습니다.
+명백한 완료 했으면, Windows 다양 한 내게 필요한 옵션 도구 및 사용자를 활용 하 고 자신의 요구 사항 및 텍스트를 읽기 위한 환경 설정에 맞게 조정 수 있는 설정에도 포함 되어 있습니다. 이러한 개체는 다음과 같습니다.
 
 * UI의 선택된 영역 확대는 돋보기 도구입니다. 앱에서 텍스트의 레이아웃 하지 하기가 어려울 읽기용 돋보기를 사용 해야 합니다.
 * 전역 크기 및 해상도 설정을 **설정-> 시스템 표시->-> 확장 및 레이아웃**합니다. 정확 하 게 크기 조정을 사용할 수 있는 옵션으로 디스플레이 장치의 기능에 따라 달라 집니다. 달라질 수 있습니다.
@@ -172,19 +172,19 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 변수의 **TextScaleFactor** 이 범위에서 double \[1,2.25\]합니다. 가장 작은 텍스트는 이 값만큼 확대됩니다. 값을 사용하여 텍스트에 맞게 그래픽의 크기를 조정할 수 있습니다. 하지만 모든 텍스트가 같은 배율로 크기가 조정되지는 않습니다. 일반적으로 텍스트 크기가 클수록 크기 조정의 영향을 덜 받습니다.
 
 다음 형식에는 **IsTextScaleFactorEnabled** 속성이 있습니다.  
-* [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378)
-* [**컨트롤** ](https://msdn.microsoft.com/library/windows/apps/BR209390) 및 파생 클래스
-* [**FontIcon**](https://msdn.microsoft.com/library/windows/apps/Dn279514)
-* [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)
-* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)
-* [**TextElement** ](https://msdn.microsoft.com/library/windows/apps/BR209967) 및 파생 클래스
+* [**ContentPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter)
+* [**컨트롤** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 및 파생 클래스
+* [**FontIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FontIcon)
+* [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock)
+* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
+* [**TextElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.TextElement) 및 파생 클래스
 
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>관련 항목  
 
 * [텍스트 크기 조정](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
-* [접근성](accessibility.md)
+* [액세스 가능성](accessibility.md)
 * [기본 내게 필요한 옵션 정보](basic-accessibility-information.md)
 * [XAML 텍스트 표시 샘플](https://go.microsoft.com/fwlink/p/?linkid=238579)
 * [XAML 텍스트 편집 샘플](https://go.microsoft.com/fwlink/p/?linkid=251417)

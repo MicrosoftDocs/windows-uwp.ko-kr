@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e508feb8a530f29b40d5a3839df573cb2ce89896
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 60d713efd9deeffa0856a5d1dbc92688c229288e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634398"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363576"
 ---
 # <a name="drag-and-drop"></a>끌어서 놓기
 
 끌어서 놓기는 Windows 바탕화면에 있는 응용 프로그램 내 또는 응용 프로그램 간에 데이터를 전송하는 직관적인 방법입니다. 끌어서 놓기의 표준 제스처(손가락으로 누른 채 이동하기 또는 마우스나 스타일러스로 눌러서 이동하기)를 사용하면 응용 프로그램 간에 또는 응용 프로그램 내에서 데이터를 전송할 수 있습니다.
 
-> **중요 API**: [CanDrag 속성](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag), [AllowDrop 속성](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 
+> **중요 API**: [CanDrag 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag), [AllowDrop 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop) 
 
 끌기 제스처가 트리거되는 영역 또는 응용 프로그램인 끌기 소스는 텍스트, RTF, HTML, 비트맵, 저장소 항목 또는 사용자 지정 데이터 형식 등의 표준 데이터 형식을 포함할 수 있는 데이터 패키지 개체를 입력함으로써 데이터가 전송되도록 해줍니다. 소스는 또한 복사, 이동 또는 연결 등 지원되는 작업의 종류도 나타냅니다. 마우스 포인터를 놓으면 놓기가 발생합니다. 포인터 아래에 있는 영역이나 응용 프로그램인 놓기 대상은 데이터 패키지를 처리하고 수행된 작업 유형을 반환합니다.
 
@@ -37,11 +37,11 @@ ms.locfileid: "57634398"
 
 ## <a name="enable-dragging"></a>끌기 사용
 
-요소에 대해 끌기를 설정하려면 [**CanDrag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag) 속성을 **True**로 설정합니다. 이렇게 하면 요소 및 요소에 포함된 요소(ListView와 같은 모음의 경우)에 끌기를 사용할 수 있습니다.
+요소에 대해 끌기를 설정하려면 [**CanDrag**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag) 속성을 **True**로 설정합니다. 이렇게 하면 요소 및 요소에 포함된 요소(ListView와 같은 모음의 경우)에 끌기를 사용할 수 있습니다.
 
 끌 수 있는 항목을 구체적으로 지정하세요. 사용자는 이미지나 텍스트와 같은 특정 항목만 앱에서 끌고자 할 것입니다. 
 
-다음은 [**CanDrag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag)를 설정하는 방법입니다.
+다음은 [**CanDrag**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag)를 설정하는 방법입니다.
 
 [!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]
 
@@ -51,26 +51,26 @@ ms.locfileid: "57634398"
 
 대부분의 경우, 데이터 패키지는 자동으로 작성됩니다. 자동으로 처리되는 항목은 다음과 같습니다.
 * 이미지
-* 텍스트 
+* 텍스트 모드 
 
 그 외 콘텐츠의 경우, 사용자가 **DragStarted** 및 **DragCompleted** 이벤트를 처리하고 이를 사용하여 사용자 고유의 [DataPackage](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage)를 만들어야 합니다.
 
 ## <a name="enable-dropping"></a>놓기 사용
 
-다음 태그는 XAML에서 [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop)을 사용하여 앱의 특정 영역을 놓기 작업이 가능하도록 설정하는 방법을 보여 줍니다. 사용자가 다른 위치를 끌려고 해도 시스템에서 허용되지 않습니다. 사용자가 앱의 아무 곳에나 항목을 놓을 수 있게 하려면 전체 배경을 놓기 대상으로 설정합니다.
+다음 태그는 XAML에서 [**AllowDrop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop)을 사용하여 앱의 특정 영역을 놓기 작업이 가능하도록 설정하는 방법을 보여 줍니다. 사용자가 다른 위치를 끌려고 해도 시스템에서 허용되지 않습니다. 사용자가 앱의 아무 곳에나 항목을 놓을 수 있게 하려면 전체 배경을 놓기 대상으로 설정합니다.
 
 [!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
 
 
 ## <a name="handle-the-dragover-event"></a>DragOver 이벤트 처리
 
-[  **DragOver**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DragOver) 이벤트는 사용자가 앱에서 항목을 놓을 때가 아니라 항목을 끌 때 발생합니다. 이 처리기에서 [**AcceptedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.DragEventArgs.AcceptedOperation) 속성을 사용하여 앱이 지원하는 작업 종류를 지정해야 합니다. 복사가 가장 일반적입니다.
+[  **DragOver**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover) 이벤트는 사용자가 앱에서 항목을 놓을 때가 아니라 항목을 끌 때 발생합니다. 이 처리기에서 [**AcceptedOperation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.acceptedoperation) 속성을 사용하여 앱이 지원하는 작업 종류를 지정해야 합니다. 복사가 가장 일반적입니다.
 
 [!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]
 
 ## <a name="process-the-drop-event"></a>Drop 이벤트 처리
 
-[  **Drop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.Drop) 이벤트는 유효한 놓기 영역에 항목을 놓을 때 발생합니다. [  **DataView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.DragEventArgs.DataView) 속성을 사용하여 처리합니다.
+[  **Drop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop) 이벤트는 유효한 놓기 영역에 항목을 놓을 때 발생합니다. [  **DataView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.dataview) 속성을 사용하여 처리합니다.
 
 아래 예제에서는 편의상 사용자가 사진 한 장을 놓았다고 가정하고 이에 직접 액세스합니다. 실제로 사용자는 다양한 형식의 여러 항목을 동시에 놓을 수 있습니다. 앱에서는 삭제된 파일 유형과 현재 개수를 확인하여 이에 대한 가능성을 처리하고 각각을 이에 따라 처리해야 합니다. 또한 사용자에게 앱에서 지원하지 않는 작업 수행 시도 유무에 대해서 알리는 것을 고려해야 합니다.
 
@@ -78,13 +78,13 @@ ms.locfileid: "57634398"
 
 ## <a name="customize-the-ui"></a>UI 사용자 지정
 
-시스템에서 끌어서 놓기를 위한 기본 UI를 제공합니다. 그러나 사용자 지정 자막과 문자 모양을 설정하거나 UI를 전혀 표시하지 않도록 선택하여 UI의 다양한 부분을 사용자 지정하도록 선택할 수도 있습니다. UI를 사용자 지정하려면 [**DragEventArgs.DragUIOverride**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.DragEventArgs.DragUIOverride) 속성을 사용합니다.
+시스템에서 끌어서 놓기를 위한 기본 UI를 제공합니다. 그러나 사용자 지정 자막과 문자 모양을 설정하거나 UI를 전혀 표시하지 않도록 선택하여 UI의 다양한 부분을 사용자 지정하도록 선택할 수도 있습니다. UI를 사용자 지정하려면 [**DragEventArgs.DragUIOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.draguioverride) 속성을 사용합니다.
 
 [!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
 
 ## <a name="open-a-context-menu-on-an-item-you-can-drag-with-touch"></a>터치로 끌 수 있는 항목에서 상황에 맞는 메뉴 열기
 
-터치를 사용할 때 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement)를 끌고 해당 상황에 맞는 메뉴를 여는 작업은 비슷한 터치 제스처를 공유합니다. 각각은 길게 누르기로 시작됩니다. 시스템에서 둘 다 지원하는 앱의 요소의 경우 두 작업 간을 식별하는 방법은 다음과 같습니다. 
+터치를 사용할 때 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)를 끌고 해당 상황에 맞는 메뉴를 여는 작업은 비슷한 터치 제스처를 공유합니다. 각각은 길게 누르기로 시작됩니다. 시스템에서 둘 다 지원하는 앱의 요소의 경우 두 작업 간을 식별하는 방법은 다음과 같습니다. 
 
 * 사용자가 항목을 누른 채 500밀리초 내에 끌기 시작하면 항목이 끌리고 상황에 맞는 메뉴가 표시되지 않습니다. 
 * 사용자가 항목을 누른 채 500밀리초 내에 끌지 않으면 상황에 맞는 메뉴가 열립니다. 
@@ -92,9 +92,9 @@ ms.locfileid: "57634398"
 
 ## <a name="designate-an-item-in-a-listview-or-gridview-as-a-folder"></a>ListView 또는 GridView의 항목을 폴더로 지정
 
-[  **ListViewItem**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ListViewItem) 또는 [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridViewItem)을 폴더로 지정할 수 있습니다. 이는 TreeView 및 파일 탐색기 시나리오에 특히 유용합니다. 이렇게 하려면 해당 항목에서 명시적으로 [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 속성을 **True**로 설정합니다. 
+[  **ListViewItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewItem) 또는 [**GridViewItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridViewItem)을 폴더로 지정할 수 있습니다. 이는 TreeView 및 파일 탐색기 시나리오에 특히 유용합니다. 이렇게 하려면 해당 항목에서 명시적으로 [**AllowDrop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop) 속성을 **True**로 설정합니다. 
 
-시스템은 폴더 및 비폴더 항목에 놓을 적절한 애니메이션을 자동으로 표시합니다. 데이터 원본을 업데이트하고 대상 폴더에 놓은 항목을 추가하기 위해 앱 코드는 폴더 항목(및 비폴더 항목)에서 [**Drop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.Drop) 이벤트를 계속 처리해야 합니다.
+시스템은 폴더 및 비폴더 항목에 놓을 적절한 애니메이션을 자동으로 표시합니다. 데이터 원본을 업데이트하고 대상 폴더에 놓은 항목을 추가하기 위해 앱 코드는 폴더 항목(및 비폴더 항목)에서 [**Drop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop) 이벤트를 계속 처리해야 합니다.
 
 ## <a name="implementing-custom-drag-and-drop"></a>사용자 지정 끌어서 놓기 구현
 
@@ -109,14 +109,14 @@ ms.locfileid: "57634398"
 
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 * [앱 간 통신](index.md)
-* [AllowDrop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.allowdrop.aspx)
-* [CanDrag](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.candrag.aspx)
-* [끌기](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.dragover.aspx)
-* [AcceptedOperation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.acceptedoperation.aspx)
-* [DataView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.dataview.aspx)
-* [DragUIOverride](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.draguioverride.aspx)
-* [삭제](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.drop.aspx)
-* [IsDragSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isdragsource.aspx)
+* [AllowDrop](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop)
+* [CanDrag](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag)
+* [DragOver](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
+* [AcceptedOperation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.acceptedoperation)
+* [DataView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.dataview)
+* [DragUIOverride](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.draguioverride)
+* [삭제](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
+* [IsDragSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isdragsource)

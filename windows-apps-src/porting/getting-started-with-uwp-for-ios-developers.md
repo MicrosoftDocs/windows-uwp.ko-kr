@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3212128a5fda9f6c5c811b2725b97f64655588b1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c53d93735d097aed3fe6e6f24912e659ad7d28a7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617628"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66358697"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>iOS 개발자용 UWP 시작
 
@@ -32,10 +32,10 @@ Windows 10 데스크톱, 랩톱, 태블릿, phone 장치에서 매력적인 앱�
 | [시작 하기: 프로그래밍 언어를 선택합니다.](getting-started-choosing-a-programming-language.md) | 이제 UWP 앱을 개발할 때 선택할 수 있는 프로그래밍 언어에 대해 알아야 합니다. |
 | [시작 하기: Visual Studio 살펴보기](getting-started-getting-around-in-visual-studio.md) | 이제 앞에서 만든 프로젝트로 돌아가서 Visual Studio IDE(통합 개발 환경)를 탐색하는 방법에 대해 알아보겠습니다. |
 | [시작 하기: 공용 컨트롤](getting-started-common-controls.md) | 앱에서 사용하는 몇 가지 일반적인 컨트롤과 이와 동일한 iOS 컨트롤은 다음과 같습니다. |
-| [시작 하기: 탐색](getting-started-navigation.md) | Windows 10 앱에서 이 탐색을 관리하는 방법 중 하나는 [Frame](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스를 사용하는 것입니다. 다음 연습에서는 이 작업을 수행하는 방법을 보여 줍니다. |
+| [시작 하기: 탐색](getting-started-navigation.md) | Windows 10 앱에서 이 탐색을 관리하는 방법 중 하나는 [Frame](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) 클래스를 사용하는 것입니다. 다음 연습에서는 이 작업을 수행하는 방법을 보여 줍니다. |
 | [시작 하기: 애니메이션](getting-started-animation.md) | Windows 앱에서는 애니메이션을 프로그래밍 방식으로 만들 수 있지만 XAML(Extensible Application Markup Language)을 사용하여 선언적으로 정의할 수도 있습니다. |
 | [시작 하기: 다음은 뭔가요?](getting-started-what-next.md) | 이제 이 기본 정보를 사용하여 보다 흥미로운 UWP(유니버설 Windows 플랫폼) 앱을 작성할 수 있습니다. 다음 단계를 위해 아래 항목을 읽고 Visual Studio를 실행하여 코드 작성을 시작하세요. |
-| [Windows 앱 개념 매핑](https://msdn.microsoft.com//windows/uwp/porting/android-ios-uwp-map) | Windows(및 Android) 기능 측면에서 iOS 개념을 고려하는 방법 |
+| [Windows 앱 개념 매핑](https://docs.microsoft.com/windows/uwp/porting/android-ios-uwp-map) | Windows(및 Android) 기능 측면에서 iOS 개념을 고려하는 방법 |
 
  
 

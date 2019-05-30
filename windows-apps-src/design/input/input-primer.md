@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bae6e5b21369c30c8ed067fe7283c0a116d220b8
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
-ms.translationtype: HT
+ms.openlocfilehash: 55879c33e30564f4639b8880c3a12f4b4181245e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343292"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365926"
 ---
 # <a name="interaction-primer"></a>조작 입문서
 
@@ -135,7 +135,7 @@ Windows 10에서 **Cortana** 확장성을 사용 하면 사용자의 음성 명�
 
 ### <a name="more-info"></a>추가 정보
 
-[음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)
+[음성 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
  
 
 ## <a name="pen"></a>펜
@@ -168,7 +168,7 @@ Windows 10에서 **Cortana** 확장성을 사용 하면 사용자의 음성 명�
 
 ### <a name="more-info"></a>추가 정보
 
-[펜 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn456352)
+[펜 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions)
  
 
 ## <a name="touch"></a>터치
@@ -203,7 +203,7 @@ Surface Hub 장치는 100개의 고유한 동시 터치 접촉을 인식합니�
 
 ### <a name="more-info"></a>추가 정보
 
-[터치 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465370)
+[터치 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction)
  
 
 ## <a name="touchpad"></a>터치 패드
@@ -227,7 +227,7 @@ Surface Hub 장치는 100개의 고유한 동시 터치 접촉을 인식합니�
 
 ### <a name="more-info"></a>추가 정보
 
-[터치 패드 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn456353)
+[터치 패드 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/touch-interactions)
  
 
 ## <a name="keyboard"></a>키보드
@@ -267,7 +267,7 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 
 ### <a name="more-info"></a>추가 정보
 
-[바로 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh972345)
+[바로 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
  
 
 ## <a name="mouse"></a>마우스
@@ -294,7 +294,7 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 
 ### <a name="more-info"></a>추가 정보
 
-[마우스 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn456351)
+[마우스 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/mouse-interactions)
  
 
 ## <a name="gesture"></a>제스처

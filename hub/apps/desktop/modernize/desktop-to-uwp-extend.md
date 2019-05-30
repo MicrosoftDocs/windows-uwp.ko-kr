@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 10ad54dd485d7dbf5e7f4cb119c7700c09056017
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 672485dd505227da0a59a220edaa9648e2521e63
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215128"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359633"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>최신 UWP 구성 요소를 사용 하 여 데스크톱 앱 확장
 
@@ -175,7 +175,7 @@ UWP 프로젝트에 XAML UI를 추가합니다. 기본 지도의 XAML은 다음�
 
 ### <a name="start-the-uwp-app"></a>UWP 앱 시작
 
-먼저 데스크톱 응용 프로그램에서 UWP 앱으로 보내고 싶은 매개 변수와 프로토콜 입력이 포함된 [Uri](https://msdn.microsoft.com/library/system.uri.aspx)를 생성합니다. 그런 후 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출합니다.
+먼저 데스크톱 응용 프로그램에서 UWP 앱으로 보내고 싶은 매개 변수와 프로토콜 입력이 포함된 [Uri](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN)를 생성합니다. 그런 후 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출합니다.
 
 ```csharp
 

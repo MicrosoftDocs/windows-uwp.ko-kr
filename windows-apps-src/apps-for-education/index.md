@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 교육
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
-ms.openlocfilehash: 7696cd785b4a8720f6eefb7bc897d13ffb0c7115
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8c2333d960ba91b1d1c3d3030481108407909594
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583427"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359213"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>교육용 유니버설 Windows 앱 개발
 ![시험 응시 앱 스크린샷](images/take-a-test-screen-small.png)
@@ -38,7 +38,7 @@ Windows Ink 플랫폼은 학생에게 익숙한 입력 모드에 맞게 조정�
 
 
 ### <a name="microsoft-store"></a>Microsoft Store
-교육용 앱은 주로 특정 조직에게 특별한 상황에서 출시됩니다. 이에 대한 자세한 내용은 [엔터프라이즈에 LOB 앱 배포](https://msdn.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises)를 참조하세요.
+교육용 앱은 주로 특정 조직에게 특별한 상황에서 출시됩니다. 이에 대한 자세한 내용은 [엔터프라이즈에 LOB 앱 배포](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises)를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 - Windows IT 센터의 [Windows 10 for Education](https://technet.microsoft.com/edu/windows/index)

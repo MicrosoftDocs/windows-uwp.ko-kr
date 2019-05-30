@@ -1,16 +1,16 @@
 ---
 description: 전체 Direct2D 코드 예제를 사용하여 C++/WinRT를 통해 COM 클래스 및 인터페이스를 사용하는 방법을 보여 줍니다.
 title: C++/WinRT로 작성된 COM 구성 요소 사용
-ms.date: 07/23/2018
+ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c + +, cpp, winrt, COM 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 16425fd6d296a4abd4ed62c0c64cd23ef1f88891
-ms.sourcegitcommit: 9031a51f9731f0b675769e097aa4d914b4854e9e
+ms.openlocfilehash: dc4acd288496d83d5d91f1bdf206be19fe2fbb06
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618410"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361153"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>C++/WinRT로 작성된 COM 구성 요소 사용
 
@@ -30,7 +30,7 @@ COM을 사용 하 여 프로그래밍 인터페이스를 사용 하 여 직접 �
 winrt::com_ptr<ID2D1Factory1> factory;
 ```
 
-위의 코드는 초기화 되지 않은 스마트 포인터를 선언 하는 방법을 보여 줍니다는 [ **ID2D1Factory1** ](https://msdn.microsoft.com/library/Hh404596) COM 인터페이스입니다. 아직 가리키는 스마트 포인터가 초기화 되었으므로 **ID2D1Factory1** (해당 가리키고 있지 않으면 인터페이스 전혀) 실제 개체에 속하는 인터페이스입니다. 이렇게; 가능성이 되었지만 및 COM 참조를 가리키는 인터페이스의 소유 하는 개체의 수명을 관리 하는 데 해당 인터페이스 함수를 호출 하는 미디어 수 계산을 통해 수 있는지 (스마트 포인터 중).
+위의 코드는 초기화 되지 않은 스마트 포인터를 선언 하는 방법을 보여 줍니다는 [ **ID2D1Factory1** ](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1factory1) COM 인터페이스입니다. 아직 가리키는 스마트 포인터가 초기화 되었으므로 **ID2D1Factory1** (해당 가리키고 있지 않으면 인터페이스 전혀) 실제 개체에 속하는 인터페이스입니다. 이렇게; 가능성이 되었지만 및 COM 참조를 가리키는 인터페이스의 소유 하는 개체의 수명을 관리 하는 데 해당 인터페이스 함수를 호출 하는 미디어 수 계산을 통해 수 있는지 (스마트 포인터 중).
 
 ## <a name="com-functions-that-return-an-interface-pointer-as-void"></a>인터페이스 포인터를 반환 하는 COM 함수 **void**
 
@@ -72,7 +72,7 @@ D2D1CreateFactory(
 
 ## <a name="com-functions-that-return-an-interface-pointer-as-iunknown"></a>인터페이스 포인터를 반환 하는 COM 함수 **IUnknown**
 
-합니다 [ **DWriteCreateFactory** ](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) 함수에는 마지막 매개 변수인 통해 DirectWrite 팩터리 인터페이스 포인터를 반환 [ **IUnknown** ](https://msdn.microsoft.com/library/windows/desktop/ms680509)형식입니다. 이러한 함수를 사용 하 여 [ **com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptr_put-function), 하지만 캐스팅 재해석 **IUnknown**합니다.
+합니다 [ **DWriteCreateFactory** ](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) 함수에는 마지막 매개 변수인 통해 DirectWrite 팩터리 인터페이스 포인터를 반환 [ **IUnknown** ](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)형식입니다. 이러한 함수를 사용 하 여 [ **com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptr_put-function), 하지만 캐스팅 재해석 **IUnknown**합니다.
 
 ```cppwinrt
 DWriteCreateFactory(
@@ -477,7 +477,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 
 int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 {
-    CoreApplication::Run(App());
+    CoreApplication::Run(winrt::make<App>());
 }
 ```
 

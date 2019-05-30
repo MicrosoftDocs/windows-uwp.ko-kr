@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ebf54e062ef2388562cc970a2f124f0ce1f978c7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b07ab7fa6b65e16f39d9e2a77a677d33d3c70254
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653828"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360506"
 ---
 # <a name="composition-effects"></a>컴퍼지션 효과
 
-[  **Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) API를 사용하면 애니메이션 효과를 줄 수 있는 효과 속성을 사용하여 이미지 및 UI에 실시간 효과를 적용할 수 있습니다. 이 개요에서는 컴퍼지션 시각적 개체에 효과를 적용할 수 있는 전체 기능을 실행할 것입니다.
+[  **Windows.UI.Composition**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition) API를 사용하면 애니메이션 효과를 줄 수 있는 효과 속성을 사용하여 이미지 및 UI에 실시간 효과를 적용할 수 있습니다. 이 개요에서는 컴퍼지션 시각적 개체에 효과를 적용할 수 있는 전체 기능을 실행할 것입니다.
 
-응용 프로그램에서 효과를 설명하는 개발자를 위해 [UWP(유니버설 Windows 플랫폼)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)를 일관적으로 지원하기 위해, 컴퍼지션 효과에서는 Win2D의 IGraphicsEffect 인터페이스를 활용하여 [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 통해 효과 설명을 사용합니다.
+응용 프로그램에서 효과를 설명하는 개발자를 위해 [UWP(유니버설 Windows 플랫폼)](https://docs.microsoft.com/windows/uwp/get-started/whats-a-uwp)를 일관적으로 지원하기 위해, 컴퍼지션 효과에서는 Win2D의 IGraphicsEffect 인터페이스를 활용하여 [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 통해 효과 설명을 사용합니다.
 
 브러시 효과는 기존 이미지에 효과를 적용하여 응용 프로그램 영역을 그리는 데 사용됩니다. Windows 10 컴퍼지션 효과 API는 스트라이프 시각적 개체에 중점을 둡니다. SpriteVisual은 색, 이미지, 효과 생성에서 상호 작용하며 유연성을 제공합니다. SpriteVisual는 브러시를 사용하여 2D 사각형을 채울 수 있는 컴퍼지션 시각적 형식입니다. 시각적 개체는 사각형의 경계를 정의하고 브러시는 사각형을 그리는 데 사용되는 픽셀을 정의합니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "57653828"
 
 현재 컴퍼지션은 다음과 같은 효과를 지원합니다.
 
-| 효과               | 설명                                                                                                                                                                                                                |
+| 영향               | 설명                                                                                                                                                                                                                |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 2D 아핀 변형  | 2D 아핀 변형 매트릭스를 이미지에 적용합니다. 효과 [샘플](https://go.microsoft.com/fwlink/?LinkId=785341)에서 이 효과를 사용하여 알파 마스크에 애니메이션 효과를 주었습니다.       |
 | 산술 합성 | 유연한 수식을 사용하여 두 개의 이미지를 결합합니다. [샘플](https://go.microsoft.com/fwlink/?LinkId=785341)에서 산술 합성을 사용하여 크로스페이드 효과를 만들었습니다. |
@@ -235,10 +235,10 @@ LoadImage(surfaceBrush);
 
 ![흐릿한 이미지](images/composition-cat-desaturated.png)
 
-## <a name="more-information"></a>자세한 정보
+## <a name="more-information"></a>추가 정보
 
 - [Microsoft-컴퍼지션 GitHub](https://github.com/Microsoft/composition)
-- [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878)
+- [**Windows.UI.Composition**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
 - [Twitter의 Windows 컴퍼지션 팀](https://twitter.com/wincomposition)
 - [컴퍼지션 개요](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
 - [시각적 트리 기본 사항](composition-visual-tree.md)

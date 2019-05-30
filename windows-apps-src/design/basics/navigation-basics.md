@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3d516343798b7d8c221a5af12210a4897a3124a9
-ms.sourcegitcommit: 358abe22243da4592c30e18d6fc322778f091c8d
+ms.openlocfilehash: 1c764eeb57ec8046a93e7fb58e156fa68daea8df
+ms.sourcegitcommit: 13fe5d04bdb43c75d0fc4de18c2c3d4ae58ff982
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58362953"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "64564517"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>UWP 앱의 탐색 디자인 기본 사항
 
@@ -29,17 +29,17 @@ ms.locfileid: "58362953"
     :::column:::
         ![navigation example 1](images/nav/nav-1.svg)
 
-        Require users to go through a series of pages in order.
+사용자는 일련의 페이지가 순서 대로 진행 해야 합니다.
     :::column-end:::
     :::column:::
         ![navigation example 2](images/nav/nav-2.svg)
 
-        Provide a menu that allows users to jump directly to any page.
+모든 페이지로 직접 이동할 수 있게 해 주는 메뉴를 제공 합니다.
     :::column-end:::
     :::column:::
         ![navigation example 3](images/nav/nav-3.svg)
 
-        Place everything on a single page and provide filtering mechanisms for viewing content.
+단일 페이지에 모든 항목을 배치 하 고 콘텐츠를 보기 위한 필터링 메커니즘을 제공 합니다.
     :::column-end:::
 :::row-end:::
 
@@ -71,14 +71,14 @@ ms.locfileid: "58362953"
 
         ![navview good](images/nav/navview-good.svg)
 
-        Present navigation items in a familiar navigation menu.
+친숙 한 탐색 메뉴에 있는 탐색 항목입니다.
     :::column-end:::
     :::column:::
         ![don't example](images/nav/dont.svg)
 
         ![navview bad](images/nav/navview-bad.svg)
 
-        Overwhelm users with many navigation options.
+다양 한 탐색 옵션을 사용 하 여 사용자를 과부하.
     :::column-end:::
 :::row-end:::
 
@@ -111,14 +111,14 @@ ms.locfileid: "58362953"
     :::column span="2":::
         ### Flat/lateral
 
-        In a flat/lateral structure, pages exist side-by-side. You can go from one page to another in any order.
+플랫/측면 구조에서 페이지는 나란히 표시됩니다. 순서에 관계 없이 페이지 간을 이동할 수 있습니다.
 
-        We recommend using a flat structure when:
+다음과 같은 경우 플랫 구조를 사용하는 것이 좋습니다.
 
-        - 순서에 관계없이 페이지를 볼 수 있습니다.
-        - 페이지끼리 명확히 구분이 가며 명확한 부모/자식 관계가 없습니다.
-        - 보다 작거나 8 페이지 그룹에 있습니다. <br>
-        (그룹의 7페이지 이상이 있는 경우 페이지가 고유한 페이지인지를 이해하거나 그룹 내에서의 현재 위치를 파악하기 어려울 수 있습니다. 이러한 것이 앱에 문제가 되지 않는다면 계속 진행하고 페이지를 피어로 만듭니다. 그러지 않은 경우 계층 구조를 사용하여 페이지를 둘 이상의 더 작은 그룹으로 구분하는 것이 좋습니다.)
+- 순서에 관계없이 페이지를 볼 수 있습니다.
+- 페이지끼리 명확히 구분이 가며 명확한 부모/자식 관계가 없습니다.
+- 보다 작거나 8 페이지 그룹에 있습니다. <br>
+(그룹의 7페이지 이상이 있는 경우 페이지가 고유한 페이지인지를 이해하거나 그룹 내에서의 현재 위치를 파악하기 어려울 수 있습니다. 이러한 것이 앱에 문제가 되지 않는다면 계속 진행하고 페이지를 피어로 만듭니다. 그러지 않은 경우 계층 구조를 사용하여 페이지를 둘 이상의 더 작은 그룹으로 구분하는 것이 좋습니다.)
 
     :::column-end:::
 :::row-end:::
@@ -130,15 +130,15 @@ ms.locfileid: "58362953"
     :::column span="2":::
         ### Hierarchical
 
-        In a hierarchical structure, pages are organized into a tree-like structure. Each child page has one parent, but a parent can have one or more child pages. To reach a child page, you travel through the parent.
+계층 구조에서 페이지는 트리와 유사한 구조로 구성됩니다. 각 자식 페이지에는 부모 페이지가 하나만 있지만 부모 페이지에는 자식 페이지가 여러 개 있을 수 있습니다. 자식 페이지로 가려면 부모 페이지를 통해 이동합니다.
 
-        Hierarchical structures are good for organizing complex content that spans lots of pages. The downside is some navigation overhead: the deeper the structure, the more clicks it takes to get from page to page.
+계층 구조는 많은 페이지로 확장되는 복잡한 콘텐츠 구성에 적합합니다. 단점은 탐색의 과부하입니다. 구조가 깊을 수록, 페이지에서 페이지로 이동하는 데 더 많은 클릭이 필요하게 됩니다.
 
-        We recommend a hierarchical structure when:
+권장 계층을 구성 하는 경우:
         
-        - 페이지를 특정한 순서로 통과할 수 있어야 합니다.
-        - 페이지 사이에는 확실한 부모 자식 관계가 있습니다.
-        - 그룹에 8페이지 이상이 포함되어 있습니다.
+- 페이지를 특정한 순서로 통과할 수 있어야 합니다.
+- 페이지 사이에는 확실한 부모 자식 관계가 있습니다.
+- 그룹에 8페이지 이상이 포함되어 있습니다.
         
     :::column-end:::
 :::row-end:::
@@ -150,12 +150,12 @@ ms.locfileid: "58362953"
     :::column span="2":::
         ### Combining structures
 
-        You don't have choose to one structure or the other; many well-design apps use both. An app can use flat structures for top-level pages that can be viewed in any order, and hierarchical structures for pages that have more complex relationships.
+하나의 구조 또는 다른 선택 하지 대부분의 디자인에도 앱 모두를 사용합니다. 앱은 최상위 수준 페이지를 어떤 순서로도 볼 수 있게 플랫 구조를 사용하고, 더 복잡한 관계에 있는 페이지에는 계층 구조를 사용합니다.
 
-        If your navigation structure has multiple levels, we recommend that peer-to-peer navigation elements only link to the peers within their current subtree. Consider the adjacent illustration, which shows a navigation structure that has two levels:
+탐색 구조에 수준이 여러 개인 경우 피어 투 피어 탐색 요소를 현재 하위 트리 내 피어에만 연결하는 것이 좋습니다. 인접 한 두 개의 수준이 있는 탐색 구조를 보여 주는 그림을 고려 합니다.
 
-        - 수준 1의 경우 피어 투 피어 탐색 요소는 A, B, C 및 D 페이지에 대한 액세스를 제공해야 합니다.
-        - 수준 2에서 A2 페이지에 대한 피어 투 피어 탐색 요소는 다른 A2 페이지에만 연결되어야 하며 C 하위 트리의 수준 2 페이지에는 연결되지 않아야 합니다.
+- 수준 1의 경우 피어 투 피어 탐색 요소는 A, B, C 및 D 페이지에 대한 액세스를 제공해야 합니다.
+- 수준 2에서 A2 페이지에 대한 피어 투 피어 탐색 요소는 다른 A2 페이지에만 연결되어야 하며 C 하위 트리의 수준 2 페이지에는 연결되지 않아야 합니다.
     :::column-end:::
 :::row-end:::
 
@@ -170,7 +170,7 @@ ms.locfileid: "58362953"
     :::column span="2":::
         [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
-        With few exceptions, any app that has multiple pages uses a frame. Typically, an app has a main page that contains the frame and a primary navigation element, such as a navigation view control. When the user selects a page, the frame loads and displays it.
+몇 가지 예외를 제외하고, 여러 페이지가 있는 모든 앱은 프레임을 사용합니다. 일반적으로 앱에는 프레임과 탐색 보기 컨트롤과 같은 기본 탐색 요소가 있는 기본 페이지를 포함합니다. 사용자가 페이지를 선택하면, 프레임을 로드하여 표시합니다.
 :::row-end:::
 
 :::row:::
@@ -180,18 +180,18 @@ ms.locfileid: "58362953"
     :::column span="2":::
         [**Top navigation and tabs**](../controls-and-patterns/navigationview.md)
 
-        Displays a horizontal list of links to pages at the same level. The [NavigationView](../controls-and-patterns/navigationview.md) control implements the top navigation and tabs patterns.
+동일한 수준의 페이지에 대한 링크의 가로 목록을 표시합니다. 합니다 [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤 위쪽 탐색 모음을 구현 하 고 패턴을 탭 합니다.
         
-        Use top navigation when:
+위쪽 탐색 모음을 사용 하는 경우:
 
-        - 화면에서 모든 탐색 옵션을 표시 하려고 합니다.
-        - 원하는 앱의 콘텐츠에 대 한 더 많은 공간입니다.
-        - 아이콘에는 사용자 탐색 범주 명확 하 게 설명 수 없습니다.
+- 화면에서 모든 탐색 옵션을 표시 하려고 합니다.
+- 원하는 앱의 콘텐츠에 대 한 더 많은 공간입니다.
+- 아이콘에는 사용자 탐색 범주 명확 하 게 설명 수 없습니다.
         
-        사용 시기를 탭 합니다.
+사용 시기를 탭 합니다.
 
-        - 탐색 기록 및 페이지 상태를 유지 하려고 합니다.
-        - 예상한 자주 탭 사이 전환할 수 있습니다.
+- 탐색 기록 및 페이지 상태를 유지 하려고 합니다.
+- 예상한 자주 탭 사이 전환할 수 있습니다.
 
 :::row-end:::
 
@@ -202,11 +202,12 @@ ms.locfileid: "58362953"
         :::column span="2":::
     [**Pivot**](../controls-and-patterns/pivot.md)
     
-    비슷합니다 [탐색 보기](../controls-and-patterns/navigationview.md), 하지만 약간 다른 탐색 동작과 터치에 대 한 추가 지원 합니다.
+비슷합니다 [탐색 보기](../controls-and-patterns/navigationview.md), 하지만 약간 다른 탐색 동작과 터치에 대 한 추가 지원 합니다.
     
-    pivot을 사용할 경우:-앱 범주 간의 터치 살짝 허용 하려는
-        - 탐색 옵션을 만들어서 캐 러셀 infintely 원합니다
-        - 범주 간의 탐색 동작을 제어할 필요가 없습니다.
+pivot을 사용할 경우:
+- 앱 범주 간의 터치 살짝 허용 하려는
+- 탐색 옵션을 만들어서 캐 러셀 infintely 원합니다
+- 범주 간의 탐색 동작을 제어할 필요가 없습니다.
 
 :::row-end:::
 
@@ -217,11 +218,11 @@ ms.locfileid: "58362953"
     :::column span="2":::
         [**Left navigation**](../controls-and-patterns/navigationview.md)
 
-        Displays a vertical list of links to top-level pages. Use when:
+최상위 수준 페이지에 대한 세로 목록을 표시합니다. 사용하는 경우:
         
-        - 페이지는 최상위 수준에 있습니다.
-        - 여러 항목이 탐색 (5 개)
-        - 사용자가 페이지 간을 자주 전환할 것으로 예상되지 않습니다.
+- 페이지는 최상위 수준에 있습니다.
+- 여러 항목이 탐색 (5 개)
+- 사용자가 페이지 간을 자주 전환할 것으로 예상되지 않습니다.
 
 :::row-end:::
         
@@ -232,12 +233,12 @@ ms.locfileid: "58362953"
     :::column span="2":::
         [**Master/details**](../controls-and-patterns/master-details.md)
 
-        Displays a list (master view) of items. Selecting an item displays its corresponding page in the details section. Use when:
+항목의 목록(마스터 보기)을 표시합니다. 항목을 선택하면 세부 정보 섹션에 해당 항목 페이지가 표시됩니다. 사용하는 경우:
         
-        - 사용자가 자식 항목 간을 자주 전환할 것으로 예상됩니다.
-        - 개별 항목 또는 항목 그룹에 대해 삭제 또는 정렬과 같은 상위 수준 작업을 수행할 수 있도록 하거나 각 항목에 대한 세부 정보를 보거나 업데이트할 수 있도록 하려고 합니다.
+- 사용자가 자식 항목 간을 자주 전환할 것으로 예상됩니다.
+- 개별 항목 또는 항목 그룹에 대해 삭제 또는 정렬과 같은 상위 수준 작업을 수행할 수 있도록 하거나 각 항목에 대한 세부 정보를 보거나 업데이트할 수 있도록 하려고 합니다.
 
-        마스터/세부 요소는 전자 메일 받은 편지함, 연락처 목록 및 데이터 항목에 적합합니다.
+마스터/세부 요소는 전자 메일 받은 편지함, 연락처 목록 및 데이터 항목에 적합합니다.
 :::row-end:::
 
 :::row:::
@@ -247,7 +248,7 @@ ms.locfileid: "58362953"
     :::column span="2":::
         [**Hyperlinks**](../controls-and-patterns/hyperlinks.md)
 
-        Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
+포함된 탐색 요소는 페이지의 콘텐츠에 표시될 수 있습니다. 페이지에서 일관되어야 하는 다른 탐색 요소와 달리, 콘텐츠 포함 탐색 요소는 페이지 간에 고유합니다.
 :::row-end:::
 
 ## <a name="next-add-navigation-code-to-your-app"></a>다음: 탐색 코드를 앱에 추가

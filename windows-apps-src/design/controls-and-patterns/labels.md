@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4345daf5b879fed7ba9805e4a448c473299031d7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5996fb15c0d7302c7360c2e45613f0da2720d415
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654148"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364649"
 ---
 # <a name="labels"></a>Labels(레이블)
 
@@ -24,9 +24,9 @@ ms.locfileid: "57654148"
 
 레이블은 컨트롤 또는 관련 컨트롤 그룹의 이름이나 제목입니다.
 
-> **중요 API**: 헤더 속성 [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/br209652)
+> **중요 API**: 헤더 속성 [TextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
-XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우에는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)을 사용할 수 있습니다.
+XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우에는 [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 사용할 수 있습니다.
 
 ![표준 레이블 컨트롤을 보여 주는 스크린샷](images/label-standard.png)
 
@@ -43,15 +43,15 @@ XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 
 
 ## <a name="related-topics"></a>관련 항목
 * [텍스트 컨트롤](text-controls.md)
-* [TextBox.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn252861)
-* [PasswordBox.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn299051)
-* [ToggleSwitch.Header 속성](https://msdn.microsoft.com/library/windows/apps/br209713)
-* [DatePicker.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn279460)
-* [TimePicker.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn299286)
-* [Slider.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn252829)
-* [ComboBox.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn279416)
-* [RichEditBox.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn252726)
-* [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/br209652)
+* [TextBox.Header 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.header)
+* [PasswordBox.Header 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.header)
+* [ToggleSwitch.Header 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.header)
+* [DatePicker.Header 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepicker.header)
+* [TimePicker.Header 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepicker.header)
+* [Slider.Header 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider.header)
+* [ComboBox.Header 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox.header)
+* [RichEditBox.Header 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.header)
+* [TextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
  
 

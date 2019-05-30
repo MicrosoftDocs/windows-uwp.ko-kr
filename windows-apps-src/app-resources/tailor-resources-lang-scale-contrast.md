@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ac80888019044beabc44335290bc6ad59cf377c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0e5ba7ddb6ef37b4aa54584602fc890bbabc8998
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608138"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359349"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 
@@ -114,11 +114,11 @@ ms.locfileid: "57608138"
 
 ## <a name="alternateform"></a>AlternateForm
 
-`alternateform` 한정자는 특정 목적을 위해 대체 형식의 자원을 제공하는 데 사용됩니다. 이는 일반적으로 일본 앱 개발자가 `msft-phonetic` 값이 예약된 후리가나 문자열을 제공하기 위해서만 사용됩니다([지역화를 준비하는 방법](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)의 '정렬 가능한 일본어 문자열에 대해 후리가나 지원' 섹션 참조).
+`alternateform` 한정자는 특정 목적을 위해 대체 형식의 자원을 제공하는 데 사용됩니다. 이는 일반적으로 일본 앱 개발자가 `msft-phonetic` 값이 예약된 후리가나 문자열을 제공하기 위해서만 사용됩니다([지역화를 준비하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))의 '정렬 가능한 일본어 문자열에 대해 후리가나 지원' 섹션 참조).
 
 대상 시스템 또는 앱은 `alternateform` 한정자가 일치하는 값을 제공해야 합니다. 자체적인 사용자 지정 `alternateform` 한정자 값에 대해 `msft-` 접두사는 사용하지 않습니다.
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>Configuration
 
 `configuration` 한정자 이름이 필요할 가능성은 없습니다. 이는 테스트 전용 리소스와 같이 주어진 제작 환경에 적용할 수 있는 리소스를 지정하는 데 사용할 수 있습니다.
 
@@ -193,7 +193,7 @@ public void SetLicenseLevel(BrandID brand)
 
 `homeregion` 한정자는 국가 또는 지역에 대한 사용자 설정에 해당합니다. 이는 사용자의 홈 위치를 나타냅니다. 값에는 유효한 [BCP 47 지역 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)가 포함되어 있습니다. 즉, **ISO 1 3166 alpha-2** 두 자리 문자 지역 코드와 구성된 지역에 대한 **ISO 1 3166 숫자** 세 자리 지리적 코드 집합입니다([United Nations Statistic Division M49 지역 코드의 구성](https://go.microsoft.com/fwlink/p/?linkid=247929) 참조). '선택된 경제 및 기타 그룹화"에 대한 코드는 유효하지 않습니다.
 
-## <a name="language"></a>외국어
+## <a name="language"></a>언어
 
 `language` 한정자는 표시 언어 설정에 해당합니다. 값에는 유효한 [BCP 47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)가 포함되어 있습니다. 언어 목록은 [IANA 언어 하위 태그 레지스트리](https://go.microsoft.com/fwlink/p/?linkid=227303)를 참조하세요.
 
@@ -226,7 +226,7 @@ public void SetLicenseLevel(BrandID brand)
 
 `layoutdirection` 한정자는 표시 언어 설정의 레이아웃 방향에 해당합니다. 예를 들어 이미지를 아랍어 또는 히브리어와 같이 오른쪽에서 왼쪽으로 쓰는 언어로 미러링해야 할 수 있습니다. [FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) 속성을 설정하는 경우 UI의 레이아웃 패널 및 이미지가 레이아웃 방향에 적절하게 대응합니다([레이아웃 및 글꼴 조정, RTL 지원](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md) 참조). 하지만 `layoutdirection` 한정자는 단순한 플리핑이 적절하지 않은 경우를 위한 것이며, 보다 일반적인 방법으로 특정 읽기 순서 및 텍스트 정렬의 방향에 대응할 수 있습니다.
 
-## <a name="scale"></a>배율
+## <a name="scale"></a>소수 자릿수
 
 Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 각 디스플레이의 배율을 자동으로 선택합니다. [유효 픽셀 및 배율](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)을 참조하세요. Windows에서 최적 크기를 선택하거나 가장 유사한 크기를 사용하여 확장할 수 있도록 권장된 여러 크기(최소 100, 200, 및 400)에서 이미지를 만들어야 합니다. Windows에서 디스플레이 배율 인수에 대해 올바른 크기의 이미지를 포함하는 실제 파일을 식별할 수 있도록 `scale`한정자를 사용합니다. 리소스의 배율은 [DisplayInformation.ResolutionScale](/uwp/api/windows.graphics.display.displayinformation.ResolutionScale) 값 또는 다음으로 큰 배율의 리소스와 일치합니다.
 
@@ -250,7 +250,7 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 
 ## <a name="targetsize"></a>TargetSize
 
-`targetsize` 한정자는 주로 파일 탐색기에 표시할 [파일 유형 연결 아이콘](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh127427) 또는 [프로토콜 아이콘](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bb266530)을 지정하는 데 사용됩니다. 한정자 값은 원시(물리적) 픽셀의 정사각형 이미지 측면 길이를 나타냅니다. 파일 탐색기의 보기 설정과 일치하는 값의 리소스 또는 정확한 일치가 없는 경우 다음으로 큰 값을 갖는 리소스가 로드됩니다.
+`targetsize` 한정자는 주로 파일 탐색기에 표시할 [파일 유형 연결 아이콘](https://docs.microsoft.com/windows/desktop/shell/how-to-assign-a-custom-icon-to-a-file-type) 또는 [프로토콜 아이콘](https://docs.microsoft.com/windows/desktop/search/-search-3x-wds-ph-ui-extensions)을 지정하는 데 사용됩니다. 한정자 값은 원시(물리적) 픽셀의 정사각형 이미지 측면 길이를 나타냅니다. 파일 탐색기의 보기 설정과 일치하는 값의 리소스 또는 정확한 일치가 없는 경우 다음으로 큰 값을 갖는 리소스가 로드됩니다.
 
 앱 패키지 매니페스트 디자이너의 시각적 자산 탭에서 앱 아이콘(`/Assets/Square44x44Logo.png`)에 대한 `targetsize` 한정자 값의 여러 크기를 나타내는 자산을 정의할 수 있습니다.
 
@@ -259,6 +259,21 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 ## <a name="theme"></a>테마
 
 `theme` 한정자는 기본 앱 모드 설정 또는 [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme)를 사용하는 앱의 재정의 설정과 가장 잘 일치하는 리소스를 제공하는 데 사용됩니다.
+
+
+## <a name="shell-light-theme-and-unplated-resources"></a>셸 밝은 테마 및 플레이트 되지 않은 리소스
+합니다 *2019 업데이트할 수 있습니다 Windows 10* Windows 셸에 대 한 새 "light" 테마를 도입 합니다. 결과적으로, 이전에 어두운 배경에 표시 된 일부 응용 프로그램 자산 이제 밝은 배경에 표시 됩니다. 앱에 대 한 해당 앱 제공 하는 altform 플레이트 되지 않은 자산을 연한 배경에 허용 대비 있는지 확인 해야을 작업 표시줄 및 창의 전환기 (Alt + Tab, 작업 보기 등)에 대 한 합니다.
+
+### <a name="providing-light-theme-specific-assets"></a>밝은 테마 특정 자산 제공
+셸 밝은 테마 새 대체 폼 리소스 한정자를 사용 하 여 수에 대 한 맞춤형된 리소스를 제공 하고자 하는 앱: `altform-lightunplated`합니다. 이 한정자를 기존 altform 플레이트 되지 않은 한정자를 미러링합니다. 
+
+### <a name="downlevel-considerations"></a>하위 수준 고려 사항
+앱을 사용 하지 않아야 합니다 `theme-light` 한정자는 `altform-unplated` 한정자입니다. 그러면 RS5에서 예기치 않은 동작이 및 작업 표시줄에 대 한 이전 버전 Windows의 방식으로 리소스가 로드 됩니다. 이전 버전의 windows에서는 밝은 테마 버전을 올바르게 사용할 수 있습니다. `altform-lightunplated` 한정자는이 문제를 방지 합니다. 
+
+### <a name="compatibility-behavior"></a>호환성 동작
+이전 버전과 호환성을 위해 Windows 단색 아이콘을 검색 하 고 원하는 배경 대조 됩니다 있는지 여부를 확인 하는 논리가 포함 되어 있습니다. 아이콘 대비 요구 사항에 맞게 못하면 Windows 고대비 흰색 버전의 자산에 대해 살펴보겠습니다. 제공 되지 않는 경우 Windows는 사용 하도록 대체 도금 된 버전의 자산입니다.
+
+
 
 ## <a name="important-apis"></a>중요 API
 
@@ -269,7 +284,7 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 
 * [효과적인 픽셀이 고 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
 * [리소스 관리 시스템](resource-management-system.md)
-* [지역화를 위한 준비 방법](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
+* [지역화를 위한 준비 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))
 * [플랫폼 검색 앱에서 실행 되](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
 * [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
 * [UI 문자열 지역화](localize-strings-ui-manifest.md)

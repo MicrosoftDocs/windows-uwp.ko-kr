@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e50d3613e5f7058e99f2e71ba023fb4191e5c734
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9ecb325566733e57c1ae9d1a13c68b25794e9e87
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644538"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360035"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>앱 시작 성능 모범 사례
 
@@ -60,7 +60,7 @@ Ngen.exe가 시스템에서 사용된 적이 있고 네이티브 이미지가 �
 
 앱의 일부가 제대로 작동하지 않더라도 앱과의 상호 작용이 가능할 수 있습니다. 예를 들어 앱에서 검색하는 데 오랜 시간이 걸리는 데이터를 표시할 경우 데이터를 비동기적으로 검색함으로써 코드가 앱의 시작 코드와 별개로 실행되게 할 수 있습니다. 데이터를 사용할 수 있게 되면 앱의 사용자 인터페이스를 그 데이터로 채웁니다.
 
-데이터를 검색하는 UWP(유니버설 Windows 플랫폼) API 중 상당수가 비동기적이므로, 어떤 식으로든 비동기적으로 데이터를 검색하고 있을 것입니다. 비동기 API에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기 API 호출](https://msdn.microsoft.com/library/windows/apps/Mt187337)을 참조하세요. 비동기 API를 사용하지 않는 작업을 하는 경우 장기간 실행되는 작업에 Task 클래스를 사용하여 사용자의 앱 조작을 차단하지 않을 수 있습니다. 그러면 데이터가 로드되는 동안에도 앱이 사용자에게 응답 가능한 상태로 유지됩니다.
+데이터를 검색하는 UWP(유니버설 Windows 플랫폼) API 중 상당수가 비동기적이므로, 어떤 식으로든 비동기적으로 데이터를 검색하고 있을 것입니다. 비동기 API에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. 비동기 API를 사용하지 않는 작업을 하는 경우 장기간 실행되는 작업에 Task 클래스를 사용하여 사용자의 앱 조작을 차단하지 않을 수 있습니다. 그러면 데이터가 로드되는 동안에도 앱이 사용자에게 응답 가능한 상태로 유지됩니다.
 
 앱에서 해당 UI의 일부를 로드하는 데 특히 오랜 시간이 걸릴 경우 그 영역에 "최신 데이터를 가져오고 있습니다"와 같은 문자열을 추가해 보세요. 그러면 사용자는 앱이 계속 처리하고 있음을 알 수 있습니다.
 
@@ -103,11 +103,11 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 -   UserControls 및 컨트롤 템플릿은 확장되므로 이러한 템플릿들도 고려해야 합니다.
 -   화면에 표시되지 않는 XAML을 만드는 경우 이러한 XAML 부분이 시작 중 만들어져야 하는지 여부를 확인해야 합니다.
 
-[Visual Studio 실시간 시각적 트리](https://blogs.msdn.com/b/visualstudio/archive/2015/02/24/introducing-the-ui-debugging-tools-for-xaml.aspx) 창은 트리의 각 노드에 대해 자식 요소 수를 표시합니다.
+[Visual Studio 실시간 시각적 트리](https://devblogs.microsoft.com/visualstudio/introducing-the-ui-debugging-tools-for-xaml/) 창은 트리의 각 노드에 대해 자식 요소 수를 표시합니다.
 
 ![실시간 시각적 트리.](images/live-visual-tree.png)
 
-**지연 사용**. 요소를 축소하거나 불투명도를 0으로 설정하면 요소가 만들어지는 것을 방지하지 않습니다. x:Load 또는 x:DeferLoadStrategy를 사용하면 UI 일부의 로드를 지연시켰다가 필요할 때 로드할 수 있습니다. 이는 시작 화면 중에 표시되지 않는 UI 처리를 지연시키는 좋은 방법이므로 필요할 때 로드하거나 지연된 논리 집합의 일부로 로드할 수 있습니다. 로드를 트리거하려면 요소의 FindName만 호출하면 됩니다. 예제 및 자세한 내용은 [x:Load attribute](../xaml-platform/x-load-attribute.md) 및 [x:DeferLoadStrategy 특성](https://msdn.microsoft.com/library/windows/apps/Mt204785)을 참조하세요.
+**지연 사용**. 요소를 축소하거나 불투명도를 0으로 설정하면 요소가 만들어지는 것을 방지하지 않습니다. x:Load 또는 x:DeferLoadStrategy를 사용하면 UI 일부의 로드를 지연시켰다가 필요할 때 로드할 수 있습니다. 이는 시작 화면 중에 표시되지 않는 UI 처리를 지연시키는 좋은 방법이므로 필요할 때 로드하거나 지연된 논리 집합의 일부로 로드할 수 있습니다. 로드를 트리거하려면 요소의 FindName만 호출하면 됩니다. 예제 및 자세한 내용은 [x:Load attribute](../xaml-platform/x-load-attribute.md) 및 [x:DeferLoadStrategy 특성](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute)을 참조하세요.
 
 **가상화**. UI에 목록 또는 반복기 콘텐츠가 있는 경우 UI 가상화를 사용하는 것이 좋습니다. 목록 UI가 가상화되지 않은 경우 먼저 모든 요소를 만드는 비용을 지불하고 시작을 늦출 수 있습니다. [ListView 및 GridView UI 최적화](optimize-gridview-and-listview.md)를 참조하세요.
 
@@ -146,13 +146,13 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 </Package>
 ```
 
-자세한 내용은 [시작 화면 추가](https://msdn.microsoft.com/library/windows/apps/Mt187306)를 참조하세요.
+자세한 내용은 [시작 화면 추가](https://docs.microsoft.com/windows/uwp/launch-resume/add-a-splash-screen)를 참조하세요.
 
 앱 생성자를 사용하여 앱에 중요한 데이터 구조만 초기화합니다. 생성자는 앱이 처음 실행될 때만 호출되며 앱이 활성화될 때마다 호출되지는 않습니다. 예를 들어 생성자는 이미 실행되고 백그라운드에 배치된 후 검색 계약을 통해 활성화된 앱에 대해 호출되지 않습니다.
 
 ### <a name="phase-2"></a>2단계
 
-앱을 활성화하는 다양한 이유가 있고 각 이유를 다르게 처리할 수 있습니다. [  **OnActivated**](https://msdn.microsoft.com/library/windows/apps/BR242330), [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/BR242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701801), [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/BR242335), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/BR242336) 및 [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701806) 메서드를 재정의하여 각 활성화 이유를 처리할 수 있습니다. 앱이 이러한 메서드로 수행해야 하는 작업 중 하나는 UI를 만들고 [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/BR209051)에 할당한 다음 [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046)를 호출하는 것입니다. 이때 시작 화면이 앱에서 만든 UI로 바뀝니다. 이 표시는 로드 화면이 되거나, 활성화할 때 UI를 만들 충분한 정보가 있는 경우 앱의 실제 UI가 될 수 있습니다.
+앱을 활성화하는 다양한 이유가 있고 각 이유를 다르게 처리할 수 있습니다. [  **OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated), [**OnCachedFileUpdaterActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.oncachedfileupdateractivated), [**OnFileActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated), [**OnFileOpenPickerActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileopenpickeractivated), [**OnFileSavePickerActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfilesavepickeractivated), [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched), [**OnSearchActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsearchactivated) 및 [**OnShareTargetActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsharetargetactivated) 메서드를 재정의하여 각 활성화 이유를 처리할 수 있습니다. 앱이 이러한 메서드로 수행해야 하는 작업 중 하나는 UI를 만들고 [**Window.Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content)에 할당한 다음 [**Window.Activate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.activate)를 호출하는 것입니다. 이때 시작 화면이 앱에서 만든 UI로 바뀝니다. 이 표시는 로드 화면이 되거나, 활성화할 때 UI를 만들 충분한 정보가 있는 경우 앱의 실제 UI가 될 수 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -267,9 +267,9 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 > End Class 
 > ```
 
-활성화 처리기에서 로드 페이지를 표시하는 앱은 UI를 만드는 작업을 백그라운드에서 시작합니다. 요소가 생성된 후 [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) 이벤트가 발생합니다. 이벤트 처리기에서 현재 로드 화면을 표시하는 창의 내용을 새로 생성된 홈페이지로 바꿉니다.
+활성화 처리기에서 로드 페이지를 표시하는 앱은 UI를 만드는 작업을 백그라운드에서 시작합니다. 요소가 생성된 후 [**FrameworkElement.Loaded**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.loaded) 이벤트가 발생합니다. 이벤트 처리기에서 현재 로드 화면을 표시하는 창의 내용을 새로 생성된 홈페이지로 바꿉니다.
 
-초기화 기간이 긴 앱에서는 로드 페이지를 표시해야 합니다. 활성화 프로세스에 대한 사용자 피드백을 제공하는 것 외에 활성화 프로세스가 시작된 후 15초 내에 [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046)가 호출되지 않으면 프로세스가 종료됩니다.
+초기화 기간이 긴 앱에서는 로드 페이지를 표시해야 합니다. 활성화 프로세스에 대한 사용자 피드백을 제공하는 것 외에 활성화 프로세스가 시작된 후 15초 내에 [**Window.Activate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.activate)가 호출되지 않으면 프로세스가 종료됩니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -339,7 +339,7 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 
 재사용 가능 코드는 종종 프로젝트에 포함된 모듈(DLL) 형식으로 나타납니다. 이 모듈을 로드하려면 디스크에 액세스해야 하고 예상대로 작업을 수행하는 부담이 추가될 수 있습니다. 이 부담은 콜드 부팅에 가장 큰 영향을 미치지만 웜 부팅에도 영향을 미칠 수 있습니다. C# 및 Visual Basic의 경우 CLR이 요청 시 어셈블리를 로드하는 방식으로 해당 부담을 가능한 많이 지연시킵니다. 즉, 실행된 메서드가 가리킬 때까지 CLR이 모듈을 로드하지 않습니다. 따라서 CLR이 불필요한 모듈을 로드하지 않도록 시작 코드에서 앱 실행에 필요한 어셈블리만 가리키세요. 시작 경로에 불필요한 참조가 포함된 사용되지 않는 코드가 있을 경우 이 코드 경로를 다른 메서드로 이동하여 불필요한 로드를 방지할 수 있습니다.
 
-모듈 로드를 줄이는 다른 방법은 앱 모듈을 결합하는 것입니다. 큰 어셈블리 하나를 로드하는 것이 보통 작업 어셈블리 두 개를 로드하는 것보다 시간이 덜 걸립니다. 항상 가능하지는 않으며 개발자 생산성이나 코드 재사용 가능성에 실질적 차이를 만들지 않는 경우에만 모듈을 결합해야 합니다. [PerfView](https://go.microsoft.com/fwlink/p/?linkid=251609) 또는 [WPA(Windows 성능 분석기)](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx)와 같은 도구를 사용하여 시작 시 로드되는 모듈을 찾을 수 있습니다.
+모듈 로드를 줄이는 다른 방법은 앱 모듈을 결합하는 것입니다. 큰 어셈블리 하나를 로드하는 것이 보통 작업 어셈블리 두 개를 로드하는 것보다 시간이 덜 걸립니다. 항상 가능하지는 않으며 개발자 생산성이나 코드 재사용 가능성에 실질적 차이를 만들지 않는 경우에만 모듈을 결합해야 합니다. [PerfView](https://go.microsoft.com/fwlink/p/?linkid=251609) 또는 [WPA(Windows 성능 분석기)](https://docs.microsoft.com/previous-versions/windows/desktop/xperf/windows-performance-analyzer--wpa-)와 같은 도구를 사용하여 시작 시 로드되는 모듈을 찾을 수 있습니다.
 
 ### <a name="make-smart-web-requests"></a>효율적인 웹 요청
 

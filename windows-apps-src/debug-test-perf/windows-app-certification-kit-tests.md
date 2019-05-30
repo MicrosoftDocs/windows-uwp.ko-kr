@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10 uwp 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: ecb7cb68b57e3d9b30a25237a63410d3bfa319b3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0a7cf1e89c91f9ad53777aa21af1d43e070c4fc8
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645088"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362226"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
@@ -34,7 +34,7 @@ Windows 호환성 모드, AppHelp 메시지 또는 호환성 수정을 사용하
 
 인증 테스트 전체에서 앱 복원력 및 안정성을 테스트합니다.
 
-Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplication**](https://msdn.microsoft.com/library/windows/desktop/Hh706903)를 호출하여 앱을 시작합니다. **ActivateApplication**에서 앱을 시작하려면 UAC(사용자 계정 컨트롤)을 사용할 수 있어야 하며 화면 해상도가 1024 x 768 또는 768 x 1024 이상이어야 합니다. 두 조건 중 하나가 충족되지 않으면 앱이 이 테스트에 실패합니다.
+Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplication**](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)를 호출하여 앱을 시작합니다. **ActivateApplication**에서 앱을 시작하려면 UAC(사용자 계정 컨트롤)을 사용할 수 있어야 하며 화면 해상도가 1024 x 768 또는 768 x 1024 이상이어야 합니다. 두 조건 중 하나가 충족되지 않으면 앱이 이 테스트에 실패합니다.
 
 ### <a name="corrective-actions"></a>수정 작업
 
@@ -42,10 +42,10 @@ Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplic
 
 화면이 충분히 큰 컴퓨터에서 테스트를 실행하고 있는지 확인합니다.
 
-앱이 시작되지 않는 경우 테스트 플랫폼이 [**ActivateApplication**](https://msdn.microsoft.com/library/windows/desktop/Hh706903)의 필수 조건을 충족하면 활성화 이벤트 로그를 검토하여 문제를 해결할 수 있습니다. 이벤트 로그에서 이러한 항목을 찾으려면
+앱이 시작되지 않는 경우 테스트 플랫폼이 [**ActivateApplication**](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)의 필수 조건을 충족하면 활성화 이벤트 로그를 검토하여 문제를 해결할 수 있습니다. 이벤트 로그에서 이러한 항목을 찾으려면
 
 1.  Eventvwr.exe를 열고 응용 프로그램 및 서비스 로그를 이동할\\Microsoft\\Windows\\Immersive 셸 폴더입니다.
-2.  이벤트 Id를 표시 하도록 보기를 필터링 합니다. 5900-6000 합니다.
+2.  이벤트 Id를 표시 하도록 보기를 필터링 합니다. 5900-6000.
 3.  로그 항목에서 앱이 시작되지 않은 이유를 설명하는 정보를 검토합니다.
 
 문제가 있는 파일을 식별하고 문제를 해결합니다. 앱을 다시 빌드하고 다시 테스트하세요. 앱을 디버그하는 데 사용할 수 있는 덤프 파일이 Windows 앱 인증 키트 로그 폴더에 생성되었는지 확인할 수도 있습니다.
@@ -62,9 +62,9 @@ Windows 앱이 OS의 이후 버전에서 실행할 수 있는지 확인합니다
 
 Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방법을 검색합니다. 앱이 충돌 하는 경우 앱은 이 테스트에 실패합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
-앱은 버전 API 도우미 함수를 사용하여 이를 확인해야 합니다. 자세한 내용은 [운영 체제 버전](https://msdn.microsoft.com/library/windows/desktop/ms724832)을 참조하세요.
+앱은 버전 API 도우미 함수를 사용하여 이를 확인해야 합니다. 자세한 내용은 [운영 체제 버전](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version)을 참조하세요.
 
 ## <a name="background-tasks-cancellation-handler-validation"></a>백그라운드 작업 취소 처리기 유효성 검사
 
@@ -78,9 +78,9 @@ Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방
 
 앱이 시작되고, 일시 중단되며 앱의 백그라운드가 아닌 부분이 종료됩니다. 그런 다음 이 앱과 연결된 백그라운드 작업이 취소됩니다. 앱의 상태가 확인되며, 앱이 계속 실행 중인 경우 이 테스트에 실패 합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
-앱에 취소 처리기를 추가합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/library/windows/apps/Mt299103)을 참조하세요.
+앱에 취소 처리기를 추가합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://docs.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks)을 참조하세요.
 
 ## <a name="app-count"></a>앱 개수
 
@@ -96,7 +96,7 @@ Windows Phone 8.1 앱의 경우 테스트는 번들에 포함된 총 appx 패키
 
 Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 설정되었는지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 테스트 정보에서 앱 패키지 및 번들이 위의 요구 사항을 충족하는지 확인합니다.
 
@@ -110,7 +110,7 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
 ### <a name="test-details"></a>테스트 정보
 
-앱 매니페스트를 검사하여 [앱 패키지 요구 사항](https://msdn.microsoft.com/library/windows/apps/Mt148525)에 설명된 대로 내용이 올바른지 확인합니다.
+앱 매니페스트를 검사하여 [앱 패키지 요구 사항](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)에 설명된 대로 내용이 올바른지 확인합니다.
 
 -   **파일 확장명과 프로토콜**
 
@@ -124,11 +124,11 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
 -   **프로세스 간 통신 (IPC) 확인**
 
-    이 테스트는 uwp 앱 컨테이너 데스크톱 구성 요소를 외부에서 통신 하지 않는 요구 사항을 적용 합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414)를 지정하는 앱은 이 테스트에 실패합니다.
+    이 테스트는 uwp 앱 컨테이너 데스크톱 구성 요소를 외부에서 통신 하지 않는 요구 사항을 적용 합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)를 지정하는 앱은 이 테스트에 실패합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
-앱의 매니페스트가 [앱 패키지 요구 사항](https://msdn.microsoft.com/library/windows/apps/Mt148525)에 설명된 요구 사항에 맞는지 검토합니다.
+앱의 매니페스트가 [앱 패키지 요구 사항](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)에 설명된 요구 사항에 맞는지 검토합니다.
 
 ## <a name="windows-security-features-test"></a>Windows 보안 기능 테스트
 
@@ -224,11 +224,11 @@ ASLR(Address Space Layout Randomization)은 실행 가능 이미지를 예측할
 
 **Windows 앱 인증 키트 오류 메시지:** SharedSectionsCheck 테스트가 실패 했습니다.
 
-공유로 표시된 쓰기 가능한 섹션이 있는 이진 파일은 보안 위협이 됩니다. 필요한 경우가 아니면 쓰기 가능한 공유 섹션을 사용하여 앱을 빌드하지 마세요. [  **CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) 또는 [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761)을 사용하여 보안이 제대로 설정된 공유 메모리 개체를 만드세요.
+공유로 표시된 쓰기 가능한 섹션이 있는 이진 파일은 보안 위협이 됩니다. 필요한 경우가 아니면 쓰기 가능한 공유 섹션을 사용하여 앱을 빌드하지 마세요. [  **CreateFileMapping**](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-createfilemappinga) 또는 [**MapViewOfFile**](https://docs.microsoft.com/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile)을 사용하여 보안이 제대로 설정된 공유 메모리 개체를 만드세요.
 
 **앱이이 테스트에 실패 하는 경우 수행할 작업**
 
-앱에서 공유 섹션을 제거하고 적절한 보안 특성으로 [**CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) 또는 [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761)을 호출하여 공유 메모리 개체를 만든 다음 앱을 다시 빌드하세요.
+앱에서 공유 섹션을 제거하고 적절한 보안 특성으로 [**CreateFileMapping**](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-createfilemappinga) 또는 [**MapViewOfFile**](https://docs.microsoft.com/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile)을 호출하여 공유 메모리 개체를 만든 다음 앱을 다시 빌드하세요.
 
 **설명**
 
@@ -315,11 +315,11 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 앱이 디버그 빌드가 아니라 릴리스 빌드로 컴파일되었는지 확인하세요.
 
-> **참고**  앱의 디버그 빌드를이 테스트는 앱만 사용 하는 경우에 실패 [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)합니다.
+> **참고**  앱의 디버그 빌드를이 테스트는 앱만 사용 하는 경우에 실패 [UWP 앱 용 Api](https://docs.microsoft.com/uwp/)합니다.
 
-앱 사용 되지 않는 API를 식별 하는 오류 메시지를 검토는 [UWP 앱 용 API](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)합니다.
+앱 사용 되지 않는 API를 식별 하는 오류 메시지를 검토는 [UWP 앱 용 API](https://docs.microsoft.com/uwp/)합니다.
 
-> **참고**  구성만 UWP 앱 용 Windows SDK에서 Api를 사용 하는 경우에 디버그 구성에서 만든 c + + 앱에서이 테스트를 실패 합니다. 하세요 [UWP 앱에서 Windows Api에 대 한 대안](https://go.microsoft.com/fwlink/p/?LinkID=244022) 자세한 정보에 대 한 합니다.
+> **참고**    C++ 디버그 구성에 기본 제공 되는 앱이이 테스트 구성을 UWP 앱 용 Windows SDK에서 Api를 사용 하는 경우에 실패 합니다. 하세요 [UWP 앱에서 Windows Api에 대 한 대안](https://go.microsoft.com/fwlink/p/?LinkID=244022) 자세한 정보에 대 한 합니다.
 
 ## <a name="performance-tests"></a>성능 테스트
 
@@ -335,7 +335,7 @@ JavaScript 실행 시간을 가속화하기 위한 성능 최적화로서, .js �
 
 앱 배포를 검사하여 모든 .js 파일이 바이트코드로 변환되었는지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 이 테스트가 실패할 경우 문제를 해결할 때 다음을 고려하세요.
 
@@ -352,7 +352,7 @@ JavaScript 실행 시간을 가속화하기 위한 성능 최적화로서, .js �
 
 WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 앱 JavaScript에서 WinJS.Binding.optimizeBindingReferences를 **true**로 설정합니다.
 
@@ -366,12 +366,12 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 
 앱 매니페스트에 정의된 리소스를 검사하여 리소스가 있고 유효한지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 다음 표의 지침을 따르세요.
 
 <table>
-<tr><th>오류 메시지</th><th>설명</th></tr>
+<tr><th>오류 메시지</th><th>주석</th></tr>
 <tr><td>
 <p>{image name} 이미지에서 Scale 및 TargetSize 한정자를 정의합니다. 한정자는 한 번에 하나만 정의할 수 있습니다.</p>
 </td><td>
@@ -412,7 +412,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>이미지에서 TargetSize 한정자를 사용하지 않고 둘 이상의 변형을 정의해야 합니다. 이미지에서 Scale 한정자를 정의하거나 Scale 및 TargetSize를 지정하지 않은 상태로 유지하여 기본값 Scale-100으로 설정해야 합니다.</p>
 </td><td>
-<p>자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx">UWP 앱에 대한 반응형 디자인 101</a> 및 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">앱 리소스에 대한 지침</a>을 참조하세요.</p>
+<p>자세한 내용은 <a href="https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design">UWP 앱에 대한 반응형 디자인 101</a> 및 <a href="https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data">앱 리소스에 대한 지침</a>을 참조하세요.</p>
 </td></tr>
 <tr><td>
 <p>패키지에 "resources.pri" 파일이 없습니다.</p>
@@ -434,7 +434,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>{string} 문자열에서 {number}자의 최대 길이 제한을 준수하지 못했습니다.</p>
 </td><td>
-<p><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">앱 패키지 요구 사항</a>을 참조하세요.</p>
+<p><a href="https://docs.microsoft.com/windows/uwp/publish/app-package-requirements">앱 패키지 요구 사항</a>을 참조하세요.</p>
 <p>실제 메시지에서는 {string}이(가) 오류가 있는 문자열로 대체되고 {number}에는 최대 길이가 포함됩니다.</p>
 </td></tr>
 <tr><td>
@@ -447,12 +447,12 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>문자열은 비어 있으면 안 되며 길이가 0보다 커야 합니다.</p>
 </td><td>
-<p>자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">앱 패키지 요구 사항</a>을 참조하세요.</p>
+<p>자세한 내용은 <a href="https://docs.microsoft.com/windows/uwp/publish/app-package-requirements">앱 패키지 요구 사항</a>을 참조하세요.</p>
 </td></tr>
 <tr><td>
 <p>"resources.pri" 파일에 지정된 기본 리소스가 없습니다.</p>
 </td><td>
-<p>자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">앱 리소스에 대한 지침</a>을 참조하세요.</p>
+<p>자세한 내용은 <a href="https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data">앱 리소스에 대한 지침</a>을 참조하세요.</p>
 <p>기본 빌드 구성에서 Visual Studio는 번들을 생성할 때 앱 패키지에 scale-200 이미지 리소스만 포함하고 다른 리소스는 리소스 패키지에 배치합니다. scale-200 이미지 리소스를 포함하거나 갖고 있는 리소스를 포함하도록 프로젝트를 구성해야 합니다.</p>
 </td></tr>
 <tr><td>
@@ -521,7 +521,7 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 
 앱 패키지의 내용을 테스트하여 올바른 파일 인코딩을 사용하는지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 영향을 받은 파일을 열고 Visual Studio의 **파일** 메뉴에서 **다른 이름으로 저장**을 선택합니다. **저장** 단추 옆에 있는 드롭다운 컨트롤을 선택하고 **Save with Encoding**을 선택합니다. **고급** 저장 옵션 대화 상자에서 유니코드(서명 있는 UTF-8) 옵션을 선택하고 **확인**을 클릭합니다.
 
@@ -541,7 +541,7 @@ Microsoft Store 정상적으로 실패 하거나 제대로 렌더링 Direct3D를
 
 테스트는 앱 기능 수준 9에서 정확 하 게 렌더링 하는 경우 유효성을 검사 합니다\-1입니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 앱 기능 수준 Direct3D 9에서 올바르게 렌더링 되도록\-1, 더 높은 기능 수준에서 실행 되도록 하려는 경우에 합니다. 자세한 내용은 [각 Direct3D 기능 수준에 대한 개발](https://go.microsoft.com/fwlink/p/?LinkID=253575)을 참조하세요.
 
@@ -551,15 +551,15 @@ Microsoft Store 정상적으로 실패 하거나 제대로 렌더링 Direct3D를
 
 ### <a name="background"></a>배경
 
-앱이 Direct3D 디바이스에서 [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346)을 호출하지 않는 경우 앱은 이전 3D 작업에 할당된 메모리를 해제하지 않습니다. 이 경우 시스템 메모리 부족으로 인해 앱이 종료될 가능성이 커집니다.
+앱이 Direct3D 디바이스에서 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim)을 호출하지 않는 경우 앱은 이전 3D 작업에 할당된 메모리를 해제하지 않습니다. 이 경우 시스템 메모리 부족으로 인해 앱이 종료될 가능성이 커집니다.
 
 ### <a name="test-details"></a>테스트 정보
 
-앱이 d3d 요구 사항을 준수하는지 검사하고 앱이 일시 중단 콜백에서 새 [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346) API를 호출하는지 확인합니다.
+앱이 d3d 요구 사항을 준수하는지 검사하고 앱이 일시 중단 콜백에서 새 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) API를 호출하는지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
-앱이 일시 중단될 때마다 해당 [**IDXGIDevice3**](https://msdn.microsoft.com/library/windows/desktop/Dn280345) 인터페이스에서 [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346) API를 호출해야 합니다.
+앱이 일시 중단될 때마다 해당 [**IDXGIDevice3**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) 인터페이스에서 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) API를 호출해야 합니다.
 
 ## <a name="app-capabilities-test"></a>앱 접근 권한 값 테스트
 
@@ -616,7 +616,7 @@ Microsoft Store 정상적으로 실패 하거나 제대로 렌더링 Direct3D를
 
 앱 패키지 매니페스트 프로세서 아키텍처 선언과 상호 참조될 때 PE 헤더에서 각 파일의 "비트 수"가 적절한지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 앱 패키지가 앱 매니페스트에 지정된 아키텍처에서 지원되는 파일만 포함하고 있는지 확인하려면 다음 지침을 따르세요.
 
@@ -642,7 +642,7 @@ OS 구성 요소 (Trident, WWAHost 등 포함)는 내부적으로 최대 제한\
 
 최대값을 초과 하는 앱 설치 디렉터리 경로가 없는 확인\-경로입니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 더 짧은 디렉터리 구조 및/또는 파일 이름을 사용합니다.
 
@@ -660,7 +660,7 @@ JavaScript 백그라운드 작업이 포함된 앱은 백그라운드 작업의 
 
 매니페스트에 지정된 백그라운드 작업 파일이 앱에 없을 경우 테스트를 통과합니다. 그렇지 않으면 테스트에서 앱 패키지에 지정된 JavaScript 백그라운드 작업 파일을 구문 분석하고 Close() 문을 찾습니다. Close() 문이 있으면 테스트를 통과하고, 그렇지 않으면 테스트에 실패합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 Close()를 올바르게 호출하도록 백그라운드 JavaScript 코드를 업데이트합니다.
 
@@ -668,5 +668,5 @@ Close()를 올바르게 호출하도록 백그라운드 JavaScript 코드를 업
 ## <a name="related-topics"></a>관련 항목
 
 * [Windows 데스크톱 브리지 응용 프로그램 테스트](windows-desktop-bridge-app-tests.md)
-* [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)
  

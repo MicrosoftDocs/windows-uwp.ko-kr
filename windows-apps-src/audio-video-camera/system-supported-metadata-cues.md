@@ -6,12 +6,12 @@ ms.date: 04/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, 메타데이터, 신호, 음성, 챕터
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b3753e92524e300252930f48433f91e175353c9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 92f8826729bb2374b87267d27b961d74eb72e928
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635858"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360547"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>시스템에서 지원하는 시간이 제한된 메타데이터 신호
 이 문서에서는 미디어 파일 또는 스트림에 포함될 수 있는 시간이 지정된 여러 형식의 메타데이터를 활용하는 방법을 설명합니다. UWP 앱은 이러한 메타데이터 신호가 발견될 때마다 재생하는 동안 미디어 파이프라인에 의해 발생하는 이벤트를 등록할 수 있습니다. [  **DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue) 클래스를 사용하여 앱은 자체 사용자 지정 메타데이터 신호를 구현할 수 있지만 이 문서는 다음과 같은 미디어 파이프라인이 자동으로 검색하는 몇 가지 메타데이터 표준에 초점을 맞춥니다.
@@ -24,7 +24,7 @@ ms.locfileid: "57635858"
 * 조각화된 mp4 emsg 상자
 
 
-이 문서는 [**MediaSource**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource), [**MediaPlaybackItem**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackitem) 및 [**TimedMetadataTrack**](https://msdn.microsoft.com/library/windows/apps/dn956580) 클래스를 포함하는 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md) 문서 및 앱에서 시간이 제한된 메타데이터를 사용하는 일반 가이드에서 설명한 개념에 기초하여 작성되었습니다.
+이 문서는 [**MediaSource**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource), [**MediaPlaybackItem**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackitem) 및 [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.TimedMetadataTrack) 클래스를 포함하는 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md) 문서 및 앱에서 시간이 제한된 메타데이터를 사용하는 일반 가이드에서 설명한 개념에 기초하여 작성되었습니다.
 
 기본 구현 단계는 이 문서에서 설명하는 모든 다른 종류의 시간이 제한된 메타데이터에 대해 동일합니다.
 

@@ -1,16 +1,16 @@
 ---
 description: C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하면서 가질 수 있는 질문에 대해 답변을 제공합니다.
 title: C++/WinRT 질문과 대답
-ms.date: 10/26/2018
+ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 70aedf4034ce433b0aa529375799cf45a18ca3e0
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: 7ac7f8e46974b7c12b42f6d6f94052e61902b240
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291891"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360247"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT 질문과 대답
 작성 하 고 사용 하 여 Windows 런타임 Api를 사용 하는 방법에 대 한 있을 수 있는 질문에 답변 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)합니다.
@@ -21,8 +21,11 @@ ms.locfileid: "58291891"
 ## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>대상을 수행 하는 방법을 내 C++Windows SDK의 최신 버전으로 /WinRT 프로젝트?
 참조 [대상을 다시 지정 하는 방법에 C++Windows SDK의 최신 버전으로 /WinRT 프로젝트](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)합니다.
 
+## <a name="why-wont-my-new-project-compile-now-that-ive-moved-to-cwinrt-20"></a>왜 내 새 프로젝트 컴파일되지 이동할 했습니다 했으므로 C++WinRT 2.0?
+변경 내용 (주요 변경 내용 포함)의 전체 집합을 참조 하세요 [뉴스 및 변경 내용에 C++WinRT 2.0](news.md#news-and-changes-in-cwinrt-20)합니다. 코 루틴 지원에 대 한 예를 들어 (코 루틴 도우미를 포함 하 여 같은 **winrt::resume_background**를 **winrt::resume_foreground**, 및 **winrt::resume_on_signal** )를 할 `#include <winrt/coroutine.h>`합니다. 범위 기반을 사용 하는 경우 `for` Windows 런타임 컬렉션에 대해 다음 이제 해야 `#include <winrt/Windows.Foundation.Collections.h>`합니다.
+
 ## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>내 새 프로젝트 컴파일되지 이유는? Visual Studio 2017을 사용 하 고 (15.8.0 버전 이상), 및 SDK 버전 17134
-Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상), 한 다음 새로 만든된 Windows SDK (Windows 10, 버전 1803) 10.0.17134.0 버전을 대상으로 하 고 C++WinRT 프로젝트는 오류가 발생 하 여 컴파일하는 데 실패할 수 있습니다 / "*오류 C3861: 'from_abi': 식별자를 찾을 수 없습니다*", 및에서 발생 하는 다른 오류로 *base.h*합니다. 두 대상에는 솔루션을 이상 (더 부합) 버전의 Windows SDK 또는 프로젝트 속성 설정 **C /C++** > **언어**  >   **준수 모드: 더** (또한 경우 **/ permissive-** 프로젝트 속성에 표시 됩니다 **C /C++** > **명령줄** 아래 **추가 옵션**, 삭제).
+Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상), 한 다음 새로 만든된 Windows SDK (Windows 10, 버전 1803) 10.0.17134.0 버전을 대상으로 하 고 C++WinRT 프로젝트는 오류가 발생 하 여 컴파일하는 데 실패할 수 있습니다 / "*오류 C3861: 'from_abi': 식별자를 찾을 수 없습니다*", 및에서 발생 하는 다른 오류로 *base.h*합니다. 두 대상에는 솔루션을 이상 (더 부합) 버전의 Windows SDK 또는 프로젝트 속성 설정 **C /C++**  > **언어**  >   **준수 모드: 더** (또한 경우 **/ permissive-** 프로젝트 속성에 표시 됩니다 **C /C++**  > **명령줄** 아래 **추가 옵션**, 삭제).
 
 ## <a name="how-do-i-resolve-the-build-error-the-cwinrt-vsix-no-longer-provides-project-build-support--please-add-a-project-reference-to-the-microsoftwindowscppwinrt-nuget-package"></a>빌드 오류를 해결 하는 방법 "을 C++WinRT VSIX 프로젝트 빌드 지원을 제공 하지 않습니다.  Microsoft.Windows.CppWinRT Nuget 패키지에 프로젝트 참조를 추가 하십시오 "?
 설치 합니다 **Microsoft.Windows.CppWinRT** 프로젝트에 NuGet 패키지. 자세한 내용은 참조 하세요 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)합니다.
@@ -44,7 +47,7 @@ Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상), 한 다음 �
 ## <a name="why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error"></a>이유는 링커 쓰면서를 "LNK2019: Unresolved external symbol"오류 인가요?
 확인되지 않은 기호가 **winrt** 네임스페이스의 C++/WinRT 프로젝션에 대한 Windows 네임스페이스 헤더의 API인 경우 포함한 API는 전방 선언되지만 그 정의는 아직 포함하지 않은 헤더에 있습니다. API 네임스페이스에 따라 명명한 헤더를 추가하고 다시 빌드하세요. 자세한 정보는 [C++/WinRT 프로젝션 헤더](consume-apis.md#cwinrt-projection-headers)를 참조하세요.
 
-확인 되지 않은 기호는 Windows 런타임 사용 가능한 함수와 같은 [RoInitialize](https://msdn.microsoft.com/library/br224650)를 명시적으로 링크 해야 합니다 [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 포괄적인 라이브러리 프로젝트에서. C++/WinRT 프로젝션은 이러한 무료(비 구성원) 함수 및 진입점에 따라 달라집니다. 응용 프로그램에 [C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix) 프로젝트 템플릿 중 하나를 사용하는 경우 `WindowsApp.lib`가 자동으로 연결됩니다. 그렇지 않은 경우 프로젝트 연결 설정을 사용하거나 소스 코드에서 포함할 수 있습니다.
+확인 되지 않은 기호는 Windows 런타임 사용 가능한 함수와 같은 [RoInitialize](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roinitialize)를 명시적으로 링크 해야 합니다 [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 포괄적인 라이브러리 프로젝트에서. C++/WinRT 프로젝션은 이러한 무료(비 구성원) 함수 및 진입점에 따라 달라집니다. 응용 프로그램에 [C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix) 프로젝트 템플릿 중 하나를 사용하는 경우 `WindowsApp.lib`가 자동으로 연결됩니다. 그렇지 않은 경우 프로젝트 연결 설정을 사용하거나 소스 코드에서 포함할 수 있습니다.
 
 ```cppwinrt
 #pragma comment(lib, "windowsapp")

@@ -7,12 +7,12 @@ ms.date: 09/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b58eb4b6e3f3f02bb1f72fcba9da3710f08a72da
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c37ceb63a5d9d9f83d3f1ebca0b0584f1092b7f6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649008"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359583"
 ---
 # <a name="high-contrast-themes"></a>고대비 테마  
 
@@ -39,14 +39,14 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 첫 번째 예제에서 인라인으로 `#E6E6E6` 색을 설정하면 모든 테마에서 그리드에 해당 배경색이 유지됩니다. 사용자가 고대비 검정 테마로 전환할 경우 앱에 검은색 배경이 표시될 것으로 기대합니다. `#E6E6E6`은 거의 흰색이므로 일부 사용자는 앱을 조작하지 못할 수도 있습니다.
 
-두 번째 예제에서는 [**{ThemeResource} 태그 확장**](../../xaml-platform/themeresource-markup-extension.md)을 사용하여 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) 요소의 전용 속성인 [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx) 컬렉션의 색을 참조합니다. **ThemeDictionaries**를 사용하면 XAML에서 사용자의 현재 테마에 따라 자동으로 색을 바꿀 수 있습니다.
+두 번째 예제에서는 [ **{ThemeResource} 태그 확장**](../../xaml-platform/themeresource-markup-extension.md)을 사용하여 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) 요소의 전용 속성인 [**ThemeDictionaries**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries) 컬렉션의 색을 참조합니다. **ThemeDictionaries**를 사용하면 XAML에서 사용자의 현재 테마에 따라 자동으로 색을 바꿀 수 있습니다.
 
 ## <a name="theme-dictionaries"></a>테마 사전
 
 시스템 기본값에서 색을 변경해야 하는 경우 앱에 대한 ThemeDictionaries 컬렉션을 만듭니다.
 
 1. 이 컬렉션이 없는 경우 적절한 연결을 만들어 시작합니다. App.xaml에서 최소한 **Default** 및 **HighContrast**를 포함하여 **ThemeDictionaries** 컬렉션을 만듭니다.
-2. **Default**에서 필요한 유형의 [Brush](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx)를 만듭니다. 일반적으로 **SolidColorBrush**입니다. 이 항목에 용도와 관련된 *x:Key* 이름을 지정합니다.
+2. **Default**에서 필요한 유형의 [Brush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Brush)를 만듭니다. 일반적으로 **SolidColorBrush**입니다. 이 항목에 용도와 관련된 *x:Key* 이름을 지정합니다.
 3. 이 항목에 원하는 **Color**를 할당합니다.
 4. 이 **Brush**를 **HighContrast**에 복사합니다.
 
@@ -95,7 +95,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 각 **SytemColor*Color** 리소스는 사용자가 고대비 테마를 전환할 때 자동으로 색을 업데이트하는 변수입니다. 다음은 각 리소스를 사용할 위치 및 시기에 대한 지침입니다.
 
-리소스 | 용도 |
+Resource | 사용법 |
 |--------|-------|
 **SystemColorWindowTextColor** | 본문 복사, 제목, 목록, 조작할 수 없는 모든 텍스트 |
 | **SystemColorHotlightColor** | 하이퍼링크 |
@@ -108,7 +108,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 기존 앱, 시작 또는 공용 컨트롤을 살펴보고 다른 개발자가 유사한 고대비 디자인 문제를 어떻게 해결했는지 확인하면 도움이 되는 경우가 많습니다.
 
-**수행**
+**Do**
 
 * 가능하면 배경/전경 쌍을 준수합니다.
 * 앱이 실행되는 동안 4개의 고대비 테마에서 모두 테스트합니다. 사용자가 테마를 전환할 때 앱을 다시 시작할 필요가 없어야 합니다.
@@ -167,7 +167,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ## <a name="list-items"></a>목록 항목
 
-고대비에서 [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 항목의 배경은 마우스로 가리키거나 누르거나 선택할 때 **SystemColorHighlightColor**로 설정됩니다. 복잡한 목록 항목에는 일반적으로 항목을 마우스로 가리키거나 누르거나 선택할 때 목록 항목 콘텐츠의 색이 반전되지 않는 버그가 있습니다. 이 때문에 항목을 읽을 수 없게 됩니다.
+고대비에서 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) 항목의 배경은 마우스로 가리키거나 누르거나 선택할 때 **SystemColorHighlightColor**로 설정됩니다. 복잡한 목록 항목에는 일반적으로 항목을 마우스로 가리키거나 누르거나 선택할 때 목록 항목 콘텐츠의 색이 반전되지 않는 버그가 있습니다. 이 때문에 항목을 읽을 수 없게 됩니다.
 
 ![밝은 테마 및 고대비 검정 테마의 간단한 목록](images/high-contrast-list1.png)
 
@@ -176,7 +176,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ### <a name="list-items-with-colored-text"></a>색이 지정된 텍스트가 있는 목록 항목
 
-한 가지 원인은 ListView의 [DataTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)에서 TextBlock.Foreground를 설정했기 때문입니다. 일반적으로 이 작업은 시각적 계층 구조를 설정하기 위해 수행됩니다. Foreground 속성은 [ListViewItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx)에서 설정되며, 항목을 마우스로 가리키거나 누르거나 선택할 때 DataTemplate의 TextBlocks가 올바른 Foreground 색을 상속합니다. 그러나 Foreground를 설정하면 상속이 끊어집니다.
+한 가지 원인은 ListView의 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)에서 TextBlock.Foreground를 설정했기 때문입니다. 일반적으로 이 작업은 시각적 계층 구조를 설정하기 위해 수행됩니다. Foreground 속성은 [ListViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewitem)에서 설정되며, 항목을 마우스로 가리키거나 누르거나 선택할 때 DataTemplate의 TextBlocks가 올바른 Foreground 색을 상속합니다. 그러나 Foreground를 설정하면 상속이 끊어집니다.
 
 ![밝은 테마 및 고대비 검정 테마의 복잡한 목록](images/high-contrast-list2.png)
 
@@ -228,14 +228,14 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ## <a name="detecting-high-contrast"></a>고대비 검색
 
-[  **AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) 클래스의 멤버를 사용하여 프로그래밍 방식으로 현재 테마가 고대비 테마인지 확인할 수 있습니다.
+[  **AccessibilitySettings**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.AccessibilitySettings) 클래스의 멤버를 사용하여 프로그래밍 방식으로 현재 테마가 고대비 테마인지 확인할 수 있습니다.
 
 > [!NOTE]
 > 앱이 초기화되어 이미 콘텐츠를 표시하고 있는 범위에서 **AccessibilitySettings** 생성자를 호출해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목  
-* [접근성](accessibility.md)
+* [액세스 가능성](accessibility.md)
 * [UI 설정과 대비 샘플](https://go.microsoft.com/fwlink/p/?linkid=231539)
 * [XAML 액세스 가능성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [XAML 고대비 샘플](https://go.microsoft.com/fwlink/p/?linkid=254993)
-* [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)
+* [**AccessibilitySettings**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.AccessibilitySettings)

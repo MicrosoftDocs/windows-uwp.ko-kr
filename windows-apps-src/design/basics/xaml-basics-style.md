@@ -5,18 +5,18 @@ keywords: XAML, UWP, 시작
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a1eacc42720e7bce4290476676b0864fbd8a3694
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d540b41620110a41676d08f5e6239efd0ef4ca46
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592958"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361229"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 
 이 자습서는 XAML 앱의 UI를 사용자 지정하는 방법을 보여 줍니다. 경고 :이 자습서에는 유니콘이 포함될 수도 있습니다. (확인해 보세요!)  
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 * [Visual Studio 2017 및 Windows 10 SDK (10.0.15063.468 이상)](https://developer.microsoft.com/windows/downloads)
 
 ## <a name="part-0-get-the-code"></a>0 부: 코드 다운로드
@@ -30,7 +30,7 @@ PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
 **DetailPage.xaml:** 하나의 사진을 선택한 후에 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
 ![DetailPage](../basics/images/xaml-basics/detailpage.png)
 
-## <a name="part-1-create-a-fancy-slider-control"></a>1부: 멋진 슬라이더 컨트롤 만들기  
+## <a name="part-1-create-a-fancy-slider-control"></a>1단계: 멋진 슬라이더 컨트롤 만들기  
 
 UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 여러 가지 방법을 제공합니다. 글꼴 및 인쇄 설정에서 색상 및 효과를 흐리게 처리하는 그라데이션에 이르기까지 많은 옵션이 있습니다. 
 
@@ -60,7 +60,8 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
 
     [Windows.XAML.Ui.Shapes 네임스페이스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Shapes)는 선택할 수 있는 7 가지 모양을 제공합니다. 타원, 직사각형 및 유니콘처럼 어떤 형태로든 만들 수 있는 '패스'라고 불리는 항목이 있습니다. 
     
-    <!-- TODO reduce size --> ![유니콘](../basics/images/xaml-basics/unicorn.png)
+    <!-- TODO reduce size -->
+    ![유니콘](../basics/images/xaml-basics/unicorn.png)
     
     > **관련 된 내용을 읽으세요.** 합니다 [도형을 그릴](https://docs.microsoft.com/en-us/windows/uwp/graphics/drawing-shapes) 문서를 알려 XAML 모양에 알아야 하는 데 필요한 모든 것입니다. 
     
@@ -87,7 +88,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
         Minimum="-2"
         Maximum="2" />
     ```
-    **후**
+    **After**
     ```xaml
     <Polygon Grid.Row="2" Stretch="Fill"
                 Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -134,7 +135,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
             Minimum="-1"
             Maximum="1" />
     ```
-    **후**
+    **After**
     ```xaml
     <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -179,7 +180,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
 
 XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대폭 줄일 수 있고 앱의 모양을 훨씬 쉽게 업데이트할 수 있다는 것입니다.
 
-스타일을 정의하려면 스타일을 지정할 컨트롤이 포함된 요소의 [리소스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.Resources) 속성에 [스타일](https://msdn.microsoft.com/library/windows/apps/br208849) 요소를 추가합니다.  **Page.Resources** 속성에 스타일을 추가하면 스타일이 전체 페이지에 액세스할 수 있습니다. App.xaml 파일의 **Application.Resources** 속성에 스타일을 추가하면 스타일이 전체 앱에 액세스할 수 있습니다.
+스타일을 정의하려면 스타일을 지정할 컨트롤이 포함된 요소의 [리소스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.Resources) 속성에 [스타일](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) 요소를 추가합니다.  **Page.Resources** 속성에 스타일을 추가하면 스타일이 전체 페이지에 액세스할 수 있습니다. App.xaml 파일의 **Application.Resources** 속성에 스타일을 추가하면 스타일이 전체 앱에 액세스할 수 있습니다.
 
 명명된 스타일과 일반 스타일을 만들 수 있습니다. 명명된 스타일은 특정 컨트롤에 명시적으로 적용되어야 합니다. 일반 스타일은 지정된 **TargetType**과 일치하는 모든 컨트롤에 적용됩니다. 
 
@@ -262,7 +263,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
         </Grid.Resources>
     ```
 
-    **후**
+    **After**
     ```XAML
         <Grid.Resources>
             <Style TargetType="Slider">
@@ -302,7 +303,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             </Style>                            
     ```    
 
-    **후**
+    **After**
     ```XAML
             <Style TargetType="TextBlock"
                    x:Key="ValueTextBox">
@@ -325,7 +326,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
                 Text="{x:Bind item.Exposure.ToString('N', culture), Mode=OneWay}" />   
     ```
 
-    **후**
+    **After**
     ```XAML
      <TextBlock Grid.Row="2"
                 Grid.Column="1"
@@ -337,7 +338,8 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
 
 6. 앱을 컴파일하고 실행합니다. 동일한 모습으로 보여야 합니다. 하지만 효율적이고 유지 관리하기 쉬운 코드를 작성함으로써 얻은 만족감과 성취감을 느낄 수 있습니다.
 
-<!-- TODO add new start/end points --> 축 하 합니다, 2 부를 완료 했습니다!
+<!-- TODO add new start/end points -->
+축하합니다. 파트 2를 완료했습니다!
 
 
 ## <a name="part-3-use-a-control-template-to-make-a-fancy-slider"></a>3부: 컨트롤 템플릿을 사용 하 여 멋진 슬라이더를 확인 합니다.
@@ -646,7 +648,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
         </Grid.RowDefinitions>        
     ```
 
-    **후**
+    **After**
     ```XAML
     <Grid x:Name="HorizontalTemplate" MinHeight="44">
         <Grid.ColumnDefinitions>
@@ -691,7 +693,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
         </Polygon>           
     ```
     
-    **후**
+    **After**
     ```XAML
         <Polygon Grid.Row="0" Grid.RowSpan="3"  Grid.ColumnSpan="3" Stretch="Fill"
                     Points="0,20 200,20 200,0" HorizontalAlignment="Stretch"  
@@ -711,7 +713,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
                     Grid.ColumnSpan="3" />          
     ```
     
-    **후**
+    **After**
     ```XAML
         <Rectangle x:Name="HorizontalTrackRect"
                     Height="{ThemeResource SliderTrackThemeHeight}"
@@ -750,7 +752,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             Template="{StaticResource FancySliderControlTemplate}"/>    
     ```
     
-    **후**
+    **After**
     ```XAML
     <Slider Header="Exposure" 
             Grid.Row="2"  Foreground="Transparent"
@@ -791,7 +793,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             Maximum="1" />
     ```
     
-    **후**
+    **After**
     ```XAML
     <Slider Header="Temperature"
             Grid.Row="3" Foreground="Transparent"
@@ -833,7 +835,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             Maximum="1" />
     ```
     
-    **후**
+    **After**
     ```XAML
     <Slider Header="Tint"
             Grid.Row="4" Foreground="Transparent"
@@ -858,4 +860,5 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
     
     보시다시피, 업데이트를 통해 다각형의 위치를 개선했습니다. 이제 다각형의 아래쪽이 슬라이더 위치 조정 컨트롤의 아래쪽에 정렬됩니다.
     
-<!-- TODO correct folder --> 축, 자습서를 완료 했습니다! 중간에 문제가 생겼거나 최종 솔루션을 확인하려는 경우 [UWP 앱 샘플 리포지토리](https://github.com/Microsoft/Windows-universal-samples)에서 전체 샘플을 찾을 수 있습니다.
+<!-- TODO correct folder -->
+축하합니다! 이 자습서를 완료했습니다. 중간에 문제가 생겼거나 최종 솔루션을 확인하려는 경우 [UWP 앱 샘플 리포지토리](https://github.com/Microsoft/Windows-universal-samples)에서 전체 샘플을 찾을 수 있습니다.

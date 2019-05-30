@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, 연락처, 연락처 카드, 주석
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a3485635a49b1690116e7cb271435e63bee2151
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 506f0d2c778a934c3f8861493f4a512a39fe66fc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616438"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360461"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>연락처 카드의 작업에 앱 연결
 
@@ -181,13 +181,13 @@ public async void OpenContactCard(object sender, RoutedEventArgs e)
 
 ## <a name="perform-operations-when-users-select-your-app-in-a-contact-card"></a>사용자가 연락처 카드에서 앱을 선택할 때 작업 수행
 
-**App.cs** 파일의 [Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330) 메서드를 재정의하고 사용자를 앱의 페이지로 이동합니다. [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)에서는 이 작업을 수행하는 한 가지 방법을 보여 줍니다.
+**App.cs** 파일의 [Application.OnActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) 메서드를 재정의하고 사용자를 앱의 페이지로 이동합니다. [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)에서는 이 작업을 수행하는 한 가지 방법을 보여 줍니다.
 
-페이지의 코드 숨김 파일에서 [Page.OnNavigatedTo](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.onnavigatedto.aspx) 메서드를 재정의합니다. 연락처 카드는 이 메서드에 작업 이름과 사용자 ID를 전달합니다.
+페이지의 코드 숨김 파일에서 [Page.OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) 메서드를 재정의합니다. 연락처 카드는 이 메서드에 작업 이름과 사용자 ID를 전달합니다.
 
-비디오 또는 오디오 호출을 시작 하려면이 샘플을 참조 하세요. [VoIP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP)합니다. [WIndows.ApplicationModel.Calls](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.calls.aspx) 네임스페이스에서 전체 API를 확인할 수 있습니다.
+비디오 또는 오디오 호출을 시작 하려면이 샘플을 참조 하세요. [VoIP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP)합니다. [WIndows.ApplicationModel.Calls](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls) 네임스페이스에서 전체 API를 확인할 수 있습니다.
 
-메시지를 간편하게 하려면 [Windows.ApplicationModel.Chat](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.aspx) 네임스페이스를 참조하세요.
+메시지를 간편하게 하려면 [Windows.ApplicationModel.Chat](https://docs.microsoft.com/uwp/api/windows.applicationmodel.chat) 네임스페이스를 참조하세요.
 
 다른 앱을 시작할 수도 있습니다. 다음 코드에서는 이 작업을 수행합니다.
 

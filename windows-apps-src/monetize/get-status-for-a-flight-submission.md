@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출, 상태
 ms.localizationpriority: medium
-ms.openlocfilehash: 794e30fd68924e7031788253f968bd7a5d896ceb
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: e79e57353a729712da39431028282b90c0741bbd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334911"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66358909"
 ---
 # <a name="get-the-status-of-a-package-flight-submission"></a>패키지 비행 제출 상태 가져오기
 
@@ -45,7 +45,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 패키지 플라�
 
 | 이름        | 형식   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | 필수. 상태를 가져오려는 패키지 플라이트 제출이 포함된 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
+| applicationId | string | 필수. 상태를 가져오려는 패키지 플라이트 제출이 포함된 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
 | flightId | string | 필수. 상태를 가져올 제출이 포함된 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 파트너 센터에서 생성 된 비행이이 ID 파트너 센터에서 비행 페이지의 URL에서 사용할 수 있는 이기도 합니다.  |
 | submissionId | string | 필수. 상태를 가져올 제출의 ID입니다. 이 ID는 [패키지 플라이트 제출 만들기](create-a-flight-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대 한이 ID의 파트너 센터에서 제출 페이지의 URL을 사용할 수도 있습니다.  |
 

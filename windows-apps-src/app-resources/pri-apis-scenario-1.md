@@ -6,15 +6,15 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ccb9447e9594f71907f0da5d0e15f9c6c65bb6b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a63cf64fec32be5439838618e534617d1f4a9afc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57622758"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359355"
 ---
 # <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>시나리오 1: 문자열 리소스 및 자산 파일에서 PRI 파일을 생성 합니다.
-이 시나리오에서는 [패키지 리소스 인덱싱(PRI) API](https://msdn.microsoft.com/library/windows/desktop/mt845690)를 사용하여 사용자 지정 빌드 시스템을 나타내는 새로운 앱을 만듭니다. 이 사용자 지정 빌드 시스템의 용도는 대상 UWP 앱용 PRI 파일을 만드는 것입니다. 따라서, 이 연습의 일부로, 대상 UWP 앱의 리소스를 나타내는 몇 가지 샘플 리소스 파일(문자열 및 다른 종류의 리소스가 들어 있음)을 만들겠습니다.
+이 시나리오에서는 [패키지 리소스 인덱싱(PRI) API](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference)를 사용하여 사용자 지정 빌드 시스템을 나타내는 새로운 앱을 만듭니다. 이 사용자 지정 빌드 시스템의 용도는 대상 UWP 앱용 PRI 파일을 만드는 것입니다. 따라서, 이 연습의 일부로, 대상 UWP 앱의 리소스를 나타내는 몇 가지 샘플 리소스 파일(문자열 및 다른 종류의 리소스가 들어 있음)을 만들겠습니다.
 
 ## <a name="new-project"></a>새 프로젝트
 먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Visual C++ Windows 콘솔 응용 프로그램** 프로젝트를 만들고 이름을 *CBSConsoleApp*("사용자 지정 빌드 시스템 콘솔 앱")으로 지정합니다.
@@ -228,10 +228,10 @@ PRI 파일은 이진 파일이므로 해당 XML 파일에 이진 PRI 파일을 �
 첫 번째 문자열 리소스는 `en-US\resources.resw`의 *EnOnlyString*이며, 하나의 후보만 가지고 있습니다(*language-en-US* 한정자와 일치함). 그 다음으로 `resources.resw` 및 `en-US\resources.resw` 모두의 *LocalizedString1*이 옵니다. 그 결과, *language-en-US*과 일치하는 것 하나와 모든 컨텍스트와 일치하는 대체 중간 후보 등 두 개의 후보를 갖게 됩니다. 마찬가지로, *LocalizedString2*에도 *language-de-DE*와 중간의 두 후보가 있게 됩니다. 마지막으로, *NeutralOnlyString*은 중간 형식으로만 존재합니다. 지역화용이 아님을 알 수 있도록 이름도 그렇게 지정했습니다.
 
 ## <a name="summary"></a>요약
-이 시나리오에서는 [패키지 리소스 인덱싱(PRI) API](https://msdn.microsoft.com/library/windows/desktop/mt845690)를 사용하여 리소스 인덱서를 만드는 방법을 살펴봤습니다. 그리고 리소스 인덱서에 문자열 리소스와 자산 파일을 추가했습니다. 그런 다음, 리소스 인덱서를 사용하여 이진 PRI 파일을 생성했습니다. 마지막으로 XML 형식으로 이진 PRI 파일을 덤프하여 원하는 정보가 들어 있는지를 확인했습니다.
+이 시나리오에서는 [패키지 리소스 인덱싱(PRI) API](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference)를 사용하여 리소스 인덱서를 만드는 방법을 살펴봤습니다. 그리고 리소스 인덱서에 문자열 리소스와 자산 파일을 추가했습니다. 그런 다음, 리소스 인덱서를 사용하여 이진 PRI 파일을 생성했습니다. 마지막으로 XML 형식으로 이진 PRI 파일을 덤프하여 원하는 정보가 들어 있는지를 확인했습니다.
 
 ## <a name="important-apis"></a>중요 API
-* [패키지 리소스 인덱스 (PRI) 참조](https://msdn.microsoft.com/library/windows/desktop/mt845690)
+* [패키지 리소스 인덱스 (PRI) 참조](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference)
 
 ## <a name="related-topics"></a>관련 항목
 * [PRI(패키지 리소스 인덱싱) API 및 사용자 지정 빌드 시스템](pri-apis-custom-build-systems.md)

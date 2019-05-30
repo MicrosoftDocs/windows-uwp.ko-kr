@@ -9,12 +9,12 @@ dev_langs:
 - vb
 keywords: windows 10, uwp, 화면 캡처
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bbe52de6e148ff86f492ee2c490e5dda388ffa1
-ms.sourcegitcommit: 703f23f0cd2037997b6540335d32d344d5604974
+ms.openlocfilehash: 5d61e5bb8e5f00a2ac5743ed1a91c470f455c9c6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58867889"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361446"
 ---
 # <a name="screen-capture"></a>화면 캡처
 
@@ -216,15 +216,15 @@ End Sub
 
 또는 필요한 모든 프레임을 가져올 때까지 **Direct3D11CaptureFramePool.TryGetNextFrame** 메서드로 프레임을 수동으로 가져올 수 있습니다.
 
-**Direct3D11CaptureFrame** 개체는 **ContentSize**, **Surface**, **SystemRelativeTime** 속성을 포함합니다. **SystemRelativeTime**은 다른 미디어 요소를 동기화하는 데 사용할 수 있는 QPC([QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904)) 시간입니다.
+**Direct3D11CaptureFrame** 개체는 **ContentSize**, **Surface**, **SystemRelativeTime** 속성을 포함합니다. **SystemRelativeTime**은 다른 미디어 요소를 동기화하는 데 사용할 수 있는 QPC([QueryPerformanceCounter](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancecounter)) 시간입니다.
 
 ## <a name="processing-capture-frames"></a>캡처 프레임 처리
 
-**Direct3D11CaptureFramePool**의 각 프레임은 **TryGetNextFrame**를 호출할 때 확인되고 **Direct3D11CaptureFrame** 객체의 수명에 따라 다시 확인됩니다. 기본 응용 프로그램의 경우 **Direct3D11CaptureFrame** 개체를 해제하면 프레임 풀에서 프레임을 다시 충분히 확인할 수 있습니다. 관리 응용 프로그램의 경우 **Direct3D11CaptureFrame.Dispose**(C++에서 **Close**) 메서드를 사용하는 것이 좋습니다. **Direct3D11CaptureFrame**은 [IClosable](https://docs.microsoft.com/uwp/api/Windows.Foundation.IClosable) 인터페이스를 구현하고, 이것은 C# 호출자에 대해 [IDisposable](https://msdn.microsoft.com/library/system.idisposable.aspx)로서 프로젝션됩니다.
+**Direct3D11CaptureFramePool**의 각 프레임은 **TryGetNextFrame**를 호출할 때 확인되고 **Direct3D11CaptureFrame** 객체의 수명에 따라 다시 확인됩니다. 기본 응용 프로그램의 경우 **Direct3D11CaptureFrame** 개체를 해제하면 프레임 풀에서 프레임을 다시 충분히 확인할 수 있습니다. 관리 응용 프로그램의 경우 **Direct3D11CaptureFrame.Dispose**(C++에서 **Close**) 메서드를 사용하는 것이 좋습니다. **Direct3D11CaptureFrame**은 [IClosable](https://docs.microsoft.com/uwp/api/Windows.Foundation.IClosable) 인터페이스를 구현하고, 이것은 C# 호출자에 대해 [IDisposable](https://docs.microsoft.com/dotnet/api/system.idisposable?redirectedfrom=MSDN)로서 프로젝션됩니다.
 
 응용 프로그램은 **Direct3D11CaptureFrame** 개체에 대한 참조를 저장하지 말아야 하며 프레임을 다시 확인한 후에 기본 Direct3D 표면에 대한 참조를 저장해서도 안 됩니다.
 
-프레임을 처리하는 동안 응용 프로그램은 **Direct3D11CaptureFramePool** 개체와 연결된 동일한 디바이스에서 [ID3D11Multithread](https://msdn.microsoft.com/library/windows/desktop/mt644886) 잠금을 가져오는 것이 좋습니다.
+프레임을 처리하는 동안 응용 프로그램은 **Direct3D11CaptureFramePool** 개체와 연결된 동일한 디바이스에서 [ID3D11Multithread](https://docs.microsoft.com/windows/desktop/api/d3d11_4/nn-d3d11_4-id3d11multithread) 잠금을 가져오는 것이 좋습니다.
 
 기본 Direct3D 표면은 **Direct3D11CaptureFramePool**을 만들거나 다시 만들 때 항상 지정된 크기가 됩니다. 콘텐츠가 프레임보다 크면 콘텐츠가 프레임 크기로 잘립니다. 콘텐츠가 프레임보다 작은 경우 나머지 프레임에는 정의되지 않은 데이터를 포함합니다. 정의되지 않은 콘텐츠가 표시되지 않도록 응용 프로그램에서 이 **Direct3D11CaptureFrame**에 대한 **ContentSize** 속성을 사용하여 하위 리소스를 복사하는 것이 좋습니다.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 82cb45dae1a4b9b1a9db8fabc044edf8157f1eb1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 58d3b59d8fdd1587a0bec8369a78863d0c3d4557
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646338"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66358806"
 ---
 # <a name="getting-started-getting-around-in-visual-studio"></a>시작: Visual Studio 둘러보기
 
@@ -44,7 +44,7 @@ Visual Studio에서도 비슷한 작업을 수행할 수 있습니다. **도구 
 
 ![Visual Studio에서 UI 디자인](images/ios-to-uwp/vs-add-button-label.png)
 
-레이아웃 및 바인딩 정보를 .xib 또는 스토리보드 파일에 숨기는 Xcode와 달리, Visual Studio에서는 이러한 세부 정보를 풍부하고 편집 가능하며 선언적인 XML 같은 언어로 저장하는 데 사용되는 XAML 파일을 편집하는 것이 좋습니다. XAML(Extensible Application Markup Language)에 대한 자세한 내용은 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/mt185595)를 참조하세요. **디자인** 창에 표시되는 모든 항목은 **XAML** 창에서 정의됩니다. 필요한 경우 **XAML** 창에서 세부적으로 제어할 수 있으며 자세히 알고 있으면 사용자 인터페이스 코드를 수동으로 신속하게 개발할 수 있습니다. 하지만 여기서는 **디자인** 창과 **속성** 창을 중심으로 살펴보겠습니다.
+레이아웃 및 바인딩 정보를 .xib 또는 스토리보드 파일에 숨기는 Xcode와 달리, Visual Studio에서는 이러한 세부 정보를 풍부하고 편집 가능하며 선언적인 XML 같은 언어로 저장하는 데 사용되는 XAML 파일을 편집하는 것이 좋습니다. XAML(Extensible Application Markup Language)에 대한 자세한 내용은 [XAML 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview)를 참조하세요. **디자인** 창에 표시되는 모든 항목은 **XAML** 창에서 정의됩니다. 필요한 경우 **XAML** 창에서 세부적으로 제어할 수 있으며 자세히 알고 있으면 사용자 인터페이스 코드를 수동으로 신속하게 개발할 수 있습니다. 하지만 여기서는 **디자인** 창과 **속성** 창을 중심으로 살펴보겠습니다.
 
 단추의 세부 정보를 변경해 보겠습니다. Xcode에서 단추의 이름을 변경하려면 해당 속성 패널에서 **제목** 필드 값을 변경합니다.
 

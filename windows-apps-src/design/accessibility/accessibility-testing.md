@@ -8,12 +8,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d84683544628a9b6df0eafb2999fabb134465ea8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8af03b32453bcdacb3da95678cf23a988c375f1b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635568"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359639"
 ---
 # <a name="accessibility-testing"></a>접근성 테스트  
 
@@ -23,7 +23,7 @@ UWP(유니버설 Windows 플랫폼) 앱에 접근성을 구현하기 위해 따�
 <span id="RUN_ACCESSIBILITY_TESTING_TOOLS"/>
 
 ## <a name="run-accessibility-testing-tools"></a>접근성 테스트 도구 실행  
-Windows SDK(소프트웨어 개발 키트)에는 [**AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239), [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) 및 [**UI Accessibility Checker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985) 같은 여러 가지 접근성 테스트 도구가 포함되어 있습니다. 이 도구는 앱의 접근성을 검증하는 데 도움이 될 수 있습니다. 모든 앱 시나리오와 UI 요소를 확인하세요.
+Windows SDK(소프트웨어 개발 키트)에는 [**AccScope**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope), [**Inspect**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) 및 [**UI Accessibility Checker**](https://docs.microsoft.com/windows/desktop/WinAuto/ui-accessibility-checker) 같은 여러 가지 접근성 테스트 도구가 포함되어 있습니다. 이 도구는 앱의 접근성을 검증하는 데 도움이 될 수 있습니다. 모든 앱 시나리오와 UI 요소를 확인하세요.
 
 Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개발 컴퓨터에서 Windows SDK가 설치되어 있는 위치의 bin 하위 디렉터리)에서 접근성 테스트 도구를 시작할 수 있습니다.
   
@@ -35,16 +35,16 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 
 ### <a name="accscope"></a>**AccScope**  
 
-[  **AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239) 도구를 사용하면 개발자와 테스터가 앱 개발 및 디자인 중 앱 개발 주기의 이후 테스트 단계가 아니라 초기 프로토타입 단계에서 앱의 접근성을 평가할 수 있습니다. 특히 앱에서 내레이터 접근성 시나리오를 테스트하는 데 사용됩니다.
+[  **AccScope**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope) 도구를 사용하면 개발자와 테스터가 앱 개발 및 디자인 중 앱 개발 주기의 이후 테스트 단계가 아니라 초기 프로토타입 단계에서 앱의 접근성을 평가할 수 있습니다. 특히 앱에서 내레이터 접근성 시나리오를 테스트하는 데 사용됩니다.
 
 <span id="inspect"/>
 <span id="INSPECT"/>
 
 ### <a name="inspect"></a>**검사**  
 
-[**검사할** ](https://msdn.microsoft.com/library/windows/desktop/Dd318521) UI 요소를 선택 하 고 해당 내게 필요한 옵션 데이터를 볼 수 있습니다. 사용자는 Microsoft UI 자동화 속성 및 컨트롤 패턴을 보고 UI 자동화 트리에서 자동화 요소의 탐색 구조를 테스트할 수 있습니다. UI를 개발할 때 **Inspect**를 사용하여 접근성 특성이 UI 자동화에 어떻게 표시되는지 확인하세요. 경우에 따라 특성은 기본 XAML 컨트롤에 대해 이미 구현된 UI 자동화 지원에서 제공됩니다. 다른 경우 특성은 XAML 태그에서 [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties) 연결된 속성으로 설정한 특정 값에서 제공됩니다.
+[**검사할** ](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) UI 요소를 선택 하 고 해당 내게 필요한 옵션 데이터를 볼 수 있습니다. 사용자는 Microsoft UI 자동화 속성 및 컨트롤 패턴을 보고 UI 자동화 트리에서 자동화 요소의 탐색 구조를 테스트할 수 있습니다. UI를 개발할 때 **Inspect**를 사용하여 접근성 특성이 UI 자동화에 어떻게 표시되는지 확인하세요. 경우에 따라 특성은 기본 XAML 컨트롤에 대해 이미 구현된 UI 자동화 지원에서 제공됩니다. 다른 경우 특성은 XAML 태그에서 [**AutomationProperties**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties) 연결된 속성으로 설정한 특정 값에서 제공됩니다.
 
-다음 이미지는 메모장에서 **편집** 메뉴 요소의 UI 자동화 속성을 쿼리하는 [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) 도구를 보여 줍니다.
+다음 이미지는 메모장에서 **편집** 메뉴 요소의 UI 자동화 속성을 쿼리하는 [**Inspect**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) 도구를 보여 줍니다.
 
 ![검사 도구의 스크린샷](./images/inspect.png)
 
@@ -64,7 +64,7 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 <span id="ACCESSIBLE_EVENT_WATCHER"/>
 
 ### <a name="accessible-event-watcher"></a>**접근성 있는 이벤트 감시자**  
-[**(AccEvent)에 액세스할 수 있는 이벤트 감시자** ](https://msdn.microsoft.com/library/windows/desktop/Dd317979) 앱의 UI 요소 UI 변경 될 때 적절 한 UI 자동화 및 Microsoft Active Accessibility 이벤트를 발생 시키는 지 여부를 테스트 합니다. UI는 포커스가 변경되거나 UI 요소가 호출, 선택 또는 상태나 속성이 변경될 때 변경될 수 있습니다.
+[ **(AccEvent)에 액세스할 수 있는 이벤트 감시자** ](https://docs.microsoft.com/windows/desktop/WinAuto/accessible-event-watcher) 앱의 UI 요소 UI 변경 될 때 적절 한 UI 자동화 및 Microsoft Active Accessibility 이벤트를 발생 시키는 지 여부를 테스트 합니다. UI는 포커스가 변경되거나 UI 요소가 호출, 선택 또는 상태나 속성이 변경될 때 변경될 수 있습니다.
 
 > [!NOTE]
 > 설명서에 나오는 대부분의 접근성 테스트 도구는 PC에서 실행되며 휴대폰에서는 실행되지 않습니다. 개발하고 에뮬레이터를 사용하는 동안 일부 도구를 실행할 수 있지만, 이 도구의 대부분은 에뮬레이터 내에서 UI 자동화 트리를 노출할 수 없습니다.
@@ -95,7 +95,7 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 
 ## <a name="verify-your-app-with-display-settings"></a>디스플레이 설정으로 앱 확인  
 
-디스플레이의 dpi(인치당 도트 수) 값을 조정하는 시스템 디스플레이 옵션을 사용하고 dpi 값이 변경되면 앱 UI 크기가 올바르게 조정되도록 합니다. (Dpi 값을 변경 하는 일부 사용자는 내게 필요한 옵션으로에서 사용할 수 있기 **접근성** 속성으로 표시도 합니다.) 문제를 발견할 경우에 따라 합니다 [레이아웃 크기 조정에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/Dn611863) 다른 배율에 대 한 추가 리소스를 제공 합니다.
+디스플레이의 dpi(인치당 도트 수) 값을 조정하는 시스템 디스플레이 옵션을 사용하고 dpi 값이 변경되면 앱 UI 크기가 올바르게 조정되도록 합니다. (Dpi 값을 변경 하는 일부 사용자는 내게 필요한 옵션으로에서 사용할 수 있기 **접근성** 속성으로 표시도 합니다.) 문제를 발견할 경우에 따라 합니다 [레이아웃 크기 조정에 대 한 지침](https://developer.microsoft.com/windows/design) 다른 배율에 대 한 추가 리소스를 제공 합니다.
 
 <span id="verify_main_app_scenarios_by_using_narrator"/>
 <span id="VERIFY_MAIN_APP_SCENARIOS_BY_USING_NARRATOR"/>
@@ -142,9 +142,9 @@ Windows 10 버전 1607부터 내레이터에 새 개발자 모드가 도입되�
 
     일부 컨트롤은 추가 작업을 제공합니다. 전체 목록을 표시하려면 네 손가락으로 한 번 탭합니다.
 
-    컨트롤이 마우스 또는 키보드에는 응답하지만 주 또는 보조 터치 조작에는 응답하지 않는 경우에는 컨트롤에서 추가 [UI 자동화](https://msdn.microsoft.com/library/windows/desktop/Ee684009) 컨트롤 패턴을 구현해야 합니다.
+    컨트롤이 마우스 또는 키보드에는 응답하지만 주 또는 보조 터치 조작에는 응답하지 않는 경우에는 컨트롤에서 추가 [UI 자동화](https://docs.microsoft.com/windows/desktop/WinAuto/entry-uiauto-win32) 컨트롤 패턴을 구현해야 합니다.
 
-[  **AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239) 도구를 사용하여 앱에서 내레이터 접근성 시나리오를 테스트하는 것도 고려해야 합니다. [  **AccScope tool topic**](https://msdn.microsoft.com/library/windows/desktop/Dn433239)에서는 내레이터 시나리오를 테스트하도록 **AccScope**을 구성하는 방법에 대해 설명합니다.
+[  **AccScope**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope) 도구를 사용하여 앱에서 내레이터 접근성 시나리오를 테스트하는 것도 고려해야 합니다. [  **AccScope tool topic**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope)에서는 내레이터 시나리오를 테스트하도록 **AccScope**을 구성하는 방법에 대해 설명합니다.
 
 <span id="Examine_the_UI_Automation_representation_for_your_app"/>
 <span id="examine_the_ui_automation_representation_for_your_app"/>
@@ -153,15 +153,15 @@ Windows 10 버전 1607부터 내레이터에 새 개발자 모드가 도입되�
 ## <a name="examine-the-ui-automation-representation-for-your-app"></a>앱의 UI 자동화 표현 검사  
 앞에서 언급한 다수의 UI 자동화 테스트 도구를 사용하면 의도적으로 앱의 모양을 고려하지 않고 대신 앱을 UI 자동화 요소 구조로 표현하는 방법으로 앱을 볼 수 있습니다. 이는 UI 자동화 클라이언트, 주로 보조 기술이 접근성 시나리오에서 앱과 상호 작용하는 방법입니다.
 
-[  **AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239) 도구는 UI 자동화 요소를 시각적 표현이나 목록으로 표시할 수 있어 특히 흥미로운 앱 보기를 제공합니다. 시각화를 사용하면 앱 UI의 시각적 모양과 서로 연결할 수 있는 방법을 통해 부분으로 드릴다운할 수 있습니다. UI에 논리를 할당하기 전에 초기 UI 프로토타입의 접근성을 테스트할 수도 있어, 이를 통해 시각적 상호 작용과 앱의 접근성 시나리오 탐색이 모두 균형을 유지하는지 확인할 수 있습니다.
+[  **AccScope**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope) 도구는 UI 자동화 요소를 시각적 표현이나 목록으로 표시할 수 있어 특히 흥미로운 앱 보기를 제공합니다. 시각화를 사용하면 앱 UI의 시각적 모양과 서로 연결할 수 있는 방법을 통해 부분으로 드릴다운할 수 있습니다. UI에 논리를 할당하기 전에 초기 UI 프로토타입의 접근성을 테스트할 수도 있어, 이를 통해 시각적 상호 작용과 앱의 접근성 시나리오 탐색이 모두 균형을 유지하는지 확인할 수 있습니다.
 
-테스트할 수 있는 한 가지 측면은 UI 자동화 요소 보기에 표시하지 않으려는 요소가 나타나는지 여부입니다. 보기에 표시하지 않으려는 요소가 발견되는 경우나 이와 반대로 누락된 요소가 있는 경우 XAML 연결된 속성 [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.accessibilityview)를 사용하여 접근성 보기에 XAML 컨트롤이 나타나는 방식을 조정할 수 있습니다. 기본 접근성 보기를 살펴본 후에는 화살표 키를 통해 활성화되는 탭 시퀀스나 공간 탐색을 다시 점검하여 사용자가 컨트롤 보기에 표시되는 각 대화형 부분에 도달할 수 있는지 확인하는 것도 좋습니다.
+테스트할 수 있는 한 가지 측면은 UI 자동화 요소 보기에 표시하지 않으려는 요소가 나타나는지 여부입니다. 보기에 표시하지 않으려는 요소가 발견되는 경우나 이와 반대로 누락된 요소가 있는 경우 XAML 연결된 속성 [**AutomationProperties.AccessibilityView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityview)를 사용하여 접근성 보기에 XAML 컨트롤이 나타나는 방식을 조정할 수 있습니다. 기본 접근성 보기를 살펴본 후에는 화살표 키를 통해 활성화되는 탭 시퀀스나 공간 탐색을 다시 점검하여 사용자가 컨트롤 보기에 표시되는 각 대화형 부분에 도달할 수 있는지 확인하는 것도 좋습니다.
 
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>관련 항목  
-* [접근성](accessibility.md)
+* [액세스 가능성](accessibility.md)
 * [피해야 할 사례](practices-to-avoid.md)
-* [UI 자동화](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
+* [UI 자동화](https://docs.microsoft.com/windows/desktop/WinAuto/entry-uiauto-win32)
 * [Windows의 내게 필요한 옵션](https://go.microsoft.com/fwlink/p/?LinkId=320802)
 * [내레이터를 사용 하 여 시작](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

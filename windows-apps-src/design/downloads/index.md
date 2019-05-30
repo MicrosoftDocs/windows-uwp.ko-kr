@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 24e994435a2ff7a01e5c77a0043e7a3fb8bc3f33
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 2c7332a3e1097a8e62576ae5920eb82c2bd5d2a6
+ms.sourcegitcommit: 423ff8f1fd791445e21cca534bcefe407251acf1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065424"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251607"
 ---
 ![디자인 기본 사항](../images/downloads-2x.png)
 
@@ -27,44 +27,44 @@ Fluent 디자인/UWP 앱용 디자인 및 UI 관련 다운로드를 제공합니
 
 :::row:::
     :::column:::
-        ![hero image](images/figma.png)
-        <b>Figma toolkit</b><br>
-        v1810, October 2018<br>
-        <a href="https://aka.ms/figmatoolkit">Download</a>
+![영웅 이미지](images/figma.png)
+<b>Figma 도구 키트</b><br>
+v1810, 2018년 10월<br>
+<a href="https://aka.ms/figmatoolkit">다운로드</a>
     :::column-end:::
     :::column:::
-        ![hero image](images/sketch.png)
-        <b>Sketch toolkit</b><br>
-        v1810, October 2018<br>
-        <a href="https://aka.ms/sketchtoolkit">Download</a>
+![영웅 이미지](images/sketch.png)
+<b>Sketch 도구 키트</b><br>
+v1810, 2018년 10월<br>
+<a href="https://aka.ms/sketchtoolkit">다운로드</a>
     :::column-end:::    
     :::column:::
-        ![hero image](images/adobe-xd.png)
-        <b>Adobe XD toolkit</b><br>
-        v1901, January 2019<br>
-        <a href="https://aka.ms/adobexdtoolkit">Download</a>
+![영웅 이미지](images/adobe-xd.png)
+<b>Adobe XD 도구 키트</b><br>
+v1901, 2019년 1월<br>
+<a href="https://aka.ms/adobexdtoolkit">다운로드</a>
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![hero image](images/adobe-illustrator.png)
-        <b>Adobe Illustrator toolkit</b><br>
-        v1806, June 2018<br>
-        <a href="https://aka.ms/adobeillustratortoolkit">Download</a>
+![영웅 이미지](images/adobe-illustrator.png)
+<b>Adobe Illustrator 도구 키트</b><br>
+v1806, 2018년 6월<br>
+<a href="https://aka.ms/adobeillustratortoolkit">다운로드</a>
     :::column-end:::
     :::column:::
-        ![hero image](images/adobe-photoshop.png)
-        <b>Adobe Photoshop toolkit</b><br>
-        v1705, May 2017<br>
-        <a href="https://aka.ms/adobephotoshoptoolkit">Download</a>
+![영웅 이미지](images/adobe-photoshop.png)
+<b>Adobe Photoshop 도구 키트</b><br>
+v1705, 2017년 5월<br>
+<a href="https://aka.ms/adobephotoshoptoolkit">다운로드</a>
     :::column-end:::
     :::column:::
-        ![hero image](images/framer.png)
-        <b>Framer toolkit</b><br>
-        (This toolkit is no longer supported.)<br/>
-        v1806, June 2018<br>
-        <a href="https://aka.ms/framertoolkit">Download</a>
+![영웅 이미지](images/framer.png)
+<b>Framer 도구 키트</b><br>
+(이 도구 키트는 더 이상 지원되지 않습니다.)<br/>
+v1806, 2018년 6월<br>
+<a href="https://aka.ms/framertoolkit">다운로드</a>
     :::column-end:::
 :::row-end:::
 
@@ -72,16 +72,16 @@ Fluent 디자인/UWP 앱용 디자인 및 UI 관련 다운로드를 제공합니
 
 :::row:::
     :::column:::
-        ![WinUI library thumbnail](images/WinUI-library.png)
-        <b>Windows UI Library</b><br>
-        Controls and other UI elements for UWP apps.<br/>
-        <a href="/uwp/toolkits/winui/getting-started">Installation instructions</a><br/>
+![WinUI 라이브러리 미리 보기](images/WinUI-library.png)
+<b>Windows UI 라이브러리</b><br>
+UWP 앱에 대한 컨트롤 및 기타 UI 요소.<br/>
+<a href="/uwp/toolkits/winui/getting-started">설치 지침</a><br/>
     :::column-end:::
     :::column:::
-        ![Windows community thumbnail](images/Windows-community-toolkit.png)
-        <b>Windows Community Toolkit</b><br>
-        Helper functions, custom controls, and app services.<br />
-        <a href="/windows/uwpcommunitytoolkit/getting-started">Installation instructions</a>
+![Windows 커뮤니티 미리 보기](images/Windows-community-toolkit.png)
+<b>Windows 커뮤니티 도구 키트</b><br>
+도우미 함수, 사용자 지정 컨트롤 및 앱 서비스.<br />
+<a href="/windows/uwpcommunitytoolkit/getting-started">설치 지침</a>
     :::column-end:::
     :::column:::
     :::column-end:::

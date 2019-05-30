@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c0da215cad867a498527b475422c4026cc65ce3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a6e72aea74c4aed092cab450c05dc0982e838f09
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640698"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66358966"
 ---
 # <a name="camera-ui-features-for-mobile-devices"></a>모바일 디바이스용 카메라 UI 기능
 
@@ -31,7 +31,7 @@ ms.locfileid: "57640698"
 
 ## <a name="hide-the-status-bar"></a>상태 표시줄 숨기기
 
-모바일 디바이스에는 사용자에게 디바이스에 대한 상태 정보를 제공하는 [**StatusBar**](https://msdn.microsoft.com/library/windows/apps/dn633864) 컨트롤이 있습니다. 이 컨트롤은 화면에서 공간을 차지하여 미디어 캡처 UI를 방해할 수 있습니다. [  **HideAsync**](https://msdn.microsoft.com/library/windows/apps/dn610339)를 호출하여 상태 표시줄을 숨길 수 있지만 [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/dn949016) 메서드를 사용하여 API를 사용할 수 있는지 확인하는 조건부 블록 내에서 이 호출을 수행해야 합니다. 이 메서드는 상태 표시줄을 지원하는 모바일 장치에서만 true를 반환합니다. 앱이 시작되거나 카메라에서 미리 보기를 시작할 때 상태 표시줄을 숨겨야 합니다.
+모바일 디바이스에는 사용자에게 디바이스에 대한 상태 정보를 제공하는 [**StatusBar**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.StatusBar) 컨트롤이 있습니다. 이 컨트롤은 화면에서 공간을 차지하여 미디어 캡처 UI를 방해할 수 있습니다. [  **HideAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.statusbar.hideasync)를 호출하여 상태 표시줄을 숨길 수 있지만 [**ApiInformation.IsTypePresent**](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.istypepresent) 메서드를 사용하여 API를 사용할 수 있는지 확인하는 조건부 블록 내에서 이 호출을 수행해야 합니다. 이 메서드는 상태 표시줄을 지원하는 모바일 장치에서만 true를 반환합니다. 앱이 시작되거나 카메라에서 미리 보기를 시작할 때 상태 표시줄을 숨겨야 합니다.
 
 [!code-cs[HideStatusBar](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHideStatusBar)]
 
@@ -41,7 +41,7 @@ ms.locfileid: "57640698"
 
 ## <a name="use-the-hardware-camera-button"></a>하드웨어 카메라 단추 사용
 
-일부 모바일 디바이스에는 일부 사용자가 화면 컨트롤보다 선호하는 전용 하드웨어 카메라 단추가 있습니다. 하드웨어 카메라 단추를 누를 때 알림을 받으려면 [**HardwareButtons.CameraPressed**](https://msdn.microsoft.com/library/windows/apps/dn653805) 이벤트에 대한 처리기를 등록합니다. 이 API는 모바일 디바이스에서만 사용할 수 있으므로 **IsTypePresent**를 사용하여 액세스를 시도하기 전에 API가 현재 디바이스에서 지원되는지를 확인해야 합니다.
+일부 모바일 디바이스에는 일부 사용자가 화면 컨트롤보다 선호하는 전용 하드웨어 카메라 단추가 있습니다. 하드웨어 카메라 단추를 누를 때 알림을 받으려면 [**HardwareButtons.CameraPressed**](https://docs.microsoft.com/uwp/api/windows.phone.ui.input.hardwarebuttons.camerapressed) 이벤트에 대한 처리기를 등록합니다. 이 API는 모바일 디바이스에서만 사용할 수 있으므로 **IsTypePresent**를 사용하여 액세스를 시도하기 전에 API가 현재 디바이스에서 지원되는지를 확인해야 합니다.
 
 [!code-cs[PhoneUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPhoneUsing)]
 

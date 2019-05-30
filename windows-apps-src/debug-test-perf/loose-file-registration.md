@@ -5,12 +5,12 @@ ms.date: 6/1/2018
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털, 앱 관리자, 배포, sdk
 ms.localizationpriority: medium
-ms.openlocfilehash: 928c07bd23228f0fefd78be6019a0d116b2e6e4b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: adc944f3e84e2ea7ba3dacd2021bc2e141bf8cdd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635428"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362315"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>느슨한 파일 등록을 통해 앱 배포 
 
@@ -34,7 +34,7 @@ ms.locfileid: "57635428"
 Windows는 로컬 및 원격 장치에서 느슨한 파일 레이아웃을 등록 하려면 여러 개발자 도구를 제공 합니다. 선택할 수 있습니다 `WinDeployAppCmd` (Windows SDK 도구), Windows Device Portal, PowerShell, 및 [Visual Studio](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#register-layout-from-network)합니다. 아래 이러한 도구를 사용 하 여 느슨한 파일을 등록 하는 방법을 살펴보겠습니다. 하지만 먼저 설치 했는지를 확인 합니다.
 
 - 장치에서 Windows 10 크리에이터 업데이트 (빌드 14965) 이상 이어야 합니다.
-- 사용 하도록 설정 해야 합니다 [개발자 모드](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) 하 고 [장치 검색](https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development#device-discovery) 모든 장치에서.
+- 사용 하도록 설정 해야 합니다 [개발자 모드](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) 하 고 [장치 검색](https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development#device-discovery) 모든 장치에서.
 
 > [!IMPORTANT]
 > 사용 완화 파일을 등록 하는 네트워크 공유 (SMB) 프로토콜을 지 원하는 장치에서 사용할 수 만입니다. 데스크톱, Xbox입니다. 

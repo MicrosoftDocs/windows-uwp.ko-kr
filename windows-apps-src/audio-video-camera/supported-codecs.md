@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 02d8c67c92a070fbeaaab81ef6c5145dec90e411
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 92511c1f5b7ad8991900d80d4ec52659d6e74f88
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631358"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361408"
 ---
 # <a name="supported-codecs"></a>지원되는 코덱
 
@@ -66,10 +66,10 @@ ms.locfileid: "57631358"
 <tbody>
 <tr class="odd">
 <td align="left">HE-AAC v1 / AAC+</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -81,10 +81,10 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="even">
 <td align="left">HE-AAC v2 / eAAC+</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -99,7 +99,7 @@ ms.locfileid: "57631358"
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -113,12 +113,12 @@ ms.locfileid: "57631358"
 <td align="left">AC3</td>
 <td align="left">D/E</td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -126,14 +126,14 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="odd">
 <td align="left">EAC3/EC3</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -156,7 +156,7 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="odd">
 <td align="left">AMR-NB</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -165,7 +165,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D/E</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -197,7 +197,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">GSM 6.10</td>
@@ -212,7 +212,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="odd">
 <td align="left">IMA ADPCM</td>
@@ -227,7 +227,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">LPCM</td>
@@ -263,7 +263,7 @@ ms.locfileid: "57631358"
 <td align="left">MPEG-1/2</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -287,7 +287,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">WMA 1/2/3</td>
@@ -339,7 +339,7 @@ ms.locfileid: "57631358"
 
  
 
-### <a name="mobile"></a>모바일
+### <a name="mobile"></a>휴대폰
 
 <table>
 <colgroup>
@@ -377,10 +377,10 @@ ms.locfileid: "57631358"
 <tbody>
 <tr class="odd">
 <td align="left">HE-AAC v1 / AAC+</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -392,10 +392,10 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="even">
 <td align="left">HE-AAC v2 / eAAC+</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -410,7 +410,7 @@ ms.locfileid: "57631358"
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -452,7 +452,7 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="even">
 <td align="left">ALAC</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -467,7 +467,7 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="odd">
 <td align="left">AMR-NB</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -476,7 +476,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D/E</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -492,7 +492,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -508,7 +508,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">GSM 6.10</td>
@@ -523,7 +523,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="odd">
 <td align="left">IMA ADPCM</td>
@@ -538,7 +538,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">LPCM</td>
@@ -558,7 +558,7 @@ ms.locfileid: "57631358"
 <tr class="odd">
 <td align="left">MP3</td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -598,7 +598,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">WMA 1/2/3</td>
@@ -606,7 +606,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -621,7 +621,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -688,10 +688,10 @@ ms.locfileid: "57631358"
 <tbody>
 <tr class="odd">
 <td align="left">HE-AAC v1 / AAC+</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -703,10 +703,10 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="even">
 <td align="left">HE-AAC v2 / eAAC+</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -721,7 +721,7 @@ ms.locfileid: "57631358"
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -733,14 +733,14 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="even">
 <td align="left">AC3</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -748,14 +748,14 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="odd">
 <td align="left">EAC3/EC3</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -763,7 +763,7 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="even">
 <td align="left">ALAC</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -778,7 +778,7 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="odd">
 <td align="left">AMR-NB</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -787,7 +787,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D/E</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -803,7 +803,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -819,7 +819,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">GSM 6.10</td>
@@ -834,7 +834,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="odd">
 <td align="left">IMA ADPCM</td>
@@ -849,7 +849,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">LPCM</td>
@@ -869,7 +869,7 @@ ms.locfileid: "57631358"
 <tr class="odd">
 <td align="left">MP3</td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -885,7 +885,7 @@ ms.locfileid: "57631358"
 <td align="left">MPEG-1/2</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -909,7 +909,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">WMA 1/2/3</td>
@@ -917,7 +917,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -932,7 +932,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -947,7 +947,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -999,10 +999,10 @@ ms.locfileid: "57631358"
 <tbody>
 <tr class="odd">
 <td align="left">HE-AAC v1 / AAC+</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1014,10 +1014,10 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="even">
 <td align="left">HE-AAC v2 / eAAC+</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1032,7 +1032,7 @@ ms.locfileid: "57631358"
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1074,7 +1074,7 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="even">
 <td align="left">ALAC</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1089,7 +1089,7 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="odd">
 <td align="left">AMR-NB</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1098,7 +1098,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D/E</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -1114,7 +1114,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -1130,7 +1130,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">GSM 6.10</td>
@@ -1145,7 +1145,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="odd">
 <td align="left">IMA ADPCM</td>
@@ -1160,7 +1160,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">LPCM</td>
@@ -1180,7 +1180,7 @@ ms.locfileid: "57631358"
 <tr class="odd">
 <td align="left">MP3</td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1196,7 +1196,7 @@ ms.locfileid: "57631358"
 <td align="left">MPEG-1/2</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1220,7 +1220,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">WMA 1/2/3</td>
@@ -1228,7 +1228,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1243,7 +1243,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1258,7 +1258,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1310,10 +1310,10 @@ ms.locfileid: "57631358"
 <tbody>
 <tr class="odd">
 <td align="left">HE-AAC v1 / AAC+</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1325,10 +1325,10 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="even">
 <td align="left">HE-AAC v2 / eAAC+</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1343,7 +1343,7 @@ ms.locfileid: "57631358"
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1355,14 +1355,14 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="even">
 <td align="left">AC3</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1370,14 +1370,14 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="odd">
 <td align="left">EAC3/EC3</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1385,7 +1385,7 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="even">
 <td align="left">ALAC</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1400,7 +1400,7 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="odd">
 <td align="left">AMR-NB</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1409,7 +1409,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D/E</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -1425,7 +1425,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -1441,7 +1441,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">GSM 6.10</td>
@@ -1456,7 +1456,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="odd">
 <td align="left">IMA ADPCM</td>
@@ -1471,7 +1471,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">LPCM</td>
@@ -1491,7 +1491,7 @@ ms.locfileid: "57631358"
 <tr class="odd">
 <td align="left">MP3</td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1507,7 +1507,7 @@ ms.locfileid: "57631358"
 <td align="left">MPEG-1/2</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1531,7 +1531,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">WMA 1/2/3</td>
@@ -1539,7 +1539,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1554,7 +1554,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1569,7 +1569,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1638,13 +1638,13 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left">D/E</td>
 <td align="left">D/E</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -1660,29 +1660,29 @@ ms.locfileid: "57631358"
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">MPEG-4(파트 2)</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">H.265</td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1692,7 +1692,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -1707,8 +1707,8 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left">D/E</td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -1723,7 +1723,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -1731,16 +1731,16 @@ ms.locfileid: "57631358"
 <td align="left">VC-1</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -1763,15 +1763,15 @@ ms.locfileid: "57631358"
 <td align="left">WMV9 화면</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -1779,7 +1779,7 @@ ms.locfileid: "57631358"
 <td align="left">DV</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1787,15 +1787,15 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 </tr>
 <tr class="odd">
 <td align="left">Motion JPEG</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1803,7 +1803,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -1812,7 +1812,7 @@ ms.locfileid: "57631358"
 
  
 
-### <a name="mobile"></a>모바일
+### <a name="mobile"></a>휴대폰
 
 <table>
 <colgroup>
@@ -1886,22 +1886,22 @@ ms.locfileid: "57631358"
 <td align="left">MPEG-4(파트 2)</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">H.265</td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1911,7 +1911,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -1926,8 +1926,8 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left">D/E</td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -1942,7 +1942,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -1950,7 +1950,7 @@ ms.locfileid: "57631358"
 <td align="left">VC-1</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1958,8 +1958,8 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -2014,7 +2014,7 @@ ms.locfileid: "57631358"
 <td align="left">Motion JPEG</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2022,7 +2022,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -2105,22 +2105,22 @@ ms.locfileid: "57631358"
 <td align="left">MPEG-4(파트 2)</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">H.265</td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2130,7 +2130,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -2145,8 +2145,8 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left">D/E</td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -2161,7 +2161,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -2169,31 +2169,31 @@ ms.locfileid: "57631358"
 <td align="left">VC-1</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">WMV7/8/9</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -2201,15 +2201,15 @@ ms.locfileid: "57631358"
 <td align="left">WMV9 화면</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -2233,7 +2233,7 @@ ms.locfileid: "57631358"
 <td align="left">Motion JPEG</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2241,7 +2241,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -2339,7 +2339,7 @@ ms.locfileid: "57631358"
 <tr class="even">
 <td align="left">H.265</td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2349,7 +2349,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -2364,8 +2364,8 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left">D/E</td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -2388,31 +2388,31 @@ ms.locfileid: "57631358"
 <td align="left">VC-1</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">WMV7/8/9</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -2452,7 +2452,7 @@ ms.locfileid: "57631358"
 <td align="left">Motion JPEG</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2460,7 +2460,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -2514,13 +2514,13 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left">D/E</td>
 <td align="left">D/E</td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -2536,29 +2536,29 @@ ms.locfileid: "57631358"
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">MPEG-4(파트 2)</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">H.265</td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left">D/E</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2568,7 +2568,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -2583,8 +2583,8 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left">D/E</td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -2599,7 +2599,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -2607,7 +2607,7 @@ ms.locfileid: "57631358"
 <td align="left">VC-1</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2615,8 +2615,8 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -2671,7 +2671,7 @@ ms.locfileid: "57631358"
 <td align="left">Motion JPEG</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2679,7 +2679,7 @@ ms.locfileid: "57631358"
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">D</td>
+<td align="left">d</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -2723,8 +2723,8 @@ ms.locfileid: "57631358"
 </tr>
 <tr class="odd">
 <td align="left">ICO</td>
-<td align="left">D</td>
-<td align="left">D</td>
+<td align="left">d</td>
+<td align="left">d</td>
 </tr>
 <tr class="even">
 <td align="left">JPEG</td>
@@ -2757,4 +2757,4 @@ ms.locfileid: "57631358"
 <sup>2</sup> RAW가 아닌 미리 보기가 포함된 DNG 이미지가 지원됩니다.  
 <sup>3</sup> 특정 카메라 RAW 형식만 지원됩니다.  
 
-이미지 코덱에 대한 자세한 내용은 [네이티브 WIC 코덱](https://msdn.microsoft.com/library/windows/desktop/gg430027.aspx)을 참조하세요.
+이미지 코덱에 대한 자세한 내용은 [네이티브 WIC 코덱](https://docs.microsoft.com/windows/desktop/wic/native-wic-codecs)을 참조하세요.

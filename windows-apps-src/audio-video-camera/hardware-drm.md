@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f0a53d0f725c134bbb7adecaa956000a53235b0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9c48cd52d69d13b61f059894cc0dbea89eecf913
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57600908"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360865"
 ---
 # <a name="hardware-drm"></a>하드웨어 DRM
 
@@ -89,18 +89,18 @@ mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectio
 
 이 섹션에서는 시스템에서 지원되는 하드웨어 DRM의 유형을 감지하는 방법을 설명합니다.
 
-[  **PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) 메서드를 사용하여 시스템에서 특정 하드웨어 DRM 기능을 지원하는지 확인할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+[  **PlayReadyStatics.CheckSupportedHardware**](https://docs.microsoft.com/uwp/api/windows.media.protection.playready.playreadystatics.checksupportedhardware) 메서드를 사용하여 시스템에서 특정 하드웨어 DRM 기능을 지원하는지 확인할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```csharp
 bool isFeatureSupported = PlayReadyStatics.CheckSupportedHardware(PlayReadyHardwareDRMFeatures.HEVC);
 ```
 
-[  **PlayReadyHardwareDRMFeatures**](https://msdn.microsoft.com/library/windows/apps/dn986265) 열거에는 쿼리할 수 있는 하드웨어 DRM 기능 값의 올바른 목록이 포함되어 있습니다. 하드웨어 DRM이 지원되는지 확인하려면 쿼리에서 **HardwareDRM** 멤버를 사용합니다. 하드웨어에서 HEVC(고효율성 비디오 코딩)/H.265 코덱을 지원하는지 확인하려면 쿼리에서 **HEVC** 멤버를 사용합니다.
+[  **PlayReadyHardwareDRMFeatures**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyHardwareDRMFeatures) 열거에는 쿼리할 수 있는 하드웨어 DRM 기능 값의 올바른 목록이 포함되어 있습니다. 하드웨어 DRM이 지원되는지 확인하려면 쿼리에서 **HardwareDRM** 멤버를 사용합니다. 하드웨어에서 HEVC(고효율성 비디오 코딩)/H.265 코덱을 지원하는지 확인하려면 쿼리에서 **HEVC** 멤버를 사용합니다.
 
-하드웨어 DRM이 지원되는지 확인하기 위해 클라이언트 인증서의 보안 수준을 얻으려면 [**PlayReadyStatics.PlayReadyCertificateSecurityLevel**](https://msdn.microsoft.com/library/windows/apps/windows.media.protection.playready.playreadystatics.playreadycertificatesecuritylevel.aspx) 속성도 사용할 수 있습니다. 반환된 인증서 보안 수준이 3000 이상인 경우 클라이언트가 개별화 또는 프로비전되지 않았거나(두 경우 모두 이 속성은 0을 반환) 하드웨어 DRM이 사용 중이 아닙니다(이 경우 이 속성은 3000 미만인 값을 반환).
+하드웨어 DRM이 지원되는지 확인하기 위해 클라이언트 인증서의 보안 수준을 얻으려면 [**PlayReadyStatics.PlayReadyCertificateSecurityLevel**](https://docs.microsoft.com/uwp/api/windows.media.protection.playready.playreadystatics.playreadycertificatesecuritylevel) 속성도 사용할 수 있습니다. 반환된 인증서 보안 수준이 3000 이상인 경우 클라이언트가 개별화 또는 프로비전되지 않았거나(두 경우 모두 이 속성은 0을 반환) 하드웨어 DRM이 사용 중이 아닙니다(이 경우 이 속성은 3000 미만인 값을 반환).
 
 ### <a name="detecting-support-for-aes128cbc-hardware-drm"></a>AES128CBC 하드웨어 DRM에 대한 지원 검색
-Windows 10, 버전 1709부터 디바이스에서 AES128CBC 하드웨어 암호화에 대한 지원을 검색하려면 **[PlayReadyStatics.CheckSupportedHardware](https://msdn.microsoft.com/library/windows/apps/dn986441)** 를 호출하고 열거 값 [**PlayReadyHardwareDRMFeatures.Aes128Cbc**](https://msdn.microsoft.com/library/windows/apps/dn986265)를 지정합니다. 이전 버전의 Windows 10에서 이 값을 지정하면 예외가 발생합니다. 이러한 이유로 열거 값이 있는지 확인하려면 **[ApiInformation.IsApiContractPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent)** 를 호출하고 주요 계약 버전 5를 지정한 후 **CheckSupportedHardware**를 호출합니다.
+Windows 10, 버전 1709부터 디바이스에서 AES128CBC 하드웨어 암호화에 대한 지원을 검색하려면 **[PlayReadyStatics.CheckSupportedHardware](https://docs.microsoft.com/uwp/api/windows.media.protection.playready.playreadystatics.checksupportedhardware)** 를 호출하고 열거 값 [**PlayReadyHardwareDRMFeatures.Aes128Cbc**](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyHardwareDRMFeatures)를 지정합니다. 이전 버전의 Windows 10에서 이 값을 지정하면 예외가 발생합니다. 이러한 이유로 열거 값이 있는지 확인하려면 **[ApiInformation.IsApiContractPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent)** 를 호출하고 주요 계약 버전 5를 지정한 후 **CheckSupportedHardware**를 호출합니다.
 
 ```csharp
 bool supportsAes128Cbc = ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 5);
@@ -111,5 +111,5 @@ if (supportsAes128Cbc)
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [PlayReady DRM](playready-client-sdk.md)

@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 063106362a36aa32d0874be15dd589b5fb573409
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 291c16d14428f8c6476b12fbadf00f84c26a4235
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66214944"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359479"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Windows 10 및 UWP 패키지에 포함 된 데스크톱 앱 통합
 
@@ -99,7 +99,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 있는지 사용자가 연 데스크톱 버전의 앱을 여는 대신 파일의 특정 형식에 대해 기본적으로 새 패키지에 포함 된 응용 프로그램을 만들 수 있습니다.
 
-이를 위해 파일 연결을 상속하려는 각 애플리케이션의 [프로그래밍 ID (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx)를 지정합니다.
+이를 위해 파일 연결을 상속하려는 각 애플리케이션의 [프로그래밍 ID (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids)를 지정합니다.
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
@@ -123,8 +123,8 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 |이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
-|이름 |앱에 대한 고유 ID입니다. 이 ID는 파일 형식 연결과 관련된 해시된 [프로그래밍 ID (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx)를 생성하는 데 내부적으로 사용됩니다. 앱의 이후 버전에서 변경을 관리하는 데 이 ID를 사용할 수 있습니다. |
-|MigrationProgId |합니다 [ProgID (프로그래밍 식별자)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) 응용 프로그램, 구성 요소 및 파일 연결을 상속 하려는 데스크톱 응용 프로그램의 버전을 설명 하는 합니다.|
+|이름 |앱에 대한 고유 ID입니다. 이 ID는 파일 형식 연결과 관련된 해시된 [프로그래밍 ID (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids)를 생성하는 데 내부적으로 사용됩니다. 앱의 이후 버전에서 변경을 관리하는 데 이 ID를 사용할 수 있습니다. |
+|MigrationProgId |합니다 [ProgID (프로그래밍 식별자)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) 응용 프로그램, 구성 요소 및 파일 연결을 상속 하려는 데스크톱 응용 프로그램의 버전을 설명 하는 합니다.|
 
 #### <a name="example"></a>예제
 
@@ -182,7 +182,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 |이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
-|이름 |앱에 대한 고유 ID입니다. 이 ID는 파일 형식 연결과 관련된 해시된 [프로그래밍 ID (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx)를 생성하는 데 내부적으로 사용됩니다. 앱의 이후 버전에서 변경을 관리하는 데 이 ID를 사용할 수 있습니다.   |
+|이름 |앱에 대한 고유 ID입니다. 이 ID는 파일 형식 연결과 관련된 해시된 [프로그래밍 ID (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids)를 생성하는 데 내부적으로 사용됩니다. 앱의 이후 버전에서 변경을 관리하는 데 이 ID를 사용할 수 있습니다.   |
 |FileType |앱에서 지원하는 파일 확장명입니다. |
 
 #### <a name="example"></a>예제
@@ -410,7 +410,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 해당 폴더를 식별하기 위해 확장을 사용합니다. 이렇게 시스템은 사용자가 안에 배치한 파일을 찾아 로드할 수 있습니다. 이를 _%PATH%_ 환경 변수를 대체하는 확장으로 생각하세요.
 
-이 확장을 사용하지 않는 경우 시스템은 프로세스의 패키지 종속성 그래프, 패키지 루트 폴더, 그리고 시스템 디렉터리( _%SystemRoot%\system32_)를 순서대로 검색합니다. 자세한 내용은 [Windows 앱의 검색 순서](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx#_search_order_for_windows_store_apps)를 참조하세요.
+이 확장을 사용하지 않는 경우 시스템은 프로세스의 패키지 종속성 그래프, 패키지 루트 폴더, 그리고 시스템 디렉터리( _%SystemRoot%\system32_)를 순서대로 검색합니다. 자세한 내용은 [Windows 앱의 검색 순서](https://docs.microsoft.com/windows/desktop/Dlls/dynamic-link-library-search-order)를 참조하세요.
 
 각 패키지에는 이 확장 중 하나만 포함될 수 있습니다. 따라서 이 중 하나를 주 패키지에 추가한 다음 하나를 각 [선택적 패키지 및 관련 집합](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)에 추가할 수 있습니다.
 
@@ -673,7 +673,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 파일 탐색기에서 사용자는 이 필드를 사용하여 해당 파일을 그룹화할 수 있습니다. 또한 시스템 구성 요소는 색인 같은 다양한 목적을 위해 이 필드를 사용합니다.
 
-**종류** 필드와 이 필드에서 사용할 수 있는 값에 대한 자세한 내용은 [종류 이름 사용하기](https://msdn.microsoft.com/library/windows/desktop/cc144136.aspx)을 참조하세요.
+**종류** 필드와 이 필드에서 사용할 수 있는 값에 대한 자세한 내용은 [종류 이름 사용하기](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names)을 참조하세요.
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
@@ -702,7 +702,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |앱에 대한 고유 ID입니다. |
 |FileType |관련 파일 확장명입니다. |
-|value |유효한 [종류 값](https://msdn.microsoft.com/en-us/library/windows/desktop/cc144136.aspx#kind_hierarchy)입니다. |
+|value |유효한 [종류 값](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names)입니다. |
 
 #### <a name="example"></a>예제
 
@@ -1069,8 +1069,8 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 |DropTargetHandler |구현 하는 응용 프로그램의 클래스 ID를 [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스입니다. 이동식 미디어의 파일은 [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 구현의 [Drop](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) 메서드에 전달됩니다.  |
 |매개 변수 |모든 콘텐츠 이벤트에 대해 [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스를 구현할 필요가 없습니다. 모든 콘텐츠 이벤트에 대해 [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스를 구현하는 대신 명령줄 매개 변수를 제공할 수 있습니다. 이러한 이벤트에 대 한 자동 재생 해당 명령줄 매개 변수를 사용 하 여 응용 프로그램을 시작 됩니다. 앱의 초기화 코드에서 매개 변수를 분석하여 이 매개 변수가 자동 실행에서 시작되었는지 확인한 다음 사용자 지정 구현을 제공할 수 있습니다. |
 |DeviceEvent |사용자에게 ``ActionDisplayName``및 ``ProviderDisplayName``을 알리는 메시지가 표시하는 장치 이벤트의 이름. 장치 이벤트는 장치가 PC에 연결될 때 발생합니다. 장치 이벤트는 ``WPD`` 문자열로 시작하며 [여기](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference)서 나열되어 있는 것을 찾을 수 있습니다. |
-|HWEventHandler |구현 하는 응용 프로그램의 클래스 ID를 [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) 인터페이스입니다. |
-|InitCmdLine |[IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) 인터페이스의 [Initialize](https://msdn.microsoft.com/en-us/library/windows/desktop/bb775495.aspx) 메서드에 전달하려는 문자열 매개 변수. |
+|HWEventHandler |구현 하는 응용 프로그램의 클래스 ID를 [IHWEventHandler](https://docs.microsoft.com/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler) 인터페이스입니다. |
+|InitCmdLine |[IHWEventHandler](https://docs.microsoft.com/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler) 인터페이스의 [Initialize](https://docs.microsoft.com/windows/desktop/api/shobjidl/nf-shobjidl-ihweventhandler-initialize) 메서드에 전달하려는 문자열 매개 변수. |
 
 ### <a name="example"></a>예제
 
@@ -1101,14 +1101,14 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 사용자가 되도록 업데이트를 설치할 때 응용 프로그램이 열려 있으면 응용 프로그램을 종료 합니다.
 
-해당 응용 프로그램 업데이트 후 다시 시작을 완료를 호출 합니다 [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) 다시 시작 하려는 모든 프로세스에는 함수입니다.
+해당 응용 프로그램 업데이트 후 다시 시작을 완료를 호출 합니다 [RegisterApplicationRestart](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-registerapplicationrestart) 다시 시작 하려는 모든 프로세스에는 함수입니다.
 
-응용 프로그램의 각 활성 창에 수신 된 [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) 메시지입니다. 이 시점에서 응용 프로그램에서 호출 수를 [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) 다시 필요한 경우 명령줄을 업데이트 하는 함수입니다.
+응용 프로그램의 각 활성 창에 수신 된 [WM_QUERYENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-queryendsession) 메시지입니다. 이 시점에서 응용 프로그램에서 호출 수를 [RegisterApplicationRestart](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-registerapplicationrestart) 다시 필요한 경우 명령줄을 업데이트 하는 함수입니다.
 
-응용 프로그램의 활성 창에 각 받으면 합니다 [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) 메시지를 응용 프로그램 데이터를 저장 하며 종료 합니다.
+응용 프로그램의 활성 창에 각 받으면 합니다 [WM_ENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-endsession) 메시지를 응용 프로그램 데이터를 저장 하며 종료 합니다.
 
 >[!NOTE]
-활성 windows 권한도 합니다 [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) 응용 프로그램 처리 하지 않는 경우 메시지를 [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) 메시지입니다.
+활성 windows 권한도 합니다 [WM_CLOSE](https://docs.microsoft.com/windows/desktop/winmsg/wm-close) 응용 프로그램 처리 하지 않는 경우 메시지를 [WM_ENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-endsession) 메시지입니다.
 
 이 시점에서 응용 프로그램에 자체 프로세스를 닫으십시오 30 초 또는 플랫폼을 강제로 종료 합니다.
 

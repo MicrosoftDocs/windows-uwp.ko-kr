@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: cb87bea001492e39a0f60b96f884db70b5bd28ad
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d5774b5301f7e8ce0616df72cfbf4fc81d0d0cf7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592528"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363247"
 ---
 # <a name="command-bar-flyout"></a>명령 모음 플라이아웃
 
@@ -153,7 +153,7 @@ CommandBarFlyout 컨트롤에 명령 및 콘텐츠를 추가 하 여 2 개의 �
 
 ### <a name="app-bar-buttons"></a>앱 바 단추
 
-사용 하 여 직접 SecondaryCommands 고 PrimaryCommands 채울 수 있습니다 [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx)를 [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx), 및 [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx) 컨트롤입니다.
+사용 하 여 직접 SecondaryCommands 고 PrimaryCommands 채울 수 있습니다 [AppBarButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton)를 [AppBarToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton), 및 [AppBarSeparator](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator) 컨트롤입니다.
 
 앱 바 단추 컨트롤은 아이콘 및 텍스트 레이블에 따라 구분됩니다. 이러한 컨트롤에는 명령 모음에서 사용 하도록 최적화 된 및 명령 모음 오버플로 메뉴에 컨트롤을 표시 하는 여부에 따라 모양을 변경 합니다.
 
@@ -384,10 +384,10 @@ CommandBarFlyout으로 보조 명령만 사용할 수는 [상황에 맞는 메�
 
 이 테이블에 표시 되는 시점과 TextCommandBarFlyout, 포함 된 명령을 보여 줍니다.
 
-| 명령 | 표시 하는 중... |
+| Command | 표시 하는 중... |
 | ------- | -------- |
 | Bold | 텍스트 컨트롤이 없는 경우 읽기 전용 (RichEditBox만). |
-| Italic | 텍스트 컨트롤이 없는 경우 읽기 전용 (RichEditBox만). |
+| 기울임꼴 | 텍스트 컨트롤이 없는 경우 읽기 전용 (RichEditBox만). |
 | Underline | 텍스트 컨트롤이 없는 경우 읽기 전용 (RichEditBox만). |
 | 교정 | IsSpellCheckEnabled 경우 **true** 철자가 잘못 된 텍스트를 선택 하 고 있습니다. |
 | 잘라내기 | 경우 텍스트 컨트롤은 읽기 전용 및 텍스트를 선택 합니다. |
@@ -411,4 +411,4 @@ TextCommandBarFlyout은 사용자 지정할 수 없습니다, 하 고 각 텍스
 ## <a name="related-articles"></a>관련 문서
 
 - [UWP 앱에 대 한 명령 디자인 기본 사항](../basics/commanding-basics.md)
-- [CommandBar 클래스](https://msdn.microsoft.com/library/windows/apps/dn279427)
+- [CommandBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)

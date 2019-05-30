@@ -12,18 +12,18 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 86b0063175b5e040cd7d92357bfa4b8abac4e13c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c3076e9a098ff62ba9000b4337417013e400375e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592408"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361102"
 ---
 # <a name="auto-suggest-box"></a>자동 제안 상자
 
 AutoSuggestBox를 사용하여 사용자가 입력과 동시에 선택할 수 있는 제안 사항 목록을 제공합니다.
 
-> **중요 API**: [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)하십시오 [TextChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)를 [SuggestionChose 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx), [QuerySubmitted 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx)
+> **중요 API**: [AutoSuggestBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)하십시오 [TextChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.textchanged)를 [SuggestionChose 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.suggestionchosen), [QuerySubmitted 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.querysubmitted)
 
 ![자동 제안 상자](images/controls/auto-suggest-box-open.png)
 
@@ -72,9 +72,9 @@ AutoSuggestBox를 사용하려면 세 가지 사용자 작업에 응답해야 �
 
 ### <a name="text-changed"></a>텍스트가 변경됨
 
-입력란의 콘텐츠가 업데이트될 때마다 [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx) 이벤트가 발생합니다. 이벤트 인수 [Reason](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxtextchangedeventargs.reason.aspx) 속성을 사용하여 사용자 입력으로 인해 변경되었는지 확인합니다. 변경 이유가 **UserInput**이면 입력에 따라 데이터를 필터링합니다. 그런 다음 필터링된 데이터를 AutoSuggestBox의 [ItemsSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)로 설정하여 제안 사항 목록을 업데이트합니다.
+입력란의 콘텐츠가 업데이트될 때마다 [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.textchanged) 이벤트가 발생합니다. 이벤트 인수 [Reason](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestboxtextchangedeventargs.reason) 속성을 사용하여 사용자 입력으로 인해 변경되었는지 확인합니다. 변경 이유가 **UserInput**이면 입력에 따라 데이터를 필터링합니다. 그런 다음 필터링된 데이터를 AutoSuggestBox의 [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource)로 설정하여 제안 사항 목록을 업데이트합니다.
 
-[DisplayMemberPath](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.displaymemberpath.aspx) 또는 [ItemTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)을 사용하여 제안 사항 목록에 항목이 표시되는 방법을 제어할 수 있습니다.
+[DisplayMemberPath](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.displaymemberpath) 또는 [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)을 사용하여 제안 사항 목록에 항목이 표시되는 방법을 제어할 수 있습니다.
 
 - 데이터 항목의 단일 속성에 대한 텍스트를 표시하려면 제안 사항 목록에 표시할 개체의 속성을 선택하도록 DisplayMemberPath 속성을 설정합니다.
 - 목록에서 각 항목의 사용자 지정 모양을 정의하려면 ItemTemplate 속성을 사용합니다.
@@ -83,19 +83,19 @@ AutoSuggestBox를 사용하려면 세 가지 사용자 작업에 응답해야 �
 
 키보드를 사용하여 제안 사항 목록을 탐색할 때 이에 일치하도록 입력란의 텍스트를 업데이트해야 합니다.
 
-입력란에 표시될 데이터 개체의 속성을 선택하도록 [TextMemberPath](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textmemberpath.aspx) 속성을 선택할 수 있습니다. TextMemberPath를 지정하는 경우 입력란이 자동으로 업데이트됩니다. 제안 사항 목록과 입력란의 텍스트가 동일하도록 일반적으로 DisplayMemberPath와 TextMemberPath의 값을 동일하게 지정해야 합니다.
+입력란에 표시될 데이터 개체의 속성을 선택하도록 [TextMemberPath](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.textmemberpath) 속성을 선택할 수 있습니다. TextMemberPath를 지정하는 경우 입력란이 자동으로 업데이트됩니다. 제안 사항 목록과 입력란의 텍스트가 동일하도록 일반적으로 DisplayMemberPath와 TextMemberPath의 값을 동일하게 지정해야 합니다.
 
-간단한 속성을 두 개 이상 표시해야 하는 경우 선택한 항목에 따라 사용자 지정된 텍스트로 입력란을 채우도록 [SuggestionChosen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx) 이벤트를 처리합니다.
+간단한 속성을 두 개 이상 표시해야 하는 경우 선택한 항목에 따라 사용자 지정된 텍스트로 입력란을 채우도록 [SuggestionChosen](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.suggestionchosen) 이벤트를 처리합니다.
 
 ### <a name="query-submitted"></a>쿼리가 제출됨
 
-앱에 적절한 쿼리 작업을 수행하고 사용자에게 결과를 표시하도록 [QuerySubmitted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx) 이벤트를 처리합니다.
+앱에 적절한 쿼리 작업을 수행하고 사용자에게 결과를 표시하도록 [QuerySubmitted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.querysubmitted) 이벤트를 처리합니다.
 
 QuerySubmitted 이벤트는 사용자가 쿼리 문자열을 커밋할 때 발생합니다. 사용자는 다음과 같은 방법 중 하나로 쿼리를 커밋할 수 있습니다.
-- 포커스가 입력란에 있는 동안 Enter 키를 누르거나 쿼리 아이콘을 클릭합니다. 이벤트 인수 [ChosenSuggestion](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.chosensuggestion.aspx) 속성은 **null**입니다.
+- 포커스가 입력란에 있는 동안 Enter 키를 누르거나 쿼리 아이콘을 클릭합니다. 이벤트 인수 [ChosenSuggestion](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.chosensuggestion) 속성은 **null**입니다.
 - 포커스가 제안 목록에 있는 동안 Enter 키를 누르거나 항목을 클릭하거나 탭합니다. 이벤트 인수 ChosenSuggestion 속성은 목록에서 선택된 항목을 포함합니다.
 
-모든 경우에 이벤트 인수 [QueryText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext.aspx) 속성은 입력란의 텍스트를 포함합니다.
+모든 경우에 이벤트 인수 [QueryText](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext) 속성은 입력란의 텍스트를 포함합니다.
 
 다음은 필수 이벤트 처리기가 포함된 간단한 AutoSuggestBox입니다.
 
@@ -143,7 +143,7 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
 AutoSuggestBox를 사용하여 사용자가 입력과 동시에 선택할 수 있는 제안 사항 목록을 제공합니다.
 
-기본적으로 텍스트 입력 상자에 쿼리 단추가 표시되지 않습니다. 입력란의 오른쪽에 지정된 아이콘과 함께 단추를 추가하려면 [QueryIcon](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.queryicon.aspx) 속성을 설정할 수 있습니다. 예를 들어 AutoSuggestBox를 일반적인 검색 상자와 같이 표시하려면 다음과 같이 '찾기' 아이콘을 추가합니다.
+기본적으로 텍스트 입력 상자에 쿼리 단추가 표시되지 않습니다. 입력란의 오른쪽에 지정된 아이콘과 함께 단추를 추가하려면 [QueryIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.queryicon) 속성을 설정할 수 있습니다. 예를 들어 AutoSuggestBox를 일반적인 검색 상자와 같이 표시하려면 다음과 같이 '찾기' 아이콘을 추가합니다.
 
 ```xaml
 <AutoSuggestBox QueryIcon="Find"/>
@@ -184,6 +184,6 @@ AutoSuggestBox를 사용하여 사용자가 입력과 동시에 선택할 수 �
 - [텍스트 컨트롤](text-controls.md)
 - [맞춤법 검사](text-controls.md)
 - [검색](search.md)
-- [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
-- [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length.aspx)
+- [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+- [String.Length 속성이](https://docs.microsoft.com/dotnet/api/system.string.length?redirectedfrom=MSDN#System_String_Length)

@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a3133508a0cb8919994543845412ef71a8d463fe
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5d02c75775dfd63281dbf46c7f9fc58f48ac1e20
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611768"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359971"
 ---
 # <a name="conditional-xaml"></a>조건부 XAML
 
@@ -44,7 +44,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 
 조건부 XAML은 다음 조건부 메서드를 지원합니다.
 
-메서드 | 반대
+메서드 | 역
 ------ | -------
 IsApiContractPresent(ContractName, VersionNumber) | IsApiContractNotPresent(ContractName, VersionNumber)
 IsTypePresent(ControlType) | IsTypeNotPresent(ControlType)
@@ -244,6 +244,6 @@ xmlns:contract5Present="http://schemas.microsoft.com/winfx/2006/xaml/presentatio
 
 ## <a name="related-articles"></a>관련 문서
 
-- [UWP 앱 가이드](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [UWP 앱 가이드](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
 - [API 계약을 사용 하 여 기능을 동적으로 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [API 계약](https://channel9.msdn.com/Events/Build/2015/3-733)(빌드 2015 비디오)

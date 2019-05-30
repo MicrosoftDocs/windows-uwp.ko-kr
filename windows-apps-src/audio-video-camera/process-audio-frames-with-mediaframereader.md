@@ -6,16 +6,16 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c78e16a50bdca09f474d5016fdc86b6d27702d5b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 60abc29ad4f9e16dc9d37e99f94c9f30039c0087
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598588"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360696"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 오디오 프레임 처리
 
-이 문서에서는 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture)와 함께 [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader)를 사용하여 미디어 프레임 원본에서 오디오 데이터를 가져오는 방법을 설명합니다. **MediaFrameReader**를 사용하여 색, 적외선 또는 깊이 카메라 등에서 이미지 데이터를 가져오는 방법에 대해 자세히 알아보려면  [Process media frames with MediaFrameReader](process-media-frames-with-mediaframereader.md)를 참조하세요. 이 문서에서는 프레임 판독기 사용 패턴에 대한 일반적인 개요를 제공하고 **MediaFrameSourceGroup**를 사용하여 여러 소스에서 동시에 프레임을 검색하는 등과 같이 **MediaFrameReader** 클래스의 몇 가지 추가 기능에 대해 설명합니다. 
+이 문서에서는 [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture)와 함께 [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader)를 사용하여 미디어 프레임 원본에서 오디오 데이터를 가져오는 방법을 설명합니다. **MediaFrameReader**를 사용하여 색, 적외선 또는 깊이 카메라 등에서 이미지 데이터를 가져오는 방법에 대해 자세히 알아보려면  [Process media frames with MediaFrameReader](process-media-frames-with-mediaframereader.md)를 참조하세요. 이 문서에서는 프레임 판독기 사용 패턴에 대한 일반적인 개요를 제공하고 **MediaFrameSourceGroup**를 사용하여 여러 소스에서 동시에 프레임을 검색하는 등과 같이 **MediaFrameReader** 클래스의 몇 가지 추가 기능에 대해 설명합니다. 
 
 > [!NOTE] 
 > 이 문서에 설명된 기능은 Windows 10 버전 1803부터 사용할 수 있습니다.
@@ -37,7 +37,7 @@ ms.locfileid: "57598588"
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>프레임 원본과 프레임 원본 그룹 선택
 
-오디오 프레임을 캡처하는 첫 단계는 마이크나 다른 오디오 캡처 디바이스와 같은 오디오 데이터 소스를 나타내는 [**MediaFrameSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource)를 초기화하는 것입니다. 이 작업을 하려면 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) 개체의 새로운 인스턴스를 만들어야 합니다. 이 예제에서는 **MediaCapture**의 초기화 설정만이 캡처 디바이스에서 오디오를 스트리밍해야 함을 나타내는[**StreamingCaptureMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.streamingcapturemode) 설정입니다. 
+오디오 프레임을 캡처하는 첫 단계는 마이크나 다른 오디오 캡처 디바이스와 같은 오디오 데이터 소스를 나타내는 [**MediaFrameSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSource)를 초기화하는 것입니다. 이 작업을 하려면 [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) 개체의 새로운 인스턴스를 만들어야 합니다. 이 예제에서는 **MediaCapture**의 초기화 설정만이 캡처 디바이스에서 오디오를 스트리밍해야 함을 나타내는[**StreamingCaptureMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.streamingcapturemode) 설정입니다. 
 
 [  **MediaCapture.InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.initializeasync)를 호출한 후 [**FrameSources**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.framesources) 속성으로 액세스 가능한 미디어 프레임 소스 목록을 가져올 수 있습니다. 이 예제에서는 Linq 쿼리를 사용하여 모든 프레임 소스를 선택하며, 이 경우에 프레임 소스를 나타내는 [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo)에는 **Audio**의 [**MediaStreamType**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.mediastreamtype)가 있고, 이것은 미디어 소스가 오디오 데이터를 생성함을 나타냅니다.
 

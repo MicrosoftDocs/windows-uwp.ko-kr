@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 291c2a922e2b2df7111da8bfc6aefb57b87e84bb
-ms.sourcegitcommit: 4bad5f9427e7db27b57bedc6d7df19077c62e8c3
+ms.openlocfilehash: d4150e7296badd3d31a9aacc7becd3d849f6affd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535197"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360418"
 ---
 # <a name="my-people-notifications"></a>내 피플 알림
 
@@ -126,7 +126,7 @@ experienceType=”shoulderTap”
 ![스프라이트시트 알림](images/pizza-notification-small.gif)
 
 ## <a name="starting-the-notification"></a>알림 시작
-내 피플 알림을 시작하려면 알림 메시지 템플릿을 [XmlDocument](https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.xml.dom.xmldocument.aspx) 개체로 변환해야 합니다. XML 파일(여기서는 "content.xml")에 알림을 정의했다면, 이 코드를 사용하여 알림을 시작할 수 있습니다.
+내 피플 알림을 시작하려면 알림 메시지 템플릿을 [XmlDocument](https://docs.microsoft.com/uwp/api/windows.data.xml.dom.xmldocument) 개체로 변환해야 합니다. XML 파일(여기서는 "content.xml")에 알림을 정의했다면, 이 코드를 사용하여 알림을 시작할 수 있습니다.
 
 ```CSharp
 string xmlText = File.ReadAllText("content.xml");

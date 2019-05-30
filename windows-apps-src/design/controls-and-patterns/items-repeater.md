@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3344230bc52013825d94cfbe3668acfa0d7a2e13
-ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.openlocfilehash: 93a81501b524826484111419899675fbb99b86fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58914003"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364763"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -22,7 +22,7 @@ ms.locfileid: "58914003"
 
 생각할 수 있습니다 [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) 개념적 데이터 기반 패널 아니라 ListView와 같은 컨트롤을 완료 합니다. 표시할 데이터 항목의 컬렉션, 각 데이터 항목에 대 한 UI 요소를 생성 하는 항목 템플릿 및 요소 크기 및 위치를 결정 하는 레이아웃을 지정 합니다. 그런 다음 ItemsRepeater 데이터 원본에 따라 자식 요소를 생성 하 고 항목 템플릿 및 레이아웃에 지정 된 대로 표시 합니다. 표시 된 항목 ItemsRepeater 데이터 템플릿 선택기의 사용자가 지정한 조건에 따라 데이터 항목을 나타내는 콘텐츠를 로드할 수 없기 때문에 형식이 되도록 필요가 없습니다.
 
-| **Windows UI Library 가져오기** |
+| **Windows UI 라이브러리 가져오기** |
 | - |
 | 이 컨트롤은 Windows UI 라이브러리, 새로운 컨트롤 및 UWP 앱 용 UI 기능을 포함 하는 NuGet 패키지의 일부로 포함 합니다. 설치 지침을 비롯 한 자세한 내용은 참조는 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)합니다. |
 
@@ -50,8 +50,8 @@ ItemsRepeater을 기본 제공 항목 컬렉션에 없습니다. 별도 데이�
 <td>
     <p>있는 경우는 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하려면 여기를 클릭 앱을 열고 참조를 <a href="xamlcontrolsgallery:/item/ItemsRepeater">ItemsRepeater</a> 작업에서.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">소스 코드 다운로드(GitHub)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>
@@ -59,17 +59,30 @@ ItemsRepeater을 기본 제공 항목 컬렉션에 없습니다. 별도 데이�
 
 ## <a name="scrolling-with-itemsrepeater"></a>ItemsRepeater를 사용 하 여 스크롤
 
-[ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) 에서 파생 되지 않습니다 [제어](/uwp/api/windows.ui.xaml.controls.control)이므로 컨트롤 템플릿에 것은 아닙니다. 따라서 스크롤 하는 ListView와 같은 기본 제공 포함 되지 않습니다 또는 다른 컬렉션 컨트롤 작업을 수행 합니다.
+[**ItemsRepeater** ](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) 에서 파생 되지 않습니다 [ **컨트롤**](/uwp/api/windows.ui.xaml.controls.control)이므로 컨트롤 템플릿에 것은 아닙니다. 따라서 스크롤 하는 ListView와 같은 기본 제공 포함 되지 않습니다 또는 다른 컬렉션 컨트롤 작업을 수행 합니다.
 
-래핑하여 스크롤 기능을 제공 해야는 ItemsRepeater를 사용 하는 경우는 [ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer) 제어 합니다.
+사용 하는 경우는 **ItemsRepeater**에 래핑하여 스크롤 기능을 제공 해야 하는 [ **ScrollViewer** ](/uwp/api/windows.ui.xaml.controls.scrollviewer) 컨트롤입니다.
+
+> [!NOTE]
+> 출시 된 앱-Windows의 이전 버전에서 실행 되는 경우 *하기 전에* Windows 10, 버전 1809-을 호스트 해야 합니다 **ScrollViewer** 안에 [  **ItemsRepeaterScrollHost**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeaterscrollhost)합니다. 
+> ```xaml
+> <muxc:ItemsRepeaterScrollHost>
+>     <ScrollViewer>
+>         <muxc:ItemsRepeater ... />
+>     </ScrollViewer>
+> </muxc:ItemsRepeaterScrollHost>
+> ```
+> 사용할 필요는 경우 앱 버전 1809 이상-Windows 10의 최신 버전에만 실행 됩니다 합니다 [ **ItemsRepeaterScrollHost**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeaterscrollhost)합니다.
+>
+> Windows 10 버전 1809, 이전 **ScrollViewer** 를 구현 하지 않았습니다 합니다 [ **IScrollAnchorProvider** ](/uwp/api/windows.ui.xaml.controls.iscrollanchorprovider) 는 인터페이스를 **ItemsRepeater**해야 합니다.  합니다 **ItemsRepeaterScrollHost** 사용 하도록 설정 합니다 **ItemsRepeater** 협력 하 여 **ScrollViewer** 올바르게 항목의 표시 위치를 유지 하기 위해 이전 버전에서 사용자가 볼 수 있습니다.  그렇지 않으면 항목을 이동 하거나 목록에서 항목을 변경한 경우 또는 앱의 크기를 조정할 때 갑자기 사라지는 나타날 수 있습니다.
 
 ## <a name="create-an-itemsrepeater"></a>ItemsRepeater 만들기
 
-사용 하는 [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater), ItemsSource 속성을 설정 하 여 표시할 데이터를 지정 해야 합니다. 그런 다음 설정 하 여 항목을 표시 하는 방법을 알려주는 합니다 [ItemTemplate](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) 속성입니다.
+사용 하는 [ **ItemsRepeater**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)를 설정 하 여 표시할 데이터를 지정 해야 합니다 **ItemsSource** 속성입니다. 그런 다음 설정 하 여 항목을 표시 하는 방법을 알려주는 합니다 [ **ItemTemplate** ](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) 속성입니다.
 
 ### <a name="itemssource"></a>ItemsSource
 
-뷰를 채우는 설정 합니다 [ItemsSource](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemssource) 속성 데이터 항목의 컬렉션을 합니다. 여기에서 ItemsSource는 컬렉션의 인스턴스를 직접 코드에서 설정 됩니다.
+뷰를 채우는 설정 합니다 [ **ItemsSource** ](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemssource) 속성 데이터 항목의 컬렉션을 합니다. 여기에 **ItemsSource** 컬렉션 인스턴스에 직접 코드에 설정 됩니다.
 
 ```csharp
 ObservableCollection<string> Items = new ObservableCollection<string>();
@@ -78,21 +91,23 @@ ItemsRepeater itemsRepeater1 = new ItemsRepeater();
 itemsRepeater1.ItemsSource = Items;
 ```
 
-또한 XAML에서 ItemsSource 속성을 컬렉션에 바인딩할 수도 있습니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](https://msdn.microsoft.com/windows/uwp/data-binding/data-binding-quickstart)를 참조하세요.
+바인딩할 수도 있습니다는 **ItemsSource** XAML 컬렉션 속성입니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-quickstart)를 참조하세요.
 
 
 ```xaml
 <ItemsRepeater ItemsSource="{x:Bind Items}"/>
 ```
 
-### <a name="data-template"></a>데이터 템플릿
+### <a name="itemtemplate"></a>ItemTemplate
+데이터 항목은 시각화 하는 방법을 지정 하려면 설정 합니다 [ **ItemTemplate** ](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) 속성을 [ **DataTemplate** ](/uwp/api/windows.ui.xaml.datatemplate) 또는 [  **DataTemplateSelector** ](/uwp/api/windows.ui.xaml.controls.datatemplateselector) 정의한 합니다. 데이터 템플릿 데이터는 시각화 하는 방법을 정의 합니다. 기본적으로 항목을 사용 하 여 보기에 표시 됩니다는 **TextBlock** 를 사용 하 여 데이터 개체의 문자열 표현입니다.
 
-항목의 데이터 템플릿은 데이터가 시각화되는 방식을 정의합니다. 기본적으로 바인딩되는 TextBlock을 사용 하 여 데이터 개체의 문자열 표현으로 항목 보기에 표시 됩니다. 그러나 일반적으로 데이터를 보다 다양하게 표시하려는 경우가 많습니다. 항목이 표시 되는 방식을 정확 하 게를 지정 하려면 정의 [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate)합니다. DataTemplate의 XAML은 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃 및 모양을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 정적 콘텐츠 정의 인라인을 가질 수 있습니다. DataTemplate을 할당 합니다 [ItemTemplate](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) 는 ItemsRepeater의 속성입니다.
+그러나 일반적으로 표시 하려는 데이터를 더 풍부한 기능의 프레젠테이션 개별 항목을 표시 하는 데 사용할 수 있는 하나 이상의 컨트롤의 모양과 레이아웃을 정의 하는 템플릿을 사용 하 여 합니다. 템플릿에서 사용할 컨트롤 데이터 개체의 속성에 바인딩할 수 있고 정적 콘텐츠 인라인으로 정의.
 
-이 예제에서는 데이터 개체에는 간단한 문자열입니다. 텍스트의 왼쪽에 이미지를 추가 하려면 DataTemplate을 사용 하 고 청록에서 문자열을 표시 하는 TextBlock 스타일.
+#### <a name="datatemplate"></a>DataTemplate
+이 예제에서는 데이터 개체에는 간단한 문자열입니다. **DataTemplate** 텍스트 및 스타일의 왼쪽에 이미지를 포함 합니다 **TextBlock** 청록 색에서 문자열을 표시 하 합니다.
 
 > [!NOTE]
-> DataTemplate에서 [x:Bind 태그 확장](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하는 경우 DataTemplate에서 DataType(`x:DataType`)을 지정해야 합니다.
+> 사용 하는 경우는 [X:bind 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) 에 **DataTemplate**, 데이터 형식을 지정 해야 (`x:DataType`) DataTemplate에 합니다.
 
 ```xaml
 <DataTemplate x:DataType="x:String">
@@ -109,23 +124,46 @@ itemsRepeater1.ItemsSource = Items;
 </DataTemplate>
 ```
 
-이 데이터 서식 파일을 표시할 때 항목 형태가 나타나는 방법을 다음과 같습니다.
+이 사용 하 여 표시할 때 항목 형태가 나타나는 방법을 다음과 같습니다 **DataTemplate**합니다.
 
 ![데이터 템플릿을 사용 하 여 표시 되는 항목](images/listview-itemstemplate.png)
 
-항목에 대 한 데이터 템플릿에서 사용 되는 요소 수가 표시 항목 수가 많은 경우 성능에 상당한 영향을 수 있습니다. 자세한 정보 및 데이터 템플릿을 사용 하 여 목록에서 항목의 모양을 정의 하는 방법의 예제를 참조 하세요 [컨테이너 및 템플릿 항목](item-containers-templates.md)합니다.
+사용 되는 요소의 수를 **DataTemplate** 보기는 많은 수의 항목을 표시 하는 경우 항목 성능에 큰 영향을 줄 수에 대 한 합니다. 자세한 내용 및 예제를 사용 하는 방법에 대 한 **DataTemplate**목록에서 항목의 모양을 정의 참조 하십시오 [항목 컨테이너 및 템플릿](item-containers-templates.md)합니다.
 
 > [!TIP]
-> ItemsRepeater는 ListView에서 다른 컬렉션 컨트롤 등 항목 컨테이너의 DataTemplate의 내용을 줄 바꿈 하지 않습니다. 대신 ItemsRepeater DataTemplate에 정의 된 것만 표시 합니다. 목록 보기 항목으로 동일한 모양을 할 항목을 하려는 경우 데이터 템플릿에 ListViewItem와 같은 컨테이너를 사용할 수 있습니다. ItemsRepeater ListViewItem 시각적 개체에는 표시 되지만 되어도 선택 영역 또는 다중 선택 확인란을 보여 주는 같은 다른 기능을 사용 합니다.
+> 정적 리소스 참조를 지정할 수 있습니다 보다는 인라인으로 선언할 때 편의 위해 합니다 **DataTemplate** 또는 **DataTemplateSelector** 합니다 의직접적인자식으로**ItemsRepeater**합니다.  값으로 할당 됩니다 합니다 **ItemTemplate** 속성입니다. 예를 들어이 유효 합니다.
+> ```xaml
+> <ItemsRepeater ItemsSource="{x:Bind Items}">
+>     <DataTemplate>
+>         <!-- ... -->
+>     </DataTemplate>
+> </ItemsRepeater>
+> ```
+
+> [!TIP]
+> 와 달리 **ListView** 및 기타 컬렉션 컨트롤을 **ItemsRepeater** 의 요소를 둘러싼를 **DataTemplate** 포함 하는 추가 항목 컨테이너를 사용 하 여 여백, 안쪽 여백, 시각적 개체 선택 또는 시각적 상태 위로 포인터와 같은 기본 정책입니다. 대신 **ItemsRepeater** 에 정의 된 제공 된 **DataTemplate**합니다. 목록 보기 항목으로 동일한 모양을 할 항목을 하려는 경우 같은 컨테이너를 명시적으로 포함할 수 있습니다 **ListViewItem**, 데이터 서식 파일에 있습니다. **ItemsRepeater** 표시 됩니다는 **ListViewItem** 시각적 개체를 자동으로 확인 하지 않습니다 하지만 선택 영역 또는 다중 선택 확인란을 보여 주는 같은 다른 기능을 사용 합니다.
 >
-> 데이터를 수집 하면 실제 컨트롤의 컬렉션인 경우 마찬가지로 같은 단추 (`List<Button>`), 컨트롤을 표시 하 여 DataTemplate에는 ContentPresenter를 넣을 수 있습니다.
+> 데이터를 수집 하면 실제 컨트롤의 컬렉션인 경우 같은 마찬가지로 **단추** (`List<Button>`)를 넣을 수 있습니다를 **ContentPresenter** 에서 프로그램 **DataTemplate** 를 컨트롤을 표시 합니다.
 
 #### <a name="datatemplateselector"></a>DataTemplateSelector
 
-보기에 표시할 항목 동일한 형식일 필요가 없습니다. [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) 사용할 수는 **DataTemplateSelector** 사용자가 지정한 조건에 따라 데이터 항목을 나타내는 데이터 템플릿을 로드 합니다. 자세한 정보 및 예제를 참조 하세요 [DataTemplateSelector](/uwp/api/windows.ui.xaml.controls.datatemplateselector)합니다.
+보기에 표시할 항목 동일한 형식일 필요가 없습니다. 제공할 수 있습니다 합니다 [ **ItemTemplate** ](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) 사용 하 여 속성을 [ **DataTemplateSelector** ](/uwp/api/windows.ui.xaml.controls.datatemplateselector) 다른 선택  **DataTemplate**사용자가 지정한 조건에 따라 합니다.
+
+이 예에서는 가정를 **DataTemplateSelector** 정의 된 다른 두 결정 하는 **DataTemplate**대형 및 소형 항목을 나타내는 s입니다.
+
+```xaml
+<ItemsRepeater ...>
+    <ItemsRepeater.ItemTemplate>
+        <local:VariableSizeTemplateSelector Large="{StaticResource LargeItemTemplate}" 
+                                            Small="{StaticResource SmallItemTemplate}"/>
+    </ItemsRepeater.ItemTemplate>
+</ItemsRepeater>
+```
+
+정의 하는 경우는 **DataTemplateSelector** 사용 하 **ItemsRepeater** 에 대 한 재정의 구현 해야 합니다 [ **SelectTemplateCore(Object)** ](/uwp/api/windows.ui.xaml.controls.datatemplateselector.selecttemplatecore#Windows_UI_Xaml_Controls_DataTemplateSelector_SelectTemplateCore_System_Object_) 메서드. 자세한 정보 및 예제를 참조 하세요 [ **DataTemplateSelector**](/uwp/api/windows.ui.xaml.controls.datatemplateselector)합니다.
 
 > [!NOTE]
-> 파생 된 고유한 클래스를 구현 하는 DataTemplate 또는 DataTemplateSelector를 사용 하는 대신 [Microsoft.UI.Xaml.Controls.ElementFactory](/uwp/api/microsoft.ui.xaml.controls.elementfactory) 는 요청할 때 콘텐츠를 생성 합니다.
+> 대 안으로 **DataTemplate**관리 보다 고급 시나리오에서는 요소를 만드는 방법에 직접 구현 하는 [ **Windows.UI.Xaml.Controls.IElementFactory** ](/uwp/api/windows.ui.xaml.controls.ielementfactory)를 사용 하 여 **ItemTemplate**합니다.  요청 하는 경우 콘텐츠를 생성 해야 합니다.
 
 ## <a name="configure-the-data-source"></a>데이터 원본 구성
 
@@ -632,6 +670,7 @@ public sealed class MediaCollectionView : Control
 
 ```xaml
 <!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
+<!-- Include the <muxc:ItemsRepeaterScrollHost> if targeting Windows 10 versions earlier than 1809. -->
 <ScrollViewer>
   <muxc:ItemsRepeater ItemsSource="{x:Bind Categories}"
                       Background="LightGreen">
@@ -639,6 +678,7 @@ public sealed class MediaCollectionView : Control
       <DataTemplate x:DataType="local:Category">
         <StackPanel Margin="12,0">
           <TextBlock Text="{x:Bind Name}" Style="{ThemeResource TitleTextBlockStyle}"/>
+          <!-- Include the <muxc:ItemsRepeaterScrollHost> if targeting Windows 10 versions earlier than 1809. -->
           <ScrollViewer HorizontalScrollMode="Enabled"
                                           VerticalScrollMode="Disabled"
                                           HorizontalScrollBarVisibility="Auto" >

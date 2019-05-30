@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: bd71e4715b26f9e06326690d3642b4d19e23d292
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6c13ac8f1421fe785ebce70789c8ea6d0bf6c068
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617268"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364023"
 ---
 # <a name="access-keys"></a>선택키
 
@@ -353,7 +353,7 @@ _키 팁 사용자 지정 옵션_
 
 XAML 프레임워크는 UI 자동화 클라이언트가 사용자 인터페이스의 요소에 대한 정보를 검색할 수 있게 해주는 자동화 속성을 노출합니다.
 
-UIElement 또는 TextElement 컨트롤에서 AccessKey 속성을 지정하는 경우 [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) 속성을 사용하여 이 값을 가져올 수 있습니다. 내레이터 같은 접근성 클라이언트의 경우 요소가 포커스를 받을 때마다 이 속성 값을 읽습니다.
+UIElement 또는 TextElement 컨트롤에서 AccessKey 속성을 지정하는 경우 [AutomationProperties.AccessKey](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) 속성을 사용하여 이 값을 가져올 수 있습니다. 내레이터 같은 접근성 클라이언트의 경우 요소가 포커스를 받을 때마다 이 속성 값을 읽습니다.
 
 ## <a name="related-articles"></a>관련 문서
 

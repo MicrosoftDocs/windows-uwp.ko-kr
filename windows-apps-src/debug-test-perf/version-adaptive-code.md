@@ -6,22 +6,22 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 ms.localizationpriority: medium
-ms.openlocfilehash: d62ce9abd84a0769a2393db169b8198d3d9f6cec
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f542c76d879881af296351ce51a803aa9986ecbb
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616408"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359705"
 ---
 # <a name="version-adaptive-code"></a>버전 적응 코드
 
-[적응 UI를 만드는](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml) 것과 유사하게 적응 코드 작성에 대해 생각할 수 있습니다. 가장 작은 화면에서 실행될 기본 UI를 디자인한 다음 앱이 더 큰 화면에서 실행되고 있음을 감지하면 요소를 이동하거나 추가할 수 있습니다. 적응 코드를 사용하여 최하위 OS 버전에서 실행될 기본 코드를 작성하고, 앱이 새 기능을 사용할 수 있는 상위 버전에서 실행되고 있음을 감지하면 수동으로 선택한 기능을 추가할 수 있습니다.
+[적응 UI를 만드는](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml) 것과 유사하게 적응 코드 작성에 대해 생각할 수 있습니다. 가장 작은 화면에서 실행될 기본 UI를 디자인한 다음 앱이 더 큰 화면에서 실행되고 있음을 감지하면 요소를 이동하거나 추가할 수 있습니다. 적응 코드를 사용하여 최하위 OS 버전에서 실행될 기본 코드를 작성하고, 앱이 새 기능을 사용할 수 있는 상위 버전에서 실행되고 있음을 감지하면 수동으로 선택한 기능을 추가할 수 있습니다.
 
 ApiInformation, API 계약 및 Visual Studio 구성에 대한 중요한 배경 정보는 [버전 적응 앱](version-adaptive-apps.md)을 참조하세요.
 
 ### <a name="runtime-api-checks"></a>런타임 API 검사
 
-코드의 조건에서 [Windows.Foundation.Metadata.ApiInformation](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx) 클래스를 사용하여 호출할 API의 존재 여부를 테스트합니다. 그러면 앱이 실행되는 모든 디바이스에서 이 조건이 평가되지만, API가 있어 호출에 사용할 수 있는 디바이스에 대해서만 **true**로 평가합니다. 이렇게 하면 특정 OS 버전에서만 사용할 수 있는 API를 사용하는 앱을 만들기 위해 버전 적응 코드를 작성할 수 있습니다.
+코드의 조건에서 [Windows.Foundation.Metadata.ApiInformation](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation) 클래스를 사용하여 호출할 API의 존재 여부를 테스트합니다. 그러면 앱이 실행되는 모든 디바이스에서 이 조건이 평가되지만, API가 있어 호출에 사용할 수 있는 디바이스에 대해서만 **true**로 평가합니다. 이렇게 하면 특정 OS 버전에서만 사용할 수 있는 API를 사용하는 앱을 만들기 위해 버전 적응 코드를 작성할 수 있습니다.
 
 여기서는 Windows Insider Preview의 새로운 기능을 대상으로 지정하기 위한 구체적인 예를 살펴봅니다. **ApiInformation** 사용에 대한 일반적인 개요는 [장치 패밀리 개요](https://docs.microsoft.com/en-us/uwp/extension-sdks/device-families-overview#writing-code) 및 [API 계약을 사용하여 동적으로 기능 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) 블로그 게시물을 참조하세요.
 
@@ -34,7 +34,7 @@ ApiInformation, API 계약 및 Visual Studio 구성에 대한 중요한 배경 �
 
 다음을 사용하는 경우 앱의 최소 버전을 증가시켜야 합니다.
 - 이전 버전에서 사용할 수 없는 기능을 필요로 하는 새로운 API. 지원되는 최소 버전을 해당 기능이 포함된 버전으로 증가시켜야 합니다. 자세한 내용은 [앱 접근 권한 값 선언](../packaging/app-capability-declarations.md)을 참조하세요.
-- generic.xaml에 추가되고 이전 버전에서 사용할 수 없는 새로운 리소스 키. 런타임에 사용되는 generic.xaml의 버전은 디바이스가 실행되고 있는 OS 버전에 의해 결정됩니다. API 런타임 검사를 사용하여 XAML 리소스의 존재 여부를 확인할 수 없습니다. 따라서 앱이 지원하는 최소 버전에서 사용할 수 있는 리소스 키만 사용해야 합니다. 그러지 않으면 [XAMLParseException](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.markup.xamlparseexception.aspx)으로 인해 런타임에 앱의 작동이 중단됩니다.
+- generic.xaml에 추가되고 이전 버전에서 사용할 수 없는 새로운 리소스 키. 런타임에 사용되는 generic.xaml의 버전은 디바이스가 실행되고 있는 OS 버전에 의해 결정됩니다. API 런타임 검사를 사용하여 XAML 리소스의 존재 여부를 확인할 수 없습니다. 따라서 앱이 지원하는 최소 버전에서 사용할 수 있는 리소스 키만 사용해야 합니다. 그러지 않으면 [XAMLParseException](https://docs.microsoft.com/uwp/api/windows.ui.xaml.markup.xamlparseexception)으로 인해 런타임에 앱의 작동이 중단됩니다.
 
 ### <a name="adaptive-code-options"></a>적응 코드 옵션
 
@@ -73,9 +73,9 @@ ApiInformation, API 계약 및 Visual Studio 구성에 대한 중요한 배경 �
 
 ### <a name="example-1-new-enum-value"></a>예 1: 새 열거형 값
 
-Windows 10 버전 1607에 새 값을 추가 합니다 [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx) 열거형: **ChatWithoutEmoji**합니다. 이 새로운 입력 범위는 **Chat** 입력 범위와 동일한 입력 동작을 포함하고 있지만(맞춤법 검사, 자동 완성, 자동 대문자 표시), 이모지 단추가 없는 터치 키보드에 매핑됩니다. 이는 고유한 이모지 선택기를 만들고 터치 키보드에서 기본 제공 이모지 단추를 사용하지 않도록 설정하려는 경우에 유용합니다. 
+Windows 10 버전 1607에 새 값을 추가 합니다 [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue) 열거형: **ChatWithoutEmoji**. 이 새로운 입력 범위는 **Chat** 입력 범위와 동일한 입력 동작을 포함하고 있지만(맞춤법 검사, 자동 완성, 자동 대문자 표시), 이모지 단추가 없는 터치 키보드에 매핑됩니다. 이는 고유한 이모지 선택기를 만들고 터치 키보드에서 기본 제공 이모지 단추를 사용하지 않도록 설정하려는 경우에 유용합니다. 
 
-이 예제에서는 **ChatWithoutEmoji** 열거형 값이 있는지 확인하고 있으면 **TextBox**의 [InputScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.inputscope.aspx) 속성을 설정하는 방법을 보여 줍니다. 이 값이 앱이 실행되는 시스템에 없는 경우 **InputScope**는 대신 **Chat**로 설정됩니다. 표시된 코드는 Page 생성자나 Page.Loaded 이벤트 처리기에 배치될 수 있습니다.
+이 예제에서는 **ChatWithoutEmoji** 열거형 값이 있는지 확인하고 있으면 **TextBox**의 [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 설정하는 방법을 보여 줍니다. 이 값이 앱이 실행되는 시스템에 없는 경우 **InputScope**는 대신 **Chat**로 설정됩니다. 표시된 코드는 Page 생성자나 Page.Loaded 이벤트 처리기에 배치될 수 있습니다.
 
 > [!TIP]
 > API를 검사할 때 .NET 언어 기능에 의존하는 대신 정적 문자열을 사용하세요. 그러지 않으면 앱이 정의되지 않은 형식에 액세스하려고 하고 런타임에 작동이 중단될 수 있습니다.
@@ -156,20 +156,20 @@ XAML이나 코드에서 검사 없이 ChatWithoutEmoji 값을 사용하는 경�
 
 ### <a name="example-2-new-control"></a>예 2: 새 컨트롤
 
-일반적으로 새 버전의 Windows에서는 새로운 기능을 플랫폼에 제공하는 새 컨트롤을 UWP API 노출 영역에 제공합니다. 새 컨트롤을 활용하려면 [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) 메서드를 사용합니다.
+일반적으로 새 버전의 Windows에서는 새로운 기능을 플랫폼에 제공하는 새 컨트롤을 UWP API 노출 영역에 제공합니다. 새 컨트롤을 활용하려면 [ApiInformation.IsTypePresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.istypepresent) 메서드를 사용합니다.
 
-Windows 10, 버전 1607에서는 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)라는 새로운 미디어 컨트롤을 도입했습니다. 이 컨트롤은 [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx) 클래스를 기반으로 하므로 배경 오디오에 쉽게 연결하는 기능 등을 제공하며 미디어 스택의 향상된 아키텍처를 이용합니다.
+Windows 10, 버전 1607에서는 [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement)라는 새로운 미디어 컨트롤을 도입했습니다. 이 컨트롤은 [MediaPlayer](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer) 클래스를 기반으로 하므로 배경 오디오에 쉽게 연결하는 기능 등을 제공하며 미디어 스택의 향상된 아키텍처를 이용합니다.
 
-그러나 앱이 버전 1607보다 이전 버전의 Windows 10에서 실행되고 있는 디바이스에서 실행되는 경우 새로운 **MediaPlayerElement** 컨트롤 대신 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx) 컨트롤을 사용해야 합니다. [  **ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) 메서드를 사용하여 런타임에 MediaPlayerElement 컨트롤의 존재 여부를 확인할 수 있으며 앱이 실행되고 있는 시스템에 적합한 컨트롤을 로드할 수 있습니다.
+그러나 앱이 버전 1607보다 이전 버전의 Windows 10에서 실행되고 있는 디바이스에서 실행되는 경우 새로운 **MediaPlayerElement** 컨트롤 대신 [**MediaElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaelement) 컨트롤을 사용해야 합니다. [  **ApiInformation.IsTypePresent**](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.istypepresent) 메서드를 사용하여 런타임에 MediaPlayerElement 컨트롤의 존재 여부를 확인할 수 있으며 앱이 실행되고 있는 시스템에 적합한 컨트롤을 로드할 수 있습니다.
 
-이 예제에서는 MediaPlayerElement 형식의 존재 여부에 따라 새 MediaPlayerElement 또는 이전 MediaElement를 사용하는 앱을 만드는 방법을 보여 줍니다. 이 코드에서는 [UserControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol.aspx) 클래스를 사용하여 컨트롤과 관련 UI 및 코드를 구성 요소화하므로 OS 버전에 따라 이러한 항목을 내부 및 외부로 전환할 수 있습니다. 다른 방법으로, 이 간단한 예제에 필요한 것보다 많은 기능과 사용자 지정 동작을 제공하는 사용자 지정 컨트롤을 사용할 수 있습니다.
+이 예제에서는 MediaPlayerElement 형식의 존재 여부에 따라 새 MediaPlayerElement 또는 이전 MediaElement를 사용하는 앱을 만드는 방법을 보여 줍니다. 이 코드에서는 [UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) 클래스를 사용하여 컨트롤과 관련 UI 및 코드를 구성 요소화하므로 OS 버전에 따라 이러한 항목을 내부 및 외부로 전환할 수 있습니다. 다른 방법으로, 이 간단한 예제에 필요한 것보다 많은 기능과 사용자 지정 동작을 제공하는 사용자 지정 컨트롤을 사용할 수 있습니다.
  
 **MediaPlayerUserControl** 
 
 `MediaPlayerUserControl`은 **MediaPlayerElement** 및 프레임 단위로 미디어를 건너뛰는 데 사용되는 몇 가지 단추를 캡슐화합니다. UserControl을 사용하면 이러한 컨트롤을 단일 엔터티로 처리할 수 있으며 이전 시스템의 MediaElement와 전환하기가 더 쉽습니다. 이 사용자 컨트롤은 MediaPlayerElement가 있는 시스템에서만 사용해야 하므로 이 사용자 컨트롤 내의 코드에서는 ApiInformation 검사를 사용하지 마세요.
 
 > [!NOTE]
-> 이 예제를 주제 중심으로 간단하게 유지하기 위해 프레임 단계 단추가 미디어 플레이어 외부에 배치됩니다. 사용자 환경을 개선하려면 사용자 지정 단추를 포함하도록 MediaTransportControls를 사용자 지정해야 합니다. 자세한 내용은 [사용자 지정 전송 컨트롤](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/custom-transport-controls)을 참조하세요. 
+> 이 예제를 주제 중심으로 간단하게 유지하기 위해 프레임 단계 단추가 미디어 플레이어 외부에 배치됩니다. 사용자 환경을 개선하려면 사용자 지정 단추를 포함하도록 MediaTransportControls를 사용자 지정해야 합니다. 자세한 내용은 [사용자 지정 전송 컨트롤](https://docs.microsoft.com/windows/uwp/controls-and-patterns/custom-transport-controls)을 참조하세요. 
 
 **XAML**
 ```xaml
@@ -305,7 +305,7 @@ public MainPage()
 
 ### <a name="example-1-new-property"></a>예 1: 새 속성
 
-확장 가능한 상태 트리거를 설정하는 첫 번째 단계는 [StateTriggerBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.statetriggerbase.aspx) 클래스를 하위 클래스화하여 API의 존재 여부에 따라 활성화될 사용자 지정 트리거를 만드는 것입니다. 이 예제에서는 속성 존재 여부가 XAML에서 설정된 `_isPresent` 변수와 일치하는 경우 활성화되는 트리거를 보여 줍니다.
+확장 가능한 상태 트리거를 설정하는 첫 번째 단계는 [StateTriggerBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.statetriggerbase) 클래스를 하위 클래스화하여 API의 존재 여부에 따라 활성화될 사용자 지정 트리거를 만드는 것입니다. 이 예제에서는 속성 존재 여부가 XAML에서 설정된 `_isPresent` 변수와 일치하는 경우 활성화되는 트리거를 보여 줍니다.
 
 **C#**
 ```csharp
@@ -339,7 +339,7 @@ class IsPropertyPresentTrigger : StateTriggerBase
 
 다음 단계는 API의 존재 여부에 따라 두 가지 시각적 상태가 발생하도록 XAML에서 시각적 상태 트리거를 설정하는 것입니다. 
 
-Windows 10 버전 1607에서는 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) 클래스에 [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx)이라는 새 속성을 도입했습니다. 이 속성은 사용자가 컨트롤을 사용할 때 컨트롤이 포커스를 받는지 여부를 결정합니다. 이는 사용자가 단추를 클릭하는 동안 데이터 입력을 위해 텍스트 상자에 포커스를 유지하고 터치 키보드를 계속 표시하려는 경우에 유용합니다.
+Windows 10 버전 1607에서는 [FrameworkElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement) 클래스에 [AllowFocusOnInteraction](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.allowfocusoninteraction)이라는 새 속성을 도입했습니다. 이 속성은 사용자가 컨트롤을 사용할 때 컨트롤이 포커스를 받는지 여부를 결정합니다. 이는 사용자가 단추를 클릭하는 동안 데이터 입력을 위해 텍스트 상자에 포커스를 유지하고 터치 키보드를 계속 표시하려는 경우에 유용합니다.
 
 이 예제에서 트리거는 속성이 있는지 여부를 검사합니다. 속성이 있으면 Button의 **AllowFocusOnInteraction** 속성을 **false**로 설정하고, 속성이 없으면 Button이 원래 상태를 유지합니다. 코드를 실행할 때 이 속성의 효과를 쉽게 확인할 수 있도록 하기 위해 TextBox가 포함되었습니다.
 

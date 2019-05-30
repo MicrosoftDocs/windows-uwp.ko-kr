@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 321f8efc1475bc153102f3f8157cd2d094b37077
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 71150df50a7c7e01293d4ec638f520239124e7cd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630138"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359412"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI와 앱 패키지 매니페스트에 문자열 지역화
 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요.
@@ -69,7 +69,7 @@ Greeting.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
 명시적으로 단순한 문자열 리소스 식별자를 기반으로 문자열 리소스를 로드할 수 있습니다.
 
 > [!NOTE]
-> 백그라운드/작업자 스레드에서 *실행되었을 수 있는* **GetForCurrentView** 메서드를 호출하는 경우 해당 호출을 `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` 테스트로 보호하세요. 백그라운드/작업자 스레드에서 **GetForCurrentView**를 호출하면 예외 "CoreWindow가 없는 스레드에서는 *&lt;typename&gt;을(를) 만들 수 없습니다.*"가 발생합니다.
+> 백그라운드/작업자 스레드에서 *실행되었을 수 있는* **GetForCurrentView** 메서드를 호출하는 경우 해당 호출을 `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` 테스트로 보호하세요. 백그라운드/작업자 스레드에서 **GetForCurrentView**를 호출하면 예외 "CoreWindow가 없는 스레드에서는 *&lt;typename&gt;을(를) 만들 수 없습니다.* "가 발생합니다.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
@@ -152,7 +152,7 @@ this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <da
 아래의 코드 예제는 `ErrorMessages.resw`가 이름이 "MismatchedPasswords"고 값이 오류를 설명하는 리소스를 포함한다고 가정합니다.
 
 > [!NOTE]
-> 백그라운드/작업자 스레드에서 *실행되었을 수 있는* **GetForCurrentView** 메서드를 호출하는 경우 해당 호출을 `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` 테스트로 보호하세요. 백그라운드/작업자 스레드에서 **GetForCurrentView**를 호출하면 예외 "CoreWindow가 없는 스레드에서는 *&lt;typename&gt;을(를) 만들 수 없습니다.*"가 발생합니다.
+> 백그라운드/작업자 스레드에서 *실행되었을 수 있는* **GetForCurrentView** 메서드를 호출하는 경우 해당 호출을 `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` 테스트로 보호하세요. 백그라운드/작업자 스레드에서 **GetForCurrentView**를 호출하면 예외 "CoreWindow가 없는 스레드에서는 *&lt;typename&gt;을(를) 만들 수 없습니다.* "가 발생합니다.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ErrorMessages");
@@ -282,15 +282,15 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 프레임워크 패키지는 절대 리소스 식별자 URI로 자체 리소스에 액세스할 수 있습니다. [URI 스키마](uri-schemes.md)도 참조하세요.
 
 ## <a name="important-apis"></a>중요 API
-* [ApplicationModel.Resources.ResourceLoader](https://msdn.microsoft.com/library/windows/apps/br206014)
+* [ApplicationModel.Resources.ResourceLoader](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.ResourceLoader)
 * [ResourceContext.SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
 * [MapChanged](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)
 
 ## <a name="related-topics"></a>관련 항목
 * [XAML 및 UI를 이식합니다.](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization)
-* [X:uid 지시문](../xaml-platform/x-uid-directive.md)
+* [x:Uid directive](../xaml-platform/x-uid-directive.md)
 * [연결 된 속성](../xaml-platform/attached-properties-overview.md)
 * [매니페스트 지역화 가능한 항목](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
 * [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [언어, 배율 및 다른 한정자에 대 한 리소스를 조정 합니다.](tailor-resources-lang-scale-contrast.md)
-* [문자열 리소스를 로드 하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)
+* [문자열 리소스를 로드 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh965323(v=win.10))

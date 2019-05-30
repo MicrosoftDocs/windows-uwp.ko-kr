@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f6a1277dbb2d756f0d3a4ffc1fd545f892a2096
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2ac7f0785894849cffe09cd902f459015f1f7b6b
+ms.sourcegitcommit: ea15237291ae3ade0bf22e38bd292c3a23947a03
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596508"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377317"
 ---
 # <a name="block-compression"></a>블록 압축
 
@@ -73,7 +73,7 @@ ms.locfileid: "57596508"
 
 다이어그램의 왼쪽은 압축되지 않은 60×40 텍스처에 대해 생성되는 MIP 맵 수준 크기를 보여 줍니다. 최상위 수준의 크기는 텍스처를 생성하는 API 호출에서 가져옵니다. 각 하위 수준은 이전 수준 크기의 절반입니다. 압축되지 않은 텍스처의 경우 가상(선언된) 크기와 물리적(실제) 크기 사이에 차이가 없습니다.
 
-다이어그램의 오른쪽은 압축된 동일한 60×40 텍스처에 대해 생성되는 MIP 맵 수준 크기를 보여 줍니다. 두 번째 수준과 세 번째 수준에는 모든 수준에서 크기를 4의 계수로 만드는 메모리 패딩이 있습니다. 이는 알고리즘이 4×4 텍셀 블록에 작용하는 데 필요합니다. 4×4보다 작은 MIP 맵 수준을 고려하는 경우 특히 그렇습니다. 텍스처 메모리가 할당될 때 이렇게 작은 MIP 맵 수준의 크기는 가장 가까운 4의 계수로 반올림됩니다.
+다이어그램의 오른쪽은 압축된 동일한 60×40 텍스처에 대해 생성되는 MIP 맵 수준 크기를 보여 줍니다. 두 번째 수준과 세 번째 수준에는 모든 수준에서 크기를 4의 계수로 만드는 메모리 패딩이 있습니다. 이는 알고리즘이 4×4 텍셀 블록에 작용하는 데 필요합니다. 이 4 × 4; 보다 작은 mip 맵 수준을 고려 하는 경우 특히 뚜렷하게 나타납니다. 텍스처 메모리를 할당할 때 이러한 매우 작은 mip 맵 수준 크기 4의 가장 가까운 요소를 반올림 됩니다.
 
 샘플링 하드웨어는 가상 크기를 사용합니다. 텍스처가 샘플링될 때 메모리 패딩은 무시됩니다. 4×4보다 작은 MIP 맵 수준의 경우 처음 네 개의 텍셀만 2×2 맵에 사용되며 첫 번째 텍셀만 1×1 블록에 사용됩니다. 그러나 메모리 패딩을 포함한 실제 크기를 노출하는 API 구조는 없습니다.
 
@@ -346,13 +346,13 @@ FLOAT32 f = 1.0f;
 UINT32 u;
 ```
 
-'f'을 'u' 유형으로 재해석하려면 [memcpy](https://msdn.microsoft.com/library/dswaw1wk.aspx)를 사용합니다.
+'f'을 'u' 유형으로 재해석하려면 [memcpy](https://docs.microsoft.com/cpp/c-runtime-library/reference/memcpy-wmemcpy)를 사용합니다.
 
 ```cpp
 memcpy( &u, &f, sizeof( f ) ); // 'u' becomes equal to 0x3F800000.
 ```
 
-위의 재해석에서 데이터의 기본 값은 변경되지 않습니다. [memcpy](https://msdn.microsoft.com/library/dswaw1wk.aspx)는 부동 소수점을 부호 없는 정수로 재해석합니다.
+위의 재해석에서 데이터의 기본 값은 변경되지 않습니다. [memcpy](https://docs.microsoft.com/cpp/c-runtime-library/reference/memcpy-wmemcpy)는 부동 소수점을 부호 없는 정수로 재해석합니다.
 
 더 일반적인 유형의 변환을 수행하려면 할당을 사용합니다.
 

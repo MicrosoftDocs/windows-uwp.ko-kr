@@ -6,12 +6,12 @@ keywords: 연락처, 메일, 보내기
 ms.date: 10/11/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1593ab8b547a464492a35aa7d49d38f667a8210b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 524e1f12c3da0d9d06e73d84e08e2d54efde9a7e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626488"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361214"
 ---
 # <a name="send-email"></a>메일 보내기
 
@@ -25,7 +25,7 @@ ms.locfileid: "57626488"
 
 ## <a name="launch-the-compose-email-dialog"></a>메일 작성 대화 상자 시작
 
-메일 작성 대화 상자에서 새 [**EmailMessage**](https://msdn.microsoft.com/library/windows/apps/Dn631270) 개체를 만들고 미리 채울 데이터를 설정합니다. [  **ShowComposeNewEmailAsync**](https://msdn.microsoft.com/library/windows/apps/Dn631269)를 호출하여 대화 상자를 표시합니다.
+메일 작성 대화 상자에서 새 [**EmailMessage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Email.EmailMessage) 개체를 만들고 미리 채울 데이터를 설정합니다. [  **ShowComposeNewEmailAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailmanager.showcomposenewemailasync)를 호출하여 대화 상자를 표시합니다.
 
 ``` cs
 private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient,
@@ -51,12 +51,12 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-이 항목에서는 메일 작성 대화 상자를 시작하는 방법을 살펴보았습니다. 메일 메시지의 수신자로 사용할 연락처를 선택하는 방법에 대한 자세한 내용은 [연락처 선택](selecting-contacts.md)을 참조하세요. 메일 첨부 파일로 사용할 파일을 선택하려면 [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275)를 참조하세요.
+이 항목에서는 메일 작성 대화 상자를 시작하는 방법을 살펴보았습니다. 메일 메시지의 수신자로 사용할 연락처를 선택하는 방법에 대한 자세한 내용은 [연락처 선택](selecting-contacts.md)을 참조하세요. 메일 첨부 파일로 사용할 파일을 선택하려면 [**PickSingleFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync)를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [연락처 선택](selecting-contacts.md)
-* [파일 선택기를 호출한 후 Windows Phone 앱을 계속 하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/Dn614994)
+* [파일 선택기를 호출한 후 Windows Phone 앱을 계속 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/dn614994(v=win.10))
  
 
  

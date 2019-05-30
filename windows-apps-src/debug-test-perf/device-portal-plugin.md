@@ -6,12 +6,12 @@ ms.date: 03/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: d9e11445d77434320c8842608bf8183a078c0660
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: debc4572a26db9e849dd31f17b114f15aa9ef055
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644468"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362488"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Device Portal에 대한 사용자 지정 플러그 인 작성
 
@@ -75,7 +75,7 @@ Microsoft Visual Studio 2017에서 UWP 앱 프로젝트를 만듭니다. '파일
 ```
 
 > [!NOTE]
-> "devicePortalProvider" 기능은 제한되어 있습니다("rescap"). 즉, 앱을 게시하기 전에 스토어에서 사전 승인을 받아야 합니다. 그러나 테스트용 로드를 통해 로컬에서 앱을 테스트할 수는 있습니다. 제한된 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities)을 참조하세요.
+> "devicePortalProvider" 기능은 제한되어 있습니다("rescap"). 즉, 앱을 게시하기 전에 스토어에서 사전 승인을 받아야 합니다. 그러나 테스트용 로드를 통해 로컬에서 앱을 테스트할 수는 있습니다. 제한된 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.
 
 ## <a name="set-up-your-background-task-and-winrt-component"></a>백그라운드 작업 및 WinRT 구성 요소 설정
 Device Portal 연결을 설정하려면 앱이 앱 내에서 실행되는 Device Portal 인스턴스로 Device Portal 서비스의 앱 서비스 연결을 연결해야 합니다. 이를 위해 [**IBackgroundTask**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.ibackgroundtask)를 구현하는 클래스로 새로운 WinRT 구성 요소를 응용 프로그램에 추가합니다.

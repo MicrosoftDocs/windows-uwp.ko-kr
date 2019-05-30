@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c + +, cpp, winrt, 프로젝션, 뉴스 항목의 새,
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b84736e41e039d350a849c55fead008cbab5fdea
-ms.sourcegitcommit: bc64db47b6ff326f15cac15fc2cfd709fa7f877b
+ms.openlocfilehash: a84e118d988d8bf6a7d26eba7d5dd009c7ad44f3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626218"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360143"
 ---
 # <a name="whats-new-in-cwinrt"></a>새로운 기능 C++/WinRT
 
@@ -302,7 +302,7 @@ struct MainPage : PageT<MainPage>
 
 현재 Windows SDK 헤더 파일 격리의 유일한 예외는 내장 함수 및 수치에 대 한 합니다. 이러한 마지막 남은 종속성 알려진된 문제가 있습니다.
 
-프로젝트에서 해야 할 경우 Windows SDK 헤더와의 상호 운용성을 다시 활성화할 수 있습니다. COM 인터페이스를 구현 하려면 예를 들어, 할 수 있습니다 (에서 루 팅 [ **IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)). 이 예제에서는 포함 `unknwn.h` 모든 C + 포함 하기 전에 + WinRT 헤더입니다. 이렇게 하면은 C++/WinRT 기본 라이브러리 클래식 COM 인터페이스를 지원 하기 위해 다양 한 후크를 사용 하도록 설정 합니다. 코드 예제를 참조 하세요 [사용 하 여 만든 COM 구성 요소 C++/WinRT](author-coclasses.md)합니다. 마찬가지로, 형식 및/또는 호출 하려는 함수를 선언 하는 다른 Windows SDK 헤더를 명시적으로 포함 합니다.
+프로젝트에서 해야 할 경우 Windows SDK 헤더와의 상호 운용성을 다시 활성화할 수 있습니다. COM 인터페이스를 구현 하려면 예를 들어, 할 수 있습니다 (에서 루 팅 [ **IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)). 이 예제에서는 포함 `unknwn.h` 모든 C + 포함 하기 전에 + WinRT 헤더입니다. 이렇게 하면은 C++/WinRT 기본 라이브러리 클래식 COM 인터페이스를 지원 하기 위해 다양 한 후크를 사용 하도록 설정 합니다. 코드 예제를 참조 하세요 [사용 하 여 만든 COM 구성 요소 C++/WinRT](author-coclasses.md)합니다. 마찬가지로, 형식 및/또는 호출 하려는 함수를 선언 하는 다른 Windows SDK 헤더를 명시적으로 포함 합니다.
 
 ### <a name="how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>대상 다시 지정 하는 방법에 C++Windows SDK의 최신 버전으로 /WinRT 프로젝트
 
@@ -315,7 +315,7 @@ struct MainPage : PageT<MainPage>
 
 이러한 두 메서드 중 하나를 사용 하 여 모든 컴파일러나 링커 오류가 발생할 경우 솔루션 정리를 시도할 수 있습니다 (**빌드합니다** > **솔루션 정리** 및/또는 모두를 수동으로 삭제 임시 폴더 및 파일)를 다시 빌드하기 전에 합니다.
 
-경우는 C++ 컴파일러 생성 "*오류 C2039: 'IUnknown':의 구성원이 아닌 '\`전역 네임 스페이스 '*"를 추가한 `#include <unknwn.h>` 의 맨 위에 사용자 `pch.h` 파일 (모든 C + 포함 하기 전에 + WinRT 헤더).
+경우는 C++ 컴파일러 생성 "*오류 C2039: 'IUnknown':의 구성원이 아닌 '\`전역 네임 스페이스 '* "를 추가한 `#include <unknwn.h>` 의 맨 위에 사용자 `pch.h` 파일 (모든 C + 포함 하기 전에 + WinRT 헤더).
 
 추가 해야 `#include <hstring.h>` 그 후 합니다.
 

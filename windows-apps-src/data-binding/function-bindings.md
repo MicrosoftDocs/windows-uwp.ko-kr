@@ -5,17 +5,17 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: b85777c254c36cc7bf5b156569c7cef267a6c567
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 879be9591bae36a1dbcd485387fbb4ac7f502fea
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626218"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360078"
 ---
 # <a name="functions-in-xbind"></a>X:bind 함수
 
 > [!NOTE]
-> 데이터 바인딩을 사용 하 여 앱에서 사용 하는 방법에 대 한 일반 정보에 대 한 **{X:bind}** (및 사이의 모든 비교 **{X:bind}** 하 고 **{Binding}**)를 참조 [데이터 깊이에서 바인딩](data-binding-in-depth.md)합니다.
+> 데이터 바인딩을 사용 하 여 앱에서 사용 하는 방법에 대 한 일반 정보에 대 한 **{X:bind}** (및 사이의 모든 비교 **{X:bind}** 하 고 **{Binding}** )를 참조 [데이터 깊이에서 바인딩](data-binding-in-depth.md)합니다.
 
 Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이 수 있습니다.
 
@@ -23,7 +23,7 @@ Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리
 - 둘 이상의 매개 변수를 사용하는 바인딩 방식
 
 > [!NOTE]
-> **{x:Bind}** 와 함께 함수를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 함수를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
+> **{x:Bind}** 와 함께 함수를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 함수를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
 
 다음 예제에서는 항목의 배경과 전경이 색 매개 변수에 따라 변환을 수행하는 함수에 바인딩됩니다.
 

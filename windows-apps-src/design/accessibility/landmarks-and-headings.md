@@ -8,12 +8,12 @@ ms.date: 01/24/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d81957c379bd948a50d08b980ff20debc6c223c5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 28a1bd46646deae8f6e6519d72295d42ce2766db
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611268"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359555"
 ---
 # <a name="landmarks-and-headings"></a>랜드마크 및 머리글
 
@@ -33,7 +33,7 @@ Windos 설정 앱의 **접근성** 페이지를 보겠습니다.
 
 랜드마크와 머리글 없이도 설정 앱을 사용할 수 있지만, 랜드마크와 머리글 때문에 더욱 간편하게 사용할 수 있습니다. 화면 읽기 프로그램 사용자는 자신에게 필요한 그룹(랜드마크)을 빨리 쉽게 찾고, 다시 하위 그룹(머리글)을 찾을 수 있습니다. 
 
-[AutomationProperties.LandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LandmarkTypeProperty)을 사용해 UI 요소를 원하는 [랜드마크 유형](https://msdn.microsoft.com/library/windows/desktop/mt759299) 으로 설정합니다. 이 랜드마크 UI 요소는 랜드마크에 적합한 모든 다른 UI 요소들을 포함합니다. 
+[AutomationProperties.LandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LandmarkTypeProperty)을 사용해 UI 요소를 원하는 [랜드마크 유형](https://docs.microsoft.com/windows/desktop/WinAuto/landmark-type-identifiers) 으로 설정합니다. 이 랜드마크 UI 요소는 랜드마크에 적합한 모든 다른 UI 요소들을 포함합니다. 
 
 [AutomationProperties.LocalizedLandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LocalizedLandmarkTypeProperty)를 사용해 랜드마크의 이름을 지정합니다. 메인이나 탐색형 등 미리 정의된 랜드마크 유형을 선택하는 경우 이 이름을 랜드마크 이름으로 사용합니다. 하지만 랜드마크 유형을 사용자 지정 설정하는 경우, 이 속성을 통해 랜드마크 이름을 지정해야 합니다. 또 이 속성을 사용해 사용자 지정 랜드마크 유형이 아닌 랜드마크의 기본값인 이름을 재정의할 수 있습니다. 
 

@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 606cc68aafa4de110f034336cd5d18bd1426a0a7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 350565d9eccb8b19cf276c800522e28c59c9b10f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596368"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361026"
 ---
 # <a name="raw-notification-overview"></a>원시 알림 개요
 
@@ -28,19 +28,19 @@ ms.locfileid: "57596368"
 
 알림 메시지, 타일 및 배지 푸시 알림과 마찬가지로, 원시 알림은 할당된 채널 URI(Uniform Resource Identifier)를 통해 앱의 클라우드 서비스에서 WNS로 푸시됩니다. 그러면 WNS이 채널과 관련된 디바이스 및 사용자 계정에 다시 알림을 전달합니다. 다른 푸시 알림과는 달리, 원시 알림에는 지정된 형식이 없습니다. 페이로드의 콘텐츠는 전적으로 앱에서 정의됩니다.
 
-원시 알림을 사용하여 이점을 누릴 수 있는 앱의 실제 사례로, 이론상의 문서 공동 작업 앱을 살펴보겠습니다. 두 명의 사용자가 동시에 같은 문서를 편집 중이라고 가정해 보세요. 공유 문서를 호스트하는 클라우드 서비스는 원시 알림을 사용하여 한 사용자가 문서를 변경하면 이를 각 사용자에게 알릴 수 있습니다. 문서에 대한 변경 사항을 반드시 원시 알림에 포함할 필요는 없으며, 대신 중앙 위치에 연결하여 적용 가능한 변경 사항을 동기화하도록 각 사용자의 앱 사본을 알립니다. 원시 알림을 사용하여 앱과 앱의 클라우드 서비스는 문서가 열려 있는 전체 시간 동안 연결을 유지하는 데 따르는 오버헤드를 줄일 수 있습니다.
+원시 알림을 사용하여 이점을 누릴 수 있는 앱의 실제 사례로, 이론상의 문서 협업 앱을 살펴보겠습니다. 두 명의 사용자가 동시에 같은 문서를 편집 중이라고 가정해 보세요. 공유 문서를 호스트하는 클라우드 서비스는 원시 알림을 사용하여 한 사용자가 문서를 변경하면 이를 각 사용자에게 알릴 수 있습니다. 문서에 대한 변경 사항을 반드시 원시 알림에 포함할 필요는 없으며, 대신 중앙 위치에 연결하여 적용 가능한 변경 사항을 동기화하도록 각 사용자의 앱 사본을 알립니다. 원시 알림을 사용하여 앱과 앱의 클라우드 서비스는 문서가 열려 있는 전체 시간 동안 연결을 유지하는 데 따르는 오버헤드를 줄일 수 있습니다.
 
 ## <a name="how-raw-notifications-work"></a>원시 알림 작동 방법
 
 
 모든 원시 알림은 푸시 알림입니다. 따라서 원시 알림을 보내고 받는 데 필요한 설정은 원시 알림에도 적용됩니다.
 
--   원시 알림을 보낼 유효한 WNS 채널이 있어야 합니다. 푸시 알림 채널 획득에 대한 자세한 내용은 [알림 채널을 요청, 생성 및 저장하는 방법](https://msdn.microsoft.com/library/windows/apps/hh465412)을 참조하세요.
+-   원시 알림을 보낼 유효한 WNS 채널이 있어야 합니다. 푸시 알림 채널 획득에 대한 자세한 내용은 [알림 채널을 요청, 생성 및 저장하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))을 참조하세요.
 -   앱의 매니페스트에 **Internet** 접근 권한 값을 포함해야 합니다. Microsoft Visual Studio 매니페스트 편집기에는 **접근 권한 값** 탭 아래에 **인터넷(클라이언트)** 이라는 옵션이 있습니다. 자세한 내용은 [**Capabilities**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-capabilities)를 참조하세요.
 
 알림의 본문은 앱에서 정의하는 형식입니다. 클라이언트는 앱에서 인식하기만 하면 되는 null로 끝나는 문자열(**HSTRING**)로 데이터를 받습니다.
 
-클라이언트가 오프라인인 경우 원시 알림은 [X-WNS-Cache-Policy](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_cache) 헤더가 알림에 포함되어 있을 때만 WNS에 의해 캐시됩니다. 그러나 디바이스가 온라인 상태로 돌아오면 하나의 원시 알림만 캐시되고 전달됩니다.
+클라이언트가 오프라인인 경우 원시 알림은 [X-WNS-Cache-Policy](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) 헤더가 알림에 포함되어 있을 때만 WNS에 의해 캐시됩니다. 그러나 디바이스가 온라인 상태로 돌아오면 하나의 원시 알림만 캐시되고 전달됩니다.
 
 클라이언트에서 원시 알림이 취할 수 있는 가능한 경로는 세 개뿐입니다. 이러한 경로는 알림 전달 이벤트를 통해 실행 중인 앱에 전달되고, 백그라운드 작업에 보내지거나, 삭제됩니다. 따라서 클라이언트가 오프라인인 상태에서 WNS가 원시 알림을 보내려고 시도하면 알림은 삭제됩니다.
 
@@ -50,12 +50,12 @@ ms.locfileid: "57596368"
 원시 알림 보내기는 타일, 알림 메시지 또는 배지 푸시 알림을 보내는 것과 유사하지만 다음과 같은 차이점이 있습니다.
 
 -   HTTP Content-Type 헤더를 "application/octet-stream"으로 설정해야 합니다.
--   HTTP [X-WNS-Type](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_type) 헤더를 "wns/raw"로 설정해야 합니다.
+-   HTTP [X-WNS-Type](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) 헤더를 "wns/raw"로 설정해야 합니다.
 -   알림 본문에는 5KB 미만의 문자열 페이로드가 포함될 수 있습니다.
 
 원시 알림은 앱이 서비스에 직접 연결하여 대량의 데이터를 동기화하거나, 알림 콘텐츠를 기반으로 로컬 상태를 수정하는 등의 동작을 취하도록 트리거하는 짧은 메시지로 사용하기 위한 것입니다. WNS 푸시 알림은 전달이 보장되지 않으므로 앱과 클라우드 서비스에서는 클라이언트가 오프라인인 경우와 같이 원시 알림이 클라이언트에 도달하지 않을 가능성을 고려해야 합니다.
 
-푸시 알림을 보내는 방법에 대 한 자세한 내용은 참조 하세요. [빠른 시작: 푸시 알림을 보낼](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)합니다.
+푸시 알림을 보내는 방법에 대 한 자세한 내용은 참조 하세요. [빠른 시작: 푸시 알림을 보낼](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))합니다.
 
 ## <a name="receiving-a-raw-notification"></a>원시 알림 받기
 
@@ -77,16 +77,16 @@ ms.locfileid: "57596368"
 앱이 실행 중이 아니고 [백그라운드 작업](#background-tasks-triggered-by-raw-notifications)을 사용하지 않는 경우에는 WNS에서 해당 앱으로 보내진 원시 알림이 수신되면 삭제합니다. 클라우드 서비스의 리소스를 낭비하지 않으려면 앱이 활성 상태인지 여부를 추적하도록 서비스에 논리를 구현해야 합니다. 이 정보의 원본은 두 가지입니다. 앱은 알림을 받을 준비가 되었음을 명시적으로 서비스에 알릴 수 있고, WNS는 중지해야 할 시점을 서비스에 알릴 수 있습니다.
 
 -   **앱에 클라우드 서비스에 알립니다**: 앱에는 해당 서비스 응용 프로그램이 포그라운드에서 실행 되 고 있는지를 알리기를 문의할 수 있습니다. 이러한 접근 방식의 단점은 앱이 서비스 연결을 아주 빈번하게 끊을 수 있다는 것입니다. 그러나 앱이 들어오는 원시 알림을 받을 준비가 되었을 때를 항상 서비스가 알게 된다는 장점도 있습니다. 또 다른 장점은 앱이 서비스에 연결되면 서비스가 브로드캐스트가 아닌 해당 앱의 특정 인스턴스에 원시 알림을 보내야 한다는 것을 아는 것입니다.
--   **클라우드 서비스가 WNS 응답 메시지에 응답** : App service에서 사용할 수는 [WNS-X-notificationstatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_notification) 및 [X-WNS-DeviceConnectionStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_dcs) 앱에 원시 알림 보내기를 중지 하는 시기를 결정 하는 WNS에서 반환 되는 정보입니다. 서비스가 HTTP POST로 채널에 알림을 보내면 응답으로 다음 메시지 중 하나를 받을 수 있습니다.
+-   **클라우드 서비스가 WNS 응답 메시지에 응답** : App service에서 사용할 수는 [WNS-X-notificationstatus](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) 및 [X-WNS-DeviceConnectionStatus](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) 앱에 원시 알림 보내기를 중지 하는 시기를 결정 하는 WNS에서 반환 되는 정보입니다. 서비스가 HTTP POST로 채널에 알림을 보내면 응답으로 다음 메시지 중 하나를 받을 수 있습니다.
 
     -   **WNS-X-notificationstatus: 삭제**: 이 알림을 클라이언트에서 받은 없습니다 것을 나타냅니다. 사용자의 디바이스에서 더 이상 포그라운드로 실행 중이지 않은 앱에서 **dropped** 응답이 발생되었다고 추정할 수 있습니다.
-    -   **X-WNS DeviceConnectionStatus: 연결 끊김** 나 **DeviceConnectionStatus-WNS-X: tempconnected**: Windows 클라이언트에 WNS에 대 한 연결을 더 이상 나타냅니다. WNS에서 이 메시지를 받으려면 알림의 HTTP POST에 [X-WNS-RequestForStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_request) 헤더를 설정하여 요청해야 합니다.
+    -   **X-WNS DeviceConnectionStatus: 연결 끊김** 나 **DeviceConnectionStatus-WNS-X: tempconnected**: Windows 클라이언트에 WNS에 대 한 연결을 더 이상 나타냅니다. WNS에서 이 메시지를 받으려면 알림의 HTTP POST에 [X-WNS-RequestForStatus](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) 헤더를 설정하여 요청해야 합니다.
 
     앱의 클라우드 서비스는 이러한 상태 메시지의 정보를 사용하여 원시 알림을 통해 통신을 시도할 수 있습니다. 앱이 포그라운드로 다시 전환되고 서비스와 연결되면 서비스는 원시 알림 보내기를 다시 시작할 수 있습니다.
 
-    알림이 성공적으로 클라이언트에 전달되었는지 여부를 확인하기 위해 [X-WNS-NotificationStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_notification)를 사용해서는 안 됩니다.
+    알림이 성공적으로 클라이언트에 전달되었는지 여부를 확인하기 위해 [X-WNS-NotificationStatus](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))를 사용해서는 안 됩니다.
 
-    자세한 내용은 [푸시 알림 서비스 요청 및 응답 헤더](https://msdn.microsoft.com/library/windows/apps/hh465435)를 참조하세요.
+    자세한 내용은 [푸시 알림 서비스 요청 및 응답 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))를 참조하세요.
 
 ### <a name="background-tasks-triggered-by-raw-notifications"></a>원시 알림에 의해 트리거된 백그라운드 작업
 
@@ -117,9 +117,9 @@ ms.locfileid: "57596368"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [원시 알림에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/hh761463)
-* [빠른 시작: 만들기 및 원시 알림 백그라운드 작업 등록](https://msdn.microsoft.com/library/windows/apps/jj676800)
-* [빠른 시작: 앱을 실행 하는 것에 대 한 푸시 알림 차단](https://msdn.microsoft.com/library/windows/apps/jj709908)
+* [원시 알림에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-raw-notification-overview)
+* [빠른 시작: 만들기 및 원시 알림 백그라운드 작업 등록](https://docs.microsoft.com/previous-versions/windows/apps/jj676800(v=win.10))
+* [빠른 시작: 앱을 실행 하는 것에 대 한 푸시 알림 차단](https://docs.microsoft.com/previous-versions/windows/apps/jj709908(v=win.10))
 * [**RawNotification**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.RawNotification)
 * [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)
  
