@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c + +, cpp, winrt, COM 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
-ms.openlocfilehash: dc4acd288496d83d5d91f1bdf206be19fe2fbb06
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2c36c7b896b4d08240f08e85570110b45e0a9f3c
+ms.sourcegitcommit: ba24a6237355119ef3e36687417f390c8722bd67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361153"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421264"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>C++/WinRT로 작성된 COM 구성 요소 사용
 
@@ -171,6 +171,8 @@ void ExampleFunction(winrt::com_ptr<ID3D11Device> const& device)
 
 빌드 및 Visual Studio에서이 원본 코드 예제에서는 먼저 실행 하려는 경우 새로 만듭니다 **Core 앱 (C++/WinRT)** 합니다. `Direct2D` 프로젝트에 대 한 적절 한 이름 이지만 사용자가 원하는 대로 이름을 지정할 수 있습니다. 열기 `App.cpp`, 전체 콘텐츠를 삭제 하 고 아래 목록에 붙여 넣습니다.
 
+사용 하 여 아래 코드는 [winrt::com_ptr::capture 함수](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcapture-function) 가능 합니다.
+
 ```cppwinrt
 #include "pch.h"
 #include <d2d1_1.h>
@@ -263,7 +265,7 @@ namespace
         winrt::check_hresult(dxdevice->GetAdapter(adapter.put()));
 
         winrt::com_ptr<IDXGIFactory2> factory;
-        winrt::check_hresult(adapter->GetParent(__uuidof(factory), factory.put_void()));
+        factory.capture(adapter, &IDXGIAdapter::GetParent);
         return factory;
     }
 
@@ -275,7 +277,7 @@ namespace
         WINRT_ASSERT(target);
 
         winrt::com_ptr<IDXGISurface> surface;
-        winrt::check_hresult(swapchain->GetBuffer(0, __uuidof(surface), surface.put_void()));
+        surface.capture(swapchain, &IDXGISwapChain1::GetBuffer, 0);
 
         D2D1_BITMAP_PROPERTIES1 const props{ D2D1::BitmapProperties1(
             D2D1_BITMAP_OPTIONS_TARGET | D2D1_BITMAP_OPTIONS_CANNOT_DRAW,
@@ -483,7 +485,9 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 ## <a name="working-with-com-types-such-as-bstr-and-variant"></a>BSTR 및 VARIANT 같이 COM 형식 사용
 
-알 수 있듯이 C++/WinRT 구현 및 호출 하는 COM 인터페이스에 대 한 지원을 제공 합니다. BSTR 및 VARIANT를 같이 COM 형식 사용에 대 한 옵션 (함께 적절 한 Api)는 원시 형태로 사용 하려면 항상입니다. 또는 같은 프레임 워크에서 제공 하는 래퍼를 사용할 수 있습니다 합니다 [액티브 템플릿 라이브러리 (ATL)](/cpp/atl/active-template-library-atl-concepts), 또는 시각적 개체에서 C++ 컴파일러의 [COM 지원](/cpp/cpp/compiler-com-support), 또는 사용자 고유의 래퍼에 의해서도 합니다.
+알 수 있듯이 C++/WinRT 구현 및 호출 하는 COM 인터페이스에 대 한 지원을 제공 합니다. BSTR 및 VARIANT를 같이 COM 형식을 사용 하 여 제공 하는 래퍼를 사용 하는 권장 합니다 [Windows 구현 라이브러리 (에서)](https://github.com/Microsoft/wil)와 같은 **wil::unique_bstr** 고 **wil::unique_ variant** (리소스 수명 관리).
+
+[콘솔이](https://github.com/Microsoft/wil) 액티브 템플릿 라이브러리 (ATL) 및 시각적 개체와 같은 프레임 워크를 대체 C++ 컴파일러 COM 지원 합니다. 및 사용자 고유의 래퍼를 작성 하거나 (함께 적절 한 Api)는 원시 형태로 BSTR 및 VARIANT 같이 COM 형식 사용을 통해 것이 좋습니다.
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::check_hresult 함수](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)
