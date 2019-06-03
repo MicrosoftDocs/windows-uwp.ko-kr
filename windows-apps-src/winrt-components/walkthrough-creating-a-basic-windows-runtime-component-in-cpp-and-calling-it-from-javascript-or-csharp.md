@@ -45,7 +45,7 @@ ms.locfileid: "66363201"
 #include <amp_math.h>
 ```
 
-collection.h는 Windows 런타임에서 정의된 언어 중립 인터페이스를 구현하는 Platform::Collections::Vector 클래스 및 Platform::Collections::Map 클래스 등의 C++ 구체적 클래스에 대한 헤더 파일입니다. amp 헤더는 GPU에서 계산을 실행하는 데 사용됩니다. 동등한 Windows 런타임 항목은 없으며 private이므로 문제가 되지 않습니다. 일반적으로 성능상의 이유로 구성 요소 내에서는 내부적으로 ISO C++ 코드 및 표준 라이브러리를 사용해야 합니다. Windows 런타임 형식으로 표시해야 하는 것은 Windows 런타임 인터페이스뿐입니다.
+collection.h는 Windows 런타임에서 정의된 언어 중립 인터페이스를 구현하는 Platform::Collections::Vector 클래스 및 Platform::Collections::Map 클래스 등의 C++ 구체적 클래스에 대한 헤더 파일입니다. amp 헤더는 GPU에서 계산을 실행하는 데 사용됩니다. 동등한 Windows 런타임 항목은 없으며 프라이빗이므로 문제가 되지 않습니다. 일반적으로 성능상의 이유로 구성 요소 내에서는 내부적으로 ISO C++ 코드 및 표준 라이브러리를 사용해야 합니다. Windows 런타임 형식으로 표시해야 하는 것은 Windows 런타임 인터페이스뿐입니다.
 
 ## <a name="to-add-a-delegate-at-namespace-scope"></a>네임스페이스 범위에서 대리자를 추가하려면
 대리자는 메서드에 대한 매개 변수 및 반환 형식을 정의하는 구문입니다. 이벤트는 특정 대리자 형식의 인스턴스이며 이벤트를 구독하는 모든 이벤트 처리기 메서드에 대리자에 지정된 서명이 있어야 합니다. 다음 코드는 int를 받아서 void를 반환하는 대리자 형식을 정의합니다. 그런 후에 코드는 이 형식의 public 이벤트를 선언합니다. 이 경우 클라이언트 코드를 통해 이벤트 발생 시 호출되는 메서드를 제공할 수 있습니다.
@@ -76,8 +76,8 @@ public:
         event PrimeFoundHandler^ primeFoundEvent;
 
 ```
-## <a name="to-add-the-private-members"></a>private 멤버를 추가하려면
-클래스는 private 멤버 3개를 포함합니다. 숫자 계산에 사용되는 도우미 메서드 2개와 작업자 스레드의 이벤트 호출을 다시 UI 스레드로 마샬링하는 데 사용되는 CoreDispatcher 개체 1개입니다.
+## <a name="to-add-the-private-members"></a>프라이빗 멤버를 추가하려면
+클래스는 프라이빗 멤버 3개를 포함합니다. 숫자 계산에 사용되는 도우미 메서드 2개와 작업자 스레드의 이벤트 호출을 다시 UI 스레드로 마샬링하는 데 사용되는 CoreDispatcher 개체 1개입니다.
 
 ```cpp
 private:

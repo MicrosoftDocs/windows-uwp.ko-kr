@@ -42,7 +42,7 @@ Windows 런타임에서의 종속성 속성의 예로: [**Control.Background**](
 
 ## <a name="when-to-implement-a-property-as-a-dependency-property"></a>속성을 종속성 속성으로 구현하는 시기
 
-클래스가 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)에서 파생된 경우 클래스에서 공개 읽기/쓰기 속성을 구현할 때마다 속성을 종속성 속성으로 작동하게 할 수 있는 옵션이 있습니다. 개인 필드로 속성을 지원하는 일반적인 기술이 충분한 경우가 있습니다. 사용자 지정 속성을 종속성 속성으로 정의하는 것이 불필요하거나 부적절한 경우도 있습니다. 속성을 지원하려는 시나리오에 따라 선택이 달라질 수 있습니다.
+클래스가 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)에서 파생된 경우 클래스에서 공개 읽기/쓰기 속성을 구현할 때마다 속성을 종속성 속성으로 작동하게 할 수 있는 옵션이 있습니다. 프라이빗 필드로 속성을 지원하는 일반적인 기술이 충분한 경우가 있습니다. 사용자 지정 속성을 종속성 속성으로 정의하는 것이 불필요하거나 부적절한 경우도 있습니다. 속성을 지원하려는 시나리오에 따라 선택이 달라질 수 있습니다.
 
 속성이 Windows 런타임 또는 Windows 런타임 앱의 다음 기능 중 하나 이상을 지원하도록 하려는 경우 해당 속성을 종속성 속성으로 구현하는 것을 고려할 수 있습니다.
 
@@ -166,7 +166,7 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> 에 대 한는 C++/CX 코드, 이유 있는 개인 필드와 공용 읽기 전용 속성을 표시 하는 이유는 [ **DependencyProperty** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 종속성 속성을 사용 하는 다른 호출자 수 있도록 속성 시스템 유틸리티를 공용 식별자를 필요로 하는 Api를 사용할 수도 있습니다. 식별자를 개인 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 또는 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue), [**ClearValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.clearvalue), [**GetAnimationBaseValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getanimationbasevalue), [**SetBinding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.setbinding)및 [**Setter.Property**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter.property)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
+> 에 대 한는 C++/CX 코드, 이유 있는 개인 필드와 공용 읽기 전용 속성을 표시 하는 이유는 [ **DependencyProperty** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 종속성 속성을 사용 하는 다른 호출자 수 있도록 속성 시스템 유틸리티를 공용 식별자를 필요로 하는 Api를 사용할 수도 있습니다. 식별자를 프라이빗 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 또는 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue), [**ClearValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.clearvalue), [**GetAnimationBaseValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getanimationbasevalue), [**SetBinding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.setbinding)및 [**Setter.Property**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter.property)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
 
 ## <a name="dependency-property-name-conventions"></a>종속성 속성 이름 규칙
 
@@ -460,7 +460,7 @@ Windows 런타임 API에서 컬렉션 형식 종속성 속성은 상대적으로
 
 ### <a name="dependency-property-security-considerations"></a>종속성 속성 보안 고려 사항
 
-종속성 속성은 public 속성으로 선언합니다. 종속성 속성 식별자는 **public static readonly** 멤버로 선언합니다. 언어(예: **protected**)에서 허용하는 다른 액세스 수준을 선언하려고 시도해도 종속성 속성은 항상 속성-시스템 API와 함께 식별자를 통해 액세스할 수 있습니다. 종속성 속성 식별자는 내부 또는 개인으로 선언할 수 없습니다. 이렇게 하면 속성 시스템이 올바르게 작동할 수 없기 때문입니다.
+종속성 속성은 public 속성으로 선언합니다. 종속성 속성 식별자는 **public static readonly** 멤버로 선언합니다. 언어(예: **protected**)에서 허용하는 다른 액세스 수준을 선언하려고 시도해도 종속성 속성은 항상 속성-시스템 API와 함께 식별자를 통해 액세스할 수 있습니다. 종속성 속성 식별자는 내부 또는 프라이빗으로 선언할 수 없습니다. 이렇게 하면 속성 시스템이 올바르게 작동할 수 없기 때문입니다.
 
 래퍼 속성은 순전히 편의를 위한 것입니다. 래퍼에 적용되는 보안 메커니즘은 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 또는 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue)를 대신 호출하여 무시할 수 있습니다. 그러므로 래퍼 속성을 공개 상태로 유지하세요. 그렇지 않으면 실질적인 보안상 장점을 전혀 제공하지도 않으면서 정상 호출자가 속성을 사용하기 더 어려워집니다.
 

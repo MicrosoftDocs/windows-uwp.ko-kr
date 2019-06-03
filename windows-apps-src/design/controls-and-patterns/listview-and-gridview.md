@@ -127,7 +127,7 @@ stackPanel1.Children.Add(itemListView);
 
 또한 XAML에서 ItemsSource 속성을 컬렉션에 바인딩할 수도 있습니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-quickstart)를 참조하세요.
 
-여기서 ItemsSource는 Page의 개인 데이터 컬렉션을 노출하는 `Items`라는 public 속성에 바인딩됩니다.
+여기서 ItemsSource는 Page의 프라이빗 데이터 컬렉션을 노출하는 `Items`라는 public 속성에 바인딩됩니다.
 
 **XAML**
 ```xaml

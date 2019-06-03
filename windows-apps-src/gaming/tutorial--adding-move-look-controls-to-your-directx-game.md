@@ -141,7 +141,7 @@ internal:
 };  // class MoveLookController
 ```
 
-코드에는 4개 그룹의 private 필드가 있습니다. 각 필드의 용도에 대해 검토하겠습니다.
+코드에는 4개 그룹의 프라이빗 필드가 있습니다. 각 필드의 용도에 대해 검토하겠습니다.
 
 먼저 카메라 보기에 대해 업데이트된 정보를 저장하는 유용한 필드 몇 가지를 정의합니다.
 
@@ -200,7 +200,7 @@ Windows 런타임 이벤트 디스패처는 다음과 같이 클래스의 인스
 
 이러한 이벤트는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 유형에 구현됩니다. 이때 사용할 **CoreWindow** 개체가 있다고 가정합니다. 개체를 얻는 방법을 모르는 경우 [DirectX 보기를 표시하도록 UWP(유니버설 Windows 플랫폼) C++ 앱을 설정하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465077(v=win.10))을 참조하세요.
 
-앱이 실행되는 동안 이러한 이벤트가 발생하면 처리기에서 private 필드에 정의된 컨트롤러의 상태 정보를 업데이트합니다.
+앱이 실행되는 동안 이러한 이벤트가 발생하면 처리기에서 프라이빗 필드에 정의된 컨트롤러의 상태 정보를 업데이트합니다.
 
 먼저 마우스 및 터치 포인터 이벤트 처리기를 채워 보겠습니다. 첫 번째 이벤트 처리기 **OnPointerPressed()** 에서 포인터의 x-y 좌표를 사용자가 보기 컨트롤러 영역에서 마우스를 클릭하거나 화면을 터치할 때 디스플레이를 관리하는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow)에서 가져옵니다.
 

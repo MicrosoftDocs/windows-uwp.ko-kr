@@ -41,7 +41,7 @@ ms.locfileid: "66371190"
 
 ## <a name="dependency-properties-and-windows-runtime-properties"></a>종속성 속성 및 Windows 런타임 속성
 
-종속성 속성은 런타임에 앱의 모든 종속성 속성을 지원하는 전역 내부 속성 저장소를 제공함으로써 기본 Windows 런타임 속성 기능을 확장합니다. 속성 정의 클래스에서 private인 개인 필드로 속성을 지원하는 표준 패턴의 대안으로 사용됩니다. 이 내부 속성 저장소는 특정 개체에 대해 존재하는 속성 식별자와 값의 집합으로 간주될 수 있습니다([**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)인 경우). 저장소의 각 속성은 이름으로 식별되는 대신 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 인스턴스로 식별됩니다. 그러나 속성 시스템은 대개 이 구현 정보를 숨기므로, 사용자는 일반적으로 간단한 이름(사용하는 코드 언어의 프로그래밍 속성 이름 또는 XAML 작성 시의 특성 이름)을 사용하여 종속성 속성에 액세스할 수 있습니다.
+종속성 속성은 런타임에 앱의 모든 종속성 속성을 지원하는 전역 내부 속성 저장소를 제공함으로써 기본 Windows 런타임 속성 기능을 확장합니다. 속성 정의 클래스에서 private인 프라이빗 필드로 속성을 지원하는 표준 패턴의 대안으로 사용됩니다. 이 내부 속성 저장소는 특정 개체에 대해 존재하는 속성 식별자와 값의 집합으로 간주될 수 있습니다([**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)인 경우). 저장소의 각 속성은 이름으로 식별되는 대신 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 인스턴스로 식별됩니다. 그러나 속성 시스템은 대개 이 구현 정보를 숨기므로, 사용자는 일반적으로 간단한 이름(사용하는 코드 언어의 프로그래밍 속성 이름 또는 XAML 작성 시의 특성 이름)을 사용하여 종속성 속성에 액세스할 수 있습니다.
 
 종속성 속성 시스템의 기초를 제공하는 기본 형식은 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)입니다. **DependencyObject**는 종속성 속성에 액세스할 수 있는 메서드를 정의하고, **DependencyObject** 파생 클래스의 인스턴스는 이전에 언급한 속성 저장소 개념을 내부적으로 지원합니다.
 

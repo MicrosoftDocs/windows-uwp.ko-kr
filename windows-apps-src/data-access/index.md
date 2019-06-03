@@ -1,7 +1,7 @@
 ---
 ms.assetid: 76776b0f-3163-48c9-835b-3f4213968079
 title: 데이터 액세스
-description: 이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱에서 개체 관계형 매핑을 사용하는 방법과 디바이스의 개인 데이터베이스에 데이터를 저장하는 방법에 대해 설명합니다.
+description: 이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱에서 개체 관계형 매핑을 사용하는 방법과 디바이스의 프라이빗 데이터베이스에 데이터를 저장하는 방법에 대해 설명합니다.
 ms.date: 11/13/2017
 ms.topic: article
 keywords: Windows 10, UWP, 데이터, 데이터베이스, 관계형, 테이블, SQLite

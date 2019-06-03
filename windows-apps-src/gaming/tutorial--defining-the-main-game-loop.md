@@ -252,7 +252,7 @@ void GameRenderer::Render()
 -   **RunGame**: 게임 루프의 반복을 실행합니다. 이 메서드는 게임 상태가 **Active**인 경우 게임 루프가 반복될 때마다 한 번 **App::Update**에서 호출됩니다.
 -   **OnSuspending** 하 고 **OnResuming**: 각각 게임의 오디오를 일시 중단하고 다시 시작합니다.
 
-private 메서드:
+프라이빗 메서드:
 
 -   **LoadSavedState** 하 고 **SaveState**: 각각 게임의 현재 상태를 로드하고 저장합니다.
 -   **SaveHighScore** 하 고 **LoadHighScore**: 각각 게임에서 최고 점수를 저장하고 로드합니다.

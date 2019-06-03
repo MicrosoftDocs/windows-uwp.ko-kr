@@ -160,7 +160,7 @@ GLSL에서는 전역 셰이더 변수 선언에 한정자를 적용하여 셰이
 
  
 
-GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전역 변수입니다.
+GLSL에서 한정자가 없는 변수는 각 셰이더에 프라이빗인 일반 글로벌 변수입니다.
 
 데이터를 텍스처(HLSL의 경우 [Texture2D](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d)) 및 연결된 해당 샘플러(HLSL의 경우 [SamplerState](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-sampler))로 전달하는 경우 일반적으로 픽셀 셰이더에서 해당 데이터를 전역 변수로 선언합니다.
 

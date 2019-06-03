@@ -62,7 +62,7 @@ Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강�
 
 ### <a name="22-how-windows-hello-works"></a>2.2 Windows Hello의 작동 방식
 
-사용자가 자신의 컴퓨터에서 Windows Hello를 설정하면 Windows Hello는 해당 디바이스에 새 공개-개인 키 쌍을 만듭니다. TPM([신뢰할 수 있는 플랫폼 모듈](https://technet.microsoft.com/itpro/windows/keep-secure/trusted-platform-module-overview))은 이 개인 키를 생성하고 보호합니다. 디바이스에 TPM 칩이 없는 경우 개인 키는 소프트웨어에 의해 암호화되고 보호됩니다. 그 외에도 TPM 지원 디바이스는 TPM에 키가 바인딩되어 있음을 증명하는 데 사용할 수 있는 데이터 블록을 생성합니다. 예를 들어 솔루션에서 이 증명 정보를 사용하여 사용자에게 다른 권한 부여 수준이 지정되었는지 여부를 확인할 수 있습니다.
+사용자가 자신의 컴퓨터에서 Windows Hello를 설정하면 Windows Hello는 해당 디바이스에 새 공개-개인 키 쌍을 만듭니다. TPM([신뢰할 수 있는 플랫폼 모듈](https://technet.microsoft.com/itpro/windows/keep-secure/trusted-platform-module-overview))은 이 프라이빗 키를 생성하고 보호합니다. 디바이스에 TPM 칩이 없는 경우 프라이빗 키는 소프트웨어에 의해 암호화되고 보호됩니다. 그 외에도 TPM 지원 디바이스는 TPM에 키가 바인딩되어 있음을 증명하는 데 사용할 수 있는 데이터 블록을 생성합니다. 예를 들어 솔루션에서 이 증명 정보를 사용하여 사용자에게 다른 권한 부여 수준이 지정되었는지 여부를 확인할 수 있습니다.
 
 디바이스에서 Windows Hello를 사용하려면 사용자가 Azure Active Directory 계정 또는 Windows 설정에 연결된 Microsoft 계정이 있어야 합니다.
 
@@ -124,7 +124,7 @@ var keyCreationResult = await KeyCredentialManager.RequestCreateAsync(
     AccountId, KeyCredentialCreationOption.ReplaceExisting);
 ```
 
-[  **RequestCreateAsync**](https://docs.microsoft.com/previous-versions/windows/dn973048(v=win.10))는 공개 키 및 개인 키를 만드는 부분입니다. 디바이스에 적절한 TPM 칩이 있는 경우 API는 개인 키와 공개 키를 만들어 그 결과를 저장하도록 이 TPM 칩에 요청합니다. 이러한 TPM 칩이 없으면 OS에서 코드에 키 쌍이 만들어집니다. 생성된 개인 키에 대해 앱에서 직접 액세스하는 방법은 없습니다. 키 쌍 생성의 일부분이 결과 증명 정보이기도 합니다. 증명에 대한 자세한 내용은 다음 섹션을 참조하세요.
+[  **RequestCreateAsync**](https://docs.microsoft.com/previous-versions/windows/dn973048(v=win.10))는 공개 키 및 개인 키를 만드는 부분입니다. 디바이스에 적절한 TPM 칩이 있는 경우 API는 프라이빗 키와 공개 키를 만들어 그 결과를 저장하도록 이 TPM 칩에 요청합니다. 이러한 TPM 칩이 없으면 OS에서 코드에 키 쌍이 만들어집니다. 생성된 프라이빗 키에 대해 앱에서 직접 액세스하는 방법은 없습니다. 키 쌍 생성의 일부분이 결과 증명 정보이기도 합니다. 증명에 대한 자세한 내용은 다음 섹션을 참조하세요.
 
 디바이스에서 키 쌍과 증명 정보가 만들어지면 공개 키, (선택적으로) 증명 정보, 고유 식별자(예: 메일 주소) 등을 백 엔드 등록 서비스로 전송하여 백 엔드에 저장해야 합니다.
 
@@ -235,7 +235,7 @@ if (consentResult.Equals(UserConsentVerificationResult.Verified))
 
 ### <a name="34-authentication-at-the-backend"></a>3.4 백 엔드에서 인증
 
-앱에서 보호된 백 엔드 서비스에 액세스하려는 경우 서비스는 앱에 시도를 보냅니다. 앱에서는 사용자의 개인 키를 사용하여 시도에 서명하고 시도를 다시 서버로 보냅니다. 서버에서는 사용자의 공개 키를 저장했으므로 표준 암호 API를 사용하여 메시지가 올바른 개인 키를 사용해 서명되었는지 확인합니다. 클라이언트 서명은 Windows Hello API를 통해 이루어지며, 개발자는 모든 사용자의 개인 키에 액세스할 수 없습니다.
+앱에서 보호된 백 엔드 서비스에 액세스하려는 경우 서비스는 앱에 시도를 보냅니다. 앱에서는 사용자의 프라이빗 키를 사용하여 시도에 서명하고 시도를 다시 서버로 보냅니다. 서버에서는 사용자의 공개 키를 저장했으므로 표준 암호 API를 사용하여 메시지가 올바른 프라이빗 키를 사용해 서명되었는지 확인합니다. 클라이언트 서명은 Windows Hello API를 통해 이루어지며, 개발자는 모든 사용자의 개인 키에 액세스할 수 없습니다.
 
 서비스에서는 키를 검사하는 것 외에도 키 증명을 확인하여 디바이스에서 키가 저장되는 방법에 대해 제한이 호출되었는지 여부를 확인할 수도 있습니다. 예를 들어 디바이스에서 TPM을 사용하여 키를 보호하는 경우 TPM 없이 키를 저장하는 디바이스에 비해 더 안전합니다. 백 엔드 논리는 예를 들어 TPM이 사용되지 않은 경우 위험을 줄이기 위해 사용자가 특정 금액만 이체할 수 있도록 결정할 수 있습니다.
 
@@ -267,9 +267,9 @@ if (openKeyResult.Status == KeyCredentialStatus.Success)
 }
 ```
 
-첫 번째 줄 [**KeyCredentialManager.OpenAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredentialmanager.openasync)에서는 키 핸들을 열도록 OS에 요청합니다. 이 과정이 완료되면 [**KeyCredential.RequestSignAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredential.requestsignasync) 메서드를 사용하여 시도 메시지에 서명할 수 있으며, 이 경우 Windows Hello를 통해 OS에서 사용자 PIN 또는 생체 인식 정보를 요청합니다. 개발자는 절대로 사용자의 개인 키에 액세스할 수 없습니다. API를 통해 모두 안전하게 보관됩니다.
+첫 번째 줄 [**KeyCredentialManager.OpenAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredentialmanager.openasync)에서는 키 핸들을 열도록 OS에 요청합니다. 이 과정이 완료되면 [**KeyCredential.RequestSignAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredential.requestsignasync) 메서드를 사용하여 시도 메시지에 서명할 수 있으며, 이 경우 Windows Hello를 통해 OS에서 사용자 PIN 또는 생체 인식 정보를 요청합니다. 개발자는 절대로 사용자의 프라이빗 키에 액세스할 수 없습니다. API를 통해 모두 안전하게 보관됩니다.
 
-API는 개인 키를 사용해 시도에 서명하도록 OS에 요청하며, 그러면 시스템은 사용자에게 PIN 코드나 구성된 생체 인식 로그온을 요구합니다. 올바른 정보가 입력되면 시스템은 암호화 기능을 수행하고 시도에 서명하도록 TPM 칩에 요청합니다. TPM을 사용할 수 없는 경우에는 대체 소프트웨어 솔루션을 사용할 수 있습니다. 클라이언트는 서명된 시도를 다시 서버에 전송해야 합니다.
+API는 프라이빗 키를 사용해 챌린지에 서명하도록 OS에 요청합니다. 그러면 시스템은 사용자에게 PIN 코드나 구성된 생체 인식 로그온을 요구합니다. 올바른 정보가 입력되면 시스템은 암호화 기능을 수행하고 시도에 서명하도록 TPM 칩에 요청합니다. TPM을 사용할 수 없는 경우에는 대체 소프트웨어 솔루션을 사용할 수 있습니다. 클라이언트는 서명된 시도를 다시 서버에 전송해야 합니다.
 
 기본 시도-응답 흐름이 이 시퀀스 다이어그램에 표시됩니다.
 
@@ -415,11 +415,11 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 
 | | |
 |-|-|
-| AIK | 증명 ID 키는 마이그레이션 불가능한 키의 속성에 서명하고 확인을 위해 신뢰 당사자에게 속성 및 서명을 제공함으로써 암호화 증명(TPM 키 증명)을 제공하는 데 사용됩니다. 결과로 얻게 되는 서명을 "증명서"라고 합니다. 서명은 AIK 개인 키(이 키를 생성한 TPM에서만 사용 가능)를 사용하여 생성되므로 신뢰 당사자는 증명된 키가 진정으로 마이그레이션 불가능한 키이며 해당 TPM 외부에서 사용할 수 없다는 점을 신뢰할 수 있습니다. |
+| AIK | 증명 ID 키는 마이그레이션 불가능한 키의 속성에 서명하고 확인을 위해 신뢰 당사자에게 속성 및 서명을 제공함으로써 암호화 증명(TPM 키 증명)을 제공하는 데 사용됩니다. 결과로 얻게 되는 서명을 "증명서"라고 합니다. 서명은 AIK 프라이빗 키(이 키를 생성한 TPM에서만 사용 가능)를 사용하여 생성되므로 신뢰 당사자는 증명된 키가 진정으로 마이그레이션 불가능한 키이며 해당 TPM 외부에서 사용할 수 없다는 점을 신뢰할 수 있습니다. |
 | AIK 인증서 | AIK 인증서는 TPM 내에서 AIK의 존재를 입증하는 데 사용됩니다. 또한 AIK에서 인증된 다른 키가 이 특정 TPM에서 발생했음을 입증하는 데에도 사용됩니다. |
 | IDP | IDP는 ID 공급자입니다. Microsoft 계정에 대해 Microsoft에서 제공하는 IDP 빌드를 예로 들 수 있습니다. 응용 프로그램에서 MSA를 사용하여 인증해야 할 때마다 MSA IDP를 호출할 수 있습니다. |
 | PKI | 공개 키 인프라로서, 일반적으로 조직 자체에서 호스트되는 환경을 가리키는 데 사용되며 키 생성, 키 호출 등을 담당합니다. |
-| TPM | 신뢰할 수 있는 플랫폼 모듈을 사용하면 개인 키가 TPM 외부에서 노출되거나 사용되지 않는(즉, 키 마이그레이션 불가능) 방식으로 암호화 공개/개인 키 쌍을 만들 수 있습니다. |
+| TPM | 신뢰할 수 있는 플랫폼 모듈을 사용하면 프라이빗 키가 TPM 외부에서 노출되거나 사용되지 않는(즉, 키 마이그레이션 불가능) 방식으로 암호화 공개/프라이빗 키 쌍을 만들 수 있습니다. |
 | TPM 키 증명 | 키가 TPM에 바인딩되었음을 암호화 방식으로 증명하는 프로토콜입니다. 이 유형의 증명을 사용하여 특정 컴퓨터의 TPM에서 특정 암호화 작업이 발생했음을 보증할 수 있습니다. |
 
 ## <a name="related-topics"></a>관련 항목

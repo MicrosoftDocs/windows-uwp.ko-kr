@@ -345,7 +345,7 @@ private void GetDictionary()
 ```
 
 ## <a name="properties"></a>속성
-Public ref 클래스에서 C++/CX 구성 요소 확장 속성 키워드를 사용 하 여 public 데이터 멤버 속성으로 노출 합니다. 개념은 .NET Framework 속성과 동일합니다. Trivial 속성은 그 기능이 암시적이므로 데이터 멤버와 비슷합니다. NSEOTrivial이 아닌 속성은 명시적인 get 및 set 접근자와 해당 값에 대한 “백업 저장소”인 명명된 전용 변수가 있습니다. 이 예제에서는 private 멤버 변수 \_propertyAValue PropertyA에 대 한 백업 저장소입니다. 속성은 값이 변경될 때 이벤트를 발생시킬 수 있으며 클라이언트 앱은 해당 이벤트를 받도록 등록할 수 있습니다.
+Public ref 클래스에서 C++/CX 구성 요소 확장 속성 키워드를 사용 하 여 public 데이터 멤버 속성으로 노출 합니다. 개념은 .NET Framework 속성과 동일합니다. Trivial 속성은 그 기능이 암시적이므로 데이터 멤버와 비슷합니다. NSEOTrivial이 아닌 속성은 명시적인 get 및 set 접근자와 해당 값에 대한 "백업 저장소"인 명명된 프라이빗 변수가 있습니다. 이 예제에서는 private 멤버 변수 \_propertyAValue PropertyA에 대 한 백업 저장소입니다. 속성은 값이 변경될 때 이벤트를 발생시킬 수 있으며 클라이언트 앱은 해당 이벤트를 받도록 등록할 수 있습니다.
 
 ```cpp
 //Properties

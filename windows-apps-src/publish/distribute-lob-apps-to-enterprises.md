@@ -27,7 +27,7 @@ LOB 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고
 
 ## <a name="set-up-the-enterprise-association"></a>엔터프라이즈 연결 설정
 
-LOB 앱을 엔터프라이즈에 독점적으로 게시하는 첫 번째 단계는 계정과 엔터프라이즈의 개인 저장소 간에 연결을 설정하는 것입니다.
+LOB 앱을 엔터프라이즈에 독점적으로 게시하는 첫 번째 단계는 계정과 엔터프라이즈의 프라이빗 저장소 간에 연결을 설정하는 것입니다.
 
 > [!IMPORTANT]
 > 이 연결 프로세스는 엔터프라이즈에 의해 시작되어야 하고 개발자 계정을 만들 때 사용한 Microsoft 계정과 연결된 메일 주소를 사용해야 합니다. 자세한 내용은 [기간 업무 앱 작업](https://go.microsoft.com/fwlink/p/?LinkId=698846)을 참조하세요.
@@ -73,7 +73,7 @@ LOB 앱의 경우 제출 프로세스의 [연령별 등급](age-ratings.md) 단�
 > [!NOTE]
 > LOB 앱을 가져오려면 조직이 [지원 시장](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets)에 위치해 있어야 하며, 앱을 제출할 때 [해당 시장을 제외](define-pricing-and-market-selection.md)하지 않아야 합니다. 
 
-자세한 내용은 [기간 업무 앱 작업](https://go.microsoft.com/fwlink/p/?LinkId=698846) 및 [개인 저장소를 사용하여 앱 배포](https://go.microsoft.com/fwlink/p/?LinkId=698847)를 참조하세요.
+자세한 내용은 [기간 업무 앱 작업](https://go.microsoft.com/fwlink/p/?LinkId=698846) 및 [프라이빗 저장소를 사용하여 앱 배포](https://go.microsoft.com/fwlink/p/?LinkId=698847)를 참조하세요.
 
 
 ## <a name="update-lob-apps"></a>LOB 앱 업데이트

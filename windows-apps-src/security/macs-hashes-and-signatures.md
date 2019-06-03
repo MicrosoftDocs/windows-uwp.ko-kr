@@ -30,13 +30,13 @@ ms.locfileid: "66371201"
 -   Bob 보냅니다 합니다 \[암호화 되지 않은\] 메시지 및 MAC 네트워크를 통해 alice 값입니다.
 -   Alice는 비밀 키와 메시지를 MAC 기능의 입력으로 사용합니다. Alice는 생성된 MAC 값을 Bob이 보낸 MAC 값과 비교합니다. 두 MAC 값이 같으면 메시지는 전송 중에 변경되지 않은 것입니다.
 
-Bob과 Alice의 대화를 엿들은 제3자 Eve는 사실상 메시지를 조작할 수 없습니다. Eve는 개인 키에 액세스할 수 없으므로 Alice에게 변조된 메시지가 그럴 듯해 보이게 하는 MAC 값을 만들 수 없습니다.
+Bob과 Alice의 대화를 엿들은 제3자 Eve는 사실상 메시지를 조작할 수 없습니다. Eve는 프라이빗 키에 액세스할 수 없으므로 Alice에게 변조된 메시지가 그럴 듯해 보이게 하는 MAC 값을 만들 수 없습니다.
 
-MAC 코드 만들기는 원래 메시지가 변경되지 않았고, 공유 비밀 키가 사용되었고, 해당 개인 키에 액세스할 수 있는 누군가가 메시지 해시에 서명했다는 점만 보장합니다.
+MAC 코드 만들기는 원래 메시지가 변경되지 않았고, 공유 비밀 키가 사용되었고, 해당 프라이빗 키에 액세스할 수 있는 누군가가 메시지 해시에 서명했다는 점만 보장합니다.
 
 [  **MacAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider)를 사용하여 사용 가능한 MAC 알고리즘을 열거하고 대칭 키를 생성할 수 있습니다. [  **CryptographicEngine**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicEngine) 클래스에서 정적 메서드를 사용하여 MAC 값을 만드는 필요한 암호화를 수행할 수 있습니다.
 
-디지털 서명은 개인 키 MAC(메시지 인증 코드)와 동일한 공개 키입니다. MAC는 메시지 수신자가 해당 메시지가 전송 중에 변경되지 않았음을 확인하는 데 개인 키를 사용하는 반면, 서명은 개인/공개 키 쌍을 사용합니다.
+디지털 서명은 프라이빗 키 MAC(메시지 인증 코드)와 동일한 공개 키입니다. MAC는 메시지 수신자가 해당 메시지가 전송 중에 변경되지 않았음을 확인하는 데 프라이빗 키를 사용하는 반면, 서명은 프라이빗/공개 키 쌍을 사용합니다.
 
 다음 예제 코드에서는 [**MacAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider) 클래스를 사용하여 HMAC(해시된 메시지 인증 코드)를 만드는 방법을 보여 줍니다.
 
@@ -135,11 +135,11 @@ namespace SampleMacAlgorithmProvider
 -   Bob 보냅니다 합니다 \[암호화 되지 않은\] 메시지 및 MAC 네트워크를 통해 alice 값입니다.
 -   Alice는 비밀 키와 메시지를 MAC 기능의 입력으로 사용합니다. Alice는 생성된 MAC 값을 Bob이 보낸 MAC 값과 비교합니다. 두 MAC 값이 같으면 메시지는 전송 중에 변경되지 않은 것입니다.
 
-Alice는 암호화되지 않은 메시지를 보냈고, 해시만 암호화되었다는 점에 유의하세요. 이 절차는 원래 메시지가 변경되지 않았고, Alice의 공개 키가 사용되었고, Alice의 개인 키에 액세스할 수 있는 누군가(아마도 Alice)가 메시지 해시에 서명했다는 점만 보장합니다.
+Alice는 암호화되지 않은 메시지를 보냈고, 해시만 암호화되었다는 점에 유의하세요. 이 절차는 원래 메시지가 변경되지 않았고, Alice의 공개 키가 사용되었고, Alice의 프라이빗 키에 액세스할 수 있는 누군가(아마도 Alice)가 메시지 해시에 서명했다는 점만 보장합니다.
 
 [  **HashAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.HashAlgorithmProvider) 클래스를 사용하여 사용 가능한 해시 알고리즘을 열거하고 [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) 값을 만들 수 있습니다.
 
-디지털 서명은 개인 키 MAC(메시지 인증 코드)와 동일한 공개 키입니다. MAC는 메시지 수신자가 해당 메시지가 전송 중에 변경되지 않았음을 확인하는 데 개인 키를 사용하는 반면, 서명은 개인/공개 키 쌍을 사용합니다.
+디지털 서명은 프라이빗 키 MAC(메시지 인증 코드)와 동일한 공개 키입니다. MAC는 메시지 수신자가 해당 메시지가 전송 중에 변경되지 않았음을 확인하는 데 프라이빗 키를 사용하는 반면, 서명은 프라이빗/공개 키 쌍을 사용합니다.
 
 [  **CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) 개체를 사용하면 사용할 때마다 개체를 다시 만들지 않고도 여러 데이터를 반복적으로 해시할 수 있습니다. [  **Append**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.core.cryptographichash.append) 메서드는 해시할 새 데이터를 버퍼에 추가합니다. [  **GetValueAndReset**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.core.cryptographichash.getvalueandreset) 메서드는 데이터를 해시하고 개체를 또 사용하기 위해 초기화합니다. 이 메서드는 다음 예제에 나와 있습니다.
 
@@ -185,10 +185,10 @@ public void SampleReusableHash()
 ## <a name="digital-signatures"></a>디지털 서명
 
 
-디지털 서명은 개인 키 MAC(메시지 인증 코드)와 동일한 공개 키입니다. MAC는 메시지 수신자가 해당 메시지가 전송 중에 변경되지 않았음을 확인하는 데 개인 키를 사용하는 반면, 서명은 개인/공개 키 쌍을 사용합니다.
+디지털 서명은 프라이빗 키 MAC(메시지 인증 코드)와 동일한 공개 키입니다. MAC는 메시지 수신자가 해당 메시지가 전송 중에 변경되지 않았음을 확인하는 데 프라이빗 키를 사용하는 반면, 서명은 프라이빗/공개 키 쌍을 사용합니다.
 
 대부분의 공개 키 서명 작업은 집중적인 계산이 필요하므로 주로 원본 메시지에 서명하는 것보다 메시지 해시에 서명(암호화)하는 것이 보다 효과적입니다. 발신자는 메시지 해시를 만들고, 해시에 서명하고, 서명과 (암호화되지 않은) 메시지 둘 다를 보냅니다. 수신자는 메시지의 해시를 계산하고, 서명을 암호 해독하고, 암호 해독한 서명을 해시 값과 비교합니다. 그 둘이 일치하면 수신자는 발신자가 보낸 메시지가 전송 중에 변경되지 않았음을 확신할 수 있습니다.
 
-서명은 원래 메시지가 변경되지 않았고, 발신자의 공개 키가 사용되었고, 개인 키에 액세스할 수 있는 누군가가 메시지 해시에 서명했다는 점만 보장합니다.
+서명은 원래 메시지가 변경되지 않았고, 발신자의 공개 키가 사용되었고, 프라이빗 키에 액세스할 수 있는 누군가가 메시지 해시에 서명했다는 점만 보장합니다.
 
 [  **AsymmetricKeyAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider) 개체를 사용하면 사용 가능한 서명 알고리즘을 열거하고 키 쌍을 생성하거나 가져올 수 있습니다. [  **CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) 클래스에서 정적 메서드를 사용하면 메시지에 서명하거나 서명을 확인할 수 있습니다.

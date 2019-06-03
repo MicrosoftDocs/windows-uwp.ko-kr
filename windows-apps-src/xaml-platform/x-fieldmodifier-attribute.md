@@ -1,5 +1,5 @@
 ---
-description: 개체 참조의 필드가 private 기본 동작 대신 public 액세스로 정의되도록 XAML 컴파일 동작을 수정합니다.
+description: 개체 참조의 필드가 프라이빗 기본 동작 대신 public 액세스로 정의되도록 XAML 컴파일 동작을 수정합니다.
 title: xFieldModifier 특성
 ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
 ms.date: 02/08/2017
@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 751cda36fc58d0e6add9204327a74ec947c9fc53
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57660918"

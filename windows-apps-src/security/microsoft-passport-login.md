@@ -349,7 +349,7 @@ ms.locfileid: "66371300"
             }
     ```
 
--   다음으로 사용자의 로그인 요청을 처리해야 합니다. Login.xaml.cs에 현재 계정 로그인을 보관하는 새 private 변수를 만듭니다. 그런 다음 새 메서드 호출 SignInPassport를 추가합니다. AccountHelper.ValidateAccountCredentials 메서드를 사용하여 계정 자격 증명의 유효성을 검사합니다. 입력한 사용자 이름이 이전 단계에서 설정한 하드 코드된 문자열 값과 같으면 이 메서드는 부울 값을 반환합니다. 이 샘플의 경우 하드 코드된 값은 "sampleUsername"입니다.
+-   다음으로 사용자의 로그인 요청을 처리해야 합니다. Login.xaml.cs에 현재 계정 로그인을 보관하는 새 프라이빗 변수를 만듭니다. 그런 다음 새 메서드 호출 SignInPassport를 추가합니다. AccountHelper.ValidateAccountCredentials 메서드를 사용하여 계정 자격 증명의 유효성을 검사합니다. 입력한 사용자 이름이 이전 단계에서 설정한 하드 코드된 문자열 값과 같으면 이 메서드는 부울 값을 반환합니다. 이 샘플의 경우 하드 코드된 값은 "sampleUsername"입니다.
 
     ```cs
     using PassportLogin.Models;
@@ -510,7 +510,7 @@ ms.locfileid: "66371300"
     </Grid>
     ```
 
--   Welcome.xaml.cs 코드 숨김 파일에 로그인된 계정을 보관하는 새 private 변수를 추가합니다. OnNavigateTo 이벤트를 재정의하는 메서드를 구현해야 하며 이는 환영 페이지에 전달된 계정을 저장합니다. 또한 XAML에 정의된 두 개의 단추에 대한 클릭 이벤트를 구현해야 합니다. Models 및 Utils 폴더에 대한 참조가 필요합니다.
+-   Welcome.xaml.cs 코드 숨김 파일에 로그인된 계정을 보관하는 새 프라이빗 변수를 추가합니다. OnNavigateTo 이벤트를 재정의하는 메서드를 구현해야 하며 이는 환영 페이지에 전달된 계정을 저장합니다. 또한 XAML에 정의된 두 개의 단추에 대한 클릭 이벤트를 구현해야 합니다. Models 및 Utils 폴더에 대한 참조가 필요합니다.
 
     ```cs
     using PassportLogin.Models;
@@ -743,7 +743,7 @@ ms.locfileid: "66371300"
     }
     ```
 
--   로그인 페이지에 UserSelection 페이지 목록에서 선택한 계정에 로그인하는 코드가 필요합니다. OnNavigatedTo 이벤트에서 이동에 전달된 계정을 저장합니다. 기존 계정인지 식별하는 새 private 변수를 추가하는 작업부터 시작합니다. 그런 다음 OnNavigatedTo 이벤트를 처리합니다.
+-   로그인 페이지에 UserSelection 페이지 목록에서 선택한 계정에 로그인하는 코드가 필요합니다. OnNavigatedTo 이벤트에서 이동에 전달된 계정을 저장합니다. 기존 계정인지 식별하는 새 프라이빗 변수를 추가하는 작업부터 시작합니다. 그런 다음 OnNavigatedTo 이벤트를 처리합니다.
 
     ```cs
     namespace PassportLogin.Views
@@ -904,7 +904,7 @@ ms.locfileid: "66371300"
     </Grid>
     ```
 
--   PassportRegister.xaml.cs 코드 숨김 파일에서 private Account 변수와 Register 단추에 대한 클릭 이벤트를 구현합니다. 새 로컬 계정을 추가하고 Passport 키를 만듭니다.
+-   PassportRegister.xaml.cs 코드 숨김 파일에서 프라이빗 Account 변수와 Register 단추에 대한 클릭 이벤트를 구현합니다. 새 로컬 계정을 추가하고 Passport 키를 만듭니다.
 
     ```cs
     using PassportLogin.Models;

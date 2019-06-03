@@ -65,7 +65,7 @@ UWP XAML에서 사용된 일부 형식에는 **Name**이라는 속성도 있습�
 
 **Name**을 요소의 설정 가능한 속성으로 사용할 수 있는 경우 XAML에서 **Name** 및 **x:Name**을 서로 바꿔서 사용할 수 있지만, 동일한 요소에 두 특성을 모두 지정하면 오류가 발생합니다. **Name** 속성이 있지만 읽기 전용인 경우도 있습니다(예: [**VisualState.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstate.name)). 이 경우 XAML에서 항상 **x:Name**을 사용하여 해당 요소의 이름을 지정하며 읽기 전용 **Name**은 덜 일반적인 일부 코드 시나리오에 사용됩니다.
 
-**참고** 일반적으로   [**FrameworkElement.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.name)은 원래 **x:Name**으로 설정된 값을 변경하기 위한 방법으로 사용해서는 안 됩니다. 단, 이 일반 규칙에 대한 예외 시나리오도 있습니다. XAML 이름 범위의 생성 및 정의는 XAML 프로세서 작업입니다. 런타임에 **FrameworkElement.Name**을 수정하면 XAML 이름 범위/전용 필드의 이름 지정이 일치하지 않게 되므로 코드 숨김에서 추적하기 어렵습니다.
+**참고** 일반적으로   [**FrameworkElement.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.name)은 원래 **x:Name**으로 설정된 값을 변경하기 위한 방법으로 사용해서는 안 됩니다. 단, 이 일반 규칙에 대한 예외 시나리오도 있습니다. XAML 이름 범위의 생성 및 정의는 XAML 프로세서 작업입니다. 런타임에 **FrameworkElement.Name**을 수정하면 XAML 이름 범위/프라이빗 필드의 이름 지정이 일치하지 않게 되므로 코드 숨김에서 추적하기 어렵습니다.
 
 ### <a name="xname-and-xkey"></a>x:Name 및 x:Key
 

@@ -226,7 +226,7 @@ Visual Studio에 대한 기호 옵션을 설정하려면 **도구 &gt; 옵션**�
 .reload
 ```
 
-`‘;’` 구분 기호를 사용하여 경로를 더 추가하거나 `.sympath+` 명령을 사용할 수 있습니다. WinDbg를 사용하는 고급 기호 작업의 경우 [공용 및 개인 기호](https://docs.microsoft.com/windows-hardware/drivers/debugger/public-and-private-symbols)를 참조하세요.
+`‘;’` 구분 기호를 사용하여 경로를 더 추가하거나 `.sympath+` 명령을 사용할 수 있습니다. WinDbg를 사용하는 고급 기호 작업의 경우 [공용 및 프라이빗 기호](https://docs.microsoft.com/windows-hardware/drivers/debugger/public-and-private-symbols)를 참조하세요.
 
 ## <a name="windbg"></a>WinDbg
 

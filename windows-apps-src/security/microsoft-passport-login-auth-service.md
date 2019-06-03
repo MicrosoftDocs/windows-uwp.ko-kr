@@ -383,7 +383,7 @@ ms.locfileid: "66371236"
     }
     ```
 
-- 이제 MockStore 클래스가 완료되어 private으로 간주되어야 하는 데이터베이스를 나타냅니다. MockStore에 액세스하려면 AuthService 클래스에서 데이터베이스 데이터를 조작해야 합니다. AuthService 폴더에서 "AuthService.cs"라는 새 클래스를 만듭니다. 클래스 정의를 public으로 변경하고 단일 인스턴스만 만들어지도록 singleton 인스턴스 패턴을 추가합니다.
+- 이제 MockStore 클래스가 완료되어 프라이빗으로 간주되어야 하는 데이터베이스를 나타냅니다. MockStore에 액세스하려면 AuthService 클래스에서 데이터베이스 데이터를 조작해야 합니다. AuthService 폴더에서 "AuthService.cs"라는 새 클래스를 만듭니다. 클래스 정의를 public으로 변경하고 단일 인스턴스만 만들어지도록 singleton 인스턴스 패턴을 추가합니다.
 
     ```cs
     namespace PassportLogin.AuthService
@@ -599,7 +599,7 @@ ms.locfileid: "66371236"
     </Grid>
     ```
 
--   로그인 클래스 코드 숨김에서 클래스 맨 위의 Account private 변수를 변경하여 UserAccount가 되도록 해야 합니다. 형식을 캐스트할 OnNavigateTo 이벤트를 변경하여 UserAccount가 되도록 합니다. 다음과 같은 참조가 필요합니다.
+-   로그인 클래스 코드 숨김에서 클래스 맨 위의 Account 프라이빗 변수를 변경하여 UserAccount가 되도록 해야 합니다. 형식을 캐스트할 OnNavigateTo 이벤트를 변경하여 UserAccount가 되도록 합니다. 다음과 같은 참조가 필요합니다.
 
     ```cs
     using PassportLogin.AuthService;
@@ -771,7 +771,7 @@ ms.locfileid: "66371236"
     </Grid>
     ```
 
--   Welcome.xaml.cs 파일에서 클래스의 맨 위쪽에 있는 private Account 변수를 private UserAccount 변수가 되도록 변경해야 합니다. 그런 다음 OnNavigatedTo 메서드를 업데이트하여 AuthService를 사용하고 현재 계정에 대한 정보를 검색합니다. 계정 정보가 있으면 디바이스를 표시하도록 목록의 itemsource를 설정할 수 있습니다. AuthService 네임스페이스에 대한 참조를 추가해야 합니다.
+-   Welcome.xaml.cs 파일에서 클래스의 맨 위쪽에 있는 프라이빗 Account 변수를 프라이빗 UserAccount 변수가 되도록 변경해야 합니다. 그런 다음 OnNavigatedTo 메서드를 업데이트하여 AuthService를 사용하고 현재 계정에 대한 정보를 검색합니다. 계정 정보가 있으면 디바이스를 표시하도록 목록의 itemsource를 설정할 수 있습니다. AuthService 네임스페이스에 대한 참조를 추가해야 합니다.
 
     ```cs
     using PassportLogin.AuthService;
@@ -944,7 +944,7 @@ ms.locfileid: "66371236"
     }
     ```
 
--   PassportRegister 페이지에서 코드 숨김을 업데이트해야 하며 사용자 인터페이스는 변경할 필요가 없습니다. PassportRegister.xaml.cs에서 클래스 맨 위쪽의 private Account 변수는 더 이상 필요하지 않으므로 제거합니다. RegisterButton 클릭 이벤트를 업데이트하여 AuthService를 사용합니다. 이 메서드에서 새 UserAccount를 만든 다음 Passport 세부 정보를 업데이트하려고 합니다. Passport에서 Passport 키를 만들지 못한 경우 등록 프로세스가 실패했으므로 계정이 제거됩니다.
+-   PassportRegister 페이지에서 코드 숨김을 업데이트해야 하며 사용자 인터페이스는 변경할 필요가 없습니다. PassportRegister.xaml.cs에서 클래스 맨 위쪽의 프라이빗 Account 변수는 더 이상 필요하지 않으므로 제거합니다. RegisterButton 클릭 이벤트를 업데이트하여 AuthService를 사용합니다. 이 메서드에서 새 UserAccount를 만든 다음 Passport 세부 정보를 업데이트하려고 합니다. Passport에서 Passport 키를 만들지 못한 경우 등록 프로세스가 실패했으므로 계정이 제거됩니다.
 
     ```cs
     private async void RegisterButton_Click_Async(object sender, RoutedEventArgs e)

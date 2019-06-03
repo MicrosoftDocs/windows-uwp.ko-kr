@@ -102,7 +102,7 @@ public:
 };  // Class CameraPanController
 ```
 
-private 필드에는 카메라 컨트롤러의 현재 상태가 포함되어 있습니다. 해당 필드를 검토해 보겠습니다.
+프라이빗 필드에는 카메라 컨트롤러의 현재 상태가 포함되어 있습니다. 해당 필드를 검토해 보겠습니다.
 
 -   **m\_위치** 장면 공간에서 카메라의 위치입니다. 이 예에서는 z-좌표 값이 0에 고정되어 있습니다. DirectX::XMFLOAT2를 사용하여 이 값을 나타낼 수 있지만 이 샘플 및 향후 확장성을 위해 DirectX::XMFLOAT3을 사용합니다. 이 값을 통해 전달 합니다 **가져올\_위치** 속성 뷰포트 적절 하 게 업데이트할 수 있도록 해당 앱을 합니다.
 -   **m\_panInUse** 이동 작업을 활성 상태 인지 또는 보다 구체적으로, 여부 플레이어는 화면을 터치 카메라를 이동를 나타내는 부울 값입니다.
@@ -140,7 +140,7 @@ Windows 런타임 이벤트 디스패처에서는 다음과 같이 앱에서 처
 
 이러한 이벤트는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 유형에 구현됩니다. 이때 사용할 **CoreWindow** 개체가 있다고 가정합니다. 자세한 내용은 [DirectX 보기를 표시하도록 UWP C++ 앱을 설정하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465077(v=win.10))을 참조하세요.
 
-이러한 이벤트는 앱이 실행되는 동안 발생하므로 처리기에서 private 필드에 정의된 카메라 컨트롤러 상태 정보를 업데이트합니다.
+이러한 이벤트는 앱이 실행되는 동안 발생하므로 처리기에서 프라이빗 필드에 정의된 카메라 컨트롤러 상태 정보를 업데이트합니다.
 
 먼저 터치 포인터 이벤트 처리기를 채워보겠습니다. 첫 번째 이벤트 처리기 **OnPointerPressed**에서는 사용자가 화면을 터치하거나 마우스를 클릭할 때 디스플레이를 관리하는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow)에서 포인터의 x-y 좌표를 가져옵니다.
 
