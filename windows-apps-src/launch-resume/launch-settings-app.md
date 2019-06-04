@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 1a0c632089c8c4cf84ecf6df99935671423b51a6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d720b256ae528192d694f98877126a6df087a18e
+ms.sourcegitcommit: 26bd7953ee5c5e625d4ed8f93df0391511c76f23
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370813"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491144"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -234,7 +234,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 나타납니다 | ms-settings:privacy-appdiagnostics |
 | 자동 파일 다운로드 | ms-settings:privacy-automaticfiledownloads |
 | 배경 앱 | ms-settings:privacy-backgroundapps |
-| 달력 | ms-settings:privacy-calendar |
+| 일정 | ms-settings:privacy-calendar |
 | 통화 기록 | ms-settings:privacy-callhistory |
 | 카메라 | ms-settings:privacy-webcam |
 | 연락처 | ms-settings:privacy-contacts |
@@ -274,7 +274,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 정보 | ms-settings:about |
 | 고급 디스플레이 설정 | ms-settings:display-advanced(고급 디스플레이 옵션을 지원하는 장치에서만 사용 가능) |
-| 앱 볼륨 및 장치 기본 설정 | ms-settings:apps-volume |
+| 앱 볼륨 및 장치 기본 설정 | ms-설정: 앱-볼륨 (**Windows 10, 버전 1903 추가**)|
 | 배터리 절약 모드 | ms-settings:batterysaver(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 배터리 절약 모드 설정 | ms-settings:batterysaver-settings(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 배터리 사용 | ms-settings:batterysaver-usagedetails(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |

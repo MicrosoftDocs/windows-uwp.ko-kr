@@ -8,7 +8,7 @@ keywords: windows 10, uwp, 게임, 아케이드 스틱, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f9e3ff29dfb17b6e2a07df52153013b5266206e
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57593148"
@@ -125,7 +125,7 @@ Each arcade stick can be associated with a user account to link their identity t
 
 ### <a name="polling-the-arcade-stick"></a>아케이드 스틱 폴링
 
-폴링은 정확한 시점에 아케이드 스틱의 스냅숏을 캡처합니다. 이러한 입력 수집 방법은 대부분의 게임에 적합합니다. 게임의 논리는 일반적으로 이벤트 기반 방식이 아닌 결정적 루프로 실행되기 때문입니다. 또한 시간을 두고 수집된 여러 단일 입력보다 한 번에 수집된 입력에서 게임 명령을 해석하는 것이 일반적으로 더 간단합니다.
+폴링은 정확한 시점에 아케이드 스틱의 스냅샷을 캡처합니다. 이러한 입력 수집 방법은 대부분의 게임에 적합합니다. 게임의 논리는 일반적으로 이벤트 기반 방식이 아닌 결정적 루프로 실행되기 때문입니다. 또한 시간을 두고 수집된 여러 단일 입력보다 한 번에 수집된 입력에서 게임 명령을 해석하는 것이 일반적으로 더 간단합니다.
 
 아케이드 스틱은 [GetCurrentReading][]을 호출하여 폴링합니다. 이 함수는 아케이드 스틱의 상태가 포함된 [ArcadeStickReading][]을 반환합니다.
 
@@ -170,7 +170,7 @@ if (ArcadeStickButtons::None == (reading.Buttons & ArcadeStickButtons::Action1))
 
 ## <a name="run-the-inputinterfacing-sample"></a>InputInterfacing 샘플 실행
 
-[InputInterfacingUWP 샘플 _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP)에서는 아케이드 스틱 및 여러 종류의 입력 장치를 동시에 사용하는 방법과 이러한 입력 장치가 UI 탐색 컨트롤러로 동작하는 방법을 보여 줍니다.
+[InputInterfacingUWP 샘플 _(github)_ ](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP)에서는 아케이드 스틱 및 여러 종류의 입력 장치를 동시에 사용하는 방법과 이러한 입력 장치가 UI 탐색 컨트롤러로 동작하는 방법을 보여 줍니다.
 
 ## <a name="see-also"></a>참고 항목
 

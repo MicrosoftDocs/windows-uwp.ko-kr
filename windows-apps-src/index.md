@@ -9,12 +9,12 @@ ms.date: 08/04/2017
 keywords: windows uwp, 유니버설 windows 플랫폼, Windows 런타임 API, windows api, windows api 참조, winrt api, windows api 참조, uwp api, uwp api 참조, uwp 개발, uwp 설계, uwp 게시
 ms.localizationpriority: medium
 ms.technology: uwp-conceptual-docs
-ms.openlocfilehash: ebc8d3c8602a5a67816f0817af0d2f7851a82d68
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 04adb7de9fa52988329bd8b5739b6bc315ddf786
+ms.sourcegitcommit: a4fe508e62827a10471e2359e81e82132dc2ac5a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984149"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66468337"
 ---
 # <a name="universal-windows-platform-documentation"></a>유니버설 Windows 플랫폼 설명서
 
@@ -230,7 +230,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 PC, Xbox One, HoloLens 등 �
                 <div class="card">
                     <div class="cardText">
                         <h3>관련 문서</h3>
-                        <p><a href="/windows/msix/desktop/desktop-to-uwp-root">MSIX 패키징 및 배포</a></p>
+                        <p><a href="/windows/msix">MSIX 패키징 및 배포</a></p>
                         <p><a href="https://docs.microsoft.com/dotnet/csharp/index">C# 가이드</a></p>
                         <p><a href="https://docs.microsoft.com/visualstudio/ide/">Visual Studio</a></p>
                     </div>

@@ -35,7 +35,7 @@ Direct3D 장치는 비디오 메모리에 리소스를 만드는 데 사용하�
 
 [**QueryPerformanceCounter**](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancecounter)를 함께 [ **QueryPerformanceFrequency**](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancefrequency), UWP 앱 용 게임 타이머를 구현 하는 가장 좋은 방법은 그대로입니다.
 
-타이머와 UWP 앱 수명 주기의 미묘한 차이를 알고 있어야 합니다. 일시 중단/다시 시작은 플레이어가 데스크톱 게임을 다시 실행하는 것과는 다른데, 이는 게임이 마지막으로 플레이된 때로부터 시간이 지나 스냅숏을 다시 시작하기 때문입니다. 많은 시간이 경과한 경우(예: 몇 주) 일부 게임 타이머 구현은 정상적으로 동작하지 않을 수 있습니다. 앱 수명 주기 이벤트를 사용하여 게임이 다시 시작될 때 타이머를 초기화할 수 있습니다.
+타이머와 UWP 앱 수명 주기의 미묘한 차이를 알고 있어야 합니다. 일시 중단/다시 시작은 플레이어가 데스크톱 게임을 다시 실행하는 것과는 다른데, 이는 게임이 마지막으로 플레이된 때로부터 시간이 지나 스냅샷을 다시 시작하기 때문입니다. 많은 시간이 경과한 경우(예: 몇 주) 일부 게임 타이머 구현은 정상적으로 동작하지 않을 수 있습니다. 앱 수명 주기 이벤트를 사용하여 게임이 다시 시작될 때 타이머를 초기화할 수 있습니다.
 
 여전히 RDTSC 명령을 사용하는 게임은 업그레이드 해야 합니다. [게임 타이밍 및 멀티 코어 프로세서](https://docs.microsoft.com/windows/desktop/DxTechArts/game-timing-and-multicore-processors)를 참조하세요.
 

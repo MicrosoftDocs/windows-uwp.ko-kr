@@ -8,7 +8,7 @@ keywords: windows 10, uwp, 게임, 게임 패드, 진동
 ms.localizationpriority: medium
 ms.openlocfilehash: e65b22039c381bd333516bd9f98c60bbddb9621c
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57646928"
@@ -231,7 +231,7 @@ Gamepad.GamepadRemoved += (object sender, Gamepad e) =>
 
 ### <a name="polling-the-gamepad"></a>게임 패드 폴링
 
-폴링은 정확한 시점에 탐색 장치의 스냅숏을 캡처합니다. 이러한 입력 수집 방법은 대부분의 게임에 적합합니다. 게임의 논리는 일반적으로 이벤트 기반 방식이 아닌 결정적 루프로 실행되기 때문입니다. 또한 시간을 두고 수집된 여러 단일 입력보다 한 번에 수집된 입력에서 게임 명령을 해석하는 것이 일반적으로 더 간단합니다.
+폴링은 정확한 시점에 탐색 장치의 스냅샷을 캡처합니다. 이러한 입력 수집 방법은 대부분의 게임에 적합합니다. 게임의 논리는 일반적으로 이벤트 기반 방식이 아닌 결정적 루프로 실행되기 때문입니다. 또한 시간을 두고 수집된 여러 단일 입력보다 한 번에 수집된 입력에서 게임 명령을 해석하는 것이 일반적으로 더 간단합니다.
 
 게임 패드는 [GetCurrentReading][]을 호출하여 폴링합니다. 이 함수는 게임 패드의 상태가 포함된 [GamepadReading][]을 반환합니다.
 
@@ -374,7 +374,7 @@ if (GamepadButtons.None == (reading.Buttons & GamepadButtons.A))
 
 ## <a name="run-the-gamepad-input-sample"></a>게임 패드 입력 샘플 실행
 
-[GamepadUWP 샘플 _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/GamepadUWP)은 게임 패드에 연결하여 상태를 읽는 방법을 보여 줍니다.
+[GamepadUWP 샘플 _(github)_ ](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/GamepadUWP)은 게임 패드에 연결하여 상태를 읽는 방법을 보여 줍니다.
 
 ## <a name="vibration-and-impulse-triggers-overview"></a>진동 및 임펄스 트리거 개요
 
@@ -462,7 +462,7 @@ mainGamepad.Vibration = vibration;
 
 ## <a name="run-the-gamepad-vibration-sample"></a>게임 패드 진동 샘플 실행
 
-[GamepadVibrationUWP 샘플 _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/GamepadVibrationUWP)은 게임 패드 진동 모터와 임펄스 트리거를 사용하여 다양한 효과를 생성하는 방법을 보여 줍니다.
+[GamepadVibrationUWP 샘플 _(github)_ ](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/GamepadVibrationUWP)은 게임 패드 진동 모터와 임펄스 트리거를 사용하여 다양한 효과를 생성하는 방법을 보여 줍니다.
 
 ## <a name="see-also"></a>참고 항목
 

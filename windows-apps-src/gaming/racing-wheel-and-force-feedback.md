@@ -8,7 +8,7 @@ keywords: Windows 10, uwp, 게임, 레이싱 휠, 힘 피드백
 ms.localizationpriority: medium
 ms.openlocfilehash: ab7c5bc15b149d5f469b7fc5e6b6285986569b22
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57608838"
@@ -136,7 +136,7 @@ Each racing wheel can be associated with a user account to link their identity t
 
 ### <a name="polling-the-racing-wheel"></a>레이싱 휠 폴링
 
-폴링은 정확한 시점에 레이싱 휠의 스냅숏을 캡처합니다. 이러한 입력 수집 방법은 대부분의 게임에 적합합니다. 게임의 논리는 일반적으로 이벤트 기반 방식이 아닌 결정적 루프로 실행되기 때문입니다. 또한 시간을 두고 수집된 여러 단일 입력보다 한 번에 수집된 입력에서 게임 명령을 해석하는 것이 일반적으로 더 간단합니다.
+폴링은 정확한 시점에 레이싱 휠의 스냅샷을 캡처합니다. 이러한 입력 수집 방법은 대부분의 게임에 적합합니다. 게임의 논리는 일반적으로 이벤트 기반 방식이 아닌 결정적 루프로 실행되기 때문입니다. 또한 시간을 두고 수집된 여러 단일 입력보다 한 번에 수집된 입력에서 게임 명령을 해석하는 것이 일반적으로 더 간단합니다.
 
 레이싱 휠은 [GetCurrentReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.getcurrentreading#Windows_Gaming_Input_RacingWheel_GetCurrentReading)을 호출하여 폴링합니다. 이 함수는 레이싱 휠의 상태가 포함된 [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading)을 반환합니다.
 
@@ -274,7 +274,7 @@ if (racingwheel->HasPatternShifter)
 
 ## <a name="run-the-inputinterfacing-sample"></a>InputInterfacing 샘플 실행
 
-[InputInterfacingUWP 샘플 _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP)에서는 레이싱 휠과 여러 종류의 입력 장치를 동시에 사용하는 방법과 이러한 입력 장치가 UI 탐색 컨트롤러로 동작하는 방법을 보여 줍니다.
+[InputInterfacingUWP 샘플 _(github)_ ](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP)에서는 레이싱 휠과 여러 종류의 입력 장치를 동시에 사용하는 방법과 이러한 입력 장치가 UI 탐색 컨트롤러로 동작하는 방법을 보여 줍니다.
 
 ## <a name="force-feedback-overview"></a>힘 피드백 개요
 

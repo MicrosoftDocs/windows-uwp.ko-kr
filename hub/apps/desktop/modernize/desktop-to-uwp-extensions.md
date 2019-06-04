@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 291c16d14428f8c6476b12fbadf00f84c26a4235
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 814d8c04943e32ff4d2f0c81bd847e78becd5ebb
+ms.sourcegitcommit: a4fe508e62827a10471e2359e81e82132dc2ac5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359479"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66468329"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Windows 10 및 UWP 패키지에 포함 된 데스크톱 앱 통합
 
@@ -465,6 +465,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 * [파일 탐색기의 미리 보기 창에서 파일 콘텐츠를 보여 줍니다.](#preview)
 * [파일 탐색기의 유형 열을 사용 하 여 사용자가 그룹 파일을 사용 하도록 설정](#enable)
 * [검색, 인덱스, 속성 대화 상자 및 세부 정보 창에 파일 속성을 사용할 수 있도록](#make-file-properties)
+* [파일 형식에 대 한 상황에 맞는 메뉴 처리기를 지정 합니다.](#context-menu)
 * [클라우드 서비스에서 파일을 파일 탐색기에 표시](#cloud-files)
 
 <a id="define" />
@@ -784,6 +785,104 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
             <desktop2:DesktopPropertyHandler Clsid ="20000000-0000-0000-0000-000000000001"/>
           </uap3:FileTypeAssociation>
         </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+</Package>
+```
+
+<a id="context-menu" />
+
+### <a name="specify-a-context-menu-handler-for-a-file-type"></a>파일 형식에 대 한 상황에 맞는 메뉴 처리기를 지정 합니다.
+
+데스크톱 응용 프로그램 정의 하는 경우는 [상황에 맞는 메뉴 처리기](https://docs.microsoft.com/windows/desktop/shell/context-menu-handlers), 메뉴 처리기를 등록 하려면이 확장을 사용 합니다.
+
+#### <a name="xml-namespaces"></a>XML 네임스페이스
+
+* http://schemas.microsoft.com/appx/manifest/foundation/windows10
+* http://schemas.microsoft.com/appx/manifest/desktop/windows10/4
+
+#### <a name="elements-and-attributes-of-this-extension"></a>이 확장의 요소 및 특성
+
+```XML
+<Extensions>
+    <com:Extension Category="windows.comServer">
+        <com:ComServer>
+            <com:SurrogateServer AppId="[AppID]" DisplayName="[DisplayName]">
+                <com:Class Id="[Clsid]" Path="[Path]" ThreadingModel="[Model]"/>
+            </com:SurrogateServer>
+        </com:ComServer>
+    </com:Extension>
+    <desktop4:Extension Category="windows.fileExplorerContextMenus">
+        <desktop4:FileExplorerContextMenus>
+            <desktop4:ItemType Type="[Type]">
+                <desktop4:Verb Id="[ID]" Clsid="[Clsid]" />
+            </desktop4:ItemType>
+        </desktop4:FileExplorerContextMenus>
+    </desktop4:Extension>
+</Extensions>
+```
+
+전체 스키마 참조를 찾으려면: [com:ComServer](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-com-comserver) 하 고 [desktop4:FileExplorerContextMenus](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus)합니다.
+
+#### <a name="instructions"></a>지침
+
+상황에 맞는 메뉴 처리기를 등록 하려면 다음이 지침을 따릅니다.
+
+1. 데스크톱 응용 프로그램에서 구현 된 [상황에 맞는 메뉴 처리기](https://docs.microsoft.com/windows/desktop/shell/context-menu-handlers) 구현 하 여는 [IExplorerCommand](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) 또는 [IExplorerCommandState](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate) 인터페이스. 샘플을 참조 하세요. 합니다 [ExplorerCommandVerb](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/ExplorerCommandVerb) 코드 샘플입니다. 각 구현 개체에 대 한 GUID 클래스를 정의 하 고 있는지 확인 합니다. 다음 코드는 구현의 클래스 ID를 정의 하는 예를 들어 [IExplorerCommand](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand)합니다.
+
+    ```cpp
+    class __declspec(uuid("d0c8bceb-28eb-49ae-bc68-454ae84d6264")) CExplorerCommandVerb;
+    ```
+
+2. 패키지 매니페스트에 지정 된 [com:ComServer](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-com-comserver) 상황에 맞는 메뉴 처리기 구현의 클래스 ID를 사용 하 여 COM 서로게이트 서버를 등록 하는 응용 프로그램 확장입니다.
+
+    ```xml
+    <com:Extension Category="windows.comServer">
+        <com:ComServer>
+            <com:SurrogateServer AppId="d0c8bceb-28eb-49ae-bc68-454ae84d6264" DisplayName="ContosoHandler">
+                <com:Class Id="d0c8bceb-28eb-49ae-bc68-454ae84d6264" Path="ExplorerCommandVerb.dll" ThreadingModel="STA"/>
+            </com:SurrogateServer>
+        </com:ComServer>
+    </com:Extension>
+    ```
+
+2. 패키지 매니페스트에 지정 된 [desktop4:FileExplorerContextMenus](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) 에 상황에 맞는 메뉴 처리기 구현을 등록 하는 응용 프로그램 확장입니다.
+
+    ```xml
+    <desktop4:Extension Category="windows.fileExplorerContextMenus">
+        <desktop4:FileExplorerContextMenus>
+            <desktop4:ItemType Type=".rar">
+                <desktop4:Verb Id="Command1" Clsid="d0c8bceb-28eb-49ae-bc68-454ae84d6264" />
+            </desktop4:ItemType>
+        </desktop4:FileExplorerContextMenus>
+    </desktop4:Extension>
+    ```
+
+#### <a name="example"></a>예제
+
+```XML
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"
+  IgnorableNamespaces="desktop4">
+  <Applications>
+    <Application>
+      <Extensions>
+        <com:Extension Category="windows.comServer">
+          <com:ComServer>
+            <com:SurrogateServer AppId="d0c8bceb-28eb-49ae-bc68-454ae84d6264" DisplayName="ContosoHandler"">
+              <com:Class Id="Id="d0c8bceb-28eb-49ae-bc68-454ae84d6264" Path="ExplorerCommandVerb.dll" ThreadingModel="STA"/>
+            </com:SurrogateServer>
+          </com:ComServer>
+        </com:Extension>
+        <desktop4:Extension Category="windows.fileExplorerContextMenus">
+          <desktop4:FileExplorerContextMenus>
+            <desktop4:ItemType Type=".contoso">
+              <desktop4:Verb Id="Command1" Clsid="d0c8bceb-28eb-49ae-bc68-454ae84d6264" />
+            </desktop4:ItemType>
+          </desktop4:FileExplorerContextMenus>
+        </desktop4:Extension>
       </Extensions>
     </Application>
   </Applications>

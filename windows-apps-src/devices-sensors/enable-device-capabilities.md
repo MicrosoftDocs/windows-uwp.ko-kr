@@ -53,7 +53,7 @@ Windows 앱에서는 특정 유형의 장치를 사용할 경우 앱 패키지 �
 | 사용자 계정 정보 | ![매니페스트 디자이너에서 사용 가능](images/ap-tools.png) | 앱에서 사용자의 이름 및 사진에 액세스할 수 있도록 합니다. [  **Windows.System.UserProfile**](https://docs.microsoft.com/uwp/api/Windows.System.UserProfile) 네임스페이스에서 일부 API에 액세스하려면 이 접근 권한 값이 필요합니다. | 
 | 비디오 라이브러리 | ![매니페스트 디자이너에서 사용 가능](images/ap-tools.png) | 로컬 PC 및 **홈 그룹** PC의 **비디오 라이브러리**에서 파일을 추가, 변경 또는 삭제할 수 있는 접근 권한 값을 제공합니다. | 
 | VOIP 호출 | ![매니페스트 디자이너에서 사용 가능](images/ap-tools.png) | 앱이 [**Windows.ApplicationModel.Calls**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Calls) 네임스페이스에서 API를 호출하는 VOIP에 액세스할 수 있도록 허용합니다. | 
-| Webcam | ![매니페스트 디자이너에서 사용 가능](images/ap-tools.png) | 기본 제공 카메라 또는 연결된 webcam 화상 대화에 액세스할 수 있게 해줍니다. 이를 통해 앱에서 스냅숏과 동영상을 캡처할 수 있습니다. | 
+| Webcam | ![매니페스트 디자이너에서 사용 가능](images/ap-tools.png) | 기본 제공 카메라 또는 연결된 webcam 화상 대화에 액세스할 수 있게 해줍니다. 이를 통해 앱에서 스냅샷과 동영상을 캡처할 수 있습니다. | 
 | USB | | 사용자 지정 USB 장치에 대한 액세스를 제공합니다. 이 접근 권한 값에는 자식 요소가 필요합니다. Windows Phone에서는 이 기능이 지원되지 않습니다. | 
 | HID(휴먼 인터페이스 장치) | | HID(휴먼 인터페이스 장치)에 대한 액세스를 제공합니다. 이 접근 권한 값에는 자식 요소가 필요합니다. 자세한 내용은 [HID 관련 장치 접근 권한 값을 지정하는 방법](https://docs.microsoft.com/uwp/schemas/appxpackage/how-to-specify-device-capabilities-for-hid)을 참조하세요. | 
 | Bluetooth GATT | | 주 서비스, 포함된 서비스, 특징 및 설명자의 컬렉션을 통해 Bluetooth LE 장치에 대한 액세스를 제공합니다. 이 접근 권한 값에는 자식 요소가 필요합니다. 자세한 내용은 [Bluetooth 관련 장치 접근 권한 값을 지정하는 방법](https://docs.microsoft.com/uwp/schemas/appxpackage/how-to-specify-device-capabilities-for-bluetooth)을 참조하세요. | 

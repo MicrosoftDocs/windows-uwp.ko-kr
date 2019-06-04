@@ -8,7 +8,7 @@ keywords: windows 10, uwp, 게임, ui, 탐색
 ms.localizationpriority: medium
 ms.openlocfilehash: ec5ba9d893a622e256030601cca204abab35045f
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57599928"
@@ -164,7 +164,7 @@ UINavigationController::UINavigationControllerRemoved += ref new EventHandler<UI
 
 ### <a name="polling-the-ui-navigation-controller"></a>UI 탐색 컨트롤러 폴링
 
-폴링은 정확한 시점에 탐색 장치의 스냅숏을 캡처합니다. 이러한 입력 수집 방법은 대부분의 게임에 적합합니다. 게임의 논리는 일반적으로 이벤트 기반 방식이 아닌 결정적 루프로 실행되기 때문입니다. 또한 시간을 두고 수집된 여러 단일 입력보다 한 번에 수집된 입력에서 게임 명령을 해석하는 것이 일반적으로 더 간단합니다.
+폴링은 정확한 시점에 탐색 장치의 스냅샷을 캡처합니다. 이러한 입력 수집 방법은 대부분의 게임에 적합합니다. 게임의 논리는 일반적으로 이벤트 기반 방식이 아닌 결정적 루프로 실행되기 때문입니다. 또한 시간을 두고 수집된 여러 단일 입력보다 한 번에 수집된 입력에서 게임 명령을 해석하는 것이 일반적으로 더 간단합니다.
 
 탐색 장치는 [UINavigationController.GetCurrentReading][getcurrentreading]을 호출하여 폴링합니다. 이 함수는 탐색 장치의 상태가 포함된 [UINavigationReading][]을 반환합니다.
 
@@ -211,7 +211,7 @@ if (OptionalUINavigationButtons::Context1 == (reading.OptionalButtons & Optional
 
 ## <a name="run-the-ui-navigation-controller-sample"></a>UI 탐색 컨트롤러 샘플 실행
 
-[InputInterfacingUWP 샘플 _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/InputInterfacingUWP)에서는 여러 입력 장치가 UI 탐색 컨트롤러로 동작하는 방법을 보여 줍니다.
+[InputInterfacingUWP 샘플 _(github)_ ](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/InputInterfacingUWP)에서는 여러 입력 장치가 UI 탐색 컨트롤러로 동작하는 방법을 보여 줍니다.
 
 ## <a name="see-also"></a>참고 항목
 [Windows.Gaming.Input.Gamepad][]
