@@ -1,6 +1,6 @@
 ---
 title: Windows 10 게임 개발 가이드
-description: UWP(유니버설 Windows 플랫폼) 게임 개발용 리소스 및 정보에 대한 종단 간 가이드입니다.
+description: UWP(유니버설 Windows 플랫폼) 게임 개발용 리소스 및 정보에 대한 엔드투엔드 가이드입니다.
 ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
 ms.date: 04/16/2018
 ms.topic: article
@@ -18,14 +18,14 @@ ms.locfileid: "66368781"
 
 Windows 10 게임 개발 가이드입니다.
 
-이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 필요한 리소스 및 정보의 종단 간 컬렉션을 제공합니다. 이 가이드의 영어(미국) 버전은 [PDF](https://download.microsoft.com/download/9/C/9/9C9D344F-611F-412E-BB01-259E5C76B17F/Windev_Game_Dev_Guide_Oct_2017.pdf) 형식으로 제공됩니다.
+이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 필요한 리소스 및 정보의 엔드투엔드 컬렉션을 제공합니다. 이 가이드의 영어(미국) 버전은 [PDF](https://download.microsoft.com/download/9/C/9/9C9D344F-611F-412E-BB01-259E5C76B17F/Windev_Game_Dev_Guide_Oct_2017.pdf) 형식으로 제공됩니다.
 
 ## <a name="introduction-to-game-development-for-the-universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)용 게임 개발 기술 소개
 
 
 Windows 10 게임을 만드는 경우 휴대폰, PC 및 Xbox One을 통해 전 세계 수백만 명의 플레이어와 접촉할 수 있습니다. Windows의 Xbox, Xbox Live, 디바이스 간 멀티플레이어, 놀라운 게임 커뮤니티, UWP(유니버설 Windows 플랫폼) 및 DirectX 12와 같은 강력한 새 기능을 지원하는 Windows 10 게임은 모든 연령 및 장르의 플레이어를 열광시킵니다. 새 UWP(유니버설 Windows 플랫폼)는 휴대폰, PC 및 Xbox One용 공통 API를 사용하는 Windows 10 디바이스에서, 각 디바이스 환경에 맞게 게임을 조정하는 도구 및 옵션과 함께 게임에 대한 호환성을 제공합니다.
 
-이 가이드에서는 게임을 개발할 때 도움이 되는 정보 및 리소스의 종단 간 컬렉션을 제공합니다. 게임 개발의 단계에 따라 섹션이 구성되어 있으므로 필요할 때 정보를 찾아 볼 위치를 알 수 있습니다.
+이 가이드에서는 게임을 개발할 때 도움이 되는 정보 및 리소스의 엔드투엔드 컬렉션을 제공합니다. 게임 개발의 단계에 따라 섹션이 구성되어 있으므로 필요할 때 정보를 찾아 볼 위치를 알 수 있습니다.
 
 Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작](getting-started.md) 가이드를 참조해서 시작할 수 있습니다. 또한 [게임 개발 리소스](#game-development-resources) 섹션에서는 설명서, 프로그램 및 게임을 만들 때 도움이 되는 기타 리소스에 대한 대략적인 설문 조사도 제공하고 있습니다. 대신에 몇몇 UWP 코드를 살펴보는 것부터 시작하고 싶다면 [게임 샘플](#game-samples)을 참조하세요.
 

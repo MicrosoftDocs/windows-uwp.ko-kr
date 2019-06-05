@@ -8,7 +8,7 @@ keywords: windows 10, uwp, Microsoft Store 리뷰 API, 리뷰에 응답
 ms.localizationpriority: medium
 ms.openlocfilehash: 677108e692bbc702778cad3c42a45b4f5408b8cd
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57653168"
@@ -17,7 +17,7 @@ ms.locfileid: "57653168"
 
 *Microsoft Store 리뷰 API*를 사용하여 Microsoft Store의 앱 리뷰에 프로그래밍 방식으로 응답할 수 있습니다. 파트너 센터를 사용 하지 않고 많은 검토에 응답 하는 대량 하려는 개발자에 대 한이 API는 특히 유용 합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
-다음 단계에서는 종단 간 프로세스를 설명합니다.
+다음 단계에서는 엔드투엔드 프로세스를 설명합니다.
 
 1.  [필수 조건](#prerequisites)을 모두 완료했는지 확인합니다.
 2.  Microsoft Store 리뷰 API에서 메서드를 호출하기 전에 [Azure AD 액세스 토큰을 가져옵니다](#obtain-an-azure-ad-access-token). 토큰을 가져온 후 만료되기 전에 이 토큰을 Microsoft Store 리뷰 API에 대한 호출에 사용할 수 있는 시간은 60분입니다. 토큰이 만료된 후 새 토큰을 생성할 수 있습니다.

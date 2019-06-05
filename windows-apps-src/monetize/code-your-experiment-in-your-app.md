@@ -8,7 +8,7 @@ keywords: Windows 10 uwp, Microsoft Store Services SDK A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e00c3f8d7f1f41d6b44743ebb663b09575fb21a
 ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/21/2019
 ms.locfileid: "58334951"
@@ -22,7 +22,7 @@ ms.locfileid: "58334951"
 
 앱에 이 동작을 추가하려면 Microsoft Store Services SDK에서 제공하는 API를 사용합니다.
 
-다음 섹션에서는 실험에 대 한 변형 하 고 파트너 센터에 이벤트를 기록 하는 일반적인 프로세스를 설명 합니다. 실험에 대 한 앱에 코드 할 수 있습니다 [파트너 센터에서 실험 정의](define-your-experiment-in-the-dev-center-dashboard.md)합니다. 실험 만들기 및 실행의 종단 간 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
+다음 섹션에서는 실험에 대 한 변형 하 고 파트너 센터에 이벤트를 기록 하는 일반적인 프로세스를 설명 합니다. 실험에 대 한 앱에 코드 할 수 있습니다 [파트너 센터에서 실험 정의](define-your-experiment-in-the-dev-center-dashboard.md)합니다. 실험 만들기 및 실행의 엔드투엔드 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
 > [!NOTE]
 > Microsoft Store Services SDK Api 실험의 일부를 사용 합니다 [비동기 패턴](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) 파트너 센터에서 데이터를 검색 합니다. 즉 이러한 메서드 실행 중 일부는 메서드를 호출한 이후에 발생할 수 있으므로 작업이 완료되더라도 앱 UI는 응답 상태를 유지할 수 있습니다. 비동기 패턴에서는 이 문서의 코드 예제에서 살펴본 것처럼 API를 호출할 때 앱에서 **async** 키워드 및 **await** 연산자를 사용해야 합니다. 규칙에 따라 비동기 메서드는 **Async**로 끝납니다.

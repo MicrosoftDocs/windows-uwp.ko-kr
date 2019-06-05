@@ -8,7 +8,7 @@ keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: e9b88c2aa4c16564d8b2708f54ed25e5d284b4c0
 ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/21/2019
 ms.locfileid: "58334871"
@@ -17,7 +17,7 @@ ms.locfileid: "58334871"
 
 사용 합니다 *Microsoft Store 프로 모션 API* 귀하나 귀하 조직의 파트너 센터 계정에 등록 된 앱에 대 한 프로 모션 광고 캠페인을 프로그래밍 방식으로 관리할 수 있습니다. 이 API를 사용하여 대상 지정 및 창작 광고와 같은 캠페인 및 기타 관련 자산을 만들고 업데이트하고 모니터링할 수 있습니다. 이 API는 개발자는 많은 양의 캠페인을 만들고 파트너 센터를 사용 하지 않고 이렇게 하려고 하는 데 특히 유용 합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
-다음 단계에서는 종단 간 프로세스를 설명합니다.
+다음 단계에서는 엔드투엔드 프로세스를 설명합니다.
 
 1.  [필수 조건](#prerequisites)을 모두 완료했는지 확인합니다.
 2.  Microsoft Store 프로모션 API에서 메서드를 호출하기 전에 [Azure AD 액세스 토큰을 가져옵니다](#obtain-an-azure-ad-access-token). 토큰을 가져온 후 만료되기 전에 이 토큰을 Microsoft Store 프로모션 API에 대한 호출에 사용할 수 있는 시간은 60분입니다. 토큰이 만료된 후 새 토큰을 생성할 수 있습니다.

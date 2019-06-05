@@ -17,7 +17,7 @@ ms.locfileid: "57624168"
 
 한 후 [프로젝트를 만들고 파트너 센터에서 원격 변수 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) 및 [실험에 대 한 앱을 코딩](code-your-experiment-in-your-app.md), 프로젝트에서 실험을 만들 준비가 되었습니다. 합니다. 실험을 만들 때 사용자가 받을 목표와 변형을 정의합니다.
 
-실험 만들기 및 실행의 종단 간 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
+실험 만들기 및 실행의 엔드투엔드 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
 <span id="get-an-api-key" />
 <span id="create-an-experiment" />

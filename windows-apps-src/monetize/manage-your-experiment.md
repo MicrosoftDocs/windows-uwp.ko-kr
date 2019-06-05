@@ -8,7 +8,7 @@ keywords: Windows 10 uwp, Microsoft Store Services SDK A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e5c0d0ca1b1d771df2b224cc41ec5a37e267bc9
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57594928"
@@ -20,7 +20,7 @@ ms.locfileid: "57594928"
 > [!NOTE]
 > 실험을 활성화 하면 파트너 센터 즉시 시작 실험에 대 한 데이터를 기록할 계측 된 앱에서 데이터를 수집 합니다. 그러나 실험 데이터를 파트너 센터에서 표시 하는 데 몇 시간이 걸릴 수 있습니다.
 
-실험 만들기 및 실행의 종단 간 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
+실험 만들기 및 실행의 엔드투엔드 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
 ## <a name="activate-your-experiment"></a>실험 활성화
 

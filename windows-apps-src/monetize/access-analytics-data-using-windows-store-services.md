@@ -18,7 +18,7 @@ ms.locfileid: "66372007"
 
 사용 된 *Microsoft Store 분석 API* 귀하나 귀하 조직의 Windows 파트너 센터 계정에 등록 된 앱에 대 한 분석 데이터를 프로그래밍 방식으로 검색할 합니다. 이 API를 사용하면 앱 및 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 구입, 오류, 앱 평점 및 리뷰에 대한 데이터를 검색할 수 있습니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
-다음 단계에서는 종단 간 프로세스를 설명합니다.
+다음 단계에서는 엔드투엔드 프로세스를 설명합니다.
 
 1.  [필수 조건](#prerequisites)을 모두 완료했는지 확인합니다.
 2.  Microsoft Store 분석 API에서 메서드를 호출하기 전에 [Azure AD 액세스 토큰을 가져옵니다](#obtain-an-azure-ad-access-token). 토큰을 가져온 후 만료되기 전에 이 토큰을 Microsoft Store 분석 API에 대한 호출에 사용할 수 있는 시간은 60분입니다. 토큰이 만료된 후 새 토큰을 생성할 수 있습니다.
