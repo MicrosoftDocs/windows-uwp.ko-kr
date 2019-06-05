@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 지침, 모범 사례
 ms.localizationpriority: medium
-ms.openlocfilehash: 78f044890e49f4631abf710764bc2f9746a1306f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7bb187092158386c503b91973d8d63ce291b4760
+ms.sourcegitcommit: c62b260eecd373e57b19a623bae77e29180e0f3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639148"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66565510"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>광고의 UI 및 사용자 환경 지침
 
@@ -76,6 +76,8 @@ ms.locfileid: "57639148"
 * 앱 컨텍스트에서 실행되는 Microsoft 광고 라이브러리 이외의 다른 방식을 통해 광고 서비스를 호출하는 코드를 작성하거나 배포하는 경우.
 
 * Microsoft 광고 라이브러리로 생성된 문서화되지 않은 인터페이스 또는 자식 개체(예: **WebView** 또는 **MediaElement**)를 조작하는 경우.
+
+* 평소 보다 페이지에 자세한 광고를 허용 하기 위해 광고의 크기를 줄이기 위해 viewbox에 광고를 배치 합니다.
 
 <span id="interstitialbestpractices10" />
 
