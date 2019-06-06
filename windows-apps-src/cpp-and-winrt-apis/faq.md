@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ac7f8e46974b7c12b42f6d6f94052e61902b240
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 914cf884b97d14af523cc61b0fcce719104783ba
+ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360247"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66721691"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT 질문과 대답
 작성 하 고 사용 하 여 Windows 런타임 Api를 사용 하는 방법에 대 한 있을 수 있는 질문에 답변 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)합니다.
@@ -22,7 +22,7 @@ ms.locfileid: "66360247"
 참조 [대상을 다시 지정 하는 방법에 C++Windows SDK의 최신 버전으로 /WinRT 프로젝트](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)합니다.
 
 ## <a name="why-wont-my-new-project-compile-now-that-ive-moved-to-cwinrt-20"></a>왜 내 새 프로젝트 컴파일되지 이동할 했습니다 했으므로 C++WinRT 2.0?
-변경 내용 (주요 변경 내용 포함)의 전체 집합을 참조 하세요 [뉴스 및 변경 내용에 C++WinRT 2.0](news.md#news-and-changes-in-cwinrt-20)합니다. 코 루틴 지원에 대 한 예를 들어 (코 루틴 도우미를 포함 하 여 같은 **winrt::resume_background**를 **winrt::resume_foreground**, 및 **winrt::resume_on_signal** )를 할 `#include <winrt/coroutine.h>`합니다. 범위 기반을 사용 하는 경우 `for` Windows 런타임 컬렉션에 대해 다음 이제 해야 `#include <winrt/Windows.Foundation.Collections.h>`합니다.
+변경 내용 (주요 변경 내용 포함)의 전체 집합을 참조 하세요 [뉴스 및 변경 내용에 C++WinRT 2.0](news.md#news-and-changes-in-cwinrt-20)합니다. 예를 들어, 범위 기반을 사용 하는 경우 `for` Windows 런타임 컬렉션에 대해 다음 이제 해야 `#include <winrt/Windows.Foundation.Collections.h>`합니다.
 
 ## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>내 새 프로젝트 컴파일되지 이유는? Visual Studio 2017을 사용 하 고 (15.8.0 버전 이상), 및 SDK 버전 17134
 Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상), 한 다음 새로 만든된 Windows SDK (Windows 10, 버전 1803) 10.0.17134.0 버전을 대상으로 하 고 C++WinRT 프로젝트는 오류가 발생 하 여 컴파일하는 데 실패할 수 있습니다 / "*오류 C3861: 'from_abi': 식별자를 찾을 수 없습니다*", 및에서 발생 하는 다른 오류로 *base.h*합니다. 두 대상에는 솔루션을 이상 (더 부합) 버전의 Windows SDK 또는 프로젝트 속성 설정 **C /C++**  > **언어**  >   **준수 모드: 더** (또한 경우 **/ permissive-** 프로젝트 속성에 표시 됩니다 **C /C++**  > **명령줄** 아래 **추가 옵션**, 삭제).

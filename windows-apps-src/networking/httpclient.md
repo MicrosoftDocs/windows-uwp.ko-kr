@@ -2,16 +2,16 @@
 description: HttpClient와 Windows.Web.Http 네임스페이스 API의 나머지를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.
 title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
-ms.date: 02/08/2017
+ms.date: 6/5/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 988cd2fafbb0cd632711dc2eaa5f6a6db8eed7e4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bb098aae346c7a81771262793f5f6a042d62d5a3
+ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371380"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66721613"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -229,6 +229,49 @@ int main()
 실제 이진 파일 (위에서 사용 된 명시적 이진 데이터 대신)의 콘텐츠를 게시 하기 위해 찾을 수 있습니다 보다 쉽게 사용할 수는 [HttpStreamContent](/uwp/api/windows.web.http.httpstreamcontent) 개체입니다. 하나를 생성 하 고 해당 생성자에 인수로 전달에 대 한 호출에서 반환 된 값 [StorageFile.OpenReadAsync](/uwp/api/windows.storage.storagefile.openreadasync)합니다. 해당 메서드는 이진 파일 내에 있는 데이터에 대 한 스트림을 반환합니다.
 
 또한 (약 10MB 보다 큰) 큰 파일을 업로드 하는 경우 다음 권장 Windows 런타임을 사용 하는 [백그라운드 전송](/uwp/api/windows.networking.backgroundtransfer) Api.
+
+## <a name="post-json-data-over-http"></a>HTTP 통한 POST JSON 데이터
+
+다음 예제에서는 일부 JSON 끝점을 게시 한 다음 응답 본문을 작성 합니다.
+
+```cs
+using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using Windows.Storage.Streams;
+using Windows.Web.Http;
+
+private async Task TryPostJsonAsync()
+{
+    try
+    {
+        // Construct the HttpClient and Uri. This endpoint is for test purposes only.
+        HttpClient httpClient = new HttpClient();
+        Uri uri = new Uri("https://www.contoso.com/post");
+
+        // Construct the JSON to post.
+        HttpStringContent content = new HttpStringContent(
+            "{ \"firstName\": \"Eliot\" }",
+            UnicodeEncoding.Utf8,
+            "application/json");
+
+        // Post the JSON and wait for a response.
+        HttpResponseMessage httpResponseMessage = await httpClient.PostAsync(
+            uri,
+            content);
+
+        // Make sure the post succeeded, and write out the response.
+        httpResponseMessage.EnsureSuccessStatusCode();
+        var httpResponseBody = await httpResponseMessage.Content.ReadAsStringAsync();
+        Debug.WriteLine(httpResponseBody);
+    }
+    catch (Exception ex)
+    {
+        // Write out any exceptions.
+        Debug.WriteLine(ex);
+    }
+}
+```
 
 ## <a name="exceptions-in-windowswebhttp"></a>Windows.Web.Http의 예외
 

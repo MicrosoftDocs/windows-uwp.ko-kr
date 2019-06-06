@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문제 해결, HRESULT, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fe67fd0593c9c1f605a5d1cc7418c348b6ca9c3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 563545e8a819ab6af5bbc0604c18b4833d76bebb
+ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360095"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66721670"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>C++/WinRT 문제 해결
 
@@ -51,7 +51,6 @@ ms.locfileid: "66360095"
 | C++ 컴파일러 생성 "*오류 C2039: 'IUnknown':의 구성원이 아닌 '\`전역 네임 스페이스 '* "입니다. | 참조 [대상을 다시 지정 하는 방법에 C++Windows SDK의 최신 버전으로 /WinRT 프로젝트](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)합니다. |
 | C++ 링커 생성 "*LNK2019 오류: 확인 되지 않은 외부 기호 _WINRT_CanUnloadNow@0 함수에서 참조 _VSDesignerCanUnloadNow@0* " | 참조 [대상을 다시 지정 하는 방법에 C++Windows SDK의 최신 버전으로 /WinRT 프로젝트](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)합니다. |
 | 오류 메시지를 생성 하는 빌드 프로세스 *C + WinRT VSIX 프로젝트 빌드 지원을 제공 하지 않습니다.  Microsoft.Windows.CppWinRT Nuget 패키지에 대 한 프로젝트 참조를 추가 하십시오*합니다. | 설치 합니다 **Microsoft.Windows.CppWinRT** 프로젝트에 NuGet 패키지. 자세한 내용은 참조 하세요 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)합니다. |
-| C++ 를 언급 하는 오류 메시지를 생성 하는 컴파일러 *'std::experimental'* , 및/또는 형식 오류로 *오류 C3861: 'resume_background': 식별자를 찾을 수 없습니다*합니다. | [ C++WinRT 2.0](news.md#news-and-changes-in-cwinrt-20), 코 루틴 지원에 대 한 (등 코 루틴 도우미를 비롯 하 여 **winrt::resume_background**, **winrt::resume_foreground**, 하고**winrt::resume_on_signal**), 해야 `#include <winrt/coroutine.h>`합니다. |
 | C++ 링커 생성 *LNK2019 오류: 확인 되지 않은 외부 기호*에 대 한 언급이 사용 하 여 *winrt::impl::consume_Windows_Foundation_Collections_IVector*합니다. | 일부로 [ C++WinRT 2.0](news.md#news-and-changes-in-cwinrt-20)범위 기반을 사용 하는 경우 `for` Windows 런타임 컬렉션에 대해 다음 이제 해야 `#include <winrt/Windows.Foundation.Collections.h>`합니다. |
 
 > [!NOTE]

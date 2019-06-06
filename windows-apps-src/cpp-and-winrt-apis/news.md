@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c + +, cpp, winrt, 프로젝션, 뉴스 항목의 새,
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a84e118d988d8bf6a7d26eba7d5dd009c7ad44f3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 11249335f9d29d37bb0824fa779d3ae151c74799
+ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360143"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66721645"
 ---
 # <a name="whats-new-in-cwinrt"></a>새로운 기능 C++/WinRT
 
@@ -160,13 +160,17 @@ Xlang 메타 데이터 판독기로 인해 C++/WinRT 메타 데이터에서 이�
 
 합니다 `module.g.cpp` 파일에 현재 포함 되어 두 가지 추가 구성 가능한 도우미 라는 **winrt_can_unload_now**, 및 **winrt_get_activation_factory**합니다. 이러한 다양 한 라이브러리, 고유한 런타임 클래스를 사용 하 여 각 DLL은 이루어진 대규모 프로젝트에 대 한 설계 되었습니다. 이 경우 수동으로 함께 붙이기 위한 DLL의 해야 **DllGetActivationFactory** 하 고 **DllCanUnloadNow**합니다. 이러한 도우미 훨씬 쉽게는 의사 학자 금 보조 발생 오류를 방지 하 여 수행할 수 있습니다. 합니다 `cppwinrt.exe` 도구의 `-lib` 플래그 자체 머리말 각 개별 lib를 제공 하기 위해 사용할 수도 있습니다 (대신 `winrt_xxx`) 각 라이브러리의 함수를 개별적으로 라는 하 고 따라서 명확 하 게 결합 될 수 있습니다.
 
-#### <a name="new-winrtcoroutineh-header"></a>새 `winrt/coroutine.h` 헤더
+#### <a name="coroutine-support"></a>코 루틴 지원
 
-합니다 `winrt/coroutine.h` 헤더는 모두를 위한 새 홈 C++/WinRT의 코 루틴 지원 합니다. 이 지원은 내 몇 개의 위치에 상주 하는 이전에 생각 했던는 너무 제한 되었습니다. 이제 상주 직접 작성 하는 것이 아니라 이제 Windows 런타임 비동기 인터페이스를 생성 하므로 `winrt/Windows.Foundation.h`합니다. 코 루틴 외에도 유지 가능 하 고 지원 되 고, 의미와 같은 도우미 [ **resume_foreground** ](/uwp/cpp-ref-for-winrt/resume-foreground) 특정 네임 스페이스 헤더의 끝 추가 될 필요가 없어졌습니다. 대신, 해당 종속성 보다 자연스럽 게 포함할 수 있습니다. 이렇게 추가 하면 **resume_foreground** 뿐만 아니라에서 다시 시작을 지원 하기 위해를 지정 [ **Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher), 하지만 수 이제도 지원에서 다시 시작을 지정 [ **Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue)합니다. 이전에 하나만 지원 될 수 있습니다. 두 정의 네임 스페이스가 하나에 상주할 수 있으므로 합니다.
+코 루틴 지원 자동으로 포함 됩니다. 지원 내 여러 위치에 상주 하는 이전에 생각 했던는 너무 제한 되었습니다. V2.0에 대해 일시적으로 다음을 `winrt/coroutine.h` 헤더 파일이 필요 했지만 더 이상 필요 합니다. 이제 상주 직접 작성 하는 것이 아니라 이제 Windows 런타임 비동기 인터페이스를 생성 하므로 `winrt/Windows.Foundation.h`합니다. 코 루틴 외에도 유지 가능 하 고 지원 되 고, 의미와 같은 도우미 [ **resume_foreground** ](/uwp/cpp-ref-for-winrt/resume-foreground) 특정 네임 스페이스 헤더의 끝 추가 될 필요가 없어졌습니다. 대신, 해당 종속성 보다 자연스럽 게 포함할 수 있습니다. 이렇게 추가 하면 **resume_foreground** 뿐만 아니라에서 다시 시작을 지원 하기 위해를 지정 [ **Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher), 하지만 수 이제도 지원에서 다시 시작을 지정 [ **Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue)합니다. 이전에 하나만 지원 될 수 있습니다. 두 정의 네임 스페이스가 하나에 상주할 수 있으므로 합니다.
 
 예로 **DispatcherQueue** 지원 합니다.
 
 ```cppwinrt
+...
+#include <winrt/Windows.System.h>
+using namespace Windows::System;
+...
 fire_and_forget Async(DispatcherQueueController controller)
 {
     bool queued = co_await resume_foreground(controller.DispatcherQueue());
