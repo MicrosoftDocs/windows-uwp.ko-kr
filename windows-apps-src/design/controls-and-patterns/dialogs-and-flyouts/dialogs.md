@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: bee954cba446ac7dc7eb41622d9275b3b73af6ee
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1277d9089e900451ac4c537805079ff479f808fa
+ms.sourcegitcommit: f47620e72ff8127fae9b024c70ddced3a5c45d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621838"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748449"
 ---
 # <a name="dialog-controls"></a>대화 상자 컨트롤
 
@@ -250,9 +250,37 @@ private async void DisplaySubscribeDialog()
 
 > 일부 플랫폼에서는 확정 단추가 왼쪽 대신 오른쪽에 배치됩니다. 왼쪽에 배치하는 것을 권장하는 이유는 무엇일까요?  대부분의 사용자가 오른손잡이고 오른손으로 휴대폰을 휴대한다고 가정하면 확정 단추가 왼쪽에 있을 때 실제로 좀 더 편안하다고 느낍니다. 단추가 사용자의 엄지 손가락을 뻗어 닿기 편한 곳에 있기 때문입니다. 화면의 오른쪽에 있는 단추는 사용자가 엄지 손가락을 약간 불편한 위치로 안쪽으로 당겨야 합니다.
 
+## <a name="contentdialog-in-appwindow-or-xaml-islands"></a>ContentDialog AppWindow 또는 Xaml 제도
 
+> 참고: 이 섹션에서는 Windows 10 1903 이상 버전을 대상으로 하는 앱에만 적용 됩니다. AppWindow 및 XAML 제도 이전 버전에서 사용할 수 없는 경우 버전 관리에 대 한 자세한 내용은 참조 하세요. [적응 응용 프로그램 버전](../../../debug-test-perf/version-adaptive-apps.md)합니다.
 
+기본적으로 콘텐츠 루트를 기준으로 대화 상자를 모달 형식으로 표시 [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)합니다. ContentDialog 하나 내에서 사용 하는 경우는 [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 또는 [XAML 섬](/apps/desktop/modernize/xaml-islands)을 수동으로 설정 해야 합니다 [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) XAML 호스트의 루트에 대화 상자에서.
 
+이렇게 하려면 다음과 같이 ContentDialog의 XamlRoot 속성 AppWindow 또는 XAML 섬, 이미 요소와 동일한 XamlRoot을 설정 합니다.
+
+```csharp
+private async void DisplayNoWifiDialog()
+{
+    ContentDialog noWifiDialog = new ContentDialog
+    {
+        Title = "No wifi connection",
+        Content = "Check your connection and try again.",
+        CloseButtonText = "Ok"
+    };
+
+    // Use this code to associate the dialog to the appropriate AppWindow by setting
+    // the dialog's XamlRoot to the same XamlRoot as an element that is already present in the AppWindow.
+    if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+    {
+        noWifiDialog.XamlRoot = elementAlreadyInMyAppWindow.XamlRoot;
+    }
+
+    ContentDialogResult result = await noWifiDialog.ShowAsync();
+}
+```
+
+> [!WARNING]
+> 있을 수 있습니다만 한 번에 스레드당 ContentDialog 열 하나. 두 ContentDialogs 열려는 별도 AppWindows에서 열려고 시도 하는 경우에는 예외를 throw 합니다.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
