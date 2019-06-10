@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: medium
-ms.openlocfilehash: 450fc4d016debb72364cbefedb6b69a80cc6235b
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: dc2786df57ebe1364f045795c52b301ef5feed0f
+ms.sourcegitcommit: 94316b8daf60a89a90a661ea17428c3d2734fee8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63790598"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66814409"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 
@@ -51,15 +51,15 @@ ms.locfileid: "63790598"
 
 다음 표에서는 이러한 역할 각각(계정 소유자 포함)이 사용할 수 있는 특정 기능 중 일부를 보여 줍니다.
 
-|                                 |    계정 소유자                 |    Manager                       |    Developer                     |    비즈니스 기여자    |    재무 기여자    |    마케팅 담당자                      |
-|---------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------|---------------------------|----------------------------------|
-|    구입 보고서           |    볼 수 있음                      |    볼 수 있음                      |     권한 없음                    |     권한 없음              |    볼 수 있음               |    권한 없음                     |
-|    피드백 보고서/응답    |    볼 수 있고 피드백 보낼 수 있음    |    볼 수 있고 피드백 보낼 수 있음    |    볼 수 있고 피드백 보낼 수 있음    |     권한 없음              |     권한 없음             |    볼 수 있고 피드백 보낼 수 있음    |
-|    상태 보고서                |    볼 수 있음                      |    볼 수 있음                      |    볼 수 있음                      |    볼 수 있음                |     권한 없음             |    권한 없음                     |
-|    사용 보고서                 |    볼 수 있음                      |    볼 수 있음                      |    볼 수 있음                      |    볼 수 있음                |     권한 없음             |    권한 없음                     |
-|    지급 계좌               |    업데이트할 수 있음                    |    권한 없음                     |    권한 없음                     |    권한 없음               |    볼 수 있음               |    권한 없음                     |
-|    세금 프로필                  |    업데이트할 수 있음                    |    권한 없음                     |    권한 없음                     |    권한 없음               |    볼 수 있음               |    권한 없음                     |
-|    지급 요약               |    볼 수 있음                      |    권한 없음                     |    권한 없음                     |    권한 없음               |    볼 수 있음               |    권한 없음                     |
+|                                                       |    계정 소유자                 |    Manager                       |    Developer                     |    비즈니스 기여자    |    재무 기여자    |    마케팅 담당자                      |
+|-------------------------------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------|---------------------------|----------------------------------|
+|    취득 보고서 (거의 실시간으로 데이터 포함) |    볼 수 있음                      |    볼 수 있음                      |    권한 없음                     |    권한 없음               |    볼 수 있음               |    권한 없음                     |
+|    피드백 보고서/응답                          |    볼 수 있고 피드백 보낼 수 있음    |    볼 수 있고 피드백 보낼 수 있음    |    볼 수 있고 피드백 보낼 수 있음    |    권한 없음               |    권한 없음              |    볼 수 있고 피드백 보낼 수 있음    |
+|    상태 보고서 (거의 실시간으로 데이터 포함)      |    볼 수 있음                      |    볼 수 있음                      |    볼 수 있음                      |    볼 수 있음                |    권한 없음              |    권한 없음                     |
+|    사용 보고서                                       |    볼 수 있음                      |    볼 수 있음                      |    볼 수 있음                      |    볼 수 있음                |    권한 없음              |    권한 없음                     |
+|    지급 계좌                                     |    업데이트할 수 있음                    |    권한 없음                     |    권한 없음                     |    권한 없음               |    볼 수 있음               |    권한 없음                     |
+|    세금 프로필                                        |    업데이트할 수 있음                    |    권한 없음                     |    권한 없음                     |    권한 없음               |    볼 수 있음               |    권한 없음                     |
+|    지급 요약                                     |    볼 수 있음                      |    권한 없음                     |    권한 없음                     |    권한 없음               |    볼 수 있음               |    권한 없음                     |
 
 적절한 표준 역할이 없거나 특정 앱 및/또는 추가 기능에 대한 액세스를 제한하려면 아래 설명한 대로 **사용 권한 사용자 지정**을 선택하여 사용자에게 사용자 지정 권한을 부여할 수 있습니다.
 
@@ -123,7 +123,6 @@ ms.locfileid: "63790598"
 <tr><td align="left">    <b>지급 계좌</b>                      </td><td align="left">  <b>계정 설정</b>에서 <a href="setting-up-your-payout-account-and-tax-forms.md#payout-account">지급 계정 정보</a>를 볼 수 있습니다.     </td><td align="left">  <b>계정 설정</b>에서 <a href="setting-up-your-payout-account-and-tax-forms.md#payout-account">지급 계정 정보</a>를 편집하고 볼 수 있습니다.       </td></tr>
 <tr><td align="left">    <b>지급액 요약</b>                      </td><td align="left">  지급 보고 정보에 액세스하고 다운로드할 수 있는 <a href="payout-summary.md">지급 요약</a>을 볼 수 있습니다.       </td><td align="left">  지급 보고 정보에 액세스하고 다운로드할 수 있는 <a href="payout-summary.md">지급 요약</a>을 볼 수 있습니다.   </td></tr>
 <tr><td align="left">    <b>신뢰 당사자</b>&nbsp;*                   </td><td align="left">  XToken을 검색하는 신뢰 당사자를 볼 수 있습니다.    </td><td align="left">  XToken을 검색하는 신뢰 당사자를 관리하고 볼 수 있습니다.     </td></tr>
-<tr><td align="left">    <b>디스크 요청</b>&nbsp;*                   </td><td align="left">  게임 디스크 요청을 볼 수 있습니다.    </td><td align="left">  게임 디스크 요청을 구성하고 볼 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>샌드박스</b>&nbsp;*                         </td><td align="left">  <b>샌드박스</b> 페이지에 액세스하고, 계정의 샌드박스 및 해당 샌드박스에 적용되는 구성을 볼 수 있습니다. 적절한 제품 수준 사용 권한이 부여되지 않으면 각 샌드박스에 대한 제품과 제출을 볼 수 없습니다. </td><td align="left">  <b>샌드박스</b> 페이지에 액세스하고, 샌드박스 만들기와 삭제 및 구성 관리를 포함하여 계정의 샌드박스를 보고 관리할 수 있습니다. 적절한 제품 수준 사용 권한이 부여되지 않으면 각 샌드박스에 대한 제품과 제출을 볼 수 없습니다.    </td></tr>
 <tr><td align="left">    <b>Microsoft Store 영업 이벤트</b>&nbsp;*                            </td><td align="left">  해당 사항 없음    </td><td align="left">  자동으로 Microsoft Store 영업 이벤트에서 제품을 포함하는 옵션을 구성할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>세금 프로필</b>                         </td><td align="left">  <b>계정 설정</b>의 <a href="setting-up-your-payout-account-and-tax-forms.md#tax-forms">세금 프로필 정보 및 양식</a>을 볼 수 있습니다.     </td><td align="left">  <b>계정 설정</b>에서 세금 양식을 작성하고 <a href="setting-up-your-payout-account-and-tax-forms.md#tax-forms">세금 프로필 정보</a>를 업데이트할 수 있습니다.     </td></tr>
@@ -166,9 +165,9 @@ ms.locfileid: "63790598"
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    <b>획득</b>     </td><td>    제품에 대한 <a href="acquisitions-report.md">구입</a> 및 <a href="add-on-acquisitions-report.md">추가 기능 구입</a> 보고서를 볼 수 있습니다.        </td><td>    해당 사항 없음    </td><td>    해당 없음 (부모 제품에 대 한 설정을 포함 합니다 **추가 기능 구매** 보고서)        </td><td>    해당 사항 없음                         </td></tr>
+    <tr><td align="left">    <b>획득</b> (거의 실시간으로 데이터 포함) </td><td>    제품에 대한 <a href="acquisitions-report.md">구입</a> 및 <a href="add-on-acquisitions-report.md">추가 기능 구입</a> 보고서를 볼 수 있습니다.        </td><td>    해당 사항 없음    </td><td>    해당 없음 (부모 제품에 대 한 설정을 포함 합니다 **추가 기능 구매** 보고서)        </td><td>    해당 사항 없음                         </td></tr>
     <tr><td align="left">    <b>Usage</b> </td><td>    제품에 대한 <a href="usage-report.md">사용 보고서</a>를 볼 수 있습니다.     </td><td>    해당 사항 없음       </td><td>    해당 사항 없음     </td><td>    해당 사항 없음         </td></tr>
-    <tr><td align="left">    <b>상태</b> </td><td>    제품에 대한 <a href="health-report.md">상태 보고서</a>를 볼 수 있습니다.    </td><td>    해당 사항 없음     </td><td>    해당 사항 없음     </td><td>    해당 사항 없음         </td></tr>
+    <tr><td align="left">    <b>상태</b> (거의 실시간으로 데이터 포함) </td><td>    제품에 대한 <a href="health-report.md">상태 보고서</a>를 볼 수 있습니다.    </td><td>    해당 사항 없음     </td><td>    해당 사항 없음     </td><td>    해당 사항 없음         </td></tr>
     <tr><td align="left">    <b>고객 의견</b>    </td><td>    제품에 대한 <a href="reviews-report.md">리뷰</a> 및 <a href="feedback-report.md">피드백</a> 보고서를 볼 수 있습니다.       </td><td>    해당 없음(의견 또는 리뷰에 응답하려면 <b>고객에게 문의</b> 권한을 부여받아야 함)   </td><td>    해당 사항 없음     </td><td>    해당 사항 없음         </td></tr>
     <tr><td align="left">    <b>Xbox 분석</b> </td><td>    볼 수는 <a href="xbox-analytics-report.md">Xbox 분석 보고서</a> 제품에 대 한 합니다.    </td><td>    해당 사항 없음   </td><td>    해당 사항 없음       </td><td>    해당 사항 없음          </td></tr>
     </tbody>
@@ -208,15 +207,18 @@ ms.locfileid: "63790598"
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    <b>가격 책정 및 가용성</b>  </td><td>    제품 제출의 <a href="set-app-pricing-and-availability.md">가격 책정 및 가용성</a> 페이지를 볼 수 있습니다.     </td><td>    제품 제출의 <a href="set-app-pricing-and-availability.md">가격 책정 및 가용성</a> 페이지를 보고 편집할 수 있습니다. </td><td>    추가 기능 제출의 <a href="set-add-on-pricing-and-availability.md">가격 책정 및 가용성</a> 페이지를 볼 수 있습니다.   </td><td>    추가 기능 제출의 <a href="set-add-on-pricing-and-availability.md">가격 책정 및 가용성</a> 페이지를 보고 편집할 수 있습니다.          </td></tr>
-    <tr><td align="left">    <b>속성</b>   </td><td>    제품 제출의 <a href="enter-app-properties.md">속성</a> 페이지를 볼 수 있습니다.      </td><td>    제품 제출의 <a href="enter-app-properties.md">속성</a> 페이지를 보고 편집할 수 있습니다.       </td><td>    추가 기능 제출의 <a href="enter-add-on-properties.md">속성</a> 페이지를 볼 수 있습니다.     </td><td>    추가 기능 제출의 <a href="enter-add-on-properties.md">속성</a> 페이지를 보고 편집할 수 있습니다.               </td></tr>
-    <tr><td align="left">    <b>연령별 등급</b>    </td><td>    제품 제출의 <a href="age-ratings.md">연령별 등급</a> 페이지를 볼 수 있습니다.       </td><td>    제품 제출의 <a href="age-ratings.md">연령별 등급</a> 페이지를 보고 편집할 수 있습니다.    </td><td>    추가 기능 제출의 연령별 등급 페이지를 볼 수 있습니다.          </td><td>     추가 기능 제출의 연령별 등급 페이지를 보고 편집할 수 있습니다.       </td></tr>
-    <tr><td align="left">    <b>패키지</b>        </td><td>    제품 제출의 <a href="upload-app-packages.md">패키지</a> 페이지를 볼 수 있습니다.  </td><td>    제품 제출의 <a href="upload-app-packages.md">패키지</a> 페이지를 보고 편집할 수 있습니다(패키지 업로드 포함).     </td><td>   추가 기능 제출의 디바이스 패밀리 타기팅 및 패키지(해당되는 경우)를 볼 수 있습니다.   </td><td>     추가 기능 제출의 디바이스 패밀리 타기팅을 보고 편집할 수 있습니다(해당되는 경우 패키지 업로드 포함).             </td></tr>
-    <tr><td align="left">    <b>스토어 목록</b>  </td><td>    제품 제출의 <a href="create-app-store-listings.md">스토어 목록 페이지</a>를 볼 수 있습니다.  </td><td>    제품 제출의 <a href="create-app-store-listings.md">스토어 목록 페이지</a>를 보고 편집할 수 있으며, 서로 다른 언어에 대한 새로운 스토어 목록을 추가할 수 있습니다.     </td><td>    추가 기능 제출의 <a href="create-add-on-store-listings.md">스토어 목록 페이지</a>를 볼 수 있습니다.            </td><td>    추가 기능 제출의 <a href="create-add-on-store-listings.md">스토어 목록 페이지</a>를 보고 편집할 수 있으며, 서로 다른 언어에 대한 스토어 목록을 추가할 수 있습니다.                 </td></tr>
+    <tr><td align="left">    <b>제품 설치</b>  </td><td>    제품의 제품 설치 페이지를 볼 수 있습니다.     </td><td>    확인 하 고 제품의 제품 설치 페이지를 편집할 수 있습니다. </td><td>    추가 기능 제품 설치 페이지를 볼 수 있습니다.   </td><td>    확인 하 고 제품 설치 페이지 추가 기능을 편집할 수 있습니다.          </td></tr>
+    <tr><td align="left">    <b>가격 책정 및 가용성</b>  </td><td>    볼 수는 <a href="set-app-pricing-and-availability.md">가격 책정 및 가용성</a> 제품 페이지입니다.     </td><td>    확인 및 편집할 수는 <a href="set-app-pricing-and-availability.md">가격 책정 및 가용성</a> 제품 페이지입니다. </td><td>    볼 수는 <a href="set-add-on-pricing-and-availability.md">가격 책정 및 가용성</a> 페이지 추가 기능입니다.   </td><td>    확인 및 편집할 수는 <a href="set-add-on-pricing-and-availability.md">가격 책정 및 가용성</a> 페이지 추가 기능입니다.          </td></tr>
+    <tr><td align="left">    <b>속성</b>   </td><td>    볼 수는 <a href="enter-app-properties.md">속성</a> 제품 페이지입니다.      </td><td>    확인 및 편집할 수는 <a href="enter-app-properties.md">속성</a> 제품 페이지입니다.       </td><td>    볼 수는 <a href="enter-add-on-properties.md">속성</a> 페이지 추가 기능입니다.     </td><td>    확인 및 편집할 수는 <a href="enter-add-on-properties.md">속성</a> 페이지 추가 기능입니다.               </td></tr>
+    <tr><td align="left">    <b>연령별 등급</b>    </td><td>    볼 수는 <a href="age-ratings.md">등급 Age</a> 제품 페이지입니다.       </td><td>    확인 및 편집할 수는 <a href="age-ratings.md">등급 Age</a> 제품 페이지입니다.    </td><td>    추가 기능은 연령 등급 페이지를 볼 수 있습니다.          </td><td>     확인 하 고 추가 기능 연령 등급 페이지를 편집할 수 있습니다.       </td></tr>
+    <tr><td align="left">    <b>패키지</b>        </td><td>    볼 수는 <a href="upload-app-packages.md">패키지</a> 제품 페이지입니다.  </td><td>    확인 및 편집할 수는 <a href="upload-app-packages.md">패키지</a> 패키지 업로드 등 다양 한 제품 페이지입니다.     </td><td>   볼 수는 <a href="upload-app-packages.md">패키지</a> 추가 기능 (있는 경우)의 페이지입니다.   </td><td>     확인 및 편집할 수 <a href="upload-app-packages.md">패키지</a> 추가 기능 (있는 경우)의 페이지입니다.             </td></tr>
+    <tr><td align="left">    <b>스토어 목록</b>  </td><td>    볼 수는 <a href="create-app-store-listings.md">목록 페이지를 저장할</a> 제품입니다.  </td><td>    확인 및 편집할 수는 <a href="create-app-store-listings.md">목록 페이지를 저장할</a> 제품의 다른 언어에 대 한 새 저장소가 목록에 추가할 수 있습니다.     </td><td>    볼 수는 <a href="create-add-on-store-listings.md">목록 페이지를 저장할</a> 추가 기능입니다.            </td><td>    확인 및 편집할 수는 <a href="create-add-on-store-listings.md">목록 페이지를 저장할</a> 추가 기능, 다른 언어에 대 한 저장소 목록에 추가할 수 있습니다.                 </td></tr>
     <tr><td align="left">    <b>스토어 제출</b>     </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.           </td><td>    제품을 스토어에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다. </td><td>이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.     </td><td>    추가 기능을 스토어에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다.</td></tr>
     <tr><td align="left">    <b>새 전송 만들기</b>       </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.        </td><td>    제품의 새 <a href="app-submissions.md">제출</a>을 만들 수 있습니다.  </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.   </td><td>    추가 기능의 새 <a href="add-on-submissions.md">제출</a>을 만들 수 있습니다.        </td></tr>
     <tr><td align="left">    <b>새 추가 기능</b>    </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다. </td><td>    제품의 새 <a href="set-your-add-on-product-id.md">추가 기능</a>을 만들 수 있습니다. </td><td>    해당 사항 없음    </td><td>    해당 사항 없음        </td></tr>
     <tr><td align="left">    <b>이름 예약</b>   </td><td>    제품의 <a href="manage-app-names.md">앱 이름 관리</a> 페이지를 볼 수 있습니다.</td><td>    제품의 <a href="manage-app-names.md">앱 이름 관리</a> 페이지를 보고 편집할 수 있습니다(추가 이름 예약 및 예약된 이름 삭제 포함). </td><td>   추가 기능의 예약된 이름을 볼 수 있습니다.    </td><td>   추가 기능의 예약된 이름을 보고 편집할 수 있습니다.          </td></tr>
+    <tr><td align="left">    <b>디스크 요청</b>   </td><td>    디스크를 요청 페이지 보기 수 있습니다. </td><td>    디스크 요청을 만들 수 있습니다. </td><td>   해당 사항 없음    </td><td>   해당 사항 없음          </td></tr>
+    <tr><td align="left">    <b>디스크 저자가 </b>   </td><td>    디스크는 사용료 페이지 보기 수 있습니다.</td><td>    디스크 로열티를 만들 수 있습니다. </td><td>   해당 사항 없음    </td><td>   해당 사항 없음          </td></tr>
     </tbody>
     </table>
 
@@ -233,8 +235,15 @@ ms.locfileid: "63790598"
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    <b>앱 채널</b>&nbsp;*</td><td>    해당 사항 없음  </td><td>    OneGuide를 통해 볼 수 있도록 홍보 비디오 채널을 Xbox 콘솔에 게시할 수 있습니다.  </td><td>  해당 사항 없음 </td><td> 해당 사항 없음 </td></tr>
-    <tr><td align="left">    <b>서비스 구성</b>&nbsp;*    </td><td>    도전 과제, 멀티플레이어, 순위표 및 제품에 대한 기타 Xbox Live 구성과 관련된 설정을 볼 수 있습니다.  </td><td>    도전 과제, 멀티플레이어, 순위표 및 제품에 대한 기타 Xbox Live 구성과 관련된 설정을 보고 편집할 수 있습니다.  </td><td>    해당 사항 없음     </td><td>    해당 사항 없음                      </td></tr>
+    <tr><td align="left">    <b>신뢰 당사자</b>&nbsp;*</td><td>    계정의 신뢰 당사자 페이지를 볼 수 있습니다.   </td><td>    확인 하 고 계정의 신뢰 당사자 페이지를 편집할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
+    <tr><td align="left">    <b>Partner Services</b>&nbsp;*</td><td>    계정의 웹 서비스 페이지를 볼 수 있습니다.  </td><td>    확인 하 고 계정의 웹 서비스 페이지를 편집할 수 있습니다.      </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
+    <tr><td align="left">    <b>Xbox 테스트 계정</b>&nbsp;*</td><td>    계정의 Xbox 테스트 계정 페이지를 볼 수 있습니다.  </td><td>    확인 하 고 계정의 Xbox 테스트 계정 페이지를 편집할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
+    <tr><td align="left">    <b>샌드박스 당 Xbox 테스트 계정</b>&nbsp;*</td><td>    계정 지정된 샌드박스에 Xbox 테스트 계정 페이지를 볼 수 있습니다.  </td><td>    확인 하 고 Xbox 테스트를 편집할 수 있습니다.   <tr><td align="left">    <b>계정 지정된 샌드박스에에 대 한 계정 페이지    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
+    <tr><td align="left">    <b>Xbox 장치</b>&nbsp;*</td><td>    계정의 Xbox 한 개발 콘솔 페이지를 볼 수 있습니다.  </td><td>    확인 하 고 계정의 Xbox 하나 개발 콘솔 페이지를 편집할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
+    <tr><td align="left">    <b>샌드박스 당 Xbox 장치</b>&nbsp;*</td><td>    계정 지정된 샌드박스에의 Xbox 하나 개발 콘솔 페이지를 볼 수 있습니다.  </td><td>    확인 및 계정의 지정 된 샌드박스에의 Xbox 하나 개발 콘솔 페이지를 편집할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
+    <tr><td align="left">    <b>앱 채널</b>&nbsp;*</td><td>    해당 사항 없음  </td><td>    OneGuide를 통해 볼 수 있도록 홍보 비디오 채널을 Xbox 콘솔에 게시할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
+    <tr><td align="left">    <b>서비스 구성</b>&nbsp;*</td><td>    제품의 Xbox Live 서비스 구성 페이지를 볼 수 있습니다.  </td><td>    확인 하 고 제품의 Xbox Live 서비스 구성 페이지를 편집할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
+    <tr><td align="left">    <b>도구 액세스</b>&nbsp;*</td><td>    데이터를 볼 제품에서 Xbox Live 도구를 실행할 수 있습니다.  </td><td>    Xbox Live 도구 제품 데이터 보기 및 편집을 실행할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
 </tbody>
 </table>
 

@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 프로모션 코드, 토큰
 ms.localizationpriority: medium
-ms.openlocfilehash: db4cde6f8c195101ec31de26c00ffa7325e08d71
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 931b3abfe13a3834d991ee1a0a38c752b9e3f719
+ms.sourcegitcommit: 7da28cf4f4e8390bc9a21a9488b03af39271cbbe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605398"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64745029"
 ---
 # <a name="generate-promotional-codes"></a>홍보 코드 생성
 
@@ -31,8 +31,13 @@ ms.locfileid: "57605398"
 홍보 코드에 대한 다음 정책을 알아야 합니다.
 
 -   Microsoft Store에 게시한 앱 또는 추가 기능(구독 추가 제외)에 대한 홍보 코드를 생성할 수 있습니다. 고객은 해당 앱 또는 추가 기능에서 지원하는 모든 버전의 Windows에서 코드를 교환할 수 있습니다.
--   홍보 코드는 주문일로부터 6개월 후에 만료됩니다(더 빠른 만료일을 선택하지 않을 경우).
--   각 앱 또는 추가 기능에 대해 6개월마다 최대 1600회 교환할 수 있는 코드를 생성할 수 있습니다. 첫 홍보 코드를 주문한 때부터 6개월이라는 기간이 시작됩니다. 이보다 앞선 만료일을 선택한 경우도 마찬가지입니다. 일회용 코드와 여러 번 사용할 수 있는 코드 모두 제품 별로 1600번까지 교환할 수 있습니다.
+-   게임용:
+    - 게임 당 최대 5000 개의 프로 모션 코드를 생성할 수 있습니다.
+    - 게임에 대해 생성 된 프로 모션 코드는 만료 되지 않도록 합니다.
+- 다른 모든 형식의 앱 또는 추가 기능:
+    - 6 개월 동안의 최대 1600 일회용 프로 모션 코드를 생성할 수 있습니다 또는 여러 개 사용 하 여 코드를 개수에 관계 없이 총 사용 가능한 수 있도록 넘지 않는 1600입니다.
+    - 첫 번째를 생성 하는 경우 6 개월 기간 시작 프로 모션 코드 생성 되 고 코드에 이전 만료 날짜를 설정 하는 여부에 관계 없이 6 개월 동안 지속 됩니다.
+    - 기존 6 개월 기간 동안 생성 한 모든 코드 기간이 종료 된 후에 만료 됩니다 하는 경우에 해당 기간 내에 생성 된 코드의 수가 포함 되어 계산 됩니다 (예를 들어 6 개월 기간의 마지막 날에는 코드를 생성 하는 경우는 것은 여전히 수  유효 생성에서 6 개월에 대 한 합니다.)
 -   에 정의 된 요구 사항을 따라야 합니다 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), 섹션을 포함 하 여 **3 k. 프로 모션 코드**합니다.
 
 > [!NOTE]
