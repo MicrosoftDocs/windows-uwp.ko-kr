@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows 10, UWP, 게시, 판매, 배포, Store, 대시보드
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: bb7792ee3fa0c6a9f0480e5fe3aaf98bb4b316f4
-ms.sourcegitcommit: 5030c4c636d6d7a46d416f03c78e1a711222f56b
+ms.openlocfilehash: ac003cd0931f0ff320ba2906451c5eaf448eac78
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197529"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826127"
 ---
 # <a name="publish-windows-apps-and-games"></a>Windows 앱 및 게임 게시  
  
@@ -34,7 +34,7 @@ ms.locfileid: "58197529"
                         <ul>
                             <li><a href="app-submissions.md">앱 제출 검사 목록</a></li>
                             <li><a href="the-app-certification-process.md">인증 프로세스</a></li>                      
-                            <li><a href="//docs.microsoft.com/legal/windows/agreements/store-policies">Microsoft Store 정책</a></li>   
+                            <li><a href="store-policies.md">Microsoft Store 정책</a></li>   
                         </ul>
                     </div>
                 </div>

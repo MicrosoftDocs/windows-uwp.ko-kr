@@ -6,12 +6,12 @@ keywords: 검사 목록, Windows, UWP, 제출, 제출하다, 게임, 앱, 제출
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b98ea7f1d28c4fcd63cd2d4706905578b240e126
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 24d3c99636009ebf65f3e24d39d657297b105150
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643288"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826115"
 ---
 # <a name="app-submissions"></a>앱 제출
 
@@ -56,7 +56,7 @@ ms.locfileid: "57643288"
 | 필드 이름                    | 참고                                       | 자세한 정보                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **범주 및 하위 범주**  | 필수                                    | [Category 및 subcategory 테이블](category-and-subcategory-table.md)       |
-| **개인정보 처리 방침 URL**            | 많은 앱에 필요. [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책](https://docs.microsoft.com/en-us/legal/windows/agreements/store-policies#105-personal-information)을 참조하세요. | [개인정보 처리 방침 URL](enter-app-properties.md#privacy-policy-url)        |
+| **개인정보 처리 방침 URL**            | 많은 앱에 필요. [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책](store-policies.md#105-personal-information)을 참조하세요. | [개인정보 처리 방침 URL](enter-app-properties.md#privacy-policy-url)        |
 | **웹 사이트**                   | 선택 사항                                    | [웹 사이트](enter-app-properties.md#website)                   |
 | **지원 연락처 정보**      | Xbox에서 제품을 사용할 수 있는 경우에는 필수이지만, 그 외의 경우에는 선택 사항입니다(그러나 권장 사항).                                   | [지원 연락처 정보](enter-app-properties.md#support-contact-info)              |
 | **게임 설정**             | 선택 사항(게임에만 해당)         | [게임 설정](enter-app-properties.md#game-settings) |
@@ -97,9 +97,9 @@ ms.locfileid: "57643288"
 | **스토어 로고**               | 권장 사항(일부 OS 버전에서는 필수 사항) | [스토어 로고](app-screenshots-and-images.md#store-logos)             |
 | **트레일러**                  | 선택 사항                                    | [트레일러](app-screenshots-and-images.md#trailers)                | 
 | **Windows 10 및 Xbox 이미지 (16:9 슈퍼 hero 아트)**     | 권장        | [Windows 10 및 Xbox 이미지 (16:9 슈퍼 hero 아트)
-] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
 | **Xbox 이미지**     | Xbox에 게시 하는 경우 적절 하 게 표시할에 필요한        | [Xbox 이미지
-] (#xbox-이미지 앱-스크린샷-및-images.md) |
+](app-screenshots-and-images.md#xbox-images) |
 | **추가 필드**  | 선택 사항                                    | [추가 필드](create-app-store-listings.md#supplemental-fields) 
 | **검색 용어**              | 선택 사항                                    | [검색 용어](create-app-store-listings.md#search-terms)         |
 | **저작권 및 상표 정보** | 선택 사항                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |

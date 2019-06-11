@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bab1d6bd629aa85351e28a907d4b5ad705fb377
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 47011a22353f26361a392690d857bde1fc180c03
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788369"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826108"
 ---
 # <a name="product-declarations"></a>제품 선언
 
@@ -21,7 +21,7 @@ ms.locfileid: "63788369"
 
 ## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>이 앱을 구매할 수 있습니다 하지만 Microsoft Store 상거래 시스템을 사용 하지 않습니다.
 
-거의 모든 서브 미션이 상자를 선택 취소 되어 있음 두어야 구입 하는 기회를 제공 하는 앱부터 됩니다 또는 가져오거나 수 있는 사용 앱 내에서 사용 되는 항목 사용 해야 합니다 Microsoft Store 앱에서 바로 구매 API 만들기 및 추가 기능을 제출 합니다. 당 합니다 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), 앱 만들고 2015 년 6 월 29 일 전에 전송 된 구매 기능으로 한 Microsoft의 상용 엔진을 사용 하지 않고 앱 내 구매 기능을 제공 합니다. 계속 될 수 있습니다 준수 하는 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions)합니다. 이 경우 이 상자를 선택해야 합니다. 그렇지 않으면 선택되지 않은 상태로 그대로 둡니다.
+거의 모든 서브 미션이 상자를 선택 취소 되어 있음 두어야 구입 하는 기회를 제공 하는 앱부터 됩니다 또는 가져오거나 수 있는 사용 앱 내에서 사용 되는 항목 사용 해야 합니다 Microsoft Store 앱에서 바로 구매 API 만들기 및 추가 기능을 제출 합니다. 당 합니다 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), 앱 만들고 2015 년 6 월 29 일 전에 전송 된 구매 기능으로 한 Microsoft의 상용 엔진을 사용 하지 않고 앱 내 구매 기능을 제공 합니다. 계속 될 수 있습니다 준수 하는 [Microsoft Store 정책](store-policies.md#108-financial-transactions)합니다. 이 경우 이 상자를 선택해야 합니다. 그렇지 않으면 선택되지 않은 상태로 그대로 둡니다.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>이 앱은 접근성 준수하도록 테스트되었습니다.
 

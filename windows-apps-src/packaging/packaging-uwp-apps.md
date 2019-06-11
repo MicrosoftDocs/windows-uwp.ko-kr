@@ -2,19 +2,19 @@
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: UWP 앱 패키징
 description: UWP 앱을 배포 또는 판매하려면, 여기에 대한 앱 패키지를 만들어야 합니다.
-ms.date: 03/18/2019
+ms.date: 06/10/2019
 ms.topic: article
 keywords: windows 10, uwp
 f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: ba1e09a3819b2c22de52760519f352adc36d6362
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 265e034b264cf82bacfa5a32141eb5d999d57108
+ms.sourcegitcommit: aa5a055e3ff9ee9defc73ed9567196d59f59542a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372376"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66825029"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
@@ -54,7 +54,7 @@ Windows 10에서 앱 패키지, 앱 번들 또는 완전 한 앱 패키지 업�
 
 Visual Studio 매니페스트 디자이너를 이용하면 파일의 원시 XML을 편집하지 않고도 매니페스트 파일을 업데이트 할 수 있습니다.
 
-**매니페스트 디자이너를 사용 하 여 패키지를 구성 합니다.**
+### <a name="configure-a-package-with-the-manifest-designer"></a>매니페스트 디자이너를 사용하여 패키지 구성
 
 1.  **Solution Explorer**에서 UWP 앱의 프로젝트 노드를 확장합니다.
 2.  **Package.appxmanifest** 파일을 두 번 클릭합니다. 매니페스트 파일이 XML 코드 뷰에 이미 열린 경우 Visual Studio에서 파일을 닫으라는 메시지를 표시합니다.
@@ -81,7 +81,7 @@ Microsoft Store 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.msix)
 >[!NOTE]
 > 앱 패키지 (.appx 또는.msix) 또는 앱 번들 (.appxbundle 또는.msixbundle)를 수동으로 만들어야 하는 경우 참조 [MakeAppx.exe 도구를 사용 하 여 앱 패키지 만들기](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)합니다.
 
-### <a name="to-create-your-app-package-upload-file-using-visual-studio"></a>Visual Studio를 사용 하 여 앱 패키지 업로드 파일을 만들려면
+### <a name="create-your-app-package-upload-file-using-visual-studio"></a>Visual Studio를 사용 하 여 앱 패키지 업로드 파일 만들기
 
 1.  **Solution Explorer**에서 UWP 앱 프로젝트용 솔루션을 엽니다.
 2.  프로젝트를 마우스 오른쪽 단추로 클릭하고 **스토어**->**패키지 만들기**를 선택합니다. 이 옵션이 사용되지 않거나 전혀 표시되지 않는 경우에는 프로젝트가 유니버설 Windows 프로젝트인지 확인합니다.  
@@ -100,11 +100,10 @@ Microsoft Store 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.msix)
     ![표시 된 패키지 구성을 사용 하 여 앱 패키지 창 만들기](images/packaging-screen5.jpg)
 7.  전체 PDB 기호 파일 포함 [앱 성능 분석](https://docs.microsoft.com/windows/uwp/publish/analytics) 앱이 게시 된 후에 파트너 센터에서. 버전 번호 또는 패키지 출력 위치 등 추가 세부 정보를 구성합니다.
 8.  **만들기**를 클릭하여 앱 패키지를 만듭니다. 중 하나를 선택한 경우 합니다 **Microsoft Store 업로드할 패키지를 만들고** 옵션에서 3 단계 및 파트너 센터 제출용 패키지를 만드는, 마법사가 패키지 업로드 (.appxupload 또는.msixupload) 파일을 만듭니다. 선택한 경우 **테스트용 로드에 대 한 패키지를 만들고** 3 단계에서 마법사가 단일 앱 패키지 또는 6 단계에서 선택한 항목에 따라 앱 번들을 만듭니다.
-9. 앱은 성공적으로 패키지 하는 경우이 대화 상자가 표시 됩니다 하 고 지정된 된 출력 위치에서 앱 패키지 업로드 파일을 검색할 수 있습니다. 이 시점에서 수 있습니다 [로컬 컴퓨터 또는 원격 컴퓨터에서 앱 패키지의 유효성을 검사](#validate-your-app-package) 및 [스토어 제출 자동화](#automate-store-submission)합니다.
+9. 앱은 성공적으로 패키지 하는 경우이 대화 상자가 표시 됩니다 하 고 지정된 된 출력 위치에서 앱 패키지 업로드 파일을 검색할 수 있습니다. 이 시점에서 수 있습니다 [로컬 컴퓨터 또는 원격 컴퓨터에서 앱 패키지의 유효성을 검사](#validate-your-app-package) 및 [스토어 제출 자동화](#automate-store-submissions)합니다.
     ![패키지 만들기 완료 표시 된 유효성 검사 옵션 창](images/packaging-screen6.jpg)
 
-
-### <a name="to-create-your-app-package-upload-file-manually"></a>앱 패키지 업로드 파일을 수동으로 만들려면
+### <a name="create-your-app-package-upload-file-manually"></a>앱 패키지 업로드 파일을 수동으로 만들기
 
 1. 폴더에 다음 파일을 배치 합니다.
     - 하나 이상의 앱 패키지 (.msix 또는.appx) 또는 앱 번들 (.appxbundle 또는.msixbundle).
@@ -112,46 +111,74 @@ Microsoft Store 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.msix)
 2. 폴더를 압축 합니다.
 3. zip 폴더 확장 이름을.zip에서.msixupload 또는.appxupload로 변경 합니다.
 
-### <a name="validate-your-app-package"></a>앱 패키지 유효성 검사
+## <a name="validate-your-app-package"></a>앱 패키지 유효성 검사
 
 로컬 또는 원격 컴퓨터에서 인증에 대 한 파트너 센터에 제출 하기 전에 앱의 유효성을 검사 합니다. 앱 패키지의 릴리스 빌드만 유효성 검사할 수 있으며 디버그 빌드는 검사할 수 없습니다. 파트너 센터에 앱 제출에 대 한 자세한 내용은 참조 하세요. [응용 프로그램 제출을](https://docs.microsoft.com/windows/uwp/publish/app-submissions)합니다.
 
-**로컬로 앱 패키지의 유효성을 검사 하려면**
+### <a name="validate-your-app-package-locally"></a>로컬로 앱 패키지 유효성 검사
 
 1. 최종에서 **패키지 만들기 완료** 페이지를 **앱 패키지 만들기** 마법사를 유지 합니다 **로컬 컴퓨터** 옵션을 선택 하 고 **시작 Windows 앱 인증 키트**합니다. Windows 앱 인증 키트로 앱을 테스트하는 방법에 대한 자세한 내용은 [Windows 앱 인증 키트](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)를 참조하세요.
 
-    Windows 앱 인증 키트는 다양한 테스트를 수행하고 결과를 보여 줍니다. 더 자세한 정보는 [Windows 앱 인증 키트](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit-tests)를 참조하세요.
+    Windows 앱 인증 키트 (WACK)는 다양 한 테스트를 수행 하 고 결과 반환 합니다. 더 자세한 정보는 [Windows 앱 인증 키트](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit-tests)를 참조하세요.
 
     테스트에 사용 하려는 원격 Windows 10 장치에 있는 경우 해당 장치에 Windows 앱 인증 키트를 수동으로 설치 해야 합니다. 다음 섹션에서 다음 단계를 안내합니다. 작업이 완료되면 **Remote machine**를 선택하고 **Launch Windows App Certification Kit**을 클릭하여 원격 디바이스에 연결하고 유효성 검사를 실행할 수 있습니다.
 
 2. WACK가 완료 되 고 앱에 인증을 전달 했으면 파트너 센터에 앱을 제출할 수 있습니다. 올바른 파일을 업로드하는지 확인합니다. 솔루션의 루트 폴더에 파일의 기본 위치를 찾을 수 있습니다 `\[AppName]\AppPackages` 및.msixupload 또는.appxupload 파일 확장명으로 끝납니다. 형식의 이름이 됩니다 `[AppName]_[AppVersion]_x86_x64_arm_bundle.appxupload` 또는 `[AppName]_[AppVersion]_x86_x64_arm_bundle.msixupload` 모든 선택 된 패키지 아키텍처를 사용 하 여 앱 번들을 선택한 경우.
 
-**원격 Windows 10 장치에서 앱 패키지의 유효성을 검사 하려면**
+### <a name="validate-your-app-package-on-a-remote-windows10-device"></a>원격 Windows 10 장치에서 앱 패키지 유효성 검사
 
-1.  수행 하 여 개발을 위한 Windows 10 장치를 사용 하도록 설정 합니다 [개발용 장치를 사용 하도록 설정](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) 지침입니다.
+1. 수행 하 여 개발을 위한 Windows 10 장치를 사용 하도록 설정 합니다 [개발용 장치를 사용 하도록 설정](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) 지침입니다.
     >[!IMPORTANT]
     > Windows 10 용 원격 ARM 장치에서 앱 패키지를 확인할 수 없습니다.
-2.  Visual Studio용 원격 도구를 다운로드하여 설치합니다. 이러한 도구를 사용하여 Windows 앱 인증 키트를 원격으로 실행합니다. 이러한 도구를 다운로드할 위치를 포함하여 자세한 관련 내용은 [원격 컴퓨터에서 UWP 앱 실행](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015)을 참조하세요.
-3.  필수 다운로드 [Windows 앱 인증 키트](https://go.microsoft.com/fwlink/p/?LinkID=309666) 및 원격 Windows 10 장치에 설치 합니다.
-4.  마법사 **Package Creation Completed** 페이지에서 **Remote Machine** 옵션 단추를 선택하고 **Test Connection** 단추 옆에 있는 줄임표 단추를 선택합니다.
+2. Visual Studio용 원격 도구를 다운로드하여 설치합니다. 이러한 도구를 사용하여 Windows 앱 인증 키트를 원격으로 실행합니다. 이러한 도구를 다운로드할 위치를 포함하여 자세한 관련 내용은 [원격 컴퓨터에서 UWP 앱 실행](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015)을 참조하세요.
+3. 필수 다운로드 [Windows 앱 인증 키트](https://go.microsoft.com/fwlink/p/?LinkID=309666) 및 원격 Windows 10 장치에 설치 합니다.
+4. 마법사 **Package Creation Completed** 페이지에서 **Remote Machine** 옵션 단추를 선택하고 **Test Connection** 단추 옆에 있는 줄임표 단추를 선택합니다.
     >[!NOTE]
     > 합니다 **원격 컴퓨터** 옵션 단추는 유효성 검사를 지 원하는 솔루션 구성을 하나 이상 선택한 경우에 사용할 수 있습니다. WACK로 앱을 테스트하는 방법에 대한 자세한 내용은 [Windows 앱 인증 키트](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)를 참조하세요.
-5.  서브넷 내부에서 디바이스 양식을 지정하거나 서브넷 외부 디바이스의 DNS(도메인 이름 서버) 이름 또는 IP 주소를 제공합니다.
-6.  디바이스에서 Windows 자격 증명을 사용해 로그온하도록 요구하지 않는 경우 **Authentication Mode** 목록에서 **None**을 선택합니다.
-7.  **Select** 단추를 선택한 다음 **Launch Windows App Certification Kit** 단추를 선택합니다. 해당 디바이스에서 원격 도구가 실행 중인 경우 Visual Studio는 디바이스에 연결한 다음 유효성 검사 테스트를 수행합니다. [Windows 앱 인증 키트 테스트](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit-tests)를 참조하세요.
+5. 서브넷 내부에서 디바이스 양식을 지정하거나 서브넷 외부 디바이스의 DNS(도메인 이름 서버) 이름 또는 IP 주소를 제공합니다.
+6. 디바이스에서 Windows 자격 증명을 사용해 로그온하도록 요구하지 않는 경우 **Authentication Mode** 목록에서 **None**을 선택합니다.
+7. **Select** 단추를 선택한 다음 **Launch Windows App Certification Kit** 단추를 선택합니다. 해당 디바이스에서 원격 도구가 실행 중인 경우 Visual Studio는 디바이스에 연결한 다음 유효성 검사 테스트를 수행합니다. [Windows 앱 인증 키트 테스트](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit-tests)를 참조하세요.
 
-### <a name="automate-store-submission"></a>스토어 제출 자동화
+## <a name="automate-store-submissions"></a>스토어 제출 자동화
 
-Visual Studio 2019 년부터 제출할 수 있습니다 생성 된.appxupload 파일을 Microsoft Store IDE에서 직접 선택 하 여 합니다 **자동으로 Windows 앱 인증 키트 유효성 검사 후 Microsoft Store 제출** 옵션입니다. 전송에 사용 되는 자격 증명을 지정 해야 합니다. 이러한 자격 증명은 세 부분으로 구성 됩니다: 합니다 **Azure 테 넌 트 ID**의 **클라이언트 ID** 하며 **클라이언트 암호**. 얻을 수 있는 다음이 단계를 수행 합니다.
+Visual Studio 2019 년부터 제출할 수 있습니다 생성 된.appxupload 파일을 Microsoft Store IDE에서 직접 선택 하 여 합니다 **자동으로 Windows 앱 인증 키트 유효성 검사 후 Microsoft Store 제출** 끝에 옵션이 합니다 [앱 패키지 만들기 마법사](#create-your-app-package-upload-file-using-visual-studio)합니다. 이 기능은 앱을 게시 하는 데 필요한 파트너 센터 계정 정보에 액세스 하기 위한 Azure Active Directory를 활용 합니다. 이 기능을 사용 하려면 필요한 파트너 센터 계정을 사용 하 여 Azure Active Directory를 연결 하 고 합니다 제출을 위해 필요한 여러 자격 증명 검색.
 
-1. 파트너 센터에서로 이동 하 **개발자 설정을**, 클릭 **사용자**, 조직의 Azure AD 디렉터리를 사용 하 여 조직의 개발자 센터 계정을 연결 합니다. 자세한 내용은 [계정 사용자 관리](https://docs.microsoft.com/windows/uwp/publish/manage-account-users)를 참조하세요.
-2. 에 **사용자** 페이지에서 클릭 **Azure AD 응용 프로그램을 추가**, 앱을 나타내는 Azure AD 응용 프로그램을 추가 또는 서브 미션에 개발자 센터 계정에 대 한 액세스 할당을 사용 하는 서비스는 관리자 역할입니다. 이 응용 프로그램이 이미 Azure AD 디렉터리에 있는 경우에 개발자 센터 계정에 추가할 추가 Azure AD 응용 프로그램 페이지에서 선택할 수 있습니다. 그러지 않으면 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [사용자, 그룹 및 파트너 센터 계정에 Azure AD 응용 프로그램 추가](/windows/uwp/publish/add-users-groups-and-azure-ad-applications)합니다.
-3. 돌아갑니다 합니다 **사용자 관리** 페이지에서 응용 프로그램 설정 및 복사로 Azure AD 응용 프로그램의 이름을 클릭 합니다 **테 넌 트 ID** 및 **클라이언트 ID** 값.
-4. **새 키 추가**를 클릭합니다. 다음 화면에서 클라이언트 암호에 해당 하는 키 값을 복사 합니다. 이 페이지를 나간 후 다시이 정보에 액세스할 수 없습니다 손실 되지 해야 합니다. 자세한 내용은에서 키를 관리 하는 방법에 대 한 정보를 참조 하세요 [사용자, 그룹 및 파트너 센터 계정에 Azure AD 응용 프로그램 추가](/windows/uwp/publish/add-users-groups-and-azure-ad-applications)합니다.
-    ![확인 하 고 진행률 게시](images/packaging-screen8.jpg)
-    > [!Important] 
+### <a name="associate-azure-active-directory-with-your-partner-center-account"></a>파트너 센터 계정을 사용 하 여 Azure Active Directory 연결
+
+자동 스토어 제출에 필요한 자격 증명을 검색할 수 있습니다, 전에 먼저에서 다음이 단계를 수행 해야 합니다 [파트너 센터 대시보드](https://partner.microsoft.com/dashboard) 하지 않았으면이 이미 있습니다.
+
+1. [조직의 Azure Active Directory를 사용 하 여 파트너 센터 계정을 연결](https://docs.microsoft.com/windows/uwp/publish/associate-azure-ad-with-partner-center)합니다. 조직에서 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD가 있습니다. 그렇지 않은 경우 만들 수 있습니다 새 Azure AD 테 넌 트의 파트너 센터 내에서 추가 비용 없이 합니다.
+
+2. [파트너 센터 계정 Azure AD 응용 프로그램을 추가](https://docs.microsoft.com/windows/uwp/publish/add-users-groups-and-azure-ad-applications#add-azure-ad-applications-to-your-partner-center-account)합니다. 이 Azure AD 응용 프로그램에는 앱 또는 개발자 센터 계정에 대 한 서브 미션에 액세스 하는 데 사용할 서비스를 나타냅니다. 이 응용 프로그램을 할당 해야 합니다 **Manager** 역할입니다. 이 응용 프로그램이 Azure AD 디렉터리에 이미 존재하는 경우 **Azure AD 응용 프로그램 추가** 페이지에서 선택하여 개발자 센터 계정에 추가할 수 있습니다. 그러지 않으면 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다.
+
+### <a name="retrieve-the-credentials-required-for-submissions"></a>제출을 위해 필요한 자격 증명을 검색 합니다.
+
+다음, 제출을 위해 필요한 파트너 센터 자격 증명을 검색할 수 있습니다: 합니다 **Azure 테 넌 트 ID**, **클라이언트 ID** 하며 **클라이언트 키**합니다.
+
+1. 로 이동 합니다 [파트너 센터 대시보드](https://partner.microsoft.com/dashboard) 및 Azure AD 자격 증명으로 로그인 합니다.
+
+2. 파트너 센터 대시보드에서 대시보드의 오른쪽 위 모서리) (근처의 기어 아이콘을 선택 하 고 선택한 **개발자 설정을**합니다.
+
+3. 에 **설정을** 왼쪽된 창에서 메뉴 **사용자**합니다.
+
+4. 응용 프로그램의 설정으로 이동 하려면 Azure AD 응용 프로그램의 이름을 클릭 합니다. 이 페이지에 복사 합니다 **테 넌 트 ID** 하 고 **클라이언트 ID** 값입니다.
+
+5. 에 **키** 섹션에서 클릭 **새 키 추가**합니다. 다음 화면에 복사 합니다 **키** 클라이언트 암호에 해당 하는 값입니다. 이 페이지를 나간 후 다시이 정보에 액세스할 수 없습니다 손실 되지 해야 합니다. 자세한 내용은 [AD 응용 프로그램 키 관리](https://docs.microsoft.com/windows/uwp/publish/add-users-groups-and-azure-ad-applications#manage-keys-for-an-azure-ad-application)를 참조하세요.
+
+### <a name="configure-automatic-store-submissions-in-visual-studio"></a>Visual Studio에서 스토어 제출 자동 구성
+
+이전 단계를 완료 하면 Visual Studio 2019에 자동 저장소 서브 미션을 구성할 수 있습니다.
+
+1. 끝에 [앱 패키지 만들기 마법사](#create-your-app-package-upload-file-using-visual-studio)를 선택 **자동으로 Windows 앱 인증 키트 유효성 검사 후 Microsoft Store 제출** 를 클릭 하 고 **다시구성**.
+
+2. 에 **Microsoft Store 전송 구성 설정을** 대화 상자에서 Azure 테 넌 트 ID, 클라이언트 ID 및 클라이언트 키를 입력 합니다.
+
+    ![Microsoft Store 전송 설정을 구성 합니다.](images/packaging-screen8.jpg)
+
+    > [!Important]
     > 이후 전송에서 사용할 프로필에 자격 증명을 저장할 수 있습니다.
-5. **확인**을 클릭합니다.
+
+3. **확인**을 클릭합니다.
 
 제출은 WACK 테스트 완료 후에 시작 됩니다. 전송 진행률을 추적할 수 있습니다 합니다 **확인 및 게시** 창입니다.
 

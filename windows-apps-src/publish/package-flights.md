@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, 플라이팅
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c0d299ba5b3a37b2f80a5e3c9b4456d63c3e0d4
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: abd4b26d0943bf032f93f62719959ef6650e0d65
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788478"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826140"
 ---
 # <a name="package-flights"></a>패키지 플라이트
 
@@ -75,7 +75,7 @@ ms.locfileid: "63788478"
 
 ## <a name="submit-your-package-flight-to-the-store"></a>스토어에 패키지 플라이트 제출
 
-패키지를 지정하고 필요한 옵션을 구성했으면 **스토어에 제출**을 클릭합니다. 그러면 패키지 플라이트는 [앱 인증 프로세스](the-app-certification-process.md)를 거치게 됩니다. 패키지 비행 프로그램에 포함 된 패키지 준수 해야 하는 참고 합니다 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies), 모든 서브 미션 마찬가지로 합니다.
+패키지를 지정하고 필요한 옵션을 구성했으면 **스토어에 제출**을 클릭합니다. 그러면 패키지 플라이트는 [앱 인증 프로세스](the-app-certification-process.md)를 거치게 됩니다. 패키지 비행 프로그램에 포함 된 패키지 준수 해야 하는 참고 합니다 [Microsoft Store 정책](store-policies.md), 모든 서브 미션 마찬가지로 합니다.
 
 이미 앱이 있고 해당 패키지 플라이트와 연결된 플라이트 그룹에 속한 사용자는 이제 패키지 플라이트에 포함된 패키지를 사용하여 업데이트를 다운로드합니다. 앱이 없는 경우 앱을 설치할 때 패키지 플라이트에서 패키지가 다운로드됩니다. 
 

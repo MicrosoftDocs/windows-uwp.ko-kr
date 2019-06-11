@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 게시, 전처리, 인증, 릴리스, 보류 중, 제출, publish, 상태 시간
 ms.localizationpriority: medium
-ms.openlocfilehash: fe9df9ce95c6b17bcd3d702bf09ac57b9f205e0c
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: d88d8deeb467f186f120fb8c1e579d5c9222aaf1
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63790590"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826232"
 ---
 # <a name="the-app-certification-process"></a>앱 인증 프로세스
 
@@ -29,7 +29,7 @@ ms.locfileid: "63790590"
 -   **기술 규정 준수를 테스트 합니다.** 기술 규정 준수는 Windows 앱 인증 키트에서 테스트 됩니다. 스토어에 앱을 제출하기 전에 항상 [Windows 앱 인증 키트로 앱을 테스트](../debug-test-perf/windows-app-certification-kit.md)해야 합니다.
 -   **콘텐츠 규정 준수:** 이 작업에 걸리는 시간은 앱이 얼마나 복잡, 얼마나 많은 시각적 콘텐츠 및 앱의 개수 최근에 제출한에 따라 달라 집니다. [인증에 대한 참고 사항](notes-for-certification.md) 페이지에 테스터가 알고 있어야 하는 정보를 제공해야 합니다.
 
-인증 프로세스가 완료되면 앱의 인증 통과 여부를 알리는 인증 보고서를 받게 됩니다. 앱이 인증을 통과하지 못한 경우 보고서에 실패한 테스트나 충족되지 않은 [정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)이 표시됩니다. 문제를 해결한 후 앱에 대한 새 제출을 만들어서 인증 프로세스를 다시 시작할 수 있습니다.
+인증 프로세스가 완료되면 앱의 인증 통과 여부를 알리는 인증 보고서를 받게 됩니다. 앱이 인증을 통과하지 못한 경우 보고서에 실패한 테스트나 충족되지 않은 [정책](store-policies.md)이 표시됩니다. 문제를 해결한 후 앱에 대한 새 제출을 만들어서 인증 프로세스를 다시 시작할 수 있습니다.
 
 ## <a name="release"></a>릴리스
 
@@ -54,7 +54,7 @@ ms.locfileid: "63790590"
 위의 단계를 성공적으로 수행하면 제출의 상태가 **게시 중**에서 **스토어에 있음**으로 변경됩니다. 그런 다음 고객이 다운로드할 수 있도록 제출이 Microsoft Store에 제공됩니다(다른 [검색 기능](choose-visibility-options.md#discoverability) 옵션을 선택하지 않은 경우). 
 
 > [!NOTE]
-> 잠재적 문제를 식별하고 모든 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)을 준수하는지 확인할 수 있으려면 앱이 게시된 후에 스팟 체킹을 수행합니다. 문제가 발견되면 해당하는 경우 또는 앱이 스토어에서 제거된 경우 문제와 문제 해결 방법에 대한 알림을 받게 됩니다.
+> 잠재적 문제를 식별하고 모든 [Microsoft Store 정책](store-policies.md)을 준수하는지 확인할 수 있으려면 앱이 게시된 후에 스팟 체킹을 수행합니다. 문제가 발견되면 해당하는 경우 또는 앱이 스토어에서 제거된 경우 문제와 문제 해결 방법에 대한 알림을 받게 됩니다.
 
  
 

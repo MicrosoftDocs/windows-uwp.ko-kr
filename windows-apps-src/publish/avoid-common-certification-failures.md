@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 62c99c159ff68201919fa15baded999e3b6a2477
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0032a5bbaafabab3c847b2b7c48536873f4532dd
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625798"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826171"
 ---
 # <a name="avoid-common-certification-failures"></a>일반적인 인증 실패 방지
 
@@ -19,7 +19,7 @@ ms.locfileid: "57625798"
 이 목록을 검토하여 빈번하게 앱이 인증되지 않도록 하거나, 앱이 게시된 후 임의 추출 검사 중 식별할 수 있는 문제를 방지하세요.
 
 > [!NOTE]
-> 검토 해야 합니다 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies) 앱 모두 여기에 나열 된 요구 사항을 충족 하도록 합니다.
+> 검토 해야 합니다 [Microsoft Store 정책](store-policies.md) 앱 모두 여기에 나열 된 요구 사항을 충족 하도록 합니다.
 
 -   완료된 앱만 제출합니다. 앱 설명을 사용하여 제공 예정인 기능을 언급할 수 있지만 앱에 불완전한 조항, 생성 중인 웹 페이지 링크 또는 앱이 불완전하다는 인상을 고객에게 주는 다른 사항이 앱에 포함되지 않도록 하세요.
 
@@ -31,7 +31,7 @@ ms.locfileid: "57625798"
 
 -   앱을 사용하기 위해 사용자가 서비스에 로그인해야 하는 경우 테스트 계정의 사용자 이름 및 암호, 숨겨진 기능 또는 잠긴 기능을 액세스하는 데 필요한 단계 등 앱을 사용하는 데 [필요한 정보를 제공](notes-for-certification.md)합니다.
 
--   포함 한 [개인정보 처리 방침 URL](enter-app-properties.md#privacy-policy-url) 앱에 하나; 필요한 경우 예를 들어, 앱 모든 종류의 어떤 방식으로 개인 정보에 액세스 하거나이 고 그렇지 않으면 법률에서 요구 합니다. 앱 개인 정보 취급 방침에 필요한 경우를 확인 하려면를 검토 합니다 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 하며 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)합니다.
+-   포함 한 [개인정보 처리 방침 URL](enter-app-properties.md#privacy-policy-url) 앱에 하나; 필요한 경우 예를 들어, 앱 모든 종류의 어떤 방식으로 개인 정보에 액세스 하거나이 고 그렇지 않으면 법률에서 요구 합니다. 앱 개인 정보 취급 방침에 필요한 경우를 확인 하려면를 검토 합니다 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 하며 [Microsoft Store 정책](store-policies.md)합니다.
 
 -   앱이 수행하는 역할을 앱 설명이 명확하게 나타내는지 확인합니다. 도움이 필요하면 [유용한 앱 설명 작성](write-a-great-app-description.md)에 있는 지침을 참조하세요.
 

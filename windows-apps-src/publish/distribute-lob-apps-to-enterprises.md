@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, lob, 엔터프라이즈 앱, 비즈니스용 Store, 교육용 Store, 엔터프라이즈
 ms.localizationpriority: medium
-ms.openlocfilehash: b379762ba3d3ea11b974a84119280247b85bc19e
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: d44d2b248ddc2bff6ffa91860621fe315fb22c47
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787077"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826143"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>엔터프라이즈에 LOB 앱 배포
 
@@ -39,7 +39,7 @@ LOB 앱을 엔터프라이즈에 독점적으로 게시하는 첫 번째 단계�
 
 ## <a name="submit-lob-apps"></a>LOB 앱 제출
 
-엔터프라이즈의 독점적 사용을 위해 앱을 게시할 준비가 된 후 프로세스는 앱 제출 프로세스와 유사합니다. 앱은 동일한 [인증 프로세스](the-app-certification-process.md)를 거치며 모든 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)을 준수해야 합니다. 프로세스 중 몇 부분만 서로 다릅니다.
+엔터프라이즈의 독점적 사용을 위해 앱을 게시할 준비가 된 후 프로세스는 앱 제출 프로세스와 유사합니다. 앱은 동일한 [인증 프로세스](the-app-certification-process.md)를 거치며 모든 [Microsoft Store 정책](store-policies.md)을 준수해야 합니다. 프로세스 중 몇 부분만 서로 다릅니다.
 
 
 ### <a name="visibility"></a>표시 여부

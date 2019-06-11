@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: Windows 10, UWP, 예고편, 동영상, 스크린샷, 이미지, 아이콘, Store 목록, Store 목록 이미지
 ms.localizationpriority: medium
-ms.openlocfilehash: a27763d76d2be65c7e0d2c6ccaeb0cd13123bdae
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 3f1931a15b5517264cd11dca8d8086dda7094b93
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244314"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826159"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>앱 스크린샷, 이미지 및 예고편
 
@@ -128,7 +128,7 @@ Store 목록에 최대 15개의 예고편을 추가할 수 있습니다. 아래 
 
 또 아래의 요구 사항을 적용해야 합니다.
 
-**예고편을 사용자 목록에 추가합니다.**
+**추가 하려면 트레일러의 고객 명단:**
 1. 표시된 상자에 예고편 **비디오 파일**을 업로드합니다. 이미 업로드 한 예고편을 다시 사용하기 원할 경우 드롭다운 상자가 표시됩니다(다른 언어의 Microsoft Store 목록 등).
 2. 예고편을 업로드 한 후, 여기에 해당되는 **미리 보기 이미지** 를 업로드해야 합니다. 1920x1080 픽셀의 .png 파일이어야 합니다. 일반적으로 예고편의 정지 이미지를 사용합니다.
 3. 연필 모양 아이콘을 클릭해 예고편 **제목**을 추가하세요(255자 이하).
@@ -152,7 +152,7 @@ Store 목록에 최대 15개의 예고편을 추가할 수 있습니다. 아래 
 - 제목은 255자 이하입니다. 
 - 예고편에 연령별 등급을 포함하지 마세요.
 
-Microsoft Store 목록 페이지의 다른 필드와 마찬가지로, 승인을 받은 예고편만 Microsoft Store에 게시할 수 있습니다. 예고편이 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)을 준수하는지 확인하세요.
+Microsoft Store 목록 페이지의 다른 필드와 마찬가지로, 승인을 받은 예고편만 Microsoft Store에 게시할 수 있습니다. 예고편이 [Microsoft Store 정책](store-policies.md)을 준수하는지 확인하세요.
 
 파일 형식에 따라 추가 요구 사항이 있습니다.
 
