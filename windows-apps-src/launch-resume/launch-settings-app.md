@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: d720b256ae528192d694f98877126a6df087a18e
-ms.sourcegitcommit: 26bd7953ee5c5e625d4ed8f93df0391511c76f23
+ms.openlocfilehash: 9ce2024131035e77e7d8140c047e37979c6ac490
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491144"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040133"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -251,7 +251,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 알림 | ms-settings:privacy-notifications |
 | 기타 장치 | ms-settings:privacy-customdevices |
 | 사진 | ms-settings:privacy-pictures |
-| 전화 통화 | ms-설정: 개인 정보-전화 통화 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
+| 전화 통화 | ms-설정: 개인 정보-통화 (**Windows 10 1809 이상 버전에서에서 지원 되지 않는**) |
 | 무선 | ms-settings:privacy-radios |
 | 음성, 수동 입력 및 입력 |ms-settings:privacy-speechtyping |
 | 태스크 | ms-settings:privacy-tasks |
