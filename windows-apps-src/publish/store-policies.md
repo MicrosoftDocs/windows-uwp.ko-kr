@@ -8,10 +8,10 @@ keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
 ms.openlocfilehash: 3511fb221e1e087f7ced5ce11aca8d53bd027079
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66826480"
 ---
 # <a name="microsoft-store-policies"></a>Microsoft Store 정책
@@ -467,7 +467,7 @@ Microsoft Store에서 배포하기 위해 제공되는 콘텐츠 및 메타데�
 ---
 <sup>1</sup>"Store" 또는 "Microsoft Store"는 어떤 이름이든 간에 고객에게 앱이 제공되거나 고객이 앱을 구매할 수 있도록 Microsoft에서 소유하거나 운영하는 플랫폼을 의미합니다. 달리 명시되지 않는 이상 Microsoft Store에는 Microsoft Store, Windows Store, Xbox Store, 비즈니스용 Microsoft Store 및 교육용 Microsoft Store가 모두 포함됩니다.
 
-### <a name="see-also"></a>참조
+### <a name="see-also"></a>참고 항목
 
 - [Microsoft Store 정책에 대한 변경 내용](store-policies-change-history.md)
 - [Microsoft Store 정책 및 준수 사항](store-policies-and-code-of-conduct.md)

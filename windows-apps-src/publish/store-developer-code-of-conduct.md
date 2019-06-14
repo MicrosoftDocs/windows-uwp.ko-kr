@@ -8,10 +8,10 @@ keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: 2B84B877-794A-468F-A478-DA09E4694513
 ms.openlocfilehash: a9e96431594cf1a046741659011e546807294f7a
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66826450"
 ---
 # <a name="developer-code-of-conduct"></a>개발자 준수 사항
@@ -34,7 +34,7 @@ Microsoft Store 개발자 계정을 양호한 상태로 유지해야 합니다. 
 Microsoft Store 또는 파트너 센터에서 사기 또는 부정 행위에 참여해서는 안 됩니다. 여기에는 개발자의 앱이나 다른 모든 앱에 대한 순위, 검색 결과, 평가 또는 리뷰를 조작하려는 시도, 다른 사람의 Microsoft Store 서비스(또는 Microsoft에서 제공하는 관련 서비스) 사용을 방해하는 행위, 모든 형태의 금융 사기(광고 노출 또는 클릭 사기를 포함하되 이에 제한되지 않음) 시도 또는 응용 프로그램의 광고 인벤토리 및 광고 크리에이티브 관련 사기 행위에 참여하는 행위 또는 직간접적 수단을 이용하여 개인 정보에 대한 무단 액세스 권한을 얻거나 얻으려고 시도하는 행위 또는 이러한 정보를 사용하려고 하는 행위를 포함되며 이에 제한되지 않습니다.
 
 
-### <a name="see-also"></a>참조
+### <a name="see-also"></a>참고 항목
 
 - [Microsoft Store 정책 및 준수 사항](store-policies-and-code-of-conduct.md)
 - [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)

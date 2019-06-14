@@ -8,10 +8,10 @@ keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: B15D4F19-4E6A-4C27-AD64-F03014D11BA9
 ms.openlocfilehash: 550ffeac8912769fc7e319d819f4de67f6d36cf1
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66826420"
 ---
 # <a name="app-quality"></a>앱 품질
@@ -86,7 +86,7 @@ Store 페이지의 메타데이터(아이콘, 제목, 스크린 샷, 설명 등)
 - 더 자세한 내용은 [고객과의 소통](https://developer.microsoft.com/store/engage)을 참조하십시오.
 
 
-### <a name="see-also"></a>참조
+### <a name="see-also"></a>참고 항목
 
 - [Microsoft Store 정책 및 준수 사항](store-policies-and-code-of-conduct.md)
 - [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)
