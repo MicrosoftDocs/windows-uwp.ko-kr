@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 22aefb58dc06a35ed3a10338eb585aa6c49e55fc
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 4846a29e914ffed15e4c3dea938cc51cefd566e0
+ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215099"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131942"
 ---
 # <a name="call-uwp-apis-in-desktop-apps"></a>데스크톱 앱에서 UWP Api를 호출 합니다.
 
@@ -213,10 +213,6 @@ void UWP::ShowToast()
 실행 중인 Windows 버전에 관계없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 응용 프로그램 호출 Windows 런타임 Api는 사용자가 실행 하는 경우에 응용 프로그램 패키지 응용 프로그램으로 Windows 10에서 합니다.
 
 코드에 런타임 검사를 추가 하는 가장 쉬운 방법은 다음과 같습니다.이 Nuget 패키지를 설치 하려면 [데스크톱 브리지 도우미](https://www.nuget.org/packages/DesktopBridge.Helpers/) 사용 하 여는 ``IsRunningAsUWP()`` Windows 런타임 Api를 호출 하는 모든 코드는 게이트 방법입니다. 이 블로그 게시물에 대 한 자세한 내용은 참조 하세요. [데스크톱 브리지-응용 프로그램의 컨텍스트를 식별](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/)합니다.
-
-## <a name="related-video"></a>관련 비디오
-
-<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Use-UWP-APIs-in-Your-Code-3d78c6WhD_9506218965" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
 
 ## <a name="related-samples"></a>관련 샘플
 

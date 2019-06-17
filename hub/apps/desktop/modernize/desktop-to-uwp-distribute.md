@@ -8,12 +8,12 @@ ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e1aa424fe038a50a5e29364c7f8246e324dc07c
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 45d298aca60155915900f494654dce8e89fb1ee0
+ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215007"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131900"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>패키지에 포함 된 데스크톱 앱 배포
 
@@ -57,12 +57,6 @@ Windows 10 S를 실행 하는 장치에 응용 프로그램을 배포 하려는 
 인증서를 사용 하 여 응용 프로그램에 서명, 참조 [SignTool을 사용 하 여 응용 프로그램 패키지를 서명](/windows/uwp/packaging/sign-app-package-using-signtool)합니다.
 
 다른 장치에 응용 프로그램을 사이드 로드 참조 [Windows 10에서 테스트용으로 로드 LOB 앱](/windows/application-management/sideload-apps-in-windows-10)합니다.
-
-**비디오**
-
-|Microsoft Store 응용 프로그램 게시 |엔터프라이즈 응용 프로그램 배포  |
-|---|---|
-|<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Windows-Store-Publication-3cWyG5WhD_5506218965"      width="426" height="472" allowFullScreen frameBorder="0"></iframe>|<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Video-Distribution-for-Enterprise-Apps-XJ5Hd5WhD_1106218965" width="426" height="472" allowFullScreen frameBorder="0"></iframe>|
 
 <a id="transition-users" />
 
@@ -167,10 +161,6 @@ private void RemoveDesktopApp()
 
 }
 ```
-
-### <a name="video"></a>비디오
-
-<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Transition-Taskbar-Pins-Start-Tiles-File-Type-Associations-and-Protocol-Handlers-MD5mv5WhD_2406218965" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
 
 ## <a name="next-steps"></a>다음 단계
 

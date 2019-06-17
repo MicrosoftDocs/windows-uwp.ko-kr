@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
-ms.openlocfilehash: 40cf41df4ccf15206e5855f989bc46c599baa473
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8cc6ca24453be83f5c10cc6c86c508a5a3f99c4c
+ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372073"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131927"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스
 
@@ -24,9 +24,9 @@ Xbox One에서 실행되는 UWP 앱은 시스템 및 다른 앱과 리소스를 
 백그라운드에서 실행되는 앱에서 사용할 수 있는 최대 메모리는 128MB입니다. 백그라운드 모드는 백그라운드 음악 플레이어와 같은 동시 응용 프로그램에만 적용됩니다.  게임이 중단되고 백그라운드에서 종료됩니다.
 
 이러한 제한을 초과하면 메모리 할당 오류가 발생합니다. 메모리 사용 모니터링에 대한 자세한 내용은 [MemoryManager 클래스](https://docs.microsoft.com/uwp/api/windows.system.memorymanager) 참조를 참조하세요.
-    
-    > [!NOTE]
-    > When running your app or game from the Visual Studio debugger, these memory constraints do not apply. This limit is only applicable when not running in debugging mode.
+
+> [!NOTE]
+> Visual Studio 디버거에서 앱 이나 게임을 실행 하는 경우 이러한 메모리 제약 조건 적용 되지 않습니다. 이 제한은 디버깅 모드에서 실행하지 않는 경우에만 적용됩니다.
 
 * CPU
     * 앱: 시스템에서 실행되는 앱과 게임 수에 따라 CPU 코어 2~4개 공유.
@@ -46,14 +46,7 @@ Xbox One에서 실행되는 UWP 앱은 시스템 및 다른 앱과 리소스를 
 
 **게임 개발**의 경우 다른 게임 콘솔과 마찬가지로 Xbox One은 전체 잠재 기능에 액세스하기 위해 특정 하드웨어 기반 개발 키트가 필요한 특수 하드웨어입니다. Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 개발하는 경우 Xbox One 개발 키트에 액세스하기 위해 [ID@Xbox](https://www.xbox.com/Developers/id) 프로그램에 등록할 수 있습니다.
 
-
-Xbox One의 UWP 앱에 대한 시스템 리소스에 대해 자세한 내용은 이 동영상의 첫 번째 부분을 확인하세요.
-</br>
-</br>
-<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developing-xbox-one-applications-16860/Video-What-s-Unique--vk0fOPf9C_2006218965" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
-
 ## <a name="see-also"></a>참조
 - [Xbox One에서 UWP](index.md)
 - [Xbox Live 크리에이터 스 프로그램 시작](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/creators-program)
 - [DirectX 및 Xbox One에서 UWP](https://walbourn.github.io/)
-
