@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: windows 10 uwp 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f979edbd49699447040880964dd1378bc7c94c0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 38c9a40dbe1a46aa125c76cd1fcc88a84685c8cc
+ms.sourcegitcommit: 280193dfe5a106fc6b4c85df3ac40535547b855c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362079"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67235166"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 
@@ -30,7 +30,7 @@ Windows 데스크톱 브리지 앱에 대 한 선택적 테스트는 정보용 �
 테스트는 패키지의 모든 PE 파일을 검색하고 서명에 대한 파일의 헤더를 검사합니다. 모든 PE 파일에 디지털 서명이 권장됩니다. PE 파일이 서명되지 않은 경우 경고가 생성됩니다.
  
 **정정 작업**  
-파일에 항상 디지털 서명이 권장됩니다. 자세한 내용은 [코드 서명 소개](https://msdn.microsoft.com/en-us/library/ms537361(v=vs.85).aspx)를 참조하세요.
+파일에 항상 디지털 서명이 권장됩니다. 자세한 내용은 [코드 서명 소개](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))를 참조하세요.
 
 ### <a name="2-file-association-verbs"></a>2. 파일 연결 동사 
 **배경**  
