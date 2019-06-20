@@ -8,12 +8,12 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fb292ad5cba892275709fbc89d5d53fa136144f3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ef8cdad247a57ce5fab461e70c2725fda4231efd
+ms.sourcegitcommit: ed32219e04f814a12ea018348e9cf678fcfd5e3a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365294"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67253065"
 ---
 # <a name="speech-interactions"></a>음성 조작
 
@@ -58,7 +58,7 @@ ms.locfileid: "66365294"
 
 인식이 끝났음을 나타내는 침묵 시간 즉, 음성 입력이 없는 시간을 지정합니다. 이는 일반적으로 사용자가 앱 참여를 중지했음을 나타내므로 이 시간 이후에 인식을 자동으로 다시 시작하지 마세요.
 
-네트워크 연결을 사용할 수 없는 경우 모든 연속 인식 UI를 비활성화하고 인식 세션을 종료합니다. 연속 인식에는 네트워크 연결이 필요합니다.
+네트워크 연결을 사용할 수 없는 경우 모든 연속 인식 UI를 비활성화하고 인식 세션을 종료합니다. 연속 인식 네트워크 연결이 필요 합니다.
 
 ## <a name="commanding"></a>명령
 
@@ -200,7 +200,7 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 -   비정상적인 단어 순서로 연결하거나 문장 구성 숫자 또는 문장 부호를 발음하면 구를 이해할 수 없게 될 수 있습니다.
 -   원어민이 구를 말하는 방식과 음성 운율 또는 억양이 다른 경우 음성이 부자연스럽게 들릴 수 있습니다.
 
-두 문제 모두 일반 텍스트 대신 SSML을 음성 신시사이저에 입력하여 해결할 수 있습니다. SSML에 대한 자세한 내용은 [SSML을 사용하여 합성된 음성 제어](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) 및 [음성 합성 생성 언어 참조](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14))를 참조하세요.
+일반 텍스트 대신 SSML 음성 신시사이저에 대 한 입력으로 사용 하 여 두 가지 문제를 해결할 수 있습니다. SSML에 대한 자세한 내용은 [SSML을 사용하여 합성된 음성 제어](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) 및 [음성 합성 생성 언어 참조](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14))를 참조하세요.
 
 ## <a name="other-articles-in-this-section"></a>이 섹션의 다른 문서 
 

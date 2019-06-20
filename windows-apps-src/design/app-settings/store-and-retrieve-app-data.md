@@ -8,12 +8,12 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2848b22c69960075297546d401689d4c51c637aa
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: dc13b53450c97ffcd3d44b58d564c813344abf0a
+ms.sourcegitcommit: ed32219e04f814a12ea018348e9cf678fcfd5e3a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361925"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67253052"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>설정 및 기타 앱 데이터 저장 및 검색
 
@@ -430,7 +430,7 @@ localSettings.DeleteContainer("exampleContainer");
 ## <a name="versioning-your-app-data"></a>앱 데이터 버전 관리
 
 
-선택적으로, 앱에 대한 앱 데이터에 버전을 지정할 수 있습니다. 이렇게 하면 앱의 이전 버전과 호환성 문제를 일으키지 않고 앱 데이터의 형식을 변경하는 차기 앱 버전을 만들 수 있습니다. 앱은 데이터 저장소에서 앱 데이터의 버전을 확인하며, 그 버전이 앱 버전보다 낮을 경우 앱은 앱 데이터를 새 형식으로 업데이트하고 버전을 업데이트해야 합니다. 자세한 내용은 [**Application.Version**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.version) 속성 및 [**ApplicationData.SetVersionAsync**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.) 메서드를 참조하세요.
+선택적으로, 앱에 대한 앱 데이터에 버전을 지정할 수 있습니다. 이렇게 하면 앱의 이전 버전과 호환성 문제를 일으키지 않고 앱 데이터의 형식을 변경하는 차기 앱 버전을 만들 수 있습니다. 앱은 데이터 저장소에서 앱 데이터의 버전을 확인하며, 그 버전이 앱 버전보다 낮을 경우 앱은 앱 데이터를 새 형식으로 업데이트하고 버전을 업데이트해야 합니다. 자세한 내용은 [**Application.Version**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.version) 속성 및 [**ApplicationData.SetVersionAsync**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.setversionasync) 메서드를 참조하세요.
 
 ## <a name="related-articles"></a>관련 문서
 
