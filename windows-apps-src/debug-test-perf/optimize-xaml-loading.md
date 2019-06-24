@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e177f4715d549ce3ef64534e0fc28d2fc3a9fe0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: aacf51cc320a0835f906e91806b686a88907640e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359946"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317614"
 ---
 # <a name="optimize-your-xaml-markup"></a>XAML 태그 최적화
 
@@ -350,7 +350,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 
 ### <a name="borders"></a>테두리
 
-[Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.) 요소를 사용하여 개체 주위의 테두리를 그립니다. 이 예제에서는 [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)를 [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 주위의 임시 테두리로 사용합니다. 그러나 가운데 셀에 있는 모든 픽셀은 과도하게 그려집니다.
+[Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border) 요소를 사용하여 개체 주위의 테두리를 그립니다. 이 예제에서는 [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)를 [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 주위의 임시 테두리로 사용합니다. 그러나 가운데 셀에 있는 모든 픽셀은 과도하게 그려집니다.
 
 **비효율적입니다.**
 

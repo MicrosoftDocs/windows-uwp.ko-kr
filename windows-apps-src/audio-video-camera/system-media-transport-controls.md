@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fc783d07d8d9bb907c7c23da483d5fbfb8ce63ac
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3e306cfe1ee03e9ef4a0688145c2db7b3addd68e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360686"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318501"
 ---
 # <a name="manual-control-of-the-system-media-transport-controls"></a>시스템 미디어 전송 컨트롤의 수동 컨트롤
 
@@ -68,7 +68,7 @@ SMTC의 수동 제어를 구현해야 하는 몇 가지 시나리오가 있습�
 
 ## <a name="update-the-system-media-transport-controls-timeline-properties"></a>시스템 미디어 전송 컨트롤 타임라인 속성 업데이트
 
-시스템 전송 컨트롤은 현재 재생 중인 미디어 항목(예: 현재 재생 위치, 미디어 항목의 시작 시간과 종료 시간)의 타임라인에 대한 정보를 표시합니다. 시스템 전송 컨트롤 타임라인 속성을 업데이트하려면 새 [**SystemMediaTransportControlsTimelineProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.SystemMediaTransportControlsTimelineProperties) 개체를 만듭니다. 재생 중인 미디어 항목의 현재 상태를 반영하도록 개체의 속성을 설정합니다. [  **SystemMediaTransportControls.UpdateTimelineProperties**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.)를 호출하여 컨트롤이 타임라인을 업데이트하도록 합니다.
+시스템 전송 컨트롤은 현재 재생 중인 미디어 항목(예: 현재 재생 위치, 미디어 항목의 시작 시간과 종료 시간)의 타임라인에 대한 정보를 표시합니다. 시스템 전송 컨트롤 타임라인 속성을 업데이트하려면 새 [**SystemMediaTransportControlsTimelineProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.SystemMediaTransportControlsTimelineProperties) 개체를 만듭니다. 재생 중인 미디어 항목의 현재 상태를 반영하도록 개체의 속성을 설정합니다. [  **SystemMediaTransportControls.UpdateTimelineProperties**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.updatetimelineproperties)를 호출하여 컨트롤이 타임라인을 업데이트하도록 합니다.
 
 [!code-cs[UpdateTimelineProperties](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetUpdateTimelineProperties)]
 

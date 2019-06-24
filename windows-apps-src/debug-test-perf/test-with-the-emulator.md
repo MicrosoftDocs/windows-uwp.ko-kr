@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6850a5d2458c29c81bacc195106af697b37dd23b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: dfe6a8b7efd358640e59445c2f8fa9cb49ff6a67
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359899"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317571"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -566,7 +566,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 | 해결 방법         | 640 x 480(VGA)          | 640 x 480(VGA) 이상 |
 | 자동 초점          | 예                      | 예                       |
 | Flash              | 아니요                       | 예                       |
-| 확대/축소               | 2x(디지털 또는 광학)  | 2x(디지털 또는 광학)   |
+| Zoom               | 2x(디지털 또는 광학)  | 2x(디지털 또는 광학)   |
 | 비디오 해상도   | 640 x 480(VGA)          | 640 x 480(VGA) 이상 |
 | 미리 보기 해상도 | 640 x 480(VGA)          | 640 x 480(VGA)           |
 
@@ -661,6 +661,6 @@ Windows 10 도구를 사용하여 작업을 시작할 때 해답을 찾아 문�
 ## <a name="related-topics"></a>관련 항목
 
 * [에뮬레이터에서 Windows Phone 앱 실행](https://docs.microsoft.com/visualstudio/debugger/run-windows-phone-apps-in-the-emulator?view=vs-2015)
-* [Windows 및 Windows Phone SDK 아카이브](https://dev.windows.com/downloads/sdk-archive)
+* [Windows 및 Windows Phone SDK 아카이브](https://developer.microsoft.com/windows/downloads/sdk-archive)
  
 

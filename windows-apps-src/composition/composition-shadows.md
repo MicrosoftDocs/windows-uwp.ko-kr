@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9541ea1c00d473bc4881a80d8597625592e278f9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4a47a5f8ffca1d9ca2ddab05fe0baf2f85977d7f
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630838"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318187"
 ---
 # <a name="shadows-in-windows-ui"></a>Windows UI에 그림자
 
@@ -113,9 +113,9 @@ shadow.StartAnimation("BlurRadius", blurAnimation);
 
 더 복잡 한 프레임 워크 요소에 그림자를 추가 하려는 경우에 XAML 컴퍼지션 사이의 그림자와의 상호 운용성에 몇 가지가 있습니다.
 
-1. 사용 된 [DropShadowPanel](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.Properties.cs) Windows 커뮤니티 도구 키트에서 사용할 수 있습니다. 참조 된 [DropShadowPanel 설명서](https://docs.microsoft.com/windows/uwpcommunitytoolkit/controls/DropShadowPanel) 사용 방법에 대 한 자세한 내용은 합니다.
+1. 사용 된 [DropShadowPanel](https://github.com/windows-toolkit/WindowsCommunityToolkit/blob/master/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.Properties.cs) Windows 커뮤니티 도구 키트에서 사용할 수 있습니다. 참조 된 [DropShadowPanel 설명서](https://docs.microsoft.com/windows/uwpcommunitytoolkit/controls/DropShadowPanel) 사용 방법에 대 한 자세한 내용은 합니다.
 1. 시각적 개체를 섀도 호스트로 사용 및 XAML 유인물 시각적 개체에 연결을 만듭니다.
-1. 컴퍼지션 샘플 갤러리를 사용 하 여 [SamplesCommon](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SamplesCommon/SamplesCommon) CompositionShadow 컨트롤 사용자 지정 합니다. 사용량에 대 한 다음 예제를 참조 하세요.
+1. 컴퍼지션 샘플 갤러리를 사용 하 여 [SamplesCommon](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SamplesCommon/SamplesCommon) CompositionShadow 컨트롤 사용자 지정 합니다. 사용량에 대 한 다음 예제를 참조 하세요.
 
 ## <a name="performance"></a>성능
 
@@ -124,12 +124,12 @@ shadow.StartAnimation("BlurRadius", blurAnimation);
 섀도 특성| 비용
 ------------- | -------------
 사각형    | 낮음
-Shadow.Mask      | 높은
-CompositionDropShadowSourcePolicy.InheritFromVisualContent | 높은
+Shadow.Mask      | 높음
+CompositionDropShadowSourcePolicy.InheritFromVisualContent | 높음
 정적 흐리게 반경이 | 낮음
-흐리게 반경이 애니메이션 적용 | 높은
+흐리게 반경이 애니메이션 적용 | 높음
 
 ## <a name="additional-resources"></a>추가 리소스
 
-- [컴퍼지션 DropShadow API](/uwp/api/Windows.UI.Composition.DropShadow)
-- [WindowsUIDevLabs GitHub 리포지토리](https://github.com/Microsoft/WindowsUIDevLabs)
+- [Composition DropShadow API](/uwp/api/Windows.UI.Composition.DropShadow)
+- [WindowsUIDevLabs GitHub Repo](https://github.com/microsoft/WindowsCompositionSamples)

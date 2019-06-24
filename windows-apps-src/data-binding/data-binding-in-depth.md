@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 972556a3d8d46dce11b251fc11d209fa96d3b751
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 150ea5fc9f5e91171f29cc985351856487e91d4a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362589"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318763"
 ---
 # <a name="data-binding-in-depth"></a>데이터 바인딩 심층 분석
 
@@ -43,7 +43,7 @@ ms.locfileid: "66362589"
 **{X:bind}를 보여 주는 샘플 앱**
 
 -   [{x:Bind} 샘플](https://go.microsoft.com/fwlink/p/?linkid=619989)
--   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)
+-   [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper)
 -   [XAML UI 기본 사항 샘플](https://go.microsoft.com/fwlink/p/?linkid=619992)
 
 **{Binding}를 보여 주는 샘플 앱**
@@ -199,7 +199,7 @@ void HostViewModel::PropertyChanged(winrt::event_token const& token) noexcept
 
 이제 **NextButtonText** 속성을 관찰할 수 있습니다. 이 속성에 대한 단방향 또는 양방향 바인딩을 작성할 경우(방법은 나중에 설명) 결과 바인딩 개체는 **PropertyChanged** 이벤트를 구독합니다. 이 이벤트가 발생하면 바인딩 개체의 처리기에 변경된 속성 이름이 포함된 인수가 수신됩니다. 이를 통해 바인딩 개체는 다시 읽어야 하는 속성 값을 인식할 수 있습니다.
 
-사용 하는 경우 여러 번 위에 표시 된 패턴을 구현 하지 않아도 되도록 C# 방금에서 파생할 수 있습니다 다음는 **BindableBase** 에서 볼 수 있는 되는 기본 클래스를 [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (샘플 "Common" 폴더)입니다. 관련 예제는 다음과 같습니다.
+사용 하는 경우 여러 번 위에 표시 된 패턴을 구현 하지 않아도 되도록 C# 방금에서 파생할 수 있습니다 다음는 **BindableBase** 에서 볼 수 있는 되는 기본 클래스를 [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper) (샘플 "Common" 폴더)입니다. 관련 예제는 다음과 같습니다.
 
 ```csharp
 public class HostViewModel : BindableBase
@@ -604,7 +604,7 @@ Click="{x:Bind RootFrame.GoForward}"/>
 
 오버로드된 메서드는 이 기술을 사용하여 이벤트를 처리하는 데 사용할 수 없습니다. 또한 이벤트를 처리하는 메서드에 매개 변수가 있는 경우 각각 모든 이벤트 매개 변수의 형식에서 할당 가능해야 합니다. 이 경우 [**Frame.GoForward**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goforward)는 오버로드되지 않고 매개 변수가 없습니다(그러나 두 개의 **object** 매개 변수를 사용한 경우에도 유효함). [**Frame.GoBack** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goback) 오버 로드 하지만 하므로이 기술을 사용 하 여 해당 메서드를 사용할 수 없습니다.
 
-이벤트 바인딩 기술은 명령(명령은 [**ICommand**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 인터페이스를 구현하는 개체를 반환하는 속성)을 구현하고 사용하는 것과 유사합니다. [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)와 [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) 둘 다 명령과 함께 작동합니다. 명령 패턴을 여러 번 구현할 필요가 없도록 [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) 샘플("Common" 폴더)에 있는 **DelegateCommand** 도우미 클래스를 사용할 수 있습니다.
+이벤트 바인딩 기술은 명령(명령은 [**ICommand**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 인터페이스를 구현하는 개체를 반환하는 속성)을 구현하고 사용하는 것과 유사합니다. [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)와 [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) 둘 다 명령과 함께 작동합니다. 명령 패턴을 여러 번 구현할 필요가 없도록 [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper) 샘플("Common" 폴더)에 있는 **DelegateCommand** 도우미 클래스를 사용할 수 있습니다.
 
 ## <a name="binding-to-a-collection-of-folders-or-files"></a>폴더 또는 파일 컬렉션에 바인딩
 
@@ -675,7 +675,7 @@ ItemsSource="{x:Bind AuthorHasACollectionOfBookSku}" ...>
 </GridView>
 ```
 
-"is-a-group" 패턴을 구현하는 방법에는 두 가지 방법이 있습니다. 한 가지 방법은 사용자 고유의 그룹 클래스를 작성하는 것입니다. **List&lt;T&gt;** (여기서 *T*는 항목의 형식)에서 클래스를 파생합니다. `public class Author : List<BookSku>`) 을 입력합니다. 두 번째 방법은 [LINQ](https://docs.microsoft.com/previous-versions/bb397926(v=vs.140)) 식을 사용하여 **BookSku** 항목의 유사한 속성 값에서 그룹 개체(및 그룹 클래스)를 동적으로 만드는 것입니다. 이 방법(항목의 단순 목록만 유지하고 즉석에서 그룹화)은 클라우드 서비스에서 데이터에 액세스하는 앱에 일반적입니다. **Author** 및 **Genre**와 같이 특정 그룹 클래스가 필요 없는 책을 저자 또는 장르 등으로 유연하게 그룹화할 수 있게 됩니다.
+"is-a-group" 패턴을 구현하는 방법에는 두 가지 방법이 있습니다. 한 가지 방법은 사용자 고유의 그룹 클래스를 작성하는 것입니다. **List&lt;T&gt;** (여기서 *T*는 항목의 형식)에서 클래스를 파생합니다. `public class Author : List<BookSku>` )을 입력합니다. 두 번째 방법은 [LINQ](https://docs.microsoft.com/previous-versions/bb397926(v=vs.140)) 식을 사용하여 **BookSku** 항목의 유사한 속성 값에서 그룹 개체(및 그룹 클래스)를 동적으로 만드는 것입니다. 이 방법(항목의 단순 목록만 유지하고 즉석에서 그룹화)은 클라우드 서비스에서 데이터에 액세스하는 앱에 일반적입니다. **Author** 및 **Genre**와 같이 특정 그룹 클래스가 필요 없는 책을 저자 또는 장르 등으로 유연하게 그룹화할 수 있게 됩니다.
 
 아래 예제에서는 [LINQ](https://docs.microsoft.com/previous-versions/bb397926(v=vs.140))를 사용하는 "is-a-group" 패턴을 보여 줍니다. 여기에서는 장르별로 책을 그룹화합니다. 따라서 그룹 머리글에 장르 이름으로 책이 표시됩니다. 이는 그룹 [**Key**](https://docs.microsoft.com/dotnet/api/system.linq.igrouping-2.key?redirectedfrom=MSDN#System_Linq_IGrouping_2_Key) 값에 대한 "Key" 속성 경로로 표시됩니다.
 

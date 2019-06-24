@@ -9,12 +9,12 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: 265e034b264cf82bacfa5a32141eb5d999d57108
-ms.sourcegitcommit: aa5a055e3ff9ee9defc73ed9567196d59f59542a
+ms.openlocfilehash: 3f24d91231b4da1a4a456846faceb604d9ee450d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66825029"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319848"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
@@ -46,7 +46,7 @@ Windows 10에서 앱 패키지, 앱 번들 또는 완전 한 앱 패키지 업�
 
 1.  **앱을 테스트 합니다.** 파트너 센터 제출할 응용 프로그램을 패키지 하기 전에 지원 하려는 모든 장치 패밀리에서 예상 대로 작동 하는지 확인 합니다. 이러한 장치 패밀리에는 데스크톱, 모바일, Surface Hub, Xbox, IoT 장치 등이 포함될 수 있습니다. 배포 및 Visual Studio를 사용 하 여 앱을 테스트 하는 방법에 대 한 자세한 내용은 참조 하세요. [배포 및 UWP 앱을 디버깅](../debug-test-perf/deploying-and-debugging-uwp-apps.md)합니다.
 2.  **앱을 최적화 합니다.** Visual Studio의 프로파일링 도구와 디버깅 도구를 사용하여 UWP 앱의 성능을 최적화할 수 있습니다. 예를 들어 UI 응답성을 위한 타임라인 도구, 메모리 사용 도구, CPU 사용 도구 등을 사용할 수 있습니다. 이러한 도구에 대한 자세한 내용은 [프로파일링 도구 살펴보기](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour)를 참조하세요.
-3.  **.NET 네이티브 호환성 확인 (vb 및 C# 앱).** 유니버설 Windows 플랫폼에는 앱의 런타임 성능을 개선하는 기본 컴파일러가 있습니다. 이 변경으로 인해, 이 컴파일 환경에서 앱을 테스트해야 합니다. 기본적으로 **릴리스** 빌드 구성에서는 .NET 네이티브 도구 체인을 사용하므로, 이 **릴리스** 구성을 사용하여 앱을 테스트하고 앱이 예상대로 작동하는지 확인해야 합니다. .NET 네이티브에서 흔히 발생할 수 있는 디버깅 문제에 대해서는 [여기 Debugging .NET Native Windows Universal Apps](https://blogs.msdn.microsoft.com/devops/2015/07/29/debugging-net-native-windows-universal-apps/)에서 자세히 설명합니다.
+3.  **.NET 네이티브 호환성 확인 (vb 및 C# 앱).** 유니버설 Windows 플랫폼에는 앱의 런타임 성능을 개선하는 기본 컴파일러가 있습니다. 이 변경으로 인해, 이 컴파일 환경에서 앱을 테스트해야 합니다. 기본적으로 **릴리스** 빌드 구성에서는 .NET 네이티브 도구 체인을 사용하므로, 이 **릴리스** 구성을 사용하여 앱을 테스트하고 앱이 예상대로 작동하는지 확인해야 합니다. .NET 네이티브에서 흔히 발생할 수 있는 디버깅 문제에 대해서는 [여기 Debugging .NET Native Windows Universal Apps](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)에서 자세히 설명합니다.
 
 ## <a name="configure-an-app-package"></a>앱 패키지 구성
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bb71a95de3f54cb62fa3d2cbc96e5c7935e5d945
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 649062c8d1901a7b0f24a69378e13a7725d7c84c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372457"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322322"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>Windows Phone Silverlight를 UWP API에 매핑
 
@@ -179,11 +179,11 @@ ms.locfileid: "66372457"
 | (MPNN = **Microsoft.Phone.Net.NetworkInformation**) <br/> **MPNN.WebRequestExtensions** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | **Microsoft.Phone.Networking.Voip** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
 | **System.Net.CookieCollection** 클래스 | 여전히 지원되지만 일부 속성은 누락되었음(예: IsReadOnly) |
-| **System.Net.DownloadProgressChangedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [**HttpClient** ](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)). [System.Net.Http.StreamContent](https://docs.microsoft.com/previous-versions/visualstudio/hh138119(v=vs.118))에서 파생되어 진행률을 측정합니다. |
+| **System.Net.DownloadProgressChangedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [**HttpClient** ](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 (또는 [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). [System.Net.Http.StreamContent](https://docs.microsoft.com/previous-versions/visualstudio/hh138119(v=vs.118))에서 파생되어 진행률을 측정합니다. |
 | **System.Net.DnsEndPoint**, **IPAddress** 클래스 | 이러한 클래스는 여전히 지원되지만 일부 속성은 누락되었습니다. 또는 [**HostName**](https://docs.microsoft.com/uwp/api/Windows.Networking.HostName) 클래스로 포팅합니다. |
 | **System.Net.HttpUtility** 클래스 | [**HtmlFormatHelper** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.HtmlFormatHelper) 클래스 |
-| **System.Net.HttpWebRequest** 클래스 | 부분적으로 지원되지만 권장되는 미래 지향적인 대안은 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)입니다. 이러한 API는 [System.Net.Http.HttpRequestMessage](https://docs.microsoft.com/previous-versions/visualstudio/hh159020(v=vs.118))를 사용하여 HTTP 요청을 나타냅니다. |
-| **System.Net.HttpWebResponse** 클래스 | 여전히 지원되지만, Close() 대신 Dispose()를 사용합니다. 그러나 권장되는 미래 지향적인 대안은 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)입니다. 이러한 API는 [System.Net.Http.HttpResponseMessage](https://msdn.microsoft.com/library/system.net.http.httpresponsemessage(v=vs.110).aspx)를 사용하여 HTTP 응답을 나타냅니다. |
+| **System.Net.HttpWebRequest** 클래스 | 부분적으로 지원되지만 권장되는 미래 지향적인 대안은 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 또는 [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))입니다. 이러한 API는 [System.Net.Http.HttpRequestMessage](https://docs.microsoft.com/previous-versions/visualstudio/hh159020(v=vs.118))를 사용하여 HTTP 요청을 나타냅니다. |
+| **System.Net.HttpWebResponse** 클래스 | 여전히 지원되지만, Close() 대신 Dispose()를 사용합니다. 그러나 권장되는 미래 지향적인 대안은 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 또는 [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))입니다. 이러한 API는 [System.Net.Http.HttpResponseMessage](https://docs.microsoft.com/dotnet/api/system.net.http.httpresponsemessage?redirectedfrom=MSDN)를 사용하여 HTTP 응답을 나타냅니다. |
 | (SNN = **System.Net.NetworkInformation**) <br/> **SNN.NetworkChange** 클래스 | 생성자를 제외하고 계속 지원됩니다. |
 | **System.Net.OpenReadCompletedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [**HttpClient** ](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 (또는 [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))) |
 | **System.Net.Sockets.Socket** 클래스 | 여전히 지원되지만, Close() 대신 Dispose()를 사용합니다. 또는 [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) 클래스로 포팅합니다. |
@@ -191,8 +191,8 @@ ms.locfileid: "66372457"
 | **System.Net.Sockets.UdpAnySourceMulticastClient**, **UdpSingleSourceMulticastClient** 클래스 | [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket) class |
 | **System.Net.UploadProgressChangedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [**HttpClient** ](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 (또는 [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))) |
 | **System.Net.WebClient** 클래스 | [**HttpClient** ](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 (또는 [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))) |
-| **System.Net.WebRequest** 클래스 | 부분적으로 지원되지만(다른 속성 집합), 권장되는 미래 지향적인 대안은 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)입니다. 이러한 API는 [System.Net.Http.HttpRequestMessage](https://docs.microsoft.com/previous-versions/visualstudio/hh159020(v=vs.118))를 사용하여 HTTP 요청을 나타냅니다. |
-| **System.Net.WebResponse** 클래스 | 여전히 지원되지만, Close() 대신 Dispose()를 사용합니다. 그러나 권장되는 미래 지향적인 대안은 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)입니다. 이러한 API는 [System.Net.Http.HttpResponseMessage](https://msdn.microsoft.com/library/system.net.http.httpresponsemessage(v=vs.110).aspx)를 사용하여 HTTP 응답을 나타냅니다. |
+| **System.Net.WebRequest** 클래스 | 부분적으로 지원되지만(다른 속성 집합), 권장되는 미래 지향적인 대안은 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 또는 [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))입니다. 이러한 API는 [System.Net.Http.HttpRequestMessage](https://docs.microsoft.com/previous-versions/visualstudio/hh159020(v=vs.118))를 사용하여 HTTP 요청을 나타냅니다. |
+| **System.Net.WebResponse** 클래스 | 여전히 지원되지만, Close() 대신 Dispose()를 사용합니다. 그러나 권장되는 미래 지향적인 대안은 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 또는 [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))입니다. 이러한 API는 [System.Net.Http.HttpResponseMessage](https://docs.microsoft.com/dotnet/api/system.net.http.httpresponsemessage?redirectedfrom=MSDN)를 사용하여 HTTP 응답을 나타냅니다. |
 | (SN = **System.Net**) <br/> **SN.WriteStreamClosedEventArgs** 클래스 | [**HttpClient** ](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 (또는 [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))) |
 | (SN = **System.Net**) <br/> **SN.WriteStreamClosedEventHandler** 클래스 | [**HttpClient** ](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 (또는 [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))) |
 | **System.UriFormatException** 클래스 | **System.FormatException** 클래스 |

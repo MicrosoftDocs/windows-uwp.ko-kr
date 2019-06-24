@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 75066b566fde3f25ea4feb2ed82358b106ffcf7c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ff067729e71ed4d4a49a082adf9fc754804836a6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359118"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317596"
 ---
 # <a name="audio-graphs"></a>오디오 그래프
 
@@ -48,7 +48,7 @@ Windows 런타임 오디오 그래프 API:
 
 ## <a name="audiograph-class"></a>AudioGraph 클래스
 
-[  **AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph) 클래스는 그래프를 구성하는 모든 노드의 부모입니다. 이 개체를 사용하여 모든 오디오 노드 유형의 인스턴스를 만들 수 있습니다. [  **AudioGraphSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraphSettings) 개체를 초기화하고, 그래프의 구성 설정을 포함한 후 [**AudioGraph.CreateAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.)를 호출하여 **AudioGraph** 클래스의 인스턴스를 만듭니다. 반환된 [**CreateAudioGraphResult**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.CreateAudioGraphResult)는 만들어진 오디오 그래프에 대한 액세스를 제공하고, 오디오 그래프 만들기가 실패하는 경우 오류 값을 제공합니다.
+[  **AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph) 클래스는 그래프를 구성하는 모든 노드의 부모입니다. 이 개체를 사용하여 모든 오디오 노드 유형의 인스턴스를 만들 수 있습니다. [  **AudioGraphSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraphSettings) 개체를 초기화하고, 그래프의 구성 설정을 포함한 후 [**AudioGraph.CreateAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createasync)를 호출하여 **AudioGraph** 클래스의 인스턴스를 만듭니다. 반환된 [**CreateAudioGraphResult**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.CreateAudioGraphResult)는 만들어진 오디오 그래프에 대한 액세스를 제공하고, 오디오 그래프 만들기가 실패하는 경우 오류 값을 제공합니다.
 
 [!code-cs[DeclareAudioGraph](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareAudioGraph)]
 
@@ -168,7 +168,7 @@ Windows 런타임 오디오 그래프 API:
 -   이 메서드는 Windows 런타임 형식의 기반이 되는 원시 버퍼에 액세스하므로 **unsafe** 키워드를 사용하여 선언해야 합니다. 또한, 안전하지 않은 코드의 컴파일을 허용하도록 Microsoft Visual Studio에서 프로젝트를 구성해야 합니다. 그러려면 프로젝트의 **속성** 페이지를 열고 **빌드** 속성 페이지를 클릭한 후 **안전하지 않은 코드 허용** 확인란을 선택합니다.
 -   원하는 버퍼 크기를 생성자로 전달하여 **Windows.Media** 네임스페이스에서 [**AudioFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame)의 새 인스턴스를 초기화합니다. 버퍼 크기는 샘플 수에 각 샘플의 크기를 곱한 값입니다.
 -   [  **LockBuffer**](https://docs.microsoft.com/uwp/api/windows.media.audioframe.lockbuffer)를 호출하여 오디오 프레임의 [**AudioBuffer**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioBuffer)를 가져옵니다.
--   [  **CreateReference**](https://docs.microsoft.com/uwp/api/windows.media.audiobuffer.createreference)를 호출하여 오디오 버퍼에서 [**IMemoryBufferByteAccess**](https://docs.microsoft.com/previous-versions//mt297505(v=vs.85)) COM 인터페이스의 인스턴스를 가져옵니다.
+-   [  **CreateReference**](https://docs.microsoft.com/uwp/api/windows.media.audiobuffer.createreference)를 호출하여 오디오 버퍼에서 [**IMemoryBufferByteAccess**](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85)) COM 인터페이스의 인스턴스를 가져옵니다.
 -   [  **IMemoryBufferByteAccess.GetBuffer**](https://docs.microsoft.com/windows/desktop/WinRT/imemorybufferbyteaccess-getbuffer)를 호출한 후 오디오 데이터의 샘플 데이터 형식으로 캐스팅하여 원시 오디오 버퍼 데이터에 대한 포인터를 가져옵니다.
 -   데이터로 버퍼를 채우고 오디오 그래프로 제출하기 위해 [**AudioFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame)을 반환합니다.
 
@@ -241,7 +241,7 @@ Windows 런타임 오디오 그래프 API:
 ## <a name="spatial-audio"></a>공간 오디오
 Windows 10 버전 1607부터 **AudioGraph**는 입력 또는 서브믹스 노드의 오디오를 내보낼 3D 공간의 위치를 지정할 수 있는 공간 오디오를 지원합니다. 오디오를 내보내는 모양 및 방향, 노드의 오디오를 도플러 이동하는 데 사용할 속도를 지정하고 거리에 따라 오디오가 감쇠되는 방식을 설명하는 감쇠 모델을 정의할 수도 있습니다. 
 
-송신기를 만들려면 먼저 송신기에서 소리가 프로젝션되는 모양을 만듭니다. 원뿔 또는 전방향 모양일 수 있습니다. [  **AudioNodeEmitterShape**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioNodeEmitterShape) 클래스는 각 모양을 만들기 위한 정적 메서드를 제공합니다. 다음에는 감쇠 모델을 만듭니다. 이 모델은 수신기에서의 거리가 증가함에 따라 송신기의 오디오 볼륨이 어떻게 감소되는지를 정의합니다. [  **CreateNatural**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitterdecaymodel.createnatural) 메서드는 거리 제곱 감소 모델을 사용하여 소리의 자연 감쇠를 에뮬레이트하는 감쇠 모델을 만듭니다. 마지막으로, [**AudioNodeEmitterSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioNodeEmitterSettings) 개체를 만듭니다. 현재 이 개체는 송신기 오디오의 속도 기반 도플러 감쇠를 설정 및 해제하는 데만 사용됩니다. 방금 만든 초기화 개체를 전달하여 [**AudioNodeEmitter**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitter.) 생성자를 호출합니다. 기본적으로 송신기는 원점에 배치되지만 [**Position**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitter.position) 속성을 사용하여 송신기 위치를 설정할 수 있습니다.
+송신기를 만들려면 먼저 송신기에서 소리가 프로젝션되는 모양을 만듭니다. 원뿔 또는 전방향 모양일 수 있습니다. [  **AudioNodeEmitterShape**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioNodeEmitterShape) 클래스는 각 모양을 만들기 위한 정적 메서드를 제공합니다. 다음에는 감쇠 모델을 만듭니다. 이 모델은 수신기에서의 거리가 증가함에 따라 송신기의 오디오 볼륨이 어떻게 감소되는지를 정의합니다. [  **CreateNatural**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitterdecaymodel.createnatural) 메서드는 거리 제곱 감소 모델을 사용하여 소리의 자연 감쇠를 에뮬레이트하는 감쇠 모델을 만듭니다. 마지막으로, [**AudioNodeEmitterSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioNodeEmitterSettings) 개체를 만듭니다. 현재 이 개체는 송신기 오디오의 속도 기반 도플러 감쇠를 설정 및 해제하는 데만 사용됩니다. 방금 만든 초기화 개체를 전달하여 [**AudioNodeEmitter**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitter.-ctor) 생성자를 호출합니다. 기본적으로 송신기는 원점에 배치되지만 [**Position**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitter.position) 속성을 사용하여 송신기 위치를 설정할 수 있습니다.
 
 > [!NOTE]
 > 오디오 노드 송신기는 샘플 속도 48kHz인 모노 형식의 오디오만 처리할 수 있습니다. 스테레오 오디오 또는 다른 샘플 속도의 오디오를 사용하려고 하면 예외가 발생합니다.

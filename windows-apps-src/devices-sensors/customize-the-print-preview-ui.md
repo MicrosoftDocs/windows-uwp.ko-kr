@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
-ms.openlocfilehash: 68f8f990209a66a8677afbd1913c95bfd2fce187
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8d13f67ecff5c670707ca1832ea44b85ca8319d9
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370288"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321560"
 ---
 # <a name="customize-the-print-preview-ui"></a>인쇄 미리 보기 UI 사용자 지정
 
@@ -54,9 +54,9 @@ ms.locfileid: "66370288"
 
 ### <a name="define-the-options-to-display"></a>표시할 옵션 정의
 
-앱의 화면이 로드되면 앱이 인쇄 계약을 등록합니다. 등록 과정에 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기를 정의하는 것이 포함됩니다. 인쇄 미리 보기 UI에 표시되는 옵션을 사용자 지정할 코드가 **PrintTaskRequested** 이벤트 처리기에 추가됩니다.
+앱의 화면이 로드되면 앱이 인쇄 계약을 등록합니다. 등록 과정에 [**PrintTaskRequested**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress) 이벤트 처리기를 정의하는 것이 포함됩니다. 인쇄 미리 보기 UI에 표시되는 옵션을 사용자 지정할 코드가 **PrintTaskRequested** 이벤트 처리기에 추가됩니다.
 
-[  **PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기가 [**printTask.options**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtask.options) 지시문을 포함하도록 수정합니다. 이 지시문은 인쇄 미리 보기 UI에 표시할 인쇄 설정을 구성합니다. 인쇄 옵션의 사용자 지정된 목록을 표시할 앱 화면에 대해서는 이 화면이 인쇄될 때 표시할 옵션을 지정하는 코드를 포함하도록 기본 클래스에서 **PrintTaskRequested** 이벤트 처리기를 재정의합니다.
+[  **PrintTaskRequested**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress) 이벤트 처리기가 [**printTask.options**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtask.options) 지시문을 포함하도록 수정합니다. 이 지시문은 인쇄 미리 보기 UI에 표시할 인쇄 설정을 구성합니다. 인쇄 옵션의 사용자 지정된 목록을 표시할 앱 화면에 대해서는 이 화면이 인쇄될 때 표시할 옵션을 지정하는 코드를 포함하도록 기본 클래스에서 **PrintTaskRequested** 이벤트 처리기를 재정의합니다.
 
 ``` csharp
 protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs e)
@@ -109,7 +109,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 
 ## <a name="add-new-print-options"></a>새 인쇄 옵션 추가
 
-이 섹션에서는 새 인쇄 옵션을 만들고, 옵션이 지원하는 값 목록을 정의한 다음 이 옵션을 인쇄 미리 보기에 추가하는 방법을 보여 줍니다. 이전 섹션과 마찬가지로 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기에서 새 인쇄 옵션을 추가합니다.
+이 섹션에서는 새 인쇄 옵션을 만들고, 옵션이 지원하는 값 목록을 정의한 다음 이 옵션을 인쇄 미리 보기에 추가하는 방법을 보여 줍니다. 이전 섹션과 마찬가지로 [**PrintTaskRequested**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress) 이벤트 처리기에서 새 인쇄 옵션을 추가합니다.
 
 먼저 [**PrintTaskOptionDetails**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails) 개체를 가져옵니다. 이 개체는 새 인쇄 옵션을 인쇄 미리 보기 UI에 추가하는 데 사용됩니다. 그런 다음 인쇄 미리 보기 UI에 표시된 옵션 목록을 지우고 사용자가 앱에서 인쇄를 하고자 할 때 표시할 옵션을 추가합니다. 이제 새 인쇄 옵션을 만들고 옵션 값 목록을 초기화합니다. 마지막으로, 새 옵션을 추가하고 **OptionChanged** 이벤트에 대한 처리기를 할당합니다.
 

@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API
 ms.localizationpriority: medium
-ms.openlocfilehash: e8e7653174eaf31f11341a5c8e21b69ec54a6189
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0a926b9383231e7cec9dc168afe8d0a0b34136a2
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371287"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318592"
 ---
 # <a name="create-and-manage-submissions"></a>제출 만들기 및 관리
 
@@ -136,7 +136,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 문제점      | 해결 방법                                          |
 |---------------|---------------------------------------------|
-| PowerShell에서 Microsoft Store 제출 API를 호출한 후 API에 대한 응답 데이터를 [ConvertFrom Json](https://technet.microsoft.com/library/hh849898.aspx) cmdlet을 사용하여 JSON 형식에서 PowerShell 개체로 변환하고 [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet을 사용하여 다시 JSON 형식으로 변환하면 API에 대한 응답 데이터가 손상됩니다. |  기본적으로 [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet에 대한 *-Depth* 매개 변수는 개체의 2개 수준으로 설정되며 이는 Microsoft Store 제출 API에 에서 반환하는 대부분의 JSON 개체에는 너무 얕습니다. [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet을 호출할 때 *-Depth* 매개 변수를 20과 같이 큰 수로 설정합니다. |
+| PowerShell에서 Microsoft Store 제출 API를 호출한 후 API에 대한 응답 데이터를 [ConvertFrom Json](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertFrom-Json) cmdlet을 사용하여 JSON 형식에서 PowerShell 개체로 변환하고 [ConvertTo Json](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) cmdlet을 사용하여 다시 JSON 형식으로 변환하면 API에 대한 응답 데이터가 손상됩니다. |  기본적으로 [ConvertTo Json](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) cmdlet에 대한 *-Depth* 매개 변수는 개체의 2개 수준으로 설정되며 이는 Microsoft Store 제출 API에 에서 반환하는 대부분의 JSON 개체에는 너무 얕습니다. [ConvertTo Json](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) cmdlet을 호출할 때 *-Depth* 매개 변수를 20과 같이 큰 수로 설정합니다. |
 
 ## <a name="additional-help"></a>추가 도움말
 

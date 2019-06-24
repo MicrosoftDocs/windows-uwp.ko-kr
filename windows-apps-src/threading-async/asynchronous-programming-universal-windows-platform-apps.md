@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp, 비동기
 ms.localizationpriority: medium
-ms.openlocfilehash: 26378473803b8963c0ca85eb414bae798f9607e4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 63772a4ee9ea98ca6a45dde45b728d4fedd988d7
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371573"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320493"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 이 항목에서는 유니버설 Windows 플랫폼 (UWP)의 비동기 프로그래밍 및 표현 C#, Microsoft Visual Basic.NET, C++, 및 JavaScript입니다.
@@ -71,5 +71,5 @@ Promise 개체는 차후에 수행될 값을 나타냅니다. UWP에서는 facto
 
 ## <a name="related-topics"></a>관련 항목
 * [C# 또는 Visual Basic에서 비동기 API 호출](call-asynchronous-apis-in-csharp-or-visual-basic.md)
-* [비동기 비동기를 사용 하 여 프로그래밍 및 Await (C# 및 Visual Basic)](https://msdn.microsoft.com/library/hh191443(vs.110).aspx)
+* [비동기 비동기를 사용 하 여 프로그래밍 및 Await (C# 및 Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh191443(v=vs.110))
 * [리버시 샘플 기능 시나리오: 비동기 코드](https://docs.microsoft.com/previous-versions/windows/apps/jj712233(v=win.10))

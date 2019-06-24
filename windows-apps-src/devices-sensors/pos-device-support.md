@@ -5,19 +5,19 @@ ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 865c95fe5453a038a73b397fdcf32f77f9e8defb
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: aa8bec12ca3920b1e273d8f2d98186f62a340016
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63828073"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321527"
 ---
 # <a name="supported-point-of-service-peripherals"></a>지원되는 서비스 지점 주변 장치
 
 ## <a name="barcode-scanner"></a>바코드 스캐너
 | 연결 | 지원 |
 | -------------|-------------|
-| USB          | <p>Windows는 HID POS 스캐너 사용량 테이블 (8c) 사양에서 정의 기반으로 하는 연결 된 USB 바코드 스캐너에 대 한 기본 클래스 드라이버를 포함 [USB.org](https://www.usb.org/developers/hidpage/)합니다. 알려진 호환되는 디바이스 목록은 다음 표를 참조하세요.  바코드 스캐너를 **USB.HID.POS** 스캐너 모드로 구성하는 방법을 알아보려면 바코드 스캐너 설명서를 참조하거나 제조업체에 문의하세요. </p><p>Windows는 특정 공급 업체의 구현 또한 지원하여 USB.HID.POS 스캐너 표준을 지원하지 않는 추가 바코드 스캐너를 지원합니다. 특정 공급 업체의 드라이버 사용 가능 여부는 바코드 스캐너 제조업체에 확인하세요.</p><p>바코드 스캐너 제조업체의 경우 사용자 지정 바코드 스캐너 드라이버 생성에 대한 내용은 [바코드 스캐너 드라이버 디자인 가이드](https://aka.ms/pointofservice-drv)를 참조하세요.</p> |
+| USB          | <p>Windows는 HID POS 스캐너 사용량 테이블 (8c) 사양에서 정의 기반으로 하는 연결 된 USB 바코드 스캐너에 대 한 기본 클래스 드라이버를 포함 [USB.org](https://www.usb.org/hid)합니다. 알려진 호환되는 디바이스 목록은 다음 표를 참조하세요.  바코드 스캐너를 **USB.HID.POS** 스캐너 모드로 구성하는 방법을 알아보려면 바코드 스캐너 설명서를 참조하거나 제조업체에 문의하세요. </p><p>Windows는 특정 공급 업체의 구현 또한 지원하여 USB.HID.POS 스캐너 표준을 지원하지 않는 추가 바코드 스캐너를 지원합니다. 특정 공급 업체의 드라이버 사용 가능 여부는 바코드 스캐너 제조업체에 확인하세요.</p><p>바코드 스캐너 제조업체의 경우 사용자 지정 바코드 스캐너 드라이버 생성에 대한 내용은 [바코드 스캐너 드라이버 디자인 가이드](https://aka.ms/pointofservice-drv)를 참조하세요.</p> |
 | Bluetooth    | <p>Windows는 SPP(직렬 포트 프로토콜) - SSI(단순 직렬 인터페이스) 기반 Bluetooth 바코드 스캐너를 지원합니다. 알려진 호환되는 디바이스 목록은 다음 표를 참조하세요. 바코드 스캐너를 **SPP-SSI** 스캐너 모드로 구성하는 방법을 알아보려면 바코드 스캐너 설명서를 참조하거나 제조업체에 문의하세요.</p> |
 | Webcam       | <p>Windows 10, 버전 1803부터는 유니버설 Windows 응용 프로그램에서 기준 카메라 렌즈를 통해 바코드를 읽을 수 있습니다. 자동 초점과 최소 1920 x 1440의 해상도를 지원하는 카메라를 사용하는 것이 좋습니다.  일부 저해상도 카메라에서는 바코드가 충분히 크게 인쇄되는 경우에 표준 바코드를 읽을 수 있습니다.  슬림한 요소를 가진 바코드에서는 고해상도 카메라가 필요할 수 있습니다.</p>| 
 |
@@ -68,8 +68,8 @@ ms.locfileid: "63828073"
 
 
 ¹ Upgradable Honeywell 통해 2D 바코드를 지원 하기 위해 <br/>
-² 최소 펌웨어 009 (2018.07.09) 필요 합니다. 얼룩말을 사용 하 여 업그레이드할 수 있습니다 [123Scan](http://www.zebra.com/123Scan)합니다.<br/>
-³ 최소 펌웨어 016 (2018.01.18) 필요 합니다. 얼룩말을 사용 하 여 업그레이드할 수 있습니다 [123Scan](http://www.zebra.com/123Scan)합니다. 
+² 최소 펌웨어 009 (2018.07.09) 필요 합니다. 얼룩말을 사용 하 여 업그레이드할 수 있습니다 [123Scan](http://www.zebra.com/123scan)합니다.<br/>
+³ 최소 펌웨어 016 (2018.01.18) 필요 합니다. 얼룩말을 사용 하 여 업그레이드할 수 있습니다 [123Scan](http://www.zebra.com/123scan)합니다. 
 
 
 <hr>

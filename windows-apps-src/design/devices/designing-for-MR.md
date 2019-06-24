@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: df81348dee781d1c329562d558ed8df30fd40bc5
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 0e8cee688cbfbda0fe3822017b769560fc0fffe3
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244119"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319378"
 ---
 # <a name="designing-for-mixed-reality"></a>혼합 현실을 위한 디자인
 
@@ -38,7 +38,7 @@ HoloLens와 Windows Mixed Reality 헤드셋 모두 UWP 플랫폼 기반 응용 �
 
 몰입형 앱은 사용자에게 보이는 전체 디스플레이를 사용하여 앱에서 생성되는 뷰의 중앙에 사용자를 배치합니다. 예를 들어, 몰입형 게임이라고 하면 사용자가 외계 행성의 지표면에 놓이거나, 혹은 여행 가이드 앱일 경우에는 사용자가 남미 지역의 한 마을에 놓일 수 있습니다. 몰입형 앱을 만들려면 3D 그래픽 또는 캡처된 입체 비디오가 필요합니다. 몰입형 앱은 종종 Unity 같은 타사의 게임 엔진이나 DirectX를 사용해 개발됩니다.
 
-몰입형 앱을 개발하는 경우에는 자세한 내용을 [Windows Mixed Reality 개발자 센터](https://developer.microsoft.com/windows/mixed-reality)에서 확인할 수 있습니다.
+몰입형 앱을 개발하는 경우에는 자세한 내용을 [Windows Mixed Reality 개발자 센터](https://developer.microsoft.com/mixed-reality)에서 확인할 수 있습니다.
 
 2D 앱은 사용자의 뷰 내에서 기존 평면 창으로 실행됩니다. HoloLens의 경우, 이 말은 사용자의 실제 거실이나 사무실에서 한쪽 벽 또는 공간의 한 지점으로 뷰가 고정된다는 것을 의미합니다. Windows Mixed Reality 헤드셋에서는 앱이 [혼합 현실 홈](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)(종종 *클리프 하우스*라고 불림)의 한쪽 벽면에 고정됩니다.
 
@@ -82,7 +82,7 @@ HoloLens와 혼합 현실 플랫폼 모두 키보드 및 마우스가 지원됩�
 * [핸드 제스처](https://developer.microsoft.com/windows/mixed-reality/gestures)(HoloLens 전용, 2D 앱을 실행하는 데만 사용됨)
 * [게임 패드 지원](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories)(두 환경 모두)
 * [Clicker 장치](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories)(HoloLens 전용)
-* [모션 컨트롤러](https://developer.microsoft.com/windows/mixed-reality/motion_controllers)(혼합 현실 장치 전용, 위 그림 참조)
+* [모션 컨트롤러](https://docs.microsoft.com/windows/mixed-reality/motion-controllers)(혼합 현실 장치 전용, 위 그림 참조)
 
 위 컨트롤러는 가상 개체와 일어나는 상호 작용이 자연스럽고 정확하게 보일 수 있도록 지원합니다. 일부 상호 작용은 아무런 대가 없이 지원됩니다. 예를 들어는 HoloLens 제스처를 선택 하거나 예상할 수 있겠지만 다시 코딩을 사용 하 여 입력된 응답을 생성 하는 트리거 또는 동작 컨트롤러의 Windows 키를 클릭 하 합니다.
 
@@ -98,7 +98,7 @@ HoloLens와 혼합 현실 플랫폼 모두 키보드 및 마우스가 지원됩�
 
 * 끌어서 놓기는 모션 컨트롤러, 게임 패드 또는 제스처를 함께 사용할 경우 유효하지 않을 수도 있습니다. 응용 프로그램이 끌어서 놓기에 크게 의존하는 경우에는 개체의 새로운 위치 이동 여부를 확인하는 대화 상자를 표시하는 등 이러한 작업을 지원할 수 있는 대체 방식을 제공해야 합니다.
 
-* 소리의 변경 방식에 주의하세요. 앱이 소리 효과를 생성하는 경우에는 가상 세계에서 앱이 고정된 위치에 음원이 표시됩니다. 이때 사용자가 앱에서 나오면 소리도 줄어듭니다. 자세한 내용은 [공간 음향](https://developer.microsoft.com/windows/mixed-reality/spatial_sound)을 참조하세요.
+* 소리의 변경 방식에 주의하세요. 앱이 소리 효과를 생성하는 경우에는 가상 세계에서 앱이 고정된 위치에 음원이 표시됩니다. 이때 사용자가 앱에서 나오면 소리도 줄어듭니다. 자세한 내용은 [공간 음향](https://docs.microsoft.com/windows/mixed-reality/spatial-sound)을 참조하세요.
 
 * 시야각을 고려하여 어포던스를 제공하세요. 모든 장치가 컴퓨터 모니터만큼 넓은 시야각을 제공하는 것은 아닙니다. 자세한 내용은 [홀로그래픽 프레임](https://developer.microsoft.com/windows/mixed-reality/holographic_frame)을 참조하세요. 또한 사용자가 실행 중인 앱에서 약간 떨어져 있는 경우도 있습니다. 다시 말해서 앱이 실제 세상이든 가상 세상이든 앱이 다른 곳 벽면에 고정되어 표시될 수 있습니다. 이때는 앱이 사용자의 주의를 끌 수 있도록 하거나, 혹은 전체 시야각이 항상 한 눈에 들어오지는 않는다는 사실을 감안해야 합니다. 이를 위해 알림 메시지를 사용할 수도 있지만 사용자의 주의를 끌 수 있는 또 한 가지 방법으로 소리 또는 [음성](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpeechRecognitionAndSynthesis/cs/Scenario_SynthesizeText.xaml.cs) 경고를 사용하는 것도 괜찮습니다.
 
@@ -163,8 +163,8 @@ bool isViewingInMR = Windows.ApplicationModel.Preview.Holographic.HolographicApp
 ## <a name="related-articles"></a>관련 문서
 
 
-* [현재 앱이 셸에서 API를 사용하는 데 따른 제약](https://developer.microsoft.com/windows/mixed-reality/current_limitations_for_apps_using_apis_from_the_shell)
-* [2D 앱 개발](https://developer.microsoft.com/windows/mixed-reality/building_2d_apps)
+* [셸에서 Api를 사용 하 여 앱에 대 한 현재 제한 사항](https://developer.microsoft.com/windows/mixed-reality/current_limitations_for_apps_using_apis_from_the_shell)
+* [2D 앱 빌드](https://developer.microsoft.com/windows/mixed-reality/building_2d_apps)
 * [HoloLens: Microsoft HoloLens 용 UWP 2D 앱 빌드](https://channel9.msdn.com/Events/Build/2016/B854)
 * [조건부 XAML](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/conditional-xaml)
 

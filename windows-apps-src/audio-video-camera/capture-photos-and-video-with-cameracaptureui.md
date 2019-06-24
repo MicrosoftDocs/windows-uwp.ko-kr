@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 35eed8310b406a960334c90d6c359c0313b2660c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f23d80b4d2796b4d9c86648c09d6bece5e82d482
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66358892"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317826"
 ---
 # <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Windows 기본 카메라 UI를 사용하여 사진 및 비디오 캡처
 
@@ -36,7 +36,7 @@ ms.locfileid: "66358892"
 > [!NOTE]
 > **CameraCaptureUI**의 이미징 자르기는 모바일 디바이스 패밀리의 디바이스에 대해 지원되지 않습니다. [  **AllowCropping**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureuiphotocapturesettings.allowcropping) 속성 값은 앱이 이러한 디바이스에서 실행되는 경우 무시됩니다.
 
-[  **CaptureFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.)를 호출하고 [**CameraCaptureUIMode.Photo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CameraCaptureUIMode)를 지정하여 사진을 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 이미지를 포함하는 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
+[  **CaptureFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.capturefileasync)를 호출하고 [**CameraCaptureUIMode.Photo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CameraCaptureUIMode)를 지정하여 사진을 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 이미지를 포함하는 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
 
 [!code-cs[CapturePhoto](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCapturePhoto)]
 
@@ -62,7 +62,7 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 [!code-cs[UsingSoftwareBitmapSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingSoftwareBitmapSource)]
 
-**Image** 컨트롤을 사용하려면 이미지 소스가 사전 곱셈된 알파가 있거나 알파가 없는 BGRA8 형식이어야 합니다. 따라서 정적 메서드 [**SoftwareBitmap.Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows)를 호출하여 원하는 형식의 새 소프트웨어 비트맵을 만듭니다. 다음에는 새 [**SoftwareBitmapSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource) 개체를 만들고 [**SetBitmapAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync)를 호출하여 소프트웨어 비트맵을 소스에 할당합니다. 마지막으로 **Image** 컨트롤의 [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) 속성을 설정하여 캡처한 사진을 UI에 표시합니다.
+**Image** 컨트롤을 사용하려면 이미지 소스가 사전 곱셈된 알파가 있거나 알파가 없는 BGRA8 형식이어야 합니다. 따라서 정적 메서드 [**SoftwareBitmap.Convert**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert)를 호출하여 원하는 형식의 새 소프트웨어 비트맵을 만듭니다. 다음에는 새 [**SoftwareBitmapSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource) 개체를 만들고 [**SetBitmapAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync)를 호출하여 소프트웨어 비트맵을 소스에 할당합니다. 마지막으로 **Image** 컨트롤의 [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) 속성을 설정하여 캡처한 사진을 UI에 표시합니다.
 
 [!code-cs[SetImageSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetSetImageSource)]
 
@@ -70,7 +70,7 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 비디오를 캡처하려면 새 [**CameraCaptureUI**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CameraCaptureUI) 개체를 만듭니다. 개체의 [**VideoSettings**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.videosettings) 속성을 사용하여 비디오의 형식과 같은 반환된 비디오에 대한 속성을 지정할 수 있습니다.
 
-[  **CaptureFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.)를 호출하고 [**Video**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.videosettings)를 지정하여 비디오를 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 비디오를 포함하는 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
+[  **CaptureFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.capturefileasync)를 호출하고 [**Video**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.videosettings)를 지정하여 비디오를 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 비디오를 포함하는 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
 
 [!code-cs[CaptureVideo](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCaptureVideo)]
 

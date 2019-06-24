@@ -6,12 +6,12 @@ ms.date: 01/29/2018
 ms.topic: article
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
-ms.openlocfilehash: 743df4398792d910626f63900d244ab4da388fb0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1a60def61e974bca493fb932cc0fb8716ba521f0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369822"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321495"
 ---
 # <a name="print-from-your-app"></a>앱에서 인쇄하기
 
@@ -137,7 +137,7 @@ async private void OnPrintButtonClick(object sender, RoutedEventArgs e)
 
 ## <a name="format-your-apps-content"></a>앱 콘텐츠 형식 지정
 
-**ShowPrintUIAsync**가 호출되면 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트가 발생합니다. 이 단계에 나오는 **PrintTaskRequested** 이벤트 처리기는 [**PrintTaskRequest.CreatePrintTask**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtaskrequest.createprinttask) 메서드를 호출하여 [**PrintTask**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.PrintTask)를 만들고 인쇄 페이지의 제목과 [**PrintTaskSourceRequestedHandler**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtask.source) 대리자의 이름을 전달합니다. 이 예제에서 **PrintTaskSourceRequestedHandler**는 인라인으로 정의되어 있습니다. **PrintTaskSourceRequestedHandler**는 인쇄용 콘텐츠를 제공하고 나중에 설명됩니다.
+**ShowPrintUIAsync**가 호출되면 [**PrintTaskRequested**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress) 이벤트가 발생합니다. 이 단계에 나오는 **PrintTaskRequested** 이벤트 처리기는 [**PrintTaskRequest.CreatePrintTask**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtaskrequest.createprinttask) 메서드를 호출하여 [**PrintTask**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.PrintTask)를 만들고 인쇄 페이지의 제목과 [**PrintTaskSourceRequestedHandler**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtask.source) 대리자의 이름을 전달합니다. 이 예제에서 **PrintTaskSourceRequestedHandler**는 인라인으로 정의되어 있습니다. **PrintTaskSourceRequestedHandler**는 인쇄용 콘텐츠를 제공하고 나중에 설명됩니다.
 
 이 예제에서는 완료 처리기가 catch 오류에도 정의되어 있습니다. 완료 이벤트를 처리하는 것은 오류가 발생했을 때 이를 사용자에게 알리고 가능한 해결 방법도 제공할 수 있으므로 좋은 방법입니다. 또한 인쇄 작업이 성공한 후 사용자가 수행할 다음 단계를 안내하는 데도 완료 이벤트를 사용할 수 있습니다.
 
@@ -258,7 +258,7 @@ protected virtual void AddPrintPages(object sender, AddPagesEventArgs e)
 | **선택 영역 인쇄**  | 사용자가 선택한 콘텐츠만 인쇄합니다.|
 | **인쇄 범위**      | 사용자가 인쇄할 페이지를 입력할 수 있는 편집 컨트롤을 표시합니다.|
 
-먼저 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기를 수정하여 [**PrintTaskOptionDetails**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails) 개체를 가져오는 코드를 추가합니다.
+먼저 [**PrintTaskRequested**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress) 이벤트 처리기를 수정하여 [**PrintTaskOptionDetails**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails) 개체를 가져오는 코드를 추가합니다.
 
 ```csharp
 PrintTaskOptionDetails printDetailedOptions = PrintTaskOptionDetails.GetFromPrintTaskOptions(printTask.Options);

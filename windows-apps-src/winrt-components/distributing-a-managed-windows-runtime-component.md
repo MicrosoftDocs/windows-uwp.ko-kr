@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b4e05a1f24e6192d25c80c043cdb4a51e7ac61ec
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b9fcdff5b8648822bb5cc22771daded23f6d52a5
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372360"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322227"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>관리되는 Windows 런타임 구성 요소 배포
 
@@ -53,7 +53,7 @@ For example: Microsoft.Cpp.Build.dll
 
 **확장 SDK를 만들려면**
 
-1.  Visual Studio SDK가 설치되어 있는지 확인합니다. [Visual Studio 다운로드](https://www.visualstudio.com/downloads/download-visual-studio-vs) 페이지에서 Visual Studio SDK를 다운로드할 수 있습니다.
+1.  Visual Studio SDK가 설치되어 있는지 확인합니다. [Visual Studio 다운로드](https://visualstudio.microsoft.com/downloads/download-visual-studio-vs) 페이지에서 Visual Studio SDK를 다운로드할 수 있습니다.
 2.  VSIX 프로젝트 템플릿을 사용하여 새 프로젝트를 만듭니다. Visual C# 또는 Visual Basic 아래의 확장성 범주에서 템플릿을 찾을 수 있습니다. 이 템플릿은 Visual Studio SDK의 일부로 설치됩니다. ([연습: 사용 하 여 SDK 만들기 C# 또는 Visual Basic](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic?view=vs-2015) 나 [연습: 사용 하 여 SDK 만들기 C++ ](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-creating-an-sdk-using-cpp?view=vs-2015), 매우 간단한 시나리오에서이 서식 파일의 사용을 보여 줍니다. )
 3.  SDK에 대한 폴더 구조를 확인합니다. 폴더 구조는 VSIX 프로젝트의 루트 수준에서 시작하여 **References**, **Redist** 및 **DesignTime** 폴더가 있습니다.
 

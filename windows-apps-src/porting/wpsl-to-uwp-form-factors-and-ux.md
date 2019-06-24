@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: efd024838194876532dc3a1925f9c43430513cda
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 03a994930e956cb3c2e775c32e77c6e62b526a17
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370732"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322309"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>폼 팩터 및 UX에 대 한 Windows Phone Silverlight UWP에 이식
 
@@ -30,7 +30,7 @@ Windows 앱은 PC, 모바일 디바이스 및 기타 여러 종류의 디바이�
 
 객관적으로 화면은 인치 단위 및 실제(원시) 픽셀로 측정됩니다. 이 두 메트릭을 모두 알면 적합한 인치당 픽셀 수를 알 수 있습니다. 이것이 바로 픽셀 밀도이며, DPI(인치당 도트 수) 또는 PPI(인치당 픽셀 수)라고도 합니다. DPI의 역은 픽셀의 실제 크기로 1인치의 몇 분의 1에 불과합니다. 픽셀 밀도를 *해상도*라고도 하지만, 해상도는 막연히 픽셀 수를 나타내는 데 주로 사용됩니다.
 
-시청 거리가 증가하면 모든 객관적 메트릭은 더 작아지는 것처럼 *보이고* 화면의 *유효 크기*와 *유효 해상도*로 확인됩니다. 가장 가까운 위치에서 사용되는 것은 휴대폰이고 그다음이 태블릿, PC 모니터의 순이며, [Surface Hub](https://www.microsoft.com/microsoft-surface-hub) 장치와 TV가 가장 멀리서 사용됩니다. 이를 보완하기 위해 디바이스가 시청 거리에서 객관적으로 더 커지는 경향이 있습니다. UI 요소에서 크기를 설정할 때 유효 픽셀(epx)이라는 단위로 해당 크기를 설정합니다. 및 Windows 10 UI 요소를 가장 잘 알아 볼 수 있도록 물리적 픽셀의 최대 크기를 계산 하려면 DPI, 계정 및 장치에서 일반적인 거리에 걸립니다. [보기/유효 픽셀, 가시거리 및 배율 인수](wpsl-to-uwp-porting-xaml-and-ui.md)를 참조하세요.
+시청 거리가 증가하면 모든 객관적 메트릭은 더 작아지는 것처럼 *보이고* 화면의 *유효 크기*와 *유효 해상도*로 확인됩니다. 가장 가까운 위치에서 사용되는 것은 휴대폰이고 그다음이 태블릿, PC 모니터의 순이며, [Surface Hub](https://www.microsoft.com/surface/devices/surface-hub) 장치와 TV가 가장 멀리서 사용됩니다. 이를 보완하기 위해 디바이스가 시청 거리에서 객관적으로 더 커지는 경향이 있습니다. UI 요소에서 크기를 설정할 때 유효 픽셀(epx)이라는 단위로 해당 크기를 설정합니다. 및 Windows 10 UI 요소를 가장 잘 알아 볼 수 있도록 물리적 픽셀의 최대 크기를 계산 하려면 DPI, 계정 및 장치에서 일반적인 거리에 걸립니다. [보기/유효 픽셀, 가시거리 및 배율 인수](wpsl-to-uwp-porting-xaml-and-ui.md)를 참조하세요.
 
 그렇다고 해도 각 환경을 확인할 수 있도록 여러 디바이스에서 앱을 테스트하는 것이 좋습니다.
 

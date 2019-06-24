@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 ms.localizationpriority: medium
-ms.openlocfilehash: 019db8c93b61f84dde400f7be9f98bf82b1466e8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: afebfd089b80b7402929bd85ea482b86aca0e694
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660328"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320213"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Xbox의 UWP에 HTML 게임 가져오기
-Xbox One은 HTML 5 게임에 훌륭한 플랫폼입니다. HTML 5 게임은 [Microsoft Edge](https://developer.microsoft.com/microsoft-edge/) 브라우저 엔진에서 실행됩니다. Microsoft Edge는 속도가 빠르며 WebGL, 캔버스 등의 HTML 5 및 CSS 3 기능을 완전히 지원합니다.
+Xbox One은 HTML 5 게임에 훌륭한 플랫폼입니다. HTML 5 게임은 [Microsoft Edge](https://developer.microsoft.com/microsoft-edge) 브라우저 엔진에서 실행됩니다. Microsoft Edge는 속도가 빠르며 WebGL, 캔버스 등의 HTML 5 및 CSS 3 기능을 완전히 지원합니다.
 
-[Construct 2](https://www.scirra.com/blog/176/announcing-xbox-one-export-beta)와 같은 인기 있는 게임 엔진은 Xbox One을 지원합니다. 모든 HTML 프레임워크 및 엔진을 테스트하지는 않았지만 지금까지 확인한 바로는 대부분이 Xbox One에서 작동할 것으로 예상됩니다.
+[Construct 2](https://www.construct.net/en/blogs/construct-official-blog-1/announcing-xbox-one-export-beta-857)와 같은 인기 있는 게임 엔진은 Xbox One을 지원합니다. 모든 HTML 프레임워크 및 엔진을 테스트하지는 않았지만 지금까지 확인한 바로는 대부분이 Xbox One에서 작동할 것으로 예상됩니다.
 
 HTML 게임은 다른 모든 유형의 게임과 비슷한 수준에 있습니다. 개발자는 컨트롤러 입력, Kinect 등의 기본 API에 완전히 액세스할 수 있습니다.
 
@@ -31,6 +31,6 @@ Xbox One은 유니버설 Windows 플랫폼에서 실행됩니다. 즉, 다른 Mi
 
 시작하려면 선택한 엔진을 다운로드하고 Windows 10 앱에 대한 지침을 확인합니다. 또한 [시작 가이드](getting-started.md)를 읽고 콘솔을 개발 키트로 전환하는 방법과 Visual Studio에서 배포하는 방법에 대한 자세한 내용을 파악해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [기존 게임을 Xbox로 가져오기](development-lanes-landing.md)
 - [Xbox One에서 UWP](index.md)

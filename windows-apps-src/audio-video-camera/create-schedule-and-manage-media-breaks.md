@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 68260cadd4322d51c528bf6c6af7f5c8472f2199
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 23cb51ec6b2c6c2560c0a1f6d583ba916768254c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361858"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318557"
 ---
 # <a name="create-schedule-and-manage-media-breaks"></a>미디어 휴지 만들기, 예약 및 관리
 
@@ -66,7 +66,7 @@ ms.locfileid: "66361858"
 
 [!code-cs[RegisterMediaBreakEvents](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetRegisterMediaBreakEvents)]
 
-[  **BreakStarted**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakmanager.breakstarted)는 미디어 중단이 시작될 때 발생합니다. 미디어 중단 콘텐츠가 재생되고 있음을 사용자에게 알리기 위해 UI를 업데이트하는 것이 좋습니다. 이 예제에서는 처리기에 전달된 [**MediaBreakStartedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaBreakStartedEventArgs)를 사용하여 시작된 미디어 중단에 대한 참조를 가져옵니다. 그런 다음 [**CurrentItemIndex**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacklist.currentitemindex) 속성을 사용하여 재생 중인 미디어 중단 재생 목록의 미디어 항목을 확인합니다. 사용자에게 현재 광고 인덱스 및 중단에 남아 있는 광고 수를 표시하기 위해 UI가 업데이트됩니다. UI 업데이트는 UI 스레드에서 수행해야 하므로 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) 호출 내에서 호출해야 합니다. 
+[  **BreakStarted**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakmanager.breakstarted)는 미디어 중단이 시작될 때 발생합니다. 미디어 중단 콘텐츠가 재생되고 있음을 사용자에게 알리기 위해 UI를 업데이트하는 것이 좋습니다. 이 예제에서는 처리기에 전달된 [**MediaBreakStartedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaBreakStartedEventArgs)를 사용하여 시작된 미디어 중단에 대한 참조를 가져옵니다. 그런 다음 [**CurrentItemIndex**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacklist.currentitemindex) 속성을 사용하여 재생 중인 미디어 중단 재생 목록의 미디어 항목을 확인합니다. 사용자에게 현재 광고 인덱스 및 중단에 남아 있는 광고 수를 표시하기 위해 UI가 업데이트됩니다. UI 업데이트는 UI 스레드에서 수행해야 하므로 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 호출 내에서 호출해야 합니다. 
 
 [!code-cs[BreakStarted](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakStarted)]
 

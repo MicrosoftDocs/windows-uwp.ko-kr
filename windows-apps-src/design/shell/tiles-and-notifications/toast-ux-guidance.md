@@ -7,12 +7,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp, 알림, 컬렉션, 그룹, ux, ux 지침 지침, 작업, 알림, 관리 센터, noninterruptive, 효과적인 알림, 비침입적 알림, 실행 가능한, 관리, 구성
 ms.localizationpriority: medium
-ms.openlocfilehash: 878df85db9ab0e33db06a86ddb726f07dc28f013
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 327a2add84343be3b972f7bb1f232298e7ef92ad
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615768"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320725"
 ---
 # <a name="toast-notification-ux-guidance"></a>토스트 알림 UX 지침
 알림은 최신 수명;의 필수 구성 사용자 생산성과 모든 업데이트를 사용 하 여 최신 뿐만 아니라 앱 및 웹 사이트를 사용 하 여 참여 데 도움이 됩니다. 그러나 알림 overbearing를 유용 하 고 사용자 중심 방식으로 설계 되지 않은 경우 주입에서 신속 하 게 설정할 수 있습니다. 알림은 해제 중에서 하나의 마우스 오른쪽 단추로 클릭 하 고 그럴 가능성은 해제 되 면, 이러한 켜 집니다 다시 합니다.  따라서 사용자 알림은 사용자의 화면 공간 시간과 정직 수 있도록이 engagement 채널 열기 해야 합니다.
@@ -65,4 +65,4 @@ UWP 앱에 현재 알림을 보내는 경우의 알림 내용에 분석을 볼 �
 * [알림 콘텐츠](adaptive-interactive-toasts.md)
 * [원시 알림](raw-notification-overview.md)
 * [보류 중인 업데이트](toast-pending-update.md)
-* [GitHub (Windows 커뮤니티 도구 키트의 일부)에 대 한 알림 라이브러리](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [GitHub (Windows 커뮤니티 도구 키트의 일부)에 대 한 알림 라이브러리](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)

@@ -4,12 +4,12 @@ description: 이 문서에서는 UWP(유니버설 Windows 플랫폼)에 새로 �
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
-ms.openlocfilehash: 49662d476d6d022ca05d53e9358fc547fda92a32
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 693abe68fcc7e4a341d773c6fa1af0d777c60c15
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625668"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322161"
 ---
 # <a name="cpusets-for-game-development"></a>게임 개발용 CPUSets
 
@@ -188,10 +188,10 @@ for (size_t i = 0; i < count; ++i)
 
 ## <a name="summary"></a>요약
 
-UWP 개발에 사용할 수 있는 CPUSets API는 다중 스레딩 옵션에 대한 상당한 양의 정보와 제어 기능을 제공합니다. Windows 개발을 위한 이전의 다중 스레드 API와 비교할 때 더 복잡해졌으므로 학습 기간이 어느 정도 필요하지만, 유연성 향상으로 결국 다양한 소비자 PC와 기타 하드웨어 대상 전체에서 성능을 높일 수 있습니다. 
+UWP 개발에 사용할 수 있는 CPUSets API는 다중 스레딩 옵션에 대한 상당한 양의 정보와 제어 기능을 제공합니다. Windows 개발을 위한 이전의 다중 스레드 API와 비교할 때 더 복잡해졌으므로 학습 기간이 어느 정도 필요하지만, 유연성 향상으로 결국 다양한 소비자 PC와 기타 하드웨어 대상 전체에서 성능을 높일 수 있습니다.
 
-## <a name="additional-resources"></a>추가 리소스
-- [CPU 집합 (MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
+## <a name="additional-resources"></a>추가 자료
+- [CPU 집합 (MSDN)](https://docs.microsoft.com/windows/desktop/ProcThread/cpu-sets)
 - [ATG 제공한 CPUSets 샘플](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
 - [Xbox One에서 UWP](index.md)
 

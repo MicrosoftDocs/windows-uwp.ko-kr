@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: cb02e9c332ab1c27886520c0a9c95a312a8c395d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: cc613177f7cdd57691fa261519127e8bbf03e3ad
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372743"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319885"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -51,7 +51,7 @@ ms.locfileid: "66372743"
 | **VoIP 호출** | 합니다 **voipCall** 기능에는 앱에서 Api를 호출 하는 VoIP에 액세스할 수 있도록 허용 합니다 [ **이 Windows.ApplicationModel.Calls** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Calls) 네임 스페이스입니다.<br /><br />**voipCall** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="voipCall"/></Capabilities>```
 | **3D 개체** | 앱에서는 **objects3D** 접근 권한 값을 통해 3D 개체 파일에 프로그래밍 방식으로 액세스할 수 있습니다. 이 접근 권한 값은 주로 전체 3D 개체 라이브러리에 액세스해야 하는 3D 앱과 게임에서 사용됩니다.<br /><br />이 접근 권한 값은 [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage) 네임스페이스에서 API를 사용하여 3D 개체를 포함하는 폴더에 액세스하는 데 필요합니다.<br /><br />**objects3D** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="objects3D"/></Capabilities>```
 | **읽기 차단된 메시지**\* | **blockedChatMessages**접근 권한 값을 통해 앱은 스팸 필터 앱에 의해 차단된 SMS 및 MMS 메시지를 읽을 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Chat**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Chat) 네임스페이스에서 API를 사용하여 차단된 메시지에 액세스하는 데 필요합니다.<br /><br />**blockedChatMessages** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="blockedChatMessages"/></Capabilities>```
-| **사용자 지정 장치** | 합니다 **lowLevelDevices** 기능 많은 추가 요구 사항이 충족 되 면 사용자 지정 장치에 액세스 하는 앱을 허용 합니다. 이 기능은와 혼동 하지 마십시오 합니다 **lowLevel** GPIO, I2C, SPI, 및 PWM 장치에 대 한 액세스를 허용 하는 장치 기능을 합니다.<br /><br /> 노출 하는 사용자 지정 드라이버를 개발 하는 경우는 [장치 인터페이스](https://docs.microsoft.com/windows-hardware/drivers/install/device-interface-classes) 이 장치에 대 한 핸들을 열고 Ioctl를 송신 하려는 수행 해야 합니다. <ul><li>사용 하도록 설정 합니다 **lowLevelDevices** 응용 프로그램 매니페스트에 기능: ```<Capabilities><iot:Capability Name="lowLevelDevices"/></Capabilities>```</li><li>사용 하도록 설정 [포함된 모드](https://docs.microsoft.com/windows/iot-core/develop-your-app/EmbeddedMode)</li><li>장치 인터페이스로 표시 [제한](https://docs.microsoft.com/windows-hardware/drivers/install/devpkey-deviceinterface-restricted)를에 하 [INF](https://msdn.microsoft.com/library/windows/desktop/hh404264(v=vs.85).aspx) 호출 하 여 [WdfDeviceAssignInterfaceProperty()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfdevice/nf-wdfdevice-wdfdeviceassigninterfaceproperty) 드라이버에서.</ul>사용할 수 있습니다 [ **Windows.Devices.Custom.CustomDevice** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Custom.CustomDevice) 를 장치에 대 한 핸들을 엽니다. 자세한 내용은 [내부 장치에 대 한 장치 앱을 UWP](https://docs.microsoft.com/windows-hardware/drivers/devapps/uwp-device-apps-for-specialized-devices)합니다.
+| **사용자 지정 장치** | 합니다 **lowLevelDevices** 기능 많은 추가 요구 사항이 충족 되 면 사용자 지정 장치에 액세스 하는 앱을 허용 합니다. 이 기능은와 혼동 하지 마십시오 합니다 **lowLevel** GPIO, I2C, SPI, 및 PWM 장치에 대 한 액세스를 허용 하는 장치 기능을 합니다.<br /><br /> 노출 하는 사용자 지정 드라이버를 개발 하는 경우는 [장치 인터페이스](https://docs.microsoft.com/windows-hardware/drivers/install/device-interface-classes) 이 장치에 대 한 핸들을 열고 Ioctl를 송신 하려는 수행 해야 합니다. <ul><li>사용 하도록 설정 합니다 **lowLevelDevices** 응용 프로그램 매니페스트에 기능: ```<Capabilities><iot:Capability Name="lowLevelDevices"/></Capabilities>```</li><li>사용 하도록 설정 [포함된 모드](https://docs.microsoft.com/windows/iot-core/develop-your-app/EmbeddedMode)</li><li>장치 인터페이스로 표시 [제한](https://docs.microsoft.com/windows-hardware/drivers/install/devpkey-deviceinterface-restricted)를에 하 [INF](https://docs.microsoft.com/previous-versions/windows/desktop/deviceaccess/register-the-device-interface-class-as-privileged) 호출 하 여 [WdfDeviceAssignInterfaceProperty()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfdevice/nf-wdfdevice-wdfdeviceassigninterfaceproperty) 드라이버에서.</ul>사용할 수 있습니다 [ **Windows.Devices.Custom.CustomDevice** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Custom.CustomDevice) 를 장치에 대 한 핸들을 엽니다. 자세한 내용은 [내부 장치에 대 한 장치 앱을 UWP](https://docs.microsoft.com/windows-hardware/drivers/devapps/uwp-device-apps-for-specialized-devices)합니다.
 | **IoT 시스템 관리** | **systemManagement** 접근 권한 값을 통해 앱은 종료 또는 다시 부팅, 로캘 및 표준 시간대와 같은 기본 시스템 관리 권한을 가질 수 있습니다.<br /><br />[  **Windows.System**](https://docs.microsoft.com/uwp/api/Windows.System) 네임스페이스에서 일부 API에 액세스하려면 이 접근 권한 값이 필요합니다.<br /><br />**systemManagement** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **iot** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><iot:Capability Name="systemManagement"/></Capabilities>```
 | **백그라운드 미디어 재생** | **backgroundMediaPlayback** 접근 권한 값은 [**MediaPlayer**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer) 및 [**AudioGraph**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph) 클래스 같은 미디어 관련 API의 동작을 변경하여 앱이 백그라운드에 있는 동안 미디어 재생을 사용하도록 설정합니다. 모든 활성 오디오 스트림은 더 이상 음소거되지 않고 앱이 백그라운드로 전환할 때 계속 들을 수 있습니다. 또한 재생 중 자동으로 앱 수명이 확장됩니다.
 | **원격 시스템** | **remoteSystem** 접근 권한 값을 통해 앱이 사용자의 Microsoft 계정과 연결된 디바이스 목록에 액세스할 수 있습니다. 디바이스 목록에 대한 액세스는 디바이스 간에 유지되는 모든 작업을 수행하는 데 필요합니다. 다음의 모든 멤버에 액세스하려면 이 접근 권한 값이 필요합니다.<ul><li>[Windows.System.RemoteSystems](https://docs.microsoft.com/uwp/api/windows.system.remotesystems) namespace</li><li>[Windows.System.RemoteLauncher](https://docs.microsoft.com/uwp/api/Windows.System.RemoteLauncher) class</li><li>[AppServiceConnection.OpenRemoteAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appserviceconnection.openremoteasync) method</li></ul> |
@@ -110,7 +110,7 @@ ms.locfileid: "66372743"
 
 ### <a name="restricted-capability-approval-process"></a>제한된 접근 권한 값 승인 프로세스
 
-이전에는 접근 권한 값을 사용하기 위해 승인을 받으려면 지원 팀에 문의해야 했습니다. 이제 있도록에서이 정보를 제공할 수 있습니다 [파트너 센터](https://partner.microsoft.com/dashboard/) 의 일부로 합니다 [제출 프로세스](../publish/app-submissions.md)합니다.
+이전에는 접근 권한 값을 사용하기 위해 승인을 받으려면 지원 팀에 문의해야 했습니다. 이제 있도록에서이 정보를 제공할 수 있습니다 [파트너 센터](https://partner.microsoft.com/dashboard) 의 일부로 합니다 [제출 프로세스](../publish/app-submissions.md)합니다.
 
 제출을 위해 패키지를 업로드 하는 경우 모든 제한 된 기능이 선언 하는지 여부를 탐지 됩니다. 이러한 경우 [제출 옵션](../publish/manage-submission-options.md#restricted-capabilities) 페이지에서 제품이 각 접근 권한 값을 사용하는 방식에 대한 세부 정보를 제공해야 합니다. 제품에서 접근 권한 값을 선언해야 하는 이유를 이해하는 데 도움이 되기 위해 가능한 한 자세한 정보를 제공해야 합니다. 제출이 인증 프로세스를 완료하려면 추가 시간이 소요될 수 있습니다.
 

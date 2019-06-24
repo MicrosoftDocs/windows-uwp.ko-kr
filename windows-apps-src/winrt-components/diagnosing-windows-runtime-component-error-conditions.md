@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 72a7a7d4bbe6987781c538a7276bf3942f10cf5b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 87299ad36ac1cca3318a240e55cb2ce73c2a8699
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372201"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320313"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Windows 런타임 구성 요소 오류 조건 진단
 
@@ -25,7 +25,7 @@ ms.locfileid: "66372201"
 ## <a name="error-message-for-implementing-async-interface-provides-incorrect-type"></a>비동기 인터페이스 구현에 대한 오류 메시지가 잘못된 형식 제공
 
 
-관리되는 Windows 런타임 구성 요소는 비동기 작업을 나타내는 UWP(유니버설 Windows 플랫폼) 인터페이스를 구현할 수 없습니다([IAsyncAction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [IAsyncActionWithProgress&lt;TProgress&gt;](https://docs.microsoft.com/previous-versions//br205784(v=vs.85)), [IAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_) 또는 [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)). 대신 .NET Framework가 Windows 런타임 구성 요소에서 비동기 작업을 생성하기 위해 [AsyncInfo](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime?redirectedfrom=MSDN) 클래스를 제공합니다. 비동기 인터페이스를 잘못 구현하려고 할 때 Winmdexp.exe가 표시하는 오류 메시지가 이 클래스를 이전 이름인 AsyncInfoFactory로 나타냅니다. .NET Framework는 더 이상 AsyncInfoFactory 클래스를 포함하지 않습니다.
+관리되는 Windows 런타임 구성 요소는 비동기 작업을 나타내는 UWP(유니버설 Windows 플랫폼) 인터페이스를 구현할 수 없습니다([IAsyncAction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [IAsyncActionWithProgress&lt;TProgress&gt;](https://docs.microsoft.com/previous-versions/br205784(v=vs.85)), [IAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_) 또는 [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)). 대신 .NET Framework가 Windows 런타임 구성 요소에서 비동기 작업을 생성하기 위해 [AsyncInfo](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime?redirectedfrom=MSDN) 클래스를 제공합니다. 비동기 인터페이스를 잘못 구현하려고 할 때 Winmdexp.exe가 표시하는 오류 메시지가 이 클래스를 이전 이름인 AsyncInfoFactory로 나타냅니다. .NET Framework는 더 이상 AsyncInfoFactory 클래스를 포함하지 않습니다.
 
 | 오류 번호 | 메시지 텍스트|       
 |--------------|-------------|

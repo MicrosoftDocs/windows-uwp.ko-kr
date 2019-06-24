@@ -8,12 +8,12 @@ keywords: 시각적 피드백, 포커스 피드백, 터치 피드백, 접촉 시
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f716b930a4d8b96a55a5741e5a520be624526fa
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9ab5d8b12539b7669f3459e62159177bfd95269d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363535"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317151"
 ---
 # <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 
@@ -112,7 +112,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 * [이동에 대 한 지침](guidelines-for-panning.md)
 
 **개발자를 위한**
-* [사용자 지정 사용자 상호 작용](https://developer.microsoft.com/windows/design/inputs-devices)
+* [사용자 지정 사용자 상호 작용](https://docs.microsoft.com/windows/uwp/design/layout/index)
 
 **샘플**
 * [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)

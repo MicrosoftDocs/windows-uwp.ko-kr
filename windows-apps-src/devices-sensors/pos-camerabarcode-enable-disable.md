@@ -5,12 +5,12 @@ ms.date: 4/8/2019
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: da0379109dcf56de505f2a56317258e0ab597f94
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 7db48b610d5bdf256d6a44d4786b8642d984c0b0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244369"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321542"
 ---
 # <a name="enable-or-disable-the-software-decoder-that-ships-with-windows"></a>Windows와 함께 배송된 소프트웨어 디코더를 활성화 또는 비활성화
 
@@ -43,7 +43,7 @@ Windows Registry Editor Version 5.00
 ```  
 
 > [!Warning]
-> 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다.  보호를 강화하기 위해 수정 전에 레지스트리를 백업합니다.  그러면 문제가 발생했을 때 레지스트리를 복원할 수 있습니다.  레지스트리를 백업 및 복원하는 방법에 대한 자세한 내용은 다음 문서 번호를 클릭하여 Microsoft 기술 자료의 문서를 확인하세요. <br/><br/> [322756](https://support.microsoft.com/kb/322756) Windows에서 레지스트리를 백업 및 복원하는 방법입니다.
+> 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다.  보호를 강화하기 위해 수정 전에 레지스트리를 백업합니다.  그러면 문제가 발생했을 때 레지스트리를 복원할 수 있습니다.  레지스트리를 백업 및 복원하는 방법에 대한 자세한 내용은 다음 문서 번호를 클릭하여 Microsoft 기술 자료의 문서를 확인하세요. <br/><br/> [322756](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows) Windows에서 레지스트리를 백업 및 복원하는 방법입니다.
 
 > [!NOTE]
 > Windows 10에서 기본 제공되는 소프트웨어 디코더는  [**Digimarc Corporation**](https://www.digimarc.com/)이 무료로 제공합니다.

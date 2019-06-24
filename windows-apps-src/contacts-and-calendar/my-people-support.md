@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08acb2972469a84e6a37d7293ed00cae8df94dfb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 58bf8df4551c8bcfc663d2c832bef3a879ff6350
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611538"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317971"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>응용 프로그램에 내 피플 지원 추가
 
@@ -29,7 +29,7 @@ ms.locfileid: "57611538"
 
 1. [응용 프로그램 매니페스트에 shareTarget 활성화 계약에 대 한 지원을 선언 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
 2. [사용자가 앱을 사용 하 여 공유할 수 있는 연락처에 주석을 추가 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
-3.  동시에 실행되는 여러 응용 프로그램 인스턴스를 지원합니다. 사용자가 연락처 패널에서 응용 프로그램을 사용하는 동안 응용 프로그램의 전체 버전과 상호 작용할 수 있어야 합니다.  사용자가 동시에 여러 연락처 패널에서 응용 프로그램을 사용할 수도 있습니다.  이 상황을 지원하려면 응용 프로그램이 여러 보기를 동시에 실행할 수 있어야 합니다. 자세한 방법은 ["앱에 대한 여러 보기 표시"](https://docs.microsoft.com/en-us/windows/uwp/layout/show-multiple-views)를 참조하세요.
+3.  동시에 실행되는 여러 응용 프로그램 인스턴스를 지원합니다. 사용자가 연락처 패널에서 응용 프로그램을 사용하는 동안 응용 프로그램의 전체 버전과 상호 작용할 수 있어야 합니다.  사용자가 동시에 여러 연락처 패널에서 응용 프로그램을 사용할 수도 있습니다.  이 상황을 지원하려면 응용 프로그램이 여러 보기를 동시에 실행할 수 있어야 합니다. 자세한 방법은 ["앱에 대한 여러 보기 표시"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views)를 참조하세요.
 
 여기까지 마치면 주석 처리된 연락처의 연락처 패널에 응용 프로그램이 표시됩니다.
 
@@ -53,7 +53,7 @@ ms.locfileid: "57611538"
 
 ```
 
-**후**
+**After**
 
 ```xml
 <Package
@@ -121,7 +121,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 </Applications>
 ```
 
-**후**
+**After**
 
 ```Csharp
 <Applications>
@@ -179,17 +179,17 @@ ContactPanel 개체에는 응용 프로그램에서 수신 대기해야 하는 �
 
 ## <a name="supporting-notification-badging"></a>지원 알림 배지
 
-앱에서 해당 인물에 관한 새 알림을 수신할 경우 작업 표시줄에 고정된 연락처가 배지로 표시되도록 하려면, [알림 메시지](https://docs.microsoft.com/en-us/windows/uwp/shell/tiles-and-notifications/adaptive-interactive-toasts)와 명시적인 [내 피플 알림](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications)에 **hint-people** 매개 변수를 포함시켜야 합니다.
+앱에서 해당 인물에 관한 새 알림을 수신할 경우 작업 표시줄에 고정된 연락처가 배지로 표시되도록 하려면, [알림 메시지](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts)와 명시적인 [내 피플 알림](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications)에 **hint-people** 매개 변수를 포함시켜야 합니다.
 
 ![피플 알림 배지](images/my-people-badging.png)
 
 연락처를 배지로 표시하려면 최상위 알림 메시지 노드에는 발신 또는 관련 연락처를 나타내는 hint-people 매개 변수가 포함되어야 합니다. 이 매개 변수에 가능한 값은 다음과 같습니다.
 + **전자 메일 주소** 
-    + 예: mailto:johndoe@mydomain.com
+    + 예를 들어 mailto:johndoe@mydomain.com
 + **전화 번호** 
-    + 예: tel:888-888-8888
+    + 예를 들어 tel:888-888-8888
 + **원격 ID** 
-    + 예: remoteid:1234
+    + 예를 들어 remoteid:1234
 
 다음은 특정 사람과 관련된 알림 메시지를 구별하는 방법의 예입니다.
 ```XML
@@ -248,7 +248,7 @@ async Task PinMultipleContacts(Contact[] contacts)
 
 **참고:** 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 + [내 피플 공유](my-people-sharing.md)
 + [내 사용자 알림](my-people-notifications.md)
 + [Channel 9 비디오 내 사용자 지원 응용 프로그램에 추가 하는 방법](https://channel9.msdn.com/Events/Build/2017/P4056)

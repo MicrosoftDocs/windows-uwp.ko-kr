@@ -5,12 +5,12 @@ ms.date: 03/21/2019
 ms.topic: article
 keywords: Windows 10, uwp, 패키지, 업로드, 장치 패밀리 가용성
 ms.localizationpriority: medium
-ms.openlocfilehash: af2152eb8d174f6d2e40e20c8cdaccd0e87605bb
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 088fb859ae38e608182b22b94300b9c27063054e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787093"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320014"
 ---
 # <a name="device-family-availability"></a>디바이스 패밀리 가용성
 
@@ -30,7 +30,7 @@ Windows.Universal 장치 패밀리를 대상으로 하는 패키지는 모든 Wi
 
 해당 디바이스 형식의 고객에게 제출을 제공하지 않으려는 경우 Windows 10 디바이스 패밀리에 대한 확인란의 선택을 취소할 수 있습니다. 디바이스 패밀리 확인란을 선택하지 않은 경우 해당 디바이스 형식의 새 고객은 앱을 다운로드할 수 없습니다. 그러나 앱을 이미 다운로드한 고객은 계속 사용하고 제출한 업데이트를 받을 수 있습니다.
 
-앱이 이를 지원하는 경우 앱을 다운로드할 수 있는 Windows 10 장치 형식에 제한이 없는 한 모든 확인란을 선택하는 것이 좋습니다. 예를 들어 앱이 [Surface Hub](https://developer.microsoft.com/windows/surfacehub) 및/또는 [Microsoft HoloLens](https://developer.microsoft.com/windows/mixed-reality)에 대해 적절한 환경을 제공하지 않는 경우 **Windows 10 Team** 및/또는 **Windows 10 Holographic** 확인란을 선택 해제할 수 있습니다. 이렇게 하면 새로운 고객이 해당 장치에서 앱을 다운로드할 수 없습니다. 나중에 이러한 고객에게 제공할 준비가 되면 이 확인란을 선택하여 새 제출을 생성할 수 있습니다.
+앱이 이를 지원하는 경우 앱을 다운로드할 수 있는 Windows 10 장치 형식에 제한이 없는 한 모든 확인란을 선택하는 것이 좋습니다. 예를 들어 앱이 [Surface Hub](https://developer.microsoft.com/windows/surfacehub) 및/또는 [Microsoft HoloLens](https://developer.microsoft.com/mixed-reality)에 대해 적절한 환경을 제공하지 않는 경우 **Windows 10 Team** 및/또는 **Windows 10 Holographic** 확인란을 선택 해제할 수 있습니다. 이렇게 하면 새로운 고객이 해당 장치에서 앱을 다운로드할 수 없습니다. 나중에 이러한 고객에게 제공할 준비가 되면 이 확인란을 선택하여 새 제출을 생성할 수 있습니다.
 
 <span id="xbox" />
 

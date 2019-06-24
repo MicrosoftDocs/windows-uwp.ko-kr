@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d3530861175c8d9b70683926393b5adfdd59407
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 992648c8c90a8ad62b772d417b2b1beeb6087c53
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361556"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318534"
 ---
 # <a name="process-media-files-in-the-background"></a>백그라운드에서 미디어 파일 처리
 
@@ -55,7 +55,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 [!code-cs[BackgroundMembers](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundMembers)]
 
-작업이 시작되면 시스템에서 백그라운드 작업의 [**Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.) 메서드를 호출합니다. 메서드에 전달된 [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 개체를 해당 멤버 변수로 설정합니다. 시스템에서 백그라운드 작업을 종료해야 하는 경우 실행될 [**Canceled**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.canceled) 이벤트의 처리기를 등록합니다. 그런 다음 [**Progress**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) 속성을 0으로 설정합니다.
+작업이 시작되면 시스템에서 백그라운드 작업의 [**Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드를 호출합니다. 메서드에 전달된 [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 개체를 해당 멤버 변수로 설정합니다. 시스템에서 백그라운드 작업을 종료해야 하는 경우 실행될 [**Canceled**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.canceled) 이벤트의 처리기를 등록합니다. 그런 다음 [**Progress**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) 속성을 0으로 설정합니다.
 
 다음으로 백그라운드 작업 개체의 [**GetDeferral**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.getdeferral) 메서드를 호출하여 지연을 확보합니다. 이를 통해 현재 비동기 조작을 수행 중이므로 작업을 종료하지 않아야 한다고 시스템에 지시합니다.
 

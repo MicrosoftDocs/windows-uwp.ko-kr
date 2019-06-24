@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bfd84d5e0e41f07b53be0c0afce4b881a8a75d59
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4a171df5312d6c4613dfca1215f5ddd948153a8f
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359214"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317867"
 ---
 # <a name="receive-data"></a>데이터 수신
 
@@ -47,7 +47,7 @@ ms.locfileid: "66359214"
 
 ## <a name="handle-share-activation"></a>공유 활성화 처리
 
-사용자가 공유 UI의 사용 가능한 대상 앱 목록 등에서 앱을 선택하면 [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Application.OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs)) 이벤트가 발생합니다. 앱은 사용자가 공유하려는 데이터를 처리하기 위해 이 이벤트를 처리해야 합니다.
+사용자가 공유 UI의 사용 가능한 대상 앱 목록 등에서 앱을 선택하면 [**OnShareTargetActivated**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application#Windows_UI_Xaml_Application_OnShareTargetActivated_Windows_ApplicationModel_Activation_ShareTargetActivatedEventArgs_) 이벤트가 발생합니다. 앱은 사용자가 공유하려는 데이터를 처리하기 위해 이 이벤트를 처리해야 합니다.
 
 <!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -87,7 +87,7 @@ shareOperation.ReportStarted();
 shareOperation.ReportSubmittedBackgroundTask(); 
 ```
 
-오류가 발생한 경우 [**ReportError**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportError(System.String))를 호출하여 시스템에 오류 메시지를 보내세요. 사용자가 공유 상태를 확인할 때 메시지가 표시됩니다. 이때 앱이 종료되고 공유가 끝나므로 사용자가 다시 시작하여 콘텐츠를 앱에 공유해야 합니다. 시나리오에 따라 특정 오류는 공유 작업을 종료할 만큼 심각하지 않다고 결정할 수 있습니다. 이 경우 **ReportError**를 호출하지 않고 공유를 계속할 수 있습니다.
+오류가 발생한 경우 [**ReportError**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation#Windows_ApplicationModel_DataTransfer_ShareTarget_ShareOperation_ReportError_System_String_)를 호출하여 시스템에 오류 메시지를 보내세요. 사용자가 공유 상태를 확인할 때 메시지가 표시됩니다. 이때 앱이 종료되고 공유가 끝나므로 사용자가 다시 시작하여 콘텐츠를 앱에 공유해야 합니다. 시나리오에 따라 특정 오류는 공유 작업을 종료할 만큼 심각하지 않다고 결정할 수 있습니다. 이 경우 **ReportError**를 호출하지 않고 공유를 계속할 수 있습니다.
 
 ```cs
 shareOperation.ReportError("Could not reach the server! Try again later."); 

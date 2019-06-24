@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 캠페인, 홍보
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d38d47c1b5e228e984faa4657cd12735e98bcf9
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 1dc06a2977832e659220b133ba42a99bad982291
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215230"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320099"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>앱 광고 캠페인 만들기
 
@@ -90,7 +90,7 @@ ms.locfileid: "66215230"
 
 12.  [프리미엄 계정](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign)이 있는 경우 **대상 URL** 상자를 사용하여 고객이 광고를 클릭할 때 발생하는 상황을 제어할 수 있습니다.
     * 상자를 비워 두면 고객이 광고를 클릭할 때 앱의 스토어 목록이 표시됩니다.
-    * 조정, Kochava, 조정, 또는 Vungle를 사용 하 여 앱에 대 한 설치 분석을 측정 하는, 하는 경우 설치 추적 URL을 입력 합니다. 캠페인을 저장할 때 추적 URL이 Microsoft Store의 앱 목록 페이지로 확인되는지 검사하기 위해 추적 URL의 유효성이 검사됩니다. 이러한 서비스를 사용 하 여 설치 추적에 대 한 자세한 내용은 참조는 [조정](https://docs.adjust.com/en/), [Kochava](https://support.kochava.com/)를 [조정](https://help.tune.com/), 및 [Vungle](https://support.vungle.com/) 설명서 .
+    * 조정, Kochava, 조정, 또는 Vungle를 사용 하 여 앱에 대 한 설치 분석을 측정 하는, 하는 경우 설치 추적 URL을 입력 합니다. 캠페인을 저장할 때 추적 URL이 Microsoft Store의 앱 목록 페이지로 확인되는지 검사하기 위해 추적 URL의 유효성이 검사됩니다. 이러한 서비스를 사용 하 여 설치 추적에 대 한 자세한 내용은 참조는 [조정](https://docs.adjust.com/en/), [Kochava](https://support.kochava.com/)를 [조정](https://help.tune.com/hasoffers/), 및 [Vungle](https://support.vungle.com/hc/en-us) 설명서 .
     * 캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 [딥 링크 URI](../launch-resume/handle-uri-activation.md)를 지정하여 선택한 고객층을 앱 내의 특정 페이지로 리디렉션할 수 있습니다.
     * 앱 설명 페이지 또는 앱 내부 페이지가 아닌 대상을 지정하면 캠페인이 자동으로 일시 중지됩니다.
 

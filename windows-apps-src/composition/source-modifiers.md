@@ -5,18 +5,18 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 834f631cd5c4b8696e75f83f194b95f809b1cf8a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 87e4eb90b4801d01ecb85c91b5e64ccc9155d199
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649868"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318091"
 ---
 # <a name="pull-to-refresh-with-source-modifiers"></a>SourceModifier로 당겨서 새로 고침
 
 이 문서에서는 InteractionTracker의 SourceModifier 기능을 사용하는 방법에 대해 자세히 살펴보고, 사용자 지정 당겨서 새로 고침 컨트롤을 만들어 실제 용례를 시연하겠습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 여기에서는 여러분이 이 문서에서 다룬 개념에 익숙하다고 가정합니다.
 
@@ -40,7 +40,7 @@ InteractionTracker가 상호 작용 중 상태에 있으면 할당된 각각의 
 1. 조건 정의 – 이 특정 Source Modifier가 적용되어야 하는 시점에 대한 조건문을 정의하는 식입니다.
 1. DeltaPosition/DeltaScale 정의 - 위의 정의된 조건이 충족될 때 DeltaPosition 또는 DeltaScale을 변경하는 Source Modifier 식입니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이제 Source Modifier를 사용하여 기존 XAML ListView 컨트롤로 사용자 지정 끌어서 새로 고침 경험을 만드는 방법을 살펴보겠습니다. 이 경험을 빌드하기 위해 XAML ListView 위에 누적될 "새로 고침 패널"로 캔버스를 사용하겠습니다.
 
@@ -48,7 +48,7 @@ InteractionTracker가 상호 작용 중 상태에 있으면 할당된 각각의 
 
 ![당겨서 새로 고침이 적용된 목록](images/animation/city-list.gif)
 
-이 경험의 작업 코드는 [GitHub의 Window UI 개발자 랩 리포](https://github.com/Microsoft/WindowsUIDevLabs)에서 확인할 수 있습니다. 아래에 이 경험을 빌드하는 과정을 단계별로 안내합니다.
+이 경험의 작업 코드는 [GitHub의 Window UI 개발자 랩 리포](https://github.com/microsoft/WindowsCompositionSamples)에서 확인할 수 있습니다. 아래에 이 경험을 빌드하는 과정을 단계별로 안내합니다.
 XAML 태그 코드는 다음과 같이 구성됩니다.
 
 ```xaml

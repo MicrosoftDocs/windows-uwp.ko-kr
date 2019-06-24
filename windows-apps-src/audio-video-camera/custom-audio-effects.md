@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: f34b2cdbb538d121c1c6182b2c02042d6c0047ed
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6bebf9533ab045822902d44f87f68eec55c11074
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360924"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318568"
 ---
 # <a name="custom-audio-effects"></a>사용자 지정 오디오 효과
 
@@ -51,7 +51,7 @@ ms.locfileid: "66360924"
 
 ### <a name="setencodingproperties-method"></a>SetEncodingProperties 메서드
 
-시스템에서 효과에 대해 [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties.windows)를 호출하므로 효과가 작동하는 오디오 스트림에 대한 인코딩 속성을 알 수 있습니다. 에코 효과를 구현하기 위해 이 예제에서는 1초 오디오 데이터를 저장하는 버퍼를 사용합니다. 이 방법을 통해 오디오를 인코딩하는 샘플 속도를 기반으로 버퍼 크기를 오디오 초당 샘플 수로 초기화할 수 있게 됩니다. 또한 지연 효과에서는 정수 카운터를 사용하여 지연 버퍼에서 현재 위치를 추적합니다. 오디오 파이프라인에 효과를 추가할 때마다 **SetEncodingProperties**가 호출되므로 해당 값을 0으로 초기화할 좋은 기회입니다. 다른 효과에서 사용할 수 있도록 이 메서드를 통과하는 **AudioEncodingProperties** 개체를 캡처할 수도 있습니다.
+시스템에서 효과에 대해 [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties)를 호출하므로 효과가 작동하는 오디오 스트림에 대한 인코딩 속성을 알 수 있습니다. 에코 효과를 구현하기 위해 이 예제에서는 1초 오디오 데이터를 저장하는 버퍼를 사용합니다. 이 방법을 통해 오디오를 인코딩하는 샘플 속도를 기반으로 버퍼 크기를 오디오 초당 샘플 수로 초기화할 수 있게 됩니다. 또한 지연 효과에서는 정수 카운터를 사용하여 지연 버퍼에서 현재 위치를 추적합니다. 오디오 파이프라인에 효과를 추가할 때마다 **SetEncodingProperties**가 호출되므로 해당 값을 0으로 초기화할 좋은 기회입니다. 다른 효과에서 사용할 수 있도록 이 메서드를 통과하는 **AudioEncodingProperties** 개체를 캡처할 수도 있습니다.
 
 [!code-cs[DeclareEchoBuffer](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetDeclareEchoBuffer)]
 [!code-cs[SetEncodingProperties](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetSetEncodingProperties)]

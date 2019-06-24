@@ -6,12 +6,12 @@ ms.date: 08/01/2018
 ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store 컬렉션 API, Microsoft Store 구매 API, 제품 보기, 제품 권한 부여
 ms.localizationpriority: medium
-ms.openlocfilehash: 0bf85a73cb35044b4be2282c9a13c1e65b836a92
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 184937133b85ae2cac7a21bb6002af70b06d34da
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604008"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319920"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>서비스에서 제품 권한 관리
 
@@ -107,7 +107,7 @@ Microsoft Store 컬렉션 API 또는 구매 API에서 호출하려는 메서드�
 
 ### <a name="create-the-tokens"></a>토큰 만들기
 
-액세스 토큰을 만들려면 [클라이언트 자격 증명을 사용한 서비스 간 호출](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service)의 지침에 따라 서비스에서 OAuth 2.0 API를 사용하여 ```https://login.microsoftonline.com/<tenant_id>/oauth2/token``` 끝점으로 HTTP POST를 보냅니다. 다음은 샘플 요청입니다.
+액세스 토큰을 만들려면 [클라이언트 자격 증명을 사용한 서비스 간 호출](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/)의 지침에 따라 서비스에서 OAuth 2.0 API를 사용하여 ```https://login.microsoftonline.com/<tenant_id>/oauth2/token``` 끝점으로 HTTP POST를 보냅니다. 다음은 샘플 요청입니다.
 
 ``` syntax
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
@@ -122,7 +122,7 @@ grant_type=client_credentials
 
 각 토큰에 대해 다음 매개 변수 데이터를 지정합니다.
 
-* 에 대 한 합니다 *클라이언트\_id* 하 고 *클라이언트\_비밀* 응용 프로그램 ID 및 클라이언트 암호를 에서검색하는응용프로그램에대한매개변수를지정[Azure 관리 포털](https://manage.windowsazure.com)합니다. Microsoft Store 컬렉션 API 또는 구매 API에서 요구하는 인증 수준의 액세스 토큰을 만들려면 두 매개 변수가 모두 필요합니다.
+* 에 대 한 합니다 *클라이언트\_id* 하 고 *클라이언트\_비밀* 응용 프로그램 ID 및 클라이언트 암호를 에서검색하는응용프로그램에대한매개변수를지정[Azure 관리 포털](https://portal.azure.com/)합니다. Microsoft Store 컬렉션 API 또는 구매 API에서 요구하는 인증 수준의 액세스 토큰을 만들려면 두 매개 변수가 모두 필요합니다.
 
 * *리소스* 매개 변수의 경우 만들려는 액세스 토큰의 종류에 따라 [이전 섹션](#access-tokens)에 나열된 대상 그룹 URI 중 하나를 지정합니다.
 

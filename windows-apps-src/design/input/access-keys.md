@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c13ac8f1421fe785ebce70789c8ea6d0bf6c068
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b27c5a0446bc9b329b09855f06d58a13723ece1c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66364023"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317379"
 ---
 # <a name="access-keys"></a>선택키
 
@@ -241,7 +241,7 @@ _영어와 스페인어 리소스 문자열 폴더_
 
 _Resources.resw 파일에서 지정 된 AccessKey 속성 지정_
 
-자세한 내용은 [UI 리소스 번역](https://msdn.microsoft.com/library/windows/apps/xaml/Hh965329(v=win.10).aspx)을 참조하세요.
+자세한 내용은 [UI 리소스 번역](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10))을 참조하세요.
 
 ## <a name="key-tip-positioning"></a>키 팁 위치 지정
 

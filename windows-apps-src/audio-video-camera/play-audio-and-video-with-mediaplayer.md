@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d5d4e7b71ea0fcc6f18106ee1d11c3dead1438c7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d25cd3f8a963d85f704e32482475827462ddba58
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360665"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318260"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>MediaPlayer를 사용하여 오디오 및 비디오 재생
 
@@ -161,7 +161,7 @@ Windows 10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSur
 
 [!code-cs[CreateSourceWithOpenCompleted](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCreateSourceWithOpenCompleted)]
 
-**OpenOperationCompleted** 처리기는 미디어 소스 콘텐츠의 기간을 검색하는 데 사용됩니다. 기간이 결정되면 **Slider** 컨트롤의 최대값은 미디어 항목의 총 시간(초)으로 설정됩니다. 값은 UI 스레드에서 실행되도록 하는 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows)에 대한 호출 내에 설정됩니다.
+**OpenOperationCompleted** 처리기는 미디어 소스 콘텐츠의 기간을 검색하는 데 사용됩니다. 기간이 결정되면 **Slider** 컨트롤의 최대값은 미디어 항목의 총 시간(초)으로 설정됩니다. 값은 UI 스레드에서 실행되도록 하는 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)에 대한 호출 내에 설정됩니다.
 
 [!code-cs[DeclareDuration](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareDuration)]
 

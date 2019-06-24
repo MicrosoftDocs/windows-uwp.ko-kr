@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 829755f6ccba7a076096e4a03555458b98a4b670
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5fcc4312cd238279e01e275d2525c9ac8df98190
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372243"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322361"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Windows 런타임 8.x XAML 및 UI를 UWP로 포팅
 
@@ -110,7 +110,7 @@ Windows 10에서 실행 되는 유니버설 8.1 앱 8.1 모양과 컨트롤에 �
 | **ListPickerFlyout**, **PickerFlyout**  | **ListPickerFlyout** 하 고 **PickerFlyout** Windows 10 앱에 대 한 사용 되지 않습니다. 단일 선택 플라이아웃의 경우 [**MenuFlyout**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyout)을 사용하고, 더욱 복잡한 환경의 경우 [**Flyout**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)을 사용합니다. |
 | [**PasswordBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox) | 합니다 [ **PasswordBox.IsPasswordRevealButtonEnabled** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.ispasswordrevealbuttonenabled) 속성은 Windows 10 앱에서 사용 되지 않으며 설정 해도 효과가 없습니다. 사용 하 여 [ **PasswordBox.PasswordRevealMode** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode) 기본값으로 하는 대신 **피킹** (에 시각 문자 모양 표시 되는, 예: Windows 런타임 8.x 앱에서). 또한 [암호 상자에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/password-box)을 참조하세요. |
 | [**Pivot**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) | [  **Pivot**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) 컨트롤은 이제 범용이며 더 이상 모바일 디바이스로 사용이 제한되지 않습니다. |
-| [**SearchBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SearchBox) | [  **SearchBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.searchbox.)는 범용 디바이스 패밀리에 구현되어 있지만 모바일 디바이스에서 완전히 작동하지 않습니다. [AutoSuggestBox를 위해 더 이상 사용되지 않는 SearchBox](#searchbox-deprecated-in-favor-of-autosuggestbox)를 참조하세요. |
+| [**SearchBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SearchBox) | [  **SearchBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.searchbox)는 범용 디바이스 패밀리에 구현되어 있지만 모바일 디바이스에서 완전히 작동하지 않습니다. [AutoSuggestBox를 위해 더 이상 사용되지 않는 SearchBox](#searchbox-deprecated-in-favor-of-autosuggestbox)를 참조하세요. |
 | **SemanticZoom** | **SemanticZoom**에 대해서는 [SemanticZoom 변경](#semanticzoom-changes)을 참조하세요. |
 | [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)  | [  **ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)의 일부 기본 속성이 변경되었습니다. [**HorizontalScrollMode** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode) 됩니다 **자동**에 [ **VerticalScrollMode** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollmode) 은 **자동**, 및 [ **ZoomMode** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.zoommode) 됩니다 **비활성**합니다. 새 기본값이 앱에 적합하지 않으면 스타일에서 변경하거나 컨트롤 자체의 로컬 값으로 변경할 수 있습니다.  |
 | [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Windows 런타임 8.x 앱에서 맞춤법 검사 해제 되어 기본적으로는 [ **텍스트 상자**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)합니다. Windows Phone 스토어 앱 및 Windows 10 앱에이 기본적으로 켜져 있습니다. |
@@ -118,7 +118,7 @@ Windows 10에서 실행 되는 유니버설 8.1 앱 8.1 모양과 컨트롤에 �
 | [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | [  **TextBox.TextReadingOrder**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.textreadingorder)의 기본값이 **Default**에서 **DetectFromContent**로 변경되었습니다. 값이 적합하지 않으면 **UseFlowDirection**을 사용합니다. **Default**는 사용되지 않습니다. |
 | Various | 강조 색을 Windows Phone 스토어 앱 및 Windows 10 앱에이 아니라 Windows 런타임 8.x 앱 적용 됩니다.  |
 
-UWP 앱 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://docs.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function), [컨트롤 목록](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/) 및 [컨트롤에 대한 지침](https://developer.microsoft.com/windows/design/controls-patterns)을 참조하세요.
+UWP 앱 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://docs.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function), [컨트롤 목록](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/) 및 [컨트롤에 대한 지침](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/index)을 참조하세요.
 
 ##  <a name="design-language-in-windows10"></a>Windows 10의 디자인 언어
 
@@ -410,7 +410,7 @@ Windows 10에 대 한 디자인 언어가 발전 하 고 특정 시스템 스타
 
 ## <a name="searchbox-deprecated-in-favor-of-autosuggestbox"></a>AutoSuggestBox를 위해 더 이상 사용되지 않는 SearchBox
 
-[  **SearchBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.searchbox.)는 범용 디바이스 패밀리에 구현되어 있지만 모바일 디바이스에서 완전히 작동하지 않습니다. 유니버설 검색 환경에 [**AutoSuggestBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)를 사용합니다. 일반적으로 **AutoSuggestBox**를 사용하여 검색 환경을 구현하는 방법은 다음과 같습니다.
+[  **SearchBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.searchbox)는 범용 디바이스 패밀리에 구현되어 있지만 모바일 디바이스에서 완전히 작동하지 않습니다. 유니버설 검색 환경에 [**AutoSuggestBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)를 사용합니다. 일반적으로 **AutoSuggestBox**를 사용하여 검색 환경을 구현하는 방법은 다음과 같습니다.
 
 사용자가 입력을 시작하면 **UserInput**이라는 이유의 **TextChanged** 이벤트가 발생합니다. 그러면 제안 목록을 채우고 [**AutoSuggestBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)의 **ItemsSource**를 설정합니다. 사용자가 목록을 탐색하면 **SuggestionChosen** 이벤트가 발생합니다(또한 **TextMemberDisplayPath**를 설정한 경우 텍스트 상자가 지정된 속성으로 자동으로 채워짐). 사용자가 Enter 키를 사용하여 선택을 전송하면 **QuerySubmitted** 이벤트가 발생합니다. 이때 해당 제안에 대한 작업을 수행할 수 있습니다(이 경우 지정된 콘텐츠에 대한 세부 정보가 있는 다른 페이지로 이동할 가능성이 가장 큼). **SearchBoxQuerySubmittedEventArgs**의 **LinguisticDetails** 및 **Language** 속성은 더 이상 지원되지 않습니다(이 기능을 지원하는 동등한 API가 있음). **KeyModifiers**도 더 이상 지원되지 않습니다.
 
@@ -456,7 +456,7 @@ Windows 런타임 8.x **SettingsPane** 클래스 Windows 10에 적합 하지 않
 
 ![Windows 10 앱의 시스템 textblock 스타일](images/label-uwp10stylegallery.png) <br/>Windows 10 앱에 대 한 시스템 TextBlock 스타일
 
-Windows 런타임 8.x 앱 및 Windows Phone 스토어 앱에서 기본 글꼴 패밀리는 전역 사용자 인터페이스입니다. Windows 10 앱을 기본 글꼴 패밀리에서는 Segoe Ui입니다. 결과적으로 앱에서 글꼴 메트릭은 다르게 보일 수 있습니다. 8.1 텍스트의 모양을 재현하려는 경우 [**LineHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.lineheight) 및 [**LineStackingStrategy**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy)와 같은 속성을 사용하여 고유한 메트릭을 설정할 수 있습니다.
+Windows 런타임 8.x 앱 및 Windows Phone 스토어 앱에서 기본 글꼴 패밀리는 전역 사용자 인터페이스입니다. Windows 10 앱을 기본 글꼴 패밀리에서는 Segoe Ui입니다. 결과적으로 앱에서 글꼴 메트릭은 다르게 보일 수 있습니다. 8\.1 텍스트의 모양을 재현하려는 경우 [**LineHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.lineheight) 및 [**LineStackingStrategy**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy)와 같은 속성을 사용하여 고유한 메트릭을 설정할 수 있습니다.
 
 Windows 런타임 8.x 앱 및 Windows Phone 스토어 앱에서 텍스트에 대 한 기본 언어를 언어 또는 en 설정 되어-주세요. Windows 10 앱에서 기본 언어는 최고의 앱 언어 (글꼴 대체 (fallback))에 설정 됩니다. [  **FrameworkElement.Language**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.language)를 명시적으로 설정할 수 있지만, 해당 속성에 대해 값을 설정하지 않은 경우 더 나은 글꼴 대체 동작을 사용할 수 있습니다.
 

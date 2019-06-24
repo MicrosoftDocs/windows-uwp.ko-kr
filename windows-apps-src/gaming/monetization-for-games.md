@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 수익 창출
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ef957700f6554ccece9d0c3bf51ccf4244a4b74
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4c84c42da0e2653f0e5958583ad0ee9b9babe3bc
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368412"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318949"
 ---
 #  <a name="monetization-for-games"></a>게임의 수익 창출
 
@@ -195,7 +195,7 @@ UWP 앱 및 게임에 광고 서비스를 제공하는 데 사용되는 SDK를 �
 
 #### <a name="vungle"></a>Vungle
 
-Vungle SDK for Windows에서 앱 및 게임에 비디오 광고를 제공합니다. SDK를 다운로드하려면 [Vungle SDK](https://v.vungle.com/sdk)로 이동합니다.
+Vungle SDK for Windows에서 앱 및 게임에 비디오 광고를 제공합니다. SDK를 다운로드하려면 [Vungle SDK](https://publisher.vungle.com/sdk/)로 이동합니다.
 
 #### <a name="smaato"></a>Smaato
 

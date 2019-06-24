@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 정기 작업 항목, 스레딩, 타이머
 ms.localizationpriority: medium
-ms.openlocfilehash: cf3a5817e459c7089eafb8f2c38d58b0e8eef03c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8e045c12f96cc9404abb4ba9be395eb49b1ab850
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371558"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321994"
 ---
 # <a name="create-a-periodic-work-item"></a>정기 작업 항목 만들기
 
@@ -31,7 +31,7 @@ ms.locfileid: "66371558"
 
 > **참고**  0 값을 지정 하지 마세요 (또는 모든 값 보다 작거나 1 밀리초) 간격입니다. 지정하면 주기적 타이머가 대신 일회성 타이머로 동작합니다.
 
-> **참고**  사용할 수 있습니다 [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) UI에 액세스 하 여 작업 항목에서 진행률을 표시 합니다.
+> **참고**  사용할 수 있습니다 [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) UI에 액세스 하 여 작업 항목에서 진행률을 표시 합니다.
 
 다음 예제에서는 60초마다 실행되는 작업 항목을 만듭니다.
 

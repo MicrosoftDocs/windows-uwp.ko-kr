@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 65e8599a73a196ebb72fe3cc45ea984f82057741
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 52aeb590e7672ccfd3fe74232575f008c132d9fd
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371504"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320170"
 ---
 # <a name="manage-app-submissions"></a>앱 제출 관리
 
@@ -98,7 +98,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
     응답 본문에는 새 제출의 ID, Azure Blob Storage 제출용 관련 파일(앱 패키지, 목록 이미지, 예고편 파일 등)을 업로드 할 수 있는 SAS URI, 기타 새 제출 데이터 일체(목록 및 가격 정보 등)가 포함된 [앱 제출](#app-submission-object) 리소스가 포함되어 있습니다.
 
     > [!NOTE]
-    > SAS URI는 계정 키를 요구하지 않고 Azure Storage의 보안 리소스에 대한 액세스를 제공합니다. SAS Uri 및 Azure Blob storage 사용 하 여 용도 대 한 배경 정보를 참조 하세요. [공유 액세스 서명, 1 부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) 고 [공유 액세스 서명, 2 부: 만들기 및 SAS를 사용 하 여 Blob storage를 사용 하 여](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)입니다.
+    > SAS URI는 계정 키를 요구하지 않고 Azure Storage의 보안 리소스에 대한 액세스를 제공합니다. SAS Uri 및 Azure Blob storage 사용 하 여 용도 대 한 배경 정보를 참조 하세요. [공유 액세스 서명, 1 부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) 고 [공유 액세스 서명, 2 부: 만들기 및 SAS를 사용 하 여 Blob storage를 사용 하 여](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)입니다.
 
 4. 제출에 대한 새 패키지, 목록 이미지, 예고편 파일을 추가하려면 [앱 패키지를 준비](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)하고 [앱 스크린샷 및 이미지, 예고편을 준비](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images)합니다. ZIP 보관 파일에 이러한 파일을 모두 추가합니다.
 

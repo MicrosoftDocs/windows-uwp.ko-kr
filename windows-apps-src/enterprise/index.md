@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a44a1adb8685ad182620b4c68024176628b9204d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 087192160fd098d63042f3d1ad16fe7a811de337
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369663"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321505"
 ---
 # <a name="enterprise"></a>엔터프라이즈
 
@@ -156,8 +156,8 @@ LOB(기간 업무) 앱은 다양한 다른 시스템에 데이터를 저장하�
 | 항목 | 설명 |
 |-------|-------------|
 | [엔터프라이즈에 LOB 앱 배포](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) | 일반 사용자에게 광범위하게 LOB(기간 업무) 앱을 제공하지 않고도 비즈니스용 Microsoft Store를 통해 대량 구매할 수 있도록 해당 앱을 엔터프라이즈에 직접 게시할 수 있습니다. |
-| [앱 사이드로드](https://technet.microsoft.com/library/mt269549) | 앱을 테스트용으로 로드할 때 서명된 앱 패키지를 디바이스에 배포합니다. 이러한 앱의 서명, 호스팅 및 배포를 유지 관리합니다. Windows 10에서는 앱을 테스트용으로 로드하는 프로세스가 간소화되었습니다.             |
-| [Microsoft Store에 앱 게시](https://dev.windows.com/publish) | 통합 Microsoft Store를 사용하면 모든 Windows 디바이스용 앱을 모두 게시하고 관리할 수 있습니다. 시장별 가격 책정, 배포 및 가시성 제어, 기타 옵션을 사용하여 앱의 가용성을 사용자 지정하세요. |
+| [앱 사이드로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) | 앱을 테스트용으로 로드할 때 서명된 앱 패키지를 디바이스에 배포합니다. 이러한 앱의 서명, 호스팅 및 배포를 유지 관리합니다. Windows 10에서는 앱을 테스트용으로 로드하는 프로세스가 간소화되었습니다.             |
+| [Microsoft Store에 앱 게시](https://developer.microsoft.com/store/publish-apps) | 통합 Microsoft Store를 사용하면 모든 Windows 디바이스용 앱을 모두 게시하고 관리할 수 있습니다. 시장별 가격 책정, 배포 및 가시성 제어, 기타 옵션을 사용하여 앱의 가용성을 사용자 지정하세요. |
 
 ## <a name="enterprise-uwp-samples"></a>엔터프라이즈 UWP 샘플
 

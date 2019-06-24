@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c61f6580039b9fe3da915491acd84c939088370
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bf9cc4f97cdfcb02eb725b81163f215b22b259e4
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361392"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318060"
 ---
 # <a name="visual-layer"></a>시각적 계층
 
@@ -71,7 +71,7 @@ XAML 프레임워크에서 생성한 시각을 가져와 [**Windows.UI.Xaml.Host
 ## <a name="additional-resources"></a>추가 자료
 
 * [**API에 대 한 전체 참조 설명서**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
-* [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)의 고급 UI 및 Composition 샘플
+* [WindowsUIDevLabs GitHub](https://github.com/microsoft/WindowsCompositionSamples)의 고급 UI 및 Composition 샘플
 * [Windows.UI.Composition 샘플 갤러리](https://aka.ms/winuiapp)
 * [@windowsui Twitter 피드 ](https://twitter.com/windowsui)
 * 이 API에서 Kenny Kerr의 MSDN 문서를 읽어보세요. [그래픽 및 애니메이션-10 Windows 구성 설정](https://msdn.microsoft.com/magazine/mt590968)

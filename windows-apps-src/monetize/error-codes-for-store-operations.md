@@ -5,12 +5,12 @@ ms.date: 08/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱에서 바로 구매, IAP, 추가 기능, 오류 코드
 ms.localizationpriority: medium
-ms.openlocfilehash: ba505b30076c356a39ae195e1d187cbc49d8a66a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e887e5fec2a2e04658332a25a3a6c8e23fe2550c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662878"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321722"
 ---
 # <a name="error-codes-for-store-operations"></a>Store 작업에 대한 오류 코드
 
@@ -53,7 +53,7 @@ ms.locfileid: "57662878"
 | 0x803F8009<br/>0x803F800A   | 앱 평가 기간이 만료되었습니다.   |
 | 0x803F8190   |  현재 장치가 속한 국가 또는 지역에서 제품을 사용할 수 없는 라이선스입니다.  |
 | 0x803F81F5<br/>0x803F81F6<br/>0x803F81F7<br/>0x803F81F8<br/>0x803F81F9   |  Store의 게임과 앱에 사용할 수 있는 최대 장치 수에 도달했습니다. 현재 장치에서 이 게임이나 앱을 사용하려면 먼저 계정에서 다른 장치를 삭제하세요.  |
-| 0x803F9000<br/>0x803F9001    |  라이선스 만료되었거나 손상되었습니다. 이 오류를 해결 하는 데 실행 합니다 [Windows 앱에 대 한 문제 해결사](https://support.microsoft.com/help/4027498/windows-run-the-troubleshooter-for-windows-apps) 저장소 캐시를 다시 설정 합니다.     |
+| 0x803F9000<br/>0x803F9001    |  라이선스 만료되었거나 손상되었습니다. 이 오류를 해결 하는 데 실행 합니다 [Windows 앱에 대 한 문제 해결사](https://support.microsoft.com/help/4027498/microsoft-store-fix-problems-with-apps) 저장소 캐시를 다시 설정 합니다.     |
 | 0x803F9006    |  이 제품에 대한 권한이 있는 사용자가 자신의 Microsoft 계정으로 장치에 로그인하지 않았기 때문에 작업을 완료할 수 없습니다.            |
 | 0x803F9008<br/>0x803F9009    |  장치가 오프라인 상태입니다. 이 제품을 사용하려면 장치가 온라인이어야 합니다.            |
 | 0x803F900A    |  구독이 만료되었습니다.            |

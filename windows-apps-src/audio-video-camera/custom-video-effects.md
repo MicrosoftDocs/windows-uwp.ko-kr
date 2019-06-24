@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d1aa710485d38f20433e842b3d6418f911252e2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 819f0b4a5ba17a866eb50539f5138460eefd0eec
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361806"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318396"
 ---
 # <a name="custom-video-effects"></a>사용자 지정 비디오 효과
 
@@ -79,7 +79,7 @@ ms.locfileid: "66361806"
 
 ### <a name="setencodingproperties-method"></a>SetEncodingProperties 메서드
 
-시스템에서 효과에 대해 [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties.windows)를 호출하므로 효과가 작동하는 비디오 스트림에 대한 인코딩 속성을 알 수 있습니다. 또한 이 메서드는 하드웨어 렌더링에 사용되는 Direct3D 장치에 대한 참조를 제공합니다. 이 장치의 사용법은 이 문서 뒷부분에 나오는 하드웨어 처리 예제에 나와 있습니다.
+시스템에서 효과에 대해 [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties)를 호출하므로 효과가 작동하는 비디오 스트림에 대한 인코딩 속성을 알 수 있습니다. 또한 이 메서드는 하드웨어 렌더링에 사용되는 Direct3D 장치에 대한 참조를 제공합니다. 이 장치의 사용법은 이 문서 뒷부분에 나오는 하드웨어 처리 예제에 나와 있습니다.
 
 [!code-cs[SetEncodingProperties](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSetEncodingProperties)]
 
@@ -154,7 +154,7 @@ ms.locfileid: "66361806"
 
 이제 **ProcessFrame** 메서드 구현을 추가할 수 있습니다. 먼저 이 메서드는 입력 및 출력 소프트웨어 비트맵에서 [**BitmapBuffer**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBuffer) 개체를 가져옵니다. 쓰기 작업을 위해 출력 프레임이 열려 있고 읽기 작업을 위해 입력 프레임이 열려 있는지 확인합니다. 다음으로 [**CreateReference**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference)를 호출하여 각 버퍼에 대해 [**IMemoryBufferReference**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IMemoryBufferReference)를 획득합니다. 그런 후 **IMemoryBufferReference** 개체를 위에 정의된 COM interop 인터페이스인 **IMemoryByteAccess**로 캐스팅한 후 **GetBuffer**를 호출하여 실제 데이터 버퍼를 획득합니다.
 
-이제 데이터 버퍼를 획득했으므로 입력 버퍼에서 읽고 출력 버퍼에 쓸 수 있습니다. 버퍼의 너비, 진행 속도 및 초기 오프셋에 대한 정보를 제공하는 [**GetPlaneDescription**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.getplanedescription)을 호출하여 버퍼의 레이아웃을 획득합니다. 픽셀당 비트 수는 이전에 [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties.windows) 메서드를 사용하여 설정한 인코딩 속성에 의해 결정됩니다. 버퍼 형식 정보는 각 픽셀에 대한 버퍼의 인덱스를 찾는 데 사용됩니다. 원본 버퍼의 픽셀 값이 대상 버퍼로 복사되고, 색 값을 이 효과에 대해 정의된FadeValue 속성과 곱하여 지정된 크기만큼 흐리게 나타납니다.
+이제 데이터 버퍼를 획득했으므로 입력 버퍼에서 읽고 출력 버퍼에 쓸 수 있습니다. 버퍼의 너비, 진행 속도 및 초기 오프셋에 대한 정보를 제공하는 [**GetPlaneDescription**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.getplanedescription)을 호출하여 버퍼의 레이아웃을 획득합니다. 픽셀당 비트 수는 이전에 [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties) 메서드를 사용하여 설정한 인코딩 속성에 의해 결정됩니다. 버퍼 형식 정보는 각 픽셀에 대한 버퍼의 인덱스를 찾는 데 사용됩니다. 원본 버퍼의 픽셀 값이 대상 버퍼로 복사되고, 색 값을 이 효과에 대해 정의된FadeValue 속성과 곱하여 지정된 크기만큼 흐리게 나타납니다.
 
 [!code-cs[ProcessFrameSoftwareBitmap](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetProcessFrameSoftwareBitmap)]
 
@@ -190,7 +190,7 @@ ms.locfileid: "66361806"
 [!code-cs[SupportedEncodingPropertiesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSupportedEncodingPropertiesWin2D)]
 
 
-[  **SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties.windows) 메서드를 사용하여 해당 메서드에 전달된 [**IDirect3DDevice**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice)에서 새 Win2D **CanvasDevice** 개체를 만듭니다.
+[  **SetEncodingProperties**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert) 메서드를 사용하여 해당 메서드에 전달된 [**IDirect3DDevice**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice)에서 새 Win2D **CanvasDevice** 개체를 만듭니다.
 
 [!code-cs[SetEncodingPropertiesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSetEncodingPropertiesWin2D)]
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: fae6caf73cb8a5b569193a17e65e5d8b4f582ff2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4b6bc87c4d1694b47823a92619e6ec9d1e91bb69
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57652228"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319915"
 ---
 # <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>UWP용으로 개발하는 경우 Xbox One에서 Fiddler를 사용하는 방법
 
@@ -19,14 +19,14 @@ Fiddler는 Xbox One 개발 키트와 인터넷 간의 모든 HTTP 및 HTTPS 트�
 
 정상 작동 시, 프록시를 통해 통신하는 콘솔은 해당 통신이 프록시에 의해 수정되어 플레이어가 치트키를 사용할 수 있는 위험에 처합니다. 따라서 콘솔은 프록시를 통한 통신을 허용하지 않도록 설계되었습니다. Xbox One 개발 키트에서 Fiddler를 사용하려면 개발 키트에서 Fiddler 프록시 사용을 허용하기 위해 몇 가지 특별한 구성 단계를 수행해야 합니다. 
 
-Fiddler는 프리웨어이며, [Fiddler 웹 사이트](https://www.fiddler2.com/fiddler2/)에서 다운로드할 수 있습니다. 
+Fiddler는 프리웨어이며, [Fiddler 웹 사이트](https://www.telerik.com/download/fiddler)에서 다운로드할 수 있습니다. 
 
 Fiddler는 콘솔에서 보고하는 네트워크 상태에 영향을 줄 수 있습니다. Fiddler를 실행하는 컴퓨터에서 업스트림 연결이 사용되지 않는 경우 콘솔의 인증이 만료될 때까지 콘솔이 연결 끊김을 검색하지 못할 수 있습니다. Fiddler를 사용하는 경우 Fiddler를 사용하여 연결 끊김을 시뮬레이션하는 대신 콘솔과 Fiddler를 실행하는 컴퓨터 간의 연결을 끊어야 합니다.
 
 ### <a name="to-install-and-enable-fiddler-on-your-development-pc"></a>개발 PC에서 Fiddler를 설치하여 사용하려면
 다음 단계를 따라 Fiddler를 설치하고 사용하여 개발 키트에서 트래픽을 모니터링하세요.
 
-1. [Fiddler 웹 사이트](https://www.fiddler2.com/fiddler2/)의 지침에 따라 개발 PC에 Fiddler를 설치합니다. 
+1. [Fiddler 웹 사이트](https://www.telerik.com/download/fiddler)의 지침에 따라 개발 PC에 Fiddler를 설치합니다. 
 2. Fiddler를 시작하고 **Tools**(도구) 메뉴에서 **Fiddler Options**(Fiddler 옵션)를 선택합니다. 
 3. **Connections**(연결) 탭을 선택하고 **Allow remote computers to connect**(원격 컴퓨터 연결 허용)를 선택해야 합니다. 
 4. **OK**(확인)를 클릭하여 변경 내용을 적용합니다. 변경 내용을 적용하려면 Fiddler를 다시 시작해야 하며 방화벽을 수동으로 구성해야 할 수 있다는 내용의 대화 상자가 표시됩니다. 이 대화 상자에서 **OK**(확인)를 클릭하지만 *아직 Fiddler를 다시 시작하지는 않습니다*.
@@ -36,18 +36,18 @@ Fiddler는 콘솔에서 보고하는 네트워크 상태에 영향을 줄 수 �
   | ----              | ----                           |
   | 이름              | FiddlerProxy                   |
   | 그룹             | *값 없음* |
-  | 프로필           | 모두                            |
+  | 프로필           | All                            |
   | Enabled           | 예                            |
   | 작업            | 허용                          |
-  | 재정의          | 아니오                             |
+  | 재정의          | 아니요                             |
   | 프로그램           | *fiddler.exe 경로*          |
-  | LocalAddress      | 임의                            |
-  | RemoteAddress     | 임의                            |
-  | 프로토콜          | TCP                            |
-  | LocalPort         | 임의                            |
-  | RemotePort        | 임의                            |
-  | AllowedUsers      | 임의                            |
-  | AllowedComputers  | 임의                            |
+  | LocalAddress      | 임의의 값                            |
+  | RemoteAddress     | 임의의 값                            |
+  | Protocol          | TCP                            |
+  | LocalPort         | 임의의 값                            |
+  | RemotePort        | 임의의 값                            |
+  | AllowedUsers      | 임의의 값                            |
+  | AllowedComputers  | 임의의 값                            |
 
 
 6. 다음을 수행하여 HTTPS 트래픽을 캡처하고 암호 해독하도록 Fiddler를 구성합니다.
@@ -74,7 +74,7 @@ Fiddler는 콘솔에서 보고하는 네트워크 상태에 영향을 줄 수 �
 > [!NOTE]
 > Fiddler가 설치된 각 PC마다 다른 Fiddler 루트 인증서를 사용합니다. 개발 키트용 Fiddler 프록시를 제공하는 데 사용되는 PC가 두 대 이상인 경우 두 PC 간에 전환할 때 새 루트 인증서를 선택해야 합니다. PC를 한 대만 사용하는 경우 Fiddler를 처음 사용할 때만 루트 인증서를 선택하면 됩니다. IP 주소 및 포트는 여전히 지정해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [Fiddler 설정 API 참조](wdp-fiddler-api.md)
 - [질문과 대답](frequently-asked-questions.md)
 - [Xbox One에서 UWP](index.md)

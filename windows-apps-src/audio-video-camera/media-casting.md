@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2318d873a55b4134cf36eda91b57866e14b6b3a7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 50f588caaf36d9a2a74222029e17785663cf3953
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361728"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318303"
 ---
 # <a name="media-casting"></a>미디어 캐스팅
 
@@ -66,14 +66,14 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 [!code-xml[CastPickerButton](./code/MediaCasting_RS1/cs/MainPage.xaml#SnippetCastPickerButton)]
 
-단추에 대한 **Click** 이벤트 처리기에서 [**TransformToVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.)을 호출하여 다른 요소에 대해 상대적인 UI 요소의 변환을 가져옵니다. 이 예제에서 변환은 응용 프로그램 창의 시각적 루트에 대해 상대적인 캐스트 선택기 단추의 위치입니다. [  **CastingDevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Media.Casting.CastingDevicePicker) 개체의 [**Show**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevicepicker.show) 메서드를 호출하여 캐스팅 선택기 대화 상자를 시작합니다. 시스템이 사용자가 누른 단추에서 대화 상자를 펼칠 수 있도록 캐스트 선택기 단추의 크기와 위치를 지정합니다.
+단추에 대한 **Click** 이벤트 처리기에서 [**TransformToVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.transformtovisual)을 호출하여 다른 요소에 대해 상대적인 UI 요소의 변환을 가져옵니다. 이 예제에서 변환은 응용 프로그램 창의 시각적 루트에 대해 상대적인 캐스트 선택기 단추의 위치입니다. [  **CastingDevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Media.Casting.CastingDevicePicker) 개체의 [**Show**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevicepicker.show) 메서드를 호출하여 캐스팅 선택기 대화 상자를 시작합니다. 시스템이 사용자가 누른 단추에서 대화 상자를 펼칠 수 있도록 캐스트 선택기 단추의 크기와 위치를 지정합니다.
 
 [!code-cs[CastPickerButtonClick](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetCastPickerButtonClick)]
 
 **CastingDeviceSelected** 이벤트 처리기에서 이벤트 인수 중 사용자가 선택한 캐스팅 디바이스를 나타내는 [**SelectedCastingDevice**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdeviceselectedeventargs.selectedcastingdevice) 속성의 [**CreateCastingConnection**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.createcastingconnection) 메서드를 호출합니다. [  **ErrorOccurred**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.erroroccurred) 및 [**StateChanged**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.statechanged) 이벤트에 대한 처리기를 등록합니다. 마지막으로 [**RequestStartCastingAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.requeststartcastingasync)를 호출하여 캐스팅을 시작하고 **MediaPlayerElement** 컨트롤의 **MediaPlayer** 개체에 대한 [**GetAsCastingSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaelement.getascastingsource) 메서드로 결과를 전달하여 캐스팅할 미디어가 **MediaPlayerElement**와 연관된 **MediaPlayer**의 콘텐츠임을 지정합니다.
 
 > [!NOTE] 
-> UI 스레드에서 캐스팅 연결을 시작해야 합니다. **CastingDeviceSelected**는 UI 스레드에서 호출되지 않으므로 이 호출을 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) 호출 내에 배치해야 UI 스레드에서 호출될 수 있습니다.
+> UI 스레드에서 캐스팅 연결을 시작해야 합니다. **CastingDeviceSelected**는 UI 스레드에서 호출되지 않으므로 이 호출을 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 호출 내에 배치해야 UI 스레드에서 호출될 수 있습니다.
 
 [!code-cs[CastingDeviceSelected](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetCastingDeviceSelected)]
 
@@ -112,7 +112,7 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 감시자에서 새 디바이스를 발견하면 **Added** 이벤트가 발생합니다. 이 이벤트에 대한 처리기에서 [**CastingDevice.FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.fromidasync)를 호출하고 검색된 캐스팅 디바이스의 ID(처리기에 전달된 **DeviceInformation** 개체에 포함됨)를 전달하여 새 [**CastingDevice**](https://docs.microsoft.com/uwp/api/Windows.Media.Casting.CastingDevice) 개체를 만듭니다.
 
-사용자가 선택할 수 있도록 캐스팅 디바이스 **ListBox**에 **CastingDevice**를 추가합니다. XAML에 정의된 [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)으로 인해 [**FriendlyName**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.friendlyname) 속성은 목록 상자에서 해당 항목 텍스트로 사용됩니다. 이 이벤트 처리기는 UI 스레드에서 호출되지 않기 때문에 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) 호출 내에서 UI를 업데이트해야 합니다.
+사용자가 선택할 수 있도록 캐스팅 디바이스 **ListBox**에 **CastingDevice**를 추가합니다. XAML에 정의된 [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)으로 인해 [**FriendlyName**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.friendlyname) 속성은 목록 상자에서 해당 항목 텍스트로 사용됩니다. 이 이벤트 처리기는 UI 스레드에서 호출되지 않기 때문에 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 호출 내에서 UI를 업데이트해야 합니다.
 
 [!code-cs[WatcherAdded](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetWatcherAdded)]
 
@@ -149,7 +149,7 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 [!code-cs[ErrorOccurred](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetErrorOccurred)]
 
-마지막으로, 연결 끊기 단추에 대한 처리기를 구현합니다. 미디어 캐스팅을 중지하고 **CastingConnection** 개체의 [**DisconnectAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.disconnectasync) 메서드를 호출하여 캐스팅 디바이스에서 연결을 끊습니다. 이 호출은 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) 호출을 통해 UI 스레드에 디스패치해야 합니다.
+마지막으로, 연결 끊기 단추에 대한 처리기를 구현합니다. 미디어 캐스팅을 중지하고 **CastingConnection** 개체의 [**DisconnectAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.disconnectasync) 메서드를 호출하여 캐스팅 디바이스에서 연결을 끊습니다. 이 호출은 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 호출을 통해 UI 스레드에 디스패치해야 합니다.
 
 [!code-cs[DisconnectButton](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetDisconnectButton)]
 

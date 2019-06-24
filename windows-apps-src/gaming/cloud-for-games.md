@@ -6,12 +6,12 @@ ms.date: 03/27/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 클라우드 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: 15a7e3bed746a31ce2d8f458045cdd1126b71b8c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b1b63c6eb3c803b26ead85332affe1fc4f20e314
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368988"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321329"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>UWP 게임에 클라우드 서비스 사용
 
@@ -111,7 +111,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
         </td>
     </tr>
     <tr>
-        <td><a href="https://www.crimecoast.com/">픽셀 계</a></td>
+        <td><a href="http://www.crimecoast.com/">픽셀 계</a></td>
         <td>Pixel Squad는 Unity 게임 엔진과 Azure를 사용하여 <b>Crime Coast</b>를 개발했습니다. <b>Crime Coast</b>는 Android, iOS 및 Windows 플랫폼에서 사용할 수 있는 소셜 전략 게임입니다. Azure Blob 저장소, Managed Azure Redis Cache, 부하 조정된 IIS VM 배열, Microsoft 알림 허브가 게임에 사용되었습니다. 확장을 관리하고 5000명의 동시 플레이어가 있는 플레이어 급증을 처리한 방법을 알아봅니다.
         </td>
         <td>
@@ -182,7 +182,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
 | 게임 데이터 수집 및 분석| 관계형 및 비관계형 데이터베이스의 대량 병렬 처리 데이터 | [Azure Data Warehouse](https://azure.microsoft.com/services/sql-data-warehouse/)| 서비스로 제공되는 엔터프라이즈급 기능을 갖춘 탄력적인 데이터 웨어하우스   |
 | 사용자의 사용 및 보존 증가| 백 엔드에서 임의의 플랫폼에 대상 푸시 알림을 보내 관심을 생성하고 특정 게임 작업 권장 | [Azure Notification Hubs](https://azure.microsoft.com/services/notification-hubs/)| 모든 주요 플랫폼 &mdash; iOS, Android, Windows, Kindle, Baidu 등에서 수백만의 모바일 디바이스에 빠르게 브로드캐스트합니다. 모든 백 엔드 &mdash; 클라우드 또는 온-프레미스에서 게임을 호스트할 수 있습니다.|
 | 콘텐츠를 보호하면서 지역 및 전 세계 시청자에게 미디어 콘텐츠 스트리밍| 브로드캐스트 품질의 게임 예고편과 영화 클립을 모든 디바이스에서 볼 수 있습니다.| [Azure Media Services](https://azure.microsoft.com/services/media-services/)| 통합 CDN(콘텐츠 배달 네트워크) 기능을 통한 주문형 및 라이브 동영상 스트리밍. 콘텐츠 보호 및 암호화를 포함하여 모든 재생 요구 사항에 대해 하나의 플레이어만 사용합니다.| 
-| 모바일 앱 개발, 배포 및 베타 테스트 | 모바일 앱을 테스트하고 배포합니다. 앱 성능 및 사용자 경험 관리. | [HockeyApp](https://azure.microsoft.com/services/hockeyapp/)| 충돌 보고 및 사용자 메트릭을 앱 배포 및 사용자 피드백 플랫폼과 통합합니다. Android, Cordova, iOS, OS X, Unity, Windows 및 Xamarin 앱을 지원합니다. 또한 고려해 야 [Visual Studio Mobile Center](https://www.visualstudio.com/vs/mobile-center/) &mdash; 관제 풍부한 분석을 결합 하는 앱 충돌 보고에 대 한 푸시 알림, 앱 배포 및 더 합니다. |
+| 모바일 앱 개발, 배포 및 베타 테스트 | 모바일 앱을 테스트하고 배포합니다. 앱 성능 및 사용자 경험 관리. | [HockeyApp](https://azure.microsoft.com/services/hockeyapp/)| 충돌 보고 및 사용자 메트릭을 앱 배포 및 사용자 피드백 플랫폼과 통합합니다. Android, Cordova, iOS, OS X, Unity, Windows 및 Xamarin 앱을 지원합니다. 또한 고려해 야 [Visual Studio Mobile Center](https://visualstudio.microsoft.com/app-center/) &mdash; 관제 풍부한 분석을 결합 하는 앱 충돌 보고에 대 한 푸시 알림, 앱 배포 및 더 합니다. |
 | 마케팅 캠페인을 만들어 사용 및 보존 증가  | 대상 플레이어에게 푸시 알림을 보내 관심을 생성하고 데이터 분석에 따라 특정 게임 작업 권장 | [Mobile Engagement](https://azure.microsoft.com/services/mobile-engagement/) - 2018년 3월에 사용 중지되며 현재 기존 고객에게만 제공 |  iOS, Android, Windows, Windows Phone 등 모든 주요 플랫폼에서 게임 플레이 시간 및 사용자 보존 증가 |
 
 
@@ -206,7 +206,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
 ## <a name="tools-and-other-useful-links"></a>도구 및 기타 유용한 링크
 
 * [MSDN 포럼 &mdash; Azure 플랫폼](https://social.msdn.microsoft.com/Forums/azure/home?category=windowsazureplatform)
-* [클라우드 기반 부하 테스트 도구](https://www.visualstudio.com/team-services/cloud-load-testing/)
+* [클라우드 기반 부하 테스트 도구](https://visualstudio.microsoft.com/team-services/cloud-load-testing/)
 * [Sdk 및 명령줄 도구](https://azure.microsoft.com/downloads/)
     
 ## <a name="software-as-a-service-for-game-backend"></a>게임 백 엔드에 대한 SaaS(Software as a Service)

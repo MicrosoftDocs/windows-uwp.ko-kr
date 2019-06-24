@@ -8,12 +8,12 @@ ms.date: 11/16/2017
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ffed5cdc063a35b4693aa4a9323e2143b69e4fc
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 2ecf82294614114e711483dfdc58cfad36591369
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065336"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319555"
 ---
 # <a name="controls-for-uwp-apps"></a>UWP 앱용 컨트롤 
 
@@ -133,6 +133,6 @@ Microsoft Store에서 _XAML Controls Gallery_ 앱을 가져와서 이러한 컨�
 
 ## <a name="additional-controls"></a>추가 컨트롤
 
-UWP 개발용 추가 컨트롤은<a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/products/uwp">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> 및 <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>와 같은 회사에서 사용할 수 있습니다. 이러한 컨트롤은 사용자 지정 컨트롤 및 서비스를 사용하여 표준 시스템 컨트롤을 보강함으로써 엔터프라이즈 및 .NET 개발자용 추가 지원을 제공합니다.  
+UWP 개발용 추가 컨트롤은<a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/uwp-ui-controls">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> 및 <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>와 같은 회사에서 사용할 수 있습니다. 이러한 컨트롤은 사용자 지정 컨트롤 및 서비스를 사용하여 표준 시스템 컨트롤을 보강함으로써 엔터프라이즈 및 .NET 개발자용 추가 지원을 제공합니다.  
 
 이러한 컨트롤에 대해 자세히 알아보려면 GitHub의 <a href="https://github.com/Microsoft/Windows-appsample-customers-orders-database">고객 주문 데이터베이스</a> 샘플을 확인하세요. 이 샘플에서는 UWP 제품군용 UI의 일부인 Telerik의 데이터 그리드 컨트롤과 데이터 입력 유효성 검사를 사용합니다. UWP 제품군용 UI는 .NET Foundation을 통해 오픈 소스 프로젝트로 사용할 수 있는 20개가 넘는 컨트롤 모음입니다.

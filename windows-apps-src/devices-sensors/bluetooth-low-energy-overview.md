@@ -5,15 +5,15 @@ ms.date: 03/19/2017
 ms.topic: article
 keywords: Windows 10, uwp, bluetooth, bluetooth LE, 저 에너지, gatt, gap, 중앙, 주변, 클라이언트, 서버, 감시자, 게시자
 ms.localizationpriority: medium
-ms.openlocfilehash: 1714a4c21852a7582325fc26f7e6a1f0f969126e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3f23bdc658d2a82e3edeefd0a7be471ca9620d33
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57629038"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321609"
 ---
 # <a name="bluetooth-low-energy"></a>Bluetooth 저 에너지
-Bluetooth LE(저 에너지)는 전력 효율적인 디바이스 간 검색 및 통신에 대한 프로토콜을 정의하는 사양입니다. 장치 검색은 GAP(일반 액세스 프로필) 프로토콜을 통해 수행됩니다. 검색 후 장치 간 통신은 GATT(일반 특성) 프로토콜을 통해 수행됩니다. 이 항목에서는 UWP 앱의 Bluetooth LE에 대한 빠른 개요를 제공합니다. Bluetooth LE에 대해 자세히 알아보려면 Bluetooth LE가 도입된 [Bluetooth Core 사양](https://www.bluetooth.com/specifications/bluetooth-core-specification) 버전 4.0을 참조하세요. 
+Bluetooth LE(저 에너지)는 전력 효율적인 디바이스 간 검색 및 통신에 대한 프로토콜을 정의하는 사양입니다. 장치 검색은 GAP(일반 액세스 프로필) 프로토콜을 통해 수행됩니다. 검색 후 장치 간 통신은 GATT(일반 특성) 프로토콜을 통해 수행됩니다. 이 항목에서는 UWP 앱의 Bluetooth LE에 대한 빠른 개요를 제공합니다. Bluetooth LE에 대해 자세히 알아보려면 Bluetooth LE가 도입된 [Bluetooth Core 사양](https://www.bluetooth.com/specifications/bluetooth-core-specification/) 버전 4.0을 참조하세요. 
 
 ![Bluetooth LE 역할](images/gatt-roles.png)
 
@@ -39,7 +39,7 @@ Windows Bluetooth API에서 볼 수 있는 일반적인 약어는 GATT(일반 �
 ## <a name="watchers-and-publishers-beacons"></a>감시자 및 게시자(비콘)
 중앙 및 주변 역할 외에 관찰자 및 브로드캐스터 역할이 있습니다. 브로드캐스터는 일반적으로 비콘이라고 하며 광고 패킷에서 제공되는 제한된 공간을 사용하기 때문에 GATT를 통해 통신하지 않습니다. 마찬가지로, 관찰자는 데이터를 수신하기 위해 연결을 설정하지 않아도 되며 근처의 광고를 검사합니다. Windows가 근처에 있는 광고를 관찰하도록 구성하려면 [BluetoothLEAdvertisementWatcher](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher) 클래스를 사용합니다. 비콘 페이로드를 브로드캐스트하기 위해 [BluetoothLEAdvertisementPublisher](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher) 클래스를 사용합니다. 자세한 내용은 [광고](ble-beacon.md) 항목을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 - [Windows.Devices.Bluetooth.GenericAttributeProfile](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.genericattributeprofile)
 - [Windows.Devices.Bluetooth.Advertisement](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.genericattributeprofile)
-- [Bluetooth 핵심 사양](https://www.bluetooth.com/specifications/bluetooth-core-specification)
+- [Bluetooth 핵심 사양](https://www.bluetooth.com/specifications/bluetooth-core-specification/)

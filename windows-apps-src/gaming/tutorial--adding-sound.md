@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 사운드
 ms.localizationpriority: medium
-ms.openlocfilehash: 945270247b8a288554e1910ac1c6f8e5c1ec1619
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 06c06e1ffe52cae37a000f748076d78ebf6afff4
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367839"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318860"
 ---
 # <a name="add-sound"></a>소리 추가
 
@@ -478,7 +478,7 @@ XAudio2 음성 개체의 세 가지 종류가 있습니다: 원본를 및 음성
 ### <a name="additional-reading"></a>추가 참조 항목
 
 * [방법: XAudio2 초기화](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--initialize-xaudio2)
-* [방법: XAudio2의 오디오 데이터 파일 로드](https://msdn.microsoft.com/library/windows/desktop/ee415781(v=vs.85).aspx)
+* [방법: XAudio2의 오디오 데이터 파일 로드](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--load-audio-data-files-in-xaudio2)
 * [방법: XAudio2 사용 하 여 소리 재생](https://docs.microsoft.com/windows/desktop/xaudio2/how-to--play-a-sound-with-xaudio2)
 
 ## <a name="key-audio-h-files"></a>키 오디오.h 파일

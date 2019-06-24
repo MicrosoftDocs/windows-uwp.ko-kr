@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱에서 바로 구매, IAP, 추가 기능, 카탈로그, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: b2292bbbe735d9121955d93407a53456176dbbee
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e297c01aa19449691e775c4d7d2c33028b234cfa
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371028"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320179"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>앱에서 바로 구매 제품의 큰 카탈로그 관리
 
@@ -32,7 +32,7 @@ ms.locfileid: "66371028"
 
 ## <a name="make-the-purchase-request-for-the-in-app-product"></a>앱에서 바로 구매 제품을 위한 구매 요청 만들기
 
-큰 카탈로그 내의 특정 제품에 대한 구매 요청은 앱 내에서의 다른 모든 구매 요청과 거의 동일한 방식으로 처리됩니다. 앱은 새로운 [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) 메서드 오버로드를 호출할 때 *OfferId*와 앱에서 바로 구매 제품 이름으로 채워진 [ProductPurchaseDisplayProperties](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productpurchasedisplayproperties.) 개체를 둘 다 제공합니다.
+큰 카탈로그 내의 특정 제품에 대한 구매 요청은 앱 내에서의 다른 모든 구매 요청과 거의 동일한 방식으로 처리됩니다. 앱은 새로운 [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) 메서드 오버로드를 호출할 때 *OfferId*와 앱에서 바로 구매 제품 이름으로 채워진 [ProductPurchaseDisplayProperties](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productpurchasedisplayproperties) 개체를 둘 다 제공합니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-csharp[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#MakePurchaseRequest)]

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bebd214f5f634e501f7a79bc57cc306f1b559e7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 08dbe9ed7aaa732172d488712aa47d6d3631508a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359202"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317700"
 ---
 # <a name="share-data"></a>데이터 공유
 
@@ -60,7 +60,7 @@ ms.locfileid: "66359202"
 
 ## <a name="handle-errors"></a>오류 처리
 
-대부분의 경우 콘텐츠 공유는 간단한 프로세스입니다. 그러나 항상 예기치 않은 문제가 발생할 수 있습니다. 예를 들어 앱에서 사용자가 공유할 콘텐츠를 선택해야 하지만 아무것도 선택하지 않았을 수 있습니다. 이러한 상황을 처리하려면 잘못된 부분이 있는 경우 사용자에게 메시지를 표시하는 [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)) 메서드를 사용합니다.
+대부분의 경우 콘텐츠 공유는 간단한 프로세스입니다. 그러나 항상 예기치 않은 문제가 발생할 수 있습니다. 예를 들어 앱에서 사용자가 공유할 콘텐츠를 선택해야 하지만 아무것도 선택하지 않았을 수 있습니다. 이러한 상황을 처리하려면 잘못된 부분이 있는 경우 사용자에게 메시지를 표시하는 [**FailWithDisplayText**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataRequest#Windows_ApplicationModel_DataTransfer_DataRequest_FailWithDisplayText_System_String_) 메서드를 사용합니다.
 
 ## <a name="delay-share-with-delegates"></a>대리자와 공유 지연
 

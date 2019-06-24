@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: f41bf9f56b63f59844bec976e9d6e5e3d650b271
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3dbb06f53f760724da312e00f545d799d6a24200
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370276"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321567"
 ---
 # <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>GPIO, I2C 및 SPI에 대한 사용자 모드 액세스를 사용하도록 설정
 
@@ -614,7 +614,7 @@ Device(I2C1)
 * CLIENT_ConnectFunctionConfigPins – 지정된 muxing 구성을 적용할 것을 미니 포트 드라이버에 명령하기 위해 `GpioClx`에 의해 호출됩니다.
 * CLIENT_DisconnectFunctionConfigPins – muxing 구성을 복구할 것을 미니 포트 드라이버에 명령하기 위해 `GpioClx`에 의해 호출됩니다.
 
-이러한 루틴에 대한 설명을 보려면 [GpioClx 이벤트 콜백 함수](https://docs.microsoft.com/previous-versions//hh439464(v=vs.85))를 참조하세요.
+이러한 루틴에 대한 설명을 보려면 [GpioClx 이벤트 콜백 함수](https://docs.microsoft.com/previous-versions/hh439464(v=vs.85))를 참조하세요.
 
 이러한 두 가지 새로운 DDI 외에, 기존 DDI의 핀 muxing 호환성을 감사해야 합니다.
 
@@ -744,7 +744,7 @@ rhproxy가 시작된 것으로 출력에 나타나면 rhproxy가 제대로 로�
 
 rhproxy가 실행 중이면 사용자 모드에서 액세스가 가능한 디바이스 인터페이스가 생성된 것입니다. 몇 가지 명령줄 도구를 사용하여 디바이스를 열거하고 이들이 존재하는지 확인하게 됩니다.
 
-복제는 [ https://github.com/ms-iot/samples ](https://github.com/ms-iot/samples) 리포지토리 및 빌드를 `GpioTestTool`를 `I2cTestTool`를 `SpiTestTool`, 및 `Mincomm` 샘플입니다. 테스트 동안 디바이스로 도구를 복사하고 다음 명령을 사용하여 디바이스를 열거합니다.
+복제는 [ https://github.com/ms-iot/samples ](https://github.com/ms-iot/samples) 리포지토리 및 빌드를 `GpioTestTool` 를 `I2cTestTool` 를 `SpiTestTool`, 및 `Mincomm` 샘플입니다. 테스트 동안 디바이스로 도구를 복사하고 다음 명령을 사용하여 디바이스를 열거합니다.
 
 ```ps
 I2cTestTool.exe -list
@@ -800,7 +800,7 @@ MinComm "\\?\ACPI#FSCL0007#3#{86e0d1e0-8089-11d0-9ce4-08003e301f73}\000000000000
 
 다음 샘플을 사용하여 UWP에서 디바이스가 작동하는지 확인합니다.
 
-| 샘플 | 링크 |
+| 예제 | Link |
 |------|------|
 | IoT-GPIO | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-GPIO |
 | IoT-I2C | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-I2C |
@@ -835,7 +835,7 @@ HLK 관리자에서 "리소스 허브 프록시 장치"를 선택합니다.
 
 ## <a name="resources"></a>리소스
 
-| Destination | 링크 |
+| Destination | Link |
 |-------------|------|
 | ACPI 5.0 사양 | http://acpi.info/spec.htm |
 | Asl.exe(Microsoft ASL 컴파일러) | https://msdn.microsoft.com/library/windows/hardware/dn551195.aspx |

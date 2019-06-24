@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 472e163344c8cc2fdea3dd639383bb1dac84a2f4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0ea4376b36d72da552da7269e691cfacb31fffd6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361587"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318237"
 ---
 # <a name="media-items-playlists-and-tracks"></a>미디어 항목, 재생 목록 및 트랙
 
@@ -96,7 +96,7 @@ Windows, 버전 1803부터 **DownloadOperation**의 **MediaSource** 개체를 �
 
 [!code-xml[VideoComboBox](./code/MediaSource_RS1/cs/MainPage.xaml#SnippetVideoComboBox)]
 
-**VideoTracksChanged** 처리기에서 재생 항목의 **[VideoTracks](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackitem.videotracks)** 목록에 있는 모든 트랙을 루핑합니다. 각 트랙에 대해 새 [**ComboBoxItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBoxItem)이 만들어집니다. 트랙에 레이블이 아직 없는 경우 트랙 인덱스에서 레이블을 생성합니다. 콤보 상자 항목의 [**Tag**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.tag) 속성은 트랙 인덱스로 설정되므로 나중에 식별할 수 있습니다. 마지막으로 콤보 상자에 항목이 추가됩니다. 모든 UI 변경 사항이 UI 스레드에서 만들어져야 하며 이 이벤트가 다른 스레드에서 발생하므로 이러한 작업은 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) 호출 내에서 수행됩니다.
+**VideoTracksChanged** 처리기에서 재생 항목의 **[VideoTracks](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackitem.videotracks)** 목록에 있는 모든 트랙을 루핑합니다. 각 트랙에 대해 새 [**ComboBoxItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBoxItem)이 만들어집니다. 트랙에 레이블이 아직 없는 경우 트랙 인덱스에서 레이블을 생성합니다. 콤보 상자 항목의 [**Tag**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.tag) 속성은 트랙 인덱스로 설정되므로 나중에 식별할 수 있습니다. 마지막으로 콤보 상자에 항목이 추가됩니다. 모든 UI 변경 사항이 UI 스레드에서 만들어져야 하며 이 이벤트가 다른 스레드에서 발생하므로 이러한 작업은 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 호출 내에서 수행됩니다.
 
 [!code-cs[VideoTracksChanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetVideoTracksChanged)]
 
@@ -206,7 +206,7 @@ Windows 10 버전 1703부터 [MaxPlayedItemsToKeepOpen](https://docs.microsoft.c
 
 [!code-cs[PlayMediaPlaybackList](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetPlayMediaPlaybackList)]
 
-**CurrentItemChanged** 이벤트 처리기에서 UI를 업데이트하여 이벤트로 전달된 [**CurrentMediaPlaybackItemChangedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs) 개체의 [**NewItem**](https://docs.microsoft.com/uwp/api/windows.media.playback.currentmediaplaybackitemchangedeventargs.newitem) 속성을 사용하여 검색될 수 있는 현재 재생 중인 항목을 반영합니다. 이 이벤트에서 UI를 업데이트하는 경우 UI 스레드에서 업데이트되도록 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows)에 대한 호출 안에서 수행해야 합니다.
+**CurrentItemChanged** 이벤트 처리기에서 UI를 업데이트하여 이벤트로 전달된 [**CurrentMediaPlaybackItemChangedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs) 개체의 [**NewItem**](https://docs.microsoft.com/uwp/api/windows.media.playback.currentmediaplaybackitemchangedeventargs.newitem) 속성을 사용하여 검색될 수 있는 현재 재생 중인 항목을 반영합니다. 이 이벤트에서 UI를 업데이트하는 경우 UI 스레드에서 업데이트되도록 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)에 대한 호출 안에서 수행해야 합니다.
 
 Windows 10 버전 1703부터 [CurrentMediaPlaybackItemChangedEventArgs.Reason](https://docs.microsoft.com/uwp/api/windows.media.playback.currentmediaplaybackitemchangedeventargs.Reason) 속성을 확인하여 프로그래밍 방식의 앱 전환 항목, 이전에 재생된 항목의 종료, 또는 오류 발생 등 항목이 변경된 이유를 나타내는 값을 가져올 수 있습니다.
 

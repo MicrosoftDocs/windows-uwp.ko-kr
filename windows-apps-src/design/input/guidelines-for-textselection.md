@@ -8,12 +8,12 @@ keywords: 키보드, 텍스트, 입력, 사용자 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fc227904e57577a30eb2d171a060fb69d39b71f0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8dab8d26436d312601b749bed7e97048ed5805bb
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363495"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317281"
 ---
 # <a name="selecting-text-and-images"></a>텍스트 및 이미지 선택
 
@@ -109,7 +109,7 @@ Windows 선택 상호 작용, 편집 가능한과 편집 불가능 상태를 인
 
 
 **개발자를 위한**
-* [사용자 지정 사용자 상호 작용](https://developer.microsoft.com/windows/design/inputs-devices)
+* [사용자 지정 사용자 상호 작용](https://docs.microsoft.com/windows/uwp/design/layout/index)
 
 **샘플**
 * [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)

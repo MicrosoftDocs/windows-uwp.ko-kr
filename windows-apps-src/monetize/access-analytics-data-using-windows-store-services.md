@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 14a1b73a2c82beea746d40c25bfa18ddf6171203
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5514ea3a0e416ad2a0b7b75084bc66ad057c1a73
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372007"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320978"
 ---
 # <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 
@@ -106,7 +106,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 ### <a name="methods-for-xbox-live-services"></a>Xbox Live 서비스의 메서드
 
-다음 추가 메서드는 [Xbox Live 서비스](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md)를 사용하는 게임의 개발자 계정에서 사용할 수 있습니다.
+다음 추가 메서드는 [Xbox Live 서비스](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md)를 사용하는 게임의 개발자 계정에서 사용할 수 있습니다.
 
 | 시나리오       | 메서드      |
 |---------------|--------------------|

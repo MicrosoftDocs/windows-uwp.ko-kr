@@ -5,12 +5,12 @@ keywords: 사용자 활동, 사용자 활동, 타임라인, cortana 사용자의
 ms.date: 08/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e98f5d73cf2d1afb26a823ed417c8980d118485c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9b2ad2e68c21167df7b0210a04b62e161fd264ab
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589908"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318702"
 ---
 # <a name="user-activities-best-practices"></a>사용자 활동 모범 사례
 
@@ -104,4 +104,4 @@ ms.locfileid: "57589908"
 * [Adaptive card 시각화 도우미, 샘플](https://adaptivecards.io/)
 * [URI 활성화 처리](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 * [Microsoft Graph, 작업 피드 및 Adaptive Card를 사용 하 여 모든 플랫폼에서 고객 참여](https://channel9.msdn.com/Events/Connect/2017/B111)
-* [Microsoft Graph](https://developer.microsoft.com/graph/)
+* [Microsoft Graph](https://developer.microsoft.com/graph)

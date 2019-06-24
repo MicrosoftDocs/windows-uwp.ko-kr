@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d2d1b2b4e6875730d5a6bfa8dd711e11ac5d049c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 81f50625d3af6728adcc6c377a249410354489dd
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642918"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322352"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Windows 런타임 8.x UWP 사례 연구: QuizGame 샘플 앱
 
@@ -40,7 +40,7 @@ ms.locfileid: "57642918"
 
 [Windows 10 앱 다운로드를 QuizGame10](https://go.microsoft.com/fwlink/?linkid=532954)합니다. 포팅한 직후 앱의 상태입니다. 
 
-[GitHub에서 이 샘플의 최신 버전을 참조하세요](https://github.com/Microsoft/Windows-appsample-quizgame).
+[GitHub에서 이 샘플의 최신 버전을 참조하세요](https://github.com/microsoft/Windows-appsample-networkhelper).
 
 ## <a name="the-winrt-81-solution"></a>WinRT 8.1 솔루션
 
@@ -94,7 +94,7 @@ QuizGame에는 다음과 같은 부분에 있습니다.
 
 **P2PHelper**
 
--   솔루션에서 새 Windows 10 클래스 라이브러리 프로젝트를 만듭니다 (**새 프로젝트** &gt; **Windows 범용** &gt; **클래스 라이브러리 (Windows 유니버설)**) P2PHelper 이라는 이름을 지정 합니다.
+-   솔루션에서 새 Windows 10 클래스 라이브러리 프로젝트를 만듭니다 (**새 프로젝트** &gt; **Windows 범용** &gt; **클래스 라이브러리 (Windows 유니버설)** ) P2PHelper 이라는 이름을 지정 합니다.
 -   새 프로젝트에서 Class1.cs를 삭제합니다.
 -   P2PSession.cs, P2PSessionClient.cs 및 P2PSessionHost.cs를 새 프로젝트 폴더에 복사하고 복사된 파일을 새 프로젝트에 포함합니다.
 -   추가로 변경할 필요 없이 프로젝트가 빌드됩니다.
@@ -106,7 +106,7 @@ QuizGame에는 다음과 같은 부분에 있습니다.
 
 **QuizGameHost**
 
--   새 Windows 10 앱 프로젝트를 만듭니다 (**추가** &gt; **새 프로젝트** &gt; **Windows 유니버설** &gt; **빈 응용 프로그램 (Windows 유니버설)**) QuizGameHost 이라는 이름을 지정 합니다.
+-   새 Windows 10 앱 프로젝트를 만듭니다 (**추가** &gt; **새 프로젝트** &gt; **Windows 유니버설** &gt; **빈 응용 프로그램 (Windows 유니버설)** ) QuizGameHost 이라는 이름을 지정 합니다.
 -   P2PHelper에 대 한 참조를 추가 합니다. (**참조 추가** &gt; **프로젝트** &gt; **솔루션** &gt; **P2PHelper**).
 -   **솔루션 탐색기**에서 디스크의 각 공유 폴더에 대한 새 폴더를 만듭니다. 따라서 방금 만든 각 폴더를 마우스 오른쪽 단추로 클릭 하 고 클릭 **추가** &gt; **기존 항목** 폴더를 이동 합니다. 적절한 공유 폴더를 열고 모든 파일을 선택한 후 **링크로 추가**를 클릭합니다.
 -   MainPage.xaml을 복사 \\QuizGame.Windows\\ 하 \\QuizGameHost\\ QuizGameHost를 네임 스페이스를 변경 합니다.
@@ -133,7 +133,7 @@ rootFrame.Navigate(typeof(MainPage), e.Arguments);
 
 **QuizGameClient**
 
--   새 Windows 10 앱 프로젝트를 만듭니다 (**추가** &gt; **새 프로젝트** &gt; **Windows 유니버설** &gt; **빈 응용 프로그램 (Windows 유니버설)**) QuizGameClient 이라는 이름을 지정 합니다.
+-   새 Windows 10 앱 프로젝트를 만듭니다 (**추가** &gt; **새 프로젝트** &gt; **Windows 유니버설** &gt; **빈 응용 프로그램 (Windows 유니버설)** ) QuizGameClient 이라는 이름을 지정 합니다.
 -   P2PHelper에 대 한 참조를 추가 합니다. (**참조 추가** &gt; **프로젝트** &gt; **솔루션** &gt; **P2PHelper**).
 -   **솔루션 탐색기**에서 디스크의 각 공유 폴더에 대한 새 폴더를 만듭니다. 따라서 방금 만든 각 폴더를 마우스 오른쪽 단추로 클릭 하 고 클릭 **추가** &gt; **기존 항목** 폴더를 이동 합니다. 적절한 공유 폴더를 열고 모든 파일을 선택한 후 **링크로 추가**를 클릭합니다.
 -   MainPage.xaml을 복사 \\QuizGame.WindowsPhone\\ 하 \\QuizGameClient\\ QuizGameClient를 네임 스페이스를 변경 합니다.

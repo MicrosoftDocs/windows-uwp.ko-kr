@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 화면 방향, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cb741e8eb87987c51324c5f4e5f2d0f0da23f74
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 84dc81734d945e32d222bdc3e1fe9c7468f078bb
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368017"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321150"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>화면 방향 지원(DirectX 및 C++)
 
@@ -328,7 +328,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 
 ` floor((dips * dpi / 96.0f) + 0.5f);`
 
-0.5f를 추가하여 가장 가까운 정수 값으로 반올림합니다.
+0\.5f를 추가하여 가장 가까운 정수 값으로 반올림합니다.
 
 부연하지만 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 좌표는 항상 DIP로 정의됩니다. Windows 10 및 Windows의 이전 버전에 대 한 DIP를 1/96 인치, 및의 OS의 정의에 맞춤으로 정의 됩니다 *등록*합니다. 디스플레이 방향이 세로 모드로 회전되면 앱은 **CoreWindow**의 너비와 높이를 대칭 이동하며 렌더링 대상 크기(경계)가 그에 따라 변경되어야 합니다. Direct3D의 좌표는 항상 물리적 픽셀로 되어 있으므로 이러한 값을 Direct3D에 전달하여 스왑 체인을 설정하기 전에 **CoreWindow**의 DIP 값을 정수 픽셀 값으로 변환해야 합니다.
 
@@ -368,7 +368,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 
 기본적으로 Windows 10 짧지만 눈에 띄는 앱 모델 또는 이미지의 회전을 완료 하려면 언어에 관계 없이 모든 앱에 대 한 시간 기간을 제공 합니다. 그러나 앱이 여기에 설명된 기법 중 하나를 사용하여 회전 계산을 수행하면 이 기간이 끝나기 전에 작업을 끝낼 수 있을 것입니다. 여러분은 이 시간을 다시 얻고 회전 애니메이션을 완료하려고 할 것입니다. [  **CoreWindowResizeManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindowResizeManager)를 통해 이러한 결과를 얻을 수 있습니다.
 
-다음은 [**CoreWindowResizeManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindowResizeManager)의 사용 방법입니다. [**DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged) 이벤트가 발생하면 이벤트에 대한 처리기 내에서 [**CoreWindowResizeManager::GetForCurrentView**](https://docs.microsoft.com/previous-versions//hh404170(v=vs.85))를 호출하여 **CoreWindowResizeManager**의 인스턴스를 획득하고, 새 방향의 레이아웃이 완료되고 표시되면 [**NotifyLayoutCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindowresizemanager.notifylayoutcompleted)를 호출하여 회전 애니메이션을 완료하고 앱 화면을 표시할 수 있음을 Windows에 알립니다.
+다음은 [**CoreWindowResizeManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindowResizeManager)의 사용 방법입니다. [**DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged) 이벤트가 발생하면 이벤트에 대한 처리기 내에서 [**CoreWindowResizeManager::GetForCurrentView**](https://docs.microsoft.com/previous-versions/hh404170(v=vs.85))를 호출하여 **CoreWindowResizeManager**의 인스턴스를 획득하고, 새 방향의 레이아웃이 완료되고 표시되면 [**NotifyLayoutCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindowresizemanager.notifylayoutcompleted)를 호출하여 회전 애니메이션을 완료하고 앱 화면을 표시할 수 있음을 Windows에 알립니다.
 
 [  **DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged)에 대한 이벤트 처리기의 코드는 다음과 유사할 수 있습니다.
 

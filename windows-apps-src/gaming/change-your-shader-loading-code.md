@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, opengl, direct3d, 셰이더 파이프라인
 ms.localizationpriority: medium
-ms.openlocfilehash: 8793ef8b44df1ca1d93133383666434f525f2d07
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fc5e1eb9c261a4397d83c833591f2497521aa1c6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368971"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321378"
 ---
 # <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>OpenGL ES 2.0 셰이더 파이프라인과 Direct3D 비교
 
@@ -21,8 +21,8 @@ ms.locfileid: "66368971"
 **중요 한 Api**
 
 -   [입력 어셈블러 단계](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage)
--   [꼭 짓 점 셰이더 단계](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85))
--   [픽셀 셰이더 단계](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85))
+-   [꼭 짓 점 셰이더 단계](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85))
+-   [픽셀 셰이더 단계](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85))
 
 개념적으로 Direct3D 11 셰이더 파이프라인은 OpenGL ES 2.0의 셰이더 파이프라인과 매우 유사합니다. 그러나 API 디자인의 관점에서 셰이더 단계를 만들고 관리하기 위한 주요 구성 요소는 두 가지 주 인터페이스 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 및 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1)의 일부입니다. 이 항목에서는 일반적인 OpenGL ES 2.0 셰이더 파이프라인 API 패턴을 이러한 인터페이스의 Direct3D 11 셰이더 파이프라인 API 패턴에 매핑하려고 합니다.
 
@@ -34,10 +34,10 @@ ms.locfileid: "66368971"
 Direct3D 11 그래픽 파이프라인은 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 인터페이스의 인스턴스에 의해 관리되며 다음 단계를 포함합니다.
 
 -   [입력 어셈블러 단계](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage) - 입력 어셈블러 단계는 파이프라인에 데이터(삼각형, 선 및 점)를 제공합니다. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 이 단계를 지 원하는 메서드에 "IA" 접두사로 추가 됩니다.
--   [꼭짓점 셰이더 단계](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85)) - 꼭짓점 셰이더 단계에서는 꼭짓점을 처리하며, 일반적으로 변환, 스킨 지정 및 조명과 같은 작업을 수행합니다. 꼭짓점 셰이더는 항상 단일 입력 꼭짓점을 사용하여 단일 출력 꼭짓점을 생성합니다. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 이 단계를 지 원하는 메서드에 "및" 접두사로 추가 됩니다.
+-   [꼭짓점 셰이더 단계](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85)) - 꼭짓점 셰이더 단계에서는 꼭짓점을 처리하며, 일반적으로 변환, 스킨 지정 및 조명과 같은 작업을 수행합니다. 꼭짓점 셰이더는 항상 단일 입력 꼭짓점을 사용하여 단일 출력 꼭짓점을 생성합니다. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 이 단계를 지 원하는 메서드에 "및" 접두사로 추가 됩니다.
 -   [스트림 출력 단계](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-stream-stage) - 스트림 출력 단계에서는 파이프라인에서 메모리를 거쳐 래스터라이저로 기본 요소 데이터를 스트림합니다. 데이터를 스트림 출력하거나 래스터라이저로 전달할 수 있습니다. 메모리로 스트림 출력된 데이터는 입력 데이터 또는 CPU에서 다시 읽기로 파이프라인으로 다시 재순환될 수 있습니다. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 이 단계를 지 원하는 메서드에 "등" 접두사로 추가 됩니다.
 -   [래스터라이저 단계](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage) - 래스터라이저는 기본 요소를 잘라내고, 픽셀 셰이더에 대해 기본 요소를 준비하고, 픽셀 셰이더를 호출하는 방법을 결정합니다. 래스터화를 비활성화할 수 있습니다 다음 픽셀 셰이더가 없음을 파이프라인에 게 알려 서 (픽셀 셰이더 단계를 사용 하 여 NULL로 [ **ID3D11DeviceContext::PSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader)), 깊이 및 스텐실 테스트 (및 해제 DepthEnable 및 StencilEnable을 FALSE로 설정 [ **D3D11\_깊이\_스텐실\_DESC**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc)). 사용하지 않도록 설정되어 있는 동안 래스터화 관련 파이프라인 카운터는 업데이트되지 않습니다.
--   [픽셀 셰이더 단계](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85)) - 픽셀 셰이더 단계는 기본 요소에 대한 보간된 데이터를 받아 픽셀별 데이터(예: 색)를 생성합니다. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 이 단계를 지 원하는 메서드는 "PS" 접두사가 붙어 있습니다.
+-   [픽셀 셰이더 단계](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85)) - 픽셀 셰이더 단계는 기본 요소에 대한 보간된 데이터를 받아 픽셀별 데이터(예: 색)를 생성합니다. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 이 단계를 지 원하는 메서드는 "PS" 접두사가 붙어 있습니다.
 -   [출력 병합기 단계](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-merger-stage) - 출력 병합기 단계는 다양한 유형의 출력 데이터(픽셀 셰이더 값, 깊이 및 스텐실 정보)를 렌더링 대상 및 깊이/스텐실 버퍼의 내용과 결합하여 최종 파이프라인 결과를 생성합니다. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 이 단계를 지 원하는 메서드에 "OM" 접두사로 추가 됩니다.
 
 (이 밖에도 기 하 도형 셰이더, 헐 셰이더, tesselators, 및 도메인 셰이더 단계에 불과하지만 OpenGL ES 2.0에서 없습니다 유사한 기능을 있기 때문 않습니다 여기.) 이러한 단계에 대 한 메서드의 전체 목록은 참조 합니다 [ **ID3D11DeviceContext** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) 하 고 [ **ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 참조 페이지입니다. **ID3D11DeviceContext1**은 Direct3D 11용으로 **ID3D11DeviceContext**를 확장합니다.

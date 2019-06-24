@@ -8,12 +8,12 @@ ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, uwp, 알림 메시지, 대화형 알림, 적응형 알림, 알림 콘텐츠, 알림 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 75e5ea7e83a1a274b90b14588f7d809a4aa91269
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7bef6874b7855a321c4e5a9153faa96d432d2dea
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366872"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320926"
 ---
 # <a name="toast-content"></a>알림 콘텐츠
 
@@ -880,5 +880,5 @@ ToastContent content = new ToastContent()
 ## <a name="related-topics"></a>관련 항목
 
 * [로컬 알림 및 핸들 활성화 보내기](send-local-toast.md)
-* [GitHub (UWP 커뮤니티 도구 키트의 일부)에 대 한 알림 라이브러리](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [GitHub (UWP 커뮤니티 도구 키트의 일부)에 대 한 알림 라이브러리](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
 * [언어, 배율 및 고대비 대 한 타일 및 알림 알림 지원](tile-toast-language-scale-contrast.md)

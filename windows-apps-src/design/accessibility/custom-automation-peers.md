@@ -8,12 +8,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f01c3faf115bc2bac29854462d3bd321ae48a8ec
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d6100b68c66f72a619c7aad0beca488d7318182a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361944"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317322"
 ---
 # <a name="custom-automation-peers"></a>사용자 지정 자동화 피어  
 
@@ -402,7 +402,7 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 
 * [**GetBoundingRectangleCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getboundingrectanglecore): 반환 된 [ **Rect** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect) 알려진된 레이아웃 특성을 기반으로 하는 구조입니다. [  **IsOffscreen**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.isoffscreen)이 **true**이면 0 값 **Rect**를 반환합니다.
 * [**GetClickablePointCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getclickablepointcore): 반환 된 [ **지점** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 구조는 0이 아닌으로 알려진된 레이아웃 특성을 기준 **BoundingRectangle**합니다.
-* [**GetNameCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getnamecore): 요약 하자면; 보다 더 광범위 한 동작 참조 [ **GetNameCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getnamecore)합니다. 기본적으로 [**ContentControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl)의 알려진 콘텐츠나 콘텐츠가 있는 관련 클래스에서 문자열 변환을 시도합니다. 또한 [**LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v%3Dvs.95)) 값이 있는 경우 해당 항목의 **Name** 값이 **Name**으로 사용됩니다.
+* [**GetNameCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getnamecore): 요약 하자면; 보다 더 광범위 한 동작 참조 [ **GetNameCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getnamecore)합니다. 기본적으로 [**ContentControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl)의 알려진 콘텐츠나 콘텐츠가 있는 관련 클래스에서 문자열 변환을 시도합니다. 또한 [**LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v=vs.95)) 값이 있는 경우 해당 항목의 **Name** 값이 **Name**으로 사용됩니다.
 * [**HasKeyboardFocusCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.haskeyboardfocuscore): 평가 소유자의 기반 [ **FocusState** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.focusstate) 하 고 [ **IsEnabled** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성입니다. 컨트롤이 아닌 요소는 항상 **false**를 반환합니다.
 * [**IsEnabledCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.isenabledcore): 평가 소유자의 기반 [ **IsEnabled** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) 경우에 속성을 [ **컨트롤**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control). 컨트롤이 아닌 요소는 항상 **true**를 반환합니다. 이는 기존 조작의 측면에서 소유자를 사용할 수 있다는 것이 아니라 소유자에게 **IsEnabled** 속성이 없어도 피어를 사용할 수 있다는 것을 의미합니다.
 * [**IsKeyboardFocusableCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.iskeyboardfocusablecore): 반환 **true** 소유자가는 [ **컨트롤**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control); 그렇지 않으면 **false**합니다.
@@ -422,7 +422,7 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 
 [  **AutomationProperties**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties) 연결된 속성에 대한 자세한 내용은 [기본적인 접근성 정보](basic-accessibility-information.md)를 참조하세요.
 
-일부 [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 메서드는 UI 자동화 공급자가 정보를 보고하는 방식의 일반적인 계약으로 인해 존재하지만 일반적으로 이러한 메서드는 컨트롤 피어에 구현되지 않습니다. 이는 특정 UI에서 컨트롤을 사용하는 앱 코드에 적용된 [**AutomationProperties**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties) 값에서 해당 정보를 제공하도록 되어 있기 때문입니다. 예를 들어 대부분의 앱은 [**AutomationProperties.LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v%3Dvs.95)) 값을 적용하여 UI에 있는 서로 다른 두 컨트롤 간의 레이블 지정 관계를 정의합니다. 그러나 [**LabeledByCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getlabeledbycore)는 헤더 부분을 사용하여 데이터 필드 부분의 레이블 지정, 해당 컨테이너로 항목의 레이블 지정 또는 유사한 시나리오 같이 컨트롤에 데이터 또는 항목 관계를 나타내는 특정 피어에서 구현됩니다.
+일부 [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 메서드는 UI 자동화 공급자가 정보를 보고하는 방식의 일반적인 계약으로 인해 존재하지만 일반적으로 이러한 메서드는 컨트롤 피어에 구현되지 않습니다. 이는 특정 UI에서 컨트롤을 사용하는 앱 코드에 적용된 [**AutomationProperties**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties) 값에서 해당 정보를 제공하도록 되어 있기 때문입니다. 예를 들어 대부분의 앱은 [**AutomationProperties.LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v=vs.95)) 값을 적용하여 UI에 있는 서로 다른 두 컨트롤 간의 레이블 지정 관계를 정의합니다. 그러나 [**LabeledByCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getlabeledbycore)는 헤더 부분을 사용하여 데이터 필드 부분의 레이블 지정, 해당 컨테이너로 항목의 레이블 지정 또는 유사한 시나리오 같이 컨트롤에 데이터 또는 항목 관계를 나타내는 특정 피어에서 구현됩니다.
 
 <span id="Implementing_patterns"/>
 <span id="implementing_patterns"/>

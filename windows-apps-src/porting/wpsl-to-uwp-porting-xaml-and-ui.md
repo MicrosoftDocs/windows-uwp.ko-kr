@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ac96354fa1752f655307a5dfd18678233e59c724
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a72a4e7349a5d72b7081873814389c0924ca9308
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372443"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322283"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Windows Phone Silverlight XAML 및 UI를 UWP에 이식
 
@@ -201,7 +201,7 @@ Windows Phone Silverlight 앱에 정의 된 제어를 사용 합니다 **Microso
 
 **참고**    The PointerOver 시각적 상태 템플릿에서 사용자 지정 스타일/Windows Phone Silverlight 앱 있지만 Windows 10 앱에 관련이 있습니다. 이유는 기존 사용자 지정 스타일/템플릿을 적합 하지 않을 Windows 10 앱에를 사용 하는 시스템 리소스 키를 포함 하 여 변경 집합을 사용 하는 시각적 상태 및 Windows 10 기본 스타일에 대 한 성능 향상에 대 한 다른 이유가 없으면 / 템플릿을 구성 합니다. Windows 10 용 컨트롤의 기본 서식 파일의 새 복사본을 편집 하 고 다음 다시 적용 된 스타일 및 템플릿 사용자 지정 하는 것이 좋습니다.
 
-UWP 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://docs.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function), [컨트롤 목록](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/) 및 [컨트롤에 대한 지침](https://developer.microsoft.com/windows/design/controls-patterns)을 참조하세요.
+UWP 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://docs.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function), [컨트롤 목록](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/) 및 [컨트롤에 대한 지침](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/index)을 참조하세요.
 
 ##  <a name="design-language-in-windows10"></a>Windows 10의 디자인 언어
 
@@ -211,7 +211,7 @@ UWP 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://docs.m
 
 지역화 된 문자열에 대 한 UWP 앱 프로젝트에서 Windows Phone Silverlight 프로젝트에서.resx 파일을 다시 사용할 수 있습니다. 조회 메커니즘에서 기본적으로 파일을 찾도록 파일을 복사하여 프로젝트에 추가하고 이름을 Resources.resw로 바꿉니다. **빌드 작업**을 **PRIResource**로 설정하고 **출력 디렉터리로 복사**를 **복사 안 함**으로 설정합니다. 그런 다음 XAML 요소에서 **x:Uid** 특성을 지정하여 태그에서 문자열을 사용할 수 있습니다. 참조 [빠른 시작: 문자열 리소스를 사용 하 여](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10))입니다.
 
-Windows Phone Silverlight 앱을 사용 합니다 **CultureInfo** 클래스는 앱을 전역화 하는 데 있습니다. UWP 앱은 MRT(Modern Resource Technology)를 사용합니다. MRT는 Visual Studio 디자인 화면에서 런타임 시 앱 리소스(지역화, 배율 및 테마)를 동적으로 로드할 수 있도록 합니다. 자세한 내용은 [파일, 데이터 및 세계화 지침](https://developer.microsoft.com/windows/design/usability)을 참조하세요.
+Windows Phone Silverlight 앱을 사용 합니다 **CultureInfo** 클래스는 앱을 전역화 하는 데 있습니다. UWP 앱은 MRT(Modern Resource Technology)를 사용합니다. MRT는 Visual Studio 디자인 화면에서 런타임 시 앱 리소스(지역화, 배율 및 테마)를 동적으로 로드할 수 있도록 합니다. 자세한 내용은 [파일, 데이터 및 세계화 지침](https://docs.microsoft.com/windows/uwp/design/usability/index)을 참조하세요.
 
 [  **ResourceContext.QualifierValues**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues)에서는 디바이스 패밀리 리소스 선택 배율에 따라 디바이스 패밀리 관련 리소스를 로드하는 방법에 대해 설명합니다.
 

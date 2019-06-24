@@ -8,12 +8,12 @@ ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 45d298aca60155915900f494654dce8e89fb1ee0
-ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
+ms.openlocfilehash: 2d10836da46cce4d862f7f727890b0c9c107df5a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67131900"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317067"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>패키지에 포함 된 데스크톱 앱 배포
 
@@ -26,7 +26,7 @@ ms.locfileid: "67131900"
 
 [Microsoft Store](https://www.microsoft.com/store/apps)는 고객이 앱을 다운로드할 수 있는 편리한 방법입니다.
 
-가장 광범위 한 대상에 연결할 Microsoft Store 응용 프로그램을 게시 합니다. 또한 조직 고객 응용 프로그램을 통해 조직에 내부적으로 배포를 얻을 수 있습니다 합니다 [비즈니스용 Microsoft Store](https://www.microsoft.com/business-store)합니다.
+가장 광범위 한 대상에 연결할 Microsoft Store 응용 프로그램을 게시 합니다. 또한 조직 고객 응용 프로그램을 통해 조직에 내부적으로 배포를 얻을 수 있습니다 합니다 [비즈니스용 Microsoft Store](https://businessstore.microsoft.com/store)합니다.
 
 Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 몇 가지 추가 질문을 받게 됩니다. 패키지 매니페스트가 **runFullTrust**라는 제한된 접근 권한 값을 선언하기 때문이며, 해당 접근 권한 값을 사용하여 응용 프로그램을 승인해야 합니다. 자세한 내용은이 요구 사항에 대 한 합니다. [기능 제한](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities)합니다.
 

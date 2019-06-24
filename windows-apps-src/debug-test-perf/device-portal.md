@@ -6,12 +6,12 @@ ms.date: 4/9/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 39715dc3f4b88a2e9a91a7cb659208f8370f16f2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 59e7e46ea68f6bb5fe7fd63e6ac35b9256103c38
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362422"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317896"
 ---
 # <a name="windows-device-portal-overview"></a>Windows Device Portal 개요
 
@@ -204,7 +204,7 @@ ETW 로깅 사용에 대 한 자세한 내용은 참조는 [디버그 로그를 
 Key | 형식 | 설명
 ----|------|-------------
 S | ssNoversion | 디바이스 포털의 보안 포트입니다. 0(영)인 경우 디바이스 포털은 HTTPS 연결을 수신 대기하지 않습니다.
-d | string | 디바이스의 유형입니다. "Windows.*" 형식으로 제공됩니다(예: Windows.Xbox 또는 Windows.Desktop).
+D | string | 디바이스의 유형입니다. "Windows.*" 형식으로 제공됩니다(예: Windows.Xbox 또는 Windows.Desktop).
 변수를 잠그기 위한 | string | 디바이스 아키텍처입니다. ARM, x86 또는 AMD64입니다.  
 T | null 문자로 구분된 문자열 목록 | 디바이스에 대해 사용자가 적용한 태그입니다. 사용 방법은 태그 REST API를 참조하세요. 목록은 이중 null로 종료됩니다.  
 
@@ -212,7 +212,7 @@ T | null 문자로 구분된 문자열 목록 | 디바이스에 대해 사용자
 
 ### <a name="csrf-protection-and-scripting"></a>CSRF 보호 및 스크립팅
 
-[CSRF 공격](https://wikipedia.org/wiki/Cross-site_request_forgery)으로부터 보호하기 위해 모든 비 GET 요청에서 고유한 토큰이 필요합니다. 이 토큰(X-CSRF-Token 요청 헤더)은 세션 쿠키(CSRF-Token)에서 파생됩니다. 디바이스 포털 웹 UI에서 CSRF-Token 쿠키는 각 요청에서 X-CSRF-Token 헤더로 복사됩니다.
+[CSRF 공격](https://en.wikipedia.org/wiki/Cross-site_request_forgery)으로부터 보호하기 위해 모든 비 GET 요청에서 고유한 토큰이 필요합니다. 이 토큰(X-CSRF-Token 요청 헤더)은 세션 쿠키(CSRF-Token)에서 파생됩니다. 디바이스 포털 웹 UI에서 CSRF-Token 쿠키는 각 요청에서 X-CSRF-Token 헤더로 복사됩니다.
 
 > [!IMPORTANT]
 > 이 보호는 독립 실행형 클라이언트 (예: 명령줄 유틸리티)에서 REST Api의 사용을 방지합니다. 이 문제는 다음 세 가지 방법으로 해결할 수 있습니다.

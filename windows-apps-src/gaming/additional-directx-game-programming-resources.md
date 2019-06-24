@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 프로그래밍
 ms.localizationpriority: medium
-ms.openlocfilehash: b855bc9adc79b3ae5dd5ab7128be7035a78a4aa0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 684180d9fc86c870475351ed8e429ea83f968735
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369103"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321366"
 ---
 # <a name="game-programming-resources"></a>게임 프로그래밍 리소스
 
@@ -29,7 +29,7 @@ Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스
 ## <a name="game-design-guidance"></a>게임 디자인 지침
 
 
--   [UWP 앱에 대 한 인덱스의 UX 지침](https://developer.microsoft.com/windows/design)
+-   [UWP 앱에 대 한 인덱스의 UX 지침](https://developer.microsoft.com/windows/apps/design)
 
 ## <a name="blogs"></a>블로그
 

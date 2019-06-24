@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: a9b6c6fc7a7e3ddfab70fe289a41bb4d436e9722
-ms.sourcegitcommit: ea15237291ae3ade0bf22e38bd292c3a23947a03
+ms.openlocfilehash: 24878d3c63de7df9c55f48571984b7d60d1ea240
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377309"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320367"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>테스트용으로 로드하는 UWP 앱의 조정된 Windows 런타임 구성 요소
 
@@ -19,7 +19,7 @@ ms.locfileid: "66377309"
 
 ## <a name="introduction"></a>소개
 
->**참고**  에 대 한이 백서와 함께 제공 되는 샘플 코드를 다운로드할 수 있습니다 [Visual Studio 2015 및 2017](https://aka.ms/brokeredsample)합니다. 조정 된 Windows 런타임 구성 요소를 작성 하려면 Microsoft Visual Studio 템플릿 여기에서 다운로드할 수 있습니다. [Windows 10 용 유니버설 Windows 앱을 대상으로 하는 visual Studio 2015 템플릿](https://marketplace.visualstudio.com/vsgallery/10be07b3-67ef-4e02-9243-01b78cd27935)
+>**참고**  에 대 한이 백서와 함께 제공 되는 샘플 코드를 다운로드할 수 있습니다 [Visual Studio 2015 및 2017](https://aka.ms/brokeredsample)합니다. 조정 된 Windows 런타임 구성 요소를 작성 하려면 Microsoft Visual Studio 템플릿 여기에서 다운로드할 수 있습니다. [Windows 10 용 유니버설 Windows 앱을 대상으로 하는 visual Studio 2015 템플릿](https://marketplace.visualstudio.com/items?itemName=vs-publisher-713547.VS2015TemplateBrokeredComponents)
 
 Windows 라는 새로운 기능이 포함 되어 있습니다 *조정 된 Windows 런타임 구성 요소 테스트용으로 로드 된 응용 프로그램에 대 한*합니다. Microsoft는 하나의 프로세스에서 기존 데스크톱 소프트웨어 자산(데스크톱 구성 요소)을 실행하는 한편, UWP 앱에서 이 코드를 조작하는 기능을 설명하는 데 IPC(프로세스 간 통신)라는 용어를 사용합니다. 데이터베이스 응용 프로그램과 Windows에서 NT 서비스를 활용하는 응용 프로그램이 유사한 다중 프로세스 아키텍처를 공유하므로, 이것은 기업 개발자에게 친숙한 모델입니다.
 
@@ -590,7 +590,7 @@ struct PersonStruct
 
 ## <a name="resources"></a>리소스
 
--   [Windows 10 및 VS 2015에 대 한 조정 된 WinRT 구성 요소 프로젝트 템플릿](https://marketplace.visualstudio.com/vsgallery/10be07b3-67ef-4e02-9243-01b78cd27935)
+-   [Windows 10 및 VS 2015에 대 한 조정 된 WinRT 구성 요소 프로젝트 템플릿](https://marketplace.visualstudio.com/items?itemName=vs-publisher-713547.VS2015TemplateBrokeredComponents)
 
 -   [NorthwindRT 조정 된 WinRT 구성 요소 예제](https://go.microsoft.com/fwlink/p/?LinkID=397349)
 

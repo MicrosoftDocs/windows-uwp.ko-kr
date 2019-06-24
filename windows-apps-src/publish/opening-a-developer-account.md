@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 205ccd6a8a2424d96f2c18068f5bf4c15596fdcb
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: fb8bdb2d2052bb50ee9bc2c9c719f102ac1d9aa0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63785004"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319986"
 ---
 # <a name="opening-a-developer-account"></a>개발자 계정 열기
 
@@ -72,7 +72,7 @@ Windows 개발자 계정에 등록 하는 방법 대략적으로 다음과 같�
 
 Microsoft는 개발자가 제공하는 보안 정보를 사용하여 개발자 계정을 여러 형식의 ID에 연결함으로써 Microsoft 계정의 보안 수준을 높입니다. 그러면 Microsoft 계정(및 개발자 계정)에 무단으로 액세스하는 것이 훨씬 더 어려워집니다. 또한 암호가 기억나지 않거나 다른 사용자가 개발자 계정에 액세스하려고 시도할 경우 Microsoft는 개발자에게 연락하여 개발자 계정에 대한 소유권을 확인하거나 적절한 제어 권한을 다시 설정할 수 있습니다.
 
-Microsoft 계정에 대한 메일 주소 및/또는 전화 번호가 2개 이상 있어야 합니다. 가능한 한 많이 추가하는 것이 좋습니다. 일부 보안 정보는 확인을 거쳐야 유효해집니다. 또한 보안 정보를 자주 검토하여 최신으로 유지해야 합니다. 으로 이동 하 여 보안 정보를 관리할 수 있습니다 https://account.microsoft.com/security Microsoft 계정을 사용 하 고 로그인 합니다. 참조 [보안 정보 및 보안 코드](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) 자세한 정보에 대 한 합니다.
+Microsoft 계정에 대한 메일 주소 및/또는 전화 번호가 2개 이상 있어야 합니다. 가능한 한 많이 추가하는 것이 좋습니다. 일부 보안 정보는 확인을 거쳐야 유효해집니다. 또한 보안 정보를 자주 검토하여 최신으로 유지해야 합니다. 으로 이동 하 여 보안 정보를 관리할 수 있습니다 https://account.microsoft.com/security Microsoft 계정을 사용 하 고 로그인 합니다. 참조 [보안 정보 및 보안 코드](https://support.microsoft.com/help/12428/microsoft-account-security-info-verification-codes) 자세한 정보에 대 한 합니다.
 
 로그인 할 때 파트너 센터에 Microsoft 계정을 사용 하 여, 로그인 프로세스를 완료 하려면 제공 해야 하는 보안 코드를 전송 하 여 id를 확인 하는 시스템 요청할 수 있습니다. 으로 자주 사용 하는 Pc를 지정 하는 것이 좋습니다 *신뢰할 수 있는 장치*합니다. 신뢰할 수 있는 장치에서 로그인 할 때 일반적으로 않습니다 묻는 코드를 오랫동안에서 해당 장치에 로그인 하지 않은 경우 또는 되지만 특정 상황에 따라 메시지가 나타날 수 있습니다. 참조 [신뢰할 수 있는 장치를 Microsoft 계정에 추가](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) 자세한 정보에 대 한 합니다.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c00bf23a8539f7ee37974e16586a4477cc6b78bb
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4d118633d9d0d9b7007c94ec4d5053db34b09e29
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360399"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318039"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>XAML로 시각적 계층 사용
 
@@ -25,7 +25,7 @@ XAML 및 시각적 계층 interop 기능은 XAML API를 단독으로 사용하�
 - 정확한 픽셀 그림자
 
 이러한 효과와 애니메이션은 기존 XAML 콘텐츠에 적용할 수 있으므로 새로운 기능을 활용하기 위해 XAML 앱 구조를 크게 변경하지 않아도 됩니다.
-레이아웃 애니메이션, 그림자 및 흐림 효과는 아래 레시피 섹션에서 설명합니다. 시차를 구현하는 코드 샘플에 대한 자세한 내용은 [ParallaxingListItems 샘플](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems)을 참조하세요. [WindowsUIDevLabs 리포지토리](https://github.com/Microsoft/WindowsUIDevLabs)에 애니메이션, 그림자 및 효과를 구현하기 위한 다른 몇 가지 샘플도 있습니다.
+레이아웃 애니메이션, 그림자 및 흐림 효과는 아래 레시피 섹션에서 설명합니다. 시차를 구현하는 코드 샘플에 대한 자세한 내용은 [ParallaxingListItems 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 10586/ParallaxingListItems)을 참조하세요. [WindowsUIDevLabs 리포지토리](https://github.com/microsoft/WindowsCompositionSamples)에 애니메이션, 그림자 및 효과를 구현하기 위한 다른 몇 가지 샘플도 있습니다.
 
 ## <a name="the-xamlcompositionbrushbase-class"></a>XamlCompositionBrushBase 클래스
 
@@ -364,6 +364,6 @@ private void InitializeFrostedGlass(UIElement glassHost)
 
 - [계층에 대 한 시각적 개요](https://docs.microsoft.com/windows/uwp/composition/visual-layer)
 - [**ElementCompositionPreview** 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview)
-- [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)의 고급 UI 및 Composition 샘플
-- [BasicXamlInterop 샘플](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/BasicXamlInterop)
-- [ParallaxingListItems 샘플](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems)
+- [WindowsUIDevLabs GitHub](https://github.com/microsoft/WindowsCompositionSamples)의 고급 UI 및 Composition 샘플
+- [BasicXamlInterop 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 10586/BasicXamlInterop)
+- [ParallaxingListItems 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 10586/ParallaxingListItems)

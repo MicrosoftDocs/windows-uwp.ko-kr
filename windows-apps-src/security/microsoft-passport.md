@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 1026bd153f43d5e956fbacdcc33728d890f34e34
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6e69d3489bcc41f40eca07aff628425d34819c4b
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371977"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320585"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
 이 문서에서는 새로운 Windows Hello 기술을 Windows 10 운영 체제의 일부로 제공 되 고 개발자 유니버설 Windows 플랫폼 (UWP) 앱 및 백 엔드 서비스를 보호 하기 위해이 기술을 구현 방법을 설명 하는 설명 합니다. 여기서는 기존 자격 증명의 사용으로 발생되는 위협 요소를 완화할 수 있는 이러한 기술의 특징에 대해 중점적으로 설명하고 Windows 10 롤아웃의 일부로 이러한 기술을 디자인 및 배포하는 방법에 대한 지침을 제공합니다.
 
-이 문서는 앱 개발에 중점을 둡니다. Windows Hello의 아키텍처 및 구현에 대한 자세한 내용은 [TechNet의 Windows Hello 가이드](https://technet.microsoft.com/library/mt589441.aspx)를 참조하세요.
+이 문서는 앱 개발에 중점을 둡니다. Windows Hello의 아키텍처 및 구현에 대한 자세한 내용은 [TechNet의 Windows Hello 가이드](https://docs.microsoft.com/windows/keep-secure/microsoft-passport-guide)를 참조하세요.
 
 전체 코드 샘플을 보려면 [GitHub의 Windows Hello 코드 샘플](https://go.microsoft.com/fwlink/?LinkID=717812)을 참조하세요.
 
@@ -62,7 +62,7 @@ Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강�
 
 ### <a name="22-how-windows-hello-works"></a>2.2 Windows Hello의 작동 방식
 
-사용자가 자신의 컴퓨터에서 Windows Hello를 설정하면 Windows Hello는 해당 디바이스에 새 공개-개인 키 쌍을 만듭니다. TPM([신뢰할 수 있는 플랫폼 모듈](https://technet.microsoft.com/itpro/windows/keep-secure/trusted-platform-module-overview))은 이 프라이빗 키를 생성하고 보호합니다. 디바이스에 TPM 칩이 없는 경우 프라이빗 키는 소프트웨어에 의해 암호화되고 보호됩니다. 그 외에도 TPM 지원 디바이스는 TPM에 키가 바인딩되어 있음을 증명하는 데 사용할 수 있는 데이터 블록을 생성합니다. 예를 들어 솔루션에서 이 증명 정보를 사용하여 사용자에게 다른 권한 부여 수준이 지정되었는지 여부를 확인할 수 있습니다.
+사용자가 자신의 컴퓨터에서 Windows Hello를 설정하면 Windows Hello는 해당 디바이스에 새 공개-개인 키 쌍을 만듭니다. TPM([신뢰할 수 있는 플랫폼 모듈](https://docs.microsoft.com/windows/keep-secure/trusted-platform-module-overview))은 이 프라이빗 키를 생성하고 보호합니다. 디바이스에 TPM 칩이 없는 경우 프라이빗 키는 소프트웨어에 의해 암호화되고 보호됩니다. 그 외에도 TPM 지원 디바이스는 TPM에 키가 바인딩되어 있음을 증명하는 데 사용할 수 있는 데이터 블록을 생성합니다. 예를 들어 솔루션에서 이 증명 정보를 사용하여 사용자에게 다른 권한 부여 수준이 지정되었는지 여부를 확인할 수 있습니다.
 
 디바이스에서 Windows Hello를 사용하려면 사용자가 Azure Active Directory 계정 또는 Windows 설정에 연결된 Microsoft 계정이 있어야 합니다.
 
@@ -407,8 +407,8 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 
 ### <a name="61-articles-and-sample-code"></a>6.1 문서 및 샘플 코드
 
-- [Windows Hello 개요](https://windows.microsoft.com/windows-10/getstarted-what-is-hello)
-- [Windows Hello에 대 한 구현 세부 정보](https://technet.microsoft.com/itpro/windows/keep-secure/microsoft-passport-guide)
+- [Windows Hello 개요](https://support.microsoft.com/help/17215)
+- [Windows Hello에 대 한 구현 세부 정보](https://docs.microsoft.com/windows/keep-secure/microsoft-passport-guide)
 - [Windows Hello GitHub의 코드 샘플](https://go.microsoft.com/fwlink/?LinkID=717812)
 
 ### <a name="62-terminology"></a>6.2 용어

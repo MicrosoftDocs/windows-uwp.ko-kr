@@ -5,12 +5,12 @@ ms.date: 05/17/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 579f92cc51ed5f9eeea522d81cfdb030f85ef0da
-ms.sourcegitcommit: f282c906cddf0d57217484e61a5cbd2fe8469421
+ms.openlocfilehash: b947d0b6cc83dc6bca45efb7103a933e79972e3b
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65852271"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317456"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>적응 응용 프로그램 버전: 이전 버전과 호환성을 유지 하면서 새 Api를 사용 하 여
 
@@ -59,9 +59,9 @@ Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상
 | 2018 년 10 월 업데이트 | 1809 | 17763 |
 | 2019 년 5 월 업데이트 | 1903 | 18362 |
 
-출시된 모든 버전의 SDK는 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/downloads/sdk-archive)에서 다운로드할 수 있습니다. 최신 Windows Insider Preview SDK는 [Windows 참가자](https://insider.windows.com/Home/BuildWithWindows) 사이트의 개발자 섹션에서 다운로드할 수 있습니다.
+출시된 모든 버전의 SDK는 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/windows/downloads/sdk-archive)에서 다운로드할 수 있습니다. 최신 Windows Insider Preview SDK는 [Windows 참가자](https://insider.windows.com/for-developers/) 사이트의 개발자 섹션에서 다운로드할 수 있습니다.
 
- Windows 10 업데이트에 대 한 자세한 내용은 참조 하세요. [Windows 10 릴리스 정보](https://technet.microsoft.com/windows/release-info)합니다. Windows 10 지원 수명 주기에 대 한 중요 한 내용은 참조는 [Windows 수명 주기 팩트 시트](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)합니다.
+ Windows 10 업데이트에 대 한 자세한 내용은 참조 하세요. [Windows 10 릴리스 정보](https://www.microsoft.com/itpro/windows-10/release-information)합니다. Windows 10 지원 수명 주기에 대 한 중요 한 내용은 참조는 [Windows 수명 주기 팩트 시트](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)합니다.
 
 ## <a name="perform-api-checks"></a>API 검사 수행
 

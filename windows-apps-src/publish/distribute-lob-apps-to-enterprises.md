@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, lob, 엔터프라이즈 앱, 비즈니스용 Store, 교육용 Store, 엔터프라이즈
 ms.localizationpriority: medium
-ms.openlocfilehash: d44d2b248ddc2bff6ffa91860621fe315fb22c47
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
+ms.openlocfilehash: cf970c1812b4200cea4e4902ad883ef8b0b5e141
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826143"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319995"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>엔터프라이즈에 LOB 앱 배포
 
@@ -71,7 +71,7 @@ LOB 앱의 경우 제출 프로세스의 [연령별 등급](age-ratings.md) 단�
 **스토어에 제출**을 클릭한 후 앱이 인증 프로세스를 거칩니다. 준비가 되면 엔터프라이즈 관리자가 해당 앱을 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어 포털의 개인 저장소에 추가해야 합니다. 그런 다음 엔터프라이즈에서 사용자에게 앱을 배포할 수 있습니다.
 
 > [!NOTE]
-> LOB 앱을 가져오려면 조직이 [지원 시장](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets)에 위치해 있어야 하며, 앱을 제출할 때 [해당 시장을 제외](define-pricing-and-market-selection.md)하지 않아야 합니다. 
+> LOB 앱을 가져오려면 조직이 [지원 시장](https://docs.microsoft.com/windows/whats-new/windows-store-for-business-overview#supported-markets)에 위치해 있어야 하며, 앱을 제출할 때 [해당 시장을 제외](define-pricing-and-market-selection.md)하지 않아야 합니다. 
 
 자세한 내용은 [기간 업무 앱 작업](https://go.microsoft.com/fwlink/p/?LinkId=698846) 및 [프라이빗 저장소를 사용하여 앱 배포](https://go.microsoft.com/fwlink/p/?LinkId=698847)를 참조하세요.
 

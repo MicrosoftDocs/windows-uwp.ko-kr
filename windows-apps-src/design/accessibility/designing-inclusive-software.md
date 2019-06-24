@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 88d2377f95efbe79853b1416213a25e22ed7d5f0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e9cc88792e6cfdc581a4c7dc27ecc060cc0000c3
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639698"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317342"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Windows 10용 포괄 소프트웨어 디자인  
 
@@ -23,7 +23,7 @@ Microsoft에서는 디자인 원칙과 사례를 개선하고 있습니다. 이�
 
 이 새로운 디자인 철학을 포괄 디자인이라고 합니다. 즉, 초기 단계부터 모든 사용자를 염두에 두고 소프트웨어를 디자인합니다. 이는 접근성을 일부 소규모 사용자 그룹을 충족하기 위해 개발 과정의 끝에 결합할 수 있는 기술로 이해하는 것과 대조됩니다.
 
-"장애를 개인의 요구와 제공되는 서비스, 제품 또는 환경 간의 불일치로 정의합니다. 누구든지 장애를 겪을 수 있습니다. 장애는 배제되는 일반적인 인간의 특성입니다."  \- [포괄](https://www.microsoft.com/design/inclusive) 비디오  
+"장애를 개인의 요구와 제공되는 서비스, 제품 또는 환경 간의 불일치로 정의합니다. 누구든지 장애를 겪을 수 있습니다. 장애는 배제되는 일반적인 인간의 특성입니다."  \- [포괄](https://www.microsoft.com/design/inclusive/) 비디오  
 
 포괄 디자인은 모든 사용자를 위한 더 나은 제품을 만듭니다. 인간의 다양성을 포괄적으로 고려합니다. 대부분의 보도와 차도 경계 구간에서 볼 수 있는 연석 경사로를 살펴보겠습니다. 애초에 연석 경사로는 분명히 휠체어를 이용하는 사람들을 위한 것이었습니다. 하지만 이제는 유모차나 자전거를 이용하는 사람, 스케이트보드를 타는 사람을 비롯한 거의 모든 사람이 연석 경사로를 이용합니다. 보행자도 편의성 때문에 연석 경사로를 종종 이용합니다. TV 리모컨은 신체적 장애가 있는 사람을 위한 AT(보조 기술)로 간주될 수 있습니다. 하지만 지금은 리모컨이 없는 TV를 구입하는 것이 거의 불가능합니다. 아이들은 운동화 끈을 묶는 법을 배우기 전에 끈이 없는 신발이나 쉽게 조여지는 신발을 신을 수 있습니다. 신고 벗기 쉬운 신발은 신발을 벗고 집에 들어가는 문화권에서 흔히 선호됩니다. 이러한 신발은 관절염이 있거나 일시적인 손목 골절로 손을 쓰는 데 문제가 있는 사람에게도 좋습니다.
 
@@ -50,7 +50,7 @@ Microsoft에서 위임하고 Forrester Research에서 시행한 2003-2004 연구
 
 영구적 장애 외에도 개인이 겪는 어려움의 심각도와 유형은 전체 수명 동안 달라질 수 있습니다. 정상적인 인간이란 없습니다. 사람의 능력은 항상 변합니다. Margaret Meade가 말했듯이 "사람은 모두 고유합니다. 모두 고유하다는 것이 우리 모두를 동일하게 만듭니다."  
 
-Microsoft는 컴퓨팅 환경을 개선하고 뛰어난 컴퓨팅 기술을 발명하기 위해 컴퓨터 과학 및 소프트웨어 엔지니어링 조사를 실시하고 있습니다. 컴퓨터의 접근성을 높이고 더 쉽게 보고 듣고 조작할 수 있게 하기 위한 [최근 Microsoft 연구 및 개발 프로젝트](https://www.microsoft.com/enable/microsoft/research.aspx)를 참조하세요.  
+Microsoft는 컴퓨팅 환경을 개선하고 뛰어난 컴퓨팅 기술을 발명하기 위해 컴퓨터 과학 및 소프트웨어 엔지니어링 조사를 실시하고 있습니다. 컴퓨터의 접근성을 높이고 더 쉽게 보고 듣고 조작할 수 있게 하기 위한 [최근 Microsoft 연구 및 개발 프로젝트](https://www.microsoft.com/accessibility/)를 참조하세요.  
 
 ## <a name="practical-design-steps"></a>실용적인 디자인 단계  
 복잡한 사항에 지쳐 있다면 이 섹션이 도움이 될 것입니다. 이 섹션에서는 앱에 대한 포괄 디자인을 구현할 때 고려할 실용적인 디자인 단계를 설명합니다.  
@@ -104,8 +104,8 @@ ADA(미국 장애인 복지법)의 업데이트된 섹션 508 및 기타 입법�
 7.  완성된 제품을 제공하고 이후의 프로젝트 작업자를 위해 구현을 문서화합니다.  
 
 ## <a name="related-topics"></a>관련 항목  
-* [포괄 디자인](https://design.microsoft.com/inclusive)
+* [포괄 디자인](https://www.microsoft.com/design/inclusive/)
 * [내게 필요한 옵션에 대 한 엔지니어링 소프트웨어](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft accessibility developer hub](https://developer.microsoft.com/windows/accessible-apps)
 * [포괄 Windows 앱 개발](developing-inclusive-windows-apps.md) 
-* [접근성](accessibility.md)
+* [액세스 가능성](accessibility.md)

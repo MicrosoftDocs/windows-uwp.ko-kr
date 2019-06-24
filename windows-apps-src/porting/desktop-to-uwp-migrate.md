@@ -5,12 +5,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 16b75226d6b79b19978ddf7e37231b15ac7a4e3e
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 344ee7060edcee3376e271fc21e104490d8724d7
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984174"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319716"
 ---
 # <a name="move-from-a-desktop-application-to-uwp"></a>UWP 응용 프로그램을 데스크톱에서 이동
 
@@ -18,15 +18,15 @@ WPF 및 Windows Forms 등.NET Framework를 사용 하 여 빌드된 기존 데�
 
 ## <a name="package-your-desktop-application-in-an-msix-package"></a>MSIX 패키지에서 데스크톱 응용 프로그램 패키지
 
-많은 Windows 10 기능에 대 한 액세스를 가져오려고 MSIX 패키지에서 데스크톱 응용 프로그램을 패키징할 수 있습니다. MSIX는 UWP, WPF, Windows Forms 및 Win32 앱을 비롯 한 모든 Windows 앱에 대해 유니버설 패키징 환경을 제공 하는 최신 Windows 앱 패키지 형식입니다. 강력한 설치에 대 한 액세스를 가져옵니다 MSIX 패키지에서 데스크톱 Windows 앱 패키징 및 유연한 기능 system, Microsoft Store, 엔터프라이즈 관리 및 여러 사용자 지정에 대 한 지원을 사용 하 여 관리 되는 보안 모델 환경 업데이트 배포 모델입니다. 소스 코드를 사용 해야 할지 여부를 또는 기존 설치 관리자 파일 (예: MSI 또는 App-v 설치 관리자)만 있는 경우 응용 프로그램을 패키징할 수 있습니다. 응용 프로그램을 패키지 한 후에 패키지 확장 및 기타 UWP 구성 요소와 같은 UWP 기능을 통합할 수 있습니다.
+많은 Windows 10 기능에 대 한 액세스를 가져오려고 MSIX 패키지에서 데스크톱 응용 프로그램을 패키징할 수 있습니다. MSIX는 UWP, WPF, Windows Forms 및 Win32 앱을 비롯한 모든 Windows 앱에 유니버설 패키징 환경을 제공하는 최신 Windows 앱 패키지 형식입니다. MSIX 패키지에 데스크톱 Windows 앱을 패키지하면 강력한 설치 및 업데이트 환경, 유연한 기능 시스템을 포함하는 관리형 보안 모듈, Microsoft Store, 엔터프라이즈 관리 및 여러 사용자 지정 모델에 대한 지원 기능에 액세스할 수 있습니다. 소스 코드를 사용 해야 할지 여부를 또는 기존 설치 관리자 파일 (예: MSI 또는 App-v 설치 관리자)만 있는 경우 응용 프로그램을 패키징할 수 있습니다. 응용 프로그램을 패키지 한 후에 패키지 확장 및 기타 UWP 구성 요소와 같은 UWP 기능을 통합할 수 있습니다.
 
 자세한 내용은 [데스크톱 응용 프로그램 (데스크톱 브리지) 패키지](/windows/msix/desktop/desktop-to-uwp-root) 하 고 [패키지 id를 요구 하는 기능](/windows/apps/desktop/modernize/modernize-packaged-apps)합니다.
 
 ## <a name="use-uwp-apis"></a>UWP Api를 사용 합니다.
 
-WPF에서 Windows Forms에서 직접 여러 UWP Api를 호출할 수 있습니다 또는 C++ Win32 데스크톱 응용 프로그램 등록 Windows 10 사용자는 간단한 최신 환경을 통합 합니다. 예를 들어, 데스크톱 앱에 알림 메시지를 추가 하는 UWP Api를 호출할 수 있습니다.
+WPF, Windows Forms 또는 C++ Win32 데스크톱 앱에서 직접 여러 UWP API를 호출하여 Windows 10 사용자에게 유용한 최신 환경을 통합할 수 있습니다. 예를 들어, UWP API를 호출하여 데스크톱 앱에 알림 메시지를 추가할 수 있습니다.
 
-자세한 내용은 [데스크톱 앱에서 사용 하 여 UWP Api](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)합니다.
+자세한 내용은 [데스크톱 앱에서 UWP API 사용](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)을 참조하세요.
 
 ## <a name="migrate-a-net-framework-app-to-a-uwp-app"></a>마이그레이션하는.NET Framework 앱을 UWP 앱
 
@@ -239,7 +239,7 @@ UWP와 마찬가지로 .NET Standard 2.0 클래스 라이브러리에서 비즈�
 ![Xamarin 앱](images/desktop-to-uwp/xamarin-projects.png)
 
 >[!NOTE]
->크로스 플랫폼 프로젝트는 플랫폼별 기능이 거의 없는 앱에 적합합니다. 이를 사용하여 iOS, Android 및 Windows에서 실행되는 네이티브 XAML 기반 UI를 빌드할 수 있습니다. [여기](https://www.xamarin.com/forms)에서 자세한 내용을 알아보세요.
+>크로스 플랫폼 프로젝트는 플랫폼별 기능이 거의 없는 앱에 적합합니다. 이를 사용하여 iOS, Android 및 Windows에서 실행되는 네이티브 XAML 기반 UI를 빌드할 수 있습니다. [여기](https://docs.microsoft.com/xamarin/xamarin-forms/)에서 자세한 내용을 알아보세요.
 
 그런 다음 Android, iOS 또는 크로스 플랫폼 프로젝트에서 클래스 라이브러리 프로젝트에 대한 참조를 추가합니다.
 
@@ -278,7 +278,7 @@ public class MainActivity : ListActivity
 }
 ```
 
-Android, iOS 및 크로스 플랫폼 프로젝트를 시작하려면 [Xamarin 개발자 포털](https://developer.xamarin.com/)을 참조하세요.
+Android, iOS 및 크로스 플랫폼 프로젝트를 시작하려면 [Xamarin 개발자 포털](https://docs.microsoft.com/xamarin)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

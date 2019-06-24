@@ -6,12 +6,12 @@ ms.date: 08/21/2017
 ms.topic: article
 keywords: Windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: 48a19b2fc32733e13cb9a7b730bad7741307c328
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9f88480bde2ba5a5e0856028921e5d9d933edcb0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372805"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320077"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Microsoft Store Services SDK를 사용하여 고객과 소통
 
@@ -99,7 +99,7 @@ NuGet을 통해 Microsoft Store Services SDK 라이브러리를 설치하려면
 
 5. 검색 상자에 **Microsoft.Services.Store.Engagement**를 입력하고 Microsoft.Services.Store.Engagement 패키지를 설치합니다. 패키지 설치가 완료되면 솔루션을 저장합니다.
     > [!NOTE]
-    > **출력** 창이 지정된 경로가 너무 길다는 것을 나타내는 *Install-Package* 오류를 보고하는 경우, 기본 위치보다 경로가 더 짧은 다른 위치로 패키지를 추출하도록 NuGet을 구성해야 할 수 있습니다. 이렇게 하려면 컴퓨터의 nuget.config 파일에 `repositoryPath` 값을 추가하고 NuGet 패키지를 추출할 수 있는 더 짧은 폴더에 할당합니다. 자세한 내용은 NuGet 설명서에서 [이 문서](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior)를 참조하세요. 또는 Visual Studio 프로젝트를 더 짧은 경로의 대체 폴더로 이동하려고 할 수 있습니다. 문제에 전역 패키지 경로가 너무 길기도 원인일 수 있습니다. 이 경우 추가 `globalPackagesFolder` nuget.config 파일에는 값입니다.
+    > **출력** 창이 지정된 경로가 너무 길다는 것을 나타내는 *Install-Package* 오류를 보고하는 경우, 기본 위치보다 경로가 더 짧은 다른 위치로 패키지를 추출하도록 NuGet을 구성해야 할 수 있습니다. 이렇게 하려면 컴퓨터의 nuget.config 파일에 `repositoryPath` 값을 추가하고 NuGet 패키지를 추출할 수 있는 더 짧은 폴더에 할당합니다. 자세한 내용은 NuGet 설명서에서 [이 문서](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)를 참조하세요. 또는 Visual Studio 프로젝트를 더 짧은 경로의 대체 폴더로 이동하려고 할 수 있습니다. 문제에 전역 패키지 경로가 너무 길기도 원인일 수 있습니다. 이 경우 추가 `globalPackagesFolder` nuget.config 파일에는 값입니다.
 
 6. 프로젝트가 포함된 Visual Studio 솔루션을 닫고, 솔루션을 다시 엽니다.
 

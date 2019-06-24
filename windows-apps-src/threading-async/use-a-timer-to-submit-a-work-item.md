@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 타이머, 스레드
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a1a7a161734a142b5f1399798394494d05c6a49
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fb375f280c474ce5a23e10977f96659480cdbb53
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371517"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320511"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>타이머를 사용하여 작업 항목 제출
 
@@ -27,7 +27,7 @@ ms.locfileid: "66371517"
 
 [  **CreateTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) 메서드를 사용하여 작업 항목에 대한 타이머를 만듭니다. 작업을 수행하는 람다를 제공하고 *delay* 매개 변수를 사용하여 스레드 풀이 사용 가능한 스레드에 작업 항목을 할당하기 전에 대기해야 하는 시간을 지정합니다. 이 지연은 [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan) 구조를 사용하여 지정합니다.
 
-> **참고**  사용할 수 있습니다 [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) UI에 액세스 하 여 작업 항목에서 진행률을 표시 합니다.
+> **참고**  사용할 수 있습니다 [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) UI에 액세스 하 여 작업 항목에서 진행률을 표시 합니다.
 
 다음 예제에서는 3분 후에 실행되는 작업 항목을 만듭니다.
 

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b41069f1ca964f978ba0cff73f5c34a9db133a10
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7e0c3802f0b6163ad5f0e179d90148bae543aeab
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649088"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320853"
 ---
 # <a name="badge-notifications-for-uwp-apps"></a>UWP 앱에 대한 배지 알림
 
@@ -60,7 +60,7 @@ ms.locfileid: "57649088"
     <th>XML</th>
 </tr>
 <tr>
-    <td>없음</td>
+    <td>none</td>
     <td>표시되는 배지 없음</td>
     <td>`<badge value="none"/>`</td>
 </tr>
@@ -196,7 +196,7 @@ private void clearBadge()
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-* [알림 사용 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> 라이브 타일을 만들고, 배지 업데이트를 보내고, 알림 메시지를 표시하는 방법을 보여 줍니다. 
+* [알림 사용 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)<br/> 라이브 타일을 만들고, 배지 업데이트를 보내고, 알림 메시지를 표시하는 방법을 보여 줍니다. 
 
 ## <a name="related-articles"></a>관련 문서
 

@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6dfdc0c8a888890d4052dda1ac7cbf0ed2b6a667
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 996cc797ff46bd7eb9a172d66ffbb1fd6fe621bc
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362381"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317535"
 ---
 # <a name="improve-garbage-collection-performance"></a>가비지 수집 성능 향상
 
 
 C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .NET 가비지 수집기의 자동 메모리 관리를 사용합니다. 이 섹션에는 UWP 앱에서 .NET 가비지 수집기에 대한 동작 및 성능 모범 사례가 요약되어 있습니다. .NET 가비지 수집기가 작동하는 방식과 가비지 수집기 성능 디버깅 및 분석용 도구에 대한 자세한 내용은 [가비지 수집](https://docs.microsoft.com/dotnet/standard/garbage-collection/index)을 참조하세요.
 
-**참고**  가비지 수집의 기본 동작에 개입할 필요 없이 강력한 앱을 사용 하 여 일반적인 메모리 문제를 나타냅니다. 자세한 내용은 [Visual Studio 2015에서 디버그하는 동안의 메모리 사용량 도구](https://blogs.msdn.microsoft.com/devops/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015/)를 참조하세요. 이 항목은 C# 및 Visual Basic에만 적용됩니다.
+**참고**  가비지 수집의 기본 동작에 개입할 필요 없이 강력한 앱을 사용 하 여 일반적인 메모리 문제를 나타냅니다. 자세한 내용은 [Visual Studio 2015에서 디버그하는 동안의 메모리 사용량 도구](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/)를 참조하세요. 이 항목은 C# 및 Visual Basic에만 적용됩니다.
 
  
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 교육
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c2333d960ba91b1d1c3d3030481108407909594
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3d68fd78a7da3f1b98f61225f3aad8ca1590140e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359213"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317603"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>교육용 유니버설 Windows 앱 개발
 ![시험 응시 앱 스크린샷](images/take-a-test-screen-small.png)
@@ -23,7 +23,7 @@ ms.locfileid: "66359213"
 
 
 ### <a name="secure-assessments"></a>보안 평가
-평가/테스트 앱의 경우 종종 학생들이 테스트 중 다른 컴퓨터나 인터넷 리소스를 사용할 수 없도록 *잠금* 환경을 만들어야 합니다. 이 기능은 [시험 응시 API](take-a-test-api.md)를 통해 사용할 수 있습니다. 고위험 테스트를 위해 온라인 액세스가 잠긴 상태인 테스트 환경에 대한 예는 Windows IT 센터에서 [시험 응시](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) 웹앱을 참조하세요.
+평가/테스트 앱의 경우 종종 학생들이 테스트 중 다른 컴퓨터나 인터넷 리소스를 사용할 수 없도록 *잠금* 환경을 만들어야 합니다. 이 기능은 [시험 응시 API](take-a-test-api.md)를 통해 사용할 수 있습니다. 고위험 테스트를 위해 온라인 액세스가 잠긴 상태인 테스트 환경에 대한 예는 Windows IT 센터에서 [시험 응시](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) 웹앱을 참조하세요.
 
 ### <a name="user-input"></a>사용자 입력
 사용자 입력은 교육용 앱에서 중요한 부분입니다. UI 컨트롤은 사용자의 포커스에 문제가 생기지 않도록 반응성이 좋고 직관적이어야 합니다. 유니버설 Windows 앱에서 사용할 수 있는 입력 옵션에 대한 일반적인 개요는 [입력 지침서](https://docs.microsoft.com/windows/uwp/design/input/input-primer)와 디자인 및 UI 섹션에서 아래의 항목을 참조하세요. 또한 다음 샘플 앱에서는 유니버설 Windows 플랫폼에서 처리하는 기본 UI를 소개합니다.
@@ -41,4 +41,4 @@ Windows Ink 플랫폼은 학생에게 익숙한 입력 모드에 맞게 조정�
 교육용 앱은 주로 특정 조직에게 특별한 상황에서 출시됩니다. 이에 대한 자세한 내용은 [엔터프라이즈에 LOB 앱 배포](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises)를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
-- Windows IT 센터의 [Windows 10 for Education](https://technet.microsoft.com/edu/windows/index)
+- Windows IT 센터의 [Windows 10 for Education](https://docs.microsoft.com/education/windows/index)

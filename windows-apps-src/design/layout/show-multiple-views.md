@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 097ff0bb9e2ac8d36780a692172afb0a7933fdd1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 275dc6ab7cdb310dff817a3e0017568ad2fed80c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66364970"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317120"
 ---
 # <a name="show-multiple-views-for-an-app"></a>앱에 대한 여러 보기 표시
 
@@ -83,7 +83,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 3.  새 스레드에서 창을 채웁니다.
 
-    [  **CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) 메서드를 사용하여 새 보기에 대한 UI 스레드에 작업을 예약합니다. [람다 식](https://go.microsoft.com/fwlink/p/?LinkId=389615)을 사용하여 함수를 **RunAsync** 메서드에 인수로 전달합니다. 람다 함수에서 수행하는 작업이 새 보기의 스레드에서 발생합니다.
+    [  **CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 메서드를 사용하여 새 보기에 대한 UI 스레드에 작업을 예약합니다. [람다 식](https://go.microsoft.com/fwlink/p/?LinkId=389615)을 사용하여 함수를 **RunAsync** 메서드에 인수로 전달합니다. 람다 함수에서 수행하는 작업이 새 보기의 스레드에서 발생합니다.
 
     XAML에서는 일반적으로 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window)의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content) 속성에 [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)을 추가한 다음 **Frame**에서 앱 콘텐츠를 정의한 XAML [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page)로 이동합니다. 자세한 내용은 [두 페이지 간의 피어 투 피어 탐색:](../basics/navigate-between-two-pages.md)을 참조하세요.
 
@@ -125,7 +125,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 앱 코드에서 [**CreateNewView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)를 호출하여 만든 모든 보기를 비롯한 다른 보기는 보조 보기입니다. 기본 보기와 보조 보기는 둘 다 [**CoreApplication.Views**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.views) 컬렉션에 저장됩니다. 일반적으로 사용자 작업에 대한 응답으로 보조 보기를 만듭니다. 시스템이 앱에 대한 보조 보기를 만드는 경우도 있습니다.
 
 > [!NOTE]
-> Windows *할당된 액세스* 기능을 사용하여 [키오스크 모드](https://technet.microsoft.com/library/mt219050.aspx)로 앱을 실행할 수 있습니다. 이렇게 하면 시스템이 보조 보기를 만들어 잠금 화면 위에 앱 UI를 표시합니다. 앱에서 만든 보조 보기는 허용되지 않으므로 사용자 고유의 보조 보기를 키오스크 모드로 표시하려고 하면 예외가 발생합니다.
+> Windows *할당된 액세스* 기능을 사용하여 [키오스크 모드](https://docs.microsoft.com/windows/manage/set-up-a-device-for-anyone-to-use)로 앱을 실행할 수 있습니다. 이렇게 하면 시스템이 보조 보기를 만들어 잠금 화면 위에 앱 UI를 표시합니다. 앱에서 만든 보조 보기는 허용되지 않으므로 사용자 고유의 보조 보기를 키오스크 모드로 표시하려고 하면 예외가 발생합니다.
 
 ## <a name="switch-from-one-view-to-another"></a>보기 간에 전환
 

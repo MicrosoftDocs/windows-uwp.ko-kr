@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: c638eb843528cc17a3f02233ef5f238264eb58a0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0d8550d346833559ccea1e8aea4ae73a8c6d4e7c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370524"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318656"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>앱 URI 처리기를 사용하여 웹 사이트에 대해 앱 활성화
 
@@ -191,7 +191,7 @@ AppModel\SystemAppData\YourApp\AppUriHandlers`
 - JSON 파일은 https 서버에 업로드해야 합니다.
 - 지원하려는 경로를 변경해야 하는 경우 앱을 다시 게시하지 않고 JSON 파일을 다시 게시할 수 있습니다. 사용자는 1-8일 내에 변경 사항을 확인할 수 있습니다.
 - AppUriHandlers를 사용하여 테스트용으로 로드된 모든 앱에는 설치 시 호스트에 대해 유효성이 검사된 링크가 있습니다. 기능을 테스트하기 위해 JSON 파일을 업로드할 필요는 없습니다.
-- 이 기능은 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)를 사용하여 UWP 앱을 시작하거나 [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx)를 사용하여 Windows 데스크톱 앱을 시작할 때마다 작동합니다. 등록된 앱 URI 처리기에 해당하는 URL의 경우 브라우저 대신 앱이 시작됩니다.
+- 이 기능은 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)를 사용하여 UWP 앱을 시작하거나 [ShellExecuteEx](https://docs.microsoft.com/windows/desktop/api/shellapi/nf-shellapi-shellexecuteexa)를 사용하여 Windows 데스크톱 앱을 시작할 때마다 작동합니다. 등록된 앱 URI 처리기에 해당하는 URL의 경우 브라우저 대신 앱이 시작됩니다.
 
 ## <a name="see-also"></a>참조
 

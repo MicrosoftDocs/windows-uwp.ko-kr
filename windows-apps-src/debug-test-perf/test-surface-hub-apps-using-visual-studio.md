@@ -6,12 +6,12 @@ ms.date: 10/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a846aab77fad6f087057fe930d11ac781ed7171
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 37c7f9edbaee008b6e16ef2ca202ff5cbcf39ca2
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362194"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317504"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Visual Studio를 사용하여 Surface Hub 앱 테스트
 Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을 포함하여 UWP(유니버설 Windows 플랫폼) 앱을 디자인, 개발, 디버그 및 테스트할 수 있는 환경을 제공합니다. 시뮬레이터 Surface Hub와 같은 사용자 인터페이스를 사용 하지 않지만 앱의 모양과 Surface Hub의 화면 크기 및 해상도 사용 하 여 동작을 테스트 하는 데 유용 합니다.
@@ -69,7 +69,7 @@ Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을
     ![Visual Studio 시뮬레이터 해상도](images/vs-simulator-resolutions.png)
 
    > [!TIP]
-   > [태블릿 모드 켜기](https://windows.microsoft.com/windows-10/getstarted-like-a-tablet) Surface Hub의 경험을 효율적으로 시뮬레이션할 하 합니다.
+   > [태블릿 모드 켜기](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) Surface Hub의 경험을 효율적으로 시뮬레이션할 하 합니다.
 
 ## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a>Visual Studio에서 Surface Hub 장치에 앱 배포
 Surface Hub에 앱을 수동으로 배포 하는 것은 간단 합니다.

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 다중 샘플링, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: b547e47b7d896ab818349dcc70ee9dc3c7078847
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 976cdfb5f1dc92f693f7296d6e33d7ccc4c4d6e7
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368379"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318942"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> 다중 샘플링에서 유니버설 Windows 플랫폼 (UWP) 앱
 
@@ -30,7 +30,7 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
 
 1.  다중 샘플링에 어떤 DXGI 형식을 사용할 수 있는지 알아보려면 [**ID3D11Device::CheckFeatureSupport**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport)를 호출합니다. 게임에 사용할 수 있는 렌더링 대상 형식을 제공합니다. 렌더링 대상 및 대상 해결 동일한 형식을 사용 해야, 하므로 둘 다에 대해 확인 [ **D3D11\_형식\_지원\_MULTISAMPLE\_RENDERTARGET** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ne-d3d11-d3d11_format_support) 하 고 **D3D11\_형식\_지원\_MULTISAMPLE\_해결**합니다.
 
-    **기능 수준 9:  ** 기능 수준 9 장치 이지만 [다중된 렌더링 대상 형식에 대 한 지원을 보증](https://docs.microsoft.com/previous-versions//ff471324(v=vs.85)), 다중 샘플 해결 대상에 대 한 지원을 보장 되지 않습니다. 따라서 이 항목에서 설명한 다중 샘플링 기법을 사용하기 전에 이러한 사항을 확인해야 합니다.
+    **기능 수준 9:  ** 기능 수준 9 장치 이지만 [다중된 렌더링 대상 형식에 대 한 지원을 보증](https://docs.microsoft.com/previous-versions/ff471324(v=vs.85)), 다중 샘플 해결 대상에 대 한 지원을 보장 되지 않습니다. 따라서 이 항목에서 설명한 다중 샘플링 기법을 사용하기 전에 이러한 사항을 확인해야 합니다.
 
     다음 코드는 모든 DXGI에 대 한 다중 샘플링 지원을 확인\_형식 값:
 

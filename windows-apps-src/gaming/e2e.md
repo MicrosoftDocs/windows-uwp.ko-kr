@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: 6729711a424bfdcf9af2da92d60f12a066500256
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 950f9415e63a31a5204a15f4f72b968535489cfa
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368781"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321249"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows 10 게임 개발 가이드
 
@@ -50,15 +50,15 @@ Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작]
     </colgroup>
     <tr>
         <td>Windows 개발자 센터 주 포털</td>
-        <td><a href="https://dev.windows.com">Windows 개발자 센터</a></td>
+        <td><a href="https://developer.microsoft.com/windows">Windows 개발자 센터</a></td>
     </tr>
     <tr>
         <td>Windows 앱 개발</td>
-        <td><a href="https://dev.windows.com/develop">Windows 앱 개발</a></td>
+        <td><a href="https://developer.microsoft.com/windows/apps/develop">Windows 앱 개발</a></td>
     </tr>
     <tr>
         <td>유니버설 Windows 플랫폼 앱 개발</td>
-        <td><a href="https://developer.microsoft.com/windows/apps/">Windows 10 앱에 대 한 방법 가이드</a></td>
+        <td><a href="https://developer.microsoft.com/windows/apps">Windows 10 앱에 대 한 방법 가이드</a></td>
     </tr>
     <tr>
         <td>UWP 게임 사용 방법 가이드</td>
@@ -169,7 +169,7 @@ Xbox 도구와 미들웨어 프로그램에서는 게임 도구와 미들웨어�
 
 ### <a name="game-samples"></a>게임 샘플
 
-Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하는 데 도움이 되는 많은 Windows 10 게임 및 앱 샘플이 있습니다. 더 많은 샘플이 정기적으로 개발 및 게시되므로 가끔 샘플 포털을 다시 확인하여 새 소식을 확인하세요. 또한 GitHub 리포지토리가 변경 및 추가 사항에 대한 알림을 받는지 [확인](https://help.github.com/articles/watching-repositories/)할 수 있습니다.
+Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하는 데 도움이 되는 많은 Windows 10 게임 및 앱 샘플이 있습니다. 더 많은 샘플이 정기적으로 개발 및 게시되므로 가끔 샘플 포털을 다시 확인하여 새 소식을 확인하세요. 또한 GitHub 리포지토리가 변경 및 추가 사항에 대한 알림을 받는지 [확인](https://help.github.com/en/articles/watching-and-unwatching-repositories)할 수 있습니다.
 
 <table>
     <colgroup>
@@ -306,7 +306,7 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Visual Studio 개발자 도구 블로그</td>
-        <td><a href="https://devblogs.microsoft.com/">개발자 도구 블로그</a></td>
+        <td><a href="https://devblogs.microsoft.com/visualstudio/">개발자 도구 블로그</a></td>
     </tr>
     <tr>
         <td>Somasegar의 개발자 도구 블로그</td>
@@ -599,7 +599,7 @@ Direct3D 11.3은 익숙한 Direct3D 프로그래밍 모델을 사용하며 GPU �
     </tr>
     <tr>
         <td>12에서 Direct3D 11 개요</td>
-        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/direct3d-11-on-12">Direct3D 11 12</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/direct3d-11-on-12">12에서 Direct3D 11</a></td>
     </tr>
 </table>
 
@@ -619,11 +619,11 @@ Direct3D 11.3은 익숙한 Direct3D 프로그래밍 모델을 사용하며 GPU �
     </colgroup>
     <tr>
         <td>UWP 브리지</td>
-        <td><a href="https://dev.windows.com/bridges/">Windows 코드 상태로</a></td>
+        <td><a href="https://developer.microsoft.com/windows/bridges">Windows 코드 상태로</a></td>
     </tr>
     <tr>
         <td>iOS용 Windows 브리지</td>
-        <td><a href="https://dev.windows.com/bridges/ios">IOS 앱을 Windows 상태로</a></td>
+        <td><a href="https://developer.microsoft.com/windows/bridges/ios">IOS 앱을 Windows 상태로</a></td>
     </tr>
     <tr>
         <td>데스크톱 응용 프로그램용 Windows 브리지(.NET 및 Win32)</td>
@@ -688,11 +688,11 @@ Unity는 Unity 5.4부터 Direct3D 12 개발을 지원합니다.
     </colgroup>
     <tr>
         <td>Unity 게임 엔진</td>
-        <td><a href="https://unity3d.com/">Unity-게임 엔진</a></td>
+        <td><a href="https://unity.com/">Unity-게임 엔진</a></td>
     </tr>
     <tr>
         <td>Unity 다운로드</td>
-        <td><a href="https://unity3d.com/get-unity">Unity 다운로드</a></td>
+        <td><a href="https://store.unity.com/">Unity 다운로드</a></td>
     </tr>
     <tr>
         <td>Windows용 Unity 설명서</td>
@@ -756,7 +756,7 @@ Havok의 모듈식 도구 및 기술 모음은 게임 작성자가 새로운 수
     </tr>
     <tr>
         <td>Havok 지원 포럼</td>
-        <td><a href="https://support.havok.com">Havok</a></td>
+        <td><a href="https://www.havok.com/">Havok</a></td>
     </tr>
 </table>
  
@@ -957,7 +957,7 @@ Windows 10에서는 Windows 10 디바이스에서 공통 API 플랫폼을 제�
     </colgroup>
     <tr>
         <td>UWP 개발 시작</td>
-        <td><a href="https://dev.windows.com/getstarted">Windows 앱 시작</a></td>
+        <td><a href="https://developer.microsoft.com/windows/apps/getstarted">Windows 앱 시작</a></td>
     </tr>
     <tr>
         <td>UWP 개발 설정</td>
@@ -991,7 +991,7 @@ UWP 프로그래밍에 "완전 초보자"이고 게임에서 XAML 사용을 고�
     </colgroup>
     <tr>
         <td>유니버설 Windows 플랫폼 앱 개발 개요</td>
-        <td><a href="https://dev.windows.com/develop">Windows 앱 개발</a></td>
+        <td><a href="https://developer.microsoft.com/windows/apps/develop">Windows 앱 개발</a></td>
     </tr>
     <tr>
         <td>UWP의 네트워크 프로그래밍 개요</td>
@@ -1235,11 +1235,11 @@ Direct3D 12의 변경 사항 및 Direct3D 12를 사용하여 프로그래밍을 
     </tr>
     <tr>
         <td>리소스 바인딩 개념(설명자, 설명자 테이블, 설명자 힙 및 루트 서명 설명) </td>
-        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/resource-binding">Direct3D 12에서 리소스 바인딩</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/resource-binding">Direct3D 12의 리소스 바인딩</a></td>
     </tr>
     <tr>
         <td>메모리 관리</td>
-        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/memory-management">Direct3D 12에서 메모리 관리</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/memory-management">Direct3D 12의 메모리 관리</a></td>
     </tr>
 </table>
  
@@ -1347,7 +1347,7 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
     </tr>
     <tr>
         <td>Visual Studio의 UWP 타일 생성기 확장</td>
-        <td><a href="https://marketplace.visualstudio.com/vsgallery/09611e90-f3e8-44b7-9c83-18dba8275bb2">단일 이미지를 사용 하 여 필요한 모든 타일을 만들기 위한 도구</a></td>
+        <td><a href="https://marketplace.visualstudio.com/items?itemName=shenchauhan.UWPTileGenerator">단일 이미지를 사용 하 여 필요한 모든 타일을 만들기 위한 도구</a></td>
     </tr>
     <tr>
         <td>Visual Studio의 UWP 타일 생성기 확장(블로그 게시물)</td>
@@ -1397,7 +1397,7 @@ Windows Performance Toolkit(WPT)은 Windows 운영 체제 및 응용 프로그�
     </colgroup>
     <tr>
         <td>코드 성능 테스트</td>
-        <td><a href="https://www.visualstudio.com/team-services/cloud-load-testing/">클라우드 기반된 부하 테스트</a></td>
+        <td><a href="https://azure.microsoft.com/services/devops/test-plans/">클라우드 기반된 부하 테스트</a></td>
     </tr>
     <tr>
         <td>게임 디바이스 정보를 사용하여 Xbox 콘솔 형식 파악</td>
@@ -1530,7 +1530,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </colgroup>
     <tr>
         <td>파트너 센터 앱 게시</td>
-        <td><a href="https://dev.windows.com/publish">Windows 앱 게시</a></td>
+        <td><a href="https://developer.microsoft.com/store/publish-apps">Windows 앱 게시</a></td>
     </tr>
     <tr>
         <td>파트너 센터 고급 게시 (GDN)</td>
@@ -1658,7 +1658,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </tr>
     <tr>
         <td>게임 홍보 방법</td>
-        <td><a href="https://dev.windows.com/store-promotion">앱 홍보하기</a></td>
+        <td><a href="https://developer.microsoft.com/store/promote-your-apps">앱 홍보하기</a></td>
     </tr>
 </table>
  
@@ -1692,7 +1692,7 @@ Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원�
     </colgroup>
     <tr>
         <td>GameAnalytics를 사용하여 플레이어의 동작 이해</td>
-        <td><a href="https://www.gameanalytics.com/">GameAnalytics</a></td>
+        <td><a href="https://gameanalytics.com/">GameAnalytics</a></td>
     </tr>
     <tr>
         <td>UWP 앱을 Google Analytics에 연결</td>
@@ -1712,7 +1712,7 @@ Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원�
     </tr>
     <tr>
         <td>Vungle을 사용하여 게임에 동영상 광고 추가</td>
-        <td><a href="https://v.vungle.com/sdk">Vungle에 대 한 Windows SDK 가져오기</a></td>
+        <td><a href="https://publisher.vungle.com/sdk/">Vungle에 대 한 Windows SDK 가져오기</a></td>
     </tr>
 </table>
  

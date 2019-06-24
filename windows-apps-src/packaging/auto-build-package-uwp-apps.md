@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: cb21573dac0c4cc4fc2d6aa2e2345c56631fde87
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 61525e2a4a088e37184bb93526722e0bf23fbd56
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372758"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319815"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -119,7 +119,7 @@ steps:
 
 생성 된 아티팩트를 볼 수 있습니다 합니다 **아티팩트** 옵션 빌드 결과 페이지입니다.
 
-![아티팩트](images/building-screen6.png)
+![artifacts](images/building-screen6.png)
 
 설정 했습니다 때문에 합니다 `UapAppxPackageBuildMode` 인수를 `StoreUpload`, 아티팩트 폴더 (.msixupload/.appxupload) 스토어에 제출할 패키지를 포함 합니다. 제출할 수도 있습니다는 일반 앱 패키지 (.msix/.appx) 또는 앱 번들 (.msixbundle/.appxbundle/) 저장소에 note 합니다. 이 문서의 목적을 위해 .appxupload 파일을 사용합니다.
 
@@ -140,7 +140,7 @@ steps:
 
 ## <a name="related-topics"></a>관련 항목
 
-- [Windows 용.NET 앱 빌드](https://www.visualstudio.com/docs/build/get-started/dot-net)
+- [Windows 용.NET 앱 빌드](https://docs.microsoft.com/vsts/build-release/get-started/dot-net)
 - [UWP 앱 패키징](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
-- [Windows 10에서에서 테스트용으로 로드 LOB 앱](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
+- [Windows 10에서에서 테스트용으로 로드 LOB 앱](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10)
 - [패키지 서명 인증서 만들기](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)

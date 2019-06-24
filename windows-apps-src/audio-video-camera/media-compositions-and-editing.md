@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4054f1f4ce4db7f158c1297b748ecea8cab83602
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6a0b21ac4c2bc1a2278757cdaa542be39c01f481
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360737"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318248"
 ---
 # <a name="media-compositions-and-editing"></a>미디어 컴퍼지션 및 편집
 
@@ -86,7 +86,7 @@ ms.locfileid: "66360737"
 
 [!code-cs[Namespace2](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace2)]
 
-사용자가 [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker)로 출력 파일을 선택할 수 있도록 허용하려면 **MediaComposition** 개체의 [**RenderToFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.editing.mediacomposition.rendertofileasync)를 호출하여 컴퍼지션을 선택된 파일로 렌더링합니다. 다음 예제에 나온 코드의 나머지 부분은 단순히 [**AsyncOperationWithProgress**](https://docs.microsoft.com/previous-versions//br205807(v=vs.85)) 처리 패턴을 따릅니다.
+사용자가 [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker)로 출력 파일을 선택할 수 있도록 허용하려면 **MediaComposition** 개체의 [**RenderToFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.editing.mediacomposition.rendertofileasync)를 호출하여 컴퍼지션을 선택된 파일로 렌더링합니다. 다음 예제에 나온 코드의 나머지 부분은 단순히 [**AsyncOperationWithProgress**](https://docs.microsoft.com/previous-versions/br205807(v=vs.85)) 처리 패턴을 따릅니다.
 
 [!code-cs[RenderCompositionToFile](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetRenderCompositionToFile)]
 

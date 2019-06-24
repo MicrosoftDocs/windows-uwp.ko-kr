@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
-ms.openlocfilehash: ff47115c228e3cf6530e12aa4686c88660f16fcd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0ff0eca18eeab72dbf0a2f9a539e452a5923392d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371555"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322022"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
 
@@ -31,7 +31,7 @@ ms.locfileid: "66371555"
 선택적으로 작업 항목의 우선 순위를 지정하고 다른 작업 항목과 동시에 실행할지 여부를 제어할 수 있도록 세 가지 버전의 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)를 사용할 수 있습니다.
 
 >[!NOTE]
->사용 하 여 [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) UI 스레드에 액세스 하 여 작업 항목에서 진행률을 표시 합니다.
+>사용 하 여 [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) UI 스레드에 액세스 하 여 작업 항목에서 진행률을 표시 합니다.
 
 다음 예제에서는 작업 항목을 만들고 작업을 수행할 람다를 제공합니다.
 
@@ -195,7 +195,7 @@ const unsigned int n = 9999;
 // A shared pointer to the result.
 // We use a shared pointer to keep the result alive until the
 // thread is done.
-std::shared_ptr<unsigned long> nthPrime = make_shared<unsigned long int>(0);
+std::shared_ptr<unsigned long> nthPrime = std::make_shared<unsigned long int>(0);
 
 // Simulates work by searching for the nth prime number. Uses a
 // naive algorithm and counts 2 as the first prime number.
@@ -275,7 +275,7 @@ m_workItem = asyncAction;
 
 ## <a name="handle-work-item-completion"></a>작업 항목 완료 처리
 
-작업 항목의 [**IAsyncAction.Completed**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction.completed) 속성을 설정하여 완료 처리기를 제공합니다. 작업 항목 완료를 처리할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). 예를 들어 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows)를 사용하여 UI 스레드에 액세스하고 결과를 표시합니다.
+작업 항목의 [**IAsyncAction.Completed**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction.completed) 속성을 설정하여 완료 처리기를 제공합니다. 작업 항목 완료를 처리할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). 예를 들어 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)를 사용하여 UI 스레드에 액세스하고 결과를 표시합니다.
 
 다음 예제에서는 1단계에서 제출된 작업 항목의 결과로 UI를 업데이트합니다.
 

@@ -9,12 +9,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: e0ae94b0f8631c88f48098f8c2f3df000c25252c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e4b919d42cb113c6ec9f2710baec6c9aa1765840
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359432"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317585"
 ---
 # <a name="uwp-apis-available-to-desktop-apps"></a>데스크톱 앱에 사용할 수 있는 UWP Api
 
@@ -50,7 +50,7 @@ UWP 앱에 완벽 하 게 전환 되지 있어야 하는 경우에 데스크톱 
 
 다음은 데스크톱 앱에서 지원 되는 UWP Api의 전체 목록입니다. 볼 수 있습니다 [패키지 된 앱 에서만에서 지원 되는 Api](#new) 하거나 [패키지 된 앱 및 데스크톱 응용 프로그램에서 지원 되는 Api](#both)합니다.
 
-UWP Api를 사용 하는 방법에 대 한 예제를 참조 하세요. 합니다 [데스크톱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 하 고 [유니버설 Windows 플랫폼 (UWP) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples) GitHub에서. Windows용 앱 빌드 블로그 게시물 [데스크톱 응용 프로그램에서 Windows 10 API 호출](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application)을 참조하세요.
+UWP Api를 사용 하는 방법에 대 한 예제를 참조 하세요. 합니다 [데스크톱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 하 고 [유니버설 Windows 플랫폼 (UWP) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples) GitHub에서. Windows용 앱 빌드 블로그 게시물 [데스크톱 응용 프로그램에서 Windows 10 API 호출](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/)을 참조하세요.
 
 <a id="new" />
 

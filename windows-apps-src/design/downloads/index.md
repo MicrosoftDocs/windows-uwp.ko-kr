@@ -7,18 +7,18 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2c7332a3e1097a8e62576ae5920eb82c2bd5d2a6
-ms.sourcegitcommit: 423ff8f1fd791445e21cca534bcefe407251acf1
+ms.openlocfilehash: 20980562f73bca2087d4c0a6ee049c848404d6a6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251607"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319411"
 ---
 ![디자인 기본 사항](../images/downloads-2x.png)
 
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱용 디자인 도구 키트 및 샘플
  
-Fluent 디자인/UWP 앱용 디자인 및 UI 관련 다운로드를 제공합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요. 
+Fluent 디자인/UWP 앱용 디자인 및 UI 관련 다운로드를 제공합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/windows/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요. 
 
 
 ## <a name="design-toolkits"></a>디자인 도구 키트
@@ -131,4 +131,4 @@ BuildCast는 Fluent Design System 및 UWP를 보여주기 위해 빌드된 엔�
 
 ## <a name="want-more-code"></a>더 많은 코드가 필요하세요?
 
-Windows 샘플 페이지에서 모든 UWP 앱 샘플의 전체 목록을 확인하세요. <a href="https://developer.microsoft.com/samples">예제 포털로 이동</a>
+Windows 샘플 페이지에서 모든 UWP 앱 샘플의 전체 목록을 확인하세요. <a href="https://developer.microsoft.com/windows/samples">예제 포털로 이동</a>

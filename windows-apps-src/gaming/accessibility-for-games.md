@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, 접근성, 게임
 ms.localizationpriority: medium
-ms.openlocfilehash: a3ef82db2d0ddb7883179279fd7e48c1acf38dd3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 74ff2c25d38f20b94f50cc05a548778ee212bad0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369171"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321359"
 ---
 #  <a name="making-games-accessible"></a>접근성 높은 게임 만들기
 
@@ -19,11 +19,11 @@ ms.locfileid: "66369171"
 
 ## <a name="gaming-for-everyone"></a>전체 이용가 게임
 
-Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다. 우리는 "모든 이용자를 아우르는 포괄적인 게임 환경을 구축하기 위해 더 많은 노력을 해야 한다는 의무감을 느꼈습니다. 회사 내부와 외부에서 Microsoft가 고객을 어떻게 지원하고 어떻게 두각을 나타내고 있는지를 보면 Microsoft가 어떤 회사인지 그 정체성을 알 수 있다고 생각합니다. Microsoft는 기업으로서 추구하는 핵심 가치를 반영하여 프로그램을 개발했으며, 이러한 프로그램이 작업 공간을 비롯해 게이머를 위해 개발된 제품들에 긍정적인 변화를 가져올 수 있다고 믿습니다." (Phil Spencer의 [블로그 게시물](https://blogs.microsoft.com/blog/2016/06/13/gaming-for-everyone))
+Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다. 우리는 "모든 이용자를 아우르는 포괄적인 게임 환경을 구축하기 위해 더 많은 노력을 해야 한다는 의무감을 느꼈습니다. 회사 내부와 외부에서 Microsoft가 고객을 어떻게 지원하고 어떻게 두각을 나타내고 있는지를 보면 Microsoft가 어떤 회사인지 그 정체성을 알 수 있다고 생각합니다. Microsoft는 기업으로서 추구하는 핵심 가치를 반영하여 프로그램을 개발했으며, 이러한 프로그램이 작업 공간을 비롯해 게이머를 위해 개발된 제품들에 긍정적인 변화를 가져올 수 있다고 믿습니다." (Phil Spencer의 [블로그 게시물](https://blogs.microsoft.com/blog/2016/06/13/gaming-for-everyone/))
 
-우리는 누구나 즐길 수 있는 재미있고 다양하며 포괄적인 환경을 만들고 싶습니다. "지속적인 영향력을 갖기 위해서는 문화 패러다임의 전환이 필요하며, 이는 하루 아침에 이루어지는 것이 아닙니다. 그러나 우리 팀은 하루하루 더 발전하고 의사 결정 과정에서 서로 의견을 수렴하여 전 세계 게이머의 다양한 요구와 능력, 관심사를 고려하기 위해 노력하고 있습니다." (Phil Spencer의 [블로그 게시물](https://blogs.microsoft.com/blog/2016/06/13/gaming-for-everyone))
+우리는 누구나 즐길 수 있는 재미있고 다양하며 포괄적인 환경을 만들고 싶습니다. "지속적인 영향력을 갖기 위해서는 문화 패러다임의 전환이 필요하며, 이는 하루 아침에 이루어지는 것이 아닙니다. 그러나 우리 팀은 하루하루 더 발전하고 의사 결정 과정에서 서로 의견을 수렴하여 전 세계 게이머의 다양한 요구와 능력, 관심사를 고려하기 위해 노력하고 있습니다." (Phil Spencer의 [블로그 게시물](https://blogs.microsoft.com/blog/2016/06/13/gaming-for-everyone/))
 
-[전체 이용가 게임](https://news.microsoft.com/gamingforeveryone)을 개발하기 위한 이 여정에 함께 해주시기 바랍니다. 
+[전체 이용가 게임](https://news.microsoft.com/gamingforeveryone/)을 개발하기 위한 이 여정에 함께 해주시기 바랍니다. 
 
 ##  <a name="why-make-games-accessible"></a>접근성 높은 게임을 만드는 이유
 
@@ -69,7 +69,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 ## <a name="defining-disability"></a>장애 정의
 
-장애는 "개인의 요구와 제공되는 서비스, 제품 또는 환경 간의 불일치"로 정의됩니다. ([포괄 비디오](https://www.microsoft.com/design/inclusive), Microsoft.com.) 이 장애를 경험할 수 있습니다 누구나 하 고 단기 또는 상황에 따른 조건을 사용할 수 있다는 의미 합니다. 게임을 플레이할 때 이러한 조건을 가진 게임에서 발생하는 문제를 상상해 보고 게임을 더 효과적으로 디자인할 수 있는 방법을 구상합니다. 다음은 고려해야 할 몇 가지 장애입니다.
+장애는 "개인의 요구와 제공되는 서비스, 제품 또는 환경 간의 불일치"로 정의됩니다. ([포괄 비디오](https://www.microsoft.com/design/inclusive/), Microsoft.com.) 이 장애를 경험할 수 있습니다 누구나 하 고 단기 또는 상황에 따른 조건을 사용할 수 있다는 의미 합니다. 게임을 플레이할 때 이러한 조건을 가진 게임에서 발생하는 문제를 상상해 보고 게임을 더 효과적으로 디자인할 수 있는 방법을 구상합니다. 다음은 고려해야 할 몇 가지 장애입니다.
 
 ### <a name="vision"></a>시각
 
@@ -196,7 +196,7 @@ Microsoft는 누구나 게임을 즐길 수 있어야 한다고 생각합니다.
 
 마이크가 게임 디바이스에 연결되어 있지 않은 플레이어도 여전히 누군가와 음성 대화를 할 수 있습니다. 채팅 창에 문자를 입력하고 이러한 문자 메시지를 음성으로 변환할 수 있습니다. 또한 음성이 잘 들리지 않으면 음성 채팅 중인 상대방으로부터 온 기록된 문자 메시지를 읽을 수 있습니다.
 
-ID@Xbox 및 관리 파트너 프로그램의 개발자들을 위해 텍스트-음성 및 음성-텍스트 변환 기능이 Xbox Live 서비스에서 [Game Chat 2 접근성 기능](https://docs.microsoft.com/gaming/xbox-live//multiplayer/chat/using-game-chat-2.md#accessibility)의 일부로 제공되고 있습니다. 자세한 내용은 [Game Chat 2 개요](https://docs.microsoft.com/gaming/xbox-live//multiplayer/chat/game-chat-2-overview.md)를 참조하세요.
+ID@Xbox 및 관리 파트너 프로그램의 개발자들을 위해 텍스트-음성 및 음성-텍스트 변환 기능이 Xbox Live 서비스에서 [Game Chat 2 접근성 기능](https://docs.microsoft.com/gaming/xbox-live/multiplayer/chat/using-game-chat-2.md#accessibility)의 일부로 제공되고 있습니다. 자세한 내용은 [Game Chat 2 개요](https://docs.microsoft.com/gaming/xbox-live/multiplayer/chat/game-chat-2-overview.md)를 참조하세요.
 
 ### <a name="sound-feedback"></a>소리 피드백
 
@@ -225,7 +225,7 @@ Windows, Xbox One 등의 다양한 게임 시스템에서 사용할 수 있는 �
 
 ### <a name="photosensitivity-epilepsy-testing"></a>감광성 간질 테스트
 
-감광성 간질(PSE)은 깜박이는 조명이나 움직이는 특정한 시각적 형태와 패턴에 노출되는 것과 같이 시각적 자극에 의해 발작이 시작되는 병입니다. 약 3%의 사용자에서 발생하며 어린이와 청소년에서 더 일반적으로 나타납니다. 숫자로 환산하면 [5 ~ 24세 인구 4000명 당 1명](https://www.epilepsy.com/information/professionals/about-epilepsy-seizures/reflex-seizures-and-related-epileptic-syndromes-3)꼴입니다.
+감광성 간질(PSE)은 깜박이는 조명이나 움직이는 특정한 시각적 형태와 패턴에 노출되는 것과 같이 시각적 자극에 의해 발작이 시작되는 병입니다. 약 3%의 사용자에서 발생하며 어린이와 청소년에서 더 일반적으로 나타납니다. 숫자로 환산하면 [5 ~ 24세 인구 4000명 당 1명](https://www.epilepsy.com/learn/professionals/about-epilepsy-seizures/reflex-seizures-and-related-epileptic-syndromes-0)꼴입니다.
 
 게임 플레이 기간, 깜박임 빈도, 조명 강도, 배경과 조명 대비, 화면과 게이머 간의 거리, 조명의 파장 등 비디오 게임을 플레이할 때 감광성 반응을 초래할 수 있는 다양한 요인이 있습니다.
 
@@ -253,7 +253,7 @@ Windows, Xbox One 등의 다양한 게임 시스템에서 사용할 수 있는 �
 
 ### <a name="game-accessibility-guidelines"></a>게임 접근성 지침
 * [게임 내게 필요한 옵션 지침](https://gameaccessibilityguidelines.com/)
-* [AbleGamers Foundation 지침](https://www.includification.com/)
+* [AbleGamers Foundation 지침](https://accessible.games/accessible-player-experiences/)
 * [보편적으로 액세스할 수 있습니다 (UA) 게임 디자인](https://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
 
 ### <a name="custom-input-controllers"></a>사용자 지정 입력 컨트롤러
@@ -262,14 +262,14 @@ Windows, Xbox One 등의 다양한 게임 시스템에서 사용할 수 있는 �
 
 ## <a name="references-used"></a>사용된 참조
 * [게임 내게 필요한 옵션 지침](https://gameaccessibilityguidelines.com/)
-* [AbleGamers Foundation 지침](https://www.includification.com/)
+* [AbleGamers Foundation 지침](https://accessible.games/accessible-player-experiences/)
 * [시각 인식, 커뮤니티 관심 회사 색](https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
 * [수행 하는 방법을 자막 well-Ian Hamilton 여 Gamasutra 하는 블로그 문서](https://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
 * [모든 프로그램에 대 한 혁신](https://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
 * [간 질 foundation](https://www.epilepsy.com/)
 
 ## <a name="related-links"></a>관련 링크
-* [포괄 디자인](https://www.microsoft.com/design/inclusive)
+* [포괄 디자인](https://www.microsoft.com/design/inclusive/)
 * [Microsoft Accessibility Developer Hub](https://developer.microsoft.com/windows/accessible-apps)
 * [액세스 가능한 UWP 앱 개발](https://docs.microsoft.com/windows/uwp/accessibility/accessibility)
 * [엔지니어링 소프트웨어에 대 한 내게 필요한 옵션 전자책](https://www.microsoft.com/download/details.aspx?id=19262)

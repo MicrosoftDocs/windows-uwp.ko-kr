@@ -6,12 +6,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ebc87c685d92fa4dbc1a954e2fc6f0cf549a5554
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 62f603a6ff5aadc1c3e5342db6a7d771f8c37a7b
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366073"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320837"
 ---
 # <a name="storyboarded-animations"></a>스토리보드 애니메이션
 
@@ -70,7 +70,7 @@ Microsoft Silverlight 또는 WPF(Windows Presentation Foundation)에 대해 잘 
 
 ### <a name="targeting-the-dependency-property-to-animate"></a>애니메이션 효과를 줄 종속성 속성을 대상으로 지정
 
-애니메이션에서 [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v%3Dvs.95))에 대한 값을 설정합니다. 이 값은 대상 개체에서 애니메이션 효과를 줄 특정 속성을 결정합니다.
+애니메이션에서 [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95))에 대한 값을 설정합니다. 이 값은 대상 개체에서 애니메이션 효과를 줄 특정 속성을 결정합니다.
 
 경우에 따라 대상 개체의 직접 속성이 아닌 속성을 대상으로 지정해야 하지만 그러면 개체-속성 관계에서 더 깊게 중첩됩니다. 애니메이션 효과를 줄 수 있는 속성 형식([**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN), [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color))을 참조할 때까지 영향을 주는 일련의 개체 및 속성 값으로 드릴다운하려면 이렇게 해야 하는 경우가 종종 있습니다. 이 개념을 *간접 대상*이라고 하고 이 방식으로 속성을 대상 지정하는 구문을 *속성 경로*라고 합니다.
 
@@ -101,7 +101,7 @@ Microsoft Silverlight 또는 WPF(Windows Presentation Foundation)에 대해 잘 
 
 XAML 연결 속성에도 애니메이션 효과를 줄 수 있습니다. 항상 전체 연결 속성 이름을 괄호로 묶습니다(예: `(Canvas.Left)`). 자세한 내용은 [XAML 연결 속성에 애니메이션 효과 주기](./storyboarded-animations.md#animating-xaml-attached-properties)를 참조하세요.
 
-애니메이션 효과를 줄 속성의 간접 대상에 속성 경로를 사용하는 방법에 대한 자세한 내용은 [속성 경로 구문](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax) 또는 [**Storyboard.TargetProperty 연결된 속성**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v%3Dvs.95))을 참조하세요.
+애니메이션 효과를 줄 속성의 간접 대상에 속성 경로를 사용하는 방법에 대한 자세한 내용은 [속성 경로 구문](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax) 또는 [**Storyboard.TargetProperty 연결된 속성**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95))을 참조하세요.
 
 ### <a name="animation-types"></a>애니메이션 형식
 
@@ -323,7 +323,7 @@ XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법
 
 ## <a name="animating-xaml-attached-properties"></a>XAML 연결 속성에 애니메이션 효과 주기
 
-일반적인 시나리오는 아니지만 애니메이션 효과를 준 값을 XAML 연결 속성에 적용할 수 있습니다. 연결 속성의 정의와 작동 방식에 대한 자세한 내용은 [연결 속성 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/attached-properties-overview)를 참조하세요. 연결된 속성을 대상으로 지정하려면 속성 이름을 괄호로 묶는 [속성 경로 구문](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax)이 필요합니다. 별도의 정수 값을 적용하는 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames)를 사용하여 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v%3Dvs.95)) 같은 기본 제공된 연결 속성에 애니메이션 효과를 줄 수 있습니다. 그러나 Windows 런타임 XAML 구현의 기존 제한점은 사용자 지정 연결 속성에 애니메이션 효과를 줄 수 없다는 것입니다.
+일반적인 시나리오는 아니지만 애니메이션 효과를 준 값을 XAML 연결 속성에 적용할 수 있습니다. 연결 속성의 정의와 작동 방식에 대한 자세한 내용은 [연결 속성 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/attached-properties-overview)를 참조하세요. 연결된 속성을 대상으로 지정하려면 속성 이름을 괄호로 묶는 [속성 경로 구문](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax)이 필요합니다. 별도의 정수 값을 적용하는 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames)를 사용하여 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95)) 같은 기본 제공된 연결 속성에 애니메이션 효과를 줄 수 있습니다. 그러나 Windows 런타임 XAML 구현의 기존 제한점은 사용자 지정 연결 속성에 애니메이션 효과를 줄 수 없다는 것입니다.
 
 ## <a name="more-animation-types-and-next-steps-for-learning-about-animating-your-ui"></a>추가 애니메이션 형식 및 UI에 애니메이션 효과를 주는 방법을 알아보는 다음 단계
 
@@ -337,7 +337,7 @@ XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법
 * [시각적 상태에 대 한 애니메이션 스토리 보드를 만들었습니다](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10))
 * [컨트롤 템플릿](https://docs.microsoft.com/windows/uwp/controls-and-patterns/control-templates)
 * [**스토리 보드**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)
-* [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v%3Dvs.95))
+* [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95))
  
 
  

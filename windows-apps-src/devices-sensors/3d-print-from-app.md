@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 3dprinting, 3d 인쇄
 ms.localizationpriority: medium
-ms.openlocfilehash: 712efde0293edff6134309ac2d6d9105413a2877
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e2ed99720afdccef297d46853d4a2445b497195e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370421"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321691"
 ---
 # <a name="3d-printing-from-your-app"></a>앱에서 3D 인쇄
 
@@ -54,7 +54,7 @@ UI 피드백에 대한 **TextBlock**을 추가합니다.
 ## <a name="get-the-3d-data"></a>3D 데이터 가져오기
 
 
-앱에서 3D 기하 도형 데이터를 얻는 방법은 다양합니다. 앱에서 3D 스캔을 통해 데이터를 검색하거나, 웹 리소스에서 모델 데이터를 다운로드하거나, 수학 공식이나 사용자 입력을 사용하여 프로그래밍 방식으로 3D 메시를 생성합니다. 이 가이드에서는 편의상 디바이스 저장소에서 일반적인 몇 가지 파일 형식의 3D 데이터 파일을 프로그램 메모리로 로드하는 방법을 보여 줍니다. [3D Builder 모델 라이브러리](https://developer.microsoft.com/windows/hardware/3d-builder-model-library)는 디바이스에 쉽게 다운로드할 수 있는 다양한 모델을 제공합니다.
+앱에서 3D 기하 도형 데이터를 얻는 방법은 다양합니다. 앱에서 3D 스캔을 통해 데이터를 검색하거나, 웹 리소스에서 모델 데이터를 다운로드하거나, 수학 공식이나 사용자 입력을 사용하여 프로그래밍 방식으로 3D 메시를 생성합니다. 이 가이드에서는 편의상 디바이스 저장소에서 일반적인 몇 가지 파일 형식의 3D 데이터 파일을 프로그램 메모리로 로드하는 방법을 보여 줍니다. [3D Builder 모델 라이브러리](https://developer.microsoft.com/windows/hardware/3d-print/windows-3d-printing)는 디바이스에 쉽게 다운로드할 수 있는 다양한 모델을 제공합니다.
 
 `OnLoadClick` 메서드에서 [**FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 클래스를 사용하여 단일 파일을 앱의 메모리에 로드합니다.
 

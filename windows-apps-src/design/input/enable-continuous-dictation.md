@@ -8,12 +8,12 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3709a9076ce1d258ce2eca7f97aa1478088a9044
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 646f4ad98e6c914c2318a164629d31ce7b67dab4
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363573"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317301"
 ---
 # <a name="continuous-dictation"></a>연속 받아쓰기
 
@@ -125,7 +125,7 @@ speechRecognizer.ContinuousRecognitionSession.ResultGenerated +=
 
 2.  그런 다음 [**Confidence**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.confidence) 속성을 확인합니다. 신뢰도 값이 [**Medium**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionConfidence) 이상인 경우 StringBuilder에 텍스트를 추가합니다. 또한 입력을 수집할 때 UI를 업데이트합니다.
 
-    **참고**  는 [ **ResultGenerated** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) UI를 직접 업데이트할 수 없습니다는 백그라운드 스레드에서 이벤트가 발생 합니다. 처리기가 UI를 업데이트 해야 할 경우 (으로 \[음성 및 TTS 샘플\] 않습니다), 업데이트를 통해 UI 스레드로 발송 되어야 하는 [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) 디스패처의 메서드.
+    **참고**  는 [ **ResultGenerated** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) UI를 직접 업데이트할 수 없습니다는 백그라운드 스레드에서 이벤트가 발생 합니다. 처리기가 UI를 업데이트 해야 할 경우 (으로 \[음성 및 TTS 샘플\] 않습니다), 업데이트를 통해 UI 스레드로 발송 되어야 하는 [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 디스패처의 메서드.
 ```csharp
 private async void ContinuousRecognitionSession_ResultGenerated(
       SpeechContinuousRecognitionSession sender,
@@ -165,7 +165,7 @@ speechRecognizer.ContinuousRecognitionSession.Completed +=
 
 4.  이벤트 처리기는 Status 속성을 확인하여 인식에 성공했는지 여부를 알아봅니다. 또한 사용자가 말하기를 중지하는 경우도 처리합니다. [  **TimeoutExceeded**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus)는 사용자가 말하기를 마친 것을 의미하므로, 대개 인식에 성공한 것으로 간주됩니다. 한층 뛰어난 환경을 구현하기 위해 코드에서 이런 경우를 처리해야 합니다.
 
-    **참고**  는 [ **ResultGenerated** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) UI를 직접 업데이트할 수 없습니다는 백그라운드 스레드에서 이벤트가 발생 합니다. 처리기가 UI를 업데이트 해야 할 경우 (으로 \[음성 및 TTS 샘플\] 않습니다), 업데이트를 통해 UI 스레드로 발송 되어야 하는 [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) 디스패처의 메서드.
+    **참고**  는 [ **ResultGenerated** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) UI를 직접 업데이트할 수 없습니다는 백그라운드 스레드에서 이벤트가 발생 합니다. 처리기가 UI를 업데이트 해야 할 경우 (으로 \[음성 및 TTS 샘플\] 않습니다), 업데이트를 통해 UI 스레드로 발송 되어야 하는 [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 디스패처의 메서드.
 ```csharp
 private async void ContinuousRecognitionSession_Completed(
       SpeechContinuousRecognitionSession sender,

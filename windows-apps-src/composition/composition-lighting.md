@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 733ce75942a05482ade88c1510e788f1cbd515d4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c23de238a0004066b44cfe962e2de72216eb7a6d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602208"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318473"
 ---
 # <a name="using-lights-in-windows-ui"></a>Windows UI에서 광원을 사용 하 여
 
@@ -35,10 +35,10 @@ Windows.UI.Composition Api 실시간 애니메이션 및 효과 만드는 데 �
 
 | 형식 | 설명 |
 | --- | --- |
-| [Ambientlight를 함께 사용](/uwp/api/windows.ui.composition.ambientlight) | 장면에 있는 모든 항목 표시 되는 비 방향 빛을 내보내는 광원 반영 합니다. |
+| [AmbientLight](/uwp/api/windows.ui.composition.ambientlight) | 장면에 있는 모든 항목 표시 되는 비 방향 빛을 내보내는 광원 반영 합니다. |
 | [DistantLight](/uwp/api/windows.ui.composition.distantlight) | 크기에 제한이 없는 먼 광원을 단일 방향으로 조명을 내보냅니다. Sun 같은. |
 | [PointLight](/uwp/api/windows.ui.composition.pointlight) | 조명을 모든 방향으로 내보내는 광원의 지점 원본입니다. 전구 같은. |
-| [추천](/uwp/api/windows.ui.composition.spotlight) | 광원을 광원의 내부 및 외부 콘을 내보냅니다. 같은 손전등 합니다. |
+| [SpotLight](/uwp/api/windows.ui.composition.spotlight) | 광원을 광원의 내부 및 외부 콘을 내보냅니다. 같은 손전등 합니다. |
 
 ## <a name="targets"></a>대상
 
@@ -63,17 +63,17 @@ Windows.UI.Composition Api 실시간 애니메이션 및 효과 만드는 데 �
 _pointLight.Offset = new Vector3(-(float)TextBlock.ActualWidth, (float)TextBlock.ActualHeight / 2, (float)TextBlock.FontSize);
 ```
 
-전체 참조 [텍스트 Shimmer](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2014393/TextShimmer) 자세한 무명 인쇄 업자가 WindowUIDevLabs 샘플에 있는 샘플입니다.
+전체 참조 [텍스트 Shimmer](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 14393/TextShimmer) 자세한 무명 인쇄 업자가 WindowUIDevLabs 샘플에 있는 샘플입니다.
 
-## <a name="restrictions"></a>제한 사항
+## <a name="restrictions"></a>Restrictions
 
 콘텐츠 확인 켜지 CompositionLight 여 때 고려해 야 할 여러 요인이 있습니다.
 
-개념 | 세부 정보
+개념 | 설명
 --- | ---
 **한 앰비언트 조명** | 장면에 앰비언트가 아니어야 광원 추가 모든 기존 조명 해제 됩니다.  앰비언트가 아니어야 광원 대상이 아닌 항목 검게 표시 됩니다.  대상으로 지정 하지 광원 자연 스러운 방식으로 주변 시각적 개체를 함께 다른 광원에에서 주변 광원을 사용 합니다.
 **조명 수** | UI를 대상으로 모든 조합에서 모든 두 앰비언트가 아니어야 컴퍼지션 광원을 사용할 수 있습니다. 주변 광원; 제한 되지 않습니다. 스폿 지점과 먼 광원 됩니다.
-**수명** | CompositionLight 수명 조건이 발생할 수 있습니다 (예: 가비지 수집기 사용 되기 전에 조명 개체를 재활용할 수 있습니다).  응용 프로그램 수명을 관리 하는 데 멤버로 조명을 추가 하 여 조명에 대 한 참조를 유지 하는 것이 좋습니다.
+**Lifetime** | CompositionLight 수명 조건이 발생할 수 있습니다 (예: 가비지 수집기 사용 되기 전에 조명 개체를 재활용할 수 있습니다).  응용 프로그램 수명을 관리 하는 데 멤버로 조명을 추가 하 여 조명에 대 한 참조를 유지 하는 것이 좋습니다.
 **변환** | 광원 UI와 같은 효과 사용 하는 위의 노드에 배치 해야 합니다 [원근 변환을](/windows/uwp/design/layout/3-d-perspective-effects) 올바르게 그릴 시각적 구조에 있습니다.
 **대상 및 좌표 공간** | CoordinateSpace 공간이 visual 모든 조명 속성을 설정 해야 합니다. CompositionLight.Targets는 CoordinateSpace 트리 내에 있어야 합니다.
 
@@ -84,10 +84,10 @@ _pointLight.Offset = new Vector3(-(float)TextBlock.ActualWidth, (float)TextBlock
 속성 | 설명
 --- | ---
 **색** | 합니다 [Color](/uwp/api/windows.ui.color) 조명의 합니다. 조명 색 값은 정의한 [D3D](https://docs.microsoft.com/windows/uwp/graphics-concepts/light-properties) 확산을 주변광을 내보낸다는 것 색을 정의 하는 반사 합니다. 표시등; RGBA 값을 사용 하는 조명 알파 색 구성 요소 사용 되지 않습니다.
-**방향** | 광원의 방향입니다. 밝은 가리키고 있는 방향을 기준으로 지정 된 해당 [CoordinateSpace](/uwp/api/windows.ui.composition.distantlight.coordinatespace) Visual 합니다.
+**Direction** | 광원의 방향입니다. 밝은 가리키고 있는 방향을 기준으로 지정 된 해당 [CoordinateSpace](/uwp/api/windows.ui.composition.distantlight.coordinatespace) Visual 합니다.
 **좌표 공간** | 모든 시각적 개체에는 암시적 3D 좌표 공간입니다. X 방향은 왼쪽에서 오른쪽입니다. Y 방향 방법은 위쪽에서 아래쪽입니다. Z 방향의 평면에서 점입니다. 이 좌표 원래 점은 시각적 개체의 왼쪽 위 모퉁이 고 단위 장치 독립적 픽셀 (DIP)입니다. 이 좌표에 정의 된 광원의 오프셋입니다.
 **내부 및 외부 콘** | 스포트라이트는 밝은 안쪽 원뿔과 바깥쪽 원뿔 등 두 부분으로 구성된 원뿔 모양의 빛을 방출합니다. 컴퍼지션 내부 및 외부 원뿔 각도 및 색 제어할 수 있습니다.
-**오프셋** | 시각적 개체의 좌표 공간을 기준으로 광원의 오프셋입니다.
+**Offset** | 시각적 개체의 좌표 공간을 기준으로 광원의 오프셋입니다.
 
 > [!NOTE]
 > 여러 개의 조명을 동일한 시각적 개체에 도달할 때 또는 광원의 색 값 1.0 초과 충분히 커지면 때마다 조명의 색의 광원 색 채널을 고정으로 인해 변경할 수 있습니다.
@@ -167,4 +167,4 @@ CompositionBrush CreateNormalMapBrush(ICompositionSurface normalMapImage)
 - [CompositionCapabilities API](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositioncapabilities)
 - [조명의 수학](https://docs.microsoft.com/windows/uwp/graphics-concepts/mathematics-of-lighting)
 - [SceneLightingEffect](https://docs.microsoft.com/uwp/api/windows.ui.composition.effects.scenelightingeffect)
-- [WindowsUIDevLabs GitHub 리포지토리](https://github.com/Microsoft/WindowsUIDevLabs)
+- [WindowsUIDevLabs GitHub Repo](https://github.com/microsoft/WindowsCompositionSamples)

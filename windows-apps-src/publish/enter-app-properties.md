@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 게임 설정, 표시 모드, 시스템 요구 사항, 하드웨어 요구 사항, 최소 하드웨어, 권장 하드웨어, 개인 정보 취급 방침, 지원 연락처 정보, 앱 웹 사이트, 지원 정보
 ms.localizationpriority: medium
-ms.openlocfilehash: ec3b78da4e56ab5994155c41505bbdde42b44e12
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 5bc1283560334d2eac97fd358feabfca0f411014
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63774050"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320036"
 ---
 # <a name="enter-app-properties"></a>앱 속성 입력
 
@@ -67,7 +67,7 @@ Microsoft Store에서 앱을 분류하는 데 사용해야 하는 범주 및 하
 
 ## <a name="display-mode"></a>디스플레이 모드
 
-이 섹션에서는 제품이 PC 및/또는 HoloLens 디바이스에서 [Windows Mixed Reality](https://developer.microsoft.com/windows/mixed-reality)에 대해 2D가 아닌 몰입형 보기로 실행되도록 설계되어 있는지 여부를 표시하도록 할 수 있습니다. 몰입형 보기임을 표시하면 다음 또한 수행해야 합니다.
+이 섹션에서는 제품이 PC 및/또는 HoloLens 디바이스에서 [Windows Mixed Reality](https://developer.microsoft.com/mixed-reality)에 대해 2D가 아닌 몰입형 보기로 실행되도록 설계되어 있는지 여부를 표시하도록 할 수 있습니다. 몰입형 보기임을 표시하면 다음 또한 수행해야 합니다.
 - **속성** 페이지의 아래에 표시되는 [시스템 요구 사항](#system-requirements) 섹션에서 **Windows Mixed Reality 몰입형 헤드셋**에 대해 **최소 하드웨어** 또는 **권장 하드웨어**를 선택 합니다.
 - **경계 설정**(PC가 선택된 경우)을 지정하여 앉거나 서서 사용해야 하는지, 또는 사용자가 이를 이동하면서 사용하는 것을 허용(또는 허락)하는지 여부를 알립니다. 
 

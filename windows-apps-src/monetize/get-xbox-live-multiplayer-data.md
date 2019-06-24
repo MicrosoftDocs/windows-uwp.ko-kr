@@ -5,20 +5,20 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 멀티플레이
 ms.localizationpriority: medium
-ms.openlocfilehash: 58f470abdf7cbf0770bf01dd123a8fdfd2c2cbea
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: b80a9dc8828459e7734370061e960fad64ab7015
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162998"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321770"
 ---
 # <a name="get-xbox-live-multiplayer-data"></a>Xbox Live 멀티플레이 데이터 가져오기
 
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원 게임](https://docs.microsoft.com/gaming/xbox-live//index.md)에 대한 일별 또는 월별 멀티플레이 데이터를 가져옵니다. 이 정보를 사용할 수 있습니다 합니다 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 파트너 센터에서.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원 게임](https://docs.microsoft.com/gaming/xbox-live/index.md)에 대한 일별 또는 월별 멀티플레이 데이터를 가져옵니다. 이 정보를 사용할 수 있습니다 합니다 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 파트너 센터에서.
 
 > [!IMPORTANT]
-> 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
+> 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -51,9 +51,9 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원
 |---------------|--------|---------------|------|
 | applicationId | string | Xbox Live 멀티플레이 데이터를 검색하려는 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.  |  예  |
 | metricType | string | 검색할 Xbox Live 분석 데이터의 유형을 지정하는 문자열입니다. 이 메서드에 대해 일별 멀티플레이 데이터를 가져오려면 **multiplayerdaily** 값을 지정하고 월별 멀티플레이 데이터를 가져오려면 **multiplayermonthly**를 지정합니다.  |  예  |
-| startDate | date | 검색할 멀티플레이 데이터의 날짜 범위에 대한 시작 날짜입니다. **multiplayerdaily**의 기본값은 현재 날짜 전 3개월입니다. **multiplayermonthly**의 기본값은 현재 날짜 전 1년입니다. |  아니요  |
-| endDate | date | 검색할 멀티플레이 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
-| top | ssNoversion | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니요  |
+| startDate | date | 검색할 멀티플레이 데이터의 날짜 범위에 대한 시작 날짜입니다. **multiplayerdaily**의 기본값은 현재 날짜 전 3개월입니다. **multiplayermonthly**의 기본값은 현재 날짜 전 1년입니다. |  아니오  |
+| endDate | date | 검색할 멀티플레이 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니오  |
+| top | ssNoversion | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니오  |
 | skip | ssNoversion | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 큰 데이터 집합의 페이지를 탐색할 수 있습니다. 예를 들어 top=10000 및 skip=0이면 데이터의 처음 10000개 행을 검색하고 top=10000 및 skip=10000이면 데이터의 다음 10000개 행을 검색하는 방식입니다. |  아니요  |
 | filter | string  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 각 문에는 응답 본문의 필드 이름 및 **eq** 또는 **ne** 연산자와 연결된 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 문자열 값은 *filter* 매개 변수에서 단일 따옴표로 묶여야 합니다. 응답 본문의 다음과 같은 필드를 지정할 수 있습니다.<p/><ul><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>market</strong></li><li><strong>subscriptionName</strong></li></ul> | 아니요   |
 | groupby | string | 지정된 필드에 대한 데이터 집계에만 적용되는 문입니다. 응답 본문의 다음과 같은 필드를 지정할 수 있습니다.<p/><ul><li><strong>date</strong></li><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>market</strong></li><li><strong>subscriptionName</strong></li></ul><p/>하나 이상의 *groupby* 필드를 지정하는 경우 응답 본문에서 지정하지 않은 다른 *groupby* 필드의 값은 **All**입니다. |  아니요  |
@@ -90,7 +90,7 @@ Authorization: Bearer <your access token>
 | 출시       | string | 멀티플레이 데이터가 발생한 지역에 대한 2자로 된 ISO 3166 국가 코드입니다.       |
 | packageVersion     | string |  게임에 대한 네 부분으로 된 패키지 버전입니다.  |
 | deviceType          | string | 멀티플레이 데이터가 발생한 장치 유형을 나타내는 다음 문자열 중 하나입니다.<p/><ul><li><strong>콘솔</strong></li><li><strong>PC</strong></li><li>**알 수 없음**</li></ul>  |
-| subscriptionName     | string |  멀티플레이 데이터에 사용되는 구독 이름입니다. 가능한 값은 **Xbox Game Pass** 및 **""**(구독 없음)입니다.  |
+| subscriptionName     | string |  멀티플레이 데이터에 사용되는 구독 이름입니다. 가능한 값은 **Xbox Game Pass** 및 **""** (구독 없음)입니다.  |
 | dailySessionCount     | number |  지정된 날짜에 게임의 멀티플레이 세션 수입니다.  |
 | engagementDurationMinutes     | number |  지정된 날짜에 고객이 게임의 멀티플레이 세션에 참여한 총 시간(분)입니다.  |
 | dailyActiveUsers     | number |  지정된 날짜에 게임에 참여한 활성 멀티플레이 사용자의 총 수입니다.  |
@@ -113,7 +113,7 @@ Authorization: Bearer <your access token>
 | 출시       | string | 멀티플레이 데이터가 발생한 지역에 대한 2자로 된 ISO 3166 국가 코드입니다.       |
 | packageVersion     | string |  게임에 대한 네 부분으로 된 패키지 버전입니다.  |
 | deviceType          | string | 멀티플레이 데이터가 발생한 장치 유형을 나타내는 다음 문자열 중 하나입니다.<p/><ul><li><strong>콘솔</strong></li><li><strong>PC</strong></li><li>**알 수 없음**</li></ul>  |
-| subscriptionName     | string |  멀티플레이 데이터에 사용되는 구독 이름입니다. 가능한 값은 **Xbox Game Pass** 및 **""**(구독 없음)입니다.  |
+| subscriptionName     | string |  멀티플레이 데이터에 사용되는 구독 이름입니다. 가능한 값은 **Xbox Game Pass** 및 **""** (구독 없음)입니다.  |
 | monthlySessionCount     | number |  지정된 달 동안 게임의 멀티플레이 세션 수입니다.   |
 | engagementDurationMinutes     | number |  지정된 달 동안 고객이 게임의 멀티플레이 세션에 참여한 총 시간(분)입니다.  |
 | monthlyActiveUsers     | number | 지정된 달 동안 게임에 참여한 활성 멀티플레이 사용자의 총 수입니다.   |

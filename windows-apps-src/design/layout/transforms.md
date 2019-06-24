@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fe9805bfd754c050371b41ff091b1b2edf47891
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: da0031dbb87bffb457786170494140dbee0b2a6e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66364926"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317113"
 ---
 # <a name="transforms-overview"></a>변환 개요
 
@@ -46,7 +46,7 @@ XAML 레이아웃에서 변형은 레이아웃 단계가 완료된 후에 적용
 
 변환을 사용 하 여 사용할 때마다 [ **UIElement.RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform), 다른 속성 임을 기억 [ **UIElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 는 변환의 동작 방식에 영향을 줍니다. [**RenderTransformOrigin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransformorigin). **RenderTransformOrigin**에서 선언하는 사항은 요소의 기본(0, 0) 지점 또는 해당 요소의 상대 좌표 공간 내 다른 원점에 전체 변형을 적용할지 여부입니다. 일반적인 요소의 경우 (0, 0)은 왼쪽 맨 위에 변형을 적용합니다. 원하는 효과에 따라 변형의 **CenterX** 및 **CenterY** 값을 조정하는 대신 **RenderTransformOrigin**을 변경할 수도 있습니다. **RenderTransformOrigin** 및 **CenterX** / **CenterY** 값을 모두 적용하는 경우 특히 값에 애니메이션 효과를 적용하면 결과가 혼란스러울 수 있습니다.
 
-적중 횟수 테스트를 위해 변형이 적용된 개체는 x-y 공간의 시각적 모양과 일치하는 예상 방식으로 계속 입력에 응답합니다. 예를 들어 [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform)을 사용하여 UI에서 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 수평으로 400픽셀만큼 이동한 경우 **Rectangle**이 시각적으로 표시되는 지점을 사용자가 누르면 **Rectangle**이 [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트에 응답합니다. 사용자가 변환 전에 **Rectangle**이 있던 영역을 누르는 경우 false 이벤트가 표시되지 않습니다. 적중 횟수 테스트에 영향을 주는 모든 Z-인덱스 고려 사항의 경우 변형을 적용해도 차이가 없습니다. x-y 공간의 한 지점에 대한 입력 이벤트를 처리하는 요소를 제어하는 Z-인덱스는 컨테이너에서 선언된 자식 순서를 사용하여 평가됩니다. 해당 순서는 일반적으로 XAML에서 요소를 선언한 순서와 같습니다. 하지만 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 개체의 자식 요소는 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v%3Dvs.95)) 연결된 속성을 자식 요소에 적용하여 순서를 조정할 수 있습니다.
+적중 횟수 테스트를 위해 변형이 적용된 개체는 x-y 공간의 시각적 모양과 일치하는 예상 방식으로 계속 입력에 응답합니다. 예를 들어 [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform)을 사용하여 UI에서 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 수평으로 400픽셀만큼 이동한 경우 **Rectangle**이 시각적으로 표시되는 지점을 사용자가 누르면 **Rectangle**이 [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트에 응답합니다. 사용자가 변환 전에 **Rectangle**이 있던 영역을 누르는 경우 false 이벤트가 표시되지 않습니다. 적중 횟수 테스트에 영향을 주는 모든 Z-인덱스 고려 사항의 경우 변형을 적용해도 차이가 없습니다. x-y 공간의 한 지점에 대한 입력 이벤트를 처리하는 요소를 제어하는 Z-인덱스는 컨테이너에서 선언된 자식 순서를 사용하여 평가됩니다. 해당 순서는 일반적으로 XAML에서 요소를 선언한 순서와 같습니다. 하지만 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 개체의 자식 요소는 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95)) 연결된 속성을 자식 요소에 적용하여 순서를 조정할 수 있습니다.
 
 ## <a name="span-idothertransformpropertiesspanspan-idothertransformpropertiesspanspan-idothertransformpropertiesspanother-transform-properties"></a><span id="Other_transform_properties"></span><span id="other_transform_properties"></span><span id="OTHER_TRANSFORM_PROPERTIES"></span>다른 변환 속성
 
@@ -95,7 +95,7 @@ void StartAnimation (object sender, RoutedEventArgs e) {
 
 ## <a name="span-idaccountingforcoordinateframesofreferenceatruntimespanspan-idaccountingforcoordinateframesofreferenceatruntimespanspan-idaccountingforcoordinateframesofreferenceatruntimespanaccounting-for-coordinate-frames-of-reference-at-run-time"></a><span id="Accounting_for_coordinate_frames_of_reference_at_run_time"></span><span id="accounting_for_coordinate_frames_of_reference_at_run_time"></span><span id="ACCOUNTING_FOR_COORDINATE_FRAMES_OF_REFERENCE_AT_RUN_TIME"></span>런타임 시 좌표 프레임의 참조에 대 한 계정
 
-[**UIElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 라는 메서드가 [ **TransformToVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.)를 생성할 수 있는 한 [ **변환** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Transform) 두 가지 UI 요소에 대 한 좌표 프레임의 참조를 상호 연결합니다. 루트 시각적 모양을 첫 번째 매개 변수로 전달하는 경우 이 메서드를 사용하여 요소를 앱의 기본 참조 좌표 프레임과 비교할 수 있습니다. 이 기능은 다른 요소에서 입력 이벤트를 캡처한 경우 또는 실제로 레이아웃 단계를 요청하지 않고 레이아웃 동작을 예측하려는 경우에 유용할 수 있습니다.
+[**UIElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 라는 메서드가 [ **TransformToVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.transformtovisual)를 생성할 수 있는 한 [ **변환** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Transform) 두 가지 UI 요소에 대 한 좌표 프레임의 참조를 상호 연결합니다. 루트 시각적 모양을 첫 번째 매개 변수로 전달하는 경우 이 메서드를 사용하여 요소를 앱의 기본 참조 좌표 프레임과 비교할 수 있습니다. 이 기능은 다른 요소에서 입력 이벤트를 캡처한 경우 또는 실제로 레이아웃 단계를 요청하지 않고 레이아웃 동작을 예측하려는 경우에 유용할 수 있습니다.
 
 포인터 이벤트에서 얻은 이벤트 데이터를 통해 [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpoint.getcurrentpoint) 메서드에 액세스할 수 있으며, 여기서 *relativeTo* 매개 변수를 지정하여 참조 좌표 프레임을 앱 기본값이 아닌 특정 요소로 변경할 수 있습니다. 이 접근 방식에서는 반환된 [**PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) 개체를 만들 때 변환 변형이 내부적으로 적용되고 x-y 좌표 데이터가 변형됩니다.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1be694be412bbf0a4e076e8ac5753eefda74c55
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: be6780851c05f59abc373318f0746c8e436b74ac
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360906"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318412"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>이미지 또는 동영상에서 얼굴 감지
 
@@ -45,7 +45,7 @@ ms.locfileid: "66360906"
 
 [!code-cs[Decode](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDecode)]
 
-현재 버전에서 **FaceDetector** 클래스는 Gray8 또는 Nv12의 이미지만 지원합니다. **SoftwareBitmap** 클래스는 비트맵의 형식을 변환하는 [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows) 메서드를 제공합니다. 이 예제에서는 원본 이미지가 Gray8 픽셀 형식이 아닌 경우 이 형식으로 변환합니다. 지원되는 형식 집합이 이후 버전에서 확장되는 경우를 위해 원하는 경우 [**GetSupportedBitmapPixelFormats**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.getsupportedbitmappixelformats) 및 [**IsBitmapPixelFormatSupported**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.isbitmappixelformatsupported) 메서드를 사용하여 런타임에 지원되는 픽셀 형식인지 확인할 수 있습니다.
+현재 버전에서 **FaceDetector** 클래스는 Gray8 또는 Nv12의 이미지만 지원합니다. **SoftwareBitmap** 클래스는 비트맵의 형식을 변환하는 [**Convert**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert) 메서드를 제공합니다. 이 예제에서는 원본 이미지가 Gray8 픽셀 형식이 아닌 경우 이 형식으로 변환합니다. 지원되는 형식 집합이 이후 버전에서 확장되는 경우를 위해 원하는 경우 [**GetSupportedBitmapPixelFormats**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.getsupportedbitmappixelformats) 및 [**IsBitmapPixelFormatSupported**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.isbitmappixelformatsupported) 메서드를 사용하여 런타임에 지원되는 픽셀 형식인지 확인할 수 있습니다.
 
 [!code-cs[Format](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFormat)]
 
@@ -91,7 +91,7 @@ ms.locfileid: "66360906"
 
 **FaceDetector**와 마찬가지로 **FaceTracker**는 제한된 픽셀 형식 집합을 지원합니다. 이 예제에서는 제공된 프레임이 Nv12 형식이 아닌 경우 얼굴 감지를 중단합니다.
 
-[  **ProcessNextFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facetracker.processnextframeasync)을 호출하여 프레임에 있는 얼굴을 나타내는 [**DetectedFace**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.DetectedFace) 개체의 목록을 검색합니다. 얼굴 목록이 있으면 얼굴 감지를 위해 위에 설명된 동일한 방식으로 얼굴을 표시할 수 있습니다. 얼굴 추적 도우미 메서드는 UI 스레드에서 호출되지 않으므로 모든 UI 업데이트는 [**CoredDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) 호출 내에서 해야 합니다.
+[  **ProcessNextFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facetracker.processnextframeasync)을 호출하여 프레임에 있는 얼굴을 나타내는 [**DetectedFace**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.DetectedFace) 개체의 목록을 검색합니다. 얼굴 목록이 있으면 얼굴 감지를 위해 위에 설명된 동일한 방식으로 얼굴을 표시할 수 있습니다. 도우미 메서드를 추적 하는 얼굴 UI 스레드에서 호출 되지를 확인 해야 호출 내에서 UI 업데이트 확인 [ **CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)합니다.
 
 [!code-cs[ProcessCurrentVideoFrame](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetProcessCurrentVideoFrame)]
 

@@ -6,12 +6,12 @@ ms.date: 4/8/2019
 ms.topic: article
 keywords: Windows 10, uwp, 디버그, 테스트, 성능
 ms.localizationpriority: medium
-ms.openlocfilehash: 3263f7a0f1c353cfd15bf83e6fe1b0004b3bcc94
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 96e6f712f1a9882a10cf0706452628329c0c085d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362679"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317949"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>UWP 앱 배포 및 디버그
 
@@ -41,7 +41,7 @@ Visual Studio는 **디버그**, **프로세스에 연결**을 차례로 선택�
 
 **실행하지 않지만 시작되면 내 코드 디버그**를 선택하면 사용자 지정 시간에 시작할 때 Visual Studio 디버거가 UWP 앱에 연결합니다. 사용자 지정 매개 변수를 사용한 프로토콜 활성화 등 [다양한 시작 메서드](../xbox-apps/automate-launching-uwp-apps.md)의 제어 경로를 디버그하는 효과적인 방법입니다.  
 
-UWP 앱은 Windows 8.1 이상에서 개발하고 컴파일할 수 있지만 실행하려면 Windows 10이 필요합니다. Windows 8.1 PC에서 UWP 앱을 개발하는 경우 호스트 및 대상 컴퓨터가 모두 동일한 LAN에 있다면 다른 Windows 10 디바이스에서 실행되는 UWP 앱을 원격으로 디버그할 수 있습니다. 이렇게 하려면 두 컴퓨터에서 모두 [Visual Studio용 원격 도구](https://www.visualstudio.com/downloads/)를 다운로드하여 설치합니다. 설치된 버전이 설치한 Visual Studio의 기존 버전과 일치해야 하며 선택한 아키텍처(x86, x64)도 대상 앱의 아키텍처와 일치해야 합니다.
+UWP 앱은 Windows 8.1 이상에서 개발하고 컴파일할 수 있지만 실행하려면 Windows 10이 필요합니다. Windows 8.1 PC에서 UWP 앱을 개발하는 경우 호스트 및 대상 컴퓨터가 모두 동일한 LAN에 있다면 다른 Windows 10 디바이스에서 실행되는 UWP 앱을 원격으로 디버그할 수 있습니다. 이렇게 하려면 두 컴퓨터에서 모두 [Visual Studio용 원격 도구](https://visualstudio.microsoft.com/downloads/)를 다운로드하여 설치합니다. 설치된 버전이 설치한 Visual Studio의 기존 버전과 일치해야 하며 선택한 아키텍처(x86, x64)도 대상 앱의 아키텍처와 일치해야 합니다.
 
 ## <a name="package-layout"></a>패키지 레이아웃
 
@@ -94,7 +94,7 @@ C# 또는 Microsoft Visual Basic 앱에 대한 원격 컴퓨터를 지정하려�
 
 로 변경 하도록 **인증 없음**를 **원격 디버거**로 이동 하세요 **도구**  - &gt; **옵션**, 및 로 설정한 **인증 없음**합니다. 원격 디버거를 설정한 후 호스트 디바이스를 [개발자 모드](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)로 설정했는지도 확인해야 합니다. 그런 다음 개발 컴퓨터에서 배포할 수 있습니다.
 
-자세한 내용은 [Visual Studio 다운로드 센터](https://www.visualstudio.com/downloads/)를 참조하세요.
+자세한 내용은 [Visual Studio 다운로드 센터](https://visualstudio.microsoft.com/downloads/)를 참조하세요.
 
 ## <a name="passing-command-line-debug-arguments"></a>명령줄 디버그 인수 전달
 

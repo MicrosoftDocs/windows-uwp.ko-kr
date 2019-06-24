@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 기술, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: ba15a4f965dc582a8bd4eaeca211367ea1fcb5cb
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c6d2b0bd04fd14804f65072c8a698e1a240ce00e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368696"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321298"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>UWP 앱용 게임 기술
 
@@ -323,7 +323,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
 
 합니다 [Xbox Live 크리에이터 스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator) 모든 개발자는 UWP 게임에 Xbox Live를 통합 하 고 Xbox One 및 Windows 10을 게시할 수 있습니다. 최소한의 개발 시간을 투자하여 로그인, 상태, 순위표 등의 Xbox Live 소셜 환경을 타이틀과 통합하세요. Xbox Live 소셜 기능은 5500만이 넘는 활성 사용자에게 인지도를 확산시켜 고객을 조직적으로 유치할 수 있도록 설계되었습니다.
 
-훨씬 다양한 Xbox Live 기능을 사용하고 전용 마케팅 및 개발 지원을 이용하고 메인 Xbox One 스토어에 추천 앱으로 등록되고 싶다면 [ID@Xbox](https://www.xbox.com/developers/id) 프로그램에 지원하세요. Xbox Live 크리에이터스 프로그램 및 ID@Xbox프로그램에 제공되는 기능을 살펴보려면 [기능표](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#feature-table)를 참조하세요.
+훨씬 다양한 Xbox Live 기능을 사용하고 전용 마케팅 및 개발 지원을 이용하고 메인 Xbox One 스토어에 추천 앱으로 등록되고 싶다면 [ID@Xbox](https://www.xbox.com/developers/id) 프로그램에 지원하세요. Xbox Live 크리에이터스 프로그램 및 ID@Xbox프로그램에 제공되는 기능을 살펴보려면 [기능표](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#feature-table)를 참조하세요.
 
 자세한 내용을 보려면 [게임에 Xbox Live 추가](e2e.md#adding-xbox-live-to-your-game)로 이동하세요.
 

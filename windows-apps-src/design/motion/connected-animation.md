@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d1d459ab10614ddf9186275b1a6b66e8fa5703ec
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f448f481b2b55a42cbaa158cc4b07261e2d7717b
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66364955"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317131"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>UWP 앱에 대한 연결된 애니메이션
 
@@ -34,7 +34,7 @@ ms.locfileid: "66364955"
 <td>
     <p>있는 경우는 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하려면 여기를 클릭 <a href="xamlcontrolsgallery:/item/ConnectedAnimation">앱을 열고 작업에 연결 된 애니메이션을 참조 하세요.</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
@@ -101,7 +101,7 @@ ConnectedAnimation에서 구성 속성을 설정 하 여 애니메이션 구성�
 | Configuration | 측면 DefaultDuration? | 측면 DefaultEasingFunction? |
 | - | - | - |
 | 무게 | 예 | 예* <br/> **A에서 B에 대 한 기본 변환을이 감속/가속 함수를 사용 하지만 "중력 dip" 자체 감속/가속 함수입니다.*  |
-| 직접 | 아니요 <br/> *개 150ms 애니메이션 효과 줍니다.*| 아니오 <br/> *감속/가속 함수 감속을 사용 합니다.* |
+| 직접 | 아니요 <br/> *개 150ms 애니메이션 효과 줍니다.*| 아니요 <br/> *감속/가속 함수 감속을 사용 합니다.* |
 | 기본 | 예 | 예 |
 
 ## <a name="how-to-implement-connected-animation"></a>연결 된 애니메이션을 구현 하는 방법

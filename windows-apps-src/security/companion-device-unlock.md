@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ddadde2502e8512ba38dc30c6ac24d22631d62c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f653ebe874bfa4d4ad8bb608acf9495f02191de7
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372640"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320622"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Windows Hello 도우미(IoT) 디바이스에서 Windows 잠금 해제
 
@@ -38,7 +38,7 @@ Windows Hello 도우미 디바이스는 사용자 인증 환경을 향상하기 
 
 ### <a name="biometric-enabled-windows-hello-companion-devices"></a>생체 인식 지원 Windows Hello 도우미 디바이스
 
-도우미 디바이스에서 생체 인식을 지원하는 경우 [Windows 생체 인식 프레임워크](https://msdn.microsoft.com/library/windows/hardware/mt608302(v=vs.85).aspx)가 Windows Hello 도우미 디바이스 프레임워크보다 더 나은 솔루션일 수 있습니다. [cdfonboard@microsoft.com  ](mailto:cdfonboard@microsoft.com)으로 문의하시면 올바르게 접근하실 수 있도록 돕겠습니다.
+도우미 디바이스에서 생체 인식을 지원하는 경우 [Windows 생체 인식 프레임워크](https://msdn.microsoft.com/windows/hardware/commercialize/design/device-experiences/windows-hello)가 Windows Hello 도우미 디바이스 프레임워크보다 더 나은 솔루션일 수 있습니다. [cdfonboard@microsoft.com  ](mailto:cdfonboard@microsoft.com)으로 문의하시면 올바르게 접근하실 수 있도록 돕겠습니다.
 
 ### <a name="components-of-the-solution"></a>솔루션의 구성 요소
 

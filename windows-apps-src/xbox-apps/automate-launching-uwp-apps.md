@@ -4,12 +4,12 @@ description: 개발자는 프로토콜 활성화 및 시작 활성화를 사용�
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
-ms.openlocfilehash: f61fcfcef549295b8f3c9004572a74043a2917a2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: abc0b40178dc9b7c386342af6a6d85c6fb61945a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365825"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320265"
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Windows 10 UWP 앱 시작 자동화
 
@@ -136,7 +136,7 @@ C:\Program Files (x86)\Windows Kits\10\App Certification Kit\microsoft.windows.s
 
 ### <a name="launcher-application"></a>시작 관리자 응용 프로그램
 
-시작하는 데 COM을 사용하도록 지원하는 별도의 응용 프로그램을 만들 수 있습니다. 다음 예제에서는 시작 관리자 프로그램에서 시작 활성화로 시작하기 위한 C++ 코드를 보여 줍니다. 이 코드를 사용하여 **ApplicationActivationManager** 개체를 만들고, 앞에서 찾은 AUMID 및 인수를 전달하여 **ActivateApplication**을 호출합니다. 다른 매개 변수에 대한 자세한 내용은 [IApplicationActivationManager::ActivateApplication 메서드(MSDN)](https://msdn.microsoft.com/library/windows/desktop/hh706903(v=vs.85).aspx)를 참조하세요.
+시작하는 데 COM을 사용하도록 지원하는 별도의 응용 프로그램을 만들 수 있습니다. 다음 예제에서는 시작 관리자 프로그램에서 시작 활성화로 시작하기 위한 C++ 코드를 보여 줍니다. 이 코드를 사용하여 **ApplicationActivationManager** 개체를 만들고, 앞에서 찾은 AUMID 및 인수를 전달하여 **ActivateApplication**을 호출합니다. 다른 매개 변수에 대한 자세한 내용은 [IApplicationActivationManager::ActivateApplication 메서드(MSDN)](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)를 참조하세요.
 
 ```
 #include <ShObjIdl.h>

@@ -4,12 +4,12 @@ title: 결제 요청 API로 결제를 간단하게
 ms.date: 09/26/2017
 ms.topic: article
 keywords: windows 10, uwp, 지불 요청
-ms.openlocfilehash: a40b8265e3445319bd7baa530df0f9e9eaae0f31
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: f055bacbddae88cdbd100b460d933682b3c78a13
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63804492"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320056"
 ---
 # <a name="simplify-payments-with-the-payment-request-api"></a>결제 요청 API로 결제를 간단하게
 UWP 앱에 대 한 지불 요청 API 기반으로 합니다 [W3C 지불 요청 API 사양](https://w3c.github.io/browser-payment-api/)합니다. UWP 앱에서 체크 아웃 프로세스를 간소화 하는 기능 제공. 사용자가 체크 아웃을 통해 지불 옵션을 사용 하 고 이미 Microsoft 계정으로 저장 하는 주소를 전달 하 여 단축할 수 있습니다. 전환율을 높일 수 있으며 결제 정보를 토큰화 있으므로 데이터 침해 위험을 줄일 수 있습니다. Windows 10 크리에이터 스 업데이트부터, 사용자는 해당 저장 된 지불 옵션 UWP 앱에서 환경을 통해 쉽게 비용을 지불 사용할 수 있습니다.
@@ -18,7 +18,7 @@ UWP 앱에 대 한 지불 요청 API 기반으로 합니다 [W3C 지불 요청 A
 지불 요청 API를 사용 하 여 시작 하기 전에 수행 하거나 주의 해야 하는 몇 가지 있습니다.
 
 ### <a name="getting-a-merchant-id"></a>가맹점 ID를 가져오는 중
-지불 요청 프로세스의 일부로, Microsoft 서비스 공급자 로부터 사용자를 대신해 결제 토큰을 요청합니다. 따라서 API 사용을 시작 하기 전에 해당 토큰을 요청 하려면 권한이 필요 합니다.  판매자 계정을 등록 하 고 필요한 권한을 제공 하는 몇 가지 단계를 따라야 합니다. 이렇게 하려면로 이동 [Microsoft 판매자 센터](https://seller.microsoft.com/en-us/dashboard/registration/seller/?accountprogram=uwp)합니다. 이 작업을 수행한 후 복사 결과 가맹점 ID 지불 요청을 생성할 때 앱에 대 한 파트너 센터에서. 그런 다음 응용 프로그램가 지불 요청을 제출 하는 경우는 토큰을 받게 지불 결제 금액을 제출 해야 하는 프로세서에서.
+지불 요청 프로세스의 일부로, Microsoft 서비스 공급자 로부터 사용자를 대신해 결제 토큰을 요청합니다. 따라서 API 사용을 시작 하기 전에 해당 토큰을 요청 하려면 권한이 필요 합니다.  판매자 계정을 등록 하 고 필요한 권한을 제공 하는 몇 가지 단계를 따라야 합니다. 이렇게 하려면로 이동 [Microsoft 판매자 센터](https://partner.microsoft.com/dashboard/registration/seller?accountprogram=uwp)합니다. 이 작업을 수행한 후 복사 결과 가맹점 ID 지불 요청을 생성할 때 앱에 대 한 파트너 센터에서. 그런 다음 응용 프로그램가 지불 요청을 제출 하는 경우는 토큰을 받게 지불 결제 금액을 제출 해야 하는 프로세서에서.
 
 ### <a name="geographic-restrictions-and-language-support"></a>지리적 제한 사항 및 언어 지원
 미국 기반 비즈니스 미국에서 트랜잭션 처리 하기에 의해서만 지불 요청 API는 사용할 수 있습니다.
@@ -80,5 +80,5 @@ UWP 앱에 대 한 지불 요청 API 기반으로 합니다 [W3C 지불 요청 A
 - [Windows.ApplicationModel.Payments 참조 설명서](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.payments)
 - [GitHub의 UWP 쇼핑 앱 샘플](https://github.com/Microsoft/Windows-appsample-shopping)
 - [W3C 지불 요청 API 사양](https://www.w3.org/TR/payment-request/)
-- [지불 요청 API ](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/payment-request-api)
+- [지불 요청 API ](https://docs.microsoft.com/microsoft-edge/dev-guide/windows-integration/payment-request-api)
 

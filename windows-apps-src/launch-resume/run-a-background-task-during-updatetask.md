@@ -5,12 +5,12 @@ ms.date: 04/21/2017
 ms.topic: article
 keywords: windows 10, uwp, 업데이트, 백그라운드 작업, updatetask, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 3683595926f20fdd9f9af5929db65396b0001bcc
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d943623a9978d39fd3930edc07e7524fe1cadf55
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371483"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321783"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>UWP 앱 업데이트 시 백그라운드 작업을 실행합니다.
 
@@ -27,7 +27,7 @@ UWP 스토어 앱 업데이트 후 실행되는 백그라운드 작업을 작성
 - 솔루션에 Windows 런타임 구성 요소 개체 추가
 - 엡에서 구성 요소로의 참조 만들기
 - [  **IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)를 구현하는 구성 요소에 public sealed 클래스 만들기
-- 업데이트 작업 실행 시 호출되는 필수 진입점인 [**Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.) 메서드 구현 백그라운드 작업에서 비동기 호출을 만들려는 경우 [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)에 **Run** 메서드에 지연을 사용하는 방법이 나와 있습니다.
+- 업데이트 작업 실행 시 호출되는 필수 진입점인 [**Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드 구현 백그라운드 작업에서 비동기 호출을 만들려는 경우 [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)에 **Run** 메서드에 지연을 사용하는 방법이 나와 있습니다.
 
 업데이트 작업을 사용하기 위해 이 백그라운드 작업을 등록할 필요가 없습니다(**Out-of-process 백그라운드 작업 만들기 및 등록** 항목의 "실행할 백그라운드 작업 등록" 섹션 참조). 바로 이것이 업데이트 작업을 사용하는 주된 이유입니다. 백그라운드 작업을 등록하기 위해 업데이트 전에 앱을 한 번 이상 실행할 필요가 없으며 작업 등록을 위해 앱에 코드를 추가할 필요가 없기 때문입니다.
 

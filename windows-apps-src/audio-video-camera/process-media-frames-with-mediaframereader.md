@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e9db0960070c77485fbe8b2f3231f7ce8035b5c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2b77fb147ab614b19993700d5d99572f0247d54e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361487"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318276"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 
@@ -93,7 +93,7 @@ ms.locfileid: "66361487"
 ## <a name="set-the-preferred-format-for-the-frame-source"></a>프레임 원본에 대한 기본 형식 설정
 프레임 원본에 대한 기본 형식을 설정하려면 원본을 나타내는 [**MediaFrameSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSource) 개체를 가져와야 합니다. 이 개체를 가져오려면 초기화된 **MediaCapture** 개체의 [**Frames**](https://docs.microsoft.com/previous-versions/windows/apps/phone/jj207578(v=win.10)) 사전에 액세스하여 사용할 프레임 원본의 식별자를 지정합니다. 이러한 이유로 프레임 원본 그룹을 선택할 때 [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceInfo) 개체를 저장한 것입니다.
 
-[  **MediaFrameSource.SupportedFormats**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesource.supportedformats) 속성에는 프레임 원본에 대해 지원되는 형식을 설명하는 [**MediaFrameFormat**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameFormat) 개체 목록이 있습니다. **Where** Linq 확장 메서드를 사용하여 원하는 속성을 기반으로 형식을 선택합니다. 이 예제에서는 너비가 1080픽셀이고 32비트 RGB 형식으로 제공할 수 있는 형식이 선택됩니다. **FirstOrDefault** 확장 메서드는 목록의 첫 번째 항목을 선택합니다. 선택한 형식이 null이면 요청한 형식이 프레임 원본에서 지원되지 않습니다. 형식이 지원되는 경우 [**SetFormatAsync**](https://developer.microsoft.com/windows/apps/develop)를 호출하여 원본에서 이 형식을 사용하도록 요청할 수 있습니다.
+[  **MediaFrameSource.SupportedFormats**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesource.supportedformats) 속성에는 프레임 원본에 대해 지원되는 형식을 설명하는 [**MediaFrameFormat**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameFormat) 개체 목록이 있습니다. **Where** Linq 확장 메서드를 사용하여 원하는 속성을 기반으로 형식을 선택합니다. 이 예제에서는 너비가 1080픽셀이고 32비트 RGB 형식으로 제공할 수 있는 형식이 선택됩니다. **FirstOrDefault** 확장 메서드는 목록의 첫 번째 항목을 선택합니다. 선택한 형식이 null이면 요청한 형식이 프레임 원본에서 지원되지 않습니다. 형식이 지원되는 경우 [**SetFormatAsync**](https://docs.microsoft.com/windows/uwp/develop/)를 호출하여 원본에서 이 형식을 사용하도록 요청할 수 있습니다.
 
 [!code-cs[GetPreferredFormat](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetGetPreferredFormat)]
 
@@ -127,11 +127,11 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 
 이제 **FrameArrived** 이벤트 처리기를 구현해야 합니다. 처리기가 호출되면 *sender* 매개 변수에 이벤트를 발생시킬 **MediaFrameReader** 개체에 대한 참조가 포함됩니다. 이 개체에서 [**TryAcquireLatestFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.tryacquirelatestframe)을 호출하여 최신 프레임을 가져옵니다. 이름에서 알 수 있듯이 **TryAcquireLatestFrame**은 프레임을 반환하지 못할 수 있습니다. 따라서 VideoMediaFrame에 액세스한 다음 SoftwareBitmap 속성에 액세스할 때는 null인지 테스트해야 합니다. 이 예제에서는 null 조건부 연산자 ?를 사용하여 **SoftwareBitmap**에 액세스하고 검색된 개체가 null인지 확인합니다.
 
-**Image** 컨트롤은 프리멀티플라이되거나 알파가 없는 BRGA8 형식으로만 이미지를 표시할 수 있습니다. 도착하는 프레임이 해당 형식이 아니면 정적 메서드 [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows)가 소프트웨어 비트맵을 올바른 형식으로 변환합니다.
+**Image** 컨트롤은 프리멀티플라이되거나 알파가 없는 BRGA8 형식으로만 이미지를 표시할 수 있습니다. 도착하는 프레임이 해당 형식이 아니면 정적 메서드 [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.convert)가 소프트웨어 비트맵을 올바른 형식으로 변환합니다.
 
 다음으로 [**Interlocked.Exchange**](https://docs.microsoft.com/dotnet/api/system.threading.interlocked.exchange?redirectedfrom=MSDN#System_Threading_Interlocked_Exchange__1___0____0_) 메서드를 사용하여 도착하는 비트맵의 참조를 백 버퍼 비트맵으로 바꿉니다. 이 메서드는 스레드로부터 안전한 원자성 작업에서 이러한 참조를 바꿉니다. 바꾼 후에는 이제 *softwareBitmap* 변수에 있는 이전 백 버퍼 이미지가 삭제되어 해당 리소스가 정리됩니다.
 
-다음으로 **Image** 요소와 연관된 [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher)를 사용하여 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows)를 호출하여 UI 스레드에서 실행할 작업을 만듭니다. 작업 내에서 비동기 작업이 수행되므로 *async* 키워드를 사용하여 **RunAsync**로 전달된 람다 식이 선언됩니다.
+다음으로 **Image** 요소와 연관된 [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher)를 사용하여 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출하여 UI 스레드에서 실행할 작업을 만듭니다. 작업 내에서 비동기 작업이 수행되므로 *async* 키워드를 사용하여 **RunAsync**로 전달된 람다 식이 선언됩니다.
 
 작업 내에서 *_taskRunning* 변수를 검사하여 한 번에 작업의 한 인스턴스만 실행 중인지 확인합니다. 작업이 실행되고 있지 않은 경우 작업이 다시 실행되지 않도록 *_taskRunning*이 true로 설정됩니다. *while* 루프에서 백 버퍼 이미지가 null이 될 때까지 백 버퍼에서 임시 **SoftwareBitmap**으로 복사하기 위해 **Interlocked.Exchange**를 호출합니다. 임시 비트맵을 채울 때마다 **Image**의 **Source** 속성이 **SoftwareBitmapSource**로 캐스트된 다음 [**SetBitmapAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync)가 호출되어 이미지의 원본을 설정합니다.
 
@@ -235,7 +235,7 @@ Windows 버전 1709부터 XAML 페이지의 **[MediaPlayerElement](https://docs.
 
 [!code-cs[MediaSourceInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMediaSourceInitMediaCapture)]
 
-마지막으로 **[MediaSource.CreateFromMediaFrameSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfrommediaframesource)** 를 호출하고 관련 **MediaFrameSourceInfo** 개체의 **[Id](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.Id)** 속성을 사용하여 각 프레임 원본별로 **MediaSource**를 만들고 나서 **MediaCapture** object's **[FrameSources](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.FrameSources)** 컬렉션에서 프레임 원본 중 하나를 선택합니다.  **[SetMediaPlayer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.MediaPlayer)** 를 호출하여 새로운 **MediaPlayer** 개체를 초기화하고 이것을 **MediaPlayerElement**에 할당합니다. 그리고 나서 **[Source](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Source)** 속성을 새로 만든  **MediaSource** 개체로 설정합니다.
+마지막으로 **[MediaSource.CreateFromMediaFrameSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfrommediaframesource)** 를 호출하고 관련 **MediaFrameSourceInfo** 개체의 **[Id](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.Id)** 속성을 사용하여 각 프레임 원본별로 **MediaSource**를 만들고 나서 **MediaCapture** object's **[FrameSources](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.FrameSources)** 컬렉션에서 프레임 원본 중 하나를 선택합니다. **[SetMediaPlayer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.MediaPlayer)** 를 호출하여 새로운 **MediaPlayer** 개체를 초기화하고 이것을 **MediaPlayerElement**에 할당합니다. 그리고 나서 **[Source](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Source)** 속성을 새로 만든  **MediaSource** 개체로 설정합니다.
 
 [!code-cs[MediaSourceMediaPlayer](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMediaSourceMediaPlayer)]
 

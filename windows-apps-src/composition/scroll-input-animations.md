@@ -5,18 +5,18 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 118b3f6e306e60d1d8d569f0d58f2d77ea30d9a8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 25b0732b7c29653d18f0e018698ab4b6398d402a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635068"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318068"
 ---
 # <a name="enhance-existing-scrollviewer-experiences"></a>기존 ScrollViewer 경험 향상
 
 이 문서에서는 XAML ScrollViewer 및 ExpressionAnimations를 사용하여 동적 입력 기반의 동작 경험을 만드는 방법에 대해 설명합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 여기에서는 여러분이 이 문서에서 다룬 개념에 익숙하다고 가정합니다.
 
@@ -59,9 +59,9 @@ ScrollManipulationPropertySet에는 ScrollViewer의 스크롤 위치에 대한 �
 > [!NOTE]
 > GetScrollManipulationPropertySet 메서드에서 반환된 PropertySet을 클래스 변수에 할당하는 것이 좋습니다. 이렇게 하면 가비지 수집에 의해 속성 집합이 정리되지 않으므로 참조되는 ExpressionAnimation에 아무런 영향을 미치지 않습니다. ExpressionAnimations는 수식에 사용된 개체에 대한 강력한 참조를 유지하지 않습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
-위의 시차 샘플을 어떻게 조합하는지 살펴보겠습니다. 참고로, 앱의 모든 소스 코드는 [GitHub의 Window UI 개발자 랩 리포](https://github.com/Microsoft/WindowsUIDevLabs)에서 확인할 수 있습니다.
+위의 시차 샘플을 어떻게 조합하는지 살펴보겠습니다. 참고로, 앱의 모든 소스 코드는 [GitHub의 Window UI 개발자 랩 리포](https://github.com/microsoft/WindowsCompositionSamples)에서 확인할 수 있습니다.
 
 가장 먼저 할 일은 ScrollManipulationPropertySet에 대한 참조를 얻는 것입니다.
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 ms.localizationpriority: medium
-ms.openlocfilehash: 72e45f8ef0f5684b3a712056eb367975f8e6103a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f61f2a0889cd5a2b2b95063e6009530951b49cbd
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370356"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321599"
 ---
 # <a name="bluetooth-developer-faq"></a>Bluetooth 개발자 FAQ
 
@@ -82,5 +82,5 @@ Bluetooth RFCOMM(클래식) 디바이스의 경우에는 페어링할 필요가 
 **Bluetooth LE**: 예, 모든 기능이 OneCore 이며 작동 Bluetooth LE 스택 통한 가장 최근의 장치에서 사용할 수 있어야 합니다. 
 > 주의 사항: 주변 역할 하드웨어 종속 되며 몇 가지 Windows Server 버전에서 Bluetooth를 지원 하지 않습니다. 
 
-**Bluetooth b R/EDR (클래식)** : 몇 가지 변형이 존재 하지만 전반적으로 매우 유사 프로필 수준 지원. [RFCOMM](send-or-receive-files-with-rfcomm.md)의 문서와 [PC](https://support.microsoft.com/en-us/help/10568/windows-10-supported-bluetooth-profiles) 및 [휴대폰](https://support.microsoft.com/en-us/help/10569/windows-10-mobile-supported-bluetooth-profiles)에서 지원되는 이러한 지원되는 프로필을 참조하세요.
+**Bluetooth b R/EDR (클래식)** : 몇 가지 변형이 존재 하지만 전반적으로 매우 유사 프로필 수준 지원. [RFCOMM](send-or-receive-files-with-rfcomm.md)의 문서와 [PC](https://support.microsoft.com/en-us/help/10568/windows-10-supported-bluetooth-profiles) 및 [휴대폰](https://support.microsoft.com/products/windows?os=windows-10-mobile)에서 지원되는 이러한 지원되는 프로필을 참조하세요.
 

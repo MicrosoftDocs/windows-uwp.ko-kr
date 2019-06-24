@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: ee386199fbee7d2f9b839d6b1805c6181e4d70a9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c9b4060fbd2e59a545451c9c8ebe103c9bb527a0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371390"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320599"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>보안 Windows 앱 개발 소개
 
@@ -175,7 +175,7 @@ Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강�
 
 수집한 등록 정보에는 이처럼 간단한 시나리오에서 더 많은 식별 정보가 포함될 수 있습니다. 예를 들어, 앱이 은행 업무용 보안 서비스 같은 것에 액세스할 경우에는 등록 프로세스의 일부로 ID 증명과 다른 작업을 요청해야 합니다. 모든 조건이 충족되면 이 사용자의 공개 키가 백 엔드에 저장되고 다음에 사용자가 서비스를 사용하려고 할 때 유효성을 확인하는 데 사용됩니다.
 
-Windows Hello에 대한 자세한 내용은 [Windows Hello 가이드](https://technet.microsoft.com/itpro/windows/keep-secure/microsoft-passport-guide) 및 [Windows Hello 개발자 가이드](microsoft-passport.md)를 참조하세요.
+Windows Hello에 대한 자세한 내용은 [Windows Hello 가이드](https://docs.microsoft.com/windows/keep-secure/microsoft-passport-guide) 및 [Windows Hello 개발자 가이드](microsoft-passport.md)를 참조하세요.
 
 ## <a name="3-data-in-flight-security-methods"></a>3 진행 데이터(data-in-flight) 보안 방법
 
@@ -478,14 +478,14 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 
 ### <a name="62-code-samples"></a>6.2 코드 샘플
 
--   [자격 증명 보관](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/PasswordVault)
--   [자격 증명 선택](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CredentialPicker)
--   [Azure 로그인을 사용 하 여 장치 잠금](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DeviceLockdownAzureLogin)
--   [엔터프라이즈 데이터 보호](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/EnterpriseDataProtection)
--   [KeyCredentialManager](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/KeyCredentialManager)
--   [스마트 카드](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SmartCard)
--   [웹 계정 관리](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/WebAccountManagement)
--   [WebAuthenticationBroker](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/WebAuthenticationBroker)
+-   [자격 증명 보관](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PasswordVault)
+-   [자격 증명 선택](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CredentialPicker)
+-   [Azure 로그인을 사용 하 여 장치 잠금](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceLockdownAzureLogin)
+-   [엔터프라이즈 데이터 보호](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection)
+-   [KeyCredentialManager](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/KeyCredentialManager)
+-   [스마트 카드](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SmartCard)
+-   [웹 계정 관리](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)
+-   [WebAuthenticationBroker](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)
 
 ### <a name="63-api-reference"></a>6.3 API 참조
 

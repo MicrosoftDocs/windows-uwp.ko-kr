@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bdd859a922cf3252f5896da2652a0b73e20a079
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a07fae7920bbcddd4c68b052aa82c072312b4995
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371190"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322147"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
@@ -194,7 +194,7 @@ Windows 10에는 [**RegisterPropertyChangedCallback**](https://docs.microsoft.co
 
 ## <a name="dependencyobject-and-threading"></a>**DependencyObject** 및 스레딩
 
-모든 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) 인스턴스는 Windows 런타임 앱에 표시되는 현재 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)와 연결된 UI 스레드에 만들어야 합니다. 각 **DependencyObject**는 주 UI 스레드에 만들어야 하지만 개체는 [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.dispatcher)에 액세스하여 다른 스레드의 디스패처 참조를 사용하여 액세스할 수 있습니다. 그런 다음, [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) 개체에서 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows)와 같은 메서드를 호출하고 UI 스레드에 대한 스레드 제한 사항의 규칙 내에서 코드를 실행할 수 있습니다.
+모든 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) 인스턴스는 Windows 런타임 앱에 표시되는 현재 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)와 연결된 UI 스레드에 만들어야 합니다. 각 **DependencyObject**는 주 UI 스레드에 만들어야 하지만 개체는 [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.dispatcher)에 액세스하여 다른 스레드의 디스패처 참조를 사용하여 액세스할 수 있습니다. 그런 다음, [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) 개체에서 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)와 같은 메서드를 호출하고 UI 스레드에 대한 스레드 제한 사항의 규칙 내에서 코드를 실행할 수 있습니다.
 
 [  **DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)의 스레딩 측면은 일반적으로 UI 스레드에서 실행되는 코드만 종속성 속성의 값을 변경하거나 읽을 수 있다는 의미이므로 관련이 있습니다. 스레딩 문제는 보통 **async** 패턴 및 백그라운드 작업자 스레드를 올바르게 사용하는 일반적인 UI 코드로 방지할 수 있습니다. 일반적으로 직접 **DependencyObject** 유형을 정의하여 **DependencyObject**가 적합하지 않을 수 있는 데이터 원본이나 다른 시나리오에 사용하려고 하는 경우에만 **DependencyObject** 관련 스레딩 문제가 발생합니다.
 

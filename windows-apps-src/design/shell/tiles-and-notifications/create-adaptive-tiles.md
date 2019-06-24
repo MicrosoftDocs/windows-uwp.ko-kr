@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08a7ca0b08a9df57d3c496f33f963fcd9d0ebfe2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a3fa029c5046b1c3f20058275aec0ff901706e65
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367277"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320938"
 ---
 # <a name="create-adaptive-tiles"></a>적응형 타일 만들기
 
@@ -1393,7 +1393,7 @@ TileWide = new TileBinding()
 * [타일 콘텐츠 스키마](../tiles-and-notifications/tile-schema.md)
 * [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)
 * [특수 타일 템플릿](special-tile-templates-catalog.md)
-* [UWP 커뮤니티 도구 키트-알림](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [UWP 커뮤니티 도구 키트-알림](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
 * [GitHub에서 Windows 알림](https://github.com/WindowsNotifications)
 
  

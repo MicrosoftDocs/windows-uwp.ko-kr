@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c4b796c8af493508328730c2b958a0beb38bf60c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a50ca6eaeecd2528eaa0d8558ef70552ae49944a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361955"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317297"
 ---
 # <a name="expose-basic-accessibility-information"></a>기본적인 접근성 정보 표시  
 
@@ -97,7 +97,7 @@ XAML
 <span id="LABELS"/>
 
 ## <a name="labels-and-labeledby"></a>레이블 및 LabeledBy  
-레이블을 양식 요소와 연결하는 기본 방법은 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 **x:Name**과 함께 레이블 텍스트에 사용한 다음 양식 요소에서 [**AutomationProperties.LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v%3Dvs.95)) 연결된 속성을 설정하여 XAML 이름으로 레이블 지정 **TextBlock**을 참조하는 것입니다. 이 패턴을 사용하는 경우 사용자가 레이블을 클릭하면 포커스가 연결된 컨트롤로 이동하고 보조 기술에서 레이블 텍스트를 양식 필드의 접근성 있는 이름으로 사용할 수 있습니다. 다음은 이 기술을 보여 주는 예입니다.
+레이블을 양식 요소와 연결하는 기본 방법은 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 **x:Name**과 함께 레이블 텍스트에 사용한 다음 양식 요소에서 [**AutomationProperties.LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v=vs.95)) 연결된 속성을 설정하여 XAML 이름으로 레이블 지정 **TextBlock**을 참조하는 것입니다. 이 패턴을 사용하는 경우 사용자가 레이블을 클릭하면 포커스가 연결된 컨트롤로 이동하고 보조 기술에서 레이블 텍스트를 양식 필드의 접근성 있는 이름으로 사용할 수 있습니다. 다음은 이 기술을 보여 주는 예입니다.
 
 XAML
 ```xml

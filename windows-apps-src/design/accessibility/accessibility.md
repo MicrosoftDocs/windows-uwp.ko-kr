@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 157d0c2ef640f4059d532c26956419e7b3fd3cb4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6c580136dd8500b6bb8fe1b849a33c846b29637f
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362106"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317358"
 ---
 # <a name="accessibility"></a>액세스 가능성  
 
@@ -45,4 +45,4 @@ UWP(유니버설 Windows 플랫폼) 앱과 관련된 접근성 개념을 소개�
 
 ## <a name="related-topics"></a>관련 항목  
 * [**Windows.UI.Xaml.Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation) 
-* [내레이터를 사용 하 여 시작](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)
+* [내레이터를 사용 하 여 시작](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

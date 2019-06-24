@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 23d4a4e0159fc18ac524937326e69d6fbc3a627e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 64a093ddd8a53d72ccb6780b73f280e7b2874612
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370717"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320949"
 ---
 # <a name="launch-an-app-for-results"></a>결과를 위한 앱 실행
 
@@ -20,10 +20,10 @@ ms.locfileid: "66370717"
 
 **중요 한 Api**
 
--   [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows)
+-   [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync)
 -   [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet)
 
-다른 앱에서 앱을 시작하고 두 사이에서 데이터를 교환하는 방법을 알아봅니다. 이것은 *결과에 의한 앱 시작*이라고 합니다. 여기에 있는 예제에서는 [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows)를 사용하여 결과를 위해 앱을 실행하는 방법을 보여줍니다.
+다른 앱에서 앱을 시작하고 두 사이에서 데이터를 교환하는 방법을 알아봅니다. 이것은 *결과에 의한 앱 시작*이라고 합니다. 여기에 있는 예제에서는 [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync)를 사용하여 결과를 위해 앱을 실행하는 방법을 보여줍니다.
 
 새 앱-앱 통신에서 Windows 10 Api는 앱 및 exchange 데이터 및 파일을 시작 하려면 Windows 앱 (및 Windows 웹 앱) 수 있도록 합니다. 이렇게 하면 여러 앱에서 매시업 솔루션을 빌드할 수 있습니다. 이러한 새 API를 사용하면 이전에는 여러 앱을 사용해야 했던 복잡한 작업도 원활하게 처리할 수 있습니다. 예를 들어 앱에서 소셜 네트워킹 앱을 실행하여 연락처를 선택하거나 체크 아웃 앱을 실행하여 지급 프로세스를 완료할 수 있습니다.
 
@@ -36,8 +36,8 @@ ms.locfileid: "66370717"
 
 프로토콜 확장의 **ReturnResults** 특성에서 다음 값 중 하나를 허용합니다.
 
--   **optional**—[**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows) 메서드를 사용하여 결과를 위해 또는 [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)를 사용하여 결과가 아닌 다른 용도로 앱을 시작할 수 있습니다. **optional**을 사용하는 경우 시작된 앱이 결과를 위해 시작되었는지 확인해야 합니다. 이 작업은 [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) 이벤트 인수를 확인하여 수행할 수 있습니다. 인수의 [**IActivatedEventArgs.Kind**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind) 속성에서 [**ActivationKind.ProtocolForResults**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind)를 반환하거나 이벤트 인수의 형식이 [**ProtocolActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs)인 경우 앱은 **LaunchUriForResultsAsync**를 통해 시작된 것입니다.
--   **always**—결과를 위해서만 앱을 시작할 수 있습니다. 즉, [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows)에만 응답할 수 있습니다.
+-   **optional**—[**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync) 메서드를 사용하여 결과를 위해 또는 [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)를 사용하여 결과가 아닌 다른 용도로 앱을 시작할 수 있습니다. **optional**을 사용하는 경우 시작된 앱이 결과를 위해 시작되었는지 확인해야 합니다. 이 작업은 [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) 이벤트 인수를 확인하여 수행할 수 있습니다. 인수의 [**IActivatedEventArgs.Kind**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind) 속성에서 [**ActivationKind.ProtocolForResults**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind)를 반환하거나 이벤트 인수의 형식이 [**ProtocolActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs)인 경우 앱은 **LaunchUriForResultsAsync**를 통해 시작된 것입니다.
+-   **always**—결과를 위해서만 앱을 시작할 수 있습니다. 즉, [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync)에만 응답할 수 있습니다.
 -   **none**—결과를 위해 앱을 시작할 수 없습니다. [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)에만 응답할 수 있습니다.
 
 이 프로토콜 확장 예에서 앱은 결과를 위해서만 시작할 수 있습니다. 여기서는 아래 논의된 **OnActivated** 메서드의 내부 논리를 간소화합니다. 앱을 활성화할 수 있는 다른 방법이 아닌 결과를 위해 시작된 경우만 처리하면 되기 때문입니다.
@@ -186,7 +186,7 @@ string familyName = Windows.ApplicationModel.Package.Current.Id.FamilyName;
 ## <a name="remarks"></a>설명
 
 
-이 방법의 예제에서는 결과를 위해 앱을 시작하는 "hello world"를 소개합니다. 주의해야 할 사항은 새로운 [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows) API를 사용하여 앱을 비동기적으로 시작하고 [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet) 클래스를 통해 통신할 수 있다는 것입니다. **ValueSet**을 통해 전달되는 데이터를 100KB로 제한됩니다. 더 많은 양의 데이터를 전달해야 하는 경우 [**SharedStorageAccessManager**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) 클래스로 파일을 공유하여 앱 간에 전달할 수 있는 파일 토큰을 만들 수 있습니다. 예를 들어 `inputData`라는 **ValueSet**이 있는 경우 시작된 앱과 공유할 파일에 토큰을 저장할 수 있습니다.
+이 방법의 예제에서는 결과를 위해 앱을 시작하는 "hello world"를 소개합니다. 주의해야 할 사항은 새로운 [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync) API를 사용하여 앱을 비동기적으로 시작하고 [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet) 클래스를 통해 통신할 수 있다는 것입니다. **ValueSet**을 통해 전달되는 데이터를 100KB로 제한됩니다. 더 많은 양의 데이터를 전달해야 하는 경우 [**SharedStorageAccessManager**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) 클래스로 파일을 공유하여 앱 간에 전달할 수 있는 파일 토큰을 만들 수 있습니다. 예를 들어 `inputData`라는 **ValueSet**이 있는 경우 시작된 앱과 공유할 파일에 토큰을 저장할 수 있습니다.
 
 ```cs
 inputData["ImageFileToken"] = SharedStorageAccessManager.AddFile(myFile);
@@ -198,7 +198,7 @@ inputData["ImageFileToken"] = SharedStorageAccessManager.AddFile(myFile);
 
 
 * [**LaunchUri**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)
-* [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows)
+* [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync)
 * [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet)
 
  

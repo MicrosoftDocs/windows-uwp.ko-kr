@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fc43d5229ecd2bd9502fd74fef7f5197f758c62
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 01754d94cf413317cf204d04f8590028eeabcfc8
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363586"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317318"
 ---
 # <a name="guidelines-for-panning"></a>이동에 대한 지침
 
@@ -171,7 +171,7 @@ Windows 8에는 세 가지 유형의 이동을 지원합니다.
 ## <a name="related-articles"></a>관련 문서
 
 
-* [사용자 지정 사용자 상호 작용](https://developer.microsoft.com/windows/design/inputs-devices)
+* [사용자 지정 사용자 상호 작용](https://docs.microsoft.com/windows/uwp/design/layout/index)
 * [ListView 및 GridView 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
 * [키보드 접근성](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
 

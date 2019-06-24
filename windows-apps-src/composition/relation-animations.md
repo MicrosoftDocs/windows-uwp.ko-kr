@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: b6fdc59e8a7203a3bb8c6ad79adabd446b884639
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bfed00cf4866d79d4ac3097026cc09c70f9327cd
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597718"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318175"
 ---
 # <a name="relation-based-animations"></a>관계 기반 애니메이션
 
@@ -55,7 +55,7 @@ Expressions는 또한 ExpressionAnimation 시스템 내에서만 고유한 의�
 UWP 앱에서 Expressions를 빌드하는 방법은 두 가지입니다.
 
 1. 하나는 공용 API를 통해 문자열로 수식을 작성하는 것입니다.
-1. 오픈 소스 ExpressionBuilder 도구를 통해 형식이 안전한 개체 모델에서 수식을 작성하는 것입니다. [Github 원본 및 설명서](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/ExpressionBuilder)를 참조하세요.
+1. 오픈 소스 ExpressionBuilder 도구를 통해 형식이 안전한 개체 모델에서 수식을 작성하는 것입니다. [Github 원본 및 설명서](https://github.com/microsoft/WindowsCompositionSamples/tree/master/ExpressionBuilder)를 참조하세요.
 
 이 문서에서는 ExpressionBuilder를 사용하여 Expressions를 정의하겠습니다.
 
@@ -79,7 +79,7 @@ KeyFrameAnimation.InsertExpressionKeyFrame(Single, ExpressionNode)
 
 그러나 ExpressionAnimations와 달리 ExpressionKeyFrames는 KeyFrameAnimation이 시작될 때 한 번만 평가됩니다. KeyFrame의 값으로 ExpressionAnimation이 아닌 문자열(또는 ExpressionBuilder를 사용하는 경우 ExpressionNode)을 전달해야 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이제 Expressions, 특히 Windows UI 샘플 갤러리의 PropertySet 샘플을 사용하는 예제를 살펴보겠습니다. 파란색 공의 궤도 동작을 관리하는 Expression을 살펴보겠습니다.
 

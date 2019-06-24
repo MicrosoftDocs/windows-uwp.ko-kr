@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 템플릿, 도구, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: a272c579fb3ead676fe76f16c33b70f557de4ed8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 090cb13faa00f55f5c611abc20f4ee9e90977113
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653768"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321186"
 ---
 # <a name="project-templates-and-tools-for-games"></a>게임용 프로젝트 템플릿 및 도구
 
@@ -25,7 +25,7 @@ ms.locfileid: "57653768"
 ## <a name="get-visual-studio"></a>Visual Studio 다운로드
 
 
-[다운로드 하 여 Microsoft Visual Studio 2015 설치](https://www.visualstudio.com/vs-2015-product-editions)합니다.
+[다운로드 하 여 Microsoft Visual Studio 2015 설치](https://visualstudio.microsoft.com/vs/)합니다.
 
 <table>
 <colgroup>
@@ -67,7 +67,7 @@ ms.locfileid: "57653768"
 DirectX 게임을 새로 만드는 경우 다음 항목을 참조하세요.
 
 -   [DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-uwp-directx-game.md)
--   [C + + 및 DirectX에서 유니버설 Windows 플랫폼 게임 Marble Maze 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+-   [유니버설 Windows 플랫폼 게임 Marble Maze 개발 C++ 와 DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

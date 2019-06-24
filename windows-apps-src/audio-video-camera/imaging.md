@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c61a35f0ad35cf85afcba564eb676aa171b0243
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c25fc09d606c0f143f357dd7f89026fa94b80922
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360837"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318352"
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>비트맵 이미지 만들기, 편집 및 저장
 
@@ -65,7 +65,7 @@ ms.locfileid: "66360837"
 
 [!code-xml[ImageControl](./code/ImagingWin10/cs/MainPage.xaml#SnippetImageControl)]
 
-현재 **Image** 컨트롤은 BGRA8 인코딩과 미리 곱한 알파가 있거나 알파가 없는 채널을 사용하는 이미지만 지원합니다. 이미지를 표시하기 전에 형식이 올바른지 테스트하고, 올바른 형식이 아닐 경우 **SoftwareBitmap** 정적 [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows) 메서드를 사용하여 이미지를 지원되는 형식으로 변환합니다.
+현재 **Image** 컨트롤은 BGRA8 인코딩과 미리 곱한 알파가 있거나 알파가 없는 채널을 사용하는 이미지만 지원합니다. 이미지를 표시하기 전에 형식이 올바른지 테스트하고, 올바른 형식이 아닐 경우 **SoftwareBitmap** 정적 [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.convert) 메서드를 사용하여 이미지를 지원되는 형식으로 변환합니다.
 
 새 [**SoftwareBitmapSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource) 개체를 만듭니다. [  **SetBitmapAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync)를 호출하고 **SoftwareBitmap**을 전달하여 원본 개체의 콘텐츠를 설정합니다. 그러면 **Image** 컨트롤의 [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) 속성을 새로 만든 **SoftwareBitmapSource**로 설정할 수 있습니다.
 
@@ -89,7 +89,7 @@ COM interop을 사용하려면 프로젝트의 **System.Runtime.InteropServices*
 
 [!code-cs[InteropNamespace](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetInteropNamespace)]
 
-네임스페이스 내에 다음 코드를 추가하여 [**IMemoryBufferByteAccess**](https://docs.microsoft.com/previous-versions//mt297505(v=vs.85)) COM 인터페이스를 초기화합니다.
+네임스페이스 내에 다음 코드를 추가하여 [**IMemoryBufferByteAccess**](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85)) COM 인터페이스를 초기화합니다.
 
 [!code-cs[COMImport](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCOMImport)]
 
@@ -111,7 +111,7 @@ Direct3D 화면에서 **SoftwareBitmap** 개체를 만들려면 프로젝트에 
 
 ## <a name="convert-a-softwarebitmap-to-a-different-pixel-format"></a>SoftwareBitmap을 다른 픽셀 형식으로 변환
 
-**SoftwareBitmap** 클래스는 정적 메서드 [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows)를 제공하며, 이 메서드를 사용하면 지정된 픽셀 형식과 알파 모드를 사용하는 새로운 **SoftwareBitmap**을 기존 **SoftwareBitmap**에서 쉽게 만들 수 있습니다. 새로 만들어진 비트맵에는 별도의 이미지 데이터 복사본이 있습니다. 새 비트맵을 수정해도 소스 비트맵에는 영향이 없습니다.
+**SoftwareBitmap** 클래스는 정적 메서드 [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.convert)를 제공하며, 이 메서드를 사용하면 지정된 픽셀 형식과 알파 모드를 사용하는 새로운 **SoftwareBitmap**을 기존 **SoftwareBitmap**에서 쉽게 만들 수 있습니다. 새로 만들어진 비트맵에는 별도의 이미지 데이터 복사본이 있습니다. 새 비트맵을 수정해도 소스 비트맵에는 영향이 없습니다.
 
 [!code-cs[Convert](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
 

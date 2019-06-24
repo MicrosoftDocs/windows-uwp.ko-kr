@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b8cbbd6f82555576b89328d28d94e43aae7574a2
-ms.sourcegitcommit: 81021b7930905beb67383a08b09520cf95c68fd9
+ms.openlocfilehash: bc879e43d7e117a4e61e8b6de4bb5437d126e84b
+ms.sourcegitcommit: 7effecb544952b493250337fc622848232fa5995
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940323"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67325851"
 ---
 # <a name="bringing-it-together"></a>통합
 
@@ -27,17 +27,14 @@ ms.locfileid: "65940323"
 :::row:::
     :::column:::
         **Implicit animation**
-
         Automatic tween and timing between values in a parameter change to achieve very simple Fluent motion using the standardized values.
     :::column-end:::
     :::column:::
         **Built-in animation**
-
         System components, such as common controls and shared motion, are "Fluent by default". Fundamentals have been applied in a manner consistent with their implied usage.
     :::column-end:::
     :::column:::
         **Custom animation following guidance recommendations**
-
         There may be times when the system does not yet provide an exact motion solution for your scenario. In those cases, use the baseline fundamental recommendations as a starting point for your experiences.
     :::column-end:::
 :::row-end:::
@@ -50,14 +47,12 @@ ms.locfileid: "65940323"
     :::column:::
         <b>Direction Forward Out:</b><br>
         Fade out: 150m; Easing: Default Accelerate
-
         <b>Direction Forward In:</b><br>
         Slide up 150px: 300ms; Easing: Default Decelerate
     :::column-end:::
     :::column:::
          <b>Direction Backward Out:</b><br>
         Slide down 150px: 150ms; Easing: Default Accelerate
-
         <b>Direction Backward In:</b><br>
         Fade in: 300ms; Easing: Default Decelerate
     :::column-end:::
@@ -86,7 +81,7 @@ ms.locfileid: "65940323"
 <td>
     <p>있는 경우는 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하려면 여기를 클릭 <a href="xamlcontrolsgallery:/item/ImplicitTransition">앱을 열고 암시적 전환 중인 참조</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>

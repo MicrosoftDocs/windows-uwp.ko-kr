@@ -8,12 +8,12 @@ ms.date: 07/28/2017
 ms.topic: article
 keywords: windows 10, uwp, 타일, 타일 알림, 타일 콘텐츠, 스키마, 타일 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: f12f1c2b6ac158b6f8e837fd3d6a64f96939ed99
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 26dcfc992dfc7557b1a9d835111346588cd2431a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642988"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320761"
 ---
 # <a name="tile-content-schema"></a>타일 콘텐츠 스키마
 
@@ -51,14 +51,14 @@ TileContent는 시각적 개체를 포함한 타일 알림의 콘텐츠를 설�
 | **TileWide** | [TileBinding](#tilebinding) | false | 와이드 바인딩 옵션을 제공하여 넓은 타일 크기에 대한 콘텐츠를 지정합니다. |
 | **TileLarge** | [TileBinding](#tilebinding) | false | 큰 바인딩 옵션을 제공하여 큰 타일 크기에 대한 콘텐츠를 지정합니다. |
 | **브랜딩** | [TileBranding](#tilebranding) | false | 타일이 앱의 브랜드를 표시하는 데 사용해야 하는 형식입니다. 기본적으로 브랜딩은 기본 타일에서 상속됩니다. |
-| **DisplayName** | 문자열 | false | 이 알림을 표시하는 동안 타일의 표시 이름을 재정의하기 위한 선택적 문자열입니다. |
-| **인수** | 문자열 | false | 1 주년 업데이트 새로운 기능: 전달 되는 앱으로 돌아가 TileActivatedInfo 속성을 통해 LaunchActivatedEventArgs에서 사용자가 라이브 타일에서 앱을 시작 하는 경우 앱 정의 데이터입니다. 이를 통해 사용자가 Live Tile을 탭했을 때 사용자에게 어떤 타일 알림이 표시되었는지 알 수 있습니다. 기념일 업데이트를 하지 않은 디바이스에서는 이 기능이 무시됩니다. |
-| **LockDetailedStatus1** | 문자열 | false | 이와 같이 지정하면 TileWide 바인딩도 제공해야 합니다. 사용자가 타일을 상세한 상태 앱으로 선택한 경우 잠금 화면에 표시되는 첫 번째 텍스트 줄입니다. |
-| **LockDetailedStatus2** | 문자열 | false | 이와 같이 지정하면 TileWide 바인딩도 제공해야 합니다. 사용자가 타일을 상세한 상태 앱으로 선택한 경우 잠금 화면에 표시되는 두 번째 텍스트 줄입니다. |
-| **LockDetailedStatus3** | 문자열 | false | 이와 같이 지정하면 TileWide 바인딩도 제공해야 합니다. 사용자가 타일을 상세한 상태 앱으로 선택한 경우 잠금 화면에 표시되는 세 번째 텍스트 줄입니다. |
-| **baseUri** | URI | false | 이미지 소스 특성에 상대 URL과 결합되는 기본 기준 URL입니다. |
+| **DisplayName** | string | false | 이 알림을 표시하는 동안 타일의 표시 이름을 재정의하기 위한 선택적 문자열입니다. |
+| **인수** | string | false | 1 주년 업데이트 새로운 기능: 전달 되는 앱으로 돌아가 TileActivatedInfo 속성을 통해 LaunchActivatedEventArgs에서 사용자가 라이브 타일에서 앱을 시작 하는 경우 앱 정의 데이터입니다. 이를 통해 사용자가 Live Tile을 탭했을 때 사용자에게 어떤 타일 알림이 표시되었는지 알 수 있습니다. 기념일 업데이트를 하지 않은 디바이스에서는 이 기능이 무시됩니다. |
+| **LockDetailedStatus1** | string | false | 이와 같이 지정하면 TileWide 바인딩도 제공해야 합니다. 사용자가 타일을 상세한 상태 앱으로 선택한 경우 잠금 화면에 표시되는 첫 번째 텍스트 줄입니다. |
+| **LockDetailedStatus2** | string | false | 이와 같이 지정하면 TileWide 바인딩도 제공해야 합니다. 사용자가 타일을 상세한 상태 앱으로 선택한 경우 잠금 화면에 표시되는 두 번째 텍스트 줄입니다. |
+| **LockDetailedStatus3** | string | false | 이와 같이 지정하면 TileWide 바인딩도 제공해야 합니다. 사용자가 타일을 상세한 상태 앱으로 선택한 경우 잠금 화면에 표시되는 세 번째 텍스트 줄입니다. |
+| **BaseUri** | URI | false | 이미지 소스 특성에 상대 URL과 결합되는 기본 기준 URL입니다. |
 | **AddImageQuery** | bool? | false | Windows에서 알림 메시지에 제공된 이미지 URL에 쿼리 문자열을 추가할 수 있게 하려면 "true"로 설정합니다. 서버에서 이미지를 호스트하고, 쿼리 문자열을 기반으로 이미지 변형을 검색하거나 쿼리 문자열을 무시하고 쿼리 문자열 없이 지정된 이미지를 반환하여 쿼리 문자열을 처리할 수 있는 경우 이 특성을 사용합니다. 이 쿼리 문자열은 배율, 대비 설정 및 언어를 지정합니다. 예를 들어, 알림에 지정된 "www.website.com/images/hello.png"의 값은 "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us"가 됩니다. |
-| **언어**| 문자열 | false | "en-US" 또는 "fr-FR"과 같이 BCP-47 언어 태그로 지정된 지역화된 리소스를 사용할 때 시각적 페이로드의 대상 로캘입니다. 이 로캘은 바인딩 또는 텍스트에 지정된 로캘로 재정의됩니다. 제공되지 않을 경우 시스템 로캘이 대신 사용됩니다. |
+| **언어**| string | false | "en-US" 또는 "fr-FR"과 같이 BCP-47 언어 태그로 지정된 지역화된 리소스를 사용할 때 시각적 페이로드의 대상 로캘입니다. 이 로캘은 바인딩 또는 텍스트에 지정된 로캘로 재정의됩니다. 제공되지 않을 경우 시스템 로캘이 대신 사용됩니다. |
 
 
 ## <a name="tilebinding"></a>TileBinding
@@ -68,11 +68,11 @@ TileContent는 시각적 개체를 포함한 타일 알림의 콘텐츠를 설�
 |---|---|---|---|
 | **콘텐츠** | [ITileBindingContent](#itilebindingcontent) | false | 타일에 표시할 시각적 콘텐츠입니다. [TileBindingContentAdaptive](#tilebindingcontentadaptive), [TileBindingContentIconic](#TileBindingContentIconic), [TileBindingContentContact](#TileBindingContentContact), [TileBindingContentPeople](#TileBindingContentPeople) 또는 [TileBindingContentPhotos](#TileBindingContentPhotos) 중 하나입니다. |
 | **브랜딩** | TileBranding | false | 타일이 앱의 브랜드를 표시하는 데 사용해야 하는 형식입니다. 기본적으로 브랜딩은 기본 타일에서 상속됩니다. |
-| **DisplayName** | 문자열 | false | 이 타일 크기에 대한 타일의 표시 이름을 재정의하기 위한 선택적 문자열입니다. |
-| **인수** | 문자열 | false | 1 주년 업데이트 새로운 기능: 전달 되는 앱으로 돌아가 TileActivatedInfo 속성을 통해 LaunchActivatedEventArgs에서 사용자가 라이브 타일에서 앱을 시작 하는 경우 앱 정의 데이터입니다. 이를 통해 사용자가 Live Tile을 탭했을 때 사용자에게 어떤 타일 알림이 표시되었는지 알 수 있습니다. 기념일 업데이트를 하지 않은 디바이스에서는 이 기능이 무시됩니다. |
-| **baseUri** | URI | false | 이미지 소스 특성에 상대 URL과 결합되는 기본 기준 URL입니다. |
+| **DisplayName** | string | false | 이 타일 크기에 대한 타일의 표시 이름을 재정의하기 위한 선택적 문자열입니다. |
+| **인수** | string | false | 1 주년 업데이트 새로운 기능: 전달 되는 앱으로 돌아가 TileActivatedInfo 속성을 통해 LaunchActivatedEventArgs에서 사용자가 라이브 타일에서 앱을 시작 하는 경우 앱 정의 데이터입니다. 이를 통해 사용자가 Live Tile을 탭했을 때 사용자에게 어떤 타일 알림이 표시되었는지 알 수 있습니다. 기념일 업데이트를 하지 않은 디바이스에서는 이 기능이 무시됩니다. |
+| **BaseUri** | URI | false | 이미지 소스 특성에 상대 URL과 결합되는 기본 기준 URL입니다. |
 | **AddImageQuery** | bool? | false | Windows에서 알림 메시지에 제공된 이미지 URL에 쿼리 문자열을 추가할 수 있게 하려면 "true"로 설정합니다. 서버에서 이미지를 호스트하고, 쿼리 문자열을 기반으로 이미지 변형을 검색하거나 쿼리 문자열을 무시하고 쿼리 문자열 없이 지정된 이미지를 반환하여 쿼리 문자열을 처리할 수 있는 경우 이 특성을 사용합니다. 이 쿼리 문자열은 배율, 대비 설정 및 언어를 지정합니다. 예를 들어, 알림에 지정된 "www.website.com/images/hello.png"의 값은 "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us"가 됩니다. |
-| **언어**| 문자열 | false | "en-US" 또는 "fr-FR"과 같이 BCP-47 언어 태그로 지정된 지역화된 리소스를 사용할 때 시각적 페이로드의 대상 로캘입니다. 이 로캘은 바인딩 또는 텍스트에 지정된 로캘로 재정의됩니다. 제공되지 않을 경우 시스템 로캘이 대신 사용됩니다. |
+| **언어**| string | false | "en-US" 또는 "fr-FR"과 같이 BCP-47 언어 태그로 지정된 지역화된 리소스를 사용할 때 시각적 페이로드의 대상 로캘입니다. 이 로캘은 바인딩 또는 텍스트에 지정된 로캘로 재정의됩니다. 제공되지 않을 경우 시스템 로캘이 대신 사용됩니다. |
 
 
 ## <a name="itilebindingcontent"></a>ITileBindingContent
@@ -103,13 +103,13 @@ TileContent는 시각적 개체를 포함한 타일 알림의 콘텐츠를 설�
 
 | 속성 | 형식 | 필수 |설명 |
 |---|---|---|---|
-| **텍스트** | 문자열 | false | 표시할 텍스트입니다. |
+| **텍스트 모드** | string | false | 표시할 텍스트입니다. |
 | **HintStyle** | [AdaptiveTextStyle](#adaptivetextstyle) | false | 스타일로 텍스트의 글꼴 크기, 두께 및 불투명도가 제어됩니다. |
 | **HintWrap** | bool? | false | 텍스트 배치를 활성화하려면 true로 설정합니다. 기본값은 false입니다. |
 | **HintMaxLines** | int? | false | 텍스트 요소가 표시할 수 있는 최대 줄 수입니다. |
 | **HintMinLines** | int? | false | 텍스트 요소가 표시해야 하는 최소 줄 수입니다. |
 | **HintAlign** | [AdaptiveTextAlign](#adaptivetextalign) | false | 텍스트의 가로 맞춤입니다. |
-| **언어** | 문자열 | false | "en-US" 또는 "fr-FR"과 같이 BCP-47 언어 태그로 지정된 XML 페이로드의 대상 로캘입니다. 여기에 지정된 로캘이 바인딩이나 시각적 개체의 로캘을 비롯하여 지정된 다른 로캘을 재정의합니다. 이 값이 리터럴 문자열인 경우 이 특성은 기본적으로 사용자의 UI 언어로 설정됩니다. 이 값이 문자열 참조인 경우 문자열 확인 시 이 특성은 기본적으로 Windows 런타임에서 선택한 로캘로 설정됩니다. |
+| **언어** | string | false | "en-US" 또는 "fr-FR"과 같이 BCP-47 언어 태그로 지정된 XML 페이로드의 대상 로캘입니다. 여기에 지정된 로캘이 바인딩이나 시각적 개체의 로캘을 비롯하여 지정된 다른 로캘을 재정의합니다. 이 값이 리터럴 문자열인 경우 이 특성은 기본적으로 사용자의 UI 언어로 설정됩니다. 이 값이 문자열 참조인 경우 문자열 확인 시 이 특성은 기본적으로 Windows 런타임에서 선택한 로캘로 설정됩니다. |
 
 
 ### <a name="adaptivetextstyle"></a>AdaptiveTextStyle
@@ -117,19 +117,19 @@ TileContent는 시각적 개체를 포함한 타일 알림의 콘텐츠를 설�
 
 | 값 | 의미 |
 |---|---|
-| **기본** | 기본값입니다. 스타일은 렌더러로 결정됩니다. |
+| **Default** | 기본 값입니다. 스타일은 렌더러로 결정됩니다. |
 | **캡션** | 단락 글꼴 크기보다 작습니다. |
 | **CaptionSubtle** | Caption과 동일하지만 불투명도가 약합니다. |
 | **본문** | 단락 글꼴 크기입니다. |
 | **BodySubtle** | Body와 동일하지만 불투명도가 약합니다. |
-| **자료** | 단락 글꼴 크기이며 두께는 굵게입니다. 기본적으로 Body의 굵게 버전입니다. |
+| **Base** | 단락 글꼴 크기이며 두께는 굵게입니다. 기본적으로 Body의 굵게 버전입니다. |
 | **BaseSubtle** | Base와 동일하지만 불투명도가 약합니다. |
-| **부제목** | H4 글꼴 크기입니다. |
+| **Subtitle** | H4 글꼴 크기입니다. |
 | **SubtitleSubtle** | Subtitle과 동일하지만 불투명도가 약합니다. |
-| **제목** | H3 글꼴 크기입니다. |
+| **Title** | H3 글꼴 크기입니다. |
 | **TitleSubtle** | Title과 동일하지만 불투명도가 약합니다. |
 | **TitleNumeral** | Title과 동일하지만 안쪽 여백(위쪽/아래쪽)이 제거되었습니다. |
-| **하기** | H2 글꼴 크기입니다. |
+| **Subheader** | H2 글꼴 크기입니다. |
 | **SubheaderSubtle** | Subheader와 동일하지만 불투명도가 약합니다. |
 | **SubheaderNumeral** | Subheader와 동일하지만 안쪽 여백(위쪽/아래쪽)이 제거되었습니다. |
 | **헤더** | H1 글꼴 크기입니다. |
@@ -142,11 +142,11 @@ TileContent는 시각적 개체를 포함한 타일 알림의 콘텐츠를 설�
 
 | 값 | 의미 |
 |---|---|
-| **기본** | 기본값입니다. 맞춤은 렌더러로 자동 결정됩니다. |
+| **Default** | 기본 값입니다. 맞춤은 렌더러로 자동 결정됩니다. |
 | **자동** | 현재 언어와 문화로 결정된 맞춤입니다. |
-| **왼쪽** | 텍스트를 가로로 왼쪽에 맞춥니다. |
+| **Left** | 텍스트를 가로로 왼쪽에 맞춥니다. |
 | **center** | 텍스트를 가로로 가운데에 맞춥니다. |
-| **오른쪽** | 텍스트를 가로로 오른쪽에 맞춥니다. |
+| **Right** | 텍스트를 가로로 오른쪽에 맞춥니다. |
 
 
 ## <a name="adaptiveimage"></a>AdaptiveImage
@@ -154,11 +154,11 @@ TileContent는 시각적 개체를 포함한 타일 알림의 콘텐츠를 설�
 
 | 속성 | 형식 | 필수 |설명 |
 |---|---|---|---|
-| **원본** | 문자열 | true | 이미지에 대한 URL입니다. ms-appx, ms-appdata 및 http가 지원됩니다. Fall Creators Update에서 일반 연결의 경우 웹 이미지는 최대 3MB이고 데이터 통신 연결의 경우 1MB입니다. Fall Creators Update를 아직 실행하지 않는 디바이스에서 웹 이미지는 200KB 이하여야 합니다. |
+| **원본** | string | true | 이미지에 대한 URL입니다. ms-appx, ms-appdata 및 http가 지원됩니다. Fall Creators Update에서 일반 연결의 경우 웹 이미지는 최대 3MB이고 데이터 통신 연결의 경우 1MB입니다. Fall Creators Update를 아직 실행하지 않는 디바이스에서 웹 이미지는 200KB 이하여야 합니다. |
 | **HintCrop** | [AdaptiveImageCrop](#adaptiveimagecrop) | false | 이미지의 원하는 자르기를 제어합니다. |
 | **HintRemoveMargin** | bool? | false | 기본적으로 그룹/하위 그룹 내 이미지의 주변 여백은 8px입니다. 이 속성을 true로 설정하여 이 여백을 제거할 수 있습니다. |
 | **HintAlign** | [AdaptiveImageAlign](#adaptiveimagealign) | false | 이미지의 가로 맞춤입니다. |
-| **AlternateText** | 문자열 | false | 이미지를 설명하는 대체 텍스트로서 접근성 용도로 사용됩니다. |
+| **AlternateText** | string | false | 이미지를 설명하는 대체 텍스트로서 접근성 용도로 사용됩니다. |
 | **AddImageQuery** | bool? | false | "true"로 설정하면 Windows가 타일 알림에 제공된 이미지 URL에 쿼리 문자열을 추가할 수 있습니다. 서버에서 이미지를 호스트하고, 쿼리 문자열을 기반으로 이미지 변형을 검색하거나 쿼리 문자열을 무시하고 쿼리 문자열 없이 지정된 이미지를 반환하여 쿼리 문자열을 처리할 수 있는 경우 이 특성을 사용합니다. 이 쿼리 문자열은 배율, 대비 설정 및 언어를 지정합니다. 예를 들어, 알림에 지정된 "www.website.com/images/hello.png"의 값은 "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us"가 됩니다. |
 
 
@@ -167,7 +167,7 @@ TileContent는 시각적 개체를 포함한 타일 알림의 콘텐츠를 설�
 
 | 값 | 의미 |
 |---|---|
-| **기본** | 기본값입니다. 렌더러로 결정되는 자르기 동작입니다. |
+| **Default** | 기본 값입니다. 렌더러로 결정되는 자르기 동작입니다. |
 | **없음** | 이미지가 잘리지 않습니다. |
 | **원** | 이미지가 원 모양으로 잘립니다. |
 
@@ -177,11 +177,11 @@ TileContent는 시각적 개체를 포함한 타일 알림의 콘텐츠를 설�
 
 | 값 | 의미 |
 |---|---|
-| **기본** | 기본값입니다. 렌더러로 결정되는 대체 동작입니다. |
-| **스트레치** | 이미지가 사용 가능한 너비(및 이미지가 어디에 배치되었는지에 따라 사용 가능한 높이)를 채우도록 늘어납니다. |
-| **왼쪽** | 이미지를 왼쪽에 맞추고 기본 해상도로 표시합니다. |
+| **Default** | 기본 값입니다. 렌더러로 결정되는 대체 동작입니다. |
+| **Stretch** | 이미지가 사용 가능한 너비(및 이미지가 어디에 배치되었는지에 따라 사용 가능한 높이)를 채우도록 늘어납니다. |
+| **Left** | 이미지를 왼쪽에 맞추고 기본 해상도로 표시합니다. |
 | **center** | 이미지를 가로로 가운데에 맞추고 기본 해상도로 표시합니다. |
-| **오른쪽** | 이미지를 오른쪽에 맞추고 기본 해상도로 표시합니다. |
+| **Right** | 이미지를 오른쪽에 맞추고 기본 해상도로 표시합니다. |
 
 
 ## <a name="adaptivegroup"></a>AdaptiveGroup
@@ -216,8 +216,8 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 | 값 | 의미 |
 |---|---|
-| **기본** | 기본값입니다. 렌더러가 자동으로 기본 세로 맞춤을 선택합니다. |
-| **맨 위로** | 위쪽에 세로로 맞춥니다. |
+| **Default** | 기본 값입니다. 렌더러가 자동으로 기본 세로 맞춤을 선택합니다. |
+| **Top** | 위쪽에 세로로 맞춥니다. |
 | **center** | 가운데에 세로로 맞춥니다. |
 | **아래쪽** | 아래쪽에 세로로 맞춥니다. |
 
@@ -227,10 +227,10 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 | 속성 | 형식 | 필수 |설명 |
 |---|---|---|---|
-| **원본** | 문자열 | true | 이미지에 대한 URL입니다. ms-appx, ms-appdata, http(s)가 지원됩니다. Http 이미지는 크기가 200KB 이하여야 합니다. |
+| **원본** | string | true | 이미지에 대한 URL입니다. ms-appx, ms-appdata, http(s)가 지원됩니다. Http 이미지는 크기가 200KB 이하여야 합니다. |
 | **HintOverlay** | int? | false | 배경 이미지상의 검은색 오버레이입니다. 이 값은 검은색 오버레이의 불투명도를 제어합니다. 0으로 설정하면 오버레이가 없고 100은 완전히 검은 색입니다. 기본값은 20입니다. |
 | **HintCrop** | [TileBackgroundImageCrop](#tilebackgroundimagecrop) | false | 1511 새로운 기능: 이미지를 어떻게 자를지를 지정합니다. 1511 이전 버전에서는 이 설정이 무시되며 배경 이미지가 잘리지 않고 표시됩니다. |
-| **AlternateText** | 문자열 | false | 이미지를 설명하는 대체 텍스트로서 접근성 용도로 사용됩니다. |
+| **AlternateText** | string | false | 이미지를 설명하는 대체 텍스트로서 접근성 용도로 사용됩니다. |
 | **AddImageQuery** | bool? | false | "true"로 설정하면 Windows가 타일 알림에 제공된 이미지 URL에 쿼리 문자열을 추가할 수 있습니다. 서버에서 이미지를 호스트하고, 쿼리 문자열을 기반으로 이미지 변형을 검색하거나 쿼리 문자열을 무시하고 쿼리 문자열 없이 지정된 이미지를 반환하여 쿼리 문자열을 처리할 수 있는 경우 이 특성을 사용합니다. 이 쿼리 문자열은 배율, 대비 설정 및 언어를 지정합니다. 예를 들어, 알림에 지정된 "www.website.com/images/hello.png"의 값은 "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us"가 됩니다. |
 
 
@@ -239,7 +239,7 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 | 값 | 의미 |
 |---|---|
-| **기본** | 자르기는 렌더러의 기본 동작을 사용합니다. |
+| **Default** | 자르기는 렌더러의 기본 동작을 사용합니다. |
 | **없음** | 이미지가 잘리지 않으며 사각형이 표시됩니다. |
 | **원** | 이미지가 원으로 잘립니다. |
 
@@ -249,10 +249,10 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 | 속성 | 형식 | 필수 |설명 |
 |---|---|---|---|
-| **원본** | 문자열 | true | 이미지에 대한 URL입니다. ms-appx, ms-appdata, http(s)가 지원됩니다. Http 이미지는 크기가 200KB 이하여야 합니다. |
+| **원본** | string | true | 이미지에 대한 URL입니다. ms-appx, ms-appdata, http(s)가 지원됩니다. Http 이미지는 크기가 200KB 이하여야 합니다. |
 | **HintOverlay** | int? | false | 1511 새로운 기능: 미리 보기 이미지에 검은색 오버레이 합니다. 이 값은 검은색 오버레이의 불투명도를 제어합니다. 0으로 설정하면 오버레이가 없고 100은 완전히 검은 색입니다. 기본값은 20입니다. 이전 버전에서는 이 값이 무시되고 미리 보기 이미지가 0 오버레이로 표시됩니다. |
 | **HintCrop** | [TilePeekImageCrop](#tilepeekimagecrop) | false | 1511 새로운 기능: 이미지를 어떻게 자를지를 지정합니다. 1511 이전 버전에서는 이 설정이 무시되며 미리 보기 이미지가 잘리지 않고 표시됩니다. |
-| **AlternateText** | 문자열 | false | 이미지를 설명하는 대체 텍스트로서 접근성 용도로 사용됩니다. |
+| **AlternateText** | string | false | 이미지를 설명하는 대체 텍스트로서 접근성 용도로 사용됩니다. |
 | **AddImageQuery** | bool? | false | "true"로 설정하면 Windows가 타일 알림에 제공된 이미지 URL에 쿼리 문자열을 추가할 수 있습니다. 서버에서 이미지를 호스트하고, 쿼리 문자열을 기반으로 이미지 변형을 검색하거나 쿼리 문자열을 무시하고 쿼리 문자열 없이 지정된 이미지를 반환하여 쿼리 문자열을 처리할 수 있는 경우 이 특성을 사용합니다. 이 쿼리 문자열은 배율, 대비 설정 및 언어를 지정합니다. 예를 들어, 알림에 지정된 "www.website.com/images/hello.png"의 값은 "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us"가 됩니다. |
 
 
@@ -261,7 +261,7 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 | 값 | 의미 |
 |---|---|
-| **기본** | 자르기는 렌더러의 기본 동작을 사용합니다. |
+| **Default** | 자르기는 렌더러의 기본 동작을 사용합니다. |
 | **없음** | 이미지가 잘리지 않으며 사각형이 표시됩니다. |
 | **원** | 이미지가 원으로 잘립니다. |
 
@@ -271,8 +271,8 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 | 값 | 의미 |
 |---|---|
-| **기본** | 기본값입니다. 렌더러가 자동으로 기본 세로 맞춤을 선택합니다. |
-| **맨 위로** | 위쪽에 세로로 맞춥니다. |
+| **Default** | 기본 값입니다. 렌더러가 자동으로 기본 세로 맞춤을 선택합니다. |
+| **Top** | 위쪽에 세로로 맞춥니다. |
 | **center** | 가운데에 세로로 맞춥니다. |
 | **아래쪽** | 아래쪽에 세로로 맞춥니다. |
 
@@ -291,7 +291,7 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 | 속성 | 형식 | 필수 |설명 |
 |---|---|---|---|
 | **이미지** | [TileBasicImage](#tilebasicimage) | true | 표시할 이미지입니다. |
-| **텍스트** | [TileBasicText](#tilebasictext) | false | 표시되는 텍스트 줄입니다. 작은 타일에는 표시되지 않습니다. |
+| **텍스트 모드** | [TileBasicText](#tilebasictext) | false | 표시되는 텍스트 줄입니다. 작은 타일에는 표시되지 않습니다. |
 
 
 ## <a name="tilebindingcontentpeople"></a>TileBindingContentPeople
@@ -315,8 +315,8 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 | 속성 | 형식 | 필수 |설명 |
 |---|---|---|---|
-| **원본** | 문자열 | true | 이미지에 대한 URL입니다. ms-appx, ms-appdata, http(s)가 지원됩니다. Http 이미지는 크기가 200KB 이하여야 합니다. |
-| **AlternateText** | 문자열 | false | 이미지를 설명하는 대체 텍스트로서 접근성 용도로 사용됩니다. |
+| **원본** | string | true | 이미지에 대한 URL입니다. ms-appx, ms-appdata, http(s)가 지원됩니다. Http 이미지는 크기가 200KB 이하여야 합니다. |
+| **AlternateText** | string | false | 이미지를 설명하는 대체 텍스트로서 접근성 용도로 사용됩니다. |
 | **AddImageQuery** | bool? | false | "true"로 설정하면 Windows가 타일 알림에 제공된 이미지 URL에 쿼리 문자열을 추가할 수 있습니다. 서버에서 이미지를 호스트하고, 쿼리 문자열을 기반으로 이미지 변형을 검색하거나 쿼리 문자열을 무시하고 쿼리 문자열 없이 지정된 이미지를 반환하여 쿼리 문자열을 처리할 수 있는 경우 이 특성을 사용합니다. 이 쿼리 문자열은 배율, 대비 설정 및 언어를 지정합니다. 예를 들어, 알림에 지정된 "www.website.com/images/hello.png"의 값은 "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us"가 됩니다. |
 
 
@@ -325,11 +325,11 @@ TextStacking은 콘텐츠의 세로 맞춤을 지정합니다.
 
 | 속성 | 형식 | 필수 |설명 |
 |---|---|---|---|
-| **텍스트** | 문자열 | false | 표시할 텍스트입니다. |
-| **언어** | 문자열 | false | "en-US" 또는 "fr-FR"과 같이 BCP-47 언어 태그로 지정된 XML 페이로드의 대상 로캘입니다. 여기에 지정된 로캘이 바인딩이나 시각적 개체의 로캘을 비롯하여 지정된 다른 로캘을 재정의합니다. 이 값이 리터럴 문자열인 경우 이 특성은 기본적으로 사용자의 UI 언어로 설정됩니다. 이 값이 문자열 참조인 경우 문자열 확인 시 이 특성은 기본적으로 Windows 런타임에서 선택한 로캘로 설정됩니다. |
+| **텍스트 모드** | string | false | 표시할 텍스트입니다. |
+| **언어** | string | false | "en-US" 또는 "fr-FR"과 같이 BCP-47 언어 태그로 지정된 XML 페이로드의 대상 로캘입니다. 여기에 지정된 로캘이 바인딩이나 시각적 개체의 로캘을 비롯하여 지정된 다른 로캘을 재정의합니다. 이 값이 리터럴 문자열인 경우 이 특성은 기본적으로 사용자의 UI 언어로 설정됩니다. 이 값이 문자열 참조인 경우 문자열 확인 시 이 특성은 기본적으로 Windows 런타임에서 선택한 로캘로 설정됩니다. |
 
 
 ## <a name="related-topics"></a>관련 항목
 
 * [빠른 시작: 로컬 타일 알림 보내기](../tiles-and-notifications/sending-a-local-tile-notification.md)
-* [GitHub의 알림 라이브러리](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
+* [GitHub의 알림 라이브러리](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/dev/Notifications)

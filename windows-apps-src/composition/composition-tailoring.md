@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bcc9a6d89a143d8fd03d73dbd83b832ed9513ee2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9692a8ef21e9f62114b38c6bb5d15199b8c0e04a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644418"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318147"
 ---
 # <a name="tailoring-effects--experiences-using-windows-ui"></a>효과 및 Windows UI를 사용 하 여 환경을 조정 합니다.
 
@@ -112,13 +112,13 @@ API는 몇 가지 간단한 단계로의 기존 코드를 추가할 수 있습�
     }
     ```
 
-전체 예제 코드에서 확인할 수 있습니다 합니다 [Windows UI Github 리포지토리](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2015063/CompCapabilities)합니다.
+전체 예제 코드에서 확인할 수 있습니다 합니다 [Windows UI Github 리포지토리](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 15063/CompCapabilities)합니다.
 
 ## <a name="fast-vs-slow-effects"></a>느린 효과 빠른 비교
 
 제공 된 피드백에 따라 [AreEffectsSupported](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectssupported) 하 고 [AreEffectsFast](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectsfast) CompositionCapabilities api에서 메서드, 응용 프로그램에 대 한 비용이 많이 드는 또는 지원 되지 않는 효과 교환 하려면 결정할 수 있습니다 기타 효과 자신이 선택한 장치에 최적화 된 합니다. 몇 가지 다른 항목 보다 더 많은 리소스 집약적 일관 되 게 것으로 알려져 제한적으로 쓰일 수 및 기타 효과 더 자유롭게 사용할 수 있습니다. 그러나 모든 효과 대해 주의 때 사용할 연결 하 고 몇 가지 시나리오 또는 조합으로 애니메이션 효과 그래프의 성능 특성을 변경 될 수 있습니다. 다음은 개별 효과 대 한 몇 가지 경험에 따르면 성능 특징:
 
-- 효과 높은 성능에 영향으로 알려져 되며 다음과 같이 – 가우스 흐리게 표시, 섀도 마스크, BackDropBrush, HostBackDropBrush를 시각적 계층입니다. 이러한 최소값 장치에 대 한 권장 되지 않습니다 [(기능 수준 9.1-9.3)](https://msdn.microsoft.com/library/windows/desktop/ff476876(v=vs.85).aspx), 하이엔드 장치의 주의 해 서 사용 해야 합니다.
+- 효과 높은 성능에 영향으로 알려져 되며 다음과 같이 – 가우스 흐리게 표시, 섀도 마스크, BackDropBrush, HostBackDropBrush를 시각적 계층입니다. 이러한 최소값 장치에 대 한 권장 되지 않습니다 [(기능 수준 9.1-9.3)](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro), 하이엔드 장치의 주의 해 서 사용 해야 합니다.
 - 색 매트릭스를 특정 Blend 효과 BlendModes (명도, 색상, 채도 및 Hue)를 포함 하는 중간 성능에 영향을 효과 추천, SceneLightingEffect, 및 (시나리오에 따라) BorderEffect 합니다. 이러한 효과 최소값 장치의 특정 시나리오에 사용할 수 있지만 연결 하 고 애니메이션 효과 적용 하는 경우 주의 사용 해야 합니다. 두 개 이하로 제한 하는 사용 하 고만 전환에 애니메이션을 적용 하는 것이 좋습니다.
 - 다른 모든 작업이 낮은 성능에 영향 및 애니메이션 및 연결 하는 경우 모든 적절 한 시나리오에서 작동 합니다.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d1f139ca4cf134ff8515a4da1134da16c338a4a8
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1cc13470c1f07d1ee420253c8a147ff7a5c3fc40
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371331"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318767"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>자동 실행을 사용 하 여 자동으로 시작
 
@@ -225,7 +225,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 앱을 **자동 실행** 장치 이벤트에 대한 옵션으로 등록할 수 있습니다. **자동 실행** 장치 이벤트는 장치가 PC에 연결될 때 발생합니다.
 
-여기에서는 카메라가 PC에 연결될 때 앱을 **자동 실행** 옵션으로 식별하는 방법을 보여 줍니다. 앱에 대 한 처리기로 등록 합니다 **WPD\\ImageSourceAutoPlay** 이벤트입니다. 이는 카메라 및 기타 이미징 장치가 MTP를 사용하는 ImageSource임을 알릴 경우 WPD(Windows 휴대용 장치)에서 발생하는 일반적인 이벤트입니다. 자세한 내용은 [Windows 휴대용 장치](https://docs.microsoft.com/previous-versions//ff597729(v=vs.85))를 참조하세요.
+여기에서는 카메라가 PC에 연결될 때 앱을 **자동 실행** 옵션으로 식별하는 방법을 보여 줍니다. 앱에 대 한 처리기로 등록 합니다 **WPD\\ImageSourceAutoPlay** 이벤트입니다. 이는 카메라 및 기타 이미징 장치가 MTP를 사용하는 ImageSource임을 알릴 경우 WPD(Windows 휴대용 장치)에서 발생하는 일반적인 이벤트입니다. 자세한 내용은 [Windows 휴대용 장치](https://docs.microsoft.com/previous-versions/ff597729(v=vs.85))를 참조하세요.
 
 **중요 한**  는 [ **Windows.Devices.Portable.StorageDevice** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice) Api가 포함 된 [데스크톱 장치 제품군](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)합니다. 앱은 데스크톱 장치 제품군, Pc 등의 Windows 10 장치에만 이러한 Api를 사용할 수 있습니다.
 

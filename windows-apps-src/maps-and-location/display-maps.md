@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지도 컨트롤, 지도 보기
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c026fa0762e25421414ac66fc614625c0df6cd7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 366a6212f8974ef3d3fedffa8f2d657e08a1b549
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371902"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318668"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>2D, 3D 및 Streetside 뷰가 있는 지도 표시
 
@@ -319,7 +319,7 @@ Streetside 뷰를 표시하려면
 1.  [  **IsStreetsideSupported**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.isstreetsidesupported)를 클릭하여 Streetside 뷰가 장치에서 지원되는지 확인합니다.
 2.  Streetside 뷰가 지원되는 경우 [**FindNearbyAsync**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.StreetsidePanorama)를 호출하여 지정된 위치 근처에 [**StreetsidePanorama**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.streetsidepanorama.findnearbyasync)를 만듭니다.
 3.  [  **StreetsidePanorama**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.StreetsidePanorama)가 null이 아닌지 확인하여 주변 파노라마가 있는지 확인합니다.
-4.  주변 파노라마가 있는 경우 지도 컨트롤의 [**CustomExperience**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.streetsideexperience.) 속성에 대한 [**StreetsideExperience**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.customexperience)를 만듭니다.
+4.  주변 파노라마가 있는 경우 지도 컨트롤의 [**CustomExperience**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.streetsideexperience) 속성에 대한 [**StreetsideExperience**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.customexperience)를 만듭니다.
 
 이 예제에서는 이전 이미지와 유사한 Streetside 뷰를 표시하는 방법을 보여 줍니다.
 

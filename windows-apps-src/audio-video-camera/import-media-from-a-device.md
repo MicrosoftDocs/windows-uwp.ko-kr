@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ec16f9810a0802fc319b3ebac679cc4cb2f8334
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a4302568b398c76198e241aeb37980165e1bb864
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361720"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318362"
 ---
 # <a name="import-media-from-a-device"></a>디바이스에서 미디어 가져오기
 
@@ -50,7 +50,7 @@ ms.locfileid: "66361720"
 
 일반적인 미디어 가져오기 시나리오에서는 가져올 수 있는 미디어 항목 목록을 사용자에게 표시하고, 선택할 수 있는 많은 미디어 파일이 있을 수 있으며, 각 미디어 항목에 대한 미리 보기를 표시하는 것이 좋습니다. 따라서 이 예제에서는 세 가지 도우미 클래스를 사용하여 사용자가 목록을 아래로 스크롤할 때 ListView 컨트롤에 항목을 증분 방식으로 로드합니다.
 
-* **IncrementalLoadingBase** 클래스 - [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist?redirectedfrom=MSDN), [**ISupportIncrementalLoading**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading) 및 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/system.collections.specialized.inotifycollectionchanged(v=vs.105).aspx)를 구현하여 기본 증분 로드 동작을 제공합니다.
+* **IncrementalLoadingBase** 클래스 - [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist?redirectedfrom=MSDN), [**ISupportIncrementalLoading**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading) 및 [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?redirectedfrom=MSDN)를 구현하여 기본 증분 로드 동작을 제공합니다.
 * **GeneratorIncrementalLoadingClass** 클래스 - 증분 로드 기본 클래스 구현을 제공합니다.
 * **ImportableItemWrapper** 클래스 - 가져온 각 항목에 대한 미리 보기 이미지의 바인딩 가능한 [**BitmapImage**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) 속성을 추가하는 [**PhotoImportItem**](https://docs.microsoft.com/uwp/api/Windows.Media.Import.PhotoImportItem) 클래스를 둘러싼 씬 래퍼입니다.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 98bc1e93c918310b902c70709df1c2cc1b38a238
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e3e29dabf074eab59f6c788c139524f7dc2474df
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360851"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318314"
 ---
 # <a name="audio-video-and-camera"></a>오디오 비디오 및 카메라
 
@@ -40,7 +40,7 @@ ms.locfileid: "66360851"
 | [화면 캡처](screen-capture.md) | [Windows.Graphics.Capture 네임스페이스](https://docs.microsoft.com/uwp/api/windows.graphics.capture)를 사용하여 디스플레이 또는 애플리케이션 창에서 프레임을 가져오고 비디오 스트림 또는 스냅숏을 만들어 공동 작업 및 대화형 환경을 빌드하는 방법에 대해 설명합니다. |
 
 ## <a name="see-also"></a>참고 항목
-- [UWP 앱 개발](https://developer.microsoft.com/windows/develop)
+- [UWP 앱 개발](https://docs.microsoft.com/windows/uwp/develop/)
 
  
 

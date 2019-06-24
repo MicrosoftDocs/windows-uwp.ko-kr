@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ce41a495297870f512f0694e4f2b63eedebbc37
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a137a4bddd7f86e7aed91a63033c54583dc71f08
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616968"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318522"
 ---
 # <a name="process-bitmaps-with-opencv"></a>OpenCV로 비트맵 처리
 
@@ -63,7 +63,7 @@ include 지시문 뒤에 **using** 지시문을 추가합니다.
 
 그런 다음 메서드 **GetPointerToPixelData**를 OpenCVHelper.cpp에 추가합니다. 이 메서드는 **[SoftwareBitmap](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap)** 을 가져오고, 일련의 대화를 통해 픽셀 데이터의 COM 인터페이스 표현을 가져옵니다. 그러면 기본 데이터 버퍼에 **char** 어레이로 포인터를 가져올 수 있습니다. 
 
-먼저, **[LockBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.lockbuffer)** 를 호출하고 읽기쓰기 버퍼를 요청하여 OpenCV 라이브러리가 픽셀 데이터를 수정할 수 있도록 픽셀 데이터가 포함된 **[BitmapBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer)** 를 가져옵니다.  **[CreateReference](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.CreateReference)**  을 가져오기 위해 호출 되는 **[IMemoryBufferReference](https://docs.microsoft.com/uwp/api/windows.foundation.imemorybufferreference)** 개체입니다. 그런 다음 **IMemoryBufferByteAccess** 인터페이스가 모든 Windows 런타임 클래스의 기본 인터페이스인 **IInspectable**로 캐스팅되고, 픽셀 데이터 버퍼를 **char** 어레이로 가져올 수 있는 **[IMemoryBufferByteAccess](https://msdn.microsoft.com/library/mt297505(v=vs.85).aspx)** COM 인터페이스를 가져오기 위해 **[QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521(v=vs.85).aspx)** 가 호출됩니다. 마지막으로 **[IMemoryBufferByteAccess::GetBuffer](https://msdn.microsoft.com/library/mt297506(v=vs.85).aspx)** 를 호출하여 **char** 어레이를 채웁니다. 이 메서드에서 변환 단계 중 하나라도 실패하면 메서드는 **false**를 반환하여 추가 처리를 계속할 수 없음을 나타냅니다.
+먼저, **[LockBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.lockbuffer)** 를 호출하고 읽기쓰기 버퍼를 요청하여 OpenCV 라이브러리가 픽셀 데이터를 수정할 수 있도록 픽셀 데이터가 포함된 **[BitmapBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer)** 를 가져옵니다.  **[CreateReference](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.CreateReference)**  을 가져오기 위해 호출 되는 **[IMemoryBufferReference](https://docs.microsoft.com/uwp/api/windows.foundation.imemorybufferreference)** 개체입니다. 그런 다음 **IMemoryBufferByteAccess** 인터페이스가 모든 Windows 런타임 클래스의 기본 인터페이스인 **IInspectable**로 캐스팅되고, 픽셀 데이터 버퍼를 **char** 어레이로 가져올 수 있는 **[IMemoryBufferByteAccess](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85))** COM 인터페이스를 가져오기 위해 **[QueryInterface](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))** 가 호출됩니다. 마지막으로 **[IMemoryBufferByteAccess::GetBuffer](https://docs.microsoft.com/windows/desktop/WinRT/imemorybufferbyteaccess-getbuffer)** 를 호출하여 **char** 어레이를 채웁니다. 이 메서드에서 변환 단계 중 하나라도 실패하면 메서드는 **false**를 반환하여 추가 처리를 계속할 수 없음을 나타냅니다.
 
 [!code-cpp[OpenCVHelperGetPointerToPixelData](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperGetPointerToPixelData)]
 
@@ -92,6 +92,9 @@ include 지시문 뒤에 **using** 지시문을 추가합니다.
 
 **OpenCVHelper**의 새 인스턴스가 형성되고 **Blur** 메서드가 호출되어 원본과 대상 비트맵에 전달됩니다. 마지막으로 **SoftwareBitmapSource**가 생성되어 출력 이미지를 XAML **이미지** 컨트롤에 할당합니다.
 
+이 샘플 코드는 기본 프로젝트 템플릿에 의해 포함 된 네임 스페이스 외에도 다음 네임 스페이스에서 Api를 사용 합니다.
+
+[!code-cs[OpenCVMainPageUsing](./code/ImagingWin10/cs/MainPage.OpenCV.xaml.cs#SnippetOpenCVMainPageUsing)]
 
 [!code-cs[OpenCVBlur](./code/ImagingWin10/cs/MainPage.OpenCV.xaml.cs#SnippetOpenCVBlur)]
 

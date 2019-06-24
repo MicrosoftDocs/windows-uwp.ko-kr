@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 001f7cb641b7bb210897ef9406c2324bbc20a2bd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e5ff5d8e1a63522a70b37c3226b01a2fc680c368
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362073"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318968"
 ---
 # <a name="accessibility-overview"></a>접근성 개요  
 
@@ -195,4 +195,4 @@ XAML UI([**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.
 * [내게 필요한 옵션에 대 한 디자인](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
 * [XAML 액세스 가능성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [액세스 가능성](accessibility.md)
-* [내레이터를 사용 하 여 시작](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)
+* [내레이터를 사용 하 여 시작](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

@@ -8,12 +8,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8af03b32453bcdacb3da95678cf23a988c375f1b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 60be53bfcb351866a0cf124fe4ef6f21ff889f88
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359639"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318961"
 ---
 # <a name="accessibility-testing"></a>접근성 테스트  
 
@@ -95,7 +95,7 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 
 ## <a name="verify-your-app-with-display-settings"></a>디스플레이 설정으로 앱 확인  
 
-디스플레이의 dpi(인치당 도트 수) 값을 조정하는 시스템 디스플레이 옵션을 사용하고 dpi 값이 변경되면 앱 UI 크기가 올바르게 조정되도록 합니다. (Dpi 값을 변경 하는 일부 사용자는 내게 필요한 옵션으로에서 사용할 수 있기 **접근성** 속성으로 표시도 합니다.) 문제를 발견할 경우에 따라 합니다 [레이아웃 크기 조정에 대 한 지침](https://developer.microsoft.com/windows/design) 다른 배율에 대 한 추가 리소스를 제공 합니다.
+디스플레이의 dpi(인치당 도트 수) 값을 조정하는 시스템 디스플레이 옵션을 사용하고 dpi 값이 변경되면 앱 UI 크기가 올바르게 조정되도록 합니다. (Dpi 값을 변경 하는 일부 사용자는 내게 필요한 옵션으로에서 사용할 수 있기 **접근성** 속성으로 표시도 합니다.) 문제를 발견할 경우에 따라 합니다 [레이아웃 크기 조정에 대 한 지침](https://developer.microsoft.com/windows/apps/design) 다른 배율에 대 한 추가 리소스를 제공 합니다.
 
 <span id="verify_main_app_scenarios_by_using_narrator"/>
 <span id="VERIFY_MAIN_APP_SCENARIOS_BY_USING_NARRATOR"/>
@@ -164,4 +164,4 @@ Windows 10 버전 1607부터 내레이터에 새 개발자 모드가 도입되�
 * [피해야 할 사례](practices-to-avoid.md)
 * [UI 자동화](https://docs.microsoft.com/windows/desktop/WinAuto/entry-uiauto-win32)
 * [Windows의 내게 필요한 옵션](https://go.microsoft.com/fwlink/p/?LinkId=320802)
-* [내레이터를 사용 하 여 시작](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)
+* [내레이터를 사용 하 여 시작](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

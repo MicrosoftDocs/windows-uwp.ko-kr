@@ -6,12 +6,12 @@ ms.date: 01/25/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임을 시작 하기
 localizationpriority: medium
-ms.openlocfilehash: 596d0b1eb371fec98825b23a214683421e388506
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: c0d819322e7e9479772f8ca3d72bbdcdb4d192b8
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162658"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321275"
 ---
 # <a name="getting-started"></a>시작
 
@@ -31,7 +31,7 @@ ms.locfileid: "58162658"
 
 Windows 10 장치에 설치 하 고 최신 업데이트가 설치 되어 있습니다.
 
-Visual Studio와 같은 적합 한 IDE를 설치 합니다. Visual Studio Community 2017는 무료로 다운로드할 수 있습니다. 자세한 내용은 [Visual Studio 다운로드](https://www.visualstudio.com/downloads/)합니다.
+Visual Studio와 같은 적합 한 IDE를 설치 합니다. Visual Studio Community 2017는 무료로 다운로드할 수 있습니다. 자세한 내용은 [Visual Studio 다운로드](https://visualstudio.microsoft.com/downloads/)합니다.
 
 게임 엔진 및 다른 미들웨어를 사용 하려는 경우 참조 [브리지, 게임 엔진 및 미들웨어](e2e.md#bridges-game-engines-and-middleware) 섹션을 [Windows 10 게임 개발 가이드](e2e.md)합니다. 특정 게임 엔진을 사용 하 여 Windows 및 Xbox 게임 개발에 대 한 내용은 게임 엔진 설명서로 이동 해야 합니다.
 
@@ -54,7 +54,7 @@ UWP DirectX 개발 시작을 참조 하세요 [DirectX를 사용 하 여 간단�
 
 Xbox 게임을 개발 하거나 게임에 Xbox Live 기능을 사용 하려는 경우 조인 하거나 합니다 [Xbox Live 크리에이터 스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator) 하거나 [ ID@Xbox ](https://www.xbox.com/Developers/id) 프로그램입니다. 
 
-각 프로그램에 사용할 수 있는 Xbox Live 기능에 대 한 자세한 내용은 참조 하세요 [기능 테이블](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#feature-table)합니다. 자세한 내용은 [개발자 프로그램](e2e.md#developer-programs)합니다.
+각 프로그램에 사용할 수 있는 Xbox Live 기능에 대 한 자세한 내용은 참조 하세요 [기능 테이블](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#feature-table)합니다. 자세한 내용은 [개발자 프로그램](e2e.md#developer-programs)합니다.
 
 > [!Note]
 > Xbox Live 크리에이터 스 프로그램은 모든 개발자에 게 제공 합니다. **누구나** Xbox 게임을 게시할 수 있습니다. 제목 부분은 Xbox Live 크리에이터 스 프로그램을 만들려면 파트너 센터에서이 옵션을 사용 하도록 설정 하기만 하면 됩니다. 파트너 센터 계정에 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [5 단계](#step-5-sign-up-for-a-partner-center-account) 아래.

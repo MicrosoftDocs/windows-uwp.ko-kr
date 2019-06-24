@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
 ms.localizationpriority: medium
-ms.openlocfilehash: 585289fdc66b8730036f3d14faeafce8c22c09a7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 276a352918e4458e145755bbafad09d4278ec4d7
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371366"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322045"
 ---
 # <a name="bring-custom-c-games-to-uwp-on-xbox"></a>Xbox의 UWP에 사용자 지정 C++ 게임 가져오기
 
 사용자 지정 C++ 엔진을 작성하는 경우 Xbox One은 C++를 완전히 지원합니다. 
 
-UWP(유니버설 Windows 플랫폼)에서의 C++ 게임은 렌더링에 DirectX를 사용합니다. 자세한 내용은 [DirectX 그래픽 및 게임](https://msdn.microsoft.com/library/windows/desktop/ee663274(v=vs.85).aspx)에서 알아보세요.
+UWP(유니버설 Windows 플랫폼)에서의 C++ 게임은 렌더링에 DirectX를 사용합니다. 자세한 내용은 [DirectX 그래픽 및 게임](https://docs.microsoft.com/windows/desktop/directx)에서 알아보세요.
 
 [C++ with Component Extensions](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)(C++/CX) 또는 [표준 C++](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps)(Win32 및 COM)를 작성할 수 있습니다.
 

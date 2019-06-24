@@ -5,12 +5,12 @@ ms.date: 04/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b2de040b31f026818f27a0e345992b9c00945c7a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9b1d663c0d4c4ff86650f015e5e428d6505af156
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365112"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317148"
 ---
 # <a name="layout-panels"></a>레이아웃 패널
 
@@ -133,7 +133,7 @@ StackPanel에서 자식 요소의 크기가 명시적으로 설정되지 않은 
 
 Grid의 특정 셀에 개체의 위치를 지정하려면 [**Grid.Column**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.column?view=netframework-4.8) 및 [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row?view=netframework-4.8) 연결된 속성을 사용하세요.
 
-여러 행과 열에 걸쳐 콘텐츠를 표시하려면 [**Grid.RowSpan**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms605035(v%3Dvs.95)) 및 [**Grid.ColumnSpan**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.columnspan?view=netframework-4.8) 연결된 속성을 사용하세요.
+여러 행과 열에 걸쳐 콘텐츠를 표시하려면 [**Grid.RowSpan**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms605035(v=vs.95)) 및 [**Grid.ColumnSpan**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.columnspan?view=netframework-4.8) 연결된 속성을 사용하세요.
 
 다음 XAML 예제는 행 2개와 열 2개로 이루어진 그리드를 만드는 방법을 보여 줍니다.
 
@@ -231,7 +231,7 @@ Visual Studio XAML 디자이너에서 결과는 다음과 같습니다.
 
 [  **Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 패널에서는 고정된 좌표 점을 사용하여 자식 요소를 배치하기 때문에 유동 레이아웃을 지원하지 않습니다. 각 요소의 [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8) 연결된 속성을 설정하여 개별 자식 요소의 점을 지정합니다. 부모 Canvas는 레이아웃의 [Arrange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) 단계 중에 자식에서 이러한 연결된 속성 값을 읽습니다.
 
-Canvas의 개체는 겹칠 수 있으므로 한 개체를 다른 개체 위에 그릴 수 있습니다. 기본적으로 Canvas는 선언된 순서로 자식 개체를 렌더링하므로 마지막 자식이 맨 위에 렌더링됩니다(각 요소는 Z-인덱스의 기본값 0을 가짐). 이는 다른 기본 제공 패널과 같습니다. 그러나 Canvas는 각 자식 요소에 설정할 수 있는 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v%3Dvs.95)) 연결된 속성도 지원합니다. 코드에서 이 속성을 설정하면 런타임 중 요소의 그리기 순서를 변경할 수 있습니다. 가장 큰 Canvas.ZIndex 값을 가진 요소가 마지막에 그려지므로 동일한 공간을 공유하거나 어떤 방식으로든 겹치는 다른 요소 위에 그려집니다. 알파 값(투명도)이 적용되므로 요소가 겹치는 경우에도 위쪽 요소의 알파 값이 최대값이 아니면 겹치는 영역에 표시되는 콘텐츠가 혼합될 수 있습니다.
+Canvas의 개체는 겹칠 수 있으므로 한 개체를 다른 개체 위에 그릴 수 있습니다. 기본적으로 Canvas는 선언된 순서로 자식 개체를 렌더링하므로 마지막 자식이 맨 위에 렌더링됩니다(각 요소는 Z-인덱스의 기본값 0을 가짐). 이는 다른 기본 제공 패널과 같습니다. 그러나 Canvas는 각 자식 요소에 설정할 수 있는 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95)) 연결된 속성도 지원합니다. 코드에서 이 속성을 설정하면 런타임 중 요소의 그리기 순서를 변경할 수 있습니다. 가장 큰 Canvas.ZIndex 값을 가진 요소가 마지막에 그려지므로 동일한 공간을 공유하거나 어떤 방식으로든 겹치는 다른 요소 위에 그려집니다. 알파 값(투명도)이 적용되므로 요소가 겹치는 경우에도 위쪽 요소의 알파 값이 최대값이 아니면 겹치는 영역에 표시되는 콘텐츠가 혼합될 수 있습니다.
 
 Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 크기를 지정해야 합니다.
 

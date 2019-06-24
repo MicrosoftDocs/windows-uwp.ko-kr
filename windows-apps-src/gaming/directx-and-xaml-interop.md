@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, xaml 상호 운용성
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a7b9800bbcc9746db03eae50a99b701bfbfa815
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ad03a86ba18f11d8d63c2c98649e7f159f3d4f52
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368873"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321295"
 ---
 # <a name="directx-and-xaml-interop"></a>DirectX 및 XAML interop
 
@@ -32,7 +32,7 @@ DirectX는 2D 및 3D 그래픽에 대 한 두 가지 강력한 라이브러리�
 사용자 지정 XAML 및 DirectX interop을 구현하는 경우 다음의 두 개념에 대해 알고 있어야 합니다.
 
 -   공유 표면은 XAML로 정의된 크기 조정되는 표시 영역입니다. 즉, DirectX를 사용하여 [Windows::UI::Xaml::Media::ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagesource) 유형으로 간접적으로 그릴 수 있는 영역입니다. 공유 표면의 경우 새 콘텐츠가 화면에 표시될 때에 대한 정확한 타이밍을 제어하지 못합니다. 대신, 공유 표면에 대한 업데이트는 XAML 프레임워크의 업데이트와 동기화됩니다.
--   [스왑 체인](https://msdn.microsoft.com/library/windows/desktop/bb206356(v=vs.85).aspx)은 최소 대기 시간에 그래픽을 표시하는 데 사용되는 버퍼의 컬렉션을 나타냅니다. 일반적으로 스왑 체인은 UI 스레드에서 별도로 초당 60프레임으로 업데이트됩니다. 그러나 스왑 체인은 빠른 업데이트를 지원하기 위해 더 많은 메모리와 CPU 리소스를 사용하며, 사용자는 여러 스레드를 관리해야 하므로 사용하기가 더욱 어렵습니다.
+-   [스왑 체인](https://docs.microsoft.com/windows/desktop/direct3d9/what-is-a-swap-chain-)은 최소 대기 시간에 그래픽을 표시하는 데 사용되는 버퍼의 컬렉션을 나타냅니다. 일반적으로 스왑 체인은 UI 스레드에서 별도로 초당 60프레임으로 업데이트됩니다. 그러나 스왑 체인은 빠른 업데이트를 지원하기 위해 더 많은 메모리와 CPU 리소스를 사용하며, 사용자는 여러 스레드를 관리해야 하므로 사용하기가 더욱 어렵습니다.
 
 DirectX를 사용하여 어떤 작업을 하려는 것인지 고려해 봅니다. 표시 창 크기에 맞는 단일 컨트롤을 합성하거나 애니메이션 효과를 주기 위해 사용하나요? 게임에서처럼 실시간으로 렌더링 및 제어해야 하는 출력을 포함하나요? 그런 경우 스왑 체인을 구현해야 할 수 있습니다. 그러지 않으면 공유 표면을 세밀하게 사용해야 합니다.
 
@@ -72,7 +72,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
         (void **)&m_sisNativeWithD2D);
     ```
 
-3.  먼저 [D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 및 [D2D1CreateDevice](https://msdn.microsoft.com/library/windows/desktop/hh404272(v=vs.85).aspx)를 호출한 후 [ISurfaceImageSourceNativeWithD2D::SetDevice](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-setdevice)로 디바이스 및 컨텍스트를 전달하여 DXGI 및 D2D 디바이스를 만듭니다. 
+3.  먼저 [D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 및 [D2D1CreateDevice](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nf-d2d1_1-d2d1createdevice)를 호출한 후 [ISurfaceImageSourceNativeWithD2D::SetDevice](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-setdevice)로 디바이스 및 컨텍스트를 전달하여 DXGI 및 D2D 디바이스를 만듭니다. 
 
     > [!NOTE]
     > 백그라운드 스레드에서 **SurfaceImageSource**에 그릴 경우 DXGI 디바이스에 다중 스레드 액세스가 활성화되어 있는지도 확인해야 합니다. 이는 백그라운드 스레드에서 그릴 경우에만 성능을 위해 취해야 하는 조치입니다.

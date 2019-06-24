@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 인식 앱
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
-ms.openlocfilehash: f6938118b3a9041eea27367c3916e94ce34d468e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 42f08127567704b1c8623ac64857cc5afe0ef882
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595478"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321388"
 ---
 # <a name="windows-information-protection-wip"></a>WIP(Windows Information Protection)
 
@@ -42,8 +42,8 @@ WIP와 MDM을 함께 사용하면 조직이 관리하는 디바이스에서 데�
 ![WIP 수명 주기](images/wip-lifecycle.png)
 
 > **WIP에 대해 자세히 알아보기** <br>
-* [Windows Information Protection 소개](https://blogs.technet.microsoft.com/windowsitpro/2016/06/29/introducing-windows-information-protection/)
-* [Windows 정보 보호 (WIP)를 사용 하 여 엔터프라이즈 데이터 보호](https://technet.microsoft.com/library/dn985838(v=vs.85).aspx)
+* [Windows Information Protection 소개](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Windows10Blog)
+* [Windows 정보 보호 (WIP)를 사용 하 여 엔터프라이즈 데이터 보호](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
 
 앱이 허용 목록에 있는 경우 앱에 의해 생성된 모든 데이터에는 정책 제한이 적용됩니다. 즉, 관리자가 엔터프라이즈 데이터에 대한 사용자의 액세스를 해지하면 해당 사용자는 앱에서 생성한 모든 데이터에 액세스할 수 없습니다.
 
@@ -65,7 +65,7 @@ WIP API를 사용하여 앱을 지원한 다음 엔터프라이즈 인식 앱으
 
 [WIP(Windows Information Protection) 개발자 가이드](wip-dev-guide.md).
 
-**C + +를 사용 하 여 작성 하는 데스크톱 앱**
+**사용 하 여 작성 하는 데스크톱 앱C++**
 
 [WIP(Windows Information Protection) 개발자 가이드(C++)](https://go.microsoft.com/fwlink/?LinkId=822192).
 

@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 545e1e1b220de9edf444ca06c3b21140227e8284
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 16f61c1f950583ee0fef7f30b7e17939df7ea538
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215147"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317764"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>데스크톱 응용 프로그램에서 호스팅 API는 UWP XAML을 사용 하 여
 
@@ -71,7 +71,7 @@ Windows 10, 버전 1903, 비 UWP 데스크톱 응용 프로그램 시작 (WPF, W
 
 ### <a name="c-win32"></a>C++Win32
 
-[C++Win32 샘플](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island)합니다. 이 샘플에는 패키지 되지 않은 UWP 사용자 정의 컨트롤 호스팅의 전체 구현을 보여 줍니다. C++ Win32 응용 프로그램 (즉, 응용 프로그램을 MSIX 패키지로 포함 되어 있지).
+[C++Win32 샘플](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island)합니다. 이 샘플에는 패키지 되지 않은 UWP 사용자 정의 컨트롤 호스팅의 전체 구현을 보여 줍니다. C++ Win32 응용 프로그램 (즉, 응용 프로그램을 MSIX 패키지로 포함 되어 있지).
 
 ### <a name="wpf-and-windows-forms"></a>WPF 및 Windows Forms
 
@@ -162,7 +162,7 @@ Windows 10, 버전 1903, 비 UWP 데스크톱 응용 프로그램 시작 (WPF, W
 
 샘플 응용 프로그램의 컨텍스트에서 이러한 작업을 보여 주는 전체 예제를 다음 코드 파일을 참조 하세요.
 
-  * **C++Win32:** 참조를 [XamlBridge.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/XamlBridge.cpp) 파일을 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island)합니다.
+  * **C++Win32:** 참조를 [XamlBridge.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/XamlBridge.cpp) 파일을 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island)합니다.
 
   * **WPF:** 참조를 [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.cs) 하 고 [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHost.cs) Windows 커뮤니티 도구 키트의 파일입니다.  
 
@@ -176,7 +176,7 @@ Windows 10, 버전 1903, 비 UWP 데스크톱 응용 프로그램 시작 (WPF, W
 
 각 XAML 섬에 대 한 키보드 입력을 제대로 처리 하려면 응용 프로그램 해야 모든 Windows 메시지 전달 UWP XAML 프레임 워크 특정 메시지를 올바르게 처리할 수 있도록 합니다. 메시지 루프에 액세스할 수 있는 응용 프로그램의 특정 위치에서이 위해 캐스팅 합니다 **DesktopWindowXamlSource** 각 XAML 아일랜드에 대 한 개체를 **IDesktopWindowXamlSourceNative2** COM 인터페이스입니다. 차례로 호출 합니다 **PreTranslateMessage** 메서드의이 인터페이스와 현재 메시지를 전달 합니다.
 
-  * C++ Win32 응용 프로그램에서 호출할 수 있습니다 **PreTranslateMessage** 주 메시지 루프에서 직접. 예제를 참조 하세요. 합니다 [SampleApp.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/SampleApp.cpp#L61) 코드 파일을 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island)합니다.
+  * C++ Win32 응용 프로그램에서 호출할 수 있습니다 **PreTranslateMessage** 주 메시지 루프에서 직접. 예제를 참조 하세요. 합니다 [SampleApp.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/SampleApp.cpp#L61) 코드 파일을 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island)합니다.
 
   * WPF 응용 프로그램을 호출할 수 있습니다 **PreTranslateMessage** 에 대 한 이벤트 처리기에서 합니다 [ **ComponentDispatcher.ThreadFilterMessage** ](https://docs.microsoft.com/dotnet/api/system.windows.interop.componentdispatcher.threadfiltermessage?view=netframework-4.7.2) 이벤트입니다. 예를 들어 참조를 [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs#L177) Windows 커뮤니티 도구 키트의 파일입니다.
 
@@ -202,7 +202,7 @@ Windows 10, 버전 1903, 비 UWP 데스크톱 응용 프로그램 시작 (WPF, W
 
 사용자 부모 UI 요소의 크기를 변경 하는 경우 필요한 레이아웃 변경 되도록 예상 대로 표시 UWP 컨트롤을 처리 해야 합니다. 다음은 몇 가지 중요 한 시나리오를 고려해 야 합니다.
 
-* 에 C++ Win32 응용 프로그램, 응용 프로그램에서 사용 하 여 호스트 된 XAML 섬을 재배치할 수 WM_SIZE 메시지를 처리할 때 합니다 [SetWindowPos](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-setwindowpos) 함수입니다. 예제를 참조 하세요. 합니다 [SampleApp.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/SampleApp.cpp#L191) 코드 파일을 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island)합니다.
+* 에 C++ Win32 응용 프로그램, 응용 프로그램에서 사용 하 여 호스트 된 XAML 섬을 재배치할 수 WM_SIZE 메시지를 처리할 때 합니다 [SetWindowPos](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-setwindowpos) 함수입니다. 예제를 참조 하세요. 합니다 [SampleApp.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/SampleApp.cpp#L191) 코드 파일을 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island)합니다.
 
 * 부모 UI 요소를 필요에 맞게 사각형 영역의 크기를 가져올 해야 하는 경우를 **Windows.UI.Xaml.UIElement** 에서 호스트 하는 합니다 **DesktopWindowXamlSource**를 호출 합니다 [ **측정값** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 메서드를 **Windows.UI.Xaml.UIElement**합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
@@ -245,11 +245,11 @@ UWP XAML 프레임 워크 (예를 들어 경우 사용자가 다른 화면 DPI �
 2. 호출 된 [ **GetXamlType** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.markup.ixamlmetadataprovider.getxamltype) UWP XAML 컨트롤의 형식 이름을 할당 되 면 루트 메타 데이터 공급자의 메서드 (이 런타임 시 코드에서 할당 될 수 또는이를 사용 하도록 선택할 수 있습니다 할당 된 Visual Studio 속성 창에서).
 
     예를 들어 다음 코드 파일을 참조 하세요.
-      * **C++Win32:** 참조를 [XamlApplication.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/Microsoft.UI.Xaml.Markup/XamlApplication.cpp) 코드 파일을 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island)합니다.
+      * **C++Win32:** 참조를 [XamlApplication.cpp](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/Microsoft.UI.Xaml.Markup/XamlApplication.cpp) 코드 파일을 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island)합니다.
 
       * **WPF 및 Windows Forms**: 참조를 [XamlApplication.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Win32.UI.XamlHost/XamlApplication.cs) 하 고 [UWPTypeFactory.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Win32.UI.XamlHost/UWPTypeFactory.cs) 코드 Windows 커뮤니티 도구 키트의 파일입니다. 이러한 파일은 공유 구현의 일부를 **WindowsXamlHost** WPF와 이러한 유형의 앱에서 API를 호스트 하는 UWP XAML을 사용 하는 방법을 설명 하는 데 도움이 되는 Windows Forms에 대 한 클래스입니다.
 
-3. 호스트 응용 프로그램 솔루션에 사용자 지정 UWP XAML 컨트롤에 대 한 소스 코드를 통합 하 고 사용자 지정 컨트롤을 빌드하고 응용 프로그램에서 사용 합니다. WPF 또는 Windows Forms 응용 프로그램에 대 한 지침은 [이러한 지침](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost#add-a-custom-uwp-control)합니다. 에 대 한 예는 C++ Win32 응용 프로그램 참조를 [Microsoft.UI.Xaml.Markup](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island/Microsoft.UI.Xaml.Markup) 및 [MyApp](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island/MyApp) 에서 프로젝트를 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island).
+3. 호스트 응용 프로그램 솔루션에 사용자 지정 UWP XAML 컨트롤에 대 한 소스 코드를 통합 하 고 사용자 지정 컨트롤을 빌드하고 응용 프로그램에서 사용 합니다. WPF 또는 Windows Forms 응용 프로그램에 대 한 지침은 [이러한 지침](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost#add-a-custom-uwp-control)합니다. 에 대 한 예는 C++ Win32 응용 프로그램 참조를 [Microsoft.UI.Xaml.Markup](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island/Microsoft.UI.Xaml.Markup) 및 [MyApp](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island/MyApp) 에서 프로젝트를 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island).
 
 ## <a name="troubleshooting"></a>문제 해결
 
@@ -274,4 +274,4 @@ UWP XAML 프레임 워크 (예를 들어 경우 사용자가 다른 화면 DPI �
 ## <a name="related-topics"></a>관련 항목
 
 * [데스크톱 응용 프로그램에서 UWP 컨트롤](xaml-islands.md)
-* [C++Win32 XAML 제도 샘플](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island)
+* [C++Win32 XAML 제도 샘플](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island)

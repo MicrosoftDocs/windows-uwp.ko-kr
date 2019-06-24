@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2737713030d68dbc19aaad3df767cea103b53f35
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 73806735401f53a73b1051f37c72119b45b574be
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361603"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318285"
 ---
 # <a name="midi"></a>MIDI
 
@@ -73,7 +73,7 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
 -   [**업데이트할** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.updated) -기존 장치를 사용 하 여 연결 정보를 업데이트 될 때 발생 합니다.
 -   [**EnumerationCompleted** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.enumerationcompleted) -감시자 요청된 장치 유형의 열거 완료 되 면 발생 합니다.
 
-이러한 각 이벤트에 대한 이벤트 처리기에서 도우미 메서드 **UpdateDevices**가 호출되어 **ListBox**를 현재 디바이스 목록으로 업데이트합니다. **UpdateDevices**는 UI 요소를 업데이트하며 이러한 이벤트 처리기는 UI 스레드에서 호출되지 않기 때문에, 각 호출은 지정된 코드를 UI 스레드에서 실행시키는 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) 호출에 래핑해야 합니다.
+이러한 각 이벤트에 대한 이벤트 처리기에서 도우미 메서드 **UpdateDevices**가 호출되어 **ListBox**를 현재 디바이스 목록으로 업데이트합니다. **UpdateDevices**는 UI 요소를 업데이트하며 이러한 이벤트 처리기는 UI 스레드에서 호출되지 않기 때문에, 각 호출은 지정된 코드를 UI 스레드에서 실행시키는 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 호출에 래핑해야 합니다.
 
 [!code-cs[WatcherEventHandlers](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherEventHandlers)]
 

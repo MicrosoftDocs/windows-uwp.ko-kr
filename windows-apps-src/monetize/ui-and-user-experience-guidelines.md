@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 지침, 모범 사례
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bb187092158386c503b91973d8d63ce291b4760
-ms.sourcegitcommit: c62b260eecd373e57b19a623bae77e29180e0f3d
+ms.openlocfilehash: cf7f61f427ef0b1a0ff5b6f3b66d02d13d02e4ab
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66565510"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320681"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>광고의 UI 및 사용자 환경 지침
 
@@ -25,10 +25,10 @@ ms.locfileid: "66565510"
 이 문서에서 다양한 유형의 광고에 대한 지침을 검토하기 전에 먼저 광고 수익을 개선하기 위해 이러한 일반 모범 사례를 검토합니다.
 
 * [세심하게 광고 배치 계획](https://blogs.windows.com/buildingapps/2017/04/10/monetizing-app-advertisement-placement/). [광고 단위 가시성 최적화](optimize-ad-unit-viewability.md)에 대한 관련 지침을 확인하세요.
-* [중간 비디오 광고를 대체하여 중간 배너 광고 사용](https://blogs.windows.com/buildingapps/2017/04/17/monetizing-app-use-interstitial-banner-fallback-interstitial-video)합니다.
+* [중간 비디오 광고를 대체하여 중간 배너 광고 사용](https://blogs.windows.com/buildingapps/2017/04/17/monetizing-app-use-interstitial-banner-fallback-interstitial-video/)합니다.
 * [더 나은 대상이 지정된 광고를 제공하기 위해 사용자 파악](https://blogs.windows.com/buildingapps/2017/05/17/monetize-app-know-user-serve-better-targeted-ads/).
 * [최신 광고 라이브러리 사용](https://blogs.windows.com/buildingapps/2017/05/22/earn-money-moving-latest-advertising-libraries/).
-* [앱에 대해 정확한 COPPA 설정](https://blogs.windows.com/buildingapps/2017/06/21/monetizing-app-set-coppa-settings-app).
+* [앱에 대해 정확한 COPPA 설정](https://blogs.windows.com/buildingapps/2017/06/21/monetizing-app-set-coppa-settings-app/).
 
 
 ## <a name="guidelines-for-banner-ads"></a>배너 광고에 대한 지침
@@ -39,7 +39,7 @@ ms.locfileid: "66565510"
 
 앱 내 배너 광고를 구현할 때는 이러한 모범 사례를 따르는 것이 좋습니다.
 
-* 실행 중인 디바이스의 레이아웃에 잘 맞는 [IAB(Interactive Advertising Bureau) 크기를 사용](https://blogs.windows.com/buildingapps/2017/04/03/monetizing-app-use-interactive-advertising-bureau-ad-sizes)하세요.
+* 실행 중인 디바이스의 레이아웃에 잘 맞는 [IAB(Interactive Advertising Bureau) 크기를 사용](https://blogs.windows.com/buildingapps/2017/04/03/monetizing-app-use-interactive-advertising-bureau-ad-sizes/)하세요.
 
 * 앱 UI의 대부분을 기능 컨트롤 및 콘텐츠에 할애합니다.
 

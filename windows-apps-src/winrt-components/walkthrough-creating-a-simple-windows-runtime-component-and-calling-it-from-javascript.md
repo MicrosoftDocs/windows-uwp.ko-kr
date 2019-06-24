@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 855c629e961df36970886b4076e5091726d07c93
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8d6f77c92efdd5ebe93a32514513747174ab9e9c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372934"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322192"
 ---
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>연습: 간단한 Windows 런타임 구성 요소를 만들고 JavaScript에서 호출
 
@@ -557,7 +557,7 @@ events1Button.addEventListener("click", events1, false);
 ## <a name="exposing-asynchronous-operations"></a>비동기 작업 노출
 
 
-.NET Framework에는 작업 및 제네릭 [Task&lt;TResult&gt;](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1?redirectedfrom=MSDN) 클래스에 따라 비동기 처리 및 병렬 처리를 위한 풍부한 도구 집합이 있습니다. Windows 런타임 구성 요소에 작업 기반 비동기 처리를 노출하려면 Windows 런타임 인터페이스 [IAsyncAction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [IAsyncActionWithProgress&lt;TProgress&gt;](https://docs.microsoft.com/previous-versions//br205784(v=vs.85)), [IAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/previous-versions//br205802(v=vs.85)) 및 [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://docs.microsoft.com/previous-versions//br205807(v=vs.85))를 사용합니다. Windows 런타임에서 작업(operation)은 결과를 반환하지만 작업(action)은 반환하지 않습니다.
+.NET Framework에는 작업 및 제네릭 [Task&lt;TResult&gt;](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1?redirectedfrom=MSDN) 클래스에 따라 비동기 처리 및 병렬 처리를 위한 풍부한 도구 집합이 있습니다. Windows 런타임 구성 요소에 작업 기반 비동기 처리를 노출하려면 Windows 런타임 인터페이스 [IAsyncAction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [IAsyncActionWithProgress&lt;TProgress&gt;](https://docs.microsoft.com/previous-versions/br205784(v=vs.85)), [IAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/previous-versions/br205802(v=vs.85)) 및 [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://docs.microsoft.com/previous-versions/br205807(v=vs.85))를 사용합니다. Windows 런타임에서 작업(operation)은 결과를 반환하지만 작업(action)은 반환하지 않습니다.
 
 이 섹션에서는 진행률을 보고하고 결과를 반환하는 취소할 수 있는 비동기 작업을 보여 줍니다. GetPrimesInRangeAsync 메서드는 [AsyncInfo](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime?redirectedfrom=MSDN) 클래스를 사용하여 작업을 생성하고 해당 취소 및 진행률 보고 기능을 WinJS.Promise 개체에 연결합니다. 먼저 Example 클래스에 GetPrimesInRangeAsync 메서드를 추가합니다.
 

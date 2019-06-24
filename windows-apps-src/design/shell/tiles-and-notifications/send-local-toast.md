@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c8def5d1a220fe0458dd5c244d875b991b2b76c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 654c063b7c377023fef4b2dab3ddf5d7a755cb2d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365936"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320802"
 ---
 # <a name="send-a-local-toast-notification"></a>로컬 알림 메시지 보내기
 
@@ -501,7 +501,7 @@ var toast = new ToastNotification(toastXml);
 
 ## <a name="resources"></a>리소스
 
-* [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-sending-local-toast)
+* [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10)
 * [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)
 * [ToastNotification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
 * [ToastNotificationActivatedEventArgs 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)

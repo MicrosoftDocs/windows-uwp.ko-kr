@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, Store 목록 가져오기, Store 목록 내보내기, 가져오기 내보내기, Store 목록 csv
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d98795d6ab43f92ad2927553b037524e2fc1ec7
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: b45f12a9ef7212ddb23b647894189491bfa73549
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63784781"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320631"
 ---
 # <a name="import-and-export-store-listings"></a>스토어 목록 가져오기 및 내보내기
 
@@ -27,7 +27,7 @@ ms.locfileid: "63784781"
 
 앱에 대한 제출 개요 페이지에서 **목록 내보내기**(**목록 저장** 섹션의)를 클릭하여 UTF-8로 인코딩된 .csv 파일을 생성합니다. 이 파일을 컴퓨터의 한 위치에 저장합니다.
 
-Microsoft Excel이나 다른 편집기를 사용해 이 파일을 편집할 수 있습니다. Excel의 Office 365 버전은 .csv 파일을 **CSV UTF-8(쉼표로 구분)(*.csv)** 로 저장할 수 있지만, 다른 버전에서는 이 기능이 지원되지 않습니다. 이 기능을 지원하는 Excel 버전에 대한 세부 정보는 [Excel 2016의 새로운 기능 공지](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73)를 참조하고, 다양한 편집기에서 UTF-8로의 인코딩에 대한 자세한 내용은 [여기](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16)를 참조하세요.
+Microsoft Excel이나 다른 편집기를 사용해 이 파일을 편집할 수 있습니다. Excel의 Office 365 버전은 .csv 파일을 **CSV UTF-8(쉼표로 구분)(*.csv)** 로 저장할 수 있지만, 다른 버전에서는 이 기능이 지원되지 않습니다. 이 기능을 지원하는 Excel 버전에 대한 세부 정보는 [Excel 2016의 새로운 기능 공지](https://support.office.com/article/what-s-new-in-excel-for-office-365-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-001&ad=US)를 참조하고, 다양한 편집기에서 UTF-8로의 인코딩에 대한 자세한 내용은 [여기](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16)를 참조하세요.
       
 제품에 대한 목록을 아직 만들지 않은 경우에는 내보낸 .csv 파일에 사용자 지정 데이터가 포함되지 않습니다. Store 목록에 표시될 수 있는 모든 항목에 해당하는 **필드**, **ID**, **유형** 및 **기본** 행에 대한 열이 표시됩니다.
 

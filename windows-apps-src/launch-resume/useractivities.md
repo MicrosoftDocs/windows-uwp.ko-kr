@@ -5,12 +5,12 @@ keywords: 사용자 활동, 사용자 활동, 타임라인, cortana 사용자의
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2756231b067176da66c6dbcedf7a1452d5d109f4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ed268dd4ba07604db468ee24e5ea348acf806b39
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641158"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321807"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>장치 간 사용자 활동 계속 수행
 
@@ -32,7 +32,7 @@ ms.locfileid: "57641158"
 
 [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity)는 Windows에서의 사용자 사용 단위입니다. UserActivity는 활동이 속한 앱을 활성화하는 데 사용되는 URI, 시각적 개체 및 활동을 설명하는 메타데이터의 세 부분으로 구성됩니다.
 
-1. [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri#Windows_ApplicationModel_UserActivities_UserActivity_ActivationUri)를 사용하여 특정 컨텍스트로 응용 프로그램을 다시 시작합니다. 일반적으로 이 링크는 스키마에 대한 프로토콜 처리기 양식(예: “my-app://page2?action=edit”) 또는 AppUriHandler 양식(예: http://constoso.com/page2?action=edit)을 사용합니다.
+1. [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri#Windows_ApplicationModel_UserActivities_UserActivity_ActivationUri)를 사용하여 특정 컨텍스트로 응용 프로그램을 다시 시작합니다. 일반적으로 이 링크는 스키마에 대한 프로토콜 처리기 양식(예: “my-app://page2?action=edit”) 또는 AppUriHandler 양식(예: http://constoso.com/page2?action=edit) 을 사용합니다.
 2. [VisualElements](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.visualelements)는 사용자가 제목, 설명 또는 적응형 카드 요소로 활동을 시각적으로 식별할 수 있는 클래스를 노출합니다.
 3. 마지막으로 [Content](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content)에는 특정 컨텍스트에서 활동을 그룹화하고 검색하는 데 사용할 수 있는 활동 메타데이터를 저장할 수 있습니다. 여기서는 종종 [https://schema.org](https://schema.org) 데이터 양식을 사용합니다.
 
@@ -73,7 +73,7 @@ private async Task GenerateActivityAsync()
 
 **UserActivity**를 가져오거나 만든 후에 `UserActivity.VisualElements.DisplayText` 및 `UserActivity.ActivationUri`라는 두 개의 필수 필드를 지정합니다.
 
-그런 다음 [SaveAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.saveasync)를 호출하여 **UserActivity**를 저장하고, 마지막으로 [UserActivitySession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitysession)을 반환하는 [CreateSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.createsession)을 저장합니다. **UserActivitySession**은 사용자가 실제로 **UserActivity**를 사용할 때 관리할 수 있는 개체입니다. 예를 들어 사용자가 페이지에서 나가면 **UserActivitySession**에서 `Dispose()`를 호출해야 합니다. 위의 예에서는 `CreateSession()`을 호출하기 전에 `_currentActivity`에서도 `Dispose()`를 호출합니다. 이는 `_currentActivity`를 페이지의 멤버 필드로 만들었으며 새 활동을 시작하기 전에 기존 활동을 중지하기를 원하기 때문입니다(참고: `?`는 멤버 액세스를 수행하기 전에 널 테스트를 수행하는 [조건부 널 연산자](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators)임).
+그런 다음 [SaveAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.saveasync)를 호출하여 **UserActivity**를 저장하고, 마지막으로 [UserActivitySession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitysession)을 반환하는 [CreateSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.createsession)을 저장합니다. **UserActivitySession**은 사용자가 실제로 **UserActivity**를 사용할 때 관리할 수 있는 개체입니다. 예를 들어 사용자가 페이지에서 나가면 **UserActivitySession**에서 `Dispose()`를 호출해야 합니다. 위의 예에서는 `CreateSession()`을 호출하기 전에 `_currentActivity`에서도 `Dispose()`를 호출합니다. 이는 `_currentActivity`를 페이지의 멤버 필드로 만들었으며 새 활동을 시작하기 전에 기존 활동을 중지하기를 원하기 때문입니다(참고: `?`는 멤버 액세스를 수행하기 전에 널 테스트를 수행하는 [조건부 널 연산자](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-)임).
 
 이 경우 `ActivationUri`는 사용자 지정 스키마이므로 응용 프로그램 매니페스트에도 프로토콜을 등록해야 합니다. 이는 Package.appmanifest XML 파일 또는 디자이너를 사용하여 수행됩니다.
 
@@ -149,8 +149,8 @@ Windows.UI.Shell.AdaptiveCardBuilder.CreateAdaptiveCardFromJson(jsonCardText); /
 
 ## <a name="cross-platform-and-service-to-service-integration"></a>교차 플랫폼 및 서비스 간 통합
 
-앱이 교차 플랫폼(예: Android 및 iOS)에서 실행되거나 클라우드에서 사용자 상태를 유지 관리하는 경우 [Microsoft Graph](https://developer.microsoft.com/graph/)를 통해 UserActivities를 게시할 수 있습니다.
-Microsoft 계정을 사용하여 응용 프로그램 또는 서비스를 인증하면 위에서 설명된 대로 동일한 데이터로 두 개의 간단한 REST 호출만 사용하여 [활동](https://developer.microsoft.com/graph/docs/api-reference/beta/api/projectrome_put_activity) 및 [기록](https://developer.microsoft.com/graph/docs/api-reference/beta/resources/projectrome_historyitem) 개체를 생성합니다.
+앱이 교차 플랫폼(예: Android 및 iOS)에서 실행되거나 클라우드에서 사용자 상태를 유지 관리하는 경우 [Microsoft Graph](https://developer.microsoft.com/graph)를 통해 UserActivities를 게시할 수 있습니다.
+Microsoft 계정을 사용하여 응용 프로그램 또는 서비스를 인증하면 위에서 설명된 대로 동일한 데이터로 두 개의 간단한 REST 호출만 사용하여 [활동](https://docs.microsoft.com/graph/api/resources/projectrome-activity) 및 [기록](https://docs.microsoft.com/graph/api/resources/projectrome-historyitem) 개체를 생성합니다.
 
 ## <a name="summary"></a>요약
 
@@ -158,7 +158,7 @@ Microsoft 계정을 사용하여 응용 프로그램 또는 서비스를 인증�
 * 에 대 한 자세한 정보는 [ **UserActivity** API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 * [샘플 코드](https://github.com/Microsoft/project-rome)를 확인합니다.
 * [더 정교한 적응형 카드](https://adaptivecards.io/)를 참조하세요.
-* [Microsoft Graph](https://developer.microsoft.com/graph/)를 통해 iOS, Android 또는 웹 서비스에서 **UserActivity**를 게시합니다.
+* [Microsoft Graph](https://developer.microsoft.com/graph)를 통해 iOS, Android 또는 웹 서비스에서 **UserActivity**를 게시합니다.
 * [GitHub의 프로젝트 로마](https://github.com/Microsoft/project-rome)에 대해 자세히 알아보세요.
 
 ## <a name="key-apis"></a>주요 API
@@ -172,4 +172,4 @@ Microsoft 계정을 사용하여 응용 프로그램 또는 서비스를 인증�
 * [Adaptive card 시각화 도우미, 샘플](https://adaptivecards.io/)
 * [URI 활성화 처리](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 * [Microsoft Graph, 작업 피드 및 Adaptive Card를 사용 하 여 모든 플랫폼에서 고객 참여](https://channel9.msdn.com/Events/Connect/2017/B111)
-* [Microsoft Graph](https://developer.microsoft.com/graph/)
+* [Microsoft Graph](https://developer.microsoft.com/graph)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 63656fc545596fc045dc536167313c0c8e3f6ad2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 57532c45bdf6c2b8feb2af1277be74a0f8b2c759
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371166"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320298"
 ---
 # <a name="property-path-syntax"></a>속성 경로 구문
 
@@ -58,7 +58,7 @@ Windows 런타임에서는 종속성 속성의 대상 값에 바인딩할 수 �
 
 ### <a name="attached-properties"></a>연결 된 속성
 
-속성 경로에는 연결된 속성에 대한 참조가 포함될 수 있습니다. 연결된 속성을 식별하는 이름에는 점이 이미 포함되어 있으므로 점이 개체-속성 단계로 처리되지 않도록 하려면 연결된 속성 이름을 괄호로 묶어야 합니다. 예를 들어 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v%3Dvs.95))를 바인딩 경로로 사용하도록 지정하는 문자열은 "(Canvas.ZIndex)"입니다. 연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](attached-properties-overview.md)를 참조하세요.
+속성 경로에는 연결된 속성에 대한 참조가 포함될 수 있습니다. 연결된 속성을 식별하는 이름에는 점이 이미 포함되어 있으므로 점이 개체-속성 단계로 처리되지 않도록 하려면 연결된 속성 이름을 괄호로 묶어야 합니다. 예를 들어 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95))를 바인딩 경로로 사용하도록 지정하는 문자열은 "(Canvas.ZIndex)"입니다. 연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](attached-properties-overview.md)를 참조하세요.
 
 ### <a name="combining-property-path-syntax"></a>속성 경로 구문 결합
 
@@ -70,7 +70,7 @@ Windows 런타임에서는 종속성 속성의 대상 값에 바인딩할 수 �
 
 ## <a name="property-path-for-animation-targeting"></a>애니메이션 대상에 대한 속성 경로
 
-애니메이션은 애니메이션이 실행될 때 스토리보드 값이 적용되는 종속성 속성을 대상으로 합니다. 애니메이션할 속성이 있는 개체를 식별하기 위해 애니메이션은 이름([x:Name 특성](x-name-attribute.md))에 따라 요소를 대상으로 지정합니다. [  **Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname?view=netframework-4.8)으로 식별되는 개체에서 시작하고 애니메이션이 적용되어야 하는 특정 종속성 속성 값으로 끝나는 속성 경로를 정의해야 하는 경우가 많습니다. 해당 속성 경로는 [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v%3Dvs.95))의 값으로 사용됩니다.
+애니메이션은 애니메이션이 실행될 때 스토리보드 값이 적용되는 종속성 속성을 대상으로 합니다. 애니메이션할 속성이 있는 개체를 식별하기 위해 애니메이션은 이름([x:Name 특성](x-name-attribute.md))에 따라 요소를 대상으로 지정합니다. [  **Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname?view=netframework-4.8)으로 식별되는 개체에서 시작하고 애니메이션이 적용되어야 하는 특정 종속성 속성 값으로 끝나는 속성 경로를 정의해야 하는 경우가 많습니다. 해당 속성 경로는 [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95))의 값으로 사용됩니다.
 
 XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 [스토리보드 애니메이션](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)을 참조하세요.
 
@@ -107,7 +107,7 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 
 대부분 코드를 전혀 사용하지 않고 XAML에서[**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath)를 적용할 수 있습니다. 그러나 경우에 따라 코드를 사용하여 **PropertyPath** 개체를 정의하고 런타임에 속성에 할당해야 할 수 있습니다.
 
-[**PropertyPath** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath) 에 [ **PropertyPath(String)** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.) 생성자 및 기본 생성자가 없습니다. 이 생성자에 전달하는 문자열은 앞에서 설명한 대로 속성 경로 구문을 사용하여 정의된 문자열입니다. 또한 [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path)를 XAML 특성으로 할당하는 데 사용한 문자열과 동일한 문자열입니다. **PropertyPath** 클래스의 유일하게 다른 API는 읽기 전용인 [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.path) 속성입니다. 이 속성을 다른 **PropertyPath** 인스턴스의 생성 문자열로 사용할 수 있습니다.
+[**PropertyPath** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath) 에 [ **PropertyPath(String)** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.-ctor) 생성자 및 기본 생성자가 없습니다. 이 생성자에 전달하는 문자열은 앞에서 설명한 대로 속성 경로 구문을 사용하여 정의된 문자열입니다. 또한 [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path)를 XAML 특성으로 할당하는 데 사용한 문자열과 동일한 문자열입니다. **PropertyPath** 클래스의 유일하게 다른 API는 읽기 전용인 [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.path) 속성입니다. 이 속성을 다른 **PropertyPath** 인스턴스의 생성 문자열로 사용할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -116,6 +116,6 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 * [{Binding} 태그 확장](binding-markup-extension.md)
 * [**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath)
 * [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding)
-* [**바인딩 생성자**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.)
+* [**바인딩 생성자**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.-ctor)
 * [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)
 

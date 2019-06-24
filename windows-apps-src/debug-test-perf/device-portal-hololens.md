@@ -6,12 +6,12 @@ ms.date: 01/3/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 2561f18e2ac054c8b378b0c7c0a9689bebcc4140
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3b25283dbe8feff74ba994efba31c542f59171d9
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611258"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317886"
 ---
 # <a name="device-portal-for-hololens"></a>HoloLens용 디바이스 포털
 
@@ -21,12 +21,12 @@ ms.locfileid: "57611258"
 ### <a name="enable-device-portal"></a>디바이스 포털 사용
 
 1. HoloLens의 전원을 켜고 디바이스에 배치합니다.
-2. [블룸](https://dev.windows.com/holographic/Gestures.html#Bloom) 제스처를 수행하여 주 메뉴를 시작합니다.
-3. **설정** 타일을 보면서 [에어 탭](https://dev.windows.com/holographic/Gestures.html#Press_and_release) 제스처를 수행합니다. 두 번째 에어 탭을 수행하여 환경에 앱을 배치합니다. 앱을 배치한 후 앱 설정이 시작됩니다.
+2. [블룸](https://developer.microsoft.com/mixed-reality#Bloom) 제스처를 수행하여 주 메뉴를 시작합니다.
+3. **설정** 타일을 보면서 [에어 탭](https://developer.microsoft.com/mixed-reality#Press_and_release) 제스처를 수행합니다. 두 번째 에어 탭을 수행하여 환경에 앱을 배치합니다. 앱을 배치한 후 앱 설정이 시작됩니다.
 4. **업데이트** 메뉴 항목을 선택합니다.
 5. **개발자용** 메뉴 항목을 선택합니다.
 6. **개발자 모드**를 사용하도록 설정합니다.
-7. [아래로 스크롤](https://dev.windows.com/holographic/Gestures.html#Navigation)하여 디바이스 포털을 사용하도록 설정합니다.
+7. [아래로 스크롤](https://developer.microsoft.com/mixed-reality#Navigation)하여 디바이스 포털을 사용하도록 설정합니다.
 
 
 ### <a name="pair-your-device"></a>디바이스 페어링
@@ -51,7 +51,7 @@ ms.locfileid: "57611258"
 #### <a name="connect-to-an-emulator"></a>에뮬레이터에 연결 
 
 에뮬레이터로 디바이스 포털을 사용할 수도 있습니다. 디바이스 포털에 연결하려면 도구 모음을 사용합니다. 다음 아이콘을 클릭합니다.
-- 장치 포털을 엽니다. 에뮬레이터에서 HoloLens OS에 대 한 Windows Device Portal 엽니다.
+- 장치 포털을 엽니다. 에뮬레이터에서 HoloLens OS용 Windows 디바이스 포털을 엽니다.
 
 #### <a name="create-a-username-and-password"></a>사용자 이름 및 암호 만들기 
 
@@ -90,7 +90,7 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
 
 페이지 맨 위에 있는 도구 모음에서 자주 사용하는 상태 및 기능에 대한 액세스를 제공합니다.
 - **온라인**: 장치에서 Wi-fi에 연결 되어 있는지 여부를 나타냅니다.
-- **종료**: 장치를 해제합니다.
+- **Shutdown**: 장치를 해제합니다.
 - **다시 시작**: 장치의 전원을 주기입니다.
 - **보안**: 장치 보안 페이지를 엽니다.
 - **쿨**: 장치의 온도 나타냅니다.
@@ -116,7 +116,7 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
 - **Floor 표시**: 체크 무늬 floor 평면에 표시 됩니다.
 - **꼭지점이 절 두 체 표시**: 하면 보기 프러스텀을 표시합니다.
 - **안정화 평면 표시**: HoloLens 안정화 동작을 사용 하는 평면에 표시 됩니다.
-- **메시를 보여 줍니다.**: 사용자 환경을 나타내는 surface 매핑 메시를 표시 합니다.
+- **메시를 보여 줍니다.** : 사용자 환경을 나타내는 surface 매핑 메시를 표시 합니다.
 - **세부 정보 표시**: 표시를 실시간으로 변경 될 때 해당 위치, 헤드 회전 쿼터 니 및 장치 원본 벡터를 전달 합니다.
 - **전체 화면 단추**: 전체 화면 모드에서 3D 뷰를 보여 줍니다. 전체 화면 보기를 종료하려면 ESC 키를 누릅니다.
 
@@ -174,7 +174,7 @@ Enable Kiosk Mode(키오스크 모드 사용)을 선택하여 HoloLens를 키오
 
 가상 키보드 아래 영역을 클릭 또는 탭하여 HoloLens에 키 입력 전송을 사용합니다. 입력 텍스트 텍스트 상자에 입력하고 보내기를 클릭 또는 탭하여 활성 앱에 키 입력을 보냅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 * [Windows Device Portal 개요](device-portal.md)
 * [장치 포털 핵심 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)(모든 Windows 10 장치의 AIP 명령)

@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c9088f695fb70d171f0b9d5474a4a0f2a63cae05
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d611c57ff6d8382a70bcc5078e04e9af8b6fd4ca
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372418"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322269"
 ---
 #  <a name="move-from-windowsphone-silverlight-to-uwp"></a>Windows Phone Silverlight에서 UWP로 이동
 
 
 Windows Phone Silverlight 앱 개발자 인 경우 만들 수 있습니다 기술 집합 및 소스 코드의 좋은 사용 이동에서 Windows 10으로 합니다. Windows 10을 사용 하 여 고객에 게 모든 종류의 장치에 설치할 수 있는 단일 앱 패키지는 유니버설 Windows 플랫폼 (UWP) 앱을 만들 수 있습니다. Windows 10에서 UWP 앱 및 적응 코드 및이 포팅 가이드에서 언급할 수는 적응 UI의 개념에 자세한 배경 정보를 참조 하세요. 합니다 [유니버설 Windows 플랫폼 (UWP) 앱 가이드](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)합니다.
 
-Windows 10 앱 Windows Phone Silverlight 앱을 포팅하 면에 있던 모바일 기능에 따라잡을 수 있습니다 [Windows Phone 8.1에 도입 된](https://docs.microsoft.com/previous-versions/windows/apps/ff402535(v%3dvs.105))를 뛰어넘는 Windows 플랫폼 (UWP (유니버설)을 사용 하도록 앱 및 모든 Windows 10 장치에서 모델 및 UI 프레임 워크는 범용입니다. PC, 태블릿, 휴대폰 및 기타 여러 종류의 장치를 하나의 코드 베이스에서 그리고 하나의 앱 패키지를 통해 지원할 수 있게 됩니다. 또한 앱의 잠재 사용자 수가 배로 증가하고 공유 데이터, 구매한 소모성 항목 등을 통해 새로운 가능성이 열립니다. 새로운 기능에 대 한 자세한 내용은 참조 하세요. [개발자를 위한 Windows 10의 새로운 기능](https://dev.windows.com/getstarted/whats-new-windows-10)합니다.
+Windows 10 앱 Windows Phone Silverlight 앱을 포팅하 면에 있던 모바일 기능에 따라잡을 수 있습니다 [Windows Phone 8.1에 도입 된](https://docs.microsoft.com/previous-versions/windows/apps/ff402535(v=vs.105))를 뛰어넘는 Windows 플랫폼 (UWP (유니버설)을 사용 하도록 앱 및 모든 Windows 10 장치에서 모델 및 UI 프레임 워크는 범용입니다. PC, 태블릿, 휴대폰 및 기타 여러 종류의 장치를 하나의 코드 베이스에서 그리고 하나의 앱 패키지를 통해 지원할 수 있게 됩니다. 또한 앱의 잠재 사용자 수가 배로 증가하고 공유 데이터, 구매한 소모성 항목 등을 통해 새로운 가능성이 열립니다. 새로운 기능에 대 한 자세한 내용은 참조 하세요. [개발자를 위한 Windows 10의 새로운 기능](https://docs.microsoft.com/windows/uwp/whats-new/windows-10-version-latest)합니다.
 
 원하는 경우 Windows Phone Silverlight 버전의 앱 및 Windows 10 버전을 모두 사용할 수 있습니다 고객에 게 동시에.
 
@@ -79,7 +79,7 @@ Windows 10 앱에 기존.NET 소스 코드를 다시 컴파일하거나 또 다�
 ## <a name="related-topics"></a>관련 항목
 
 **설명서**
-* [개발자를 위한 Windows 10의 새로운 기능](https://dev.windows.com/getstarted/whats-new-windows-10)
+* [개발자를 위한 Windows 10의 새로운 기능](https://docs.microsoft.com/windows/uwp/whats-new/windows-10-version-latest)
 * [UWP(유니버설 Windows 플랫폼) 앱 가이드](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
 * [사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱 용 로드맵 C# 또는 Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))
 * [Windows Phone 8 개발자를 위한 새로운 기능](https://docs.microsoft.com/previous-versions/windows/apps/dn655121(v=vs.105))

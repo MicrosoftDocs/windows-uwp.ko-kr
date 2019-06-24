@@ -6,23 +6,23 @@ ms.date: 08/08/2018
 ms.topic: article
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
-ms.openlocfilehash: bee8a04e3b4d57caf7da3e21f2be3c789d83be90
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 31672ff989da7d72f751a33ec3df3d8d528e22ec
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627598"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317816"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript API 시험 응시
 
-[시험](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) 는 렌더링 중요 테스트를 위해 잠긴 온라인 평가 콘텐츠 보안을 제공 하는 방법 대신 평가 중점적으로 강사를 허용 하는 브라우저 기반 UWP 앱 테스트 환경입니다. 이를 위해 이 앱에서는 모든 웹 응용 프로그램이 활용할 수 있는 JavaScript API를 사용합니다. 시험 응시 API는 고강도 일반 코어 테스트를 위해 [SBAC 브라우저 API 표준](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)을 지원합니다.
+[시험](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) 는 렌더링 중요 테스트를 위해 잠긴 온라인 평가 콘텐츠 보안을 제공 하는 방법 대신 평가 중점적으로 강사를 허용 하는 브라우저 기반 UWP 앱 테스트 환경입니다. 이를 위해 이 앱에서는 모든 웹 응용 프로그램이 활용할 수 있는 JavaScript API를 사용합니다. 시험 응시 API는 고강도 일반 코어 테스트를 위해 [SBAC 브라우저 API 표준](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)을 지원합니다.
 
-앱 자체에 대한 자세한 내용은 [시험 응시 앱 기술 참조](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)를 참조하세요. 문제 해결 도움말은 [이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결](troubleshooting.md)을 참조하세요.
+앱 자체에 대한 자세한 내용은 [시험 응시 앱 기술 참조](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)를 참조하세요. 문제 해결 도움말은 [이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결](troubleshooting.md)을 참조하세요.
 
 ## <a name="reference-documentation"></a>참조 설명서
 시험 응시 API는 다음 네임스페이스로 존재합니다. 모든 API는 글로벌 `SecureBrowser`개체에 따라 달라짐에 주의하십시오.
 
-| 네임스페이스 | 설명 |
+| Namespace | 설명 |
 |-----------|-------------|
 |[보안 네임 스페이스](#security-namespace)|테스트를 위해 장치를 잠그고 테스트 환경을 제어하도록 해주는 API가 들어 있습니다. |
 
@@ -32,11 +32,11 @@ ms.locfileid: "57627598"
 
 | 메서드 | 설명   |
 |--------|---------------|
-|[잠금](#lockDown) | 테스트를 위해 장치를 잠급니다. |
+|[lockDown](#lockDown) | 테스트를 위해 장치를 잠급니다. |
 |[isEnvironmentSecure](#isEnvironmentSecure) | 잠금 컨텍스트가 디바이스에 적용되는지 결정합니다. |
 |[getDeviceInfo](#getDeviceInfo) | 테스트 응용 프로그램이 실행되는 플랫폼에 대한 세부 정보를 가져옵니다. |
 |[examineProcessList](#examineProcessList)|실행 중인 사용자 및 시스템 프로세스의 목록을 가져옵니다.|
-|[닫기](#close) | 브라우저를 닫고 디바이스의 잠금을 해제합니다. |
+|[close](#close) | 브라우저를 닫고 디바이스의 잠금을 해제합니다. |
 |[getPermissiveMode](#getPermissiveMode)|허용 모드가 켜져 있는지 아니면 꺼져 있는지 확인합니다.|
 |[setPermissiveMode](#setPermissiveMode)|허용 모드를 켜거나 끕니다.|
 |[emptyClipBoard](#emptyClipBoard)|시스템 클립보드를 지웁니다.|
@@ -58,7 +58,7 @@ ms.locfileid: "57627598"
 `void SecureBrowser.security.lockDown(Boolean enable, Function onSuccess, Function onError);`
 
 **매개 변수**  
-* `enable` - **true 이면** 잠금 화면 위에 Take-a-테스트 앱을 실행 하 고이 설명 하는 정책을 적용 하 [문서](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)합니다. 앱이 잠겨 있지 않으면 잠금 화면 위에서 시험 응시의 실행을 중지하고 닫는 **false**입니다. 이 경우 영향을 주지 않습니다.  
+* `enable` - **true 이면** 잠금 화면 위에 Take-a-테스트 앱을 실행 하 고이 설명 하는 정책을 적용 하 [문서](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)합니다. 앱이 잠겨 있지 않으면 잠금 화면 위에서 시험 응시의 실행을 중지하고 닫는 **false**입니다. 이 경우 영향을 주지 않습니다.  
 * `onSuccess` -[선택 사항] 성공적으로 사용 되거나 사용 하지 않도록 설정 된 잠금을 후 호출할 함수입니다. `Function(Boolean currentlockdownstate)` 형식이어야 합니다.  
 * `onError` -[선택 사항] 잠금 작업에 실패 하면 호출할 함수입니다. `Function(Boolean currentlockdownstate)` 형식이어야 합니다.  
 
@@ -184,7 +184,7 @@ Windows 10, 버전 1709
 <span id="emptyClipBoard"/>
 
 ### <a name="emptyclipboard"></a>emptyClipBoard
-시스템 클립보드를 지웁니다. 시스템 클립보드에 저장되어 있을 수 있는 데이터를 강제로 지우려면 테스트 응용 프로그램에서 이 함수를 호출해야 합니다.  **[lockDown](#lockDown)** 함수도 이 작업을 수행합니다.
+시스템 클립보드를 지웁니다. 시스템 클립보드에 저장되어 있을 수 있는 데이터를 강제로 지우려면 테스트 응용 프로그램에서 이 함수를 호출해야 합니다. **[lockDown](#lockDown)** 함수도 이 작업을 수행합니다.
 
 **구문**  
 `void SecureBrowser.security.emptyClipBoard();`

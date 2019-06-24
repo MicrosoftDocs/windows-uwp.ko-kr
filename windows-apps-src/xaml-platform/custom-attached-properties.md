@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: e128a4c9d1269b8ed5fe1c09d38af7edbed8fe02
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7ff5d49521591300214b8ce451e38b4b83d64ef8
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366547"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322212"
 ---
 # <a name="custom-attached-properties"></a>사용자 지정 연결된 속성
 
@@ -28,7 +28,7 @@ ms.locfileid: "66366547"
 
 ## <a name="scenarios-for-attached-properties"></a>연결된 속성 시나리오
 
-정의 클래스가 아닌 클래스에 사용할 수 있는 속성 설정 메커니즘이 있어야 하는 이유가 있는 경우 연결된 속성을 만들 수 있습니다. 이러한 경우에 대한 가장 일반적인 시나리오는 레이아웃 및 서비스 지원입니다. 기존 레이아웃 속성에 대한 예로는 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v%3Dvs.95)) 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8)이 있습니다. 레이아웃 시나리오에서는 레이아웃 제어 요소의 자식 요소로 존재하는 요소가 해당 부모 요소에 대한 레이아웃 요구 사항을 개별적으로 표시하고 각각 해당 부모가 연결된 속성으로 정의하는 속성 값을 설정할 수 있습니다. Windows 런타임 API의 서비스 지원 시나리오 예로는 [**ScrollViewer.IsZoomChainingEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.iszoomchainingenabled) 같은 [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)의 연결된 속성 집합이 있습니다.
+정의 클래스가 아닌 클래스에 사용할 수 있는 속성 설정 메커니즘이 있어야 하는 이유가 있는 경우 연결된 속성을 만들 수 있습니다. 이러한 경우에 대한 가장 일반적인 시나리오는 레이아웃 및 서비스 지원입니다. 기존 레이아웃 속성에 대한 예로는 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95)) 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8)이 있습니다. 레이아웃 시나리오에서는 레이아웃 제어 요소의 자식 요소로 존재하는 요소가 해당 부모 요소에 대한 레이아웃 요구 사항을 개별적으로 표시하고 각각 해당 부모가 연결된 속성으로 정의하는 속성 값을 설정할 수 있습니다. Windows 런타임 API의 서비스 지원 시나리오 예로는 [**ScrollViewer.IsZoomChainingEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.iszoomchainingenabled) 같은 [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)의 연결된 속성 집합이 있습니다.
 
 > [!WARNING]
 > Windows 런타임 XAML 구현를 기존 제한은 아니지만 사용자 지정 연결 된 속성에 애니메이션 효과 수 없습니다.
@@ -73,7 +73,7 @@ Visual Basic의 경우 다음과 같습니다.
 
 다음 예에서는 종속성 속성 등록([**RegisterAttached**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.registerattached) 메서드 사용)을 보여 주며 사용자 지정 연결된 속성의 경우 **Get** 및 **Set** 접근자도 보여 줍니다. 이 예에서 연결된 속성 이름은 `IsMovable`입니다. 따라서 접근자는 `GetIsMovable` 및 `SetIsMovable`로 명명되어야 합니다. 연결된 속성의 소유자는 고유 UI가 없는 `GameService`라는 서비스 클래스이며, 이 클래스는 **GameService.IsMovable** 연결된 속성이 사용되는 경우 연결된 속성 서비스를 제공하는 것만을 목적으로 합니다.
 
-C +에서 연결 된 속성을 정의 + CX가 좀 더 복잡 합니다. 헤더 및 코드 파일 사이에서 팩터링하는 방법을 결정해야 합니다. 또한 [사용자 지정 종속성 속성](custom-dependency-properties.md)에 설명된 이유로 인해 **get** 접근자만 있는 속성으로 식별자를 노출해야 합니다. C++.NET에서 신뢰 하는 것이 아니라 /CX가 속성 필드 관계를 명시적으로 정의 해야 합니다 **readonly** 키워드 및 단순 속성의 암시적 백업 합니다. 또한, 앱이 처음 시작되고 연결된 속성이 필요한 XAML 페이지가 로드되기 전에 도우미 함수 내에서 연결된 속성을 등록해야 합니다. 이 함수는 한 번만 실행됩니다. 일부 및 전체 종속성 속성이나 연결된 속성에 대해 속성 등록 도우미 함수를 호출하는 일반적인 위치는 app.xaml 파일의 코드 안에 있는 **App** / [**Application**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.) 생성자입니다.
+C +에서 연결 된 속성을 정의 + CX가 좀 더 복잡 합니다. 헤더 및 코드 파일 사이에서 팩터링하는 방법을 결정해야 합니다. 또한 [사용자 지정 종속성 속성](custom-dependency-properties.md)에 설명된 이유로 인해 **get** 접근자만 있는 속성으로 식별자를 노출해야 합니다. C++.NET에서 신뢰 하는 것이 아니라 /CX가 속성 필드 관계를 명시적으로 정의 해야 합니다 **readonly** 키워드 및 단순 속성의 암시적 백업 합니다. 또한, 앱이 처음 시작되고 연결된 속성이 필요한 XAML 페이지가 로드되기 전에 도우미 함수 내에서 연결된 속성을 등록해야 합니다. 이 함수는 한 번만 실행됩니다. 일부 및 전체 종속성 속성이나 연결된 속성에 대해 속성 등록 도우미 함수를 호출하는 일반적인 위치는 app.xaml 파일의 코드 안에 있는 **App** / [**Application**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.-ctor) 생성자입니다.
 
 ```csharp
 public class GameService : DependencyObject

@@ -6,19 +6,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 응답에서 응답을 검토
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d45b5144bb13e66c506c4a55115bf252288064d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fa73c8f43c449e8cf7b1c5aa67574f6ff00e7a15
+ms.sourcegitcommit: 7effecb544952b493250337fc622848232fa5995
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633968"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67325859"
 ---
 # <a name="respond-to-customer-reviews"></a>고객 리뷰에 응답
 
 
 고객이 자신의 의견을 수렴 하 고 알 수 있도록 앱의 검토에 대응할 수 있습니다. 리뷰 응답에서는 고객 의견을 기반으로 추가한 기능이나 수정한 버그에 대해 고객에게 알려 주거나, 앱 개선 방도에 대한 구체적인 의견을 얻을 수 있습니다. 응답 내용을 볼 수 있는 모든 Windows 10 고객에 대 한 Microsoft Store 표시 됩니다. 또한 (옵트아웃 하지 않으며 Windows 10, 버전 1803 이상이 실행 하는 장치를 사용 하는) 경우 전자 메일을 통해 응답을 고객에 게 보낼 수 있습니다.
 
-를 앱의 검토를 보고 하려면 응답에서 앱을 찾으려면 [파트너 센터](https://partner.microsoft.com/dashboard)합니다. 왼쪽된 탐색 메뉴에서 *Analytics**을 클릭 한 다음 **검토** 표시할를 [보고서를 검토](reviews-report.md). 선택 **검토에 응답** 응답을 제공 합니다.
+를 앱의 검토를 보고 하려면 응답에서 앱을 찾으려면 [파트너 센터](https://partner.microsoft.com/dashboard)합니다. 왼쪽 탐색 메뉴에서 **분석**을 확장하고 **리뷰**를 클릭하여 [리뷰 보고서](reviews-report.md)를 표시합니다. 선택 **검토에 응답** 응답을 제공 합니다.
 
 > [!TIP]
 > 파트너 센터를 사용 하 여 검토에 응답을 하는 것 외에도 검토에 응답 [프로그래밍 방식으로](../monetize/submit-responses-to-app-reviews.md)입니다.

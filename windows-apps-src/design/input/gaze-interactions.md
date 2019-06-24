@@ -11,12 +11,12 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 77e39b9c7440fab491b3d7ef85baa757d299fff8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3fb07dd9aec475566940dbf98ae6bd1c5f9c1337
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604398"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317334"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>UWP 앱의 응시 상호 작용 및 눈 추적
 
@@ -27,7 +27,7 @@ ms.locfileid: "57604398"
 > [!NOTE]
 > [Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/)의 응시 입력은 [응시](https://docs.microsoft.com/windows/mixed-reality/gaze)를 참조하세요.
 
-**중요 API**: [Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)하십시오 [GazeDevicePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicepreview)하십시오 [GazePointPreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview), [GazeInputSourcePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
+**중요 API**: [Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview), [GazeDevicePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicepreview), [GazePointPreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview), [GazeInputSourcePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
 
 ## <a name="overview"></a>개요
 
@@ -44,7 +44,7 @@ ms.locfileid: "57604398"
 
 또한, 앱이 눈 추적 데이터를 수집, 저장 또는 전송하는 경우 앱의 개인정보처리방침에서 이를 설명해야 하며 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)의 **개인 정보**의 모든 기타 요구 사항을 따라야 합니다.
 
-## <a name="setup"></a>설치
+## <a name="setup"></a>설치 프로그램
 
 UWP 앱에서 응시 API를 사용하려면 다음을 수행해야 합니다. 
 
@@ -66,7 +66,7 @@ UWP 앱에서 응시 API를 사용하려면 다음을 수행해야 합니다.
 
 이 예에서 UWP 응용 프로그램 내에서 사용자의 응시를 추적하고 기본 적중 횟수 테스트를 통해 타이밍 기능을 사용하여 특정 요소에서 응시 초점을 얼마나 잘 유지할 수 있는지 나타내는 방법을 보여 줍니다.
 
-응용 프로그램 뷰포트 내 응시 지점을 표시하는 데 작은 타원이 사용되며 [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/)의 [RadialProgressBar](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/controls/radialprogressbar)는 캔버스에 임의로 배치됩니다. 응시 초점이 진행률 표시줄에 표시되면 타이머가 시작되고 진행률 표시줄이 100%에 도달하면 진행률 표시줄이 캔버스에 임의로 재배치됩니다.
+응용 프로그램 뷰포트 내 응시 지점을 표시하는 데 작은 타원이 사용되며 [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/communitytoolkit/)의 [RadialProgressBar](https://docs.microsoft.com/windows/communitytoolkit/controls/radialprogressbar)는 캔버스에 임의로 배치됩니다. 응시 초점이 진행률 표시줄에 표시되면 타이머가 시작되고 진행률 표시줄이 100%에 도달하면 진행률 표시줄이 캔버스에 임의로 재배치됩니다.
 
 ![타이머 샘플로 응시 추적](images/gaze/gaze-input-timed2.gif)
 
@@ -405,7 +405,7 @@ UWP 앱에서 응시 API를 사용하려면 다음을 수행해야 합니다.
 
     각각 `GazeEntered` 및 `GazeExited`에서 응시 추적 타원을 표시 및 숨깁니다.
 
-    `GazeMoved`에서 [GazeEnteredPreviewEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs)의 [CurrentPoint](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs.currentpoint)에서 제공되는 [EyeGazePosition](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview.eyegazeposition)을 기반으로 응시 추적 타원을 이동합니다. 또한 진행률 표시줄의 위치 변경을 트리거하는 [RadialProgressBar](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/controls/radialprogressbar)에서 응시 초점 타이머를 관리합니다. 자세한 내용은 다음 단계를 참조하십시오.
+    `GazeMoved`에서 [GazeEnteredPreviewEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs)의 [CurrentPoint](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs.currentpoint)에서 제공되는 [EyeGazePosition](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview.eyegazeposition)을 기반으로 응시 추적 타원을 이동합니다. 또한 진행률 표시줄의 위치 변경을 트리거하는 [RadialProgressBar](https://docs.microsoft.com/windows/communitytoolkit/controls/radialprogressbar)에서 응시 초점 타이머를 관리합니다. 자세한 내용은 다음 단계를 참조하십시오.
 
     ```csharp
     /// <summary>
@@ -596,11 +596,11 @@ UWP 앱에서 응시 API를 사용하려면 다음을 수행해야 합니다.
     }
     ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 ### <a name="resources"></a>리소스
 
-- [Windows 커뮤니티 도구 키트 Gaze 라이브러리](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/gaze/gazeinteractionlibrary)
+- [Windows 커뮤니티 도구 키트 Gaze 라이브러리](https://docs.microsoft.com/windows/communitytoolkit/gaze/gazeinteractionlibrary)
 
 ### <a name="topic-samples"></a>항목 샘플
 

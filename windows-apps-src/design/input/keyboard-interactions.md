@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: e3fcf6b792990fad9cb0071aece878cac31f5420
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 20cb1e3162f0c852a60c620be92afd37ad9f8232
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662918"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317277"
 ---
 # <a name="keyboard-interactions"></a>키보드 조작
 
@@ -59,7 +59,7 @@ ms.locfileid: "57662918"
 |-----------------------------------|-----------------|
 |키보드(하드웨어 및 소프트웨어)   |UWP 응용 프로그램을 표준 하드웨어 키보드를 외에도 두 개의 소프트웨어 키보드 지원: 합니다 [터치 (또는 소프트웨어) 키보드](#software-keyboard) 하며 [화상 키보드](#on-screen-keyboard)합니다.|
 |게임 패드 및 리모컨         |Xbox 게임 패드 및 리모컨은 [3m 환경](../devices/designing-for-tv.md)의 핵심 입력 디바이스입니다. UWP의 게임 패드 및 리모컨 지원에 대한 자세한 내용은 [게임 패드 및 리모컨 조작](gamepad-and-remote-interactions.md)을 참조하세요.|
-|화면 읽기 프로그램(내레이터)          |내레이터는 고유한 조작 환경과 기능을 제공하는 Windows의 기본 화면 읽기 프로그램이지만 여전히 기본 키보드 탐색 및 입력을 사용합니다. 내레이터에 대한 자세한 내용은 [내레이터 시작](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)을 참조하세요.|
+|화면 읽기 프로그램(내레이터)          |내레이터는 고유한 조작 환경과 기능을 제공하는 Windows의 기본 화면 읽기 프로그램이지만 여전히 기본 키보드 탐색 및 입력을 사용합니다. 내레이터에 대한 자세한 내용은 [내레이터 시작](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)을 참조하세요.|
 
 ## <a name="custom-experiences-and-efficient-keyboarding"></a>사용자 지정 환경 및 효율적인 키보드 조작
 앞서 언급했듯이, 키보드 지원은 기술, 능력, 기대치가 각기 다른 사용자들이 응용 프로그램을 원활하게 조작하기 위한 필수 요소입니다. 다음 사항을 우선적으로 처리할 것을 권장합니다.
@@ -203,7 +203,7 @@ UWP 앱에 대 한 최고 요소에 초기 포커스를 설정할지 [TabIndex](
     -   목록 및 그리드 항목과 연결된 추가 작업(새 창 열기)이 없으면 **Enter** 키는 목록 및 그리드 항목에 대한 **Space** 키로 선택 작업을 수행합니다.
     -   컨트롤과 연결된 추가 작업이 있으면 **Enter** 키가 추가 작업을 수행하고 **Space** 키가 선택 작업을 수행합니다.
 
-**참고****Enter** 키와 **Space** 키가 항상 같은 작업을 수행하는 것은 아니지만 같은 작업을 수행하는 경우가 자주 있습니다.
+**참고** **Enter** 키와 **Space** 키가 항상 같은 작업을 수행하는 것은 아니지만 같은 작업을 수행하는 경우가 자주 있습니다.
 
 ![Enter 키](images/keyboard/enter-key.png)
 
@@ -320,7 +320,7 @@ UWP 컨트롤은 기본적으로 화살표 키 탐색을 지원합니다. 사용
       <p><img src="images/keyboard/dialog.png" alt="Dialog buttons"/></p>
       <p><sup>대화 상자 단추</sup></p>
       <p><img src="images/keyboard/radiobutton.png" alt="Radio buttons"/></p>
-      <p><sup>라디오 단추</sup></p>     
+      <p><sup>RadioButtons</sup></p>     
     </td>
     <td>
       <p><img src="images/keyboard/appbar.png" alt="AppBar buttons"/></p>
@@ -364,7 +364,7 @@ UWP 컨트롤은 기본적으로 화살표 키 탐색을 지원합니다. 사용
 
 ### <a name="keyboard-and-narrator"></a>키보드 및 내레이터
 
-내레이터는 키보드 사용자를 위한 UI 접근성 도구입니다(다른 입력 유형도 지원됨). 하지만 내레이터 기능은 UWP 앱에서 지원하는 키보드 조작에서 그치지 않으며 내레이터용 UWP 앱을 디자인할 때는 각별한 주의가 필요합니다. ([내레이터 기본 사항 페이지](https://support.microsoft.com/help/22808/windows-10-narrator-learning-basics)에 내레이터 사용자 환경이 설명되어 있습니다.)
+내레이터는 키보드 사용자를 위한 UI 접근성 도구입니다(다른 입력 유형도 지원됨). 하지만 내레이터 기능은 UWP 앱에서 지원하는 키보드 조작에서 그치지 않으며 내레이터용 UWP 앱을 디자인할 때는 각별한 주의가 필요합니다. ([내레이터 기본 사항 페이지](https://support.microsoft.com/help/22808/windows-10-narrator-basics)에 내레이터 사용자 환경이 설명되어 있습니다.)
 
 UWP 키보드 동작과 내레이터에서 지원하는 동작의 차이점은 다음과 같습니다.
 -   컨트롤 레이블을 읽는 Caps Lock + 화살표 키처럼 표준 키보드 탐색을 통해 노출되지 않는 UI 요소를 탐색하는 추가 키 조합.
@@ -400,13 +400,13 @@ Xbox 게임 패드 및 리모컨은 여러 UWP 키보드 동작과 환경을 지
 
 다음은 키보드, 게임 패드 및 리모컨 사이의 몇 가지 키 매핑을 보여 줍니다.
 
-| **키보드**  | **Gamepad**                         | **원격 제어**  |
+| **키보드**  | **게임 패드**                         | **원격 제어**  |
 |---------------|-------------------------------------|---------------------|
 | Space         | A 버튼                            | 선택 단추       |
 | 입력         | A 버튼                            | 선택 단추       |
 | 이스케이프        | B 버튼                            | 뒤로 단추         |
-| Home/End      | 해당 없음                                 | 해당 없음                 |
-| Page Up/Down  | 세로 방향 스크롤을 위한 트리거 단추, 가로 방향 스크롤을 위한 범퍼 단추   | 해당 없음                 |
+| Home/End      | 해당 사항 없음                                 | 해당 사항 없음                 |
+| Page Up/Down  | 세로 방향 스크롤을 위한 트리거 단추, 가로 방향 스크롤을 위한 범퍼 단추   | 해당 사항 없음                 |
 
 게임 패드 및 리모컨과 함께 사용할 UWP 앱을 디자인할 때에는 다음과 같은 주요 차이점에 대해 알아야 합니다.
 -   텍스트를 입력하려면 사용자가 A를 눌러 텍스트 컨트롤을 활성화해야 합니다.
@@ -534,7 +534,7 @@ ContextMenu, AppBarOverflowMenu, 및 AutoSuggest, 같은 일부 컨트롤 위치
 -   콤보 상자
 -   라디오 단추
 -   스크롤 막대
--   트리
+-   trEE
 -   트리 항목
 -   메뉴
 -   메뉴 모음

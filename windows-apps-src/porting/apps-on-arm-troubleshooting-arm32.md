@@ -5,19 +5,19 @@ ms.date: 01/03/2019
 ms.topic: article
 keywords: windows 10 s, 항상 연결, ARM 기반 ARM32 앱, ARM 기반 Windows 10, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: ddf28627838ebc8cb2df620c398f3803c026cb17
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b93a4a3bdf4a6abd12a0df8bfc1871cb38647f63
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366830"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319748"
 ---
 # <a name="troubleshooting-arm-uwp-apps"></a>UWP 앱이 ARM 문제 해결
 
 ARM에서 ARM32 또는 ARM64 UWP 앱 올바르게 작동 하지 않는 경우 도움이 될 수 있는 몇 가지 지침은 다음과 같습니다.
 
 >[!NOTE]
-> 고유 하 게 ARM64 플랫폼을 대상으로 UWP 응용 프로그램을 빌드하려면 Visual Studio 2017 버전 15.9 이상이 있어야 합니다. 자세한 내용은 [이 블로그 게시물](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development)합니다.
+> 고유 하 게 ARM64 플랫폼을 대상으로 UWP 응용 프로그램을 빌드하려면 Visual Studio 2017 버전 15.9 이상이 있어야 합니다. 자세한 내용은 [이 블로그 게시물](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development/)합니다.
 
 ## <a name="common-issues"></a>일반적인 문제
 ARM64 및 ARM32 앱 문제를 해결할 때 염두에 몇 가지 일반적인 문제는 다음과 같습니다.

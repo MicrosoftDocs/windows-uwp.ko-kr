@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.localizationpriority: medium
-ms.openlocfilehash: 665a40cf69b7518643390abddc3895be07c63c5c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 83230e17548f022767dcdde6b17fa9a93d6d9304
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366190"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320964"
 ---
 # <a name="discover-remote-devices"></a>원격 장치 검색
 앱에서 무선 네트워크, Bluetooth 및 클라우드 연결을 사용하여 검색 장치와 동일한 Microsoft 계정으로 로그온된 Windows 장치를 검색할 수 있습니다. 특별한 소프트웨어가 설치되어 있지 않아도 원격 디바이스를 검색할 수 있습니다.
@@ -48,7 +48,7 @@ ms.locfileid: "66366190"
 여기서 이벤트를 처리하고, [**RemoteSystem**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem) 개체를 검색하고, 원격 디바이스에 연결하는 절차는 [원격 앱 실행](launch-a-remote-app.md)과 동일합니다. 즉, **RemoteSystem** 개체가 각 **RemoteSystemAdded** 이벤트와 함께 전달되는 [**RemoteSystemAddedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystemAddedEventArgs) 개체의 속성으로 저장됩니다.
 
 ## <a name="discover-devices-by-address-input"></a>주소를 입력하여 디바이스 검색
-일부 디바이스는 사용자와 연결되어 있지 않거나 검색을 통해 찾을 수 없지만 검색 앱에서 직접 주소를 사용할 경우 연결할 수 있습니다. [  **HostName**](https://docs.microsoft.com/uwp/api/windows.networking.hostname) 클래스는 원격 디바이스의 주소를 나타내는 데 사용됩니다. IP 주소의 형태로 저장되는 경우가 많지만 다른 여러 형식도 허용됩니다(자세한 내용은 [**HostName 생성자**](https://docs.microsoft.com/uwp/api/windows.networking.hostname.) 참조).
+일부 디바이스는 사용자와 연결되어 있지 않거나 검색을 통해 찾을 수 없지만 검색 앱에서 직접 주소를 사용할 경우 연결할 수 있습니다. [  **HostName**](https://docs.microsoft.com/uwp/api/windows.networking.hostname) 클래스는 원격 디바이스의 주소를 나타내는 데 사용됩니다. IP 주소의 형태로 저장되는 경우가 많지만 다른 여러 형식도 허용됩니다(자세한 내용은 [**HostName 생성자**](https://docs.microsoft.com/uwp/api/windows.networking.hostname.-ctor) 참조).
 
 유효한 **HostName** 개체를 제공하면 **RemoteSystem** 개체가 검색됩니다. 주소 데이터가 잘못된 경우 `null` 개체 참조가 반환됩니다.
 

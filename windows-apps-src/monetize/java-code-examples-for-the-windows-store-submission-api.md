@@ -6,12 +6,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, Java
 ms.localizationpriority: medium
-ms.openlocfilehash: db87b1f8f3fdf039fe6e8ee8ca8a0bc91d26b428
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 94dc87bbbf734e2cfc2f25bd06b7d4fb59a4e4de
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334501"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320195"
 ---
 # <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Java 샘플: 앱, 추가 기능, 플라이트 제출
 
@@ -30,7 +30,7 @@ ms.locfileid: "58334501"
 
 이러한 예제는 다음 라이브러리를 사용합니다.
 
-* [Apache Commons Logging 1.2](https://commons.apache.org/proper/commons-logging)(commons-logging-1.2.jar).
+* [Apache Commons Logging 1.2](https://commons.apache.org/proper/commons-logging/)(commons-logging-1.2.jar).
 * [Apache HttpComponents Core 4.4.5 및 Apache HttpComponents Client 4.5.2](https://hc.apache.org/)(httpcore-4.4.5.jar 및 httpclient-4.5.2.jar).
 * [JSR 353 JSON Processing API 1.0](https://mvnrepository.com/artifact/javax.json/javax.json-api/1.0) 및 [JSR 353 JSON Processing Default Provider API 1.0.4](https://mvnrepository.com/artifact/org.glassfish/javax.json/1.0.4)(javax.json-api-1.0.jar 및 javax.json-1.0.4.jar).
 

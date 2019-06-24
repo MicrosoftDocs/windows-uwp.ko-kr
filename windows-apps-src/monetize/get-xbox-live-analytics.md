@@ -5,19 +5,19 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석
 ms.localizationpriority: medium
-ms.openlocfilehash: dd10fadea415bd769061e198fcf29f8edf0f3124
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 5ab41001f7331defc6d37b0561e2844392ccca3c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162676"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321846"
 ---
 # <a name="get-xbox-live-analytics-data"></a>Xbox Live 분석 데이터 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원 게임](https://docs.microsoft.com/gaming/xbox-live//index.md)을 플레이하는 고객의 지난 30일 동안의 일반 분석 데이터를 가져옵니다. 여기에는 장치 액세서리 사용량, 인터넷 연결 유형, 게이머 점수 분포, 게임 통계 및 친구와 팔로워 데이터가 포함되어 있습니다. 이 정보를 사용할 수 있습니다 합니다 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 파트너 센터에서.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원 게임](https://docs.microsoft.com/gaming/xbox-live/index.md)을 플레이하는 고객의 지난 30일 동안의 일반 분석 데이터를 가져옵니다. 여기에는 장치 액세서리 사용량, 인터넷 연결 유형, 게이머 점수 분포, 게임 통계 및 친구와 팔로워 데이터가 포함되어 있습니다. 이 정보를 사용할 수 있습니다 합니다 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 파트너 센터에서.
 
 > [!IMPORTANT]
-> 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
+> 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
 
 Xbox Live 지원 게임은 다음 방법을 통해 사용할 수 있습니다.
 * [Xbox Live 성과 데이터 가져오기](get-xbox-live-achievements-data.md)
