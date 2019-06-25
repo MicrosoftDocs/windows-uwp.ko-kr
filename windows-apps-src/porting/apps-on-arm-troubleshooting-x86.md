@@ -5,12 +5,12 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10 s, 항상 연결, x86 ARM 기반 에뮬레이션, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f40c53c70a457057f678cdc227a98fc694e2273
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3c29151ae2823aa70711bf002e8954148cc0861b
+ms.sourcegitcommit: f7e3782e24d46b2043023835c5b59d12d3b4ed4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319675"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345669"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>x86 데스크톱 앱의 문제 해결
 >[!IMPORTANT]
@@ -47,3 +47,8 @@ Windows 구성 요소를 연결하거나 DLL을 Windows 프로세스에 로드�
 
 ## <a name="virtual-machines"></a>가상 머신
 Windows 하이퍼바이저 플랫폼은 Qualcomm Snapdragon 835 모바일 PC 플랫폼에서 지원되지 않습니다. 따라서 Hyper-V를 사용하여 가상 컴퓨터를 실행할 수 없습니다. 현재 추후 Qualcomm 칩셋에 대한 기술에 계속 투자하고 있습니다. 
+
+## <a name="dynamic-code-generation"></a>동적 코드 생성
+데스크톱 앱은 런타임 시 ARM64 명령을 생성 하는 시스템에서 ARM64에서 에뮬레이트 되는 X86입니다. 즉, x86 동적 코드 생성을 방지 하는 데스크톱 앱 또는 ARM64의 x86으로 실행 되도록 수정 프로세스를 해당 앱에서 지원할 수 없습니다. 
+
+이 일부 앱을 사용 하 여 해당 프로세스에서 사용 하도록 설정 하는 보안 완화 [SetProcessMitigationPolicy](https://docs.microsoft.com/en-us/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setprocessmitigationpolicy) 사용 하 여 API를 `ProcessDynamicCodePolicy` 플래그입니다. ARM64는 x86에서 성공적으로 실행 프로세스를 사용 하지 않도록 설정할이 완화 정책을 조정 해야 합니다. 

@@ -5,12 +5,12 @@ ms.date: 03/19/2017
 ms.topic: article
 keywords: Windows 10, uwp, bluetooth, bluetooth LE, 저 에너지, gatt, gap, 중앙, 주변, 클라이언트, 서버, 감시자, 게시자
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f23bdc658d2a82e3edeefd0a7be471ca9620d33
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 7921094c55944b4cfed4fdb3f3e6d895eb7fe0a4
+ms.sourcegitcommit: 58d35b89662d4ad240650933e43fee0b00e9a962
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321609"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344508"
 ---
 # <a name="bluetooth-low-energy"></a>Bluetooth 저 에너지
 Bluetooth LE(저 에너지)는 전력 효율적인 디바이스 간 검색 및 통신에 대한 프로토콜을 정의하는 사양입니다. 장치 검색은 GAP(일반 액세스 프로필) 프로토콜을 통해 수행됩니다. 검색 후 장치 간 통신은 GATT(일반 특성) 프로토콜을 통해 수행됩니다. 이 항목에서는 UWP 앱의 Bluetooth LE에 대한 빠른 개요를 제공합니다. Bluetooth LE에 대해 자세히 알아보려면 Bluetooth LE가 도입된 [Bluetooth Core 사양](https://www.bluetooth.com/specifications/bluetooth-core-specification/) 버전 4.0을 참조하세요. 
@@ -21,7 +21,7 @@ Bluetooth LE(저 에너지)는 전력 효율적인 디바이스 간 검색 및 �
 
 다음 네임스페이스를 사용하여 UWP 앱에서 GATT 및 GAP 프로토콜을 구현할 수 있습니다.
 - [Windows.Devices.Bluetooth.GenericAttributeProfile](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.genericattributeprofile)
-- [Windows.Devices.Bluetooth.Advertisement](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.genericattributeprofile)
+- [Windows.Devices.Bluetooth.Advertisement](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.advertisement)
 
 ## <a name="central-and-peripheral"></a>중앙 및 주변 기기
 검색의 두 가지 기본 역할을 중앙 및 주변 기기라고 합니다. 일반적으로 Windows는 중앙 모드에서 작동하고 다양한 주변 장치에 연결됩니다. 
@@ -41,5 +41,5 @@ Windows Bluetooth API에서 볼 수 있는 일반적인 약어는 GATT(일반 �
 
 ## <a name="see-also"></a>관련 항목
 - [Windows.Devices.Bluetooth.GenericAttributeProfile](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.genericattributeprofile)
-- [Windows.Devices.Bluetooth.Advertisement](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.genericattributeprofile)
-- [Bluetooth 핵심 사양](https://www.bluetooth.com/specifications/bluetooth-core-specification/)
+- [Windows.Devices.Bluetooth.Advertisement](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.advertisement)
+- [Bluetooth 핵심 사양](https://www.bluetooth.com/specifications/bluetooth-core-specification)

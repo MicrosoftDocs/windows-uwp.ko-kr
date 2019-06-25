@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e26908839204c67a4746f602acc08c6776e889c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7223123ef6f71a45acc967aa60feffa1003b66d1
+ms.sourcegitcommit: 58d35b89662d4ad240650933e43fee0b00e9a962
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370251"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344534"
 ---
 # <a name="device-information-properties"></a>디바이스 정보 속성
 
@@ -101,6 +101,15 @@ ms.locfileid: "66370251"
 
  
 
+## <a name="devicepanel-properties"></a>DevicePanel 속성
+
+| 이름                                            | 형식    | 설명                                                                                                      |
+|-------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------|
+| **System.Devices.Panel.PanelId**                | 문자열  | 식별자를 **DevicePanel** 개체입니다.                                                                    |
+| **System.Devices.Panel.PanelGroup**             | 문자열  | 부모 식별자 **PanelGroup**합니다.                                                                      |
+ 
+ 
+ 
 ## <a name="associationendpoint-properties"></a>AssociationEndpoint 속성
 
 | 이름                                  | 형식       | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -155,9 +164,3 @@ ms.locfileid: "66370251"
 | **System.Devices.AepService.ServiceClassId**    | GUID    | 이 장치가 나타내는 서비스의 ID입니다.                                                             |
 | **System.Devices.AepService.ServiceId**         | 문자열  | 이 서비스의 ID입니다. [  **DeviceInformation.Id**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) 값이기도 합니다. |
 | **System.ItemNameDisplay**                      | 문자열  | 서비스의 가장 적합한 표시 이름입니다.                                                                           |
-
- 
-
- 
-
- 

@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 150ea5fc9f5e91171f29cc985351856487e91d4a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f3cdb9cbb1aa3f62fb711be747c44a0df10fb1ee
+ms.sourcegitcommit: f7e3782e24d46b2043023835c5b59d12d3b4ed4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318763"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345717"
 ---
 # <a name="data-binding-in-depth"></a>데이터 바인딩 심층 분석
 
@@ -526,6 +526,18 @@ public class DateToStringConverter : IValueConverter
 {x:Bind}를 사용하면 바인딩 경로의 마지막 단계가 함수가 됩니다. 이는 변환을 수행하고 둘 이상의 속성에 종속된 바인딩을 수행하는 데 사용할 수 있습니다. 참조 [ **X:bind 함수**](function-bindings.md)
 
 <span id="resource-dictionaries-with-x-bind"/>
+
+## <a name="element-to-element-binding"></a>요소에 바인딩
+
+다른 XAML 요소의 속성에 하나의 XAML 요소의 속성을 바인딩할 수 있습니다. 다음은 예제 태그에 표시 하는 방법입니다.
+
+```xaml
+<TextBox x:Name="myTextBox" />
+<TextBlock Text="{x:Bind myTextBox.Text, Mode=OneWay}" />
+```
+
+> [!IMPORTANT]
+> 요소에 바인딩을 사용 하는 데 필요한 워크플로에 대 한 C++/WinRT를 참조 하세요 [요소에 바인딩을](/windows/uwp/cpp-and-winrt-apis/binding-property#element-to-element-binding)합니다.
 
 ## <a name="resource-dictionaries-with-xbind"></a>{x:Bind}를 사용하는 리소스 사전
 
