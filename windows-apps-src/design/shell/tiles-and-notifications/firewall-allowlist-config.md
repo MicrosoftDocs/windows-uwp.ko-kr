@@ -11,18 +11,20 @@ ms.prod: windows
 ms.technology: uwp
 keywords: WNS, windows 10, uwp, windows 알림 서비스, 알림, windows, 방화벽 문제 해결, IP, 트래픽, enterprise, 네트워크, 공용 IP 주소, FQDN, VIP, IPv4
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ed4ad6ed828abda9d487ef96beca9b655c92421
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 23a9b11cd961e03217aba8ca3d1d988447a2f80b
+ms.sourcegitcommit: b0edd3c09f931b9b62f9c2d17037fb58d826174f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366676"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67349854"
 ---
 # <a name="allowing-windows-notification-traffic-through-enterprise-firewalls"></a>엔터프라이즈 방화벽을 통해 Windows 알림 트래픽을 허용
 
 ## <a name="background"></a>배경
 원치 않는 네트워크 트래픽을 차단 하도록 방화벽을 사용 하는 대부분의 기업에서는 그러나 중요 한 등 Windows 알림 서비스 통신 차단할 수도 있습니다. 즉, WNS를 통해 전송 되는 모든 알림이 삭제 됩니다. 이 방지 하려면 네트워크 관리자 WNS 트래픽이 방화벽을 통해 전달 되도록 허용 하는 예외 목록에 승인 된 WNS 채널 목록을 추가할 수 있습니다. 추가 하는 방법에 대 한 자세한 내용은 같습니다. 
 
+> [!Note] 
+2019/6/24, Windows 클라이언트 기준 **하지** 지원 프록시를 WNS에 대 한 연결에 직접 연결 해야 합니다.
 
 ## <a name="what-information-should-be-added-to-the-allowlist"></a>allowlist에 추가할 정보
 Fqdn, Vip 및 IP를 포함 하는 목록을 Windows 알림 서비스에서 사용 되는 범위를 해결 하는 다음 됩니다. 
