@@ -34,6 +34,19 @@
 	}		  
     },
 	"fileMetadata": {
+	     "open_to_public_contributors": {
+		     "contributing/**.md": true,
+		     "get-started/**.md": true,
+		     "updates-and-versions/**.md": true,
+		     "data-access/**.md": true,
+		     "files/**.md": true,
+		     "networking/**.md": true,
+		     "whats-new/**.md": true,
+		     "cpp-and-winrt-apis/**.md": true,
+		     "design/basics/**.md": true,
+		     "design/controls-and-patterns/**.md": true,
+		     "design/style/**.md": true
+             },
 	   "ms.technology":
 	   {
 		 "app-resources/**.md": "data-and-files",
