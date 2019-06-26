@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bb098aae346c7a81771262793f5f6a042d62d5a3
-ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66721613"
 ---
 # <a name="httpclient"></a>HttpClient
 
-**중요 한 Api**
+**중요 API**
 
 -   [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)
 -   [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)
@@ -45,11 +45,11 @@ ms.locfileid: "66721613"
 
 -   [**HttpBufferContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpBufferContent). 콘텐츠를 버퍼로
 -   [**HttpFormUrlEncodedContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpFormUrlEncodedContent). 콘텐츠를 **application/x-www-form-urlencoded** MIME 형식으로 인코드된 이름/값 튜플로
--   [**HttpMultipartContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpMultipartContent). 형식의 콘텐츠를 **다중 파트 /\***  MIME 형식입니다.
+-   [**HttpMultipartContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpMultipartContent). **multipart/\*** MIME 형식의 콘텐츠
 -   [**HttpMultipartFormDataContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpMultipartFormDataContent). **multipart/form-data** MIME 형식으로 인코딩된 콘텐츠
 -   [**HttpStreamContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpStreamContent). 콘텐츠를 스트림으로(내부 형식은 HTTP GET 메서드가 데이터를 받고 HTTP POST 메서드가 데이터를 업로드하는 데 사용됨)
 -   [**HttpStringContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpStringContent). 콘텐츠를 문자열로
--   [**IHttpContent** ](https://docs.microsoft.com/uwp/api/Windows.Web.Http.IHttpContent) -자체 콘텐츠 개체를 만드는 개발자를 위한 기본 인터페이스
+-   [**IHttpContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.IHttpContent) - 개발자가 해당 콘텐츠 개체를 만들 수 있는 기본 인터페이스
 
 "HTTP를 통해 간단한 GET 요청 보내기" 섹션의 코드 조각에서는 [**HttpStringContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpStringContent) 클래스를 사용하여 HTTP GET 요청의 HTTP 응답을 문자열로 나타냅니다.
 
@@ -57,7 +57,7 @@ ms.locfileid: "66721613"
 
 ## <a name="send-a-simple-get-request-over-http"></a>HTTP를 통해 간단한 GET 요청 보내기
 
-이 문서의 앞부분에서 설명한 것처럼 [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스는 UWP 앱에서 GET 요청을 보낼 수 있도록 합니다. 다음 코드 조각에는 GET 요청을 보내는 방법을 보여 줍니다 http://www.contoso.com 를 사용 하는 [ **Windows.Web.Http.HttpClient** ](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스와 [  **Windows.Web.Http.HttpResponseMessage** ](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) GET 요청에서 응답을 읽는 클래스입니다.
+이 문서의 앞부분에서 설명한 것처럼 [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스는 UWP 앱에서 GET 요청을 보낼 수 있도록 합니다. 다음 코드 조각은 [**Windows.Web.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 및 [**Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) 클래스를 사용하여 GET 요청에서 응답을 읽을 수 있도록 http://www.contoso.com 으로 GET 요청을 전송하는 방법을 보여 줍니다.
 
 ```csharp
 //Create an HTTP client object
@@ -156,12 +156,12 @@ int main()
 }
 ```
 
-## <a name="post-binary-data-over-http"></a>HTTP 통해 게시 이진 데이터
+## <a name="post-binary-data-over-http"></a>HTTP를 통해 이진 데이터 게시
 
-합니다 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis) 아래 코드 예제에서는 양식 데이터 및 POST 요청을 사용 하 여 웹 서버에 적은 양의 이진 데이터 파일 업로드로 전송 하는 방법을 보여 줍니다. 코드를 사용 하는 [ **HttpBufferContent** ](/uwp/api/windows.web.http.httpbuffercontent) 이진 데이터를 나타내는 클래스 및 [ **HttpMultipartFormDataContent** ](/uwp/api/windows.web.http.httpmultipartformdatacontent) 클래스 다중 파트 양식 데이터를 나타냅니다.
+아래의 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis) 코드 예제에서는 양식 데이터 및 POST 요청을 사용하여 웹 서버에 적은 양의 이진 데이터 파일을 업로드하는 방법을 보여 줍니다. 이 코드는 [**HttpBufferContent**](/uwp/api/windows.web.http.httpbuffercontent) 클래스를 사용하여 이진 데이터를 나타내고 [**HttpMultipartFormDataContent** ](/uwp/api/windows.web.http.httpmultipartformdatacontent) 클래스를 사용하여 다중 파트 양식 데이터를 나타냅니다.
 
 > [!NOTE]
-> 호출 **가져올** (아래 코드 예제에 표시)으로 UI 스레드에 대 한 적절 한 없습니다. 이 경우 사용 하는 올바른 기법을 참조 하세요 [동시성 및 비동기 작업을 C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)합니다.
+> **get** 호출(아래 코드 예제에 표시)은 UI 스레드에는 적절하지 없습니다. 이 경우에 사용할 수 있는 올바른 방법에 대해서는 [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조하세요.
 
 ```cppwinrt
 // pch.h
@@ -226,13 +226,13 @@ int main()
 }
 ```
 
-실제 이진 파일 (위에서 사용 된 명시적 이진 데이터 대신)의 콘텐츠를 게시 하기 위해 찾을 수 있습니다 보다 쉽게 사용할 수는 [HttpStreamContent](/uwp/api/windows.web.http.httpstreamcontent) 개체입니다. 하나를 생성 하 고 해당 생성자에 인수로 전달에 대 한 호출에서 반환 된 값 [StorageFile.OpenReadAsync](/uwp/api/windows.storage.storagefile.openreadasync)합니다. 해당 메서드는 이진 파일 내에 있는 데이터에 대 한 스트림을 반환합니다.
+실제 이진 파일의 내용(위에서 사용된 명시적 이진 데이터 대신)을 게시하려면의 [HttpStreamContent](/uwp/api/windows.web.http.httpstreamcontent) 개체를 사용하는 것이 더 쉬울 것입니다. 하나를 생성하고, [StorageFile.OpenReadAsync](/uwp/api/windows.storage.storagefile.openreadasync) 호출에서 반환된 값을 해당 생성자의 인수로 전달합니다. 해당 메서드는 이진 파일 내에 있는 데이터의 스트림을 반환합니다.
 
-또한 (약 10MB 보다 큰) 큰 파일을 업로드 하는 경우 다음 권장 Windows 런타임을 사용 하는 [백그라운드 전송](/uwp/api/windows.networking.backgroundtransfer) Api.
+또한 대형(약 10MB보다 큰) 파일을 업로드하는 경우 Windows 런타임 [백그라운드 전송](/uwp/api/windows.networking.backgroundtransfer) API를 사용하는 것이 좋습니다.
 
-## <a name="post-json-data-over-http"></a>HTTP 통한 POST JSON 데이터
+## <a name="post-json-data-over-http"></a>HTTP를 통해 JSON 데이터 게시
 
-다음 예제에서는 일부 JSON 끝점을 게시 한 다음 응답 본문을 작성 합니다.
+다음 예제에서는 엔드포인트에 JSON을 게시한 다음, 응답 본문을 작성합니다.
 
 ```cs
 using System;
@@ -277,7 +277,7 @@ private async Task TryPostJsonAsync()
 
 잘못된 URI(Uniform Resource Identifier) 문자열이 [**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) 개체에 대한 생성자에 전달되면 예외가 발생합니다.
 
-**.NET:**   는 [ **Windows.Foundation.Uri** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) 형식으로 표시 됩니다 [ **System.Uri** ](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) 에서 C# 및 VB.
+**.NET:**   [**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) 형식은 C# 및 VB에서 [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN)로 표시됩니다.
 
 C# 및 Visual Basic에서는 .NET 4.5의 [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) 클래스와 [**System.Uri.TryCreate**](https://docs.microsoft.com/dotnet/api/system.uri.trycreate?redirectedfrom=MSDN#overloads) 메서드 중 하나를 통해 URI가 생성되기 전에 사용자로부터 받은 문자열을 테스트하여 이 오류를 방지할 수 있습니다.
 
@@ -285,9 +285,9 @@ C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 �
 
 [  **Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)에는 편의 기능이 부족합니다. 따라서 이 네임스페이스에서 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 및 다른 클래스를 사용하는 앱은 **HRESULT** 값을 사용해야 합니다.
 
-.NET Framework 4.5를 사용 하 여 앱에서 C#, VB.NET 합니다 [System.Exception](https://docs.microsoft.com/dotnet/api/system.exception?redirectedfrom=MSDN) 예외가 발생할 때 앱을 실행 하는 동안 오류를 나타냅니다. [System.Exception.HResult](https://docs.microsoft.com/dotnet/api/system.exception.hresult?redirectedfrom=MSDN#System_Exception_HResult) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [System.Exception.Message](https://docs.microsoft.com/dotnet/api/system.exception.message?redirectedfrom=MSDN#System_Exception_Message) 속성은 예외를 설명하는 메시지를 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+C#, VB.NET에서 .NET Framework 4.5를 사용하는 앱에서 [System.Exception](https://docs.microsoft.com/dotnet/api/system.exception?redirectedfrom=MSDN)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [System.Exception.HResult](https://docs.microsoft.com/dotnet/api/system.exception.hresult?redirectedfrom=MSDN#System_Exception_HResult) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [System.Exception.Message](https://docs.microsoft.com/dotnet/api/system.exception.message?redirectedfrom=MSDN#System_Exception_Message) 속성은 예외를 설명하는 메시지를 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 관리되는 C++을 사용하는 앱에서 [Platform::Exception](https://docs.microsoft.com/cpp/cppcx/platform-exception-class)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [Platform::Exception::HResult](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#hresult) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [Platform::Exception::Message](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#message) 속성은 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
-대부분의 매개 변수 유효성 검사 오류에 대 한 합니다 **HRESULT** 반환 된 **E\_INVALIDARG**합니다. 일부 잘못 된 메서드 호출을 **HRESULT** 반환 되 **E\_잘못 된\_메서드\_호출**합니다.
+대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다. 일부 잘못된 메서드 호출의 경우 반환되는 **HRESULT**는 **E\_ILLEGAL\_METHOD\_CALL**입니다.
 

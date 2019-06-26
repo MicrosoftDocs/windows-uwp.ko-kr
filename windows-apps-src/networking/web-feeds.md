@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a9d3b4b9b404ab2c0828ea302f0c564ae1c8e7b4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66372780"
 ---
 # <a name="rssatom-feeds"></a>RSS/Atom 피드
 
 
-**중요 한 Api**
+**중요 API**
 
 -   [**Windows.Data.Xml.Dom**](https://docs.microsoft.com/uwp/api/Windows.Data.Xml.Dom)
 -   [**Windows.Web.AtomPub**](https://docs.microsoft.com/uwp/api/Windows.Web.AtomPub)
@@ -44,7 +44,7 @@ UWP(유니버설 Windows 플랫폼)는 0.91에서 RSS 2.0까지의 RSS 형식 �
 
 네트워크 격리는 네트워크에 액세스하려고 하는 [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) 및 [**Windows.Web.AtomPub**](https://docs.microsoft.com/uwp/api/Windows.Web.AtomPub) 네임스페이스의 모든 클래스 요소에 영향을 미칩니다. Windows에서는 적극적으로 네트워크 격리가 적용됩니다. 적절한 네트워크 접근 권한 값을 사용하지 않은 경우 결과적으로 네트워크에 액세스하게 되는 **Windows.Web.Syndication** 또는 **Windows.Web.AtomPub** 네임스페이스의 클래스 요소 호출이 네트워크 격리로 인해 실패할 수 있습니다.
 
-앱의 네트워크 접근 권한 값은 앱을 빌드할 때 앱 매니페스트에 구성됩니다. 일반적으로 네트워크 기능 앱을 개발 하는 경우 Microsoft Visual Studio 2015를 사용 하 여 추가 됩니다. 텍스트 편집기를 사용하여 앱 매니페스트 파일에서 수동으로 네트워크 접근 권한 값을 설정할 수도 있습니다.
+앱의 네트워크 접근 권한 값은 앱을 빌드할 때 앱 매니페스트에 구성됩니다. 네트워크 접근 권한 값은 일반적으로 앱을 개발할 때 Microsoft Visual Studio 2015를 사용하여 추가합니다. 텍스트 편집기를 사용하여 앱 매니페스트 파일에서 수동으로 네트워크 접근 권한 값을 설정할 수도 있습니다.
 
 네트워크 격리 및 네트워킹 기능에 대한 자세한 내용은 [네트워킹기본 사항](networking-basics.md) 항목의 "기능" 섹션을 참조하세요.
 
@@ -56,7 +56,7 @@ UWP(유니버설 Windows 플랫폼)는 0.91에서 RSS 2.0까지의 RSS 형식 �
 
 UWP 앱에서 네트워크에 대비하려면 프로젝트 **Package.appxmanifest** 파일에 필요한 네트워크 접근 권한 값을 설정해야 합니다. 앱이 인터넷의 원격 서비스에 클라이언트로 연결해야 하는 경우 **인터넷(클라이언트)** 접근 권한 값이 필요합니다. 자세한 내용은 [네트워킹 기본 사항](networking-basics.md) 항목의 "기능" 섹션을 참조하세요.
 
-**웹 피드에서 배포 된 콘텐츠를 검색 합니다.**
+**웹 피드에서 신디케이티드 콘텐츠 검색**
 
 이제 피드를 검색한 다음 피드에 포함된 개별 항목을 표시하는 방법을 보여 주는 일부 코드를 검토합니다. 요청을 구성하여 보내려면 먼저 작업 중 사용할 몇 가지 변수를 정의하고 피드를 검색 및 표시할 때 사용할 메서드와 속성을 정의하는 [**SyndicationClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationClient)의 인스턴스를 초기화합니다.
 

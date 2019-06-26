@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: db2e444b9f13ba41127b362483774c92d45f1f77
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66372751"
 ---
 # <a name="which-networking-technology"></a>네트워킹 기술 선택
@@ -22,7 +22,7 @@ UWP 개발자가 사용할 수 있는 네트워킹 기술에 대한 빠른 개�
 
 다른 장치와 통신할 때 사용자 고유의 프로토콜을 사용하려는 경우 [소켓](sockets.md)을 사용합니다.
 
-소켓의 두 가지 구현이 유니버설 Windows 플랫폼 (UWP) 개발자가 사용할 수 있습니다. [**Windows.Networking.Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets), 및 [Winsock](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)합니다. 새 코드를 작성하는 경우 Windows.Networking.Socket은 UWP 개발자용으로 디자인된 최신 API를 활용합니다. 플랫폼 간 네트워킹 라이브러리나 기존의 다른 Winsock 코드를 사용하려는 경우 또는 기본적으로 Winsock API를 사용하려는 경우에 사용합니다.
+UWP(유니버설 Windows 플랫폼) 개발자는 두 가지 소켓 구현 [**Windows.Networking.Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) 및 [Winsock](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)을 사용할 수 있습니다. 새 코드를 작성하는 경우 Windows.Networking.Socket은 UWP 개발자용으로 디자인된 최신 API를 활용합니다. 플랫폼 간 네트워킹 라이브러리나 기존의 다른 Winsock 코드를 사용하려는 경우 또는 기본적으로 Winsock API를 사용하려는 경우에 사용합니다.
 
 ### <a name="when-to-use-sockets"></a>소켓을 사용하는 경우
 
@@ -69,7 +69,7 @@ HTTP(S)를 사용하여 웹 서비스 또는 웹 서버와 통신하는 경우 [
 
 네트워크를 통해 안정적으로 파일을 전송하려는 경우 [백그라운드 전송 API](background-transfers.md)를 사용합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 장치 배터리 상태에 따라 다운로드 작업이 조정됩니다. 앱이 모바일 또는 배터리 전원을 장치에서 실행되는 경우 이러한 접근 권한 값이 필요합니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
 
-Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 업데이트, 다른 앱을 활성화 하거나 다운로드 완료 되 면 사용자에 게 알릴 수 있도록 파일 전송이 완료 되 면 사후 처리를 실행 하는 기능입니다.
+Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 업데이트하거나, 다른 앱을 활성화하거나, 다운로드가 완료된 경우 사용자에게 알릴 수 있도록 파일 전송이 완료되면 사후 처리를 트리거하는 기능입니다.
 
 ### <a name="when-to-use-background-transfers"></a>백그라운드 전송을 사용하는 경우
 
@@ -127,7 +127,7 @@ Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 
 
 ### <a name="mobile-operators"></a>통신사
 
-Windows 10에는 일부 Api만 장치 제조업체 및 모바일 운영자에 게 표시 되어 이전에 와이드 개발자에 게 표시 합니다. 이러한 API는 현재 노출되어 있지만 앱을 게시하기 전에 Microsoft의 승인을 받아야 하는 특정 앱 접근 권한 값으로 제어됩니다. 이러한 API의 실제 사용은 주로 장치 제조업체 및 통신사로 제한됩니다.
+Windows 10에서는 이전에 디바이스 제조업체 및 통신사에만 노출된 일부 API를 광범위한 개발자 그룹에 노출합니다. 이러한 API는 현재 노출되어 있지만 앱을 게시하기 전에 Microsoft의 승인을 받아야 하는 특정 앱 접근 권한 값으로 제어됩니다. 이러한 API의 실제 사용은 주로 장치 제조업체 및 통신사로 제한됩니다.
 
 ### <a name="network-operations"></a>네트워크 운영
 

@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 97ad2485abab0bd4733699bc4ffcf29e17a22844
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369443"
 ---
 # <a name="track-recently-used-files-and-folders"></a>최근에 사용한 파일 및 폴더 추적
 
-**중요 한 Api**
+**중요 API**
 
 - [**MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist)
 - [**FileOpenPicker**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-fileopenpicker)
@@ -25,15 +25,15 @@ ms.locfileid: "66369443"
 앱의 MRU는 정적 [**StorageApplicationPermissions.MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist) 속성에서 가져오는 [**StorageItemMostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList) 클래스로 표현됩니다. MRU 항목은 [**IStorageItem**](https://docs.microsoft.com/uwp/api/Windows.Storage.IStorageItem) 개체로 저장되므로 파일을 나타내는 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체와 폴더를 나타내는 [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) 개체를 모두 MRU에 추가할 수 있습니다.
 
 > [!NOTE]
-> 전체 샘플에 대 한 참조를 [파일 선택 샘플](https://go.microsoft.com/fwlink/p/?linkid=619994) 및 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)합니다.
+> 전체 샘플을 보려면 [파일 선택기 샘플](https://go.microsoft.com/fwlink/p/?linkid=619994) 및 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)을 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
--   **유니버설 Windows 플랫폼 (UWP) 앱 용 비동기 프로그래밍 이해**
+-   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
     C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
 
--   **위치에 대 한 액세스 권한**
+-   **위치에 대한 액세스 권한**
 
     [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
@@ -52,7 +52,7 @@ ms.locfileid: "66369443"
     string mruToken = mru.Add(file, "profile pic");
     ```
 
-    [**StorageItemMostRecentlyUsedList.Add** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add) 오버 로드 합니다. 이 예제에서는 메타데이터를 파일과 연결할 수 있도록 [**Add(IStorageItem, String)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add)를 사용합니다. 메타데이터를 설정하면 항목의 용도(예: "프로필 사진")를 기록할 수 있습니다. [  **Add(IStorageItem)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add)을 호출하면 메타데이터 없이 파일을 MRU에 추가할 수 있습니다. 항목을 MRU에 추가한 경우 메서드는 항목을 검색하는 데 사용되는 고유하게 식별되는 문자열(토큰)을 반환합니다.
+    [**StorageItemMostRecentlyUsedList.Add**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add)가 오버로드됩니다. 이 예제에서는 메타데이터를 파일과 연결할 수 있도록 [**Add(IStorageItem, String)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add)를 사용합니다. 메타데이터를 설정하면 항목의 용도(예: "프로필 사진")를 기록할 수 있습니다. [  **Add(IStorageItem)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add)을 호출하면 메타데이터 없이 파일을 MRU에 추가할 수 있습니다. 항목을 MRU에 추가한 경우 메서드는 항목을 검색하는 데 사용되는 고유하게 식별되는 문자열(토큰)을 반환합니다.
 
 > [!TIP]
 > MRU에서 항목을 검색하려면 토큰이 필요하므로 다른 곳에 유지해야 합니다. 앱 데이터에 대한 자세한 내용은 [응용 프로그램 데이터 관리](https://docs.microsoft.com/previous-versions/windows/apps/hh465109(v=win.10))를 참조하세요.

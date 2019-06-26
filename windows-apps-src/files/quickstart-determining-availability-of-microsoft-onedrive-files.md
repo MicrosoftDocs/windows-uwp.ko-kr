@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: effb28fa453ec884152dbc404245f00f4893ef5a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369420"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Microsoft OneDrive 파일의 가용성 확인
 
 
-**중요 한 Api**
+**중요 API**
 
 -   [**FileIO 클래스**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO)
 -   [**StorageFile 클래스**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)
@@ -24,13 +24,13 @@ ms.locfileid: "66369420"
 
 [  **StorageFile.isAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable) 속성을 사용하여 Microsoft OneDrive 파일의 사용 가능 여부를 확인합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
--   **유니버설 Windows 플랫폼 (UWP) 앱 용 비동기 프로그래밍 이해**
+-   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
     C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
 
--   **앱 capabilty 선언**
+-   **앱 접근 권한 값 선언**
 
     [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
@@ -38,7 +38,7 @@ ms.locfileid: "66369420"
 
 사용자는 OneDrive 파일을 '오프라인 사용 가능'(기본값) 또는 '온라인만'으로 표시할 수 있습니다. 이 기능을 통해 사용자는 큰 파일(예: 사진과 동영상)을 OneDrive로 이동하고 '온라인만'으로 표시하여 디스크 공간을 절약할 수 있습니다(메타데이터 파일만 로컬로 보관됨).
 
-[**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable), 파일을 현재 사용할 수 있는지 확인 하는 데 사용 됩니다. 다음 표는 다양한 시나리오에서 **StorageFile.IsAvailable** 속성의 값을 보여 줍니다.
+[**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable)은 파일을 현재 사용할 수 있는지 확인하는 데 사용됩니다. 다음 표는 다양한 시나리오에서 **StorageFile.IsAvailable** 속성의 값을 보여 줍니다.
 
 | 파일 형식                              | 온라인 | 데이터 통신 연결 네트워크        | 오프라인 |
 |-------------------------------------------|--------|------------------------|---------|

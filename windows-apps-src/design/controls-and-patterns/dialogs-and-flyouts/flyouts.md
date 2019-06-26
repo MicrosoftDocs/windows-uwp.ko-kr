@@ -1,6 +1,6 @@
 ---
 Description: 대화 상자 및 플라이아웃은 사용자가 요청할 경우나 알림 또는 승인이 필요한 문제가 발생할 경우 나타나는 임시 UI 요소를 표시합니다.
-title: 플라이 아웃 컨트롤
+title: 플라이아웃 컨트롤
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 52de0933bf51adaae6b0923868e12eb92ced4a1a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625018"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63793775"
 ---
 # <a name="flyouts"></a>플라이아웃
 
@@ -24,13 +24,13 @@ ms.locfileid: "57625018"
 
 ![플라이아웃 내에 중첩된 상황에 맞는 메뉴](../images/flyout-nested.png)
 
-> **중요 API**: [플라이 아웃 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+> **중요 API**: [Flyout 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 * [도구 설명](../tooltips.md) 또는 [상황에 맞는 메뉴](../menus.md) 대신에 플라이아웃을 사용하지 마세요. 도구 설명을 사용하여 지정된 시간 후에 숨겨지는 간단한 설명을 표시합니다. 복사 및 붙여넣기 등 UI 요소에 관련된 상황별 작업을 위한 상황에 맞는 메뉴를 사용합니다.
 
-(유사한 컨트롤) 대화 상자를 사용 하는 경우와 플라이 아웃을 사용 하는 경우에 권장 사항을 참조 하세요 [대화 상자와 플라이 아웃](index.md)합니다. 
+플라이아웃을 사용해야 할 경우와 대화 상자(비슷한 컨트롤)를 사용해야 할 경우에 대한 권장 사항을 보려면 [대화 상자 및 플라이아웃](index.md)을 참조하세요. 
 
 ## <a name="examples"></a>예
 
@@ -51,7 +51,7 @@ ms.locfileid: "57625018"
 ##  <a name="how-to-create-a-flyout"></a>플라이아웃을 만드는 방법
 
 
-플라이아웃은 특정 컨트롤에 연결됩니다. 사용할 수는 [배치](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) 플라이 아웃이 표시 되는 위치를 지정 하는 속성: 위쪽, 왼쪽, 아래쪽, 오른쪽 또는 전체. [전체 배치 모드](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode)를 선택하면 앱은 플라이아웃을 확대하고 앱 창 내에서 가운데로 지정합니다. [Button](/uwp/api/Windows.UI.Xaml.Controls.Button)과 같은 일부 컨트롤은 플라이아웃이나 [상황에 맞는 메뉴](../menus.md)를 연결하는 데 사용할 수 있는 [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) 속성을 제공합니다.
+플라이아웃은 특정 컨트롤에 연결됩니다. [Placement](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.Placement) 속성을 사용하여 플라이아웃이 표시되는 위치(위쪽, 왼쪽, 아래쪽, 오른쪽 또는 전체)를 지정할 수 있습니다. [전체 배치 모드](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode)를 선택하면 앱은 플라이아웃을 확대하고 앱 창 내에서 가운데로 지정합니다. [Button](/uwp/api/Windows.UI.Xaml.Controls.Button)과 같은 일부 컨트롤은 플라이아웃이나 [상황에 맞는 메뉴](../menus.md)를 연결하는 데 사용할 수 있는 [Flyout](/uwp/api/Windows.UI.Xaml.Controls.Button.Flyout) 속성을 제공합니다.
 
 이 예제에서는 단추를 누를 때 일부 텍스트를 표시하는 간단한 플라이아웃을 만듭니다.
 ````xaml
@@ -145,9 +145,9 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 </Flyout>
 ````
 
-## <a name="styling-flyouts-for-10-foot-experiences"></a>원격 제어 환경에 대 한 플라이 아웃의 스타일 지정
+## <a name="styling-flyouts-for-10-foot-experiences"></a>3m 환경을 위한 플라이아웃 스타일 지정
 
-플라이아웃과 같은 빠른 해제 컨트롤은 해제될 때까지 키보드 및 게임 패드 포커스를 임시 UI 내에 트래핑합니다. 이 동작에 대한 시각 신호를 제공하기 위해 Xbox의 빠른 해제 컨트롤은 범위를 벗어난 UI의 대비와 가시성을 줄이는 오버레이를 그립니다. 이 동작은 [`LightDismissOverlayMode`](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.LightDismissOverlayMode) 속성으로 수정할 수 있습니다. 기본적으로 플라이아웃은 Xbox에 빠른 해제 오버레이를 그리지만 다른 장치 패밀리에는 그리지 않습니다. 그러나 앱에서 오버레이가 항상 **설정** 또는 항상 **해제** 상태가 되도록 선택할 수 있습니다.
+플라이아웃과 같은 빠른 해제 컨트롤은 해제될 때까지 키보드 및 게임 패드 포커스를 임시 UI 내에 트래핑합니다. 이 동작에 대한 시각 신호를 제공하기 위해 Xbox의 빠른 해제 컨트롤은 범위를 벗어난 UI의 대비와 가시성을 줄이는 오버레이를 그립니다. 이 동작은 [`LightDismissOverlayMode`](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.LightDismissOverlayMode) 속성으로 수정할 수 있습니다. 기본적으로 플라이아웃은 Xbox에 빠른 해제 오버레이를 그리지만 다른 디바이스 패밀리에는 그리지 않습니다. 그러나 앱에서 오버레이가 항상 **설정** 또는 항상 **해제** 상태가 되도록 선택할 수 있습니다.
 
 ![흐리게 표시 오버레이를 포함한 플라이아웃](../images/flyout-smoke.png)
 
@@ -166,7 +166,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 
 플라이아웃에 대한 입력 통과 요소로 단추를 지정하여 이 동작을 변경할 수 있습니다. 플라이아웃이 위에 설명된 빠른 해제 작업의 결과로 닫히고 탭 이벤트를 지정된 `OverlayInputPassThroughElement`에 전달합니다. 이러한 동작을 채택하여 기능적으로 비슷한 항목에 대한 사용자 상호 작용 속도를 높일 수 있습니다. 앱에 즐겨찾기 컬렉션이 있고 컬렉션의 각 항목에 연결된 플라이아웃이 포함된 경우 사용자가 빠르게 여러 플라이아웃과 연달아 상호 작용할 것으로 예상할 수 있습니다.
 
-[!NOTE] 파괴적 작업을 유발하는 오버레이 입력 통과 요소를 지정하지 않도록 주의하세요. 사용자가는 기본 UI를 활성화하지 않는 빠른 해제 작업에 익숙해졌습니다. 예기치 않은 파괴적 동작을 피하기 위해 닫기, 삭제 또는 비슷하게 파괴적인 단추가 빠른 해제 시 활성화되면 안 됩니다.
+[!NOTE] 파괴적 작업을 유발하는 오버레이 입력 통과 요소를 지정하지 않도록 주의하세요. 사용자는 기본 UI를 활성화하지 않는 빠른 해제 작업에 익숙해졌습니다. 예기치 않은 파괴적 동작을 피하기 위해 닫기, 삭제 또는 비슷하게 파괴적인 단추가 빠른 해제 시 활성화되면 안 됩니다.
 
 다음 예에서는 FavoritesBar 내의 3가지 단추 모두 첫 번째 탭에서 활성화됩니다.
 
@@ -215,5 +215,5 @@ private void Folder2_Click(object sender, RoutedEventArgs e)
 ## <a name="related-articles"></a>관련 문서
 - [도구 설명](../tooltips.md)
 - [메뉴 및 상황에 맞는 메뉴](../menus.md)
-- [플라이 아웃 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+- [Flyout 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 - [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)

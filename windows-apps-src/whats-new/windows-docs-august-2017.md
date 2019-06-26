@@ -1,15 +1,15 @@
 ---
 title: 2017년 8월 Windows 문서의 새로운 내용 - UWP 앱 개발
-description: 2017년 8월 Windows 10 개발자 설명서에 추가된 새로운 기능, 동영상 및 개발자 지침
+description: 2017년 8월 Windows 10 개발자 설명서에 추가된 새로운 기능, 동영상 및 개발자 참고 자료
 keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 1708
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 53bd11950d30e3924d6d196e911fa05208d0f5ec
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66371912"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>2017년 8월 Windows 개발자 문서의 새로운 내용
@@ -43,17 +43,17 @@ UWP(유니버설 Windows 플랫폼)을 위한 [게임 모드](https://docs.micro
 
 ## <a name="developer-guidance"></a>개발자 지침
 
-### <a name="data-schemas-for-store-products"></a>스토어 제품용 데이터 스키마
+### <a name="data-schemas-for-store-products"></a>Microsoft Store 제품용 데이터 스키마
 
-[스토어 제품용 데이터 스키마](../monetize/data-schemas-for-store-products.md) 문서가 추가되었습니다. 이 문서는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct), [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense)를 포함하여 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 몇 가지 개체에 사용할 수 있는 스토어 관련 데이터에 대한 스키마를 제공합니다.
+[Store 제품용 데이터 스키마](../monetize/data-schemas-for-store-products.md) 문서가 추가되었습니다. 이 문서는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct), [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense)를 포함하여 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 몇 가지 개체에 사용할 수 있는 Store 관련 데이터에 대한 스키마를 제공합니다.
 
 ### <a name="desktop-bridge"></a>데스크톱 브리지
 
 Windows 10 사용자를 위한 최신 환경을 추가하는 데 도움이 되는 두 개의 가이드를 추가했습니다.
 
-올바른 파일을 찾아 참고하고, Windows 10 사용자를 위한 UWP 환경을 돋보이게 하려면 [Windows 10용 데스크톱 응용 프로그램 향상](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance)을 참조하세요.  
+올바른 파일을 찾아 참고하고, Windows 10 사용자를 위한 UWP 환경을 돋보이게 하려면 [Windows 10용 데스크톱 애플리케이션 향상](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance)을 참조하세요.  
 
-UWP 앱 컨테이너에서 실행해야 하는 최신 XAML UI 및 다른 UWP 환경을 통합하려면 [최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-extend)을 참조하세요.
+UWP 앱 컨테이너에서 실행해야 하는 최신 XAML UI 및 다른 UWP 환경을 통합하려면 [최신 UWP 구성 요소로 데스크톱 애플리케이션 확장](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-extend)을 참조하세요.
 
 ### <a name="getting-started-with-point-of-service"></a>서비스 지점 시작
 
@@ -73,7 +73,7 @@ Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 �
 
 ### <a name="mixed-reality"></a>혼합 현실
 
-[Microsoft HoloLens Course 250](https://developer.microsoft.com/en-us/windows/mixed-reality/mixed_reality_250)에 대한 새로운 자습서 동영상 시리즈가 추가되었습니다. 혼합 현실을 위한 도구를 이미 설치했고 개발의 기본에 친숙하다면, 이 동영상 과정을 확인하여 혼합 현실 디바이스 간에 공유 환경을 만드는 정보를 얻으십시오.
+[Microsoft HoloLens Course 250](https://developer.microsoft.com/en-us/windows/mixed-reality/mixed_reality_250)에 대한 새로운 자습서 동영상 시리즈가 추가되었습니다. 혼합 현실을 위한 도구를 이미 설치했고 개발의 기본에 친숙하다면, 이 동영상 과정을 확인하여 혼합 현실 디바이스 간에 공유 환경을 만드는 정보를 얻으세요.
 
 ### <a name="narrator-and-dev-mode"></a>내레이터 및 개발자 모드
 
@@ -81,4 +81,4 @@ Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 �
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Windows Template Studio에 대한 자세한 개요는 [이 동영상](https://channel9.msdn.com/Blogs/One-Dev-Minute/Getting-Started-with-Windows-Template-Studio)에서 볼 수 있습니다. 준비가 되었다면 [확장을 설치](https://aka.ms/wtsinstall)하거나 [소스 코드 및 설명서를 확인](https://aka.ms/wtsinstall)하십시오.
+Windows Template Studio에 대한 자세한 개요는 [이 동영상](https://channel9.msdn.com/Blogs/One-Dev-Minute/Getting-Started-with-Windows-Template-Studio)에서 볼 수 있습니다. 준비가 되었다면 [확장을 설치](https://aka.ms/wtsinstall)하거나 [소스 코드 및 설명서를 확인](https://aka.ms/wtsinstall)하세요.

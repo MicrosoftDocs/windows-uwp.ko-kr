@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, 등록, 개발자 계정
 ms.localizationpriority: medium
 ms.openlocfilehash: 1eac2ad42b277c8cea5d571e08018d62ba338011
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66370647"
 ---
 # <a name="create-a-developer-account"></a>개발자 계정 만들기
 
 지금 개발자 계정에 등록하여 Microsoft Store에 앱을 제출하고 다른 Microsoft 프로그램에 참여하세요.
 
-[지금 가입 하세요!](https://go.microsoft.com/fwlink/p/?LinkId=615100)
+[지금 등록!](https://go.microsoft.com/fwlink/p/?LinkId=615100)
 
 ## <a name="opening-your-developer-account"></a>개발자 계정 열기
 

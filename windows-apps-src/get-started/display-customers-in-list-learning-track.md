@@ -6,20 +6,20 @@ ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 데이터 바인딩, 목록
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bd4a1f6747ea68623039b7eac22ac08aaa15d9ea
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.openlocfilehash: a949479a021d4f8de592d1991773dd2e31e9769c
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651378"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "64564485"
 ---
-# <a name="display-customers-in-a-list"></a>목록에서 고객 표시
+# <a name="display-customers-in-a-list"></a>목록에 고객 표시
 
 UI에서 실제 데이터를 표시하고 조작하는 것은 매우 많은 앱의 기능에 중요합니다. 이 문서는 목록에 고객 개체 컬렉션을 표시하기 전에 알아야 할 사항을 보여 줍니다.
 
 이 문서는 자습서가 아닙니다. 자습서를 원하는 경우 단계별 안내식 환경을 제공하는 우리의 [데이터 바인딩 자습서](../data-binding/xaml-basics-data-binding.md)를 참조하세요.
 
-데이터 바인딩이 무엇인지와 작동 방식에 대해 빠르게 언급하는 것으로 시작하겠습니다. 그런 다음 UI에 **ListView**를 추가하고, 데이터 바인딩을 추가하고, 추가 기능으로 데이터 바인딩을 사용자 지정하겠습니다. 
+데이터 바인딩이 무엇인지와 작동 방식에 대해 빠르게 언급하는 것으로 시작하겠습니다. 그런 다음, UI에 **ListView**를 추가하고, 데이터 바인딩을 추가하고, 추가 기능으로 데이터 바인딩을 사용자 지정하겠습니다.
 
 ## <a name="what-do-you-need-to-know"></a>알아야 할 사항?
 
@@ -30,10 +30,10 @@ UI에서 실제 데이터를 표시하고 조작하는 것은 매우 많은 앱�
 * 바인딩할 데이터를 제공하는 원본입니다.
 * 데이터가 표시되는 UI의 대상입니다.
 
-데이터 바인딩을 구현하려면 바인딩에 데이터를 제공하는 소스에 코드를 추가해야 합니다. 또한 데이터 원본 속성을 지정하기 위해 XAML에 두 개의 태그 확장을 추가해야 합니다. 두 가지의 주요 차이는 다음과 같습니다.
+데이터 바인딩을 구현하려면 바인딩에 데이터를 제공하는 소스에 코드를 추가해야 합니다. 또한 데이터 원본 속성을 지정하기 위해 XAML에 두 개의 태그 확장을 추가해야 합니다. 두 가지 방식의 주요 차이는 다음과 같습니다.
 
-* [**X:bind** ](../xaml-platform/x-bind-markup-extension.md) 강력한 형식 및 성능 향상을 위해 컴파일 타임에 코드를 생성 합니다. x:Bind은 기본적으로 변경되지 않는 읽기 전용 데이터의 빠른 디스플레이를 위해 최적화되는 일회성 바인딩입니다.
-* [**바인딩** ](../xaml-platform/binding-markup-extension.md) 이며 약하게 형식화 된 런타임 시 구성 합니다. 따라서 x:Bind보다 성능이 저하됩니다. 대부분의 경우 바인딩 대신 x:Bind를 사용해야 합니다. 그러나 이전 코드에서 바인딩이 발생할 수 있습니다. 바인딩은 기본적으로 원본에서 변경할 수 있는 읽기 전용 데이터를 최적화하는 단방향 데이터 전송입니다.
+* [**x:Bind**](../xaml-platform/x-bind-markup-extension.md)는 강력한 형식이며 성능 향상을 위해 컴파일 시 코드를 생성합니다. x:Bind은 기본적으로 변경되지 않는 읽기 전용 데이터의 빠른 디스플레이를 위해 최적화되는 일회성 바인딩입니다.
+* [**바인딩**](../xaml-platform/binding-markup-extension.md)은 약한 형식이며 런타임 시 조립됩니다. 따라서 x:Bind보다 성능이 저하됩니다. 대부분의 경우 바인딩 대신 x:Bind를 사용해야 합니다. 그러나 이전 코드에서 바인딩이 발생할 수 있습니다. 바인딩은 기본적으로 원본에서 변경할 수 있는 읽기 전용 데이터를 최적화하는 단방향 데이터 전송입니다.
 
 가능한 때마다 **x:Bind**를 사용하는 것이 좋으며 이 문서의 조각에서 이를 설명하겠습니다. 차이점에 대한 자세한 내용은 [{x:Bind} 및 {Binding} 기능 비교](../data-binding/data-binding-in-depth.md#xbind-and-binding-feature-comparison)를 참조하세요.
 
@@ -92,7 +92,7 @@ public sealed partial class MainPage : Page
 </ListView>
 ```
 
-[데이터 바인딩 개요](../data-binding/data-binding-quickstart.md#binding-to-a-collection-of-items)는 항목의 컬렉션에 대한 바인딩 섹션에서 유사한 문제를 안내합니다. 여기 예에서 중요한 다음 단계를 보여 줍니다.
+[데이터 바인딩 개요](../data-binding/data-binding-quickstart.md#binding-to-a-collection-of-items)는 항목의 컬렉션에 대한 바인딩 섹션에서 유사한 문제를 안내합니다. 이 예제에서는 중요한 다음 단계를 보여 줍니다.
 
 * UI의 코드 뒤에서 **ObservableCollection<T>** 형식의 속성을 만들어 고객 개체를 고정합니다.
 * ListView의 **ItemSource** 해당 속성에 바인딩합니다.
@@ -104,9 +104,9 @@ public sealed partial class MainPage : Page
 
 목록에 고객을 표시했지만 데이터 B=바인딩으로 더 많은 것을 수행할 수 있습니다. UI에서 어떻게 바로 데이터를 편집할 수 있나요? 이렇게 하려면 먼저에 데이터 바인딩의 세 가지 모드에 대해 살펴보겠습니다.
 
-* *일회성*: 이 데이터를 한 번만 활성화 됩니다 바인딩과 변경에 대응 하지 않습니다.
-* *단방향*: 이 데이터 바인딩은 데이터 원본에 대 한 변경 내용으로 UI를 업데이트 됩니다.
-* *양방향*: 이 데이터 바인딩을 UI 데이터 소스에 대 한 변경 내용으로 업데이트 되며 UI 내에서 수행 된 변경 데이터를 업데이트할 수도 있습니다.
+* *일회성*: 이 데이터 바인딩은 한 번만 활성화되며 변경에 대응하지 않습니다.
+* *단방향*: 이 데이터 바인딩은 데이터 원본의 변경 내용으로 UI를 업데이트합니다.
+* *양방향*: 이 데이터 바인딩은 데이터 원본의 변경 내용으로 UI를 업데이트하고 UI 내의 변경 사항으로 데이터를 업데이트합니다.
 
 앞에서 코드 조각을 따랐다면 귀하가 만든 바인딩을 x:Bind를 사용하며 모드를 지정하지 않고 이를 일회성 바인딩으로 만듭니다. UI에서 바로 고객을 편집하려는 경우 데이터 변경이 고객 개체에도 다시 전달되도록 하기 위해 양방향 바인딩으로 변경해야 합니다. [데이터 바인딩 심층 분석](../data-binding/data-binding-in-depth.md)에 자세한 내용이 나와 있습니다.
 
@@ -155,7 +155,7 @@ public class Customer : INotifyPropertyChanged
 
 ## <a name="going-further"></a>더 나아가기
 
-양방향 바인딩의 고객 목록을 만들었으므로 이제 자유롭게 제공한 링크를 통해 문서를 왔다 갔다 하고 체험해 보세요. 또한 .기본 및 고급 바인딩의 단계별 실습을 원하는 경우 우리의 [데이터 바인딩 자습서](../data-binding/xaml-basics-data-binding.md)를 확인하거나 보다 강력한 UI를 만들기 위해 [마스터/세부 정보 패턴](../design/controls-and-patterns/master-details.md) 같은 컨트롤을 조사할 수 있습니다.
+양방향 바인딩의 고객 목록을 만들었으므로 이제 자유롭게 제공한 링크를 통해 문서를 앞뒤로 이동하면서 체험해 보세요. 또한 .기본 및 고급 바인딩의 단계별 실습을 원하는 경우 우리의 [데이터 바인딩 자습서](../data-binding/xaml-basics-data-binding.md)를 확인하거나 보다 강력한 UI를 만들기 위해 [마스터/세부 정보 패턴](../design/controls-and-patterns/master-details.md) 같은 컨트롤을 조사할 수 있습니다.
 
 ## <a name="useful-apis-and-docs"></a>유용한 API 및 문서
 
@@ -166,10 +166,10 @@ public class Customer : INotifyPropertyChanged
 | API | 설명 |
 |------|---------------|
 | [데이터 템플릿](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) | UI의 특정 요소를 표시하도록 데이터 개체의 시각적 구조에 대해 설명합니다. |
-| [x: 바인딩](../xaml-platform/x-bind-markup-extension.md) | 권장된 x:Bind 태그 확장에 대한 설명서. |
-| [바인딩](../xaml-platform/binding-markup-extension.md) | 이전 바인딩 태그 확장에 대한 설명서. |
+| [x:Bind](../xaml-platform/x-bind-markup-extension.md) | 권장된 x:Bind 태그 확장에 대한 설명서입니다. |
+| [Binding](../xaml-platform/binding-markup-extension.md) | 이전 바인딩 태그 확장에 대한 설명서입니다. |
 | [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) | 세로 스택에 데이터 항목을 표시하는 UI 컨트롤입니다. |
-| [텍스트 상자](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | UI에서 편집할 수 있는 텍스트 데이터를 표시하기 위한 기본 텍스트 컨트롤입니다. |
+| [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | UI에서 편집할 수 있는 텍스트 데이터를 표시하기 위한 기본 텍스트 컨트롤입니다. |
 | [INotifyPropertyChanged](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged(d=robot).aspx) | 데이터를 관찰할 수 있도록 만들어 데이터 바인딩에 제공하는 인터페이스입니다. |
 | [ItemsControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) | 이 클래스의 **ItemsSource** 속성으로 ListView를 데이터 원본에 바인딩할 수 있습니다. |
 
@@ -177,9 +177,9 @@ public class Customer : INotifyPropertyChanged
 
 | 항목 | 설명 |
 |-------|----------------|
-| [데이터 바인딩 심층 분석](../data-binding/data-binding-in-depth.md) | 데이터 바인딩 원칙의 기본 개요 |
-| [데이터 바인딩 개요](../data-binding/data-binding-quickstart.md) | 데이터 바인딩에 대한 자세한 개념 정보. |
-| [목록 보기](../design/controls-and-patterns/listview-and-gridview.md) | **DataTemplate**의 구현을 포함하여 ListView를 만들고 구성하는 정보 |
+| [데이터 바인딩 심층 분석](../data-binding/data-binding-in-depth.md) | 데이터 바인딩 원칙의 기본 개요입니다. |
+| [데이터 바인딩 개요](../data-binding/data-binding-quickstart.md) | 데이터 바인딩에 대한 자세한 개념 정보입니다. |
+| [목록 보기](../design/controls-and-patterns/listview-and-gridview.md) | **DataTemplate**의 구현을 포함하여 ListView를 만들고 구성하는 정보입니다. |
 
 ## <a name="useful-code-samples"></a>유용한 코드 샘플
 

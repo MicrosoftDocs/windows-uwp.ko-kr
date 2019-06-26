@@ -6,10 +6,10 @@ ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 03bc41ca76f6c6b20f06c98b0e71e2bc5a361992
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65984198"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>2017년 7월 Windows 개발자 문서의 새로운 내용
@@ -34,7 +34,7 @@ SDK Preview 빌드의 [Windows 참가자](https://insider.windows.com/)에서 �
 
 [표시](../design/style/reveal.md)는 앱의 중요한 요소를 강조 표시합니다. 
 
-![Visual 표시](../design/style/images/Nav_Reveal_Animation.gif)
+![시각적 개체 표시](../design/style/images/Nav_Reveal_Animation.gif)
 
 ### <a name="ui-controls"></a>UI 컨트롤
 
@@ -60,7 +60,7 @@ SDK Preview 빌드의 [Windows 참가자](https://insider.windows.com/)에서 �
 
 Sketch 및 Adobe XD의 추가로 [UWP 앱에 대한 디자인 도구 키트 및 리소스](../design/downloads/index.md)가 확장되었습니다. 이전의 도구 키트도 업데이트되고 개선되어, UWP 앱을 위한 더 견고한 컨트롤과 레이아웃 템플릿을 제공합니다.
 
-### <a name="dashboard-monetization-and-store-services"></a>대시보드, 수익 창출 및 스토어 서비스
+### <a name="dashboard-monetization-and-store-services"></a>대시보드, 수익 창출 및 Store 서비스
 
 다음과 같은 새로운 기능을 사용할 수 있습니다.
 
@@ -70,19 +70,19 @@ Sketch 및 Adobe XD의 추가로 [UWP 앱에 대한 디자인 도구 키트 및 
 
 * [대상 제품](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)은 특정 고객층을 대상으로 맞춤 설정된 매력적인 콘텐츠를 게시하는 방식으로 참여도와 고객 유지, 수익 창출을 향상시킵니다. 
 
-* 이제 앱의 스토어 목록에 [비디오 예고편](../publish/app-screenshots-and-images.md#trailers)을 포함시킬 수 있습니다.
+* 이제 앱의 Store 목록에 [비디오 예고편](../publish/app-screenshots-and-images.md#trailers)을 포함시킬 수 있습니다.
 
 * 새 가격 책정 및 가용성 옵션을 사용하면 [가격 변경을 예약](../publish/set-and-schedule-app-pricing.md)하고 [정확한 출시 날짜를 설정](..//publish/configure-precise-release-scheduling.md)할 수 있습니다.
 
-* [스토어 목록을 가져오고 내보내](../publish/import-and-export-store-listings.md) 빠르게 업데이트할 수 있습니다. 특히 여러 언어로 목록이 있는 경우 더 빠릅니다.
+* [Store 목록을 가져오고 내보내](../publish/import-and-export-store-listings.md) 빠르게 업데이트할 수 있습니다. 특히 여러 언어로 목록이 있는 경우 더 빠릅니다.
 
 ### <a name="my-people"></a>내 피플
 
-SDK Preview 빌드의 [Windows 참가자](https://insider.windows.com/)에 곧 추가될 내 피플 기능을 통해 응용 프로그램에서 작업 표시줄로 연락처를 직접 고정할 수 있습니다. [응용 프로그램 내 사용자 지원을 추가 하는 방법을 알아봅니다.](../contacts-and-calendar/my-people-support.md)
+SDK Preview 빌드의 [Windows 참가자](https://insider.windows.com/)에 곧 추가될 내 피플 기능을 통해 애플리케이션에서 작업 표시줄로 연락처를 직접 고정할 수 있습니다. [애플리케이션에 내 피플 지원을 추가하는 방법을 알아보세요.](../contacts-and-calendar/my-people-support.md)
 
 ![내 피플 연락처 패널](images/my-people.png)
 
-[내 피플 공유](../contacts-and-calendar/my-people-sharing.md)를 사용하면 사용자가 작업 표시줄에서 바로 응용 프로그램을 통해 파일을 공유할 수 있습니다.
+[내 피플 공유](../contacts-and-calendar/my-people-sharing.md)를 사용하면 사용자가 작업 표시줄에서 바로 애플리케이션을 통해 파일을 공유할 수 있습니다.
 
 ![내 피플 공유](images/my-people-sharing.png)
 
@@ -102,7 +102,7 @@ SDK Preview 빌드의 [Windows 참가자](https://insider.windows.com/)에서 �
 
 ### <a name="media-capture"></a>미디어 캡처
 
-[MediaFrameReader를 사용하여 미디어 프레임 처리](../audio-video-camera/process-media-frames-with-mediaframereader.md) 문서가 업데이트되어 새로운 [MultiSourceMediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader) 클래스를 사용하여 여러 미디어 원본에서 시간 연관 프레임을 가져오는 방법을 설명합니다. 이는 깊이 카메라 및 색상 카메라와 같은 여러 원본의 프레임을 처리해야 하는 경우에 유용하며 사용자는 각 원본의 프레임이 서로 가깝게 캡처되는지 확인해야 합니다. 자세한 내용은 [MultiSourceMediaFrameReader를 사용하여 여러 원본에서 시간 연관 프레임 가져오기](../audio-video-camera/process-media-frames-with-mediaframereader.md#use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources)를 참고하세요.
+[MediaFrameReader를 사용하여 미디어 프레임 처리](../audio-video-camera/process-media-frames-with-mediaframereader.md) 문서가 업데이트되어 새로운 [MultiSourceMediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader) 클래스를 사용하여 여러 미디어 원본에서 시간 연관 프레임을 가져오는 방법을 설명합니다. 이는 깊이 카메라 및 색상 카메라와 같은 여러 원본의 프레임을 처리해야 하는 경우에 유용하며 사용자는 각 원본의 프레임이 서로 가깝게 캡처되는지 확인해야 합니다. 자세한 내용은 [MultiSourceMediaFrameReader를 사용하여 여러 원본에서 시간 연관 프레임 가져오기](../audio-video-camera/process-media-frames-with-mediaframereader.md#use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources)를 참조하세요.
 
 ### <a name="scoped-search"></a>범위가 지정된 검색
 
@@ -126,17 +126,17 @@ Windows S를 실행하는 디바이스에서 Windows 앱이 제대로 작동하�
 
 [사용자가 이모지를 구입할 수 있는 기본 쇼핑 환경을 나타내는 작은 앱 샘플입니다](https://github.com/Microsoft/Windows-appsample-shopping). 이 앱은 [결제 요청 API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.payments)를 사용하여 체크아웃 환경을 구현합니다.
 
-![쇼핑 앱 샘플의 스크린샷](images/shoppingcart.png)  
+![쇼핑 앱 샘플 스크린샷](images/shoppingcart.png)  
 
 ## <a name="videos"></a>비디오
 
-### <a name="accessibility"></a>액세스 가능성
+### <a name="accessibility"></a>접근성
 
-앱에 접근성 기능을 추가하여 더 많은 사용자가 사용할 수 있도록 합니다. [동영상을 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Developing-Apps-for-Accessibility)하고 [접근성용 앱 개발](https://developer.microsoft.com/en-us/windows/accessible-apps)에 대해 자세히 알아보세요.
+앱에 접근성 기능을 추가하여 더 많은 사용자가 사용할 수 있도록 합니다. [비디오를 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Developing-Apps-for-Accessibility)하고 [접근성용 앱 개발](https://developer.microsoft.com/en-us/windows/accessible-apps)에 대해 자세히 알아보세요.
 
 ### <a name="payments-request-api"></a>결제 요청 API
 
-결제 요청 API는 고객과 판매자가 보다 원활하게 온라인 체크아웃 프로세스를 완료할 수 있도록 도와줍니다. [동영상을 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-the-Payments-Request-API)하고 [결제 요청 설명서](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-the-Payments-Request-API)를 살펴보세요.
+결제 요청 API는 고객과 판매자가 보다 원활하게 온라인 체크아웃 프로세스를 완료할 수 있도록 도와줍니다. [비디오를 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-the-Payments-Request-API)하고 [결제 요청 설명서](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-the-Payments-Request-API)를 살펴보세요.
 
 ### <a name="windows-10-iot-core"></a>Windows 10 IoT Core K
 

@@ -1,17 +1,17 @@
 ---
 title: MonoGame 2D로 UWP 게임 만들기
-description: 간단한 UWP 게임 작성, Microsoft Store 대 한 C# 및 MonoGame
+description: C# 및 MonoGame으로 작성된 간단한 Microsoft Store용 UWP 게임
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: dbd2c6c9f5e3cf2200f9b260687f05718178868a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.openlocfilehash: 64a00c1c281c8cc7ddf427449c92e560668cccad
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57619158"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "64564533"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -25,27 +25,27 @@ ms.locfileid: "57619158"
 MonoGame은 경량의 게임 개발 프레임워크입니다. 이 자습서에서는 콘텐츠를 로드하는 방법, 스프라이트를 그리고 애니메이션하는 방법, 사용자 입력을 처리하는 방법을 포함하여 MonoGame으로 게임을 개발하기 위한 기본 사항을 안내합니다. 충돌 감지나 고 DPI 화면의 크기 조정 같은 일부 고급 개념도 다룹니다. 이 자습서는 30-60분 정도 걸립니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
-+   Windows 10 및 Microsoft Visual Studio 2017.  [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ .NET 데스크톱 개발 프레임워크. Visual Studio가 아직 설치되지 않은 경우, Visual Studio 설치 프로그램을 다시 실행하여 Visual Studio 2017 설치를 수정할 수 있습니다.
++   Windows 10 및 Microsoft Visual Studio 2019.  [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
++ .NET 데스크톱 개발 프레임워크. Visual Studio가 아직 설치되지 않은 경우, Visual Studio 설치 프로그램을 다시 실행하여 Visual Studio 2019 설치를 수정할 수 있습니다.
 +   C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. [C#을 시작하는 방법을 알아보려면 여기를 클릭하세요](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   클래스, 메서드, 변수 등 기본적인 컴퓨터 공학 개념에 대한 지식.
 
 ## <a name="why-monogame"></a>MonoGame을 사용하는 이유
-게임 개발 환경에 필요한 옵션은 차고 넘치게 많습니다. Unity 같은 완전한 기능을 갖춘 엔진부터 DirectX 같은 포괄적이고 복잡한 멀티미디어 API까지 너무나도 많은 옵션이 있기 때문에 어디서 시작해야 할지 판단하기가 쉽지 않습니다. MonoGame은 복잡성 수준으로 볼 때 게임 엔진과 DirectX 같은 grittier API 사이에 속하는 도구 집합입니다. 간편한 콘텐츠 파이프라인을 제공하며, 다양한 플랫폼에서 실행되는 가벼운 게임을 만드는 데 필요한 모든 기능을 갖추고 있습니다. 앱이 작성 된에서 순수 all, MonoGame 무엇 보다 C#, Microsoft Store 또는 다른 유사한 배포 플랫폼을 통해 신속 하 게 배포할 수 있습니다.
+게임 개발 환경에 필요한 옵션은 차고 넘치게 많습니다. Unity 같은 완전한 기능을 갖춘 엔진부터 DirectX 같은 포괄적이고 복잡한 멀티미디어 API까지 너무나도 많은 옵션이 있기 때문에 어디서 시작해야 할지 판단하기가 쉽지 않습니다. MonoGame은 복잡성 수준으로 볼 때 게임 엔진과 DirectX 같은 grittier API 사이에 속하는 도구 세트입니다. 간편한 콘텐츠 파이프라인을 제공하며, 다양한 플랫폼에서 실행되는 가벼운 게임을 만드는 데 필요한 모든 기능을 갖추고 있습니다. 무엇보다도 MonoGame 앱은 순수한 C#로 작성되기 때문에 Microsoft Store 또는 기타 비슷한 배포 플랫폼을 통해 신속하게 배포할 수 있습니다.
 
 ## <a name="get-the-code"></a>코드 다운로드
 자습서를 단계별로 연습하지 않고 MonoGame이 실제로 작동하는 것만 보려면 [여기를 클릭하여 완성된 앱을 다운로드하세요](https://github.com/Microsoft/Windows-appsample-get-started-mg2d).
 
-Visual Studio 2017에서 프로젝트를 열고 **F5** 키를 눌러 샘플을 실행합니다. 처음 실행하는 경우 Visual Studio가 현재 설치된 파일에서 누락된 NuGet 패키지를 가져와야 하므로 다소 시간이 걸릴 수 있습니다.
+Visual Studio 2019에서 프로젝트를 열고 **F5** 키를 눌러 샘플을 실행합니다. 처음 실행하는 경우 Visual Studio가 현재 설치된 파일에서 누락된 NuGet 패키지를 가져와야 하므로 다소 시간이 걸릴 수 있습니다.
 
 이 작업을 마쳤으면 MonoGame 설정에 대한 다음 섹션으로 넘어가서 단계별 코드 연습을 살펴봅니다.
 
-**참고:** 이 샘플에서 만든 게임 완료 되기를 나오지 않는 (또는 모든 전혀 재미 있는). MonoGame에서 2D 개발의 모든 핵심 개념을 보여 주기 위해 유일한 목적은 것입니다. 이 코드를 자유롭게 사용하고 필요에 따라 개선하셔도 되고, 기본 사항을 익힌 후 처음부터 새로 시작하셔도 됩니다!
+**참고:** 이 샘플에서 만드는 게임은 완전한(또는 재미를 위한) 게임이 아닙니다 이 샘플의 유일한 목적은 MonoGame으로 2D 게임을 개발하는 핵심 개념을 보여주는 것입니다. 이 코드를 자유롭게 사용하고 필요에 따라 개선하셔도 되고, 기본 사항을 익힌 후 처음부터 새로 시작하셔도 됩니다!
 
 ## <a name="set-up-monogame-project"></a>MonoGame 프로젝트 설정
 1. [MonoGame.net](https://www.monogame.net/)에서 Visual Studio용 **MonoGame 3.6**을 다운로드합니다.
 
-2. Visual Studio 2017을 시작합니다.
+2. Visual Studio 2019를 시작합니다.
 
 3. **파일 -> 새로 만들기 -> 프로젝트**로 이동합니다.
 
@@ -53,7 +53,7 @@ Visual Studio 2017에서 프로젝트를 열고 **F5** 키를 눌러 샘플을 �
 
 5. 프로젝트 이름을 “MonoGame2D"로 지정하고 확인을 선택합니다. 생성된 프로젝트에 오류가 잔뜩 있는 것처럼 보일 것입니다. 프로젝트를 처음으로 실행하면 이러한 오류가 사라지고, 누락된 NuGet 패키지가 설치됩니다.
 
-6. **x86** 및 **로컬 컴퓨터**를 대상 플랫폼으로 설정하고 **F5** 키를 눌러 빈 프로젝트를 빌드하여 실행합니다. 위의 단계를 잘 따라 하셨다면 프로젝트가 빌딩을 마친 후 비어 있는 파란색 창이 보일 것입니다.
+6. **x86** 및 **로컬 컴퓨터**를 대상 플랫폼으로 설정하고 **F5** 키를 눌러 빈 프로젝트를 빌드하여 실행합니다. 위의 단계를 잘 따라 하셨다면 프로젝트 빌드를 마친 후 비어 있는 파란색 창이 보일 것입니다.
 
 ## <a name="method-overview"></a>메서드 개요
 프로젝트를 만들었으니, 이제 **솔루션 탐색기**에서 **Game1.cs** 파일을 엽니다. 대부분의 게임 논리가 이 파일로 이동합니다. 개발자가 새 MonoGame 프로젝트를 만들 때 여러 중요한 메서드가 여기에 자동으로 생성됩니다. 메서드를 간략하게 살펴보도록 하겠습니다.
@@ -66,7 +66,7 @@ Visual Studio 2017에서 프로젝트를 열고 **F5** 키를 눌러 샘플을 �
 
 **protected override void UnloadContent()** 이 메서드는 비 콘텐츠-관리자 콘텐츠를 언로드하는 데 사용됩니다. 여기서는 이 메서드는 사용할 일이 없습니다.
 
-**보호 된 override void Update (GameTime gameTime)** 이 메서드는 게임 루프의 주기 마다 한 번씩 호출 합니다. 게임에 사용되는 개체 또는 변수의 상태를 여기서 업데이트합니다. 개체의 위치, 속도, 색 등이 포함됩니다. 또한 사용자 입력 처리 되는 위치입니다. 즉, 이 메서드는 화면에 개체를 그리는 것을 제외한 게임 논리의 모든 부분을 처리합니다.
+**protected override void Update(GameTime gameTIme)** 이 메서드는 게임 루프 주기마다 한 번 호출됩니다. 게임에 사용되는 개체 또는 변수의 상태를 여기서 업데이트합니다. 개체의 위치, 속도, 색 등이 포함됩니다. 사용자 입력도 여기서 처리됩니다. 즉, 이 메서드는 화면에 개체를 그리는 것을 제외한 게임 논리의 모든 부분을 처리합니다.
 
 **protected override void Draw(GameTime gameTime)** 이 메서드는 Update 메서드가 제공하는 위치를 사용하여 화면에 개체를 그립니다.
 
@@ -74,17 +74,17 @@ Visual Studio 2017에서 프로젝트를 열고 **F5** 키를 눌러 샘플을 �
 새로운 MonoGame 프로젝트를 실행하면 멋진 파란색 하늘을 볼 수 있습니다. 이제 땅을 추가하겠습니다.
 MonoGame에서 2D 아트는 "스프라이트" 형태로 앱에 추가됩니다. 스프라이트는 단일 엔터티로 조작되는 컴퓨터 그래픽일 뿐입니다. 스프라이트를 이동하고, 모양을 만들고, 애니메이션하고, 결합하여 상상하는 그 무엇이든 2D 공간에 만들 수 있습니다.
 
-### <a name="1-download-a-texture"></a>1. 텍스처를 다운로드 합니다.
+### <a name="1-download-a-texture"></a>1. 텍스처 다운로드
 우리 목적에 필요한 이 첫 번째 스프라이트는 매우 지루할 것입니다. [여기를 클릭하여 아무 특징 없는 이 녹색 사각형을 다운로드하세요](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/grass.png).
 
-### <a name="2-add-the-texture-to-the-content-folder"></a>2. 텍스처를 Content 폴더 추가
+### <a name="2-add-the-texture-to-the-content-folder"></a>2. Content 폴더에 텍스처 추가
 - **솔루션 탐색기**를 엽니다.
-- **Content** 폴더에서 **Content.mgcb**를 마우스 오른쪽 단추로 클릭한 다음 **연결 프로그램**를 선택합니다. 팝업 메뉴에서 **Monogame 파이프라인**을 선택하고 **확인**을 선택합니다.
+- **Content** 폴더에서 **Content.mgcb**를 마우스 오른쪽 단추로 클릭한 다음, **연결 프로그램**를 선택합니다. 팝업 메뉴에서 **Monogame 파이프라인**을 선택하고 **확인**을 선택합니다.
 - 새 창에서 **콘텐츠** 항목을 마우스 오른쪽 단추로 클릭하고 **추가 -> 기존 항목**을 선택합니다.
-- 찾아 파일 브라우저에서 녹색 사각형을 선택 합니다.
+- 파일 브라우저에서 녹색 사각형을 찾아 선택합니다.
 - 항목 이름을 "grass.png"로 지정하고 **추가**를 선택합니다.
 
-### <a name="3-add-class-variables"></a>3. 클래스 변수를 추가 합니다.
+### <a name="3-add-class-variables"></a>3. 클래스 변수 추가
 이 이미지를 스프라이트 텍스처로 추가하려면 **Game1.cs**를 열고 다음 클래스 변수를 추가합니다.
 
 ```CSharp
@@ -96,7 +96,7 @@ Texture2D grass;
 
 SKYRATIO 변수는 화면에서 하늘과 풀밭의 비율을 알려줍니다. 이 예에서는 2/3입니다. **screenWidth** 및 **screenHeight**는 앱 창 크기를 추적하고, **grass**는 녹색 사각형을 저장할 위치입니다.
 
-### <a name="4-initialize-class-variables-and-set-window-size"></a>4. 클래스 변수를 초기화 하 고 창 크기를 설정 합니다.
+### <a name="4-initialize-class-variables-and-set-window-size"></a>4. 클래스 변수를 초기화하고 창 크기 설정
 여전히 **screenWidth** 및 **screenHeight** 변수를 초기화해야 하므로 **Initialize** 메서드에 다음 코드를 추가합니다.
 
 ```CSharp
@@ -110,7 +110,7 @@ this.IsMouseVisible = false;
 
 화면의 높이와 너비 외에도 앱의 창 작업 모드를 **전체 화면**으로 설정하고 마우스를 보이지 않게 합니다.
 
-### <a name="5-load-the-texture"></a>5. 텍스처를 로드 합니다.
+### <a name="5-load-the-texture"></a>5. 텍스처 로드
 grass 변수에 텍스처를 로드하기 위해 **LoadContent** 메서드에 다음을 추가합니다.
 
 ```CSharp
@@ -159,7 +159,7 @@ DPI가 높은 화면에서 앱을 다시 실행하면 녹색 사각형이 화면
 ### <a name="1-create-a-new-class"></a>1. 새 클래스 만들기
 **솔루션 탐색기**에서 **MonoGame2D(유니버설 Windows)** 를 마우스 오른쪽 단추로 클릭하고 **추가 -> 클래스**를 선택합니다. 클래스 이름을 "SpriteClass.cs"로 지정하고 **추가**를 선택합니다.
 
-### <a name="2-add-class-variables"></a>2. 클래스 변수를 추가 합니다.
+### <a name="2-add-class-variables"></a>2. 클래스 변수 추가
 방금 만든 클래스에 다음 코드를 추가합니다.
 
 ```CSharp
@@ -211,11 +211,11 @@ public float scale
 }
 ```
 
-여기서 스프라이트를 그리고 애니메이션하는 데 필요한 클래스 변수를 설정합니다. **x** 및 **y** 변수는 평면에서 스프라이트의 현재 위치를 나타내고 **angle** 변수는 스프라이트의 현재 각을 도 단위로 나타냅니다(0은 수직, 90은 시계 방향으로 90도 기울어진 상태). 이 클래스의 **x** 및 **y**는 스프라이트의 **center** 좌표를 나타냅니다(기본 원점은 왼쪽 위 모서리). 따라서 스프라이트가 지정된 원점을 기준으로 회전하기 때문에 스프라이트를 보다 쉽게 회전할 수 있으며, 중심을 기준으로 회전하면 일관적인 회전 동작을 얻을 수 있습니다.
+여기서 스프라이트를 그리고 애니메이트하는 데 필요한 클래스 변수를 설정합니다. **x** 및 **y** 변수는 평면에서 스프라이트의 현재 위치를 나타내고 **angle** 변수는 스프라이트의 현재 각을 도 단위로 나타냅니다(0은 수직, 90은 시계 방향으로 90도 기울어진 상태). 이 클래스의 **x** 및 **y**는 스프라이트의 **center** 좌표를 나타냅니다(기본 원점은 왼쪽 위 모서리). 따라서 스프라이트가 지정된 원점을 기준으로 회전하기 때문에 스프라이트를 보다 쉽게 회전할 수 있으며, 중심을 기준으로 회전하면 일관적인 회전 동작을 얻을 수 있습니다.
 
 그 다음으로 각각 **x**, **y**, **angle** 변수의 초당 변화 속도를 나타내는 **dX**, **dY**, **dA**가 있습니다.
 
-### <a name="3-create-a-constructor"></a>3. 생성자를 만들려면
+### <a name="3-create-a-constructor"></a>3. 생성자 만들기
 **SpriteClass** 인스턴스를 만들 때 생성자에 **Game1.cs**의 그래픽 디바이스, 프로젝트 폴더에 대한 텍스처 경로, 원래 크기를 기준으로 원하는 텍스처 배율을 제공합니다. 나머지 클래스 변수는 게임을 시작한 후 업데이트 메서드에서 설정하겠습니다.
 
 ```CSharp
@@ -255,16 +255,16 @@ public void Draw (SpriteBatch spriteBatch)
 **Draw** 메서드는 Game1.cs의 **Draw** 메서드에서 호출되며 게임 창에 스프라이트를 그리는 데 사용됩니다.
 
 ## <a name="user-input-and-animation"></a>사용자 입력 및 애니메이션
-앞에서 만든 SpriteClass를 사용하여 새로운 게임 개체를 두 개 만들겠습니다. 첫 번째 개체는 플레이어가 화살표 키와 스페이스바로 제어할 수 있는 아바타입니다. 두 번째는 플레이어 피해 야 하는 개체입니다.
+앞에서 만든 SpriteClass를 사용하여 새로운 게임 개체를 두 개 만들겠습니다. 첫 번째 개체는 플레이어가 화살표 키와 스페이스바로 제어할 수 있는 아바타입니다. 두 번째는 플레이어가 피해야 하는 개체입니다.
 
-### <a name="1-get-the-textures"></a>1. 질감을 가져오기
+### <a name="1-get-the-textures"></a>1. 텍스처 가져오기
 플레이어 아바타로는 믿음직한 티라노사우루스를 타고 있는 Microsoft 고유의 닌자 고양이를 사용하겠습니다. [이미지를 다운로드하려면 여기를 클릭하세요](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/ninja-cat-dino.png).
 
 이번에는 플레이어가 피해야 할 장애물을 만들 차례입니다. 닌자 고양이와 육식 공룡이 가장 싫어하는 것은 무엇일까요? 바로 야채입니다! [이미지를 다운로드하려면 여기를 클릭하세요](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/broccoli.png).
 
 앞에서 본 녹색 사각형과 마찬가지로, **MonoGame 파이프라인**를 통해 이러한 이미지를 **Content.mgcb**에 추가하고, 각각 이름을 “ninja-cat-dino.png”와 “broccoli.png”로 지정합니다.
 
-### <a name="2-add-class-variables"></a>2. 클래스 변수를 추가 합니다.
+### <a name="2-add-class-variables"></a>2. 클래스 변수 추가
 다음 코드를 **Game1.cs**의 클래스 변수 목록에 추가합니다.
 
 ```CSharp
@@ -324,8 +324,8 @@ broccoli = new SpriteClass(GraphicsDevice, "Content/broccoli.png", ScaleToHighDP
 
 브로콜리 이미지는 우리가 화면에 표시하려는 크기보다 훨씬 더 큽니다. 따라서 원래 크기의 0.2배로 줄이겠습니다.
 
-### <a name="5-program-obstacle-behaviour"></a>5. 프로그램 장애물 동작
-화면 밖 어딘가에서 브로콜리가 생성되어 플레이어 아바타가 있는 방향으로 이동하면 플레이어가 브로콜리를 피하도록 해야 합니다. 이를 위해이 메서드를 추가 합니다 **Game1.cs** 클래스:
+### <a name="5-program-obstacle-behaviour"></a>5. 장애물 동작 프로그래밍
+화면 밖 어딘가에서 브로콜리가 생성되어 플레이어 아바타가 있는 방향으로 이동하면 플레이어가 브로콜리를 피하도록 해야 합니다. 이 동작을 구현하기 위해 **Game1.cs** 클래스에 다음 메서드를 추가합니다.
 
 ```CSharp
 public void SpawnBroccoli()
@@ -365,7 +365,7 @@ public void SpawnBroccoli()
 
 세 번째 부분은 브로콜리 스프라이트의 이동 방향을 설정합니다. 생성된 브로콜리는 플레이어 아바타(dino)가 있는 방향으로 이동합니다. 또한 브로콜리가 플레이어를 추격할 때 브로콜리가 공중에서 회전하도록 **dA** 값을 7f로 지정합니다.
 
-### <a name="6-program-game-starting-state"></a>6. 프로그램 게임 시작 상태
+### <a name="6-program-game-starting-state"></a>6. 게임 시작 상태 프로그래밍
 키보드 입력을 처리하려면 앞에서 만든 두 개체의 초기 게임 상태를 설정하는 메서드가 필요합니다. 우리가 원하는 것은 앱이 실행되는 즉시 게임이 시작되는 것이 아니라 사용자가 스페이스바를 눌러 수동으로 게임을 시작하게 만드는 것입니다. 애니메이션된 개체의 초기 상태를 설정하고 점수를 다시 설정하는 다음 코드를 추가합니다.
 
 ```CSharp
@@ -380,7 +380,7 @@ public void StartGame()
 ```
 
 ### <a name="7-handle-keyboard-input"></a>7. 키보드 입력 처리
-다음으로 키보드를 통해 사용자 입력을 처리하는 새 메서드가 필요합니다. 이 메서드를 추가 **Game1.cs**:
+다음으로 키보드를 통해 사용자 입력을 처리하는 새 메서드가 필요합니다. 다음 메서드를 **Game1.cs**에 추가합니다.
 
 ```CSharp
 void KeyboardHandler()
@@ -429,13 +429,13 @@ void KeyboardHandler()
 
 두 번째는 게임이 시작되지 않은 상태에서 **스페이스바**를 누르면 게임을 시작하는 문입니다.
 
-세 번째는 **스페이스바**를 누르면 **dY** 속성을 변경하여 공룡 아바타가 점프하게 만드는 문입니다. "처음 부터"에 있지 않은 경우 플레이어 점프할 수 없습니다 (dino.y screenHeight = * SKYRATIO)에 또한 점프 하지 않고 누름된 번 대신 space 키를 누르고 되는 경우 및 합니다. 이렇게 하면 게임이 시작되자마자 공룡이 점프하는 것을 방지하고, 게임을 시작하는 동일한 키 동작에 공룡 등에 올라탑니다.
+세 번째는 **스페이스바**를 누르면 **dY** 속성을 변경하여 공룡 아바타가 점프하게 만드는 문입니다. 플레이어는 발이 “땅”(dino.y = screenHeight * SKYRATIO)에 붙어 있지 않으면 점프할 수 없으며, 스페이스바를 한 번 누르는 대신 계속 누르고 있는 경우에도 점프하지 않습니다. 이렇게 하면 게임이 시작되자마자 공룡이 점프하는 것을 방지하고, 게임을 시작하는 동일한 키 동작에 공룡 등에 올라탑니다.
 
 마지막으로 if/else 절은 왼쪽 또는 오른쪽 화살표 키가 눌렸는지 검사하고, 눌렸으면 그에 따라 공룡의 **dX** 속성을 변경합니다.
 
 **과제:** 위에 나온 키보드 처리 메서드가 화살표 키 뿐만 아니라 WASD 입력 스키마도 처리하게 만들 수 있을까요?
 
-### <a name="8-add-logic-to-the-update-method"></a>8. 논리 Update 메서드를 추가
+### <a name="8-add-logic-to-the-update-method"></a>8. Update 메서드에 논리 추가
 다음으로 이 모든 부분에 대한 논리를 **Game1.cs**의 **Update** 메서드에 추가해야 합니다.
 
 ```CSharp
@@ -483,9 +483,9 @@ broccoli.Draw(spriteBatch);
 dino.Draw(spriteBatch);
 ```
 
-MonoGame에서 새 **spriteBatch.Draw** 호출은 이전 호출 위에 그립니다. 이 모두를 broccoli 및 dino 스프라이트 그릴지 기존 grass 스프라이트를 통해 되지 숨길 수는 있습니다 뒤의 위치에 관계 없이 있도록 것을 의미 합니다.
+MonoGame에서 새 **spriteBatch.Draw** 호출은 이전 호출 위에 그립니다. 다시 말해서 브로콜리 및 공룡 스프라이트는 기존의 풀밭 스프라이트 위에 그려지기 때문에 위치에 관계없이 풀밭 뒤에 숨길 수 없습니다.
 
-이제 게임을 실행하고 화살표 키와 스페이스바로 공룡을 움직여 보세요. 위의 단계를 수행한 경우는 게임 창 내에서 이동 하 여 아바타를 만들 수 있습니다 및는 broccoli 증가 속도 생성 해야 합니다.
+이제 게임을 실행하고 화살표 키와 스페이스바로 공룡을 움직여 보세요. 위의 단계를 잘 따라 하셨다면 게임 창 내에서 아바타를 움직일 수 있을 것이며 브로콜리의 속도가 점점 빨라져야 합니다.
 
 ![플레이어 아바타 및 장애물](images/monogame-tutorial-2.png)
 
@@ -495,7 +495,7 @@ MonoGame에서 새 **spriteBatch.Draw** 호출은 이전 호출 위에 그립니
 이러한 문제를 해결하기 위해 **SpriteFonts**라고 하는 새로운 종류의 MonoGame 개체를 사용하겠습니다.
 
 ### <a name="1-create-spritefont-description-files"></a>1. SpriteFont 설명 파일 만들기
-**솔루션 탐색기**에서 **Content** 폴더를 찾습니다. 이 폴더에서 **Content.mgcb** 파일을 마우스 오른쪽 단추로 클릭하고 **연결 프로그램**을 선택합니다. 팝업 메뉴에서 **MonoGame 파이프라인**을 선택한 다음 **확인**을 누릅니다. 새 창에서 **콘텐츠** 항목을 마우스 오른쪽 단추로 클릭하고 **추가 -> 새 항목**을 선택합니다. **SpriteFont 설명**을 선택하고 이름을 “점수”로 지정한 다음 **확인**을 누릅니다. 그런 다음 동일한 방법으로 “게임상태”라고 하는 또 다른 SpriteFont 설명을 추가합니다.
+**솔루션 탐색기**에서 **Content** 폴더를 찾습니다. 이 폴더에서 **Content.mgcb** 파일을 마우스 오른쪽 단추로 클릭하고 **연결 프로그램**을 선택합니다. 팝업 메뉴에서 **MonoGame 파이프라인**을 선택한 다음, **확인**을 누릅니다. 새 창에서 **콘텐츠** 항목을 마우스 오른쪽 단추로 클릭하고 **추가 -> 새 항목**을 선택합니다. **SpriteFont 설명**을 선택하고 이름을 “점수”로 지정한 다음, **확인**을 누릅니다. 그런 다음 동일한 방법으로 “게임상태”라고 하는 또 다른 SpriteFont 설명을 추가합니다.
 
 ### <a name="2-edit-descriptions"></a>2. 설명 편집
 **MonoGame 파이프라인**에서 **Content** 폴더를 마우스 오른쪽 단추로 클릭하고 **파일 위치 열기**를 선택합니다. 지금까지 Content 폴더에 추가한 이미지 외에도 방금 만든 SpriteFont 설명 파일이 포함된 폴더가 보일 것입니다. 이제 MonoGame 파이프라인 창을 닫고 저장할 수 있습니다. **파일 탐색기**에서 두 설명 파일을 텍스트 편집기(Visual Studio, NotePad++, Atom 등)로 엽니다.
@@ -527,7 +527,7 @@ scoreFont = Content.Load<SpriteFont>("Score");
 stateFont = Content.Load<SpriteFont>("GameState");
 ```
 
-### <a name="4-draw-the-score"></a>4. 점수를 그리기
+### <a name="4-draw-the-score"></a>4. 점수 그리기
 **Game1.cs**의 **Draw** 메서드로 이동하여 **spriteBatch.End();** 바로 앞에 다음 코드를 추가합니다.
 
 ```CSharp
@@ -537,7 +537,7 @@ new Vector2(screenWidth - 100, 50), Color.Black);
 
 위의 코드는 우리가 앞에서 만든 스프라이트 설명(Arial Size 36)을 사용하여 화면 오른쪽 위에 플레이어의 현재 점수를 그립니다.
 
-### <a name="5-draw-horizontally-centered-text"></a>5. 가로 가운데 맞춤 된 텍스트를 그립니다.
+### <a name="5-draw-horizontally-centered-text"></a>5. 가로 방향으로 가운데 맞춤된 텍스트 그리기
 게임을 만들 때 가로 또는 세로 방향으로 가운데 맞춤된 텍스트를 그려야 하는 경우가 많이 있을 것입니다. 소개 텍스트를 가로 방향으로 가운데에 맞추려면 **Draw** 메서드에서 **spriteBatch.End();** 바로 앞에 다음 코드를 추가합니다.
 
 ```CSharp
@@ -566,7 +566,7 @@ if (!gameStarted)
 
 먼저 문자열을 두 개 만듭니다. 그 중 하나는 우리가 그리려고 하는 각 텍스트 줄에 대한 것입니다. 다음으로 **SpriteFont.MeasureString(String)** 메서드를 사용하여 각 줄을 인쇄했을 때의 너비와 높이를 측정합니다. 그러면 **Vector2** 개체의 크기, 너비가 포함된 **X** 속성, 높이가 포함된 **Y** 속성을 구할 수 있습니다.
 
-마지막으로 각 줄을 그립니다. 우리가 텍스트를 가로로 가운데에 **X** 값의 위치 벡터의 같음 **screenWidth / 2-textSize.X / 2**합니다.
+마지막으로 각 줄을 그립니다. 텍스트를 가로 방향으로 가운데에 맞추기 위해 위치 벡터의 **X** 값을 **screenWidth / 2 - textSize.X / 2**로 맞춥니다.
 
 **과제:** 텍스트를 가로 방향뿐 아니라 세로 방향으로도 가운데에 맞추려면 위의 절차를 어떻게 변경해야 할까요?
 
@@ -577,10 +577,10 @@ if (!gameStarted)
 ## <a name="collision-detection"></a>충돌 감지
 플레이어 주변을 따라다니는 브로콜리와 브로콜리가 새로 생성될 때마다 올라가는 점수를 만들었습니다. 하지만 현재는 이 게임이 끝나는 조건이 없습니다. 공룡 스프라이트와 브로콜리 스프라이트의 충돌 여부를 확인하는 방법 그리고 두 스프라이트가 충돌할 경우 게임 종료를 선언하는 방법을 알아야 합니다.
 
-### <a name="1-get-the-textures"></a>1. 질감을 가져오기
-필요한 마지막 이미지를 사용 하면 "게임 over"에 대 한 것입니다. [이미지를 다운로드하려면 여기를 클릭하세요](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/game-over.png).
+### <a name="1-get-the-textures"></a>1. 텍스처 가져오기
+필요한 마지막 이미지는 "게임 종료"에 대한 것입니다. [이미지를 다운로드하려면 여기를 클릭하세요](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/game-over.png).
 
-이전과 마찬가지로이 이미지를 추가할 ninja cat 및 broccoli 이미지 녹색 사각형을 사용 하 여 **Content.mgcb** 를 통해 합니다 **MonoGame 파이프라인**, "게임 over.png" 이름을 합니다.
+앞에서 본 녹색 사각형, 닌자 고양이 및 브로콜리 이미지와 마찬가지로, **MonoGame 파이프라인**을 통해 이러한 이미지를 **Content.mgcb**에 추가하고, 이름을 “game-over.png”로 지정합니다.
 
 ### <a name="2-rectangular-collision"></a>2. 사각형 충돌
 게임에서 충돌을 감지할 때 종종 관련 수식의 복잡성을 줄이기 위해 개체를 간소화하곤 합니다. 충돌을 감지하기 위해 플레이어 아바타와 브로콜리 장애물을 사각형으로 취급하겠습니다.
@@ -606,9 +606,9 @@ public bool RectangleCollision(SpriteClass otherSprite)
 }
 ```
 
-이 메서드는 두 사각형 개체의 충돌을 감지합니다. 테스트 된 사각형의 면 사이의 간격이 있는지 확인 하 여 알고리즘 작동 합니다. 틈이 있으면 충돌하지 않은 것이고 틈이 없으면 충돌한 것입니다.
+이 메서드는 두 사각형 개체의 충돌을 감지합니다. 이 알고리즘은 사각형의 측면 사이에 틈이 있는지 테스트하는 방식으로 작동합니다. 틈이 있으면 충돌하지 않은 것이고 틈이 없으면 충돌한 것입니다.
 
-### <a name="3-load-new-textures"></a>3. 새 텍스처를 로드 합니다.
+### <a name="3-load-new-textures"></a>3. 새 텍스처 로드
 
 그런 다음 **Game1.cs**를 열고 새로운 클래스 변수 두 개를 추가합니다. 하나는 게임 종료 스프라이트 텍스처를 저장하는 변수이고, 다른 하나는 게임 상태를 추적하는 부울입니다.
 
@@ -617,7 +617,7 @@ Texture2D gameOverTexture;
 bool gameOver;
 ```
 
-그런 다음 **Initialize** 메서드에서 **gameOver**를 초기화합니다.
+그런 다음, **Initialize** 메서드에서 **gameOver**를 초기화합니다.
 
 ```CSharp
 gameOver = false;
@@ -629,8 +629,8 @@ gameOver = false;
 gameOverTexture = Content.Load<Texture2D>("game-over");
 ```
 
-### <a name="4-implement-game-over-logic"></a>4. "를 통해 게임" 논리를 구현 합니다.
-**Update** 메서드에서 **KeyboardHandler** 메서드가 호출되는 위치 바로 다음에 다음 코드를 추가합니다.
+### <a name="4-implement-game-over-logic"></a>4. “게임 종료” 논리 구현
+**Update** 메서드에서 **KeyboardHandler** 메서드가 호출되는 위치 바로 뒤에 다음 코드를 추가합니다.
 
 ```CSharp
 if (gameOver)
@@ -653,8 +653,8 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 
 이렇게 하면 우리가 **SpriteClass**에 만든 **RectangleCollision** 메서드가 호출되고, 만약 true 값이 반환되면 게임이 끝난 것으로 플래그가 지정됩니다.
 
-### <a name="5-add-user-input-for-resetting-the-game"></a>5. 게임을 다시 설정에 대 한 사용자 입력 추가
-이 코드를 추가 합니다 **KeyboardHandler** 메서드를 사용자가 enter 키를 이러한 게임을 다시 설정 하도록 허용 합니다.
+### <a name="5-add-user-input-for-resetting-the-game"></a>5. 게임 초기화를 위한 사용자 입력 추가
+사용자가 Enter 키를 눌러 게임을 초기화할 수 있도록 다음 코드를 **KeyboardHandler** 메서드에 추가합니다.
 
 ```CSharp
 if (gameOver && state.IsKeyDown(Keys.Enter))
@@ -664,7 +664,7 @@ if (gameOver && state.IsKeyDown(Keys.Enter))
 }
 ```
 
-### <a name="6-draw-game-over-splash-and-text"></a>6. 시작 및 텍스트 그리기 게임
+### <a name="6-draw-game-over-splash-and-text"></a>6. 게임 종료 화면 및 텍스트 그리기
 마지막으로 Draw 메서드에서 **spriteBatch.Draw**가 처음으로 호출되는 위치 바로 뒤에 다음 코드를 추가합니다(풀밭 텍스처를 그리는 호출이어야 함).
 
 ```CSharp
@@ -690,7 +690,7 @@ if (gameOver)
 ![게임 종료](images/monogame-tutorial-4.png)
 
 ## <a name="publish-to-the-microsoft-store"></a>Microsoft Store에 게시
-UWP 앱으로이 게임을 빌드 했습니다 이므로 Microsoft Store이 프로젝트를 게시할 수 있습니다. 몇 가지 단계를 처리해야 합니다.
+이 게임은 UWP 앱입니다. 따라서 이 프로젝트를 Microsoft Store에 게시할 수 있습니다. 몇 가지 단계를 처리해야 합니다.
 
 Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/register)해야 합니다.
 
@@ -698,4 +698,4 @@ Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/regist
 
 앱을 제출하여 [인증](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
-자세한 내용은 참조 하세요. [UWP 앱을 게시](https://developer.microsoft.com/en-us/store/publish-apps)합니다.
+자세한 내용은 [UWP 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 참조하세요.

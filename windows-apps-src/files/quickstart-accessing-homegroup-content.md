@@ -7,36 +7,36 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 07d94f5b11acfe14bf55392c5cbf2c1b7bcfbeef
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369392"
 ---
 # <a name="accessing-homegroup-content"></a>홈 그룹 콘텐츠 액세스
 
 
 
-**중요 한 Api**
+**중요 API**
 
 -   [**Windows.Storage.KnownFolders 클래스**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders)
 
 사진, 음악, 동영상 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
--   **유니버설 Windows 플랫폼 (UWP) 앱 용 비동기 프로그래밍 이해**
+-   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
     C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
 
--   **앱 capabilty 선언**
+-   **앱 접근 권한 값 선언**
 
     홈 그룹 콘텐츠에 액세스하려면 사용자의 컴퓨터에 홈 그룹이 설정되어 있고 앱에는 **picturesLibrary**, **musicLibrary** 또는 **videosLibrary** 접근 권한 값 중 하나 이상이 있어야 합니다. 앱에서 홈 그룹 폴더에 액세스하면 앱의 매니페스트에 선언된 접근 권한 값에 해당하는 라이브러리만 표시됩니다. 자세한 내용은 [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
     > [!NOTE]
-    > 홈 그룹의 문서 라이브러리에서 콘텐츠는 앱의 매니페스트에 선언 된 기능에 관계 없이 및 사용자의 공유 설정에 관계 없이 앱에 표시 되지 않습니다.     
+    > 홈 그룹의 문서 라이브러리에 있는 콘텐츠는 앱의 매니페스트에 선언된 접근 권한 값 및 사용자의 공유 설정에 관계없이 앱에 표시되지 않습니다.     
 
--   **파일 선택기를 사용 하는 방법 이해**
+-   **파일 선택기 사용 방법 이해**
 
     일반적으로 파일 선택기를 사용하여 홈 그룹의 파일 및 폴더에 액세스합니다. 파일 선택기 사용 방법에 대한 자세한 내용은 [선택기를 사용하여 파일 및 폴더 열기](quickstart-using-file-and-folder-pickers.md)를 참조하세요.
 
@@ -48,7 +48,7 @@ ms.locfileid: "66369392"
 
 사용자가 홈 그룹에서 파일 및 폴더를 선택할 수 있도록 하는 파일 선택기 인스턴스를 열려면 다음 단계를 수행하세요.
 
-1.  **만들기 및 파일 선택기를 사용자 지정**
+1.  **파일 선택기 만들기 및 사용자 지정**
 
     [  **FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker)를 사용하여 파일 선택기를 만든 다음 선택기의 [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation)을 [**PickerLocationId.HomeGroup**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerLocationId)으로 설정합니다. 또는 사용자 및 앱과 관련된 다른 속성을 설정합니다. 파일 선택기 사용자 지정 방법을 결정하는 데 도움이 되는 지침은 [파일 선택기에 대한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/files/quickstart-using-file-and-folder-pickers)을 참조하세요.
 
@@ -61,7 +61,7 @@ ms.locfileid: "66369392"
     picker.FileTypeFilter.Add("*");
     ```
 
-2.  **파일 선택기를 표시 하 고 선택된 파일을 처리 합니다.**
+2.  **파일 선택기를 표시하고 선택된 파일을 처리합니다.**
 
     파일 선택기를 만들어 사용자 지정한 후 [**FileOpenPicker.PickSingleFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync)를 호출하여 사용자가 파일 하나를 선택하거나 [**FileOpenPicker.PickMultipleFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.pickmultiplefilesasync)를 호출하여 여러 파일을 선택하도록 할 수 있습니다.
 
@@ -83,14 +83,14 @@ ms.locfileid: "66369392"
 
 이 섹션에서는 사용자가 제공한 쿼리 용어와 일치하는 홈 그룹 항목을 찾는 방법을 보여 줍니다.
 
-1.  **사용자 로부터 쿼리 용어를 가져옵니다.**
+1.  **사용자의 쿼리 용어를 가져옵니다.**
 
     여기서는 사용자가 `searchQueryTextBox`라는 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 컨트롤에 입력한 쿼리 용어를 가져옵니다.
     ```cs
     string queryTerm = this.searchQueryTextBox.Text;    
     ```
 
-2.  **쿼리 옵션 및 검색 필터를 설정 합니다.**
+2.  **쿼리 옵션 및 검색 필터를 설정합니다.**
 
     쿼리 옵션은 검색 결과를 정렬하는 방식을 결정하고 검색 필터는 검색 결과에 포함되는 항목을 결정합니다.
 
@@ -104,7 +104,7 @@ ms.locfileid: "66369392"
             Windows.Storage.KnownFolders.HomeGroup.CreateFileQueryWithOptions(queryOptions);    
     ```
 
-3.  **쿼리를 실행 하 고 결과 처리 합니다.**
+3.  **쿼리를 실행하고 결과를 처리합니다.**
 
     다음 예에서는 홈 그룹에서 검색 쿼리를 실행하고 일치하는 파일의 이름으로 문자열 목록으로 저장합니다.
     ```cs
@@ -126,7 +126,7 @@ ms.locfileid: "66369392"
 
 이 섹션에서는 특정 사용자가 공유하는 홈 그룹을 찾는 방법을 보여 줍니다.
 
-1.  **홈 그룹 사용자의 컬렉션을 가져옵니다.**
+1.  **홈 그룹 사용자 컬렉션을 가져옵니다.**
 
     홈 그룹에 있는 각각의 첫 번째 수준 폴더는 개별 홈 그룹 사용자를 나타냅니다. 따라서 홈 그룹 사용자 컬렉션을 가져오려면 [**GetFoldersAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfoldersasync)를 호출하여 최상위 수준의 홈 그룹 폴더를 검색합니다.
     ```cs
@@ -134,7 +134,7 @@ ms.locfileid: "66369392"
         await Windows.Storage.KnownFolders.HomeGroup.GetFoldersAsync();    
     ```
 
-2.  **대상 사용자의 폴더를 찾습니다 하 고 해당 사용자의 폴더로 범위가 지정 된 파일 쿼리를 만듭니다.**
+2.  **대상 사용자의 폴더를 찾은 다음 범위가 해당 사용자의 폴더로 지정된 파일 쿼리를 만듭니다.**
 
     다음 예제에서는 검색된 폴더를 반복하여 대상 사용자의 폴더를 찾습니다. 그런 다음 폴더의 모든 파일을 찾아서 관련성순으로 정렬하고 나서 수정 날짜로 정렬하도록 쿼리 옵션을 설정합니다. 이 예제에서는 파일 이름과 함께 찾은 파일 수를 보고하는 문자열을 작성합니다.
     ```cs
@@ -171,7 +171,7 @@ ms.locfileid: "66369392"
 
 홈 그룹에서 비디오 콘텐츠를 스트리밍하려면 다음 단계를 수행하세요.
 
-1.  **앱에 MediaElement를 포함 합니다.**
+1.  **MediaElement를 앱에 포함합니다.**
 
     [  **MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)를 사용하면 앱에서 오디오 및 비디오 콘텐츠를 재생할 수 있습니다. 오디오 및 비디오 재생에 대한 자세한 내용은 [사용자 지정 전송 컨트롤 만들기](https://docs.microsoft.com/windows/uwp/controls-and-patterns/custom-transport-controls) 및 [오디오, 비디오 및 카메라](https://docs.microsoft.com/windows/uwp/audio-video-camera/index)를 참조하세요.
     ```HTML
@@ -180,7 +180,7 @@ ms.locfileid: "66369392"
     </Grid>    
     ```
 
-2.  **홈 그룹에 파일 선택기를 열고 앱을 지 원하는 형식 비디오 파일을 포함 하는 필터를 적용 합니다.**
+2.  **홈 그룹에서 파일 선택기를 열고 앱이 지원하는 형식으로 비디오 파일을 포함하는 필터를 적용합니다.**
 
     다음 예에서는 파일 열기 선택기에 .mp4 및 .wmv 파일을 포함합니다.
     ```cs
@@ -193,7 +193,7 @@ ms.locfileid: "66369392"
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **읽기 액세스를 위해 사용자의 파일 선택 영역을 열고 파일 스트림을 원본으로 설정 합니다** [ **MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement), 한 다음 파일을 재생 합니다.
+3.  **사용자가 선택한 파일을 읽을 수 있도록 열고 파일 스트림을**[**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)의 원본으로 설정한 다음, 파일을 재생합니다.
     ```cs
     if (file != null)
     {

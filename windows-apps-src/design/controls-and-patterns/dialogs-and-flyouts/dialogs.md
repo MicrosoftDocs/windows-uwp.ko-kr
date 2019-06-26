@@ -13,15 +13,15 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1277d9089e900451ac4c537805079ff479f808fa
-ms.sourcegitcommit: f47620e72ff8127fae9b024c70ddced3a5c45d91
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66748449"
 ---
 # <a name="dialog-controls"></a>대화 상자 컨트롤
 
-대화 상자 컨트롤은 상황에 맞는 앱 정보를 제공 하는 모달 UI 오버레이입니다. 상호 작용 앱 창 사용 하 여 명시적으로 해제 될 때까지 차단 합니다. 종종 사용자의 작업을 요청하기도 합니다.
+대화 상자 컨트롤은 상황에 맞는 앱 정보를 제공하는 모달 UI 오버레이입니다. 이러한 컨트롤은 명시적으로 닫을 때까지 앱 창의 조작을 차단합니다. 종종 사용자의 작업을 요청하기도 합니다.
 
 ![대화 상자 예제](../images/dialogs/dialog_RS2_delete_file.png)
 
@@ -32,7 +32,7 @@ ms.locfileid: "66748449"
 
 대화 상자를 사용하여 사용자에게 중요한 정보를 알리거나 확인 또는 추가 정보를 요청한 후에 작업을 완료할 수 있습니다.
 
-(유사한 컨트롤), 플라이 아웃을 사용 하는 경우 및 대화 상자를 사용 하는 경우에 권장 사항을 참조 하세요 [대화 상자와 플라이 아웃](index.md)합니다. 
+대화 상자를 사용해야 할 경우와 플라이아웃(비슷한 컨트롤)를 사용해야 할 경우에 대한 권장 사항을 보려면 [대화 상자 및 플라이아웃](index.md)을 참조하세요. 
 
 ## <a name="examples"></a>예
 
@@ -118,8 +118,8 @@ private async void DisplayDeleteFileDialog()
 }
 ```
 
-## <a name="provide-a-safe-action"></a>안전한 작업을 제공 합니다.
-대화 상자는 사용자 상호 작용을 차단하고 단추는 사용자가 대화 상자를 해제하는 기본 메커니즘이기 때문에 대화 상자에 "닫기"나 "확인" 등의 "안전한" 비파괴 단추가 하나 이상 있는지 확인하세요. **모든 대화 상자는 대화 상자를 닫습니다 안전 실행 단추를 하나 이상 포함 해야 합니다.** 이를 통해 사용자가 작업을 수행하지 않고 대화 상자를 닫을 수 있습니다.<br>![대화 상자를 하나의 단추](../images/dialogs/dialog_RS2_one_button.png)
+## <a name="provide-a-safe-action"></a>안전한 작업 제공
+대화 상자는 사용자 상호 작용을 차단하고 단추는 사용자가 대화 상자를 해제하는 기본 메커니즘이기 때문에 대화 상자에 "닫기"나 "확인" 등의 "안전한" 비파괴 단추가 하나 이상 있는지 확인하세요. **모든 대화 상자에 대화 상자를 닫기 위한 안전한 작업 단추가 하나 이상 있어야 합니다.** 이를 통해 사용자가 작업을 수행하지 않고 대화 상자를 닫을 수 있습니다.<br>![단추가 1개인 대화 상자](../images/dialogs/dialog_RS2_one_button.png)
 
 ```csharp
 private async void DisplayNoWifiDialog()
@@ -207,7 +207,7 @@ CloseButton 외에도 필요에 따라 기본 지시 사항과 관련된 1-2개�
 ![단추가 3개인 대화 상자](../images/dialogs/dialog_RS2_three_button.png)
 
 ### <a name="defaultbutton"></a>DefaultButton
-필요에 따라 기본 단추로 세 가지 단추 중 하나를 식별하도록 선택할 수 있습니다. 기본 단추를 지정하면 다음과 같은 일이 일어납니다.
+필요에 따라 기본 단추로 세 가지 단추 중 하나를 식별하도록 선택할 수 있습니다. 기본 단추를 지정하면 다음과 같은 결과가 발생합니다.
 - 단추가 강조색 단추 시각적 처리를 수신합니다.
 - 단추가 Enter 키에 자동으로 응답합니다.
     - 사용자가 키보드에서 Enter 키를 누르면 기본 단추와 연결된 클릭 처리기가 시작되고 ContentDialogResult가 기본값 단추와 연결된 값을 반환합니다.
@@ -250,13 +250,13 @@ private async void DisplaySubscribeDialog()
 
 > 일부 플랫폼에서는 확정 단추가 왼쪽 대신 오른쪽에 배치됩니다. 왼쪽에 배치하는 것을 권장하는 이유는 무엇일까요?  대부분의 사용자가 오른손잡이고 오른손으로 휴대폰을 휴대한다고 가정하면 확정 단추가 왼쪽에 있을 때 실제로 좀 더 편안하다고 느낍니다. 단추가 사용자의 엄지 손가락을 뻗어 닿기 편한 곳에 있기 때문입니다. 화면의 오른쪽에 있는 단추는 사용자가 엄지 손가락을 약간 불편한 위치로 안쪽으로 당겨야 합니다.
 
-## <a name="contentdialog-in-appwindow-or-xaml-islands"></a>ContentDialog AppWindow 또는 Xaml 제도
+## <a name="contentdialog-in-appwindow-or-xaml-islands"></a>AppWindow 또는 Xaml island의 ContentDialog
 
-> 참고: 이 섹션에서는 Windows 10 1903 이상 버전을 대상으로 하는 앱에만 적용 됩니다. AppWindow 및 XAML 제도 이전 버전에서 사용할 수 없는 경우 버전 관리에 대 한 자세한 내용은 참조 하세요. [적응 응용 프로그램 버전](../../../debug-test-perf/version-adaptive-apps.md)합니다.
+> 참고: 이 섹션은 Windows 10, 버전 1903 이상을 대상으로 하는 앱에만 적용됩니다. AppWindow 및 XAML island를 이전 버전에서는 사용할 수 없습니다. 버전 관리에 대한 자세한 내용은 [버전 적응 앱](../../../debug-test-perf/version-adaptive-apps.md)을 참조하세요.
 
-기본적으로 콘텐츠 루트를 기준으로 대화 상자를 모달 형식으로 표시 [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)합니다. ContentDialog 하나 내에서 사용 하는 경우는 [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 또는 [XAML 섬](/apps/desktop/modernize/xaml-islands)을 수동으로 설정 해야 합니다 [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) XAML 호스트의 루트에 대화 상자에서.
+기본적으로 콘텐츠 대화 상자는 루트 [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)를 기준으로 모달 형식으로 표시됩니다. [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 또는 [XAML Island](/apps/desktop/modernize/xaml-islands)에서 ContentDialog를 사용하는 경우 수동으로 대화 상자의 [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot)를 XAML 호스트의 루트로 설정해야 합니다.
 
-이렇게 하려면 다음과 같이 ContentDialog의 XamlRoot 속성 AppWindow 또는 XAML 섬, 이미 요소와 동일한 XamlRoot을 설정 합니다.
+이렇게 하려면 다음과 같이 ContentDialog의 XamlRoot 속성을 AppWindow 또는 XAML Island에 이미 있는 요소와 동일한 XamlRoot로 설정합니다.
 
 ```csharp
 private async void DisplayNoWifiDialog()
@@ -280,7 +280,7 @@ private async void DisplayNoWifiDialog()
 ```
 
 > [!WARNING]
-> 있을 수 있습니다만 한 번에 스레드당 ContentDialog 열 하나. 두 ContentDialogs 열려는 별도 AppWindows에서 열려고 시도 하는 경우에는 예외를 throw 합니다.
+> 한 번에 스레드당 하나의 ContentDialog만 열어 둘 수 있습니다. 두 ContentDialog를 열려는 하면 별도의 AppWindow에서 열려고 하더라도 예외가 throw됩니다.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
@@ -289,5 +289,5 @@ private async void DisplayNoWifiDialog()
 ## <a name="related-articles"></a>관련 문서
 - [도구 설명](../tooltips.md)
 - [메뉴 및 상황에 맞는 메뉴](../menus.md)
-- [플라이 아웃 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+- [Flyout 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 - [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)

@@ -6,22 +6,22 @@ ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 레이아웃, 양식
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 45c4acda953808a85363d1cec7c623dd79cc08f1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.openlocfilehash: cd3fb1c294ac81f42bb53c23d307eed49a6708fd
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57656448"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "64564582"
 ---
 # <a name="create-and-customize-a-form"></a>양식 만들기 및 사용자 지정
 
-사용자는 상당한 양의 정보를 입력 하도록 요구 하는 앱을 만들 경우 작성 하기 위해 폼을 만드는 해야 하는 것이 경우가 있습니다. 이 문서에서는 안내해 유용 하 고 강력한 폼을 만들기 위해 알아야 할 내용.
+사용자에게 상당한 양의 정보를 입력하도록 요구하는 앱을 만들 경우 사용자가 채울 양식을 만들 수 있습니다. 이 문서에서는 유용하고 강력한 양식을 만들기 위해 알아야 할 내용을 보여줍니다.
 
 이 문서는 자습서가 아닙니다. 자습서를 원하는 경우 단계별 안내식 환경을 제공하는 우리의 [적응 레이아웃 자습서](../design/basics/xaml-basics-adaptive-layout.md)를 참조하세요.
 
 양식에 들어갈 **XAML 컨트롤**, 페이지에서 이를 가장 잘 정렬하는 방법 및 화면 크기를 변경하기 위해 양식을 최적화하는 방법을 설명합니다. 하지만 양식은 시각적 요소의 상대 위치에 대한 것이기 때문에 먼저 XAML이 있는 페이지 레이아웃을 살펴보겠습니다.
 
-## <a name="what-do-you-need-to-know"></a>알아야 할 사항?
+## <a name="what-do-you-need-to-know"></a>알아야 할 사항
 
 UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 없습니다. 대신, 페이지에서 UI 요소 컬렉션을 정렬하여 양식을 만들어야 합니다.
 
@@ -45,15 +45,15 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 
 ## <a name="what-goes-in-a-form"></a>양식에 무엇이 들어가나요?
 
-다양한 [XAML 컨트롤](../design/controls-and-patterns/controls-and-events-intro.md)로 양식을 작성해야 합니다. 이러한 컨트롤에 익숙할 수도 있지만 언제든지 필요한 경우 세부 정보를 읽을 수 있습니다. 특히, 사용자가 텍스트를 입력하거나 값 목록에서 선택할 수 있는 컨트롤이 필요할 수 있습니다. 이 추가할 수 있습니다 하는 옵션의 기본 목록을 –,에 대 한 모든 것 처럼 보입니다 및 작동 방법을 알고 정도로 해 읽이 필요가 없습니다.
+다양한 [XAML 컨트롤](../design/controls-and-patterns/controls-and-events-intro.md)로 양식을 작성해야 합니다. 이러한 컨트롤에 익숙할 수도 있지만 언제든지 필요한 경우 세부 정보를 읽을 수 있습니다. 특히, 사용자가 텍스트를 입력하거나 값 목록에서 선택할 수 있는 컨트롤이 필요할 수 있습니다. 이것이 추가할 수 있는 기본 옵션 목록입니다. 이 옵션에 대한 모든 사항을 읽을 필요는 없으며 각 옵션의 모습과 작동 방식만 이해하면 됩니다.
 
-* [텍스트 상자](../design/controls-and-patterns/text-box.md) 앱에 사용자 입력된 텍스트를 수 있습니다.
+* [TextBox](../design/controls-and-patterns/text-box.md)는 사용자가 앱에 텍스트를 입력할 수 있도록 합니다.
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md)는 사용자가 두 가지 옵션 중에서 선택할 수 있도록 합니다.
 * [DatePicker](../design/controls-and-patterns/date-picker.md)는 날짜 값을 선택할 수 있도록 합니다.
 * [TimePicker](../design/controls-and-patterns/time-picker.md)는 시간 값을 선택할 수 있도록 합니다.
 * [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)는 선택할 수 있는 항목의 목록을 표시하도록 확장합니다. [여기](../design/controls-and-patterns/lists.md#drop-down-lists)에서 자세한 내용을 알아볼 수 있습니다.
 
-사용자가 저장하거나 취소할 수 있도록 [단추](../design/controls-and-patterns/buttons.md)를 추가하고자 할 수도 있습니다.
+사용자가 저장하거나 취소할 수 있도록 [단추](../design/controls-and-patterns/buttons.md)를 추가하려고 할 수도 있습니다.
 
 ## <a name="format-controls-in-your-layout"></a>레이아웃의 서식 컨트롤
 
@@ -90,7 +90,7 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 
 ## <a name="make-your-layout-responsive"></a>반응형 레이아웃 만들기
 
-사용자는 서로 다른 화면 폭의 다양한 장치에서 UI를 볼 수 있습니다. 화면에 관계없이 좋은 환경을 제공하기 위해 [반응형 디자인](../design/layout/responsive-design.md)을 사용해야 합니다. 진행하면서 유의해야 한 디자인 철학에 대한 좋은 조언을 해당 페이지를 통해 읽어보세요.
+사용자는 서로 다른 화면 폭의 다양한 디바이스에서 UI를 볼 수 있습니다. 화면에 관계없이 좋은 환경을 제공하기 위해 [반응형 디자인](../design/layout/responsive-design.md)을 사용해야 합니다. 진행하면서 유의해야 한 디자인 철학에 대한 좋은 조언을 해당 페이지를 통해 읽어보세요.
 
 [XAML을 사용한 반응형 레이아웃](../design/layout/layouts-with-xaml.md) 페이지에서는 이를 구현하는 방법을 자세히 설명합니다. 지금은 **유동 레이아웃** 및 **XAML에서 시각적 상태**에 집중합니다.
 
@@ -99,30 +99,39 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 반응형 레이아웃에 더 중요한 것은 **시각적 상태**입니다. 시각적 상태는 주어진 조건이 참일 때 주어진 요소에 적용되는 속성 값을 정의합니다. [xaml에서 이 작업을 수행하는 방법을 읽고](../design/layout/layouts-with-xaml.md#set-visual-states-in-xaml-markup), 이를 양식에 구현합니다. *매우* 기본적인 양식은 이전 샘플에서 다음과 같이 보일 수 있습니다.
 
 ```xaml
-<VisualStateManager.VisualStateGroups>
-    <VisualStateGroup>
-        <VisualState>
-            <VisualState.StateTriggers>
-                <AdaptiveTrigger MinWindowWidth="640" />
-            </VisualState.StateTriggers>
+<Page ...>
+    <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="640" />
+                    </VisualState.StateTriggers>
 
-            <VisualState.Setters>
-                <Setter Target="Associate.(RelativePanel.RightOf)" Value="Customer"/>
-                <Setter Target="Associate.(RelativePanel.Below)" Value=""/>
-                <Setter Target="Save.(RelativePanel.Below)" Value="Customer"/>
-            </VisualState.Setters>
-        </VisualState>
-    </VisualStateGroup>
-</VisualStateManager.VisualStateGroups>
+                    <VisualState.Setters>
+                        <Setter Target="Associate.(RelativePanel.RightOf)" Value="Customer"/>
+                        <Setter Target="Associate.(RelativePanel.Below)" Value=""/>
+                        <Setter Target="Save.(RelativePanel.Below)" Value="Customer"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
-<RelativePanel>
-    <!--Previous 3 stack panels-->
-</RelativePanel>
+        <RelativePanel>
+            <!-- Customer StackPanel -->
+            <!-- Associate StackPanel -->
+            <!-- Save StackPanel -->
+        </RelativePanel>
+    </Grid>
+</Page>
 ```
+
+> [!IMPORTANT]
+> StateTriggers를 사용하는 경우 VisualStateGroups가 루트의 첫 번째 자식에 연결되어 있는지 항상 확인합니다. 여기서 **Grid**는 루트 **Page** 요소의 첫 번째 자식입니다.
 
 다양한 화면 크기의 시각적 상태를 만드는 것은 실용적이지 않으며 두 개 이상의 화면은 앱의 사용자 환경에 큰 영향을 줄 수 있습니다. 대신 몇 가지 주요 중단점에 맞춰 디자인하는 것이 좋습니다. [여기에서 더 자세히 알아볼 수 있습니다](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md).
 
-## <a name="add-accessibility-support"></a>추가 접근성 지원
+## <a name="add-accessibility-support"></a>접근성 지원 추가
 
 화면 크기의 변경에 대응하는 잘 생성된 레이아웃이 있으므로 사용자 환경을 개선하기 위해 할 수 있는 마지막 작업은 [앱에 액세스할 수 있도록](../design/accessibility/accessibility-overview.md) 만드는 것입니다. 여러 방법을 사용할 수 있지만 이와 같은 양식에서는 보이는 것보다 쉽습니다. 다음에 중점을 둡니다.
 
@@ -133,9 +142,9 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 
 ## <a name="going-further"></a>더 나아가기
 
-여기에서 양식을 만들었지만 레이아웃과 컨트롤의 개념은 생성할 수 있는 모든 XAML UI 전반에서 적용됩니다. 다시 연결 하 고 새로운 UI 기능을 추가 하 고 사용자 경험을 구체화 해야 양식을 사용 하 여 실험에 문서를 진행 해도 됩니다. 자세한 레이아웃 기능을 통해 단계별 지침을 원한다 면 참조는 [적응 레이아웃 자습서](../design/basics/xaml-basics-adaptive-layout.md)
+여기에서 양식을 만들었지만 레이아웃과 컨트롤의 개념은 생성할 수 있는 모든 XAML UI 전반에서 적용됩니다. 자유롭게 제공한 링크를 통해 문서로 돌아가 가지고 있는 양식을 시험해보고, 새로운 UI 기능을 추가하고 사용자 환경을 구체화하세요. 더 자세한 레이아웃 기능에 대한 단계별 지침을 원한다면 [적응형 레이아웃 자습서](../design/basics/xaml-basics-adaptive-layout.md)를 참조하세요.
 
-양식은 비워둘 필요도 없습니다. 한 발자국 나아가 [마스터/세부 정보 패턴](../design/controls-and-patterns/master-details.md) 또는 [피벗 컨트롤](../design/controls-and-patterns/pivot.md) 내에 자신의 양식을 채울 수 있습니다. 또는 양식의 코드 뒤에서 작업하려는 경우 우리의 [이벤트 개요](../xaml-platform/events-and-routed-events-overview.md)로 시작할 수 있습니다.
+양식은 비워둘 필요도 없습니다. 한 발자국 나아가 [마스터/세부 정보 패턴](../design/controls-and-patterns/master-details.md) 또는 [피벗 컨트롤](../design/controls-and-patterns/pivot.md) 내에 자신의 양식을 채울 수 있습니다. 또는 양식의 코드 뒤에서 작업하려는 경우 [이벤트 개요](../xaml-platform/events-and-routed-events-overview.md)로 시작할 수 있습니다.
 
 ## <a name="useful-apis-and-docs"></a>유용한 API 및 문서
 
@@ -145,10 +154,10 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 
 | API | 설명 |
 |------|---------------|
-| [폼에 대 한 유용한 컨트롤](../design/controls-and-patterns/forms.md#input-controls) | 양식을 만드는 데 유용한 입력 컨트롤 목록과 이 컨트롤을 어디에 사용할지에 대한 기본 지침입니다. |
-| [표](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) | 다중 행/열 레이아웃의 요소를 배열하는 패널입니다. |
+| [양식에 유용한 컨트롤](../design/controls-and-patterns/forms.md#input-controls) | 양식을 만드는 데 유용한 입력 컨트롤 목록과 이 컨트롤을 어디에 사용할지에 대한 기본 지침입니다. |
+| [그리드](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) | 다중 행/열 레이아웃의 요소를 배열하는 패널입니다. |
 | [RelativePanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) | 다른 요소 및 패널의 경계와 관련하여 항목을 배열하는 패널입니다. |
-| [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) | 가로나 세로줄로 요소를 배열하는 패널입니다. |
+| [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) | 하나의 가로줄이나 세로줄로 요소를 배열하는 패널입니다. |
 | [VisualState](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState) | 특정 상태일 때 UI 요소의 모양을 설정할 수 있습니다. |
 
 ### <a name="useful-docs"></a>유용한 문서
@@ -156,21 +165,21 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 | 항목 | 설명 |
 |-------|----------------|
 | [접근성 개요](../design/accessibility/accessibility-overview.md) | 앱에서 접근성 옵션에 대한 광범위한 개요입니다. |
-| [액세스 가능성 검사 목록](../design/accessibility/accessibility-checklist.md) | 앱이 접근성 표준을 준수하는지 확인하기 위한 실용적인 검사 목록입니다. |
+| [접근성 검사 목록](../design/accessibility/accessibility-checklist.md) | 앱이 접근성 표준을 준수하는지 확인하기 위한 실용적인 검사 목록입니다. |
 | [이벤트 개요](../xaml-platform/events-and-routed-events-overview.md) | UI 작업을 처리하기 위한 이벤트 추가 및 구조화에 대해 자세히 설명합니다. |
 | [양식](../design/controls-and-patterns/forms.md) | 양식 작성에 대한 전반적인 지침입니다. |
 | [레이아웃 패널](../design/layout/layout-panels.md) | 레이아웃 패널의 유형과 용도에 대한 개요를 제공합니다. |
 | [마스터/세부 정보 패턴](../design/controls-and-patterns/master-details.md) | 하나 또는 여러 개의 양식 주변에 구현할 수 있는 디자인 패턴입니다. |
-| [피벗 컨트롤](../design/controls-and-patterns/pivot.md) | 하나 또는 여러 개의 양식을 포함할 수 있는 컨트롤. |
-| [반응 형 디자인](../design/layout/responsive-design.md) | 대규모 반응형 디자인 원칙에 대한 개요입니다. | 
-| [XAML 사용 하 여 반응 형 레이아웃](../design/layout/layouts-with-xaml.md) | 반응형 디자인의 시각적 상태 및 기타 구현에 대한 정보입니다. |
-| [반응 형 디자인에 대 한 화면 크기](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) | 반응형 레이아웃의 범위여야 하는 화면 크기에 대한 지침입니다. |
+| [피벗 컨트롤](../design/controls-and-patterns/pivot.md) | 하나 또는 여러 개의 양식을 포함할 수 있는 컨트롤입니다. |
+| [반응형 디자인](../design/layout/responsive-design.md) | 대규모 반응형 디자인 원칙에 대한 개요입니다. |
+| [XAML을 사용한 반응형 레이아웃](../design/layout/layouts-with-xaml.md) | 반응형 디자인의 시각적 상태 및 기타 구현에 대한 정보입니다. |
+| [반응형 디자인의 화면 크기](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) | 반응형 레이아웃의 범위여야 하는 화면 크기에 대한 지침입니다. |
 
 ## <a name="useful-code-samples"></a>유용한 코드 샘플
 
 | 코드 샘플 | 설명 |
 |-----------------|---------------|
-| [적응 레이아웃 자습서](../design/basics/xaml-basics-adaptive-layout.md) | 적응형 레이아웃 및 반응형 디자인을 단계별로 안내하는 경험입니다. | 
+| [적응형 레이아웃 자습서](../design/basics/xaml-basics-adaptive-layout.md) | 적응형 레이아웃 및 반응형 디자인을 단계별로 안내하는 경험입니다. |
 | [고객 주문 데이터베이스](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | 여러 페이지 엔터프라이즈 샘플에서 작업 중인 레이아웃 및 양식을 표시합니다. |
 | [XAML 컨트롤 갤러리](https://github.com/Microsoft/Xaml-Controls-Gallery) | XAML 컨트롤 선택 및 구현 방법을 확인합니다. |
 | [추가 코드 샘플](https://developer.microsoft.com//windows/samples) | 관련된 코드를 표시하려면 범주 드롭다운 목록에서 **컨트롤, 레이아웃 및 텍스트**를 선택합니다. |

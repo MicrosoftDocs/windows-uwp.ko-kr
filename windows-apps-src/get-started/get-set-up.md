@@ -1,29 +1,32 @@
 ---
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: 설정
-description: 생각보다 쉽게 설정할 수 있습니다. 이러한 지침 및 Windows 10 용 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 시작 합니다.
+description: 생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요.
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a92b8d0f921bc747108b802d285b783e7f2bcaa8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.openlocfilehash: 5d0f3e7ca98f01750d7d05cc06b56783e3b32359
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658648"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "64564465"
 ---
 # <a name="get-set-up"></a>설정
 
 ![Visual Studio 사용 준비](images/VisualStudio2017Hero_ImageXL-LG.png)
 
-생각보다 쉽게 시작할 수 있습니다. 이러한 지침 및 Windows 10 용 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 시작 합니다.
+생각보다 쉽게 시작할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요.
 
-## <a name="1-download-or-update-visual-studio"></a>1. 다운로드 또는 Visual Studio 업데이트
+## <a name="1-download-or-update-visual-studio"></a>1. Visual Studio 다운로드 또는 업데이트
 
-Microsoft Visual Studio 2017에서는 디자인, 코딩, 테스트 및 앱을 디버깅 합니다.
+> [!NOTE]
+> 새 버전의 Visual Studio는 이러한 지침을 수반하는 스크린샷과는 다르게 보일 수 있습니다. 그래도 걱정할 필요는 없습니다. 다음 지침에 따라 적절히 설정할 수 있습니다.
 
-Visual Studio 2017이 아직 없는 경우에 무료 Microsoft Visual Studio Community 2017을 설치할 수 있습니다. 이 다운로드에는 앱 테스트를 위한 디바이스 시뮬레이터가 포함되어 있습니다.
+Microsoft Visual Studio 2019는 앱을 디자인, 코딩, 테스트 및 디버그하는 데 도움이 됩니다.
+
+Microsoft Visual Studio Community 2019가 없는 경우 무료 Microsoft Visual Studio Community 2019를 설치할 수 있습니다. 이 다운로드에는 앱 테스트를 위한 디바이스 시뮬레이터가 포함되어 있습니다.
 
 -   [Windows 10 개발자 도구 다운로드](https://go.microsoft.com/fwlink/p/?LinkID=534189)
 
@@ -52,7 +55,7 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 
 ## <a name="whats-next"></a>다음 작업
 
-도구를 설치하고 개발을 위해 장치를 활성화했으면 Windows 10 앱 만들기를 시작하는 방법에 대한 지침을 확인합니다.
+도구를 설치하고 개발을 위해 디바이스를 활성화했으면 Windows 10 앱 만들기를 시작하는 방법에 대한 지침을 확인합니다.
 
 -   [코딩 시작](create-uwp-apps.md)
 
@@ -60,7 +63,7 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 
 디바이스를 사용자 지정하고 다른 기능이나 패키지를 설치하려는 경우 시스템 설정 스크립트에 대해 이 프로젝트를 확인합니다.
 
-- [개발자 설치 스크립트](https://github.com/Microsoft/windows-dev-box-setup-scripts)
+- [개발자 설정 스크립트](https://github.com/Microsoft/windows-dev-box-setup-scripts)
 
 ## <a name="want-more-tools-and-downloads"></a>더 많은 도구와 다운로드가 필요한 경우
 
@@ -70,4 +73,4 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
 * [UWP 앱이란 무엇인가요?](universal-application-platform-guide.md)
-* [Windows 계정에 등록](sign-up.md)
+* [Windows 계정 등록](sign-up.md)
