@@ -35,13 +35,16 @@
   "notification_subscribers": [
     "v-mikmat@microsoft.com"
   ],
+  "sync_notification_subscribers": [],
   "branches_to_filter": [
     "live",
     "master"
   ],
-  "git_repository_url_open_to_public_contributors": "",
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/windows-uwp.ko-kr",
+  "git_repository_branch_open_to_public_contributors": "live",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
+  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -65,6 +68,7 @@
       }
     }
   ],
+  "branch_target_mapping": {},
   "need_generate_pdf_url_template": false,
   "targets": {
     "Pdf": {
