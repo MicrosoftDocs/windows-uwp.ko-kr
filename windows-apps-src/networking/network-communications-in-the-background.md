@@ -1,5 +1,5 @@
 ---
-description: 네트워크 통신을 계속하려면 백그라운드가 아닌 상태에서 앱이 백그라운드 작업을 사용하고 소켓 브로커나 컨트롤 채널 트리거를 사용할 수 있습니다.
+description: 백그라운드가 아닌 상태에서 네트워크 통신을 계속하기 위해 앱에서 백그라운드 작업과 소켓 브로커 또는 컨트롤 채널 트리거를 사용할 수 있습니다.
 title: 백그라운드 네트워크 통신
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
 ms.date: 06/14/2018
@@ -7,26 +7,26 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b0246e338c13027f8afc8da4aa919faa0911b39c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66371619"
 ---
 # <a name="network-communications-in-the-background"></a>백그라운드 네트워크 통신
-포그라운드에 없을 때 네트워크 통신을 계속 하려면 앱 백그라운드 작업 및 이러한 두 옵션 중 하나를 사용할 수 있습니다.
-- 소켓 브로커. 앱에서는 소켓 장기 연결에 대 한 다음 전경 떠날 때 경우에 시스템 소켓 브로커에 소켓의 소유권을 위임할 수 것. 그런 다음 broker: 소켓;에 트래픽이 도착 하는 경우 앱을 활성화 앱에 다시 소유권을 전송합니다. 앱에는 다음 도착 트래픽을 처리 합니다.
-- 컨트롤 채널 트리거입니다. 
+포그라운드에 없을 때 네트워크 통신을 계속하려면 앱 백그라운드 작업과 이러한 두 옵션 중 하나를 사용할 수 있습니다.
+- 소켓 브로커. 앱이 오랜 기간 연결하기 위해 소켓을 사용하는 경우 포그라운드를 벗어날 때 시스템 소켓 브로커에 소켓 소유권을 위임할 수 있습니다. 그런 다음 브로커는 트래픽이 소켓에 도착하면 앱을 활성화하고 소유권을 다시 앱으로 이전하며, 앱은 도착하는 트래픽을 처리합니다.
+- 컨트롤 채널 트리거. 
 
 ## <a name="performing-network-operations-in-background-tasks"></a>백그라운드 작업으로 네트워크 작업 수행
-- [SocketActivityTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.socketactivitytrigger)를 사용하여 패킷이 수신되고 지속 시간이 짧은 작업을 수행해야 하는 경우 백그라운드 작업을 활성화합니다. 작업을 수행한 후 전원을 절약 하기 위해 백그라운드 태스크가 종료 해야 합니다.
+- [SocketActivityTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.socketactivitytrigger)를 사용하여 패킷이 수신되고 지속 시간이 짧은 작업을 수행해야 하는 경우 백그라운드 작업을 활성화합니다. 작업을 수행한 후 전원을 절약하기 위해 백그라운드 작업을 종료해야 합니다.
 - [ControlChannelTrigger](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)를 사용하여 패킷이 수신되고 지속 시간이 긴 작업을 수행해야 하는 경우 백그라운드 작업을 활성화합니다.
 
 **네트워크 관련 조건 및 플래그**
 
 - 백그라운드 작업에 **InternetAvailable** 조건을 추가[BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)하여 네트워크 스택이 실행될 때까지 백그라운드 작업의 트리거를 지연시킵니다. 네트워크가 가동되어야 백그라운드 작업이 실행되기 때문에 이 조건을 적용하면 전원이 절약됩니다. 이 조건은 실시간 정품 인증을 제공하지 않습니다.
 
-어떤 트리거를 사용하든, 백그라운드 작업에 [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder)를 설정하여 백그라운드 작업이 실행되는 동안 네트워크 가동을 유지해야 합니다. 이렇게 하면 디바이스가 연결된 대기 상태 모드인 경우에도 작업 실행 중 네트워크를 계속 유지하도록 백그라운드 작업 인프라에 지시할 수 있습니다. 백그라운드 작업을 사용 하지 않는 경우 **IsNetworkRequested**, 백그라운드 작업 (예: 휴대폰의 화면 해제 된 경우) 연결 된 대기 모드에 있을 때 네트워크에 액세스할 수 없습니다.
+어떤 트리거를 사용하든, 백그라운드 작업에 [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder)를 설정하여 백그라운드 작업이 실행되는 동안 네트워크 가동을 유지해야 합니다. 이렇게 하면 디바이스가 연결된 대기 상태 모드인 경우에도 작업 실행 중 네트워크를 계속 유지하도록 백그라운드 작업 인프라에 지시할 수 있습니다. 백그라운드 작업에서 **IsNetworkRequested**를 사용하지 않으면 연결된 대기 상태 모드(예: 휴대폰 화면이 꺼져 있는 경우)에서 백그라운드 작업이 네트워크에 액세스할 수 없습니다.
 
 ## <a name="socket-broker-and-the-socketactivitytrigger"></a>소켓 브로커 및 SocketActivityTrigger
 앱에서 [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) 또는 [**StreamSocketListener**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener) 연결을 사용하는 경우 [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger) 및 소켓 브로커를 사용하여 앱이 포그라운드에 없을 때 앱에 대한 트래픽이 도착하면 알림을 받도록 해야 합니다.
@@ -150,14 +150,14 @@ case SocketActivityTriggerReason.SocketClosed:
   deferral.Complete();
 ```
 
-[  **SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger) 및 소켓 브로커 사용을 보여 주는 전체 샘플은 [SocketActivityStreamSocket 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620606)을 참조하세요. Scenario1에서 소켓의 초기화가 수행\_SocketActivityTask.cs Connect.xaml.cs, 및 백그라운드 작업 구현 중인 합니다.
+[  **SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger) 및 소켓 브로커 사용을 보여 주는 전체 샘플은 [SocketActivityStreamSocket 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620606)을 참조하세요. 소켓 초기화는 Scenario1\_Connect.xaml.cs에서 수행되며 백그라운드 작업 구현은 SocketActivityTask.cs에서 수행됩니다.
 
 이 항목에서 설명한 대로 작업을 수행하기 위해 샘플에서는 새 소켓을 만들거나 기존 소켓을 획득하자마자 **OnSuspending** 이벤트 처리기를 사용하는 대신 **TransferOwnership**을 호출합니다. 이는 샘플은 [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger)를 설명하는 데 중점을 두고 있으며 실행되는 동안 다른 활동에 대해 소켓을 사용하지 않기 때문입니다. 앱이 더 복잡해질 수 있으며 **OnSuspending**을 호출하는 시기를 결정할 때 **TransferOwnership**을 사용해야 합니다.
 
 ## <a name="control-channel-triggers"></a>컨트롤 채널 트리거
-먼저 CCT(컨트롤 채널 트리거)를 적절하게 사용하고 있는지 확인합니다. 사용 중인 경우 [ **DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket)하십시오 [ **StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket), 또는 [ **StreamSocketListener** ](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener) 연결, 그런 다음 사용할 것을 권장 [ **SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger)합니다. **StreamSocket**에 대해 CCT를 사용할 수 있지만 이러한 CCT는 더 많은 리소스를 사용하고 연결된 대기 상태 모드에서 작동하지 않을 수 있습니다.
+먼저 CCT(컨트롤 채널 트리거)를 적절하게 사용하고 있는지 확인합니다. [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) 또는 [**StreamSocketListener**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener) 연결을 사용하는 경우 [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger)를 사용하는 것이 좋습니다. **StreamSocket**에 대해 CCT를 사용할 수 있지만 이러한 CCT는 더 많은 리소스를 사용하고 연결된 대기 상태 모드에서 작동하지 않을 수 있습니다.
 
-Websocket을 사용 하는 경우 [ **IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)하십시오 [ **System.Net.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient), 또는 [  **Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient)를 사용 해야 합니다 [ **ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)합니다.
+WebSockets, [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2), [**System.Net.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 또는 [**Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient)를 사용하는 경우 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)를 사용해야 합니다.
 
 ## <a name="controlchanneltrigger-with-websockets"></a>ControlChannelTrigger와 WebSockets
 [  **MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket)을 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. **MessageWebSocket** 또는 **StreamWebSocket**을 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. 또한 이러한 고려 사항은 **StreamWebSocket**에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다. **MessageWebSocket**에서 패킷을 수신하는 요청은 영향을 받지 않습니다.
@@ -259,7 +259,7 @@ public void OnDataReadCompletion(uint bytesRead, DataReader readPacket)
 
 Websockets에 대한 추가 정보는 keep-alive 처리기입니다. WebSocket 프로토콜은 keep-alive 메시지에 대한 표준 모델을 정의합니다.
 
-[  **MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket)을 사용할 경우 [**WebSocketKeepAlive**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.WebSocketKeepAlive) 클래스 인스턴스를 KeepAliveTrigger에 대한 [**TaskEntryPoint**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.taskentrypoint)로 등록해야 앱이 일시 중단되지 않고 keep-alive 메시지를 주기적으로 서버(원격 끝점)에 전송할 수 있습니다. 이 작업은 패키지 매니페스트에서뿐 아니라 라운드 등록 앱 코드의 일부로도 수행해야 합니다.
+[**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket)을 사용할 경우 [**WebSocketKeepAlive**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.WebSocketKeepAlive) 클래스 인스턴스를 KeepAliveTrigger에 대한 [**TaskEntryPoint**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.taskentrypoint)로 등록해야 앱이 일시 중단되지 않고 keep-alive 메시지를 주기적으로 서버(원격 엔드포인트)에 전송할 수 있습니다. 이 작업은 패키지 매니페스트에서뿐 아니라 라운드 등록 앱 코드의 일부로도 수행해야 합니다.
 
 [  **Windows.Sockets.WebSocketKeepAlive**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.WebSocketKeepAlive)의 이 작업 진입점을 다음 두 곳에서 지정해야 합니다.
 
@@ -437,7 +437,7 @@ async Task<bool> RegisterWithCCTHelper(string serverUri)
 -   앱은 특정 URI로 요청을 보내기 전에 [System.Net.Http](https://go.microsoft.com/fwlink/p/?linkid=227894) 네임스페이스에서 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 또는 [HttpClientHandler](https://go.microsoft.com/fwlink/p/?linkid=241638) 개체에 여러 속성 및 헤더를 설정해야 합니다.
 -   앱은 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)와 함께 사용할 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 전송을 만들기 전에 초기 요청을 만들어 전송을 테스트하고 적절하게 설정해야 합니다. 앱에서 전송이 적절히 설정되었다고 판단하면 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체는 **ControlChannelTrigger**와 함께 사용할 전송 개체로 구성될 수 있습니다. 이 프로세스는 일부 시나리오에서 전송을 통해 설정된 연결이 끊어지는 것을 방지하기 위해 설계되었습니다. SSL 인증서를 사용할 경우, 또는 선택할 수 있는 인증서가 여러 개인 경우 PIN 입력에 사용할 대화 상자가 앱에 필요할 수 있습니다. 또한 프록시 인증 및 서버 인증이 필요할 수 있습니다. 프록시 또는 서버 인증이 만료되면 연결이 닫힙니다. 앱에서 이러한 인증 만료 문제를 처리할 수 있는 방법은 타이머를 설정하는 것입니다. HTTP 리디렉션이 필요한 경우에는 두 번째 연결을 안정적으로 설정할 수 있는지 여부가 확실치 않습니다. 초기 테스트 요청은 **ControlChannelTrigger** 개체와 함께 전송으로서 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체를 사용하기 전에 앱이 가장 최근에 리디렉션된 URL을 사용할 수 있음을 보장합니다.
 
-다른 네트워크 전송과 달리 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체는 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger) 개체의 [**UsingTransport**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.controlchanneltrigger.usingtransport) 메서드로 직접 전달할 수 없습니다. 대신 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체 및 **ControlChannelTrigger**와 함께 사용하기 위해 [HttpRequestMessage](https://go.microsoft.com/fwlink/p/?linkid=259153) 개체를 특별히 생성해야 합니다. [HttpRequestMessage](https://go.microsoft.com/fwlink/p/?linkid=259153) 개체는 [RtcRequestFactory.Create](https://go.microsoft.com/fwlink/p/?linkid=259154) 메서드를 사용하여 만듭니다. 그런 다음 만든 [HttpRequestMessage](https://go.microsoft.com/fwlink/p/?linkid=259153) 개체를 **UsingTransport** 메서드에 전달합니다.
+다른 네트워크 전송과 달리 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체는 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger) 개체의 [**UsingTransport**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.controlchanneltrigger.usingtransport) 메서드로 직접 전달할 수 없습니다. 대신 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체 및 **ControlChannelTrigger**와 함께 사용하기 위해 [HttpRequestMessage](https://go.microsoft.com/fwlink/p/?linkid=259153) 개체를 특별히 생성해야 합니다. [HttpRequestMessage](https://go.microsoft.com/fwlink/p/?linkid=259153) 개체는 [RtcRequestFactory.Create](https://go.microsoft.com/fwlink/p/?linkid=259154) 메서드를 사용하여 만듭니다. 그런 다음, 만든 [HttpRequestMessage](https://go.microsoft.com/fwlink/p/?linkid=259153) 개체를 **UsingTransport** 메서드에 전달합니다.
 
 다음 샘플에서는 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 개체 및 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)와 함께 사용할 [HttpRequestMessage](https://go.microsoft.com/fwlink/p/?linkid=259153) 개체를 생성하는 방법을 보여 줍니다.
 
