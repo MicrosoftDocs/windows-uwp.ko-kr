@@ -3,7 +3,7 @@ pm-contact: kisai
 design-contact: ksulliv
 dev-contact: Shmazlou
 doc-status: Published
-Description: 안쪽으로 살짝 밀어 명령 실행은 상황에 맞는 메뉴에 대 한 터치 가속기입니다.
+Description: 살짝 밀기 명령은 상황에 맞는 메뉴를 위한 터치 가속기입니다.
 title: 살짝 밀기
 label: Swipe
 template: detail.hbs
@@ -12,17 +12,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d575eb25d9a013aa999cf304db6d83faeb87765
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626658"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63774710"
 ---
 # <a name="swipe"></a>살짝 밀기
 
-살짝 밀기 명령은 사용자가 앱 내에서 상태를 변경하지 않고도 공통 메뉴 작업에 터치로 쉽게 액세스할 수 있게 해주는 컨텍스트 메뉴의 가속화 도구입니다.
+살짝 밀기 명령은 사용자가 앱 내에서 상태를 변경하지 않고도 공통 메뉴 작업에 터치로 쉽게 액세스할 수 있는 상황에 맞는 메뉴의 가속기입니다.
 
-> **중요 API**: [SwipeControl](/uwp/api/windows.ui.xaml.controls.swipecontrol)하십시오 [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem), [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView)
+> **중요 API**: [SwipeControl](/uwp/api/windows.ui.xaml.controls.swipecontrol), [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem), [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView)
 
 ![실행 및 표시등 테마](images/LightThemeSwipe.png)
 
@@ -33,14 +33,14 @@ ms.locfileid: "57626658"
 항목 그룹의 크기가 클 때는 살짝 밀기 명령을 사용해야 합니다. 각 항목에는 사용자가 정기적으로 수행하고 싶어하는 작업이 1 ~ 3개 포함되어 있습니다. 이러한 작업은 다음을 포함하지만 이에 국한되지 않습니다.
 
 - 삭제
-- 표시/보관
-- 저장/다운로드
+- 표시 또는 보관
+- 저장 또는 다운로드
 - 회신
 
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
@@ -59,7 +59,7 @@ ms.locfileid: "57626658"
 
 ## <a name="how-does-swipe-work"></a>살짝 밀기는 어떻게 작동합니까?
 
-UWP 안쪽으로 살짝 밀어 명령에 두 가지 모드가 있습니다. [표시할](/uwp/api/windows.ui.xaml.controls.swipemode) 하 고 [실행](/uwp/api/windows.ui.xaml.controls.swipemode)합니다. 살짝 밀기에는 위쪽, 아래쪽, 왼쪽, 오른쪽 등 4가지 방향이 지원됩니다.
+UWP 살짝 밀기 명령에는 두 가지 모드 즉, [표시](/uwp/api/windows.ui.xaml.controls.swipemode)와 [실행](/uwp/api/windows.ui.xaml.controls.swipemode)이 있습니다. 살짝 밀기는 또한 위쪽, 아래쪽, 왼쪽, 오른쪽 등 4가지 방향을 지원합니다.
 
 ### <a name="reveal-mode"></a>표시 모드
 
@@ -96,7 +96,7 @@ UWP 안쪽으로 살짝 밀어 명령에 두 가지 모드가 있습니다. [표
 살짝 밀기 명령에는 정의가 필요한 두 가지 요소가 포함되어 있습니다.
 
 - [SwipeControl](/uwp/api/windows.ui.xaml.controls.swipecontrol)은 콘텐츠를 중심으로 래핑을 수행합니다. ListView 같은 컬렉션의 경우, 이 요소는 DataTemplate 내에 있습니다.
-- 안쪽으로 살짝 밀어 메뉴 항목에는 하나 이상의 [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem) 개체 안쪽으로 살짝 밀어 컨트롤의 방향 컨테이너에 배치 합니다. [LeftItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.LeftItems)하십시오 [RightItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.RightItems)합니다 [TopItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.TopItems), 또는 [BottomItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.BottomItems)
+- 살짝 밀기 컨트롤의 방향 컨테이너에 배치된 하나 이상의 [ SwipeItem ](/uwp/api/windows.ui.xaml.controls.swipeitem) 개체인 살짝 밀기 메뉴 항목으로는 [LeftItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.LeftItems), [RightItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.RightItems), [TopItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.TopItems) 또는 [BottomItems](/uwp/api/windows.ui.xaml.controls.swipecontrol.BottomItems)가 있습니다.
 
 살짝 밀기 콘텐츠는 인라인으로 배치되거나 페이지 또는 앱의 리소스 섹션에 정의될 수 있습니다.
 
@@ -182,7 +182,7 @@ UWP 안쪽으로 살짝 밀어 명령에 두 가지 모드가 있습니다. [표
 
 ## <a name="handle-an-invoked-swipe-command"></a>호출된 살짝 밀기 명령을 처리
 
-살짝 밀기 명령에 대해 작업을 수행하려면 [호출](/uwp/api/windows.ui.xaml.controls.swipeitem.Invoked) 이벤트를 처리합니다. (는 방법에 대 한 자세한 정보에 대 한 사용자 명령 호출을 검토 합니다 _안쪽으로 살짝 밀어 작동 하는 방법?_ 이 문서 앞부분에 나오는 섹션입니다.) 일반적으로 ListView 또는 목록 같은 시나리오를 살짝 밀기 명령이입니다. 이 경우, 명령이 호출되면 살짝 민 항목에 대해 어떤 작업을 수행하고 싶을 것입니다.
+살짝 밀기 명령에 대해 작업을 수행하려면 [호출](/uwp/api/windows.ui.xaml.controls.swipeitem.Invoked) 이벤트를 처리합니다. (사용자가 명령을 호출하는 방법에 대한 자세한 내용은 이 문서 앞부분의 _살짝 밀기는 어떻게 작동합니까?_ 섹션을 검토하세요.) 일반적으로 살짝 밀기 명령은 ListView나 목록 스타일의 시나리오에 있습니다. 이 경우, 명령이 호출되면 살짝 민 항목에 대해 어떤 작업을 수행하고 싶을 것입니다.
 
 이전에 생성한 살짝 밀기 항목인 _삭제_에서 호출 이벤트를 처리하는 방법은 다음과 같습니다.
 

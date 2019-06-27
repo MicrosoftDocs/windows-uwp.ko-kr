@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: b561e08227664f723802ffc0ee3f0e16bc34a5cc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613928"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63810724"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>파일 및 폴더 열거 및 쿼리
 
@@ -25,24 +25,24 @@ ms.locfileid: "57613928"
 유니버설 Windows 플랫폼 앱의 데이터를 저장하는 방법에 대한 내용은 [ApplicationData](/uwp/api/windows.storage.applicationdata) 클래스를 참조하세요.
 
 > [!NOTE]
-> 전체 샘플을 참조 하세요. 합니다 [폴더 열거형 샘플](https://go.microsoft.com/fwlink/p/?linkid=619993)합니다.
+> 전체 샘플은 [폴더 열거 샘플](https://go.microsoft.com/fwlink/p/?linkid=619993)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
--   **유니버설 Windows 플랫폼 (UWP) 앱 용 비동기 프로그래밍 이해**
+-   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
-    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C + 비동기 앱을 작성 하는 방법을 알아보려면 + WinRT, 참조 [동시성 및 비동기 작업을 사용 하 여 C + + /cli WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)합니다. C + 비동기 앱을 작성 하는 방법을 알아보려면 + CX, 참조 [비동기 프로그래밍 C + + /cli CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)합니다.
+    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++/WinRT에서 비동기 앱을 작성하는 방법을 알아보려면 [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조하세요. C++/CX에서 비동기 앱을 작성하는 방법은 [C++/CX의 비동기 프로그래밍](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
 
--   **위치에 대 한 액세스 권한**
+-   **위치에 대한 액세스 권한**
 
     예를 들어 이 예제의 코드에서는 **picturesLibrary** 기능이 필요하지만 사용자 위치에는 다른 기능이 필요하거나 아무 기능도 필요하지 않을 수 있습니다. 자세한 내용은 [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
 ## <a name="enumerate-files-and-folders-in-a-location"></a>위치에 있는 파일 및 폴더 열거
 
 > [!NOTE]
-> 선언 해야 합니다 **picturesLibrary** 기능입니다.
+> **picturesLibrary** 기능을 선언해야 합니다.
 
-이 예제에서는 먼저 사용 합니다 [ **StorageFolder.GetFilesAsync** ](/uwp/api/windows.storage.storagefolder.getfilesasync) 의 루트 폴더에 있는 모든 파일을 가져오기 위한 메서드를 [ **KnownFolders.PicturesLibrary** ](/uwp/api/windows.storage.knownfolders.pictureslibrary) (하위 폴더)에 없는 및 각 파일의 이름을 나열 합니다. 다음을 사용 하 여는 [ **StorageFolder.GetFoldersAsync** ](/uwp/api/windows.storage.storagefolder.getfoldersasync) 모든 하위 폴더를 가져오기 위한 메서드를 **PicturesLibrary** 및 각 하위 폴더의 이름을 나열 합니다.
+이 예제에서는 먼저 [**StorageFolder.GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) 메서드를 사용하여 [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary)의 루트 폴더(하위 폴더가 아님)에 있는 모든 파일을 가져오고 각 파일의 이름을 나열합니다. 그런 다음, [**StorageFolder.GetFoldersAsync**](/uwp/api/windows.storage.storagefolder.getfoldersasync) 메서드를 사용하여 **PicturesLibrary**의 모든 하위 폴더를 가져오고 각 하위 폴더의 이름을 나열합니다.
 
 ```csharp
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
@@ -177,7 +177,7 @@ Next folder
 > [!NOTE]
 > C# 또는 Visual Basic에서 **await** 연산자를 사용하는 메서드의 메서드 선언에 **async** 키워드를 넣어야 합니다.
 
-사용할 수 있습니다 합니다 [ **StorageFolder.GetItemsAsync** ](/uwp/api/windows.storage.storagefolder.getitemsasync) 메서드를 특정 위치에서 모든 항목 (파일 및 하위 폴더)을 가져옵니다. 다음 예제에서는 합니다 **GetItemsAsync** 메서드를 모든 파일 및 하위 폴더의 루트 폴더에는 [ **KnownFolders.PicturesLibrary** ](/uwp/api/windows.storage.knownfolders.pictureslibrary) (하위 폴더)에 없음. 그런 다음 각 파일 및 하위 폴더의 이름을 나열합니다. 항목이 하위 폴더인 경우 이름에 `"folder"`를 추가합니다.
+또는 [**StorageFolder.GetItemsAsync**](/uwp/api/windows.storage.storagefolder.getitemsasync) 메서드를 사용하여 특정 위치에 있는 모든 항목(파일과 하위 폴더)을 가져올 수 있습니다. 다음 예제에서는 **GetItemsAsync** 메서드를 사용하여 [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary)의 루트 폴더(하위 폴더가 아님)에 있는 모든 파일과 하위 폴더를 가져옵니다. 그런 다음 각 파일 및 하위 폴더의 이름을 나열합니다. 항목이 하위 폴더인 경우 이름에 `"folder"`를 추가합니다.
 
 ```csharp
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
@@ -280,7 +280,7 @@ Next item
 
 ## <a name="query-files-in-a-location-and-enumerate-matching-files"></a>위치에 있는 파일 쿼리 및 일치하는 파일 열거
 
-이 예제에 있는 모든 파일에 대 한 쿼리를 [ **KnownFolders.PicturesLibrary** ](/uwp/api/windows.storage.knownfolders.pictureslibrary) 월 그룹화 및 하위 폴더에 예제에서는 재귀적 이번 합니다. 먼저 [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery)를 호출하고 [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery) 값을 메서드로 전달합니다. 그러면 [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult) 개체가 제공됩니다.
+다음 예제에서는 월별로 그룹화된 [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary)에서 모든 파일을 쿼리하고, 이번에는 하위 폴더를 재귀적으로 사용합니다. 먼저 [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery)를 호출하고 [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery) 값을 메서드로 전달합니다. 그러면 [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult) 개체가 제공됩니다.
 
 그런 다음 가상 폴더를 나타내는 [**StorageFolder**](/uwp/api/windows.storage.storagefolder) 개체를 반환하는 [**StorageFolderQueryResult.GetFoldersAsync**](/uwp/api/windows.storage.search.storagefolderqueryresult.getfoldersasync)를 호출합니다. 이 예제에서는 월별로 그룹화하므로 가상 폴더는 각각 같은 달의 파일 그룹을 나타냅니다.
 

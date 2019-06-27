@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f9dba57d8e75ba105a2154be5add5b101a4a6aa4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369329"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>음악, 사진 및 비디오 라이브러리의 파일 및 폴더
@@ -19,14 +19,14 @@ ms.locfileid: "66369329"
 
 라이브러리는 기본적으로 알려진 폴더와 사용자가 개발자의 앱 또는 기본 제공 앱 중 하나를 사용하여 라이브러리에 추가한 다른 폴더를 포함하는 가상 폴더 컬렉션입니다. 예를 들어 사진 라이브러리에는 기본적으로 알려진 사진 폴더가 포함되어 있습니다. 사용자는 개발자의 앱 또는 기본 제공 사진 앱을 사용하여 사진 라이브러리에서 폴더를 추가하거나 제거할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 
--   **유니버설 Windows 플랫폼 (UWP) 앱 용 비동기 프로그래밍 이해**
+-   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
     C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
 
--   **위치에 대 한 액세스 권한**
+-   **위치에 대한 액세스 권한**
 
     Visual Studio의 매니페스트 디자이너에서 앱 매니페스트 파일을 엽니다. **기능** 페이지에서 앱이 관리하는 라이브러리를 선택합니다.
 
@@ -173,7 +173,7 @@ private async void getSongs()
 
 카메라 롤과 저장된 사진 폴더는 심층 쿼리를 지원하지 않습니다.
 
-**데이터를 캡처는 앱에서 사진을 열기**
+**사진을 캡처한 앱으로 사진 열기**
 
 나중에 사용자가 사진을 캡처한 앱으로 사진을 다시 열 수 있도록 하려면 다음 예제와 비슷한 코드를 사용하여 사진의 메타데이터로 **CreatorAppId**을(를) 저장할 수 있습니다. 이 예제에서 **testPhoto**는 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)입니다.
 

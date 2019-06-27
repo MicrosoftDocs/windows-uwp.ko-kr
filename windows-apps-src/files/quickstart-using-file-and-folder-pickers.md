@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d45c907215f21977b0a59acede5a8314d6ed168
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369321"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>선택기를 사용하여 파일 및 폴더 열기
 
-**중요 한 Api**
+**중요 API**
 
 -   [**FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker)
 -   [**FolderPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FolderPicker)
@@ -24,16 +24,16 @@ ms.locfileid: "66369321"
 사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. [  **FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 및 [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 클래스를 사용하여 파일에 액세스하고 [**FolderPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FolderPicker) 클래스를 사용하여 폴더에 액세스할 수 있습니다.
 
 > [!NOTE]
-> 전체 샘플을 참조 하세요. 합니다 [파일 선택 샘플](https://go.microsoft.com/fwlink/p/?linkid=619994)합니다.
+> 전체 샘플에 대해서는 [파일 선택기 샘플](https://go.microsoft.com/fwlink/p/?linkid=619994)을 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 
--   **유니버설 Windows 플랫폼 (UWP) 앱 용 비동기 프로그래밍 이해**
+-   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
     C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
 
--   **위치에 대 한 액세스 권한**
+-   **위치에 대한 액세스 권한**
 
     [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
@@ -91,7 +91,7 @@ else
 
 파일 선택기 사용에는 파일 선택기 개체를 만들고 사용자 지정한 다음 사용자가 하나 이상의 항목을 선택할 수 있도록 파일 선택기를 표시하는 과정이 포함됩니다.
 
-1.  **만들기 및 FileOpenPicker를 사용자 지정**
+1.  **FileOpenPicker 만들기 및 사용자 지정**
 
     ```cs
     var picker = new Windows.Storage.Pickers.FileOpenPicker();
@@ -103,9 +103,9 @@ else
     ```
     사용자 및 앱과 관련된 파일 선택기 개체에서 속성을 설정합니다.
 
-    이 예제에서는 세 가지 속성을 설정 하 여 사용자를 선택할 수 있는 편리한 위치에 그림을 시각적으로 풍부한 표시를 만듭니다. [**ViewMode**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode)하십시오 [ **SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation), 및 [ **FileTypeFilter**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter)합니다.
+    이 예제에서는 세 가지 속성을 설정하여 사용자가 선택할 수 있는 편리한 위치에 사진의 풍부한 시각적 개체를 만듭니다. [**ViewMode**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode), [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation) 및 [**FileTypeFilter**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter).
 
-    -   설정 [ **ViewMode** ](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode) 하는 [ **PickerViewMode** ](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode) **축소판 그림** 열거형 값을 다양 하 고 만듭니다 파일 선택에서 파일을 나타내는 그림 미리 보기를 사용 하 여 시각적 개체 표시 합니다. 이렇게 하려면 사진이나 비디오와 같은 시각적 파일을 선택합니다. 그렇지 않으면 [**PickerViewMode.List**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode)를 사용합니다. **사진 또는 비디오 첨부** 및 **문서 첨부** 기능이 있는 가상 메일 앱은 파일 선택기를 표시하기 전에 기능에 적합한 **ViewMode**를 설정합니다.
+    -   [**ViewMode**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode)를 [**PickerViewMode**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode) **Thumbnail** 열거 값으로 설정하면 사진 미리 보기를 사용하여 파일 선택기에 파일을 표시함으로써 풍부한 시각적 개체가 만들어집니다. 이렇게 하려면 사진이나 비디오와 같은 시각적 파일을 선택합니다. 그렇지 않으면 [**PickerViewMode.List**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode)를 사용합니다. **사진 또는 비디오 첨부** 및 **문서 첨부** 기능이 있는 가상 메일 앱은 파일 선택기를 표시하기 전에 기능에 적합한 **ViewMode**를 설정합니다.
 
     -   [  **PickerLocationId.PicturesLibrary**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation)를 사용하여 [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerLocationId)을 사진으로 설정하면 사용자가 사진을 찾을 수 있을 것 같은 위치에서 시작됩니다. **SuggestedStartLocation**을 선택하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
 
@@ -113,7 +113,7 @@ else
 
 2.  **FileOpenPicker 표시**
 
-    - **단일 파일 선택**
+    - **단일 파일을 선택하려면**
 
         ```cs
         Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
@@ -128,7 +128,7 @@ else
         }
         ```
 
-    - **여러 파일 선택**  
+    - **여러 파일을 선택하려면**  
 
         ```cs
         var files = await picker.PickMultipleFilesAsync();

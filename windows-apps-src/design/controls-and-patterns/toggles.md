@@ -13,19 +13,19 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a23a7a7da9605c0ffb5a537c75d63e3f06705881
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625468"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63775136"
 ---
 # <a name="toggle-switches"></a>토글 스위치
 
-토글 스위치를 등을 끄거나 조명 스위치를 설정 하는 사용자를 허용 하는 실제 스위치를 나타냅니다. 토글 스위치 컨트롤을 사용하여 사용자에게 서로 배타적인 두 옵션(예: 켜짐/꺼짐)을 제공합니다. 이러한 옵션은 선택하는 즉시 결과가 제공됩니다.
+토글 스위치는 전등 스위치처럼 사용자가 켜거나 끌 수 있는 물리적 스위치를 나타냅니다. 토글 스위치 컨트롤을 사용하여 사용자에게 서로 배타적인 두 옵션(예: 켜짐/꺼짐)을 제공합니다. 이러한 옵션은 선택하는 즉시 결과가 제공됩니다.
 
 토글 스위치 컨트롤을 [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)를 사용합니다.
 
-> **중요 API**: [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)하십시오 [IsOn 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
+> **중요 API**: [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [IsOn 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -33,14 +33,14 @@ ms.locfileid: "57625468"
 
 ![WiFi 토글 스위치, 켜짐 및 꺼짐](images/toggleswitches01.png)
 
-토글 스위치를 장치의 물리적 전원 스위치에 비유할 수 있습니다. 장치에서 수행하는 작업을 설정하거나 해제하려고 할 때 토글 스위치를 켜고 끕니다.
+토글 스위치를 디바이스의 물리적 전원 스위치에 비유할 수 있습니다. 디바이스에서 수행하는 작업을 설정하거나 해제하려고 할 때 토글 스위치를 켜고 끕니다.
 
 토글 스위치를 쉽게 이해할 수 있게 스위치가 제어하는 기능을 설명하는 한두 단어(대개 명사)로 레이블을 붙입니다. "WiFi"나 "주방 등"을 예로 들 수 있습니다. 
 
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
@@ -61,13 +61,13 @@ ms.locfileid: "57625468"
 
     ![토글 스위치 및 확인란](images/toggleswitches02.png)
 
-    이 예에서는 토글 스위치를 사용하여 주방 등을 “켜짐"으로 설정합니다. 그러나 확인란을 사용하면 주방 등이 현재 켜져 있는지 또는 주방 등을 켜기 위해 확인란을 선택해야 하는지 여부를 판단해야 합니다.
+    이 예에서는 토글 스위치를 사용하여 주방 등을 "켜짐"으로 설정합니다. 그러나 확인란을 사용하면 주방 등이 현재 켜져 있는지 또는 주방 등을 켜기 위해 확인란을 선택해야 하는지 여부를 판단해야 합니다.
 
 - "있으면 좋은" 선택적 항목에는 확인란을 사용합니다.
 - 변경 사항을 적용하려면 추가 단계를 수행해야 하는 경우에는 확인란을 사용합니다. 예를 들어, 사용자가 '전송' 또는 '다음' 단추를 클릭하여 변경 사항을 적용해야 하는 경우에는 확인란을 사용합니다.
 - 사용자가 단일 설정이나 기능과 관련된 여러 항목을 선택할 수 있을 때 확인란을 사용합니다.
 
-## <a name="toggle-switches-in-the-windows-ui"></a>Windows UI에 설정/해제 스위치
+## <a name="toggle-switches-in-the-windows-ui"></a>Windows UI의 토글 스위치
 
 다음 이미지는 Windows UI에서 토글 스위치를 사용하는 방법을 보여 줍니다. 다음은 Smart Storage 설정 화면에서 토글 스위치를 사용하는 방법입니다.
 
@@ -177,5 +177,5 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 - [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)
 - [라디오 단추](radio-button.md)
-- [설정/해제 스위치](toggles.md)
+- [토글 스위치](toggles.md)
 - [확인란](checkbox.md)

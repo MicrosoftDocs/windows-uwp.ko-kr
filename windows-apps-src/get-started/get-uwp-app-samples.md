@@ -7,16 +7,16 @@ keywords: windows 10, uwp, 샘플 코드, 코드 샘플
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
 ms.openlocfilehash: 4cdf38a4bd77c4f6affb813c9e1de68463c43100
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598538"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63772266"
 ---
 # <a name="get-uwp-app-samples"></a>UWP 앱 샘플 다운로드
 
-UWP(유니버설 Windows 플랫폼) 앱 샘플은 GitHub 리포지토리를 통해 사용할 수 있습니다. [샘플](https://developer.microsoft.com/windows/samples "개발자 센터 샘플")에서 검색 가능한 분류된 목록을 확인하거나 모든 UWP 기능과 API 사용 패턴을 설명하는 샘플이 포함된 [Microsoft/Windows-universal-samples] 리포지토리(https://github.com/Microsoft/Windows-universal-samples "유니버설 Windows 플랫폼 앱 샘플 GitHub 리포지토리")를 찾아보세요.  
-![UWP GitHub 샘플 리포지토리](images/GitHubUWPSamplesPage.png)
+UWP(유니버설 Windows 플랫폼) 앱 샘플은 GitHub 리포지토리를 통해 사용할 수 있습니다. [샘플](https://developer.microsoft.com/windows/samples "개발자 센터 샘플")에서 검색 가능한 분류된 목록을 확인하거나 모든 UWP 기능과 API 사용 패턴을 설명하는 샘플이 포함된 [Microsoft/Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples "유니버설 Windows 플랫폼 앱 샘플 GitHub 리포지토리")를 찾아보세요.  
+![GitHub UWP 샘플 리포지토리](images/GitHubUWPSamplesPage.png)
 
 ## <a name="download-the-code"></a>코드 다운로드
 
@@ -45,7 +45,7 @@ zip 파일을 다운로드한 후 Visual Studio에서 샘플을 엽니다.
 
     ![언어 폴더](images/SamplesUnzip3.png)
 
-4.  C 용 CS 등을 사용 하려는 언어 선택\#, Visual Studio에서 열 수 있는 Visual Studio 솔루션 파일을 확인할 수 있습니다.
+4.  C\#용 CS 등 사용할 언어를 선택하면 Visual Studio에서 열 수 있는 Visual Studio 솔루션 파일이 표시됩니다.
 
     ![VS 솔루션](images/SamplesUnzip4.png)
 

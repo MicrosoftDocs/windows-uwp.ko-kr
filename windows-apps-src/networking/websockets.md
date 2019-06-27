@@ -1,5 +1,5 @@
 ---
-description: WebSockets는 HTTP(S)를 사용하고 UTF-8 및 이진 메시지를 둘 다 지원하여 웹을 통해 클라이언트와 서버 간의 신속하고 보안이 유지된 양방향 통신을 위한 메커니즘을 제공합니다.
+description: WebSocket은 HTTP(S)를 사용하고 UTF-8 및 이진 메시지를 모두 지원하는 웹을 통해 클라이언트와 서버 간의 빠르고 안전한 양방향 통신을 위한 메커니즘을 제공합니다.
 title: WebSocket
 ms.assetid: EAA9CB3E-6A3A-4C13-9636-CCD3DE46E7E2
 ms.date: 06/04/2018
@@ -7,27 +7,27 @@ ms.topic: article
 keywords: Windows 10, uwp, 네트워킹, websocket, messagewebsocket, streamwebsocket
 ms.localizationpriority: medium
 ms.openlocfilehash: 8af1f478bc466719eef3c5e19d055ac6073a0b11
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615418"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63777842"
 ---
 # <a name="websockets"></a>WebSocket
-WebSockets는 HTTP(S)를 사용하고 UTF-8 및 이진 메시지를 둘 다 지원하여 웹을 통해 클라이언트와 서버 간의 신속하고 보안이 유지된 양방향 통신을 위한 메커니즘을 제공합니다.
+WebSocket은 HTTP(S)를 사용하고 UTF-8 및 이진 메시지를 모두 지원하는 웹을 통해 클라이언트와 서버 간의 빠르고 안전한 양방향 통신을 위한 메커니즘을 제공합니다.
 
-[WebSocket 프로토콜](https://tools.ietf.org/html/rfc6455)에서는 데이터가 전이중 단일 소켓 연결을 통해 즉시 전송되므로 두 끝점에서 실시간으로 메시지를 보내고 받을 수 있습니다. WebSockets는 멀티 플레이어 게임(실시간 및 턴 기반 모두), 즉각적인 소셜 네트워크 알림, 주식 또는 날씨 정보의 최신 표시, 보안 및 고속 데이터 전송이 필요한 기타 앱에 적합합니다.
+[WebSocket 프로토콜](https://tools.ietf.org/html/rfc6455)에서는 데이터가 전이중 단일 소켓 연결을 통해 즉시 전송되므로 두 끝점에서 실시간으로 메시지를 보내고 받을 수 있습니다. WebSocket은 멀티 플레이어 게임(실시간 및 턴 기반 모두), 즉각적인 소셜 네트워크 알림, 주식 또는 날씨 정보의 최신 표시, 보안 및 고속 데이터 전송이 필요한 기타 앱에 적합합니다.
 
-WebSocket 연결을 설정하려면 특정 HTTP 기반 핸드셰이크가 클라이언트와 서버 간에 교환됩니다. 성공하면 응용 프로그램 계층 프로토콜은 이전에 설정한 TCP 연결을 사용하여 HTTP에서 WebSockets로 "업그레이드"됩니다. 이렇게 되면 HTTP는 완전히 제외됩니다. 데이터는 WebSocket 연결을 종료할 때까지 양 끝점에 의해 WebSocket 프로토콜을 사용하여 송수신될 수 있습니다.
+WebSocket 연결을 설정하기 위해 특정 HTTP 기반 핸드셰이크가 클라이언트와 서버 간에 교환됩니다. 성공하면 애플리케이션 계층 프로토콜이 이전에 설정된 TCP 연결을 사용하여 HTTP에서 WebSocket으로 "업그레이드"됩니다. 이렇게 되면 HTTP는 완전히 제외됩니다. 데이터는 WebSocket 연결을 종료할 때까지 양쪽 엔드포인트에서 WebSocket 프로토콜을 사용하여 보내거나 받을 수 있습니다.
 
-**참고** 서버가 WebSocket 프로토콜도 사용하지 않는 경우 클라이언트는 WebSockets를 사용하여 데이터를 전송할 수 없습니다. 서버가 WebSockets를 지원하지 않는 경우 데이터를 전송하는 다른 방법을 사용해야 합니다.
+**참고** 서버도 WebSocket 프로토콜을 사용하지 않으면, 클라이언트는 WebSocket을 사용하여 데이터를 전송할 수 없습니다. 서버가 WebSocket을 지원하지 않으면 다른 데이터 전송 방법을 사용해야 합니다.
 
-UWP(유니버설 Windows 플랫폼)는 WebSockets의 클라이언트 및 서버 사용에 대한 지원을 제공합니다. [  **Windows.Networking.Sockets**](/uwp/api/windows.networking.sockets) 네임스페이스는 [**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket) 및 [**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket) 클라이언트에서 사용할 수 있도록 두 가지 WebSocket 클래스를 정의합니다. 여기서는 이러한 두 WebSocket 클래스를 비교합니다.
+UWP(유니버설 Windows 플랫폼)는 WebSocket의 클라이언트 및 서버 사용을 모두 지원합니다. [**Windows.Networking.Sockets**](/uwp/api/windows.networking.sockets) 네임스페이스는 클라이언트&mdash;[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket) 및 [**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket)에서 사용할 두 가지 WebSocket 클래스를 정의합니다. 다음은 두 가지 WebSocket 클래스에 대한 비교입니다.
 
 | [MessageWebSocket](/uwp/api/windows.networking.sockets.messagewebsocket) | [StreamWebSocket](/uwp/api/windows.networking.sockets.streamwebsocket) |
 | - | - |
-| 전체 WebSocket 메시지는 단일 작업에서 읽고 써집니다. | 각 읽기 작업으로 메시지의 섹션을 읽을 수 있습니다. |
-| 메시지가 매우 크지 않은 경우에 적합합니다. | 사진이나 동영상 등 매우 큰 파일이 전송되는 경우에 적합합니다. |
+| 전체 WebSocket 메시지는 단일 작업으로 읽거나 씁니다. | 메시지 섹션은 각 읽기 작업으로 읽을 수 있습니다. |
+| 메시지가 너무 크지 않은 경우에 적합합니다. | 대용량 파일(예: 사진 또는 동영상)을 전송할 때 적합합니다. |
 | UTF-8 메시지와 바이너리 메시지를 모두 지원합니다. | 바이너리 메시지만 지원합니다. |
 | [UDP 또는 데이터그램 소켓](sockets.md#build-a-basic-udp-socket-client-and-server)과 유사하지만(잦은 작은 메시지용인 면에서) TCP의 안정성, 패킷 순서 보장 및 정체 제어를 지원합니다. | [TCP 또는 스트림 소켓](sockets.md#build-a-basic-tcp-socket-client-and-server)과 유사합니다. |
 
@@ -67,9 +67,9 @@ IAsyncAction OnNavigatedTo(NavigationEventArgs /* e */)
 ```
 
 ## <a name="use-messagewebsocket-to-connect"></a>MessageWebSocket을 사용하여 연결
-[**MessageWebSocket** ](/uwp/api/windows.networking.sockets.messagewebsocket) 단일 작업에서 읽거나 쓴 되도록 전체 WebSocket 메시지를 허용 합니다. 따라서 메시지가 매우 크지 않은 경우에 적합합니다. 클래스는 UTF-8 메시지와 이진 메시지를 모두 지원합니다.
+[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket)을 사용하여 전체 WebSocket 메시지를 단일 작업으로 읽고 쓸 수 있습니다. 따라서 메시지가 매우 크지 않은 경우에 적합합니다. 클래스는 UTF-8 메시지와 이진 메시지를 모두 지원합니다.
 
-아래의 예제 코드는 전송된 모든 메시지를 보낸 사람에게 다시 전달하기만 하는 서비스인 WebSocket.org 에코 서버를 사용합니다.
+아래의 예제 코드는 전송된 모든 메시지를 보낸 사람에게 다시 전달하기만 하는 서비스인&mdash;WebSocket.org 에코 서버를 사용합니다.
 
 ```csharp
 private Windows.Networking.Sockets.MessageWebSocket messageWebSocket;
@@ -300,12 +300,12 @@ private:
 ### <a name="send-data-on-a-messagewebsocket"></a>MessageWebSocket에서 데이터 보내기
 연결이 설정되면 서버에 데이터를 보낼 수 있습니다. 데이터를 쓰기 위해 [**MessageWebSocket.OutputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream) 속성과 [**DataWriter**](/uwp/api/windows.storage.streams.datawriter)를 사용하여 이 작업을 수행할 수 있습니다. 
 
-**참고****DataWriter**는 출력 스트림의 소유권을 갖습니다. **DataWriter**가 범위 이외에 있을 때 출력 스트림이 연결되어 있으면 **DataWriter**는 출력 스트림의 할당을 취소합니다. 그 이후 출력 스트림을 사용하려는 시도가 HRESULT 값 0x80000013과 함께 실패합니다. 하지만 [**DataWriter.DetachStream**](/uwp/api/windows.storage.streams.datawriter.DetachStream)을 호출하여 **DataWriter**에서 출력 스트림을 분리하고 스트림의 소유권을 **MessageWebSocket**으로 반환할 수 있습니다.
+**참고** **DataWriter**는 출력 스트림의 소유권을 갖습니다. **DataWriter**가 범위 이외에 있을 때 출력 스트림이 연결되어 있으면 **DataWriter**는 출력 스트림의 할당을 취소합니다. 그 이후 출력 스트림을 사용하려는 시도가 HRESULT 값 0x80000013과 함께 실패합니다. 하지만 [**DataWriter.DetachStream**](/uwp/api/windows.storage.streams.datawriter.DetachStream)을 호출하여 **DataWriter**에서 출력 스트림을 분리하고 스트림의 소유권을 **MessageWebSocket**으로 반환할 수 있습니다.
 
 ## <a name="use-streamwebsocket-to-connect"></a>StreamWebSocket을 사용하여 연결
-[**StreamWebSocket** ](/uwp/api/windows.networking.sockets.streamwebsocket) 각 읽기 작업을 사용 하 여 읽을 메시지의 섹션 수 있습니다. 따라서 사진이나 동영상 등 매우 큰 파일이 전송되는 경우에 적합합니다. 클래스는 이진 메시지만 지원합니다.
+[**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket)을 사용하여 각 읽기 작업으로 메시지의 섹션을 읽을 수 있습니다. 따라서 사진이나 동영상 등 매우 큰 파일이 전송되는 경우에 적합합니다. 클래스는 이진 메시지만 지원합니다.
 
-아래의 예제 코드는 전송된 모든 메시지를 보낸 사람에게 다시 전달하기만 하는 서비스인 WebSocket.org 에코 서버를 사용합니다.
+아래의 예제 코드는 전송된 모든 메시지를 보낸 사람에게 다시 전달하기만 하는 서비스인&mdash;WebSocket.org 에코 서버를 사용합니다.
 
 ```csharp
 private Windows.Networking.Sockets.StreamWebSocket streamWebSocket;
@@ -603,30 +603,30 @@ streamWebSocket->Control->NoDelay = false;
 auto connectTask = Concurrency::create_task(streamWebSocket->ConnectAsync(ref new Uri(L"wss://echo.websocket.org")));
 ```
 
-**참고****ConnectAsync**를 호출한 *후* 컨트롤 속성을 변경하려고 하지 마세요. 이 규칙의 유일한 예외는 [MessageWebSocketControl.MessageType](/uwp/api/windows.networking.sockets.messagewebsocketcontrol.MessageType)입니다.
+**참고** **ConnectAsync**를 호출한 *후* 컨트롤 속성을 변경하려고 하지 마세요. 이 규칙의 유일한 예외는 [MessageWebSocketControl.MessageType](/uwp/api/windows.networking.sockets.messagewebsocketcontrol.MessageType)입니다.
 
 ## <a name="websocket-information-classes"></a>WebSocket 정보 클래스
-[**MessageWebSocket** ](/uwp/api/windows.networking.sockets.messagewebsocket) 하 고 [ **StreamWebSocket** ](/uwp/api/windows.networking.sockets.streamwebsocket) 각 개체에 대 한 추가 정보를 제공 하는 해당 클래스에 있습니다.
+[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket) 및 [**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket) 각각에는 개체에 대한 추가 정보를 제공하는 해당 클래스가 있습니다.
 
-[**MessageWebSocketInformation** ](/uwp/api/windows.networking.sockets.messagewebsocketinformation) 정보를 제공는 **MessageWebSocket**를 사용 하 여 해당 인스턴스를 검색 하 고는 [ **MessageWebSocket.Information** ](/uwp/api/windows.networking.sockets.messagewebsocket.Information) 속성입니다.
+[**MessageWebSocketInformation**](/uwp/api/windows.networking.sockets.messagewebsocketinformation)은 **MessageWebSocket**에 대한 정보를 제공하며, [**MessageWebSocket.Information**](/uwp/api/windows.networking.sockets.messagewebsocket.Information) 속성을 사용하여 이 인스턴스를 검색합니다.
 
-[**StreamWebSocketInformation** ](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation) 정보를 제공는 **StreamWebSocket**를 사용 하 여 해당 인스턴스를 검색 하 고는 [ **StreamWebSocket.Information** ](/uwp/api/Windows.Networking.Sockets.StreamWebSocket.Information) 속성입니다.
+[**StreamWebSocketInformation**](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation)은 **StreamWebSocket**에 대한 정보를 제공하며, [**StreamWebSocket.Information**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket.Information) 속성을 사용하여 이 인스턴스를 검색합니다.
 
 이 정보 클래스의 속성은 읽기 전용이지만 이를 사용하여 웹 소켓 개체의 수명 동안 언제든지 정보를 검색할 수 있습니다.
 
-## <a name="handling-exceptions"></a>처리 예외
+## <a name="handling-exceptions"></a>예외 처리
 [  **MessageWebSocket**](/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는 [**StreamWebSocket**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 작업에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. 이 **HRESULT** 값을 [**WebSocketError.GetStatus**](/uwp/api/windows.networking.sockets.websocketerror.getstatus) 메서드로 전달하여 [**WebErrorStatus**](/uwp/api/Windows.Web.WebErrorStatus) 열거형 값으로 변환할 수 있습니다.
 
 대부분의 **WebErrorStatus** 열거형 값은 기본 HTTP 클라이언트 작업에서 반환한 오류에 해당합니다. 앱은 특정 **WebErrorStatus** 열거형 값을 켜 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
-매개 변수 유효성 검사 오류의 경우 예외에서 **HRESULT**를 사용하여 오류에 대한 더 자세한 정보를 알 수 있습니다. 가능한 **HRESULT** 값은 `Winerror.h`에 나열되며, SDK 설치에서 확인할 수 있습니다(예를 들어 `C:\Program Files (x86)\Windows Kits\10\Include\<VERSION>\shared` 폴더에서). 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E_INVALIDARG**입니다.
+매개 변수 유효성 검사 오류의 경우 예외에서 **HRESULT**를 사용하여 오류에 대한 자세한 정보를 얻을 수 있습니다. 가능한 **HRESULT** 값은 `Winerror.h`에 나열되며, SDK 설치에서 확인할 수 있습니다(예를 들어 `C:\Program Files (x86)\Windows Kits\10\Include\<VERSION>\shared` 폴더에서). 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E_INVALIDARG**입니다.
 
 ## <a name="setting-timeouts-on-websocket-operations"></a>WebSocket 작업에 대한 시간 제한 설정
-**MessageWebSocket** 및 **StreamWebSocket**은 내부 시스템 서비스를 사용하여 WebSocket 클라이언트 요청을 보내고 서버에서 응답을 받습니다. WebSocket 연결 작업에 사용되는 기본 시간 제한 값은 60초입니다. WebSockets를 지원하는 HTTP 서버가 WebSocket 연결 요청에 응답하지 않거나 응답할 수 없는 경우(일시적 중단 또는 네트워크 중단으로 차단됨) 내부 시스템 서비스는 기본 60초 간 대기한 후 오류를 반환합니다. 해당 오류는 WebSocket **ConnectAsync** 메서드에 예외를 발생시킵니다. WebSocket 연결이 설정된 후 전송 및 수신 작업에 대해 기본 시간 제한은 30초입니다.
+**MessageWebSocket** 및 **StreamWebSocket**은 내부 시스템 서비스를 사용하여 WebSocket 클라이언트 요청을 보내고 서버에서 응답을 받습니다. WebSocket 연결 작업에 사용되는 기본 시간 제한 값은 60초입니다. WebSocket을 지원하는 HTTP 서버가 WebSocket 연결 요청에 응답하지 않거나 응답할 수 없는 경우(일시적 중단 또는 네트워크 중단으로 차단됨) 내부 시스템 서비스는 기본 60초 간 대기한 후 오류를 반환합니다. 해당 오류는 WebSocket **ConnectAsync** 메서드에 예외를 발생시킵니다. WebSocket 연결이 설정된 후 전송 및 수신 작업에 대해 기본 시간 제한은 30초입니다.
 
 URI의 HTTP 서버 이름에 대한 이름 쿼리에서 이름의 IP 주소를 여러 개 반환하는 경우 내부 시스템 서비스는 각각 실패하기까지 기본 시간 제한 60초를 사용하여 사이트에 대해 최대 5개의 IP 주소를 시도합니다. 따라서 앱은 예외를 처리하기 전에 여러 IP 주소에 연결하기 위해 시도하는 것을 몇 분 정도 기다릴 수 있습니다. 이 동작은 사용자에게 앱 작동이 중지된 것처럼 보일 수 있습니다. 
 
-앱의 응답성을 높이고 이러한 문제를 최소화하기 위해 연결 요청에 더 짧은 시간 제한을 설정할 수 있습니다. **MessageWebSocket** and **StreamWebSocket**둘 다에 대해 유사한 방식으로 시간 제한을 설정합니다.
+앱의 응답성을 높이고 이러한 문제를 최소화하기 위해 연결 요청에 더 짧은 시간 제한을 설정할 수 있습니다. **MessageWebSocket** 및 **StreamWebSocket** 둘 다에 유사한 방식으로 시간 제한을 설정합니다.
 
 ```csharp
 private Windows.Networking.Sockets.MessageWebSocket messageWebSocket;
@@ -806,7 +806,7 @@ protected:
 
 ## <a name="important-apis"></a>중요 API
 * [DataReader](/uwp/api/Windows.Storage.Streams.DataReader)
-* [Datawriter 여부](/uwp/api/Windows.Storage.Streams.DataWriter)
+* [DataWriter](/uwp/api/Windows.Storage.Streams.DataWriter)
 * [DataWriter.DetachStream](/uwp/api/windows.storage.streams.datawriter.DetachStream)
 * [MessageWebSocket](/uwp/api/windows.networking.sockets.messagewebsocket)
 * [MessageWebSocket.Closed](/uwp/api/Windows.Networking.Sockets.MessageWebSocket.Closed)

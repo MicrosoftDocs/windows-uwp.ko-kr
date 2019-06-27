@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: d0ea274b2c185664685de4c8ce2972d41531bd88
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.openlocfilehash: b83a4f5da233b5015dce1af0d709c8f76d0aff85
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57661458"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63780552"
 ---
-# <a name="add-whats-new-content-here"></a>여기에 새 콘텐츠 란를 추가 합니다.
+# <a name="add-whats-new-content-here"></a>여기에 새 콘텐츠를 추가합니다.

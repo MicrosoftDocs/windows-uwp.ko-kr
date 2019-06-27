@@ -6,11 +6,11 @@ ms.date: 02/05/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 421fb7c973c1aaa4e9e1924548d7f11439fd5350
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632868"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63780311"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>2018년 2월 Windows 개발자 문서의 새로운 내용
 
@@ -25,7 +25,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 적응형 및 대화형 알림으로 앱을 개선합니다. [업데이트된 알림 메시지에 대한 지침](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)으로 시작하고, 이미지 크기 제한, 진행률 표시줄, 그리고 입력 옵션 추가에 대한 새로운 정보를 살펴보세요.
 
-[사용자 지정 타임스탬프](../design/shell/tiles-and-notifications/custom-timestamps-on-toasts.md), [사용자 지정 오디오](../design/shell/tiles-and-notifications/custom-audio-on-toasts.md), 또는 [진행률 표시줄](../design/shell/tiles-and-notifications/toast-progress-bar.md)을 사용하여 알림 메시지를 사용자 지정합니다.
+[사용자 지정 타임스탬프](../design/shell/tiles-and-notifications/custom-timestamps-on-toasts.md), [사용자 지정 오디오](../design/shell/tiles-and-notifications/custom-audio-on-toasts.md) 또는 [진행률 표시줄](../design/shell/tiles-and-notifications/toast-progress-bar.md)을 사용하여 알림 메시지를 사용자 지정합니다.
 
 [알림 미러링](../design/shell/tiles-and-notifications/notification-mirroring.md) 및 [유니버설 해제](../design/shell/tiles-and-notifications/universal-dismiss.md)를 사용하여 사용자의 디바이스로 알림을 확장합니다.
 
@@ -35,7 +35,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ### <a name="page-layouts-with-xaml"></a>XAML을 사용하는 페이지 레이아웃
 
-[XAML 페이지 레이아웃](../design/layout/layouts-with-xaml.md) 문서가 유연한 레이아웃 및 시각적 상태에 대한 새로운 정보로 업데이트되었습니다. 이러한 새로운 기능을 사용하며 귀하의 앱의 여러 요소의 위치를 지정하는 방법과 사용 가능한 시각적 공간에 맞추는 방법에 대해 보다 더 잘 제어할 수 있습니다.
+[XAML 페이지 레이아웃](../design/layout/layouts-with-xaml.md) 문서가 유연한 레이아웃 및 시각적 상태에 대한 새로운 정보로 업데이트되었습니다. 이러한 새로운 기능을 사용하여 귀하의 앱의 여러 요소의 위치를 지정하는 방법과 사용 가능한 시각적 공간에 맞추는 방법에 대해 보다 더 잘 제어할 수 있습니다.
 
 ![XAML 페이지 레이아웃의 여백 및 안쪽 여백](../design/layout/images/xaml-layout-margins-padding.png)
 
@@ -47,7 +47,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ### <a name="design-basics"></a>디자인 기본 사항
 
-[UWP 앱 디자인 소개](../design/basics/design-and-ui-intro.md)가 새로운 시각적 예시들로 향상되었습니다. 모든 UWP의 유니버설 디자인 기능 개요가 이제 Fluent 디자인 시스템의 기능을 실행하는 방법 강조합니다.
+[UWP 앱 디자인 소개](../design/basics/design-and-ui-intro.md)가 새로운 시각적 예시들로 향상되었습니다. 모든 UWP의 유니버설 디자인 기능 개요가 이제 Fluent 디자인 시스템의 기능을 실행하는 방법을 강조 표시합니다.
 
 앱에서 여러 유형의 콘텐츠를 표시하는 방법에 대한 여러 예시를 제공하는 [콘텐츠 디자인 기본 사항](../design/basics/content-basics.md)에 일반적인 페이지 패턴에 대한 소개가 추가되었습니다.
 
@@ -59,13 +59,13 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ### <a name="getting-started-for-game-development"></a>게임 개발 시작
 
-Windows 10 게임 개발에 흥미가 있으신가요? 새로운 [게임 개발 시작](../gaming/getting-started.md) 페이지는 앱과 게임을 스스로 설정 및 등록하고 제출하기 위해 수행해야 할 작업에 대한 전체 개요를 제공 합니다.
+Windows 10 게임 개발에 흥미가 있으신가요? 새로운 [게임 개발 시작](../gaming/getting-started.md) 페이지는 앱과 게임을 스스로 설정 및 등록하고 제출하기 위해 수행해야 할 작업에 대한 전체 개요를 제공합니다.
 
 ## <a name="videos"></a>비디오
 
 ### <a name="xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램
 
-Xbox Live 크리에이터스 프로그램을 사용하면 개발자는 UWP 게임을 신속하게 Xbox One 및 Windows 10에 게시할 수 있습니다. [이 동영상을 시청](https://www.youtube.com/watch?v=zpFfHHBkVq4)하여 프로그램에 대해 학습한 다음 [이 페이지를 확인](https://www.xbox.com/developers/creators-program)하여 시작합니다.
+Xbox Live 크리에이터스 프로그램을 사용하면 개발자는 UWP 게임을 신속하게 Xbox One 및 Windows 10에 게시할 수 있습니다. [이 동영상을 시청](https://www.youtube.com/watch?v=zpFfHHBkVq4)하여 프로그램에 대해 학습한 다음, [이 페이지를 확인](https://www.xbox.com/developers/creators-program)하여 시작합니다.
 
 ### <a name="creating-3d-app-launchers-for-windows-mixed-reality"></a>Windows Mixed Reality용 3D 앱 시작 관리자 만들기
 
@@ -73,4 +73,4 @@ Xbox Live 크리에이터스 프로그램을 사용하면 개발자는 UWP 게�
 
 ### <a name="motion-controller-tracking"></a>모션 컨트롤러 추적
 
-모션 컨트롤러는 Windows Mixed Reality에서 사용자의 손을 나타냅니다. [동영상을 시청](https://www.youtube.com/watch?v=rkDpRllbLII)하여 Mixed Reality 헤드셋의 보기 필드 안과 밖에서 모션 컨트롤러가 어떻게 작동하는지 알아보고 [여기에서 컨트롤러 추적에 대해 자세한 내용을 읽어보십시오.](https://developer.microsoft.com/windows/mixed-reality/motion_controllers#controller_tracking_state%E2%80%9D)
+모션 컨트롤러는 Windows Mixed Reality에서 사용자의 손을 나타냅니다. [동영상을 시청](https://www.youtube.com/watch?v=rkDpRllbLII)하여 Mixed Reality 헤드셋의 보기 필드 안과 밖에서 모션 컨트롤러가 어떻게 작동하는지 알아보고 [여기에서 컨트롤러 추적에 대해 자세한 내용을 읽어보세요.](https://developer.microsoft.com/windows/mixed-reality/motion_controllers#controller_tracking_state%E2%80%9D)

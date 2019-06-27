@@ -1,21 +1,21 @@
 ---
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: 파일 속성 가져오기
-description: 속성 가져오기 &\#8212; 최상위 수준, 기본 및 확장 &\#8212;는 StorageFile 나타낸 파일에 대 한 개체입니다.
+description: StorageFile 개체로 표시되는 파일의 최상위, 기본 및 확장 속성을 가져옵니다.
 ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 01eda8eefea7e1b3b1102ef154a019e1630e80c2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369312"
 ---
 # <a name="get-file-properties"></a>파일 속성 가져오기
 
-**중요 한 Api**
+**중요 API**
 
 -   [**StorageFile.GetBasicPropertiesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getbasicpropertiesasync)
 -   [**StorageFile.Properties**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.properties)
@@ -24,15 +24,15 @@ ms.locfileid: "66369312"
 [  **StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체로 표시되는 파일의 최상위, 기본 및 확장 속성을 가져옵니다.
 
 > [!NOTE]
-> 전체 샘플을 참조 하세요. 합니다 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)합니다.
+> 전체 샘플에 대해서는 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)을 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
--   **유니버설 Windows 플랫폼 (UWP) 앱 용 비동기 프로그래밍 이해**
+-   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
     C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
 
--   **위치에 대 한 액세스 권한**
+-   **위치에 대한 액세스 권한**
 
     예를 들어 이 예제의 코드에서는 **picturesLibrary** 기능이 필요하지만 사용자 위치에는 다른 기능이 필요하거나 아무 기능도 필요하지 않을 수 있습니다. 자세한 내용은 [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
@@ -88,7 +88,7 @@ foreach (Windows.Storage.StorageFile file in files)
 
 ## <a name="getting-a-files-extended-properties"></a>파일의 확장 속성 가져오기
 
-최상위 및 기본 파일 속성 외에도 파일의 내용과 연결된 많은 속성이 있습니다. 이러한 확장 속성은 [**BasicProperties.RetrievePropertiesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.basicproperties.retrievepropertiesasync) 메서드를 호출하여 액세스합니다. (A [ **BasicProperties** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileProperties.BasicProperties) 호출 하 여 개체를 가져올 합니다 [ **StorageFile.Properties** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.properties) 속성입니다.) 최상위 및 기본 파일 속성에는 클래스의 속성으로 액세스할 수 있습니다 —[**StorageFile** ](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 하 고 **BasicProperties**각각-확장된 속성은 전달 하 여 얻은 [IEnumerable](https://go.microsoft.com/fwlink/p/?LinkID=313091) 컬렉션인 [문자열](https://go.microsoft.com/fwlink/p/?LinkID=325032) 개체를 검색할 수 있는 속성의 이름을 나타내는  **BasicProperties.RetrievePropertiesAsync** 메서드. 그러면 이 메서드에서 [IDictionary](https://go.microsoft.com/fwlink/p/?LinkId=325238) 컬렉션을 반환합니다. 그러면 컬렉션에서 이름 또는 인덱스로 각 확장 속성을 검색합니다.
+최상위 및 기본 파일 속성 외에도 파일의 내용과 연결된 많은 속성이 있습니다. 이러한 확장 속성은 [**BasicProperties.RetrievePropertiesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.basicproperties.retrievepropertiesasync) 메서드를 호출하여 액세스합니다. ([**BasicProperties**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileProperties.BasicProperties) 개체는 [**StorageFile.Properties**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.properties) 속성을 호출하여 가져옵니다.) 최상위 및 기본 파일 속성은 각각 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 및 **BasicProperties** 클래스의 속성으로 액세스할 수 있지만 확장 속성은 검색할 속성의 이름을 나타내는 [String](https://go.microsoft.com/fwlink/p/?LinkID=325032) 개체의 [IEnumerable](https://go.microsoft.com/fwlink/p/?LinkID=313091) 컬렉션을 **BasicProperties.RetrievePropertiesAsync** 메서드로 전달하여 가져옵니다. 그러면 이 메서드에서 [IDictionary](https://go.microsoft.com/fwlink/p/?LinkId=325238) 컬렉션을 반환합니다. 그러면 컬렉션에서 이름 또는 인덱스로 각 확장 속성을 검색합니다.
 
 다음 예제에서는 사진 라이브러리의 모든 파일을 열거하고 [List](https://go.microsoft.com/fwlink/p/?LinkID=325246) 개체에서 원하는 속성(**DataAccessed** 및 **FileOwner**)의 이름을 지정한 다음 해당 [List](https://go.microsoft.com/fwlink/p/?LinkID=325246) 개체를 [**BasicProperties.RetrievePropertiesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.basicproperties.retrievepropertiesasync)에 전달하여 해당 속성을 검색하고 반환된 [IDictionary](https://go.microsoft.com/fwlink/p/?LinkId=325238) 개체에서 이름으로 해당 속성을 검색합니다.
 
