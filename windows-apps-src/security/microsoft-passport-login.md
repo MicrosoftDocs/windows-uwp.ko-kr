@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 72b7f168c9f4e812b1cfb459ebea91f61a988122
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 24ae3fb7442ac955b5edf4127dfdf66176c81a43
+ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371300"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399627"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Windows Hello 로그인 앱 만들기
 
@@ -224,10 +224,14 @@ ms.locfileid: "66371300"
     }
     ```
 
--   계정을 처리할 방법이 필요합니다. 이 실습 연습에 대한 서버나 데이터베이스가 없으므로 사용자 목록을 로컬로 저장하고 로드합니다. Utils 폴더를 마우스 오른쪽 단추로 클릭하고 "AccountHelper.cs"라는 새 클래스를 추가합니다. 클래스 정의를 public static으로 변경합니다. AccountHelper는 계정 목록을 로컬로 저장하고 로드하는 데 필요한 모든 메서드를 포함하는 정적 클래스입니다. 저장 및 로드는 XmlSerializer를 사용하여 수행됩니다. 또한 저장한 파일과 위치를 기억해야 합니다. 추가 네임스페이스를 참조해야 합니다.
+-   계정을 처리할 방법이 필요합니다. 이 실습 연습에 대한 서버나 데이터베이스가 없으므로 사용자 목록을 로컬로 저장하고 로드합니다. Utils 폴더를 마우스 오른쪽 단추로 클릭하고 "AccountHelper.cs"라는 새 클래스를 추가합니다. 클래스 정의를 public static으로 변경합니다. AccountHelper는 계정 목록을 로컬로 저장하고 로드하는 데 필요한 모든 메서드를 포함하는 정적 클래스입니다. 저장 및 로드는 XmlSerializer를 사용하여 수행됩니다. 또한 저장한 파일과 위치를 기억해야 합니다.
     
     ```cs
+    using System;
+    using System.Collections.Generic;
     using System.IO;
+    using System.Text;
+    using System.Threading.Tasks;
     using System.Xml.Serialization;
     using Windows.Storage;
     using PassportLogin.Models;
