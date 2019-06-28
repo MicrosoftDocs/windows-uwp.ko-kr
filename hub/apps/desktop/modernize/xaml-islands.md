@@ -8,18 +8,18 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 62dc89b9e17f1ae9c2394629100e0bd54606594b
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: e6074202a05c80a9dc759cdf81b2c20c7cc17d07
+ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215121"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414093"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱 (XAML 제도)에서 호스트 UWP XAML 컨트롤
 
 Windows 10 버전 1903부터 UWP 컨트롤 이라는 기능을 사용 하 여 비 UWP 데스크톱 응용 프로그램에서 호스트할 수 있습니다 *XAML 제도*합니다. 이 기능을 사용 하면 모양, 느낌 및 UWP 컨트롤을 통해 이용할 수 있는 최신 Windows 10 UI 기능을 사용 하 여 기존 데스크톱 응용 프로그램의 기능을 향상 시킬 수 있습니다. 즉, 같은 UWP 기능을 사용할 수 [Windows 잉크](/windows/uwp/design/input/pen-and-stylus-interactions) 지 원하는 컨트롤 및 합니다 [Fluent Design System](/windows/uwp/design/fluent-design-system/index) 에 기존 wpf에서 Windows Forms, 및 C++ Win32 응용 프로그램입니다.
 
-Windows Forms, wpf에서 XAML 제도 사용 하는 여러 방법을 제공 하 고 C++ 기술 이나 사용할 프레임 워크에 따라 Win32 응용 프로그램입니다.
+Windows Forms, wpf에서 XAML 제도 사용 하는 여러 방법을 제공 하 고 C++ 기술 이나 사용할 프레임 워크에 따라 Win32 응용 프로그램입니다. 
 
 > [!NOTE]
 > XAML 아일랜드에 대 한 의견이 있는 경우에서 새 문제를 작성 합니다 [Microsoft.Toolkit.Win32 리포지토리](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/issues) 두고 의견 있습니다. 개인적으로 피드백을 제출 하려는 경우에 보낼 수 있습니다를 XamlIslandsFeedback@microsoft.com입니다. Insights 및 시나리오에는 우리에 게 매우 중요 합니다.
@@ -35,7 +35,7 @@ Windows 10, 버전 1903, 시작에서는 두 가지 방법으로 Windows Forms, 
 > [!NOTE]
 > C++Win32 데스크톱 응용 프로그램 호스트 UWP 컨트롤에 호스팅 API는 UWP XAML을 사용 해야 합니다. Windows 커뮤니티 도구 키트의 XAML 섬 컨트롤을 사용할 수 없는 C++ Win32 데스크톱 응용 프로그램입니다.
 
-WPF 및 Windows Forms 응용 프로그램에 대 한 Windows 커뮤니티 도구 키트에서 제공 하는 XAML 섬 컨트롤의 두 가지가: *래핑된 컨트롤* 하 고 *컨트롤을 호스팅할*합니다.
+WPF 및 Windows Forms 응용 프로그램에 대 한 Windows 커뮤니티 도구 키트에서 제공 하는 XAML 섬 컨트롤의 두 가지가: *래핑된 컨트롤* 하 고 *컨트롤을 호스팅할*합니다. 
 
 ### <a name="wrapped-controls"></a>래핑된 컨트롤
 
@@ -67,14 +67,6 @@ XAML 아일랜드에 대 한 래핑된 컨트롤 외에도 Windows 커뮤니티 
 ![호스트 컨트롤 아키텍처](images/xaml-islands/host-controls.png)
 
 이 다이어그램 맨 아래에 표시되는 API는 Windows SDK와 함께 제공됩니다. 래핑된 컨트롤 및 호스트 컨트롤 Windows 커뮤니티 도구 키트에서 Nuget 패키지를 통해 사용할 수 있습니다.
-
-## <a name="feature-roadmap"></a>기능 로드맵
-
-Windows 10 버전 1903, 버전부터 래핑된 컨트롤과 Windows 커뮤니티 도구 키트에서 호스트 컨트롤은 아직 개발자 미리 보기 컨트롤의 버전 1.0 릴리스에 제공 될 때까지입니다.
-
-* 버전 1.0의.NET Framework 4.6.2에 대 한 컨트롤 및 나중에 출시 될 예정인 합니다 [도구 키트의 6.0 릴리스에](https://github.com/windows-toolkit/WindowsCommunityToolkit/milestones)합니다.
-* 버전 1.0의.NET Core 3에 대 한 컨트롤 도구 키트의 후속 릴리스에서 계획 되어 있습니다.
-* .NET Framework 및.NET Core 3에 대 한 이러한 컨트롤의 버전 1.0 릴리스의 최신 미리 보기를 시도 하려는 경우 참조를 **6.0.0-preview3** NuGet 패키지를 [UWP 커뮤니티 도구 키트](https://dotnet.myget.org/gallery/uwpcommunitytoolkit) 갤러리입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -112,8 +104,19 @@ Windows 10, 버전 1903 SDK (또는 이후 릴리스)를 설치 합니다. 그�
     </assembly>
     ```
 
+## <a name="feature-roadmap"></a>기능 로드맵
+
+Windows 10 버전 1903, 버전부터 래핑된 컨트롤과 Windows 커뮤니티 도구 키트에서 호스트 컨트롤은 아직 개발자 미리 보기 컨트롤의 버전 1.0 릴리스에 제공 될 때까지입니다.
+
+* 버전 1.0의.NET Framework 4.6.2에 대 한 컨트롤 및 나중에 출시 될 예정인 합니다 [도구 키트의 6.0 릴리스에](https://github.com/windows-toolkit/WindowsCommunityToolkit/milestones)합니다.
+* 버전 1.0의.NET Core 3에 대 한 컨트롤 도구 키트의 후속 릴리스에서 계획 되어 있습니다.
+* .NET Framework 및.NET Core 3에 대 한 이러한 컨트롤의 버전 1.0 릴리스의 최신 미리 보기를 시도 하려는 경우 참조를 **6.0.0-preview3** NuGet 패키지를 [UWP 커뮤니티 도구 키트](https://dotnet.myget.org/gallery/uwpcommunitytoolkit) 갤러리입니다.
+
+자세한 내용은 참조 하세요. [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2019/06/13/xaml-islands-v1-updates-and-roadmap)합니다.
+
 ## <a name="additional-resources"></a>추가 자료
 
 자세한 배경 정보 및 XAML 제도 사용 하 여에 대 한 자습서를 보려면 다음 문서 및 리소스를 참조 하세요.
 
-* [XAML 제도 랩](https://github.com/Microsoft/Windows-AppConsult-XAMLIslandsLab/tree/microsoftlearn)합니다. 이 포괄적인 랩 UWP 컨트롤 기존 WPF 기간 업무 응용 프로그램에 추가할 Windows 커뮤니티 도구 키트에서 래핑된 컨트롤 및 호스트 컨트롤을 사용 하기 위한 단계별 지침을 제공 합니다. 이 환경에는 [전체 WPF 응용 프로그램에 대 한 코드](https://github.com/Microsoft/Windows-AppConsult-XAMLIslandsLab/tree/microsoftlearn/Lab) 뿐만 [상세 지침](https://github.com/Microsoft/Windows-AppConsult-XAMLIslandsLab/blob/microsoftlearn/Manual/README.md) 프로세스의 각 단계에 대 한 합니다.
+* [WPF 앱 자습서를 현대화](modernize-wpf-tutorial.md): 이 자습서는 기존 WPF 기간 업무 응용 프로그램을 UWP 컨트롤을 추가 하려면 Windows 커뮤니티 도구 키트에서 래핑된 컨트롤 및 호스트 컨트롤을 사용 하기 위한 단계별 지침을 제공 합니다. 이 자습서는 프로세스에 WPF 응용 프로그램에 대 한 전체 코드와 각 단계에 대 한 자세한 지침을 포함합니다.
+* [XAML 제도 v1-업데이트 및 로드맵](https://blogs.windows.com/windowsdeveloper/2019/06/13/xaml-islands-v1-updates-and-roadmap): 이 블로그 게시물 XAML 아일랜드에 대 한 일반적인 여러 질문에 설명 하 고 자세한 개발 로드맵을 제공 합니다.

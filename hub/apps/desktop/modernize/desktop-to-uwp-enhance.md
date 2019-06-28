@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 4846a29e914ffed15e4c3dea938cc51cefd566e0
-ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
+ms.openlocfilehash: 0545ea525b96d3a9310f3a761fd60a644f21baeb
+ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67131942"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414076"
 ---
 # <a name="call-uwp-apis-in-desktop-apps"></a>데스크톱 앱에서 UWP Api를 호출 합니다.
 
@@ -29,20 +29,46 @@ ms.locfileid: "67131942"
 
 ### <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Windows 런타임 Api를 사용 하도록.NET 프로젝트를 수정 합니다.
 
+가지.NET 프로젝트에 대 한 두 가지 옵션이 있습니다.
+
+* 앱에서 Windows 10 버전 1803 이상이 대상으로 하는 경우에 필요한 모든 참조를 제공 하는 NuGet 패키지를 설치할 수 있습니다.
+* 또는 수동으로 참조를 추가할 수 있습니다.
+
+#### <a name="to-use-the-nuget-option"></a>NuGet 옵션을 사용 하려면
+
+1. 했는지 [패키지 참조](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) 활성화 됩니다.
+
+    1. Visual Studio에서 클릭 **도구-> NuGet 패키지 관리자-> 패키지 관리자 설정**합니다.
+    2. 했는지 **PackageReference** 에 대해 선택 되었는지 **기본 패키지 관리 형식**합니다.
+
+2. Visual Studio에서 열려 있는 프로젝트에서 프로젝트를 마우스 오른쪽 단추로 클릭 **솔루션 탐색기** 선택한 **NuGet 패키지 관리**합니다.
+
+3. 에 **NuGet 패키지 관리자** 창에서를 **찾아보기** 탭을 검색할 `Microsoft.Windows.SDK.Contracts`.
+
+4. 후는 `Microsoft.Windows.SDK.Contracts` 의 오른쪽 창에서 패키지를 찾은 합니다 **NuGet 패키지 관리자** 창 선택 합니다 **버전** 를 설치 하려면 대상으로 하려는 Windows 10의 버전에 따라 패키지의:
+
+    * **10.0.18362.xxxx-preview**: Windows 10의 버전이 1903 경우이 선택 합니다.
+    * **10.0.17763.xxxx-preview**: Windows 10, 버전 1809이를 선택 합니다.
+    * **10.0.17134.xxxx-preview**: Windows 10, 버전 1803이를 선택 합니다.
+
+5. **설치**를 클릭합니다.
+
+#### <a name="to-add-the-required-references-manually"></a>필요한 참조를 수동으로 추가 하려면
+
 1. **참조 관리자** 대화 상자를 연 후, **찾아보기**와 **모든 파일**을 차례대로 선택합니다.
 
     ![참조 대화 상자 추가](images/desktop-to-uwp/browse-references.png)
 
 2. 이러한 파일에 대 한 참조를 추가 합니다.
 
-  |파일|위치|
-  |--|--|
-  |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-  |System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-  |System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-  |windows.winmd|C:\Program Files (x86)\Windows Kits\10\UnionMetadata\\<*sdk version*>\Facade|
-  |Windows.Foundation.UniversalApiContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\\<*sdk version*>\Windows.Foundation.UniversalApiContract\<*version*>|
-  |Windows.Foundation.FoundationContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\\<*sdk version*>\Windows.Foundation.FoundationContract\<*version*>|
+    |파일|위치|
+    |--|--|
+    |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
+    |System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
+    |System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
+    |windows.winmd|C:\Program Files (x86)\Windows Kits\10\UnionMetadata\\<*sdk version*>\Facade|
+    |Windows.Foundation.UniversalApiContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\\<*sdk version*>\Windows.Foundation.UniversalApiContract\<*version*>|
+    |Windows.Foundation.FoundationContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\\<*sdk version*>\Windows.Foundation.FoundationContract\<*version*>|
 
 3. **속성** 창에서 각 *.winmd* 파일의 **로컬 복사** 필드를 **False**로 설정합니다.
 
