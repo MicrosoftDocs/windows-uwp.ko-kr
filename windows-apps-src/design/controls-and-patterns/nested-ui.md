@@ -12,10 +12,10 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: aa672c99dc83e7955c4d4f91b5bc34620c48ed01
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364547"
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
@@ -37,7 +37,7 @@ ms.locfileid: "66364547"
 
 ![중첩된 UI 부분](images/nested-ui-example-1.png)
 
-> 참고&nbsp;&nbsp; ListView 및 GridView 모두 [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
+> 참고&nbsp;&nbsp; ListView와 GridView는 모두 [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
 
 ## <a name="primary-and-secondary-actions"></a>기본 및 보조 작업
 
@@ -109,7 +109,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 
 ![중첩된 UI 부분](images/nested-ui-navigation.png)
 
-**Gamepad**
+**게임 패드**
 
 게임 패드에서 입력하는 경우 다음 사용자 환경을 제공합니다.
 
@@ -167,7 +167,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 
 목록 항목에서 작업을 수행하지 않는 경우 이 지침을 사용하여 게임 패드 또는 키보드로 탐색을 처리하는 것이 좋습니다.
 
-**Gamepad**
+**게임 패드**
 
 게임 패드에서 입력하는 경우 다음 사용자 환경을 제공합니다.
 
@@ -186,7 +186,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 - 중첩된 UI 항목 중 하나에서 Tab 키를 누르면 탭 순서에 따라 중첩된 UI 항목 사이를 이동합니다.  중첩된 UI 항목 사이를 모두 이동한 후에는 탭 순서상 ListView 다음인 컨트롤로 포커스가 이동합니다.
 - Shift+Tab을 누르면 탭 동작이 반대 방향으로 수행됩니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 예제에서는 [목록 항목이 작업을 수행하는 중첩된 UI](#nested-ui-where-list-items-perform-an-action)를 구현하는 방법을 보여 줍니다.
 
