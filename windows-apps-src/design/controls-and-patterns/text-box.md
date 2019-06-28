@@ -12,10 +12,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 2db08cc577a82ddf6973cb33e41f9bdb39fdffde
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364229"
 ---
 # <a name="text-box"></a>입력란
@@ -32,7 +32,7 @@ TextBox에는 텍스트 입력을 간소화할 수 있는 다양한 기능이 �
 
 TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상태여야 합니다. 텍스트를 편집할 수 없는 경우 [TextBlock](text-block.md)을 대신 사용하는 것이 좋습니다.
 
-[PasswordBox](password-box.md) 컨트롤을 사용하여 암호 또는 주민 등록 번호 등의 기타 개인 데이터를 수집합니다. 암호 상자는 텍스트 입력란처럼 보이지만 입력된 텍스트 대신 글머리 기호를 렌더링합니다.
+[PasswordBox](password-box.md) 컨트롤을 사용하여 암호 또는 주민 등록 번호 등의 기타 프라이빗 데이터를 수집합니다. 암호 상자는 텍스트 입력란처럼 보이지만 입력된 텍스트 대신 글머리 기호를 렌더링합니다.
 
 사용자가 검색어를 입력할 수 있게 하거나 입력 시 선택할 제안 목록을 사용자에게 표시하려면 [AutoSuggestBox](auto-suggest-box.md)를 사용합니다.
 
@@ -43,11 +43,11 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/TextBox">앱을 열고 작동 중인 TextBox를 확인</a>합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/TextBox">앱을 열고 TextBox의 기능을 확인</a>합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -83,7 +83,7 @@ rootGrid.Children.Add(textBox);
 
 입력란을 사용하여 양식의 데이터 입력을 수락하고 [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) 속성을 사용하여 입력란에서 전체 텍스트 문자열을 가져오는 것이 일반적입니다. 일반적으로 제출 단추 클릭과 같은 이벤트를 사용하여 Text 속성에 액세스하지만, 텍스트가 변경될 때 특정 작업을 수행해야 하는 경우 [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 또는 [TextChanging](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanging) 이벤트를 처리할 수 있습니다.
 
-이 예제에서는 가져오기 및 입력란의 현재 콘텐츠를 설정 하는 방법을 보여 줍니다.
+이 예제에서는 텍스트 상자의 현재 콘텐츠를 가져오고 설정하는 방법을 보여 줍니다.
 
 ```xaml
 <TextBox name="SampleTextBox" Text="Sample Text"/>
@@ -111,7 +111,7 @@ SampleTextBox.Text = "Sample text retrieved";
 - **AcceptsReturn**이 **true**인 경우
 - **TextWrap**에 **NoWrap** 이외의 값이 있는 경우
 
-이 예제에서는 가져오기 및 입력란의 현재 콘텐츠를 설정 하는 방법을 보여 줍니다.
+이 예제에서는 텍스트 상자의 현재 콘텐츠를 가져오고 설정하는 방법을 보여 줍니다.
 
 ```xaml
 <TextBox name="SampleTextBox" Text="Sample Text"/>
@@ -138,8 +138,8 @@ IsEnabled
 
 입력란에서 여러 줄에 텍스트를 표시할지 여부를 제어하는 데 사용할 수 있는 두 개의 속성이 있습니다. 일반적으로 여러 줄 입력란을 만들려면 두 속성을 모두 설정합니다.
 
-- 입력란에서 줄 바꿈 또는 리턴 문자를 허용하고 표시할 수 있게 하려면 [AcceptsReturn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.acceptsreturn) 속성을 **true**로 설정합니다.
-- 텍스트 줄 바꿈을 사용하도록 설정하려면 [TextWrapping](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textwrapping) 속성을 **Wrap**으로 설정합니다. 이렇게 하면 줄 구분 기호에 관계없이 입력란의 가장자리에 도달하면 텍스트가 줄 바꿈됩니다.
+- 텍스트 상자에서 줄 바꿈 또는 리턴 문자를 허용하고 표시할 수 있게 하려면 [AcceptsReturn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.acceptsreturn) 속성을 **true**로 설정합니다.
+- 텍스트 배치를 사용하려면 [TextWrapping](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textwrapping) 속성을 **Wrap**으로 설정합니다. 이렇게 하면 줄 구분 기호에 관계없이 입력란의 가장자리에 도달하면 텍스트가 줄 바꿈됩니다.
 
 > **참고**&nbsp;&nbsp;TextBox와 RichEditBox는 해당 TextWrapping 속성에 대해 **WrapWholeWords** 값을 지원하지 않습니다. TextBox.TextWrapping 또는 RichEditBox.TextWrapping 값으로 WrapWholeWords를 사용하려고 하면 잘못된 인수 예외가 발생합니다.
 
@@ -207,7 +207,7 @@ rootGrid.Children.Add(textBox);
 
 기본적으로 입력란의 상황에 맞는 메뉴에 표시되는 명령은 입력란의 상태에 따라 달라집니다. 예를 들어 입력란을 편집할 수 있는 경우 다음 명령이 표시될 수 있습니다.
 
-Command | 표시되는 경우
+명령 | 표시되는 경우
 ------- | -------------
 복사 | 텍스트를 선택한 경우
 잘라내기 | 텍스트를 선택한 경우
@@ -259,7 +259,7 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 
 예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 **Number**로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다.
 
-> **중요**&nbsp;&nbsp;입력 범위는 입력 유효성 검사가 수행되지 않으며 사용자가 하드웨어 키보드 또는 다른 입력 디바이스를 사용해서 입력을 제공하지 못하도록 방지하지 않습니다. 따라서 필요에 따라 입력 코드에 대한 유효성을 검사해야 합니다.
+> **중요**&nbsp;&nbsp;입력 범위에서는 입력 유효성 검사가 수행되지 않으며, 사용자가 하드웨어 키보드 또는 다른 입력 디바이스를 사용해서 입력할 수 있습니다. 따라서 필요에 따라 입력 코드에 대한 유효성을 검사해야 합니다.
 
 터치 키보드에 영향을 주는 다른 속성은 [IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.isspellcheckenabled), [IsTextPredictionEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled) 및 [PreventKeyboardDisplayOnProgrammaticFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus)입니다. 하드웨어 키보드를 사용하는 경우 IsSpellCheckEnabled는 TextBox에도 영향을 줍니다.
 
@@ -309,14 +309,14 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 
 - [텍스트 컨트롤](text-controls.md)
-- [맞춤법 검사에 대 한 지침](text-controls.md)
+- [맞춤법 검사에 대한 지침](text-controls.md)
 - [검색 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
-- [텍스트 입력에 대 한 지침](text-controls.md)
+- [텍스트 입력에 대한 지침](text-controls.md)
 - [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+- [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

@@ -1,5 +1,5 @@
 ---
-Description: ListView 및 GridView 컨트롤을 사용 하 여 표시 하 고 이미지 갤러리에서 일련의 전자 메일 메시지 등의 데이터 집합을 조작 합니다.
+Description: ListView 및 GridView 컨트롤을 사용하여 이미지 갤러리 또는 메일 메시지 세트와 같은 데이터 세트를 표시하고 조작합니다.
 title: 목록 보기 및 그리드 보기
 label: List view and grid view
 template: detail.hbs
@@ -13,17 +13,17 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1664da65beed21dededb481aadd56f793af20f01
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364682"
 ---
 # <a name="list-view-and-grid-view"></a>목록 보기 및 그리드 보기
 
 대부분의 응용 프로그램은 이미지 갤러리, 메일 메시지 집합 등과 같은 데이터 집합을 조작하고 표시합니다. XAML UI 프레임워크는 앱에 데이터를 쉽게 표시하고 조작할 수 있도록 하는 ListView 및 GridView 컨트롤을 제공합니다.  
 
-> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)하십시오 [GridView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview)를 [ItemsSource 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [속성 항목](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items)
+> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [GridView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [ItemsSource 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [Items 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items)
 
 ListView 및 GridView 모두 ListViewBase 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 ListView에 대해 논의할 때 다른 언급이 없는 한, 해당 정보가 ListView 및 GridView 컨트롤 둘 다에 적용됩니다. ListView 또는 ListViewItem과 같은 클래스를 참조할 수 있지만 그리드와 관련된 동일한 항목에 대해 "List" 접두사 "Grid"로 바꿀 수 있습니다(GridView 또는 GridViewItem). 
 
@@ -42,11 +42,11 @@ GridView는 세로로 스크롤할 수 있는 행과 열로 항목 컬렉션을 
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 작동 중인 <a href="xamlcontrolsgallery:/item/ListView">ListView</a> 또는 <a href="xamlcontrolsgallery:/item/GridView">GridView</a>을 확인합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 <a href="xamlcontrolsgallery:/item/ListView">ListView</a> 또는 <a href="xamlcontrolsgallery:/item/GridView">GridView</a>의 기능을 확인합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -61,7 +61,7 @@ GridView는 세로로 스크롤할 수 있는 행과 열로 항목 컬렉션을 
 
 **중요**&nbsp;&nbsp;Items 또는 ItemsSource를 사용하여 목록을 채울 수 있지만 두 속성을 동시에 사용할 수는 없습니다. ItemsSource 속성을 설정하고 항목을 XAML에 추가하는 경우 추가된 항목이 무시됩니다. ItemsSource 속성을 설정하고 코드에서 항목을 Items 컬렉션에 추가하는 경우 예외가 발생합니다.
 
-> **참고**&nbsp;&nbsp;이 문서의 많은 예제는 간편성을 위해 **Items** 컬렉션을 직접 채웁니다. 그러나 온라인 데이터베이스의 책 목록처럼 목록의 항목을 동적 원본에서 가져오는 것이 더 일반적입니다. 이를 위해 **ItemsSource** 속성을 사용합니다. 
+> **참고**&nbsp;&nbsp;이 문서의 많은 예제는 간편하도록 **Items** 컬렉션을 직접 채웁니다. 그러나 온라인 데이터베이스의 책 목록처럼 목록의 항목을 동적 원본에서 가져오는 것이 더 일반적입니다. 이를 위해 **ItemsSource** 속성을 사용합니다. 
 
 ### <a name="add-items-to-the-items-collection"></a>Items 컬렉션에 항목 추가
 
@@ -167,7 +167,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 이 예제에서는 데이터 항목이 간단한 문자열입니다. DataTemplate을 사용하여 문자열의 왼쪽에 이미지를 추가하고 문자열을 청록색으로 표시합니다.
 
-> **참고**&nbsp;&nbsp;DataTemplate에서 [x:Bind 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하는 경우 DataTemplate에서 DataType(`x:DataType`)을 지정해야 합니다.
+> **참고**&nbsp;&nbsp;DataTemplate에서 [x:Bind 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하는 경우 DataTemplate의 DataType(`x:DataType`)을 지정해야 합니다.
 
 **XAML**
 ```XAML
@@ -198,12 +198,12 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ![데이터 템플릿을 사용한 목록 보기 항목](images/listview-itemstemplate.png)
 
-데이터 템플릿은 목록 보기의 모양을 정의하는 기본적인 방법입니다. 목록에 많은 수의 항목이 표시되는 경우 데이터 템플릿이 성능에 큰 영향을 미칠 수도 있습니다. 이 문서에서는 대부분의 예제에 간단한 문자열 데이터를 사용하고 데이터 템플릿을 지정하지 않습니다. 데이터 템플릿 및 항목 컨테이너를 사용하여 목록이나 그리드의 항목 모양을 정의하는 방법에 대한 자세한 내용 및 예제를 보려면 [항목 컨테이너 및 템플릿](item-containers-templates.md)을 참조하세요. 
+데이터 템플릿은 목록 보기의 모양을 정의하는 기본적인 방법입니다. 목록에 많은 수의 항목이 표시되는 경우 데이터 템플릿이 성능에 큰 영향을 미칠 수도 있습니다. 이 문서에서는 대부분의 예제에 간단한 문자열 데이터를 사용하고 데이터 템플릿을 지정하지 않습니다. 데이터 템플릿 및 항목 컨테이너를 사용하여 목록이나 그리드의 항목 모양을 정의하는 방법에 대한 자세한 내용과 예제는 [항목 컨테이너 및 템플릿](item-containers-templates.md)을 참조하세요. 
 
 ## <a name="change-the-layout-of-items"></a>항목의 레이아웃 변경
 
 목록 보기 또는 그리드 보기에 항목을 추가하면 컨트롤이 항목 컨테이너의 각 항목을 자동으로 줄 바꿈한 후 모든 항목 컨테이너를 배치합니다. 이러한 항목 컨테이너가 배치되는 방식은 컨트롤의 [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel)에 따라 좌우됩니다.  
-- 기본적으로 **ListView**는 다음과 같은 세로 목록으로 생성하는 [ItemsStackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel)을 사용합니다.
+- 기본적으로 **ListView**는 다음과 같이 세로 목록을 생성하는 [ItemsStackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel)을 사용합니다.
 
 ![간단한 목록 보기](images/listview-simple.png)
 
@@ -215,14 +215,14 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 > 참고&nbsp;&nbsp;ItemsPanel를 변경하는 경우 가상화를 해제하지 않도록 주의합니다. **ItemsStackPanel** 및 **ItemsWrapGrid** 둘 다 가상화를 지원하므로 안전하게 사용할 수 있습니다. 다른 패널을 사용하는 경우 목록 보기의 성능이 느려질 수 있으므로 가상화를 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [성능](https://docs.microsoft.com/windows/uwp/debug-test-perf/performance-and-xaml-ui) 아래의 목록 보기 문서를 참조하세요. 
 
-이 예제에서는 **ItemsStackPanel**의 [Orientation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel.orientation) 속성을 변경하여 **ListView**에서 항목 컨테이너를 가로 목록으로 배치하는 방법을 보여 줍니다.
+이 예제에서는 **ItemsStackPanel**의 [Orientation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel.orientation) 속성을 변경하여 **ListView**의 항목 컨테이너를 가로 목록으로 레이아웃하는 방법을 보여 줍니다.
 목록 보기는 기본적으로 세로로 스크롤되므로 목록 보기의 내부 [ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer)에 대한 일부 속성을 조정하여 가로로 스크롤되도록 해야 합니다.
 - [ScrollViewer.HorizontalScrollMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode)를 **Enabled** 또는 **Auto**로
 - [ScrollViewer.HorizontalScrollBarVisibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollbarvisibility)를 **Auto**로 
 - [ScrollViewer.VerticalScrollMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollmode)를 **Disabled**로 
 - [ScrollViewer.VerticalScrollBarVisibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility)를 **Hidden**으로 
 
-> **참고**&nbsp;&nbsp;이러한 예제는 목록 보기 너비에 제약이 없이 표시되므로 가로 스크롤 막대는 표시되지 않습니다. 이 코드를 실행하는 경우 ListView에 대해 `Width="180"`을 설정하여 스크롤 막대가 표시되도록 할 수 있습니다.
+> **참고**&nbsp;&nbsp;이러한 예제는 목록 보기 너비의 제약 없이 표시되므로 가로 스크롤 막대가 표시되지 않습니다. 이 코드를 실행하는 경우 ListView에 대해 `Width="180"`을 설정하여 스크롤 막대가 표시되도록 할 수 있습니다.
 
 **XAML**
 ```xaml
@@ -284,19 +284,19 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 다양한 방법 중에서 목록 보기를 조작하는 방법을 선택할 수 있습니다. 기본적으로 사용자는 단일 항목을 선택할 수 있습니다. [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) 속성을 변경하여 다중 선택을 사용 가능하게 하거나 선택을 사용 불가능하게 할 수 있습니다. 항목을 선택하는 대신 항목을 클릭하여 작업(예: 단추)을 호출하도록 [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) 속성을 설정할 수 있습니다.
 
-> **참고**&nbsp;&nbsp;ListView 및 GridView 둘 다 SelectionMode 속성에 대해 [ListViewSelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewselectionmode) 열거형을 사용합니다. IsItemClickEnabled는 기본적으로 **False**이므로 클릭 모드를 사용 가능하게 설정하려는 경우에만 설정하면 됩니다.
+> **참고**&nbsp;&nbsp;ListView와 GridView는 둘 다 SelectionMode 속성에 대해 [ListViewSelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewselectionmode) 열거형을 사용합니다. IsItemClickEnabled는 기본적으로 **False**이므로 클릭 모드를 사용 가능하게 설정하려는 경우에만 설정하면 됩니다.
 
 다음 표에는 사용자가 목록 보기를 조작할 수 있는 방법과 이러한 사용자 조작에 반응할 수 있는 방법이 나와 있습니다.
 
 활성화할 조작 | 사용할 설정 | 처리할 이벤트 | 선택한 항목을 가져오기 위해 사용할 속성
 ----------------------------|---------------------|--------------------|--------------------------------------------
-조작 없음 | [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) = **None**, [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) = **False** | 해당 사항 없음 | 해당 사항 없음 
+조작 없음 | [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) = **None**, [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) = **False** | 해당 없음 | 해당 없음 
 단일 선택 | SelectionMode = **Single**, IsItemClickEnabled = **False** | [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) | [SelectedItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selecteditem), [SelectedIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedindex)  
 다중 선택 | SelectionMode = **Multiple**, IsItemClickEnabled = **False** | [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) | [SelectedItems](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selecteditems)  
 확장 선택 | SelectionMode = **Extended**, IsItemClickEnabled = **False** | [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) | [SelectedItems](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selecteditems)  
-클릭 | SelectionMode = **None**, IsItemClickEnabled = **True** | [ItemClick](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.itemclick) | 해당 사항 없음 
+그룹에 타일을 추가하려면 | SelectionMode = **None**, IsItemClickEnabled = **True** | [ItemClick](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.itemclick) | 해당 없음 
 
-> **참고**&nbsp;&nbsp;Windows 10부터 SelectionMode도 Single, Multiple 또는 Extended로 설정된 상태에서 IsItemClickEnabled를 사용하도록 설정하여 ItemClick 이벤트를 발생할 수 있습니다. 이렇게 하면 먼저 ItemClick 이벤트가 발생한 다음 SelectionChanged 이벤트가 발생합니다. ItemClick 이벤트 처리기에서 다른 페이지로 이동하는 경우와 같은 상황에서는 SelectionChanged 이벤트가 발생하지 않고 항목이 선택되지 않습니다.
+> **참고**&nbsp;&nbsp;Windows 10부터 SelectionMode도 Single, Multiple 또는 Extended로 설정된 상태에서 IsItemClickEnabled를 통해 ItemClick 이벤트를 발생시킬 수 있습니다. 이렇게 하면 먼저 ItemClick 이벤트가 발생한 다음 SelectionChanged 이벤트가 발생합니다. ItemClick 이벤트 처리기에서 다른 페이지로 이동하는 경우와 같은 상황에서는 SelectionChanged 이벤트가 발생하지 않고 항목이 선택되지 않습니다.
 
 아래와 같이 XAML 또는 코드에서 이러한 속성을 설정할 수 있습니다.
 
@@ -511,7 +511,7 @@ private void DeselectAllButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-선택한 항목의 모양을 변경하는 방법은 [항목 컨테이너 및 템플릿](item-containers-templates.md)을 참조하세요.
+선택한 항목의 모양을 변경하는 방법에 대한 자세한 내용은 [항목 컨테이너 및 템플릿](item-containers-templates.md)을 참조하세요.
 
 ### <a name="drag-and-drop"></a>끌어서 놓기
 
@@ -519,9 +519,9 @@ ListView 및 GridView 컨트롤은 컨트롤 내 항목의 끌어서 놓기를 �
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML ListView 및 GridView 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView) - ListView 및 GridView 컨트롤을 보여줍니다.
-- [XAML 끌어서 놓기 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlDragAndDrop) - ListView 컨트롤을 통한 끌어서 놓기를 보여줍니다.
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML ListView 및 GridView 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView) - ListView 및 GridView 컨트롤을 보여 줍니다.
+- [XAML 끌어서 놓기 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlDragAndDrop) - ListView 컨트롤을 통한 끌어서 놓기를 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 

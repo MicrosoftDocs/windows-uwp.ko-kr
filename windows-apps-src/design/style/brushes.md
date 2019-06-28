@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e5f8dfc780b50e70f92fc388a04258ce7be11a4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66366847"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a>브러시를 사용하여 배경, 전경 및 윤곽선 그리기
 
-[  **Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 개체를 사용하여 그릴 개체가 UI에 표시되도록 XAML 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그릴 수 있습니다. 사용 가능한 브러시와 이러한 브러시를 사용하는 방법을 살펴보겠습니다.
+[**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 개체를 사용하여 그릴 개체가 UI에 표시되도록 XAML 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그릴 수 있습니다. 사용 가능한 브러시와 이러한 브러시를 사용하는 방법을 살펴보겠습니다.
 
 > **중요 API**:  [Brush 클래스](/uwp/api/Windows.UI.Xaml.Media.Brush)
 
@@ -37,7 +37,7 @@ ms.locfileid: "66366847"
 
 ### <a name="predefined-color-names"></a>미리 정의된 색 이름
 
-[  **Yellow**](https://docs.microsoft.com/uwp/api/windows.ui.colors.yellow), [**Magenta**](https://docs.microsoft.com/uwp/api/windows.ui.colors.magenta) 등의 미리 정의된 색 이름을 사용할 수 있습니다. 이름이 지정된 256개 색을 사용할 수 있습니다. XAML 파서가 올바른 색 채널을 통해 색 이름을 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 구조로 변환합니다. 256 명명 된 색에 기반한 합니다 *X11* 웹 개발 경험이 있다면 연계 스타일 시트에서 Level 3 (CSS3) 사양에이 목록을 사용 하 여 이미 익숙할 수도 있습니다 있도록 색 이름 명명 된 색 또는 디자인 합니다.
+[  **Yellow**](https://docs.microsoft.com/uwp/api/windows.ui.colors.yellow), [**Magenta**](https://docs.microsoft.com/uwp/api/windows.ui.colors.magenta) 등의 미리 정의된 색 이름을 사용할 수 있습니다. 이름이 지정된 256개 색을 사용할 수 있습니다. XAML 파서가 올바른 색 채널을 통해 색 이름을 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 구조로 변환합니다. 이름이 지정된 256개 색은 CSS3(CSS 스타일시트, 수준 3) 사양의 *X11* 색 이름을 기반으로 하므로 이전에 웹 개발 또는 디자인 경험이 있는 경우 이름이 지정된 색 목록을 이미 알고 있을 수도 있습니다.
 
 다음은 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 [**Fill**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill) 속성을 미리 정의된 색 [**Red**](https://docs.microsoft.com/uwp/api/windows.ui.colors.red)로 설정하는 예입니다.
 
@@ -53,9 +53,9 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://docs.microsoft.
 
 ### <a name="hexadecimal-color-values"></a>16진수 색 값
 
-16진수 형식 문자열을 사용하여 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)에 대해 정밀한 24비트 색 값과 8비트 알파 채널을 선언할 수 있습니다. 0에서 F 범위의 두 문자는 각 구성 요소 값을 정의하며 16진수 문자열의 구성 요소 값 순서는 알파 채널(불투명도), 빨간색 채널, 녹색 채널 및 파란색 채널(**ARGB**)입니다. 예를 들어, 16 진수 값을 "\#FFFF0000" 완전 불투명 빨강 정의 (알파 빨간색 "FF" = "FF", 녹색 = = "00" 및 파란색 = "00").
+16진수 형식 문자열을 사용하여 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)에 대해 정밀한 24비트 색 값과 8비트 알파 채널을 선언할 수 있습니다. 0에서 F 범위의 두 문자는 각 구성 요소 값을 정의하며 16진수 문자열의 구성 요소 값 순서는 알파 채널(불투명도), 빨간색 채널, 녹색 채널 및 파란색 채널(**ARGB**)입니다. 예를 들어 16진수 값 “\#FFFF0000”은 완전히 불투명한 빨간색입니다(알파=“FF”, 빨간색=“FF”, 녹색=“00”, 파란색=“00”).
 
-설정 하는 XAML 예제는 [ **채우기** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill) 속성을 [ **사각형** ](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 16 진수 값으로 "\#FFFF0000"를 제공 명명 된 색을 사용 하 여 동일한 결과 [ **colors.red로 설정 하면**](https://docs.microsoft.com/uwp/api/windows.ui.colors.red)합니다.
+다음 XAML 예제에서는 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 [**Fill**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill) 속성을 16진수 값 “\#FFFF0000”으로 설정하고 이름이 지정된 색 [**Colors.Red**](https://docs.microsoft.com/uwp/api/windows.ui.colors.red)를 사용하여 동일한 결과를 제공합니다.
 
 ```xml
 <StackPanel>
@@ -105,9 +105,9 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://docs.microsoft.
 
 그라데이션 중지점 사이에 있는 각 점의 색은 두 개의 경계 그라데이션 중지점에 지정된 색의 조합으로 선형으로 채워 넣어집니다. 다음은 이전 예제의 그라데이션 중지점을 강조 표시한 그림입니다. 원은 그라데이션 중지점의 위치를 나타내고 점선은 그라데이션 축을 나타냅니다.
 
-![그라데이션 중지점](images/linear-gradients-stops.png) 그라데이션 중지점 설정 하 여 배치 되는 줄을 변경할 수 있습니다 합니다 [**StartPoint** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.lineargradientbrush.startpoint) 하 고 [**끝점** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.lineargradientbrush.endpoint) 수 있는 값은 다른 속성을 합니다 `(0,0)` 및 `(1,1)` 기본값을 시작 합니다. **StartPoint** 및 **EndPoint** 좌표 값을 변경하여 가로 또는 세로 그라데이션을 만들거나, 그라데이션 방향을 반대로 하거나, 칠해진 전체 영역보다 적은 범위에 적용하기 위해 그라데이션 범위를 좁힐 수 있습니다. 그라데이션 범위를 좁히려면 **StartPoint** 및/또는 **EndPoint**의 값을 0에서 1 사이의 값으로 설정합니다. 예를 들어 브러시 왼쪽 절반에서 모두 페이드하고 오른쪽은 마지막 [**GradientStop**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.GradientStop) 색으로 고정되는 가로 그라데이션을 만들려는 경우 **StartPoint**를 `(0,0)`으로, **EndPoint**를 `(0.5,0)`으로 각각 지정합니다.
+![그라데이션 중지점](images/linear-gradients-stops.png) [**StartPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.lineargradientbrush.startpoint) 및 [**EndPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.lineargradientbrush.endpoint) 속성을 시작 기본값인 `(0,0)` 및 `(1,1)`과는 다른 값으로 설정하여 그라데이션 중지점이 배치되는 선을 변경할 수 있습니다. **StartPoint** 및 **EndPoint** 좌표 값을 변경하여 가로 또는 세로 그라데이션을 만들거나, 그라데이션 방향을 반대로 하거나, 칠해진 전체 영역보다 적은 범위에 적용하기 위해 그라데이션 범위를 좁힐 수 있습니다. 그라데이션 범위를 좁히려면 **StartPoint** 및/또는 **EndPoint**의 값을 0에서 1 사이의 값으로 설정합니다. 예를 들어 브러시 왼쪽 절반에서 모두 페이드하고 오른쪽은 마지막 [**GradientStop**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.GradientStop) 색으로 고정되는 가로 그라데이션을 만들려는 경우 **StartPoint**를 `(0,0)`으로, **EndPoint**를 `(0.5,0)`으로 각각 지정합니다.
 
-### <a name="span-idusetoolstomakegradientsspanspan-idusetoolstomakegradientsspanspan-idusetoolstomakegradientsspanuse-tools-to-make-gradients"></a><span id="Use_tools_to_make_gradients"></span><span id="use_tools_to_make_gradients"></span><span id="USE_TOOLS_TO_MAKE_GRADIENTS"></span>도구를 사용 하 여 그라데이션 만들기
+### <a name="span-idusetoolstomakegradientsspanspan-idusetoolstomakegradientsspanspan-idusetoolstomakegradientsspanuse-tools-to-make-gradients"></a><span id="Use_tools_to_make_gradients"></span><span id="use_tools_to_make_gradients"></span><span id="USE_TOOLS_TO_MAKE_GRADIENTS"></span>도구를 사용하여 그라데이션 만들기
 
 이제 선형 그라데이션의 작동 방식을 알았으므로 Visual Studio 또는 Blend를 사용하여 이러한 그라데이션을 보다 쉽게 만들 수 있습니다. 그라데이션을 만들려면 디자인 화면 또는 XAML 뷰에서 그라데이션을 적용할 개체를 선택합니다. **브러시**를 확장하고 **선형 그라데이션** 탭을 선택합니다(다음 스크린샷 참조).
 
@@ -137,7 +137,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://docs.microsoft.
 
 ![렌더링된 ImageBrush](images/brushes-imagebrush.jpg)
 
-[**ImageBrush** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush) 하 고 [ **이미지** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) 이미지 원본 파일에서 리소스 URI (Uniform Identifier), 여기서는 이미지 원본 파일은 여러 가지 가능한 이미지 형식 둘 다 참조 합니다. 이러한 이미지 원본 파일은 URI로 지정됩니다. 이미지 원본, 사용 가능한 이미지 형식을 지정하고 앱에 패키징하는 방법에 대한 자세한 내용은 [Image 및 ImageBrush](https://docs.microsoft.com/windows/uwp/controls-and-patterns/images-imagebrushes)를 참조하세요.
+[**ImageBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush) 및 [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image)는 모두 URI(Uniform Resource Identifier)를 사용하여 이미지 원본 파일을 참조합니다. 이 경우 이미지 원본 파일은 가능한 여러 이미지 형식을 사용합니다. 이러한 이미지 원본 파일은 URI로 지정됩니다. 이미지 원본, 사용 가능한 이미지 형식을 지정하고 앱에 패키징하는 방법에 대한 자세한 내용은 [Image 및 ImageBrush](https://docs.microsoft.com/windows/uwp/controls-and-patterns/images-imagebrushes)를 참조하세요.
 
 ## <a name="brushes-and-text"></a>브러시 및 텍스트
 
@@ -151,15 +151,15 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://docs.microsoft.
 
 ## <a name="xamlcompositionbrushbase"></a>XamlCompositionBrushBase
 
-[**XamlCompositionBrushBase** ](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase) 는 사용자 지정을 만드는 데 기본 클래스를 사용 하는 브러시 [ **CompositionBrush** ](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.CompositionBrush) XAML UI 요소를 그릴 합니다.
+[**XamlCompositionBrushBase**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)는 [**CompositionBrush**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.CompositionBrush)를 사용하여 XAML UI 요소를 그리는 사용자 지정 브러시를 만드는 데 사용되는 기본 클래스입니다.
 
-이렇게 하면 [**시각적 계층 개요**](/windows/uwp/composition/visual-layer)에 설명된 Windows.UI.Xaml과 Windows.UI.Composition 계층 사이의 "드롭다운" 상호 작용이 가능합니다. 
+이렇게 하면 [**시각적 계층 개요**](/windows/uwp/composition/visual-layer)에 설명된 대로 Windows.UI.Xaml과 Windows.UI.Composition 계층 간의 “드롭다운” 상호 운용이 가능합니다. 
 
 사용자 지정 브러시를 만들려면 XamlCompositionBrushBase를 상속하는 새 클래스를 만들고 필요한 메서드를 구현합니다.
 
-예를 들어, 이를 사용하여 [**CompositionEffectBrush**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.CompositionEffectBrush)를 통해 XAML UIElement에 [**효과**](/windows/uwp/composition/composition-effects)를 적용할 수 있습니다. 효과에는 **GaussianBlurEffect**나 [**XamlLight**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.xamllight)에서 조명을 받을 때 XAML UIElement의 반사 속성을 제어하는 [**SceneLightingEffect**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) 등이 있습니다.
+예를 들어 이 기능을 사용하여 [**CompositionEffectBrush**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.CompositionEffectBrush)를 통해 XAML UIElement에 [**효과**](/windows/uwp/composition/composition-effects)를 적용할 수 있습니다. 효과에는 [**XamlLight**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.xamllight)로 조명을 받을 때 XAML UIElement의 반사 속성을 제어하는 [**SceneLightingEffect**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect), **GaussianBlurEffect** 등이 있습니다.
 
-코드 샘플은 [**XamlCompositionBrushBase**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)에 대한 참조 페이지를 참조하세요.
+코드 샘플은 [**XamlCompositionBrushBase**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)의 참조 페이지를 참조하세요.
 
 ## <a name="brushes-as-xaml-resources"></a>XAML 리소스인 브러시
 
@@ -189,10 +189,10 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 [  **WebViewBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebViewBrush) 및 [**ImageBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush)의 경우 기본 생성자를 사용한 다음 다른 API를 호출한 후 해당 브러시를 UI 속성에 사용합니다.
 
--   [**ImageSource** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesourceproperty) 필요는 [ **BitmapImage** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) (없습니다 URI)를 정의 하는 경우를 [ **ImageBrush** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush) 를 사용 하 여 코드입니다. 소스가 스트림이면 [**SetSourceAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) 메서드를 사용하여 값을 초기화합니다. 소스가 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [**BitmapImage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [**ImageOpened**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imageopened) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다.
+-   코드를 사용하여 [**ImageBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush)를 정의하는 경우 [**ImageSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesourceproperty)에 [**BitmapImage**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage)(URI 아님)가 필요합니다. 소스가 스트림이면 [**SetSourceAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) 메서드를 사용하여 값을 초기화합니다. 소스가 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [**BitmapImage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [**ImageOpened**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imageopened) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다.
 -   [  **WebViewBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebViewBrush)의 경우 최근에 [**SourceName**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webviewbrush.sourcename) 속성을 다시 설정하거나 [**WebView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView)의 콘텐츠가 코드와 함께 변경된 경우 [**Redraw**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webviewbrush.redraw)를 호출해야 할 수 있습니다.
 
-코드 예제는 [**WebViewBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebViewBrush),  [**ImageBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush), [**XamlCompositionBrushBase**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)에 대한 참조 페이지를 참조하세요.
+코드 예제는 [**WebViewBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebViewBrush), [**ImageBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush), [**XamlCompositionBrushBase**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)의 참조 페이지를 참조하세요.
  
 
  
