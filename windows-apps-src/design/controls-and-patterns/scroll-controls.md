@@ -13,29 +13,29 @@ dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e401e700728e1d481fd2142281fe81524d146f94
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364424"
 ---
 # <a name="scroll-viewer-controls"></a>스크롤 뷰어 컨트롤
 
 
 
-UI가 너무 많아 한 영역에 다 표시할 수 없는 경우 스크롤 뷰어 컨트롤을 사용합니다.
+한 영역에 모두 표시할 수 없을 정도로 UI 콘텐츠가 너무 많은 경우 스크롤 뷰어 컨트롤을 사용합니다.
 
 > **중요 API**: [ScrollViewer 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), [ScrollBar 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.scrollbar)
 
-스크롤 뷰어를 사용하면 콘텐츠가 뷰포트(표시 영역)의 경계를 넘어 확장될 수 있습니다. 사용자는 마우스 또는 펜 커서를 사용하여 스크롤 뷰어의 스크롤 막대를 조작하거나 터치, 마우스휠, 키보드 또는 게임 패드를 통해 스크롤 뷰어 표면을 조작하여 이 콘텐츠에 도달합니다. 이 이미지는 스크롤 뷰어 컨트롤의 몇 가지 예를 보여 줍니다.
+스크롤 뷰어를 사용하면 콘텐츠가 뷰포트(표시 영역)의 경계를 넘어 확장될 수 있습니다. 사용자는 마우스 또는 펜 커서를 사용하여 스크롤 뷰어의 스크롤 막대를 조작하거나 터치, 마우스 휠, 키보드 또는 게임 패드를 통해 스크롤 뷰어 표면을 조작하여 이 콘텐츠에 도달합니다. 이 이미지는 스크롤 뷰어 컨트롤의 몇 가지 예를 보여 줍니다.
 
 ![표준 스크롤 막대 컨트롤을 보여 주는 스크린샷](images/ScrollBar_Standard.jpg)
 
-스크롤 뷰어의 스크롤 막대는 다음 그림과 같이 상황에 따라 이동 표시기(왼쪽)와 기본 스크롤 막대(오른쪽)라는 2가지 시각화를 사용합니다.
+스크롤 뷰어의 스크롤 막대는 다음 그림과 같이 상황에 따라 이동 표시기(왼쪽)와 기본 스크롤 막대(오른쪽)라는 두 가지 시각화를 사용합니다.
 
 ![표준 스크롤 막대 및 이동 표시기 컨트롤의 모양 샘플](images/SCROLLBAR.png)
 
-스크롤 뷰어는 사용자의 입력 방식을 인식하고 이를 사용하여 표시할 시각화를 결정합니다.
+스크롤 뷰어는 사용자의 입력 방식을 인식하고, 표시할 시각화를 결정하는 데 사용합니다.
 
 * 스크롤 막대를 직접 조작하지 않고 터치 등으로 영역을 스크롤하는 경우 현재 스크롤 위치 표시와 함께 이동 표시기가 나타납니다.
 * 마우스나 펜 커서가 이동 표시기 위로 이동하면 이동 표시기가 기존 스크롤 막대로 변형됩니다.  스크롤 막대 위치 조정 컨트롤을 끌어 스크롤 영역을 조작합니다.
@@ -46,19 +46,19 @@ See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/
 </div>
 -->
 
-![작동 중인 스크롤 막대](images/conscious-scroll.gif)
+![스크롤 막대의 기능](images/conscious-scroll.gif)
 
 > [!NOTE]
-> 스크롤 막대는 ScrollViewer 내의 콘텐츠 위쪽에 16px로 겹쳐서 표시됩니다. 훌륭한 UX 디자인을 보장하려면 스크롤 막대가 겹쳐서 대화형 콘텐츠가 잘 보이지 않는 일이 없도록 합니다. 또한 UX가 겹치지 않게 하려면 뷰포트의 가장자리에 스크롤 막대를 위한 16px 패딩을 남겨 둡니다.
+> 스크롤 막대는 ScrollViewer 내의 콘텐츠 맨 위에 16px로 오버레이되어 표시됩니다. 훌륭한 UX 디자인을 만들려면 스크롤 막대가 오버레이되어 대화형 콘텐츠가 잘 보이지 않는 경우가 없도록 합니다. 또한 UX가 겹치지 않도록 하려면 뷰포트의 가장자리에 스크롤 막대를 위한 16px 안쪽 여백을 남겨 둡니다.
 
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ScrollViewer">앱을 열고 작동 중인 ScrollViewer를 확인</a>합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ScrollViewer">앱을 열고 ScrollViewer의 기능을 확인</a>합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -87,7 +87,7 @@ See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/
 </Page>
 ```
 
-이 XAML에는 가로 스크롤을 사용, 스크롤 뷰어 이미지 배치, 확대/축소를 사용 하도록 설정 하는 방법을 보여 줍니다.
+이 XAML은 수평 스크롤을 사용하도록 설정하고, 스크롤 뷰어에 이미지를 배치하며, 확대/축소를 사용하도록 설정하는 방법을 보여 줍니다.
 
 ```xaml
 <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"
@@ -105,7 +105,7 @@ ScrollViewer 컨트롤은 다른 컨트롤의 복합 파트로 사용되는 것�
 
 ScrollViewer를 포함하는 컨트롤이 ScrollViewer 파트 내에 있는 일부 동작과 속성에 영향을 줄 수 있도록 ScrollViewer는 스타일에서 설정하고 템플릿 바인딩에 사용할 수 있는 많은 XAML 연결 속성을 정의합니다. 연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](../../xaml-platform/attached-properties-overview.md)를 참조하세요.
 
-**ScrollViewer XAML 연결 된 속성**
+**ScrollViewer XAML 연결 속성**
 
 ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
@@ -126,7 +126,7 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
 이러한 XAML 연결 속성은 ScrollViewer가 암시적이며(예: ScrollViewer가 ListView 또는 GridView의 기본 템플릿에 있는 경우) 템플릿 파트에 액세스하지 않고 컨트롤의 스크롤 동작에 영향을 주려는 경우에 사용됩니다.
 
-예를 들어, 다음은 ListView의 기본 제공 스크롤 뷰어에 세로 스크롤 막대가 항상 표시되도록 하는 방법입니다.
+예를 들어 ListView의 기본 제공 스크롤 뷰어에 세로 스크롤 막대가 항상 표시되도록 하는 방법은 다음과 같습니다.
 
 ```xaml
 <ListView ScrollViewer.VerticalScrollBarVisibility="Visible"/>
@@ -147,10 +147,10 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-**개발자 (XAML)**
+**개발자용(XAML)**
 
 * [ScrollViewer 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)

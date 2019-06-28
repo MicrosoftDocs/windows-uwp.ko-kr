@@ -12,10 +12,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: cdf361bfd993ce93e2c3b9eec4e66cb1417e36f8
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364141"
 ---
 # <a name="text-controls"></a>텍스트 컨트롤
@@ -23,9 +23,9 @@ ms.locfileid: "66364141"
 텍스트 컨트롤은 텍스트 입력란, 암호 상자, 자동 제안 상자 및 텍스트 블록으로 구성됩니다. XAML 프레임워크는 텍스트를 렌더링, 입력 및 편집하는 여러 개의 컨트롤과 텍스트 서식을 지정하는 속성 집합을 제공합니다.
 
 - 읽기 전용 텍스트를 표시하는 컨트롤은 [TextBlock](text-block.md) 및 [RichTextBlock](rich-text-block.md)입니다.
-- 텍스트를 입력 하 고 편집 컨트롤은 같습니다. [TextBox](text-box.md), [RichEditBox](rich-edit-box.md)를 [AutoSuggestBox](auto-suggest-box.md), 및 [PasswordBox](password-box.md)합니다.
+- 텍스트 입력 및 편집용 컨트롤은 [TextBox](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md)입니다.
 
-> **중요 API**: [TextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [RichTextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock)를 [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)를 [RichEditBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)를 [AutoSuggestBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox), [PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+> **중요 API**: [TextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [RichTextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), [RichEditBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [AutoSuggestBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox), [PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -49,7 +49,7 @@ RichTextBlock의 콘텐츠 속성은 [Paragraph](https://docs.microsoft.com/uwp/
 
 TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상태여야 합니다. 텍스트를 편집할 수 없는 경우 TextBlock을 대신 사용하는 것이 좋습니다.
 
-**PasswordBox** 컨트롤을 사용하여 암호 또는 주민 등록 번호 등의 기타 개인 데이터를 수집합니다. 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력란입니다. 암호 상자는 텍스트 입력란처럼 보이지만 입력된 텍스트 대신 글머리 기호를 렌더링합니다. 글머리 기호 문자는 사용자 지정 가능합니다.
+**PasswordBox** 컨트롤을 사용하여 암호 또는 주민 등록 번호 등의 기타 프라이빗 데이터를 수집합니다. 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력란입니다. 암호 상자는 텍스트 입력란처럼 보이지만 입력된 텍스트 대신 글머리 기호를 렌더링합니다. 글머리 기호 문자는 사용자 지정 가능합니다.
 
 입력 시 선택할 제안 목록을 사용자에게 표시하려면 **AutoSuggestBox**를 사용합니다. 자동 제안 상자는 기본 검색 제안 목록을 트리거하는 텍스트 입력란입니다. 제안된 단어는 인기 있는 검색 단어와 이전에 사용자가 입력한 단어의 조합에서 뽑을 수 있습니다.
 
@@ -57,27 +57,27 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 
 텍스트 파일을 표시하고 편집하려면 **RichEditBox**를 사용합니다. 다른 표준 텍스트 입력란을 사용하는 방식으로 사용자 입력을 앱으로 가져오기 위해 RichEditBox를 사용하지 마세요. 대신, 앱과 분리된 텍스트 파일 작업에 사용합니다. 일반적으로 RichEditBox에 입력된 텍스트는 .rtf 파일에 저장합니다.
 
-**텍스트 입력 가장 적합 한 옵션 인지 확인 합니다.**
+**텍스트 입력이 최상의 옵션인가요?**
 
 앱에서 사용자 입력을 가져올 수 있는 방법에는 여러 가지가 있습니다. 이러한 질문은 표준 텍스트 입력란 또는 다른 컨트롤 중 하나가 사용자 입력을 가져오는 데 가장 적합한지 여부를 결정하는 데 도움이 됩니다.
 
--   **유효한 모든 값을 효율적으로 열거 하는 실용적이 지?** 그렇다면 선택 컨트롤(예: [확인란](checkbox.md), [드롭다운 목록](lists.md), 목록 상자 [라디오 단추](radio-button.md), [슬라이더](slider.md), [토글 스위치](toggles.md), [날짜 선택기](date-and-time.md), 또는 시간 선택기) 중 하나를 사용하는 것이 좋습니다.
--   **유효한 값의 매우 작은 집합 없습니다?** 이때 값이 일부 문자 길이보다 큰 경우 [드롭다운 목록](lists.md) 또는 목록 상자를 사용하는 것이 좋습니다.
--   **유효한 데이터 완전히 비제한? 또는 유효한 데이터만 제한 됩니다 (제약 조건이 지정 된 길이 또는 문자 형식) 형식으로?** 그렇다면 텍스트 입력 컨트롤을 사용합니다. 입력할 수 있는 문자 수를 제한하고 앱 코드 형식의 유효성을 검사할 수 있습니다.
--   **값을 특수 한 공용 컨트롤에 있는 데이터 형식을 나타내지?** 그렇다면 텍스트 입력 컨트롤 대신 적절한 컨트롤을 사용합니다. 예를 들어 데이터 입력을 수락하려면 텍스트 입력 컨트롤 대신 [DatePicker](https://docs.microsoft.com/previous-versions/windows/apps/br211681(v=win.10))를 사용합니다.
+-   **유효한 값을 모두 열거하는 것이 효과적인가요?** 그렇다면 선택 컨트롤(예: [확인란](checkbox.md), [드롭다운 목록](lists.md), 목록 상자 [라디오 단추](radio-button.md), [슬라이더](slider.md), [토글 스위치](toggles.md), [날짜 선택기](date-and-time.md), 또는 시간 선택기) 중 하나를 사용하는 것이 좋습니다.
+-   **유효한 값 세트가 매우 적은가요?** 이때 값이 일부 문자 길이보다 큰 경우 [드롭다운 목록](lists.md) 또는 목록 상자를 사용하는 것이 좋습니다.
+-   **유효한 데이터에는 아무런 제약이 없나요? 아니면 형식에 의해서만 제약을 받나요(길이 제한 또는 문자 형식 제한)?** 그렇다면 텍스트 입력 컨트롤을 사용합니다. 입력할 수 있는 문자 수를 제한하고 앱 코드 형식의 유효성을 검사할 수 있습니다.
+-   **값이 특수한 공통 컨트롤이 있는 데이터 형식을 나타내나요?** 그렇다면 텍스트 입력 컨트롤 대신 적절한 컨트롤을 사용합니다. 예를 들어 데이터 입력을 수락하려면 텍스트 입력 컨트롤 대신 [DatePicker](https://docs.microsoft.com/previous-versions/windows/apps/br211681(v=win.10))를 사용합니다.
 -   데이터가 엄격히 숫자인 경우
-    -   **값은 동일한 페이지의 대략적인 및/또는 다른 수량을 기준으로 입력 되?** 그렇다면 [슬라이더](slider.md)를 사용하세요.
-    -   **사용자 설정이 변경의 효과에 대 한 즉각적인 피드백에서 혜택은?** 그렇다면 함께 표시되는 컨트롤과 함께 [슬라이더](slider.md)를 사용하세요.
-    -   **결과 확인 되는 이러한 볼륨 또는 화면 밝기 마찬가지로 후 조정 값 가능성이 입력은?** 그렇다면 [슬라이더](slider.md)를 사용하세요.
+    -   **값을 근사값 및/또는 동일한 페이지에 있는 다른 수량을 기준으로 입력되나요?** 그렇다면 [슬라이더](slider.md)를 사용하세요.
+    -   **설정을 변경하면 어떤 효과가 있는지에 대해 즉각적인 피드백을 받게 되면 사용자에게 도움이 되나요?** 그렇다면 함께 표시되는 컨트롤과 함께 [슬라이더](slider.md)를 사용하세요.
+    -   **결과를 확인한 후 입력한 값을 조정할 수 있나요(예: 볼륨 또는 화면 밝기)?** 그렇다면 [슬라이더](slider.md)를 사용하세요.
 
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/category/Text">앱을 열고 작동 중인 텍스트 컨트롤을 확인</a>합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/category/Text">앱을 열고 텍스트 컨트롤의 기능을 확인</a>합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -119,15 +119,15 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 
 **적용 대상:** TextBox, RichEditBox, AutoSuggestBox
 
-Windows 10 버전 1803부터는 XAML 텍스트 입력 상자에 [Windows Ink](../input/pen-and-stylus-interactions.md)를 사용한 펜 입력 지원이 포함되어 있습니다. 사용자가 Windows 펜을 사용해 텍스트 입력 상자를 터치하면 사용자가 별도의 입력 창을 열지 않고도 펜으로 직접 쓸 수 있도록 텍스트 상자가 변환됩니다.
+Windows 10, 버전 1803부터는 XAML 텍스트 입력 상자에서 [Windows Ink](../input/pen-and-stylus-interactions.md)를 사용한 펜 입력이 지원됩니다. 사용자가 Windows 펜을 사용하여 텍스트 입력 상자를 탭하면 별도의 입력판을 열지 않고도 펜으로 직접 쓸 수 있도록 텍스트 상자가 변환됩니다.
 
-![펜으로 터치할 때 텍스트 상자가 확장](images/handwritingview/handwritingview2.gif)
+![펜으로 탭하면 텍스트 상자가 확장됨](images/handwritingview/handwritingview2.gif)
 
-자세한 내용은 참조 하세요. [필기 뷰를 사용 하 여 텍스트 입력](text-handwriting-view.md)합니다.
+자세한 내용은 [필기 보기를 사용한 텍스트 입력](text-handwriting-view.md)을 참조하세요.
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>텍스트 컨트롤에 맞는 키보드를 선택합니다.
 
-**적용 대상:** 텍스트 상자 PasswordBox RichEditBox
+**적용 대상:** TextBox, PasswordBox RichEditBox
 
 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 터치 키보드나 SIP(Soft Input Panel)를 사용한 데이터 입력을 도울 수 있습니다.
 
@@ -162,7 +162,7 @@ Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 �
 
 ## <a name="guidelines-for-line-and-paragraph-separators"></a>줄 및 단락 구분 기호에 대한 지침
 
-**적용 대상:** TextBlock RichTextBlock, 여러 줄 텍스트 상자 RichEditBox
+**적용 대상:** TextBlock, RichTextBlock, 여러 줄 TextBox, RichEditBox
 
 일반 텍스트를 나누려면 줄 구분 기호(0x2028) 및 단락 구분 기호(0x2029)를 사용합니다. 각 줄 구분 기호 뒤에서 새 줄이 시작됩니다. 각 단락 구분 기호 뒤에서 새 단락이 시작됩니다.
 
@@ -174,7 +174,7 @@ Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 �
 
 ## <a name="guidelines-for-spell-checking"></a>맞춤법 검사에 대한 지침
 
-**적용 대상:** 텍스트 상자 RichEditBox
+**적용 대상:** TextBox, RichEditBox
 
 텍스트를 입력 및 편집하는 동안 맞춤법 검사는 빨간색 물결선으로 강조 표시하여 단어의 맞춤법이 틀렸음을 사용자에게 알리고 맞춤법을 수정하는 방법을 제공합니다.
 
@@ -184,11 +184,11 @@ Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 �
 
 텍스트 입력 컨트롤을 이용한 맞춤법 검사는 다음 두 가지 목적에 사용합니다.
 
--   **맞춤법 오류 자동 수정 하려면**
+-   **오타 자동 수정**
 
     맞춤법 검사 엔진은 수정에 대한 확신이 있을 경우 철자가 틀린 단어를 자동으로 수정합니다. 예를 들어, 'teh'를 'the'로 자동 수정합니다.
 
--   **단어를 표시 하려면**
+-   **대신할 철자 표시**
 
     맞춤법 검사 엔진이 수정에 대한 확신이 없으면 철자가 틀린 단어 밑에 빨간 줄을 추가하며, 이 단어를 누르거나 마우스 오른쪽 단추로 클릭하면 대신할 철자들이 상황에 맞는 메뉴에 표시됩니다.
 
@@ -205,7 +205,7 @@ TextBox 및 RichEditBox 컨트롤의 경우 맞춤법 검사가 기본적으로 
 - [Segoe MDL2 아이콘 목록 및 지침](../style/segoe-ui-symbol-font.md)
 - [검색 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
 
-**개발자 (XAML)**
+**개발자용(XAML)**
 - [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [Windows.UI.Xaml.Controls PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [String.Length 속성이](https://docs.microsoft.com/dotnet/api/system.string.length?redirectedfrom=MSDN#System_String_Length)
+- [String.Length 속성](https://docs.microsoft.com/dotnet/api/system.string.length?redirectedfrom=MSDN#System_String_Length)

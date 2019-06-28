@@ -12,10 +12,10 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: c552109b243688c2618425adce797c4d208eac31
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364782"
 ---
 # <a name="inverted-lists"></a>반전된 목록
@@ -24,7 +24,7 @@ ms.locfileid: "66364782"
 
 목록 보기를 사용하여 발신자/수신자를 나타내기 위해 시각적으로 구분된 항목으로 채팅 환경의 대화를 표시할 수 있습니다.  서로 다른 색과 가로 맞춤을 사용하여 발신자/수신자의 메시지를 구분하면 사용자가 빠르게 대화에 적응하는 데 도움이 됩니다.
 
-> **중요 API**:  [ListView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)하십시오 [ItemsStackPanel 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel), [ItemsUpdatingScrollMode 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode)
+> **중요 API**:  [ListView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [ItemsStackPanel 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel), [ItemsUpdatingScrollMode 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode)
  
 일반적으로 위에서 아래 대신 아래에서 위로 확장되는 것처럼 목록을 표시해야 합니다.  새 메시지가 도착하고 끝에 추가되면 이전 메시지가 위로 올라가서 사용자가 최신 메시지를 발견하기 쉽게 합니다.  그러나 사용자가 이전 회신을 보기 위해 위로 스크롤한 경우 새 메시지가 도착해도 화면이 이동하여 포커스를 방해하면 안 됩니다.
 

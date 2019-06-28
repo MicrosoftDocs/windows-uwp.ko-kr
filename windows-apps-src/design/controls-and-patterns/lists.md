@@ -13,10 +13,10 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a574ff858f8eab3fa1984ecd883a786fa0e0f19c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364718"
 ---
 # <a name="lists"></a>목록
@@ -30,14 +30,14 @@ ms.locfileid: "66364718"
 
 각 목록 패턴에 대한 디자인 지침, 기능 및 예제가 제공됩니다.
 
-> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)하십시오 [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [ComboBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [ComboBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
 
 > <div id="main">
-> <strong>Windows 10 Fall Creators Update-동작 변경</strong>
+> <strong>Windows 10 Fall Creators Update - 동작 변경</strong>
 > </div>
-> 이제는 기본적으로 선택을 수행하는 대신 터치, 터치 패드, 패시브 펜 등의 활성 펜이 UWP 앱의 목록을 스크롤/이동합니다.
-> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 무시하고 이전 동작으로 되돌릴 수 있습니다. 세부 정보에 대 한 API 참조 항목을 참조 합니다 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer 클래스</a>합니다.
+> 이제 기본적으로 선택을 수행하는 대신 터치, 터치패드, 패시브 펜 등의 활성 펜이 UWP 앱의 목록을 스크롤/이동합니다.
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer 클래스</a>의 API 참조 항목을 참조하세요.
 
 ## <a name="list-views"></a>목록 보기
 
@@ -84,19 +84,19 @@ ms.locfileid: "66364718"
 <td align="left"><p>목록이나 그리드에 표시하는 항목은 앱의 전체 모양에서 중요한 역할을 담당할 수 있습니다. 컨트롤 템플릿과 데이터 템플릿을 수정하여 항목 모양을 정의하고 앱을 멋지게 만들 수 있습니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="item-templates-listview.md">목록 보기에 대 한 항목 템플릿</a></p></td>
-<td align="left"><p>ListView에서 이러한 항목 템플릿 예제를 사용하여 일반적인 앱 유형의 형태를 확인하세요.</p></td>
+<td align="left"><p><a href="item-templates-listview.md">목록 보기의 항목 템플릿</a></p></td>
+<td align="left"><p>이러한 ListView용 예제 항목 템플릿을 사용하여 일반적인 앱 유형의 모양을 확인합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="inverted-lists.md">반전 된 목록</a></p></td>
+<td align="left"><p><a href="inverted-lists.md">반전된 목록</a></p></td>
 <td align="left"><p>반전된 목록에는 채팅 앱에서처럼 아래쪽에 추가된 새 항목이 있습니다. 앱에서 반전된 목록을 사용하려면 이 지침을 따릅니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="pull-to-refresh.md">끌어오기-새로 고침</a></p></td>
+<td align="left"><p><a href="pull-to-refresh.md">당겨서 새로 고침</a></p></td>
 <td align="left"><p>당겨서 새로 고침 패턴을 사용하면 데이터 목록을 터치하고 아래로 당겨서 더 많은 데이터를 검색할 수 있습니다. 목록 보기에서 당겨서 새로 고침을 구현하려면 이 지침을 사용합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="nested-ui.md">중첩 된 UI</a></p></td>
+<td align="left"><p><a href="nested-ui.md">중첩된 UI</a></p></td>
 <td align="left"><p>중첩된 UI는 실행 가능한 컨트롤을 사용자가 실행할 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다. 예를 들어 단추가 있는 목록 보기 항목이 있을 수 있으며 사용자가 목록 항목을 선택하거나 목록 항목 내에 중첩된 단추를 누를 수 있습니다. 사용자에게 최상의 중첩된 UI 환경을 제공하려면 다음 모범 사례를 따르세요.</p></td>
 </tr>
 </tbody>
@@ -151,11 +151,11 @@ ms.locfileid: "66364718"
 <td align="left"><p>목록이나 그리드에 표시하는 항목은 앱의 전체 모양에서 중요한 역할을 담당할 수 있습니다. 컨트롤 템플릿과 데이터 템플릿을 수정하여 항목 모양을 정의하고 앱을 멋지게 만들 수 있습니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="item-templates-gridview.md">그리드 보기에 대 한 항목 템플릿</a></p></td>
-<td align="left"><p>GridView에서 이러한 항목 템플릿 예제를 사용하여 일반적인 앱 유형의 형태를 확인하세요.</p></td>
+<td align="left"><p><a href="item-templates-gridview.md">그리드 보기의 항목 템플릿</a></p></td>
+<td align="left"><p>이러한 GridView용 예제 항목 템플릿을 사용하여 일반적인 앱 유형의 모양을 확인합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="nested-ui.md">중첩 된 UI</a></p></td>
+<td align="left"><p><a href="nested-ui.md">중첩된 UI</a></p></td>
 <td align="left"><p>중첩된 UI는 실행 가능한 컨트롤을 사용자가 실행할 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다. 예를 들어 단추가 있는 목록 보기 항목이 있을 수 있으며 사용자가 목록 항목을 선택하거나 목록 항목 내에 중첩된 단추를 누를 수 있습니다. 사용자에게 최상의 중첩된 UI 환경을 제공하려면 다음 모범 사례를 따르세요.</p></td>
 </tr>
 </tbody>
@@ -190,7 +190,7 @@ ms.locfileid: "66364718"
 
 -   콤보 상자 항목의 텍스트 콘텐츠를 한 줄로 제한합니다.
 -   가장 논리적인 순서로 콤보 상자의 항목을 정렬합니다. 관련 옵션을 그룹화하고 가장 일반적인 옵션을 맨 위에 배치합니다. 이름은 사전순으로 정렬하고, 숫자는 숫자순으로 정렬하고, 날짜는 시간순으로 정렬합니다.
--   사용자가 글꼴 선택 드롭다운과 같은 화살표 키를 사용하고 있는 동안 라이브로 업데이트되는 콤보 상자를 만들려면 SelectionChangedTrigger를 “항상”으로 설정합니다.  
+-   사용자가 화살표 키를 사용하는 동안 라이브로 업데이트되는 콤보 상자(예: 글꼴 선택 드롭다운)를 만들려면 SelectionChangedTrigger를 “항상”으로 설정합니다.  
 
 ### <a name="text-search"></a>텍스트 검색
 
@@ -229,9 +229,9 @@ ms.locfileid: "66364718"
 
 다음과 같은 세 가지 선택 모드가 있습니다.
 
--   단일: 사용자 한 번에 하나의 항목만 선택할 수 있습니다.
--   여러: 한정자를 사용 하지 않고 여러 항목을 선택할 수 있습니다.
--   확장: SHIFT 키를 누른 채 같은 한정자를 사용 하 여 여러 항목을 선택할 수 있습니다.
+-   단일: 사용자가 한 번에 하나의 항목만 선택할 수 있습니다.
+-   다중: 사용자가 보조 키를 사용하지 않고 여러 항목을 선택할 수 있습니다.
+-   확장: 사용자가 보조 키를 사용하여 여러 항목을 선택할 수 있습니다. 예를 들어 Shift 키를 누른 상태로 선택할 수 있습니다.
 
 항목의 아무 곳이나 탭하면 선택됩니다. 명령 모음 작업을 탭하면 선택한 모든 항목에 영향을 줍니다. 항목을 선택하지 않으면 “모두 선택"을 제외한 명령 모음 작업이 비활성화되어야 합니다.
 
@@ -268,7 +268,7 @@ ms.locfileid: "66364718"
 - [끌어서 놓기](https://docs.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 - [미리 보기 이미지](../../files/thumbnails.md)
 
-**개발자를 위한**
+**개발자용**:
 - [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [ComboBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)

@@ -13,10 +13,10 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 841903f9bc998af5ead2a3486c500487cb070855
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364298"
 ---
 # <a name="sliders"></a>슬라이더
@@ -25,7 +25,7 @@ ms.locfileid: "66364298"
 
 슬라이더는 사용자가 트랙을 따라 Thumb 컨트롤을 이동하여 값 범위에서 값을 선택할 수 있도록 하는 컨트롤입니다.
 
-> **중요 API**: [Slider 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider), [속성을 값](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [ValueChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
+> **중요 API**: [Slider 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider), [Value 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [ValueChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
 
 ![슬라이더 컨트롤](images/controls/slider.png)
 
@@ -40,11 +40,11 @@ ms.locfileid: "66364298"
 
 다음은 슬라이더를 사용할지 여부를 결정할 때 고려해야 하는 추가 요소입니다.
 
--   **설정으로 보일 상대 수량?** 그렇지 않다면 [라디오 단추](radio-button.md) 또는 [목록 상자](lists.md)를 사용합니다.
--   **설정은 정확한 숫자 값을 알려진?** 그렇다면 숫자 [입력란](text-box.md)을 사용합니다.
--   **사용자 설정이 변경의 효과에 대 한 즉각적인 피드백에서 혜택은?** 그렇다면 슬라이더를 사용합니다. 예를 들어 사용자는 색상, 채도 및 광도 값의 변경 효과를 즉시 확인함으로써 색상을 더 쉽게 선택할 수 있습니다.
--   **설정에 4 개 이상의 값의 범위에 있습니까?** 그렇지 않다면 [라디오 단추](radio-button.md)를 사용합니다.
--   **사용자 값을 변경할 수 있습니까?** 슬라이더는 사용자 조작을 위한 것입니다. 사용자가 값을 변경할 수 없으면 대신 읽기 전용 텍스트를 사용합니다.
+-   **설정이 상대 수량처럼 보이나요?** 그렇지 않다면 [라디오 단추](radio-button.md) 또는 [목록 상자](lists.md)를 사용합니다.
+-   **설정이 정확하고 알려진 숫자 값인가요?** 그렇다면 숫자 [입력란](text-box.md)을 사용합니다.
+-   **설정을 변경하면 어떤 효과가 있는지에 대해 즉각적인 피드백을 받게 되면 사용자에게 도움이 되나요?** 그렇다면 슬라이더를 사용합니다. 예를 들어 사용자는 색상, 채도 및 광도 값의 변경 효과를 즉시 확인함으로써 색상을 더 쉽게 선택할 수 있습니다.
+-   **설정에서 4개 이상의 값으로 이루어진 범위를 사용하나요?** 그렇지 않다면 [라디오 단추](radio-button.md)를 사용합니다.
+-   **사용자가 값을 변경할 수 있나요?** 슬라이더는 사용자 조작을 위한 것입니다. 사용자가 값을 변경할 수 없으면 대신 읽기 전용 텍스트를 사용합니다.
 
 슬라이더와 숫자 입력란 중 결정하려 할 때, 다음과 같은 경우에는 숫자 입력란을 사용합니다.
 
@@ -58,11 +58,11 @@ ms.locfileid: "66364298"
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Slider">앱을 열고 작동 중인 슬라이더를 확인</a>합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Slider">앱을 열고 슬라이더의 기능을 확인</a>합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -117,7 +117,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 -   컨트롤은 사용자가 원하는 값을 쉽게 설정할 수 있는 크기로 만듭니다. 불연속 값이 포함된 설정의 경우 마우스를 사용하여 어떤 값이든 쉽게 선택할 수 있도록 만듭니다. 슬라이더의 끝점이 항상 뷰의 범위 내에 있는지 확인합니다.
 -   사용자가 실제로 선택을 하는 동안이나 후에 즉각적인 피드백을 제공합니다. 예를 들어 Windows 볼륨 컨트롤은 사용자가 선택한 오디오 볼륨을 들려줍니다.
--   레이블을 사용하여 값의 범위를 표시합니다. 예외: 세로 방향 slider는 되어 맨 위 레이블의 최대, 높음, 또는 이와 동등한 이므로 생략할 수 있습니다 다른 레이블이 의미는의 선택을 취소 합니다.
+-   레이블을 사용하여 값의 범위를 표시합니다. 예외: 슬라이더가 세로 방향이고 맨 위 레이블이 최댓값, 높음, 많음 등을 나타낼 경우 의미가 분명하므로 다른 레이블을 생략할 수 있습니다.
 -   슬라이더를 사용하지 않을 경우 모든 관련 레이블 또는 시각적 피드백도 해제합니다.
 -   흐름 방향 및/또는 슬라이더 방향을 설정할 때 텍스트의 방향을 고려합니다. 언어에 따라 스크립트를 왼쪽에서 오른쪽으로 읽거나, 오른쪽에서 왼쪽으로 읽습니다.
 -   슬라이더를 진행률 표시기로 사용하지 마세요.
@@ -169,7 +169,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
     -   세로 방향이어서 불필요한 경우가 아니면 슬라이더 범위의 양 끝에 레이블을 지정합니다.
     -   가능하면 한 레이블에 한 단어만 사용합니다.
     -   끝에 문장 부호를 넣지 않습니다.
-    -   다음 레이블들은 설명적이어야 하며 나란히 배치해야 합니다. 예를 들면 다음과 같습니다. Maximum/Minimum, More/Less, Low/High, Soft/Loud.
+    -   다음 레이블들은 설명적이어야 하며 나란히 배치해야 합니다. 예제: 최대/최소, 많음/적음, 낮음/높음, 작음/큼
 -   **값 레이블**
 
     값 레이블은 슬라이더의 현재 값을 표시합니다.
@@ -188,8 +188,8 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 
 ## <a name="related-topics"></a>관련 항목
-- [설정/해제 스위치](toggles.md)
+- [토글 스위치](toggles.md)
 - [Slider 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider)

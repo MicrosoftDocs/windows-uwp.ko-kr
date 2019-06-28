@@ -12,10 +12,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e671c61058ec1c048fbb1b547cc79060a7cd0d0a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364342"
 ---
 # <a name="rich-text-block"></a>서식 있는 텍스트 블록
@@ -24,7 +24,7 @@ ms.locfileid: "66364342"
 
 서식 있는 텍스트 블록은 단락, 인라인 UI 요소 또는 복잡한 텍스트 레이아웃에 대한 지원이 필요한 경우 사용할 수 있는 몇 가지 고급 텍스트 레이아웃 기능을 제공합니다.
 
-> **중요 API**: [RichTextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock)하십시오 [RichTextBlockOverflow 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlockOverflow), [클래스를 단락](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph), [입력 체계 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography)
+> **중요 API**: [RichTextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [RichTextBlockOverflow 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlockOverflow), [Paragraph 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph), [Typography 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -37,11 +37,11 @@ ms.locfileid: "66364342"
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/RichTextBlock">앱을 열고 작동 중인 RichTextBlock을 확인</a>합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/RichTextBlock">앱을 열고 RichTextBlock의 기능을 확인</a>합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -151,21 +151,21 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 
 [텍스트 컨트롤](text-controls.md)
 
 **디자이너용**
-- [맞춤법 검사에 대 한 지침](text-controls.md)
+- [맞춤법 검사에 대한 지침](text-controls.md)
 - [검색 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
-- [텍스트 입력에 대 한 지침](text-controls.md)
+- [텍스트 입력에 대한 지침](text-controls.md)
 
-**개발자 (XAML)**
+**개발자용(XAML)**
 - [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [Windows.UI.Xaml.Controls PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
 
 
-**(기타)는 개발자를 위한**
-- [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+**개발자용(기타)**
+- [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

@@ -12,10 +12,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3b69bc093fb9aae6e35618949bf6eebe8c36c893
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364166"
 ---
 # <a name="text-block"></a>텍스트 블록
@@ -24,7 +24,7 @@ ms.locfileid: "66364166"
 
  텍스트 블록은 앱에서 읽기 전용 텍스트를 표시하기 위한 주 컨트롤입니다. 이 컨트롤을 사용하여 한 줄 또는 여러 줄 텍스트, 인라인 하이퍼링크 및 굵게, 기울임꼴 또는 밑줄 서식이 적용된 텍스트를 표시할 수 있습니다.
  
- > **중요 API**: [TextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)하십시오 [Text 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text), [Inlines 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.inlines)
+ > **중요 API**: [TextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [Text 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text), [Inlines 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.inlines)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -37,11 +37,11 @@ ms.locfileid: "66364166"
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/TextBlock">앱을 열고 작동 중인 TextBlock을 확인</a>합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/TextBlock">앱을 열고 TextBlock의 기능을 확인</a>합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -70,7 +70,7 @@ textBlock1.Text = "Hello, world!";
 
 ### <a name="content-model"></a>콘텐츠 모델
 
-두 가지 속성이 있습니다 사용 하 여 텍스트 블록에 콘텐츠를 추가할 수 있습니다. [텍스트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text) 하 고 [인라인](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.inlines)합니다.
+TextBlock에 콘텐츠를 추가하는 데 사용할 수 있는 속성에는 [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text)와 [Inlines](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.inlines)의 두 가지가 있습니다.
 
 텍스트를 표시하는 가장 일반적인 방법은 이전 예제에 나와 있듯이 Text 속성을 문자열 값으로 설정하는 것입니다.
 
@@ -88,18 +88,18 @@ Bold, Italic, Run, Span 및 LineBreak와 같이 Inline 클래스에서 파생된
 가능한 경우 언제나 XAML에서는 레이아웃 텍스트에 대한 더 효율적인 코드 경로를 사용합니다. 이 빠른 경로는 텍스트를 측정하고 정렬하는 드는 전체 메모리 사용량을 줄이고 CPU 시간을 크게 단축합니다. 이 빠른 경로는 TextBlock에만 적용되므로 가능한 경우에는 RichTextBlock 대신 이 경로를 사용해야 합니다.
 
 특정 조건에서는 텍스트 렌더링을 위해 TextBlock이 기능이 풍부하고 CPU를 많이 사용하는 코드 경로를 사용해야 합니다. 텍스트 렌더링을 빠른 경로에서 유지하려면 여기에 나열된 속성을 설정할 때 다음 지침에 따야 합니다.
-- [텍스트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text): 가장 중요 한 조건 (앞의 예제에 표시 됨)에 따라 코드 또는 XAML에서 Text 속성을 명시적으로 설정 하 여 텍스트를 설정 하는 경우에 빠른 경로입니다. 여러 형식의 잠재적 복잡성으로 인해, TextBlock의 Inlines 컬렉션(예: `<TextBlock>Inline text</TextBlock>`)을 통해 텍스트를 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
-- [CharacterSpacing](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.characterspacing): 만 기본값 0은 빠른 경로입니다.
-- [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming): 만 **None**를 **CharacterEllipsis**, 및 **WordEllipsis** 값은 빠른 경로입니다. **Clip** 값은 빠른 경로를 사용하지 않도록 설정합니다.
+- [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text): 가장 중요한 조건은 이전 예제와 같이 XAML 또는 코드에서 명시적으로 Text 속성을 설정하여 텍스트를 설정하는 경우에만 빠른 경로가 사용된다는 것입니다. 여러 형식의 잠재적 복잡성으로 인해, TextBlock의 Inlines 컬렉션(예: `<TextBlock>Inline text</TextBlock>`)을 통해 텍스트를 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
+- [CharacterSpacing](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.characterspacing): 기본값 0만 빠른 경로입니다.
+- [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming): **None**, **CharacterEllipsis**, **WordEllipsis** 값만 빠른 경로입니다. **Clip** 값은 빠른 경로를 사용하지 않도록 설정합니다.
 
-> **참고**&nbsp;&nbsp;Windows 10 버전 1607 이전에는 추가 속성도 빠른 경로에 영향을 주었습니다. 앱이 이전 버전의 Windows에서 실행되는 경우 이러한 조건으로 인해 텍스트가 느린 경로로 렌더링됩니다. 버전에 대한 자세한 내용은 버전 적응 코드를 참조하세요.
-- [입력 체계](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography): 다양 한 입력 체계 속성에 대 한 기본값에만 빠른 경로입니다.
-- [LineStackingStrategy](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy): 경우 [LineHeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.lineheight) 는 0이 아닌 합니다 **BaselineToBaseline** 하 고 **MaxHeight** 값 빠른 경로 사용 하지 않도록 설정 합니다.
-- [IsTextSelectionEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextselectionenabled): 만 **false** 빠른 경로입니다. 이 속성을 **true**로 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
+> **참고**&nbsp;&nbsp;Windows 10, 버전 1607 이전에서는 추가 속성도 빠른 경로에 영향을 줍니다. 앱이 이전 버전의 Windows에서 실행되는 경우 이러한 조건으로 인해 텍스트가 느린 경로로 렌더링됩니다. 버전에 대한 자세한 내용은 버전 적응 코드를 참조하세요.
+- [Typography](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography): 다양한 Typography 속성의 기본값만 빠른 경로입니다.
+- [LineStackingStrategy](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy): [LineHeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.lineheight)가 0이 아닌 경우 **BaselineToBaseline** 및 **MaxHeight** 값이 빠른 경로를 사용하지 않도록 설정합니다.
+- [IsTextSelectionEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextselectionenabled): **false**만 빠른 경로입니다. 이 속성을 **true**로 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
 
 디버그 도중에 [DebugSettings.IsTextPerformanceVisualizationEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.debugsettings.istextperformancevisualizationenabled) 속성을 **true**로 설정하여 텍스트가 빠른 경로 렌더링을 사용하고 있는지 여부를 확인할 수 있습니다. 이 속성이 true로 설정된 경우 빠른 경로에 있는 텍스트가 밝은 녹색으로 표시됩니다.
 
->**팁**&nbsp;&nbsp;이 기능은이 세션에서 자세히 설명 되어 빌드 2015-에서 [XAML 성능: 유니버설 Windows 앱 경험을 극대화 하기 위한 기술을 XAML을 사용 하 여 빌드한](https://channel9.msdn.com/Events/Build/2015/3-698)합니다.
+>**팁**&nbsp;&nbsp;이 기능은 빌드 2015의 [XAML 성능: XAML로 빌드된 유니버설 Windows 앱 환경을 최대화하는 기술](https://channel9.msdn.com/Events/Build/2015/3-698) 세션에서 자세히 설명합니다.
 
 
 
@@ -131,13 +131,13 @@ IsTextPerformanceVisualizationEnabled를 true로 설정하여 이 XAML을 디버
 
 ![디버그 모드에서 렌더링된 텍스트](images/text-block-rendering-performance.png)
 
->**주의**&nbsp;&nbsp;빠른 경로에 있지 않은 텍스트의 색은 변경되지 않습니다. 앱에 밝은 녹색으로 지정된 텍스트가 있는 경우 텍스트가 더 느린 렌더링 경로에 있으면 계속 밝은 녹색으로 표시됩니다. 앱에서 녹색으로 설정된 텍스트와, 빠른 경로에 있으며 디버그 설정 때문에 녹색인 텍스트와 혼동하지 않도록 주의해야 합니다.
+>**주의**&nbsp;&nbsp;빠른 경로에 있지 않은 텍스트 색은 변경되지 않습니다. 앱에 밝은 녹색으로 지정된 텍스트가 있는 경우 텍스트가 더 느린 렌더링 경로에 있으면 계속 밝은 녹색으로 표시됩니다. 앱에서 녹색으로 설정된 텍스트와, 빠른 경로에 있으며 디버그 설정 때문에 녹색인 텍스트와 혼동하지 않도록 주의해야 합니다.
 
 ## <a name="formatting-text"></a>텍스트 서식 지정
 
 Text 속성이 일반 텍스트를 저장하지만, TextBlock 컨트롤에 다양한 서식 옵션을 적용하여 앱에서 텍스트가 렌더링되는 방법을 사용자 지정할 수 있습니다. FontFamily, FontSize, FontStyle, Foreground 및 CharacterSpacing과 같은 표준 컨트롤 속성을 설정하여 텍스트의 모양을 변경할 수 있습니다. 또한 인라인 텍스트 요소 및 Typography 연결 속성을 사용하여 텍스트의 서식을 지정할 수 있습니다. 이러한 옵션은 TextBlock이 로컬에서 텍스트를 표시하는 방식에만 영향을 줍니다. 예를 들어 서식 있는 텍스트 컨트롤에 텍스트를 복사하여 붙여넣을 경우 서식이 적용되지 않습니다.
 
->**참고**&nbsp;&nbsp;이전 섹션에서 설명했듯이 인라인 텍스트 요소 및 기본값이 아닌 입력 체계 값은 빠른 경로에서 렌더링되지 않습니다.
+>**참고**&nbsp;&nbsp;이전 섹션에서 설명했듯이, 인라인 텍스트 요소 및 기본값이 아닌 입력 체계 값은 빠른 경로에서 렌더링되지 않습니다.
 
 
 ### <a name="inline-elements"></a>인라인 요소
@@ -190,14 +190,14 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 
 - [텍스트 컨트롤](text-controls.md)
-- [맞춤법 검사에 대 한 지침](text-controls.md)
+- [맞춤법 검사에 대한 지침](text-controls.md)
 - [검색 추가](search.md)
-- [텍스트 입력에 대 한 지침](text-controls.md)
+- [텍스트 입력에 대한 지침](text-controls.md)
 - [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [Windows.UI.Xaml.Controls PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+- [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
