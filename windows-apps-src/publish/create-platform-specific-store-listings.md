@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 사용자 지정, 목록, 설명, 이전
 ms.localizationpriority: medium
-ms.openlocfilehash: 50c14ed3fa7f7f5f7d1b4c80bb8165b3f27e522a
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 2d9a9e86397ca5e85697543f99481b43f438a063
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63777701"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468972"
 ---
 # <a name="create-platform-specific-store-listings"></a>플랫폼별 스토어 목록 만들기
 
@@ -21,7 +21,7 @@ ms.locfileid: "63777701"
 Windows 10 (Xbox 포함)에서 고객에 게는 항상 기본 표시 [스토어 목록](create-app-store-listings.md)합니다. 하나 이상의 이전 OS 버전을 지 원하는 패키지를 사용 하 여 앱을 이미 게시 하지 않는 한 플랫폼별 스토어 목록을 만드는 옵션을 볼 수 없습니다. 
 
 > [!IMPORTANT]
-> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)합니다.
+> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store)합니다.
 
 플랫폼별 스토어 목록 (장치 유형에 관계 없이)는 특정 OS와 관련이 있는 스크린 샷을 제공 하려면 한 OS 버전에만 표시 되는 기능을 언급 하려고 하는 경우 유용할 수 있습니다.
 

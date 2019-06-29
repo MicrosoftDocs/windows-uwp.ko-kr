@@ -6,12 +6,12 @@ keywords: 검사 목록, Windows, UWP, 제출, 제출하다, 게임, 앱, 제출
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 24d3c99636009ebf65f3e24d39d657297b105150
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
+ms.openlocfilehash: 2fe5d44823821208a2384aec9d66037c4da3865f
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826115"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468924"
 ---
 # <a name="app-submissions"></a>앱 제출
 
@@ -29,7 +29,7 @@ ms.locfileid: "66826115"
 > 설명서의이 섹션에는 파트너 센터에서는 응용 프로그램 제출을 만드는 방법을 설명 합니다. 또는 [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
 
 > [!IMPORTANT]
-> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)합니다.
+> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store)합니다.
 
 ## <a name="app-submission-checklist"></a>앱 제출 검사 목록
 

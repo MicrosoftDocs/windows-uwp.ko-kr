@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 베타 테스트, 제한 배포, 베타, 베타들, 테스트, 테스터
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c0a4d1053c35a831458c832131659b9cb888259
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 6cf7fb20129c0b616fcdb537ff8e612aec9b94a4
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787174"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468923"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>베타 테스트 및 대상이 지정된 배포
 
@@ -70,7 +70,7 @@ ms.locfileid: "63787174"
 - 앱을 공중 대상에게 제공할 준비가 되면 새 제출을 만들고 **가시성** 옵션을 **이 제품을 Store에서 다운로드 및 검색이 가능하게 설정**(변경하려는 다른 모든 사항 포함)으로 변경합니다.
 
 > [!IMPORTANT]
-> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows Phone 대상으로 하는 패키지를 포함할 수 없습니다 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)합니다.
+> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows Phone 대상으로 하는 패키지를 포함할 수 없습니다 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store)합니다.
 
 ## <a name="targeted-distribution-to-windows-phone-customers-with-specified-email-addresses"></a>지정된 이메일 주소를 사용하여 Windows Phone 고객에게 배포
 

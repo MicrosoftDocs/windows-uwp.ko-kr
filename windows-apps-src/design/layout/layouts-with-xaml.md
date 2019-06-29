@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 749466e8ebce798f68295df28ad9f11a15e46702
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 69facfe9b1cdac408fe1fd63dfa144de072dfdfd
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365019"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468975"
 ---
 # <a name="responsive-layouts-with-xaml"></a>XAML을 사용한 반응형 레이아웃
 
@@ -22,7 +22,7 @@ XAML 레이아웃 시스템은 반응형 UI를 만들 수 있는 자동 크기 �
 
 XAML 레이아웃 시스템은 고정 레이아웃과 가변 레이아웃을 모두 지원합니다. 고정 레이아웃에서는 컨트롤에 정확한 픽셀 크기와 위치를 제공합니다. 사용자가 장치의 해상도나 방향을 변경해도 UI가 바뀌지 않습니다. 고정 레이아웃은 다양한 폼 요소 및 디스플레이 크기에서 잘릴 수 있습니다. 반면에 유동 레이아웃은 장치에서 사용할 수 있는 가시 공간에 맞게 축소, 확대 또는 재배치됩니다. 
 
-실제로는 고정 및 가변 요소의 조합을 사용하여 UI를 만듭니다. 일부 위치에서 여전히 고정 요소와 값을 사용할 수 있지만, 전체 UI는 해상도, 화면 크기 및 보기에 따라 반응할 수 있도록 해야 합니다.
+실제로는 고정 및 가변 요소의 조합을 사용하여 UI를 만듭니다. 여전히 일부 위치에서는 정적 요소와 값을 사용 하지만 전체 UI를 다양 한 해상도, 화면 크기 및 뷰를 응답 인지 확인 합니다.
 
 여기서는 XAML 속성 및 레이아웃 패널을 사용하여 유동 레이아웃을 만드는 방법을 살펴봅니다.
 
@@ -88,7 +88,7 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 
 자세한 내용은 [맞춤, 여백 및 안쪽 여백](alignment-margin-padding.md) 문서, [**HorizontalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) 및 [**VerticalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment) 참조 페이지를 참조하세요.
 
-**표시 유형**
+**표시 여부**
 
 표시 하거나 설정 하 여 요소를 숨길 수 있습니다 해당 [ **가시성** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) 속성 중 하나에 [ **가시성** 열거형](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Visibility) 값: **표시** 나 **축소**합니다. 요소가 Collapsed인 경우 UI 레이아웃에서 공간을 차지하지 않습니다.
 

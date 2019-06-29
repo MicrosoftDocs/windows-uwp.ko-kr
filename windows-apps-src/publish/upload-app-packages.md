@@ -6,19 +6,19 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 패키지, 업로드, 패키지 업로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 07643b42a4c897c3af1865b895fb174e0eee4a3e
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 97735a8e860f7c941cc35d77a21496696683640f
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787939"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468874"
 ---
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 
 합니다 **패키지** 페이지는 모든 제출할 앱의 패키지 파일 (.msix,.msixupload,.msixbundle,.appx,.appxupload, 및/또는.appxbundle)를 업로드 하는 위치입니다. 이 페이지에서 동일한 앱에 대 한 모든 패키지를 업로드할 수 있습니다 하 고 앱을 다운로드 하는 고객을 때 저장소는 자동으로 해당 장치에 가장 잘 작동 하는 패키지를 사용 하 여 각 고객을 제공 합니다. 패키지를 업로드하면 [특정 Windows 10 디바이스 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지](#device-family-availability)를 등급순으로 나타내는 표가 표시됩니다.
 
 > [!IMPORTANT]
-> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)합니다.
+> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store)합니다.
 
 패키지 내용 및 패키지 구성 방법에 대한 자세한 내용은 [앱 패키지 요구 사항](app-package-requirements.md)을 참조하세요. 에 대 한 자세한 하려는 수도 [특정 고객에 게 배달 하는 방법을 버전 번호 영향 패키지](package-version-numbering.md) 하 고 [다양 한 시나리오에 대 한 패키지를 관리 하는 방법](guidance-for-app-package-management.md)합니다.
 

@@ -6,12 +6,12 @@ ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bdcb8132052cd12444c192c93170fb2f8e94113a
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 989aecdd6c33599b38a53b68439dbf0f0d925040
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215221"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468941"
 ---
 # <a name="in-app-ads"></a>인앱 광고
 
@@ -21,7 +21,7 @@ ms.locfileid: "66215221"
 * 이전에 게시 한 Windows 8.x 및 Windows Phone 8.x 앱을 사용 하는 합니다 [Microsoft Advertising SDK에 대 한 Windows 및 Windows Phone 8.x](https://aka.ms/store-8-sdk)합니다.
 
 > [!IMPORTANT]
-> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)합니다.
+> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store)합니다.
 
 이러한 SDK를 앱과 통합하여 광고를 표시하는 방법에 대한 자세한 내용은 [Microsoft Advertising SDK를 사용하여 앱에 광고 표시](../monetize/display-ads-in-your-app.md)를 참조하세요.
 

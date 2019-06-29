@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c75eb1a4b28b015b83557f74957a3370f478a26e
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: f514177ad5de7774e6926165435fd3b2d7b5e1f7
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63790779"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468943"
 ---
 # <a name="guidance-for-app-package-management"></a>앱 패키지 관리 지침
 
@@ -31,7 +31,7 @@ ms.locfileid: "63790779"
 일반적으로 이후 OS 버전은 동일한 디바이스 패밀리에 대해 이전 OS 버전을 대상으로 하는 패키지를 실행할 수 있습니다. Windows 10 장치는 이전 (장치 제품군) 당 지원 되는 모든 OS 버전을 실행할 수 있습니다. Windows 10 데스크톱 장치는 Windows 8.1 또는 Windows 8;에 대해 빌드된 앱을 실행할 수 있습니다. Windows 10 mobile 장치는 Windows Phone 8.1, Windows Phone 8 및 Windows Phone 빌드된 앱을 실행할 수 7.x입니다. 그러나 고객은 Windows 10에서 앱 적용 가능한 장치 제품군을 대상으로 하는 UWP 패키지에 포함 되지 않은 경우에 해당 패키지 받게 됩니다.
 
 > [!IMPORTANT]
-> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/)합니다.
+> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store)합니다.
 
 
 ## <a name="removing-an-app-from-the-store"></a>스토어에서 앱 제거

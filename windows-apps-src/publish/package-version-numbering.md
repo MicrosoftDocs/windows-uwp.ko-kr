@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bf71e5f6dd77da025a50866d32caca2870d3525b
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: cfab93064cf2fa2edd91798167a2c2fbc368ecb1
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788428"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468894"
 ---
 # <a name="package-version-numbering"></a>패키지 버전 번호
 
@@ -50,7 +50,7 @@ Windows 10 작성할 수 있게 단일 코드 베이스를 어디에 나를 실�
 | 4          | 패키지 버전: 2.0.0.0 <br> 장치 패밀리: Windows.Universal, minVersion 10.0.10240.0   | -   Windows 10 빌드 v10.0.10240.0 이상의 모든 장치 패밀리 고객은 패키지 2.0.0.0을 가져옴 | 
 
 > [!NOTE]
->  모든 경우에 고객의 장치에 대 한 자격이 있는 가능한 버전 번호가 가장 높은 있는 패키지를 받게 됩니다. 예를 들어 위의 세 번째 제출에서는 모든 데스크톱 디바이스가 OS 버전이 10.0.10250.0 이상이고 v1.1.5.0을 받을 수 있는 경우에도 v1.1.10.0을 가져옵니다. 1.1.10.0이 해당 디바이스에서 사용 가능한 가장 높은 버전 번호이므로 이 패키지를 받게 됩니다.
+>  모든 경우에 고객의 장치에 대 한 자격이 있는 가능한 버전 번호가 가장 높은 있는 패키지를 받게 됩니다. 예를 들어 위의 세 번째 제출에서는 모든 데스크톱 디바이스가 OS 버전이 10.0.10250.0 이상이고 v1.1.5.0을 받을 수 있는 경우에도 v1.1.10.0을 가져옵니다. 1\.1.10.0이 해당 디바이스에서 사용 가능한 가장 높은 버전 번호이므로 이 패키지를 받게 됩니다.
 
 ### <a name="using-version-numbering-to-roll-back-to-a-previously-shipped-package-for-new-acquisitions"></a>버전 번호를 사용하여 새 패키지를 이전에 제공된 패키지로 롤백
 
@@ -64,7 +64,7 @@ Windows 10 작성할 수 있게 단일 코드 베이스를 어디에 나를 실�
 ## <a name="version-numbering-for-windows81-and-earlier-and-windows-phone-81-packages"></a>Windows 8.1 (및 이전) 번호 매기기 버전 및 Windows Phone 8.1 패키지
 
 > [!IMPORTANT]
-> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)합니다.
+> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store)합니다.
 
 Windows Phone 8.1을 대상으로 하는 .appx 패키지의 경우 새 제출의 패키지 버전 번호는 항상 마지막 제출(또는 이전 제출)에 포함된 패키지보다 높아야 합니다.
 
