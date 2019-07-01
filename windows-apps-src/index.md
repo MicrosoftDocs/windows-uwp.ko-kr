@@ -1,7 +1,7 @@
 ---
 author: mijacobs
 layout: LandingPage
-description: UWP(유니버설 Windows 플랫폼)를 사용하여 PC, 휴대폰, Xbox One, HoloLens 등 모든 Windows 장치용 앱을 빌드하고 Store에 게시할 수 있습니다.
+description: UWP(유니버설 Windows 플랫폼)를 사용하여 PC, Xbox One, HoloLens 등 모든 Windows 장치용 앱을 빌드하고 Store에 게시할 수 있습니다.
 title: UWP 설명서 - UWP 앱 개발자 | Microsoft Docs
 ms.topic: landing-page
 ms.author: mijacobs
@@ -9,12 +9,12 @@ ms.date: 08/04/2017
 keywords: windows uwp, 유니버설 windows 플랫폼, Windows 런타임 API, windows api, windows api 참조, winrt api, windows api 참조, uwp api, uwp api 참조, uwp 개발, uwp 설계, uwp 게시
 ms.localizationpriority: medium
 ms.technology: uwp-conceptual-docs
-ms.openlocfilehash: 7b89ef27fb83ff12fc2d65e622975ca5dd4f1510
-ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
+ms.openlocfilehash: 06a06ca78532a26dd45480e451d9541efe38c496
+ms.sourcegitcommit: e0471306399e11200252361fa36cc8e6a2add31f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67131910"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67409977"
 ---
 # <a name="universal-windows-platform-documentation"></a>유니버설 Windows 플랫폼 설명서
 

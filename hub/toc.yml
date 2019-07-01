@@ -43,6 +43,20 @@
               href: apps/desktop/modernize/desktop-to-uwp-extend.md
             - name: 패키지된 앱 배포
               href: apps/desktop/modernize/desktop-to-uwp-distribute.md
+        - name: '자습서: WPF 앱 현대화'
+          items:
+            - name: 개요
+              href: apps/desktop/modernize/modernize-wpf-tutorial.md
+            - name: Contoso Expenses 앱을 .NET Core 3으로 마이그레이션
+              href: apps/desktop/modernize/modernize-wpf-tutorial-1.md
+            - name: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
+              href: apps/desktop/modernize/modernize-wpf-tutorial-2.md
+            - name: XAML Islands를 사용하여 UWP CalendarView 컨트롤 추가
+              href: apps/desktop/modernize/modernize-wpf-tutorial-3.md
+            - name: Windows 10 사용자 작업 및 알림 추가
+              href: apps/desktop/modernize/modernize-wpf-tutorial-4.md
+            - name: MSIX로 패키징 및 배포
+              href: apps/desktop/modernize/modernize-wpf-tutorial-5.md
     - name: Fluent 디자인 시스템
       href: apps/fluent-design-system.md
     - name: 접근성
