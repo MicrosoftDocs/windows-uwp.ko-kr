@@ -6,24 +6,23 @@ ms.date: 03/13/2019
 ms.topic: article
 keywords: Windows 10, UWP, 목록, 설명, Microsoft Store 페이지, 릴리스 노트, 제목
 ms.localizationpriority: medium
-ms.openlocfilehash: 91031f8442f43753a04b958692c851b1f16eb1a0
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 0e9c7f56dd799b568e12a887355ec19561f207ea
+ms.sourcegitcommit: 35a511c2b29ae3d5008612a5fc13d3eb6370d2d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63811882"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67495724"
 ---
 # <a name="create-app-store-listings"></a>앱 스토어 목록 만들기
-
 
 [앱 제출 프로세스](app-submissions.md)의 **Store 목록** 섹션에서는 Microsoft Store의 앱 목록을 확인할 때 고객에게 표시되는 텍스트 및 [이미지](app-screenshots-and-images.md)를 제공합니다.
 
 **스토어 목록** 필드 대부분은 선택 사항이지만, 목록을 한눈에 알아볼 수 있도록 여러 이미지와 최대한 많은 정보를 제공하는 것이 좋습니다. **스토어 목록** 단계가 완료된 것으로 간주되려면 텍스트 설명과 [스크린샷](app-screenshots-and-images.md#screenshots)이 하나 이상이 필요합니다.
 
 > [!TIP]
-> 필요에 따라 [가져오기 및 내보내기 스토어 목록](import-and-export-store-listings.md) 경우.csv 파일에서 오프 라인 목록 정보를 입력 하려는 것이 아니라 파트너 센터에서 직접 파일을 업로드 하는 정보를 제공 합니다. 가져오기 및 내보내기 옵션을 사용할 수 있는 기능은 한 번에 여러 번 업데이트를 수행할 수 있기 때문에 목록이 다양한 언어로 되어 있는 경우에 특히 편리할 수 있습니다. 
+> 필요에 따라 [가져오기 및 내보내기 스토어 목록](import-and-export-store-listings.md) 경우.csv 파일에서 오프 라인 목록 정보를 입력 하려는 것이 아니라 파트너 센터에서 직접 파일을 업로드 하는 정보를 제공 합니다. 가져오기 및 내보내기 옵션을 사용할 수 있는 기능은 한 번에 여러 번 업데이트를 수행할 수 있기 때문에 목록이 다양한 언어로 되어 있는 경우에 특히 편리할 수 있습니다.
 
-이전에 게시 된 앱에서 Windows를 지원 하면 8.x 및/또는 Windows Phone 8.x 또는 수 앞 [플랫폼별 스토어 목록 만들기](create-platform-specific-store-listings.md) 해당 고객에 게 표시 합니다. 
+이전에 게시 된 앱에서 Windows를 지원 하면 8.x 및/또는 Windows Phone 8.x 또는 수 앞 [플랫폼별 스토어 목록 만들기](create-platform-specific-store-listings.md) 해당 고객에 게 표시 합니다.
 
 ## <a name="store-listing-languages"></a>스토어 목록 언어
 
@@ -36,7 +35,7 @@ Microsoft Store 목록에 대한 언어를 추가 또는 제거하려면 제출 
 
 **추가 스토어 목록 언어** 섹션에서 **추가 언어 관리**를 클릭하여 패키지에 포함되지 *않은* 언어를 추가하거나 제거할 수 있습니다. 추가할 언어의 확인란을 선택한 다음 **업데이트**를 클릭합니다. 선택한 언어는 **추가 스토어 목록 언어** 섹션에 표시됩니다. 이러한 언어 중 하나 이상을 제거하려면 **제거**를 클릭하거나 **추가 언어 관리**를 클릭하고 제거할 언어의 확인란을 선택 취소합니다.
 
-선택을 완료하면 **저장**을 클릭하여 제출 개요 페이지로 돌아갑니다. 
+선택을 완료하면 **저장**을 클릭하여 제출 개요 페이지로 돌아갑니다.
 
 ## <a name="add-and-edit-store-listing-info"></a>추가 및 편집 저장소 정보를 나열 합니다.
 
@@ -80,16 +79,14 @@ Microsoft Store 목록에 대한 언어를 추가 또는 제거하려면 제출 
 
 자세한 내용은 [앱 스크린샷 및 이미지](app-screenshots-and-images.md#screenshots)를 참조하세요.
 
-
-## <a name="store-logos"></a>Microsoft Store 로고 
+## <a name="store-logos"></a>Microsoft Store 로고
 
 Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 있도록 업로드 할 수 있는 옵션 이미지입니다. Store가 앱 패키지의 로고 이미지를 사용하도록 허용하는 대신, Windows 10(Xbox 포함) 고객을 대상으로 한 앱 Store 목록에서 여기에 업로드 한 이미지만 사용하도록 선택적으로 지정할 수 있습니다.
 
 > [!IMPORTANT]
-> 앱이 Xbox나 Windows Phone 8.1 이전 버전을 지원하는 경우, Microsoft Store에 목록이 정확히 표시될 수 있는 특정 이미지를 제공해야 합니다. 
+> 앱이 Xbox나 Windows Phone 8.1 이전 버전을 지원하는 경우, Microsoft Store에 목록이 정확히 표시될 수 있는 특정 이미지를 제공해야 합니다.
 
 자세한 내용은 [Microsoft Store 로고](app-screenshots-and-images.md#store-logos)를 참조하세요.
-
 
 ## <a name="trailers-and-additional-assets"></a>트레일러 및 자산 추가
 
@@ -109,20 +106,17 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 이 필드는 50자로 제한됩니다
 
-
 ### <a name="sort-title"></a>정렬 제목
 
-제품을 사전 순서로 정렬할 수 있거나 다양한 방식으로 철자를 입력할 수 있는 경우에는 여기에 다른 버전을 입력할 수 있습니다. 이렇게 하면 고객이 검색 동안 해당 버전을 입력할 경우 더 빠르게 제품을 찾을 수 있습니다. 
+제품을 사전 순서로 정렬할 수 있거나 다양한 방식으로 철자를 입력할 수 있는 경우에는 여기에 다른 버전을 입력할 수 있습니다. 이렇게 하면 고객이 검색 동안 해당 버전을 입력할 경우 더 빠르게 제품을 찾을 수 있습니다.
 
 이 필드는 255자로 제한됩니다.
-
 
 ### <a name="voice-title"></a>음성 제목
 
 제품의 대체 이름이 있는 경우에는 Kinect 또는 헤드셋을 사용할 때 Xbox One의 오디오 환경에서 사용할 수 있습니다.
 
 이 필드는 255자로 제한됩니다.
-
 
 ### <a name="short-description"></a>간단한 설명
 
@@ -132,16 +126,14 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 최상의 결과 대 한 짧은 설명 아래 270 문자 유지 합니다. 필드는 1000 자로 제한 되었지만 일부 보기에서는 먼저 270 자만 표시 됩니다 (링크를 간단한 설명의 나머지 부분을 볼 수 있습니다).
 
-
 ### <a name="additional-system-requirements"></a>추가 시스템 요구 사항
 
-필요한 경우 앱이 제대로 작동하는 데 필요한 하드웨어 구성을 [앱 속성](enter-app-properties.md#system-requirements)의 **시스템 요구 사항** 섹션에서 제공한 정보 이상으로 설명할 수 있습니다. 이 정보는 일부 컴퓨터에서 사용할 수 없는 하드웨어가 앱에 필요한 경우에 특히 중요합니다. 예를 들어 앱이 3D 프린터나 마이크로 컨트롤러 같은 외부 USB 하드웨어에서만 제대로 작동하는 경우 여기에 입력하는 것이 좋습니다. 여기에 입력하는 정보는 Windows 10, 버전 1607 이상(Xbox 포함)에서 앱의 Store 목록을 조회하는 고객에게 제품의 속성 페이지에 지정한 요구 사항과 함께 표시됩니다. 
+필요한 경우 앱이 제대로 작동하는 데 필요한 하드웨어 구성을 [앱 속성](enter-app-properties.md#system-requirements)의 **시스템 요구 사항** 섹션에서 제공한 정보 이상으로 설명할 수 있습니다. 이 정보는 일부 컴퓨터에서 사용할 수 없는 하드웨어가 앱에 필요한 경우에 특히 중요합니다. 예를 들어 앱이 3D 프린터나 마이크로 컨트롤러 같은 외부 USB 하드웨어에서만 제대로 작동하는 경우 여기에 입력하는 것이 좋습니다. 여기에 입력하는 정보는 Windows 10, 버전 1607 이상(Xbox 포함)에서 앱의 Store 목록을 조회하는 고객에게 제품의 속성 페이지에 지정한 요구 사항과 함께 표시됩니다.
 
 **최소 하드웨어** 및 **권장 하드웨어** 모두에 대해 최대 11개 항목까지 입력할 수 있습니다. 이 항목들은 Store 목록에 글머리 기호 목록으로 고객에게 표시됩니다. 항목당 200자 이하의 몇 단어만 사용하여 간단하게 유지합니다.
 
 > [!NOTE]
 > 추가 시스템 요구 사항이 Store 목록에 글 머리 기호로 표시되므로 별도의 글머리 기호를 추가하지 마세요.
-
 
 <span id="shared-fields" />
 
@@ -159,7 +151,6 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 추가 저작권 및/또는 상표 정보를 제공하려는 경우 여기에 입력합니다. 이 필드는 200자로 제한됩니다.
 
-
 ### <a name="additional-license-terms"></a>추가 사용 조건
 
 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에서 연결된 **표준 응용 프로그램 사용 조건**에 따라 고객에게 앱 사용을 허가하려면 이 필드를 비워 둡니다.
@@ -170,16 +161,13 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 이 필드에는 텍스트를 최대 10,000자 입력할 수 있습니다. 이렇게 하면 고객에게 이러한 추가 사용 조건이 일반 텍스트로 표시됩니다.
 
-
 ### <a name="developed-by"></a>개발자
 
 앱의 Microsoft Store 목록에 **개발자** 필드를 포함시킬 경우 여기에 텍스트를 입력합니다. (**게시자** 필드는 **개발자** 필드에 값을 제공하는지 여부에 관계 없이 계정에 연결된 게시자 표시 이름을 나열합니다.)
 
 이 필드는 255자로 제한됩니다.
  
-
 <span id="privacy-policy" />
 
 > [!NOTE]
 > **개인 정보 취급 방침**, **웹 사이트** 및 **지원 연락처 정보** 필드가 이제는 [속성](enter-app-properties.md) 페이지에 위치합니다.
-

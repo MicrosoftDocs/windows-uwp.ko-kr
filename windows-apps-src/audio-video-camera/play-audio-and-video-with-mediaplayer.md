@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d25cd3f8a963d85f704e32482475827462ddba58
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3d2d95711196a9bf2ab113527e5fc8f44459dc3d
+ms.sourcegitcommit: d8ce1a25ac0373acafb394837eb5c0737f6efec8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318260"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486427"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>MediaPlayer를 사용하여 오디오 및 비디오 재생
 
@@ -189,7 +189,7 @@ Windows 10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSur
 ## <a name="play-spherical-video-with-mediaplayer"></a>MediaPlayer를 사용하여 구형 비디오 재생
 Windows 10 버전 1703부터 **MediaPlayer**에서 구형 비디오 재생에 대해 정방형 프로젝션을 지원합니다. 구형 동영상 콘텐츠는 일반 동영상과 차이가 없으며 비디오 인코딩이 지원되는 한 **MediaPlayer**의 플랫 비디오에서 비디오가 렌더링됩니다. 비디오가 정방형 프로젝션을 사용하도록 지정하는 메타데이터 태그를 포함하는 구형 비디오의 경우 **MediaPlayer**는 지정한 필드의 보기 및 보기 방향을 사용하여 비디오를 렌더링할 수 있습니다. 이를 통해 탑재된 디스플레이로 가상 현실 비디오 재생 또는 마우스 또는 키보드 입력을 통해 사용자에게 구면 비디오 콘텐츠를 이동하도록 설정 등의 시나리오가 가능합니다.
 
-구면 비디오를 재생하려면 이 문서에서 이전에 설명한 동영상 콘텐츠 재생에 대한 단계를 사용합니다. 한 가지 추가 단계는 [**MediaPlayer.MediaOpened**])https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer#Windows_Media_Playback_MediaPlayer_MediaOpened) 이벤트에 대한 처리기를 등록하는 것입니다. 이 이벤트는 구형 비디오 재생 매개변수를 활성화하고 제어할 수 있는 기회를 제공합니다.
+구면 비디오를 재생하려면 이 문서에서 이전에 설명한 동영상 콘텐츠 재생에 대한 단계를 사용합니다. 하나의 추가 단계에 대 한 처리기를 등록 하는 것은 [ **MediaPlayer.MediaOpened** ](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer#Windows_Media_Playback_MediaPlayer_MediaOpened) 이벤트입니다. 이 이벤트는 구형 비디오 재생 매개변수를 활성화하고 제어할 수 있는 기회를 제공합니다.
 
 [!code-cs[OpenSphericalVideo](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetOpenSphericalVideo)]
 

@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: f653ebe874bfa4d4ad8bb608acf9495f02191de7
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 8bba51627445c553c67b2c02bd66d65486f9caf6
+ms.sourcegitcommit: 68051d2adcf3facc036c9f4c76d82bb4d342a75f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320622"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67498905"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Windows Hello 도우미(IoT) 디바이스에서 Windows 잠금 해제
 
 Windows Hello 도우미 디바이스는 사용자 인증 환경을 향상하기 위해 Windows 10 데스크톱과 함께 실행할 수 있습니다. Windows Hello 도우미 디바이스 프레임워크를 사용하면 도우미 디바이스는 생체 인식을 사용할 수 없는 경우(예: Windows 10 데스크톱에 얼굴 인증용 카메라 또는 지문 판독기를 사용할 수 없는 경우)에도 Windows Hello에 풍부한 환경을 제공할 수 있습니다.
 
-> **참고** Microsoft는 사용 중단 될 Windows Hello 포함 장치 framework 앞으로 및 게시 날짜 초기 고객은 대체 솔루션을 배포 하려면 적절 한 지연 시간을 확인 합니다.
+> **참고** Microsoft에서 Windows Hello 포함 장치에에서 프레임 워크 2020 년 상반기에 대 한 API 사용 중단 됩니다.
 
 > **참고** Windows Hello 도우미 디바이스 프레임워크는 일부 앱 개발자는 사용할 수 없는 특수 기능입니다. 이 프레임워크를 사용하려면 Microsoft에서 앱을 구체적으로 프로비전해야 하며 해당 매니페스트에 제한된 *secondaryAuthenticationFactor* 접근 권한 값을 나열해야 합니다. 승인을 얻으려면 [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com)으로 문의하세요.
 

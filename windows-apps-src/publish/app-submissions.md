@@ -6,12 +6,12 @@ keywords: 검사 목록, Windows, UWP, 제출, 제출하다, 게임, 앱, 제출
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fe5d44823821208a2384aec9d66037c4da3865f
-ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
+ms.openlocfilehash: 7c535b77c68f4375f70fe344165f96d66a551eaf
+ms.sourcegitcommit: d8ce1a25ac0373acafb394837eb5c0737f6efec8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468924"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486418"
 ---
 # <a name="app-submissions"></a>앱 제출
 
@@ -96,10 +96,8 @@ ms.locfileid: "67468924"
 | **스크린 샷**               | 필수 사항(최소 하나의 스크린샷, 4개 이상을 권장)          | [스크린 샷](app-screenshots-and-images.md#screenshots)          |
 | **스토어 로고**               | 권장 사항(일부 OS 버전에서는 필수 사항) | [스토어 로고](app-screenshots-and-images.md#store-logos)             |
 | **트레일러**                  | 선택 사항                                    | [트레일러](app-screenshots-and-images.md#trailers)                | 
-| **Windows 10 및 Xbox 이미지 (16:9 슈퍼 hero 아트)**     | 권장        | [Windows 10 및 Xbox 이미지 (16:9 슈퍼 hero 아트)
-](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
-| **Xbox 이미지**     | Xbox에 게시 하는 경우 적절 하 게 표시할에 필요한        | [Xbox 이미지
-](app-screenshots-and-images.md#xbox-images) |
+| **Windows 10 및 Xbox 이미지 (16:9 슈퍼 hero 아트)**     | 권장        | [Windows 10 및 Xbox 이미지 (16:9 슈퍼 hero 아트)](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+| **Xbox 이미지**     | Xbox에 게시 하는 경우 적절 하 게 표시할에 필요한        | [Xbox 이미지](app-screenshots-and-images.md#xbox-images) |
 | **추가 필드**  | 선택 사항                                    | [추가 필드](create-app-store-listings.md#supplemental-fields) 
 | **검색 용어**              | 선택 사항                                    | [검색 용어](create-app-store-listings.md#search-terms)         |
 | **저작권 및 상표 정보** | 선택 사항                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |

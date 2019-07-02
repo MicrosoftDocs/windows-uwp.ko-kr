@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 5498480e0dbe2c8be96d92df766b15676a3e6b7b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ff17facbb22e4e336b302415b0b64d0dffda93e0
+ms.sourcegitcommit: 68051d2adcf3facc036c9f4c76d82bb4d342a75f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371930"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67498893"
 ---
 # <a name="smart-cards"></a>스마트 카드
 
@@ -82,6 +82,9 @@ SmartCardProvisioning provisioning = await
 ```
 
 [  **RequestVirtualSmartCardCreationAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcardcreationasync)에서 연결된 [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) 개체를 반환하면 가상 스마트 카드가 프로비전되고 사용할 준비가 됩니다.
+
+>[!NOTE]
+>UWP 앱을 사용 하 여 가상 스마트 카드를 만들려면 앱을 실행 하는 사용자는 administrators 그룹의 구성원 이어야 합니다. 사용자의 관리자 그룹의 멤버인 경우 가상 스마트 카드를 만들지가 못합니다.
 
 ## <a name="handle-authentication-challenges"></a>인증 질문 처리
 

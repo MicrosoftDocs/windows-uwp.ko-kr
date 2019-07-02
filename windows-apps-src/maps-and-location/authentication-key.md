@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도 인증 키, 지도 컨트롤
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f62ecfab5bd8d09092e5264831327b8c63666bc
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bb6cf66a6725e8231fac693a81a39bc2f0b15fd2
+ms.sourcegitcommit: 68051d2adcf3facc036c9f4c76d82bb4d342a75f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370509"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67498896"
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 
@@ -48,7 +48,7 @@ ms.locfileid: "66370509"
     -   **응용 프로그램 이름:** 응용 프로그램의 이름입니다.
     -   **응용 프로그램 URL (선택 사항):** 응용 프로그램의 URL입니다.
     -   **키 형식:** 선택 **기본적인** 하거나 **Enterprise**합니다.
-    -   **응용 프로그램 형식:** 선택 **유니버설 Windows 앱** 유니버설 Windows 앱에서 사용 합니다.
+    -   **응용 프로그램 형식:** 선택 **Windows 응용 프로그램** 유니버설 Windows 앱에서 사용 합니다.
 
     다음은 양식이 표시되는 모양의 예입니다.
 
