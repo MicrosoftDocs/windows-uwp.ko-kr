@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bc879e43d7e117a4e61e8b6de4bb5437d126e84b
-ms.sourcegitcommit: 7effecb544952b493250337fc622848232fa5995
+ms.openlocfilehash: 8cf010533d2d62559bb8dc0d214e04ab917e62bd
+ms.sourcegitcommit: d534f81590d881a18d677a648c59913029837a84
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67325851"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535436"
 ---
 # <a name="bringing-it-together"></a>통합
 
@@ -26,16 +26,13 @@ ms.locfileid: "67325851"
 
 :::row:::
     :::column:::
-        **Implicit animation**
-        Automatic tween and timing between values in a parameter change to achieve very simple Fluent motion using the standardized values.
+**암시적 애니메이션** 자동 트윈 및 표준화 된 값을 사용 하는 매우 간단한 Fluent 동작을 달성 하기 위해 매개 변수 변경에서 값 사이의 시간입니다.
     :::column-end:::
     :::column:::
-        **Built-in animation**
-        System components, such as common controls and shared motion, are "Fluent by default". Fundamentals have been applied in a manner consistent with their implied usage.
+**기본 제공 애니메이션** 공용 컨트롤 및 공유 중인 등 시스템 구성 요소는 "Fluent 기본적으로". 기본 사항 묵시적된 용도 사용 하 여 일관 된 방식으로 적용 되었습니다.
     :::column-end:::
     :::column:::
-        **Custom animation following guidance recommendations**
-        There may be times when the system does not yet provide an exact motion solution for your scenario. In those cases, use the baseline fundamental recommendations as a starting point for your experiences.
+**사용자 지정 애니메이션 지침 권장 사항을 따르면** 경우 시스템 제공 하지 않습니다는 정확한 동작 솔루션 시나리오에 대 한 경우가 있을 수 있습니다. 이러한 경우 경험에 대 한 시작 점으로 기본 기본 권장 사항을 사용 합니다.
     :::column-end:::
 :::row-end:::
 
@@ -45,16 +42,14 @@ ms.locfileid: "67325851"
 
 :::row:::
     :::column:::
-        <b>Direction Forward Out:</b><br>
-        Fade out: 150m; Easing: Default Accelerate
-        <b>Direction Forward In:</b><br>
-        Slide up 150px: 300ms; Easing: Default Decelerate
+<b>방향 정방향 제한:</b><br>
+페이드 아웃을 적용 합니다. 150 m; 감속/가속: 기본 가속화 <b>표면은에서:</b><br>
+150px 위로 이동 합니다. 되 300ms; 감속/가속: 기본 감속
     :::column-end:::
     :::column:::
-         <b>Direction Backward Out:</b><br>
-        Slide down 150px: 150ms; Easing: Default Accelerate
-        <b>Direction Backward In:</b><br>
-        Fade in: 300ms; Easing: Default Decelerate
+<b>Out 이전 버전과 방향:</b><br>
+150px 아래로 이동 합니다. 150ms; 감속/가속: 기본 가속화 <b>에서 이전 버전과 방향:</b><br>
+페이드 인 합니다. 되 300ms; 감속/가속: 기본 감속
     :::column-end:::
 :::row-end:::
 
@@ -64,12 +59,12 @@ ms.locfileid: "67325851"
 
 :::row:::
     :::column:::
-        <b>Direction Expand:</b><br>
-        Grow: 300ms; Easing: Standard
+<b>방향 확장 합니다.</b><br>
+증가: 되 300ms; 감속/가속: Standard
     :::column-end:::
     :::column:::
-        <b>Direction Contract:</b><br>
-        Grow: 150ms; Easing: Default Accelerate
+<b>방향 계약:</b><br>
+증가: 150ms; 감속/가속: 기본 가속화
     :::column-end:::
 :::row-end:::
 
