@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dbb06f53f760724da312e00f545d799d6a24200
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 991d86dd61c660553e5b0a3fdbbdec0336c7fb8b
+ms.sourcegitcommit: d63e5a4fd24434068067cae5b8fb3bed4931247e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321567"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67515156"
 ---
 # <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>GPIO, I2C 및 SPI에 대한 사용자 모드 액세스를 사용하도록 설정
 
@@ -268,7 +268,7 @@ InputHighImpedance 및 OutputCmos는 거의 모든 GPIO 컨트롤러에서 지�
 Windows는 다음 두 가지 핀 번호 매기기 체계를 지원합니다.
 
 * 순차 핀 번호 매기기 – 0, 1, 2...부터 노출된 최대 핀 수까지 번호가 표시됩니다. 0은 ASL에 선언된 첫 번째 GpioIo 리소스이고, 1은 ASL에 선언된 두 번째 GpioIo 리소스이며 이와 같은 방식으로 계속 적용됩니다.
-* 네이티브 핀 번호 매기기 – GpioIo 설명자에 지정된 핀 번호(예: 4, 5, 12, 13...)가 표시됩니다
+* 기본 Pin 번호 매기기 – 사용자에 게 5, 12, 13, 예: 4 GpioIo 설명자에 지정 된 pin 번호를 표시 하는 중...
 
 ```cpp
 Package (2) { “GPIO-UseDescriptorPinNumbers”, 1 },
