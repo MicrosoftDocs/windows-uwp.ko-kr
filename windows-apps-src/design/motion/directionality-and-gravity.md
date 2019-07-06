@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3cdb20516d4f21933c7770f43701af322e09c886
-ms.sourcegitcommit: 7effecb544952b493250337fc622848232fa5995
+ms.openlocfilehash: 8f1e36f0febeeaac5a12d408d7be8a717f0ab398
+ms.sourcegitcommit: 7c3b88198178d6f6a535f35e1bf8665410d41d92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67325914"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569120"
 ---
 # <a name="directionality-and-gravity"></a>방향 및 무게
 
@@ -43,8 +43,8 @@ ms.locfileid: "67325914"
 
 :::row:::
     :::column:::
-        Direction of movement corresponds to physical motion. Just like in nature, objects can move in any world axis - X,Y,Z. This is how we think of the movement of objects on the screen.
-        When you move objects, avoid unnatural collisions. Keep in mind where objects come from and go to, and alway support higher level constructs that may be used in the scene, such as scroll direction or layout hierarchy.
+이동 방향을 실제 동작에 해당합니다. 자연에서처럼 개체는 세계 축 X, Y, Z의 어디든지 이동할 수 있습니다. 다음은 화면에서 개체의 동작에 대한 생각입니다.
+개체를 이동 하면 자연스럽 지 충돌을 방지 합니다. 염두에 있는 개체에서 가져올, 이동 및 항상 스크롤 방향 또는 레이아웃 계층 같은 장면에서 사용할 수 있는 더 높은 수준의 구문을 지원 합니다.
     :::column-end:::
     :::column:::
         ![direction backward in](images/Direction.gif)
@@ -75,8 +75,7 @@ ms.locfileid: "67325914"
 
 :::row:::
     :::column:::
-        **Forward-In**
-        Celebrate content entering the scene in a manner that does not collide with outgoing content. Content decelerates into the scene.
+**앞에서** 장면 나가는 콘텐츠를 사용 하 여 충돌 하지 않도록 하는 방식으로 입력 하는 콘텐츠를 잡게 합니다. 콘텐츠는 장면을 감속 합니다.
     :::column-end:::
     :::column:::
         ![direction forward in](images/forwardIN.gif)
@@ -84,8 +83,7 @@ ms.locfileid: "67325914"
 :::row-end:::
 :::row:::
     :::column:::
-        **Forward-Out**
-        Content exits quickly. Objects accelerate off screen.
+**정방향 스케일 아웃** 콘텐츠 신속 하 게 종료 됩니다. 화면 밖으로 개체 가속화 하세요.
     :::column-end:::
     :::column:::
         ![direction forward out](images/forwardOUT.gif)
@@ -93,8 +91,7 @@ ms.locfileid: "67325914"
 :::row-end:::
 :::row:::
     :::column:::
-        **Backward-In**
-        Same as Forward-In, but reversed.
+**이전 버전과 옵트인** 앞에서와 동일 하지만 반대로 합니다.
     :::column-end:::
     :::column:::
         ![direction backward in](images/backwardIN.gif)
@@ -102,8 +99,7 @@ ms.locfileid: "67325914"
 :::row-end:::
 :::row:::
     :::column:::
-        **Backward-Out**
-        Same as Forward-Out, but reversed.
+**이전 버전과 스케일 아웃** 정방향 스케일 아웃 동일 하지만 반대로 합니다.
     :::column-end:::
     :::column:::
         ![direction backward out](images/backwardOUT.gif)
