@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0aac8f82f4dd6a40f5672af8c000905cfa9c747e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9ef2007648c21e015aa2ae692d28efa56c922bf5
+ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365636"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660190"
 ---
 # <a name="keyboard-events"></a>키보드 이벤트
 
@@ -165,7 +165,8 @@ void MainPage::OnNavigatedTo(NavigationEventArgs^ e)
     (void) e;    // Unused parameter
     this->Loaded+=ref new RoutedEventHandler(this,&amp;MainPage::ProgrammaticFocus);
 }
-void MainPage::ProgrammaticFocus(Object^ sender, RoutedEventArgs^ e) {
+void MainPage::ProgrammaticFocus(Object^ sender, RoutedEventArgs^ e) 
+{
     this->Focus(Windows::UI::Xaml::FocusState::Programmatic);
 }
 
@@ -192,7 +193,8 @@ void KeyboardSupport::MainPage::Grid_KeyDown(Platform::Object^ sender, Windows::
 
 void KeyboardSupport::MainPage::Grid_KeyUp(Platform::Object^ sender, Windows::UI::Xaml::Input::KeyRoutedEventArgs^ e)
 {
-    if (IsCtrlKeyPressed()) {
+    if (IsCtrlKeyPressed()) 
+    {
         if (e->Key==VirtualKey::P) { DemoMovie->Play(); }
         if (e->Key==VirtualKey::A) { DemoMovie->Pause(); }
         if (e->Key==VirtualKey::S) { DemoMovie->Stop(); }
@@ -328,7 +330,7 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 다음 예제에서에서는 모든 화살표 키를 누를 때 콘텐츠 컨트롤 하위 클래스 및 GridView에 포커스를 이동 하려면 KeyDown 동작을 재정의 합니다.
 
 ```csharp
-public class CustomGridView : GridView
+  public class CustomGridView : GridView
   {
     protected override void OnKeyDown(KeyRoutedEventArgs e)
     {
@@ -393,7 +395,7 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 * [터치 키보드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
 * [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
 * [입력된 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)

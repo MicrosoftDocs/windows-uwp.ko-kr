@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 814d8c04943e32ff4d2f0c81bd847e78becd5ebb
-ms.sourcegitcommit: a4fe508e62827a10471e2359e81e82132dc2ac5a
+ms.openlocfilehash: 38a5a6fae3e6477321a8879a50dff21e10fd92e2
+ms.sourcegitcommit: 48ca9c99b52f93a805d5afeb7045ba4bf6597371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66468329"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67622941"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Windows 10 및 UWP 패키지에 포함 된 데스크톱 앱 통합
 
@@ -288,8 +288,8 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+* http:\//schemas.microsoft.com/appx/manifest/uap/windows10
+* http:\//schemas.microsoft.com/appx/manifest/uap/windows10/3"
 
 #### <a name="elements-and-attributes-of-this-extension"></a>이 확장의 요소 및 특성
 
@@ -375,7 +375,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 |-------|-------------|
 |범주 |항상 ``windows.firewallRules``|
 |실행 파일 |방화벽 예외 목록에 추가하고자 하는 실행 파일의 이름 |
-|Direction |인바운드 규칙인지 아웃바운드 규칙인지를 표시 |
+|방향 |인바운드 규칙인지 아웃바운드 규칙인지를 표시 |
 |IPProtocol |통신 프로토콜 |
 |LocalPortMin |로컬 포트 번호의 범위 내에 있는 하위 포트 번호입니다. |
 |LocalPortMax |로컬 포트 번호의 범위 내에 있는 최상위 포트 번호입니다 |

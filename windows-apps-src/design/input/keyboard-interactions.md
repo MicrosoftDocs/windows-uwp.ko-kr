@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: 20cb1e3162f0c852a60c620be92afd37ad9f8232
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: eef1c3dd50f06d38023102122cc7fc63a36df25c
+ms.sourcegitcommit: 3ec8c1d0ea3798cdb2745e7a941a025cf3cf21c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317277"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650790"
 ---
 # <a name="keyboard-interactions"></a>키보드 조작
 
@@ -369,7 +369,7 @@ UWP 컨트롤은 기본적으로 화살표 키 탐색을 지원합니다. 사용
 UWP 키보드 동작과 내레이터에서 지원하는 동작의 차이점은 다음과 같습니다.
 -   컨트롤 레이블을 읽는 Caps Lock + 화살표 키처럼 표준 키보드 탐색을 통해 노출되지 않는 UI 요소를 탐색하는 추가 키 조합.
 -   비활성화된 항목 탐색. 기본적으로 비활성화된 항목은 표준 키보드 탐색을 통해 노출되지 않습니다.
-    -   UI 세분성에 따라 보다 빠른 탐색을 위한 컨트롤 "보기". 사용자가 항목, 문자, 단어, 줄, 단락, 링크, 머리글, 표, 랜드마크 및 제안을 탐색할 수 있습니다. 표준 키보드 탐색에서 이러한 개체를 단순 목록으로 노출하며, 바로 가기 키를 제공하지 않으면 탐색이 번거로울 수 있습니다.
+-   UI 세분성에 따라 보다 빠른 탐색을 위한 컨트롤 "보기". 사용자가 항목, 문자, 단어, 줄, 단락, 링크, 머리글, 표, 랜드마크 및 제안을 탐색할 수 있습니다. 표준 키보드 탐색에서 이러한 개체를 단순 목록으로 노출하며, 바로 가기 키를 제공하지 않으면 탐색이 번거로울 수 있습니다.
 
 #### <a name="case-study--autosuggestbox-control"></a>사례 연구 – AutoSuggestBox 컨트롤
 
@@ -485,16 +485,21 @@ Xbox 게임 패드 및 리모컨은 여러 UWP 키보드 동작과 환경을 지
 
 언급 했 듯이 응용 프로그램의 UI에서 컨트롤의 시각적 개체 순서에 해당 하는 방향 탐색을 확인 하려고 해야 합니다.
 
-ContextMenu, AppBarOverflowMenu, 및 AutoSuggest, 같은 일부 컨트롤 위치 및 방향 (사용 가능한 화면 공간에 따라) 기본 컨트롤을 기준으로 표시 되는 메뉴 팝업을 포함 합니다. 예를 들어 메뉴를 아래쪽(기본 방향)으로 열기에 공간이 부족할 경우 메뉴가 위쪽으로 열립니다. 메뉴가 항상 같은 방향으로 열린다는 보장은 없습니다.
+일부 컨트롤 (예: 상황에 맞는 메뉴, 명령 모음 오버플로 메뉴 및 AutoSuggest 메뉴)의 기본 컨트롤 및 사용 가능한 화면 공간을 기준으로 아래쪽으로 기본적으로 위치 및 방향에 팝업 메뉴를 표시합니다. 참고 런타임에 여 방향을 다양 한 요인에 따라 달라질 수 있습니다.
 
 <table>
   <td><img src="images/keyboard/command-bar-open-down.png" alt="command bar opens down with down arrow key" /></td>
   <td><img src="images/keyboard/command-bar-open-up.png" alt="command bar opens up with down arrow key" /></td>
 </table>
 
-이러한 컨트롤의 경우 메뉴를 처음으로 열면(그리고 사용자가 아무 항목도 선택하지 않으면) 아래쪽 화살표 키는 항상 첫 번째 항목에 포커스를 설정하고 위쪽 화살표 키는 항상 메뉴의 마지막 항목에 포커스를 설정합니다. 마찬가지로 마지막 항목을 선택하고 아래쪽 화살표 키를 누르면 메뉴의 첫 번째 항목으로 포커스가 이동하고, 첫 번째 항목을 선택하고 위쪽 화살표 키를 누르면 메뉴의 마지막 항목으로 포커스가 이동합니다.
+이러한 컨트롤의 메뉴를 처음으로 열면 (및 사용자가 선택 된 항목이 없음을) 하는 경우 아래쪽 화살표 키를 항상 포커스를 설정 첫 번째 항목 동안 위쪽 화살표 키를 항상 마지막 항목에 집중 합니다. 
 
-개발자는 사용자 지정 컨트롤에서 이와 동일한 동작을 에뮬레이션하려고 시도해야 합니다. 이 동작을 구현 하는 방법에 대 한 코드 샘플에서 확인할 수 있습니다 [프로그래밍 방식 포커스 탐색](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) 설명서.
+마지막 항목에 포커스가 있는 아래쪽 화살표 키를 누를 경우 포커스가 메뉴의 첫 번째 항목으로 이동 합니다. 마찬가지로, 첫 번째 항목에 포커스가 있는 위쪽 화살표 키를 누를 경우 포커스가 이동 마지막 항목 메뉴에서 합니다. 이 동작은 이라고 *순환* 예측할 수 없는 방향으로 열 수 있는 팝업 메뉴를 탐색 하는 데 유용 합니다.
+
+> [!NOTE]
+> 사용자는 무한 루프에서 트랩을 가져올 수 있습니다 위치 하는 팝업이 아닌 ui에서 순환를 피해 야 합니다. 
+
+사용자 지정 컨트롤에서 이러한 동일한 동작을 에뮬레이션 하는 것이 좋습니다. 이 동작을 구현 하는 방법에 대 한 코드 샘플에서 확인할 수 있습니다 [프로그래밍 방식 포커스 탐색](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) 설명서.
 
 ## <a name="test-your-app"></a>앱 테스트
 
@@ -504,7 +509,7 @@ ContextMenu, AppBarOverflowMenu, 및 AutoSuggest, 같은 일부 컨트롤 위치
 * [키보드 이벤트](keyboard-events.md)
 * [입력 디바이스 식별](identify-input-devices.md)
 * [터치 키보드의 현재 상태에 대 한 응답](respond-to-the-presence-of-the-touch-keyboard.md)
-* [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 ## <a name="appendix"></a>부록
 
