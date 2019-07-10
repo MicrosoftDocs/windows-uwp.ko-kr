@@ -3,16 +3,16 @@ Description: 관리 센터에서 알림 메시지를 사용 하 여 시각적으
 title: 알림 헤더
 label: Toast headers
 template: detail.hbs
-ms.date: 12/7/2017
+ms.date: 12/07/2017
 ms.topic: article
 keywords: Windows 10, uwp, 알림, 헤더, 알림 헤더, 알림, 그룹 알림, 알림 센터
 ms.localizationpriority: medium
-ms.openlocfilehash: 361b161b8cf323596a3b07665819300c78f1dcc5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c7d1e3ce0a012d36bea671f87efb8df3a5d49b5f
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612108"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714089"
 ---
 # <a name="toast-headers"></a>알림 헤더
 

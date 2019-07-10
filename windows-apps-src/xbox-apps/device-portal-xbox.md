@@ -2,16 +2,16 @@
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Xbox용 디바이스 포털
 description: Xbox One용 디바이스 포털을 사용하는 방법에 대해 알아봅니다.
-ms.date: 4/9/2019
+ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: c701dc7eef4d37f28db9f9cabd7bbb0f39a92a4c
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: db0d2955f01fcae04a85c57a6dc28a32c561553a
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322091"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713851"
 ---
 # <a name="device-portal-for-xbox"></a>Xbox용 디바이스 포털
 

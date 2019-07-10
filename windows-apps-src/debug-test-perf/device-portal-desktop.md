@@ -2,16 +2,16 @@
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Windows 데스크톱의 장치 포털
 description: Windows Device Portal이 Windows 데스크톱의 진단 및 자동화를 제공하는 방법을 알아봅니다.
-ms.date: 02/6/2019
+ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fe1f2a51199dd12cd1d285c17c5d48c9a25b969
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 00cf497d5d57f5a3cdc5c52ecfeead7885ff7d56
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654528"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713807"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Windows 데스크톱의 장치 포털
 
@@ -115,9 +115,9 @@ Windows 10의 시험판 빌드에 대해 개발자 패키지를 설치 하려고
 
 1. 이동할 **설정 > 업데이트 및 보안 > Windows 참가자 프로그램** 있는지 확인 합니다 **Windows Insider 계정** 섹션에는 올바른 계정 정보입니다. 찾을 수 없으면 해당 섹션을 선택 **Windows Insider 계정을 연결할**메일 계정을 추가 하 고는 아래에 표시를 확인 합니다 **Windows Insider 계정** 제목 ( 를선택해야할수도있습니다**Windows Insider 계정을 연결할** 새로 추가 된 계정을 실제로 링크를 두 번째 시간).
  
-2. 아래 **어떤 종류의 콘텐츠를 수신 하 시겠습니까?**, 했는지 **Windows의 활발 한 개발** 선택 합니다.
+2. 아래 **어떤 종류의 콘텐츠를 수신 하 시겠습니까?** , 했는지 **Windows의 활발 한 개발** 선택 합니다.
  
-3. 아래 **속도 새 빌드를 가져오기 하 시겠습니까?**, 했는지 **Windows Insider 빠른** 선택 합니다.
+3. 아래 **속도 새 빌드를 가져오기 하 시겠습니까?** , 했는지 **Windows Insider 빠른** 선택 합니다.
  
 4. 이제는 FoDs를 설치할 수 있습니다. Windows Insider 빠른 있는 및 여전히 없습니다 설치는 FoDs, 하세요 피드백을 제공 하 고는 아래에 있는 로그 파일을 첨부 하 게 확인 하는 경우 **C:\Windows\Logs\CBS**합니다.
 
@@ -129,7 +129,7 @@ Windows 10의 시험판 빌드에 대해 개발자 패키지를 설치 하려고
 
 요금제 인터넷 연결을 사용 하는 경우이 오류가 발생할 수 있습니다. 데이터 통신된 연결에서 개발자 패키지를 다운로드할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 * [Windows Device Portal 개요](device-portal.md)
 * [장치 포털 core API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

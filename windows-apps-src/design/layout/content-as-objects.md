@@ -3,12 +3,13 @@ description: ''
 title: 개체로서의 콘텐츠
 template: detail.hbs
 ms.localizationpriority: medium
-ms.openlocfilehash: ed2ac8530d69929cc0e0e921cfb1cc5368058cd2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.date: 04/18/2019
+ms.openlocfilehash: b73e595454121fa34b536f3672c75a5c554ee0f3
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593118"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714024"
 ---
 # <a name="content-as-objects"></a>개체로서의 콘텐츠
 
@@ -140,7 +141,7 @@ Windows 10 RS2에서는 또 다른 차원인 깊이를 추가하였습니다.
 Depth is meaningful; it establishes visual and interactive hierarchy for users to efficiently complete tasks. Depth orients users in our system. 
 -->
 
-## <a name="example-tbd"></a>예제: TBD
+## <a name="example-tbd"></a>예: TBD
 > TODO: Z 순서를 사용 하는 일반적인 UI 패턴을 적용 하는 방법을 보여 줍니다. 일러스터레이션 및 코드를 표시해야 합니다. 
 
 ## <a name="download-the-code-samples"></a>코드 샘플 다운로드

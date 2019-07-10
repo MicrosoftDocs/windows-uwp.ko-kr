@@ -5,16 +5,16 @@ title: 세계화 및 지역화
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
-ms.date: 12/7/2018
+ms.date: 12/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e9e0f6305a99b6e3ab83cb3b560754f2e4d310f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 91396051ec822f469e300f51217191fc4e704cac
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648228"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714045"
 ---
 # <a name="globalization-and-localization"></a>세계화 및 지역화
 
@@ -65,7 +65,7 @@ Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용
 | [레이아웃 및 글꼴 조정, RTL 지원](adjust-layout-and-fonts--and-support-rtl.md) | RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 설계합니다. |
 | [NumeralSystem 값](glob-numeralsystem-values.md) | 이 항목에서는 [**Windows.Globalization**](/uwp/api/windows.globalization?branch=live) 네임스페이스의 다양한 **NumeralSystem** 속성 클래스에 대해 사용할 수 있는 값을 나열합니다. |
 | [앱을 지역화할 수 확인](prepare-your-app-for-localization.md) | 현지화된 앱은 앱에 기능적인 결함은 다루지 않고 다른 시장, 언어 또는 지역에 맞게 현지화할 수 있습니다. 지역화할 앱의 가장 중요한 속성은 실행 코드가 앱의 지역화 리소스와 깔끔하게 분리된 것입니다. |
-| [국가별 글꼴](loc-international-fonts.md) | 이 항목에서는 미국 이외의 언어로 지역화 된 UWP 앱에 대 한 사용 가능한 글꼴을 보여 줍니다. 영어. |
+| [국가별 글꼴](loc-international-fonts.md) | 이 항목에서는 미국 이외의 언어로 지역화 된 UWP 앱에 대 한 사용 가능한 글꼴을 보여 줍니다. 사용합니다. |
 | [양방향 텍스트에 대 한 앱 디자인](design-for-bidi-text.md) | 왼쪽에서 오른쪽 및 오른쪽에서 왼쪽 쓰기 시스템으로 구성된 스크립트를 결합할 수 있도록 양방향 텍스트 지원을 제공하도록 앱을 디자인합니다. |
 | [Multilingual App Toolkit 4.0 사용](use-mat.md) | MAT(다국어 앱 도구 키트) 4.0은 UWP 앱에 번역 지원, 번역 파일 관리 및 편집기 도구를 제공하도록 Microsoft Visual Studio 2017과 통합되어 있습니다. |
 | [다국어 앱 도구 키트 4.0 FAQ 및 문제 해결](mat-faq-troubleshooting.md) | 이 항목에는 자주 묻는 질문과 대답, 다국어 앱 도구 키트(MAT) 4.0과 관련된 문제가 나와 있습니다. |

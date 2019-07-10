@@ -1,16 +1,16 @@
 ---
 title: 느슨한 파일 등록을 통해 앱 배포
 description: 이 가이드에서는 느슨한 파일 레이아웃을 사용하여 Windows 10 앱을 패키지하지 않고도 유효성을 검사하고 공유하는 방법을 보여 줍니다.
-ms.date: 6/1/2018
+ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털, 앱 관리자, 배포, sdk
 ms.localizationpriority: medium
-ms.openlocfilehash: adc944f3e84e2ea7ba3dacd2021bc2e141bf8cdd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3369f3a982efec258fb5ac2358b2962e84e6cefb
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362315"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713766"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>느슨한 파일 등록을 통해 앱 배포 
 

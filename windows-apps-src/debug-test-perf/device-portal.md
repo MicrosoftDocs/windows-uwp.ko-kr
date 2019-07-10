@@ -2,16 +2,16 @@
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: Windows Device Portal 개요
 description: Windows Device Portal을 사용하여 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있는 방법에 대해 알아봅니다.
-ms.date: 4/9/2019
+ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 59e7e46ea68f6bb5fe7fd63e6ac35b9256103c38
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 1f776a9d0ffe15f4bec26fbf8a26ce52a73345e9
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317896"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713862"
 ---
 # <a name="windows-device-portal-overview"></a>Windows Device Portal 개요
 
@@ -45,11 +45,11 @@ Xbox | 개발자 모드 내에서 사용 설정 | 사용 안 함 | 11443 | 해�
 
 디바이스별 설치 지침은 다음을 참조하세요.
 
-- [HoloLens 장치 포털](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens)
-- [Iot 장치 포털](https://go.microsoft.com/fwlink/?LinkID=616499)
-- [모바일 장치 포털](device-portal-mobile.md)
-- [Xbox 용 장치 포털](../xbox-apps/device-portal-xbox.md)
-- [데스크톱에 대 한 장치 포털](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
+- [HoloLens용 디바이스 포털](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens)
+- [IoT용 디바이스 포털](https://go.microsoft.com/fwlink/?LinkID=616499)
+- [모바일용 디바이스 포털](device-portal-mobile.md)
+- [Xbox용 디바이스 포털](../xbox-apps/device-portal-xbox.md)
+- [데스크톱 디바이스 포털](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
 
 ## <a name="features"></a>기능
 

@@ -8,16 +8,16 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 16f61c1f950583ee0fef7f30b7e17939df7ea538
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: fa38c952d4d46d83ea9b4e9f0db5f516fe09ce59
+ms.sourcegitcommit: f9a30bfd1e8eab50d0b1db97dd2f650ce66b5d34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317764"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690898"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>데스크톱 응용 프로그램에서 호스팅 API는 UWP XAML을 사용 하 여
 
-Windows 10, 버전 1903, 비 UWP 데스크톱 응용 프로그램 시작 (WPF, Windows Forms를 포함 하 여 및 C++ Win32 응용 프로그램) 사용할 수는 *호스팅 API는 UWP XAML* 연관 된 모든 UI 요소에서 UWP 컨트롤을 호스트 하는 창 핸들 (HWND)입니다. 이 API는 UWP 컨트롤을 통해 이용할 수 있는 최신 Windows 10 UI 기능을 사용 하려면 비 UWP 데스크톱 응용 프로그램 수 있습니다. 비 UWP 데스크톱 응용 프로그램 수를 사용 하는 호스트 UWP 컨트롤에이 API를 사용 하는 예를 들어 합니다 [Fluent Design System](/windows/uwp/design/fluent-design-system/index) 지원과 [Windows 잉크](/windows/uwp/design/pen-and-stylus-interactions)합니다.
+Windows 10, 버전 1903, 비 UWP 데스크톱 응용 프로그램 시작 (WPF, Windows Forms를 포함 하 여 및 C++ Win32 응용 프로그램) 사용할 수는 *호스팅 API는 UWP XAML* 연관 된 모든 UI 요소에서 UWP 컨트롤을 호스트 하는 창 핸들 (HWND)입니다. 이 API는 UWP 컨트롤을 통해 이용할 수 있는 최신 Windows 10 UI 기능을 사용 하려면 비 UWP 데스크톱 응용 프로그램 수 있습니다. 비 UWP 데스크톱 응용 프로그램 수를 사용 하는 호스트 UWP 컨트롤에이 API를 사용 하는 예를 들어 합니다 [Fluent Design System](/windows/uwp/design/fluent-design-system/index) 지원과 [Windows 잉크](/windows/uwp/design/input/pen-and-stylus-interactions)합니다.
 
 호스팅 API는 UWP XAML 광범위 한 개발자가 데스크톱 응용 프로그램 uwp 비 Fluent UI를 가져올 수 있도록 제공 되는 컨트롤 집합을 위한 토대를 제공 합니다. 이 기능은 이라고 *XAML 제도*합니다. 이 기능의 개요를 보려면 [데스크톱 응용 프로그램에서 UWP 컨트롤](xaml-islands.md)합니다.
 

@@ -1,17 +1,17 @@
 ---
 description: 프로세스 수명 관리에서 앱의 작동 방식을 디버깅 및 테스트하기 위한 도구와 기술입니다.
 title: PLM(프로세스 수명 관리) 테스트 및 디버깅 도구
-ms.date: 4/8/2019
+ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
-ms.openlocfilehash: 94cbad6e497ea2f5b36a07a6b039bfc293175c4c
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 4d99492577fafc9f67929f795cd115d367940938
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244349"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713740"
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>PLM(프로세스 수명 관리) 테스트 및 디버깅 도구
 
@@ -86,5 +86,5 @@ plmdebug /enableDebug 279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.0.0_x86__c6sq6kwg
 
 ## <a name="related-topics"></a>관련 항목
 
-- [UWP 앱 배포 및 디버그](deploying-and-debugging-uwp-apps.md)
+- [UWP 앱 배포 및 디버깅](deploying-and-debugging-uwp-apps.md)
 - [디버깅, 테스트 및 성능](index.md)
