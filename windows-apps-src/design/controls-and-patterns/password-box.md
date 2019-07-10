@@ -13,10 +13,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: d41590914fb66cb8061298f77f24e5efcdd03bf5
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364633"
 ---
 # <a name="password-box"></a>비밀번호 상자
@@ -25,20 +25,20 @@ ms.locfileid: "66364633"
 
 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력 상자입니다. 암호 상자는 입력란처럼 보이지만 입력된 텍스트 대신 자리 표시자 문자를 렌더링합니다. 자리 표시자 문자는 구성할 수 있습니다.
 
-> **중요 API**: [PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [Password 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.password)합니다 [PasswordChar 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar)를 [PasswordRevealMode 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode), [PasswordChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
+> **중요 API**: [PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [Password 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.password), [PasswordChar 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar), [PasswordRevealMode 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode), [PasswordChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
 
 기본적으로 암호 상자는 사용자가 표시 단추를 누른 채로 자신의 암호를 볼 수 있는 방법을 제공합니다. 표시 단추를 사용하지 않도록 설정하거나 확인란과 같은 암호를 표시하는 대체 메커니즘을 제공할 수 있습니다.
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-**PasswordBox** 컨트롤을 사용하여 암호 또는 주민 등록 번호 등의 기타 개인 데이터를 수집합니다.
+**PasswordBox** 컨트롤을 사용하여 암호 또는 주민 등록 번호 등의 기타 프라이빗 데이터를 수집합니다.
 
 올바른 텍스트 컨트롤을 선택하는 방법에 대한 자세한 내용은 [텍스트 컨트롤](text-controls.md) 문서를 참조하세요.
 
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
@@ -192,15 +192,15 @@ private void CheckBox_Changed(object sender, RoutedEventArgs e)
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 
 [텍스트 컨트롤](text-controls.md)
 
-- [맞춤법 검사에 대 한 지침](text-controls.md)
+- [맞춤법 검사에 대한 지침](text-controls.md)
 - [검색 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
-- [텍스트 입력에 대 한 지침](text-controls.md)
+- [텍스트 입력에 대한 지침](text-controls.md)
 - [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [Windows.UI.Xaml.Controls PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [String.Length 속성이](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+- [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

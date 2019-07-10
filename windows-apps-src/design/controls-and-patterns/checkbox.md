@@ -13,10 +13,10 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3905ef8786a06d4221ce42511f786927c3173ba6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363164"
 ---
 # <a name="check-boxes"></a>확인란
@@ -25,7 +25,7 @@ ms.locfileid: "66363164"
 
 확인란은 작업 항목을 선택하거나 선택 취소하는 데 사용됩니다. 사용자가 선택할 수 있는 단일 항목이나 여러 항목의 목록에도 사용할 수 있습니다. 컨트롤에는 3개의 선택 상태, 즉 선택되지 않음, 선택됨 및 확정되지 않음이 있습니다. 하위 항목 컬렉션에 선택되지 않음과 선택됨 상태가 둘 다 있는 경우에 확정되지 않은 상태를 사용합니다.
 
-> **중요 API**: [확인란 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox), [이벤트 선택된](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked), [IsChecked 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked)
+> **중요 API**: [CheckBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox), [Checked 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked), [IsChecked 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked)
 
 ![확인란 상태의 예](images/templates-checkbox-states-default.png)
 
@@ -36,7 +36,7 @@ ms.locfileid: "66363164"
 
 ![개별 선택에 사용되는 단일 확인란](images/checkbox1.png)
 
-이진 선택의 경우 **확인란**과 [토글 스위치](toggles.md)의 주요 차이점은 확인란은 상태에 대한 것이고 토글 스위치는 동작에 대한 것이라는 점입니다. 확인란 상호 작용(예: 양식 전송)의 커밋은 연기할 수 있지만 전환 스위치 상호 작용은 즉시 커밋해야 합니다. 또한 다중 선택에는 확인란만 사용할 수 있습니다.
+이진 선택의 경우 **확인란**과 [토글 스위치](toggles.md)의 주요 차이점은, 확인란은 상태에 대한 것이고 토글 스위치는 동작에 대한 것이라는 점입니다. 확인란 상호 작용(예: 양식 전송)의 커밋은 연기할 수 있지만 전환 스위치 상호 작용은 즉시 커밋해야 합니다. 또한 다중 선택에는 확인란만 사용할 수 있습니다.
 
 사용자가 함께 사용할 수 있는 선택 항목 그룹에서 항목을 하나 이상 선택하는 다중 선택 시나리오에 **여러 확인란**을 사용합니다.
 
@@ -89,7 +89,7 @@ checkBox1.Content = "I agree to the terms of service.";
 
 이 예제에서는 서비스 약관에 동의하는 확인란의 **IsChecked** 속성을 제출 단추의 [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성으로 바인딩합니다. 제출 단추는 서비스 약관에 동의하는 경우에만 사용할 수 있습니다.
 
-> 참고&nbsp;&nbsp;기에서는 관련 코드만 표시합니다. 데이터 바인딩 및 값 변환기에 대한 자세한 내용은 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)를 참조하세요.
+> 참고&nbsp;&nbsp;여기서는 관련 코드만 표시합니다. 데이터 바인딩 및 값 변환기에 대한 자세한 내용은 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)를 참조하세요.
 
 ```xaml
 ...
@@ -185,9 +185,9 @@ private void toppingsCheckbox_Click(object sender, RoutedEventArgs e)
 
 CheckBox 컨트롤은 [ToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton)에서 상속되며 세 가지 상태를 가질 수 있습니다. 
 
-State | 속성 | 값
+상태 | 속성 | 값
 ------|----------|------
-checked | IsChecked | **true** 
+선택됨 | IsChecked | **true** 
 선택되지 않음 | IsChecked | **false** 
 확정되지 않음 | IsChecked | **null** 
 
@@ -294,16 +294,16 @@ private void SetCheckedState()
 
     ![확정되지 않은 상태 확인란](images/checkbox4_spicy.png)
 
-    세 가지 옵션이 있는 라디오 단추 그룹을 대신 사용 합니다. 매운, 매운, 없고 추가 매운 합니다.
+    대신 세 가지 옵션 안 매운 맛, 매운 맛, 아주 매운 맛이 있는 라디오 단추 그룹을 사용하세요.
 
-    ![세 가지 옵션이 있는 라디오 단추 그룹을 선택 합니다. 매운, 매운, 없고 추가 매운](images/spicyoptions.png)
+    ![세 가지 옵션 안 매운 맛, 매운 맛, 아주 매운 맛이 있는 라디오 단추 그룹](images/spicyoptions.png)
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 
-- [확인란 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 
+- [CheckBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 
 - [라디오 단추](radio-button.md)
-- [설정/해제 스위치](toggles.md)
+- [토글 스위치](toggles.md)

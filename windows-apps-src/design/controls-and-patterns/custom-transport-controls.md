@@ -9,10 +9,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c42a058398539701cc1df003717eec99d1b2cd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66362863"
 ---
 # <a name="create-custom-transport-controls"></a>사용자 지정 전송 컨트롤 만들기
@@ -35,7 +35,7 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 
 **MediaPlayerElement**는 수정하지 않고도 대부분의 비디오 및 오디오 재생 앱에서 우수하게 작동하도록 설계된 기본 제공 전송 컨트롤이 있습니다. 이 컨트롤은 [**MediaTransportControls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 클래스에서 제공하며 미디어 재생, 중지, 탐색 단추를 비롯하여, 볼륨 조정, 전체 화면으로 전환, 두 번째 디바이스로 캐스팅, 자막 사용, 오디오 트랙 전환 및 재생 속도 조정을 처리하는 단추를 포함합니다. MediaTransportControls에는 각 단추의 표시 여부와 사용 설정 여부를 제어할 수 있는 속성이 있습니다. 또한 [**IsCompact**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediatransportcontrols.iscompact) 속성을 설정하여 컨트롤을 한 행에 표시할지 아니면 두 행에 표시할지 여부를 지정할 수 있습니다.
 
-그러나 추가로 컨트롤의 모양을 사용자 지정하거나 컨트롤 동작을 변경해야 하는 시나리오가 있을 수 있습니다. 다음은 몇 가지 예입니다.
+그러나 추가로 컨트롤의 모양을 사용자 지정하거나 컨트롤 동작을 변경해야 하는 시나리오가 있을 수 있습니다. 예를 들면 다음과 같습니다.
 - 아이콘, 슬라이더 동작 및 색을 변경합니다.
 - 자주 사용하지 않는 명령 단추를 오버플로 메뉴로 이동합니다.
 - 컨트롤 크기를 조정할 때 명령이 드롭아웃되는 순서를 변경합니다.
@@ -57,11 +57,11 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 - 세 번째 섹션에는 다양한 MediaTransportControls 요소를 포함하고 구성 요소가 배치되는 방식을 정의하는 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)가 있습니다.
 
 > [!NOTE]
-> 템플릿을 수정하는 방법은 [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)을 참조하세요. 텍스트 편집기 또는 유사한 편집기 IDE에서 하 여 XAML 파일을 엽니다 \( *Program Files*) \Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK버전*) \Generic 합니다. 각 컨트롤의 기본 스타일과 템플릿은 **generic.xaml** 파일에 정의되어 있습니다. "MediaTransportControls"를 검색하여 generic.xaml에서 MediaTransportControls 템플릿을 찾을 수 있습니다.
+> 템플릿을 수정하는 방법은 [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)을 참조하세요. 텍스트 편집기 또는 IDE의 유사한 편집기를 사용하여 \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic에 있는 XAML 파일을 열 수 있습니다. 각 컨트롤의 기본 스타일과 템플릿은 **generic.xaml** 파일에 정의되어 있습니다. "MediaTransportControls"를 검색하여 generic.xaml에서 MediaTransportControls 템플릿을 찾을 수 있습니다.
 
 다음 섹션에서는 전송 컨트롤의 기본 요소 중 몇 가지를 사용자 지정하는 방법에 대해 알아봅니다.
-- [**슬라이더**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider): 사용자가 해당 미디어를 통해 삭제 하도록 허용 하 고 진행률 표시
-- [**CommandBar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar): 모든 단추를 포함 합니다.
+- [**Slider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider): 사용자는 이 요소를 통해 미디어를 삭제할 수 있으며, 이 요소는 진행률도 표시합니다.
+- [**CommandBar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar): 모든 단추를 포함합니다.
 자세한 내용은 MediaTransportControls 참조 항목의 구조 섹션을 참조하세요.
 
 ## <a name="customize-the-transport-controls"></a>전송 컨트롤 사용자 지정
@@ -70,7 +70,7 @@ MediaTransportControls의 모양만 수정하려는 경우 기본 컨트롤 스�
 
 ### <a name="re-template-the-control"></a>컨트롤 다시 템플릿
 
-**MediaTransportControls 기본 스타일 및 템플릿 사용자 지정 하려면**
+**MediaTransportControls 기본 스타일 및 템플릿을 사용자 지정하려면**
 1. MediaTransportControls 스타일 및 템플릿의 기본 스타일을 프로젝트의 ResourceDictionary로 복사합니다.
 2. Style에 x:Key 값을 지정하여 다음과 같이 식별합니다.
 
@@ -97,7 +97,7 @@ MediaTransportControls의 모양만 수정하려는 경우 기본 컨트롤 스�
 
 전송 컨트롤의 기능을 추가하거나 수정하려면 MediaTransportControls에서 파생된 새 클래스를 만들어야 합니다. `CustomMediaTransportControls`라는 파생 클래스가 [미디어 전송 컨트롤 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620023) 및 이 페이지의 나머지 예제에 나와 있습니다.
 
-**MediaTransportControls에서 파생 된 새 클래스를 만들려면**
+**MediaTransportControls에서 파생된 새 클래스를 만들려면**
 1. 새 클래스 파일을 프로젝트에 추가합니다.
     - Visual Studio에서 프로젝트 &gt; 클래스 추가를 선택합니다. 새 항목 추가 대화 상자가 열립니다.
     - 새 항목 추가 대화 상자에서 클래스 파일의 이름을 입력한 다음 추가를 클릭합니다. 미디어 전송 컨트롤 샘플에서 클래스 이름은 `CustomMediaTransportControls`입니다.
@@ -159,7 +159,7 @@ MediaTransportControls 템플릿에서 명령 단추는 [**CommandBar**](https:/
 
 명령 모음 기본 명령의 요소를 오버플로 메뉴로 이동하려면 XAML 컨트롤 템플릿을 편집해야 합니다.
 
-**에 오버플로 메뉴 명령을 이동 합니다.**
+**오버플로 메뉴로 명령을 이동하려면 다음을 수행합니다.**
 1. 컨트롤 템플릿에서 `MediaControlsCommandBar`라는 CommandBar 요소를 찾습니다.
 2. [  **SecondaryCommands**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.secondarycommands) 섹션을 CommandBar에 대한 XAML에 추가합니다. 이 섹션을 [**PrimaryCommands**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.primarycommands)의 닫는 태그 뒤에 넣습니다.
 
@@ -204,7 +204,7 @@ MediaTransportControls 템플릿에서 명령 단추는 [**CommandBar**](https:/
 
 MediaTransportControls를 사용자 지정하려고 할 수 있는 한 가지 이유는 사용자 지정 명령을 컨트롤에 추가할 수 있기 때문입니다. 기본 명령으로 추가하든 아니면 보조 명령으로 추가하든 명령 단추를 만들고 해당 동작을 수정하기 위한 절차는 동일합니다. [미디어 전송 컨트롤 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620023)에서 "등급" 단추가 기본 명령에 추가됩니다.
 
-**사용자 지정 명령 단추를 추가 하려면**
+**사용자 지정 명령 단추를 추가하려면**
 1. AppBarButton 개체를 만들고 컨트롤 템플릿의 CommandBar에 추가합니다.
 
 ```xaml
@@ -215,9 +215,9 @@ MediaTransportControls를 사용자 지정하려고 할 수 있는 한 가지 �
               VerticalAlignment="Center" />
 ```
 
-적절 한 위치에서 명령 모음에 추가 해야 합니다. (자세한 내용은 오버플로 메뉴의 섹션을 사용 하 여 작업 참조). UI에 배치 하는 방식을 태그에 단추 인 의해 결정 됩니다. 예를 들어, 기본 명령에서 마지막 요소로 표시 하려면이 단추를 사용 하도록 하려는 경우 기본 명령 목록 맨 끝에 추가 합니다.
+적절한 위치의 명령 모음에 추가해야 합니다. (자세한 내용은 오버플로 메뉴에 대한 작업 섹션을 참조하세요.) UI에 배치하는 방식은 태그 속의 단추 위치에 따라 결정됩니다. 예를 들어 이 단추를 기본 명령의 마지막 요소로 표시하려면 이 단추를 기본 명령 목록의 맨 끝에 추가합니다.
 
-단추에 대 한 아이콘을 사용자 지정할 수 있습니다. 자세한 내용은 참조는 <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton"> <b>AppBarButton</b> </a> 참조 합니다.
+단추 아이콘을 사용자 지정할 수도 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton"><b>AppBarButton</b></a> 참조에서 확인할 수 있습니다.
     
 
 2. [  **OnApplyTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.onapplytemplate) 재정의에서, 템플릿의 단추를 가져와서 해당 [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트에 대한 처리기를 등록합니다. 이 코드는 `CustomMediaTransportControls` 클래스에 포함됩니다.
@@ -272,8 +272,8 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
 }
 ```
 
-**사용자 지정 미디어 추가 "유사" 단추를 사용 하 여 컨트롤을 전송**
-![추가 사용 하 여 사용자 지정 미디어 전송 컨트롤 같은 단추](images/controls/mtc_double_custom_inprod.png)
+**"좋아요" 단추가 추가된 사용자 지정 미디어 전송 컨트롤**
+![추가 좋아요 단추가 있는 사용자 지정 미디어 전송 컨트롤](images/controls/mtc_double_custom_inprod.png)
 
 ### <a name="modifying-the-slider"></a>슬라이더 수정
 

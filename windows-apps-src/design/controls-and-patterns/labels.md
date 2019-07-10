@@ -12,10 +12,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5996fb15c0d7302c7360c2e45613f0da2720d415
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364649"
 ---
 # <a name="labels"></a>Labels(레이블)
@@ -24,7 +24,7 @@ ms.locfileid: "66364649"
 
 레이블은 컨트롤 또는 관련 컨트롤 그룹의 이름이나 제목입니다.
 
-> **중요 API**: 헤더 속성 [TextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
+> **중요 API**: Header 속성, [TextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
 XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우에는 [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 사용할 수 있습니다.
 

@@ -1,64 +1,64 @@
 ---
 title: 간격 및 크기
-description: 장치 및 입력 방법에 관계 없이 편리한 사용자 환경을 보장 하는 새로운 Fluent 표준 및 Compact 컨트롤 스타일입니다.
-keywords: UWP, Windows 10, 컨트롤, 크기, 밀도, standard, compact
-ms.date: 4/4/2019
+description: 새로운 Fluent 표준 및 컴팩트 컨트롤 스타일은 디바이스 및 입력 방법에 관계 없이 편리한 사용자 환경을 보장합니다.
+keywords: UWP, Windows 10, 컨트롤, 크기, 밀도, 표준, 컴팩트
+ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 7b74e3dc2ad047d9e52509b71ef00b829ad63a0d
-ms.sourcegitcommit: 7a1d5198345d114c58287d8a047eadc4fe10f012
-ms.translationtype: MT
+ms.openlocfilehash: ff88332e0b44749bcd86e06adafeb596ca8678b3
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59249455"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63820654"
 ---
-# <a name="control-size-and-density"></a>컨트롤 크기와 밀도
+# <a name="control-size-and-density"></a>컨트롤 크기 및 밀도
 
-유니버설 Windows 플랫폼 (UWP) 응용 프로그램을 최적화 하 고 앱의 기능 및 상호 작용 요구 사항에 가장 적합 한 사용자 환경을 제공 하려면 컨트롤 크기와 밀도 조합해 서 사용 합니다.
+컨트롤 크기와 밀도 조합을 사용하여 UWP(유니버설 Windows 플랫폼) 애플리케이션을 최적화하고 앱의 기능과 상호 작용 요구 사항에 가장 적합한 사용자 환경을 제공할 수 있습니다.
 
-기본적으로 UWP 앱을 저밀도 사용 하 여 렌더링 됩니다 (또는 `Standard`) 레이아웃 합니다. 그러나는 고밀도 WinUI 2.1부터 (또는 `Compact`) 레이아웃 옵션 정보에 대 한 풍부한 UI와 유사한 특수 시나리오도 지원 됩니다. 기본 스타일 리소스를 통해 지정할 수 있습니다 (아래 예제 참조).
+기본적으로 UWP 앱은 저밀도(또는 `Standard`) 레이아웃을 사용하여 렌더링됩니다. 그러나 WinUI 2.1부터는 정보가 많은 UI와 비슷한 특수 시나리오를 위한 고밀도(또는 `Compact`) 레이아웃 옵션도 지원됩니다. 기본 스타일 리소스를 통해 지정할 수 있습니다(아래 예제 참조).
 
-둘 간에 일관성을 유지 하 고 기능 및 동작 하는 동안 변경 되지 않은 크기와 밀도 옵션을 기본 본문 글꼴 크기는 이러한 두 밀도 옵션을 지원 하기 위해 모든 컨트롤에 대 한 14px 하도록 업데이트 되었습니다. 이 글꼴 크기는 지역 및 장치에서 작동 하 고 응용 프로그램을 부하가 분산 되 고 사용자가 편리 하 게 계속 되도록 합니다.
+두 크기 및 밀도 옵션의 기능과 동작은 변경되지 않고 그대로 유지되지만, 두 가지 밀도 옵션을 지원하기 위해 모든 컨트롤의 기본 본문 글꼴 크기가 14픽셀로 업데이트되었습니다. 이 글꼴 크기는 지역과 디바이스에 관계 없이 작동하며 사용자를 위해 애플리케이션의 균형과 사용 편의를 유지합니다.
 
-## <a name="fluent-standard-sizing"></a>Fluent 표준 크기 조정
+## <a name="fluent-standard-sizing"></a>Fluent 표준 크기
 
-*Fluent 표준 크기 조정* 정보 밀도 및 사용자와 쾌적 간의 균형을 이룰 위해 만들어졌습니다. 효과적으로 화면에 있는 모든 항목 UI 요소 표 형식으로 정렬 하 고 적절 하 게 확장할 수 있습니다. 시스템 수준 크기 조정에 기반 하는 40 x 40 효과적인 픽셀 (epx) 대상에 맞춥니다.
+*Fluent 표준 크기*는 정보 밀도와 사용자 편의 간에 균형을 유지하기 위해 개발되었습니다. 화면에 있는 모든 항목을 40x40 유효 픽셀(epx) 대상에 맞추기 때문에 UI 요소를 그리드에 맞추고 시스템 수준 스케일링에 따라 적절하게 크기를 조정할 수 있습니다.
 
-**표준 크기 조정은 터치와 입력 포인터에 맞게 설계 되었습니다.**
+**표준 크기는 터치와 포인터 입력을 모두 수용하도록 설계되었습니다.**
 
 > [!NOTE]
->효과적인 픽셀 및 크기 조정에 대 한 자세한 내용은 참조 하세요. [UWP 앱 디자인 소개](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
+>유효 픽셀과 크기 조정에 대한 자세한 내용은 [UWP 앱 디자인 소개](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)를 참조하세요.
 >
-> 시스템 수준 크기 조정에 대 한 자세한 내용은 참조 하세요. [맞춤, 여백, 안쪽 여백](../layout/alignment-margin-padding.md)합니다.
+> 시스템 수준 크기 조정에 대한 자세한 내용은 [맞춤, 여백, 안쪽 여백](../layout/alignment-margin-padding.md)을 참조하세요.
 
-Windows 10 년 10 월에 대 한 모든 사용 시나리오에서 유용성을 높이려면 2018 업데이트 (버전 1809), 표준, 모든 UWP 컨트롤에 대 한 기본 크기 감소 했습니다.
+Windows 10 2018년 10월 업데이트(버전 1809)의 경우 모든 사용 시나리오의 유용성을 높이기 위해 모든 UWP 컨트롤의 표준 기본 크기를 줄였습니다.
 
-다음 이미지는 Windows를 사용 하 여 도입 된 레이아웃 변경 내용을 컨트롤의 일부 표시 10 년 10 월 2018 업데이트 합니다. 특히 4epx, 하는 헤더와 컨트롤의 위쪽 사이의 여백을 8epx에서 감소 및 44epx 표 40epx 표 형식으로 변경 되었습니다.
+다음 이미지는 Windows 10 2018년 10월 업데이트에 도입된 컨트롤 레이아웃 변경 내용의 일부를 보여줍니다. 특히 컨트롤의 헤더와 상단 사이의 여백이 8epx에서 4epx로 줄고, 44epx 그리드가 40epx 그리드로 변경되었습니다.
 
 ![표준 컨트롤 레이아웃 예제](images/standarddensity.png)
 
 *표준 컨트롤 레이아웃 예제*
 
-이 다음 이미지는 Windows에 대 한 크기를 제어 하는 변경 10 년 10 월 2018 업데이트 합니다. 40epx 눈금에 맞춤 특히입니다.
+다음 이미지는 Windows 10 2018년 10월 업데이트의 컨트롤 크기 변경 내용을 보여줍니다. 특히 40epx 그리드에 맞추도록 변경되었습니다.
 
 ![표준 명령 예제](images/standarddensitycommanding.png)
 
-## <a name="fluent-compact-sizing"></a>Fluent Compact 크기 조정
+## <a name="fluent-compact-sizing"></a>Fluent 컴팩트 크기
 
-Compact 크기 조정 조밀한 정보가 풍부한 그룹 컨트롤을 사용 하도록 설정 및 다음 유용할 수 있습니다.
+컴팩트 크기는 정보가 많은 고밀도 컨트롤 그룹을 사용할 수 있으며 다음 용도에 유용할 수 있습니다.
 
-- 많은 양의 콘텐츠를 검색 합니다.
-- 페이지에 표시 되는 콘텐츠의 최대화 합니다.
-- 컨트롤 및 콘텐츠를 사용 하 여 상호 작용 및 탐색
+- 대량의 콘텐츠를 검색합니다.
+- 페이지에 표시되는 콘텐츠를 최대화합니다.
+- 컨트롤과 콘텐츠의 탐색 및 상호 작용
 
-**Compact 크기는 주로 포인터 입력에 맞게 설계 되었습니다.**
+**컴팩트 크기는 주로 포인터 입력에 맞게 설계되었습니다.**
 
 ### <a name="examples"></a>예
 
-Compact 크기 조정 페이지 수준에서 또는 특정 레이아웃에 응용 프로그램에서 지정할 수 있는 특별 한 리소스 사전을 통해 구현 됩니다. 리소스 사전에서 사용할 수는 [WinUI](https://docs.microsoft.com/en-us/uwp/toolkits/winui/) Nuget 패키지.
+컴팩트 크기는 페이지 수준에서 또는 특정 레이아웃에서 애플리케이션을 사용하여 지정할 수 있는 특수 리소스 사전을 통해 구현됩니다. 리소스 사전은 [WinUI](https://docs.microsoft.com/en-us/uwp/toolkits/winui/) Nuget 패키지에서 사용할 수 있습니다.
 
-다음 예제에 나온 방법을 `Compact` 페이지 및 개별 표 컨트롤에 대 한 스타일을 적용할 수 있습니다.
+다음 예제에서는 페이지 및 개별 그리드 컨트롤에 `Compact` 스타일을 적용하는 방법을 보여줍니다.
 
 #### <a name="page-level"></a>페이지 수준
 
@@ -68,7 +68,7 @@ Compact 크기 조정 페이지 수준에서 또는 특정 레이아웃에 응�
 </Page.Resources>
 ```
 
-#### <a name="grid-level"></a>표 수준
+#### <a name="grid-level"></a>그리드 수준
 
 ```xaml
 <Grid>
@@ -80,7 +80,7 @@ Compact 크기 조정 페이지 수준에서 또는 특정 레이아웃에 응�
 
 ## <a name="related-articles"></a>관련 문서
 
-- [터치 대상에 대 한 지침](../input/guidelines-for-targeting.md)
+- [터치 대상에 대한 지침](../input/guidelines-for-targeting.md)
 - [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
 - [리소스 사전](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.resourcedictionary)
 - [XAML 스타일](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/xaml-styles) 

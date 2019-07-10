@@ -12,29 +12,29 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: ac2bd55d1cea25359c3c609148c7098532d76c46
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654058"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63796470"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>UWP 앱의 명령 디자인 기본 사항
 
-유니버설 Windows 플랫폼 (UWP) 앱에서 *요소를 명령* 는 사용자가 전자 메일 보내기, 항목을 삭제 또는 양식 제출 등의 작업을 수행할 수 있는 대화형 UI 요소입니다. *명령 인터페이스* 일반적인 명령 요소, 호스트 하는 명령 화면, 지원, 상호 작용 및 제공 하는 환경을 구성 됩니다.
+UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 이메일 보내기, 항목 삭제 또는 양식 제출 같은 작업을 수행할 수 있게 해주는 대화형 UI 요소입니다. *명령 인터페이스*는 일반적인 명령 요소, 명령 요소를 호스트하는 명령 화면, 명령 요소가 지원하는 상호 작용 및 제공하는 환경으로 구성됩니다.
 
 ## <a name="provide-the-best-command-experience"></a>최고의 명령 환경 제공
 
-인터페이스의 가장 중요 한 측면을 사용자가 수행할 수 있도록 하려는 경우 앱의 기능을 계획할 때는 해당 태스크 및 사용 하도록 설정 하려는 사용자 경험을 수행 하는 데 필요한 단계를 고려 합니다. 이러한 환경을 초안을 마친 후 구현 하는 데 도구와 상호 작용에 결정을 내릴 수 있습니다.
+명령 인터페이스에서 가장 중요한 것은 사용자가 수행할 수 있도록 허용할 작업입니다. 앱의 기능을 계획할 때 이러한 작업을 수행하는 데 필요한 단계와 구현할 사용자 환경을 고려해야 합니다. 이러한 환경의 초안을 작성한 후에는 구현에 사용할 도구와 상호 작용을 결정할 수 있습니다.
 
-몇 가지 일반적인 명령 환경을 다음과 같습니다.
+다음은 몇 가지 일반적인 명령 환경입니다.
 
-- 정보를 보내거나 제출
-- 설정 선택 등 선택
+- 정보 전송 또는 제출
+- 설정 및 옵션 선택
 - 콘텐츠 검색 및 필터링
 - 파일 열기, 저장, 삭제
-- 콘텐츠 편집이나 만들기
+- 콘텐츠 편집 또는 만들기
 
-명령 경험의 디자인을 사용 하 여 creative 수 있습니다. 장치를 입력 하는 앱 선택 지원 하 고 각 장치에 앱이 응답 하는 방법입니다. 광범위 한 기능 및 기본 설정을 지원 하 여 변경한 응용 프로그램을 사용할 수 있는, 이식 가능 하 고 가능한 만큼 액세스 가능 (참조 [유니버설 Windows 플랫폼 (UWP) 앱에 대 한 디자인 명령](../controls-and-patterns/commanding.md) 자세한).
+독창적인 명령 환경을 디자인하세요. 앱에서 지원할 입력 디바이스와 앱이 각 디바이스에 응답하는 방식을 선택합니다. 광범위한 기능과 기본 설정을 지원하여 앱의 사용 편의성, 휴대성 및 접근성을 최대한 높여야 합니다(자세한 내용은 [UWP(유니버설 Windows 플랫폼) 앱의 명령 디자인](../controls-and-patterns/commanding.md) 참조).
 
 
 
@@ -42,9 +42,9 @@ ms.locfileid: "57654058"
 When designing a command interface, the most important decision is choosing what a user can do. To plan the right type of interactions, focus on your app - consider the user experiences you want to enable, and what steps users will need to take. Once you decide what you want users to accomplish, then you can provide them the tools to do so.
 -->
 
-## <a name="choose-the-right-command-elements"></a>올바른 명령 요소를 선택 합니다.
+## <a name="choose-the-right-command-elements"></a>올바른 명령 요소 선택
 
-명령 인터페이스에서 올바른 요소를 사용 하 여 직관적이 고 사용 하기 쉬운 앱 및 어려운, 혼란 스러운 앱 간의 차이 만들 수 있습니다. 포괄적인 명령 요소 유니버설 Windows 플랫폼 (UWP)에서 사용할 수 있습니다. 몇 가지 가장 일반적인 UWP 명령 요소 목록을 다음과 같습니다.
+명령 인터페이스에 적합한 요소를 사용하면 직관적이고 쉽게 사용할 수 있는 앱을 만들 수 있고, 그렇지 않으면 앱이 어렵고 사용하기 까다롭게 됩니다. 포괄적인 명령 요소는 UWP(유니버설 Windows 플랫폼)에서 사용할 수 있습니다. 다음은 가장 일반적인 UWP 명령 요소 목록입니다.
 
 :::row:::
     :::column:::
@@ -100,13 +100,13 @@ When designing a command interface, the most important decision is choosing what
 
 ## <a name="place-commands-on-the-right-surface"></a>올바른 화면에 명령 배치
 
-앱 캔버스 또는 명령 모음, 명령 모음 플라이 아웃, 메뉴 또는 대화 상자와 같은 특수 한 명령 컨테이너를 포함 하 여 앱에서 다양 한 화면에 명령 요소를 배치할 수 있습니다.
+명령 모음, 명령 모음 플라이아웃, 메뉴 모음, 대화 상자 같은 앱 캔버스 또는 특수 명령 컨테이너를 포함하여 다양한 앱 화면에 명령 요소를 배치할 수 있습니다.
 
-항상 사용자가 콘텐츠를 직접 조작 하려고 하지 않고를 통해 콘텐츠를 끌어서 목록 항목을 다시 정렬 하려면 삭제와 같은 아닌 명령 단추 위쪽 및 아래쪽에 대해 실행 되는 명령입니다. 
+위쪽 및 아래쪽 명령 단추보다는 끌어서 놓아 목록 항목을 다시 정렬하는 것처럼, 항상 콘텐츠에서 작동하는 명령보다는 사용자가 콘텐츠를 직접 조작하는 방법을 사용합니다. 
 
-그러나이 하지 못할 특정 입력된 장치를 사용 하 여 또는 특정 사용자 기능 및 기본 설정을 수용 하는 경우. 이러한 경우 최대한 많은 명령 affordances 제공 및 앱에서 명령 화면에서 이러한 명령 요소를 배치 합니다.
+하지만 특정 입력 디바이스에서, 또는 특정 사용자 기능 및 기본 설정을 수용하는 경우에는 이렇게 하는 것이 불가능할 수 있습니다. 이 경우 최대한 많은 명령 어포던스를 제공하고, 이러한 명령 요소를 앱의 명령 화면에 배치합니다.
 
-가장 일반적인 명령 표면 중 일부 목록은 다음과 같습니다.
+다음은 가장 일반적인 명령 표면 목록입니다.
 
 :::row:::
     :::column:::
@@ -144,12 +144,12 @@ When designing a command interface, the most important decision is choosing what
 
 ## <a name="provide-command-feedback"></a>명령 피드백 제공 
 
-명령 피드백 사용자에 게는 상호 작용 또는 명령을 검색 되었습니다, 명령을 해석 하 고 처리 하는 방법 및 통신 여부를 명령이 성공 합니다. 이렇게 하면 사용자가 어떤는 지금까지 작업 및 수행할 수 있는 다음을 이해 합니다. 피드백을 UI에 자연스럽게 통합해서 사용자에게 방해가 없도록 만들거나 정말 필요한 경우를 제외하면 추가 작업을 할 필요가 없도록 만드는 것이 좋습니다.
+명령 피드백은 상호 작용 또는 명령이 발견되었다는 사실과 명령을 해석하고 처리한 방법 및 명령의 성공 여부를 사용자에게 전달합니다. 이렇게 하면 사용자는 무엇을 했는지, 앞으로 무엇을 할 수 있는지 이해할 수 있습니다. 꼭 필요한 경우를 제외하고 사용자가 개입하거나 추가 작업을 할 필요가 없도록 피드백을 UI에 자연스럽게 통합하는 것이 가장 좋습니다.
 
 > [!NOTE]
-> 필요한 경우에 하 고 다른 곳에서 사용할 수 없는 경우에 피드백을 제공 합니다. 값을 추가 하는 경우가 아니면 응용 프로그램 UI를 명확 하 고 깔끔하게 유지 합니다.
+> 꼭 필요하고 다른 곳에서 제공할 수 없는 경우에만 피드백을 제공합니다. 값을 추가하지 않는 이상 애플리케이션 UI를 깨끗하고 깔끔하게 유지합니다.
 
-앱에서 피드백을 제공하는 방법 몇 가지를 소개합니다.
+다음은 앱에서 피드백을 제공하는 방법입니다.
 
 :::row:::
     :::column:::
@@ -168,7 +168,7 @@ When designing a command interface, the most important decision is choosing what
     :::column span="2":::
         <b>Flyouts</b>
 
-       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">플라이 아웃</a> 탭 또는 플라이 아웃 외부의 아무 위치나 클릭 하 여 해제할 수 있는 간단한 상황별 팝업 됩니다.
+       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">플라이아웃</a> - 플라이아웃 바깥쪽의 아무 곳이나 탭하거나 클릭하여 해제할 수 있는 경량의 상황에 맞는 팝업입니다.
 :::row-end:::
 
 :::row:::
@@ -187,7 +187,7 @@ When designing a command interface, the most important decision is choosing what
 
 ### <a name="when-to-confirm-or-undo-actions"></a>작업을 확인하거나 실행 취소하는 경우
 
-잘 설계 된 방법에 관계 없이 응용 프로그램의 UI를 하지 않은 자신이 작업을 수행 하는 모든 사용자. 앱 동작을 확인을 요구 하거나 최근 작업 실행 취소 하는 방법을 제공 하 여 이러한 상황에서 도움이 됩니다.
+앱의 UI가 아무리 잘 설계되었더라도 모든 사용자는 원치 않는 작업을 수행합니다. 앱에서 사용자에게 작업을 확인하도록 요구하거나 최근 작업을 실행 취소하는 방법을 제공하여 이러한 상황을 도와줄 수 있습니다.
 
 :::row:::
     :::column:::

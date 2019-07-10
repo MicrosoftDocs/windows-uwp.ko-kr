@@ -1,28 +1,28 @@
 ---
-title: 유니버설 Windows 플랫폼 (UWP) 앱 명령
-description: ICommand 인터페이스) (함께 XamlUICommand 및 StandardUICommand 클래스를 사용 하 여 공유 하 고 다양 한 장치에 관계 없이 컨트롤 형식 및 사용 되는 입력된 형식에 걸쳐 명령을 관리 하는 방법.
+title: UWP(유니버설 Windows 플랫폼) 앱의 명령
+description: 현재 사용하는 디바이스 및 입력 형식에 관계없이, XamlUICommand 및 StandardUICommand 클래스를 ICommand 인터페이스와 함께 사용하여 다양한 컨트롤 형식에서 명령을 공유하고 관리할 수 있습니다.
 author: Karl-Bridge-Microsoft
 ms.service: ''
 ms.topic: overview
 ms.date: 03/11/2019
 ms.openlocfilehash: a85a101cd529bf487cbc97b93bb3905f28213c19
-ms.sourcegitcommit: 99271798fe53d9768fc52b21366de05268cadcb0
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221419"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63793855"
 ---
-# <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>StandardUICommand, XamlUICommand, 및 ICommand를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱에서 명령 실행
+# <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>StandardUICommand, XamlUICommand 및 ICommand를 사용하는 UWP(유니버설 Windows 플랫폼) 앱의 명령
 
-이 항목에서는 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 명령을 설명 합니다. 특히 사용 하는 방법을 설명 했습니다 합니다 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 하 고 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) (ICommand 인터페이스)와 함께 공유 하 고 다양 한 컨트롤 형식에 관계 없이에서 명령을 관리 클래스 장치 및 입력된 형식이 사용 됩니다.
+이 토픽에서는 UWP(유니버설 Windows 플랫폼) 애플리케이션의 명령에 대해 설명합니다. 특히, 사용하는 디바이스 및 입력 형식에 관계없이 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 및 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 클래스를 ICommand 인터페이스와 함께 사용하여 다양한 컨트롤 형식에서 명령을 공유하고 관리하는 방법을 살펴보겠습니다.
 
-![공유 명령에 대 한 일반적인 용도 나타내는 다이어그램: '즐겨찾기' 명령을 사용 하 여 여러 UI를 표시 합니다.](images/commanding/generic-commanding.png)
+![공유 명령의 일반적인 용도를 나타내는 다이어그램: '즐겨찾기' 명령이 있는 다중 UI 화면](images/commanding/generic-commanding.png)
 
-*장치 및 입력된 형식에 관계 없이 다양 한 컨트롤 간 공유 명령*
+*디바이스 및 입력 형식에 관계 없이 다양한 컨트롤 간에 명령 공유*
 
 ## <a name="important-apis"></a>중요 API
 
-- [Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 고 [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand)
+- [Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 및 [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand)
 - [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand)
 - [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand)
 
@@ -32,79 +32,79 @@ ms.locfileid: "58221419"
 
 <!-- A command describes an action but not its implementation (in other words, the what, but not the how). For example, the "Paste" command indicates that the user wants to copy something from the clipboard to a target control, but does not specify how. -->
 
-명령 단추를 클릭 하거나 상황에 맞는 메뉴에서 항목을 선택 하면 같은 UI 상호 작용을 통해 직접 호출할 수 있습니다. 또한 호출할 수 있습니다 하지 직접 키보드 액셀러레이터, 제스처, 음성 인식 하는 자동화/내게 필요한 옵션 도구 등 입력된 장치를 통해. 호출 되 면 명령을 처리할 수 있습니다 (편집 컨트롤에서 텍스트 탐색), 컨트롤에서 (뒤로 탐색) 창 또는 응용 프로그램 (종료).
+단추를 클릭하거나 상황에 맞는 메뉴에서 항목을 선택하는 등의 UI 상호 작용을 통해 명령을 직접 호출할 수 있습니다. 바로 가기 키, 제스처, 음성 인식, 자동화/접근성 도구 등의 입력 디바이스를 통해 간접적으로 호출할 수도 있습니다. 호출한 후에는 컨트롤(편집 컨트롤의 텍스트 탐색), 창(뒤로 탐색) 또는 애플리케이션(종료)을 통해 명령을 처리할 수 있습니다.
 
-명령 텍스트를 삭제 하거나 작업을 취소 하는 등, 앱 내에서 특정 컨텍스트에 대해 작동할 수 있습니다 또는 상황에 맞는 없는 무료, 예: 오디오 음소거 또는 밝기 조정 될 수 있습니다.
+명령은 텍스트를 삭제하거나 작업을 취소하는 등의 경우처럼 앱 내의 특정 상황에서 작동할 수도 있고, 오디오 음소거나 밝기 조정처럼 상황에 관계 없이 작동할 수도 있습니다.
 
-다음 이미지는 두 개의 명령 인터페이스를 보여 줍니다 (을 [CommandBar](app-bars.md) 상황에 맞는 부동 및 [CommandBarFlyout](command-bar-flyout.md)) 같은 명령의 대부분을 공유 하는 합니다.
+다음 이미지는 여러 동일한 명령을 공유하는 두 개의 명령 인터페이스([CommandBar](app-bars.md) 및 부동 [CommandBarFlyout](command-bar-flyout.md))를 보여줍니다.
 
 ![명령 인터페이스 예제](images/commanding/command-interface-example.png)
 
 ## <a name="command-interactions"></a>명령 상호 작용
 
-다양 한 장치, 입력된 형식 및 명령을 호출 하는 방법을 영향을 주는 UI 화면을 인해 최대한 많은 명령 화면을 통해 명령을 노출 하는 것이 좋습니다. 조합을 포함할 수 있습니다 [안쪽으로 살짝 밀어](swipe.md), [MenuBar](menus.md)를 [CommandBar](app-bars.md), [CommandBarFlyout](command-bar-flyout.md), 및 기존 [ 상황에 맞는 메뉴](menus.md)합니다.
+다양한 디바이스, 입력 형식 및 UI 화면이 명령 호출 방법에 영향을 미칠 수 있기 때문에 최대한 많은 명령 화면을 통해 명령을 노출하는 것이 좋습니다. 여기에는 [살짝 밀기](swipe.md), [MenuBar](menus.md), [CommandBar](app-bars.md), [CommandBarFlyout](command-bar-flyout.md) 및 전통적인 [ 상황에 맞는 메뉴](menus.md) 조합이 포함될 수 있습니다.
 
-**중요 한 명령에 대 한 입력 관련 가속기를 사용 합니다.** 입력된 가속기는 사용자를 사용 하는 입력된 장치에 따라 더 빠르게 작업을 수행할 수 있습니다.
+**중요한 명령에는 입력 관련 가속기를 사용합니다.** 입력 가속기는 사용자가 사용하는 입력 디바이스에 따라 작업을 더 빠르게 수행할 수 있게 도와줍니다.
 
-다양 한 입력된 형식에 대 한 몇 가지 일반적인 입력된 가속기는 다음과 같습니다.
+다음은 다양한 입력 형식에 제공되는 일반적인 입력 가속기입니다.
 
-- **포인터** -열기 (&) 마우스 호버 단추
-- **키보드** -바로 가기 (액세스 키 및 액셀러레이터 키)
-- **터치** -살짝 밀기
-- **터치** -데이터를 새로 고치려면 끌어오기
+- **포인터** - 마우스 및 펜 호버 단추
+- **키보드** - 바로 가기(액세스 키 및 가속기 키)
+- **터치** - 살짝 밀기
+- **터치** - 당겨서 데이터 새로 고침
 
-응용 프로그램의 기능을 보편적으로 액세스할 수 있도록 하려면 입력된 형식 및 사용자 환경을 고려해 야 합니다. 예를 들어, 컬렉션 (특히 사용자 편집 가능한 것)는 일반적으로 다양 한 입력된 장치에 따라 상당히 다르게 수행 되는 특정 명령 포함 합니다.
+애플리케이션의 기능을 보편적으로 사용할 수 있도록 입력 형식과 사용자 환경을 고려해야 합니다. 예를 들어 컬렉션(특히 사용자가 편집 가능한 컬렉션)에는 일반적으로 입력 디바이스에 따라 전혀 다른 방법으로 수행되는 다양한 명령이 포함됩니다.
 
-다음 표에서 몇 가지 일반적인 컬렉션 명령과 해당 명령을 노출 하는 방법을 보여 줍니다.
+다음 표는 몇 가지 일반적인 컬렉션 명령과 이러한 명령을 노출하는 방법을 보여줍니다.
 
-| Command          | 입력에 관계없는 | 마우스 가속기 | 키보드 가속기 | 터치 가속기 |
+| 명령          | 입력과 무관 | 마우스 가속기 | 바로 가기 키 | 터치 가속기 |
 | ---------------- | -------------- | ----------------- | -------------------- | ----------------- |
 | 항목 삭제      | 상황에 맞는 메뉴   | 호버 단추      | DEL 키              | 살짝 밀어 삭제   |
 | 항목에 플래그 지정        | 상황에 맞는 메뉴   | 호버 단추      | Ctrl+Shift+G         | 살짝 밀어 플래그 지정     |
-| 데이터 새로 고침     | 상황에 맞는 메뉴   | 해당 사항 없음               | F5 키               | 당겨서 새로 고침   |
+| 데이터 새로 고침     | 상황에 맞는 메뉴   | 해당 없음               | F5 키               | 당겨서 새로 고침   |
 | 즐겨찾기에 항목 추가 | 상황에 맞는 메뉴   | 호버 단추      | F, Ctrl+S            | 살짝 밀어 즐겨찾기에 추가 |
 
-**상황에 맞는 메뉴를 항상 제공** 좋습니다 관련 상황에 맞는 명령에 모든 기존 상황에 맞는 메뉴 또는 CommandBarFlyout를 포함 하 여 모든 입력 형식을 모두 지원 됩니다. 예를 들어, 명령 포인터 가리키기 이벤트 중에 노출 되는, 경우 터치만 장치에서 사용할 수 없습니다.
+**상황에 맞는 메뉴를 항상 제공** 관련된 모든 상황에 맞는 명령을 기존 상황에 맞는 메뉴 또는 CommandBarFlyout에 포함하는 것이 좋습니다. 둘 다 모든 입력 형식을 지원합니다. 예를 들어 명령이 포인터 가리키기 이벤트 중에만 노출되는 경우에는 터치 전용 디바이스에 사용할 수 없습니다.
 
-## <a name="commands-in-uwp-applications"></a>UWP 응용 프로그램에는 명령
+## <a name="commands-in-uwp-applications"></a>UWP 애플리케이션의 명령
 
-공유 하 고 UWP 응용 프로그램에서 명령 환경을 관리할 수는 몇 가지가 있습니다. 코드 숨김 (이 비효율적일 수 있습니다 매우, UI의 복잡성에 따라.)에서 클릭 같은 표준 상호 작용에 대 한 이벤트 처리기를 정의할 수 있습니다., 공유 하는 처리기를 표준 상호 작용에 대 한 이벤트 수신기를 바인딩할 수 있습니다. 또는 컨트롤을 바인딩할 수 있습니다. 명령 논리를 설명 하는 ICommand 구현 속성 명령입니다.
+UWP 애플리케이션에서 명령 환경을 공유하고 관리할 수 있는 몇 가지 방법이 있습니다. 클릭 같은 표준 상호 작용에 대한 이벤트 처리기를 코드 숨김에 정의하거나(이 방법은 UI의 복잡성에 따라 매우 비효율적일 수 있음), 표준 상호 작용에 대한 이벤트 수신기를 바인딩하거나, 컨트롤의 Command 속성을 명령 논리를 설명하는 ICommand 구현에 바인딩할 수 있습니다.
 
-이 항목에서 설명 하는 기능을 바인딩 명령을 사용 하 여 좋습니다 효율적이 고 최소한의 코드 중복을 사용 하 여 명령 화면에서 풍부 하 고 포괄적인 사용자 환경을 제공 합니다 (표준 이벤트 처리에 대 한 개별 이벤트 항목 참조).
+코드 중복을 최소화하면서 효율적으로 명령 화면에 풍부하고 포괄적인 사용자 환경을 제공하려면 이 토픽에서 설명하는 명령 바인딩 기능을 사용하는 것이 좋습니다(표준 이벤트 처리는 개별 이벤트 토픽 참조).
 
-공유 명령 리소스를 컨트롤에 바인딩하려면 ICommand 인터페이스를 직접 구현할 수 있습니다 또는 명령 중 하나에서 만들 수는 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 기본 클래스 또는 정의한 플랫폼 명령 중 하나는 [ StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 클래스를 파생 합니다.
+컨트롤을 공유 명령 리소스에 바인딩하려면 ICommand 인터페이스를 직접 구현하거나, [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 기본 클래스 또는 [ StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 파생 클래스가 정의하는 플랫폼 명령 중 하나로 명령을 빌드하면 됩니다.
 
-- ICommand 인터페이스 ([Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 하거나 [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand))을 만들 수 있습니다 완전히 사용자 지정된 앱에서 다시 사용할 수 있는 명령입니다.
-- [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 도이 기능을 제공 하지만 명령 동작, 바로 가기 키 (선택 키 및 액셀러레이터 키), 아이콘, 레이블 및 설명 등의 기본 제공 명령 집합을 노출 하 여 개발을 간소화 합니다.
-- [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 에서 미리 정의 된 속성을 사용 하 여 표준 플랫폼 명령 집합을 선택할 수 있도록 하 여 작업을 더욱 단순화 합니다.
+- ICommand 인터페이스([Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 또는 [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand))를 사용하면 완전히 사용자 지정된 재사용 가능한 명령을 앱에 만들 수 있습니다.
+- [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand)도 이 기능을 제공하지만, 명령 동작, 바로 가기 키(액세스 키 및 가속기 키), 아이콘, 레이블, 설명 등의 기본 제공 명령 속성을 노출하여 개발을 간소화합니다.
+- [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand)는 속성이 미리 정의되어 있는 표준 플랫폼 명령 세트에서 선택할 수 있으므로 더욱 간단합니다.
 
 > [!Important]
-> 명령 중 하나 구현에는 UWP 응용 프로그램에는 [Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) (C++) 또는 [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand) (C#)에 따라 인터페이스에 선택한 언어 프레임 워크입니다.
+> UWP 애플리케이션에서는 선택하는 언어 프레임워크에 따라 명령이 [Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand)(C++) 또는 [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand)(C#) 인터페이스로 구현됩니다.
 
-## <a name="command-experiences-using-the-standarduicommand-class"></a>명령은 StandardUICommand 클래스를 사용 하 여 환경을
+## <a name="command-experiences-using-the-standarduicommand-class"></a>StandardUICommand 클래스를 사용하는 명령 환경
 
-파생 된 [XamlUiCommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) (에서 파생 된 [Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 에 C++ 또는 [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand) 에 C#), 합니다 [ StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 클래스 아이콘, 키보드 액셀러레이터 및 설명과 같은 미리 정의 된 속성을 사용 하 여 표준 플랫폼 명령 집합을 노출 합니다.
+[XamlUiCommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand)에서 파생되는(C++는 [Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand)에서 파생되고, C#은 [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand)에서 파생) [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 클래스는 아이콘, 키보드 바로 가기 키, 설명 같은 속성이 미리 정의되어 있는 표준 플랫폼 명령 세트를 노출합니다.
 
-A [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 와 같은 일반적인 명령을 정의 하는 빠르고 일관 된 방법을 제공 `Save` 또는 `Delete`합니다. Execute 및 canExecute 기능을 제공 하면 됩니다.
+[StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand)는 `Save` 또는 `Delete`처럼 일반적인 명령을 빠르고 일관적으로 정의할 수 있는 방법을 제공합니다. 개발자는 execute 및 canExecute 함수만 제공하면 됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ![StandardUICommand 샘플](images/commanding/StandardUICommandSampleOptimized.gif)
 
 *StandardUICommandSample*
 
-| 이 예제에 대 한 코드를 다운로드 합니다. |
+| 이 예제의 코드 다운로드 |
 | -------------------- |
-| [UWP 명령 샘플 (StandardUICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-standarduicommand.zip) |
+| [UWP 명령 샘플(StandardUICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-standarduicommand.zip) |
 
-이 예제에서는 기본을 개선 하는 방법을 알아보겠습니다 [ListView](listview-and-gridview.md) 삭제 된 항목을 통해 구현 되는 명령 합니다 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 다양 한 입력된 형식에 대 한 사용자 환경을 최적화 하는 동안 클래스 사용 하 여를 [MenuBar](menus.md), [안쪽으로 살짝 밀어](swipe.md) 컨트롤을 가리킬 때 단추, 및 [상황에 맞는 메뉴](menus.md)합니다.
+이 예제에서는 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 클래스를 통해 구현된 항목 삭제 명령으로 기본 [ListView](listview-and-gridview.md)를 개선하는 방법과 [MenuBar](menus.md), [살짝 밀기](swipe.md) 컨트롤, 호버 단추 및 [상황에 맞는 메뉴](menus.md)를 사용하여 다양한 입력 형식에 맞게 사용자 환경을 최적화하는 방법을 보여줍니다.
 
 > [!NOTE]
-> 이 샘플의 일부 Microsoft.UI.Xaml.Controls NuGet 패키지에 필요 합니다 [Microsoft Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)합니다.
+> 이 샘플에는 [Microsoft Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)의 일부인 Microsoft.UI.Xaml.Controls NuGet 패키지가 필요합니다.
 
 **Xaml:**
 
-샘플 UI를 포함 한 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) 5 개 항목입니다. 삭제가 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 바인딩되는 [MenuBarItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.menubaritem), [SwipeItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.swipeitem), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), 및 [ ContextFlyout 메뉴](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout)합니다.
+샘플 UI에는 5개 항목의 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)가 포함되어 있습니다. Delete [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand)는 [MenuBarItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.menubaritem), [SwipeItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.swipeitem), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [ ContextFlyout 메뉴](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout)에 바인딩됩니다.
 
 ``` xaml
 <Page
@@ -228,9 +228,9 @@ A [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.s
 </Page>
 ```
 
-**Code-behind**
+**코드 숨김**
 
-1. 첫째, 정의 `ListItemData` 는 ListView의 각 ListViewItem에 ICommand를 텍스트 문자열을 포함 하는 클래스입니다.
+1. 먼저, ListView의 각 ListViewItem에 대한 텍스트 문자열과 ICommand를 포함하는 `ListItemData` 클래스를 정의합니다.
 
 ```csharp
 public class ListItemData
@@ -240,7 +240,7 @@ public class ListItemData
 }
 ```
 
-2. MainPage 클래스 정의의 컬렉션 `ListItemData` 에 대 한 개체를 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) 의 합니다 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)합니다. 다음 5 개 항목의 초기 컬렉션을 사용 하 여 채우는 것 (텍스트를 사용 하 여 연결 하 고 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 삭제).
+2. MainPage [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)의 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)에 대한 `ListItemData` 개체 컬렉션을 정의합니다. 그런 다음, 처음 5개 항목의 컬렉션으로 채웁니다(텍스트 및 연결된 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) Delete를 사용하여).
 
 ```csharp
 /// <summary>
@@ -284,7 +284,7 @@ private void ListView_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-3. 다음으로, 항목 삭제 명령을 구현 ICommand ExecuteRequested 처리기를 정의 합니다.
+3. 다음으로, ICommand ExecuteRequested 처리기를 정의하고 항목 삭제 명령을 구현합니다.
 
 ``` csharp
 /// <summary>
@@ -314,7 +314,7 @@ private void DeleteCommand_ExecuteRequested(
 }
 ```
 
-4. 마지막으로 포함 하 여 다양 한 ListView 이벤트에 대 한 처리기 정의 [PointerEntered](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered)를 [PointerExited](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited), 및 [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) 이벤트입니다. 포인터 이벤트 처리기는 각 항목에 대 한 Delete 단추 표시 또는 숨기기 위해 사용 됩니다.
+4. 마지막으로, [PointerEntered](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered), [PointerExited](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited) 및 [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) 이벤트를 포함하여 다양한 ListView 이벤트에 대한 처리기를 정의합니다. 포인터 이벤트 처리기는 각 항목의 삭제 단추를 표시하거나 숨기는 데 사용됩니다.
 
 ```csharp
 /// <summary>
@@ -364,32 +364,32 @@ private void ListViewSwipeContainer_PointerExited(
 }
 ```
 
-## <a name="command-experiences-using-the-xamluicommand-class"></a>명령은 XamlUICommand 클래스를 사용 하 여 환경을
+## <a name="command-experiences-using-the-xamluicommand-class"></a>XamlUICommand 클래스를 사용하는 명령 환경
 
-정의 되지 않은 명령을 생성 해야 하는 경우는 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 클래스에 더 많은 명령 모양 제어 하고자 합니다 [XamlUiCommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 클래스에서 파생 되는 [ ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 인터페이스를 다양 한 UI (예: 아이콘, 레이블, 설명 및 바로 가기 키) 속성, 메서드 및 UI 및 사용자 지정 명령 동작을 신속 하 게 정의 하는 이벤트를 추가 합니다.
+[StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 클래스에 정의되지 않은 명령을 만들어야 하거나 명령의 모양을 보다 정교하게 제어하려는 경우 [XamlUiCommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 클래스는 [ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 인터페이스에서 파생되어 UI 및 사용자 지정 명령의 동작을 신속하게 정의할 수 있는 다양한 UI 속성(예: 아이콘, 레이블, 설명, 바로 가기 키), 메서드 및 이벤트를 추가합니다.
 
-[XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 아이콘 같은 바인딩 컨트롤을 통해 UI를 지정할 수 있습니다 레이블, 설명 및 바로 가기 키 (둘 다 액세스 키 및 키보드 액셀러레이터)를 개별 속성을 설정 하지 않고 있습니다.
+[XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand)를 사용하면 개별 속성을 설정하지 않고 아이콘, 레이블, 설명, 바로 가기 키(액세스 키 및 키보드 가속기 둘 다) 같은 컨트롤 바인딩을 통해 UI를 지정할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ![XamlUICommand 샘플](images/commanding/XamlUICommandSampleOptimized.gif)
 
 *XamlUICommandSample*
 
-| 이 예제에 대 한 코드를 다운로드 합니다. |
+| 이 예제의 코드 다운로드 |
 | -------------------- |
-| [UWP 명령 샘플 (XamlUICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-xamluicommand.zip) |
+| [UWP 명령 샘플(XamlUICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-xamluicommand.zip) |
 
-이 예제에서는 이전 삭제 기능을 공유 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 예, 하지만 표시 하는 방법을 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 클래스를 사용 하면 사용자 고유의 글꼴 아이콘을 사용 하 여 사용자 지정 삭제 명령을 정의 레이블 키보드 액셀러레이터 및 설명 합니다. 같은 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 예제에서는 기본 강화 [ListView](listview-and-gridview.md) 삭제를 사용 하 여 항목을 통해 구현 되는 명령 합니다 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 클래스를 최적화 하는 동안는 입력된 형식 사용 하 여 다양 한 사용자 환경을 [MenuBar](menus.md), [안쪽으로 살짝 밀어](swipe.md) 컨트롤을 가리킬 때 단추, 및 [상황에 맞는 메뉴](menus.md).
+이 예제에서는 이전 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 예제의 삭제 기능을 공유하지만, [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 클래스를 사용하여 개발자 고유의 글꼴, 아이콘, 레이블, 키보드 가속기 및 설명으로 사용자 지정 삭제 명령을 정의하는 방법을 보여줍니다. [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 예제와 마찬가지로, [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 클래스를 통해 구현된 항목 삭제 명령으로 기본 [ListView](listview-and-gridview.md)를 개선하고 [MenuBar](menus.md), [살짝 밀기](swipe.md) 컨트롤, 호버 단추 및 [상황에 맞는 메뉴](menus.md)를 사용하여 다양한 입력 형식에 맞게 사용자 환경을 최적화합니다.
 
-많은 플랫폼 컨트롤 내부적으로 이전 섹션에서 StandardUICommand 예제 처럼 XamlUICommand 속성을 사용 합니다. 
+이전 섹션의 StandardUICommand 예제와 마찬가지로, 많은 플랫폼 컨트롤이 XamlUICommand 속성을 내부적으로 사용합니다. 
 
 > [!NOTE]
-> 이 샘플의 일부 Microsoft.UI.Xaml.Controls NuGet 패키지에 필요 합니다 [Microsoft Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)합니다.
+> 이 샘플에는 [Microsoft Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)의 일부인 Microsoft.UI.Xaml.Controls NuGet 패키지가 필요합니다.
 
 **Xaml:**
 
-샘플 UI를 포함 한 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) 5 개 항목입니다. 사용자 지정 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) Delete 바인딩되는 [MenuBarItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.menubaritem), [SwipeItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.swipeitem), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), 및 [ ContextFlyout 메뉴](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout)합니다.
+샘플 UI에는 5개 항목의 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)가 포함되어 있습니다. 사용자 지정 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 삭제는 [MenuBarItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.menubaritem), [SwipeItem](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.swipeitem), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [ContextFlyout 메뉴](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout)에 바인딩됩니다.
 
 ``` xaml
 <Page
@@ -523,9 +523,9 @@ private void ListViewSwipeContainer_PointerExited(
 </Page>
 ```
 
-**Code-behind**
+**코드 숨김**
 
-1. 첫째, 정의 `ListItemData` 는 ListView의 각 ListViewItem에 ICommand를 텍스트 문자열을 포함 하는 클래스입니다.
+1. 먼저, ListView의 각 ListViewItem에 대한 텍스트 문자열과 ICommand를 포함하는 `ListItemData` 클래스를 정의합니다.
 
 ```csharp
 public class ListItemData
@@ -535,7 +535,7 @@ public class ListItemData
 }
 ```
 
-2. MainPage 클래스 정의의 컬렉션 `ListItemData` 에 대 한 개체를 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) 의 합니다 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)합니다. 다음 5 개 항목의 초기 컬렉션을 사용 하 여 채우는 것 (텍스트를 사용 하 여 연결 하 고 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand)).
+2. MainPage [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)의 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)에 대한 `ListItemData` 개체 컬렉션을 정의합니다. 그런 다음, 처음 5개 항목의 컬렉션으로 채웁니다(텍스트 및 연결된 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand)를 사용하여).
 
 ```csharp
 ObservableCollection<ListItemData> collection = new ObservableCollection<ListItemData>();
@@ -555,7 +555,7 @@ private void ListView_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-3. 다음으로, 항목 삭제 명령을 구현 ICommand ExecuteRequested 처리기를 정의 합니다.
+3. 다음으로, ICommand ExecuteRequested 처리기를 정의하고 항목 삭제 명령을 구현합니다.
 
 ``` csharp
 private void DeleteCommand_ExecuteRequested(XamlUICommand sender, ExecuteRequestedEventArgs args)
@@ -578,7 +578,7 @@ private void DeleteCommand_ExecuteRequested(XamlUICommand sender, ExecuteRequest
 }
 ```
 
-4. 마지막으로 포함 하 여 다양 한 ListView 이벤트에 대 한 처리기 정의 [PointerEntered](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered)를 [PointerExited](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited), 및 [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) 이벤트입니다. 포인터 이벤트 처리기는 각 항목에 대 한 Delete 단추 표시 또는 숨기기 위해 사용 됩니다.
+4. 마지막으로, [PointerEntered](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered), [PointerExited](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited) 및 [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) 이벤트를 포함하여 다양한 ListView 이벤트에 대한 처리기를 정의합니다. 포인터 이벤트 처리기는 각 항목의 삭제 단추를 표시하거나 숨기는 데 사용됩니다.
 
 ```csharp
 private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -603,30 +603,30 @@ private void ListViewSwipeContainer_PointerExited(object sender, PointerRoutedEv
 }
 ```
 
-## <a name="command-experiences-using-the-icommand-interface"></a>ICommand 인터페이스를 사용 하 여 명령 환경
+## <a name="command-experiences-using-the-icommand-interface"></a>ICommand 인터페이스를 사용하는 명령 환경
 
-다양 한 일반적인 명령 환경을 위한 기초를 제공 하는 표준 UWP 컨트롤 (단추, 목록, 선택, 일정, 예측 텍스트)입니다. 컨트롤 형식의 전체 목록은 참조 하세요 [컨트롤 및 UWP 앱에 대 한 패턴](index.md)합니다.
+표준 UWP 컨트롤(단추, 목록, 선택, 일정, 예측 텍스트)은 여러 일반 명령 환경을 위한 기초를 제공합니다. 컨트롤 형식의 전체 목록은 [UWP 앱 컨트롤 및 패턴](index.md)을 참조하세요.
 
-가장 기본적인 방법은 구조화 된 명령 환경을 지원 하도록 ICommand 인터페이스 구현의 정의 하는 것 ([Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 에 대 한 C++ 하거나 [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand) 에 대 한 C#).  이 ICommand 인스턴스 단추와 같은 컨트롤을 바인딩할 수 있습니다.
+체계적인 명령 환경을 지원하는 가장 기본적인 방법은 ICommand 인터페이스 구현을 정의하는 것입니다(C++는 [Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand), C#은 [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand)).  이 ICommand 인스턴스를 단추 같은 컨트롤에 바인딩할 수 있습니다.
 
 > [!NOTE]
-> 경우에 따라 효율적 메서드 클릭 이벤트와 IsEnabled 속성에 속성에 바인딩할 수 있습니다.
+> 경우에 따라 메서드를 Click 이벤트에 바인딩하고 속성을 IsEnabled 속성에 바인딩하는 것이 효과적일 수 있습니다.
 
-#### <a name="example"></a>예제
+#### <a name="example"></a>예
 
 ![명령 인터페이스 예제](images/commanding/icommand.gif)
 
 *ICommand 예제*
 
-| 이 예제에 대 한 코드를 다운로드 합니다. |
+| 이 예제의 코드 다운로드 |
 | -------------------- |
-| [UWP 명령 샘플 (ICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-icommand.zip) |
+| [UWP 명령 샘플(ICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-icommand.zip) |
 
-이 기본 예제에서는 단일 명령 단추를 사용 하 여 호출할 수 있습니다 하는 방법을 설명 클릭, 키보드 액셀러레이터를 및 마우스 휠 회전 합니다.
+이 기본 예제에서는 단추 클릭, 바로 가기 키, 마우스 휠 회전을 통해 단일 명령을 호출하는 방법을 보여줍니다.
 
-두 개 사용 하 여 [Listview](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), 5 개 항목 및 다른 빈 및 이동 항목을 ListView에서 왼쪽에서 오른쪽의 ListView에 대해 하나씩 두 개의 단추를 사용 하 여 채워진 하나 및 왼쪽 오른쪽에서 이동 하는 것에 대 한 다른 항목을 합니다. 각 단추는 해당 명령에 연결 (ViewModel.MoveRightCommand 및 ViewModel.MoveLeftCommand, 각각), 및 설정 되며 해당 연결 된 ListView의 항목 수에 따라 자동으로 사용 하지 않도록 설정 합니다.
+[ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)를 두 개 사용합니다. 하나는 5개 항목과 다른 빈 항목 그리고 단추 2개로 채워져 있고 왼쪽에 있는 ListView의 항목을 오른쪽에 있는 ListView로 이동하는 데 사용되며, 다른 하나는 오른쪽에서 왼쪽으로 항목을 이동하는 데 사용됩니다. 각 단추는 해당 명령에 바인딩되고(각각 ViewModel.MoveRightCommand 및 ViewModel.MoveLeftCommand), 연결된 ListView의 항목 수에 따라 자동으로 설정/해제됩니다.
 
-**다음 XAML 코드 예제에 대 한 UI를 정의합니다.**
+**다음 XAML 코드는 이 예제의 UI를 정의합니다.**
 
 ```xaml
 <Page
@@ -736,9 +736,9 @@ private void ListViewSwipeContainer_PointerExited(object sender, PointerRoutedEv
 </Page>
 ```
 
-**이전 UI에 대 한 코드 숨김은 다음과 같습니다.**
+**다음은 이전 UI의 코드 숨김입니다.**
 
-코드 숨김에서 명령 코드를 포함 하는 보기 모델에 연결 합니다. 또한 마우스 휠도 명령 코드를 연결 하는 입력에 대 한 처리기를 정의 합니다.
+코드 숨김에서 명령 코드를 포함하는 보기 모델을 연결합니다. 또한 마우스 휠의 입력을 처리하는 처리기를 정의합니다. 이 처리기 역시 명령 코드를 연결합니다.
 
 ```csharp
 using Windows.UI.Xaml;
@@ -799,9 +799,9 @@ namespace UICommand1.View
 }
 ```
 
-**뷰 모델에서 코드는 같습니다.**
+**다음은 보기 모델의 코드입니다.**
 
-보기 모델 위치 이며에서는 앱에서 두 개의 명령에 대 한 실행 정보를 정의 하나의 ListView를 채우는 숨기 거 나 각 ListView의 항목 개수에 따라 몇 가지 추가 UI 표시에 대 한 불투명도 값 변환기를 제공 합니다.
+보기 모델에서 앱의 두 명령에 대한 실행 세부 정보를 정의하고, 한 ListView를 채우고, 각 ListView의 항목 수에 따라 추가 UI를 숨기거나 표시하는 불투명도 값 변환기를 제공합니다.
 
 ```csharp
 using System;
@@ -979,9 +979,9 @@ namespace UICommand1.ViewModel
 }
 ```
 
-**마지막으로,이 ICommand 인터페이스 구현의 같습니다.**
+**마지막으로, 다음은 ICommand 인터페이스의 구현입니다.**
 
-여기에 구현 하는 명령을 정의 합니다 [ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 중계 하 여 다른 개체에 해당 기능 및 인터페이스입니다.
+여기서는 [ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 인터페이스를 구현하고 해당 기능을 다른 개체에 전달하는 명령을 정의합니다.
 
 ```csharp
 using System;
@@ -1070,35 +1070,35 @@ namespace UICommand1
 
 ## <a name="summary"></a>요약
 
-유니버설 Windows 플랫폼을 제공 하면 강력 하 고 유연한 명령 시스템 공유 및 명령 컨트롤 형식, 장치 및 입력된 형식을 관리 하는 앱을 빌드합니다.
+유니버설 Windows 플랫폼은 컨트롤 형식, 디바이스 및 입력 형식에 관계 없이 명령을 공유하고 관리하는 앱을 빌드할 수 있는 강력하고 유연한 명령 시스템을 제공합니다.
 
-UWP 앱에 대 한 명령을 만들 때 다음 방법 중 하나를 사용 합니다.
+UWP 앱의 명령을 만들 때 다음 방법을 사용합니다.
 
-- 수신 대기 하 고 XAML/코드 숨김에서 이벤트를 처리 합니다.
-- 클릭 같은 메서드를 처리 하는 이벤트에 바인딩
-- 사용자 지정 ICommand 구현을 정의 합니다.
-- 미리 정의 된 속성 집합에 대 한 고유한 값을 사용 하 여 XamlUICommand 개체 만들기
-- 미리 정의 된 플랫폼 속성 및 값의 집합을 사용 하 여 StandardUICommand 개체 만들기
+- XAML/코드 숨김의 이벤트를 수신 대기하고 처리합니다.
+- Click 같은 이벤트 처리 메서드에 바인딩
+- 개발자 고유의 ICommand 구현을 정의
+- 미리 정의된 속성 세트에 개발자 고유의 값을 사용하여 XamlUICommand 개체 만들기
+- 미리 정의된 플랫폼 속성 및 값 세트를 사용하여 StandardUICommand 개체 만들기
 
 ## <a name="next-steps"></a>다음 단계
 
-보여 주는 전체 예제는 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 및 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 구현 참조를 [XAML 컨트롤 갤러리](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) 샘플입니다.
+[XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 및 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 구현을 보여주는 전체 예제는 [XAML 컨트롤 갤러리](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) 샘플을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[컨트롤 및 UWP 앱에 대 한 패턴](index.md)
+[UWP 앱 컨트롤 및 패턴](index.md)
 
 ### <a name="samples"></a>샘플
 
-#### <a name="topic-samples"></a>항목 샘플
+#### <a name="topic-samples"></a>토픽 샘플
 
-- [UWP 명령 샘플 (StandardUICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-standarduicommand.zip)
-- [UWP 명령 샘플 (XamlUICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-xamluicommand.zip)
-- [UWP 명령 샘플 (ICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-icommand.zip)
+- [UWP 명령 샘플(StandardUICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-standarduicommand.zip)
+- [UWP 명령 샘플(XamlUICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-xamluicommand.zip)
+- [UWP 명령 샘플(ICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-icommand.zip)
 
 #### <a name="other-samples"></a>기타 샘플
 
-- [유니버설 Windows 플랫폼 샘플 (C# 및 C++)](https://go.microsoft.com/fwlink/?linkid=832713)
+- [유니버설 Windows 플랫폼 샘플(C# 및 C++)](https://go.microsoft.com/fwlink/?linkid=832713)
 - [XAML 컨트롤 갤러리](https://github.com/Microsoft/Xaml-Controls-Gallery)
 
 <!---Some context for the following links goes here

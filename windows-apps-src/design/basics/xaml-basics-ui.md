@@ -1,66 +1,66 @@
 ---
 title: 사용자 인터페이스 만들기 자습서
-description: 이 문서는 XAML의 사용자 인터페이스 빌드 기본 사항에 대해 설명합니다.
+description: 이 문서에서는 XAML의 사용자 인터페이스 빌드 기본 사항에 대해 설명합니다.
 keywords: XAML, UWP, 시작
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bae8455f1062b3ad62aeac3807c6c58ae274a1b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640818"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63794778"
 ---
 # <a name="tutorial-create-a-user-interface"></a>자습서: 사용자 인터페이스 만들기
 
 이 자습서에서는 이미지 편집 프로그램의 기본 UI를 만드는 방법을 알아봅니다. 
 
 + XAML 디자이너, 도구 상자, XAML 편집기, 속성 패널 및 문서 개요 등의 Visual Studio XAML 도구를 사용하여 UI에 컨트롤 및 콘텐츠 추가
-+ RelativePanel, Grid 및 StackPanel과 같은 가장 일반적인 XAML 레이아웃 패널 일부를 활용합니다.
++ RelativePanel, Grid 및 StackPanel과 같은 가장 일반적인 XAML 레이아웃 패널 활용
 
-이미지 편집 프로그램은 2페이지/화면을 갖고 있습니다.
+이미지 편집 프로그램은 다음과 같은 두 가지 페이지/화면을 갖고 있습니다.
 
-**메인 페이지**, 각 이미지 파일에 대한 정보와 함께 사진 갤러리 보기를 표시합니다.
+**메인 페이지** - 각 이미지 파일에 대한 정보와 함께 사진 갤러리 보기를 표시합니다.
 
 ![MainPage](images/xaml-basics/mainpage.png)
 
-**세부 정보 페이지**, 하나의 사진을 선택한 후에 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
+**세부 정보 페이지** - 사진을 하나 선택하면 해당 사진이 표시됩니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
 
 ![DetailPage](images/xaml-basics/detailpage.png)
 
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-* Visual Studio 2017: [Visual Studio 2017 Community (무료)를 다운로드 합니다.](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
-* Windows 10 SDK (10.0.15063.468 이상):  [(무료) 최신 Windows SDK 다운로드](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* Visual Studio 2017: [Visual Studio 2017 Community(무료) 다운로드](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
+* Windows 10 SDK(10.0.15063.468 이상):  [최신 Windows SDK(무료)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 
-## <a name="part-0-get-the-starter-code-from-github"></a>0 부: 시작 코드를 github에서 가져오기
+## <a name="part-0-get-the-starter-code-from-github"></a>0부: github에서 시작 코드 다운로드
 
-이번 자습서에서는 PhotoLab 샘플의 간소화된 버전부터 시작합니다. 
+이 자습서에서는 PhotoLab 샘플의 간소화된 버전부터 시작합니다. 
 
-1. 로 이동 [ https://github.com/Microsoft/Windows-appsample-photo-lab ](https://github.com/Microsoft/Windows-appsample-photo-lab)합니다. 샘플을 볼 수 있는 GitHub 페이지로 이동하게 됩니다. 
-2. 그런 다음 샘플을 복제 또는 다운로드해야 합니다. **복제 또는 다운로드** 단추를 클릭합니다. 하위 메뉴가 나타납니다.
+1. [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab)으로 이동합니다. 샘플이 있는 GitHub 페이지로 이동됩니다. 
+2. 다음으로, 샘플을 복제 또는 다운로드해야 합니다. **복제 또는 다운로드** 단추를 클릭합니다. 하위 메뉴가 나타납니다.
     <figure>
         <img src="images/xaml-basics/clone-repo.png" alt="The Clone or download menu on GitHub">
         <figcaption>PhotoLab 샘플의 GitHub 페이지에 있는 <b>복제 또는 다운로드</b> 메뉴</figcaption>
     </figure>
 
-    **GitHub 잘 모르는 경우:**
+    **GitHub에 익숙하지 않은 경우:**
     
     a. **ZIP 다운로드**를 클릭하고 파일을 로컬에 저장합니다. 그러면 필요한 프로젝트 파일이 모두 포함된 .zip 파일이 다운로드됩니다.
-    b. 파일의 압축을 풉니다. 파일 탐색기를 사용해 앞에서 다운로드한 .zip 파일로 이동하여 마우스 오른쪽 버튼을 클릭한 후 **모두 압축 풀기**를 선택합니다. c. 샘플의 로컬 사본으로 탐색한 후 `Windows-appsample-photo-lab-master\xaml-basics-starting-points\user-interface` 디렉토리로 이동합니다.    
+    b. 파일의 압축을 풉니다. 파일 탐색기를 사용하여 앞에서 다운로드한 .zip 파일로 이동한 다음, 해당 파일을 마우스 오른쪽 단추로 클릭하고 **모두 압축 풀기...** 를 선택합니다. c. 샘플의 로컬 복사본을 찾아서 `Windows-appsample-photo-lab-master\xaml-basics-starting-points\user-interface` 디렉토리로 이동합니다.    
 
-    **GitHub를 사용 하 여 친숙 한 경우:**
+    **GitHub에 익숙한 경우:**
 
     a. 리포지토리의 마스터 분기를 로컬에 복제합니다.
-    b. `Windows-appsample-photo-lab\xaml-basics-starting-points\user-interface` 디렉토리로 이동합니다.
+    b. `Windows-appsample-photo-lab\xaml-basics-starting-points\user-interface` 디렉터리로 이동합니다.
 
 3. `Photolab.sln`을 클릭하여 프로젝트를 엽니다.
 
-## <a name="part-1-add-a-textblock-using-xaml-designer"></a>1부: XAML 디자이너를 사용 하 여 텍스트 블록 추가
+## <a name="part-1-add-a-textblock-using-xaml-designer"></a>1부: XAML 디자이너를 사용하여 TextBlock 추가
 
-Visual Studio에서는 XAML UI를 쉽게 만들 수 있는 여러 가지 도구를 제공합니다. XAML 디자이너를 사용하면 컨트롤을 디자인 화면으로 드래그하여 앱을 실행하기 전에 어떤 모습인지 볼 수 있습니다. 속성 패널을 사용하면 디자이너에서 활성화된 컨트롤의 모든 속성을 보고 설정할 수 있습니다. 문서 개요는 UI에 대한 XAML 시각적 트리의 부모-자식 구조를 보여 줍니다. XAML 편집기를 사용하면 XAML 태그를 직접 입력하고 수정할 수 있습니다.
+Visual Studio에서는 XAML UI를 쉽게 만들 수 있는 여러 가지 도구를 제공합니다. XAML 디자이너를 사용하면 컨트롤을 디자인 화면으로 끌어 놓아 앱을 실행하기 전에 어떤 모습인지 볼 수 있습니다. 속성 패널을 사용하면 디자이너에서 활성화된 컨트롤의 모든 속성을 보고 설정할 수 있습니다. 문서 개요는 UI에 대한 XAML 시각적 트리의 부모-자식 구조를 보여줍니다. XAML 편집기를 사용하면 XAML 태그를 직접 입력하고 수정할 수 있습니다.
 
 다음은 Visual Studio UI의 레이블이 있는 도구입니다.
 
@@ -68,11 +68,11 @@ Visual Studio에서는 XAML UI를 쉽게 만들 수 있는 여러 가지 도구�
 
 이러한 각 도구로 UI를 쉽게 만들 수 있으므로 이 자습서에서는 이 도구를 모두 사용합니다. 먼저 XAML 디자이너를 사용하여 컨트롤을 추가합니다. 
 
-**XAML 디자이너를 사용 하는 컨트롤을 추가 합니다.**
+**XAML 디자이너를 사용하여 컨트롤 추가:**
 
-1. 솔루션 탐색기에서 **MainPage.xaml**을 두 번 클릭해 엽니다. 이는 UI 요소가 추가되지 않은 상태에서 앱의 메인 페이지를 보여 줍니다.
+1. 솔루션 탐색기에서 **MainPage.xaml**을 두 번 클릭하여 엽니다. 그러면 UI 요소가 추가되지 않은 상태에서 앱의 메인 페이지가 표시됩니다.
 
-2. 더 진행하기 전에 Visual Studio를 약간 조정해야 합니다.
+2. 더 진행하기 전에, Visual Studio를 약간 조정해야 합니다.
 
     - 솔루션 플랫폼이 ARM이 아닌 x86 또는 x64로 설정되었는지 확인합니다.
     - 13.3인치 데스크톱 미리 보기를 표시하도록 기본 페이지 XAML 디자이너를 설정합니다.
@@ -81,11 +81,11 @@ Visual Studio에서는 XAML UI를 쉽게 만들 수 있는 여러 가지 도구�
 
     ![VS 설정](images/xaml-basics/layout-vs-settings.png)
 
-    지금 앱을 실행할 수는 있지만 많이 볼 수는 없습니다. 좀 더 재미있는 UI 요소를 추가해 보겠습니다.
+    지금 앱을 실행할 수는 있지만, 볼 수 있는 것이 별로 없습니다. 좀 더 재미있는 UI 요소를 추가해 보겠습니다.
 
-3. 도구 상자에서 **공용 XAML 컨트롤**을 확장하고 [TextBlock](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock) 컨트롤을 찾습니다. TextBlock을 페이지의 왼쪽 위 모서리 근처의 디자인 화면으로 드래그합니다.
+3. 도구 상자에서 **공용 XAML 컨트롤**을 확장하고 [TextBlock](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock) 컨트롤을 찾습니다. TextBlock을 페이지의 왼쪽 위 모서리 근처에 있는 디자인 화면으로 끕니다.
 
-    TextBlock이 페이지에 추가되고 디자이너는 원하는 레이아웃에서 최상의 추측을 기반으로 일부 속성을 설정합니다. TextBlock 주위에 파란색 강조 표시가 나타나 현재 TextBlock이 활성 객체임을 나타냅니다. 디자이너가 추가한 여백 및 기타 설정을 확인합니다. XAML은 다음과 같이 보입니다. 이 형식이 정확하게 지정되지 않아도 걱정할 필요가 없습니다. 읽기 쉽도록 이 부분을 축약했습니다.
+    TextBlock이 페이지에 추가되고 디자이너는 원하는 레이아웃에서 최상의 추측을 기반으로 일부 속성을 설정합니다. TextBlock 주위에 파란색 강조 표시가 나타나 현재 TextBlock이 활성 개체임을 나타냅니다. 디자이너가 추가한 여백 및 기타 설정을 확인합니다. XAML은 다음과 같이 보입니다. 이 형식이 정확하게 지정되지 않아도 걱정할 필요가 없습니다. 읽기 쉽도록 이 부분을 축약했습니다.
 
     ```xaml
     <TextBlock x:Name="textBlock"
@@ -96,9 +96,9 @@ Visual Studio에서는 XAML UI를 쉽게 만들 수 있는 여러 가지 도구�
                VerticalAlignment="Top"/>
     ```
 
-    다음 단계에서 이 값을 업데이트합니다.
+    다음 단계에서 이 값을 업데이트하겠습니다.
 
-4. 속성 패널에서 TextBlock의 이름 값을 **textBlock**에서 **TitleTextBlock**으로 변경합니다. (TextBlock이 여전히 활성 객체인지 확인합니다.)
+4. 속성 패널에서, TextBlock의 이름 값을 **textBlock**에서 **TitleTextBlock**으로 변경합니다. (TextBlock이 여전히 활성 개체인지 확인합니다.)
 
 5. **공용** 아래에서 텍스트 값을 **컬렉션**으로 변경합니다.
 
@@ -115,11 +115,11 @@ Visual Studio에서는 XAML UI를 쉽게 만들 수 있는 여러 가지 도구�
                VerticalAlignment="Top"/>
     ```
 
-6. TextBlock의 위치를 지정하려면 먼저 Visual Studio에서 추가한 속성 값을 제거해야 합니다. 문서 개요에서 **TitleTextBlock**을 마우스 오른쪽 단추로 클릭한 다음 **레이아웃 > 모두 다시 설정**을 선택합니다.
+6. TextBlock의 위치를 지정하려면 먼저 Visual Studio에서 추가한 속성 값을 제거해야 합니다. 문서 개요에서 **TitleTextBlock**을 마우스 오른쪽 단추로 클릭한 다음, **레이아웃 > 모두 다시 설정**을 선택합니다.
 
 ![문서 개요](images/xaml-basics/doc-outline-reset.png)
 
-7. 속성 패널에서 검색 상자에 **margin**을 입력하여 **Margin** 속성을 쉽게 찾을 수 있게 합니다. 왼쪽 여백과 아래쪽 여백을 24로 설정합니다.
+7. 속성 패널에서 검색 상자에 **여백**을 입력하면 **Margin** 속성을 쉽게 찾을 수 있습니다. 왼쪽 여백과 아래쪽 여백을 24로 설정합니다.
 
     ![TextBlock 여백](images/xaml-basics/margins.png)
 
@@ -127,7 +127,7 @@ Visual Studio에서는 XAML UI를 쉽게 만들 수 있는 여러 가지 도구�
 
     자세한 내용은 [맞춤, 여백 및 안쪽 여백](../layout/alignment-margin-padding.md)을 참조하세요.
 
-8. 문서 개요 패널에서 **TitleTextBlock**를 마우스 오른쪽 단추로 클릭한 후 **Edit Style > Apply Resource > TitleTextBlockStyle**를 선택하세요. 이렇게 하면 제목 텍스트에 시스템 정의 스타일이 적용됩니다.
+8. 문서 개요 패널에서 **TitleTextBlock**를 마우스 오른쪽 단추로 클릭한 다음, **스타일 편집 > 리소스 적용 > TitleTextBlockStyle**을 선택합니다. 그러면 제목 텍스트에 시스템 정의 스타일이 적용됩니다.
 
     ```xaml
     <TextBlock x:Name="TitleTextBlock"
@@ -137,30 +137,30 @@ Visual Studio에서는 XAML UI를 쉽게 만들 수 있는 여러 가지 도구�
                Style="{StaticResource TitleTextBlockStyle}"/>
     ```
 
-9. 속성 패널에서 검색 상자에 **textwrapping**을 입력하여 **TextWrapping** 속성을 쉽게 찾을 수 있게 합니다. **TextWrapping** 속성에 대한 _속성 마커_를 클릭하여 메뉴를 엽니다. _속성 마커_는 각 속성 값의 오른쪽에 있는 작은 상자 모양 기호입니다. _속성 표식을_ 속성 기본이 아닌 값으로 설정 되어 있는지를 나타내기 위해 검정색입니다.) 에 **속성** 메뉴에서 **재설정** TextWrapping 속성을 다시 합니다.
+9. 속성 패널에서 검색 상자에 **textwrapping**을 입력하여 **TextWrapping** 속성을 찾습니다. **TextWrapping** 속성에 대한 _속성 마커_를 클릭하여 메뉴를 엽니다. (_속성 마커_는 각 속성 값의 오른쪽에 있는 작은 상자 모양 기호입니다. 속성이 기본값이 아닌 값으로 설정된 것을 나타내기 위해 _속성 마커_가 검은색입니다.) **속성** 메뉴에서 **다시 설정**을 선택하여 TextWrapping 속성을 다시 설정합니다.
 
-    Visual Studio는 이 속성을 추가하지만 적용한 스타일로 이미 설정되어 있으므로 여기서는 필요하지 않습니다.
+    Visual Studio가 이 속성을 추가하지만, 여러분이 적용한 스타일로 이미 설정되어 있으므로 여기서는 필요 없습니다.
 
-UI의 첫 번째 부분을 앱에 추가했습니다! 이제 앱을 실행하여 현재의 모습을 확인합니다.
+UI의 첫 번째 부분을 앱에 추가했습니다! 이제 앱을 실행하여 어떤 모양인지 확인합니다.
 
-XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지만, 실행했을 때 검은색 텍스트가 흰색 배경에 나타났다는 점을 인식했을 수도 있습니다. Windows에는 어두운 테마와 밝은 테마가 모두 있고 기본 테마는 디바이스마다 다르기 때문입니다. PC에서 기본 테마는 '밝게'입니다. XAML 디자이너의 위쪽에 있는 톱니 바퀴 아이콘을 클릭하여 디바이스 미리 보기 설정을 열고 테마를 '밝게'로 변경하면 XAML 디자이너의 앱이 PC에서와 같은 모습이 됩니다.
+XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지만, 실행했을 때 검은색 텍스트가 흰색 배경에 나타났다는 점을 인식했을 수도 있습니다. Windows에는 어두운 테마와 밝은 테마가 모두 있고 기본 테마는 디바이스마다 다르기 때문입니다. PC에서 기본 테마는 [밝게]입니다. XAML 디자이너의 위쪽에 있는 톱니바퀴 아이콘을 클릭하여 디바이스 미리 보기 설정을 열고 테마를 [밝게]로 변경하면 XAML 디자이너의 앱이 PC와 같은 모습이 됩니다.
 
 > [!NOTE]
-> 이 자습서의 이번 파트에서는 드래그 앤 드롭으로 컨트롤을 추가했습니다. 도구 상자에서 에서 컨트롤을 두 번 클릭하여 컨트롤을 추가할 수도 있습니다. 시도해 보고 Visual Studio에서 생성되는 XAML의 차이점을 확인해 보세요.
+> 이 자습서의 이번 파트에서는 끌어서 놓기로 컨트롤을 추가했습니다. 도구 상자에서 컨트롤을 두 번 클릭하여 컨트롤을 추가할 수도 있습니다. 시도해 보고 Visual Studio에서 생성하는 XAML의 차이점을 확인해 보세요.
 
-## <a name="part-2-add-a-gridview-control-using-the-xaml-editor"></a>2부: XAML 편집기를 사용 하는 GridView 컨트롤 추가
+## <a name="part-2-add-a-gridview-control-using-the-xaml-editor"></a>2부: XAML 편집기를 사용하여 GridView 컨트롤 추가
 
-파트 1에서는 Visual Studio에서 제공하는 XAML 디자이너 및 기타 도구를 사용했습니다. 여기에서는 XAML 편집기를 사용하여 XAML 태그를 직접 사용해 봅니다. XAML에 익숙해지면 이 방법이 더 효율적으로 작동할 수 있습니다.
+1부에서는 Visual Studio에서 제공하는 XAML 디자이너 및 기타 도구를 사용했습니다. 여기서는 XAML 편집기를 사용하여 XAML 태그를 직접 작업하겠습니다. XAML에 익숙해지면 이 방법이 더 효율적으로 작동할 수 있습니다.
 
-먼저, 루트 레이아웃 [Grid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid)를 [**RelativePanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel)로 바꿉니다. RelativePanel을 사용하면 패널이나 다른 UI와 비교하여 UI 청크를 쉽게 재배열할 수 있습니다. [XAML 적응형 레이아웃](xaml-basics-adaptive-layout.md) 자습서에서 이러한 유용함을 확인할 수 있습니다. 
+먼저, 루트 레이아웃 [Grid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid)를 [**RelativePanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel)로 바꿉니다. RelativePanel을 사용하면 패널이나 다른 UI와 비교하여 UI 청크를 쉽게 재배열할 수 있습니다. [XAML 적응형 레이아웃](xaml-basics-adaptive-layout.md) 자습서에서 이 방법이 얼마나 유용한지 확인할 수 있습니다. 
 
-그 다음 [GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview) 컨트롤을 추가하여 데이터를 표시합니다.
+다음으로, [GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview) 컨트롤을 추가하여 데이터를 표시합니다.
 
-**XAML 편집기를 사용 하 여 컨트롤 추가**
+**XAML 편집기를 사용하여 컨트롤 추가**
 
 1. XAML 편집기에서 루트 **Grid**를 **RelativePanel**로 변경합니다.
 
-    **전에**
+    **이전**
     ```xaml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
           <TextBlock x:Name="TitleTextBlock"
@@ -170,7 +170,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
     </Grid>
     ```
 
-    **후**
+    **이후**
     ```xaml
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock x:Name="TitleTextBlock"
@@ -182,9 +182,9 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
 
     **RelativePanel**을 사용하는 레이아웃에 대한 자세한 내용은 [레이아웃 패널](https://docs.microsoft.com/windows/uwp/layout/layout-panels#relativepanel)을 참조하세요.
 
-2. **TextBlock** 요소 아래에서 'ImageGridView'라는 **GridView 컨트롤**을 추가합니다. 설정 된 **RelativePanel** _연결 된 속성_ 제목 텍스트를 아래에서 컨트롤을 화면의 전체 너비를 확장 하도록 합니다.
+2. **TextBlock** 요소 아래에 'ImageGridView'라는 **GridView 컨트롤**을 추가합니다. **RelativePanel**_연결된 속성_을 설정하여 컨트롤을 제목 텍스트 아래에 배치하고 화면의 전체 너비를 따라 늘립니다.
 
-    **이 XAML을 추가 합니다.**
+    **이 XAML 추가**
 
     ```xaml
     <GridView x:Name="ImageGridView"
@@ -194,7 +194,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
               RelativePanel.Below="TitleTextBlock"/>
     ```
 
-    **TextBlock 후**
+    **TextBlock 이후**
     ```xaml
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock x:Name="TitleTextBlock"
@@ -209,7 +209,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
 
     패널 연결된 속성에 대한 자세한 내용은 [레이아웃 패널](https://docs.microsoft.com/windows/uwp/layout/layout-panels)을 참조하세요.
 
-3. **GridView**에 무엇이든 표시하려면 표시할 데이터 모음을 제공해야 합니다. MainPage.xaml.cs를 열고 **GetItemsAsync** 메서드를 찾습니다. 이 메서드는 Images라는 컬렉션을 채우는데, 이 컬렉션은 MainPage에 추가한 속성입니다.
+3. **GridView**에 무엇이든 표시하려면 표시할 데이터 컬렉션을 제공해야 합니다. MainPage.xaml.cs를 열고 **GetItemsAsync** 메서드를 찾습니다. 이 메서드는 Images라는 컬렉션을 채우는데, 이 컬렉션은 MainPage에 추가한 속성입니다.
 
     **GetItemsAsync**의 **foreach** 루프 이후에 이 코드 행을 추가합니다.
 
@@ -217,36 +217,36 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
     ImageGridView.ItemsSource = Images;
     ```
 
-    이는 GridView의 **ItemsSource** 속성을 앱의 **Images** 컬렉션으로 설정하고 **GridView**에 표시할 항목을 제공합니다.
+    이렇게 하면 GridView의 **ItemsSource** 속성이 앱의 **Images** 컬렉션으로 설정되고 **GridView**에 표시할 항목이 제공됩니다.
 
-앱을 실행하고 모든 것이 제대로 작동하는지 확인할 수 있는 좋은 장소입니다. 이 도구는 다음과 같습니다.
+앱을 실행하고 모든 것이 제대로 작동하는지 확인할 수 있는 좋은 장소입니다. 이제 다음과 비슷한 모양입니다.
 
 ![앱 UI 검사점 1](images/xaml-basics/layout-0.png)
 
-앱에서 아직 이미지가 표시되지 않는 것을 알 수 있습니다. 기본적으로 이는 컬렉션에 있는 데이터 형식의 ToString 값을 표시합니다. 그런 다음 데이터 템플릿을 만들어 데이터 표시 방법을 정의합니다.
+앱에 아직 이미지가 표시되지 않는 것을 알 수 있습니다. 기본적으로 앱은 컬렉션에 있는 데이터 형식의 ToString 값을 표시합니다. 다음으로, 데이터 템플릿을 만들어 데이터 표시 방법을 정의합니다.
 
 > [!NOTE]
 > **RelativePanel**을 사용하는 레이아웃은 [레이아웃 패널](https://docs.microsoft.com/windows/uwp/layout/layout-panels#relativepanel) 문서에서 자세히 알아볼 수 있습니다. **TextBlock** 및 **GridView**에 대해 RelativePanel 연결된 속성을 설정하여 다른 레이아웃을 실험해 봅니다.
 
-## <a name="part-3-add-a-datatemplate-to-display-your-data"></a>3부: 데이터를 표시할 DataTemplate을 추가 합니다.
+## <a name="part-3-add-a-datatemplate-to-display-your-data"></a>3부: 데이터를 표시하는 DataTemplate 추가
 
-이제 데이터를 표시하는 방법을 GridView에 알려 주는 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)을 만듭니다. 데이터 템플릿의 전체 설명은 [항목 컨테이너 및 템플릿](../controls-and-patterns/item-containers-templates.md)을 참조하세요.
+이제 데이터를 표시하는 방법을 GridView에 알려주는 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)을 만듭니다. 데이터 템플릿의 전체 설명은 [항목 컨테이너 및 템플릿](../controls-and-patterns/item-containers-templates.md)을 참조하세요.
 
-지금은 자리 표시자를 추가하여 원하는 레이아웃을 쉽게 만들 수 있습니다. [XAML 데이터 바인딩](../../data-binding/xaml-basics-data-binding.md) 자습서에서 이러한 자리 표시자를 **ImageFileInfo** 클래스의 실제 데이터로 바꿉니다. 데이터 개체의 모습을 보려면 ImageFileInfo.cs 파일을 열 수 있습니다.
+지금은 자리 표시자를 추가하여 원하는 레이아웃을 쉽게 만들 수 있습니다. [XAML 데이터 바인딩](../../data-binding/xaml-basics-data-binding.md) 자습서에서 이러한 자리 표시자를 **ImageFileInfo** 클래스의 실제 데이터로 바꿉니다. 데이터 개체의 모습을 보려면 ImageFileInfo.cs 파일을 열면 됩니다.
 
-**표 뷰로 데이터 템플릿을 추가합니다**
+**그리드 보기에 데이터 템플릿 추가**
 
 1. MainPage.xaml을 엽니다.
 
-2. 평점을 보려면 [UWP용 Telerik UI](https://github.com/telerik/UI-For-UWP) NuGet 패키지의 **RadRating** 컨트롤을 사용합니다. Telerik 컨트롤의 네임스페이스를 지정하는 XAML 네임스페이스 참조를 추가합니다. 이를 다른 'xmlns:' 항목 바로 뒤에 여는 **Page**태그에 배치합니다.
+2. 평점을 보려면 [UWP용 Telerik UI](https://github.com/telerik/UI-For-UWP) NuGet 패키지의 **RadRating** 컨트롤을 사용합니다. Telerik 컨트롤의 네임스페이스를 지정하는 XAML 네임스페이스 참조를 추가합니다. 이 참조를 다른 'xmlns:' 항목 바로 뒤에 있는 여는 **Page**태그에 배치합니다.
 
-    **이 XAML을 추가 합니다.**
+    **이 XAML 추가**
 
     ```xaml
     xmlns:telerikInput="using:Telerik.UI.Xaml.Controls.Input"
     ```
 
-    **마지막 ' xmlns:' 항목**
+    **마지막 'xmlns:' 항목 이후**
 
     ```xaml
     <Page x:Name="page"
@@ -263,7 +263,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
 
     XAML 네임스페이스에 대한 자세한 내용은 [XAML 네임스페이스 및 네임스페이스 매핑](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-namespaces-and-namespace-mapping)을 참조하세요.
 
-3. 문서 개요에서 **ImageGridView**를 마우스 오른쪽 단추로 클릭합니다. 상황에 맞는 메뉴에서 선택 **추가 템플릿 편집 > 편집 생성 된 항목 (ItemTemplate) > 빈 항목 만들기...** . 합니다 **리소스 만들기** 대화 상자가 열립니다.
+3. 문서 개요에서 **ImageGridView**를 마우스 오른쪽 단추로 클릭합니다. 컨텍스트 메뉴에서 **추가 템플릿 편집 > 생성된 항목 편집(ItemTemplate) > 빈 역할 만들기...** 를 선택합니다. **리소스 만들기** 대화 상자가 열립니다.
 
 4. 대화 상자에서 이름(키) 값을 **ImageGridView_DefaultItemTemplate**으로 변경하고 **확인**을 클릭합니다.
 
@@ -294,14 +294,14 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
                   ItemTemplate="{StaticResource ImageGridView_DefaultItemTemplate}"/>
     ```
 
-5. **ImageGridView_DefaultItemTemplate** 리소스에서 루트 **Grid**의 Height와 Width를 **300**으로, Margin을 **8**로 설정합니다. 그런 다음 두 개의 행을 추가하고 두 번째 행의 Height를 **Auto**로 설정합니다.
+5. **ImageGridView_DefaultItemTemplate** 리소스에서 루트 **Grid**의 Height와 Width를 **300**으로, Margin을 **8**로 설정합니다. 그런 다음, 두 개의 행을 추가하고 두 번째 행의 Height를 **Auto**로 설정합니다.
 
-    **전에**
+    **이전**
     ```xaml
     <Grid/>
     ```
 
-    **후**
+    **이후**
     ```xaml
     <Grid Height="300"
           Width="300"
@@ -323,7 +323,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
 
     **StackPanel** 레이아웃에 대한 자세한 내용은 [레이아웃 패널](https://docs.microsoft.com/windows/uwp/layout/layout-panels#stackpanel)을 참조하세요.
 
-    c. **RadRating** 컨트롤을 외부(수직) **StackPanel**에 추가합니다. 이를 내부(수평) **StackPanel** 다음에 배치합니다.
+    c. **RadRating** 컨트롤을 외부(수직) **StackPanel**에 추가합니다. 이 컨트롤을 내부(수평) **StackPanel** 다음에 배치합니다.
 
     **최종 템플릿**
 
@@ -376,17 +376,17 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
     </Grid>
     ```
 
-이제 앱을 실행해서 방금 만든 항목 템플릿이 있는 **GridView**를 확인합니다. 하지만 흰색 배경에 흰색 별이 있기 때문에 평점 컨트롤이 표시되지 않을 수 있습니다. 다음에는 배경색을 바꿔 봅니다.
+이제 앱을 실행해서 방금 만든 항목 템플릿이 있는 **GridView**를 확인합니다. 하지만 흰색 배경에 흰색 별이 있기 때문에 평점 컨트롤이 표시되지 않을 수 있습니다. 다음으로 배경색을 변경하겠습니다.
 
 ![앱 UI 검사점 2](images/xaml-basics/layout-1.png)
 
 ## <a name="part-4-modify-the-item-container-style"></a>4부: 항목 컨테이너 스타일 수정
 
-항목의 컨트롤 템플릿에는 선택 항목, 포인터 가리키기 및 포커스와 같은 상태를 표시하는 시각적 개체가 포함됩니다. 이러한 시각적 개체는 데이터 템플릿의 위 또는 아래에 렌더링됩니다. 여기에서는 컨트롤 템플릿의 **Background** 및 **Margin** 속성을 수정하여 **GridView** 항목에 회색 배경을 부여합니다.
+항목의 컨트롤 템플릿에는 선택 항목, 포인터 가리키기 및 포커스와 같은 상태를 표시하는 시각적 개체가 포함됩니다. 이러한 시각적 개체는 데이터 템플릿의 위 또는 아래에 렌더링됩니다. 여기서는 컨트롤 템플릿의 **Background** 및 **Margin** 속성을 수정하여 **GridView** 항목에 회색 배경을 부여합니다.
 
-**항목 컨테이너를 수정 합니다.**
+**항목 컨테이너 수정**
 
-1. 문서 개요에서 **ImageGridView**를 마우스 오른쪽 단추로 클릭합니다. 상황에 맞는 메뉴에서 선택 **추가 템플릿 편집 > 생성 된 항목 컨테이너 편집 (ItemContainerStyle) > 복사본 편집...** . 합니다 **리소스 만들기** 대화 상자가 열립니다.
+1. 문서 개요에서 **ImageGridView**를 마우스 오른쪽 단추로 클릭합니다. 상황에 맞는 메뉴에서 **추가 템플릿 편집 > 생성된 항목 컨테이너 편집(ItemContainerStyle) > 복사본 편집...** 을 선택합니다. **리소스 만들기** 대화 상자가 열립니다.
 
 2. 대화 상자에서 이름(키) 값을 **ImageGridView_DefaultItemContainerStyle**로 변경하고 **확인**을 클릭합니다.
 
@@ -424,7 +424,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
     </Style>
     ```
 
-    **GridViewItem** 기본 스타일은 많은 속성을 설정합니다. 항상 기본 스타일의 복사본을 사용하여 시작한 다음 필요한 속성만 수정해야 합니다. 그러지 않으면 일부 속성이 올바르게 설정되지 않으므로 시각적 개체가 예상대로 표시되지 않을 수 있습니다.
+    **GridViewItem** 기본 스타일은 많은 속성을 설정합니다. 항상 기본 스타일의 복사본을 사용하여 시작하고, 필요한 속성만 수정해야 합니다. 그러지 않으면 일부 속성이 올바르게 설정되지 않으므로 시각적 개체가 예상대로 표시되지 않을 수 있습니다.
 
     이전 단계와 같이 GridView의 **ItemContainerStyle** 속성을 **Style** 리소스로 설정합니다.
 
@@ -440,48 +440,48 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
 
 3. **Background** 속성의 값을 **Gray**로 변경합니다.
 
-    **전에**
+    **이전**
     ```xaml
         <Setter Property="Background" Value="{ThemeResource GridViewItemBackground}"/>
     ```
 
-    **후**
+    **이후**
     ```xaml
         <Setter Property="Background" Value="Gray"/>
     ```
 
 4. **Margin** 속성의 값을 **8**로 변경합니다.
 
-    **전에**
+    **이전**
     ```xaml
         <Setter Property="Margin" Value="0,0,4,4"/>
     ```
 
-    **후**
+    **이후**
     ```xaml
         <Setter Property="Margin" Value="8"/>
     ```
 
-앱을 실행하고 현재의 모습을 확인합니다. 앱 창 크기를 조정합니다. **GridView**는 이미지를 재정렬해 주지만, 일부 너비의 경우 앱 창 오른쪽에 공간이 많이 있습니다. 이미지가 중심에 있다면 더 보기 좋을 것입니다. 다음에 살펴보겠습니다.
+앱을 실행하고 현재의 모습을 확인합니다. 앱 창 크기를 조정합니다. **GridView**가 이미지 재정렬을 처리하지만, 일부 너비의 경우 앱 창 오른쪽에 공간이 많이 있습니다. 이미지가 중심에 있다면 더 보기 좋을 것입니다. 이 부분은 다음에 처리하겠습니다.
 
 ![앱 UI 검사점 3](images/xaml-basics/layout-2.png)
 
 > [!Note]
 > 실험해 보고 싶다면 배경 및 여백 속성을 다른 값으로 설정하고 효과를 확인합니다.
 
-## <a name="part-5-apply-some-final-adjustments-to-the-layout"></a>5부: 마지막으로 일부 조정 레이아웃에 적용
+## <a name="part-5-apply-some-final-adjustments-to-the-layout"></a>5부: 레이아웃에 최종 조정 사항 적용
 
 페이지에서 이미지의 중심을 맞추려면 페이지에서 그리드의 정렬을 조정해야 합니다. 아니면 **GridView**에서 이미지 정렬을 조정해야 할까요? 효과가 있을까요? 확인해 보겠습니다.
 
 맞춤에 대한 자세한 내용은 [맞춤, 여백 및 안쪽 여백](../layout/alignment-margin-padding.md)을 참조하세요.
 
-(**GridView**의 **Background**를 이 단계에서 원하는 색상으로 설정해 보세요. 레이아웃을 통해 어떤 일이 일어나는지 더 분명하게 확인할 수 있습니다.)
+(**GridView**의 **Background**를 이 단계에서 원하는 색상으로 설정해 보세요. 레이아웃을 통해 어떤 일이 일어나는지 좀 더 분명하게 확인할 수 있습니다.)
 
-**이미지의 맞춤을 수정 합니다.**
+**이미지 맞춤 수정**
 
 1. **Gridview**에서 **HorizontalAlignment** 속성을 **Center**로 설정합니다.
 
-    **전에**
+    **이전**
     ```xaml
         <GridView x:Name="ImageGridView"
                   Margin="0,0,0,8"
@@ -492,7 +492,7 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
                   ItemContainerStyle="{StaticResource ImageGridView_DefaultItemContainerStyle}"/>
     ```
 
-    **후**
+    **이후**
     ```xaml
         <GridView x:Name="ImageGridView"
                   Margin="0,0,0,8"
@@ -504,13 +504,13 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
                   HorizontalAlignment="Center"/>
     ```
 
-2. 앱을 실행하고 창의 크기를 조정합니다. 아래로 스크롤해서 더 많은 이미지를 봅니다.
+2. 앱을 실행하고 창의 크기를 조정합니다. 아래로 스크롤하여 더 많은 이미지를 봅니다.
 
     이미지가 중앙에 위치해서 보기가 더 좋습니다. 스크롤 막대는 창 가장자리 대신 **GridView** 가장자리에 맞춰집니다. 이 문제를 해결하려면 **GridView**를 페이지 중앙에 배치하는 대신 **GridView**에 이미지의 중심을 맞춥니다. 약간의 작업이 더 필요하지만 최종적인 모습은 더 보기 좋게 됩니다.
 
 3. 이전 단계의 **HorizontalAlignment** 설정을 제거합니다.
 
-4. 문서 개요에서 **ImageGridView**를 마우스 오른쪽 단추로 클릭합니다. 상황에 맞는 메뉴에서 선택 **추가 템플릿 편집 > 레이아웃의 항목 편집 (ItemsPanel) > 복사본 편집...** . 합니다 **리소스 만들기** 대화 상자가 열립니다.
+4. 문서 개요에서 **ImageGridView**를 마우스 오른쪽 단추로 클릭합니다. 상황에 맞는 메뉴에서 **추가 템플릿 편집 > 항목 레이아웃 편집(ItemsPanel) > 복사본 편집...** 을 선택합니다. **리소스 만들기** 대화 상자가 열립니다.
 
 5. 대화 상자에서 이름(키) 값을 **ImageGridView_ItemsPanelTemplate**으로 변경하고 **확인**을 클릭합니다.
 
@@ -522,18 +522,18 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
     </ItemsPanelTemplate>
     ```
 
-    다양한 패널을 사용하여 앱의 컨트롤을 레이아웃 처리하는 것처럼 **GridView**에는 항목의 레이아웃을 관리하는 내부 패널이 있습니다. 이 패널(**ItemsWrapGrid**)에 액세스했으므로 속성을 수정하여 **GridView** 내부의 항목 레이아웃을 변경할 수 있습니다.
+    다양한 패널을 사용하여 앱의 컨트롤을 레이아웃 처리하는 것처럼, **GridView**에는 항목의 레이아웃을 관리하는 내부 패널이 있습니다. 이 패널(**ItemsWrapGrid**)에 액세스했으므로 속성을 수정하여 **GridView** 내부의 항목 레이아웃을 변경할 수 있습니다.
 
 6. **ItemsWrapGrid**에서 **HorizontalAlignment** 속성을 **Center**로 설정합니다.
 
-    **전에**
+    **이전**
     ```xaml
     <ItemsPanelTemplate x:Key="ImageGridView_ItemsPanelTemplate">
         <ItemsWrapGrid Orientation="Horizontal" />
     </ItemsPanelTemplate>
     ```
 
-    **후**
+    **이후**
     ```xaml
     <ItemsPanelTemplate x:Key="ImageGridView_ItemsPanelTemplate">
         <ItemsWrapGrid Orientation="Horizontal"
@@ -541,18 +541,18 @@ XAML 디자이너에서 검은색 바탕에 흰색 텍스트가 표시되었지�
     </ItemsPanelTemplate>
     ```
 
-7. 앱을 실행하고 창의 크기를 다시 조정합니다. 아래로 스크롤해서 더 많은 이미지를 봅니다.
+7. 앱을 실행하고 창의 크기를 다시 조정합니다. 아래로 스크롤하여 더 많은 이미지를 봅니다.
 
 ![앱 UI 검사점 4](images/xaml-basics/layout-3.png)
 
-이제 스크롤 막대가 창의 가장자리와 정렬됩니다. 축하합니다. 앱의 기본 UI를 만들었습니다.
+이제 스크롤 막대가 창의 가장자리에 맞춰 정렬됩니다. 축하합니다. 앱의 기본 UI를 만들었습니다.
 
 ## <a name="going-further"></a>더 나아가기
 
-기본 UI를 만들었습니다. 이제 역시 PhotoLab 샘플에 기반을 둔 다음의 다른 자습서들을 확인해 보세요. 
+기본 UI를 만들었습니다. 마찬가지로 PhotoLab 샘플을 기반으로 하는 다른 자습서도 확인해 보세요. 
 
 * [XAML 데이터 바인딩 자습서](../../data-binding/xaml-basics-data-binding.md)에 실제 이미지와 데이터를 추가합니다.
-* [XAML 적응 레이아웃 자습서](xaml-basics-adaptive-layout.md)에서 여러 화면 크기에 맞춰지는 적응형 UI를 만듭니다.
+* [XAML 적응 레이아웃 자습서](xaml-basics-adaptive-layout.md)에서 여러 화면 크기에 맞게 조정되는 적응형 UI를 만듭니다.
 
 
 ## <a name="get-the-final-version-of-the-photolab-sample"></a>PhotoLab 샘플의 최종 버전 다운로드

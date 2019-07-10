@@ -1,5 +1,5 @@
 ---
-Description: 텍스트 컨트롤에 다양 한 데이터를 포함 하려면 콘텐츠 링크를 사용 합니다.
+Description: 콘텐츠 링크를 사용하여 텍스트 컨트롤에 풍부한 데이터를 포함하세요.
 title: 텍스트 컨트롤의 콘텐츠 링크
 label: Content links
 template: detail.hbs
@@ -11,50 +11,50 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 3fc54662b29255b73e972bcfb0fa4b6bb2dcf968
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363054"
 ---
 # <a name="content-links-in-text-controls"></a>텍스트 컨트롤의 콘텐츠 링크
 
 콘텐츠 링크는 텍스트 컨트롤에 풍부한 데이터를 포함시킬 수 있는 방법을 제공하기 때문에 사용자는 앱의 컨텍스트를 벗어나지 않고도 사람이나 장소에 대해 더 많은 정보를 찾아서 활용할 수 있습니다.
 
-사용자가 RichEditBox에서 앰퍼샌드(@) 기호를 항목 앞에 붙이면 항목과 일치되는 사람 및 장소 목록이 표시됩니다. 그런 다음, 예를 들어 사용자가 장소를 선택하면 해당 장소에 대한 ContentLink가 텍스트에 삽입됩니다. 사용자가 RichEditBox에서 콘텐츠 링크를 호출하면 지도 및 이 장소에 대한 추가 정보와 함께 플라이아웃이 표시됩니다.
+사용자가 RichEditBox에서 앰퍼샌드(@) 기호를 항목 앞에 붙이면 항목과 일치하는 사람 및 장소 목록이 표시됩니다. 그런 다음, 예를 들어 사용자가 장소를 선택하면 해당 장소에 대한 ContentLink가 텍스트에 삽입됩니다. 사용자가 RichEditBox에서 콘텐츠 링크를 호출하면 지도 및 이 장소에 대한 추가 정보와 함께 플라이아웃이 표시됩니다.
 
-> **중요 API**: [ContentLink 클래스](/uwp/api/windows.ui.xaml.documents.contentlink)하십시오 [ContentLinkInfo 클래스](/uwp/api/windows.ui.text.contentlinkinfo), [RichEditTextRange 클래스](/uwp/api/windows.ui.text.richedittextrange)
+> **중요 API**: [ContentLink 클래스](/uwp/api/windows.ui.xaml.documents.contentlink), [ContentLinkInfo 클래스](/uwp/api/windows.ui.text.contentlinkinfo), [RichEditTextRange 클래스](/uwp/api/windows.ui.text.richedittextrange)
 
 > [!NOTE]
-> 콘텐츠 링크에 대 한 Api는 다음 네임 스페이스에 분산 됩니다. Windows.UI.Xaml.Controls Windows.UI.Xaml.Documents, 하며 Windows.UI.Text 합니다.
+> 콘텐츠 링크에 대한 API는 Windows.UI.Xaml.Controls, Windows.UI.Xaml.Documents 및 Windows.UI.Text 네임스페이스에 분산됩니다.
 
 
 
 ## <a name="content-links-in-rich-edit-vs-text-block-controls"></a>서식 있는 편집 상자의 콘텐츠 링크와 텍스트 블록 컨트롤의 콘텐츠 링크 비교
 
-콘텐츠 링크를 사용할 수 있는 두 가지 방법이 있습니다.
+다음과 같은 두 가지 방법으로 콘텐츠 링크를 사용할 수 있습니다.
 
 1. [RichEditBox](/uwp/api/windows.ui.xaml.controls.richeditbox)에서 사용자는 선택기를 열고 @ 기호를 텍스트 앞에 붙여서 콘텐츠 링크를 추가할 수 있습니다. 콘텐츠 링크는 서식 있는 텍스트 콘텐츠의 일부로 저장됩니다.
 1. [TextBlock](/uwp/api/windows.ui.xaml.controls.textblock) 또는 [RichTextBlock](/uwp/api/windows.ui.xaml.controls.richtextblock)에서 콘텐츠 링크는 사용 패턴과 동작이 [하이퍼링크](/uwp/api/windows.ui.xaml.documents.hyperlink)와 상당 부분 비슷한 텍스트 요소입니다.
 
 아래에는 RichEditBox 및 TextBlock에서 콘텐츠 링크가 기본적으로 어떻게 나타나는지 나와 있습니다.
 
-![콘텐츠 링크에서 서식 있는 입력란](images/content-link-default-richedit.png)
-![텍스트 블록에 대 한 콘텐츠 링크](images/content-link-default-textblock.png)
+![서식 있는 편집 상자의 콘텐츠 링크](images/content-link-default-richedit.png)
+![텍스트 블록의 콘텐츠 링크](images/content-link-default-textblock.png)
 
 사용 패턴, 렌더링 및 동작의 차이점은 다음 세션에서 자세히 다루겠습니다. 이 표에는 RichEditBox의 콘텐츠 링크와 텍스트 블록의 콘텐츠 링크 간의 가장 큰 차이점이 간략하게 비교되어 있습니다.
 
 | 기능   | RichEditBox | 텍스트 블록 |
 | --------- | ----------- | ---------- |
-| 사용법 | ContentLinkInfo 인스턴스 | ContentLink 텍스트 요소 |
-| Cursor | 콘텐츠 링크의 유형에 따라 결정되며 변경이 불가능 | 커서 속성에 의해 결정되며 기본값은 **null** |
-| ToolTip | 렌더링 되지 않음 | 보조 텍스트 표시 |
+| 용도 | ContentLinkInfo 인스턴스 | ContentLink 텍스트 요소 |
+| 커서 | 콘텐츠 링크의 유형에 따라 결정되며 변경 불가능 | 커서 속성에 의해 결정되며 기본값은 **null** |
+| ToolTip | 렌더링되지 않음 | 보조 텍스트 표시 |
 
 ## <a name="enable-content-links-in-a-richeditbox"></a>RichEditBox에서 콘텐츠 링크 활성화
 
-가장 일반적인 콘텐츠 링크 용도는 사용자가 텍스트에서 사람 또는 장소 이름 앞에 앰퍼샌드(@) 기호를 붙여 신속하게 정보를 추가하기 위한 것입니다. [RichEditBox](/uwp/api/windows.ui.xaml.controls.richeditbox)에서 활성화가 되면 선택기가 열리고 사용자는 활성화된 항목에 따라 연락처 목록의 사람이나 근처 장소를 삽입할 수 있습니다.
+가장 일반적인 콘텐츠 링크 용도는 사용자가 텍스트에서 사람 또는 장소 이름 앞에 앰퍼샌드(@) 기호를 붙여 신속하게 정보를 추가하기 위한 것입니다. [RichEditBox](/uwp/api/windows.ui.xaml.controls.richeditbox)에서 활성화되면 선택기가 열리고 사용자는 활성화된 항목에 따라 연락처 목록의 사람이나 근처 장소를 삽입할 수 있습니다.
 
-서식 있는 텍스트 콘텐츠로 콘텐츠 링크를 저장할 수 있으며, 이를 추출해서 앱의 다른 부분에서 사용할 수 있습니다. 예를 들어, 이메일 앱에서 사람 정보를 추출하고 이를 이메일 주소에서 수신자 상자를 채우는 데 사용할 수 있습니다.
+서식 있는 텍스트 콘텐츠로 콘텐츠 링크를 저장할 수 있으며, 이를 추출하여 앱의 다른 부분에서 사용할 수 있습니다. 예를 들어 이메일 앱에서 사람 정보를 추출하고 이를 이메일 주소에서 수신자 상자를 채우는 데 사용할 수 있습니다.
 
 > [!NOTE]
 > 콘텐츠 링크 선택기는 Windows에 포함된 앱이기 때문에 앱과 별도의 프로세스에서 실행됩니다.
@@ -63,11 +63,11 @@ ms.locfileid: "66363054"
 
 [RichEditBox.ContentLinkProviders](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkProviders) 컬렉션에 하나 이상의 콘텐츠 링크 공급자를 추가하여 RichEditBox에서 콘텐츠 링크를 활성화할 수 있습니다. XAML 프레임워크에서는 2개의 콘텐츠 링크 공급자가 기본 제공됩니다.
 
-- [ContactContentLinkProvider](/uwp/api/windows.ui.xaml.documents.contactcontentlinkprovider) – **사람** 앱을 사용해 연락처를 조회합니다.
-- [PlaceContentLinkProvider](/uwp/api/windows.ui.xaml.documents.placecontentlinkprovider) – **지도** 앱을 사용해 장소를 조회합니다.
+- [ContactContentLinkProvider](/uwp/api/windows.ui.xaml.documents.contactcontentlinkprovider) – **피플** 앱을 사용해 연락처를 조회합니다.
+- [PlaceContentLinkProvider](/uwp/api/windows.ui.xaml.documents.placecontentlinkprovider) – **지도** 앱을 사용하여 장소를 조회합니다.
 
 > [!IMPORTANT]
-> RichEditBox.ContentLinkProviders 속성에 대 한 기본값은 빈 컬렉션이 아니라 **null**입니다. 콘텐츠 링크 공급자를 추가하기 전에 [ContentLinkProviderCollection](/uwp/api/windows.ui.xaml.documents.contentlinkprovidercollection)을 명시적으로 생성해야 합니다.
+> RichEditBox.ContentLinkProviders 속성의 기본값은 빈 컬렉션이 아니라 **null**입니다. 콘텐츠 링크 공급자를 추가하기 전에 [ContentLinkProviderCollection](/uwp/api/windows.ui.xaml.documents.contentlinkprovidercollection)을 명시적으로 생성해야 합니다.
 
 XAML에 콘텐츠 링크 공급자를 추가하는 방법은 다음과 같습니다.
 
@@ -82,7 +82,7 @@ XAML에 콘텐츠 링크 공급자를 추가하는 방법은 다음과 같습니
 </RichEditBox>
 ```
 
-또한 스타일에서 콘텐츠 링크 공급자를 추가하고 이를 여러 RichEditBoxe에 적용할 수 있습니다.
+또한 스타일에서 콘텐츠 링크 공급자를 추가하고 이를 여러 RichEditBox에 적용할 수 있습니다.
 
 ```xaml
 <Page.Resources>
@@ -113,7 +113,7 @@ editor.ContentLinkProviders = new ContentLinkProviderCollection
 };
 ```
 
-### <a name="content-link-colors"></a>콘텐츠 링크 색상
+### <a name="content-link-colors"></a>콘텐츠 링크 색
 
 콘텐츠 링크의 모양은 전경, 배경 및 아이콘에 의해 결정됩니다. RichEditBox에서 [ContentLinkForegroundColor](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkForegroundColor) 및 [ContentLinkBackgroundColor](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkBackgroundColor) 속성을 설정하여 기본 색상을 변경할 수 있습니다. 
 
@@ -125,50 +125,50 @@ editor.ContentLinkProviders = new ContentLinkProviderCollection
 
 ContentLinkInfo 개체에는 콘텐츠 링크를 표시, 호출 및 관리하는 데 사용되는 정보가 포함되어 있습니다.
 
-- **DisplayText** – 콘텐츠 링크가 렌더링될 때 표시되는 문자열입니다. RichEditBox에서 사용자는 생성된 콘텐츠 링크의 텍스트를 편집해서 이 속성의 값을 변경할 수 있습니다.
+- **DisplayText** – 콘텐츠 링크가 렌더링될 때 표시되는 문자열입니다. RichEditBox에서 사용자는 생성된 콘텐츠 링크의 텍스트를 편집하여 이 속성의 값을 변경할 수 있습니다.
 - **SecondaryText** -이 문자열은 렌더링된 콘텐츠 링크의 ToolTip에 표시됩니다.
-  - 선택기에서 생성된 장소 콘텐츠 링크에는 위치의 주소가 포함됩니다.
+  - 선택기에서 생성된 장소 콘텐츠 링크에는 위치의 주소가 포함됩니다(사용 가능한 경우).
 - **Uri** – 콘텐츠 링크의 주제에 대한 자세한 내용을 제공하는 링크입니다. 이 Uri를 통해 설치된 앱이나 웹 사이트를 열 수 있습니다.
-- **Id** - RichEditBox 컨트롤로 만든 컨트롤당 읽기 전용 카운터입니다. 삭제나 편집 같은 작업을 수행하는 동안 이 ContentLinkInfo를 추적하는 데 사용됩니다. 새 id를 가져오게 됩니다을 ContentLinkInfo 잘라내기는 컨트롤에 다시 붙여를 Id 값은 증분 합니다.
+- **Id** - RichEditBox 컨트롤로 만든 컨트롤당 읽기 전용 카운터입니다. 삭제나 편집 같은 작업을 수행하는 동안 이 ContentLinkInfo를 추적하는 데 사용됩니다. ContentLinkInfo를 잘라서 컨트롤에 붙여넣으면 새 ID를 얻을 수 있습니다. Id 값은 증분입니다.
 - **LinkContentKind** – 콘텐츠 링크의 유형을 설명하는 문자열입니다. 기본 제공되는 콘텐츠 유형은 _장소_ 및 _연락처_입니다. 이 값은 대/소문자를 구분합니다.
 
 #### <a name="link-content-kind"></a>링크 콘텐츠 종류
 
 LinkContentKind가 중요한 상황이 종종 있습니다.
 
-- 사용자가 RichEditBox에서 콘텐츠 링크를 복사해서 다른 RichEditBox에 붙여 넣을 때는 두 컨트롤 모두가 해당 콘텐츠 유형에 대해 ContentLinkProvider를 가지고 있어야 합니다. 그렇지 않으면 링크가 텍스트로 붙여 넣기가 됩니다.
-- [ContentLinkChanged](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkChanged) 이벤트 처리기에서 LinkContentKind를 사용해서 앱의 다른 부분에서 사용할 때 콘텐츠 링크에서 어떤 조치가 필요한지 결정할 수 있습니다. 자세한 내용은 예제 섹션을 참조하세요.
+- 사용자가 RichEditBox에서 콘텐츠 링크를 복사하여 다른 RichEditBox에 붙여넣을 때 두 컨트롤 모두 해당 콘텐츠 유형의 ContentLinkProvider를 갖고 있어야 합니다. 그렇지 않으면 링크가 텍스트로 붙여넣기 됩니다.
+- [ContentLinkChanged](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkChanged) 이벤트 처리기에서 LinkContentKind를 사용하여 앱의 다른 부분에서 사용할 때 콘텐츠 링크에서 어떤 조치가 필요한지 결정할 수 있습니다. 자세한 내용은 예제 섹션을 참조하세요.
 - LinkContentKind는 링크 호출 시 시스템이 Uri를 여는 방법에 영향을 미칩니다. 다음에 Uri 시작에 대해 논의할 때 이에 대해 살펴보겠습니다.
 
 #### <a name="uri-launching"></a>Uri 시작
 
-Uri 속성은 하이퍼링크의 NavigateUri 속성과 상당 부분 비슷하게 작동합니다. 사용자가 클릭을 하면 기본 브라우저나 Uri 값에 지정된 특정 프로토콜에 대해 등록된 앱에서 Uri가 시작됩니다.
+Uri 속성은 하이퍼링크의 NavigateUri 속성과 상당 부분 비슷하게 작동합니다. 사용자가 클릭하면 기본 브라우저나 Uri 값에 지정된 특정 프로토콜에 대해 등록된 앱에서 Uri가 시작됩니다.
 
 아래에서는 기본 제공되는 2개의 링크 콘텐츠 유형에 대한 특정 동작을 설명합니다.
 
 ##### <a name="places"></a>장소
 
-장소 선택기는 Uri 루트가 https://maps.windows.com/인 ContentLinkInfo를 생성합니다. 다음 세 가지 방법으로 이 링크를 열 수 있습니다.
+장소 선택기는 Uri 루트가 https://maps.windows.com/ 인 ContentLinkInfo를 생성합니다. 다음 3가지 방법으로 이 링크를 열 수 있습니다.
 
-- LinkContentKind가 "장소"인 경우에는 플라이아웃에서 정보 카드가 열립니다. 플라이아웃은 콘텐츠 링크 선택기 플라이아웃과 비슷합니다. 이는 Windows의 일부로, 앱과는 별도의 프로세스에서 실행됩니다.
-- LinkContentKind가 "장소"가 아니면 지정된 위치로 **지도** 앱이 열립니다. 예를 들어, ContentLinkChanged 이벤트 처리기에서 LinkContentKind를 수정한 경우에 이런 일이 발생할 수 있습니다.
-- 지도 앱에서 Uri가 열리지 않으면 기본 브라우저에서 지도가 열립니다. 사용자의 _웹 사이트용 앱_ 설정에서 **지도** 앱으로 Uri를 열 수 없도록 하고 있을 때 주로 이런 일이 발생합니다.
+- LinkContentKind가 "장소"인 경우에는 플라이아웃에서 정보 카드가 열립니다. 플라이아웃은 콘텐츠 링크 선택기 플라이아웃과 비슷합니다. Windows의 일부이며, 앱과는 별도의 프로세스에서 실행됩니다.
+- LinkContentKind가 "장소"가 아니면 지정된 위치로 **지도** 앱이 열립니다. 예를 들어 ContentLinkChanged 이벤트 처리기에서 LinkContentKind를 수정한 경우에 이런 일이 발생할 수 있습니다.
+- 지도 앱에서 Uri가 열리지 않으면 기본 브라우저에서 지도가 열립니다. 사용자의 _웹 사이트용 앱_ 설정에서 **지도** 앱으로 Uri를 여는 것을 허용하지 않을 때 주로 이런 일이 발생합니다.
 
 ##### <a name="people"></a>피플
 
-사람 선택기는 **ms-people** 프로토콜을 사용하는 Uri를 통해 ContentLinkInfo를 생성합니다.
+피플 선택기는 **ms-people** 프로토콜을 사용하는 Uri를 통해 ContentLinkInfo를 생성합니다.
 
-- LinkContentKind가 "사람"인 경우에는 플라이아웃에서 정보 카드가 열립니다. 플라이아웃은 콘텐츠 링크 선택기 플라이아웃과 비슷합니다. 이는 Windows의 일부로, 앱과는 별도의 프로세스에서 실행됩니다.
-- LinkContentKind가 "사람"이 아니면 **사람** 앱이 열립니다. 예를 들어, ContentLinkChanged 이벤트 처리기에서 LinkContentKind를 수정한 경우에 이런 일이 발생할 수 있습니다.
+- LinkContentKind가 "피플"인 경우에는 플라이아웃에서 정보 카드가 열립니다. 플라이아웃은 콘텐츠 링크 선택기 플라이아웃과 비슷합니다. Windows의 일부이며, 앱과는 별도의 프로세스에서 실행됩니다.
+- LinkContentKind가 "피플"이 아니면 **피플** 앱이 열립니다. 예를 들어 ContentLinkChanged 이벤트 처리기에서 LinkContentKind를 수정한 경우에 이런 일이 발생할 수 있습니다.
 
 > [!TIP]
-> 앱에서 다른 앱 및 웹 사이트 열기에 대 한 자세한 내용은 아래의 항목을 참조 하세요 [Uri 사용 하 여 앱을 시작](/windows/uwp/launch-resume/launch-app-with-uri)합니다.
+> 앱에서 다른 앱이나 웹 사이트를 여는 방법은 [URI를 사용하여 앱 실행](/windows/uwp/launch-resume/launch-app-with-uri)의 토픽을 참조하세요.
 
 #### <a name="invoked"></a>호출됨
 
-사용자가 콘텐츠 링크를 호출하면 URI 시작을 위한 기본 동작이 개시되기 전에 [ContentLinkInvoked](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkInvoked) 이벤트가 발생됩니다. 이 이벤트를 처리하여 기본 동작을 재정의하거나 취소할 수 있습니다.
+사용자가 콘텐츠 링크를 호출하면 [ContentLinkInvoked](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkInvoked) 이벤트가 발생한 후 URI를 시작하는 기본 동작이 발생합니다. 이 이벤트를 처리하여 기본 동작을 재정의하거나 취소할 수 있습니다.
 
-이 예제는 장소 콘텐츠 링크에 대한 기본 시작 동작을 재정의할 수 있는 방법을 보여줍니다. 장소 정보 카드, 지도 앱 또는 기본 웹 브라우저에서 지도를 여는 대신, 이벤트를 Handled로 표시하고 앱 내 [웹 보기](/uwp/api/windows.ui.xaml.controls.webview) 컨트롤에서 지도를 엽니다.
+이 예제는 장소 콘텐츠 링크에 대한 기본 시작 동작을 재정의할 수 있는 방법을 보여줍니다. 장소 정보 카드, 지도 앱 또는 기본 웹 브라우저에서 지도를 여는 대신, 이벤트를 Handled로 표시하고 앱 내 [WebView](/uwp/api/windows.ui.xaml.controls.webview) 컨트롤에서 지도를 엽니다.
 
 ```xaml
 <RichEditBox x:Name="editor"
@@ -203,13 +203,13 @@ private void editor_ContentLinkInvoked(RichEditBox sender, ContentLinkInvokedEve
 - **ChangedKind** - 이 ContentLinkChangeKind 열거형은 ContentLink 내의 작업입니다. 예를 들어 ContentLink가 삽입, 제거 또는 편집된 경우입니다.
 - **정보** - ContentLinkInfo가 작업 대상이었습니다.
 
-각 ContentLinkInfo 작업에서 이 이벤트가 발생합니다. 예를 들어, 사용자가 한 번에 여러 콘텐츠 링크를 복사해서 RichEditBox에 붙여 넣으면 추가된 각 항목에 대해 이 이벤트가 발생합니다. 또는 사용자가 여러 콘텐츠 링크를 동시에 선택해 삭제하면 삭제된 각 항목에서 이 이벤트가 발생합니다.
+각 ContentLinkInfo 작업에서 이 이벤트가 발생합니다. 예를 들어 사용자가 한 번에 여러 콘텐츠 링크를 복사하여 RichEditBox에 붙여넣으면 추가된 각 항목에 대해 이 이벤트가 발생합니다. 또는 사용자가 여러 콘텐츠 링크를 동시에 선택하여 삭제하면 삭제된 각 항목에서 이 이벤트가 발생합니다.
 
 **TextChanging** 이벤트 후, **TextChanged** 이벤트 전에 이 이벤트가 RichEditBox에서 발생합니다.
 
 #### <a name="enumerate-content-links-in-a-richeditbox"></a>RichEditBox에 콘텐츠 링크를 열거
 
-RichEditTextRange.ContentLink 속성을 사용해 서식 있는 편집 문서에서 콘텐츠 링크를 얻을 수 있습니다. 콘텐츠 링크를 텍스트 범위를 탐색할 때 사용할 단위로 지정할 수 있도록 TextRangeUnit 열거형에 ContentLink 값이 포함되어 있습니다.
+RichEditTextRange.ContentLink 속성을 사용하여 서식 있는 편집 문서에서 콘텐츠 링크를 얻을 수 있습니다. 콘텐츠 링크를 텍스트 범위를 탐색할 때 사용할 단위로 지정할 수 있도록 TextRangeUnit 열거형에 ContentLink 값이 포함되어 있습니다.
 
 이 예제는 RichEditBox에 모든 콘텐츠 링크를 열거하고 목록으로 사람을 추출하는 방법을 보여줍니다.
 
@@ -265,7 +265,7 @@ TextBlock 또는 RichTextBlock 컨트롤에서 콘텐츠 링크를 사용하려�
 텍스트 블록의 ContentLink를 위한 일반적인 소스는 다음과 같습니다.
 
 - RichTextBlock 컨트롤에서 추출한 선택기로 생성한 콘텐츠 링크입니다.
-- 코드에서 생성하는 장소를 위한 콘텐츠 링크입니다.
+- 코드에서 만드는 장소를 위한 콘텐츠 링크입니다.
 
 다른 상황에서는 하이퍼링크 텍스트 요소가 일반적으로 적합합니다.
 

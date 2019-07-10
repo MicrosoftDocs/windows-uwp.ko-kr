@@ -1,31 +1,31 @@
 ---
 description: C++에 존재하는 값의 다양한 범주에 대해 설명합니다. 분명히 lvalues와 rvalues에 대해 들어 보았을 것이지만, 다른 종류도 있습니다.
-title: 값 범주 및에 대 한 참조
+title: 값 범주 및 해당 참조
 ms.date: 08/11/2018
 ms.topic: article
-keywords: windows 10 uwp, 표준, c + +, cpp, winrt, 프로젝션, 이동, 전달, 값 범주, 이동 의미 체계, 완벽 한 전달, lvalue를 rvalue, glvalue, prvalue, xvalue
+keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이동, 전달, 값 범주, 이동 의미 체계, 완벽한 전달, lvalue, rvalue, glvalue, prvalue, xvalue
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1860f562233ceefa6d9ebb3741378b3265b4c3a9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593018"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63797084"
 ---
-# <a name="value-categories-and-references-to-them"></a>값 범주 및에 대 한 참조
-이 항목에서는 c + +에 존재 하는 값 (및 값에 대 한 참조)의 다양 한 범주를 설명 합니다. 여러분 봤 *lvalue* 하 고 *rvalue*,이 항목에서 제공 하는 측면에서 그 중 간주 하지 않을 수도 있지만. 하 고 다른 종류의 값을 너무 않습니다.
+# <a name="value-categories-and-references-to-them"></a>값 범주 및 해당 참조
+이 토픽에서는 C++에 존재하는 다양한 값 범주(및 값 참조)에 대해 설명합니다. 거의 모든 분들이 *lvalue* 및 *rvalue*에 대해 들어보셨겠지만, 이 토픽의 주제와 관련 지어 생각해 본 적은 없을 것입니다. 그리고 그 외에도 다른 값이 더 있습니다.
 
-이 항목에서 설명 하는 범주 중 하나에 속하는 값을 생성 하는 c + +의 모든 식입니다. facilies, c + + 언어와 값 범주 및 해당 참조를 적절 한 이해를 요구 하는 규칙의 측면이 있습니다. 예를 들어, 값을 복사 하 고, 값을 이동 하 고, 다른 함수에 값을 전달 된 값의 주소는 중입니다. 이 항목에서는 모든 측면을 심층적으로 이동 하지 않습니다 하지만 그 중 확실 하 게 이해에 대 한 기본 정보를 제공 합니다.
+C++의 모든 식은 이 토픽에서 설명하는 범주 중 하나에 속하는 값을 생성합니다. C++ 언어, 패밀리 및 규칙 중에는 이러한 값 범주와 해당 참조에 대한 적절한 이해가 필요한 경우가 있습니다. 값의 주소를 가져오고, 값을 복사하고, 값을 이동하고, 값을 다른 함수에 전달하는 경우를 예로 들 수 있습니다. 이 토픽에서는 이러한 내용을 심층적으로 다루지는 않을 것이며, 확실한 이해를 돕기 위한 기본 정보를 제공합니다.
 
-이 항목의 정보를 id 및 movability [2013 Stroustrup]의 두 가지 독립적인 속성 값 범주의 Stroustrup의 분석 측면에서 구성 됩니다.
+이 토픽의 정보는 Stroustrup의 두 가지 독립 속성 ID 및 이동성에 따른 값 범주 분석[2013 Stroustrup]을 기반으로 합니다.
 
-## <a name="an-lvalue-has-identity"></a>Lvalue는 id
-무엇을 의미 있는 값에 대 한 *identity*? 있는 경우 (수행할 수 있는) 값의 메모리 주소 및 id를 가진 값을 안전 하 게 사용 합니다. 이렇게 할 수 있는 비교 이상 값의 내용을: 비교 하거나 id로 구분할 수 있습니다.
+## <a name="an-lvalue-has-identity"></a>ID를 갖고 있는 lvalue
+값에 *ID*가 있다는 것은 무슨 의미일까요? 값의 메모리 주소를 갖고 있고(또는 가져올 수 있고) 안전하게 사용할 수 있다면 그 값이 바로 ID입니다. 이와 같은 방식으로 값의 콘텐츠를 비교하는 것보다 많은 것을 할 수 있습니다. 예를 들어 ID로 비교하거나 구분할 수 있습니다.
 
-*lvalue* id입니다. 이제 "lvalue"에서 "l" "left" (예: 왼쪽-hand의 쪽은 할당)의 약어는 에서만 기록 관심 문제입니다. C + +에서는 lvalue 왼쪽에 나타날 수 있습니다 *또는* 할당의 오른쪽에 있습니다. "Lvalue"에서 "l" 그런 다음 실제로 도움이 되지 이해 하거나 용도 정의 합니다. 이라고 하는 lvalue에 id가 있는 값 임을 이해에 필요 합니다.
+*lvalue*에는 ID가 있습니다. 이제는 과거의 산물이 된 "lvalue"의 "l"는 "left"의 약어입니다(할당의 왼쪽처럼). C++에서 lvalue는 할당의 왼쪽 *또는* 오른쪽에 나타날 수 있습니다. "lvalue"의 "l"는 lvalue를 이해하거나 정의하는 데 실질적인 도움을 주지 못합니다. lvalue란 ID가 있는 값을 말한다는 것만 이해하면 됩니다.
 
-Lvalue는 식의 예로: 명명 된 변수 또는 상수입니다. 또는 대 한 참조를 반환 하는 함수입니다. 사용 되는 식의 예 *되지* lvalue 포함: 임시; 또는 값으로 반환 하는 함수입니다.
+lvalue인 식의 예로는 명명된 변수나 상수 또는 참조를 반환하는 함수가 있습니다. lvalue가 *아닌* 식의 예로는 임시 항목 또는 값이 반환하는 함수가 있습니다.
 
 ```cppwinrt
 int& get_by_ref() { ... }
@@ -42,53 +42,53 @@ int main()
 }
 ```
 
-이제 lvalue 개별성 문이 true 이지만, 그렇게 xvalues 합니다. 에 자세히 살펴보겠습니다를 *xvalue* 이 항목의 뒷부분에 나오는 됩니다. 이제 방금 glvalue를 "일반화 lvalue"에 대 한 호출 값 범주는 주의 합니다. Glvalues의 상위 집합 둘 다 lvalue 포함 (라고도 *고전 lvalue*) 및 xvalues 합니다. 따라서 while "lvalue에 id가" true 이면이 그림과 같이 id가 있는 항목의 전체 집합은 glvalues, 집합입니다.
+이제 true 문에서 lvalue가 ID를 갖지만, xvalue도 마찬가지입니다. *xvalue*에 대한 내용은 이 토픽의 뒷부분에서 다루겠습니다. 지금은 "generalized lvalue"를 의미하는 glvalue라는 값 범주가 있다는 사실만 기억하세요. glvalue의 상위 집합에는 lvalue(*클래식 lvalue*라고도 함)와 xvalue가 모두 포함되어 있습니다. 따라서 "lvalue에 ID가 있다"는 말은 true이지만, ID가 있는 부분의 전체 세트는 다음 일러스트레이션처럼 glvalue 세트입니다.
 
-![Lvalue는 id](images/has-identity1.png)
+![ID를 갖고 있는 lvalue](images/has-identity1.png)
 
-## <a name="an-rvalue-is-movable-an-lvalue-is-not"></a>Rvalue는 이동할 수 있습니다. lvalue가 아닙니다.
-이 밖에도 glvalues 하지 않은 값입니다. 결과적으로 가지는 값 *없습니다* 의 메모리 주소를 가져옵니다 (또는 유효 하는 데 사용할 수 없게). 위의 코드 예제에 이러한 일부 값에 살펴보았습니다. 단점은 처럼 생각 합니다. 하지만 실제로 값의 이점은 즉 할 수 있습니다 *이동* 후 (이 일반적으로 저렴 한) 대신 (이 일반적으로 비용이 많이 드는)를 복사 합니다. 값에서 이동 하는 위치에 더 이상는 의미입니다. 따라서는 위치에 액세스 하려고 하지 않아야 할 사항입니다. 시기에 대 한 자세한 내용은 및 *어떻게* 이동 값이이 항목의 범위를 벗어났습니다. 이 항목에 대 한 바로 알아야 이동 된 값 이라고 하는 *rvalue* (또는 *고전 rvalue*).
+## <a name="an-rvalue-is-movable-an-lvalue-is-not"></a>rvalue는 이동할 수 있지만, lvalue는 그렇지 않습니다.
+하지만 glvalue가 아닌 값도 있습니다. 결과적으로 메모리 주소를 가져올 수 *없는*(또는 메모리 주소가 유효하다고 믿을 수 없는) 값이 있습니다. 위의 코드 예제에서 이러한 값을 목격했습니다. 이는 마치 단점인 것처럼 들립니다. 하지만 사실 이러한 값은 복사하는 대신(일반적으로 많은 비용 발생) *이동*(일반적으로 저렴)할 수 있다는 장점이 있습니다. 값을 이동한다는 것은 값이 더 이상 이전 위치에 있지 않다는 것을 의미합니다. 따라서 이전에 있었던 위치에서 값에 액세스하려고 하면 안 됩니다. 값을 이동하는 시기 및 *방법*은 이 토픽의 범위를 벗어납니다. 이 토픽에서는 이동 가능한 *rvalue*(또는 *클래식 rvalue*)라는 값을 이해하기만 하면 됩니다.
 
-"Rvalue"의 "r"은 "오른쪽" (예: 오른쪽-hand의 쪽은 할당)의 약어입니다. 하지만 rvalue를 및 할당 외부 rvalue에 대 한 참조를 사용할 수 있습니다. "Rvalue"의 "r"에서 가장 중점적으로 그러면 됩니다. 부르는 rvalue 이동할 수 있는 값 임을 이해에 필요 합니다.
+"rvalue"의 "r"은 "오른쪽"의 약어입니다(할당의 오른쪽처럼). 하지만 rvalue 및 rvalue 참조를 할당 외부에 사용할 수도 있습니다. "rvalue"의 "r"은 중요하지 않습니다. 우리가 rvalue라고 부르는 값이 이동 가능하다는 사실만 이해하면 됩니다.
 
-이 그림에서와 같이 lvalue은 반대로 이동할 수 없습니다. 이동 하는 lvalue는 정의 무시 *lvalue*, 것이 합리적으로 매우에 계속 lvalue를 액세스할 수 있게 되기를 예상 하는 코드에 대 한 예기치 않은 문제가 및 합니다.
+반면 이 일러스트레이션처럼 lvalue는 이동할 수 없습니다. 이동된 lvalue는 *lvalue*의 정의를 위반하므로, 당연히 lvalue에 계속 액세스할 수 있을 것으로 예상되는 코드에서 예기치 않은 문제가 발생합니다.
 
-![Rvalue는 이동할 수 있습니다. lvalue가 아닙니다.](images/is-movable.png)
+![rvalue는 이동할 수 있지만, lvalue는 그렇지 않습니다.](images/is-movable.png)
 
-Lvalue를 이동할 수 없습니다. 하지만 거기 *는* glvalue (identity 사용 하 여 작업 집합) 이동할 수 있는 유형의&mdash;무엇을 알고 있는 경우 (하지 않도록 주의 해야 이동한 후 액세스 포함)&mdash;는 xvalue입니다. 한 번 더 아래 값 범주의 전체 그림을 그릴 때 보면이 아이디어를 다시 방문할 예정입니다.
+lvalue를 이동할 수 없습니다. 하지만 이동할 수 있는 glvalue(ID가 있는 것들의 세트)라는 값이 *있습니다*. 값을 이동한 후에는 액세스하지 않도록 주의해야 한다는 점을 포함하여 충분한 이해가 있다면 사용할 수 있는 xvalue도 있습니다. 아래에서 값 범주의 전체 그림을 살펴볼 때 이 개념을 다시 한 번 검토하겠습니다.
 
 ## <a name="rvalue-references-and-reference-binding-rules"></a>Rvalue 참조 및 참조 바인딩 규칙
-이 섹션에서는 rvalue에 대 한 참조를 포함 하는 구문은 소개 합니다. 다른 항목 이동 및 전달, 상당한 처리로 이동할 때까지 대기 해야 하지만를 rvalue 참조로 해결 되는 문제는 합니다. Rvalue 참조를 살펴보기 전에 그러나에서는 먼저이 대 한 명확 하 게 `T&` &mdash;가장에서는 한 이전 호출 된 "참조만"입니다. "(비 const) lvalue 참조를" 참조의 사용자 작성할 수 있는 값으로 참조 하는 것입니다.
+이 섹션에서는 rvalue에 대한 참조의 구문을 소개합니다. 다른 토픽에서 값의 이동과 전달에 대해 자세히 알아보겠지만, rvalue 참조로 해결되는 문제입니다. rvalue 참조를 살펴보기 전에, 우리가 이전에 "참조"라고 부르던 `T&`&mdash;에 대해 정확하게 이해해야 합니다. 이것은 진정한 "lvalue(비 const) 참조"이며, 참조의 사용자가 쓸 수 있는 값을 의미합니다.
 
 ```cppwinrt
 template<typename T> T& get_by_lvalue_ref() { ... } // Get by lvalue (non-const) reference.
 template<typename T> void set_by_lvalue_ref(T&) { ... } // Set by lvalue (non-const) reference.
 ```
 
-Lvalue 참조는 lvalue 아니라 rvalue에 바인딩할 수 있습니다.
+lvalue 참조는 lvalue에 바인딩할 수 있지만 rvalue에는 바인딩할 수 없습니다.
 
-Const lvalue 참조 한 다음 (`T const&`)는 개체를 참조 하는 참조의 사용자 *없습니다* 쓰기 (예를 들어, 상수).
+그리고 참조의 사용자가 쓸 수 *없는* 개체(예: 상수)를 의미하는 lvalue const 참조(`T const&`)가 있습니다.
 
 ```cppwinrt
 template<typename T> T const& get_by_lvalue_cref() { ... } // Get by lvalue const reference.
 template<typename T> void set_by_lvalue_cref(T const&) { ... } // Set by lvalue const reference.
 ```
 
-Const lvalue 참조는 lvalue 또는 rvalue에 바인딩할 수 있습니다.
+lvalue const 참조는 lvalue 또는 rvalue에 바인딩할 수 있습니다.
 
-형식 rvalue에 대 한 참조를 포함 하는 구문은 `T` 으로 기록 됩니다 `T&&`합니다. Rvalue 참조는 이동 가능한 값을 참조&mdash;값을 해당 내용을 것 (예를 들어 임시) 사용한 후에 유지할 필요가 없습니다. 전체 지점 이후에서 이동할 (수정 함으로써) 값에 바인딩된 rvalue 참조 `const` 고 `volatile` 한정자 (cv 한정자)는 rvalue 참조에 적용 되지 않습니다.
+`T` 형식의 rvalue에 대한 참조 구문은 `T&&`로 작성됩니다. rvalue 참조는 이동 가능한 값, 다시 말해서 사용한 후 콘텐츠를 보존할 필요가 없는 값(예: 임시 항목)을 의미합니다. 전체 지점이 rvalue 참조에 바인딩된 값으로부터 이동되므로(따라서 수정되므로) `const` 및 `volatile` 한정자(cv 한정자라고도 함)가 rvalue 참조를 적용하지 않습니다.
 
 ```cppwinrt
 template<typename T> T&& get_by_rvalue_ref() { ... } // Get by rvalue reference.
 struct A { A(A&& other) { ... } }; // A move constructor takes an rvalue reference.
 ```
 
-Rvalue는 rvalue를 바인딩합니다. 오버 로드 확인을 rvalue 측면에서 말하자면 *선호* 보다는 rvalue 참조를 const lvalue 참조로 바인딩되어야 합니다. 하지만, 말한 것 처럼 rvalue 참조 하기 때문에 값 (즉, 이동 생성자의 매개 변수)를 유지할 필요가 가정 내용을 rvalue 참조가 lvalue에 바인딩할 수 없습니다.
+rvalue 참조는 rvalue에 바인딩됩니다. 사실, 오버로드 확인 때문에 rvalue는 lvalue const 참조보다 rvalue 참조에 바인딩하는 것을 *선호*합니다. 하지만 앞서 언급했듯이 rvalue 참조는 lvalue에 바인딩할 수 없으므로, rvalue 참조는 콘텐츠를 보존할 필요가 없는 것으로 가정하는 값(즉, 이동 생성자의 매개 변수)을 의미합니다.
 
-또한 값으로 인수를 필요한 곳에서 복사 생성을 통해 (또는 rvalue를 xvalue 경우 이동 생성을 통해)는 rvalue을 전달할 수 있습니다.
+또한 복사 생성을 통해(또는 rvalue가 xvalue인 경우 이동 생성을 통해) by-value 인수가 필요한 곳에 rvalue를 전달할 수 있습니다.
 
-## <a name="a-glvalue-has-identity-a-prvalue-does-not"></a>glvalue가 id입니다. prvalue가 않습니다.
-이 단계에서는 id가 무엇을 알고 있습니다. 및 이동할 수 란 무엇 이며 그렇지 않은 알 수 있습니다. 에서는 아직 아직 하 명명 된 값 집합이 있지만 *하지* id가 있습니다. 집합 이라고 합니다 *prvalue*, 또는 *순수 rvalue*합니다.
+## <a name="a-glvalue-has-identity-a-prvalue-does-not"></a>ID가 있는 glvalue, ID가 없는 prvalue
+이제 ID가 무엇인지 다들 이해하셨을 것입니다. 이동 가능한 값과 이동할 수 없는 값도 이해하셨을 것입니다. 하지만 ID가 *없는* 값 세트의 이름을 지정하지 않았습니다. 이 세트를 *prvalue* 또는 *순수 rvalue*라고 합니다.
 
 ```cppwinrt
 int& get_by_ref() { ... }
@@ -101,21 +101,21 @@ int main()
 }
 ```
 
-![Lvalue는 id입니다. prvalue가 않습니다.](images/has-identity2.png)
+![ID가 있는 lvalue, ID가 없는 prvalue](images/has-identity2.png)
 
-## <a name="the-complete-picture-of-value-categories"></a>범주 값의 전체 개요
-정보 및 위의 그림은 단일, 큰 그림으로 결합 하 여만 유지 됩니다.
+## <a name="the-complete-picture-of-value-categories"></a>값 범주의 전체 그림
+위의 정보와 일러스트레이션을 하나의 큰 그림으로 결합하면 다음과 같은 그림이 완성됩니다.
 
-![범주 값의 전체 개요](images/value-categories.png)
+![값 범주의 전체 그림](images/value-categories.png)
 
-### <a name="glvalue-i"></a>glvalue (i)
-glvalue (일반화 된 lvalue)에 id가 있습니다.
+### <a name="glvalue-i"></a>glvalue(i)
+glvalue(일반화된 lvalue)는 ID가 있습니다.
 
-### <a name="lvalue-im"></a>lvalue (있습니까\&\!m)
-Lvalue (glvalue의 kind)는 id가 있지만 이동할 수 없습니다. 이들은 전달 하는 관련 참조 또는 const 참조 또는 값으로 복사 하는 저렴 하는 경우 일반적으로 읽기 / 쓰기 값입니다. Lvalue는 rvalue 참조에 바인딩할 수 없습니다.
+### <a name="lvalue-im"></a>lvalue(i\&\!m)
+lvalue(glvalue의 일종)는 ID가 있지만 이동할 수 없습니다. 참조나 const 참조, 또는 복사하는 것이 저렴한 경우 값을 통해 전달하는 일반적인 읽기-쓰기 값입니다. lvalue는 rvalue 참조에 바인딩할 수 없습니다.
 
-### <a name="xvalue-im"></a>xvalue (있습니까\&m)
-xvalue (glvalue, 유형의 뿐만 아니라 특정 유형의 rvalue)는 id가 있으며 이동할 수 이기도 합니다. 이 복사는 저렴 하기 때문에 이동 하기로 다니고 lvalue를 수 있습니다 하 고 나중에 액세스 하지 않도록 주의 수입니다. Lvalue를 xvalue로 변환 하는 방법을 다음과 같습니다.
+### <a name="xvalue-im"></a>xvalue(i\&m)
+xvalue(glvalue의 일종이지만 동시에 rvalue의 일종이기도 함)는 ID가 있고 이동할 수 있습니다. 복사는 비용이 많이 들기 때문에 이동하기로 결정한 이전 lvalue일 수 있으며, 이동 후에 액세스하지 않도록 주의해야 합니다. lvalue를 xvalue로 변환하는 방법은 다음과 같습니다.
 
 ```cppwinrt
 struct A { ... };
@@ -123,9 +123,9 @@ A a; // a is an lvalue...
 static_cast<A&&>(a); // ...but this expression is an xvalue.
 ```
 
-위의 코드 예제에서는 아직 이동 하지 아무 것도 합니다. Lvalue를 이름이 지정 되지 않은 rvalue 참조로 캐스팅 하 여 xvalue는 방금 만들었습니다. Lvalue 이름으로 계속 식별할 수 있습니다. 하지만 이제는 xvalue *가능* 이동 하는 중입니다. 이렇게 하는 원인은 다른 항목에 대 한 대기 해야 등 조사 어떤 이동 합니다. 하지만 "xvalue" 의미 "전문가 전용 으로"에 도움이 되는 경우에 있는 "x"를 생각할 수 있습니다. Lvalue를 xvalue (rvalue의 kind)로 캐스팅을 하 여 값 그러면 rvalue 참조 바인딩될 수 있습니다.
+위의 코드 예제에서는 아직 아무 것도 이동하지 않았습니다. 조금 전에 lvalue를 이름이 지정되지 않은 rvalue 참조로 캐스팅하여 xvalue를 만들었습니다. 여전히 lvalue 이름으로 식별할 수 있지만, 이제는 xvalue로써 이동이 *가능*합니다. 이렇게 하는 이유와 이동의 결과는 다른 토픽에서 다루겠습니다. 하지만 도움이 된다면 "xvalue"의 "x"가 "expert-only(전문가 전용)"를 의미한다고 생각하셔도 좋습니다. lvalue를 xvalue(rvalue의 일종)로 캐스팅하면 값을 rvalue 참조에 바인딩할 수 있게 됩니다.
 
-다음의 두 가지 다른 예 xvalues&mdash;명명 되지 않은 rvalue 참조를 반환 하는 함수를 호출 하 고는 xvalue의 멤버에 액세스 합니다.
+다음은 명명되지 않은 rvalue 참조를 반환하는 함수를 호출한 후 xvalue 멤버에 액세스하는 두 가지 xvalue 예제입니다.
 
 ```cppwinrt
 struct A { int m; };
@@ -134,13 +134,13 @@ f(); // This expression is an xvalue...
 f().m; // ...and so is this.
 ```
 
-### <a name="prvalue-im"></a>prvalue (\!있습니까\&m)
-(순수 rvalue; rvalue 유형의) prvalue id 없지만 이동할 수 있습니다. 임시 개체는 일반적으로, 값 또는 glvalue 없는 다른 식 평가의 결과 반환 하는 함수 호출의 결과
+### <a name="prvalue-im"></a>prvalue(\!i\&m)
+prvalue(순수 rvalue. rvalue의 일종)는 ID가 없지만 이동할 수 있습니다. 일반적으로 임시 항목, 값에 따라 반환하는 함수를 호출한 결과 또는 glvalue가 아닌 다른 식을 평가한 결과입니다.
 
-### <a name="rvalue-m"></a>rvalue (m)
-Rvalue는 이동할 수 있습니다. Rvalue *참조* 항상 rvalue (유지할 필요가 가정 내용을 값)를 참조 합니다.
+### <a name="rvalue-m"></a>rvalue(m)
+rvalue는 이동할 수 있습니다. rvalue *참조*는 항상 rvalue(콘텐츠를 보존할 필요가 없는 것으로 가정하는 값)을 참조합니다.
 
-하지만를 rvalue 참조 자체 rvalue? *명명 되지 않은* rvalue 참조 (예: 위의 xvalue 코드 예제에 나와 있는 것)는 xvalue은 예,이 rvalue입니다. 이동 생성자의 것과 같은 rvalue 참조 함수 매개 변수에 바인딩할 선호 합니다. 반대로 아마도 counter-intuitively rvalue 참조 이름을 가진 경우 해당 이름으로 이루어진 식은 lvalue입니다. 따라서 것 *없습니다* 는 rvalue 참조 매개 변수를 바인딩할 수 있습니다. 하지만 이렇게 하도록 쉽습니다&mdash;다시 명명 되지 않은 rvalue 참조 (xvalue)으로 캐스팅만 합니다.
+그렇다면 rvalue 참조 자체는 rvalue일까요? *명명되지 않은* rvalue 참조(위의 xvalue 코드 예제에 나온 것처럼)는 xvalue이므로 rvalue입니다. 이동 생성자와 마찬가지로 rvalue 참조 함수 매개 변수에 바인딩하는 것을 선호합니다. 반대로(그리고 반직관적으로) rvalue 참조의 이름이 있는 경우 해당 이름으로 구성된 식은 lvalue입니다. 따라서 rvalue 참조 매개 변수에 바인딩할 수 *없습니다*. 하지만 간단하게 바인딩하는 방법이 있습니다. 명명되지 않은 rvalue 참조(xvalue)에 다시 캐스팅하면 됩니다.
 
 ```cppwinrt
 void foo(A&) { ... }
@@ -153,40 +153,40 @@ void bar(A&& a) // a is a named rvalue reference; it's an lvalue.
 A&& get_by_rvalue_ref() { ... } // This unnamed rvalue reference is an xvalue.
 ```
 
-### <a name="im"></a>\!필자\&\!m
-Id가 없는 것을 이동할 수 없는 값의 종류에는 아직 설명 하지는 하나의 조합입니다. 하지만 해당 범주에는 c + + 언어의 유용한 아이디어를 하지 않기 때문에, 무시 해도 했습니다.
+### <a name="im"></a>\!i\&\!m
+ID가 없고 이동할 수 없는 값은 아직 살펴보지 않았습니다. 하지만 이러한 값 범주는 C++ 언어에서 유용하지 않으므로 무시해도 됩니다.
 
 ## <a name="reference-collapsing-rules"></a>참조 축소 규칙
-다른 아웃 (lvalue 참조를 lvalue 참조 또는 rvalue 참조에 대 한 rvalue 참조) 식에서 여러 like 참조 하나를 취소 합니다.
+한 식의 여러 유사 참조(lvalue 참조에 대한 lvalue 참조 또는 rvalue 참조에 대한 rvalue 참조)는 서로를 취소합니다.
 
-- `A& &` 축소 `A&`합니다.
-- `A&& &&` 축소 `A&&`합니다.
+- `A& &`는 `A&`로 축소됩니다.
+- `A&& &&`는 `A&&`로 축소됩니다.
 
-식에서 참조와 달리 여러 lvalue 참조를 축소 합니다.
+한 식의 여러 유사하지 않은 참조는 lvalue 참조로 축소됩니다.
 
-- `A& &&` 축소 `A&`합니다.
-- `A&& &` 축소 `A&`합니다.
+- `A& &&`는 `A&`로 축소됩니다.
+- `A&& &`는 `A&`로 축소됩니다.
 
-## <a name="forwarding-references"></a>참조를 전달합니다.
-이 최종 섹션에 설명한, 다른 개념을 사용 하 여 rvalue 참조를 대조 한 *참조를 전달*합니다.
+## <a name="forwarding-references"></a>전달 참조
+마지막 섹션에서는 앞에서 살펴본 rvalue 참조를 *전달 참조*라는 다른 개념과 비교해 보겠습니다.
 
 ```cppwinrt
 void foo(A&& a) { ... }
 ```
 
-- `A&&` 앞서 설명한 것 처럼 rvalue 참조가 됩니다. Const 및 volatile rvalue 참조에 적용 되지 않습니다.
-- `foo` 형식 rvalue만 수락 **는**합니다.
-- 이유 rvalue 참조 (같은 `A&&`)가 전달 되는 임시 (또는 다른 rvalue)의 경우에 최적화 된 오버 로드를 작성할 수 있도록 합니다.
+- `A&&`는 앞서 살펴본 것처럼 rvalue 참조입니다. const 및 volatile은 rvalue 참조에 적용되지 않습니다.
+- `foo`는 **A** 형식의 rvalue만 수락합니다.
+- rvalue 참조(예: `A&&`)가 있는 이유는 임시 항목(또는 다른 rvalue) 전달에 최적화된 오버로드를 작성하기 위함입니다.
 
 ```cppwinrt
 template <typename _Ty> void bar(_Ty&& ty) { ... }
 ```
 
-- `_Ty&&` *참조를 전달*합니다. 에 전달 된 항목에 따라 `bar`, 형식 **_Ty** const/비 const volatile/비 volatile 독립적으로 일 수 있습니다.
-- `bar` 모든 lvalue 또는 rvalue 형식의 수락 **_Ty**합니다.
-- 되도록 전달 참조는 lvalue를 전달 하면 `_Ty& &&`, lvalue 참조 축소는 `_Ty&`합니다.
-- 되도록 전달 참조는 rvalue를 전달 하면 `_Ty&& &&`에 대 한 rvalue 참조를 축소 하는 `_Ty&&`합니다.
-- 참조를 전달 하는 이유 (같은 `_Ty&&`) 존재 됩니다 *하지* 최적화를 위해 있지만 있습니다 통과 하는 데 및 투명 하 고 효율적으로 전달 하도록 합니다. 또는 경우에 쓰기 (밀접 하 게 연구) 라이브러리 코드에 대 한 참조를 전달 발생할 가능성이&mdash;예를 들어 팩터리 함수를 생성자 인수에 전달 합니다.
+- `_Ty&&`는 *전달 참조*입니다. `bar`에 전달하는 항목에 따라 **_Ty** 형식은 휘발성/비휘발성 여부에 관계 없이 const/비 const일 수 있습니다.
+- `bar`는 **_Ty** 형식의 lvalue 또는 rvalue를 모두 수락합니다.
+- lvalue를 전달하면 전달 참조는 lvalue 참조 `_Ty&`로 축소되는 `_Ty& &&`가 됩니다.
+- lvalue를 전달하면 전달 참조는 lvalue 참조 `_Ty&&`로 축소되는 `_Ty&& &&`가 됩니다.
+- 전달 참조(예: `_Ty&&`)가 있는 이유는 최적화가 *아니라*, 전달 참조에 항목을 투명하고 효율적으로 전달하는 것입니다. 라이브러리 코드를 작성(또는 면밀하게 연구)하는 경우에만 전달 참조를 경험할 가능성이 있습니다. 생성자 인수에 전달하는 팩터리 함수를 예로 들 수 있습니다.
 
 ## <a name="sources"></a>원본
-* \[Stroustrup 2013\] B. Stroustrup: C + + 프로그래밍 언어, Fourth Edition입니다. Addison-Wesley. 2013입니다.
+* \[Stroustrup, 2013년\] B. Stroustrup: C++ 프로그래밍 언어, Fourth Edition. Addison-Wesley. 2013년.

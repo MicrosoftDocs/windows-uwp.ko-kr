@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 076e4b0ddf30a23271bbb6b488f235f7233b28c2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649058"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63834294"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
@@ -22,11 +22,11 @@ ms.locfileid: "57649058"
 
 이 문서는 Segoe MDL2 자산 글꼴에서 제공하는 아이콘을 나열합니다. 
 
-> **중요 API**: [**열거형 기호**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)하십시오 [ **FontIcon 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
+> **중요 API**: [**기호 열거형**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol), [**FontIcon 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
 
 ## <a name="about-segoe-mdl2-assets"></a>Segoe MDL2 자산 정보
 
-Windows 10 릴리스에서 Windows 8/8.1의 Segoe UI Symbol 아이콘 글꼴이 Segoe MDL2 자산 글꼴로 대체되었습니다. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI 기호** "레거시" 리소스로 사용할 수 있지만 사용 하도록 앱을 업데이트 하는 것이 좋습니다 **Segoe MDL2 자산**.)
+Windows 10 릴리스에서 Windows 8/8.1의 Segoe UI Symbol 아이콘 글꼴이 Segoe MDL2 자산 글꼴로 대체되었습니다. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI Symbol**을 계속 "레거시" 리소스로 사용할 수 있지만, 새 **Segoe MDL2 자산**을 사용하도록 앱을 업데이트하는 것이 좋습니다.)
 
 **Segoe MDL2 Assets** 글꼴에 포함된 아이콘 및 UI 컨트롤은 대부분 PUA(Private Use Area of Unicode)에 매핑됩니다. PUA를 통해 글꼴 개발자는 기존 코드 점에 매핑되지 않는 문자 모양에 프라이빗 유니코드 값을 할당할 수 있습니다. 이 글꼴은 기호 글꼴을 만들 때 유용하지만 상호 운용성 문제가 발생될 수 있습니다. 글꼴을 사용할 수 없으면 문자 모양이 표시되지 않습니다. **Segoe MDL2 Assets** 글꼴을 지정할 수 있을 때만 이러한 문자 모양을 사용하세요.
 
@@ -43,7 +43,7 @@ Windows 10 릴리스에서 Windows 8/8.1의 Segoe UI Symbol 아이콘 글꼴이 
 또한 많은 아이콘에는 아랍어, 페르시아어 및 히브리어와 같은 오른쪽에서 왼쪽 텍스트 방향을 사용하는 언어에 사용할 수 있는 미러링된 양식이 있습니다.
 
 ## <a name="using-the-icons"></a>아이콘 사용
-앱을 개발 하는 경우 C#/VB/c + + 및 XAML을 사용 하 여 Segoe MDL2 자산에서 지정 된 문자를 사용할 수 있습니다는 [열거형 기호](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)합니다. 
+C#/VB/C++ 및 XAML로 앱을 개발하는 경우 [Symbol 열거형](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)을 사용하여 Segoe MDL2 자산에서 지정된 문자 모양을 사용할 수 있습니다. 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
@@ -55,18 +55,18 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
 ```
 
-정적 리소스를 사용할 수도 있습니다 `SymbolThemeFontFamily` 에 액세스 하려면 **Segoe MDL2 자산**, 글꼴 이름으로 지정 하는 대신:
+이름으로 글꼴을 지정하는 대신, 다음과 같이 정적 리소스 `SymbolThemeFontFamily`를 사용하여 **Segoe MDL2 자산**에 액세스할 수도 있습니다.
 ```xaml
 <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>
 ```
 
 
 ## <a name="how-do-i-get-this-font"></a>글꼴을 가져오는 방법
-* Windows 10: 해야 할 항목이 없는, 글꼴 Windows와 함께 제공 합니다.
-* Mac에서 다운로드 하 고 글꼴을 설치 해야 합니다. <a href="https://aka.ms/SegoeFonts">Segoe UI 및 MDL2 아이콘 글꼴 가져오기</a>
+* Windows 10: 아무 것도 할 필요가 없습니다. Windows와 함께 글꼴이 제공됩니다.
+* Mac에서는 글꼴을 다운로드하여 설치해야 합니다. <a href="https://aka.ms/SegoeFonts">Segoe UI 및 MDL2 아이콘 글꼴 다운로드</a>
 
 ## <a name="icon-list"></a>아이콘 목록
-**Segoe MDL2 자산** 글꼴에는 여기에 표시할 수 있는 아이콘보다 더 많은 아이콘이 포함되어 있다는 점에 유의하세요. 대다수 아이콘은 특수 용도로 제작되었고 보통 다른 곳에서는 사용되지 않습니다.
+**Segoe MDL2 자산** 글꼴에는 여기에 표시할 수 있는 아이콘보다 더 많은 아이콘이 포함되어 있습니다. 대다수 아이콘은 특수 용도로 제작되었으며 다른 용도에는 잘 사용되지 않습니다.
 
 
 <table style="background-color: white; color: black">
@@ -190,7 +190,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E71C.png" width="32" height="32" alt="Filter" /></td>
   <td>E71C</td>
-  <td>Filter</td>
+  <td>필터</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E71D.png" width="32" height="32" alt="AllApps" /></td>
   <td>E71D</td>
@@ -2378,7 +2378,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E9F5.png" width="32" height="32" alt="Processing" /></td>
   <td>E9F5</td>
-  <td>처리 중</td>
+  <td>처리</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E9F9.png" width="32" height="32" alt="ReportDocument" /></td>
   <td>E9F9</td>
@@ -3970,7 +3970,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EF31.png" width="32" height="32" alt="TrafficLight" /></td>
   <td>EF31</td>
-  <td>Trafficlight 라고 하며</td>
+  <td>TrafficLight</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EF3B.png" width="32" height="32" alt="Replay" /></td>
   <td>EF3B</td>
@@ -3978,7 +3978,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EF3C.png" width="32" height="32" alt="Eyedropper" /></td>
   <td>EF3C</td>
-  <td>스 포 이트</td>
+  <td>스포이트</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EF3D.png" width="32" height="32" alt="LineDisplay" /></td>
   <td>EF3D</td>
@@ -4002,7 +4002,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EF6B.png" width="32" height="32" alt="LandscapeOrientation" /></td>
   <td>EF6B</td>
-  <td>가로 방향</td>
+  <td>LandscapeOrientation</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EFA5.png" width="32" height="32" alt="Touchpad" /></td>
   <td>EFA5</td>
@@ -4018,7 +4018,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/F003.png" width="32" height="32" alt="Relationship" /></td>
   <td>F003</td>
-  <td>Relationship</td>
+  <td>관계</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F080.png" width="32" height="32" alt="DefaultAPN" /></td>
   <td>F080</td>
@@ -4742,7 +4742,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/F540.png" width="32" height="32" alt="Safe" /></td>
   <td>F540</td>
-  <td>안전 하 게 보호</td>
+  <td>Safe</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F552.png" width="32" height="32" alt="LaptopSecure" /></td>
   <td>F552</td>
@@ -5166,8 +5166,8 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 
 ## <a name="related-articles"></a>관련 문서
 
-* [아이콘에 대 한 지침](../style/icons.md)
-* [열거형 기호](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Symbol)
+* [아이콘에 대한 지침](../style/icons.md)
+* [Symbol 열거형](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Symbol)
 * [FontIcon 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
 
 

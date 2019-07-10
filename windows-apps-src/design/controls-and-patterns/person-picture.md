@@ -1,5 +1,5 @@
 ---
-description: 사람의 아바타 이미지가 있으면 이를 표시하고, 없으면 사람의 이니셜이나 일반 글자 모양을 표시합니다.
+description: 사람의 아바타 이미지가 있으면 아바타 이미지를 표시하고, 없으면 사람의 이니셜이나 일반 글자 모양을 표시합니다.
 title: 인물 사진 컨트롤
 template: detail.hbs
 label: Parallax View
@@ -12,40 +12,40 @@ dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1897eded4d18a00a3c11cf1926adb1ebec6ae69a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57638938"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63791720"
 ---
 # <a name="person-picture-control"></a>인물 사진 컨트롤
 
 인물 사진 컨트롤은 사람의 아바타 이미지가 있는 경우 해당 이미지를 표시하고, 없는 경우 사람의 이니셜이나 일반 글자 모양을 표시합니다. 컨트롤을 사용하여 사람의 연락처 정보를 관리하는 개체인 [Contact 개체](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact)를 표시하거나 수동으로 표시 이름과 프로필 사진 등의 연락처 정보를 제공할 수 있습니다.  
 
-> **중요 API**: [PersonPicture 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.personpicture)하십시오 [클래스에 게 문의](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), [ContactManager 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
+> **중요 API**: [PersonPicture 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.personpicture), [Contact 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), [ContactManager 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
 
-이 그림은 사용자 이름을 표시하는 2개의 [텍스트 블록](text-block.md) 요소가 수반되는 인물 사진 컨트롤을 보여줍니다. 
-![사용자 사진 제어](images/person-picture/person-picture_hero.png)
+이 일러스트레이션은 사용자 이름을 표시하는 두 개의 [텍스트 블록](text-block.md) 요소가 포함된 인물 사진 컨트롤을 보여줍니다. 
+![인물 사진 컨트롤](images/person-picture/person-picture_hero.png)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 사람과 해당 연락처 정보를 표시하려면 인물 사진을 사용하세요. 다음은 인물 사진 컨트롤의 사용 예입니다.
-* 현재 사용자 표시
-* 주소록에서 연락처 표시
-* 메시지를 보낸 사람 표시 
-* 소셜 미디어 연락처 표시
+* 현재 사용자를 표시하려면
+* 주소록의 연락처를 표시하려면
+* 메시지를 보낸 사람을 표시하려면 
+* 소셜 미디어 연락처를 표시하려면
 
-그림은 연락처 목록에서 person 그림 컨트롤을 보여 줍니다. ![사용자 사진 제어](images/person-picture/person-picture-control.png)
+다음 일러스트레이션은 연락처 목록의 인물 사진 컨트롤을 보여줍니다. ![인물 사진 컨트롤](images/person-picture/person-picture-control.png)
 
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/PersonPicture">앱을 열고 작동 중인 PersonPicture를 확인</a>합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/PersonPicture">앱을 열고 실제로 작동하는 PersonPicture를 확인</a>합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -56,7 +56,7 @@ ms.locfileid: "57638938"
 
 ## <a name="how-to-use-the-person-picture-control"></a>인물 사진 컨트롤 사용 방법
 
-인물 사진을 만들려면 PersonPicture 클래스를 사용합니다. 이 예에서는 PersonPicture 컨트롤을 만들고 수동으로 사람의 표시 이름, 프로필 사진 및 이니셜을 제공합니다.
+인물 사진을 만들려면 PersonPicture 클래스를 사용합니다. 이 예제에서는 PersonPicture 컨트롤을 만들고 수동으로 사람의 표시 이름, 프로필 사진 및 이니셜을 제공합니다.
 
 ```xaml
 <Page
@@ -167,7 +167,7 @@ namespace SampleApp
 ```
 
 > [!NOTE]
-> 코드를 단순하게 유지하기 위해 이 예에서는 새 Contact 개체를 만듭니다. 실제 앱에서는 사용자가 연락처를 선택하게 하거나 [ContactManager](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)를 사용하여 연락처 목록을 쿼리합니다. 연락처 검색 및 관리에 대한 자세한 내용은 [연락처 및 일정 문서](../../contacts-and-calendar/index.md)를 참조하세요. 
+> 코드를 단순하게 유지하기 위해 이 예제에서는 새 Contact 개체를 만듭니다. 실제 앱에서는 사용자가 연락처를 선택하게 하거나 [ContactManager](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)를 사용하여 연락처 목록을 쿼리합니다. 연락처 검색 및 관리에 대한 자세한 내용은 [연락처 및 일정 문서](../../contacts-and-calendar/index.md)를 참조하세요. 
 
 ## <a name="determining-which-info-to-display"></a>표시할 정보 결정
 
@@ -177,17 +177,17 @@ namespace SampleApp
 
 1. LargeDisplayPicture
 1. SmallDisplayPicture
-1. Thumbnail
+1. 미리 보기
 
 PreferSmallImage 속성을 true로 설정하여 선택되는 이미지를 변경할 수 있습니다. 이렇게 설정하면 SmallDisplayPicture에 LargeDisplayPicture보다 높은 우선 순위가 지정됩니다.
 
-이미지가 없는 경우 컨트롤에서 연락처의 이름이나 이니셜을 표시합니다. 이름 데이터가 없는 경우 컨트롤에서 전자 메일 주소나 전화 번호 등의 연락처 데이터를 표시합니다. 
+이미지가 없는 경우 컨트롤에서 연락처의 이름이나 이니셜을 표시합니다. 이름 데이터가 없는 경우 컨트롤에서 이메일 주소나 전화 번호 등의 연락처 데이터를 표시합니다. 
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 
 * [연락처 및 일정](../../contacts-and-calendar/index.md)
-* [대화 상대 카드 샘플](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+* [연락처 카드 샘플](https://go.microsoft.com/fwlink/p/?LinkId=624040)

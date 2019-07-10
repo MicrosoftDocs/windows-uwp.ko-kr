@@ -13,17 +13,17 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 91903365a258d54804b420cd217dd7c25d79406a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606138"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63813704"
 ---
 # <a name="radio-buttons"></a>라디오 단추
 
-> **중요 API**: [RadioButton 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton)하십시오 [선택한 이벤트](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [IsChecked 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
+> **중요 API**: [RadioButton 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [Checked 이벤트](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [IsChecked 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
-라디오 단추는 사용자가 집합에서 옵션 중 하나를 선택할 수 있도록 해줍니다. 각 옵션은 하나의 라디오 단추로 표시됩니다. 사용자는 라디오 단추 그룹에서 하나의 라디오 단추만 선택할 수 있습니다.
+라디오 단추는 사용자가 세트의 옵션 중 하나를 선택할 수 있게 해줍니다. 각 옵션은 하나의 라디오 단추로 표시되고, 사용자는 라디오 단추 그룹에서 한 가지 라디오 단추만 선택할 수 있습니다.
 
 이름에 대해 궁금할 수 있는데, 라디오의 채널에 미리 설정된 단추의 이름을 따서 라디오 단추의 이름이 지정됩니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "57606138"
 
 ![라디오 단추 그룹](images/radiobutton_basic.png)
 
-사용자가 선택을 위해 모든 옵션을 확인해야 할 때 라디오 단추를 사용합니다. 라디오 단추는 모든 옵션을 똑같이 강조하므로 필요 이상으로 옵션에 주의를 끌 수도 있습니다. 옵션에 특별한 관심을 가질 필요가 있는 경우가 아니면 다른 컨트롤을 사용하는 것이 좋습니다. 예를 들어 대부분의 사용자가 대부분의 경우에 기본 옵션을 사용하는 것이 좋을 경우 [드롭다운 목록](lists.md)을 대신 사용하세요.
+사용자가 모든 옵션을 확인한 후 선택해야 할 때 라디오 단추를 사용합니다. 라디오 단추는 모든 옵션을 똑같이 강조하므로 필요 이상으로 옵션에 주의를 끌 수도 있습니다. 옵션에 특별히 주의를 기울여야 하는 경우 외에는 다른 컨트롤을 사용하는 것이 좋습니다. 예를 들어 대부분의 사용자가 대부분의 경우에 기본 옵션을 사용하는 것이 좋을 경우 [드롭다운 목록](lists.md)을 대신 사용하세요.
 
 ![드롭다운 목록](images/combo_box_collapsed.png)
 
@@ -51,20 +51,20 @@ ms.locfileid: "57606138"
 
 ![슬라이더 컨트롤](images/controls/slider.png)
 
-옵션이 8개 이상인 경우에는 [드롭다운 목록](lists.md) 또는 [목록 상자](lists.md)를 사용합니다.
+옵션이 8개를 초과하는 경우에는 [드롭다운 목록](lists.md) 또는 [목록 상자](lists.md)를 사용합니다.
 
 ![콤보 상자](images/combo_box_scroll.png)
 
-사용 가능한 옵션이 앱의 현재 컨텍스트에 따라 달라지거나 동적으로 변경될 수 있는 경우에는 단일 선택 [목록 상자](lists.md)를 사용하세요.
+사용 가능한 옵션이 앱의 현재 컨텍스트에 따라 달라지거나 동적으로 변경될 수 있는 경우에는 단일 선택 [목록 상자](lists.md)를 사용합니다.
 
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/RadioButton">앱을 열고 작동 중인 RadioButton을 확인</a>합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/RadioButton">앱을 열고 실제로 작동하는 RadioButton을 확인</a>합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -173,11 +173,11 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 ## <a name="recommendations"></a>권장 사항
 
--   라디오 단추 집합의 용도와 현재 상태가 명확한지 확인합니다.
+-   라디오 단추 세트의 용도와 현재 상태가 명확한지 확인합니다.
 -   라디오 단추의 텍스트 콘텐츠를 한 줄로 제한합니다.
 -   텍스트 콘텐츠가 동적인 경우 단추 크기를 조정하는 방법과 주위의 시각적 모양을 고려하세요.
 -   브랜드 지침에 다른 글꼴을 사용하도록 규정되지 않은 경우 기본 글꼴을 사용합니다.
--   라디오 단추 그룹 두 개를 나란히 넣지 마세요. 두 라디오 단추 그룹이 나란히 배치된 경우 어느 단추가 어느 그룹에 속하는지 확인하는 데 어려움이 있습니다.
+-   라디오 단추 그룹 두 개를 나란히 배치하지 마세요. 두 라디오 단추 그룹이 나란히 배치된 경우 어느 단추가 어느 그룹에 속하는지 확인하는 데 어려움이 있습니다.
 
 ## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
@@ -191,10 +191,10 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 **디자이너용**
 - [단추](buttons.md)
-- [설정/해제 스위치](toggles.md)
+- [토글 스위치](toggles.md)
 - [확인란](checkbox.md)
-- [목록 및 콤보 상자](lists.md)
+- [목록과 콤보 상자](lists.md)
 - [슬라이더](slider.md)
 
-**개발자 (XAML)**
+**개발자용(XAML)**
 - [RadioButton 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.radiobutton)

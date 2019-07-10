@@ -11,11 +11,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c5736e917d77415eeb6df53b3fd92f7ab584884
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644928"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63787438"
 ---
 # <a name="rating-control"></a>평점 컨트롤
 
@@ -28,7 +28,7 @@ ms.locfileid: "57644928"
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
@@ -89,7 +89,7 @@ UI 설계와 성능의 이유로 매우 큰 가상화된 콘텐츠 목록에 사
 평점 컨트롤에는 사용할 수 있는 추가 기능이 많습니다. 이러한 기능 사용에 대한 자세한 내용은 MSDN 참조 설명서에 나와 있습니다.
 다음은 일부 추가 기능의 목록입니다.
 -   뛰어난 긴 목록 성능
--   비좁은 UI 시나리오를 위한 세밀한 크기 조정
+-   공간이 협소한 UI 시나리오를 위한 세밀한 크기 조정
 -   연속 값 채우기 및 평점
 -   간격 사용자 지정
 -   성장 애니메이션 비활성화
@@ -97,4 +97,4 @@ UI 설계와 성능의 이유로 매우 큰 가상화된 콘텐츠 목록에 사
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.

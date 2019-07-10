@@ -1,5 +1,5 @@
 ---
-description: 앱에서 입력 체계를 사용하여 사용자가 콘텐츠를 쉽게 이해하도록 돕는 방법에 대해 알아보세요.
+description: 앱에서 입력 체계를 사용하여 사용자가 콘텐츠를 쉽게 이해할 수 있도록 도와주는 방법을 알아보세요.
 title: UWP 앱의 입력 체계
 ms.date: 04/06/2018
 ms.topic: article
@@ -7,21 +7,21 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 76196add0829dcfa0aa638a2d8ae6995fafce69e
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244389"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63820594"
 ---
 # <a name="typography"></a>입력 체계
 
 ![영웅 이미지](images/header-typography.svg)
 
-언어의 시각적인 표현으로서 입력 체계의 주요 목적은 정보를 전달하는 것입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 이 문서에서는 사용자가 콘텐츠를 쉽고 효율적으로 이해할 수 있도록 UWP 앱에서 입력 체계 스타일을 지정하는 방법에 대해 설명합니다.
+언어의 시각적 표현인 입력 체계의 주요 목적은 정보 전달입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 이 문서에서는 사용자가 콘텐츠를 쉽고 효율적으로 이해할 수 있도록 UWP 앱에서 입력 체계 스타일을 지정하는 방법에 대해 설명합니다.
 
-## <a name="font"></a>글꼴
+## <a name="font"></a>Font
 
-앱의 UI 전체에서 글꼴 하나를 사용해야 하며 UWP 앱의 기본 글꼴은 **Segoe UI**를 사용하는 것이 좋습니다. 크기와 픽셀 밀도에 따라 최적의 가독성을 유지하도록 설계되었으며 시스템의 콘텐츠를 보완하는 깔끔하고 가볍고 개방적인 디자인을 제공합니다.
+앱의 UI 전체에서 한 가지 글꼴만 사용해야 하며 UWP 앱의 기본 글꼴인 **Segoe UI**를 계속 사용하는 것이 좋습니다. 크기와 픽셀 밀도에 따라 최적의 가독성을 유지하도록 설계되었으며, 시스템의 콘텐츠를 보완하는 깔끔하고 가볍고 개방적인 디자인을 제공합니다.
 
 ![Segoe UI 글꼴의 샘플 텍스트](images/type/segoe-sample.svg)
 
@@ -38,13 +38,13 @@ ms.locfileid: "59244389"
     :::column-end:::
 :::row-end:::
 
-## <a name="size-and-scaling"></a>크기 및 배율
+## <a name="size-and-scaling"></a>크기 및 스케일링
 
-UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니다. 크기 조정 알고리즘에 따르면 3m 떨어져 있는 Surface Hub 10의 24픽셀 글꼴은 몇 인치 떨어져 있는 5인치 휴대폰의 24픽셀 글꼴과 마찬가지로 사용자에게 읽힙니다.
+UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니다. 스케일링 알고리즘은 3m 떨어져 있는 Surface Hub 10의 24픽셀 글꼴을 불과 몇 인치 떨어져 있는 5인치 휴대폰의 24픽셀 글꼴처럼 읽을 수 있게 해줍니다.
 
 ![다양한 디바이스의 가시거리](images/type/scaling-chart.svg)
 
-크기 조정 시스템의 작동 방식 때문에 실제 픽셀이 아닌 유효 픽셀로 디자인하고 있으므로 화면 크기나 해상도가 다른 경우에도 글꼴 크기를 변경할 필요가 없습니다.
+스케일링 시스템의 작동 방식 때문에 실제 픽셀이 아닌 유효 픽셀로 디자인하고 있으므로, 화면 크기나 해상도가 다른 경우에도 글꼴 크기를 변경할 필요가 없습니다.
 
 :::row:::
     :::column:::
@@ -70,7 +70,7 @@ UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니�
 
 ### <a name="type-ramp"></a>유형 램프
 
-UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를 수립하여 사용자가 콘텐츠를 쉽게 읽도록 해줍니다. 모든 크기는 유효 픽셀이고 모든 디바이스에서 실행되는 UWP 앱에 최적화되어 있습니다.
+UWP 유형 램프는 페이지의 유형 스타일 간에 중요한 관계를 설정하므로 사용자가 콘텐츠를 쉽게 읽을 수 있습니다. 모든 크기는 유효 픽셀로 설정되며 모든 디바이스에서 실행되는 UWP 앱에 최적화되어 있습니다.
 
 ![유형 램프](images/type/type-ramp.png)
 
@@ -112,7 +112,7 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
 
 ## <a name="alignment"></a>맞춤
 
-[TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) 기본값은 왼쪽이고, 대부분의 경우 이 왼쪽 맞춤 방법은 일관된 콘텐츠 고정과 균일한 레이아웃을 제공합니다. RTL 언어에 대해서는 [세계화를 지원하도록 레이아웃 및 글꼴 조정](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)을 참조하세요.
+[TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) 기본값은 왼쪽이고, 대부분의 경우 이 왼쪽 맞춤 방법은 일관된 콘텐츠 고정과 균일한 레이아웃을 제공합니다. RTL 언어에 대한 내용은 [세계화를 지원하도록 레이아웃 및 글꼴 조정](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)을 참조하세요.
 
 ![텍스트 왼쪽 맞춤을 표시합니다.](images/type/alignment.svg)
 
@@ -135,7 +135,7 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
 
 ## <a name="clipping-and-ellipses"></a>클리핑 및 줄임표
 
-텍스트의 양이 사용 가능한 공간을 초과하면 텍스트 클리핑을 권장하며, 이것은 대다수 [UWP 텍스트 컨트롤](../controls-and-patterns/text-controls.md)의 기본 동작입니다.
+텍스트의 양이 사용 가능한 공간을 초과하는 경우 텍스트 클리핑을 사용할 것을 권장하며, 이는 대다수 [UWP 텍스트 컨트롤](../controls-and-patterns/text-controls.md)의 기본 동작입니다.
 
 ![일부 텍스트 클리핑이 있는 디바이스 프레임을 보여 줍니다.](images/type/clipping.svg)
 
@@ -154,11 +154,11 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
     :::column-end:::
 :::row-end:::
 
-**참고**: 컨테이너 잘 정의 된 경우 (예: 차별화 배경 색 없음), 또는 더 많은 텍스트를 보려면 링크의 경우 다음 줄임표를 사용 합니다.
+**참고**: 컨테이너가 잘 정의되지 않았거나(예: 차별화된 배경색 없음) 추가 텍스트를 확인해야 하는 링크가 있는 경우 줄임표를 사용합니다.
 
 ## <a name="languages"></a>언어 
 
-Segoe UI는 영어, 유럽 언어, 그리스어, 히브리어, 아르메니아어, 그루지야어, 아랍어에서 사용하는 공통 글꼴입니다. 다른 언어에서는 다음 권장 글꼴을 확인하세요.
+Segoe UI는 영어, 유럽 언어, 그리스어, 히브리어, 아르메니아어, 그루지야어, 아랍어에서 사용하는 공통 글꼴입니다. 그 외의 언어는 다음 권장 글꼴을 확인하세요.
 
 ### <a name="globalizinglocalizing-fonts"></a>글꼴 세계화/지역화
 
@@ -222,7 +222,7 @@ Segoe UI는 영어, 유럽 언어, 그리스어, 히브리어, 아르메니아�
 </tr>
 <tr class="even">
 <td align="left" style="font-family: Yu Gothic UI;">Yu Gothic UI</td>
-<td align="left">가늘게, Semilight, 보통, Semibold, 굵게</td>
+<td align="left">약간 가늘게, Semilight, 보통, Semibold, 굵게</td>
 <td align="left">일본어의 사용자 인터페이스 글꼴</td>
 </tr>
 </tbody>
@@ -272,7 +272,7 @@ Sans-serif 글꼴은 제목 및 UI 요소에 적합합니다.
 <tr class="even">
 <td style="font-family: Selawik;">Selawik</td>
 <td align="left">보통, Semilight, 가늘게, 굵게, Semibold</td>
-<td align="left">Segoe UI와 계측적으로 호환되는 오픈 소스 글꼴이며 Segoe UI를 번들로 만들지 않으려는 다른 플랫폼의 앱을 위한 글꼴입니다. <a href="https://github.com/Microsoft/Selawik">Github에서 Selawik를 가져옵니다.</a></td>
+<td align="left">Segoe UI와 계측적으로 호환되는 오픈 소스 글꼴이며 Segoe UI를 번들로 만들지 않으려는 다른 플랫폼의 앱을 위한 글꼴입니다. <a href="https://github.com/Microsoft/Selawik">GitHub에서 Selawik를 가져옵니다.</a></td>
 </tr>
 
 </tbody>
