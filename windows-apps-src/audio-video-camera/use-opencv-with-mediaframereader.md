@@ -35,7 +35,7 @@ ms.locfileid: "66360590"
 [OpenCV를 사용하여 소프트웨어 비트맵 처리](process-software-bitmaps-with-opencv.md)에 제시된 단계에 따라 OpenCV 도우미 Windows 런타임 구성 요소를 만들고 구성 요소 프로젝트에 대한 참조를 UWP 앱 솔루션에 추가합니다.
 
 ## <a name="find-available-frame-source-groups"></a>사용 가능한 프레임 소스 그룹 찾기
-먼저 미디어 프레임을 가져올 미디어 프레임 소스 그룹을 찾아야 합니다.  **[MediaFrameSourceGroup.FindAllAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.FindAllAsync)** 를 호출하여 현재 장치에서 사용할 수 있는 소스 그룹 목록을 가져옵니다. 그런 다음, 앱 시나리오에 필요한 센서 유형을 제공하는 소스 그룹을 선택합니다. 이 예제에서는 RGB 카메라의 프레임을 제공하는 소스 그룹만 있으면 됩니다.
+먼저 미디어 프레임을 가져올 미디어 프레임 소스 그룹을 찾아야 합니다. **[MediaFrameSourceGroup.FindAllAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.FindAllAsync)** 를 호출하여 현재 장치에서 사용할 수 있는 소스 그룹 목록을 가져옵니다. 그런 다음, 앱 시나리오에 필요한 센서 유형을 제공하는 소스 그룹을 선택합니다. 이 예제에서는 RGB 카메라의 프레임을 제공하는 소스 그룹만 있으면 됩니다.
 
 [!code-cs[OpenCVFrameSourceGroups](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameSourceGroups)]
 
@@ -58,7 +58,7 @@ ms.locfileid: "66360590"
 
 
 ## <a name="handle-the-framearrived-event"></a>FrameArrived 이벤트 처리
-프레임 읽기 프로그램에서 새 프레임을 사용할 수 있을 때마다 **FrameArrived** 이벤트가 발생합니다.  **[TryAcquireLatestFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** 을 호출하여, 프레임이 있을 경우 가져옵니다.  **[MediaFrameReference](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)** 에서 **SoftwareBitmap** 을 가져옵니다. 이 예제에 사용된 **CVHelper** 클래스의 이미지는 프리멀티플라이된 알파가 있는 BRGA8 픽셀 형식을 사용해야 합니다. 이벤트로 전달된 프레임의 형식이 다른 경우 **SoftwareBitmap**을 올바른 형식으로 변환합니다. 그런 다음, 흐림 작업의 대상으로 사용할 **SoftwareBitmap**을 생성합니다. 소스 이미지 속성이 생성자에 대한 인수로 사용되어, 해당하는 형식으로 비트맵을 만듭니다. 도우미 클래스 **Blur** 메서드를 호출하여 프레임을 처리합니다. 마지막으로, 초기화에 사용된 XAML **Image** 컨트롤로 이미지를 표시하는 **FrameRenderer** 도우미 클래스의 메서드 **PresentSoftwareBitmap**으로 흐림 작업의 출력 이미지를 전달합니다.
+프레임 읽기 프로그램에서 새 프레임을 사용할 수 있을 때마다 **FrameArrived** 이벤트가 발생합니다. **[TryAcquireLatestFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** 을 호출하여, 프레임이 있을 경우 가져옵니다. **[MediaFrameReference](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)** 에서 **SoftwareBitmap** 을 가져옵니다. 이 예제에 사용된 **CVHelper** 클래스의 이미지는 프리멀티플라이된 알파가 있는 BRGA8 픽셀 형식을 사용해야 합니다. 이벤트로 전달된 프레임의 형식이 다른 경우 **SoftwareBitmap**을 올바른 형식으로 변환합니다. 그런 다음, 흐림 작업의 대상으로 사용할 **SoftwareBitmap**을 생성합니다. 소스 이미지 속성이 생성자에 대한 인수로 사용되어, 해당하는 형식으로 비트맵을 만듭니다. 도우미 클래스 **Blur** 메서드를 호출하여 프레임을 처리합니다. 마지막으로, 초기화에 사용된 XAML **Image** 컨트롤로 이미지를 표시하는 **FrameRenderer** 도우미 클래스의 메서드 **PresentSoftwareBitmap**으로 흐림 작업의 출력 이미지를 전달합니다.
 
 [!code-cs[OpenCVFrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameArrived)]
 

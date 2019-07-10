@@ -35,7 +35,7 @@ ms.locfileid: "66365362"
 
 ## <a name="changing-the-input-scope-of-a-text-control"></a>텍스트 컨트롤의 입력 범위 변경
 
-앱에서 사용할 수 있는 입력 범위는 **[InputScopeNameValue](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue)** 열거의 멤버입니다.  ****TextBox**** 또는 **[RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)** 의 [InputScope](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox) 속성을 이러한 값 중 하나로 설정할 수 있습니다.
+앱에서 사용할 수 있는 입력 범위는 **[InputScopeNameValue](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue)** 열거의 멤버입니다. 설정할 수 있습니다 합니다 **InputScope** 의 속성을 **[텍스트 상자](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)** 또는 **[RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)** 다음 중 하나를 값입니다.
 
 > [!IMPORTANT]
 > 합니다 **[InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.inputscope)** 속성을 **[PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)** 만 지원 합니다 **암호** 및  **NumericPin** 값입니다. 다른 값이 무시됩니다.
@@ -45,7 +45,7 @@ ms.locfileid: "66365362"
 **XAML의 입력된 범위를 변경 하려면**
 
 1.  페이지의 XAML 파일에서 변경하려는 텍스트 컨트롤에 대한 태그를 찾습니다.
-2.  [  **InputScope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 특성을 태그에 추가하고 예상되는 입력과 일치하는 [**InputScopeNameValue**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue) 값을 지정합니다.
+2.  [**InputScope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 특성을 태그에 추가하고 예상되는 입력과 일치하는 [**InputScopeNameValue**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue) 값을 지정합니다.
 
     다음은 일반적인 고객 연락처 양식에서 볼 수 있는 몇 가지 입력란입니다. [  **InputScope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope)가 설정된 상태에서 데이터에 적합한 레이아웃의 터치 키보드가 각 입력란에 대해 표시됩니다.
 
@@ -78,19 +78,19 @@ ms.locfileid: "66365362"
     InputScopeName scopeName = new InputScopeName();
     ```
 
-4.  [  **InputScopeName**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopename.namevalue) 개체의 [**NameValue**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeName) 속성을 [**InputScopeNameValue**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue) 열거형 값으로 설정합니다.
+4.  [**InputScopeName**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopename.namevalue) 개체의 [**NameValue**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeName) 속성을 [**InputScopeNameValue**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue) 열거형 값으로 설정합니다.
 
     ```csharp
     scopeName.NameValue = InputScopeNameValue.TelephoneNumber;
     ```
 
-5.  [  **InputScopeName**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeName) 개체를 [**InputScope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscope.names) 개체의 [**Names**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScope) 컬렉션에 추가합니다.
+5.  [**InputScopeName**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeName) 개체를 [**InputScope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscope.names) 개체의 [**Names**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScope) 컬렉션에 추가합니다.
 
     ```csharp
     scope.Names.Add(scopeName);
     ```
 
-6.  [  **InputScope**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScope) 개체를 텍스트 컨트롤의 [**InputScope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성 값으로 설정합니다.
+6.  [**InputScope**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScope) 개체를 텍스트 컨트롤의 [**InputScope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성 값으로 설정합니다.
 
     ```csharp
     phoneNumberTextBox.InputScope = scope;
@@ -117,7 +117,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 
 ## <a name="text-prediction-spell-checking-and-auto-correction"></a>텍스트 자동 완성, 맞춤법 검사 및 자동 고침
 
-[  **TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 및 [**RichEditBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox) 컨트롤은 SIP의 동작에 영향을 주는 몇 가지 속성을 포함합니다. 사용자에게 최상의 환경을 제공하기 위해서는 이러한 속성이 터치를 사용한 텍스트 입력에 어떤 영향을 주는지 이해하는 것이 중요합니다.
+[**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 및 [**RichEditBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox) 컨트롤은 SIP의 동작에 영향을 주는 몇 가지 속성을 포함합니다. 사용자에게 최상의 환경을 제공하기 위해서는 이러한 속성이 터치를 사용한 텍스트 입력에 어떤 영향을 주는지 이해하는 것이 중요합니다.
 
 -   [**IsSpellCheckEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.isspellcheckenabled)-컨트롤을 인식 하지 못하는 단어가 표시 되는 시스템의 맞춤법 검사 엔진과 상호 작용 하는 맞춤법 검사 텍스트 컨트롤에 사용 됩니다. 단어를 탭하면 제안된 수정 단어 목록을 볼 수 있습니다. 기본적으로 맞춤법 검사는 사용하도록 설정되어 있습니다.
 

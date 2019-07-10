@@ -9,10 +9,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c996b22395fc8186fb1b6dc786a73fa4a97ecf16
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363987"
 ---
 # <a name="web-view"></a>웹 보기
@@ -28,7 +28,7 @@ ms.locfileid: "66363987"
 
 ## <a name="create-a-web-view"></a>웹 보기 만들기
 
-**웹 뷰의 모양을 수정 합니다.**
+**웹 보기의 모양 수정**
 
 [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView)는 [Control](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 하위 클래스가 아니므로 컨트롤 템플릿이 없습니다. 그러나 다양한 속성을 설정하여 웹 보기의 일부 시각적 측면을 제어할 수 있습니다.
 - 표시 영역을 제한하려면 [Width](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.width) 및 [Height](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) 속성을 설정합니다. 
@@ -36,19 +36,19 @@ ms.locfileid: "66363987"
 - 웹 보기의 불투명도를 제어하려면 [Opacity](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.opacity) 속성을 설정합니다.
 - HTML 콘텐츠에서 색을 지정하지 않는 경우 웹 페이지 배경으로 사용할 색을 지정하려면 [DefaultBackgroundColor](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.defaultbackgroundcolor) 속성을 설정합니다. 
 
-**웹 페이지 제목**
+**웹 페이지 제목 가져오기**
 
 [DocumentTitle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.documenttitle) 속성을 사용하여 현재 웹 보기에 표시된 HTML 문서의 제목을 가져올 수 있습니다. 
 
-**입력된 이벤트와 탭 순서**
+**입력 이벤트 및 탭 순서**
 
 WebView는 Control 하위 클래스가 아니지만 키보드 입력 포커스를 받고 탭 순서에 참여합니다. [Focus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.focus) 메서드와 [GotFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus) 및 [LostFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus) 이벤트를 제공하지만 탭 관련 속성은 없습니다. 탭 순서상 해당 위치는 XAML 문서 순서상 위치와 같습니다. 탭 순서에는 입력 포커스를 받을 수 있는 웹 보기 콘텐츠의 모든 요소가 포함됩니다. 
 
-[WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) 클래스 페이지의 이벤트 테이블에 표시된 대로 웹 보기는 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에서 상속된 사용자 입력 이벤트(예: [KeyDown](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown), [KeyUp](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) 및 [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed))를 대부분 지원하지 않습니다. 대신, JavaScript eval 함수와 함께 [**InvokeScriptAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.invokescriptasync)를 사용하여 HTML 이벤트 처리기를 사용하고, HTML 이벤트 처리기의 **window.external.notify**를 통해 [WebView.ScriptNotify](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.scriptnotify)를 사용하는 응용 프로그램에 알릴 수 있습니다.
+[WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) 클래스 페이지의 이벤트 테이블에 표시된 대로 웹 보기는 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에서 상속된 사용자 입력 이벤트(예: [KeyDown](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown), [KeyUp](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) 및 [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed))를 대부분 지원하지 않습니다. 대신, JavaScript **eval** 함수와 함께 [InvokeScriptAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.invokescriptasync)를 사용하여 HTML 이벤트 처리기를 사용하고, HTML 이벤트 처리기의 **window.external.notify**를 통해 [WebView.ScriptNotify](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.scriptnotify)를 사용하는 애플리케이션에 알릴 수 있습니다.
 
 ### <a name="navigating-to-content"></a>콘텐츠로 이동
 
-기본 탐색을 위한 여러 Api를 제공 하는 웹 보기: [GoBack](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.goback), [GoForward](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.goforward)를 [중지](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.stop)를 [새로 고침](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.refresh)를 [CanGoBack](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.cangoback), 및 [CanGoForward](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.cangoforward). 이러한 기능을 사용하여 일반적인 웹 검색 기능을 앱에 추가할 수 있습니다. 
+웹 보기는 기본 탐색을 위한 API로 [GoBack](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.goback), [GoForward](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.goforward), [Stop](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.stop), [Refresh](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.refresh), [CanGoBack](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.cangoback) 및 [CanGoForward](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.cangoforward)를 제공합니다. 이러한 기능을 사용하여 일반적인 웹 검색 기능을 앱에 추가할 수 있습니다. 
 
 웹 보기의 초기 콘텐츠를 설정하려면 XAML에서 [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.source) 속성을 설정합니다. XAML 파서는 문자열을 [Uri](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri)로 자동으로 변환합니다. 
 
@@ -91,7 +91,7 @@ webView1.Navigate("ms-appx-web:///help/about.html");
 
 ### <a name="responding-to-navigation-events"></a>탐색 이벤트에 응답
 
-웹 보기 컨트롤은 탐색 및 콘텐츠 로드 상태에 응답하는 데 사용할 수 있는 몇 가지 이벤트를 제공합니다. 루트 웹 뷰 콘텐츠를 위한 다음과 같은 순서로 이벤트가 발생 합니다. [NavigationStarting](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigationstarting), [ContentLoading](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.contentloading), [DOMContentLoaded](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.domcontentloaded), [NavigationCompleted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigationcompleted)
+웹 보기 컨트롤은 탐색 및 콘텐츠 로드 상태에 응답하는 데 사용할 수 있는 몇 가지 이벤트를 제공합니다. 이벤트는 다음과 같은 순서로 루트 웹 보기 콘텐츠에 대해 발생합니다. [NavigationStarting](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigationstarting), [ContentLoading](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.contentloading), [DOMContentLoaded](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.domcontentloaded), [NavigationCompleted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigationcompleted)
 
 
 **NavigationStarting** - 웹 보기가 새 콘텐츠로 이동하기 전에 발생합니다. WebViewNavigationStartingEventArgs.Cancel 속성을 true로 설정하여 이 이벤트 처리기에서 탐색을 취소할 수 있습니다. 
@@ -258,7 +258,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 웹 보기 콘텐츠의 스크립트는 문자열 매개 변수와 함께 **window.external.notify**를 사용하여 정보를 다시 앱으로 보낼 수 있습니다. 이러한 메시지를 받으려면 [ScriptNotify](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.scriptnotify) 이벤트를 처리합니다. 
 
-외부 웹 페이지에서 window.external.notify를 호출할 때 **ScriptNotify** 이벤트가 발생하게 하려면 페이지의 URI를 앱 매니페스트의 **ApplicationContentUriRules** 섹션에 포함해야 합니다. (이렇게 하려면 Microsoft Visual Studio에서 Package.appxmanifest 디자이너 콘텐츠 Uri 탭 합니다.) 이 목록에는 Uri HTTPS를 사용 해야 하 고 하위 도메인 와일드 카드를 포함할 수 있습니다 (예를 들어 `https://*.microsoft.com`) 도메인 와일드 카드는 사용할 수 없습니다 있지만 (예를 들어 `https://*.com` 및 `https://*.*`). 매니페스트 요구 사항은 앱 패키지에서 시작되거나 ms-local-stream:// URI를 사용하거나 [NavigateToString](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigatetostring)을 통해 로드되는 콘텐츠에 적용되지 않습니다. 
+외부 웹 페이지에서 window.external.notify를 호출할 때 **ScriptNotify** 이벤트가 발생하게 하려면 페이지의 URI를 앱 매니페스트의 **ApplicationContentUriRules** 섹션에 포함해야 합니다. (Microsoft Visual Studio에서 제공하는 Package.appxmanifest 디자이너의 Content URI 탭에서 이렇게 할 수 있습니다.) 이 목록의 URI는 HTTPS를 사용해야 하며, 하위 도메인 와일드 카드를 포함할 수 있지만(예: `https://*.microsoft.com`) 도메인 와일드 카드는 포함할 수 없습니다(예: `https://*.com` 및 `https://*.*`). 매니페스트 요구 사항은 앱 패키지에서 시작되거나 ms-local-stream:// URI를 사용하거나 [NavigateToString](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigatetostring)을 통해 로드되는 콘텐츠에 적용되지 않습니다. 
 
 ### <a name="accessing-the-windows-runtime-in-a-web-view"></a>웹 보기에서 Windows 런타임 액세스
 

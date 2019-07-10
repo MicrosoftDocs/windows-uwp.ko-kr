@@ -11,10 +11,10 @@ template: detail.hbs
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cd11427ed1b53641a25c32742ca114b121efcfe8
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363957"
 ---
 # <a name="xaml-styles"></a>XAML 스타일
@@ -67,7 +67,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 스타일을 리소스로 정의할 경우 다음 두 가지 방법으로 스타일을 컨트롤에 적용할 수 있습니다.
 
 -   암시적 적용 - [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)에 대하여 [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.targettype)만 지정합니다.
--   명시적 적용 - [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)에 대해 [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.targettype) 및 [x:Key 특성](../../xaml-platform/x-key-attribute.md) 특성을 지정한 후 명시적 키를 사용하는 [{StaticResource} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/staticresource-markup-extension) 참조로 대상 컨트롤의 [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) 속성을 설정합니다.
+-   명시적 적용 - [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)에 대해 [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.targettype) 및 [x:Key 특성](../../xaml-platform/x-key-attribute.md)을 지정한 후 명시적 키를 사용하는 [{StaticResource} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/staticresource-markup-extension) 참조로 대상 컨트롤의 [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) 속성을 설정합니다.
 
 스타일에 [x:Key 특성](../../xaml-platform/x-key-attribute.md)이 포함된 경우, 컨트롤의 [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) 속성을 키 입력 스타일로 설정하여 이 특성을 컨트롤에만 적용할 수 있습니다. 이와 달리, x:Key 특성이 없는 스타일은 이 경우 외에는 명시적 스타일 설정이 없는 대상 유형의 모든 컨트롤에 자동으로 적용됩니다.
 
@@ -107,11 +107,11 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 ## <a name="use-based-on-styles"></a>파생 스타일 사용
 
-스타일을 더 쉽게 유지 관리하고 스타일 재사용을 최적화하기 위해 다른 스타일에서 상속받는 스타일을 만들 수 있습니다. [BasedOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.basedon) 속성을 사용하여 상속받은 스타일을 만들 수 있습니다. 다른 스타일에서 상속받은 스타일은 동일한 유형의 컨트롤 또는 기본 스타일이 대상으로 하는 유형에서 파생된 컨트롤을 대상으로 지정해야 합니다. 예를 들어, 기본 스타일이 [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl)을 대상으로 지정할 경우 이 스타일을 기반으로 하는 파생 스타일은 **ContentControl**, 또는 [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 및 [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)와 같은 **ContentControl**에서 파생된 유형을 대상으로 지정할 수 있습니다. 파생 스타일에 값이 설정되어 있지 않으면 기본 스타일에서 상속받습니다. 기본 스타일의 값을 변경하면 파생 스타일이 이 값보다 우선합니다. 다음 예제는 동일한 기본 스타일에서 상속받은 스타일이 적용된 **Button** 및 [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox)를 보여 줍니다.
+스타일을 더 쉽게 유지 관리하고 스타일 재사용을 최적화하기 위해 다른 스타일에서 상속받는 스타일을 만들 수 있습니다. [BasedOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.basedon) 속성을 사용하여 상속받은 스타일을 만들 수 있습니다. 다른 스타일에서 상속받은 스타일은 동일한 유형의 컨트롤 또는 기본 스타일이 대상으로 하는 유형에서 파생된 컨트롤을 대상으로 지정해야 합니다. 예를 들어 기본 스타일이 [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl)을 대상으로 지정할 경우 이 스타일을 기반으로 하는 파생 스타일은 **ContentControl**, 또는 [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 및 [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)와 같은 **ContentControl**에서 파생된 유형을 대상으로 지정할 수 있습니다. 파생 스타일에 값이 설정되어 있지 않으면 기본 스타일에서 상속받습니다. 기본 스타일의 값을 변경하면 파생 스타일이 이 값보다 우선합니다. 다음 예제는 동일한 기본 스타일에서 상속받은 스타일이 적용된 **Button** 및 [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox)를 보여줍니다.
 
 ![파생 스타일을 사용한 스타일 적용 단추](images/styles-buttons-based-on.png)
 
-기본 스타일이 [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl)을 대상으로 지정하고 [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 및 [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 속성을 설정합니다. 이 스타일을 기반으로 하는 스타일은 **ContentControl**에서 파생되는 [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 및 [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)를 대상으로 지정합니다. 파생 스타일은 [BorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.borderbrush) 및 [Foreground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.foreground) 속성에 대해 서로 다른 색상을 설정합니다. (일반적으로 **CheckBox** 주위에 테두리를 배치하지 않습니다. 여기서 스타일의 효과를 표시하기 위해 배치합니다.)
+기본 스타일이 [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl)을 대상으로 지정하고 [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 및 [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 속성을 설정합니다. 이 스타일을 기반으로 하는 스타일은 **ContentControl**에서 파생되는 [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 및 [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)을 대상으로 지정합니다. 파생 스타일은 [BorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.borderbrush) 및 [Foreground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.foreground) 속성에 대해 서로 다른 색상을 설정합니다. (일반적으로 **CheckBox** 주위에 테두리를 배치하지 않습니다. 여기서 스타일의 효과를 표시하기 위해 배치합니다.)
 
 ```XAML
 <Page.Resources>
@@ -147,7 +147,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 ## <a name="lightweight-styling"></a>경량 스타일 지정
 
-시스템 브러시를 재정의하는 작업은 일반적으로 앱 또는 페이지 수준에서 수행되며, 두 경우 모두 해당 브러시를 참조하는 모든 컨트롤에 색상 재지정이 적용됩니다. 또한 XAML에서 많은 컨트롤은 동일한 시스템 브러시를 참조할 수 있습니다.
+시스템 브러시를 재정의하는 작업은 일반적으로 앱 또는 페이지 수준에서 수행되며, 두 경우 모두 해당 브러시를 참조하는 모든 컨트롤에 색상 재지정이 적용됩니다. 또한 XAML에서는 여러 컨트롤이 동일한 시스템 브러시를 참조할 수 있습니다.
 
 ![스타일이 적용된 단추](images/LightweightStyling_ButtonStatesExample.png)
 
@@ -165,7 +165,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 </Page.Resources>
 ```
 
-PointerOver(단추 위로 마우스를 가져감), **PointerPressed**(단추가 호출됨) 또는 Disabled(단추가 조작 가능하지 않음)와 같은 상태에 해당합니다. 이러한 끝 원래 경량 스타일 이름에 추가 됩니다. **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etc. 수정 된 브러시도 게 컨트롤 앱의 테마를 일관 되 게 지정 됩니다.
+PointerOver(단추 위로 마우스를 가져감), **PointerPressed**(단추가 호출됨) 또는 Disabled(단추가 조작 가능하지 않음)와 같은 상태에 해당합니다. 원래 경량 스타일 지정 이름 끝에 **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled** 등이 추가됩니다. 이러한 브러시를 수정하면 컨트롤의 색이 앱의 테마에 일관적으로 적용됩니다.
 
 이러한 브러시 재정의를 **App.Resources** 수준에 배치하면 단일 페이지가 아닌 전체 앱 내의 모든 단추가 변경됩니다.
 
