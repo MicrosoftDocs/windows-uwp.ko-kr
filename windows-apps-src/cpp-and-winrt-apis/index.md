@@ -1,16 +1,16 @@
 ---
 description: C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API용 완전한 표준 C++17 언어 프로젝션입니다.
 title: C++/WinRT
-ms.date: 05/14/2018
+ms.date: 04/18/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, CPP, WinRT, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: 664fd22fc954403776e1becc31563a06d5fdd15b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8b3cb74e3b3613cf562af7b5290697f111722226
+ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583076"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67800542"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -55,6 +55,7 @@ C++/WinRT는 Windows 런타임에 사용되는 다른 언어 옵션보다 성능
 | [XAML 컨트롤(C++/WinRT 속성에 바인딩)](binding-property.md) | XAML 컨트롤에 효과적으로 바인딩할 수 있는 속성은 *식별할 수 있는*(observable) 속성이라고 합니다. 이 항목에서는 식별할 수 있는 속성을 구현하고 사용하는 방법과 XAML 컨트롤에 바인딩하는 방법을 보여 줍니다. |
 | [XAML 항목 컨트롤(C++/WinRT 컬렉션에 바인딩)](binding-collection.md) | XAML 항목에 효과적으로 바인딩할 수 있는 컬렉션은 *식별할 수 있는*(observable) 컬렉션이라고 합니다. 이 항목에서는 식별할 수 있는 컬렉션을 구현하고 사용하는 방법과 XAML 항목에 바인딩하는 방법을 보여 줍니다. |
 | [C++/WinRT를 사용한 XAML 사용자 지정(템플릿 기반) 컨트롤](xaml-cust-ctrl.md) | C++/WinRT를 사용하여 간단한 사용자 지정 컨트롤을 만드는 단계를 안내합니다. 여기에 나와 있는 정보에 따라 기능이 풍부하고 사용자 지정 가능한 UI 컨트롤을 만들 수 있습니다. |
+| [매개 변수를 ABI 경계로 전달](pass-parms-to-abi.md) | C++/WinRT는 일반적인 경우에 대한 자동 변환을 제공하여 매개 변수를 ABI 경계에 전달하는 것을 단순화합니다. |
 | [C++/WinRT를 통한 COM 구성 요소 사용](consume-com.md) | 전체 Direct2D 코드 예제를 사용하여 C++/WinRT를 통해 COM 클래스 및 인터페이스를 사용하는 방법을 보여 줍니다. |
 | [C++/WinRT를 통한 COM 구성 요소 작성](author-coclasses.md) | C++/WinRT는 Windows 런타임 클래스를 작성하는 데 도움이 되는 것처럼 클래식 COM 구성 요소를 작성하는 데도 도움이 됩니다. |
 | [C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) | C++/CX 코드를 C++/WinRT의 해당 코드로 이동하는 방법을 보여 줍니다. |

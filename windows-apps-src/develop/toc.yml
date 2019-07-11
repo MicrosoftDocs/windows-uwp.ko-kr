@@ -822,6 +822,8 @@
           href: ../cpp-and-winrt-apis/binding-collection.md
         - name: XAML 사용자 지정(템플릿) 컨트롤
           href: ../cpp-and-winrt-apis/xaml-cust-ctrl.md
+        - name: 매개 변수를 ABI 경계로 전달
+          href: ../cpp-and-winrt-apis/pass-parms-to-abi.md
         - name: COM 구성 요소 사용
           href: ../cpp-and-winrt-apis/consume-com.md
         - name: COM 구성 요소 작성
