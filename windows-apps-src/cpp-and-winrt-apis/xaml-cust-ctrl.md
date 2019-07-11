@@ -1,31 +1,31 @@
 ---
 description: C++/WinRT를 사용하여 간단한 사용자 지정 컨트롤을 만드는 단계를 안내합니다. 여기에 나와 있는 정보에 따라 기능이 풍부하고 사용자 지정 가능한 UI 컨트롤을 만들 수 있습니다.
-title: C++/WinRT을 사용한 XAML 사용자 지정(템플릿) 컨트롤
-ms.date: 10/03/2018
+title: C++/WinRT를 사용한 XAML 사용자 지정(템플릿 기반) 컨트롤
+ms.date: 04/24/2019
 ms.topic: article
-keywords: windows 10, uwp, standard, c + +, cpp, winrt, 프로젝션, XAML, 사용자 지정, 템플릿 컨트롤
+keywords: Windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 사용자 지정, 템플릿 기반, 컨트롤
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ce4f7eea074233c625a2cc92ef773f0b06c2be9f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.openlocfilehash: 01ace91737602d768e71c564abceb28a7d19f9fb
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635148"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "64745026"
 ---
-# <a name="xaml-custom-templated-controls-with-cwinrt"></a>C++/WinRT을 사용한 XAML 사용자 지정(템플릿) 컨트롤
+# <a name="xaml-custom-templated-controls-with-cwinrt"></a>C++/WinRT를 사용한 XAML 사용자 지정(템플릿 기반) 컨트롤
 
 > [!IMPORTANT]
-> 핵심 개념 및 용어를 사용 하 고 사용 하 여 런타임 클래스를 작성 하는 방법에 대 한 이해를 지 원하는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 참조 하세요 [C +를 사용 하 여 Api 사용 + WinRT](consume-apis.md) 및 [작성 Api C + + WinRT](author-apis.md)합니다.
+> [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
-유니버설 Windows 플랫폼 (UWP)의 가장 강력한 기능 중 하나는 사용자 인터페이스 (UI) 스택에 XAML 기반 사용자 지정 컨트롤을 만드는 데 제공 하는 유연성 [ **제어** ](/uwp/api/windows.ui.xaml.controls.control) 형식입니다. XAML UI 프레임 워크와 같은 기능을 제공 [사용자 지정 종속성 속성](/windows/uwp/xaml-platform/custom-dependency-properties) 하 고 [연결 된 속성](/windows/uwp/xaml-platform/custom-attached-properties), 및 [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)를 쉽게 만들 수 있도록 기능이 풍부 하 고 사용자 지정할 수 있는 컨트롤입니다. 이 항목에서는 C +를 사용 하 여 사용자 지정 (템플릿 기반) 컨트롤을 만드는 단계를 통해 + WinRT 합니다.
+UWP(유니버설 Windows 플랫폼)의 가장 강력한 기능 중 하나는 XAML [**컨트롤**](/uwp/api/windows.ui.xaml.controls.control) 형식을 기반으로 사용자 지정 컨트롤을 만들기 위해 UI(사용자 인터페이스) 스택이 제공하는 유연성입니다. XAML UI 프레임워크는 [사용자 지정 종속성 속성](/windows/uwp/xaml-platform/custom-dependency-properties) 및 [연결 속성](/windows/uwp/xaml-platform/custom-attached-properties)과 같은 기능뿐 아니라, 기능이 풍부하고 사용자 지정 가능한 컨트롤을 쉽게 작성할 수 있는 [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)을 제공합니다. 이 항목에서는 C++/WinRT를 사용하여 사용자 지정(템플릿 기반) 컨트롤을 만드는 단계를 안내합니다.
 
-## <a name="create-a-blank-app-bglabelcontrolapp"></a>빈 앱 (BgLabelControlApp) 만들기
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. 만들기는 **Visual c + +** > **Windows 범용** > **비어 있는 앱 (C + + /cli WinRT)** 프로젝트를 만들고 이름을 *BgLabelControlApp* . 이 항목의 뒷부분에 나오는 섹션에서 이동 하 여 프로젝트를 빌드할 (그때 까지는 빌드 안 함).
+## <a name="create-a-blank-app-bglabelcontrolapp"></a>비어 있는 앱(BgLabelControlApp) 만들기
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **비어 있는 앱(C++/WinRT)** 프로젝트를 만들어서 이름을 *BgLabelControlApp*으로 지정합니다. 이 항목의 뒤쪽 섹션에서는 프로젝트(다음까지 빌드하지 않음)를 빌드하게 됩니다.
 
-사용자 지정 (템플릿 기반) 컨트롤을 나타내는 새 클래스를 작성 하겠습니다. 또한 동일한 컴파일 단위 내에서 클래스를 작성하고 사용할 계획입니다. 하지만 런타임 클래스일 하려는 이유는이 클래스에 대 한 XAML 태그에서 인스턴스화할 수 하고자 합니다. 그 밖에도 런타임 클래스를 작성하고 사용하는 데 모두 C++/WinRT를 사용합니다.
+사용자 지정(템플릿 기반) 컨트롤을 나타내는 새 클래스를 작성합니다. 동일한 컴파일 단위 내에서 클래스를 작성하고 사용합니다. 하지만 XAML 태그에서 이 클래스를 인스턴스화할 수 있어야 하므로 결국 런타임 클래스가 될 것입니다. 그 밖에도 런타임 클래스를 작성하고 사용하는 데 모두 C++/WinRT를 사용합니다.
 
-새로운 런타임 클래스를 작성하려면 먼저 새 **Midl 파일(.idl)** 항목을 프로젝트에 추가합니다. 이름을 `BgLabelControl.idl`이라고 지정합니다. `BgLabelControl.idl`의 기본 내용을 삭제한 후 아래 런타임 클래스 선언을 붙여 넣습니다.
+새로운 런타임 클래스를 작성하려면 먼저 새 **Midl 파일(.idl)** 항목을 프로젝트에 추가합니다. 이름을 `BgLabelControl.idl`이라고 지정합니다. `BgLabelControl.idl`의 기본 콘텐츠를 삭제한 후 아래 런타임 클래스 선언에 붙여넣습니다.
 
 ```idl
 // BgLabelControl.idl
@@ -40,19 +40,19 @@ namespace BgLabelControlApp
 }
 ```
 
-위의 목록 (DP) 종속성 속성을 선언할 때 따르는 패턴을 보여 줍니다. 각 DP 하는 방법은 두 가지입니다. 첫째, 형식의 읽기 전용 정적 속성을 선언 [ **DependencyProperty**](/uwp/api/windows.ui.xaml.dependencyproperty)합니다. 더하기에 DP의 이름이 *속성*합니다. 구현에서이 정적 속성을 사용 합니다. 둘째, 형식 및 프로그램 DP의 이름을 사용 하 여 읽기 / 쓰기 인스턴스 속성을 선언합니다. 작성 하려는 경우는 *연결 된 속성* DP), (대신의 코드 예제를 참조 하십시오 [사용자 지정 연결 된 속성](/windows/uwp/xaml-platform/custom-attached-properties)합니다.
+위 목록에서는 DP(종속성 속성)를 선언할 때 따라야 하는 패턴을 보여 줍니다. 각 DP에는 두 개의 조각이 있습니다. 먼저 [**DependencyProperty**](/uwp/api/windows.ui.xaml.dependencyproperty) 형식의 읽기 전용 정적 속성을 선언합니다. 여기에는 DP 및 ‘속성’의 이름이 포함됩니다.  구현에서 이 정적 속성을 사용합니다. 두 번째로, DP의 형식 및 이름으로 읽기-쓰기 인스턴스 속성을 선언합니다. DP 대신 ‘연결된 속성’을 작성하려면 [사용자 지정 연결 속성](/windows/uwp/xaml-platform/custom-attached-properties)에서 코드 예제를 참조하세요. 
 
 > [!NOTE]
-> 부동 소수점 형식과 DP를 하려는 경우 다음 있도록 `double` (`Double` 에 [MIDL 3.0](/uwp/midl-3/)). 선언 및 구현 형식의 DP `float` (`Single` MIDL에서), 오류 발생 후 XAML 태그에서 해당 DP에 대 한 값을 설정 하 고 *'Windows.Foundation.Single' 텍스트에서 만들지 못했습니다. '<NUMBER>'*.
+> DP를 부동 소수점 형식과 함께 사용하려면 DP를 `double`([MIDL 3.0](/uwp/midl-3/)의 `Double`)로 설정합니다. `float`(MIDL의 `Single`) 형식의 DP를 선언하고 구현한 후 XAML 태그에서 해당 DP의 값을 설정하면 ‘텍스트 ‘<NUMBER>’에서 ‘Windows.Foundation.Single’을 만들지 못했습니다.’ 오류가 발생합니다.  .
 
-파일을 저장하고 프로젝트를 빌드합니다. 빌드 과정에서 `midl.exe` 도구가 실행되어 런타임 클래스를 설명하는 Windows 런타임 메타데이터 파일(`\BgLabelControlApp\Debug\BgLabelControlApp\Unmerged\BgLabelControl.winmd`)을 생성합니다. 그런 다음 `cppwinrt.exe` 도구가 실행되어 런타임 클래스를 작성하거나 사용하도록 지원하는 소스 코드 파일을 생성합니다. 스텁 구현 하는 데 이러한 파일에 포함 된 **BgLabelControl** 프로그램 IDL에 선언 된 런타임 클래스. 이 스텁이 `\BgLabelControlApp\BgLabelControlApp\Generated Files\sources\BgLabelControl.h`와 `BgLabelControl.cpp`입니다.
+파일을 저장하고 프로젝트를 빌드합니다. 빌드 프로세스에서 `midl.exe` 도구가 실행되어 런타임 클래스를 설명하는 Windows 런타임 메타데이터 파일(`\BgLabelControlApp\Debug\BgLabelControlApp\Unmerged\BgLabelControl.winmd`)을 생성합니다. 그런 다음, `cppwinrt.exe` 도구가 실행되어 런타임 클래스를 작성하거나 사용하도록 지원하는 원본 코드 파일을 생성합니다. 원본 코드 파일에는 IDL로 선언한 **BgLabelControl** 런타임 클래스의 구현을 시작할 수 있는 스텁이 포함됩니다. 이 스텁이 `\BgLabelControlApp\BgLabelControlApp\Generated Files\sources\BgLabelControl.h`와 `BgLabelControl.cpp`입니다.
 
-스텁 파일인 `BgLabelControl.h`와 `BgLabelControl.cpp`를 `\BgLabelControlApp\BgLabelControlApp\Generated Files\sources\`에서 프로젝트 폴더인 `\BgLabelControlApp\BgLabelControlApp\`로 복사합니다. **솔루션 탐색기**에서 **모든 파일 표시**가 설정되어 있는지 확인합니다. 복사한 스텁 파일을 마우스 오른쪽 버튼으로 클릭하고 **프로젝트에 포함**을 클릭합니다.
+스텁 파일인 `BgLabelControl.h`와 `BgLabelControl.cpp`를 `\BgLabelControlApp\BgLabelControlApp\Generated Files\sources\`에서 프로젝트 폴더인 `\BgLabelControlApp\BgLabelControlApp\`로 복사합니다. **솔루션 탐색기**에서 **모든 파일 표시**가 설정되어 있는지 확인합니다. 복사한 스텁 파일을 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 클릭합니다.
 
-## <a name="implement-the-bglabelcontrol-custom-control-class"></a>구현 된 **BgLabelControl** 사용자 지정 컨트롤 클래스
-이제 `\BgLabelControlApp\BgLabelControlApp\BgLabelControl.h`와 `BgLabelControl.cpp`를 열고 런타임 클래스를 구현합니다. `BgLabelControl.h`, 생성자는 기본 스타일 키를 구현 설정 변경 **레이블을** 및 **LabelProperty**, 라는 정적 이벤트 처리기를 추가 **OnLabelChanged** 를 종속성 속성의 값으로 변경 내용을 처리 및 저장에 대 한 지원 필드를 private 멤버를 추가 **LabelProperty**합니다.
+## <a name="implement-the-bglabelcontrol-custom-control-class"></a>**BgLabelControl** 사용자 지정 컨트롤 클래스를 구현합니다.
+이제 `\BgLabelControlApp\BgLabelControlApp\BgLabelControl.h`와 `BgLabelControl.cpp`를 열고 런타임 클래스를 구현합니다. `BgLabelControl.h`에서는 생성자를 변경하여 기본 스타일 키를 설정하고, **Label** 및 **LabelProperty**를 구현하고, **OnLabelChanged**라는 정적 이벤트 처리기를 추가하여 변경된 종속성 속성 값을 처리하고, **LabelProperty**의 지원 필드를 저장할 프라이빗 멤버를 추가합니다.
 
-추가한 후에 `BgLabelControl.h` 다음과 유사 합니다.
+해당 항목을 추가한 후 `BgLabelControl.h`는 다음과 같이 표시됩니다.
 
 ```cppwinrt
 // BgLabelControl.h
@@ -81,7 +81,7 @@ private:
 ...
 ```
 
-`BgLabelControl.cpp`, 다음과 같은 정적 멤버를 정의 합니다.
+`BgLabelControl.cpp`에서 이와 같은 정적 멤버를 정의합니다.
 
 ```cppwinrt
 // BgLabelControl.cpp
@@ -107,16 +107,16 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d
 ...
 ```
 
-이 연습에서는 사용 하지 않을 **OnLabelChanged**합니다. 하지만 없는 속성 변경 콜백을 사용 하 여 종속성 속성을 등록 하는 방법을 볼 수 있도록 합니다. 구현의 **OnLabelChanged** 도 기본 프로젝션 된 형식에서 파생된 된 예상된 형식을 가져오는 방법을 보여 줍니다 (기본 예상 형식이 **DependencyObject**,이 경우). 및 다음 프로젝션 된 형식을 구현 하는 형식에 대 한 포인터를 가져오는 방법을 보여 줍니다. 두 번째 작업 자연스럽 게만 되도록 프로젝션 된 형식 (즉, 런타임 클래스를 구현 하는 프로젝트)를 구현 하는 프로젝트에서 가능 합니다.
+이 연습에서는 **OnLabelChanged**를 사용하지 않습니다. 하지만 속성 변경 콜백에 종속성 속성을 등록하는 방법을 확인할 수 있도록 제공됩니다. **OnLabelChanged** 구현은 기본 프로젝션된 형식에서 파생된 프로젝션된 형식을 가져오는 방법도 보여 줍니다(기본 프로젝션된 형식은 이 클래스의 **DependencyObject**임). 또한 프로젝션된 형식을 구현하는 형식에 대한 포인터를 가져오는 방법을 보여 줍니다. 이 두 번째 작업은 기본적으로 프로젝션된 형식을 구현하는 프로젝트(런타임 클래스를 구현하는 프로젝트)에서만 가능합니다.
 
 > [!NOTE]
-> Windows SDK (Windows 10, 버전 1809) 10.0.17763.0 버전을 설치 하지 않은 경우 나중에 다음 호출 해야 [ **winrt::from_abi** ](/uwp/cpp-ref-for-winrt/from-abi) 위의 종속성 속성 변경된 이벤트 처리기에서 대신 [ **winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self)합니다.
+> Windows SDK 버전 10.0.17763.0(Windows 10 버전 1809) 이상을 설치하지 않은 경우 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) 대신, 위의 종속성 속성 변경 이벤트 처리기에서 [**winrt::from_abi**](/uwp/cpp-ref-for-winrt/from-abi)를 호출해야 합니다.
 
-## <a name="design-the-default-style-for-bglabelcontrol"></a>에 대 한 기본 스타일 디자인 **BgLabelControl**
+## <a name="design-the-default-style-for-bglabelcontrol"></a>**BgLabelControl**의 기본 스타일을 디자인합니다.
 
-해당 생성자에서 **BgLabelControl** 자체에 대 한 기본 스타일 키를 설정 합니다. 그렇다면 *는* 기본 스타일? 사용자 지정 (템플릿 기반) 컨트롤에서 기본 스타일 해야&mdash;기본 컨트롤 템플릿이 포함 된&mdash;스타일 및/또는 템플릿 소비자 컨트롤에 설정 하지 않는 경우 사용 하 여 자체적으로 렌더링 하는 데 사용할 수 있는 합니다. 이 섹션에는 기본 스타일을 포함 하는 프로젝트에 마크업 파일을 추가 합니다.
+해당 생성자에서 **BgLabelControl**은 스스로 기본 스타일 키를 설정합니다. 그러나 기본 스타일이란 ‘무엇인가요’?  사용자 지정(템플릿 기반) 컨트롤의 경우 컨트롤의 소비자가 스타일 및/또는 템플릿을 설정하지 않는 경우 자체적으로 렌더링하는 데 사용할 수 있는 기본 컨트롤 템플릿을 포함하는 기본 스타일이 있어야 합니다. 이 섹션에서는 기본 스타일을 포함하는 프로젝트에 태그 파일을 추가합니다.
 
-프로젝트 노드에서 새 폴더를 만들고 "테마" 라는 이름을 지정 합니다. 아래 `Themes`, 유형의 새 항목 추가 **Visual c + +** > **XAML** > **XAML 뷰**, "Generic.xaml" 이라는 이름을 지정 합니다. 폴더 및 파일 이름을 사용자 지정 컨트롤에 대 한 기본 스타일을 찾으려면 XAML 프레임 워크에 대 한 순서 대로 다음과 같은 수 해야 합니다. 기본 내용을 삭제 `Generic.xaml`, 아래의 태그에 붙여넣습니다.
+프로젝트 노드에서 새 폴더를 만들고 이름을 “Themes”로 지정합니다. `Themes` 아래에서 형식 **Visual C++**  > **XAML** > **XAML 보기**의 새 항목을 추가하고 이름을 “Generic.xaml”로 지정합니다. XAML 프레임워크가 사용자 지정 컨트롤의 기본 스타일을 찾으려면 폴더 및 파일 이름이 이와 같아야 합니다. `Generic.xaml`의 기본 콘텐츠를 삭제하고 아래 태그에 붙여넣습니다.
 
 ```xaml
 <!-- \Themes\Generic.xaml -->
@@ -139,17 +139,17 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d
 </ResourceDictionary>
 ```
 
-이 경우 기본 스타일을 설정 하는 유일한 속성은 컨트롤 템플릿입니다. 템플릿을 사각형으로 이루어져 (해당 배경 바인딩되는 **백그라운드** 속성은는 XAML의 모든 인스턴스 [ **컨트롤** ](/uwp/api/windows.ui.xaml.controls.control) 형식), 및 (해당 텍스트 요소 텍스트에 바인딩되는 **BgLabelControl::Label** 종속성 속성).
+이 경우 기본 스타일이 설정하는 속성은 컨트롤 템플릿뿐입니다. 템플릿은 사각형(해당 배경이 XAML [**Control**](/uwp/api/windows.ui.xaml.controls.control) 형식의 모든 인스턴스에 있는 **Background** 속성에 바인딩됨) 및 텍스트 요소(해당 텍스트가 **BgLabelControl::Label** 종속성 속성에 바인딩됨)로 구성됩니다.
 
-## <a name="add-an-instance-of-bglabelcontrol-to-the-main-ui-page"></a>인스턴스를 추가 **BgLabelControl** 주 UI 페이지
+## <a name="add-an-instance-of-bglabelcontrol-to-the-main-ui-page"></a>기본 UI 페이지에 **BgLabelControl** 인스턴스 추가
 
-`MainPage.xaml`을 엽니다. 여기에는 메인 UI 페이지에 사용할 XAML 태그가 포함되어 있습니다. 바로 뒤를 **단추** 요소 (내 합니다 **StackPanel**), 다음 태그를 추가 합니다.
+`MainPage.xaml`을 엽니다. 여기에는 기본 UI 페이지에 사용할 XAML 태그가 포함되어 있습니다. **StackPanel** 내부에서 **Button** 요소 바로 뒤에 다음 태그를 추가합니다.
 
 ```xaml
 <local:BgLabelControl Background="Red" Label="Hello, World!"/>
 ```
 
-또한 다음 include 지시문을 추가 `MainPage.h` 있도록 합니다 **MainPage** 형식 (명령적 코드 및 XAML 태그 컴파일의 조합) 인지를 **BgLabelControl** 사용자 지정 컨트롤 형식입니다. 사용 하려는 경우 **BgLabelControl** 다른 XAML 페이지에서 추가한이 너무 동일한 include 지시문이 페이지에 대 한 헤더 파일에 있습니다. 또는 또는 입력 단일 include 지시문 미리 컴파일된 헤더 파일에 있습니다.
+또한 **MainPage** 형식(컴파일 XAML 태그 및 필수 코드의 조합)이 **BgLabelControl** 사용자 지정 컨트롤 형식을 인식하도록 `MainPage.h`에 다음 include 지시문을 추가합니다. 다른 XAML 페이지에서 **BgLabelControl**을 사용하려면 해당 페이지의 헤더 파일에 동일한 include 지시문을 추가합니다. 또는 미리 컴파일된 헤더 파일에 단일 include 지시문을 넣으면 됩니다.
 
 ```cppwinrt
 // MainPage.h
@@ -158,13 +158,13 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d
 ...
 ```
 
-이제 프로젝트를 빌드하고 실행합니다. 기본 컨트롤 템플릿이 배경 브러시를 레이블 하의 바인딩된를 표시 합니다 **BgLabelControl** 태그에는 인스턴스.
+이제 프로젝트를 빌드하고 실행합니다. 기본 컨트롤 템플릿이 배경 브러시에 바인딩되고 태그의 **BgLabelControl** 인스턴스 레이블에 바인딩되는 것을 알 수 있습니다.
 
-이 연습에서는 사용자 지정 (템플릿 기반) 컨트롤의 간단한 예제에 설명 했습니다 C + + /cli WinRT 합니다. 임의로 풍부 하 고 모든 기능을 갖춘 사용자 지정 컨트롤을 만들 수 있습니다. 예를 들어, 사용자 지정 컨트롤에는 편집 가능한 데이터 표, 비디오 플레이어, 또는 3 차원 기 하 도형의 시각화 도우미 것 만큼 복잡 한 항목 형식의 걸릴 수 있습니다.
+이 연습에서는 C++/WinRT의 사용자 지정(템플릿 기반) 컨트롤에 대한 간단한 예제를 보여 줍니다. 임의로 풍부하고 모든 기능을 갖춘 고유한 사용자 지정 컨트롤을 만들 수 있습니다. 예를 들어 사용자 지정 컨트롤은 편집 가능한 데이터 표, 비디오 플레이어 또는 3D 기하 도형 시각화 도우미만큼 복잡한 형식을 사용할 수 있습니다.
 
-## <a name="implementing-overridable-functions-such-as-measureoverride-and-onapplytemplate"></a>구현 *overridable* 와 같은 함수 **MeasureOverride** 고 **OnApplyTemplate**
+## <a name="implementing-overridable-functions-such-as-measureoverride-and-onapplytemplate"></a>**MeasureOverride** 및 **OnApplyTemplate** 같은 ‘재정의 가능’ 함수 구현 
 
-사용자 지정 컨트롤을 파생 합니다 [ **제어** ](/uwp/api/windows.ui.xaml.controls.control) 기본 런타임 클래스에서 파생 되는 런타임 클래스에서 직접 추가 합니다. 재정의 가능한 메서드가 되며 **제어**를 [ **FrameworkElement**](/uwp/api/windows.ui.xaml.frameworkelement), 및 [ **UIElement** ](/uwp/api/windows.ui.xaml.uielement) 파생된 클래스에서 재정의할 수 있습니다. 작업을 수행 하는 방법을 보여 주는 코드 예제는 다음과 같습니다.
+기본 런타임 클래스에서 추가로 파생된 [**Control**](/uwp/api/windows.ui.xaml.controls.control) 런타임 클래스에서 사용자 지정 컨트롤을 파생시킵니다. 파생 클래스에서 재정의할 수 있는 **Control**, [**FrameworkElement**](/uwp/api/windows.ui.xaml.frameworkelement) 및 [**UIElement**](/uwp/api/windows.ui.xaml.uielement)의 재정의 가능 메서드도 있습니다. 작업을 수행하는 방법을 보여 주는 코드 예제는 다음과 같습니다.
 
 ```cppwinrt
 struct BgLabelControl : BgLabelControlT<BgLabelControl>
@@ -183,10 +183,10 @@ struct BgLabelControl : BgLabelControlT<BgLabelControl>
 };
 ```
 
-*재정의 가능한* 함수 다른 언어에서 자신을 다르게 표시 합니다. C#, 예를 들어, 재정의 가능 함수는 일반적으로 나타납니다 보호 된 가상 함수입니다. C + + /cli WinRT, 가상 또는 보호 하지만 여전히 재정의할 하 고 위에 표시 된 대로 사용자 지정 구현을 제공할 수 있습니다.
+‘재정의 가능’ 함수는 다른 언어 프로젝션에서는 다르게 표현됩니다.  예를 들어 C#에서 재정의 가능 함수는 일반적으로 보호된 가상 함수로 표시됩니다. C++/WinRT에서는 가상도 아니고 보호되지도 않지만 위에 표시된 것처럼 고유한 구현을 함수를 재정의하고 고유한 구현을 제공할 수 있습니다.
 
 ## <a name="important-apis"></a>중요 API
-* [컨트롤 클래스](/uwp/api/windows.ui.xaml.controls.control)
+* [Control 클래스](/uwp/api/windows.ui.xaml.controls.control)
 * [DependencyProperty 클래스](/uwp/api/windows.ui.xaml.dependencyproperty)
 * [FrameworkElement 클래스](/uwp/api/windows.ui.xaml.frameworkelement)
 * [UIElement 클래스](/uwp/api/windows.ui.xaml.uielement)

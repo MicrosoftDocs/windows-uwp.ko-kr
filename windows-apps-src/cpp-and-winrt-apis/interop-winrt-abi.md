@@ -1,25 +1,25 @@
 ---
-description: 이번 항목에서는 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다.
-title: C++/WinRT와 ABI 사이의 상호 운용성
+description: ABI(애플리케이션 이진 인터페이스)와 C++/WinRT 개체 간에 변환하는 방법을 보여 줍니다.
+title: C++/WinRT와 ABI 사이의 Interop
 ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, ABI
 ms.localizationpriority: medium
 ms.openlocfilehash: a1745f9ad98ed8dac2e54e17d18467981eafdcec
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66360233"
 ---
-# <a name="interop-between-cwinrt-and-the-abi"></a>C++/WinRT와 ABI 사이의 상호 운용성
+# <a name="interop-between-cwinrt-and-the-abi"></a>C++/WinRT와 ABI 사이의 Interop
 
-이 항목에서는 SDK 응용 프로그램 이진 인터페이스 (ABI) 간에 변환 하는 방법 및 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 개체입니다. 여기에서 설명하는 방법은 Windows 런타임을 통한 두 가지 프로그래밍 방법을 사용하는 코드 사이의 상호 운용성에 사용하거나, 혹은 코드를 ABI에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
+이번 항목에서는 SDK ABI(Application Binary Interface)와 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 개체를 서로 변환하는 방법에 대해서 설명합니다. 여기에서 설명하는 방법은 Windows 런타임을 통한 두 가지 프로그래밍 방법을 사용하는 코드 사이의 Interop에 사용하거나, 코드를 ABI에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
 
 ## <a name="what-is-the-windows-runtime-abi-and-what-are-abi-types"></a>Windows 런타임 ABI란 무엇이며, ABI 형식이란 무엇인가요?
-Windows 런타임 클래스(런타임 클래스)는 추상화입니다. 이 추상화는 여러 프로그래밍 언어가 개체와 상호 작용할 수 있게 하는 이진 인터페이스(응용 프로그램 바이너리 인터페이스, ABI)를 정의합니다. 프로그래밍 언어에 관계없이 Windows 런타임 개체와의 클라이언트 코드 상호 작용은 개체의 ABI에 대한 호출로 번역되는 클라이언트 언어 구문으로 최저 수준에서 수행됩니다.
+Windows 런타임 클래스(런타임 클래스)는 추상화입니다. 이 추상화는 여러 프로그래밍 언어가 개체와 상호 작용할 수 있게 하는 이진 인터페이스(Application Binary Interface, ABI)를 정의합니다. 프로그래밍 언어에 관계없이 Windows 런타임 개체와의 클라이언트 코드 상호 작용은 개체의 ABI에 대한 호출로 번역되는 클라이언트 언어 구문으로 최저 수준에서 수행됩니다.
 
-"%WindowsSdkDir%Include\10.0.17134.0\winrt" 폴더(필요한 경우 SDK 버전을 사용자 요건에 맞게 조정)에 있는 Windows SDK 헤더가 Windows 런타임 ABI 헤더 파일입니다. 이 파일들은 MIDL 컴파일러에서 생성되었습니다. 다음은 이러한 헤더 중 하나를 추가하는 예제입니다.
+“%WindowsSdkDir%Include\10.0.17134.0\winrt” 폴더(필요한 경우 SDK 버전 번호를 사용자 요건에 맞게 조정)에 있는 Windows SDK 헤더가 Windows 런타임 ABI 헤더 파일입니다. 이 파일은 MIDL 컴파일러에서 생성되었습니다. 다음은 이 헤더 중 하나를 추가하는 예제입니다.
 
 ```cpp
 #include <windows.foundation.h>
@@ -39,11 +39,11 @@ namespace ABI::Windows::Foundation
 }
 ```
 
-**IUriRuntimeClass**는 COM 인터페이스입니다. 하지만 **IUriRuntimeClass**가 **IInspectable**을 기반으로 한다는 점에서 Windows 런타임 인터페이스에 더욱 가깝습니다. 예외 발생보다는 오히려 **HRESULT** 반환 형식에 주의하세요. 또한 **HSTRING** 핸들 같은 아티팩트의 사용도 주의할 필요가 있습니다(작업을 마치면 핸들을 다시 `nullptr`로 설정하는 것이 좋습니다). 이렇게 하면 Windows 런타임이 응용 프로그램 이진 수준, 즉 COM 프로그래밍 수준에서 어떻게 보이는지 알 수 있습니다.
+**IUriRuntimeClass**는 COM 인터페이스입니다. 하지만 **IUriRuntimeClass**가 **IInspectable**을 기반으로 한다는 점에서 Windows 런타임 인터페이스에 더욱 가깝습니다. 예외 발생보다는 오히려 **HRESULT** 반환 형식에 주의하세요. 또한 **HSTRING** 핸들 같은 아티팩트의 사용도 주의할 필요가 있습니다(작업을 마치면 핸들을 다시 `nullptr`로 설정하는 것이 좋음). 이렇게 하면 Windows 런타임이 애플리케이션 이진 수준, 즉 COM 프로그래밍 수준에서 어떻게 보이는지 알 수 있습니다.
 
-Windows 런타임은 구성 요소 개체 모델(COM) API를 기반으로 합니다. 따라서 Windows 런타임에는 COM API를 통하거나, 혹은 *언어 프로젝션을 통해* 액세스할 수 있습니다. 프로젝션은 COM 세부 정보를 숨기며, 지정된 언어에 더욱 자연스러운 프로그래밍 환경을 제공합니다.
+Windows 런타임은 COM(구성 요소 개체 모델) API를 기반으로 합니다. 따라서 Windows 런타임에는 COM API를 통하거나, ‘언어 프로젝션’을 통해 액세스할 수 있습니다.  프로젝션은 COM 세부 정보를 숨기며, 지정된 언어에 더욱 자연스러운 프로그래밍 환경을 제공합니다.
 
-예를 들어, "%WindowsSdkDir%Include\10.0.17134.0\cppwinrt\winrt" 폴더(다시 말하지만 필요한 경우 사용자 요건에 맞게 SDK 버전을 조정) 안을 보면 C++/WinRT 언어 프로젝션 헤더를 찾을 수 있습니다. Windows 네임스페이스마다 ABI 헤더가 하나씩 있는 것처럼 각 Windows 네임스페이스에도 헤더가 있습니다. 다음은 C++/WinRT 헤더 중 하나를 추가하는 예제입니다.
+예를 들어, “%WindowsSdkDir%Include\10.0.17134.0\cppwinrt\winrt” 폴더(다시 말하지만 필요한 경우 사용자 요건에 맞게 SDK 버전 번호를 조정) 안을 보면 C++/WinRT 언어 프로젝션 헤더를 찾을 수 있습니다. Windows 네임스페이스마다 ABI 헤더가 하나씩 있는 것처럼 각 Windows 네임스페이스에도 헤더가 있습니다. 다음은 C++/WinRT 헤더 중 하나를 추가하는 예제입니다.
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>
@@ -64,10 +64,10 @@ namespace winrt::Windows::Foundation
 
 여기에서 사용하는 인터페이스는 최신 표준 C++입니다. 이 인터페이스는 **HRESULT**를 사용하지 않습니다(필요한 경우 C++/WinRT에서 예외 발생). 접근자 함수는 범위 끝에서 정리되는 단순 문자열 개체를 반환합니다.
 
-이 항목은 응용 프로그램 이진 인터페이스(ABI) 계층에서 사용할 수 있는 코드와 상호 작용하건 코드를 포트하려는 경우를 다룹니다.
+이 항목은 ABI(Application Binary Interface) 계층에서 사용할 수 있는 코드와 interop하거나 코드를 이식하려는 경우를 다룹니다.
 
 ## <a name="converting-to-and-from-abi-types-in-code"></a>코드의 ABI 형식 변환
-안전성과 단순성, 그리고 양방향 변환 시 편의성을 고려하여 간단하게 [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr), [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptras-function) 및 [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)를 사용할 수 있습니다. 다음은 C++/WinRT 프로젝션 및 ABI 간의 잠재적인 네임스페이스 충돌을 다루기 위해 다른 격리 영역에 대한 네임스페이스 별칭을 사용하는 방법을 보여 주는 코드 예제입니다(**Console App** 프로젝트 템플릿 기반).
+안전성과 단순성, 그리고 양방향 변환 시 편의성을 고려하여 간단하게 [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr), [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptras-function) 및 [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)를 사용할 수 있습니다. 다음은 C++/WinRT 프로젝션 및 ABI 간의 잠재적인 네임스페이스 충돌을 다루기 위해 다른 격리 영역에 대한 네임스페이스 별칭을 사용하는 방법을 보여 주는 코드 예제입니다(**콘솔 앱** 프로젝트 템플릿 기반).
 
 ```cppwinrt
 // pch.h
@@ -104,7 +104,7 @@ int main()
 }
 ```
 
-**as** 함수의 구현체가 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))를 호출합니다. [  **AddRef**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)만 호출하는 하위 수준의 변환을 원한다면 도우미 함수로 [**winrt::copy_to_abi**](/uwp/cpp-ref-for-winrt/copy-to-abi)와 [**winrt::copy_from_abi**](/uwp/cpp-ref-for-winrt/copy-from-abi)를 사용할 수 있습니다. 다음 코드 예제에서는 이러한 하위 수준 변환을 위의 코드 예제에 추가합니다.
+**as** 함수의 구현이 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))를 호출합니다. [**AddRef**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)만 호출하는 하위 수준의 변환을 원한다면 도우미 함수로 [**winrt::copy_to_abi**](/uwp/cpp-ref-for-winrt/copy-to-abi)와 [**winrt::copy_from_abi**](/uwp/cpp-ref-for-winrt/copy-from-abi)를 사용할 수 있습니다. 다음 코드 예제에서는 이 하위 수준 변환을 위의 코드 예제에 추가합니다.
 
 ```cppwinrt
 int main()
@@ -177,7 +177,7 @@ T convert_from_abi(::IUnknown* from)
 
 앞에서 본 것처럼 C++/WinRT 개체를 상응하는 ABI 인터페이스 포인터로 변환할 때는 도우미 함수가 필요하지 않습니다. 단순히 [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)(또는 [**try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function)) 멤버 함수를 사용하여 요청된 인터페이스에 대해 쿼리를 실행하면 됩니다. **as** 및 **try_as** 함수는 요청된 ABI 형식을 래핑하는 [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) 개체를 반환합니다.
 
-## <a name="code-example-using-convertfromabi"></a>convert_from_abi 함수를 사용하는 코드 예제
+## <a name="code-example-using-convertfromabi"></a>convert_from_abi를 사용하는 코드 예제
 다음은 이 도우미 함수가 실제로 사용되는 코드 예제입니다.
 
 ```cppwinrt
@@ -248,9 +248,9 @@ int main()
 * [QueryInterface 함수](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
 * [winrt::attach_abi 함수](/uwp/cpp-ref-for-winrt/attach-abi)
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
-* [winrt::copy_from_abi function](/uwp/cpp-ref-for-winrt/copy-from-abi)
-* [winrt::copy_to_abi function](/uwp/cpp-ref-for-winrt/copy-to-abi)
+* [winrt::copy_from_abi 함수](/uwp/cpp-ref-for-winrt/copy-from-abi)
+* [winrt::copy_to_abi 함수](/uwp/cpp-ref-for-winrt/copy-to-abi)
 * [winrt::detach_abi 함수](/uwp/cpp-ref-for-winrt/detach-abi)
 * [winrt::get_abi 함수](/uwp/cpp-ref-for-winrt/get-abi)
-* [winrt::Windows::Foundation::IUnknown:: 멤버 함수로](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
+* [winrt::Windows::Foundation::IUnknown::as 멤버 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 * [winrt::Windows::Foundation::IUnknown::try_as 멤버 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function)

@@ -13,10 +13,10 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: b17220a039612e0b13cd9842800c37c39bf194dd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66362755"
 ---
 # <a name="hyperlinks"></a>하이퍼링크
@@ -25,7 +25,7 @@ ms.locfileid: "66362755"
 
 하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다. XAML 앱에 하이퍼링크를 추가할 수 있는 두 가지 방법(**Hyperlink** 텍스트 요소 및 **HyperlinkButton** 컨트롤)이 있습니다.
 
-> **중요 API**: [하이퍼링크 텍스트 요소](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [HyperlinkButton 컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
+> **중요 API**: [Hyperlink 텍스트 요소](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [HyperlinkButton 컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
 
 ![하이퍼링크 단추](images/controls/hyperlink-button.png)
 
@@ -43,7 +43,7 @@ ms.locfileid: "66362755"
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
@@ -73,7 +73,7 @@ ms.locfileid: "66362755"
 
 ![텍스트 요소로 표시되는 하이퍼링크의 예](images/controls_hyperlink-element.png) 
 
-> **팁**&nbsp;&nbsp;XAML에서 텍스트 컨트롤에 다른 텍스트 요소와 함께 Hyperlink를 사용하는 경우에는 콘텐츠를 [Span](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span) 컨테이너에 넣고 `xml:space="preserve"` 특성을 Span에 적용하여 Hyperlink와 기타 요소 사이의 공백을 유지합니다.
+> **팁**&nbsp;&nbsp;XAML에서 텍스트 컨트롤에 다른 텍스트 요소와 함께 Hyperlink를 사용하는 경우에는 콘텐츠를 Span 컨테이너에 넣고 `xml:space="preserve"` 특성을 [Span](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span)에 적용하여 Hyperlink와 기타 요소 사이의 공백을 유지합니다.
 
 ## <a name="create-a-hyperlinkbutton"></a>HyperlinkButton 만들기
 
@@ -97,7 +97,7 @@ ms.locfileid: "66362755"
 
 ![단추 컨트롤로 표시되는 하이퍼링크의 예](images/controls_hyperlink-button-image.png)
 
-이 예제에서는 코드에서 HyperlinkButton을 만드는 방법을 보여줍니다.
+이 예제에서는 코드에서 HyperlinkButton을 만드는 방법을 보여 줍니다.
 
 ```csharp
 var helpLinkButton = new HyperlinkButton();
@@ -114,16 +114,16 @@ helpLinkButton.NavigateUri = new Uri("http://www.contoso.com");
 URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성을 설정합니다. 사용자가 하이퍼링크를 클릭하거나 탭하면 지정된 URI가 기본 브라우저에서 열립니다. 기본 브라우저는 앱과는 별도의 프로세스에서 실행됩니다.
 
 > [!NOTE]
-> URI는 [Windows.Foundation.Uri](/uwp/api/windows.foundation.uri) 클래스에 의해 표시됩니다. .NET으로 프로그래밍할 때 이 클래스는 숨겨지므로 [System.Uri](https://docs.microsoft.com/dotnet/api/system.uri) 클래스를 사용해야 합니다. 자세한 내용은 이들 클래스에 대한 참조 페이지를 확인하세요.
+> URI는 [Windows.Foundation.Uri](/uwp/api/windows.foundation.uri) 클래스에 의해 표시됩니다. .NET으로 프로그래밍할 때 이 클래스는 숨겨지므로 [System.Uri](https://docs.microsoft.com/dotnet/api/system.uri) 클래스를 사용해야 합니다. 자세한 내용은 이 클래스에 대한 참조 페이지를 확인하세요.
 
-**http:** 또는 **https:** 체계를 사용하지 않아도 됩니다. 브라우저에서 로드하기 적합한 위치에 리소스 콘텐츠가 있으면 **ms-appx:** , **ms-appdata:** 또는 **ms-resources:** 같은 체계를 사용할 수 있습니다. 그러나 **file:** 체계는 특별히 차단됩니다. 자세한 내용은 [URI 체계](https://docs.microsoft.com/previous-versions/windows/apps/jj655406(v=win.10))를 참조하세요.
+**http:** 또는 **https:** 체계를 사용하지 않아도 됩니다. 브라우저에서 로드하기 적합한 위치에 리소스 콘텐츠가 있으면 **ms-appx:** , **ms-appdata:** 또는 **ms-resources:** 와 같은 체계를 사용할 수 있습니다. 그러나 **file:** 체계는 특별히 차단됩니다. 자세한 내용은 [URI 체계](https://docs.microsoft.com/previous-versions/windows/apps/jj655406(v=win.10))를 참조하세요.
 
 사용자가 하이퍼링크를 클릭하면 NavigateUri 속성 값이 URI 형식 및 체계에 대한 시스템 처리기에 전달됩니다. 그런 다음 시스템은 NavigateUri에 제공된 URI의 체계를 등록한 앱을 시작합니다.
 
 하이퍼링크가 기본 웹 브라우저에 콘텐츠를 로드하지 않도록 않고 브라우저를 표시하고 싶지 않은 경우 NavigateUri 값을 설정하지 않습니다. 대신 Click 이벤트를 처리하고 원하는 작업을 수행하는 코드를 작성합니다.
 
 
-**클릭 이벤트를 처리 합니다.**
+**Click 이벤트 처리**
 
 앱 내 이동과 같이 브라우저에서의 URI 실행 이외의 작업에 대해 Click 이벤트를 사용합니다. 예를 들어 브라우저를 열지 않고 새 앱 페이지를 로드하려는 경우 새 앱 페이지로 이동하기 위해 Click 이벤트 처리기 내에서 [Frame.Navigate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate) 메서드를 호출합니다. 외부, 절대 URI를 앱에 있는 [WebView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview) 컨트롤 내에서 로드하려는 경우 클릭 처리기 논리의 일부로 [WebView.Navigate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigate)를 호출합니다.
 
@@ -134,7 +134,7 @@ URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성
 ## <a name="hyperlink-underlines"></a>하이퍼링크 밑줄
 기본적으로 하이퍼링크에 밑줄이 표시됩니다. 이 밑줄은 접근성 요구 사항을 충족하는 데 도움이 되므로 중요합니다. 색맹인 사용자는 밑줄을 사용하여 하이퍼링크 및 기타 텍스트를 구분합니다. 밑줄을 사용하지 않도록 설정하려면 하이퍼링크와 다른 텍스트를 구분할 수 있는 다른 유형의 서식(FontWeight 또는 FontStyle)을 지정하는 것이 좋습니다.
 
-**하이퍼링크 텍스트 요소**
+**Hyperlink 텍스트 요소**
 
 [UnderlineStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.hyperlink.underlinestyle) 속성에서 밑줄을 사용하지 않도록 설정할 수 있습니다. 그렇게 하려면 [FontWeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement.fontweight) 또는 [FontStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement.fontstyle)을 사용하여 링크 텍스트를 구분하는 것이 좋습니다.
 
@@ -152,7 +152,7 @@ URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성
 
 이 섹션은 Hyperlink 텍스트 요소에만 적용되고 HyperlinkButton 컨트롤에는 적용되지 않습니다.
 
-**입력된 이벤트**
+**입력 이벤트**
 
 Hyperlink는 [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)가 아니기 때문에 Tapped, PointerPressed 등의 UI 요소 입력 이벤트 집합은 없습니다. 대신 Hyperlink에는 고유 Click 이벤트와 NavigateUri로 지정된 모든 URI를 로드하는 시스템의 암시적 동작이 있습니다. 시스템은 Hyperlink 작업을 호출하여 그 응답으로 Click 이벤트를 발생시키는 모든 입력 작업을 처리합니다.
 
@@ -160,7 +160,7 @@ Hyperlink는 [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uiel
 
 Hyperlink는 해당 [Inlines](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span.inlines) 컬렉션에 존재할 수 있는 콘텐츠를 제한합니다. 특히 Hyperlink는 다른 Hyperlink가 없는 [Run](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.run) 및 기타 [Span](/uwp/api/windows.ui.xaml.documents.span) 형식만 허용합니다. [InlineUIContainer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.inlineuicontainer)는 Hyperlink의 Inlines 컬렉션에 있을 수 없습니다. 제한된 콘텐츠를 추가하려고 하면 잘못된 인수 예외 또는 XAML 구문 분석 예외가 발생합니다.
 
-**하이퍼링크 및 테마/스타일 동작**
+**하이퍼링크와 테마/스타일 동작**
 
 Hyperlink는 [Control](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control)에서 상속되지 않으므로 [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) 속성 또는 [Template](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.template)이 없습니다. 하이퍼링크의 모양을 변경하기 위해 Foreground 또는 FontFamily와 같은 [TextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement)에서 상속되는 속성은 편집할 수 있지만 변경 내용을 적용하는 데 일반적인 스타일 또는 템플릿은 사용할 수 없습니다. 템플릿을 사용하는 대신 Hyperlink 속성 값에 대한 공통 리소스를 사용하여 일관성을 제공하는 것이 좋습니다. Hyperlink의 일부 속성은 시스템에서 제공하는 {ThemeResource} 태그 확장 값의 기본값을 사용합니다. 이렇게 하면 사용자가 런타임 시 시스템 테마를 변경할 때 하이퍼링크 모양을 적절한 방법으로 전환할 수 있습니다.
 
@@ -175,13 +175,13 @@ Hyperlink는 [Control](https://docs.microsoft.com/uwp/api/windows.ui.xaml.contro
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 
 - [텍스트 컨트롤](text-controls.md)
-- [도구 설명에 대 한 지침](tooltips.md)
+- [도구 설명에 대한 지침](tooltips.md)
 
-**개발자 (XAML)**
+**개발자용(XAML)**
 - [Windows.UI.Xaml.Documents.Hyperlink 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink)
 - [Windows.UI.Xaml.Controls.HyperlinkButton 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)

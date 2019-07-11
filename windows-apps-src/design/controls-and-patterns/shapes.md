@@ -7,20 +7,20 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 06f5ce8ad7576114137adb862f89720e27d3802b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364285"
 ---
 # <a name="draw-shapes"></a>셰이프 그리기
 
 타원, 사각형, 다각형, 패스 같은 다양한 셰이프를 그리는 방법에 대해 알아봅니다. [  **Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 클래스를 사용하면 XAML UI에서 매우 복잡한 벡터 기반 그리기 언어를 시각화할 수 있습니다. 예를 들어 베지어 곡선을 그릴 수 있습니다.
 
-> **중요 API**: [Path 클래스](/uwp/api/Windows.UI.Xaml.Shapes.Path)하십시오 [Windows.UI.Xaml.Shapes 네임 스페이스](/uwp/api/Windows.UI.Xaml.Shapes), [Windows.UI.Xaml.Media 네임 스페이스](/uwp/api/Windows.UI.Xaml.Media)
+> **중요 API**: [경로 클래스](/uwp/api/Windows.UI.Xaml.Shapes.Path), [Windows.UI.Xaml.Shapes 네임스페이스](/uwp/api/Windows.UI.Xaml.Shapes), [Windows.UI.Xaml.Media 네임스페이스](/uwp/api/Windows.UI.Xaml.Media)
 
 
-XAML ui에서 공간의 영역을 정의 하는 두 가지의 클래스 집합: [**셰이프** ](/uwp/api/Windows.UI.Xaml.Shapes.Shape) 클래스와 [ **Geometry** ](/uwp/api/Windows.UI.Xaml.Media.Geometry) 클래스입니다. 이 두 클래스의 주요 차이점은 **Shape**에는 연결된 브러시가 있어 화면으로 렌더링될 수 있고, **Geometry**는 또 다른 UI 속성에 정보를 제공하는 데 도움이 되지 않는 경우 단순히 공간 영역만 정의하고 렌더링되지는 않는다는 점입니다. **Shape**를 **Geometry**에 의해 정의된 경계를 가진 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)로 생각할 수 있습니다. 이 항목에서는 주로 **Shape** 클래스에 대해 설명합니다.
+두 개의 클래스 세트인 [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape) 클래스와 [**Geometry**](/uwp/api/Windows.UI.Xaml.Media.Geometry) 클래스가 XAML UI의 공간 영역을 정의합니다. 이 두 클래스의 주요 차이점은 **Shape**에는 연결된 브러시가 있어 화면으로 렌더링될 수 있고, **Geometry**는 또 다른 UI 속성에 정보를 제공하는 데 도움이 되지 않는 경우 단순히 공간 영역만 정의하고 렌더링되지는 않는다는 점입니다. **Shape**를 **Geometry**에 의해 정의된 경계를 가진 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)로 생각할 수 있습니다. 이 항목에서는 주로 **Shape** 클래스에 대해 설명합니다.
 
 [  **Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape) 클래스는 [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line), [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse), [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle), [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon), [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline) 및 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)입니다. **Path**는 임의의 기하 도형을 정의할 수 있기 때문에 흥미롭고, [**Geometry**](/uwp/api/Windows.UI.Xaml.Media.Geometry) 클래스는 **Path**의 일부를 정의하는 한 가지 방법이기 때문에 여기에 포함됩니다.
 
@@ -69,7 +69,7 @@ UI 레이아웃에 [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse)을 배
 
 [  **Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 모서리를 둥글게 만들 수 있습니다. 모서리를 둥글게 만들려면 [**RadiusX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle.radiusx) 및 [**RadiusY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle.radiusy) 속성에 대해 값을 지정합니다. 이 두 속성은 모서리의 곡선을 정의하는 타원의 x-축과 y-축을 지정합니다. **RadiusX**의 최대값은 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)를 2로 나눈 값이고 **RadiusY**의 최대값은 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height)를 2로 나눈 값입니다.
 
-다음 예제에서는 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)가 200이고 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height)가 100인 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 만듭니다. [**Fill**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill)에 대해서는 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)의 [**Blue**](https://docs.microsoft.com/uwp/api/windows.ui.colors.blue) 값을 사용하고 [**Stroke**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.stroke)에 대해서는 **SolidColorBrush**의 [**Black**](https://docs.microsoft.com/uwp/api/windows.ui.colors.black) 값을 사용합니다. 여기에서는 [**StrokeThickness**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.strokethickness)를 3으로 설정합니다. [  **RadiusX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle.radiusx) 속성을 50으로 설정하고 [**RadiusY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle.radiusy) 속성을 10으로 설정하여 **Rectangle**의 모서리를 둥글게 만듭니다.
+다음 예제에서는 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)가 200이고 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height)가 100인 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 만듭니다. [  **Fill**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill)에 대해서는 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)의 [**Blue**](https://docs.microsoft.com/uwp/api/windows.ui.colors.blue) 값을 사용하고 [**Stroke**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.stroke)에 대해서는 **SolidColorBrush**의 [**Black**](https://docs.microsoft.com/uwp/api/windows.ui.colors.black) 값을 사용합니다. 여기에서는 [**StrokeThickness**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.strokethickness)를 3으로 설정합니다. [  **RadiusX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle.radiusx) 속성을 50으로 설정하고 [**RadiusY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle.radiusy) 속성을 10으로 설정하여 **Rectangle**의 모서리를 둥글게 만듭니다.
 
 ```xaml
 <Rectangle Fill="Blue"
@@ -102,7 +102,7 @@ layoutRoot.Children.Add(rectangle1);
 
 ![렌더링된 사각형](images/shapes-rectangle.jpg)
 
-**팁**  일부의 시나리오가 UI 정의를 여기서 사용 하는 대신를 [ **사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을, [ **테두리** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) 더 적절할 수 있습니다. 다른 콘텐츠 주위에 사각형 셰이프를 만들려는 경우 **Border**를 사용하는 것이 더 나을 수 있습니다. 그러면 자식 콘텐츠를 사용할 수 있고 **Rectangle**처럼 높이와 너비에 고정 치수를 사용하는 대신 해당 콘텐츠를 둘러싸도록 크기가 자동으로 지정됩니다. **Border**에는 [**CornerRadius**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.cornerradius) 속성을 설정할 경우 모서리를 둥글게 하는 옵션도 있습니다.
+**팁**   [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 사용하는 대신 [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border)가 더 적합할 수 있는 UI 정의 시나리오도 있습니다. 다른 콘텐츠 주위에 사각형 셰이프를 만들려는 경우 **Border**를 사용하는 것이 더 나을 수 있습니다. 그러면 자식 콘텐츠를 사용할 수 있고 **Rectangle**처럼 높이와 너비에 고정 치수를 사용하는 대신 해당 콘텐츠를 둘러싸도록 크기가 자동으로 지정됩니다. **Border**에는 [**CornerRadius**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.cornerradius) 속성을 설정할 경우 모서리를 둥글게 하는 옵션도 있습니다.
 
 반면에 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)은 컨트롤 컴퍼지션에 더 적합한 선택일 수 있습니다. **Rectangle** 셰이프는 포커스 가능 컨트롤의 "FocusVisual" 부분을 사용되므로 많은 컨트롤 템플릿에 표시됩니다. 이 직사각형은 컨트롤이 "Focused" 시각적 상태일 때마다 표시되며 다른 상태에서는 숨겨집니다.
 
@@ -141,13 +141,13 @@ layoutRoot.Children.Add(polygon1);
 
 ![렌더링된 다각형](images/shapes-polygon.jpg)
 
-**팁**  A [ **지점** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 값은 대개 XAML에서 형식으로 도형의 꼭 짓 점 선언 이외의 시나리오에 대 한 합니다. 예를 들어 **Point**는 터치 이벤트에 대한 이벤트 데이터의 일부이므로 좌표 공간에서 터치 작업이 발생한 위치를 정확하게 알 수 있습니다. **Point** 및 XAML 또는 코드에서 사용하는 방법에 대한 자세한 내용은 [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)에 대한 API 참조 항목을 참조하세요.
+**팁**   [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 값은 셰이프의 꼭짓점 선언이 아닌 다른 시나리오에 대한 XAML에서 한 형식으로 자주 사용됩니다. 예를 들어 **Point**는 터치 이벤트에 대한 이벤트 데이터의 일부이므로 좌표 공간에서 터치 작업이 발생한 위치를 정확하게 알 수 있습니다. **Point** 및 XAML 또는 코드에서 사용하는 방법에 대한 자세한 내용은 [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)에 대한 API 참조 항목을 참조하세요.
 
 ## <a name="line"></a>선
 
 [  **Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line)은 좌표 공간에서 두 점 사이에 그려진 선입니다. **Line**은 내부 공간이 없기 때문에 [**Fill**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill)에 제공된 값을 모두 무시합니다. **Line**에 대해서는 [**Stroke**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.stroke) 및 [**StrokeThickness**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.strokethickness) 속성의 값을 지정해야 하며, 그러지 않으면 **Line**이 렌더링되지 않습니다.
 
-[**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 값을 사용하여 [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line) 셰이프를 지정하지는 않으며 [**X1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x1), [**Y1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y1), [**X2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x2) 및 [**Y2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y2)에 대해 불연속 [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) 값을 사용합니다. 이렇게 하면 가로줄 또는 세로줄의 표시가 최소화됩니다. 예를 들어 `<Line Stroke="Red" X2="400"/>`은 400픽셀 길이의 가로줄을 정의합니다. 다른 X,Y 속성은 기본적으로 0이므로 점과 관련하여 이 XAML은 `(0,0)`에서 `(400,0)`까지 선을 그립니다. 그런 다음 (0,0)이 아닌 다른 점에서 시작하도록 하려면 [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform)을 사용하여 전체 **Line**을 이동할 수 있습니다.
+[  **Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 값을 사용하여 [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line) 셰이프를 지정하지는 않으며 [**X1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x1), [**Y1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y1), [**X2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x2) 및 [**Y2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y2)에 대해 불연속 [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) 값을 사용합니다. 이렇게 하면 가로줄 또는 세로줄의 표시가 최소화됩니다. 예를 들어 `<Line Stroke="Red" X2="400"/>`은 400픽셀 길이의 가로줄을 정의합니다. 다른 X,Y 속성은 기본적으로 0이므로 점과 관련하여 이 XAML은 `(0,0)`에서 `(400,0)`까지 선을 그립니다. 그런 다음 (0,0)이 아닌 다른 점에서 시작하도록 하려면 [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform)을 사용하여 전체 **Line**을 이동할 수 있습니다.
 
 ```xaml
 <Line Stroke="Red" X2="400"/>
@@ -165,13 +165,13 @@ line1.X2 = 400;
 layoutRoot.Children.Add(line1);
 ```
 
-## <a name="span-idpolylinespanspan-idpolylinespanspan-idpolylinespan-polyline"></a><span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> 다중선
+## <a name="span-idpolylinespanspan-idpolylinespanspan-idpolylinespan-polyline"></a><span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> 폴리라인
 
 [  **Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)은 **Polyline**의 마지막 점이 첫 번째 점에 연결되지 않는다는 것을 제외하고, 점 집합에 의해 셰이프의 경계가 정의된다는 점에서 [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon)과 유사합니다.
 
-**참고**    는 동일한 시작점 및 끝점을 명시적으로 있을 수 있습니다 합니다 [ **지점** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.polyline.points) 에 대 한 설정 합니다 [ **다중선** ](/uwp/api/Windows.UI.Xaml.Shapes.Polyline), 하지만 경우 아마도 수 있는 사용 하는 [ **다각형** ](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) 대신 합니다.
+**참고**   [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)에 대해 설정된 [**Points**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.polyline.points)에 명시적으로 동일한 시작점과 끝점이 있을 수도 있지만, 이 경우 [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon)을 대신 사용하는 것이 좋습니다.
 
-[**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)의 [**Fill**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill)을 지정하면 **Polyline**에 설정된 [**Points**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.polyline.points)의 시작점과 끝점이 교차하지 않아도 **Fill**이 셰이프의 내부 공간을 그립니다. **Fill**을 지정하지 않으면 **Polyline**은 연속하는 선의 시작점과 끝점이 교차하는 개별 [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line) 요소를 여러 개 지정한 경우에 렌더링되는 모양과 유사합니다.
+[  **Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)의 [**Fill**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill)을 지정하면 **Polyline**에 설정된 [**Points**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.polyline.points)의 시작점과 끝점이 교차하지 않아도 **Fill**이 셰이프의 내부 공간을 그립니다. **Fill**을 지정하지 않으면 **Polyline**은 연속하는 선의 시작점과 끝점이 교차하는 개별 [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line) 요소를 여러 개 지정한 경우에 렌더링되는 모양과 유사합니다.
 
 [  **Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon)에서와 마찬가지로 [**Points**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.polyline.points) 속성은 경계를 구성하는 점의 컬렉션을 정의합니다. XAML에서는 쉼표로 구분된 목록으로 점을 정의합니다. 코드 숨김에서는 [**PointCollection**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PointCollection)을 사용하여 점을 정의하고 각 개별 점을 [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 구조로 컬렉션에 추가합니다.
 
@@ -206,7 +206,7 @@ layoutRoot.Children.Add(polyline1);
 
 ![렌더링된 폴리라인](images/shapes-polyline.jpg)
 
-## <a name="path"></a>Path
+## <a name="path"></a>경로
 
 [  **Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)는 임의의 기하 도형을 정의하는 데 사용할 수 있기 때문에 가장 유용한 [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape)입니다. 하지만 유용성에는 복잡성이 따릅니다. 이제 XAML에서 기본 **Path**를 만드는 방법을 살펴보겠습니다.
 
@@ -233,7 +233,7 @@ layoutRoot.Children.Add(polyline1);
 
 ![렌더링된 경로](images/shapes-path.jpg)
 
-다음 예제에서는 이미 설명한 다른 기술 즉, [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry)가 포함된 [**GeometryGroup**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.geometrygroup)의 사용법을 보여 줍니다. 이 예제에서는 실행의 일부로 사용할 수 있는 영향을 주는 기 하 도형 형식 중 일부는 **PathGeometry**: [**PathFigure** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathFigure) 세그먼트가 수 있는 다양 한 요소 [ **PathFigure.Segments**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.segments)합니다.
+다음 예제에서는 이미 설명한 다른 기술 즉, [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry)가 포함된 [**GeometryGroup**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.geometrygroup)의 사용법을 보여 줍니다. 이 예제에서는 **PathGeometry**: [**PathFigure**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathFigure)의 일부로 사용할 수 있는 영향을 주는 기하 도형 형식 일부와 [**PathFigure.Segments**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.segments)에서 세그먼트가 될 수 있는 다양한 요소를 실행합니다.
 
 ```xaml
 <Path Stroke="Black" StrokeThickness="1" Fill="#CCCCFF">

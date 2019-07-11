@@ -14,10 +14,10 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e0a7d1732833f8e6fc750f8ee481fa3c1116b50
-ms.sourcegitcommit: 0d6110cd3d868612bee347566f5b85b724cb57df
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66823602"
 ---
 # <a name="date-picker"></a>날짜 선택기
@@ -26,7 +26,7 @@ ms.locfileid: "66823602"
 
 날짜 선택은 사용자가 터치, 마우스 또는 키보드 입력을 사용하여 지역화된 날짜 값을 선택할 수 있는 표준화된 방법을 제공합니다. 
 
-> **중요 API**: [DatePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.DatePicker), [날짜 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepicker.date)
+> **중요 API**: [DatePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.DatePicker), [Date 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepicker.date)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -37,7 +37,7 @@ ms.locfileid: "66823602"
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
@@ -71,11 +71,11 @@ birthDatePicker.Header = "Date of birth";
 
 ![날짜 선택의 예](images/date-picker-closed.png)
 
-> **참고**&nbsp;&nbsp;날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
+> **참고**&nbsp;&nbsp;날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar](date-and-time.md#datetime-and-calendar-values) 값을 참조하세요.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 

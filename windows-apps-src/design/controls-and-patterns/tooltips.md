@@ -13,10 +13,10 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dabfee25df08d933fc892c3ed6e46f3cc6f4513
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364028"
 ---
 # <a name="tooltips"></a>도구 설명
@@ -25,7 +25,7 @@ ms.locfileid: "66364028"
 
 ![도구 설명](images/controls/tool-tip.png)
 
-> **중요 API**: [도구 설명 클래스](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
+> **중요 API**: [ToolTip 클래스](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -33,31 +33,31 @@ ms.locfileid: "66364028"
 
 도구 설명은 언제 사용해야 하나요? 결정하기 전에 다음 사항을 고려합니다.
 
-- **포인터에 기반 하는 정보가 표시 됩니다?**
+- **마우스로 가리킬 때 정보가 표시되어야 하나요?**
     그렇지 않다면 다른 컨트롤을 사용합니다. 도구 설명은 사용자 조작의 결과로만 표시합니다. 저절로 표시되도록 하지 마세요.
 
-- **컨트롤에 텍스트 레이블이 있습니까?**
+- **컨트롤에 텍스트 레이블이 있나요?**
     없다면 도구 설명을 사용하여 레이블을 제공합니다. 대부분의 컨트롤에 인라인 레이블을 지정하는 것은 바람직한 UX 디자인 방법이며, 이러한 컨트롤에는 도구 설명이 필요 없습니다. 아이콘만 표시하는 도구 모음 컨트롤과 명령 단추에는 도구 설명이 필요합니다.
 
-- **개체에서 설명 또는 추가 정보를 언제 활용 하나요?**
+- **개체에 설명이나 추가 정보를 제공하면 이점이 있나요?**
     그렇다면 도구 설명을 사용합니다. 그러나 텍스트는 추가 정보가 되어야 합니다. 즉, 기본 작업에 필수적인 요소가 아니어야 합니다. 필수적이라면 UI에 직접 텍스트를 추가하여 사용자가 설명을 찾아다닐 필요가 없게 합니다.
 
-- **오류, 경고 또는 상태 정보를 추가 기능**
+- **추가 정보가 오류, 경고 또는 상태 정보인가요?**
     그렇다면 플라이아웃과 같은 UI 요소를 사용합니다.
 
-- **사용자는 팁과 상호 작용 해야 하나요?**
+- **사용자가 설명을 조작해야 하나요?**
     그렇다면 다른 컨트롤을 사용합니다. 도구 설명은 마우스를 움직이면 설명이 사라지므로 사용자 조작을 할 수 없습니다.
 
-- **사용자 추가 정보를 인쇄 해야 하나요?**
+- **사용자가 추가 정보를 인쇄해야 하나요?**
     그렇다면 다른 컨트롤을 사용합니다.
 
-- **사용자 찾기 성가 시 거 나 방해 팁**
+- **도구 설명이 사용자를 짜증나게 하거나 주의를 분산시키나요?**
     그렇다면 다른 해결 방법을 생각해 보세요. 아무것도 하지 않는 방법도 있습니다. 주의가 산만해질 수 있는 곳에 도구 설명을 사용하고 있다면 사용자가 끌 수 있도록 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
@@ -78,7 +78,7 @@ Bing 지도 앱의 도구 설명입니다.
 
 [ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip)은 소유자인 다른 UI 요소에 할당되어야 합니다. [ToolTipService](/uwp/api/windows.ui.xaml.controls.tooltipservice) 클래스는 ToolTip을 표시할 정적 메서드를 제공합니다.
 
-XAML에서 속성에 연결된 **ToolTipService.Tooltip**을 사용하여 소유자에게 ToolTip을 할당합니다.
+XAML에서 **ToolTipService.Tooltip** 연결된 속성을 사용하여 소유자에게 ToolTip을 할당합니다.
 
 ```xaml
 <Button Content="Submit" ToolTipService.ToolTip="Click to submit"/>
@@ -110,9 +110,9 @@ ToolTipService.SetToolTip(submitButton, toolTip);
 
 ### <a name="placement"></a>배치
 
-기본적으로 ToolTip은 포인터 위 중간에 표시됩니다. 배치는 앱 창에 의해 제한되지 않으므로 ToolTip은 부분적으로 또는 완전히 앱 창의 범위 밖에 표시될 수 있습니다.
+기본적으로 ToolTip은 포인터 위 가운데에 표시됩니다. 배치는 앱 창에 의해 제한되지 않으므로 ToolTip은 부분적으로 또는 완전히 앱 창의 범위 밖에 표시될 수 있습니다.
 
-광범위 한 조정을 사용 합니다 [배치](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성 또는 **ToolTipService.Placement** 연결 된 속성 위, 아래, 왼쪽 또는 오른쪽 포인터의 도구 설명을 그려야 하는지 여부를 지정 합니다. 설정할 수 있습니다 합니다 [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) 또는 [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) 도구 설명 포인터 사이의 거리를 변경 하는 속성입니다. 두 오프셋된 값 중 하나만 VerticalOffset 경우 배치 위쪽 또는 아래쪽, HorizontalOffset 배치는 왼쪽 또는 오른쪽 위치-최종을 영향을 미칩니다.
+광범위한 조정을 위해 [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성 또는 **ToolTipService.Placement** 연결된 속성을 사용하여 ToolTip을 포인터의 위, 아래, 왼쪽 또는 오른쪽에 그릴지 여부를 지정합니다. [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) 또는 [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) 속성을 설정하여 포인터와 ToolTip 간 거리를 변경할 수 있습니다. 두 오프셋 값 중 하나만 최종 위치인 VerticalOffset(Placement가 Top 또는 Bottom인 경우), HorizontalOffset(Placement가 Left 또는 Right인 경우)에 영향을 줍니다.
 
 ```xaml
 <!-- An Image with an offset ToolTip. -->
@@ -125,7 +125,7 @@ ToolTipService.SetToolTip(submitButton, toolTip);
 </Image>
 ```
 
-도구 설명이 참조 하는 콘텐츠를가 려 지 면을 정확 하 게 새 사용 하 여 해당 배치를 조정할 수 있습니다 **PlacementRect** 속성입니다. PlacementRect 고정 도구 설명의 위치 및 도구 설명이이 영역 밖에 그릴 화면 공간이 충분 한지 제공 도구 설명 됩니다 채워집니다 없습니다, 하는 영역으로도 사용 합니다. 도구 설명의 소유자 및 높이 상대적인 사각형의 원점과 제외 영역의 너비를 지정할 수 있습니다. 합니다 [배치](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성 위에, 왼쪽 아래 또는 오른쪽의 PlacementRect 도구 설명 그려야 하는 경우 정의 됩니다. 
+ToolTip이 참조하는 콘텐츠를 가리는 경우 새 **PlacementRect** 속성을 사용하여 배치를 정확하게 조정할 수 있습니다. PlacementRect는 ToolTip 위치를 고정하며 ToolTip이 가리지 않을 영역으로도 사용됩니다. 단, 이 경우에는 이 영역 외부에 ToolTip을 그릴 충분한 화면 공간이 있어야 합니다. ToolTip의 소유자에 상대적인 사각형의 원점과 제외 영역의 높이 및 너비를 지정할 수 있습니다. [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성은 ToolTip이 PlacementRect의 위, 아래, 왼쪽 또는 오른쪽에 그려야 하는지 정의합니다. 
 
 ```xaml
 <!-- An Image with a non-occluding ToolTip. -->
@@ -149,8 +149,8 @@ ToolTipService.SetToolTip(submitButton, toolTip);
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 
-- [도구 설명 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip)
+- [ToolTip 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip)

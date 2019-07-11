@@ -6,20 +6,20 @@ ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
 ms.openlocfilehash: 0a772c0ec6aad2c0d6a099b54eb4c6faa413cc7b
-ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913943"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63793894"
 ---
 # <a name="item-templates-for-list-view"></a>목록 보기의 항목 템플릿
 
-이 섹션에는 [**ListView**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView) 컨트롤로 사용할 수 있는 항목 템플릿이 포함되어 있습니다. 이 템플릿을 사용하여 일반적인 앱 유형의 형태를 확인하세요. 
+이 섹션에는 [**ListView**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView) 컨트롤로 사용할 수 있는 항목 템플릿이 포함되어 있습니다. 이 템플릿을 사용하여 일반적인 앱 유형의 모양을 확인합니다. 
 
-증상을 보여 주기 위해 이러한 템플릿에 바인딩할 **ListViewItems** 예제에서는 기록 클래스에는 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)합니다.
+데이터 바인딩을 보여 주기 위해 이 템플릿은 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)의 예제 Recording 클래스에 **ListViewItems**를 바인딩합니다.
 
 > [!NOTE] 
-> 현재 **DataTemplate**에 여러 개의 컨트롤이 포함되어 있는 경우(예: 둘 이상의 **TextBlock**), 화면 읽기 프로그램의 접근 가능한 기본 이름은 해당 항목의 .ToString()에서 가져옵니다. 편의상 **DataTemplate**의 루트 요소에 있는 [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties)을 대신 설정할 수 있습니다. 접근성에 대한 자세한 내용은 [접근성 개요](../accessibility/accessibility-overview.md)를 참조하세요.
+> 현재 **DataTemplate**에 여러 컨트롤(예: 둘 이상의 단일 **TextBlock**)이 포함되어 있는 경우, 화면 읽기 프로그램의 접근 가능한 기본 이름은 해당 항목의 .ToString()에서 가져옵니다. 편의상 **DataTemplate**의 루트 요소에 있는 [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties)을 대신 설정할 수 있습니다. 접근성에 대한 자세한 내용은 [접근성 개요](../accessibility/accessibility-overview.md)를 참조하세요.
 
 ## <a name="single-line-list-item"></a>한 줄 목록 항목
 이 템플릿을 사용하여 이미지와 한 줄 텍스트가 있는 항목 목록을 표시합니다.

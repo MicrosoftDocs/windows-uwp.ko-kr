@@ -1,62 +1,62 @@
 ---
 title: UWP 앱에서 SQL Server 데이터베이스 사용
-description: UWP 앱에서 SQL Server 데이터베이스 사용.
+description: UWP 앱에서 SQL Server 데이터베이스를 사용합니다.
 ms.date: 3/28/2019
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, 데이터베이스
 ms.localizationpriority: medium
 ms.openlocfilehash: f8986f14872d4e5de2c45bba264de6619ef07141
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66360145"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>UWP 앱에서 SQL Server 데이터베이스 사용
-앱을 SQL Server 데이터베이스에 직접 연결한 후, [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN) 네임스페이스를 사용해 데이터를 저장 및 검색할 수 있습니다.
+앱에서 [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN) 네임스페이스를 사용하여 SQL Server 데이터베이스에 직접 연결한 다음, 데이터를 저장하고 검색할 수 있습니다.
 
-이 가이드에서 그 방법 중 하나를 살펴보겠습니다. SQL Server 인스턴스에 [Northwind](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) 샘플 데이터베이스를 설치한 후 코드 조각을 사용하면, 기본 UI가 Northwind 샘플 데이터베이스의 제품들을 보여줍니다.
+이 가이드에서 그 방법 중 하나를 살펴보겠습니다. SQL Server 인스턴스에 [Northwind](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) 샘플 데이터베이스를 설치한 후 코드 조각을 사용하면, 기본 UI가 Northwind 샘플 데이터베이스의 제품을 보여 줍니다.
 
 ![Northwind 제품](images/products-northwind.png)
 
-이 가이드에 표시되는 코드 조각들은 더 [완전한 샘플](https://github.com/StefanWickDev/IgniteDemos/tree/master/NorthwindDemo)에 기반을 두고 있습니다.
+이 가이드에 표시되는 코드 조각은 더 [완전한 샘플](https://github.com/StefanWickDev/IgniteDemos/tree/master/NorthwindDemo)을 기반으로 합니다.
 
 ## <a name="first-set-up-your-solution"></a>먼저 솔루션을 설정합니다.
 
-앱을 SQL Server 데이터베이스에 직접 연결하려면 프로젝트의 최소 버전이 Fall Creators Update가 대상이어여 합니다.  UWP 프로젝트의 속성 페이지에서 이에 대한 정보를 찾을 수 있습니다.
+앱을 SQL Server 데이터베이스에 직접 연결하려면 프로젝트의 최소 버전이 Fall Creators Update가 대상이어야 합니다.  UWP 프로젝트의 속성 페이지에서 이에 대한 정보를 찾을 수 있습니다.
 
 ![Windows SDK 최소 버전](images/min-version-fall-creators.png)
 
 매니페스트 디자이너에서 UWP 프로젝트의 **Package.appxmanifest** 파일을 엽니다.
 
-에 **기능** 탭을 선택 합니다 **엔터프라이즈 인증** SQL Server 인증에 대 한 Windows 인증을 사용 하는 경우 확인란을 선택 합니다.
+**기능** 탭에서 SQL Server 인증에 Windows 인증을 사용하는 경우 **엔터프라이즈 인증** 확인란을 선택합니다.
 
-![Enterprise Authentication Capability](images/enterprise-authentication.png)
+![엔터프라이즈 인증 기능](images/enterprise-authentication.png)
 
 <a id="use-data" />
 
-## <a name="add-and-retrieve-data-in-a-sql-server-database"></a>SQL Server 데이터베이스에서 데이터를 추가 및 검색
+## <a name="add-and-retrieve-data-in-a-sql-server-database"></a>SQL Server 데이터베이스에서 데이터 추가 및 검색
 
 이 섹션에서는 다음을 수행합니다.
 
-: 하나: 연결 문자열을 추가 합니다.
+:one: 연결 문자열을 추가합니다.
 
-: 두: 제품 데이터를 보유 하는 클래스를 만듭니다.
+:two: 제품 데이터를 저장할 클래스를 만듭니다.
 
-: 3: SQL Server 데이터베이스에서 제품을 검색 합니다.
+:three: SQL Server 데이터베이스에서 제품을 검색합니다.
 
-: 4: 기본 사용자 인터페이스를 추가 합니다.
+:four: 기본 사용자 인터페이스를 추가합니다.
 
-: 5: 제품을 사용 하 여 UI를 채웁니다.
+:five: UI를 제품으로 채웁니다.
 
 >[!NOTE]
-> 이 섹션에서는 데이터 액세스 코드를 구성하는 방법 중 하나를 설명합니다. SQL Server 데이터베이스에서 데이터를 저장 및 검색하기 위해 [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN)를 사용하는 방법에 대한 예만 제공합니다. 응용 프로그램 디자인에 가장 적합한 방식으로 코드를 구성할 수 있습니다.
+> 이 섹션에서는 데이터 액세스 코드를 구성하는 방법 중 하나를 설명합니다. SQL Server 데이터베이스에서 데이터를 저장 및 검색하기 위해 [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN)를 사용하는 방법에 대한 예제만 제공합니다. 애플리케이션 디자인에 가장 적합한 방식으로 코드를 구성할 수 있습니다.
 
-### <a name="add-a-connection-string"></a>연결 스트링 추가
+### <a name="add-a-connection-string"></a>연결 문자열 추가
 
-**App.xaml.cs** 파일에서 ``App`` 클래스에 속성을 추가해 솔루션의 다른 클래스가 연결 스트링에 액세스 할 수 있도록 만듭니다.
+**App.xaml.cs** 파일에서 ``App`` 클래스에 속성을 추가해 솔루션의 다른 클래스가 연결 문자열에 액세스 할 수 있도록 만듭니다.
 
-연결 스트링은 SQL Server Express 인스턴스의 Northwind 데이터베이스를 가리킵니다.
+연결 문자열은 SQL Server Express 인스턴스의 Northwind 데이터베이스를 가리킵니다.
 
 ```csharp
 sealed partial class App : Application
@@ -77,7 +77,7 @@ sealed partial class App : Application
 
 ### <a name="create-a-class-to-hold-product-data"></a>제품 데이터를 저장할 클래스 만들기
 
-[INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN) 이벤트를 구현하는 클래스를 만들어 XAML UI 특성을 이 클래스의 속성에 바인딩 시킵니다.
+[INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN) 이벤트를 구현하는 클래스를 만들어 XAML UI 속성을 이 클래스의 속성에 바인딩합니다.
 
 ```csharp
 public class Product : INotifyPropertyChanged
@@ -158,7 +158,7 @@ public ObservableCollection<Product> GetProducts(string connectionString)
 
  다음 XAML을 UWP 프로젝트의 **MainPage.xaml** 파일에 추가합니다.
 
- 이 XAML은 앞서 코드 조각에서 반환한 각 제품을 표시하고, [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) 각 행의 특성과 ``Product`` 클래스에서 정의한 속성을 바인딩하는 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)를 만듭니다.
+ 이 XAML은 앞서 코드 조각에서 반환한 각 제품을 표시하고, [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)에 있는 각 행의 특성을 ``Product`` 클래스에서 정의한 속성에 바인딩하는 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)를 만듭니다.
 
 ```xml
 <Grid Background="{ThemeResource SystemControlAcrylicWindowBrush}">
@@ -226,7 +226,7 @@ public MainPage()
 
 ## <a name="trouble-connecting-to-your-database"></a>데이터베이스에 연결하는 데 문제가 있나요?
 
-대부분의 경우 SQL Server 구성의 일부 기능을 변경해야 합니다. Windows Forms 또는 WPF 응용 프로그램 등의 다른 형식의 데스크톱 응용 프로그램의 데이터베이스에 연결할 수 있는 경우 SQL Server에 대해 TCP/IP를 활성화했는지 확인하세요. **컴퓨터 관리** 콘솔에서 이를 수행할 수 있습니다.
+대부분의 경우 SQL Server 구성의 일부 기능을 변경해야 합니다. Windows Forms 또는 WPF 애플리케이션 등의 다른 형식의 데스크톱 애플리케이션의 데이터베이스에 연결할 수 있는 경우 SQL Server에 대해 TCP/IP를 활성화했는지 확인하세요. **컴퓨터 관리** 콘솔에서 이를 수행할 수 있습니다.
 
 ![컴퓨터 관리](images/computer-management.png)
 
@@ -236,14 +236,14 @@ public MainPage()
 
 ## <a name="next-steps"></a>다음 단계
 
-**간단한 데이터베이스를 사용 하 여 사용자 장치에 데이터를 저장 합니다.**
+**간단한 데이터베이스를 사용해 사용자 디바이스에 데이터 저장**
 
 [UWP 앱에서 SQLite 데이터베이스 사용](sqlite-databases.md)을 참조하세요.
 
-**다른 플랫폼에서 다른 앱 간에 코드 공유**
+**여러 플랫폼의 여러 앱 간에 코드 공유**
 
-[데스크톱과 UWP에서 코드 공유](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate)를 참조하세요.
+[데스크톱과 UWP 간에 코드 공유](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate)를 참조하세요.
 
-**Azure SQL 백 엔드를 사용 하 여 마스터-세부 페이지 추가**
+**Azure SQL 백 엔드로 마스터 세부 정보 페이지 추가**
 
 [고객 주문 데이터베이스 샘플](https://github.com/Microsoft/Windows-appsample-customers-orders-database)을 참조하세요.

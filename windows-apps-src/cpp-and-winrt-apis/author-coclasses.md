@@ -1,21 +1,21 @@
 ---
 description: C++/WinRT는 Windows 런타임 클래스를 작성하는 데 도움이 되는 것처럼 클래식 COM 구성 요소를 작성하는 데도 도움이 됩니다.
-title: C++/WinRT으로 COM 구성 요소 작성
+title: C++/WinRT를 통한 COM 구성 요소 작성
 ms.date: 04/24/2019
 ms.topic: article
-keywords: windows 10, uwp, standard, c + +, cpp, winrt, 프로젝션, 작성자, COM, 구성 요소
+keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, COM, 구성 요소
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 3badcd59155bc4bb5ef8d9e29271b853c245c24e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66360320"
 ---
-# <a name="author-com-components-with-cwinrt"></a>C++/WinRT으로 COM 구성 요소 작성
+# <a name="author-com-components-with-cwinrt"></a>C++/WinRT를 통한 COM 구성 요소 작성
 
-[C++/ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Windows 런타임 클래스를 작성 하는 데 도움이 하는 것 처럼 클래식 COM 구성 요소 개체 모델 () 구성 요소 (또는 coclass)를 작성 하는 데 도움이 됩니다. 다음은 코드를 붙여 넣는 경우 테스트할 수 있는 간단한 보여 줍니다는 `pch.h` 하 고 `main.cpp` 새 **Windows 콘솔 응용 프로그램 (C++/WinRT)** 프로젝트.
+[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)는 Windows 런타임 클래스를 작성하는 데 도움이 되는 것처럼 클래식 COM(구성 요소 개체 모델) 구성 요소를 작성하는 데도 도움이 됩니다. 다음은 새 **Windows Console Application (C++/WinRT)** 프로젝트의 `pch.h` 및 `main.cpp`에 코드를 붙여넣는 경우 테스트할 수 있는 간단한 일러스트레이션입니다.
 
 ```cppwinrt
 // pch.h
@@ -64,19 +64,19 @@ int main()
 }
 ```
 
-도 참조 하세요 [사용 하 여 사용 하는 COM 구성 요소 C++/WinRT](consume-com.md)합니다.
+[C++/WinRT를 통한 COM 구성 요소 사용](consume-com.md)을 참조하세요.
 
-## <a name="a-more-realistic-and-interesting-example"></a>더 현실적이 고 흥미로운 예제
+## <a name="a-more-realistic-and-interesting-example"></a>더 현실적이고 흥미로운 예제
 
-이 항목의 나머지 부분에서는 C +를 사용 하는 최소한의 콘솔 응용 프로그램 프로젝트를 만드는 방법을 안내 + WinRT 클래스 팩터리를 기본 coclass (COM 구성 요소 또는 COM 클래스)를 구현 합니다. 예제 응용 프로그램에서 콜백 단추와 coclass 알림 메시지를 전달 하는 방법을 보여 줍니다 (구현 하는 **INotificationActivationCallback** COM 인터페이스)는 응용 프로그램이 시작 되 고 호출 허용 사용자가 알림에서 해당 단추를 클릭 하면 백업 합니다.
+이 항목의 나머지 부분에서는 C++/WinRT를 사용하여 기본 coclass(COM 구성 요소 또는 COM 클래스) 및 클래스 팩터리를 구현하는 최소한의 콘솔 애플리케이션 프로젝트를 만드는 방법을 안내합니다. 예제 애플리케이션은 콜백 단추를 사용하여 알림을 전달하는 방법을 보여 주며, **INotificationActivationCallback** COM 인터페이스를 구현하는 coclass를 사용하면 사용자가 알림에서 해당 단추를 클릭할 때 애플리케이션을 시작하고 콜백할 수 있습니다.
 
-토스트 알림 기능 영역에 대 한 자세한 배경 정보를 찾을 수 있습니다 [로컬 알림 메시지를 보낼](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)합니다. 설명서의이 섹션의 코드 예제 중 C++/WinRT, 그러나 따라서 좋습니다이 항목에 표시 된 코드를 사용 하 합니다.
+알림 기능 영역에 대한 더 많은 배경은 [로컬 알림 보내기](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)에서 확인할 수 있습니다. 문서의 해당 섹션에 있는 코드 예제는 C++/WinRT를 사용하지 않으므로 이 항목에 표시된 코드를 사용하는 것이 좋습니다.
 
-## <a name="create-a-windows-console-application-project-toastandcallback"></a>Windows 콘솔 응용 프로그램 프로젝트 (ToastAndCallback) 만들기
+## <a name="create-a-windows-console-application-project-toastandcallback"></a>Windows 콘솔 애플리케이션 프로젝트(ToastAndCallback) 만들기
 
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. 만들기는 **Windows 콘솔 응용 프로그램 (C++/WinRT)** 프로젝트를 만들고 이름을 *ToastAndCallback*합니다.
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Windows 콘솔 애플리케이션(C++/WinRT)** 프로젝트를 만들고 이름을 *ToastAndCallback*으로 지정합니다.
 
-열기 `pch.h`를 추가한 `#include <unknwn.h>` 하기 전에에 대 한 포함 되어 있습니다 C++/WinRT 헤더입니다. 다음은 결과가 됩니다. 콘텐츠를 바꿀 수 있습니다 프로그램 `pch.h` 이 목록을 사용 하 여 합니다.
+`pch.h`를 열고 C++/WinRT 헤더의 includes 앞에 `#include <unknwn.h>`를 추가합니다. 결과적으로 `pch.h`의 콘텐츠를 이 목록으로 바꿀 수 있습니다.
 
 ```cppwinrt
 // pch.h
@@ -85,7 +85,7 @@ int main()
 #include <winrt/Windows.Foundation.h>
 ```
 
-열기 `main.cpp`, 및를 사용 하 여 지시문 프로젝트 템플릿을 생성 하는 제거 합니다. 그 자리에 다음 코드 (라이브러리, 헤더 및 해야 하는 형식 이름 제공)를 삽입 합니다. 다음은 결과가 됩니다. 콘텐츠를 바꿀 수 있습니다 하 `main.cpp` 이 목록을 사용 하 여 (에서 코드를 제거 했습니다 `main` 아래 목록에서에서는에서는 대체 함수를 나중에 있으므로).
+`main.cpp`를 열고 프로젝트 템플릿이 생성하는 using 지시문을 제거합니다. 그 위치에 필요한 라이브러리, 헤더 및 형식 이름을 제공하는 다음 코드를 삽입합니다. 결과적으로 `main.cpp`의 콘텐츠를 이 목록으로 바꿀 수 있습니다(나중에 해당 함수를 바꿀 예정이므로 아래 목록의 `main`에서 코드도 제거함).
 
 ```cppwinrt
 // main.cpp : Defines the entry point for the console application.
@@ -112,11 +112,11 @@ using namespace Windows::UI::Notifications;
 int main() { }
 ```
 
-프로젝트는 아직 빌드하지 않습니다. 코드 추가 완료 했습니다 후 빌드 및 실행을 묻는 메시지가 나타납니다.
+프로젝트가 아직 빌드되지 않았으며, 코드 추가를 마친 후에 빌드하고 실행하라는 메시지가 표시됩니다.
 
-## <a name="implement-the-coclass-and-class-factory"></a>Coclass 및 클래스 팩터리를 구현 합니다.
+## <a name="implement-the-coclass-and-class-factory"></a>coclass 및 클래스 팩터리 구현
 
-C++WinRT, 구현, coclass 및 클래스 팩터리에서 파생 하 여/합니다 [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) 기본 구조체입니다. 세 가지를 사용 하 여-지시문은 위에 표시 된 직후 (전과 `main`), 토스트 알림 COM 활성기 구성 요소를 구현 하는이 코드를 붙여 넣습니다.
+C++/WinRT에서는 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체에서 파생시키는 방식으로 coclass 및 클래스 팩터리를 구현합니다. 위에 표시된 3개의 using 지시문 바로 뒤에(및 `main` 앞에) 이 코드를 붙여넣어 알림 COM 활성자 구성 요소를 구현합니다.
 
 ```cppwinrt
 static constexpr GUID callback_guid // BAF2FA85-E121-4CC9-A942-CE335B6F917F
@@ -172,21 +172,21 @@ struct callback_factory : implements<callback_factory, IClassFactory>
 };
 ```
 
-위의 coclass의 구현에 설명 된 동일한 패턴을 따릅니다 [사용 하 여 만든 Api C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class)합니다. 따라서 Windows 런타임 인터페이스 뿐만 아니라 COM 인터페이스를 구현 하는 동일한 기법을 사용할 수 있습니다. COM 구성 요소 및 Windows 런타임 클래스 인터페이스를 통해 해당 기능을 노출합니다. 모든 COM 인터페이스에서 궁극적으로 파생 되는 [ **IUnknown 인터페이스** ](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) 인터페이스입니다. COM 기반 Windows 런타임&mdash;하나의 구분 되는 궁극적으로 Windows 런타임 인터페이스에서 파생 된 [ **IInspectable 인터페이스** ](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (및 **IInspectable**  에서 파생 되 **IUnknown**).
+위의 coclass 구현은 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class)에 설명된 동일한 패턴을 따릅니다. 따라서 동일한 기술을 사용하여 Windows 런타임 인터페이스뿐만 아니라 COM 인터페이스도 구현할 수 있습니다. COM 구성 요소 및 Windows 런타임 클래스는 인터페이스를 통해 해당 기능을 공개합니다. 모든 COM 인터페이스는 기본적으로 [**IUnknown 인터페이스**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) 인터페이스에서 파생됩니다. Windows 런타임은 COM을 기반으로 합니다. 한 가지 예외는 Windows 런타임 인터페이스는 기본적으로 [**IInspectable 인터페이스**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)에서 파생되고 **IInspectable**은 **IUnknown**에서 파생된다는 것입니다.
 
-구현에서는 위의 코드에서 coclass를는 **INotificationActivationCallback::Activate** 메서드는 알림 메시지 통지 콜백 단추를 클릭할 때 호출 되는 함수입니다. 하지만 해당 함수를 호출할 수 있습니다, 전에 coclass 인스턴스를 만들 수 해야 하는 경우의 작업이 그 해답이 며 합니다 **IClassFactory::CreateInstance** 함수입니다.
+위 코드의 coclass에서는 사용자가 알림에서 콜백 단추를 클릭할 때 호출되는 함수인 **INotificationActivationCallback::Activate** 메서드를 구현합니다. 그러나 이 함수를 호출하기 전에 **IClassFactory::CreateInstance** 함수를 사용하여 coclass의 인스턴스를 만들어야 합니다.
 
-만 구현 하는 coclass 라고 합니다 *COM 활성기* 에 대 한 알림 및 해당 컨트롤의 클래스 id (CLSID) 형식의 합니다 `callback_guid` 식별자 (형식의 **GUID**) 위에 표시 되는. 사용 해당 식별자 나중에 시작 메뉴 바로 가기 및 Windows 레지스트리 항목의 형식에서입니다. COM 활성기 CLSID, 및 경로를 해당 연결 된 COM 서버 (즉, 여기를 빌드하는 하는 실행 파일 경로)는 알림 메시지는 해당 콜백 단추를 클릭할 때의 인스턴스를 만드는 클래스 무엇을 알고 메커니즘 (여부는 알림을 클릭할 관리 센터에서 여부).
+방금 구현한 coclass를 알림용 ‘COM 활성자’라고 하며, 위에서 확인한 **GUID** 형식의 `callback_guid` 식별자 형태로 클래스 ID(CLSID)를 포함합니다.  나중에 시작 메뉴 바로 가기 및 Windows 레지스트리 항목의 형태로 해당 식별자를 사용합니다. COM 활성자 CLSID 및 연결된 COM 서버 경로(여기서는 빌드하는 실행 파일 경로)는 알림 센터에서 알림을 클릭하는지 여부와 관계없이 콜백 단추를 클릭하는 경우의 인스턴스를 만드는 클래스를 알림 메시지에서 인식하는 데 사용되는 메커니즘입니다.
 
-## <a name="best-practices-for-implementing-com-methods"></a>COM 메서드를 구현 하기 위한 모범 사례
+## <a name="best-practices-for-implementing-com-methods"></a>COM 메서드 구현 모범 사례
 
-리소스 관리 및 오류 처리에 대 한 기술 관련 직접 이동할 수 있습니다. 것이 더 편리 하 고 오류 코드 보다 예외를 사용 하는 데 적합 합니다. 그리고 리소스 취득-는-초기화 (RAII) 관용구를 사용 하면 다음 오류 코드에 대 한 명시적으로 확인 하 고 리소스를 명시적으로 해제 합니다. 명시적 검사가 필요한 경우 보다 더 복잡 하 여 코드를 확인 하 고 다양 한 위치를 숨기려면 버그를 제공. 대신, RAII을 throw/catch 예외입니다. 이렇게 하면 리소스 할당은 예외 로부터 안전한 및 코드는 간단 합니다.
+오류 처리 및 리소스 관리 기술은 밀접한 관련이 있습니다. 오류 코드보다는 예외를 사용하는 것이 더 편리하고 실용적입니다. RAII(Resource-Acquisition-Is-Initialization) 관용구를 사용하면 오류 코드를 명시적으로 확인한 후 리소스를 명시적으로 릴리스하지 않아도 됩니다. 이 명시적 확인은 코드를 필요한 것보다 더 복잡하게 만들고 숨겨야 하는 많은 곳에 버그를 제공합니다. RAII 및 throw/catch 예외를 대신 사용합니다. 이렇게 하면 리소스 할당은 예외로부터 안전하며 코드는 단순합니다.
 
-그러나 COM 메서드 구현을 이스케이프 하는 예외를 허용할 돼 있습니다. 사용 하 여 되도록 하는 `noexcept` 에 COM 메서드에 지정자입니다. 메서드 종료 되기 전에 처리 하는 만큼 메서드의 호출 그래프에서 아무 곳 이나 throw 되는 예외에 대 한 해도 됩니다. 사용 하는 경우 `noexcept`, 않지만 끼운 예외가 메서드를 이스케이프 하 고 응용 프로그램이 종료 됩니다.
+그러나 예외가 COM 메서드 구현을 이스케이프하도록 허용하면 안 됩니다. COM 메서드에서 `noexcept` 지정자를 사용하여 확인할 수 있습니다. 메서드가 종료되기 전에 예외를 처리하는 경우에는 메서드의 호출 그래프에서 예외가 throw되어도 괜찮습니다. `noexcept`를 사용하지만 예외가 메서드를 이스케이프하도록 허용하면 애플리케이션이 종료됩니다.
 
-## <a name="add-helper-types-and-functions"></a>도우미 형식 및 함수를 추가 합니다.
+## <a name="add-helper-types-and-functions"></a>도우미 형식 및 함수 추가
 
-이 단계에서는 코드의 나머지는 몇 가지 도우미 형식 및 함수 사용 추가 합니다. 따라서 직전 `main`, 다음을 추가 합니다.
+이 단계에서는 나머지 코드에서 사용할 일부 도우미 형식 및 함수를 추가합니다. 따라서 `main` 바로 앞에 다음을 추가합니다.
 
 ```cppwinrt
 struct prop_variant : PROPVARIANT
@@ -256,9 +256,9 @@ std::wstring get_shortcut_path()
 }
 ```
 
-## <a name="implement-the-remaining-functions-and-the-wmain-entry-point-function"></a>나머지 함수 및 wmain 진입점 함수를 구현 합니다.
+## <a name="implement-the-remaining-functions-and-the-wmain-entry-point-function"></a>나머지 함수 및 wmain 진입점 함수 구현
 
-삭제에 `main` 함수를 해당 위치에이 코드를 붙여넣은 다음이 목록에 coclass를 등록 하는 코드를 포함 하는 응용 프로그램을 다시 호출할 수 있는 알림을 배달 하는 고 합니다.
+`main` 함수를 삭제하며, coclass를 등록한 후 애플리케이션을 호출할 수 있는 알림을 전달하는 코드가 포함된 이 코드 목록을 해당 위치에 붙여넣습니다.
 
 ```cppwinrt
 void register_callback()
@@ -417,31 +417,31 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 }
 ```
 
-## <a name="how-to-test-the-example-application"></a>예제 응용 프로그램을 테스트 하는 방법
+## <a name="how-to-test-the-example-application"></a>예제 애플리케이션을 테스트하는 방법
 
-응용 프로그램을 빌드하고, 등록 및 다른 설치 프로그램을 실행 하는 코드를 관리자 권한으로 최소 한 번 실행 합니다. 작업을 수행 하는 한 가지 방법은 관리자로 서 Visual Studio를 실행 한 후 Visual Studio에서 앱을 실행 하는 경우 작업 표시줄 점프 목록 표시, 점프 목록에서 Visual Studio를 마우스 오른쪽 단추로 클릭 하 고 클릭을에서 Visual Studio를 마우스 오른쪽 단추로 클릭 **관리자 권한으로 실행**합니다. 프롬프트에 동의 하 고 프로젝트를 엽니다. 응용 프로그램을 실행 하는 경우 응용 프로그램을 관리자 권한으로 실행 되 고 있는지 여부를 나타내는 메시지가 표시 됩니다. 그렇지 않으면 등록 및 다른 설치가 실행 되지 않습니다. 해당 등록 및 기타 설치 응용 프로그램이 올바르게 작동 하기 위해 한 번 이상 실행 해야 합니다.
+애플리케이션을 빌드한 후 관리자 권한으로 한 번 이상 실행하여 등록 및 기타 설정 코드가 실행되도록 합니다. 이 작업을 수행하는 한 가지 방법은 Visual Studio를 관리자 권한으로 실행한 후 Visual Studio에서 앱을 실행하는 것입니다. 작업 표시줄에서 Visual Studio를 마우스 오른쪽 단추로 클릭하여 점프 목록을 표시하고, 점프 목록에서 Visual Studio를 마우스 오른쪽 단추로 클릭한 다음, **관리자 권한으로 실행**을 클릭합니다. 프롬프트에 동의한 후 프로젝트를 엽니다. 애플리케이션을 실행할 때 애플리케이션이 관리자 권한으로 실행 중인지 여부를 나타내는 메시지가 표시됩니다. 메시지가 표시되지 않으면 등록 및 기타 설정이 실행되지 않습니다. 애플리케이션이 올바르게 작동하려면 해당 등록 및 기타 설정이 한 번 이상 실행되어야 합니다.
 
-표시할지, 아니면 관리자 권한으로 응용 프로그램을 실행 하 고, 키를 눌러 ' T '를 표시할 알림. 클릭할 수 있습니다 합니다 **ToastAndCallback 콜백할** 단추에 표시 되는 알림 메시지에서 직접 또는 관리 센터 및 응용 프로그램에서 시작 됩니다, 인스턴스화된 coclass 및  **INotificationActivationCallback::Activate** 메서드를 실행 합니다.
+애플리케이션을 관리자 권한으로 실행 중인지 여부에 관계없이 ‘T’를 눌러 알림이 표시되도록 합니다. 그런 다음, 표시되는 알림에서 직접 또는 알림 센터에서 **ToastAndCallback 콜백** 단추를 클릭하면 애플리케이션이 시작되고, coclass가 인스턴스화되고, **INotificationActivationCallback::Activate** 메서드가 실행됩니다.
 
 ## <a name="in-process-com-server"></a>In-process COM 서버
 
-합니다 *ToastAndCallback* 위 예제 앱에 로컬 같거나 out-of-process COM 서버로 작동 합니다. 이 표시 됩니다는 [LocalServer32](/windows/desktop/com/localserver32) Windows 레지스트리 키를 사용 하 여 해당 coclass의 CLSID를 등록 합니다. 로컬 COM 서버를 호스팅하는 실행 가능 바이너리 내에서 해당 coclass(es) (프로그램 `.exe`).
+위의 *ToastAndCallback* 예제 앱은 로컬(또는 Out of Process) COM 서버로 작동합니다. 이 서버는 해당 coclass의 CLSID를 등록하는 데 사용하는 [LocalServer32](/windows/desktop/com/localserver32) Windows 레지스트리 키로 표시됩니다. 로컬 COM 서버는 실행 가능한 이진 파일(`.exe`) 내부에 해당 coclass를 호스트합니다.
 
-또는 (및 가능성이 아마도), 동적 연결 라이브러리 내부에 coclass(es)를 호스트 하도록 선택할 수 있습니다 (한 `.dll`). DLL 형식의 COM 서버를 in-process COM 서버 이라고 하며 사용 하 여 등록할 Clsid로 표시 됩니다는 [InprocServer32](/windows/desktop/com/inprocserver32) Windows 레지스트리 키입니다.
+가능성이 더 높은 또 다른 방법으로, 동적 연결 라이브러리(`.dll`) 내부에 coclass를 호스트할 수 있습니다. DLL 형식의 COM 서버를 In-process COM 서버라고 하며 [InprocServer32](/windows/desktop/com/inprocserver32) Windows 레지스트리 키를 사용하여 등록되는 CLSID로 표시됩니다.
 
-### <a name="create-a-dynamic-link-library-dll-project"></a>동적 연결 라이브러리 (DLL) 프로젝트 만들기
+### <a name="create-a-dynamic-link-library-dll-project"></a>DLL(동적 연결 라이브러리) 프로젝트 만들기
 
-Microsoft Visual Studio에서 새 프로젝트를 만들어는 in-process COM 서버를 만드는 작업을 시작할 수 있습니다. 만들기는 **시각적 C++**   >  **Windows 바탕 화면** > **동적 연결 라이브러리 (DLL)** 프로젝트입니다.
+Microsoft Visual Studio에서 새 프로젝트를 만들어 In-process COM 서버를 만드는 작업을 시작할 수 있습니다. **Visual C++**  > **Windows 데스크톱** > **DLL(동적 연결 라이브러리)** 프로젝트를 만듭니다.
 
-추가할 C++에 설명 된 단계를 수행 하는 새 프로젝트에 WinRT 지원/ [추가할 Windows 데스크톱 응용 프로그램 프로젝트를 수정 C++/WinRT 지원](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support)합니다.
+새 프로젝트에 C++/WinRT 지원을 추가하려면 [Windows 데스크톱 애플리케이션 프로젝트를 수정하여 C++/WinRT 지원 추가](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support)에 설명된 단계를 따릅니다.
 
-### <a name="implement-the-coclass-class-factory-and-in-proc-server-exports"></a>Coclass, 클래스 팩터리 및 프로시저에서 서버 내보내기 구현
+### <a name="implement-the-coclass-class-factory-and-in-proc-server-exports"></a>coclass, 클래스 팩터리 및 in-proc 서버 내보내기 구현
 
-열기 `dllmain.cpp`, 아래에 표시 된 코드를 추가 합니다.
+`dllmain.cpp`를 열고 아래에 표시된 코드 목록을 추가합니다.
 
-C +를 구현 하는 DLL이 이미 있는 경우 + WinRT Windows 런타임 클래스를 이미 해야 합니다 **DllCanUnloadNow** 아래 표시 된 함수입니다. 해당 DLL에 대 한 coclass를 추가 하려는 경우 추가할 수 있습니다 합니다 **DllGetClassObject** 함수입니다.
+C++/WinRT Windows 런타임 클래스를 구현하는 DLL이 이미 있는 경우 아래 표시된 **DllCanUnloadNow** 함수가 이미 있는 것입니다. coclass를 해당 DLL에 추가하려면 **DllGetClassObject** 함수를 추가하면 됩니다.
 
-하는 경우 기존 없는 [Windows 런타임 C++ 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 보여드린 코드의 부분 코드는 호환을 유지 하려는 다음 WRL를 제거할 수 있습니다.
+호환성을 유지하는 데 필요한 기존 [Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드가 없는 경우 표시된 코드에서 WRL 파트를 제거할 수 있습니다.
 
 ```cppwinrt
 // dllmain.cpp
@@ -522,13 +522,13 @@ HRESULT __stdcall DllGetClassObject(GUID const& clsid, GUID const& iid, void** r
 }
 ```
 
-### <a name="support-for-weak-references"></a>약한 참조에 대 한 지원
+### <a name="support-for-weak-references"></a>약한 참조 지원
 
-도 참조 하세요 [약한 참조 C++/WinRT](weak-references.md#weak-references-in-cwinrt)합니다.
+[C++/WinRT의 약한 참조](weak-references.md#weak-references-in-cwinrt)를 참조하세요.
 
-C++/ WinRT (특히 합니다 [ **winrt::implements** ](/uwp/cpp-ref-for-winrt/implements) 구조체를 기본 템플릿) 구현 [ **IWeakReferenceSource** ](/windows/desktop/api/weakreference/nn-weakreference-iweakreferencesource) 를 경우에 구현 형식 [ **IInspectable** ](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (또는에서 파생 되는 모든 인터페이스 **IInspectable**).
+사용자가 사용하는 형식이 [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)(또는 **IInspectable**에서 파생되는 인터페이스)을 구현하는 경우 C++/WinRT(특히 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체 템플릿)는 [**IWeakReferenceSource**](/windows/desktop/api/weakreference/nn-weakreference-iweakreferencesource)를 구현합니다.
 
-왜냐하면 **IWeakReferenceSource** 하 고 [ **IWeakReference** ](/windows/desktop/api/weakreference/nn-weakreference-iweakreference) Windows 런타임 형식에 대 한 설계 되었습니다. 따라서 켤 수 있습니다 약한 참조 지원을 coclass에 대 한 추가 하기만 **winrt::Windows::Foundation::IInspectable** (또는 인터페이스에서 파생 되는 **IInspectable**) 구현 합니다.
+이는 **IWeakReferenceSource** 및 [**IWeakReference**](/windows/desktop/api/weakreference/nn-weakreference-iweakreference)가 Windows 런타임 형식용으로 디자인되었기 때문입니다. 따라서 **winrt::Windows::Foundation::IInspectable**(또는 **IInspectable**에서 파생된 인터페이스)을 구현에 추가하면 coclass의 약한 참조 지원을 간단히 켤 수 있습니다.
 
 ```cppwinrt
 struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows::Foundation::IInspectable>

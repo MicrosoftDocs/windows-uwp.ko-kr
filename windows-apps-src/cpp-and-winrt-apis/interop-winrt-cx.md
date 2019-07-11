@@ -1,25 +1,25 @@
 ---
-description: 이번 항목에서는 C++/CX 개체와 C++/WinRT 개체를 서로 변환하는 데 사용할 수 있는 두 가지 도우미 함수에 대해서 설명합니다.
-title: C++/WinRT와 C++/CX 사이의 상호 운용성
+description: 이 항목에서는 C++/CX 개체와 C++/WinRT 개체 간에 변환하는 데 사용할 수 있는 두 가지 도우미 함수를 보여 줍니다.
+title: C++/WinRT와 C++/CX 간의 Interop
 ms.date: 10/09/2018
 ms.topic: article
-keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, C++/CX
+keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, Interop, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: 5394443b4832864e5b46bfbf917c04f0af6d8a19
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66360214"
 ---
-# <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 사이의 상호 운용성
+# <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 간의 Interop
 
-전략의 코드를 점차적으로 이식 하 [ C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트를 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 에 설명 되어 [이동 C++에서 /WinRT C++/CX](move-to-winrt-from-cx.md).
+[C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트의 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 점진적으로 이식하는 전략은 [C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md)에서 설명합니다.
 
-이 항목에서는 변환에 사용할 수 있는 두 도우미 함수 C++/CX 및 C++동일한 프로젝트 내의 /WinRT 개체입니다. 두 언어 프로젝션을 사용 하는 코드 간의 상호 운용성을 사용할 수 있습니다 하거나에서 코드를 함수를 사용할 수 있습니다 C++를 /CX C++/WinRT 합니다.
+이 항목에서는 동일한 프로젝트 내에서 C++/CX 개체와 C++/WinRT 개체 간에 변환하는 데 사용할 수 있는 두 가지 도우미 함수를 보여 줍니다. 두 언어 프로젝션을 사용하는 코드 사이의 interop에 도우미 함수를 사용하거나 코드를 C++/CX에서 C++/WinRT로 이식할 때 함수를 사용할 수 있습니다.
 
 ## <a name="fromcx-and-tocx-functions"></a>from_cx 함수와 to_cx 함수
-아래 도우미 함수는 C++/CX 개체를 상응하는 C++/WinRT 개체로 변환합니다. 이 함수는 C++/CX 개체를 기본 [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) 인터페이스 포인터로 캐스팅합니다. 그런 다음 해당 포인터에 대한 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))를 호출하여 C++/WinRT 개체의 기본 인터페이스에 대해 쿼리를 실행합니다. **QueryInterface**는 C++/CX safe_cast 확장에 상응하는 Windows 런타임 응용 프로그램 이진 인터페이스(ABI)입니다. 그러면 [**winrt::put_abi**](/uwp/cpp-ref-for-winrt/put-abi) 함수가 C++/WinRT 개체의 기본 **IUnknown** 인터페이스 포인터 주소를 다른 값으로 설정할 수 있도록 가져옵니다.
+아래 도우미 함수는 C++/CX 개체를 상응하는 C++/WinRT 개체로 변환합니다. 이 함수는 C++/CX 개체를 기본 [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) 인터페이스 포인터로 캐스팅합니다. 그런 다음, 해당 포인터에 대한 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))를 호출하여 C++/WinRT 개체의 기본 인터페이스에 대해 쿼리를 실행합니다. **QueryInterface**는 C++/CX safe_cast 확장에 상응하는 Windows 런타임 ABI(Application Binary Interface)입니다. 그러면 [**winrt::put_abi**](/uwp/cpp-ref-for-winrt/put-abi) 함수가 C++/WinRT 개체의 기본 **IUnknown** 인터페이스 포인터 주소를 다른 값으로 설정할 수 있도록 가져옵니다.
 
 ```cppwinrt
 template <typename T>
@@ -35,7 +35,7 @@ T from_cx(Platform::Object^ from)
 }
 ```
 
-아래 도우미 함수는 C++/WinRT 개체를 상응하는 C++/CX 개체로 변환합니다. [  **winrt::get_abi**](/uwp/cpp-ref-for-winrt/get-abi) 함수는 포인터를 C++/WinRT 개체의 기본 **IUnknown** 인터페이스로 가져옵니다. 그런 다음 포인터를 C++/CX 개체로 캐스팅한 후 C++/CX safe_cast 확장을 사용해 요청된 C++/CX 형식에 대해 쿼리를 실행합니다.
+아래 도우미 함수는 C++/WinRT 개체를 상응하는 C++/CX 개체로 변환합니다. [**winrt::get_abi**](/uwp/cpp-ref-for-winrt/get-abi) 함수는 포인터를 C++/WinRT 개체의 기본 **IUnknown** 인터페이스로 가져옵니다. 그런 다음, 해당 포인터를 C++/CX 개체로 캐스팅한 후 C++/CX safe_cast 확장을 사용해 요청된 C++/CX 형식에 대해 쿼리를 실행합니다.
 
 ```cppwinrt
 template <typename T>
@@ -45,15 +45,15 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 }
 ```
 
-## <a name="example-project-showing-the-two-helper-functions-in-use"></a>사용 중인 두 도우미 함수를 보여 주는 예제 프로젝트
+## <a name="example-project-showing-the-two-helper-functions-in-use"></a>사용 중인 두 개의 도우미 함수를 보여 주는 예제 프로젝트
 
-간단한 방식으로 코드를 점차적으로 이식 하는 시나리오를 재현 하려면는 C++/CX 프로젝트를 C++중 하나를 사용 하 여 Visual Studio에서 새 프로젝트를 만들어 시작할 수 WinRT, / 합니다 C++/WinRT 프로젝트 템플릿 (참조 [Visual Studio 에 대 한 지원 C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)).
+간단한 방법으로 C++/CX 프로젝트에서 C++/WinRT로 코드를 점진적으로 이식하는 시나리오를 재현하려면 먼저 C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 만듭니다([Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조).
 
-이 예제 프로젝트 수도, 그렇지 않으면 잠재적인 네임 스페이스 충돌을 처리 하기 위해 코드의 다른 아일랜드에 대 한 네임 스페이스 별칭을 사용 하는 방법을 보여 줍니다는 C++/WinRT 프로젝션 및 C++/CX 프로젝션 합니다.
+또한 이 예제 프로젝트에서는 C++/WinRT 프로젝션 및 C++/CX 프로젝션 간의 잠재적인 네임스페이스 충돌을 다루기 위해 코드의 다른 격리 영역에 대한 네임스페이스 별칭을 사용하는 방법을 보여 줍니다.
 
-- 만들기는 **시각적 C++**  \> **Windows 유니버설** > **Core 앱 (C++/WinRT)** 프로젝트입니다.
-- 프로젝트 속성에서 **C /C++**  \> **일반** \> **Windows 런타임 확장 사용** \>  **예 (/ZW)** 합니다. 이 설정에 대 한 프로젝트 지원 C++/CX입니다.
-- 내용을 바꿉니다 `App.cpp` 아래 나열 된 코드를 사용 하 여 합니다.
+- a **Visual C++** \> **Windows Universal** > **Core App(C++/WinRT)** 프로젝트를 만듭니다.
+- 프로젝트 속성에서 **C/C++** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)** 를 선택합니다. 이렇게 하면 C++/CX에 대한 프로젝트 지원이 켜집니다.
+- `App.cpp`의 콘텐츠를 아래 코드 목록으로 바꿉니다.
 
 ```cppwinrt
 // App.cpp

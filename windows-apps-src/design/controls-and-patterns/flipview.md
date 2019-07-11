@@ -12,10 +12,10 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7942839b43739ca5fb15106abbfa1877ead81dc2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66362766"
 ---
 # <a name="flip-view"></a>보기 대칭 이동
@@ -24,7 +24,7 @@ ms.locfileid: "66362766"
 
 대칭 이동 보기를 사용하여 앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지나 다른 항목을 탐색할 수 있습니다. 터치 디바이스의 경우 항목을 살짝 밀면 컬렉션 내에서 이동됩니다. 마우스를 사용할 경우에는 항목 위로 마우스를 가져가면 탐색 단추가 나타납니다. 키보드를 사용할 경우에는 화살표 키를 사용하여 컬렉션 내에서 이동합니다.
 
-> **중요 API**: [FlipView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview)하십시오 [ItemsSource 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [ItemTemplate 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)
+> **중요 API**: [FlipView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [ItemsSource 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [ItemTemplate 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -34,7 +34,7 @@ ms.locfileid: "66362766"
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
@@ -227,9 +227,9 @@ FlipView에 상황 표시기를 추가하는 방법을 보여 주는 예제 코�
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 
-- [목록에 대 한 지침](lists.md)
+- [목록에 대한 지침](lists.md)
 - [**FlipView 클래스**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView)

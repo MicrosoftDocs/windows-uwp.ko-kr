@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 61fa4f8afa0404591831be4136c16672503274f2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66362780"
 ---
 # <a name="images-and-image-brushes"></a>이미지 및 이미지 브러시
 
 이미지를 표시하려면 **Image** 개체 또는 **ImageBrush** 개체를 사용할 수 있습니다. Image 개체는 이미지를 렌더링하고 ImageBrush 개체는 이미지에 다른 개체를 그립니다. 
 
-> **중요 API**: [클래스를 이미지](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image), [속성을 원본](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source)를 [ImageBrush 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush), [ImageSource 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)
+> **중요 API**: [Image 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image), [Source 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source), [ImageBrush 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush), [ImageSource 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)
 
 ## <a name="are-these-the-right-elements"></a>올바른 요소인가요?
 앱에 독립 실행형 이미지를 표시하려면 **Image** 요소를 사용합니다.
@@ -29,7 +29,7 @@ ms.locfileid: "66362780"
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
@@ -44,7 +44,7 @@ ms.locfileid: "66362780"
 
 ## <a name="create-an-image"></a>이미지 만들기
 
-### <a name="image"></a>Image
+### <a name="image"></a>이미지
 다음 예제에서는 [Image](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) 개체를 사용하여 이미지를 만드는 방법을 보여 줍니다.
 
 
@@ -56,11 +56,11 @@ ms.locfileid: "66362780"
 
 ![Image 요소의 예](images/Image_Licorice.jpg)
 
-다음 예제에서 [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) 속성은 표시할 이미지의 위치를 지정합니다. 절대 URL을 지정 하 여 소스를 설정할 수 있습니다 (예를 들어 http://contoso.com/myPicture.jpg) 앱 패키징 구조에 상대 URL을 지정 하 여 합니다. 이 예제에서는 "licorice.jpg" 이미지 파일을 프로젝트의 루트 폴더에 넣고 이 이미지 파일을 내용으로 포함하는 프로젝트 설정을 선언합니다.
+다음 예제에서 [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) 속성은 표시할 이미지의 위치를 지정합니다. Source를 설정하려면 절대 URL(예: http://contoso.com/myPicture.jpg) )을 지정하거나 앱 패키징 구조에 상대적인 URL을 지정할 수 있습니다. 이 예제에서는 "licorice.jpg" 이미지 파일을 프로젝트의 루트 폴더에 넣고 이 이미지 파일을 내용으로 포함하는 프로젝트 설정을 선언합니다.
 
 ### <a name="imagebrush"></a>ImageBrush
 
-[ImageBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush) 개체를 사용하면 [Brush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Brush) 개체를 가지는 영역을 이미지로 그릴 수 있습니다. 예를 들어 [Ellipse](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Shapes.Ellipse)의 [Fill](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill) 속성 또는 [Canvas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas)의 [Background](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background) 속성 값에 ImageBrush를 사용할 수 있습니다.
+[ImageBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush) 개체를 사용하면 [Brush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Brush) 개체를 가지는 영역을 이미지로 그릴 수 있습니다. 예를 들어 [Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill)의 [Fill](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) 속성 또는 [Canvas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas)의 [Background](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background) 속성 값에 ImageBrush를 사용할 수 있습니다.
 
 다음 예제에서는 ImageBrush를 사용하여 Ellipse를 그리는 방법을 보여 줍니다.
 
@@ -80,10 +80,10 @@ ms.locfileid: "66362780"
 
 **Image**의 [Width](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.width) 또는 [Height](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) 값을 설정하지 않는 경우 이미지는 **Source**에서 지정한 이미지 크기로 표시됩니다. **Width** 및 **Height**를 설정하면 이미지가 표시되는 컨테이너 사각형 영역이 만들어집니다. 이미지가 이 컨테이너 영역을 채우는 방법을 지정하려면 [Stretch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.stretch) 속성을 사용합니다. Stretch 속성에는 [Stretch](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Stretch) 열거형에서 정의하는 다음 값을 사용할 수 있습니다.
 
--   **없음**: 이미지 출력 크기를 채우도록 늘어나지 않습니다. 이 Stretch 설정은 주의해서 사용해야 합니다. 원본 이미지가 컨테이너 영역보다 큰 경우 이미지가 잘립니다. 이는 일반적으로 바람직하지 않은데, 의도적 [Clip](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.clip)을 사용할 때처럼 뷰포트를 제어할 수 없기 때문입니다.
--   **Uniform**: 이미지 출력 크기에 맞게 크기가 조정 됩니다. 콘텐츠의 가로 세로 비율은 유지됩니다. 이것은 기본값입니다.
--   **UniformToFill**: 이미지를 완전히 출력 영역을 채우는 원래 가로 세로 비율은 유지 하지만 크기가 조정 됩니다.
--   **입력**: 이미지 출력 크기에 맞게 크기가 조정 됩니다. 콘텐츠의 높이와 너비가 따로 조정되므로 이미지의 원래 가로 세로 비율은 유지될 수 없습니다. 즉, 이미지가 출력 영역을 완전히 채우기 위해 왜곡될 수 있습니다.
+-   **없음**: 이미지가 출력 크기를 채우기 위해 확대되지 않습니다. 이 Stretch 설정은 주의해서 사용해야 합니다. 원본 이미지가 컨테이너 영역보다 큰 경우 이미지가 잘립니다. 이는 일반적으로 바람직하지 않은데, 의도적 [Clip](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.clip)을 사용할 때처럼 뷰포트를 제어할 수 없기 때문입니다.
+-   **Uniform**: 이미지가 출력 크기에 맞게 크기 조정됩니다. 콘텐츠의 가로 세로 비율은 유지됩니다. 기본값입니다.
+-   **UniformToFill**: 이미지가 원래 가로 세로 비율은 유지하고 출력 영역을 완전히 채우도록 크기 조정됩니다.
+-   **Fill**: 이미지가 출력 크기에 맞게 크기 조정됩니다. 콘텐츠의 높이와 너비가 따로 조정되므로 이미지의 원래 가로 세로 비율은 유지될 수 없습니다. 즉, 이미지가 출력 영역을 완전히 채우기 위해 왜곡될 수 있습니다.
 
 ![확대 설정의 예](images/Image_Stretch.jpg)
 
@@ -147,7 +147,7 @@ Windows 10 버전 1607부터 **Image** 요소는 애니메이션 GIF 이미지�
 
 ### <a name="image-sources-and-scaling"></a>이미지 원본 및 크기 조정
 
-여러 가지 권장 크기로 이미지 원본을 만들어 Windows에서 크기를 조정할 때 앱 모양이 멋지게 보이도록 합니다. **Image**에 **Source**를 지정할 때 현재 크기에 적합한 리소스를 자동으로 참조하는 명명 규칙을 사용할 수 있습니다. 명명 규칙 및 자세한 내용은 참조 하세요. [빠른 시작: 파일 또는 이미지 리소스를 사용 하 여](https://docs.microsoft.com/previous-versions/windows/apps/hh965325(v=win.10))입니다.
+여러 가지 권장 크기로 이미지 원본을 만들어 Windows에서 크기를 조정할 때 앱 모양이 멋지게 보이도록 합니다. **Image**에 **Source**를 지정할 때 현재 크기에 적합한 리소스를 자동으로 참조하는 명명 규칙을 사용할 수 있습니다. 명명 규칙의 특성 및 자세한 내용은 [빠른 시작: 파일 또는 이미지 리소스 사용](https://docs.microsoft.com/previous-versions/windows/apps/hh965325(v=win.10))을 참조하세요.
 
 크기 조정을 위해 디자인하는 방법에 대한 자세한 내용은 [레이아웃 및 크기 조정에 대한 UX 지침](https://developer.microsoft.com/windows/design)을 참조하세요.
 
@@ -155,14 +155,14 @@ Windows 10 버전 1607부터 **Image** 요소는 애니메이션 GIF 이미지�
 
 Image 및 ImageBrush 요소는 코드가 아닌 XAML을 사용하여 지정하는 것이 일반적입니다. 왜냐하면 이러한 요소는 XAML UI 정의의 일부로 디자인 도구에서 출력되는 경우가 자주 있기 때문입니다.
 
-코드를 사용하여 Image 또는 ImageBrush를 정의하는 경우 기본 생성자를 사용한 다음 관련 원본 속성([Image.Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) 또는 [ImageBrush.ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource))을 설정합니다. 코드를 사용하여 설정할 때 원본 속성에는 [BitmapImage](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage)(URI 아님)가 필요합니다. 원본이 스트림이면 [SetSourceAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) 메서드를 사용하여 값을 초기화합니다. 소스가 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [BitmapImage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [ImageOpened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다. 예제 코드는 [XAML 이미지 샘플](https://go.microsoft.com/fwlink/p/?linkid=238575)을 참조하세요.
+코드를 사용하여 Image 또는 ImageBrush를 정의하는 경우 기본 생성자를 사용한 다음 관련 원본 속성([Image.Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) 또는 [ImageBrush.ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource))을 설정합니다. 코드를 사용하여 설정할 때 원본 속성에는 [BitmapImage](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage)(URI 아님)가 필요합니다. 원본이 스트림이면 [SetSourceAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) 메서드를 사용하여 값을 초기화합니다. 원본이 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [BitmapImage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [ImageOpened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다. 예제 코드는 [XAML 이미지 샘플](https://go.microsoft.com/fwlink/p/?linkid=238575)을 참조하세요.
 
 > [!NOTE]
 > 코드를 사용하여 이미지를 설정하면 현재 크기 및 문화권 한정자로 비정규화된 리소스에 액세스하는 데 자동 처리를 사용하거나 문화권 및 크기에 대한 한정자와 함께 [ResourceManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager) 및 [ResourceMap](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap)을 사용하여 리소스를 직접 가져올 수 있습니다. 자세한 내용은 [리소스 관리 시스템](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10))을 참조하세요.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 
