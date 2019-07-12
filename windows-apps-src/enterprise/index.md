@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 087192160fd098d63042f3d1ad16fe7a811de337
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: baac4498fcc6dd65d106166f73ca89db89cbfc6b
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321505"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821001"
 ---
 # <a name="enterprise"></a>엔터프라이즈
 
@@ -21,7 +21,7 @@ ms.locfileid: "67321505"
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Windows Template Studio는 마법사 기반 환경을 사용하여 새 UWP(유니버설 Windows 플랫폼) 앱의 만들기를 가속화하는 Visual Studio 2017 확장입니다. 결과적인 UWP 프로젝트는 검증된 패턴과 모범 사례를 구현하면서 최신 Windows 10 기능을 통합하는 잘 구성된 읽기 가능한 코드입니다.
+Windows Template Studio는 마법사 기반 환경을 사용하여 새 UWP(유니버설 Windows 플랫폼) 앱을 신속하게 만들 수 있는 Visual Studio 2017 및 Visual Studio 2019 확장입니다. 그 결과로 얻게 되는 UWP 프로젝트는 검증된 패턴과 모범 사례를 구현하면서도 최신 Windows 10 기능을 통합하는 잘 구성된 읽기 가능한 코드입니다.
 
 ![Windows Template Studio](images/windows-template-studio.png)
 

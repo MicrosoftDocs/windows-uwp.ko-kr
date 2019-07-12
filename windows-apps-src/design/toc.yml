@@ -562,6 +562,8 @@
           href: globalizing/use-mat.md
         - name: 다국어 앱 도구 키트 4.0 FAQ 및 문제 해결
           href: globalizing/mat-faq-troubleshooting.md
+        - name: UTF-8 코드 페이지 사용
+          href: globalizing/use-utf8-code-page.md
         - name: 일본의 시대 변경을 대비한 애플리케이션 준비
           href: globalizing/japanese-era-change.md
     - name: 앱 도움말에 대한 지침
