@@ -5,12 +5,12 @@ keywords: 앱 확장, 앱 서비스, 백그라운드
 ms.date: 10/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a7bb6f719f95766c07c1e5f92b50148cf0f2cce
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2cfb3be556cb681bc9ed2d9d46bb86304182e5ca
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642368"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821023"
 ---
 # <a name="create-and-host-an-app-extension"></a>앱 확장 만들기 및 호스팅
 
@@ -18,7 +18,7 @@ ms.locfileid: "57642368"
 
 이 문서에는 다음과 같은 코드 샘플이 있습니다.
 - [Math Extension 코드 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip)을 다운로드하고 압축을 풉니다.
-- Visual Studio 2017에서 MathExtensionSample.sln을 엽니다. 빌드 유형을 x86(**빌드** > **구성 관리자**에서 두 프로젝트에 대해 **플랫폼**을 **x86**으로 변경)으로 설정합니다.
+- Visual Studio 2019 MathExtensionSample.sln를 엽니다. 빌드 유형을 x86(**빌드** > **구성 관리자**에서 두 프로젝트에 대해 **플랫폼**을 **x86**으로 변경)으로 설정합니다.
 - 솔루션을 배포 합니다. **빌드할** > **솔루션을 배포**합니다.
 
 ## <a name="introduction-to-app-extensions"></a>앱 확장 소개
@@ -41,7 +41,7 @@ UWP 앱 확장은 콘텐츠와 배포 이벤트를 호스트 앱과 공유할 �
 4. 호스트와 해당 확장이 통신하는 방법을 정의합니다.
 5. 호스트 앱에서 [Windows.ApplicationModel.AppExtensions](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppExtensions) API를 사용하여 확장에 액세스할 수 있습니다.
 
-확장을 통해 새로운 기능을 추가할 수 있는 가상 계산기를 구현하는 [Math Extension 코드 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip)을 검사하여 이 작업이 어떻게 수행되는지 살펴보겠습니다. Microsoft Visual Studio 2017에서 코드 샘플의 **MathExtensionSample.sln**을 로드합니다.
+확장을 통해 새로운 기능을 추가할 수 있는 가상 계산기를 구현하는 [Math Extension 코드 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip)을 검사하여 이 작업이 어떻게 수행되는지 살펴보겠습니다. Microsoft Visual Studio 2019에 로드 **MathExtensionSample.sln** 코드 샘플에서입니다.
 
 ![Math Extension 코드 샘플](images/mathextensionhost-calctab.png)
 
@@ -120,7 +120,7 @@ _MathExtension 프로젝트에서 Package.appxmanifest:_
 
 `<uap3:AppExtension>` 특성의 의미는 다음과 같습니다.
 
-|특성|설명|필수|
+|attribute|설명|필수|
 |---------|-----------|:------:|
 |**이름**|확장 계약 이름입니다. 호스트에서 선언된 **이름**과 일치하면 해당 호스트는 이 확장을 찾을 수 있습니다.| :heavy_check_mark: |
 |**ID**| 이 확장을 고유하게 식별합니다. 동일한 확장 계약 이름을 사용하는 여러 개의 확장이 있을 수 있으므로(여러 확장을 지원하는 페인트 앱을 상상할 수 있음) ID를 사용하여 구분할 수 있습니다. 앱 확장 호스트는 ID를 사용하여 확장 유형에 대한 정보를 추측할 수 있습니다. 예를 들어 데스크톱용으로 설계된 확장과 차별화 요소인 ID를 사용하여 모바일용으로 설계된 확장 중 하나를 사용할 수 있습니다. 아래에서 설명하는 **속성** 요소를 사용할 수도 있습니다.| :heavy_check_mark: |

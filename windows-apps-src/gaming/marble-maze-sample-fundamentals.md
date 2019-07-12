@@ -6,12 +6,12 @@ ms.date: 08/22/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 기본 사항
 ms.localizationpriority: medium
-ms.openlocfilehash: 21dcbbcc1fde25877592fafe9e8372e269a72a42
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f04c17609976e8bd8f6c1c6143ed7b992b0bb3c5
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368490"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820614"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Marble Maze 샘플 기본 사항
 
@@ -25,7 +25,7 @@ ms.locfileid: "66368490"
 
 이 문서에서 UWP(유니버설 Windows 플랫폼) 게임을 계획하고 개발하는 경우에 대해 논의하는 주요 사항은 다음과 같습니다.
 
--   Visual Studio의 **DirectX 11 앱(유니버설 Windows)** Visual C++ 템플릿을 사용하여 DirectX UWP 게임을 만듭니다.
+-   사용 된 **DirectX 11 앱 (유니버설 Windows- C++/CX)** DirectX UWP 게임을 만들려면 Visual Studio에서 템플릿.
 -   Windows 런타임은 보다 현대적이고 개체 지향적인 방식으로 UWP 앱을 개발할 수 있도록 클래스와 인터페이스를 제공합니다.
 -   Hat (^) 기호를 사용 하 여 개체 참조를 사용 하 여 Windows 런타임 변수의 수명을 관리 하 [Microsoft::WRL::ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) COM 개체의 수명을 관리 하 고 [std::shared\_ptr](https://docs.microsoft.com/cpp/standard-library/shared-ptr-class) 또는 [std::unique\_ptr](https://docs.microsoft.com/cpp/standard-library/unique-ptr-class) 다른 모든 힙 할당의 수명을 관리 하려면 C++ 개체입니다.
 -   대부분의 경우 결과 코드 대신 예외 처리를 사용하여 예기치 않은 오류를 처리합니다.
@@ -36,19 +36,19 @@ ms.locfileid: "66368490"
 
 다운로드 하 고 샘플을 열 수 있습니다는 **MarbleMaze_VS2017.sln** 파일 (에 **C++** 폴더) Visual Studio에서 코드를 해야 합니다.
 
-Marble Maze에 대한 Visual Studio 프로젝트를 만들 때는 기존 프로젝트에서 시작했습니다. 그러나 DirectX UWP 게임에 필요한 기본 기능을 제공하는 기존 프로젝트가 없는 경우 작동하는 기본 3D 응용 프로그램을 제공하는 Visual Studio **DirectX 11 앱(유니버설 Windows)** 템플릿을 기준으로 프로젝트를 만드는 것이 좋습니다. 이렇게 하려면 다음 단계를 수행합니다.
+Marble Maze에 대한 Visual Studio 프로젝트를 만들 때는 기존 프로젝트에서 시작했습니다. 그러나 DirectX UWP 게임에 필요한 기본 기능을 제공 하는 기존 프로젝트를 아직 없는 경우 좋습니다 Visual Studio를 기반으로 프로젝트를 만들어야 **DirectX 11 앱 (유니버설 Windows- C++/CX)** 서식 파일을 기본 작업 3D 응용 프로그램을 제공 하기 때문입니다. 이렇게 하려면 다음 단계를 수행합니다.
 
-1. Visual Studio 2017에서 **파일 > 새로 만들기 > 프로젝트...** 를 선택합니다.
+1. Visual Studio 2019 선택 **파일 > 새로 만들기 > 프로젝트...**
 
-2. 왼쪽 사이드바의 **새 프로젝트** 창에서 **설치됨 > 템플릿 > Visual C++** 를 선택합니다.
+2. 에 **새 프로젝트를 만듭니다** 창에서 **DirectX 11 앱 (유니버설 Windows- C++/CX)** 합니다. 설치 필수 구성 요소 없을 경우이 옵션에 보이지&mdash;참조 [워크 로드 및 구성 요소 추가 또는 제거 하 여 Visual Studio 2019 수정](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) 추가 구성 요소를 설치 하는 방법에 대 한 내용은 .
 
-3. 가운데 목록에서 **DirectX 11 앱(유니버설 Windows)** 을 선택합니다. 이 옵션이 표시되지 않으면 필요한 구성 요소가 설치되어 있지 않은 것일 수 있습니다.&mdash; 추가적인 구성 요소 설치 방법에 대한 내용은 [작업과 구성 요소를 추가하거나 제거하여 Visual Studio 2017 수정](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)을 참조하세요.
+![새 프로젝트](images/vs2019-marble-maze-sample-fundamentals-1.png)
 
-4. 저장할 파일에 대해 프로젝트의 **이름**, **위치** 및 **솔루션 이름**을 지정하고 **확인**을 클릭합니다.
+3. 선택 **다음**, 한 다음 enter를 **프로젝트 이름**, **위치** 저장 될 파일에 대 한 및 **솔루션 이름**를 선택한 다음  **만들**합니다.
 
-![새 프로젝트](images/marble-maze-sample-fundamentals-1.png)
 
-**DirectX 11 앱(유니버설 Windows)** 템플릿의 한 가지 중요한 프로젝트 설정은 **/ZW** 옵션으로, 프로그램이 Windows 런타임 언어 확장을 사용할 수 있도록 합니다. 이 옵션은 Visual Studio 템플릿을 사용할 때 기본적으로 사용됩니다. Visual Studio에서 컴파일러 옵션을 설정하는 방법에 대한 자세한 내용은 [컴파일러 옵션 설정](https://docs.microsoft.com/cpp/build/reference/setting-compiler-options)을 참조하세요.
+
+한 가지 중요 한 프로젝트 설정은 합니다 **DirectX 11 앱 (유니버설 Windows- C++/CX)** 템플릿은 합니다 **/ZW** Windows 런타임 언어 확장을 사용 하 여 프로그램을 사용 하도록 설정 하는 옵션. 이 옵션은 Visual Studio 템플릿을 사용할 때 기본적으로 사용됩니다. Visual Studio에서 컴파일러 옵션을 설정하는 방법에 대한 자세한 내용은 [컴파일러 옵션 설정](https://docs.microsoft.com/cpp/build/reference/setting-compiler-options)을 참조하세요.
 
 > **주의**    는 **/ZW** 와 같은 옵션 옵션과 호환 되지 않습니다 **/clr**합니다. **/clr**의 경우 동일한 Visual C++ 프로젝트에서 .NET Framework 및 Windows 런타임을 둘 다 대상으로 지정할 수 없다는 의미입니다.
 

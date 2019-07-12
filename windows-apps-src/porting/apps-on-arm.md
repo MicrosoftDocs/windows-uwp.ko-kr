@@ -5,12 +5,12 @@ ms.date: 02/15/2018
 ms.topic: article
 keywords: windows 10 s, 항상 연결, ARM, ARM64, x86 에뮬레이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 24f33ffc1c5661c5450c24c6fa271e59788e5229
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 6bafc890ca6ea279e487e20886ce5d8eae2e6629
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319700"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821070"
 ---
 # <a name="windows-10-on-arm"></a>ARM 기반 Windows 10
 원래 Windows 10 Mobile과 달리 원래 Windows 10은 x86 및 x64 프로세서 기반 PC에서만 실행할 수 있었습니다. 이제 Fall Creators Update로 Windows 10 데스크톱(Pro 및 S 에디션)부터는 ARM64 프로세서로 구동되는 컴퓨터에서 실행될 수 있습니다. ARM CPU 아키텍처의 절전 특징은 하루 종일 배터리 사용 시간을 유지하고 모바일 데이터 네트워크를 지원할 수 있게 합니다. 이러한 PC는 훌륭한 응용 프로그램의 호환성을 제공하고 기존 x86 win32 응용 프로그램을 수정하지 않고 실행할 수 있도록 합니다. 예를 들어 Adobe Reader. 자세한 내용 또는 데모는 [항상 연결된 PC에 대한 Channel 9 비디오](https://channel9.msdn.com/Events/Build/2017/P4171)를 확인하세요.
@@ -26,7 +26,8 @@ Microsoft Edge, Cortana, 시작 메뉴, 탐색기와 같이 기본 제공되는 
 모든 x86, ARM64 및 ARM32를 실행 하는 ARM에서 Windows 10 [UWP 앱](../get-started/universal-application-platform-guide.md) Microsoft Store. 에뮬레이션을 없이도 기본적으로 실행 하는 ARM64 및 ARM32 앱에 x86 에뮬레이션에서 앱 실행 하는 동안. UWP 개발자인 경우 이 디바이스에 대한 최적의 사용자 환경을 제공하므로 앱에 대한 ARM 패키지를 제출할 수 있는지 확인하십시오. 자세한 내용은 [앱 패키지 아키텍처](../packaging/device-architecture.md)를 참조하세요.
 
 >[!NOTE]
-> 고유 하 게 ARM64 플랫폼을 대상으로 UWP 응용 프로그램을 빌드하려면 Visual Studio 2017 버전 15.9 이상이 있어야 합니다. 자세한 내용은 [이 블로그 게시물](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development/)합니다.
+> 고유 하 게 ARM64 플랫폼을 대상으로 UWP 응용 프로그램을 빌드하려면 Visual Studio 2017 버전 15.9 이상 또는 Visual Studio 2019 있어야 합니다. 자세한 내용은 [이 블로그 게시물](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development)합니다.
+
 
 >[!IMPORTANT]
 > x86 버전 이외도 사용할 수 있는 경우 사용자가 Microsoft Store에서 UWP 앱을 다운로드하면 ARM64 장치에 ARM32 버전이 설치됩니다. 아키텍처에 대한 자세한 내용은 [앱 패키지 아키텍처](../packaging/device-architecture.md)를 참조하세요.

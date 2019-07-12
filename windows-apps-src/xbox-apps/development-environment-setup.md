@@ -6,28 +6,29 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
-ms.openlocfilehash: 02c33e0dbe1209f3c31937df800ceecb354475f5
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 84818561e2f49827a1a76d446fa6a7cfcf2f9896
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322129"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820380"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Xbox 개발 환경에서의 UWP 설정
 
 Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워크를 통해 Xbox One 본체에 연결된 개발 PC로 구성됩니다.
-개발 PC에는 Windows 10, Visual Studio 2017 또는 Visual Studio 2015 업데이트 3, Windows 10 SDK 빌드 14393 이상, 그리고 다양한 지원 도구가 필요합니다.
-
+개발 PC에는 Visual Studio 2015 업데이트 3, Visual Studio 2017 또는 Visual Studio 2019에 필요합니다.
+PC 개발은 Windows 10, Windows 10 SDK 빌드 14393 이상 및 다양 한 도구를 지원 해야 합니다.
 
 이 문서에서는 개발 환경의 설정 및 테스트 단계를 설명합니다.
 
 ## <a name="visual-studio-setup"></a>Visual Studio 설치
 
-1. Visual Studio 2017, Visual Studio 2015 업데이트 3 또는 Visual Studio의 최신 릴리스를 설치 합니다. 설치에 대한 자세한 내용은 [Windows 10용 다운로드 및 도구](https://developer.microsoft.com/windows/downloads)를 참조하세요. 개발자와 보안에 대 한 최신 업데이트를 받을 수 있도록 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
+1. Visual Studio 2015 업데이트 3, Visual Studio 2017 또는 Visual Studio 2019를 설치 합니다. 설치에 대한 자세한 내용은 [Windows 10용 다운로드 및 도구](https://dev.windows.com/downloads)를 참조하세요. 개발자와 보안에 대 한 최신 업데이트를 받을 수 있도록 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
 
-2. Visual Studio 2017을 설치하는 경우 **유니버설 Windows 플랫폼 개발** 작업을 선택하도록 하세요. C++ 개발자인 경우에도 **유니버설 Windows 플랫폼 개발** 아래의 오른쪽 **요약** 창의 **C++ 유니버설 Windows 플랫폼 도구** 확인란을 선택하도록 하세요. 이는 기본 설치에 포함되지 않습니다.
 
-    ![Visual Studio 2017 설치](images/development-environment-setup-1.png)
+2. Visual Studio 2017 또는 Visual Studio 2019를 설치 하는 경우 확인을 선택 해야 합니다 **유니버설 Windows 플랫폼 개발** 워크 로드. C++ 개발자인 경우에도 **유니버설 Windows 플랫폼 개발** 아래의 오른쪽 **요약** 창의 **C++ 유니버설 Windows 플랫폼 도구** 확인란을 선택하도록 하세요. 이는 기본 설치에 포함되지 않습니다.
+
+    ![Visual Studio 2019 설치](images/development-environment-setup-1.png)
 
     Visual Studio 2015 업데이트 3을 설치하는 경우 **유니버설 Windows 앱 개발 도구** 확인란이 선택되었는지 확인합니다.
 

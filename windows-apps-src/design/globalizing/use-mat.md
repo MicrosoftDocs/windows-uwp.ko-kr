@@ -1,21 +1,21 @@
 ---
-Description: MAT(다국어 앱 도구 키트) 4.0은 UWP 앱에 번역 지원, 번역 파일 관리 및 편집기 도구를 제공하도록 Microsoft Visual Studio 2017과 통합되어 있습니다.
+Description: 다국어 앱 도구 키트 (지) 4.0의 번역 지원, 번역 파일 관리 및 편집기 도구를 사용 하 여 UWP 앱을 제공 하려면 Microsoft Visual Studio 2019 통합 됩니다.
 title: 다국어 앱 도구 키트 사용
 template: detail.hbs
 ms.date: 01/23/2018
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 49f03a1ae5ed0ea1a602103e2181c252c8c29c2f
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 428238f9d8a3468ab308841850ac13e8da22961f
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319325"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820579"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>다국어 앱 도구 키트 4.0 사용
 
-MAT(다국어 앱 도구 키트) 4.0은 UWP 앱에 번역 지원, 번역 파일 관리 및 편집기 도구를 제공하도록 Microsoft Visual Studio 2017과 통합되어 있습니다. 도구 키트에 대해 제안하는 몇 가지 값은 다음과 같습니다.
+다국어 앱 도구 키트 (지) 4.0의 번역 지원, 번역 파일 관리 및 편집기 도구를 사용 하 여 UWP 앱을 제공 하려면 Microsoft Visual Studio 2019 통합 됩니다. 도구 키트에 대해 제안하는 몇 가지 값은 다음과 같습니다.
 
 - 개발 중에 리소스 변경 사항 및 변환 상태를 관리할 수 있습니다.
 - 구성된 번역 제공자를 기반으로 언어를 선택할 UI를 제공합니다.
@@ -38,10 +38,10 @@ MAT를 효과적으로 사용하려면 먼저 앱을 지역화할 수 있어야 
 
 MAT 4.0(다국어 앱 도구 키트 4.0)에는 두 가지 부분이 있으며 각 부분에는 고유한 설치 프로그램이 포함되어 있습니다.
 
-- [Visual Studio 2017용 다국어 앱 도구 키트 4.0 확장 프로그램](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308). 여기에는 .vsix 형식의 설치 프로그램으로 Visual Studio 2017용 MAT 4.0 확장 프로그램이 포함됩니다.
+- [다국어 앱 도구 키트 4.0 확장 Visual Studio 2017 이상](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)합니다. 이.vsix 설치 관리자의 형태로 Visual Studio 2019 신체가 안전 하 게 4.0 확장이 포함 되어 있습니다.
 - [다국어 앱 도구 키트 4.0 편집기](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit). 여기에는 .msi 설치 프로그램 형식의 MAT 4.0 독립 실행형 다국어 편집기 도구가 포함됩니다. Visual Studio 2015 및 Visual Studio 2013용 MAT 4.0 확장 프로그램도 포함됩니다.
 
-Visual Studio 2017을 사용하는 경우 두 설치 프로그램을 차례로 다운로드하여 실행합니다. Visual Studio 2015 또는 Visual Studio 2013을 사용하는 경우 .msi 설치 프로그램을 다운로드하여 실행합니다.
+Visual Studio 2017 또는 Visual Studio 2019를 사용 하는 경우 다운로드 하 고 하나씩 두 설치 관리자를 실행 합니다. Visual Studio 2015 또는 Visual Studio 2013을 사용하는 경우 .msi 설치 프로그램을 다운로드하여 실행합니다.
 
 ### <a name="step-3-enable-the-multilingual-app-toolkit-for-your-project"></a>3단계. 프로젝트에 다국어 앱 도구 키트를 사용하도록 설정
 

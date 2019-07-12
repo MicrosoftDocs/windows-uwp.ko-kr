@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e5ba7ddb6ef37b4aa54584602fc890bbabc8998
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: db5ba7fb6e13d2a5aab4b74014458073aa88e7f4
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359349"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820219"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 
@@ -61,7 +61,7 @@ ms.locfileid: "66359349"
 
 ## <a name="reference-a-string-or-image-resource-by-name"></a>이름 기준으로 문자열 또는 이미지 리소스 참조
 
-[XAML 태그에서 문자열 리소스 식별자 참조](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-xaml-markup), [코드에서 문자열 리소스 식별자 참조](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-code) 및 [XAML 태그와 코드에서 이미지 또는 다른 자산 참조](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)를 참조하세요.
+[XAML 태그에서 문자열 리소스 식별자 참조](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-xaml), [코드에서 문자열 리소스 식별자 참조](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-code) 및 [XAML 태그와 코드에서 이미지 또는 다른 자산 참조](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)를 참조하세요.
 
 ## <a name="actual-and-neutral-qualifier-matches"></a>실제 및 중립적 한정자 일치
 *모든* 한정자 값에 대한 리소스 파일을 제공할 필요가 없습니다. 예를 들어 고대비 및 표준 대비에 대해 하나의 시각적 자산만 필요하다면 이러한 자산의 이름을 다음과 같이 지정할 수 있습니다.

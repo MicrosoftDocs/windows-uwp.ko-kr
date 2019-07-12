@@ -5,12 +5,12 @@ ms.date: 04/21/2017
 ms.topic: article
 keywords: windows 10, uwp, 업데이트, 백그라운드 작업, updatetask, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: d943623a9978d39fd3930edc07e7524fe1cadf55
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: fa5420b14d3d73f370031eed917e0e7c367c41c7
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321783"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820952"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>UWP 앱 업데이트 시 백그라운드 작업을 실행합니다.
 
@@ -86,12 +86,12 @@ Visual Studio 솔루션 탐색기에서 **Package.appxmanifest** 파일을 마�
 
 ![버전 업데이트](images/bump-version.png)
 
-이제 Visual Studio 2017에서 F5 키를 누르면 앱이 업데이트되고 백그라운드에서 UpdateTask 구성 요소가 활성화됩니다. 디버거가 자동으로 백그라운드 프로세스에 연결됩니다. 중단점이 실행되고 업데이트 코드 논리를 단계별로 실행할 수 있습니다.
+이제 Visual Studio 2019에서 f5 키를 누르면 앱은 업데이트 되 고 시스템을 백그라운드에서 UpdateTask 구성 요소를 활성화 합니다. 디버거가 자동으로 백그라운드 프로세스에 연결됩니다. 중단점이 실행되고 업데이트 코드 논리를 단계별로 실행할 수 있습니다.
 
 백그라운드 작업이 완료되면 같은 디버그 세션 내의 Windows 시작 메뉴에서 포그라운드 앱을 시작할 수 있습니다. 디버거가 다시 자동으로 포그라운드 프로세스에 연결되고 앱의 논리를 단계별로 실행할 수 있습니다.
 
 > [!NOTE]
-> Visual Studio 2015 사용자: 위의 단계는 Visual Studio 2017에 적용 됩니다. Visual Studio 2015를 사용하는 경우 동일할 기술을 사용하여 UpdateTask를 트리거하고 테스트할 수 있습니다. 단, Visual Studio가 연결되지 않습니다. VS 2015에서 대체 절차는 UpdateTask를 진입점으로 설정하는 [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app)를 설정하고 포그라운드 앱에서 바로 실행을 트리거하는 것입니다.
+> Visual Studio 2015 사용자: 위의 단계는 Visual Studio 2017 또는 Visual Studio 2019에 적용 됩니다. Visual Studio 2015를 사용하는 경우 동일할 기술을 사용하여 UpdateTask를 트리거하고 테스트할 수 있습니다. 단, Visual Studio가 연결되지 않습니다. VS 2015에서 대체 절차는 UpdateTask를 진입점으로 설정하는 [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app)를 설정하고 포그라운드 앱에서 바로 실행을 트리거하는 것입니다.
 
 ## <a name="see-also"></a>참조
 

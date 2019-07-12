@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 58bf8df4551c8bcfc663d2c832bef3a879ff6350
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 67a96b8423d589036ef1c6896f056d097282dc33
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317971"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820221"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>응용 프로그램에 내 피플 지원 추가
 
@@ -20,7 +20,7 @@ ms.locfileid: "67317971"
 
 ## <a name="requirements"></a>요구 사항
 
-+ Windows 10 및 Microsoft Visual Studio 2017. 설치 세부 정보는 [Visual Studio를 사용하여 설정](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up)을 참조하세요.
++ Windows 10 및 Microsoft Visual Studio 2019. 설치 세부 정보는 [Visual Studio를 사용하여 설정](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up)을 참조하세요.
 + C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. C#을 시작하려면 ["Hello, world" 앱 만들기](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)를 참조하세요.
 
 ## <a name="overview"></a>개요
@@ -37,7 +37,7 @@ ms.locfileid: "67317971"
 
 내 피플 계약에 대한 지원을 선언하려면 Visual Studio에서 응용 프로그램을 엽니다. **솔루션 탐색기**에서 **Package.appxmanifest**를 오른쪽 단추로 클릭하고**연결 프로그램**을 선택합니다. 메뉴에서 **XML(텍스트) 편집기**를 선택하고 **확인**을 클릭합니다. 매니페스트를 다음과 같이 변경합니다.
 
-**전에**
+**이전**
 
 ```xml
 <Package
@@ -53,7 +53,7 @@ ms.locfileid: "67317971"
 
 ```
 
-**After**
+**이후**
 
 ```xml
 <Package
@@ -107,7 +107,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 
 기본적으로 응용 프로그램은 개발자가 구체적으로 주석을 단 연락처의 연락처 패널에만 표시됩니다.  이는 앱을 통해 상호 작용할 수 없는 연락처와 혼동하지 않도록 방지하기 위한 조치입니다.  응용 프로그램이 알지 못하는 연락처에 대해서도 응용 프로그램을 표시하려면(예: 해당 연락처를 계정에 추가하도록 사용자를 초대하기 위해) 다음을 매니페스트에 추가하면 됩니다.
 
-**전에**
+**이전**
 
 ```Csharp
 <Applications>
@@ -121,7 +121,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 </Applications>
 ```
 
-**After**
+**이후**
 
 ```Csharp
 <Applications>
@@ -185,7 +185,7 @@ ContactPanel 개체에는 응용 프로그램에서 수신 대기해야 하는 �
 
 연락처를 배지로 표시하려면 최상위 알림 메시지 노드에는 발신 또는 관련 연락처를 나타내는 hint-people 매개 변수가 포함되어야 합니다. 이 매개 변수에 가능한 값은 다음과 같습니다.
 + **전자 메일 주소** 
-    + 예를 들어 mailto:johndoe@mydomain.com
+    + 예를 들어 [https://doi.org/10.13012/J8PN93H8](mailto:johndoe@mydomain.com)
 + **전화 번호** 
     + 예를 들어 tel:888-888-8888
 + **원격 ID** 

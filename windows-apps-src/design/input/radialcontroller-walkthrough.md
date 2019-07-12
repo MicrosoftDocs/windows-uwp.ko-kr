@@ -6,12 +6,12 @@ keywords: 다이얼, 방사형, 자습서
 ms.date: 03/11/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a16b455d692eaf9f73b7dc90200bd0f021025e52
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4cf27f6f9893b3d4cc68c899bf3ff1902320a910
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365655"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820557"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>자습서: UWP 앱에서 Surface Dial(및 기타 휠 장치) 지원
 
@@ -41,7 +41,7 @@ Surface Dial은 펜, 터치, 마우스와 같은 기본 입력 디바이스와 �
 ## <a name="prerequisites"></a>사전 요구 사항
 
 * Windows 10 크리에이터 업데이트 이상을 실행하는 컴퓨터(또는 가상 컴퓨터)
-* [Visual Studio 2017 (10.0.15063.0)](https://developer.microsoft.com/windows/downloads)
+* [Visual Studio 2019](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * 휠 디바이스(지금은 [Surface Dial](https://aka.ms/purchasesurfacedial)만)
 * Visual Studio를 사용하는 UWP(유니버설 Windows 플랫폼) 앱 개발을 처음 하는 경우, 이 자습서를 시작하기 전에 이러한 항목을 살펴보십시오.  
@@ -641,6 +641,6 @@ Surface Dial을 Surface Studio와 함께 사용하면 더 고유한 사용자 �
 #### <a name="other-samples"></a>기타 샘플
 [색 지정 책 샘플](https://github.com/Microsoft/Windows-appsample-coloringbook)
 
-[유니버설 Windows 플랫폼 샘플 (C# 및 C++)](https://go.microsoft.com/fwlink/?linkid=832713)
+[유니버설 Windows 플랫폼 샘플(C# 및 C++)](https://go.microsoft.com/fwlink/?linkid=832713)
 
 [Windows 클래식 데스크톱 샘플](https://aka.ms/radialcontrollerclassicsample)

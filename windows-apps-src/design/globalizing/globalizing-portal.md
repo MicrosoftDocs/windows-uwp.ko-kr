@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 91396051ec822f469e300f51217191fc4e704cac
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 466747cbbfe6f599f42a39f0d2766f78775ec6c8
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67714045"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820596"
 ---
 # <a name="globalization-and-localization"></a>세계화 및 지역화
 
@@ -67,6 +67,6 @@ Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용
 | [앱을 지역화할 수 확인](prepare-your-app-for-localization.md) | 현지화된 앱은 앱에 기능적인 결함은 다루지 않고 다른 시장, 언어 또는 지역에 맞게 현지화할 수 있습니다. 지역화할 앱의 가장 중요한 속성은 실행 코드가 앱의 지역화 리소스와 깔끔하게 분리된 것입니다. |
 | [국가별 글꼴](loc-international-fonts.md) | 이 항목에서는 미국 이외의 언어로 지역화 된 UWP 앱에 대 한 사용 가능한 글꼴을 보여 줍니다. 사용합니다. |
 | [양방향 텍스트에 대 한 앱 디자인](design-for-bidi-text.md) | 왼쪽에서 오른쪽 및 오른쪽에서 왼쪽 쓰기 시스템으로 구성된 스크립트를 결합할 수 있도록 양방향 텍스트 지원을 제공하도록 앱을 디자인합니다. |
-| [Multilingual App Toolkit 4.0 사용](use-mat.md) | MAT(다국어 앱 도구 키트) 4.0은 UWP 앱에 번역 지원, 번역 파일 관리 및 편집기 도구를 제공하도록 Microsoft Visual Studio 2017과 통합되어 있습니다. |
+| [Multilingual App Toolkit 4.0 사용](use-mat.md) | 다국어 앱 도구 키트 (지) 4.0의 번역 지원, 번역 파일 관리 및 편집기 도구를 사용 하 여 UWP 앱을 제공 하려면 Microsoft Visual Studio 2017 이상를 통합 합니다. |
 | [다국어 앱 도구 키트 4.0 FAQ 및 문제 해결](mat-faq-troubleshooting.md) | 이 항목에는 자주 묻는 질문과 대답, 다국어 앱 도구 키트(MAT) 4.0과 관련된 문제가 나와 있습니다. |
 | [일본어 연대 변경에 대 한 응용 프로그램 준비](japanese-era-change.md) | 2019년 5월 일본의 시대 변경과 응용 프로그램을 준비하는 방법에 대해 알아보세요. |

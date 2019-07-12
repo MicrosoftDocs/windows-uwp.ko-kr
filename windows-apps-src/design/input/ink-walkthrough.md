@@ -6,12 +6,12 @@ keywords: 잉크, 잉크 입력, 자습서
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: be7005e64a431d65006315fbee551e5c6c3a2a6f
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: 929d72da46c52cfdb510f1e1b6a97ddcbbe066d5
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343282"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820574"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>자습서: UWP 앱에서 잉크 지원
 
@@ -36,7 +36,7 @@ Windows Ink를 사용하면 상상할 수 있는 거의 모든 펜과 종이 환
 ## <a name="prerequisites"></a>사전 요구 사항
 
 * Windows 10 최신 버전을 실행하는 Windows 컴퓨터(또는 가상 컴퓨터)
-* [Visual Studio 2017 및는 RS2 SDK](https://developer.microsoft.com/windows/downloads)
+* [Visual Studio 2019 및는 RS2 SDK](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * 구성에 따라 설치 해야 합니다 [Microsoft.NETCore.UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform) NuGet 패키지 하 고 사용 하도록 설정 **개발자 모드** (설정-> 업데이트 시스템 설정에서 & 개발자가 사용 하 여 개발자 기능-> 보안->).
 * Visual Studio를 사용하는 UWP(유니버설 Windows 플랫폼) 앱 개발을 처음 하는 경우, 이 자습서를 시작하기 전에 이러한 항목을 살펴보십시오.  
@@ -464,7 +464,7 @@ Windows Ink는 잉크 스트로크를 클립보드에 복사하고 붙여넣는 
 
 ## <a name="related-articles"></a>관련 문서
 
-* [펜 상호 작용 및 UWP 앱에서 Windows 잉크](pen-and-stylus-interactions.md)
+* [UWP 앱의 펜 조작 및 Windows Ink](pen-and-stylus-interactions.md)
 
 ### <a name="samples"></a>샘플
 

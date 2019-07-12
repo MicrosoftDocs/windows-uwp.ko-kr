@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 21a053934d7391d12f7cd987026524b9ff4c279d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 707c2ed110498f4ef18fea31ace87d1fd2434112
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639988"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820338"
 ---
 # <a name="create-data-bindings"></a>데이터 바인딩 만들기
 
@@ -20,12 +20,12 @@ ms.locfileid: "57639988"
 
 PhotoLab 샘플의 간소화된 버전부터 시작합니다. 이 시작 버전에는 전체 데이터 계층 및 기본 XAML 페이지 레이아웃이 포함되어 있으며, 코드를 더 쉽게 탐색할 수 있게 해 주는 여러 보조 기능은 생략하고 있습니다. 이 자습서에서는 전체적인 앱을 빌드하지 않으므로 최종 버전을 확인하여 사용자 지정 애니메이션 및 휴대폰 지원과 같은 기능을 살펴보세요. [Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab) 리포에서 루트 폴더 최종 버전을 찾을 수 있습니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
-* [Visual Studio 2017 및 Windows 10 SDK 최신 버전](https://developer.microsoft.com/windows/downloads).
+* [Windows 10 SDK의 최신 버전과 visual Studio 2019](https://developer.microsoft.com/windows/downloads)합니다.
 
-## <a name="part-0-get-the-code"></a>0 부: 코드 다운로드
-이 실습은 [xaml-basics-starting-points/data-binding](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/data-binding) 폴더의 PhotoLab 샘플 리포지토리에서 시작됩니다. 리포지토리를 복제 또는 다운로드 한 후에는 Visual Studio 2017로 PhotoLab.sln을 열어 프로젝트를 편집할 수 있습니다.
+## <a name="part-0-get-the-code"></a>0부: 코드 다운로드
+이 실습은 [xaml-basics-starting-points/data-binding](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/data-binding) 폴더의 PhotoLab 샘플 리포지토리에서 시작됩니다. 복제 또는 리포지토리를 다운로드 한 후에 Visual Studio 2019로 PhotoLab.sln를 열어 프로젝트를 편집할 수 있습니다.
 
 PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
 
@@ -35,7 +35,7 @@ PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
 **DetailPage.xaml:** 하나의 사진을 선택한 후에 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
 ![DetailPage](../design/basics/images/xaml-basics/detailpage.png)
 
-## <a name="part-1-replace-the-placeholders"></a>1부: 자리 표시자를 대체 합니다.
+## <a name="part-1-replace-the-placeholders"></a>1단계: 자리 표시자를 대체 합니다.
 
 여기에서는 데이터 템플릿 XAML에서 일회성 바인딩을 만들어 자리 표시자 콘텐츠 대신 실제 이미지와 이미지 메타데이터를 표시합니다. 
 
@@ -211,7 +211,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
 
 * **ImageGridView_DefaultItemTemplate**라는 이름의 **DataTemplate**을 찾고 템플릿 상단에서 **Grid** 컨트롤의 **Height** 및 **Width** 값을 바꿉니다.
 
-    **전에**
+    **이전**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -220,7 +220,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
               Margin="{StaticResource LargeItemMargin}">
     ```
     
-    **후**
+    **이후**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -303,7 +303,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
 
 4. MainPage.xaml에서 **ImageGridView_DefaultItemTemplate**라는 이름의 **DataTemplate**을 찾고 템플릿 상단에서 **Grid** 컨트롤의 **Height** 및 **Width** 값을 바꿉니다. (이 자습서의 이전 파트에서 컨트롤 간 바인딩을 수행한 경우 **Value**를 **ItemSize**로, **ZoomSlider**를 **page**로만 변경할 수 있습니다. Height 및 Width 모두에 대해 이 작업을 수행해야 합니다!)
 
-    **전에**
+    **이전**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -312,7 +312,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
             Margin="{StaticResource LargeItemMargin}">
     ```
     
-    **후**
+    **이후**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">

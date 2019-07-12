@@ -6,12 +6,12 @@ keywords: 앱에 통신, IPC, 메시징, 백그라운드 통신을 앱에 app se
 ms.date: 01/16/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 21e1b409406cf03d83ff10b04d96d7ff9f0413dd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d122a51c53fc7eb32ab79f6decc570238af22973
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370742"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821042"
 ---
 # <a name="create-and-consume-an-app-service"></a>앱 서비스 만들기 및 사용
 
@@ -27,10 +27,10 @@ Windows 10 버전 1607부터 호스트 앱과 같은 프로세스에서 실행�
 
 1. Visual Studio 2015 이상에서는 새 UWP 앱 프로젝트를 만들고 이름을 **AppServiceProvider**합니다.
     1. 선택 **파일 > 새로 만들기 > 프로젝트...** 
-    2. 에 **새 프로젝트** 대화 상자에서 **설치 됨 > Visual C# > 비어 있는 앱 (유니버설 Windows)** 합니다. 이렇게 하면 다른 UWP 앱에서 앱 서비스 사용할 수 있게 됩니다.
-    3. 프로젝트 이름을 **AppServiceProvider**, 한 위치를 선택 하 고 클릭 **확인**합니다.
+    2. 에 **새 프로젝트를 만듭니다** 대화 상자에서 **비어 있는 앱 (유니버설 Windows) C#** 합니다. 이렇게 하면 다른 UWP 앱에서 앱 서비스 사용할 수 있게 됩니다.
+    3. 클릭 **다음**, 한 다음 프로젝트의 이름을 **AppServiceProvider**를 한 위치를 선택 하 고 클릭 **만들기**합니다.
 
-2. 선택 하 라는 메시지가 표시 되는 경우는 **대상** 하 고 **최소 버전** 이상 프로젝트를 선택 **10.0.14393**합니다. 새 사용 하려는 경우 **SupportsMultipleInstances** 특성을 사용 해야 Visual Studio 2017 및 대상 **10.0.15063** (**Windows 10 크리에이터 스 업데이트**) 이상.
+2. 선택 하 라는 메시지가 표시 되는 경우는 **대상** 하 고 **최소 버전** 이상 프로젝트를 선택 **10.0.14393**합니다. 새 사용 하려는 경우 **SupportsMultipleInstances** 특성을 사용 해야 Visual Studio 2017 또는 Visual Studio 2019 및 대상 **10.0.15063** (**Windows10크리에이터업데이트**) 이상.
 
 <span id="appxmanifest"/>
 

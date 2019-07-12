@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d0f6cdf4818743e3b5a3cc7c5a6b13f69f40afa
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f0549aa1e20d8ed787eed550f4a7e7171a812831
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318455"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820187"
 ---
 # <a name="my-people-sharing"></a>내 피플 공유
 
@@ -20,7 +20,7 @@ ms.locfileid: "67318455"
 
 ## <a name="requirements"></a>요구 사항
 
-+ Windows 10 및 Microsoft Visual Studio 2017. 설치 세부 정보는 [Visual Studio를 사용하여 설정](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up)을 참조하세요.
++ Windows 10 및 Microsoft Visual Studio 2019. 설치 세부 정보는 [Visual Studio를 사용하여 설정](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up)을 참조하세요.
 + C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. C#을 시작하려면 ["Hello, world" 앱 만들기](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)를 참조하세요.
 
 ## <a name="overview"></a>개요
@@ -40,7 +40,7 @@ ms.locfileid: "67318455"
 공유 대상으로써 응용 프로그램에 대한 지원을 선언하려면 먼저 Visual Studio에서 응용 프로그램을 엽니다. **솔루션 탐색기**에서 **Package.appxmanifest**를 오른쪽 단추로 클릭하고**연결 프로그램**을 선택합니다. 메뉴에서 **XML(텍스트) 편집기**를 선택하고 **확인**을 클릭합니다. 그런 다음 매니페스트를 다음과 같이 변경합니다.
 
 
-**전에**
+**이전**
 ```xml
 <Applications>
     <Application Id="MyApp"
@@ -50,7 +50,7 @@ ms.locfileid: "67318455"
 </Applications>
 ```
 
-**After**
+**이후**
 
 ```xml
 <Applications>

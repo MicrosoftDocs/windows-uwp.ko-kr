@@ -6,12 +6,12 @@ ms.date: 03/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: debc4572a26db9e849dd31f17b114f15aa9ef055
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fe1c2130c3fae70f8aa5aa18acee83a6b6247ef5
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362488"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820153"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Device Portal에 대한 사용자 지정 플러그 인 작성
 
@@ -22,7 +22,7 @@ Windows Device Portal을 사용하여 웹 페이지를 호스팅하고 진단 �
 ## <a name="create-a-new-uwp-app-project"></a>새 UWP앱 프로젝트 만들기
 이 가이드에서는 편의상 모두를 한 솔루션으로 만듭니다.
 
-Microsoft Visual Studio 2017에서 UWP 앱 프로젝트를 만듭니다. '파일 > 새 프로젝트 및 템플릿 선택 > Visual C# > Windows Universal > 비어 있는 앱(Windows Universal)'으로 이동합니다. "DevicePortalProvider"로 이름을 지정합니다. 이 앱이 앱 서비스를 포함하는 앱이 됩니다. 지원을 위해 크리에이터 업데이트 SDK를 선택했는지 확인합니다.  Visual Studio를 업데이트하거나 새 SDK를 설치해야 하는 경우 자세한 내용은 [여기](https://blogs.windows.com/buildingapps/2017/04/05/updating-tooling-windows-10-creators-update/)를 참조하세요. 
+Microsoft Visual Studio 2019, 새 UWP 앱 프로젝트를 만듭니다. 파일로 이동 > 새로 만들기 > 프로젝트 및 선택 비어 있는 앱 (유니버설 Windows)에 대 한 C#, 다음을 클릭 하 고 있습니다. 새 프로젝트 대화 상자를 구성 합니다. 프로젝트 이름을 "DevicePortalProvider" 고 만들기를 클릭 합니다. 이 앱이 앱 서비스를 포함하는 앱이 됩니다. "Windows 10 크리에이터 스 업데이트 (10.0;를 선택 했는지 확인 빌드 15063) "를 지원 합니다.  Visual Studio를 업데이트하거나 새 SDK를 설치해야 하는 경우 자세한 내용은 [여기](https://blogs.windows.com/buildingapps/2017/04/05/updating-tooling-windows-10-creators-update/)를 참조하세요. 
 
 ## <a name="add-the-deviceportalprovider-extension-to-your-packageappxmanifest-file"></a>package.appxmanifest 파일에 devicePortalProvider 확장 추가
 앱을 Device Portal 플러그 인으로 작동하게 하기 위해 *package.appxmanifest* 파일에 일부 코드를 추가해야 합니다. 먼저 파일의 위쪽에 다음 네임스페이스 정의를 추가합니다. `IgnorableNamespaces` 특성에도 추가합니다.

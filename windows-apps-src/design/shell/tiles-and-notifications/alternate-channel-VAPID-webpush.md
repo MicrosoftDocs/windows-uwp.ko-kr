@@ -1,26 +1,29 @@
 ---
-title: UWP의 Webpush 및 VAPID를 사용 하 여 대체 푸시 채널
+title: UWP의 VAPID를 사용 하 여 대체 푸시 채널
 description: 대체 푸시 채널을 사용 하 여 UWP 앱에서 VAPID 프로토콜을 사용 하는 것에 대 한 지침
 ms.date: 01/10/2017
 ms.topic: article
 keywords: windows 10, uwp, WinRT API WNS
 localizationpriority: medium
-ms.openlocfilehash: bf224b6c0997ce8af86ab2919a1d0513f619a8a3
-ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.openlocfilehash: 6512eb891967b6c17bc4845d5e47639ae3c97d31
+ms.sourcegitcommit: 0c97c025d751082db3424cb9941bf6688d9b7381
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59067828"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67835021"
 ---
-# <a name="alternate-push-channels-using-webpush-and-vapid-in-uwp"></a>UWP의 Webpush 및 VAPID를 사용 하 여 대체 푸시 채널 
-부터는 Fall Creators Update에 UWP 앱 수 사용 하 여 웹 푸시 VAPID 인증을 사용 하 여 푸시 알림을 보내도록 합니다.  
+# <a name="alternate-push-channels-using-vapid-in-uwp"></a>UWP의 VAPID를 사용 하 여 대체 푸시 채널 
+UWP 앱 Fall Creators Update부터 푸시 알림을 보내도록 VAPID 인증을 사용할 수 있습니다.  
+
+> [!NOTE]
+> 이러한 Api는 다른 웹 사이트를 호스팅하는 본인을 대신해 채널을 만들기는 웹 브라우저 설계 되었습니다.  웹 앱에 알림 webpush 추가 하려는 경우에 서비스 작업자 만들고 알림을 전송 하기 위한 WhatWG 및 W3C 표준을 준수 하는 것이 좋습니다.
 
 ## <a name="introduction"></a>소개
 웹 푸시 표준의 도입을 통해 웹 사이트 사용자가 웹 사이트에 없는 경우에 알림을 보낼 앱 처럼 더 작동할 수 있습니다.
 
 웹 사이트에서 공급 업체에서 서버 푸시를 사용 하 여 인증을 허용 하도록 생성 된 VAPID 인증 프로토콜을 알 수 없는 방식으로 합니다. VAPID 프로토콜을 사용 하는 모든 공급 업체를 사용 하 여 웹 사이트 실행 되는 브라우저를 모른 채 푸시 알림을 보낼 수 있습니다. 구현 하는 각 플랫폼에 대해 다른 푸시 프로토콜을 통해 상당히 향상 된 기능입니다. 
 
-UWP 앱 이러한 장점에도 사용 하 여 푸시 알림을 보내도록 webpush 및 VAPID를 사용할 수 있습니다. 이러한 프로토콜 새 앱에 대 한 개발 시간을 절약 하 고 기존 앱에 대 한 플랫폼 간 지원을 간소화할 수 있습니다. 또한 엔터프라이즈 앱 또는 테스트용 로드 앱에 Microsoft Store 등록 하지 않고 알림을 보낼 이제 수 있습니다. 다행히 모든 플랫폼에서 사용자를 사용 하 여 참여 하는 새로운 방법을 엽니다.  
+UWP 앱 VAPID를 사용 하 여 이러한 장점에도 사용 하 여 푸시 알림을 보낼 수 있습니다. 이러한 프로토콜 새 앱에 대 한 개발 시간을 절약 하 고 기존 앱에 대 한 플랫폼 간 지원을 간소화할 수 있습니다. 또한 엔터프라이즈 앱 또는 테스트용 로드 앱에 Microsoft Store 등록 하지 않고 알림을 보낼 이제 수 있습니다. 다행히 모든 플랫폼에서 사용자를 사용 하 여 참여 하는 새로운 방법을 엽니다.  
 
 ## <a name="alternate-channels"></a>대체 채널 
 UWP, 이러한 VAPID 채널 대체 채널 이라고 하 고 웹 푸시 채널에 유사한 기능을 제공 합니다. 메시지 암호화 사용을 실행 하는 앱 백그라운드 작업 트리거를 단일 앱에서 여러 채널을 허용 합니다. 다른 채널 형식 간의 차이점에 대 한 자세한 내용은 참조 하십시오 [올바른 채널 선택](channel-types.md)합니다.
@@ -106,8 +109,8 @@ Note는 알림을 기본 채널에서 들어오는 경우 다음 채널 ID 설�
 다른 형태의 암호화를 사용 하려는 경우 키는 원시 사용 합니다. 헤더 속성입니다. 모든 푸시 서버로 POST 요청에 포함 된 암호화 헤더 포함 합니다. 여기에서 앱 메시지를 해독 하려면 키를 사용할 수 있습니다.  
 
 ## <a name="related-topics"></a>관련 항목
-- [알림 채널 유형](channel-types.md)
-- [WNS(Windows 푸시 알림 서비스)](windows-push-notification-services--wns--overview.md)
+- [알림 채널 형식입니다.](channel-types.md)
+- [Windows 푸시 알림 서비스 (WNS)](windows-push-notification-services--wns--overview.md)
 - [PushNotificationChannel 클래스](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannel)
 - [PushNotificationChannelManager 클래스](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager)
 

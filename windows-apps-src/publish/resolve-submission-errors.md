@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1df93195578c1e7c6fd87ab7403375a1a3dcc825
-ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
+ms.openlocfilehash: 8ec2b10b402db7398dad6643355e064c26318170
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468907"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820598"
 ---
 # <a name="resolve-submission-errors"></a>제출 오류 해결
 
@@ -25,7 +25,7 @@ UWP 앱을 제출 하는 경우 스토어 용 Visual Studio에서 생성 된.msi
 
 ## <a name="desktop-application"></a>데스크톱 응용 프로그램
 
-Win32와 UWP 모두 이진 파일을 포함 하는 패키지를 제출 하려는 경우 Visual Studio 2017 업데이트 4에서 사용할 수 있는 Windows 패키징 프로젝트를 사용 하 여 해당 패키지를 만들 수 있는지 확인 합니다. UWP 프로젝트 템플릿을 사용 하 여 패키지를 만들 수는 패키지 저장소 또는 테스트용으로 로드를 다른 Pc에 전송할 수 없습니다 수 있습니다. 패키지를 성공적으로 게시 하는 경우에 사용자의 PC에서 예기치 않게에서 동작할 수 있습니다. 자세한 내용은 참조 하세요. [Visual Studio (데스크톱 브리지)를 사용 하 여 응용 프로그램을 패키징할]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)합니다.
+Win32와 UWP 모두 이진 파일을 포함 하는 패키지를 제출 하려는 경우 Visual Studio 2017 업데이트 4 및 이후 버전에서 사용할 수 있는 Windows 패키징 프로젝트를 사용 하 여 해당 패키지를 만들 수 있는지 확인 합니다. UWP 프로젝트 템플릿을 사용 하 여 패키지를 만들 수는 패키지 저장소 또는 테스트용으로 로드를 다른 Pc에 전송할 수 없습니다 수 있습니다. 패키지를 성공적으로 게시 하는 경우에 사용자의 PC에서 예기치 않게에서 동작할 수 있습니다. 자세한 내용은 참조 하세요. [Visual Studio (데스크톱 브리지)를 사용 하 여 응용 프로그램을 패키징할]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)합니다.
 
 ## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8.x 및 이전 버전
 

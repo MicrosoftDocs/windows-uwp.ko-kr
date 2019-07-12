@@ -6,12 +6,12 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 956e4050e3077ac827cf8107470698b42878a5e1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 182a2862589ef5b6b0bd5d76cb1b9ef9599b2ed6
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370871"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820629"
 ---
 # <a name="add-a-splash-screen"></a>시작 화면 추가
 
@@ -27,7 +27,7 @@ Visual Studio 템플릿을 사용하여 앱을 만드는 경우 기본 이미지
 
     다음 스크린샷은 Visual Studio의 "Package.appxmanifest" 창을 보여 줍니다. 프로젝트 유형에 따라 약간 다른 시각적 자산 집합이 표시됩니다.
 
-    ![Visual Studio 2017의 "Package.appxmanifest" 창 스크린샷](images/appmanifest.png)
+    ![Visual Studio 2019 "package.appxmanifest" 창의 스크린샷](images/appmanifest.png)
 
     텍스트 편집기에서 "Package.appxmanifest"를 열면 [**SplashScreen 요소**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-splashscreen)가 [**VisualElements 요소**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements)의 자식 요소로 표시됩니다. 매니페스트 파일의 기본 시작 화면 태그는 텍스트 편집기에서 다음과 같이 나타납니다.
 

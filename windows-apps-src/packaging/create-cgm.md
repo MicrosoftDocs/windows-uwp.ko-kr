@@ -6,12 +6,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: Windows 10, uwp, 콘텐츠 그룹 맵, 스트리밍 설치, uwp 앱 스트리밍 설치, 소스 콘텐츠 그룹 맵
 ms.localizationpriority: medium
-ms.openlocfilehash: 882db0a6a97c5ee203a072156ca3eb82615607bb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7e25f30a2288f6be76ce108de2056ab6407187de
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57647948"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821029"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>소스 콘텐츠 그룹 맵 생성 및 변환
 
@@ -143,7 +143,7 @@ Visual Studio를 사용하여 앱을 개발한 경우에는 필수 콘텐츠 그
 
 ## <a name="convert-sourceappxcontentgroupmapxml-to-appxcontentgroupmapxml"></a>SourceAppxContentGroupMap.xml을 AppxContentGroupMap.xml로 변환
 
-`SourceAppxContentGroupMap.xml`을 최종 버전인 `AppxContentGroupMap.xml`으로 변환하려면 Visual Studio 2017 또는 **MakeAppx.exe** 명령줄 도구를 사용할 수 있습니다.
+변환 하는 `SourceAppxContentGroupMap.xml` 최종 버전으로 `AppxContentGroupMap.xml`, Visual Studio 2019를 사용할 수 있습니다 또는 **MakeAppx.exe** 명령줄 도구입니다.
 
 Visual Studio를 사용하여 콘텐츠 그룹 맵을 변환하는 방법:
 1. `SourceAppxContentGroupMap.xml`을 프로젝트 폴더에 추가
