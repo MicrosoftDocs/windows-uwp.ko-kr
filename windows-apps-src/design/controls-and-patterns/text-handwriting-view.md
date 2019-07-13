@@ -11,12 +11,12 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f7b31898e6a90410e4edc73ee36f71a7e4d94155
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 262e033c8393544e3b5b8394d0e9a5be410cd080
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63774779"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319472"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>필기 보기를 사용한 텍스트 입력
 
@@ -275,8 +275,7 @@ private void SampleTextBox_TextChanged(object sender, TextChangedEventArgs e)
 
 ![사용자 지정 UI가 있는 TextBox](images/handwritingview/textbox-with-customui.png)
 
-다음 예제에서는 [Popup](https://docs.microsoft.com/uwp/api/windows.ui.popups)의 위치를 설정하기 위해 [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview)의 [Opened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.opened), [Closed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.closed
-) 및 [SizeChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged) 이벤트를 수신 대기하는 방법을 보여줍니다.
+다음 예제에서는 [Popup](https://docs.microsoft.com/uwp/api/windows.ui.popups)의 위치를 설정하기 위해 [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview)의 [Opened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.opened), [Closed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.closed) 및 [SizeChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged) 이벤트를 수신 대기하는 방법을 보여줍니다.
 
 ```csharp
 private void Search_HandwritingViewOpened(

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 43423bc1475e446fcc0c6ab3f0d65b5a844d19d2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 97407ec48eaac3415980b9313092b21e9532250a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66370685"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321116"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>복잡한 UWP(유니버설 Windows 플랫폼) 앱 빌드
 
@@ -220,7 +220,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 
 ![앱을 위한 PC 및 모바일 디자인](images/ux-budgettracker1-md-notablet.png)
 
-다양한 화면 크기 디자인에 대한 자세한 내용은 [반응형 디자인에 대한 화면 크기 및 중단점](https://docs.microsoft.com/en-us/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design)을 참조하세요.
+다양한 화면 크기 디자인에 대한 자세한 내용은 [반응형 디자인에 대한 화면 크기 및 중단점](https://docs.microsoft.com/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)을 참조하세요.
 
 ## <a name="make-a-good-first-impression"></a>좋은 첫인상 주기
 
@@ -238,4 +238,4 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 
 앱 개발을 많이 진행하기 전에 지침, 사용자 인상 및 요구 사항을 기준으로 디자인 또는 프로토타입의 유효성을 검사하여 나중에 다시 작업하는 일이 없도록 합니다. 각 기능에는 앱을 세련되게 꾸미는 데 도움이 되는 UX 지침 세트와 Microsoft Store에 앱을 게시하기 위해 충족해야 하는 Store 요구 사항 세트가 있습니다. [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit)를 사용하여 기술 사양이 스토어 요구 사항에 맞는지 테스트할 수 있습니다. Microsoft Visual Studio의 성능 도구를 사용하여 모든 시나리오에서 최상의 환경을 사용자에게 제공하도록 설정할 수도 있습니다.
 
-[UWP 앱에 대한 자세한 UX 지침](https://developer.microsoft.com/windows/design)을 사용하여 중요한 기능에 집중할 수 있습니다. [Visual Studio 성능 도구](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015)를 사용하여 각 앱의 시나리오 성능을 분석할 수 있습니다.
+[UWP 앱에 대한 자세한 UX 지침](https://developer.microsoft.com/windows/apps/design)을 사용하여 중요한 기능에 집중할 수 있습니다. [Visual Studio 성능 도구](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015)를 사용하여 각 앱의 시나리오 성능을 분석할 수 있습니다.

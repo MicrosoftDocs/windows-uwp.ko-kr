@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - javascript
-ms.openlocfilehash: 1473d93bc10f50bf361f92f753adb786e502fc3a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 9adc872554e0823eb0a4e1fdbebef19b876b6198
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369430"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321414"
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 
@@ -259,7 +259,7 @@ UWP(유니버설 Windows 플랫폼) 앱은 기본적으로 특정 파일 시스�
 
 | 위치 | 기능 | Windows.Storage API |
 |----------|------------|---------------------|
-| 사용자에게 액세스 권한이 있는 모든 파일입니다. 예: 문서, 그림, 사진, 다운로드, 데스크톱, OneDrive 등. | broadFileSystemAccess<br><br>이는 제한된 접근 권한 값입니다. 액세스는 **설정** > **개인 정보** > **파일 시스템**에서 구성할 수 있습니다. 사용자가 언제든지 **설정**에서 권한을 부여 또는 거부할 수 있으므로 앱은 이러한 변경에 탄력적으로 반응할 수 있어야 합니다. 앱에 액세스 권한이 없으면 [Windows 10 파일 시스템 액세스 및 개인 정보](https://privacy.microsoft.com/en-US/windows-10-file-system-access-and-privacy) 문서에 대한 링크를 제공하여 사용자가 설정을 변경할지 묻도록 선택할 수 있습니다. 사용자는 앱을 닫고, 설정을 전환하고, 앱을 다시 시작해야 합니다. 이러한 앱이 실행되는 동안 사용자가 설정을 전환하면 플랫폼은 사용자가 상태를 저장한 후 새 설정 저장을 위해 앱을 강제로 종료할 수 있도록 앱을 일시 중단합니다. 2018년 4월 업데이트에서 사용 권한의 기본값은 켜짐입니다. 2018년 10월 업데이트에서 기본값은 꺼짐입니다.<br /><br />이 접근 권한 값을 선언하는 Microsoft Store에 앱을 제출하는 경우 앱에 이 접근 권한 값이 필요한 이유와 이를 사용할 방법에 대한 추가 설명을 제공해야 합니다.<br>이 접근 권한 값은 [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage) 네임스페이스의 API에 대해 작동합니다. 앱에서 이 접근 권한 값을 사용하도록 설정하는 방법의 예를 보려면 이 문서 끝에 나오는 **예제** 섹션을 참조하세요. | 해당 없음 |
+| 사용자에게 액세스 권한이 있는 모든 파일입니다. 예: 문서, 그림, 사진, 다운로드, 데스크톱, OneDrive 등. | broadFileSystemAccess<br><br>이는 제한된 접근 권한 값입니다. 액세스는 **설정** > **개인 정보** > **파일 시스템**에서 구성할 수 있습니다. 사용자가 언제든지 **설정**에서 권한을 부여 또는 거부할 수 있으므로 앱은 이러한 변경에 탄력적으로 반응할 수 있어야 합니다. 앱에 액세스 권한이 없으면 [Windows 10 파일 시스템 액세스 및 개인 정보](https://support.microsoft.com/help/4468237/windows-10-file-system-access-and-privacy-microsoft-privacy) 문서에 대한 링크를 제공하여 사용자가 설정을 변경할지 묻도록 선택할 수 있습니다. 사용자는 앱을 닫고, 설정을 전환하고, 앱을 다시 시작해야 합니다. 이러한 앱이 실행되는 동안 사용자가 설정을 전환하면 플랫폼은 사용자가 상태를 저장한 후 새 설정 저장을 위해 앱을 강제로 종료할 수 있도록 앱을 일시 중단합니다. 2018년 4월 업데이트에서 사용 권한의 기본값은 켜짐입니다. 2018년 10월 업데이트에서 기본값은 꺼짐입니다.<br /><br />이 접근 권한 값을 선언하는 Microsoft Store에 앱을 제출하는 경우 앱에 이 접근 권한 값이 필요한 이유와 이를 사용할 방법에 대한 추가 설명을 제공해야 합니다.<br>이 접근 권한 값은 [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage) 네임스페이스의 API에 대해 작동합니다. 앱에서 이 접근 권한 값을 사용하도록 설정하는 방법의 예를 보려면 이 문서 끝에 나오는 **예제** 섹션을 참조하세요. | 해당 없음 |
 | 문서 | DocumentsLibrary <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. <br><br>앱에서 다음 작업을 하려는 경우 이 접근 권한 값을 사용합니다.<br>- 유효한 OneDrive URL 또는 리소스 ID를 사용하여 특정 OneDrive 콘텐츠에 대한 플랫폼 간 오프라인 액세스를 용이하게 합니다.<br>- 오프라인에 있는 동안 열려 있는 파일을 사용자의 OneDrive에 자동으로 저장합니다. | [KnownFolders.DocumentsLibrary](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.documentslibrary) |
 | 음악     | MusicLibrary <br>[음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.MusicLibrary](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.musiclibrary) |    
 | 사진  | PicturesLibrary<br> [음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.PicturesLibrary](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.pictureslibrary) |  

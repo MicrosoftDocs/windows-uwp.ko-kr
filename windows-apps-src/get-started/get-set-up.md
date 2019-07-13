@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d0f3e7ca98f01750d7d05cc06b56783e3b32359
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 30ffec0f2a5e771e649eda6240d9e7ef90f50890
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564465"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318790"
 ---
 # <a name="get-set-up"></a>설정
 
@@ -34,7 +34,7 @@ Visual Studio를 설치할 때 다음과 같이 유니버설 Windows 앱 개발 
 
 ![UWP용 Visual Studio 도구](images/vs-2017-community-setup.png)
 
-Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](https://www.visualstudio.com/vs/getting-started)을 참조하세요.
+Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](https://visualstudio.microsoft.com/vs/getting-started/)을 참조하세요.
 
 이미 Visual Studio를 사용하고 있지만 일부 구성 요소가 없는 것을 발견한 경우 *새 프로젝트* 대화 상자에서 설치 관리자를 다시 실행할 수 있습니다.
 

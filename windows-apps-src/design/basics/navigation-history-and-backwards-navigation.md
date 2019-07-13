@@ -3,16 +3,16 @@ Description: UWP 앱 내에서 사용자의 탐색 기록을 살펴볼 수 있�
 title: 탐색 기록 및 뒤로 탐색(Windows 앱)
 template: detail.hbs
 op-migration-status: ready
-ms.date: 4/9/2019
+ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e3ab6760ed3eff1d284e51205de261796db0fb2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: de2e70a09f75ed5380a47bed225c0689eb029e89
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63799104"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713794"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>UWP 앱에 대한 탐색 기록 및 뒤로 탐색
 
@@ -31,7 +31,17 @@ UWP(유니버설 Windows 플랫폼)는 앱 내에서 그리고 디바이스에 �
 ![앱 UI의 왼쪽 위에 있는 뒤로 단추](images/back-nav/BackEnabled.png)
 
 ```xaml
-<Button Style="{StaticResource NavigationBackButtonNormalStyle}"/>
+<Page>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Style="{StaticResource NavigationBackButtonNormalStyle}"/>
+
+    </Grid>
+</Page>
 ```
 
 앱의 위쪽에 [CommandBar](../controls-and-patterns/app-bars.md)가 있다면 높이가 44px인 단추 컨트롤과 48px인 AppBarButton이 매끄럽게 정렬되지 않을 것입니다. 이런 문제를 방지하려면 단추 컨트롤 위쪽을 48px 범위 내로 맞춥니다.
@@ -39,8 +49,23 @@ UWP(유니버설 Windows 플랫폼)는 앱 내에서 그리고 디바이스에 �
 ![위쪽 명령 모음의 뒤로 단추](images/back-nav/CommandBar.png)
 
 ```xaml
-<Button VerticalAlignment="Top" HorizontalAlignment="Left" 
-Style="{StaticResource NavigationBackButtonNormalStyle}"/>
+<Page>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <CommandBar>
+            <CommandBar.Content>
+                <Button Style="{StaticResource NavigationBackButtonNormalStyle}" VerticalAlignment="Top"/>
+            </CommandBar.Content>
+        
+            <AppBarButton Icon="Delete" Label="Delete"/>
+            <AppBarButton Icon="Save" Label="Save"/>
+        </CommandBar>
+    </Grid>
+</Page>
 ```
 
 앱의 이동 UI 요소를 최소화 하려면 백스택에 아무 것도 없을 때 사용할 수 없는 뒤로 단추를 표시하세요. 하지만 앱에 백스택이 없어야 하는 경우에는 뒤로 단추를 표시할 필요가 없습니다.
@@ -287,17 +312,6 @@ bool App::On_BackRequested()
 앱에서 [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 계속 사용하는 경우 시스템 UI는 제목 표시줄 내부에 시스템 뒤로 단추를 렌더링합니다. (뒤로 단추의 모양과 사용자 상호 작용은 이전 빌드와 달라진 것이 없습니다.)
 
 ![제목 표시줄 뒤로 단추](images/nav-back-pc.png)
-
-### <a name="system-back-bar"></a>시스템 뒤로 표시줄
-
-> [!NOTE]
-> "시스템 뒤로 표시줄"은 공식 명칭이 아니라 단지 설명일 뿐입니다.
-
-시스템 뒤로 표시줄은 탭 밴드와 앱의 콘텐츠 영역 사이에 삽입되는 “밴드”입니다. 이 밴드는 앱의 가로를 따라 흐르고, 왼쪽 가장자리에 뒤로 단추가 표시됩니다. 뒤로 단추에 적절한 터치 대상 크기를 확보할 수 있도록 이 밴드의 세로 높이는 32픽셀입니다.
-
-시스템 뒤로 표시줄은 뒤로 단추 표시 여부에 따라 동적으로 표시됩니다. 뒤로 단추가 표시된 경우 시스템 뒤로 표시줄이 삽입되고, 앱 콘텐츠가 탭 밴드 아래로 32픽셀만큼 이동됩니다. 뒤로 단추가 숨겨진 경우 시스템 뒤로 표시줄이 동적으로 제거되고, 앱 콘텐츠가 탭 밴드와 만나도록 위로 32픽셀만큼 이동됩니다. 앱의 UI가 위나 아래로 이동하지 않도록 [앱 내 뒤로 단추](#back-button)를 구현하는 것이 좋습니다.
-
-[제목 표시줄 사용자 지정](../shell/title-bar.md)은 앱 탭 및 시스템 뒤로 표시줄 모두에 적용됩니다. 앱에서 [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar)를 사용하여 배경색과 전경색 속성을 지정하면 해당 색상이 탭과 시스템 뒤로 표시줄에 적용됩니다.
 
 ## <a name="guidelines-for-custom-back-navigation-behavior"></a>사용자 지정 뒤로 탐색 동작 지침
 

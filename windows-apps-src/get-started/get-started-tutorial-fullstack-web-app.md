@@ -5,12 +5,12 @@ keywords: 호스트된 웹앱, HWA, REST API, 단일 페이지 앱, SPA
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c38a7182cd27abcfb0de66c721f0e06b95b695d5
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: b1b837d6585507311dc2246d42f3094ce8b07421
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66366981"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321172"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>REST API 백 엔드를 사용하는 단일 페이지 웹앱 만들기
 
@@ -233,7 +233,7 @@ Swagger 파일(config\swagger.json)은 처리기 파일(\handlers 내)로 정의
  - 이 [guess.js](https://raw.githubusercontent.com/Microsoft/Windows-tutorials-web/master/Single-Page-App-with-REST-API/backend/data/guess.js?token=ACEfkvY69Zr1AZQ4iXgfCgDxeinT21bBks5ZFhYBwA%3D%3D) 코드를 **data\guess.js** 파일에
  - 이 [new.js](https://raw.githubusercontent.com/Microsoft/Windows-tutorials-web/master/Single-Page-App-with-REST-API/backend/data/new.js?token=ACEfkiqeDN0HjZ4-gIKRh3wfVZPSlEmgks5ZFhYPwA%3D%3D) 코드를 **data\new.js** 파일에
 
-간소화를 위해 게임 보드를 노드 서버의 글로벌 변수(`global.board`)에 저장합니다. 하지만 실제로는 Google [클라우드 데이터 저장소](https://cloud.google.com/datastore/) 또는 Azure [DocumentDB](https://azure.microsoft.com/en-us/services/documentdb/) 같은 클라우드 스토리지를 사용하여 이 변수를 여러 게임과 플레이어를 동시에 지원하는 기억력 게임 API 서비스로 만들 것입니다.
+간소화를 위해 게임 보드를 노드 서버의 글로벌 변수(`global.board`)에 저장합니다. 하지만 실제로는 Google [클라우드 데이터 저장소](https://cloud.google.com/datastore/) 또는 Azure [DocumentDB](https://azure.microsoft.com/services/cosmos-db/) 같은 클라우드 스토리지를 사용하여 이 변수를 여러 게임과 플레이어를 동시에 지원하는 기억력 게임 API 서비스로 만들 것입니다.
 
 VS Code에 모든 변경 사항이 저장되었는지 확인하고 서버를 다시 시작(VS Code에서 F5 또는 셸에서 `npm start`를 입력한 다음, [https://localhost:8000](https://localhost:8000) 찾아보기)하여 게임 API를 테스트합니다.
 
@@ -284,7 +284,7 @@ Azure 문서에서는 다음 내용을 설명합니다.
 
 ### <a name="going-further"></a>더 나아가기
 
-기억력 게임 API를 프로덕션 앱을 위한 실행 가능한 백 엔드 서비스로 만들려면, 여러 플레이어와 게임을 지원하도록 코드를 확장해야 합니다. 이를 위해서는 [인증](https://swagger.io/docs/specification/authentication/)(플레이어 ID 관리용), [NoSQL 데이터베이스](https://docs.microsoft.com/en-us/azure/documentdb/)(게임과 플레이어 추적용) 및 API에 대한 몇 가지 기본 [단위 테스트](https://apigee.com/about/blog/developer/swagger-test-templates-test-your-apis)에 연결해야 합니다.
+기억력 게임 API를 프로덕션 앱을 위한 실행 가능한 백 엔드 서비스로 만들려면, 여러 플레이어와 게임을 지원하도록 코드를 확장해야 합니다. 이를 위해서는 [인증](https://swagger.io/docs/specification/authentication/)(플레이어 ID 관리용), [NoSQL 데이터베이스](https://azure.microsoft.com/blog/dear-documentdb-customers-welcome-to-azure-cosmos-db/)(게임과 플레이어 추적용) 및 API에 대한 몇 가지 기본 [단위 테스트](https://apigee.com/about/blog/api-technology/swagger-test-templates-test-your-apis)에 연결해야 합니다.
 
 더 발전시키기 위한 유용한 몇 가지 리소스는 다음과 같습니다.
 
@@ -292,7 +292,7 @@ Azure 문서에서는 다음 내용을 설명합니다.
 
  - [Azure 웹 + 모바일 문서](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=web)
 
- - [Azure DocumentDB 문서](https://docs.microsoft.com/en-us/azure/documentdb/index)
+ - [Azure DocumentDB 문서](https://azure.microsoft.com/blog/dear-documentdb-customers-welcome-to-azure-cosmos-db/)
 
 ## <a name="part-ii-build-a-single-page-web-application"></a>2부: 단일 페이지 웹 애플리케이션 빌드
 
@@ -575,7 +575,7 @@ body
 ### <a name="5-add-a-card-flip-animation-with-css-transforms"></a>5. CSS 변환을 사용하여 카드 뒤집기 애니메이션 추가
 memory\public\stylesheets의 style.css 파일을 Start 폴더의 style.css 파일로 바꿉니다.
 
-카드가 진짜처럼 보이게 만드는 3D 뒤집기 동작을 표현하는 [CSS 변환](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/css/transforms)을 사용하여 뒤집기 동작을 추가합니다. 게임의 카드는 다음 HTML 구조를 사용하여 만들어지며, 프로그래밍 방식으로 게임 보드에 추가(앞서 본 `drawGameBoard()` 기능 내에)됩니다.
+카드가 진짜처럼 보이게 만드는 3D 뒤집기 동작을 표현하는 [CSS 변환](https://developer.mozilla.org/docs/Web/CSS/CSS_Transforms)을 사용하여 뒤집기 동작을 추가합니다. 게임의 카드는 다음 HTML 구조를 사용하여 만들어지며, 프로그래밍 방식으로 게임 보드에 추가(앞서 본 `drawGameBoard()` 기능 내에)됩니다.
 
 ``` html
 <div class="flipContainer">
@@ -642,6 +642,6 @@ Microsoft Store에 게시하는 기본 단계는 다음과 같습니다.
 
  - [애플리케이션 개발 프로젝트를 Azure 웹 사이트에 배포](https://docs.microsoft.com/azure/cosmos-db/documentdb-nodejs-application#_Toc395783182)
 
- - [UWP(유니버설 Windows 플랫폼) 앱으로 웹 애플리케이션 변환](https://docs.microsoft.com/en-us/windows/uwp/porting/hwa-create-windows)
+ - [UWP(유니버설 Windows 플랫폼) 앱으로 웹 애플리케이션 변환](https://docs.microsoft.com/microsoft-edge/progressive-web-apps)
 
- - [Windows 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)
+ - [Windows 앱 게시](https://docs.microsoft.com/windows/uwp/publish/)

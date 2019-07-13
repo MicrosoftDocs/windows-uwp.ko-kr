@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: 37207d4ce65551a7bdd33d57f72f3fa6a0a6185d
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 8b1f6e0e04cdf81512918e0cd3e33ec0f93e2245
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66370706"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321006"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
@@ -121,13 +121,12 @@ Microsoft의 디자인 시스템을 Fluent라고 합니다. Fluent Design System
 
 - [UWP 앱의 탐색 디자인 기본 사항](https://docs.microsoft.com/windows/uwp/layout/navigation-basics)에 따라 모바일, 작은 화면 및 큰 화면 디바이스를 수용하도록 워크플로를 디자인합니다. 다양한 화면 크기와 해상도에 맞게 [사용자 인터페이스를 레이아웃](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design)합니다.
 
-- 여러 입력 형식을 수용할 방법을 고려합니다. [Cortana](https://docs.microsoft.com/windows/uwp/input-and-devices/cortana-design-guidelines), [음성](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions), [터치 조작](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction), [터치 키보드](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) 등을 사용하여 앱을 조작하는 방법은 [조작에 대한 지침](https://developer.microsoft.com/windows/design/inputs-devices)을 참조하세요.  기존 조작 환경은 [텍스트 및 텍스트 입력에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/text-controls)을 참조하세요.
+- 여러 입력 형식을 수용할 방법을 고려합니다. [Cortana](https://docs.microsoft.com/windows/uwp/input-and-devices/cortana-design-guidelines), [음성](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions), [터치 조작](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction), [터치 키보드](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) 등을 사용하여 앱을 조작하는 방법은 [조작에 대한 지침](https://docs.microsoft.com/windows/uwp/design/layout/index)을 참조하세요.  기존 조작 환경은 [텍스트 및 텍스트 입력에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/text-controls)을 참조하세요.
 
 ### <a name="add-services"></a>서비스 추가
 
 - 디바이스 간에 동기화하려면 [클라우드 서비스](https://go.microsoft.com/fwlink/?LinkId=526377)를 사용합니다.
 - 앱 환경에서 지원하기 위해 [웹 서비스에 연결](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))하는 방법을 알아보세요.
-- 앱이 음성 명령에 응답할 수 있도록 [앱에 Cortana를 추가](https://mva.microsoft.com/training-courses/integrating-cortana-in-your-apps-8487?l=20D3s5Xz_5904984382)하는 방법을 알아보세요.
 - [푸시 알림](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) 및 [앱에서 바로 구매](https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-product-purchases)를 계획에 포함합니다. 이러한 기능은 장치 간에 작동해야 합니다.
 
 ### <a name="submit-your-app-to-the-store"></a>스토어에 앱 제출
@@ -142,7 +141,7 @@ Microsoft의 디자인 시스템을 Fluent라고 합니다. Fluent Design System
 
 - 앱의 사용자 활동이 Windows 타임라인이나 Cortana의 "중단한 위치부터 다시 시작" 기능에 표시되도록 [사용자 활동](https://blogs.windows.com/buildingapps/2017/12/19/application-engagement-windows-timeline-user-activities/#tHuZ6tLPtCXqYKvw.97)을 사용하는 방법을 알아보세요.
 - [UWP 앱을 위한 타일, 배지 및 알림](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/)을 사용하는 방법을 알아보세요.
-- UWP 앱에 사용할 수 있는 Win32 API의 전체 목록은 [UWP 앱의 API 집합](https://docs.microsoft.com/previous-versions//mt186421(v=vs.85)) 및 [UWP 앱의 Dll](https://docs.microsoft.com/previous-versions//mt186422(v=vs.85))을 참조하세요.
+- UWP 앱에 사용할 수 있는 Win32 API의 전체 목록은 [UWP 앱의 API 집합](https://docs.microsoft.com/previous-versions/mt186421(v=vs.85)) 및 [UWP 앱의 Dll](https://docs.microsoft.com/previous-versions/mt186422(v=vs.85))을 참조하세요.
 - .NET UWP 앱에 대한 개요는 [.NET의 유니버설 Windows 앱](https://devblogs.microsoft.com/dotnet/universal-windows-apps-in-net/)을 참조하세요.
 - UWP 앱에서 사용할 수 있는 .NET 종류의 목록을 보려면 [UWP 앱용 .NET](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0)을 참조하세요.
 - [.NET 네이티브로 앱 컴파일](https://docs.microsoft.com/dotnet/framework/net-native/)

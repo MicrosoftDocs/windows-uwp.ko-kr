@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a79edb39cc4bfa5794d79d68f4fb8d5b0e976105
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c715a48e0f9d6dea5939e6363441b0300544c252
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63806066"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321913"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>2017년 12월 Windows 개발자 문서의 새로운 내용
 
@@ -44,7 +44,7 @@ Mixed Reality의 세계에 대해 보다 깊이 알아보려는 기술 매니아
 
 ### <a name="microsoft-collaborate"></a>Microsoft Collaborate
 
-Microsoft Collaborate 포털은 엔지니어링 시스템 작업 항목(버그, 기능 요청 등)의 공유와 콘텐츠(빌드, 문서, 사양)의 배포를 활성화하여 Microsoft 에코 시스템 내에서 엔지니어링 협업을 간소화하는 도구와 서비스를 제공합니다. [자세한 내용을 알아보십시오](https://docs.microsoft.com/en-us/collaborate).
+Microsoft Collaborate 포털은 엔지니어링 시스템 작업 항목(버그, 기능 요청 등)의 공유와 콘텐츠(빌드, 문서, 사양)의 배포를 활성화하여 Microsoft 에코 시스템 내에서 엔지니어링 협업을 간소화하는 도구와 서비스를 제공합니다. [자세한 내용을 알아보십시오](https://docs.microsoft.com/collaborate/).
 
 ![파트너 센터에서 Microsoft Collaborate](images/microsoft_collaborate_screenshot.PNG)
 
@@ -52,7 +52,7 @@ Microsoft Collaborate 포털은 엔지니어링 시스템 작업 항목(버그, 
 
 Visual Studio 2017 버전 15.5에서는 **Windows 애플리케이션 패키징 프로젝트** 템플릿이 업데이트되어 UWP 프로젝트를 훨씬 쉽게 포함시킬 수 있습니다. 더 이상 JavaScript 기반 패키징 프로젝트를 사용하여 패키지 매니페스트를 수동으로 조정할 필요가 없습니다.  
 
-이 새로운 템플릿을 사용하여 데스크톱 애플리케이션을 패키징하는 방법에 대한 지침은 [Visual Studio를 사용한 앱 패키징](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)을 참조하세요.
+이 새로운 템플릿을 사용하여 데스크톱 애플리케이션을 패키징하는 방법에 대한 지침은 [Visual Studio를 사용한 앱 패키징](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)을 참조하세요.
 
 패키지에 UWP 프로젝트를 추가하는 방법에 대한 지침은 [최신 UWP 구성 요소로 데스크톱 애플리케이션 확장](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-extend)을 참조하세요.
 

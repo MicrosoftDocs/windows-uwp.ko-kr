@@ -1,16 +1,16 @@
 ---
 title: UWP 앱에서 MySQL 데이터베이스 사용
 description: UWP 앱에서 MySQL 데이터베이스를 사용합니다.
-ms.date: 3/28/2019
+ms.date: 03/28/2019
 ms.topic: article
 keywords: windows 10, uwp, MySQL, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: a7708ca082647aef6bbf2261922d2ebd6723923e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: bfed9c0a0c4198095b9be48fe71832bdfca67718
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63785482"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713787"
 ---
 # <a name="use-a-mysql-database"></a>MySQL 데이터베이스 사용
 이 문서는 UWP 앱에서 MySQL 데이터베이스를 사용하도록 설정하는 데 필요한 단계를 포함하고 있습니다. 코드로 데이터베이스와 상호 작용하는 방법을 보여주는 작은 코드 조각도 포함되어 있습니다.

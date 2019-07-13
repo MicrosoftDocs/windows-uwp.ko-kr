@@ -5,12 +5,12 @@ keywords: 새로운 기능, 새로운 기능, 업데이트, Windows 10, 최신, 
 ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b0860021386c52ead3defb17c1b3ba56d65f224
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: eb3ec9646848f74e4a147a102c0e2bd803073d74
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63780423"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322006"
 ---
 # <a name="new-apis-in-windows-10-build-17134"></a>Windows 10 빌드 17134의 새로운 API
 
@@ -74,7 +74,7 @@ sequencevariabledescriptorpreview <br> sequencevariabledescriptorpreview.descrip
 
 tensorvariabledescriptorpreview <br> tensorvariabledescriptorpreview.datatype <br> tensorvariabledescriptorpreview.description <br> tensorvariabledescriptorpreview.modelfeaturekind <br> tensorvariabledescriptorpreview.name <br> tensorvariabledescriptorpreview.shape
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsaimachinelearningpreviewwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsaimachinelearningpreview"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview)
 
 windows.ai.machinelearning.preview
 
@@ -262,7 +262,7 @@ displaymonitorphysicalconnectorkind
 
 displaymonitorusagekind
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicesdisplaywindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.devices.display.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicesdisplay"></a>[windows](https://docs.microsoft.com/uwp/api/windows.devices.display)
 
 windows.devices.display
 
@@ -312,7 +312,7 @@ gazemovedprevieweventargs <br> gazemovedprevieweventargs.currentpoint <br> gazem
 
 gazepointpreview <br> gazepointpreview.eyegazeposition <br> gazepointpreview.headgazeposition <br> gazepointpreview.hidinputreport <br> gazepointpreview.sourcedevice <br> gazepointpreview.timestamp
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicesinputpreviewwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicesinputpreview"></a>[windows](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)
 
 windows.devices.input.preview
 
@@ -398,7 +398,7 @@ barcodescannertriggerstate
 
 barcodesymbologyattributesbuilder <br> barcodesymbologyattributesbuilder.barcodesymbologyattributesbuilder <br> barcodesymbologyattributesbuilder.createattributes <br> barcodesymbologyattributesbuilder.ischeckdigittransmissionsupported <br> barcodesymbologyattributesbuilder.ischeckdigitvalidationsupported <br> barcodesymbologyattributesbuilder.isdecodelengthsupported
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicespointofserviceproviderwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.provider.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsdevicespointofserviceprovider"></a>[windows](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.provider)
 
 windows.devices.pointofservice.provider
 
@@ -464,7 +464,7 @@ graphicscapturepicker <br> graphicscapturepicker.graphicscapturepicker <br> grap
 
 graphicscapturesession <br> graphicscapturesession.close <br> graphicscapturesession.issupported <br> graphicscapturesession.startcapture
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsgraphicscapturewindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.graphics.capture.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsgraphicscapture"></a>[windows](https://docs.microsoft.com/uwp/api/windows.graphics.capture)
 
 windows.graphics.capture
 
@@ -650,7 +650,7 @@ previewbuildsmanager <br> previewbuildsmanager.arepreviewbuildsallowed <br> prev
 
 previewbuildsstate <br> previewbuildsstate.properties
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsmanagementupdatewindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.management.update.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsmanagementupdate"></a>[windows](https://docs.microsoft.com/uwp/api/windows.management.update)
 
 windows.management.update
 
@@ -1158,7 +1158,7 @@ storeuninstallstorepackagestatus
 
 ### <a name="windowsstoragefilepropertieshttpsdocsmicrosoftcomuwpapiwindowsstoragefileproperties"></a>[windows.storage.fileproperties](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties)
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsstoragefilepropertieswindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsstoragefileproperties"></a>[windows](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties)
 
 windows.storage.fileproperties
 
@@ -1244,7 +1244,7 @@ diagnosticinvoker.rundiagnosticactionfromstringasync
 
 installeddesktopapp <br> installeddesktopapp.displayname <br> installeddesktopapp.displayversion <br> installeddesktopapp.getinventoryasync <br> installeddesktopapp.id <br> installeddesktopapp.publisher <br> installeddesktopapp.tostring
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowssysteminventorywindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.system.inventory.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowssysteminventory"></a>[windows](https://docs.microsoft.com/uwp/api/windows.system.inventory)
 
 windows.system.inventory
 
@@ -1320,7 +1320,7 @@ timezonesettings.autoupdatetimezoneasync
 
 compositorcontroller <br> compositorcontroller.close <br> compositorcontroller.commit <br> compositorcontroller.commitneeded <br> compositorcontroller.compositor <br> compositorcontroller.compositorcontroller <br> compositorcontroller.ensurepreviouscommitcompletedasync
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositioncorewindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.core.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositioncore"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.core)
 
 windows.ui.composition.core
 
@@ -1330,7 +1330,7 @@ windows.ui.composition.core
 
 desktopwindowtarget <br> desktopwindowtarget.istopmost
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositiondesktopwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.desktop.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositiondesktop"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.desktop)
 
 windows.ui.composition.desktop
 
@@ -1348,7 +1348,7 @@ compositiondebugoverdrawcontentkinds
 
 compositiondebugsettings <br> compositiondebugsettings.heatmaps <br> compositiondebugsettings.trygetsettings
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositiondiagnosticswindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.diagnostics.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowsuicompositiondiagnostics"></a>[windows](https://docs.microsoft.com/uwp/api/windows.ui.composition.diagnostics)
 
 windows.ui.composition.diagnostics
 
@@ -1864,7 +1864,7 @@ webviewcontrolprocesscapabilitystate
 
 webviewcontrolprocessoptions <br> webviewcontrolprocessoptions.enterpriseid <br> webviewcontrolprocessoptions.privatenetworkclientservercapability <br> webviewcontrolprocessoptions.webviewcontrolprocessoptions
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowswebuiinteropwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.web.ui.interop.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowswebuiinterop"></a>[windows](https://docs.microsoft.com/uwp/api/windows.web.ui.interop)
 
 windows.web.ui.interop
 
@@ -1938,7 +1938,7 @@ webviewcontrolunviewablecontentidentifiedeventargs <br> webviewcontrolunviewable
 
 webviewcontrolwebresourcerequestedeventargs <br> webviewcontrolwebresourcerequestedeventargs.getdeferral <br> webviewcontrolwebresourcerequestedeventargs.request <br> webviewcontrolwebresourcerequestedeventargs.response
 
-#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowswebuiwindows"></a>[windows](https://docs.microsoft.com/uwp/api/windows.web.ui.windows)
+#### <a name="windowshttpsdocsmicrosoftcomuwpapiwindowswebui"></a>[windows](https://docs.microsoft.com/uwp/api/windows.web.ui)
 
 windows.web.ui
 

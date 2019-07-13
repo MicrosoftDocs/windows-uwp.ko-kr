@@ -6,12 +6,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
-ms.openlocfilehash: d9a7f0302dfdc9f9fa980f0fe93a3371328f9e5c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 65dfc7b5f9a870f3ccdd5c0c046b996a01c06a00
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66367430"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321212"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
 
@@ -240,8 +240,8 @@ XAML을 통해 앱에서 사용할 컨트롤을 배치하는 방법을 알아보
 ## <a name="see-also"></a>참고 항목
 
 * [첫 번째 앱](your-first-app.md)
-* [UWP 앱 게시](https://developer.microsoft.com/store/publish-apps)
-* [UWP 앱 개발에 대한 방법 문서](https://developer.microsoft.com/windows/apps/develop)
+* [UWP 앱 게시](https://docs.microsoft.com/windows/uwp/publish/)
+* [UWP 앱 개발에 대한 방법 문서](https://docs.microsoft.com/windows/uwp/develop/)
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
 * [유니버설 Windows 앱이란?](universal-application-platform-guide.md)
 * [Windows 계정 가입](sign-up.md)

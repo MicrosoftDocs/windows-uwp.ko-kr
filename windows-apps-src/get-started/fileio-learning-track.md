@@ -6,12 +6,12 @@ ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 파일, 파일 io, 파일 읽기, 파일 쓰기, 파일 만들기, 텍스트 쓰기, 텍스트 읽기
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5480638e201dca8a5eb5363d7a5944422c626f67
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 29cfeef852f240548f1cd961f73766346da7afa4
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66366895"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321127"
 ---
 # <a name="work-with-files"></a>파일 작업
 
@@ -145,4 +145,4 @@ UWP 앱은 매니페스트에 해당 접근 권한 (값)을 추가하여 특정 
 | [파일 액세스 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | 파일을 만들고, 읽고, 쓰고, 복사하고 삭제하는 방법을 보여줍니다. |
 | [파일 선택기 샘플](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | 사용자가 UI를 통해 파일을 선택하도록 하여 파일 및 폴더에 액세스하는 방법과 사용자가 이름, 파일 형식 및 저장할 파일의 위치를 지정할 수 있도록 파일을 저장하는 방법을 보여줍니다. |
 | [JSON 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Json) | [Windows.Data.Json 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.Data.Json)를 사용하여 JavaScript Object Notation(JSON) 개체, 배열, 문자열, 숫자 및 부울을 인코딩 및 디코딩하는 방법을 보여줍니다. |
-| [추가 코드 샘플](https://developer.microsoft.com//windows/samples) | 범주 드롭다운 목록에서 **파일, 폴더 및 라이브러리**를 선택합니다. |
+| [추가 코드 샘플](https://developer.microsoft.com/windows/samples) | 범주 드롭다운 목록에서 **파일, 폴더 및 라이브러리**를 선택합니다. |

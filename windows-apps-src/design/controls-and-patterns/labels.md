@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5996fb15c0d7302c7360c2e45613f0da2720d415
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 2b642f1d6c3f2a04bacdf293858492ea095af1a8
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364649"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319525"
 ---
 # <a name="labels"></a>Labels(레이블)
 
@@ -39,7 +39,7 @@ XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 
 
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
-* [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
 
 ## <a name="related-topics"></a>관련 항목
 * [텍스트 컨트롤](text-controls.md)

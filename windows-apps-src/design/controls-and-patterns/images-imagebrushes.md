@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 61fa4f8afa0404591831be4136c16672503274f2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 59678dc5eca7dec0857cadd9249dd19e25b3430b
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362780"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319042"
 ---
 # <a name="images-and-image-brushes"></a>이미지 및 이미지 브러시
 
@@ -35,7 +35,7 @@ ms.locfileid: "66362780"
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Image">앱을 열고 작동 중인 이미지를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
@@ -149,20 +149,20 @@ Windows 10 버전 1607부터 **Image** 요소는 애니메이션 GIF 이미지�
 
 여러 가지 권장 크기로 이미지 원본을 만들어 Windows에서 크기를 조정할 때 앱 모양이 멋지게 보이도록 합니다. **Image**에 **Source**를 지정할 때 현재 크기에 적합한 리소스를 자동으로 참조하는 명명 규칙을 사용할 수 있습니다. 명명 규칙의 특성 및 자세한 내용은 [빠른 시작: 파일 또는 이미지 리소스 사용](https://docs.microsoft.com/previous-versions/windows/apps/hh965325(v=win.10))을 참조하세요.
 
-크기 조정을 위해 디자인하는 방법에 대한 자세한 내용은 [레이아웃 및 크기 조정에 대한 UX 지침](https://developer.microsoft.com/windows/design)을 참조하세요.
+크기 조정을 위해 디자인하는 방법에 대한 자세한 내용은 [레이아웃 및 크기 조정에 대한 UX 지침](https://developer.microsoft.com/windows/apps/design)을 참조하세요.
 
 ### <a name="image-and-imagebrush-in-code"></a>코드의 Image 및 ImageBrush
 
 Image 및 ImageBrush 요소는 코드가 아닌 XAML을 사용하여 지정하는 것이 일반적입니다. 왜냐하면 이러한 요소는 XAML UI 정의의 일부로 디자인 도구에서 출력되는 경우가 자주 있기 때문입니다.
 
-코드를 사용하여 Image 또는 ImageBrush를 정의하는 경우 기본 생성자를 사용한 다음 관련 원본 속성([Image.Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) 또는 [ImageBrush.ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource))을 설정합니다. 코드를 사용하여 설정할 때 원본 속성에는 [BitmapImage](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage)(URI 아님)가 필요합니다. 원본이 스트림이면 [SetSourceAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) 메서드를 사용하여 값을 초기화합니다. 원본이 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [BitmapImage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [ImageOpened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다. 예제 코드는 [XAML 이미지 샘플](https://go.microsoft.com/fwlink/p/?linkid=238575)을 참조하세요.
+코드를 사용하여 Image 또는 ImageBrush를 정의하는 경우 기본 생성자를 사용한 다음 관련 원본 속성([Image.Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) 또는 [ImageBrush.ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource))을 설정합니다. 코드를 사용하여 설정할 때 원본 속성에는 [BitmapImage](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage)(URI 아님)가 필요합니다. 원본이 스트림이면 [SetSourceAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) 메서드를 사용하여 값을 초기화합니다. 원본이 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [BitmapImage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [ImageOpened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다. 예제 코드는 [XAML 이미지 샘플](https://go.microsoft.com/fwlink/p/?linkid=238575)을 참조하세요.
 
 > [!NOTE]
 > 코드를 사용하여 이미지를 설정하면 현재 크기 및 문화권 한정자로 비정규화된 리소스에 액세스하는 데 자동 처리를 사용하거나 문화권 및 크기에 대한 한정자와 함께 [ResourceManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager) 및 [ResourceMap](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap)을 사용하여 리소스를 직접 가져올 수 있습니다. 자세한 내용은 [리소스 관리 시스템](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10))을 참조하세요.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 

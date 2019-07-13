@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
-ms.openlocfilehash: 0629201b695f6df6f7f3e2084a73d72b10b82be5
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 478c4a16902329e1dd9267e0339dca0e0dcf3539
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63813605"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321974"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Windows as a service용 응용 프로그램 개발
 
@@ -160,4 +160,4 @@ Insider Preview 빌드에서 앱의 수행 방식을 알려주세요. 테스트 
 [Windows 준비](https://go.microsoft.com/fwlink/?LinkID=780580) 웹 사이트는 Windows 10을 지원하는 소프트웨어 디렉터리입니다. 배포에 Windows 10을 고려 중인 전 세계 회사 및 조직의 IT 관리자를 위한 것입니다. IT 관리자는 엔터프라이즈에 배포된 소프트웨어가 Windows 10에서 지원되는지 여부를 사이트에서 확인할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
-[업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)
+[업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](https://docs.microsoft.com/windows/manage/introduction-to-windows-10-servicing)

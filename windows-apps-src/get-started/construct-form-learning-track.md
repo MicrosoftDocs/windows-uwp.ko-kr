@@ -6,12 +6,12 @@ ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 레이아웃, 양식
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: cd3fb1c294ac81f42bb53c23d307eed49a6708fd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 2e64392e1de5f6061b802acc0a2eed81c3e750fb
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564582"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318802"
 ---
 # <a name="create-and-customize-a-form"></a>양식 만들기 및 사용자 지정
 
@@ -182,4 +182,4 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 | [적응형 레이아웃 자습서](../design/basics/xaml-basics-adaptive-layout.md) | 적응형 레이아웃 및 반응형 디자인을 단계별로 안내하는 경험입니다. |
 | [고객 주문 데이터베이스](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | 여러 페이지 엔터프라이즈 샘플에서 작업 중인 레이아웃 및 양식을 표시합니다. |
 | [XAML 컨트롤 갤러리](https://github.com/Microsoft/Xaml-Controls-Gallery) | XAML 컨트롤 선택 및 구현 방법을 확인합니다. |
-| [추가 코드 샘플](https://developer.microsoft.com//windows/samples) | 관련된 코드를 표시하려면 범주 드롭다운 목록에서 **컨트롤, 레이아웃 및 텍스트**를 선택합니다. |
+| [추가 코드 샘플](https://developer.microsoft.com/windows/samples) | 관련된 코드를 표시하려면 범주 드롭다운 목록에서 **컨트롤, 레이아웃 및 텍스트**를 선택합니다. |

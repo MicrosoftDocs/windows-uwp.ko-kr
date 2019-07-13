@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 07/11/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 22a3a9614a4488791a36f81a3d4dedac572111b4
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 4030796e942c76ccf32e04dbf951cac68718a6a5
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63780262"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320394"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>2018년 7월 Windows 개발자 문서의 새로운 내용
 
@@ -22,7 +22,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ### <a name="progressive-web-apps-on-windows"></a>Windows의 점진적 웹앱
 
-[PWA(점진적 웹앱)](https://developer.microsoft.com/windows/pwa)는 플랫폼 및 브라우저 엔진을 지원하는 네이티브 앱과 비슷한 기능(예: 홈 화면 시작 설치, 오프라인 지원 및 푸시 알림)으로 [점진적으로 향상되는](https://wikipedia.org/wiki/Progressive_enhancement) 간단한 웹앱입니다. Microsoft Edge(EdgeHTML) 엔진이 있는 Windows 10에서 PWA에는 [브라우저 창과 독립적으로 UWP 앱으로 실행](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)될 수 있다는 장점이 추가되었습니다.
+[PWA(점진적 웹앱)](https://developer.microsoft.com/windows/pwa)는 플랫폼 및 브라우저 엔진을 지원하는 네이티브 앱과 비슷한 기능(예: 홈 화면 시작 설치, 오프라인 지원 및 푸시 알림)으로 [점진적으로 향상되는](https://www.wikipedia.org/wiki/Progressive_enhancement) 간단한 웹앱입니다. Microsoft Edge(EdgeHTML) 엔진이 있는 Windows 10에서 PWA에는 [브라우저 창과 독립적으로 UWP 앱으로 실행](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)될 수 있다는 장점이 추가되었습니다.
 
 ![실행 중인 PWA의 이미지](images/progressive-web-apps.jpg)
 
@@ -48,11 +48,9 @@ Adobe XD 및 Adobe Illustrator 도구 키트는 새로운 기능으로 업데이
 
 ### <a name="webvr"></a>WebVR
 
-[WebVR 설명서](https://docs.microsoft.com/microsoft-edge/webvr/
-)에는 다음 몇 가지 새로운 항목이 추가되었습니다.
+[WebVR 설명서](https://docs.microsoft.com/microsoft-edge/webvr/)에는 다음 몇 가지 새로운 항목이 추가되었습니다.
 
-* [WebVR이란?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr
-) WebVR의 기본 사항, 사용해야 하는 이유 및 개발을 시작하는 방법을 설명합니다.
+* [WebVR이란?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr) WebVR의 기본 사항, 사용해야 하는 이유 및 개발을 시작하는 방법을 설명합니다.
 
 * [점진적 웹앱의 WebVR](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): PWA(점진적 웹앱)에 WebVR을 추가하는 방법을 알아봅니다.
 
@@ -80,7 +78,7 @@ Project Personality Chat을 사용하면 사용자 지정 가능한 가상 사�
 
 ### <a name="one-dev-question"></a>One Dev Question
 
-Microsoft 개발자는 One Dev Question 비디오 시리즈에서 오랫동안 Windows 개발, 팀 문화 및 이력에 대한 일련의 질문을 다루어 왔습니다. 최근에 답변한 질문은 다음과 같습니다.
+Microsoft 개발자는 One Dev Question 동영상 시리즈에서 오랫동안 Windows 개발, 팀 문화 및 이력에 대한 일련의 질문을 다루어 왔습니다. 최근에 답변한 질문은 다음과 같습니다.
 
 Raymond Chen:
 

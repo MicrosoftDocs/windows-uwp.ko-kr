@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ae5001e907d7d38cbf05fd6863b192337fe365f
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 1312c55d98d3e1df2c9e583422df7938c994c2b5
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63801082"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320375"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>2017년 9월 Windows 개발자 문서의 새로운 내용
 
@@ -24,22 +24,22 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ### <a name="xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램
 
-이제 Xbox Live 크리에이터스 프로그램이 공개되어, Windows 10 PC와 Xbox One 콘솔에서 모두 실행할 수 있는 UWP 게임을 쉽게 빌드하고 게시할 수 있습니다. 자세한 내용은 [Xbox Live 크리에이터스 프로그램 시작](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md)을 참조하세요.
+이제 Xbox Live 크리에이터스 프로그램이 공개되어, Windows 10 PC와 Xbox One 콘솔에서 모두 실행할 수 있는 UWP 게임을 쉽게 빌드하고 게시할 수 있습니다. 자세한 내용은 [Xbox Live 크리에이터스 프로그램 시작](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 참조하세요.
 
 ## <a name="developer-guidance"></a>개발자 지침
 
 ### <a name="xaml-basics-tutorials"></a>XAML 기본 사항 자습서
 
-새로운 [PhotoLab 샘플](https://github.com/Microsoft/Windows-appsample-photo-lab)과 함께 제공할 네 권의 [XAML 기본 사항 자습서](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-intro)를 작성했습니다. 각각 사용자 인터페이스, 데이터 바인딩, 사용자 지정 스타일, 적응형 레이아웃 등 XAML 프로그래밍의 네 가지 주요 구성 요소를 다룹니다. 각 자습서는 부분적으로 완성된 PhotoLab 샘플 버전으로 시작하고, 최종 앱의 누락된 구성 요소를 단계별로 빌드합니다. 
+새로운 [PhotoLab 샘플](https://github.com/Microsoft/Windows-appsample-photo-lab)과 함께 제공할 네 권의 [XAML 기본 사항 자습서](https://docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui)를 작성했습니다. 각각 사용자 인터페이스, 데이터 바인딩, 사용자 지정 스타일, 적응형 레이아웃 등 XAML 프로그래밍의 네 가지 주요 구성 요소를 다룹니다. 각 자습서는 부분적으로 완성된 PhotoLab 샘플 버전으로 시작하고, 최종 앱의 누락된 구성 요소를 단계별로 빌드합니다. 
 
 ![사진 갤러리 페이지를 보여 주는 PhotoLab 샘플 스크린샷](images/PhotoLab-gallery-page.png)  
 
 새 문서의 개요를 살펴보면 다음과 같습니다.
 
-+ [**사용자 인터페이스 만들기**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-ui)는 기본 사진 갤러리 인터페이스를 만드는 방법을 보여 줍니다.
-+ [**데이터 바인딩 만들기**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-data-binding)는 사진 갤러리에 데이터 바인딩을 추가하여 실제 이미지 데이터로 채우는 방법을 보여 줍니다.
-+ [**사용자 지정 스타일 만들기**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-style)는 사진 편집 메뉴에 세련된 사용자 지정 스타일을 추가하는 방법을 보여 줍니다.
-+ [**적응형 레이아웃 만들기**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-adaptive-layout)는 갤러리 레이아웃을 적응형으로 만들어 모든 디바이스와 화면 크기에 최적으로 표시되도록 하는 방법을 보여 줍니다.
++ [**사용자 인터페이스 만들기**](https://docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui)는 기본 사진 갤러리 인터페이스를 만드는 방법을 보여 줍니다.
++ [**데이터 바인딩 만들기**](https://docs.microsoft.com/windows/uwp/data-binding/xaml-basics-data-binding)는 사진 갤러리에 데이터 바인딩을 추가하여 실제 이미지 데이터로 채우는 방법을 보여 줍니다.
++ [**사용자 지정 스타일 만들기**](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-basics-style)는 사진 편집 메뉴에 세련된 사용자 지정 스타일을 추가하는 방법을 보여 줍니다.
++ [**적응형 레이아웃 만들기**](https://docs.microsoft.com/windows/uwp/design/basics/xaml-basics-adaptive-layout)는 갤러리 레이아웃을 적응형으로 만들어 모든 디바이스와 화면 크기에 최적으로 표시되도록 하는 방법을 보여 줍니다.
 
 ### <a name="get-started-tutorials"></a>시작 자습서
 

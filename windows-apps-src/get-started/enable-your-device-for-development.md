@@ -3,15 +3,15 @@ ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: 디바이스를 개발에 사용하도록 설정
 description: 개발 및 디버깅을 위해 Windows 10 디바이스를 구성합니다.
 keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 디바이스 활성화
-ms.date: 4/9/2019
+ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f927d8bce1e59ba9a8ed9b0f3f08ce3575c6d7bd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 9c1979f8e8232ee3bfd2e2961307608bf8da7836
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66367026"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714143"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -56,7 +56,7 @@ ms.locfileid: "66367026"
 
 ### <a name="sideload-apps"></a>앱 테스트용 로드
 
-테스트용으로 앱 로드 설정은 일반적으로 Microsoft Store를 거치지 않고 관리 디바이스에 사용자 지정 앱을 설치해야 하는 회사나 학교에서 사용하거나 타사 소스에서 앱을 실행해야 하는 모든 사용자가 사용합니다. 이 경우 이전에 설정 페이지 이미지에 표시된 대로 조직에서 *UWP 앱* 설정을 사용하지 않는 정책을 적용하는 경우가 일반적입니다. 또한 조직에서는 필요한 인증서 및 테스트용 로드 앱의 설치 위치를 제공합니다. 자세한 내용은 TechNet 문서 [Windows 10에서 앱을 테스트용으로 로드](https://technet.microsoft.com/library/mt269549.aspx) 및 [Microsoft Intune에서 앱 배포 시작](https://technet.microsoft.com/library/dn646955.aspx)을 참조하세요.
+테스트용으로 앱 로드 설정은 일반적으로 Microsoft Store를 거치지 않고 관리 디바이스에 사용자 지정 앱을 설치해야 하는 회사나 학교에서 사용하거나 타사 소스에서 앱을 실행해야 하는 모든 사용자가 사용합니다. 이 경우 이전에 설정 페이지 이미지에 표시된 대로 조직에서 *UWP 앱* 설정을 사용하지 않는 정책을 적용하는 경우가 일반적입니다. 또한 조직에서는 필요한 인증서 및 테스트용 로드 앱의 설치 위치를 제공합니다. 자세한 내용은 TechNet 문서 [Windows 10에서 앱을 테스트용으로 로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) 및 [Microsoft Intune에서 앱 배포 시작](https://docs.microsoft.com/intune/deploy-use/add-apps)을 참조하세요.
 
 디바이스 패밀리 관련 정보
 
@@ -94,7 +94,7 @@ ms.locfileid: "66367026"
 
 디바이스별 설치 지침은 다음을 참조하세요.
 - [데스크톱 디바이스 포털](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [HoloLens용 디바이스 포털](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
+- [HoloLens용 디바이스 포털](https://developer.microsoft.com/mixed-reality)
 - [IoT용 디바이스 포털](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [모바일용 디바이스 포털](../debug-test-perf/device-portal-mobile.md)
 - [Xbox용 디바이스 포털](../xbox-apps/device-portal-xbox.md)
@@ -238,8 +238,8 @@ Windows 8.1 장치에서 앱을 만들거나 테스트용으로 로드할 때는
 ## <a name="see-also"></a>참고 항목
 
 * [첫 번째 앱](your-first-app.md)
-* [UWP 앱 게시](https://developer.microsoft.com/store/publish-apps)
-* [UWP 앱 개발에 대한 방법 문서](https://developer.microsoft.com/windows/apps/develop)
+* [UWP 앱 게시](https://docs.microsoft.com/windows/uwp/publish/)
+* [UWP 앱 개발에 대한 방법 문서](https://docs.microsoft.com/windows/uwp/develop/)
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
 * [UWP 앱이란 무엇인가요?](universal-application-platform-guide.md)
 * [Windows 계정 등록](sign-up.md)

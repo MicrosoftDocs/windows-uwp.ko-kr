@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1277d9089e900451ac4c537805079ff479f808fa
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 67ba9f5c9bc4a5e723eb2696d88804df5300eda0
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66748449"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468991"
 ---
 # <a name="dialog-controls"></a>대화 상자 컨트롤
 
@@ -254,7 +254,7 @@ private async void DisplaySubscribeDialog()
 
 > 참고: 이 섹션은 Windows 10, 버전 1903 이상을 대상으로 하는 앱에만 적용됩니다. AppWindow 및 XAML island를 이전 버전에서는 사용할 수 없습니다. 버전 관리에 대한 자세한 내용은 [버전 적응 앱](../../../debug-test-perf/version-adaptive-apps.md)을 참조하세요.
 
-기본적으로 콘텐츠 대화 상자는 루트 [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)를 기준으로 모달 형식으로 표시됩니다. [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 또는 [XAML Island](/apps/desktop/modernize/xaml-islands)에서 ContentDialog를 사용하는 경우 수동으로 대화 상자의 [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot)를 XAML 호스트의 루트로 설정해야 합니다.
+기본적으로 콘텐츠 대화 상자는 루트 [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)를 기준으로 모달 형식으로 표시됩니다. [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 또는 [XAML Island](/windows/apps/desktop/modernize/xaml-islands)에서 ContentDialog를 사용하는 경우 수동으로 대화 상자의 [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot)를 XAML 호스트의 루트로 설정해야 합니다.
 
 이렇게 하려면 다음과 같이 ContentDialog의 XamlRoot 속성을 AppWindow 또는 XAML Island에 이미 있는 요소와 동일한 XamlRoot로 설정합니다.
 
@@ -284,7 +284,7 @@ private async void DisplayNoWifiDialog()
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 - [도구 설명](../tooltips.md)

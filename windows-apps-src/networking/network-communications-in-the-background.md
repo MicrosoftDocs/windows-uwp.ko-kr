@@ -6,12 +6,12 @@ ms.date: 06/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b0246e338c13027f8afc8da4aa919faa0911b39c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 4fcf2e1fa39ae1e40edc07c9ca3df81386c17823
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66371619"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319930"
 ---
 # <a name="network-communications-in-the-background"></a>백그라운드 네트워크 통신
 포그라운드에 없을 때 네트워크 통신을 계속하려면 앱 백그라운드 작업과 이러한 두 옵션 중 하나를 사용할 수 있습니다.
@@ -169,7 +169,7 @@ WebSockets, [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/
 
 일부 고려 사항은 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket)에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다. 특히 **StreamWebSocket**을 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)와 함께 사용할 경우 앱은 읽기를 처리하기 위해 C# 및 VB.NET의 **await** 모델이나 C++의 Tasks 대신 원시 비동기 패턴을 사용해야 합니다. 원시 비동기 패턴은 이 섹션의 뒷부분에 나오는 코드 샘플에서 확인할 수 있습니다.
 
-원시 비동기 패턴을 사용하면 Windows에서 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)에 대한 백그라운드 작업의 [**IBackgroundTask.Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.) 메서드를 수신 완료 콜백의 반환값과 동기화할 수 있습니다. **Run** 메서드는 모든 완료 콜백이 반환된 후에 호출됩니다. 따라서 앱은 **Run** 메서드가 호출되기 전에 데이터/오류를 받습니다.
+원시 비동기 패턴을 사용하면 Windows에서 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)에 대한 백그라운드 작업의 [**IBackgroundTask.Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드를 수신 완료 콜백의 반환값과 동기화할 수 있습니다. **Run** 메서드는 모든 완료 콜백이 반환된 후에 호출됩니다. 따라서 앱은 **Run** 메서드가 호출되기 전에 데이터/오류를 받습니다.
 
 앱은 다른 읽기를 게시해야만 완료 콜백에서 컨트롤을 반환받습니다. 또한 [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는[**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 전송에서 [**DataReader**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader)를 직접 사용하면 안 됩니다. 그럴 경우 위에서 설명한 동기화가 중단되기 때문입니다. 전송에서 [**DataReader.LoadAsync**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.loadasync) 메서드를 직접 사용하는 것은 지원되지 않습니다. 대신 [**StreamWebSocket.InputStream**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamwebsocket.inputstream) 속성의 [**IInputStream.ReadAsync**](https://docs.microsoft.com/uwp/api/windows.storage.streams.iinputstream.readasync) 메서드에서 반환된 [**IBuffer**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IBuffer)를 나중에 [**DataReader.FromBuffer**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.frombuffer) 메서드에 전달하여 더 처리할 수 있습니다.
 
@@ -216,7 +216,7 @@ void PostSocketRead(int length)
 }
 ```
 
-읽기 완료 처리기는 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)에 대한 백그라운드 작업의 [**IBackgroundTask.Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.) 메서드가 호출되기 전에 발생합니다. Windows의 내부 동기화는 앱이 읽기 완료 콜백에서 반환될 때까지 대기합니다. 앱은 일반적으로 읽기 완료 콜백의 [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket)에서 데이터 또는 오류를 신속하게 처리합니다. 메시지 자체는 **IBackgroundTask.Run** 메서드의 컨텍스트 내에서 처리됩니다. 아래 샘플에서는 읽기 완료 처리기가 메시지를 삽입하고 백그라운드 작업이 나중에 처리하는 메시지 큐를 사용하여 이에 대해 설명합니다.
+읽기 완료 처리기는 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)에 대한 백그라운드 작업의 [**IBackgroundTask.Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드가 호출되기 전에 발생합니다. Windows의 내부 동기화는 앱이 읽기 완료 콜백에서 반환될 때까지 대기합니다. 앱은 일반적으로 읽기 완료 콜백의 [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket)에서 데이터 또는 오류를 신속하게 처리합니다. 메시지 자체는 **IBackgroundTask.Run** 메서드의 컨텍스트 내에서 처리됩니다. 아래 샘플에서는 읽기 완료 처리기가 메시지를 삽입하고 백그라운드 작업이 나중에 처리하는 메시지 큐를 사용하여 이에 대해 설명합니다.
 
 다음 샘플에서는 원시 비동기 패턴을 사용하여 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket)에서 읽기를 처리하는 읽기 완료 처리기를 보여 줍니다.
 
@@ -483,7 +483,7 @@ private void SetupHttpRequestAndSendToHttpServer()
 
 일부 특수 고려 사항은 응답 수신을 시작하는 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)의 HTTP 요청을 보내는 요청이 처리되는 방식에 영향을 줍니다. 특히 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)와 함께 사용할 경우 앱은 **await** 모델 대신 Task를 사용하여 보내기를 처리해야 합니다.
 
-[HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 사용하면 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)에 대한 백그라운드 작업의 [**IBackgroundTask.Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.) 메서드를 수신 완료 콜백의 반환값과 동기화할 수 있습니다. 이 때문에 앱은 **Run** 메서드에서 차단 HttpResponseMessage 방법을 사용하고 전체 응답이 수신될 때까지 기다릴 수만 있습니다.
+[HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 사용하면 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)에 대한 백그라운드 작업의 [**IBackgroundTask.Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드를 수신 완료 콜백의 반환값과 동기화할 수 있습니다. 이 때문에 앱은 **Run** 메서드에서 차단 HttpResponseMessage 방법을 사용하고 전체 응답이 수신될 때까지 기다릴 수만 있습니다.
 
 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)와 함께 사용하면 [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket), [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 전송과 크게 다릅니다. [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 수신 콜백은 [HttpClient](https://go.microsoft.com/fwlink/p/?linkid=241637) 코드 이후 Task를 통해 앱에 배달됩니다. 따라서 **ControlChannelTrigger** 푸시 알림 작업은 데이터 또는 오류가 앱에 디스패치되는 즉시 발생합니다. 아래 샘플 코드에서는 [HttpClient.SendAsync](https://go.microsoft.com/fwlink/p/?linkid=241637) 메서드에서 반환된 responseTask를 푸시 알림 작업이 인라인으로 선택 및 처리하는 글로벌 저장소에 저장합니다.
 

@@ -5,12 +5,12 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: webvr, edge, 웹 개발, babylon, babylonjs, babylon.js, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d8029752790e19adc5eb4266615372fb346e001
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 5f212e4e06035134b0ac5b5ea69381ed0d985783
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63798236"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321159"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>3D Babylon.js 게임에 WebVR 지원 추가
 
@@ -23,7 +23,7 @@ Babylon.js로 3D 게임을 만들었고 가상 현실(VR)에서 멋지게 보이
 </iframe>
 
 이 게임은 평면 화면에서 잘 작동하는 3D 게임입니다. 하지만 VR에 대해서는 어떨까요?
-이 자습서에서는 이 게임이 WebVR에서 실행되기 위한 몇 가지 단계를 살펴보겠습니다. 이를 위해 Microsoft Edge에서 WebVR을 위한 지원을 추가하는 [Windows 혼합 현실](https://developer.microsoft.com/en-us/windows/mixed-reality) 헤드셋을 활용할 것입니다. 게임에 이러한 변경 사항을 적용하면 WebVR을 지원하는 다른 브라우저/헤드셋 조합에서도 작동할 것으로 기대할 수 있습니다.
+이 자습서에서는 이 게임이 WebVR에서 실행되기 위한 몇 가지 단계를 살펴보겠습니다. 이를 위해 Microsoft Edge에서 WebVR을 위한 지원을 추가하는 [Windows 혼합 현실](https://developer.microsoft.com/mixed-reality) 헤드셋을 활용할 것입니다. 게임에 이러한 변경 사항을 적용하면 WebVR을 지원하는 다른 브라우저/헤드셋 조합에서도 작동할 것으로 기대할 수 있습니다.
 
 
 
@@ -132,12 +132,12 @@ navigator.getVRDisplays().then(function (displays) {
 
 ## <a name="creating-and-selecting-the-initial-camera"></a>초기 카메라 만들기 및 선택
 
-Babylon.js를 통해, [`WebVRFreeCamera`](https://doc.babylonjs.com/classes/3.1/webvrfreecamera)를 사용하여 WebVR을 신속하게 추가할 수 있습니다. 이 카메라는 키보드 입력을 받을 수 있으며, VR 헤드셋으로 "머리"의 회전을 제어할 수 있습니다.
+Babylon.js를 통해, [`WebVRFreeCamera`](https://doc.babylonjs.com/api/classes/babylon.webvrfreecamera)를 사용하여 WebVR을 신속하게 추가할 수 있습니다. 이 카메라는 키보드 입력을 받을 수 있으며, VR 헤드셋으로 "머리"의 회전을 제어할 수 있습니다.
 
 
 ### <a name="step-1-checking-for-headsets"></a>1단계: 헤드셋 확인
 
-대체 카메라를 위해, 본래 게임에 현재 사용되는 [`UniversalCamera`](https://doc.babylonjs.com/classes/3.1/universalcamera)를 사용합니다.
+대체 카메라를 위해, 본래 게임에 현재 사용되는 [`UniversalCamera`](https://doc.babylonjs.com/api/classes/babylon.universalcamera)를 사용합니다.
 
 `WebVRFreeCamera` 카메라를 사용할 수 있는지 확인하기 위해 `headset` 변수를 확인할 것입니다.
 

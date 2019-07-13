@@ -10,18 +10,18 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ea4dc1d77c5cf7199d084d4646b5862599a1d54
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: dc696c9a57e84e2caade6a2623a72a6048b65621
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63794457"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319103"
 ---
 # <a name="teaching-tip"></a>교육 팁
 
 교육 팁은 상황별 정보를 제공하는 풍부한 콘텐츠의 반영구적 플라이아웃입니다. 작업 환경을 개선할 수 있는 중요한 새 기능을 사용자에게 알리고 교육하는 데 주로 사용됩니다.
 
-**중요 API:** [TeachingTip 클래스](https://docs.microsoft.com/en-us/uwp/api/microsoft.ui.xaml.controls.teachingtip)
+**중요 API:** [TeachingTip 클래스](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.teachingtip?view=winui-2.2)
 
 교육 팁은 빠르게 해제되거나 닫기 위해 명시적 작업이 필요할 수 있습니다. 교육 팁은 꼬리를 사용하여 특정 UI 요소를 대상으로 지정할 수 있으며, 꼬리 또는 대상 없이 사용할 수도 있습니다.
 
@@ -52,11 +52,11 @@ ms.locfileid: "63794457"
 
 교육 팁은 꼬리로 특정 UI 요소를 대상으로 지정하여 나타내는 정보의 컨텍스트 명확성을 높일 수 있습니다. 
 
-![저장 단추를 대상으로 지정하는 교육 팁이 있는 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제목으로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-targeted.png)
+![저장 단추를 대상으로 지정하는 교육 팁이 있는 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-targeted.png)
 
 제공된 정보가 특정 UI 요소에 적용되지 않는 경우 해당 꼬리를 제거하여 대상이 없는 교육 팁을 만들 수 있습니다.
 
-![오른쪽 아래 모서리에 교육 팁이 표시되는 샘플 앱입니다. 팁 제목으로 "자동으로 저장"이 표시되고 부제목으로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-non-targeted.png)
+![오른쪽 아래 모서리에 교육 팁이 표시되는 샘플 앱입니다. 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-non-targeted.png)
 
 교육 팁은 사용자가 위쪽 모서리에 있는 "X" 단추 또는 아래쪽의 "닫기" 단추를 통해 해제해야 할 수 있습니다. 교육 팁은 해제 단추가 없는 경우에 빠른 해제를 설정할 수 있으며, 사용자가 스크롤하거나 애플리케이션의 다른 요소와 상호 작용할 때 해제됩니다. 이 동작으로 인해 팀을 스크롤 가능 영역에 배치해야 하는 경우 빠른 해제 팁이 가장 적합한 해결 방법입니다. 
 

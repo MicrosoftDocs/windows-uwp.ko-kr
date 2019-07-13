@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a9d3b4b9b404ab2c0828ea302f0c564ae1c8e7b4
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: bc422f57cdc268ea517aff729a9c3e57c80acf69
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66372780"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320617"
 ---
 # <a name="rssatom-feeds"></a>RSS/Atom 피드
 
@@ -60,7 +60,7 @@ UWP 앱에서 네트워크에 대비하려면 프로젝트 **Package.appxmanifes
 
 이제 피드를 검색한 다음 피드에 포함된 개별 항목을 표시하는 방법을 보여 주는 일부 코드를 검토합니다. 요청을 구성하여 보내려면 먼저 작업 중 사용할 몇 가지 변수를 정의하고 피드를 검색 및 표시할 때 사용할 메서드와 속성을 정의하는 [**SyndicationClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationClient)의 인스턴스를 초기화합니다.
 
-생성자에 전달된 *uriString*이 유효한 URI가 아니면 [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) 생성자에서 예외가 발생합니다. 따라서 try/catch 블록을 사용하여 *uriString*의 유효성을 검사합니다.
+생성자에 전달된 *uriString*이 유효한 URI가 아니면 [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_) 생성자에서 예외가 발생합니다. 따라서 try/catch 블록을 사용하여 *uriString*의 유효성을 검사합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -93,13 +93,13 @@ try {
 }
 ```
 
-다음에는 필요한 서버 자격 증명([**ServerCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.servercredential) 속성), 프록시 자격 증명([**ProxyCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.proxycredential) 속성) 및 HTTP 헤더([**SetRequestHeader**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.setrequestheader) 메서드)를 설정하여 요청을 구성합니다. 기본 요청 매개 변수를 구성하면 앱에서 제공한 피드 URI 문자열을 사용하여 유효한 [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) 개체가 만들어집니다. 그런 다음 피드를 요청하기 위해 **Uri** 개체가 [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) 함수에 전달됩니다.
+다음에는 필요한 서버 자격 증명([**ServerCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.servercredential) 속성), 프록시 자격 증명([**ProxyCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.proxycredential) 속성) 및 HTTP 헤더([**SetRequestHeader**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.setrequestheader) 메서드)를 설정하여 요청을 구성합니다. 기본 요청 매개 변수를 구성하면 앱에서 제공한 피드 URI 문자열을 사용하여 유효한 [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri) 개체가 만들어집니다. 그런 다음 피드를 요청하기 위해 **Uri** 개체가 [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) 함수에 전달됩니다.
 
 필요한 피드 콘텐츠가 반환된 경우 예제 코드는 다음에 정의하는 **displayCurrentItem**을 호출하여 각 피드 항목을 반복하여 UI를 통해 항목과 해당 콘텐츠를 목록으로 표시합니다.
 
 따라서 대부분의 비동기 네트워크 메서드를 호출할 때 예외를 처리하는 코드를 작성해야 합니다. 예외 처리기는 예외의 원인에 대해 보다 자세한 정보를 검색하므로 오류를 더 잘 이해하고 적절한 의사 결정을 내릴 수 있습니다.
 
-HTTP 서버에 연결할 수 없거나 [**Uri**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) 개체가 유효한 AtomPub 또는 RSS 피드를 가리키지 않는 경우 [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) 메서드에서 예외가 발생합니다. Javascript 샘플 코드는 **onError** 함수를 사용하여 예외를 catch하고, 오류가 발생할 경우 예외에 대한 자세한 정보를 출력합니다.
+HTTP 서버에 연결할 수 없거나 [**Uri**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) 개체가 유효한 AtomPub 또는 RSS 피드를 가리키지 않는 경우 [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.foundation.uri) 메서드에서 예외가 발생합니다. Javascript 샘플 코드는 **onError** 함수를 사용하여 예외를 catch하고, 오류가 발생할 경우 예외에 대한 자세한 정보를 출력합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
