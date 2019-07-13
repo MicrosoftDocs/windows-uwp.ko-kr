@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aacf51cc320a0835f906e91806b686a88907640e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f46967cd26f10510e2620229fee0eec13ca7f52a
+ms.sourcegitcommit: 7bbc24d770bf23a8d7e2b234503aad743eb354f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317614"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67852052"
 ---
 # <a name="optimize-your-xaml-markup"></a>XAML 태그 최적화
 
@@ -159,7 +159,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 
 ### <a name="resourcedictionary-in-a-usercontrol"></a>UserControl의 ResourceDictionary
 
-[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) 내부에서 정의된 ResourceDictionary는 성능 저하를 동반합니다. 플랫폼이 UserControl의 모든 인스턴스에 대해 이러한 ResourceDictionary의 복사본을 만듭니다. 많이 사용되는 UserControl이 있는 경우에는 ResourceDictionary를 UserControl 외부로 이동하여 페이지 수준에 배치합니다.
+[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) 내부에서 정의된 ResourceDictionary는 성능 저하를 동반합니다. 플랫폼이 UserControl의 모든 인스턴스에 대해 이러한 ResourceDictionary의 복사본을 만듭니다. UserControl을 많이 사용 되는 경우 UserControl에서 ResourceDictionary를 이동 하 고 페이지 수준에 배치 합니다.
 
 ### <a name="resource-and-resourcedictionary-scope"></a>리소스 및 ResourceDictionary 범위
 
