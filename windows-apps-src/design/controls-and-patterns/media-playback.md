@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b212ff435e58bdb8766972d1832bbf0690db3ed1
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 5e93a1806d1d2add4b3b1c3ee02417a43d574d3c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364739"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319389"
 ---
 # <a name="media-player"></a>미디어 플레이어
 
@@ -143,7 +143,7 @@ private void LoadMediaFromString(string path)
 }
 ```
 
-미디어 원본을 앱에 포함된 미디어 파일로 설정하려면 경로 앞에 **ms-appx:///** 를 붙여 [Uri](https://docs.microsoft.com/uwp/api/windows.foundation.uri.)를 초기화한 다음, 이 Uri로 [MediaSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource)를 만들고 [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source)를 이 Uri로 설정합니다. 예를 들어 **Videos** 하위 폴더에 있는 **video1.mp4** 파일의 경우 경로는 **ms-appx:///Videos/video1.mp4**와 같습니다.
+미디어 원본을 앱에 포함된 미디어 파일로 설정하려면 경로 앞에 **ms-appx:///** 를 붙여 [Uri](https://docs.microsoft.com/uwp/api/windows.foundation.uri)를 초기화한 다음, 이 Uri로 [MediaSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource)를 만들고 [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source)를 이 Uri로 설정합니다. 예를 들어 **Videos** 하위 폴더에 있는 **video1.mp4** 파일의 경우 경로는 **ms-appx:///Videos/video1.mp4**와 같습니다.
 
 다음 코드는 이전에 XAML로 정의된 [MediaPlayerElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement)의 [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) 속성을 **ms-appx:///Videos/video1.mp4**로 설정합니다.
 

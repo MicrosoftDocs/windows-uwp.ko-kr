@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d8968104ec7b28a6b4a59eb6a83c422807282a7c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: bb43307b0a95b49acfd7e2f9739a843824dbf61c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362988"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319069"
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
 
@@ -202,5 +202,5 @@ XAML 예제의 일부 속성에서 [{ThemeResource} 태그 확장](../../xaml-pl
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-* [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
-* [사용자 지정 텍스트 편집 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
+* [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
+* [사용자 지정 텍스트 편집 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl)

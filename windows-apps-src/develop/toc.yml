@@ -840,6 +840,8 @@
           href: ../cpp-and-winrt-apis/weak-references.md
         - name: Agile 개체
           href: ../cpp-and-winrt-apis/agile-objects.md
+        - name: 간단한 C++/WinRT WinUI 예제
+          href: ../cpp-and-winrt-apis/simple-winui-example.md
         - name: C++ 언어
           items:
             - name: 값 범주 및 참조
