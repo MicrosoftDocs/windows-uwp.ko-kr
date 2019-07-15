@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 비즈니스용 Store, 교육용 Store, 조직, 볼륨 라이선싱, 엔터프라이즈, 교육 Store, 비즈니스 Store, 대량 구매, 대량
 localizationpriority: high
-ms.openlocfilehash: b7f0ecc1eb7faec39eaad925ccd6c9d501d39749
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 8cfa4d4a18112ef1cad793048399d04835ff4633
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63788400"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320578"
 ---
 # <a name="organizational-licensing-options"></a>조직 라이선스 옵션
 
@@ -59,7 +59,7 @@ ms.locfileid: "63788400"
 현재 특정 시장에 위치한 개발자 계정은 비즈니스용 Microsoft Store를 통해 유료 앱의 대량 구매 서비스를 제공할 수 있습니다. 
 
 > [!NOTE]
-> 일부 시장에서는 비즈니스용 Microsoft Store 또는 교육용 Microsoft Store에서 표시되는 앱 가격이 동일한 기준 가격에 대해 Microsoft Store 소매 고객에게 표시되는 가격과 다를 수 있습니다. 조직 구매를 통해 얻은 수익 지급액은 앱을 소비자가 구매한 경우와 동일하게 적용됩니다. 자세한 내용은 [지급 받기](getting-paid-apps.md) 및 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 비즈니스용 Microsoft Store 및 교육용 Microsoft Store가 제공되는 시장의 목록은 [비즈니스용 Microsoft Store 및 교육용 Microsoft Store 개요](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets)를 참조하세요.
+> 일부 시장에서는 비즈니스용 Microsoft Store 또는 교육용 Microsoft Store에서 표시되는 앱 가격이 동일한 기준 가격에 대해 Microsoft Store 소매 고객에게 표시되는 가격과 다를 수 있습니다. 조직 구매를 통해 얻은 수익 지급액은 앱을 소비자가 구매한 경우와 동일하게 적용됩니다. 자세한 내용은 [지급 받기](getting-paid-apps.md) 및 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 비즈니스용 Microsoft Store 및 교육용 Microsoft Store가 제공되는 시장의 목록은 [비즈니스용 Microsoft Store 및 교육용 Microsoft Store 개요](https://docs.microsoft.com/windows/manage/windows-store-for-business-overview#supported-markets)를 참조하세요.
 
 국가 또는 지역이 아래에 나열되지 않은 경우에는 유료 앱이 비즈니스용 Microsoft Store 및 교육용 Microsoft Store에서 현재 제공되지 않고 있다는 뜻입니다. 이 경우, 나중에 추가 개발자 계정 시장에서 제출 지원을 추가할 수 있기 때문에 유료 앱에 대해 선택한 조직 라이선스가 나중에 적용될 수 있습니다.
 

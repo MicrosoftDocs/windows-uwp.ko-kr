@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 8a57f13e168a248569bca1beeceed7b4f6c89f69
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: ff071a2a98c533ad7c089b28165f026de00ba68f
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63794298"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319090"
 ---
 # <a name="forms"></a>양식
 양식은 사용자가 데이터를 제출할 수 있고 이를 수집할 수 있는 컨트롤 그룹입니다. 일반적으로 양식은 설정 페이지, 설문 조사, 계정 생성 등에 사용됩니다. 
@@ -149,7 +149,7 @@ ms.locfileid: "63794298"
 ### <a name="additional-controls"></a>추가 컨트롤 
 UWP 컨트롤의 전체 목록을 보려면 [기능별 컨트롤 인덱스](controls-by-function.md)를 참조하세요.
 
-더 많은 복합 및 사용자 지정 UI 컨트롤을 알아보려면 [Telerik](https://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/products/uwp), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](https://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) 및 [ActiPro](https://www.actiprosoftware.com/products/controls/universal)와 같은 회사에서 제공되는 UWP 리소스를 확인하세요.
+더 많은 복합 및 사용자 지정 UI 컨트롤을 알아보려면 [Telerik](https://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/uwp-ui-controls), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](https://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) 및 [ActiPro](https://www.actiprosoftware.com/products/controls/universal)와 같은 회사에서 제공되는 UWP 리소스를 확인하세요.
 
 ## <a name="one-column-form-example"></a>하나의 열 양식 예제
 이 예제에서는 Acrylic [마스터/세부 정보](master-details.md) [목록 보기](lists.md) 및 [NavigationView](navigationview.md) 컨트롤을 사용합니다.
