@@ -1,6 +1,6 @@
 ---
 description: 이 자습서에는 UWP XAML 사용자 인터페이스를 추가, MSIX 패키지 만들기 및 WPF 앱에 다른 최신 구성 요소를 통합 하는 방법을 보여 줍니다.
-title: XAML 제도 사용 하 여 UWP InkCanvas 컨트롤 추가
+title: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
 ms.topic: article
 ms.date: 06/27/2019
 ms.author: mcleans
@@ -8,14 +8,14 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 2f8cf18bce7bec880a2cb0bef298c0b565e20208
-ms.sourcegitcommit: 1eec0e4fd8a5ba82803fdce6e23fcd01b9488523
+ms.openlocfilehash: 35b6886389640c7960c4120772c169161779ab68
+ms.sourcegitcommit: 734aa941dc675157c07bdeba5059cb76a5626b39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141837"
 ---
-# <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>2부: XAML 제도 사용 하 여 UWP InkCanvas 컨트롤 추가
+# <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>2부: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
 
 Contoso Expenses 라는 샘플 WPF 데스크톱 앱을 현대화 하는 방법에 설명 하는 자습서의 두 번째 부분입니다. 자습서, 필수 구성 요소 및 샘플 앱을 다운로드 하기 위한 지침의 개요를 참조 하세요. [자습서: WPF 앱을 현대화](modernize-wpf-tutorial.md)합니다. 이 문서에서는 이미 완료 했다고 가정 [1 부](modernize-wpf-tutorial-1.md)합니다.
 
@@ -38,20 +38,20 @@ Contoso Expenses 라는 샘플 WPF 데스크톱 앱을 현대화 하는 방법�
 
 4. 선택 **응용 프로그램 매니페스트 파일**, 이름을 **app.manifest**를 클릭 하 고 **추가**합니다.
 
-5. 열린된 매니페스트 파일에서 찾습니다 합니다 **호환성** 섹션 및 다음 주석으로 처리 된 항목을 식별 합니다.
+5. 열린된 매니페스트 파일에서 찾습니다 합니다 **호환성** 섹션 및 주석 처리 된 다음 식별 **supportedOS** Windows 10에 대 한 요소입니다.
 
     ```xml
     <!-- Windows 10 -->
     <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
     ```
 
-6. 이 항목 아래에 다음 항목을 추가 합니다.
+6. 이 요소 아래에 다음 추가 **maxversiontested** 요소입니다.
 
     ```xml
     <maxversiontested Id="10.0.18362.0"/>
     ```
 
-7. 주석 처리를 제거 합니다 **supportedOS** Windows 10에 대 한 항목입니다. 이제이 섹션에서는이 처럼 보여야 합니다.
+7. 주석 처리를 제거 합니다 **supportedOS** Windows 10에 대 한 요소입니다. 이제이 섹션에서는이 처럼 보여야 합니다.
 
     ```xml
     <!-- Windows 10 -->
@@ -60,7 +60,7 @@ Contoso Expenses 라는 샘플 WPF 데스크톱 앱을 현대화 하는 방법�
     ```
 
     > [!NOTE]
-    > 이 항목은 앱을 Windows 10 버전 1903 (18362 빌드)에 필요 함을 지정 이상. XAML 제도 지 원하는 Windows 10의 첫 번째 버전입니다. 응용 프로그램 매니페스트에서이 항목이 없으면 앱에는 런타임 시 예외가 throw 됩니다.
+    > 합니다 **maxversiontested** 요소 필요 하도록 지정 합니다 앱을 Windows 10 버전 1903 (18362 빌드) 이상. XAML 제도 지 원하는 Windows 10의 첫 번째 버전입니다. 응용 프로그램 매니페스트에서이 항목이 없으면 앱에는 런타임 시 예외가 throw 됩니다. 이 요소를 추가한 후 프로젝트에 다음 빌드 경고를 발생할 수 있습니다: `manifest authoring warning 81010002: Unrecognized Element "maxversiontested" in namespace "urn:schemas-microsoft-com:compatibility.v1"`합니다. 이 경고는 프로젝트에서 잘못 된 항목이 무시할 수는 나타내지 않습니다.
 
 8. 매니페스트 파일에서 주석 처리 된 다음 찾습니다 **응용 프로그램** 섹션입니다.
 

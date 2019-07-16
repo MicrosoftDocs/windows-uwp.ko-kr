@@ -1,6 +1,6 @@
 ---
 description: 이 자습서에는 UWP XAML 사용자 인터페이스를 추가, MSIX 패키지 만들기 및 WPF 앱에 다른 최신 구성 요소를 통합 하는 방법을 보여 줍니다.
-title: Contoso 마이그레이션 expenses 3.NET Core로
+title: Contoso Expenses 앱을 .NET Core 3으로 마이그레이션
 ms.topic: article
 ms.date: 06/27/2019
 ms.author: mcleans
@@ -8,14 +8,14 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: e718de7a22873ccf347e60c661f724ce3abdd2cf
-ms.sourcegitcommit: 1eec0e4fd8a5ba82803fdce6e23fcd01b9488523
+ms.openlocfilehash: 6e303e7059edd72fcdeb5455f450e6ece9d58e02
+ms.sourcegitcommit: 734aa941dc675157c07bdeba5059cb76a5626b39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141845"
 ---
-# <a name="part-1-migrate-the-contoso-expenses-app-to-net-core-3"></a>1단계: Contoso 마이그레이션 expenses 3.NET Core로
+# <a name="part-1-migrate-the-contoso-expenses-app-to-net-core-3"></a>1단계: Contoso Expenses 앱을 .NET Core 3으로 마이그레이션
 
 Contoso Expenses 라는 샘플 WPF 데스크톱 앱을 현대화 하는 방법에 설명 하는 자습서의 첫 번째 부분입니다. 자습서, 필수 구성 요소 및 샘플 앱을 다운로드 하기 위한 지침의 개요를 참조 하세요. [자습서: WPF 앱을 현대화](modernize-wpf-tutorial.md)합니다.
   
@@ -162,7 +162,7 @@ Contoso Expenses 라는 샘플 WPF 데스크톱 앱을 현대화 하는 방법�
 
 5. 검색 된 `MvvmLightLibsStd10` 패키지 하 고 설치 합니다. 이 버전의.NET Standard 버전 이기는 `MvvmLightLibs` 패키지 있습니다. 이 패키지에 대 한 작성자는.NET Standard 버전의.NET Framework 버전 보다 별도 패키지에서 라이브러리 패키지 하도록 선택 했습니다.
 
-    ! MvvmLightsLibs 패키지[](images/wpf-modernize-tutorial/MvvmLightsLibsPackage.png)
+    ![MvvmLightsLibs 패키지](images/wpf-modernize-tutorial/MvvmLightsLibsPackage.png)
 
 6. 에 **ContosoExpenses.Core** 프로젝트를 마우스 오른쪽 단추로 클릭 합니다 **종속성** 노드 선택 **참조 추가**합니다.
 
