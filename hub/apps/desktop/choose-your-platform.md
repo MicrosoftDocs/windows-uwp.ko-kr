@@ -7,12 +7,12 @@ ms.date: 03/18/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 996bbaf4dd05ce5b24e536459c6d7d009a53fa19
-ms.sourcegitcommit: f167775291cbc566b72b0859ae6b426d848c5c89
+ms.openlocfilehash: 2a4de1a43e60250e7efc2faf70f3c49e8253beb3
+ms.sourcegitcommit: 734aa941dc675157c07bdeba5059cb76a5626b39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141795"
 ---
 # <a name="choose-your-app-platform"></a>앱 플랫폼 선택
 
@@ -27,7 +27,7 @@ ms.locfileid: "66266402"
 
 * **UWP, WPF 및 Windows Forms**합니다. 이러한 플랫폼의 개발자 생산성, 정교 하 고 사용자 지정 가능한 UI 및 응용 프로그램 보안 영역에서 특히 다양 한 혜택을 사용 하 여 관리 되는 런타임 환경 (UWP 및.NET에 대 한 Windows Forms 및 WPF에 대 한 Windows 런타임)을 제공합니다. 되기 때문에 이러한 프레임 워크 신속 하 게 UI를 만들기 위한 비주얼 디자이너 및 UI 태그 지원, 기간 업무 응용 프로그램에 특히 적합 합니다.
 
-* **Win32 API**. Win32 API (Windows API 라고도 함)는 네이티브 C에 대 한 원래 플랫폼 /C++ Windows 및 하드웨어에 직접 액세스 해야 하는 Windows 응용 프로그램입니다. .NET 등 WinRT는 관리 되는 런타임 환경에 따라 없이 최고급 개발 환경을 제공합니다. 이 통해 Win32 API는 선택한 가장 높은 수준의 성능 및 시스템 하드웨어에 대 한 직접 액세스 해야 하는 응용 프로그램에 대 한 플랫폼이 됩니다.
+* **Win32 API**합니다. Win32 API (Windows API 라고도 함)는 네이티브 C에 대 한 원래 플랫폼 /C++ Windows 및 하드웨어에 직접 액세스 해야 하는 Windows 응용 프로그램입니다. .NET 등 WinRT는 관리 되는 런타임 환경에 따라 없이 최고급 개발 환경을 제공합니다. 이 통해 Win32 API는 선택한 가장 높은 수준의 성능 및 시스템 하드웨어에 대 한 직접 액세스 해야 하는 응용 프로그램에 대 한 플랫폼이 됩니다.
 
 이 문서는 자세히 이러한 플랫폼에 설명 하 고 응용 프로그램에 가장 적합 한 결정 하도록 도와줍니다. 
 
@@ -64,8 +64,8 @@ Windows Forms에 대 한 자세한 내용은 참조 하세요. [Windows Forms �
 | **언어들**      |   C\#, C++/WinRT, C++/CX, VB, JavaScript   |  C\#, C++/CLI (관리 되는 확장에 대 한 C++), F\#, VB |  C\#, C++/CLI (관리 되는 확장에 대 한 C++), F\#, VB   |
 | **UI 런타임** |    네이티브 (C++/WinRT 및 C++/CX) 및 관리 (.NET 네이티브)  |  매니지드(.NET Framework)<br/><br/>.NET Core 3에 대 한 지원이 곧 제공 됩니다.  |   매니지드(.NET Framework)<br/><br/>.NET Core 3에 대 한 지원이 곧 제공 됩니다.    |
 | **오픈 소스** | [예 (Windows UI 라이브러리에만 해당)](https://github.com/Microsoft/microsoft-ui-xaml)  |  [예 (.NET Core에만 해당)](https://github.com/dotnet/wpf) | [예 (.NET Core에만 해당)](https://github.com/dotnet/winforms)  |
-| **XAML 지원** |   예   |  예  |   아니오   |
-| **Strengths**  |  <ul><li>UI에 대 한 XAML 태그</li><li>풍부 하 고 사용자 지정할 수 있는 UX</li><li>기존 코드 베이스에는.NET 표준 준수</li><li>높은 DPI 지원</li><li>터치, 펜, gamepad, 마우스 및 키보드 등 Windows 장치에서 여러 입력된 형식에 대 한 지원</li><li>Xbox, HoloLens, IoT 또는 Surface Hub에 대 한 지원</li><li>네이티브에 대 한 지원C++</li><li>배터리 최적화</li><li>최신 내게 필요한 옵션 지원 (예: 화면 판독기)</li><li>서식 있는 텍스트 데이터 기능 (예: 기본 제공 맞춤법 검사)</li><li>잉크 입력 기능</li><li>응용 프로그램 컨테이너를 통해 실행 보안 (예를 들어, 신뢰할 수 없는 콘텐츠를 샌드박스)</li></ul>  |  <ul><li>UI에 대 한 XAML 태그</li><li>풍부 하 고 사용자 지정할 수 있는 UX</li><li>컨트롤에서 Microsoft 및 파트너의 대규모 컬렉션</li><li>조밀한 UI</li><li>Windows 7에 대 한 지원</li><li>입력된 유효성 검사에 대 한 플랫폼 지원</li></ul> | <ul><li>신속한 응용 프로그램 개발</li><li>UI를 빌드하기 위한 wysiwyg (위지윅) 편집기</li><li>컨트롤에서 Microsoft 및 파트너의 대규모 컬렉션</li><li>조밀한 UI</li><li>Windows 7에 대 한 지원</li><li>키보드 및 마우스 입력</li></ul>          |
+| **XAML 지원** |   예   |  예  |   아니요   |
+| **장점**  |  <ul><li>UI에 대 한 XAML 태그</li><li>풍부 하 고 사용자 지정할 수 있는 UX</li><li>기존 코드 베이스에는.NET 표준 준수</li><li>높은 DPI 지원</li><li>터치, 펜, gamepad, 마우스 및 키보드 등 Windows 장치에서 여러 입력된 형식에 대 한 지원</li><li>Xbox, HoloLens, IoT 또는 Surface Hub에 대 한 지원</li><li>네이티브에 대 한 지원C++</li><li>배터리 최적화</li><li>최신 내게 필요한 옵션 지원 (예: 화면 판독기)</li><li>서식 있는 텍스트 데이터 기능 (예: 기본 제공 맞춤법 검사)</li><li>잉크 입력 기능</li><li>응용 프로그램 컨테이너를 통해 실행 보안 (예를 들어, 신뢰할 수 없는 콘텐츠를 샌드박스)</li></ul>  |  <ul><li>UI에 대 한 XAML 태그</li><li>풍부 하 고 사용자 지정할 수 있는 UX</li><li>컨트롤에서 Microsoft 및 파트너의 대규모 컬렉션</li><li>조밀한 UI</li><li>Windows 7에 대 한 지원</li><li>입력된 유효성 검사에 대 한 플랫폼 지원</li></ul> | <ul><li>신속한 응용 프로그램 개발</li><li>UI를 빌드하기 위한 wysiwyg (위지윅) 편집기</li><li>컨트롤에서 Microsoft 및 파트너의 대규모 컬렉션</li><li>조밀한 UI</li><li>Windows 7에 대 한 지원</li><li>키보드 및 마우스 입력</li></ul>          |
 | **제한 된 지원을 제공 하는 시나리오** |  <ul><li>조밀한 UI (사용자 지정 스타일을 필요 조밀한 UI 만들기)<sup>1</sup></li><li>여러 창 지원<sup>1</sup></li><li>입력된 유효성 검사에 대 한 플랫폼 지원<sup>1</sup></li><li>Windows 7 지원 되지 않습니다.</li><li>일부 UWP Api에는 Windows 10의 특정 최소 버전 필요</li><li>완전 한 플랫폼 지원 및 셸 통합 (예를 들어 UWP 현재 지원 하지 않습니다 시스템 트레이에서 통합 또는 모든 장치에 대 한 전체 액세스)</li><li>디스크의 모든 파일에 대 한 직접 액세스</li><li>ADO.NET</li><li>비-.NET Standard를 사용 하는 기존 코드 기반 클래스 라이브러리 또는 비-Windows 앱 인증 키트 규격 Api</li><li>로컬 네트워크 루프백 지원 (즉, 대상 장치에서 루프백 예외를 만들지 않고 localhost를 사용 하 여 통신 해야 하는 앱)</li><li>I/O 집약적인 파일</li></ul>     |  <ul><li>높은 DPI 지원<sup>2</sup></li><li>터치식 입력<sup>2</sup></li></ul>  |  <ul><li>높은 DPI 지원<sup>2</sup></li><li>터치식 입력<sup>2</sup></li><li>UI 사용자 지정 가능</li><li>풍부한 그래픽 및 사용자 환경 (예: 터치 및 애니메이션)</li><li>뷰 및 데이터 모델의 다양 한 추상화</li></ul>    |   |
 
 <sup>1</sup> 공개적으로 Windows 10의 이후 릴리스에서이 시나리오를 해결 하는 기능 발표 했습니다.

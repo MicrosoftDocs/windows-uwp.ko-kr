@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 8ceb314424ae2611e141ef866a84c08e55b0ba2d
-ms.sourcegitcommit: f9a30bfd1e8eab50d0b1db97dd2f650ce66b5d34
+ms.openlocfilehash: 52338ef4d3850b5cf4a2caa0e2d6f93341897285
+ms.sourcegitcommit: 734aa941dc675157c07bdeba5059cb76a5626b39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141814"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱 (XAML 제도)에서 호스트 UWP XAML 컨트롤
 
@@ -84,12 +84,12 @@ XAML 섬 지원을 사용 하려면 프로젝트에 다음 변경 중 하나를 
 
 Windows 10, 버전 1903 SDK (또는 이후 릴리스)를 설치 합니다. 그런 다음 추가 하 여 MSIX 패키지의 응용 프로그램 패키지를 [Windows 응용 프로그램 패키징 프로젝트](https:/docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) 솔루션 및 WPF 또는 Windows Forms 프로젝트에 대 한 참조를 추가 합니다.
 
-#### <a name="option-2-set-the-maxversiontested-value-in-your-assembly-manifest"></a>옵션 2: 어셈블리 매니페스트에 maxVersionTested 값을 설정 합니다.
+#### <a name="option-2-set-the-maxversiontested-value-in-your-assembly-manifest"></a>옵션 2: 어셈블리 매니페스트에 maxversiontested 값을 설정 합니다.
 
-없는 하려는 경우 MSIX 패키지의 응용 프로그램 패키지를 추가할 수 있습니다는 [응용 프로그램 매니페스트](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests) 프로젝트에 추가 합니다 **maxVersionTested** 매니페스트를 지정 하는 요소에 응용 프로그램은 Windows 10 버전이 1903 이상 호환 됩니다.
+없는 하려는 경우 MSIX 패키지의 응용 프로그램 패키지를 추가할 수 있습니다는 [응용 프로그램 매니페스트](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests) 프로젝트에 추가 합니다 **maxversiontested** 매니페스트를 지정 하는 요소에 응용 프로그램은 Windows 10 버전이 1903 이상 호환 됩니다.
 
 1. 응용 프로그램 프로젝트에서 매니페스트를 프로젝트에 새 XML 파일을 추가 하 고 이름을 이미 없다면 **app.manifest**합니다. WPF 또는 Windows Forms 응용 프로그램을 할당할 수도 있는지 확인 합니다 **매니페스트** 속성을 **. app.manifest** 에 **응용 프로그램** 페이지에 [프로젝트 속성](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp?view=vs-2019#resources)합니다.
-2. 응용 프로그램 매니페스트에 포함 된 **호환성** 요소와 다음 예제와 같이 자식 요소입니다. 대체는 **Id** 특성을 **maxVersionTested** 대상으로 하는 Windows 10의 버전 번호를 사용 하 여 요소 (Windows 10, 버전 1903 또는 이후 버전 이어야 함).
+2. 응용 프로그램 매니페스트에 포함 된 **호환성** 요소와 다음 예제와 같이 자식 요소입니다. 대체는 **Id** 특성을 **maxversiontested** 대상으로 하는 Windows 10의 버전 번호를 사용 하 여 요소 (Windows 10, 버전 1903 또는 이후 버전 이어야 함).
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -105,7 +105,7 @@ Windows 10, 버전 1903 SDK (또는 이후 릴리스)를 설치 합니다. 그�
     ```
 
 > [!NOTE]
-> 추가 하는 경우는 **maxVersionTested** 요소에서 응용 프로그램 매니페스트를는 C++ Win32 프로젝트 (Visual Studio에서 Windows 데스크톱 응용 프로그램 프로젝트 템플릿을 사용), 프로젝트에서 다음과 같은 빌드 경고가 표시 될 수 있습니다: `manifest authoring warning 81010002: Unrecognized Element "maxversiontested" in namespace "urn:schemas-microsoft-com:compatibility.v1"` . 이 경고는 프로젝트에서 잘못 된 항목이 무시할 수는 나타내지 않습니다.
+> 추가 하는 경우는 **maxversiontested** 요소는 응용 프로그램 매니페스트를 프로젝트에서 경고 빌드가 표시 될 수 있습니다: `manifest authoring warning 81010002: Unrecognized Element "maxversiontested" in namespace "urn:schemas-microsoft-com:compatibility.v1"`합니다. 이 경고는 프로젝트에서 잘못 된 항목이 무시할 수는 나타내지 않습니다.
 
 ## <a name="feature-roadmap"></a>기능 로드맵
 
