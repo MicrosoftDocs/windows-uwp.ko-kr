@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: b6caf2de67b72c01391d47037150d76500a1cb42
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
-ms.translationtype: MT
+ms.openlocfilehash: 23cd899a196fbe3d28b7156890d65e90ac88cdad
+ms.sourcegitcommit: 9f097438937539f94b6a14a09ee65d30f71da9c6
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223960"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI와 앱 패키지 매니페스트에 문자열 지역화
 
@@ -301,23 +301,21 @@ UWP 사용자 컨트롤/라이브러리를 만들기만 하 고 [리소스 파�
 
 비-패키지 응용 프로그램에서 리소스를 사용 하려면 몇 가지를 수행 해야 합니다.
 
-1. 패키지 되지 않은 시나리오를 지원 하기 위해 사용 하 여 [GetForViewIndependentUse](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforviewindependentuse) of [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) 없기 때문에 없습니다 *현재 보기* 패키지 되지 않은 시나리오에서 합니다. 호출 하는 경우 예외가 발생 [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) 패키지 되지 않은 시나리오에서: *CoreWindow를 갖지 않는 스레드에서 리소스 컨텍스트를 만들 수 있습니다.*
+1. 사용 하 여 [GetForViewIndependentUse](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforviewindependentuse) of [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) 없기 때문에 코드에서 리소스를 확인 하는 경우 없습니다 *현재 보기* 패키지 되지 않은 시나리오에서 합니다. 호출 하는 경우 예외가 발생 [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) 패키지 되지 않은 시나리오에서: *CoreWindow를 갖지 않는 스레드에서 리소스 컨텍스트를 만들 수 있습니다.*
 1. 사용 하 여 [MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/compile-resources-manually-with-makepri) 수동으로 앱의 resources.pri 파일을 생성 합니다.
     - `makepri new /pr <PROJECTROOT> /cf <PRICONFIG> /dq <DEFAULTLANGUAGEQUALIFIER> /of resources.pri`를 실행합니다.
-    - 합니다 <PRICONFIG> 생략 해야 합니다 "<packaging>" 모든 리소스는 단일 resources.pri 파일에 번들로 제공 되는 섹션입니다. 기본값을 사용 하는 경우 [MakePri.exe 구성 파일](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) 에서 만든 [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command)를 삭제 해야 합니다 "<packaging>" 만들어진 후 수동으로 섹션.
-    - <PRICONFIG> 단일 resources.pri 파일로 프로젝트의 모든 리소스를 병합 하는 데 필요한 모든 관련 인덱서를 포함 해야 합니다. 기본값 [MakePri.exe 구성 파일](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) 생겨난 [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command) 모든 인덱서를 포함 합니다.
+    - 합니다 &lt;PRICONFIG&gt; 생략 해야 합니다 "&lt;패키징&gt;" 모든 리소스는 단일 resources.pri 파일에 번들로 제공 되는 섹션입니다. 기본값을 사용 하는 경우 [MakePri.exe 구성 파일](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) 에서 만든 [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command)를 삭제 해야 합니다 "&lt;패키징&gt;" 만들어진 후 수동으로 섹션.
+    - 합니다 &lt;PRICONFIG&gt; 단일 resources.pri 파일로 프로젝트의 모든 리소스를 병합 하는 데 필요한 모든 관련 인덱서를 포함 해야 합니다. 기본값 [MakePri.exe 구성 파일](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) 생겨난 [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command) 모든 인덱서를 포함 합니다.
     - 기본 구성을 사용 하지 않는 경우 PRI 인덱서를 사용할 수 있는지 (이 작업을 수행 하는 방법에 대 한 기본 구성 검토) PRIs UWP 프로젝트 참조, NuGet 참조 및 등에서 찾을 수 있는 프로젝트 루트에 병합 합니다.
         > [!NOTE]
-        > 생략 하 여 `/IndexName`, 응용 프로그램 매니페스트를가지고 있지 않은 경우 프로젝트에서 PRI 파일의 IndexName/루트 네임 스페이스가 자동으로 설정 *응용 프로그램*, 런타임이 아닌 패키지 된 앱에 대 한 이해 하는 (이 제거 합니다 이전 대 한 강한 종속성 패키지 ID)입니다. 그러나 다음과 같이 명시적으로 루트 네임 스페이스를 지정할 수 있습니다.
-        > - ResourceLoader.GetForViewIndependentUse("ControlName\Resources").GetStringForUri(new Uri("ms-resource:///ManagedWinRT/Resources/Header"))
-        > - ResourceLoader.GetForViewIndependentUse("ControlName\Resources").GetStringForUri(new Uri("ms-resource://Application/ManagedWinRT/Resources/Header"))
+        > 생략 하 여 `/IndexName`, 응용 프로그램 매니페스트를가지고 있지 않은 경우 프로젝트에서 PRI 파일의 IndexName/루트 네임 스페이스가 자동으로 설정 *응용 프로그램*, 런타임이 아닌 패키지 된 앱에 대 한 이해 하는 (이 제거 합니다 이전 대 한 강한 종속성 패키지 ID)입니다. 리소스 Uri를 지정 하는 경우 ms 리소스: / / / 참조 루트 네임 스페이스를 생략 하는 유추 *응용 프로그램* 비 패키지 된 앱에 대 한 루트 네임 스페이스 (하거나 지정할 수 있습니다 *응용 프로그램* 명시적으로 ms-resource://Application/).
 1. .Exe의 빌드 출력 디렉터리에 PRI 파일을 복사 합니다.
 1. .Exe를 실행 합니다. 
     > [!NOTE]
     > 리소스 관리 시스템 패키지 되지 않은 앱의 언어를 기반으로 리소스를 확인 하는 경우 사용자 기본 설정된 언어 목록 대신 체제 표시 언어를 사용 합니다. UWP 앱에 대 한 사용자 기본 설정된 언어 목록만 사용 됩니다.
 
 > [!Important]
-> 수동으로 다시 빌드해야 PRI 파일을 처리 하는 빌드 후 스크립트와 같은 리소스 파일의 콘텐츠를 변경 하는 경우는 [MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/compile-resources-manually-with-makepri) 명령 및.exe 디렉터리로 resources.pri 출력에 복사 합니다.
+> 리소스는 수정 될 때마다 다시 수동으로 PRI 파일 빌드해야 합니다. 처리 하는 빌드 후 스크립트를 사용 하는 것이 좋습니다 합니다 [MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/compile-resources-manually-with-makepri) 명령 및.exe 디렉터리로 resources.pri 출력에 복사 합니다.
 
 ## <a name="important-apis"></a>중요 API
 * [ApplicationModel.Resources.ResourceLoader](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.ResourceLoader)
@@ -326,7 +324,7 @@ UWP 사용자 컨트롤/라이브러리를 만들기만 하 고 [리소스 파�
 
 ## <a name="related-topics"></a>관련 항목
 * [XAML 및 UI를 이식합니다.](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization)
-* [x:Uid directive](../xaml-platform/x-uid-directive.md)
+* [X:uid 지시문](../xaml-platform/x-uid-directive.md)
 * [연결 된 속성](../xaml-platform/attached-properties-overview.md)
 * [매니페스트 지역화 가능한 항목](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
 * [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)

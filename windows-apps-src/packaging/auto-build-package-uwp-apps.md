@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 61525e2a4a088e37184bb93526722e0bf23fbd56
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5837674f2cb20710a59eeac0af59498bf28b197e
+ms.sourcegitcommit: a86d0bd1c2f67e5986cac88a98ad4f9e667cfec5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319815"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229392"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -64,11 +64,21 @@ steps:
 
 기본 템플릿을.csproj 파일에 지정 된 인증서를 사용 하 여 패키지에 서명 하려고 시도 합니다. 빌드 중에 패키지를 서명 하려면 개인 키에 액세스할 수 있어야 합니다. 매개 변수를 추가 하 여 서명을 해제할 수이 고, 그렇지 `/p:AppxPackageSigningEnabled=false` 에 `msbuildArgs` YAML 파일의 섹션입니다.
 
-## <a name="add-your-project-certificate-to-a-repository"></a>리포지토리에 프로젝트 인증서 추가
+## <a name="add-your-project-certificate-to-the-secure-files-library"></a>보안 파일 라이브러리를 프로젝트 인증서 추가
 
-파이프라인은 Azure 리포지토리 Git 및 TFVC 리포지토리를 사용 하 여 작동 합니다. Git 리포지토리를 사용하는 경우 빌드 에이전트에서 앱 패키지에 서명할 수 있도록 프로젝트의 인증서 파일을 리포지토리에 추가합니다. 이렇게 하지 않으면 Git 리포지토리에서는 인증서 파일을 무시합니다. 리포지토리에 인증서 파일을 추가 하려면에서 인증서 파일을 마우스 오른쪽 단추로 **솔루션 탐색기**을 선택한 다음 바로 가기 메뉴를 선택 합니다 **소스 제어에 무시 파일 추가** 명령입니다.
+리포지토리에 가능한, 인증서를 제출 하지 않아야 하 고 git은 기본적으로 무시 합니다. Azure DevOps는 인증서와 같은 중요 한 파일의 안전한 처리를 관리 하려면 다음을 지원 합니다. [파일을 보호](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops)합니다.
 
-![인증서를 포함하는 방법](images/building-screen1.png)
+자동화 된 빌드에 대 한 인증서를 업로드 합니다.
+
+1. Azure 파이프라인 확장 **파이프라인** 탐색 창에서 클릭 **라이브러리**합니다.
+2. 클릭 합니다 **파일을 보호** 탭을 클릭 한 다음 **+ 보안 파일**합니다.
+
+    ![보안 파일을 업로드 하는 방법](images/secure-file1.png)
+
+3. 인증서 파일을 찾아 클릭 **확인**합니다.
+4. 인증서를 업로드 한 후에 해당 속성을 보려면 선택 합니다. 아래 **권한을 파이프라인**, 사용 하도록 설정 합니다 **모든 파이프라인에서 사용 하기 위해 권한 부여** 설정/해제 합니다.
+
+    ![보안 파일을 업로드 하는 방법](images/secure-file2.png)
 
 ## <a name="configure-the-build-solution-build-task"></a>솔루션 빌드에 대한 빌드 작업 구성
 
@@ -82,7 +92,12 @@ steps:
 | AppxBundle | Always | 지정 된 플랫폼에 대 한.msix/.appx 파일을 사용 하 여는.msixbundle/.appxbundle를 만듭니다. |
 | UapAppxPackageBuildMode | StoreUpload | .Msixupload/.appxupload 파일을 생성 하며 **테스트 (_t)** 테스트용 로드에 대 한 폴더입니다. |
 | UapAppxPackageBuildMode | CI | .Msixupload/.appxupload 파일만을 생성합니다. |
-| UapAppxPackageBuildMode | SideloadOnly | 생성 된 **테스트 (_t)** 만 테스트용 로드에 대 한 폴더 |
+| UapAppxPackageBuildMode | SideloadOnly | 생성 된 **테스트 (_t)** 만 테스트용 로드에 대 한 폴더입니다. |
+| AppxPackageSigningEnabled | true | 패키지 서명이 사용 됩니다. |
+| PackageCertificateThumbprint | 인증서 지문 | 이 값 **해야** 서명 인증서의 지문과 일치 또는 빈 문자열일 수 있습니다. |
+| PackageCertificateKeyFile | Path | 인증서를 사용 하 여 경로입니다. 이 보안 파일 메타 데이터에서 검색 됩니다. |
+
+### <a name="configure-the-build"></a>빌드 구성
 
 명령줄을 사용 하 여 또는 다른 빌드 시스템을 사용 하 여 솔루션을 빌드 하려는 경우 이러한 인수를 사용 하 여 MSBuild를 실행 합니다.
 
@@ -92,6 +107,41 @@ steps:
 /p:AppxBundlePlatforms="$(Build.BuildPlatform)"
 /p:AppxBundle=Always
 ```
+
+### <a name="configure-package-signing"></a>패키지를 서명 구성
+
+MSIX (또는 APPX) 패키지에 서명 하려면 파이프라인 서명 인증서를 검색 해야 합니다. 이 작업을 수행 하려면 VSBuild 작업 전에 DownloadSecureFile 작업을 추가 합니다.
+통해 서명 인증서에 액세스할 수 그러면 ```signingCert```합니다.
+
+```yml
+- task: DownloadSecureFile@1
+  name: signingCert
+  displayName: 'Download CA certificate'
+  inputs:
+    secureFile: '[Your_Pfx].pfx'
+```
+
+다음으로 서명 인증서를 참조할 VSBuild 작업 업데이트:
+
+```yml
+- task: VSBuild@1
+  inputs:
+    platform: 'x86'
+    solution: '$(solution)'
+    configuration: '$(buildConfiguration)'
+    msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" 
+                  /p:AppxPackageDir="$(appxPackageDir)" 
+                  /p:AppxBundle=Always 
+                  /p:UapAppxPackageBuildMode=StoreUpload 
+                  /p:AppxPackageSigningEnabled=true
+                  /p:PackageCertificateThumbprint="" 
+                  /p:PackageCertificateKeyFile="$(signingCert.secureFilePath)"'
+```
+
+> [!NOTE]
+> PackageCertificateThumbprint 인수 의도적으로 예방 조치로 서 빈 문자열로 설정 됩니다. 오류가 발생 하 여 빌드가 실패 지문을 프로젝트에 설정 되어 있지만 서명 인증서가 일치 하지 않습니다, 경우: `Certificate does not match supplied signing thumbprint`합니다.
+
+### <a name="review-parameters"></a>매개 변수를 검토
 
 정의 된 매개 변수는 `$()` 구문은 빌드 정의에 정의 된 변수 및 다른 변경 시스템 빌드됩니다.
 
