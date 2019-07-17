@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 23cd899a196fbe3d28b7156890d65e90ac88cdad
-ms.sourcegitcommit: 9f097438937539f94b6a14a09ee65d30f71da9c6
-ms.translationtype: HT
+ms.openlocfilehash: 6412416fe2d73c4fc313a32fdc2929fff9dc51c4
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223960"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270093"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI와 앱 패키지 매니페스트에 문자열 지역화
 
@@ -303,7 +303,7 @@ UWP 사용자 컨트롤/라이브러리를 만들기만 하 고 [리소스 파�
 
 1. 사용 하 여 [GetForViewIndependentUse](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforviewindependentuse) of [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) 없기 때문에 코드에서 리소스를 확인 하는 경우 없습니다 *현재 보기* 패키지 되지 않은 시나리오에서 합니다. 호출 하는 경우 예외가 발생 [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) 패키지 되지 않은 시나리오에서: *CoreWindow를 갖지 않는 스레드에서 리소스 컨텍스트를 만들 수 있습니다.*
 1. 사용 하 여 [MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/compile-resources-manually-with-makepri) 수동으로 앱의 resources.pri 파일을 생성 합니다.
-    - `makepri new /pr <PROJECTROOT> /cf <PRICONFIG> /dq <DEFAULTLANGUAGEQUALIFIER> /of resources.pri`를 실행합니다.
+    - `makepri new /pr <PROJECTROOT> /cf <PRICONFIG> /of resources.pri`를 실행합니다.
     - 합니다 &lt;PRICONFIG&gt; 생략 해야 합니다 "&lt;패키징&gt;" 모든 리소스는 단일 resources.pri 파일에 번들로 제공 되는 섹션입니다. 기본값을 사용 하는 경우 [MakePri.exe 구성 파일](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) 에서 만든 [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command)를 삭제 해야 합니다 "&lt;패키징&gt;" 만들어진 후 수동으로 섹션.
     - 합니다 &lt;PRICONFIG&gt; 단일 resources.pri 파일로 프로젝트의 모든 리소스를 병합 하는 데 필요한 모든 관련 인덱서를 포함 해야 합니다. 기본값 [MakePri.exe 구성 파일](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) 생겨난 [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command) 모든 인덱서를 포함 합니다.
     - 기본 구성을 사용 하지 않는 경우 PRI 인덱서를 사용할 수 있는지 (이 작업을 수행 하는 방법에 대 한 기본 구성 검토) PRIs UWP 프로젝트 참조, NuGet 참조 및 등에서 찾을 수 있는 프로젝트 루트에 병합 합니다.
