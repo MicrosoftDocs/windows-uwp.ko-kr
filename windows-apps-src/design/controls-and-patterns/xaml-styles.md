@@ -10,12 +10,12 @@ label: XAML styles
 template: detail.hbs
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cd11427ed1b53641a25c32742ca114b121efcfe8
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 5a2f73fe6280d3a86510ce48f47017dd4897139a
+ms.sourcegitcommit: 3ec8c1d0ea3798cdb2745e7a941a025cf3cf21c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363957"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650772"
 ---
 # <a name="xaml-styles"></a>XAML 스타일
 
@@ -31,7 +31,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 ![스타일이 적용된 단추](images/styles-rainbow-buttons.png)
 
-컨트롤에 XAML로 스타일을 인라인으로 정의하거나 재사용 가능한 리소스로 정의할 수 있습니다. 개별 페이지의 XAML 파일인 App.xaml 파일 또는 별도의 리소스 사전 XAML 파일에서 리소스를 정의합니다. 앱 간에 리소스 사전 XAML 파일을 공유할 수 있으며, 여러 리소스 사전을 하나의 앱으로 병합할 수 있습니다. 리소스가 정의되는 위치에 따라 리소스를 사용할 수 있는 범위가 결정됩니다. 페이지 수준별 리소스는 해당 리소스가 정의된 페이지에서만 사용할 수 있습니다. App.xaml과 페이지에 모두 동일한 키를 사용하여 리소스가 정의되어 있는 경우 페이지의 리소스는 App.xaml의 리소스보다 우선합니다. 리소스가 별도 리소스 사전 파일에서 정의된 경우 리소스 사전이 참조된 위치에 따라 범위가 결정됩니다.
+컨트롤에 XAML로 스타일을 인라인으로 정의하거나 재사용 가능한 리소스로 정의할 수 있습니다. 개별 페이지의 XAML 파일인 App.xaml 파일 또는 별도의 리소스 사전 XAML 파일에서 리소스를 정의합니다. 앱 간에 리소스 사전 XAML 파일을 공유할 수 있으며, 여러 리소스 사전을 하나의 앱으로 병합할 수 있습니다. 리소스가 정의되는 위치에 따라 리소스를 사용할 수 있는 범위가 결정됩니다. 페이지 수준별 리소스는 해당 리소스가 정의된 페이지에서만 사용할 수 있습니다. App.xaml과 페이지에 모두 동일한 키를 사용하여 리소스가 정의되어 있는 경우 페이지의 리소스는 App.xaml의 리소스보다 우선합니다. 리소스가 별도의 리소스 사전 파일에 정의된 경우 리소스 사전이 참조된 위치에 따라 범위가 결정됩니다.
 
 [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) 정의에서는 [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.targettype) 특성과 하나 이상의 [Setter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) 요소 컬렉션이 필요합니다. **TargetType** 특성은 스타일을 적용하는 [FrameworkElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement) 형식을 지정하는 문자열입니다. **TargetType** 값은 참조되는 어셈블리에서 사용할 수 있는 사용자 지정 형식 또는 Windows 런타임에서 정의되는 **FrameworkElement** 파생 형식을 지정해야 합니다. 컨트롤에 스타일을 적용하려고 하는데 컨트롤의 형식이 적용하려는 스타일의 **TargetType** 특성과 일치하지 않으면 예외가 발생합니다.
 
@@ -177,26 +177,26 @@ PointerOver(단추 위로 마우스를 가져감), **PointerPressed**(단추가 
 
 ```XAML
 <CheckBox Content="Normal CheckBox" Margin="5"/>
-    <CheckBox Content="Special CheckBox" Margin="5">
-        <CheckBox.Resources>
-            <ResourceDictionary>
-                <ResourceDictionary.ThemeDictionaries>
-                    <ResourceDictionary x:Key="Light">
-                        <SolidColorBrush x:Key="CheckBoxForegroundUnchecked"
-                            Color="Purple"/>
-                        <SolidColorBrush x:Key="CheckBoxForegroundChecked"
-                            Color="Purple"/>
-                        <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundChecked"
-                            Color="White"/>
-                        <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeChecked"  
-                            Color="Purple"/>
-                        <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillChecked"
-                            Color="Purple"/>
-                    </ResourceDictionary>
-                </ResourceDictionary.ThemeDictionaries>
-            </ResourceDictionary>
-        </CheckBox.Resources>
-    </CheckBox>
+<CheckBox Content="Special CheckBox" Margin="5">
+    <CheckBox.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="CheckBoxForegroundUnchecked"
+                        Color="Purple"/>
+                    <SolidColorBrush x:Key="CheckBoxForegroundChecked"
+                        Color="Purple"/>
+                    <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundChecked"
+                        Color="White"/>
+                    <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeChecked"  
+                        Color="Purple"/>
+                    <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillChecked"
+                        Color="Purple"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </CheckBox.Resources>
+</CheckBox>
 <CheckBox Content="Normal CheckBox" Margin="5"/>
 ```
 

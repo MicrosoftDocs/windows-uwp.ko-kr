@@ -6,24 +6,24 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 682a69726b20be52a3217f49bed4947b8b621230
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 0b5423c9aae607d4f6ffe14b755c8f73e013d8b6
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564510"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820975"
 ---
 # <a name="create-a-hello-world-app-js"></a>"Hello, world" 앱 만들기(JS)
 
 이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows 10 디바이스에서 실행되는 앱을 빌드할 수 있습니다.
 
 > [!NOTE]
-> 이 자습서에서는 Visual Studio Community 2017을 사용합니다. 다른 버전의 Visual Studio를 사용하는 경우 약간 다르게 보일 수 있습니다.
+> 이 자습서에서는 Visual Studio Community 2019를 사용합니다. 다른 버전의 Visual Studio를 사용하는 경우 약간 다르게 보일 수 있습니다.
 
 
 여기에서는 다음에 대한 방법을 알아봅니다.
 
--   **Windows 10** 및 **UWP**를 대상으로 하는 새 **Visual Studio** 프로젝트 만들기
+-   **Windows 10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2019** 프로젝트를 만듭니다.
 -   HTML 및 JavaScript 콘텐츠 추가
 -   Visual Studio의 로컬 데스크톱에서 프로젝트 실행
 
@@ -35,20 +35,18 @@ ms.locfileid: "64564510"
 
 ## <a name="step-1-create-a-new-project-in-visual-studio"></a>1단계: Visual Studio에서 새 프로젝트 만들기
 
-1.  Visual Studio를 시작합니다.
+1.  Visual Studio 2019를 시작합니다.
 
-2.  **파일** 메뉴에서 **새로 만들기 &gt; 프로젝트...** 를 선택하여 *새 프로젝트* 대화 상자를 엽니다.
+2.  **파일** 메뉴에서 **새로 만들기 > 프로젝트...** 를 선택하여 *새 프로젝트 만들기* 대화 상자를 엽니다.
 
-3.  왼쪽에 있는 템플릿 목록에서 **설치됨 > 템플릿 > JavaScript**를 열고 **Windows 유니버설**을 선택하여 UWP 프로젝트 템플릿 목록을 표시합니다.
+3.  **비어 있는 앱(유니버설 Windows) JavaScript**를 선택한 후 **다음**을 선택합니다.
 
-    유니버설 템플릿이 보이지 않으면 UWP 앱을 만들기 위한 구성 요소가 누락된 것일 수 있습니다. 설치 과정을 다시 실행하고 **새 프로젝트** 대화 상자에서 *Visual Studio 설치 관리자 열기*를 클릭하여 UWP 지원을 추가할 수 있습니다. [설정 방법](get-set-up.md) 보기
+    (유니버설 템플릿이 보이지 않으면 UWP 앱을 만들기 위한 구성 요소가 누락된 것일 수 있습니다. 설치 과정을 다시 실행하고 *새 프로젝트 만들기* 대화 상자에서 **Visual Studio 설치 관리자 열기**를 클릭하여 UWP 지원을 추가할 수 있습니다. [설정 방법](get-set-up.md) 보기
 
-4.  **빈 앱(유니버설 Windows)** 템플릿을 선택하고 "HelloWorld"를 **이름**으로 입력합니다. **확인**을 선택합니다.
-
-    ![새 프로젝트 창](images/win10-js-01.png)
+4.  *새 프로젝트 구성* 대화 상자에서 **프로젝트 이름**으로 "HelloWorld"를 입력한 후 **만들기**를 선택합니다.
 
 > [!NOTE]
-> Visual Studio를 처음 사용하는 경우 **개발자 모드**를 사용하도록 설정하라는 설정 대화 상자가 표시될 수 있습니다. 개발자 모드는 앱을 Store에서만 실행하는 것이 아니라 직접 실행할 수 있는 권한처럼 특정 기능을 활성화하는 특수 설정입니다. 자세한 내용은 [디바이스를 개발에 사용하도록 설정](enable-your-device-for-development.md)을 읽어보세요. 이 가이드를 계속 하려면 **개발자 모드**를 선택하고 **예**를 클릭하여 대화 상자를 닫습니다.
+> Visual Studio를 처음 사용하는 경우 **개발자 모드**를 사용하도록 설정하라는 설정 대화 상자가 표시될 수 있습니다. 개발자 모드는 앱을 Store에서만 실행하는 것이 아니라 직접 실행할 수 있는 권한처럼 특정 기능을 활성화하는 특수 설정입니다. 자세한 내용은 [디바이스를 개발에 사용하도록 설정](enable-your-device-for-development.md)을 읽어보세요. 이 가이드를 계속하려면 **개발자 모드**를 선택하고 **예**를 클릭하여 대화 상자를 닫습니다.
 
  ![개발자 모드 활성화 대화 상자](images/win10-cs-00.png)
 
