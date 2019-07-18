@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, CPP, WinRT, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: a55f543aae5efae101590bd892278a30b3ca9907
-ms.sourcegitcommit: cba3ba9b9a9f96037cfd0e07d05bd4502753c809
+ms.openlocfilehash: 7be1fe8f23d51ecff6dbee30ad6ebecc6d65b4d8
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2019
-ms.locfileid: "67870321"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270034"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -61,6 +61,7 @@ C++/WinRT는 Windows 런타임에 사용되는 다른 언어 옵션보다 성능
 | [C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) | C++/CX 코드를 C++/WinRT의 해당 코드로 이동하는 방법을 보여 줍니다. |
 | [C++/WinRT와 C++/CX 간의 상호 운용성](interop-winrt-cx.md) | [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 개체와 C++/WinRT 개체 간에 변환하는 데 사용할 수 있는 두 가지 도우미 함수를 보여 줍니다. |
 | [WRL에서 C++/WinRT로 이동](move-to-winrt-from-wrl.md) | [Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드를 C++/WinRT의 해당 코드로 이동하는 방법을 보여 줍니다. |
+| [C#에서 C++/WinRT로 이동](move-to-winrt-from-csharp.md) | C# 코드를 C++/WinRT의 해당 코드로 포팅하는 방법을 보여 줍니다. |
 | [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md) | ABI(애플리케이션 이진 인터페이스)와 C++/WinRT 개체 간에 변환하는 방법을 보여 줍니다. |
 | [C++/WinRT의 강력하고 약한 참조](weak-references.md) | Windows 런타임은 참조 계산 시스템입니다. 이러한 시스템에서는 강한 참조와 약한 참조의 중요성과 차이점을 인식해야 합니다. |
 | [Agile 개체](agile-objects.md) | Agile 개체는 모든 스레드에서 액세스할 수 있는 개체입니다. C++/WinRT 형식은 기본적으로 Agile이지만 옵트아웃할 수 있습니다. |
