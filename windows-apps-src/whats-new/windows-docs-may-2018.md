@@ -5,16 +5,16 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 69df2bbe8bc91fcf4a2631c0f257fc44851c24f2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 9adf5a80595e00a30098044536d1ecfe4fd62279
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63805858"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820489"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>2018년 5월 Windows 개발자 문서의 새로운 내용
 
-Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 다음 기능 개요, 개발자 가이드, 동영상 및 샘플은 [Microsoft Build 2018](https://www.microsoft.com/build) 개발자 컨퍼런스에 맞춰 5월 중에 사용할 수 있게 제공되었습니다.
+Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 다음 기능 개요, 개발자 가이드, 동영상 및 샘플은 [Microsoft Build 2018](https://www.microsoft.com/build/) 개발자 컨퍼런스에 맞춰 5월 중에 사용할 수 있게 제공되었습니다.
 
 Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
@@ -55,7 +55,7 @@ Fluent Design 페이지가 다음과 같이 시각적으로 업데이트되고 �
 
 ### <a name="app-installer-files-in-visual-studio"></a>Visual Studio의 앱 설치 관리자 파일
 
-이제 Visual Studio 2017, 업데이트 15.7을 사용하여 앱 설치 관리자 파일을 만들 수 있습니다. [Visual Studio를 사용하여 앱 설치 관리자 파일을 만들고](../packaging/create-appinstallerfile-vs.md) 앱 자동 업데이트를 사용하도록 설정하는 방법을 알아봅니다. 실행 중에 문제가 발생하는 경우 [앱 설치 관리자 파일의 설치 문제 해결](../packaging/troubleshoot-appinstaller-issues.md)을 참조하여 일반적인 문제 및 해결 방법을 확인하세요.
+이제 Visual Studio 2017, 업데이트 15.7 이상 버전을 사용하여 앱 설치 관리자 파일을 만들 수 있습니다. [Visual Studio를 사용하여 앱 설치 관리자 파일을 만들고](../packaging/create-appinstallerfile-vs.md) 앱 자동 업데이트를 사용하도록 설정하는 방법을 알아봅니다. 실행 중에 문제가 발생하는 경우 [앱 설치 관리자 파일의 설치 문제 해결](../packaging/troubleshoot-appinstaller-issues.md)을 참조하여 일반적인 문제 및 해결 방법을 확인하세요.
 
 ### <a name="edge-webview-control-for-windows-forms-and-wpf-applications"></a>Windows Forms 및 WPF 애플리케이션에 대한 Edge WebView 컨트롤
 
@@ -87,7 +87,7 @@ MSIX 패키징 형식은 파트너가 해당 도구 및 솔루션으로 MSIX 에
 
 ### <a name="page-transitions"></a>페이지 전환
 
-[페이지 전환](../design/motion/page-transitions.md)을 사용하여 앱의 페이지 사이에서 사용자를 이동할 수 있습니다. 이 기능은 탐색 계층 구조에서 사용자의 현재 위치를 이해하도록 하고 페이지 간 관계에 대한 피드백을 제공합니다.
+[페이지 전환](../design/motion/page-transitions.md)은 사용자를 앱의 페이지 간에 이동시킵니다. 이 기능은 탐색 계층 구조에서 사용자의 현재 위치를 이해하도록 하고 페이지 간 관계에 대한 피드백을 제공합니다.
 
 ### <a name="project-rome"></a>프로젝트 로마
 
@@ -126,7 +126,7 @@ C++/WinRT는 Windows 런타임 API를 작성하고 사용하는 새로운 방법
 
 ### <a name="multi-instance-uwp-apps"></a>다중 인스턴스 UWP 앱
 
-이제 Windows에서는 각각에 자체의 고유한 프로세스를 사용하여 UWP 앱의 여러 인스턴스를 실행할 수 있습니다. [동영상을 시청](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be)하여 이 기능을 지원하는 새 앱을 만드는 방법을 알아보고 [개발자 문서를 읽어](../launch-resume/multi-instance-uwp.md) 이 기능을 사용하는 방법과 이유에 대한 추가 지침을 확인하세요.
+Windows에서는 이제 UWP 앱의 여러 인스턴스를 각각 별도의 자체 프로세스로 실행할 수 있습니다. [동영상을 시청](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be)하여 이 기능을 지원하는 새 앱을 만드는 방법을 알아보고 [개발자 문서를 읽어](../launch-resume/multi-instance-uwp.md) 이 기능을 사용하는 방법과 이유에 대한 추가 지침을 확인하세요.
 
 ## <a name="samples"></a>샘플
 

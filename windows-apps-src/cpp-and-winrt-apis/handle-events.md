@@ -1,16 +1,16 @@
 ---
-description: 본 항목에서는 C++/WinRT를 사용하여 이벤트 처리 대리자를 등록하거나 취소하는 방법을 보여 줍니다.
+description: C++/WinRT를 사용하여 이벤트 처리 대리자를 등록하거나 취소하는 방법을 보여 줍니다.
 title: C++/WinRT의 대리자를 사용한 이벤트 처리
 ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: 00870a196517f975d2736298513be7567f3dd29e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 194fd9041b76acb1ef76288fed21c8098462b406
+ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64745052"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67844345"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
@@ -18,6 +18,15 @@ ms.locfileid: "64745052"
 
 > [!NOTE]
 > 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
+
+## <a name="using-visual-studio-2019-to-add-an-event-handler"></a>Visual Studio 2019를 사용하여 이벤트 처리기 추가
+
+프로젝트에 이벤트 처리기를 추가하는 편리한 방법은 Visual Studio 2019에서 XAML 디자이너 사용자 인터페이스(UI)를 사용하는 것입니다. XAML 디자이너에서 XAML 페이지를 열고 이벤트를 처리하려는 컨트롤을 선택합니다. 해당 컨트롤에 대한 속성 페이지에서 번개 아이콘을 클릭하여 해당 컨트롤에서 소싱되는 모든 이벤트를 나열합니다. 그런 다음, 처리하려는 이벤트(예: *OnClicked*)를 두 번 클릭합니다.
+
+고유한 구현으로 바꿀 준비가 된 사용자 소스 파일에 XAML 디자이너가 적절한 이벤트 처리기 함수 프로토타입(및 스텁 구현)을 추가합니다.
+
+> [!NOTE]
+> 일반적으로 사용자 이벤트 처리기는 Midl 파일(`.idl`)에서 설명할 필요가 없습니다. 따라서 XAML 디자이너는 사용자 Midl 파일에 이벤트 처리기 함수 프로토타입을 추가하지 않습니다. `.h` 및 `.cpp` 파일에만 추가합니다.
 
 ## <a name="register-a-delegate-to-handle-an-event"></a>이벤트 처리를 위한 대리자 등록
 
@@ -49,7 +58,7 @@ MainPage::MainPage()
 ```
 
 > [!IMPORTANT]
-> 대리자를 등록할 때 위의 코드 예제에서는 현재 개체를 가리키는 원시 *this* 포인터를 전달합니다. 현재 개체에 대한 강력하거나 약한 참조를 설정하는 방법을 알아보려면 [이벤트 처리 대리자를 사용하여 안전하게 *this* 포인터 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate) 섹션에서 **멤버 함수를 대리자로 사용하는 경우** 하위 섹션을 참조하세요.
+> 대리자를 등록할 때 위의 코드 예제에서는 현재 개체를 가리키는 원시 *this* 포인터를 전달합니다. 현재 개체에 대한 강력한 참조 또는 약한 참조를 설정하는 방법을 알아보려면 [멤버 함수를 대리자로 사용하는 경우](weak-references.md#if-you-use-a-member-function-as-a-delegate)를 참조하세요.
 
 **RoutedEventHandler**를 생성하는 다른 방법도 있습니다. 아래는 [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) 문서 항목에서 가져온 구문 블록입니다(웹 페이지의 오른쪽 위 모서리에 있는 **언어** 드롭다운에서 *C++/WinRT* 선택). 아래 예제를 보면 다양한 생성자가 있습니다. 하나는 람다 함수를, 다른 하나는 프리 함수를, 그리고 나머지 하나(위에서 사용한 것)는 개체와 멤버 포인터 함수를 사용합니다.
 
@@ -177,8 +186,11 @@ Button::Click_revoker Click(winrt::auto_revoke_t,
 > [!NOTE]
 > 위의 코드 예제에서 `Button::Click_revoker`는 `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`의 형식 별칭입니다. 비슷한 패턴이 모든 C++/WinRT 이벤트에 적용됩니다. 각 Windows 런타임 이벤트에는 이벤트 취소자를 반환하는 취소 함수 오버로드가 있으며 해당 취소자의 형식은 이벤트 원본의 멤버입니다. 따라서 또 다른 예제로 [**CoreWindow::SizeChanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) 이벤트에는 **CoreWindow::SizeChanged_revoker** 형식 값을 반환하는 등록 함수 오버로드가 있습니다.
 
-
 페이지 탐색 시나리오에서는 처리기 취소를 고려할 수 있습니다. 페이지 탐색 후 다른 페이지 탐색이 반복될 경우에는 페이지에서 다른 페이지를 탐색할 때 처리기를 취소할 수 있습니다. 또는 동일한 페이지 인스턴스를 다시 사용하는 경우에는 토큰 값을 확인하여 아직 설정되지 않은 경우에만 등록합니다(`if (!m_token){ ... }`). 세 번째 옵션은 이벤트 취소자를 데이터 멤버로 페이지에 저장하는 것입니다. 마지막으로 네 번째 옵션은 이번 항목 후반에 설명하겠지만 람다 함수에서 *this* 개체에 대한 강력한 참조나 약한 참조를 캡처하는 것입니다.
+
+### <a name="if-your-auto-revoke-delegate-fails-to-register"></a>자동 취소 대리자를 등록하지 못하는 경우
+
+대리자를 등록할 때 [**winrt::auto_revoke**](/uwp/cpp-ref-for-winrt/auto-revoke-t)를 지정하려고 하면 [**winrt::hresult_no_interface**](/uwp/cpp-ref-for-winrt/error-handling/hresult-no-interface) 예외가 발생하는 경우 일반적으로 해당 이벤트 소스가 약한 참조를 지원하지 않는 것입니다. [**Windows.UI.Composition**](/uwp/api/windows.ui.composition) 네임스페이스 등에서 일반적으로 발생하는 상황입니다. 이런 경우 자동 취소 기능을 사용할 수 없습니다. 이벤트 처리기를 수동으로 취소하도록 폴백해야 합니다.
 
 ## <a name="delegate-types-for-asynchronous-actions-and-operations"></a>비동기 작업을 위한 대리자 형식
 

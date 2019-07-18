@@ -5,22 +5,22 @@ keywords: XAML, UWP, 시작
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d540b41620110a41676d08f5e6239efd0ef4ca46
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 804f1994e187d3b09ed4dcb2186105cf615f5de0
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66361229"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820498"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 
 이 자습서는 XAML 앱의 UI를 사용자 지정하는 방법을 보여 줍니다. 경고: 이 자습서에는 유니콘이 포함될 수도 있습니다. (확인해 보세요!)  
 
 ## <a name="prerequisites"></a>필수 구성 요소
-* [Visual Studio 2017 및 Windows 10 SDK(10.0.15063.468 이상)](https://developer.microsoft.com/windows/downloads)
+* [Visual Studio 2019 및 Windows 10 SDK(10.0.15063.468 이상)](https://developer.microsoft.com/windows/downloads)
 
 ## <a name="part-0-get-the-code"></a>0부: 코드 다운로드
-이 실습은 [xaml-basics-starting-points/style/ folder](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/style)의 PhotoLab 샘플 리포지토리에서 시작됩니다. 리포지토리를 복제/다운로드 한 후에는 Visual Studio 2017로 PhotoLab.sln을 열어 프로젝트를 편집할 수 있습니다.
+이 실습은 [xaml-basics-starting-points/style/ folder](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/style)의 PhotoLab 샘플 리포지토리에서 시작됩니다. 리포지토리를 복제/다운로드한 후에는 Visual Studio 2019로 PhotoLab.sln을 열어 프로젝트를 편집할 수 있습니다.
 
 PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
 
@@ -54,7 +54,7 @@ UWP(유니버설 Windows 플랫폼)에서는 여러 가지 방법으로 앱 모�
 
 2. 솔루션 탐색기 패널에서 **DetailPage.xaml**을 두 번 클릭하여 엽니다. 
 
-    ![Visual Studio 2017 솔루션 탐색기의 DetailPage.xaml 파일.](../basics/images/xaml-basics/style-detail-page-explorer.png)
+    ![Visual Studio 2019 솔루션 탐색기의 DetailPage.xaml 파일.](../basics/images/xaml-basics/style-detail-page-explorer.png)
 
 3. 다각형 요소를 사용하여 노출 슬라이더의 배경 모양을 만듭니다.
 
@@ -63,7 +63,7 @@ UWP(유니버설 Windows 플랫폼)에서는 여러 가지 방법으로 앱 모�
     <!-- TODO reduce size -->
     ![유니콘](../basics/images/xaml-basics/unicorn.png)
     
-    > **확인 항목:** [셰이프 그리기](https://docs.microsoft.com/en-us/windows/uwp/graphics/drawing-shapes) 문서에서는 XAML 도형에 대해 알아야 할 모든 정보를 제공합니다. 
+    > **확인 항목:** [셰이프 그리기](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/shapes) 문서에서는 XAML 도형에 대해 알아야 할 모든 정보를 제공합니다. 
     
     스테레오의 볼륨 컨트롤에서 볼 수 있는 모양과 같은 삼각형 모양의 위젯을 만들려고 합니다.
     

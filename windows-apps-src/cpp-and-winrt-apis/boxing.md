@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, boxing, 스칼라, 값
 ms.localizationpriority: medium
-ms.openlocfilehash: 1bd69e07f2285b6c05581a60ddbaf4b394d0b6d0
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: b50a0d6b231b9c526fc619a98c37f81520db3ff2
+ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66361198"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660113"
 ---
 # <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>C++/WinRT를 사용해 스칼라 값을 IInspectable로 boxing 및 unboxing
  
@@ -54,6 +54,8 @@ void Unbox(winrt::Windows::Foundation::IInspectable const& object)
 
 ## <a name="determine-the-type-of-a-boxed-value"></a>boxing된 값 형식 확인
 boxing된 값을 받았으나 이 값에 포함된 형식이 무엇인지 확실하지 않은 경우(unboxing하려면 형식을 알아야 함) 해당 [**IPropertyValue**](/uwp/api/windows.foundation.ipropertyvalue) 인터페이스에 대해 boxing된 값을 쿼리하고 **Type**을 호출할 수 있습니다. 코드 예제는 다음과 같습니다.
+
+`WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.
 
 ```cppwinrt
 float pi = 3.14f;

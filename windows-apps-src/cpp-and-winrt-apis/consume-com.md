@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, COM, 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c36c7b896b4d08240f08e85570110b45e0a9f3c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: bb28ec7afa22f81033bfce2aff530119e53a4b91
+ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66421264"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660155"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>C++/WinRT를 통한 COM 구성 요소 사용
 
@@ -30,7 +30,7 @@ COM을 사용하여 프로그래밍하는 경우 개체가 아닌 인터페이�
 winrt::com_ptr<ID2D1Factory1> factory;
 ```
 
-위의 코드는 [**ID2D1Factory1**](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1factory1) COM 인터페이스에 대한 초기화되지 않은 스마트 포인터를 선언하는 방법을 보여 줍니다. 스마트 포인터가 초기화되지 않았으므로, 아직 실제 개체에 속하는 **ID2D1Factory1** 인터페이스를 가리키지는 않습니다(인터페이스를 가리키지 않음). 그러나 잠재적으로 인터페이스를 가리킬 수 있으며, 스마트 포인터로서 COM 참조 계산을 통해 가리키는 인터페이스의 소유 개체 및 해당 인터페이스에서 함수를 호출하는 데 사용되는 매체의 수명을 관리할 수 있습니다.
+위의 코드는 [**ID2D1Factory1**](/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1factory1) COM 인터페이스에 대한 초기화되지 않은 스마트 포인터를 선언하는 방법을 보여 줍니다. 스마트 포인터가 초기화되지 않았으므로, 아직 실제 개체에 속하는 **ID2D1Factory1** 인터페이스를 가리키지는 않습니다(인터페이스를 가리키지 않음). 그러나 잠재적으로 인터페이스를 가리킬 수 있으며, 스마트 포인터로서 COM 참조 계산을 통해 가리키는 인터페이스의 소유 개체 및 해당 인터페이스에서 함수를 호출하는 데 사용되는 매체의 수명을 관리할 수 있습니다.
 
 ## <a name="com-functions-that-return-an-interface-pointer-as-void"></a>인터페이스 포인터를 **void**로 반환하는 COM 함수
 
@@ -72,7 +72,7 @@ D2D1CreateFactory(
 
 ## <a name="com-functions-that-return-an-interface-pointer-as-iunknown"></a>인터페이스 포인터를 **IUnknown**으로 반환하는 COM 함수
 
-[**DWriteCreateFactory**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) 함수는 [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) 형식인 마지막 매개 변수를 통해 DirectWrite 팩터리 인터페이스 포인터를 반환합니다. 이러한 함수의 경우 [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptr_put-function)를 사용하지만, **IUnknown**으로 재해석 캐스팅합니다.
+[**DWriteCreateFactory**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) 함수는 [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) 형식인 마지막 매개 변수를 통해 DirectWrite 팩터리 인터페이스 포인터를 반환합니다. 이러한 함수의 경우 [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptr_put-function)를 사용하지만, **IUnknown**으로 재해석 캐스팅합니다.
 
 ```cppwinrt
 DWriteCreateFactory(
@@ -171,7 +171,7 @@ void ExampleFunction(winrt::com_ptr<ID3D11Device> const& device)
 
 이 소스 코드 예제를 빌드 및 실행하려는 경우, 먼저 Visual Studio에서 새 **코어 앱(C++/WinRT)** 을 만듭니다. `Direct2D`는 프로젝트에 적합한 이름이지만, 원하는 이름을 임의로 지정할 수 있습니다. `App.cpp`를 열고 전체 내용을 삭제한 다음, 아래 목록을 붙여넣습니다.
 
-아래 코드는 가능한 경우 [winrt::com_ptr::capture 함수](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcapture-function)를 사용합니다.
+아래 코드는 가능한 경우 [winrt::com_ptr::capture 함수](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcapture-function)를 사용합니다. `WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.
 
 ```cppwinrt
 #include "pch.h"
@@ -488,6 +488,55 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 C++/WinRT는 COM 인터페이스 구현 및 호출을 모두 지원합니다. BSTR, VARIANT 등의 COM 형식을 사용하려면 [WIL(Windows 구현 라이브러리)](https://github.com/Microsoft/wil)에서 제공하는 **wil::unique_bstr**, **wil::unique_variant**(리소스 수명 관리) 등의 래퍼를 사용하는 것이 좋습니다.
 
 [WIL](https://github.com/Microsoft/wil)은 ATL(액티브 템플릿 라이브러리) 및 Visual C++ 컴파일러의 COM 지원과 같은 프레임워크를 대체합니다. 또한 고유한 래퍼를 작성하거나 적절한 API와 함께 BSTR, VARIANT 등의 COM 형식을 원시 형식으로 사용하는 것보다 WIL이 권장됩니다.
+
+## <a name="avoiding-namespace-collisions"></a>네임스페이스 충돌 방지
+
+일반적으로 C++/WinRT에서는 using 지시문을 자유롭게 사용할 수 있습니다(이 항목의 코드 목록에 있는 설명 참조). 그러나 이로 인해 충돌하는 이름을 전역 네임스페이스로 가져오는 문제가 발생할 수 있습니다. 예를 들면 다음과 같습니다.
+
+C++/WinRT에 이름이 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)인 형식이 포함되어 있지만 COM에서는 [ **::IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown)라는 이름의 형식을 정의합니다. 따라서 COM 헤더를 사용하는 C++/WinRT 프로젝트에서 다음 코드를 고려해 보세요.
+
+```cppwinrt
+using namespace winrt::Windows::Foundation;
+...
+void MyFunction(IUnknown*); // error C2872:  'IUnknown': ambiguous symbol
+```
+
+정규화되지 않은 이름인 *IUnknown*은 전역 네임스페이스에서 충돌하므로 *모호한 기호* 컴파일러 오류가 발생합니다. 대신 다음과 같이 C++/WinRT 버전의 이름을 **winrt** 네임스페이스로 격리할 수 있습니다.
+
+```cppwinrt
+namespace winrt
+{
+    using namespace Windows::Foundation;
+}
+...
+void MyFunctionA(IUnknown*); // Ok.
+void MyFunctionB(winrt::IUnknown const&); // Ok.
+```
+
+아니면, 간편하게 `using namespace winrt`를 사용할 수도 있습니다. 다음과 같이 전역 버전의 *IUnknown*을 한정하면 됩니다.
+
+```cppwinrt
+using namespace winrt;
+namespace winrt
+{
+    using namespace Windows::Foundation;
+}
+...
+void MyFunctionA(::IUnknown*); // Ok.
+void MyFunctionB(winrt::IUnknown const&); // Ok.
+```
+
+물론, 이 방법은 모든 C++/WinRT 네임스페이스에서 작동합니다.
+
+```cppwinrt
+namespace winrt
+{
+    using namespace Windows::Storage;
+    using namespace Windows::System;
+}
+```
+
+그 다음, **winrt::Windows::Storage::StorageFile**(예를 들어, 간단히 **winrt::StorageFile**)을 참조할 수 있습니다.
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::check_hresult 함수](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)

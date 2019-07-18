@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 78f6fe36fb8955b6234cdf3cb42e4db02a602f4a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 00a65324b799b0cf974271da23fdbcb36aa6c8e2
+ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364351"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399620"
 ---
 # <a name="rich-edit-box"></a>서식 있는 편집 상자
 
@@ -29,8 +29,7 @@ RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 �
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 텍스트 파일을 표시하고 편집하려면 **RichEditBox**를 사용합니다. 다른 표준 텍스트 입력란을 사용하는 방식으로 사용자 입력을 앱으로 가져오기 위해 RichEditBox를 사용하지 마세요. 대신, 앱과 분리된 텍스트 파일 작업에 사용합니다. 일반적으로 RichEditBox에 입력된 텍스트는 .rtf 파일에 저장합니다.
--   여러 줄 입력란의 주된 목적이 문서(예, 블로그 항목 또는 메일 메시지의 본문)를 만드는 것이며 그 문서에 서식을 지정해야 하는 경우에는 서식 있는 입력란을 사용합니다.
--   사용자가 텍스트에 서식을 지정할 수 있도록 하려면 서식 있는 입력란을 사용합니다.
+-   여러 줄 입력란의 주된 목적이 읽기 전용 문서(예: 블로그 항목 또는 이메일 메시지의 본문)를 만드는 것이고 그 문서에 서식을 지정해야 하는 경우에는 [서식 있는 텍스트 블록](/windows/uwp/design/controls-and-patterns/rich-text-block)을 사용합니다.
 -   데이터 처리에 사용 후 사용자에게 다시 표시하지는 않을 텍스트를 캡처할 때는 일반 텍스트 입력 컨트롤을 사용합니다.
 -   기타 모든 시나리오에서는 일반 텍스트 입력 컨트롤을 사용합니다.
 
@@ -218,7 +217,7 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f8e74688d0f7048276b12680237b85663d7e2b81
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: a91c080805bca5d536aad3755ca7edf052d1fe0e
+ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66214742"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414056"
 ---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>UWP 개념 문서에 참여
 
@@ -48,7 +48,7 @@ Microsoft 직원인 경우 [프라이빗 콘텐츠 리포지토리](https://gith
 
 내부 리포지토리에서 끌어오기 요청을 만드는 경우 개인 분기를 생성된 원본 분기로 병합할지 확인합니다.
 
-끌어오기 요청을 제출한 후에는 [콘텐츠 품질 검사 목록](https://review.docs.microsoft.com/windows-authoring-guide/managing-contributions/editorial-checklist?branch=master)에 대해 평가되어 기본적인 기준을 충족하는지 확인합니다. 요청이 전달되면 요청은 추가 검토를 위해 UWP 문서 팀의 구성원에게 할당됩니다. 실패하면 변경된 내용에 대한 알림을 받습니다.
+끌어오기 요청을 제출한 후에는 [PR 병합기](https://review.docs.microsoft.com/help/contribute/prmerger-overview?branch=master)로 평가하여 기본적인 기준을 충족하는지 확인합니다. 충족하는 경우 `#sign-off`를 입력하여 추가 검토를 위해 UWP 문서 팀의 구성원에게 전달할 수 있습니다. 실패하면 변경된 내용에 대한 알림을 받게 되며 그 후에 사인 오프할 수 있습니다.
 
 할당된 검토자는 PR를 승인 또는 거부하거나 추가로 변경할 수 있습니다. 사용자가 직접 PR을 승인할 때까지 검토자는 PR를 병합하지 않습니다.
 

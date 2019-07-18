@@ -2,16 +2,16 @@
 description: HttpClient와 Windows.Web.Http 네임스페이스 API의 나머지를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.
 title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
-ms.date: 6/5/2019
+ms.date: 06/05/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bb098aae346c7a81771262793f5f6a042d62d5a3
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 877901deeec4da7674c6c8431e5b11f5eae075ed
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721613"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714130"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -57,7 +57,7 @@ ms.locfileid: "66721613"
 
 ## <a name="send-a-simple-get-request-over-http"></a>HTTP를 통해 간단한 GET 요청 보내기
 
-이 문서의 앞부분에서 설명한 것처럼 [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스는 UWP 앱에서 GET 요청을 보낼 수 있도록 합니다. 다음 코드 조각은 [**Windows.Web.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 및 [**Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) 클래스를 사용하여 GET 요청에서 응답을 읽을 수 있도록 http://www.contoso.com 으로 GET 요청을 전송하는 방법을 보여 줍니다.
+이 문서의 앞부분에서 설명한 것처럼 [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스는 UWP 앱에서 GET 요청을 보낼 수 있도록 합니다. 다음 코드 조각은 [**Windows.Web.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 및 [**Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) 클래스를 사용하여 GET 요청에서 응답을 읽을 수 있도록 http:\//www.contoso.com으로 GET 요청을 전송하는 방법을 보여 줍니다.
 
 ```csharp
 //Create an HTTP client object

@@ -1,16 +1,16 @@
 ---
 description: C++/WinRT를 사용하여 Windows 런타임 비동기 개체를 만들고 사용하는 방법을 보여 줍니다.
 title: C++/WinRT를 통한 동시성 및 비동기 작업
-ms.date: 04/24/2019
+ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: 910d7a7ca2aaebac6dd462d7104b26a989cf8814
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: cbabf38f41ae940f5c92944154638eae7016e043
+ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721660"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660094"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT를 통한 동시성 및 비동기 작업
 
@@ -230,12 +230,16 @@ IASyncAction DoWorkAsync(Param const& value)
 }
 ```
 
-코루틴에서는 컨트롤이 호출자에 반환되는 첫 번째 일시 중단 지점까지 동기 방식으로 실행됩니다. 코루틴이 다시 시작될 때까지 참조 매개 변수가 참조하는 소스 값이 변경되었을 수 있습니다. 코루틴의 관점에서 참조 매개 변수의 수명은 제어되지 않습니다. 따라서 위 예제에서 `co_await`까지는 ‘값’에 액세스해도 안전하지만 이후에는 안전하지 않습니다.  함수가 일시 중단되었다가 다시 시작된 후 ‘값’을 사용하려고 시도할 위험이 있는 경우 **DoOtherWorkAsync**에 ‘값’을 안전하게 전달할 수도 없습니다.   일시 중단했다가 다시 시작한 후 매개 변수를 안전하게 사용하려면 코루틴이 기본적으로 값으로 전달을 사용하여 값으로 캡처함으로써 수명 문제를 방지해야 합니다. 이 지침을 따르지 않아도 안전하다고 확신할 수 있는 경우는 흔치 않습니다.
+코루틴에서는 컨트롤이 호출자에 반환되는 첫 번째 일시 중단 지점까지 동기 방식으로 실행됩니다. 코루틴이 다시 시작될 때까지 참조 매개 변수가 참조하는 소스 값이 변경되었을 수 있습니다. 코루틴의 관점에서 참조 매개 변수의 수명은 제어되지 않습니다. 따라서 위 예제에서 `co_await`까지는 ‘값’에 액세스해도 안전하지만 이후에는 안전하지 않습니다.  호출자에 의해 *값*이 소멸되는 이벤트에서 그 이후 코루틴 내의 해당 값에 액세스하려고 하면 메모리가 손상됩니다. 함수가 일시 중단되었다가 다시 시작된 후 ‘값’을 사용하려고 시도할 위험이 있는 경우 **DoOtherWorkAsync**에 ‘값’을 안전하게 전달할 수도 없습니다.  
+
+일시 중단했다가 다시 시작한 후 매개 변수를 안전하게 사용하려면 코루틴이 기본적으로 값으로 전달을 사용하여 값으로 캡처함으로써 수명 문제를 방지해야 합니다. 이 지침을 따르지 않아도 안전하다고 확신할 수 있는 경우는 흔치 않습니다.
 
 ```cppwinrt
 // Coroutine
-IASyncAction DoWorkAsync(Param value);
+IASyncAction DoWorkAsync(Param value); // not const&
 ```
+
+값으로 전달하기 위해서는 저비용으로 인수를 이동 또는 복사할 수 있어야 하며, 이는 일반적으로 스마트 포인터에서 흔한 경우입니다.
 
 값을 이동하려는 경우가 아니면, const 값으로 전달하는 것이 좋다는 주장도 가능합니다. 복사본을 만드는 소스 값에는 영향을 미치지 않지만 의도를 보다 명확하게 하며, 실수로 복사본을 수정하는 경우 도움이 됩니다.
 
@@ -245,6 +249,38 @@ IASyncAction DoWorkAsync(Param const value);
 ```
 
 표준 벡터를 비동기 호출 수신자에 전달하는 방법을 설명하는 [표준 배열 및 벡터](std-cpp-data-types.md#standard-arrays-and-vectors)도 참조하세요.
+
+코루틴의 서명은 변경할 수 없지만 구현은 변경할 수 있는 경우에는 첫 번째 `co_await` 전에 로컬 복사본을 만들 수 있습니다.
+
+```cppwinrt
+IASyncAction DoWorkAsync(Param const& value)
+{
+    auto safe_value = value;
+    // It's ok to access both safe_value and value here.
+
+    co_await DoOtherWorkAsync();
+
+    // It's ok to access only safe_value here (not value).
+}
+```
+
+`Param` 복사에 비용이 많이 들면 첫 번째 `co_await` 전에 필요한 구성 요소를 추출합니다.
+
+```cppwinrt
+IASyncAction DoWorkAsync(Param const& value)
+{
+    auto safe_data = value.data;
+    // It's ok to access safe_data, value.data, and value here.
+
+    co_await DoOtherWorkAsync();
+
+    // It's ok to access only safe_data here (not value.data, nor value).
+}
+```
+
+## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>클래스-멤버 코루틴에서 안전하게 *this* 포인터 액세스
+
+[C++/WinRT의 강한 참조 및 약한 참조](/windows/uwp/cpp-and-winrt-apis/weak-references#safely-accessing-the-this-pointer-in-a-class-member-coroutine)를 참조하세요.
 
 ## <a name="offloading-work-onto-the-windows-thread-pool"></a>Windows 스레드 풀에 작업 오프로딩
 
@@ -723,6 +759,23 @@ int main()
     // Do other work here.
 }
 ```
+
+**winrt::fire_and_forget**은 비동기 작업을 수행해야 할 때 이벤트 처리기의 반환 형식으로도 유용합니다. 다음은 예제입니다([C++/WinRT의 강한 참조 및 약한 참조](/windows/uwp/cpp-and-winrt-apis/weak-references#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 참조).
+
+```cppwinrt
+winrt::fire_and_forget MyClass::MyMediaBinder_OnBinding(MediaBinder const&, MediaBindingEventArgs args)
+{
+    auto lifetime{ get_strong() }; // Prevent *this* from prematurely being destructed.
+    auto ensure_completion{ unique_deferral(args.GetDeferral()) }; // Take a deferral, and ensure that we complete it.
+
+    auto file{ co_await StorageFile::GetFileFromApplicationUriAsync(Uri(L"ms-appx:///video_file.mp4")) };
+    args.SetStorageFile(file);
+
+    // The destructor of unique_deferral completes the deferral here.
+}
+```
+
+첫 번째 인수(*sender*)는 사용하지 않으므로 명명되지 않은 그대로입니다. 따라서 이 인수는 참조로 두어도 안전합니다. 하지만 *args*는 값으로 전달됩니다. 위의 [매개 변수 전달](#parameter-passing) 섹션을 참조하세요.
 
 ## <a name="important-apis"></a>중요 API
 * [concurrency::task 클래스](/cpp/parallel/concrt/reference/task-class)

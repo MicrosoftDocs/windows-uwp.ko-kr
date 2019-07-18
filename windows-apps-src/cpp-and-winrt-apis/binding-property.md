@@ -1,16 +1,16 @@
 ---
 description: XAML 컨트롤에 효과적으로 바인딩할 수 있는 속성은 *식별할 수 있는*(observable) 속성이라고 합니다. 이 항목에서는 식별할 수 있는 속성을 구현하고 사용하는 방법과 XAML 컨트롤에 바인딩하는 방법을 보여 줍니다.
 title: XAML 컨트롤, C++/WinRT 속성에 바인딩
-ms.date: 04/24/2019
+ms.date: 06/21/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fe5c03eebd2b68e98ae908ea4624471fbd2b3d2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 25ce3164ece443c8c1d95bccbc2bfb57e3347a55
+ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "65627664"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67717658"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>XAML 컨트롤, C++/WinRT 속성에 바인딩
 XAML 컨트롤에 효과적으로 바인딩할 수 있는 속성은 *식별할 수 있는*(observable) 속성이라고 합니다. 이 아이디어는 ‘관찰자 패턴’이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다.  이번 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법에 대해서 설명합니다.
@@ -210,7 +210,7 @@ namespace Bookstore
 
 표시될 것으로 예상하는 오류를 해결하려면 **MainViewModel** 속성의 접근자 스텁을 생성된 파일(`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`)에서 복사하여 `\Bookstore\Bookstore\MainPage.h` 및 `MainPage.cpp`에 붙여넣습니다. 이 작업을 수행하는 단계는 다음과 같이 설명됩니다.
 
-`\Bookstore\Bookstore\MainPage.h`에 **BookstoreViewModel**의 구현 형식(**winrt::Bookstore::implementation::BookstoreViewModel**)을 선언하는 `BookstoreViewModel.h`를 포함합니다. 보기 모델을 저장할 프라이빗 멤버를 추가합니다. 단, 속성 접근자 함수(및 m_mainViewModel 멤버)는 **BookstoreViewModel**의 프로젝션된 형식(**Bookstore::BookstoreViewModel**)을 기반으로 구현됩니다. 구현 형식이 애플리케이션과 동일한 프로젝트(컴파일 단위)에 있으므로 `nullptr_t`를 가져오는 생성자 오버로드를 통해 m_mainViewModel을 생성합니다. 또한 **MyProperty** 속성도 제거합니다.
+`\Bookstore\Bookstore\MainPage.h`에 **BookstoreViewModel**의 구현 형식(**winrt::Bookstore::implementation::BookstoreViewModel**)을 선언하는 `BookstoreViewModel.h`를 포함합니다. 보기 모델을 저장할 프라이빗 멤버를 추가합니다. 단, 속성 접근자 함수(및 m_mainViewModel 멤버)는 **BookstoreViewModel**의 프로젝션된 형식(**Bookstore::BookstoreViewModel**)을 기반으로 구현됩니다. 구현 형식이 애플리케이션과 동일한 프로젝트(컴파일 단위)에 있으므로 **std::nullptr_t**를 가져오는 생성자 오버로드를 통해 m_mainViewModel을 생성합니다. 또한 **MyProperty** 속성도 제거합니다.
 
 ```cppwinrt
 // MainPage.h
@@ -276,6 +276,28 @@ namespace winrt::Bookstore::implementation
 
 ## <a name="using-the-binding-markup-extension-with-cwinrt"></a>C++/WinRT와 함께 {Binding} 태그 확장 사용
 현재 릴리스된 C++/WinRT 버전의 경우 {Binding} 태그 확장을 사용하려면 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현해야 합니다.
+
+## <a name="element-to-element-binding"></a>요소 간 바인딩
+
+한 XAML 요소의 속성을 다른 XAML 요소의 속성에 바인딩할 수 있습니다. 태그에서는 다음과 같이 표시됩니다.
+
+```xaml
+<TextBox x:Name="myTextBox" />
+<TextBlock Text="{x:Bind myTextBox.Text, Mode=OneWay}" />
+```
+
+명명된 XAML 엔터티 `myTextBox`를 Midl 파일(.idl)에서 읽기 전용 속성으로 선언해야 합니다.
+
+```idl
+// MainPage.idl
+runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
+{
+    MainPage();
+    Windows.UI.Xaml.Controls.TextBox myTextBox{ get; };
+}
+```
+
+이렇게 해야 하는 이유는 다음과 같습니다. XAML 컴파일러에서 유효성을 검사해야 하는 모든 형식([{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)에서 사용되는 형식 포함)을 Windows 메타 데이터(WinMD)에서 읽어옵니다. 사용자는 Midl 파일에 읽기 전용 속성을 추가하기만 하면 됩니다. 구현하지 않도록 합니다. 자동 생성된 XAML 코드 숨김에서 자동으로 구현을 제공하기 때문입니다.
 
 ## <a name="important-apis"></a>중요 API
 * [INotifyPropertyChanged::PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)

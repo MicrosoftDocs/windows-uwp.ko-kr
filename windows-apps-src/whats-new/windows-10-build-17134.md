@@ -5,16 +5,16 @@ keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능
 ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b7fe830e07c1daf95928ab747259cb57aaa7a9f
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: dc35dc50b8dc523aff5478b3ec19c3daeed9dafb
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66371345"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820449"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>개발자용 Windows 10 빌드 17134의 새로운 기능
 
-Visual Studio 2017 및 업데이트된 SDK와 함께 사용되는 Windows 10 빌드 17134(4월 업데이트 또는 버전 1803이라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2019 및 업데이트된 SDK와 함께 사용되는 Windows 10 빌드 17134(4월 업데이트 또는 버전 1803이라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 다음은 이 릴리스에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. Windows SDK에 추가된 새 네임스페이스의 전체 목록은 [Windows 10 빌드 17134 API 변경 내용](windows-10-build-17134-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
 
@@ -41,7 +41,7 @@ Fluent Design 업데이트 | 새로운 정보 및 지침으로 많은 Fluent Des
 ## <a name="gaming"></a>게임
 기능 | 설명
  :------ | :------
-게임 개발 시작 | Windows 10 게임 개발에 흥미가 있으신가요? 새로운 [게임 개발 시작](../gaming/getting-started.md) 페이지는 앱과 게임을 스스로 설정 및 등록하고 제출하기 위해 수행해야 할 작업에 대한 전체 개요를 제공합니다.
+게임 개발 시작 | Windows 10 게임 개발에 흥미가 있으신가요? 새로운 [게임 개발 시작](../gaming/getting-started.md) 페이지는 앱과 게임을 스스로 설정 및 등록하고 제출하기 위해 수행해야 할 작업에 대한 전체 개요를 제공합니다.
 그래픽 어댑터 | 그래픽 어댑터 기본 설정 및 제거와 관련된 다음 DXGI API가 추가되었습니다. </br> * [IDXGIFactory6](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/nn-dxgi1_6-idxgifactory6) 인터페이스는 지정된 GPU 기본 설정에 따라 그래픽 어댑터를 열거하는 단일 메서드를 사용합니다. </br> * [DXGIDeclareAdapterRemovalSupport](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/nf-dxgi1_6-dxgideclareadapterremovalsupport) 함수를 사용하여 프로세스에 제거되는 모든 그래픽 디바이스를 복원할 수 있음을 나타낼 수 있습니다. </br> * [DXGI_GPU_PREFERENCE](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/ne-dxgi1_6-dxgi_gpu_preference) 열거는 실행할 앱에 대한 GPU의 기본 설정을 설명합니다.
 
 ## <a name="develop-windows-apps"></a>Windows 앱 개발
@@ -102,7 +102,7 @@ Windows Machine Learning은 미리 숙련된 기계 학습 모델을 Windows 10 
 
 ### <a name="motion-controller-tracking"></a>모션 컨트롤러 추적
 
-모션 컨트롤러는 Windows Mixed Reality에서 사용자의 손을 나타냅니다. [동영상을 시청](https://www.youtube.com/watch?v=rkDpRllbLII)하여 Mixed Reality 헤드셋의 보기 필드 안과 밖에서 모션 컨트롤러가 어떻게 작동하는지 알아보고 [여기에서 컨트롤러 추적에 대해 자세한 내용을 읽어보세요.](https://developer.microsoft.com/windows/mixed-reality/motion_controllers#controller_tracking_state%E2%80%9D)
+모션 컨트롤러는 Windows Mixed Reality에서 사용자의 손을 나타냅니다. [동영상을 시청](https://www.youtube.com/watch?v=rkDpRllbLII)하여 Mixed Reality 헤드셋의 보기 필드 안과 밖에서 모션 컨트롤러가 어떻게 작동하는지 알아보고 [여기에서 컨트롤러 추적에 대해 자세한 내용을 읽어보세요.](https://docs.microsoft.com/windows/mixed-reality/motion-controllers#controller_tracking_state%E2%80%9D)
 
 ### <a name="package-a-net-app-in-visual-studio"></a>Visual Studio에서 .NET 앱 패키징
 

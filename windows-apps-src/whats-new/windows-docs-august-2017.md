@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 53bd11950d30e3924d6d196e911fa05208d0f5ec
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 52b929f2b6f95c2be2feb68a6221a606ca3715e5
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66371912"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821138"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>2017년 8월 Windows 개발자 문서의 새로운 내용
 
@@ -22,7 +22,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-새로운 Visual Studio 2017용 [Windows Template Studio](https://aka.ms/wtsinstall) 확장을 사용하여 원하는 페이지, 프레임워크 및 기능으로 신속하게 UWP 앱을 빌드할 수 있습니다. 이 마법사 기반 환경은 시간을 절약하고 앱에 기능을 추가하는 데 발생하는 문제를 줄일 수 있는 입증된 패턴과 모범 사례를 구현합니다.
+새로운 Visual Studio 2019용 [Windows Template Studio](https://aka.ms/wtsinstall) 확장을 사용하여 원하는 페이지, 프레임워크 및 기능으로 신속하게 UWP 앱을 빌드할 수 있습니다. 이 마법사 기반 환경은 시간을 절약하고 앱에 기능을 추가하는 데 발생하는 문제를 줄일 수 있는 입증된 패턴과 모범 사례를 구현합니다.
 
 ![Windows Template Studio](images/template-studio.png)
 
@@ -63,11 +63,11 @@ UWP 앱 컨테이너에서 실행해야 하는 최신 XAML UI 및 다른 UWP 환
 
 UWP 및 XDK(Xbox 개발자 키트) 게임 모두에 대한 Xbox Live 개발자를 위한 문서를 추가했습니다.
 
-Xbox Live API를 사용하여 게임을 Xbox Live 소셜 게임 네트워크에 연결하는 방법은 [Xbox Live 개발자 가이드](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/)를 참조하세요.
+Xbox Live API를 사용하여 게임을 Xbox Live 소셜 게임 네트워크에 연결하는 방법은 [Xbox Live 개발자 가이드](https://docs.microsoft.com//gaming/xbox-live/index)를 참조하세요.
 
-[Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators)을 사용하면 모든 UWP 게임 개발자가 PC와 Xbox One에 모두에 Xbox Live 지원 게임을 게시할 수 있습니다.
+[Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com//gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators)을 사용하면 모든 UWP 게임 개발자가 PC와 Xbox One에 모두에 Xbox Live 지원 게임을 게시할 수 있습니다.
 
-Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 자세한 내용은 [Xbox Live 개발자 프로그램 개요](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/developer-program-overview)를 참조하세요.
+Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 자세한 내용은 [Xbox Live 개발자 프로그램 개요](https://docs.microsoft.com//gaming/xbox-live/developer-program-overview)를 참조하세요.
 
 ## <a name="videos"></a>비디오
 
@@ -77,7 +77,7 @@ Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 �
 
 ### <a name="narrator-and-dev-mode"></a>내레이터 및 개발자 모드
 
-[내레이터](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)를 사용하여 앱의 화면 읽기 환경을 테스트할 수 있다는 것을 이미 알고 계실 수 있습니다. 하지만 내레이터에는 개발자 모드도 있으며, 이를 통해 내레이터에 노출되는 정보를 한눈에 확인할 수 있습니다. [동영상을 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode)하고 [내레이터 개발자 모드](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode)에 대해 자세히 알아보세요.
+[내레이터](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)를 사용하여 앱의 화면 읽기 환경을 테스트할 수 있다는 것을 이미 알고 계실 수 있습니다. 하지만 내레이터에는 개발자 모드도 있으며, 이를 통해 내레이터에 노출되는 정보를 한눈에 확인할 수 있습니다. [동영상을 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode)하고 [내레이터 개발자 모드](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode)에 대해 자세히 알아보세요.
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 

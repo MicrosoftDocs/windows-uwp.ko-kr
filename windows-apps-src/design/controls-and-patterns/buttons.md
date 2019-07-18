@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 210431928c5dd7c5d5dfb99855322f1560e91dd7
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 8f8d4172389fc2778fda4e335a29b3bae7d90fd0
+ms.sourcegitcommit: 5fcd3a595efd3686009505602c34e10163fd0aa5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363227"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558758"
 ---
 # <a name="buttons"></a>단추
 
@@ -26,37 +26,39 @@ ms.locfileid: "66363227"
 
 ![단추 예제](images/controls/button.png)
 
-XAML 프레임워크는 표준 단추 컨트롤뿐 아니라 여러 특수화된 단추 컨트롤을 제공합니다.
+[XAML(Extensible Application Markup Language)](../../xaml-platform/xaml-overview.md) 프레임워크는 표준 단추 컨트롤뿐 아니라 여러 특수 단추 컨트롤도 제공합니다.
 
 컨트롤 | 설명
 ------- | -----------
-[Button](/uwp/api/windows.ui.xaml.controls.button) | 즉시 작업을 트리거합니다. Click 이벤트와 Command 바인딩에 사용할 수 있습니다.
-[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | 누르고 있는 동안 계속해서 Click 이벤트를 발생시키는 단추입니다.
-[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | 하이퍼링크처럼 스타일이 지정되며, 탐색에 사용됩니다. 추가 정보는 [하이퍼링크](hyperlinks.md)를 참조하세요.
+[Button](/uwp/api/windows.ui.xaml.controls.button) | 즉시 작업을 시작하는 단추입니다. [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 또는 [Command](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command) 바인딩에 사용할 수 있습니다.
+[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | 누르고 있는 동안 계속해서 [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트를 발생시키는 단추입니다.
+[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | 하이퍼링크처럼 스타일이 지정되는 단추로, 탐색에 사용됩니다. 하이퍼링크에 대한 자세한 내용은 [하이퍼링크](hyperlinks.md)를 참조하세요.
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | 연결된 플라이아웃을 여는 펼침 단추가 있는 단추입니다.
 [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | 두 면이 있는 단추입니다. 한 쪽은 작업을 시작하고, 다른 쪽은 메뉴를 엽니다.
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | 두 면이 있는 토글 단추입니다. 한쪽은 켜기/끄기를 전환하고, 다른 쪽은 메뉴를 엽니다.
 
 | **Windows UI 라이브러리 가져오기** |
 | - |
-| DropDownButton, SplitButton 및 ToggleSplitButton은 UWP 앱용 새 컨트롤과 UI 기능을 포함하고 있는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| **DropDownButton**, **SplitButton** 및 **ToggleSplitButton**은 UWP 앱용 새 컨트롤과 UI 기능을 포함하고 있는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
 
 | **플랫폼 API** | **Windows UI 라이브러리 API** |
 | - | - |
-| [Click 이벤트](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click), [Command 속성](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command) | [DropDownButton 클래스](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton), [SplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.splitbutton), [ToggleSplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton) |
+| [Click 이벤트](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click)<br/> [Command 속성](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command) | [DropDownButton 클래스](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton)<br/> [SplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.splitbutton)<br/> [ToggleSplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton) |
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-**단추**를 사용하면 사용자가 양식 제출 같은 즉각적인 작업을 시작할 수 있습니다.
+**Button** 컨트롤을 사용하면 사용자가 양식 제출 같은 즉각적인 작업을 시작할 수 있습니다.
 
-다른 페이지를 탐색하는 작업인 경우에는 단추를 사용하지 말고 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton)을 사용합니다. 추가 정보는 [하이퍼링크](hyperlinks.md)를 참조하세요.
-> 예외: 마법사 탐색인 경우에는 "뒤로" 및 "다음"이라는 레이블이 붙은 단추를 사용합니다. 역방향 탐색 또는 상위 수준 탐색에는 [뒤로 단추](../basics/navigation-history-and-backwards-navigation.md)를 사용합니다.
+다른 페이지를 탐색하는 작업인 경우에는 **Button** 컨트롤을 사용하지 말고 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) 컨트롤을 사용합니다. 하이퍼링크에 대한 자세한 내용은 [하이퍼링크](hyperlinks.md)를 참조하세요.
 
-사용자가 작업을 반복적으로 트리거하려는 경우에는 **RepeatButton**을 사용합니다. 예를 들어 카운터 값을 늘리거나 줄이려면 RepeatButton을 사용합니다.
+> [!IMPORTANT]
+> 마법사 탐색인 경우에는 *뒤로* 및 *다음*이라는 레이블이 붙은 단추를 사용합니다. 역방향 탐색 또는 상위 수준 탐색에는 [뒤로 단추](../basics/navigation-history-and-backwards-navigation.md)를 사용합니다.
 
-단추에 더 많은 옵션을 포함하는 플라이아웃이 있으면 **DropDownButton**을 사용합니다. 기본 펼침 단추는 단추에 플라이아웃이 포함되어 있다는 것을 시각적으로 나타냅니다.
+사용자가 작업을 반복적으로 트리거하려는 경우에는 **RepeatButton** 컨트롤을 사용합니다. 예를 들어 카운터 값을 늘리거나 줄이려면 **RepeatButton** 컨트롤을 사용합니다.
 
-사용자가 즉각적인 작업을 시작하거나 추가 옵션에서 독립적으로 선택할 수 있게 하려면 **SplitButton**을 사용합니다.
+단추에 더 많은 옵션을 포함하는 플라이아웃이 있으면 **DropDownButton** 컨트롤을 사용합니다. 기본 펼침 단추는 단추에 플라이아웃이 포함되어 있다는 것을 시각적으로 나타냅니다.
+
+사용자가 즉각적인 작업을 시작하거나 추가 옵션에서 독립적으로 선택할 수 있게 하려면 **SplitButton** 컨트롤을 사용합니다.
 
 ## <a name="examples"></a>예
 
@@ -65,16 +67,16 @@ XAML 프레임워크는 표준 단추 컨트롤뿐 아니라 여러 특수화된
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Button">앱을 열고 작동 중인 단추를 확인</a>합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML Controls Gallery</strong>가 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Button">앱을 열고 작동 중인 단추를 확인</a>합니다.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-이 예에서는 위치 액세스를 요청하는 대화 상자에서 허용 및 차단의 두 가지 단추를 사용합니다.
+이 예에서는 위치 액세스를 요청하는 대화 상자에서 **허용** 및 **차단**의 두 가지 단추를 사용합니다.
 
 ![대화 상자에서 사용되는 단추의 예제](images/dialogs/dialog_RS2_two_button.png)
 
@@ -99,7 +101,7 @@ subscribeButton.Click += SubscribeButton_Click;
 stackPanel1.Children.Add(subscribeButton);
 ```
 
-Click 이벤트를 처리합니다.
+[Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트를 처리합니다.
 
 ```csharp
 private async void SubscribeButton_Click(object sender, RoutedEventArgs e)
@@ -120,23 +122,28 @@ private async void SubscribeButton_Click(object sender, RoutedEventArgs e)
 
 ### <a name="button-interaction"></a>단추 조작
 
-손가락 또는 스타일러스로 단추를 탭하거나 포인터가 단추 위에 있을 때 마우스 왼쪽 단추를 누르면 [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트가 발생합니다. 단추에 키보드 포커스가 있는 경우 Enter 키 또는 스페이스바 키를 눌러도 Click 이벤트가 발생합니다.
+손가락 또는 스타일러스로 **Button** 컨트롤을 탭하거나 포인터가 그 위에 있을 때 마우스 왼쪽 단추를 누르면 [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트가 발생합니다. 단추에 키보드 포커스가 있는 경우 Enter 키 또는 스페이스바를 눌러도 **Click** 이벤트가 발생합니다.
 
-단추에는 대신 클릭 동작이 있기 때문에 일반적으로 단추에서 하위 수준의 [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트를 처리할 수 없습니다. 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)를 참조하세요.
+단추에는 **Click** 동작이 있기 때문에 일반적으로 **Button** 개체에서 하위 수준의 [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트를 처리할 수 없습니다. 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)를 참조하세요.
 
-[ClickMode](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.clickmode) 속성을 변경하여 단추가 Click 이벤트를 발생시키는 방법을 변경할 수 있습니다. ClickMode의 기본값은 **Release**이지만, 단추의 ClickMode를 **Hover** 또는 **Press**로 설정할 수 있습니다. ClickMode가 **Hover**인 경우 키보드 또는 터치로 Click 이벤트를 발생시킬 수 없습니다.
+[ClickMode](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.clickmode) 속성을 변경하여 단추가 **Click** 이벤트를 발생시키는 방법을 변경할 수 있습니다. **ClickMode**의 기본값은 **Release**이지만, 단추의 **ClickMode** 값을 **Hover** 또는 **Press**로 설정할 수도 있습니다. **ClickMode**가 **Hover**인 경우 키보드 또는 터치를 통해 **Click** 이벤트를 발생시킬 수는 없습니다.
 
 
 ### <a name="button-content"></a>단추 콘텐츠
 
-단추는 [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl)입니다. 단추의 XAML 콘텐츠 속성은 [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content)이며 XAML에 대해 다음과 같은 구문을 가능하게 합니다. `<Button>A button's content</Button>`. 어떠한 개체라도 단추 콘텐츠로 설정할 수 있습니다. 콘텐츠가 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)인 경우 단추에서 렌더링됩니다. 콘텐츠가 다른 유형의 개체인 경우 해당 문자열 표현이 단추에 표시됩니다.
+**Button**은 [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl) 클래스의 콘텐츠 컨트롤입니다. 단추의 XAML 콘텐츠 속성은 [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content)이며 XAML에 대해 다음과 같은 구문을 가능하게 합니다. `<Button>A button's content</Button>`. 어떠한 개체라도 단추 콘텐츠로 설정할 수 있습니다. 콘텐츠가 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체인 경우 단추에서 렌더링됩니다. 콘텐츠가 다른 유형의 개체인 경우 해당 문자열 표현이 단추에 표시됩니다.
 
-단추의 콘텐츠는 일반적으로 텍스트입니다. 콘텐츠 텍스트가 있는 단추에서는 다음과 같은 디자인을 추천합니다.
--   단추가 수행하는 작업을 명확히 설명해 주는 간결하고 구체적이며 설명적인 텍스트를 사용합니다. 일반적으로 단추 텍스트 콘텐츠는 한 단어로 된 동사입니다.
--   브랜드 지침에 다른 글꼴을 사용하도록 규정되어 있지 않은 경우 기본 글꼴을 사용하세요.
--   텍스트가 짧은 경우에는 120px의 최소 단추 너비를 사용하여 명령 단추가 좁아지지 않도록 합니다.
+단추의 콘텐츠는 일반적으로 텍스트입니다. 해당 텍스트를 디자인할 때는 다음 권장 사항을 사용합니다.
+
+-  단추가 수행하는 작업을 명확히 설명해 주는 간결하고 구체적이며 설명적인 텍스트를 사용합니다. 일반적으로 단추 텍스트는 한 단어로 된 동사입니다.
+
+-  브랜드 지침에 다른 글꼴을 사용하도록 규정되어 있지 않은 경우 기본 글꼴을 사용하세요.
+
+-  텍스트가 짧은 경우에는 120px의 최소 단추 너비를 사용하여 명령 단추가 좁아지지 않도록 합니다.
+
 - 텍스트가 긴 경우에는 텍스트의 최대 길이를 26자로 제한하여 명령 단추가 넓어지지 않도록 합니다.
--   단추의 텍스트 콘텐츠가 동적인 경우에는(예: [지역화](../globalizing/globalizing-portal.md)) 단추 크기를 조정하는 방법과 주위의 컨트롤에 나타날 변화를 고려하세요.
+
+-  단추의 텍스트 콘텐츠가 동적인 경우에는(예: [지역화](../globalizing/globalizing-portal.md)) 단추 크기를 조정하는 방법과 주위의 컨트롤에 나타날 변화를 고려하세요.
 
 <table>
 <tr>
@@ -175,9 +182,9 @@ private async void SubscribeButton_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-repeat-button"></a>반복 단추 만들기
 
-[RepeatButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton)은 사용자가 눌렀다가 놓을 때까지 반복해서 [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트를 발생시키는 컨트롤입니다. [Delay](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton.delay) 속성을 설정하여 RepeatButton이 클릭 동작 반복을 시작하기 전에 눌러진 후 대기해야 하는 시간을 지정합니다. [Interval](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton.interval) 속성을 설정하여 클릭 동작의 반복 간 시간을 지정합니다. 두 속성에 대한 시간은 밀리초로 지정됩니다.
+[RepeatButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) 컨트롤은 사용자가 눌렀다가 놓을 때까지 반복해서 [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트를 발생시키는 단추입니다. [Delay](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton.delay) 속성을 설정하여 **RepeatButton** 컨트롤이 클릭 동작 반복을 시작하기 전에 눌러진 후 대기해야 하는 시간을 지정합니다. [Interval](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton.interval) 속성을 설정하여 클릭 동작의 반복 간 시간을 지정합니다. 두 속성에 대한 시간은 밀리초로 지정됩니다.
 
-다음 예제에서는 두 RepeatButton 컨트롤(해당 Click 이벤트는 텍스트 블록에 표시되는 값을 늘리고 줄이는 데 사용함)을 보여 줍니다.
+다음 예제에서는 두 **RepeatButton** 컨트롤(해당 **Click** 이벤트는 텍스트 블록에 표시되는 값을 늘리고 줄이는 데 사용함)을 보여 줍니다.
 
 ```xaml
 <StackPanel>
@@ -207,18 +214,19 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-drop-down-button"></a>드롭다운 단추 만들기
 
-> DropDownButton에는 Windows 10, 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)가 필요합니다.
+> **DropDownButton**에는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 또는 Windows 10, 버전 1809(SDK 17763) 이상이 필요합니다. 최신 SDK를 다운로드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 참조하고 이전 SDK를 다운로드하려면 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)를 참조하세요.
 
-[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton)은 더 많은 옵션을 포함하는 연결된 플라이아웃이 있는 시각적 표시기 형태의 갈매기형 펼침 단추를 표시합니다. 플라이아웃을 사용하는 표준 단추와 동작은 동일하고, 모양만 다릅니다.
+[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton)은 더 많은 옵션을 포함하는 연결된 플라이아웃이 있는 시각적 표시기 형태의 갈매기형 펼침 단추를 표시합니다. 플라이아웃을 사용하는 표준 **Button** 컨트롤과 동작은 동일하고, 모양만 다릅니다.
 
-드롭다운 단추는 Click 이벤트를 상속하지만, 일반적으로 사용되지 않는 단추입니다. 대신, Flyout 속성을 사용하여 플라이아웃을 연결하고 플라이아웃의 메뉴 옵션을 사용하여 작업을 호출합니다. 단추를 클릭하면 플라이아웃이 자동으로 열립니다. 단추를 원하는 대로 배치하려면 플라이아웃의 [Placement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) 속성을 지정해야 합니다. 기본 배치 알고리즘으로는 상황에 따라 의도한 대로 배치하지 못할 수 있습니다.
+드롭다운 단추는 **Click** 이벤트를 상속하지만 일반적으로 사용되지 않습니다. 대신, **Flyout** 속성을 사용하여 플라이아웃을 연결하고 플라이아웃의 메뉴 옵션을 사용하여 작업을 호출합니다. 단추를 클릭하면 플라이아웃이 자동으로 열립니다.
+단추를 원하는 대로 배치하려면 플라이아웃의 [Placement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) 속성을 지정해야 합니다. 기본 배치 알고리즘으로는 상황에 따라 의도한 대로 배치하지 못할 수 있습니다.
 
 > [!TIP]
 > 플라이아웃에 대한 자세한 내용은 [메뉴 및 상황에 맞는 메뉴](menus.md)를 참조하세요.
 
 ### <a name="example---drop-down-button"></a>예제 - 드롭다운 단추
 
-이 예제에서는 RichEditBox의 단락 맞춤 명령이 포함된 플라이아웃을 사용하여 드롭다운 단추를 만드는 방법을 보여줍니다. 자세한 정보 및 코드는 [서식 있는 편집 상자](rich-edit-box.md)를 참조하세요.
+이 예제에서는 **RichEditBox** 컨트롤의 단락 맞춤 명령이 포함된 플라이아웃을 사용하여 드롭다운 단추를 만드는 방법을 보여줍니다. 자세한 정보 및 코드는 [서식 있는 편집 상자](rich-edit-box.md)를 참조하세요.
 
 ![맞춤 명령을 사용하는 드롭다운 단추](images/drop-down-button-align.png)
 
@@ -266,24 +274,26 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-split-button"></a>분할 단추 만들기
 
-> SplitButton에는 Windows 10, 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)가 필요합니다.
+ > [!IMPORTANT]
+ > **SplitButton**에는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 또는 Windows 10, 버전 1809(SDK 17763) 이상이 필요합니다. 최신 SDK를 다운로드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 참조하고 이전 SDK를 다운로드하려면 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)를 참조하세요.
 
-[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton)은 별도로 호출할 수 있는 두 부분으로 구성됩니다. 한 부분은 표준 단추처럼 동작하며 즉각적인 작업을 호출합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션을 포함하는 플라이아웃을 호출합니다.
+[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) 컨트롤은 개별적으로 호출할 수 있는 두 부분으로 구성됩니다. 한 부분은 표준 단추처럼 동작하며 즉각적인 작업을 호출합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션을 포함하는 플라이아웃을 호출합니다.
 
 > [!NOTE]
 > 터치로 호출하면 분할 단추가 드롭다운 단추처럼 동작하고, 단추의 양쪽 절반이 플라이아웃을 호출합니다. 또 다른 입력 방법으로, 사용자는 단추의 절반을 개별적으로 호출할 수 있습니다.
 
 분할 단추의 일반적인 동작은 다음과 같습니다.
 
-- 사용자가 단추 부분을 클릭하면 클릭 이벤트를 처리하여 현재 드롭다운 목록에서 선택된 옵션을 호출합니다.
-- 드롭다운이 열려 있으면 드롭다운의 항목 호출을 처리하여 현재 선택된 옵션을 변경하고 호출합니다. 터치를 사용할 때에는 단추 Click 이벤트가 발생하지 않으므로 플라이아웃 항목을 호출해야 합니다.
+- 사용자가 단추 부분을 클릭하면 **Click** 이벤트를 처리하여 현재 드롭다운 목록에서 선택된 옵션을 호출합니다.
+
+- 드롭다운이 열려 있으면 드롭다운의 항목 호출을 처리하여 현재 선택된 옵션을 변경하고 호출합니다. 터치를 사용할 때에는 단추 **Click** 이벤트가 발생하지 않으므로 플라이아웃 항목을 호출해야 합니다.
 
 > [!TIP]
-> 여러 가지 방법으로 드롭다운에 항목을 배치하고 호출을 처리할 수 있습니다. ListView 또는 GridView를 사용하는 경우 한 가지 방법은 SelectionChanged 이벤트를 처리하는 것입니다. 이렇게 하는 경우 [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus)를 **false**로 설정합니다. 그러면 사용자는 변경할 때마다 항목을 호출하지 않고 키보드를 사용하여 옵션을 탐색할 수 있습니다.
+> 여러 가지 방법으로 드롭다운에 항목을 배치하고 호출을 처리할 수 있습니다. **ListView** 또는 **GridView**를 사용하는 경우 한 가지 방법은 **SelectionChanged** 이벤트를 처리하는 것입니다. 이렇게 하는 경우 [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus)를 **false**로 설정합니다. 그러면 사용자는 변경할 때마다 항목을 호출하지 않고 키보드를 사용하여 옵션을 탐색할 수 있습니다.
 
 ### <a name="example---split-button"></a>예제 - 분할 단추
 
-이 예제에서는 RichEditBox에서 선택한 텍스트의 전경색을 변경하는 데 사용되는 분할 단추를 만드는 방법을 보여줍니다. 자세한 정보 및 코드는 [서식 있는 편집 상자](rich-edit-box.md)를 참조하세요.
+이 예제에서는 **RichEditBox** 컨트롤에서 선택한 텍스트의 전경색을 변경하는 데 사용되는 분할 단추를 만드는 방법을 보여줍니다. 자세한 정보 및 코드는 [서식 있는 편집 상자](rich-edit-box.md)를 참조하세요.
 분할 단추의 플라이아웃은 [Placement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) 속성의 기본값으로 [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode)를 사용합니다. 이 값을 재정의할 수 없습니다.
 
 ![전경색을 선택할 수 있는 분할 단추](images/split-button-rtb.png)
@@ -296,7 +306,7 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
         <Flyout x:Name="BrushFlyout">
             <!-- Set SingleSelectionFollowsFocus="False"
                  so that keyboard navigation works correctly. -->
-            <GridView ItemsSource="{x:Bind ColorOptions}" 
+            <GridView ItemsSource="{x:Bind ColorOptions}"
                       SelectionChanged="BrushSelectionChanged"
                       SingleSelectionFollowsFocus="False"
                       SelectedIndex="0" Padding="0">
@@ -374,26 +384,29 @@ public sealed partial class MainPage : Page
 
 ## <a name="create-a-toggle-split-button"></a>설정/해제 분할 단추 만들기
 
-> ToggleSplitButton에는 Windows 10, 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)가 필요합니다.
+> [!NOTE]
+> **ToggleSplitButton**에는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 또는 Windows 10, 버전 1809(SDK 17763) 이상이 필요합니다. 최신 SDK를 다운로드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 참조하고 이전 SDK를 다운로드하려면 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)를 참조하세요.
 
-[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton)은 별도로 호출할 수 있는 두 부분으로 구성됩니다. 한 부분은 끄거나 켤 수 있는 토글 단추처럼 동작합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션을 포함하는 플라이아웃을 호출합니다.
+[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) 컨트롤은 개별적으로 호출할 수 있는 두 부분으로 구성됩니다. 한 부분은 끄거나 켤 수 있는 토글 단추처럼 동작합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션을 포함하는 플라이아웃을 호출합니다.
 
 설정/해제 분할 단추는 일반적으로 기능에 사용자가 선택할 수 있는 여러 옵션이 있을 때 기능을 활성화 또는 비활성화하는 데 사용됩니다. 예를 들어 문서 편집기에서 목록을 켜고 끄는 데 사용할 수 있습니다. 반면 드롭다운은 목록의 스타일을 선택하는 데 사용됩니다.
 
 > [!NOTE]
 > 터치로 호출하면 설정/해제 분할 단추가 드롭다운 단추로 작동합니다. 또 다른 입력 방법으로, 사용자는 단추의 절반을 개별적으로 전환하고 호출할 수 있습니다. 터치를 사용하면 단추의 두 절반이 플라이아웃을 호출합니다. 따라서 플라이아웃 콘텐츠에 단추를 켜고 끄는 옵션을 포함해야 합니다.
 
+
 ### <a name="differences-with-togglebutton"></a>ToggleButton과의 차이점
 
-[ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton)과는 다르게, ToggleSplitButton은 확정되지 않은 상태가 없습니다. 따라서 다음과 같은 차이점을 기억해야 합니다.
+[ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton)과는 다르게, **ToggleSplitButton**은 확정되지 않은 상태가 없습니다. 따라서 다음과 같은 차이점을 기억해야 합니다.
 
-- ToggleSplitButton에는 **IsThreeState** 속성 또는 **Indeterminate** 이벤트가 없습니다.
-- [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) 속성은 **nullable 부울**이 아닌 **부울**입니다.
-- ToggleSplitButton에는 [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged) 이벤트만 있고, 별도의 **Checked** 및 **Unchecked** 이벤트는 없습니다.
+- **ToggleSplitButton**에는 **IsThreeState** 속성 또는 **Indeterminate** 이벤트가 없습니다.
+- [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) 속성은 **Nullable<bool>** 이 아닌 부울입니다.
+- **ToggleSplitButton**에는 [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged) 이벤트만 있고, 별도의 **Checked** 및 **Unchecked** 이벤트는 없습니다.
+
 
 ### <a name="example---toggle-split-button"></a>예제 - 설정/해제 분할 단추
 
-다음 예제는 RichEditBox에서 설정/해제 분할 단추를 사용하여 목록 서식 지정을 켜고 끄는 방법과 목록 스타일을 변경하는 방법을 보여줍니다 자세한 정보 및 코드는 [서식 있는 편집 상자](rich-edit-box.md)를 참조하세요.
+다음 예제는 **RichEditBox** 컨트롤에서 설정/해제 분할 단추를 사용하여 목록 서식 지정을 켜고 끄는 방법과 목록 스타일을 변경하는 방법을 보여줍니다. 자세한 정보 및 코드는 [서식 있는 편집 상자](rich-edit-box.md)를 참조하세요.
 설정/해제 분할 단추의 플라이아웃은 [Placement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) 속성의 기본값으로 [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode)를 사용합니다. 이 값을 재정의할 수 없습니다.
 
 ![목록 스타일을 선택하는 설정/해제 분할 단추](images/toggle-split-button-open.png)
@@ -407,7 +420,7 @@ public sealed partial class MainPage : Page
     <ToggleSplitButton.Flyout>
         <Flyout>
             <ListView x:Name="ListStylesListView"
-                      SelectionChanged="ListStylesListView_SelectionChanged" 
+                      SelectionChanged="ListStylesListView_SelectionChanged"
                       SingleSelectionFollowsFocus="False">
                 <StackPanel Tag="bullet" Orientation="Horizontal">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7C8;"/>
@@ -502,36 +515,43 @@ private void ApplyListStyle(string listStyle)
 ## <a name="recommendations"></a>권장 사항
 
 - 단추의 목적과 상태가 사용자에게 명확하게 전달되는지 확인합니다.
+
 - 확인 대화 상자처럼 동일한 결정에 대한 단추가 여러 개 있는 경우에는 다음과 같은 순서로 커밋 단추를 표시합니다. 여기서 [그렇게 함] 및 [그렇게 하지 않음]은 기본 지침에 대한 구체적인 응답입니다.
-    - 확인/[그렇게 함]/예
+  - 확인/[그렇게 함]/예
     - [그렇게 하지 않음]/아니요
     - Cancel
-- 사용자에게 단추를 한 번에 한두 개(예: 수락 및 취소)만 표시합니다. 사용자에게 더 많은 작업을 표시해야 하는 경우 사용자가 하나의 명령 단추로 작업을 선택하여 트리거할 수 있도록 [확인란](checkbox.md) 또는 [라디오 단추](radio-button.md)를 사용하는 것이 좋습니다.
+
+- 사용자에게 단추를 한 번에 한 개 또는 두 개만 표시합니다(예: **수락** 및 **취소**). 사용자에게 더 많은 작업을 표시해야 하는 경우 사용자가 하나의 명령 단추로 작업을 선택하여 트리거할 수 있도록 [확인란](checkbox.md) 또는 [라디오 단추](radio-button.md)를 사용하는 것이 좋습니다.
+
 - 앱 내의 여러 페이지에서 작업을 사용할 수 있어야 하는 경우 단추를 여러 페이지에 복제하는 대신 [하단 앱 바](app-bars.md)를 사용하는 것이 좋습니다.
+
 
 ### <a name="recommended-single-button-layout"></a>권장하는 단일 단추 레이아웃
 
 레이아웃에 단추가 하나만 필요한 경우 컨테이너 컨텍스트에 따라 왼쪽 또는 오른쪽에 맞춰야 합니다.
 
-- 단추가 하나만 있는 대화 상자의 경우 단추를 **오른쪽에 맞춰야** 합니다. 대화 상자에 단추가 하나만 있는 경우 단추가 안전한 비파괴 작업을 수행하는지 확인합니다. [ContentDialog](dialogs.md)를 사용하고 단일 단추를 지정하면 자동으로 오른쪽에 맞춰집니다.
+  - 단추가 하나만 있는 대화 상자의 경우 단추를 **오른쪽에 맞춰야** 합니다. 대화 상자에 단추가 하나만 있는 경우 단추가 안전한 비파괴 작업을 수행하는지 확인합니다. [ContentDialog](dialogs.md)를 사용하고 단일 단추를 지정하면 자동으로 오른쪽에 맞춰집니다.
 
-![대화 상자 내의 단추](images/pushbutton_doc_dialog.png)
+    ![대화 상자 내의 단추](images/pushbutton_doc_dialog.png)
 
-- 단추가 알림 메시지, 플라이아웃 또는 목록 보기 항목과 같은 컨테이너 UI 내에 나타나는 경우 컨테이너 내에서 단추를 **오른쪽에 맞춰야**합니다.
+  - 단추가 알림 메시지, 플라이아웃 또는 목록 보기 항목과 같은 컨테이너 UI 내에 나타나는 경우 컨테이너 내에서 단추를 **오른쪽에 맞춰야**합니다.
 
-![컨테이너 내의 단추](images/pushbutton_doc_container.png)
+    ![컨테이너 내의 단추](images/pushbutton_doc_container.png)
 
-- 설정 페이지의 아래쪽에 있는 "적용" 단추와 같이 단일 단추가 있는 페이지에서는 단추를 **왼쪽에 맞춰야** 합니다. 그러면 단추가 나머지 페이지 콘텐츠와 맞춰집니다.
+  - 설정 페이지의 아래쪽에 있는 **적용** 단추와 같이 단일 단추가 있는 페이지에서는 단추를 **왼쪽에 맞춰야** 합니다. 그러면 단추가 나머지 페이지 콘텐츠와 맞춰집니다.
 
-![페이지의 단추](images/pushbutton_doc_page.png)
+    ![페이지의 단추](images/pushbutton_doc_page.png)
+
 
 ## <a name="back-buttons"></a>뒤로 단추
 
-뒤로 단추는 뒤로 스택 또는 사용자의 탐색 기록을 통해 뒤로 탐색할 수 있게 하는 시스템 제공 UI 요소입니다. 뒤로 단추를 직접 만들지 않아도 되지만 좋은 뒤로 탐색 환경을 사용하려면 일부 작업을 수행해야 할 수 있습니다. 자세한 내용은 [검색 기록 및 뒤로 탐색](../basics/navigation-history-and-backwards-navigation.md)을 참조하세요.
+뒤로 단추는 뒤로 스택 또는 사용자의 탐색 기록을 통해 뒤로 탐색할 수 있게 하는 시스템 제공 UI 요소입니다. 뒤로 단추를 직접 만들지 않아도 되지만 좋은 뒤로 탐색 환경을 사용하려면 일부 작업을 수행해야 할 수 있습니다. 자세한 내용은 [UWP 앱에 대한 탐색 기록 및 뒤로 탐색](../basics/navigation-history-and-backwards-navigation.md)을 참조하세요.
+
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
+- [XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): 이 샘플에서는 모든 XAML 컨트롤을 대화형 형식으로 보여줍니다.
+
 
 ## <a name="related-articles"></a>관련 문서
 

@@ -5,16 +5,16 @@ keywords: 새로운 기능, 업데이트, 기능, 신규, Windows 10, 1709, 10�
 ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: bf9b6461bb3f1783be2157cde2f89462d0480099
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: bc0172246c14459113ae1952f5db880ecf44e9d9
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66372878"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820982"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>개발자용 Windows 10 빌드 16299의 새로운 기능
 
-Visual Studio 2017 및 업데이트된 SDK와 함께 Windows 10 빌드 16299(Fall Creators Update 또는 버전 1709라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2019 및 업데이트된 SDK와 함께 Windows 10 빌드 16299(Fall Creators Update 또는 버전 1709라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 다음은 이 릴리스에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. Windows SDK에 추가된 새 네임스페이스의 전체 목록은 [Windows 10 빌드 16299 API 변경 내용](windows-10-build-16299-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
 
@@ -43,7 +43,7 @@ UI 컨트롤 | 이러한 새 컨트롤은 멋진 UI를 신속하고 손쉽게 �
 게임 모드 | UWP(유니버설 Windows 플랫폼)을 위한 [게임 모드](https://docs.microsoft.com/previous-versions/windows/desktop/gamemode/game-mode-portal) API를 사용하여 Windows 10의 게임 모드가 제공하는 장점을 활용하여 가장 최적화된 게임 환경을 만들 수 있습니다. 이러한 API는 **&lt;expandedresources.h&gt;** 헤더에 있습니다.
 게임 모니터 | [GameMonitor 클래스](https://docs.microsoft.com/uwp/api/windows.gaming.ui.gamemonitor)를 통해 앱이 디바이스의 게임 모니터 권한 상태를 가져오고 사용자에게 게임 모니터링을 사용하도록 설정하라는 메시지를 표시할 수 있습니다.
 TruePlay | [TruePlay](https://aka.ms/trueplay)는 개발자에게 PC 게임 내 부정 행위에 대처하기 위한 새로운 도구 세트를 제공합니다. TruePlay에 등록한 게임은 일반적인 공격의 클래스를 완화하는 보호된 프로세스에서 실행됩니다. UWP(유니버설 Windows 플랫폼)에 대한 TruePlay API를 통해 Windows 10 PC에서 게임 및 게임 모니터링 시스템 간의 상호 작용을 제한할 수 있습니다. 이러한 API는 **&lt;gamemonitor.h&gt;** 헤더에 있습니다.
-Xbox Live | UWP 및 XDK(Xbox 개발자 키트) 게임 모두에 대한 Xbox Live 개발자를 위한 문서를 추가했습니다. </br>* Xbox Live API를 사용하여 게임을 Xbox Live 소셜 게임 네트워크에 연결하는 방법은 [Xbox Live 개발자 가이드](https://docs.microsoft.com/gaming/xbox-live//index.md)를 참조하세요. </br>* [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md)을 사용하면 모든 UWP 게임 개발자가 PC와 Xbox One에 모두에 Xbox Live 지원 게임을 게시할 수 있습니다. </br>* Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 자세한 내용은 [Xbox Live 개발자 프로그램 개요](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md)를 참조하세요.
+Xbox Live | UWP 및 XDK(Xbox 개발자 키트) 게임 모두에 대한 Xbox Live 개발자를 위한 문서를 추가했습니다. </br>* Xbox Live API를 사용하여 게임을 Xbox Live 소셜 게임 네트워크에 연결하는 방법은 [Xbox Live 개발자 가이드](https://docs.microsoft.com/gaming/xbox-live/index.md)를 참조하세요. </br>* [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 사용하면 모든 UWP 게임 개발자가 PC와 Xbox One에 모두에 Xbox Live 지원 게임을 게시할 수 있습니다. </br>* Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 자세한 내용은 [Xbox Live 개발자 프로그램 개요](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md)를 참조하세요.
 
 ## <a name="develop-windows-apps"></a>Windows 앱 개발
 

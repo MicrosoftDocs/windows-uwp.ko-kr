@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 31b90866a0f612fb8f488d11e7d989380f14da99
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 0352e01363fc077439325eba4f74fe97febac33c
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63784879"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820556"
 ---
 # <a name="app-icons-and-logos"></a>앱 아이콘 및 로고 
 
@@ -105,18 +105,18 @@ For more information, see [App screenshots, images, and trailers in the Microsof
 
 Visual Studio는 앱 아이콘을 관리할 수 있는 **매니페스트 디자이너**라는 매우 유용한 도구를 제공합니다. 
 
-> 아직 Visual Studio 2017이 없는 경우 체험 버전(Visual Studio 2017 Community Edition)을 비롯한 여러 버전이 제공되며, 다른 버전은 평가판을 제공합니다. [https://developer.microsoft.com/windows/downloads](https://developer.microsoft.com/windows/downloads)에서 다운로드할 수 있습니다.
+> 아직 Visual Studio 2019가 없는 경우 체험 버전(Visual Studio 2019 Community Edition)을 비롯한 여러 버전이 제공되며, 다른 버전은 평가판을 제공합니다. [https://developer.microsoft.com/windows/downloads](https://developer.microsoft.com/windows/downloads)에서 다운로드할 수 있습니다.
 
 
 매니페스트 디자이너를 시작하려면 다음을 수행합니다.
 <!-- 1. Use Visual Studio to open a UWP project.
 2. In the **Solution Explorer**, double-click the package.appmanifest file. 
 
-    ![The Visual Studio 2017 Solution Explorer](images/icons/vs-solution-explorer.png)
+    ![The Visual Studio 2019 Solution Explorer](images/icons/vs-solution-explorer.png)
 
     Visual Studio displays the manifest designer.
 
-    ![The Visual Studio 2017 manifest designer](images/icons/vs-manfiest-designer.png)
+    ![The Visual Studio 2019 manifest designer](images/icons/vs-manfiest-designer.png)
 3. Click the **Visual Assets** tab.
 
     ![The Visual Assets tab](images/icons/vs-manfiest-designer-visual-assets.png) -->
@@ -135,7 +135,7 @@ Visual Studio는 앱 아이콘을 관리할 수 있는 **매니페스트 디자�
         2. **솔루션 탐색기**에서 Package.appmxanifest 파일을 두 번 클릭합니다.
     :::column-end:::
     :::column:::
-        ![The Visual Studio 2017 Manifest Designer](images/icons/vs-solution-explorer.png)
+        ![The Visual Studio 2019 Manifest Designer](images/icons/vs-solution-explorer.png)
     :::column-end:::
 :::row-end:::
 :::row:::

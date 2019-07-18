@@ -6,16 +6,16 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: ea855480-874d-431f-94bf-13d81eacc010
 ms.localizationpriority: medium
-ms.openlocfilehash: dbf7c5d8d0f788fb37150ae348d60e61d34753d5
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 83c1952a3cb21945a3e4c22aaa6ffe9f7f55c8f8
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66372901"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821093"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-15063"></a>개발자용 Windows 10 빌드 15063의 새로운 기능
 
-Visual Studio 2017 및 업데이트된 SDK와 함께 Windows 10 빌드 15063(크리에이터스 업데이트 또는 버전 1703이라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2019 및 업데이트된 SDK와 함께 Windows 10 빌드 15063(크리에이터스 업데이트 또는 버전 1703이라고도 함)은 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 다음은 개발자가 관심을 갖는 신규 및 개선 기능 모음입니다. Windows SDK에 추가된 새 네임스페이스의 전체 목록은 [Windows 10 빌드 15063 API 변경 내용](windows-10-build-15063-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
 
@@ -32,7 +32,7 @@ Bluetooth 저 에너지 | 일반 특성(GATT) 게시 서비스가 이제는 포�
 Direct3D | 원자성 버퍼 복사본(최신 래치 기법을 지원), 프로그래밍이 가능한 샘플 위치, 깊이 제한 테스트, 농도 범위 테스트, residency 우선 순위 등을 지원하기 위해 새로운 API가 [Direct3D 12](https://docs.microsoft.com/windows/desktop/direct3d12/direct3d-12-graphics)에 추가되었습니다. </br></br> [Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11)의 다중 디바이스 시나리오와 Direct3D 11과 Direct3D 12 사이의 상호 운영성 시나리오를 지원하도록 펜스 API가 추가되었습니다. 현재 런타임은 애플리케이션 로드 시간 및 성능을 개선하기 위해 셰이더의 OS 관리형 캐싱을 지원하고 있습니다.
 EdgeHTML 15 | Microsoft Edge 및 JS 기반 유니버설 Windows 플랫폼 앱을 지원하는 웹 플랫폼이 EdgeHTML 15로 업데이트 되었으며, 이제는 무엇보다 결제 요청 API, WebVR, 콘텐츠 보안 정책 2 등에 대한 지원이 포함되었습니다. 변경 사항의 전체 목록은 [Microsoft Edge 개발자 가이드](https://docs.microsoft.com/microsoft-edge/dev-guide)를 참조하세요.
 FlightStick 및 RawGameController | [플라이트 스틱](https://docs.microsoft.com/windows/uwp/gaming/flight-stick)을 비롯해 모든 종류의 컨트롤러에서 입력을 수집하고 플레이어가 사용자 지정 입력 매핑을 선택할 수 있도록 허용하는 [원시 게임 컨트롤러](https://docs.microsoft.com/windows/uwp/gaming/raw-game-controller)를 지원하는 등 신규 API가 [Windows.Gaming.Input 네임스페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input)에 추가되었습니다.
-Win32의 높은 DPI | [새로운 "모니터별 v2" DPI 인식 컨텍스트](https://msdn.microsoft.com/library/mt791579(v=vs.85))가 데스크톱 애플리케이션에 추가 되었습니다. 모니터별 v2는 해당 DPI가 변경될 때마다 창의 배율 인수를 여전히 자동으로 조정하지만, 애플리케이션이 최상위 창 별로 새로운 DPI 배율 조정 동작에 액세스할 수 있도록 허용합니다.
+Win32의 높은 DPI | [새로운 "모니터별 v2" DPI 인식 컨텍스트](https://docs.microsoft.com/windows/desktop/hidpi/dpi-awareness-context)가 데스크톱 애플리케이션에 추가 되었습니다. 모니터별 v2는 해당 DPI가 변경될 때마다 창의 배율 인수를 여전히 자동으로 조정하지만, 애플리케이션이 최상위 창 별로 새로운 DPI 배율 조정 동작에 액세스할 수 있도록 허용합니다.
 잉크 | [Ink](https://docs.microsoft.com/uwp/api/windows.ui.input.inking)는 각도기 및 눈금자 스텐실, 잉크 입력 타임 스탬프, 세련된 고대비 형광펜, 프로그래밍을 통한 잉크 스트로크 생성 등을 추가적으로 지원합니다. </br></br> [Ink 분석](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis)은 모양 감지 및 인식, 필기 인식, 레이아웃 해석 및 분류 같은 Windows Ink 앱에 대한 잉크 스트로크 입력을 분석할 수 있습니다. </br></br> 스텐실 단추(눈금자 및 각도기용), 플라이아웃 컨트롤 유형 및 플라이아웃 위치/방향을 포함해 [Ink 도구 모음](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar)의 기능이 전체적으로 개선되었습니다. </br></br> 이제는 [Ink 작업 영역](https://docs.microsoft.com/uwp/api/windows.applicationmodel.preview.inkworkspace)에서 잉크 앱을 지정할 수 있습니다.
 입력 주입 | [입력 주입](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection)은 다양한 디바이스로부터 입력을 프로그래밍 방식으로 생성 및 자동화하도록 지원합니다.
 IoT | [Windows IoT Core](https://developer.microsoft.com/windows/iot/Explore/IoTCore)의 업데이트에는 Cortana, IoT 대시보드 개선, Azure 디바이스 관리, IoT용 Device Guard에 대한 지원이 포함되어 있습니다. 최신 기능에 대한 전체적인 개요는 [Windows 10 IoT Core의 새로운 기능](https://developer.microsoft.com/windows/iot/Docs/WhatsNew)을 참조하세요.

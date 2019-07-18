@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: 7669c6536f28d5f979567f5b433dbf614800bec3
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 999238d72017b92f1eb64c2e3089305166f993f2
+ms.sourcegitcommit: bf32c7ea6ca94b60dbd01cae279b31c6e0e5f338
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "65627674"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348638"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>XAML 항목 컨트롤, C++/WinRT 컬렉션에 바인딩
 
@@ -39,13 +39,16 @@ XAML 항목에 효과적으로 바인딩할 수 있는 컬렉션은 *식별할 �
 runtimeclass BookstoreViewModel
 {
     BookSku BookSku{ get; };
-    Windows.Foundation.Collections.IObservableVector<IInspectable> BookSkus{ get; };
+    Windows.Foundation.Collections.IObservableVector<BookSku> BookSkus{ get; };
 }
 ...
 ```
 
-> [!IMPORTANT]
-> 위의 MIDL 3.0 목록에서 **BookSkus** 속성의 형식은 [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)의 [**IObservableVector**](/uwp/api/windows.foundation.collections.ivector_t_)입니다. 이 항목의 다음 섹션에서는 [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox)의 항목 원본을 **BookSkus**에 바인딩합니다. 목록 상자는 항목 컨트롤이며, [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 제대로 설정하려면 **IInspectable**의 **IObservableVector** 또는 **IVector** 형식 값으로 설정하거나 [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector)와 같은 상호 운용성 형식 값으로 설정해야 합니다.
+> [!NOTE]
+> 위의 MIDL 3.0 목록에서 **BookSkus** 속성의 형식은 **BookSku**의 [**IObservableVector**](/uwp/api/windows.foundation.collections.ivector_t_)입니다. 이 항목의 다음 섹션에서는 [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox)의 항목 원본을 **BookSkus**에 바인딩합니다. 목록 상자는 항목 컨트롤이며, [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 제대로 설정하려면 **IObservableVector** 또는 **IVector** 형식 값으로 설정하거나 [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector)와 같은 상호 운용성 형식 값으로 설정해야 합니다.
+
+> [!WARNING]
+> 이 항목에 표시된 코드는 C++/WinRT 버전 2.0.190530.8 이상에 적용됩니다. 이전 버전을 사용하는 경우 표시된 코드에 몇 가지 사소한 변경을 해야 합니다. 위의 MIDL 3.0 목록에서 **BookSkus** 속성을 [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)의 [**IObservableVector**](/uwp/api/windows.foundation.collections.ivector_t_)로 변경합니다. 그 다음, 구현에서도 **IInspectable**(**BookSku** 대신)을 사용합니다.
 
 저장 후 빌드합니다. `\Bookstore\Bookstore\Generated Files\sources` 폴더의 `BookstoreViewModel.h` 및 `BookstoreViewModel.cpp`에서 접근자 스텁을 복사합니다. 자세한 내용은 이전 항목인 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md)을 참조하세요. 다음과 같이 접근자 스텁을 구현합니다.
 
@@ -58,11 +61,11 @@ struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
 
     Bookstore::BookSku BookSku();
 
-    Windows::Foundation::Collections::IObservableVector<Windows::Foundation::IInspectable> BookSkus();
+    Windows::Foundation::Collections::IObservableVector<Bookstore::BookSku> BookSkus();
 
 private:
     Bookstore::BookSku m_bookSku{ nullptr };
-    Windows::Foundation::Collections::IObservableVector<Windows::Foundation::IInspectable> m_bookSkus;
+    Windows::Foundation::Collections::IObservableVector<Bookstore::BookSku> m_bookSkus;
 };
 ...
 ```
@@ -73,7 +76,7 @@ private:
 BookstoreViewModel::BookstoreViewModel()
 {
     m_bookSku = winrt::make<Bookstore::implementation::BookSku>(L"Atticus");
-    m_bookSkus = winrt::single_threaded_observable_vector<Windows::Foundation::IInspectable>();
+    m_bookSkus = winrt::single_threaded_observable_vector<Bookstore::BookSku>();
     m_bookSkus.Append(m_bookSku);
 }
 
@@ -82,7 +85,7 @@ Bookstore::BookSku BookstoreViewModel::BookSku()
     return m_bookSku;
 }
 
-Windows::Foundation::Collections::IObservableVector<Windows::Foundation::IInspectable> BookstoreViewModel::BookSkus()
+Windows::Foundation::Collections::IObservableVector<Bookstore::BookSku> BookstoreViewModel::BookSkus()
 {
     return m_bookSkus;
 }

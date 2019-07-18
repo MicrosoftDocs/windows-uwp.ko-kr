@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 오류, 처리, 예외
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b72bb3cb2527585c114d386981e02d4730614a2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c75cf8763b5f47772a138c15049155458772eeb5
+ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721643"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660141"
 ---
 # <a name="error-handling-with-cwinrt"></a>C++/WinRT를 통한 오류 처리
 
@@ -112,7 +112,7 @@ HRESULT DoWork() noexcept
 [**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult)는 **std::exception**에서 파생된 예외와 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 및 그 파생 형식을 처리합니다. API 소비자가 다양한 오류 정보를 받을 수 있도록 구현에서 **winrt::hresult_error** 또는 파생 형식을 사용하는 것이 좋습니다. **std::exception**(E_FAIL에 매핑됨)은 표준 템플릿 라이브러리를 사용하는 중 예외가 발생하는 경우에 지원됩니다.
 
 ## <a name="assertions"></a>어설션
-애플리케이션 내부 가정의 경우 어설션이 있습니다. 가능한 경우 컴파일 시간 유효성 검사에는 **static_assert**를 사용하는 것이 좋습니다. 런타임 조건의 경우 WINRT_ASSERT에 부울 식을 사용합니다.
+애플리케이션 내부 가정의 경우 어설션이 있습니다. 가능한 경우 컴파일 시간 유효성 검사에는 **static_assert**를 사용하는 것이 좋습니다. 런타임 조건의 경우 `WINRT_ASSERT`에 부울 식을 사용합니다. `WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.
 
 ```cppwinrt
 WINRT_ASSERT(pos < size());

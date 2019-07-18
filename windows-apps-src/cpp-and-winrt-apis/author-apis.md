@@ -1,20 +1,23 @@
 ---
 description: '**winrt::implements** 기본 구조체를 직접 또는 간접적으로 사용하여 C++/WinRT API를 작성하는 방법을 보여 줍니다.'
 title: C++/WinRT를 사용하여 API 작성
-ms.date: 04/23/2019
+ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: 526c6fba76539a5d43231c29479621478b2dde59
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 74d15b517c5ec6547115bc8ffdb44a2b742c68d6
+ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "65821083"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67717664"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 사용하여 API 작성
 
 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체를 직접 또는 간접적으로 사용하여 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) API를 작성하는 방법을 보여줍니다. 이 맥락에서 사용되는 *작성*이라는 표현은 *생성* 또는 *구현*과 동의어입니다. 이 토픽에서는 다음 시나리오의 순서대로 C++/WinRT 형식으로 API를 구현하는 방법을 설명합니다.
+
+> [!NOTE]
+> 이 토픽에서는 Windows 런타임 구성 요소에 대해 다루지만 C++/WinRT 컨텍스트 내에서만 설명합니다. 모든 Windows 런타임 언어를 포함하는 Windows 런타임 구성 요소에 대한 콘텐츠를 원하는 경우 [Windows 런타임 구성 요소](/windows/uwp/winrt-components/)를 참조하세요.
 
 - Windows 런타임 클래스(이하 런타임 클래스)를 작성하지 *않습니다*. 단지 앱 내에서 로컬로 사용할 수 있도록 Windows 런타임 인터페이스를 하나 이상 구현할 것입니다. 이 예제의 **winrt::implements**에서 직접 파생시켜 함수를 구현합니다.
 - 런타임 클래스를 *작성*할 것입니다. 앱에서 사용할 구성 요소를 작성할 수도 있습니다. 혹은 XAML UI(사용자 인터페이스)에서 사용할 형식을 작성할 수도 있습니다. 이 경우에는 동일한 컴파일 단위 내에서 런타임 클래스를 구현하고 사용하게 됩니다. 어쨌든 두 경우 모두 도구를 사용해 **winrt::implements**에서 파생되는 클래스를 생성할 수 있습니다.
@@ -25,6 +28,7 @@ ms.locfileid: "65821083"
 > 구현 형식과 프로젝션된 형식의 개념을 구분할 수 있어야 합니다. 프로젝션된 형식은 [C++/WinRT를 통한 API 사용](consume-apis.md)에 설명되어 있습니다.
 
 ## <a name="if-youre-not-authoring-a-runtime-class"></a>런타임 클래스를 작성하지 *않는* 경우
+
 가장 간단한 시나리오는 로컬에서 사용할 목적으로 Windows 런타임 인터페이스를 구현하는 경우입니다. 이 경우 런타임 클래스는 필요 없고 일반적인 C++ 클래스만 있으면 됩니다. 예를 들어 [**CoreApplication**](/uwp/api/windows.applicationmodel.core.coreapplication)을 기반으로 앱을 개발할 수 있습니다.
 
 > [!NOTE]
@@ -121,6 +125,7 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 ```
 
 ## <a name="if-youre-authoring-a-runtime-class-in-a-windows-runtime-component"></a>Windows 런타임 구성 요소에서 런타임 클래스를 작성하는 경우
+
 형식이 애플리케이션에서 사용할 수 있도록 Windows 런타임 구성 요소에 패키지 형태로 존재하는 경우에는 런타임 클래스 형식이어야 합니다.
 
 > [!TIP]
@@ -142,7 +147,9 @@ namespace MyProject
 }
 ```
 
-이 IDL은 Windows 런타임(이하 런타임) 클래스를 선언합니다. 런타임 클래스는 일반적으로 실행 가능한 경계를 넘어서 최신 COM 인터페이스를 통해 활성화 및 사용할 수 있는 형식입니다. IDL 파일을 프로젝트에 추가하여 빌드할 때 C++/WinRT 도구 체인(`midl.exe` 및 `cppwinrt.exe`)이 사용자를 대신하여 구현 형식을 생성합니다. 위의 IDL 예제를 보면 이름이 `\MyProject\MyProject\Generated Files\sources\MyRuntimeClass.h`와 `MyRuntimeClass.cpp`인 소스 코드 파일에서 **winrt::MyProject::implementation::MyRuntimeClass**라는 이름의 C++ 구조체 스텁이 구현 형식에 해당합니다.
+이 IDL은 Windows 런타임(이하 런타임) 클래스를 선언합니다. 런타임 클래스는 일반적으로 실행 가능한 경계를 넘어서 최신 COM 인터페이스를 통해 활성화 및 사용할 수 있는 형식입니다. IDL 파일을 프로젝트에 추가하여 빌드할 때 C++/WinRT 도구 체인(`midl.exe` 및 `cppwinrt.exe`)이 사용자를 대신하여 구현 형식을 생성합니다. IDL 파일 워크플로 작업 예제는 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md)을 참조하세요.
+
+위의 IDL 예제를 보면 이름이 `\MyProject\MyProject\Generated Files\sources\MyRuntimeClass.h`와 `MyRuntimeClass.cpp`인 소스 코드 파일에서 **winrt::MyProject::implementation::MyRuntimeClass**라는 이름의 C++ 구조체 스텁이 구현 형식에 해당합니다.
 
 구현 형식은 다음과 같은 모습입니다.
 
@@ -175,6 +182,7 @@ struct MyRuntimeClass_base : implements<D, MyProject::IMyRuntimeClass, I...>
 Windows 런타임 구성 요소의 API 작성에 대한 자세한 내용과 코드 및 연습은 [C++/WinRT의 이벤트 작성](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component)을 참조하세요.
 
 ## <a name="if-youre-authoring-a-runtime-class-to-be-referenced-in-your-xaml-ui"></a>XAML UI에서 참조할 런타임 클래스를 작성하는 경우
+
 형식을 XAML UI에서 참조하는 경우에는 XAML과 동일한 프로젝트에 위치하더라도 런타임 클래스 형식이어야 합니다. 일반적으로 실행 가능한 경계에서 활성화되기는 하지만, 대신에 구현되는 컴파일 단위 내에서 런타임 클래스를 사용할 수도 있습니다.
 
 이 시나리오에서는 API를 작성*하고* 사용합니다. 런타임 클래스를 구현하는 절차는 기본적으로 Windows 런타임 구성 요소의 절차와 동일합니다. 따라서 이전 섹션&mdash;[Windows 런타임 구성 요소에서 런타임 클래스를 작성하는 경우](#if-youre-authoring-a-runtime-class-in-a-windows-runtime-component)를 참조하세요. 유일하게 다른 점이라고 한다면 C++/WinRT 도구 체인이 IDL에서 구현 형식뿐 아니라 프로젝션된 형식도 생성한다는 것입니다. 이 시나리오에서 "**MyRuntimeClass**"만 언급하여 혼란스러울 수 있겠지만, 이는 종류가 다르면서 이름만 같은 엔터티가 다수 있기 때문입니다.
@@ -205,10 +213,11 @@ namespace winrt::MyProject
 이 시나리오에서 런타임 클래스를 사용하는 절차는 [C++/WinRT를 통한 API 사용](consume-apis.md#if-the-api-is-implemented-in-the-consuming-project)에 설명되어 있습니다.
 
 ## <a name="runtime-class-constructors"></a>런타임 클래스 생성자
+
 다음은 위에서 언급한 내용 외에 주의해야 할 몇 가지 사항입니다.
 
 - IDL에서 각 생성자를 생성하면 생성자가 구현 형식과 프로젝션된 형식으로 생성됩니다. IDL에서 선언하는 생성자는 *다른* 컴파일 단위에서 런타임 클래스를 이용하는 데 사용됩니다.
-- IDL에서 생성자를 선언하든 선언하지 않든 상관없이, `nullptr_t`을 가져오는 생성자 오버로드는 프로젝션된 형식으로 생성됩니다. `nullptr_t` 생성자 호출은 *동일한* 컴파일 단위의 런타임 클래스를 사용하기 위한 *두 단계 중 첫 번째 단계*입니다. 자세한 내용과 코드 예제는 [C++/WinRT를 통한 API 사용](consume-apis.md#if-the-api-is-implemented-in-the-consuming-project)을 참조하세요.
+- IDL에서 생성자를 선언하든 선언하지 않든 상관없이, **std::nullptr_t**를 가져오는 생성자 오버로드는 프로젝션된 형식으로 생성됩니다. **std::nullptr_t** 생성자 호출은 *동일한* 컴파일 단위의 런타임 클래스를 사용하기 위한 *두 단계 중 첫 번째 단계*입니다. 자세한 내용과 코드 예제는 [C++/WinRT를 통한 API 사용](consume-apis.md#if-the-api-is-implemented-in-the-consuming-project)을 참조하세요.
 - *동일한* 컴파일 단위에서 런타임 클래스를 사용하는 경우에는 비 기본 생성자를 직접 구현 형식(`MyRuntimeClass.h`)으로 구현할 수도 있습니다.
 
 > [!NOTE]
@@ -218,7 +227,20 @@ namespace winrt::MyProject
 > 
 > 동일한 컴파일 단위에서만 런타임 클래스를 작성하여 사용할 계획이며, 생성자 매개 변수가 필요한 경우에는 직접 구현 형식으로 필요한 생성자를 작성하세요.
 
+## <a name="runtime-class-methods-properties-and-events"></a>런타임 클래스 메서드, 속성 및 이벤트
+
+IDL을 사용하여 런타임 클래스 및 해당 멤버를 선언하는 워크플로를 살펴보았으며, 그 다음은 도구에서 프로토타입 및 스텁 구현을 자동으로 생성합니다. 런타임 클래스의 멤버에 대해 자동 생성된 이러한 프로토타입의 경우 IDL에서 선언된 형식과 다른 형식을 전달할 수 있도록 편집*할 수 있습니다*. 하지만 그렇게 할 수 있는 것은 IDL에서 선언된 형식을 구현된 버전에서 선언된 형식으로 전달할 수 있을 때만 가능합니다.
+
+예를 들면 다음과 같습니다.
+
+- 매개 변수 형식을 완화할 수 있습니다. 예를 들어 IDL에서 메서드가 **SomeClass**를 가져오는 경우 구현에서 이를 **IInspectable**로 변경하도록 선택할 수 있습니다. 이는 모든 **SomeClass**를 **IInspectable**로 전달할 수 있기 때문에 가능합니다(물론 반대로는 작동하지 않습니다).
+- 참조 대신 값으로 복사 가능한 매개 변수를 허용할 수 있습니다. 예를 들어 `SomeClass const&`를 `SomeClass const&`로 변경할 수 있습니다. 코루틴에 대한 참조를 캡처하지 못하도록 해야 할 때 필요합니다([매개 변수 전달](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing) 참조).
+- 반환 값을 완화할 수 있습니다. 예를 들어 **void**를 [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget)으로 변경할 수 있습니다.
+
+마지막 둘은 비동기 이벤트 처리기를 작성할 때 매우 유용합니다.
+
 ## <a name="instantiating-and-returning-implementation-types-and-interfaces"></a>구현 형식과 인터페이스의 인스턴스화 및 반환
+
 이 섹션에서는 [**IStringable**](/uwp/api/windows.foundation.istringable) 및 [**IClosable**](/uwp/api/windows.foundation.iclosable) 인터페이스를 구현하는 **MyType**이라는 이름의 구현 형식을 예로 들겠습니다.
 
 **MyType**은 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements)에서 직접 파생시킬 수 있습니다(런타임 클래스 아님).
@@ -249,7 +271,7 @@ namespace MyProject
 }
 ```
 
-**MyType**에서 프로젝션 과정 중 사용하거나 반환할 수 있는 **IStringable** 또는 **IClosable** 개체로 이동하려면 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 함수 템플릿을 호출하면 됩니다. **make**는 구현 형식의 기본 인터페이스를 반환합니다.
+**MyType**에서 프로젝션 과정 중 사용하거나 반환할 수 있는 **IStringable** 또는 **IClosable** 개체로 이동하려면 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 함수 템플릿을 호출해야 합니다. **make**는 구현 형식의 기본 인터페이스를 반환합니다.
 
 ```cppwinrt
 IStringable istringable = winrt::make<MyType>();
@@ -335,6 +357,7 @@ void MyType::MemberFunction(MyProject::MyOtherType const& ot)
 ```
 
 ## <a name="deriving-from-a-type-that-has-a-non-default-constructor"></a>기본이 아닌 생성자를 갖고 있는 형식에서 파생
+
 [**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)** ](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_)는 기본이 아닌 생성자의 예입니다. 기본 생성자가 없기 때문에 **ToggleButtonAutomationPeer**를 생성하려면 *소유자*를 전달해야 합니다. 결과적으로 **ToggleButtonAutomationPeer**에서 파생시키는 경우에는 *소유자*를 가져와 기본 클래스로 전달하는 생성자를 입력해야 합니다. 실제로 표시되는 모습은 다음과 같습니다.
 
 ```idl
@@ -391,6 +414,47 @@ MySpecializedToggleButtonAutomationPeer::MySpecializedToggleButtonAutomationPeer
 기본 클래스 생성자는 **ToggleButton**이 필요합니다. 그리고 **MySpecializedToggleButton***은* **ToggleButton**입니다.
 
 위에서 설명한 대로(생성자 매개 변수를 기본 클래스에게 전달) 편집할 때까지 컴파일러는 생성자를 플래그 처리하고 **MySpecializedToggleButtonAutomationPeer_base&lt;MySpecializedToggleButtonAutomationPeer&gt;** 라는 이름의 형식에 사용할 수 있는 기본 생성자가 없다고 알립니다. 하지만 실제로는 이 클래스가 구현 형식의 기본 클래스입니다.
+
+## <a name="namespaces-projected-types-implementation-types-and-factories"></a>네임스페이스: 프로젝션된 형식, 구현 형식 및 팩터리
+
+이 항목에서 이전에 살펴본 대로 C++/WinRT 런타임 클래스는 둘 이상의 네임스페이스에 둘 이상의 C++ 클래스 형태로 존재합니다. 따라서 **MyRuntimeClass**라는 이름은 **winrt::MyProject** 네임스페이스와 **winrt::MyProject::implementation** 네임스페이스에서 의미가 서로 다릅니다. 현재 컨텍스트에서 사용 중인 네임스페이스를 확인한 다음, 다른 네임스페이스의 이름이 필요하면 네임스페이스 접두사를 사용합니다. 해당 네임스페이스에 대해 좀 더 자세히 살펴보겠습니다.
+
+- **winrt::MyProject**. 이 네임스페이스는 프로젝션된 형식을 포함합니다. 프로젝션된 형식의 개체는 프록시로, 특히 지원 개체를 사용자 프로젝트에서 구현하거나 다른 컴파일 단위에서 구현할 수 있는 경우 해당 지원 개체에 대한 스마트 포인터입니다.
+- **winrt::MyProject::implementation**. 이 네임스페이스는 구현 형식을 포함합니다. 구현 형식의 개체는 포인터가 아닌 값(전체 C++ 스택 개체)입니다. 구현 형식을 직접 생성하지 마세요. 대신, [**winrt::make**](/uwp/cpp-ref-for-winrt/make)를 호출하여 구현 형식을 템플릿 매개 변수로 전달하세요. 이 항목에서 이전에 **winrt::make** 작업 예제를 살펴보았으며 다른 예제는 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)에서 찾을 수 있습니다.
+- **winrt::MyProject::factory_implementation**. 이 네임스페이스는 팩터리를 포함합니다. 이 네임스페이스의 개체가 [**IActivationFactory**](/windows/win32/api/activation/nn-activation-iactivationfactory)를 지원합니다.
+
+다음 표에서는 다른 컨텍스트에서 사용하는 데 필요한 최소 네임스페이스 자격을 보여 줍니다.
+
+|컨텍스트의 네임스페이스|프로젝션된 형식 지정|프로젝션된 형식 지정|
+|-|-|-|
+|**winrt::MyProject**|`MyRuntimeClass`|`implementation::MyRuntimeClass`|
+|**winrt::MyProject::implementation**|`MyProject::MyRuntimeClass`|`MyRuntimeClass`|
+
+> [!IMPORTANT]
+> 프로젝션된 형식을 구현에서 반환하려는 경우 `MyRuntimeClass myRuntimeClass;`를 작성하여 구현 형식을 인스턴스화하지 않도록 주의해야 합니다. 해당 시나리오에 대한 올바른 기술 및 코드는 이 항목의 [구현 형식과 인터페이스의 인스턴스화 및 반환](#instantiating-and-returning-implementation-types-and-interfaces) 섹션에 나와 있습니다.
+>
+> 해당 시나리오에서 `MyRuntimeClass myRuntimeClass;` 관련 문제는 스택에 **winrt::MyProject::implementation::MyRuntimeClass** 개체가 생성된다는 것입니다. 이 개체(구현 형식)는 몇 가지 측면에서 프로젝션된 형식처럼 동작하므로 동일한 방식으로 메서드를 호출할 수 있으며 프로젝션된 형식으로 변환됩니다. 하지만 범위를 벗어나면 표준 C++ 규칙에 따라 개체가 소멸합니다. 따라서 해당 개체에 프로젝션된 형식(스마트 포인터)을 반환한 경우 해당 포인터는 이제 현수 포인터입니다.
+>
+> 이러한 메모리 손상 버그 유형은 진단하기 어렵습니다. 따라서 디버그 빌드에서 C++WinRT 어설션을 사용하면 스택 감지기를 사용하여 이러한 실수를 잡아내는 데 도움이 됩니다. 하지만 코루틴이 힙에 할당되므로 코루틴 내에서 실수가 발생하면 잡아낼 수 없습니다.
+
+## <a name="using-projected-types-and-implementation-types-with-various-cwinrt-features"></a>다양한 C++/WinRT 기능에서 프로젝션된 형식 및 구현 형식 사용
+
+C++/WinRT 기능에서 형식을 사용하는 다양한 위치 및 필요한 형식의 종류(프로젝션된 형식, 구현 형식 또는 둘 다)는 다음과 같습니다.
+
+|기능|허용|참고|
+|-|-|-|
+|`T`(스마트 포인터를 나타냄)|프로젝션|실수로 구현 형식을 사용한 경우에 대해서는 [네임스페이스: 프로젝션된 형식, 구현 형식 및 팩터리](#namespaces-projected-types-implementation-types-and-factories)의 주의 사항을 참조하세요.|
+|`agile_ref<T>`|둘 다|구현 형식을 사용할 경우 생성자 인수는 `com_ptr<T>`여야 합니다.|
+|`com_ptr<T>`|구현|프로젝션된 형식을 사용하면 `'Release' is not a member of 'T'` 오류가 생성됩니다.|
+|`default_interface<T>`|둘 다|구현 형식을 사용하면 첫 번째 구현된 인터페이스가 반환됩니다.|
+|`get_self<T>`|구현|프로젝션된 형식을 사용하면 `'_abi_TrustLevel': is not a member of 'T'` 오류가 생성됩니다.|
+|`guid_of<T>()`|둘 다|기본 인터페이스의 GUID를 반환합니다.|
+|`IWinRTTemplateInterface<T>`<br>|프로젝션|실수로 구현 형식을 사용하여 컴파일한 경우 [네임스페이스: 프로젝션된 형식, 구현 형식 및 팩터리](#namespaces-projected-types-implementation-types-and-factories)의 주의 사항을 참조하세요.|
+|`make<T>`|구현|프로젝션된 형식을 사용하면 `'implements_type': is not a member of any direct or indirect base class of 'T'` 오류가 생성됩니다.|
+| `make_agile(T const&amp;)`|둘 다|구현 형식을 사용할 경우 인수는 `com_ptr<T>`여야 합니다.|
+| `make_self<T>`|구현|프로젝션된 형식을 사용하면 `'Release': is not a member of any direct or indirect base class of 'T'` 오류가 생성됩니다.|
+| `name_of<T>`|프로젝션|구현 형식을 사용하는 경우 기본 인터페이스의 stringified GUID를 가져올 수 있습니다.|
+| `weak_ref<T>`|둘 다|구현 형식을 사용할 경우 생성자 인수는 `com_ptr<T>`여야 합니다.|
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)

@@ -6,18 +6,18 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2b172844e75d9af3d0112e03f155708af3ca6bed
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d393ee92be8768861da0fb0783372c8bafc6f815
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63780353"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821117"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>개발자용 Windows 10 빌드 17763의 새로운 기능
 
-Visual Studio 2017 및 업데이트된 SDK와 함께 Windows 10 빌드 17763(2018년 10월 업데이트 또는 버전 1809라고도 함)은 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2019 및 업데이트된 SDK와 함께 Windows 10 빌드 17763(2018년 10월 업데이트 또는 버전 1809라고도 함)은 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
-이는 Windows 개발자가 관심을 갖는 이 릴리스의 새로운 기능, 향상된 기능 및 지침의 모음입니다. Windows SDK에 추가된 새로운 네임스페이스의 전체 목록은 [Windows 10 빌드 17763 API 변경 내용](windows-10-build-17763-api-diff.md)을 참조하세요. Windows 10의 중요한 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 또한 과거 및 미래 모두의 Windows 플랫폼 추가 기능에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
+이는 Windows 개발자가 관심을 갖는 이 릴리스의 새로운 기능, 향상된 기능 및 지침의 모음입니다. Windows SDK에 추가된 새로운 네임스페이스의 전체 목록은 [Windows 10 빌드 17763 API 변경 내용](windows-10-build-17763-api-diff.md)을 참조하세요. Windows 10의 중요한 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
 
 ## <a name="design--ui"></a>디자인 및 UI
 
@@ -113,7 +113,7 @@ Unity용 Xbox Live 플러그 인에는 Xbox Live 서명, 통계, 친구 목록, 
 
 ### <a name="one-dev-question"></a>One Dev Question
 
-Microsoft 개발자는 One Dev Question 비디오 시리즈에서 오랫동안 Windows 개발, 팀 문화 및 이력에 대한 일련의 질문을 다루어 왔습니다.
+Microsoft 개발자는 One Dev Question 동영상 시리즈에서 오랫동안 Windows 개발, 팀 문화 및 이력에 대한 일련의 질문을 다루어 왔습니다.
 
 * [Raymond Chen, Windows 개발 및 역사](https://www.youtube.com/playlist?list=PLWs4_NfqMtoxjy3LrIdf2oamq1coolpZ7)
 

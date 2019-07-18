@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b444a11ab032034976d2f1b269bd10a89bf339e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 67d5861e65a85a07cdda486ddb9c9634c388e819
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63798618"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820461"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 
@@ -28,7 +28,7 @@ ms.locfileid: "63798618"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-* Visual Studio 2017: [Visual Studio 2017 Community(무료) 다운로드](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
+* Visual Studio 2019: [Visual Studio 2019 Community(무료) 다운로드](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
 * Windows 10 SDK(10.0.15063.468 이상):  [최신 Windows SDK(무료)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Windows 모바일 에뮬레이터: [Windows 10 모바일 에뮬레이터(무료)](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
 
@@ -321,8 +321,8 @@ Visual Studio 도구 모음에서 대상 디바이스를 **로컬 컴퓨터**로
 
 문제가 있는 경우 [XAML을 사용하여 페이지 레이아웃 정의](../layout/layouts-with-xaml.md)의 다음 섹션에서 더 많은 지침을 찾을 수 있습니다.
 
-+ [시각적 상태 및 상태 트리거](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#visual-states-and-state-triggers)
-+ [맞춤형 레이아웃](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#tailored-layouts)
++ [시각적 상태 및 상태 트리거](https://docs.microsoft.com/windows/uwp/design/layout/layouts-with-xaml#visual-states-and-state-triggers)
++ [맞춤형 레이아웃](https://docs.microsoft.com/windows/uwp/design/layout/layouts-with-xaml#tailored-layouts)
 
 또는 초기 사진 편집 앱의 빌드 방법에 대해 자세히 알아보려면 XAML [사용자 인터페이스](../basics/xaml-basics-ui.md) 및 [데이터 바인딩](../../data-binding/xaml-basics-data-binding.md)의 이 자습서를 확인하세요.
 

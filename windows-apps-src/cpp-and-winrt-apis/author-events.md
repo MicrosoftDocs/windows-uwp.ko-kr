@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a3c834a1696b65099549aa001338a8a02f60e50
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: fc3b07848215699afe971674acfa7606ffb21bce
+ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64745231"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660173"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
@@ -91,7 +91,10 @@ namespace winrt::BankAccountWRC::implementation
 }
 ```
 
-C++/WinRT 프로젝션에 의해 관리되는 이벤트 취소자에 대한 오버로드를 구현할 필요는 없습니다(자세한 내용은 [등록된 대리자 취소](handle-events.md#revoke-a-registered-delegate) 참조). 다른 오버로드는 사용자 시나리오에 최적으로 구현하는 유연성을 제공하기 위해 프로젝션에 반영되지 않습니다. 이처럼 [**event::add**](/uwp/cpp-ref-for-winrt/event#eventadd-function) 및 [**event::remove**](/uwp/cpp-ref-for-winrt/event#eventremove-function) 호출은 효율적이며 동시성/스레드로부터 안전한 기본값입니다. 하지만 매우 많은 수의 이벤트를 처리하는 경우 각각에 대한 이벤트 필드 대신 일부 밀도가 낮은 구현을 원할 수 있습니다.
+> [!NOTE]
+> 자동 이벤트 취소자에 대한 자세한 정보는 [등록된 대리자 취소](handle-events.md#revoke-a-registered-delegate)를 참조하세요. 이벤트에 대한 자동 이벤트 취소자 구현을 무료로 가져올 수 있습니다. 즉, 이벤트 취소자(C++/WinRT 프로젝션을 통해 제공)에 대한 오버로드를 구현할 필요가 없습니다.
+
+다른 오버로드(등록 및 수동 해지 오버로드)는 프로젝션에 반영되지 *않습니다*. 이는 시나리오에 최적으로 구현할 수 있는 유연성을 제공하기 위한 것입니다. 이러한 구현에 나온 것처럼 [**event::add**](/uwp/cpp-ref-for-winrt/event#eventadd-function) 및 [**event::remove**](/uwp/cpp-ref-for-winrt/event#eventremove-function) 호출은 효율적이며 동시성/스레드로부터 안전한 기본값입니다. 하지만 매우 많은 수의 이벤트를 처리하는 경우 각각에 대한 이벤트 필드 대신 일부 밀도가 낮은 구현을 원할 수 있습니다.
 
 잔액이 마이너스가 될 경우 **AdjustBalance** 함수의 구현에서 **AccountIsInDebit** 이벤트가 발생하는 시나리오는 위에서 확인할 수 있습니다.
 
@@ -112,6 +115,8 @@ C++/WinRT 프로젝션에 의해 관리되는 이벤트 취소자에 대한 오�
 ```
 
 또한 `App.cpp`에서 다음 코드를 추가하여 BankAccount(프로젝션된 형식의 기본 생성자 사용)를 인스턴스화하고, 이벤트 처리기를 등록하고, 계좌에서 차변이 발생하도록 합니다.
+
+`WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.
 
 ```cppwinrt
 struct App : implements<App, IFrameworkViewSource, IFrameworkView>

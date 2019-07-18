@@ -5,12 +5,12 @@ ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, Interop, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 5394443b4832864e5b46bfbf917c04f0af6d8a19
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: a6b57627cbf9021732a8a66818250ffc1fca915f
+ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66360214"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660120"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 간의 Interop
 
@@ -54,6 +54,8 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 - a **Visual C++** \> **Windows Universal** > **Core App(C++/WinRT)** 프로젝트를 만듭니다.
 - 프로젝트 속성에서 **C/C++** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)** 를 선택합니다. 이렇게 하면 C++/CX에 대한 프로젝트 지원이 켜집니다.
 - `App.cpp`의 콘텐츠를 아래 코드 목록으로 바꿉니다.
+
+`WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.
 
 ```cppwinrt
 // App.cpp

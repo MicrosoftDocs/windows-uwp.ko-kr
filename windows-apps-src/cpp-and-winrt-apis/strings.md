@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문자열
 ms.localizationpriority: medium
-ms.openlocfilehash: d66cdcff8eff8c620d58a5948cbcf081acea2f45
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 004aa3e267bab86527ac3d5c3fe0383ccd4ad904
+ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66360177"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67844309"
 ---
 # <a name="string-handling-in-cwinrt"></a>C++/WinRT의 문자열 처리
 
@@ -137,6 +137,8 @@ void Print(winrt::hstring const& hstring)
 
 다수의 C++ 라이브러리가 **std::string**을 사용하며, UTF-8 텍스트에서만 유효하다는 사실은 이미 잘 알고 있습니다. 편의상 앞뒤로 변환을 위해 [**winrt::to_string**](/uwp/cpp-ref-for-winrt/to-string) 및 [**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring)과 같은 도우미를 제공합니다.
 
+`WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.
+
 ```cppwinrt
 winrt::hstring w{ L"Hello, World!" };
 
@@ -152,7 +154,7 @@ WINRT_ASSERT(w == L"Hello, World!");
 ## <a name="the-rationale-for-winrthstring-and-winrtparamhstring"></a>**winrt::hstring** 및 **winrt::param::hstring**의 이론적 근거
 Windows 런타임은 **wchar_t** 문자와 관련하여 구현되지만 Windows 런타임의 ABI(Application Binary Interface)는 **std::wstring** 또는 **std::wstring_view**가 제공하는 것의 하위 세트가 아닙니다. 따라서 이 둘을 사용하면 상당한 비효율성으로 이어질 수 있습니다. 대신 C++/WinRT는 **winrt::hstring**을 제공합니다. 이는 기본 [HSTRING](https://docs.microsoft.com/windows/desktop/WinRT/hstring)을 따를 뿐만 아니라 **std::wstring** 인터페이스와 비슷한 인터페이스 뒤에서 구현되기 때문에 문자열을 변경할 수 없다는 것을 의미합니다. 
 
-**winrt::hstring**을 논리적으로 허용해야 하는 C++/WinRT 입력 매개 변수에 실제로 **winrt::param::hstring**이 필요하다는 사실을 확인할 수 있습니다. **param** 네임스페이스에는 C++ 표준 라이브러리 형식에 자연스럽게 바인딩하여 복사본과 기타 비효율성을 회피할 수 있도록 입력 매개 변수를 최적화하는 데만 사용되는 형식 세트만 포함됩니다. 이 형식을 직접 사용해서는 안 됩니다. 사용자 고유의 함수에 최적화를 사용하려면 **std::wstring_view**를 사용하세요.
+**winrt::hstring**을 논리적으로 허용해야 하는 C++/WinRT 입력 매개 변수에 실제로 **winrt::param::hstring**이 필요하다는 사실을 확인할 수 있습니다. **param** 네임스페이스에는 C++ 표준 라이브러리 형식에 자연스럽게 바인딩하여 복사본과 기타 비효율성을 회피할 수 있도록 입력 매개 변수를 최적화하는 데만 사용되는 형식 세트만 포함됩니다. 이 형식을 직접 사용해서는 안 됩니다. 사용자 고유의 함수에 최적화를 사용하려면 **std::wstring_view**를 사용하세요. [매개 변수를 ABI 경계로 전달](/windows/uwp/cpp-and-winrt-apis/pass-parms-to-abi)도 참조하세요.
 
 결론적으로 Windows 런타임 문자열 관리를 위한 고유 정보는 대부분 무시하고 알고 있는 정보만으로도 효율적으로 작업할 수 있습니다. 문자열이 Windows 런타임에서 얼마나 많이 사용되는지 생각해보면 이는 매우 중요합니다.
 
@@ -169,6 +171,22 @@ void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
     wstringstream << L"Pointer pressed at (" << point.x << L"," << point.y << L")" << std::endl;
     ::OutputDebugString(wstringstream.str().c_str());
 }
+```
+
+## <a name="the-correct-way-to-set-a-property"></a>속성을 설정하는 올바른 방법
+
+setter 함수로 값을 전달하여 속성을 설정합니다. 예를 들면 다음과 같습니다.
+
+```cppwinrt
+// The right way to set the Text property.
+myTextBlock.Text(L"Hello!");
+```
+
+아래는 잘못된 코드입니다. 컴파일할 수는 있지만 **Text()** 접근자 함수에서 반환된 임시 **winrt::hstring**을 수정한 다음, 결과를 버리는 것이 전부입니다.
+
+```cppwinrt
+// *Not* the right way to set the Text property.
+myTextBlock.Text() = L"Hello!";
 ```
 
 ## <a name="important-apis"></a>중요 API

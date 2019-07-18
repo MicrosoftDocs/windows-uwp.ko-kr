@@ -5,16 +5,18 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 데이터, 형식
 ms.localizationpriority: medium
-ms.openlocfilehash: 83d2c0c2c544d63d2806dc71bfc367613d34e23a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: a87ba48a0853058ba1259e079c586b97af551656
+ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64745283"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67844326"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>표준 C++ 데이터 형식 및 C++/WinRT
 
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서는 일부 C++ 표준 라이브러리 데이터 형식이 포함된 표준 C++ 데이터 형식을 사용해 Windows 런타임 API를 호출할 수 있습니다. API에 표준 문자열을 전달할 수 있으며([C++/WinRT의 문자열 처리](strings.md) 참조), 의미 체계적으로 동일한 컬렉션을 예상하는 API에 이니셜라이저 목록 및 표준 컨테이너를 전달할 수 있습니다.
+
+[매개 변수를 ABI 경계로 전달](/windows/uwp/cpp-and-winrt-apis/pass-parms-to-abi)도 참조하세요.
 
 ## <a name="standard-initializer-lists"></a>표준 이니셜라이저 목록
 이니셜라이저 목록(**std::initializer_list**)은 C++ 표준 라이브러리 구문을 말합니다. 이니셜라이저 목록은 일부 Windows 런타임 생성자와 메서드를 호출할 때 사용할 수 있습니다. 예를 들어 목록 하나로 [**DataWriter::WriteBytes**](/uwp/api/windows.storage.streams.datawriter.writebytes)를 호출할 수 있습니다.

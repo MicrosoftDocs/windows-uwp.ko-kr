@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문제 해결, HRESULT, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: 563545e8a819ab6af5bbc0604c18b4833d76bebb
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: e53fb74b8287b6aee25ddbdd4563846403ff087e
+ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721670"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67717555"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>C++/WinRT 문제 해결
 
@@ -29,7 +29,7 @@ ms.locfileid: "66721670"
 ## <a name="symptoms-and-remedies"></a>증상 및 해결 방법
 | 증상 | 해결 방법 |
 |---------|--------|
-| HRESULT 값이 REGDB_E_CLASSNOTREGISTERED일 때 런타임에서 예외가 throw됩니다. | 이 오류가 발생하는 한 가지 원인은 Windows 런타임 구성 요소를 로드할 수 없기 때문입니다. 구성 요소의 Windows 런타임 메타데이터 파일(`.winmd`) 이름이 구성 요소 이진(`.dll`) 이름과 같은지 확인합니다. 프로젝트 이름이자 루트 네임스페이스 이름이기도 합니다. Windows 런타임 메타데이터와 이진이 빌드 프로세스를 통해 사용하는 앱의 `Appx` 폴더로 정확히 복사되었는지도 확인합니다. 또한 사용하는 앱의 `AppxManifest.xml`(`Appx` 폴더에 있음)에 활성화 가능한 클래스와 이진 이름을 올바르게 선언하는 **&lt;InProcessServer&gt;** 요소가 포함되어 있는지 확인합니다. 이 오류는 로컬에 구현된 런타임 클래스를 프로젝션된 형식의 기본 생성자를 통해 인스턴스화하는 실수를 저지르는 경우에도 발생할 수 있습니다. 이러한 경우 프로젝션된 형식을 올바르게 사용하는 방법에 대한 자세한 내용은 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md)을 참조하세요. |
+| HRESULT 값이 REGDB_E_CLASSNOTREGISTERED일 때 런타임에서 예외가 throw됩니다. | ["클래스가 등록되지 않음" 예외가 발생하는 이유는 무엇인가요?](faq.md#why-am-i-getting-a-class-not-registered-exception)를 참조하세요. |
 | C++ 컴파일러에서 “’implements_type’: ‘&lt;projected type&gt;’의 직접 또는 간접 기본 클래스에 속하는 멤버가 아닙니다.” 오류를 생성합니다.  | 이 오류는 네임스페이스로 한정되지 않은 구현 형식 이름(예: **MyRuntimeClass**)으로 **make**를 호출하고 해당 형식의 헤더를 포함하지 않은 경우에 발생할 수 있습니다. 컴파일러가 **MyRuntimeClass**를 프로젝션된 형식으로 해석합니다. 해결 방법은 구현 형식의 헤더(예: `MyRuntimeClass.h`)를 포함하는 것입니다. |
 | C++ 컴파일러에서 “삭제된 함수를 참조하려고 합니다.” 오류를 생성합니다.  | 이 오류는 **make**를 호출하고 템플릿 매개 변수로 전달하는 구현 형식에 `= delete` 기본 생성자가 있는 경우에 발생할 수 있습니다. 구현 형식의 헤더 파일을 편집하여 `= delete`를 `= default`로 변경합니다. 런타임 클래스의 IDL에 생성자를 추가할 수도 있습니다. |
 | [**INotifyPropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged)를 구현했지만 XAML 바인딩이 업데이트되지 않고 UI가 [**PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)를 구독하지 않습니다. | XAML 태그의 바인딩 식에서 `Mode=OneWay`(또는 TwoWay)를 설정해야 합니다. [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md)을 참조하세요. |
@@ -46,12 +46,19 @@ ms.locfileid: "66721670"
 | C++ 컴파일러에서 “오류 C2338: 약한 참조 지원에만 사용됩니다.”를 생성합니다. |현재 **winrt::no_weak_ref** 마커 구조체를 템플릿 인수로 기본 클래스에 전달한 형식에 대해 약한 참조를 요청하고 있습니다. [약한 참조 지원 옵트아웃](weak-references.md#opting-out-of-weak-reference-support)을 참조하세요.|
 | C++ 링커에서 “오류 LNK2019: 확인되지 않은 외부 기호”를 생성합니다. |[링커에서 “LNK2019: 확인되지 않은 외부 기호” 오류가 발생하는 이유는 무엇인가요?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)를 참조하세요.|
 | C++/WinRT에서 사용할 경우 LLVM 및 Clang 도구 체인에서 오류를 생성합니다.|LLVM 및 Clang 도구 체인은 C++/WinRT에서 지원되지 않지만 내부적으로 사용하는 방법을 에뮬레이트하려는 경우 [C++/WinRT로 컴파일하기 위해 LLVM/Clang을 사용할 수 있나요?](faq.md#can-i-use-llvmclang-to-compile-with-cwinrt)에 설명된 것처럼 실험해 볼 수 있습니다.|
-| C++ 컴파일러에서 프로젝션된 형식에 대해 “사용할 수 있는 적절한 기본 생성자가 없습니다.”를 생성합니다.  | 런타임 클래스 개체의 초기화를 지연하거나 동일한 프로젝트에서 런타임 클래스를 사용 및 구현하려는 경우, `nullptr_t` 생성자를 호출해야 합니다. 자세한 내용은 [C++/WinRT를 통한 API 사용](consume-apis.md)을 참조하세요. |
+| C++ 컴파일러에서 프로젝션된 형식에 대해 “사용할 수 있는 적절한 기본 생성자가 없습니다.”를 생성합니다.  | 런타임 클래스 개체의 초기화를 지연하거나 동일한 프로젝트에서 런타임 클래스를 사용 및 구현하려는 경우, **std::nullptr_t** 생성자를 호출해야 합니다. 자세한 내용은 [C++/WinRT를 통한 API 사용](consume-apis.md)을 참조하세요. |
 | C++ 컴파일러에서 “오류 C3861: ‘from_abi’: 식별자를 찾을 수 없습니다.” 및 *base.h*에서 시작되는 기타 오류를 생성합니다.  이 오류는 Visual Studio 2017(버전 15.8.0 이상)을 사용 중이며 Windows SDK 버전 10.0.17134.0(Windows 10, 버전 1803)을 대상으로 지정하는 경우에 표시될 수 있습니다. | 보다 규칙에 맞는 Windows SDK 최신 버전을 대상으로 지정하거나, 프로젝트 속성 **C/C++**  > **언어** > **적합성 모드: 아니요**를 설정합니다. 또는 **추가 옵션** 아래의 프로젝트 속성 **C/C++**  > **언어** > **명령줄**에 **/permissive-** 가 표시되는 경우 삭제합니다. |
 | C++ 컴파일러에서 “오류 C2039: ‘IUnknown’: ‘\`global namespace’의 멤버가 아닙니다.”를 생성합니다.  | [C++/WinRT 프로젝트의 대상을 Windows SDK 최신 버전으로 변경하는 방법](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)을 참조하세요. |
 | C++ 링커에서 “오류 LNK2019: 확인되지 않은 외부 기호 _WINRT_CanUnloadNow@0이 _VSDesignerCanUnloadNow@0 함수에서 참조되었습니다.”를 생성합니다.  | [C++/WinRT 프로젝트의 대상을 Windows SDK 최신 버전으로 변경하는 방법](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)을 참조하세요. |
 | 빌드 프로세스에서 오류 메시지 “C++/WinRT VSIX에서 더 이상 프로젝트 빌드 지원을 제공하지 않습니다.  Microsoft.Windows.CppWinRT Nuget 패키지에 프로젝트 참조를 추가하세요.”를 생성합니다.  | **Microsoft.Windows.CppWinRT** NuGet 패키지를 프로젝트에 설치합니다. 자세한 내용은 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)을 참조하세요. |
 | C++ 링커에서 *winrt::impl::consume_Windows_Foundation_Collections_IVector*에 대한 멘션과 함께 “오류 LNK2019: 확인되지 않은 외부 기호”를 생성합니다.  | [C++/WinRT 2.0](news.md#news-and-changes-in-cwinrt-20)에서는 Windows 런타임 컬렉션에서 범위 기반의 `for`를 사용하는 경우 이제 `#include <winrt/Windows.Foundation.Collections.h>`가 필요합니다. |
+| C++ 컴파일러에서 "*오류 C4002: 함수 형식 매크로 호출 GetCurrentTime에 대한 인수가 너무 많습니다.* "를 생성합니다. | [GetCurrentTime 및/또는 TRY를 사용하여 모호성을 해결하려면 어떻게 하나요?](faq.md#how-do-i-resolve-ambiguities-with-getcurrenttime-andor-try)를 참조하세요. |
+| C++ 컴파일러에서 "*오류 C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.* "를 생성합니다. | [GetCurrentTime 및/또는 TRY를 사용하여 모호성을 해결하려면 어떻게 하나요?](faq.md#how-do-i-resolve-ambiguities-with-getcurrenttime-andor-try)를 참조하세요. |
+| C++ 컴파일러에서 "GetBindingConnector가 없으므로 *winrt::impl::produce&lt;D,I&gt;에서 추상 클래스를 인스턴스화할 수 없습니다.* "를 생성합니다. | `#include <winrt/Windows.UI.Xaml.Markup.h>`를 수행해야 합니다. |
+| C++ 컴파일러에서 "*오류 C2039: 'promise_type':은 'std::experimental::coroutine_traits<void>'의 멤버가 아닙니다.* "를 생성합니다. | 사용자 코루틴에서 비동기 작업 개체 또는 **winrt::fire_and_forget** 중 하나를 반환해야 합니다. [동시성 및 비동기 작업](concurrency.md)을 참조하세요. |
+| 사용자 프로젝트에서 " *'PopulatePropertyInfoOverride' 액세스가 모호합니다.* "를 생성합니다. | 이 오류는 IDL에서 하나의 기본 클래스를 선언하고 XAML 태그에서 다른 기본 클래스를 선언하는 경우에 발생할 수 있습니다. |
+| 처음으로 C++/WinRT 솔루션을 로드하면 "*프로젝트 'MyProject.vcxproj' 구성 'Debug\|x86'에 대한 Designtime 빌드에 실패했습니다. IntelliSense를 사용하지 못할 수 있습니다.* "를 생성합니다. | 이 IntelliSense 문제는 처음 빌드한 후 해결됩니다. |
+| 대리자 등록 시 [**winrt::auto_revoke**](/uwp/cpp-ref-for-winrt/auto-revoke-t)를 지정하려고 하면 [**winrt::hresult_no_interface**](/uwp/cpp-ref-for-winrt/error-handling/hresult-no-interface) 예외를 생성합니다. | [자동 취소 대리자를 등록하지 못하는 경우](handle-events.md#if-your-auto-revoke-delegate-fails-to-register)를 참조하세요. |
 
 > [!NOTE]
 > 이 항목에서 질문에 대한 답변을 찾지 못한 경우, [Visual Studio C++ 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html)를 방문하거나 [Stack Overflow의 `c++-winrt` 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)를 사용하여 도움말을 찾을 수 있습니다.

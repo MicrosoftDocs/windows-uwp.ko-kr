@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 914cf884b97d14af523cc61b0fcce719104783ba
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 01ff6fb443550287330d6fe503c3d49d81e2142c
+ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721691"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67717646"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT에 대해 자주 묻는 질문
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
@@ -54,6 +54,24 @@ Windows 런타임 클래스(런타임 클래스)를 ‘사용’하기만 하는
 ```
 
 대체 정적 연결 라이브러리 대신 **WindowsApp.lib**를 연결하여 해결할 수 있는 링커 오류를 모두 해결하는 것이 중요합니다. 그러지 않으면 애플리케이션이 Visual Studio 및 Microsoft Store에서 제출의 유효성 검사에 사용하는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과하지 못하기 때문에 애플리케이션을 Microsoft Store로 수집할 수 없습니다.
+
+## <a name="why-am-i-getting-a-class-not-registered-exception"></a>"클래스가 등록되지 않음" 예외가 발생하는 이유는 무엇인가요?
+
+이런 경우 해당 증상은 (런타임 클래스를 생성하거나 정적 멤버에 액세스할 때) REGDB_E_CLASSNOTREGISTERED의 HRESULT 값을 사용하여 런타임에서 예외가 발생한 것입니다.
+
+한 가지 원인은 Windows 런타임 구성 요소를 로드할 수 없기 때문일 수 있습니다. 구성 요소의 Windows 런타임 메타데이터 파일(`.winmd`) 이름이 구성 요소 이진(`.dll`) 이름과 같은지 확인합니다. 프로젝트 이름이자 루트 네임스페이스 이름이기도 합니다. Windows 런타임 메타데이터와 이진이 빌드 프로세스를 통해 사용하는 앱의 `Appx` 폴더로 정확히 복사되었는지도 확인합니다. 또한 사용하는 앱의 `AppxManifest.xml`(`Appx` 폴더에 있음)에 활성화 가능한 클래스와 이진 이름을 올바르게 선언하는 **&lt;InProcessServer&gt;** 요소가 포함되어 있는지 확인합니다.
+
+### <a name="uniform-construction"></a>균일한 생성
+
+프로젝션된 형식의 생성자 중 하나(**std::nullptr_t** 생성자 제외)를 통해 로컬로 구현한 런타임 클래스를 인스턴스화하려는 경우에도 이 오류가 발생할 수 있습니다. 이 작업을 수행하려면 균일한 생성이라고 부르는 C++/WinRT 2.0 기능이 필요합니다. 그러나 균일한 생성이 필요하지 *않은* 로컬로 구현한 런타임 클래스를 인스턴스화하는 방법은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md)을 참조하세요.
+
+균일한 생성을 *수행*하려는 경우 이 기능은 새 프로젝트에 대해 기본적으로 사용하도록 설정됩니다. 기존 프로젝트의 경우 `cppwinrt.exe` 도구를 구성하여 균일한 생성을 옵트인해야 합니다. Visual Studio에서 프로젝트 속성 **공용 속성** > **C++/WinRT** > **최적화됨**을 *예*로 설정합니다. 이렇게 하면 `<CppWinRTOptimized>true</CppWinRTOptimized>`를 프로젝트 파일에 추가하는 효과가 있습니다. 또한 명령줄에서 `cppwinrt.exe`를 호출할 때 `-opt[imize]` 스위치를 추가하는 것과 동일한 효과입니다.
+
+이 설정 *없이* 프로젝트를 빌드하면 결과 C++/WinRT 프로젝션에서 [**RoGetActivationFactory**](/windows/win32/api/roapi/nf-roapi-rogetactivationfactory)를 호출하여 런타임 클래스의 생성자 및 정적 멤버에 액세스합니다. 또한 클래스를 등록해야 하며, 사용자 모듈에서 [**DllGetActivationFactory**](/previous-versions/br205771(v=vs.85)) 진입점을 구현해야 합니다.
+
+`-opt[imize]` 스위치를 *사용하여* 프로젝트를 빌드하면 프로젝트에서 구성 요소의 클래스에 대해 **RoGetActivationFactory**를 바이패스할 수 있으며, 따라서 구성 요소 외부에 있는 경우 수행했던 것과 동일한 방법으로 클래스를 생성할 수 있습니다.
+
+균일한 생성을 사용하려면 구현 헤더 파일을 포함한 후 각 구현의 `.cpp` 파일도 `#include <Sub/Namespace/ClassName.g.cpp>`로 편집해야 합니다.
 
 ## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>[**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable)을 구현해야 하나요? 구현해야 한다면 어떻게 구현하나요?
 소멸자에서 리소스를 해제하는 런타임 클래스가 있고, 이 런타임 클래스가 구현하는 컴파일 단위 외부에서 사용하도록 설계된 경우(여기에서 런타임 클래스는 Windows 런타임 클라이언트 앱에서 일반 용도로 사용하는 Windows 런타임 구성 요소임), 결정적 종료가 없는 언어에서 런타임 클래스를 사용할 수 있도록 지원하기 위해 **IClosable**도 구현하는 것이 좋습니다. 소멸자, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close) 또는 둘 다 호출하든 관계없이 리소스가 해제되는지 확인합니다. **IClosable::Close**는 원하는 횟수만큼 임의로 호출할 수 있습니다.
@@ -154,6 +172,25 @@ a.f();
 
 ## <a name="how-do-i-turn-a-string-into-a-typemdashfor-navigation-for-example"></a>탐색 등을 위해 문자열을 형식으로 변환하려면 어떻게 하나요?
 [탐색 보기 코드 예제](/windows/uwp/design/controls-and-patterns/navigationview#code-example)(대부분 C#으로 작성됨)의 끝에 이 작업을 수행하는 방법을 보여 주는 C++/WinRT 코드 조각이 있습니다.
+
+## <a name="how-do-i-resolve-ambiguities-with-getcurrenttime-andor-try"></a>GetCurrentTime 및/또는 TRY를 사용하여 모호성을 해결하려면 어떻게 하나요?
+
+`winrt/Windows.UI.Xaml.Media.Animation.h` 헤더 파일에서 이름이 **GetCurrentTime**인 메서드를 선언하며 `windows.h`(`winbase.h`를 통해)에서는 **GetCurrentTime**이라는 매크로를 정의합니다. 두 개가 충돌하는 경우 C++ 컴파일러에서 "*오류 C4002: 함수 형식 매크로 호출 GetCurrentTime에 대한 인수가 너무 많습니다.* "를 생성합니다.
+
+마찬가지로 `winrt/Windows.Globalization.h`에서 **TRY**라는 이름의 메서드를 선언하며 `afx.h`에서는 **GetCurrentTime**이라는 매크로를 정의합니다. 이들이 충돌하면 C++ 컴파일러에서 "*오류 C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.* "를 생성합니다.
+
+두 문제 중 하나 또는 둘 모두 해결하려면 다음을 수행할 수 있습니다.
+
+```cppwinrt
+#pragma push_macro("GetCurrentTime")
+#pragma push_macro("TRY")
+#undef GetCurrentTime
+#undef TRY
+#include <winrt/include_your_cppwinrt_headers_here.h>
+#include <winrt/include_your_cppwinrt_headers_here.h>
+#pragma pop_macro("TRY")
+#pragma pop_macro("GetCurrentTime")
+```
 
 > [!NOTE]
 > 이 항목에서 질문에 대한 답변을 찾지 못한 경우, [Visual Studio C++ 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html)를 방문하거나 [Stack Overflow의 `c++-winrt` 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)를 사용하여 도움말을 찾을 수 있습니다.

@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: e6bf1e7fb32533aa9d7b865ac7c8afc374290e54
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 88a4c65b20c2fb805baecb8a90498e8e4ec9b229
+ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66360347"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67717626"
 ---
 # <a name="consume-apis-with-cwinrt"></a>C++/WinRT를 통한 API 사용
 
@@ -79,6 +79,8 @@ C++/WinRT에서 Windows 네임스페이스 API를 사용하려면 `%WindowsSdkDi
 ## <a name="accessing-members-via-the-object-via-an-interface-or-via-the-abi"></a>개체, 인터페이스 또는 ABI를 통해 멤버 액세스
 C++/WinRT 프로젝션과 관련하여 Windows 런타임 클래스의 런타임 표현은 기본 ABI 인터페이스보다 많지 않습니다. 하지만 편의를 위해 작성자가 의도한 방식으로 클래스에 대해 코딩할 수 있습니다. 예를 들어 클래스의 메서드인 것처럼 [**Uri**](/uwp/api/windows.foundation.uri)의 **ToString** 메서드를 호출할 수 있습니다(사실 내부적으로 개별 **IStringable** 인터페이스의 메서드임).
 
+`WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.
+
 ```cppwinrt
 Uri contosoUri{ L"http://www.contoso.com" };
 WINRT_ASSERT(contosoUri.ToString() == L"http://www.contoso.com/"); // QueryInterface is called at this point.
@@ -107,15 +109,17 @@ int main()
     winrt::init_apartment();
     Uri contosoUri{ L"http://www.contoso.com" };
 
-    int port = contosoUri.Port(); // Access the Port "property" accessor via C++/WinRT.
+    int port{ contosoUri.Port() }; // Access the Port "property" accessor via C++/WinRT.
 
-    winrt::com_ptr<ABI::Windows::Foundation::IUriRuntimeClass> abiUri = contosoUri.as<ABI::Windows::Foundation::IUriRuntimeClass>();
+    winrt::com_ptr<ABI::Windows::Foundation::IUriRuntimeClass> abiUri{
+        contosoUri.as<ABI::Windows::Foundation::IUriRuntimeClass>() };
     HRESULT hr = abiUri->get_Port(&port); // Access the get_Port ABI function.
 }
 ```
 
 ## <a name="delayed-initialization"></a>지연된 초기화
-프로젝션된 형식의 기본 생성자도 지원하는 Windows 런타임 개체를 만들 수 있습니다. 런타임 개체 없이 Windows 런타임 개체를 생성하여(나중에 해당 작업을 지연시킬 수 있도록) 프로젝션된 형식의 변수를 생성하려면 그렇게 할 수 있습니다. 프로젝션된 형식의 특수 C++/WinRT `nullptr_t` 생성자를 사용하여 변수 또는 필드를 선언합니다.
+
+프로젝션된 형식의 기본 생성자도 지원하는 Windows 런타임 개체를 만들 수 있습니다. 런타임 개체 없이 Windows 런타임 개체를 생성하여(나중에 해당 작업을 지연시킬 수 있도록) 프로젝션된 형식의 변수를 생성하려면 그렇게 할 수 있습니다. 프로젝션된 형식의 특수 C++/WinRT **std::nullptr_t** 생성자를 사용하여 변수 또는 필드를 선언합니다. C++/WinRT 프로젝션에서는 모든 런타임 클래스에 이 생성자를 삽입합니다.
 
 ```cppwinrt
 #include <winrt/Windows.Storage.Streams.h>
@@ -144,7 +148,7 @@ int main()
 }
 ```
 
-`nullptr_t` 생성자를 ‘제외한’ 프로젝션된 형식의 모든 생성자는 지원하는 Windows 런타임 개체를 만들 수 있습니다.  `nullptr_t` 생성자는 기본적으로 작동하지 않습니다. 다음번에 초기화할 프로젝션된 개체가 필요합니다. 따라서 런타임 클래스에 기본 생성자가 있는지 여부에 상관없이 효율적인 지연된 초기화에 대한 이 방법을 사용할 수 있습니다.
+**std::nullptr_t** 생성자를 *제외한* 프로젝션된 형식의 모든 생성자는 지원하는 Windows 런타임 개체를 만들 수 있습니다. **std::nullptr_t** 생성자는 기본적으로 작동하지 않습니다. 다음번에 초기화할 프로젝션된 개체가 필요합니다. 따라서 런타임 클래스에 기본 생성자가 있는지 여부에 상관없이 효율적인 지연된 초기화에 대한 이 방법을 사용할 수 있습니다.
 
 이 고려 사항은 벡터 및 맵과 같은 기본 생성자를 호출하는 다른 위치에 영향을 줍니다. **비어 있는 앱(C++/WinRT)** 프로젝트가 필요한 다음 코드 예제를 살펴봅니다.
 
@@ -158,6 +162,98 @@ lookup[2] = value;
 ```cppwinrt
 std::map<int, TextBlock> lookup;
 lookup.insert_or_assign(2, value);
+```
+
+### <a name="dont-delay-initialize-by-mistake"></a>실수로 지연 초기화하지 않습니다.
+
+실수로 **std::nullptr_t** 생성자를 호출하지 않도록 주의합니다. 컴파일러의 충돌 해결에서는 이 생성자가 팩터리 생성자보다 선호됩니다. 예를 들어, 다음과 같은 두 런타임 클래스 정의를 생각해 보세요.
+
+```idl
+// GiftBox.idl
+runtimeclass GiftBox
+{
+    GiftBox();
+}
+
+// Gift.idl
+runtimeclass Gift
+{
+    Gift(GiftBox giftBox); // You can create a gift inside a box.
+}
+```
+
+박스 안에 들어 있지 않은 **Gift**를 생성한다고 가정해 보겠습니다(초기화되지 않은 **GiftBox**를 사용하여 **Gift** 생성). 먼저 *잘못된* 방법을 살펴보겠습니다. **GiftBox**를 사용하는 **Gift** 생성자가 있는 것을 알 수 있습니다. 하지만 null **GiftBox**(아래에서처럼 균일 초기화를 통해 **Gift** 생성자 호출)를 전달하는 경우 원하는 결과를 얻지 *못하게* 됩니다.
+
+```cppwinrt
+// These are *not* what you intended. Doing it in one of these two ways
+// actually *doesn't* create the intended backing Windows Runtime Gift object;
+// only an empty smart pointer.
+
+Gift gift{ nullptr };
+auto gift{ Gift(nullptr) };
+```
+
+여기서 얻는 것은 초기화되지 않은 **Gift**입니다. 초기화되지 않은 **GiftBox**를 가진 **Gift**는 얻을 수 없습니다. 다음은 *올바른* 방법입니다.
+
+```cppwinrt
+// Doing it in one of these two ways creates an initialized
+// Gift with an uninitialized GiftBox.
+
+Gift gift{ GiftBox{ nullptr } };
+auto gift{ Gift(GiftBox{ nullptr }) };
+```
+
+잘못된 예제에서 `nullptr` 리터럴을 전달하여 지연 초기화 생성자 대신 해결합니다. 팩터리 생성자 대신 해결하기 위해서는 매개 변수 형식이 **GiftBox**여야 합니다. 올바른 예제에 나와 있는 것처럼 명시적으로 지연 초기화 **GiftBox**를 전달하는 옵션이 아직 있습니다.
+
+다음 예제 *역시* 올바른 방법으로, 매개 변수에 **std::nullptr_t**가 아닌 GiftBox 형식이 있기 때문입니다.
+
+```cppwinrt
+GiftBox giftBox{ nullptr };
+Gift gift{ giftBox }; // Calls factory constructor.
+```
+
+`nullptr` 리터럴을 전달할 때만 모호성이 발생합니다.
+
+## <a name="dont-copy-construct-by-mistake"></a>실수로 복사 생성하지 않습니다.
+
+이 주의 사항은 위의 [실수로 지연 초기화하지 않습니다.](#dont-delay-initialize-by-mistake) 섹션에 설명된 것과 비슷합니다.
+
+지연 초기화 생성자 외에, C++/WinRT 프로젝션에서는 모든 런타임 클래스에 복사 생성자도 삽입합니다. 생성 중인 개체와 동일한 형식을 허용하는 단일 매개 변수 생성자입니다. 결과 스마트 포인터는 해당 생성자 매개 변수가 가리키는 것과 동일한 지원 Windows 런타임 개체를 가리킵니다. 결과로 동일한 지원 개체를 가리키는 두 개의 스마트 포인터 개체를 얻게 됩니다.
+
+코드 예제에서 사용할 런타임 클래스 정의는 다음과 같습니다.
+
+```idl
+// GiftBox.idl
+runtimeclass GiftBox
+{
+    GiftBox(GiftBox biggerBox); // You can place a box inside a bigger box.
+}
+```
+
+**GiftBox**를 더 큰 **GiftBox** 안에 생성한다고 가정해 보겠습니다.
+
+```cppwinrt
+GiftBox bigBox{ ... };
+
+// These are *not* what you intended. Doing it in one of these two ways
+// copies bigBox's backing-object-pointer into smallBox.
+// The result is that smallBox == bigBox.
+
+GiftBox smallBox{ bigBox };
+auto smallBox{ GiftBox(bigBox) };
+```
+
+작업을 수행하는 *올바른* 방법은 활성화 팩터리를 명시적으로 호출하는 것입니다.
+
+```cppwinrt
+GiftBox bigBox{ ... };
+
+// These two ways call the activation factory explicitly.
+
+GiftBox smallBox{
+    winrt::get_activation_factory<GiftBox, IGiftBoxFactory>().CreateInstance(bigBox) };
+auto smallBox{
+    winrt::get_activation_factory<GiftBox, IGiftBoxFactory>().CreateInstance(bigBox) };
 ```
 
 ## <a name="if-the-api-is-implemented-in-a-windows-runtime-component"></a>API가 Windows 런타임 구성 요소에서 구현되는 경우
@@ -185,7 +281,7 @@ Windows 런타임 구성 요소에서 구현된 API의 사용에 대한 자세�
 ## <a name="if-the-api-is-implemented-in-the-consuming-project"></a>API가 사용하는 프로젝트에 구현된 경우
 XAML UI에서 사용되는 형식은 XAML과 동일한 프로젝트에 있다고 해도 런타임 클래스이어야 합니다.
 
-이러한 시나리오에서는 프로젝션된 형식을 런타임 클래스의 Windows 런타임 메타데이터(`.winmd`)에서 생성합니다. 한 번 더 헤더를 추가하지만 이번에는 프로젝션된 형식을 `nullptr` 생성자를 통해 생성합니다. 생성자는 초기화를 수행하지 않기 때문에 다음에는 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 도우미 함수를 통해 값을 인스턴스에 할당하여 필요한 생성자 인수를 전달해야 합니다. 사용하는 코드와 동일한 프로젝트에서 구현되는 런타임 클래스는 등록하거나, 혹은 Windows 런타임/COM 활성화를 통해 인스턴스화할 필요도 없습니다.
+이러한 시나리오에서는 프로젝션된 형식을 런타임 클래스의 Windows 런타임 메타데이터(`.winmd`)에서 생성합니다. 다시 말해, 헤더를 포함하지만 이번에는 **std::nullptr_t** 생성자를 통해 프로젝션된 형식을 생성합니다. 생성자는 초기화를 수행하지 않기 때문에 다음에는 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 도우미 함수를 통해 값을 인스턴스에 할당하여 필요한 생성자 인수를 전달해야 합니다. 사용하는 코드와 동일한 프로젝트에서 구현되는 런타임 클래스는 등록하거나, 혹은 Windows 런타임/COM 활성화를 통해 인스턴스화할 필요도 없습니다.
 
 이 코드 예제에는 **비어 있는 앱(C++/WinRT)** 프로젝트가 필요합니다.
 

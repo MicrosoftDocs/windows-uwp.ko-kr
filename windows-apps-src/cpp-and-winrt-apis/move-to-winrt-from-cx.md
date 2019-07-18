@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fbe10e41da1b330d6f5042bea109a8a0e04f8ad
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d2b92bf5e265c2d596a7fc7eb54b127010cee897
+ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66360156"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67717603"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 
@@ -181,7 +181,7 @@ private:
 };
 ```
 
-C++/WinRT로 이식된 동일한 코드. `nullptr` 생성자의 사용에 주의합니다. 해당 생성자에 대한 자세한 내용은 [C++/WinRT를 통한 API 사용](consume-apis.md)을 참조하세요.
+C++/WinRT로 이식된 동일한 코드. **std::nullptr_t** 생성자 사용에 유의하세요. 해당 생성자에 대한 자세한 내용은 [C++/WinRT를 통한 API 사용](consume-apis.md#delayed-initialization)을 참조하세요.
 
 ```cppwinrt
 using namespace winrt::Windows::Storage::Streams;
@@ -365,7 +365,7 @@ winrt::Windows::Foundation::IInspectable var{ nullptr };
 ### <a name="port-platformstring-to-winrthstring"></a>**Platform::String\^** 을 **winrt::hstring**으로 이식
 **Platform::String\^** 은 Windows 런타임 HSTRING ABI 형식에 해당합니다. C++/WinRT의 해당 항목은 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)입니다. 그러나 C++/WinRT에서는 **std::wstring** 같은 C++ 표준 라이브러리 와이드 문자열 형식 및/또는 와이드 문자열 리터럴을 사용해 Windows 런타임 API를 호출할 수 있습니다. 자세한 내용과 코드 예제는 [C++/WinRT의 문자열 처리](strings.md)를 참조하세요.
 
-C++/CX에서 [**Platform::String::Data**](https://docs.microsoft.com/en-us/cpp/cppcx/platform-string-class#data) 속성에 액세스하여 문자열을 C 스타일 **const wchar_t\*** 배열로 검색할 수 있습니다(예를 들면 이를 **std::wcout**에 전달).
+C++/CX에서 [**Platform::String::Data**](https://docs.microsoft.com/cpp/cppcx/platform-string-class?view=vs-2019#data) 속성에 액세스하여 문자열을 C 스타일 **const wchar_t\*** 배열로 검색할 수 있습니다(예를 들면 이를 **std::wcout**에 전달).
 
 ```cppcx
 auto var{ titleRecord->TitleName->Data() };
