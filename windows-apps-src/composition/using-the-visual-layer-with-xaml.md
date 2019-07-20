@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d118633d9d0d9b7007c94ec4d5053db34b09e29
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: c11a812aaa62e9fa4d27fddc1d55739fe491bd20
+ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318039"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340839"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>XAML로 시각적 계층 사용
 
@@ -25,7 +25,7 @@ XAML 및 시각적 계층 interop 기능은 XAML API를 단독으로 사용하�
 - 정확한 픽셀 그림자
 
 이러한 효과와 애니메이션은 기존 XAML 콘텐츠에 적용할 수 있으므로 새로운 기능을 활용하기 위해 XAML 앱 구조를 크게 변경하지 않아도 됩니다.
-레이아웃 애니메이션, 그림자 및 흐림 효과는 아래 레시피 섹션에서 설명합니다. 시차를 구현하는 코드 샘플에 대한 자세한 내용은 [ParallaxingListItems 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 10586/ParallaxingListItems)을 참조하세요. [WindowsUIDevLabs 리포지토리](https://github.com/microsoft/WindowsCompositionSamples)에 애니메이션, 그림자 및 효과를 구현하기 위한 다른 몇 가지 샘플도 있습니다.
+레이아웃 애니메이션, 그림자 및 흐림 효과는 아래 레시피 섹션에서 설명합니다. 시차를 구현하는 코드 샘플에 대한 자세한 내용은 [ParallaxingListItems 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems)을 참조하세요. [WindowsUIDevLabs 리포지토리](https://github.com/microsoft/WindowsCompositionSamples)에 애니메이션, 그림자 및 효과를 구현하기 위한 다른 몇 가지 샘플도 있습니다.
 
 ## <a name="the-xamlcompositionbrushbase-class"></a>XamlCompositionBrushBase 클래스
 
@@ -45,12 +45,12 @@ XAML UI 요소 조명을 포함한 조명 사용에 대한 자세한 내용은 [
 
 ## <a name="the-elementcompositionpreview-class"></a>ElementCompositionPreview 클래스
 
-[**ElementCompositionPreview** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview) 는 XAML 및 시각적 계층 interop 기능을 제공 하는 정적 클래스입니다. 시각적 계층 및 해당 기능의 개요는 [시각적 계층](https://docs.microsoft.com/windows/uwp/graphics/visual-layer)을 참조하세요. **ElementCompositionPreview** 클래스는 다음 메서드를 제공합니다.
+[**ElementCompositionPreview**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview) 는 XAML 및 비주얼 계층 interop 기능을 제공 하는 정적 클래스입니다. 시각적 계층 및 해당 기능의 개요는 [시각적 계층](https://docs.microsoft.com/windows/uwp/graphics/visual-layer)을 참조하세요. **ElementCompositionPreview** 클래스는 다음 메서드를 제공합니다.
 
--   [**GetElementVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): "유인물"이이 요소를 렌더링 하는 데 사용 되는 시각적 개체 가져오기
--   [**SetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): "handin" 마지막 자식으로 Visual이이 요소의 시각적 트리를 설정합니다. 이 시각적 개체는 나머지 요소의 맨 위에 표시됩니다. 
--   [**GetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): 사용 하 여 Visual 집합 검색 **SetElementChildVisual**
--   [**GetScrollViewerManipulationPropertySet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): 스크롤 오프셋에 따라 60 fps 애니메이션을 만드는 데 사용할 수 있는 개체를 가져오기는 **ScrollViewer**
+-   [**Getelementvisual 개체**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): 이 요소를 렌더링 하는 데 사용 되는 "유인물" 시각적 개체 가져오기
+-   [**Setelementchildvisual 개체**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): "수동" 시각적 개체를이 요소의 시각적 트리의 마지막 자식으로 설정 합니다. 이 시각적 개체는 나머지 요소의 맨 위에 표시됩니다. 
+-   [**Getelementchildvisual 개체**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): **Setelementchildvisual** 개체를 사용 하 여 시각적 집합 검색
+-   [**GetScrollViewerManipulationPropertySet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): **ScrollViewer** 의 스크롤 오프셋을 기반으로 60fps 애니메이션을 만드는 데 사용할 수 있는 개체를 가져옵니다.
 
 ## <a name="remarks-on-elementcompositionpreviewgetelementvisual"></a>ElementCompositionPreview.GetElementVisual에 대한 설명
 
@@ -96,7 +96,7 @@ ElementCompositionPreview.GetElementVisual(MyImage).StartAnimation("Offset", par
 
 ## <a name="getalphamask-methods"></a>**GetAlphaMask** 메서드
 
-[**이미지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image)하십시오 [ **TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), 및 [ **셰이프** ](/uwp/api/Windows.UI.Xaml.Shapes.Shape) 라는 메서드를 구현 하는 각  **GetAlphaMask** 를 반환 하는 **CompositionBrush** 요소의 셰이프를 사용 하 여 회색조 이미지를 나타내는입니다. 이 **CompositionBrush**는 컴퍼지션 **DropShadow**에 대한 입력으로 사용할 수 있으므로 그림자는 사각형 대신 요소의 모양을 반영할 수 있습니다. 이렇게 하면 텍스트, 알파 이미지 및 모양에 대한 정확한 픽셀, 등고선 기반 그림자를 사용할 수 있습니다. 이 API의 예를 보려면 아래의 *그림자*를 참조하세요.
+[**이미지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image), [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)및 [**shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape) 는 각각 요소의 모양의 회색조 이미지를 나타내는 **CompositionBrush** 을 반환 하는 **GetAlphaMask** 라는 메서드를 구현 합니다. 이 **CompositionBrush**는 컴퍼지션 **DropShadow**에 대한 입력으로 사용할 수 있으므로 그림자는 사각형 대신 요소의 모양을 반영할 수 있습니다. 이렇게 하면 텍스트, 알파 이미지 및 모양에 대한 정확한 픽셀, 등고선 기반 그림자를 사용할 수 있습니다. 이 API의 예를 보려면 아래의 *그림자*를 참조하세요.
 
 ## <a name="recipes"></a>레시피
 
@@ -362,8 +362,8 @@ private void InitializeFrostedGlass(UIElement glassHost)
 
 ## <a name="additional-resources"></a>추가 리소스
 
-- [계층에 대 한 시각적 개요](https://docs.microsoft.com/windows/uwp/composition/visual-layer)
+- [시각적 계층 개요](https://docs.microsoft.com/windows/uwp/composition/visual-layer)
 - [**ElementCompositionPreview** 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview)
 - [WindowsUIDevLabs GitHub](https://github.com/microsoft/WindowsCompositionSamples)의 고급 UI 및 Composition 샘플
-- [BasicXamlInterop 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 10586/BasicXamlInterop)
-- [ParallaxingListItems 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 10586/ParallaxingListItems)
+- [BasicXamlInterop 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK%2010586/BasicXamlInterop)
+- [ParallaxingListItems 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems)

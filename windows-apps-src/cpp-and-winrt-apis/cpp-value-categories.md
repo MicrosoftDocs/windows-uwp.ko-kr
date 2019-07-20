@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이동, 전달, 값 범주, 이동 의미 체계, 완벽한 전달, lvalue, rvalue, glvalue, prvalue, xvalue
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1860f562233ceefa6d9ebb3741378b3265b4c3a9
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: a11d7763c33df6733a8dbf78392d27417e7cf18d
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63797084"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270214"
 ---
 # <a name="value-categories-and-references-to-them"></a>값 범주 및 해당 참조
 이 토픽에서는 C++에 존재하는 다양한 값 범주(및 값 참조)에 대해 설명합니다. 거의 모든 분들이 *lvalue* 및 *rvalue*에 대해 들어보셨겠지만, 이 토픽의 주제와 관련 지어 생각해 본 적은 없을 것입니다. 그리고 그 외에도 다른 값이 더 있습니다.

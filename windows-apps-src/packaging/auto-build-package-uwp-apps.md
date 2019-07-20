@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 86e9b15ee71c3ed831a46e369e8feaef8641e714
-ms.sourcegitcommit: 2062d06567ef087ad73507a03ecc726a7d848361
+ms.openlocfilehash: de623240e275dda5b6fc4df9afee31e1adf9fd4f
+ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68303578"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340856"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -80,13 +80,14 @@ steps:
 
     ![보안 파일을 업로드 하는 방법](images/secure-file2.png)
 
+5. 인증서에 암호가 있는 경우 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) 에 암호를 저장 하 고 [변수 그룹](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups)에 암호를 연결 하는 것이 좋습니다. 변수를 사용 하 여 파이프라인에서 암호에 액세스할 수 있습니다.
+
 > [!NOTE]
 > Visual Studio 2019 부터는 UWP 프로젝트에서 임시 인증서가 더 이상 생성 되지 않습니다. 인증서를 만들거나 내보내려면 [이 문서](create-certificate-package-signing.md)에 설명 된 PowerShell cmdlet을 사용 합니다.
 
 ## <a name="configure-the-build-solution-build-task"></a>솔루션 빌드에 대한 빌드 작업 구성
 
-이 작업은 작업 폴더에 있는 모든 솔루션을 이진 파일로 컴파일하고 출력 앱 패키지 파일을 생성 합니다.
-이 태스크에서는 MSBuild 인수를 사용 합니다. 이러한 인수 값을 지정해야 합니다. 다음 표를 가이드로 따르세요.
+이 작업은 작업 폴더에 있는 모든 솔루션을 이진 파일로 컴파일하고 출력 앱 패키지 파일을 생성 합니다. 이 태스크에서는 MSBuild 인수를 사용 합니다. 이러한 인수 값을 지정해야 합니다. 다음 표를 가이드로 따르세요.
 
 |**MSBuild 인수**|**Value**|**설명**|
 |--------------------|---------|---------------|
@@ -99,6 +100,7 @@ steps:
 | AppxPackageSigningEnabled | true | 패키지 서명을 사용 하도록 설정 합니다. |
 | PackageCertificateThumbprint | 인증서 지문 | 이 값은 서명 인증서의 지문과 일치 **해야** 합니다. 그렇지 않으면 빈 문자열 이어야 합니다. |
 | PackageCertificateKeyFile | Path | 사용할 인증서의 경로입니다. 이는 보안 파일 메타 데이터에서 검색 됩니다. |
+| PackageCertificatePassword | 암호 | 인증서의 암호입니다. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) 에 암호를 저장 하 고 [변수 그룹](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups)에 암호를 연결 하는 것이 좋습니다. 이 인수에 변수를 전달할 수 있습니다. |
 
 ### <a name="configure-the-build"></a>빌드 구성
 

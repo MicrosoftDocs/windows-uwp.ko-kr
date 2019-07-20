@@ -1,5 +1,5 @@
 ---
-Description: 데스크톱 Win32 앱에 알림 메시지를 보내기 위한 다양 한 옵션 검색
+Description: 바탕 화면에서 알림 메시지를 보내기 위해 사용할 수 있는 다양 한 옵션 검색
 title: 데스크톱 앱에서 알림 메시지
 label: Toast notifications from desktop apps
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/01/2018
 ms.topic: article
 keywords: Windows 10, uwp, win32, 데스크톱, 알림, 데스크톱 브리지, 알림을 보내는 옵션, com 서버, com 활성자, com, 가짜 com, com 없음, com 없이, 알림 보내기
 ms.localizationpriority: medium
-ms.openlocfilehash: bab89962bdc7986f7653e39c7e5967a493421f05
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ef4810ec594173f3cc4da35d63143909f4859e3c
+ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636088"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340818"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>데스크톱 앱에서 알림 메시지
 
@@ -28,17 +28,17 @@ ms.locfileid: "57636088"
 
 아래 표에서 데스크톱 앱 내에서 알림을 지원하는 옵션과 그 옵션에 지원되는 기능을 보여 줍니다. 표를 사용하여 자신의 시나리오에서 가장 좋은 옵션을 선택할 수 있습니다.<br/><br/>
 
-| 옵션 | 화면 효과 | 조치 | 입력 | 프로세스 내 활성화 |
+| 옵션 | 시각적 개체 | 동작 | 입력 | 프로세스 내 활성화 |
 | -- | -- | -- | -- | -- |
 | [COM 활성기](#preferred-option---com-activator) | ✔️ | ✔️ | ✔️ | ✔️ |
-| [없는 COM CLSID를 스텁](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
+| [COM/스텁 CLSID 없음](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
 
 
 ## <a name="preferred-option---com-activator"></a>기본 옵션 - COM 활성자
 
 데스크톱 브리지 및 클래식 Win32 모두에서 작동하고 모든 알림 기능을 지원하는 기본 옵션입니다. "COM 활성자"를 두려워 하지 마십시오. COM 서버를 작성해 본 적이 없더라도 이를 매우 단순하게 만드는 [C#](send-local-toast-desktop.md) 및 [C++ 앱](send-local-toast-desktop-cpp-wrl.md)용 라이브러리가 있습니다.<br/><br/>
 
-| 화면 효과 | 조치 | 입력 | 프로세스 내 활성화 |
+| 시각적 개체 | 동작 | 입력 | 프로세스 내 활성화 |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ✔️ | ✔️ |
 
@@ -61,7 +61,7 @@ COM 활성자 옵션을 사용하면 앱에서 다음 알림 템플릿 및 활�
 
 COM 활성자를 구현할 수 없는 경우 대체 옵션입니다. 그러나 입력 지원(알림 시 텍스트 상자) 및 프로세스 내 활성화 등의 몇 가지 기능이 저하됩니다.<br/><br/>
 
-| 화면 효과 | 조치 | 입력 | 프로세스 내 활성화 |
+| 시각적 개체 | 동작 | 입력 | 프로세스 내 활성화 |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ❌ | ❌ |
 
@@ -74,13 +74,13 @@ COM 활성자를 구현할 수 없는 경우 대체 옵션입니다. 그러나 �
 | ToastGeneric 프로토콜 | ✔️ | ✔️ |
 | 레거시 템플릿 | ✔️ | ❌ |
 
-나중에 이 옵션을 사용하는 방법을 보여 주는 문서를 게시할 예정입니다. 기본적으로, 데스크톱 브리지 앱의 경우 UWP 앱과 같이 알림 메시지를 전송합니다. 사용자가 알림을 클릭하면 앱은 알림에서 사용자가 지정한 시작 인수로 명령줄에 의해 시작됩니다.
+데스크톱 브리지 앱의 경우 UWP 앱 처럼 알림 메시지를 보냅니다. 사용자가 알림을 클릭하면 앱은 알림에서 사용자가 지정한 시작 인수로 명령줄에 의해 시작됩니다.
 
 클래식 Win32 앱의 경우 알림을 전송할 수 있도록 AUMID를 설정한 다음 바로 가기에 CLSID도 지정합니다. 임의의 GUID를 사용할 수 있습니다. COM 서버/활성자를 추가하지 마십시오. 알림 센터에 알림을 유지할 수 있는 "스텁" COM CLSID를 추가합니다. 스텁 CLSID가 모든 다른 알림 활성화를 끊기 때문에 프로토콜 활성화 알림만 사용할 수 있습니다. 따라서 앱이 프로토콜 활성화를 지원하도록 업데이트하고 알림 프로토콜이 앱을 활성화하도록 해야 합니다.
 
 
 ## <a name="resources"></a>리소스
 
-* [데스크톱에서 로컬 알림 메시지를 보내는 C# 앱](send-local-toast-desktop.md)
-* [앱 WRL c + + 데스크톱에서 로컬 알림 보내기](send-local-toast-desktop-cpp-wrl.md)
+* [Destkop C# 앱에서 로컬 알림 메시지 보내기](send-local-toast-desktop.md)
+* [Destkop C++ WRL apps에서 로컬 알림 메시지 보내기](send-local-toast-desktop-cpp-wrl.md)
 * [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)
