@@ -1,6 +1,7 @@
 - name: Windows용 앱 빌드
-  href: apps/index.md
   items:
+    - name: 개요
+      href: apps/index.md
     - name: 데스크톱 앱 빌드
       items:
         - name: 개요
@@ -63,3 +64,19 @@
       href: apps/accessibility.md
     - name: 기능 및 기술
       href: apps/features-and-technologies.md
+- name: Windows를 사용하여 빌드
+  items:
+    - name: Python을 사용하여 개발
+      items:
+        - name: 개요
+          href: python/index.md
+        - name: 초보자를 위한 시작
+          href: python/get-started/python-for-education.md
+        - name: 웹 개발 시작
+          href: python/get-started/python-for-web.md
+        - name: 자동화 시작
+          href: python/get-started/python-for-scripting.md
+        - name: FAQ
+          href: python/faqs.md
+        - name: 리소스
+          href: python/resources.md

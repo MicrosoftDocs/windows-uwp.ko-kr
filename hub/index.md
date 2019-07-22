@@ -9,12 +9,12 @@ ms.topic: hub-page
 title: Windows 설명서
 description: Windows 솔루션을 구축 및 유지 관리하는 데 도움이 되는 개발자, 하드웨어 및 IT 전문가용 설명서를 확인할 수 있습니다.
 localizationpriority: medium
-ms.openlocfilehash: a58310793dd43f3c1970ced7d9365690670bb6a2
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 8bd9a7e4e9575c725830481339438912af193ee3
+ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317711"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68349194"
 ---
 <div id="main" class="v2">
   <div class="container">
@@ -82,7 +82,7 @@ ms.locfileid: "67317711"
             <a data-default="true" href="#developer">개발자</a>
             <ul id="developer">
                 <li>
-                    <a href="#developer-all">전체</a>
+                    <a href="#developer-all">모두</a>
                     <ul id="developer-all" class="cardsC">
                         <li>
                             <div class="container intro">
@@ -222,7 +222,49 @@ ms.locfileid: "67317711"
                                 </div>
                             </a>
                         </li>
-                       <li>
+                        <li>
+                            <div class="container">
+                                <p>Windows를 사용하여 빌드</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/windows/python/index">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img data-scaleimage="/media/hubs/windows/win_developer-uwp.svg?branch=master" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Python을 사용하여 개발</h3>
+                                                <p>플랫폼 간 웹앱을 빌드하거나 스크립트를 사용하여 일반적인 작업을 자동화하거나 교육 환경에서 Python을 처음 학습하는 경우, Windows에서 Python으로 개발하는 데 필요한 모든 것을 설정하는 데 도움이 됩니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="/windows/nodejs/index">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img data-scaleimage="/media/hubs/windows/win_developer-desktop.svg?branch=master" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Develop with NodeJS<</h3>
+                                                <p>If you love JavaScript and want to build a quick web app with Express, a server-side app with Meteor, a data-heavy enterprise app with Sails, a desktop app with Electron, or an online multi-player game with Socket.io, we'll help you get set up to develop using Node.js on Windows.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li> -->
                     </ul>
                 </li>
             </ul>
