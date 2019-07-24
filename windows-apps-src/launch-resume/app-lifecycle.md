@@ -6,12 +6,12 @@ ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e15428c058fcd8d0e1e1de1e91f191cc54af5a31
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e4d5d667abcca02d3668c3c266c68584aec26abb
+ms.sourcegitcommit: 6cc8b231c1b970112d26a7696cc3e907082ef2be
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371318"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68308415"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Windows 10 UWP(유니버설 Windows 플랫폼) 앱 수명 주기
 
@@ -30,7 +30,7 @@ Windows 8에서는 UWP 앱을 사용하는 새 응용 프로그램 모델이 도
 
 운영 체제에서 리소스를 확보하기 위해 일시 중단된 앱을 종료할 수 있기 때문에 일시 중단 상태는 개발자에게 새로운 요구 사항을 추가합니다. 종료된 앱이 작업 표시줄에 계속 표시됩니다. 사용자는 시스템에서 앱을 닫은 것을 알지 못하기 때문에 앱을 클릭할 때 앱이 종료되기 전의 상태를 복원해야 합니다. 다른 작업을 수행하는 동안 앱이 백그라운드에서 대기 중이라고 생각하며 앱에서 전환할 때와 동일한 상태에 있을 것으로 예상합니다. 이 항목에서는 이 작업을 수행하는 방법을 설명합니다.
 
-Windows 10 버전 1607에서는 두 개의 자세한 앱 모델 상태를 제공합니다. **전경에서 실행 중인** 하 고 **백그라운드에서 실행**합니다. 이후 섹션에서 이러한 새 상태에 대해서도 살펴보겠습니다.
+Windows 10 버전 1607에는 두 가지 추가 앱 모델 상태가 도입 되었습니다. **포그라운드로 실행 중** 이 고 **백그라운드에서 실행 되**고 있습니다. 이후 섹션에서 이러한 새 상태에 대해서도 살펴보겠습니다.
 
 ## <a name="app-execution-state"></a>앱 실행 상태
 
@@ -51,8 +51,8 @@ Windows 10 버전 1607에서는 두 개의 자세한 앱 모델 상태를 제공
 | ApplicationExecutionState | 설명 | 수행할 작업 |
 |-------|-------------|----------------|
 | **NotRunning** | 마지막으로 사용자가 다시 부팅하거나 로그인한 후 앱을 실행하지 않은 경우 이 상태일 수 있습니다. 실행 중이었지만 충돌이 발생했거나 사용자가 이전에 앱을 닫은 경우에도 이 상태가 될 수 있습니다.| 현재 사용자 세션에서 처음으로 실행하는 것처럼 앱을 초기화합니다. |
-|**일시 중단** | 사용자가 앱을 최소화하거나 전환했으며 몇 초 내에 돌아오지 않았습니다. | 앱이 일시 중단된 경우 해당 상태가 메모리에 남아 있습니다. 앱이 일시 중단되었을 때 릴리스한 파일 핸들이나 기타 리소스를 다시 획득하기만 하면 됩니다. |
-| **종료** | 앱이 이전에 일시 중단되었지만 시스템이 메모리를 확보하기 위해 일정 시점에서 종료되었습니다. | 사용자가 전환했을 때의 앱 상태를 복원합니다.|
+|**일시** | 사용자가 앱을 최소화하거나 전환했으며 몇 초 내에 돌아오지 않았습니다. | 앱이 일시 중단된 경우 해당 상태가 메모리에 남아 있습니다. 앱이 일시 중단되었을 때 릴리스한 파일 핸들이나 기타 리소스를 다시 획득하기만 하면 됩니다. |
+| **끝나는** | 앱이 이전에 일시 중단되었지만 시스템이 메모리를 확보하기 위해 일정 시점에서 종료되었습니다. | 사용자가 전환했을 때의 앱 상태를 복원합니다.|
 |**ClosedByUser** | 사용자가 태블릿 모드에서 닫기 제스처를 사용하거나 Alt+F4를 사용하여 앱을 닫았습니다. 사용자가 앱을 닫으면 먼저 일시 중단된 다음 종료됩니다. | 기본적으로 앱이 Terminated 상태로 진행하는 동일한 단계를 거쳤기 때문에 Terminated 상태와 동일한 방식으로 처리합니다.|
 |**실행 중** | 사용자가 앱을 다시 실행하려고 할 때 앱이 이미 열려 있었습니다. | 없음. 다른 앱 인스턴스가 실행되지 않았습니다. 이미 실행 중인 인스턴스가 활성화된 것뿐입니다. |
 
@@ -73,21 +73,21 @@ Windows 10 버전 1607에서는 두 개의 자세한 앱 모델 상태를 제공
 사용자가 실행하는 경우와 달리 시스템에서 앱을 활성화할 수 있습니다. 공유 계약 등의 계약을 통해 앱이 활성화될 수 있습니다. 또는 사용자 지정 URI 프로토콜이나 앱이 처리하도록 등록된 확장명을 가진 파일을 처리하기 위해 활성화될 수 있습니다. 앱이 활성화될 수 있는 방법 목록은 [**ActivationKind**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind)를 참조하세요.
 
 [  **Windows.UI.Xaml.Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) 클래스는 앱이 활성화될 수 있는 다양한 방법을 처리하기 위해 재정의할 수 있는 메서드를 정의합니다.
-[**OnActivated** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) 모든 가능한 정품 인증 형식을 처리할 수 있습니다. 그러나 가장 일반적인 활성화 유형 처리에는 특정 메서드를 사용하고 **OnActivated**는 덜 일반적인 활성화 유형을 위한 대체 메서드로 사용하는 것이 더 일반적입니다. 특정 활성화를 위한 추가 메서드는 다음과 같습니다.
+[**Onactivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) 은 가능한 모든 활성화 형식을 처리할 수 있습니다. 그러나 가장 일반적인 활성화 유형 처리에는 특정 메서드를 사용하고 **OnActivated**는 덜 일반적인 활성화 유형을 위한 대체 메서드로 사용하는 것이 더 일반적입니다. 특정 활성화를 위한 추가 메서드는 다음과 같습니다.
 
 [**OnCachedFileUpdaterActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.oncachedfileupdateractivated)  
-[**OnFileActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)  
-[**OnFileOpenPickerActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileopenpickeractivated)  [**OnFileSavePickerActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfilesavepickeractivated)  
-[**OnSearchActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsearchactivated)  
+[**OnFileActivated 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)  
+[**Onfileopenpickeractivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileopenpickeractivated) 됨 [ **OnFileSavePickerActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfilesavepickeractivated)  
+[**OnSearchActivated 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsearchactivated)  
 [**OnShareTargetActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsharetargetactivated)
 
 이러한 메서드에 대한 이벤트 데이터에는 활성화되기 전의 앱 상태를 알려주는, 위에서 살펴본 것과 동일한 [**PreviousExecutionState**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate) 속성이 포함되어 있습니다. 위의 [앱 실행](#app-launch) 섹션에서 설명한 것과 동일한 방식으로 상태와 수행해야 하는 작업을 해석합니다.
 
-**참고** 컴퓨터의 관리자 계정을 사용 하 여 로그온 할 경우에 UWP 앱을 활성화할 수 없습니다.
+**참고 컴퓨터의**관리자 계정을 사용 하 여 로그온 하는 경우 UWP 앱을 활성화할 수 없습니다. 
 
 ## <a name="running-in-the-background"></a>백그라운드에서 실행 ##
 
-Windows 10, 버전 1607부터 앱은 앱 자체와 동일한 프로세스에서 백그라운드 작업을 실행할 수 있습니다. 자세한 내용은 [단일 프로세스 모델을 사용하는 백그라운드 작업](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)을 참조하세요. 이 문서에서는 In-process 백그라운드 처리를 다루지 않지만 앱 수명 주기에 미치는 영향은 앱이 백그라운드에 있는 경우와 관련된 두 가지 이벤트가 새로 추가되었다는 것입니다. 구현되지 않은 것은 다음과 같습니다. [**EnteredBackground** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) 하 고 [ **LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground)합니다.
+Windows 10, 버전 1607부터 앱은 앱 자체와 동일한 프로세스에서 백그라운드 작업을 실행할 수 있습니다. 자세한 내용은 [단일 프로세스 모델을 사용하는 백그라운드 작업](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)을 참조하세요. 이 문서에서는 In-process 백그라운드 처리를 다루지 않지만 앱 수명 주기에 미치는 영향은 앱이 백그라운드에 있는 경우와 관련된 두 가지 이벤트가 새로 추가되었다는 것입니다. 구현되지 않은 것은 다음과 같습니다. Background [**edbackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) 및 [**leavingbackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground).
 
 이러한 이벤트는 사용자가 앱의 UI를 볼 수 있는지 여부도 반영합니다.
 
@@ -129,7 +129,7 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 ### <a name="asynchronous-work-and-deferrals"></a>비동기 작업 및 지연
 
-처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) 개체의 [**GetDeferral**](https://aka.ms/Kt66iv) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral) 개체에서 [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
+처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) 개체의 [**GetDeferral**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.suspendingoperation.getdeferral) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral) 개체에서 [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
 
 지연을 사용해도 앱이 종료되기 전에 코드를 실행할 수 있는 시간이 증가하지는 않습니다. 단지 지연의 *Complete* 메서드 호출이나 기한 경과 중 *더 빠른 시간*까지 종료가 지연됩니다.
 
@@ -157,7 +157,7 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 앱이 종료된 후 활성화된 것을 확인하면 앱은 종료되기 전과 동일한 상태에 있도록 저장한 응용 프로그램 데이터를 로드해야 합니다. 사용자가 일시 중단 후 일시 중단된 앱으로 다시 돌아오면, 앱이 [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 메서드에서 응용 프로그램 데이터를 복원해야 합니다. 앱이 종료될 때 시스템에서 알리지 않으므로, 앱은 일시 중단되기 전에 응용 프로그램 데이터를 저장하고 단독 리소스와 파일 핸들을 해제한 다음 종료 후 앱이 활성화될 때 복원해야 합니다.
 
-**Visual Studio를 사용 하 여 디버깅 하는 방법에 대 한 메모:** Visual Studio 디버거에 연결 된 앱을 일시 중단에서 Windows를 방지 합니다. 이렇게 하는 것은 앱이 실행되는 동안 Visual Studio 디버그 UI를 사용자가 볼 수 있도록 하기 위한 것입니다. 앱을 디버그할 때에는 Visual Studio를 사용하여 앱을 일시 중단 이벤트로 보낼 수 있습니다. **디버그 위치** 도구 모음이 표시되는지 확인한 다음 **일시 중단** 아이콘을 클릭합니다.
+**Visual Studio를 사용한 디버깅에 대 한 참고 사항:** Visual Studio는 Windows에서 디버거에 연결 된 앱을 일시 중단 하지 못하도록 합니다. 이렇게 하는 것은 앱이 실행되는 동안 Visual Studio 디버그 UI를 사용자가 볼 수 있도록 하기 위한 것입니다. 앱을 디버그할 때에는 Visual Studio를 사용하여 앱을 일시 중단 이벤트로 보낼 수 있습니다. **디버그 위치** 도구 모음이 표시되는지 확인한 다음 **일시 중단** 아이콘을 클릭합니다.
 
 ## <a name="app-resume"></a>앱 다시 시작
 
@@ -173,7 +173,7 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 일시 중단된 동안에는 앱이 수신되도록 등록한 네트워크 이벤트를 받지 못합니다. 이러한 네트워크 이벤트는 대기하지 않으며, 그대로 누락됩니다. 따라서 앱이 다시 시작될 때 네트워크 상태를 테스트해야 합니다.
 
-**참고**  때문에 [ **다시 시작 중** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resuming) UI 스레드에서 이벤트가 발생 하지 않습니다, 다시 시작 처리기의 코드는 UI와 통신 하는 경우 발송자를 사용 해야 합니다. 이 작업을 수행하는 방법의 코드 예제는 [백그라운드 스레드에서 UI 스레드 업데이트](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md)를 참조하세요.
+참고  다시 시작 [**이벤트는**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resuming) ui 스레드에서 발생 하지 않기 때문에 resume 처리기의 코드가 ui와 통신할 경우 디스패처를 사용 해야 합니다. 이 작업을 수행하는 방법의 코드 예제는 [백그라운드 스레드에서 UI 스레드 업데이트](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md)를 참조하세요.
 
 일반적인 지침은 [앱 일시 중단 및 다시 시작에 대한 지침](https://docs.microsoft.com/windows/uwp/launch-resume/index)을 참조하세요.
 
@@ -181,9 +181,9 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 일반적으로 사용자는 앱을 닫을 필요가 없으며 Windows에서 관리합니다. 그러나 사용자는 닫기 제스처를 사용하거나 Alt+F4를 누르거나 Windows Phone에서 작업 전환기를 사용하여 앱을 닫도록 선택할 수 있습니다.
 
-사용자가 앱을 닫았음을 나타내는 이벤트는 없습니다. 사용자가 앱을 닫으면 먼저 일시 중단되어 상태를 저장할 수 있는 기회를 제공합니다. Windows 8.1 이상 버전에서는 사용자가 앱이 닫힌 후 앱 화면에서 제거 됩니다 및 목록 전환 되었지만 명시적으로 중지 되었습니다.
+사용자가 앱을 닫았음을 나타내는 이벤트는 없습니다. 사용자가 앱을 닫으면 먼저 일시 중단되어 상태를 저장할 수 있는 기회를 제공합니다. Windows 8.1 이상에서 사용자가 앱을 닫은 후에는 앱이 화면에서 제거 되 고 목록으로 전환 되지만 명시적으로 종료 되지는 않습니다.
 
-**사용자가 닫을 동작:**   앱을 Windows에서 닫을 때 보다 사용자가 닫을 때 다른 작업을 수행 해야 하는 경우 앱 또는 사용자가 종료 되었습니다 여부를 확인 하려면 활성화 이벤트 처리기를 사용할 수 있습니다 Windows입니다. [  **ApplicationExecutionState**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ApplicationExecutionState) 열거형에 대한 참조에서 **ClosedByUser** 및 **Terminated** 상태에 대한 설명을 참조하세요.
+**사용자가 닫은 동작:**   Windows에서 닫을 때가 아닌 사용자가 닫을 때 앱이 다른 작업을 수행 해야 하는 경우, 활성화 이벤트 처리기를 사용 하 여 앱이 사용자에 의해 종료 되었는지 또는 windows에서 종료 되었는지 확인할 수 있습니다. [  **ApplicationExecutionState**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ApplicationExecutionState) 열거형에 대한 참조에서 **ClosedByUser** 및 **Terminated** 상태에 대한 설명을 참조하세요.
 
 반드시 필요한 경우가 아니면 앱이 자동으로 닫히지 않도록 하는 것이 좋습니다. 예를 들어 앱이 메모리 누수를 발견한 경우 사용자의 개인 데이터 보안을 위해 스스로 닫을 수 있습니다.
 
@@ -205,21 +205,21 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 ## <a name="key-application-lifecycle-apis"></a>주요 응용 프로그램 수명 주기 API
 
--   [**Windows.ApplicationModel**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel) namespace
--   [**Windows.ApplicationModel.Activation**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation) namespace
--   [**Windows.ApplicationModel.Core**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core) namespace
--   [**Windows.UI.Xaml.Application** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) 클래스 (XAML)
--   [**Windows.UI.Xaml.Window** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) 클래스 (XAML)
+-   [**Windows ApplicationModel**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel) 네임 스페이스
+-   [**Windows ApplicationModel. Activation**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation) 네임 스페이스
+-   [**Windows. ApplicationModel. Core**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core) 네임 스페이스
+-   [**Windows. .xaml. 응용 프로그램**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) 클래스 (Xaml)
+-   [**Windows. .xaml**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) 클래스 (xaml)
 
 ## <a name="related-topics"></a>관련 항목
 
 * [**ApplicationExecutionState**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ApplicationExecutionState)
-* [일시 중단 하 고 다시 시작 하는 앱에 대 한 지침](https://docs.microsoft.com/windows/uwp/launch-resume/index)
+* [앱 일시 중단 및 다시 시작에 대 한 지침](https://docs.microsoft.com/windows/uwp/launch-resume/index)
 * [앱 사전 실행 처리](handle-app-prelaunch.md)
 * [앱 활성화 처리](activate-an-app.md)
 * [앱 일시 중단 처리](suspend-an-app.md)
 * [앱 다시 시작 처리](resume-an-app.md)
-* [단일 프로세스 모델을 사용 하 여 백그라운드 작업](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)
+* [단일 프로세스 모델을 사용 하는 백그라운드 작업](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)
 * [백그라운드에서 미디어 재생](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 
  
