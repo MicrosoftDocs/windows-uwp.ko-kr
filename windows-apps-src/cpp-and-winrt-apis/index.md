@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, CPP, WinRT, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a65fe882057370f9d0ca603157279b3aa7429fb
-ms.sourcegitcommit: 02cc7aaa408efe280b089ff27484e8bc879adf23
+ms.openlocfilehash: ba8576402165f2d36d048eb3d214cb1dad601d76
+ms.sourcegitcommit: 8179902299df0f124dd770a09a5a332397970043
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387023"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428626"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -52,6 +52,7 @@ C++/WinRT는 Windows 런타임에 사용되는 다른 언어 옵션보다 성능
 | [이벤트 작성](author-events.md) | 이벤트를 발생시키는 런타임 클래스가 포함된 Windows 런타임 구성 요소를 작성하는 방법을 보여 줍니다. 또한 구성 요소를 사용하고 이벤트를 처리하는 앱도 보여 줍니다. |
 | [C++/WinRT로 작성된 컬렉션](collections.md) | C++/WinRT는 컬렉션을 구현하거나 전달하려는 경우 많은 시간과 노력을 절약할 수 있는 함수와 기본 클래스를 제공합니다. |
 | [동시성 및 비동기 작업](concurrency.md) | C++/WinRT를 사용하여 Windows 런타임 비동기 개체를 만들고 사용하는 방법을 보여 줍니다. |
+| [한층 향상한 동시성, 비동기 프로그래밍 기능](concurrency-2.md) | C++/WinRT로 동시성, 비동기 작업을 모두 수행하는 고급 시나리오. |
 | [XAML 컨트롤(C++/WinRT 속성에 바인딩)](binding-property.md) | XAML 컨트롤에 효과적으로 바인딩할 수 있는 속성은 *식별할 수 있는*(observable) 속성이라고 합니다. 이 항목에서는 식별할 수 있는 속성을 구현하고 사용하는 방법과 XAML 컨트롤에 바인딩하는 방법을 보여 줍니다. |
 | [XAML 항목 컨트롤(C++/WinRT 컬렉션에 바인딩)](binding-collection.md) | XAML 항목에 효과적으로 바인딩할 수 있는 컬렉션은 *식별할 수 있는*(observable) 컬렉션이라고 합니다. 이 항목에서는 식별할 수 있는 컬렉션을 구현하고 사용하는 방법과 XAML 항목에 바인딩하는 방법을 보여 줍니다. |
 | [C++/WinRT를 사용한 XAML 사용자 지정(템플릿 기반) 컨트롤](xaml-cust-ctrl.md) | C++/WinRT를 사용하여 간단한 사용자 지정 컨트롤을 만드는 단계를 안내합니다. 여기에 나와 있는 정보에 따라 기능이 풍부하고 사용자 지정 가능한 UI 컨트롤을 만들 수 있습니다. |

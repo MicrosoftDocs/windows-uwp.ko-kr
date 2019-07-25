@@ -816,6 +816,8 @@
           href: ../cpp-and-winrt-apis/collections.md
         - name: 동시성 및 비동기 작업
           href: ../cpp-and-winrt-apis/concurrency.md
+        - name: '한층 향상한 동시성, 비동기 프로그래밍 기능'
+          href: ../cpp-and-winrt-apis/concurrency-2.md
         - name: 'XAML 컨트롤, 속성에 바인딩'
           href: ../cpp-and-winrt-apis/binding-property.md
         - name: 'XAML 항목 컨트롤, 컬렉션에 바인딩'
