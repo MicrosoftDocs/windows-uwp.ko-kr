@@ -10,12 +10,12 @@ ms.technology: hub
 keywords: python, windows 10, microsoft, python 시스템 관리, python 파일 자동화, windows에서 python 스크립트, windows에서 python 개발자 환경, windows의 python 개발자 환경, windows의 python 개발 환경, powershell을 사용한 python, python 스크립트 파일 시스템 작업
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 0571d442d17cdac8989df10d7c11f3e762ab6fb6
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+ms.openlocfilehash: b34bf61f4ce4d2157df572cfbbc9337fced6cf2f
+ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68349371"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473664"
 ---
 # <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>Windows에서 Python을 사용 하 여 스크립팅 및 자동화를 시작 합니다.
 
@@ -23,10 +23,9 @@ ms.locfileid: "68349371"
 
 ## <a name="set-up-your-development-environment"></a>개발 환경 설정
 
-Python을 사용 하 여 파일 시스템 작업을 수행 하는 스크립트를 작성 하는 경우 [Microsoft Store에서 python을 설치](https://www.microsoft.com/en-us/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab)하는 것이 좋습니다. 
+Python을 사용 하 여 파일 시스템 작업을 수행 하는 스크립트를 작성 하는 경우 [Microsoft Store에서 python을 설치](https://www.microsoft.com/en-us/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab)하는 것이 좋습니다. Microsoft Store를 통해 설치 하는 경우 기본 Python3 인터프리터를 사용 하지만, 자동 업데이트를 제공 하는 것 외에도 현재 사용자에 대 한 경로 설정 설정 (관리자 액세스 필요 방지)을 처리 합니다.
 
-> [!IMPORTANT]
-> Windows에서 **웹 개발**에 Python을 사용 하는 경우 개발 환경에 대해 다른 설정을 사용 하는 것이 좋습니다. Windows에 직접 설치 하는 대신 Linux 용 Windows 하위 시스템을 통해 Python을 설치 합니다. 가이드에서 연습을 찾아보세요. [Windows에서 웹 개발용 Python을 사용 하 여 시작](./python-for-web.md)하세요. Python을 처음 접하는 경우 다음 가이드를 사용해 보세요. [초보자를 위해 Windows에서 Python을 사용 하 여 시작](./python-for-education.md)하세요. <br>일부 고급 시나리오의 경우 [python.org](https://www.python.org/downloads/windows/) 에서 직접 특정 Python 릴리스를 다운로드 하거나 Anaconda, Jython, PyPy, Winpython, IronPython 등의 [대안](https://www.python.org/download/alternatives)을 설치 하는 것을 고려해 볼 수 있습니다. 대체 구현을 선택 하는 특별 한 이유가 있는 고급 Python 프로그래머 인 경우에만이를 권장 합니다.
+Windows에서 **웹 개발** 에 Python을 사용 하는 경우 Linux 용 Windows 하위 시스템을 사용 하는 다른 설정을 사용 하는 것이 좋습니다. 가이드에서 연습을 찾아보세요. [Windows에서 웹 개발용 Python을 사용 하 여 시작](./python-for-web.md)하세요. Python을 처음 접하는 경우 다음 가이드를 사용해 보세요. [초보자를 위해 Windows에서 Python을 사용 하 여 시작](./python-for-education.md)하세요. 일부 고급 시나리오의 경우 (예: Python의 설치 된 파일에 액세스/수정, 이진 파일 복사 또는 Python Dll을 직접 사용 해야 하는 경우), [python.org](https://www.python.org/downloads/) 에서 직접 특정 Python 릴리스를 다운로드 하거나 설치를 고려 하는 것이 좋습니다. Anaconda, Jython, PyPy, WinPython, IronPython 등의 [대안](https://www.python.org/download/alternatives)입니다. 대체 구현을 선택 하는 특별 한 이유가 있는 고급 Python 프로그래머 인 경우에만이를 권장 합니다.
 
 ## <a name="install-python"></a>Python 설치
 

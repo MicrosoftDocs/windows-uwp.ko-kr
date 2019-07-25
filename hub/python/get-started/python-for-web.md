@@ -10,12 +10,12 @@ ms.technology: hub
 keywords: python, windows 10, microsoft, windows의 python, wsl이 포함 된 python 웹 앱, windows의 python 웹 개발, windows에서 flask 앱, windows의 django 앱, python 웹, windows의 flask 웹 개발자, django web dev in windows python, vs code python 웹 개발, 원격 wsl 확장, ubuntu, wsl, venv, pip, microsoft python 확장, windows에서 python 실행, windows에서 python 사용, windows에서 python으로 빌드
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: dfef049c40b5f1578a75d4e78c566f5049607e36
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+ms.openlocfilehash: eafe85ac7e954d1a76708b059a191c14526afff8
+ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68349348"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473689"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>Windows에서 웹 개발을 위한 Python 사용 시작
 
@@ -23,10 +23,9 @@ ms.locfileid: "68349348"
 
 ## <a name="set-up-your-development-environment"></a>개발 환경 설정
 
-웹 응용 프로그램을 빌드하기 위해 구체적으로 WSL을 통해 Python을 설치 하는 것이 좋습니다. Python 웹 개발에 대 한 다양 한 자습서와 지침은 Linux 사용자를 위해 작성 되었으며 Linux 기반 패키징 및 설치 도구를 사용 합니다. 대부분의 웹 앱은 Linux에도 배포 되므로 개발 환경과 프로덕션 환경 간에 일관성을 유지할 수 있습니다.
+웹 응용 프로그램을 빌드할 때 WSL에 Python을 설치 하는 것이 좋습니다. Python 웹 개발에 대 한 다양 한 자습서와 지침은 Linux 사용자를 위해 작성 되었으며 Linux 기반 패키징 및 설치 도구를 사용 합니다. 대부분의 웹 앱은 Linux에도 배포 되므로 개발 환경과 프로덕션 환경 간에 일관성을 유지할 수 있습니다.
 
-> [!IMPORTANT]
-> 웹 개발 이외의 다른 항목에 Python을 사용 하는 경우 Microsoft Store를 사용 하 여 Windows 10에 직접 Python을 설치 하는 것이 좋습니다. WSL은 GUI 데스크톱 또는 응용 프로그램 (예: PyGame, Gnome, KDE 등)을 지원 하지 않습니다. 이러한 경우 Windows에서 직접 Python을 설치 하 고 사용 합니다. Python을 처음 접하는 경우 가이드를 참조 하세요. [초보자를 위해 Windows에서 Python을 사용 하 여 시작](./python-for-education.md)하세요. 운영 체제에서 일반적인 작업을 자동화 하는 데 관심이 있는 경우 다음 가이드를 참조 하세요. [Windows에서 Python을 사용 하 여 스크립팅 및 자동화를 시작](./python-for-scripting.md)합니다. <br>일부 고급 시나리오의 경우 [python.org](https://www.python.org/downloads/windows/) 에서 직접 특정 Python 릴리스를 다운로드 하거나 Anaconda, Jython, PyPy, Winpython, IronPython 등의 [대안](https://www.python.org/download/alternatives)을 설치 하는 것을 고려해 볼 수 있습니다. 대체 구현을 선택 하는 특별 한 이유가 있는 고급 Python 프로그래머 인 경우에만이를 권장 합니다.
+웹 개발 이외의 다른 항목에 Python을 사용 하는 경우 Microsoft Store를 사용 하 여 Windows 10에 직접 Python을 설치 하는 것이 좋습니다. WSL은 GUI 데스크톱 또는 응용 프로그램 (예: PyGame, Gnome, KDE 등)을 지원 하지 않습니다. 이러한 경우 Windows에서 직접 Python을 설치 하 고 사용 합니다. Python을 처음 접하는 경우 가이드를 참조 하세요. [초보자를 위해 Windows에서 Python을 사용 하 여 시작](./python-for-education.md)하세요. 운영 체제에서 일반적인 작업을 자동화 하는 데 관심이 있는 경우 다음 가이드를 참조 하세요. [Windows에서 Python을 사용 하 여 스크립팅 및 자동화를 시작](./python-for-scripting.md)합니다. 일부 고급 시나리오의 경우 [python.org](https://www.python.org/downloads/windows/) 에서 직접 특정 Python 릴리스를 다운로드 하거나 Anaconda, Jython, PyPy, Winpython, IronPython 등의 [대안](https://www.python.org/download/alternatives)을 설치 하는 것을 고려해 볼 수 있습니다. 대체 구현을 선택 하는 특별 한 이유가 있는 고급 Python 프로그래머 인 경우에만이를 권장 합니다.
 
 ## <a name="enable-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템 사용
 
@@ -46,26 +45,20 @@ WSL에서 실행할 수 있는 몇 가지 Linux 배포판이 있습니다. Micro
 
 2. 다운로드가 완료 되 면 Microsoft Store에서 **시작** 을 선택 하거나 **시작** 메뉴에 "Ubuntu 18.04 lts"를 입력 하 여 시작 합니다.
 
-3. 처음으로 배포를 실행할 때 계정 이름 및 암호를 만들라는 메시지가 표시 됩니다. 그 후에는 기본적으로이 사용자로 자동 로그인 됩니다. 사용자 이름 및 암호를 선택할 수 있습니다. Windows 사용자 이름에는 영향을 미치지 않습니다. 을 입력 `lsb_release -d`하 여 현재 사용 중인 Linux 배포를 확인할 수 있습니다.
+3. 처음으로 배포를 실행할 때 계정 이름 및 암호를 만들라는 메시지가 표시 됩니다. 그 후에는 기본적으로이 사용자로 자동 로그인 됩니다. 사용자 이름 및 암호를 선택할 수 있습니다. Windows 사용자 이름에는 영향을 미치지 않습니다.
 
-Microsoft Store, 대체 설치 방법 또는 문제 해결에서 사용할 수 있는 다른 Linux 배포에 대 한 링크는 windows [10 용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조 하세요.
-
-> [!NOTE]
-> Linux 배포를 정기적으로 업데이트 하는 것이 좋습니다. 대부분의 Linux 배포판은 비어 있거나 최소 패키지 카탈로그와 함께 제공 됩니다. 업데이트를 통해 최신 패키지가 있는지 확인할 수 있습니다. Windows는 Linux 배포를 자동으로 업데이트 하거나 업그레이드 하지 않습니다. Linux 사용자는 일반적으로이 작업을 제어 하는 것을 선호 합니다. Ubuntu 배포를 업데이트 하려면이 명령을 터미널 `sudo apt update && sudo apt upgrade`에 붙여넣어 APT 패키지 관리자를 사용 합니다.
+을 입력 `lsb_release -d`하 여 현재 사용 중인 Linux 배포를 확인할 수 있습니다. Ubuntu 배포를 업데이트 하려면 다음 `sudo apt update && sudo apt upgrade`을 사용 합니다. 최신 패키지를 유지 하기 위해 정기적으로 업데이트 하는 것이 좋습니다. 이 업데이트는 Windows에서 자동으로 처리 되지 않습니다. Microsoft Store, 대체 설치 방법 또는 문제 해결에서 사용할 수 있는 다른 Linux 배포에 대 한 링크는 windows [10 용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조 하세요.
 
 ## <a name="set-up-visual-studio-code"></a>Visual Studio Code 설정
 
-VS Code은 Linux 용 Windows 하위 시스템에 원활 하 게 통합 되며, 코드 편집기와 명령줄 사이에 원활한 워크플로를 설정 하는 [기본 제공 터미널](https://code.visualstudio.com/docs/editor/integrated-terminal) 을 제공 하 고, 일반 git에서 [버전 제어를 위해 git](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support) 를 지원 합니다. UI에 바로 빌드된 명령 (추가, 커밋, 푸시, 끌어오기)
-
-> [!NOTE]
-> VS Code를 사용 하 여 [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense), [lint](https://code.visualstudio.com/docs/python/linting), [디버그 지원](https://code.visualstudio.com/docs/python/debugging), [코드 조각](https://code.visualstudio.com/docs/editor/userdefinedsnippets)및 [단위 테스트](https://code.visualstudio.com/docs/python/unit-testing) 를 활용 합니다. 그러나 Windows에서 Linux 도구를 사용 하는 경우 VS Code를 적절히 구성 하려면 원격-WSL 확장도 설치 해야 합니다.  
+VS Code를 사용 하 여 [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense), [lint](https://code.visualstudio.com/docs/python/linting), [디버그 지원](https://code.visualstudio.com/docs/python/debugging), [코드 조각](https://code.visualstudio.com/docs/editor/userdefinedsnippets)및 [단위 테스트](https://code.visualstudio.com/docs/python/unit-testing) 를 활용 합니다. VS Code은 Linux 용 Windows 하위 시스템에 원활 하 게 통합 되며, 코드 편집기와 명령줄 사이에 원활한 워크플로를 설정 하는 [기본 제공 터미널](https://code.visualstudio.com/docs/editor/integrated-terminal) 을 제공 하 고, 일반 git에서 [버전 제어를 위해 git](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support) 를 지원 합니다. UI에 바로 빌드된 명령 (추가, 커밋, 푸시, 끌어오기)
 
 1. [Windows 용 VS Code를 다운로드 하 고 설치](https://code.visualstudio.com)합니다. VS Code은 Linux 에서도 사용할 수 있지만 Linux 용 Windows 하위 시스템은 GUI 앱을 지원 하지 않으므로 Windows에 설치 해야 합니다. 걱정 하지 마세요. 여전히 원격-WSL 확장을 사용 하 여 Linux 명령줄 및 도구와 통합할 수 있습니다.
 
 2. VS Code에 [원격-WSL 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) 을 설치 합니다. 이를 통해 사용자는 통합 개발 환경으로 WSL을 사용 하 고 호환성 및 pathing를 처리할 수 있습니다. [자세한 내용을 알아보십시오](https://code.visualstudio.com/docs/remote/remote-overview).
 
 > [!IMPORTANT]
-> VS Code 이미 설치 되어 있는 경우에는 [원격-WSL 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)을 설치 하기 위해 [1.35 이상 버전을 릴리스할 수](https://code.visualstudio.com/updates/v1_35) 있는지 확인 해야 합니다. VS Code에서 WSL을 사용 하지 않는 것이 좋습니다. 이 확장이 없으면 WSL 프로젝트가 자동 완성, 디버깅, lint, 테스트 등을 지원 하지 않습니다. 흥미로운 사실: WSL에 설치 된 작업 영역 확장은 $HOME/.vscode-server/extensions.로 이동 합니다.
+> VS Code 이미 설치 되어 있는 경우에는 [원격-WSL 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)을 설치 하기 위해 [1.35 이상 버전을 릴리스할 수](https://code.visualstudio.com/updates/v1_35) 있는지 확인 해야 합니다. 자동 완성, 디버깅, lint 등에 대 한 지원이 손실 될 것 이므로, 원격-WSL 확장이 없으면 VS Code에서 WSL을 사용 하지 않는 것이 좋습니다. 흥미로운 사실: 이 WSL 확장은 $HOME/.vscode-server/extensions.에 설치 됩니다.
 
 ## <a name="create-a-new-project"></a>새 프로젝트 만들기
 
@@ -78,16 +71,13 @@ Linux (Ubuntu) 파일 시스템에 새 프로젝트 디렉터리를 만들어 VS
 ![Ubuntu 터미널](../../images/ubuntu-terminal.png)
 
 > [!TIP]
-> WSL (Linux 용 Windows 하위 시스템)을 사용할 때 기억해 야 할 중요 한 사항은 다음과 같이 **서로 다른 두 파일 시스템 간에 작업**하는 것입니다. 1) Windows 파일 시스템 및 2) 예제를 위한 Ubuntu 인 WSL (Linux 파일 시스템) 패키지를 설치 하 고 파일을 저장 하는 위치에 주의 해야 합니다. Windows 파일 시스템에는 도구 또는 패키지의 한 버전을 설치 하 고, Linux 파일 시스템에는 완전히 다른 버전을 설치할 수 있습니다. Windows 파일 시스템에서 도구를 업데이트 해도 Linux 파일 시스템의 도구에는 영향을 주지 않으며 그 반대의 경우도 마찬가지입니다. Wsl은 Linux 배포판의/mnt/<drive> 폴더 아래에 있는 컴퓨터의 고정 드라이브를 탑재 합니다. 예를 들어 Windows C: 드라이브는에 탑재 `/mnt/c/`되어 있습니다. Ubuntu 터미널에서 Windows 파일에 액세스 하 고 해당 파일에서 Linux 앱 및 도구를 사용할 수 있으며 그 반대의 경우도 마찬가지입니다. 대부분의 웹 도구는 처음에 Linux 용으로 작성 되 고 Linux 프로덕션 환경에 배포 되는 경우 Python 웹 개발용 Linux 파일 시스템에서 작업 하는 것이 좋습니다. 또한 파일 시스템 의미 체계를 혼합 하지 않습니다 (예: 파일 이름에 대 한 대/소문자를 구분 하지 않음). 즉, WSL은 이제 Linux 및 Windows 파일 시스템 간에 이동 하는 것을 지원 하므로 하나에서 파일을 호스트할 수 있습니다. [자세한 내용을 알아보십시오](https://devblogs.microsoft.com/commandline/do-not-change-linux-files-using-windows-apps-and-tools/). <br> [WSL2가 Windows에 곧](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/) 제공 될 예정 이며, 몇 가지 향상 된 기능을 제공 합니다. [이제 Windows 참가자 빌드 18917에서 사용해](https://docs.microsoft.com/windows/wsl/wsl2-install)볼 수 있습니다.
+> WSL (Linux 용 Windows 하위 시스템)을 사용할 때 기억해 야 할 중요 한 사항은 다음과 같이 **서로 다른 두 파일 시스템 간에 작업**하는 것입니다. 1) Windows 파일 시스템 및 2) 예제를 위한 Ubuntu 인 WSL (Linux 파일 시스템) 패키지를 설치 하 고 파일을 저장 하는 위치에 주의 해야 합니다. Windows 파일 시스템에는 도구 또는 패키지의 한 버전을 설치 하 고, Linux 파일 시스템에는 완전히 다른 버전을 설치할 수 있습니다. Windows 파일 시스템에서 도구를 업데이트 해도 Linux 파일 시스템의 도구에는 영향을 주지 않으며 그 반대의 경우도 마찬가지입니다. Wsl은 Linux 배포판의/mnt/<drive> 폴더 아래에 있는 컴퓨터의 고정 드라이브를 탑재 합니다. 예를 들어 Windows C: 드라이브는에 탑재 `/mnt/c/`되어 있습니다. Ubuntu 터미널에서 Windows 파일에 액세스 하 고 해당 파일에서 Linux 앱 및 도구를 사용할 수 있으며 그 반대의 경우도 마찬가지입니다. 대부분의 웹 도구는 처음에 Linux 용으로 작성 되 고 Linux 프로덕션 환경에 배포 되는 경우 Python 웹 개발용 Linux 파일 시스템에서 작업 하는 것이 좋습니다. 또한 파일 시스템 의미 체계를 혼합 하지 않습니다 (예: 파일 이름에 대 한 대/소문자를 구분 하지 않음). 즉, WSL은 이제 Linux 및 Windows 파일 시스템 간에 이동 하는 것을 지원 하므로 하나에서 파일을 호스트할 수 있습니다. [자세한 내용을 알아보십시오](https://devblogs.microsoft.com/commandline/do-not-change-linux-files-using-windows-apps-and-tools/). 또한 [WSL2가 Windows에 곧](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/) 제공 될 예정 이며 몇 가지 향상 된 기능을 제공 합니다. [이제 Windows 참가자 빌드 18917에서 사용해](https://docs.microsoft.com/windows/wsl/wsl2-install)볼 수 있습니다.
 
 ## <a name="install-python-pip-and-venv"></a>Python, pip 및 venv 설치
 
 Ubuntu 18.04 LTS는 이미 설치 된 Python 3.6과 함께 제공 되지만, 다른 Python 설치를 사용 하 여 얻을 수 있는 일부 모듈은 제공 되지 않습니다. 경량 가상 환경을 만들고 관리 하는 데 사용 되는 표준 모듈인 **pip**, Python 용 표준 패키지 관리자를 설치 해야 합니다.  
 
-1. Ubuntu 터미널을 열고 다음 `python3 --version`을 입력 하 여 Python3이 이미 설치 되어 있는지 확인 합니다. Python 버전 번호를 반환 해야 합니다.
-
-    > [!NOTE]
-    > Python 버전을 업데이트 해야 하는 경우 먼저 다음 `sudo apt update && sudo apt upgrade`을 입력 하 여 Ubuntu 버전을 업데이트 한 다음를 사용 하 여 `sudo apt upgrade python3`python을 업데이트 합니다.
+1. Ubuntu 터미널을 열고 다음 `python3 --version`을 입력 하 여 Python3이 이미 설치 되어 있는지 확인 합니다. Python 버전 번호를 반환 해야 합니다. Python 버전을 업데이트 해야 하는 경우 먼저 다음 `sudo apt update && sudo apt upgrade`을 입력 하 여 Ubuntu 버전을 업데이트 한 다음를 사용 하 여 `sudo apt upgrade python3`python을 업데이트 합니다.
 
 2. `sudo apt install python3-pip`을 입력 하 여 **pip** 를 설치 합니다. Pip를 사용 하면 Python 표준 라이브러리에 포함 되지 않은 추가 패키지를 설치 하 고 관리할 수 있습니다.
 
@@ -95,10 +85,7 @@ Ubuntu 18.04 LTS는 이미 설치 된 Python 3.6과 함께 제공 되지만, 다
 
 ## <a name="create-a-virtual-environment"></a>가상 환경 만들기
 
-Python에서 가상 환경은 충돌을 피하기 위해 프로젝트를 서로 격리 하는 데 사용 됩니다. 지금 하나를 설정 해 보겠습니다.
-
-> [!NOTE]
-> 가상 환경을 사용 하는 것은 Python 개발 프로젝트에 권장 되는 모범 사례입니다. 가상 환경을 만들면 웹 개발 프레임 워크를 설치할 수 있지만 전역 Python 환경에 프레임 워크를 설치 하지 않는 것이 좋습니다. 격리 된 가상 환경에 웹 프레임 워크를 설치 하는 것은 여러 프로젝트에서 작업할 때 매우 유용 합니다. Django 2.2를 사용 하 여 새 웹 프로젝트를 시작 하는 경우 덮어쓰지 않으려는 Django 1.2와 같은 이전 버전의 프레임 워크가 웹 앱 프로젝트 하나에 필요할 수 있습니다. 가상 환경에서는 실수로 인 한 버전 변경 또는 업그레이드를 방지 하는 것 외에도 관리 권한 없이 패키지를 설치 하 고 관리할 수 있습니다.
+가상 환경을 사용 하는 것은 Python 개발 프로젝트에 권장 되는 모범 사례입니다. 가상 환경을 만들면 프로젝트 도구를 분리 하 고 다른 프로젝트에 대 한 도구와의 버전 충돌을 방지할 수 있습니다. 예를 들어 Django 1.2 웹 프레임 워크를 필요로 하는 이전 웹 프로젝트를 유지 관리할 수 있지만 Django 2.2을 사용 하 여 흥미로운 새 프로젝트가 제공 됩니다. 가상 환경 외부에서 Django를 전역적으로 업데이트 하는 경우 나중에 일부 버전 관리 문제가 발생할 수 있습니다. 가상 환경에서는 실수로 인 한 버전 관리 충돌을 방지 하는 것 외에도 관리 권한 없이 패키지를 설치 하 고 관리할 수 있습니다.
 
 1. 터미널을 열고 *HelloWorld* 프로젝트 폴더 내에서 다음 명령을 사용 하 여 이름이 **. venv**: `python3 -m venv .venv`인 가상 환경을 만듭니다.
 
@@ -107,11 +94,11 @@ Python에서 가상 환경은 충돌을 피하기 위해 프로젝트를 서로 
     ![가상 환경 만들기](../../images/wsl-venv.png)
 
 > [!TIP]
-> 프로젝트를 만들려는 디렉터리 내에 가상 환경을 만드는 것이 좋습니다. 각 프로젝트에는 자체의 고유한 디렉터리가 있어야 하므로 각 프로젝트에는 고유한 가상 환경이 있으므로 고유한 이름을 지정할 필요가 없습니다. 가상 환경에 대해 이름 **. venv** 를 사용 하 여 Python 규칙을 따르는 것이 좋습니다. Pipenv와 같은 일부 도구는 프로젝트 디렉터리에를 설치 하는 경우에도 기본적으로이 이름으로 표시 됩니다. 환경 변수 정의 파일과 충돌 하는 경우에는 **env** 를 사용 하지 않는 것이 좋습니다. 디렉터리가 존재 한다는 것을 지속적으로 확인할 필요가 `ls` 없으므로 일반적으로는 점으로 구분 되지 않는 이름을 권장 하지 않습니다. 또한. **venv** 를 .gitignore 파일에 추가 하는 것이 좋습니다. (참조를 위해 [Python 용 GitHub의 기본 .gitignore 템플릿이](https://github.com/github/gitignore/blob/50e42aa1064d004a5c99eaa72a2d8054a0d8de55/Python.gitignore#L99-L106) 있습니다.) VS Code에서 가상 환경을 사용 하는 방법에 대 한 자세한 내용은 [VS Code에서 Python 환경 사용](https://code.visualstudio.com/docs/python/environments)을 참조 하세요.
+> 프로젝트를 만들려는 디렉터리 내에 가상 환경을 만드는 것이 좋습니다. 각 프로젝트에는 자체의 고유한 디렉터리가 있어야 하므로 각 프로젝트에는 고유한 가상 환경이 있으므로 고유한 이름을 지정할 필요가 없습니다. 여기서는 이름 **. venv** 를 사용 하 여 Python 규칙을 따르는 것이 좋습니다. Pipenv와 같은 일부 도구는 프로젝트 디렉터리에를 설치 하는 경우에도 기본적으로이 이름으로 표시 됩니다. 환경 변수 정의 파일과 충돌 하는 경우에는 **env** 를 사용 하지 않는 것이 좋습니다. 디렉터리가 존재 한다는 것을 지속적으로 확인할 필요가 `ls` 없으므로 일반적으로는 점으로 구분 되지 않는 이름을 권장 하지 않습니다. 또한. **venv** 를 .gitignore 파일에 추가 하는 것이 좋습니다. (참조를 위해 [Python 용 GitHub의 기본 .gitignore 템플릿이](https://github.com/github/gitignore/blob/50e42aa1064d004a5c99eaa72a2d8054a0d8de55/Python.gitignore#L99-L106) 있습니다.) VS Code에서 가상 환경을 사용 하는 방법에 대 한 자세한 내용은 [VS Code에서 Python 환경 사용](https://code.visualstudio.com/docs/python/environments)을 참조 하세요.
 
 ## <a name="open-a-wsl---remote-window"></a>WSL-원격 창 열기
 
-VS Code은 원격-WSL 확장 (이전에 설치 됨)을 사용 하 여 Linux 하위 시스템을 원격 서버로 처리 합니다. 이를 통해 사용자는 통합 개발 환경으로 WSL을 사용 하 고 호환성 및 pathing를 처리할 수 있습니다. [자세한 내용을 알아보십시오](https://code.visualstudio.com/docs/remote/wsl).
+VS Code은 원격-WSL 확장 (이전에 설치 됨)을 사용 하 여 Linux 하위 시스템을 원격 서버로 처리 합니다. 이를 통해 통합 개발 환경으로 WSL을 사용할 수 있습니다. [자세한 내용을 알아보십시오](https://code.visualstudio.com/docs/remote/wsl). 
 
 1. 다음 `code .` 을 입력 하 여 Ubuntu 터미널에서 VS Code의 프로젝트 폴더를 엽니다. ("."는 VS Code에 게 현재 폴더를 열도록 지시 합니다).
 
@@ -124,9 +111,6 @@ VS Code은 원격-WSL 확장 (이전에 설치 됨)을 사용 하 여 Linux 하�
 4. **Ctrl + '** (억음 문자 사용)를 누르거나**터미널** **보기** > 를 선택 하 여 VS Code에서 wsl 터미널을 엽니다. Ubuntu 터미널에서 만든 프로젝트 폴더 경로에 대해 bash (WSL) 명령줄이 열립니다.
 
     ![WSL 터미널을 사용 하 여 VS Code](../../images/vscode-bash-remote.png)
-
-> [!NOTE]
-> VS Code에서 사용 하는 터미널의 유형을 변경 해야 하는 경우 **Ctrl + Shift + P** 를 사용 하 여 팔레트 명령을 입력 합니다. 터미널 **입력: 기본 셸** 을 선택 하면 터미널 옵션 목록에 PowerShell, 명령 프롬프트, wsl 등이 포함 됩니다. 스위치를 사용 하려는 항목을 선택 하 고 **Ctrl + Shift + '** (backtick 사용)를 입력 하 여 새 터미널을 만듭니다. *Python 웹 개발용으로 WSL 터미널을 사용 하는 것이 좋습니다.*
 
 ## <a name="install-the-microsoft-python-extension"></a>Microsoft Python 확장 설치
 
@@ -142,10 +126,9 @@ VS Code 확장은 원격 WSL에 대해 설치 해야 합니다. 이미 VS Code�
 
 ## <a name="run-a-simple-python-program"></a>간단한 Python 프로그램 실행
 
-간단한 Python 프로그램을 만들어 테스트로 실행 하 고 올바른 Python 인터프리터를 선택 했는지 확인해 보겠습니다.
+Python은 해석 된 언어 이며 다양 한 유형의 interpretors (Python2, Anaconda, PyPy 등)를 지원 합니다. VS Code는 프로젝트와 연결 된 인터프리터를 기본값으로 지정 해야 합니다. 변경 해야 하는 이유가 있는 경우 VS Code 창의 아래쪽에 파란색 막대에 현재 표시 된 인터프리터를 선택 하거나 **명령 팔레트** (Ctrl + Shift + P)를 열고 명령 **Python을 입력 합니다. 인터프리터**를 선택 합니다. 현재 설치 된 Python 인터프리터의 목록이 표시 됩니다. [Python 환경 구성에 대해 자세히 알아보세요](https://code.visualstudio.com/docs/python/environments).
 
-> [!NOTE]
-> Python은 해석 된 언어입니다. 즉, 물리적 컴퓨터를 에뮬레이션 하는 가상 컴퓨터 역할을 합니다. 다음과 같은 다양 한 유형의 Python 인터프리터를 사용할 수 있습니다. Python 2, Anaconda, PyPy 등 Python 코드를 실행 하 고 Python IntelliSense를 가져오기 위해 사용할 인터프리터 VS Code를 알려 주어 야 합니다. 다른 항목을 선택 해야 하는 특별 한 이유가 없다면 VS Code (이 경우 Python 3.6.8)로 기본 설정 된 인터프리터를 사용 하는 것이 좋습니다. Python 인터프리터를 변경 하려면 VS Code 창 아래쪽의 파란색 표시줄에 현재 표시 된 인터프리터를 선택 하거나 **명령 팔레트** (Ctrl + Shift + P)를 열고 Python 명령을 **입력 합니다. 인터프리터**를 선택 합니다. 현재 설치 된 Python 인터프리터의 목록이 표시 됩니다. [Python 환경 구성에 대해 자세히 알아보세요](https://code.visualstudio.com/docs/python/environments).
+간단한 Python 프로그램을 만들어 테스트로 실행 하 고 올바른 Python 인터프리터를 선택 했는지 확인해 보겠습니다.
 
 1. **Ctrl + Shift + E** 를 눌러 VS Code 파일 탐색기 창을 열거나 메뉴를 사용 하 여 **보기** > **탐색기**로 이동 합니다.
 

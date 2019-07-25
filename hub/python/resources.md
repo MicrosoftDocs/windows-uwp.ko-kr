@@ -1,6 +1,6 @@
 ---
 title: Windows에서 Python을 사용 하 여 개발 하기 위한 리소스
-description: Windows에서 Python을 사용 하 여 개발 하기 위한 리소스 목록입니다.
+description: Windows에서 Python으로 개발하기 위한 리소스 목록입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -10,12 +10,12 @@ ms.technology: hub
 keywords: python, microsoft, windows 10, 자습서, 온라인 과정, 블로그, 이벤트
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: ffcb2b280077d96b0405691976e04fc82959cf4c
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+ms.openlocfilehash: a987043735dd433288fd53090cf3623b035fad7d
+ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68349523"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473641"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Windows에서 Python을 사용 하 여 개발 하기 위한 리소스
 
@@ -24,6 +24,8 @@ Windows 10을 실행 하는 컴퓨터에서 작업 하는 Python 개발자에 �
 ## <a name="general"></a>일반
 
 - [Microsoft 개발자 블로그: Python](https://devblogs.microsoft.com/python/): Microsoft에서 Python 모든 항목에 대 한 최신 업데이트를 읽으십시오.
+
+- [WSL 및 Visual Studio Code를 사용 하 여 Windows에서 Linux를 개발 하는 방법에 대 한 자세한 자습서](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/) 개발자 않고도를 설정 하 고 Python 앱을 만들고 몇 가지 디버깅을 수행 하는 방법에 대 한 연습입니다.
 
 - [Windows에서 Python 사용](https://docs.python.org/3/using/windows.html): 이 Python.org 설명서에서는 Microsoft Windows에서 Python을 사용할 때 알아야 할 Windows 관련 동작에 대 한 개요를 제공 합니다.
 

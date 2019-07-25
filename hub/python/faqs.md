@@ -10,12 +10,12 @@ ms.technology: hub
 keywords: python, windows 10, microsoft, pip, py, 파일 경로, PYTHONPATH, python 배포, python 패키징
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 4f7f5c325dfd114093e1434259489459a8c78151
-ms.sourcegitcommit: 161eac985af11faaff78797d86343d4fa7d6a05f
+ms.openlocfilehash: fd08061858fc97f1427e94c6a92a4c3a9511967d
+ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68366734"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473656"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Windows에서 Python 사용에 대 한 질문과 대답
 
@@ -29,9 +29,11 @@ ms.locfileid: "68366734"
 
 [StackOverflow에 대 한 설명을 따르세요](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows/12476379).
 
-## <a name="what-is-pyexe"></a>Py 란?
+### <a name="what-is-pyexe"></a>Py 란?
 
-여러 유형의 Python 프로젝트에서 작업 하 고 있으므로 컴퓨터에 여러 버전의 Python이 설치 될 수 있습니다. 이러한 `python` 명령은 모두 명령을 사용 하므로 사용 중인 것이 명확 하지 않을 수 있습니다. [Py 시작 관리자](https://docs.python.org/3/using/windows.html#launcher) 는 설치한 Python의 최신 버전을 자동으로 선택 합니다. 같은 `py -3.7` 명령을 사용 하 여 특정 버전을 선택 하거나 `py --list` 사용할 수 있는 버전을 확인할 수도 있습니다. **그러나** [python.org](https://www.python.org/downloads/windows/)에서 설치 된 Python 버전을 사용 하는 경우에만 py 시작 관리자가 작동 합니다. Microsoft Store에서 Python을 `py` 설치 하는 경우 명령은 **포함 되지 않습니다**. Linux, macos, wsl 및 Microsoft Store 버전의 Python의 경우 `python3` 명령을 사용 해야 합니다.
+여러 유형의 Python 프로젝트에서 작업 하 고 있으므로 컴퓨터에 여러 버전의 Python이 설치 될 수 있습니다. 이러한 모두 `python` 명령을 사용 하기 때문에 사용 중인 Python 버전을 명확 하 게 알 수 없습니다. 표준으로 `python3` 명령을 사용 하거나 `python3.7` 특정 버전을 선택 하는 것이 좋습니다.
+
+[Py 시작 관리자](https://docs.python.org/3/using/windows.html#launcher) 는 설치한 Python의 최신 버전을 자동으로 선택 합니다. 같은 `py -3.7` 명령을 사용 하 여 특정 버전을 선택 하거나 `py --list` 사용할 수 있는 버전을 확인할 수도 있습니다. **그러나** [python.org](https://www.python.org/downloads/windows/)에서 설치 된 Python 버전을 사용 하는 경우에만 py 시작 관리자가 작동 합니다. Microsoft Store에서 Python을 `py` 설치 하는 경우 명령은 **포함 되지 않습니다**. Linux, macos, wsl 및 Python의 Microsoft Store 버전에 대해 `python3` (또는 `python3.7`) 명령을 사용 해야 합니다.
 
 ## <a name="why-dont-file-paths-work-in-python-when-i-copy-paste-them"></a>파일 경로를 복사 하 여 붙여넣을 때 Python에서 파일 경로가 작동 하지 않는 이유는 무엇 인가요?
 
