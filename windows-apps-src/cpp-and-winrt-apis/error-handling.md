@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 오류, 처리, 예외
 ms.localizationpriority: medium
-ms.openlocfilehash: c75cf8763b5f47772a138c15049155458772eeb5
-ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
+ms.openlocfilehash: 37819d1626d3adc6f5647f447567a9273e72668d
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660141"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270127"
 ---
 # <a name="error-handling-with-cwinrt"></a>C++/WinRT를 통한 오류 처리
 
@@ -92,7 +92,9 @@ Windows API는 다양한 반환 값 형식을 사용하여 런타임 오류를 �
 일반적인 반환 코드 형식에 대해 이러한 도우미 함수를 사용하거나, 모든 오류 조건에 응답하여 [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error) 또는 [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult)를 호출할 수 있습니다. 
 
 ## <a name="throwing-exceptions-when-authoring-an-api"></a>API를 작성할 때 예외 throw
-구현에서 발생하는 오류 조건은 [Windows 런타임 ABI](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types) 경계를 넘어가는 예외에 유효하지 않기 때문에 HRESULT 오류 코드의 형태로 ABI 계층에서 반환됩니다. C++/WinRT를 사용하여 API를 작성하는 경우 구현에서 throw한 모든 예외를 HRESULT로 변환할 수 있도록 코드가 생성됩니다.  [**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) 함수는 생성된 코드에서 다음과 같은 패턴으로 사용됩니다.
+모든 [Windows 런타임 ABI(애플리케이션 이진 인터페이스)](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types) 경계(또는 ABI 경계)는 *noexcept*여야 합니다. 즉, 예외가 여기서 발생하면 안 됩니다. API를 작성할 때 ABI 경계는 항상 C++ `noexcept` 키워드를 사용하여 표시해야 합니다. `noexcept`에는 C++의 특정 동작이 있습니다. C++ 예외가 `noexcept` 경계에 도달하면 프로세스에서 **std::terminate**를 사용하여 페일 패스트합니다. 처리되지 않은 예외는 거의 항상 프로세스에서 알 수 없는 상태를 나타내므로 이 동작은 일반적으로 바람직합니다.
+
+예외는 ABI 경계를 넘지 않아야 하므로 구현에서 발생하는 오류 조건은 ABI 계층에서 HRESULT 오류 코드 형식으로 반환됩니다. C++/WinRT를 사용하여 API를 작성하는 경우 구현에서 throw한 모든 예외를 HRESULT로 변환할 수 있도록 코드가 생성됩니다.  [**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) 함수는 생성된 코드에서 다음과 같은 패턴으로 사용됩니다.
 
 ```cppwinrt
 HRESULT DoWork() noexcept
@@ -110,6 +112,48 @@ HRESULT DoWork() noexcept
 ```
 
 [**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult)는 **std::exception**에서 파생된 예외와 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 및 그 파생 형식을 처리합니다. API 소비자가 다양한 오류 정보를 받을 수 있도록 구현에서 **winrt::hresult_error** 또는 파생 형식을 사용하는 것이 좋습니다. **std::exception**(E_FAIL에 매핑됨)은 표준 템플릿 라이브러리를 사용하는 중 예외가 발생하는 경우에 지원됩니다.
+
+### <a name="debuggability-with-noexcept"></a>noexcept를 사용하는 디버그 효율성
+위에서 언급한 대로 `noexcept` 경계에 도달하는 C++ 예외는 **std::terminate**를 사용하여 페일 패스트합니다. **std::terminate**는 대부분 또는 모든 오류, 특히 코루틴이 관련된 경우 throw되는 예외 컨텍스트를 손실하는 경우가 많으므로 디버깅에 적합하지 않습니다.
+
+따라서 이 섹션에서는 `noexcept`를 사용하여 적절히 주석 처리한 ABI 메서드에서 `co_await`를 사용하여 비동기 C++/WinRT 프로젝션 코드를 호출하는 경우를 다룹니다. **winrt::fire_and_forget** 내에서 C++/WinRT 프로젝션 코드에 대한 호출을 래핑하는 것이 좋습니다. 이렇게 하면 처리되지 않은 예외가 stowed 예외로 적절히 기록될 수 있는 적절한 위치가 제공되므로 디버그 효율성이 크게 향상됩니다.
+
+```cppwinrt
+HRESULT MyWinRTObject::MyABI_Method() noexcept
+{
+    winrt::com_ptr<Foo> foo{ get_a_foo() };
+
+    [/*no captures*/](winrt::com_ptr<Foo> foo) -> winrt::fire_and_forget
+    {
+        co_await winrt::resume_background();
+
+        foo->ABICall();
+
+        AnotherMethodWithLotsOfProjectionCalls();
+    }(foo);
+
+    return S_OK;
+}
+```
+
+**winrt::fire_and_forget**에 **winrt::terminate**를 호출하는 기본 제공 `unhandled_exception` 메서드 도우미가 있습니다. 이 도우미는 **RoFailFastWithErrorContext**를 호출합니다. 이렇게 하면 모든 컨텍스트(stowed 예외, 오류 코드, 오류 메시지, 스택 역추적 등)가 라이브 디버깅 또는 사후 덤프를 위해 유지됩니다. 편의상 fire-and-forget 부분을 **winrt::fire_and_forget**을 반환하는 별도의 함수로 팩터링한 다음, 이를 호출할 수 있습니다.
+
+### <a name="synchronous-code"></a>동기 코드
+경우에 따라 ABI 메서드(`noexcept`를 사용하여 적절히 주석 처리했음)는 동기 코드만 호출합니다. 즉 비동기 Windows 런타임 메서드를 호출하거나 포그라운드 스레드와 백그라운드 스레드 간에 전환하기 위해 `co_await`를 사용하지 않습니다. 이 경우 fire_and_forget 기술은 계속 작동하지만 효율적이지 않습니다. 대신 다음과 같은 작업을 수행할 수 있습니다.
+
+```cppwinrt
+HRESULT abi() noexcept try
+{
+    // ABI code goes here.
+} catch (...) { winrt::terminate(); }
+```
+
+### <a name="fail-fast"></a>페일 패스트
+이전 섹션의 코드는 여전히 페일 패스트합니다. 이 코드는 작성된 대로 어떤 예외도 처리하지 않습니다. 처리되지 않은 예외가 발생하면 프로그램이 종료됩니다.
+
+그러나 이 형식은 디버그 효율성을 보장하므로 우수합니다. 드문 경우이지만 `try/catch`를 수행하고 특정 예외를 처리하려고 할 수 있습니다. 그러나 이 항목에서 설명한 대로 예외를 예상하는 조건에 대한 흐름 제어 메커니즘으로 사용하지 않는 것이 좋습니다.
+
+처리되지 않은 예외에서 비보호 `noexcept` 컨텍스트를 이스케이프하지 않는 것이 좋습니다. 이 조건에서는 C++ 런타임에서 프로세스를 **std::terminate**하므로 C++/WinRT에서 주의 깊게 기록한 stowed 예외 정보가 손실됩니다.
 
 ## <a name="assertions"></a>어설션
 애플리케이션 내부 가정의 경우 어설션이 있습니다. 가능한 경우 컴파일 시간 유효성 검사에는 **static_assert**를 사용하는 것이 좋습니다. 런타임 조건의 경우 `WINRT_ASSERT`에 부울 식을 사용합니다. `WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.

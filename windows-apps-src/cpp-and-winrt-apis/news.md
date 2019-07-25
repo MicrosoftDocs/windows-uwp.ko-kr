@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 새로운 기능
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 537150f6fc000794b11ef9236bfd88469d3f6b19
-ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
+ms.openlocfilehash: 524d0f2d9e428e87187ca27747fbd1c54406d345
+ms.sourcegitcommit: 6cc8b231c1b970112d26a7696cc3e907082ef2be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67800582"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68308435"
 ---
 # <a name="whats-new-in-cwinrt"></a>C++/WinRT의 새로운 기능
 
@@ -28,7 +28,7 @@ ms.locfileid: "67800582"
 
 - 이제 `cppwinrt.exe` 도구는 Microsoft.Windows.CppWinRT NuGet 패키지에 포함되며 요청 시 각 프로젝트에 대한 플랫폼 프로젝션 헤더를 생성합니다. 따라서 `cppwinrt.exe` 도구는 더 이상 Windows SDK를 사용하지 않지만, 호환성을 위해 계속해서 SDK와 함께 제공됩니다.
 - 이제 `cppwinrt.exe`는 각 플랫폼/ 구성 특정 중간 폴더($IntDir) 아래에 프로젝션 헤더를 생성하여 병렬 빌드를 사용하도록 설정합니다.
-- 이제 프로젝트 파일을 수동으로 사용자 지정하려는 경우 C++/WinRT 빌드 지원(속성/대상)이 완벽하게 문서화되어 있습니다. [Microsoft.Windows.CppWinRT NuGet 패키지](https://github.com/Microsoft/xlang/blob/master/src/package/cppwinrt/nuget/readme.md)를 참조하세요.
+- 이제 프로젝트 파일을 수동으로 사용자 지정하려는 경우 C++/WinRT 빌드 지원(속성/대상)이 완벽하게 문서화되어 있습니다. Microsoft.Windows.CppWinRT NuGet 패키지 [추가 정보](https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing)를 참조하세요.
 - 수많은 버그가 수정되었습니다.
 
 ### <a name="changes-to-cwinrt-for-version-20"></a>버전 2.0용 C++/WinRT의 변경 내용

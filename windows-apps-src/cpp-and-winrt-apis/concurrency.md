@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: cbabf38f41ae940f5c92944154638eae7016e043
-ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
+ms.openlocfilehash: f7db1e5810de478f1c6198860100409d79d4f5d5
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660094"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270138"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT를 통한 동시성 및 비동기 작업
 
@@ -224,13 +224,13 @@ IASyncAction DoWorkAsync(Param const& value)
 {
     // While it's ok to access value here...
 
-    co_await DoOtherWorkAsync();
+    co_await DoOtherWorkAsync(); // (this is the first suspension point)...
 
     // ...accessing value here carries no guarantees of safety.
 }
 ```
 
-코루틴에서는 컨트롤이 호출자에 반환되는 첫 번째 일시 중단 지점까지 동기 방식으로 실행됩니다. 코루틴이 다시 시작될 때까지 참조 매개 변수가 참조하는 소스 값이 변경되었을 수 있습니다. 코루틴의 관점에서 참조 매개 변수의 수명은 제어되지 않습니다. 따라서 위 예제에서 `co_await`까지는 ‘값’에 액세스해도 안전하지만 이후에는 안전하지 않습니다.  호출자에 의해 *값*이 소멸되는 이벤트에서 그 이후 코루틴 내의 해당 값에 액세스하려고 하면 메모리가 손상됩니다. 함수가 일시 중단되었다가 다시 시작된 후 ‘값’을 사용하려고 시도할 위험이 있는 경우 **DoOtherWorkAsync**에 ‘값’을 안전하게 전달할 수도 없습니다.  
+코루틴에서 실행은 첫 번째 일시 중단 지점까지 동기화됩니다. 이 경우 컨트롤이 호출자에 반환되고 호출하는 프레임이 범위를 벗어납니다. 코루틴이 다시 시작될 때까지 참조 매개 변수가 참조하는 소스 값이 변경되었을 수 있습니다. 코루틴의 관점에서 참조 매개 변수의 수명은 제어되지 않습니다. 따라서 위 예제에서 `co_await`까지는 ‘값’에 액세스해도 안전하지만 이후에는 안전하지 않습니다.  호출자에 의해 *값*이 소멸되는 이벤트에서 그 이후 코루틴 내의 해당 값에 액세스하려고 하면 메모리가 손상됩니다. 함수가 일시 중단되었다가 다시 시작된 후 ‘값’을 사용하려고 시도할 위험이 있는 경우 **DoOtherWorkAsync**에 ‘값’을 안전하게 전달할 수도 없습니다.  
 
 일시 중단했다가 다시 시작한 후 매개 변수를 안전하게 사용하려면 코루틴이 기본적으로 값으로 전달을 사용하여 값으로 캡처함으로써 수명 문제를 방지해야 합니다. 이 지침을 따르지 않아도 안전하다고 확신할 수 있는 경우는 흔치 않습니다.
 
@@ -776,6 +776,68 @@ winrt::fire_and_forget MyClass::MyMediaBinder_OnBinding(MediaBinder const&, Medi
 ```
 
 첫 번째 인수(*sender*)는 사용하지 않으므로 명명되지 않은 그대로입니다. 따라서 이 인수는 참조로 두어도 안전합니다. 하지만 *args*는 값으로 전달됩니다. 위의 [매개 변수 전달](#parameter-passing) 섹션을 참조하세요.
+
+## <a name="awaiting-a-kernel-handle"></a>커널 핸들 대기
+
+C++/WinRT는 커널 이벤트에서 신호를 받을 때까지 일시 중단하는 데 사용할 수 있는 **resume_on_signal** 클래스를 제공합니다. `co_await resume_on_signal(h)`이 반환될 때까지 핸들이 계속 유효하게 유지되는지 확인해야 합니다. 이 첫 번째 예제와 같이 **resume_on_signal**이 시작되기도 전에 핸들이 손실되었을 수 있으므로 **resume_on_signal** 자체는 이 작업을 수행할 수 없습니다.
+
+```cppwinrt
+IAsyncAction Async(HANDLE event)
+{
+    co_await DoWorkAsync();
+    co_await resume_on_signal(event); // The incoming handle is not valid here.
+}
+```
+
+들어오는 **HANDLE**은 함수가 반환될 때까지 유효하며, 이 함수(코루틴)는 첫 번째 일시 중단 지점(이 경우 첫 번째 `co_await`)에서 반환됩니다. **DoWorkAsync**를 기다리는 동안 컨트롤이 호출자에 반환되고, 호출하는 프레임이 범위를 벗어났으며, 코루틴이 다시 시작될 때 핸들이 유효한지 여부를 더 이상 알 수 없습니다.
+
+기술적으로 코루틴은 매개 변수를 값으로 받고 있습니다(위의 [매개 변수 전달](#parameter-passing) 참조). 그러나 이 경우 해당 지침의 *정신*(단지 문자만이 아닌)을 따르기 위해 한 단계 더 나아가야 합니다. 핸들과 함께 강한 참조(즉, 소유권)를 전달해야 합니다. 다음과 같이 하세요.
+
+```cppwinrt
+IAsyncAction Async(winrt::handle event)
+{
+    co_await DoWorkAsync();
+    co_await resume_on_signal(event); // The incoming handle *is* not valid here.
+}
+```
+
+값을 기준으로 [**winrt::handle**](/uwp/cpp-ref-for-winrt/handle)을 전달하면 소유권 의미 체계가 제공되므로 커널 핸들이 코루틴의 수명 동안 유효하게 유지됩니다.
+
+이 코루틴을 호출하는 방법은 다음과 같습니다.
+
+```cppwinrt
+namespace
+{
+    winrt::handle duplicate(winrt::handle const& other, DWORD access)
+    {
+        winrt::handle result;
+        if (other)
+        {
+            winrt::check_bool(::DuplicateHandle(::GetCurrentProcess(),
+                other.get(), ::GetCurrentProcess(), result.put(), access, FALSE, 0));
+        }
+        return result;
+    }
+
+    winrt::handle make_manual_reset_event(bool initialState = false)
+    {
+        winrt::handle event{ ::CreateEvent(nullptr, true, initialState, nullptr) };
+        winrt::check_bool(static_cast<bool>(event));
+        return event;
+    }
+}
+
+IAsyncAction SampleCaller()
+{
+    handle event{ make_manual_reset_event() };
+    auto async{ Async(duplicate(event)) };
+
+    ::SetEvent(event.get());
+    event.close(); // Our handle is closed, but Async still has a valid handle.
+
+    co_await async; // Will wake up when *event* is signaled.
+}
+```
 
 ## <a name="important-apis"></a>중요 API
 * [concurrency::task 클래스](/cpp/parallel/concrt/reference/task-class)

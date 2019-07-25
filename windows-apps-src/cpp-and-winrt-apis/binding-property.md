@@ -5,12 +5,12 @@ ms.date: 06/21/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: 25ce3164ece443c8c1d95bccbc2bfb57e3347a55
-ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
+ms.openlocfilehash: 5ff15e9b86d90aa14fd56e4e7015e949e2742bf6
+ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67717658"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68328885"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>XAML 컨트롤, C++/WinRT 속성에 바인딩
 XAML 컨트롤에 효과적으로 바인딩할 수 있는 속성은 *식별할 수 있는*(observable) 속성이라고 합니다. 이 아이디어는 ‘관찰자 패턴’이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다.  이번 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법에 대해서 설명합니다.
@@ -127,7 +127,7 @@ namespace winrt::Bookstore::implementation
 ## <a name="declare-and-implement-bookstoreviewmodel"></a>**BookstoreViewModel** 선언 및 구현
 이제 기본 XAML 페이지가 주요 보기 모델에 바인딩됩니다. 이 보기 모델은 **BookSku** 형식 중 하나를 포함해 여러 속성을 갖게 됩니다. 이번 단계에서는 주요 보기 모델 런타임 클래스를 선언하고 구현합니다.
 
-`BookstoreViewModel.idl`이라는 이름의 새 **Midl 파일(.idl)** 항목을 추가합니다.
+`BookstoreViewModel.idl`이라는 이름의 새 **Midl 파일(.idl)** 항목을 추가합니다. 또한 [런타임 클래스를 Midl 파일(.idl)로 팩터링](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)도 참조하세요.
 
 ```idl
 // BookstoreViewModel.idl
@@ -298,6 +298,55 @@ runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
 ```
 
 이렇게 해야 하는 이유는 다음과 같습니다. XAML 컴파일러에서 유효성을 검사해야 하는 모든 형식([{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)에서 사용되는 형식 포함)을 Windows 메타 데이터(WinMD)에서 읽어옵니다. 사용자는 Midl 파일에 읽기 전용 속성을 추가하기만 하면 됩니다. 구현하지 않도록 합니다. 자동 생성된 XAML 코드 숨김에서 자동으로 구현을 제공하기 때문입니다.
+
+## <a name="consuming-objects-from-xaml-markup"></a>XAML 태그에서 개체 사용
+
+XAML [ **{x:Bind} 태그 확장**](/windows/uwp/xaml-platform/x-bind-markup-extension)을 통해 사용되는 모든 엔터티는 IDL에 공개적으로 노출되어야 합니다. 또한 XAML 태그에 또 다른 요소에 대한 참조도 포함되어 있는 경우 해당 태그에 대한 getter가 IDL에 있어야 합니다.
+
+```xaml
+<Page x:Name="MyPage">
+    <StackPanel>
+        <CheckBox x:Name="UseCustomColorCheckBox" Content="Use custom color"
+             Click="UseCustomColorCheckBox_Click" />
+        <Button x:Name="ChangeColorButton" Content="Change color"
+            Click="{x:Bind ChangeColorButton_OnClick}"
+            IsEnabled="{x:Bind UseCustomColorCheckBox.IsChecked.Value, Mode=OneWay}"/>
+    </StackPanel>
+</Page>
+```
+
+*ChangeColorButton* 요소는 바인딩을 통해 *UseCustomColorCheckBox* 요소를 참조합니다. 따라서 바인딩에 액세스할 수 있도록 이 페이지의 IDL에서 *UseCustomColorCheckBox*라는 읽기 전용 속성을 선언해야 합니다.
+
+*UseCustomColorCheckBox*에 대한 클릭 이벤트 처리기 대리자는 클래식 XAML 대리자 구문을 사용하므로 IDL의 항목이 필요하지 않으며 단지 구현 클래스에서 public으로만 선언하면 됩니다. 반면, *ChangeColorButton*에는 IDL에도 포함되어야 하는 `{x:Bind}` 클릭 이벤트 처리기도 있습니다.
+
+```idl
+runtimeclass MyPage : Windows.UI.Xaml.Controls.Page
+{
+    MyPage();
+
+    // These members are consumed by binding.
+    void ChangeColorButton_OnClick();
+    Windows.UI.Xaml.Controls.CheckBox UseCustomColorCheckBox{ get; };
+}
+```
+
+**UseCustomColorCheckBox** 속성에 대한 구현은 제공할 필요가 없습니다. XAML 코드 생성기에서 이를 수행합니다.
+
+### <a name="binding-to-boolean"></a>부울에 바인딩
+
+이 작업은 진단 모드에서 수행할 수 있습니다.
+
+<syntaxhighlight lang="xml">
+<TextBlock Text="{Binding CanPair}"/>
+</syntaxhighlight>
+
+이 경우 C++/CX에서는 `true` 또는 `false`가 표시되지만, C++/WinRT에서는 **Windows.Foundation.IReference`1<Boolean>** 이 표시됩니다.
+
+부울에 바인딩하는 경우 `x:Bind`를 사용합니다.
+
+```xaml
+<TextBlock Text="{x:Bind CanPair}"/>
+```
 
 ## <a name="important-apis"></a>중요 API
 * [INotifyPropertyChanged::PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 강한, 약한, 참조
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 77fcd8369b2df3fdb42facf9d2b2a1d93188322b
-ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
+ms.openlocfilehash: 3ad6bb9a98b0fe2a699580001698740e44cea14f
+ms.sourcegitcommit: cba3ba9b9a9f96037cfd0e07d05bd4502753c809
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67844318"
+ms.lasthandoff: 07/14/2019
+ms.locfileid: "67870316"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>C++/WinRT의 강한 참조 및 약한 참조
 
@@ -197,12 +197,13 @@ int main()
 }
 ```
 
-패턴은 이벤트 수신자에게 *this* 포인터에 대한 종속성을 가진 람다 이벤트 처리기가 있다는 것입니다. 이벤트 수신자가 이벤트 소스보다 오래 활성화되는 경우 항상, 이러한 종속성보다 오래 활성화됩니다. 이러한 일반적인 경우에는 패턴이 효과적입니다. UI 페이지가 해당 페이지에 있는 컨트롤에서 발생한 이벤트를 처리하는 경우와 같이 이러한 경우 중 일부는 쉽게 이해할 수 있습니다. 페이지가 단추보다 오래 활성화되므로 처리기도 단추보다 오래 활성화됩니다. 수신자가 소스를 데이터 멤버 등으로 소유하고 있거나, 수신자와 소스가 형제이고 다른 개체가 직접 소유하고 있는 경우에도 동일하게 적용됩니다. 또 다른 안전한 경우는 이벤트 소스에서 해당 이벤트를 동기식으로 발생시키는 경우인데, 더 이상 이벤트가 수신되지 않는 상태에서 처리기를 취소할 수 있습니다.
+패턴은 이벤트 수신자에게 *this* 포인터에 대한 종속성을 가진 람다 이벤트 처리기가 있다는 것입니다. 이벤트 수신자가 이벤트 소스보다 오래 활성화되는 경우 항상, 이러한 종속성보다 오래 활성화됩니다. 이러한 일반적인 경우에는 패턴이 효과적입니다. UI 페이지가 해당 페이지에 있는 컨트롤에서 발생한 이벤트를 처리하는 경우와 같이 이러한 경우 중 일부는 쉽게 이해할 수 있습니다. 페이지가 단추보다 오래 활성화되므로 처리기도 단추보다 오래 활성화됩니다. 수신자가 소스를 데이터 멤버 등으로 소유하고 있거나, 수신자와 소스가 형제이고 다른 개체가 직접 소유하고 있는 경우에도 동일하게 적용됩니다.
 
 처리기가 종속되는 *this*보다 오래 활성화되지 않는 경우가 있다고 확신할 때, 강하거나 약한 수명을 고려하지 않고 *this*를 정상적으로 캡처할 수 있습니다.
 
 그러나 *this*가 처리기(비동기 작업에서 발생한 완료/진행률 이벤트의 처리기 포함)에서 사용되는 기간보다 오래 활성화되지 않는 경우도 있으며, 이러한 경우를 처리하는 방법을 알아 두어야 합니다.
 
+- 이벤트 원본에서 해당 이벤트를 *동기적으로* 발생시키면 처리기를 취소하고 이벤트를 더 이상 받지 않을 것임을 확신할 수 있습니다. 그러나 비동기 이벤트의 경우 해지 후에도(특히 소멸자 내에서 해지하는 경우) 진행 중인 이벤트에서 소멸을 시작한 후 개체에 도달할 수 있습니다. 소멸하기 전에 구독을 취소할 장소를 찾으면 문제가 완화될 수 있지만 강력한 해결 방법을 계속 읽어야 합니다.
 - 코루틴을 작성하여 비동기 메서드를 구현하면 처리할 수 있습니다.
 - 드물긴 하지만 특정 XAML UI 프레임워크 개체(예: [**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel))를 사용하는 경우 이벤트 소스에서 등록을 취소하지 않고 수신자를 종료하면 처리할 수 있습니다.
 
@@ -252,7 +253,7 @@ event_source.Event([this](auto&& ...)
 
 ### <a name="the-solution"></a>해결 방법
 
-해결 방법은 강한 참조를 캡처하는 것입니다. 강한 참조는 참조 개수를 ‘증가’시키고 현재 개체를 활성 상태로 ‘유지’합니다.   캡처 변수(이 예제에서 `strong_this` *이*(가) 호출됨)만 선언하고 이 포인터에 대한 강력한 참조 를 검색하는 [**implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)에 대한 호출로 초기화합니다.
+해결 방법은 강한 참조(또는 나중에 확인하겠지만 더 적절한 경우 약한 참조)를 캡처하는 것입니다. 강한 참조는 참조 개수를 ‘증가’시키고 현재 개체를 활성 상태로 ‘유지’합니다.   캡처 변수(이 예제에서 `strong_this` *이*(가) 호출됨)만 선언하고 이 포인터에 대한 강력한 참조 를 검색하는 [**implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)에 대한 호출로 초기화합니다.
 
 > [!IMPORTANT]
 > **get_strong**은 **winrt::implements** 구조체 템플릿의 멤버 함수이므로, C++/WinRT 클래스와 같이 **winrt::implements**에서 직간접적으로 파생된 클래스에서만 호출할 수 있습니다. **winrt::implements**에서 파생하는 방법에 대한 자세한 내용과 예제는 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)을 참조하세요.
@@ -273,7 +274,7 @@ event_source.Event([strong_this { get_strong()}](auto&& ...)
 });
 ```
 
-강한 참조가 적절하지 않은 경우, 대신 [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)를 호출하여 *this*에 대한 약한 참조를 검색할 수 있습니다. 멤버에 액세스하기 전에 여전히 강한 참조를 검색할 수 있는지 확인하기만 하면 됩니다.
+강한 참조가 적절하지 않은 경우, 대신 [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)를 호출하여 *this*에 대한 약한 참조를 검색할 수 있습니다. 약한 참조는 현재 개체를 활성 상태로 유지하지 *않습니다*. 따라서 멤버에 액세스하기 전에 먼저 약한 참조에서 여전히 강한 참조를 검색할 수 있는지 확인하기만 하면 됩니다.
 
 ```cppwinrt
 event_source.Event([weak_this{ get_weak() }](auto&& ...)
@@ -284,6 +285,8 @@ event_source.Event([weak_this{ get_weak() }](auto&& ...)
     }
 });
 ```
+
+원시 포인터를 캡처하는 경우 가리키는 개체를 활성 상태로 유지해야 합니다.
 
 ### <a name="if-you-use-a-member-function-as-a-delegate"></a>멤버 함수를 대리자로 사용하는 경우
 
@@ -314,11 +317,15 @@ struct EventRecipient : winrt::implements<EventRecipient, IInspectable>
 event_source.Event({ get_strong(), &EventRecipient::OnEvent });
 ```
 
+강한 참조를 캡처한다는 것은 처리기가 등록 취소되고 처리 중인 모든 콜백이 반환된 후에만 개체가 소멸될 수 있음을 의미합니다. 하지만 이 보장은 이벤트가 발생한 시점에만 유효합니다. 이벤트 처리기가 비동기인 경우 첫 번째 일시 중단 지점 앞에 클래스 인스턴스에 대한 강한 참조를 코루틴에 제공해야 합니다(자세한 내용과 코드는 이 문서의 앞부분에 있는 [클래스-멤버 코루틴에서 안전하게 *this* 포인터 액세스](#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 섹션 참조). 그러나 이렇게 하면 이벤트 원본과 개체 간의 순환 참조가 만들어지므로 이벤트를 해지하여 이를 명시적으로 중단해야 합니다.
+
 약한 참조의 경우 [**get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)를 호출합니다. C++/WinRT에서 결과 대리자에 약한 참조가 포함되도록 합니다. 최후의 순간에 백그라운드에서 대리자가 약한 참조를 강한 참조로 확인하려고 하며, 성공하는 경우에만 멤버 함수를 호출합니다.
 
 ```cppwinrt
 event_source.Event({ get_weak(), &EventRecipient::OnEvent });
 ```
+
+대리자에서 멤버 함수를 *호출*하면 C++/WinRT는 처리기가 반환될 때까지 개체를 활성 상태로 유지합니다. 그러나 처리기가 비동기인 경우 일시 중단 지점으로 반환되므로 첫 번째 일시 중단 지점 앞에 클래스 인스턴스에 대한 강한 참조를 코루틴에 제공해야 합니다. 자세한 내용은 이 문서의 앞부분에 있는 [클래스-멤버 코루틴에서 안전하게 *this* 포인터 액세스](#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 섹션을 참조하세요.
 
 ### <a name="a-weak-reference-example-using-swapchainpanelcompositionscalechanged"></a>**SwapChainPanel::CompositionScaleChanged**를 사용하는 약한 참조 예제
 

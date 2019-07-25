@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: da8452329e353c0bbb4b0cedbfe269fd239f9c78
-ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
+ms.openlocfilehash: 87ab033ddd9de92922f043a069b793ca101307d0
+ms.sourcegitcommit: 6cc8b231c1b970112d26a7696cc3e907082ef2be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67800564"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68308451"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -62,7 +62,7 @@ C++/WinRT에 대한 Visual Studio 프로젝트 템플릿은 아래 섹션에서 
 
 C++/WinRT로 COM 스타일 프로그래밍을 이용하지 않고도 자체 표준 C++를 사용하여 런타임 클래스를 구현할 수도 있습니다. 런타임 클래스의 경우 IDL 파일에 형식만 설명하면 `midl.exe` 및 `cppwinrt.exe`가 상용구 원본 코드 파일 구현을 생성합니다. 또는 C++/WinRT 기본 클래스에서 파생하여 인터페이스를 구현할 수도 있습니다. 자세한 내용은 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
-프로젝트 속성을 통해 설정된 `cppwinrt.exe` 도구에 대한 사용자 지정 옵션 목록은 [https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing ]을 참조하세요.
+프로젝트 속성을 통해 설정된 `cppwinrt.exe` 도구에 대한 사용자 지정 옵션 목록은 Microsoft.Windows.CppWinRT NuGet 패키지 [추가 정보](https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing)를 참조하세요.
 
 프로젝트에 설치된 **Microsoft.Windows.CppWinRT** NuGet 패키지가 있는 경우 C++/WinRT MSBuild 지원을 사용하는 프로젝트를 식별할 수 있습니다.
 
@@ -71,7 +71,7 @@ VSIX 확장에서 제공되는 Visual Studio 프로젝트 템플릿은 다음과
 ### <a name="blank-app-cwinrt"></a>비어 있는 앱(C++/WinRT)
 XAML 사용자 인터페이스가 있는 UWP(유니버설 Windows 플랫폼) 앱용 프로젝트 템플릿입니다.
 
-Visual Studio는 각 XAML 태그 파일 뒤에 있는 IDL(Interface Definition Language)(`.idl`) 파일에서 구현과 헤더 스텁을 생성할 목적으로 XAML 컴파일러를 지원합니다. 먼저 IDL 파일에서 앱의 XAML 페이지에서 참조할 로컬 런타임 클래스를 모두 정의한 후 프로젝트를 한 번 빌드하여 구현 템플릿을 `Generated Files`에서 생성하고 스텁 형식 정의를 `Generated Files\sources`에서 생성합니다. 그런 다음, 생성된 스텁 형식 정의를 참조에 사용하여 로컬 런타임 클래스를 구현합니다. 런타임 클래스는 클래스 고유의 IDL 파일에 선언하는 것이 좋습니다.
+Visual Studio는 각 XAML 태그 파일 뒤에 있는 IDL(Interface Definition Language)(`.idl`) 파일에서 구현과 헤더 스텁을 생성할 목적으로 XAML 컴파일러를 지원합니다. 먼저 IDL 파일에서 앱의 XAML 페이지에서 참조할 로컬 런타임 클래스를 모두 정의한 후 프로젝트를 한 번 빌드하여 구현 템플릿을 `Generated Files`에서 생성하고 스텁 형식 정의를 `Generated Files\sources`에서 생성합니다. 그런 다음, 생성된 스텁 형식 정의를 참조에 사용하여 로컬 런타임 클래스를 구현합니다. [런타임 클래스를 Midl 파일(.idl)로 팩터링](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)을 참조하세요.
 
 C++/WinRT에 대한 Visual Studio 2019의 XAML 디자인 화면은 C#의 패리티에 가깝습니다. Visual Studio 2019에서 **속성** 창의 **이벤트** 탭을 사용하여 C++/WinRT 프로젝트에 이벤트 처리기를 추가할 수 있습니다. 수동으로 코드에 이벤트 처리기를 추가할 수도 있습니다. 자세한 내용은 [C++/WinRT에서 대리자를 사용하여 이벤트 처리](handle-events.md)를 참조하세요.
 
@@ -91,7 +91,7 @@ Windows 데스크톱의 C++/WinRT 클라이언트 애플리케이션용 프로�
 
 이 템플릿은 `midl.exe` > `cppwinrt.exe` 도구 체인을 나타냅니다. 이 경우 Windows 런타임 메타데이터(`.winmd`)가 IDL에서 생성된 다음, 구현과 헤더 스텁이 Windows 런타임 메타데이터에서 생성됩니다.
 
-IDL 파일에서 구성 요소의 런타임 클래스와 기본 인터페이스, 그리고 그 밖에 구현되는 인터페이스를 정의합니다. 프로젝트를 1회 빌드하여 `module.g.cpp`, `module.h.cpp`, `Generated Files`의 구현 템플릿 및 `Generated Files\sources`의 스텁 형식 정의를 생성합니다. 그런 다음, 생성된 스텁 형식 정의를 참조에 사용하여 구성 요소의 런타임 클래스를 구현합니다. 런타임 클래스는 클래스 고유의 IDL 파일에 선언하는 것이 좋습니다.
+IDL 파일에서 구성 요소의 런타임 클래스와 기본 인터페이스, 그리고 그 밖에 구현되는 인터페이스를 정의합니다. 프로젝트를 1회 빌드하여 `module.g.cpp`, `module.h.cpp`, `Generated Files`의 구현 템플릿 및 `Generated Files\sources`의 스텁 형식 정의를 생성합니다. 그런 다음, 생성된 스텁 형식 정의를 참조에 사용하여 구성 요소의 런타임 클래스를 구현합니다. [런타임 클래스를 Midl 파일(.idl)로 팩터링](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)을 참조하세요.
 
 빌드된 Windows 런타임 구성 요소 이진 파일 및 이진 파일의 `.winmd`과 함께 이 두 항목을 사용하는 UWP 앱을 번들로 제공합니다.
 

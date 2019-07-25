@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c8cc237dec082096eb235237490e4f5d29cc6dd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c655fbf5582ae5abbb3f415e6e0778b9c64ca7fd
+ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364315"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340836"
 ---
 # <a name="semantic-zoom"></a>시맨틱 줌
 
@@ -76,7 +76,7 @@ ms.locfileid: "66364315"
 **SemanticZoom** 컨트롤은 자체적인 시각적 표현이 없습니다. 콘텐츠 보기를 제공하는 두 가지 다른 컨트롤(일반적으로 **ListView** 또는 **GridView** 컨트롤) 간의 전환을 관리하는 호스트 컨트롤입니다.  보기 컨트롤을 SemanticZoom의 [ZoomedInView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedinview) 및 [ZoomedOutView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedoutview) 속성으로 설정합니다.
 
 시맨틱 줌에 필요한 3가지 요소는 다음과 같습니다.
-- 그룹화된 데이터 원본
+- 그룹화된 데이터 원본. (그룹은 확대 보기에서 GroupStyle 정의로 정의됩니다.)
 - 항목 수준의 데이터를 보여 주는 확대 보기
 - 그룹 수준의 데이터를 보여 주는 축소 보기
 
@@ -195,7 +195,7 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 
 ## <a name="related-articles"></a>관련 문서

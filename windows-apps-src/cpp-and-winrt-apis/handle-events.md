@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: 194fd9041b76acb1ef76288fed21c8098462b406
-ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
+ms.openlocfilehash: b64fbe93198af95402161873c1d68d0da41f33f7
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67844345"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270110"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
@@ -126,7 +126,9 @@ MainPage::MainPage()
 
 ## <a name="revoke-a-registered-delegate"></a>등록된 대리자 취소
 
-대리자를 등록하면 일반적으로 토큰이 반환됩니다. 이후 반환된 토큰을 사용하여 대리자를 취소할 수 있습니다. 이 말은 대리자가 이벤트에서 등록 해제된 후 이벤트가 다시 발생하는 경우에는 대리자를 취소할 수 없다는 것을 의미합니다. 쉽게 설명하기 위해 위의 코드 예제에는 어디에도 취소하는 방법이 나와있지 않습니다. 하지만 다음 코드 예제에서는 구조체의 프라이빗 데이터 멤버에 토큰을 저장한 후 소멸자에서 처리기를 취소합니다.
+대리자를 등록하면 일반적으로 토큰이 반환됩니다. 이후 반환된 토큰을 사용하여 대리자를 취소할 수 있습니다. 이 말은 대리자가 이벤트에서 등록 해제된 후 이벤트가 다시 발생하는 경우에는 대리자를 취소할 수 없다는 것을 의미합니다.
+
+쉽게 설명하기 위해 위의 코드 예제에는 어디에도 취소하는 방법이 나와있지 않습니다. 하지만 다음 코드 예제에서는 구조체의 프라이빗 데이터 멤버에 토큰을 저장한 후 소멸자에서 처리기를 취소합니다.
 
 ```cppwinrt
 struct Example : ExampleT<Example>
@@ -150,6 +152,9 @@ private:
 ```
 
 위의 예제와 같이 강력한 참조 대신 단추에 약한 참조를 저장할 수 있습니다([C++/WinRT의 강력한 참조 및 약한 참조](weak-references.md) 참조).
+
+> [!NOTE]
+> 이벤트 원본에서 해당 이벤트를 동기적으로 발생시키면 처리기를 취소하고 이벤트를 더 이상 받지 않을 것임을 확신할 수 있습니다. 그러나 비동기 이벤트의 경우 해지 후에도(특히 소멸자 내에서 해지하는 경우) 진행 중인 이벤트에서 소멸을 시작한 후 개체에 도달할 수 있습니다. 소멸하기 전에 구독을 취소할 장소를 찾으면 문제가 완화될 수 있습니다. 또는 강력한 해결 방법으로 [이벤트 처리 대리자를 사용하여 안전하게 *this* 포인터 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)를 참조하세요.
 
 그 밖에 대리자를 등록할 때 **winrt::auto_revoke**([**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t) 형식의 값)를 지정하여 이벤트 취소자([**winrt::event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker) 형식)를 요청하는 방법도 있습니다. 이벤트 취소자는 이벤트 원본(이벤트를 발생하게 만든 개체)에 대한 약한 참조를 보유합니다. **event_revoker::revoke** 멤버 함수를 호출하여 수동으로 취소할 수 있지만 함수가 범위를 벗어나면 이벤트 취소자는 자동으로 그 함수를 호출합니다. **취소** 함수는 이벤트 원본이 여전히 존재하는지 확인합니다. 존재하는 경우 대리자를 취소합니다. 이번 예제에서는 이벤트 원본을 저장할 필요도 없고, 소멸자도 필요 없습니다.
 

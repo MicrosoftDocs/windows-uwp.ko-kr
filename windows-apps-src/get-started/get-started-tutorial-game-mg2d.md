@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: a3fa5833d126ea41a6efbf714d2f9dae87eba933
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 01ddc46c80c0ed9a9999ec7c8e67ab9034803a3d
+ms.sourcegitcommit: deb1cdecf34feaa92b0342adc61a5d08f3f10687
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318877"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68332831"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -566,7 +566,7 @@ if (!gameStarted)
 
 먼저 문자열을 두 개 만듭니다. 그 중 하나는 우리가 그리려고 하는 각 텍스트 줄에 대한 것입니다. 다음으로 **SpriteFont.MeasureString(String)** 메서드를 사용하여 각 줄을 인쇄했을 때의 너비와 높이를 측정합니다. 그러면 **Vector2** 개체의 크기, 너비가 포함된 **X** 속성, 높이가 포함된 **Y** 속성을 구할 수 있습니다.
 
-마지막으로 각 줄을 그립니다. 텍스트를 가로 방향으로 가운데에 맞추기 위해 위치 벡터의 **X** 값을 **screenWidth / 2 - textSize.X / 2**로 맞춥니다.
+마지막으로 각 줄을 그립니다. 텍스트를 가로 방향으로 가운데에 맞추기 위해 해당 위치 벡터의 **X** 값을 **screenWidth / 2 - textSize.X / 2**와 동일하게 만듭니다.
 
 **과제:** 텍스트를 가로 방향뿐 아니라 세로 방향으로도 가운데에 맞추려면 위의 절차를 어떻게 변경해야 할까요?
 

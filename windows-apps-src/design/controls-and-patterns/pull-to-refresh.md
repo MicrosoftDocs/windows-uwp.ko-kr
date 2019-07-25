@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2efd091d90a856e45d76c0b1357f30417812160a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 8fdde696a0bc1dc7706f89ede5d525194e5d2830
+ms.sourcegitcommit: f0e539359b9766db0339ddbae3f7ccf0069011e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63791527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885659"
 ---
 # <a name="pull-to-refresh"></a>당겨서 새로 고침
 
@@ -183,6 +183,8 @@ private void Visualizer_RefreshStateChanged(RefreshVisualizer sender, RefreshSta
 ## <a name="examples"></a>예
 
 ### <a name="using-a-scrollviewer-in-a-refreshcontainer"></a>RefreshContainer에서 ScrollViewer 사용
+> [!NOTE]
+> RefreshContainer의 Content는 ScrollViewer, GridView, ListView 등과 같이 스크롤할 수 있는 컨트롤이어야 합니다. Content를 Grid와 같은 컨트롤로 설정하면 정의되지 않은 동작이 발생합니다.
 
 이 예제는 스크롤 뷰어에서 당겨서 새로 고침을 사용하는 방법을 보여줍니다.
 

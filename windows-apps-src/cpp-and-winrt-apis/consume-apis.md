@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: 88a4c65b20c2fb805baecb8a90498e8e4ec9b229
-ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
+ms.openlocfilehash: 5a3d4b554fafeb2053e4e6af831c224b5eacd151
+ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67717626"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68328872"
 ---
 # <a name="consume-apis-with-cwinrt"></a>C++/WinRT를 통한 API 사용
 
@@ -119,7 +119,9 @@ int main()
 
 ## <a name="delayed-initialization"></a>지연된 초기화
 
-프로젝션된 형식의 기본 생성자도 지원하는 Windows 런타임 개체를 만들 수 있습니다. 런타임 개체 없이 Windows 런타임 개체를 생성하여(나중에 해당 작업을 지연시킬 수 있도록) 프로젝션된 형식의 변수를 생성하려면 그렇게 할 수 있습니다. 프로젝션된 형식의 특수 C++/WinRT **std::nullptr_t** 생성자를 사용하여 변수 또는 필드를 선언합니다. C++/WinRT 프로젝션에서는 모든 런타임 클래스에 이 생성자를 삽입합니다.
+C++/WinRT에서 프로젝션된 각 형식에는 특수 C++/WinRT **std::nullptr_t** 생성자가 있습니다. 이를 제외하고는 모든 프로젝션된 형식 생성자(기본 생성자 포함)에서 지원 Windows 런타임 개체를 만들고 이에 대한 스마트 포인터를 제공합니다. 따라서 이 규칙은 초기화되지 않은 로컬 변수, 초기화되지 않은 글로벌 변수 및 초기화되지 않은 멤버 변수와 같은 기본 생성자가 사용되는 모든 위치에 적용됩니다.
+
+반면, 나중에 작업을 지연시킬 수 있도록 프로젝션된 형식의 변수를 생성하고 이에 따라 지원 Windows 런타임 개체를 구성하지 않으려는 경우 그렇게 할 수 있습니다. 해당 특수 C++/WinRT **std::nullptr_t** 생성자(C++/WinRT 프로젝션에서 모든 런타임 클래스에 주입)를 사용하여 변수 또는 필드를 선언합니다. 아래 코드 예제에서는 *m_gamerPicBuffer*가 있는 특수 생성자를 사용합니다.
 
 ```cppwinrt
 #include <winrt/Windows.Storage.Streams.h>
@@ -163,6 +165,8 @@ lookup[2] = value;
 std::map<int, TextBlock> lookup;
 lookup.insert_or_assign(2, value);
 ```
+
+또한 [기본 생성자가 컬렉션에 미치는 영향](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx#how-the-default-constructor-affects-collections)을 참조하세요.
 
 ### <a name="dont-delay-initialize-by-mistake"></a>실수로 지연 초기화하지 않습니다.
 
@@ -375,6 +379,66 @@ Uri account = factory.CreateUri(L"http://www.contoso.com");
 auto factory = winrt::get_activation_factory<BankAccountWRC::BankAccount>();
 BankAccountWRC::BankAccount account = factory.ActivateInstance<BankAccountWRC::BankAccount>();
 ```
+
+## <a name="membertype-ambiguities"></a>멤버/형식 모호성
+
+멤버 함수와 형식의 이름이 같을 경우 모호성이 있습니다. 멤버 함수의 C++ 정규화되지 않은 이름 조회 규칙으로 인해 네임스페이스에서 검색하기 전에 클래스를 검색합니다. *SFINAE*(substitution failure is not an error, 대체 오류는 오류가 아님) 규칙이 적용되지 않습니다(함수 템플릿의 오버로드 확인 중에 적용됨). 따라서 클래스 내의 이름이 적절하지 않으면 컴파일러에서 더 일치하는 항목을 계속 검색하지 않고 단지 오류만 보고할 뿐입니다.
+
+```cppwinrt
+struct MyPage : Page
+{
+    void DoWork()
+    {
+        // This doesn't compile. You get the error
+        // "'winrt::Windows::Foundation::IUnknown::as':
+        // no matching overloaded function found".
+        auto style{ Application::Current().Resources().
+            Lookup(L"MyStyle").as<Style>() };
+    }
+}
+```
+
+위의 컴파일러는 [**FrameworkElement.Style()** ](/uwp/api/windows.ui.xaml.frameworkelement.style)(C++/WinRT에서는 멤버 함수임)을 템플릿 매개 변수로 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)에 전달한다고 간주합니다. 해결 방법은 `Style` 이름을 [**Windows::UI::Xaml::Style**](/uwp/api/windows.ui.xaml.style) 형식으로 해석하도록 강제하는 것입니다.
+
+```cppwinrt
+struct MyPage : Page
+{
+    void DoWork()
+    {
+        // One option is to fully-qualify it.
+        auto style{ Application::Current().Resources().
+            Lookup(L"MyStyle").as<Windows::UI::Xaml::Style>() };
+
+        // Another is to force it to be interpreted as a struct name.
+        auto style{ Application::Current().Resources().
+            Lookup(L"MyStyle").as<struct Style>() };
+
+        // If you have "using namespace Windows::UI;", then this is sufficient.
+        auto style{ Application::Current().Resources().
+            Lookup(L"MyStyle").as<Xaml::Style>() };
+
+        // Or you can force it to be resolved in the global namespace (into which
+        // you imported the Windows::UI::Xaml namespace when you did
+        // "using namespace Windows::UI::Xaml;".
+        auto style = Application::Current().Resources().
+            Lookup(L"MyStyle").as<::Style>();
+    }
+}
+```
+
+이름 뒤에 `::`이 나오는 경우 정규화되지 않은 이름 조회에는 특별한 예외가 있습니다. 이 경우 함수, 변수 및 열거형 값이 무시됩니다. 이렇게 하면 다음과 같은 작업을 수행할 수 있습니다.
+
+```cppwinrt
+struct MyPage : Page
+{
+    void DoSomething()
+    {
+        Visibility(Visibility::Collapsed); // No ambiguity here (special exception).
+    }
+}
+```
+
+`Visibility()`에 대한 호출이 [**UIElement.Visibility**](/uwp/api/windows.ui.xaml.uielement.visibility) 멤버 함수 이름으로 확인됩니다. 그러나 `Visibility::Collapsed` 매개 변수에는 `Visibility` 단어 뒤에 `::`이 있으므로 해당 메서드 이름이 무시되고 컴파일러에서 열거형 클래스를 찾습니다.
 
 ## <a name="important-apis"></a>중요 API
 * [QueryInterface 인터페이스](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
