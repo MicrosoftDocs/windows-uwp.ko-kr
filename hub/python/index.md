@@ -7,17 +7,17 @@ ms.author: mattwoj
 manager: jken
 ms.topic: landing-page
 ms.date: 07/19/2019
-keywords: windows, python 개발
-ms.openlocfilehash: efaa587578fef891f9b870c9f357f19c5f8e5bb7
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+keywords: windows, python 개발, windows에서 python으로 시작하는 방법, linux용 windows 하위 시스템의 python, wsl이 있는 python, windows에서 python용 개발 환경 설정, windows에서 python용 IDE, windows에서 python이 설치되는 위치, windows에서 python 실행, windows의 초보자용 python
+ms.openlocfilehash: 7711230b141c57135e1cda3f68416f0ed5287eac
+ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68349330"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473646"
 ---
 # <a name="develop-with-python-on-windows"></a>Windows PC에서 Python으로 개발
 
-숙련 개발자나 초보 개발자 모두에게 가장 중요한 결정 사항 중 하나는 사용할 하드웨어의 유형과 개발 환경을 결정하는 것입니다. Windows는 Python 개발자에 대한 지원을 강화하기 위해 상당한 발전을 이루고 있습니다. 이 곳을 통해 개발 환경을 설정하는 방법, 네이티브 Windows와 Linux용 Windows 하위 시스템 중 어디에 도구를 설치할지에 대한 지침, 그리고 VS Code와 Git과 같은 도구를 통합하는 방법을 알아볼 수 있습니다.
+숙련된 개발자이든 Python 코딩을 막 시작하든 관계 없이, 가장 중요한 결정 중 하나는 사용할 개발 환경입니다. 여기서부터 개발 환경 설정, 기본 Windows 또는 Linux용 Windows 하위 시스템에 도구를 설치할지 여부, 그리고 VS Code와 Git과 같은 도구를 통합하는 방법에 대한 지침을 살펴봅니다. Windows는 Python 개발자를 지원하는 기능이 크게 향상되고 있으며, 여러분이 시작하는 데 도움을 드리고 싶습니다.
 
 <ul class="cardsK panelContent">
     <li>
