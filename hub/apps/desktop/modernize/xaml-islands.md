@@ -1,19 +1,19 @@
 ---
 description: 이 가이드에서는 WPF 및 Windows Forms 응용 프로그램에서 직접 Fluent 기반 UWP UI를 만들 수 있습니다.
 title: 데스크톱 앱의 UWP 컨트롤
-ms.date: 07/17/2019
+ms.date: 07/26/2019
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 79dcd6069a5746e04565db660e6f5c03988a94a4
-ms.sourcegitcommit: 2062d06567ef087ad73507a03ecc726a7d848361
+ms.openlocfilehash: 560d339476ef3cd45f30bfc678661fb0a4a11ee1
+ms.sourcegitcommit: f6af7aeb8506379a184207035c8e43288cb31453
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68303560"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68601542"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱에서 UWP XAML 컨트롤 호스트 (XAML 제도)
 
@@ -76,40 +76,14 @@ Windows 커뮤니티 도구 키트는 XAML 아일랜드에 대해 래핑된 컨�
 
 XAML 아일랜드에는 Windows 10, 버전 1903 이상이 필요 합니다. 응용 프로그램에서 XAML 아일랜드를 사용 하려면 먼저 프로젝트를 설정 해야 합니다.
 
-### <a name="wpf-and-windows-forms"></a>WPF 및 Windows Forms
+1. Windows 런타임 Api를 사용 하도록 프로젝트를 수정 합니다. 자세한 내용은 [이 문서](desktop-to-uwp-enhance.md#set-up-your-project)를 참조 하세요.
+2. 이러한 NuGet 패키지 중 하나를 프로젝트에 설치 합니다. 버전 6.0.0-preview 6.4 이상 버전의 패키지를 설치 했는지 확인 합니다.
+    * WPF: [Microsoft Toolkit. 컨트롤](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 을 설치 합니다.
+    * Windows Forms: [Microsoft Toolkit. 컨트롤](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.Controls)
+    * C++(Win32 [Microsoft Toolkit. XamlApplication 프로그램](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication)
 
-* Windows 런타임 Api를 사용 하도록 프로젝트를 수정 합니다. 자세한 내용은 [이 문서](desktop-to-uwp-enhance.md#set-up-your-project)를 참조 하세요.
-
-* 프로젝트에 최신 버전의 WPF 용 [Microsoft toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) (wpf 용) 또는 [microsoft](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.Controls) Windows Forms NuGet 패키지를 설치 해야 합니다. 버전 6.0.0-preview 6.4 이상 버전의 패키지를 설치 했는지 확인 합니다.
-
-### <a name="cwin32"></a>C++/Win32
-
-* Windows 런타임 Api를 사용 하도록 프로젝트를 수정 합니다. 자세한 내용은 [이 문서](desktop-to-uwp-enhance.md#set-up-your-project)를 참조 하세요.
-* 다음 작업 중 하나를 수행합니다.
-
-    **MSIX 패키지에서 응용 프로그램을 패키지**합니다. [Msix 패키지](https://docs.microsoft.com/windows/msix/) 에서 응용 프로그램을 패키징하 면 다양 한 배포 및 런타임 이점이 제공 됩니다.
-    1. Windows 10 버전 1903 SDK (또는 이후 버전)를 설치 합니다.
-    2. [Windows 응용 프로그램 패키징 프로젝트](https:/docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) 를 솔루션에 추가 하 고 C++/win32 프로젝트에 대 한 참조를 추가 하 여 msix 패키지에 응용 프로그램을 패키지 합니다.
-
-    **응용 프로그램 매니페스트에서 maxversiontested 값을 설정**합니다. MSIX 패키지에서 응용 프로그램을 패키지 하지 않으려는 경우 XAML 아일랜드를 사용 하려면 먼저 프로젝트에 [응용 프로그램 매니페스트](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests) 를 추가 하 고 매니페스트에 **maxversiontested** 요소를 추가 하 여 응용 프로그램을 지정 해야 합니다. Windows 10 버전 1903 이상과 호환 됩니다.
-    1. 프로젝트에 응용 프로그램 매니페스트가 아직 없는 경우 프로젝트에 새 XML 파일을 추가 하 고 이름을 **app.config**로 표시 합니다.
-    2. 응용 프로그램 매니페스트에서 다음 예제에 표시 된 것과 같은 **호환성** 요소와 자식 요소를 포함 합니다. **Maxversiontested** 요소의 **Id** 특성을 대상으로 하는 windows 10의 버전 번호로 바꿉니다 (windows 10, 버전 1903 이상 릴리스).
-
-        ```xml
-        <?xml version="1.0" encoding="UTF-8"?>
-        <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
-            <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
-                <application>
-                    <!-- Windows 10 -->
-                    <maxversiontested Id="10.0.18362.0"/>
-                    <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
-                </application>
-            </compatibility>
-        </assembly>
-        ```
-
-        > [!NOTE]
-        > 응용 프로그램 매니페스트에 **maxversiontested** 요소를 추가 하면 프로젝트 `manifest authoring warning 81010002: Unrecognized Element "maxversiontested" in namespace "urn:schemas-microsoft-com:compatibility.v1"`에 다음 빌드 경고가 표시 될 수 있습니다. 이 경고는 프로젝트에서 문제가 발생 한 것으로 표시 되지 않으며 무시 해도 됩니다.
+> [!NOTE]
+> 이러한 지침의 이전 버전에서는 프로젝트의 응용 프로그램 매니페스트에 **maxversiontested** 요소를 추가 했습니다. NuGet 패키지의 최신 미리 보기 버전을 사용할 경우이 요소를 매니페스트에 더 이상 추가할 필요가 없습니다.
 
 ## <a name="feature-roadmap"></a>기능 로드맵
 
