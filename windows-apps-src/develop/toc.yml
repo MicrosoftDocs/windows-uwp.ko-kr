@@ -738,45 +738,15 @@
         - name: 결제 요청 API를 사용하여 결제 간소화
           href: ../monetize/payment-request.md
     - name: 앱 패키징
-      href: ../packaging/index.md
       items:
-        - name: Visual Studio를 사용하여 UWP 앱 패키징
-          href: ../packaging/packaging-uwp-apps.md
-        - name: 수동 앱 패키징
-          href: ../packaging/manual-packaging-root.md
-          items:
-            - name: MakeAppx.exe 도구를 사용하여 앱 패키지 만들기
-              href: ../packaging/create-app-package-with-makeappx-tool.md
-            - name: 패키지 서명용 인증서 만들기
-              href: ../packaging/create-certificate-package-signing.md
-            - name: SignTool을 사용하여 앱 패키지에 서명
-              href: ../packaging/sign-app-package-using-signtool.md
-            - name: 자산 패키지 및 패키지 접기를 사용하여 개발
-              href: ../packaging/package-folding.md
-            - name: 플랫 번들 앱 패키지
-              href: ../packaging/flat-bundles.md
-            - name: 자산 패키지 소개
-              href: ../packaging/asset-packages.md
-            - name: 패키징 레이아웃으로 패키지 만들기
-              href: ../packaging/packaging-layout.md
-        - name: 앱 패키지 아키텍처
-          href: ../packaging/device-architecture.md
-        - name: UWP 앱 스트리밍 설치
-          href: ../packaging/streaming-install.md
-          items:
-            - name: 소스 콘텐츠 그룹 맵 생성 및 변환
-              href: ../packaging/create-cgm.md
-        - name: 선택형 패키지 및 관련 세트 제작
-          href: ../packaging/optional-packages.md
-          items:
-            - name: 실행 가능한 코드가 있는 옵션 패키지
-              href: ../packaging/optional-packages-with-executable-code.md
-        - name: WinAppDeployCmd.exe 도구를 사용하여 앱 설치
-          href: ../packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md
+        - name: 개요
+          href: ../packaging/index.md
         - name: 앱 접근 권한 값 선언
           href: ../packaging/app-capability-declarations.md
         - name: UWP 앱에 대한 자동화된 빌드 설정
           href: ../packaging/auto-build-package-uwp-apps.md
+        - name: WinAppDeployCmd.exe 도구를 사용하여 앱 설치
+          href: ../packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md
         - name: Microsoft Store에서 패키지 업데이트 다운로드 및 설치
           href: ../packaging/self-install-package-updates.md
 - name: 플랫폼
