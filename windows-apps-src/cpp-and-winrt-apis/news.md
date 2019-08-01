@@ -6,14 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 새로운 기능
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 524d0f2d9e428e87187ca27747fbd1c54406d345
-ms.sourcegitcommit: 6cc8b231c1b970112d26a7696cc3e907082ef2be
+ms.openlocfilehash: e1fd738435b8622a2db2e849abf1c4984bb7ae64
+ms.sourcegitcommit: fccefde61a155a4a5a866acd1c4c9de42a14ddfd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68308435"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507724"
 ---
 # <a name="whats-new-in-cwinrt"></a>C++/WinRT의 새로운 기능
+
+이후 버전의 C++/WinRT가 출시됨에 따라 이 항목에서 새롭거나 변경된 기능에 대해 설명합니다.
 
 ## <a name="news-and-changes-in-cwinrt-20"></a>C++/WinRT 2.0의 새로운 기능 및 변경 내용
 
@@ -49,22 +51,14 @@ xlang 메타데이터 판독기로 인해 `cppwinrt.exe` 도구 자체의 종속
  
 이 종속성은 `cppwinrt.exe` 2.0에 해당합니다.
  
-- api-ms-win-core-processenvironment-l1-1-0.dll
-- api-ms-win-core-libraryloader-l1-2-0.dll
-- XmlLite.dll
-- api-ms-win-core-memory-l1-1-0.dll
-- api-ms-win-core-handle-l1-1-0.dll
-- api-ms-win-core-file-l1-1-0.dll
-- SHLWAPI.dll
 - ADVAPI32.dll
 - KERNEL32.dll
-- api-ms-win-core-rtlsupport-l1-1-0.dll
-- api-ms-win-core-processthreads-l1-1-0.dll
-- api-ms-win-core-heap-l1-1-0.dll
-- api-ms-win-core-console-l1-1-0.dll
-- api-ms-win-core-localization-l1-2-0.dll
+- SHLWAPI.dll
+- XmlLite.dll
 
-이 종속성은 `cppwinrt.exe` 1.0의 종속성과 대조적입니다.
+이러한 DLL은 모두 Windows 10뿐만 아니라 Windows 7, 심지어 Windows Vista에서도 사용할 수 있습니다. 이렇게 하려면 Windows 7을 실행하는 이전 빌드 서버에서 이제 `cppwinrt.exe`를 실행하여 프로젝트에 대한 C++ 헤더를 생성할 수 있습니다. 관심이 있는 경우 약간의 작업을 통해 [Windows 7에서 C++/WinRT를 실행](https://github.com/kennykerr/win7)할 수도 있습니다.
+
+위의 목록을 다음과 같은 `cppwinrt.exe` 1.0의 종속성과 대조합니다.
 
 - ADVAPI32.dll
 - SHELL32.dll
@@ -150,7 +144,9 @@ xlang 메타데이터 판독기로 인해 C++/WinRT는 이제 메타데이터에
 
 ##### <a name="uniform-construction-and-direct-implementation-access"></a>균일한 생성 및 직접 구현 액세스
 
-이 두 가지 최적화에서는 프로젝션된 형식만 사용하는 경우에도 고유한 구현 형식에 대한 구성 요소 직접 액세스를 허용합니다. 공용 API 표면을 사용하려는 경우에는 [**make**](/uwp/cpp-ref-for-winrt/make), [**make_self**](/uwp/cpp-ref-for-winrt/make-self) 및 [**get_self**](/uwp/cpp-ref-for-winrt/get-self)를 사용할 필요가 없습니다. 호출은 호출을 구현으로 이동하도록 컴파일되며 완전히 인라인될 수도 있습니다. 균일한 생성에 대한 자세한 내용은 FAQ에서 ["클래스가 등록되지 않음" 예외가 발생하는 이유는 무엇인가요?](faq.md#why-am-i-getting-a-class-not-registered-exception)를 참조하세요.
+이 두 가지 최적화에서는 프로젝션된 형식만 사용하는 경우에도 고유한 구현 형식에 대한 구성 요소 직접 액세스를 허용합니다. 공용 API 표면을 사용하려는 경우에는 [**make**](/uwp/cpp-ref-for-winrt/make), [**make_self**](/uwp/cpp-ref-for-winrt/make-self) 및 [**get_self**](/uwp/cpp-ref-for-winrt/get-self)를 사용할 필요가 없습니다. 호출은 호출을 구현으로 이동하도록 컴파일되며 완전히 인라인될 수도 있습니다.
+
+자세한 내용과 및 코드 예제는 [균일한 생성 및 직접 구현 액세스 옵트인](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access)을 참조하세요.
 
 ##### <a name="type-erased-factories"></a>형식이 지워진 팩터리
 
@@ -186,9 +182,11 @@ fire_and_forget Async(DispatcherQueueController controller)
 
 이제 코루틴 도우미는 `[[nodiscard]]`로 데코레이트되기도 하므로 사용 편의성이 향상됩니다. 그러나 코루틴 도우미 작동에 필요한 코루틴 도우미 `co_await`를 수행하는 것을 잊거나 감지하지 못하는 실수를 하면 `[[nodiscard]]`로 인해 컴파일러 경고가 생성됩니다.
 
-#### <a name="help-with-diagnosing-stack-allocations"></a>스택 할당 진단 지원
+#### <a name="help-with-diagnosing-direct-stack-allocations"></a>직접(스택) 할당 진단 지원
 
 프로젝션 및 구현 클래스 이름은 기본적으로 동일하고 네임스페이스로만 구별되므로 두 클래스를 혼동할 수 있고 도우미의 [**make**](/uwp/cpp-ref-for-winrt/make) 패밀리를 사용하는 대신 실수로 스택에서 구현을 만들 수도 있습니다. 해결되지 않은 참조가 진행되는 동안 개체가 소멸될 수 있으므로 경우에 따라 이 문제를 진단하기가 어려울 수 있습니다. 이제 어설션은 디버그 빌드를 위해 이 문제를 발견합니다. 어설션은 코루틴 내부에서 스택 할당을 감지하지 않지만 대부분의 해당 실수를 발견하는 데 유용합니다.
+
+자세한 내용은 [직접 할당 진단](/windows/uwp/cpp-and-winrt-apis/diag-direct-alloc)을 참조하세요.
 
 #### <a name="improved-capture-helpers-and-variadic-delegates"></a>향상된 캡처 도우미 및 variadic 대리자
 
@@ -257,6 +255,8 @@ struct MainPage : PageT<MainPage>
 };
 ```
 
+자세한 내용은 [소멸자에 대한 세부 정보](/windows/uwp/cpp-and-winrt-apis/details-about-destructors)를 참조하세요.
+
 #### <a name="improved-support-for-com-style-single-interface-inheritance"></a>COM 스타일 단일 인터페이스 상속에 대한 향상된 지원
 
 또한 Windows 런타임 프로그래밍을 위해 C++/WinRT는 COM 전용 API를 작성하고 사용하는 데 사용됩니다. 이 업데이트를 통해 인터페이스 계층 구조가 있는 COM 서버를 구현할 수 있습니다. 이 서버는 Windows 런타임에 필요하지 않지만 일부 COM 구현에는 필요합니다.
@@ -283,7 +283,7 @@ struct MainPage : PageT<MainPage>
 | Visual Studio 프로젝트 시스템 형식이 변경되었습니다. | 아래 [C++/WinRT 프로젝트의 대상을 Windows SDK 최신 버전으로 다시 지정하는 방법](#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)을 참조하세요. |
 | Windows 런타임 함수에 컬렉션 개체를 전달하는 데 도움이 되거나 자체 컬렉션 속성과 컬렉션 형식을 구현하는 새로운 함수와 기본 클래스가 있습니다. | [C++/WinRT로 작성된 컬렉션](collections.md)을 참조하세요. |
 | C++/WinRT 런타임 클래스와 함께 [{바인딩}](/windows/uwp/xaml-platform/binding-markup-extension) 태그 확장을 사용할 수 있습니다. | 자세한 내용과 코드 예제는 [데이터 바인딩 개요](/windows/uwp/data-binding/data-binding-quickstart)를 참조하세요. |
-| 코루틴 취소 지원을 통해 취소 콜백을 등록할 수 있습니다. | 자세한 내용과 코드 예제는 [비동기 작업 취소 및 취소 콜백](concurrency.md#canceling-an-asychronous-operation-and-cancellation-callbacks)를 참조하세요. |
+| 코루틴 취소 지원을 통해 취소 콜백을 등록할 수 있습니다. | 자세한 내용과 코드 예제는 [비동기 작업 취소 및 취소 콜백](concurrency-2.md#canceling-an-asychronous-operation-and-cancellation-callbacks)를 참조하세요. |
 | 멤버 함수를 가리키는 대리자를 만들 때 처리기가 등록된 지점에서 원시 *this* 포인터 대신에 현재 개체에 대한 강력하거나 약한 참조를 설정할 수 있습니다. | 자세한 내용과 코드 예제는 [이벤트 처리 대리자를 사용하여 안전하게 *this* 포인터 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate) 섹션에서 **멤버 함수를 대리자로 사용하는 경우** 하위 섹션을 참조하세요. |
 | Visual Studio의 C++ 표준 규칙이 향상되어 처리되지 않았던 버그가 수정되었습니다. C++/WinRT의 표준 규칙의 유효성을 검사하기 위해 LLVM 및 Clang 도구 체인을 더 효율적으로 이용합니다. | [새 프로젝트가 컴파일되지 않는 이유는 무엇인가요? Visual Studio 2017(버전 15.8.0 이상) 및 SDK 버전 17134를 사용하고 있습니다.](faq.md#why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134)에 설명된 문제가 더 이상 발생하지 않습니다. |
 

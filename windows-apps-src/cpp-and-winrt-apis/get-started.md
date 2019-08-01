@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 시작하기, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: 64104124a6342da3f6963c61bafc871838fd00f6
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 346877178b4450df5fb0151656d58e203ea0be63
+ms.sourcegitcommit: 4e74c920f1fef507c5cdf874975003702d37bcbb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721684"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68372731"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 
@@ -158,6 +158,26 @@ C++/WinRT 언어 프로젝션은 [WindowsApp.lib](/uwp/win32-and-com/win32-apis)
 ```
 
 이제 컴파일하고 연결한 다음, 프로젝트에 C++/WinRT 코드(예: 위의 [C++/WinRT 빠른 시작](#a-cwinrt-quick-start) 섹션의 코드와 유사한 코드)를 추가할 수 있습니다.
+
+## <a name="the-three-main-scenarios-for-cwinrt"></a>C++/WinRT에 대한 세 가지 주요 시나리오
+
+C++/WinRT를 사용하여 익숙해지고 이 설명서의 나머지 부분을 살펴보면 다음 섹션에서 설명하는 세 가지 주요 시나리오가 있음을 알 수 있습니다.
+
+### <a name="consuming-windows-runtime-apis-and-types"></a>Windows 런타임 API 및 형식 사용
+
+즉 API를 *사용*하거나 *호출*합니다. 예를 들어 Bluetooth를 통한 통신, 비디오 스트리밍 및 표시, Windows 셸과의 통합 등을 수행하는 API를 호출합니다. C++/WinRT는 이 시나리오 범주를 완벽하고 단호하게 지원합니다. 자세한 내용은 [C++/WinRT를 통한 API 사용](/windows/uwp/cpp-and-winrt-apis/consume-apis)을 참조하세요.
+
+### <a name="authoring-windows-runtime-apis-and-types"></a>Windows 런타임 API 및 형식 작성
+
+즉 API 및 형식을 *생성*합니다. 예를 들어 위의 섹션에서 설명하는 종류의 API, 그래픽 API, 스토리지 및 파일 시스템 API, 네트워킹 API 등을 생성합니다. 자세한 내용은 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)을 참조하세요.
+
+API를 구현하려면 먼저 IDL을 사용하여 해당 API의 모양을 정의해야 하므로 C++/WinRT를 사용하여 API를 작성하는 것이 이러한 API를 사용하는 것보다 더 중요합니다. 이러한 작업은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](/windows/uwp/cpp-and-winrt-apis/binding-property)에서 연습할 수 있습니다.
+
+### <a name="xaml-applications"></a>XAML 애플리케이션
+
+이 시나리오는 애플리케이션 및 컨트롤을 XAML UI 프레임워크에 구축하는 것입니다. XAML 애플리케이션에서 작업하는 것은 사용과 작성의 조합에 해당합니다. 그러나 XAML은 현재 Windows에서 가장 많이 사용되는 UI 프레임워크이며 Windows 런타임에 대한 영향력은 이에 비례하므로 고유한 시나리오 범주가 있습니다.
+
+XAML은 리플렉션을 제공하는 프로그래밍 언어에서 가장 효율적으로 작동합니다. C++/WinRT에서는 XAML 프레임워크와 상호 운용하기 위해 약간의 추가 작업을 수행해야 하는 경우도 있습니다. 이러한 모든 사례는 설명서에서 다룹니다. 적절한 시작 지점은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](/windows/uwp/cpp-and-winrt-apis/binding-property) 및 [C++/WinRT를 통한 XAML 사용자 지정(템플릿 기반) 컨트롤](/windows/uwp/cpp-and-winrt-apis/xaml-cust-ctrl)입니다.
 
 ## <a name="important-apis"></a>중요 API
 * [SyndicationClient::RetrieveFeedAsync 메서드](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)

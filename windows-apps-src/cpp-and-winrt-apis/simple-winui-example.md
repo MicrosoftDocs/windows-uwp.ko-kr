@@ -5,16 +5,16 @@ ms.date: 07/12/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, Windows UI 라이브러리, WinUI
 ms.localizationpriority: medium
-ms.openlocfilehash: 082e7ca0684495e1f67c2fa79b448866f68a059c
-ms.sourcegitcommit: cba3ba9b9a9f96037cfd0e07d05bd4502753c809
+ms.openlocfilehash: 5d0066abb2a6eb15f1d31aaf930ed2c0f0faf81a
+ms.sourcegitcommit: 4e74c920f1fef507c5cdf874975003702d37bcbb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2019
-ms.locfileid: "67870348"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68372713"
 ---
 # <a name="a-simple-cwinrt-windows-ui-library-example"></a>간단한 C++/WinRT Windows UI 라이브러리 예제
 
-이 항목에서는 간단한 WinUI(Windows UI) 라이브내러리 지원을 C++/WinRT 프로젝트에 추가하는 과정을 안내합니다.
+이 항목에서는 간단한 [WinUI(Windows UI) 라이브내러리](https://github.com/Microsoft/microsoft-ui-xaml) 지원을 C++/WinRT 프로젝트에 추가하는 과정을 안내합니다. 덧붙여 말해, Windows UI 라이브러리 자체는 C++/WinRT로 작성됩니다.
 
 > [!NOTE]
 > 이 항목에서 알 수 있듯이 WinUI(Windows UI) 라이브러리 도구 키트는 Visual Studio를 사용하여 기존 또는 새 프로젝트에 추가할 수 있는 NuGet 패키지로 사용할 수 있습니다. 자세한 배경, 설정 및 지원 정보는 [Windows UI 라이브러리 시작](/uwp/toolkits/winui/getting-started)을 참조하세요.
@@ -49,7 +49,9 @@ Visual Studio에서 **비어 있는 앱(C++/WinRT)** 프로젝트 템플릿을 �
 
 ## <a name="edit-mainpageh-and-cpp-as-necessary"></a>필요에 따라 MainPage.h 및 .cpp를 편집합니다.
 
-`MainPage.h`에서 다음과 같이 표시되도록 include를 편집합니다.
+NuGet 패키지(예: 이전에 추가한 **Microsoft.UI.Xaml** 패키지)를 C++/WinRT 프로젝트에 추가하면 도구에서 일단의 프로젝션 헤더를 프로젝트의 `\Generated Files\winrt` 폴더에 생성합니다. 이러한 헤더 파일을 프로젝트에 가져와서 이러한 새 형식의 참조가 해결되도록 하려면 해당 헤더 파일이 포함되어야 합니다.
+
+따라서 `MainPage.h`에서 include를 아래 목록과 같이 편집합니다. 둘 이상의 XAML 페이지에서 WinUI를 사용하는 경우 미리 컴파일된 헤더 파일(일반적으로 `pch.h`)로 이동하여 대신 포함시킬 수 있습니다.
 
 ```cppwinrt
 #include "MainPage.g.h"

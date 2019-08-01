@@ -4,13 +4,13 @@ description: 현재 사용하는 디바이스 및 입력 형식에 관계없이,
 author: Karl-Bridge-Microsoft
 ms.service: ''
 ms.topic: overview
-ms.date: 03/11/2019
-ms.openlocfilehash: a85a101cd529bf487cbc97b93bb3905f28213c19
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.date: 07/23/2019
+ms.openlocfilehash: 338cae7b6238c3c773f409322600c8bee8c193f5
+ms.sourcegitcommit: 401c8ecaf74eee247f1ed0093028cc6558b4a605
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63793855"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446375"
 ---
 # <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>StandardUICommand, XamlUICommand 및 ICommand를 사용하는 UWP(유니버설 Windows 플랫폼) 앱의 명령
 
@@ -36,9 +36,11 @@ ms.locfileid: "63793855"
 
 명령은 텍스트를 삭제하거나 작업을 취소하는 등의 경우처럼 앱 내의 특정 상황에서 작동할 수도 있고, 오디오 음소거나 밝기 조정처럼 상황에 관계 없이 작동할 수도 있습니다.
 
-다음 이미지는 여러 동일한 명령을 공유하는 두 개의 명령 인터페이스([CommandBar](app-bars.md) 및 부동 [CommandBarFlyout](command-bar-flyout.md))를 보여줍니다.
+다음 이미지에서는 동일한 명령 중 일부를 공유하는 두 개의 명령 인터페이스([CommandBar](app-bars.md) 및 움직이는 상황별 [CommandBarFlyout](command-bar-flyout.md))를 보여 줍니다.
 
-![명령 인터페이스 예제](images/commanding/command-interface-example.png)
+![Microsoft 사진의 명령 모음](images/control-examples/command-bar-photos.png)<br>*Microsoft 사진의 명령 모음*
+
+![Microsoft 사진 갤러리의 상황에 맞는 메뉴](images/ContextMenu_example.png)<br>*Microsoft 사진 갤러리의 상황에 맞는 메뉴*
 
 ## <a name="command-interactions"></a>명령 상호 작용
 

@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 01ff6fb443550287330d6fe503c3d49d81e2142c
-ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
+ms.openlocfilehash: 6bac3fec34467f29d9cf2cc3f1ce4e3754187745
+ms.sourcegitcommit: 7ece8a9a9fa75e2e92aac4ac31602237e8b7fde5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67717646"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485154"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT에 대해 자주 묻는 질문
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
@@ -63,15 +63,9 @@ Windows 런타임 클래스(런타임 클래스)를 ‘사용’하기만 하는
 
 ### <a name="uniform-construction"></a>균일한 생성
 
-프로젝션된 형식의 생성자 중 하나(**std::nullptr_t** 생성자 제외)를 통해 로컬로 구현한 런타임 클래스를 인스턴스화하려는 경우에도 이 오류가 발생할 수 있습니다. 이 작업을 수행하려면 균일한 생성이라고 부르는 C++/WinRT 2.0 기능이 필요합니다. 그러나 균일한 생성이 필요하지 *않은* 로컬로 구현한 런타임 클래스를 인스턴스화하는 방법은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md)을 참조하세요.
+프로젝션된 형식의 생성자 중 하나(**std::nullptr_t** 생성자 제외)를 통해 로컬로 구현한 런타임 클래스를 인스턴스화하려는 경우에도 이 오류가 발생할 수 있습니다. 이 작업을 수행하려면 균일한 생성이라고 부르는 C++/WinRT 2.0 기능이 필요합니다. 해당 기능을 옵트인하려고 하고 자세한 내용과 코드 예제를 알아보려면 [균일한 생성 및 직접 구현 액세스 옵트인](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access)을 참조하세요.
 
-균일한 생성을 *수행*하려는 경우 이 기능은 새 프로젝트에 대해 기본적으로 사용하도록 설정됩니다. 기존 프로젝트의 경우 `cppwinrt.exe` 도구를 구성하여 균일한 생성을 옵트인해야 합니다. Visual Studio에서 프로젝트 속성 **공용 속성** > **C++/WinRT** > **최적화됨**을 *예*로 설정합니다. 이렇게 하면 `<CppWinRTOptimized>true</CppWinRTOptimized>`를 프로젝트 파일에 추가하는 효과가 있습니다. 또한 명령줄에서 `cppwinrt.exe`를 호출할 때 `-opt[imize]` 스위치를 추가하는 것과 동일한 효과입니다.
-
-이 설정 *없이* 프로젝트를 빌드하면 결과 C++/WinRT 프로젝션에서 [**RoGetActivationFactory**](/windows/win32/api/roapi/nf-roapi-rogetactivationfactory)를 호출하여 런타임 클래스의 생성자 및 정적 멤버에 액세스합니다. 또한 클래스를 등록해야 하며, 사용자 모듈에서 [**DllGetActivationFactory**](/previous-versions/br205771(v=vs.85)) 진입점을 구현해야 합니다.
-
-`-opt[imize]` 스위치를 *사용하여* 프로젝트를 빌드하면 프로젝트에서 구성 요소의 클래스에 대해 **RoGetActivationFactory**를 바이패스할 수 있으며, 따라서 구성 요소 외부에 있는 경우 수행했던 것과 동일한 방법으로 클래스를 생성할 수 있습니다.
-
-균일한 생성을 사용하려면 구현 헤더 파일을 포함한 후 각 구현의 `.cpp` 파일도 `#include <Sub/Namespace/ClassName.g.cpp>`로 편집해야 합니다.
+균일한 생성이 필요하지 *않은* 로컬로 구현한 런타임 클래스를 인스턴스화하는 방법은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md)을 참조하세요.
 
 ## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>[**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable)을 구현해야 하나요? 구현해야 한다면 어떻게 구현하나요?
 소멸자에서 리소스를 해제하는 런타임 클래스가 있고, 이 런타임 클래스가 구현하는 컴파일 단위 외부에서 사용하도록 설계된 경우(여기에서 런타임 클래스는 Windows 런타임 클라이언트 앱에서 일반 용도로 사용하는 Windows 런타임 구성 요소임), 결정적 종료가 없는 언어에서 런타임 클래스를 사용할 수 있도록 지원하기 위해 **IClosable**도 구현하는 것이 좋습니다. 소멸자, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close) 또는 둘 다 호출하든 관계없이 리소스가 해제되는지 확인합니다. **IClosable::Close**는 원하는 횟수만큼 임의로 호출할 수 있습니다.

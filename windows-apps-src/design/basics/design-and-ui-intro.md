@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 25dc7118fcb7d9c6e997fae458ef7846777b1262
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 2b0f5918b240bf5c28e49f2ede6f10dbeefcbbfc
+ms.sourcegitcommit: e13f06042a28a8455a211b8693a009098e150cd1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "65983923"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68522097"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 
@@ -47,12 +47,12 @@ UWP 앱은 모든 디바이스와 화면 크기에서 쉽게 읽고 상호 작�
 
 :::row:::
     :::column span:::
-        The sizes, margins, and positions of UI elements should always be in **multiples of 4 epx** in your UWP apps.
+UWP 앱에서 UI 요소의 크기, 여백, 위치는 항상 **4epx의 배수**여야 합니다.
 
-        UWP scales across a range of devices with scaling plateaus of 100%, 125%, 150%, 175%, 200%, 225%, 250%, 300%, 350%, and 400%. The base unit is 4 because it's the only integer that can be scaled by non-whole numbers (e.g. 4*1.5 = 6). Using multiples of four aligns all UI elements with whole pixels and ensures UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
+UWP는 다양한 디바이스에서 100%, 125%, 150%, 175%, 200%, 225%, 250%, 300%, 350%, 400%의 크기 조정 안정화를 사용하여 크기 조정됩니다. 기준 단위는 정수가 아닌 숫자(예: 4*1.5 = 6)로 크기 조정할 수 있는 유일한 정수이므로 4입니다. 4의 배수를 사용하면 모든 UI 요소가 전체 픽셀에 맞춰지고, UI 요소의 선명하고 날카로운 가장자리가 보장됩니다. (텍스트에는 이 요구 사항이 없으며, 해당 크기와 위치를 지정할 수 있습니다.)
     :::column-end:::
     :::column:::
-        ![grid](images/4epx.svg)
+![그리드](images/4epx.svg)
     :::column-end:::
 :::row-end:::
 
@@ -64,21 +64,21 @@ UWP 앱은 모든 디바이스에 자동으로 조정되므로 모든 디바이�
 
 :::row:::
     :::column:::
-        When a UWP app is launched on any Windows 10 device, it launches in a [Window](/uwp/api/windows.ui.xaml.window) with a [Frame](/uwp/api/windows.ui.xaml.controls.frame), which can navigate between [Page](/uwp/api/windows.ui.xaml.controls.page) instances.
+UWP 앱이 모든 Windows 10 디바이스에서 시작되면 [페이지](/uwp/api/windows.ui.xaml.controls.page) 인스턴스 간에 이동할 수 있는 [프레임](/uwp/api/windows.ui.xaml.controls.frame)이 있는 [창](/uwp/api/windows.ui.xaml.window)에서 시작됩니다.
     :::column-end:::
     :::column:::
-        ![Frame](images/frame.svg)
+![프레임](images/frame.svg)
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        You can think of your app's UI as a collection of pages. It's up to you to decide what should go on each page, and the relationships between pages.
+앱의 UI는 페이지 컬렉션으로 간주할 수 있습니다. 각 페이지에서 수행할 작업과 페이지 간의 관계를 결정할 수 있습니다.
 
-        To learn how you can organize your pages, see [Navigation basics](navigation-basics.md).
+페이지를 구성하는 방법을 알아보려면 [탐색 기본 사항](navigation-basics.md)을 참조하세요.
     :::column-end:::
     :::column:::
-        ![Frame](images/collection-pages.svg)
+![프레임](images/collection-pages.svg)
     :::column-end:::
 :::row-end:::
 
@@ -116,14 +116,14 @@ UWP의 디자인 플랫폼은 모든 Windows 기반 디바이스에서 제대로
 
 :::row:::
     :::column:::
-        Your UWP app will interact with the broader Windows experience with tiles and notifications in the Windows [Shell](../shell/tiles-and-notifications/creating-tiles.md).
+UWP 앱은 Windows [셸](../shell/tiles-and-notifications/creating-tiles.md)에서 타일과 알림이 있는 광범위한 Windows 환경과 상호 작용합니다.
 
-        Tiles are displayed in the Start menu and when your app launches, and they provide a glimpse of what's going on in your app. Their power comes from the content behind them, and the intelligence and craft with which they're offered up.
+타일은 [시작] 메뉴와 앱이 실행될 때 표시되며, 앱에서 진행되는 상황을 한 눈에 확인할 수 있습니다. 이러한 기능은 내부의 콘텐츠와 제공되는 인텔리전스 및 기술로부터 나오는 것입니다.
 
-        UWP apps have four tile sizes (small, medium, wide, and large) that can be customized with the app's icon and identity. For guidance on designing tiles for your UWP app, see [Guidelines for tile and icon assets](../shell/tiles-and-notifications/app-assets.md).
+UWP 앱에는 앱의 아이콘과 ID에 따라 사용자 지정할 수 있는 4가지 크기(작은, 중간, 넓은, 큰)의 타일이 있습니다. UWP 앱의 타일 디자인에 대한 지침은 [타일 및 아이콘 자산에 대한 지침](../shell/tiles-and-notifications/app-assets.md)을 참조하세요.
     :::column-end:::
     :::column:::
-        ![tiles on start menu](images/shell.svg)
+![시작 메뉴의 타일](images/shell.svg)
     :::column-end:::
 :::row-end:::
 
@@ -131,10 +131,10 @@ UWP의 디자인 플랫폼은 모든 Windows 기반 디바이스에서 제대로
 
 :::row:::
     :::column:::
-        UWP apps rely on smart interactions. You can design around a click interaction without having to know or define whether the click comes from a mouse, a stylus, or a tap of a finger. However, you can also design your apps for [specific input modes](../input/input-primer.md).
+UWP 앱은 스마트 상호 작용을 사용합니다. 클릭이 마우스, 스타일러스 또는 손가락 탭에서 비롯되는 것인지 여부를 알거나 정의하지 않고 클릭 상호 작용을 중심으로 디자인할 수 있습니다. 그러나 앱은 [특정 입력 모드](../input/input-primer.md)에 대해서도 디자인할 수 있습니다.
     :::column-end:::
     :::column:::
-        ![inputs](images/inputs.svg)
+![입력](images/inputs.svg)
     :::column-end:::
 :::row-end:::
 
@@ -170,7 +170,7 @@ UWP의 디자인 플랫폼은 모든 Windows 기반 디바이스에서 제대로
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
 
-## <a name="next-fluent-design-system"></a>다음: 흐름 디자인 시스템
+## <a name="next-fluent-design-system"></a>다음: Fluent 디자인 시스템
 
 흐름 디자인(Microsoft의 디자인 시스템)의 기반이 되는 원칙에 대해 학습하고, UWP 앱에 포함시킬 수 있는 더 많은 기능에 대해 알아보고 싶다면 계속해서 [Fluent 디자인 시스템](/windows/apps/fluent-design-system)에 대해 알아보세요.
 
