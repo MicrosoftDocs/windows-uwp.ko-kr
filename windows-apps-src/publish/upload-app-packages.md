@@ -1,38 +1,38 @@
 ---
-Description: 패키지 페이지의 모든 제출할 앱의 패키지 파일 (.appxupload,.appx,.appxbundle, 및/또는.xap)를 업로드 하는 위치입니다.
+Description: 패키지 페이지에서는 제출 중인 앱에 대 한 모든 패키지 파일 (.appxupload, .appx, .appxbundle 및/또는 .xap)을 업로드 합니다.
 title: 앱 패키지 업로드
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 패키지, 업로드, 패키지 업로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 97735a8e860f7c941cc35d77a21496696683640f
-ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
+ms.openlocfilehash: 570ccc1329fd1b2f768ca528b75fe22b982bdaf6
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468874"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682620"
 ---
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 
-합니다 **패키지** 페이지는 모든 제출할 앱의 패키지 파일 (.msix,.msixupload,.msixbundle,.appx,.appxupload, 및/또는.appxbundle)를 업로드 하는 위치입니다. 이 페이지에서 동일한 앱에 대 한 모든 패키지를 업로드할 수 있습니다 하 고 앱을 다운로드 하는 고객을 때 저장소는 자동으로 해당 장치에 가장 잘 작동 하는 패키지를 사용 하 여 각 고객을 제공 합니다. 패키지를 업로드하면 [특정 Windows 10 디바이스 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지](#device-family-availability)를 등급순으로 나타내는 표가 표시됩니다.
+**패키지** 페이지에서는 제출 중인 앱에 대 한 모든 패키지 파일 (. msix,. msixupload,. msixupload, .appx, .appxupload 및/또는 .appxbundle)을 업로드 합니다. 이 페이지에서 동일한 앱에 대 한 모든 패키지를 업로드할 수 있으며, 고객이 앱을 다운로드 하면 스토어는 각 고객에 게 장치에 가장 적합 한 패키지를 자동으로 제공 합니다. 패키지를 업로드하면 [특정 Windows 10 디바이스 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지](#device-family-availability)를 등급순으로 나타내는 표가 표시됩니다.
 
 > [!IMPORTANT]
-> 2018 년 10 월 31 일부 터 새로 만든 제품 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 또는 이전 버전입니다. 자세한 내용은 참조 [블로그 게시물](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store)합니다.
+> 2018 년 10 월 31 일까 지 새로 만든 제품은 Windows 8.x/Windows Phone 8.x이 하 버전을 대상으로 하는 패키지를 포함할 수 없습니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store)을 참조 하세요.
 
-패키지 내용 및 패키지 구성 방법에 대한 자세한 내용은 [앱 패키지 요구 사항](app-package-requirements.md)을 참조하세요. 에 대 한 자세한 하려는 수도 [특정 고객에 게 배달 하는 방법을 버전 번호 영향 패키지](package-version-numbering.md) 하 고 [다양 한 시나리오에 대 한 패키지를 관리 하는 방법](guidance-for-app-package-management.md)합니다.
+패키지 내용 및 패키지 구성 방법에 대한 자세한 내용은 [앱 패키지 요구 사항](app-package-requirements.md)을 참조하세요. 또한 [특정 고객에 게 제공 되는 패키지](package-version-numbering.md) 에 대 한 버전 번호의 영향 및 다양 한 [시나리오에 대 한 패키지를 관리](guidance-for-app-package-management.md)하는 방법에 대해 알아볼 수 있습니다.
 
 
 ## <a name="uploading-packages-to-your-submission"></a>제출에 패키지 업로드
 
-패키지를 업로드하려면 패키지를 업로드 필드로 끌거나 파일을 클릭하여 찾아봅니다. 합니다 **패키지** 페이지를 사용 하면.msix,.msixupload,.msixbundle,.appx,.appxupload, 및/또는.appxbundle 파일을 업로드할 수 있습니다.
+패키지를 업로드하려면 패키지를 업로드 필드로 끌거나 파일을 클릭하여 찾아봅니다. **패키지** 페이지에서는. msix,. msixupload,. msixupload, .appx, .appxupload 및/또는 .appxbundle 파일을 업로드할 수 있습니다.
 
 > [!IMPORTANT]
-> Windows 10 용.msixupload 또는.appxupload 파일 대신.msix,.appx,.msixbundle, 또는.appxbundle 업로드 하는 것이 좋습니다.  스토어에서의 UWP 앱 패키징에 대한 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](../packaging/packaging-uwp-apps.md)을 참조하세요.
+> Windows 10의 경우. m 6, .appx,. msixupload 또는 .appxbundle 대신. msixupload 또는 .appxupload 파일을 업로드 하는 것이 좋습니다.  스토어에서의 UWP 앱 패키징에 대한 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](/windows/msix/package/packaging-uwp-apps)을 참조하세요.
 
 앱에 대한 [패키지 플라이트](package-flights.md)를 만든 경우 패키지 플라이트 중 하나에서 패키지를 복사하는 옵션이 포함된 드롭다운이 표시됩니다. 끌어오려는 패키지가 있는 패키지 플라이트를 선택합니다. 그런 다음 해당 패키지를 일부 또는 전부 선택하여 이 제출에 포함할 수 있습니다.
 
-유효성을 검사 하는 동안 패키지를 사용 하 여 오류를 검색 하는 경우 무엇이 잘못 인지 여부를 알려 주는 메시지가 표시 됩니다. 패키지를 제거 하 고, 문제를 해결 하 고, 추가한 다음 다시 업로드 해야 합니다. 문제를 일으킬 수 있지만 제출을 계속하지 못하게 차단하지는 않는 정보를 알리는 경고가 표시될 수도 있습니다.
+유효성을 검사 하는 동안 패키지를 사용 하 여 오류를 감지 하면 무엇이 잘못 되었는지 알려 주는 메시지가 표시 됩니다. 패키지를 제거 하 고 문제를 해결 한 다음 다시 업로드 해 보십시오. 문제를 일으킬 수 있지만 제출을 계속하지 못하게 차단하지는 않는 정보를 알리는 경고가 표시될 수도 있습니다.
 
 
 ## <a name="device-family-availability"></a>디바이스 패밀리 가용성
@@ -44,7 +44,7 @@ ms.locfileid: "67468874"
 
 ## <a name="package-details"></a>패키지 세부 정보
 
-업로드 된 패키지는 대상 운영 체제 별로 그룹화 된 여기에 나열 됩니다. 패키지의 이름, 버전 및 아키텍처가 표시됩니다. 각 패키지의 지원되는 언어, 앱 접근 권한 값 및 파일 크기와 같은 추가 정보를 표시하려면 **세부 정보 표시**를 클릭합니다.
+업로드 된 패키지는 대상 운영 체제별로 그룹화 되어 나열 됩니다. 패키지의 이름, 버전 및 아키텍처가 표시됩니다. 각 패키지의 지원되는 언어, 앱 접근 권한 값 및 파일 크기와 같은 추가 정보를 표시하려면 **세부 정보 표시**를 클릭합니다.
 
 제출에서 패키지를 제거해야 하는 경우 각 패키지의 **세부 정보** 섹션 아래쪽에서 **제거** 링크를 클릭합니다.
 

@@ -1,23 +1,23 @@
 ---
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: Microsoft Store에서 패키지 업데이트 다운로드 및 설치
-description: 파트너 센터에서 필수로 패키지를 표시 하 고 패키지 업데이트를 다운로드 및 설치 앱에서 코드를 작성 하는 방법에 알아봅니다.
+description: 파트너 센터에서 패키지를 필수로 표시 하 고 패키지 업데이트를 다운로드 하 고 설치 하기 위해 앱에서 코드를 작성 하는 방법에 대해 알아봅니다.
 ms.date: 04/04/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fc5fca95ca475444792fb0209a936bdfc64cb3c6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: cb1ac05bdc5dcaaf31074f1b89e5bbb35e4f850d
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372356"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682723"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Microsoft Store에서 패키지 업데이트 다운로드 및 설치
 
-Windows 10 버전 1607부터 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스의 메서드를 사용하여 Microsoft Store의 현재 앱에 대한 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. 파트너 센터에서 필수로 표시 한 필수 업데이트 설치 될 때까지 앱에서 기능을 해제 하는 패키지에 대 한 쿼리할 수 있습니다.
+Windows 10 버전 1607부터 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스의 메서드를 사용하여 Microsoft Store의 현재 앱에 대한 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. 또한 필수 업데이트를 설치할 때까지 파트너 센터에서 필수로 표시 한 패키지를 쿼리하고 앱에서 기능을 사용 하지 않도록 설정할 수 있습니다.
 
-Windows 10 버전 1803에 도입된 추가 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 메서드를 사용하면 자동으로(사용자에게 알림 UI를 표시하지 않고) 패키지 업데이트를 다운로드 및 설치하고, [선택적 패키지](optional-packages.md)를 제거하고, 앱의 다운로드 및 설치 큐의 패키지에 대한 정보를 확인할 수 있습니다.
+Windows 10 버전 1803에 도입된 추가 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 메서드를 사용하면 자동으로(사용자에게 알림 UI를 표시하지 않고) 패키지 업데이트를 다운로드 및 설치하고, [선택적 패키지](/windows/msix/package/optional-packages)를 제거하고, 앱의 다운로드 및 설치 큐의 패키지에 대한 정보를 확인할 수 있습니다.
 
 이러한 기능을 사용하면 Microsoft Store에서 최신 버전의 앱, 선택적 패키지 및 관련 서비스를 사용하여 자동으로 사용자 기반을 최신 상태로 유지할 수 있습니다.
 
@@ -26,7 +26,7 @@ Windows 10 버전 1803에 도입된 추가 [StoreContext](https://docs.microsoft
 이 코드 예는 [GetAppAndOptionalStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync) 메서드를 사용하여 Microsoft Store에서 이용할 수 있는 모든 패키지 업데이트를 검색한 다음 [RequestDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadandinstallstorepackageupdatesasync) 메서드를 호출하여 업데이트를 다운로드 및 설치하는 방법을 보여줍니다. 이 메서드를 사용하여 업데이트를 다운로드 및 설치할 때 OS는 업데이트를 다운로드하기 전에 사용자의 권한을 요청하는 대화 상자를 표시합니다.
 
 > [!NOTE]
-> 이러한 메서드는 앱에 대한 필수 및 [선택적 패키지](optional-packages.md)를 지원합니다. 선택적 패키지는 다운로드할 수 있는 콘텐츠(DLC) 추가 기능에서 크기 제한을 위해 대용량 앱을 분할하거나, 핵심 앱과의 분리를 위해 추가 콘텐츠를 전달하는 경우에 유용합니다. Microsoft Store에 DLC 추가 기능을 포함한 선택적 패키지를 사용하는 앱을 제출할 권한을 얻으려면 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
+> 이러한 메서드는 앱에 대한 필수 및 [선택적 패키지](/windows/msix/package/optional-packages)를 지원합니다. 선택적 패키지는 다운로드할 수 있는 콘텐츠(DLC) 추가 기능에서 크기 제한을 위해 대용량 앱을 분할하거나, 핵심 앱과의 분리를 위해 추가 콘텐츠를 전달하는 경우에 유용합니다. Microsoft Store에 DLC 추가 기능을 포함한 선택적 패키지를 사용하는 앱을 제출할 권한을 얻으려면 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
 
 이 코드 예는 다음을 가정합니다.
 
@@ -193,14 +193,14 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>필수 패키지 업데이트
 
-파트너 센터에서 Windows 10 버전 1607 이상을 대상으로 하는 앱에 대 한 패키지 제출을 생성 하는 경우 할 수 있습니다 [필수 패키지 표시](../publish/upload-app-packages.md#mandatory-update) 날짜 및 시간에는 필수 됩니다. 이 속성이 설정되고 앱에서 패키지 업데이트를 사용할 수 있다고 판단한 경우 앱에서는 업데이트 패키지가 필수인지 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예를 들어 앱에서 기능을 비활성화할 수 있음).
+Windows 10 버전 1607 이상을 대상으로 하는 앱에 대 한 파트너 센터에서 패키지 제출을 만들 때 [패키지를 필수로 표시](../publish/upload-app-packages.md#mandatory-update) 하 고 필수로 설정 된 날짜와 시간을 표시할 수 있습니다. 이 속성이 설정되고 앱에서 패키지 업데이트를 사용할 수 있다고 판단한 경우 앱에서는 업데이트 패키지가 필수인지 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예를 들어 앱에서 기능을 비활성화할 수 있음).
 
 > [!NOTE]
 > Microsoft는 패키지 업데이트를 위한 필수 상태를 적용하지 않으며, OS는 필수 앱 업데이트를 설치해야 할 사용자를 나타내기 위한 UI를 제공하지 않습니다. 개발자가 필수 설정을 사용하여 자체 코드에서 필수 앱 업데이트를 적용합니다.  
 
 패키지 제출을 필수로 표시하려면
 
-1. 에 로그인 [파트너 센터](https://partner.microsoft.com/dashboard) 앱에 대 한 개요 페이지로 이동 합니다.
+1. [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 하 고 앱에 대 한 개요 페이지로 이동 합니다.
 2. 필수로 만들 패키지 업데이트가 포함된 제출의 이름을 클릭합니다.
 3. 제출의 **패키지** 페이지로 이동합니다. 이 페이지 하단에서 **이 업데이트를 필수로 설정하세요.** 를 선택한 다음 패키지 업데이트가 필수가 되는 날짜와 시간을 선택합니다. 이 옵션은 제출의 모든 UWP 패키지에 적용됩니다.
 
@@ -326,7 +326,7 @@ private void HandleMandatoryPackageError()
 
 ## <a name="uninstall-optional-packages"></a>선택적 패키지 제거
 
-Windows 10 버전 1803부터 [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync) 또는 [RequestUninstallStorePackageByStoreIdAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackagebystoreidasync) 메서드를 사용하여 현재 앱에 대해 DLC 패키지 포함 [선택적 패키지](optional-packages.md)를 제거할 수 있습니다. 예를 들어 선택적 패키지를 통해 설치된 콘텐츠가 있는 앱을 사용하는 경우 디스크 공간을 확보하기 위해 사용자가 선택적 패키지를 제거할 수 있도록 UI를 제공하고자 할 수 있습니다.
+Windows 10 버전 1803부터 [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync) 또는 [RequestUninstallStorePackageByStoreIdAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackagebystoreidasync) 메서드를 사용하여 현재 앱에 대해 DLC 패키지 포함 [선택적 패키지](/windows/msix/package/optional-packages)를 제거할 수 있습니다. 예를 들어 선택적 패키지를 통해 설치된 콘텐츠가 있는 앱을 사용하는 경우 디스크 공간을 확보하기 위해 사용자가 선택적 패키지를 제거할 수 있도록 UI를 제공하고자 할 수 있습니다.
 
 다음 코드 예제에서는 [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync)를 호출하는 방법을 보여 줍니다. 이 예제에서는 다음을 가정합니다.
 * 코드 파일에는 **Windows.Services.Store** 및 **System.Threading.Tasks** 네임스페이스에 대한 **using** 문이 있습니다.
@@ -463,4 +463,4 @@ private void StoreItem_StatusChanged(StoreQueueItem sender, object args)
 
 ## <a name="related-topics"></a>관련 항목
 
-* [선택형 패키지 및 관련 세트 제작](optional-packages.md)
+* [선택형 패키지 및 관련 세트 제작](/windows/msix/package/optional-packages)

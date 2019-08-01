@@ -6,18 +6,18 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bf2d34bc3dae20750f66c9116499a17444b798c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f7acabc9858f5a2fa0b6b76d752d2a342959f41f
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627288"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682508"
 ---
 # <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>리소스 팩 대신 앱 패키지에 리소스 빌드
 
 일부 앱(다국어 사전, 번역 도구 등)은 앱 번들의 기본 동작을 재정의하고, 리소스를 별도의 리소스 패키지(또는 리소스 팩)에 두는 대신 앱 패키지에 빌드해야 합니다. 이 항목에서는 이러한 작업을 수행하는 방법을 설명합니다.
 
-기본적으로 [앱 번들(.appxbundle)](../packaging/packaging-uwp-apps.md)을 빌드하면, 언어, 크기 및 DirectX 기능 수준에 대한 기본 리소스만 앱 패키지에 빌드됩니다. 번역된 리소스&mdash;및 기본 이외 크기에 맞게 조정된 리소스 및/또는 DirectX 기능 수준&mdash;는 리소스 패키지에 빌드되며, 필요한 장치에만 다운로드됩니다. 고객이 언어 기본 설정이 스페인어인 장치를 사용하여 Microsoft Store로부터 앱을 구매하게 되면, 앱과 스페인어 리소스 패키지만 다운로드 및 설치됩니다. 동일한 사용자가 나중에 **설정**에서 언어 기본 설정을 스페인어로 변경하게 되면, 앱의 프랑스어 리소스 패키지가 다운로드 및 설치됩니다. 크기 및 DirectX 기능 수준에 대한 기준을 충족하는 리소스에 유사한 동작이 발생합니다. 대부분의 앱에서는 이러한 동작 덕분에 효율성이 높아지므로 사용자와 고객 모두가 *원하는* 바를 충족해준다고 볼 수 있습니다.
+기본적으로 [앱 번들(.appxbundle)](/windows/msix/package/packaging-uwp-apps)을 빌드하면, 언어, 크기 및 DirectX 기능 수준에 대한 기본 리소스만 앱 패키지에 빌드됩니다. 번역된 리소스&mdash;및 기본 이외 크기에 맞게 조정된 리소스 및/또는 DirectX 기능 수준&mdash;는 리소스 패키지에 빌드되며, 필요한 장치에만 다운로드됩니다. 고객이 언어 기본 설정이 스페인어인 장치를 사용하여 Microsoft Store로부터 앱을 구매하게 되면, 앱과 스페인어 리소스 패키지만 다운로드 및 설치됩니다. 동일한 사용자가 나중에 **설정**에서 언어 기본 설정을 스페인어로 변경하게 되면, 앱의 프랑스어 리소스 패키지가 다운로드 및 설치됩니다. 크기 및 DirectX 기능 수준에 대한 기준을 충족하는 리소스에 유사한 동작이 발생합니다. 대부분의 앱에서는 이러한 동작 덕분에 효율성이 높아지므로 사용자와 고객 모두가 *원하는* 바를 충족해준다고 볼 수 있습니다.
 
 그러나 앱 내에서 즉시 언어를 변경하도록 허용하는 앱의 경우(**설정**을 통하지 않고), 해당 기본 동작이 적절치 않습니다. 이러한 경우 모든 언어 리소스를 앱과 함께 한 번에 조건 없이 다운로드 및 설치한 다음 장치에 남겨 놓길 원할 것입니다. 리소스 모두를 별도의 리소스 패키지가 아닌 앱 패키지에 빌드하고자 할 것입니다.
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: de623240e275dda5b6fc4df9afee31e1adf9fd4f
-ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
+ms.openlocfilehash: 838bd9cb790893ea24b57bb2b0bad49aa262fdbc
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340856"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682537"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -83,7 +83,7 @@ steps:
 5. 인증서에 암호가 있는 경우 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) 에 암호를 저장 하 고 [변수 그룹](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups)에 암호를 연결 하는 것이 좋습니다. 변수를 사용 하 여 파이프라인에서 암호에 액세스할 수 있습니다.
 
 > [!NOTE]
-> Visual Studio 2019 부터는 UWP 프로젝트에서 임시 인증서가 더 이상 생성 되지 않습니다. 인증서를 만들거나 내보내려면 [이 문서](create-certificate-package-signing.md)에 설명 된 PowerShell cmdlet을 사용 합니다.
+> Visual Studio 2019 부터는 UWP 프로젝트에서 임시 인증서가 더 이상 생성 되지 않습니다. 인증서를 만들거나 내보내려면 [이 문서](/windows/msix/package/create-certificate-package-signing)에 설명 된 PowerShell cmdlet을 사용 합니다.
 
 ## <a name="configure-the-build-solution-build-task"></a>솔루션 빌드에 대한 빌드 작업 구성
 
@@ -196,6 +196,6 @@ MSIX (또는 APPX) 패키지에 서명 하려면 파이프라인에서 서명 �
 ## <a name="related-topics"></a>관련 항목
 
 - [Windows 용 .NET 앱 빌드](https://docs.microsoft.com/vsts/build-release/get-started/dot-net)
-- [UWP 앱 패키징](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
+- [UWP 앱 패키징](/windows/msix/package/packaging-uwp-apps)
 - [Windows 10에서 LOB 앱 테스트용으로 로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10)
-- [패키지 서명에 대 한 인증서 만들기](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)
+- [패키지 서명에 대 한 인증서 만들기](/windows/msix/package/create-certificate-package-signing)

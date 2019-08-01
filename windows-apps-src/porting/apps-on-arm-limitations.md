@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10 s, 항상 연결, 제한, ARM 기반 Windows 10
 ms.localizationpriority: medium
 redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
-ms.openlocfilehash: ebca781ecfd3373d63185b0afb3d7bd0ecf84c0f
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: a0765f8b7b250949146c4ed6f374bb5b6f7ae8bb
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319785"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682753"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>ARM의 앱 및 환경 제한
 ARM 기반 Windows 10은 다음과 같은 필수 제한 사항이 있습니다.
@@ -33,7 +33,7 @@ ARM 기반 Windows 10은 다음과 같은 필수 제한 사항이 있습니다.
 |문제점|해결 방법|
 |-----|--------|
 | 앱은 ARM용으로 고안되지 않은 드라이버를 사용합니다. | x86 드라이버를 ARM64에 다시 컴파일합니다. [WDK를 사용하여 ARM64 드라이버 빌드](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)를 참조하세요. |
-| 앱은 x64에서만 사용할 수 있습니다. | Microsoft Store용으로 개발하는 경우 앱의 ARM 버전을 제출하세요. 자세한 내용은 [앱 패키지 아키텍처](../packaging/device-architecture.md)를 참조하세요. Win32 개발자는 경우 앱의 x86 버전을 배포합니다. |
+| 앱은 x64에서만 사용할 수 있습니다. | Microsoft Store용으로 개발하는 경우 앱의 ARM 버전을 제출하세요. 자세한 내용은 [앱 패키지 아키텍처](/windows/msix/package/device-architecture)를 참조하세요. Win32 개발자는 경우 앱의 x86 버전을 배포합니다. |
 | 앱은 1.1 이상의 OpenGL 버전을 사용하거나 하드웨어 가속 OpenGL이 필요합니다. | DirectX 9, DirectX 10, DirectX 11, DirectX 12를 사용하는 x86 앱은 ARM에서 작동합니다. 자세한 내용은 [DirectX 그래픽 및 게임](https://docs.microsoft.com/windows/desktop/directx)을 참조하세요. |
 | x86 앱이 예상대로 작동하지 않습니다. | [ARM의 프로그램 호환성 문제 해결사](apps-on-arm-program-compat-troubleshooter.md)의 지침을 따라 호환성 문제 해결사 사용을 시도해 보세요. 몇 가지 문제 해결 단계는 [ARM의 x86 앱 문제 해결](apps-on-arm-troubleshooting-x86.md) 문서를 참조하세요. |
 | x86 앱이 ARM에서 실행되고 있는지 감지하지 않습니다. | [IsWow64Process2](https://docs.microsoft.com/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process2)를 사용하여 앱이 ARM에서 실행되고 있는지 확인합니다. |

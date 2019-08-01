@@ -1,32 +1,32 @@
 ---
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: WinAppDeployCmd.exe 도구를 사용하여 앱 설치
-description: Windows 응용 프로그램 배포 (WinAppDeployCmd.exe)는 모든 Windows 10 장치에는 Windows 10 PC에서 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다.
+description: Windows 응용 프로그램 배포 (WinAppDeployCmd)는 Windows 10 PC에서 Windows 10 장치에 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다.
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 06107691a4551ae2af05e63c1db810485273dc9b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 79e92cd781a83295a8cbbee4fe4b25022295568a
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372809"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682651"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>WinAppDeployCmd.exe 도구를 사용하여 앱 설치
 
 
-Windows 응용 프로그램 배포 (WinAppDeployCmd.exe)는 모든 Windows 10 장치에는 Windows 10 PC에서 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다. Windows 10 장치를 USB로 연결 된 또는 동일한 서브넷에 사용할 수 있는 해당 앱에 대 한 Microsoft Visual Studio 또는 솔루션 없이 되는 앱 패키지를 배포 하려면이 도구를 사용할 수 있습니다. 또한 원격 PC 또는 Xbox One에 먼저 패키징하지 않고 앱을 배포할 수도 있습니다. 이 문서는 이 도구를 사용하여 UWP 앱을 설치하는 방법을 설명합니다.
+Windows 응용 프로그램 배포 (WinAppDeployCmd)는 Windows 10 PC에서 Windows 10 장치에 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다. 이 도구를 사용 하 여 Windows 10 장치를 USB로 연결 하거나 해당 앱에 대 한 Microsoft Visual Studio 나 솔루션이 없어도 동일한 서브넷에서 사용할 수 있는 경우 앱 패키지를 배포할 수 있습니다. 또한 원격 PC 또는 Xbox One에 먼저 패키징하지 않고 앱을 배포할 수도 있습니다. 이 문서는 이 도구를 사용하여 UWP 앱을 설치하는 방법을 설명합니다.
 
-Windows 10 SDK를 설치한 명령 프롬프트 또는 스크립트 파일에서 WinAppDeployCmd 도구를 실행 하기만 하면 됩니다. WinAppDeployCmd.exe를 사용 하 여 앱을 설치할 때이를 사용 하 여.appx/.msix 파일 또는 AppxManifest (느슨한 파일)에 대 한 Windows 10 장치에 앱을 테스트용으로 로드 합니다. 이 명령은 앱에 필요한 인증서를 설치하지 않습니다. Windows 10 장치 앱을 실행 하려면 개발자 모드 여야 하거나 이미 인증서가 설치 해야 합니다.
+명령 프롬프트 또는 스크립트 파일에서 WinAppDeployCmd 도구를 실행 하려면 Windows 10 SDK만 설치 해야 합니다. WinAppDeployCmd를 사용 하 여 앱을 설치 하는 경우이는 .appx/.m6 파일이 나 Appxmanifest.xml (느슨한 파일의 경우)를 사용 하 여 앱을 Windows 10 장치에 테스트용으로 로드 합니다. 이 명령은 앱에 필요한 인증서를 설치하지 않습니다. 앱을 실행 하려면 Windows 10 장치가 개발자 모드 이거나 인증서가 이미 설치 되어 있어야 합니다.
 
-모바일 디바이스에 배포하려면 먼저 패키지를 만들어야 합니다. 자세한 내용은 [여기](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)를 참조하세요.
+모바일 디바이스에 배포하려면 먼저 패키지를 만들어야 합니다. 자세한 내용은 [여기](/windows/msix/package/packaging-uwp-apps)를 참조하세요.
 
-합니다 **WinAppDeployCmd.exe** 도구는 Windows 10 PC: **C:\\프로그램 파일 (x86)\\Windows 키트\\10\\bin\\&lt;SDK 버전&gt;\\x86\\WinAppDeployCmd.exe** ( 설치 경로 별로 SDK에 대 한). 
+**Winappdeploycmd** 도구는 WINDOWS 10 PC에 있습니다. **C:\\Program Files (x86)\\Windows 키트\\10\\bin\\SDK버전&gt;x86\\winappdeploycmd(기반:\\&lt;** SDK의 설치 경로). 
 > [!NOTE]
 > 버전 15063 이상의 SDK에서 SDK는 특정 버전의 폴더에 나란히 설치되어 있습니다.  14393 및 이하를 포함한 SDK는 부모 폴더에 직접 기록됩니다.
 
-먼저 동일한 서브넷에 Windows 10 장치를 연결 하거나 USB 연결을 사용 하 여 Windows 10 컴퓨터에 직접 연결 합니다. 그런 후 다음 구문이나 이 문서의 뒷부분에 있는 이 명령의 예를 사용하여 UWP 앱을 배포합니다.
+먼저 Windows 10 장치를 동일한 서브넷에 연결 하거나 USB 연결을 사용 하 여 Windows 10 컴퓨터에 직접 연결 합니다. 그런 후 다음 구문이나 이 문서의 뒷부분에 있는 이 명령의 예를 사용하여 UWP 앱을 배포합니다.
 
 ## <a name="winappdeploycmd-syntax-and-options"></a>WinAppDeployCmd 구문 및 옵션
 
@@ -120,7 +120,7 @@ WinAppDeployCmd deletecreds -credserver <server> -ip <address>
 WinAppDeployCmd devices 3
 ```
 
-192.168.0.1 장치와 연결 A1B2C3 PIN을 사용 하 여 IP 주소를 사용 하 여 Windows 10 장치를 PC의 다운로드 디렉터리에 있는 MyApp.appx 패키지에서 앱을 설치 합니다.
+장치와의 연결을 설정 하기 위해 A1B2C3 PIN을 사용 하 여 IP 주소가 192.168.0.1 인 Windows 10 장치에 PC의 다운로드 디렉터리에 있는 응용 프로그램을 설치 합니다.
 
 ``` syntax
 WinAppDeployCmd install -file "Downloads\MyApp.appx" -ip 192.168.0.1 -pin A1B2C3
@@ -132,7 +132,7 @@ WinAppDeployCmd install -file "Downloads\MyApp.appx" -ip 192.168.0.1 -pin A1B2C3
 WinAppDeployCmd uninstall -package Company.MyApp_1.0.0.1_x64__qwertyuiop -ip 192.168.0.1
 ```
 
-지정 된 앱 패키지를 사용 하 여 192.168.0.1 IP 주소를 사용 하 여 Windows 10 장치에 이미 설치 되어 있는 앱을 업데이트 합니다.
+지정 된 앱 패키지를 사용 하 여 IP 주소가 192.168.0.1 인 Windows 10 장치에 이미 설치 된 앱을 업데이트 합니다.
 
 ``` syntax
 WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1

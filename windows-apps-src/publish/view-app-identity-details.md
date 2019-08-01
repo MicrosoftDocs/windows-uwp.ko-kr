@@ -1,33 +1,33 @@
 ---
-Description: Microsoft Store 앱에 할당 된 고유 id와 관련 된 세부 정보를 확인 하 고 앱의 스토어 목록에 대 한 링크를 가져옵니다.
+Description: Microsoft Store에서 앱에 할당 한 고유 id와 관련 된 세부 정보를 확인 하 고 앱의 스토어 목록에 대 한 링크를 가져옵니다.
 title: 앱 ID 세부 정보 보기
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: acc39dfecaf4360f9f5b7db9f3c1fe34021f35c0
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: bd9f61aa32c7e4b78603af37947b39a44e705015
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788226"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682640"
 ---
 # <a name="view-app-identity-details"></a>앱 ID 세부 정보 보기
 
 
-Microsoft Store에서 앱에 할당 된 고유 id와 관련 된 세부 정보를 보면 해당 **앱 id** 페이지입니다. 또한이 페이지에서 나열 하는 앱 스토어에 링크로 가져올 수 있습니다.
+앱 **id** 페이지에서 Microsoft Store 하 여 앱에 할당 된 고유 id와 관련 된 세부 정보를 볼 수 있습니다. 또한이 페이지에서 앱의 스토어 목록에 대 한 링크를 가져올 수 있습니다.
 
 이 정보를 찾으려면 앱의 하나로 이동하고 왼쪽 탐색 메뉴에서 **앱 관리**를 확장합니다. 그리고 **앱 ID**를 선택하여 이들 세부 정보를 확인합니다.
 
 
 ## <a name="values-to-include-in-your-app-package-manifest"></a>앱 패키지 매니페스트에 포함시킬 값
 
-패키지 매니페스트에 다음 값을 포함 되어야 합니다. [Microsoft Visual Studio를 사용하여 패키지를 빌드](../packaging/packaging-uwp-apps.md)하고 개발자 계정에 연결된 동일한 Microsoft 계정으로 로그인을 하면 이들 세부 정보가 자동으로 포함됩니다. 패키지를 수동으로 빌드할 경우에는 이들 항목을 반드시 추가해야 합니다.
+패키지 매니페스트에는 다음 값이 포함 되어야 합니다. [Microsoft Visual Studio를 사용하여 패키지를 빌드](/windows/msix/package/packaging-uwp-apps)하고 개발자 계정에 연결된 동일한 Microsoft 계정으로 로그인을 하면 이들 세부 정보가 자동으로 포함됩니다. 패키지를 수동으로 빌드할 경우에는 이들 항목을 반드시 추가해야 합니다.
 
--   **Package/Identity/Name**
--   **Package/Identity/Publisher**
--   **Package/Properties/PublisherDisplayName**
+-   **패키지/Id/이름**
+-   **패키지/i d/게시자**
+-   **패키지/속성/Publisherdisplayname 문자열과**
 
 자세한 내용은 [패키지 매니페스트 스키마 참조](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root)에서 [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)를 참조하세요.
 
@@ -38,8 +38,8 @@ Microsoft Store에서 앱에 할당 된 고유 id와 관련 된 세부 정보를
 
 다음 값은 앱의 패키지 패밀리를 나타내는 추가적인 값이지만 매니페스트에 포함되지 않습니다.
 
--   **패키지 제품군 이름 (PFN)**: 이 값은 특정 Windows Api와 함께 사용 됩니다.
--   **패키지 SID**: 앱에 WNS 알림을 보내는 데이 값이 필요 합니다. 자세한 내용은 [WNS(Windows 푸시 알림 서비스) 개요](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)를 참조하세요.
+-   **PFN (패키지 패밀리 이름)** : 이 값은 특정 Windows Api와 함께 사용 됩니다.
+-   **패키지 SID**: 앱에 WNS 알림을 보내려면이 값이 필요 합니다. 자세한 내용은 [WNS(Windows 푸시 알림 서비스) 개요](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)를 참조하세요.
 
 
 ## <a name="link-to-your-apps-listing"></a>앱 목록 링크
