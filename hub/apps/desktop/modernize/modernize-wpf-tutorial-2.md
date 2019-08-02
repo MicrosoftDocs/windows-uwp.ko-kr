@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 07d2c957dff61a8b1ec9f9541ffeb9706da8a0e9
-ms.sourcegitcommit: 2062d06567ef087ad73507a03ecc726a7d848361
+ms.openlocfilehash: 4d504686e2ff50700e3f4bf242ef5d16be814894
+ms.sourcegitcommit: 3cc6eb3bab78f7e68c37226c40410ebca73f82a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68303576"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68729489"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>2부: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
 
@@ -29,7 +29,7 @@ Contoso 지출 앱에 **InkCanvas** 컨트롤을 추가 하려면 먼저 UWP XAM
 
     ![Visual Studio의 NuGet 패키지 관리 메뉴](images/wpf-modernize-tutorial//ManageNuGetPackages.png)
 
-2. **NuGet 패키지 관리자** 창에서 **찾아보기**를 클릭 합니다. **시험판 포함** 옵션을 선택 하 고, `Microsoft.Toolkit.Wpf.UI.Controls` 패키지를 검색 하 고, 결과에 표시 된 패키지의 최신 미리 보기 릴리스를 설치 합니다. 버전 6.0.0-preview 6.4 이상 버전을 설치 해야 합니다.
+2. **NuGet 패키지 관리자** 창에서 **찾아보기**를 클릭 합니다. **시험판 포함** 옵션을 선택 하 고, `Microsoft.Toolkit.Wpf.UI.Controls` 패키지를 검색 하 고, 결과에 표시 된 패키지의 최신 미리 보기 릴리스를 설치 합니다. 6\.0.0-preview7 이상 버전을 설치 했는지 확인 합니다.
 
     > [!NOTE]
     > 이 패키지에는 **InkCanvas** 래핑된 uwp 컨트롤을 비롯 하 여 WPF 앱에서 UWP XAML 아일랜드를 호스트 하는 데 필요한 모든 인프라가 포함 되어 있습니다. Windows Forms 앱에는 `Microsoft.Toolkit.Forms.UI.Controls` 라는 유사한 패키지를 사용할 수 있습니다.

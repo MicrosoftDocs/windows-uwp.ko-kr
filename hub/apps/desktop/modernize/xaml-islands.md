@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 560d339476ef3cd45f30bfc678661fb0a4a11ee1
-ms.sourcegitcommit: f6af7aeb8506379a184207035c8e43288cb31453
+ms.openlocfilehash: 765fefa0b489e1620d7a37fe75acd02acb8d5ae8
+ms.sourcegitcommit: 3cc6eb3bab78f7e68c37226c40410ebca73f82a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68601542"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68729473"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱에서 UWP XAML 컨트롤 호스트 (XAML 제도)
 
@@ -77,7 +77,7 @@ Windows 커뮤니티 도구 키트는 XAML 아일랜드에 대해 래핑된 컨�
 XAML 아일랜드에는 Windows 10, 버전 1903 이상이 필요 합니다. 응용 프로그램에서 XAML 아일랜드를 사용 하려면 먼저 프로젝트를 설정 해야 합니다.
 
 1. Windows 런타임 Api를 사용 하도록 프로젝트를 수정 합니다. 자세한 내용은 [이 문서](desktop-to-uwp-enhance.md#set-up-your-project)를 참조 하세요.
-2. 이러한 NuGet 패키지 중 하나를 프로젝트에 설치 합니다. 버전 6.0.0-preview 6.4 이상 버전의 패키지를 설치 했는지 확인 합니다.
+2. 이러한 NuGet 패키지 중 하나를 프로젝트에 설치 합니다. 6\.0.0-preview7 이상 버전의 패키지를 설치 했는지 확인 합니다.
     * WPF: [Microsoft Toolkit. 컨트롤](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 을 설치 합니다.
     * Windows Forms: [Microsoft Toolkit. 컨트롤](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.Controls)
     * C++(Win32 [Microsoft Toolkit. XamlApplication 프로그램](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication)
@@ -91,7 +91,7 @@ Windows 10 버전 1903의 릴리스에서는 컨트롤의 버전 1.0 릴리스�
 
 * .NET Framework 4.6.2 이상 버전에 대 한 컨트롤의 버전 1.0은 [toolkit의 6.0 릴리스에서](https://github.com/windows-toolkit/WindowsCommunityToolkit/milestones)출시 될 예정입니다.
 * .NET Core 3 용 컨트롤의 버전 1.0은 toolkit의 이후 릴리스에 사용할 예정입니다.
-* .NET Framework 및 .NET Core 3에 대해 이러한 컨트롤의 버전 1.0 릴리스 최신 미리 보기를 시도 하려면 [UWP 커뮤니티 도구 키트](https://dotnet.myget.org/gallery/uwpcommunitytoolkit) 갤러리에서 **6.0.0-preview 6.4** NuGet 패키지를 참조 하세요.
+* .NET Framework 및 .NET Core 3에 대해 이러한 컨트롤의 버전 1.0 릴리스 최신 미리 보기를 시도 하려면 [UWP 커뮤니티 도구 키트](https://dotnet.myget.org/gallery/uwpcommunitytoolkit) 갤러리에서 **6.0.0-preview7** NuGet 패키지를 참조 하세요.
 
 자세한 내용은 참조 하세요. [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2019/06/13/xaml-islands-v1-updates-and-roadmap)합니다.
 
