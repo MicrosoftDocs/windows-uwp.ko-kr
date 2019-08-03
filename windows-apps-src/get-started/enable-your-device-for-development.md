@@ -6,12 +6,12 @@ keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 �
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c1979f8e8232ee3bfd2e2961307608bf8da7836
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 09f115cad236582ccb0008c2274a7472ed4c0d55
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67714143"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682661"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -60,7 +60,7 @@ ms.locfileid: "67714143"
 
 디바이스 패밀리 관련 정보
 
--   데스크톱 디바이스 패밀리에서: 앱 패키지(.appx) 및 패키지("Add-AppDevPackage.ps1")로 만든 Windows PowerShell 스크립트를 실행하여 앱을 실행하는 데 필요한 모든 인증서를 설치할 수 있습니다. 자세한 내용은 [UWP 앱 패키징](../packaging/packaging-uwp-apps.md)을 참조하세요.
+-   데스크톱 디바이스 패밀리에서: 앱 패키지(.appx) 및 패키지("Add-AppDevPackage.ps1")로 만든 Windows PowerShell 스크립트를 실행하여 앱을 실행하는 데 필요한 모든 인증서를 설치할 수 있습니다. 자세한 내용은 [UWP 앱 패키징](/windows/msix/package/packaging-uwp-apps)을 참조하세요.
 
 -   모바일 디바이스 패밀리에서: 필요한 인증서가 이미 설치되어 있는 경우 파일을 탭하여 이메일로 전송되거나 SD 카드에 있는 .appx를 설치할 수 있습니다.
 

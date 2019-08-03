@@ -6,12 +6,12 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d393ee92be8768861da0fb0783372c8bafc6f815
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: faf3cdc1a3fab3bd0332b995c25b081d296a55bb
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821117"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682774"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>개발자용 Windows 10 빌드 17763의 새로운 기능
 
@@ -83,7 +83,7 @@ WebVR | 홈 페이지를 완전히 다시 디자인하고 목차를 다시 구�
 MSIX | [MSIX](https://docs.microsoft.com/windows/msix/overview)는 모든 Windows 앱에 최신 패키징 환경을 제공하는 새 Windows 앱 패키징 형식입니다. 오픈 소스 MSIX 형식은 기존의 패키징 기능을 유지하는 동시에 최신 배포 기능을 구현합니다.
 MSIX Packaging Tool | 새 [MSIX 패키징 도구](https://docs.microsoft.com/windows/msix/mpt-overview)를 사용하면 소스 코드에 액세스할 수 없는 경우에도 기존 데스크톱 애플리케이션을 MSIX 형식으로 다시 패키지할 수 있습니다. 명령줄 또는 대화형 UI를 통해 실행할 수 있습니다.
 MSIX에 Desktop App Converter 지원 | [Desktop App Converter](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)를 사용하여 `-MakeMSIX` 매개 변수를 통해 MSIX 패키지를 출력할 수 있습니다.
-MSIX에 MakeAppx.exe 도구 지원 | MakeAppx.exe 도구를 사용하여 UWP 앱 또는 기존 데스크톱 애플리케이션용 MSIX 패키지를 만들 수 있습니다. 이 도구는 Windows 10 SDK에 포함되어 있으며 명령 프롬프트 또는 스크립트 파일에서 사용할 수 있습니다. </br> UWP 앱의 경우 [MakeAppx.exe 도구를 사용하여 앱 패키지 만들기](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요. </br> 데스크톱 애플리케이션의 경우 [수동 데스크톱 애플리케이션 패키징](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion)을 참조하세요.
+MSIX에 MakeAppx.exe 도구 지원 | MakeAppx.exe 도구를 사용하여 UWP 앱 또는 기존 데스크톱 애플리케이션용 MSIX 패키지를 만들 수 있습니다. 이 도구는 Windows 10 SDK에 포함되어 있으며 명령 프롬프트 또는 스크립트 파일에서 사용할 수 있습니다. </br> UWP 앱의 경우 [MakeAppx.exe 도구를 사용하여 앱 패키지 만들기](/windows/msix/package/create-app-package-with-makeappx-tool)를 참조하세요. </br> 데스크톱 애플리케이션의 경우 [수동 데스크톱 애플리케이션 패키징](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion)을 참조하세요.
 패키지 지원 프레임워크 | [패키지 지원 프레임워크](https://docs.microsoft.com/windows/msix/package-support-framework-overview)는 소스 코드에 액세스할 수 없는 경우 기존 데스크톱 애플리케이션에 수정 프로그램을 적용하여 MSIX 컨테이너에서 실행할 수 있도록 지원하는 오픈 소스 키트입니다.
 Store 분석 API | [Microsoft Store 분석 API](../monetize/access-analytics-data-using-windows-store-services.md)에는 이제 다음과 같은 새 메서드가 포함되어 있습니다. </br> * [UWP 앱에 대한 인사이트 데이터 가져오기](../monetize/get-insights-data-for-your-app.md) </br> * [데스크톱 애플리케이션에 대한 인사이트 데이터 가져오기](../monetize/get-insights-data-for-your-desktop-app.md) </br>* [데스크톱 애플리케이션에 대한 업그레이드 차단 가져오기](../monetize/get-desktop-block-data.md) </br> * [데스크톱 애플리케이션에 대한 업그레이드 차단 세부 정보 가져오기](../monetize/get-desktop-block-data-details.md)
 

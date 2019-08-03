@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9adf5a80595e00a30098044536d1ecfe4fd62279
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: d8b72501c298f3814092ec4567a5fb608c4bb88f
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820489"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682761"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>2018년 5월 Windows 개발자 문서의 새로운 내용
 
@@ -83,7 +83,7 @@ MSIX 패키징 형식은 파트너가 해당 도구 및 솔루션으로 MSIX 에
 
 ### <a name="optional-packages-with-executable-code"></a>실행 가능한 코드가 있는 옵션 패키지
 
-앱의 선택적 패키지는 이제 실행 C# 코드를 포함할 수 있습니다. [Visual Studio를 사용하여 기본 앱 패키지를 지원하도록 선택적 추가 기능 패키지를 구성하는 방법을 알아봅니다](../packaging/optional-packages-with-executable-code.md).
+앱의 선택적 패키지는 이제 실행 C# 코드를 포함할 수 있습니다. [Visual Studio를 사용하여 기본 앱 패키지를 지원하도록 선택적 추가 기능 패키지를 구성하는 방법을 알아봅니다](/windows/msix/package/optional-packages).
 
 ### <a name="page-transitions"></a>페이지 전환
 
