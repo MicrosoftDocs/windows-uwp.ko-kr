@@ -39,7 +39,13 @@
     - name: XAML 사용한 레이아웃
       href: layout/layouts-with-xaml.md
     - name: 여러 보기 표시
-      href: layout/show-multiple-views.md
+      items:
+        - name: 여러 보기 표시
+          href: layout/show-multiple-views.md
+        - name: AppWindow 사용
+          href: layout/app-window.md
+        - name: ApplicationView 사용
+          href: layout/application-view.md
     - name: '맞춤, 여백 및 안쪽 여백'
       href: layout/alignment-margin-padding.md
     - name: 패널
