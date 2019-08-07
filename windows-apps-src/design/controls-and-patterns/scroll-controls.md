@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e401e700728e1d481fd2142281fe81524d146f94
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 3a3a2adee262a521bde77d657aa4f5283b68ddcf
+ms.sourcegitcommit: e0ae346eadda864dcad1453cd1644668549e66e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364424"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68603434"
 ---
 # <a name="scroll-viewer-controls"></a>스크롤 뷰어 컨트롤
 
@@ -101,7 +101,7 @@ See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/
 
 ScrollViewer 컨트롤은 다른 컨트롤의 복합 파트로 사용되는 것이 일반적입니다. ScrollViewer 파트는 호스트 컨트롤의 레이아웃 공간이 확장된 콘텐츠 크기보다 더 작게 제한되는 경우에만 지원용 [ScrollContentPresenter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollContentPresenter) 클래스와 더불어 스크롤 막대와 함께 뷰포트를 표시합니다. 종종 목록에도 이러한 경우가 발생하므로 [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) 템플릿에는 항상 ScrollViewer가 포함됩니다. [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 및 [RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)의 템플릿에도 ScrollViewer가 포함됩니다.
 
-**ScrollViewer** 파트가 컨트롤에 있는 경우 대체로 호스트 컨트롤에 콘텐츠를 스크롤할 수 있게 하는 특정 입력 이벤트 및 조작에 대한 기본 제공 이벤트 처리가 있습니다. 예를 들어 GridView가 살짝 밀기 제스처를 해석하고 이로 인해 콘텐츠가 가로로 스크롤됩니다. 호스트 컨트롤이 수신하는 입력 이벤트와 원시 조작은 컨트롤에 의해 처리된 것으로 간주되며 [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)와 같은 하위 수준 이벤트가 발생하지 않고 부모 컨테이너로 버블링되지도 않습니다. 컨트롤 클래스 및 이벤트에 대한 **On*** 가상 메서드를 재정의하거나 컨트롤을 다시 템플릿으로 작성하여 기본 제공 컨트롤 처리의 일부를 변경할 수 있습니다. 하지만 두 경우 모두 일반적으로 컨트롤이 이벤트와 사용자의 입력 동작 및 제스처에 예상된 방식으로 반응하도록 하는 원래 기본 동작을 재현하는 것은 쉽지 않습니다. 따라서 해당 입력 이벤트를 반드시 발생해야 하는지 여부를 고려해야 합니다. 컨트롤에 의해 처리되지 않는 다른 입력 이벤트 또는 제스처가 있는지 조사하고 앱 또는 컨트롤 조작 디자인에 사용하는 것이 좋습니다.
+**ScrollViewer** 파트가 컨트롤에 있는 경우 대체로 호스트 컨트롤에 콘텐츠를 스크롤할 수 있게 하는 특정 입력 이벤트 및 조작에 대한 기본 제공 이벤트 처리가 있습니다. 예를 들어 GridView가 살짝 밀기 제스처를 해석하고 이로 인해 콘텐츠가 가로로 스크롤됩니다. 호스트 컨트롤이 수신하는 입력 이벤트와 원시 조작은 컨트롤에 의해 처리된 것으로 간주되며 [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)와 같은 하위 수준 이벤트가 발생하지 않고 부모 컨테이너로 버블링되지도 않습니다. 컨트롤 클래스 및 이벤트에 대한 **On**_Event_ 가상 메서드를 재정의하거나 컨트롤을 다시 템플릿으로 작성하여 기본 제공 컨트롤 처리의 일부를 변경할 수 있습니다. 하지만 두 경우 모두 일반적으로 컨트롤이 이벤트와 사용자의 입력 동작 및 제스처에 예상된 방식으로 반응하도록 하는 원래 기본 동작을 재현하는 것은 쉽지 않습니다. 따라서 해당 입력 이벤트를 반드시 발생해야 하는지 여부를 고려해야 합니다. 컨트롤에 의해 처리되지 않는 다른 입력 이벤트 또는 제스처가 있는지 조사하고 앱 또는 컨트롤 조작 디자인에 사용하는 것이 좋습니다.
 
 ScrollViewer를 포함하는 컨트롤이 ScrollViewer 파트 내에 있는 일부 동작과 속성에 영향을 줄 수 있도록 ScrollViewer는 스타일에서 설정하고 템플릿 바인딩에 사용할 수 있는 많은 XAML 연결 속성을 정의합니다. 연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](../../xaml-platform/attached-properties-overview.md)를 참조하세요.
 
@@ -147,7 +147,7 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-topics"></a>관련 항목
 

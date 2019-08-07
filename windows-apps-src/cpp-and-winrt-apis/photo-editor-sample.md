@@ -5,19 +5,19 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 샘플, 애플리케이션, 사진, 편집기
 ms.localizationpriority: medium
-ms.openlocfilehash: bbac9d6a6d08d327bf1bf55de5e86cbb1edd51ea
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 92aff51b6e5ba98d0f5fd157dd3a2dd57e861821
+ms.sourcegitcommit: f8c354def02d5c82d195e4f629e6470110268223
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64745191"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68623381"
 ---
 # <a name="photo-editor-cwinrt-sample-application"></a>Photo Editor C++/WinRT 샘플 애플리케이션
 
 > [!NOTE]
 > 샘플은 Windows 10 버전 1903(10.0, 빌드 18362) 및 Visual Studio 2019를 대상으로 테스트되었습니다. 원하는 경우 프로젝트 속성을 사용하여 프로젝트의 대상을 Windows 10 버전 1809(10.0, 빌드 17763)로 다시 지정하거나 Visual Studio 2017에서 샘플을 열 수 있습니다.
 
-[사진 편집기 C++/WinRT 샘플 애플리케이션](https://github.com/Microsoft/Windows-appsample-photo-editor) GitHub 리포지토리에서 샘플 애플리케이션을 복제 또는 다운로드할 수 있습니다.
+샘플 애플리케이션을 복제 또는 다운로드하려면 코드 샘플 갤러리의 [사진 편집기 C++/WinRT 샘플 애플리케이션](/samples/microsoft/windows-appsample-photo-editor/photo-editor-cwinrt-sample-application/)을 참조하세요.
 
 사진 편집기 애플리케이션은 [C++/WinRT](intro-to-using-cpp-with-winrt.md) 언어 프로젝션을 사용한 개발을 보여 주는 UWP(유니버설 Windows 플랫폼) 샘플 애플리케이션입니다. 샘플 애플리케이션을 사용하면 **사진** 라이브러리에서 사진을 검색한 다음, 다양한 사진 효과를 사용하여 선택한 이미지를 편집할 수 있습니다. 샘플의 원본 코드에 C++/WinRT 프로젝션을 사용하여 수행되는 [데이터 바인딩](binding-property.md) 및 [비동기 작업](concurrency.md)과 같은 일반적인 사례의 숫자가 표시됩니다. 다음은 샘플이 보여 주는 특정 기능 중 일부입니다.
 
