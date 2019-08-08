@@ -13,15 +13,16 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "is_dynamic_rendering": false,
+      "version": 0,
+      "xref_query_tags": [ "/uwp/api" ]
     },
     {
       "docset_name": "windows-uwp",
       "build_source_folder": "windows-apps-src",
       "build_output_subfolder": "windows-apps-src",
       "locale": "ko-kr",
-      "monikers": [],
-      "moniker_ranges": [],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
@@ -29,7 +30,10 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "is_dynamic_rendering": false,
+      "version": 0,
+      "xref_query_tags": [ "/uwp/api" ]
     }
   ],
   "notification_subscribers": [
@@ -44,7 +48,11 @@
   "git_repository_branch_open_to_public_contributors": "live",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
-  "contribution_branch_mappings": {},
+  "need_preview_pull_request": true,
+  "resolve_user_profile_using_github": true,
+  "contribution_branch_mappings": {
+    "live-sxs": "live"
+  },
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
