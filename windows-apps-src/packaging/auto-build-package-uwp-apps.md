@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 838bd9cb790893ea24b57bb2b0bad49aa262fdbc
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 9df150d4a8873630a371fa2ad02e8c88bed7f42e
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682537"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867748"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -80,7 +80,7 @@ steps:
 
     ![보안 파일을 업로드 하는 방법](images/secure-file2.png)
 
-5. 인증서에 암호가 있는 경우 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) 에 암호를 저장 하 고 [변수 그룹](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups)에 암호를 연결 하는 것이 좋습니다. 변수를 사용 하 여 파이프라인에서 암호에 액세스할 수 있습니다.
+5. 인증서의 개인 키에 암호가 있는 경우 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) 에 암호를 저장 하 고 [변수 그룹](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups)에 암호를 연결 하는 것이 좋습니다. 변수를 사용 하 여 파이프라인에서 암호에 액세스할 수 있습니다. 암호는 개인 키에 대해서만 지원 됩니다. 암호로 보호 되는 인증서 파일을 사용 하는 것은 현재 지원 되지 않습니다.
 
 > [!NOTE]
 > Visual Studio 2019 부터는 UWP 프로젝트에서 임시 인증서가 더 이상 생성 되지 않습니다. 인증서를 만들거나 내보내려면 [이 문서](/windows/msix/package/create-certificate-package-signing)에 설명 된 PowerShell cmdlet을 사용 합니다.
@@ -100,7 +100,7 @@ steps:
 | AppxPackageSigningEnabled | true | 패키지 서명을 사용 하도록 설정 합니다. |
 | PackageCertificateThumbprint | 인증서 지문 | 이 값은 서명 인증서의 지문과 일치 **해야** 합니다. 그렇지 않으면 빈 문자열 이어야 합니다. |
 | PackageCertificateKeyFile | Path | 사용할 인증서의 경로입니다. 이는 보안 파일 메타 데이터에서 검색 됩니다. |
-| PackageCertificatePassword | 암호 | 인증서의 암호입니다. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) 에 암호를 저장 하 고 [변수 그룹](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups)에 암호를 연결 하는 것이 좋습니다. 이 인수에 변수를 전달할 수 있습니다. |
+| PackageCertificatePassword | 암호 | 인증서의 개인 키에 대 한 암호입니다. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) 에 암호를 저장 하 고 [변수 그룹](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups)에 암호를 연결 하는 것이 좋습니다. 이 인수에 변수를 전달할 수 있습니다. |
 
 ### <a name="configure-the-build"></a>빌드 구성
 

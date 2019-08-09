@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5fababa6903880c4c4aa70d93d36e49fd4ea89b5
-ms.sourcegitcommit: f4b64245cf784793b431f2c9d8bded6f321e7788
+ms.openlocfilehash: 63af76e0ee7faa757798f71c63b141e6b2262007
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412117"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867641"
 ---
 ![디자인 기본 사항](../images/downloads-2x.png)
 
@@ -96,7 +96,7 @@ UWP 앱에 대한 컨트롤 및 기타 UI 요소.<br/>
 
 :::row:::
     :::column:::
-        <a href="https://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
+<a href="https://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
       **Adobe Photoshop용 타일 및 아이콘 생성기** 이 Adobe Photoshop용 작업 세트는 단 7개의 파일로 68개의 권장 타일 및 아이콘 자산을 생성합니다. <br/><a href="https://go.microsoft.com/fwlink/p/?LinkId=760394">타일 및 아이콘 생성기 다운로드</a></p>
