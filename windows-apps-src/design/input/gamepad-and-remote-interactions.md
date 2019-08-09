@@ -1,5 +1,5 @@
 ---
-Description: Xbox 게임 패드에서 원격 제어는 입력에 대 한 앱을 최적화 합니다.
+Description: Xbox 게임 패드 및 원격 제어에서 입력을 위해 앱을 최적화 합니다.
 title: 게임 패드 및 리모컨 조작
 ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
 label: Gamepad and remote interactions
@@ -9,49 +9,49 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1292051362b9751d41b530f6b47f226d36228252
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 440f758e5db8bd77d3f26290eb59d7684e5f87a3
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592808"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867657"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>게임 패드 및 리모컨 조작
 
 ![키보드 및 게임 패드 이미지](images/keyboard/keyboard-gamepad.jpg)
 
-***다양 한 상호 작용 환경은 gamepad, 원격 제어와 키보드 간에 공유 됩니다.***
+***많은 상호 작용 환경은 게임 패드, 원격 제어 및 키보드 간에 공유 됩니다.***
 
-앱이 사용 가능 하 고 입력된 형식 뿐만 아니라 기존 입력된의 형식과 Pc, 랩톱 및 태블릿 (마우스, 키보드, 터치 및 등)를 통해 액세스할 수 있는지 확인 하는 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 상호 작용 환경 구축 TV 및 Xbox의 일반적인 *10 피트* gamepad 및 원격 제어와 같은 경험 합니다.
+UWP (유니버설 Windows 플랫폼) 응용 프로그램에서의 빌드 상호 작용 환경으로, 앱을 사용 하 고 기존 입력 유형 (마우스, 키보드, 터치 등)을 모두 통해 사용 하 고 액세스할 수 있도록 합니다. TV 및 Xbox *10 피트* 환경 (예: 게임 패드 및 원격 제어).
 
-참조 [Xbox 및 TV에 대 한 디자인](../devices/designing-for-tv.md) 에서 UWP 응용 프로그램에 대 한 일반적인 디자인 지침에 대 한 합니다 *10 피트* 경험 합니다.
+*10 피트* 환경에서 UWP 응용 프로그램에 대 한 일반 디자인 지침은 [Xbox 및 TV를 위한 디자인](../devices/designing-for-tv.md) 을 참조 하세요.
 
 ## <a name="overview"></a>개요
 
-이 항목에서는 논의 새로운 사항과 고려해 야 상호 작용 디자인 (또는 새로운를 지정 하지 않으면 플랫폼을 후 표시 되는 경우)에 지침, 권장 사항 및 즐거운에 관계 없이 사용 하는 UWP 응용 프로그램을 구축 하는 것에 대 한 제안을 제공 합니다. 장치, 입력된 형식 또는 사용자 기능 및 기본 설정 합니다.
+이 항목에서는 상호 작용 디자인에서 고려해 야 할 사항 (또는 플랫폼이 그 뒤에 표시 되는 경우)에 대해 설명 하 고,와 상관 없이 사용 하기에는 UWP 응용 프로그램을 빌드하기 위한 지침, 권장 사항 및 제안 사항을 제공 합니다. 장치, 입력 유형, 사용자 기능 및 기본 설정입니다.
 
-아래쪽 줄, 응용 프로그램으로 직관적이 고에서 사용 하기 쉬운 되어야 합니다는 *2 피트* 하므로 환경이 합니다 *원격 제어* 환경 (및 그 반대의 경우도 마찬가지). 사용자의 기본 장치를 지원 위해 원하는 항목에 명확 하 고 괴 성으로 집중 탐색은 일관적이 고 예측할 수 있도록 콘텐츠를 정렬 하 고 사용자에 게 가장 짧은 경로 제공 하는 UI를 가능 하 게 합니다.
+응용 프로그램은 *10 피트* 환경에서와 마찬가지로 *2 피트* 환경에서 직관적이 고 쉽게 사용할 수 있어야 합니다 (그 반대의 경우도 마찬가지). 사용자가 선호 하는 장치를 지원 하 고, UI 포커스를 명확 하 고 unmistakable 하 고, 탐색을 일관적이 고 예측 가능 하도록 콘텐츠를 정렬 하 고, 사용자에 게 원하는 작업에 가장 짧은 경로를 제공 합니다.
 
 > [!NOTE]
 > 이 항목의 코드 조각은 대부분 XAML/C#으로 작성되었지만 원칙과 개념은 모든 UWP 앱에 적용됩니다. Xbox용 HTML/JavaScript UWP 앱을 개발하는 경우 GitHub 라이브러리에서 뛰어난 [TVHelpers](https://github.com/Microsoft/TVHelpers/wiki) 라이브러리를 확인하세요.
 
 
-## <a name="optimize-for-both-2-foot-and-10-foot-experiences"></a>2-foot와 원격 제어 환경 최적화
+## <a name="optimize-for-both-2-foot-and-10-foot-experiences"></a>2 피트 및 10 피트 환경 모두에 맞게 최적화
 
-최소한 것이 좋으며 2 foot와 원격 제어 시나리오에서 잘 작동 하도록 응용 프로그램을 테스트 하는 모든 기능을 검색 및 Xbox에 액세스할 수 있는지 [gamepad 및 원격 제어](#gamepad-and-remote-control)입니다.
+응용 프로그램을 테스트 하 여 2 피트와 10mbps 시나리오 모두에서 잘 작동 하는지, 그리고 모든 기능이 검색 가능 하 고 Xbox [게임 및 원격 제어](#gamepad-and-remote-control)에서 액세스할 수 있도록 하는 것이 좋습니다.
 
-몇 가지 다른 모든 입력된 장치 (이 항목의 해당 섹션을 각 링크)를 사용 하 여 2 foot와 원격 제어 환경에서 사용 하기 위해 앱을 최적화할 수 있습니다.
+다음은 2 피트 및 10-및 모든 입력 장치에서 사용할 수 있도록 앱을 최적화할 수 있는 몇 가지 다른 방법입니다 (각 항목의 해당 섹션에 대 한 링크).
 
 > [!NOTE]
-> Xbox 게임 패드 및 원격 제어를 지 원하는 여러 UWP 키보드 동작 및 경험 하기 때문에 이러한 권장 사항은 모두 입력된 형식에 적합 합니다. 참조 [상호 작용 키보드](keyboard-interactions.md) 자세한 내용을 보려면 키보드 정보입니다.
+> Xbox gamepads 및 원격 컨트롤이 많은 UWP 키보드 동작 및 환경을 지원 하기 때문에 이러한 권장 사항은 두 입력 유형에 모두 적합 합니다. 자세한 키보드 정보는 [키보드 상호 작용](keyboard-interactions.md) 을 참조 하세요.
 
 | 기능        | 설명           |
 | -------------------------------------------------------------- |--------------------------------|
-| [XY 포커스 탐색 및 상호 작용](#xy-focus-navigation-and-interaction) | **XY 포커스 탐색** 사용자가 앱의 UI 주위를 탐색할 수 있도록 합니다. 그러나 사용자가 위, 아래, 왼쪽 및 오른쪽으로만 탐색할 수 있도록 제한됩니다. 이 섹션에는 이 문제를 해결하기 위한 권장 사항과 기타 고려 사항이 요약되어 있습니다. |
-| [마우스 모드](#mouse-mode)|XY 포커스 탐색 실용적이 지 또는 일부 유형의 지도 또는 그리기 및 칠하기 앱 등의 응용 프로그램에 대 한 수도 없습니다. 이러한 경우 **마우스 모드** 같은 PC에서 마우스 사용자는 게임 패드 또는 원격 제어를 사용 하 여 자유롭게 탐색할 수 있습니다.|
-| [포커스 시각적 개체](#focus-visual)  | 포커스 시각적 개체는 현재 포커스가 있는 UI 요소를 강조 표시 하는 테두리입니다. 이렇게 하면 사용자가 신속 하 게 탐색 하거나 상호 작용 하는 UI를 식별 하는 수 있습니다.  |
-| [포커스 engagement](#focus-engagement) | 포커스 engagement에 필요한 키를 눌러 사용자는 **A/선택** gamepad 또는 상호 작용 하기 위해 UI 요소에 포커스가 있을 때 원격 제어에는 단추입니다. |
-| [하드웨어 단추](#hardware-buttons) | Gamepad 및 원격 제어를 매우 다른 단추 및 구성을 제공합니다. |
+| [XY 포커스 탐색 및 상호 작용](#xy-focus-navigation-and-interaction) | **XY 포커스 탐색** 을 사용 하면 사용자가 앱의 UI를 탐색할 수 있습니다. 그러나 사용자가 위, 아래, 왼쪽 및 오른쪽으로만 탐색할 수 있도록 제한됩니다. 이 섹션에는 이 문제를 해결하기 위한 권장 사항과 기타 고려 사항이 요약되어 있습니다. |
+| [마우스 모드](#mouse-mode)|지도, 그리기 및 그리기와 같은 일부 유형의 응용 프로그램에서는 XY 포커스 탐색이 실용적이 지 않거나 가능 하지 않습니다. 이러한 경우 **마우스 모드** 를 사용 하면 사용자가 PC의 마우스와 마찬가지로 게임 패드 또는 원격 제어로 자유롭게 이동할 수 있습니다.|
+| [포커스 시각적 개체](#focus-visual)  | 포커스 시각적 개체는 현재 포커스가 있는 UI 요소를 강조 표시 하는 테두리입니다. 이렇게 하면 사용자가 탐색 하거나 상호 작용 하는 UI를 빠르게 식별할 수 있습니다.  |
+| [포커스 참여](#focus-engagement) | 포커스 engagement를 사용 하려면 UI 요소에 포커스가 있을 때 사용자가 게임 패드 또는 원격 제어에서 **A/Select** 단추를 눌러야 합니다. |
+| [하드웨어 단추](#hardware-buttons) | 게임 패드 및 원격 제어는 매우 다양 한 단추와 구성을 제공 합니다. |
 
 ## <a name="gamepad-and-remote-control"></a>게임 패드 및 리모컨
 
@@ -71,23 +71,23 @@ PC의 키보드 및 마우스, 휴대폰과 태블릿의 터치와 마찬가지�
 
 다음 표에서는 UWP 앱이 지원하는 모든 하드웨어 버튼 및 해당 버튼을 지원하는 입력 장치를 보여 줍니다.
 
-| Button                    | 게임 패드   | 원격 제어    |
+| 단추                    | 게임 패드   | 원격 제어    |
 |---------------------------|-----------|-------------------|
 | A/선택 버튼           | 예       | 예               |
 | B/뒤로 버튼             | 예       | 예               |
 | 방향 패드(D 패드)   | 예       | 예               |
 | 메뉴 버튼               | 예       | 예               |
 | 보기 버튼               | 예       | 예               |
-| X 및 Y 버튼           | 예       | 아니오                |
-| 왼쪽 스틱                | 예       | 아니오                |
-| 오른쪽 스틱               | 예       | 아니오                |
-| 왼쪽 및 오른쪽 트리거   | 예       | 아니오                |
-| 왼쪽 및 오른쪽 범퍼    | 예       | 아니오                |
-| OneGuide 버튼           | 아니오        | 예               |
-| 볼륨 버튼             | 아니오        | 예               |
-| 채널 버튼            | 아니오        | 예               |
-| 미디어 컨트롤 버튼     | 아니오        | 예               |
-| 음소거 버튼               | 아니오        | 예               |
+| X 및 Y 버튼           | 예       | 아니요                |
+| 왼쪽 스틱                | 예       | 아니요                |
+| 오른쪽 스틱               | 예       | 아니요                |
+| 왼쪽 및 오른쪽 트리거   | 예       | 아니요                |
+| 왼쪽 및 오른쪽 범퍼    | 예       | 아니요                |
+| OneGuide 버튼           | 아니요        | 예               |
+| 볼륨 버튼             | 아니요        | 예               |
+| 채널 버튼            | 아니요        | 예               |
+| 미디어 컨트롤 버튼     | 아니요        | 예               |
+| 음소거 버튼               | 아니요        | 예               |
 
 ### <a name="built-in-button-support"></a>기본 제공 버튼 지원
 
@@ -97,10 +97,10 @@ UWP는 기존의 키보드 입력 동작을 게임 패드 및 리모컨 입력�
 |-----------------------|---------------------------------------|
 | 화살표 키            | D 패드(또한 게임 패드의 왼쪽 스틱)    |
 | 스페이스바              | A/선택 버튼                       |
-| 입력                 | A/선택 버튼                       |
+| Enter 키                 | A/선택 버튼                       |
 | 이스케이프                | B/뒤로 버튼*                        |
 
-\*하지 않은 경우는 [KeyDown](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) 도 [KeyUp](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) B 단추에 대 한 이벤트는 앱에서 처리 되는 [SystemNavigationManager.BackRequested](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.backrequested) 이벤트가 발생 해야 하는 결과 앱 내에서 탐색 합니다. 그러나 다음 코드 조각과 같이 이를 직접 구현해야 합니다.
+\*응용 프로그램에서 B 단추에 대 한 [KeyDown](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) 또는 [KeyUp](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트를 처리 하지 않으면 [systemnavigationmanager. 요청](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.backrequested) 된 이벤트가 발생 하 여 앱 내에서 다시 탐색이 발생 합니다. 그러나 다음 코드 조각과 같이 이를 직접 구현해야 합니다.
 
 ```csharp
 // This code goes in the MainPage class
@@ -159,10 +159,10 @@ Xbox One의 UWP 앱은 **메뉴** 버튼을 눌러 상황에 맞는 메뉴를 �
 |---------------|------------|--------------|----------------|------------------|
 | 페이지 위로/아래로  | 페이지 위로/아래로 | 왼쪽/오른쪽 트리거 | [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | 세로 스크롤을 지원하는 보기
 | 페이지 왼쪽/오른쪽으로 | 없음 | 왼쪽/오른쪽 범퍼 | [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | 가로 스크롤을 지원하는 보기
-| 확대/축소        | Ctrl +/- | 왼쪽/오른쪽 트리거 | 없음 | `ScrollViewer`를 지 원하는 확대 및 축소 뷰 |
+| 확대/축소        | Ctrl +/- | 왼쪽/오른쪽 트리거 | 없음 | `ScrollViewer`확대 및 축소를 지 원하는 뷰 |
 | 탐색 창 열기/닫기 | 없음 | 보기 | 없음 | 탐색 창 |
-| [검색](#search-experience) | 없음 | Y 버튼 | 없음 | 앱에서 기본 검색 기능에 대한 바로 가기 |
-| [열기 상황에 맞는 메뉴](#commandbar-and-contextflyout) | 마우스 오른쪽 단추 클릭 | 메뉴 버튼 | [ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout) | 상황에 맞는 메뉴 |
+| 검색 | 없음 | Y 버튼 | 없음 | 앱에서 기본 검색 기능에 대한 바로 가기 |
+| [상황에 맞는 메뉴 열기](#commandbar-and-contextflyout) | 마우스 오른쪽 단추 클릭 | 메뉴 버튼 | [ContextFlyout 아웃](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout) | 상황에 맞는 메뉴 |
 
 ## <a name="xy-focus-navigation-and-interaction"></a>XY 포커스 탐색 및 조작
 
@@ -284,15 +284,15 @@ XY 포커스 탐색은 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으�
 
 ### <a name="commandbar-and-contextflyout"></a>CommandBar 및 ContextFlyout
 
-사용 하는 경우는 [CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)에서 설명 했 듯이 목록을 통해 스크롤 하는 문제를 염두 [문제: 시간 스크롤 목록/표 뒤에 있는 UI 요소](#problem-ui-elements-located-after-long-scrolling-list-grid)합니다. 다음 그림은 `CommandBar`가 목록/그리드 맨 아래에 있는 UI 레이아웃을 보여 줍니다. 사용자는 `CommandBar`에 접근하기 위해 목록/그리드 맨 아래까지 스크롤해야 합니다.
+[명령 모음](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)을 사용 하는 경우 문제에 [설명 된 대로 목록을 스크롤 하는 문제를 염두에 두어야 합니다. 긴 스크롤 목록/그리드](#problem-ui-elements-located-after-long-scrolling-list-grid)후에 위치한 UI 요소입니다. 다음 그림은 `CommandBar`가 목록/그리드 맨 아래에 있는 UI 레이아웃을 보여 줍니다. 사용자는 `CommandBar`에 접근하기 위해 목록/그리드 맨 아래까지 스크롤해야 합니다.
 
 ![CommandBar가 목록/그리드 맨 아래에 있음](images/designing-for-tv/2d-navigation-best-practices-commandbar-and-contextflyout.png)
 
-배치 하는 경우에 어떻게 합니다 `CommandBar` *위에* 목록/모눈? 목록/그리드를 스크롤한 사용자가 `CommandBar`에 접근하기 위해 다시 위로 스크롤해야 하지만 이전 구성보다는 탐색이 약간 줄어듭니다. 여기서는 앱의 초기 포커스가 `CommandBar` 옆이나 위에 있다고 가정합니다. 초기 포커스가 목록/그리드 아래에 있으면 이 방식은 제대로 작동하지 않습니다. 이러한 `CommandBar` 항목이 자주 액세스할 필요가 없는 전역 작업 항목인 경우(예: **동기화** 단추) 목록/그리드 위에 배치해도 됩니다.
+목록/그리드 *위에* 을 `CommandBar` 배치 하면 어떻게 되나요? 목록/그리드를 스크롤한 사용자가 `CommandBar`에 접근하기 위해 다시 위로 스크롤해야 하지만 이전 구성보다는 탐색이 약간 줄어듭니다. 여기서는 앱의 초기 포커스가 `CommandBar` 옆이나 위에 있다고 가정합니다. 초기 포커스가 목록/그리드 아래에 있으면 이 방식은 제대로 작동하지 않습니다. 이러한 `CommandBar` 항목이 자주 액세스할 필요가 없는 전역 작업 항목인 경우(예: **동기화** 단추) 목록/그리드 위에 배치해도 됩니다.
 
 `CommandBar`의 항목을 세로로 겹칠 수는 없지만 스크롤 방향과 반대로(예: 세로로 스크롤되는 목록의 왼쪽 또는 오른쪽이나 가로로 스크롤되는 목록의 위쪽 또는 아래쪽) 배치하는 것도 UI 레이아웃에 적합한 경우 고려할 수 있는 또 다른 옵션입니다.
 
-사용자가 항목에 쉽게 액세스할 수 있어야 하는 `CommandBar`이 앱에 있는 경우 이러한 항목을 [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) 내부에 배치하고 `CommandBar`에서 제거하는 것이 좋습니다. `ContextFlyout` 속성인 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 되며 합니다 [상황에 맞는 메뉴](../controls-and-patterns/dialogs-and-flyouts/index.md) 해당 요소와 연결 된입니다. PC에서 `ContextFlyout`이 있는 요소를 마우스 오른쪽 단추로 클릭하면 해당 상황에 맞는 메뉴가 팝업됩니다. Xbox One에서는 이러한 요소에 포커스가 있는 동안 **메뉴** 단추를 누를 때 이 작업이 수행됩니다.
+사용자가 항목에 쉽게 액세스할 수 있어야 하는 `CommandBar`이 앱에 있는 경우 이러한 항목을 [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) 내부에 배치하고 `CommandBar`에서 제거하는 것이 좋습니다. `ContextFlyout`는 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 의 속성 이며 해당 요소와 연결 된 [상황에 맞는 메뉴](../controls-and-patterns/dialogs-and-flyouts/index.md) 입니다. PC에서 `ContextFlyout`이 있는 요소를 마우스 오른쪽 단추로 클릭하면 해당 상황에 맞는 메뉴가 팝업됩니다. Xbox One에서는 이러한 요소에 포커스가 있는 동안 **메뉴** 단추를 누를 때 이 작업이 수행됩니다.
 
 ### <a name="ui-layout-challenges"></a>UI 레이아웃 문제
 
@@ -306,12 +306,12 @@ XY 포커스 탐색은 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으�
 다음은 판매용 주택 목록, 지도, 속성 설명 및 기타 정보를 보여 주는 가상 부동산 앱입니다. 이 앱은 다음과 같은 방법으로 해결할 수 있는 세 가지 문제를 제기합니다.
 
 - [UI 다시 정렬](#ui-rearrange)
-- [포커스 engagement](#engagement)
+- [포커스 참여](#engagement)
 - [마우스 모드](#mouse-mode)
 
 ![가상 부동산 앱](images/designing-for-tv/2d-focus-navigation-and-interaction-real-estate-app.png)
 
-#### 문제: 시간 스크롤 목록/표 뒤에 있는 UI 요소 <a name="problem-ui-elements-located-after-long-scrolling-list-grid"></a>
+#### 문제: 긴 스크롤 목록/그리드 후에 있는 UI 요소<a name="problem-ui-elements-located-after-long-scrolling-list-grid"></a>
 
 다음 그림에 표시된 속성의 [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)는 매우 긴 스크롤 목록입니다. `ListView`에서 [연결](#focus-engagement)이 요구되지 *않는* 경우 사용자가 목록으로 이동하면 목록의 첫 번째 항목에 포커스가 배치됩니다. 사용자가 **이전** 또는 **다음** 단추에 접근하려면 목록에 있는 모든 항목을 탐색해야 합니다. 이처럼 사용자가 전체 목록을 트래버스하는 것이 힘든 경우&mdash;즉, 이러한 경험이 허용될 만큼&mdash;목록이 짧지 않은 경우에는 다른 옵션을 고려하는 것이 좋습니다.
 
@@ -319,7 +319,7 @@ XY 포커스 탐색은 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으�
 
 #### <a name="solutions"></a>해결 방법
 
-**UI 다시 정렬 <a name="ui-rearrange"></a>**
+**UI 다시 정렬<a name="ui-rearrange"></a>**
 
 초기 포커스가 페이지 맨 아래에 배치되지 않는 경우 일반적으로 긴 스크롤 목록 위에 있는 UI 요소가 아래에 배치된 UI 요소보다 액세스하기 더 쉽습니다.
 이 새로운 레이아웃이 다른 디바이스에도 적합한 경우 Xbox One용으로 특수 UI 변경을 수행하는 대신 모든 디바이스 패밀리에 대한 레이아웃을 변경하는 것이 비용을 줄이는 방법일 수 있습니다.
@@ -327,20 +327,20 @@ XY 포커스 탐색은 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으�
 
 ![부동산 앱: 긴 스크롤 목록 위에 단추 배치](images/designing-for-tv/2d-focus-navigation-and-interaction-ui-rearrange.png)
 
-**포커스 engagement <a name="engagement"></a>**
+**포커스 참여<a name="engagement"></a>**
 
 연결이 *필수*이면 전체 `ListView`가 단일 포커스 대상이 됩니다. 사용자가 다음 포커스 가능 요소에 액세스하기 위해 목록 내용을 무시할 수 있습니다. 연결을 지원하는 컨트롤 및 사용 방법에 대한 자세한 내용은 [포커스 연결](#focus-engagement)을 참조하세요.
 
 ![부동산 앱: 한 번만 클릭하면 이전/다음 단추에 접근할 수 있도록 연결을 필수로 설정](images/designing-for-tv/2d-focus-navigation-and-interaction-engagement.png)
 
-#### <a name="problem-scrollviewer-without-any-focusable-elements"></a>문제: 포커스 된 요소 없이 ScrollViewer
+#### <a name="problem-scrollviewer-without-any-focusable-elements"></a>문제: 포커스를 받을 요소가 없는 ScrollViewer
 
 XY 포커스 탐색은 한 번에 하나씩 포커스 가능 UI요소로 이동하므로 포커스 가능 요소가 없는 [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)(예: 이 예제와 같이 텍스트만 포함된 경우)에서는 사용자가 `ScrollViewer`의 일부 콘텐츠를 볼 수 없는 시나리오가 발생할 수 있습니다.
 이 시나리오 및 기타 관련 시나리오에 대한 해결 방법은 [포커스 연결](#focus-engagement)을 참조하세요.
 
-![부동산 앱: 텍스트만 포함 된 ScrollViewer](images/designing-for-tv/2d-focus-navigation-and-interaction-scrollviewer.png)
+![부동산 앱: 텍스트만 있는 ScrollViewer](images/designing-for-tv/2d-focus-navigation-and-interaction-scrollviewer.png)
 
-#### <a name="problem-free-scrolling-ui"></a>문제: UI 스크롤
+#### <a name="problem-free-scrolling-ui"></a>문제: 자유 스크롤 UI
 
 앱에 그리기 화면 또는 이 예제의 지도와 같은 자유 스크롤 UI가 필요한 경우 XY 포커스 탐색이 작동하지 않습니다.
 이런 경우에는 [마우스 모드](#mouse-mode)를 켜서 사용자가 UI 요소 내에서 자유롭게 탐색하도록 할 수 있습니다.
@@ -485,7 +485,7 @@ HTML/JavaScript용 샘플 코드를 포함하여 자세한 내용은 [마우스 
 [FrameworkElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement) 개체의 `IsFocusEngagementEnabled` 속성이 `True`로 설정된 경우 컨트롤이 포커스 연결 필요로 표시됩니다. 즉, 사용자가 **A/선택** 단추를 눌러 컨트롤을 "연결"하고 조작해야 합니다. 작업이 끝나면 **B/뒤로** 버튼을 눌러 컨트롤 연결을 해제하고 벗어날 수 있습니다.
 
 > [!NOTE]
-> `IsFocusEngagementEnabled` 새로운 API 및 문서화 되지 않습니다.
+> `IsFocusEngagementEnabled`는 새로운 API 이며 아직 문서화 되지 않았습니다.
 
 ### <a name="focus-trapping"></a>포커스 트래핑
 
@@ -514,10 +514,10 @@ HTML/JavaScript용 샘플 코드를 포함하여 자세한 내용은 [마우스 
 
 [Slider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) 컨트롤 외에도 연결을 요구할 수 있는 다음과 같은 컨트롤이 있습니다.
 
-- [목록 상자](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)
+- [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)
 - [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
-- [FlipView]https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView)
+- [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView)
 
 `Slider` 컨트롤과 달리 이러한 컨트롤은 해당 컨트롤 내에 포커스를 트래핑하지 않습니다. 그러나 대량 데이터를 포함할 경우 유용성 문제가 발생할 수 있습니다. 다음은 대량 데이터를 포함하는 `ListView`의 예입니다.
 
@@ -549,21 +549,21 @@ HTML/JavaScript용 샘플 코드를 포함하여 자세한 내용은 [마우스 
 | 컨트롤               | 포커스 연결 기본값  |
 |-----------------------|---------------------------|
 | CalendarDatePicker    | 켜짐                        |
-| FlipView              | 꺼짐                       |
-| GridView              | 꺼짐                       |
-| ListBox               | 꺼짐                       |
-| ListView              | 꺼짐                       |
-| ScrollViewer          | 꺼짐                       |
-| SemanticZoom          | 꺼짐                       |
+| FlipView              | 끄기                       |
+| GridView              | 끄기                       |
+| ListBox               | 끄기                       |
+| ListView              | 끄기                       |
+| ScrollViewer          | 끄기                       |
+| SemanticZoom          | 끄기                       |
 | 슬라이더                | 켜짐                        |
 
 다른 모든 UWP 컨트롤은 `IsFocusEngagementEnabled="True"`일 때 동작 또는 시각적 변경이 없습니다.
 
 ## <a name="summary"></a>요약
 
-특정 장치 또는 환경에 최적화 된 UWP 응용 프로그램을 작성할 수 있지만 유니버설 Windows 플랫폼 또한 여러 장치에서 입력에 관계 없이 2 foot와 원격 제어 환경에 성공적으로 사용할 수 있는 앱을 빌드할 수 있습니다. 장치 또는 사용자 수 있습니다. 이 문서의 권장 사항을 사용 하 여 앱이 TV와 PC는 것 보다 좋은 것을 확인할 수 있습니다.
+특정 장치 또는 환경에 최적화 된 UWP 응용 프로그램을 빌드할 수는 있지만, 유니버설 Windows 플랫폼을 사용 하면 2 피트 및 10-면에서 모두 장치에 성공적으로 사용할 수 있는 앱을 빌드할 수 있으며, 입력에 상관 없이 앱을 빌드할 수도 있습니다. 장치 또는 사용자 기능. 이 문서의 권장 사항을 사용 하면 앱이 TV와 PC 둘 다에서 가능 하다는 것을 확인할 수 있습니다.
 
 ## <a name="related-articles"></a>관련 문서
 
 - [Xbox 및 TV용 디자인](../devices/designing-for-tv.md)
-- [유니버설 Windows 플랫폼 (UWP) 앱에 대 한 장치 입문서](index.md)
+- [UWP (유니버설 Windows 플랫폼 용 장치 입문) 앱](index.md)

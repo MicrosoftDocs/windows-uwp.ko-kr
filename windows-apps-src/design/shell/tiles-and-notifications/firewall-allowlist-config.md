@@ -1,43 +1,41 @@
 ---
 author: mijacobs
-Description: 대부분의 기업에서는 불필요 한 트래픽을 차단 하도록 방화벽을 사용 합니다. 이 문서에는 WNS 트래픽이 방화벽을 통해 전달 되도록 허용 하는 방법을 설명 합니다.
-title: WNS 트래픽을 방화벽 Allowlist 추가
+Description: 많은 기업에서 방화벽을 사용 하 여 원치 않는 트래픽을 차단 합니다. 이 문서에서는 WNS 트래픽이 방화벽을 통과 하도록 허용 하는 방법을 설명 합니다.
+title: 방화벽에 WNS 트래픽 추가 Allowlist
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/20/2019
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: WNS, windows 10, uwp, windows 알림 서비스, 알림, windows, 방화벽 문제 해결, IP, 트래픽, enterprise, 네트워크, 공용 IP 주소, FQDN, VIP, IPv4
+keywords: windows 10, uwp, WNS, windows 알림 서비스, 알림, windows, 방화벽, 문제 해결, IP, 트래픽, 엔터프라이즈, 네트워크, IPv4, VIP, FQDN, 공용 IP 주소
 ms.localizationpriority: medium
-ms.openlocfilehash: 23a9b11cd961e03217aba8ca3d1d988447a2f80b
-ms.sourcegitcommit: b0edd3c09f931b9b62f9c2d17037fb58d826174f
+ms.openlocfilehash: 1f8a72eec46971fa27a4bd0dec112430f2eb3535
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67349854"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867305"
 ---
-# <a name="allowing-windows-notification-traffic-through-enterprise-firewalls"></a>엔터프라이즈 방화벽을 통해 Windows 알림 트래픽을 허용
+# <a name="allowing-windows-notification-traffic-through-enterprise-firewalls"></a>엔터프라이즈 방화벽을 통해 Windows 알림 트래픽 허용
 
 ## <a name="background"></a>배경
-원치 않는 네트워크 트래픽을 차단 하도록 방화벽을 사용 하는 대부분의 기업에서는 그러나 중요 한 등 Windows 알림 서비스 통신 차단할 수도 있습니다. 즉, WNS를 통해 전송 되는 모든 알림이 삭제 됩니다. 이 방지 하려면 네트워크 관리자 WNS 트래픽이 방화벽을 통해 전달 되도록 허용 하는 예외 목록에 승인 된 WNS 채널 목록을 추가할 수 있습니다. 추가 하는 방법에 대 한 자세한 내용은 같습니다. 
+많은 기업에서 방화벽을 사용 하 여 원치 않는 네트워크 트래픽을 차단 합니다. 불행 하 게도 Windows Notification Service 통신과 같은 중요 한 작업을 차단할 수 있습니다. 즉, WNS를 통해 전송 된 모든 알림이 삭제 됩니다. 이를 방지 하기 위해 네트워크 관리자는 승인 목록에 승인 된 WNS 채널 목록을 추가 하 여 WNS 트래픽이 방화벽을 통과 하도록 할 수 있습니다. 다음은 추가 방법 및 항목에 대 한 자세한 내용입니다. 
 
 > [!Note] 
-2019/6/24, Windows 클라이언트 기준 **하지** 지원 프록시를 WNS에 대 한 연결에 직접 연결 해야 합니다.
+6/24/2019 이상 Windows 클라이언트는 프록시를 지원 **하지** 않습니다. WNS에 대 한 연결은 직접 연결 이어야 합니다.
 
-## <a name="what-information-should-be-added-to-the-allowlist"></a>allowlist에 추가할 정보
-Fqdn, Vip 및 IP를 포함 하는 목록을 Windows 알림 서비스에서 사용 되는 범위를 해결 하는 다음 됩니다. 
-
-> [!IMPORTANT]
-> 좋습니다 FQDN 기준으로 목록을 허용 하는 이러한 변경 하지 않기 때문입니다. FQDN으로 목록에 허용 하는 경우에 IP 주소 범위를 허용 하도록 필요가 없습니다.
+## <a name="what-information-should-be-added-to-the-allowlist"></a>Allowlist에 추가 해야 하는 정보
+다음은 Windows 알림 서비스에서 사용 하는 Fqdn, Vip 및 IP 주소 범위를 포함 하는 목록입니다. 
 
 > [!IMPORTANT]
-> IP 주소 범위를; 주기적으로 변경 됩니다. 이 인해이 페이지에 포함 되지 않습니다. IP 범위 목록을 확인 하려는 경우에 다운로드 센터에서 파일을 다운로드할 수 있습니다. [Windows 알림 서비스 (WNS) VIP 및 IP 범위](https://www.microsoft.com/download/details.aspx?id=44238)합니다. 하십시오 돌아갑니다 정기적으로 최신 정보가 있는지 확인 합니다. 
+> FQDN으로 목록을 허용 하는 것은 변경 되지 않으므로이를 허용 하는 것이 좋습니다. FQDN으로 목록을 허용 하는 경우 IP 주소 범위를 허용 하지 않아도 됩니다.
+
+> [!IMPORTANT]
+> IP 주소 범위는 주기적으로 변경 됩니다. 이로 인해이 페이지에 포함 되지 않습니다. IP 범위 목록을 보려는 경우 다운로드 센터에서 파일을 다운로드할 수 있습니다. [WNS (Windows 알림 서비스) VIP 및 IP 범위](https://www.microsoft.com/download/details.aspx?id=44238) 최신 정보를 확인 하려면 정기적으로 다시 확인 하세요. 
 
 
 ### <a name="fqdns-vips-and-ips"></a>Fqdn, Vip 및 Ip
-그 다음 표에 설명 되어 각 다음 XML 문서의 요소 (에서 [약관 표기법](#terms-and-notations)합니다. IP 범위 Fqdn 일정 하 게 유지 됩니다 처럼 Fqdn만을 사용 하는 것이 좋습니다에이 문서에서 의도적으로 남아 있습니다. 그러나 다운로드 센터에서 전체 목록이 포함 된 XML 파일을 다운로드할 수 있습니다. [Windows 알림 서비스 (WNS) VIP 및 IP 범위](https://www.microsoft.com/download/details.aspx?id=44238)합니다. 새 Vip 또는 IP 범위는 수 **업로드한 후 1 주 동안 유효**합니다.
+다음 XML 문서의 각 요소에 대 [한 설명은 용어 및 표기법](#terms-and-notations)의 표에 설명 되어 있습니다. Fqdn이 일정 하 게 유지 되므로 Fqdn만 사용 하는 것이 좋습니다. 그러나 다운로드 센터에서 전체 목록이 포함 된 XML 파일을 다운로드할 수 있습니다. [WNS (Windows 알림 서비스) VIP 및 IP 범위](https://www.microsoft.com/download/details.aspx?id=44238) 새 Vip 또는 IP 범위는 **업로드 후 1 주일에 적용**됩니다.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -62,28 +60,28 @@ Fqdn, Vip 및 IP를 포함 하는 목록을 Windows 알림 서비스에서 사�
 
 ```
 
-### <a name="terms-and-notations"></a>사용 약관 표기법
-표기법 및 위의 XML 조각에서 사용 되는 요소에 대 한 설명은 다음과 같습니다.
+### <a name="terms-and-notations"></a>용어 및 표기법
+위의 XML 조각에 사용 된 표기법 및 요소에 대 한 설명은 다음과 같습니다.
 
 | 용어 | 설명 |
 |---|---|
-| **십진수 표기법 (예: 64.4.28.0/26)** | 십진수 표기법으로의 IP 주소 범위를 설명 하는 방법입니다. 예를 들어 64.4.28.0/26 64.4.28.0의 처음 26 비트는 마지막 6 비트 변수는 상수를 의미 합니다.  이 경우 IPv4 범위가 64.4.28.0-64.4.28.63 합니다. |
-| **ClientDNS** | 클라이언트 장치 (Windows Pc, 데스크톱)에 대 한 Fully-Qualified 도메인 이름 (FQDN) 필터는 WNS에서 알림을 수신 합니다. 이러한 WNS 기능을 사용 하려면 WNS 클라이언트가 방화벽을 통해 허용 되어야 합니다.  것이 좋습니다 허용 목록 IP/VIP 범위 대신 Fqdn으로 하므로 이러한 변경 되지 것입니다. |
-| **ClientIPsIPv4** | 클라이언트 장치 (Windows Pc, 데스크톱)에서 액세스 서버의 IPv4 주소는 WNS에서 알림을 수신 합니다. |
-| **CloudServiceDNS** | 이들은 알림으로 WNS에 보내도록 클라우드 서비스에는 강연과 WNS 서버용 Fully-Qualified 도메인 이름 (FQDN) 필터입니다. 이러한 순서로 WNS 알림을 보내도록 서비스에 대 한 방화벽을 통해 허용 되어야 합니다.  것이 좋습니다 허용 목록 IP/VIP 범위 대신 Fqdn으로 하므로 이러한 변경 되지 것입니다.|
-| **CloudServiceIPs** | CloudServiceIPs는 WNS 알림을 보내는 데 클라우드 서비스에 대 한 서버의 IPv4 주소  |
+| **점-10 진수 표기법 (예: 64.4.28.0/26)** | 점-10 진수 표기법은 IP 주소의 범위를 설명 하는 방법입니다. 예를 들어 64.4.28.0/26은 64.4.28.0의 처음 26 비트가 상수이 고, 마지막 6 비트는 가변적입니다.  이 경우 IPv4 범위는 64.4.28.0-64.4.28.63입니다. |
+| **ClientDNS** | 이는 WNS에서 알림을 수신 하는 클라이언트 장치 (Windows Pc, 데스크톱)의 FQDN (정규화 된 도메인 이름) 필터입니다. 이는 WNS 클라이언트가 WNS 기능을 사용 하기 위해 방화벽을 통해 허용 되어야 합니다.  IP/VIP 범위 대신 Fqdn으로 목록을 허용 하는 것이 좋습니다 .이는 변경 되지 않기 때문입니다. |
+| **ClientIPsIPv4** | 클라이언트 장치 (Windows Pc, 데스크톱)에서 WNS 로부터 알림을 수신 하 여 액세스 하는 서버의 IPv4 주소입니다. |
+| **CloudServiceDNS** | 클라우드 서비스에서 notificatios를 WNS로 보내기 위해 통신 하는 WNS 서버에 대 한 FQDN (정규화 된 도메인 이름) 필터입니다. 이는 서비스에서 WNS 알림을 보내기 위해 방화벽을 통해 허용 되어야 합니다.  IP/VIP 범위 대신 Fqdn으로 목록을 허용 하는 것이 좋습니다 .이는 변경 되지 않기 때문입니다.|
+| **CloudServiceIPs** | CloudServiceIPs는 클라우드 서비스에서 WNS에 알림을 보내는 데 사용 되는 서버의 IPv4 주소입니다.  |
 
 
-## <a name="microsoft-push-notifications-service-mpns-public-ip-ranges"></a>Microsoft 푸시 알림 서비스 (MPNS) 공용 IP 범위
-MPNS 레거시 알림 서비스를 사용 하는 경우 IP 주소 범위를 허용 목록에 추가 해야 합니다. 다운로드 센터에서 사용할 수 있습니다: [Microsoft 푸시 알림 서비스 (MPNS) 공용 IP 범위](https://www.microsoft.com/download/details.aspx?id=44535)합니다.
+## <a name="microsoft-push-notifications-service-mpns-public-ip-ranges"></a>MPNS (Microsoft 푸시 알림 서비스) 공용 IP 범위
+레거시 notification service MPNS를 사용 하는 경우 허용 목록에 추가 해야 하는 IP 주소 범위를 다운로드 센터에서 사용할 수 있습니다. [MPNS (Microsoft 푸시 알림 서비스) 공용 IP 범위](https://www.microsoft.com/download/details.aspx?id=44535)
 
 
 ## <a name="related-topics"></a>관련 항목
 
 * [빠른 시작: 푸시 알림 보내기](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
-* [요청, 생성 및 알림 채널을 저장 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
-* [응용 프로그램을 실행 하는 것에 대 한 알림을 차단 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
-* [WNS와 함께 Windows 푸시 알림 서비스 ()를 인증 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [알림 채널을 요청, 생성 및 저장 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
+* [실행 중인 응용 프로그램에 대 한 알림을 가로채는 방법](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
+* [WNS (Windows 푸시 알림 서비스)를 사용 하 여 인증 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
 * [푸시 알림 서비스 요청 및 응답 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
-* [지침 및 푸시 알림에 대 한 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [푸시 알림에 대 한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
  

@@ -10,12 +10,12 @@ ms.technology: hub
 keywords: python, windows 10, microsoft, pip, py, 파일 경로, PYTHONPATH, python 배포, python 패키징
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: fd08061858fc97f1427e94c6a92a4c3a9511967d
-ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
+ms.openlocfilehash: d944e16dc96f78efdece715778a13cd3fb2d9dbd
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68473656"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867352"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Windows에서 Python 사용에 대 한 질문과 대답
 
@@ -29,11 +29,21 @@ ms.locfileid: "68473656"
 
 [StackOverflow에 대 한 설명을 따르세요](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows/12476379).
 
-### <a name="what-is-pyexe"></a>Py 란?
+## <a name="what-is-pyexe"></a>Py 란?
 
 여러 유형의 Python 프로젝트에서 작업 하 고 있으므로 컴퓨터에 여러 버전의 Python이 설치 될 수 있습니다. 이러한 모두 `python` 명령을 사용 하기 때문에 사용 중인 Python 버전을 명확 하 게 알 수 없습니다. 표준으로 `python3` 명령을 사용 하거나 `python3.7` 특정 버전을 선택 하는 것이 좋습니다.
 
 [Py 시작 관리자](https://docs.python.org/3/using/windows.html#launcher) 는 설치한 Python의 최신 버전을 자동으로 선택 합니다. 같은 `py -3.7` 명령을 사용 하 여 특정 버전을 선택 하거나 `py --list` 사용할 수 있는 버전을 확인할 수도 있습니다. **그러나** [python.org](https://www.python.org/downloads/windows/)에서 설치 된 Python 버전을 사용 하는 경우에만 py 시작 관리자가 작동 합니다. Microsoft Store에서 Python을 `py` 설치 하는 경우 명령은 **포함 되지 않습니다**. Linux, macos, wsl 및 Python의 Microsoft Store 버전에 대해 `python3` (또는 `python3.7`) 명령을 사용 해야 합니다.
+
+## <a name="why-does-running-pythonexe-open-the-microsoft-store"></a>Python .exe를 실행 하 여 Microsoft Store을 여는 이유는 무엇 인가요?
+
+새 사용자가 Python을 올바르게 설치 하는 것을 지원 하기 위해 Microsoft Store에 게시 된 커뮤니티 패키지의 최신 버전으로 바로 이동 하는 바로 가기를 Windows에 추가 했습니다. 이 패키지는 관리자 권한 없이 쉽게 설치할 수 있으며, 기본 `python` 및 `python3` 명령을 실제 항목으로 바꿉니다.
+
+명령줄 인수를 사용 하 여 바로 가기 실행 파일을 실행 하면 Python이 설치 되지 않았음을 나타내는 오류 코드가 반환 됩니다. 이는 배치 파일 및 스크립트가 의도 하지 않을 때 스토어 앱을 열지 못하도록 하기 위한 것입니다.
+
+[Python.org](https://www.python.org/downloads/windows/) 의 설치 관리자를 사용 하 여 Python을 설치 하 고 "경로에 추가" 옵션을 선택 `python` 하면 새 명령이 바로 가기 보다 우선적으로 적용 됩니다. 다른 설치 관리자는 기본 제공 `python` 바로 가기 보다 _낮은_ 우선 순위로 추가 될 수 있습니다.
+
+시작에서 "앱 실행 별칭 관리"를 열고 "App Installer" Python 항목을 찾은 다음 "끄기"로 전환 하 여 Python을 설치 하지 않고 바로 가기를 사용 하지 않도록 설정할 수 있습니다.
 
 ## <a name="why-dont-file-paths-work-in-python-when-i-copy-paste-them"></a>파일 경로를 복사 하 여 붙여넣을 때 Python에서 파일 경로가 작동 하지 않는 이유는 무엇 인가요?
 

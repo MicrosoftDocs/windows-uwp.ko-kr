@@ -1,26 +1,26 @@
 ---
-title: Windows 10의에서 내게 필요한 옵션
-description: 이 페이지에 액세스할 수 있는 Windows 앱 개발을 시작 하는 정보를 제공 합니다.
+title: Windows 10의 내게 필요한 옵션
+description: 이 페이지에서는 액세스 가능한 Windows 앱 개발을 시작할 수 있는 정보를 제공 합니다.
 ms.topic: article
 ms.date: 04/03/2019
 ms.localizationpriority: medium
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-keywords: Windows 10에서 내게 필요한 옵션을 구축 액세스할 수 있는 WPF 앱에 액세스할 수 있는 WinForms 앱을 빌드하기 액세스할 UWP 앱 빌드에 액세스할 수 있는 win32 앱을 빌드하는 접근성
-ms.openlocfilehash: b818b99ebf896b2d2de219d2eedbfd101f3a5caa
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+keywords: Windows 10의 접근성, 접근성, 액세스 가능한 win32 앱 빌드, 액세스 가능한 UWP 앱 빌드, 액세스 가능한 WPF 앱 빌드, 액세스 가능한 WinForms 앱 빌드
+ms.openlocfilehash: bb82103c030c436655630a37678bbec11e588f61
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66214991"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867422"
 ---
-# <a name="accessibility-in-windows-10"></a>Windows 10의에서 내게 필요한 옵션
+# <a name="accessibility-in-windows-10"></a>Windows 10의 내게 필요한 옵션
 
-![hero-accessibility-bar-smaller.png](images/hero-accessibility-bar-smaller.png)
+![hero-accessibility-bar-smaller](images/hero-accessibility-bar-smaller.png)
 
-액세스 가능한 앱은 장애가, 취향, 특정 작업 스타일을 포함 하 여 가능한 또는 상황 제약 조건 (예: 구동, 요리, 반사, 및 등)으로 많은 사용자에 대 한 유용성을 향상 시켜 포함 되도록 설계 되었습니다.
+내게 필요한 옵션 지원 앱은 장애가 있는 사용자, 개인 설정, 특정 작업 스타일 또는 상황 제약 조건 (예: 운전, 요리, 눈부심 등)을 포함 하 여 최대한 많은 사용자에 대 한 유용성을 향상 시켜 포함 하도록 설계 되었습니다.
 
-이 페이지에서는 다양 한 Windows 개발 프레임 워크를 화면 판독기 및 돋보기, 소프트웨어 테스트와 같은 도구를 구축 하는 보조 기술 개발자가 Windows 응용 프로그램 빌드 개발자를 위한 내게 필요한 옵션을 지 원하는 방법 설명 엔지니어를 응용 프로그램 테스트에 대 한 자동화 된 스크립트를 작성 합니다.
+이 페이지에서는 Windows 응용 프로그램을 빌드하는 개발자를 위한 다양 한 Windows 개발 프레임 워크, 화면 판독기 및 돋보기와 같은 도구를 빌드하는 보조 기술 개발자, 소프트웨어 테스트에 대 한 정보를 제공 합니다. 응용 프로그램 테스트를 위한 자동화 된 스크립트를 만드는 엔지니어
 
 ## <a name="platform-specific-documentation"></a>플랫폼별 설명서
 
@@ -28,7 +28,7 @@ ms.locfileid: "66214991"
     :::column:::
         ![Universal Windows Platform (UWP)](images/platform-uwp.png)
 
-        ### Universal Windows Platform (UWP)
+        **Universal Windows Platform (UWP)**
 
         Develop accessible apps and tools on the modern platform for Windows 10 applications and games on any Windows device (including PCs, phones, Xbox One, HoloLens, and more), and publish them to the Microsoft Store.
 
@@ -43,7 +43,7 @@ ms.locfileid: "66214991"
     :::column:::
         ![Win32 platform apps](images/platform-win32.png)
 
-        ### Win32 platform
+        **Win32 platform**
 
         Develop accessible apps and tools on the original platform for C/C++ Windows applications.
 
@@ -68,7 +68,7 @@ ms.locfileid: "66214991"
     :::column:::
         ![WPF platform](images/platform-wpf.png)
 
-        ### Windows Presentation Foundation (WPF)
+        **Windows Presentation Foundation (WPF)**
 
         Develop accessible apps and tools on the established platform for managed Windows applications with a XAML UI model and the .NET Framework.
 
@@ -91,7 +91,7 @@ ms.locfileid: "66214991"
     :::column:::
         ![Windows Forms platform apps](images/platform-winforms.png)
 
-        ### Windows Forms (WinForms)
+        **Windows Forms (WinForms)**
 
         Develop accessible apps and tools for managed Windows applications with a XAML UI model and the .NET Framework.
 
