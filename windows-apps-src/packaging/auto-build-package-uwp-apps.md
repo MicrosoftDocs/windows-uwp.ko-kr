@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 9df150d4a8873630a371fa2ad02e8c88bed7f42e
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 08ad21d3ddc73499bb2b97b300e635fe0a6c148d
+ms.sourcegitcommit: 698a86640b365dc1ca772fb6f53ca556dc284ed6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867748"
+ms.locfileid: "68935773"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -176,7 +176,7 @@ MSIX (또는 APPX) 패키지에 서명 하려면 파이프라인에서 서명 �
 
 ![artifacts](images/building-screen6.png)
 
-`UapAppxPackageBuildMode` 인수를로 `StoreUpload`설정 했으므로 아티팩트 폴더에는 저장소 (. msixupload/. .appxupload)에 제출할 패키지를 포함 합니다. 또한 일반 앱 패키지 (. m 6/.appx) 또는 앱 번들 (. msixbundle/.appxbundle/)을 스토어에 제출할 수 있습니다. 이 문서의 목적을 위해 .appxupload 파일을 사용합니다.
+`UapAppxPackageBuildMode` 인수를로 `StoreUpload`설정 했으므로 아티팩트 폴더에는 저장소 (. msixupload/. .appxupload)에 제출할 패키지를 포함 합니다. 또한 일반 앱 패키지 (. msix/.appx) 또는 앱 번들 (. msixbundle/.appxbundle/)을 스토어에 제출할 수 있습니다. 이 문서의 목적을 위해 .appxupload 파일을 사용합니다.
 
 ## <a name="address-bundle-errors"></a>주소 번들 오류
 
