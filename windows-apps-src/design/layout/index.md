@@ -6,12 +6,12 @@ ms.date: 03/07/2018
 ms.topic: article
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
 ms.localizationpriority: medium
-ms.openlocfilehash: 33bb7aa6a5a244f1d7b9dcd178b036ac571032f8
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 7ab0344acc40103620da5164faa397c081a4a079
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065275"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867331"
 ---
 # <a name="layout"></a>레이아웃
 
@@ -21,52 +21,52 @@ ms.locfileid: "65065275"
 
 :::row:::
     :::column:::
-        ### [Page layout](page-layout.md)
-        Walk through a basic page layout structure.
+### <a name="page-layoutpage-layoutmd"></a>[페이지 레이아웃](page-layout.md)
+기본 페이지 레이아웃 구조를 안내합니다.
     :::column-end:::
     :::column:::
-        ### [Screen sizes and breakpoints](screen-sizes-and-breakpoints-for-responsive-design.md)
-        Learn about screen sizes across the Windows 10 ecosystem and how to design for breakpoints.
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-        ### [Responsive design techniques](responsive-design.md)
-        Learn about responsive design techniques that optimize your app's layout for breakpoints.
-    :::column-end:::
-    :::column:::
-        ### [Layouts with XAML](layouts-with-xaml.md)
-        Implement responsive UI in XAML with adaptive or tailored layouts.
+### <a name="screen-sizes-and-breakpointsscreen-sizes-and-breakpoints-for-responsive-designmd"></a>[화면 크기 및 중단점](screen-sizes-and-breakpoints-for-responsive-design.md)
+Windows 10 에코시스템 전체의 화면 크기와 중단점에 맞게 설계하는 방법에 대해 알아봅니다.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ### [Multiple views](show-multiple-views.md)
-        Show independent parts of your app in separate windows.
+### <a name="responsive-design-techniquesresponsive-designmd"></a>[반응형 디자인 기술](responsive-design.md)
+중단점에 맞게 앱의 레이아웃을 최적화하는 반응형 디자인 기술에 대해 알아봅니다.
     :::column-end:::
     :::column:::
-        ### [Alignment, margin, padding](alignment-margin-padding.md)
-        Use alignment, margin, and padding to influence layout behavior.
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-        ### [Layout panels](layout-panels.md)
-        Learn about each type of layout panel an how to use them to arrange UI elements.
-    :::column-end:::
-    :::column:::
-        ### [Transforms](transforms.md)
-        Use transforms to rotate, skew, and scale elements.
+### <a name="layouts-with-xamllayouts-with-xamlmd"></a>[XAML을 사용한 레이아웃](layouts-with-xaml.md)
+적응형 또는 맞춤형 레이아웃을 사용하여 XAML에서 반응형 UI를 구현합니다.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ### [Attached layouts](attached-layouts.md)
-        Learn advanced layout concepts in XAML and how to create a custom virtualizing layout.
+### <a name="multiple-viewsshow-multiple-viewsmd"></a>[여러 보기](show-multiple-views.md)
+앱의 각 부분을 별도의 창으로 표시합니다.
+    :::column-end:::
+    :::column:::
+### <a name="alignment-margin-paddingalignment-margin-paddingmd"></a>[맞춤, 여백, 안쪽 여백](alignment-margin-padding.md)
+레이아웃 동작에 영향을 주는 맞춤, 여백 및 안쪽 여백을 사용합니다.
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+### <a name="layout-panelslayout-panelsmd"></a>[레이아웃 패널](layout-panels.md)
+레이아웃 패널의 각 유형과 패널을 사용하여 UI 요소를 정렬하는 방법에 대해 알아봅니다.
+    :::column-end:::
+    :::column:::
+### <a name="transformstransformsmd"></a>[변형](transforms.md)
+변환을 사용하여 요소의 회전, 기울이기 및 크기 조정이 가능합니다.
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+### <a name="attached-layoutsattached-layoutsmd"></a>[연결된 레이아웃](attached-layouts.md)
+XAML의 고급 레이아웃 개념 및 사용자 지정 가상화 레이아웃을 만드는 방법을 알아봅니다.
     :::column-end:::
     :::column:::
     :::column-end:::

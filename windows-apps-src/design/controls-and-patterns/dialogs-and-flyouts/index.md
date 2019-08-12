@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d542c9809eb939553a851508886e34265f269263
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 43d63b1831766ecdf65fe1c1d7fd15457f728f83
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583316"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867442"
 ---
 # <a name="dialogs-and-flyouts"></a>대화 상자 및 플라이아웃
 
@@ -29,20 +29,20 @@ ms.locfileid: "57583316"
 
 :::row:::
     :::column:::
-        **Dialogs**
-        
-        ![Example of a dialog](../images/dialogs/dialog_RS2_delete_file.png)
+**대화 상자**
 
-        Dialogs are modal UI overlays that provide contextual app information. Dialogs block interactions with the app window until being explicitly dismissed. They often request some kind of action from the user.
+![대화 상자 예제](../images/dialogs/dialog_RS2_delete_file.png)
+
+대화 상자는 상황에 맞는 앱 정보를 제공하는 모달 UI 오버레이입니다. 대화 상자는 명시적으로 닫을 때까지 앱 창의 조작을 차단합니다. 종종 사용자의 작업을 요청하기도 합니다.
     :::column-end:::
     :::column::: 
-        **Flyouts**
+**플라이아웃**
 
-        ![Example of a flyout](../images/flyout-example2.png)
+![플라이아웃의 예제](../images/flyout-example2.png)
 
-        A flyout is a lightweight contextual popup that displays UI related to what the user is doing. It includes placement and sizing logic, and can be used to reveal a secondary control or show more detail about an item.
+플라이아웃은 사용자가 수행하는 작업과 관련된 UI를 표시하는 경량의 상황에 맞는 팝업입니다. 이 기능은 배치 및 크기 조정 논리를 포함하며, 보조 컨트롤을 표시하거나 항목에 대한 세부 정보를 표시하는 데 사용할 수 있습니다.
 
-        Unlike a dialog, a flyout can be quickly dismissed by tapping or clicking somewhere outside the flyout, pressing the Escape key or Back button, resizing the app window, or changing the device's orientation.
+대화 상자와 달리 플라이아웃은 플라이아웃 바깥쪽 아무 곳이나 탭 또는 클릭하거나, Esc 키 또는 뒤로 단추를 누르거나, 앱 창 크기를 조정하거나, 디바이스의 방향을 변경하여 신속하게 해제할 수 있습니다.
     :::column-end:::
 :::row-end:::
 

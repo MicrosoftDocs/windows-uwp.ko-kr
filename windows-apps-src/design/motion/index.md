@@ -12,12 +12,12 @@ design-contact: jeffarn
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1096bdab340c3f0fef24b5815423f72b0f5c8219
-ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
+ms.openlocfilehash: 31cf2134fb8f77809b75a5abf3e6980443452059
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65444161"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867400"
 ---
 # <a name="motion-for-uwp-apps"></a>UWP 앱의 동작
 
@@ -74,21 +74,21 @@ Fluent 움직임은 앱에서 목적에 맞게 작동합니다. 사용자의 동
 
 :::row:::
     :::column:::
-        ### [Timing and easing](timing-and-easing.md)
-        Timing and easing are important elements that make motion feel natural for objects entering, exiting, or moving within the UI.
+### <a name="timing-and-easingtiming-and-easingmd"></a>[타이밍 및 감속](timing-and-easing.md)
+타이밍 및 감속은 UI 내에서 개체가 출입하거나 이동하는 움직임이 자연스럽게 느껴지도록 만드는 중요한 요소입니다.
     :::column-end:::
     :::column:::
-        ### [Directionality and gravity](directionality-and-gravity.md)
-        Directional signals help provide a solid mental model of the journey a user takes across experiences. Directional movement is subject to forces like gravity, which reinforces the natural feel of the movement.
+### <a name="directionality-and-gravitydirectionality-and-gravitymd"></a>[방향 및 무게](directionality-and-gravity.md)
+방향 신호는 환경 전반에서 사용자에게 구체적인 멘탈 모델을 제공하는 데 도움이 됩니다. 방향 이동에는 이동의 자연스러운 느낌을 강화하는 중력 같은 힘이 강제로 적용됩니다.
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        ### [Page transitions](page-transitions.md)
-        Page transitions navigate users between pages in an app, providing feedback about the relationship between pages. They help users understand where they are in the navigation hierarchy.
+### <a name="page-transitionspage-transitionsmd"></a>[페이지 전환](page-transitions.md)
+페이지 전환은 앱 페이지 사이에서 사용자를 탐색하면서 페이지 사이의 관계에 대한 피드백을 제공합니다. 사용자가 탐색 계층 구조상의 위치를 이해하는 데 도움이 됩니다.
     :::column-end:::
     :::column:::
-        ### [Connected animation](connected-animation.md)
-        Connected animations let you create a dynamic and compelling navigation experience by animating the transition of an element between two different views.
+### <a name="connected-animationconnected-animationmd"></a>[연결된 애니메이션](connected-animation.md)
+연결된 애니메이션을 사용하면 두 가지 보기 간에 전환되는 동작에 애니메이션 효과를 적용하여 역동적이고 매력적인 탐색 환경을 만들 수 있습니다.
     :::column-end:::
 :::row-end:::
