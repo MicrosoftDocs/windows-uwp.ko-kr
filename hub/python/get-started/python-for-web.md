@@ -5,17 +5,15 @@ author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-ms.prod: windows
-ms.technology: hub
 keywords: python, windows 10, microsoft, windows의 python, wsl이 포함 된 python 웹 앱, windows의 python 웹 개발, windows에서 flask 앱, windows의 django 앱, python 웹, windows의 flask 웹 개발자, django web dev in windows python, vs code python 웹 개발, 원격 wsl 확장, ubuntu, wsl, venv, pip, microsoft python 확장, windows에서 python 실행, windows에서 python 사용, windows에서 python으로 빌드
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: eafe85ac7e954d1a76708b059a191c14526afff8
-ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
+ms.openlocfilehash: fa6da9f5151d9457aafd255c9d10c91e3d219cee
+ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68473689"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68959080"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>Windows에서 웹 개발을 위한 Python 사용 시작
 
@@ -75,7 +73,7 @@ Linux (Ubuntu) 파일 시스템에 새 프로젝트 디렉터리를 만들어 VS
 
 ## <a name="install-python-pip-and-venv"></a>Python, pip 및 venv 설치
 
-Ubuntu 18.04 LTS는 이미 설치 된 Python 3.6과 함께 제공 되지만, 다른 Python 설치를 사용 하 여 얻을 수 있는 일부 모듈은 제공 되지 않습니다. 경량 가상 환경을 만들고 관리 하는 데 사용 되는 표준 모듈인 **pip**, Python 용 표준 패키지 관리자를 설치 해야 합니다.  
+Ubuntu 18.04 LTS는 이미 설치 된 Python 3.6과 함께 제공 되지만, 다른 Python 설치를 사용 하 여 얻을 수 있는 일부 모듈은 제공 되지 않습니다. 경량 가상 환경을 만들고 관리 하는 데 사용 되는 표준 모듈인 **pip**, Python용 표준 패키지 관리자를 설치 해야 합니다.  
 
 1. Ubuntu 터미널을 열고 다음 `python3 --version`을 입력 하 여 Python3이 이미 설치 되어 있는지 확인 합니다. Python 버전 번호를 반환 해야 합니다. Python 버전을 업데이트 해야 하는 경우 먼저 다음 `sudo apt update && sudo apt upgrade`을 입력 하 여 Ubuntu 버전을 업데이트 한 다음를 사용 하 여 `sudo apt upgrade python3`python을 업데이트 합니다.
 
@@ -170,7 +168,7 @@ Python은 해석 된 언어 이며 다양 한 유형의 interpretors (Python2, A
 
 8. Python 코드에 대 한 새 파일을 만듭니다.`touch app.py`
 
-9. VS Code의  파일 탐색기`Ctrl+Shift+E`에서 app.py 파일을 연 다음 app.py 파일을 선택 합니다. 이렇게 하면 Python 확장을 활성화 하 여 인터프리터를 선택 합니다. **Python 3.6.8 64 비트 ('. venv ': venv)** 로 기본값을 지정 해야 합니다. 가상 환경도 검색 되었습니다.
+9. VS Code의 파일 탐색기`Ctrl+Shift+E`에서 app.py 파일을 연 다음 app.py 파일을 선택 합니다. 이렇게 하면 Python 확장을 활성화 하 여 인터프리터를 선택 합니다. **Python 3.6.8 64 비트 ('. venv ': venv)** 로 기본값을 지정 해야 합니다. 가상 환경도 검색 되었습니다.
 
     ![활성화 된 가상 환경](../../images/virtual-environment.png)
 

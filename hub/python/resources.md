@@ -5,17 +5,15 @@ author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-ms.prod: windows
-ms.technology: hub
 keywords: python, microsoft, windows 10, 자습서, 온라인 과정, 블로그, 이벤트
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: a987043735dd433288fd53090cf3623b035fad7d
-ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
+ms.openlocfilehash: 28a77b9e936acddb6158d865aef933f27444c5c9
+ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68473641"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68959058"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Windows에서 Python을 사용 하 여 개발 하기 위한 리소스
 

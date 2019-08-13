@@ -5,17 +5,15 @@ author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-ms.prod: windows
-ms.technology: hub
 keywords: python, windows 10, microsoft, python 시스템 관리, python 파일 자동화, windows에서 python 스크립트, windows에서 python 개발자 환경, windows의 python 개발자 환경, windows의 python 개발 환경, powershell을 사용한 python, python 스크립트 파일 시스템 작업
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: b34bf61f4ce4d2157df572cfbbc9337fced6cf2f
-ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
+ms.openlocfilehash: 93fdea3347cc15aa6231ff90fb18eb2f7defb201
+ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68473664"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68959074"
 ---
 # <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>Windows에서 Python을 사용 하 여 스크립팅 및 자동화를 시작 합니다.
 
@@ -135,7 +133,7 @@ Python 코드에서 다른 사용자와 공동으로 작업 하거나, GitHub와
         print(os.linesep)
     ```
 
-9. VS Code 통합**터미널 (** 억음 문자 사용)을 열고 Python 스크립트를 방금 저장 한 src 디렉터리를 입력 합니다.
+9. VS Code 통합 터미널 (억음문자 사용)을 열고 Python 스크립트를 방금 저장 한 src 디렉터리를 입력 합니다.
 
     ```powershell
     cd src

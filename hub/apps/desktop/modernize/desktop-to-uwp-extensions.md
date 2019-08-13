@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: c47eba0e0f5969e978cde5575cf8ab05e589350e
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 87483c5d34cfb2b0bb266fb3d903e15d1b492187
+ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682478"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68959048"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>패키지 된 데스크톱 앱을 Windows 10 및 UWP와 통합
 
@@ -110,7 +110,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
-<FileTypeAssociation Name="[AppID]">
+<FileTypeAssociation Name="[Name]">
          <MigrationProgIds>
             <MigrationProgId>"[ProgID]"</MigrationProgId>
         </MigrationProgIds>
@@ -123,7 +123,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 |이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
-|이름 |앱에 대한 고유 ID입니다. 이 ID는 파일 형식 연결과 관련된 해시된 [프로그래밍 ID (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids)를 생성하는 데 내부적으로 사용됩니다. 앱의 이후 버전에서 변경을 관리하는 데 이 ID를 사용할 수 있습니다. |
+|이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |MigrationProgId |파일 연결을 상속 하려는 데스크톱 응용 프로그램, 구성 요소 및 응용 프로그램의 버전을 설명 하는 [ProgID (프로그래밍 식별자)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) 입니다.|
 
 #### <a name="example"></a>예제
@@ -137,7 +137,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
     <Application>
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
-          <uap3:FileTypeAssociation Name="Contoso">
+          <uap3:FileTypeAssociation Name="myfiletypes">
             <rescap3:MigrationProgIds>
               <rescap3:MigrationProgId>Foo.Bar.1</rescap3:MigrationProgId>
               <rescap3:MigrationProgId>Foo.Bar.2</rescap3:MigrationProgId>
@@ -169,7 +169,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
-    <FileTypeAssociation Name="[AppID]">
+    <FileTypeAssociation Name="[Name]">
         <SupportedFileTypes>
             <FileType>"[file extension]"</FileType>
         </SupportedFileTypes>
@@ -182,7 +182,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 |이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
-|이름 |앱에 대한 고유 ID입니다. 이 ID는 파일 형식 연결과 관련된 해시된 [프로그래밍 ID (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids)를 생성하는 데 내부적으로 사용됩니다. 앱의 이후 버전에서 변경을 관리하는 데 이 ID를 사용할 수 있습니다.   |
+|이름 | 파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다.   |
 |FileType |앱에서 지원하는 파일 확장명입니다. |
 
 #### <a name="example"></a>예제
@@ -196,9 +196,8 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
     <Application>
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
-          <uap3:FileTypeAssociation Name="Contoso">
+          <uap3:FileTypeAssociation Name="mediafiles">
             <uap:SupportedFileTypes>
-            <uap:FileType>.txt</uap:FileType>
             <uap:FileType>.avi</uap:FileType>
             </uap:SupportedFileTypes>
           </uap3:FileTypeAssociation>
@@ -231,7 +230,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
-    <FileTypeAssociation Name="[AppID]">
+    <FileTypeAssociation Name="[Name]">
         <SupportedVerbs>
            <Verb Id="[ID]" Extended="[Extended]" Parameters="[parameters]">"[verb label]"</Verb>
         </SupportedVerbs>
@@ -244,7 +243,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 |이름 |설명 |
 |-------|-------------|
 |범주 | 항상 ``windows.fileTypeAssociation``입니다.
-|이름 |앱에 대한 고유 ID입니다. |
+|이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |동사 |파일 탐색기 컨텍스트 메뉴에 표시되는 이름입니다. 이 문자열은 ```ms-resource```를 사용하여 지역화할 수 있습니다.|
 |Id |동사의 고유 ID입니다. 응용 프로그램이 UWP 앱 인 경우 사용자의 선택 항목을 적절 하 게 처리할 수 있도록 해당 활성화 이벤트의 일부로 앱에 전달 됩니다. 응용 프로그램이 완전 신뢰 패키지 앱 인 경우 매개 변수를 대신 받습니다 (다음 글머리 기호 참조). |
 |매개 변수 |동사와 연관된 인수 매개 변수 및 값의 목록입니다. 응용 프로그램이 완전 신뢰 패키지 앱 인 경우 응용 프로그램이 활성화 될 때 이러한 매개 변수가 이벤트 인수로 응용 프로그램에 전달 됩니다. 다른 활성화 동사에 따라 응용 프로그램의 동작을 사용자 지정할 수 있습니다. 변수가 파일 경로를 포함할 수 있는 경우에는 매개 변수 값을 따옴표로 묶습니다. 이렇게 해야 경로에 공백이 포함된 경우에 발생하는 모든 문제를 방지할 수 있습니다. 응용 프로그램이 UWP 앱 인 경우 매개 변수를 전달할 수 없습니다. 대신에 앱은 ID를 수신합니다 (이전 항목 참조).|
@@ -263,7 +262,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
     <Application>
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
-          <uap3:FileTypeAssociation Name="Contoso">
+          <uap3:FileTypeAssociation Name="myfiletypes">
             <uap2:SupportedVerbs>
               <uap3:Verb Id="Edit" Parameters="/e &quot;%1&quot;">Edit</uap3:Verb>
               <uap3:Verb Id="Print" Extended="true" Parameters="/p &quot;%1&quot;">Print</uap3:Verb>
@@ -295,7 +294,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
-    <FileTypeAssociation Name="[AppID]" UseUrl="true" Parameters="%1">
+    <FileTypeAssociation Name="[Name]" UseUrl="true" Parameters="%1">
         <SupportedFileTypes>
             <FileType>"[FileExtension]"</FileType>
         </SupportedFileTypes>
@@ -308,9 +307,9 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 |이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
-|이름 |앱에 대한 고유 ID입니다. |
+|이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |UseUrl |URL 대상에서 직접 파일을 열 것인지 여부를 나타냅니다. 이 값을 설정 하지 않으면 응용 프로그램에서 URL을 사용 하 여 파일을 열도록 시도 하면 시스템이 먼저 파일을 로컬로 다운로드 합니다. |
-|매개 변수 |선택적 매개 변수입니다. |
+|매개 변수 | 선택적 매개 변수입니다. |
 |FileType |관련 파일 확장명입니다. |
 
 #### <a name="example"></a>예제
@@ -324,7 +323,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
       <Application>
         <Extensions>
           <uap:Extension Category="windows.fileTypeAssociation">
-            <uap3:FileTypeAssociation Name="documenttypes" UseUrl="true" Parameters="%1">
+            <uap3:FileTypeAssociation Name="myfiletypes" UseUrl="true" Parameters="%1">
               <uap:SupportedFileTypes>
                 <uap:FileType>.txt</uap:FileType>
                 <uap:FileType>.doc</uap:FileType>
@@ -484,7 +483,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
-    <FileTypeAssociation Name="[AppID]" MultiSelectModel="[SelectionModel]">
+    <FileTypeAssociation Name="[Name]" MultiSelectModel="[SelectionModel]">
         <SupportedVerbs>
             <Verb Id="Edit" MultiSelectModel="[SelectionModel]">Edit</Verb>
         </SupportedVerbs>
@@ -499,7 +498,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 |이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
-|이름 |앱에 대한 고유 ID입니다. |
+|이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |MultiSelectModel |아래 참조 |
 |FileType |관련 파일 확장명입니다. |
 
@@ -525,7 +524,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
     <Application>
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
-          <uap3:FileTypeAssociation Name="myapp" MultiSelectModel="Document">
+          <uap3:FileTypeAssociation Name="myfiletypes" MultiSelectModel="Document">
             <uap2:SupportedVerbs>
               <uap3:Verb Id="Edit" MultiSelectModel="Player">Edit</uap3:Verb>
               <uap3:Verb Id="Preview" MultiSelectModel="Document">Preview</uap3:Verb>
@@ -559,7 +558,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
-    <FileTypeAssociation Name="[AppID]">
+    <FileTypeAssociation Name="[Name]">
         <SupportedFileTypes>
             <FileType>"[FileExtension]"</FileType>
         </SupportedFileTypes>
@@ -574,7 +573,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 |이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
-|이름 |앱에 대한 고유 ID입니다. |
+|이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |FileType |관련 파일 확장명입니다. |
 |Clsid   |앱의 클래스 ID입니다. |
 
@@ -591,7 +590,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
     <Application>
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
-          <uap3:FileTypeAssociation Name="Contoso">
+          <uap3:FileTypeAssociation Name="myfiletypes">
             <uap2:SupportedFileTypes>
               <uap:FileType>.bar</uap:FileType>
             </uap2:SupportedFileTypes>
@@ -622,7 +621,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
-    <FileTypeAssociation Name="[AppID]">
+    <FileTypeAssociation Name="[Name]">
         <SupportedFileTypes>
             <FileType>"[FileExtension]"</FileType>
         </SupportedFileTypes>
@@ -636,7 +635,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 |이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
-|이름 |앱에 대한 고유 ID입니다. |
+|이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |FileType |관련 파일 확장명입니다. |
 |Clsid   |앱의 클래스 ID입니다. |
 
@@ -653,7 +652,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
     <Application>
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
-          <uap3:FileTypeAssociation Name="Contoso">
+          <uap3:FileTypeAssociation Name="myfiletypes">
             <uap2SupportedFileTypes>
               <uap:FileType>.bar</uap:FileType>
                 </uap2SupportedFileTypes>
@@ -685,7 +684,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
-    <FileTypeAssociation Name="[AppID]">
+    <FileTypeAssociation Name="[Name]">
         <SupportedFileTypes>
             <FileType>"[FileExtension]"</FileType>
         </SupportedFileTypes>
@@ -701,7 +700,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 |이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
-|이름 |앱에 대한 고유 ID입니다. |
+|이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |FileType |관련 파일 확장명입니다. |
 |value |유효한 [종류 값](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names)입니다. |
 
@@ -716,7 +715,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
     <Application>
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
-           <uap:FileTypeAssociation Name="Contoso">
+           <uap:FileTypeAssociation Name="mediafiles">
              <uap:SupportedFileTypes>
                <uap:FileType>.m4a</uap:FileType>
                <uap:FileType>.mta</uap:FileType>
@@ -748,7 +747,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 ```XML
 <uap:Extension Category="windows.fileTypeAssociation">
-    <uap:FileTypeAssociation Name="[AppID]">
+    <uap:FileTypeAssociation Name="[Name]">
         <SupportedFileTypes>
             <FileType>.bar</FileType>
         </SupportedFileTypes>
@@ -762,7 +761,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 |이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
-|이름 |앱에 대한 고유 ID입니다. |
+|이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |FileType |관련 파일 확장명입니다. |
 |Clsid  |앱의 클래스 ID입니다. |
 
@@ -778,7 +777,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
     <Application>
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
-          <uap3:FileTypeAssociation Name="Contoso">
+          <uap3:FileTypeAssociation Name="myfiletypes">
             <uap:SupportedFileTypes>
               <uap:FileType>.bar</uap:FileType>
             </uap:SupportedFileTypes>
