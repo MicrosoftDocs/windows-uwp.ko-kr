@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: aaaf13c455d3d05d5ccfac6b2bd61418f3e8e5bb
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: f5f38fdfb3ba9fd32a6e06ec19cdbfb6c3b09f24
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63820518"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867682"
 ---
 # <a name="writing-style"></a>쓰기 스타일
 
@@ -41,12 +41,10 @@ ms.locfileid: "63820518"
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        Select **filters** to add effects to your image.
+![허용](images/do.svg) **필터**를 선택하여 효과를 이미지에 추가하세요.
     :::column-end:::
     :::column:::
-        ![Don't](images/dont.svg)
-        If you want to add visual effects or alterations to your image, select **filters.**
+![금지](images/dont.svg) 시각적 효과 또는 변경 내용을 이미지에 추가하려면 **필터**를 선택합니다.
     :::column-end:::
 :::row-end:::
 
@@ -56,12 +54,10 @@ ms.locfileid: "63820518"
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        Restart the app to see your changes.
+![허용](images/do.svg) 앱을 다시 시작하여 변경 내용을 확인하세요.
     :::column-end:::
     :::column:::
-        ![Don't](images/dont.svg)
-        The changes will be applied when the app is restarted.
+![금지](images/dont.svg) 앱이 다시 시작되면 변경 내용이 적용됩니다.
     :::column-end:::
 :::row-end:::
 
@@ -71,12 +67,10 @@ ms.locfileid: "63820518"
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        We couldn't upload the picture. If this happens again, try restarting the app. But don't worry — your picture will be waiting when you come back.
+![허용](images/do.svg) 사진을 업로드할 수 없습니다. 이 문제가 다시 발생하면 앱을 다시 시작해보세요. 하지만 걱정하지 마세요. 다시 돌아오면 사진이 업로드되어 있습니다.
     :::column-end:::
     :::column:::
-        ![Don't](images/dont.svg)
-        An error occured, and we weren't able to upload the picture. Please try again, and if you encounter this problem again, you may need to restart the app. But don't worry — we've saved your work locally, and it'll be waiting for you when you come back.
+![금지](images/dont.svg) 오류가 발생하여 사진을 업로드할 수 없습니다. 다시 시도하세요. 이 문제가 다시 발생하면 앱을 다시 시작해야 할 수도 있습니다. 하지만 걱정하지 마세요. 해당 작업을 로컬로 저장했으며, 다시 돌아오면 사진이 업로드되어 있습니다.
     :::column-end:::
 :::row-end:::
 
@@ -93,8 +87,7 @@ ms.locfileid: "63820518"
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        We couldn't save your file to that location.
+![허용](images/do.svg) 파일을 해당 위치에 저장할 수 없습니다.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -110,8 +103,7 @@ ms.locfileid: "63820518"
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        The Universal Windows Platform (UWP) design guidance is a resource to help you design and build beautiful, polished apps. With the design features that are included in every UWP app, you can build user interfaces (UI) that scale across a range of devices.
+![허용](images/do.svg) UWP(유니버설 Windows 플랫폼) 디자인 지침은 세련되고 아름다운 앱을 디자인하고 빌드하는 데 도움이 되는 리소스입니다. 모든 UWP 앱에 포함된 디자인 기능을 사용하면 다양한 디바이스에서 크기를 조정하는 UI(사용자 인터페이스)를 빌드할 수 있습니다.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -125,8 +117,7 @@ ms.locfileid: "63820518"
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        When you're happy with your image, select **save** to add it to your gallery. From there, you'll be able to share it with friends.
+![허용](images/do.svg) 이미지에 만족하면 **저장**을 선택하여 갤러리에 추가하세요. 여기서는 친구들과 공유할 수 있습니다.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -140,12 +131,12 @@ ms.locfileid: "63820518"
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        <b>You’re not connected.</b>
-        * Check that your network cables are plugged in.
-        * Make sure you're not in airplane mode.
-        * See if your wireless switch is turned on.
-        * Restart your router.
+![허용](images/do.svg)
+<b>연결되어 있지 않습니다.</b>
+* 네트워크 케이블이 연결되어 있는지 확인합니다.
+* 비행기 모드로 있지 않은지 확인합니다.
+* 무선 스위치가 켜져 있는지 확인합니다.
+* 라우터를 다시 시작합니다.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -159,11 +150,11 @@ ms.locfileid: "63820518"
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        <b>Which part is giving you trouble?</b>
-        * I forgot your password.
-        * It won't accept password.
-        * Someone else might be using my account.
+![허용](images/do.svg)
+<b>어떤 부분에 문제가 있나요?</b>
+* 사용자 암호를 잊어버렸습니다.
+* 암호가 허용되지 않습니다.
+* 다른 사용자가 내 계정을 사용하고 있을 수 있습니다.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -183,12 +174,12 @@ ms.locfileid: "63820518"
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        <b>You’re not connected.</b>
-        * Check that your network cables are plugged in.
-        * Make sure you're not in airplane mode.
-        * See if your wireless switch is turned on.
-        * Restart your router.
+![허용](images/do.svg)
+<b>연결되어 있지 않습니다.</b>
+* 네트워크 케이블이 연결되어 있는지 확인합니다.
+* 비행기 모드로 있지 않은지 확인합니다.
+* 무선 스위치가 켜져 있는지 확인합니다.
+* 라우터를 다시 시작합니다.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -198,16 +189,16 @@ ms.locfileid: "63820518"
 
 :::row:::
     :::column:::
-        Many of the same advice for writing error messages also applies when creating the text for any dialogs in your app. While dialogs are expected by the user, they still interrupt the normal flow of the app, and need to be helpful and concise so the user can get back to what they were doing.
+앱에서 대화 상자의 텍스트를 작성하는 경우에도 오류 메시지 작성 시 제안된 것과 동일한 대부분의 조언이 적용됩니다. 대화 상자는 사용자에게 필요하지만 여전히 정상적인 앱 흐름을 방해하므로 사용자가 수행하고 있는 작업으로 돌아갈 수 있도록 유용하고 간결해야 합니다.
 
-        But most important is the "call and response" between the title of a dialog and its buttons. Make sure that your buttons are clear answers to the question posed by the title, and that their format is consistent across your app.
+그러나 가장 중요한 것은 대화 상자의 제목과 해당 단추 간의 "호출 및 응답"입니다. 단추는 제목으로 제시되는 질문에 대한 명확한 답변이어야 하고 해당 형식은 앱 전체에서 일관되어야 합니다.
     :::column-end:::
     :::column:::
-        ![Do](images/do.svg)
-        <b>Which part is giving you trouble?</b>
-        1. I forgot my password
-        2. It won't accept my password
-        3. Someone else might be using my account
+![허용](images/do.svg)
+<b>어떤 부분에 문제가 있나요?</b>
+1. 내 암호를 잊어버렸습니다.
+2. 암호가 허용되지 않습니다.
+3. 다른 사용자가 내 계정을 사용하고 있을 수 있습니다.
     :::column-end:::
 :::row-end:::
 
@@ -215,13 +206,13 @@ ms.locfileid: "63820518"
 
 :::row:::
     :::column:::
-        Text on buttons needs to be concise enough that users can read it all at a glance and clear enough that the button's function is immediately obvious. The longest the text on a button should ever be is a couple short words, and many should be shorter than that.
-        When writing the text for buttons, remember that every button represents an action. Be sure to use the *active voice* in button text, to use words that represent actions rather than reactions.
+단추의 텍스트는 사용자가 한눈에 모두 읽을 수 있을 만큼 간결해야 하며, 단추의 기능을 즉시 명확하게 나타낼 수 있을 만큼 명료해야 합니다. 단추에서 가장 긴 텍스트는 몇 개의 짧은 단어여야 하며, 대부분은 이보다 더 짧아야 합니다.
+단추 텍스트를 작성하는 경우 모든 단추는 작업을 나타내어야 합니다. 반응이 아니라 작업을 나타내는 단추를 사용하려면 단추 텍스트에서 *능동형*을 사용해야 합니다.
     :::column-end:::
     :::column:::
-        ![Do](images/do.svg)
-        * Install now
-        * Share
+![권장 사항](images/do.svg)
+* 지금 설치
+* Share
     :::column-end:::
 :::row-end:::
 

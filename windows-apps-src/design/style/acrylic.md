@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4731ab089189a8a03656281d1a9a6da6e4d24e89
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 7ed9feb6edae58b906d4f37f0e1f011d4fa42ee9
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "65984257"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867730"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
@@ -27,12 +27,10 @@ ms.locfileid: "65984257"
 
 :::row:::
     :::column:::
-        Acrylic in light theme
-        ![Acrylic in light theme](images/Acrylic_LightTheme_Base.png)
+밝은 테마의 아크릴 ![밝은 테마의 아크릴](images/Acrylic_LightTheme_Base.png)
     :::column-end:::
     :::column:::
-        Acrylic in dark theme
-        ![Acrylic in dark theme](images/Acrylic_DarkTheme_Base.png)
+어두운 테마의 아크릴 ![어두운 테마의 아크릴](images/Acrylic_DarkTheme_Base.png)
     :::column-end:::
 :::row-end:::
 
@@ -334,7 +332,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 

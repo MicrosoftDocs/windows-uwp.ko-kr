@@ -11,12 +11,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ac2bd55d1cea25359c3c609148c7098532d76c46
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 8b33fe420e93c9ce78c625ad365ec8dc10e343ad
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63796470"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867452"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>UWP 앱의 명령 디자인 기본 사항
 
@@ -48,52 +48,52 @@ When designing a command interface, the most important decision is choosing what
 
 :::row:::
     :::column:::
-        ![button image](images/commanding/thumbnail-button.svg)
+![단추 이미지](images/commanding/thumbnail-button.svg)
     :::column-end:::
     :::column span="2":::
-        <b>Buttons</b>
+<b>단추</b>
 
-        <a href="../controls-and-patterns/buttons.md" style="text-decoration:none">Buttons</a> trigger an immediate action. Examples include sending an email, submitting form data, or confirming an action in a dialog.
+<a href="../controls-and-patterns/buttons.md" style="text-decoration:none">Button</a>은 즉각적인 작업을 트리거합니다. 예를 들어 이메일 보내기, 양식 데이터 제출 또는 대화 상자에서 작업 확인이 있습니다.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![list image](images/commanding/thumbnail-list.svg)
+![목록 이미지](images/commanding/thumbnail-list.svg)
     :::column-end:::
     :::column span="2":::
-        <b>Lists</b>
+<b>목록</b>
 
-        <a href="../controls-and-patterns/lists.md" style="text-decoration:none">Lists</a> present items in a interactive list or a grid. Usually used for many options or display items. Examples include drop-down list, list box, list view and grid view.
+<a href="../controls-and-patterns/lists.md" style="text-decoration:none">List</a>는 항목을 대화형 목록 또는 그리드로 표시합니다. 일반적으로 많은 옵션 또는 표시 항목에 사용합니다. 예를 들어 드롭다운 목록, 목록 상자, 목록 보기 및 그리드 보기가 있습니다.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![selection control image](images/commanding/thumbnail-selection.svg)
+![선택 컨트롤 이미지](images/commanding/thumbnail-selection.svg)
     :::column-end:::
     :::column span="2":::
-        <b>Selection controls</b>
+<b>선택 컨트롤</b>
 
-        Lets users choose from a few options, such as when completing a survey or configuring app settings. Examples include <a href="../controls-and-patterns/checkbox.md">check box</a>, <a href="../controls-and-patterns/radio-button.md">radio button</a>, and <a href="../controls-and-patterns/toggles.md">toggle switch</a>.
+설문 조사를 작성하거나 앱 설정을 구성하는 경우와 같이 사용자가 몇 가지 옵션 중에서 선택할 수 있습니다. 예를 들어 <a href="../controls-and-patterns/checkbox.md">확인란</a>, <a href="../controls-and-patterns/radio-button.md">라디오 단추</a> 및 <a href="../controls-and-patterns/toggles.md">토글 스위치</a>가 있습니다.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![Calendar  image](images/commanding/thumbnail-calendar.svg)
+![달력 이미지](images/commanding/thumbnail-calendar.svg)
     :::column-end:::
     :::column span="2":::
-        <b>Calendar, date and time pickers</b>
+<b>달력, 날짜 및 시간 선택기</b>
 
-        <a href="../controls-and-patterns/date-and-time.md">Calendar, date and time pickers</a> enable users to view and modify date and time info, such as when creating an event or setting an alarm. Examples include calendar date picker, calendar view, date picker, time picker.
+<a href="../controls-and-patterns/date-and-time.md">달력, 날짜 및 시간 선택기</a>를 사용하면 사용자가 이벤트를 만들거나 경보를 설정하는 경우와 같이 날짜 및 시간 정보를 보고 수정할 수 있습니다. 예를 들어 달력 날짜 선택기, 달력 보기, 날짜 선택기, 시간 선택기가 있습니다.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![Predictive text entry image](images/commanding/thumbnail-autosuggest.svg)
+![예측 텍스트 입력 이미지](images/commanding/thumbnail-autosuggest.svg)
     :::column-end:::
     :::column span="2":::
-        <b>Predictive text entry</b>
+<b>예측 텍스트 항목</b>
 
-        Provides suggestions as users type, such as when entering data or performing queries. Examples include <a href="../controls-and-patterns/auto-suggest-box.md">auto-suggest box</a>.<br>
+데이터를 입력하거나 쿼리를 수행하는 경우와 같이 사용자가 입력함에 따라 제안을 제공합니다. 예를 들어 <a href="../controls-and-patterns/auto-suggest-box.md">자동 제안 상자</a>가 있습니다.<br>
 :::row-end:::
 
 전체 목록은 [컨트롤 및 UI 요소](../controls-and-patterns/index.md)를 참조하세요.
@@ -110,36 +110,36 @@ When designing a command interface, the most important decision is choosing what
 
 :::row:::
     :::column:::
-        ![app canvas image](images/commanding/thumbnail-canvas.svg)
+![앱 캔버스 이미지](images/commanding/thumbnail-canvas.svg)
     :::column-end:::
     :::column span="2":::
-        <b>App canvas (content area)</b>
+<b>앱 캔버스(콘텐츠 영역)</b>
 
-        If a command is constantly needed for users to complete core scenarios, put it on the canvas. Because you can put commands near (or on) the objects they affect, putting commands on the canvas makes them easy and obvious to use. However, choose the commands you put on the canvas carefully. Too many commands on the app canvas take up valuable screen space and can overwhelm the user. If the command won't be frequently used, consider putting it in another command surface.
+사용자가 핵심 시나리오를 완료하기 위한 명령이 지속적으로 필요한 경우 해당 명령을 캔버스에 배치합니다. 명령을 명령이 영향을 주는 개체 근처나 개체에 배치할 수 있으므로 캔버스에 명령을 배치하면 사용하기가 쉽고 명확합니다. 그러나 캔버스에 배치할 명령을 신중하게 선택하세요. 앱 캔버스에 너무 많은 명령이 있으면 중요한 화면 공간을 차지하여 사용자를 당혹스럽게 할 수 있습니다. 자주 사용되지 않는 명령인 경우 다른 명령 화면에 배치하는 것이 좋습니다.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![commandbar image](images/commanding/thumbnail-commandbar.svg)
+![명령 모음 이미지](images/commanding/thumbnail-commandbar.svg)
     :::column-end:::
     :::column span="2":::
-        <b>Command bars and menu bars</b>
+<b>명령 모음 및 메뉴 모음</b>
 
-        <a href="../controls-and-patterns/app-bars.md">Command bars</a> help organize commands and make them easy to access. Command bars can be placed at the top of the screen, at the bottom of the screen, or at both the top and bottom of the screen (a <a href="../controls-and-patterns/menus.md#create-a-menu-bar">MenuBar</a> can also be used when the functionality in your app is too complex for a command bar).
+<a href="../controls-and-patterns/app-bars.md">명령 모음</a>을 사용하면 명령을 구성하고 쉽게 액세스 할 수 있습니다. 명령 모음은 화면 위쪽, 화면 아래쪽 또는 양쪽 모두에 배치할 수 있습니다(앱의 기능이 명령 모음에 비해 너무 복잡한 경우 <a href="../controls-and-patterns/menus.md#create-a-menu-bar">MenuBar</a>를 사용할 수도 있음).
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![context menu image](images/commanding/thumbnail-contextmenu.svg)
+![상황에 맞는 메뉴 이미지](images/commanding/thumbnail-contextmenu.svg)
     :::column-end:::
     :::column span="2":::
-        <b>Menus and context menus</b>
+<b>메뉴 및 상황에 맞는 메뉴</b>
 
-        <p>Menus and context menus save space by organizing commands and hiding them until the user needs them. Users typically access a menu or context menu by clicking a button or right-clicking a control.</p> 
+<p>메뉴 및 상황에 맞는 메뉴는 명령을 구성하고 사용자가 요청할 때까지 이를 숨겨 공간을 절약합니다. 사용자는 일반적으로 단추를 클릭하거나 마우스 오른쪽 단추로 컨트롤을 클릭하여 메뉴 또는 상황에 맞는 메뉴에 액세스합니다.</p> 
 
-        <p>The <a href="../controls-and-patterns/command-bar-flyout.md">command bar flyout </a> is a type of contextual menu that combines the benefits of a command bar and a context menu into a single control. It can provide shortcuts to commonly-used actions and provide access to secondary commands that are only relevant in certain contexts, such as clipboard or custom commands.</p>
+<p><a href="../controls-and-patterns/command-bar-flyout.md">명령 모음 플라이아웃</a>은 명령 모음과 상황에 맞는 메뉴의 이점을 단일 컨트롤로 결합한 상황에 맞는 메뉴의 한 유형입니다. 일반적으로 사용되는 작업에 대한 바로 가기를 제공하고 특정 상황에만 관련된 보조 명령(예: 클립보드 또는 사용자 지정 명령)에 대한 액세스를 제공할 수 있습니다.</p>
 
-        <p>UWP also provides a set of traditional menus and context menus; for more info, see the <a href="../controls-and-patterns/menus.md">menus and context menus overview</a>.</p>
+<p>또한 UWP는 기존 메뉴 및 상황에 맞는 메뉴 세트도 제공합니다. 자세한 내용은 <a href="../controls-and-patterns/menus.md">메뉴 및 상황에 맞는 메뉴 개요</a>를 참조하세요.</p>
 :::row-end:::
 
 ## <a name="provide-command-feedback"></a>명령 피드백 제공 
@@ -153,32 +153,32 @@ When designing a command interface, the most important decision is choosing what
 
 :::row:::
     :::column:::
-        ![commandbar content area image](images/commanding/thumbnail-commandbar2.svg)
+![명령 모음 콘텐츠 영역 이미지](images/commanding/thumbnail-commandbar2.svg)
     :::column-end:::
     :::column span="2":::
-        <b>Command bar</b>
+<b>명령 모음</b>
 
-        The content area of the <a href="../controls-and-patterns/app-bars.md">command bar</a> is an intuitive place to communicate status to users if they'd like to see feedback.
+<a href="../controls-and-patterns/app-bars.md">명령 모음</a>의 콘텐츠 영역은 피드백을 확인하려는 사용자에게 상태를 전달하는 직관적인 장소입니다.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![Flyout image](images/commanding/thumbnail-flyout.svg)
+![플라이아웃 이미지](images/commanding/thumbnail-flyout.svg)
     :::column-end:::
     :::column span="2":::
-        <b>Flyouts</b>
+<b>플라이아웃</b>
 
        <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">플라이아웃</a> - 플라이아웃 바깥쪽의 아무 곳이나 탭하거나 클릭하여 해제할 수 있는 경량의 상황에 맞는 팝업입니다.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![Dialog image](images/commanding/thumbnail-dialog.svg)
+![대화 상자 이미지](images/commanding/thumbnail-dialog.svg)
     :::column-end:::
     :::column span="2":::
-        <b>Dialog controls</b>
+<b>Dialog 컨트롤</b>
 
-        <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Dialog controls</a> are modal UI overlays that provide contextual app information. In most cases, dialogs block interactions with the app window until being explicitly dismissed, and often request some kind of action from the user. Dialogs can be disruptive and should only be used in certain situations. For more info, see the [When to confirm or undo actions](#when-to-confirm-or-undo-actions) section.
+<a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Dialog 컨트롤</a>은 상황에 맞는 앱 정보를 제공하는 모달 UI 오버레이입니다. 대부분의 경우 대화 상자는 명시적으로 해제할 때까지 앱 창의 조작을 차단하고 사용자 작업을 요청하기도 합니다. 대화 상자는 불편을 줄 수 있어 특정 상황에서만 사용해야 합니다. 자세한 내용은 [작업을 확인하거나 실행 취소하는 경우](#when-to-confirm-or-undo-actions) 섹션을 참조하세요.
     :::column-end:::
 :::row-end:::
 
@@ -191,23 +191,23 @@ When designing a command interface, the most important decision is choosing what
 
 :::row:::
     :::column:::
-        ![do image](images/do.svg)
+![허용 이미지](images/do.svg)
 
-        For actions that can't be undone and have major consequences, we recommend using a confirmation dialog. Examples of such actions include:
-        -   Overwriting a file
-        -   Not saving a file before closing
-        -   Confirming permanent deletion of a file or data
-        -   Making a purchase (unless the user opts out of requiring a confirmation)
-        -   Submitting a form, such as signing up for something
+실행 취소할 수 없으며 중대한 결과가 발생하는 작업의 경우 확인 대화 상자를 사용하는 것이 좋습니다. 이러한 동작의 예제는 다음과 같습니다.
+-   파일 덮어쓰기
+-   저장하지 않고 파일 닫기
+-   파일 또는 데이터의 영구 삭제 확인
+-   구매(사용자가 확인 요청을 옵트아웃(opt out)하지 않은 경우)
+-   양식 제출(예: 등록)
     :::column-end:::
     :::column:::
-        ![do image](images/do.svg)
+![허용 이미지](images/do.svg)
 
-        For actions that can be undone, offering a simple undo command is usually enough. Examples of such actions include:
-        -   Deleting a file
-        -   Deleting an email (not permanently)
-        -   Modifying content or editing text
-        -   Renaming a file
+실행 취소할 수 있는 작업의 경우 간단히 실행 취소 명령을 제공하는 것만으로도 충분합니다. 이러한 동작의 예제는 다음과 같습니다.
+-   파일 삭제
+-   메일 삭제(영구적이지 않음)
+-   콘텐츠 수정 또는 텍스트 편집
+-   파일 이름 바꾸기
 :::row-end:::
 
 ##  <a name="optimize-for-specific-input-types"></a>특정 입력 유형에 대한 최적화

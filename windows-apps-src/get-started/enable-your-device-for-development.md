@@ -6,12 +6,12 @@ keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 �
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 09f115cad236582ccb0008c2274a7472ed4c0d55
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 705ff7fab00d13123211feb747ea9a9f95b0cc43
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682661"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867616"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -46,6 +46,9 @@ ms.locfileid: "68682661"
 
 ## <a name="which-setting-should-i-choose-sideload-apps-or-developer-mode"></a>테스트용으로 앱 로드 또는 개발자 모드 중에서 어떤 설정을 선택해야 하나요?
 
+> [!NOTE]
+> Windows 참가자 빌드 18956부터 테스트용 로드 옵션이 제거되었으며, 개발자 모드는 이제 토글 방식으로 전환됩니다. 다음 섹션에서 테스트용 로드에 대한 자세한 내용을 참조하세요. 
+
  장치를 개발 또는 단순히 테스트용 로드에 사용할 수 있습니다.
 
 -   *Microsoft Store 앱*이 기본 설정입니다. 사용하는 앱이 개발용 앱이 아니거나 회사에서 지급한 특수한 내부 앱을 사용하는 경우 이 설정을 계속 활성 상태로 유지하세요.
@@ -55,6 +58,9 @@ ms.locfileid: "68682661"
 기본적으로 Microsoft Store의 UWP(유니버설 Windows 플랫폼) 앱만 설치할 수 있습니다. 개발자 기능을 사용하도록 이러한 설정을 변경하면 장치의 보안 수준을 변경할 수 있습니다. 확인되지 않은 원본에서 앱을 설치하지 않아야 합니다.
 
 ### <a name="sideload-apps"></a>앱 테스트용 로드
+
+> [!NOTE]
+> Windows 참가자 빌드 18956부터 테스트용 로드는 기본적으로 사용하도록 설정되어 있습니다. 이제 특별한 구성 없이 서명된 MSIX 패키지를 디바이스에 배포할 수 있습니다. 
 
 테스트용으로 앱 로드 설정은 일반적으로 Microsoft Store를 거치지 않고 관리 디바이스에 사용자 지정 앱을 설치해야 하는 회사나 학교에서 사용하거나 타사 소스에서 앱을 실행해야 하는 모든 사용자가 사용합니다. 이 경우 이전에 설정 페이지 이미지에 표시된 대로 조직에서 *UWP 앱* 설정을 사용하지 않는 정책을 적용하는 경우가 일반적입니다. 또한 조직에서는 필요한 인증서 및 테스트용 로드 앱의 설치 위치를 제공합니다. 자세한 내용은 TechNet 문서 [Windows 10에서 앱을 테스트용으로 로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) 및 [Microsoft Intune에서 앱 배포 시작](https://docs.microsoft.com/intune/deploy-use/add-apps)을 참조하세요.
 

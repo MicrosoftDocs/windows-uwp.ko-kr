@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e5cd8ecafd3557719e70c50890da4c3eade18f52
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 5f040060b1c3931e9ef1634fddd65febb1be7dbc
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67714134"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867724"
 ---
 # <a name="color"></a>색
 
@@ -26,23 +26,23 @@ UWP 앱에서 색은 주로 테마 컬러와 테마로 결정됩니다. 이 문�
 
 :::row:::
     :::column:::
-        **Use color meaningfully.**
-        When color is used sparingly to highlight important elements, it can help create a user interface that is fluid and intuitive.
+**색을 의미 있게 사용합니다.**
+색을 조금만 사용하여 중요한 요소를 강조하면 유동적이고 직관적인 사용자 인터페이스를 만들 수 있습니다.
     :::column-end:::
     :::column:::
-        **Use color to indicate interactivity.**
-        It's a good idea to choose one color to indicate elements of your application that are interactive. For example, many web pages use blue text to denote a hyperlink.
+**색을 사용하여 대화형 작업을 나타냅니다.**
+한 가지 색을 선택하여 대화형 애플리케이션의 요소를 나타내는 것이 좋습니다. 예를 들어 대부분의 웹 페이지에서는 파란색 텍스트를 사용하여 하이퍼링크를 나타냅니다.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        **Color is personal.**
-        In Windows, users can choose an accent color and a light or dark theme, which are reflected throughout their experience. You can choose how to incorporate the user's accent color and theme into your application, personalizing their experience.
+**색은 맞춤입니다.**
+Windows에서 사용자는 자신의 환경 전체에 반영되는 테마 컬러와 밝거나 어두운 테마를 선택할 수 있습니다. 사용자의 테마 컬러와 테마를 애플리케이션에 통합하여 자신의 환경을 요구 사항에 맞게 설정하는 방법을 선택할 수 있습니다.
     :::column-end:::
     :::column:::
-        **Color is cultural.**
-        Consider how the colors you use will be interpreted by people from different cultures. For example, in some cultures the color blue is associated with virtue and protection, while in others it represents mourning.
+**색은 문화입니다.**
+다른 문화권의 사용자가 사용된 색을 해석하는 방법을 고려합니다. 예를 들어 일부 문화권에서는 파란색이 미덕과 보호를 나타내지만, 다른 문화권에서는 애도를 나타냅니다.
     :::column-end:::
 :::row-end:::
 
@@ -105,12 +105,12 @@ UWP 앱은 밝거나 어두운 애플리케이션 테마를 사용할 수 있습
 
 :::row:::
     :::column:::
-        When creating templates for custom controls, use theme brushes rather than hard code color values. This way, your app can easily adapt to any theme.
+사용자 지정 컨트롤용 템플릿을 만드는 경우 하드 코드 색 값 대신 테마 브러시를 사용합니다. 앱에서는 이러한 방식으로 모든 테마에 쉽게 적용할 수 있습니다.
 
-        For example, these [item templates for ListView](../controls-and-patterns/item-templates-listview.md) demonstrate how to use theme brushes in a custom template.
+예를 들어 이러한 [ListView의 항목 템플릿](../controls-and-patterns/item-templates-listview.md)은 사용자 지정 템플릿에서 테마 브러시를 사용하는 방법을 보여 줍니다.
     :::column-end:::
     :::column:::
-         ![double line list item with icon example](images/color/list-view.svg)
+ ![아이콘 예제가 있는 두 줄 목록 항목](images/color/list-view.svg)
     :::column-end:::
 :::row-end:::
 
@@ -144,12 +144,12 @@ UWP 앱은 밝거나 어두운 애플리케이션 테마를 사용할 수 있습
 
 :::row:::
     :::column:::
-        ![user-selected accent header](images/color/user-accent.svg)
-        ![user-selected accent color](images/color/user-selected-accent.svg)
+![사용자가 선택한 테마 헤더](images/color/user-accent.svg)
+![사용자가 선택한 테마 컬러](images/color/user-selected-accent.svg)
     :::column-end:::
     :::column:::
-        ![custom accent header](images/color/custom-accent.svg)
-        ![custom brand accent color](images/color/brand-color.svg)
+![사용자 지정 테마 헤더](images/color/custom-accent.svg)
+![사용자 지정 브랜드 테마 컬러](images/color/brand-color.svg)
     :::column-end:::
 :::row-end:::
 
@@ -408,36 +408,36 @@ ColorPaletteResources를 사용하면 인라인 대신 내부에서 래퍼로 �
 
 :::row:::
     :::column:::
-        ![contrast illustration](images/color/illo-contrast.svg)
+![대비 그림](images/color/illo-contrast.svg)
     :::column-end:::
     :::column span="2":::
-        **Contrast**
+**대비**
 
-        Make sure that elements and images have sufficient contrast to differentiate between them, regardless of the accent color or theme.
+요소와 이미지에는 테마 컬러 또는 테마에 관계없이 서로 구분할 수 있을 만큼 충분한 대비가 있어야 합니다.
 
-        When considering what colors to use in your application, accessibility should be a primary concern. Use the guidance below to make sure your application is accessible to as many users as possible.
+애플리케이션에서 사용할 색을 고려하는 경우 접근성이 가장 중요합니다. 아래 지침을 사용하여 가능한 한 많은 사용자가 애플리케이션에 액세스할 수 있도록 합니다.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![contrast illustration](images/color/illo-lighting.svg)
+![대비 그림](images/color/illo-lighting.svg)
     :::column-end:::
     :::column span="2":::
-        **Lighting**
+**조명**
 
-        Be aware that variation in ambient lighting can affect the usability of your app. For example, a page with a black background might unreadable outside due to screen glare, while a page with a white background might be painful to look at in a dark room.
+주변 조명의 변화는 앱의 유용성에 영향을 줄 수 있습니다. 예를 들어 검은색 배경의 페이지는 화면 눈부심으로 인해 외부에서 읽을 수 없는 반면, 흰색 배경의 페이지는 어두운 공간에서 보는 것이 어려울 수 있습니다.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![contrast illustration](images/color/illo-colorblindness.svg)
+![대비 그림](images/color/illo-colorblindness.svg)
     :::column-end:::
     :::column span="2":::
-        **Colorblindness**
+**색맹**
 
-        Be aware of how colorblindness could affect the usability of your application. For example, a user with red-green colorblindness will have difficulty distinguishing red and green elements from each other. About **8 percent of men** and **0.5 percent of women** are red-green colorblind, so avoid using these color combinations as the sole differentiator between application elements.
+색맹은 앱의 유용성에 영향을 줄 수 있습니다. 예를 들어 적록 색맹인 사용자는 빨간색과 녹색 요소를 구분하는 데 어려움이 있습니다. **남성의 약 8%** 및 **여성의 약 0.5%** 는 적록 색맹이므로 이러한 색 조합을 애플리케이션 요소 간의 유일한 구별자로 사용하지 않도록 합니다.
     :::column-end:::
 :::row-end:::
 

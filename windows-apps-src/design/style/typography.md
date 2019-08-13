@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 76196add0829dcfa0aa638a2d8ae6995fafce69e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 1d162fcf9a0f1023c58792e8c9f7a0e22fac4440
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63820594"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867750"
 ---
 # <a name="typography"></a>입력 체계
 
@@ -25,16 +25,14 @@ ms.locfileid: "63820594"
 
 ![Segoe UI 글꼴의 샘플 텍스트](images/type/segoe-sample.svg)
 
-영어 이외의 언어를 표시하거나 앱의 다른 글꼴을 선택하려면 UWP 앱의 권장 글꼴에서 [언어](#Languages) 및 [글꼴](#Fonts)을 참조하세요.
+영어 이외의 언어를 표시하거나 앱의 다른 글꼴을 선택하려면 UWP 앱의 권장 글꼴에서 [언어](#languages) 및 [글꼴](#fonts)을 참조하세요.
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        Pick one font for your UI.
+![허용](images/do.svg) UI에 사용할 하나의 글꼴을 선택합니다.
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        Don't mix multiple fonts.
+![금지](images/dont.svg) 여러 글꼴을 혼합하지 않습니다.
     :::column-end:::
 :::row-end:::
 
@@ -48,12 +46,10 @@ UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니�
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        Follow the UWP [type ramp](#type-ramp) sizing.
+![허용](images/do.svg) UWP [유형 램프](#type-ramp) 크기 조정을 따릅니다.
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        Use a font size smaller than 12 px.
+![금지](images/dont.svg) 12픽셀보다 작은 글꼴 크기를 사용합니다.
     :::column-end:::
 :::row-end:::
 
@@ -61,10 +57,10 @@ UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니�
 
 :::row:::
     :::column:::
-        Users rely on visual hierarchy when scanning a page: headers summarize content, and body text provides more detail. To create a clear visual hierarchy in your app, follow the UWP type ramp.
+사용자는 페이지를 검색할 때 시각적 계층 구조를 사용합니다. 머리글은 콘텐츠를 요약하고, 본문 텍스트는 자세한 정보를 제공합니다. 앱에서 명확한 시각적 계층 구조를 만들려면 UWP 유형 램프를 따릅니다.
     :::column-end:::
     :::column:::
-        ![text block styles](images/type/type-hierarchy.svg)
+![텍스트 블록 스타일](images/type/type-hierarchy.svg)
     :::column-end:::
 :::row-end:::
 
@@ -78,10 +74,10 @@ UWP 유형 램프는 페이지의 유형 스타일 간에 중요한 관계를 �
 
 :::row:::
     :::column:::
-        You can access levels of the type ramp as XAML [static resources](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp). The styles follow the `*TextBlockStyle` naming convention.
+유형 램프 수준에 XAML [정적 리소스](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)로 액세스할 수 있습니다. 스타일은 `*TextBlockStyle` 명명 규칙을 따릅니다.
     :::column-end:::
     :::column:::
-        ![text block styles](images/type/text-block-type-ramp.svg)
+![텍스트 블록 스타일](images/type/text-block-type-ramp.svg)
     :::column-end:::
 :::row-end:::
 
@@ -97,16 +93,14 @@ UWP 유형 램프는 페이지의 유형 스타일 간에 중요한 관계를 �
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        Use "Body" for most text.
+![허용](images/do.svg) 대부분의 텍스트에는 "Body"를 사용합니다.
 
-        Use "Base" for titles when space is constrained.
+공간이 제한된 경우에는 제목에 "Base"를 사용합니다.
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        Use "Caption" for primary action or any long strings.
+![금지](images/dont.svg) 기본 작업 또는 긴 문자열에는 "Caption"을 사용합니다.
 
-        Use "Header" or "Subheader" if text needs to wrap.
+텍스트를 줄 바꿈해야 하는 경우 "Header" 또는 "Subheader"를 사용합니다.
     :::column-end:::
 :::row-end:::
 
@@ -124,12 +118,10 @@ UWP 유형 램프는 페이지의 유형 스타일 간에 중요한 관계를 �
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        Keep to 50–60 letters per line for ease of reading.
+![허용](images/do.svg) 쉽게 읽을 수 있도록 줄당 50~60자를 유지합니다.
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        Less than 20 characters or more than 60 characters per line is difficult to read.
+![금지](images/dont.svg) 줄당 20자 미만 또는 60자 이상은 쉽게 읽을 수 없습니다.
     :::column-end:::
 :::row-end:::
 
@@ -145,12 +137,10 @@ UWP 유형 램프는 페이지의 유형 스타일 간에 중요한 관계를 �
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        Clip text, and wrap if multiple lines are enabled.
+![허용](images/do.svg) 여러 줄을 사용하도록 설정되면 텍스트를 잘라내고 줄 바꿈합니다.
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        Use ellipses to avoid visual clutter.
+![금지](images/dont.svg) 생략 부호를 사용하여 시각적 혼란을 방지합니다.
     :::column-end:::
 :::row-end:::
 

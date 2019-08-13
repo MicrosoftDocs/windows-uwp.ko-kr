@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d485e6e2926f0065e090e7ef9d2bfab0683f396
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 343fa50dbe9a0574914dc96b9fac450475a69b0a
+ms.sourcegitcommit: 87ddc67d31668a6351206bda3546ffbabb7b4551
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318811"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68807848"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>JavaScript로 UWP 게임 만들기
 
@@ -134,7 +134,7 @@ EaselJS는 여러 종류의 그래픽 개체를 제공합니다. 하늘에 사�
     ];
 ```
 
-JavaScript는 이미지 같은 리소스를 로드할 때 약간의 도움이 필요합니다. 따라서 이미지를 미리 로드할 수 있는 CreateJS 라이브러리의 기능인 [LoadQueue](https://www.createjs.com/docs/preloadjs/classes/LoadQueue.html)를 사용하겠습니다. 이미지가 로드될 때까지 시간이 얼마나 걸릴지 알 수 없기 때문에 LoadQueue를 사용하여 처리하겠습니다. 이미지를 사용할 수 있게 되면 큐가 그 사실을 알려줄 것입니다. 이렇게 만들기 위해 먼저 모든 이미지를 나열하는 새 개체를 만든 후 LoadQueue 개체를 만듭니다. 아래 코드를 보시면 모든 준비가 완료되면 **loadingComplete()** 함수를 호출하도록 설정하는 방법을 알 수 있습니다.
+JavaScript는 이미지 같은 리소스를 로드할 때 약간의 도움이 필요합니다. 따라서 이미지를 미리 로드할 수 있는 CreateJS 라이브러리의 기능인 [LoadQueue](https://www.createjs.com/docs/preloadjs/classes/LoadQueue.html)를 사용하겠습니다. 이미지를 로드하는 데 걸리는 시간을 알 수 없으므로 LoadQueue를 사용하여 처리합니다. 이미지를 사용할 수 있게 되면 큐가 그 사실을 알려줄 것입니다. 이렇게 만들기 위해 먼저 모든 이미지를 나열하는 새 개체를 만든 후 LoadQueue 개체를 만듭니다. 아래 코드를 보시면 모든 준비가 완료되면 **loadingComplete()** 함수를 호출하도록 설정하는 방법을 알 수 있습니다.
 
 ```
     // Now we create a special queue, and finally a handler that is

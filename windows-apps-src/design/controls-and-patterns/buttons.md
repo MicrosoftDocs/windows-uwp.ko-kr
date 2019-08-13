@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8f8d4172389fc2778fda4e335a29b3bae7d90fd0
-ms.sourcegitcommit: 5fcd3a595efd3686009505602c34e10163fd0aa5
+ms.openlocfilehash: e454bed6dc1a9429fe313e305dc9ba818d86e765
+ms.sourcegitcommit: 802699ce8d21e7fa4639f0b19b1c5b6c46c2c727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558758"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68835635"
 ---
 # <a name="buttons"></a>단추
 
@@ -36,6 +36,7 @@ ms.locfileid: "67558758"
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | 연결된 플라이아웃을 여는 펼침 단추가 있는 단추입니다.
 [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | 두 면이 있는 단추입니다. 한 쪽은 작업을 시작하고, 다른 쪽은 메뉴를 엽니다.
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | 두 면이 있는 토글 단추입니다. 한쪽은 켜기/끄기를 전환하고, 다른 쪽은 메뉴를 엽니다.
+[ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton) | 설정하거나 해제할 수 있는 단추입니다.
 
 | **Windows UI 라이브러리 가져오기** |
 | - |
@@ -59,6 +60,8 @@ ms.locfileid: "67558758"
 단추에 더 많은 옵션을 포함하는 플라이아웃이 있으면 **DropDownButton** 컨트롤을 사용합니다. 기본 펼침 단추는 단추에 플라이아웃이 포함되어 있다는 것을 시각적으로 나타냅니다.
 
 사용자가 즉각적인 작업을 시작하거나 추가 옵션에서 독립적으로 선택할 수 있게 하려면 **SplitButton** 컨트롤을 사용합니다.
+
+사용자가 상호 배타적인 두 상태 간에 즉시 전환할 수 있도록 하려면 **ToggleButton** 컨트롤을 사용하고, 단추는 UI 요구 사항에 가장 적합합니다. UI에서 단추를 사용하지 않는 경우 [AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [CheckBox](checkbox.md), [RadioButton](radio-button.md) 또는 [ToggleSwitch](toggles.md)를 사용하는 것이 더 적합할 수 있습니다.
 
 ## <a name="examples"></a>예
 
