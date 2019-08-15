@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c1a7de0e9e6817fc4b0bf1ada113f49e798641e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f567637f3d38ce80c320bfe92fff392efadeda8d
+ms.sourcegitcommit: 7803f11ba4c9194c350217cc06069a4707f15ed6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320543"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69017429"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
@@ -76,7 +76,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 시스템은 UI 셸만 제공하므로 창으 비어 있습니다. 프로그래밍 방식을 사용하여 ID 공급자로 창을 채우는 것은 개발자의 책임입니다. 
 
 > [!TIP]
-> 사용할 수 있습니다 **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** 대신  **[표시](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)** 를 반환 하는 프로그램  **[ IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)** , 작업의 상태를 쿼리해야 합니다. 
+> 필요에 따라 **[Show](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)** 대신 **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** 를 사용 하 여 **[iasyncaction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)** 을 반환 하는 작업의 상태를 쿼리할 수 있습니다. 
 
 ## <a name="register-for-accountcommandsrequested"></a>AccountCommandsRequested 등록
 
@@ -116,7 +116,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-다음으로 WebAuthenticationCoreManager.FindAccountProviderAsync 메서드를 사용하여 공급자를 가져옵니다. 공급자의 URL은 공급자에 따라 다르며 공급자 설명서에서 찾을 수 있습니다. Microsoft 계정 및 Azure Active Directory의 경우 해당 URL은 "https://login.microsoft.com"입니다. 
+다음으로 WebAuthenticationCoreManager.FindAccountProviderAsync 메서드를 사용하여 공급자를 가져옵니다. 공급자의 URL은 공급자에 따라 다르며 공급자 설명서에서 찾을 수 있습니다. Microsoft 계정과 Azure Active Directory의 경우 "https\://login.microsoft.com"입니다. 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s,
@@ -178,7 +178,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 * OneDrive 범위의 경우 [OneDrive 인증 및 로그인](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes)을 참조하세요. 
 
 > [!TIP]
-> 필요에 따라 앱에서 로그인 힌트 (기본 전자 메일 주소를 사용 하 여 사용자 필드를 채울) 또는 로그인 환경에 관련 된 다른 특수 속성을 사용 하는 경우 목록에 **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** 속성입니다. 이렇게 하면 시스템에 캐시에 계정 불일치를 방지 하는 웹 계정을 캐시할 때 속성을 무시 합니다.
+> 필요에 따라 앱에서 로그인 힌트를 사용 하는 경우 (사용자 필드를 기본 전자 메일 주소로 채우기 위해) 또는 로그인 환경과 관련 된 다른 특별 한 속성을 사용 하는 경우 **[Webtokenrequest. AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** 속성에 나열 합니다. 이렇게 하면 웹 계정을 캐시할 때 시스템이 속성을 무시 하므로 캐시의 계정 불일치를 방지할 수 있습니다.
 
 엔터프라이즈 앱을 개발하는 경우 AAD(Azure Active Directory) 인스턴스에 연결하고 일반 MSA 서비스 대신 Microsoft Graph API를 사용하려고 할 것입니다. 이 시나리오에서는 다음 코드를 대신 사용합니다. 
 
@@ -338,7 +338,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 
 ## <a name="remove-a-stored-account"></a>저장된 계정 제거
 
-웹 계정을 유지하는 경우 사용자가 자신의 계정을 앱과 분리하는 것을 허용하려고 할 수 있습니다. 이러한 방식으로 이러한 수 효과적으로 "로그 아웃" 앱의: 해당 계정 정보는 더 이상 로드할 수 자동으로 시작할 때입니다. 이렇게 하려면 먼저 스토리지에서 저장된 계정 및 공급자 정보를 제거합니다. 그런 후 **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** 를 호출하여 캐시를 지우고 앱에 있을 수 있는 기존 토큰을 무효화합니다. 
+웹 계정을 유지하는 경우 사용자가 자신의 계정을 앱과 분리하는 것을 허용하려고 할 수 있습니다. 이러한 방식으로 앱의 "로그 아웃"을 효과적으로 "로그 아웃" 할 수 있습니다. 해당 계정 정보는 시작 시 자동으로 로드 되지 않습니다. 이렇게 하려면 먼저 스토리지에서 저장된 계정 및 공급자 정보를 제거합니다. 그런 후 **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** 를 호출하여 캐시를 지우고 앱에 있을 수 있는 기존 토큰을 무효화합니다. 
 
 ```csharp
 private async Task SignOutAccountAsync(WebAccount account)
@@ -422,9 +422,9 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 ## <a name="see-also"></a>참조
 
-[Windows.Security.Authentication.Web.Core 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
+[Windows... i a.](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
 
-[Windows.Security.Credentials 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.security.credentials)
+[Windows. 보안 자격 증명 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.security.credentials)
 
 [AccountsSettingsPane 클래스](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane)
 
