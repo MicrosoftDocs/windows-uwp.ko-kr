@@ -148,7 +148,7 @@ Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리
 > [!NOTE]
 > **{Binding}** 에서 **{x:Bind}** 로 태그를 변환하는 경우 **모드** 속성에 대한 기본값의 차이에 주의하세요.
  
-> [**x: DefaultBindMode** ](https://docs.microsoft.com/windows/uwp/xaml-platform/x-defaultbindmode-attribute) X:bind 태그 트리의 특정 분야에 대 한 기본 모드를 변경 하려면 사용할 수 있습니다. 선택된 모드는 바인딩의 일부로 모드를 명시적으로 지정하지 않은 해당 요소와 하위 요소의 모든 x:Bind 식에 적용됩니다. OneWay를 사용하면 변경 검색을 연결 및 처리하기 위해 생성해야 할 코드가 더 많아지기 때문에 OneTime은 OneWay보다 성능이 우수합니다.
+> [**x:DefaultBindMode**](https://docs.microsoft.com/windows/uwp/xaml-platform/x-defaultbindmode-attribute) X:bind 태그 트리의 특정 분야에 대 한 기본 모드를 변경 하려면 사용할 수 있습니다. 선택된 모드는 바인딩의 일부로 모드를 명시적으로 지정하지 않은 해당 요소와 하위 요소의 모든 x:Bind 식에 적용됩니다. OneWay를 사용하면 변경 검색을 연결 및 처리하기 위해 생성해야 할 코드가 더 많아지기 때문에 OneTime은 OneWay보다 성능이 우수합니다.
 
 ## <a name="remarks"></a>설명
 
