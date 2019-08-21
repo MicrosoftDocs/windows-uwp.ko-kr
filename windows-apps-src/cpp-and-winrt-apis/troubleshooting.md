@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문제 해결, HRESULT, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: add3875e15ad747422b2e53e5d8f8438b61b3b20
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 7c34ca6da522726f07e3f4ff5092b011bd15dd93
+ms.sourcegitcommit: 260d1a0b73ef422eb6875a3e3b52495a82630f06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270097"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560162"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>C++/WinRT 문제 해결
 
@@ -38,19 +38,19 @@ ms.locfileid: "68270097"
 | C++ 컴파일러에서 “‘const std::vector&lt;std::wstring,std::allocator&lt;_Ty&gt;&gt;’에서 ‘const winrt::param::async_iterable&lt;winrt::hstring&gt; &’로 변환할 수 없습니다.” 오류를 생성합니다. |이 오류는 std::wstring의 std::vector를 컬렉션이 필요한 Windows 런타임 API에 전달하는 경우에 발생할 수 있습니다. 자세한 내용은 [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)를 참조하세요.|
 | C++ 컴파일러에서 “‘const std::vector&lt;winrt::hstring,std::allocator&lt;_Ty&gt;&gt;’에서 ‘const winrt::param::async_iterable&lt;winrt::hstring&gt; &’로 변환할 수 없습니다.” 오류를 생성합니다. |이 오류는 winrt::hstring의 std::vector를 컬렉션이 필요한 비동기 Windows 런타임 API에 전달하고, 벡터를 비동기 호출 수신자로 복사하거나 이동하지 않은 경우에 발생할 수 있습니다. 자세한 내용은 [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)를 참조하세요.|
 | 프로젝트를 열 때 Visual Studio에서 “프로젝트에 대한 애플리케이션이 설치되어 있지 않습니다.” 오류를 생성합니다. |**C++ 개발용 Windows 유니버설 도구**를 아직 설치하지 않은 경우 Visual Studio의 **새 프로젝트** 대화 상자에서 설치해야 합니다. 그래도 문제가 해결되지 않으면 프로젝트에서 C++/WinRT VSIX(Visual Studio Extension)를 사용할 수 있습니다([Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조).|
-| Windows 앱 인증 키트 테스트에서 런타임 클래스 중 하나가 “Windows 기본 클래스에서 파생되지 않았습니다. 구성 가능한 모든 클래스는 궁극적으로 Windows 네임스페이스의 형식에서 파생되어야 합니다.” 오류를 생성합니다.*|기본 클래스에서 파생된 런타임 클래스(애플리케이션에서 선언)를 ‘구성 가능’ 클래스라고 합니다.  구성 가능 클래스의 최종 기본 클래스는 Windows.* 네임스페이스에서 시작되는 형식(예: [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject))이어야 합니다. 자세한 내용은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md)을 참조하세요.|
+| Windows 앱 인증 키트 테스트에서 런타임 클래스 중 하나가 “Windows 기본 클래스에서 파생되지 않았습니다. 구성 가능한 모든 클래스는 궁극적으로 Windows 네임스페이스의 형식에서 파생되어야 합니다.” 오류를 생성합니다. |기본 클래스에서 파생된 런타임 클래스(애플리케이션에서 선언)를 ‘구성 가능’ 클래스라고 합니다.  구성 가능 클래스의 최종 기본 클래스는 Windows.* 네임스페이스에서 시작되는 형식(예: [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject))이어야 합니다. 자세한 내용은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md)을 참조하세요.|
 | C++ 컴파일러에서 EventHandler 또는 TypedEventHandler 대리자 특수화에 대해 “WinRT 형식이어야 합니다.” 오류를 생성합니다. |**winrt::delegate&lt;...T&gt;** 를 대신 사용하세요. [C++/WinRT의 이벤트 작성](author-events.md)을 참조하세요.|
 | C++ 컴파일러에서 Windows 런타임 비동기 작업 특수화에 대해 “WinRT 형식이어야 합니다.” 오류를 생성합니다. |PPL(병렬 패턴 라이브러리) [**작업**](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-class)을 대신 반환하세요. [동시성 및 비동기 작업](concurrency.md)을 참조하세요.|
-| C++ 컴파일러에서 “오류 C2220: 경고가 오류로 처리되어 생성된 ‘object’ 파일이 없습니다.” 오류를 생성합니다. |경고를 수정하거나, **C/C++**  > **일반** > **경고를 오류로 처리**를 **아니요(/WX-)** 로 설정합니다.|
+| C++ 컴파일러에서 “오류 C2220: 경고가 오류로 처리되어 생성된 ‘object’ 파일이 없습니다.” 오류를 생성합니다. |경고를 수정하거나, **C/C++**  > **일반** > **경고를 오류로 처리**를 **아니요(/WX-)** 로 설정합니다.|
 | 개체 삭제 후 C++/WinRT 개체의 이벤트 처리기가 호출되어 앱 작동이 중단됩니다.|[이벤트 처리 대리자를 사용하여 안전하게 *this* 포인터 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)를 참조하세요.|
-| C++ 컴파일러에서 “오류 C2338: 약한 참조 지원에만 사용됩니다.”를 생성합니다.*|현재 **winrt::no_weak_ref** 마커 구조체를 템플릿 인수로 기본 클래스에 전달한 형식에 대해 약한 참조를 요청하고 있습니다. [약한 참조 지원 옵트아웃](weak-references.md#opting-out-of-weak-reference-support)을 참조하세요.|
-| C++ 링커에서 “오류 LNK2019: 확인되지 않은 외부 기호”를 생성합니다.*|[링커에서 “LNK2019: 확인되지 않은 외부 기호” 오류가 발생하는 이유는 무엇인가요?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)를 참조하세요.|
+| C++ 컴파일러에서 “오류 C2338: 약한 참조 지원에만 사용됩니다.”를 생성합니다. |현재 **winrt::no_weak_ref** 마커 구조체를 템플릿 인수로 기본 클래스에 전달한 형식에 대해 약한 참조를 요청하고 있습니다. [약한 참조 지원 옵트아웃](weak-references.md#opting-out-of-weak-reference-support)을 참조하세요.|
+| C++ 링커에서 “오류 LNK2019: 확인되지 않은 외부 기호”를 생성합니다. |[링커에서 “LNK2019: 확인되지 않은 외부 기호” 오류가 발생하는 이유는 무엇인가요?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)를 참조하세요.|
 | C++/WinRT에서 사용할 경우 LLVM 및 Clang 도구 체인에서 오류를 생성합니다.|LLVM 및 Clang 도구 체인은 C++/WinRT에서 지원되지 않지만 내부적으로 사용하는 방법을 에뮬레이트하려는 경우 [C++/WinRT로 컴파일하기 위해 LLVM/Clang을 사용할 수 있나요?](faq.md#can-i-use-llvmclang-to-compile-with-cwinrt)에 설명된 것처럼 실험해 볼 수 있습니다.|
 | C++ 컴파일러에서 프로젝션된 형식에 대해 “사용할 수 있는 적절한 기본 생성자가 없습니다.”를 생성합니다.  | 런타임 클래스 개체의 초기화를 지연하거나 동일한 프로젝트에서 런타임 클래스를 사용 및 구현하려는 경우, **std::nullptr_t** 생성자를 호출해야 합니다. 자세한 내용은 [C++/WinRT를 통한 API 사용](consume-apis.md)을 참조하세요. |
 | C++ 컴파일러에서 “오류 C3861: ‘from_abi’: 식별자를 찾을 수 없습니다.” 및 *base.h*에서 시작되는 기타 오류를 생성합니다.  이 오류는 Visual Studio 2017(버전 15.8.0 이상)을 사용 중이며 Windows SDK 버전 10.0.17134.0(Windows 10, 버전 1803)을 대상으로 지정하는 경우에 표시될 수 있습니다. | 보다 규칙에 맞는 Windows SDK 최신 버전을 대상으로 지정하거나, 프로젝트 속성 **C/C++**  > **언어** > **적합성 모드: 아니요**를 설정합니다. 또는 **추가 옵션** 아래의 프로젝트 속성 **C/C++**  > **언어** > **명령줄**에 **/permissive-** 가 표시되는 경우 삭제합니다. |
-| C++ 컴파일러에서 “오류 C2039: ‘IUnknown’: ‘\`global namespace’의 멤버가 아닙니다.”를 생성합니다.* | [C++/WinRT 프로젝트의 대상을 Windows SDK 최신 버전으로 변경하는 방법](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)을 참조하세요. |
+| C++ 컴파일러에서 “오류 C2039: ‘IUnknown’: ‘\`global namespace’의 멤버가 아닙니다.”를 생성합니다.  | [C++/WinRT 프로젝트의 대상을 Windows SDK 최신 버전으로 변경하는 방법](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)을 참조하세요. |
 | C++ 링커에서 “오류 LNK2019: 확인되지 않은 외부 기호 _WINRT_CanUnloadNow@0이 _VSDesignerCanUnloadNow@0 함수에서 참조되었습니다.”를 생성합니다.  | [C++/WinRT 프로젝트의 대상을 Windows SDK 최신 버전으로 변경하는 방법](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)을 참조하세요. |
-| 빌드 프로세스에서 오류 메시지 “C++/WinRT VSIX에서 더 이상 프로젝트 빌드 지원을 제공하지 않습니다.  Microsoft.Windows.CppWinRT Nuget 패키지에 프로젝트 참조를 추가하세요.”를 생성합니다.* | **Microsoft.Windows.CppWinRT** NuGet 패키지를 프로젝트에 설치합니다. 자세한 내용은 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)을 참조하세요. |
+| 빌드 프로세스에서 오류 메시지 “C++/WinRT VSIX에서 더 이상 프로젝트 빌드 지원을 제공하지 않습니다.  Microsoft.Windows.CppWinRT Nuget 패키지에 프로젝트 참조를 추가하세요.”를 생성합니다.  | **Microsoft.Windows.CppWinRT** NuGet 패키지를 프로젝트에 설치합니다. 자세한 내용은 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)을 참조하세요. |
 | C++ 링커에서 *winrt::impl::consume_Windows_Foundation_Collections_IVector*에 대한 멘션과 함께 “오류 LNK2019: 확인되지 않은 외부 기호”를 생성합니다.  | [C++/WinRT 2.0](news.md#news-and-changes-in-cwinrt-20)에서는 Windows 런타임 컬렉션에서 범위 기반의 `for`를 사용하는 경우 이제 `#include <winrt/Windows.Foundation.Collections.h>`가 필요합니다. |
 | C++ 컴파일러에서 "*오류 C4002: 함수 형식 매크로 호출 GetCurrentTime에 대한 인수가 너무 많습니다.* "를 생성합니다. | [GetCurrentTime 및/또는 TRY를 사용하여 모호성을 해결하려면 어떻게 하나요?](faq.md#how-do-i-resolve-ambiguities-with-getcurrenttime-andor-try)를 참조하세요. |
 | C++ 컴파일러에서 "*오류 C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.* "를 생성합니다. | [GetCurrentTime 및/또는 TRY를 사용하여 모호성을 해결하려면 어떻게 하나요?](faq.md#how-do-i-resolve-ambiguities-with-getcurrenttime-andor-try)를 참조하세요. |
