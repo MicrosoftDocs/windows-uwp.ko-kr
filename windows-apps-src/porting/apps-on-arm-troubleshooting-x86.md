@@ -5,12 +5,12 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10 s, 항상 연결, x86 ARM 기반 에뮬레이션, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c29151ae2823aa70711bf002e8954148cc0861b
-ms.sourcegitcommit: f7e3782e24d46b2043023835c5b59d12d3b4ed4b
+ms.openlocfilehash: 480d9cd6508b149e0d4966bae8835c05d30db7af
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67345669"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682742"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>x86 데스크톱 앱의 문제 해결
 >[!IMPORTANT]
@@ -21,7 +21,7 @@ x86 데스크톱 앱 x86 컴퓨터에서와 다르게 작동하는 경우 문제
 |문제점|해결 방법|
 |-----|--------|
 | 앱은 ARM용으로 고안되지 않은 드라이버를 사용합니다. | x86 드라이버를 ARM64에 다시 컴파일합니다. [WDK를 사용하여 ARM64 드라이버 빌드](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)를 참조하세요. |
-| 앱은 x64에서만 사용할 수 있습니다. | Microsoft Store용으로 개발하는 경우 앱의 ARM 버전을 제출하세요. 자세한 내용은 [앱 패키지 아키텍처](../packaging/device-architecture.md)를 참조하세요. Win32 개발자는 앱을 ARM64에 다시 컴파일하는 것이 좋습니다. 자세한 내용은 [ARM 개발에서 Windows 10에 대한 Visual Studio 지원 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/)를 참조하세요. |
+| 앱은 x64에서만 사용할 수 있습니다. | Microsoft Store용으로 개발하는 경우 앱의 ARM 버전을 제출하세요. 자세한 내용은 [앱 패키지 아키텍처](/windows/msix/package/device-architecture)를 참조하세요. Win32 개발자는 앱을 ARM64에 다시 컴파일하는 것이 좋습니다. 자세한 내용은 [ARM 개발에서 Windows 10에 대한 Visual Studio 지원 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/)를 참조하세요. |
 | 앱은 1.1 이상의 OpenGL 버전을 사용하거나 하드웨어 가속 OpenGL이 필요합니다. | 사용 가능한 경우 앱의 DirectX 모드를 사용합니다. DirectX 9, DirectX 10, DirectX 11, DirectX 12를 사용하는 x86 앱은 ARM에서 작동합니다. 자세한 내용은 [DirectX 그래픽 및 게임](https://docs.microsoft.com/windows/desktop/directx)을 참조하세요. |
 | x86 앱이 예상대로 작동하지 않습니다. | [ARM의 프로그램 호환성 문제 해결사](apps-on-arm-program-compat-troubleshooter.md)의 지침을 따라 호환성 문제 해결사 사용을 시도해 보세요. 몇 가지 문제 해결 단계는 [ARM의 x86 앱 문제 해결](apps-on-arm-troubleshooting-x86.md) 문서를 참조하세요. |
 
@@ -49,6 +49,6 @@ Windows 구성 요소를 연결하거나 DLL을 Windows 프로세스에 로드�
 Windows 하이퍼바이저 플랫폼은 Qualcomm Snapdragon 835 모바일 PC 플랫폼에서 지원되지 않습니다. 따라서 Hyper-V를 사용하여 가상 컴퓨터를 실행할 수 없습니다. 현재 추후 Qualcomm 칩셋에 대한 기술에 계속 투자하고 있습니다. 
 
 ## <a name="dynamic-code-generation"></a>동적 코드 생성
-데스크톱 앱은 런타임 시 ARM64 명령을 생성 하는 시스템에서 ARM64에서 에뮬레이트 되는 X86입니다. 즉, x86 동적 코드 생성을 방지 하는 데스크톱 앱 또는 ARM64의 x86으로 실행 되도록 수정 프로세스를 해당 앱에서 지원할 수 없습니다. 
+X86 데스크톱 앱은 런타임에 ARM64 명령을 생성 하는 시스템에 의해 ARM64에서 에뮬레이션 됩니다. 즉, x86 데스크톱 앱이 동적 코드를 생성 하거나 프로세스에서 수정할 수 없도록 하는 경우 ARM64에서 x 86으로 실행 되도록 해당 앱을 지원할 수 없습니다. 
 
-이 일부 앱을 사용 하 여 해당 프로세스에서 사용 하도록 설정 하는 보안 완화 [SetProcessMitigationPolicy](https://docs.microsoft.com/en-us/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setprocessmitigationpolicy) 사용 하 여 API를 `ProcessDynamicCodePolicy` 플래그입니다. ARM64는 x86에서 성공적으로 실행 프로세스를 사용 하지 않도록 설정할이 완화 정책을 조정 해야 합니다. 
+이는 보안을 완화 하기 위한 것입니다. 일부 앱 은 `ProcessDynamicCodePolicy` 플래그가 있는 [SetProcessMitigationPolicy](https://docs.microsoft.com/en-us/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setprocessmitigationpolicy) API를 사용 하 여 프로세스에서 사용 하도록 설정 합니다. X86 프로세스로 ARM64에서 성공적으로 실행 하려면이 완화 정책을 사용 하지 않도록 설정 해야 합니다. 
