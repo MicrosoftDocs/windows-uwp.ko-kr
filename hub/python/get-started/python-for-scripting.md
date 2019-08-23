@@ -8,16 +8,19 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python 시스템 관리, python 파일 자동화, windows에서 python 스크립트, windows에서 python 개발자 환경, windows의 python 개발자 환경, windows의 python 개발 환경, powershell을 사용한 python, python 스크립트 파일 시스템 작업
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 93fdea3347cc15aa6231ff90fb18eb2f7defb201
-ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
+ms.openlocfilehash: dbb7a60103c27f648ca8bf23f87dee06923f0cd9
+ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68959074"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69979334"
 ---
 # <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>Windows에서 Python을 사용 하 여 스크립팅 및 자동화를 시작 합니다.
 
 다음은 개발자 환경을 설정 하 고 Windows에서 파일 시스템 작업을 스크립팅 및 자동화 하는 데 Python을 사용 하기 시작 하는 단계별 가이드입니다.
+
+> [!NOTE]
+> 이 문서에서는 Windows 중앙 접근 방식에서 파일 시스템 검색, 인터넷 액세스, 파일 형식 구문 분석 등 여러 플랫폼에서 작업을 자동화할 수 있는 Python의 유용한 라이브러리 중 일부를 사용 하도록 환경을 설정 하는 방법을 설명 합니다. Windows 관련 작업의 경우 [ctypes](https://docs.python.org/3/library/ctypes.html), Python 용 C 호환 외래 함수 라이브러리, [winreg](https://docs.python.org/3/library/winreg.html), Windows 레지스트리 API를 python에 노출 하는 함수 및 [python/WinRT](https://pypi.org/project/winrt/)를 확인 하 고, 다음에서 api Windows 런타임 액세스를 사용 하도록 설정 합니다. Python.
 
 ## <a name="set-up-your-development-environment"></a>개발 환경 설정
 

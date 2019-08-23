@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fb8132e7b382ee801d83986261bf71d8fef490f
-ms.sourcegitcommit: 04a6e60c3b24d6efae0f0e2ada1d66a369471fb3
-ms.translationtype: HT
+ms.openlocfilehash: d582d4815b4fb2168b187a1efff3795cc98aca02
+ms.sourcegitcommit: 99595e4938213aafdb49635d684d8ba8eb3f697a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68830423"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69487802"
 ---
 # <a name="capture-photos-and-video-with-the-windows-built-in-camera-ui"></a>Windows 기본 제공 카메라 UI를 사용 하 여 사진 및 비디오 캡처
 
@@ -22,7 +22,7 @@ ms.locfileid: "68830423"
 자체 카메라 UI를 제공하려고 하거나 시나리오가 캡처 작업에 대해 좀 더 강력한 하위 수준의 제어를 요구하는 경우 [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) 개체를 사용하고 자체 캡처 환경을 구현해야 합니다. 자세한 내용은 [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)를 참조하세요.
 
 > [!NOTE]
-> 앱에서 CameraCaptureUI만 사용 하는 경우 앱 매니페스트 파일에서 **웹캠** 또는 **마이크** 기능을 지정 하면 안 됩니다. 이렇게 하면 앱이 장치의 카메라 개인 정보 설정에 표시 되지만 사용자가 앱에 대 한 카메라 액세스를 거부 하는 경우에도 CameraCaptureUI 미디어를 캡처하지 못하게 됩니다. <p>Windows 기본 제공 카메라 앱은 사용자가 단추를 눌러서 사진, 오디오 및 비디오 캡처를 시작해야 하는 신뢰할 수 있는 자사 앱이기 때문입니다. CameraCaptureUI를 유일한 사진 캡처 메커니즘으로 사용할 때 웹캠 또는 마이크 기능을 지정 하는 경우 앱에서 Windows 응용 프로그램 인증 키트 인증 Microsoft Store에 실패할 수 있습니다.<p>
+> 앱에서 CameraCaptureUI만 사용 하는 경우 앱 매니페스트 파일에서 **웹캠** 또는 **마이크** 기능을 지정 하지 않아야 합니다. 이렇게 하면 앱이 장치의 카메라 개인 정보 설정에 표시 되지만 사용자가 앱에 대 한 카메라 액세스를 거부 하는 경우에도 CameraCaptureUI 미디어를 캡처하지 못하게 됩니다. <p>Windows 기본 제공 카메라 앱은 사용자가 단추를 눌러서 사진, 오디오 및 비디오 캡처를 시작해야 하는 신뢰할 수 있는 자사 앱이기 때문입니다. CameraCaptureUI를 유일한 사진 캡처 메커니즘으로 사용할 때 웹캠 또는 마이크 기능을 지정 하는 경우 앱에서 Windows 응용 프로그램 인증 키트 인증 Microsoft Store에 실패할 수 있습니다.<p>
 MediaCapture를 사용 하 여 오디오, 사진 또는 비디오를 프로그래밍 방식으로 캡처하는 경우 앱 매니페스트 파일에서 웹캠 또는 마이크 기능을 지정 해야 합니다.
 
 ## <a name="capture-a-photo-with-cameracaptureui"></a>CameraCaptureUI로 사진 캡처
@@ -46,7 +46,7 @@ MediaCapture를 사용 하 여 오디오, 사진 또는 비디오를 프로그�
 
 앱에서 사진을 사용하려면 여러 다양한 유니버설 Windows 앱 기능에 사용할 수 있는 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 개체를 만드는 것이 좋습니다.
 
-먼저 프로젝트에 [**Windows. Graphics. Imaging**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging) 네임 스페이스를 포함 해야 합니다.
+먼저 프로젝트에 [**Windows. Graphics. Imaging**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging) 네임 스페이스를 포함 합니다.
 
 [!code-cs[UsingSoftwareBitmap](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingSoftwareBitmap)]
 
