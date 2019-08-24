@@ -1,7 +1,7 @@
 ---
 author: mijacobs
 layout: LandingPage
-description: UWP(유니버설 Windows 플랫폼)를 사용하여 PC, Xbox One, HoloLens 등 모든 Windows 장치용 앱을 빌드하고 Store에 게시할 수 있습니다.
+description: UWP(유니버설 Windows 플랫폼)를 사용하여 PC, Xbox One, HoloLens 등 모든 Windows 디바이스용 앱을 빌드하고 Store에 게시할 수 있습니다.
 title: UWP 설명서 - UWP 앱 개발자 | Microsoft Docs
 ms.topic: landing-page
 ms.author: mijacobs

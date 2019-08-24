@@ -37,7 +37,7 @@ ms.locfileid: "67318314"
 | [카메라 독립적 플래시](camera-independent-flashlight.md) | 디바이스 램프가 있는 경우 이러한 램프에 액세스하고 사용하는 방법을 보여 줍니다. 램프 기능은 디바이스의 카메라 및 카메라 플래시 기능과는 별도로 관리됩니다. |
 | [지원되는 코덱](supported-codecs.md) | UWP 앱의 오디오, 비디오, 이미지 코덱 및 지원 형식이 나열되어 있습니다. |
 | [설치된 코덱 쿼리](codec-query.md) | 디바이스에 설치된 오디오와 비디오의 인코더 및 디코더를 쿼리하는 방법을 보여 줍니다. |
-| [화면 캡처](screen-capture.md) | [Windows.Graphics.Capture 네임스페이스](https://docs.microsoft.com/uwp/api/windows.graphics.capture)를 사용하여 디스플레이 또는 애플리케이션 창에서 프레임을 가져오고 비디오 스트림 또는 스냅숏을 만들어 공동 작업 및 대화형 환경을 빌드하는 방법에 대해 설명합니다. |
+| [화면 캡처](screen-capture.md) | [Windows.Graphics.Capture 네임스페이스](https://docs.microsoft.com/uwp/api/windows.graphics.capture)를 사용하여 디스플레이 또는 애플리케이션 창에서 프레임을 가져오고 비디오 스트림 또는 스냅샷을 만들어 협업 및 대화형 환경을 빌드하는 방법에 대해 설명합니다. |
 
 ## <a name="see-also"></a>참고 항목
 - [UWP 앱 개발](https://docs.microsoft.com/windows/uwp/develop/)
