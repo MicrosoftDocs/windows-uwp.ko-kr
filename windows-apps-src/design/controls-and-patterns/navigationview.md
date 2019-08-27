@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e00c9860ca2aa8661581de265fff106c45b30ab5
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 7431e9e41c008471fccdb955a64d44316855de0d
+ms.sourcegitcommit: 77df36d2a7391cbc588d44c47ac02d0701092264
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319406"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976216"
 ---
 # <a name="navigation-view"></a>탐색 보기
 
@@ -709,6 +709,29 @@ void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* 
     </Application.Resources>
 </Application>
 ```
+
+### <a name="top-whitespace"></a>상단 공백
+일부 앱은 [해당 창의 제목 표시줄을 사용자 지정](https://docs.microsoft.com/windows/uwp/design/shell/title-bar)하여 해당 앱 콘텐츠를 제목 표시줄 영역으로 확장하도록 선택할 수 있습니다. NavigationView가 [ExtendViewIntoTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API**를 사용하여 제목 표시줄 **로 확장되는 앱의 루트 요소인 경우, 컨트롤은 대화형 요소의 위치를 자동으로 조정하여 [끌기 가능 영역](https://docs.microsoft.com/windows/uwp/design/shell/title-bar#draggable-regions)과 겹치지 않도록 합니다. 
+![제목 표시줄로 확장되는 앱](images/navigation-view-with-titlebar-padding.png)
+
+앱이 [Window.SetTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.settitlebar) 메서드를 호출하여 끌기 가능 영역을 지정하고 뒤로 및 메뉴 단추를 앱 창의 상단에 더 가깝게 나타내려면 `IsTitleBarAutoPaddingEnabled`를 False로 설정합니다.
+
+![추가 패딩 없이 제목 표시줄로 확장되는 앱](images/navigation-view-no-titlebar-padding.png)
+
+```Xaml
+<muxc:NavigationView x:Name="NavView" IsTitleBarAutoPaddingEnabled="False">
+```
+
+#### <a name="remarks"></a>설명
+NavigationView의 헤더 영역 위치를 추가로 조정하려면 *NavigationViewHeaderMargin* XAML 테마 리소스를 재정의합니다(예: 페이지 리소스에서).
+
+```Xaml
+<Page.Resources>
+    <Thickness x:Key="NavigationViewHeaderMargin">12,0</Thickness>
+</Page.Resources>
+```
+
+이 테마 리소스가 [NavigationView.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.header) 주위의 여백을 수정합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
