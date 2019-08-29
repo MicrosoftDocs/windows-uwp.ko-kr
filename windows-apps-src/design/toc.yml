@@ -533,13 +533,11 @@
           href: accessibility/practices-to-avoid.md
         - name: 사용자 지정 자동화 피어
           href: accessibility/custom-automation-peers.md
-          items:
-            - name: 컨트롤 패턴 및 인터페이스
-              href: accessibility/control-patterns-and-interfaces.md
+        - name: 컨트롤 패턴 및 인터페이스
+          href: accessibility/control-patterns-and-interfaces.md
     - name: 앱 설정
-      href: app-settings/app-settings-and-data.md
       items:
-        - name: 지침
+        - name: 앱 설정에 대한 지침
           href: app-settings/guidelines-for-app-settings.md
         - name: 앱 설정과 데이터 저장 및 검색
           href: app-settings/store-and-retrieve-app-data.md
@@ -572,9 +570,10 @@
           href: globalizing/use-utf8-code-page.md
         - name: 일본의 시대 변경을 대비한 애플리케이션 준비
           href: globalizing/japanese-era-change.md
-    - name: 앱 도움말에 대한 지침
-      href: in-app-help/guidelines-for-app-help.md
+    - name: 앱 내 도움말
       items:
+        - name: 앱 도움말에 대한 지침
+          href: in-app-help/guidelines-for-app-help.md
         - name: UI 사용 안내
           href: in-app-help/instructional-ui.md
         - name: 앱 내 도움말
