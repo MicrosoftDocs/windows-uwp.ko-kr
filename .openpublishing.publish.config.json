@@ -82,6 +82,18 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "samples-xaml-gallery",
+      "url": "https://github.com/microsoft/Xaml-Controls-Gallery",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "snippets-windows",
+      "url": "https://github.com/MicrosoftDocs/windows-code-snippets-pr",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/microsoftdocs/windows-uwp-pr",
       "branch": "live",
