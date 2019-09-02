@@ -416,7 +416,7 @@ MySpecializedToggleButtonAutomationPeer::MySpecializedToggleButtonAutomationPeer
 ...
 ```
 
-기본 클래스 생성자는 **ToggleButton**이 필요합니다. 그리고 **MySpecializedToggleButton***은* **ToggleButton**입니다.
+기본 클래스 생성자는 **ToggleButton**이 필요합니다. 그리고 **MySpecializedToggleButton** *은* **ToggleButton**입니다.
 
 위에서 설명한 대로(생성자 매개 변수를 기본 클래스에게 전달) 편집할 때까지 컴파일러는 생성자를 플래그 처리하고 **MySpecializedToggleButtonAutomationPeer_base&lt;MySpecializedToggleButtonAutomationPeer&gt;** 라는 이름의 형식에 사용할 수 있는 기본 생성자가 없다고 알립니다. 하지만 실제로는 이 클래스가 구현 형식의 기본 클래스입니다.
 
