@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: 87ab033ddd9de92922f043a069b793ca101307d0
-ms.sourcegitcommit: 6cc8b231c1b970112d26a7696cc3e907082ef2be
+ms.openlocfilehash: 197f53df200026541a15120dfc97c187e5aa2e5b
+ms.sourcegitcommit: b186f70f0b1601b6b6a5db91d87d034f6b155e3b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68308451"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70063794"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -33,7 +33,7 @@ Windows 런타임은 COM(구성 요소 개체 모델) API를 기반으로 하며
 [Windows UWP API](https://docs.microsoft.com/uwp/api/)를 검색할 때는 오른쪽 위에 있는 **언어** 콤보 상자를 클릭하고 **C++/WinRT**를 선택하여 C++/WinRT 언어 프로젝션에 표시되는 API 구문 블록을 확인합니다.
 
 ## <a name="visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package"></a>C++/WinRT, XAML, VSIX 확장 및 NuGet 패키지에 대한 Visual Studio 지원
-Visual Studio 지원의 경우 Visual Studio 2019 또는 Visual Studio 2017(최소 15.6 버전, 15.7 이상 권장)이 필요합니다. Visual Studio 설치 관리자의 **설치 세부 정보** > **유니버설 Windows 플랫폼 개발**에서 **C++(v14x) 유니버설 Windows 플랫폼 도구** 옵션도 설치해야 합니다(아직 설치하지 않은 경우). 또한 Windows **설정** > **업데이트 \& 보안** > **개발자용**에서 **사이드로드 앱** 옵션 대신에 **개발자 모드** 옵션을 선택합니다.
+Visual Studio 지원의 경우 Visual Studio 2019 또는 Visual Studio 2017(최소 15.6 버전, 15.7 이상 권장)이 필요합니다. Visual Studio Installer 내에서 **유니버설 Windows 플랫폼 개발** 워크로드를 설치합니다. **설치 세부 정보** > **유니버설 Windows 플랫폼 개발**에서 **C++(v14x) 유니버설 Windows 플랫폼 도구** 옵션을 확인합니다(아직 확인하지 않은 경우). 또한 Windows **설정** > **업데이트 \& 보안** > **개발자용**에서 **사이드로드 앱** 옵션 대신에 **개발자 모드** 옵션을 선택합니다.
 
 Visual Studio 및 Windows SDK의 최신 버전을 사용하여 개발하는 것이 좋지만 10.0.17763.0(Windows 10 버전 1809) 이전에 Windows SDK와 함께 제공된 C++/WinRT 버전을 사용하는 경우, 위에서 언급한 Windows 네임스페이스 헤더를 사용하려면 10.0.17134.0(Windows 10 버전 1803)의 프로젝트에서 최소한의 Windows SDK 대상 버전이 필요합니다.
 
