@@ -5,12 +5,12 @@ ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: da9934f29b1c9f73a76421c4dfa793c9c7f5fae9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4eed59e302bc34e93d21adef794de02427f2933e
+ms.sourcegitcommit: 0dec04de501a3db6b22dfd4a320fc09b5c4a21b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57614038"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243278"
 ---
 # <a name="camera-barcode-scanner-system-requirements"></a>카메라 바코드 스캐너 시스템 요구 사항
 Windows 10, 버전 1803부터는 유니버설 Windows 응용 프로그램에서 기준 카메라 렌즈를 통해 바코드를 읽을 수 있습니다.
@@ -23,9 +23,14 @@ Windows 10, 버전 1803부터는 유니버설 Windows 응용 프로그램에서 
 
 
 ## <a name="webcam-requirements"></a>웹캠 요구 사항
-| 범주      | 권장 사항           | 설명 |
+| 범주      | 권장           | 주석 |
 | ------------- | ------------------------ | -------- |
-| Focus         | 자동 초점               | 고정 초점은 권장되지 않음 |
-| 해상도    | 1920 x 1440 이상    | 1920 x 1440 이상의 해상도를 처리할 수 있는 카메라를 통해 최상의 환경을 구축했습니다.  일부 저해상도 카메라에서는 바코드가 충분히 크게 인쇄되는 경우에 표준 바코드를 읽을 수 있습니다. 슬림한 요소를 가진 바코드에서는 고해상도 카메라가 필요할 수 있습니다. |
+| 포커스         | 자동 초점               | 고정 초점은 권장되지 않음 |
+| 해결 방법    | 1920 x 1440 이상    | 1920 x 1440 이상의 해상도를 처리할 수 있는 카메라를 통해 최상의 환경을 구축했습니다.  일부 저해상도 카메라에서는 바코드가 충분히 크게 인쇄되는 경우에 표준 바코드를 읽을 수 있습니다. 슬림한 요소를 가진 바코드에서는 고해상도 카메라가 필요할 수 있습니다. |
 |
 
+## <a name="see-also"></a>참조
+
+### <a name="samples"></a>샘플
+
+- [바코드 스캐너 샘플](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)

@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
 keywords: Windows 10의 접근성, 접근성, 액세스 가능한 win32 앱 빌드, 액세스 가능한 UWP 앱 빌드, 액세스 가능한 WPF 앱 빌드, 액세스 가능한 WinForms 앱 빌드
-ms.openlocfilehash: bb82103c030c436655630a37678bbec11e588f61
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 63d9b321f71019c164fe4de238a618f2730b2052
+ms.sourcegitcommit: 81213db9de2c12400d2e4d176346b466ee0794c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867422"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70237784"
 ---
 # <a name="accessibility-in-windows-10"></a>Windows 10의 내게 필요한 옵션
 
@@ -25,94 +25,82 @@ ms.locfileid: "68867422"
 ## <a name="platform-specific-documentation"></a>플랫폼별 설명서
 
 :::row:::
-    :::column:::
-        ![Universal Windows Platform (UWP)](images/platform-uwp.png)
+   :::column:::
+      ![UWP(유니버설 Windows 플랫폼)](images/platform-uwp.png)
 
-        **Universal Windows Platform (UWP)**
+      **UWP(유니버설 Windows 플랫폼)**
 
-        Develop accessible apps and tools on the modern platform for Windows 10 applications and games on any Windows device (including PCs, phones, Xbox One, HoloLens, and more), and publish them to the Microsoft Store.
+      Windows 10 응용 프로그램 및 게임을 위한 최신 플랫폼에서 액세스할 수 있는 앱과 도구를 Windows 장치 (Pc, 휴대폰, Xbox One, HoloLens 등 포함)에서 개발 하 고 Microsoft Store에 게시할 수 있습니다.
 
-        [Designing inclusive software](https://docs.microsoft.com/windows/uwp/accessibility/designing-inclusive-software)
+      [포괄 소프트웨어 디자인](https://docs.microsoft.com/windows/uwp/accessibility/designing-inclusive-software)
 
-        [Developing inclusive Windows apps](https://docs.microsoft.com/windows/uwp/accessibility/developing-inclusive-windows-apps)
+      [포괄 Windows 앱 개발](https://docs.microsoft.com/windows/uwp/accessibility/developing-inclusive-windows-apps)
 
-        [Accessibility testing](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-testing)
+      [접근성 테스트](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-testing)
 
-        [Accessibility in the Store](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-in-the-store)
-    :::column-end:::
-    :::column:::
-        ![Win32 platform apps](images/platform-win32.png)
+      [스토어의 접근성](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-in-the-store)
+   :::column-end:::
+   :::column:::
+      ![Win32 플랫폼 앱](images/platform-win32.png)
 
-        **Win32 platform**
+      **Win32 플랫폼**
 
-        Develop accessible apps and tools on the original platform for C/C++ Windows applications.
+      C/C++ Windows 응용 프로그램용 원본 플랫폼에서 액세스할 수 있는 앱 및 도구를 개발 합니다.
 
-        [What's new in Windows accessibility and automation](https://docs.microsoft.com/windows/desktop/accessibility-whatsnew)
+      [Windows 내게 필요한 옵션 및 자동화의 새로운 기능](https://docs.microsoft.com/windows/desktop/accessibility-whatsnew)
 
-        [Developing accessible applications for Windows](https://docs.microsoft.com/windows/desktop/accessibility-appdev)
+      [Windows 용 액세스 가능한 응용 프로그램 개발](https://docs.microsoft.com/windows/desktop/accessibility-appdev)
 
-        [Developing accessible UI frameworks for Windows](https://docs.microsoft.com/windows/desktop/accessibility-uiframeworkdev)
+      [Windows 용 액세스 가능한 UI 프레임 워크 개발](https://docs.microsoft.com/windows/desktop/accessibility-uiframeworkdev)
 
-        [Developing assistive technology for Windows](https://docs.microsoft.com/windows/desktop/accessibility-atdev)
+      [Windows 용 보조 기술 개발](https://docs.microsoft.com/windows/desktop/accessibility-atdev)
 
-        [Testing for accessibility](https://docs.microsoft.com/windows/desktop/accessibility-testwithuia)
+      [접근성 테스트](https://docs.microsoft.com/windows/desktop/accessibility-testwithuia)
 
-        [Legacy accessibility and automation technology - MSAA to UI Automation](https://docs.microsoft.com/windows/desktop/accessibility-legacy)
+      [레거시 접근성 및 자동화 기술-MSAA에서 UI 자동화](https://docs.microsoft.com/windows/desktop/accessibility-legacy)
 
-        [Windows Accessibility features](https://docs.microsoft.com/windows/desktop/winauto/about-windows-accessibility-features)
+      [Windows 내게 필요한 옵션 기능](https://docs.microsoft.com/windows/desktop/winauto/about-windows-accessibility-features)
 
-        [Guidelines for designing accessible apps](https://docs.microsoft.com/windows/desktop/uxguide/inter-accessibility)
-    :::column-end:::
+      [접근성 있는 앱 디자인을 위한 지침](https://docs.microsoft.com/windows/desktop/uxguide/inter-accessibility)
+   :::column-end:::
 :::row-end:::
 :::row:::
-    :::column:::
-        ![WPF platform](images/platform-wpf.png)
+   :::column:::
+      ![WPF 플랫폼](images/platform-wpf.png)
 
-        **Windows Presentation Foundation (WPF)**
+      **Windows Presentation Foundation (WPF)**
 
-        Develop accessible apps and tools on the established platform for managed Windows applications with a XAML UI model and the .NET Framework.
+      XAML UI 모델 및 .NET Framework를 사용 하 여 관리 되는 Windows 응용 프로그램에 대해 설정 된 플랫폼에서 액세스할 수 있는 앱 및 도구를 개발 합니다.
 
-        [Accessibility Best Practices](https://docs.microsoft.com/dotnet/framework/ui-automation/accessibility-best-practices)
+      [접근성 모범 사례](https://docs.microsoft.com/dotnet/framework/ui-automation/accessibility-best-practices)
 
-        [UI Automation Fundamentals](https://docs.microsoft.com/dotnet/framework/ui-automation/index)
+      [UI 자동화 기본 사항](https://docs.microsoft.com/dotnet/framework/ui-automation/index)
 
-        [UI Automation Providers for Managed Code](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-providers-for-managed-code)
+      [관리 코드에 대한 UI 자동화 공급자](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-providers-for-managed-code)
 
-        [UI Automation Clients for Managed Code](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-clients-for-managed-code)
+      [관리 코드에 대한 UI 자동화 클라이언트](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-clients-for-managed-code)
 
-        [UI Automation Control Patterns](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-patterns)
+      [UI 자동화 컨트롤 패턴](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-patterns)
 
-        [UI Automation Text Pattern](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-text-pattern)
+      [UI 자동화 텍스트 패턴](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-text-pattern)
 
-        [UI Automation Control Types](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-types)
+      [UI 자동화 컨트롤 형식](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-types)
 
-        [UI Automation Specification and Community Promise](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-specification-and-community-promise)
-        :::column-end:::
-    :::column:::
-        ![Windows Forms platform apps](images/platform-winforms.png)
+      [UI 자동화 사양 및 커뮤니티 약속](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-specification-and-community-promise)
+      :::column-end:::
+   :::column:::
+      ![Windows Forms 플랫폼 앱](images/platform-winforms.png)
 
-        **Windows Forms (WinForms)**
+      **Windows Forms (WinForms)**
 
-        Develop accessible apps and tools for managed Windows applications with a XAML UI model and the .NET Framework.
+      XAML UI 모델 및 .NET Framework를 사용 하 여 관리 되는 Windows 응용 프로그램에 액세스할 수 있는 앱 및 도구를 개발 합니다.
 
-        [Windows Forms Accessibility](https://docs.microsoft.com/dotnet/framework/winforms/advanced/windows-forms-accessibility)
+      [Windows Forms 내게 필요한 옵션](https://docs.microsoft.com/dotnet/framework/winforms/advanced/windows-forms-accessibility)
 
-        [Creating an Accessible Windows Application](https://docs.microsoft.com/dotnet/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application)
+      [내게 필요한 옵션 지원 Windows 응용 프로그램 만들기](https://docs.microsoft.com/dotnet/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application)
 
-        [Properties on Windows Forms Controls That Support Accessibility Guidelines](https://docs.microsoft.com/dotnet/framework/winforms/advanced/properties-on-windows-forms-controls-that-support-accessibility-guidelines)
+      [내게 필요한 옵션 지침을 지 원하는 Windows Forms 컨트롤의 속성](https://docs.microsoft.com/dotnet/framework/winforms/advanced/properties-on-windows-forms-controls-that-support-accessibility-guidelines)
 
-        [Providing Accessibility Information for Controls on a Windows Form](https://docs.microsoft.com/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
-    :::column-end:::
-<!--         
-    :::column:::
-![.NET platform](images/platform-dotnet.png)
-
-        ### .NET
-
-        Develop accessible apps and tools for managed Windows applications with the .NET Framework.
-    :::column-end:::
-    :::column:::
-
-    :::column-end:::
- -->    
+      [Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공](https://docs.microsoft.com/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
+   :::column-end:::
 :::row-end:::

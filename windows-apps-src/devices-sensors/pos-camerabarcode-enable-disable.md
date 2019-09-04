@@ -5,12 +5,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f4b11d6a360f09a9600961a3e50e3dd6701bf46
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 8394f79e9581101d6def0f1568cb000ffdee5987
+ms.sourcegitcommit: 0dec04de501a3db6b22dfd4a320fc09b5c4a21b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67714019"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243311"
 ---
 # <a name="enable-or-disable-the-software-decoder-that-ships-with-windows"></a>Windows와 함께 배송된 소프트웨어 디코더를 활성화 또는 비활성화
 
@@ -43,7 +43,13 @@ Windows Registry Editor Version 5.00
 ```  
 
 > [!Warning]
-> 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다.  보호를 강화하기 위해 수정 전에 레지스트리를 백업합니다.  그러면 문제가 발생했을 때 레지스트리를 복원할 수 있습니다.  레지스트리를 백업 및 복원하는 방법에 대한 자세한 내용은 다음 문서 번호를 클릭하여 Microsoft 기술 자료의 문서를 확인하세요. <br/><br/> [322756](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows) Windows에서 레지스트리를 백업 및 복원하는 방법입니다.
+> 레지스트리를 잘못 수정하면 심각한 문제가 발생할 수 있으므로  보호를 강화하기 위해 수정 전에 레지스트리를 백업합니다.  그러면 문제가 발생했을 때 레지스트리를 복원할 수 있습니다.  레지스트리를 백업 및 복원하는 방법에 대한 자세한 내용은 다음 문서 번호를 클릭하여 Microsoft 기술 자료의 문서를 확인하세요. <br/><br/> [322756](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows) Windows에서 레지스트리를 백업 및 복원하는 방법입니다.
 
 > [!NOTE]
 > Windows 10에서 기본 제공되는 소프트웨어 디코더는  [**Digimarc Corporation**](https://www.digimarc.com/)이 무료로 제공합니다.
+
+## <a name="see-also"></a>참조
+
+### <a name="samples"></a>샘플
+
+- [바코드 스캐너 샘플](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)

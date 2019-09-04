@@ -5,15 +5,15 @@ ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 14cb42e0bd0f1bac307a9dfc1ac188d8b11d8cb8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cc2aaaf4e9779cb2be712119fb1dacdf946952c5
+ms.sourcegitcommit: 0dec04de501a3db6b22dfd4a320fc09b5c4a21b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610328"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243322"
 ---
 # <a name="symbologies"></a>기호
-이 항목에서는 각 Windows 10 포함 하 여 함께 제공 되는 소프트웨어 바코드 디코더에 의해 지원 symbologies에 대 한 샘플 바코드를 제공 합니다. UPC/EAN, 39 코드, 코드 128 인터리브 2/5, QR 코드 및 GS1DWCode Databar 전방향, 막대형 누적 합니다.
+이 항목에서는 다음을 포함 하 여 Windows 10과 함께 제공 되는 소프트웨어 바코드 디코더가 지 원하는 각 symbologies에 대 한 샘플 바코드를 제공 합니다. UPC/e, 코드 39, 코드 128, 인터리브 2/5, 세로 막대형 전방향, 세로 막대형 스택형, QR 코드 및 GS1DWCode.
 
 ## <a name="1d-symbologies"></a>1D 기호
 
@@ -50,9 +50,15 @@ ms.locfileid: "57610328"
 ## <a name="digital-watermark"></a>디지털 워터마크
 ### <a name="gs1-dwcode"></a>GS1 DWCode
 
-카메라 바코드 스캐너 응용 프로그램에서 아래의 패키지 이미지를 스캔하여 작동 중인 GS1DWCode를 확인합니다.  이미지는 UPCA 856107006854로 인코딩됩니다.  GS1DWCode 기능에 대한 자세한 내용은 http://www.digimarc.com을 참조하세요.
+카메라 바코드 스캐너 응용 프로그램에서 아래의 패키지 이미지를 스캔하여 작동 중인 GS1DWCode를 확인합니다.  이미지는 UPCA 856107006854로 인코딩됩니다.  GS1DWCode 기능에 대한 자세한 내용은 http://www.digimarc.com 을 참조하세요.
 
 ![샘플 바코드 - GS1DWCode](images/pos/rice-box-v7.jpg)
 
 > [!NOTE]
 > Windows 10에 기본 제공되는 소프트웨어 디코더는  [*Digimarc Corporation*](https://www.digimarc.com/)이 무료로 제공합니다.
+
+## <a name="see-also"></a>참조
+
+### <a name="samples"></a>샘플
+
+- [바코드 스캐너 샘플](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
