@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 2a846fee7f72242d9e3becc19cf5be71128dbd9e
-ms.sourcegitcommit: 81e29e66f0cb1e13c3daa3a239e4dcc4dd674a66
+ms.openlocfilehash: bc591f66505fa6e7019cb37fed636700d8dec709
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796731"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393594"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -119,7 +119,7 @@ Windows 앱의 [패키지 매니페스트에서](https://docs.microsoft.com/uwp/
 이 기능 사용을 승인 하지 않으면 제출 시 인증에 실패 하 고, 인증 보고서에 사용자 의견을 제공 하 게 됩니다. 그러면 접근 권한 값을 선언하지 않는 새 제출을 만들고 패키지를 업로드하거나, 또는 해당되는 경우 접근 권한 값과 사용과 관련된 모든 문제를 처리하고 새 제출에서 승인을 요청할 수 있습니다.
 
 > [!NOTE]
-> 전송에서 파트너 센터의 개발 샌드박스를 사용 하는 경우 (예: Xbox Live와 통합 된 게임의 경우) **제출 옵션** 페이지에서 정보를 제공 하는 대신 미리 승인을 요청 해야 합니다. 이를 수행하려면 [Windows 개발자 지원 페이지](https://developer.microsoft.com/windows/support)를 방문하세요. 개발자 지원 항목 **대시보드 문제**, 문제 유형 **앱 제출**및 하위 범주를선택 합니다. 그런 다음 기능을 사용 하는 방법 및 제품에 필요한 이유를 설명 합니다. 필요한 모든 정보를 제공하지 않으면 요청이 거부됩니다. 자세한 정보를 제공해야 할 수도 있습니다. 이 프로세스는 일반적으로 영업일 기준으로 5일 이상 걸리므로 사전에 요청을 제출하십시오.
+> 전송에서 파트너 센터의 개발 샌드박스를 사용 하는 경우 (예: Xbox Live와 통합 된 게임의 경우) **제출 옵션** 페이지에서 정보를 제공 하는 대신 미리 승인을 요청 해야 합니다. 이를 수행하려면 [Windows 개발자 지원 페이지](https://developer.microsoft.com/windows/support)를 방문하세요. 개발자 지원 항목 **대시보드 문제**, 문제 유형 **앱 제출** **및 하위 범주를 선택**합니다. 그런 다음 기능을 사용 하는 방법 및 제품에 필요한 이유를 설명 합니다. 필요한 모든 정보를 제공하지 않으면 요청이 거부됩니다. 자세한 정보를 제공해야 할 수도 있습니다. 이 프로세스는 일반적으로 영업일 기준으로 5일 이상 걸리므로 사전에 요청을 제출하십시오.
 >
 > 사용자가 개발 샌드박스를 사용 하 고 있는지 여부에 관계 없이이 정보를 사용 하 여이 정보를 제공 하는 것이 아니라, 사용자가 다음을 시작 하기 전에 제한 된 기능을 사용 하도록 승인 되었는지 확인 하는 경우에도이 방법을 사용할 수 있습니다. 제출.
 
@@ -206,7 +206,7 @@ Windows 앱의 [패키지 매니페스트에서](https://docs.microsoft.com/uwp/
 | **Enterprise Cloud Single Sign On** | **enterpriseCloudSSO** 접근 권한 값을 통해 앱이 호스팅된 웹 보기 컨트롤 내의 Azure Active Directory(AAD) 리소스를 사용하여 Single Sign-On할 수 있습니다. |
 | **자동으로 VoIP 통화 수락** | **BackgroundVoIP** 기능을 사용 하면 사용자가 호출을 명시적으로 수락 하지 않고도 들어오는 VoIP 호출을 자동으로 수신 하 고 허용할 수 있습니다. 이 접근 권한 값을 활용하는 앱은 카메라 및 마이크에 대한 모든 권한을 가지며 백그라운드에서 이 리소스를 사용할 수 있습니다.<br /><br />Microsoft Store에 제출 된 앱에서는이 기능을 선언 하지 않는 것이 좋습니다. 대부분의 개발자는이 기능의 사용이 승인 되지 않습니다. |
 | **VoIP 호출에 대 한 리소스 예약** | **Oneprocessvoip** 기능을 사용 하면 단일 프로세스 응용 프로그램에서 VoIP 호출에 필요한 CPU 및 메모리 리소스를 예약할 수 있습니다.<br /><br />Microsoft Store에 제출 된 앱에서는이 기능을 선언 하지 않는 것이 좋습니다. 대부분의 개발자는이 기능의 사용이 승인 되지 않습니다. |
-| **개발 모드 네트워크** | **developmentModeNetwork** 접근 권한 값을 사용하면 C++/CX UWP 앱 또는 C++ Windows 런타임 구성 요소의 OpenFile Win32 API를 호출할 때 앱이 로그인한 사용자의 자격 증명을 사용하여 네트워크 경로에 액세스할 수 있습니다. <br /><br />Microsoft Store에 제출한 응용 프로그램에서이 기능을 선언 하는 것은 권장 되지 않습니다. 대부분의 경우이 기능을 사용 하는 것은 허용 되지 않습니다. |
+| **개발 모드 네트워크** | **DevelopmentModeNetwork** 기능을 사용 하면 응용 프로그램이 C++ C++ Windows 런타임 구성 요소에서 system.windows.forms.openfiledialog.openfile Win32 API를 호출할 때 로그인 한 사용자의 자격 증명을 사용 하 여 네트워크 경로에 액세스할 수 있습니다. <br /><br />Microsoft Store에 제출한 응용 프로그램에서이 기능을 선언 하는 것은 권장 되지 않습니다. 대부분의 경우이 기능을 사용 하는 것은 허용 되지 않습니다. |
 | **광범위 한 파일 시스템 액세스** | **broadFileSystemAccess** 접근 권한 값을 사용하면 앱이 런타임 동안 어떠한 추가 파일 선택기 스타일 프롬프트 없이 현재 앱을 실행하는 사용자와 같은 파일 시스템에 액세스할 수 있습니다. 이 기능은 사용자가 이미 FilePicker 또는 FolderPicker를 사용 하 여 선택한 파일에 액세스할 필요가 없다는 점에 유의 해야 합니다.<br/><br/>이 접근 권한 값은 [Windows.Storage](https://docs.microsoft.com/uwp/api/windows.storage) API에 대해 작동합니다. 사용자가 설정에서 언제 든 지 권한을 부여 하거나 거부할 수 있으므로 앱이 해당 변경 내용에 대해 복원 력이 있는지 확인 해야 합니다. 2018년 4월 업데이트에서 사용 권한의 기본값은 켜짐입니다. 2018년 10월 업데이트에서 기본값은 꺼짐입니다. 이 기능으로 **문서**, **사진** 또는 **동영상** 등의 특별한 폴더 접근 권한 값을 선언하지 않아야 합니다. **BroadFileSystemAccess** 를 매니페스트에 추가 하 여 앱에서이 기능을 사용 하도록 설정할 수 있습니다. 예제는 [파일 액세스 권한](/windows/uwp/files/file-access-permissions) 문서를 참조 하세요. |
 | **시스템 펌웨어 및 BIOS** | **smbios** 접근 권한 값을 통해 앱은 BIOS 데이터 및 시스템 펌웨어 데이터에 액세스할 수 있습니다. |
 | **완전 신뢰 권한 수준** | **RunFullTrust** 제한 기능을 사용 하면 사용자 컴퓨터의 완전 신뢰 권한 수준에서 앱을 실행할 수 있습니다. 이 기능은 [Fulltrustprocesslauncher 관리자](https://docs.microsoft.com/uwp/api/windows.applicationmodel.fulltrustprocesslauncher) API를 사용 하는 데 필요 합니다.<br /><br />이 기능은 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)와 마찬가지로 appx 또는 .msix 패키지로 제공 되는 데스크톱 응용 프로그램에도 필요 하며, DAC (데스크톱 앱 변환기)를 사용 하 여 이러한 앱을 패키지할 때 매니페스트에 자동으로 표시 됩니다. Visual Studio. |

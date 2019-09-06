@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a4e151851ef663055a4199b7ec9b8c1b168b578
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: db510c1dc084fd1af986d618716854ed09cfc618
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682616"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393608"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows 10 게임 개발 가이드
 
@@ -560,9 +560,9 @@ Windows JavaScript 앱은 개체 지향 JavaScript 클래스의 메서드 및 �
 </table>
 
 
-#### <a name="use-windows-runtime-components-to-combine-languages"></a>Windows 런타임 구성 요소를 사용하여 언어 조합
+#### <a name="use-windows-runtime-components-to-combine-languages"></a>Windows 런타임 구성 요소를 사용 하 여 언어 결합
 
-유니버설 Windows 플랫폼에서는 다른 언어로 작성된 구성 요소를 조합하기가 쉽습니다. C++, C# 또는 Visual Basic으로 Windows 런타임 구성 요소를 생성한 후 JavaScript, C#, C++ 또는 Visual Basic에서 해당 요소로 호출합니다. 이것은 선택한 언어로 게임 부분을 프로그래밍하는 훌륭한 방법입니다. 또한 구성 요소를 통해 특정 언어에서만 사용 가능한 외부 라이브러리는 물론 이미 작성해둔 레거시 코드를 사용할 수도 있습니다.
+유니버설 Windows 플랫폼에서는 다른 언어로 작성된 구성 요소를 조합하기가 쉽습니다. , C++ C#또는 Visual Basic에서 Windows 런타임 구성 요소를 만든 다음 JavaScript, C#, C++또는 Visual Basic에서 해당 구성 요소를 호출 합니다. 이것은 선택한 언어로 게임 부분을 프로그래밍하는 훌륭한 방법입니다. 또한 구성 요소를 통해 특정 언어에서만 사용 가능한 외부 라이브러리는 물론 이미 작성해둔 레거시 코드를 사용할 수도 있습니다.
 
 <table>
     <colgroup>
@@ -571,7 +571,7 @@ Windows JavaScript 앱은 개체 지향 JavaScript 클래스의 메서드 및 �
     </colgroup>
     <tr>
         <td>Windows 런타임 구성 요소를 만드는 방법</td>
-        <td><a href="https://docs.microsoft.com/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp">Windows 런타임 구성 요소 만들기</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp">/Cx를 사용 C++하 여 구성 요소 Windows 런타임</a></td>
     </tr>
 </table>
 

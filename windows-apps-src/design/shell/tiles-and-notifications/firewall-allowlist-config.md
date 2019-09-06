@@ -9,12 +9,12 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: windows 10, uwp, WNS, windows 알림 서비스, 알림, windows, 방화벽, 문제 해결, IP, 트래픽, 엔터프라이즈, 네트워크, IPv4, VIP, FQDN, 공용 IP 주소
 ms.localizationpriority: medium
-ms.openlocfilehash: 817dec616a88f0b374bc019cbbf23f56fad94484
-ms.sourcegitcommit: 820704a73174e81da3dc00cf0603c0c82471cdfe
+ms.openlocfilehash: 0ba6d2e678eee0d851b4f2e3897f9fc067b74580
+ms.sourcegitcommit: 3360db6bc975516e01913d3d73599c964a411052
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69908457"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70296978"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>WNS 트래픽을 지원 하기 위한 엔터프라이즈 방화벽 및 프록시 구성
 
@@ -23,8 +23,8 @@ ms.locfileid: "69908457"
 
 ## <a name="proxy-support"></a>프록시 지원
 
-> [!Note] 
-Windows 클라이언트는 모든 프록시를 지원 **하지 않습니다** . WNS에 대 한 연결은 직접 연결 이어야 합니다.
+> [!Note]
+> Windows 클라이언트는 모든 프록시를 지원 **하지 않습니다** . WNS에 대 한 연결은 직접 연결 이어야 합니다.
 
 **개봉박두!** 다른 네트워크 구성, 프록시 및 방화벽을 적극적으로 조사 하 고 있습니다. 이 페이지는 일반적인 엔터프라이즈 시나리오 및 WNS 지원에 대 한 자세한 내용으로 업데이트할 예정입니다.
 

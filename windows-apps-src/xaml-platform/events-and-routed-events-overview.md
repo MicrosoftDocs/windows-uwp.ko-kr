@@ -6,12 +6,12 @@ ms.date: 07/12/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9150fd34653e2beeeb8d8c1557cf9f77e95791e3
-ms.sourcegitcommit: e0ae346eadda864dcad1453cd1644668549e66e1
+ms.openlocfilehash: 0c5acc7d0d891785a7abd4f8976b0fb82bb3323b
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68603443"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393625"
 ---
 # <a name="events-and-routed-events-overview"></a>이벤트 및 라우트된 이벤트 개요
 
@@ -147,7 +147,7 @@ Private Sub textBlock1_PointerEntered(ByVal sender As Object, ByVal e As Pointer
 End Sub
 ```
 
-**참고 Visual Studio**및 XAML 디자인 화면은 일반적으로 Handles 키워드 대신 인스턴스 처리 기법을 승격 시킵니다.     이는 XAML에서 이벤트 처리기 연결을 설정하는 것이 일반적인 디자이너-개발자 워크플로의 일부이고 **Handles** 키워드 방법이 XAML에서 이벤트 처리기를 연결하는 것과 호환되지 않기 때문입니다.
+**참고 Visual Studio**및 XAML 디자인 화면은 일반적으로 Handles 키워드 대신 인스턴스 처리 기법을 승격 시킵니다.    이는 XAML에서 이벤트 처리기 연결을 설정하는 것이 일반적인 디자이너-개발자 워크플로의 일부이고 **Handles** 키워드 방법이 XAML에서 이벤트 처리기를 연결하는 것과 호환되지 않기 때문입니다.
 
 /Cx C++에서 **+=** 구문을 사용 하지만 기본 C# 양식과 차이가 있습니다.
 
@@ -299,7 +299,7 @@ UI에서 요소가 마우스, 터치 및 스타일러스 입력에 보이는지 
 - C# 및 Visual Basic의 경우 CLR 이벤트를 정의합니다. 사용자 지정 접근자(**add**/**remove**)를 사용하지 않는다면 표준 .NET 이벤트 패턴을 사용할 수 있습니다. 추가 팁:
     - 이벤트 처리기의 경우 Windows 런타임 일반 이벤트 대리자 [**EventHandler<T>** ](https://docs.microsoft.com/uwp/api/windows.foundation.eventhandler)로의 변환이 기본 제공되는 [**System.EventHandler<TEventArgs>** ](https://docs.microsoft.com/dotnet/api/system.eventhandler-1?redirectedfrom=MSDN)를 사용하는 것이 좋습니다.
     - Windows 런타임으로 변환되지 않는 [**System.EventArgs**](https://docs.microsoft.com/dotnet/api/system.eventargs?redirectedfrom=MSDN)를 이벤트 데이터 클래스의 기초로 사용하지 마세요. 기존 이벤트 데이터 클래스를 사용하거나, 기본 클래스를 사용하지 마세요.
-    - 사용자 지정 접근자를 사용하는 경우 [Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자](https://docs.microsoft.com/previous-versions/windows/apps/hh972883(v=vs.140))를 참조하세요.
+    - 사용자 지정 접근자를 사용 하는 경우 [Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자](https://docs.microsoft.com/previous-versions/windows/apps/hh972883(v=vs.140))를 참조 하세요.
     - 표준 .NET 이벤트 패턴이 무엇인지 잘 모르겠으면 [사용자 지정 Silverlight 클래스에 대한 이벤트 정의](https://docs.microsoft.com/previous-versions/windows/)를 참조하세요. 이 문서는 Microsoft Silverlight용으로 작성되었지만 표준 .NET 이벤트 패턴에 대한 코드와 개념이 잘 요약되어 있습니다.
 - C++/CX의 경우 [이벤트(C++/CX)](https://docs.microsoft.com/cpp/cppcx/events-c-cx)를 참조하세요.
     - 사용자 지정 이벤트를 고유하게 사용하는 경우에도 명명된 참조를 사용합니다. 사용자 지정 이벤트에 람다를 사용하지 마세요. 람다는 순환 참조를 만들 수 있습니다.

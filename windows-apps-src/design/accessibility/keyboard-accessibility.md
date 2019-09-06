@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0148e1a997cf97942fbbb80eff2b42b1c71d4e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5fd8fa2b5264328619619df862d21f02f70f52e0
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359525"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393756"
 ---
 # <a name="keyboard-accessibility"></a>키보드 접근성  
 
@@ -103,7 +103,7 @@ XAML
 
 따라서 화면 읽기 프로그램 및 다른 보조 기술을 사용하는 사용자에게 앱의 바로 가기 키를 찾을 수 있는 손쉬운 방법을 제공할 필요가 있습니다. 도구 설명, 접근성 있는 이름, 접근성 있는 설명 또는 몇 가지 다른 형식의 화면 통신을 사용하여 바로 가기 키를 제공합니다. 최소한 바로 가기 키에 대한 설명이 앱의 도움말 콘텐츠에 잘 나타나 있어야 합니다.
 
-[  **AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) 연결된 속성을 바로 가기 키를 설명하는 문자열로 설정하여 화면 읽기 프로그램을 통해 액세스 키를 문서화할 수 있습니다. 또한 니모닉이 아닌 바로 가기 키를 문서화하는 데 사용하는 [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey?view=netframework-4.8) 연결된 속성도 있습니다. 단, 화면 읽기 프로그램은 대개 두 속성을 같은 방식으로 처리합니다. 도구 설명, 자동화 속성 및 작성된 도움말 문서를 사용하여 여러 가지 방법으로 바로 가기 키를 문서화합니다.
+[  **AutomationProperties.AccessKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accesskeyproperty) 연결된 속성을 바로 가기 키를 설명하는 문자열로 설정하여 화면 읽기 프로그램을 통해 액세스 키를 문서화할 수 있습니다. 또한 니모닉이 아닌 바로 가기 키를 문서화하는 데 사용하는 [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.acceleratorkeyproperty) 연결된 속성도 있습니다. 단, 화면 읽기 프로그램은 대개 두 속성을 같은 방식으로 처리합니다. 도구 설명, 자동화 속성 및 작성된 도움말 문서를 사용하여 여러 가지 방법으로 바로 가기 키를 문서화합니다.
 
 다음 예제에서는 미디어 재생, 일시 중지 및 중지 단추에 대한 바로 가기 키를 문서화하는 방법을 보여 줍니다.
 
@@ -144,7 +144,7 @@ XAML
 ```
 
 > [!IMPORTANT]
-> [  **AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey?view=netframework-4.8) 또는 [**AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) 설정을 통해 키보드 기능을 사용하도록 설정할 수 없습니다. 이 설정은 사용해야 하는 키를 UI 자동화 프레임워크에 보고하여 보조 기술을 통해 이러한 정보를 사용자에게 전달할 수 있도록 하는 역할만 합니다. 키 처리 구현은 XAML이 아니라 코드에서 수행해야 합니다. 앱에서 바로 가기 키 동작을 실제로 구현하려면 관련 컨트롤에 [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) 또는 [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트 처리기를 연결해야 합니다. 또한 액세스 키에 대한 밑줄로 표시된 텍스트 장식은 자동으로 제공되지 않습니다. UI에서 밑줄로 표시된 텍스트를 표시하려면 니모닉에서 명시적으로 특정 키의 텍스트에 밑줄을 인라인 [**Underline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Underline) 서식으로 표시해야 합니다.
+> [**AcceleratorKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.acceleratorkeyproperty) 또는 [**Automationproperties. AccessKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accesskeyproperty) 를 설정 하면 키보드 기능을 사용할 수 없습니다. 이 설정은 사용해야 하는 키를 UI 자동화 프레임워크에 보고하여 보조 기술을 통해 이러한 정보를 사용자에게 전달할 수 있도록 하는 역할만 합니다. 키 처리 구현은 XAML이 아니라 코드에서 수행해야 합니다. 앱에서 바로 가기 키 동작을 실제로 구현하려면 관련 컨트롤에 [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) 또는 [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트 처리기를 연결해야 합니다. 또한 액세스 키에 대한 밑줄로 표시된 텍스트 장식은 자동으로 제공되지 않습니다. UI에서 밑줄로 표시된 텍스트를 표시하려면 니모닉에서 명시적으로 특정 키의 텍스트에 밑줄을 인라인 [**Underline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Underline) 서식으로 표시해야 합니다.
 
 간단하게 하기 위해 위 예제에서는 "Ctrl+A" 같은 문자열에 대한 리소스 사용을 생략합니다. 그러나 지역화할 때도 바로 가기 키를 고려해야 합니다. 바로 가기 키로 사용할 키의 선택은 일반적으로 해당 요소에 대해 표시되는 텍스트 레이블에 따라 달라지므로 바로 가기 키 지역화가 관련이 있습니다.
 
@@ -175,7 +175,7 @@ Ctrl 키 등의 보조키 확인을 포함하는 키 이벤트 처리기 작성 
 ## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>포커스 표시기의 시각적 상태 예제  
 앞에서 사용자가 포커스를 설정할 수 있는 모든 사용자 지정 컨트롤에 시각적 포커스 표시기가 있어야 한다고 설명했습니다. 일반적으로 포커스 표시기는 컨트롤의 일반 경계 사각형 주위에 사각형 모양을 그리는 것처럼 단순합니다. 시각적 포커스의 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)은 컨트롤 템플릿에 있는 컨트롤 컴퍼지션의 나머지 부분에 대한 피어 요소이지만 컨트롤이 아직 포커스되지 않았으므로 초기에 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) 값 **Collapsed**를 사용하여 설정됩니다. 그런 다음 컨트롤에 포커스가 있으면 구체적으로 시각적 포커스의 **Visibility**를 **Visible**로 설정하는 시각적 상태가 호출됩니다. 포커스가 다른 곳으로 이동되면 다른 시각적 상태가 호출되고 **Visibility**는 **Collapsed**가 됩니다.
 
-모든 기본 XAML 컨트롤은 포커스되었을 때 해당하는 시각적 포커스 표시기를 표시합니다(포커스될 수 있는 경우). 밖에도 사용자의 선택한 테마에 따라 잠재적으로 다른 모양 (특히 사용자가 사용 중인 경우 고대비 모드입니다.) XAML 컨트롤에 UI 컨트롤 템플릿을 대체 하지 않으면를 사용 하는 경우에 모든 동작을 올바르게 표시 하는 컨트롤의 시각적 포커스 표시기를 가져오려면 추가 작업을 수행할 필요가 없습니다. 하지만 컨트롤을 다시 템플릿으로 지정하려는 경우나 XAML 컨트롤이 시각적 포커스 지시기를 제공하는 방법을 알고 싶은 경우를 위해 이 섹션의 나머지 부분에서는 XAML 및 컨트롤 논리에서 이를 수행하는 방법을 설명합니다.
+모든 기본 XAML 컨트롤은 포커스되었을 때 해당하는 시각적 포커스 표시기를 표시합니다(포커스될 수 있는 경우). 사용자가 선택한 테마에 따라 다르게 표시 될 수도 있습니다 (특히 사용자가 고대비 모드를 사용 하는 경우). UI에서 XAML 컨트롤을 사용 하 고 컨트롤 템플릿을 바꾸지 않는 경우 제대로 동작 하 고 표시 하는 컨트롤에 대 한 시각적 포커스 표시기를 얻기 위해 추가로 작업을 수행할 필요가 없습니다. 하지만 컨트롤을 다시 템플릿으로 지정하려는 경우나 XAML 컨트롤이 시각적 포커스 지시기를 제공하는 방법을 알고 싶은 경우를 위해 이 섹션의 나머지 부분에서는 XAML 및 컨트롤 논리에서 이를 수행하는 방법을 설명합니다.
 
 다음은 [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)에 대한 기본 XAML 템플릿에서 가져온 일부 XAML입니다.
 
@@ -203,7 +203,7 @@ XAML
 </ControlTemplate>
 ```
 
-지금까지는 단순히 컴퍼지션이었습니다. 포커스 표시기의 표시 형식을 제어하려면 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) 속성을 전환하는 시각적 상태를 정의합니다. 이 작업은 컴퍼지션을 정의하는 루트 요소에 적용되는 [**VisualStateManager.VisualStateGroups**](https://docs.microsoft.com/dotnet/api/system.windows.visualstatemanager?view=netframework-4.8) 연결된 속성을 사용하여 수행합니다.
+지금까지는 단순히 컴퍼지션이었습니다. 포커스 표시기의 표시 형식을 제어하려면 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) 속성을 전환하는 시각적 상태를 정의합니다. 이 작업은 컴퍼지션을 정의 하는 루트 요소에 적용 된 [r](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager) 및 r를 사용 하 여 연결 된 속성을 사용 합니다.
 
 XAML
 ```xml
@@ -245,9 +245,9 @@ Windows Phone 장치에는 일반적으로 전용 하드웨어 키보드가 없�
 
 <span id="related_topics"/>
 
-## <a name="related-topics"></a>관련 항목  
+## <a name="related-topics"></a>관련 항목
+
 * [액세스 가능성](accessibility.md)
 * [키보드 상호 작용](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
 * [터치 키보드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [XAML 액세스 가능성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
-
+* [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)

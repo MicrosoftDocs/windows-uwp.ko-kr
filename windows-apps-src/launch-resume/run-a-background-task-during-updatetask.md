@@ -3,14 +3,14 @@ title: UWP 앱 업데이트 시 백그라운드 작업을 실행합니다.
 description: UWP(유니버설 Windows 플랫폼) 스토어 앱 업데이트 시 실행되는 백그라운드 작업을 만드는 방법을 알아봅니다.
 ms.date: 04/21/2017
 ms.topic: article
-keywords: windows 10, uwp, 업데이트, 백그라운드 작업, updatetask, 백그라운드 작업
+keywords: windows 10, uwp, 업데이트, 백그라운드 작업, updatetask 창, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: fa5420b14d3d73f370031eed917e0e7c367c41c7
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 15406e52eeceb579f2add783c74a1011074c69b7
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820952"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393542"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>UWP 앱 업데이트 시 백그라운드 작업을 실행합니다.
 
@@ -24,7 +24,7 @@ UWP 스토어 앱 업데이트 후 실행되는 백그라운드 작업을 작성
 
 다른 유형의 백그라운드 작업과 마찬가지로 Windows 런타임 구성 요소로 업데이트 작업 백그라운드 작업을 구현합니다. 이 구성 요소를 만들려면 [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)의 **백그라운드 작업 클래스 만들기** 섹션의 단계를 따르세요. 이 단계는 다음과 같습니다.
 
-- 솔루션에 Windows 런타임 구성 요소 개체 추가
+- Windows 런타임 구성 요소 프로젝트를 솔루션에 추가 합니다.
 - 엡에서 구성 요소로의 참조 만들기
 - [  **IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)를 구현하는 구성 요소에 public sealed 클래스 만들기
 - 업데이트 작업 실행 시 호출되는 필수 진입점인 [**Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드 구현 백그라운드 작업에서 비동기 호출을 만들려는 경우 [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)에 **Run** 메서드에 지연을 사용하는 방법이 나와 있습니다.
@@ -48,7 +48,7 @@ namespace BackgroundTasks
 }
 ```
 
-## <a name="step-2-declare-your-background-task-in-the-package-manifest"></a>2단계: 패키지 매니페스트에 백그라운드 작업 선언
+## <a name="step-2-declare-your-background-task-in-the-package-manifest"></a>2단계: 패키지 매니페스트에서 백그라운드 작업을 선언 합니다.
 
 Visual Studio 솔루션 탐색기에서 **Package.appxmanifest** 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 클릭하여 패키지 매니페스트를 봅니다. 다음 `<Extensions>` XML을 추가하여 업데이트 작업을 선언합니다.
 
@@ -70,7 +70,7 @@ Visual Studio 솔루션 탐색기에서 **Package.appxmanifest** 파일을 마�
 
 위의 XML에서 `EntryPoint` 특성이 업데이트 작업 클래스의 namespace.class 이름으로 설정되어 있는지 확인합니다. 이름은 대/소문자 구분입니다.
 
-## <a name="step-3-debugtest-your-update-task"></a>3단계: 업데이트 작업을 디버그 테스트 합니다.
+## <a name="step-3-debugtest-your-update-task"></a>3단계: 업데이트 작업 디버그/테스트
 
 업데이트할 사항이 있도록 컴퓨터에 앱을 배치했는지 확인합니다.
 
@@ -86,7 +86,7 @@ Visual Studio 솔루션 탐색기에서 **Package.appxmanifest** 파일을 마�
 
 ![버전 업데이트](images/bump-version.png)
 
-이제 Visual Studio 2019에서 f5 키를 누르면 앱은 업데이트 되 고 시스템을 백그라운드에서 UpdateTask 구성 요소를 활성화 합니다. 디버거가 자동으로 백그라운드 프로세스에 연결됩니다. 중단점이 실행되고 업데이트 코드 논리를 단계별로 실행할 수 있습니다.
+이제 Visual Studio 2019에서 F5 키를 누르면 앱이 업데이트 되 고 시스템은 백그라운드에서 Updatdatcomponent를 활성화 합니다. 디버거가 자동으로 백그라운드 프로세스에 연결됩니다. 중단점이 실행되고 업데이트 코드 논리를 단계별로 실행할 수 있습니다.
 
 백그라운드 작업이 완료되면 같은 디버그 세션 내의 Windows 시작 메뉴에서 포그라운드 앱을 시작할 수 있습니다. 디버거가 다시 자동으로 포그라운드 프로세스에 연결되고 앱의 논리를 단계별로 실행할 수 있습니다.
 

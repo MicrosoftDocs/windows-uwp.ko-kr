@@ -1,42 +1,43 @@
 ---
-title: C++/CX로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출
-description: 이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다.
+title: C++/Cx Windows 런타임 구성 요소를 만들고 JavaScript 또는에서 호출 하는 연습C#
+description: 이 연습에서는 JavaScript, C#또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다.
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
 ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bed6858998fe20a5dddf709cac1d2436f001c08
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b12dd09251d8d8a93869ff2f4318233d89fa0e89
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363201"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393642"
 ---
-# <a name="walkthrough-creating-a-windows-runtime-component-in-ccx-and-calling-it-from-javascript-or-c"></a>연습: C++/CX로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출
-> [!NOTE]
-> 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. 사용 하 여 Windows 런타임 구성 요소를 만드는 방법에 알아보려면 C++/WinRT를 참조 하세요 [에서 이벤트를 작성 C++/WinRT](../cpp-and-winrt-apis/author-events.md)합니다.
+# <a name="walkthrough-of-creating-a-ccx-windows-runtime-component-and-calling-it-from-javascript-or-c"></a>C++/Cx Windows 런타임 구성 요소를 만들고 JavaScript 또는에서 호출 하는 연습C#
 
-이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다. 이 연습을 시작하기 전에 쉽게 ref 클래스를 사용할 수 있게 해주는 ABI(추상 이진 인터페이스), ref 클래스, Visual C++ 구성 요소 확장 등의 개념을 이해해야 합니다. 자세한 내용은 [C++로 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-cpp.md) 및 [Visual C++ 언어 참조(C++/CX)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)를 참조하세요.
+> [!NOTE]
+> 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. /Winrt를 사용 하 여 C++Windows 런타임 구성 요소를 만드는 방법에 대 한 자세한 내용은 [/Winrt의 C++Author 이벤트](../cpp-and-winrt-apis/author-events.md)를 참조 하세요.
+
+이 연습에서는 JavaScript, C#또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다. 이 연습을 시작하기 전에 쉽게 ref 클래스를 사용할 수 있게 해주는 ABI(추상 이진 인터페이스), ref 클래스, Visual C++ 구성 요소 확장 등의 개념을 이해해야 합니다. 자세한 내용은 [/cx를 사용 하 여 C++구성 요소 Windows 런타임](creating-windows-runtime-components-in-cpp.md) 및 [/cx ( C++ C++시각적 언어 참조)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)를 참조 하세요.
 
 ## <a name="creating-the-c-component-dll"></a>C++ 구성 요소 DLL 만들기
 이 예제에서는 구성 요소 프로젝트를 먼저 만들지만 JavaScript 프로젝트를 먼저 만들 수도 있습니다. 순서는 중요하지 않습니다.
 
 구성 요소의 기본 클래스에는 속성 및 메서드 정의의 예와 이벤트 선언이 포함되어 있습니다. 이러한 항목은 작업 방식을 보여 주기 위해서만 제공됩니다. 필수는 아니며, 이 예제에서는 생성된 코드를 고유한 코드로 바꿀 것입니다.
 
-### <a name="to-create-the-c-component-project"></a>**만들려는 합니다 C++ 구성 요소 프로젝트**
+### <a name="to-create-the-c-component-project"></a>**C++ 구성 요소 프로젝트를 만들려면**
 1. Visual Studio 메뉴 모음에서 **파일, 새로 만들기, 프로젝트**를 선택합니다.
 
 2. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C++** 를 확장하고 유니버설 Windows 앱에 대한 노드를 선택합니다.
 
-3. 가운데 창에서 선택 **Windows 런타임 구성 요소** WinRT 프로젝트의 이름 및\_CPP 합니다.
+3. 가운데 창에서 **Windows 런타임 구성 요소** 를 선택 하 고 프로젝트 이름을 WinRT\_CPP로 선택 합니다.
 
 4. **확인** 단추를 선택합니다.
 
 ## <a name="to-add-an-activatable-class-to-the-component"></a>**구성 요소에 활성화 가능한 클래스를 추가 하려면**
 활성화 가능 클래스는 **new** 식(Visual Basic의 **New** 또는 C++의 **ref new**)을 사용하여 클라이언트 코드에서 만들 수 있는 클래스입니다. 구성 요소에서 **public ref class sealed**로 선언합니다. 실제로 Class1.h 및 .cpp 파일에는 이미 ref 클래스가 있습니다. 이름을 변경할 수 있지만 이 예제에서는 기본 이름인 Class1을 사용합니다. 필요한 경우 구성 요소에서 추가 ref 클래스 또는 일반 클래스를 정의할 수 있습니다. ref 클래스에 대한 자세한 내용은 [형식 시스템(C++/CX)](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx)을 참조하세요.
 
-이러한 추가 \#include 지시문을 Class1.h:
+다음 \#include 지시문을 Class1. h에 추가 합니다.
 
 ```cpp
 #include <collection.h>
@@ -421,7 +422,7 @@ function ButtonClear_Click() {
 }
 ```
 
-default.js의 app.onactivated에서 WinJS.UI.processAll에 대한 기존 호출을 then 블록에서 이벤트 등록을 구현하는 다음 코드로 대체하여 이벤트 수신기를 추가하는 코드를 추가합니다. 자세한 설명은이 대해서 ["Hello, World" 앱 (JS) 만들기](/windows/uwp/get-started/create-a-hello-world-app-js-uwp)합니다.
+default.js의 app.onactivated에서 WinJS.UI.processAll에 대한 기존 호출을 then 블록에서 이벤트 등록을 구현하는 다음 코드로 대체하여 이벤트 수신기를 추가하는 코드를 추가합니다. 이에 대 한 자세한 설명은 ["Hello, 세계" 앱 만들기 (JS)](/windows/uwp/get-started/create-a-hello-world-app-js-uwp)를 참조 하세요.
 
 ```JavaScript
 args.setPromise(WinJS.UI.processAll().then( function completed() {
@@ -479,7 +480,7 @@ MainPage.xaml의 Grid 요소에 다음 코드를 복사합니다.
 ```
 
 ## <a name="to-add-the-event-handlers-for-the-buttons"></a>단추에 대한 이벤트 처리기를 추가하려면
-솔루션 탐색기에서 MainPage.xaml.cs를 엽니다. (MainPage.xaml 아래 파일에 중첩 될 수 있습니다.) 추가 하 여 System.Text에 대 한 지시문 다음 로그 계산에 대 한 이벤트 처리기를 MainPage 클래스에 추가 합니다.
+솔루션 탐색기에서 MainPage.xaml.cs를 엽니다. 이 파일은 MainPage .xaml 아래에 중첩 될 수 있습니다. System.object에 using 지시문을 추가한 다음 MainPage 클래스에서 로그 계산에 대 한 이벤트 처리기를 추가 합니다.
 
 ```csharp
 private void Button1_Click_1(object sender, RoutedEventArgs e)
@@ -584,10 +585,10 @@ private void Clear_Button_Click(object sender, RoutedEventArgs e)
 ## <a name="inspecting-your-component-in-object-browser-optional"></a>개체 브라우저에서 구성 요소 검사(옵션)
 개체 브라우저에서 .winmd 파일에 정의된 모든 Windows 런타임 형식을 검사할 수 있습니다. 여기에는 플랫폼 네임스페이스와 기본 네임스페이스의 형식이 포함됩니다. 그러나 Platform::Collections 네임스페이스의 형식은 winmd 파일이 아니라 헤더 파일 collections.h에 정의되어 있으므로 개체 브라우저에 표시되지 않습니다.
 
-### <a name="to-inspect-a-component"></a>**구성 요소를 검사 합니다.**
+### <a name="to-inspect-a-component"></a>**구성 요소를 검사 하려면**
 1. 메뉴 모음에서 **보기, 개체 브라우저**(Ctrl+Alt+J)를 선택합니다.
 
-2. 개체 브라우저의 왼쪽된 창에서 확장 된 WinRT\_CPP 노드 형식 및 구성 요소에 정의 된 메서드를 표시 합니다.
+2. 개체 브라우저의 왼쪽 창에서 WinRT\_CPP 노드를 확장 하 여 구성 요소에 정의 된 형식과 메서드를 표시 합니다.
 
 ## <a name="debugging-tips"></a>디버깅 팁
 디버깅 환경을 개선하려면 공용 Microsoft 기호 서버에서 디버깅 기호를 다운로드하세요.
@@ -610,4 +611,4 @@ JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식�
 솔루션에서 C++ Windows 런타임 구성 요소 프로젝트를 제거하는 경우 JavaScript 프로젝트에서 프로젝트 참조를 수동으로 제거해야 합니다. 이렇게 하지 않으면 이후 디버그 또는 빌드 작업을 수행할 수 없습니다. 필요한 경우 DLL에 대한 어셈블리 참조를 추가할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
-* [C + Windows 런타임 구성 요소 만들기 + CX](creating-windows-runtime-components-in-cpp.md)
+* [/Cx를 사용 C++하 여 구성 요소 Windows 런타임](creating-windows-runtime-components-in-cpp.md)

@@ -1,20 +1,20 @@
 ---
 title: 다중 스레드 환경에서 Windows 런타임 개체 사용 | Microsoft Docs
-description: 이 문서에서는 .NET Framework가 C# 및 Visual Basic 코드에서 Windows 런타임 또는 Windows 런타임 구성 요소에서 제공하는 개체로의 호출을 처리하는 방식을 설명합니다.
+description: 이 문서에서는 .NET Framework에서 C# 호출을 처리 하 고 Windows 런타임에서 제공 하는 개체 또는 Windows 런타임 구성 요소에서 제공 하는 개체에 Visual Basic 코드를 처리 하는 방법을 설명 합니다.
 ms.date: 01/14/2017
 ms.topic: article
 ms.assetid: 43ffd28c-c4df-405c-bf5c-29c94e0d142b
 keywords: windows 10, uwp, 타이머, 스레드
 ms.localizationpriority: medium
-ms.openlocfilehash: 3afa1720ede9728e9cc25af434a431300faf26d6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4fc4f704d8e9f53282ab09dbc61bc5e625d00da9
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371214"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393525"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>다중 스레드 환경에서 Windows 런타임 개체 사용
-이 문서에서는 .NET Framework가 C# 및 Visual Basic 코드에서 Windows 런타임 또는 Windows 런타임 구성 요소에서 제공하는 개체로의 호출을 처리하는 방식을 설명합니다.
+이 문서에서는 .NET Framework에서 C# 호출을 처리 하 고 Windows 런타임에서 제공 하는 개체 또는 Windows 런타임 구성 요소에서 제공 하는 개체에 Visual Basic 코드를 처리 하는 방법을 설명 합니다.
 
 기본적으로 .NET Framework에서는 특수한 처리 없이 여러 스레드의 개체에 액세스할 수 있습니다. 개체에 대한 참조만 있으면 됩니다. Windows 런타임에서는 이러한 개체를 *Agile*이라고 합니다. 대부분의 Windows 런타임 클래스는 Agile이지만 몇몇은 그렇지 않으며, Agile 클래스에도 특수한 처리가 필요할 수 있습니다.
 

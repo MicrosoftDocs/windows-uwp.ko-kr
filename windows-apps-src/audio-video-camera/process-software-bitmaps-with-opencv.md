@@ -6,18 +6,18 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: a137a4bddd7f86e7aed91a63033c54583dc71f08
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: ed8d6572fb280b2cfecf1cf035d68a739c5bc92d
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318522"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393516"
 ---
 # <a name="process-bitmaps-with-opencv"></a>OpenCV로 비트맵 처리
 
 이 문서에서는 다양한 이미지 처리 알고리즘을 제공하는 오픈 소스 네이티브 코드 라이브러리인 오픈 소스 컴퓨터 비전 라이브러리(OpenCV)를 사용하여 이미지를 나타내기 위해 여러 UWP API에 사용되는 **[SoftwareBitmap](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap)** 클래스 사용법에 대해 설명합니다. 
 
-이 문서의 예제는 C#을 사용하여 생성된 앱을 포함하여 UWP 앱에서 사용할 수 있는 네이티브 코드 Windows 런타임 구성 요소를 만드는 과정을 안내합니다. 이 도우미 구성 요소는 OpenCV의 흐림 이미지 처리 기능을 사용할 단일 메서드 **Blur**를 노출합니다. 이 구성 요소는 OpenCV 라이브러리에서 직접 사용할 수 있는 기본 이미지 데이터 버퍼에 대한 포인터를 가져오는 private 메서드를 구현하므로 다른 OpenCV 처리 기능을 구현하기 위해 도우미 구성 요소를 쉽게 확장할 수 있습니다. 
+이 문서의 예제에서는를 사용 하 여 C#만든 앱을 포함 하 여 UWP 앱에서 사용할 수 있는 네이티브 코드 Windows 런타임 구성 요소를 만드는 과정을 안내 합니다. 이 도우미 구성 요소는 OpenCV의 흐림 이미지 처리 기능을 사용할 단일 메서드 **Blur**를 노출합니다. 이 구성 요소는 OpenCV 라이브러리에서 직접 사용할 수 있는 기본 이미지 데이터 버퍼에 대한 포인터를 가져오는 private 메서드를 구현하므로 다른 OpenCV 처리 기능을 구현하기 위해 도우미 구성 요소를 쉽게 확장할 수 있습니다. 
 
 * **SoftwareBitmap** 사용에 대한 소개는 [비트맵 이미지 만들기, 편집 및 저장](imaging.md)을 참조하세요. 
 * OpenCV 라이브러리를 사용하는 방법을 알아보려면 [https://opencv.org](https://opencv.org)로 이동하세요.
@@ -27,15 +27,15 @@ ms.locfileid: "67318522"
 > [!NOTE] 
 > 이 문서에서 자세히 설명한 OpenCVHelper 구성 요소에 사용되는 기술은 처리할 GPU 메모리가 아닌 CPU 메모리에 이미지 데이터가 있어야 합니다. 따라서 **[MediaCapture](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture)** 클래스와 같은 이미지의 메모리 위치를 요청할 수 있는 API의 경우, CPU 메모리를 지정해야 합니다.
 
-## <a name="create-a-helper-windows-runtime-component-for-opencv-interop"></a>OpenCV 상호 운용성을 위한 도우미 Windows 런타임 구성 요소 만들기
+## <a name="create-a-helper-windows-runtime-component-for-opencv-interop"></a>OpenCV interop에 대 한 도우미 Windows 런타임 구성 요소 만들기
 
-### <a name="1-add-a-new-native-code-windows-runtime-component-project-to-your-solution"></a>1. 새 네이티브 코드로 Windows 런타임 구성 요소 프로젝트를 솔루션에 추가
+### <a name="1-add-a-new-native-code-windows-runtime-component-project-to-your-solution"></a>1. 새 네이티브 코드 Windows 런타임 구성 요소 프로젝트를 솔루션에 추가 합니다.
 
 1. 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가->새 프로젝트**를 선택하여 Visual Studio에서 솔루션에 새 프로젝트를 추가합니다. 
 2. **Visual C++** 범주 아래에서 **Windows 런타임 구성 요소(유니버설 Windows)** 를 선택합니다. 이 예에서는 프로젝트 이름을 "OpenCVBridge"로 지정하고 **확인**을 클릭합니다. 
 3. **새로운 Windows 유니버설 프로젝트** 대화 상자에서 앱의 최소 OS 버전과 대상을 선택하고 **확인**을 클릭합니다.
 4. 솔루션 탐색기에서 자동 생성된 파일 Class1.cpp를 마우스 오른쪽 단추로 클릭하고, 확인 대화 상자가 나타나면 **제거**를 선택하고 **삭제**를 선택합니다. 그런 다음 Class1.h 헤더 파일을 삭제합니다.
-5. OpenCVBridge 프로젝트 아이콘을 마우스 오른쪽 단추로 클릭 하 고 선택 **추가-> 클래스...** . 에 **클래스 추가** 대화 상자에 입력된 "OpenCVHelper" 합니다 **클래스 이름** 필드를 클릭 한 다음 **확인**합니다. 이후 단계에서 생성된 클래스 파일에 코드가 추가됩니다.
+5. OpenCVBridge 프로젝트 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **추가-> 클래스 ...** 를 선택 합니다. **클래스 추가** 대화 상자에서 **클래스 이름** 필드에 "OpenCVHelper"를 입력 한 다음 **확인**을 클릭 합니다. 이후 단계에서 생성된 클래스 파일에 코드가 추가됩니다.
 
 ### <a name="2-add-the-opencv-nuget-packages-to-your-component-project"></a>2. 구성 요소 프로젝트에 OpenCV NuGet 패키지 추가
 
@@ -63,7 +63,7 @@ include 지시문 뒤에 **using** 지시문을 추가합니다.
 
 그런 다음 메서드 **GetPointerToPixelData**를 OpenCVHelper.cpp에 추가합니다. 이 메서드는 **[SoftwareBitmap](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap)** 을 가져오고, 일련의 대화를 통해 픽셀 데이터의 COM 인터페이스 표현을 가져옵니다. 그러면 기본 데이터 버퍼에 **char** 어레이로 포인터를 가져올 수 있습니다. 
 
-먼저, **[LockBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.lockbuffer)** 를 호출하고 읽기쓰기 버퍼를 요청하여 OpenCV 라이브러리가 픽셀 데이터를 수정할 수 있도록 픽셀 데이터가 포함된 **[BitmapBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer)** 를 가져옵니다.  **[CreateReference](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.CreateReference)**  을 가져오기 위해 호출 되는 **[IMemoryBufferReference](https://docs.microsoft.com/uwp/api/windows.foundation.imemorybufferreference)** 개체입니다. 그런 다음 **IMemoryBufferByteAccess** 인터페이스가 모든 Windows 런타임 클래스의 기본 인터페이스인 **IInspectable**로 캐스팅되고, 픽셀 데이터 버퍼를 **char** 어레이로 가져올 수 있는 **[IMemoryBufferByteAccess](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85))** COM 인터페이스를 가져오기 위해 **[QueryInterface](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))** 가 호출됩니다. 마지막으로 **[IMemoryBufferByteAccess::GetBuffer](https://docs.microsoft.com/windows/desktop/WinRT/imemorybufferbyteaccess-getbuffer)** 를 호출하여 **char** 어레이를 채웁니다. 이 메서드에서 변환 단계 중 하나라도 실패하면 메서드는 **false**를 반환하여 추가 처리를 계속할 수 없음을 나타냅니다.
+먼저, **[LockBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.lockbuffer)** 를 호출하고 읽기쓰기 버퍼를 요청하여 OpenCV 라이브러리가 픽셀 데이터를 수정할 수 있도록 픽셀 데이터가 포함된 **[BitmapBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer)** 를 가져옵니다.  **[CreateReference](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.CreateReference)** 는 **[IMemoryBufferReference](https://docs.microsoft.com/uwp/api/windows.foundation.imemorybufferreference)** 개체를 가져오기 위해 호출 됩니다. 그런 다음 **IMemoryBufferByteAccess** 인터페이스가 모든 Windows 런타임 클래스의 기본 인터페이스인 **IInspectable**로 캐스팅되고, 픽셀 데이터 버퍼를 **char** 어레이로 가져올 수 있는 **[IMemoryBufferByteAccess](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85))** COM 인터페이스를 가져오기 위해 **[QueryInterface](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))** 가 호출됩니다. 마지막으로 **[IMemoryBufferByteAccess::GetBuffer](https://docs.microsoft.com/windows/desktop/WinRT/imemorybufferbyteaccess-getbuffer)** 를 호출하여 **char** 어레이를 채웁니다. 이 메서드에서 변환 단계 중 하나라도 실패하면 메서드는 **false**를 반환하여 추가 처리를 계속할 수 없음을 나타냅니다.
 
 [!code-cpp[OpenCVHelperGetPointerToPixelData](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperGetPointerToPixelData)]
 
@@ -82,7 +82,7 @@ include 지시문 뒤에 **using** 지시문을 추가합니다.
 
 
 ## <a name="a-simple-softwarebitmap-opencv-example-using-the-helper-component"></a>도우미 구성 요소를 사용하는 단순한 SoftwareBitmap OpenCV 예제
-이제 OpenCVBridge 구성 요소가 만들어졌으므로, OpenCV **blur** 메서드를 사용해 **SoftwareBitmap**을 수정하는 단순한 C# 앱을 만들 수 있습니다. UWP 앱에서 Windows 런타임 구성 요소에 액세스하려면 먼저 해당 구성 요소에 참조를 추가해야 합니다. 솔루션 탐색기에서 마우스 오른쪽 단추로 클릭 합니다 **참조** UWP 앱 프로젝트 및 선택 노드에서 **참조를 추가 하는 중...** . 참조 관리자 대화 상자에서 선택 **프로젝트-> 솔루션**합니다. OpenCVBridge 프로젝트 옆의 상자를 선택하고 **확인**을 클릭합니다.
+이제 OpenCVBridge 구성 요소가 만들어졌으므로, OpenCV **blur** 메서드를 사용해 **SoftwareBitmap**을 수정하는 단순한 C# 앱을 만들 수 있습니다. UWP 앱에서 Windows 런타임 구성 요소에 액세스 하려면 먼저 구성 요소에 대 한 참조를 추가 해야 합니다. 솔루션 탐색기에서 UWP 앱 프로젝트 아래의 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**...를 선택 합니다. 참조 관리자 대화 상자에서 **프로젝트-> 솔루션**을 선택 합니다. OpenCVBridge 프로젝트 옆의 상자를 선택하고 **확인**을 클릭합니다.
 
 사용자는 아래의 예제 코드를 통해 이미지 파일을 선택한 후 **[BitmapDecoder](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapencoder)** 를 사용해 이미지의 **SoftwareBitmap** 표현을 만들 수 있습니다. **SoftwareBitmap** 작업 방법에 대한 자세한 내용은 [비트맵 이미지 만들기, 편집 및 저장](https://docs.microsoft.com/windows/uwp/audio-video-camera/imaging)을 참조하세요.
 
@@ -92,7 +92,7 @@ include 지시문 뒤에 **using** 지시문을 추가합니다.
 
 **OpenCVHelper**의 새 인스턴스가 형성되고 **Blur** 메서드가 호출되어 원본과 대상 비트맵에 전달됩니다. 마지막으로 **SoftwareBitmapSource**가 생성되어 출력 이미지를 XAML **이미지** 컨트롤에 할당합니다.
 
-이 샘플 코드는 기본 프로젝트 템플릿에 의해 포함 된 네임 스페이스 외에도 다음 네임 스페이스에서 Api를 사용 합니다.
+이 샘플 코드는 기본 프로젝트 템플릿에 포함 된 네임 스페이스 외에도 다음 네임 스페이스의 Api를 사용 합니다.
 
 [!code-cs[OpenCVMainPageUsing](./code/ImagingWin10/cs/MainPage.OpenCV.xaml.cs#SnippetOpenCVMainPageUsing)]
 
