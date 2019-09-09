@@ -933,11 +933,11 @@
     - name: Windows 런타임 구성 요소
       href: ../winrt-components/index.md
       items:
-        - name: C++/CX로 Windows 런타임 구성 요소 만들기
+        - name: C++/CX가 포함된 Windows 런타임 구성 요소
           href: ../winrt-components/creating-windows-runtime-components-in-cpp.md
-        - name: '연습: C++/CX로 기본 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출'
+        - name: C++/CX Windows 런타임 구성 요소 연습
           href: ../winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md
-        - name: 'C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기'
+        - name: 'C# 및 Visual Basic이 포함된 Windows 런타임 구성 요소'
           href: ../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md
           items:
             - name: Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
@@ -948,9 +948,9 @@
               href: ../winrt-components/diagnosing-windows-runtime-component-error-conditions.md
             - name: 관리되는 Windows 런타임 구성 요소 배포
               href: ../winrt-components/distributing-a-managed-windows-runtime-component.md
-            - name: Windows 런타임 형식의 .NET Framework 매핑
+            - name: Windows 런타임 형식의 .NET 매핑
               href: ../winrt-components/net-framework-mappings-of-windows-runtime-types.md
-        - name: '연습: 간단한 Windows 런타임 구성 요소를 만들고 JavaScript에서 호출'
+        - name: 'C# 또는 Visual Basic Windows 런타임 구성 요소 연습'
           href: ../winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md
         - name: Windows 런타임 구성 요소에서 이벤트 발생
           href: ../winrt-components/raising-events-in-windows-runtime-components.md
