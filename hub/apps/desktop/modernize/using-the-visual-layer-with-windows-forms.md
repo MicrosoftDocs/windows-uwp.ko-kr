@@ -1,92 +1,92 @@
 ---
-title: 시각적 계층을 사용 하 여 Windows Forms를 사용 하 여
-description: 고급 애니메이션을 만들고 결과를 조합 하 여 기존 Windows Forms 콘텐츠로 Visual 계층 Api를 사용 하 여 기술에 알아봅니다.
+title: Windows Forms와 함께 시각적 계층 사용
+description: 기존 Windows Forms 콘텐츠와 함께 시각적 계층 Api를 사용 하 여 고급 애니메이션과 효과를 만드는 방법에 대해 알아봅니다.
 ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.author: jimwalk
 author: jwmsft
 ms.localizationpriority: medium
-ms.openlocfilehash: 23515f8254b026b255491a90c1c8b3a2a8ab12ba
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 9da9dee48beef6e3c1cd38ffbe9761ed89fd940d
+ms.sourcegitcommit: 93d0b2996b4742b33cd6d641e036f42672cf5238
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215159"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999636"
 ---
-# <a name="using-the-visual-layer-with-windows-forms"></a>시각적 계층을 사용 하 여 Windows Forms를 사용 하 여
+# <a name="using-the-visual-layer-with-windows-forms"></a>Windows Forms와 함께 시각적 계층 사용
 
-Windows 런타임 구성 Api를 사용할 수 있습니다 (라고도 합니다 [시각적 계층](/windows/uwp/composition/visual-layer))는 Windows 10 사용자에 대해 간단한 최신 환경을 만들기 위해 Windows Forms 앱에서.
+Windows Forms 앱에서 Windows 런타임 컴퍼지션 Api ( [시각적 계층이](/windows/uwp/composition/visual-layer)라고도 함)를 사용 하 여 Windows 10 사용자를 위해 최신 환경을 만들 수 있습니다.
 
-이 자습서에 대 한 전체 코드는 GitHub에서 사용할 수 있습니다. [Windows Forms HelloComposition 샘플](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WinForms/HelloComposition)합니다.
+이 자습서에 대 한 전체 코드는 GitHub에서 사용할 수 있습니다. [Windows Forms HelloComposition 샘플](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WinForms/HelloComposition)입니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-호스팅 API는 UWP 이러한 필수 조건이 필요 합니다.
+UWP 호스팅 API에는 다음과 같은 필수 구성 요소가 있습니다.
 
-- Windows Forms 및 UWP를 사용 하 여 앱 개발 경험이 있다고 가정 합니다. 자세한 내용은 다음의 정보를 참조하세요.
+- Windows Forms 및 UWP를 사용 하 여 앱 개발에 대해 잘 알고 있다고 가정 합니다. 자세한 내용은 다음의 정보를 참조하세요.
   - [Windows Forms 시작](/dotnet/framework/winforms/getting-started-with-windows-forms)
   - [Windows 10 앱 시작](/windows/uwp/get-started/)
-  - [Windows 10 용 데스크톱 응용 프로그램을 향상합니다](/windows/uwp/porting/desktop-to-uwp-enhance)
-- .NET framework 4.7.2 이상
-- Windows 10 버전 1803 이상이
+  - [Windows 10 용 데스크톱 응용 프로그램 개선](/windows/uwp/porting/desktop-to-uwp-enhance)
+- .NET Framework 4.7.2 이상
+- Windows 10 버전 1803 이상
 - Windows 10 SDK 17134 이상
 
 ## <a name="how-to-use-composition-apis-in-windows-forms"></a>Windows Forms에서 컴퍼지션 Api를 사용 하는 방법
 
-이 자습서에서는 간단한 Windows Forms UI를 만들고 애니메이션된 컴퍼지션 요소를 추가 합니다. Windows Forms 및 컴퍼지션 구성 요소는 단순, 하지만 interop 코드 구성 요소의 복잡성에 관계 없이 동일 합니다. 완성된 된 앱을 다음과 같이 표시 됩니다.
+이 자습서에서는 간단한 Windows Forms UI를 만들고 애니메이션 효과를 주는 컴퍼지션 요소를 추가 합니다. Windows Forms 구성 요소와 구성 요소는 모두 간단 하 게 유지 되지만 표시 되는 interop 코드는 구성 요소의 복잡성에 관계 없이 동일 합니다. 완성 된 앱은 다음과 같습니다.
 
-![실행 중인 앱 UI](images/visual-layer-interop/wf-comp-interop-app-ui.png)
+![실행 중인 응용 프로그램 UI](images/visual-layer-interop/wf-comp-interop-app-ui.png)
 
 ## <a name="create-a-windows-forms-project"></a>Windows Forms 프로젝트 만들기
 
-첫 번째 단계는 UI에 대 한 응용 프로그램 정 및 기본 폼을 포함 하는 Windows Forms 앱 프로젝트를 만드는 것입니다.
+첫 번째 단계는 응용 프로그램 정의 및 UI에 대 한 기본 폼을 포함 하는 Windows Forms 앱 프로젝트를 만드는 것입니다.
 
-시각적 개체에 새 Windows Forms 응용 프로그램 프로젝트를 만들려면 C# 이라는 _HelloComposition_:
+C# _HelloComposition_라는 시각적 개체에서 새 Windows Forms 응용 프로그램 프로젝트를 만들려면 다음을 수행 합니다.
 
-1. Visual Studio를 열고 선택 **파일** > **새로 만들기** > **프로젝트**합니다.<br/>합니다 **새 프로젝트** 대화 상자가 열립니다.
-1. 아래는 **설치 됨** 범주를 확장 합니다 **Visual C#**  노드를 선택한 후 **Windows 데스크톱**.
-1. 선택 된 **Windows Forms 앱 (.NET Framework)** 템플릿.
-1. 이름을 입력 _HelloComposition 합니다_ 프레임 워크를 선택 **.NET Framework 4.7.2**, 클릭 **확인**합니다.
+1. Visual Studio를 열고 **파일** > **새로 만들기** > **프로젝트**를 선택 합니다.<br/>**새 프로젝트** 대화 상자가 열립니다.
+1. **설치 됨** 범주 아래에서  **C# 시각적** 노드를 확장 한 다음 **Windows 데스크톱**을 선택 합니다.
+1. **Windows Forms 앱 (.NET Framework)** 템플릿을 선택 합니다.
+1. 이름 _HelloComposition을 입력 하_ 고 프레임 워크 **.NET Framework 4.7.2**를 선택한 다음 **확인**을 클릭 합니다.
 
-Visual Studio 프로젝트를 만들고 Form1.cs 이라는 기본 응용 프로그램 창에 대 한 디자이너를 엽니다.
+Visual Studio에서 프로젝트를 만들고 Form1.cs 이라는 기본 응용 프로그램 창에 대 한 디자이너를 엽니다.
 
 ## <a name="configure-the-project-to-use-windows-runtime-apis"></a>Windows 런타임 Api를 사용 하도록 프로젝트 구성
 
-Windows Runtime (WinRT) Windows Forms 앱에서 Api 사용 하려면 Windows 런타임에서 액세스 하 여 Visual Studio 프로젝트를 구성 해야 합니다. 또한 벡터 널리 사용 됩니다 컴퍼지션 Api에서 벡터를 사용 하는 데 필요한 참조를 추가 해야 합니다.
+Windows Forms 앱에서 WinRT (Windows 런타임) Api를 사용 하려면 Windows 런타임에 액세스 하도록 Visual Studio 프로젝트를 구성 해야 합니다. 또한 벡터는 복합 Api에서 광범위 하 게 사용 되므로 벡터를 사용 하는 데 필요한 참조를 추가 해야 합니다.
 
-NuGet 패키지는 이러한 요구 사항을 해결 하기 위해 사용할 수 있습니다. 프로젝트에 필요한 참조를 추가 하려면 이러한 패키지의 최신 버전을 설치 합니다.  
+NuGet 패키지는 이러한 요구를 모두 해결 하는 데 사용할 수 있습니다. 이러한 패키지의 최신 버전을 설치 하 여 필요한 참조를 프로젝트에 추가 합니다.  
 
-- [Microsoft.Windows.SDK.Contracts](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts) (PackageReference로 기본 패키지 관리 형식 집합을 필요 합니다.)
+- PackageReference [(기본](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts) 패키지 관리 형식이로 설정 되어야 함)
 - [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors/)
 
 > [!NOTE]
-> NuGet 패키지를 사용 하 여 프로젝트를 구성 하는 것이 좋지만, 필수 참조를 수동으로 추가할 수 있습니다. 자세한 내용은 참조 하세요. [Windows 10 용 데스크톱 응용 프로그램을 향상](/windows/uwp/porting/desktop-to-uwp-enhance)합니다. 다음 테이블에 대 한 참조를 추가 해야 하는 파일을 보여 줍니다.
+> NuGet 패키지를 사용 하 여 프로젝트를 구성 하는 것이 좋지만 필요한 참조를 수동으로 추가할 수 있습니다. 자세한 내용은 [Windows 10 용 데스크톱 응용 프로그램 향상](/windows/uwp/porting/desktop-to-uwp-enhance)을 참조 하세요. 다음 표에서는 참조를 추가 하는 데 필요한 파일을 보여 줍니다.
 
 |파일|위치|
 |--|--|
 |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-|Windows.Foundation.UniversalApiContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\<*sdk version*>\Windows.Foundation.UniversalApiContract\<*version*>|
-|Windows.Foundation.FoundationContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\<*sdk version*>\Windows.Foundation.FoundationContract\<*version*>|
-|System.Numerics.Vectors.dll|C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Numerics.Vectors\v4.0_4.0.0.0__b03f5f7f11d50a3a|
-|System.Numerics.dll|C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2|
+|Windows.Foundation.UniversalApiContract.winmd|C:\Program files (x86) \windows Kits\10\References\<*sdk version*> \Windows.Foundation.UniversalApiContract\<*version*>|
+|Windows.Foundation.FoundationContract.winmd|C:\Program files (x86) \windows Kits\10\References\<*sdk version*> \Windows.Foundation.FoundationContract\<*version*>|
+|System.string.|C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Numerics.Vectors\v4.0_4.0.0.0__b03f5f7f11d50a3a|
+|System.object|C:\Program files (x86) \reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2|
 
-## <a name="create-a-custom-control-to-manage-interop"></a>Interop을 관리 하려면 사용자 지정 컨트롤 만들기
+## <a name="create-a-custom-control-to-manage-interop"></a>Interop를 관리 하는 사용자 지정 컨트롤 만들기
 
-파생 된 사용자 지정 컨트롤을 호스트 시각적 계층을 사용 하 여 만든 콘텐츠를 만든 [제어](/dotnet/api/system.windows.forms.control)입니다. 이 컨트롤을 창에 액세스를 제공 [처리](/dotnet/api/system.windows.forms.control.handle)를 시각적 계층 콘텐츠에 대 한 컨테이너를 만들기 위해 필요 합니다.
+시각적 계층으로 만든 콘텐츠를 호스팅하려면 [컨트롤](/dotnet/api/system.windows.forms.control)에서 파생 된 사용자 지정 컨트롤을 만듭니다. 이 컨트롤은 시각적 계층 콘텐츠에 대 한 컨테이너를 만들기 위해 필요한 창 [핸들](/dotnet/api/system.windows.forms.control.handle)에 대 한 액세스를 제공 합니다.
 
-대부분의 호스팅 컴퍼지션 Api에 대 한 구성 수행할 수입니다. 이 컨트롤을 사용 하 여 [플랫폼 호출 서비스인 PInvoke](/cpp/dotnet/calling-native-functions-from-managed-code) 하 고 [COM Interop](/dotnet/api/system.runtime.interopservices.comimportattribute) 컴퍼지션 Api Windows Forms 앱에 바인딩할 합니다. PInvoke 및 COM Interop에 대 한 자세한 내용은 참조 하세요. [비관리 코드 상호 운용](/dotnet/framework/interop/index)합니다.
+이를 통해 컴퍼지션 Api 호스팅을 위한 대부분의 구성을 수행 합니다. 이 컨트롤에서 [PInvoke (플랫폼 호출 서비스)](/cpp/dotnet/calling-native-functions-from-managed-code) 및 [COM Interop](/dotnet/api/system.runtime.interopservices.comimportattribute) 를 사용 하 여 Windows Forms 앱에 컴퍼지션 api를 가져옵니다. PInvoke 및 COM Interop에 대 한 자세한 내용은 [비관리 코드와의 상호 운용](/dotnet/framework/interop/index)을 참조 하세요.
 
 > [!TIP]
-> 해야 할 경우 자습서를 진행 하면서 모든 코드를 올바른 위치에 있는지 확인 하려면 자습서의 끝에서 전체 코드를 확인 합니다.
+> 필요한 경우 자습서의 끝 부분에 있는 전체 코드를 확인 하 여 자습서를 수행할 때 모든 코드가 올바른 위치에 있는지 확인 합니다.
 
-1. 파생 되는 프로젝트에 새 사용자 지정 컨트롤 파일을 추가할 [제어](/dotnet/api/system.windows.forms.control)입니다.
-    - **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 합니다 _HelloComposition_ 프로젝트입니다.
-    - 상황에 맞는 메뉴에서 선택 **추가** > **새 항목...** .
-    - 에 **새 항목 추가** 대화 상자에서 **사용자 지정 컨트롤**합니다.
-    - 컨트롤의 이름을 _CompositionHost.cs_, 클릭 **추가**합니다. CompositionHost.cs는 디자인 뷰에서 열립니다.
+1. [컨트롤](/dotnet/api/system.windows.forms.control)에서 파생 되는 프로젝트에 새 사용자 지정 컨트롤 파일을 추가 합니다.
+    - **솔루션 탐색기**에서 _HelloComposition_ 프로젝트를 마우스 오른쪽 단추로 클릭 합니다.
+    - 상황에 맞는 메뉴에서**새 항목** **추가** > ...를 선택 합니다.
+    - **새 항목 추가** 대화 상자에서 **사용자 지정 컨트롤**을 선택 합니다.
+    - 컨트롤 이름을 _CompositionHost.cs_로 지정한 다음 **추가**를 클릭 합니다. 디자인 뷰에서 CompositionHost.cs 열립니다.
 
-1. CompositionHost.cs에 대 한 코드 보기로 전환한 클래스에 다음 코드를 추가 합니다.
+1. CompositionHost.cs에 대 한 코드 뷰로 전환 하 고 클래스에 다음 코드를 추가 합니다.
 
     ```csharp
     // Add
@@ -114,7 +114,7 @@ NuGet 패키지는 이러한 요구 사항을 해결 하기 위해 사용할 수
 
 1. 생성자에 코드를 추가 합니다.
 
-    생성자에서 호출 된 _InitializeCoreDispatcher_ 하 고 _InitComposition_ 메서드. 다음 단계에서 이러한 메서드를 만듭니다.
+    생성자에서 _InitializeCoreDispatcher_ 및 _initcomposition_ 메서드를 호출 합니다. 다음 단계에서 이러한 메서드를 만듭니다.
 
     ```csharp
     public CompositionHost()
@@ -130,9 +130,10 @@ NuGet 패키지는 이러한 요구 사항을 해결 하기 위해 사용할 수
         // Build Composition tree of content.
         InitComposition(hwndHost);
     }
+    ```
 
-1. Initialize a thread with a [CoreDispatcher](/uwp/api/windows.ui.core.coredispatcher). The core dispatcher is responsible for processing window messages and dispatching events for WinRT APIs. New instances of **Compositor** must be created on a thread that has a CoreDispatcher.
-    - Create a method named _InitializeCoreDispatcher_ and add code to set up the dispatcher queue.
+1. [CoreDispatcher](/uwp/api/windows.ui.core.coredispatcher)를 사용 하 여 스레드를 초기화 합니다. 핵심 디스패처는 WinRT Api에 대 한 창 메시지 처리 및 이벤트 디스패치를 담당 합니다. CoreDispatcher이 있는 스레드에서 **Compositor** 의 새 인스턴스를 만들어야 합니다.
+    - _InitializeCoreDispatcher_ 라는 메서드를 만들고 디스패처 큐를 설정 하는 코드를 추가 합니다.
 
     ```csharp
     // Add
@@ -151,7 +152,7 @@ NuGet 패키지는 이러한 요구 사항을 해결 하기 위해 사용할 수
     }
     ```
 
-    - 디스패처 큐에는 PInvoke 선언이 필요합니다. 이 선언을 클래스에 대 한 코드의 끝에 배치 합니다. (클래스 코드를 깔끔하게 유지 하는 영역 내에서이 코드 배치할.)
+    - 디스패처 큐에는 PInvoke 선언이 필요 합니다. 클래스에 대 한 코드의 끝에이 선언을 삽입 합니다. (이 코드는 클래스 코드를 정리 하기 위해 지역 안에 놓습니다.)
 
     ```csharp
     #region PInvoke declarations
@@ -210,9 +211,9 @@ NuGet 패키지는 이러한 요구 사항을 해결 하기 위해 사용할 수
     #endregion PInvoke declarations
     ```
 
-    이제 디스패처 큐에서 준비 하 고 초기화 하 고 복합 콘텐츠 만들기를 시작할 수 있습니다.
+    이제 디스패처 큐가 준비 되었으며 컴퍼지션 콘텐츠 초기화 및 만들기를 시작할 수 있습니다.
 
-1. 초기화 된 [Compositor](/uwp/api/windows.ui.composition.compositor)합니다. 작성자는 다양 한 형식에서 만드는 팩터리를 [Windows.UI.Composition](/uwp/api/windows.ui.composition) 시각적 계층, 효과 시스템 및 애니메이션 시스템에 걸쳐 네임 스페이스입니다. Compositor 클래스에는 또한 팩터리에서 생성 하는 개체의 수명을 관리 합니다.
+1. [Compositor](/uwp/api/windows.ui.composition.compositor)를 초기화 합니다. Compositor는 시각적 계층, 효과 시스템 및 애니메이션 시스템을 확장 하는 다양 한 형식의 [Windows](/uwp/api/windows.ui.composition) to를 만드는 팩터리입니다. Compositor 클래스는 팩터리에서 만든 개체의 수명도 관리 합니다.
 
     ```csharp
     private void InitComposition(IntPtr hwndHost)
@@ -235,7 +236,7 @@ NuGet 패키지는 이러한 요구 사항을 해결 하기 위해 사용할 수
     }
     ```
 
-    - **ICompositorDesktopInterop** 하 고 **ICompositionTarget** COM 가져오기 필요 합니다. 뒤에 다음이 코드를 배치 합니다 _CompositionHost_ 하지만 내부 네임 스페이스 선언 합니다.
+    - **ICompositorDesktopInterop** 및 **ICOMPOSITIONTARGET** 에는 COM 가져오기가 필요 합니다. _CompositionHost_ 클래스 뒤에 네임 스페이스 선언 내에이 코드를 넣습니다.
 
     ```csharp
     #region COM Interop
@@ -284,29 +285,29 @@ NuGet 패키지는 이러한 요구 사항을 해결 하기 위해 사용할 수
     #endregion COM Interop
     ```
 
-## <a name="create-a-custom-control-to-host-composition-elements"></a>호스트 구성 요소에 사용자 지정 컨트롤 만들기
+## <a name="create-a-custom-control-to-host-composition-elements"></a>컴퍼지션 요소를 호스트 하는 사용자 지정 컨트롤 만들기
 
-생성 및 CompositionHost에서 파생 되는 별도 컨트롤에서 컴퍼지션 요소를 관리 하는 코드를 배치 하는 것이 좋습니다. 이 재사용 가능한 CompositionHost 클래스에서 만든 interop 코드를 유지 합니다.
+CompositionHost에서 파생 되는 별도의 컨트롤에서 컴퍼지션 요소를 생성 하 고 관리 하는 코드를 배치 하는 것이 좋습니다. 이렇게 하면 CompositionHost 클래스에서 만든 interop 코드를 다시 사용할 수 있습니다.
 
-여기에서 만든 CompositionHost에서 파생 된 사용자 지정 컨트롤입니다. 이 컨트롤을 양식에 추가할 수 있도록 Visual Studio 도구 상자에 추가 됩니다.
+여기에서는 CompositionHost에서 파생 된 사용자 지정 컨트롤을 만듭니다. 이 컨트롤은 Visual Studio 도구 상자에 추가 되므로 폼에 추가할 수 있습니다.
 
 1. CompositionHost에서 파생 되는 프로젝트에 새 사용자 지정 컨트롤 파일을 추가 합니다.
-    - **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 합니다 _HelloComposition_ 프로젝트입니다.
-    - 상황에 맞는 메뉴에서 선택 **추가** > **새 항목...** .
-    - 에 **새 항목 추가** 대화 상자에서 **사용자 지정 컨트롤**합니다.
-    - 컨트롤의 이름을 _CompositionHostControl.cs_, 클릭 **추가**합니다. CompositionHostControl.cs는 디자인 뷰에서 열립니다.
+    - **솔루션 탐색기**에서 _HelloComposition_ 프로젝트를 마우스 오른쪽 단추로 클릭 합니다.
+    - 상황에 맞는 메뉴에서**새 항목** **추가** > ...를 선택 합니다.
+    - **새 항목 추가** 대화 상자에서 **사용자 지정 컨트롤**을 선택 합니다.
+    - 컨트롤 이름을 _CompositionHostControl.cs_로 지정한 다음 **추가**를 클릭 합니다. 디자인 뷰에서 CompositionHostControl.cs 열립니다.
 
-1. CompositionHostControl.cs 디자인 뷰에 대 한 속성 창에서 설정 된 **BackColor** 속성을 **ControlLight**합니다.
+1. CompositionHostControl.cs 디자인 뷰의 속성 창에서 **BackColor** 속성을 **controllight**로 설정 합니다.
 
-    배경색을 설정 하는 것은 선택 사항입니다. 에서는 그렇게 폼 배경에 대 한 사용자 지정 컨트롤을 볼 수 있습니다.
+    배경색 설정은 선택 사항입니다. 이 작업을 수행 하 여 양식 배경에 대해 사용자 지정 컨트롤을 볼 수 있습니다.
 
-1. CompositionHostControl.cs에 대 한 코드 보기로 전환한 CompositionHost에서 파생 클래스 선언을 업데이트 합니다.
+1. CompositionHostControl.cs에 대 한 코드 뷰로 전환 하 고 CompositionHost에서 파생 되도록 클래스 선언을 업데이트 합니다.
 
     ```csharp
     class CompositionHostControl : CompositionHost
     ```
 
-1. 기본 생성자를 호출 하는 생성자를 업데이트 합니다.
+1. 기본 생성자를 호출 하도록 생성자를 업데이트 합니다.
 
     ```csharp
     public CompositionHostControl() : base()
@@ -315,15 +316,15 @@ NuGet 패키지는 이러한 요구 사항을 해결 하기 위해 사용할 수
     }
     ```
 
-### <a name="add-composition-elements"></a>컴퍼지션 요소를 추가 합니다.
+### <a name="add-composition-elements"></a>컴퍼지션 요소 추가
 
-준비에서 인프라와 앱 UI에 이제 컴퍼지션 콘텐츠를 추가할 수 있습니다.
+인프라가 마련 되 면 이제 앱 UI에 컴퍼지션 콘텐츠를 추가할 수 있습니다.
 
-예를 들어 코드 클래스를 추가 하 여 CompositionHostControl 만들고 간단한 애니메이션을 적용 하는 [SpriteVisual](/uwp/api/windows.ui.composition.spritevisual)합니다.
+이 예제에서는 간단한 [SpriteVisual](/uwp/api/windows.ui.composition.spritevisual)를 만들고 애니메이션 효과를 주는 코드를 CompositionHostControl 클래스에 추가 합니다.
 
 1. 컴퍼지션 요소를 추가 합니다.
 
-    CompositionHostControl.cs, CompositionHostControl 클래스에 이러한 메서드를 추가 합니다.
+    CompositionHostControl.cs에서 CompositionHostControl 클래스에 다음 메서드를 추가 합니다.
 
     ```csharp
     // Add
@@ -363,25 +364,25 @@ NuGet 패키지는 이러한 요구 사항을 해결 하기 위해 사용할 수
 
 ## <a name="add-the-control-to-your-form"></a>폼에 컨트롤 추가
 
-컴퍼지션 콘텐츠를 호스트에 사용자 지정 컨트롤을 설정 했으므로 앱 UI 추가할 수 있습니다. 여기에서 이전 단계에서 만든 CompositionHostControl 인스턴스를 추가 합니다. CompositionHostControl에서 Visual Studio 도구 상자에 자동으로 추가 됩니다  **_프로젝트 이름_ 구성 요소**합니다.
+이제 컴퍼지션 콘텐츠를 호스트 하는 사용자 지정 컨트롤이 있으므로 앱 UI에 추가할 수 있습니다. 여기서는 이전 단계에서 만든 CompositionHostControl의 인스턴스를 추가 합니다. CompositionHostControl는  **_프로젝트 이름_ 구성 요소**아래에 있는 Visual Studio 도구 상자에 자동으로 추가 됩니다.
 
-1. Form1.CS 디자인 뷰에서 ui 단추를 추가 합니다.
+1. Form1.CS 디자인 뷰에서 UI에 단추를 추가 합니다.
 
-    - Form1 도구 상자에서 단추를 끌어 옵니다. 폼의 왼쪽된 위 모퉁이에 배치 합니다. (컨트롤의 배치를 확인 하려면 자습서의 시작 부분에 이미지 참조).
-    - 속성 창에서 변경 합니다 **텍스트** 속성을 _button1_ 에 _추가 컴퍼지션 요소_합니다.
-    - 모든 텍스트가 표시 되도록 단추 크기를 조정 합니다.
+    - 도구 상자에서 단추를 Form1로 끌어 옵니다. 폼의 왼쪽 위 모퉁이에 놓습니다. 컨트롤의 배치를 확인 하려면 자습서의 시작 부분에 있는 이미지를 참조 하세요.
+    - 속성 창에서 **Text** 속성을 _button1_ 에서 _Add 컴퍼지션 요소_로 변경 합니다.
+    - 모든 텍스트가 표시 되도록 단추의 크기를 조정 합니다.
 
-    (자세한 내용은 참조 하세요. [방법: Windows Forms에 컨트롤 추가](/dotnet/framework/winforms/controls/how-to-add-controls-to-windows-forms).)
+    자세한 내용은 [방법: Windows Forms](/dotnet/framework/winforms/controls/how-to-add-controls-to-windows-forms)에 컨트롤을 추가 합니다.
 
-1. Ui는 CompositionHostControl를 추가 합니다.
+1. UI에 CompositionHostControl를 추가 합니다.
 
-    - Form1 도구 상자에서을 CompositionHostControl를 끕니다. 단추 오른쪽에 놓습니다.
-    - 크기를 조정 합니다 CompositionHost 폼의 나머지 부분을 채웁니다.
+    - CompositionHostControl를 도구 상자에서 Form1로 끌어 옵니다. 단추 오른쪽에 놓습니다.
+    - 폼의 나머지 부분을 채우도록 CompositionHost의 크기를 조정 합니다.
 
-1. 단추 핸들 이벤트를 클릭 합니다.
+1. 단추 클릭 이벤트를 처리 합니다.
 
-   - 속성 창에서 이벤트 보기로 전환 하려면 번개를 클릭 합니다.
-   - 이벤트 목록에서 선택 합니다 **클릭** 이벤트를 입력 *Button_Click*, Enter 키를 누릅니다.
+   - 속성 창에서 번개 볼트를 클릭 하 여 이벤트 보기로 전환 합니다.
+   - 이벤트 목록에서 **클릭** 이벤트를 선택 하 고 *Button_Click*를 입력 한 다음 enter 키를 누릅니다.
    - 이 코드는 Form1.cs에 추가 됩니다.
 
     ```csharp
@@ -391,9 +392,9 @@ NuGet 패키지는 이러한 요구 사항을 해결 하기 위해 사용할 수
     }
     ```
 
-1. 단추에 코드 추가 처리기 새 요소를 만들려면 클릭 합니다.
+1. 단추 클릭 처리기에 코드를 추가 하 여 새 요소를 만듭니다.
 
-    - Form1.cs의 코드를 추가 합니다 *Button_Click* 이전에 만든 이벤트 처리기입니다. 이 코드는 호출 _CompositionHostControl1.AddElement_ 임의로 생성 된 크기와 오프셋을 사용 하 여 새 요소를 만들려고 합니다. (CompositionHostControl 인스턴스의 이름이 자동으로 _compositionHostControl1_ 형식 요구 사항에 끌어 사용자 지정 하는 것입니다.)
+    - Form1.cs에서 이전에 만든 *Button_Click* 이벤트 처리기에 코드를 추가 합니다. 이 코드는 _CompositionHostControl1_ 를 호출 하 여 임의로 생성 된 크기와 오프셋을 사용 하 여 새 요소를 만듭니다. CompositionHostControl의 인스턴스는 폼으로 끌어올 때 _compositionHostControl1_ 로 자동으로 이름이 지정 되었습니다.
 
     ```csharp
     // Add
@@ -409,19 +410,19 @@ NuGet 패키지는 이러한 요구 사항을 해결 하기 위해 사용할 수
     }
     ```
 
-이제 작성 하 고 Windows Forms 앱을 실행할 수 있습니다. 단추를 클릭 하면 UI에 추가 하는 애니메이션된 사각형이 표시 됩니다.
+이제 Windows Forms 앱을 빌드하고 실행할 수 있습니다. 단추를 클릭 하면 UI에 애니메이션 효과가 추가 된 것을 볼 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-동일한 인프라에서 작성 하는 보다 완전 한 예제를 참조 하세요. 합니다 [Windows Forms 시각적 계층 통합 예제](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WinForms/VisualLayerIntegration) github입니다.
+동일한 인프라를 기반으로 하는 전체 예제는 GitHub의 [Windows Forms 비주얼 계층 통합 샘플](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WinForms/VisualLayerIntegration) 을 참조 하세요.
 
 ## <a name="additional-resources"></a>추가 자료
 
-- [Windows Forms 시작](/dotnet/framework/winforms/getting-started-with-windows-forms) (.NET)
-- [비관리 코드와의 상호 운용](/dotnet/framework/interop/) (.NET)
-- [Windows 10 앱 시작](/windows/uwp/get-started/) (UWP)
-- [Windows 10 용 데스크톱 응용 프로그램을 향상](/windows/uwp/porting/desktop-to-uwp-enhance) (UWP)
-- [Windows.UI.Composition 네임 스페이스](/uwp/api/windows.ui.composition) (UWP)
+- [Windows Forms 시작](/dotnet/framework/winforms/getting-started-with-windows-forms) .NET
+- [비관리 코드와의 상호 운용](/dotnet/framework/interop/) .NET
+- [Windows 10 앱 시작](/windows/uwp/get-started/) UWP
+- [Windows 10 용 데스크톱 응용 프로그램 개선](/windows/uwp/porting/desktop-to-uwp-enhance) UWP
+- [Windows.](/uwp/api/windows.ui.composition) ui&gt 네임 스페이스 UWP
 
 ## <a name="complete-code"></a>전체 코드
 
