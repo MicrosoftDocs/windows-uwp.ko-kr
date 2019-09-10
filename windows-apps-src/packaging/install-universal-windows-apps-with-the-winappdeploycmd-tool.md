@@ -6,15 +6,14 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 79e92cd781a83295a8cbbee4fe4b25022295568a
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: d6c8383a5b0041d5edf6e0c2c8d94acf82572d13
+ms.sourcegitcommit: afc25d41229d4e340c9557651b35e016d7595c3a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682651"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808444"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>WinAppDeployCmd.exe 도구를 사용하여 앱 설치
-
 
 Windows 응용 프로그램 배포 (WinAppDeployCmd)는 Windows 10 PC에서 Windows 10 장치에 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다. 이 도구를 사용 하 여 Windows 10 장치를 USB로 연결 하거나 해당 앱에 대 한 Microsoft Visual Studio 나 솔루션이 없어도 동일한 서브넷에서 사용할 수 있는 경우 앱 패키지를 배포할 수 있습니다. 또한 원격 PC 또는 Xbox One에 먼저 패키징하지 않고 앱을 배포할 수도 있습니다. 이 문서는 이 도구를 사용하여 UWP 앱을 설치하는 방법을 설명합니다.
 
@@ -22,21 +21,24 @@ Windows 응용 프로그램 배포 (WinAppDeployCmd)는 Windows 10 PC에서 Wind
 
 모바일 디바이스에 배포하려면 먼저 패키지를 만들어야 합니다. 자세한 내용은 [여기](/windows/msix/package/packaging-uwp-apps)를 참조하세요.
 
-**Winappdeploycmd** 도구는 WINDOWS 10 PC에 있습니다. **C:\\Program Files (x86)\\Windows 키트\\10\\bin\\SDK버전&gt;x86\\winappdeploycmd(기반:\\&lt;** SDK의 설치 경로). 
+**Winappdeploycmd** 도구는 WINDOWS 10 PC에 있습니다. **C:\\Program Files (x86)\\Windows 키트\\10\\bin\\SDK버전&gt;x86\\winappdeploycmd(기반:\\&lt;** SDK의 설치 경로).
+
 > [!NOTE]
-> 버전 15063 이상의 SDK에서 SDK는 특정 버전의 폴더에 나란히 설치되어 있습니다.  14393 및 이하를 포함한 SDK는 부모 폴더에 직접 기록됩니다.
+> 버전 15063 이상의 SDK에서 SDK는 특정 버전의 폴더에 나란히 설치되어 있습니다. 14393 및 이하를 포함한 SDK는 부모 폴더에 직접 기록됩니다.
 
 먼저 Windows 10 장치를 동일한 서브넷에 연결 하거나 USB 연결을 사용 하 여 Windows 10 컴퓨터에 직접 연결 합니다. 그런 후 다음 구문이나 이 문서의 뒷부분에 있는 이 명령의 예를 사용하여 UWP 앱을 배포합니다.
 
 ## <a name="winappdeploycmd-syntax-and-options"></a>WinAppDeployCmd 구문 및 옵션
 
 이는 **WinAppDeployCmd.exe**에 사용되는 일반 구문입니다.
-```syntax
+
+```CMD
 WinAppDeployCmd command -option <argument>
 ```
 
 다양한 명령을 사용하는 몇 가지 추가 구문의 예를 소개합니다.
-```syntax
+
+```CMD
 WinAppDeployCmd devices
 WinAppDeployCmd devices <x>
 WinAppDeployCmd install -file <path> -ip <address>
@@ -59,7 +61,6 @@ WinAppDeployCmd deletecreds -credserver <server> -ip <address>
 
 다음 표에서는 **WinAppDeployCmd.exe**에 대한 명령에 대해 설명합니다.
 
-
 | **Command**  | **설명**                                                     |
 |--------------|---------------------------------------------------------------------|
 | 디바이스      | 사용 가능한 네트워크 장치 목록을 표시합니다.                         |
@@ -73,9 +74,7 @@ WinAppDeployCmd deletecreds -credserver <server> -ip <address>
 | getcreds     | 네트워크 공유에서 응용 프로그램을 실행할 때 대상 용도로 네트워크 자격 증명을 가져옵니다.|
 | deletecreds  | 네트워크 공유에서 응용 프로그램을 실행할 때 대상이 사용하는 네트워크 자격 증명을 삭제합니다.|
 
-
 다음 표에서는 **WinAppDeployCmd.exe**에 대한 옵션에 대해 설명합니다.
-
 
 | **Command**  | **설명**  |
 |--------------|------------------|
@@ -93,7 +92,6 @@ WinAppDeployCmd deletecreds -credserver <server> -ip <address>
 | -remotedeploydir | 원격 디바이스에서 파일을 복사할 상대 디렉터리 경로/이름. 잘 알려진, 자동으로 결정된 원격 배포 폴더입니다. |
 | -deleteextrafile | 원본 디렉터리에 맞게 원격 디렉터리의 기존 파일을 제거해야 하는지 여부를 나타내는 스위치입니다. |
 
-
 다음 표에서는 **WinAppDeployCmd.exe**에 대한 옵션에 대해 설명합니다.
 
 | **인수**           | **설명**                                                              |
@@ -109,44 +107,43 @@ WinAppDeployCmd deletecreds -credserver <server> -ip <address>
 | &lt;password&gt;       | 파일 네트워크의 서버에 액세스할 수 있는 자격 증명의 암호입니다. |
 | &lt;remotedeploydir&gt;| 배포 위치에 상대적인 디바이스의 디렉터리                      |
 
- 
 ## <a name="winappdeploycmdexe-examples"></a>WinAppDeployCmd.exe 예제
 
-다음은 **WinAppDeployCmd.exe**에 대한 구문을 사용하여 명령줄에서 배포하는 방법에 대한 몇 가지 예입니다.
+다음은 **Winappdeploycmd**의 구문을 사용 하 여 명령줄에서 배포 하는 방법에 대 한 몇 가지 예입니다.
 
 배포에 사용할 수 있는 디바이스를 표시합니다. 명령 시간 제한은 3초입니다.
 
-``` syntax
+``` CMD
 WinAppDeployCmd devices 3
 ```
 
 장치와의 연결을 설정 하기 위해 A1B2C3 PIN을 사용 하 여 IP 주소가 192.168.0.1 인 Windows 10 장치에 PC의 다운로드 디렉터리에 있는 응용 프로그램을 설치 합니다.
 
-``` syntax
+``` CMD
 WinAppDeployCmd install -file "Downloads\MyApp.appx" -ip 192.168.0.1 -pin A1B2C3
 ```
 
 192.168.0.1 IP 주소를 사용하는 Windows 10 디바이스에서 지정된 패키지(전체 이름 기반)를 제거합니다. list 명령을 사용하여 디바이스에 설치된 모든 패키지의 전체 이름을 볼 수 있습니다.
 
-``` syntax
+``` CMD
 WinAppDeployCmd uninstall -package Company.MyApp_1.0.0.1_x64__qwertyuiop -ip 192.168.0.1
 ```
 
 지정 된 앱 패키지를 사용 하 여 IP 주소가 192.168.0.1 인 Windows 10 장치에 이미 설치 된 앱을 업데이트 합니다.
 
-``` syntax
+``` CMD
 WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1
 ```
 
 192.168.0.1 IP 주소를 사용하는 PC 또는 Xbox에서 AppxManifest와 동일한 폴더의 앱 파일을 디바이스 배포 경로 아래의 app1_F5 디렉터리로 배포합니다.
 
-``` syntax
+``` CMD
 WinAppDeployCmd deployfiles -file "C:\apps\App1\AppxManifest.xml" -remotedeploydir app1_F5 -ip 192.168.0.1
 ```
 
 192.168.0.1을 사용하는 PC 또는 Xbox 배포 경로 아래의 app1_F5 디렉터리에서 앱을 등록합니다.
 
-``` syntax
+``` CMD
 WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 ```
 
@@ -155,7 +152,8 @@ WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 PC에서 실행을 통해 이진 파일을 복사하지 않고 Xbox One에 UWP 응용 프로그램을 배포할 수 있습니다. 대신 이진 파일은 Xbox와 동일한 네트워크의 네트워크 공유에 호스트됩니다.  이렇게 하려면 개발자가 Xbox One을 잠금 해제해야 하고 Xbox가 액세스할 수 있는 네트워크 드라이브의 느슨한 파일 UWP 응용 프로그램이 필요합니다.
 
 앱을 등록하려면 다음을 실행합니다.
-``` syntax
+
+``` CMD
 WinAppDeployCmd registerfiles -ip <Xbox One IP> -remotedeploydir <location of app> -username <user for network> -password <password for user>
 
 ex. WinAppDeployCmd register files -ip 192.168.0.1 -remotedeploydir \\driveA\myAppLocation -username admin -password A1B2C3
