@@ -5,19 +5,19 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: 18dc65198d476204cfd54bd241fbd3c9ac401155
-ms.sourcegitcommit: 7ece8a9a9fa75e2e92aac4ac31602237e8b7fde5
+ms.openlocfilehash: ae8aca92d7eb7bc93ba4be99449d5e813238d744
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485171"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393493"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 사용하여 API 작성
 
 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체를 직접 또는 간접적으로 사용하여 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) API를 작성하는 방법을 보여줍니다. 이 맥락에서 사용되는 *작성*이라는 표현은 *생성* 또는 *구현*과 동의어입니다. 이 토픽에서는 다음 시나리오의 순서대로 C++/WinRT 형식으로 API를 구현하는 방법을 설명합니다.
 
 > [!NOTE]
-> 이 토픽에서는 Windows 런타임 구성 요소에 대해 다루지만 C++/WinRT 컨텍스트 내에서만 설명합니다. 모든 Windows 런타임 언어를 포함하는 Windows 런타임 구성 요소에 대한 콘텐츠를 원하는 경우 [Windows 런타임 구성 요소](/windows/uwp/winrt-components/)를 참조하세요.
+> 이 항목에서는 Windows 런타임 구성 요소에 대해 다루지만 C++/WinRT 컨텍스트 내에서만 설명합니다. 모든 Windows 런타임 언어를 포함하는 Windows 런타임 구성 요소에 대한 콘텐츠를 원하는 경우 [Windows 런타임 구성 요소](/windows/uwp/winrt-components/)를 참조하세요.
 
 - Windows 런타임 클래스(이하 런타임 클래스)를 작성하지 *않습니다*. 단지 앱 내에서 로컬로 사용할 수 있도록 Windows 런타임 인터페이스를 하나 이상 구현할 것입니다. 이 예제의 **winrt::implements**에서 직접 파생시켜 함수를 구현합니다.
 - 런타임 클래스를 *작성*할 것입니다. 앱에서 사용할 구성 요소를 작성할 수도 있습니다. 혹은 XAML UI(사용자 인터페이스)에서 사용할 형식을 작성할 수도 있습니다. 이 경우에는 동일한 컴파일 단위 내에서 런타임 클래스를 구현하고 사용하게 됩니다. 어쨌든 두 경우 모두 도구를 사용해 **winrt::implements**에서 파생되는 클래스를 생성할 수 있습니다.

@@ -5,12 +5,12 @@ ms.date: 05/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 포팅, 마이그레이션, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: 9695548c7e12cf5fad905a171f22e6fa1f9c1af7
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 7b313e80b744279f8dc955e8c07d31aba2860c3f
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270045"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393424"
 ---
 # <a name="move-to-cwinrt-from-wrl"></a>WRL에서 C++/WinRT로 이동
 [Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 상응하는 코드로 포팅하는 방법을 보여줍니다.

@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 404a6985c95718363f3dbbc3b8f27a7793b28e86
-ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
+ms.openlocfilehash: 92088906078a3a705e5fae052a50fc914561c77c
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68328846"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393455"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 
@@ -471,11 +471,11 @@ C++/CX는 Windows 런타임 문자열을 참조 형식으로 나타내는 반면
 | 작업 | C++/CX | C++/WinRT|
 |-|-|-|
 | 문자열 형식 범주 | 참조 형식 | 값 유형 |
-| null **HSTRING**에서 프로젝션하는 형식 | `(String^)nullptr` | `hstring{ nullptr }` |
+| null **HSTRING**에서 프로젝션하는 형식 | `(String^)nullptr` | `hstring{}` |
 | null 및 `""`가 동일한가요? | 예 | 예 |
 | null의 유효성 | `s = nullptr;`<br>`s->Length == 0`(유효) | `s = nullptr;`<br>`s.size() == 0`(유효) |
 | 문자열 boxing | `o = s;` | `o = box_value(s);` |
-| `s`가 `null`인 경우 | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{nullptr});`<br>`o != nullptr` |
+| `s`가 `null`인 경우 | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{});`<br>`o != nullptr` |
 | `s`가 `""`인 경우 | `o = "";`<br>`o == nullptr` | `o = box_value(hstring{L""});`<br>`o != nullptr;` |
 | null을 유지하는 문자열 boxing | `o = s;` | `o = s.empty() ? nullptr : box_value(s);` |
 | 문자열 강제 boxing | `o = PropertyValue::CreateString(s);` | `o = box_value(s);` |
@@ -514,7 +514,7 @@ C++/CX는 **Platform** 네임스페이스에서 몇 가지 데이터 형식을 �
 | **Platform::Object\^** | **winrt::Windows::Foundation::IInspectable** |
 | **Platform::String\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
 
-### <a name="port-platformagile-to-winrtagileref"></a>**Platform::Agile\^** 을 **winrt::agile_ref**로 이식
+### <a name="port-platformagile-to-winrtagile_ref"></a>**Platform::Agile\^** 을 **winrt::agile_ref**로 이식
 
 C++/CX의 **Platform::Agile\^** 형식은 스레드에서 액세스할 수 있는 Windows 런타임 클래스를 나타냅니다. C++/WinRT의 해당 항목은 [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref)입니다.
 
@@ -534,7 +534,7 @@ winrt::agile_ref<Windows::UI::Core::CoreWindow> m_window;
 
 옵션에는 이니셜라이저 목록, **std::array** 또는 **std::vector** 사용이 포함됩니다. 자세한 내용과 코드 예제는 [표준 이니셜라이저 목록](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-initializer-lists) 및 [표준 배열 및 벡터](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-arrays-and-vectors)를 참조하세요.
 
-### <a name="port-platformexception-to-winrthresulterror"></a>**Platform::Exception\^** 을 **winrt::hresult_error**로 이식
+### <a name="port-platformexception-to-winrthresult_error"></a>**Platform::Exception\^** 을 **winrt::hresult_error**로 이식
 
 Windows 런타임 API가 S\_OK HRESULT가 아닌 값을 반환하면 **Platform::Exception\^** 형식이 C++/CX에서 생성됩니다. C++/WinRT의 해당 항목은 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)입니다.
 

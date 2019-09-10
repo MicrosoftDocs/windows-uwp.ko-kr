@@ -5,16 +5,16 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: 258ec5e0690753c8ad9c3b0648867666397039a5
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: a98056190d035910a8ed83d2f37799a98b685ce6
+ms.sourcegitcommit: eb683734801c1de5977db70e626609cf7e5b7654
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270169"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304527"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>XAML 항목 컨트롤, C++/WinRT 컬렉션에 바인딩
 
-XAML 항목에 효과적으로 바인딩할 수 있는 컬렉션은 *식별할 수 있는*(observable) 컬렉션이라고 합니다. 이 아이디어는 ‘관찰자 패턴’이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다.  이번 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서 관찰 가능한 컬렉션을 구현하는 방법과 XAML 항목을 이 속성에 바인딩하는 방법에 대해서 설명합니다.
+XAML 항목에 효과적으로 바인딩할 수 있는 컬렉션은 *식별할 수 있는*(observable) 컬렉션이라고 합니다. 이 아이디어는 ‘관찰자 패턴’이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다.  이 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서 관찰 가능한 컬렉션을 구현하는 방법과 XAML 항목 컨트롤을 이 속성에 바인딩하는 방법을 보여줍니다(배경 정보는 [데이터 바인딩](/windows/uwp/data-binding) 참조).
 
 이 항목의 과정을 따르려면 먼저 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md)에 설명된 프로젝트를 만드는 것이 좋습니다. 이 항목에서는 해당 프로젝트에 더 많은 코드를 추가하며 이 코드는 이 항목에서 설명하는 개념에 추가됩니다.
 

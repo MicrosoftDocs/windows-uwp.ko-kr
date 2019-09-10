@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 760beb6b9baf63b23efb531567f4b5319f95845c
-ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
+ms.openlocfilehash: 0801ba9036f69aef340881b9c92807e80af6b09f
+ms.sourcegitcommit: e43bc20c2f6e9375f61931c2fce95f06fd1f31df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979358"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212065"
 ---
 # <a name="app-icons-and-logos"></a>앱 아이콘 및 로고 
 
@@ -59,14 +59,13 @@ ms.locfileid: "69979358"
 배율에 따라 텍스트 같은 UI 요소의 크기가 결정됩니다. 배율 범위는 100%~400%입니다. 값이 클수록 더 큰 UI 요소가 생성되므로 DPI가 높은 디스플레이에서 잘 보입니다. 
 
 :::row:::
-    :::column:::
-        Windows automatically sets the scale factor for each display based on its DPI (dots-per-inch) and the viewing distance of the device. 
-
-        (Users can override the default value by going to the **Settings &gt; Display &gt; Scale and layout** page.)
-    :::column-end:::
-    :::column:::
-        ![](images/icons/display-settings-screen.png)
-    :::column-end:::
+   :::column:::
+      Windows는 DPI(인치당 도트 수)와 디바이스의 가시거리를 기준으로 각 디스플레이의 배율을 자동으로 설정합니다. 
+      (사용자는 **설정 &gt; 표시 &gt; 배율 및 레이아웃** 페이지로 이동하여 기본값을 재정의할 수 있습니다.)
+   :::column-end:::
+   :::column:::
+      ![](images/icons/display-settings-screen.png)
+   :::column-end:::
 :::row-end:::  
 
 

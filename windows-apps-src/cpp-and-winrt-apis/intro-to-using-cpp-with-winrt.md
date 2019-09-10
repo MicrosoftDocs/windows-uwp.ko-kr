@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: 197f53df200026541a15120dfc97c187e5aa2e5b
-ms.sourcegitcommit: b186f70f0b1601b6b6a5db91d87d034f6b155e3b
+ms.openlocfilehash: 4b6fd3f3085449c57dafdcedc60f63997e3ec807
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063794"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393427"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -93,7 +93,7 @@ Windows 데스크톱의 C++/WinRT 클라이언트 애플리케이션용 프로�
 
 IDL 파일에서 구성 요소의 런타임 클래스와 기본 인터페이스, 그리고 그 밖에 구현되는 인터페이스를 정의합니다. 프로젝트를 1회 빌드하여 `module.g.cpp`, `module.h.cpp`, `Generated Files`의 구현 템플릿 및 `Generated Files\sources`의 스텁 형식 정의를 생성합니다. 그런 다음, 생성된 스텁 형식 정의를 참조에 사용하여 구성 요소의 런타임 클래스를 구현합니다. [런타임 클래스를 Midl 파일(.idl)로 팩터링](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)을 참조하세요.
 
-빌드된 Windows 런타임 구성 요소 이진 파일 및 이진 파일의 `.winmd`과 함께 이 두 항목을 사용하는 UWP 앱을 번들로 제공합니다.
+빌드된 Windows 런타임 구성 요소 이진 파일 및 이진 파일의 `.winmd`와 함께 이 두 항목을 사용하는 UWP 앱을 번들로 제공합니다.
 
 ## <a name="earlier-versions-of-the-vsix-extension"></a>이전 버전의 VSIX 확장
 [VSIX 확장](https://aka.ms/cppwinrt/vsix)의 최신 버전을 설치하거나 이 버전으로 업데이트하는 것이 좋습니다. 기본적으로 이 확장은 자동으로 업데이트되도록 구성됩니다. 1\.0.190128.4보다 이전 버전의 VSIX 확장을 사용하여 만든 프로젝트가 있을 때 이 작업을 수행하는 경우, 이 섹션에서는 해당 프로젝트가 새 버전에서 작동하도록 업그레이드하는 방법에 대한 중요한 정보를 제공합니다. 업데이트하지 않는 경우에도 이 섹션의 정보가 유용하다는 것을 알게 됩니다.

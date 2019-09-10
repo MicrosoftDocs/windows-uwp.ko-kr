@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: 4499b2191734c6ae66131ce92aa2654188313d5e
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: e8bb86bd8d52ff96f010bf41758f1e4602330d52
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270183"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393476"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
@@ -24,7 +24,7 @@ ms.locfileid: "68270183"
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Windows 런타임 구성 요소(BankAccountWRC) 만들기
 
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Windows 런타임 구성 요소(C++/WinRT)** 프로젝트를 만든 다음, 이름을 *BankAccountWRC*(“은행 계좌 Windows 런타임 구성 요소”인 경우)로 지정합니다. 아직 프로젝트를 빌드하지 마세요.
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Windows 런타임 구성 요소(C++/WinRT)** 프로젝트를 만든 다음, 이름을 *BankAccountWRC*("은행 계좌 Windows 런타임 구성 요소"인 경우)로 지정합니다. 아직 프로젝트를 빌드하지 마세요.
 
 새로 만든 프로젝트에는 `Class.idl`이라는 이름의 파일이 포함되어 있습니다. 해당 파일의 이름을 바꿉니다`BankAccount.idl`(`.idl` 파일의 이름을 바꾸면 자동으로 종속 `.h` 및 `.cpp` 파일의 이름도 바뀜). `BankAccount.idl`의 콘텐츠를 아래 목록으로 바꿉니다.
 
@@ -104,7 +104,7 @@ namespace winrt::BankAccountWRC::implementation
 
 이제 새 프로젝트를 만듭니다(`BankAccountWRC` 솔루션에서, 혹은 새로운 솔루션에서). **주요 앱(C++/WinRT)** 프로젝트를 만들어서 이름을 *BankAccountCoreApp*이라고 지정합니다.
 
-참조를 추가하고 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`로 이동하거나, 두 프로젝트가 동일한 솔루션에 있는 경우 프로젝트 간 참조를 추가합니다. **추가**, **확인**을 차례로 클릭합니다. 이제 BankAccountCoreApp을 빌드합니다. 드물지만 페이로드 파일인 `readme.txt`가 존재하지 않는다는 오류가 표시되는 경우에는 해당 파일을 Windows 런타임 구성 요소 프로젝트에서 제외하여 다시 빌드한 후 BankAccountCoreApp을 다시 빌드합니다.
+참조를 추가하고 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`로 이동하거나, 두 프로젝트가 동일한 솔루션에 있는 경우 프로젝트 간 참조를 추가합니다. **추가**, **확인**을 차례로 클릭합니다. 이제 BankAccountCoreApp을 빌드합니다. 드물지만 페이로드 파일인 `readme.txt`가 존재하지 않는다는 오류가 표시되는 경우에는 해당 파일을 Windows 런타임 구성 요소 프로젝트에서 제외하여 다시 빌드한 다음, BankAccountCoreApp을 다시 빌드합니다.
 
 빌드 프로세스에서 `cppwinrt.exe` 도구가 실행되면서 참조된 `.winmd` 파일을 원본 코드 파일로 처리합니다. 이 원본 코드 파일에는 구성 요소를 사용할 때 지원할 목적으로 프로젝션된 형식이 포함되어 있습니다. 구성 요소의 런타임 클래스에 맞게 프로젝션된 형식의 헤더(`BankAccountWRC.h`)가 `\BankAccountCoreApp\BankAccountCoreApp\Generated Files\winrt\` 폴더로 생성됩니다.
 
