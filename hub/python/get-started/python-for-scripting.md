@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python 시스템 관리, python 파일 자동화, windows에서 python 스크립트, windows에서 python 개발자 환경, windows의 python 개발자 환경, windows의 python 개발 환경, powershell을 사용한 python, python 스크립트 파일 시스템 작업
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: dbb7a60103c27f648ca8bf23f87dee06923f0cd9
-ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
+ms.openlocfilehash: 7ca9d5023a74610d6daa78f98ce03abf2a38e375
+ms.sourcegitcommit: 06bb87839fec26afd5d3a05c03d77b2cf1fb46e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979334"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887318"
 ---
 # <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>Windows에서 Python을 사용 하 여 스크립팅 및 자동화를 시작 합니다.
 
@@ -96,20 +96,20 @@ Python 코드에서 다른 사용자와 공동으로 작업 하거나, GitHub와
 3. 예제 스크립트에 사용할 몇 가지 디렉터리를 만듭니다.
 
     ```powershell
-    mkdir food, food/fruits, food/fruits/apples, food/fruits/oranges, food/vegetables
+    mkdir food, food\fruits, food\fruits\apples, food\fruits\oranges, food\vegetables
     ```
 
 4. 스크립트에 사용할 디렉터리 내에 몇 개의 파일을 만듭니다.
 
     ```powershell
-    new-item food/fruits/banana.txt, food/fruits/strawberry.txt, food/fruits/blueberry.txt, food/fruits/apples/honeycrisp.txt, food/fruits/oranges/mandarin.txt, food/vegetables/carrot.txt
+    new-item food\fruits\banana.txt, food\fruits\strawberry.txt, food\fruits\blueberry.txt, food\fruits\apples\honeycrisp.txt, food\fruits\oranges\mandarin.txt, food\vegetables\carrot.txt
     ```
 
 5. Python 스크립트 디렉터리에 새 python 파일을 만듭니다.
 
     ```powershell
     mkdir src
-    new-item src/list-directory-contents.py
+    new-item src\list-directory-contents.py
     ```
 
 6. 다음을 입력 하 여 VS Code에서 프로젝트를 엽니다.`code .`
@@ -126,17 +126,17 @@ Python 코드에서 다른 사용자와 공동으로 작업 하거나, GitHub와
     ```python
     import os
 
-    root = '%s%s%s' % ('..', os.path.sep, 'food')
+    root = os.path.join('..', 'food')
     for directory, subdir_list, file_list in os.walk(root):
-        print('Directory: ' + directory)
+        print('Directory:', directory)
         for name in subdir_list:
-            print ('Subdirectory: ' + name)
+            print('Subdirectory:', name)
         for name in file_list:
-            print('File: ' + name)
-        print(os.linesep)
+            print('File:', name)
+        print()
     ```
 
-9. VS Code 통합 터미널 (억음문자 사용)을 열고 Python 스크립트를 방금 저장 한 src 디렉터리를 입력 합니다.
+9. VS Code 통합**터미널 (** 억음 문자 사용)을 열고 Python 스크립트를 방금 저장 한 src 디렉터리를 입력 합니다.
 
     ```powershell
     cd src
@@ -151,24 +151,24 @@ Python 코드에서 다른 사용자와 공동으로 작업 하거나, GitHub와
     다음과 같은 출력이 표시 됩니다.
 
     ```powershell
-    Directory: ../food
+    Directory: ..\food
     Subdirectory: fruits
     Subdirectory: vegetables
 
-    Directory: ../food\fruits
+    Directory: ..\food\fruits
     Subdirectory: apples
     Subdirectory: oranges
     File: banana.txt
     File: blueberry.txt
     File: strawberry.txt
 
-    Directory: ../food\fruits\apples
+    Directory: ..\food\fruits\apples
     File: honeycrisp.txt
 
-    Directory: ../food\fruits\oranges
+    Directory: ..\food\fruits\oranges
     File: mandarin.txt
 
-    Directory: ../food\vegetables
+    Directory: ..\food\vegetables
     File: carrot.txt
     ```
 
@@ -195,15 +195,15 @@ Python 코드에서 다른 사용자와 공동으로 작업 하거나, GitHub와
     import datetime
     import os
 
-    root = '%s%s%s' % ('..', os.path.sep, 'food')
+    root = os.path.join('..', 'food')
     for directory, subdir_list, file_list in os.walk(root):
         for name in file_list:
-            source_name = '%s%s%s' % (directory, os.path.sep, name)
+            source_name = os.path.join(directory, name)
             timestamp = os.path.getmtime(source_name)
             modified_date = str(datetime.datetime.fromtimestamp(timestamp)).replace(':', '.')
-            target_name = '%s%s%s_%s' % (directory, os.path.sep, modified_date, name)
+            target_name = os.path.join(directory, f'{modified_date}_{name}')
 
-            print ('Renaming: %s to: %s' % (source_name, target_name))
+            print(f'Renaming: {source_name} to: {target_name}')
 
             os.rename(source_name, target_name)
     ```
@@ -220,7 +220,7 @@ Python 코드에서 다른 사용자와 공동으로 작업 하거나, GitHub와
     Renaming: ..\food\fruits\oranges\mandarin.txt to: ..\food\fruits\oranges\2019-07-18 12.24.46.398151_mandarin.txt
     Renaming: ..\food\vegetables\carrot.txt to: ..\food\vegetables\2019-07-18 12.24.46.402496_carrot.txt
 
-    ~/src/python-scripting/src$ python3 .\list-directory-contents.py
+    PS C:\src\python-scripting\src> python3 .\list-directory-contents.py
     ..\food\
     Directory: ..\food
     Subdirectory: fruits
