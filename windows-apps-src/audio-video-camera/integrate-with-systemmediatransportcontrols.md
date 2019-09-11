@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 81065c214cc2b0583a99ac88cf1c3e4cd784658a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d2c8e05d2b01b110085ed82c19cecd251c9c6971
+ms.sourcegitcommit: c95915f8a13736705eab74951a12b2cf528ea612
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361693"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70876248"
 ---
 # <a name="integrate-with-the-system-media-transport-controls"></a>시스템 미디어 전송 컨트롤과 통합
 
@@ -34,6 +34,11 @@ SMTC에서 비디오 또는 노래 제목과 같은 미디어 항목에 표시�
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
 [!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
+
+
+> [!Note]
+> 앱은 시스템 미디어 전송 컨트롤에 의해 표시 되는 다른 미디어 메타 데이터를 제공 하지 않는 경우에도 [**Type**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaitemdisplayproperties.type) 속성에 대 한 값을 설정 해야 합니다. 이 값을 사용 하면 재생 하는 동안 화면 보호기를 활성화 하는 것을 방지 하는 등 시스템에서 미디어 콘텐츠를 올바르게 처리할 수 있습니다.
+
 
 ## <a name="use-commandmanager-to-modify-or-override-the-default-smtc-commands"></a>CommandManager를 사용하여 기본 SMTC 명령 수정 또는 재정의
 앱에서 [**MediaPlaybackCommandManager**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager) 클래스를 사용하여 SMTC 컨트롤의 동작을 수정하거나 완전히 재정의할 수 있습니다. [  **CommandManager**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.commandmanager) 속성에 액세스하여 각 **MediaPlayer** 클래스 인스턴스에 대한 명령 관리자 인스턴스를 가져올 수 있습니다.
@@ -77,9 +82,9 @@ SMTC 명령의 동작을 완전히 재정의하려는 경우도 있습니다. �
 
 ## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)
-* [오디오 및 MediaPlayer를 사용 하 여 비디오를 재생 합니다.](play-audio-and-video-with-mediaplayer.md)
-* [수동 시스템 미디어 전송 컨트롤 제어](system-media-transport-controls.md)
-* [Github의 시스템 미디어 전송 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
+* [MediaPlayer를 사용 하 여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)
+* [시스템 미디어 전송 제어의 수동 제어](system-media-transport-controls.md)
+* [Github의 시스템 미디어/포트 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
  
 
  

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e306cfe1ee03e9ef4a0688145c2db7b3addd68e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 0a4163105b934f5c1e2970fab9f51b76d69d1bd8
+ms.sourcegitcommit: c95915f8a13736705eab74951a12b2cf528ea612
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318501"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70876227"
 ---
 # <a name="manual-control-of-the-system-media-transport-controls"></a>시스템 미디어 전송 컨트롤의 수동 컨트롤
 
@@ -66,6 +66,11 @@ SMTC의 수동 제어를 구현해야 하는 몇 가지 시나리오가 있습�
 
 [!code-cs[SystemMediaTransportControlsUpdaterManual](./code/SMTCWin10/cs/MainPage.xaml.cs#SystemMediaTransportControlsUpdaterManual)]
 
+> [!Note]
+> 앱은 시스템 미디어 전송 컨트롤에 [의해 표시 되](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolsdisplayupdater.type#Windows_Media_SystemMediaTransportControlsDisplayUpdater_Type
+) 는 다른 미디어 메타 데이터를 제공 하지 않는 경우에도 SystemMediaTransportControlsDisplayUpdater 속성에 대 한 값을 설정 해야 합니다. 이 값을 사용 하면 재생 하는 동안 화면 보호기를 활성화 하는 것을 방지 하는 등 시스템에서 미디어 콘텐츠를 올바르게 처리할 수 있습니다.
+
+
 ## <a name="update-the-system-media-transport-controls-timeline-properties"></a>시스템 미디어 전송 컨트롤 타임라인 속성 업데이트
 
 시스템 전송 컨트롤은 현재 재생 중인 미디어 항목(예: 현재 재생 위치, 미디어 항목의 시작 시간과 종료 시간)의 타임라인에 대한 정보를 표시합니다. 시스템 전송 컨트롤 타임라인 속성을 업데이트하려면 새 [**SystemMediaTransportControlsTimelineProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.SystemMediaTransportControlsTimelineProperties) 개체를 만듭니다. 재생 중인 미디어 항목의 현재 상태를 반영하도록 개체의 속성을 설정합니다. [  **SystemMediaTransportControls.UpdateTimelineProperties**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.updatetimelineproperties)를 호출하여 컨트롤이 타임라인을 업데이트하도록 합니다.
@@ -74,7 +79,7 @@ SMTC의 수동 제어를 구현해야 하는 몇 가지 시나리오가 있습�
 
 -   시스템 컨트롤이 재생 중인 항목의 타임라인을 표시하도록 하려면 [**StartTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.starttime), [**EndTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.endtime) 및 [**Position**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.playbackpositionchangerequested)의 값을 제공해야 합니다.
 
--   [**MinSeekTime** ](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.minseektime) 하 고 [ **MaxSeekTime** ](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.maxseektime) 시간대에 있는 사용자를 검색할 수 있는 범위를 지정할 수 있습니다. 이를 위한 일반적인 시나리오는 콘텐츠 공급자가 미디어에 광고 나누기를 포함할 수 있게 만드는 것입니다.
+-   [**MinSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.minseektime) 및 [**MaxSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.maxseektime) 를 사용 하면 사용자가 검색할 수 있는 타임 라인 내 범위를 지정할 수 있습니다. 이를 위한 일반적인 시나리오는 콘텐츠 공급자가 미디어에 광고 나누기를 포함할 수 있게 만드는 것입니다.
 
     [  **PositionChangeRequest**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.playbackpositionchangerequested)가 발생하도록 하려면 [**MinSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.minseektime) 및 [**MaxSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.maxseektime)을 설정해야 합니다.
 
@@ -111,8 +116,8 @@ SMTC의 수동 제어를 구현해야 하는 몇 가지 시나리오가 있습�
 
 ## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)
-* [전송 컨트롤 시스템 미디어를 사용 하 여 통합](integrate-with-systemmediatransportcontrols.md) 
-* [미디어 전송 샘플 시스템](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
+* [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md) 
+* [시스템 미디어 및 포트 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
 
  
 
