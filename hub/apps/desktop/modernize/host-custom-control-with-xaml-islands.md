@@ -8,16 +8,16 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: a22846c2b0499b990a27b1c445ad36f2ff1a0437
-ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
+ms.openlocfilehash: ab9bff69ac9ac0eaf1f02c943229829e726a0b9d
+ms.sourcegitcommit: 8cbc9ec62a318294d5acfea3dab24e5258e28c52
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979312"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911576"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅
 
-이 문서에서는 Windows Community Toolkit의 [Windowsxamlhost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용 하 여 .net Core 3을 대상으로 하는 WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하는 방법을 보여 줍니다. 사용자 지정 컨트롤은 여러 개의 자사 UWP 컨트롤을 포함 하며 UWP 컨트롤 중 하나의 속성을 WPF 앱의 문자열에 바인딩합니다.
+이 문서에서는 Windows Community Toolkit의 [Windowsxamlhost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용 하 여 .net Core 3을 대상으로 하는 WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하는 방법을 보여 줍니다. 사용자 지정 컨트롤은 Windows SDK에서 여러 개의 자사 UWP 컨트롤을 포함 하 고 UWP 컨트롤 중 하나의 속성을 WPF 앱의 문자열에 바인딩합니다. 또한이 문서에서는 [WinUI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)에서 자사 UWP 컨트롤을 호스트 하는 방법도 보여 줍니다.
 
 이 문서는 WPF 앱에서이 작업을 수행 하는 방법을 보여 주지만 Windows Forms 앱의 프로세스와 비슷합니다. WPF 및 Windows Forms apps에서 UWP 컨트롤을 호스트 하는 방법에 대 한 개요는 [이 문서](xaml-islands.md#wpf-and-windows-forms-applications)를 참조 하세요.
 
@@ -71,7 +71,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하려면 다음 구�
 1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고**새 프로젝트** **추가** -> 를 선택 합니다.
 2. 솔루션에 **빈 앱(Universal Windows)** 프로젝트 추가 대상 버전 및 최소 버전이 모두 **Windows 10 버전 1903** 이상으로 설정 되어 있는지 확인 합니다.
 3. UWP 앱 프로젝트에서 [Microsoft 6.0.0 application](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) NuGet 패키지 (버전 v-preview7 이상)를 설치 합니다.
-4. App.xaml 파일 을 열고이 파일의 내용을 다음 xaml로 바꿉니다. 을 `MyUWPApp` UWP 앱 프로젝트의 네임 스페이스로 바꿉니다.
+4. **App.xaml 파일을** 열고이 파일의 내용을 다음 xaml로 바꿉니다. 을 `MyUWPApp` UWP 앱 프로젝트의 네임 스페이스로 바꿉니다.
 
     ```xml
     <xaml:XamlApplication
@@ -106,7 +106,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하려면 다음 구�
 
 WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용 하 여 컴파일할 수 있도록 컨트롤에 대 한 소스 코드가 있어야 합니다. 일반적으로 사용자 지정 컨트롤은 간편한 이식성을 위해 UWP 클래스 라이브러리 프로젝트에서 정의 됩니다.
 
-이 섹션에서는 새 클래스 라이브러리 프로젝트에서 간단한 사용자 지정 UWP 컨트롤을 정의 합니다. 또는 이전 섹션에서 만든 UWP 앱 프로젝트에서 사용자 지정 UWP 컨트롤을 정의할 수 있습니다. 그러나 이러한 단계에서는 설명 목적으로 별도의 클래스 라이브러리 프로젝트에서이 작업을 수행 합니다 .이는 일반적으로 사용자 지정 컨트롤을 이식성에 맞게 구현 하는 방법입니다. 
+이 섹션에서는 새 클래스 라이브러리 프로젝트에서 간단한 사용자 지정 UWP 컨트롤을 정의 합니다. 또는 이전 섹션에서 만든 UWP 앱 프로젝트에서 사용자 지정 UWP 컨트롤을 정의할 수 있습니다. 그러나 이러한 단계에서는 설명 목적으로 별도의 클래스 라이브러리 프로젝트에서이 작업을 수행 합니다 .이는 일반적으로 사용자 지정 컨트롤을 이식성에 맞게 구현 하는 방법입니다.
 
 사용자 지정 컨트롤이 이미 있는 경우 여기에 표시 된 컨트롤 대신 사용할 수 있습니다. 그러나 다음 단계에 표시 된 것 처럼 컨트롤을 포함 하는 프로젝트를 구성 해야 합니다.
 
@@ -195,6 +195,60 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
     ```
 
 6. 앱을 빌드 및 실행 하 고 UWP 사용자 정의 컨트롤이 예상 대로 표시 되는지 확인 합니다.
+
+## <a name="add-a-control-from-the-winui-library-to-the-custom-control"></a>WinUI 라이브러리의 컨트롤을 사용자 지정 컨트롤에 추가 합니다.
+
+일반적으로 UWP 컨트롤은 Windows 10 OS의 일부로 출시 되었으며 개발자가 Windows SDK를 통해 사용할 수 있게 되었습니다. [WinUI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 는 Windows SDK 릴리스에 연결 되지 않은 NuGet 패키지에서 Windows SDK의 업데이트 된 버전의 업데이트 된 버전을 배포 하는 대체 방법입니다. 이 라이브러리에는 Windows SDK 및 기본 UWP 플랫폼에 속하지 않는 새 컨트롤도 포함 되어 있습니다. 자세한 내용은 [WinUI 라이브러리 로드맵](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md) 을 참조 하세요.
+
+이 섹션에서는 WPF 앱에서이 컨트롤을 호스팅할 수 있도록 WinUI 라이브러리의 UWP 컨트롤을 사용자 정의 컨트롤에 추가 하는 방법을 보여 줍니다. 
+
+1. UWP 앱 프로젝트에서 최신 시험판 버전의 [Microsoft .Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지를 설치 합니다.
+    > [!NOTE]
+    > 최신 *시험판* 버전을 설치 했는지 확인 합니다. 현재 배포에 대 한 [Msix 패키지](https://docs.microsoft.com/windows/msix) 에서 앱을 패키징하는 경우에는이 패키지의 시험판 버전만 사용할 수 있습니다.
+
+2. 이 프로젝트의 app.xaml 파일에서 다음 자식 요소를 `<xaml:Application>` 요소에 추가 합니다.
+
+    ```xml
+    <Application.Resources>
+        <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+    </Application.Resources>
+    ```
+
+    이 요소를 추가한 후에는이 파일의 내용이 다음과 같이 표시 됩니다.
+
+    ```xml
+    <xaml:XamlApplication
+        x:Class="MyUWPApp.App"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xaml="using:Microsoft.Toolkit.Win32.UI.XamlHost"
+        xmlns:local="using:MyUWPApp">
+        <Application.Resources>
+            <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+        </Application.Resources>
+    </xaml:XamlApplication>
+    ```
+
+3. UWP 클래스 라이브러리 프로젝트에서 최신 시험판 버전의 [Microsoft Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지 (uwp 앱 프로젝트에 설치한 것과 동일한 버전)를 설치 합니다.
+
+4. 동일한 프로젝트에서 사용자 정의 컨트롤에 대 한 XAML 파일을 열고 `<UserControl>` 요소에 다음 네임 스페이스 선언을 추가 합니다.
+
+    ```xml
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    ```
+
+5. 동일한 파일에서 요소를 `<winui:RatingControl />` `<StackPanel>`의 자식으로 추가 합니다. 이 요소는 WinUI 라이브러리에서 [RatingControl](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol?view=winui-2.2) 클래스의 인스턴스를 추가 합니다. 이 요소를 추가한 후에 `<StackPanel>` 는 이제 다음과 같이 표시 됩니다.
+
+    ```xml
+    <StackPanel Background="LightCoral">
+        <TextBlock>This is a simple custom UWP control</TextBlock>
+        <Rectangle Fill="Blue" Height="100" Width="100"/>
+        <TextBlock Text="{x:Bind XamlIslandMessage}" FontSize="50"></TextBlock>
+        <winui:RatingControl />
+    </StackPanel>
+    ```
+
+6. 앱을 빌드 및 실행 하 고 새 등급 컨트롤이 예상 대로 표시 되는지 확인 합니다.
 
 ## <a name="package-the-app"></a>앱 패키지
 

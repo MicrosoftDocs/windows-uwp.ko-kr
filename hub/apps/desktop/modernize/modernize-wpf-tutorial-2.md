@@ -8,18 +8,21 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: fb7bb6d4e5af8992571f9740c1321e271b2e1672
-ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
+ms.openlocfilehash: 943b2d90564dc059ed487c1f7fb7b89e689681bb
+ms.sourcegitcommit: 8cbc9ec62a318294d5acfea3dab24e5258e28c52
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69643422"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911588"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>2부: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
 
 이 자습서에서는 Contoso 지출 이라는 샘플 WPF 데스크톱 응용 프로그램을 현대화 하는 방법을 보여 주는 자습서의 두 번째 부분입니다. 샘플 앱을 다운로드 하기 위한 자습서, 필수 구성 요소 및 지침에 대 한 개요를 [보려면 자습서: WPF 앱](modernize-wpf-tutorial.md)을 현대화 합니다. 이 문서에서는 [1 부](modernize-wpf-tutorial-1.md)를 이미 완료 했다고 가정 합니다.
 
 이 자습서의 가상 시나리오에서 Contoso 개발 팀은 Contoso 지출 앱에 디지털 서명 지원을 추가 하려고 합니다. UWP **InkCanvas** 컨트롤은 텍스트와 모양을 인식 하는 기능과 같은 디지털 잉크 및 AI 기반 기능을 지원 하기 때문에이 시나리오에 유용한 옵션입니다. 이렇게 하려면 Windows 커뮤니티 도구 키트에서 제공 되는 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 래핑된 UWP 컨트롤을 사용 합니다. 이 컨트롤은 WPF 앱에서 사용할 UWP **InkCanvas** 컨트롤의 인터페이스 및 기능을 래핑합니다. 래핑된 UWP 컨트롤에 대 한 자세한 내용은 [데스크톱 앱에서 UWP xaml 컨트롤 호스트 (XAML 아일랜드)](xaml-islands.md)를 참조 하세요.
+
+> [!NOTE]
+> 이 자습서에서 WPF 앱은 Windows SDK에서 자사 UWP 컨트롤만 호스팅합니다. 사용자 지정 UWP 컨트롤을 비롯 한 다른 XAML 고립 시나리오를 지원 하려면 앱 프로젝트에 Windows 커뮤니티 도구 키트에서 `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` 제공 하는 클래스의 인스턴스에 대 한 액세스 권한이 있어야 합니다. 이 작업을 수행 하는 권장 방법은 WPF Windows Forms (유니버설 Windows) 프로젝트와 동일한 솔루션에 **빈 앱 (유니버설 Windows)** 프로젝트를 추가 하 고이 프로젝트에서 `App` 기본 클래스를 수정 하는 것입니다. Windows SDK에서 자사 UWP 컨트롤을 호스트 하는 기본적인 시나리오에서는이 단계가 필요 하지 않으므로이 자습서에서는이 단계를 생략 합니다. 자세한 내용은 [이 문서](host-standard-control-with-xaml-islands.md)를 참조 하세요.
 
 ## <a name="configure-the-project-to-use-xaml-islands"></a>XAML 아일랜드를 사용 하도록 프로젝트 구성
 

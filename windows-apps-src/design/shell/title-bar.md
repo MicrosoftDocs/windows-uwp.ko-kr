@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows 10, uwp, 제목 표시줄
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 88c613456525648883735850fe831cb3b67f145c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 323b9b80a7d0087a07faf34d598f51d643e1324c
+ms.sourcegitcommit: 5687e5340f8d78da95c3ac28304d1c9b8960c47d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648818"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70930343"
 ---
 # <a name="title-bar-customization"></a>제목 표시줄 사용자 지정
 
@@ -20,7 +20,7 @@ ms.locfileid: "57648818"
 
 앱이 데스크톱 창에서 실행될 때 앱의 퍼스낼리티와 일치하도록 제목 표시줄을 사용자 지정할 수 있습니다. 제목 표시줄 사용자 지정 API를 사용하여 제목 표시줄 요소의 색상을 지정하거나 앱 콘텐츠를 제목 표시줄 영역으로 확장하고 모든 내용을 제어할 수 있습니다.
 
-> **중요 API**: [ApplicationView.TitleBar 속성](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview)하십시오 [ApplicationViewTitleBar 클래스](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [CoreApplicationViewTitleBar 클래스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
+> **중요 API**: [Applicationview. TitleBar 속성](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [applicationviewtitlebar 클래스](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [CoreApplicationViewTitleBar 클래스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
 
 ## <a name="how-much-to-customize-the-title-bar"></a>제목 표시줄의 사용자 지정 수준
 
@@ -130,10 +130,14 @@ public MainPage()
 
     var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
     coreTitleBar.ExtendViewIntoTitleBar = true;
-
+    coreTitleBar.LayoutMetricsChanged += CoreTitleBar_LayoutMetricsChanged;
     // Set XAML element as a draggable region.
-    AppTitleBar.Height = coreTitleBar.Height;
     Window.Current.SetTitleBar(AppTitleBar);
+}
+
+private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sender, object args)
+{
+    AppTitleBar.Height = sender.Height;
 }
 ```
 
@@ -166,7 +170,7 @@ UIElement(`AppTitleBar`)는 앱에 대한 XAML의 일부입니다. 변경되지 
 
 자막 버튼 크기 변경에 응답하기 위해 [LayoutMetricsChanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.LayoutMetricsChanged) 이벤트를 처리할 수 있습니다. 예를 들어, 시스템 뒤로 버튼이 표시되거나 숨겨져 있을 때 이 문제가 발생할 수 있습니다. 제목 표시줄의 크기에 종속되는 UI 요소의 위치를 확인하고 업데이트하려면 이 이벤트를 처리합니다.
 
-이 예제는 제목 표시줄의 레이아웃을 조정하여 시스템 뒤로 버튼을 표시하거나 숨기는 것과 같은 변경 사항을 처리하는 방법을 보여 줍니다. `AppTitleBar`를 `LeftPaddingColumn`, 및 `RightPaddingColumn` 앞에 표시 된 XAML에 선언 됩니다.
+이 예제는 제목 표시줄의 레이아웃을 조정하여 시스템 뒤로 버튼을 표시하거나 숨기는 것과 같은 변경 사항을 처리하는 방법을 보여 줍니다. `AppTitleBar`, `LeftPaddingColumn` 및`RightPaddingColumn` 은 이전에 표시 된 XAML에서 선언 됩니다.
 
 ```csharp
 private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sender, object args)
@@ -189,7 +193,7 @@ private void UpdateTitleBarLayout(CoreApplicationViewTitleBar coreTitleBar)
 
 ### <a name="interactive-content"></a>대화형 콘텐츠
 
-버튼, 메뉴 또는 검색 상자와 같은 대화형 컨트롤을 앱 상단에 배치하여 제목 표시줄에 표시되도록 할 수 있습니다. 하지만 대화형 요소에 사용자 입력이 수신되는지 확실하지 않은 경우 몇 가지 규칙을 따라야 합니다.
+버튼, 메뉴 또는 검색 상자와 같은 대화형 컨트롤을 앱 상단에 배치하여 제목 표시줄에 표시되도록 할 수 있습니다. 그러나 대화형 요소가 사용자 입력을 받도록 하기 위해 수행 해야 하는 몇 가지 규칙이 있습니다.
 - 영역을 끌기 가능 제목 표시줄 영역으로 정의하려면 SetTitleBar를 호출해야 합니다. 그렇게 않으면 시스템은 페이지 상단에 기본 끌기 가능 영역을 설정합니다. 그러면 시스템에서 이 영역에 대한 모든 사용자 입력을 처리하고 입력이 해당 컨트롤에 도달하지 못하게 합니다.
 - 대화형 컨트롤을 SetTitleBar(z-순서가 더 높음) 호출에 의해 정의된 끌기 가능 영역의 위쪽에 놓습니다. UIElement의 대화형 컨트롤 하위 요소를 SetTitleBar에 전달하지 마세요. SetTitleBar에 요소를 전달하면 시스템은 이를 시스템 제목 표시줄과 같이 처리하고 해당 요소에 대한 모든 포인터 입력을 처리합니다.
 
@@ -275,7 +279,7 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 ```
 
 >[!NOTE]
->_전체 화면_ 모드는 앱에서 지원하는 경우에만 진입할 수 있습니다. 자세한 내용은 [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode)를 참조하세요. [_태블릿 모드_ ](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) 사용자 태블릿 모드에서 앱을 실행 하도록 선택할 수 있도록 지원 되는 하드웨어 사용자 옵션입니다.
+>_전체 화면_ 모드는 앱에서 지원하는 경우에만 진입할 수 있습니다. 자세한 내용은 [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode)를 참조하세요. [_태블릿 모드_](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) 는 지원 되는 하드웨어에 대 한 사용자 옵션 이므로 사용자가 태블릿 모드에서 앱을 실행 하도록 선택할 수 있습니다.
 
 ## <a name="full-customization-example"></a>전체 사용자 지정의 예
 
@@ -375,11 +379,11 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
-- 창이 활성 또는 비활성 상태일 때 만든 내용이 명확하게 나타납니다. 최소한 제목 표시줄의 텍스트, 아이콘 및 버튼 색상을 변경하세요.
+- 창이 활성 상태 이거나 비활성 상태 이면이를 명확 하 게 합니다. 최소한 제목 표시줄의 텍스트, 아이콘 및 버튼 색상을 변경하세요.
 - 앱 캔버스의 위쪽 가장자리를 따라 끌기 가능 영역을 정의합니다. 시스템 제목 표시줄의 배치를 맞추면 사용자가 쉽게 찾을 수 있습니다.
 - 앱 캔버스의 시각적 제목 표시줄(있는 경우)과 일치하는 끌기 가능 영역을 정의하세요.
 
 ## <a name="related-articles"></a>관련 문서
 
-- [못](../style/acrylic.md)
-- [색](../style/color.md)
+- [아크릴](../style/acrylic.md)
+- [Color](../style/color.md)
