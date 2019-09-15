@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 654c063b7c377023fef4b2dab3ddf5d7a755cb2d
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: ddb00ebc029ccbb15640938f01d14382e8fa273a
+ms.sourcegitcommit: 6e7665b457ec4585db19b70acfa2554791ad6e10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320802"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987203"
 ---
 # <a name="send-a-local-toast-notification"></a>로컬 알림 메시지 보내기
 
@@ -39,14 +39,14 @@ ms.locfileid: "67320802"
 * 포그라운드 활성화 처리
 * 백그라운드 활성화 처리
 
-> **중요 API**: [ToastNotification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification), [ToastNotificationActivatedEventArgs 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
+> **중요 API**: [To Notification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification), [ToastNotificationActivatedEventArgs 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 다음은 이 문서의 내용을 완전히 이해하는 데 도움이 되는 항목입니다.
 
-* 알림 메시지 용어 및 개념에 관한 실무 지식 자세한 내용은 [알림과 작업 센터 개요](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/toast-notification-and-action-center-overview-for-windows-10/)합니다.
+* 알림 메시지 용어 및 개념에 관한 실무 지식 자세한 내용은 [알림 및 알림 센터 개요](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/toast-notification-and-action-center-overview-for-windows-10/)를 참조 하세요.
 * Windows 10 알림 메시지 콘텐츠에 대한 기본적인 지식 자세한 내용은 [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)를 참조하세요.
 * Windows 10 UWP 앱 프로젝트 만들기
 
@@ -54,20 +54,20 @@ ms.locfileid: "67320802"
 > Windows 8/8.1과 달리 이제 앱에서 알림 메시지를 표시할 수 있음을 앱의 매니페스트에 선언할 필요가 없습니다. 모든 앱에서 알림 메시지를 보내고 표시할 수 있습니다.
 
 > [!NOTE]
-> **Windows 8/8.1 앱**: 사용 하십시오 합니다 [설명서를 보관](https://docs.microsoft.com/previous-versions/windows/apps/hh868254(v=win.10))합니다.
+> **Windows 8/8.1 앱**: [보관 된 설명서](https://docs.microsoft.com/previous-versions/windows/apps/hh868254(v=win.10))를 사용 하세요.
 
 
 ## <a name="install-nuget-packages"></a>NuGet 패키지 설치
 
 프로젝트에 다음 2개의 NuGet 패키지를 설치하는 것이 좋습니다. 코드 샘플에서 이러한 패키지를 사용합니다. 문서 끝에서 NuGet 패키지를 사용하지 않는 “Vanilla” 코드 조각을 제공합니다.
 
-* [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/): 원시 XML 대신 개체를 통해 알림 페이로드를 생성 합니다.
-* [QueryString.NET](https://www.nuget.org/packages/QueryString.NET/): 생성 하 고 사용 하 여 쿼리 문자열을 구문 분석C#
+* [Microsoft Toolkit. 알림](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/): 원시 XML 대신 개체를 통해 알림 페이로드를 생성 합니다.
+* [QueryString.NET](https://www.nuget.org/packages/QueryString.NET/): 를 사용 하 여 쿼리 문자열 생성 및 구문 분석C#
 
 
 ## <a name="add-namespace-declarations"></a>네임스페이스 선언 추가
 
-`Windows.UI.Notifications` 알림 Api를 포함합니다.
+`Windows.UI.Notifications`알림 Api를 포함 합니다.
 
 ```csharp
 using Windows.UI.Notifications;
@@ -84,7 +84,7 @@ Windows 10에서는 알림 모양을 유연하게 지정할 수 있게 하는 �
 
 사용자에게 표시할 텍스트와 이미지를 포함한 콘텐츠의 시각적 부분을 생성하는 것으로 시작하겠습니다.
 
-알림 라이브러리 덕분 XML 콘텐츠를 생성 하는 간단 합니다. NuGet에서 알림 라이브러리를 설치하지 않는 경우 XML을 수동으로 구성해야 합니다. 이는 오류의 여지를 남깁니다.
+알림 라이브러리 덕분에 XML 콘텐츠를 생성 하는 것은 간단 합니다. NuGet에서 알림 라이브러리를 설치하지 않는 경우 XML을 수동으로 구성해야 합니다. 이는 오류의 여지를 남깁니다.
 
 > [!NOTE]
 > 참고: 앱의 패키지, 앱의 로컬 저장소 또는 웹에서 이미지를 사용할 수 있습니다. Fall Creators Update에서 일반 연결의 경우 웹 이미지는 최대 3MB이고 데이터 통신 연결의 경우 1MB입니다. Fall Creators Update를 아직 실행하지 않는 디바이스에서 웹 이미지는 200KB 이하여야 합니다.
@@ -238,9 +238,9 @@ toast.ExpirationTime = DateTime.Now.AddDays(2);
 
 보내는 알림을 프로그래밍 방식으로 제거하거나 바꾸려면 Tag 속성과 Group 속성(옵션)을 사용하여 알림에 대한 기본 키를 제공해야 합니다. 그런 다음 나중에 이 기본 키를 사용하여 알림을 제거하거나 바꿀 수 있습니다.
 
-대체/를 제거 하는 이미 자세한 알림 메시지 배달를 참조 하세요 [빠른 시작: 관리 센터 (XAML)에서 알림 관리](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10))합니다.
+이미 제공 된 알림 메시지 바꾸기/제거에 대 한 자세한 내용은 빠른 시작 [을 참조 하세요. 작업 센터 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10))에서 알림 메시지 관리
 
-결합된 Tag와 Group은 복합 기본 키 역할을 합니다. 그룹은 "wallPosts", "messages", "friendRequests" 등과 같은 그룹을 할당할 수 있는 보다 일반적인 식별자입니다. 다음 태그는 고유 하 게 식별 그룹 내에서 자체 알림. 그러면 일반 그룹을 사용하여 [RemoveGroup API](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_)로 해당 그룹에서 모든 알림을 제거할 수 있습니다.
+결합된 Tag와 Group은 복합 기본 키 역할을 합니다. Group은 보다 일반적인 식별자로, "wallPosts", "messages", "friendRequests" 등의 그룹을 할당할 수 있습니다. 그런 다음 태그는 그룹 내에서 알림 자체를 고유 하 게 식별 해야 합니다. 그러면 일반 그룹을 사용하여 [RemoveGroup API](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_)로 해당 그룹에서 모든 알림을 제거할 수 있습니다.
 
 ```csharp
 toast.Tag = "18365";
@@ -270,10 +270,10 @@ UWP 앱은 자체 알림을 제거하고 지우는 역할을 합니다. 앱이 �
 3. 앱에서 대화를 열고 해당 대화에 대한 앱 제공 그룹에 [RemoveGroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_)을 사용하여 해당 대화에 대한 모든 알림을 지웁니다.
 4. 이제 알림 센터에 남은 대화에 대한 오래된 알림이 없으므로 사용자의 알림 센터에 알림 상태가 적절히 반영됩니다.
 
-특정 알림을 제거 하거나 모든 알림을 해제 하는 방법에 대 한 자세한 참조 [빠른 시작: 관리 센터 (XAML)에서 알림 관리](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10))합니다.
+모든 알림을 지우거 나 특정 알림을 제거 하는 방법에 대 [한 자세한 내용은 빠른 시작: 작업 센터 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10))에서 알림 메시지 관리
 
 
-## <a name="handling-activation"></a>활성화 처리
+## <a name="activation-handling"></a>활성화 처리
 
 Windows 10에서 사용자가 알림을 클릭할 때 알림에서 두 가지 방식으로 앱을 활성화하도록 할 수 있습니다.
 
@@ -501,7 +501,7 @@ var toast = new ToastNotification(toastXml);
 
 ## <a name="resources"></a>리소스
 
-* [GitHub에서 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10)
+* [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10)
 * [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)
-* [ToastNotification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
+* [To Notification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
 * [ToastNotificationActivatedEventArgs 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
