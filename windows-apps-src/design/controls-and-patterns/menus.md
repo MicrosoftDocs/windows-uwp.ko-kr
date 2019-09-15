@@ -13,12 +13,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e3465d108fc725c45999782eff80593832208b5
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 31371c2b2a4826939de428fb6d7c082b78d05843
+ms.sourcegitcommit: 6951827b7d0948618e1fbb082c28794c7f23f83c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319518"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923148"
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
@@ -32,7 +32,7 @@ ms.locfileid: "67319518"
 
 | **플랫폼 API** | **Windows UI Library API** |
 | - | - |
-| [MenuFlyout 클래스](/uwp/api/windows.ui.xaml.controls.menuflyout), [MenuBar 클래스](/uwp/api/windows.ui.xaml.controls.menubar), [ContextFlyout 속성](/uwp/api/windows.ui.xaml.uielement.contextflyout), [FlyoutBase.AttachedFlyout 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [MenuBar 클래스](/uwp/api/microsoft.ui.xaml.controls.menubar) |
+| [MenuFlyout 클래스](/uwp/api/windows.ui.xaml.controls.menuflyout), [MenuBar 클래스](/uwp/api/windows.ui.xaml.controls.menubar), [ContextFlyout 속성](/uwp/api/windows.ui.xaml.uielement.contextflyout), [FlyoutBase.AttachedFlyout 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase#xaml-attached-properties) | [MenuBar 클래스](/uwp/api/microsoft.ui.xaml.controls.menubar) |
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -90,7 +90,7 @@ CommandBar와 MenuBar를 함께 사용할 수도 있습니다. MenuBar를 사용
 - 단일 진입점(예: 화면의 맨 위에 있는 파일 메뉴)이 항상 표시되도록 합니다.
 - 일반적으로 단추 또는 부모 메뉴 항목에 연결됩니다.
 - 마우스 왼쪽 단추로 클릭하거나 이와 동등한 작업(예: 손가락으로 탭)을 통해 호출됩니다.
-- 해당 [Flyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button.flyout) 또는 [FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) 속성을 통해 요소와 연결되거나, 앱 창의 맨 위에 있는 메뉴 막대에 그룹화됩니다.
+- 해당 [Flyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button.flyout) 또는 [FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase#xaml-attached-properties) 속성을 통해 요소와 연결되거나, 앱 창의 맨 위에 있는 메뉴 막대에 그룹화됩니다.
 
 ### <a name="context-menus"></a>상황에 맞는 메뉴
 
