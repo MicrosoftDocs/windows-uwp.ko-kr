@@ -21,7 +21,7 @@ ms.locfileid: "63799617"
 - **라이브러리에 대한 액세스 권한**   이 예제의 코드에서는 **picturesLibrary** 기능이 필요하지만 파일 위치에는 다른 기능이 필요하거나 아무 기능도 필요하지 않을 수 있습니다. 자세한 내용은 [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)을 참조하세요. 
 - **단순 파일 열거**    이 예제에서는 [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions)를 사용하여 몇 가지 고급 열거 속성을 설정합니다. 작은 디렉터리에 대한 단순 파일 목록을 가져오는 방법에 대한 자세한 내용은 [파일 및 폴더 열거 및 쿼리](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)를 참조하세요. 
 
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용  
 많은 경우 앱이 파일 그룹의 속성을 나열해야 하지만 항상 파일과 직접 상호 작용할 필요는 없습니다. 예를 들어, 뮤직 앱은 한 번에 하나의 파일을 재생하지만(열지만), 앱이 곡 대기열을 표시하거나 사용자가 유효한 재생 파일을 선택할 수 있도록 하기 위해 폴더의 모든 파일에 대한 속성이 필요합니다. 
 
 모든 파일의 메타데이터를 수정할 앱 또는 속성을 읽지 않고 모든 결과 StorageFiles와 상호 작용하는 앱에 이 페이지의 예제를 사용해서는 안 됩니다. 자세한 내용은 [파일 및 폴더 열거 및 쿼리](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)를 참조하세요. 

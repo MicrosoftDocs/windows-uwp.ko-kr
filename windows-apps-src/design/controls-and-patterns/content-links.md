@@ -46,7 +46,7 @@ ms.locfileid: "68796721"
 
 | 기능   | RichEditBox | 텍스트 블록 |
 | --------- | ----------- | ---------- |
-| 용도 | ContentLinkInfo 인스턴스 | ContentLink 텍스트 요소 |
+| 사용 | ContentLinkInfo 인스턴스 | ContentLink 텍스트 요소 |
 | 커서 | 콘텐츠 링크의 유형에 따라 결정되며 변경 불가능 | 커서 속성에 의해 결정되며 기본값은 **null** |
 | ToolTip | 렌더링되지 않음 | 보조 텍스트 표시 |
 
