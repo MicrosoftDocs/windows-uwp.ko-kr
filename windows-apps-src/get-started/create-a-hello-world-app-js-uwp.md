@@ -2,28 +2,30 @@
 ms.assetid: 3a17e682-40be-41b4-8bd3-fbf0b15259d6
 title: "\"Hello, world\" 앱 만들기(JS)"
 description: 이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 &\#0034;Hello, world&\#0034; 앱을 만드는 방법을 설명합니다.
-ms.date: 03/06/2017
+ms.date: 09/12/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b5423c9aae607d4f6ffe14b755c8f73e013d8b6
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 3f4ab5b177539bc286ce24d480cd949d43a51e17
+ms.sourcegitcommit: bd41fb6f59dfbd7021b14ff749b8b0f83f883c0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820975"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70963619"
 ---
 # <a name="create-a-hello-world-app-js"></a>"Hello, world" 앱 만들기(JS)
 
 이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows 10 디바이스에서 실행되는 앱을 빌드할 수 있습니다.
 
 > [!NOTE]
-> 이 자습서에서는 Visual Studio Community 2019를 사용합니다. 다른 버전의 Visual Studio를 사용하는 경우 약간 다르게 보일 수 있습니다.
+> 이 자습서에서는 Visual Studio Community 2017을 사용합니다. 다른 버전의 Visual Studio를 사용하는 경우 약간 다르게 보일 수 있습니다.
 
+> [!WARNING]
+> Javascript UWP 앱 개발은 Visual Studio 2019에서 지원되지 않습니다. Javascript UWP 앱을 개발하려면 Visual Studio 2017을 사용해야 합니다.
 
 여기에서는 다음에 대한 방법을 알아봅니다.
 
--   **Windows 10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2019** 프로젝트를 만듭니다.
+-   **Windows 10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2017** 프로젝트를 만듭니다.
 -   HTML 및 JavaScript 콘텐츠 추가
 -   Visual Studio의 로컬 데스크톱에서 프로젝트 실행
 
@@ -35,7 +37,7 @@ ms.locfileid: "67820975"
 
 ## <a name="step-1-create-a-new-project-in-visual-studio"></a>1단계: Visual Studio에서 새 프로젝트 만들기
 
-1.  Visual Studio 2019를 시작합니다.
+1.  Visual Studio 2017을 시작합니다.
 
 2.  **파일** 메뉴에서 **새로 만들기 > 프로젝트...** 를 선택하여 *새 프로젝트 만들기* 대화 상자를 엽니다.
 
