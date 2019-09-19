@@ -1,0 +1,69 @@
+### YamlMime:Hub
+title: Windows 설명서
+summary: 소프트웨어 개발자, 하드웨어 엔지니어 및 IT 전문가를 위한 정보입니다.
+brand: windows
+metadata:
+  title: Windows 설명서 | Microsoft Docs
+  titleSuffix: ''
+  author: tedhudek
+  ms.author: tedhudek
+  ms.topic: hub-page
+  uhfHeaderId: MSDocsHeader-DocsL1
+  ms.openlocfilehash: 0cdab14a7301cdb20ca6986854523c5b6e834b21
+  ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 09/18/2019
+  ms.locfileid: "71100828"
+highlightedContent:
+  items:
+  - title: Visual Studio 및 Windows SDK 받기
+    itemType: download
+    url: https://developer.microsoft.com/windows/downloads
+  - title: WDK 다운로드
+    itemType: download
+    url: https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk
+  - title: 참가자 프로그램에 참여하세요.
+    itemType: overview
+    url: https://docs.microsoft.com/windows-insider
+  - title: 기술 향상
+    itemType: learn
+    url: https://docs.microsoft.com/learn/browse/?products=m365%2Cwindows
+additionalContent:
+  sections:
+  - items:
+    - title: 앱 개발
+      links:
+      - text: Windows 10 앱 작성 시작
+        url: https://docs.microsoft.com/windows/apps
+      - text: 앱에 Windows 10 기능 추가
+        url: https://docs.microsoft.com/windows/apps/desktop/modernize/
+      - text: Windows PC에서 Python으로 개발
+        url: https://docs.microsoft.com/windows/python/index
+      - text: Linux용 Windows 하위 시스템 설정
+        url: https://docs.microsoft.com/windows/wsl/about
+      - text: 코드 샘플 찾기
+        url: https://developer.microsoft.com/windows/samples
+    - title: 하드웨어 개발
+      links:
+      - text: 디바이스 빌드에 대해 알아보기
+        url: https://docs.microsoft.com/windows-hardware/get-started/index
+      - text: 디바이스 드라이버 개발
+        url: https://docs.microsoft.com/windows-hardware/drivers
+      - text: Windows 이미지 만들기
+        url: https://docs.microsoft.com/windows-hardware/manufacture/
+      - text: 성능 및 호환성 테스트
+        url: https://docs.microsoft.com/windows-hardware/test
+      - text: 드라이버 샘플 찾기
+        url: https://docs.microsoft.com/samples/browse/?products=windows-wdk
+    - title: IT 관리자
+      links:
+      - text: Windows 10 구성 및 배포
+        url: https://docs.microsoft.com/windows/windows-10/
+      - text: Windows 10 릴리스 정보 찾기
+        url: https://docs.microsoft.com/windows/release-information/
+      - text: Windows Server 관리
+        url: https://docs.microsoft.com/windows-server/
+      - text: 비즈니스용 Microsoft Store 시작
+        url: https://docs.microsoft.com/microsoft-store/
+  footer: '[블로그](https://blogs.windows.com/) - [Twitter](https://twitter.com/windowsdocs) - [Stack Overflow](https://stackoverflow.com/questions/tagged/windows) - [개발자 커뮤니티](https://social.msdn.microsoft.com/Forums/windowsdesktop)'
