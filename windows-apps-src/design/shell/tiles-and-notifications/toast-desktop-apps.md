@@ -7,12 +7,12 @@ ms.date: 05/01/2018
 ms.topic: article
 keywords: Windows 10, uwp, win32, 데스크톱, 알림, 데스크톱 브리지, 알림을 보내는 옵션, com 서버, com 활성자, com, 가짜 com, com 없음, com 없이, 알림 보내기
 ms.localizationpriority: medium
-ms.openlocfilehash: ef4810ec594173f3cc4da35d63143909f4859e3c
-ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
+ms.openlocfilehash: 030f8b1380dc28a41e65989ccbda688523fad965
+ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340818"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71100823"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>데스크톱 앱에서 알림 메시지
 
@@ -54,7 +54,7 @@ COM 활성자 옵션을 사용하면 앱에서 다음 알림 템플릿 및 활�
 > [!NOTE]
 > 기존 데스크톱 브리지 앱에 COM 활성자를 추가하면 포그라운드/백그라운드 및 레거시 알림이 사용자 명령줄 대신 COM 활성자를 활성화합니다.
 
-이 옵션을 사용하는 방법을 알아보려면 [데스크톱 C # 앱에서 로컬 알림 메시지 보내기](send-local-toast-desktop.md) 또는 [데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기](send-local-toast-desktop-cpp-wrl.md)를 참조하세요.
+이 옵션을 사용 하는 방법에 대 한 자세한 내용은 [데스크톱 C# 앱에서 로컬 알림 메시지 보내기](send-local-toast-desktop.md) 또는 [데스크톱 C++ WRL 앱에서 로컬](send-local-toast-desktop-cpp-wrl.md)알림 메시지 보내기를 참조 하세요.
 
 
 ## <a name="alternative-option---no-com--stub-clsid"></a>다른 옵션 - COM 없음 / 스텁 CLSID
