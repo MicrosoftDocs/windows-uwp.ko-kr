@@ -1,6 +1,6 @@
 ---
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 Xbox Live 동시 사용 데이터를 가져옵니다.
-title: Xbox Live 동시 사용 데이터 가져오기
+title: Xbox Live 동시 사용량 현황 데이터 가져오기
 ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 동시 사용
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/21/2019
 ms.locfileid: "67321759"
 ---
-# <a name="get-xbox-live-concurrent-usage-data"></a>Xbox Live 동시 사용 데이터 가져오기
+# <a name="get-xbox-live-concurrent-usage-data"></a>Xbox Live 동시 사용량 현황 데이터 가져오기
 
 
 Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 시간 범위 동안 매분, 매시간, 매일 [Xbox Live 지원 게임](https://docs.microsoft.com/gaming/xbox-live/index.md)을 플레이하는 평균 고객 수에 대한 근 실시간 사용 데이터(5~15분의 대기 시간이 있음)를 가져옵니다. 이 정보를 사용할 수 있습니다 합니다 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 파트너 센터에서.

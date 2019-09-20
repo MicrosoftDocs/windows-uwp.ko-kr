@@ -579,7 +579,7 @@
                           href: ../monetize/get-xbox-live-club-data.md
                         - name: Xbox Live 멀티 플레이 데이터 가져오기
                           href: ../monetize/get-xbox-live-multiplayer-data.md
-                        - name: Xbox Live 동시 사용 데이터 가져오기
+                        - name: Xbox Live 동시 사용량 현황 데이터 가져오기
                           href: ../monetize/get-xbox-live-concurrent-usage-data.md
             - name: 리뷰에 응답
               href: ../monetize/respond-to-reviews-using-windows-store-services.md
