@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: bc591f66505fa6e7019cb37fed636700d8dec709
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 5905c494babfcbbe8dd93b85e30602ef490fcc81
+ms.sourcegitcommit: f0588a086cf2499968bf03b10c6bce5f518e90cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393594"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71141941"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -31,7 +31,10 @@ Windows 앱의 [패키지 매니페스트에서](https://docs.microsoft.com/uwp/
 
 ## <a name="general-use-capabilities"></a>범용 접근 권한 값
 
-범용 접근 권한 값은 대부분의 앱 시나리오에 적용됩니다.
+일반적인 사용 기능은 앱 패키지 매니페스트에 **기능** 요소를 사용 하 여 지정 합니다. 이러한 기능은 가장 일반적인 앱 시나리오에 적용 됩니다.
+
+> [!NOTE]
+> 모든 **기능** 요소는 패키지 매니페스트의 기능 노드 아래에 있는 모든 [Customcapability](#custom-capabilities) 및 [DeviceCapability](#device-capabilities) 요소 앞에와 야 합니다.
 
 | 접근 권한 값 시나리오 | 접근 권한 값 사용 |
 |---------------------|------------------|
@@ -59,10 +62,10 @@ Windows 앱의 [패키지 매니페스트에서](https://docs.microsoft.com/uwp/
 
 ## <a name="device-capabilities"></a>장치 접근 권한 값
 
-장치 접근 권한 값은 앱이 주변 장치 및 내부 장치에 액세스할 수 있게 합니다. 장치 접근 권한 값은 앱 패키지 매니페스트의 **DeviceCapability** 요소를 사용하여 지정합니다. 이 요소에는 추가 자식 요소가 필요할 수 있으며 일부 장치 접근 권한 값을 패키지 매니페스트에 수동으로 추가해야 합니다. 자세한 내용은 [패키지 매니페스트에서 장치 접근 권한 값을 지정하는 방법](https://docs.microsoft.com/uwp/schemas/appxpackage/how-to-specify-device-capabilities-in-a-package-manifest) 및 [**DeviceCapability Schema reference**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-devicecapability)를 참조하세요.
+장치 접근 권한 값은 앱이 주변 장치 및 내부 장치에 액세스할 수 있게 합니다. 장치 기능은 앱 패키지 매니페스트의 **DeviceCapability** 요소를 사용 하 여 지정 됩니다. 이 요소에는 추가 자식 요소가 필요할 수 있으며 일부 장치 접근 권한 값을 패키지 매니페스트에 수동으로 추가해야 합니다. 자세한 내용은 [패키지 매니페스트에서 장치 접근 권한 값을 지정하는 방법](https://docs.microsoft.com/uwp/schemas/appxpackage/how-to-specify-device-capabilities-in-a-package-manifest) 및 [**DeviceCapability Schema reference**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-devicecapability)를 참조하세요.
 
 > [!NOTE]
-> **기능** 요소 아래에 여러 **DeviceCapability** 및 **기능** 요소를 포함할 수 있지만 모든 **DeviceCapability** 요소가 **기능** 요소 다음에와 야 합니다.
+> 패키지 매니페스트의 **기능** 요소 아래에 여러 개의 **DeviceCapability** 요소가 있을 수 있습니다. 모든 **DeviceCapability** 요소는 모든 **기능** 및 [customcapability](#custom-capabilities) 요소 뒤에와 야 합니다.
 
 | 접근 권한 값 시나리오 | 접근 권한 값 사용 |
 |---------------------|------------------|
@@ -107,6 +110,9 @@ Windows 앱의 [패키지 매니페스트에서](https://docs.microsoft.com/uwp/
 </Capabilities>
 </Package>
 ```
+
+> [!NOTE]
+> 모든 제한 된 기능 요소는 패키지 매니페스트의 기능 노드 아래에 있는 모든 [Customcapability](#custom-capabilities) 및 [DeviceCapability](#device-capabilities) 요소 앞에와 야 합니다.
 
 ### <a name="restricted-capability-approval-process"></a>제한된 접근 권한 값 승인 프로세스
 
@@ -243,6 +249,9 @@ Windows 기술 계정 관리자 (TAM)가 있는 경우 TAM을 사용 하 여 액
 </Capabilities>
 </Package>
 ```
+
+> [!NOTE]
+> 모든 **Customcapability** 요소는 모든 **기능** 요소 뒤와 패키지 매니페스트의 **기능** 노드 아래에 있는 [DeviceCapability](#device-capabilities) 요소 앞에와 야 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
