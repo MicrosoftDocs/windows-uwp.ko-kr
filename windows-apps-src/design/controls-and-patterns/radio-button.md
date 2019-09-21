@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 91903365a258d54804b420cd217dd7c25d79406a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: f623c18db5af8e503965c0c4518e35e263791a51
+ms.sourcegitcommit: 61194375c0889b73ee2b978c444c4b90a576b3e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63813704"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039151"
 ---
 # <a name="radio-buttons"></a>라디오 단추
 
@@ -187,14 +187,20 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 ![라디오 단추에 대한 간격 지침](images/radiobutton-redlines.png)
 
+## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
+
 ## <a name="related-topics"></a>관련 항목
 
-**디자이너용**
+### <a name="for-designers"></a>디자이너용
+
 - [단추](buttons.md)
 - [토글 스위치](toggles.md)
 - [확인란](checkbox.md)
 - [목록과 콤보 상자](lists.md)
 - [슬라이더](slider.md)
 
-**개발자용(XAML)**
+### <a name="for-developers-xaml"></a>개발자용(XAML)
+
 - [RadioButton 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.radiobutton)
