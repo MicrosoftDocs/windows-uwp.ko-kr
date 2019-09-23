@@ -169,6 +169,8 @@
           href: controls-and-patterns/navigationview.md
         - name: Pivot
           href: controls-and-patterns/pivot.md
+        - name: 탭 보기
+          href: controls-and-patterns/tab-view.md
     - name: 피플
       items:
         - name: 연락처 카드
