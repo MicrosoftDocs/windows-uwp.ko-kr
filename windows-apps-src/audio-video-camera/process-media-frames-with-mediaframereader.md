@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b77fb147ab614b19993700d5d99572f0247d54e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3f2442647d39c4142b50c0a2a9b1fbc2c0eb66ca
+ms.sourcegitcommit: be519a7ecff53696b853754c879db32be9a53289
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318276"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69544919"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 
@@ -44,11 +44,11 @@ ms.locfileid: "67318276"
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>프레임 원본과 프레임 원본 그룹 선택
-미디어 프레임을 처리하는 대부분의 앱은 장치의 색과 깊이 카메라 등 여러 원본의 프레임을 한 번에 가져와야 합니다. 합니다 [ **MediaFrameSourceGroup** ](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) 개체 동시에 사용할 수 있는 미디어 프레임 원본 집합을 나타냅니다. 정적 메서드 [**MediaFrameSourceGroup.FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.findallasync)를 호출하여 현재 장치에서 지원하는 모든 프레임 원본 그룹의 목록을 가져옵니다.
+미디어 프레임을 처리하는 대부분의 앱은 장치의 색과 깊이 카메라 등 여러 원본의 프레임을 한 번에 가져와야 합니다. [**Mediaframesourcegroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) 개체는 동시에 사용할 수 있는 미디어 프레임 원본 집합을 나타냅니다. 정적 메서드 [**MediaFrameSourceGroup.FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.findallasync)를 호출하여 현재 장치에서 지원하는 모든 프레임 원본 그룹의 목록을 가져옵니다.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-만들 수도 있습니다는 [ **DeviceWatcher** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) 사용 하 여 [ **DeviceInformation.CreateWatcher** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) 에서반환되는값및[ **MediaFrameSourceGroup.GetDeviceSelector** ](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) 전원 경우에 외부 카메라 같은 장치 변경 내용에 사용할 수 있는 프레임 원본 그룹화 할 때 알림을 받을 수 있습니다. 자세한 내용은 [**장치 열거**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices)를 참조하세요.
+Devicewatcher을 사용 하 여 [**Devicewatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) 를 만들 수도 있습니다 [ **. createwatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) 와 장치에서 사용 가능한 프레임 소스 그룹이 있는 경우 알림을 받기 위해 [**wdeviceselector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) 에서 반환 된 값 외부 카메라가 연결 된 경우와 같은 변경 자세한 내용은 [**장치 열거**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices)를 참조하세요.
 
 [  **MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup)에는 그룹에 포함된 프레임 원본을 설명하는 [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceInfo) 개체 컬렉션이 있습니다. 장치에서 사용할 수 있는 프레임 원본 그룹을 검색한 후에는 원하는 프레임 원본을 노출하는 그룹을 선택할 수 있습니다.
 
@@ -79,12 +79,12 @@ ms.locfileid: "67318276"
 
 [!code-cs[DeclareMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetDeclareMediaCapture)]
 
-생성자를 호출하여 **MediaCapture** 개체의 인스턴스를 만듭니다. 다음으로 **MediaCapture** 개체를 초기화하는 데 사용할 [**MediaCaptureSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSettings) 개체를 만듭니다. 이 예제에서는 다음 설정이 사용됩니다.
+생성자를 호출하여 **MediaCapture** 개체의 인스턴스를 만듭니다. 그런 다음 **MediaCapture** 개체를 초기화 하는 데 사용 되는 [**MediaCaptureInitializationSettings**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings) 개체를 만듭니다. 이 예제에서는 다음 설정이 사용됩니다.
 
-* [**해당 원본 그룹이** ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sourcegroup) -이렇게 하면 시스템 프레임을 사용 하 여가 소스 그룹입니다. 원본 그룹은 동시에 사용할 수 있는 미디어 프레임 원본 집합을 정의합니다.
-* [**SharingMode** ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode) -이렇게 하면 모든 속성 시스템 캡처 원본 장치에 대 한 독점적인 제어권을 해야 하는지 여부입니다. 이 값을 [**ExclusiveControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 생성할 프레임 형식 등의 캡처 장치 설정을 변경할 수 있다는 의미입니다. 그러나 다른 앱에서 이미 단독으로 제어하는 경우 미디어 캡처 장치를 초기화하려고 하면 오류가 발생합니다. 이 값을 [**SharedReadOnly**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 다른 앱에서 사용되어도 프레임 원본의 프레임을 수신할 수 있지만 장치의 설정을 변경할 수는 없습니다.
-* [**MemoryPreference** ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.memorypreference) -지정 된 경우 [ **CPU**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureMemoryPreference)시스템에서 프레임 도착 했을 때이 보장 하는 CPU 메모리 사용,으로 사용할 수 있습니다 [  **SoftwareBitmap** ](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 개체입니다. [  **Auto**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureMemoryPreference)로 지정할 경우 시스템에서는 프레임을 저장하는 데 가장 적합한 메모리 위치를 동적으로 선택합니다. 시스템에서 GPU 메모리를 사용하도록 선택한 경우 미디어 프레임이 **SoftwareBitmap**이 아닌 [**IDirect3DSurface**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) 개체로 수신됩니다.
-* [**StreamingCaptureMode** ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.streamingcapturemode) -이 값을 설정 [ **비디오** ](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.StreamingCaptureMode) 를 나타내는 해당 오디오를 스트리밍할 수 필요가 없습니다.
+* [**Sourcegroup**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sourcegroup) -이는 프레임을 가져오는 데 사용 하는 원본 그룹을 시스템에 알려 줍니다. 원본 그룹은 동시에 사용할 수 있는 미디어 프레임 원본 집합을 정의합니다.
+* [**SharingMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode) -캡처 원본 장치를 독점적으로 제어 해야 하는지 여부를 시스템에 알려 줍니다. 이 값을 [**ExclusiveControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 생성할 프레임 형식 등의 캡처 장치 설정을 변경할 수 있다는 의미입니다. 그러나 다른 앱에서 이미 단독으로 제어하는 경우 미디어 캡처 장치를 초기화하려고 하면 오류가 발생합니다. 이 값을 [**SharedReadOnly**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 다른 앱에서 사용되어도 프레임 원본의 프레임을 수신할 수 있지만 장치의 설정을 변경할 수는 없습니다.
+* [**MemoryPreference**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.memorypreference) - [**cpu**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureMemoryPreference)를 지정 하는 경우 시스템은 cpu 메모리를 사용하여 프레임이 도착할 때 이를 보장 하는 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 개체를 사용할 수 있습니다. [  **Auto**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureMemoryPreference)로 지정할 경우 시스템에서는 프레임을 저장하는 데 가장 적합한 메모리 위치를 동적으로 선택합니다. 시스템에서 GPU 메모리를 사용하도록 선택한 경우 미디어 프레임이 **SoftwareBitmap**이 아닌 [**IDirect3DSurface**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) 개체로 수신됩니다.
+* [**StreamingCaptureMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.streamingcapturemode) -오디오를 스트리밍할 필요가 없음을 나타내려면 [**비디오**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.StreamingCaptureMode) 로 설정 합니다.
 
 [  **InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.initializeasync)를 호출하여 **MediaCapture**를 원하는 설정으로 초기화합니다. 초기화가 실패하는 경우 *try* 블록 내에서 호출해야 합니다.
 
@@ -252,7 +252,7 @@ Windows 버전 1709부터 XAML 페이지의 **[MediaPlayerElement](https://docs.
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture를 사용 하는 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)
  
 

@@ -1,31 +1,32 @@
 ---
-title: C++로 Windows 런타임 구성 요소 만들기
-description: C#, Visual Basic, C++ 또는 Javascript를 사용하여 작성된 유니버설 Windows 앱에서 호출할 수 있는 구성 요소인 Windows 런타임 구성 요소를 만들기 위해 C++/CX를 사용하는 방법을 보여 줍니다.
+title: C++/CX가 포함된 Windows 런타임 구성 요소
+description: 이 항목에서는 C++/CX를 사용하여 Windows 런타임 언어를 통해 빌드된 유니버설 Windows 앱에서 호출할 수 있는 구성 요소인 Windows 런타임 구성 요소&mdash;를 만드는 방법을 보여줍니다.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a5f02a57d21a5c9fffa2040831667d87c68cd1fd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e6cec29594405bb9a77a9b16805d2ac5a73c13cf
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372065"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393737"
 ---
-# <a name="creating-windows-runtime-components-in-ccx"></a>C++/CX로 Windows 런타임 구성 요소 만들기
+# <a name="windows-runtime-components-with-ccx"></a>C++/CX가 포함된 Windows 런타임 구성 요소
+
 > [!NOTE]
-> 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. 사용 하 여 Windows 런타임 구성 요소를 만드는 방법에 알아보려면 C++/WinRT를 참조 하세요 [에서 이벤트를 작성 C++/WinRT](../cpp-and-winrt-apis/author-events.md)합니다.
+> 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. /Winrt를 사용 하 여 C++Windows 런타임 구성 요소를 만드는 방법에 대 한 자세한 내용은 [/Winrt의 C++Author 이벤트](../cpp-and-winrt-apis/author-events.md)를 참조 하세요.
 
-C#, Visual Basic, C++ 또는 Javascript를 사용하여 작성된 유니버설 Windows 앱에서 호출할 수 있는 구성 요소인 Windows 런타임 구성 요소를 만들기 위해 C++/CX를 사용하는 방법을 보여 줍니다.
+이 항목에서는/cx를 사용 C++하 여 Windows 런타임 언어 (&mdash;C#, Visual Basic, C++또는 Javascript)를 사용 하 여 빌드된 유니버설 Windows 앱에서 호출할 수 있는 구성 요소 Windows 런타임 구성 요소를 만드는 방법을 보여 줍니다.
 
-Windows 런타임 구성 요소를 구축 하기 위한 몇 가지 이유가 있습니다.
+Windows 런타임 구성 요소를 작성 하는 데는 여러 가지 이유가 있습니다.
 - 복잡하거나 많은 계산이 필요한 작업에서 C++의 성능 이점을 얻을 수 있습니다.
 - 이미 작성되고 테스트된 코드를 다시 사용할 수 있습니다.
 
 JavaScript 또는 .NET 프로젝트와 Windows 런타임 구성 요소 프로젝트가 포함된 솔루션을 빌드할 때, JavaScript 프로젝트 파일 및 컴파일된 DLL이 하나의 패키지로 병합되어 시뮬레이터에서 로컬로 또는 테더링된 디바이스에서 원격으로 디버그할 수 있습니다. 또한 구성 요소 프로젝트만 확장 SDK로 배포할 수 있습니다. 자세한 내용은 [소프트웨어 개발자 키트 만들기](https://docs.microsoft.com/visualstudio/extensibility/creating-a-software-development-kit?view=vs-2015)를 참조하세요.
 
-코딩할 때 일반적으로 사용자 C++/CX 구성 요소를 일반을 사용 하 여 C++ 라이브러리 및 기본 제공 형식 전달 하는 코드에서 데이터를 다른.winmd 패키지의 추상 ABI (이진 인터페이스) 경계에서 제외 합니다. 여기에서 Windows 런타임 형식 및 특수 구문을 사용 하는 C++/CX 만들고 해당 형식을 조작 하기 위한 지원 합니다. 또한에 C++/CX 코드, JavaScript, Visual Basic에서에서 구성 요소에서 발생 하 고 처리할 수 있는 이벤트를 구현 하는 대리자와 이벤트 같은 유형 사용 하 여 C++, 또는 C#합니다. 에 대 한 자세한 내용은 C++/CX 구문을 참조 하세요 [Visual C++ 언어 참조 (C++/CX)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)합니다.
+일반적으로 C++/cx 구성 요소를 코딩할 때 다른 winmd 패키지의 코드 C++ 에서 데이터를 전달 하는 ABI (추상 이진 인터페이스) 경계를 제외 하 고 일반 라이브러리 및 기본 제공 형식을 사용 합니다. 여기에서 이러한 형식을 만들고 조작 하는 데 지원 C++되는 Windows 런타임 형식 및 특수 구문이 사용 됩니다. 또한 C++/cx 코드에서 대리자 및 이벤트와 같은 형식을 사용 하 여 구성 요소에서 발생 하 고 JavaScript에서 처리 될 수 있는 이벤트를 구현 하거나, Visual Basic C++, 또는 C#를 사용 합니다. /Cx 구문에 대 한 자세한 내용은 [/cx (C++시각적 C++ 언어 참조)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)를 참조 하세요. C++
 
 ## <a name="casing-and-naming-rules"></a>대/소문자 표기 및 명명 규칙
 
@@ -73,7 +74,7 @@ ResultText.Text = num.ToString();
 ## <a name="ccx-built-in-types-library-types-and-windows-runtime-types"></a>C++/CX 기본 제공 형식, 라이브러리 형식 및 Windows 런타임 형식
 활성화 가능한 클래스(ref 클래스라고도 함)는 JavaScript, C# 또는 Visual Basic과 같은 다른 언어에서 인스턴스화할 수 있습니다. 다른 언어에서 사용할 수 있으려면 구성 요소에 하나 이상의 활성화 가능한 클래스가 포함되어야 합니다.
 
-Windows 런타임 구성 요소에는 여러 활성화 가능한 공용 클래스와 구성 요소에 내부적으로만 알려진 추가 클래스가 포함될 수 있습니다. 적용 된 [WebHostHidden](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.webhosthiddenattribute) 특성을 C++/CX 형식에는 JavaScript에 표시 되지 않아야 합니다.
+Windows 런타임 구성 요소에는 여러 활성화 가능한 공용 클래스와 구성 요소에 내부적으로만 알려진 추가 클래스가 포함될 수 있습니다. JavaScript에 표시 되지 않는 C++/cx 형식에 [WebHostHidden](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.webhosthiddenattribute) 특성을 적용합니다.
 
 모든 공용 클래스는 구성 요소 메타데이터 파일과 같은 이름을 가진 같은 루트 네임스페이스에 있어야 합니다. 예를 들어 A.B.C.MyClass라는 클래스는 A.winmd 또는 A.B.winmd 또는 A.B.C.winmd라는 메타데이터 파일에서 정의된 경우에만 인스턴스화할 수 있습니다. .winmd 파일 이름과 일치시키기 위해 DLL의 이름은 필요하지 않습니다.
 
@@ -81,7 +82,7 @@ Windows 런타임 구성 요소에는 여러 활성화 가능한 공용 클래�
 
 활성화 가능한 클래스는 **public ref class sealed**로 선언해야 합니다. **ref class** 키워드가 컴파일러에게 Windows 런타임 호환 형식으로 클래스를 만들도록 지시하면 봉인된 키워드는 클래스가 상속될 수 없다고 지정합니다. Windows 런타임은 현재 유니버설 상속 모델을 지원하지 않고, 제한된 상속 모델이 사용자 지정 XAML 컨트롤의 생성을 지원합니다. 자세한 내용은 [Ref 클래스 및 구조(C++/CX)](https://docs.microsoft.com/cpp/cppcx/ref-classes-and-structs-c-cx)를 참조하세요.
 
-에 대 한 C++/CX 모든 기본 숫자 형식을 기본 네임 스페이스에서 정의 됩니다. 합니다 [플랫폼](https://docs.microsoft.com/cpp/cppcx/platform-namespace-c-cx) 네임 스페이스는 포함 C++/CX 클래스는 Windows 런타임 형식 시스템. 여기에는 [Platform::String](https://docs.microsoft.com/cpp/cppcx/platform-string-class) 클래스 및 [Platform::Object](https://docs.microsoft.com/cpp/cppcx/platform-object-class) 클래스가 포함됩니다. [Platform::Collections::Map](https://docs.microsoft.com/cpp/cppcx/platform-collections-map-class) 클래스 및 [Platform::Collections::Vector](https://docs.microsoft.com/cpp/cppcx/platform-collections-vector-class) 클래스와 같은 구체적인 컬렉션 형식은 [Platform::Collections](https://docs.microsoft.com/cpp/cppcx/platform-collections-namespace) 네임스페이스에서 정의됩니다. 이러한 형식이 구현하는 공용 인터페이스는 [Windows::Foundation::Collections 네임스페이스(C++/CX)](https://docs.microsoft.com/cpp/cppcx/windows-foundation-collections-namespace-c-cx)에서 정의됩니다. 이러한 인터페이스 형식이 JavaScript, C# 및 Visual Basic에서 사용하는 형식입니다. 자세한 내용은 [형식 시스템(C++/CX)](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx)을 참조하세요.
+/Cx C++의 경우 모든 숫자 기본 형식은 기본 네임 스페이스에 정의 됩니다. [Platform](https://docs.microsoft.com/cpp/cppcx/platform-namespace-c-cx) 네임 스페이스는 C++Windows 런타임 형식 시스템과 관련 된/cx 클래스를 포함 합니다. 여기에는 [Platform::String](https://docs.microsoft.com/cpp/cppcx/platform-string-class) 클래스 및 [Platform::Object](https://docs.microsoft.com/cpp/cppcx/platform-object-class) 클래스가 포함됩니다. [Platform::Collections::Map](https://docs.microsoft.com/cpp/cppcx/platform-collections-map-class) 클래스 및 [Platform::Collections::Vector](https://docs.microsoft.com/cpp/cppcx/platform-collections-vector-class) 클래스와 같은 구체적인 컬렉션 형식은 [Platform::Collections](https://docs.microsoft.com/cpp/cppcx/platform-collections-namespace) 네임스페이스에서 정의됩니다. 이러한 형식이 구현하는 공용 인터페이스는 [Windows::Foundation::Collections 네임스페이스(C++/CX)](https://docs.microsoft.com/cpp/cppcx/windows-foundation-collections-namespace-c-cx)에서 정의됩니다. 이러한 인터페이스 형식이 JavaScript, C# 및 Visual Basic에서 사용하는 형식입니다. 자세한 내용은 [형식 시스템(C++/CX)](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx)을 참조하세요.
 
 ## <a name="method-that-returns-a-value-of-built-in-type"></a>기본 제공 형식의 값을 반환하는 메서드
 ```cpp
@@ -127,7 +128,7 @@ namespace CppComponent
 }
 ```
 
-Abi 전반에서 사용자 정의 값 구조체를 전달 하려면 C +에 정의 된 값 구조체와 동일한 멤버를 가진 JavaScript 개체를 정의 + CX 합니다. 해당 개체를 인수로 전달할 수 있습니다는 C++/CX 메서드 개체는 암시적으로 변환 하는 C++/CX 형식.
+ABI를 통해 사용자 정의 값 구조체를 전달 하려면/Cx에 C++정의 된 값 struct와 동일한 멤버를 포함 하는 JavaScript 개체를 정의 합니다. 그런 다음 해당 개체를 C++/cx 메서드에 인수로 전달 하 여 개체를 C++/cx 형식으로 암시적으로 변환할 수 있습니다.
 
 ```javascript
 // Get and set the value struct
@@ -146,7 +147,7 @@ function GetAndSetPlayerData() {
 
 다른 접근 방식은 IPropertySet(표시되지 않음)를 구현하는 클래스를 정의하는 것입니다.
 
-.NET 언어에서 방금 만든 C +에 정의 된 형식의 변수 + CX 구성 요소입니다.
+.NET 언어에서는 C++/cx 구성 요소에 정의 된 형식의 변수를 만듭니다.
 
 ```csharp
 private void GetAndSetPlayerData()
@@ -172,7 +173,7 @@ private void GetAndSetPlayerData()
 ```
 
 ## <a name="overloaded-methods"></a>오버로드된 메서드
-C++/CX public ref 클래스는 오버 로드 된 메서드를 포함할 수 있지만 JavaScript는 오버 로드 된 메서드를 구분 하는 기능이 제한적입니다. 예를 들어 다음 서명 간의 차이는 구분할 수 있습니다.
+/Cx C++public ref 클래스는 오버 로드 된 메서드를 포함할 수 있지만 JavaScript는 오버 로드 된 메서드를 구분 하는 기능을 제한 합니다. 예를 들어 다음 서명 간의 차이는 구분할 수 있습니다.
 
 ```cpp
 public ref class NumberClass sealed
@@ -202,10 +203,10 @@ document.getElementById('P4').innerHTML = num;
 ```
 
 ## <a name="net"></a>.NET
-오버 로드를 인식 하는.NET 언어는 C++.NET Framework 클래스와 마찬가지로 /CX ref 클래스입니다.
+.NET 언어는 모든 .NET 클래스에서 C++와 마찬가지로/cx ref 클래스의 오버 로드를 인식 합니다.
 
-## <a name="datetime"></a>Datetime
-Windows 런타임에서 [Windows::Foundation::DateTime](https://docs.microsoft.com/uwp/api/windows.foundation.datetime) 개체는 단지 1601년 1월 1일 전 또는 후의 100나노초 간격 수를 나타내는 64비트의 부호 있는 정수입니다. Windows:Foundation::DateTime 개체에는 메서드가 없습니다. 대신, 각 언어가 해당 언어에 기본이 되는 방식(JavaScript는 Date 개체이고 .NET Framework는 System.DateTime과 System.DateTimeOffset 형식)으로 DateTime을 프로젝트합니다.
+## <a name="datetime"></a>DateTime
+Windows 런타임에서 [Windows::Foundation::DateTime](https://docs.microsoft.com/uwp/api/windows.foundation.datetime) 개체는 단지 1601년 1월 1일 전 또는 후의 100나노초 간격 수를 나타내는 64비트의 부호 있는 정수입니다. Windows:Foundation::DateTime 개체에는 메서드가 없습니다. 대신 각 언어는 해당 언어에 대 한 기본 형식으로 DateTime을 프로젝션 합니다. JavaScript의 Date 개체와 .NET의 system.string 및 system.string 형식입니다.
 
 ```cpp
 public  ref class MyDateClass sealed
@@ -221,7 +222,7 @@ public:
 };
 ```
 
-날짜/시간 값에서 C + 전달 하는 경우 + javascript /CX, JavaScript 날짜 개체로 허용 및 long 형식의 날짜 문자열로 서 기본적으로 표시 합니다.
+/Cx에서 C++Javascript로 DateTime 값을 전달 하면 javascript는 해당 값을 날짜 개체로 받아들이고 기본적으로 긴 날짜 문자열로 표시 합니다.
 
 ```javascript
 function SetAndGetDate() {
@@ -238,7 +239,7 @@ function SetAndGetDate() {
 }
 ```
 
-.NET 언어는 C + System.DateTime를 전달 하는 경우 + CX 구성 요소 메서드 수락을 Windows::Foundation::DateTime로 합니다. 구성 요소가 Windows::Foundation::DateTime을 .NET Framework 메서드로 전달하면 Framework 메서드는 이 값을 DateTimeOffset으로 수락합니다.
+.NET 언어가 시스템. DateTime을 C++/cx 구성 요소에 전달 하는 경우 메서드는이를 Windows:: Foundation::D atetime으로 받아들입니다. 구성 요소가 Windows:: Foundation::D ateTime을 .NET 메서드에 전달할 때 프레임 워크 메서드는이를 DateTimeOffset으로 받아들입니다.
 
 ```csharp
 private void DateTimeExample()
@@ -259,7 +260,7 @@ private void DateTimeExample()
 ```
 
 ## <a name="collections-and-arrays"></a>컬렉션 및 배열
-컬렉션은 항상 ABI 경계 전반에서 Windows::Foundation::Collections::IVector^ 및 Windows::Foundation::Collections::IMap^과 같은 Windows 런타임 형식에 핸들로 전달됩니다. 예를 들어 핸들을 Platform::Collections::Map으로 반환하는 경우 이것이 Windows::Foundation::Collections::IMap^으로 암시적으로 변환됩니다. 컬렉션 인터페이스는 별개의 C + 네임 스페이스에 정의 된 + 구체적 구현을 제공 하는 CX 클래스입니다. JavaScript와 .NET 언어는 인터페이스를 사용합니다. 자세한 내용은 [컬렉션(C++/CX)](https://docs.microsoft.com/cpp/cppcx/collections-c-cx) 및 [배열과 WriteOnlyArray(C++/CX)](https://docs.microsoft.com/cpp/cppcx/array-and-writeonlyarray-c-cx)를 참조하세요.
+컬렉션은 항상 ABI 경계 전반에서 Windows::Foundation::Collections::IVector^ 및 Windows::Foundation::Collections::IMap^과 같은 Windows 런타임 형식에 핸들로 전달됩니다. 예를 들어 핸들을 Platform::Collections::Map으로 반환하는 경우 이것이 Windows::Foundation::Collections::IMap^으로 암시적으로 변환됩니다. 컬렉션 인터페이스는 구체적 구현을 제공 하는 C++/cx 클래스와는 별개의 네임 스페이스에서 정의 됩니다. JavaScript와 .NET 언어는 인터페이스를 사용합니다. 자세한 내용은 [컬렉션(C++/CX)](https://docs.microsoft.com/cpp/cppcx/collections-c-cx) 및 [배열과 WriteOnlyArray(C++/CX)](https://docs.microsoft.com/cpp/cppcx/array-and-writeonlyarray-c-cx)를 참조하세요.
 
 ## <a name="passing-ivector"></a>IVector 전달
 ```cpp
@@ -345,7 +346,7 @@ private void GetDictionary()
 ```
 
 ## <a name="properties"></a>속성
-Public ref 클래스에서 C++/CX 구성 요소 확장 속성 키워드를 사용 하 여 public 데이터 멤버 속성으로 노출 합니다. 개념은 .NET Framework 속성과 동일합니다. Trivial 속성은 그 기능이 암시적이므로 데이터 멤버와 비슷합니다. NSEOTrivial이 아닌 속성은 명시적인 get 및 set 접근자와 해당 값에 대한 "백업 저장소"인 명명된 프라이빗 변수가 있습니다. 이 예제에서는 private 멤버 변수 \_propertyAValue PropertyA에 대 한 백업 저장소입니다. 속성은 값이 변경될 때 이벤트를 발생시킬 수 있으며 클라이언트 앱은 해당 이벤트를 받도록 등록할 수 있습니다.
+/Cx 구성 요소 확장의 C++public ref 클래스는 property 키워드를 사용 하 여 public 데이터 멤버를 속성으로 노출 합니다. 개념은 .NET 속성과 동일 합니다. Trivial 속성은 그 기능이 암시적이므로 데이터 멤버와 비슷합니다. NSEOTrivial이 아닌 속성은 명시적인 get 및 set 접근자와 해당 값에 대한 "백업 저장소"인 명명된 프라이빗 변수가 있습니다. 이 예제에서 private 멤버 변수 \_propertyavalue는 propertya에 대 한 백업 저장소입니다. 속성은 값이 변경될 때 이벤트를 발생시킬 수 있으며 클라이언트 앱은 해당 이벤트를 받도록 등록할 수 있습니다.
 
 ```cpp
 //Properties
@@ -392,7 +393,7 @@ nativeObject.propertyB = "What is the meaning of the universe?";
 document.getElementById('P9').innerHTML += nativeObject.propertyB;
 ```
 
-.NET 언어는 기본 속성에 액세스 C++.NET Framework 개체의 경우 처럼 /CX 개체입니다.
+.Net 언어는 .NET 개체의 경우와 C++마찬가지로 네이티브/cx 개체의 속성에 액세스 합니다.
 
 ```csharp
 private void GetAProperty()
@@ -443,7 +444,7 @@ function Button_Click() {
 }
 ```
 
-.NET 언어에서 C++ 구성 요소의 이벤트를 구독하는 것은 .NET Framework 클래스의 이벤트를 구독하는 것과 동일합니다.
+.NET 언어에서 C++ 구성 요소의 이벤트를 구독 하는 것은 .net 클래스에서 이벤트를 구독 하는 것과 같습니다.
 
 ```csharp
 //Subscribe to event and call method that causes it to be fired.
@@ -507,7 +508,7 @@ nativeObject.fireEvent("The answer is ");
 C#에서는 이전 예제에 표시된 대로 += 연산자를 사용하여 임의 개수의 이벤트 처리기가 이벤트를 구독할 수 있습니다.
 
 ## <a name="enums"></a>열거형
-Windows 런타임 열거형을 C++/CX 공용 클래스 열거형;를 사용 하 여 선언 됩니다 표준에 범위가 지정 된 열거형과 비슷합니다 C++입니다.
+/Cx의 C++Windows 런타임 열거형은 public 클래스 열거를 사용 하 여 선언 됩니다. 표준 C++의 범위가 지정 된 열거형과 유사 합니다.
 
 ```cpp
 public enum class Direction {North, South, East, West};
@@ -525,7 +526,7 @@ private:
 };
 ```
 
-C + 사이 열거형 값 전달 + CX 및 정수로 JavaScript입니다. C +와 같은 명명 된 값을 포함 하는 JavaScript 개체를 선택적으로 선언할 수 + /CX 열거형을 사용 하 여 그대로 따릅니다.
+열거형 값은/Cx와 C++JavaScript 간에 정수로 전달 됩니다. 선택적으로 같은 명명 된 값을 포함 하는 JavaScript 개체를 C++/cx 열거형으로 선언 하 고 다음과 같이 사용할 수 있습니다.
 
 ```javascript
 var Direction = { 0: "North", 1: "South", 2: "East", 3: "West" };
@@ -537,12 +538,12 @@ document.getElementById('P13').innerHTML =
 Direction[curDirection];
 ```
 
-C# 및 Visual Basic 둘 다 열거에 대해 언어를 지원합니다. 이러한 언어는 .NET Framework 열거를 표시할 때와 마찬가지로 C++ 공용 열거 클래스를 표시합니다.
+C# 및 Visual Basic 둘 다 열거에 대해 언어를 지원합니다. 이러한 언어는 .NET C++ 열거형이 표시 되는 것 처럼 public enum 클래스를 참조 합니다.
 
 ## <a name="asynchronous-methods"></a>비동기 메서드
 다른 Windows 런타임 개체에서 제공하는 비동기 메서드를 사용하려면 [작업 클래스(동시성 런타임)](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-class)를 사용합니다. 자세한 내용은 [작업 병렬 처리(동시성 런타임)](https://docs.microsoft.com/cpp/parallel/concrt/task-parallelism-concurrency-runtime)를 참조하세요.
 
-C + 비동기 메서드를 구현 하 + /CX를 사용 하 여는 [만들\_비동기](https://docs.microsoft.com/cpp/parallel/concrt/reference/concurrency-namespace-functions?view=vs-2017) ppltasks.h에 정의 된 함수입니다. 자세한 내용은 [비동기 작업 만들기 C++UWP 앱 용 /CX](https://docs.microsoft.com/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps)합니다. 예를 들어 참조 [연습: C + 기본적인 Windows 런타임 구성 요소 만들기 + CX 및 JavaScript에서 호출 또는 C# ](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)합니다. .NET 언어 사용 C++.NET Framework에 정의 된 비동기 메서드의 경우와 마찬가지로 /CX 비동기 메서드.
+/Cx에서 C++비동기 메서드를 구현 하려면 ppltasks.h에 정의 된 [create\_async](https://docs.microsoft.com/cpp/parallel/concrt/reference/concurrency-namespace-functions?view=vs-2017) 함수를 사용 합니다. 자세한 내용은 [UWP 앱 용/cx에서 C++비동기 작업 만들기](https://docs.microsoft.com/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps)를 참조 하세요. 예제는 [ C++/cx Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출 ](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)하는 연습을 참조 하세요. .Net 언어는 .NET C++에 정의 된 비동기 메서드와 마찬가지로/cx 비동기 메서드를 사용 합니다.
 
 ## <a name="exceptions"></a>예외
 Windows 런타임에서 정의된 모든 예외 형식을 throw할 수 있습니다. 일부 Windows 런타임 예외 형식에서는 사용자 지정 형식을 파생시킬 수 없습니다. 그러나 COMException을 throw하고 예외를 catch하는 코드에서 액세스할 수 있는 사용자 지정 HRESULT를 제공할 수 있습니다. COMException에서 사용자 지정 메시지를 지정할 수 있는 방법이 없습니다.
@@ -552,9 +553,9 @@ Windows 런타임에서 정의된 모든 예외 형식을 throw할 수 있습니
 
 패키지 디자이너에서 적절한 기능을 선택해야 합니다. 예를 들어 Windows 런타임 API를 사용하여 사용자의 사진 라이브러리에서 이미지 파일을 열려고 하는 경우 매니페스트 디자이너의 기능 창에서 사진 라이브러리 확인란을 선택해야 합니다.
 
-JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식하지 못하는 경우 JavaScript에서 카멜식 대/소문자 표기를 사용하고 있는지 확인합니다. 예를 들어 LogCalc C+ + CX 메서드는 JavaScript에서 logCalc로 참조 되어야 합니다.
+JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식하지 못하는 경우 JavaScript에서 카멜식 대/소문자 표기를 사용하고 있는지 확인합니다. 예를 들어 LogCalc C++/cx 메서드는 JavaScript에서 logcalc로 참조 되어야 합니다.
 
-제거 하는 경우는 C++/CX Windows 런타임 구성 요소 프로젝트 솔루션에서 수동으로 제거 해야 JavaScript 프로젝트에서 프로젝트 참조 합니다. 이렇게 하지 않으면 이후 디버그 또는 빌드 작업을 수행할 수 없습니다. 필요한 경우 DLL에 대한 어셈블리 참조를 추가할 수 있습니다.
+솔루션에서 C++/cx Windows 런타임 구성 요소 프로젝트를 제거 하는 경우에는 JavaScript 프로젝트 에서도 프로젝트 참조를 수동으로 제거 해야 합니다. 이렇게 하지 않으면 이후 디버그 또는 빌드 작업을 수행할 수 없습니다. 필요한 경우 DLL에 대한 어셈블리 참조를 추가할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
-* [연습: C + 기본적인 Windows 런타임 구성 요소 만들기 + CX 및 JavaScript에서 호출 또는C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)
+* [C++/CX Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출하는 연습](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)

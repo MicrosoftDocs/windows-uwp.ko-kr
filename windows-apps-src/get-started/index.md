@@ -6,15 +6,15 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: 시작, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: c3f34d6ff8b23d23589d6899984f53fd6be34aca
-ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
+ms.openlocfilehash: 106e85fc0bd74740d99d5de6cb34c8b5a6e75e0f
+ms.sourcegitcommit: 7791596c25baf9d222729e057ecdf81b45a59f0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67131939"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71205915"
 ---
-# <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작 
- 
+# <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작
+
 <p>모든 Windows 10 디바이스에서 작동하는 앱을 빌드하거나, 새 기능 및 업데이트된 기능을 사용하여 기존 앱을 개선하세요.</p>  
 <ul class="cardsK panelContent">
     <li>
@@ -222,8 +222,7 @@ ms.locfileid: "67131939"
                 <div class="card">
                     <div class="cardText">
                         <h3>개발이 처음인가요?</h3>
-                        <p><a href="//docs.microsoft.com/learn">Microsoft Learn</a></p>
-                        <p><a href="//www.linkedin.com/learning/learning-universal-windows-app-development/welcome">LinkedIn Learning</a></p>
+                        <p><a href="//docs.microsoft.com/en-us/learn/browse/?products=windows&resource_type=module">Microsoft Learn의 Windows</a></p>
                         </div>
                     </div>
                 </div>
@@ -235,7 +234,7 @@ ms.locfileid: "67131939"
                 <div class="card">
                     <div class="cardText">
                         <h3>관련 문서 탐색</h3>
-                        <p><a href="//docs.microsoft.com/dotnet/csharp/index">C# 가이드</a></p>
+                        <p><a href="//docs.microsoft.com/dotnet/csharp/">C# 가이드</a></p>
                         <p><a href="//docs.microsoft.com/visualstudio/ide/">Visual Studio</a></p>
                     </div>
                 </div>
