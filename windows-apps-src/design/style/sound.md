@@ -12,18 +12,34 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d0955e7a018472141b137935c5bc87a9f75a5c6d
-ms.sourcegitcommit: 0c5f81100986cc4b74b54cd1ca2debd283c5b7f6
+ms.openlocfilehash: ce81088495716e43a32dab94d1d47d399dd6a309
+ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375265"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061914"
 ---
 # <a name="sound"></a>소리
 
 ![영웅 이미지](images/header-sound.svg)
 
 소리를 사용하여 앱을 향상시키는 여러 가지 방법이 있습니다. 사용자가 이벤트를 경고음으로 인식할 수 있도록 소리를 사용하여 다른 UI 요소를 보완할 수 있습니다. 소리는 시각 장애가 있는 사용자에게 효과적인 사용자 인터페이스 요소일 수 있습니다. 소리를 사용하여 사용자를 몰입시키는 분위기를 만들 수 있습니다. 예를 들어 퍼즐 게임의 백그라운드에서 기발한 사운드트랙을 재생하거나 공포/서바이벌 게임에 음울한 사운드 효과를 사용할 수 있습니다.
+
+## <a name="examples"></a>예
+
+<table>
+<th align="left">XAML Controls Gallery<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Sound">앱을 열고 Sound가 실제로 작동하는 모습을 확인하세요</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="sound-global-api"></a>소리 전역 API
 
@@ -150,6 +166,10 @@ ElementSoundPlayer.Play(ElementSoundKind.Focus);
 **ElementSound.Focus** 호출에 추가되는 기능으로, 사운드 시스템은 기본적으로 각 탐색 트리거 시 4가지 다른 소리를 순환합니다. 따라서 동일한 포커스 소리가 두 번 연속해서 재생되지 않습니다.
 
 이 순환 기능의 목적은 포커스 소리가 단조롭게 반복되고 사용자가 알아차릴 수 없게 하기 위한 것입니다. 포커스 소리는 가장 자주 재생되므로 가장 감지하기 힘든 소리여야 합니다.
+
+## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 

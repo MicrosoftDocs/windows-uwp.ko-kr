@@ -6,12 +6,12 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: ff88332e0b44749bcd86e06adafeb596ca8678b3
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 1c535e4ea4ad3c93acb048de2050d5ae7a9c2c2b
+ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63820654"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061935"
 ---
 # <a name="control-size-and-density"></a>컨트롤 크기 및 밀도
 
@@ -20,6 +20,22 @@ ms.locfileid: "63820654"
 기본적으로 UWP 앱은 저밀도(또는 `Standard`) 레이아웃을 사용하여 렌더링됩니다. 그러나 WinUI 2.1부터는 정보가 많은 UI와 비슷한 특수 시나리오를 위한 고밀도(또는 `Compact`) 레이아웃 옵션도 지원됩니다. 기본 스타일 리소스를 통해 지정할 수 있습니다(아래 예제 참조).
 
 두 크기 및 밀도 옵션의 기능과 동작은 변경되지 않고 그대로 유지되지만, 두 가지 밀도 옵션을 지원하기 위해 모든 컨트롤의 기본 본문 글꼴 크기가 14픽셀로 업데이트되었습니다. 이 글꼴 크기는 지역과 디바이스에 관계 없이 작동하며 사용자를 위해 애플리케이션의 균형과 사용 편의를 유지합니다.
+
+## <a name="examples"></a>예
+
+<table>
+<th align="left">XAML Controls Gallery<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Compact Sizing">앱을 열고 컴팩트 크기 조정이 실제로 작동하는 모습을 확인하세요</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="fluent-standard-sizing"></a>Fluent 표준 크기
 
@@ -77,6 +93,10 @@ Windows 10 2018년 10월 업데이트(버전 1809)의 경우 모든 사용 시�
     </Grid.Resources>
 </Grid>
 ```
+
+## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 

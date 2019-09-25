@@ -6,12 +6,12 @@ ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 데이터 바인딩, 목록
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c4d339a1eedb798f11d5567be6a48ec2269cf8ac
-ms.sourcegitcommit: 280193dfe5a106fc6b4c85df3ac40535547b855c
+ms.openlocfilehash: a63bcc73be0146a9f580ae3afe3684f85e51d00e
+ms.sourcegitcommit: 88431e67d282d9a2a4fe4afcb254310f90c7cd7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67235160"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127447"
 ---
 # <a name="display-customers-in-a-list"></a>목록에 고객 표시
 
@@ -102,7 +102,7 @@ public sealed partial class MainPage : Page
 
 ## <a name="edit-your-customers-through-the-ui"></a>UI를 통해 고객 편집
 
-목록에 고객을 표시했지만 데이터 B=바인딩으로 더 많은 것을 수행할 수 있습니다. UI에서 어떻게 바로 데이터를 편집할 수 있나요? 이렇게 하려면 먼저에 데이터 바인딩의 세 가지 모드에 대해 살펴보겠습니다.
+목록에 고객을 표시했지만 데이터 바인딩으로 더 많은 것을 수행할 수 있습니다. UI에서 어떻게 바로 데이터를 편집할 수 있나요? 이렇게 하려면 먼저에 데이터 바인딩의 세 가지 모드에 대해 살펴보겠습니다.
 
 * *일회성*: 이 데이터 바인딩은 한 번만 활성화되며 변경에 대응하지 않습니다.
 * *단방향*: 이 데이터 바인딩은 데이터 원본의 변경 내용으로 UI를 업데이트합니다.

@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a275d5c91e03f9eb5b6348cda673d93e7132d7a
-ms.sourcegitcommit: 7ece8a9a9fa75e2e92aac4ac31602237e8b7fde5
+ms.openlocfilehash: 1170b8e1291afd166f210feb291b644d1c7ed546
+ms.sourcegitcommit: e5a154c7b6c1b236943738febdb17a4815853de5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485139"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71164818"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>C++/WinRT를 통한 고급 동시성 및 비동기
 
@@ -219,7 +219,7 @@ co_await static_cast<no_switch>(async);
 
 그러면 C++ 컴파일러에서 **IAsyncXxx**와 일치하는 **await_xxx** 함수 3개를 찾는 대신, **no_switch**와 일치하는 함수를 찾습니다.
 
-## <a name="a-deeper-dive-into-winrtresumeforeground"></a>**winrt::resume_foreground**에 대한 심층 분석
+## <a name="a-deeper-dive-into-winrtresume_foreground"></a>**winrt::resume_foreground**에 대한 심층 분석
 
 [C++/WinRT 2.0](/windows/uwp/cpp-and-winrt-apis/newsnews#news-and-changes-in-cwinrt-20)부터 [**winrt::resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) 함수는 디스패처 스레드에서 호출되더라도 일시 중단됩니다(이전 버전에서는 아직 디스패처 스레드에 없는 경우에만 일시 중단되므로 일부 시나리오에서 교착 상태가 발생할 수 있음).
 
@@ -731,7 +731,7 @@ int main()
 
 비동기 개체가 완료되는 동안 **get** 함수는 무기한 차단됩니다. 비동기 개체는 수명이 매우 짧으므로 필요한 경우가 많습니다.
 
-그러나 이것만으로 충분하지 않은 경우가 있으며, 시간이 좀 경과되면 대기를 중단해야 합니다. 이 코드는 언제든지 Windows 런타임에서 제공하는 구성 요소를 통해 작성할 수 있었습니다. 그러나 이제 C++/WinRT를 사용하면 **wait_for** 함수를 훨씬 더 쉽게 제공할 수 있습니다. 또한 **IAsyncAction**에서도 구현되며, **std::function**에서 제공하는 것과 비슷합니다.
+그러나 이것만으로 충분하지 않은 경우가 있으며, 시간이 좀 경과되면 대기를 중단해야 합니다. 이 코드는 언제든지 Windows 런타임에서 제공하는 구성 요소를 통해 작성할 수 있었습니다. 그러나 이제 C++/WinRT를 사용하면 **wait_for** 함수를 제공하여 훨씬 쉽게 처리할 수 있습니다. 또한 **IAsyncAction**에서도 구현되며, **std::function**에서 제공하는 것과 비슷합니다.
 
 ```cppwinrt
 using namespace std::chrono_literals;
@@ -745,6 +745,9 @@ int main()
     }
 }
 ```
+
+> [!NOTE]
+> **wait_for** 함수는 인터페이스에서 **std::chrono::duration**을 사용하지만, **std::chrono::duration**이 제공하는 범위보다 작은 범위로 제한됩니다(약 49.7일).
 
 다음 예제의 **wait_for**는 약 5초 동안 기다린 후에 완료를 확인합니다. 비교가 양호하면 비동기 개체가 성공적으로 완료되었음을 알 수 있습니다. 일부 결과를 기다리는 경우 **get** 함수를 호출하여 결과를 검색하기만 하면 됩니다.
 
