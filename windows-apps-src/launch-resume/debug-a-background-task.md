@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 11ebd180ebc3bc08b418f3b22ebed190bf73c18d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ad133a9b1eb22695e6ce5d8b3edba9ad3a138b68
+ms.sourcegitcommit: f1261aa6f7eeb62bf770a08b58ec4357bdc20c7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366202"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71224767"
 ---
 # <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 
 
-**중요 한 Api**
+**중요 API**
 -   [Windows.ApplicationModel.Background](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
 Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다.
@@ -42,10 +42,13 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 
 2.  디버거에서 응용 프로그램을 실행한 다음 **수명 주기 이벤트** 도구 모음을 사용하여 백그라운드 작업을 트리거합니다. 이 드롭다운에는 Visual Studio에서 활성화할 수 있는 백그라운드 작업의 이름이 표시됩니다.
 
-    이를 위해서는 백그라운드 작업이 이미 등록되어 있고 여전히 트리거를 대기하고 있어야 합니다. 예를 들어 백그라운드 작업이 원샷 TimeTrigger로 등록되었고 Visual Studio를 통해 작업을 실행해도 아무런 효과가 없습니다.
+> [!NOTE]
+> 수명 주기 이벤트 도구 모음 옵션은 Visual Studio에 기본적으로 표시 되지 않습니다. 이러한 옵션을 표시 하려면 Visual Studio의 현재 도구 모음을 마우스 오른쪽 단추로 클릭 하 고 **디버그 위치** 옵션을 사용 하도록 설정 했는지 확인 합니다.
+
+    For this to work, the background task must already be registered and it must still be waiting for the trigger. For example, if a background task was registered with a one-shot TimeTrigger and that trigger has already fired, launching the task through Visual Studio will have no effect.
 
 > [!Note]
-> 이 방식으로 백그라운드 작업 트리거를 사용 하 여 활성화할 수 없습니다. [**응용 프로그램 트리거**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtrigger)를 [ **MediaProcessing 트리거**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger)하십시오 [ **ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), [ **PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger), 및를 사용 하 여 백그라운드 작업을 [ **SystemTrigger** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) 사용 하 여 합니다 [  **SmsReceived** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 유형을 트리거.  
+> 다음 트리거를 사용 하는 백그라운드 작업은 이러한 방식으로 활성화 될 수 없습니다. [**Smsreceived**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 트리거 유형과 함께 [**systemtrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) 를 사용 하는 [**응용 프로그램 트리거**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtrigger), [**mediaprocessing 트리거**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger), [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), [**pushnotificationtrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger)및 백그라운드 작업입니다.  
 > 코드에서 `trigger.RequestAsync()`를 사용하여 **Application 트리거** 및 **MediaProcessingTrigger**에 수동으로 신호를 보낼 수 있습니다.
 
 ![백그라운드 작업 디버그](images/debugging-activation.png)
@@ -78,8 +81,8 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
     이 절차를 수행할 때 이벤트 로그에 백그라운드 작업의 잘못된 진입점이나 트리거가 표시되면 앱에서 백그라운드 작업을 올바르게 등록할 수 없습니다. 이 작업에 대한 도움말은 [백그라운드 작업 등록](register-a-background-task.md)을 참조하세요.
 
     1.  시작 화면으로 이동하고 eventvwr.exe를 검색하여 이벤트 뷰어를 엽니다.
-    2.  로 이동 **응용 프로그램 및 서비스 로그**  - &gt; **Microsoft**  - &gt; **Windows**  - &gt; **BackgroundTaskInfrastructure** 이벤트 뷰어에 있습니다.
-    3.  작업 창에서 선택 **뷰**  - &gt; **분석 및 디버그 로그 표시** 진단 로깅을 사용 하도록 설정 합니다.
+    2.  이벤트 뷰어에서 **응용 프로그램 및 서비스 로그**  - &gt; **Microsoft**  - &gt; **Windows** BackgroundTaskInfrastructure로이동합니다. - &gt;
+    3.  작업 창에서 **보기**  - &gt; **분석 및 디버그 로그 표시** 를 선택 하 여 진단 로깅을 사용 하도록 설정 합니다.
     4.  **진단 로그**를 선택하고 **로그 사용**을 클릭합니다.
     5.  이제 앱을 사용하여 다시 백그라운드 작업을 등록하고 활성화합니다.
     6.  진단 로그에서 자세한 오류 정보를 봅니다. 여기에는 백그라운드 작업에 대해 등록된 진입점이 포함됩니다.
@@ -101,7 +104,7 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 -   백그라운드 작업에서 잠금 화면에 액세스해야 하는 경우 백그라운드 작업을 디버그하기 전에 앱을 잠금 화면에 배치해야 합니다. 잠금 화면 지원 앱에 대한 매니페스트 옵션을 지정하는 방법은 [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)을 참조하세요.
 -   백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
 
-VS를 사용 하 여 백그라운드 작업 디버깅에 대 한 자세한 내용은 참조 하세요 [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트 UWP 앱에서](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)합니다.
+VS를 사용 하 여 백그라운드 작업을 디버깅 하는 방법에 대 한 자세한 내용은 [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)을 참조 하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -110,8 +113,8 @@ VS를 사용 하 여 백그라운드 작업 디버깅에 대 한 자세한 내�
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트 UWP 앱에서](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)
-* [Visual Studio 코드 분석을 사용 하 여 UWP 앱의 코드 품질 분석](https://docs.microsoft.com/visualstudio/test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis?view=vs-2015)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)
+* [Visual Studio code 분석을 사용 하 여 UWP 앱의 코드 품질 분석](https://docs.microsoft.com/visualstudio/test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis?view=vs-2015)
 
  
 

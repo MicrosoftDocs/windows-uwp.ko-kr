@@ -73,7 +73,7 @@
     - name: Python을 사용하여 개발
       items:
         - name: 개요
-          href: python/index.md
+          href: python/index.yml
         - name: 초보자를 위한 시작
           href: python/get-started/python-for-education.md
         - name: 웹 개발 시작

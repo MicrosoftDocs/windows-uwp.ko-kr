@@ -6,34 +6,37 @@ ms.date: 05/24/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e75ab94c6f1c8c4560854fd4f5264c313657ba9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bfd84cd2f2255138b738ecb6dd7f6dab824d7ec4
+ms.sourcegitcommit: d1ef530ef4dfa34db7bc429ab5a0c19fc405885f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369896"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71247456"
 ---
 # <a name="sensor-orientation"></a>센서 방향
 
-
-**중요 한 Api**
-
--   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**Windows.Devices.Sensors.Custom**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Custom)
-
 [  **Accelerometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer), [**Gyrometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer), [**Compass**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Compass), [**Inclinometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer) 및 [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) 클래스의 센서 데이터는 참조 축에 의해 정의됩니다. 이러한 축은 디바이스의 참조 프레임에서 정의되고 사용자가 돌릴 때 디바이스와 함께 회전합니다. 앱이 자동 회전을 지원하고 사용자가 장치를 회전할 때 장치에 맞게 자동으로 방향이 조정되는 경우사용하기 전에 센서 데이터를 회전에 대해 조정해야 합니다.
+
+### <a name="important-apis"></a>중요 API
+
+- [**Windows. 장치. 센서**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+- [**Windows. Devices. 사용자 지정**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Custom)
 
 ## <a name="display-orientation-vs-device-orientation"></a>디스플레이 방향 및 장치 방향
 
-센서의 참조 축을 이해하려면 디스플레이 방향과 장치 방향을 구분해야 합니다. 디스플레이 방향은 텍스트 및 이미지가 화면에 표시되는 방향이고, 디바이스 방향은 디바이스의 실제 위치입니다. 다음 그림에서는 디바이스 및 디스플레이 방향이 모두 **가로**입니다(표시된 센서 축이 가로 방향 우선 디바이스에만 적용됨).
+센서의 참조 축을 이해하려면 디스플레이 방향과 장치 방향을 구분해야 합니다. 디스플레이 방향은 텍스트 및 이미지가 화면에 표시되는 방향이고, 디바이스 방향은 디바이스의 실제 위치입니다.
+
+다음 다이어그램에서 장치 및 표시 방향은 [가로](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations) (표시 된 센서 축이 가로 방향에 따라 지정 됨) 이며, z 축이 장치에서 확장 됩니다.
+
+이 다이어그램은 표시 및 장치 방향을 [가로로](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations)표시 합니다.
 
 ![디스플레이 및 디바이스 방향(Landscape)](images/sensor-orientation-a.PNG)
 
-다음 그림에서는 디스플레이 및 디바이스 방향이 둘 다 **LandscapeFlipped**입니다.
+다음 다이어그램에서는 [LandscapeFlipped](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations)의 표시 및 장치 방향을 모두 보여 줍니다.
 
 ![디스플레이 및 디바이스 방향(LandscapeFlipped)](images/sensor-orientation-b.PNG)
 
-다음 그림에서 디스플레이 방향은 Landscape이고 장치 방향은 LandscapeFlipped입니다.
+이 최종 다이어그램은 장치 방향이 [LandscapeFlipped](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations)는 동안 표시 방향을 가로로 보여 줍니다.
 
 ![디스플레이 방향은 Landscape이고 장치 방향은 LandscapeFlipped임](images/sensor-orientation-c.PNG)
 
@@ -45,7 +48,7 @@ ms.locfileid: "66369896"
 
 | 방향 | 가로 방향 우선 | 세로 방향 우선 |
 |-------------|-----------------|----------------|
-| **Landscape** | ![Landscape 방향의 가로 방향 우선 디바이스](images/sensor-orientation-0.PNG) | ![Landscape 방향의 세로 방향 우선 디바이스](images/sensor-orientation-1.PNG) |
+| **바꾸십시오** | ![Landscape 방향의 가로 방향 우선 디바이스](images/sensor-orientation-0.PNG) | ![Landscape 방향의 세로 방향 우선 디바이스](images/sensor-orientation-1.PNG) |
 | **세로** | ![Portrait 방향의 가로 방향 우선 디바이스](images/sensor-orientation-2.PNG) | ![Portrait 방향의 세로 방향 우선 디바이스](images/sensor-orientation-3.PNG) |
 | **LandscapeFlipped** | ![LandscapeFlipped 방향의 가로 방향 우선 디바이스](images/sensor-orientation-4.PNG) | ![LandscapeFlipped 방향의 세로 방향 우선 디바이스](images/sensor-orientation-5.PNG) | 
 | **PortraitFlipped** | ![PortraitFlipped 방향의 가로 방향 우선 디바이스](images/sensor-orientation-6.PNG)| ![PortraitFlipped 방향의 세로 방향 우선 장치](images/sensor-orientation-7.PNG) |
@@ -57,7 +60,6 @@ ms.locfileid: "66369896"
 또한 일부 장치에는 디스플레이가 없습니다. 이러한 장치를 사용할 경우 기본 방향은 세로입니다.
 
 ## <a name="display-orientation-and-compass-heading"></a>디스플레이 방향 및 나침반 제목
-
 
 나침반 제목은 참조 축에 따라 달라지므로 장치 방향과 함께 변경됩니다. 다음 표에 따라 보완합니다(사용자가 북쪽을 향하고 있다고 가정).
 
@@ -73,32 +75,31 @@ ms.locfileid: "66369896"
 ```csharp
 private void ReadingChanged(object sender, CompassReadingChangedEventArgs e)
 {
-    double heading = e.Reading.HeadingMagneticNorth;        
+    double heading = e.Reading.HeadingMagneticNorth;
     double displayOffset;
-    
+
     // Calculate the compass heading offset based on
     // the current display orientation.
     DisplayInformation displayInfo = DisplayInformation.GetForCurrentView();
-    
-    switch (displayInfo.CurrentOrientation) 
-    { 
-        case DisplayOrientations.Landscape: 
-            displayOffset = 0; 
+
+    switch (displayInfo.CurrentOrientation)
+    {
+        case DisplayOrientations.Landscape:
+            displayOffset = 0;
             break;
-        case DisplayOrientations.Portrait: 
-            displayOffset = 270; 
-            break; 
-        case DisplayOrientations.LandscapeFlipped: 
-            displayOffset = 180; 
-            break; 
-        case DisplayOrientations.PortraitFlipped: 
-            displayOffset = 90; 
-            break; 
-     } 
-    
+        case DisplayOrientations.Portrait:
+            displayOffset = 270;
+            break;
+        case DisplayOrientations.LandscapeFlipped:
+            displayOffset = 180;
+            break;
+        case DisplayOrientations.PortraitFlipped:
+            displayOffset = 90;
+            break;
+     }
 
     double displayCompensatedHeading = (heading + displayOffset) % 360;
-    
+
     // Update the UI...
 }
 ```
@@ -109,7 +110,7 @@ private void ReadingChanged(object sender, CompassReadingChangedEventArgs e)
 
 | 참조 축        |  X |  Y | Z |
 |-----------------------|----|----|---|
-| **Landscape**         |  X |  Y | Z |
+| **바꾸십시오**         |  X |  Y | Z |
 | **세로**          |  Y | -X | Z |
 | **LandscapeFlipped**  | -X | -y | Z |
 | **PortraitFlipped**   | -y |  X | Z |
@@ -124,42 +125,41 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
     double z_Axis;
 
     GyrometerReading reading = e.Reading;  
-    
+
     // Calculate the gyrometer axes based on
     // the current display orientation.
     DisplayInformation displayInfo = DisplayInformation.GetForCurrentView();
-    switch (displayInfo.CurrentOrientation) 
-    { 
-        case DisplayOrientations.Landscape: 
+    switch (displayInfo.CurrentOrientation)
+    {
+        case DisplayOrientations.Landscape:
             x_Axis = reading.AngularVelocityX;
             y_Axis = reading.AngularVelocityY;
             z_Axis = reading.AngularVelocityZ;
             break;
-        case DisplayOrientations.Portrait: 
+        case DisplayOrientations.Portrait:
             x_Axis = reading.AngularVelocityY;
             y_Axis = -1 * reading.AngularVelocityX;
             z_Axis = reading.AngularVelocityZ;
-            break; 
-        case DisplayOrientations.LandscapeFlipped: 
+            break;
+        case DisplayOrientations.LandscapeFlipped:
             x_Axis = -1 * reading.AngularVelocityX;
             y_Axis = -1 * reading.AngularVelocityY;
             z_Axis = reading.AngularVelocityZ;
-            break; 
-        case DisplayOrientations.PortraitFlipped: 
+            break;
+        case DisplayOrientations.PortraitFlipped:
             x_Axis = -1 * reading.AngularVelocityY;
             y_Axis = reading.AngularVelocityX;
             z_Axis = reading.AngularVelocityZ;
-            break; 
-     } 
-    
-    
+            break;
+     }
+
     // Update the UI...
 }
 ```
 
 ## <a name="display-orientation-and-device-orientation"></a>디스플레이 방향 및 장치 방향
 
-[  **OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) 데이터는 다른 방법으로 변경해야 합니다. 다른 방향을 Z축에 대한 시계 반대 방향 회전으로 간주하므로 사용자 방향을 다시 가져오기 위해 회전을 반대로 해야 합니다. 사원수 데이터의 경우 오일러의 공식을 사용하여 참조 사원수로 회전을 정의할 수 있으며, 참조 회전 행렬을 사용할 수도 있습니다.
+[  **OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) 데이터는 다른 방법으로 변경해야 합니다. 이러한 여러 방향을 Z 축에서 시계 반대 방향으로 회전 하는 것으로 간주 하므로 사용자의 방향을 다시 가져오려면 회전을 반대로 해야 합니다. 사원수 데이터의 경우 오일러의 공식을 사용하여 참조 사원수로 회전을 정의할 수 있으며, 참조 회전 행렬을 사용할 수도 있습니다.
 
 ![오일러의 공식](images/eulers-formula.png)
 
@@ -169,11 +169,9 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 앞의 식에서 절대 개체는 센서 데이터에서 반환됩니다.
 
-
-| 사용 됩니다.  | Z축을 중심으로 시계 반대 방향 회전 | 참조 사원수(역회전) | 참조 회전 행렬(역회전) | 
+| 사용 됩니다.  | Z축을 중심으로 시계 반대 방향 회전 | 참조 사원수(역회전) | 참조 회전 행렬(역회전) |
 |----------------------|------------------------------------|-----------------------------------------|----------------------------------------------|
-| **Landscape**        | 0                                  | 1 + 0i + 0j + 0k                        | \[1 0 0<br/> 0 1 0<br/> 0 0 1\]               |
+| **바꾸십시오**        | 0                                  | 1 + 0i + 0j + 0k                        | \[1 0 0<br/> 0 1 0<br/> 0 0 1\]               |
 | **세로**         | 90                                 | cos(-45⁰) + (i + j + k)*sin(-45⁰)       | \[0 1 0<br/>-1 0 0<br/>0 0 1]              |
 | **LandscapeFlipped** | 180                                | 0 - i - j - k                           | \[1 0 0<br/> 0 1 0<br/> 0 0 1]               |
 | **PortraitFlipped**  | 270                                | cos(-135⁰) + (i + j + k)*sin(-135⁰)     | \[0 -1 0<br/> 1 0 0<br/> 0 0 1]             |
-

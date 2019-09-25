@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, microsoft, windows 10, 자습서, 온라인 과정, 블로그, 이벤트
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 28a77b9e936acddb6158d865aef933f27444c5c9
-ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
+ms.openlocfilehash: 3320cef0d3aaf48a2f93d65d93bf8876f1f997d6
+ms.sourcegitcommit: 7104ad5d01ad1c69a4ea0b3ba6732c1b2a98ec09
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68959058"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249238"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Windows에서 Python을 사용 하 여 개발 하기 위한 리소스
 
@@ -45,8 +45,7 @@ Windows 10을 실행 하는 컴퓨터에서 작업 하는 Python 개발자에 �
 
 - [Python 및 Visual Studio Code](https://code.visualstudio.com/docs/languages/python): VS Code에서 Python을 사용 하는 방법에 대 한 개요입니다.
 
-
-### <a name="online-courses"></a>온라인 과정
+## <a name="online-courses"></a>온라인 과정
 
 - [Microsoft Learn의 Python 소개](https://docs.microsoft.com/en-us/learn/modules/intro-to-python/): 대화형 Microsoft Learn 플랫폼을 사용해 보고, 기본 Python 코드를 작성 하 고, 변수를 선언 하 고, 콘솔 입력 및 출력을 사용 하는 방법에 대 한 기본 사항을 설명 하는이 모듈을 완료 하기 위한 경험 사항을 알아봅니다. 대화형 샌드박스 환경을 사용 하면 Python 개발 환경이 아직 설정 되지 않은 사람들에 게이를 시작할 수 있습니다.
 
