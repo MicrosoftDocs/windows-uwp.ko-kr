@@ -8,15 +8,14 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cad33c0f1b72bbd379be9b8f13ed648231f1a1ca
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 799913688f04421cae6b47f0d4b7db2fb1074ed4
+ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319356"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061923"
 ---
 # <a name="web-view"></a>웹 보기
- 
 
 웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
 
@@ -25,6 +24,22 @@ ms.locfileid: "67319356"
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 웹 보기 컨트롤을 사용하여 원격 웹 서버, 동적으로 생성된 코드 또는 앱 패키지의 콘텐츠 파일에서 다양한 서식이 지정된 HTML 콘텐츠를 표시합니다. 서식 있는 콘텐츠는 스크립트 코드를 포함하고 스크립트와 앱 코드 간에 통신할 수도 있습니다.
+
+## <a name="examples"></a>예
+
+<table>
+<th align="left">XAML Controls Gallery<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/WebView">앱을 열고 WebView가 실제로 작동하는 모습을 확인하세요</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="create-a-web-view"></a>웹 보기 만들기
 
@@ -319,15 +334,10 @@ UI 스레드 외부에서 콘텐츠를 호스트하는 웹 보기는 웹 보기 
 -   입력 필드는 크기가 적절해야 합니다. 사용자는 텍스트를 입력하기 위해 확대할 수 있다는 점을 알지 못할 수 있습니다.
 -   웹 보기가 앱의 나머지 부분과 다르게 보일 경우 대체 컨트롤이나 방법을 사용하여 관련 작업을 수행하는 것이 좋습니다. 웹 보기가 앱의 나머지 부분과 일치하는 경우 사용자는 웹 보기를 하나의 완벽한 환경으로 봅니다.
 
+## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [WebView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView)
- 
-
- 
-
-
-
-
+- [WebView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView)
