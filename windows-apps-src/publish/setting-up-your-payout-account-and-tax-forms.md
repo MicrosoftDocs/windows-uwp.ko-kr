@@ -6,12 +6,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1827f24e467c113034c5d0303aaebce0e603da2a
-ms.sourcegitcommit: 68121f21c899975f3634456a651ae8e1e53c19f7
+ms.openlocfilehash: 974d96f6ba2daf275ffd346f50571787d4eee925
+ms.sourcegitcommit: ad2940a12a7ee59ee7696cd23a03743eef84ca31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70841806"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71275746"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
 
@@ -95,6 +95,9 @@ Microsoft Store의 앱 판매에서 돈을 받으려면 지급 계정을 설정 
     ![지급 계정 유형 선택](images/payout-account-type-selection.png)
 
 4. 기존 지불 프로필을 선택 하거나 **새 지불 프로필 만들기** 를 클릭 하 여 선택한 지불 방법에 대 한 새 프로필을 만듭니다.
+
+> [!NOTE]
+> 어떤 이유로 Microsoft에서 자금을 받을 준비가 되지 않은 경우 **결제 보류** 중 확인란을 선택할 수 있습니다. 계속 해 서 판매의 진행 **상태를 유지 하지만 지불** 을 사용 하지 않도록 설정할 때까지 지불액은 배포 되지 않습니다.
 
 ### <a name="create-a-bank-based-payment-profile"></a>은행 기반 지불 프로필 만들기
 
