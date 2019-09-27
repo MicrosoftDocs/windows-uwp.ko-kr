@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 2deae93f8a9706b2d5d6bebfa23b852c8d6d554f
-ms.sourcegitcommit: 8cbc9ec62a318294d5acfea3dab24e5258e28c52
+ms.openlocfilehash: cdaaa20b28a7f181467f6047bc93350ec40b366a
+ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70911562"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71317078"
 ---
 # <a name="host-a-standard-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML 아일랜드를 사용 하 여 WPF 앱에서 표준 UWP 컨트롤 호스팅
 
@@ -38,7 +38,7 @@ WPF 앱에서 UWP 컨트롤을 호스팅하려면 다음 구성 요소가 필요
 
 시작 하기 전에 다음 지침에 따라 WPF 프로젝트를 만들고 XAML 아일랜드를 호스팅하도록 구성 합니다. 기존 WPF 프로젝트가 있는 경우 프로젝트에 대 한 이러한 단계 및 코드 예제를 적용할 수 있습니다.
 
-1. Visual Studio 2019에서 새 **Wpf 앱 (.NET Framework)** 또는 **wpf 앱 (.net Core)** 프로젝트를 만듭니다. **WPF 앱 (.Net core)** 프로젝트를 만들려면 먼저 사용 가능한 최신 미리 보기 버전의 [.Net CORE 3 preview SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 설치 해야 합니다.
+1. Visual Studio 2019에서 새 **Wpf 앱 (.NET Framework)** 또는 **wpf 앱 (.net Core)** 프로젝트를 만듭니다. **WPF 앱 (.Net core)** 프로젝트를 만들려는 경우 최신 버전의 [.NET core 3 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 먼저 설치 해야 합니다.
 
 2. [패키지 참조](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) 를 사용할 수 있는지 확인 합니다.
 
@@ -102,7 +102,7 @@ WPF 앱에서 UWP 컨트롤을 호스팅하려면 다음 구성 요소가 필요
 
 UWP XAML 아일랜드를 사용 하도록 프로젝트를 구성 했으므로 이제 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [INKTOOLBAR](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 래핑된 UWP 컨트롤을 앱에 추가할 준비가 되었습니다.
 
-1. **솔루션 탐색기**에서 **MainWindow.xaml** 파일을 엽니다.
+1. **솔루션 탐색기**에서 **mainwindow.xaml** 파일을 엽니다.
 
 2. XAML 파일 위쪽의 **창** 요소에 다음 특성을 추가 합니다. 이는 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [INKTOOLBAR](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 래핑된 UWP 컨트롤에 대 한 XAML 네임 스페이스를 참조 합니다.
 
@@ -171,7 +171,7 @@ UWP XAML 아일랜드를 사용 하도록 프로젝트를 구성 했으므로 �
 > [!NOTE]
 > [Windowsxamlhost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤은 [Microsoft Toolkit. xamlhost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) 패키지에서 제공 됩니다. 이 패키지는 이전에 설치한 [Microsoft Toolkit. 컨트롤](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 패키지에 포함 되어 있습니다.
 
-1. **솔루션 탐색기**에서 **MainWindow.xaml** 파일을 엽니다.
+1. **솔루션 탐색기**에서 **mainwindow.xaml** 파일을 엽니다.
 
 2. XAML 파일 위쪽의 **창** 요소에 다음 특성을 추가 합니다. 이는 [Windowsxamlhost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤에 대 한 XAML 네임 스페이스를 참조 합니다.
 
@@ -283,7 +283,7 @@ UWP XAML 아일랜드를 사용 하도록 프로젝트를 구성 했으므로 �
         </Target>
         ```
 
-    3. 프로젝트 파일을 저장하고 닫습니다.
+    3. 프로젝트 파일을 저장 하 고 닫습니다.
 
 4. X86 또는 x64와 같은 특정 플랫폼을 대상으로 하도록 솔루션을 구성 합니다. 이는 Windows 응용 프로그램 패키징 프로젝트를 사용 하 여 MSIX 패키지에 WPF 앱을 빌드하는 데 필요 합니다.
 

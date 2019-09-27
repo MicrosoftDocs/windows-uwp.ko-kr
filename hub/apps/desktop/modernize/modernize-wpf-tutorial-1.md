@@ -8,21 +8,18 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 97488a913605916c067861b5941d7aa127b00917
-ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
+ms.openlocfilehash: 6a52e12f9d60ee4abb4b1aed3043a69c25845267
+ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69643408"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71317101"
 ---
 # <a name="part-1-migrate-the-contoso-expenses-app-to-net-core-3"></a>1단계: Contoso Expenses 앱을 .NET Core 3으로 마이그레이션
 
 Contoso 지출 이라는 샘플 WPF 데스크톱 앱을 현대화 하는 방법을 보여 주는 자습서의 첫 번째 부분입니다. 샘플 앱을 다운로드 하기 위한 자습서, 필수 구성 요소 및 지침에 대 한 개요를 [보려면 자습서: WPF 앱](modernize-wpf-tutorial.md)을 현대화 합니다.
   
-자습서의이 부분에서는 .NET Framework 4.7.2에서 [.Net Core 3](modernize-wpf-tutorial.md#net-core-3)으로 전체 Contoso 지출 앱을 마이그레이션합니다. 자습서의이 부분을 시작 하기 전에 다음을 수행 해야 합니다.
-
-* Visual Studio 2019에서 [ContosoExpenses 샘플을 열고 빌드합니다](modernize-wpf-tutorial.md#get-the-contoso-expenses-sample-app) .
-* Visual Studio 2019의 릴리스 버전을 사용 하는 경우 .NET Core SDK 미리 보기 버전을 사용 하도록 설정 합니다. Visual Studio에서 **도구 > 옵션**으로 이동 하 여 검색 상자에 "Preview"를 입력 하 고 **.NET Core SDK 미리 보기 사용**을 선택 합니다. [Visual Studio 2019의 미리 보기 버전](https://visualstudio.microsoft.com/vs/preview/)을 사용 하는 경우 .net Core 미리 보기가 기본적으로 사용 하도록 설정 되어 있으므로이 옵션을 선택 하지 않아도 됩니다.
+자습서의이 부분에서는 .NET Framework 4.7.2에서 [.Net Core 3](modernize-wpf-tutorial.md#net-core-3)으로 전체 Contoso 지출 앱을 마이그레이션합니다. 자습서의이 부분을 시작 하기 전에 Visual Studio 2019에서 [ContosoExpenses 샘플을 열고 빌드](modernize-wpf-tutorial.md#get-the-contoso-expenses-sample-app) 하세요.
 
 > [!NOTE]
 > .NET Framework에서 .NET Core 3으로 WPF 응용 프로그램을 마이그레이션하는 방법에 대 한 자세한 내용은 [이 블로그 시리즈](https://devblogs.microsoft.com/dotnet/migrating-a-sample-wpf-app-to-net-core-3-part-1/)를 참조 하세요.

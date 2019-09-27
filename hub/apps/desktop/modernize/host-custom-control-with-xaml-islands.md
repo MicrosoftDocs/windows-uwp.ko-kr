@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: ab9bff69ac9ac0eaf1f02c943229829e726a0b9d
-ms.sourcegitcommit: 8cbc9ec62a318294d5acfea3dab24e5258e28c52
+ms.openlocfilehash: 3c14cfaefcf10aa051e3054d5df2e6da9fd77602
+ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70911576"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71317061"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅
 
@@ -40,7 +40,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하려면 다음 구�
 > [!NOTE]
 > .NET Framework를 대상으로 하는 기존 프로젝트가 있는 경우 프로젝트를 .NET Core 3으로 마이그레이션해야 합니다. 자세한 내용은 [이 블로그 시리즈](https://devblogs.microsoft.com/dotnet/migrating-a-sample-wpf-app-to-net-core-3-part-1/)를 참조 하세요.
 
-1. 아직 수행 하지 않은 경우 사용 가능한 최신 미리 보기 버전의 [.Net Core 3 PREVIEW SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 설치 합니다.
+1. 아직 수행 하지 않은 경우 최신 버전의 [.Net Core 3 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 설치 합니다.
 
 2. Visual Studio 2019에서 새 **WPF 앱 (.Net Core)** 프로젝트를 만듭니다.
 
@@ -287,7 +287,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
         </Target>
         ```
 
-    3. 프로젝트 파일을 저장하고 닫습니다.
+    3. 프로젝트 파일을 저장 하 고 닫습니다.
 
 4. 올바른 기본 시작 화면 이미지를 참조 하도록 패키지 매니페스트를 편집 합니다. 이 해결 방법은 현재 사용자 지정 UWP 컨트롤을 호스트 하는 WPF 앱을 패키징하는 데 필요 합니다.
 
@@ -314,7 +314,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
         </PropertyGroup>
         ```
 
-    4. 프로젝트 파일을 저장하고 닫습니다.
+    4. 프로젝트 파일을 저장 하 고 닫습니다.
     5. WPF 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 다시 로드**를 선택 합니다.
 
 6. 패키징 프로젝트를 빌드하고 실행 합니다. WPF가 실행 되 고 UWP 사용자 지정 컨트롤이 예상 대로 표시 되는지 확인 합니다.
