@@ -1,0 +1,102 @@
+### YamlMime:Landing
+title: 유니버설 Windows 플랫폼 설명서
+summary: UWP(유니버설 Windows 플랫폼)를 사용하여 PC, Xbox One, HoloLens 등 모든 Windows 디바이스용 앱을 빌드하고 Store에 게시할 수 있습니다.
+metadata:
+  title: UWP 설명서 - UWP 앱 개발자 | Microsoft Docs
+  description: UWP(유니버설 Windows 플랫폼)를 사용하여 PC, Xbox One, HoloLens 등 모든 Windows 디바이스용 앱을 빌드하고 Store에 게시할 수 있습니다.
+  ms.topic: landing-page
+  ms.collection: collection
+  ms.author: quradic
+  author: QuinnRadich
+  ms.date: 09/24/2019
+  ms.technology: uwp-conceptual-docs
+  keywords: windows uwp, universal windows platform, Windows Runtime APIs, windows api, windows api ref, winrt api, windows api reference, uwp api, uwp api reference, develop uwp, design uwp, publish uwp
+  ms.openlocfilehash: 4d1ca7d03cdbc3dd8eccd2e22ae88c217672179c
+  ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 09/27/2019
+  ms.locfileid: "71329609"
+landingContent:
+- title: UWP를 처음 사용하는 경우
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: UWP 개발의 기본 사항 알아보기
+      url: get-started/index.md
+    - text: UWP 앱 코딩 시작
+      url: get-started/create-uwp-apps.md
+  - linkListType: concept
+    links:
+    - text: UWP 대 기타 Windows 앱 플랫폼
+      url: https://docs.microsoft.com/windows/apps/desktop/choose-your-platform
+  - linkListType: learn
+    links:
+    - text: Microsoft Learn에서 Windows 과정 찾아보기
+      url: https://docs.microsoft.com/learn/browse/?products=windows&resource_type=module
+    - text: UWP 앱이란 무엇인가요?
+      url: /get-started/universal-application-platform-guide.md
+- title: 최신 기능
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: 최신 UWP 기능에 대해 알아보기
+      url: https://docs.microsoft.com/windows/uwp/whats-new/windows-10-version-latest
+    - text: Windows 10의 주요 기능 살펴보기
+      url: https://developer.microsoft.com/windows/windows-10-for-developers
+  - linkListType: concept
+    links:
+    - text: C# 언어의 최신 정보 확인
+      url: https://docs.microsoft.com/dotnet/csharp/index
+    - text: Visual Studio의 새로운 기능 살펴보기
+      url: https://docs.microsoft.com/visualstudio/ide/
+- title: 개발
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows 10용 UWP 앱 빌드
+      url: develop/index.md
+    - text: Xbox 및 Windows 10용 UWP 게임 빌드
+      url: gaming/getting-started.md
+  - linkListType: reference
+    links:
+    - text: UWP용 API 참조 문서 찾아보기
+      url: https://docs.microsoft.com/uwp/
+    - text: Windows 코드 샘플 살펴보기
+      url: https://developer.microsoft.com/windows/samples
+  - linkListType: download
+    links:
+    - text: Windows 개발 도구 가져오기
+      url: https://developer.microsoft.com/windows/downloads
+- title: 디자인
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Fluent Design System으로 앱 디자인
+      url: design/index.md
+  - linkListType: reference
+    links:
+    - text: Windows UI 라이브러리를 사용하여 UI 컨트롤 추가
+      url: https://docs.microsoft.com/uwp/toolkits/winui/
+- title: 게시하기
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Microsoft Store에 앱 게시
+      url: publish/index.md
+    - text: MSIX로 앱 패키징 및 배포
+      url: /windows/msix
+  - linkListType: concept
+    links:
+    - text: 앱으로 수익 창출
+      url: monetize/index.md
+- title: 커뮤니티 및 지원
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Twitter의 @WindowsDocs
+      url: https://twitter.com/WindowsDocs
+    - text: YouTube의 OneDevMinute
+      url: https://aka.ms/OneDevMinute
+    - text: Windows 개발자 지원
+      url: https://developer.microsoft.com/windows/support

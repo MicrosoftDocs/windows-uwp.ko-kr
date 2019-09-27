@@ -816,7 +816,7 @@
           href: ../cpp-and-winrt-apis/agile-objects.md
         - name: 직접 할당 진단
           href: ../cpp-and-winrt-apis/diag-direct-alloc.md
-        - name: 소멸자에 대한 세부 정보
+        - name: 구현 형식에 대한 확장 지점
           href: ../cpp-and-winrt-apis/details-about-destructors.md
         - name: 간단한 C++/WinRT WinUI 예제
           href: ../cpp-and-winrt-apis/simple-winui-example.md

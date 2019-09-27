@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 47cb292b1f5aeed9473cac0f27074f449dc67032
-ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
+ms.openlocfilehash: b8ad9726397671bcb2b641d6769f014721a27a72
+ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414104"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71317095"
 ---
 # <a name="modernize-your-desktop-apps"></a>데스크톱 앱 현대화
 
@@ -32,15 +32,9 @@ MSIX 패키지에 데스크톱 Windows 앱을 패키지하면 강력한 설치 �
 
 ## <a name="net-core-3"></a>.NET Core 3
 
-.NET Core 3는 .NET Core의 차기 주 릴리스입니다. 이 예정된 릴리스의 주요 기능은 Windows Forms 및 WPF 앱을 포함하는 Windows 데스크톱 앱에 대한 지원입니다. .NET Core 3에서 새 및 기존 Windows 데스크톱 앱을 실행하고 .NET Core에서 제공하는 모든 이점을 누릴 수 있습니다. [XAML Islands](xaml-islands.md)에 호스트되는 UWP 컨트롤을 .NET Core 3를 대상으로 하는 Windows Forms 및 WPF 앱에서도 사용할 수 있습니다.
+.NET Core 3은 .NET Core의 최신 주요 릴리스입니다. 이 릴리스의 주요 기능은 Windows Forms 및 WPF 앱을 포함하는 Windows 데스크톱 앱에 대한 지원입니다. .NET Core 3에서 신규 및 기존 Windows 데스크톱 앱을 실행하고 .NET Core에서 제공하는 모든 이점을 누릴 수 있습니다. [XAML Islands](xaml-islands.md)에 호스트되는 UWP 컨트롤을 .NET Core 3를 대상으로 하는 Windows Forms 및 WPF 앱에서도 사용할 수 있습니다.
 
-자세한 내용은 다음 문서를 참조하세요.
-
-* [.NET Core 3.0 Preview 1 공지](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-* [.NET Core 3.0 Preview 2 공지](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
-* [.NET Core 3.0 Preview 2 공지](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
-* [.NET Core 3.0 Preview 4 공지](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
-* [.NET Core 3.0의 새로운 기능](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0).
+자세한 내용은 [.NET Core 3.0의 새로운 기능](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0)을 참조하세요.
 
 ## <a name="uwp-apis"></a>UWP API
 

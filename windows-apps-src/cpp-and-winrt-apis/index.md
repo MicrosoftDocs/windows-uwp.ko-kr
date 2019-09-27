@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, CPP, WinRT, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: 7554b635f76f7d00901ecb7936fdd0351d8dee75
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 61a54edc236f94bec44420471a176a2014fcdb0d
+ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393467"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71329571"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -67,7 +67,7 @@ C++/WinRT는 Windows 런타임에 사용되는 다른 언어 옵션보다 성능
 | [C++/WinRT의 강력하고 약한 참조](weak-references.md) | Windows 런타임은 참조 계산 시스템입니다. 이러한 시스템에서는 강한 참조와 약한 참조의 중요성과 차이점을 인식해야 합니다. |
 | [Agile 개체](agile-objects.md) | Agile 개체는 모든 스레드에서 액세스할 수 있는 개체입니다. C++/WinRT 형식은 기본적으로 Agile이지만 옵트아웃할 수 있습니다. |
 | [직접 할당 진단](diag-direct-alloc.md) | 필요에 따라 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 도우미 제품군을 사용하는 대신 스택에서 구현 유형의 개체를 만드는 오류를 진단하는 데 도움이 되는 C++/WinRT 2.0 기능에 대해 자세히 설명합니다. |
-| [소멸자에 대한 세부 정보](details-about-destructors.md) | C++/WinRT 2.0을 사용하면 구현 유형의 소멸을 지연하고 소멸 중 안전하게 쿼리할 수 있습니다. 해당 기능과 이러한 기능을 사용하는 경우에 대해 설명합니다. |
+| [구현 형식에 대한 확장 지점](details-about-destructors.md) | C++/WinRT 2.0의 이러한 확장 지점을 사용하면 구현 형식의 소멸을 지연하고, 소멸 중에 안전하게 쿼리하고, 프로젝션 메서드에서 항목을 연결하거나 종료할 수 있습니다. |
 | [간단한 C++/WinRT Windows UI 라이브러리 예제](simple-winui-example.md) | C++/WinRT 프로젝트 내에서 WinUI를 위해 간단한 지원을 추가하는 과정을 안내합니다. |
 
 ### <a name="topics-about-the-c-language"></a>C++ 언어 관련 항목
