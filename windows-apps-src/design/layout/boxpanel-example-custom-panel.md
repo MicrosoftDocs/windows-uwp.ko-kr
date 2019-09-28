@@ -12,12 +12,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fdde8c5af2120786f215480cc7e7ae422d77c5c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3fe1389e3c3db28f834217b4f163c48633c32d14
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365055"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340161"
 ---
 # <a name="boxpanel-an-example-custom-panel"></a>BoxPanel, 예제 사용자 지정 패널
 
@@ -25,7 +25,7 @@ ms.locfileid: "66365055"
 
 [  **ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride) 및 [**MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride) 메서드를 구현하고 [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.children) 속성을 사용하는 사용자 지정 [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel) 클래스에 대한 코드를 작성하는 방법을 알아봅니다. 
 
-> **중요 API**: [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel), [**ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride),[**MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride) 
+> **중요 API**: [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel), [**system.windows.frameworkelement.arrangeoverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride),[**system.windows.frameworkelement.measureoverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride) 
 
 예제 코드에서는 사용자 지정 패널 구현을 보여 주지만, 각 레이아웃 시나리오에 맞게 패널을 사용자 지정하는 방법에 영향을 주는 레이아웃 개념을 설명하는 데 많은 시간을 할애하지 않습니다. 이러한 레이아웃 개념과 특정 레이아웃 시나리오에 개념을 적용하는 방법에 대한 자세한 내용은 [XAML 사용자 지정 패널 개요](custom-panels-overview.md)를 참조하세요.
 
@@ -87,7 +87,7 @@ public class BoxPanel : Panel
 
 이제부터 멤버 정의(멤버 재정의 또는 종속성 속성 등의 지원 항목)를 한 번에 하나씩 보여드리겠습니다. 위의 골격에 이러한 항목을 순서에 관계없이 추가할 수 있으며, 최종 코드를 표시할 때까지 코드 조각에 클래스 범위의 정의나 **using** 문을 다시 표시하지 않습니다.
 
-## <a name="measureoverride"></a>**MeasureOverride**
+## <a name="measureoverride"></a>**System.windows.frameworkelement.measureoverride**
 
 
 ```CSharp
@@ -134,7 +134,7 @@ protected override Size MeasureOverride(Size availableSize)
 *availableSize*의 높이 구성 요소가 무한대인 경우 이 패널을 사용할 수 있습니다. 이 경우 나눌 알려진 패널 높이가 없습니다. 따라서 측정 단계의 논리에서 각 자식에게 유한 높이가 없다고 알립니다. [  **Size.Height**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size)가 무한 크기인 자식에 대한 [**Measure**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 호출에 [**Size**](https://docs.microsoft.com/uwp/api/windows.foundation.size.height)를 전달하면 됩니다. 이는 타당한 동작입니다. **Measure**가 호출된 경우의 논리는 [**DesiredSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.desiredsize)가 **Measure**에 전달된 값 또는 명시적으로 설정된 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 및 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 등의 인수를 통한 해당 요소의 실제 크기 중 최소값으로 설정되는 것입니다.
 
 > [!NOTE]
-> 내부 논리 [ **StackPanel** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) 도이 동작을 포함 합니다. **StackPanel** 는 무한 차원 값을 전달 [ **측정값** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 방향 차원의 자식에서 제약 조건이 없는 임을 나타내는 자식에서 합니다. 일반적으로 **StackPanel**은 해당 차원에서 증가하는 스택에 모든 자식을 수용하기 위해 동적으로 크기가 조정됩니다.
+> [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) 의 내부 논리에도이 동작이 있습니다. **StackPanel** 은 방향 차원의 자식에 대 한 제약 조건이 없음을 나타내는 무한 차원 값을 자식에 대 한 [**측정값**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 으로 전달 합니다. 일반적으로 **StackPanel**은 해당 차원에서 증가하는 스택에 모든 자식을 수용하기 위해 동적으로 크기가 조정됩니다.
 
 그러나 패널 자체는 [**MeasureOverride**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size)에서 무한대 값인 [**Size**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride)를 반환할 수 없으며, 레이아웃 중 예외가 발생합니다. 따라서 논리의 일부는 자식이 요청하는 최대 높이를 확인하고, 패널 자체의 크기 제약 조건에서 가져온 것이 아닐 경우 해당 높이를 셀 높이로 사용하는 것입니다. 다음은 이전 코드에서 참조된 도우미 함수 `LimitUnboundedSize`입니다. 이 함수는 최대 셀 높이를 받아서 반환할 유한 높이를 패널에 제공하는 데 사용할 뿐 아니라 정렬 단계가 시작되기 전에 `cellheight`가 유한 숫자인지 확인합니다.
 
@@ -155,7 +155,7 @@ Size LimitUnboundedSize(Size input)
 }
 ```
 
-## <a name="arrangeoverride"></a>**ArrangeOverride**
+## <a name="arrangeoverride"></a>**System.windows.frameworkelement.arrangeoverride**
 
 ```CSharp
 protected override Size ArrangeOverride(Size finalSize)
@@ -182,7 +182,7 @@ protected override Size ArrangeOverride(Size finalSize)
 
 패널에서 콘텐츠를 잘라야 하는 경우가 있습니다. 이때 잘린 크기는 [**DesiredSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.desiredsize)에 있는 크기인데, [**Measure**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 논리에서 이 크기를 **Measure**에 전달된 값 또는 다른 실제 크기 인수 중 최소값으로 설정하기 때문입니다. 따라서 일반적으로 [**Arrange**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) 중에 클리핑을 확인할 필요가 없으며, 각 **Arrange** 호출에 **DesiredSize**를 전달하여 클리핑이 발생합니다.
 
-다른 수단을 통해 렌더링 위치를 정의하는 데 필요한 모든 정보를 알고 있는 경우 루프를 수행하는 동안 개수가 항상 필요한 것은 아닙니다. 예를 들어 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 레이아웃 논리에서는 [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.children) 컬렉션의 위치가 중요하지 않습니다. **Canvas**에서 각 요소의 위치를 지정하는 데 필요한 모든 정보는 배열 논리의 일부인 자식의 [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8) 값을 읽어서 인식됩니다. `BoxPanel` 논리에서는 새 행을 시작하고 *y* 값을 오프셋할 경우를 알 수 있도록 *colcount*에 비교할 개수가 필요합니다.
+다른 수단을 통해 렌더링 위치를 정의하는 데 필요한 모든 정보를 알고 있는 경우 루프를 수행하는 동안 개수가 항상 필요한 것은 아닙니다. 예를 들어 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 레이아웃 논리에서는 [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.children) 컬렉션의 위치가 중요하지 않습니다. **Canvas**에서 각 요소의 위치를 지정하는 데 필요한 모든 정보는 배열 논리의 일부인 자식의 [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) 값을 읽어서 인식됩니다. `BoxPanel` 논리에서는 새 행을 시작하고 *y* 값을 오프셋할 경우를 알 수 있도록 *colcount*에 비교할 개수가 필요합니다.
 
 일반적으로 입력 *finalSize*와 [**ArrangeOverride**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) 구현에서 반환하는 [**Size**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride)는 같습니다. 이유에 대한 자세한 내용은 [XAML 사용자 지정 패널 개요](custom-panels-overview.md)의 "**ArrangeOverride**" 섹션을 참조하세요.
 
@@ -209,22 +209,22 @@ if (UseOppositeRCRatio) { aspectratio = 1 / aspectratio;}
 
 ## <a name="the-scenario-for-boxpanel"></a>BoxPanel에 대한 시나리오
 
-`BoxPanel`에 대한 특정 시나리오는 공간을 나누는 방법의 주요 결정자 중 하나가 자식 항목 수를 알고 패널에 사용 가능한 알려진 공간을 나누는 것인 패널입니다. 패널은 본질적으로 직사각형 모양입니다. 많은 패널은 직사각형 공간을 추가 직사각형으로 나누는 방식으로 작동하며, [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)도 해당 셀에 대해 이 작업을 수행합니다. **Grid**의 경우 [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) 및 [**RowDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RowDefinition) 값으로 셀 크기를 설정하며, [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row?view=netframework-4.8) 및 [**Grid.Column**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.column?view=netframework-4.8) 연결된 속성을 사용하여 요소가 들어가는 정확한 셀을 선언합니다. 일반적으로 **Grid**에서 적절한 레이아웃을 가져오려면 충분한 셀이 있고 각 자식 요소가 해당 셀에 맞게 연결된 속성을 설정하도록 자식 요소 수를 미리 알아야 합니다.
+`BoxPanel`에 대한 특정 시나리오는 공간을 나누는 방법의 주요 결정자 중 하나가 자식 항목 수를 알고 패널에 사용 가능한 알려진 공간을 나누는 것인 패널입니다. 패널은 본질적으로 직사각형 모양입니다. 많은 패널은 직사각형 공간을 추가 직사각형으로 나누는 방식으로 작동하며, [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)도 해당 셀에 대해 이 작업을 수행합니다. **Grid**의 경우 [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) 및 [**RowDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RowDefinition) 값으로 셀 크기를 설정하며, [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row) 및 [**Grid.Column**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.column) 연결된 속성을 사용하여 요소가 들어가는 정확한 셀을 선언합니다. 일반적으로 **Grid**에서 적절한 레이아웃을 가져오려면 충분한 셀이 있고 각 자식 요소가 해당 셀에 맞게 연결된 속성을 설정하도록 자식 요소 수를 미리 알아야 합니다.
 
 그러나 자식 수가 동적인 경우는 어떻게 해야 할까요? 이런 경우도 분명히 있습니다. 앱 코드에서 UI를 업데이트할 만큼 중요한 동적 런타임 상태에 대한 응답으로 컬렉션에 항목을 추가할 수 있습니다. 지원 컬렉션/비즈니스 개체에 대한 데이터 바인딩을 사용하는 경우 해당 업데이트 가져오기 및 UI 업데이트가 자동으로 처리되므로 대체로 이 기법을 사용하는 것이 좋습니다([데이터 바인딩 세부 정보](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth) 참조).
 
-그러나 모든 앱 시나리오가 데이터 바인딩에 적합한 것은 아닙니다. 경우에 따라 런타임에 새 UI 요소를 만들고 표시되도록 해야 합니다. `BoxPanel` 이 시나리오입니다. `BoxPanel`은 자식 개수를 계산에 사용하고 모두 들어가도록 기존 자식 요소와 새 자식 요소를 새 레이아웃으로 조정하기 때문에 자식 항목 수의 변경은 문제가 되지 않습니다.
+그러나 모든 앱 시나리오가 데이터 바인딩에 적합한 것은 아닙니다. 경우에 따라 런타임에 새 UI 요소를 만들고 표시되도록 해야 합니다. `BoxPanel`은이 시나리오에 대 한 것입니다. `BoxPanel`은 자식 개수를 계산에 사용하고 모두 들어가도록 기존 자식 요소와 새 자식 요소를 새 레이아웃으로 조정하기 때문에 자식 항목 수의 변경은 문제가 되지 않습니다.
 
-여기에는 나와 있지 않지만 `BoxPanel`을 추가로 확장하는 고급 시나리오는 동적 자식을 수용하고 개별 셀의 크기를 조정하기 위한 더 강력한 요소로 자식의 [**DesiredSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.desiredsize)를 사용합니다. 이 시나리오에서는 "불필요하게 사용된" 공간을 좀 더 줄이기 위해 다양한 행 또는 열 크기나 그리드가 아닌 모양을 사용할 수 있습니다. 이 경우 미적 요인과 가장 작은 크기를 위해 다양한 크기와 가로 세로 비율의 여러 직사각형이 컨테이너 직사각형에 모두 들어가도록 하는 방법에 대한 전략이 필요합니다. `BoxPanel` 수행 하지 않습니다. 공간 분할에 대 한 더 간단한 방법을 사용 합니다. `BoxPanel`방법은 사각형 최소 수를 확인 하려면 자식 수보다 큽니다. 예를 들어 9개 항목은 3x3 정사각형에 들어갑니다. 10 개 항목에는 4x4 정사각형이 필요합니다. 그러나 공간을 절약하기 위해 시작 정사각형의 행이나 열을 하나 제거하고 항목을 맞출 수도 있습니다. 개수=10 예제에서는 4x3 또는 3x4 직사각형에 들어갑니다.
+여기에는 나와 있지 않지만 `BoxPanel`을 추가로 확장하는 고급 시나리오는 동적 자식을 수용하고 개별 셀의 크기를 조정하기 위한 더 강력한 요소로 자식의 [**DesiredSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.desiredsize)를 사용합니다. 이 시나리오에서는 "불필요하게 사용된" 공간을 좀 더 줄이기 위해 다양한 행 또는 열 크기나 그리드가 아닌 모양을 사용할 수 있습니다. 이 경우 미적 요인과 가장 작은 크기를 위해 다양한 크기와 가로 세로 비율의 여러 직사각형이 컨테이너 직사각형에 모두 들어가도록 하는 방법에 대한 전략이 필요합니다. `BoxPanel`은이 작업을 수행 하지 않습니다. 공간 분할을 위한 간단한 기술을 사용 합니다. `BoxPanel`의 기술은 자식 개수 보다 큰 최소 제곱 수를 결정 하는 것입니다. 예를 들어 9개 항목은 3x3 정사각형에 들어갑니다. 10 개 항목에는 4x4 정사각형이 필요합니다. 그러나 공간을 절약하기 위해 시작 정사각형의 행이나 열을 하나 제거하고 항목을 맞출 수도 있습니다. 개수=10 예제에서는 4x3 또는 3x4 직사각형에 들어갑니다.
 
 패널에서 10개 항목에 대해 5x2를 선택하지 않는 이유가 궁금할 수도 있습니다. 이렇게 하면 항목 수에 정확히 맞기 때문입니다. 그러나 실제로 패널은 가로 세로 비율이 비슷한 직사각형으로 크기가 조정됩니다. 최소 정사각형 기법은 일반적인 레이아웃 모양에서 제대로 작동하도록 크기 조정 논리를 보정하고 셀 모양의 가로 세로 비율이 특이한 크기 조정을 권장하지 않는 방법입니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-**참조**
+**참조일**
 
-* [**FrameworkElement.ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride)
-* [**FrameworkElement.MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride)
+* [**FrameworkElement. System.windows.frameworkelement.arrangeoverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride)
+* [**FrameworkElement. System.windows.frameworkelement.measureoverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride)
 * [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel)
 
 **개념**

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, C#, Visual Basic, 비동기
 ms.localizationpriority: medium
-ms.openlocfilehash: db0e3064cc64e6ffbafa50d045ced020ad30b460
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 92cded952f1d4d80290a121d038c57c356e5e206
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371539"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340549"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>C# 또는Visual Basic에서 비동기식 API 호출
 
@@ -38,7 +38,7 @@ UWP에서 제공하는 대부분의 비동기 API는 그에 상응하는 동기 
 
 이 예제에는 눈여겨볼 두 가지 중요한 사항이 있습니다. 먼저 `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` 줄에서는 비동기 메서드 [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)를 호출할 때 **await** 연산자를 사용합니다. **await** 연산자는 컴파일러에게 비동기 메서드를 호출한다는 것을 알려 컴파일러가 개발자 대신 일부 추가 작업을 수행하도록 합니다. 다음으로 이벤트 처리기 선언에 키워드 **async**가 포함됩니다. **await** 연산자를 사용하는 메서드의 메서드 선언에 이 키워드를 포함해야 합니다.
 
-이 항목에서는 컴파일러가 **await** 연산자와 함께 수행하는 작업을 자세히 다루지는 않으며, 대신 앱이 비동기 및 응답 상태를 유지하기 위해 수행하는 작업을 살펴보겠습니다. 동기 코드를 사용할 경우에는 어떻게 되는지 살펴보겠습니다. 예를 들어 `SyndicationClient.RetrieveFeed`라는 동기 메서드가 있다고 가정해 보겠습니다. (이러한 메서드가 없습니다 있지만 있다고 가정해 보겠습니다.) 앱 줄을 포함 하는 경우 `SyndicationFeed feed = client.RetrieveFeed(feedUri)`, 대신 `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)`, 앱의 실행의 반환 값까지 중지 됩니다 `RetrieveFeed` 를 사용할 수 있습니다. 또한 앱이 메서드가 완료될 때까지 기다리는 동안에는 [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 등의 다른 이벤트에 응답할 수 없습니다. 즉, `RetrieveFeed`가 반환될 때까지 앱이 차단됩니다.
+이 항목에서는 컴파일러가 **await** 연산자와 함께 수행하는 작업을 자세히 다루지는 않으며, 대신 앱이 비동기 및 응답 상태를 유지하기 위해 수행하는 작업을 살펴보겠습니다. 동기 코드를 사용할 경우에는 어떻게 되는지 살펴보겠습니다. 예를 들어 `SyndicationClient.RetrieveFeed`라는 동기 메서드가 있다고 가정해 보겠습니다. 이러한 메서드는 없지만이 있다고 가정 합니다. 앱이-1 @no__t 대신 `SyndicationFeed feed = client.RetrieveFeed(feedUri)` 줄을 포함 한 경우, 앱 실행은 `RetrieveFeed`의 반환 값을 사용할 수 있을 때까지 중지 됩니다. 또한 앱이 메서드가 완료될 때까지 기다리는 동안에는 [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 등의 다른 이벤트에 응답할 수 없습니다. 즉, `RetrieveFeed`가 반환될 때까지 앱이 차단됩니다.
 
 반면 `client.RetrieveFeedAsync`를 호출하면 메서드가 검색을 시작한 후 바로 반환됩니다. [  **RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)와 함께 **await**를 사용하면 앱은 일시적으로 이벤트 처리기를 종료합니다. 그런 다음 앱은 **RetrieveFeedAsync**가 비동기적으로 실행되는 동안 다른 이벤트를 처리할 수 있습니다. 따라서 앱이 사용자에게 응답 가능한 상태를 유지하게 됩니다. **RetrieveFeedAsync**가 완료되고 [**SyndicationFeed**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationFeed)를 사용할 수 있게 되면 앱은 이벤트 처리기를 종료한 지점인 `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` 다음부터 이벤트 처리기를 다시 시작한 후 메서드의 나머지 부분을 완료합니다.
 
@@ -51,10 +51,10 @@ UWP에서 제공하는 대부분의 비동기 API는 그에 상응하는 동기 
 
 비동기 메서드를 사용하면 메서드에서 값이 반환되는 것을 기다린 후 그 결과를 보기 위해 서명을 검사할 수 있습니다. UWP의 모든 비동기 API는 다음 형식 중 하나를 반환합니다.
 
--   [**IAsyncOperation&lt;TResult&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)
--   [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)
+-   [**Iasyncoperation<tresult> @ no__t-2TResult @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)
+-   [**IAsyncOperationWithProgress @ no__t-2TResult, TProgress @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)
 -   [**IAsyncAction**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction)
--   [**IAsyncActionWithProgress&lt;TProgress&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)
+-   [**IAsyncActionWithProgress @ no__t-2TProgress @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)
 
 비동기 메서드의 결과 형식은 `      TResult` 형식 매개 변수와 같습니다. `TResult`가 없는 형식에는 결과가 없습니다. 이 경우 결과를 **void**로 간주할 수 있습니다. Visual Basic에서 [Sub](https://docs.microsoft.com/dotnet/articles/visual-basic/programming-guide/language-features/procedures/sub-procedures) 프로시저는 반환 형식이 **void**인 메서드와 같습니다.
 
@@ -62,15 +62,15 @@ UWP에서 제공하는 대부분의 비동기 API는 그에 상응하는 동기 
 
 | 비동기 메서드                                                                           | 반환 형식                                                                                                                                        | 결과 형식                                       |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
-| [**SyndicationClient.RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)     | [**IAsyncOperationWithProgress&lt;SyndicationFeed, RetrievalProgress&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)                                 | [**SyndicationFeed**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationFeed) |
-| [**FileOpenPicker.PickSingleFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync) | [**IAsyncOperation&lt;StorageFile&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)                                                                                | [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)          |
-| [**XmlDocument.SaveToFileAsync**](https://docs.microsoft.com/uwp/api/windows.data.xml.dom.xmldocument.savetofileasync)                 | [**IAsyncAction**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction)                                                                                                           | **void**                                          |
-| [**InkStrokeContainer.LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.loadasync)               | [**IAsyncActionWithProgress&lt;UInt64&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)                                                                   | **void**                                          |
-| [**DataReader.LoadAsync**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.loadasync)                            | [**DataReaderLoadOperation**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReaderLoadOperation), 사용자 지정 클래스를 구현 하는 결과 **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)                     |
+| [**SyndicationClient. RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)     | [**IAsyncOperationWithProgress @ no__t-2SyndicationFeed, RetrievalProgress @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)                                 | [**SyndicationFeed**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationFeed) |
+| [**FileOpenPicker. PickSingleFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync) | [**Iasyncoperation<tresult> @ no__t-2StorageFile @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)                                                                                | [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)          |
+| [**XmlDocument SaveToFileAsync**](https://docs.microsoft.com/uwp/api/windows.data.xml.dom.xmldocument.savetofileasync)                 | [**IAsyncAction**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction)                                                                                                           | **void**                                          |
+| [**InkStrokeContainer. LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.loadasync)               | [**IAsyncActionWithProgress @ no__t-2UInt64 @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)                                                                   | **void**                                          |
+| [**DataReader. LoadAsync**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.loadasync)                            | [**Datareaderloadoperation**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReaderLoadOperation), iasyncoperation<tresult> @ no__t를 구현 하는 사용자 지정 결과 클래스- **3UInt32 @ no__t-4** | [**UInt32**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)                     |
 
  
 
-[  **UWP 앱용 .NET**](https://dotnet.microsoft.com/apps/desktop)에 정의된 비동기 메서드의 반환 형식은 [**Task**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task?redirectedfrom=MSDN) 또는 [**Task&lt;TResult&gt;** ](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1?redirectedfrom=MSDN)입니다. **Task**를 반환하는 메서드는 [**IAsyncAction**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction)을 반환하는 UWP의 비동기 메서드와 비슷합니다. 각각의 경우 비동기 메서드의 결과는 **void**입니다. 반환 형식 **Task&lt;TResult&gt;** 는 작업을 실행할 때 비동기 메서드의 결과가 `TResult` 형식 매개 변수와 동일한 형식이라는 점에서 [**IAsyncOperation&lt;TResult&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)와 비슷합니다. **UWP 앱용 .NET** 및 작업 사용 방법에 대한 자세한 내용은 [Windows 런타임 앱용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))를 참조하세요.
+[  **UWP 앱용 .NET**](https://dotnet.microsoft.com/apps/desktop)에 정의된 비동기 메서드의 반환 형식은 [**Task**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task) 또는 [**Task&lt;TResult&gt;** ](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1)입니다. **Task**를 반환하는 메서드는 [**IAsyncAction**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction)을 반환하는 UWP의 비동기 메서드와 비슷합니다. 각각의 경우 비동기 메서드의 결과는 **void**입니다. 반환 형식 **Task&lt;TResult&gt;** 는 작업을 실행할 때 비동기 메서드의 결과가 `TResult` 형식 매개 변수와 동일한 형식이라는 점에서 [**IAsyncOperation&lt;TResult&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)와 비슷합니다. **UWP 앱용 .NET** 및 작업 사용 방법에 대한 자세한 내용은 [Windows 런타임 앱용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))를 참조하세요.
 
 ## <a name="handling-errors"></a>오류 처리
 
@@ -79,7 +79,7 @@ UWP에서 제공하는 대부분의 비동기 API는 그에 상응하는 동기 
 
 비동기 메서드가 다른 비동기 메서드를 호출할 경우 예외가 발생한 모든 비동기 메서드는 외부 메서드로 전파됩니다. 이는 가장 바깥쪽 메서드에 **try/catch** 블록을 넣어 중첩된 비동기 메서드에 대한 오류를 catch할 수 있음을 의미합니다. 즉, 동기 메서드에 대한 예외를 catch하는 방법과 유사합니다. 그러나 **catch** 블록에는 **await**를 사용할 수 없습니다.
 
-**팁**  부터 C# Microsoft Visual Studio 2005에서 사용할 수 있습니다 **await** 에 **catch** 차단 합니다.
+**팁**  부터 Microsoft Visual Studio C# 2005에서 **catch** 블록에 **wait** 를 사용할 수 있습니다.
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 

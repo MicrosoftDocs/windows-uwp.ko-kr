@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: ffb71812e192c8ca77d8f117a98e032f9e9814c9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d3892857baa29e2275845cb077e5ad9ea3166ada
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366481"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340607"
 ---
 # <a name="attached-properties-overview"></a>연결된 속성 개요
 
@@ -27,7 +27,7 @@ ms.locfileid: "66366481"
 
 ## <a name="attached-properties-in-xaml"></a>XAML의 연결된 속성
 
-XAML에서는 _AttachedPropertyProvider.PropertyName_ 구문을 사용하여 연결된 속성을 설정합니다. 다음은 XAML에서 [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8)를 설정할 수 있는 방법을 보여 주는 예입니다.
+XAML에서는 _AttachedPropertyProvider.PropertyName_ 구문을 사용하여 연결된 속성을 설정합니다. 다음은 XAML에서 [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left)를 설정할 수 있는 방법을 보여 주는 예입니다.
 
 ```xaml
 <Canvas>
@@ -36,13 +36,13 @@ XAML에서는 _AttachedPropertyProvider.PropertyName_ 구문을 사용하여 연
 ```
 
 > [!NOTE]
-> 바로 우리가 사용할 [ **Canvas.Left** ](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) 예로 완벽 하 게 사용 하는 이유를 설명 하지 않고 속성을 연결 합니다. **Canvas.Left**의 용도와 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas)에서 해당 레이아웃 자식을 처리하는 방법에 대해 자세히 알아보려면 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 참조 항목이나 [XAML을 사용하여 레이아웃 정의](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)를 참조하세요.
+> 사용 해야 하는 이유를 완전히 설명 하지 않고 [**Canvas를**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) 연결 된 속성 예제로 사용 하는 것입니다. **Canvas.Left**의 용도와 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas)에서 해당 레이아웃 자식을 처리하는 방법에 대해 자세히 알아보려면 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 참조 항목이나 [XAML을 사용하여 레이아웃 정의](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)를 참조하세요.
 
 ## <a name="why-use-attached-properties"></a>연결된 속성을 사용하는 이유
 
 연결된 속성은 관계된 여러 개체가 런타임에 서로 정보를 전달할 수 없도록 하는 코딩 규칙을 이스케이프하는 방법입니다. 각 개체가 해당 속성만 가져오고 설정할 수 있도록 공통 기본 클래스에 속성을 배치할 수 있습니다. 그러나 이 작업을 수행하는 시나리오 수가 증가할수록 결국 기본 클래스가 공유 가능한 속성들로 꽉 차게 됩니다. 수백 개의 하위 항목 중 두 개만 속성을 사용하는 경우가 발생할 수도 있습니다. 이것은 바람직한 클래스 디자인이 아닙니다. 이 문제를 해결하려면 연결된 속성 개념을 통해 개체가 해당 클래스 구조에서 정의되지 않은 속성에 대해 값을 할당할 수 있도록 합니다. 개체 트리에서 여러 개체를 만든 후에는 정의 클래스가 런타임에 자식 개체에서 값을 읽을 수 있습니다.
 
-예를 들어 자식 요소는 연결된 속성을 사용하여 해당 부모 요소에 UI에 표시되는 방법을 알릴 수 있습니다. [  **Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) 연결된 속성이 이 경우에 해당됩니다. **Canvas.Left**는 **Canvas** 자체가 아니라 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 요소에 포함된 요소에 대해 설정되기 때문에 연결된 속성으로 만들어집니다. 모든 가능한 자식 요소는 **Canvas.Left** 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8)을 사용하여 **Canvas** 레이아웃 컨테이너 부모 내에서 해당 레이아웃 오프셋을 지정합니다. 연결된 속성을 사용하면 많은 가능한 레이아웃 컨테이너 중 하나에만 각각 적용되는 다양한 속성으로 기본 요소 개체 모델을 복잡하게 만들지 않고 이 시나리오가 작동할 수 있습니다. 대신 많은 레이아웃 컨테이너가 연결된 속성 집합을 자체적으로 구현합니다.
+예를 들어 자식 요소는 연결된 속성을 사용하여 해당 부모 요소에 UI에 표시되는 방법을 알릴 수 있습니다. [  **Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) 연결된 속성이 이 경우에 해당됩니다. **Canvas.Left**는 **Canvas** 자체가 아니라 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 요소에 포함된 요소에 대해 설정되기 때문에 연결된 속성으로 만들어집니다. 모든 가능한 자식 요소는 **Canvas.Left** 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top)을 사용하여 **Canvas** 레이아웃 컨테이너 부모 내에서 해당 레이아웃 오프셋을 지정합니다. 연결된 속성을 사용하면 많은 가능한 레이아웃 컨테이너 중 하나에만 각각 적용되는 다양한 속성으로 기본 요소 개체 모델을 복잡하게 만들지 않고 이 시나리오가 작동할 수 있습니다. 대신 많은 레이아웃 컨테이너가 연결된 속성 집합을 자체적으로 구현합니다.
 
 연결된 속성을 구현하기 위해 [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 클래스는 정적 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 필드 [**Canvas.LeftProperty**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas.leftproperty)를 정의합니다. 그런 다음, **Canvas**는 [**SetLeft**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas.setleft) 및 [**GetLeft**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas.getleft) 메서드를 연결된 속성의 공개 접근자로 제공하여 XAML 설정 및 런타임 값 액세스를 모두 가능하게 합니다. XAML과 종속성 속성 시스템의 경우 이 API 집합은 연결된 속성의 특정 XAML 구문을 가능하게 하고 종속성 속성 저장소에 값을 저장하는 패턴을 충족합니다.
 
@@ -123,15 +123,15 @@ myCheckBox.SetValue(Canvas::TopProperty(), winrt::box_value(75));
 - 연결된 속성을 애니메이션에 대한 대상 경로의 일부로 지정하려면 연결된 속성 이름을 괄호("()") 예를 들어 "(Canvas.Left)"처럼 연결된 속성 이름을 닫습니다. 자세한 내용은 [속성 경로 구문](property-path-syntax.md)을 참조하세요.
 
 > [!WARNING]
-> Windows 런타임 XAML 구현를 기존 제한은 아니지만 사용자 지정 연결 된 속성에 애니메이션 효과 수 없습니다.
+> Windows 런타임 XAML 구현의 기존 제한 사항은 사용자 지정 연결 된 속성에 애니메이션 효과를 적용할 수 없다는 것입니다.
 
-- 연결된 된 속성에 리소스 파일에서 리소스 참조를 위해 대상 속성으로 지정 하려면 **X:uid**를 삽입 하는 코드 스타일을 정규화 하는 특수 구문을 사용 하 여 **를 사용 하 여:** 내에서 선언 대괄호 ("\[\]"), 의도적으로 범위 나누기를 만들도록 합니다. 예를 들어 있는 요소를 가정 `<TextBlock x:Uid="Title" />`를 대상으로 하는 리소스 파일의 리소스 키를 **Canvas.Top** 인스턴스에 있는 값은 "제목.\[ using:Windows.UI.Xaml.Controls\]Canvas.Top "입니다. 리소스 파일 및 XAML에 대 한 자세한 내용은 참조 하세요. [빠른 시작: UI 리소스를 번역](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10))합니다.
+- 리소스 파일에서 **x:Uid**로 리소스 참조에 대 한 대상 속성으로 연결 된 속성을 지정 하려면 대괄호 ("\[ @ no__t") 내에서 선언을 **사용 하 여** 정규화 된 코드 스타일을 삽입 하는 특수 구문을 사용 합니다. 의도적인 범위 나누기를 만듭니다. 예를 들어 요소 `<TextBlock x:Uid="Title" />` 인 경우 캔버스를 대상으로 하는 리소스 파일의 리소스 키 **입니다.** 해당 인스턴스의 Top 값은 "Title. \[using: Windows.UI.Xaml.Controls\]Canvas.Top"입니다. 리소스 파일 및 XAML에 대 한 자세한 내용은 [Quickstart 스타트: UI 리소스를 변환 하는 중 @ no__t-0.
 
 ## <a name="related-topics"></a>관련 항목
 
 - [사용자 지정 연결된 속성](custom-attached-properties.md)
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [XAML을 사용하여 레이아웃 정의](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)
-- [빠른 시작: UI 리소스를 변환합니다.](https://docs.microsoft.com/previous-versions/windows/apps/hh943060(v=win.10))
+- [빠른 시작: UI 리소스를 변환 하는 중 @ no__t-0
 - [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue)
 - [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue)

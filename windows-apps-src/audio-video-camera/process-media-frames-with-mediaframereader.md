@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f2442647d39c4142b50c0a2a9b1fbc2c0eb66ca
-ms.sourcegitcommit: be519a7ecff53696b853754c879db32be9a53289
+ms.openlocfilehash: ddd35e0365efcc8c224e717b66f53734af32123d
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69544919"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339758"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 
@@ -129,7 +129,7 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 
 **Image** 컨트롤은 프리멀티플라이되거나 알파가 없는 BRGA8 형식으로만 이미지를 표시할 수 있습니다. 도착하는 프레임이 해당 형식이 아니면 정적 메서드 [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.convert)가 소프트웨어 비트맵을 올바른 형식으로 변환합니다.
 
-다음으로 [**Interlocked.Exchange**](https://docs.microsoft.com/dotnet/api/system.threading.interlocked.exchange?redirectedfrom=MSDN#System_Threading_Interlocked_Exchange__1___0____0_) 메서드를 사용하여 도착하는 비트맵의 참조를 백 버퍼 비트맵으로 바꿉니다. 이 메서드는 스레드로부터 안전한 원자성 작업에서 이러한 참조를 바꿉니다. 바꾼 후에는 이제 *softwareBitmap* 변수에 있는 이전 백 버퍼 이미지가 삭제되어 해당 리소스가 정리됩니다.
+다음으로 [**Interlocked.Exchange**](https://docs.microsoft.com/dotnet/api/system.threading.interlocked.exchange#System_Threading_Interlocked_Exchange__1___0____0_) 메서드를 사용하여 도착하는 비트맵의 참조를 백 버퍼 비트맵으로 바꿉니다. 이 메서드는 스레드로부터 안전한 원자성 작업에서 이러한 참조를 바꿉니다. 바꾼 후에는 이제 *softwareBitmap* 변수에 있는 이전 백 버퍼 이미지가 삭제되어 해당 리소스가 정리됩니다.
 
 다음으로 **Image** 요소와 연관된 [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher)를 사용하여 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출하여 UI 스레드에서 실행할 작업을 만듭니다. 작업 내에서 비동기 작업이 수행되므로 *async* 키워드를 사용하여 **RunAsync**로 전달된 람다 식이 선언됩니다.
 
@@ -169,7 +169,7 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 ## <a name="use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources"></a>MultiSourceMediaFrameReader를 사용하여 여러 원본에서 시간 연관 프레임 가져오기
 Windows 10 버전 1607부터 [**MultiSourceMediaFrameReader**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader)를 사용하여 다양한 원본에서 시간 연관 프레임을 가져올 수 있습니다. 이 API를 사용하면 [**DepthCorrelatedCoordinateMapper**](https://docs.microsoft.com/uwp/api/windows.media.devices.core.depthcorrelatedcoordinatemapper) 클래스를 사용한 임시 근접 연결에서 얻은 여러 원본의 프레임을 필요로 하는 프로세싱을 더 쉽게 처리할 수 있습니다. 이 새로운 메서드의 한 가지 제한은 프레임 도착 이벤트가 가장 느린 캡처 원본의 속도로만 발생한다는 점입니다. 더 빠른 원본의 추가 프레임은 삭제됩니다. 또한 시스템이 다른 원본의 프레임이 다른 속도로 도착할 것으로 예상하기 때문에, 원본에서 프레임 생성을 모두 함께 중단한 경우에도 자동으로 인식하지 못합니다. 이 섹션의 예제 코드에서는 시간 연관 프레임이 앱에서 정의한 시간 제한 내에 도착하지 않으면 호출되는 자체 시간 초과 논리를 만들기 위해 이벤트를 사용하는 방법을 보여 줍니다.
 
-[  **MultiSourceMediaFrameReader**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader)를 사용하는 단계는 이 문서의 앞에서 설명한 [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader)를 사용하는 단계와 유사합니다. 이 예에서는 색상 원본과 깊이 원본을 사용합니다. 몇몇 문자열 변수를 정의하여 각 원본의 프레임을 선택하는 데 사용되는 미디어 프레임 소스 ID를 저장합니다. 다음, 이 예의 시간 초과 논리를 구현하는 데 사용되는 [**ManualResetEventSlim**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim?view=netframework-4.7), [**CancellationTokenSource**](https://docs.microsoft.com/dotnet/api/system.threading.cancellationtokensource?redirectedfrom=MSDN) 및 [**EventHandler**](https://docs.microsoft.com/dotnet/api/system.eventhandler?redirectedfrom=MSDN)를 선언합니다. 
+[  **MultiSourceMediaFrameReader**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader)를 사용하는 단계는 이 문서의 앞에서 설명한 [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader)를 사용하는 단계와 유사합니다. 이 예에서는 색상 원본과 깊이 원본을 사용합니다. 몇몇 문자열 변수를 정의하여 각 원본의 프레임을 선택하는 데 사용되는 미디어 프레임 소스 ID를 저장합니다. 다음, 이 예의 시간 초과 논리를 구현하는 데 사용되는 [**ManualResetEventSlim**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim), [**CancellationTokenSource**](https://docs.microsoft.com/dotnet/api/system.threading.cancellationtokensource) 및 [**EventHandler**](https://docs.microsoft.com/dotnet/api/system.eventhandler)를 선언합니다. 
 
 [!code-cs[MultiFrameDeclarations](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameDeclarations)]
 
@@ -187,7 +187,7 @@ Windows 10 버전 1607부터 [**MultiSourceMediaFrameReader**](https://docs.micr
 
 [  **CreateMultiSourceFrameReaderAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createmultisourceframereaderasync)를 호출하고 읽기 프로그램이 사용할 프레임 원본 배열을 전달하여 **MultiSourceMediaFrameReader**를 만들고 초기화합니다. [  **FrameArrived**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader.FrameArrived) 이벤트에 대한 이벤트 처리기를 등록합니다. 이 예에서는 이 문서에서 이미 설명한 **FrameRenderer** 도우미 클래스의 인스턴스를 만들어 프레임을 **Image** 컨트롤로 렌더링합니다. [  **StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader.StartAsync)를 호출하여 프레임 읽기 프로그램을 시작합니다.
 
-이 예의 앞에서 선언한 **CorellationFailed** 이벤트에 대한 이벤트 처리기를 등록합니다. 사용 중인 미디어 프레임 원본 중 하나가 프레임 생성을 중단하면 이 이벤트에 신호를 보낼 것입니다. 마지막으로, [**Task.Run**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run?redirectedfrom=MSDN#System_Threading_Tasks_Task_Run_System_Action_)을 호출하여 시간 초과 도우미 메서드인 **NotifyAboutCorrelationFailure**를 별도 스레드에서 호출합니다. 이 메서드의 구현 방법은 이 문서의 뒷부분에서 설명합니다.
+이 예의 앞에서 선언한 **CorellationFailed** 이벤트에 대한 이벤트 처리기를 등록합니다. 사용 중인 미디어 프레임 원본 중 하나가 프레임 생성을 중단하면 이 이벤트에 신호를 보낼 것입니다. 마지막으로, [**Task.Run**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run#System_Threading_Tasks_Task_Run_System_Action_)을 호출하여 시간 초과 도우미 메서드인 **NotifyAboutCorrelationFailure**를 별도 스레드에서 호출합니다. 이 메서드의 구현 방법은 이 문서의 뒷부분에서 설명합니다.
 
 [!code-cs[InitMultiFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitMultiFrameReader)]
 
@@ -195,7 +195,7 @@ Windows 10 버전 1607부터 [**MultiSourceMediaFrameReader**](https://docs.micr
 
 [  **TryAcquireLatestFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader.TryAcquireLatestFrame)을 호출하여 이벤트와 관련된 [**MultiSourceMediaFrameReference**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereference)를 가져옵니다. [  **TryGetFrameReferenceBySourceId**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereference.trygetframereferencebysourceid)를 호출하고 프레임 읽기 프로그램이 초기화되었을 때 저장된 ID 문자열을 전달하여 각 미디어 프레임 원본에 관련된 **MediaFrameReference**를 가져옵니다.
 
-**ManualResetEventSlim** 개체의 [**Set**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim.set?redirectedfrom=MSDN#System_Threading_ManualResetEventSlim_Set) 메서드를 호출하여 프레임이 도착했다는 신호를 보냅니다. 이 이벤트는 별도의 스레드에서 실행 중인 **NotifyCorrelationFailure** 메서드에서 확인합니다. 
+**ManualResetEventSlim** 개체의 [**Set**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim.set#System_Threading_ManualResetEventSlim_Set) 메서드를 호출하여 프레임이 도착했다는 신호를 보냅니다. 이 이벤트는 별도의 스레드에서 실행 중인 **NotifyCorrelationFailure** 메서드에서 확인합니다. 
 
 마지막으로, 시간 연관 프레임을 위한 처리를 수행합니다. 이 예에서는 간단히 깊이 원본의 프레임만 표시합니다.
 

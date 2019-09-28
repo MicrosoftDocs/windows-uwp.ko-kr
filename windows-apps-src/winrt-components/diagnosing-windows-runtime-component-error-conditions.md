@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ab1ad2054288c38498eb1077a924531d3e22c0dd
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 330cbaab4a1c8313fb0b298dea55176eb66d4803
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393709"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340529"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Windows 런타임 구성 요소 오류 조건 진단
 
@@ -21,17 +21,17 @@ ms.locfileid: "70393709"
 
 ## <a name="error-message-for-implementing-async-interface-provides-incorrect-type"></a>비동기 인터페이스 구현에 대한 오류 메시지가 잘못된 형식 제공
 
-관리 되는 Windows 런타임 구성 요소는 비동기 작업 또는 작업을 나타내는 UWP (유니버설 Windows 플랫폼) 인터페이스를 구현할 수 없습니다 ([iasyncaction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [&lt;iasyncactionwithprogress&gt; ](https://docs.microsoft.com/previous-versions/br205784(v=vs.85)) progress). , [Iasyncoperation<tresult>&lt;tresult&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)또는 [IAsyncOperationWithProgress&gt;tresult,&lt;tprogress](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)). 대신 .NET은 Windows 런타임 구성 요소에서 비동기 작업을 생성 하기 위한 [system.runtime.interopservices.windowsruntime.asyncinfo](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime?redirectedfrom=MSDN) 클래스를 제공 합니다. 비동기 인터페이스를 잘못 구현하려고 할 때 Winmdexp.exe가 표시하는 오류 메시지가 이 클래스를 이전 이름인 AsyncInfoFactory로 나타냅니다. .NET에는 더 이상 AsyncInfoFactory 클래스가 포함 되지 않습니다.
+관리 되는 Windows 런타임 구성 요소는 비동기 작업 또는 작업을 나타내는 UWP (유니버설 Windows 플랫폼) 인터페이스를 구현할 수 없습니다 ([Iasyncaction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [iasyncactionwithprogress @ No__t-2tprogress @ no__t-3](https://docs.microsoft.com/previous-versions/br205784(v=vs.85)), [ Iasyncoperation<tresult> @ no__t-5TResult @ no__t](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)또는 [IAsyncOperationWithProgress @ No__t-8Tresult, tprogress @ no__t-9](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)). 대신 .NET은 Windows 런타임 구성 요소에서 비동기 작업을 생성 하기 위한 [system.runtime.interopservices.windowsruntime.asyncinfo](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime) 클래스를 제공 합니다. 비동기 인터페이스를 잘못 구현하려고 할 때 Winmdexp.exe가 표시하는 오류 메시지가 이 클래스를 이전 이름인 AsyncInfoFactory로 나타냅니다. .NET에는 더 이상 AsyncInfoFactory 클래스가 포함 되지 않습니다.
 
 | 오류 번호 | 메시지 텍스트|       
 |--------------|-------------|
-| WME1084      | '{0}' 형식은 비동기 인터페이스 '{1}' Windows 런타임를 구현 합니다. Windows 런타임 형식은 비동기 인터페이스를 구현할 수 없습니다. System.Runtime.InteropServices.WindowsRuntime.AsyncInfoFactory 클래스를 사용하여 Windows 런타임으로 내보내기 위한 비동기 작업을 생성하세요. |
+| WME1084      | ' @No__t-0 ' 형식은 Windows 런타임 비동기 인터페이스 ' {1} '을 구현 합니다. Windows 런타임 형식은 비동기 인터페이스를 구현할 수 없습니다. System.Runtime.InteropServices.WindowsRuntime.AsyncInfoFactory 클래스를 사용하여 Windows 런타임으로 내보내기 위한 비동기 작업을 생성하세요. |
 
-> Windows 런타임를 참조 하는 오류 메시지는이전용어를사용합니다.  지금은 이를 UWP(유니버설 Windows 플랫폼)라고 합니다. 예를 들어 Windows 런타임 형식은 이제 UWP 형식이라고 합니다.
+> **참고**@no__t-Windows 런타임를 참조 하는 1The 오류 메시지는 이전 용어를 사용 합니다. 지금은 이를 UWP(유니버설 Windows 플랫폼)라고 합니다. 예를 들어 Windows 런타임 형식은 이제 UWP 형식이라고 합니다.
 
 ## <a name="missing-references-to-mscorlibdll-or-systemruntimedll"></a>mscorlib.dll 또는 System.Runtime.dll에 대해 누락된 참조
 
-이 문제는 명령줄에서 Winmdexp.exe를 사용하는 경우에만 발생합니다. /Reference 옵션을 사용 하 여 .NET Framework core 참조 어셈블리에 대 한 참조를 포함 하는 것이 좋습니다 .이 어셈블리는 "% ProgramFiles (x86)%\\참조 어셈블리\\에있습니다.Microsoft\\프레임워크\\. Netcore\\v 4.5 "("% ProgramFiles%\\... ") 32 비트 컴퓨터의 경우).
+이 문제는 명령줄에서 Winmdexp.exe를 사용하는 경우에만 발생합니다. /Reference 옵션을 사용 하 여 mscorlib에 대 한 참조를 포함 하는 것이 좋습니다. dll 및 ProgramFiles는 "% (x86)% \\Reference 어셈블리 @ no__t-1Microsoft @ no__t-2Framework @ no__t-3. NETCore @ no__t-4v 4.5" ("% ProgramFiles% \\ ..."에 있는 .NET Framework core 참조 어셈블리 32 비트 컴퓨터의 경우).
 
 | 오류 번호 | 메시지 텍스트                                                                                                                                     |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -42,11 +42,11 @@ ms.locfileid: "70393709"
 
 관리 코드로 작성된 Windows 런타임 구성 요소에서는 공용 형식에 오버로드된 연산자를 노출할 수 없습니다.
 
-> **참고**\_\_\_오류 메시지에서 연산자는 op\_덧셈, op 곱하기, op ExclusiveOr, op 암시적 (암시적 변환) 등의 메타 데이터 이름으로 식별 됩니다. 
+> **참고**@no__t-오류 메시지를 1In 연산자는 op @ No__t-2addition, op @ No__t-3multiply, op @ No__t-4ExclusiveOr, op @ No__t-5implicit (암시적 변환) 등의 메타 데이터 이름으로 식별 됩니다.
 
 | 오류 번호 | 메시지 텍스트                                                                                          |
 |--------------|-------------------------------------------------------------------------------------------------------|
-| WME1087      | '{0}'은 연산자 오버 로드입니다. Windows 런타임에서는 관리되는 형식이 연산자 오버로드를 노출할 수 없습니다. |
+| WME1087      | ' {0} '은 연산자 오버 로드입니다. Windows 런타임에서는 관리되는 형식이 연산자 오버로드를 노출할 수 없습니다. |
 
 ## <a name="constructors-on-a-class-have-the-same-number-of-parameters"></a>클래스의 생성자가 동일한 수의 매개 변수 사용
 
@@ -54,7 +54,7 @@ UWP에서 클래스 생성자의 매개 변수 수는 모두 달라야 합니다
 
 | 오류 번호 | 메시지 텍스트                                                                                                                                            |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME1099      | ' ' 형식에 '{1}' 인수를 사용 하는 생성자가 여러 개 있습니다.{0} Windows 런타임 형식에는 동일한 수의 인수를 사용하는 생성자가 여러 개 있을 수 없습니다. |
+| WME1099      | ' @No__t-0 ' 형식에 ' {1} ' 인수를 사용 하는 생성자가 여러 개 있습니다. Windows 런타임 형식에는 동일한 수의 인수를 사용하는 생성자가 여러 개 있을 수 없습니다. |
 
 ## <a name="must-specify-a-default-for-overloads-that-have-the-same-number-of-parameters"></a>동일한 수의 매개 변수를 사용하는 오버로드에 대해 기본값을 지정해야 함
 
@@ -62,14 +62,14 @@ UWP에서 오버로드된 메서드는 하나의 오버로드가 기본 오버�
 
 | 오류 번호 | 메시지 텍스트                                                                                                                                                                      |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME1059      | ' {0}.'{2}의 여러 매개 변수 오버 로드는 DefaultOverloadAttribute로 데코 레이트 됩니다.{1}                                                            |
-| WME1085      | 의 매개 변수 오버 로드 {1}.의 매개 변수를 DefaultOverloadAttribute로 데코레이팅하 여 기본 오버 로드로 지정 된 메서드를 하나만 지정 해야 합니다.{2} {0} |
+| WME1059      | ' @No__t-1. {2} '의 여러 @no__t 64, 매개 변수 오버 로드가 DefaultOverloadAttribute로 데코 레이트 됩니다.                                                            |
+| WME1085      | @No__t의 @no__t 64, 오버 로드-1. {2}에는 DefaultOverloadAttribute로 데코레이팅하 여 기본 오버 로드로 지정 된 메서드가 하나만 있어야 합니다. |
 
 ## <a name="namespace-errors-and-invalid-names-for-the-output-file"></a>출력 파일의 네임스페이스 오류 및 잘못된 이름
 
 유니버설 Windows 플랫폼에서는 Windows 메타데이터(.winmd) 파일의 모든 공용 형식이 .winmd 파일 이름을 공유하는 네임스페이스에 있거나 해당 파일 이름의 하위 네임스페이스에 있어야 합니다. 예를 들어 Visual Studio 프로젝트의 이름이 A.B(즉, Windows 런타임 구성 요소가 A.B.winmd)인 경우 공용 클래스 A.B.Class1 및 A.B.C.Class2는 포함될 수 있지만 A.Class3(WME0006) 또는 D.Class4(WME1044)는 포함될 수 없습니다.
 
-> **참고 이러한 제한**사항은 공용 형식에만 적용 되며 구현에 사용 되는 전용 형식에는 적용 되지 않습니다.  
+> **참고**  these 제한 사항은 공용 형식에만 적용 되며 구현에 사용 되는 전용 형식에는 적용 되지 않습니다.
 
 A.Class3의 경우 Class3을 다른 네임스페이스로 이동하거나 Windows 런타임 구성 요소의 이름을 A.winmd로 변경합니다. WME0006은 경고이지만 오류로 처리해야 합니다. 이전 예제에서 A.B.winmd를 호출하는 코드는 A.Class3을 찾을 수 없습니다.
 
@@ -81,30 +81,30 @@ D.Class4의 경우 D.Class4와 A.B 네임스페이스의 클래스를 모두 포
 
 Windows 런타임 구성 요소의 형식은 네임스페이스와 동일한 이름을 사용할 수 없습니다(WME1068).
 
-> **주의 Winmdexp을**직접 호출 하 고/out 옵션을 사용 하 여 Windows 런타임 구성 요소의 이름을 지정 하지 않는 경우 Winmdexp는 구성 요소의 모든 네임 스페이스를 포함 하는 이름을 생성 하려고 시도 합니다.   네임스페이스의 이름을 바꾸면 구성 요소의 이름도 변경될 수 있습니다.
+> **주의**  if을 직접 호출 하 고/out 옵션을 사용 하 여 Windows 런타임 구성 요소의 이름을 지정 하지 않는 경우 Winmdexp는 구성 요소의 모든 네임 스페이스를 포함 하는 이름을 생성 하려고 합니다. 네임스페이스의 이름을 바꾸면 구성 요소의 이름도 변경될 수 있습니다.
 
  
 
 | 오류 번호 | 메시지 텍스트                                                                                                                                                                                                                                                                                                                                             |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME0006      | '{0}'은 (는)이 어셈블리에 대 한 올바른 winmd 파일 이름이 아닙니다. Windows 메타데이터 파일 내의 모든 형식은 파일 이름이 암시하는 네임스페이스의 하위 네임스페이스에 있어야 합니다. 이러한 하위 네임스페이스에 존재하지 않는 형식은 런타임에 찾을 수 없습니다. 이 어셈블리에서 파일 이름으로 사용될 수 있는 가장 작은 공통 네임스페이스는 '{1}'입니다. |
+| WME0006      | ' {0} '은 (는)이 어셈블리에 올바른 winmd 파일 이름이 아닙니다. Windows 메타데이터 파일 내의 모든 형식은 파일 이름이 암시하는 네임스페이스의 하위 네임스페이스에 있어야 합니다. 이러한 하위 네임스페이스에 존재하지 않는 형식은 런타임에 찾을 수 없습니다. 이 어셈블리에서 파일 이름으로 사용될 수 있는 가장 작은 공통 네임스페이스는 '{1}'입니다. |
 | WME1042      | 입력 모듈에는 네임스페이스 내에 있는 공용 형식이 하나 이상 포함되어야 합니다.                                                                                                                                                                                                                                                                   |
 | WME1043      | 입력 모듈에는 네임스페이스 내에 있는 공용 형식이 하나 이상 포함되어야 합니다. 네임스페이스 내에서 발견된 유일한 형식은 프라이빗 형식입니다.                                                                                                                                                                                                               |
-| WME1044      | 공용 형식에 다른 네임 스페이스 ('{1}{0}')와 공통 접두사를 공유 하지 않는 네임 스페이스 (' ')가 있습니다. Windows 메타데이터 파일 내의 모든 형식은 파일 이름이 암시하는 네임스페이스의 하위 네임스페이스에 있어야 합니다.                                                                                                                              |
-| WME1067      | 대/소문자{0}만 다른 네임 스페이스 이름을 사용할 수 없습니다.{1}' ', ' '.                                                                                                                                                                                                                                                                                                |
-| WME1068      | '{0}' 형식에는 '{1}' 네임 스페이스와 같은 이름을 사용할 수 없습니다.                                                                                                                                                                                                                                                                                                 |
+| WME1044      | 공용 형식에 다른 네임 스페이스 (' {0} ')와 공통 접두사를 공유 하지 않는 네임 스페이스 (' {1} ')가 있습니다. Windows 메타데이터 파일 내의 모든 형식은 파일 이름이 암시하는 네임스페이스의 하위 네임스페이스에 있어야 합니다.                                                                                                                              |
+| WME1067      | 대/소문자만 다른 네임 스페이스 이름을 사용할 수 없습니다. ' {0} ', ' {1} '.                                                                                                                                                                                                                                                                                                |
+| WME1068      | ' @No__t-0 ' 형식은 ' {1} ' 네임 스페이스와 같은 이름을 사용할 수 없습니다.                                                                                                                                                                                                                                                                                                 |
 
 ## <a name="exporting-types-that-arent-valid-universal-windows-platform-types"></a>유효한 유니버설 Windows 플랫폼 형식이 아닌 형식 내보내기
 
 구성 요소의 공용 인터페이스는 UWP 형식만 노출해야 합니다. 그러나 .NET은 .NET 및 UWP에서 약간씩 다른 여러 가지 일반적으로 사용 되는 형식에 대 한 매핑을 제공 합니다. 이렇게 하면 .NET 개발자가 새로운 형식을 학습 하는 대신 익숙한 형식으로 작업할 수 있습니다. 이러한 매핑된 .NET 형식을 구성 요소의 공용 인터페이스에서 사용할 수 있습니다. [및 Visual Basic를 사용 C# 하는 Windows 런타임 구성 요소](creating-windows-runtime-components-in-csharp-and-visual-basic.md)에서 "Windows 런타임 구성 요소에서 형식 선언" 및 "관리 코드에 유니버설 Windows 플랫폼 형식 전달", [Windows 런타임 형식의 .net 매핑](net-framework-mappings-of-windows-runtime-types.md)을 참조 하세요.
 
-이러한 매핑의 상당수는 인터페이스입니다. 예를 들어 [IList&lt;T&gt;](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?redirectedfrom=MSDN)는 UWP 인터페이스 [IVector&lt;T&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IVector_T_)에 매핑됩니다. 매개 변수 형식으로 IList&lt;string&gt; 대신 List&lt;string&gt;(Visual Basic에서는 `List(Of String)`)을 사용하는 경우 Winmdexp.exe는 List&lt;T&gt;에서 구현되는 매핑된 모든 인터페이스가 포함된 대체 목록을 제공합니다. List&lt;Dictionary&lt;int, string&gt;&gt;(Visual Basic에서는 List(Of Dictionary(Of Integer, String))과 같이 중첩된 제네릭 형식을 사용하는 경우 Winmdexp.exe는 중첩 수준마다 선택 항목을 제공합니다. 이러한 목록은 상당히 길어질 수 있습니다.
+이러한 매핑의 상당수는 인터페이스입니다. 예를 들어 [IList&lt;T&gt;](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1)는 UWP 인터페이스 [IVector&lt;T&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IVector_T_)에 매핑됩니다. 매개 변수 형식으로 IList&lt;string&gt; 대신 List&lt;string&gt;(Visual Basic에서는 `List(Of String)`)을 사용하는 경우 Winmdexp.exe는 List&lt;T&gt;에서 구현되는 매핑된 모든 인터페이스가 포함된 대체 목록을 제공합니다. List&lt;Dictionary&lt;int, string&gt;&gt;(Visual Basic에서는 List(Of Dictionary(Of Integer, String))과 같이 중첩된 제네릭 형식을 사용하는 경우 Winmdexp.exe는 중첩 수준마다 선택 항목을 제공합니다. 이러한 목록은 상당히 길어질 수 있습니다.
 
 일반적으로 최선의 선택은 해당 형식에 가장 가까운 인터페이스입니다. 예를 들어 Dictionary&lt;int, string&gt;의 경우 최선의 선택은 IDictionary&lt;int, string&gt;일 가능성이 높습니다.
 
-> **중요 한**  JavaScript는 관리 되는 형식이 구현 하는 인터페이스 목록에 첫 번째로 표시 되는 인터페이스를 사용 합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
+> **중요**  javascript는 관리 되는 형식이 구현 하는 인터페이스 목록에 첫 번째로 표시 되는 인터페이스를 사용 합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
-> 주의  구성 요소가 JavaScript에서 사용 되는 경우 제네릭이 아닌 [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist?redirectedfrom=MSDN) 및 [IEnumerable](https://docs.microsoft.com/dotnet/api/system.collections.ienumerable?redirectedfrom=MSDN) 인터페이스를 사용 하지 마십시오. 이러한 인터페이스는 [IBindableVector](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindablevector) 및 [IBindableIterator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindableiterator)에 각각 매핑됩니다. 이들은 XAML 컨트롤에 대한 바인딩을 지원하므로 JavaScript에 표시되지 않습니다. JavaScript에서는 "'X' 함수에 잘못된 서명이 있으며 호출할 수 없습니다."라는 런타임 오류가 발생합니다.
+> **주의**  은 JavaScript에서 구성 요소를 사용 하는 경우 제네릭이 아닌 [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist) 및 [IEnumerable](https://docs.microsoft.com/dotnet/api/system.collections.ienumerable) 인터페이스를 사용 하지 않습니다. 이러한 인터페이스는 [IBindableVector](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindablevector) 및 [IBindableIterator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindableiterator)에 각각 매핑됩니다. 이들은 XAML 컨트롤에 대한 바인딩을 지원하므로 JavaScript에 표시되지 않습니다. JavaScript에서는 "'X' 함수에 잘못된 서명이 있으며 호출할 수 없습니다."라는 런타임 오류가 발생합니다.
 
  
 
@@ -122,21 +122,20 @@ Windows 런타임 구성 요소의 형식은 네임스페이스와 동일한 이
 <tbody>
 <tr class="odd">
 <td align="left">WME1033</td>
-<td align="left">' ' 메서드에 ' ' 형식의{1}{2}' ' 매개 변수가 있습니다.{0} '{2}'은(는) 올바른 Windows 런타임 매개 변수 형식이 아닙니다.</td>
+<td align="left">' @No__t-0 ' 메서드의 ' {2} ' 형식 매개 변수 ' {1} '이 (가) 있습니다. '{2}'은(는) 올바른 Windows 런타임 매개 변수 형식이 아닙니다.</td>
 </tr>
 <tr class="even">
 <td align="left">WME1038</td>
-<td align="left">' ' 메서드의 시그니처에 '{1}' 형식의 매개 변수가 있습니다.{0} 이 형식은 올바른 Windows 런타임 형식이 아니지만 올바른 Windows 런타임 형식인 인터페이스를 구현합니다. 메서드 서명을 다음 형식 중 하나를 사용하도록 변경하세요.'{2}'.</td>
+<td align="left">' @No__t-0 ' 메서드의 시그니처에 ' {1} ' 형식의 매개 변수가 있습니다. 이 형식은 올바른 Windows 런타임 형식이 아니지만 올바른 Windows 런타임 형식인 인터페이스를 구현합니다. 메서드 서명을 다음 형식 중 하나를 사용하도록 변경하세요.'{2}'.</td>
 </tr>
 <tr class="odd">
 <td align="left">WME1039</td>
-<td align="left"><p>' ' 메서드의 시그니처에 '{1}' 형식의 매개 변수가 있습니다.{0} 이 제네릭 형식은 올바른 Windows 런타임 형식이 아니지만 해당 형식이나 형식의 제네릭 매개 변수가 올바른 Windows 런타임 형식인 인터페이스를 구현합니다. {2}</p>
-> **&lt;&gt;참고**로  , Winmdexp는 "메서드 시그니처의 ' T ' 형식을 다음 중 하나로 변경 하는 것이 좋습니다 .와 같은 대체 목록을 {2}추가 합니다. 대신 형식: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
+<td align="left"><p>' @No__t-0 ' 메서드의 시그니처에 ' {1} ' 형식의 매개 변수가 있습니다. 이 제네릭 형식은 올바른 Windows 런타임 형식이 아니지만 해당 형식이나 형식의 제네릭 매개 변수가 올바른 Windows 런타임 형식인 인터페이스를 구현합니다. {2}</p>@no__t-no__t @no__t에 대 한 @ no__t @ Winmdexp의 경우,는 메서드 시그니처의 ' @ no__t-4T에서는 @ no__t ' 형식을 다음 형식 중 하나로 변경 하는 것이 좋습니다. "와 같은 대체 목록을 추가 합니다. 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
 </td>
 </tr>
 <tr class="even">
 <td align="left">WME1040</td>
-<td align="left">' ' 메서드의 시그니처에 '{1}' 형식의 매개 변수가 있습니다.{0} 관리되는 작업 형식을 사용하는 대신 Windows.Foundation.IAsyncAction, Windows.Foundation.IAsyncOperation 또는 다른 Windows 런타임 비동기 인터페이스 중 하나를 사용하세요. 이러한 인터페이스에도 표준 .NET await 패턴이 적용됩니다. 관리되는 작업 개체를 Windows 런타임 비동기 인터페이스로 변환하는 방법에 대한 자세한 내용은 System.Runtime.InteropServices.WindowsRuntime.AsyncInfo를 참조하세요.</td>
+<td align="left">' @No__t-0 ' 메서드의 시그니처에 ' {1} ' 형식의 매개 변수가 있습니다. 관리되는 작업 형식을 사용하는 대신 Windows.Foundation.IAsyncAction, Windows.Foundation.IAsyncOperation 또는 다른 Windows 런타임 비동기 인터페이스 중 하나를 사용하세요. 이러한 인터페이스에도 표준 .NET await 패턴이 적용됩니다. 관리되는 작업 개체를 Windows 런타임 비동기 인터페이스로 변환하는 방법에 대한 자세한 내용은 System.Runtime.InteropServices.WindowsRuntime.AsyncInfo를 참조하세요.</td>
 </tr>
 </tbody>
 </table>
@@ -150,7 +149,7 @@ UWP에서 구조체는 필드만 포함할 수 있으며 필드는 구조체에�
 
 | 오류 번호 | 메시지 텍스트                                                                                                                                                                                                                                                            |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME1060      | ' ' 구조체에 ' '{1}형식의{2}' ' 필드가 있습니다.{0} '{2}'은(는) 올바른 Windows 런타임 필드 형식이 아닙니다. Windows 런타임 구조체의 각 필드는 UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Boolean, String 또는 Enum이거나 필드 자체가 구조체여야 합니다. |
+| WME1060      | ' @No__t-0 ' 구조체에 ' {2} ' 형식의 ' {1} ' 필드가 있습니다. '{2}'은(는) 올바른 Windows 런타임 필드 형식이 아닙니다. Windows 런타임 구조체의 각 필드는 UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Boolean, String 또는 Enum이거나 필드 자체가 구조체여야 합니다. |
 
  
 
@@ -159,31 +158,31 @@ UWP에서 구조체는 필드만 포함할 수 있으며 필드는 구조체에�
 
 UWP에서 멤버 서명의 배열은 하한이 0인 1차원 배열이어야 합니다. `myArray[][]`(Visual Basic에서는 `myArray()()`)와 같은 중첩된 배열은 허용되지 않습니다.
 
-> **참고이 제한은**구현에서 내부적으로 사용 하는 배열에는 적용 되지 않습니다. 
+> **참고**@no__t-구현에서 내부적으로 사용 하는 배열에는 1This restriction이 적용 되지 않습니다.
 
  
 
 | 오류 번호 | 메시지 텍스트                                                                                                                                                     |
 |--------------|--------------------|
-| WME1034      | '{0}' 메서드의 시그니처에 하 한이 0이{1}아닌 ' ' 형식의 배열이 있습니다. Windows 런타임 메서드 서명의 배열은 하한이 0이어야 합니다. |
-| WME1035      | ' ' 메서드의 시그니처에 '{1}' 형식의 다차원 배열이 있습니다.{0} Windows 런타임 메서드 서명의 배열은 1차원이어야 합니다.                  |
-| WME1036      | ' ' 메서드의 시그니처에 '{1}' 형식의 중첩 배열이 있습니다.{0} Windows 런타임 메서드 서명의 배열은 중첩될 수 없습니다.                                    |
+| WME1034      | ' @No__t-0 ' 메서드의 시그니처에 하 한이 0이 아닌 ' {1} ' 형식의 배열이 있습니다. Windows 런타임 메서드 서명의 배열은 하한이 0이어야 합니다. |
+| WME1035      | ' @No__t-0 ' 메서드의 시그니처에 ' {1} ' 형식의 다차원 배열이 있습니다. Windows 런타임 메서드 서명의 배열은 1차원이어야 합니다.                  |
+| WME1036      | ' @No__t-0 ' 메서드의 시그니처에 ' {1} ' 형식의 중첩 배열이 있습니다. Windows 런타임 메서드 서명의 배열은 중첩될 수 없습니다.                                    |
 
  
 
 ## <a name="array-parameters-must-specify-whether-array-contents-are-readable-or-writable"></a>배열 매개 변수는 배열 내용의 읽기 가능 또는 쓰기 가능 여부를 지정해야 함
 
 
-UWP에서 매개 변수는 읽기 전용이거나 쓰기 전용이어야 합니다. 매개 변수는 **ref**(Visual Basic에서는 [OutAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.outattribute?redirectedfrom=MSDN) 특성이 없는 **ByRef**)로 표시할 수 없습니다. 이는 배열의 내용에 적용되므로 배열 매개 변수는 배열 내용이 읽기 전용인지 쓰기 전용인지 여부를 나타내야 합니다. 방향은 **out** 매개 변수(Visual Basic에서는 OutAttribute 특성을 가진 **ByRef** 매개 변수)의 경우 분명하지만 값(Visual Basic에서는 ByVal)으로 전달되는 배열 매개 변수는 표시해야 합니다. [Windows 런타임 구성 요소에 배열 전달](passing-arrays-to-a-windows-runtime-component.md)을 참조하세요.
+UWP에서 매개 변수는 읽기 전용이거나 쓰기 전용이어야 합니다. 매개 변수는 **ref**(Visual Basic에서는 [OutAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.outattribute) 특성이 없는 **ByRef**)로 표시할 수 없습니다. 이는 배열의 내용에 적용되므로 배열 매개 변수는 배열 내용이 읽기 전용인지 쓰기 전용인지 여부를 나타내야 합니다. 방향은 **out** 매개 변수(Visual Basic에서는 OutAttribute 특성을 가진 **ByRef** 매개 변수)의 경우 분명하지만 값(Visual Basic에서는 ByVal)으로 전달되는 배열 매개 변수는 표시해야 합니다. [Windows 런타임 구성 요소에 배열 전달](passing-arrays-to-a-windows-runtime-component.md)을 참조하세요.
 
 | 오류 번호 | 메시지 텍스트         |
 |--------------|----------------------|
-| WME1101      | '{0}' 메서드에 및 {2} {1}가모두포함 된배열인''매개변수가있습니다{3}. Windows 런타임에서 내용 배열 매개 변수는 읽기 가능이거나 쓰기 가능이어야 합니다. '{1}'에서 두 특성 중 하나를 제거하세요.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| WME1102      | '{0}' 메서드에 배열이 인 출력 매개 변수{1}' '이 (가 {2}) 있습니다. Windows 런타임에서 출력 배열 내용이 쓰기 가능합니다. '{1}'에서 이 특성을 제거하세요.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| WME1103      | '{0}' 메서드에 '{1}' 매개 변수가 있으며,이는 t e m 또는 InAttribute 또는 t e m가 포함 된 배열입니다. Windows 런타임에서 배열 매개 변수는 {2} 또는 {3}이어야 합니다. 필요한 경우 이러한 특성을 제거하거나 적절한 Windows 런타임 특성으로 바꾸세요.                                                                                                                                                                                                                                                                                                                                                                                          |
-| WME1104      | '{0}' 메서드에 배열이 아니고{1} {2} 또는{3}이 있는 ' ' 매개 변수가 있습니다. Windows 런타임에서는 배열이 아닌 매개 변수를 {2} 또는 {3}(으)로 표시할 수 없습니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| WME1105      | '{0}' 메서드의 '{1}' 매개 변수는 t e m InAttribute 또는 t e m. OutAttribute입니다. Windows 런타임에서는 매개 변수를 System.Runtime.InteropServices.InAttribute 또는 System.Runtime.InteropServices.OutAttribute로 표시할 수 없습니다. System.Runtime.InteropServices.InAttribute를 제거하고 대신 'out' 한정자를 가진 System.Runtime.InteropServices.OutAttribute로 바꾸세요. '{0}' 메서드의 '{1}' 매개 변수는 t e m InAttribute 또는 t e m. OutAttribute입니다. Windows 런타임에서는 ByRef 매개 변수를 System.Runtime.InteropServices.OutAttribute로 표시할 수만 있고 다른 특성 사용법은 지원되지 않습니다. |
-| WME1106      | '{0}' 메서드에 배열인 '{1}' 매개 변수가 있습니다. Windows 런타임에서 배열 매개 변수의 내용은 읽기 가능 또는 쓰기 가능이어야 합니다. '{1}'에 {2} 또는 {3}을(를) 적용하세요.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| WME1101      | ' @No__t-0 ' 메서드의 매개 변수 ' {1} '이 (가) 배열 이며 {2}와 {3} 모두 있습니다. Windows 런타임에서 내용 배열 매개 변수는 읽기 가능이거나 쓰기 가능이어야 합니다. '{1}'에서 두 특성 중 하나를 제거하세요.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| WME1102      | ' @No__t-0 ' 메서드의 출력 매개 변수 ' {1} '이 (가) 배열 이지만 {2}가 있습니다. Windows 런타임에서 출력 배열 내용이 쓰기 가능합니다. '{1}'에서 이 특성을 제거하세요.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| WME1103      | ' @No__t-0 ' 메서드에 ' {1} ' 매개 변수가 있습니다 .이 매개 변수는 InAttribute 또는 T e m OutAttribute가 있는 배열입니다. Windows 런타임에서 배열 매개 변수는 {2} 또는 {3}이어야 합니다. 필요한 경우 이러한 특성을 제거하거나 적절한 Windows 런타임 특성으로 바꾸세요.                                                                                                                                                                                                                                                                                                                                                                                          |
+| WME1104      | ' @No__t-0 ' 메서드의 ' {1} ' 매개 변수가 배열이 아니고 {2} 또는 {3} 이어야 합니다. Windows 런타임에서는 배열이 아닌 매개 변수를 {2} 또는 {3}(으)로 표시할 수 없습니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| WME1105      | ' @No__t-0 ' 메서드의 ' {1} ' 매개 변수는 InAttribute 또는 T e m OutAttribute입니다. Windows 런타임에서는 매개 변수를 System.Runtime.InteropServices.InAttribute 또는 System.Runtime.InteropServices.OutAttribute로 표시할 수 없습니다. System.Runtime.InteropServices.InAttribute를 제거하고 대신 'out' 한정자를 가진 System.Runtime.InteropServices.OutAttribute로 바꾸세요. ' @No__t-0 ' 메서드의 ' {1} ' 매개 변수는 InAttribute 또는 T e m OutAttribute입니다. Windows 런타임에서는 ByRef 매개 변수를 System.Runtime.InteropServices.OutAttribute로 표시할 수만 있고 다른 특성 사용법은 지원되지 않습니다. |
+| WME1106      | ' @No__t-0 ' 메서드의 매개 변수 ' {1} '이 (가) 배열입니다. Windows 런타임에서 배열 매개 변수의 내용은 읽기 가능 또는 쓰기 가능이어야 합니다. '{1}'에 {2} 또는 {3}을(를) 적용하세요.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
 ## <a name="member-with-a-parameter-named-value"></a>"value"라는 매개 변수가 있는 멤버
@@ -210,18 +209,18 @@ UWP에서 반환 값은 출력 매개 변수로 간주되고, 매개 변수 이�
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> **참고 반환 값**의 이름을 변경 하 고 새 이름이 다른 매개 변수의 이름과 충돌 하는 경우 오류 WME1091이 발생 합니다.  
+> **참고**   반환 값의 이름을 변경 하 고 새 이름이 다른 매개 변수의 이름과 충돌 하는 경우 오류 WME1091 발생 합니다.
 
-JavaScript 코드는 반환 값을 포함하여 메서드의 출력 매개 변수를 이름으로 액세스할 수 있습니다. 예제를 보려면 [ReturnValueNameAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.returnvaluenameattribute?redirectedfrom=MSDN) 특성을 참조하세요.
+JavaScript 코드는 반환 값을 포함하여 메서드의 출력 매개 변수를 이름으로 액세스할 수 있습니다. 예제를 보려면 [ReturnValueNameAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.returnvaluenameattribute) 특성을 참조하세요.
 
 | 오류 번호 | 메시지 텍스트 |
 |--------------|--------------|
-| WME1091 | '\{0} ' 메서드에 매개 변수 이름과 동일한 '\{1} ' 이라는 반환 값이 있습니다. Windows 런타임 메서드의 매개 변수와 반환 값에는 고유한 이름이 있어야 합니다. |
-| WME1092 | '\{0} ' 메서드에 기본 반환 값 이름과 동일한 '\{1} ' 매개 변수가 있습니다. 매개 변수에 다른 이름을 사용해 보거나 System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute를 사용하여 반환 값의 이름을 명시적으로 지정하세요. |
+| WME1091 | ' @No__t-00} ' 메서드에 매개 변수 이름과 동일한 ' \{1} ' 이라는 반환 값이 있습니다. Windows 런타임 메서드의 매개 변수와 반환 값에는 고유한 이름이 있어야 합니다. |
+| WME1092 | ' @No__t-00} ' 메서드에 기본 반환 값 이름과 같은 ' \{1} ' 이라는 매개 변수가 있습니다. 매개 변수에 다른 이름을 사용해 보거나 System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute를 사용하여 반환 값의 이름을 명시적으로 지정하세요. |
 
-**참고 기본 이름은**속성 접근자의 경우 "returnValue"이 고 다른 모든 메서드의 경우 "value"입니다.  
+1The 기본 이름은 속성 접근자의 경우 "returnValue"이 고 다른 모든 메서드의 경우 "value"입니다 **. @no__t**
 
 ## <a name="related-topics"></a>관련 항목
 
-* [및를 사용 C# 하 여 구성 요소 Windows 런타임 Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [C# 및 Visual Basic이 포함된 Windows 런타임 구성 요소](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
 * [Winmdexp (Windows 런타임 Metadata Export Tool)](https://docs.microsoft.com/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool)

@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b27c5a0446bc9b329b09855f06d58a13723ece1c
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f73bb15d2746dbac4403ca6daffb603588cf7a58
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317379"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340099"
 ---
 # <a name="access-keys"></a>선택키
 
@@ -44,7 +44,7 @@ Microsoft Office 앱은 선택키에 대한 다양한 지원을 제공합니다.
 
 ![Microsoft Word의 선택키에 대한 키 팁 배지](images/accesskeys/keytip-badges-word.png)
 
-_Microsoft Word에서 액세스 키에 대 한 KeyTip 배지_
+_Microsoft Word의 액세스 키에 대 한 KeyTip 배지_
 
 컨트롤에 선택키를 추가하려면 **AccessKey 속성**을 사용합니다. 이 속성의 값은 선택키 순서, 바로 가기(단일 영숫자인 경우) 및 키 팁을 지정합니다.
 
@@ -72,11 +72,11 @@ _Microsoft Word에서 액세스 키에 대 한 KeyTip 배지_
 
 다음 이미지는 Word의 두 선택키 범위를 보여 줍니다. 첫 번째는 사용자가 탭 및 다른 최상위 수준 명령을 선택할 수 있는 주 선택키를 보여 주고, 두 번째는 홈 탭의 선택키를 보여 줍니다.
 
-![Microsoft Word에서 기본 액세스 키](images/accesskeys/primary-access-keys-word.png)
-_Microsoft Word에서 기본 액세스 키_
+microsoft Word @ no__t의 기본 액세스 키 ](images/accesskeys/primary-access-keys-word.png)
+_Microsoft word의 기본 액세스 키_
 
-![Microsoft Word에 대 한 보조 액세스 키](images/accesskeys/secondary-access-keys-word.png)
-_Microsoft Word에 대 한 보조 액세스 키_
+microsoft Word @ no__t에서 보조 액세스 키 ](images/accesskeys/secondary-access-keys-word.png)
+_Microsoft word의 보조 액세스 키_
 
 선택키는 여러 범위의 요소에 대해 중복 가능합니다. 위 예제에서 "2"는 주 범위의 실행 취소 그리고 보조 범위의 "기울임꼴"에 대한 선택키입니다.
 
@@ -110,7 +110,7 @@ _Microsoft Word에 대 한 보조 액세스 키_
 
 ![CommandBar에 대한 기본 선택키](images/accesskeys/primary-access-keys-commandbar.png)
 
-_CommandBar 기본 범위 및 지원 되는 액세스 키_
+_명령 모음 주 범위 및 지원 되는 액세스 키_
 
 ![CommandBar에 대한 보조 선택키](images/accesskeys/secondary-access-keys-commandbar.png)
 
@@ -233,13 +233,13 @@ public class CommandBarHack : CommandBar
 
 ![영어 및 스페인어 리소스 문자열 폴더](images/accesskeys/resource-string-folders.png)
 
-_영어와 스페인어 리소스 문자열 폴더_
+_영어 및 스페인어 리소스 문자열 폴더_
 
 지역화된 선택키는 프로젝트 resources.resw 파일에 지정됩니다.
 
 ![resources.resw 파일에 지정된 AccessKey 속성 지정](images/accesskeys/resource-resw-file.png)
 
-_Resources.resw 파일에서 지정 된 AccessKey 속성 지정_
+_리소스. resw 파일에 지정 된 AccessKey 속성을 지정 합니다._
 
 자세한 내용은 [UI 리소스 번역](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10))을 참조하세요.
 
@@ -255,17 +255,17 @@ _자동 키 팁 배치의 예_
 
 그러나 키 팁 위치를 보다 세밀하게 제어해야 하는 경우 다음 사항을 따르는 것이 좋습니다.
 
-1.  **명백한 연결 원칙**: 사용자는 키 팁으로 쉽게 컨트롤을 연결할 수 있습니다.
+1.  **명백한 연결 원칙**: 사용자가 컨트롤을 키 팁에 쉽게 연결할 수 있습니다.
 
     a.  키 팁은 선택키를 갖고 있는 요소(소유자)와 **가까이** 있어야 합니다.  
     b.  키 팁은 선택키를 갖고 있는 **활성화된 요소를 포함하면 안 됩니다**.   
     c.  키 팁을 소유자와 가까운 곳에 배치할 수 없는 경우 소유자와 겹쳐야 합니다. 
 
-2.  **검색 기능**: 사용자 키 팁을 사용 하 여 컨트롤을 신속 하 게 검색할 수 있습니다.
+2.  검색 **가능성**: 사용자는 키 팁을 사용 하 여 컨트롤을 신속 하 게 검색할 수 있습니다.
 
     a.  키 팁은 절대로 다른 키 팁과 **겹치면** 안 됩니다.  
 
-3.  **쉽게 검색 합니다.** 사용자는 앞부분을 건너뛰고 키 팁을 쉽게 합니다.
+3.  **간편한 검색:** 사용자는 키 팁을 쉽게 skim 수 있습니다.
 
     a.  키 팁을 다른 키 팁 및 UI 요소와 일직선으로 **정렬**해야 합니다.
     b.  키 팁을 최대한 많이 **그룹화**해야 합니다. 
@@ -274,11 +274,11 @@ _자동 키 팁 배치의 예_
 
 **KeyTipPlacementMode** 속성을 사용하여 요소 또는 그룹별로 키 팁의 배치를 사용자 지정합니다.
 
-배치 모드는 다음과 같습니다. 위쪽, 아래쪽, 오른쪽, 왼쪽, 숨겨진, 가운데 및 자동입니다.
+배치 모드는 다음과 같습니다. 위쪽, 아래쪽, 오른쪽, 왼쪽, 숨김, 가운데 및 자동입니다.
 
 ![키 팁 배치 모드](images/accesskeys/keytip-postion-modes.png)
 
-_키 팁 배치 모드_
+_주요 팁 배치 모드_
 
 컨트롤의 중심선을 사용하여 키 팁의 세로 및 가로 정렬을 계산합니다.
 
@@ -303,7 +303,7 @@ KeyTipHorizontalOffset 속성은 키 팁을 왼쪽 또는 오른쪽으로 얼마
 
 ![키 팁 배치 모드](images/accesskeys/keytip-offsets.png)
 
-_키 팁에 대 한 가로 및 세로 오프셋을 설정 합니다._
+_키 팁에 대 한 세로 및 가로 오프셋 설정_
 
 ``` xaml
 <Button
@@ -320,7 +320,7 @@ _키 팁에 대 한 가로 및 세로 오프셋을 설정 합니다._
 
 ![키 팁 배치 모드](images/accesskeys/keytips-screen-edge.png)
 
-_화면 가장자리 하면 자동으로 재배치 하 키 팁_
+_화면 가장자리에 따라 키 팁이 자동으로 다시 배치 됩니다._
 
 ## <a name="key-tip-style"></a>스타일 키 팁
 
@@ -330,7 +330,7 @@ _화면 가장자리 하면 자동으로 재배치 하 키 팁_
 
 ![키 팁 배치 모드](images/accesskeys/keytip-customization.png)
 
-_키 팁 사용자 지정 옵션_
+_주요 팁 사용자 지정 옵션_
 
 이 예제에서는 이러한 응용 프로그램 리소스를 변경하는 방법을 보여 줍니다.
 
@@ -353,12 +353,12 @@ _키 팁 사용자 지정 옵션_
 
 XAML 프레임워크는 UI 자동화 클라이언트가 사용자 인터페이스의 요소에 대한 정보를 검색할 수 있게 해주는 자동화 속성을 노출합니다.
 
-UIElement 또는 TextElement 컨트롤에서 AccessKey 속성을 지정하는 경우 [AutomationProperties.AccessKey](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) 속성을 사용하여 이 값을 가져올 수 있습니다. 내레이터 같은 접근성 클라이언트의 경우 요소가 포커스를 받을 때마다 이 속성 값을 읽습니다.
+UIElement 또는 TextElement 컨트롤에서 AccessKey 속성을 지정하는 경우 [AutomationProperties.AccessKey](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey) 속성을 사용하여 이 값을 가져올 수 있습니다. 내레이터 같은 접근성 클라이언트의 경우 요소가 포커스를 받을 때마다 이 속성 값을 읽습니다.
 
 ## <a name="related-articles"></a>관련 문서
 
 * [키보드 상호 작용](keyboard-interactions.md)
-* [키보드 액셀러레이터 키](keyboard-accelerators.md)
+* [키보드 액셀러레이터](keyboard-accelerators.md)
 
 **샘플**
 * [XAML 컨트롤 갤러리 (즉, XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)

@@ -1,30 +1,30 @@
 ---
 ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
-description: Microsoft Store 제출 API 사용 하 여 이러한 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 제안 관리 합니다.
+description: Microsoft Store 제출 API에서 이러한 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 제출을 관리할 수 있습니다.
 title: 추가 기능 제출 관리
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a287889f27712d1272dd0a2f8f3d068b376fefe
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 6c725765eacfbf5a4148b8755530de74c3c0fd9a
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320199"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339951"
 ---
 # <a name="manage-add-on-submissions"></a>추가 기능 제출 관리
 
 Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 앱에 대한 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 제출을 관리할 수 있습니다. API 사용을 위한 필수 조건을 비롯하여 Microsoft Store 제출 API에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
 > [!IMPORTANT]
-> Microsoft Store 제출 API를 사용 하 여 추가 기능에 대 한 제출을 만드는 경우에 추가로 변경 하려면 제출 파트너 센터에서 변경 하는 것이 아니라 API를 사용 하 여만 해야 합니다. 파트너 센터를 사용 하 여 API를 사용 하 여 원래 만든 제출물을 변경 하려면 변경 하거나 해당 제출 API를 사용 하 여 커밋할 수 됩니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
+> Microsoft Store 제출 API를 사용 하 여 추가 기능에 대 한 제출을 만드는 경우 파트너 센터에서 변경 하는 대신 API를 사용 하 여 제출을 추가로 변경 해야 합니다. 파트너 센터를 사용 하 여 원래 API를 사용 하 여 만든 제출을 변경 하는 경우 API를 사용 하 여 해당 제출을 변경 하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 <span id="methods-for-add-on-submissions" />
 
 ## <a name="methods-for-managing-add-on-submissions"></a>추가 기능 제출 관리 메서드
 
-추가 기능 제출의 가져오기, 만들기, 업데이트, 커밋, 삭제에는 다음 메서드를 사용합니다. 이러한 메서드를 사용 하려면 먼저 파트너 센터 계정에서 추가 기능을 이미 있어야 합니다. 파트너 센터에서 추가 기능을 만들 수 있습니다 [제품 유형 및 제품 ID를 정의](../publish/set-your-add-on-product-id.md) 에 설명 된의 Microsoft Store 제출 API 메서드를 사용 하 여 [추가 기능 관리](manage-add-ons.md)합니다.
+추가 기능 제출의 가져오기, 만들기, 업데이트, 커밋, 삭제에는 다음 메서드를 사용합니다. 이러한 방법을 사용 하려면 먼저 파트너 센터 계정에 추가 기능이 있어야 합니다. 파트너 센터에서 [제품 유형 및 제품 ID를 정의](../publish/set-your-add-on-product-id.md) 하거나 [추가 기능 관리](manage-add-ons.md)에 설명 된의 Microsoft Store 제출 API 메서드를 사용 하 여 추가 기능을 만들 수 있습니다.
 
 <table>
 <colgroup>
@@ -48,27 +48,27 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 <tr>
 <td align="left">가져오기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status</td>
-<td align="left"><a href="get-status-for-an-add-on-submission.md">기존 추가 기능 제출 상태를 가져옵니다.</a></td>
+<td align="left"><a href="get-status-for-an-add-on-submission.md">기존 추가 기능 제출의 상태 가져오기</a></td>
 </tr>
 <tr>
 <td align="left">올리기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions</td>
-<td align="left"><a href="create-an-add-on-submission.md">새 추가 기능 제출을 생성합니다</a></td>
+<td align="left"><a href="create-an-add-on-submission.md">새 추가 기능 제출 만들기</a></td>
 </tr>
 <tr>
 <td align="left">PUT</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
-<td align="left"><a href="update-an-add-on-submission.md">업데이트는 기존 추가 기능 제출</a></td>
+<td align="left"><a href="update-an-add-on-submission.md">기존 추가 기능 제출 업데이트</a></td>
 </tr>
 <tr>
 <td align="left">올리기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit</td>
-<td align="left"><a href="commit-an-add-on-submission.md">새롭거나 업데이트 된 추가 기능 제출 커밋</a></td>
+<td align="left"><a href="commit-an-add-on-submission.md">신규 또는 업데이트 된 추가 기능 제출을 커밋합니다.</a></td>
 </tr>
 <tr>
 <td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
-<td align="left"><a href="delete-an-add-on-submission.md">추가 기능 제출 삭제</a></td>
+<td align="left"><a href="delete-an-add-on-submission.md">추가 기능 제출을 삭제 합니다.</a></td>
 </tr>
 </tbody>
 </table>
@@ -79,7 +79,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 
 추가 기능에 대한 제출을 만들려면 이 프로세스를 따릅니다.
 
-1. 아직 수행 하는 경우 전체 필수 구성 요소에서 설명한 [만들기 및 Microsoft Store 서비스를 사용 하 여 제출 관리](create-and-manage-submissions-using-windows-store-services.md)파트너 센터 계정을 사용 하 여 Azure AD 응용 프로그램을 연결 하 고 가져오기 등 프로그램 클라이언트 ID 및 키를 제공 합니다. 이 작업은 한 번만 수행하면 됩니다. 클라이언트 ID와 키를 얻은 후에는 새 Azure AD 액세스 토큰을 만들어야 할 때마다 다시 사용할 수 있습니다.  
+1. 아직 수행 하지 않은 경우 Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하 고 클라이언트 ID 및 키를 가져오는 등 [Microsoft Store 서비스를 사용 하 여 전송 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)에 설명 된 필수 구성 요소를 완료 합니다. 이 작업은 한 번만 수행하면 됩니다. 클라이언트 ID와 키를 얻은 후에는 새 Azure AD 액세스 토큰을 만들어야 할 때마다 다시 사용할 수 있습니다.  
 
 2. [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Microsoft Store 제출 API의 메서드에 이 액세스 토큰을 전달해야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
@@ -92,7 +92,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
     응답 본문에는 새 제출 ID, Azure Blob Storage 제출을 위한 추가 기능 아이콘 업로딩용 SAS(Shared Access Signature) RUI, 새 제출에 대한 모든 데이터(목록과 가격 정보 등)가 포함된 [추가 기능 제출](#add-on-submission-object) 리소스가 포함되어 있습니다.
 
     > [!NOTE]
-    > SAS URI는 계정 키를 요구하지 않고 Azure Storage의 보안 리소스에 대한 액세스를 제공합니다. SAS Uri 및 Azure Blob storage 사용 하 여 용도 대 한 배경 정보를 참조 하세요. [공유 액세스 서명, 1 부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) 고 [공유 액세스 서명, 2 부: 만들기 및 SAS를 사용 하 여 Blob storage를 사용 하 여](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)입니다.
+    > SAS URI는 계정 키를 요구하지 않고 Azure Storage의 보안 리소스에 대한 액세스를 제공합니다. SAS Uri 및 Azure Blob storage에서의 사용에 대 한 배경 정보는 [Shared 액세스 서명, 1 부: SAS 모델 이해 @ no__t-0 및 [Shared Access 서명, 2 부: Blob 저장소 @ no__t-0을 사용 하 여 SAS를 만들고 사용 합니다.
 
 4. 제출에 대한 새 아이콘을 추가하는 경우 [아이콘을 준비](https://docs.microsoft.com/windows/uwp/publish/create-iap-descriptions)하고 ZIP 보관 파일에 추가합니다.
 
@@ -106,11 +106,11 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 
 4. 제출에 대한 새 아이콘을 추가하는 경우 이전에 호출한 POST 메서드의 응답 본문에 제공된 SAS URI를 사용하여 [Azure Blob Storage](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage)에 ZIP 보관 파일을 업로드합니다. 다음과 같이 다양한 플랫폼에서 이 작업을 수행할 수 있는 여러 Azure 라이브러리가 있습니다.
 
-    * [.NET 용 azure Storage 클라이언트 라이브러리](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-    * [Java 용 azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
-    * [Python 용 azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
+    * [.NET 용 Azure Storage 클라이언트 라이브러리](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
+    * [Java 용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+    * [Python 용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
-    다음 C# 코드 예제는 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob?redirectedfrom=MSDN) 클래스를 사용하여 Azure Blob Storage에 ZIP 보관 파일을 업로드하는 방법을 보여 줍니다. 이 예제에서는 ZIP 보관 파일이 이미 스트림 개체에 기록되어 있다고 가정합니다.
+    다음 C# 코드 예제는 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) 클래스를 사용하여 Azure Blob Storage에 ZIP 보관 파일을 업로드하는 방법을 보여 줍니다. 이 예제에서는 ZIP 보관 파일이 이미 스트림 개체에 기록되어 있다고 가정합니다.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -119,7 +119,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. 다음 메서드를 실행하여 제출을 커밋합니다. 제출물을 사용 하 여 완료 되 고 업데이트 이제 계정에 적용 되어야 함을 파트너 센터 경고 합니다. 자세한 내용은 [추가 기능 제출 커밋](commit-an-add-on-submission.md)을 참조하세요.
+5. 다음 메서드를 실행하여 제출을 커밋합니다. 그러면 전송 작업을 수행 하 고 사용자의 계정에 업데이트가 적용 되도록 파트너 센터에 경고를 표시 합니다. 자세한 내용은 [추가 기능 제출 커밋](commit-an-add-on-submission.md)을 참조하세요.
 
     ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
@@ -133,7 +133,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 
     제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
 
-7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용 하거나 파트너 센터를 방문 하 여 전송 진행률을 모니터링 할 수 있습니다.
+7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 방법을 사용 하거나 파트너 센터를 방문 하 여 제출 진행 상황을 계속 모니터링할 수 있습니다.
 
 <span/>
 
@@ -230,7 +230,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값      | 형식   | 설명        |
 |------------|--------|----------------------|
-| id            | string  | 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md), [모든 추가 기능 가져오기](get-all-add-ons.md) 및 [추가 기능 가져오기](get-an-add-on.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대 한이 ID의 파트너 센터에서 제출 페이지의 URL을 사용할 수도 있습니다.  |
+| id            | string  | 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md), [모든 추가 기능 가져오기](get-all-add-ons.md) 및 [추가 기능 가져오기](get-an-add-on.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 만든 제출의 경우이 ID는 파트너 센터의 제출 페이지에 대 한 URL 에서도 사용할 수 있습니다.  |
 | contentType           | string  |  추가 기능에 제공된 [콘텐츠의 유형](../publish/enter-add-on-properties.md#content-type)입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
 | 키워드           | 배열  | 추가 기능에 대한 [키워드](../publish/enter-add-on-properties.md#keywords)를 최대 10개까지 포함하는 문자열의 배열입니다. 앱에서 이러한 키워드를 사용하여 추가 기능을 쿼리할 수 있습니다.   |
 | lifetime           | string  |  추가 기능의 수명입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
@@ -243,7 +243,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | 상태  | string  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | 개체(object)  |  오류에 대한 정보를 비롯하여 제출 상태에 대한 추가 세부 정보가 포함된 [상태 세부 정보 리소스](#status-details-object)입니다. |
 | fileUploadUrl           | string  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지를 추가하는 경우 패키지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [추가 기능 제출 만들기](#create-an-add-on-submission)를 참조하세요.  |
-| FriendlyName  | string  |  파트너 센터에 표시 된 대로 제출의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.  |
+| FriendlyName  | string  |  파트너 센터에 표시 된 것 처럼 전송의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.  |
 
 <span id="listing-object" />
 
@@ -290,8 +290,8 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 > [!IMPORTANT]
 > **판매** 리소스는 더 이상 지원되지 않으며, 현재 Microsoft Store 제출 API를 사용하여 추가 기능 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다. 앞으로 Microsoft Store 제출 API를 업데이트하여 추가 기능 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다.
->    * [GET 메서드를 호출하여 추가 기능 제출을 가져오면](get-an-add-on-submission.md)*판매* 값이 빈 상태로 표시됩니다. 파트너 센터를 사용 하 여 추가 기능 등록에 대 한 판매 데이터를 가져오려고 할 수 있습니다.
->    * [PUT 메서드를 호출하여 추가 기능 제출을 업데이트하는 경우](update-an-add-on-submission.md)*판매* 값의 정보는 무시됩니다. 추가 기능 등록에 대 한 판매 데이터를 변경 하려면 파트너 센터를 사용 하 여 할 수 있습니다.
+>    * [GET 메서드를 호출하여 추가 기능 제출을 가져오면](get-an-add-on-submission.md)*판매* 값이 빈 상태로 표시됩니다. 파트너 센터를 계속 사용 하 여 추가 기능 제출에 대 한 판매 데이터를 가져올 수 있습니다.
+>    * [PUT 메서드를 호출하여 추가 기능 제출을 업데이트하는 경우](update-an-add-on-submission.md)*판매* 값의 정보는 무시됩니다. 파트너 센터를 계속 사용 하 여 추가 기능 제출에 대 한 판매 데이터를 변경할 수 있습니다.
 
 이 리소스의 값은 다음과 같습니다.
 
@@ -334,7 +334,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 형식    | 설명               |
 |-----------------|---------|------|
-|     date            |    string     |  날짜 및 시간을 ISO 8601 형식으로 보고서를 생성 합니다.    |
+|     date            |    string     |  보고서가 생성 된 날짜와 시간 (ISO 8601 형식)입니다.    |
 |     reportUrl            |    string     |  보고서에 액세스할 수 있는 URL입니다.    |
 
 ## <a name="enums"></a>열거형
@@ -352,7 +352,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  기본               |   기준 가격이 설정되지 않았습니다. 추가 기능에 대한 기본 가격을 사용합니다.      |     
 |  NotAvailable              |   지정된 영역에 추가 기능을 사용할 수 없습니다.    |     
 |  무료              |   추가 기능은 무료입니다.    |    
-|  계층*xxxx*               |   추가 기능에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>각 계층에 연관 된 지역별 가격 포함 하 여 개발자 계정에 사용할 수 있는 가격 계층의 전체 테이블을 보려면로 이동 합니다 **가격 책정 및 가용성** 에 앱 제출에 대 한 페이지 파트너 센터를 클릭 합니다 **뷰 테이블** 링크를 **시장 및 사용자 지정 가격** 섹션 (일부 개발자 계정에 대 한이 링크에는 **가격 책정** 섹션).     |
+|  계층*xxxx*               |   추가 기능에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>각 계층과 관련 된 시장 특정 가격을 비롯 하 여 개발자 계정에 사용할 수 있는 가격 책정 계층의 전체 표를 보려면 파트너 센터의 앱 서브 미션에 대 한 **가격 책정 및 가용성** 페이지로 이동 하세요. **시장 및 사용자 지정 가격** 섹션에서 **테이블 보기** 링크를 클릭 합니다 (일부 개발자 계정의 경우이 링크는 **가격 책정** 섹션에 있습니다).     |
 
 <span id="submission-status-code" />
 
@@ -381,6 +381,6 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용 하 여 서브 미션을 만들고 설정 합니다.](create-and-manage-submissions-using-windows-store-services.md)
+* [Microsoft Store 서비스를 사용 하 여 제출 작성 및 관리](create-and-manage-submissions-using-windows-store-services.md)
 * [Microsoft Store 제출 API를 사용 하 여 추가 기능 관리](manage-add-ons.md)
-* [파트너 센터에서 추가 기능 제출](https://docs.microsoft.com/windows/uwp/publish/iap-submissions)
+* [파트너 센터의 추가 기능 제출](https://docs.microsoft.com/windows/uwp/publish/iap-submissions)

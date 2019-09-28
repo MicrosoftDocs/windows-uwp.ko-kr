@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ef2007648c21e015aa2ae692d28efa56c922bf5
-ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
+ms.openlocfilehash: 89257a4ec64458f5734c2b04c1e654a7c0c44f27
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660190"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339907"
 ---
 # <a name="keyboard-events"></a>키보드 이벤트
 
@@ -50,7 +50,7 @@ UI의 컨트롤은 입력 포커스가 있는 경우에만 키보드 이벤트�
 
 -   이벤트의 전송자입니다. 보낸 사람은 이벤트 처리기가 연결된 개체를 보고합니다.
 -   이벤트 데이터입니다. 키보드 이벤트의 경우 이 데이터는 [**KeyRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.KeyRoutedEventArgs)의 인스턴스입니다. 처리기의 대리자는 [**KeyEventHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyeventhandler)입니다. 대부분의 처리기 시나리오에서 **KeyRoutedEventArgs**의 가장 관련된 속성은 [**Key**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key)와 [**KeyStatus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.keystatus)입니다.
--   [**OriginalSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource). 키보드 이벤트는 라우트된 이벤트이므로 이벤트 데이터에서 **OriginalSource**를 제공합니다. 의도적으로 이벤트가 개체 트리를 통해 버블 업되도록 허용하는 경우 **OriginalSource**가 보낸 사람이 아니라 관련 개체일 수도 있지만 이것은 디자인에 따라 달라집니다. 보낸 사람 대신 **OriginalSource**를 사용하는 방법에 대한 자세한 내용은 이 항목의 "키보드 라우트된 이벤트" 섹션 또는 [이벤트 및 라우트된 이벤트 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)를 참조하세요.
+-   [**Originalsource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource). 키보드 이벤트는 라우트된 이벤트이므로 이벤트 데이터에서 **OriginalSource**를 제공합니다. 의도적으로 이벤트가 개체 트리를 통해 버블 업되도록 허용하는 경우 **OriginalSource**가 보낸 사람이 아니라 관련 개체일 수도 있지만 이것은 디자인에 따라 달라집니다. 보낸 사람 대신 **OriginalSource**를 사용하는 방법에 대한 자세한 내용은 이 항목의 "키보드 라우트된 이벤트" 섹션 또는 [이벤트 및 라우트된 이벤트 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)를 참조하세요.
 
 ### <a name="attaching-a-keyboard-event-handler"></a>키보드 이벤트 처리기 연결
 
@@ -94,10 +94,10 @@ void MyProject::MainPage::Grid_KeyUp(
 
 모든 키보드 이벤트는 이벤트 데이터에 [**KeyRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.KeyRoutedEventArgs)를 사용하며 **KeyRoutedEventArgs**에 다음 속성이 포함되어 있습니다.
 
--   [**Key**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key)
+-   [**키인지**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key)
 -   [**KeyStatus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.keystatus)
--   [**처리**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled)
--   [**OriginalSource** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource) (에서 상속 [ **RoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEventArgs))
+-   [**Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled)
+-   [**Originalsource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource) ( [**system.windows.routedeventargs.handled**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEventArgs)에서 상속)
 
 ### <a name="key"></a>Key
 
@@ -277,7 +277,7 @@ End Sub
 ```
 
 > [!NOTE]
-> XAML에서 [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey?view=netframework-4.8) 또는 [**AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8)를 설정하면 문자열 정보(해당 특정 작업을 호출하는 바로 가기 키를 문서화함)를 제공합니다. 이 정보는 Narrator와 같은 Microsoft UI 자동화 클라이언트에 의해 캡처되며 보통 사용자에게 직접 제공됩니다.
+> XAML에서 [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey) 또는 [**AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey)를 설정하면 문자열 정보(해당 특정 작업을 호출하는 바로 가기 키를 문서화함)를 제공합니다. 이 정보는 Narrator와 같은 Microsoft UI 자동화 클라이언트에 의해 캡처되며 보통 사용자에게 직접 제공됩니다.
 >
 > **AutomationProperties.AcceleratorKey** 또는 **AutomationProperties.AccessKey**를 설정해도 그 자체로는 작업이 수행되지 않습니다. 앱에서 바로 가기 키 동작을 실제로 구현하려면 [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) 또는 [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트에 대한 처리기를 연결해야 합니다. 또한 액세스 키에 대한 밑줄로 표시된 텍스트 장식은 자동으로 제공되지 않습니다. UI에서 밑줄로 표시된 텍스트를 표시하려면 니모닉에서 명시적으로 특정 키의 텍스트에 밑줄을 인라인 [**Underline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Underline) 서식으로 표시해야 합니다.
 
@@ -319,7 +319,7 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 
 ### <a name="addhandler-and-already-handled-keyboard-events"></a>AddHandler 및 이미 처리된 키보드 이벤트
 
-이미 처리된 것으로 표시된 이벤트에서 작동할 수 있는 처리기를 연결하는 특별한 기술을 사용할 수 있습니다. 이 기술을 사용 하는 [ **AddHandler** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) c에서 + = 같은 처리기를 추가 하는 것에 대 한 XAML 특성 또는 특정 언어 구문을 사용 하기 보다는 처리기를 등록 하는 메서드\#합니다.
+이미 처리된 것으로 표시된 이벤트에서 작동할 수 있는 처리기를 연결하는 특별한 기술을 사용할 수 있습니다. 이 기술은 C @ no__t에서 + =와 같이 처리기를 추가 하는 데 XAML 특성 또는 언어별 구문을 사용 하지 않고 [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) 메서드를 사용 하 여 처리기를 등록 합니다.
 
 이 기술의 일반적인 제한 사항은 **AddHandler** API가 해당 라우트된 이벤트를 식별하는 [**RoutedEvent**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEvent) 유형의 매개 변수를 사용한다는 데 있습니다. 일부 라우트된 이벤트는 **RoutedEvent** 식별자를 제공하지 않으므로 이 경우 [**Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled)에서 처리할 수 있는 라우트된 이벤트에 영향을 미칠 수 있습니다. [  **KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) 및 [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트는 [**UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydownevent)에 라우트된 이벤트 식별자([**KeyDownEvent**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyupevent) 및 [**KeyUpEvent**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement))가 있습니다. 그러나 [**TextBox.TextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 등의 다른 이벤트에는 라우트된 이벤트 식별자가 없으므로 **AddHandler** 기술에 사용할 수 없습니다.
 
@@ -327,7 +327,7 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 
 특정 컨트롤에 대한 키 이벤트를 재정의하여(예: [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)) 키보드와 게임 패드와 같이 다양한 입력 장치에 대해 일관된 포커스 탐색 기능을 제공할 수 있습니다.
 
-다음 예제에서에서는 모든 화살표 키를 누를 때 콘텐츠 컨트롤 하위 클래스 및 GridView에 포커스를 이동 하려면 KeyDown 동작을 재정의 합니다.
+다음 예제에서는 컨트롤의 서브 클래스를 만들고, 화살표 키를 누를 때 GridView 콘텐츠로 포커스를 이동 하도록 KeyDown 동작을 재정의 합니다.
 
 ```csharp
   public class CustomGridView : GridView
@@ -383,25 +383,25 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 
 ## <a name="related-articles"></a>관련 문서
 
-**개발자**
+**가**
 * [키보드 상호 작용](keyboard-interactions.md)
 * [입력 디바이스 식별](identify-input-devices.md)
 * [터치 키보드의 현재 상태에 대 한 응답](respond-to-the-presence-of-the-touch-keyboard.md)
 
 **디자이너**
-* [바로 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
+* [키보드 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
 
 **샘플**
 * [터치 키보드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
-* [입력된 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: 터치 키보드 샘플](https://go.microsoft.com/fwlink/p/?linkid=246019)
-* [모양에 응답 하는 샘플 화상 키보드](https://go.microsoft.com/fwlink/p/?linkid=231633)
+* [입력 샘플](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Input: 장치 기능 샘플 @ no__t-0
+* [Input: 터치 키보드 샘플 @ no__t-0
+* [화상 키보드 샘플의 모양에 대 한 응답](https://go.microsoft.com/fwlink/p/?linkid=231633)
 * [XAML 텍스트 편집 샘플](https://go.microsoft.com/fwlink/p/?LinkID=251417)
  
 

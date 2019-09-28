@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f1cc0e932a1dd413ed94e1fe5d9a3d1e6b0870c
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 7359d28d968a2948e9f4049e2acc3c655edcfcb3
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393576"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339205"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>최신 UWP 구성 요소를 사용 하 여 데스크톱 앱 확장
 
@@ -175,7 +175,7 @@ UWP 프로젝트에 XAML UI를 추가합니다. 기본 지도의 XAML은 다음�
 
 ### <a name="start-the-uwp-app"></a>UWP 앱 시작
 
-먼저 데스크톱 응용 프로그램에서 UWP 앱으로 보내고 싶은 매개 변수와 프로토콜 입력이 포함된 [Uri](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN)를 생성합니다. 그런 후 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출합니다.
+먼저 데스크톱 응용 프로그램에서 UWP 앱으로 보내고 싶은 매개 변수와 프로토콜 입력이 포함된 [Uri](https://docs.microsoft.com/dotnet/api/system.uri)를 생성합니다. 그런 후 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출합니다.
 
 ```csharp
 
@@ -295,9 +295,9 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 </Extensions>  
 ```
 
-UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다. 이 태그는 UWP 앱에 대 한 실행 파일의 이름이 인 `ShareTarget.exe`것으로 가정 합니다.
+UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다. 이 태그는 UWP 앱에 대 한 실행 파일의 이름이 `ShareTarget.exe` 이라고 가정 합니다.
 
-또 앱이 공유할 수 있는 파일 형식을 지정해야 합니다. 이 예제에서는 지원 되는 파일 형식에 대해를 지정 `Bitmap` 하기 위해 [WPF 사진 파일 데모](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램을 비트맵 이미지의 공유 대상으로 만듭니다.
+또 앱이 공유할 수 있는 파일 형식을 지정해야 합니다. 이 예제에서는 [WPF 사진 기능 데모](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램을 비트맵 이미지에 대 한 공유 대상으로 지정 하 여 지원 되는 파일 형식에 대 한 `Bitmap`을 지정 합니다.
 
 <a id="override" />
 
@@ -366,7 +366,7 @@ Uwp 앱 프로젝트에 **uwp 확장에 대 한 Windows 데스크톱 확장** �
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-사용자가 이미 연 데스크톱 응용 프로그램 인스턴스의 경우 [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) 이벤트를 처리 하 고 파일 위치에 대 한 경로를 전달할 수도 있습니다. 그러면 데스크톱 응용 프로그램의 열려 있는 모든 인스턴스는 공유 사진을 표시 합니다.
+사용자가 이미 연 데스크톱 응용 프로그램 인스턴스의 경우 [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher) 이벤트를 처리 하 고 파일 위치에 대 한 경로를 전달할 수도 있습니다. 그러면 데스크톱 응용 프로그램의 열려 있는 모든 인스턴스는 공유 사진을 표시 합니다.
 
 ```csharp
 ...

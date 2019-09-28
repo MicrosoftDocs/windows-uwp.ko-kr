@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: df28d253957f11f28eee7654e497a1059b4cf02e
-ms.sourcegitcommit: 172699f21a9252fe6ada1883c6967e35115b2080
+ms.openlocfilehash: 5c846d0e0110a1285e67f6f21e1eeb7a0d9c2624
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68718900"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339284"
 ---
 # <a name="xaml-overview"></a>XAML 개요
 
@@ -50,7 +50,7 @@ Microsoft Visual Studio를 사용하면 XAML 텍스트 편집기와 그래픽 �
 
 XAML 파일은 거의 항상 해당 루트 요소에서 기본 XAML 네임스페이스를 선언합니다. 기본 XAML 네임스페이스는 접두사로 자격을 부여하지 않고 선언할 수 있는 요소를 정의합니다. 일반적인 Windows 런타임 앱 프로젝트의 경우, 이 기본 네임스페이스에는 기본 컨트롤, 텍스트 요소, XAML 그래픽 및 애니메이션, 데이터 바인딩 및 스타일 지원 유형 등과 같이 UI 정의에 사용되는 Windows 런타임에 대한 모든 기본 제공 XAML 어휘가 포함되어 있습니다. Windows 런타임 앱에 대해 작성하는 대부분의 XAML은 공용 UI 요소를 참조할 때 XAML 네임스페이스 및 접두사의 사용을 방지할 수 있습니다.
 
-다음은 앱에 대 한 초기 페이지의 템플릿 <xref:Windows.UI.Xaml.Controls.Page> 생성 루트를 표시 하는 코드 조각입니다 (여는 태그와 단순화 된 태그 표시). 기본 네임스페이스를 선언하며 **x** 네임스페이스도 선언합니다(다음에 설명할 예정).
+다음은 앱에 대 한 초기 페이지의 템플릿 생성 <xref:Windows.UI.Xaml.Controls.Page> 루트를 보여 주는 코드 조각입니다 (여는 태그와 단순화 된 태그 표시). 기본 네임스페이스를 선언하며 **x** 네임스페이스도 선언합니다(다음에 설명할 예정).
 
 ```xml
 <Page
@@ -68,11 +68,11 @@ XAML 파일은 거의 항상 해당 루트 요소에서 기본 XAML 네임스페
 
 | 용어 | 설명 |
 |------|-------------|
-| [x:Key](x-key-attribute.md) | XAML <xref:Windows.UI.Xaml.ResourceDictionary>의 각 리소스에 대 한 고유한 사용자 정의 키를 설정 합니다. 키의 토큰 문자열은 **StaticResource** 태그 확장에 대한 인수이며, 나중에 이 키를 사용하여 앱 XAML의 다른 위치에서 달리 사용된 XAML의 XAML 리소스를 검색합니다. |
-| [x:Class](x-class-attribute.md) | XAML 페이지에 대한 코드 숨김을 제공하는 클래스의 코드 네임스페이스 및 코드 클래스 이름을 지정합니다. 이 이름은 앱을 빌드할 때 빌드 작업에 의해 만들어지거나 조인되는 클래스를 지정합니다. 이 빌드 작업은 XAML 태그 컴파일러를 지원하고 앱이 컴파일될 때 태그와 코드 숨김을 결합합니다. XAML 페이지에 대해 코드 숨김을 지원하려면 이런 클래스가 있어야 합니다. <xref:Windows.UI.Xaml.Window.Content%2A?displayProperty=nameWithType>기본 Windows 런타임 활성화 모델에 있습니다. |
-| [x:Name](x-name-attribute.md) | XAML에 정의된 개체 요소를 처리한 후 런타임 코드에 존재하는 인스턴스에 대한 런타임 개체 이름을 지정합니다. XAML에서 **x:Name**을 설정하는 것을 코드에서 명명된 변수를 선언하는 것과 같다고 생각하면 됩니다. 나중에 알게 되겠지만, XAML이 Windows 런타임 앱의 구성 요소로 로드될 때 이와 똑같은 상황이 발생합니다. <br/><div class="alert">**참고** <xref:Windows.UI.Xaml.FrameworkElement.Name%2A> 는 프레임 워크에서 유사한 속성 이지만 일부 요소는이를 지원 하지 않습니다. 해당 요소 형식에서 **FrameworkElement.Name** 가 지원 되지 않을 때마다 요소 식별에 대해 **x:Name** 을 사용 합니다. |
-| [x:Uid](x-uid-directive.md) | 해당 속성 값 중 일부에 대해 지역화된 리소스를 사용해야 하는 요소를 식별합니다. **X:Uid**를 사용 하는 방법에 대 한 자세한 [내용은 빠른 시작: UI 리소스](/previous-versions/windows/apps/hh965329(v=win.10))를 변환 합니다. |
-| [XAML 기본 데이터 형식](xaml-intrinsic-data-types.md) | 이 형식은 특성 또는 리소스에 필요할 경우 단순 값 형식에 대한 값을 지정할 수 있습니다. 이러한 내부 형식은 일반적으로 각 프로그래밍 언어의 내부 정의의 일부로 정의되는 단순 값 형식에 해당합니다. 예를 들어 <xref:Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames> storyboarded 시각적 상태에서 사용할 **진정한** 부울 값을 나타내는 개체가 필요할 수 있습니다. XAML의 해당 값에 대해 다음과 같이 **X:boolean** 내장 형식을 object 요소로 사용 합니다.<code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> |
+| [x:Key](x-key-attribute.md) | XAML의 각 리소스에 대 한 고유한 사용자 정의 키 <xref:Windows.UI.Xaml.ResourceDictionary>을 설정 합니다. 키의 토큰 문자열은 **StaticResource** 태그 확장에 대한 인수이며, 나중에 이 키를 사용하여 앱 XAML의 다른 위치에서 달리 사용된 XAML의 XAML 리소스를 검색합니다. |
+| [x:Class](x-class-attribute.md) | XAML 페이지에 대한 코드 숨김을 제공하는 클래스의 코드 네임스페이스 및 코드 클래스 이름을 지정합니다. 이 이름은 앱을 빌드할 때 빌드 작업에 의해 만들어지거나 조인되는 클래스를 지정합니다. 이 빌드 작업은 XAML 태그 컴파일러를 지원하고 앱이 컴파일될 때 태그와 코드 숨김을 결합합니다. XAML 페이지에 대해 코드 숨김을 지원하려면 이런 클래스가 있어야 합니다. 기본 Windows 런타임 활성화 모델에서 <xref:Windows.UI.Xaml.Window.Content%2A?displayProperty=nameWithType>입니다. |
+| [x:Name](x-name-attribute.md) | XAML에 정의된 개체 요소를 처리한 후 런타임 코드에 존재하는 인스턴스에 대한 런타임 개체 이름을 지정합니다. XAML에서 **x:Name**을 설정하는 것을 코드에서 명명된 변수를 선언하는 것과 같다고 생각하면 됩니다. 나중에 알게 되겠지만, XAML이 Windows 런타임 앱의 구성 요소로 로드될 때 이와 똑같은 상황이 발생합니다. <br/><div class="alert">**참고** <xref:Windows.UI.Xaml.FrameworkElement.Name%2A>은 프레임 워크에서 유사한 속성 이지만 일부 요소는이를 지원 하지 않습니다. 해당 요소 형식에서 **FrameworkElement.Name** 가 지원 되지 않을 때마다 요소 식별에 대해 **x:Name** 을 사용 합니다. |
+| [x:Uid](x-uid-directive.md) | 해당 속성 값 중 일부에 대해 지역화된 리소스를 사용해야 하는 요소를 식별합니다. **X:Uid**를 사용 하는 방법에 대 한 자세한 내용은 [quickstart 스타트: UI 리소스를 변환 하는 중 @ no__t-0. |
+| [XAML 기본 데이터 형식](xaml-intrinsic-data-types.md) | 이 형식은 특성 또는 리소스에 필요할 경우 단순 값 형식에 대한 값을 지정할 수 있습니다. 이러한 내부 형식은 일반적으로 각 프로그래밍 언어의 내부 정의의 일부로 정의되는 단순 값 형식에 해당합니다. 예를 들어 <xref:Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames> storyboarded 시각적 상태에서 사용할 **진정한** 부울 값을 나타내는 개체가 필요할 수 있습니다. XAML의 해당 값에 대해 다음과 같이 **X:boolean** 내장 형식을 object 요소로 사용 합니다. <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> |
 
 XAML 언어 XAML 네임스페이스의 다른 프로그래밍 구조도 있지만 잘 사용되지 않습니다.
 
@@ -86,7 +86,7 @@ Windows 런타임 핵심 라이브러리와 메타데이터 이외의 다른 라
 
 접두사는 태그의 나머지 부분에 있는 해당 XAML 네임스페이스를 참조하는 데 사용되는 태그 토큰을 정의합니다. XAML 네임스페이스 내에서 참조되는 엔터티와 접두사 사이에는 콜론(:)이 있습니다.
 
-예를 들어 접두사 `myTypes` 를 네임 스페이스 `myCompany.myTypes` 에 매핑하는 특성 구문은 다음과 `    xmlns:myTypes="using:myCompany.myTypes"`같습니다. 대표적인 요소 사용은 다음과 같습니다.`<myTypes:CustomButton/>`
+예를 들어 `myTypes` 접두사를 네임 스페이스에 매핑하기 위한 특성 구문은-1 @no__t `    xmlns:myTypes="using:myCompany.myTypes"` 이며 대표적인 요소 사용은 `<myTypes:CustomButton/>`입니다.
 
 Visual C++ 구성 요소 확장(C++/CX)에 대한 특수 고려 사항을 포함하여 사용자 지정 유형에 대해 XAML 네임스페이스를 매핑하는 데 대한 자세한 내용은 [XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping.md)을 참조하세요.
 
@@ -104,21 +104,21 @@ Windows 런타임 XAML은 기본 XAML 네임스페이스 아래에 정의되고 
 
 - [{X:bind}](x-bind-markup-extension.md): 컴파일 시간에 생성 되는 특수 한 용도의 코드를 실행 하 여 런타임 시까지 속성 평가를 지연 하는 데이터 바인딩을 지원 합니다. 이 태그 확장은 다양한 인수를 지원합니다.
 - [{Binding}](binding-markup-extension.md): 범용 런타임 개체 검사를 실행하여 런타임까지 속성 평가를 지연하는 데이터 바인딩을 지원합니다. 이 태그 확장은 다양한 인수를 지원합니다.
-- [{StaticResource}](staticresource-markup-extension.md):에 <xref:Windows.UI.Xaml.ResourceDictionary>정의 된 리소스 값 참조를 지원 합니다. 이 리소스는 다른 XAML 파일에 있을 수 있지만 궁극적으로 로드할 때 XAML 파서에서 검색할 수 있어야 합니다. `{StaticResource}` 사용의 인수는 <xref:Windows.UI.Xaml.ResourceDictionary>에서 키가 지정 된 리소스의 키 (이름)를 식별 합니다.
+- [{StaticResource}](staticresource-markup-extension.md): <xref:Windows.UI.Xaml.ResourceDictionary>에 정의 된 리소스 값 참조를 지원 합니다. 이 리소스는 다른 XAML 파일에 있을 수 있지만 궁극적으로 로드할 때 XAML 파서에서 검색할 수 있어야 합니다. @No__t-0 사용의 인수는 <xref:Windows.UI.Xaml.ResourceDictionary>의 키가 지정 된 리소스에 대 한 키 (이름)를 식별 합니다.
 - [{ThemeResource}](themeresource-markup-extension.md): [{StaticResource}](staticresource-markup-extension.md)와 비슷하지만 런타임 테마 변경에 응답할 수 있습니다. {ThemeResource}는 Windows 런타임 기본 XAML 템플릿에서 상당히 자주 나타납니다. 이 템플릿 중 대부분이 앱 실행 중 사용자의 테마 전환과 호환되도록 설계되기 때문입니다.
 - [{TemplateBinding}](templatebinding-markup-extension.md): XAML의 컨트롤 템플릿과 런타임에서 이 템플릿의 최종적인 사용을 지원하는 [{Binding}](binding-markup-extension.md)의 특별한 경우입니다.
 - [{RelativeSource}](relativesource-markup-extension.md): 템플릿 기반 상위 항목에서 값이 제공되는 특정 형식의 템플릿 바인딩을 지원합니다.
 - [{CustomResource}](customresource-markup-extension.md): 고급 리소스 조회 시나리에 해당합니다.
 
-Windows 런타임은 또한 [{x:Null} 태그 확장](x-null-markup-extension.md)을 지원합니다. XAML에서 이 태그 확장을 사용하여 [**Nullable**](/dotnet/api/system.nullable-1?view=netframework-4.8) 값을 **null**로 설정합니다. 예를 들어 <xref:Windows.UI.Xaml.Controls.CheckBox>,에 대 한 컨트롤 템플릿에서이를 사용할 수 있습니다 .이는 **null** 을 확정 되지 않은 선택 상태 ("결정 되지 않은" 시각적 상태를 트리거하기)로 해석 합니다.
+Windows 런타임은 또한 [{x:Null} 태그 확장](x-null-markup-extension.md)을 지원합니다. XAML에서 이 태그 확장을 사용하여 [**Nullable**](/dotnet/api/system.nullable-1) 값을 **null**로 설정합니다. 예를 들어 <xref:Windows.UI.Xaml.Controls.CheckBox>에 대 한 컨트롤 템플릿에서이를 사용할 수 있습니다 .이는 **null** 을 결정 되지 않은 선택 상태 ("결정 되지 않은" 시각적 상태를 트리거하기)로 해석 합니다.
 
 일반적으로 태그 확장은 응용 프로그램에 대 한 개체 그래프의 다른 부분에서 기존 인스턴스를 반환 하거나 런타임에 값을 지연 시킵니다. 태그 확장을 특성 값으로 사용할 수 있으며 일반적인 사용 예이므로 그렇지 않은 경우 속성 요소 구문이 필요할 수 있는 참조 유형 속성에 대한 값을 제공하는 태그 확장을 종종 볼 수 있습니다.
 
-예를 들어 <xref:Windows.UI.Xaml.Style> <xref:Windows.UI.Xaml.ResourceDictionary>에서 다시 사용할 수 있는를 참조 하는 구문은 다음과 `<Button Style="{StaticResource SearchButtonStyle}"/>`같습니다. 는 <xref:Windows.UI.Xaml.Style> 단순 값이 아닌 참조 형식 이므로 `{StaticResource}` 사용 하지 않으면 속성 요소 <xref:Windows.UI.Xaml.FrameworkElement.Style%2A?displayProperty=nameWithType> 와 `<Style>` 속성을 설정 하는 데 필요한 `<Button.Style>` 정의가 필요 합니다.
+예를 들어 다음은 <xref:Windows.UI.Xaml.ResourceDictionary>: `<Button Style="{StaticResource SearchButtonStyle}"/>`에서 재사용 가능한 <xref:Windows.UI.Xaml.Style>을 참조 하기 위한 구문입니다. @No__t-0은 단순 값이 아닌 참조 형식 이므로 `{StaticResource}`을 사용 하지 않으면 `<Button.Style>` 속성 요소와 그 안에 `<Style>` 정의 정의가 있어야 <xref:Windows.UI.Xaml.FrameworkElement.Style%2A?displayProperty=nameWithType> 속성을 설정할 수 있습니다.
 
 태그 확장을 사용하면 XAML에서 설정할 수 있는 모든 속성을 잠재적으로 특성 구문에서 설정할 수 있게 됩니다. 직접 개체 인스턴스화에 대한 특성 구문을 지원하지 않더라도 특성 구문을 사용하여 속성에 대한 참조 값을 제공할 수 있습니다. 값 형식 또는 새로 만든 참조 형식을 통해 XAML 속성을 채워야 한다는 일반 요구 사항을 지연하는 특정 동작을 사용할 수 있습니다.
 
-다음 XAML 예제에서는 특성 구문을 사용 하 <xref:Windows.UI.Xaml.FrameworkElement.Style%2A?displayProperty=nameWithType> <xref:Windows.UI.Xaml.Controls.Border> 여의 속성 값을 설정 하는 방법을 보여 줍니다. 속성 <xref:Windows.UI.Xaml.FrameworkElement.Style%2A?displayProperty=nameWithType> 은 <xref:Windows.UI.Xaml.Style?displayProperty=nameWithType> 클래스의 인스턴스를 사용 하며, 기본적으로 특성 구문 문자열을 사용 하 여 만들 수 없는 참조 형식입니다. 하지만 이 경우 특성은 특정 태그 확장인 [StaticResource](staticresource-markup-extension.md)를 참조합니다. 이 태그 확장은 처리되면 앞에서 리소스 사전에서 키가 지정된 리소스로 정의한 **Style** 요소에 대한 참조를 반환합니다.
+설명 하기 위해 다음 XAML 예에서는 특성 구문을 사용 하 여 <xref:Windows.UI.Xaml.Controls.Border>의 <xref:Windows.UI.Xaml.FrameworkElement.Style%2A?displayProperty=nameWithType> 속성 값을 설정 합니다. @No__t-0 속성은 <xref:Windows.UI.Xaml.Style?displayProperty=nameWithType> 클래스의 인스턴스를 사용 하며, 기본적으로 특성 구문 문자열을 사용 하 여 만들 수 없는 참조 형식입니다. 하지만 이 경우 특성은 [StaticResource](staticresource-markup-extension.md) 태그 확장을 참조합니다. 이 태그 확장은 처리되면 앞에서 리소스 사전에서 키가 지정된 리소스로 정의한 **Style** 요소에 대한 참조를 반환합니다.
 
 ```xml
 <Canvas.Resources>
@@ -141,13 +141,13 @@ Windows 런타임은 또한 [{x:Null} 태그 확장](x-null-markup-extension.md)
 
 XAML은 개체와 개체 속성에 대한 선언적 언어이지만, 이벤트 처리기를 태그의 개체에 연결하는 구문도 포함합니다. XAML 이벤트 구문은 Windows 런타임 프로그래밍 모델을 통해 XAML로 선언된 이벤트를 통합할 수 있습니다. 이벤트가 처리되는 개체에 대한 특성 이름으로 이벤트 이름을 지정합니다. 특성 값에 대해서는 코드에 정의된 이벤트 처리기 함수의 이름을 지정합니다. XAML 프로세서는 이 이름을 사용하여 로드된 개체 트리에서 위임 표현을 만들고 지정된 처리기를 내부 처리기 목록에 추가합니다. 거의 모든 Windows 런타임 앱은 태그와 코드 숨김 소스를 모두 사용하여 정의됩니다.
 
-다음은 간단한 예제입니다. 클래스 <xref:Windows.UI.Xaml.Controls.Button> 는 이라는 <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click>이벤트를 지원 합니다. 사용자의 **Button** 클릭 후에 호출되는 코드를 실행하는 **Click**에 대한 처리기를 작성할 수 있습니다. XAML에서 **Click**을 **Button**에 대한 특성으로 지정합니다. 특성 값으로 처리기의 메서드 이름인 문자열을 제공합니다.
+다음은 간단한 예제입니다. @No__t-0 클래스는 <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click> 이라는 이벤트를 지원 합니다. 사용자의 **Button** 클릭 후에 호출되는 코드를 실행하는 **Click**에 대한 처리기를 작성할 수 있습니다. XAML에서 **Click**을 **Button**에 대한 특성으로 지정합니다. 특성 값으로 처리기의 메서드 이름인 문자열을 제공합니다.
 
 ```xml
 <Button Click="showUpdatesButton-Click">Show updates</Button>
 ```
 
-컴파일하면 이제 컴파일러가 이름이 `showUpdatesButton-Click`인 메서드가 코드 숨김 파일에 정의되어 있고 네임스페이스에서 XAML 페이지의 [x:Class](x-class-attribute.md) 값에 선언되어 있다고 예상합니다. 또한 해당 메서드는 <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click> 이벤트에 대 한 대리자 계약을 충족 해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+컴파일하면 이제 컴파일러가 이름이 `showUpdatesButton-Click`인 메서드가 코드 숨김 파일에 정의되어 있고 네임스페이스에서 XAML 페이지의 [x:Class](x-class-attribute.md) 값에 선언되어 있다고 예상합니다. 또한이 메서드는 <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click> 이벤트의 대리자 계약을 충족 해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```csharp
 namespace App1
@@ -203,7 +203,7 @@ namespace App1
 
 ## <a name="resource-dictionaries"></a>리소스 사전
 
-는 <xref:Windows.UI.Xaml.ResourceDictionary> 일반적으로 리소스 사전을 xaml 페이지 또는 별도의 xaml 파일의 영역으로 작성 하 여 수행 되는 일반적인 작업입니다. 리소스 사전 및 이 사전을 사용하는 방법은 이 항목의 범위를 벗어나는 더 큰 개념 분야입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](../design/controls-and-patterns/resourcedictionary-and-xaml-resource-references.md)를 확인하세요.
+@No__t-0은 일반적으로 리소스 사전을 XAML 페이지 또는 별도의 XAML 파일의 영역으로 작성 하 여 수행 되는 일반적인 작업입니다. 리소스 사전 및 이 사전을 사용하는 방법은 이 항목의 범위를 벗어나는 더 큰 개념 분야입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](../design/controls-and-patterns/resourcedictionary-and-xaml-resource-references.md)를 확인하세요.
 
 ## <a name="xaml-and-xml"></a>XAML 및 XML
 
@@ -223,7 +223,7 @@ XAML은 앱 개발 프로세스에서 여러 중요한 역할을 합니다.
 
 - C#, Visual Basic 또는 C++/CX.를 사용하여 프로그래밍하는 경우 XAML은 앱 UI와 해당 UI의 요소를 선언하는 데 사용되는 기본 형식입니다. 처음에 표시된 UI의 경우 일반적으로 프로젝트에서 하나 이상의 XAML 파일이 앱의 페이지를 은유적으로 표시합니다. 추가 XAML 파일이 탐색 UI의 추가 페이지를 선언할 수 있습니다. 다른 XAML 파일은 템플릿이나 스타일 같은 리소스를 선언할 수 있습니다.
 - XAML 형식은 앱의 컨트롤 및 UI에 적용되는 스타일 및 템플릿을 선언하는 데 사용됩니다.
-- 기존 컨트롤에 템플릿을 지정하거나 기본 템플릿을 컨트롤 패키지의 일부로 제공하는 컨트롤을 정의한 경우 스타일 및 템플릿을 사용할 수 있습니다. 이를 사용 하 여 스타일 및 템플릿을 정의 하는 경우 관련 xaml은 일반적으로 <xref:Windows.UI.Xaml.ResourceDictionary> 루트를 사용 하는 불연속 xaml 파일로 선언 됩니다.
+- 기존 컨트롤에 템플릿을 지정하거나 기본 템플릿을 컨트롤 패키지의 일부로 제공하는 컨트롤을 정의한 경우 스타일 및 템플릿을 사용할 수 있습니다. 이를 사용 하 여 스타일 및 템플릿을 정의 하는 경우 관련 XAML은 <xref:Windows.UI.Xaml.ResourceDictionary> 루트를 사용 하는 불연속 XAML 파일로 선언 되는 경우가 많습니다.
 - XAML은 앱 UI를 만들고 서로 다른 디자이너 앱 사이에서 UI 디자인을 교환하는 데 도움을 주는 디자이너 지원의 일반적인 형식입니다. 특히 앱의 XAML은 다른 XAML 디자인 도구(또는 도구 내의 디자인 화면) 간에 교환될 수 있습니다.
 - 여러 다른 기술도 XAML에서 기본 UI를 정의합니다. WPF(Windows Presentation Foundation) XAML 및 Microsoft Silverlight XAML과 관련하여 Windows 런타임 앱에 대한 XAML은 공유되는 기본 XAML 네임스페이스에 대한 동일한 URI를 사용합니다. Windows 런타임 앱의 XAML 용어 모음은 Silverlight에서도 사용되고 WPF의 경우 약간 적은 범위에서 사용되는 UI용 XAML 용어 모음과 많은 부분에서 겹칩니다. 따라서 XAML은 마찬가지로 XAML을 사용하는 이전 기술에 대해 원래 정의된 UI에 효율적인 마이그레이션 경로를 제공합니다.
 - XAML은 UI의 시각적 모양을 정의하고 관련된 코드 숨김 파일은 논리를 정의합니다. 코드 숨김의 논리를 변경하지 않고도 UI 디자인을 조정할 수 있습니다. XAML은 디자이너와 개발자 간 워크플로를 단순화합니다.
@@ -235,13 +235,13 @@ XAML은 앱 개발 프로세스에서 여러 중요한 역할을 합니다.
 
 다음은 성능을 위한 모범 사례를 활용하여 XAML에서 UI 요소를 정의하기 위한 몇 가지 팁입니다. 이 팁의 상당수는 XAML 리소스 사용과 관련이 있지만 편의상 XAML에 대한 전반적인 개요에서 설명합니다. XAML 리소스에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](../design/controls-and-patterns/resourcedictionary-and-xaml-resource-references.md)를 확인하세요. XAML에서 사용하지 말아야 하는 성능 저하 예를 의도적으로 보여 주는 XAML을 포함하여 성능에 대한 추가 정보를 보려면 [XAML 태그 최적화](../debug-test-perf/optimize-xaml-loading.md)를 참조하세요.
 
-- XAML에서 자주 동일한 색 브러시를 사용 하는 경우 매번 특성 값 <xref:Windows.UI.Xaml.Media.SolidColorBrush> 으로 명명 된 색을 사용 하는 대신를 리소스로 정의 합니다.
-- 둘 이상의 UI 페이지에서 동일한 리소스를 사용 하는 경우 각 페이지 대신에서 <xref:Windows.UI.Xaml.Application.Resources%2A> 정의 하는 것이 좋습니다. 이와 반대로 특정 리소스를 한 페이지에서만 사용하는 경우에는 **Application.Resources**에서 리소스를 정의하지 말고 대신, 필요한 페이지에 대해서만 리소스를 정의합니다. 앱 디자인 도중의 XAML 팩터링 및 XAML 구문 분석 과정의 성능을 위해 좋은 방법입니다.
+- XAML에서 자주 동일한 색 브러시를 사용 하는 경우 매번 특성 값으로 명명 된 색을 사용 하는 대신 리소스로 <xref:Windows.UI.Xaml.Media.SolidColorBrush>을 정의 합니다.
+- 둘 이상의 UI 페이지에서 동일한 리소스를 사용 하는 경우 각 페이지 대신 <xref:Windows.UI.Xaml.Application.Resources%2A>에서 정의 하는 것이 좋습니다. 이와 반대로 특정 리소스를 한 페이지에서만 사용하는 경우에는 **Application.Resources**에서 리소스를 정의하지 말고 대신, 필요한 페이지에 대해서만 리소스를 정의합니다. 앱 디자인 도중의 XAML 팩터링 및 XAML 구문 분석 과정의 성능을 위해 좋은 방법입니다.
 - 앱에 패키징되는 리소스의 경우 사용되지 않는 리소스(키가 있지만 키를 사용하는 앱에 [StaticResource](staticresource-markup-extension.md) 참조가 없는 리소스)가 있는지 확인합니다. 앱을 릴리스하기 전에 XAML에서 이 리소스를 제거합니다.
-- 디자인 리소스 (<xref:Windows.UI.Xaml.ResourceDictionary.MergedDictionaries%2A>)를 제공 하는 별도의 XAML 파일을 사용 하는 경우 이러한 파일에서 사용 하지 않는 리소스를 주석으로 처리 하거나 제거 하는 것이 좋습니다 두 개 이상의 앱에서 사용 중이거나 모든 앱의 공통 리소스를 제공하는 공유 XAML 시작 지점이 있는 경우에도 매번 XAML 리소스를 패키지화하고 잠재적으로 로드해야 하는 것은 여전히 개발자의 앱입니다.
+- 디자인 리소스 (<xref:Windows.UI.Xaml.ResourceDictionary.MergedDictionaries%2A>)를 제공 하는 별도의 XAML 파일을 사용 하는 경우 이러한 파일에서 사용 하지 않는 리소스를 주석으로 처리 하거나 제거 하는 것이 좋습니다. 두 개 이상의 앱에서 사용 중이거나 모든 앱의 공통 리소스를 제공하는 공유 XAML 시작 지점이 있는 경우에도 매번 XAML 리소스를 패키지화하고 잠재적으로 로드해야 하는 것은 여전히 개발자의 앱입니다.
 - 컴퍼지션에 필요 없는 UI 요소를 정의하지 말고, 가능한 한 항상 기본 컨트롤 템플릿을 사용하세요. 이 템플릿은 테스트를 거쳤으며 로드 성능이 검증되었습니다.
-- UI 요소의 의도적인 그리기 <xref:Windows.UI.Xaml.Controls.Border> 대신 컨테이너를 사용 합니다. 기본적으로, 같은 픽셀을 여러 번 그리지 않습니다. 과도 한 그리기 및 테스트 하는 방법에 대 한 자세한 내용은을 <xref:Windows.UI.Xaml.DebugSettings.IsOverdrawHeatMapEnabled?displayProperty=nameWithType>참조 하십시오.
-- 또는 <xref:Windows.UI.Xaml.Controls.ListView> 에<xref:Windows.UI.Xaml.Controls.GridView>대 한 기본 항목 템플릿을 사용 합니다. 여기에는 많은 수의 목록 항목에 대 한 시각적 트리를 빌드할 때 성능 문제를 해결 하는 특별 한 **발표자** 논리가 있습니다.
+- UI 요소의 의도적인 그리기 대신 <xref:Windows.UI.Xaml.Controls.Border>과 같은 컨테이너를 사용 합니다. 기본적으로, 같은 픽셀을 여러 번 그리지 않습니다. 과도 한 그리기와이를 테스트 하는 방법에 대 한 자세한 내용은 <xref:Windows.UI.Xaml.DebugSettings.IsOverdrawHeatMapEnabled?displayProperty=nameWithType>을 참조 하세요.
+- @No__t-0 또는 <xref:Windows.UI.Xaml.Controls.GridView>;의 기본 항목 템플릿을 사용 합니다. 여기에는 많은 수의 목록 항목에 대 한 시각적 트리를 빌드할 때 성능 문제를 해결 하는 특별 한 **프레 여자** 논리가 있습니다.
 
 ## <a name="debug-xaml"></a>XAML 디버그
 

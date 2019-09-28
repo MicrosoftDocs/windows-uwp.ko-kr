@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: ad133a9b1eb22695e6ce5d8b3edba9ad3a138b68
-ms.sourcegitcommit: f1261aa6f7eeb62bf770a08b58ec4357bdc20c7e
+ms.openlocfilehash: c337de2a1fc349cfa3965402848fbead51e61e83
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71224767"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340478"
 ---
 # <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 
@@ -36,7 +36,7 @@ Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 �
 
 Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리거할 수 있습니다. 그런 다음 코드를 단계별로 실행하여 디버그할 수 있습니다.
 
-1.  C#에서는 백그라운드 클래스의 Run 메서드에 중단점을 삽입(In-process 프로세스 백그라운드 작업의 경우 App.OnBackgroundActivated()에 중단점 삽입)하거나 [**System.Diagnostics**](https://docs.microsoft.com/dotnet/api/system.diagnostics?view=netframework-4.7.2)를 사용하여 디버깅 출력을 씁니다.
+1.  C#에서는 백그라운드 클래스의 Run 메서드에 중단점을 삽입(In-process 프로세스 백그라운드 작업의 경우 App.OnBackgroundActivated()에 중단점 삽입)하거나 [**System.Diagnostics**](https://docs.microsoft.com/dotnet/api/system.diagnostics)를 사용하여 디버깅 출력을 씁니다.
 
     C++에서는 백그라운드 클래스의 Run 함수에 중단점을 삽입(In-process 백그라운드 작업의 경우 App.OnBackgroundActivated()에 중단점 삽입)하거나 [**OutputDebugString**](https://docs.microsoft.com/windows/desktop/api/debugapi/nf-debugapi-outputdebugstringw)를 사용하여 디버깅 출력을 씁니다.
 

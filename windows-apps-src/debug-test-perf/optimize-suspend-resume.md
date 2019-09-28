@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f94fcdf33267ab352f5cdc274e07373952b0939b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 610b6237071c9d7435ca167c1a89b4ef7c40b333
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362159"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339578"
 ---
 # <a name="optimize-suspendresume"></a>일시 중단/다시 시작 최적화
 
@@ -60,11 +60,11 @@ UWP 프로세스 수명 시스템에서는 다양한 이유로 앱을 일시 중
 
 ### <a name="serializing-data-in-c-and-visual-basic"></a>C# 및 Visual Basic에서 데이터 직렬화
 
-.NET 앱에 대해 선택할 수 잇는 직렬화 기술은 [**System.Xml.Serialization.XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer?redirectedfrom=MSDN), [**System.Runtime.Serialization.DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer?redirectedfrom=MSDN) 및 [**System.Runtime.Serialization.Json.DataContractJsonSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json.datacontractjsonserializer?redirectedfrom=MSDN) 클래스입니다.
+.NET 앱에 대해 선택할 수 잇는 직렬화 기술은 [**System.Xml.Serialization.XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer), [**System.Runtime.Serialization.DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer) 및 [**System.Runtime.Serialization.Json.DataContractJsonSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json.datacontractjsonserializer) 클래스입니다.
 
-성능적 관점에서 [**XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer?redirectedfrom=MSDN) 클래스를 사용하는 것이 좋습니다. **XmlSerializer**의 경우 직렬화 및 역직렬화 시간이 가장 짧고 메모리 사용 공간을 적게 유지합니다. **XmlSerializer**의 경우 일부 .NET Framework에 종속되므로 다른 직렬화 기술에 비해 **XmlSerializer**를 사용하기 위해 앱으로 로드해야 하는 모듈 수가 더 적습니다.
+성능적 관점에서 [**XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer) 클래스를 사용하는 것이 좋습니다. **XmlSerializer**의 경우 직렬화 및 역직렬화 시간이 가장 짧고 메모리 사용 공간을 적게 유지합니다. **XmlSerializer**의 경우 일부 .NET Framework에 종속되므로 다른 직렬화 기술에 비해 **XmlSerializer**를 사용하기 위해 앱으로 로드해야 하는 모듈 수가 더 적습니다.
 
-[**DataContractSerializer** ](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer?redirectedfrom=MSDN) 쉽게 사용자 지정 클래스를 serialize 하지만 보다 성능에 큰 영향 **XmlSerializer**합니다. 향상된 성능이 필요한 경우 전환을 고려하세요. 일반적으로 직렬 변환기를 2개 이상 로드하지 않아야 하며 다른 직렬 변환기의 기능이 필요하지 않은 경우 **XmlSerializer**를 사용하는 것이 좋습니다.
+[**DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer) 를 사용 하면 **XmlSerializer**보다 성능에 더 큰 영향을 주지만 사용자 지정 클래스를 더 쉽게 직렬화 할 수 있습니다. 향상된 성능이 필요한 경우 전환을 고려하세요. 일반적으로 직렬 변환기를 2개 이상 로드하지 않아야 하며 다른 직렬 변환기의 기능이 필요하지 않은 경우 **XmlSerializer**를 사용하는 것이 좋습니다.
 
 ### <a name="reduce-memory-footprint"></a>메모리 사용 공간 감소
 
@@ -85,7 +85,7 @@ UWP 프로세스 수명 시스템에서는 다양한 이유로 앱을 일시 중
 
 ## <a name="related-topics"></a>관련 항목
 
-* [일시 중단 하 고 다시 시작 하는 앱에 대 한 지침](https://docs.microsoft.com/windows/uwp/launch-resume/index)
+* [앱 일시 중단 및 다시 시작에 대 한 지침](https://docs.microsoft.com/windows/uwp/launch-resume/index)
  
 
  

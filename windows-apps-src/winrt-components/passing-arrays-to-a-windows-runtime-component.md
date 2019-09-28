@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ac91b3ea1c8396a89a2ec91c43cdcd6f52bbbbcd
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 49fb5ac5fbba5fad8123eb0167a2e00037725487
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393670"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340510"
 ---
 # <a name="passing-arrays-to-a-windows-runtime-component"></a>Windows 런타임 구성 요소에 배열 전달
 
@@ -20,12 +20,12 @@ ms.locfileid: "70393670"
 
 UWP(유니버설 Windows 플랫폼)에서 매개 변수는 입력 또는 출력용이며 입력과 출력 모두의 매개 변수는 아닙니다. 다시 말해서, 메서드에 전달되는 배열의 콘텐츠 및 배열 자체는 입력 또는 출력용입니다. 배열의 콘텐츠가 입력용인 경우 메서드는 배열에서 읽지만 배열에 쓰지는 않습니다. 배열의 콘텐츠가 출력용인 경우 메서드는 배열에 쓰지만 배열에서 읽지는 않습니다. .NET의 배열은 참조 형식이 기 때문에 배열 매개 변수에 문제가 발생 하며 배열 참조가 값으로 전달 되는 경우에도 배열의 내용이 변경 될 수 있습니다 (Visual Basic의**ByVal** ). [Windows 런타임 메타데이터 내보내기 도구(Winmdexp.exe)](https://docs.microsoft.com/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool)를 사용하려면 컨텍스트에서 명확하지 않은 경우 의도한 배열의 용도를 지정해야 합니다. ReadOnlyArrayAttribute 특성이나 WriteOnlyArrayAttribute 특성을 매개 변수에 적용하면 됩니다. 배열 사용은 다음과 같이 결정됩니다.
 
--   반환 값의 경우 또는 out 매개 변수(Visual Basic의 [OutAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.outattribute?redirectedfrom=MSDN) 특성이 적용된 **ByRef** 매개 변수)의 경우 배열은 항상 출력용입니다. ReadOnlyArrayAttribute 특성은 적용되지 않습니다. WriteOnlyArrayAttribute 특성은 출력 매개 변수에 허용되지만 중복됩니다.
+-   반환 값의 경우 또는 out 매개 변수(Visual Basic의 [OutAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.outattribute) 특성이 적용된 **ByRef** 매개 변수)의 경우 배열은 항상 출력용입니다. ReadOnlyArrayAttribute 특성은 적용되지 않습니다. WriteOnlyArrayAttribute 특성은 출력 매개 변수에 허용되지만 중복됩니다.
 
-    > **주의 Visual Basic 컴파일러**는출력전용규칙을적용하지않습니다  . 출력 매개 변수에서 읽어서는 안 됩니다. **Nothing**이 포함되어 있을 수 있습니다. 항상 새 배열을 할당하세요.
+    > **주의**  The Visual Basic 컴파일러는 출력 전용 규칙을 적용 하지 않습니다. 출력 매개 변수에서 읽어서는 안 됩니다. **Nothing**이 포함되어 있을 수 있습니다. 항상 새 배열을 할당하세요.
  
 -   **ref** 한정자(Visual Basic의 **ByRef**)가 있는 매개 변수는 사용할 수 없습니다. Winmdexp.exe에서 오류가 발생합니다.
--   값으로 전달되는 매개 변수의 경우 [ReadOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.readonlyarrayattribute?redirectedfrom=MSDN) 특성이나 [WriteOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute?redirectedfrom=MSDN) 특성을 적용하여 배열 콘텐츠가 입력용인지 아니면 출력용인지 지정해야 합니다. 두 특성을 모두 지정하는 것은 오류입니다.
+-   값으로 전달되는 매개 변수의 경우 [ReadOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.readonlyarrayattribute) 특성이나 [WriteOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute) 특성을 적용하여 배열 콘텐츠가 입력용인지 아니면 출력용인지 지정해야 합니다. 두 특성을 모두 지정하는 것은 오류입니다.
 
 메서드가 입력용 배열을 허용하고 배열 콘텐츠를 수정하고 배열을 호출자에 반환해야 하는 경우에는 입력용으로 읽기 전용 매개 변수를 사용하고 출력용으로 쓰기 전용 매개 변수(또는 반환 값)를 사용합니다. 다음 코드는 이 패턴을 구현하는 방법을 보여 줍니다.
 
@@ -62,6 +62,6 @@ ReadOnlyArrayAttribute 특성이나 WriteOnlyArrayAttribute 특성이 있는 매
 
 ## <a name="related-topics"></a>관련 항목
 
-* [ReadOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.readonlyarrayattribute?redirectedfrom=MSDN)
-* [WriteOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute?redirectedfrom=MSDN)
-* [및를 사용 C# 하 여 구성 요소 Windows 런타임 Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [ReadOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.readonlyarrayattribute)
+* [WriteOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute)
+* [C# 및 Visual Basic이 포함된 Windows 런타임 구성 요소](creating-windows-runtime-components-in-csharp-and-visual-basic.md)

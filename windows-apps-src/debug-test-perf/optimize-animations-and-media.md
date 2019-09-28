@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d93e3f681d271fe9914b122896fdaedfd3e08868
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 579772bba55c93de38c3c43538ad14253dbc2572
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362327"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339891"
 ---
 # <a name="optimize-animations-media-and-images"></a>애니메이션, 미디어 및 이미지 최적화
 
@@ -30,15 +30,15 @@ UWP 앱의 주요 측면은 매끄러운 조작입니다. 여기에는 "손가�
 
 -   키 프레임을 사용하는 개체 애니메이션
 -   제로 기간 애니메이션
--   [  **Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8) 속성에 대한 애니메이션
+-   [  **Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) 속성에 대한 애니메이션
 -   [  **UIElement.Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성에 대한 애니메이션
 -   [  **SolidColorBrush.Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 하위 속성을 대상으로 할 때 유형 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush)의 속성에 대한 애니메이션
 -   반환 값 유형의 하위 속성을 대상으로 할 때 다음 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 속성에 대한 애니메이션
 
-    -   [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform)
+    -   [**System.windows.uielement.rendertransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform)
     -   [**Transform3D**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.transform3d)
-    -   [**Projection**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.projection)
-    -   [**클립**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.clip)
+    -   [**투사**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.projection)
+    -   [**클립이**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.clip)
 
 종속 애니메이션은 레이아웃에 영향을 미치므로 UI 스레드에서 추가 입력이 없으면 계산할 수 없습니다. 종속 애니메이션에는 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width), [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 같은 속성의 수정이 포함됩니다. 기본적으로 종속 애니메이션은 실행되지 않으며 앱 개발자의 옵트인(opt in)이 필요합니다. 종속 애니메이션을 사용하는 경우 UI 스레드가 잠금 해제되어 있으면 매끄럽게 실행되지만 프레임워크나 앱이 UI 스레드에서 다른 작업을 많이 수행할 경우 잠시 멈추는 현상이 시작됩니다.
 
@@ -54,7 +54,7 @@ XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립�
 
 마찬가지로 [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement) 애니메이션도 바람직한 방법이 아닙니다. 성능이 손상될 뿐만 아니라 재생할 동영상 콘텐츠에서 작은 흠이나 기타 아티팩트가 생길 수 있습니다.
 
-> **참고**    에 대 한이 문서의 권장 사항은 **MediaPlayerElement** 에 적용 [ **MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)합니다. **MediaPlayerElement**는 Windows 10 버전 1607에서만 사용할 수 있으므로 이전 버전의 Windows용 앱을 만들려는 경우 **MediaElement**를 사용해야 합니다.
+> **참고**  이 **MediaPlayerElement** 에 대 한이 문서의 권장 사항은 [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)에도 적용 됩니다. **MediaPlayerElement**는 Windows 10 버전 1607에서만 사용할 수 있으므로 이전 버전의 Windows용 앱을 만들려는 경우 **MediaElement**를 사용해야 합니다.
 
 ### <a name="use-infinite-animations-sparingly"></a>꼭 필요한 경우에만 무한 애니메이션 사용
 
@@ -66,7 +66,7 @@ XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립�
 
 [  **Windows.UI.Xaml.Media.Animation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation) 네임스페이스에는 다른 Windows 애니메이션과 모양과 느낌이 일치하는 고성능의, 자연스러운 애니메이션 라이브러리가 포함되어 있습니다. 관련 클래스에는 해당 이름에 "테마"가 있으며 [애니메이션 개요](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)에 설명되어 있습니다. 이 라이브러리는 앱의 첫 화면을 애니메이션하거나 상태 및 콘텐츠 전환을 만드는 것과 같은 여러 일반적인 애니메이션 시나리오를 지원합니다. UWP UI에서 성능과 일관성을 높이기 위해 가능하면 이 애니메이션 라이브러리를 사용하는 것이 좋습니다.
 
-> **참고**    애니메이션 라이브러리에는 가능한 모든 속성에 애니메이션 효과 주기 수 없습니다. 애니메이션 라이브러리가 적용되지 않는 XAML 시나리오의 경우 [스토리보드 애니메이션](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)을 참조하세요.
+> **참고**   애니메이션 라이브러리는 가능한 모든 속성에 애니메이션 효과를 적용할 수 없습니다. 애니메이션 라이브러리가 적용되지 않는 XAML 시나리오의 경우 [스토리보드 애니메이션](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)을 참조하세요.
 
 
 ### <a name="animate-compositetransform3d-properties-independently"></a>CompositeTransform3D 속성을 독립적으로 애니메이션
@@ -190,14 +190,14 @@ DecodePixelWidth/DecodePixelHeight가 이미지가 화면에 표시되는 것보
 -   호스트 이미지 요소 또는 브러시 또는 부모 요소에서 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)를 0으로 설정하거나 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility)를 **Collapsed**로 설정해서 이미지가 숨겨졌습니다.
 -   이미지 컨트롤 또는 브러시가 [**Stretch**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Stretch)**None**을 사용합니다.
 -   이미지가 [**NineGrid**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.ninegrid)로 사용됩니다.
--   `CacheMode="BitmapCache"` image 요소 또는 모든 부모 요소에서 설정 됩니다.
+-   `CacheMode="BitmapCache"`은 image 요소 또는 부모 요소에 대해 설정 됩니다.
 -   이미지 브러시가 사각형이 아닙니다(예: 모양 또는 텍스트에 적용되는 경우).
 
 위의 시나리오에서는 명시적인 디코드 크기를 설정하는 것이 유일하게 메모리를 절약할 수 있는 방법입니다.
 
 원본을 설정하기 전에 항상 [**BitmapImage**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage)를 라이브 트리에 연결해야 합니다. 이미지 요소 또는 브러시가 태그에서 지정되면 항상 자동으로 그렇게 됩니다. "라이브 트리 예제"라는 제목으로 예제가 제공됩니다. 스트림 원본을 설정할 때 항상 [**SetSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsource)를 사용하지 말고 [**SetSourceAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync)를 대신 사용해야 합니다. 또한 [**ImageOpened**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) 이벤트가 발생되는 것을 기다리는 동안 이미지 콘텐츠를 숨기지(불투명도가 0이거나 축소된 표시 유형) 않는 것도 좋은 방법입니다. 이렇게 하는 것은 판단 호출입니다. 즉, 이 호출을 수행하면 적절한 크기로 자동 디코딩 혜택을 이용할 수 없게 됩니다. 앱에서 이미지 콘텐츠를 처음에 숨겨야 하는 경우에도, 가능하다면 디코드 크기를 명시적으로 설정해야 합니다.
 
-**라이브 트리에 예제**
+**라이브 트리 예**
 
 예제 1(좋음) - 태그에 지정된 URI(Uniform Resource Identifier)
 
@@ -219,7 +219,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-예 2 코드 숨김 (불량)-BitmapImage의 UriSource 트리에 연결 하기 전에 설정 합니다.
+예 2 코드 숨김이 (잘못 됨)-트리에 연결 하기 전에 BitmapImage의 UriSource를 설정 합니다.
 
 ```csharp
 var bitmapImage = new BitmapImage();
@@ -250,7 +250,7 @@ myImage.Source = bitmapImage;
 XAML은 소프트웨어 메모리에서 중간 표면을 요구하지 않고 하드웨어 메모리의 표면에 비동기적으로 이미지 콘텐츠를 디코딩할 수 있는 내부 최적화가 있습니다. 그러므로 최고 메모리 사용 및 렌더링 대기 시간이 줄어듭니다. 다음 조건 중 하나가 충족되는 경우에는 이 기능이 사용되지 않습니다.
 
 -   이미지가 [**NineGrid**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.ninegrid)로 사용됩니다.
--   `CacheMode="BitmapCache"` image 요소 또는 모든 부모 요소에서 설정 됩니다.
+-   `CacheMode="BitmapCache"`은 image 요소 또는 부모 요소에 대해 설정 됩니다.
 -   이미지 브러시가 사각형이 아닙니다(예: 모양 또는 텍스트에 적용되는 경우).
 
 ### <a name="softwarebitmapsource"></a>SoftwareBitmapSource
@@ -263,7 +263,7 @@ XAML은 소프트웨어 메모리에서 중간 표면을 요구하지 않고 하
 
 ### <a name="use-getthumbnailasync-for-thumbnails"></a>미리 보기에 GetThumbnailAsync 사용
 
-이미지 크기 조정을 위한 하나의 사용 사례는 미리 보기를 만드는 것입니다. [  **DecodePixelWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) 및 [**DecodePixelHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight)를 사용하여 작은 이미지 버전을 제공할 수 있지만 UWP에서는 미리 보기 검색을 위한 훨씬 더 효율적인 API를 제공합니다. [**GetThumbnailAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getthumbnailasync) 이미 캐시 된 파일 시스템을 포함 하는 이미지에 대 한 미리 보기를 제공 합니다. 이미지를 열거나 디코딩할 필요가 없으므로 XAML API보다 훨씬 더 나은 성능을 제공합니다.
+이미지 크기 조정을 위한 하나의 사용 사례는 미리 보기를 만드는 것입니다. [  **DecodePixelWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) 및 [**DecodePixelHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight)를 사용하여 작은 이미지 버전을 제공할 수 있지만 UWP에서는 미리 보기 검색을 위한 훨씬 더 효율적인 API를 제공합니다. [**GetThumbnailAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getthumbnailasync) 는 파일 시스템이 이미 캐시 된 이미지에 대 한 미리 보기를 제공 합니다. 이미지를 열거나 디코딩할 필요가 없으므로 XAML API보다 훨씬 더 나은 성능을 제공합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp

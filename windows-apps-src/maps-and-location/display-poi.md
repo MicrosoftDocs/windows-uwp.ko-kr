@@ -6,18 +6,18 @@ ms.date: 08/11/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 고정핀
 ms.localizationpriority: medium
-ms.openlocfilehash: 2aca8f4daea39a190af4dd1007a6b961198994dd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b8e14693dd6ef23714da53d652b9083f202cd62d
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370540"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340436"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>지도에 관심 지점 표시
 
 고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(안내 표시)를 추가합니다. POI는 관심 있는 사항을 나타내는 지도의 특정 지점입니다. 비즈니스, 도시 또는 친구의 위치를 예로 들 수 있습니다.
 
-앱에서 POI를 표시 하는 방법에 대 한 자세한 내용은에서 다음 샘플을 다운로드 합니다 [Windows 유니버설 샘플 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979) GitHub에서: [유니버설 Windows 플랫폼 (UWP) 맵 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)합니다.
+앱에서 POI를 표시 하는 방법에 대 한 자세한 내용은 GitHub의 [Windows 유니버설 샘플 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979) 에서 다음 샘플을 다운로드 하세요. [UWP (유니버설 Windows 플랫폼) 맵 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)입니다.
 
 [  **MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon), [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard),  [**MapPolygon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolygon) 및 [**MapPolyline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolyline) 개체를 [**MapElementsLayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelementslayer) 개체의 **MapElements** 컬렉션에 추가하여 고정핀, 이미지 및 셰이프를 표시합니다. 그런 다음 해당 계층 개체를 지도 컨트롤의 **계층** 컬렉션에 추가합니다.
 
@@ -163,9 +163,9 @@ public void AddLandmarkPhoto()
 }
 ```
 
-더 자세히 알아 보는이 코드의 세 부분이 포함 되어 있습니다. 이미지, 참조 카메라와 [ **NormalizedAnchorPoint** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.NormalizedAnchorPoint) 속성입니다.
+이 코드의 세 부분에서 조금 더 자세히 검토할 가치가 있습니다. 이미지, 참조 카메라 및 [**NormalizedAnchorPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.NormalizedAnchorPoint) 속성입니다.
 
-### <a name="image"></a>Image
+### <a name="image"></a>이미지
 
 프로젝트의 **Assets** 폴더에 저장된 사용자 지정 이미지를 표시하는 예제입니다. [  **MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard)의 [**이미지**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.Image) 속성은 [**RandomAccessStreamReference**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.RandomAccessStreamReference) 유형의 값이 필요합니다. 이 형식에는 [**Windows.Storage.Streams**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams) 네임스페이스용 **using** 문이 필요합니다.
 
@@ -352,7 +352,7 @@ public Geopoint BellevueLocation { get; set; }
 </maps:MapControl>
 ```
 
-위의 예제에서 ``ItemsSource`` 속성은 코드 숨김 파일에서 [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist?view=netframework-4.70) 유형의 속성에 바인딩됩니다.
+위의 예제에서 ``ItemsSource`` 속성은 코드 숨김 파일에서 [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist) 유형의 속성에 바인딩됩니다.
 
 ```csharp
 public sealed partial class Scenario1 : Page

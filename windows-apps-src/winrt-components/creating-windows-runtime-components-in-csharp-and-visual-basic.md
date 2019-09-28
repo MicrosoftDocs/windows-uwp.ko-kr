@@ -9,12 +9,12 @@ dev_langs:
 - vb
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 351d59cbecd0941cdc6218d02672b2a679cf3fce
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: c402b8e4ba98f55267a42c1bce1c16e6f090e80c
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393723"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340371"
 ---
 # <a name="windows-runtime-components-with-c-and-visual-basic"></a>C# 및 Visual Basic이 포함된 Windows 런타임 구성 요소
 
@@ -183,7 +183,7 @@ Windows 8.1부터 Windows 런타임에는 **IStringable** **에서 제공**하�
 
 ( `await` `async` `Async` Visual Basic)를 사용 하는 메서드에는 키워드 (Visual Basic)가 필요 합니다.`Await` Windows 런타임 구성 요소에서 이러한 메서드를 노출 하는 경우 **실행** 메서드에 `async` 전달 하는 대리자에 키워드를 적용 합니다.
 
-취소 또는 진행 상황 보고를 지원하지 않는 비동기 작업의 경우 [WindowsRuntimeSystemExtensions.AsAsyncAction](https://docs.microsoft.com/dotnet/api/system?redirectedfrom=MSDN) 또는 [AsAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/dotnet/api/system?redirectedfrom=MSDN) 확장 메서드를 사용하여 작업을 적절한 인터페이스에 래핑할 수 있습니다. 예를 들어 다음 코드는 task를 사용 하 여 비동기 메서드를 구현 합니다 **&lt;.&gt; TResult** 메서드를 실행 하 여 작업을 시작 합니다. **AsAsyncOperation&lt;TResult&gt;**  확장 메서드는 작업을 Windows 런타임 비동기 작업으로 반환 합니다.
+취소 또는 진행 상황 보고를 지원하지 않는 비동기 작업의 경우 [WindowsRuntimeSystemExtensions.AsAsyncAction](https://docs.microsoft.com/dotnet/api/system) 또는 [AsAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/dotnet/api/system) 확장 메서드를 사용하여 작업을 적절한 인터페이스에 래핑할 수 있습니다. 예를 들어 다음 코드는 task를 사용 하 여 비동기 메서드를 구현 합니다 **&lt;.&gt; TResult** 메서드를 실행 하 여 작업을 시작 합니다. **AsAsyncOperation&lt;TResult&gt;**  확장 메서드는 작업을 Windows 런타임 비동기 작업으로 반환 합니다.
 
 ```csharp
 public static IAsyncOperation<IList<string>> DownloadAsStringsAsync(string id)
@@ -222,7 +222,7 @@ function asyncExample(id) {
 
 취소 또는 진행률 보고를 지 원하는 비동기 작업 및 작업의 경우 [**system.runtime.interopservices.windowsruntime.asyncinfo**](/dotnet/api/system.runtime.interopservices.windowsruntime) 클래스를 사용 하 여 시작 된 작업을 생성 하 고 작업의 취소 및 진행률 보고 기능을 취소 및 진행률과 연결 합니다. 적절 한 Windows 런타임 인터페이스의 보고 기능 취소 및 진행률 보고를 모두 지 원하는 예제는 [Visual Basic Windows 런타임 구성 요소를 만들고 C# JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)하는 연습을 참조 하세요.
 
-비동기 메서드가 취소 또는 진행률 보고를 지원 하지 않는 경우에도 **system.runtime.interopservices.windowsruntime.asyncinfo** 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 C# 무명 메서드를 사용 하는 경우 토큰 및 [iprogress&lt;t&gt; ](https://docs.microsoft.com/dotnet/api/system.iprogress-1?redirectedfrom=MSDN) 인터페이스에 대 한 매개 변수를 제공 하지 마세요. C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다. AsAsyncOperation&lt;tresult&gt; 메서드를 사용 하는 이전 예제는 [**system.runtime.interopservices.windowsruntime.asyncinfo&lt;tresult&gt;(Func&lt;CancellationToken, Task&lt;를사용하는경우다음과같이표시됩니다.TResult)메서드오버로드를대신합니다&gt;&gt;** ](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime?redirectedfrom=MSDN).
+비동기 메서드가 취소 또는 진행률 보고를 지원 하지 않는 경우에도 **system.runtime.interopservices.windowsruntime.asyncinfo** 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 C# 무명 메서드를 사용 하는 경우 토큰 및 [iprogress&lt;t&gt; ](https://docs.microsoft.com/dotnet/api/system.iprogress-1) 인터페이스에 대 한 매개 변수를 제공 하지 마세요. C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다. AsAsyncOperation&lt;tresult&gt; 메서드를 사용 하는 이전 예제는 [**system.runtime.interopservices.windowsruntime.asyncinfo&lt;tresult&gt;(Func&lt;CancellationToken, Task&lt;를사용하는경우다음과같이표시됩니다.TResult)메서드오버로드를대신합니다&gt;&gt;** ](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime).
 
 ```csharp
 public static IAsyncOperation<IList<string>> DownloadAsStringsAsync(string id)
@@ -269,7 +269,7 @@ Windows 앱용 .NET에 포함된 모든 예외 형식을 발생시킬 수 있습
 
 ## <a name="declaring-and-raising-events"></a>이벤트 선언 및 발생
 
-이벤트에 대한 데이터를 저장하는 형식을 선언하면 EventArgs 대신 Object에서 파생되는데 그 이유는 EventArgs가 Windows 런타임 형식이 아니기 때문입니다. 이벤트 형식으로 [ **&lt;EventHandler&gt; teventargs**](https://docs.microsoft.com/dotnet/api/system.eventhandler-1?redirectedfrom=MSDN) 를 사용 하 고 이벤트 인수 형식을 제네릭 형식 인수로 사용 합니다. .NET 응용 프로그램에서와 마찬가지로 이벤트를 발생 시킵니다.
+이벤트에 대한 데이터를 저장하는 형식을 선언하면 EventArgs 대신 Object에서 파생되는데 그 이유는 EventArgs가 Windows 런타임 형식이 아니기 때문입니다. 이벤트 형식으로 [ **&lt;EventHandler&gt; teventargs**](https://docs.microsoft.com/dotnet/api/system.eventhandler-1) 를 사용 하 고 이벤트 인수 형식을 제네릭 형식 인수로 사용 합니다. .NET 응용 프로그램에서와 마찬가지로 이벤트를 발생 시킵니다.
 
 Windows 런타임 구성 요소가 JavaScript 또는 C++에서 사용되는 경우 이벤트는 해당 언어에 필요한 Windows 런타임 이벤트 패턴을 따릅니다. C# 또는 Visual Basic 구성 요소를 사용 하는 경우 이벤트가 일반적인 .net 이벤트로 표시 됩니다. [또는 Visual Basic Windows 런타임 구성 요소를 만들고 JavaScript에서 호출 하는 연습에서 예제를 제공 합니다. C# ](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)
 

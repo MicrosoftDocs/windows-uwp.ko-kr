@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 57532c45bdf6c2b8feb2af1277be74a0f8b2c759
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 34f315628af0ea181756f2456d4d0dfe70bf8377
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320298"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340557"
 ---
 # <a name="property-path-syntax"></a>속성 경로 구문
 
@@ -50,11 +50,11 @@ Windows 런타임에서는 종속성 속성의 대상 값에 바인딩할 수 �
 
 ### <a name="indexers"></a>인덱서
 
-데이터 바인딩의 속성 경로에는 인덱싱된 속성에 대한 참조가 포함될 수 있습니다. 따라서 순서가 지정된 목록/벡터 또는 사전/맵에 바인딩할 수 있습니다. 대괄호를 사용 하 여 "\[\]" 인덱싱된 속성을 나타내는 문자입니다. 이러한 대괄호의 내용은 정수(순서가 지정된 목록의 경우)이거나 따옴표로 끝난 문자열(사전의 경우)일 수 있습니다. 키가 정수인 사전에 바인딩할 수도 있습니다. 동일한 경로에서 개체-속성을 구분하는 점을 사용하여 여러 가지 인덱싱된 속성을 사용할 수 있습니다.
+데이터 바인딩의 속성 경로에는 인덱싱된 속성에 대한 참조가 포함될 수 있습니다. 따라서 순서가 지정된 목록/벡터 또는 사전/맵에 바인딩할 수 있습니다. 대괄호 "\[ @ no__t-1" 문자를 사용 하 여 인덱싱된 속성을 표시 합니다. 이러한 대괄호의 내용은 정수(순서가 지정된 목록의 경우)이거나 따옴표로 끝난 문자열(사전의 경우)일 수 있습니다. 키가 정수인 사전에 바인딩할 수도 있습니다. 동일한 경로에서 개체-속성을 구분하는 점을 사용하여 여러 가지 인덱싱된 속성을 사용할 수 있습니다.
 
-예를 들어 "Teams" 목록(순서가 지정된 목록)이 있는 비즈니스 개체를 예로 들어 보겠습니다. 각 개체에는 "Players"라는 사전이 있으며 각 플레이어는 성별로 키가 지정되어 있습니다. 다른 팀에서 특정 플레이어 예제 속성 경로 다음과 같습니다. "팀\[1\]합니다. 플레이어\[Smith\]"입니다. 목록의 인덱스가 0부터 시작되므로 1을 사용하여 "Teams"의 두 번째 항목을 나타냅니다.
+예를 들어 "Teams" 목록(순서가 지정된 목록)이 있는 비즈니스 개체를 예로 들어 보겠습니다. 각 개체에는 "Players"라는 사전이 있으며 각 플레이어는 성별로 키가 지정되어 있습니다. 두 번째 팀의 특정 플레이어에 대 한 속성 경로 예는 다음과 같습니다. "팀 @ no__t-01 @ no__t-1. Players @ no__t-2Smith @ no__t-3 ". 목록의 인덱스가 0부터 시작되므로 1을 사용하여 "Teams"의 두 번째 항목을 나타냅니다.
 
-**참고**  인덱싱에 대 한 지원 C++ 데이터 원본 제한은 참조 [깊이에서 데이터 바인딩에](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)합니다.
+**참고**   데이터 원본에 C++ 대 한 인덱싱 지원은 제한 됩니다. 자세한 내용은 [데이터 바인딩을](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)참조 하세요.
 
 ### <a name="attached-properties"></a>연결 된 속성
 
@@ -70,7 +70,7 @@ Windows 런타임에서는 종속성 속성의 대상 값에 바인딩할 수 �
 
 ## <a name="property-path-for-animation-targeting"></a>애니메이션 대상에 대한 속성 경로
 
-애니메이션은 애니메이션이 실행될 때 스토리보드 값이 적용되는 종속성 속성을 대상으로 합니다. 애니메이션할 속성이 있는 개체를 식별하기 위해 애니메이션은 이름([x:Name 특성](x-name-attribute.md))에 따라 요소를 대상으로 지정합니다. [  **Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname?view=netframework-4.8)으로 식별되는 개체에서 시작하고 애니메이션이 적용되어야 하는 특정 종속성 속성 값으로 끝나는 속성 경로를 정의해야 하는 경우가 많습니다. 해당 속성 경로는 [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95))의 값으로 사용됩니다.
+애니메이션은 애니메이션이 실행될 때 스토리보드 값이 적용되는 종속성 속성을 대상으로 합니다. 애니메이션할 속성이 있는 개체를 식별하기 위해 애니메이션은 이름([x:Name 특성](x-name-attribute.md))에 따라 요소를 대상으로 지정합니다. [  **Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname)으로 식별되는 개체에서 시작하고 애니메이션이 적용되어야 하는 특정 종속성 속성 값으로 끝나는 속성 경로를 정의해야 하는 경우가 많습니다. 해당 속성 경로는 [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95))의 값으로 사용됩니다.
 
 XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 [스토리보드 애니메이션](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)을 참조하세요.
 
@@ -84,19 +84,19 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 
 ## <a name="specifying-a-particular-child-in-a-collection"></a>컬렉션에서 특정 자식 지정
 
-컬렉션 속성에서 자식 항목을 지정하려면 숫자 인덱서를 사용할 수 있습니다. 대괄호를 사용 하 여 "\[\]" 정수 문자 인덱스 값입니다. 사전이 아닌 순서가 지정된 목록만 참조할 수 있습니다. 컬렉션은 애니메이션할 수 있는 값이 아니므로 인덱서 사용은 속성 경로에서 끝 속성이 될 수 없습니다.
+컬렉션 속성에서 자식 항목을 지정하려면 숫자 인덱서를 사용할 수 있습니다. 정수 인덱스 값 주위에 대괄호 "\[ @ no__t-1" 문자를 사용 합니다. 사전이 아닌 순서가 지정된 목록만 참조할 수 있습니다. 컬렉션은 애니메이션할 수 있는 값이 아니므로 인덱서 사용은 속성 경로에서 끝 속성이 될 수 없습니다.
 
-예를 들어 색 중지 첫 번째 색에 애니메이션 효과를 지정 하는 [ **LinearGradientBrush** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.LinearGradientBrush) 컨트롤에 적용 되는 [ **백그라운드** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background) 속성의 속성 경로: "(Control.Background). (GradientBrush.GradientStops) \[0\]. ( GradientStop.Color) ". 어떻게 인덱서가 경로의 마지막 단계가 될 수 없는지 확인하고 특히 마지막 단계에서는 컬렉션에 있는 항목 0의 [**GradientStop.Color**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.gradientstop.color) 속성을 참조하여 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 애니메이션 값을 적용해야 함을 확인합니다.
+예를 들어, 컨트롤의 [**배경**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background) 속성에 적용 되는 [**system.windows.media.lineargradientbrush.startpoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.LinearGradientBrush) 의 첫 번째 색 중지 색에 애니메이션 효과를 적용 하도록 지정 하려면 속성 경로: "(control. Background). (Gradientbrush가 아니며. GradientStops) \[0 @ no__t-5. (GradientStop) ". 어떻게 인덱서가 경로의 마지막 단계가 될 수 없는지 확인하고 특히 마지막 단계에서는 컬렉션에 있는 항목 0의 [**GradientStop.Color**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.gradientstop.color) 속성을 참조하여 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 애니메이션 값을 적용해야 함을 확인합니다.
 
 ## <a name="animating-an-attached-property"></a>연결된 속성 애니메이션
 
-일반적인 시나리오는 아니지만 연결된 속성에 애니메이션 유형과 일치하는 속성 값이 있으면 연결된 속성을 애니메이션할 수 있습니다. 연결된 속성을 식별하는 이름에는 점이 이미 포함되어 있으므로 점이 개체-속성 단계로 처리되지 않도록 하려면 연결된 속성 이름을 괄호로 묶어야 합니다. 예를 들어 개체의 [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row?view=netframework-4.8) 연결된 속성을 애니메이션하도록 지정하는 문자열은 속성 경로 "(Grid.Row)"를 사용합니다.
+일반적인 시나리오는 아니지만 연결된 속성에 애니메이션 유형과 일치하는 속성 값이 있으면 연결된 속성을 애니메이션할 수 있습니다. 연결된 속성을 식별하는 이름에는 점이 이미 포함되어 있으므로 점이 개체-속성 단계로 처리되지 않도록 하려면 연결된 속성 이름을 괄호로 묶어야 합니다. 예를 들어 개체의 [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row) 연결된 속성을 애니메이션하도록 지정하는 문자열은 속성 경로 "(Grid.Row)"를 사용합니다.
 
-**참고**  예를 들어 값 [ **Grid.Row** ](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row?view=netframework-4.8) 되는 **Int32** 속성 형식입니다. 따라서 **Double** 애니메이션으로 애니메이션할 수 없습니다. 대신 [**ObjectKeyFrame.Value**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.objectkeyframe.value)가 "0" 또는 "1" 같은 정수로 설정된 [**DiscreteObjectKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame) 구성 요소가 있는 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames)를 정의했습니다.
+**참고**@no__t-이 예에서는 1For 값이 **Int32** 속성 형식입니다 [ **.** ](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row) 따라서 **Double** 애니메이션으로 애니메이션할 수 없습니다. 대신 [**ObjectKeyFrame.Value**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.objectkeyframe.value)가 "0" 또는 "1" 같은 정수로 설정된 [**DiscreteObjectKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame) 구성 요소가 있는 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames)를 정의했습니다.
 
 ## <a name="rules-for-the-properties-in-an-animation-targeting-property-path"></a>애니메이션 대상 속성 경로의 속성에 대한 규칙
 
--   속성 경로의 가정된 시작 지점은 [**Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname?view=netframework-4.8)으로 식별되는 개체입니다.
+-   속성 경로의 가정된 시작 지점은 [**Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname)으로 식별되는 개체입니다.
 -   속성 경로를 따라 참조되는 모든 개체 및 속성은 공용이어야 합니다.
 -   끝 속성(경로에서 마지막으로 명명된 속성)은 공용이어야 하며 읽기/쓰기 가능하고 종속성 속성이어야 합니다.
 -   끝 속성에는 애니메이션 유형([**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 애니메이션, **Double** 애니메이션, [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 애니메이션, [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames))의 광범위한 클래스 중 하나로 애니메이션할 수 있는 속성 유형이 있어야 합니다.
@@ -107,15 +107,15 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 
 대부분 코드를 전혀 사용하지 않고 XAML에서[**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath)를 적용할 수 있습니다. 그러나 경우에 따라 코드를 사용하여 **PropertyPath** 개체를 정의하고 런타임에 속성에 할당해야 할 수 있습니다.
 
-[**PropertyPath** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath) 에 [ **PropertyPath(String)** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.-ctor) 생성자 및 기본 생성자가 없습니다. 이 생성자에 전달하는 문자열은 앞에서 설명한 대로 속성 경로 구문을 사용하여 정의된 문자열입니다. 또한 [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path)를 XAML 특성으로 할당하는 데 사용한 문자열과 동일한 문자열입니다. **PropertyPath** 클래스의 유일하게 다른 API는 읽기 전용인 [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.path) 속성입니다. 이 속성을 다른 **PropertyPath** 인스턴스의 생성 문자열로 사용할 수 있습니다.
+[**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath) 에는 [**PropertyPath (String)** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.-ctor) 생성자가 있고 기본 생성자가 없습니다. 이 생성자에 전달하는 문자열은 앞에서 설명한 대로 속성 경로 구문을 사용하여 정의된 문자열입니다. 또한 [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path)를 XAML 특성으로 할당하는 데 사용한 문자열과 동일한 문자열입니다. **PropertyPath** 클래스의 유일하게 다른 API는 읽기 전용인 [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.path) 속성입니다. 이 속성을 다른 **PropertyPath** 인스턴스의 생성 문자열로 사용할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
-* [애니메이션 스토리 보드를 만들었습니다](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)
+* [Storyboarded 애니메이션](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)
 * [{Binding} 태그 확장](binding-markup-extension.md)
 * [**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath)
-* [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding)
+* [**바인딩되**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding)
 * [**바인딩 생성자**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.-ctor)
 * [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)
 

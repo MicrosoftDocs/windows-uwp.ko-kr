@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: baac4498fcc6dd65d106166f73ca89db89cbfc6b
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: eec1de013efce7b23cd89e81f659a5cc530638c4
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821001"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339960"
 ---
 # <a name="enterprise"></a>엔터프라이즈
 
@@ -78,7 +78,7 @@ Windows UI Library는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 
 
 ### <a name="sql-server-connectivity"></a>SQL Server 연결
 
-앱에서 [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN&view=netframework-4.7.2) 네임스페이스를 사용하여 SQL Server 데이터베이스에 직접 연결한 다음, 데이터를 저장하고 검색할 수 있습니다.
+앱에서 [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient) 네임스페이스를 사용하여 SQL Server 데이터베이스에 직접 연결한 다음, 데이터를 저장하고 검색할 수 있습니다.
 
 [UWP 앱에서 SQL Server 데이터베이스 사용](https://docs.microsoft.com/en-us/windows/uwp/data-access/sql-server-databases)을 참조하세요.
 
@@ -125,7 +125,7 @@ LOB(기간 업무) 앱은 다양한 다른 시스템에 데이터를 저장하�
 |-------|-------------|
 | [네트워킹 기본 사항](https://docs.microsoft.com/windows/uwp/networking/networking-basics) | 이 연습에서는 사용 중인 통신 프로토콜에 관계없이 모든 UWP 앱과 관련된 기본 네트워킹 개념을 설명합니다.  |
 | [네트워킹 기술 선택](https://docs.microsoft.com/windows/uwp/networking/which-networking-technology) | UWP 앱에 사용할 수 있는 네트워킹 기술에 대한 빠른 개요 및 앱에 가장 적합한 기술을 선택하는 방법에 대한 제안 사항입니다. |
-| [XML 및 SOAP 직렬화](https://docs.microsoft.com/dotnet/framework/serialization/xml-and-soap-serialization) | XML 직렬화는 개체를 특정 XSD(XML 스키마 정의 언어)를 준수하는 XML 스트림으로 변환합니다. XML과 강력한 형식의 클래스 간에 변환하기 위해 네이티브 [XDocument](https://docs.microsoft.com/dotnet/api/system.xml.linq.xdocument?redirectedfrom=MSDN) 클래스 또는 외부 라이브러리를 사용할 수 있습니다. |
+| [XML 및 SOAP 직렬화](https://docs.microsoft.com/dotnet/framework/serialization/xml-and-soap-serialization) | XML 직렬화는 개체를 특정 XSD(XML 스키마 정의 언어)를 준수하는 XML 스트림으로 변환합니다. XML과 강력한 형식의 클래스 간에 변환하기 위해 네이티브 [XDocument](https://docs.microsoft.com/dotnet/api/system.xml.linq.xdocument) 클래스 또는 외부 라이브러리를 사용할 수 있습니다. |
 | [JSON 직렬화](https://docs.microsoft.com/uwp/api/Windows.Data.Json) | JSON(JavaScript Object Notation) 직렬화는 REST API와 통신하는 데 널리 사용되는 형식입니다. UWP 앱에 대해 완벽하게 지원되는 [Newtonsoft Json.NET](https://www.newtonsoft.com/json). |
 
 ## <a name="devices"></a>장치

@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 996cc797ff46bd7eb9a172d66ffbb1fd6fe621bc
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: fdb4e80d7f8da022e2ceb5496cbad592d7d22716
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317535"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339627"
 ---
 # <a name="improve-garbage-collection-performance"></a>가비지 수집 성능 향상
 
 
 C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .NET 가비지 수집기의 자동 메모리 관리를 사용합니다. 이 섹션에는 UWP 앱에서 .NET 가비지 수집기에 대한 동작 및 성능 모범 사례가 요약되어 있습니다. .NET 가비지 수집기가 작동하는 방식과 가비지 수집기 성능 디버깅 및 분석용 도구에 대한 자세한 내용은 [가비지 수집](https://docs.microsoft.com/dotnet/standard/garbage-collection/index)을 참조하세요.
 
-**참고**  가비지 수집의 기본 동작에 개입할 필요 없이 강력한 앱을 사용 하 여 일반적인 메모리 문제를 나타냅니다. 자세한 내용은 [Visual Studio 2015에서 디버그하는 동안의 메모리 사용량 도구](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/)를 참조하세요. 이 항목은 C# 및 Visual Basic에만 적용됩니다.
+**참고**  은 가비지 수집기의 기본 동작에 개입 해야 하는 것은 앱의 일반적인 메모리 문제를 의미 합니다. 자세한 내용은 [Visual Studio 2015에서 디버그하는 동안의 메모리 사용량 도구](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/)를 참조하세요. 이 항목은 C# 및 Visual Basic에만 적용됩니다.
 
  
 
@@ -40,11 +40,11 @@ C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .
 
 앱 성능을 측정했고 수집 유도가 성능을 개선할 것으로 판단된 후에만 가비지 수집을 유도하세요.
 
-[  **GC.Collect(n)** ](https://docs.microsoft.com/dotnet/api/system.gc.collect?redirectedfrom=MSDN#System_GC_Collect_System_Int32_)을 호출하여 세대에 대한 가비지 수집을 유도할 수 있습니다. 여기서 n은 수집할 세대입니다(0, 1 또는 2).
+[  **GC.Collect(n)** ](https://docs.microsoft.com/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_)을 호출하여 세대에 대한 가비지 수집을 유도할 수 있습니다. 여기서 n은 수집할 세대입니다(0, 1 또는 2).
 
-**참고**  가비지 수집을 수행 하기 적합 한 시간을 확인 하려면 많은 경험적 접근을 사용 하 고 수집 강제 실행 중인 대부분의 경우 불필요 한 사용 하기 때문에 앱에서 가비지 수집을 강제 하지 하는 것이 좋습니다 CPU입니다. 그러나 더 이상 사용되지 않는 상당한 개체가 앱에 있다는 것을 알고 있고 이 메모리를 시스템으로 반환하려는 경우에는 가비지 수집을 강제 실행하는 것이 적절할 수 있습니다. 예를 들어 게임에서 로드 순서가 끝날 때 수집을 유도하여 게임 실행이 시작되기 전에 메모리를 해제할 수 있습니다.
+**참고**   가비지 수집기는 많은 추론을 사용 하 여 컬렉션을 수행 하는 데 가장 적합 한 시간을 결정 하 고, 컬렉션을 강제 적용 하는 것은 많은 경우에 불필요 한 CPU를 사용 하 여 응용 프로그램에서 가비지 수집을 수행 하지 않는 것이 좋습니다. 그러나 더 이상 사용되지 않는 상당한 개체가 앱에 있다는 것을 알고 있고 이 메모리를 시스템으로 반환하려는 경우에는 가비지 수집을 강제 실행하는 것이 적절할 수 있습니다. 예를 들어 게임에서 로드 순서가 끝날 때 수집을 유도하여 게임 실행이 시작되기 전에 메모리를 해제할 수 있습니다.
  
-실수로 너무 많은 가비지 수집을 유도하지 않으려면 [**GCCollectionMode**](https://docs.microsoft.com/dotnet/api/system.gccollectionmode?redirectedfrom=MSDN)를 **Optimized**로 설정합니다. 이렇게 하면 수집이 정당화하기에 충분히 생산적인 것으로 판단되는 경우에만 가비지 수집기가 수집을 시작합니다.
+실수로 너무 많은 가비지 수집을 유도하지 않으려면 [**GCCollectionMode**](https://docs.microsoft.com/dotnet/api/system.gccollectionmode)를 **Optimized**로 설정합니다. 이렇게 하면 수집이 정당화하기에 충분히 생산적인 것으로 판단되는 경우에만 가비지 수집기가 수집을 시작합니다.
 
 ## <a name="reduce-garbage-collection-time"></a>가비지 수집 시간 단축
 

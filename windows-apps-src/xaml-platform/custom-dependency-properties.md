@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: ba56464cb30a8bacecae8a2347332c0c36be55ea
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: b3a112305489cc9cf5971dbc218080b52e4d30bd
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322117"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340630"
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 
@@ -30,7 +30,7 @@ ms.locfileid: "67322117"
 
 속성에 대해 스타일 지정, 데이터 바인딩, 애니메이션 및 기본값을 지원하려면 종속성 속성으로 구현해야 합니다. 종속성 속성 값은 클래스의 필드로 저장되지 않고 xaml 프레임워크에서 저장되며, [**DependencyProperty.Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 메서드를 호출하여 속성을 Windows 런타임 속성 시스템에 등록할 때 검색되는 키를 사용하여 참조됩니다.   종속성 속성은 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)에서 파생된 형식에서만 사용할 수 있습니다. 그러나 **DependencyObject**는 클래스 계층에서 매우 상위이므로 UI 및 표시 지원을 위한 클래스는 대부분 종속성 속성을 지원할 수 있습니다. 종속성 속성과 이 설명서의 설명 내용에 사용된 일부 용어 및 규칙에 대한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
 
-Windows 런타임에서의 종속성 속성의 예로: [**Control.Background**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background)를 [ **FrameworkElement.Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width), 및 [ **TextBox.Text**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text), 여러 간에 다른 방법을 사용 합니다.
+Windows 런타임 종속성 속성의 예는 다음과 같습니다. [**컨트롤. 배경**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background), [**FrameworkElement. Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)및 [**TextBox.** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text)
 
 규칙에 따라 클래스별로 노출된 각 종속성 속성에는 동일한 클래스에 대해 노출되고 종속성 속성의 식별자를 제공하는 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 형식의 해당 **public static readonly** 속성이 있습니다. 식별자 이름 지정 규칙은 종속성 속성 이름이 오고 이름 뒤에 "Property" 문자열을 추가하는 것입니다. 예를 들어 **Control.Background** 속성의 해당 **DependencyProperty** 식별자는 [**Control.BackgroundProperty**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.backgroundproperty)입니다. 식별자는 종속성 속성에 대한 정보를 등록된 대로 저장하며, [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 호출 등 종속성 속성과 관련된 다른 작업에 사용될 수 있습니다.
 
@@ -75,9 +75,9 @@ Windows 런타임에서의 종속성 속성의 예로: [**Control.Background**](
 Microsoft .NET 언어(C# 및 Microsoft Visual Basic)의 경우 클래스 본문 내에서(클래스 내부이나 멤버 정의 외부임) [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register)를 호출합니다. 식별자는 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 메서드 호출에서 반환 값으로 제공됩니다. [  **Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출은 일반적으로 정적 생성자로 수행되거나, 클래스의 일부인 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 형식의 **public static readonly** 속성 초기화의 일부로 수행됩니다. 이 속성은 종속성 속성의 식별자를 노출합니다. 다음은 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출의 예입니다.
 
 > [!NOTE]
-> 종속성 속성 등록 식별자의 일부로 속성 정의 일반적인 구현 이지만 클래스 정적 생성자에서 종속성 속성을 등록할 수도 있습니다. 종속성 속성을 초기화하는 데 두 줄 이상의 코드가 필요한 경우 이 방법이 적절할 수 있습니다.
+> 종속성 속성을 식별자 속성 정의의 일부로 등록 하는 것은 일반적인 구현 이지만 클래스 정적 생성자에서 종속성 속성을 등록할 수도 있습니다. 종속성 속성을 초기화하는 데 두 줄 이상의 코드가 필요한 경우 이 방법이 적절할 수 있습니다.
 
-에 대 한 C++구현을 머리글 사이의 코드 파일을 분할 하는 방법에 대 한 옵션을 사용할 CX, /입니다. 일반적인 분할은 **get** 구현은 포함되고 **set**는 포함되지 않도록 식별자 자체를 헤더의 **publicstatic** 속성으로 선언하는 것입니다. **get** 구현은 초기화되지 않은 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 인스턴스인 개인 필드를 참조합니다. 래퍼 및 해당 래퍼의 **get** 및 **set** 구현을 선언할 수도 있습니다. 이 경우 헤더에 일부 최소 구현이 포함됩니다. 래퍼에 Windows 런타임 특성이 필요한 경우 헤더에도 특성이 필요합니다. 코드 파일에서 앱이 처음으로 시작될 때만 실행되는 도우미 함수 내에 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출을 배치합니다. **Register**의 반환 값을 사용하여 헤더에서 선언한 정적이나 초기화되지 않은 식별자를 채웁니다. 이는 처음에 구현 파일의 루트 범위에서 **nullptr**로 설정한 식별자입니다.
+/Cx C++의 경우 헤더와 코드 파일 간에 구현을 분할 하는 방법에 대 한 옵션을 사용할 수 있습니다. 일반적인 분할은 **get** 구현은 포함되고 **set**는 포함되지 않도록 식별자 자체를 헤더의 **publicstatic** 속성으로 선언하는 것입니다. **get** 구현은 초기화되지 않은 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 인스턴스인 개인 필드를 참조합니다. 래퍼 및 해당 래퍼의 **get** 및 **set** 구현을 선언할 수도 있습니다. 이 경우 헤더에 일부 최소 구현이 포함됩니다. 래퍼에 Windows 런타임 특성이 필요한 경우 헤더에도 특성이 필요합니다. 코드 파일에서 앱이 처음으로 시작될 때만 실행되는 도우미 함수 내에 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출을 배치합니다. **Register**의 반환 값을 사용하여 헤더에서 선언한 정적이나 초기화되지 않은 식별자를 채웁니다. 이는 처음에 구현 파일의 루트 범위에서 **nullptr**로 설정한 식별자입니다.
 
 ```csharp
 public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
@@ -166,14 +166,14 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> 에 대 한는 C++/CX 코드, 이유 있는 개인 필드와 공용 읽기 전용 속성을 표시 하는 이유는 [ **DependencyProperty** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 종속성 속성을 사용 하는 다른 호출자 수 있도록 속성 시스템 유틸리티를 공용 식별자를 필요로 하는 Api를 사용할 수도 있습니다. 식별자를 프라이빗 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 또는 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue), [**ClearValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.clearvalue), [**GetAnimationBaseValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getanimationbasevalue), [**SetBinding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.setbinding)및 [**Setter.Property**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter.property)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
+> C++/Cx 코드의 경우 전용 필드와 [DependencyProperty](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 를 표시 하는 공용 읽기 전용 속성을 사용 하는 이유는 종속성 속성을 사용 하는 다른 호출자도이를 필요로 하는 속성 시스템 유틸리티 api를 사용할 수 있도록 하는 것입니다. 공용 식별자입니다. 식별자를 프라이빗 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 또는 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue), [**ClearValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.clearvalue), [**GetAnimationBaseValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getanimationbasevalue), [**SetBinding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.setbinding)및 [**Setter.Property**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter.property)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
 
 ## <a name="dependency-property-name-conventions"></a>종속성 속성 이름 규칙
 
 종속성 속성에 대한 명명 규칙이 있습니다. 예외 상황을 제외하고는 항상 이 규칙을 따릅니다. 종속성 속성에는 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register)의 첫 번째 매개 변수로 제공되는 고유 기본 이름(앞의 예에서는 "Label")이 있습니다. 이름은 각 등록 형식 내에서 고유해야 하며 이러한 고유성 요구 사항은 모든 상속되는 멤버에도 적용됩니다. 기본 형식을 통해 상속되는 종속성 속성은 이미 등록 형식의 일부로 간주됩니다. 상속되는 속성의 이름은 다시 등록될 수 없습니다.
 
 > [!WARNING]
-> 경우에 다음 문자열 식별자가 될 수를 제공 하는 이름은 선택한 언어에 대 한 프로그래밍에 일반적으로 너무 XAML에서 종속성 속성을 설정할 수 있어야 합니다. XAML에서 설정하도록 하려면 선택하는 속성 이름이 유효한 XAML 이름이어야 합니다. 자세한 내용은 [XAML 개요](xaml-overview.md)를 참조하세요.
+> 여기서 제공 하는 이름은 원하는 언어의 프로그래밍에서 유효한 문자열 식별자 일 수 있지만 일반적으로 종속성 속성을 XAML로도 설정할 수 있습니다. XAML에서 설정하도록 하려면 선택하는 속성 이름이 유효한 XAML 이름이어야 합니다. 자세한 내용은 [XAML 개요](xaml-overview.md)를 참조하세요.
 
 식별자 속성을 만드는 경우 등록한 속성 이름을 "Property" 접미사와 연결합니다(예: "LabelProperty"). 이 속성은 종속성 속성 식별자이며 고유 속성 래퍼에서 수행하는 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 및 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 호출의 입력으로 사용됩니다. 속성 시스템 및 [ **{x:Bind}** ](x-bind-markup-extension.md) 등의 다른 XAML 프로세서에서도 사용됩니다.
 
@@ -182,7 +182,7 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 속성 래퍼는 **get** 구현에서 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue)를, **set** 구현에서 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue)를 호출합니다.
 
 > [!WARNING]
-> 예외적인 상황을 모두 제외 하 고 래퍼 구현은 수행 해야 합니다 [ **GetValue** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 하 고 [ **SetValue** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 작업입니다. 그렇지 않으면 속성이 XAML을 통해 설정되는 경우와 코드를 통해 설정되는 경우에 동작이 달라집니다. 효율성을 위해 XAML 파서는 종속성 속성을 설정할 때 래퍼를 무시하고 **SetValue**를 통해 백업 저장소에 통신합니다.
+> 예외적인 경우를 제외 하 고 래퍼 구현은 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 및 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 작업을 수행 해야 합니다. 그렇지 않으면 속성이 XAML을 통해 설정되는 경우와 코드를 통해 설정되는 경우에 동작이 달라집니다. 효율성을 위해 XAML 파서는 종속성 속성을 설정할 때 래퍼를 무시하고 **SetValue**를 통해 백업 저장소에 통신합니다.
 
 ```csharp
 public String Label
@@ -247,7 +247,7 @@ public:
 일반적으로 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata)를 인라인으로 만든 인스턴스로서, [**DependencyProperty.Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register)용 매개 변수 내에서 제공합니다.
 
 > [!NOTE]
-> 정의 하는 경우는 [ **CreateDefaultValueCallback** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.createdefaultvaluecallback) 구현에 유틸리티 메서드를 사용 해야 [ **PropertyMetadata.Create** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertymetadata.create)호출 하는 대신는 [ **PropertyMetadata** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata) 정의 하는 생성자를 **PropertyMetadata** 인스턴스.
+> [**CreateDefaultValueCallback**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.createdefaultvaluecallback) 구현을 정의 하는 경우 **PropertyMetadata** 인스턴스를 정의 하기 위해 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata) 생성자를 호출 하는 대신 유틸리티 메서드 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertymetadata.create) 를 사용 해야 합니다.
 
 이 다음 예에서는 [**PropertyChangedCallback**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertychangedcallback) 값으로 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata) 인스턴스를 참조하여 이전에 보여진 [**DependencyProperty.Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 예를 수정합니다. "OnLabelChanged" 콜백의 구현은 이 섹션의 뒷부분에 설명되어 있습니다.
 
@@ -312,7 +312,7 @@ Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
 ```
 
 > [!NOTE]
-> 기본값을 사용 하 여 등록 하지 마십시오 [ **UnsetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.unsetvalue)합니다. 등록하는 경우 속성 소비자를 혼란스럽게 하고 속성 시스템 내에 의도하지 않은 결과를 발생시킵니다.
+> [**이 dependencyproperty.unsetvalue로**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.unsetvalue)의 기본값을 사용 하 여 등록 하지 마십시오. 등록하는 경우 속성 소비자를 혼란스럽게 하고 속성 시스템 내에 의도하지 않은 결과를 발생시킵니다.
 
 ### <a name="createdefaultvaluecallback"></a>CreateDefaultValueCallback
 
@@ -446,7 +446,7 @@ Windows 런타임 API에서 컬렉션 형식 종속성 속성은 상대적으로
 - 일반적으로 컬렉션은 애니메이션하지 않습니다.
 - 일반적으로 스타일 또는 템플릿을 사용하여 컬렉션의 항목을 미리 채우지 않습니다.
 - 컬렉션에 바인딩하는 것이 주요 시나리오이긴 하지만 컬렉션이 바인딩 소스이기 위해 종속성 속성일 필요는 없습니다. 바인딩 대상의 경우 [**ItemsControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) 또는 [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)의 서브클래스를 사용하여 컬렉션 항목을 지원하거나 보기 모델 패턴을 사용하는 것이 더 일반적입니다. 컬렉션 바인딩에 대한 자세한 내용은 [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)을 참조하세요.
-- 컬렉션 변경 알림은 **INotifyPropertyChanged** 또는 **INotifyCollectionChanged** 같은 인터페이스를 통해 또는 [**ObservableCollection&lt;T&gt;** ](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1?redirectedfrom=MSDN)에서 컬렉션 형식을 파생시키는 방법을 통해 더 효과적으로 설명됩니다.
+- 컬렉션 변경 알림은 **INotifyPropertyChanged** 또는 **INotifyCollectionChanged** 같은 인터페이스를 통해 또는 [**ObservableCollection&lt;T&gt;** ](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1)에서 컬렉션 형식을 파생시키는 방법을 통해 더 효과적으로 설명됩니다.
 
 하지만 컬렉션 형식 종속성 속성에 대한 시나리오도 존재합니다. 다음의 3개 섹션에서는 컬렉션 형식 종속성 속성을 구현하는 방법에 대한 몇 가지 지침을 제공합니다.
 
@@ -472,7 +472,7 @@ Windows 런타임은 사용자 지정 종속성 속성을 읽기 전용으로 �
 
 ### <a name="registering-the-dependency-properties-for-ccx-apps"></a>C++/CX 앱의 종속성 속성 등록
 
-C++/CX로 속성 등록을 위해 구현하는 일은 C#의 경우보다 어렵습니다. 이는 헤더와 구현 파일과 구분해야 하며 구현 파일의 루트 범위에서 초기화하는 것은 잘못된 용례이기 때문입니다. (Visual C++ 구성 요소 확장 (C++/CX)에 직접 루트 범위에서 정적 이니셜라이저 코드를 배치할 **DllMain**하지만 C# 컴파일러에서 클래스에 정적 이니셜라이저 할당 되지 않도록 하  **DllMain** 잠금 문제를 로드 합니다.). 여기서는 클래스당 함수 하나씩, 클래스에 대한 종속성 속성 등록을 모두 수행하는 도우미 함수를 선언하는 방식이 가장 좋습니다. 그런 다음, 앱이 사용하는 각 사용자 지정 클래스에 대해 사용할 각 사용자 지정 클래스에 의해 노출되는 도우미 등록 함수를 참조해야 합니다. `InitializeComponent` 이전에 [**Application constructor**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.-ctor)(`App::App()`)의 일환으로 각 도우미 등록 함수를 한 번 호출합니다. 이 생성자는 앱이 실제로 처음 참조될 때만 실행되며 예를 들어 일시 중단된 앱이 다시 시작되는 경우 다시 실행되지 않습니다. 또한 이전 C++ 등록 예제에서 본 것처럼, 각 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출 시 **nullptr** 확인은 함수 호출자가 해당 속성을 두 번 등록할 수 없도록 하므로 매우 중요합니다. 두 번째로 등록 호출이 발생하고 이러한 확인이 이루어지지 않는 경우 속성 이름이 중복 항목이므로 앱이 충돌합니다. C++/CX 버전 샘플의 코드를 원하는 경우 [XAML 사용자 및 사용자 지정 컨트롤 샘플](https://go.microsoft.com/fwlink/p/?linkid=238581)에서 이 구현 패턴을 참조할 수 있습니다.
+C++/CX로 속성 등록을 위해 구현하는 일은 C#의 경우보다 어렵습니다. 이는 헤더와 구현 파일과 구분해야 하며 구현 파일의 루트 범위에서 초기화하는 것은 잘못된 용례이기 때문입니다. C++/Cx ( C++ 시각적 구성 요소 확장)는 루트 범위의 정적 이니셜라이저 코드를 **DllMain**에 직접 배치 하는 C# 반면 컴파일러는 정적 이니셜라이저를 클래스에 할당 하므로 **DllMain** 로드 잠금 문제가 발생 하지 않습니다. 여기서는 클래스당 함수 하나씩, 클래스에 대한 종속성 속성 등록을 모두 수행하는 도우미 함수를 선언하는 방식이 가장 좋습니다. 그런 다음, 앱이 사용하는 각 사용자 지정 클래스에 대해 사용할 각 사용자 지정 클래스에 의해 노출되는 도우미 등록 함수를 참조해야 합니다. `InitializeComponent` 이전에 [**Application constructor**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.-ctor)(`App::App()`)의 일환으로 각 도우미 등록 함수를 한 번 호출합니다. 이 생성자는 앱이 실제로 처음 참조될 때만 실행되며 예를 들어 일시 중단된 앱이 다시 시작되는 경우 다시 실행되지 않습니다. 또한 이전 C++ 등록 예제에서 본 것처럼, 각 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출 시 **nullptr** 확인은 함수 호출자가 해당 속성을 두 번 등록할 수 없도록 하므로 매우 중요합니다. 두 번째로 등록 호출이 발생하고 이러한 확인이 이루어지지 않는 경우 속성 이름이 중복 항목이므로 앱이 충돌합니다. C++/CX 버전 샘플의 코드를 원하는 경우 [XAML 사용자 및 사용자 지정 컨트롤 샘플](https://go.microsoft.com/fwlink/p/?linkid=238581)에서 이 구현 패턴을 참조할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
