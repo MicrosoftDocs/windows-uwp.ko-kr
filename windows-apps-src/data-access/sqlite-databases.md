@@ -5,12 +5,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, SQLite, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 465376214f1bf1b390ec6db8609783e4e7872196
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 1cc8cfe696d35872469d97dba24f5388ff6833b5
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362793"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339781"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>UWP 앱에서 SQLite 데이터베이스 사용
 SQLite를 사용하여 사용자 디바이스에 경량 데이터베이스의 데이터를 저장하고 검색할 수 있습니다. 이 가이드에서는 그 방법을 보여줍니다.
@@ -39,7 +39,7 @@ EF(Entity Framework)는 도메인별 개체를 사용하여 관계형 데이터�
 
 ### <a name="sqlite-library"></a>SQLite 라이브러리
 
-[Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) 라이브러리는 [System.Data.Common](https://docs.microsoft.com/dotnet/api/system.data.common?redirectedfrom=MSDN) 네임스페이스에 인터페이스를 구현합니다. Microsoft는 이러한 구현 방식을 적극적으로 유지하고 있으며, 이 방식은 저수준 기본 SQLite API와 관련된 직관적인 래퍼를 제공합니다.
+[Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) 라이브러리는 [System.Data.Common](https://docs.microsoft.com/dotnet/api/system.data.common) 네임스페이스에 인터페이스를 구현합니다. Microsoft는 이러한 구현 방식을 적극적으로 유지하고 있으며, 이 방식은 저수준 기본 SQLite API와 관련된 직관적인 래퍼를 제공합니다.
 
 이 가이드의 나머지 부분에서는 이 라이브러리의 사용 방법을 안내합니다.
 

@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ea8c4476a47c8bd00ce74e893e2f0a730615a99
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 8f053be1aeb88454b94d7c04ba2627818ea43736
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319158"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339410"
 ---
 # <a name="combo-box"></a>콤보 상자
 
@@ -307,4 +307,4 @@ bool IsValid(string Text)
 - [검색](search.md)
 - [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [Windows.UI.Xaml.Controls PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [String.Length 속성](https://docs.microsoft.com/dotnet/api/system.string.length?redirectedfrom=MSDN#System_String_Length)
+- [String.Length 속성](https://docs.microsoft.com/dotnet/api/system.string.length)

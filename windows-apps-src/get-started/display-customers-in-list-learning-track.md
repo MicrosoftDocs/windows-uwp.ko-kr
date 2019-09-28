@@ -6,12 +6,12 @@ ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 데이터 바인딩, 목록
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a63bcc73be0146a9f580ae3afe3684f85e51d00e
-ms.sourcegitcommit: 88431e67d282d9a2a4fe4afcb254310f90c7cd7e
+ms.openlocfilehash: 3cebf51bdf9fa9942a0b88ed7b4cf66204671781
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127447"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340332"
 ---
 # <a name="display-customers-in-a-list"></a>목록에 고객 표시
 
@@ -110,7 +110,7 @@ public sealed partial class MainPage : Page
 
 앞에서 코드 조각을 따랐다면 귀하가 만든 바인딩을 x:Bind를 사용하며 모드를 지정하지 않고 이를 일회성 바인딩으로 만듭니다. UI에서 바로 고객을 편집하려는 경우 데이터 변경이 고객 개체에도 다시 전달되도록 하기 위해 양방향 바인딩으로 변경해야 합니다. [데이터 바인딩 심층 분석](../data-binding/data-binding-in-depth.md)에 자세한 내용이 나와 있습니다.
 
-데이터 원본이 변경되는 경우에도 양방향 바인딩 또한 UI를 업데이트합니다. 이를 수행하기 위해 원본에서 [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN)를 구현하고 해당 속성 setter가 **PropertyChanged** 이벤트를 발생시키는지 확인합니다. 아래와 같이 **OnPropertyChanged** 메서드와 같은 도우미 메서드를 호출하도록 하는 것이 일반적인 다른 방식입니다.
+데이터 원본이 변경되는 경우에도 양방향 바인딩 또한 UI를 업데이트합니다. 이를 수행하기 위해 원본에서 [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged)를 구현하고 해당 속성 setter가 **PropertyChanged** 이벤트를 발생시키는지 확인합니다. 아래와 같이 **OnPropertyChanged** 메서드와 같은 도우미 메서드를 호출하도록 하는 것이 일반적인 다른 방식입니다.
 
 ```csharp
 public class Customer : INotifyPropertyChanged
@@ -170,7 +170,7 @@ public class Customer : INotifyPropertyChanged
 | [Binding](../xaml-platform/binding-markup-extension.md) | 이전 바인딩 태그 확장에 대한 설명서입니다. |
 | [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) | 세로 스택에 데이터 항목을 표시하는 UI 컨트롤입니다. |
 | [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | UI에서 편집할 수 있는 텍스트 데이터를 표시하기 위한 기본 텍스트 컨트롤입니다. |
-| [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN) | 데이터를 관찰할 수 있도록 만들어 데이터 바인딩에 제공하는 인터페이스입니다. |
+| [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged) | 데이터를 관찰할 수 있도록 만들어 데이터 바인딩에 제공하는 인터페이스입니다. |
 | [ItemsControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) | 이 클래스의 **ItemsSource** 속성으로 ListView를 데이터 원본에 바인딩할 수 있습니다. |
 
 ### <a name="useful-docs"></a>유용한 문서

@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 317f373b64b1a15a9baa8310c06d6b8037ced745
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 662f23c5ab201a44669b2e4e4a454aa73ebd3b43
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364446"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340200"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary 및 XAML 리소스 참조
 
@@ -399,7 +399,7 @@ XAML 리소스 참조에 대한 조회 동작은 실제 사용이 적용되는 �
 
 컨트롤 템플릿에는 참조 조회에서 가능한 또 다른 위치인 테마 사전이 있습니다. 테마 사전은 [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) 요소가 해당 루트인 단일 XAML 파일입니다. 테마 사전은 [Application.Resources](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resources)에서 병합된 사전일 수 있습니다. 테마 사전은 템플릿 지정된 사용자 지정 컨트롤의 컨트롤 관련 테마 사전일 수도 있습니다.
 
-마지막으로 플랫폼 리소스에 대한 리소스 조회가 있습니다. 플랫폼 리소스에는 시스템 UI 테마 각각에 대해 정의되고 Windows 런타임 앱의 UI에 사용하는 모든 컨트롤의 기본 모양을 정의하는 컨트롤 템플릿이 포함되어 있습니다. 또한 플랫폼 리소스에는 시스템 전반의 모양과 테마와 관련된 명명된 리소스 집합이 포함되어 있습니다. 이러한 리소스는 기술적으로 [MergedDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.mergeddictionaries) 항목이며, 따라서 앱이 로드된 후 XAML 또는 코드에서 조회하는 데 사용할 수 있습니다. 예를 들어 시스템 테마 리소스에는 앱 텍스트 색과 운영 체제 및 사용자 기본 설정에서 제공되는 시스템 창의 텍스트 색을 일치시키기 위한 [Color](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 정의를 제공하는 "SystemColorWindowTextColor"라는 리소스가 포함되어 있습니다. 앱에 대한 다른 XAML 스타일이 이 스타일을 참조하거나, 코드가 리소스 조회 값을 가져올 수 있습니다(예제에서는 **Color**에 캐스팅 가능).
+마지막으로 플랫폼 리소스에 대한 리소스 조회가 있습니다. 플랫폼 리소스에는 시스템 UI 테마 각각에 대해 정의되고 Windows 런타임 앱의 UI에 사용하는 모든 컨트롤의 기본 모양을 정의하는 컨트롤 템플릿이 포함되어 있습니다. 또한 플랫폼 리소스에는 시스템 전반의 모양과 테마와 관련된 명명된 리소스 집합이 포함되어 있습니다. 이러한 리소스는 기술적으로 [MergedDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.mergeddictionaries) 항목이며, 따라서 앱이 로드된 후 XAML 또는 코드에서 조회하는 데 사용할 수 있습니다. 예를 들어 시스템 테마 리소스에는 앱 텍스트 색과 운영 체제 및 사용자 기본 설정에서 제공되는 시스템 창의 텍스트 색을 일치시키기 위한 [Color](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 정의를 제공하는 "SystemColorWindowTextColor"라는 리소스가 포함되어 있습니다. 앱에 대한 다른 XAML 스타일이 이 스타일을 참조하거나, 코드가 리소스 조회 값을 가져올 수 있습니다(예제에서는 **Color**에 캐스트 가능).
 
 자세한 내용과 XAML을 사용하는 UWP 앱에서 사용할 수 있는 테마별 시스템 리소스 목록은 [XAML 테마 리소스](xaml-theme-resources.md)를 참조하세요.
 
@@ -449,9 +449,9 @@ XAML 파서가 클래스를 인스턴스화하려면 생성자가 필요하므�
 
 대부분의 [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) 시나리오는 XAML에서 배타적으로 처리됩니다. **ResourceDictionary** 컨테이너 및 리소스를 XAML 파일 또는 UI 정의 파일의 XAML 노드 집합으로 선언합니다. 그런 다음, XAML 리소스 참조를 사용하여 XAML의 다른 부분에서 해당 리소스를 요청합니다. 하지만 앱이 실행 중인 동안 실행되는 코드를 사용하여 **ResourceDictionary**의 콘텐츠를 조정하거나 **ResourceDictionary** 콘텐츠를 쿼리하여 리소스가 이미 정의되어 있는지 확인해야 하는 특정 시나리오가 있습니다. 이러한 코드 호출은 **ResourceDictionary** 인스턴스에서 수행되므로 먼저 하나의 항목, 즉 [FrameworkElement.Resources](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.resources)를 가져와 개체 트리에서 즉시 실행 **ResourceDictionary**를 검색하거나 `Application.Current.Resources`를 검색해야 합니다.
 
-C\# 또는 Microsoft Visual Basic 코드에서 인덱서([Item](https://docs.microsoft.com/dotnet/api/system.windows.resourcedictionary.item?view=netframework-4.8))를 사용하여 특정 [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)의 리소스를 참조할 수 있습니다. **ResourceDictionary**는 문자열 키가 입력된 사전이므로 인덱서는 정수 인덱스가 아닌 문자열 키를 사용합니다. Visual C++ 구성 요소 확장(C++/CX) 코드에서 [Lookup](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.lookup)을 사용합니다.
+C\# 또는 Microsoft Visual Basic 코드에서 인덱서([Item](https://docs.microsoft.com/dotnet/api/system.windows.resourcedictionary.item))를 사용하여 특정 [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)의 리소스를 참조할 수 있습니다. **ResourceDictionary**는 문자열 키가 입력된 사전이므로 인덱서는 정수 인덱스가 아닌 문자열 키를 사용합니다. Visual C++ 구성 요소 확장(C++/CX) 코드에서 [Lookup](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.lookup)을 사용합니다.
 
-코드를 사용하여 [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)를 검사 또는 변경하려는 경우, [Lookup](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.lookup) 또는 [Item](https://docs.microsoft.com/dotnet/api/system.windows.resourcedictionary.item?view=netframework-4.8)과 같은 API에 대한 동작은 즉시 실행 리소스에서 앱 리소스로 트래버스되지 않습니다. 이는 XAML 페이지가 로드될 때에만 발생하는 XAML 파서 동작입니다. 런타임 시 키에 대한 범위가 당시 사용 중인 **ResourceDictionary** 인스턴스에 자체 포함됩니다. 그러나 그 범위는 [MergedDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.mergeddictionaries)로 확장되지 않습니다.
+코드를 사용하여 [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)를 검사 또는 변경하려는 경우, [Lookup](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.lookup) 또는 [Item](https://docs.microsoft.com/dotnet/api/system.windows.resourcedictionary.item)과 같은 API에 대한 동작은 즉시 실행 리소스에서 앱 리소스로 트래버스되지 않습니다. 이는 XAML 페이지가 로드될 때에만 발생하는 XAML 파서 동작입니다. 런타임 시 키에 대한 범위가 당시 사용 중인 **ResourceDictionary** 인스턴스에 자체 포함됩니다. 그러나 그 범위는 [MergedDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.mergeddictionaries)로 확장되지 않습니다.
 
 또한 [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 없는 키를 요청하는 경우 오류가 발생하지 않고 단순히 반환 값이 **null**로 제공될 수 있습니다. 반환되는 **null**을 값으로 사용하려는 경우 여전히 오류가 발생할 수 있습니다. 이 오류는 **ResourceDictionary** 호출이 아니라 속성의 setter에서 올 수 있습니다. 오류를 피할 수 있는 유일한 방법은 속성이 **null**을 유효한 값으로 수용하는 경우입니다. 이 동작이 XAML 구문 분석 시 XAML 조회 동작과 대조됩니다. 구문 분석 시 XAML에서 제공된 키를 해석하지 못하면 해당 속성에서 **null**이 허용되는 경우에도 XAML 구문 분석 오류가 발생합니다.
 

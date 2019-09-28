@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a885be33cfd9170d4324c096814d381a92e7d3d
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 71f8298456b3c297994d6aa11d815a6b46ba7ff4
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319489"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340367"
 ---
 # <a name="rich-text-block"></a>서식 있는 텍스트 블록
 
@@ -168,4 +168,4 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 
 
 **개발자용(기타)**
-- [String.Length 속성](https://docs.microsoft.com/dotnet/api/system.string.length?redirectedfrom=MSDN#System_String_Length)
+- [String.Length 속성](https://docs.microsoft.com/dotnet/api/system.string.length)
