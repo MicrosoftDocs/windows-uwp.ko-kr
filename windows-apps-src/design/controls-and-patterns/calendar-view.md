@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 02206d1f237eeeb113910aece7345ae35f22a80b
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 716f785ff6b2151913f57208068e783320292613
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363092"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339459"
 ---
 # <a name="calendar-view"></a>달력 보기
 
@@ -71,7 +71,7 @@ ms.locfileid: "66363092"
 
 기본적으로 [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selectionmode) 속성은 **Single**로 설정됩니다. 이렇게 하면 사용자가 달력에서 단일 날짜를 선택할 수 있습니다. SelectionMode를 **None**으로 설정하여 날짜 선택을 사용하지 않도록 설정합니다. 
 
-SelectionMode를 **Multiple**으로 설정하여 여러 날짜를 선택할 수 있도록 합니다. 다음과 같이 [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?redirectedfrom=MSDN)/[DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset?redirectedfrom=MSDN) 개체를 [SelectedDates](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selecteddates) 컬렉션에 추가하여 프로그래밍 방식으로 여러 날짜를 선택할 수 있습니다.
+SelectionMode를 **Multiple**으로 설정하여 여러 날짜를 선택할 수 있도록 합니다. 다음과 같이 [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime)/[DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset) 개체를 [SelectedDates](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selecteddates) 컬렉션에 추가하여 프로그래밍 방식으로 여러 날짜를 선택할 수 있습니다.
 
 ```csharp
 calendarView1.SelectedDates.Add(DateTimeOffset.Now);
