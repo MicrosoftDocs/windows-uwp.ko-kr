@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 5c846d0e0110a1285e67f6f21e1eeb7a0d9c2624
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 6d45e70afa5b0dc6e903dbd253c09042bb2046c2
+ms.sourcegitcommit: f7ef7e894d7b7fc24483b4485605686abf8f2e93
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339284"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679207"
 ---
 # <a name="xaml-overview"></a>XAML 개요
 
@@ -144,10 +144,10 @@ XAML은 개체와 개체 속성에 대한 선언적 언어이지만, 이벤트 �
 다음은 간단한 예제입니다. @No__t-0 클래스는 <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click> 이라는 이벤트를 지원 합니다. 사용자의 **Button** 클릭 후에 호출되는 코드를 실행하는 **Click**에 대한 처리기를 작성할 수 있습니다. XAML에서 **Click**을 **Button**에 대한 특성으로 지정합니다. 특성 값으로 처리기의 메서드 이름인 문자열을 제공합니다.
 
 ```xml
-<Button Click="showUpdatesButton-Click">Show updates</Button>
+<Button Click="showUpdatesButton_Click">Show updates</Button>
 ```
 
-컴파일하면 이제 컴파일러가 이름이 `showUpdatesButton-Click`인 메서드가 코드 숨김 파일에 정의되어 있고 네임스페이스에서 XAML 페이지의 [x:Class](x-class-attribute.md) 값에 선언되어 있다고 예상합니다. 또한이 메서드는 <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click> 이벤트의 대리자 계약을 충족 해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+컴파일하면 이제 컴파일러가 이름이 `showUpdatesButton_Click`인 메서드가 코드 숨김 파일에 정의되어 있고 네임스페이스에서 XAML 페이지의 [x:Class](x-class-attribute.md) 값에 선언되어 있다고 예상합니다. 또한이 메서드는 <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click> 이벤트의 대리자 계약을 충족 해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```csharp
 namespace App1

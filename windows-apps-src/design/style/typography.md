@@ -7,10 +7,10 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1d162fcf9a0f1023c58792e8c9f7a0e22fac4440
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.sourcegitcommit: f7ef7e894d7b7fc24483b4485605686abf8f2e93
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/30/2019
 ms.locfileid: "68867750"
 ---
 # <a name="typography"></a>입력 체계
