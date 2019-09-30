@@ -68,6 +68,8 @@
       href: apps/accessibility.md
     - name: 기능 및 기술
       href: apps/features-and-technologies.md
+    - name: 최신 문서 업데이트
+      href: apps/whats-new/latest-doc-updates.md
 - name: Windows를 사용하여 빌드
   items:
     - name: Python을 사용하여 개발
