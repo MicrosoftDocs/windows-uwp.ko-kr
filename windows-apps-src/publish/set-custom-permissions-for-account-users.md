@@ -7,10 +7,10 @@ ms.topic: article
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: medium
 ms.openlocfilehash: ead8012c6d4b9243e70dcc09f7ef174a3d907356
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+ms.sourcegitcommit: 035b03f1247eae4e9359ee7db66429d4e1c1d09b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 09/30/2019
 ms.locfileid: "68349214"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
@@ -41,7 +41,7 @@ ms.locfileid: "68349214"
 > 계정 **소유자**는 Microsoft 계정에 처음으로 해당 계정을 만든 사용자입니다(Azure AD를 통해 추가된 사용자가 아님). 앱 삭제, 모든 계정 사용자 생성 및 편집, 모든 재무 및 계정 설정 변경 기능을 비롯하여 계정에 대한 전체 액세스 권한은 이 계정 소유자에게만 있습니다. 
 
 
-| Role                 | 설명              |
+| 역할                 | 설명              |
 |----------------------|--------------------------|
 | Manager              | 세금 및 지급액 설정 변경을 제외하고 계정에 대한 모든 권한이 있습니다. 파트너 센터에서 사용자를 관리 하는 작업이 포함 되지만, Azure AD 테 넌 트에서 사용자를 만들고 삭제 하는 기능은 Azure AD의 계정 권한에 따라 달라 집니다. 즉, 사용자에 게 관리자 역할이 할당 되어 있지만 조직의 Azure AD에서 전역 관리자 권한이 없는 경우, 사용자는 새 사용자를 만들거나 디렉터리에서 사용자를 삭제할 수 없습니다 (사용자의 파트너 센터 역할을 변경할 수 있지만). <p> 파트너 센터 계정이 둘 이상의 Azure AD 테 넌 트와 연결 된 경우 관리자는 사용자에 대 한 전체 세부 정보 (이름, 성, 암호 복구 전자 메일, Azure AD 전역 관리자 인지 여부 등)를 볼 수 없습니다. 해당 테 넌 트에 대 한 전역 관리자 권한이 있는 계정으로 해당 사용자와 동일한 테 넌 트에 로그인 합니다. 그러나 파트너 센터 계정과 연결 된 모든 테 넌 트에서 사용자를 추가 하 고 제거할 수 있습니다. |
 | Developer            | 패키지를 업로드하고 앱 및 추가 기능을 제출할 수 있으며 원격 분석 세부 사항에 대한 [사용 보고서](usage-report.md)를 볼 수 있습니다. [장치 간 환경](https://go.microsoft.com/fwlink/?linkid=874042) 기능에 액세스할 수 있습니다. 재무 정보 또는 계정 설정을 볼 수 없습니다.   |
@@ -95,7 +95,7 @@ ms.locfileid: "68349214"
     </colgroup>
     <thead>
     <tr class="header">
-    <th align="left">권한 이름</th>
+    <th align="left">사용 권한 이름</th>
     <th align="left">읽기 전용</th>
     <th align="left">읽기/쓰기</th>
     </tr>
@@ -157,7 +157,7 @@ ms.locfileid: "68349214"
 <table>
     <thead>
     <tr class="header">
-    <th align="left">권한&nbsp;이름</th>
+    <th align="left">사용 권한&nbsp;이름</th>
     <th align="left">읽기&nbsp;전용</th>
     <th align="left">읽기/쓰기</th>
     <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
@@ -178,7 +178,7 @@ ms.locfileid: "68349214"
 <table>
     <thead>
     <tr class="header">
-    <th align="left">권한&nbsp;이름</th>
+    <th align="left">사용 권한&nbsp;이름</th>
     <th align="left">읽기&nbsp;전용</th>
     <th align="left">읽기/쓰기</th>
     <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
@@ -199,7 +199,7 @@ ms.locfileid: "68349214"
 <table>
     <thead>
     <tr class="header">
-    <th align="left">권한&nbsp;이름</th>
+    <th align="left">사용 권한&nbsp;이름</th>
     <th align="left">읽기&nbsp;전용</th>
     <th align="left">읽기/쓰기</th>
     <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
@@ -227,7 +227,7 @@ ms.locfileid: "68349214"
 <table>
     <thead>
     <tr class="header">
-    <th align="left">권한&nbsp;이름</th>
+    <th align="left">사용 권한&nbsp;이름</th>
     <th align="left">읽기&nbsp;전용</th>
     <th align="left">읽기/쓰기</th>
     <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
@@ -239,7 +239,7 @@ ms.locfileid: "68349214"
     <tr><td align="left">    <b>파트너 서비스</b>&nbsp;*</td><td>    계정의 웹 서비스 페이지를 볼 수 있습니다.  </td><td>    계정의 웹 서비스 페이지를 보고 편집할 수 있습니다.      </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
     <tr><td align="left">    <b>Xbox 테스트 계정</b>&nbsp;*</td><td>    계정의 Xbox 테스트 계정 페이지를 볼 수 있습니다.  </td><td>    계정의 Xbox 테스트 계정 페이지를 보고 편집할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
     <tr><td align="left">    <b>샌드박스 당 Xbox 테스트 계정</b>&nbsp;*</td><td>    Xbox 테스트 계정 페이지에서 계정의 지정 된 샌드박스에 대해서만 볼 수 있습니다.  </td><td>    Xbox 테스트를 보고 편집할 수 있습니다.   <tr><td align="left">    <b>계정의 지정 된 샌드박스에 대 한 계정 페이지    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
-    <tr><td align="left">    <b>Xbox 장치</b>&nbsp;*</td><td>    계정의 Xbox one development 콘솔 페이지를 볼 수 있습니다.  </td><td>    계정의 Xbox one development 콘솔 페이지를 보고 편집할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
+    <tr><td align="left"><b>Xbox 장치</b>&nbsp; @ no__t-3</td><td>    계정의 Xbox one development 콘솔 페이지를 볼 수 있습니다.  </td><td>    계정의 Xbox one development 콘솔 페이지를 보고 편집할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
     <tr><td align="left">    <b>샌드박스 별 Xbox 장치</b>&nbsp;*</td><td>    Xbox one development 콘솔 페이지에서 지정 된 계정 샌드박스에 대해 볼 수 있습니다.  </td><td>    Xbox one development 콘솔 페이지를 보고 편집할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
     <tr><td align="left">    <b>앱 채널</b>&nbsp;*</td><td>    해당 사항 없음  </td><td>    OneGuide를 통해 볼 수 있도록 홍보 비디오 채널을 Xbox 콘솔에 게시할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
     <tr><td align="left">    <b>서비스 구성</b>&nbsp;*</td><td>    제품의 Xbox Live 서비스 구성 페이지를 볼 수 있습니다.  </td><td>    제품의 Xbox Live 서비스 구성 페이지를 보고 편집할 수 있습니다.    </td><td>    해당 사항 없음    </td><td>    해당 사항 없음                      </td></tr>
