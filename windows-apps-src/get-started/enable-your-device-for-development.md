@@ -6,12 +6,12 @@ keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 �
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 705ff7fab00d13123211feb747ea9a9f95b0cc43
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 1a4c1f90c0fa8304f95b1dc958fe5a75e74301dd
+ms.sourcegitcommit: 7791596c25baf9d222729e057ecdf81b45a59f0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867616"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71205937"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -47,7 +47,7 @@ ms.locfileid: "68867616"
 ## <a name="which-setting-should-i-choose-sideload-apps-or-developer-mode"></a>테스트용으로 앱 로드 또는 개발자 모드 중에서 어떤 설정을 선택해야 하나요?
 
 > [!NOTE]
-> Windows 참가자 빌드 18956부터 테스트용 로드 옵션이 제거되었으며, 개발자 모드는 이제 토글 방식으로 전환됩니다. 다음 섹션에서 테스트용 로드에 대한 자세한 내용을 참조하세요. 
+> Windows 참가자 빌드 18956부터 테스트용 로드 옵션이 제거되었으며, 개발자 모드는 이제 토글 방식으로 전환됩니다. 다음 섹션에서 테스트용 로드에 대한 자세한 내용을 참조하세요.
 
  장치를 개발 또는 단순히 테스트용 로드에 사용할 수 있습니다.
 
@@ -60,7 +60,7 @@ ms.locfileid: "68867616"
 ### <a name="sideload-apps"></a>앱 테스트용 로드
 
 > [!NOTE]
-> Windows 참가자 빌드 18956부터 테스트용 로드는 기본적으로 사용하도록 설정되어 있습니다. 이제 특별한 구성 없이 서명된 MSIX 패키지를 디바이스에 배포할 수 있습니다. 
+> Windows 참가자 빌드 18956부터 테스트용 로드는 기본적으로 사용하도록 설정되어 있습니다. 이제 특별한 구성 없이 서명된 MSIX 패키지를 디바이스에 배포할 수 있습니다.
 
 테스트용으로 앱 로드 설정은 일반적으로 Microsoft Store를 거치지 않고 관리 디바이스에 사용자 지정 앱을 설치해야 하는 회사나 학교에서 사용하거나 타사 소스에서 앱을 실행해야 하는 모든 사용자가 사용합니다. 이 경우 이전에 설정 페이지 이미지에 표시된 대로 조직에서 *UWP 앱* 설정을 사용하지 않는 정책을 적용하는 경우가 일반적입니다. 또한 조직에서는 필요한 인증서 및 테스트용 로드 앱의 설치 위치를 제공합니다. 자세한 내용은 TechNet 문서 [Windows 10에서 앱을 테스트용으로 로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) 및 [Microsoft Intune에서 앱 배포 시작](https://docs.microsoft.com/intune/deploy-use/add-apps)을 참조하세요.
 
@@ -100,7 +100,7 @@ ms.locfileid: "68867616"
 
 디바이스별 설치 지침은 다음을 참조하세요.
 - [데스크톱 디바이스 포털](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [HoloLens용 디바이스 포털](https://developer.microsoft.com/mixed-reality)
+- [HoloLens용 디바이스 포털](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal)
 - [IoT용 디바이스 포털](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [모바일용 디바이스 포털](../debug-test-perf/device-portal-mobile.md)
 - [Xbox용 디바이스 포털](../xbox-apps/device-portal-xbox.md)
@@ -207,26 +207,26 @@ Windows 10 Home을 설치한 경우가 아니라면 gpedit.msc를 사용하여 �
 1.  **regedit**를 실행합니다.
 2.  테스트용 로드를 사용하도록 설정하려면 이 DWORD 값을 1로 설정합니다.
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
+    -   `HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps`
 
     - 또는 -
 
     개발자 모드를 사용하도록 설정하려면 이 DWORD 값을 1로 설정합니다.
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
+    -   `HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense`
 
 **PowerShell을 사용하여 디바이스를 사용하도록 설정**
 
 1.  관리자 권한으로 PowerShell을 실행합니다.
 2.  테스트용 로드를 사용하도록 설정하려면 다음 명령을 실행합니다.
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"**
+    -   `PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"`
 
     - 또는 -
 
     개발자 모드를 사용하도록 설정하려면 다음 명령을 실행합니다.
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"**
+    -   `PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"`
 
 ## <a name="upgrade-your-device-from-windows-81-to-windows-10"></a>Windows 8.1에서 Windows 10으로 디바이스 업그레이드
 
@@ -235,7 +235,7 @@ Windows 8.1 장치에서 앱을 만들거나 테스트용으로 로드할 때는
 **개발자 라이선스를 등록 취소하려면**
 
 1.  관리자 권한으로 PowerShell을 실행합니다.
-2.  다음 명령을 실행합니다. **unregister-windowsdeveloperlicense**.
+2.  `unregister-windowsdeveloperlicense` 명령을 실행합니다.
 
 이후에도 이 디바이스에서 계속 개발하려면 이 항목에 설명된 대로 디바이스를 개발용으로 설정해야 합니다. 그러지 않으면 앱을 디버그하거나 앱의 패키지를 만들려고 할 때 오류가 발생할 수 있습니다. 다음은 이러한 오류의 예입니다.
 

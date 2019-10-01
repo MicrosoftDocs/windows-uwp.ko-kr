@@ -1,20 +1,24 @@
 ---
-description: C++/WinRT 2.0을 사용하면 구현 유형의 소멸을 지연하고 소멸 중 안전하게 쿼리할 수 있습니다. 해당 기능과 이러한 기능을 사용하는 경우에 대해 설명합니다.
-title: 소멸자에 대한 세부 정보
-ms.date: 07/19/2019
+description: C++/WinRT 2.0의 이러한 확장 지점을 사용하면 구현 형식의 소멸을 지연하고, 소멸 중에 안전하게 쿼리하고, 프로젝션 메서드에서 항목을 연결하거나 종료할 수 있습니다.
+title: 구현 형식에 대한 확장 지점
+ms.date: 09/26/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, 프로젝션, 지연된 소멸, 안전한 쿼리
 ms.localizationpriority: medium
-ms.openlocfilehash: 9806ea54665b24c246f2023714a14d94ec3bcc8e
-ms.sourcegitcommit: 02cc7aaa408efe280b089ff27484e8bc879adf23
+ms.openlocfilehash: 76068ffc655c20aa13b50cce9ac49af9afd50805
+ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387800"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71329562"
 ---
-# <a name="details-about-destructors"></a>소멸자에 대한 세부 정보
+# <a name="extension-points-for-your-implementation-types"></a>구현 형식에 대한 확장 지점
 
-C++/WinRT 2.0을 사용하면 구현 유형의 소멸을 지연하고 소멸 중 안전하게 쿼리할 수 있습니다. 해당 기능과 이러한 기능을 사용하는 경우에 대해 설명합니다.
+[winrt::implements](/uwp/cpp-ref-for-winrt/implements)는 사용자 고유의 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 구현(런타임 클래스 및 활성화 팩터리)에서 직접 또는 간접적으로 파생시키는 기본 구조체 템플릿입니다.
+
+이 항목에서는 C++/WinRT 2.0의 **winrt::implements** 확장 지점에 대해 설명합니다. 검사 가능한 개체의 기본 동작([IInspectable](/windows/win32/api/inspectable/nn-inspectable-iinspectable) 인터페이스의 의미에서 *검사 가능*)을 사용자 지정하기 위해 이러한 확장 지점을 구현 형식에 구현하도록 선택할 수 있습니다.
+
+이러한 확장 지점을 사용하면 구현 형식의 소멸을 지연시키고, 소멸 중에 안전하게 쿼리하며, 프로젝션된 메서드에서 진입을 연결하고 종료할 수 있습니다. 이 항목에서는 이러한 기능을 설명하고, 이를 사용하는 시기와 방법에 대해 자세히 설명합니다.
 
 ## <a name="deferred-destruction"></a>지연된 소멸
 
@@ -89,7 +93,11 @@ struct Sample : implements<Sample, IStringable>
 };
 ```
 
-이를 좀 더 결정적인 가비지 수집기라고 생각하세요. 더 실질적이고 강력하게 **final_release** 함수를 코루틴으로 변환하고, 필요에 따라 스레드를 일시 중단 및 전환할 수 있는 동시에 최종 소멸을 한 곳에서 처리할 수 있습니다.
+이를 좀 더 결정적인 가비지 수집기라고 생각하세요.
+
+일반적으로  **std::unique_ptr** 이 소멸되면 개체가 소멸되지만,  **std::unique_ptr::reset**을 호출하여 해당 소멸을 빠르게 처리할 수 있습니다. 또는  **std::unique_ptr** 을 어딘가에 저장하여 소멸을 연기할 수 있습니다.
+
+더 실질적이고 강력하게 **final_release** 함수를 코루틴으로 변환하고, 필요에 따라 스레드를 일시 중단 및 전환할 수 있는 동시에 최종 소멸을 한 곳에서 처리할 수 있습니다.
 
 ```cppwinrt
 struct Sample : implements<Sample, IStringable>
@@ -111,7 +119,7 @@ struct Sample : implements<Sample, IStringable>
 
 지연된 소멸이라는 개념을 기반으로 하는 것은 소멸 중에 인터페이스를 안전하게 쿼리하는 기능입니다.
 
-클래식 COM은 두 가지 핵심 개념을 기반으로 합니다. 첫 번째는 참조 수 계산이고, 두 번째는 인터페이스 쿼리입니다. **IUnknown** 인터페이스는 **AddRef** 및 **Release** 외에도 [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(refiid_void)를 제공합니다. 이 메서드는 XAML과 같은 특정 UI 프레임워크에서 구성 가능한 형식 시스템을 시뮬레이션할 때 XAML 계층 구조를 트래버스하는 데 많이 사용됩니다. 간단한 예제를 살펴보겠습니다.
+클래식 COM은 두 가지 핵심 개념을 기반으로 합니다. 첫 번째는 참조 수 계산이고, 두 번째는 인터페이스 쿼리입니다. **IUnknown** 인터페이스는 **AddRef** 및 **Release** 외에도 [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(refiid_void))를 제공합니다. 이 메서드는 XAML과 같은 특정 UI 프레임워크에서 구성 가능한 형식 시스템을 시뮬레이션할 때 XAML 계층 구조를 트래버스하는 데 많이 사용됩니다. 간단한 예제를 살펴보겠습니다.
 
 ```cppwinrt
 struct MainPage : PageT<MainPage>
@@ -172,3 +180,59 @@ struct MainPage : PageT<MainPage>
 소멸자 내에서 데이터 컨텍스트를 지웁니다. 알고 있듯이 이 컨텍스트에는 **FrameworkElement** 기본 클래스에 대한 쿼리가 필요합니다.
 
 이 모든 것은 C++/WinRT 2.0에서 제공하는 참조 수 디바운싱(또는 참조 수 안정화)으로 인해 가능합니다.
+
+## <a name="method-entry-and-exit-hooks"></a>메서드 진입 및 종료 후크
+
+일반적으로 사용되지 않는 확장 지점은  **abi_guard** 구조체와 **avi_enter**  및  **avi_exit** 함수입니다.
+
+구현 형식에서 **abi_enter** 함수를 정의하면 해당 함수는 프로젝션된 모든 인터페이스 메서드 중 하나에 진입할 때마다 해당 함수가 호출됩니다( [IInspectable](/windows/win32/api/inspectable/nn-inspectable-iinspectable)의 메서드는 계산하지 않음).
+
+마찬가지로 **abi_exit** 함수를 정의하면 이러한 모든 메서드에서 종료할 때 이 함수가 호출되지만, **avi_enter** 에서 예외를 throw하는 경우에는 호출되지 않습니다. 프로젝션된 인터페이스 메서드 자체에서 예외를 throw하는 경우에도 *호출됩니다*.
+
+예를 들어 개체가 사용할 수 없는 상태로 전환된 후(즉  **Shut­Down**  또는  **Disconnect**  메서드 호출 후)에 클라이언트에서 해당 개체를 사용하려고 하면 **abi_enter**를 사용하여 가상의 **invalid_state_error** 예외를 throw할 수 있습니다. 기본 컬렉션이 변경된 경우 C++/WinRT 반복기 클래스는 이 기능을 사용하여  **avi_enter** 함수에서 잘못된 상태 예외를 throw합니다.
+
+간단한 **abi_enter**  및  **avi_exit** 함수 이상에서는  **avi_guard**라는 중첩 형식을 정의할 수 있습니다. 이 경우 각각의 프로젝션된 인터페이스 메서드(비 **IInspectable**)에 진입할 때마다 개체에 대한 참조를 해당 생성자 매개 변수로 사용하여 **abi_guard** 인스턴스가 만들어집니다. 그런 다음, 해당 메서드를 종료할 때  **abi_guard** 가 소멸됩니다. **avi_guard** 형식에는 원하는 모든 추가 상태를 넣을 수 있습니다.
+
+사용자 고유의 **abi_guard**를 정의하지 않으면 생성 시 **avi_enter** 를 호출하고, 소멸 시  **abi_exit**를 호출하는 기본 가드가 있습니다.
+
+이러한 가드는 *프로젝션된 인터페이스를 통해* 메서드를 호출한 경우에만 사용됩니다. 구현 개체에서 메서드를 직접 호출하는 경우 이러한 호출은 가드 없이 구현으로 바로 이동합니다.
+
+코드 예제는 다음과 같습니다.
+
+```cppwinrt
+struct Sample : SampleT<Sample, IClosable>
+{
+    void abi_enter();
+    void abi_exit();
+
+    void Close();
+};
+
+void example1()
+{
+    auto sampleObj1{ winrt::make<Sample>() };
+    sampleObj1.Close(); // Calls abi_enter and abi_exit.
+}
+
+void example2()
+{
+    auto sampleObj2{ winrt::make_self<Sample>() };
+    sampleObj2->Close(); // Doesn't call abi_enter nor abi_exit.
+}
+
+// A guard is used only for the duration of the method call.
+// If the method is a coroutine, then the guard applies only until
+// the IAsyncXxx is returned; not until the coroutine completes.
+
+IAsyncAction CloseAsync()
+{
+    // Guard is active here.
+    DoWork();
+
+    // Guard becomes inactive once DoOtherWorkAsync
+    // returns an IAsyncAction.
+    co_await DoOtherWorkAsync();
+
+    // Guard is not active here.
+}
+```

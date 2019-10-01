@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: ae8aca92d7eb7bc93ba4be99449d5e813238d744
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: eba0e6312bc22153d8cb62eb97d32635184f0fdc
+ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393493"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71317118"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 사용하여 API 작성
 
@@ -430,7 +430,7 @@ MySpecializedToggleButtonAutomationPeer::MySpecializedToggleButtonAutomationPeer
 
 다음 표에서는 다른 컨텍스트에서 사용하는 데 필요한 최소 네임스페이스 자격을 보여 줍니다.
 
-|컨텍스트의 네임스페이스|프로젝션된 형식 지정|프로젝션된 형식 지정|
+|컨텍스트의 네임스페이스|프로젝션된 형식 지정|구현 형식 지정|
 |-|-|-|
 |**winrt::MyProject**|`MyRuntimeClass`|`implementation::MyRuntimeClass`|
 |**winrt::MyProject::implementation**|`MyProject::MyRuntimeClass`|`MyRuntimeClass`|
