@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: be6780851c05f59abc373318f0746c8e436b74ac
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 2f9a253d8470407141c9ae56367d123d638d12c6
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318412"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339829"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>이미지 또는 동영상에서 얼굴 감지
 
 
 
-\[일부 정보는 정식으로 발표 되기 전에 대폭 수정 될 수 있는 사전 릴리스된 제품과 관련이 있습니다. Microsoft는 명시적이 든 여기에 제공 된 정보에 따라 묵시적 보증도 하지 않습니다.\]
+@no__t-일부 정보는 상업적으로 출시 되기 전에 대폭 수정 될 수 있는 미리 릴리스된 제품과 관련이 있습니다. Microsoft에서는 여기에 제공 된 정보에 대해 어떠한 명시적 또는 묵시적 보증도 하지 않습니다. \]
 
 이 항목에서는 [**FaceDetector**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.FaceDetector)를 사용하여 이미지로 얼굴을 감지하는 방법을 보여 줍니다. [  **FaceTracker**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.FaceTracker)는 비디오 프레임의 시퀀스에서 시간에 따라 얼굴을 추적하도록 최적화되어 있습니다.
 
@@ -77,7 +77,7 @@ ms.locfileid: "67318412"
 
 [!code-cs[FaceTrackingUsing](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFaceTrackingUsing)]
 
-**FaceTracker** 개체에 대한 클래스 변수를 선언합니다. 이 예제에서는 [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer)를 사용하여 정의된 간격으로 얼굴 추적을 시작합니다. [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?redirectedfrom=MSDN) 은 얼굴 추적 작업이 한 번에 하나만 실행 중인지 확인하는 데 사용됩니다.
+**FaceTracker** 개체에 대한 클래스 변수를 선언합니다. 이 예제에서는 [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer)를 사용하여 정의된 간격으로 얼굴 추적을 시작합니다. [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim) 은 얼굴 추적 작업이 한 번에 하나만 실행 중인지 확인하는 데 사용됩니다.
 
 [!code-cs[ClassVariables3](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetClassVariables3)]
 
@@ -87,19 +87,19 @@ ms.locfileid: "67318412"
 
 **ProcessCurrentVideoFrame** 도우미는 타이머에 의해 비동기적으로 호출되므로 메서드는 먼저 세마포의 **Wait** 메서드를 호출하여 추적 작업이 진행 중인지 확인하고 그런 경우 메서드는 얼굴을 감지하지 않고 반환됩니다. 이 메서드의 끝 부분에 세마포의 **Release** 메서드가 호출되므로 이후 **ProcessCurrentVideoFrame**을 계속 호출할 수 있습니다.
 
-[**FaceTracker**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.FaceTracker) 클래스는 [**VideoFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.VideoFrame) 개체에서 작동합니다. **VideoFrame**을 가져올 수 있는 방법은 실행 중인 [MediaCapture](capture-photos-and-video-with-mediacapture.md) 개체에서 미리 보기 프레임을 캡처하거나 [**IBasicVideoEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicVideoEffect)의 [**ProcessFrame**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.processframe) 메서드를 구현하는 것을 비롯해 여러 가지가 있습니다. 이 예제에서는 비디오 프레임을 반환하는 정의되지 않은 도우미 메서드 **GetLatestFrame**을 이 작업에 대한 자리 표시자로 사용합니다. 실행 중인 미디어 캡처 디바이스의 미리 보기 스트림에서 비디오 프레임을 가져오는 방법에 대한 정보는 [미리 보기 프레임 가져오기](get-a-preview-frame.md)를 참조하세요.
+[  **FaceTracker**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.FaceTracker) 클래스는 [**VideoFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.VideoFrame) 개체에서 작동합니다. **VideoFrame**을 가져올 수 있는 방법은 실행 중인 [MediaCapture](capture-photos-and-video-with-mediacapture.md) 개체에서 미리 보기 프레임을 캡처하거나 [**IBasicVideoEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicVideoEffect)의 [**ProcessFrame**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.processframe) 메서드를 구현하는 것을 비롯해 여러 가지가 있습니다. 이 예제에서는 비디오 프레임을 반환하는 정의되지 않은 도우미 메서드 **GetLatestFrame**을 이 작업에 대한 자리 표시자로 사용합니다. 실행 중인 미디어 캡처 디바이스의 미리 보기 스트림에서 비디오 프레임을 가져오는 방법에 대한 정보는 [미리 보기 프레임 가져오기](get-a-preview-frame.md)를 참조하세요.
 
 **FaceDetector**와 마찬가지로 **FaceTracker**는 제한된 픽셀 형식 집합을 지원합니다. 이 예제에서는 제공된 프레임이 Nv12 형식이 아닌 경우 얼굴 감지를 중단합니다.
 
-[  **ProcessNextFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facetracker.processnextframeasync)을 호출하여 프레임에 있는 얼굴을 나타내는 [**DetectedFace**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.DetectedFace) 개체의 목록을 검색합니다. 얼굴 목록이 있으면 얼굴 감지를 위해 위에 설명된 동일한 방식으로 얼굴을 표시할 수 있습니다. 도우미 메서드를 추적 하는 얼굴 UI 스레드에서 호출 되지를 확인 해야 호출 내에서 UI 업데이트 확인 [ **CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)합니다.
+[  **ProcessNextFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facetracker.processnextframeasync)을 호출하여 프레임에 있는 얼굴을 나타내는 [**DetectedFace**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.DetectedFace) 개체의 목록을 검색합니다. 얼굴 목록이 있으면 얼굴 감지를 위해 위에 설명된 동일한 방식으로 얼굴을 표시할 수 있습니다. 얼굴 추적 도우미 메서드는 UI 스레드에서 호출 되지 않으므로 [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)호출 내에서 ui 업데이트를 수행 해야 합니다.
 
 [!code-cs[ProcessCurrentVideoFrame](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetProcessCurrentVideoFrame)]
 
 ## <a name="related-topics"></a>관련 항목
 
 * [미디어 캡처에 대 한 장면 분석](scene-analysis-for-media-capture.md)
-* [기본 얼굴 감지 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
+* [Basic 얼굴 감지 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
 * [기본 얼굴 추적 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
 * [카메라](camera.md)
-* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture를 사용 하는 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [미디어 재생](media-playback.md)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fba78a619f18d7da2e190758d73ac7a56b12fb9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1f35cbab511912bd9cf6616330f3e9e7737189fd
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360663"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339745"
 ---
 # <a name="display-the-camera-preview"></a>카메라 미리 보기 표시
 
@@ -40,7 +40,7 @@ ms.locfileid: "66360663"
 
 ## <a name="use-mediacapture-to-start-the-preview-stream"></a>MediaCapture를 사용하여 미리 보기 스트림 시작
 
-[  **MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) 개체는 디바이스의 카메라에 대한 앱 인터페이스입니다. 이 클래스는 Windows.Media.Capture 네임스페이스의 멤버입니다. 이 문서의 예제에서는 기본 프로젝트 템플릿에 포함된 API뿐만 아니라 [**Windows.ApplicationModel**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel) 및 [System.Threading.Tasks](https://docs.microsoft.com/dotnet/api/system.threading.tasks?redirectedfrom=MSDN)의 API도 사용합니다.
+[  **MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) 개체는 디바이스의 카메라에 대한 앱 인터페이스입니다. 이 클래스는 Windows.Media.Capture 네임스페이스의 멤버입니다. 이 문서의 예제에서는 기본 프로젝트 템플릿에 포함된 API뿐만 아니라 [**Windows.ApplicationModel**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel) 및 [System.Threading.Tasks](https://docs.microsoft.com/dotnet/api/system.threading.tasks)의 API도 사용합니다.
 
 using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페이스를 포함합니다.
 
@@ -79,7 +79,7 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 -   **CaptureElement**의 [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.captureelement.source) 속성을 null로 설정합니다. 이 호출이 UI 스레드에서 실행되도록 하려면 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)를 사용합니다.
 -   **MediaCapture** 개체의 [**Dispose**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.dispose) 메서드를 호출하여 해당 개체를 해제합니다. 다시, 이 호출이 UI 스레드에서 실행되도록 하려면 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)를 사용합니다.
 -   **MediaCapture** 멤버 변수를 null로 설정합니다.
--   비활성 상태일 때 화면이 꺼지도록 하려면 [**RequestRelease**](https://docs.microsoft.com/uwp/api/windows.system.display.displayrequest.requestrelease)를 호출합니다. 
+-   비활성 상태일 때 화면이 꺼지도록 하려면 [**RequestRelease**](https://docs.microsoft.com/uwp/api/windows.system.display.displayrequest.requestrelease)를 호출합니다.
 
 [!code-cs[CleanupCameraAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetCleanupCameraAsync)]
 
@@ -99,5 +99,5 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [미리 보기 프레임을 가져오기](get-a-preview-frame.md)
+* [MediaCapture를 사용 하는 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [미리 보기 프레임 가져오기](get-a-preview-frame.md)

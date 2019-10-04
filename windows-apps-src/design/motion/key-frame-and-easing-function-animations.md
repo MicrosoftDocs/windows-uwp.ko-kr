@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ea6ec3b879ebfe997e565488828ee9942d4ecb13
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8c8e870680805a223ca948aab11113ceaeca4e61
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366117"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340356"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>키 프레임 애니메이션 및 감속/가속 함수 애니메이션
 
@@ -25,7 +25,7 @@ ms.locfileid: "66366117"
 
 ## <a name="animating-using-key-frame-animations"></a>키 프레임 애니메이션 사용
 
-키 프레임 애니메이션은 애니메이션 타임라인을 따라 특정 지점에서 도달하는 둘 이상의 대상 값을 허용합니다. 즉, 각 키 프레임에서 다른 중간 값을 지정할 수 있으며 마지막에 도달한 키 프레임이 최종 애니메이션 값입니다. 애니메이션 효과를 주는 여러 값을 지정함으로써 더 복잡한 애니메이션을 만들 수 있습니다. 또한 키 프레임 애니메이션은 다른 보간 논리를 사용하며 각각은 애니메이션 형식에 따라 다른 **KeyFrame** 하위 클래스로 구현됩니다. 특히 각 키 프레임 애니메이션 형식에는 해당 키 프레임을 지정하는 **KeyFrame** 클래스의 **Discrete**, **Linear**, **Spline** 및 **Easing** 변형이 있습니다. 예를 들어 [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN)을 대상으로 하고 키 프레임을 사용하는 애니메이션을 지정하려면 [**DiscreteDoubleKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DiscreteDoubleKeyFrame), [**LinearDoubleKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.LinearDoubleKeyFrame), [**SplineDoubleKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame) 및 [**EasingDoubleKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame)으로 키 프레임을 선언할 수 있습니다. 단일 **KeyFrames** 컬렉션 내에서 이러한 형식의 일부 및 전체를 사용하여 새 키 프레임에 도달할 때마다 보간을 변경할 수 있습니다.
+키 프레임 애니메이션은 애니메이션 타임라인을 따라 특정 지점에서 도달하는 둘 이상의 대상 값을 허용합니다. 즉, 각 키 프레임에서 다른 중간 값을 지정할 수 있으며 마지막에 도달한 키 프레임이 최종 애니메이션 값입니다. 애니메이션 효과를 주는 여러 값을 지정함으로써 더 복잡한 애니메이션을 만들 수 있습니다. 또한 키 프레임 애니메이션은 다른 보간 논리를 사용하며 각각은 애니메이션 형식에 따라 다른 **KeyFrame** 하위 클래스로 구현됩니다. 특히 각 키 프레임 애니메이션 형식에는 해당 키 프레임을 지정하는 **KeyFrame** 클래스의 **Discrete**, **Linear**, **Spline** 및 **Easing** 변형이 있습니다. 예를 들어 [**Double**](https://docs.microsoft.com/dotnet/api/system.double)을 대상으로 하고 키 프레임을 사용하는 애니메이션을 지정하려면 [**DiscreteDoubleKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DiscreteDoubleKeyFrame), [**LinearDoubleKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.LinearDoubleKeyFrame), [**SplineDoubleKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame) 및 [**EasingDoubleKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame)으로 키 프레임을 선언할 수 있습니다. 단일 **KeyFrames** 컬렉션 내에서 이러한 형식의 일부 및 전체를 사용하여 새 키 프레임에 도달할 때마다 보간을 변경할 수 있습니다.
 
 보간 동작의 경우 각 키 프레임은 **KeyTime** 시간에 도달할 때까지 보간을 제어합니다. 해당 시간에 해당 **Value**에도 도달합니다. 키 프레임이 더 있을 경우 해당 값은 시퀀스에서 다음 키 프레임에 대한 시작 값이 됩니다.
 
@@ -35,14 +35,14 @@ ms.locfileid: "66366117"
 
 [  **Duration**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.duration) 외에 모든 [**Timeline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Timeline) 기반 속성을 키 프레임 애니메이션에서 설정할 수 있으며, 키 프레임 애니메이션 클래스도 **Timeline**에서 파생되므로 **From**/**To**/**By** 애니메이션에서도 설정할 수 있습니다. 이러한 항목은 다음과 같습니다.
 
--   [**AutoReverse**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.autoreverse): 끝에서 프레임을 역순으로 반복 되 고 마지막 키 프레임에 도달 합니다. 그러면 애니메이션 기간이 명확히 두 배가 됩니다.
--   [**BeginTime**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.begintime): 애니메이션의 시작을 연기 합니다. 프레임의 **KeyTime** 값에 대한 타임라인이 **BeginTime**에 도달한 다음에야 카운팅을 시작하므로 프레임이 잘릴 위험이 없습니다.
--   [**FillBehavior**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.fillbehavior): 마지막 키 프레임에 도달한 경우 어떻게 되는지 제어 합니다. **FillBehavior**는 중간 키 프레임에 영향을 주지 않습니다.
+-   [**System.windows.media.animation.timeline.autoreverse**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.autoreverse): 마지막 키 프레임에 도달 하면 프레임은 끝부터 반대 순서로 반복 됩니다. 그러면 애니메이션 기간이 명확히 두 배가 됩니다.
+-   [**Begintime**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.begintime): 애니메이션의 시작을 지연 시킵니다. 프레임의 **KeyTime** 값에 대한 타임라인이 **BeginTime**에 도달한 다음에야 카운팅을 시작하므로 프레임이 잘릴 위험이 없습니다.
+-   [**Fillbehavior**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.fillbehavior): 마지막 키 프레임에 도달할 때 발생 하는 작업을 제어 합니다. **FillBehavior**는 중간 키 프레임에 영향을 주지 않습니다.
 -   [**RepeatBehavior**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
     -   **Forever**로 설정하면 키 프레임과 타임라인이 무한 반복됩니다.
     -   반복 횟수로 설정하면 타임라인이 해당 횟수만큼 반복됩니다.
     -   [  **Duration**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Duration)으로 설정하면 해당 시간에 도달할 때까지 타임라인이 반복됩니다. 따라서 타임라인의 암시적 기간 중 정수 요소가 아니면 키 프레임 시퀀스 중간에 애니메이션이 잘릴 수 있습니다.
--   [**SpeedRatio** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.speedratioproperty) (주로 사용 됨)
+-   [**System.windows.media.animation.timeline.speedratio**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.speedratioproperty) (일반적으로 사용 되지 않음)
 
 ### <a name="linear-key-frames"></a>선형 키 프레임
 
@@ -71,13 +71,13 @@ ms.locfileid: "66366117"
 불연속 키 프레임에서는 보간을 전혀 사용하지 않습니다. **KeyTime**에 도달하면 새 **Value**가 단순히 적용됩니다. 애니메이션 효과를 줄 UI 속성에 따라 "이동"하는 것처럼 보이는 애니메이션이 생성되는 경우가 종종 있습니다. 이 동작은 사용자가 실제로 원하는 미적 동작인지 확인해야 합니다. 선언하는 키 프레임 수를 늘려 명확한 이동을 최소화할 수 있지만 매끄러운 애니메이션이 목표인 경우 선형 또는 스플라인 키 프레임을 대신 사용하는 것이 더 좋을 수 있습니다.
 
 > [!NOTE]
-> 불연속 키 프레임은 [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN), [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 및 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 형식이 아닌 값에 [**DiscreteObjectKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame)으로 애니메이션 효과를 주는 유일한 방법입니다. 이 항목의 뒷부분에서 이 방법에 대해 좀 더 자세히 설명합니다.
+> 불연속 키 프레임은 [**Double**](https://docs.microsoft.com/dotnet/api/system.double), [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 및 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 형식이 아닌 값에 [**DiscreteObjectKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame)으로 애니메이션 효과를 주는 유일한 방법입니다. 이 항목의 뒷부분에서 이 방법에 대해 좀 더 자세히 설명합니다.
 
 ### <a name="spline-key-frames"></a>스플라인 키 프레임
 
-스플라인 키 프레임은 **KeySpline** 속성의 값에 따라 값 사이의 가변 전환을 만듭니다. 이 속성은 베지어 곡선의 첫 번째 및 두 번째 제어 지점을 지정하며, 이는 애니메이션의 가속을 나타냅니다. 기본적으로 [**KeySpline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.KeySpline)은 함수-시간 그래프가 해당 베지어 곡선의 모양이 되는 시간에 따른 함수 관계를 정의합니다. 일반적으로 **KeySpline** 값은 네 개의 [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) 값이 공백 또는 쉼표로 구분되는 XAML 속기 특성 문자열에 지정합니다. 이러한 값은 베지어 곡선의 두 제어점에 대한 "X,Y" 쌍입니다. "X"는 시간이고 "Y"는 값에 대한 함수 한정자입니다. 각 값은 항상 0에서 1(포함) 사이여야 합니다. **KeySpline**에 대한 제어점을 수정하지 않으면 0,0부터 1,1까지의 직선은 선형 보간의 시간에 따른 함수 표현입니다. 제어점은 해당 곡선의 모양을 변경하여 스플라인 애니메이션의 시간에 따른 함수 동작을 변경합니다. 이 동작은 그래프로 시각적으로 표시하는 것이 가장 좋을 수 있습니다. 브라우저에서 [Silverlight 키 스플라인 시각화 도우미 샘플](https://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample)을 실행하여 제어점이 곡선을 수정하는 방법 및 해당 곡선을 **KeySpline** 값으로 사용할 때 샘플 애니메이션이 실행되는 방법을 확인할 수 있습니다.
+스플라인 키 프레임은 **KeySpline** 속성의 값에 따라 값 사이의 가변 전환을 만듭니다. 이 속성은 베지어 곡선의 첫 번째 및 두 번째 제어 지점을 지정하며, 이는 애니메이션의 가속을 나타냅니다. 기본적으로 [**KeySpline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.KeySpline)은 함수-시간 그래프가 해당 베지어 곡선의 모양이 되는 시간에 따른 함수 관계를 정의합니다. 일반적으로 **KeySpline** 값은 네 개의 [**Double**](https://docs.microsoft.com/dotnet/api/system.double) 값이 공백 또는 쉼표로 구분되는 XAML 속기 특성 문자열에 지정합니다. 이러한 값은 베지어 곡선의 두 제어점에 대한 "X,Y" 쌍입니다. "X"는 시간이고 "Y"는 값에 대한 함수 한정자입니다. 각 값은 항상 0에서 1(포함) 사이여야 합니다. **KeySpline**에 대한 제어점을 수정하지 않으면 0,0부터 1,1까지의 직선은 선형 보간의 시간에 따른 함수 표현입니다. 제어점은 해당 곡선의 모양을 변경하여 스플라인 애니메이션의 시간에 따른 함수 동작을 변경합니다. 이 동작은 그래프로 시각적으로 표시하는 것이 가장 좋을 수 있습니다. 브라우저에서 [Silverlight 키 스플라인 시각화 도우미 샘플](https://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample)을 실행하여 제어점이 곡선을 수정하는 방법 및 해당 곡선을 **KeySpline** 값으로 사용할 때 샘플 애니메이션이 실행되는 방법을 확인할 수 있습니다.
 
-다음 예제에서는 애니메이션에 적용된 세 가지 다른 키 프레임을 보여 주며, 마지막 키 프레임은 [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) 값([**SplineDoubleKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame))에 대한 키 스플라인 애니메이션이 됩니다. **KeySpline**에 대해 적용된 "0.6,0.0 0.9,0.00" 문자열을 확인하세요. 이 예제에서는 애니메이션이 처음에는 느리게 실행되는 것처럼 보이지만 **KeyTime**에 도달하기 바로 전에는 해당 값에 빠르게 도달하는 곡선이 생성됩니다.
+다음 예제에서는 애니메이션에 적용된 세 가지 다른 키 프레임을 보여 주며, 마지막 키 프레임은 [**Double**](https://docs.microsoft.com/dotnet/api/system.double) 값([**SplineDoubleKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame))에 대한 키 스플라인 애니메이션이 됩니다. **KeySpline**에 대해 적용된 "0.6,0.0 0.9,0.00" 문자열을 확인하세요. 이 예제에서는 애니메이션이 처음에는 느리게 실행되는 것처럼 보이지만 **KeyTime**에 도달하기 바로 전에는 해당 값에 빠르게 도달하는 곡선이 생성됩니다.
 
 ```xml
 <Storyboard x:Name="myStoryboard">
@@ -154,17 +154,17 @@ ms.locfileid: "66366117"
 
 다음은 감속/가속 함수의 목록입니다.
 
--   [**BackEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.BackEase): 표시 된 경로로 애니메이션을 시작 하기 전에 애니메이션의 이동을 약간 취소 합니다.
--   [**BounceEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.BounceEase): 바운스 효과 만듭니다.
--   [**CircleEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.CircleEase): 애니메이션 가속 또는 감속 순환 함수를 사용 하 여 만듭니다.
--   [**CubicEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.CubicEase): 애니메이션 가속 또는 감속 수식 f(t)를 사용 하 여을 만듭니다 t3 =.
--   [**ElasticEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ElasticEase): 완전히 정지할 때까지 앞뒤로 진동 하는 스프링과 유사한 애니메이션을 만듭니다.
--   [**ExponentialEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ExponentialEase): 애니메이션 가속 또는 감속는 지 수 공식을 사용 하 여 만듭니다.
--   [**PowerEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PowerEase): 애니메이션 가속 또는 감속 수식 f(t)를 사용 하 여을 만듭니다 여기서 p는 같음 tp = 합니다 [ **전원** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.powerease.power) 속성입니다.
--   [**QuadraticEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.QuadraticEase): 애니메이션 가속 또는 감속 수식 f(t)를 사용 하 여을 만듭니다 t2 =.
--   [**QuarticEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.QuarticEase): 애니메이션 가속 또는 감속 수식 f(t)를 사용 하 여을 만듭니다 t4 =.
--   [**QuinticEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.QuinticEase): 애니메이션 가속 또는 감속 수식 f(t)를 사용 하 여을 t5 =.
--   [**SineEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.SineEase): 가속 또는 감속 사인 수식을 사용 하는 애니메이션을 만듭니다.
+-   [**BackEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.BackEase): 지정 된 경로에서 애니메이션 효과를 시작 하기 전에 애니메이션의 동작을 약간 취소 합니다.
+-   [**BounceEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.BounceEase): 바운스 효과를 만듭니다.
+-   [**CircleEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.CircleEase): 순환 함수를 사용 하 여 가속 하거나 감속 하는 애니메이션을 만듭니다.
+-   [**CubicEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.CubicEase): F (t) = t3 수식을 사용 하 여 가속 하거나 감속 하는 애니메이션을 만듭니다.
+-   [**ElasticEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ElasticEase): Rest로 전환 될 때까지 앞뒤로 진동 하는 스프링과 유사한 애니메이션을 만듭니다.
+-   [**ExponentialEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ExponentialEase): 지 수 수식을 사용 하 여 가속 하거나 감속 하는 애니메이션을 만듭니다.
+-   [**Powerease**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PowerEase): F (t) = tp 수식을 사용 하 여 가속 또는 감속 되는 애니메이션을 만듭니다. 여기서 p는 [**Power**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.powerease.power) 속성과 같습니다.
+-   [**QuadraticEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.QuadraticEase): 수식 f (t) = t2를 사용 하 여 가속 또는 감속 하는 애니메이션을 만듭니다.
+-   [**QuarticEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.QuarticEase): F (t) = t4 수식을 사용 하 여 가속 또는 감속 하는 애니메이션을 만듭니다.
+-   빠른 [**속도**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.QuinticEase): F (t) = t5 수식을 사용 하 여 가속 또는 감속 하는 애니메이션을 만듭니다.
+-   [**Sineease**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.SineEase): 사인 수식을 사용 하 여 가속 하거나 감속 하는 애니메이션을 만듭니다.
 
 일부 감속/가속 함수에는 고유한 속성이 있습니다. 예를 들어 [**BounceEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.BounceEase)에는 특정 **BounceEase**의 시간에 따른 함수 동작을 수정하는 두 가지 [**Bounces**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.bounceease.bounces) 및 [**Bounciness**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.bounceease.bounciness) 속성이 있습니다. [  **CubicEase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.CubicEase)와 같은 다른 감속/가속 함수에는 모든 감속/가속 함수가 공유하는 [**EasingMode**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.easingfunctionbase.easingmode) 속성 외에 다른 속성이 없으며 항상 동일한 시간에 따른 함수 동작을 생성합니다.
 
@@ -194,13 +194,13 @@ ms.locfileid: "66366117"
 
 감속/가속 함수가 **From**/**To**/**By** 애니메이션에 적용되면 애니메이션의 [**Duration에 따라**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.duration)**From**과 **To** 값 사이에서 값이 보간되는 방법의 시간에 따른 함수 특성을 변경합니다. 감속/가속 함수를 사용하지 않으면 선형 보간이 됩니다.
 
-## <a name="span-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspandiscrete-object-value-animations"></a><span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>개별적인 개체 값 애니메이션
+## <a name="span-iddiscrete_object_value_animationsspanspan-iddiscrete_object_value_animationsspanspan-iddiscrete_object_value_animationsspandiscrete-object-value-animations"></a><span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>불연속 개체 값 애니메이션
 
-한 가지 애니메이션 형식은 애니메이션 효과를 준 값을 [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN), [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 또는 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 형식이 아닌 속성에 적용할 수 있는 유일한 방법이므로 특별히 검토할 가치가 있습니다. 이는 키 프레임 애니메이션 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames)입니다. [  **Object**](https://docs.microsoft.com/dotnet/api/system.object?redirectedfrom=MSDN) 값을 사용하여 애니메이션 효과를 주는 작업은 프레임 사이에서 값을 보간할 수 없기 때문에 어렵습니다. 프레임의 [**KeyTime**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.objectkeyframe.keytime)에 도달하면 애니메이션 효과를 준 값이 키 프레임의 **Value**에서 지정한 값으로 바로 설정됩니다. 하나의 키 프레임의 사용 방법이 없는 보간에 있기 때문에 합니다 **ObjectAnimationUsingKeyFrames** 키 프레임 컬렉션: [**DiscreteObjectKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame).
+한 가지 애니메이션 형식은 애니메이션 효과를 준 값을 [**Double**](https://docs.microsoft.com/dotnet/api/system.double), [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 또는 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 형식이 아닌 속성에 적용할 수 있는 유일한 방법이므로 특별히 검토할 가치가 있습니다. 이는 키 프레임 애니메이션 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames)입니다. [  **Object**](https://docs.microsoft.com/dotnet/api/system.object) 값을 사용하여 애니메이션 효과를 주는 작업은 프레임 사이에서 값을 보간할 수 없기 때문에 어렵습니다. 프레임의 [**KeyTime**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.objectkeyframe.keytime)에 도달하면 애니메이션 효과를 준 값이 키 프레임의 **Value**에서 지정한 값으로 바로 설정됩니다. 보간이 없기 때문에 **ObjectAnimationUsingKeyFrames** 키 프레임 컬렉션에서 사용 하는 키 프레임은 하나 뿐입니다. [**DiscreteObjectKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame).
 
 설정하려는 개체 값이 특성 구문에서 **Value**를 채우는 문자열로 나타낼 수 없는 경우가 자주 있기 때문에 [**DiscreteObjectKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame)의 [**Value**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.objectkeyframe.value)는 종종 속성 요소 구문을 사용하여 설정됩니다. [StaticResource](https://docs.microsoft.com/windows/uwp/xaml-platform/staticresource-markup-extension)와 같은 참조를 사용하는 경우 특성 구문을 계속 사용할 수 있습니다.
 
-기본 템플릿에서 사용된 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames)를 확인할 수 있는 한 위치는 템플릿 속성이 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 리소스를 참조하는 경우입니다. 이러한 리소스는 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 값이 아닌 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 개체이며 시스템 테마 ([**ThemeDictionaries**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries))로 정의되는 리소스를 사용합니다. 이러한 리소스는 [**TextBlock.Foreground**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.foreground)와 같은 **Brush** 형식 값에 직접 할당할 수 있으며 간접 대상을 사용할 필요가 없습니다. 그러나 **SolidColorBrush**는 [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN), [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 또는 **Color**가 아니므로 **ObjectAnimationUsingKeyFrames**를 사용하여 리소스를 사용해야 합니다.
+기본 템플릿에서 사용된 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames)를 확인할 수 있는 한 위치는 템플릿 속성이 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 리소스를 참조하는 경우입니다. 이러한 리소스는 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 값이 아닌 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 개체이며 시스템 테마 ([**ThemeDictionaries**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries))로 정의되는 리소스를 사용합니다. 이러한 리소스는 [**TextBlock.Foreground**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.foreground)와 같은 **Brush** 형식 값에 직접 할당할 수 있으며 간접 대상을 사용할 필요가 없습니다. 그러나 **SolidColorBrush**는 [**Double**](https://docs.microsoft.com/dotnet/api/system.double), [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) 또는 **Color**가 아니므로 **ObjectAnimationUsingKeyFrames**를 사용하여 리소스를 사용해야 합니다.
 
 ```xml
 <Style x:Key="TextButtonStyle" TargetType="Button">
@@ -271,5 +271,5 @@ ms.locfileid: "66366117"
 
 * [속성 경로 구문](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax)
 * [종속성 속성 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/dependency-properties-overview)
-* [**스토리 보드**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)
-* [**Storyboard.TargetProperty**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)
+* [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)
+* [**System.windows.media.animation.storyboard.targetproperty**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)

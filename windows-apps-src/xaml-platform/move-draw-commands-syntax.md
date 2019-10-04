@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 40b959feed09546791840dafe15ab98d65f0ea09
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a54f87de49e9d43bfa423b0c01b086de1f89426f
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371151"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340487"
 ---
 # <a name="move-and-draw-commands-syntax"></a>이동 및 그리기 명령 구문
 
@@ -22,18 +22,18 @@ ms.locfileid: "66371151"
 
 이동 및 그리기 명령 구문은 명령을 구문 분석하고 런타임 그래픽 표현을 생성하는 XAML용 내부 유형 컨버터에서 지원됩니다. 이 표현은 기본적으로 즉시 표현 가능한 완료된 벡터 집합입니다. 벡터 자체는 표현 세부 사항을 완성하지 않으며, 요소에 대해 다른 값을 설정해야 합니다. [  **Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체의 경우 [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill), [**Stroke**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.stroke) 및 다른 속성의 값도 필요하며 그런 다음에는 **Path**를 시각적 트리에 연결해야 합니다. [  **PathIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PathIcon) 개체의 경우 [**Foreground**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.iconelement.foreground) 속성을 설정합니다.
 
-그리기 명령을 이동을 나타내는 문자열을 사용 하 여 Windows 런타임에서 가지 두 속성이 있습니다. [**Path.Data** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data) 하 고 [ **PathIcon.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon.data)합니다. 이동 및 그리기 명령을 지정하여 이 속성 중 하나를 설정하는 경우 일반적으로 해당 요소의 다른 필수 특성과 함께 속성을 XAML 특성 값으로 설정하게 됩니다. 대략적인 모양은 다음과 같습니다.
+Windows 런타임에는 이동 및 그리기 명령을 나타내는 문자열을 사용할 수 있는 두 가지 속성이 있습니다. [**Path. data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data) 및 [**Pathicon. data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon.data). 이동 및 그리기 명령을 지정하여 이 속성 중 하나를 설정하는 경우 일반적으로 해당 요소의 다른 필수 특성과 함께 속성을 XAML 특성 값으로 설정하게 됩니다. 대략적인 모양은 다음과 같습니다.
 
 ```xml
 <Path x:Name="Arrow" Fill="White" Height="11" Width="9.67"
   Data="M4.12,0 L9.67,5.47 L4.12,10.94 L0,10.88 L5.56,5.47 L0,0.06" />
 ```
 
-[**PathGeometry.Figures** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathgeometry.figures) 이동을 사용 및 그리기 명령을 수도 있습니다. 이동 및 그리기 명령을 사용하는 [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 개체를 [**Path.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data) 값으로 사용하게 될 [**GeometryGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.GeometryGroup) 개체의 다른 [**Geometry**](/uwp/api/Windows.UI.Xaml.Media.Geometry) 유형과 결합할 수도 있습니다. 하지만 이것은 특성 정의 데이터에 대해 이동 및 그리기 명령을 사용하는 것만큼 일반적이지는 않습니다.
+[**Pathgeometry. 그림**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathgeometry.figures) 은 이동 및 그리기 명령을 사용할 수도 있습니다. 이동 및 그리기 명령을 사용하는 [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 개체를 [**Path.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data) 값으로 사용하게 될 [**GeometryGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.GeometryGroup) 개체의 다른 [**Geometry**](/uwp/api/Windows.UI.Xaml.Media.Geometry) 유형과 결합할 수도 있습니다. 하지만 이것은 특성 정의 데이터에 대해 이동 및 그리기 명령을 사용하는 것만큼 일반적이지는 않습니다.
 
 ## <a name="using-move-and-draw-commands-versus-using-a-pathgeometry"></a>이동 및 그리기 명령 사용과 **PathGeometry** 사용 비교
 
-Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathgeometry.figures) 속성 값이 있는 단일 [**PathFigure**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathFigure) 개체를 사용하여 [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry)를 생성합니다. 각각의 그리기 명령은 이 단일 **PathFigure**의 [**Segments**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.segments) 컬렉션에서[**PathSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathSegment) 파생 클래스를 생성하고, 이동 명령은 [**StartPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.startpoint)를 변경하며, 닫기 명령의 존재는 [**IsClosed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.isclosed)를 **true**로 설정합니다. 런타임에 **Data** 값을 검사하는 경우 이 구조를 개체 모델로 탐색할 수 있습니다.
+Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathgeometry.figures) 속성 값이 있는 단일 [**PathFigure**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathFigure) 개체를 사용하여 [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry)를 생성합니다. 각각의 그리기 명령은 이 단일 **PathFigure**의 [**Segments**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.segments) 컬렉션에서 [**PathSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathSegment) 파생 클래스를 생성하고, 이동 명령은 [**StartPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.startpoint)를 변경하며, 닫기 명령의 존재는 [**IsClosed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.isclosed)를 **true**로 설정합니다. 런타임에 **Data** 값을 검사하는 경우 이 구조를 개체 모델로 탐색할 수 있습니다.
 
 ## <a name="the-basic-syntax"></a>기본 구문
 
@@ -51,9 +51,9 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 -   닫기 명령을 제외한 각 명령 뒤에는 일반적으로 하나 이상의 숫자가 나옵니다.
 -   명령에 대해 숫자가 여러 개인 경우 쉼표나 공백을 사용하여 구분합니다.
 
-**\[** _fillRule_ **\]** _moveCommand_ _drawCommand_ **\[** _drawCommand_ **\*\]** **\[** _closeCommand_ **\]**
+**@no__t**_fillrule_ **\]** _moveCommand_ _drawcommand_ **\[** _drawcommand_ **\[1 @ no__t-12** **4**_closeCommand_**7**
 
-다수의 그리기 명령은 점을 사용하며, 이 점에서 _x,y_ 값을 제공합니다. 표시는 \* _지점_ 자리 표시자를 가정할 수 있습니다에 대 한 두 개의 10 진수 값을 제공 하는 합니다 _x, y_ 요소의 값입니다.
+다수의 그리기 명령은 점을 사용하며, 이 점에서 _x,y_ 값을 제공합니다. @No__t-0_포인트_ 자리 표시 자가 표시 될 때마다 점의 _x, y_ 값에 대해 두 개의 10 진수 값을 제공 하는 것으로 간주할 수 있습니다.
 
 결과가 모호하지 않다면 공백을 종종 생략할 수 있습니다. 모든 숫자 집합(포인트 및 크기)에 대한 구분 기호로 쉼표를 사용하는 경우 실제로 모든 공백을 생략해도 됩니다. 예를 들어 다음과 같이 사용해도 유효합니다. `F1M0,58L2,56L6,60L13,51L15,53L6,64z`. 하지만 명료하게 하기 위해 명령 사이에 공백을 포함하는 것이 보다 일반적입니다.
 
@@ -61,25 +61,25 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 ## <a name="syntax-specifics"></a>구문 세부 정보
 
-**규칙 입력**
+**규칙 채우기**
 
-선택적 채우기 규칙에 대 한 가능한 값을 두 가지가 있습니다. **F0** 나 **F1**합니다. (합니다 **F** 는 항상 대문자입니다.) **F0** 기본값이; 생성 **EvenOdd** 일반적으로 지정 하지 않을 수 있으므로 동작을 입력 합니다. **Nonzero** 채우기 동작을 얻으려면 **F1**을 사용하세요. 이러한 채우기 값은 [**FillRule**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.FillRule) 열거형의 값과 정렬됩니다.
+선택적 채우기 규칙에는 다음과 같은 두 가지 값을 사용할 수 있습니다. **F0** 또는 **F1**. **F** 는 항상 대문자입니다. 기본값은 **F0** 입니다. **EvenOdd** 채우기 동작을 생성 하므로 일반적으로 지정 하지 않습니다. **Nonzero** 채우기 동작을 얻으려면 **F1**을 사용하세요. 이러한 채우기 값은 [**FillRule**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.FillRule) 열거형의 값과 정렬됩니다.
 
-**이동 명령**
+**명령 이동**
 
 새 그림의 시작점을 지정합니다.
 
 | 구문 |
 |--------|
-| `M ` _startPoint_ <br/>-또는-<br/>`m` _startPoint_|
+| @no__t _0 개_ 시작점 <br/>-또는-<br/>@no__t _0 개_ 시작점|
 
 | 용어 | 설명 |
 |------|-------------|
-| _startPoint_ | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/>새 그림의 시작점입니다.|
+| _점을_ | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/>새 그림의 시작점입니다.|
 
 대문자 **M**은 *startPoint*가 절대 좌표임을 나타내고, 소문자 **m**은 *startPoint*가 이전 점의 오프셋이거나 이전 점이 없는 경우 (0,0)임을 나타냅니다.
 
-**참고**  여러 지점을 이동 명령 뒤에 지정할 수 있습니다. 선 명령을 지정한 경우처럼 해당 점으로 선이 그려집니다. 하지만 이는 권장 스타일이 아니므로, 대신 전용 선 명령을 사용하세요.
+**@No__t-** 1it's move 명령 다음에 여러 점을 지정 하는 데 적합 합니다. 선 명령을 지정한 경우처럼 해당 점으로 선이 그려집니다. 하지만 이는 권장 스타일이 아니므로, 대신 전용 선 명령을 사용하세요.
 
 **그리기 명령**
 
@@ -89,21 +89,21 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 세그먼트의 제어점은 이전 세그먼트의 끝점에 대해 상대적입니다. 동일한 유형의 여러 명령을 순차적으로 입력할 때 중복된 명령 항목을 생략해도 됩니다. 예를 들어 `L 100,200 300,400`은 `L 100,200 L 300,400`와 같습니다.
 
-**선 명령**
+**줄 명령**
 
-현재 점과 지정된 끝점 사이에 직선을 만듭니다. `l 20 30` 및 `L 20,30` 은 유효한 줄 명령의 예입니다. [  **LineGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.LineGeometry) 개체에 상응하는 항목을 정의합니다.
+현재 점과 지정된 끝점 사이에 직선을 만듭니다. `l 20 30` 및 `L 20,30`은 올바른 줄 명령의 예입니다. [  **LineGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.LineGeometry) 개체에 상응하는 항목을 정의합니다.
 
 | 구문 |
 |--------|
-| `L` _endPoint_ <br/>-또는-<br/>`l` _endPoint_ |
+| `L` _끝점_ <br/>-또는-<br/>`l` _끝점_ |
 
 | 용어 | 설명 |
 |------|-------------|
-| endPoint | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/>선의 끝점입니다.|
+| endPoint | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/>선의 끝점입니다.|
 
-**수평선 명령**
+**가로선 명령**
 
-현재 점과 지정된 x 좌표 사이에 가로선을 만듭니다. `H 90` 유효한 수평선 명령의 예입니다.
+현재 점과 지정된 x 좌표 사이에 가로선을 만듭니다. `H 90`은 유효한 가로선 명령의 예입니다.
 
 | 구문 |
 |--------|
@@ -111,11 +111,11 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 용어 | 설명 |
 |------|-------------|
-| x | [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) <br/> 선 끝점의 x 좌표입니다. |
+| x | [**차례로**](https://docs.microsoft.com/dotnet/api/system.double) <br/> 선 끝점의 x 좌표입니다. |
 
-**수직선 명령**
+**세로줄 명령**
 
-현재 점과 지정된 y 좌표 사이에 세로선을 만듭니다. `v 90` 유효한 수직선 명령의 예입니다.
+현재 점과 지정된 y 좌표 사이에 세로선을 만듭니다. `v 90`은 올바른 세로줄 명령의 예입니다.
 
 | 구문 |
 |--------|
@@ -123,11 +123,11 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 용어 | 설명 |
 |------|-------------|
-| *y* | [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) <br/> 선 끝점의 y 좌표입니다. |
+| *y* | [**차례로**](https://docs.microsoft.com/dotnet/api/system.double) <br/> 선 끝점의 y 좌표입니다. |
 
 **입방 형 3 차원 곡선 명령**
 
-두 개의 지정된 제어점(*controlPoint1* 및 *controlPoint2*)을 사용하여 현재 점과 지정된 끝점 사이에 입방형 3차원 곡선을 만듭니다. `C 100,200 200,400 300,200` 유효한 곡선 명령의 예입니다. [  **BezierSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.BezierSegment) 개체가 있는 [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 개체에 상응하는 항목을 정의합니다.
+두 개의 지정된 제어점(*controlPoint1* 및 *controlPoint2*)을 사용하여 현재 점과 지정된 끝점 사이에 입방형 3차원 곡선을 만듭니다. `C 100,200 200,400 300,200`은 올바른 곡선 명령의 예입니다. [  **BezierSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.BezierSegment) 개체가 있는 [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 개체에 상응하는 항목을 정의합니다.
 
 | 구문 |
 |--------|
@@ -135,64 +135,64 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 용어 | 설명 |
 |------|-------------|
-| *controlPoint1* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 곡선의 첫 번째 제어점으로, 곡선의 시작 접선을 결정합니다. |
-| *controlPoint2* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 곡선의 두 번째 제어점으로, 곡선의 끝 접선을 결정합니다. |
-| *endPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 곡선을 그릴 지점입니다. | 
+| *controlPoint1* | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 곡선의 첫 번째 제어점으로, 곡선의 시작 접선을 결정합니다. |
+| *controlPoint2* | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 곡선의 두 번째 제어점으로, 곡선의 끝 접선을 결정합니다. |
+| *끝점만* | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 곡선을 그릴 지점입니다. | 
 
-**정방형 베 지 어 곡선 명령**
+**정방형 3 차원 곡선 명령**
 
-지정된 제어점(*controlPoint*)을 사용하여 현재 점과 지정된 끝점 사이에 정방형 3차원 곡선을 만듭니다. `q 100,200 300,200` 유효한 정방형 베 지 어 곡선 명령 예입니다. [  **QuadraticBezierSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.QuadraticBezierSegment)가 있는 [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry)에 상응하는 항목을 정의합니다.
+지정된 제어점(*controlPoint*)을 사용하여 현재 점과 지정된 끝점 사이에 정방형 3차원 곡선을 만듭니다. `q 100,200 300,200`은 유효한 정방형 3 차원 곡선 명령의 예입니다. [  **QuadraticBezierSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.QuadraticBezierSegment)가 있는 [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry)에 상응하는 항목을 정의합니다.
 
 | 구문 |
 |--------|
-| `Q ` *controlPoint endPoint* <br/> -또는- <br/> `q ` *controlPoint endPoint* |
+| `Q ` *ControlPoint 끝점* <br/> -또는- <br/> `q ` *ControlPoint 끝점* |
 
 | 용어 | 설명 |
 |------|-------------|
-| *controlPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 곡선의 제어점으로, 곡선의 시작 접선과 끝 접선을 결정합니다. |
-| *endPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> 곡선을 그릴 지점입니다. |
+| *controlPoint* | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 곡선의 제어점으로, 곡선의 시작 접선과 끝 접선을 결정합니다. |
+| *끝점만* | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> 곡선을 그릴 지점입니다. |
 
-**부드러운 입방 형 3 차원 큐빅 곡선 명령**
+**부드러운 입방 형 3 차원 곡선 명령**
 
 현재 점과 지정된 끝점 사이에 입방형 3차원 곡선을 만듭니다. 첫 번째 제어점은 현재 점에 대해 상대적인 이전 명령의 두 번째 제어점의 반사로 간주됩니다. 이전 명령이 없는 경우 또는 이전 명령이 입방형 3차원 곡선 명령이나 부드러운 입방형 3차원 곡선 명령이 아닌 경우에는 첫 번째 제어점이 현재 점과 일치한다고 가정합니다. 두 번째 제어점, 즉 곡선 끝에 대한 제어점은 *controlPoint2*에 의해 지정됩니다. 예를 들어 `S 100,200 200,300`은 유효한 부드러운 입방형 3차원 곡선 명령입니다. 이 명령은 이전 곡선 세그먼트가 있던 [**BezierSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.BezierSegment)가 있는 [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry)에 상응하는 항목을 정의합니다.
 
 | 구문 |
 |--------|
-| `S` *controlPoint2* *endPoint* <br/> -또는- <br/>`s` *controlPoint2 endPoint* |
+| `S` *controlPoint2* *끝점* <br/> -또는- <br/>`s` *ControlPoint2 끝점* |
 
 | 용어 | 설명 |
 |------|-------------|
-| *controlPoint2* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 곡선의 제어점으로, 곡선의 끝 접선을 결정합니다. |
-| *endPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> 곡선을 그릴 지점입니다. |
+| *controlPoint2* | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 곡선의 제어점으로, 곡선의 끝 접선을 결정합니다. |
+| *끝점만* | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> 곡선을 그릴 지점입니다. |
 
-**부드러운 정방형 베 지 어 곡선 명령**
+**부드러운 정방형 3 차원 곡선 명령**
 
 현재 점과 지정된 끝점 사이에 정방형 3차원 곡선을 만듭니다. 제어점은 현재 점에 대해 상대적인 이전 명령의 제어점의 반사로 간주됩니다. 이전 명령이 없는 경우 또는 이전 명령이 정방형 3차원 곡선 명령이나 부드러운 정방형 3차원 곡선 명령이 아닌 경우에는 제어점이 현재 점과 일치합니다. 이 명령은 이전 곡선 세그먼트가 있던 [**QuadraticBezierSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.QuadraticBezierSegment)가 있는 [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry)에 상응하는 항목을 정의합니다.
 
 | 구문 |
 |--------|
-| `T` *controlPoint* *endPoint* <br/> -또는- <br/> `t` *controlPoint* *endPoint* |
+| `T` *controlPoint* *끝점* <br/> -또는- <br/> `t` *controlPoint* *끝점* |
 
 | 용어 | 설명 |
 |------|-------------|
-| *controlPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> 곡선의 제어점으로, 곡선의 시작 및 끝 접선을 결정합니다. |
-| *endPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> 곡선을 그릴 지점입니다. |
+| *controlPoint* | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> 곡선의 제어점으로, 곡선의 시작 및 끝 접선을 결정합니다. |
+| *끝점만* | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)<br/> 곡선을 그릴 지점입니다. |
 
-**타원형 호 명령**
+**타원형 원호 명령**
 
 현재 점과 지정된 끝점 사이에 타원형 호를 만듭니다. [  **ArcSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ArcSegment)가 있는 [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry)에 상응하는 항목을 정의합니다.
 
 | 구문 |
 |--------|
-| `A ` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> -또는- <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
+| `A ` *크기* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> -또는- <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
 
 | 용어 | 설명 |
 |------|-------------|
-| *size* | [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size)<br/>호의 x 반경 및 y 반경입니다. |
-| *rotationAngle* | [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) <br/> 타원의 회전(도 단위)입니다. |
+| *size* | [**크기가**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size)<br/>호의 x 반경 및 y 반경입니다. |
+| *rotationAngle* | [**차례로**](https://docs.microsoft.com/dotnet/api/system.double) <br/> 타원의 회전(도 단위)입니다. |
 | *isLargeArcFlag* | 호의 각도가 180도 이상이어야 하는 경우 1로 설정하고, 그렇지 않으면 0으로 설정합니다. |
 | *sweepDirectionFlag* | 호가 양수 각도 방향으로 그려지는 경우 1로 설정하고, 그렇지 않으면 0으로 설정합니다. |
-| *endPoint* | [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 호를 그리는 점입니다.|
+| *끝점만* | [**까지**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) <br/> 호를 그리는 점입니다.|
  
 **닫기 명령**
 
@@ -202,7 +202,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 |--------|
 | `Z` <br/> -또는- <br/> `z ` |
 
-**점 구문**
+**Point 구문**
 
 점의 x 좌표 및 y 좌표를 설명합니다. [  **Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point)를 참조하세요.
 
@@ -212,31 +212,31 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 용어 | 설명 |
 |------|-------------|
-| *x* | [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) <br/> 점의 x 좌표입니다. |
-| *y* | [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) <br/> 점의 y 좌표입니다. |
+| *x* | [**차례로**](https://docs.microsoft.com/dotnet/api/system.double) <br/> 점의 x 좌표입니다. |
+| *y* | [**차례로**](https://docs.microsoft.com/dotnet/api/system.double) <br/> 점의 y 좌표입니다. |
 
-**추가 정보**
+**추가 참고 사항**
 
 표준 숫자 값 대신 다음과 같은 특수 값을 사용할 수도 있습니다. 이러한 값은 대/소문자를 구분합니다.
 
--   **무한대**: 나타냅니다 **PositiveInfinity**합니다.
--   **\-무한대**: 나타냅니다 **NegativeInfinity**합니다.
--   **NaN**: 나타냅니다 **NaN**합니다.
+-   **Infinity**: **PositiveInfinity**를 나타냅니다.
+-   **\-Infinity**: **NegativeInfinity**를 나타냅니다.
+-   **NaN**: **NaN**을 나타냅니다.
 
 10진수나 정수를 사용하는 대신 과학적 표기법을 사용할 수 있습니다. 예를 들어 `+1.e17`은 유효한 값입니다.
 
 ## <a name="design-tools-that-produce-move-and-draw-commands"></a>이동 및 그리기 명령을 생성하는 디자인 도구
 
-사용 하 여는 **펜** 도구 및 Blend for Microsoft Visual Studio 2015에서에서 다른 그리기 도구는 일반적으로 생성 한 [ **경로** ](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체를 이동 및 그리기 명령을 합니다.
+Blend의 **펜** 도구와 기타 그리기 도구를 Microsoft Visual Studio 2015에 사용 하면 일반적으로 이동 및 그리기 명령을 사용 하 여 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체를 생성 합니다.
 
 컨트롤에 대한 Windows 런타임 XAML 기본 템플릿에 정의된 일부 컨트롤 파트에 기존 이동 및 그리기 명령 데이터가 있을 수 있습니다. 예를 들어 일부 컨트롤은 이동 및 그리기 명령으로 정의된 데이터가 포함된 [**PathIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PathIcon)을 사용합니다.
 
-XAML 형식으로 벡터를 출력할 수 있으며 일반적으로 사용되는 다른 벡터 그래픽 디자인 도구에 사용할 수 있는 내보내기 또는 플러그 인이 있습니다. 이 내보내기 또는 플러그 인은 [**Path.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data)에 대한 이동 및 그리기 명령과 함께 레이아웃 컨테이너에서 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체를 만듭니다. 다양한 브러시를 적용할 수 있도록 XAML에서 여러 **Path** 요소가 있을 수 있습니다. Windows Presentation Foundation (WPF) XAML 또는 Silverlight에 대 한 원래 작성 된 대부분의 이러한 내보내기 도구 또는 플러그 인과 이지만 XAML 구문이 Windows 런타임 XAML을 사용 하 여 동일 합니다. 일반적으로 내보내기에서 가져온 XAML의 청크를 사용하여 Windows 런타임 XAML 페이지에 직접 붙여 넣을 수 있습니다. 하지만 변환된 XAML의 일부인 경우 **RadialGradientBrush**를 사용할 수 없습니다. Windows 런타임 XAML에서 해당 브러시가 지원되지 않기 때문입니다.
+XAML 형식으로 벡터를 출력할 수 있으며 일반적으로 사용되는 다른 벡터 그래픽 디자인 도구에 사용할 수 있는 내보내기 또는 플러그 인이 있습니다. 이 내보내기 또는 플러그 인은 [**Path.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data)에 대한 이동 및 그리기 명령과 함께 레이아웃 컨테이너에서 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체를 만듭니다. 다양한 브러시를 적용할 수 있도록 XAML에서 여러 **Path** 요소가 있을 수 있습니다. 이러한 많은 내보내기 또는 플러그 인은 원래 Windows Presentation Foundation (WPF) XAML 또는 Silverlight에 대해 작성 되었지만 XAML 경로 구문은 Windows 런타임 XAML과 동일 합니다. 일반적으로 내보내기에서 가져온 XAML의 청크를 사용하여 Windows 런타임 XAML 페이지에 직접 붙여 넣을 수 있습니다. 하지만 변환된 XAML의 일부인 경우 **RadialGradientBrush**를 사용할 수 없습니다. Windows 런타임 XAML에서 해당 브러시가 지원되지 않기 때문입니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [도형 그리기](https://docs.microsoft.com/windows/uwp/graphics/drawing-shapes)
-* [브러시를 사용 합니다.](https://docs.microsoft.com/windows/uwp/graphics/using-brushes)
-* [**Path.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data)
+* [브러시 사용](https://docs.microsoft.com/windows/uwp/graphics/using-brushes)
+* [**경로 데이터**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data)
 * [**PathIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PathIcon)
 

@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 6c1f45b4bd3da74ea150c05800eba7ec10568894
-ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
+ms.openlocfilehash: cdcef66dc1f0026ff369eeb3f3c7881385d6e5ba
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69643402"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339297"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-c-win32-app"></a>C++ Win32 앱에서 UWP XAML 호스팅 API 사용
 
@@ -146,7 +146,7 @@ XAML 호스팅 API를 사용 하 여 UWP 컨트롤을 호스트 하는 기본 �
 
     1. **Desktopwindowxamlsource** 개체를 만들고 **IDesktopWindowXamlSourceNative** 또는 **IDesktopWindowXamlSourceNative2** COM 인터페이스로 캐스팅 합니다.
         > [!NOTE]
-        > 이러한 인터페이스는 Windows SDK의 **windows.** x. x. x x x. x x x. h 헤더 파일에 선언 됩니다. 기본적으로이 파일은% programfiles (x86)% \ Windows Kits\10\Include\\< 빌드 번호\>\um.에 있습니다.
+        > 이러한 인터페이스는 Windows SDK의 **windows.** x. x. x x x. x x x. h 헤더 파일에 선언 됩니다. 기본적으로이 파일은% programfiles (x86)% \ Windows Kits\10\Include @ no__t-0 < 빌드 번호 @ no__t-1\um.에 있습니다.
 
     2. **IDesktopWindowXamlSourceNative** 또는 **IDesktopWindowXamlSourceNative2** 인터페이스의 **AttachToWindow** 메서드를 호출 하 고 응용 프로그램에서 부모 UI 요소의 창 핸들을 전달 합니다.
 
@@ -395,9 +395,9 @@ C++ Win32 응용 프로그램에 대 한 전체 예제는 [사용자 지정 컨�
 
   * **C++ Win32:** : 앱은 기본 메시지 루프에서 직접 **PreTranslateMessage** 를 호출할 수 있습니다. 예제를 보려면 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/tree/master/1903_Samples/CppWinRT_Win32_App)에서 [xamlbridge .cpp](https://github.com/marb2000/XamlIslands/blob/master/1903_Samples/CppWinRT_Win32_App/SampleCppApp/XamlBridge.cpp#L6) 파일을 참조 하세요.
 
-  * **WPF** 앱은 [Componentdispatcher. ThreadFilterMessage](https://docs.microsoft.com/dotnet/api/system.windows.interop.componentdispatcher.threadfiltermessage?view=netframework-4.7.2) 이벤트에 대 한 이벤트 처리기에서 **PreTranslateMessage** 를 호출할 수 있습니다. 예를 들어 Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs#L177) 파일을 참조 하세요.
+  * **WPF** 앱은 [Componentdispatcher. ThreadFilterMessage](https://docs.microsoft.com/dotnet/api/system.windows.interop.componentdispatcher.threadfiltermessage) 이벤트에 대 한 이벤트 처리기에서 **PreTranslateMessage** 를 호출할 수 있습니다. 예를 들어 Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs#L177) 파일을 참조 하세요.
 
-  * **Windows Forms:** 앱은 **PreTranslateMessage** 를 호출할 수 있습니다 [. preprocessmessage](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.control.preprocessmessage?view=netframework-4.7.2) 메서드. 예를 들어 Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.KeyboardFocus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.KeyboardFocus.cs#L100) 파일을 참조 하세요.
+  * **Windows Forms:** 앱은 **PreTranslateMessage** 를 호출할 수 있습니다 [. preprocessmessage](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.control.preprocessmessage) 메서드. 예를 들어 Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.KeyboardFocus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.KeyboardFocus.cs#L100) 파일을 참조 하세요.
 
 ### <a name="keyboard-focus-navigation"></a>키보드 포커스 탐색
 

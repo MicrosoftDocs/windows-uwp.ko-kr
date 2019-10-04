@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f87ecf0c3c90976295d85c1a995f1de091491974
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e0f6ef206dc836e48bfc904767ff8c8c7bdca9db
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359181"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340048"
 ---
 # <a name="adaptive-streaming-with-playready"></a>PlayReady를 사용한 적응 스트리밍
 
@@ -274,7 +274,7 @@ async void LicenseAcquisitionRequest(
 
 ## <a name="initializing-the-adaptivemediasource"></a>AdaptiveMediaSource 초기화
 
-마지막으로, 지정된 [Uri](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) 및 [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)에서 만든 [AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource)를 초기화하는 함수가 필요합니다. **Uri**는 미디어 파일(HLS 또는 DASH)에 대한 링크여야 하며 **MediaElement**는 XAML에 정의되어야 합니다.
+마지막으로, 지정된 [Uri](https://docs.microsoft.com/dotnet/api/system.uri) 및 [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)에서 만든 [AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource)를 초기화하는 함수가 필요합니다. **Uri**는 미디어 파일(HLS 또는 DASH)에 대한 링크여야 하며 **MediaElement**는 XAML에 정의되어야 합니다.
 
 ```csharp
 async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
