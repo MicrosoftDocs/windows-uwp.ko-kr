@@ -5,14 +5,17 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 67a96b8423d589036ef1c6896f056d097282dc33
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: f54cb261f6ef94545d656d5bd4f624622cc6dfff
+ms.sourcegitcommit: dafda665fd3d25136194e452e7500b5bab076638
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820221"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71982227"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>응용 프로그램에 내 피플 지원 추가
+
+> [!Note]
+> Windows 10에서 2019 업데이트 (버전 1903)를 기준으로 새 Windows 10 설치에는 기본적으로 ' 작업 표시줄의 사람 '이 더 이상 표시 되지 않습니다. 고객은 작업 표시줄을 마우스 오른쪽 단추로 클릭 하 고 "작업 표시줄에 사람 표시"를 눌러 기능을 사용 하도록 설정할 수 있습니다. 개발자는 내 사용자 지원을 응용 프로그램에 추가 하지 않는 것이 좋습니다. windows 10 용 응용 프로그램을 최적화 하는 방법에 대 한 자세한 내용은 [Windows 개발자 블로그](https://blogs.windows.com/windowsdeveloper/) 를 참조 하세요.
 
 사용자는 내 피플 기능을 사용하여 응용 프로그램에서 바로 작업 표시줄에 연락처를 고정할 수 있으며, 이렇게 하면 사용자가 여러 가지 방법으로 상호 작용할 수 있는 새 연락처 개체가 생성됩니다. 이 문서에서는 사용자가 앱에서 바로 연락처를 고정할 수 있도록 이 기능에 대한 지원을 추가하는 방법을 보여 줍니다. 연락처가 고정되면 [내 피플 공유](my-people-sharing.md) 및 [알림](my-people-notifications.md) 같은 새로운 유형의 사용자 상호 작용을 사용할 수 있게 됩니다.
 
@@ -27,7 +30,7 @@ ms.locfileid: "67820221"
 
 응용 프로그램에서 내 피플 기능을 사용할 수 있게 하려면 세 가지를 수행해야 합니다.
 
-1. [응용 프로그램 매니페스트에 shareTarget 활성화 계약에 대 한 지원을 선언 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+1. [응용 프로그램 매니페스트에서 Windows.sharetarget 활성화 계약에 대 한 지원을 선언 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
 2. [사용자가 앱을 사용 하 여 공유할 수 있는 연락처에 주석을 추가 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3.  동시에 실행되는 여러 응용 프로그램 인스턴스를 지원합니다. 사용자가 연락처 패널에서 응용 프로그램을 사용하는 동안 응용 프로그램의 전체 버전과 상호 작용할 수 있어야 합니다.  사용자가 동시에 여러 연락처 패널에서 응용 프로그램을 사용할 수도 있습니다.  이 상황을 지원하려면 응용 프로그램이 여러 보기를 동시에 실행할 수 있어야 합니다. 자세한 방법은 ["앱에 대한 여러 보기 표시"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views)를 참조하세요.
 
@@ -250,9 +253,9 @@ async Task PinMultipleContacts(Contact[] contacts)
 
 ## <a name="see-also"></a>참조
 + [내 피플 공유](my-people-sharing.md)
-+ [내 사용자 알림](my-people-notifications.md)
-+ [Channel 9 비디오 내 사용자 지원 응용 프로그램에 추가 하는 방법](https://channel9.msdn.com/Events/Build/2017/P4056)
-+ [사용자 통합 샘플](https://aka.ms/mypeoplebuild2017)
++ [내 사람들 알림](my-people-notifications.md)
++ [응용 프로그램에 사용자 지원을 추가 하는 Channel 9 비디오](https://channel9.msdn.com/Events/Build/2017/P4056)
++ [내 피플 통합 샘플](https://aka.ms/mypeoplebuild2017)
 + [연락처 카드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
-+ [PinnedContactManager 클래스 설명서](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
++ [Pinnee지도 관리자 클래스 설명서](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
 + [연락처 카드의 작업에 앱 연결](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

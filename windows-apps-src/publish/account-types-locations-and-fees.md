@@ -6,19 +6,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
 ms.localizationpriority: medium
-ms.openlocfilehash: 92f657386c3a5d1ca6815b9b0a9e56b4d6f2578b
-ms.sourcegitcommit: 35a511c2b29ae3d5008612a5fc13d3eb6370d2d0
+ms.openlocfilehash: b8a02079e7589d7c92ececa03496600a82ef427e
+ms.sourcegitcommit: dafda665fd3d25136194e452e7500b5bab076638
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67495741"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71982237"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 
-Windows 프로그래밍 [파트너 센터](https://partner.microsoft.com/dashboard) 개별 제공 및 회사 계정에 여러 [국가 및 지역](#developer-account-and-app-submission-markets)합니다. 두 가지 형식의 계정에 액세스할 수를 스토어에 앱을 게시 하는 데 추가 Microsoft 프로그램에 참여 합니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 의 Windows 프로그램은 여러 [국가 및 지역](#developer-account-and-app-submission-markets)에서 개인 계정과 회사 계정을 모두 제공 합니다. 두 가지 유형의 계정 모두 스토어에 앱을 게시 하 고 추가 Microsoft 프로그램에 참여할 수 있는 액세스 권한을 제공 합니다.
 
 > [!NOTE]
-> 개발자 계정 열기 때에 로그인 되어 있는지 확인 [파트너 센터](https://partner.microsoft.com/dashboard) 개발자 계정에 대해 사용 하려는 Microsoft 계정을 사용 하 여 합니다. 선택에 따라 나중에 [계정에 사용자를 추가](manage-account-users.md) 할 수 있습니다.
+> 개발자 계정을 열 때 개발자 계정에 사용 하려는 Microsoft 계정를 사용 하 여 [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 해야 합니다. 선택에 따라 나중에 [계정에 사용자를 추가](manage-account-users.md) 할 수 있습니다.
 
 [등록 프로세스를 시작](https://go.microsoft.com/fwlink/p/?LinkId=615100)할 때는 개인 계정을 만들지 또는 회사 계정을 만들지 여부를 선택해야 합니다. 두 유형의 계정 모두 앱, 게임, 추가 기능 및 서비스를 제출하는 데 사용할 수 있습니다.
 
@@ -33,30 +33,19 @@ Windows 프로그래밍 [파트너 센터](https://partner.microsoft.com/dashboa
 |--------------------|-----------------|
 | <ul><li>약 $19 USD가 듭니다(일회성 등록 회비로서 정확한 금액은 국가 또는 지역에 따라 달라짐).</li><li>더 짧은 계정 확인 프로세스</li></ul> | <ul><li>약 $99 USD가 듭니다(일회성 등록 회비로서 정확한 금액은 국가 또는 지역에 따라 달라짐).</li><li>더 나은 계정 확인이 필요</li><li>회사가 위치하는 국가 또는 지역에서 회사로 인식되어야 함</li><li>제한된 기능으로 앱을 제출할 수 있음([Microsoft Store 정책](store-policies.md#1014-account-type)에 설명된 대로)</li></ul> |
 
-회사 계정은 비용이 약간 더 드는데 대부분 계정을 설정할 때 회사를 대표할 수 있는 권한을 부여하기 위한 추가 단계를 수행하기 때문입니다. 당 합니다 [스토어 정책을](store-policies.md#1014-account-type), 재무 액세스 하는 등의 특정 기능을 사용 하 여 앱에 계정 정보 또는 (안전한 전용된 타사를 사용 하지 않고 기본 기능에 액세스 하는 인증을 요구 하는 인증 공급자의 경우)은 회사 계정에만 게시할 수 있습니다.
+회사 계정은 비용이 약간 더 드는데 대부분 계정을 설정할 때 회사를 대표할 수 있는 권한을 부여하기 위한 추가 단계를 수행하기 때문입니다. [매장 정책](store-policies.md#1014-account-type)에 따라 재무 계정 정보에 액세스 하거나 보안 전용 타사 인증 공급자를 사용 하지 않고 기본 기능에 액세스 하기 위해 인증이 필요한 특정 기능의 앱입니다. 회사 계정 으로만 게시할 수 있습니다.
 
 ## <a name="account-verification"></a>계정 확인
 
-등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 검증 파트너 Dun & Bradstreet가 사용자가 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지 확인합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 모든 연락처 정보가 최신 정보인지 확인해야 합니다. 확인은 할 수 있습니다를 기다리는 동안 될 때까지 회사 계정에서 앱을 제출할 수 없습니다 [응용 프로그램 이름을 예약할](create-your-app-by-reserving-a-name.md) 계속 빌드하고 앱을 테스트 하 고 작업에서 제출한 사항을 준비 합니다.
+등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 검증 파트너 Dun & Bradstreet가 사용자가 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지 확인합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 모든 연락처 정보가 최신 정보인지 확인해야 합니다. 확인 되기 전 까지는 회사 계정에서 앱을 제출할 수 없지만, 대기 하는 동안 [앱 이름을 예약](create-your-app-by-reserving-a-name.md) 하 고 앱을 계속 빌드하고 테스트할 수 있으며, 제출 준비가 완료 될 수 있습니다.
 
 **계정 설정** 페이지에서 확인 상태를 점검할 수 있습니다. 
-
 
 ## <a name="developer-account-and-app-submission-markets"></a>개발자 계정 및 앱 제출 국가/지역
 
 아래에 나열된 국가나 지역에 거주하거나 비즈니스를 운영하는 경우 개발자 계정을 등록하고 앱을 제출할 수 있습니다.
 
 다음 표에서 **등록 회비**는 개발자 계정을 등록하는 데 필요한 현재 가격입니다. 이 비용은 일회성 등록비이고 갱신 요금이 없습니다. 아래 가격은 변경될 수 있습니다.
-
-> [!NOTE]
-> 등록 시 등록 회비에 관련 세금과 수수료가 추가됩니다. 또한 지급 시 은행에서 지급 수신 수수료를 부과할 수도 있습니다.
-
-**지급액** 열에서는 앱으로 번 돈을 [지급 받는](getting-paid-apps.md) 방법에 대해 설명합니다. 이 돈을 보관할 [지급 계좌](setting-up-your-payout-account-and-tax-forms.md)를 선택할 수 있습니다.
-
-> [!NOTE]
-> 일부 시장에서는 유료 앱(**지급액**)을 지원하지 않습니다. 해당 지역/국가에서는 무료 앱만 제출할 수 있습니다.
-
-**PayPal** 열은 PayPal이 [지급 계좌](setting-up-your-payout-account-and-tax-forms.md) 및 개발자 계정 등록 회비(명시된 경우 제외)에 사용할 수 있는 지원되는 결제 방법인지 여부를 나타냅니다.
 
 | 국가/지역                    | 개인 등록 요금 | 회사 등록 요금 |
 |-----------------------------------|---------------------|------------------|
@@ -98,7 +87,7 @@ Windows 프로그래밍 [파트너 센터](https://partner.microsoft.com/dashboa
 | 중국                             | 116 CNY             | 600 CNY          |  
 | 콜롬비아                          | 36543 COP           | 180000 COP       |  
 | 코모로                           | 19 USD              | 99 USD           |  
-| 콩고 공화국                             | 19 USD              | 99 USD           |  
+| 콩고                             | 19 USD              | 99 USD           |  
 | 콩고 민주 공화국                       | 19 USD              | 99 USD           |  
 | 코스타리카                        | 9578 CRC            | 49725 CRC        |  
 | 코트디부아르                     | 19 USD              | 99 USD           |  
@@ -162,7 +151,7 @@ Windows 프로그래밍 [파트너 센터](https://partner.microsoft.com/dashboa
 | 리투아니아                         | 14 EUR              | 75 EUR           |  
 | 룩셈부르크                        | 14 EUR              | 75 EUR           |  
 | 마카오 특별 행정구                         | 19 USD              | 99 USD           |  
-| 북마케도니아 공화국(구 유고슬라비아 마케도니아 공화국)                 | 19 USD              | 99 USD           |  
+| 마케도니아 (FYROM)                 | 19 USD              | 99 USD           |  
 | 마다가스카르                        | 19 USD              | 99 USD           |  
 | 말라위                            | 19 USD              | 99 USD           |  
 | 말레이시아                          | 62 MYR              | 300 MYR          |  
