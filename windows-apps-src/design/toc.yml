@@ -86,7 +86,7 @@
           href: controls-and-patterns/buttons.md
         - name: 확인란
           href: controls-and-patterns/checkbox.md
-        - name: 콤보 상자
+        - name: 콤보 상자 및 목록 상자
           href: controls-and-patterns/combo-box.md
         - name: 하이퍼링크
           href: controls-and-patterns/hyperlinks.md
@@ -102,16 +102,15 @@
       items:
         - name: 개요
           href: controls-and-patterns/lists.md
-        - name: 수집 명령
-          href: controls-and-patterns/collection-commanding.md
-        - name: 사용자 지정 컬렉션 뷰
-          href: controls-and-patterns/items-repeater.md
-        - name: 보기 대칭 이동
-          href: controls-and-patterns/flipview.md
-        - name: 반전된 목록
-          href: controls-and-patterns/inverted-lists.md
         - name: 목록 보기 및 그리드 보기
           href: controls-and-patterns/listview-and-gridview.md
+        - name: 보기 대칭 이동
+          href: controls-and-patterns/flipview.md
+        - name: 트리 보기
+          href: controls-and-patterns/tree-view.md
+        - name: ItemsRepeater
+          href: controls-and-patterns/items-repeater.md
+        - name: 항목 컨테이너 및 템플릿
           items:
             - name: 항목 컨테이너 및 템플릿
               href: controls-and-patterns/item-containers-templates.md
@@ -119,14 +118,22 @@
               href: controls-and-patterns/item-templates-listview.md
             - name: 그리드 보기의 항목 템플릿
               href: controls-and-patterns/item-templates-gridview.md
-        - name: 중첩된 UI
-          href: controls-and-patterns/nested-ui.md
-        - name: 당겨서 새로 고침
-          href: controls-and-patterns/pull-to-refresh.md
-        - name: 살짝 밀기
-          href: controls-and-patterns/swipe.md
-        - name: 트리 보기
-          href: controls-and-patterns/tree-view.md
+        - name: 선택 및 상호 작용
+          items:
+            - name: 수집 명령
+              href: controls-and-patterns/collection-commanding.md
+            - name: 선택 모드 개요
+              href: controls-and-patterns/selection-modes.md
+            - name: 살짝 밀기
+              href: controls-and-patterns/swipe.md
+            - name: 당겨서 새로 고침
+              href: controls-and-patterns/pull-to-refresh.md
+        - name: 추가 컬렉션 옵션 및 사용자 지정
+          items:
+            - name: 반전된 목록
+              href: controls-and-patterns/inverted-lists.md
+            - name: 중첩된 UI
+              href: controls-and-patterns/nested-ui.md
     - name: 대화 상자 및 플라이아웃
       items:
         - name: 개요

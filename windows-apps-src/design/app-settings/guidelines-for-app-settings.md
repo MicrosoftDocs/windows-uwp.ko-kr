@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 72da3d17f3584d0c295926880b949591b83b47a7
-ms.sourcegitcommit: 2fa2d2236870eaabc95941a95fd4e358d3668c0c
+ms.openlocfilehash: c08dad36929c7889f1896404df862230040e3499
+ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70076395"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163711"
 ---
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
 
@@ -82,7 +82,7 @@ ms.locfileid: "70076395"
 ## <a name="color-mode-settings"></a>"컬러 모드" 설정
 
 
-앱에서 사용자가 앱의 색 모드를 선택하도록 허용하는 경우, "앱 모드 선택" 헤더와 함께 [라디오 단추](../controls-and-patterns/radio-button.md) 또는 [콤보 상자](../controls-and-patterns/lists.md#drop-down-lists)를 사용하여 이러한 옵션을 표시합니다. 포함할 수 있는 옵션
+앱에서 사용자가 앱의 색 모드를 선택하도록 허용하는 경우, "앱 모드 선택" 헤더와 함께 [라디오 단추](../controls-and-patterns/radio-button.md) 또는 [콤보 상자](../controls-and-patterns/combo-box.md)를 사용하여 이러한 옵션을 표시합니다. 포함할 수 있는 옵션
 - 밝게
 - 어둡게
 - Windows 기본값

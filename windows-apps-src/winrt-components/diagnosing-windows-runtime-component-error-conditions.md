@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 330cbaab4a1c8313fb0b298dea55176eb66d4803
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 55bf6360f09ba4ab6c7878543ecfa0c80c4558e3
+ms.sourcegitcommit: 74c674c70b86bafeac7c8c749b1662fae838c428
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340529"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252315"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Windows 런타임 구성 요소 오류 조건 진단
 
@@ -69,7 +69,7 @@ UWP에서 오버로드된 메서드는 하나의 오버로드가 기본 오버�
 
 유니버설 Windows 플랫폼에서는 Windows 메타데이터(.winmd) 파일의 모든 공용 형식이 .winmd 파일 이름을 공유하는 네임스페이스에 있거나 해당 파일 이름의 하위 네임스페이스에 있어야 합니다. 예를 들어 Visual Studio 프로젝트의 이름이 A.B(즉, Windows 런타임 구성 요소가 A.B.winmd)인 경우 공용 클래스 A.B.Class1 및 A.B.C.Class2는 포함될 수 있지만 A.Class3(WME0006) 또는 D.Class4(WME1044)는 포함될 수 없습니다.
 
-> **참고**  these 제한 사항은 공용 형식에만 적용 되며 구현에 사용 되는 전용 형식에는 적용 되지 않습니다.
+> **참고** 이러한 제한 사항은 공용 형식에만 적용되며 구현에 사용되는 전용 형식에는 적용되지 않습니다.
 
 A.Class3의 경우 Class3을 다른 네임스페이스로 이동하거나 Windows 런타임 구성 요소의 이름을 A.winmd로 변경합니다. WME0006은 경고이지만 오류로 처리해야 합니다. 이전 예제에서 A.B.winmd를 호출하는 코드는 A.Class3을 찾을 수 없습니다.
 
@@ -81,7 +81,7 @@ D.Class4의 경우 D.Class4와 A.B 네임스페이스의 클래스를 모두 포
 
 Windows 런타임 구성 요소의 형식은 네임스페이스와 동일한 이름을 사용할 수 없습니다(WME1068).
 
-> **주의**  if을 직접 호출 하 고/out 옵션을 사용 하 여 Windows 런타임 구성 요소의 이름을 지정 하지 않는 경우 Winmdexp는 구성 요소의 모든 네임 스페이스를 포함 하는 이름을 생성 하려고 합니다. 네임스페이스의 이름을 바꾸면 구성 요소의 이름도 변경될 수 있습니다.
+> **주의** Winmdexp.exe를 직접 호출할 때 /out 옵션을 사용하여 Windows 런타임 구성 요소의 이름을 지정하지 않으면 Winmdexp.exe는 구성 요소의 모든 네임스페이스를 포함하는 이름을 생성하려고 시도합니다. 네임스페이스의 이름을 바꾸면 구성 요소의 이름도 변경될 수 있습니다.
 
  
 
@@ -102,9 +102,9 @@ Windows 런타임 구성 요소의 형식은 네임스페이스와 동일한 이
 
 일반적으로 최선의 선택은 해당 형식에 가장 가까운 인터페이스입니다. 예를 들어 Dictionary&lt;int, string&gt;의 경우 최선의 선택은 IDictionary&lt;int, string&gt;일 가능성이 높습니다.
 
-> **중요**  javascript는 관리 되는 형식이 구현 하는 인터페이스 목록에 첫 번째로 표시 되는 인터페이스를 사용 합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
+> **중요**  JavaScript는 관리 형식이 구현한 인터페이스 목록에서 처음 나타나는 인터페이스를 사용합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
-> **주의**  은 JavaScript에서 구성 요소를 사용 하는 경우 제네릭이 아닌 [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist) 및 [IEnumerable](https://docs.microsoft.com/dotnet/api/system.collections.ienumerable) 인터페이스를 사용 하지 않습니다. 이러한 인터페이스는 [IBindableVector](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindablevector) 및 [IBindableIterator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindableiterator)에 각각 매핑됩니다. 이들은 XAML 컨트롤에 대한 바인딩을 지원하므로 JavaScript에 표시되지 않습니다. JavaScript에서는 "'X' 함수에 잘못된 서명이 있으며 호출할 수 없습니다."라는 런타임 오류가 발생합니다.
+> **주의** JavaScript에서 사용될 구성 요소인 경우 제네릭이 아닌 [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist) 및 [IEnumerable](https://docs.microsoft.com/dotnet/api/system.collections.ienumerable) 인터페이스를 사용하지 마세요. 이러한 인터페이스는 [IBindableVector](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindablevector) 및 [IBindableIterator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindableiterator)에 각각 매핑됩니다. 이들은 XAML 컨트롤에 대한 바인딩을 지원하므로 JavaScript에 표시되지 않습니다. JavaScript에서는 "'X' 함수에 잘못된 서명이 있으며 호출할 수 없습니다."라는 런타임 오류가 발생합니다.
 
  
 
@@ -130,7 +130,7 @@ Windows 런타임 구성 요소의 형식은 네임스페이스와 동일한 이
 </tr>
 <tr class="odd">
 <td align="left">WME1039</td>
-<td align="left"><p>' @No__t-0 ' 메서드의 시그니처에 ' {1} ' 형식의 매개 변수가 있습니다. 이 제네릭 형식은 올바른 Windows 런타임 형식이 아니지만 해당 형식이나 형식의 제네릭 매개 변수가 올바른 Windows 런타임 형식인 인터페이스를 구현합니다. {2}</p>@no__t-no__t @no__t에 대 한 @ no__t @ Winmdexp의 경우,는 메서드 시그니처의 ' @ no__t-4T에서는 @ no__t ' 형식을 다음 형식 중 하나로 변경 하는 것이 좋습니다. "와 같은 대체 목록을 추가 합니다. 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
+<td align="left"><p>' @No__t-0 ' 메서드의 시그니처에 ' {1} ' 형식의 매개 변수가 있습니다. 이 제네릭 형식은 올바른 Windows 런타임 형식이 아니지만 해당 형식이나 형식의 제네릭 매개 변수가 올바른 Windows 런타임 형식인 인터페이스를 구현합니다. [https://doi.org/10.13012/J8PN93H8]({2})</p>@no__t {2}에 대 한 참고 @ no__t-1은 메서드 시그니처의 형식 ' Winmdexp @ no__t @ t @ no__t-4 '를 대신 다음 형식 중 하나로 변경 하는 것을 고려 하십시오. 'System.Collections.Generic.IList&gt;T&lt;, System.Collections.Generic.IReadOnlyList&gt;T&lt;, System.Collections.Generic.IEnumerable&gt;T'."
 </td>
 </tr>
 <tr class="even">
@@ -209,7 +209,7 @@ UWP에서 반환 값은 출력 매개 변수로 간주되고, 매개 변수 이�
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> **참고**   반환 값의 이름을 변경 하 고 새 이름이 다른 매개 변수의 이름과 충돌 하는 경우 오류 WME1091 발생 합니다.
+> **참고** 반환 값의 이름을 변경했는데 새 이름이 다른 매개 변수 이름과 충돌하면 WME1091 오류가 발생합니다.
 
 JavaScript 코드는 반환 값을 포함하여 메서드의 출력 매개 변수를 이름으로 액세스할 수 있습니다. 예제를 보려면 [ReturnValueNameAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.returnvaluenameattribute) 특성을 참조하세요.
 
@@ -218,7 +218,7 @@ JavaScript 코드는 반환 값을 포함하여 메서드의 출력 매개 변�
 | WME1091 | ' @No__t-00} ' 메서드에 매개 변수 이름과 동일한 ' \{1} ' 이라는 반환 값이 있습니다. Windows 런타임 메서드의 매개 변수와 반환 값에는 고유한 이름이 있어야 합니다. |
 | WME1092 | ' @No__t-00} ' 메서드에 기본 반환 값 이름과 같은 ' \{1} ' 이라는 매개 변수가 있습니다. 매개 변수에 다른 이름을 사용해 보거나 System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute를 사용하여 반환 값의 이름을 명시적으로 지정하세요. |
 
-1The 기본 이름은 속성 접근자의 경우 "returnValue"이 고 다른 모든 메서드의 경우 "value"입니다 **. @no__t**
+**참고** 속성 접근자의 경우에만 기본 이름이 "returnValue"입니다. 다른 메서드의 기본 이름은 모두 "value"입니다.
 
 ## <a name="related-topics"></a>관련 항목
 
