@@ -6,12 +6,12 @@ ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 레이아웃, 양식
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2e64392e1de5f6061b802acc0a2eed81c3e750fb
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 9542151a8104ade77d8311ed1f16eba2809ecf7a
+ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318802"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163683"
 ---
 # <a name="create-and-customize-a-form"></a>양식 만들기 및 사용자 지정
 
@@ -51,7 +51,7 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md)는 사용자가 두 가지 옵션 중에서 선택할 수 있도록 합니다.
 * [DatePicker](../design/controls-and-patterns/date-picker.md)는 날짜 값을 선택할 수 있도록 합니다.
 * [TimePicker](../design/controls-and-patterns/time-picker.md)는 시간 값을 선택할 수 있도록 합니다.
-* [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)는 선택할 수 있는 항목의 목록을 표시하도록 확장합니다. [여기](../design/controls-and-patterns/lists.md#drop-down-lists)에서 자세한 내용을 알아볼 수 있습니다.
+* [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)는 선택할 수 있는 항목의 목록을 표시하도록 확장합니다. [여기](../design/controls-and-patterns/combo-box.md)에서 자세한 내용을 알아볼 수 있습니다.
 
 사용자가 저장하거나 취소할 수 있도록 [단추](../design/controls-and-patterns/buttons.md)를 추가하려고 할 수도 있습니다.
 
