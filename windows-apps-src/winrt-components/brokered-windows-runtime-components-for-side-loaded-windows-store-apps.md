@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: 16996a8706018bde89d3eb08249ee496d7e25bb9
-ms.sourcegitcommit: e7c95c156f970fe9fdf7ff98ea81508360a64c12
+ms.openlocfilehash: f6eda179a3fea0c24f3a9de0d674800bd3d2015c
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172841"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282323"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>테스트용으로 로드 된 UWP 앱에 대해 조정 된 Windows 런타임 구성 요소
 
@@ -181,7 +181,7 @@ Visual Studio에서 이 작업을 수행하려면 새로 만든 프로젝트를 
 
 <ActivatableClass> 섹션은 앱 패키지의 Windows 런타임 구성 요소에서 기본으로 사용되는 실제 In-Process RuntimeClass와 동일합니다. <ActivatableClassAttribute>은 새 요소 이며 Name = "DesktopApplicationPath" 및 Type = "string"은 필수 및 고정입니다. Value 특성은 데스크톱 구성 요소의 구현 winmd가 상주하는 위치를 가리킵니다(자세한 내용은 다음 섹션 참고). 데스크톱 구성 요소에서 기본으로 사용하는 각 RuntimeClass에는 고유한 <ActivatableClass> 요소 트리가 있어야 합니다. ActivatableClassId는 RuntimeClass의 네임스페이스로 정규화된 이름과 일치해야 합니다.
 
-"계약 정의" 섹션의 설명대로, 데스크톱 구성 요소의 참조 winmd를 프로젝트에서 참조해야 합니다. Visual Studio 프로젝트 시스템은 일반적으로 이름이 같은 2개 수준의 디렉터리 구조를 만듭니다. 이 샘플에서이 샘플은 EnterpriseIPCApplication @ no__t-0EnterpriseIPCApplication입니다. 참조 **winmd**를 이 두 번째 수준 디렉터리에 수동으로 복사한 후 프로젝트 참조 대화 상자를 사용하여(**찾아보기..** 단추 클릭) 이 **winmd**를 찾아 참조합니다. 그러면 데스크톱 구성 요소의 최상위 수준 네임스페이스(예제: Fabrikam)가 프로젝트의 참조 부분에서 최상위 수준 노드로 나타납니다.
+"계약 정의" 섹션의 설명대로, 데스크톱 구성 요소의 참조 winmd를 프로젝트에서 참조해야 합니다. Visual Studio 프로젝트 시스템은 일반적으로 이름이 같은 2개 수준의 디렉터리 구조를 만듭니다. 이 샘플에서이 샘플은 EnterpriseIPCApplication @ no__t-0EnterpriseIPCApplication입니다. 참조 **winmd**를 이 두 번째 수준 디렉터리에 수동으로 복사한 후 프로젝트 참조 대화 상자를 사용하여(**찾아보기..** 단추 클릭) 이 **winmd**를 찾아 참조합니다. 그런 다음 데스크톱 구성 요소의 최상위 네임 스페이스 (예: Fabrikam)는 프로젝트의 참조 부분에서 최상위 노드로 표시 됩니다.
 
 >**참고** 테스트용으로 로드하는 응용 프로그램에서 **참조 winmd**를 사용하는 것이 중요합니다. 실수로 **구현 winmd**를 테스트용으로 로드하는 앱 디렉터리로 이전하여 참조하는 경우 "IStringable을 찾을 수 없습니다."와 관련된 오류가 발생할 수 있습니다. 이것은 잘못된 **winmd**가 참조되었음을 나타내는 확실한 신호입니다. IPC 서버 앱의 사후 빌드 규칙(다음 섹션에서 자세히 설명)은 이 2개의 **winmd**를 개별 디렉터리로 세심하게 분리합니다.
 
@@ -491,7 +491,7 @@ IPC 방법에서는 두 프로세스 사이에 Windows 런타임 인터페이스
 
 a) Dlldata.c
 
-b) 헤더 파일(예제: MyWinRTComponent.h)
+b) 헤더 파일 (예: MyWinRTComponent .h)
 
 c) \* @ no__t 파일 (예: MyWinRTComponent @ no__t-2i)
 

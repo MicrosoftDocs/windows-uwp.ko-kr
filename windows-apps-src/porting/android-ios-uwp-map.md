@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: ebfaab1c8fe3ec3cf8893022a8f4e8dae7deac63
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: f8ace0d56e6e647ed5f977cbe6860d8f91bb2b5f
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340587"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282361"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
 
@@ -87,7 +87,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left">쉽게 재사용할 수 있도록 여러 컨트롤에 적용할 수 있는 재사용 가능한 <strong><a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style">스타일</a></strong>을 만들어 <strong><a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary">ResourceDictionary</a></strong>에 저장할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/previous-versions/windows/apps/hh465381(v=win.10)">빠른 시작: 컨트롤 스타일 지정 @ no__t-0</td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>컨트롤의 시각적 구조 편집</strong>  <br><br>속성 또는 특성을 수정하는 것 외에 확인란 아래의 확인란 텍스트를 이동하는 등 컨트롤의 시각적 구조를 사용자 지정합니다.</td>
+<td align="left"><strong>컨트롤의 시각적 구조 편집</strong>  <br><br>확인란의 확인란 텍스트를 이동 하는 것과 같이 속성 또는 특성만 수정 하는 것 외에도 컨트롤의 시각적 구조를 사용자 지정 합니다.</td>
 <td align="left">Android에서 컨트롤의 시각적 구조를 간단히 편집할 수 있는 방법은 없습니다.</td>
 <td align="left">iOS에서 컨트롤의 시각적 구조를 간단히 편집할 수 있는 방법은 없습니다.</td>
 <td align="left">컨트롤의 시각적 구조를 사용자 지정하려면 XAML 태그에서 해당 <strong><a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate">컨트롤 템플릿</a></strong>을 복사 및 편집할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/previous-versions/windows/apps/hh465374(v=win.10)">빠른 시작: 컨트롤 템플릿 @ no__t-0</td>
@@ -348,7 +348,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>비동기 프로그래밍.</strong>  <br><br>비동기 프로그래밍 패턴을 통해 UI 스레드 응답을 유지하여 스레딩 복잡성을 방지합니다.</td>
 <td align="left">자체 비동기 클래스를 만들려면 <strong>스레딩 필요</strong>를 사용합니다. 일부 기본 제공 클래스는 비동기입니다.</td>
 <td align="left">자체 비동기 클래스를 만들려면 <strong>스레딩 필요</strong>를 사용합니다. 일부 기본 제공 클래스는 비동기입니다.</td>
-<td align="left">자체 API를 만들 때 비동기 패턴(예: C# 및 Visual Basic의 <strong>async</strong> 및 <strong>await</strong>)을 사용하여 주 스레드 차단을 방지할 수 있습니다. 단어가 <strong>Async</strong>로 끝나는 비동기 기본 제공 API를 사용할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps">비동기 프로그래밍</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic">C# 또는 Visual Basic에서 비동기 API 호출</a></td>
+<td align="left">비동기 패턴을 사용 하 여 사용자 고유의 Api를 만들 때 기본 스레드를 차단 하지 않도록 비동기 패턴을 사용할 수 있습니다. 예 C# 를 들어 <strong>async</strong> 를 사용 <strong>하 고를</strong> 사용 하 고 Visual Basic 수 있습니다. 단어가 <strong>Async</strong>로 끝나는 비동기 기본 제공 API를 사용할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps">비동기 프로그래밍</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic">C# 또는 Visual Basic에서 비동기 API 호출</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>목록 뷰 최적화입니다.</strong>  <br><br>데이터 목록 최적화를 지원하는 기본 제공 패턴이며 많은 양의 데이터를 표시해야 할 경우 성능이 저하될 수 있습니다.</td>

@@ -6,34 +6,34 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 24ae3fb7442ac955b5edf4127dfdf66176c81a43
-ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
+ms.openlocfilehash: 8248e17a342563a0746e3c54c3a69a52f027d072
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399627"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282431"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Windows Hello 로그인 앱 만들기
 
 이 문서는 기존 사용자 이름 및 암호 인증 시스템의 대안으로 Windows Hello를 사용하는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법을 안내하는 전체 연습의 제1부입니다. 앱은 사용자 이름으로 로그인하고 각 계정에 Hello 키를 만듭니다. 이 계정들은 Windows Hello 구성의 Windows 설정에 설정된 PIN의 보호를 받습니다.
 
-이 연습은 앱을 빌드하고 백 엔드 서비스를 연결하는 두 부분으로 나누어집니다. 이 문서를 사용 하 여 완료 되 면, 2 부를 진행 합니다. [Windows Hello 로그인 서비스](microsoft-passport-login-auth-service.md)합니다.
+이 연습은 앱을 빌드하고 백 엔드 서비스를 연결하는 두 부분으로 나누어집니다. 이 문서를 완료 하 고 나면 2 부: [Windows Hello 로그인 서비스](microsoft-passport-login-auth-service.md)입니다.
 
 시작하기 전에 Windows Hello 작동 방식을 전반적으로 이해하기 위해 [Windows Hello](microsoft-passport.md) 개요를 읽으셔야 합니다.
 
 ## <a name="get-started"></a>시작
 
 
-이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. Visual Studio 2015를 사용 하 여 수 해야 (Community Edition 이상), 또는 Windows 10 컴퓨터에서 Visual Studio의 이후 릴리스 합니다. Visual Studio 2015 최소 필수 버전 이지만, 최신 개발자와 보안 업데이트를 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
+이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. 또한 Windows 10 컴퓨터에서 Visual Studio 2015 (Community Edition 이상) 또는 이후 버전의 Visual Studio를 사용 해야 합니다. Visual Studio 2015는 필요한 최소 버전 이지만 최신 개발자 및 보안 업데이트를 위해 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
 
--   Visual Studio를 열고 파일 > 새로 만들기 > 프로젝트입니다.
+-   Visual Studio를 열고 파일 > 새 > 프로젝트를 선택 합니다.
 -   "새 프로젝트" 창이 열립니다. 템플릿 &gt; Visual C#으로 이동합니다.
 -   비어 있는 앱(유니버설 Windows)을 선택하고 응용 프로그램의 이름을 "PassportLogin"으로 지정합니다.
 -   새 응용 프로그램을 빌드 및 실행(F5)하면 화면에 빈 창이 표시됩니다. 응용 프로그램을 닫습니다.
 
 ![Windows Hello 새 프로젝트](images/passport-login-1.png)
 
-## <a name="exercise-1-login-with-microsoft-passport"></a>연습 1: Microsoft Passport를 사용 하 여 로그인
+## <a name="exercise-1-login-with-microsoft-passport"></a>연습 1: Microsoft Passport 로그인
 
 
 이 연습에서는 컴퓨터에 Windows Hello가 설정되어 있는지 확인하는 방법과 Windows Hello를 사용하여 계정에 로그인하는 방법을 알아봅니다.
@@ -490,7 +490,7 @@ ms.locfileid: "67399627"
 
     ![Windows Hello 로그인 핀 프롬프트](images/passport-login-8.png)
 
-## <a name="exercise-2-welcome-and-user-selection-pages"></a>연습 2: 시작 하 고 사용자 선택 페이지
+## <a name="exercise-2-welcome-and-user-selection-pages"></a>연습 2: 시작 및 사용자 선택 페이지
 
 
 이 연습은 이전 연습에서 계속됩니다. 성공적으로 로그인하면 계정을 삭제 또는 로그아웃할 수 있는 환영 페이지가 표시되어야 합니다. Windows Hello는 모든 컴퓨터에 대해 키를 만들므로 해당 컴퓨터에 로그인한 모든 사용자를 표시하는 사용자 선택 화면을 만들 수 있습니다. 그런 다음 사용자는 이러한 계정 중 하나를 선택하고 컴퓨터에 액세스하도록 이미 인증되었기 때문에 암호를 다시 입력하지 않고도 환영 화면으로 바로 이동할 수 있습니다.
@@ -577,7 +577,7 @@ ms.locfileid: "67399627"
         if (keyOpenResult.Status == KeyCredentialStatus.Success)
         {
             // In the real world you would send key information to server to unregister
-            //e.g. RemovePassportAccountOnServer(account);
+            //for example, RemovePassportAccountOnServer(account);
         }
 
         // Then delete the account from the machines list of Passport Accounts
@@ -815,7 +815,7 @@ ms.locfileid: "67399627"
             // If it does here you would Request a challenge from the Server. The client would sign this challenge and the server
             // would check the signed challenge. If it is correct it would allow the user access to the backend.
             // You would likely make a new method called RequestSignAsync to handle all this
-            // e.g. RequestSignAsync(openKeyResult);
+            // for example, RequestSignAsync(openKeyResult);
             // Refer to the second Microsoft Passport sample for information on how to do this.
 
             // For this sample there is not concept of a server implemented so just return true.

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 약속, 일정
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e4eeaf486738996ce5a860f567fc18a7d41cca2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5fd4fc62a393e6439458ddc38f37bbb0680fb9b1
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361249"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282232"
 ---
 # <a name="manage-appointments"></a>약속 관리
 
@@ -156,7 +156,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
         }
         else
         {
-            // Organizer Address (e.g. Email Address)
+            // Organizer Address (for example, Email Address)
             organizer.Address = OrganizerAddressTextBox.Text;
 
             if (organizer.Address.Length > 321)
@@ -192,7 +192,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
         }
         else
         {
-            // Invitee Address (e.g. Email Address)
+            // Invitee Address (for example, Email Address)
             invitee.Address = InviteeAddressTextBox.Text;
 
             if (invitee.Address.Length > 321)
@@ -282,7 +282,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**참고**  Windows Phone 스토어 앱 용 [ **ShowAddAppointment** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 함수 처럼 [ **ShowEditNewAppointment** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 약속을 추가 하는 것에 대 한 표시 대화 상자를 편집할 수에 합니다.
+**참고**  For Windows Phone 스토어 앱, [**Showaddappointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) [**ShowEditNewAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 와 마찬가지로 약속을 추가 하기 위해 표시 되는 대화 상자를 편집할 수 있습니다.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>사용자의 일정에서 약속 바꾸기
 
@@ -507,7 +507,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
 
 ## <a name="add-a-new-editable-appointment"></a>편집 가능한 새 약속 추가
 
-[**ShowEditNewAppointmentAsync** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 처럼 작동 [ **ShowAddAppointmentAsync** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 점을 제외 하 고 사용자가 수정할 수 있도록 약속을 추가 하기 위한 대화 상자는 편집 가능 저장 하기 전에 약속 데이터입니다.
+[**ShowEditNewAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 는 사용자가 약속 데이터를 저장 하기 전에 수정할 수 있도록 약속을 추가 하는 대화 상자가 편집 가능 하다는 점을 제외 하 고는 [**ShowAddAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 와 똑같이 작동 합니다.
 
 ``` cs
 private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
@@ -542,7 +542,7 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
 
 ## <a name="show-appointment-details"></a>약속 세부 정보 표시
 
-[**ShowAppointmentDetailsAsync** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) 시스템 지정된 약속에 대 한 세부 정보를 표시 하도록 합니다. 앱 일정을 구현하는 앱을 활성화하도록 선택하여 소유한 일정에 있는 약속의 세부 정보를 표시할 수 있습니다. 그렇지 않으면 시스템에서 약속 세부 정보를 표시합니다. 되풀이되는 약속의 인스턴스에 대한 세부 정보를 표시하도록 시작 날짜 인수를 허용하는 메서드 오버로드가 제공됩니다.
+[**ShowAppointmentDetailsAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) 를 지정 하면 시스템에서 지정 된 약속에 대 한 세부 정보를 표시 합니다. 앱 일정을 구현하는 앱을 활성화하도록 선택하여 소유한 일정에 있는 약속의 세부 정보를 표시할 수 있습니다. 그렇지 않으면 시스템에서 약속 세부 정보를 표시합니다. 되풀이되는 약속의 인스턴스에 대한 세부 정보를 표시하도록 시작 날짜 인수를 허용하는 메서드 오버로드가 제공됩니다.
 
 ```cs
 private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e)

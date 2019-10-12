@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 98251ecba05dd27cbe3112a94b6cfcd36440d380
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6d15173471b7f1ef3f1c6b042671eb85b7a53dc4
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371236"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282344"
 ---
 # <a name="create-a-windows-hello-login-service"></a>Windows Hello 로그인 서비스 만들기
 
@@ -19,7 +19,7 @@ ms.locfileid: "66371236"
 
 이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. 또한 Windows 10 컴퓨터에서 Visual Studio 2015(Community Edition 이상)를 사용해야 합니다.
 
-## <a name="exercise-1-server-side-logic"></a>연습 1: 서버 쪽 논리
+## <a name="exercise-1-server-side-logic"></a>연습 1: 서버측 논리
 
 
 이 연습에서는 첫 번째 랩에 빌드된 Windows Hello 응용 프로그램을 시작하고 로컬 모의 서버와 데이터베이스를 만듭니다. 이 실습 교육의 목적은 Windows Hello를 기존 시스템에 통합하는 방법을 알려드리는 것입니다. 모의 서버와 모의 데이터베이스를 사용하여 관련이 없는 많은 설치가 제거됩니다. 자체 응용 프로그램에서는 실제 서비스 및 데이터베이스로 모의 개체를 교체해야 합니다.
@@ -661,7 +661,7 @@ ms.locfileid: "66371236"
             //If it does here you would Request a challenge from the Server. The client would sign this challenge and the server
             //would check the signed challenge. If it is correct it would allow the user access to the backend.
             //You would likely make a new method called RequestSignAsync to handle all this
-            //e.g. RequestSignAsync(openKeyResult);
+            //for example, RequestSignAsync(openKeyResult);
             //Refer to the second Windows Hello sample for information on how to do this.
 
             //For this sample there is not concept of a server implemented so just return true.
@@ -804,7 +804,7 @@ ms.locfileid: "66371236"
     }
     ```
 
--   수를 사용 하 여 AuthService 단추에서 계정을 AccountHelper에 대 한 참조를 제거 하는 동안\_무시\_사용자\_클릭 메서드를 제거할 수 있습니다. 이제 메서드가 아래와 같이 표시됩니다.
+-   계정을 제거할 때 AuthService를 사용할 때 @ no__t-0Forget @ no__t-1User @ no__t-2Click 메서드를 제거할 수 있습니다. 이제 메서드가 아래와 같이 표시됩니다.
 
     ```cs
     private void Button_Forget_User_Click(object sender, RoutedEventArgs e)
@@ -1139,7 +1139,7 @@ ms.locfileid: "66371236"
             //If it does here you would Request a challenge from the Server. The client would sign this challenge and the server
             //would check the signed challenge. If it is correct it would allow the user access to the backend.
             //You would likely make a new method called RequestSignAsync to handle all this
-            //e.g. RequestSignAsync(openKeyResult);
+            //for example, RequestSignAsync(openKeyResult);
             //Refer to the second Windows Hello sample for information on how to do this.
 
             return await RequestSignAsync(account.UserId, openKeyResult);

@@ -7,12 +7,12 @@ ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: b2e1e2dfdb1dd52e1dd07a146badd78a6bb809fa
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2e6b505dfd24a57f03169df3ed38402e7b3e9bb0
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359926"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282117"
 ---
 # <a name="device-portal-core-api-reference"></a>디바이스 포털 핵심 API 참조
 
@@ -399,7 +399,7 @@ ms.locfileid: "66359926"
 
 **요청**
 
-다음 요청 형식을 사용하여 컴퓨터에 설치된 Bluetooth 송수신 장치 목록을 가져올 수 있습니다. 이 동일한 JSON 데이터를 사용 하 여 WebSocket 연결도로 업그레이드할 수 있습니다.
+다음 요청 형식을 사용하여 컴퓨터에 설치된 Bluetooth 송수신 장치 목록을 가져올 수 있습니다. 동일한 JSON 데이터를 사용 하 여이를 WebSocket 연결로도 업그레이드할 수 있습니다.
  
 | 메서드        | 요청 URI |
 | :------          | :------ |
@@ -469,8 +469,8 @@ ms.locfileid: "66359926"
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| ID            | (**필수**) Bluetooth 송수신 장치에 대한 장치 ID이며 Base 64로 인코딩되어야 합니다. |
-| State         | (**필요**)이 될 수 있습니다 `"On"` 또는 `"Off"`합니다. |
+| id            | (**필수**) Bluetooth 송수신 장치에 대한 장치 ID이며 Base 64로 인코딩되어야 합니다. |
+| State         | (**필수**) @No__t-1 또는 `"Off"` 일 수 있습니다. |
 
 **요청 헤더**
 
@@ -499,11 +499,11 @@ ms.locfileid: "66359926"
 * IoT
 
 ---
-### <a name="get-a-list-of-paired-bluetooth-devices"></a>페어링된 Bluetooth 장치 목록을 가져오려면
+### <a name="get-a-list-of-paired-bluetooth-devices"></a>쌍을 이루는 Bluetooth 장치 목록 가져오기
 
 **요청**
 
-다음 요청 형식을 사용 하 여 현재 페어링된 Bluetooth 장치의 목록을 가져올 수 있습니다. 이 동일한 JSON 데이터를 사용 하 여 WebSocket 연결으로 업그레이드할 수 있습니다. 장치 목록에는 WebSocket 연결의 수명 동안 변경할 수 있습니다. 장치의 전체 목록은 업데이트 될 때마다 WebSocket 연결을 통해 전송 됩니다.
+다음 요청 형식을 사용 하 여 현재 페어링된 Bluetooth 장치 목록을 가져올 수 있습니다. 이는 동일한 JSON 데이터를 사용 하는 WebSocket 연결로 업그레이드할 수 있습니다. WebSocket 연결의 수명 동안 장치 목록이 변경 될 수 있습니다. 업데이트가 있을 때마다 전체 장치 목록이 WebSocket 연결을 통해 전송 됩니다.
 
 | 메서드        | 요청 URI       |
 | :---          | :---              |
@@ -524,7 +524,7 @@ ms.locfileid: "66359926"
 
 **응답**
 
-현재 되는 Bluetooth 장치의 JSON 배열을 포함 하는 응답 합니다.
+응답에는 현재 페어링된 Bluetooth 장치의 JSON 배열이 포함 되어 있습니다.
 ```json
 {"PairedDevices": [
     {
@@ -534,14 +534,14 @@ ms.locfileid: "66359926"
     },...
 ]}
 ```
-합니다 *AudioConnectionStatus* 필드는이 시스템에는 오디오 장치를 사용할 수 있는 경우에 표시 됩니다. (선택적 구성 요소 및 정책 영향을 줄 수이 있습니다.) *AudioConnectionStatus* "연결 됨" 또는 "Disconnected"이 됩니다.
+이 시스템에서 오디오에 장치를 사용할 수 있으면 오디오 *Connectionstatus* 필드가 표시 됩니다. (정책 및 선택적 구성 요소는이에 영향을 줄 수 있습니다.) *오디오 Connectionstatus* 는 "연결 됨" 또는 "연결 끊김"입니다.
 
 ---
-### <a name="get-a-list-of-available-bluetooth-devices"></a>사용 가능한 Bluetooth 장치 목록을 가져오려면
+### <a name="get-a-list-of-available-bluetooth-devices"></a>사용 가능한 Bluetooth 장치 목록 가져오기
 
 **요청**
 
-다음 요청 형식을 사용 하 여 연결에 대 한 사용 가능한 Bluetooth 장치 목록을 가져올 수 있습니다. 이 동일한 JSON 데이터를 사용 하 여 WebSocket 연결으로 업그레이드할 수 있습니다. 장치 목록에는 WebSocket 연결의 수명 동안 변경할 수 있습니다. 장치의 전체 목록은 업데이트 될 때마다 WebSocket 연결을 통해 전송 됩니다.
+다음 요청 형식을 사용 하 여 페어링에 사용할 수 있는 Bluetooth 장치 목록을 가져올 수 있습니다. 이는 동일한 JSON 데이터를 사용 하는 WebSocket 연결로 업그레이드할 수 있습니다. WebSocket 연결의 수명 동안 장치 목록이 변경 될 수 있습니다. 업데이트가 있을 때마다 전체 장치 목록이 WebSocket 연결을 통해 전송 됩니다.
 
 | 메서드        | 요청 URI          |
 | :---          | :---                 |
@@ -562,7 +562,7 @@ ms.locfileid: "66359926"
 
 **응답**
 
-응답은 Bluetooth 장치 쌍에 대 한 현재 사용할 수 있는 JSON 배열을 포함 합니다.
+응답에는 현재 페어링에 사용할 수 있는 Bluetooth 장치의 JSON 배열이 포함 되어 있습니다.
 ```json
 {"AvailableDevices": [
     {
@@ -577,17 +577,17 @@ ms.locfileid: "66359926"
 
 **요청**
 
-이 시스템에는 오디오 장치를 사용할 수 있는 경우에 장치에 연결 됩니다. (선택적 구성 요소 및 정책 영향을 줄 수이 있습니다.)
+장치가이 시스템에서 오디오에 사용 될 수 있는 경우 장치에 연결 됩니다. (정책 및 선택적 구성 요소는이에 영향을 줄 수 있습니다.)
 
 | 메서드       | 요청 URI           |
 | :---         | :---                  |
-| 올리기         | /api/bt/connectdevice |
+| 올리기         | //> |
 
 **URI 매개 변수**
 
 | URI 매개 변수 | 설명 |
 | :---          | :--- |
-| ID            | (**필요한**) Bluetooth 장치에 대 한 연결 끝점 ID는 Base64로 인코딩된 여야 합니다. |
+| id            | (**필수**) Bluetooth 장치에 대 한 연결 끝점 ID는 b a s e 64로 인코딩해야 합니다. |
 
 **요청 헤더**
 
@@ -621,7 +621,7 @@ ms.locfileid: "66359926"
 
 **요청**
 
-이 시스템에는 오디오 장치를 사용할 수 있는 경우 장치를 끊어집니다. (선택적 구성 요소 및 정책 영향을 줄 수이 있습니다.)
+장치가이 시스템에서 오디오에 사용 될 수 있는 경우 장치 연결을 끊습니다. (정책 및 선택적 구성 요소는이에 영향을 줄 수 있습니다.)
 
 | 메서드       | 요청 URI              |
 | :---         | :---                     |
@@ -631,7 +631,7 @@ ms.locfileid: "66359926"
 
 | URI 매개 변수 | 설명 |
 | :---          | :--- |
-| ID            | (**필요한**) Bluetooth 장치에 대 한 연결 끝점 ID는 Base64로 인코딩된 여야 합니다. |
+| id            | (**필수**) Bluetooth 장치에 대 한 연결 끝점 ID는 b a s e 64로 인코딩해야 합니다. |
 
 **요청 헤더**
 
@@ -762,7 +762,7 @@ ms.locfileid: "66359926"
 }
 ```
 
-**데이터를 반환 하는 샘플**
+**샘플 반환 데이터**
 ```json
 {
     "DeviceList": [{
@@ -1236,15 +1236,15 @@ ms.locfileid: "66359926"
 }
 ```
 
-**형식 덤프**
+**덤프 형식**
 
 0: 사용 안 함
 
-1: 전체 메모리 덤프 (사용 중인 메모리를 모두 수집 합니다.)
+1: 전체 메모리 덤프 (모든 사용 중인 메모리 수집)
 
-2: 커널 메모리 덤프 (사용자 모드 메모리는 무시 됨)
+2: 커널 메모리 덤프 (사용자 모드 메모리 무시)
 
-3: 제한 된 커널 미니 덤프
+3: 커널 미니 덤프 제한
 
 **상태 코드**
 
@@ -1455,7 +1455,7 @@ ms.locfileid: "66359926"
 ### <a name="etw-websocket-commands"></a>ETW WebSocket 명령
 이러한 명령은 클라이언트에서 서버로 전송됩니다.
 
-| Command | 설명 |
+| 명령 | 설명 |
 | :----- | :----- |
 | provider *{guid}* enable *{level}* | 지정된 수준에서 *{guid}* (괄호 없음)로 표시된 공급자를 사용하도록 설정합니다. 여기서 *{level}* 은 1(가장 대략적인 정보)부터 5(자세한 정보)까지의 **int**입니다. |
 | provider *{guid}* disable | *{guid}* (괄호 없음)로 표시된 공급자를 사용하지 않도록 설정합니다. |
@@ -2245,7 +2245,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 <hr>
 
-## <a name="power"></a>전원
+## <a name="power"></a>Power
 
 <hr>
 
@@ -3011,11 +3011,11 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 <hr>
 
-### <a name="set-a-static-ip-address-ipv4-configuration"></a>고정 IP 주소 (IPV4 구성)를 설정 합니다.
+### <a name="set-a-static-ip-address-ipv4-configuration"></a>고정 IP 주소 설정 (IPV4 구성)
 
 **요청**
 
-정적 IP 및 DNS를 사용 하 여 IPV4 구성을 설정합니다. 고정 IP를 지정 하지 않은 경우 다음이 통해 DHCP. 고정 IP를 지정 하면 한 DNS도 지정 해야 합니다.
+고정 IP 및 DNS를 사용 하 여 IPV4 구성을 설정 합니다. 고정 IP가 지정 되지 않은 경우 DHCP를 사용 하도록 설정 합니다. 고정 IP가 지정 된 경우 DNS도 지정 해야 합니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
@@ -3026,14 +3026,14 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :---          | :--- |
-| AdapterName | (**필요한**) 네트워크 인터페이스 GUID입니다. |
-| IP 주소 | 정적 IP 주소를 설정 합니다. |
-| SubnetMask | (**필요** 하는 경우 *IPAddress* null이 아닌) 정적 서브넷 마스크입니다. |
-| DefaultGateway | (**필요** 하는 경우 *IPAddress* null이 아닌) 정적 기본 게이트웨이입니다. |
-| PrimaryDNS | (**필요** 경우 *IPAddress* null이 아닌) 정적 기본 DNS를 설정 합니다. |
-| SecondayDNS | (**필요** 경우 *PrimaryDNS* null이 아닌) 정적 보조 DNS를 설정 합니다. |
+| AdapterName | (**필수**) 네트워크 인터페이스 GUID입니다. |
+| IP 주소 | 설정할 고정 IP 주소입니다. |
+| SubnetMask | ( *IPAddress* 가 null이 아닌 경우**필수** ) 정적 서브넷 마스크입니다. |
+| DefaultGateway | ( *IPAddress* 가 null이 아닌 경우**필수** ) 정적 기본 게이트웨이입니다. |
+| PrimaryDNS | ( *IPAddress* 가 null이 아닌 경우**필수** ) 설정할 정적 기본 DNS입니다. |
+| SecondayDNS | ( *Primarydns* 가 null이 아닌 경우**필수** ) 설정할 정적 보조 DNS입니다. |
 
-이해를 돕기 위해 serialize에 인터페이스 DHCP를 설정 하려면만 `AdapterName` 통신 중에:
+명확 하 게 하기 위해 인터페이스를 DHCP로 설정 하려면 네트워크에서 `AdapterName`만 직렬화 합니다.
 
 ```json
 {
@@ -3171,7 +3171,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
         "AlreadyConnected": bool,
         "AuthenticationAlgorithm": string, (WPA2, etc)
         "Channel": int,
-        "CipherAlgorithm": string, (e.g. AES)
+        "CipherAlgorithm": string, (for example, AES)
         "Connectable": int, (0 | 1)
         "InfrastructureType": string,
         "ProfileAvailable": bool,
@@ -3274,7 +3274,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
 | 인터페이스   | (**필수**) 삭제할 프로필과 연결된 네트워크 인터페이스의 GUID입니다. |
-| profile   | (**필수**) 삭제할 프로필의 이름입니다. |
+| profiles   | (**필수**) 삭제할 프로필의 이름입니다. |
 
 **요청 헤더**
 
@@ -3328,7 +3328,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 사용자   | (**필수**) 보고서와 연결된 사용자 이름입니다. |
 | type   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
 | name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
-| 파일   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다. Base64 인코드되어야 합니다. |
+| files   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다. Base64 인코드되어야 합니다. |
 
 **요청 헤더**
 
@@ -3549,7 +3549,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| profile   | (**필수**) 시작 시 이 매개 변수가 필요합니다. 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다. |
+| profiles   | (**필수**) 시작 시 이 매개 변수가 필요합니다. 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다. |
 
 **요청 헤더**
 
@@ -3652,7 +3652,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| profile   | (**필수**) 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다. |
+| profiles   | (**필수**) 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다. |
 
 **요청 헤더**
 
@@ -4350,7 +4350,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | HTTP 상태 코드      | 설명 |
 | :------     | :----- |
-| 200 | 확인 |. 파일 이름이 변경되었습니다.
+| 200 | 확인 |을 선택합니다. 파일 이름이 변경되었습니다.
 | 404 | 파일을 찾을 수 없습니다. |
 | 5XX | 오류 코드 |
 
@@ -4401,7 +4401,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | HTTP 상태 코드      | 설명 |
 | :------     | :----- |
-| 200 | 확인 |. 파일이 삭제되었습니다. |
+| 200 | 확인 |을 선택합니다. 파일이 삭제되었습니다. |
 | 404 | 파일을 찾을 수 없습니다. |
 | 5XX | 오류 코드 |
 
@@ -4449,7 +4449,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | HTTP 상태 코드      | 설명 |
 | :------     | :----- |
-| 200 | 확인 |. 파일이 업로드되었습니다. |
+| 200 | 확인 |을 선택합니다. 파일이 업로드되었습니다. |
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 

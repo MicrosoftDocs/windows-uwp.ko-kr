@@ -5,18 +5,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f59ae45486ee72f9d901898f6b03674e6b3e299c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3cded3ee7fb2cc3157caa61939e022c3869f5232
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370097"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282373"
 ---
 # <a name="bluetooth-gatt-server"></a>Bluetooth GATT 서버
 
 
-**중요 한 Api**
-- [**Windows.Devices.Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
+**중요 API**
+- [**Windows. Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
 - [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
 
 
@@ -31,7 +31,7 @@ ms.locfileid: "66370097"
 Windows는 일반적으로 클라이언트 역할로 작동합니다. 그러나 많은 경우 Windows에서 Bluetooth LE GATT 서버로서도 작동해야 합니다. 대부분의 IoT 장치 시나리오에서 대부분의 플랫폼 간 BLE 통신과 함께 GATT 서버로 Windows가 필요합니다. 또한 근처 착용식 디바이스에 알림을 보내는 데 이 기술을 사용해야 하는 시나리오가 흔하게 사용되는 경우입니다.  
 > 계속하기 전에 [GATT 클라이언트 문서](gatt-client.md)의 모든 개념을 숙지해야 합니다.  
 
-서버 운영은 서비스 공급자 및 GattLocalCharacteristic을 중심으로 이루어집니다. 이 두 클래스를 선언, 구현 및 원격 장치에는 데이터의 계층 구조를 노출 하는 데 필요한 기능을 제공 합니다.
+서버 운영은 서비스 공급자 및 GattLocalCharacteristic을 중심으로 이루어집니다. 이러한 두 클래스는 데이터 계층 구조를 원격 장치에 선언 하 고 구현 하 고 노출 하는 데 필요한 기능을 제공 합니다.
 
 ## <a name="define-the-supported-services"></a>지원되는 서비스 정의
 앱은 Windows에 의해 게시될 하나 이상의 서비스를 선언할 수 있습니다. 각 서비스는 UUID로 고유하게 식별됩니다. 
@@ -40,7 +40,7 @@ Windows는 일반적으로 클라이언트 역할로 작동합니다. 그러나 
 각 서비스, 특성 및 설명자는 128비트 UUID로 정의됩니다.
 > 모든 Windows API는 GUID 용어를 사용하지만 Bluetooth 표준은 이를 UUID로 정의합니다. 목적을 위해 이 두 용어는 상호 변경 가능하므로 계속해서 UUID라는 용어를 사용합니다. 
 
-특성이 표준이며 Bluetooth SIG 정의에 정의된 경우 해당하는 약식 16비트 ID 또한 가질 수 있습니다(예: 배터리 수준 UUID는 0000**2A19**-0000-1000-8000-00805F9B34FB이며 약식 ID는 0x2A19임). 이러한 표준 UUID는 [GattServiceUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids) 및 [GattCharacteristicUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids)에서 볼 수 있습니다.
+특성이 표준 이며 Bluetooth SIG 정의에 의해 정의 된 경우 해당 하는 16 비트 짧은 ID (예: 배터리 수준 UUID가 0000**2A19**-0000-1000-8000-00805F9B34FB이 고 short ID는 0x2a19)입니다. 이러한 표준 UUID는 [GattServiceUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids) 및 [GattCharacteristicUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids)에서 볼 수 있습니다.
 
 앱에서 고유사용자 지정 서비스를 구현하는 경우 사용자 지정 UUID를 생성해야 합니다. 이는 Visual Studio에서 Tools -> CreateGuid("xxxxxxxx-xxxx-... xxxx" 형식에서 이를 얻으려면 옵션 5를 사용)를 사용하여 쉽게 완료할 수 있습니다. 이제 이 UUID를 사용하여 새 로컬 서비스, 특성 또는 설명자를 선언할 수 있습니다.
 
@@ -68,7 +68,7 @@ Windows는 일반적으로 클라이언트 역할로 작동합니다. 그러나 
 
 > 브로드캐스트는 현재 지원되지 않습니다.  브로드캐스트 GattCharacteristicProperty를 지정하면 예외가 발생합니다.
 
-### <a name="build-up-the-hierarchy-of-services-and-characteristics"></a>서비스 및 특성의 계층 구조를 구축
+### <a name="build-up-the-hierarchy-of-services-and-characteristics"></a>서비스 및 특성 계층 구조 구축
 GattServiceProvider는 루트 기본 서비스 정의를 만들고 보급하는 데 사용됩니다.  각 서비스에는 GUID에서 사용되는 고유한 ServiceProvider 개체가 필요합니다. 
 
 ```csharp
@@ -144,8 +144,8 @@ GattServiceProviderAdvertisingParameters advParameters = new GattServiceProvider
 };
 serviceProvider.StartAdvertising(advParameters);
 ```
-- **IsDiscoverable**: 원격 장치에 장치를 검색할 수 있도록 보급 알림 이름을 알립니다.
-- **IsConnectable**:  주변 역할에서 사용 하기 위해 연결 가능한 광고를 알립니다.
+- **Isdiscoverable 가능**: 광고의 원격 장치에 친숙 한 이름을 보급 하 여 장치를 검색할 수 있도록 합니다.
+- **Isconnectable**가능:  주변 장치 역할에 사용할 연결 가능 보급 알림을 보급 합니다.
 
 > 서비스가 검색 가능하며 연결 가능할 때 시스템은 알림 패킷에 서비스 UUID를 추가합니다.  알림 패킷은 고작 31바이트이며 128비트 UUID는 이 중 16바이트를 차지합니다!
 
@@ -154,7 +154,7 @@ serviceProvider.StartAdvertising(advParameters);
 ## <a name="respond-to-read-and-write-requests"></a>읽기 및 쓰기 요청에 응답
 위에서 설명한 것처럼 필요한 특성을 선언할 때 GattLocalCharacteristics는 ReadRequested, WriteRequested 및 SubscribedClientsChanged의 3가지 유형의 이벤트를 갖게 됩니다.
 
-### <a name="read"></a>읽기
+### <a name="read"></a>Read
 원격 디바이스에서 특성 값을 읽으려 할 때(상수 값이 아닌 경우), ReadRequested 이벤트가 호출됩니다. 인수(원격 장치에 대한 정보를 포함)와 함께 읽기가 호출된 특성이 대리자에게 전달됩니다. 
 
 ```csharp

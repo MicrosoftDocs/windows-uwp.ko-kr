@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: df1660f16127c2bc33a893a6e411b12e432272a1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b350aa58d7fed0bb78965dcd4742d759b8e9d988
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372630"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282451"
 ---
 # <a name="authentication-and-user-identity"></a>인증 및 사용자 ID
 
@@ -21,7 +21,7 @@ UWP(유니버설 Windows 플랫폼) 앱에는 [웹 인증 브로커](web-authent
 
 Facebook, Twitter, Flickr 등과 같이 타사 ID 공급자 서비스에 대한 일반적인 앱 연결의 경우에는 [웹 인증 브로커](web-authentication-broker.md)를 사용합니다. 더 편리하게 사용하려면 [자격 증명 보관](credential-locker.md)을 사용하여 사용자의 로그인 정보를 저장하고 로밍합니다.
 
-Windows 10을 사용 하 여 기업 방법을 사용 하 여 고려해 야 [Microsoft Passport 및 Windows Hello](microsoft-passport.md), 매우 안전한 2 단계 인증을 사용 하도록 설정 하는 합니다. Microsoft Passport를 사용할 수 없는 경우 [스마트 카드](smart-cards.md) 및 [지문 생체 인식](fingerprint-biometrics.md)을 통해 추가적으로 보안을 강화할 수 있습니다.
+Windows 10을 사용 하는 기업은 매우 안전한 2 단계 인증을 가능 하 게 하는 [Microsoft Passport 및 Windows Hello](microsoft-passport.md)를 사용 하는 것이 좋습니다. Microsoft Passport를 사용할 수 없는 경우 [스마트 카드](smart-cards.md) 및 [지문 생체 인식](fingerprint-biometrics.md)을 통해 추가적으로 보안을 강화할 수 있습니다.
 
 <table>
 <tr><th>항목</th><th>설명</th></tr>
@@ -33,7 +33,7 @@ Windows 10을 사용 하 여 기업 방법을 사용 하 여 고려해 야 [Micr
 <tr><td><a href="microsoft-passport-login-auth-service.md">Microsoft Passport 로그인 서비스 만들기</a></td><td>전체 연습의 2부에는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 기존의 사용자 이름 및 암호 인증 시스템에 대한 대안으로 Microsoft Passport를 사용하는 방법이 포함되어 있습니다.</td></tr>
 <tr><td><a href="smart-cards.md">스마트 카드</a></td><td>이 항목에서는 물리적 스마트 카드 판독기에 액세스하고, 가상 스마트 카드를 만들고, 스마트 카드와 통신하고, 사용자를 인증하고, 사용자 PIN을 다시 설정하고 스마트 카드를 제거하거나 분리하는 방법을 포함하여 앱에서 스마트 카드를 사용하여 사용자를 보안 네트워크 서비스에 연결할 수 있는 방법을 설명합니다.</td></tr>
 <tr><td><a href="share-certificates.md">앱 간에 인증서 공유</a></td><td>사용자 ID 및 암호 조합 이상의 보안 인증이 필요한 UWP 앱은 인증을 위해 인증서를 사용할 수 있습니다. 인증서 인증은 사용자를 인증할 때 높은 수준의 신뢰를 제공합니다. 서비스 그룹에서 여러 개의 앱에 대해 사용자를 인증하려는 경우도 있습니다. 이 문서에서는 동일한 인증서를 사용하여 여러 개의 앱을 인증하는 방법 및 보안 웹 서비스 액세스를 위해 제공된 인증서를 사용자가 가져오는 데 편리한 코드를 제공하는 방법을 보여 줍니다.</td></tr>
-<tr><td><a href="companion-device-unlock.md">도우미(IoT) 디바이스에서 Windows 잠금 해제</a></td><td>도우미 디바이스는 사용자 인증 환경을 향상하기 위해 Windows 10 데스크톱과 함께 실행할 수 있습니다. 도우미 디바이스 프레임워크를 사용하면 Windows Hello를 사용할 수 없는 경우(예: Windows 10 데스크톱에 안면 인증용 카메라 또는 지문 판독기를 사용할 수 없는 경우)에도 Microsoft Passport에 풍부한 환경을 제공할 수 있습니다.</td></tr>
+<tr><td><a href="companion-device-unlock.md">도우미(IoT) 디바이스에서 Windows 잠금 해제</a></td><td>도우미 디바이스는 사용자 인증 환경을 향상하기 위해 Windows 10 데스크톱과 함께 실행할 수 있습니다. 부록 장치 프레임 워크를 사용 하 여 Windows Hello를 사용할 수 없는 경우에도 Windows Hello를 사용할 수 없는 경우에도 Microsoft Passport에 대 한 풍부한 환경을 제공할 수 있습니다. 예를 들어 Windows 10 desktop에 얼굴 인증 또는 지문 판독기 장치용 카메라가 없는 경우 예).</td></tr>
 <tr><td><a href="web-account-manager.md">웹 계정 관리자</a></td><td>이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane을 표시하고 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다. 사용자의 사용 권한에서 Microsoft 계정을 사용하도록 요청하고, 액세스 토큰을 받고, 이를 사용하여 기본 작업(프로필 데이터 가져오기, OneDrive에 파일 업로드)을 수행하는 방법에 대해 살펴보겠습니다. </td></tr>
 <tr><td><a href="web-authentication-broker.md">웹 인증 브로커</a></td><td>이 문서에서는 앱을 OpenID 또는 OAuth 인증 프로토콜을 사용하는 온라인 ID 공급자(예: Facebook, Twitter, Flickr, Instagram 등)에 연결하는 방법을 설명합니다. <a href="https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync">AuthenticateAsync</a> 메서드는 온라인 ID 공급자로 요청을 보내고 앱이 액세스할 수 있는 공급자 리소스에 대해 설명하는 액세스 토큰을 다시 가져옵니다.</td></tr>
 </table>

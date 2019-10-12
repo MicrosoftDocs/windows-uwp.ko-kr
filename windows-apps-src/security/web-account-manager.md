@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: f567637f3d38ce80c320bfe92fff392efadeda8d
-ms.sourcegitcommit: 7803f11ba4c9194c350217cc06069a4707f15ed6
+ms.openlocfilehash: 557f5c03bda68d11507ba3b3b3b12823dbe6fd9f
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69017429"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282406"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
@@ -80,7 +80,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 
 ## <a name="register-for-accountcommandsrequested"></a>AccountCommandsRequested 등록
 
-창에 명령을 추가하려면 먼저 AccountCommandsRequested 이벤트 처리기를 등록합니다. 이렇게 하면 사용자가 창을 표시하도록 요청할 때(예: XAML 단추 클릭) 시스템은 빌드 논리를 실행하라는 지시를 받게 됩니다. 
+창에 명령을 추가하려면 먼저 AccountCommandsRequested 이벤트 처리기를 등록합니다. 그러면 사용자가 창을 볼 때 (예: XAML 단추 클릭) 빌드 논리를 실행 하 라는 메시지가 시스템에 표시 됩니다. 
 
 코드 숨김 파일에서 OnNavigatedTo 및 OnNavigatedFrom 이벤트를 재정의하고 다음 코드를 추가합니다. 
 
@@ -116,7 +116,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-다음으로 WebAuthenticationCoreManager.FindAccountProviderAsync 메서드를 사용하여 공급자를 가져옵니다. 공급자의 URL은 공급자에 따라 다르며 공급자 설명서에서 찾을 수 있습니다. Microsoft 계정과 Azure Active Directory의 경우 "https\://login.microsoft.com"입니다. 
+다음으로 WebAuthenticationCoreManager.FindAccountProviderAsync 메서드를 사용하여 공급자를 가져옵니다. 공급자의 URL은 공급자에 따라 다르며 공급자 설명서에서 찾을 수 있습니다. Microsoft 계정과 Azure Active Directory의 경우 "https @ no__t-0//"입니다. 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s,

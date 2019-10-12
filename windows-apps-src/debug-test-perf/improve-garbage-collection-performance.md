@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fdb4e80d7f8da022e2ceb5496cbad592d7d22716
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: f9e7cc16b65f4ee2727fae5a711da9372ee91c01
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339627"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282193"
 ---
 # <a name="improve-garbage-collection-performance"></a>가비지 수집 성능 향상
 
@@ -74,7 +74,7 @@ C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .
 
 ### <a name="avoid-reference-rich-objects"></a>참조가 많은 개체 방지
 
-가비지 수집기는 앱의 루트부터 개체 간 참조에 따라 유지할 개체를 결정합니다. 자세한 내용은 [가비지 수집 중에 수행되는 작업](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals)을 참조하세요. 개체에 여러 참조가 포함된 경우에는 가비지 수집기가 수행할 작업이 더 많습니다. 특히 큰 개체인 경우 일반적인 방법은 참조가 많은 개체를 참조가 없는 개체로 변환하는 것입니다. 즉, 참조를 저장하지 않고 인덱스를 저장합니다. 물론 이 방법은 논리적으로 가능한 경우에만 작동합니다.
+가비지 수집기는 앱의 루트부터 개체 간 참조에 따라 유지할 개체를 결정합니다. 자세한 내용은 [가비지 수집 중에 수행되는 작업](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals)을 참조하세요. 개체에 여러 참조가 포함된 경우에는 가비지 수집기가 수행할 작업이 더 많습니다. 일반적인 방법 (특히, 많은 개체)은 참조를 포함 하지 않는 참조 서식 개체를 개체로 변환 하는 것입니다. 예를 들어 참조를 저장 하는 대신 인덱스를 저장 합니다. 물론 이 방법은 논리적으로 가능한 경우에만 작동합니다.
 
 개체 참조를 인덱스로 바꾸는 작업은 앱에 지장을 주고 복잡한 변경일 수 있으므로 상당한 참조가 포함된 큰 개체의 경우에 가장 효과적입니다. 참조가 많은 개체에 관련된 앱에서 상당한 가비지 수집 횟수가 발견된 경우에만 이 작업을 수행하세요.
 

@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d8550d346833559ccea1e8aea4ae73a8c6d4e7c
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5807cdc19e4b38c8cc8fa4ca45c4ef47e79b7742
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318656"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282254"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>앱 URI 처리기를 사용하여 웹 사이트에 대해 앱 활성화
 
@@ -23,7 +23,7 @@ ms.locfileid: "67318656"
 - 앱의 활성화를 처리합니다.
 
 > [!Note]
-> Windows 10 크리에이터 스 업데이트부터, Microsoft Edge에서 클릭 하는 지원 되는 링크 해당 앱이 시작 됩니다. 다른 브라우저(예: Internet Explorer 등)에서 지원되는 링크를 클릭하면 브라우저를 계속 사용할 수 있습니다.
+> Windows 10 크리에이터 업데이트부터 Microsoft Edge에서 지원 되는 링크를 클릭 하면 해당 앱이 시작 됩니다. 다른 브라우저 (예: Internet Explorer 등)에서 지원 되는 링크를 클릭 하면 검색 환경을 유지할 수 있습니다.
 
 ## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>앱 매니페스트에서 http 및 https 링크를 처리하도록 등록
 
@@ -46,7 +46,7 @@ ms.locfileid: "67318656"
 </Applications>
 ```
 
-위의 선언은 지정된 호스트의 링크를 처리하도록 앱을 등록합니다. 웹 사이트에 여러 개의 주소가 하는 경우 (예를 들어: m.example.com, www\.example.com, 및 example.com) 추가한 다음 별도 `<uap3:Host Name=... />` 내부의 항목은 `<uap3:AppUriHandler>` 각 주소에 대 한 합니다.
+위의 선언은 지정된 호스트의 링크를 처리하도록 앱을 등록합니다. 웹 사이트에 여러 개의 주소 (예: m.example.com, www\.example.com 및 example.com)가 있는 경우 각 주소에 대해 `<uap3:AppUriHandler>` 내에 별도의 `<uap3:Host Name=... />` 항목을 추가 합니다.
 
 ## <a name="associate-your-app-and-website-with-a-json-file"></a>JSON 파일을 사용하여 앱과 웹 사이트 연결
 
@@ -71,12 +71,12 @@ Windows는 웹 사이트에 https로 연결하여 웹 서버에서 해당 JSON �
 
 위의 JSON 파일 예제에서는 와일드카드를 사용하는 방법을 보여 줍니다. 와일드카드를 사용하면 더 적은 줄의 코드로 다양한 링크를 지원할 수 있습니다. 웹과 앱 연결은 JSON 파일에서 두 가지 유형의 와일드카드를 지원합니다.
 
-| **Wildcard** | **설명**               |
+| **카드인** | **설명**               |
 |--------------|-------------------------------|
 | **\***       | 모든 하위 문자열을 나타냅니다.      |
 | **?**        | 단일 문자를 나타냅니다. |
 
-예를 들어, 위의 예제에서처럼 `"excludePaths" : [ "/news/*", "/blog/*" ]`를 지정하면 앱은 `/news/` 및 `/blog/` 아래의 경로를 **제외**하고 웹 사이트의 주소(예: msn.com)로 시작하는 모든 경로를 지원합니다. **msn.com/weather.html** 제외한 지원 될 예정 **msn.com/news/topnews.html**합니다.
+예를 들어 위의 예제에서 `"excludePaths" : [ "/news/*", "/blog/*" ]`으로 지정 된 경우 앱은 `/news/` 및 `/blog/`의 주소를 **제외** 하 고 웹 사이트 주소 (예: msn.com)로 시작 하는 모든 경로를 지원 합니다. **msn.com/weather.html** 는 지원 되지만 **msn.com/news/topnews.html**은 지원 되지 않습니다.
 
 ### <a name="multiple-apps"></a>여러 앱
 
@@ -89,14 +89,14 @@ Windows는 웹 사이트에 https로 연결하여 웹 서버에서 해당 JSON �
   "excludePaths" : [ "/news/*", "/blog/*" ]
  },
  {
-  "packageFamilyName": "Your second app's package family name, e.g. MyApp2_8jmtgj2pbbz6e",
+  "packageFamilyName": "Your second app's package family name, for example, MyApp2_8jmtgj2pbbz6e",
   "paths": [ "/example/*", "/links/*" ]
  }]
 ```
 
 사용자에게 최상의 환경을 제공하려면 제외 경로를 사용하여 온라인 전용 콘텐츠가 JSON 파일의 지원되는 경로에서 제외되도록 합니다.
 
-제외 경로를 먼저 확인하고 일치하는 경로가 있으면 지정된 앱 대신 브라우저에서 해당 페이지가 열립니다. 위의 예에서 ' /news/\*' 하는 동안 해당 경로 아래의 모든 페이지가 포함 됩니다 ' / 뉴스\*' (없습니다 슬래시 '뉴스'를 추적 하는 데 사용)에서 모든 경로 포함 ' 뉴스\*' 같은 ' newslocal /', ' newsinternational /' 등입니다.
+제외 경로를 먼저 확인하고 일치하는 경로가 있으면 지정된 앱 대신 브라우저에서 해당 페이지가 열립니다. 위의 예에서 '/news/\* '은 해당 경로 아래에 있는 모든 페이지를 포함 하는 반면 '/news @ no__t-1 ' (슬래시 없는 ' news ')는 ' newslocal/', ' newsinternational/' 등의 ' news @ no__t-2 ' 아래에 있는 경로를 포함 합니다.
 
 ## <a name="handle-links-on-activation-to-link-to-content"></a>콘텐츠 연결 활성화에 대한 링크 처리
 
@@ -150,19 +150,19 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 **중요** 위 예제에서와 같이 마지막 `if (rootFrame.Content == null)` 논리를 `rootFrame.Navigate(deepLinkPageType, e);`으로 대체해야 합니다.
 
-## <a name="test-it-out-local-validation-tool"></a>테스트 하 합니다. 도구 로컬 유효성 검사
+## <a name="test-it-out-local-validation-tool"></a>테스트: 로컬 유효성 검사 도구
 
 다음에서 사용할 수 있는 앱 호스트 등록 검증 도구를 실행하여 앱 및 웹 사이트의 구성을 테스트할 수 있습니다.
 
-%windir%\\system32\\**AppHostRegistrationVerifier.exe**
+% windir% \\system32 @ no__t-1**Apphostregistrationverifier. .exe**
 
 다음 매개 변수로 이 도구를 실행하여 앱 및 웹 사이트의 구성을 테스트합니다.
 
-**AppHostRegistrationVerifier.exe** *hostname packagefamilyname 파일 경로*
+**Apphostregistrationverifier** *호스트 이름 packagefamilyname filepath*
 
 -   호스트 이름: 웹 사이트 (예: microsoft.com)
--   패키지 제품군 이름 (PFN): 앱의 PFN
--   파일 경로: -로컬 유효성 검사에 대 한 JSON 파일 (예: c:\\SomeFolder\\windows 앱-웹 링크)
+-   PFN (패키지 패밀리 이름): 앱의 PFN
+-   파일 경로: 로컬 유효성 검사를 위한 JSON 파일 (예: C: \\SomeFolder @ no__t-1windows)
 
 도구에서 아무 것도 반환하지 않는 경우, 해당 파일 업로드 시 유효성 검사가 이루어집니다. 오류 코드가 있는 경우, 작동하지 않습니다.
 
@@ -171,11 +171,11 @@ protected override void OnActivated(IActivatedEventArgs e)
 `HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
 AppModel\SystemAppData\YourApp\AppUriHandlers`
 
-키 이름: `ForceValidation` 값: `1`
+Keyname `ForceValidation` 값: `1`
 
 ## <a name="test-it-web-validation"></a>테스트: 웹 유효성 검사
 
-응용 프로그램을 닫고 링크를 클릭하면 앱이 활성화되는지 확인합니다. 그런 다음 웹 사이트에서 지원되는 경로 중 하나의 주소를 복사합니다. 예를 들어, 웹 사이트의 주소는 "msn.com", "1 번 경로 입구"가 지원 경로 중 하나를 사용 `http://msn.com/path1`
+응용 프로그램을 닫고 링크를 클릭하면 앱이 활성화되는지 확인합니다. 그런 다음 웹 사이트에서 지원되는 경로 중 하나의 주소를 복사합니다. 예를 들어 웹 사이트의 주소가 "msn.com"이 고 지원 경로 중 하나가 "path1" 인 경우 `http://msn.com/path1`을 사용 합니다.
 
 앱이 닫혀 있는지 확인합니다. **Windows 키+R**을 눌러 **실행** 대화 상자를 열고 창에 링크를 붙여넣습니다. 웹 브라우저 대신 앱이 실행되어야 합니다.
 
@@ -186,7 +186,7 @@ AppModel\SystemAppData\YourApp\AppUriHandlers`
 ## <a name="appurihandlers-tips"></a>AppUriHandlers 팁:
 
 - 앱에서 처리할 수 있는 링크만 지정해야 합니다.
-- 지원하는 모든 호스트를 나열합니다.  참고는 www\.example.com example.com와 서로 다른 호스트 합니다.
+- 지원하는 모든 호스트를 나열합니다.  Www\.example.com와 example.com는 서로 다른 호스트입니다.
 - 설정에서 웹 사이트를 처리하려는 앱을 선택할 수 있습니다.
 - JSON 파일은 https 서버에 업로드해야 합니다.
 - 지원하려는 경로를 변경해야 하는 경우 앱을 다시 게시하지 않고 JSON 파일을 다시 게시할 수 있습니다. 사용자는 1-8일 내에 변경 사항을 확인할 수 있습니다.

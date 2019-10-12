@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 316682ba136b5b3249d26abd0a5c5a877abbcf12
-ms.sourcegitcommit: 76357092f90b70bdb21ee43a5a416fe1fbfd9b89
+ms.openlocfilehash: c99d05a701f41e24663d116773b000017b805d81
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72257938"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72281798"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>패키지 된 데스크톱 앱을 Windows 10 및 UWP와 통합
 
@@ -62,7 +62,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 |이름 | 설명 |
 |-------|-------------|
-|Category |항상 ``windows.desktopAppMigration``입니다.
+|범주 |항상 ``windows.desktopAppMigration``입니다.
 |AumID |패키지 앱의 응용 프로그램 사용자 모델 ID입니다. |
 |ShortcutPath |데스크톱 버전의 앱을 시작하는 .lnk 파일에 대한 경로입니다. |
 
@@ -122,7 +122,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.fileTypeAssociation``입니다.
+|범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |MigrationProgId |파일 연결을 상속 하려는 데스크톱 응용 프로그램, 구성 요소 및 응용 프로그램의 버전을 설명 하는 [ProgID (프로그래밍 식별자)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) 입니다.|
 
@@ -181,7 +181,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.fileTypeAssociation``입니다.
+|범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 | 파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다.   |
 |FileType |앱에서 지원하는 파일 확장명입니다. |
 
@@ -242,12 +242,12 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 |이름 |설명 |
 |-------|-------------|
-|Category | 항상 ``windows.fileTypeAssociation``입니다.
+|범주 | 항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |동사 |파일 탐색기 컨텍스트 메뉴에 표시되는 이름입니다. 이 문자열은 ```ms-resource```를 사용하여 지역화할 수 있습니다.|
 |Id |동사의 고유 ID입니다. 응용 프로그램이 UWP 앱 인 경우 사용자의 선택 항목을 적절 하 게 처리할 수 있도록 해당 활성화 이벤트의 일부로 앱에 전달 됩니다. 응용 프로그램이 완전 신뢰 패키지 앱 인 경우 매개 변수를 대신 받습니다 (다음 글머리 기호 참조). |
 |매개 변수 |동사와 연관된 인수 매개 변수 및 값의 목록입니다. 응용 프로그램이 완전 신뢰 패키지 앱 인 경우 응용 프로그램이 활성화 될 때 이러한 매개 변수가 이벤트 인수로 응용 프로그램에 전달 됩니다. 다른 활성화 동사에 따라 응용 프로그램의 동작을 사용자 지정할 수 있습니다. 변수가 파일 경로를 포함할 수 있는 경우에는 매개 변수 값을 따옴표로 묶습니다. 이렇게 해야 경로에 공백이 포함된 경우에 발생하는 모든 문제를 방지할 수 있습니다. 응용 프로그램이 UWP 앱 인 경우 매개 변수를 전달할 수 없습니다. 대신에 앱은 ID를 수신합니다 (이전 항목 참조).|
-|확장 |사용자가 파일을 마우스 오른쪽 단추로 클릭하기 전에 **Shift** 키를 눌러서 컨텍스트 메뉴를 표시하는 경우에만 동사 메뉴가 표시되도록 지정합니다. 이 특성은 선택적으로 사용할 수 있으며, 목록에 없는 경우 기본적으로 **False**로 설정됩니다. 각 동사에 대해 개별적으로 이 동작을 지정합니다(항상 **False**인 "열기"는 예외).|
+|확장 |사용자가 파일을 마우스 오른쪽 단추로 클릭하기 전에 **Shift** 키를 눌러서 컨텍스트 메뉴를 표시하는 경우에만 동사 메뉴가 표시되도록 지정합니다. 이 특성은 선택 사항이 며, 나열 되지 않은 경우 항상 동사를 표시 하는 등 **False** 값으로 설정 됩니다. 각 동사에 대해 개별적으로 이 동작을 지정합니다(항상 **False**인 "열기"는 예외).|
 
 #### <a name="example"></a>예제
 
@@ -306,7 +306,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.fileTypeAssociation``입니다.
+|범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |UseUrl |URL 대상에서 직접 파일을 열 것인지 여부를 나타냅니다. 이 값을 설정 하지 않으면 응용 프로그램에서 URL을 사용 하 여 파일을 열도록 시도 하면 시스템이 먼저 파일을 로컬로 다운로드 합니다. |
 |매개 변수 | 선택적 매개 변수입니다. |
@@ -372,7 +372,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.firewallRules``|
+|범주 |항상 ``windows.firewallRules``|
 |실행 파일 |방화벽 예외 목록에 추가하고자 하는 실행 파일의 이름 |
 |Direction |인바운드 규칙인지 아웃바운드 규칙인지를 표시 |
 |IPProtocol |통신 프로토콜 |
@@ -432,7 +432,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 |이름 | 설명 |
 |-------|-------------|
-|Category |항상 ``windows.loaderSearchPathOverride``입니다.
+|범주 |항상 ``windows.loaderSearchPathOverride``입니다.
 |FolderPath | DLL 파일을 포함하는 폴더의 경로. 패키지의 루트 폴더와 관련된 경로를 지정합니다. 한 확장에서 최대 5개의 경로를 지정할 수 있습니다. 시스템이 패키지의 루트 폴더에서 파일을 검색하려는 경우 이러한 경로 중 하나에 대해 빈 문자열을 사용합니다. 중복 경로를 포함해서는 안되며 경로가 선행 또는 후행 슬래시 또는 백슬래시를 포함하지 않는지 확인하세요. <br><br> 시스템은 하위 폴더를 검색하지 않으므로 시스템에서 로드하기 원하는 DLL 파일을 포함하는 각 폴더를 명시적으로 나열하도록 하세요.|
 
 #### <a name="example"></a>예제
@@ -497,7 +497,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.fileTypeAssociation``입니다.
+|범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |MultiSelectModel |아래 참조 |
 |FileType |관련 파일 확장명입니다. |
@@ -572,7 +572,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.fileTypeAssociation``입니다.
+|범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |FileType |관련 파일 확장명입니다. |
 |Clsid   |앱의 클래스 ID입니다. |
@@ -634,7 +634,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.fileTypeAssociation``입니다.
+|범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |FileType |관련 파일 확장명입니다. |
 |Clsid   |앱의 클래스 ID입니다. |
@@ -699,7 +699,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.fileTypeAssociation``입니다.
+|범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |FileType |관련 파일 확장명입니다. |
 |값 |유효한 [종류 값](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names)입니다. |
@@ -760,7 +760,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.fileTypeAssociation``입니다.
+|범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름을 사용 하 여 파일 형식을 구성 하 고 그룹화 할 수 있습니다. 이름은 공백 없이 모두 소문자 여야 합니다. |
 |FileType |관련 파일 확장명입니다. |
 |Clsid  |앱의 클래스 ID입니다. |
@@ -916,7 +916,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.cloudfiles``입니다.
+|범주 |항상 ``windows.cloudfiles``입니다.
 |iconResource |클라우드 파일 공급자 서비스를 나타내는 아이콘. 이 아이콘은 파일 탐색기의 탐색 창에 표시됩니다.  사용자는 이 아이콘을 클라우드 서비스의 파일을 표시하려면 이 아이콘을 선택합니다. |
 |CustomStateHandler Clsid |CustomStateHandler를 구현 하는 응용 프로그램의 클래스 ID입니다. 시스템은 이 클래스 ID를 사용하여 클라우드 파일에 대한 사용자 지정 상태 및 열을 요청합니다. |
 |ThumbnailProviderHandler Clsid |ThumbnailProviderHandler을 구현 하는 응용 프로그램의 클래스 ID입니다. 시스템은 이 클래스 ID를 사용하여 클라우드 파일에 대한 미리 보기 이미지를 요청합니다. |
@@ -986,7 +986,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.protocol``입니다.
+|범주 |항상 ``windows.protocol``입니다.
 |이름 |프로토콜의 이름입니다. |
 |매개 변수 |응용 프로그램이 활성화 될 때 응용 프로그램에 이벤트 인수로 전달할 매개 변수 및 값의 목록입니다. 변수가 파일 경로를 포함할 수 있는 경우에는 매개 변수 값을 따옴표로 묶습니다. 이렇게 해야 경로에 공백이 포함된 경우에 발생하는 모든 문제를 방지할 수 있습니다. |
 
@@ -1038,7 +1038,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.appExecutionAlias``입니다.
+|범주 |항상 ``windows.appExecutionAlias``입니다.
 |실행 파일 |별칭이 호출될 때 시작할 실행 파일에 대한 상대 경로입니다. |
 |별칭 |앱에 대한 간단한 이름입니다. 항상 확장명이 ".exe"로 끝나야 합니다. 패키지의 각 응용 프로그램에 대해 하나의 앱 실행 별칭만 지정할 수 있습니다. 여러 앱이 같은 별칭으로 등록되는 경우 시스템은 다른 앱에서 재정의할 가능성이 없는 고유한 별칭을 선택하기 위해 마지막에 등록된 항목을 호출합니다.
 |
@@ -1101,7 +1101,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.startupTask``입니다.|
+|범주 |항상 ``windows.startupTask``입니다.|
 |실행 파일 |시작하려는 실행 파일에 대한 상대 경로입니다. |
 |TaskId |작업의 고유 ID입니다. 응용 프로그램은이 식별자를 사용 하 여 시작 작업을 프로그래밍 방식으로 사용 하거나 사용 하지 않도록 설정 하기 위해 [Windows](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) 의 api를 호출할 수 있습니다. |
 |Enabled |작업이 처음에 활성화 또는 비활성화 상태로 시작할 것인지를 나타냅니다. 사용하는 작업은 다음번에 사용자가 로그온할 때 실행됩니다(사용자가 사용하지 않도록 설정하지 않는 한). |
@@ -1156,7 +1156,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.autoPlayHandler``입니다.
+|범주 |항상 ``windows.autoPlayHandler``입니다.
 |ActionDisplayName |사용자가 PC에 연결 하는 장치에서 수행할 수 있는 작업을 나타내는 문자열입니다. 예를 들면 다음과 같습니다. "파일 가져오기" 또는 "비디오 재생"). |
 |ProviderDisplayName | 응용 프로그램 또는 서비스를 나타내는 문자열입니다. 예를 들면 다음과 같습니다. "Contoso video player"). |
 |ContentEvent |사용자에게 ``ActionDisplayName``및 ``ProviderDisplayName``을 알리는 메시지가 표시하는 콘텐츠 이벤트의 이름. 콘텐츠 이벤트는 카메라 메모리 카드, 썸 드라이브(thumb drive) 또는 DVD 같은 볼륨 장치가 PC에 삽입될 때 발생합니다. 이러한 이벤트의 전체 목록은 [여기](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference)에서 찾을 수 있습니다.  |
@@ -1243,7 +1243,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.appPrinter``입니다.
+|범주 |항상 ``windows.appPrinter``입니다.
 |DisplayName |앱에 대한 인쇄 대상 목록에 표시할 이름입니다. |
 |매개 변수 |응용 프로그램에서 요청을 올바르게 처리 하는 데 필요한 매개 변수입니다. |
 
@@ -1293,7 +1293,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.sharedFonts``입니다.
+|범주 |항상 ``windows.sharedFonts``입니다.
 |파일 |공유하려는 글꼴이 포함된 파일입니다. |
 
 #### <a name="example"></a>예제
@@ -1339,7 +1339,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
 |이름 |설명 |
 |-------|-------------|
-|Category |항상 ``windows.fullTrustProcess``입니다.
+|범주 |항상 ``windows.fullTrustProcess``입니다.
 |GroupID |실행 파일에 전달할 매개 변수 집합을 식별하는 문자열입니다. |
 |매개 변수 |실행 파일에 전달하려는 매개 변수입니다. |
 

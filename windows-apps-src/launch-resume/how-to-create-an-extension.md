@@ -5,12 +5,12 @@ keywords: 앱 확장, 앱 서비스, 백그라운드
 ms.date: 10/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: bdd6d3fb875e95f251e02f07e7af563c95a400a6
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 1cb5395238ad6813556b7ae254ca4a86bc8f5b28
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682780"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282387"
 ---
 # <a name="create-and-host-an-app-extension"></a>앱 확장 만들기 및 호스팅
 
@@ -19,7 +19,7 @@ ms.locfileid: "68682780"
 이 문서에는 다음과 같은 코드 샘플이 있습니다.
 - [Math Extension 코드 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip)을 다운로드하고 압축을 풉니다.
 - Visual Studio 2019에서 MathExtensionSample를 엽니다. 빌드 유형을 x86(**빌드** > **구성 관리자**에서 두 프로젝트에 대해 **플랫폼**을 **x86**으로 변경)으로 설정합니다.
-- 솔루션을 배포 합니다. > **솔루션 배포**를 빌드합니다.
+- 솔루션을 배포 합니다. @No__t-1**솔루션 배포**를 **빌드합니다**.
 
 ## <a name="introduction-to-app-extensions"></a>앱 확장 소개
 
@@ -74,7 +74,7 @@ _MathExtensionHost 프로젝트의 appxmanifest.xml_
 
 `xmlns:uap3="http://..."` 및 `IgnorableNamespaces`의 `uap3`에 주목합니다. uap3 네임스페이스를 사용하기 때문에 이것이 필요합니다.
 
-`<uap3:Extension Category="windows.appExtensionHost">`이 앱을 확장 호스트로 식별 합니다.
+`<uap3:Extension Category="windows.appExtensionHost">`은이 앱을 확장 호스트로 식별 합니다.
 
 `<uap3:AppExtensionHost>`의 **이름** 요소는 _확장 계약_ 이름입니다. 확장에서 동일한 확장 계약 이름을 지정하면 호스트가 해당 확장 계약 이름을 찾을 수 있습니다. 일반적으로 다른 확장 계약 이름과 잠재적인 충돌을 피하기 위해 앱 또는 게시자 이름을 사용하여 확장 계약 이름을 빌드하는 것이 좋습니다.
 
@@ -116,11 +116,11 @@ _MathExtension 프로젝트의 appxmanifest.xml:_
 
 `xmlns:uap3="http://..."` 라인 및 `IgnorableNamespaces`의 `uap3`에 다시 주목합니다. `uap3` 네임스페이스를 사용하기 때문에 이것이 필요합니다.
 
-`<uap3:Extension Category="windows.appExtension">`이 앱을 확장으로 식별 합니다.
+`<uap3:Extension Category="windows.appExtension">`은이 앱을 확장으로 식별 합니다.
 
 `<uap3:AppExtension>` 특성의 의미는 다음과 같습니다.
 
-|attribute|설명|필수|
+|특성|Description|필수|
 |---------|-----------|:------:|
 |**이름**|확장 계약 이름입니다. 호스트에서 선언된 **이름**과 일치하면 해당 호스트는 이 확장을 찾을 수 있습니다.| :heavy_check_mark: |
 |**ID**| 이 확장을 고유하게 식별합니다. 동일한 확장 계약 이름을 사용하는 여러 개의 확장이 있을 수 있으므로(여러 확장을 지원하는 페인트 앱을 상상할 수 있음) ID를 사용하여 구분할 수 있습니다. 앱 확장 호스트는 ID를 사용하여 확장 유형에 대한 정보를 추측할 수 있습니다. 예를 들어 데스크톱용으로 설계된 확장과 차별화 요소인 ID를 사용하여 모바일용으로 설계된 확장 중 하나를 사용할 수 있습니다. 아래에서 설명하는 **속성** 요소를 사용할 수도 있습니다.| :heavy_check_mark: |
@@ -128,7 +128,7 @@ _MathExtension 프로젝트의 appxmanifest.xml:_
 |**설명** | 호스트 앱에서 사용자에 대한 확장을 설명하는 데 사용할 수 있습니다. 쿼리 가능하며, 지역화를 위해 [새로운 리소스 관리 시스템](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games)(`ms-resource:TokenName`)을 사용할 수 있습니다. 지역화된 콘텐츠는 호스트 앱이 아니라 앱 확장 패키지에서 로드됩니다. | |
 |**PublicFolder**|확장 호스트와 콘텐츠를 공유할 수 있는 패키지 루트에 상대적인 폴더의 이름입니다. 일반적으로 이름은 "공개"이지만 확장의 폴더와 일치하는 이름을 사용할 수 있습니다.| :heavy_check_mark: |
 
-`<uap3:Properties>`는 런타임에서 읽을 수 있는 사용자 지정 메타 데이터를 포함 하는 선택적 요소입니다. 코드 샘플에서 확장은 앱 서비스로 구현되므로 호스트는 해당 앱 서비스의 이름을 가져와서 호출할 수 있어야 합니다. 앱 서비스의 이름은 미리 정의한 <Service> 요소에 정의되어 있습니다(원하는 대로 부를 수 있음). 코드 샘플의 호스트는 런타임 시 이 속성을 검색하여 앱 서비스의 이름을 확인합니다.
+`<uap3:Properties>`은 호스트에서 런타임에 읽을 수 있는 사용자 지정 메타 데이터를 포함 하는 선택적 요소입니다. 코드 샘플에서 확장은 앱 서비스로 구현되므로 호스트는 해당 앱 서비스의 이름을 가져와서 호출할 수 있어야 합니다. 앱 서비스의 이름은 미리 정의한 <Service> 요소에 정의되어 있습니다(원하는 대로 부를 수 있음). 코드 샘플의 호스트는 런타임 시 이 속성을 검색하여 앱 서비스의 이름을 확인합니다.
 
 ## <a name="decide-how-you-will-implement-the-extension"></a>확장을 구현하는 방법을 결정합니다.
 
@@ -211,7 +211,7 @@ _MathExtension 프로젝트의 appxmanifest.xml_
 
 호스트가 확장을 로드하면 다음과 같은 코드가 확장의 Package.appxmanifest에 정의된 속성에서 서비스의 이름을 추출합니다.
 
-_`Update()`ExtensionManager.cs의 MathExtensionHost 프로젝트에서_
+_MathExtensionHost 프로젝트에서 ExtensionManager.cs의 `Update()`_
 ```cs
 ...
 var properties = await ext.GetExtensionPropertiesAsync() as PropertySet;
@@ -233,13 +233,13 @@ if (_properties != null)
 
 앱 서비스의 이름이 `_serviceName`에 저장되면 호스트는 이를 사용하여 앱 서비스를 호출할 수 있습니다.
 
-앱 서비스를 호출하려면 앱 서비스가 포함된 패키지의 패밀리 이름도 필요합니다. 다행히 앱 확장 API는 줄에서 얻을 수 있는이 정보를 제공 합니다.`connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;`
+앱 서비스를 호출하려면 앱 서비스가 포함된 패키지의 패밀리 이름도 필요합니다. 다행히 앱 확장 API는 `connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;` 줄에서 얻을 수 있는이 정보를 제공 합니다.
 
 ### <a name="define-how-the-host-and-the-extension-will-communicate"></a>호스트와 해당 확장이 통신하는 방법을 정의합니다.
 
 앱 서비스에서는 [ValueSet](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset)를 사용하여 정보를 교환합니다. 호스트 작성자는 유연한 확장과 통신하기 위한 프로토콜을 제시해야 합니다. 코드 샘플에서 이는 향후 1, 2 또는 그 이상의 인수를 취할 수 있는 확장을 의미합니다.
 
-이 예에서 인수에 대한 프로토콜은 'Arg'+ 인수 번호와 같은 키 값 쌍을 포함하는 **ValueSet**입니다(예: `Arg1`및 `Arg2`). 호스트는 **ValueSet**에 있는 모든 인수를 전달하며 확장은 필요한 인수를 사용합니다. 확장이 결과를 계산할 수 있는 경우 호스트는 확장에서 반환된 **ValueSet**가 계산 값을 포함하는 `Result`라는 키를 가질 것으로 예상합니다. 해당 키가 없으면 호스트는 확장이 계산을 완료할 수 없다고 가정합니다.
+이 예제에서 인수에 대 한 프로토콜은 ' Arg ' 라는 키 값 쌍을 포함 하는 **Valueset** 와 인수 번호 (예: `Arg1` 및 `Arg2`)입니다. 호스트는 **ValueSet**에 있는 모든 인수를 전달하며 확장은 필요한 인수를 사용합니다. 확장이 결과를 계산할 수 있는 경우 호스트는 확장에서 반환된 **ValueSet**가 계산 값을 포함하는 `Result`라는 키를 가질 것으로 예상합니다. 해당 키가 없으면 호스트는 확장이 계산을 완료할 수 없다고 가정합니다.
 
 ### <a name="extension-app-service-code"></a>확장 앱 서비스 코드
 

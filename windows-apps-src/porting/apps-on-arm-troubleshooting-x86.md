@@ -5,12 +5,12 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10 s, 항상 연결, x86 ARM 기반 에뮬레이션, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 480d9cd6508b149e0d4966bae8835c05d30db7af
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 20aa5943fc1f3f0176cde33983da1fceca8a49ba
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682742"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282353"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>x86 데스크톱 앱의 문제 해결
 >[!IMPORTANT]
@@ -40,7 +40,7 @@ x86 데스크톱 앱 x86 컴퓨터에서와 다르게 작동하는 경우 문제
 모든 커널 모드 드라이버, [사용자 모드 드라이버 프레임워크(UMDF)](https://docs.microsoft.com/windows-hardware/drivers/wdf/overview-of-the-umdf) 드라이버 및 인쇄 드라이버가 운영 체제의 아키텍처와 일치하도록 컴파일되어야 합니다. x86 앱에 드라이버가 있는 경우 그 드라이버를 ARM64에 대해 다시 컴파일해야 합니다. x86 앱은 에뮬레이션 하에 잘 실행될지도 모르지만 그 드라이버는 ARM64에 대해 다시 컴파일해야 하며 해당 드라이버를 사용하는 모든 앱 환경을 사용할 수 없게 됩니다. ARM64에 대한 드라이버를 컴파일하는 것에 대한 자세한 내용은 [WDK를 사용하여 ARM64 드라이버 빌드](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers)를 참조하세요.
 
 ## <a name="shell-extensions"></a>셸 확장 
-Windows 구성 요소를 연결하거나 DLL을 Windows 프로세스에 로드하려고 시도하는 앱은 시스템의 아키텍처, 즉, ARM64와 일치하도록 DLL을 다시 컴파일해야 합니다. 일반적으로 입력기(IME), 보조 기술 및 셸 확장 앱(예: 탐색기에서 클라우드 저장소 아이콘 표시 또는 컨텍스트 메뉴 오른쪽 마우스로 클릭)에 의해 사용됩니다. 앱 또는 DLL을 ARM64에 다시 컴파일하는 방법을 알아보려면 [ARM 개발에서 Windows 10에 대한 Visual Studio 지원 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) 블로그 게시물을 참조하세요. 
+Windows 구성 요소를 연결하거나 DLL을 Windows 프로세스에 로드하려고 시도하는 앱은 시스템의 아키텍처, 즉, ARM64와 일치하도록 DLL을 다시 컴파일해야 합니다. 일반적으로 이러한 메서드는 Ime (입력기), 보조 기술 및 셸 확장 앱에서 사용 됩니다. 예를 들어, 탐색기에 클라우드 저장소 아이콘을 표시 하거나 상황에 맞는 메뉴를 마우스 오른쪽 단추로 클릭 합니다. 앱 또는 DLL을 ARM64에 다시 컴파일하는 방법을 알아보려면 [ARM 개발에서 Windows 10에 대한 Visual Studio 지원 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) 블로그 게시물을 참조하세요. 
 
 ## <a name="debugging"></a>디버깅
 앱의 동작에 대해 더 깊이 탐구하려면 [ARM 기반 디버깅](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-arm64)을 참조하여 ARM 기반 디버깅을 위한 도구 및 전략에 대해 자세한 정보를 알아보세요.

@@ -6,12 +6,12 @@ ms.date: 08/02/2019
 ms.topic: article
 keywords: Windows 10, uwp, 지급액 요약, 내역서, 결제, 수익, 지급액, 결제, 수익
 ms.localizationpriority: medium
-ms.openlocfilehash: 68a7de0692d05ffe8d1b489e75a58c16b3c826df
-ms.sourcegitcommit: 9779be4a1075e924dca7585808722d95cda99aff
+ms.openlocfilehash: 89cb689f0dce4f7dbaec96e9ce109e60d4292f92
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118068"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282483"
 ---
 # <a name="payout-summary"></a>지급 요약
 
@@ -122,7 +122,7 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 | 레버                          | 획득에 대 한 비즈니스 규칙을 나타냅니다.                                                                                                  | 모두                                                            |
 | earningRate                    | 획득을 생성 하기 위해 트랜잭션 양에 적용 되는 동기 율                                                                      | 모두                                                            |
 | quantity                       | 프로그램에 따라 다릅니다. 트랜잭션 프로그램의 청구 수량을 나타냅니다.                                                            | 모두                                                            |
-| quantityType                   | 수량 유형 (예: 청구 수량, MAU)을 나타냅니다.                                                                                     | 모두                                                            |
+| quantityType                   | 수량 유형 (예: 청구 된 수량, MAU)을 나타냅니다.                                                                                     | 모두                                                            |
 | earningType                    | 요금, 리베이트, coop, 판매 등 인지를 나타냅니다.                                                                                          | 모두                                                            |
 | earningAmount                  | 원래 트랜잭션 통화 금액을 획득 합니다.                                                                                      | 모두                                                            |
 | earningAmountUSD               | USD 단위로 금액 획득                                                                                                                    | 모두                                                            |

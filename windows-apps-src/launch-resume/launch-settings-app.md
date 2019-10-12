@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 4f44772a9e8b34bf7f19a3b14dc8efd3d16c792f
-ms.sourcegitcommit: e5ed95f8252ddc7f39055d8f7276e82167bb9891
+ms.openlocfilehash: 7dd8604d9c9f32c374161ec1478221ebee6972c6
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973706"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282497"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -151,7 +151,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-| 추가 콘텐츠 | ms-settings:extras("설정 앱"이 설치된 경우에만 사용 가능, 예: 타사에서 설치) |
+| 추가 콘텐츠 | ms-설정: 스페셜 (예: 타사에서 "설정 앱"이 설치 된 경우에만 사용 가능) |
 
 ## <a name="gaming"></a>게임
 
@@ -197,7 +197,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 모바일 핫스팟 | ms-settings:network-mobilehotspot |
 | NFC | ms-settings:nfctransactions |
 | Proxy (프록시) | ms-settings:network-proxy |
-| 상태 | ms-settings:network-status<br/>ms-설정: 네트워크 |
+| Status | ms-settings:network-status<br/>ms-설정: 네트워크 |
 | VPN | ms-settings:network-vpn |
 | Wi-Fi | ms-settings:network-wifi(장치에 wifi 어댑터가 있는 경우에만 사용 가능) |
 | Wi-Fi 통화 | ms-settings:network-wificalling(Wi-Fi 호출이 활성화된 경우에만 사용 가능) |
@@ -223,7 +223,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 사용자 전화 | ms-settings:mobile-devices<br/>ms-설정: 모바일-장치-addphone<br/>ms-설정: 모바일 장치-휴대폰-직접 ( **전화 앱을** 엽니다.) |
 
-## <a name="privacy"></a>개인 정보 취급 방침
+## <a name="privacy"></a>개인 정보
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -336,6 +336,6 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-| 프로비전 | ms-settings:workplace-provisioning(기업에서 프로비전 패키지를 배포한 경우에만 사용 가능) |
-| 프로비전 | ms-settings:provisioning(기업에서 프로비전 패키지를 배포하고 모바일에서만 사용 가능) |
+| 프로비저닝 | ms-settings:workplace-provisioning(기업에서 프로비전 패키지를 배포한 경우에만 사용 가능) |
+| 프로비저닝 | ms-settings:provisioning(기업에서 프로비전 패키지를 배포하고 모바일에서만 사용 가능) |
 | Windows Anywhere | ms-settings:windowsanywhere(장치가 Windows Anywhere를 지원해야 함) |
