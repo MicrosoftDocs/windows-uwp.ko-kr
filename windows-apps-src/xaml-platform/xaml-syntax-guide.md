@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ab2ed7bea6a353ae30bb3c245e00c77365fb5af
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: b70a3f9f9fad2d81716c22ab2f383e72ea363341
+ms.sourcegitcommit: cbd900f350569a3901086a44b2d5007bb6fb7bed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339911"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276299"
 ---
 # <a name="xaml-syntax-guide"></a>XAML 구문 가이드
 
@@ -105,7 +105,7 @@ XAML에서는 어떠한 방법으로도 설정할 수 없고 코드를 사용해
 
 읽기 전용 속성은 XAML에서 설정할 수 없습니다. 코드에서라도 소유 형식이 생성자 오버로드, 도우미 메서드, 계산된 속성 지원 등 이러한 속성을 설정하는 다른 방법을 지원해야 합니다. 계산된 속성은 다른 설정 가능한 속성의 값과 기본 제공 처리가 있는 이벤트를 사용합니다. 이러한 기능은 종속성 속성 시스템에서 사용할 수 있습니다. 종속성 속성이 계산된 속성 지원에 유용한 방식에 대한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
 
-XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느낌을 주지만 실제로는 그렇지 않습니다. 이 항목의 뒷부분에 있는 "컬렉션 구문을 사용하여 속성 설정" 섹션을 참조하세요.
+XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느낌을 주지만 실제로는 그렇지 않습니다. 이 항목의 뒷부분에 나오는 "[컬렉션 구문](#collection-syntax)"을 참조 하십시오.
 
 ### <a name="setting-a-property-by-using-attribute-syntax"></a>특성 구문을 사용하여 속성 설정
 
