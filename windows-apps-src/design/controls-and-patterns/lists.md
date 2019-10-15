@@ -1,36 +1,42 @@
 ---
 Description: 목록은 컬렉션 기반 콘텐츠를 표시하고 조작할 수 있게 합니다.
-title: 목록
+title: 컬렉션 및 목록
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
-label: Lists
+label: Collections and Lists
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 10/08/2019
 ms.topic: article
 keywords: windows 10, uwp
-pm-contact: predavid
+pm-contact: anawish
 design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f45edc213d8abdfc43e834d023993b89249844d
-ms.sourcegitcommit: 98343e851f25a11ae02fc739477f5316fe8fcb95
+ms.openlocfilehash: e1167a57da6a3f54cabcc946cfbf7a592f301d2c
+ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71061953"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163728"
 ---
-# <a name="lists"></a>목록
+# <a name="collections-and-lists"></a>컬렉션 및 목록
 
-목록은 컬렉션 기반 콘텐츠를 표시하고 조작할 수 있게 합니다. 이 문서에서 다루는 네 가지 목록 패턴은 다음과 같습니다.
+컬렉션과 목록은 모두 함께 표시되는 여러 관련 데이터 항목의 표현을 나타냅니다. 컬렉션은 다양한 컬렉션 컨트롤(컬렉션 보기라고도 함)에서 여러 가지 방법으로 표현할 수 있습니다. 컬렉션 컨트롤은 연락처 목록, 날짜 목록, 이미지 컬렉션 등과 같은 컬렉션 기반 콘텐츠와의 상호 작용을 표시하고 사용하도록 설정합니다.  이 문서에서 설명하는 컨트롤은 다음과 같습니다.
 
 - 목록 보기 - 주로 텍스트가 많은 콘텐츠 모음을 표시하는 데 사용됨
 - 그리드 보기 - 주로 이미지가 많은 콘텐츠 모음을 표시하는 데 사용됨
-- 드롭다운 목록 - 사용자가 확장 목록에서 하나의 항목을 선택할 수 있음
-- 목록 상자 - 사용자가 스크롤할 수 있는 상자에서 하나 이상의 항목을 선택할 수 있음
+- 대칭 이동 보기 - 포커스를 하나의 항목에 정확히 한 번에 맞추어야 하는 이미지가 많은 콘텐츠 컬렉션을 표시하는 데 주로 사용됩니다.
+- 트리 보기 - 특정 계층 구조에서 텍스트가 많은 콘텐츠 컬렉션을 표시하는 데 주로 사용됩니다.
+- ItemsRepeater - 사용자 지정 컬렉션 컨트롤을 만들 수 있는 사용자 지정 가능한 구성 요소입니다.
 
-각 목록 패턴에 대한 디자인 지침, 기능 및 예제가 제공됩니다.
 
-> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [ComboBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+디자인 지침 - 각 컨트롤에 대한 디자인 지침, 기능 및 예제가 아래에 나와 있습니다.
+
+이러한 각 컨트롤(ItemsRepeater 제외)은 기본 제공 스타일 지정 및 상호 작용을 제공합니다. 그러나 컬렉션 보기의 시각적 모양과 내부의 항목을 추가로 사용자 지정하려면 [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)을 사용합니다. 데이터 템플릿에 대한 자세한 내용과 컬렉션 보기의 모양을 사용자 지정하는 방법은 [항목 컨테이너 및 템플릿](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/item-containers-templates) 페이지에서 찾을 수 있습니다.
+
+이러한 각 컨트롤(ItemsRepeater 제외)에는 하나 또는 여러 항목을 선택할 수 있는 기본 제공 동작도 있습니다. 자세히 알아보려면 [선택 모드 개요](selection-modes.md)를 참조하세요.
+
+> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [FlipView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [TreeView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview), [ItemsRepeater 클래스](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
 
 > <div id="main">
 > <strong>Windows 10 Fall Creators Update - 동작 변경</strong>
@@ -45,7 +51,7 @@ ms.locfileid: "71061953"
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 <a href="xamlcontrolsgallery:/item/ListView">ListView</a>, <a href="xamlcontrolsgallery:/item/GridView">GridView</a>, <a href="xamlcontrolsgallery:/item/ComboBox">ComboBox</a> 및 <a href="xamlcontrolsgallery:/item/ListBox">ListBox</a>가 실제로 작동하는 모습을 확인합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML Controls Gallery</strong> 앱이 설치되어 있으면 <a href="xamlcontrolsgallery:/item/ListView">ListView</a>, <a href="xamlcontrolsgallery:/item/GridView">GridView</a>, <a href="xamlcontrolsgallery:/item/FlipView">FlipView</a>, <a href="xamlcontrolsgallery:/item/TreeView">TreeView</a> 및 <a href="xamlcontrolsgalley:/item/ItemsRepeater">ItemsRepeater</a>가 작동하는지 확인하세요.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -56,28 +62,31 @@ ms.locfileid: "71061953"
 
 ## <a name="list-views"></a>목록 보기
 
-목록 보기를 사용하면 항목을 분류하고, 그룹 헤더를 할당하며, 항목을 끌어서 놓고, 콘텐츠를 구성하며, 항목의 순서를 다시 매길 수 있습니다.
+목록 보기는 텍스트가 많은 항목을 나타내며, 일반적으로 세로로 쌓은 단일 열 레이아웃으로 표시됩니다. 항목을 분류하고, 그룹 헤더를 할당하고, 항목을 끌어서 놓고, 콘텐츠를 큐레이팅하고, 항목을 다시 정렬할 수 있습니다.
 
 ### <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 목록 보기를 사용하여 다음을 수행할 수 있습니다.
 
-- 주로 텍스트로 구성된 콘텐츠 모음을 표시합니다.
-- 단일 또는 분류된 콘텐츠 모음을 탐색합니다.
-- [마스터/세부 정보 패턴](master-details.md)의 마스터 창을 만듭니다. 마스터/세부 정보 패턴은 메일 앱에서 흔히 사용되는 패턴으로, 하나의 창(마스터)에는 선택 가능한 항목이 있으며 다른 창(세부 정보)에는 선택한 항목의 자세히 보기가 있습니다.
+- 기본적으로 텍스트 기반 항목으로 구성된 컬렉션을 표시합니다. 이 경우 모든 항목에는 동일한 시각적 및 상호 작용 동작이 있어야 합니다.
+- 단일 또는 분류된 콘텐츠 컬렉션을 나타냅니다.
+- 다음과 같은 일반적인 사용 사례를 포함하여 다양한 사용 사례를 수용합니다.
+    - 메시지 또는 메시지 로그의 목록을 만듭니다.
+    - 연락처 목록을 만듭니다.
+    - [마스터/세부 정보 패턴](master-details.md)의 마스터 창을 만듭니다. 마스터/세부 정보 패턴은 메일 앱에서 흔히 사용되는 패턴으로, 하나의 창(마스터)에는 선택 가능한 항목이 있으며 다른 창(세부 정보)에는 선택한 항목의 자세히 보기가 있습니다.
+    
 
 ### <a name="examples"></a>예
 
-다음은 휴대폰의 그룹화된 데이터를 보여 주는 간단한 목록 보기입니다.
+연락처 목록을 표시하고 데이터 항목을 사전순으로 그룹화하는 간단한 목록 보기는 다음과 같습니다. 그룹 헤더(이 예의 경우 각 알파벳 문자)는 스크롤하는 동안 항상 ListView의 위쪽에 표시되므로 "고정" 상태를 유지하도록 사용자 지정할 수도 있습니다.
 
-![그룹화된 데이터를 사용한 목록 보기](images/simple-list-view-phone.png)
+![그룹화된 데이터를 사용한 목록 보기](images/listview-grouped-example-resized-final.png)
 
-### <a name="recommendations"></a>권장 사항
+이는 최신 메시지가 아래쪽에 표시되는 메시지 로그를 표시하기 위해 반전된 ListView입니다. 반전된 ListView를 사용하면 항목이 기본 제공 애니메이션이 포함된 화면의 아래쪽에 표시됩니다.
 
-- 목록 내의 항목은 동작이 동일해야 합니다.
-- 목록이 그룹으로 나뉜 경우 [시맨틱 줌](semantic-zoom.md)을 사용하면 사용자가 그룹화된 콘텐츠를 쉽게 탐색할 수 있습니다.
+![반전된 목록 보기](images/listview-inverted-2.png)
 
-### <a name="list-view-articles"></a>목록 보기 문서
+### <a name="related-articles"></a>관련된 문서
 <table>
 <colgroup>
 <col width="50%" />
@@ -96,7 +105,7 @@ ms.locfileid: "71061953"
 </tr>
 <tr class="even">
 <td align="left"><p><a href="item-containers-templates.md">항목 컨테이너 및 템플릿</a></p></td>
-<td align="left"><p>목록이나 그리드에 표시하는 항목은 앱의 전체 모양에서 중요한 역할을 담당할 수 있습니다. 컨트롤 템플릿과 데이터 템플릿을 수정하여 항목 모양을 정의하고 앱을 멋지게 만들 수 있습니다.</p></td>
+<td align="left"><p>목록 또는 그리드 보기에 표시되는 항목은 앱의 전체 모양에서 중요한 역할을 수행할 수 있습니다. 컨트롤 템플릿 및 데이터 템플릿을 수정하면서 컬렉션 항목의 모양을 사용자 지정하여 앱을 멋지게 만듭니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="item-templates-listview.md">목록 보기의 항목 템플릿</a></p></td>
@@ -104,11 +113,11 @@ ms.locfileid: "71061953"
 </tr>
 <tr class="even">
 <td align="left"><p><a href="inverted-lists.md">반전된 목록</a></p></td>
-<td align="left"><p>반전된 목록에는 채팅 앱에서처럼 아래쪽에 추가된 새 항목이 있습니다. 앱에서 반전된 목록을 사용하려면 이 지침을 따릅니다.</p></td>
+<td align="left"><p>반전된 목록에는 채팅 앱에서처럼 아래쪽에 추가된 새 항목이 있습니다. 이 문서의 지침에 따라 앱에서 반전된 목록을 사용합니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="pull-to-refresh.md">당겨서 새로 고침</a></p></td>
-<td align="left"><p>당겨서 새로 고침 패턴을 사용하면 데이터 목록을 터치하고 아래로 당겨서 더 많은 데이터를 검색할 수 있습니다. 목록 보기에서 당겨서 새로 고침을 구현하려면 이 지침을 사용합니다.</p></td>
+<td align="left"><p>당겨서 새로 고침 메커니즘을 사용하면 사용자가 더 많은 데이터를 검색할 수 있도록 터치를 사용하여 데이터 목록을 아래로 당길 수 있습니다. 이 문서를 사용하여 목록 보기에서 당겨서 새로 고침을 구현합니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="nested-ui.md">중첩된 UI</a></p></td>
@@ -119,15 +128,18 @@ ms.locfileid: "71061953"
 
 ## <a name="grid-views"></a>그리드 보기
 
-그리드 보기는 이미지 기반 콘텐츠 모음의 정렬 및 탐색에 적합합니다. 그리드 보기 레이아웃은 세로로 스크롤되고 가로로 이동합니다. 항목은 왼쪽에서 오른쪽으로, 위에서 아래로 읽기 순서에 따라 배치됩니다.
+그리드 보기는 이미지 기반 콘텐츠 모음의 정렬 및 탐색에 적합합니다. 그리드 보기 레이아웃은 세로로 스크롤되고 가로로 이동합니다. 항목은 왼쪽에서 오른쪽으로, 위에서 아래로의 읽기 순서로 표시되므로 래핑된 레이아웃으로 있습니다.
 
 ### <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-목록 보기를 사용하여 다음을 수행할 수 있습니다.
+그리드 보기를 사용하여 다음을 수행합니다.
 
-- 주로 이미지로 구성된 콘텐츠 모음을 표시합니다.
+- 각 항목의 초점이 이미지이고 각 항목의 시각적 및 상호 작용 동작이 동일해야 하는 콘텐츠 컬렉션을 표시합니다.
 - 콘텐츠 라이브러리를 표시합니다.
 - [시맨틱 줌](semantic-zoom.md)과 연결된 두 콘텐츠 보기의 서식을 지정합니다.
+- 다음과 같은 일반적인 사용 사례를 포함하여 다양한 사용 사례를 수용합니다.
+    - 상점형 사용자 인터페이스(예: 앱, 노래, 제품 검색)
+    - 대화형 사진 라이브러리
 
 ### <a name="examples"></a>예
 
@@ -137,14 +149,9 @@ ms.locfileid: "71061953"
 
 그리드 보기는 사진, 동영상 등의 미디어를 표시하는 데 자주 사용되는 콘텐츠 라이브러리에 이상적인 솔루션입니다. 콘텐츠 라이브러리에서 사용자는 항목을 탭하여 동작을 호출할 수 있을 것으로 기대합니다.
 
-![콘텐츠 라이브러리의 예](images/controls_list_contentlibrary.png)
+![콘텐츠 라이브러리의 예](images/gridview-simple-example-final.png)
 
-### <a name="recommendations"></a>권장 사항
-
-- 목록 내의 항목은 동작이 동일해야 합니다.
-- 목록이 그룹으로 나뉜 경우 [시맨틱 줌](semantic-zoom.md)을 사용하면 사용자가 그룹화된 콘텐츠를 쉽게 탐색할 수 있습니다.
-
-### <a name="grid-view-articles"></a>그리드 보기 문서
+### <a name="related-articles"></a>관련 문서
 <table>
 <colgroup>
 <col width="50%" />
@@ -163,7 +170,7 @@ ms.locfileid: "71061953"
 </tr>
 <tr class="even">
 <td align="left"><p><a href="item-containers-templates.md">항목 컨테이너 및 템플릿</a></p></td>
-<td align="left"><p>목록이나 그리드에 표시하는 항목은 앱의 전체 모양에서 중요한 역할을 담당할 수 있습니다. 컨트롤 템플릿과 데이터 템플릿을 수정하여 항목 모양을 정의하고 앱을 멋지게 만들 수 있습니다.</p></td>
+<td align="left"><p>목록 또는 그리드 보기에 표시되는 항목은 앱의 전체 모양에서 중요한 역할을 수행할 수 있습니다. 컨트롤 템플릿 및 데이터 템플릿을 수정하면서 컬렉션 항목의 모양을 사용자 지정하여 앱을 멋지게 만듭니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="item-templates-gridview.md">그리드 보기의 항목 템플릿</a></p></td>
@@ -171,94 +178,131 @@ ms.locfileid: "71061953"
 </tr>
 <tr class="even">
 <td align="left"><p><a href="nested-ui.md">중첩된 UI</a></p></td>
-<td align="left"><p>중첩된 UI는 실행 가능한 컨트롤을 사용자가 실행할 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다. 예를 들어 단추가 있는 목록 보기 항목이 있을 수 있으며 사용자가 목록 항목을 선택하거나 목록 항목 내에 중첩된 단추를 누를 수 있습니다. 사용자에게 최상의 중첩된 UI 환경을 제공하려면 다음 모범 사례를 따르세요.</p></td>
+<td align="left"><p>중첩된 UI는 실행 가능한 컨트롤을 사용자가 실행할 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다. 예를 들어 단추가 포함된 그리드 보기 항목이 있을 수 있으며, 사용자는 그리드 항목을 선택하거나 해당 항목 내에 중첩된 단추를 누를 수 있습니다. 사용자에게 최상의 중첩된 UI 환경을 제공하려면 다음 모범 사례를 따르세요.</p></td>
 </tr>
 </tbody>
 </table>
 
-## <a name="drop-down-lists"></a>드롭다운 목록
+## <a name="flip-views"></a>대칭 이동 보기
 
-콤보 상자라고도 하는 드롭다운 목록은 압축 상태로 시작되어 선택 가능한 항목의 목록을 표시하도록 확장됩니다. 선택한 항목은 항상 표시되며, 표시되지 않은 항목은 사용자가 콤보 상자를 탭하여 확장하면 보기로 가져올 수 있습니다.
+대칭 이동 보기는 이미지 기반 콘텐츠 컬렉션을 검색하는 데 적합합니다. 특히 한 번에 하나의 이미지만 표시되는 환경이 필요한 경우입니다. 대칭 이동 보기를 사용하면 사용자가 상호 작용한 후에 각 항목이 한 번에 하나씩 나타나도록 컬렉션 항목을 이동시키거나 "대칭 이동"시킬 수 있습니다(세로 또는 가로로).
 
 ### <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-- 드롭다운 목록을 사용하여 사용자가 한 줄의 텍스트로 적절하게 나타낼 수 있는 일련의 항목에서 단일 값을 선택할 수 있도록 합니다.
-- 여러 줄의 텍스트나 이미지가 포함된 항목을 표시하려면 콤보 상자 대신 목록 또는 그리드 보기를 사용합니다.
-- 항목이 4개 이하이면 [라디오 단추](radio-button.md)(한 항목만 선택할 수 있는 경우) 또는 [확인란](checkbox.md)(여러 항목을 선택할 수 있는 경우)을 사용합니다.
-- 선택 항목이 앱 흐름에서 두 번째로 중요한 경우 콤보 상자를 사용합니다. 대부분의 상황에서 대부분의 사용자에게 기본 옵션이 권장되는 경우 목록 보기를 사용하여 모든 항목을 표시하면 필요 이상으로 옵션에 주의를 집중시킬 수 있습니다. 콤보 상자를 사용하여 공간을 절약하고 주의 분산을 최소화할 수 있습니다.
+대칭 이동 보기를 사용하여 다음을 수행합니다.
+
+- 메타데이터가 거의 없거나 전혀 없는 이미지로 구성된 중소 규모의 컬렉션(25개 미만의 항목)을 표시합니다.
+- 항목을 한 번에 하나씩 표시하고, 최종 사용자가 자신의 속도에 따라 항목을 대칭 이동할 수 있도록 합니다.
+- 다음과 같은 일반적인 사용 사례를 포함하여 다양한 사용 사례를 수용합니다.
+    - 사진 갤러리
+    - 제품 갤러리 또는 쇼케이스
 
 ### <a name="examples"></a>예
 
-압축 상태의 콤보 상자는 헤더를 표시할 수 있습니다.
+다음 두 예에서는 각각 가로 및 세로로 대칭 이동하는 FlipView를 보여 줍니다.
 
-![압축 상태의 드롭다운 목록의 예](images/combo_box_collapsed.png)
+![가로 대칭 이동 보기](images/controls_flipview_horizonal.jpg)
 
-콤보 상자는 더 긴 문자열 길이를 지원하도록 확장되지만 읽기 어려운 너무 긴 문자열은 피해야 합니다.
+![세로 대칭 이동 보기](images/controls_flipview_vertical.jpg)
 
-![텍스트 문자열이 긴 드롭다운 목록의 예](images/combo_box_listitemstate.png)
+### <a name="related-articles"></a>관련 문서
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">항목</th>
+<th align="left">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="flipview.md">대칭 이동 보기</a></p></td>
+<td align="left"><p>대칭 이동 보기 내에서 항목의 모양을 사용자 지정하는 방법과 함께 앱에서 대칭 이동 보기를 사용하는 데 필요한 기본 사항에 대해 알아봅니다.</p></td>
+</tr>
+</tbody>
+</table>
 
-콤보 상자에 있는 컬렉션이 긴 경우 이를 수용할 수 있는 스크롤 막대가 표시됩니다. 목록의 항목을 논리적으로 그룹화합니다.
+## <a name="tree-views"></a>트리 보기
 
-![드롭다운 목록에 있는 스크롤 막대의 예](images/combo_box_scroll.png)
-
-### <a name="recommendations"></a>권장 사항
-
-- 콤보 상자 항목의 텍스트 콘텐츠를 한 줄로 제한합니다.
-- 가장 논리적인 순서로 콤보 상자의 항목을 정렬합니다. 관련 옵션을 그룹화하고 가장 일반적인 옵션을 맨 위에 배치합니다. 이름은 사전순으로 정렬하고, 숫자는 숫자순으로 정렬하고, 날짜는 시간순으로 정렬합니다.
-- 사용자가 화살표 키를 사용하는 동안 라이브로 업데이트되는 콤보 상자(예: 글꼴 선택 드롭다운)를 만들려면 SelectionChangedTrigger를 “항상”으로 설정합니다.  
-
-### <a name="text-search"></a>텍스트 검색
-
-콤보 상자는 자동으로 컬렉션 내의 검색을 지원합니다. 사용자가 열리거나 닫힌 콤보 상자에 포커스가 있는 상태에서 실제 키보드를 통해 문자를 입력하면 사용자 문자열과 일치하는 항목이 표시됩니다. 이 기능은 긴 목록을 탐색할 때 특히 유용합니다. 예를 들어 상태 목록이 포함된 드롭다운을 조작하는 경우 사용자는 빠른 선택을 위해 "w" 키를 눌러 "워싱턴"을 표시할 수 있습니다.
-
-
-## <a name="list-boxes"></a>목록 상자
-
-목록 상자를 사용하면 사용자가 모음에서 단일 항목 또는 여러 항목을 선택할 수 있습니다. 목록 상자는 항상 열려 있다는 점을 제외하고는 드롭다운 목록과 유사합니다. 목록 상자에는 압축(확장되지 않은) 상태가 없습니다. 모두 표시할 공간이 없는 경우 목록 상자의 항목을 스크롤할 수 있습니다.
+트리 보기는 전시해야 하는 중요한 계층 구조가 포함된 텍스트 기반 컬렉션을 표시하는 데 적합합니다. 트리 보기 항목은 펼치거나 접을 수 있고, 시각적 계층 구조에 표시되고, 아이콘으로 보완할 수 있으며, 트리 보기 간에 끌어서 놓을 수 있습니다. 트리 보기에서는 N-수준 중첩을 사용할 수 있습니다.
 
 ### <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-- 목록 상자는 목록의 항목이 중요하여 강조 표시해야 하거나 전체 목록을 표시하기에 충분한 화면 공간이 있는 경우에 유용할 수 있습니다.
-- 목록 상자는 중요한 선택 시 전체 대안 집합에 대한 사용자의 주의를 끌어야 합니다. 반면, 드롭다운 목록은 처음에 선택한 항목에 대한 사용자의 주의를 끕니다.
-- 다음에 해당하는 경우 목록 상자를 사용하지 마세요.
-    - 목록의 항목 수가 매우 적은 경우. 항상 동일한 2개 옵션이 포함된 단일 선택 목록 상자는 [라디오 단추](radio-button.md)로 제공하는 것이 좋습니다. 3개 또는 4개의 정적 항목이 목록에 있는 경우에도 라디오 단추를 사용하는 것이 좋습니다.
-    - 목록 상자에서는 한 개만 선택할 수 있으므로 목록 상자는 "켜짐" 및 "꺼짐"과 같이 하나는 곧 나머지 하나가 '아님'을 의미할 수 있는 동일한 2개 옵션을 항상 포함합니다. 단일 확인란 또는 토글 스위치를 사용합니다.
-    - 매우 많은 항목이 있습니다. 긴 목록의 경우 그리드 보기 및 목록 보기를 사용하는 것이 좋습니다. 그룹화된 매우 긴 데이터 목록의 경우 시맨틱 줌을 사용하는 것이 좋습니다.
-    - 항목이 연속적인 숫자 값입니다. 이 경우 [슬라이더](slider.md)를 사용하는 것이 좋습니다.
-    - 선택 항목이 앱 흐름에서 두 번째로 중요하거나, 대부분의 상황에서 대부분 사용자에게 기본 옵션이 권장됩니다. 드롭다운 목록을 사용합니다.
+트리 보기를 사용하여 다음을 수행합니다.
 
-### <a name="recommendations"></a>권장 사항
+- 컨텍스트와 의미가 계층 구조 또는 특정 조직 체인에 따라 달라지는 중첩된 항목 컬렉션을 표시합니다.
+- 다음과 같은 일반적인 사용 사례를 포함하여 다양한 사용 사례를 수용합니다.
+    - 파일 브라우저
+    - 회사 조직도
 
-- 목록 상자의 항목에 대한 이상적인 범위는 3~9개입니다.
-- 목록 상자는 항목이 동적으로 달라질 수 있는 경우에도 제대로 작동합니다.
-- 가능한 경우 항목 목록을 이동하거나 스크롤할 필요가 없도록 목록 상자 크기를 설정합니다.
-- 목록 상자의 목적과 현재 선택되어 있는 항목이 명확한지 확인합니다.
-- 터치 피드백 및 선택한 항목 상태에 대한 시각적 효과와 애니메이션을 유지합니다.
-- 목록 상자 항목의 텍스트 콘텐츠를 한 줄로 제한합니다. 항목이 화면 효과인 경우 크기를 사용자 지정할 수 있습니다. 항목에 텍스트 또는 이미지가 여러 줄로 포함된 경우 그리드 보기 또는 목록 보기를 사용합니다.
-- 브랜드 지침에 다른 글꼴을 사용하도록 규정되어 있지 않은 경우 기본 글꼴을 사용하세요.
-- 명령을 수행하거나 다른 컨트롤을 동적으로 표시하거나 숨기는 데 목록 상자를 사용하지 마세요.
+### <a name="examples"></a>예
 
-## <a name="selection-mode"></a>선택 모드
+파일 탐색기를 나타내는 트리 보기의 예는 다음과 같으며, 아이콘으로 보완된 여러 개의 중첩된 항목을 보여 줍니다.
 
-선택 모드를 통해 사용자는 단일 항목 또는 여러 항목에 대한 작업을 수행할 수 있습니다. 이 모드는 Ctrl 키 또는 Shift 키를 누른 채 항목을 클릭하거나 갤러리 보기에서 항목의 대상을 롤오버하여 상황에 맞는 메뉴를 통해 호출할 수 있습니다. 선택 모드가 활성화되면 각 목록 항목 옆에 확인란이 표시되고 화면의 위쪽이나 아래쪽에 작업이 표시될 수 있습니다.
+![아이콘을 사용하는 트리 보기](images/treeview-icons.png)
 
-다음과 같은 세 가지 선택 모드가 있습니다.
+### <a name="related-articles"></a>관련 문서
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">항목</th>
+<th align="left">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="tree-view.md">트리 보기</a></p></td>
+<td align="left"><p>트리 보기 내에서 항목의 모양과 상호 작용 동작을 사용자 지정하는 방법과 함께 앱에서 트리 보기를 사용하는 데 필요한 기본 사항에 대해 알아봅니다.</p></td>
+</tr>
+</tbody>
+</table>
 
-- 단일: 사용자가 한 번에 하나의 항목만 선택할 수 있습니다.
-- 다중: 사용자가 보조 키를 사용하지 않고 여러 항목을 선택할 수 있습니다.
-- 확장: 사용자가 보조 키를 사용하여 여러 항목을 선택할 수 있습니다. 예를 들어 Shift 키를 누른 상태로 선택할 수 있습니다.
+## <a name="itemsrepeater"></a>ItemsRepeater
 
-항목의 아무 곳이나 탭하면 선택됩니다. 명령 모음 작업을 탭하면 선택한 모든 항목에 영향을 줍니다. 항목을 선택하지 않으면 “모두 선택"을 제외한 명령 모음 작업이 비활성화되어야 합니다.
+예를 들어 속성을 정의하지 않고 단순히 페이지에 배치하기만 하는 경우 스타일 지정 또는 상호 작용을 제공하지 않으므로 ItemsRepeater는 이 페이지에 표시된 나머지 컬렉션 컨트롤과 다릅니다. ItemsRepeater는 개발자가 고유한 사용자 지정 컬렉션 컨트롤, 특히 이 문서의 다른 컨트롤을 사용하여 얻을 수 없는 컨트롤을 만드는 데 사용할 수 있는 구성 요소입니다. ItemsRepeater는 정확한 요구 사항에 맞게 조정할 수 있는 데이터 기반 고성능 패널입니다.
 
-선택 모드에는 빠른 해제 모델이 없습니다. 즉, 선택 모드가 활성화된 프레임의 외부를 탭해도 모드가 취소되지 않습니다. 따라서 실수로 모드를 비활성화하는 것을 방지할 수 있습니다. 뒤로 단추를 클릭하면 다중 선택 모드가 해제됩니다.
+### <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-작업이 선택된 경우 시각적 확인을 표시합니다. 특정 작업, 특히 삭제와 같은 파괴적인 작업에 대해서는 확인 대화 상자를 표시하는 것이 좋습니다.
+다음과 같은 경우 ItemsRepeater를 사용합니다.
 
-선택 모드는 해당 모드가 활성화된 페이지로 제한되며, 해당 페이지 외부의 항목에는 영향을 줄 수 없습니다.
+- 기존 컬렉션 컨트롤을 사용하여 만들 수 없는 특정 사용자 인터페이스와 사용자 환경을 고려하고 있습니다.
+- 항목에 대한 기존 데이터 원본(예: 인터넷에서 가져온 데이터, 데이터베이스 또는 코드 숨김에 있는 기존 컬렉션)이 있습니다.
 
-선택 모드의 진입점은 이 모드의 영향을 받는 콘텐츠와 나란히 배치되어야 합니다.
+### <a name="examples"></a>예
 
-명령 모음 권장 사항에 대해서는 [명령 모음에 대한 지침](app-bars.md)을 참조하세요.
+동일한 데이터 원본(숫자 컬렉션)에 바인딩된 모든 ItemsRepeater 컨트롤의 세 가지 예는 다음과 같습니다. 숫자 컬렉션은 세 가지 방법으로 표현되며, 아래의 각 ItemRepeater는 서로 다른 사용자 지정 [Layout](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.layout)과 [ItemTemplate](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate?view=winui-2.2)을 사용합니다.
+
+![가로 막대를 사용하는 ItemsRepeater](images/itemsrepeater-1.png)
+![세로 막대를 사용하는 ItemsRepeater](images/itemsrepeater-2.png)
+![원형 표현을 사용하는 ItemsRepeater](images/itemsrepeater-3.png)
+
+### <a name="related-articles"></a>관련 문서
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">항목</th>
+<th align="left">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="items-repeater.md">ItemsRepeater</a></p></td>
+<td align="left"><p>컬렉션 보기에 필요한 모든 상호 작용 및 시각적 구성 요소를 구현하는 방법과 함께 앱에서 ItemsRepeater를 사용하는 데 필요한 기본 사항에 대해 알아봅니다.</p></td>
+</tr>
+</tbody>
+</table>
+
 
 ## <a name="globalization-and-localization-checklist"></a>세계화 및 지역화 검사 목록
 
@@ -267,10 +311,10 @@ ms.locfileid: "71061953"
 <th>줄 바꿈</th><td>목록 레이블에 두 줄을 허용합니다.</td>
 </tr>
 <tr>
-<th>가로 확장</th><td>필드가 텍스트 확장을 수용할 수 있고 스크롤 가능하도록 합니다.</td>
+<th>가로 확장</th><td>필드에서 텍스트 확장을 수용할 수 있고 스크롤할 수 있도록 합니다.</td>
 </tr>
 <tr>
-<th>세로 간격</th><td>세로 간격에 라틴어가 아닌 문자를 사용하여 라틴어가 아닌 스크립트가 제대로 표시되게 합니다.</td>
+<th>세로 간격</th><td>라틴 문자가 아닌 문자를 세로 간격으로 사용하여 라틴어가 아닌 스크립트가 제대로 표시되도록 합니다.</td>
 </tr>
 </table>
 
@@ -280,13 +324,14 @@ ms.locfileid: "71061953"
 
 ## <a name="related-articles"></a>관련 문서
 
+**디자인 및 UX 지침**
 - [마스터/세부](master-details.md)
 - [탐색 창](navigationview.md)
 - [시맨틱 줌](semantic-zoom.md)
 - [끌어서 놓기](https://docs.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 - [미리 보기 이미지](../../files/thumbnails.md)
 
-**개발자용**:
+**API 참조**
 - [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [ComboBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)

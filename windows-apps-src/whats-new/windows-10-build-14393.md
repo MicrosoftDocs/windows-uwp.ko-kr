@@ -6,12 +6,12 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: f95cd87b-f959-4148-a9bd-ba0b90d16e71
 ms.localizationpriority: medium
-ms.openlocfilehash: 037963109fd6f70a60c17dc1b6c1b4eef82fb080
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: b4b887ad49cfdbdea89397105809db0fe6a5ab57
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821100"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282330"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-14393"></a>개발자용 Windows 10 빌드 14393의 새로운 기능
 
@@ -60,5 +60,5 @@ Xbox One의 UWP | 이 업데이트는 Xbox One에서 UWP(유니버설 Windows �
 WebSocket | [  **MessageWebSockets**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.messagewebsocket) 및 [**StreamWebSockets**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamwebsocket)에 대한 지원이 추가되어 서버 인증서 보기, SSL 협상 중 서버에서 보낸 중간 인증서 보기, 사용자 지정 서버 유효성 검사 수행, 특정 서버 인증서 오류는 무시하도록 지정 등을 수행할 수 있습니다.
 WIP(Windows Information Protection) API | [**WIP**](https://docs.microsoft.com/windows/uwp/enterprise/wip-hub)는 MDM(모바일 디바이스 관리)을 위한 데스크톱, 노트북, 태블릿 및 휴대폰의 기능 모음입니다. WIP를 통해 엔터프라이즈는 엔터프라이즈 관리 디바이스에서 데이터가 처리되는 방식을 더 적절히 제어할 수 있습니다. <br/><br/>WIP API를 사용하면 직원의 개인 데이터가 데이터 정책의 영향을 받지 않도록 분리하는 동시에 데이터 정책을 준수하는 앱을 빌드할 수 있습니다. 정책 관리자는 앱을 신뢰하여 조직의 데이터를 사용합니다. 또한 직원은 조직의 MDM(모바일 디바이스 관리)에서 등록을 취소하거나 조직에서 완전히 퇴사한 경우에도 자신의 개인 데이터가 디바이스에 그대로 유지되기를 바랍니다.
 Windows IOT Core | Windows IoT Core는 원격 디스플레이 환경뿐만 아니라 Raspberry Pi 3을 완벽하게 지원하므로 사용자가 IoT Core 디바이스에서 실행되는 UWP 응용 프로그램을 원격으로 보고 제어할 수 있습니다.
-도우미(IoT) 디바이스에서 Windows 잠금 해제 | 도우미 디바이스는 사용자 인증 환경을 향상하기 위해 Windows 10 데스크톱과 함께 실행할 수 있습니다. [도우미 디바이스 프레임워크](https://docs.microsoft.com/windows/uwp/security/companion-device-unlock)를 사용하면 Windows Hello를 사용할 수 없는 경우(예: Windows 10 데스크톱에 안면 인증용 카메라 또는 지문 판독기를 사용할 수 없는 경우)에도 Microsoft Passport에 풍부한 환경을 제공할 수 있습니다.
+도우미(IoT) 디바이스에서 Windows 잠금 해제 | 도우미 디바이스는 사용자 인증 환경을 향상하기 위해 Windows 10 데스크톱과 함께 실행할 수 있습니다. [도우미 디바이스 프레임워크](https://docs.microsoft.com/windows/uwp/security/companion-device-unlock)를 사용하면 Windows Hello를 사용할 수 없는 경우(예: Windows 10 데스크톱에 안면 인증용 카메라 또는 지문 판독기 디바이스를 사용할 수 없는 경우)에도 도우미 디바이스에서 풍부한 환경을 Microsoft Passport에 제공할 수 있습니다.
 Winsock | TCP 소켓을 [Winsock](https://tools.ietf.org/html/rfc7413)으로 구성하면 TCP_FASTOPEN 소켓 옵션을 설정하여 [RFC 7413](https://tools.ietf.org/html/rfc7413) TCP Fast Open을 사용할 수 있습니다.

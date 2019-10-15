@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2b0f5918b240bf5c28e49f2ede6f10dbeefcbbfc
-ms.sourcegitcommit: e13f06042a28a8455a211b8693a009098e150cd1
+ms.openlocfilehash: 8568a4613b5bb62b98edc7edd302a42153e5e33b
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68522097"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72281795"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 

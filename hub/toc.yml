@@ -72,17 +72,65 @@
       href: apps/whats-new/latest-doc-updates.md
 - name: Windows를 사용하여 빌드
   items:
+    - name: 개요
+      href: dev-environment/index.yml
     - name: Python을 사용하여 개발
       items:
         - name: 개요
           href: python/index.yml
         - name: 초보자를 위한 시작
-          href: python/get-started/python-for-education.md
+          href: python/beginners.md
         - name: 웹 개발 시작
-          href: python/get-started/python-for-web.md
+          href: python/web-frameworks.md
         - name: 자동화 시작
-          href: python/get-started/python-for-scripting.md
+          href: python/scripting.md
+        - name: 데이터베이스 시작
+          href: python/databases.md
         - name: FAQ
           href: python/faqs.md
         - name: 리소스
           href: python/resources.md
+    - name: Node.js를 사용하여 개발
+      items:
+        - name: 개요
+          href: nodejs/index.yml
+        - name: 개발 환경 설정
+          href: nodejs/setup-on-wsl2.md
+        - name: 초보자를 위한 시작
+          href: nodejs/beginners.md
+        - name: 웹 프레임워크 시작
+          href: nodejs/web-frameworks.md
+        - name: 데이터베이스 시작
+          href: nodejs/databases.md
+        - name: 컨테이너 시작
+          href: nodejs/containers.md
+    - name: Mac-Windows 가이드
+      items:
+        - name: 개발 환경 변경
+          href: dev-environment/mac-to-windows.md
+        - name: 바로 가기 키
+          href: 'dev-environment/mac-to-windows.md#keyboard-shortcuts'
+        - name: 트랙 패드 바로 가기
+          href: 'dev-environment/mac-to-windows.md#trackpad-shortcuts'
+        - name: 터미널 및 셸
+          href: 'dev-environment/mac-to-windows.md#terminal-and-shell'
+        - name: 앱 및 유틸리티
+          href: 'dev-environment/mac-to-windows.md#apps-and-utilities'
+    - name: Linux용 Windows 하위 시스템
+      items:
+        - name: WSL 정보
+          href: 'https://docs.microsoft.com/windows/wsl/about?context=/windows/dev-environment/dev-environment-context'
+        - name: WSL 2 정보
+          href: 'https://docs.microsoft.com/windows/wsl/wsl2-about?context=/windows/dev-environment/dev-environment-context'
+        - name: WSL 1 및 WSL 2
+          href: 'https://docs.microsoft.com/windows/wsl/wsl2-ux-changes?context=/windows/dev-environment/dev-environment-context'
+        - name: 사용자 계정 및 사용 권한
+          href: 'https://docs.microsoft.com/windows/wsl/user-support?context=/windows/dev-environment/dev-environment-context'
+    - name: Windows 터미널
+      items:
+        - name: 개요
+          href: 'https://github.com/microsoft/terminal#terminal--console-overview'
+        - name: 사용자 가이드
+          href: 'https://github.com/microsoft/terminal/blob/master/doc/user-docs/index.md'
+        - name: 사용자 지정 설정
+          href: 'https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md'

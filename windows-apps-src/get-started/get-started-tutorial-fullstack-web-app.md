@@ -5,12 +5,12 @@ keywords: 호스트된 웹앱, HWA, REST API, 단일 페이지 앱, SPA
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b1b837d6585507311dc2246d42f3094ce8b07421
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3f5195cc3ed84116797c0b424a637c255b082386
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321172"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72281861"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>REST API 백 엔드를 사용하는 단일 페이지 웹앱 만들기
 
@@ -213,7 +213,7 @@ Server.listen(port, function () {  // Starts server with our modfied port settin
 
 ### <a name="3-set-up-your-route-handlers"></a>3. 경로 처리기 설정
 
-Swagger 파일(config\swagger.json)은 처리기 파일(\handlers 내)로 정의되는 각 URL 경로 및 해당 경로에 대해 정의되는 각 메서드(예: **GET**, **POST**)를 처리기 파일 내의 `operationId`(함수)로 매핑하여 다양한 클라이언트 HTTP 요청을 처리하는 방법을 서버에 지시합니다.
+Swagger 파일(config\swagger.json)은 정의한 각 URL 경로를 처리기 파일(\handlers)에 매핑하고 해당 경로에 대해 정의된 각 메서드(예: **GET**, **POST**)를 해당 처리기 파일 내의 `operationId`(함수)에 매핑하여 다양한 클라이언트 HTTP 요청을 처리하는 방법을 서버에 지시합니다.
 
 다양한 클라이언트 요청을 데이터 모델에 전달하기 전에 프로그램의 이 계층에서 일부 입력 확인 기능을 추가할 것입니다. 다음을 다운로드(또는 복사 및 붙여넣기)합니다.
 

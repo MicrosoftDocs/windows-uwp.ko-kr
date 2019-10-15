@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc422f57cdc268ea517aff729a9c3e57c80acf69
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 6ac962476ace10e08ef92ed4fff9fb9bf48f0006
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320617"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282266"
 ---
 # <a name="rssatom-feeds"></a>RSS/Atom 피드
 
@@ -199,7 +199,7 @@ function displayCurrentItem() {
                 //displayCurrentItem is continued below.
 ```
 
-앞에서 설명한 대로 [**SyndicationItem**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationItem) 개체로 표시되는 콘텐츠 유형은 피드를 게시하는 데 사용된 피드 표준(RSS 또는 Atom)에 따라 달라집니다. 예를 들어 Atom 피드는 [**Contributors**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.contributors) 목록을 제공할 수 있지만 RSS 피드는 제공할 수 없습니다. 그러나 한쪽 표준에서 지원되지 않는 피드 항목에 포함된 확장 요소(예: 더블린 코어 확장 요소)는 다음 예제 코드에 나온 대로 [**SyndicationItem.ElementExtensions**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.elementextensions) 속성을 사용하여 액세스한 다음 표시할 수 있습니다.
+앞에서 설명한 대로 [**SyndicationItem**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationItem) 개체로 표시되는 콘텐츠 유형은 피드를 게시하는 데 사용된 피드 표준(RSS 또는 Atom)에 따라 달라집니다. 예를 들어 Atom 피드는 [**Contributors**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.contributors) 목록을 제공할 수 있지만 RSS 피드는 제공할 수 없습니다. 그러나 두 표준 중 하나에서 지원하지 않는 피드 항목에 포함된 확장 요소(예: 더블린 코어 확장 요소)는 [**SyndicationItem.ElementExtensions**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.elementextensions) 속성을 사용하여 액세스한 다음, 아래 예제와 같이 표시할 수 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp

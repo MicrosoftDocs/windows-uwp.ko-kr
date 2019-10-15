@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d06d91d2195c483f5453aeadbc5523a8935003c
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: d8a4c354eff34edb0c97e9d95828d4287f9c4b99
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340576"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282493"
 ---
 # <a name="background-transfers"></a>백그라운드 전송
 백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 장치 배터리 상태에 따라 다운로드 작업이 조정됩니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
@@ -53,7 +53,7 @@ ms.locfileid: "71340576"
 | 데이터 통신 연결, 데이터 제한 초과. 이 상태는 사용자가 Data Sense UI에서 "백그라운드 데이터 제한"을 사용하도록 설정한 경우에만 발생합니다. | 거부             | 거부    | 거부   |
 
 ## <a name="uploading-files"></a>파일 업로드
-백그라운드 전송을 사용할 경우 업로드는 작업을 다시 시작하거나 취소하는 데 사용된 많은 컨트롤 메서드를 노출하는 [**UploadOperation**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.UploadOperation)으로 존재합니다. 앱 이벤트(예: 일시 중단 또는 종료) 및 연결 변경은 **UploadOperation**별로 자동으로 처리되며 업로드는 앱 일시 중단 또는 일시 중지 중에도 계속되며 앱 종료 후에도 유지됩니다. 또한 [**CostPolicy**](https://docs.microsoft.com/uwp/api/windows.networking.backgroundtransfer.backgrounddownloader.costpolicy) 속성을 설정하여 데이터 통신 연결 네트워크로 인터넷에 연결한 동안 앱에서 업로드를 시작할지를 나타냅니다.
+백그라운드 전송을 사용할 경우 업로드는 작업을 다시 시작하거나 취소하는 데 사용된 많은 컨트롤 메서드를 노출하는 [**UploadOperation**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.UploadOperation)으로 존재합니다. 앱 이벤트(예: 일시 중단 또는 종료) 및 연결 변경은 **UploadOperation**에 따라 시스템에서 자동으로 처리합니다. 업로드는 앱 일시 중단 기간 또는 일시 중지 중에도 계속되며, 앱 종료 후에도 유지됩니다. 또한 [**CostPolicy**](https://docs.microsoft.com/uwp/api/windows.networking.backgroundtransfer.backgrounddownloader.costpolicy) 속성을 설정하여 데이터 통신 연결 네트워크로 인터넷에 연결한 동안 앱에서 업로드를 시작할지를 나타냅니다.
 
 다음 예에서는 기본 업로드를 만들고 초기화하는 방법과 이전 앱 세션의 지속형 작업을 열거 및 다시 시도하는 방법을 안내합니다.
 
@@ -161,7 +161,7 @@ function uploadFiles() {
     [!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_D "Enumerate persisted operations")]
 
 ## <a name="downloading-files"></a>파일 다운로드
-백그라운드 전송을 사용할 경우 각 다운로드는 작업을 일시 중지, 다시 시작 및 취소하는 데 사용된 많은 컨트롤 메서드를 노출하는 [**DownloadOperation**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.DownloadOperation)으로 존재합니다. 앱 이벤트(예: 일시 중단 또는 종료) 및 연결 변경은 **DownloadOperation**별로 자동으로 처리되며 다운로드는 앱 일시 중단 또는 일시 중지 중에도 계속되며 앱 종료 후에도 유지됩니다. 모바일 네트워크 시나리오의 경우 [**CostPolicy**](https://docs.microsoft.com/uwp/api/windows.networking.backgroundtransfer.backgrounddownloader.costpolicy) 속성을 설정하여 데이터 통신 연결 네트워크로 인터넷에 연결한 동안 앱에서 다운로드를 시작하거나 계속할지를 나타냅니다.
+백그라운드 전송을 사용할 경우 각 다운로드는 작업을 일시 중지, 다시 시작 및 취소하는 데 사용된 많은 컨트롤 메서드를 노출하는 [**DownloadOperation**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.DownloadOperation)으로 존재합니다. 앱 이벤트(예: 일시 중단 또는 종료) 및 연결 변경은 **DownloadOperation**에 따라 시스템에서 자동으로 처리합니다. 다운로드는 앱 일시 중단 기간 또는 일시 중지 중에도 계속되며, 앱 종료 후에도 유지됩니다. 모바일 네트워크 시나리오의 경우 [**CostPolicy**](https://docs.microsoft.com/uwp/api/windows.networking.backgroundtransfer.backgrounddownloader.costpolicy) 속성을 설정하여 데이터 통신 연결 네트워크로 인터넷에 연결한 동안 앱에서 다운로드를 시작하거나 계속할지를 나타냅니다.
 
 빠르게 완료되는 작은 리소스를 다운로드하는 경우 백그라운드 전송 대신 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) API를 사용해야 합니다.
 

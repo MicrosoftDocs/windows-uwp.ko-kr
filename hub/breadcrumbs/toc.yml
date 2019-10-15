@@ -16,9 +16,22 @@
             - name: 데스크톱 앱 현대화
               tocHref: /windows/apps/desktop/modernize/
               topicHref: /windows/apps/desktop/modernize/
-        - name: Python
-          tocHref: /windows/python/
-          topicHref: /windows/python/index
-        - name: NodeJS
-          tocHref: /windows/nodejs/
-          topicHref: /windows/nodejs/index
+        - name: 개발 환경
+          tocHref: /windows/dev-environment/
+          topicHref: /windows/dev-environment/
+          items:
+            - name: Python
+              tocHref: /windows/python/
+              topicHref: /windows/python/
+            - name: Node.js
+              tocHref: /windows/nodejs/
+              topicHref: /windows/nodejs/
+            - name: Mac-Windows
+              tocHref: /windows/dev-environment/mac-to-windows/
+              topicHref: /windows/dev-environment/mac-to-windows/
+            - name: 개발자 환경
+              tocHref: /windows/dev-environment/wsl
+              topicHref: /windows/wsl/about
+            - name: 개발자 환경
+              tocHref: /windows/dev-environment/wsl
+              topicHref: /windows/wsl/wsl2-about

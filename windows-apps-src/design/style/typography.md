@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1d162fcf9a0f1023c58792e8c9f7a0e22fac4440
-ms.sourcegitcommit: f7ef7e894d7b7fc24483b4485605686abf8f2e93
+ms.openlocfilehash: cb2aef514c8787b5afe11ea5a2818012bfdf2f41
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "68867750"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282407"
 ---
 # <a name="typography"></a>입력 체계
 
@@ -144,7 +144,7 @@ UWP 유형 램프는 페이지의 유형 스타일 간에 중요한 관계를 �
     :::column-end:::
 :::row-end:::
 
-**참고**: 컨테이너가 잘 정의되지 않았거나(예: 차별화된 배경색 없음) 추가 텍스트를 확인해야 하는 링크가 있는 경우 줄임표를 사용합니다.
+**참고**: 컨테이너가 잘 정의되지 않았거나(예: 차별화된 배경색 없음) 추가 텍스트를 볼 수 있는 링크가 있는 경우 줄임표를 사용하세요.
 
 ## <a name="languages"></a>언어 
 

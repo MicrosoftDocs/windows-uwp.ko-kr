@@ -6,12 +6,12 @@ ms.date: 03/08/2017
 ms.topic: article
 keywords: windows 10, uwp, sd 카드, 스토리지
 ms.localizationpriority: medium
-ms.openlocfilehash: 4573e0959cf9d4af9b3cef8ffbbce14847a9e521
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: a6f94f0f417225ae154fc65c6beb5a6e2c1812fb
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369490"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282386"
 ---
 # <a name="access-the-sd-card"></a>SD 카드에 액세스
 
@@ -86,7 +86,7 @@ else
 ```
 
 > [!NOTE]
-> SD 카드 판독기가 내장 판독기(예: 노트북이나 PC 자체의 슬롯)인 경우, KnownFolders.RemovableDevices를 통해 액세스할 수 없습니다.
+> SD 카드 판독기가 포함된 판독기(예: 노트북 또는 PC 자체의 슬롯)인 경우 KnownFolders.RemovableDevices를 통해 액세스할 수 없습니다.
 
 ### <a name="querying-the-contents-of-the-sd-card"></a>SD 카드의 콘텐츠 쿼리
 

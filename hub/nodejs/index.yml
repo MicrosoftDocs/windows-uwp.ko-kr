@@ -1,0 +1,85 @@
+### YamlMime:Landing
+title: Windows에서 Node.js를 사용하여 개발
+summary: Windows를 사용하여 Node.js로 개발을 시작하세요.
+metadata:
+  author: mattwojo
+  description: Windows에서 Node.js로 개발을 시작하세요.
+  manager: jken
+  ms.author: mattwoj
+  ms.date: 09/15/2019
+  ms.prod: dev-environment
+  ms.technology: windows-node
+  ms.topic: landing-page
+  ms.openlocfilehash: 32c477cf230b7f8b5490b6f8ae7d227b6000aa77
+  ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/15/2019
+  ms.locfileid: "72314807"
+landingContent:
+- title: Node.js 개발 환경 설정
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Linux용 Windows 하위 시스템에서 설정(WSL 2)
+      url: ./setup-on-wsl2.md
+    - text: Windows에서 직접 설정
+      url: ./setup-on-windows.md
+- title: 초보자를 위한 시작
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 초보자를 위한 지침
+      url: ./beginners.md
+    - text: Node.js 애플리케이션 유형
+      url: ./beginners.md#types-of-nodejs-applications
+  - linkListType: quickstart
+    links:
+    - text: VS Code로 Node.js 사용해보기
+      url: ./beginners.md#try-using-nodejs-in-vs-code
+    - text: Express를 사용하여 기본 웹앱 설정
+      url: ./beginners.md#set-up-a-basic-web-app-framework-by-using-express
+    - text: Node.js 모듈을 사용해보기
+      url: ./beginners.md#try-using-a-nodejs-module
+- title: 웹 프레임워크 시작
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Next.js 시작
+      url: ./web-frameworks.md
+    - text: Nuxt.js 시작
+      url: ./web-frameworks.md#get-started-with-nuxtjs
+    - text: Gatsby.js 시작
+      url: ./web-frameworks.md#get-started-with-gatsbyjs
+- title: 데이터베이스 시작
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: MongoDB 및 PostgreSQL
+      url: ./databases.md
+  - linkListType: quickstart
+    links:
+    - text: MongoDB 시작
+      url: ./databases.md#install-mongodb
+    - text: PostgreSQL 시작
+      url: ./databases.md#install-postgresql
+- title: 컨테이너 시작
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Docker 컨테이너에서 Node.js 사용
+      url: ./containers.md
+  - linkListType: how-to-guide
+    links:
+    - text: Docker 설치
+      url: ./containers.md#install-docker-desktop-wsl-2-tech-preview
+    - text: VS Code Docker 확장 설치
+      url: ./containers.md#install-the-docker-extension-on-vs-code
+  - linkListType: tutorial
+    links:
+    - text: DockerFile을 사용하여 컨테이너 이미지 만들기
+      url: ./containers.md#create-a-container-image-with-dockerfile
+    - text: 리포지토리에 컨테이너 이미지 업로드
+      url: ./containers.md#upload-your-container-image-to-a-repository
+    - text: Azure Container Registry에 배포
+      url: ./containers.md#deploy-to-azure-container-registry

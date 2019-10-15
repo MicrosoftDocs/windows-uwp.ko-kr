@@ -10,51 +10,59 @@ metadata:
   ms.prod: dev-environment
   ms.technology: windows-python
   ms.topic: landing-page
-  ms.openlocfilehash: 60c0905a87d5089cccf5a525a6d29f87c327fd62
-  ms.sourcegitcommit: 7104ad5d01ad1c69a4ea0b3ba6732c1b2a98ec09
+  ms.openlocfilehash: 568c8f2eb6d7dc9c6f010e8a7c2c5d6d71fda9c7
+  ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/25/2019
-  ms.locfileid: "71251120"
+  ms.lasthandoff: 10/15/2019
+  ms.locfileid: "72313391"
 landingContent:
 - title: 초보자를 위한 시작
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: 개발 환경 설정
-      url: get-started/python-for-education.md#set-up-your-development-environment
+      url: ./beginners.md
   - linkListType: tutorial
     links:
     - text: 몇 가지 기본 Python 코드 실행
-      url: get-started/python-for-education.md#hello-world-tutorial-for-some-python-basics
+      url: ./beginners.md#hello-world-tutorial-for-some-python-basics
     - text: VS Code를 사용하는 HelloWorld
-      url: get-started/python-for-education.md#hello-world-tutorial-for-using-python-with-vs-code
+      url: ./beginners.md#hello-world-tutorial-for-using-python-with-vs-code
     - text: Pygame으로 간단한 게임 만들기
-      url: get-started/python-for-education.md#create-a-simple-game-with-pygame
+      url: ./beginners.md#create-a-simple-game-with-pygame
 - title: 웹 개발 시작
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: 개발 환경 설정
-      url: get-started/python-for-web.md#set-up-your-development-environment
+      url: ./web-frameworks.md#set-up-your-development-environment
   - linkListType: tutorial
     links:
     - text: Flask를 사용하는 HelloWorld
-      url: get-started/python-for-web.md#hello-world-tutorial-for-flask
+      url: ./web-frameworks.md#hello-world-tutorial-for-flask
     - text: Django를 사용하는 HelloWorld
-      url: get-started/python-for-web.md#hello-world-tutorial-for-django
+      url: ./web-frameworks.md#hello-world-tutorial-for-django
 - title: 자동화 스크립트 시작
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: 개발 환경 설정
-      url: get-started/python-for-scripting.md#set-up-your-development-environment
+      url: ./scripting.md#set-up-your-development-environment
   - linkListType: tutorial
     links:
     - text: 예제 스크립트 - 내 파일 시스템 표시
-      url: get-started/python-for-scripting.md#example-script-to-display-the-structure-of-your-file-system-directory
+      url: ./scripting.md#example-script-to-display-the-structure-of-your-file-system-directory
     - text: 예제 스크립트 - 디렉터리의 모든 파일 수정
-      url: get-started/python-for-scripting.md#example-script-to-modify-all-files-in-a-directory
+      url: ./scripting.md#example-script-to-modify-all-files-in-a-directory
+- title: 데이터베이스 시작
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: PostgreSQL 설치 및 실행
+      url: ./databases.md#install-postgresql
+    - text: MongoDB 설치 및 실행
+      url: ./databases.md#install-mongodb
 - title: 추가 리소스
   linkLists:
   - linkListType: reference
@@ -71,17 +79,3 @@ landingContent:
       url: resources.md#online-courses
     - text: 맞춤 웹 개발 링크
       url: resources.md#web-development
-- title: Mac-Windows 지원 가이드
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: 개발 환경 변경
-      url: ../mac-to-windows.md
-    - text: 바로 가기 키
-      url: ../mac-to-windows.md#keyboard-shortcuts
-    - text: 트랙 패드 바로 가기
-      url: ../mac-to-windows.md#trackpad-shortcuts
-    - text: 터미널 및 셸
-      url: ../mac-to-windows.md#terminal-and-shell
-    - text: 앱 및 유틸리티
-      url: ../mac-to-windows.md#apps-and-utilities
