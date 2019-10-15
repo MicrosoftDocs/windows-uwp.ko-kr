@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, microsoft, windows 10, 자습서, 온라인 과정, 블로그, 이벤트
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 3320cef0d3aaf48a2f93d65d93bf8876f1f997d6
-ms.sourcegitcommit: 7104ad5d01ad1c69a4ea0b3ba6732c1b2a98ec09
+ms.openlocfilehash: 64d4fc1c85ae4056da02f987ca654305a883d2c6
+ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249238"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313412"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Windows에서 Python을 사용 하 여 개발 하기 위한 리소스
 
@@ -21,7 +21,7 @@ Windows 10을 실행 하는 컴퓨터에서 작업 하는 Python 개발자에 �
 
 ## <a name="general"></a>일반
 
-- [Microsoft 개발자 블로그: Python](https://devblogs.microsoft.com/python/): Microsoft에서 Python 모든 항목에 대 한 최신 업데이트를 읽으십시오.
+- [Microsoft Dev 블로그: Python @ no__t-0: Microsoft에서 Python 모든 항목에 대 한 최신 업데이트를 읽으십시오.
 
 - [WSL 및 Visual Studio Code를 사용 하 여 Windows에서 Linux를 개발 하는 방법에 대 한 자세한 자습서](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/) 개발자 않고도를 설정 하 고 Python 앱을 만들고 몇 가지 디버깅을 수행 하는 방법에 대 한 연습입니다.
 
@@ -49,7 +49,7 @@ Windows 10을 실행 하는 컴퓨터에서 작업 하는 Python 개발자에 �
 
 - [Microsoft Learn의 Python 소개](https://docs.microsoft.com/en-us/learn/modules/intro-to-python/): 대화형 Microsoft Learn 플랫폼을 사용해 보고, 기본 Python 코드를 작성 하 고, 변수를 선언 하 고, 콘솔 입력 및 출력을 사용 하는 방법에 대 한 기본 사항을 설명 하는이 모듈을 완료 하기 위한 경험 사항을 알아봅니다. 대화형 샌드박스 환경을 사용 하면 Python 개발 환경이 아직 설정 되지 않은 사람들에 게이를 시작할 수 있습니다.
 
-- [Pluralsight의 Python: 8 과정, 29 시간](https://app.pluralsight.com/paths/skills/python): Pluralsight의 Python 학습 경로는 기술을 측정 하 고 차이를 찾는 도구를 비롯 하 여 Python과 관련 된 다양 한 주제를 다루는 온라인 과정을 제공 합니다.
+- Pluralsight의 [Python: 8 과정, 29 시간 @ no__t-0: Pluralsight의 Python 학습 경로는 기술을 측정 하 고 차이를 찾는 도구를 비롯 하 여 Python과 관련 된 다양 한 주제를 다루는 온라인 과정을 제공 합니다.
 
 - [LearnPython.org 자습서](https://www.learnpython.org/): DataCamp의 사람들에 게 제공 되는 무료 대화형 Python 자습서를 사용 하 여 모든 것을 설치 하거나 설정할 필요 없이 Python 학습을 시작 하세요.
 
@@ -65,7 +65,7 @@ Windows 10을 실행 하는 컴퓨터에서 작업 하는 Python 개발자에 �
 
 - [기타 Python 웹 프레임 워크](https://wiki.python.org/moin/WebFrameworks): Python.org에서 간략하게 설명 하는 Python 웹 프레임 워크의 목록입니다.
 
-- [자습서: Azure Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/translator/tutorial-build-flask-app-translation-synthesis)을 사용 하 여 flask 앱 빌드: Azure Cognitive Services를 사용 하 여 텍스트를 번역 하 고, 감정 분석 하 고, 번역 된 텍스트를 음성으로 합성 하는 Flask 웹 앱을 빌드합니다.
+- [자습서: Azure Cognitive Services @ no__t를 사용 하 여 Flask 앱 빌드-0: Azure Cognitive Services를 사용 하 여 텍스트를 번역 하 고, 감정 분석 하 고, 번역 된 텍스트를 음성으로 합성 하는 Flask 웹 앱을 빌드합니다.
 
 - [Azure Stack에서 VM에 Python 웹 앱을 배포](https://docs.microsoft.com/azure-stack/user/azure-stack-dev-start-howto-vm-python)합니다. Azure Stack에서 Python 웹 앱을 호스트 하는 VM을 만듭니다.
 
@@ -75,21 +75,4 @@ Windows 10을 실행 하는 컴퓨터에서 작업 하는 Python 개발자에 �
 
 - [Microsoft Graph를 사용 하 여 Python Django Apps 빌드](https://docs.microsoft.com/graph/tutorials/python): Microsoft Graph API를 사용 하 여 사용자에 대 한 일정 정보를 검색 하는 Python Django 웹 앱을 빌드합니다.
 
-- [연습: Python](https://docs.microsoft.com/advertising/guides/walkthrough-web-application-python?view=bingads-13)의 Bing Ads API 웹 응용 프로그램: Bing Ads Python SDK, Visual Studio Code IDE 및 Django 웹 프레임 워크를 사용 하 여 Microsoft Advertising 웹 응용 프로그램을 실행 하기 시작 합니다.
-
-<!-- ## Data Science and Machine Learning
-
-- Anaconda - brief description
-- Canopy - brief description
-- TensorFlow - brief description
-- Scikit-Learn, Keras, PyTorch, etc - brief descriptions
-
-## Desktop GUI app and IoT development
-
-- PyQT - brief description
-- PyJs - brief description
-- PyGUI - brief descriptio
-- Kivy - brief descriptio
-- PyGTK - brief descriptio
-- WxPython - brief description
-- PyGame - brief description (with links to our internal games once they're done?) -->
+- [연습: Python의 Bing Ads API 웹 응용 프로그램 @ no__t-0: Bing Ads Python SDK, Visual Studio Code IDE 및 Django 웹 프레임 워크를 사용 하 여 Microsoft Advertising 웹 응용 프로그램을 실행 하기 시작 합니다.

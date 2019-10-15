@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, pip, py, 파일 경로, PYTHONPATH, python 배포, python 패키징
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: f2dbc455578a3fbe79c2558e2ba16c8f82cea522
-ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
+ms.openlocfilehash: 4132ef0089ee707367666b4d6340333e538b1130
+ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68959044"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313380"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Windows에서 Python 사용에 대 한 질문과 대답
 
@@ -29,35 +29,35 @@ ms.locfileid: "68959044"
 
 ## <a name="what-is-pyexe"></a>Py 란?
 
-여러 유형의 Python 프로젝트에서 작업 하 고 있으므로 컴퓨터에 여러 버전의 Python이 설치 될 수 있습니다. 이러한 모두 `python` 명령을 사용 하기 때문에 사용 중인 Python 버전을 명확 하 게 알 수 없습니다. 표준으로 `python3` 명령을 사용 하거나 `python3.7` 특정 버전을 선택 하는 것이 좋습니다.
+여러 유형의 Python 프로젝트에서 작업 하 고 있으므로 컴퓨터에 여러 버전의 Python이 설치 될 수 있습니다. 모두 `python` 명령을 사용 하기 때문에 사용 중인 Python 버전을 명확 하 게 알 수 없습니다. 표준으로 `python3` 명령을 사용 하거나 `python3.7`을 사용 하 여 특정 버전을 선택 하는 것이 좋습니다.
 
-[Py 시작 관리자](https://docs.python.org/3/using/windows.html#launcher) 는 설치한 Python의 최신 버전을 자동으로 선택 합니다. 같은 `py -3.7` 명령을 사용 하 여 특정 버전을 선택 하거나 `py --list` 사용할 수 있는 버전을 확인할 수도 있습니다. **그러나** [python.org](https://www.python.org/downloads/windows/)에서 설치 된 Python 버전을 사용 하는 경우에만 py 시작 관리자가 작동 합니다. Microsoft Store에서 Python을 `py` 설치 하는 경우 명령은 **포함 되지 않습니다**. Linux, macos, wsl 및 Python의 Microsoft Store 버전에 대해 `python3` (또는 `python3.7`) 명령을 사용 해야 합니다.
+[Py 시작 관리자](https://docs.python.org/3/using/windows.html#launcher) 는 설치한 Python의 최신 버전을 자동으로 선택 합니다. @No__t-0과 같은 명령을 사용 하 여 특정 버전을 선택 하거나 `py --list`을 사용 하 여 사용할 수 있는 버전을 확인할 수도 있습니다. **그러나** [python.org](https://www.python.org/downloads/windows/)에서 설치 된 Python 버전을 사용 하는 경우에만 py 시작 관리자가 작동 합니다. Microsoft Store에서 Python을 설치 하는 경우 `py` 명령이 **포함 되지 않습니다**. Linux, macOS, WSL 및 Microsoft Store 버전의 Python의 경우 `python3` (또는 `python3.7`) 명령을 사용 해야 합니다.
 
 ## <a name="why-does-running-pythonexe-open-the-microsoft-store"></a>Python .exe를 실행 하 여 Microsoft Store을 여는 이유는 무엇 인가요?
 
-새 사용자가 Python을 올바르게 설치 하는 것을 지원 하기 위해 Microsoft Store에 게시 된 커뮤니티 패키지의 최신 버전으로 바로 이동 하는 바로 가기를 Windows에 추가 했습니다. 이 패키지는 관리자 권한 없이 쉽게 설치할 수 있으며, 기본 `python` 및 `python3` 명령을 실제 항목으로 바꿉니다.
+새 사용자가 Python을 올바르게 설치 하는 것을 지원 하기 위해 Microsoft Store에 게시 된 커뮤니티 패키지의 최신 버전으로 바로 이동 하는 바로 가기를 Windows에 추가 했습니다. 이 패키지는 관리자 권한 없이 쉽게 설치할 수 있으며 기본 `python` 및 `python3` 명령을 실제 명령으로 바꿉니다.
 
 명령줄 인수를 사용 하 여 바로 가기 실행 파일을 실행 하면 Python이 설치 되지 않았음을 나타내는 오류 코드가 반환 됩니다. 이는 배치 파일 및 스크립트가 의도 하지 않을 때 스토어 앱을 열지 못하도록 하기 위한 것입니다.
 
-[Python.org](https://www.python.org/downloads/windows/) 의 설치 관리자를 사용 하 여 Python을 설치 하 고 "경로에 추가" 옵션을 선택 `python` 하면 새 명령이 바로 가기 보다 우선적으로 적용 됩니다. 다른 설치 관리자는 기본 제공 `python` 바로 가기 보다 _낮은_ 우선 순위로 추가 될 수 있습니다.
+[Python.org](https://www.python.org/downloads/windows/) 의 설치 관리자를 사용 하 여 Python을 설치 하 고 "경로에 추가" 옵션을 선택 하면 새 `python` 명령이 바로 가기 보다 우선적으로 적용 됩니다. 다른 설치 관리자는 기본 제공 바로 가기 보다 _낮은_ 우선 순위로 `python`을 추가할 수 있습니다.
 
 시작에서 "앱 실행 별칭 관리"를 열고 "App Installer" Python 항목을 찾은 다음 "끄기"로 전환 하 여 Python을 설치 하지 않고 바로 가기를 사용 하지 않도록 설정할 수 있습니다.
 
 ## <a name="why-dont-file-paths-work-in-python-when-i-copy-paste-them"></a>파일 경로를 복사 하 여 붙여넣을 때 Python에서 파일 경로가 작동 하지 않는 이유는 무엇 인가요?
 
-Python 문자열은 특수 문자에 대해 "이스케이프"를 사용 합니다. 예를 들어, 문자열에 줄 바꿈 문자를 삽입 하려면를 입력 `\n`합니다. Windows의 파일 경로는 백슬래시를 사용 하기 때문에 일부 부분은 특수 문자로 변환 될 수 있습니다.
+Python 문자열은 특수 문자에 대해 "이스케이프"를 사용 합니다. 예를 들어, 문자열에 줄 바꿈 문자를 삽입 하려면 `\n`을 입력 합니다. Windows의 파일 경로는 백슬래시를 사용 하기 때문에 일부 부분은 특수 문자로 변환 될 수 있습니다.
 
-Python에서 경로를 문자열로 붙여넣으려면 `r` 접두사를 추가 합니다. 이것은 `raw` 문자열이 문자열이 고 \ "를 제외 하 고 이스케이프 문자를 사용 하지 않음을 나타냅니다 (경로에서 마지막 백슬래시를 제거 해야 할 수 있음). 따라서 경로는 r "C:\Users\MyName\Documents\Document.txt"와 같을 수 있습니다.
+Python에서 경로를 문자열로 붙여넣으려면 `r` 접두사를 추가 합니다. 이는 `raw` 문자열 임을 나타내며 \ "를 제외 하 고 이스케이프 문자를 사용 하지 않습니다 (경로에서 마지막 백슬래시를 제거 해야 할 수 있음). 따라서 경로는 r "C:\Users\MyName\Documents\Document.txt"와 같을 수 있습니다.
 
 Python에서 경로로 작업할 때는 표준 pathlib 모듈을 사용 하는 것이 좋습니다. 이렇게 하면 슬래시 또는 백슬래시를 사용 하 여 여러 운영 체제에서 코드를 효율적으로 사용할 수 있는지 여부에 관계 없이 경로 조작을 일관 되 게 수행할 수 있는 풍부한 경로 개체로 문자열을 변환할 수 있습니다.
 
 ## <a name="what-is-pythonpath"></a>PYTHONPATH 란?
 
-PYTHONPATH 환경 변수는 Python에서 모듈을 가져올 수 있는 디렉터리 목록을 지정 하는 데 사용 됩니다. 실행할 때 `sys.path` 변수를 검사 하 여 가져올 때 검색 되는 디렉터리를 확인할 수 있습니다.
+PYTHONPATH 환경 변수는 Python에서 모듈을 가져올 수 있는 디렉터리 목록을 지정 하는 데 사용 됩니다. 을 실행 하는 경우 `sys.path` 변수를 검사 하 여 항목을 가져올 때 검색할 디렉터리를 확인할 수 있습니다.
 
-명령 프롬프트에서이 변수를 설정 하려면를 사용 `set PYTHONPATH=list;of;paths`합니다.
+명령 프롬프트에서이 변수를 설정 하려면 `set PYTHONPATH=list;of;paths`을 사용 합니다.
 
-PowerShell에서이 변수를 설정 하려면 Python을 `$env:PYTHONPATH=’list;of;paths’` 시작 하기 바로 전에을 사용 합니다.
+PowerShell에서이 변수를 설정 하려면 Python을 시작 하기 직전에 `$env:PYTHONPATH=’list;of;paths’`을 사용 합니다.
 
 **환경 변수** 설정을 통해 전역으로이 변수를 설정 하는 것은 사용 하려는 것이 아닌 모든 버전의 Python에서 사용할 수 있기 때문에 사용 **하지 않는** 것이 좋습니다.
 
@@ -77,4 +77,4 @@ VSCode 확장 [Keymaps](https://marketplace.visualstudio.com/search?target=VSCod
 
 ## <a name="how-do-mac-shortcut-keys-map-to-windows-shortcut-keys"></a>Mac 바로 가기 키를 Windows 바로 가기 키에 매핑하는 방법
 
-Windows 컴퓨터와 Macintosh에서 키보드 단추와 시스템 바로 가기 중 일부가 약간 다릅니다. Microsoft 지원의이 [키보드 매핑 가이드](https://support.microsoft.com/help/970299/keyboard-mappings-using-a-pc-keyboard-on-a-macintosh) 에서는 기본 사항을 다룹니다.
+Windows 컴퓨터와 Macintosh에서 키보드 단추와 시스템 바로 가기 중 일부가 약간 다릅니다. 이 [Mac To Windows 전환 가이드](../dev-environment/mac-to-windows.md) 에서는 기본 사항을 다룹니다.

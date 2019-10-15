@@ -6,14 +6,14 @@ ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도
 ms.author: mcleans
 author: mcleanbyron
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: bd49417d110759dc9fec4ff4c9003e842bf1d7bb
-ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
-ms.translationtype: MT
+ms.openlocfilehash: 52287576dbc395af60e15b5f4b4a403db7e92900
+ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69643355"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313444"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱에서 UWP XAML 컨트롤 호스트 (XAML 제도)
 
@@ -29,7 +29,7 @@ Windows 10 버전 1903부터 *XAML 아일랜드*라는 기능을 사용 하 여 
 XAML 아일랜드를 사용 하는 방법은 응용 프로그램 형식 및 호스팅할 UWP 컨트롤의 형식에 따라 달라 집니다.
 
 > [!NOTE]
-> XAML 아일랜드에 대 한 피드백이 있는 경우 [Microsoft Toolkit 리포지토리의](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/issues) 새 문제를 만들고 의견을 남겨 두세요. 사용자 의견을 개인적으로 제출 하는 것을 선호 하는 경우 XamlIslandsFeedback@microsoft.com로 보낼 수 있습니다. 귀하의 통찰력 및 시나리오는 매우 중요 합니다.
+> XAML 아일랜드에 대 한 피드백이 있는 경우 [Microsoft Toolkit 리포지토리의](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/issues) 새 문제를 만들고 의견을 남겨 두세요. 사용자 의견을 개인적으로 제출 하는 것을 선호 하는 경우 XamlIslandsFeedback@microsoft.com으로 보낼 수 있습니다. 귀하의 통찰력 및 시나리오는 매우 중요 합니다.
 
 ## <a name="wpf-and-windows-forms-applications"></a>WPF 및 Windows Forms 응용 프로그램
 
@@ -81,7 +81,7 @@ XAML 아일랜드 .NET 컨트롤에는 Windows 10, 버전 1903 이상 버전이 
 
 * 사용자 지정 UWP 컨트롤을 호스트 하는 경우 WPF 또는 Windows Forms 프로젝트는 .NET Core 3을 대상으로 해야 합니다. 사용자 지정 UWP 컨트롤을 호스트 하는 것은 .NET Framework를 대상으로 하는 앱에서 지원 되지 않습니다. 또한 사용자 지정 컨트롤을 참조 하려면 몇 가지 추가 단계를 수행 해야 합니다. 자세한 내용은 [XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅](host-custom-control-with-xaml-islands.md)을 참조 하세요.
 
-* 이러한 지침의 이전 버전에서는 WPF 또는 Windows Forms `maxversiontested` 프로젝트의 응용 프로그램 매니페스트에 요소를 추가 했습니다. 위에 나열 된 NuGet 패키지의 최신 미리 보기 버전을 사용 하는 동안에는이 요소를 매니페스트에 더 이상 추가할 필요가 없습니다.
+* 이러한 지침의 이전 버전에서는 WPF 또는 Windows Forms 프로젝트의 응용 프로그램 매니페스트에 `maxversiontested` 요소를 추가 했습니다. 위에 나열 된 NuGet 패키지의 최신 미리 보기 버전을 사용 하는 동안에는이 요소를 매니페스트에 더 이상 추가할 필요가 없습니다.
 
 ### <a name="architecture-of-xaml-island-net-controls"></a>XAML 아일랜드 .NET 컨트롤의 아키텍처
 
