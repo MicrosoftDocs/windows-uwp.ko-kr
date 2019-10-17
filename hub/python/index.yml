@@ -10,12 +10,12 @@ metadata:
   ms.prod: dev-environment
   ms.technology: windows-python
   ms.topic: landing-page
-  ms.openlocfilehash: 568c8f2eb6d7dc9c6f010e8a7c2c5d6d71fda9c7
-  ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+  ms.openlocfilehash: 42ca85644c0759e3c3bb561d3decfe42560d95c9
+  ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/15/2019
-  ms.locfileid: "72313391"
+  ms.lasthandoff: 10/17/2019
+  ms.locfileid: "72517797"
 landingContent:
 - title: 초보자를 위한 시작
   linkLists:
@@ -57,7 +57,11 @@ landingContent:
       url: ./scripting.md#example-script-to-modify-all-files-in-a-directory
 - title: 데이터베이스 시작
   linkLists:
-  - linkListType: how-to-guide
+  - linkListType: concept
+    links:
+    - text: MongoDB 및 PostgreSQL
+      url: ./databases.md
+  - linkListType: quickstart
     links:
     - text: PostgreSQL 설치 및 실행
       url: ./databases.md#install-postgresql
