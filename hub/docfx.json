@@ -32,16 +32,19 @@
     "fileMetadata": {
       "ms.prod":
       {
-        "python/**.md": "dev-environment"
+        "python/**.md": "dev-environment",
+        "nodejs/**.md": "dev-environment",
+        "dev-environment/**.md": "dev-environment"
       },
       "ms.technology":
       {
       "apps/**.md": "apps",
-      "python/**.md": "windows-python"
-      }
+      "python/**.md": "windows-python",
+      "nodejs/**.md": "windows-nodejs"
       }
     },
     "template": [],
     "dest": "hub",
     "markdownEngineName": "markdig"
   }
+}
