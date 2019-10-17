@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Node.js, windows 10, 네이티브 windows, windows에서 직접
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: eaeee6e2d55bcb9221d88bd87ebeafc7c45d0a5d
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 18a8d07f790c391a6e10577ff512347106e1cf21
+ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315087"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517833"
 ---
 # <a name="set-up-your-nodejs-development-environment-directly-on-windows"></a>Windows에서 직접 node.js 개발 환경 설정
 
@@ -70,29 +70,18 @@ Volta를 사용 하 여 Windows에 여러 버전의 node.js를 설치 하는 방
 
 ## <a name="install-your-favorite-code-editor"></a>즐겨 찾는 코드 편집기 설치
 
-Windows에서 node.js를 사용 하 여 개발 하는 데에는 VS Code 및 [Node.js 확장 팩](https://marketplace.visualstudio.com/items?itemName=waderyan.nodejs-extension-pack)을 [설치](https://code.visualstudio.com)하는 것이 좋습니다.
-
-Node.js 확장 팩은 다음을 포함 합니다.
-
-- ES-코드를 "lint" 하는 도구입니다. Lint는 코드를 분석 하 고 잠재적 오류를 경고 합니다.
-- npm-명령 팔레트에서 npm 스크립트를 실행 하 고 package. json에 정의 된 모듈의 유효성을 검사 합니다.
-- JavaScript (ES6) 코드 조각-ES6 구문에서 JavaScript 개발용 코드 조각을 추가 합니다.
-- 검색 node_modules-프로젝트에서 노드 모듈을 신속 하 게 검색 합니다.
-- NPM IntelliSense-코드에서 NPM 모듈의 IntelliSense를 추가 합니다.
-- 경로 IntelliSense-코드에서 파일 이름을 자동으로 완성 합니다.
-
-모두 설치 하거나 선택 하 고 가장 유용 하다 고 생각 하는 선택 합니다.
+Windows에서 node.js를 사용 하 여 개발 하는 데에는 VS Code 및 [Node.js 확장 팩](https://marketplace.visualstudio.com/items?itemName=waderyan.nodejs-extension-pack)을 [설치](https://code.visualstudio.com)하는 것이 좋습니다. 모두 설치 하거나 선택 하 고 가장 유용 하다 고 생각 하는 선택 합니다.
 
 Node.js 확장 팩을 설치 하려면:
 
 1. VS Code에서 **확장** 창 (Ctrl + Shift + X)을 엽니다.
-2. 확장 창의 맨 위에 있는 검색 상자에 다음을 입력 합니다. "노드 확장 팩" (또는 찾고 있는 모든 확장의 이름)입니다.
-3. **설치**를 선택합니다. 설치가 끝나면 확장이 **확장** 창의 "사용" 폴더에 표시 됩니다. 새 확장의 설명 옆에 있는 기어 아이콘을 선택 하 여 설정을 사용 하지 않도록 설정 하거나, 제거 하거나, 구성할 수 있습니다.
+2. 확장 창의 맨 위에 있는 검색 상자에 "노드 확장 팩" (또는 찾고 있는 모든 확장의 이름)을 입력 합니다.
+3. **설치**를 선택 합니다. 설치가 끝나면 확장이 **확장** 창의 "사용" 폴더에 표시 됩니다. 새 확장의 설명 옆에 있는 기어 아이콘을 선택 하 여 설정을 사용 하지 않도록 설정 하거나, 제거 하거나, 구성할 수 있습니다.
 
 고려해 야 할 몇 가지 추가 확장은 다음과 같습니다.
 
-- [Chrome 용 디버거](https://code.visualstudio.com/blogs/2016/02/23/introducing-chrome-debugger-for-vs-code): Node.js를 사용 하 여 서버 쪽에서 개발을 마친 후에는 클라이언트 쪽을 개발 하 고 테스트 해야 합니다. 이 확장은 VS Code 편집기를 Chrome 브라우저 디버깅 서비스와 통합 하 여 좀 더 효율적으로 만듭니다.
-- [다른 편집기의 Keymaps](https://marketplace.visualstudio.com/search?target=VSCode&category=Keymaps&sortBy=Downloads): 이러한 확장을 통해 다른 텍스트 편집기에서 전환 하는 경우 (예: Atom, Sublime, Vim, eMacs, 메모장 + + 등) 환경에 대 한 느낌을 높일 수 있습니다.
+- [Chrome 용 디버거](https://code.visualstudio.com/blogs/2016/02/23/introducing-chrome-debugger-for-vs-code): node.js를 사용 하 여 서버 쪽에서 개발을 마친 후에는 클라이언트 쪽을 개발 하 고 테스트 해야 합니다. 이 확장은 VS Code 편집기를 Chrome 브라우저 디버깅 서비스와 통합 하 여 좀 더 효율적으로 만듭니다.
+- [다른 편집기의 Keymaps](https://marketplace.visualstudio.com/search?target=VSCode&category=Keymaps&sortBy=Downloads): 이러한 확장을 통해 다른 텍스트 편집기에서 전환 하는 경우 (예: Atom, Sublime, Vim, EMacs, 메모장 + + 등) 환경에 적합 합니다.
 - [설정 동기화](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync): GitHub를 사용 하 여 여러 설치에서 VS Code 설정을 동기화 할 수 있습니다. 여러 컴퓨터에서 작업 하는 경우이를 통해 환경을 일관 되 게 유지할 수 있습니다.
 
 ## <a name="install-git-optional"></a>Git 설치 (선택 사항)

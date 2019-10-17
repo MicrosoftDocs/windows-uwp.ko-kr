@@ -8,18 +8,18 @@ ms.topic: article
 keywords: NodeJS, node.js, windows 10, microsoft, learning NodeJS, windows의 노드, windows의 노드, windows에서 노드 설치, windows에서 노드 설치, windows에서 노드를 사용 하 여 개발, windows에서 NodeJS를 사용 하 여 개발, windows에서 노드 설치, windows의 NodeJS Linux 용 하위 시스템
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: bdc3e3c944c4aeb25f5cf880fc4d31df1019da5a
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 63c47107538d8744201f83ea1be24cfaf3193f4f
+ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315117"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517821"
 ---
-# <a name="get-started-connecting-nodejs-apps-to-a-database"></a>Node.js 앱을 데이터베이스에 연결 하기 시작
+# <a name="get-started-using-mongodb-or-postgresql-with-nodejs-on-windows"></a>Windows에서 node.js를 사용 하 여 MongoDB 또는 PostgreSQL 사용 시작
 
-Node.js 응용 프로그램은 종종 파일, 로컬 저장소, 클라우드 서비스 또는 데이터베이스를 통해 발생할 수 있는 데이터를 유지 해야 합니다. 이 단계별 가이드는 node.js 앱을 데이터베이스에 연결 하기 시작 하는 데 도움이 됩니다. 가장 널리 사용 되는 두 가지 옵션을 중점적으로 선택 했습니다. MongoDB 및 PostgreSQL.
+Node.js 응용 프로그램은 종종 파일, 로컬 저장소, 클라우드 서비스 또는 데이터베이스를 통해 발생할 수 있는 데이터를 유지 해야 합니다. 이 단계별 가이드는 node.js 앱을 데이터베이스에 연결 하기 시작 하는 데 도움이 됩니다. MongoDB 및 PostgreSQL의 두 가지 인기 있는 옵션에 집중 하도록 선택 했습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 가이드에서는 다음을 포함 하 여 [WSL 2를 사용 하 여 node.js 개발 환경을 설정](./setup-on-wsl2.md)하는 단계를 이미 완료 했다고 가정 합니다.
 
@@ -41,14 +41,14 @@ Node.js 응용 프로그램은 종종 파일, 로컬 저장소, 클라우드 서
 
 [Azure CosmosDB 확장](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)을 통해 MongoDB 데이터베이스 작업을 지원 VS Code VS Code 내에서 MongoDB 데이터베이스를 만들고 관리 하 고 쿼리할 수 있습니다.
 
-자세히 알아보려면 VS Code 문서를 참조 하세요. [MongoDB 사용](https://code.visualstudio.com/docs/azure/mongodb).
+자세히 알아보려면 [MongoDB 작업](https://code.visualstudio.com/docs/azure/mongodb): 문서를 VS Code 참조 하세요.
 
 MongoDB 문서에서 자세히 알아보세요.
 
 - [MongoDB 사용 소개](https://docs.mongodb.com/manual/introduction/)
 - [사용자 만들기](https://docs.mongodb.com/manual/tutorial/create-users/)
 - [원격 호스트에서 MongoDB 인스턴스에 연결](https://docs.mongodb.com/manual/mongo/#mongodb-instance-on-a-remote-host)
-- [CRUD: Create, Read, Update, Delete @ no__t-0
+- [CRUD: 만들기, 읽기, 업데이트, 삭제](https://docs.mongodb.com/manual/crud/)
 - [참조 문서](https://docs.mongodb.com/manual/reference/)
 
 ## <a name="install-postgresql"></a>PostgreSQL 설치

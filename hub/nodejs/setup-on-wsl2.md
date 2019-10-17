@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, node.js, windows 10, microsoft, learning NodeJS, windows의 노드, windows의 노드, windows에서 노드 설치, windows에서 노드 설치, windows에서 노드를 사용 하 여 개발, windows에서 NodeJS를 사용 하 여 개발, windows에서 노드 설치, windows의 NodeJS Linux 용 하위 시스템
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 917192d782e0a44c6de7e549960161a003c646e5
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: e5875f0bf7ce73d3615aa131d57c2384c73dd8a1
+ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315067"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517839"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>WSL 2를 사용 하 여 node.js 개발 환경 설정
 
@@ -24,15 +24,15 @@ ms.locfileid: "72315067"
 
 ## <a name="install-windows-10-insider-preview-build"></a>Windows 10 Insider preview 빌드 설치
 
-1. **[최신 버전의 Windows 10을 설치 합니다](https://www.microsoft.com/software-download/windows10)** . 업데이트 도우미를 다운로드 하려면 **지금 업데이트** 를 선택 합니다. 다운로드 한 후 업데이트 도우미를 열어 현재 최신 버전의 Windows를 실행 하 고 있는지 확인 하 고, 그렇지 않은 경우에는 길잡이 창 내부에서 **지금 업데이트** 를 선택 하 여 컴퓨터를 업데이트 합니다. *(이 단계는 Windows 10의 최신 버전을 실행 하는 경우 선택 사항입니다.)*
+1. **[최신 버전의 Windows 10 설치](https://www.microsoft.com/software-download/windows10)** : 업데이트 도우미를 다운로드 하려면 **지금 업데이트** 를 선택 합니다. 다운로드 한 후 업데이트 도우미를 열어 현재 최신 버전의 Windows를 실행 하 고 있는지 확인 하 고, 그렇지 않은 경우에는 길잡이 창 내부에서 **지금 업데이트** 를 선택 하 여 컴퓨터를 업데이트 합니다. *(이 단계는 Windows 10의 최신 버전을 실행 하는 경우 선택 사항입니다.)*
 
     ![Windows 업데이트 도우미](../images/windows-update-assistant2019.png)
 
-2. **[Windows 참가자 프로그램 > 시작 > 설정으로 이동 합니다](ms-settings:windowsinsider)** . Windows 참가자 프로그램 창 내에서 **시작** 을 선택한 다음 **계정 연결**을 선택 합니다.
+2. **[시작 > 설정 > Windows Insider program](ms-settings:windowsinsider)** : Windows 참가자 프로그램 창 내에서 **시작** , **계정 연결**을 차례로 선택 합니다.
 
     ![Windows 참가자 프로그램 설정](../images/windows-insider-program-settings.png)
 
-3. **[Windows Insider로 등록 합니다](https://insider.windows.com/getting-started/#register)** . Insider program에 등록 하지 않은 경우 [Microsoft 계정](https://account.microsoft.com/account)하 여이 작업을 수행 해야 합니다.
+3. **[Windows 참가자로 등록](https://insider.windows.com/getting-started/#register)** : Insider program에 등록 하지 않은 경우 [Microsoft 계정](https://account.microsoft.com/account)를 사용 하 여 등록 해야 합니다.
 
     ![Windows 참가자 등록](../images/windows-insider-account.png)
 
@@ -96,11 +96,15 @@ Node.js를 설치 하는 방법에는 여러 가지가 있습니다. 버전 변�
 
     ![LTS 및 현재 노드 버전을 보여 주는 NVM 목록](../images/nvm-node-installed.png)
 
-9. Node.js가 설치 되어 있고 현재 기본 버전인 `node --version` 인지 확인 합니다. 그런 다음를 사용 하 여 npm도 있는지 확인 합니다. `npm --version` (`which node` 또는 `which npm`를 사용 하 여 기본 버전에 사용 되는 경로를 확인할 수도 있습니다.)
+9. Node.js가 설치 되어 있고 현재 기본 버전인 `node --version` 인지 확인 합니다. 그런 다음 `npm --version`을 사용 하 여 npm를 확인 합니다. 즉, `which node` 또는 `which npm`를 사용 하 여 기본 버전에 사용 되는 경로를 확인할 수도 있습니다.
 10. 프로젝트에 사용 하려는 node.js의 버전을 변경 하려면 새 프로젝트 디렉터리 `mkdir NodeTest`을 만들고 @no__t 디렉터리를 입력 한 다음 `nvm use node`를 입력 하 여 현재 버전으로 전환 하거나 `nvm use --lts`을 입력 하 여 LTS 버전으로 전환 합니다. @No__t-0과 같이 설치한 모든 추가 버전에 대해 특정 번호를 사용할 수도 있습니다. 사용 가능한 node.js의 모든 버전을 나열 하려면 다음 명령을 사용 합니다. `nvm ls-remote`).
 
 > [!TIP]
 > NVM을 사용 하 여 node.js 및 NPM을 설치 하는 경우 SUDO 명령을 사용 하 여 새 패키지를 설치할 필요가 없습니다.
+
+> [!NOTE]
+> 게시 당시 NVM v 0.34.0는 사용 가능한 최신 버전 이었습니다. 최신 버전의 [NVM에 대 한 GitHub 프로젝트 페이지](https://github.com/nvm-sh/nvm)를 확인 하 고 위의 명령을 조정 하 여 최신 버전을 포함 시킬 수 있습니다.
+새 버전의 NVM을 설치 하면 이전 버전을 대체 하 여 NVM을 사용한 노드 버전이 그대로 유지 됩니다. 예를 들면 다음과 같습니다. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash`
 
 ## <a name="alternative-version-managers"></a>대체 버전 관리자
 
@@ -114,7 +118,7 @@ Nvm은 현재 노드당 가장 널리 사용 되는 버전 관리자 이지만 �
 
 ## <a name="install-your-favorite-code-editor"></a>즐겨 찾는 코드 편집기 설치
 
-Node.js 개발 프로젝트용으로는 [**Visual Studio Code**]를 **Remote wsl 확장과** 함께 사용 하는 것이 좋습니다. 이는 Windows 컴퓨터에서 실행 되는 클라이언트 (사용자 인터페이스)와 원격으로 실행 되는 서버 (코드, Git, 플러그 인 등)를 사용 하 여 "클라이언트 서버" 아키텍처로 VS Code 분할 됩니다.
+Node.js 프로젝트용 **원격-WSL 확장** 에 **Visual Studio Code** 를 사용 하는 것이 좋습니다. 이는 Windows 컴퓨터에서 실행 되는 클라이언트 (사용자 인터페이스)와 원격으로 실행 되는 서버 (코드, Git, 플러그 인 등)를 사용 하 여 "클라이언트 서버" 아키텍처로 VS Code 분할 됩니다.
 
 - Linux 기반 Intellisense 및 lint 지원 됩니다.
 - 프로젝트는 Linux에서 자동으로 빌드됩니다.
@@ -129,23 +133,14 @@ VS Code 및 원격-WSL 확장을 설치 하려면:
 
 1. [Windows 용 VS Code를 다운로드 하 고 설치](https://code.visualstudio.com)합니다. VS Code은 Linux 에서도 사용할 수 있지만 Linux 용 Windows 하위 시스템은 GUI 앱을 지원 하지 않으므로 Windows에 설치 해야 합니다. 걱정 하지 마세요. 여전히 원격-WSL 확장을 사용 하 여 Linux 명령줄 및 도구와 통합할 수 있습니다.
 
-2. VS Code에 [원격-WSL 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) 을 설치 합니다. 이를 통해 사용자는 통합 개발 환경으로 WSL을 사용 하 고 호환성 및 pathing를 처리할 수 있습니다. [자세히 알아보기](https://code.visualstudio.com/docs/remote/remote-overview).
+2. VS Code에 [원격-WSL 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) 을 설치 합니다. 이를 통해 사용자는 통합 개발 환경으로 WSL을 사용 하 고 호환성 및 pathing를 처리할 수 있습니다. [자세한 내용을 알아보세요](https://code.visualstudio.com/docs/remote/remote-overview).
 
 > [!IMPORTANT]
-> VS Code 이미 설치 되어 있는 경우에는 [원격-WSL 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)을 설치 하기 위해 [1.35 이상 버전을 릴리스할 수](https://code.visualstudio.com/updates/v1_35) 있는지 확인 해야 합니다. 자동 완성, 디버깅, lint 등에 대 한 지원이 손실 될 것 이므로, 원격-WSL 확장이 없으면 VS Code에서 WSL을 사용 하지 않는 것이 좋습니다. 흥미로운 사실: 이 WSL 확장은 $HOME/.vscode-server/extensions.에 설치 됩니다.
+> VS Code 이미 설치 되어 있는 경우에는 [원격-WSL 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)을 설치 하기 위해 [1.35 이상 버전을 릴리스할 수](https://code.visualstudio.com/updates/v1_35) 있는지 확인 해야 합니다. 자동 완성, 디버깅, lint 등에 대 한 지원이 손실 될 것 이므로, 원격-WSL 확장이 없으면 VS Code에서 WSL을 사용 하지 않는 것이 좋습니다. 흥미로운 사실:이 WSL 확장은 $HOME/.vscode-server/extensions.에 설치 됩니다.
 
 ### <a name="helpful-vs-code-extensions"></a>유용한 VS Code 확장
 
-VS Code는 기본적으로 node.js 개발을 위한 다양 한 기능을 제공 하지만 [Node.js 확장 팩](https://marketplace.visualstudio.com/items?itemName=waderyan.nodejs-extension-pack)에서 사용할 수 있는 설치를 고려 하는 몇 가지 유용한 확장이 있습니다. 이러한 개체는 다음과 같습니다.
-
-- ES-코드를 "lint" 하는 도구입니다. Lint는 코드를 분석 하 고 잠재적 오류를 경고 합니다.
-- npm-명령 팔레트에서 npm 스크립트를 실행 하 고 package. json에 정의 된 모듈의 유효성을 검사 합니다.
-- JavaScript (ES6) 코드 조각-ES6 구문에서 JavaScript 개발용 코드 조각을 추가 합니다.
-- 검색 node_modules-프로젝트에서 노드 모듈을 신속 하 게 검색 합니다.
-- NPM IntelliSense-코드에서 NPM 모듈의 IntelliSense를 추가 합니다.
-- 경로 IntelliSense-코드에서 파일 이름을 자동으로 완성 합니다.
-
-모두 설치 하거나 선택 하 고 가장 유용 하다 고 생각 하는 선택 합니다.
+VS Code는 기본적으로 node.js 개발을 위한 다양 한 기능을 제공 하지만 [Node.js 확장 팩](https://marketplace.visualstudio.com/items?itemName=waderyan.nodejs-extension-pack)에서 사용할 수 있는 설치를 고려 하는 몇 가지 유용한 확장이 있습니다. 모두 설치 하거나 선택 하 고 가장 유용 하다 고 생각 하는 선택 합니다.
 
 Node.js 확장 팩을 설치 하려면:
 
@@ -154,25 +149,25 @@ Node.js 확장 팩을 설치 하려면:
     이제 확장 창은 원격 WSL 확장을 설치 했기 때문에 세 개의 섹션으로 구분 됩니다.
     - "로컬 설치": Windows 운영 체제에서 사용 하기 위해 설치 된 확장입니다.
     - "WSL: Ubuntu-18.04-Installed": Ubuntu 운영 체제 (WSL)와 함께 사용 하기 위해 설치 된 확장입니다.
-    - "권장": 현재 프로젝트의 파일 형식에 따라 VS Code에서 권장 하는 확장입니다.
+    - "권장": 현재 프로젝트의 파일 형식에 따라 VS Code에서 권장 하는 확장명입니다.
 
     ![로컬 및 원격 확장 VS Code](../images/vscode-extensions-local-remote.png)
 
-2. 확장 창의 맨 위에 있는 검색 상자에 다음을 입력 합니다. **노드 확장 팩** (또는 찾고 있는 모든 확장의 이름)입니다. 현재 프로젝트가 열려 있는 위치에 따라 VS Code의 로컬 또는 WSL 인스턴스에 대해 확장 (또는 pack 인 경우 extensions)이 설치 됩니다. VS Code 창의 왼쪽 아래 모서리에 있는 원격 링크 (녹색)를 선택 하 여 알 수 있습니다. 원격 연결을 열거나 닫는 옵션이 제공 됩니다. "WSL: Ubuntu-18.04" 환경에 node.js 확장을 설치 합니다.
+2. 확장 창의 맨 위에 있는 검색 상자에 **노드 확장 팩** (또는 찾고 있는 모든 확장의 이름)을 입력 합니다. 현재 프로젝트가 열려 있는 위치에 따라 VS Code의 로컬 또는 WSL 인스턴스에 대해 확장이 설치 됩니다. VS Code 창의 왼쪽 아래 모서리에 있는 원격 링크 (녹색)를 선택 하 여 알 수 있습니다. 원격 연결을 열거나 닫는 옵션이 제공 됩니다. "WSL: Ubuntu-18.04" 환경에 node.js 확장을 설치 합니다.
 
     ![VS Code 원격 링크](../images/wsl-remote-extension.png)
 
 고려해 야 할 몇 가지 추가 확장은 다음과 같습니다.
 
-- [Chrome 용 디버거](https://code.visualstudio.com/blogs/2016/02/23/introducing-chrome-debugger-for-vs-code): Node.js를 사용 하 여 서버 쪽에서 개발을 마친 후에는 클라이언트 쪽을 개발 하 고 테스트 해야 합니다. 이 확장은 VS Code 편집기를 Chrome 브라우저 디버깅 서비스와 통합 하 여 좀 더 효율적으로 만듭니다.
-- [다른 편집기의 Keymaps](https://marketplace.visualstudio.com/search?target=VSCode&category=Keymaps&sortBy=Downloads): 이러한 확장을 통해 다른 텍스트 편집기에서 전환 하는 경우 (예: Atom, Sublime, Vim, eMacs, 메모장 + + 등) 환경에 대 한 느낌을 높일 수 있습니다.
+- [Chrome 용 디버거](https://code.visualstudio.com/blogs/2016/02/23/introducing-chrome-debugger-for-vs-code): node.js를 사용 하 여 서버 쪽에서 개발을 마친 후에는 클라이언트 쪽을 개발 하 고 테스트 해야 합니다. 이 확장은 VS Code 편집기를 Chrome 브라우저 디버깅 서비스와 통합 하 여 좀 더 효율적으로 만듭니다.
+- [다른 편집기의 Keymaps](https://marketplace.visualstudio.com/search?target=VSCode&category=Keymaps&sortBy=Downloads): 이러한 확장을 통해 다른 텍스트 편집기에서 전환 하는 경우 (예: Atom, Sublime, Vim, EMacs, 메모장 + + 등) 환경에 적합 합니다.
 - [설정 동기화](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync): GitHub를 사용 하 여 여러 설치에서 VS Code 설정을 동기화 할 수 있습니다. 여러 컴퓨터에서 작업 하는 경우이를 통해 환경을 일관 되 게 유지할 수 있습니다.
 
 ## <a name="install-windows-terminal-optional"></a>Windows 터미널 설치 (선택 사항)
 
-새 Windows 터미널을 사용 하면 여러 탭 (명령 프롬프트, PowerShell 또는 여러 Linux 배포 간을 신속 하 게 전환), 사용자 지정 키 바인딩 (열기 또는 닫기 탭에 대 한 바로 가기 키 만들기, 복사 + 붙여넣기 등),이 모 지 ☺ 및 사용자 지정 테마 ( 색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도). [자세히 알아보기](https://devblogs.microsoft.com/commandline/).
+새 Windows 터미널을 사용 하면 여러 탭 (명령 프롬프트, PowerShell 또는 여러 Linux 배포 간을 신속 하 게 전환), 사용자 지정 키 바인딩 (열기 또는 닫기 탭에 대 한 바로 가기 키 만들기, 복사 + 붙여넣기 등),이 모 지 ☺ 및 사용자 지정 테마 ( 색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도). [자세한 내용을 알아보세요](https://devblogs.microsoft.com/commandline/).
 
-1. [Microsoft Store에서 Windows 터미널 (미리 보기)](https://www.microsoft.com/store/apps/9n0dx20hk701)을 가져옵니다. 저장소를 통해 설치 하면 업데이트가 자동으로 처리 됩니다.
+1. [Microsoft Store에서 Windows 터미널 (미리 보기)](https://www.microsoft.com/store/apps/9n0dx20hk701)가져오기: 스토어를 통해 설치 하면 업데이트가 자동으로 처리 됩니다.
 
 2. 설치 되 면 Windows 터미널을 열고 **설정** 을 선택 하 여 `profile.json` 파일을 사용 하 여 터미널을 사용자 지정 합니다. [Windows 터미널 설정 편집에 대해 자세히 알아보세요](https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md).
 
@@ -190,7 +185,7 @@ Node.js 확장 팩을 설치 하려면:
 
 이제 node.js 개발 환경을 설정 했습니다. Node.js 환경 사용을 시작 하려면 다음 자습서 중 하나를 시도해 보세요.
 
-- [초보자를 위한 node.js 시작](./beginners.md): Node.js 개발을 처음 접하는 경우 시작 하는 데 도움이 되는 단계별 가이드입니다.
-- [Windows에서 node.js 웹 프레임 워크 시작](./web-frameworks.md): Windows에서 node.js, Nuxt 및 Gatsby를 비롯 한 node.js 웹 framworks를 사용 하 여 시작 하는 데 도움이 되는 단계별 가이드입니다.
-- [Node.js 앱을 데이터베이스에 연결 하기 시작 합니다](./databases.md). MongoDB 또는 Postgres와 같은 데이터베이스에 node.js 앱을 연결 하기 시작 하는 데 도움이 되는 단계별 가이드입니다.
-- [Node.js에서 Docker 컨테이너를 사용 하 여 시작](./containers.md): Node.js 앱에서 Docker 컨테이너를 사용 하 여 시작 하는 데 도움이 되는 단계별 가이드입니다.
+- [초보자를 위한 node.js 시작](./beginners.md)
+- [Windows에서 node.js 웹 프레임 워크 시작](./web-frameworks.md)
+- [Node.js 앱을 데이터베이스에 연결 하기 시작](./databases.md)
+- [Node.js에서 Docker 컨테이너를 사용 하 여 시작](./containers.md)

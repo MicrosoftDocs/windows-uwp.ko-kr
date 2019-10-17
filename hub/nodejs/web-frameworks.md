@@ -8,18 +8,18 @@ ms.topic: article
 keywords: NodeJS, node.js, windows 10, microsoft, learning NodeJS, windows의 노드, windows의 노드, windows에서 노드 설치, windows에서 노드 설치, windows에서 노드를 사용 하 여 개발, windows에서 NodeJS를 사용 하 여 개발, windows에서 노드 설치, windows의 NodeJS Linux 용 하위 시스템
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: a3c1cd980884dc50107c05207665d0c1ef88938e
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: a8ce1d08136a74504e1b3bad26feadd61b72068f
+ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314957"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517792"
 ---
 # <a name="get-started-with-nodejs-web-frameworks-on-windows"></a>Windows에서 node.js 웹 프레임 워크 시작
 
 Windows에서 node.js, Nuxt 및 Gatsby를 비롯 한 node.js 웹 프레임 워크를 사용 하 여 시작 하는 데 도움이 되는 단계별 가이드입니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 가이드에서는 다음을 포함 하 여 [WSL 2를 사용 하 여 node.js 개발 환경을 설정](./setup-on-wsl2.md)하는 단계를 이미 완료 했다고 가정 합니다.
 
@@ -29,7 +29,7 @@ Windows에서 node.js, Nuxt 및 Gatsby를 비롯 한 node.js 웹 프레임 워�
 - Ubuntu 18.04 배포가 WSL 2 모드로 실행 되 고 있는지 확인 합니다. WSL은 v1 또는 v2 모드에서 배포를 실행할 수 있습니다. PowerShell을 열고 다음을 입력 하 여이를 확인할 수 있습니다. `wsl -l -v`
 - PowerShell을 사용 하 여 `wsl -s ubuntu 18.04`을 사용 하 여 Ubuntu 18.04을 기본 배포로 설정 합니다.
 
-## <a name="get-started-with-nextjs"></a>다음 .js 시작
+## <a name="get-started-with-nextjs"></a>Next.js 시작
 
 다음 js는 응답 .js, node.js, Webpack 및 Babel를 기반으로 서버에서 렌더링 된 JavaScript 앱을 만들기 위한 프레임 워크입니다. 이는 기본적으로 가장 적합 한 방식으로 "범용" 웹 앱을 만들 수 있으며,이는 거의 모든 구성을 사용 하 여 간단 하 고 일관 된 방식으로 "범용" 웹 앱을 만들 수 있도록 하는 것입니다. 이러한 "범용" 서버 렌더링 웹 앱을 "isomorphic" 라고도 합니다. 즉, 코드가 클라이언트와 서버 간에 공유 됩니다.
 
@@ -61,13 +61,13 @@ Windows에서 node.js, Nuxt 및 Gatsby를 비롯 한 node.js 웹 프레임 워�
 
 8. 다음 js에서 오류를 처리 하는 방법을 살펴보겠습니다. 제목 코드가 다음과 같이 보이도록 `</h1>` 닫는 태그를 제거 합니다. `<h1 className='title'>This is my new Next.js app!`. 이 변경 내용을 저장 하면 "컴파일 실패" 오류가 브라우저에 표시 되 고 터미널에 `<h1>`에 대 한 닫는 태그가 필요 함을 알 수 있습니다. @No__t-0 닫는 태그를 바꿉니다. 저장 하 고 페이지가 다시 로드 됩니다.
 
-F5 키를 선택 하거나 메뉴 모음에서 **> 디버그** (Ctrl + Shift + D) 및 **보기 > 디버그 콘솔** (Ctrl + shift + Y)로 이동 하 여 다음 .js 앱에서 VS Code의 디버거를 사용할 수 있습니다. 디버그 창에서 기어 아이콘을 선택 하면 디버깅 설정 정보를 저장 하는 시작 구성 (`launch.json`) 파일이 생성 됩니다. 자세히 알아보려면 [VS Code 디버깅](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations)을 참조 하세요.
+F5 키를 선택 하거나 메뉴 모음에서 **> 디버그** (Ctrl + Shift + D) 및 **보기 > 디버그 콘솔** (Ctrl + shift + Y)로 이동 하 여 다음 .js 앱에서 VS Code의 디버거를 사용할 수 있습니다. 디버그 창에서 기어 아이콘을 선택 하면 디버깅 설정 정보를 저장 하는 시작 구성 (`launch.json`) 파일이 생성 됩니다. 자세히 알아보려면 [VS Code 디버깅](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)을 참조 하세요.
 
 ![VS Code 디버그 창 및 시작 json 구성 아이콘](../images/vscode-debug-launch-configuration.png)
 
 다음 .js에 대해 자세히 알아보려면 [다음 .js 문서](https://nextjs.org/docs)를 참조 하세요.
 
-## <a name="get-started-with-nuxtjs"></a>Nuxt 시작
+## <a name="get-started-with-nuxtjs"></a>Nuxt.js 시작
 
 Nuxt은 Vue, node.js, Webpack 및 Babel를 기반으로 서버 렌더링 JavaScript 앱을 만들기 위한 프레임 워크입니다. 다음 .js를 통해 아이디어를 받았습니다. 기본적으로 Vue에 대 한 프로젝트 상용구입니다. 다음 .js와 마찬가지로 모범 사례를 고려 하 여이 기능을 사용할 수 있으며, 모든 구성으로 간단 하 고 일관 된 방법으로 "범용" 웹 앱을 만들 수 있습니다. 이러한 "범용" 서버 렌더링 웹 앱을 "isomorphic" 라고도 합니다. 즉, 코드가 클라이언트와 서버 간에 공유 됩니다.
 
@@ -83,13 +83,13 @@ Nuxt 프로젝트를 만들기 위해 설치 하려는 통합 서버 쪽 프레�
     - 프로젝트 이름: 내 nuxtjs-앱
     - 프로젝트 설명: 내 Nuxt 앱에 대 한 설명입니다.
     - 작성자 이름: 내 GitHub 별칭을 사용 합니다.
-    - 패키지 관리자를 선택 합니다. Yarn 또는 **Npm** -예를 들어 Npm를 사용 합니다.
-    - UI 프레임 워크를 선택 합니다. 없음, Ant Design Vue, 부트스트랩 Vue 등 이 예에서는 **Vuetify** 를 선택 합니다. 하지만 Vue 커뮤니티는 [이러한 UI 프레임 워크를 비교](https://vue-community.org/guide/ecosystem/ui-libraries.html#summary-tldr) 하 여 프로젝트에 가장 적합 한 방법을 선택 하는 데 도움이 되는 훌륭한 요약을 만들었습니다.
-    - 사용자 지정 서버 프레임 워크 선택: None, AdonisJs, Express, Fastify 등이 있습니다. 이 예에서는 **없음** 을 선택 하겠습니다. 하지만 Dev.to 사이트에서 [2019-2020 서버 프레임 워크 비교](https://dev.to/santypk4/introducing-the-best-10-node-js-frameworks-for-2019-and-2020-mcm) 를 찾을 수 있습니다.
-    - Nuxt 모듈을 선택 합니다. 스페이스바를 사용 하 여 모듈을 선택 하거나 원하지 않는 경우 enter 키를 선택 합니다. Axios (HTTP 요청 간소화) 또는 [PWA 지원](https://pwa.nuxtjs.org/) (서비스 작업자, 매니페스트. json 파일 등을 추가 하는 경우). 이 예제에 대 한 모듈을 추가 하지 않도록 하겠습니다.
-    - Lint 도구 선택: **Eslint**, Prettier, 보풀이 없는 파일입니다. **Eslint** (코드를 분석 하 고 잠재적 오류를 경고 하는 도구)를 선택 하겠습니다.
+    - Yarn 또는 **Npm** 패키지 관리자를 선택 합니다. 예를 들어 Npm를 사용 합니다.
+    - UI 프레임 워크: 없음, Ant Design Vue, 부트스트랩 Vue 등을 선택 합니다. 이 예에서는 **Vuetify** 를 선택 합니다. 하지만 Vue 커뮤니티는 [이러한 UI 프레임 워크를 비교](https://vue-community.org/guide/ecosystem/ui-libraries.html#summary-tldr) 하 여 프로젝트에 가장 적합 한 방법을 선택 하는 데 도움이 되는 훌륭한 요약을 만들었습니다.
+    - 사용자 지정 서버 프레임 워크 (없음, AdonisJs, Express, Fastify 등)를 선택 합니다. 이 예에서는 **없음** 을 선택 하겠습니다. 하지만 Dev.to 사이트에서 [2019-2020 서버 프레임 워크 비교](https://dev.to/santypk4/introducing-the-best-10-node-js-frameworks-for-2019-and-2020-mcm) 를 찾을 수 있습니다.
+    - Nuxt 모듈 (스페이스바를 사용 하 여 모듈을 선택 하거나 원하지 않는 경우 입력): Axios (HTTP 요청 간소화) 또는 [PWA 지원](https://pwa.nuxtjs.org/) (서비스 작업자, 매니페스트. json 파일 등)을 선택 합니다. 이 예제에 대 한 모듈을 추가 하지 않도록 하겠습니다.
+    - Lint tools: **Eslint**, Prettier, 보풀이 없는 파일을 선택 합니다. **Eslint** (코드를 분석 하 고 잠재적 오류를 경고 하는 도구)를 선택 하겠습니다.
     - 테스트 프레임 워크를 선택 합니다. **없음**, JEST, ava. 이 빠른 시작에서 테스트에 대해 다루지 않으므로 **없음** 을 선택 합니다.
-    - 렌더링 모드 선택: **유니버설 (SSR)** 또는 단일 페이지 앱 (SPA). 예제에서는 **유니버설 (SSR)** 를 선택 합니다. 그러나 [Nuxt 문서](https://nuxtjs.org/guide#server-rendered-universal-ssr-) 는 정적 호스팅을 위해 앱과 SPA를 실행 하는 데 사용 되는 node.js 서버를 필요로 하는 SSR의 차이점을 가리킵니다.
+    - 렌더링 모드 **(유니버설 (SSR)** 또는 단일 페이지 앱 (SPA))를 선택 합니다. 예제에서는 **유니버설 (SSR)** 를 선택 합니다. 그러나 [Nuxt 문서](https://nuxtjs.org/guide#server-rendered-universal-ssr-) 는 정적 호스팅을 위해 앱과 SPA를 실행 하는 데 사용 되는 node.js 서버를 필요로 하는 SSR의 차이점을 가리킵니다.
     - 개발 도구 선택: **jsconfig.json** (Intellisense 코드 완성이 작동 하도록 VS Code에 권장)
 
 5. 프로젝트를 만든 후에는-0을 @no__t 하 여 Nuxt 프로젝트 디렉터리를 입력 한 다음 `code .`을 입력 하 여 VS Code WSL-원격 환경에서 프로젝트를 엽니다.
@@ -112,13 +112,13 @@ Nuxt 프로젝트를 만들기 위해 설치 하려는 통합 서버 쪽 프레�
 
 8. Nuxt에서 오류를 처리 하는 방법을 살펴보겠습니다. 제목 코드가 다음과 같이 보이도록 `</v-card-title>` 닫는 태그를 제거 합니다. `<v-card-title class="headline">This is my new Nuxt.js app!`. 이 변경 내용을 저장 하 고 브라우저 및 터미널에 컴파일 오류가 표시 되는 것을 확인 하 여 코드에서 오류를 찾을 수 있는 줄 번호와 함께 `<v-card-title>`에 대 한 닫는 태그가 없음을 확인 합니다. @No__t-0 닫는 태그를 바꿉니다. 저장 하 고 페이지가 다시 로드 됩니다.
 
-F5 키를 선택 하거나 메뉴 모음에서 **> 디버그** (Ctrl + Shift + D) 및 **보기 > 디버그 콘솔** (Ctrl + shift + Y)로 이동 하 여 Nuxt 앱에서 VS Code의 디버거를 사용할 수 있습니다. 디버그 창에서 기어 아이콘을 선택 하면 디버깅 설정 정보를 저장 하는 시작 구성 (`launch.json`) 파일이 생성 됩니다. 자세히 알아보려면 [VS Code 디버깅](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations)을 참조 하세요.
+F5 키를 선택 하거나 메뉴 모음에서 **> 디버그** (Ctrl + Shift + D) 및 **보기 > 디버그 콘솔** (Ctrl + shift + Y)로 이동 하 여 Nuxt 앱에서 VS Code의 디버거를 사용할 수 있습니다. 디버그 창에서 기어 아이콘을 선택 하면 디버깅 설정 정보를 저장 하는 시작 구성 (`launch.json`) 파일이 생성 됩니다. 자세히 알아보려면 [VS Code 디버깅](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)을 참조 하세요.
 
 ![VS Code 디버그 창 및 시작 json 구성 아이콘](../images/vscode-debug-launch-configuration.png)
 
 Nuxt에 대해 자세히 알아보려면 [Nuxt 가이드](https://nuxtjs.org/guide)를 참조 하세요.
 
-## <a name="get-started-with-gatsbyjs"></a>Gatsby 시작
+## <a name="get-started-with-gatsbyjs"></a>Gatsby.js 시작
 
 Gatsby는 다음 .js 및 Nuxt와 같이 서버에 렌더링 되는 것과는 반대로, 응답 .js를 기반으로 하는 정적 사이트 생성기 프레임 워크입니다. 정적 사이트 생성기는 빌드 시 정적 HTML을 생성 합니다. 서버가 필요 하지 않습니다. 다음 .js 및 Nuxt는 런타임에 HTML을 생성 합니다 (새 요청이 들어올 때마다). 서버를 실행 하려면 서버를 실행 해야 합니다. 또한 Gatsby는 앱에서 데이터를 처리 하는 방법 (GraphQL 사용)을 지정 하는 반면, 다음 js 및 Nuxt는 해당 결정을 그대로 둡니다.
 
@@ -151,7 +151,7 @@ Gatsby 프로젝트를 만들려면 다음을 수행 합니다.
 
 9. 다음 js에서 오류를 처리 하는 방법을 살펴보겠습니다. 제목 코드가 다음과 같이 보이도록 `</h1>` 닫는 태그를 제거 합니다. `<h1>Hi (Your Name)!`. 이 변경 내용을 저장 하면 "컴파일 실패" 오류가 브라우저에 표시 되 고 터미널에 `<h1>`에 대 한 닫는 태그가 필요 함을 알 수 있습니다. @No__t-0 닫는 태그를 바꿉니다. 저장 하 고 페이지가 다시 로드 됩니다.
 
-F5 키를 선택 하거나 메뉴 모음에서 **> 디버그** (Ctrl + Shift + D) 및 **보기 > 디버그 콘솔** (Ctrl + shift + Y)로 이동 하 여 다음 .js 앱에서 VS Code의 디버거를 사용할 수 있습니다. 디버그 창에서 기어 아이콘을 선택 하면 디버깅 설정 정보를 저장 하는 시작 구성 (`launch.json`) 파일이 생성 됩니다. 자세히 알아보려면 [VS Code 디버깅](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations)을 참조 하세요.
+F5 키를 선택 하거나 메뉴 모음에서 **> 디버그** (Ctrl + Shift + D) 및 **보기 > 디버그 콘솔** (Ctrl + shift + Y)로 이동 하 여 다음 .js 앱에서 VS Code의 디버거를 사용할 수 있습니다. 디버그 창에서 기어 아이콘을 선택 하면 디버깅 설정 정보를 저장 하는 시작 구성 (`launch.json`) 파일이 생성 됩니다. 자세히 알아보려면 [VS Code 디버깅](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)을 참조 하세요.
 
 ![VS Code 디버그 창 및 시작 json 구성 아이콘](../images/vscode-debug-launch-configuration.png)
 
