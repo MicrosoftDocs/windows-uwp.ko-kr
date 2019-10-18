@@ -2,23 +2,23 @@
 title: 게임 프로그래밍
 description: UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 수익을 창출할 수 있는 새로운 기회를 제공합니다. 새 게임을 시작하거나 기존 게임을 포팅하는 방법에 대해 알아봅니다.
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
-ms.date: 06/13/2017
+ms.date: 10/17/2019
 ms.topic: article
 keywords: Windows 10, UWP, 게임, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dddead7dcc2eedbe4e32fa4bfd749bed60ba796
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: db551135fab4e29b49b3031ad3338fa9a2e58379
+ms.sourcegitcommit: 00cd8a6616e358479a63e56126c62ef02b8da75b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583300"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72548396"
 ---
 # <a name="game-programming"></a>게임 프로그래밍
 
 UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 수익을 창출할 수 있는 새로운 기회를 제공합니다. Windows 10용 게임을 만드는 방법에 대해 알아봅니다.
 
 | 항목 | 설명 |
-|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-|-|
 | [Windows 10 게임 개발 가이드](e2e.md) | UWP 게임 개발용 리소스와 정보가 포함된 엔드투엔드 가이드입니다. |
 | [계획](planning.md) | 게임 계획 단계에 대한 문서 목록이 나와 있습니다. |
 | [UWP 프로그래밍](uwp-programming.md) | Windows 런타임 API를 사용하여 UWP 게임을 개발하는 방법에 대해 알아봅니다. |
@@ -26,17 +26,9 @@ UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 �
 
 DirectX를 사용하여 UWP 게임을 개발하는 방법에 대해 알아보려면 [DirectX 프로그래밍](directx-programming.md)으로 이동하세요.
 
-게임 개발 개요 및 자습서를 가장 효과적으로 사용하려면 다음 주제를 잘 알고 있어야 합니다.
+게임 개발 개요 및 자습서를 최대한 활용하려면 이러한 주제에 대해 잘 알고 있는 것이 좋습니다.
 
--   Microsoft C++ with Component Extensions(C++/CX). 자동 참조 계산을 통합하는 Microsoft C++에 대한 업데이트이며, DirectX 11.1 이상 버전을 사용하여 UWP 게임을 개발하기 위한 언어입니다.
--   기본 그래픽 프로그래밍 용어
--   기본 Windows 프로그래밍 개념
--   Direct3D 9 또는 11 API에 대한 기본 지식
-
- 
-
- 
-
-
-
-
+- [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index)는 DirectX로 UWP 게임을 개발하는 데 권장되는 언어 프로젝션입니다. C++/WinRT는 WinRT(Windows Runtime) API를 위한 표준 최신 C++17 언어 프로젝션입니다. Microsoft C++를 Component Extensions(C++/CX)로 대체합니다. C++/WinRT를 사용하여 DirectX API를 호출하는 코드 예제는 [최소 Direct2D 애플리케이션의 전체 소스 코드 목록](/windows/uwp/cpp-and-winrt-apis/consume-com#full-source-code-listing-of-a-minimal-direct2d-application)을 참조하세요.
+- 기본 그래픽 프로그래밍 용어
+- 기본 Windows 프로그래밍 개념
+- Direct3D 9 이상 API에 대한 기본 지식.
