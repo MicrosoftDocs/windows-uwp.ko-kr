@@ -9,12 +9,12 @@ metadata:
   ms.author: tedhudek
   ms.topic: hub-page
   uhfHeaderId: MSDocsHeader-DocsL1
-  ms.openlocfilehash: 0cdab14a7301cdb20ca6986854523c5b6e834b21
-  ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
+  ms.openlocfilehash: 2b0eee6f53445ce2f0a0bcc3f35b756ab231a888
+  ms.sourcegitcommit: 00cd8a6616e358479a63e56126c62ef02b8da75b
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/18/2019
-  ms.locfileid: "71100828"
+  ms.lasthandoff: 10/17/2019
+  ms.locfileid: "72548380"
 highlightedContent:
   items:
   - title: Visual Studio 및 Windows SDK 받기
@@ -38,10 +38,10 @@ additionalContent:
         url: https://docs.microsoft.com/windows/apps
       - text: 앱에 Windows 10 기능 추가
         url: https://docs.microsoft.com/windows/apps/desktop/modernize/
-      - text: Windows PC에서 Python으로 개발
-        url: https://docs.microsoft.com/windows/python/index
-      - text: Linux용 Windows 하위 시스템 설정
-        url: https://docs.microsoft.com/windows/wsl/about
+      - text: 데스크톱 앱 빌드
+        url: https://docs.microsoft.com/windows/apps/desktop/
+      - text: 개발 환경 설정
+        url: https://docs.microsoft.com/windows/dev-environment/
       - text: 코드 샘플 찾기
         url: https://developer.microsoft.com/windows/samples
     - title: 하드웨어 개발
