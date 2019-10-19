@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ff5d0831e918c0399bccb1dac9bb4fca8a6d408
-ms.sourcegitcommit: c079388634cbd328d0d43e7a6185e09bb4bca65b
+ms.openlocfilehash: a85edf0caa429d95d376af6fbc93bc7e8134340c
+ms.sourcegitcommit: 00cd8a6616e358479a63e56126c62ef02b8da75b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71939648"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72548451"
 ---
 # <a name="list-view-and-grid-view"></a>목록 보기 및 그리드 보기
 
@@ -604,7 +604,7 @@ private void DeselectAllButton_Click(object sender, RoutedEventArgs e)
 
 ### <a name="drag-and-drop"></a>끌어서 놓기
 
-ListView 및 GridView 컨트롤은 컨트롤 내 항목의 끌어서 놓기를 지원하고 서로 다른 ListView 및 GridView 컨트롤 간의 끌어서 놓기를 지원합니다. 끌어서 놓기 패턴을 구현하는 방법은 [끌어서 놓기](https://docs.microsoft.com/windows/uwp/design/input/drag-and-drop)를 참조하세요. 
+ListView 및 GridView 컨트롤은 컨트롤 내 항목의 끌어서 놓기를 지원하고 서로 다른 ListView 및 GridView 컨트롤 간의 끌어서 놓기를 지원합니다. 끌어서 놓기 패턴을 구현하는 방법은 [끌어서 놓기](../input/drag-and-drop.md)를 참조하세요.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
@@ -616,4 +616,4 @@ ListView 및 GridView 컨트롤은 컨트롤 내 항목의 끌어서 놓기를 �
 
 - [목록](lists.md)
 - [항목 컨테이너 및 템플릿](item-containers-templates.md)
-- [끌어서 놓기](https://docs.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
+- [끌어서 놓기](../input/drag-and-drop.md)

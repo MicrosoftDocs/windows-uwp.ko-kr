@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 3bc377e87d01106a1a2e7157dbe08f1ab022f52a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c35795eeb6afa32e77acb507c687e334e454d0d5
+ms.sourcegitcommit: e0f6150c8f45b69a3e114d0556c2c3d5aed7238f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66361063"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72560807"
 ---
 # <a name="implement-navigation-between-two-pages"></a>두 페이지 간의 탐색 구현
 
@@ -452,5 +452,5 @@ Page1::Page1()
 
 ## <a name="related-articles"></a>관련 문서
 * [UWP 앱의 탐색 디자인 기본 사항](https://docs.microsoft.com/windows/uwp/layout/navigation-basics)
-* [탭 및 피벗에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tabs-pivot)
-* [탐색 창에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/nav-pane)
+* [피벗](../controls-and-patterns/pivot.md)
+* [탐색 보기](../controls-and-patterns/navigationview.md)
