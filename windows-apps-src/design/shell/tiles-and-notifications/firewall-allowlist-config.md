@@ -9,17 +9,17 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: windows 10, uwp, WNS, windows 알림 서비스, 알림, windows, 방화벽, 문제 해결, IP, 트래픽, 엔터프라이즈, 네트워크, IPv4, VIP, FQDN, 공용 IP 주소
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ba6d2e678eee0d851b4f2e3897f9fc067b74580
-ms.sourcegitcommit: 3360db6bc975516e01913d3d73599c964a411052
+ms.openlocfilehash: c3774164d16e86a88f45eb50030beec099629d6f
+ms.sourcegitcommit: 738bab9a088a244a7a212dcac6fb3560c547b8d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70296978"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72695766"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>WNS 트래픽을 지원 하기 위한 엔터프라이즈 방화벽 및 프록시 구성
 
-## <a name="background"></a>배경
-많은 기업에서 방화벽을 사용 하 여 원치 않는 네트워크 트래픽을 차단 합니다. 불행 하 게도 Windows Notification Service 통신과 같은 중요 한 작업을 차단할 수 있습니다. 즉, WNS를 통해 전송 되는 모든 알림은 특정 네트워크 구성에서 삭제 됩니다. 이를 방지 하기 위해 네트워크 관리자는 승인 목록에 승인 된 WNS 채널 목록을 추가 하 여 WNS 트래픽이 방화벽을 통과 하도록 할 수 있습니다. 다음은 다양 한 프록시 형식에 대 한 지원 뿐만 아니라 추가 방법에 대 한 자세한 내용입니다.
+## <a name="background"></a>백그라운드
+많은 기업에서 방화벽을 사용 하 여 원치 않는 네트워크 트래픽을 차단 합니다. 불행 하 게도 Windows Notification Service 통신과 같은 중요 한 작업을 차단할 수 있습니다. 즉, WNS를 통해 전송 되는 모든 알림은 특정 네트워크 구성에서 삭제 됩니다. 이를 방지 하기 위해 네트워크 관리자는 승인 목록에 승인 된 WNS Fqdn 또는 Vip 목록을 추가 하 여 WNS 트래픽이 방화벽을 통과 하도록 할 수 있습니다. 다음은 다양 한 프록시 형식에 대 한 지원 뿐만 아니라 추가 방법에 대 한 자세한 내용입니다.
 
 ## <a name="proxy-support"></a>프록시 지원
 
@@ -36,11 +36,11 @@ ms.locfileid: "70296978"
 > FQDN으로 목록을 허용 하는 것은 변경 되지 않으므로이를 허용 하는 것이 좋습니다. FQDN으로 목록을 허용 하는 경우 IP 주소 범위를 허용 하지 않아도 됩니다.
 
 > [!IMPORTANT]
-> IP 주소 범위는 주기적으로 변경 됩니다. 이로 인해이 페이지에 포함 되지 않습니다. IP 범위 목록을 보려는 경우 다운로드 센터에서 파일을 다운로드할 수 있습니다. [WNS (Windows 알림 서비스) VIP 및 IP 범위](https://www.microsoft.com/download/details.aspx?id=44238) 최신 정보를 확인 하려면 정기적으로 다시 확인 하세요. 
+> IP 주소 범위는 주기적으로 변경 됩니다. 이로 인해이 페이지에 포함 되지 않습니다. IP 범위 목록을 보려는 경우 다운로드 센터: [WNS (Windows 알림 서비스) VIP 및 IP 범위](https://www.microsoft.com/download/details.aspx?id=44238)에서 파일을 다운로드할 수 있습니다. 최신 정보를 확인 하려면 정기적으로 다시 확인 하세요. 
 
 
 ### <a name="fqdns-vips-and-ips"></a>Fqdn, Vip 및 Ip
-다음 XML 문서의 각 요소에 대 [한 설명은 용어 및 표기법](#terms-and-notations)의 표에 설명 되어 있습니다. Fqdn이 일정 하 게 유지 되므로 Fqdn만 사용 하는 것이 좋습니다. 그러나 다운로드 센터에서 전체 목록이 포함 된 XML 파일을 다운로드할 수 있습니다. [WNS (Windows 알림 서비스) VIP 및 IP 범위](https://www.microsoft.com/download/details.aspx?id=44238) 새 Vip 또는 IP 범위는 **업로드 후 1 주일에 적용**됩니다.
+다음 XML 문서의 각 요소는 그 다음에 나오는 표에 설명 되어 있습니다 ( [용어 및 표기법](#terms-and-notations)). Fqdn이 일정 하 게 유지 되므로 Fqdn만 사용 하는 것이 좋습니다. 그러나 다운로드 센터: [WNS (Windows 알림 서비스) VIP 및 IP 범위](https://www.microsoft.com/download/details.aspx?id=44238)에서 전체 목록이 포함 된 XML 파일을 다운로드할 수 있습니다. 새 Vip 또는 IP 범위는 **업로드 후 1 주일에 적용**됩니다.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -78,7 +78,7 @@ ms.locfileid: "70296978"
 
 
 ## <a name="microsoft-push-notifications-service-mpns-public-ip-ranges"></a>MPNS (Microsoft 푸시 알림 서비스) 공용 IP 범위
-레거시 notification service MPNS를 사용 하는 경우 허용 목록에 추가 해야 하는 IP 주소 범위를 다운로드 센터에서 사용할 수 있습니다. [MPNS (Microsoft 푸시 알림 서비스) 공용 IP 범위](https://www.microsoft.com/download/details.aspx?id=44535)
+레거시 알림 서비스인 MPNS를 사용 하는 경우 허용 목록에 추가 해야 하는 IP 주소 범위를 다운로드 센터: [mpns (Microsoft 푸시 알림 서비스) 공용 IP 범위](https://www.microsoft.com/download/details.aspx?id=44535)에서 사용할 수 있습니다.
 
 
 ## <a name="related-topics"></a>관련 항목

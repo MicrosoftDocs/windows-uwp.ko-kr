@@ -6,18 +6,18 @@ ms.date: 07/12/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2615988f40fd14cab920ad52e490c4992dbb5f4a
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 759e47348198feedbf7b1e3ee2c0bfc2da1da671
+ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340496"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690395"
 ---
 # <a name="events-and-routed-events-overview"></a>이벤트 및 라우트된 이벤트 개요
 
 **중요 API**
 - [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)
-- [**RoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEventArgs)
+- [**System.windows.routedeventargs.handled**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEventArgs)
 
 Windows 런타임 앱에서 이벤트의 프로그래밍 개념을 설명 하 고, Visual Basic 또는 C#/Cx ( C++ C++시각적 구성 요소 확장)를 프로그래밍 언어로 사용 하 고, UI 정의를 위한 XAML을 사용 하는 경우를 설명 합니다. 이벤트 처리기를 XAML에서 UI 요소 선언의 일부로 할당하거나 코드에서 처리기를 추가할 수 있습니다. Windows 런타임은 *라우트된 이벤트*를 지원합니다. 이 기능을 통해 특정 입력 이벤트와 데이터 이벤트가 이벤트를 발생시킨 개체가 아닌 다른 개체에 의해 처리될 수 있습니다. 라우트된 이벤트는 컨트롤 템플릿을 정의하거나 페이지 또는 레이아웃 컨테이너를 사용하는 경우 유용합니다.
 
@@ -27,7 +27,7 @@ Windows 런타임 앱에서 이벤트의 프로그래밍 개념을 설명 하 �
 
 프로그래밍 언어로 C#, Visual Basic 또는 C++/CX를 사용하는 경우 UI는 태그(XAML)로 정의됩니다. XAML 태그 구문에서는 태그 요소와 런타임 코드 엔터티 간에 이벤트를 연결하는 원리 중 일부는 ASP.NET, HTML5 등의 다른 웹 기술과 유사합니다.
 
-**참고**@no__t-XAML 정의 UI에 대 한 런타임 논리를 제공 하는 1The 코드를 종종 *코드 숨김이* 나 코드 숨김이 라고도 합니다. Microsoft Visual Studio 솔루션 뷰에서 이 관계는 그래픽으로 표시됩니다. 여기에서 코드 숨김 파일은 자신이 참조하는 XAML 페이지에 대해 종속된 중첩 파일이 됩니다.
+**참고**   The XAML 정의 UI에 대 한 런타임 논리를 제공 하는 코드를 *코드 숨김이* 나 코드 숨김이 라고도 합니다. Microsoft Visual Studio 솔루션 뷰에서 이 관계는 그래픽으로 표시됩니다. 여기에서 코드 숨김 파일은 자신이 참조하는 XAML 페이지에 대해 종속된 중첩 파일이 됩니다.
 
 ## <a name="buttonclick-an-introduction-to-events-and-xaml"></a>Button.Click: 이벤트 및 XAML 소개
 
@@ -45,7 +45,7 @@ XAML에서 이벤트를 연결하려면 이미 정의했거나 나중에 코드 
 
 **팁**  *이벤트 연결*은 프로그래밍 용어입니다. 이벤트가 발생하면 명명된 처리기 메서드가 호출되어야 함을 나타내는 데 사용하는 프로세스 또는 코드를 나타냅니다. 대부분의 절차적 코드 모델에서 이벤트 연결은 이벤트와 메서드 둘 다를 명명하고 일반적으로 대상 개체 인스턴스와 관련된 암시적이거나 명시적인 "AddHandler" 코드입니다. XAML에서 "AddHandler"는 암시적이며, 이벤트 연결은 이벤트를 개체 요소의 속성 이름으로 명명하고 처리기를 해당 속성의 값으로 명명하는 작업으로만 구성됩니다.
 
-실제 처리기는 모든 앱 코드 및 코드 숨김에 사용하는 프로그래밍 언어로 작성합니다. `Click="ShowUpdatesButton_Click"` 특성을 사용하여 XAML의 태그가 컴파일되고 구문 분석될 때 IDE의 빌드 작업에 포함된 XAML 태그 컴파일 단계와 앱이 로드될 때 이벤트 XAML 런타임 구문 분석 작업에서 `ShowUpdatesButton_Click`이라는 메서드를 앱 코드의 일부로 발견할 수 있다는 계약을 만들었습니다. `ShowUpdatesButton_Click`은 [**클릭**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 처리기에 대 한 호환 메서드 시그니처 (대리자 기반)를 구현 하는 메서드입니다. 예를 들어 이 코드에서는 `ShowUpdatesButton_Click` 처리기를 정의합니다.
+실제 처리기는 모든 앱 코드 및 코드 숨김에 사용하는 프로그래밍 언어로 작성합니다. `Click="ShowUpdatesButton_Click"` 특성을 사용하여 XAML의 태그가 컴파일되고 구문 분석될 때 IDE의 빌드 작업에 포함된 XAML 태그 컴파일 단계와 앱이 로드될 때 이벤트 XAML 런타임 구문 분석 작업에서 `ShowUpdatesButton_Click`이라는 메서드를 앱 코드의 일부로 발견할 수 있다는 계약을 만들었습니다. `ShowUpdatesButton_Click`은 [**클릭**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 처리기에 대 한 호환 메서드 시그니처 (대리자 기반)를 구현 하는 메서드 여야 합니다. 예를 들어 이 코드에서는 `ShowUpdatesButton_Click` 처리기를 정의합니다.
 
 ```csharp
 private void ShowUpdatesButton_Click (object sender, RoutedEventArgs e) 
@@ -78,15 +78,15 @@ void MyNamespace::BlankPage::ShowUpdatesButton_Click(Platform::Object^ sender, W
 }
 ```
 
-이 예제에서 `ShowUpdatesButton_Click` 메서드는 [**RoutedEventHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventhandler) 대리자를 기반으로 합니다. MSDN 참조 페이지에서 [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 메서드에 대한 구문에 이름이 지정된 대리자를 확인하게 되므로 이 대리자를 사용할 대리자로 알고 있는 것이 좋습니다.
+이 예제에서 `ShowUpdatesButton_Click` 메서드는 [**RoutedEventHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventhandler) 대리자를 기반으로 합니다. 이 대리자는 [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 메서드의 구문에 이라는 대리자가 표시 되기 때문에 사용할 대리자 임을 알 수 있습니다.
 
-**팁**  Visual STUDIO는 XAML을 편집 하는 동안 이벤트 처리기의 이름을 지정 하 고 처리기 메서드를 정의 하는 편리한 방법을 제공 합니다. XAML 텍스트 편집기에서 이벤트 특성 이름을 제공하는 경우 Microsoft IntelliSense 목록이 표시될 때까지 잠시 기다려 주세요. 목록에서 **&lt;새 이벤트 처리기&gt;** 를 클릭하면 Microsoft Visual Studio에서 요소의 **x:Name**(또는 형식 이름), 이벤트 이름 및 숫자 접미사를 기반으로 메서드 이름을 제안합니다. 그런 다음, 선택한 이벤트 처리기 이름을 마우스 오른쪽 단추로 클릭하고 **이벤트 처리기 탐색**을 클릭할 수 있습니다. 이렇게 하면 XAML 페이지에 대한 코드 숨김 파일의 코드 편집기 보기에 표시된 것처럼 새로 삽입된 이벤트 처리기 정의로 바로 이동합니다. 이벤트 처리기에는 이벤트에서 사용하는 *sender* 매개 변수와 이벤트 데이터 클래스를 비롯한 올바른 서명이 이미 있습니다. 올바른 서명이 포함된 처리기 메서드가 코드 숨김에 이미 있는 경우에도 해당 메서드의 이름이 자동 완성 드롭다운에 **&lt;새 이벤트 처리기&gt;** 옵션과 함께 표시됩니다. IntelliSense 목록 항목을 클릭하지 않고 바로 가기로 Tab 키를 누를 수도 있습니다.
+**Tip**   Visual STUDIO는 XAML을 편집 하는 동안 이벤트 처리기의 이름을 지정 하 고 처리기 메서드를 정의 하는 편리한 방법을 제공 합니다. XAML 텍스트 편집기에서 이벤트 특성 이름을 제공하는 경우 Microsoft IntelliSense 목록이 표시될 때까지 잠시 기다려 주세요. 목록에서 **&lt;새 이벤트 처리기&gt;** 를 클릭하면 Microsoft Visual Studio에서 요소의 **x:Name**(또는 형식 이름), 이벤트 이름 및 숫자 접미사를 기반으로 메서드 이름을 제안합니다. 그런 다음, 선택한 이벤트 처리기 이름을 마우스 오른쪽 단추로 클릭하고 **이벤트 처리기 탐색**을 클릭할 수 있습니다. 이렇게 하면 XAML 페이지에 대한 코드 숨김 파일의 코드 편집기 보기에 표시된 것처럼 새로 삽입된 이벤트 처리기 정의로 바로 이동합니다. 이벤트 처리기에는 이벤트에서 사용하는 *sender* 매개 변수와 이벤트 데이터 클래스를 비롯한 올바른 서명이 이미 있습니다. 올바른 서명이 포함된 처리기 메서드가 코드 숨김에 이미 있는 경우에도 해당 메서드의 이름이 자동 완성 드롭다운에 **&lt;새 이벤트 처리기&gt;** 옵션과 함께 표시됩니다. IntelliSense 목록 항목을 클릭하지 않고 바로 가기로 Tab 키를 누를 수도 있습니다.
 
 ## <a name="defining-an-event-handler"></a>이벤트 처리기 정의
 
-UI 요소이고 XAML에서 선언되는 개체의 경우 이벤트 처리기 코드는 XAML 페이지에 대한 코드 숨김의 역할을 하는 partial 클래스에서 정의됩니다. 이벤트 처리기는 XAML과 연관된 partial 클래스의 일부로 작성하는 메서드입니다. 이러한 이벤트 처리기는 특정 이벤트에서 사용하는 대리자를 기반으로 합니다. 이벤트 처리기 메서드는 public일 수도 있고 private일 수도 있습니다. 프라이빗 액세스는 XAML로 만든 처리기와 인스턴스가 결국 코드 생성에 의해 결합되기 때문에 작동합니다. 일반적으로 이벤트 처리기 메서드는 클래스를 프라이빗으로 하는 것이 좋습니다.
+UI 요소이고 XAML에서 선언되는 개체의 경우 이벤트 처리기 코드는 XAML 페이지에 대한 코드 숨김의 역할을 하는 partial 클래스에서 정의됩니다. 이벤트 처리기는 XAML과 연관된 partial 클래스의 일부로 작성하는 메서드입니다. 이러한 이벤트 처리기는 특정 이벤트에서 사용하는 대리자를 기반으로 합니다. 이벤트 처리기 메서드는 public일 수도 있고 private일 수도 있습니다. private 액세스는 XAML로 만든 처리기와 인스턴스가 결국 코드 생성에 의해 결합되기 때문에 작동합니다. 일반적으로 이벤트 처리기 메서드는 클래스를 private으로 하는 것이 좋습니다.
 
-**참고**  에 대 한 C++ 이벤트 처리기는 부분 클래스에서 정의 되지 않으며, 헤더에서 전용 클래스 멤버로 선언 됩니다. C++ 프로젝트에 대한 빌드 작업에는 C++에 대한 XAML 형식 시스템 및 코드 숨김 모델을 지원하는 코드를 생성하는 작업이 포함됩니다.
+**참고**   Event 처리기 C++ 는 partial 클래스에서 정의 되지 않으며, 헤더에서 전용 클래스 멤버로 선언 됩니다. C++ 프로젝트에 대한 빌드 작업에는 C++에 대한 XAML 형식 시스템 및 코드 숨김 모델을 지원하는 코드를 생성하는 작업이 포함됩니다.
 
 ### <a name="the-sender-parameter-and-event-data"></a>*sender* 매개 변수 및 이벤트 데이터
 
@@ -127,7 +127,7 @@ void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-**참고**  a 더 자세한 구문이 있습니다. 2005년에 C#에는 컴파일러에서 새 대리자 인스턴스를 유추할 수 있고 이전의 보다 간단한 구문을 사용할 수 있도록 하는 대리자 유추라는 기능이 추가되었습니다. 자세한 구문은 이전 예와 기능적으로 동일하지만 대리자 인스턴스를 등록하기 전에 새 대리자 인스턴스를 명시적으로 만들기 때문에 대리자 유추를 활용하지 않습니다. 이러한 명시적 구문은 덜 일반적으로 사용되나 일부 코드 예에서 여전히 볼 수 있습니다.
+**참고**   A 자세한 구문이 있습니다. 2005년에 C#에는 컴파일러에서 새 대리자 인스턴스를 유추할 수 있고 이전의 보다 간단한 구문을 사용할 수 있도록 하는 대리자 유추라는 기능이 추가되었습니다. 자세한 구문은 이전 예와 기능적으로 동일하지만 대리자 인스턴스를 등록하기 전에 새 대리자 인스턴스를 명시적으로 만들기 때문에 대리자 유추를 활용하지 않습니다. 이러한 명시적 구문은 덜 일반적으로 사용되나 일부 코드 예에서 여전히 볼 수 있습니다.
 
 ```csharp
 void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
@@ -147,9 +147,9 @@ Private Sub textBlock1_PointerEntered(ByVal sender As Object, ByVal e As Pointer
 End Sub
 ```
 
-**참고**  Visual Studio 및 해당 XAML 디자인 화면은 일반적으로 **Handles** 키워드 대신 인스턴스 처리 기법을 승격 시킵니다. 이는 XAML에서 이벤트 처리기 연결을 설정하는 것이 일반적인 디자이너-개발자 워크플로의 일부이고 **Handles** 키워드 방법이 XAML에서 이벤트 처리기를 연결하는 것과 호환되지 않기 때문입니다.
+**참고**   Visual Studio 및 해당 XAML 디자인 화면은 일반적으로 **Handles** 키워드 대신 인스턴스 처리 기법을 승격 시킵니다. 이는 XAML에서 이벤트 처리기 연결을 설정하는 것이 일반적인 디자이너-개발자 워크플로의 일부이고 **Handles** 키워드 방법이 XAML에서 이벤트 처리기를 연결하는 것과 호환되지 않기 때문입니다.
 
-/Cx에서는 **@no__t 2** 구문을 사용 하지만 기본 C# 양식과 차이가 있습니다. C++
+/Cx에서는 **+=** 구문도 사용 하지만 기본 C# 폼과 차이가 있습니다. C++
 
 - 대리자 유추가 없으므로 대리자 인스턴스에 대해 **ref new**를 사용해야 합니다.
 - 대리 생성자에 두 매개 변수가 있고 대상 개체가 첫 번째 매개 변수로 필요합니다. 일반적으로 **this**를 지정합니다.
@@ -168,7 +168,7 @@ ref new PointerEventHandler(this, &BlankPage::textBlock1_PointerEntered);
 
 이벤트 처리기를 코드에 추가했더라도 코드에서 제거하는 것인 일반적으로 필요 없습니다. 페이지 및 컨트롤과 같은 대부분의 Windows 런타임 개체의 경우, 개체와 기본 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) 및 해당 시각적 트리 사이의 연결이 끊기면 개체의 수명 동작에 의해 개체가 제거되며, 대리자 참조도 제거됩니다. .NET은 가비지 수집을 통해 이를 수행하며, C++/CX를 사용한 Windows 런타임은 기본적으로 약한 참조를 사용합니다.
 
-드물긴 하지만 명시적으로 이벤트 처리기를 제거하려는 몇 가지 경우가 있습니다. 이러한 개체는 다음과 같습니다.
+드물긴 하지만 명시적으로 이벤트 처리기를 제거하려는 몇 가지 경우가 있습니다. 다음이 포함됩니다.
 
 - 정적 이벤트에 대해 추가되었으며 일반적인 방법으로 가비지 수집할 수 없는 처리기. Windows 런타임 API의 정적 이벤트 예로 [**CompositionTarget**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.CompositionTarget) 및 [**Clipboard**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.Clipboard) 클래스가 있습니다.
 - 처리기를 즉시 제거하려는 테스트 코드 또는 런타임에 이벤트에 대한 이전/새 이벤트 처리기를 바꾸려는 코드
@@ -178,7 +178,7 @@ ref new PointerEventHandler(this, &BlankPage::textBlock1_PointerEntered);
 
 [**FrameworkElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.unloaded) 또는 [**NavigatedFrom**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom) 는 상태 관리 및 개체 수명에서 적절 한 위치를 가진 이벤트 트리거로 서 다른 이벤트에 대 한 처리기를 제거 하는 데 사용할 수 있습니다.
 
-예를 들어이 코드를 사용 하 여 **textBlock1** 대상 개체에서 **textBlock1 @ No__t-1 pointerin** 이라는 이벤트 처리기를 제거할 수 있습니다.
+예를 들어이 코드를 사용 하 여 대상 개체 **textBlock1** 에서 **textBlock1 \_PointerEntered** 이라는 이벤트 처리기를 제거할 수 있습니다.
 
 ```csharp
 textBlock1.PointerEntered -= textBlock1_PointerEntered;
@@ -198,40 +198,40 @@ C#, Microsoft Visual Basic 또는 C++/CX를 사용하는 Windows 런타임은 �
 
 - [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
 - [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
-- [**ContextCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextcanceled)
-- [**ContextRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextrequested)
+- [**컨텍스트 취소 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextcanceled)
+- [**ContextRequested 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextrequested)
 - [**DoubleTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.doubletapped)
-- [**DragEnter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragenter)
-- [**DragLeave**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragleave)
-- [**DragOver**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
+- [**System.windows.dragdrop.dragenter>** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragenter)
+- [**System.windows.dragdrop.dragleave>** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragleave)
+- [**System.windows.uielement.dragover>** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
 - [**DragStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragstarting)
 - [**그림자**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
 - [**DropCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dropcompleted)
-- [**GettingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gettingfocus)
-- [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
+- [**Get이상 포커스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gettingfocus)
+- [**System.windows.uielement.gotfocus>** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
 - [**Ctrl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
 - [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown)
 - [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup)
 - [**LosingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.losingfocus)
 - [**LostFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus)
 - [**System.windows.uielement.manipulationcompleted>** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)
-- [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)
-- [**ManipulationInertiaStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastarting)
-- [**ManipulationStarted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)
-- [**ManipulationStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)
+- [**System.windows.uielement.manipulationdelta>** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)
+- [**System.windows.uielement.manipulationinertiastarting>** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastarting)
+- [**System.windows.uielement.manipulationstarted>** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)
+- [**System.windows.uielement.manipulationstarting>** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)
 - [**NoFocusCandidateFound**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.nofocuscandidatefoundeventargs)
 - [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled)
 - [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)
-- [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered)
+- [**PointerEntered 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered)
 - [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited)
-- [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved)
+- [**PointerMoved 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved)
 - [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)
 - [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)
 - [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
-- [**PreviewKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeydown.md)
+- [**System.windows.forms.control.previewkeydown>** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeydown.md)
 - [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup.md)
 - [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
-- [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
+- [**오른쪽 탭**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
 - [**탭**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
 
 라우트된 이벤트는 자식 개체에서 개체 트리의 연속적인 부모 개체 각각으로 전달(*라우트*)될 수 있는 이벤트입니다. UI의 XAML 구조는 이 트리와 유사하며 트리의 루트는 XAML의 루트 요소입니다. 실제 개체 트리에는 속성 요소 태그와 같은 XAML 언어 기능이 포함되지 않기 때문에 실제 개체 트리는 XAML 요소 중첩과 다소 다를 수도 있습니다. 라우트된 이벤트는 이벤트를 발생시키는 XAML 개체 요소 자식 요소에서 이러한 자식을 포함하는 부모 개체 요소로의 *버블링*으로 간주될 수 있습니다. 이벤트 및 이벤트 데이터는 이벤트 경로를 따라 여러 개체에서 처리될 수 있습니다. 처리기를 가지고 있는 요소가 없는 경우 루트 요소에 도달할 때까지 경로를 따라 계속 이동할 수 있습니다.
@@ -246,13 +246,13 @@ DHTML(동적 HTML) 또는 HTML5와 같은 웹 기술을 알고 있는 경우 이
 
 경우에 따라 *sender*가 관심 대상이 아니고, 포인터 이벤트 발생 시 가능한 자식 개체 중 포인터가 가리키는 개체 또는 키보드 키를 눌렀을 때 포커스를 받는 더 큰 UI의 개체 등과 같은 정보에 관심이 있을 수 있습니다. 이런 경우, [**OriginalSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource) 속성 값을 사용할 수 있습니다. 경로의 모든 지점에서 **OriginalSource**는 처리기가 연결된 개체 대신 이벤트를 발생시킨 원래 개체를 보고합니다. 그러나 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 입력 이벤트의 경우 원래 개체는 종종 페이지 수준 UI 정의 XAML에서 즉시 표시되지 않는 개체입니다. 대신 이 원본 개체는 컨트롤의 템플릿 기반 부분일 수 있습니다. 예를 들어 사용자가 [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)의 가장자리에 포인터를 놓으면 대부분의 포인터 이벤트의 경우 **OriginalSource**는 **Button** 자체가 아니라 [**Template**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.template)의 [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) 템플릿 요소입니다.
 
-**팁**  input 이벤트 버블링은 템플릿 기반 컨트롤을 만드는 경우에 특히 유용 합니다. 템플릿이 있는 컨트롤에는 소비자가 적용한 새 템플릿이 있을 수 있습니다. 소비자는 작업 템플릿을 다시 만들려고 하다가 기본 템플릿에서 선언된 일부 이벤트 처리를 자신도 모르게 제거할 수 있습니다. 이 경우 클래스 정의에 있는 [**OnApplyTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.onapplytemplate) 재정의의 일부로서 처리기를 연결하여 여전히 컨트롤 수준의 이벤트 처리를 제공할 수 있습니다. 그런 다음 인스턴스화에서 컨트롤의 루트까지 버블링된 입력 이벤트를 catch할 수 있습니다.
+**팁**   Input 이벤트 버블링은 템플릿 기반 컨트롤을 만드는 경우에 특히 유용 합니다. 템플릿이 있는 컨트롤에는 소비자가 적용한 새 템플릿이 있을 수 있습니다. 소비자는 작업 템플릿을 다시 만들려고 하다가 기본 템플릿에서 선언된 일부 이벤트 처리를 자신도 모르게 제거할 수 있습니다. 이 경우 클래스 정의에 있는 [**OnApplyTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.onapplytemplate) 재정의의 일부로서 처리기를 연결하여 여전히 컨트롤 수준의 이벤트 처리를 제공할 수 있습니다. 그런 다음 인스턴스화에서 컨트롤의 루트까지 버블링된 입력 이벤트를 catch할 수 있습니다.
 
 ### <a name="the-handled-property"></a>**Handled** 속성
 
 특정 라우트된 이벤트에 대한 몇 가지 이벤트 데이터 클래스에는 **Handled**라는 속성이 포함되어 있습니다. 예를 들어 [**PointerRoutedEventArgs.Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.handled), [**KeyRoutedEventArgs.Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled), [**DragEventArgs.Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.handled)를 참조하세요. 어떤 경우든 **Handled**는 설정 가능한 부울 속성입니다.
 
-**Handled** 속성을 **true**로 설정하면 이벤트 시스템 동작이 영향을 받습니다. **Handled**가 **true**이면 대부분의 이벤트 처리기에 대한 라우팅이 중지됩니다. 이벤트는 계속하여 경로를 따라 다른 연결된 처리기에 해당하는 특정 이벤트에 대해 알리지 않습니다. "Handled"가 이벤트의 컨텍스트에서 의미하는 것과 앱이 이에 응답하는 방법은 개발자에게 달려 있습니다. 기본적으로 **Handled**는 이벤트의 발생이 특정 컨테이너로 버블링될 필요가 없음을 앱 코드에 명시하도록 하는 간단한 프로토콜이며, 필요한 것은 앱 논리에서 처리합니다. 그러나 반대로, 버블링되어야 하는 이벤트를 처리하지 않는 것에는 주의를 기울여야 합니다. 그래야만 기본 제공 시스템 또는 컨트롤 동작이 작동할 수 있습니다. 예를 들어 선택 컨트롤의 일부 또는 항목 내에서 낮은 수준의 이벤트를 처리하는 것은 방해가 될 수 있습니다. 선택 컨트롤은 선택을 변경해야 하는지를 확인하기 위해 입력 이벤트를 찾아볼 수 있습니다.
+**Handled** 속성을 **true**로 설정하면 이벤트 시스템 동작이 영향을 받습니다. **Handled**가 **true**이면 대부분의 이벤트 처리기에 대한 라우팅이 중지됩니다. 이벤트는 계속하여 경로를 따라 다른 연결된 처리기에 해당하는 특정 이벤트에 대해 알리지 않습니다. "Handled"가 이벤트의 컨텍스트에서 의미하는 것과 앱이 이에 응답하는 방법은 개발자에게 달려 있습니다. 기본적으로 **Handled**는 이벤트의 발생이 특정 컨테이너로 버블링될 필요가 없음을 앱 코드에 명시하도록 하는 간단한 프로토콜이며, 필요한 것은 앱 논리에서 처리합니다. 그러나 반대로, 기본 제공 시스템이나 제어 동작이 작동할 수 있도록 버블링해야 할 수도 있는 이벤트를 처리하지 않도록 주의해야 합니다. 예를 들어, 선택 컨트롤의 일부 또는 항목 내에 있는 하위 수준 이벤트 처리가 저하될 수 있습니다. 선택 컨트롤은 선택을 변경해야 하는지를 확인하기 위해 입력 이벤트를 찾아볼 수 있습니다.
 
 라우팅된 이벤트가 모두 이런 방식으로 경로를 취소할 수 있는 것은 아닌데, 그 이유는 그러한 이벤트에 **Handled** 속성이 없기 때문일 수 있습니다. 예를 들어 [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus) 및 [**LostFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus)는 버블링되지만 항상 루트까지 계속 버블링되며, 해당 이벤트 데이터 클래스에는 이 동작에 영향을 미칠 수 있는 **Handled** 속성이 없습니다.
 
@@ -264,7 +264,7 @@ DHTML(동적 HTML) 또는 HTML5와 같은 웹 기술을 알고 있는 경우 이
 
 앞에서 **Handled**를 **true**로 설정하면 대부분의 처리기가 호출되지 않는다고 설명했습니다. 그러나 [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) 메서드는 경로에서 이전에 있는 다른 처리기가 공유 이벤트 데이터에서 **Handled**를 **true**로 설정한 경우에도 경로에 대해 항상 호출되는 처리기를 연결할 수 있는 방법을 제공합니다. 사용 중인 컨트롤이 내부 구성에서 또는 컨트롤 전용 논리에 대해 이벤트를 처리했지만 여전히 컨트롤 인스턴스 또는 앱 UI에서 이에 대해 응답하고자 하는 경우 이 방법이 유용합니다. 그러나 이 방법은 **Handled**의 목적과 모순되고 컨트롤에서 의도하는 조작을 위반할 수 있기 때문에 주의해서 사용해야 합니다.
 
-라우트된 이벤트 식별자가 **AddHandler** 메서드의 필수 입력이기 때문에 해당하는 라우트된 이벤트 식별자가 있는 라우트된 이벤트만 [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) 이벤트 처리 기술을 사용할 수 있습니다. 라우트된 이벤트 식별자를 사용할 수 있는 이벤트의 목록은 [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler)에 대한 참조 설명서를 참조하세요. 대체로 이 목록은 앞에서 표시된 라우트된 이벤트 목록과 동일합니다. 예외의 마지막 두 개는 예외입니다. [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus) 및 [**LostFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus) 에는 라우트된 이벤트 식별자가 없으므로 해당 식별자에 대해 **AddHandler** 를 사용할 수 없습니다.
+라우트된 이벤트 식별자가 **AddHandler** 메서드의 필수 입력이기 때문에 해당하는 라우트된 이벤트 식별자가 있는 라우트된 이벤트만 [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) 이벤트 처리 기술을 사용할 수 있습니다. 라우트된 이벤트 식별자를 사용할 수 있는 이벤트의 목록은 [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler)에 대한 참조 설명서를 참조하세요. 대체로 이 목록은 앞에서 표시된 라우트된 이벤트 목록과 동일합니다. 예외는 [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus) 및 [**LostFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus) 목록의 마지막 두 항목에 라우트된 이벤트 식별자가 없으므로 해당 항목에는 **AddHandler**를 사용할 수 없다는 것입니다.
 
 ## <a name="routed-events-outside-the-visual-tree"></a>시각적 트리 외부의 라우트된 이벤트
 
@@ -277,7 +277,7 @@ UI에서 요소가 마우스, 터치 및 스타일러스 입력에 보이는지 
 - 요소의 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) 속성 값이 [**Visible**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Visibility)입니다.
 - 요소의 **Background** 또는 **Fill** 속성 값이 **null**이 아닙니다. **Null** [**브러시**](/uwp/api/Windows.UI.Xaml.Media.Brush) 값은 투명도와 적중 테스트 표시 안 함을 발생 합니다. 요소가 투명하나 적중 횟수를 테스트할 수 있게 하려면 **null** 대신 [**Transparent**](https://docs.microsoft.com/uwp/api/windows.ui.colors.transparent) 브러시를 사용하세요.
 
-**참고**  **Background** 및 **Fill**은 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)로 정의되지 않으며 [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 및 [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape) 같은 다른 파생 클래스로 정의됩니다. 그러나 포그라운드 및 백그라운드 속성에 사용하는 브러시의 의미는 속성을 구현하는 서브클래스와 관계없이 적중 횟수 테스트 및 입력 이벤트의 경우와 동일합니다.
+**참고**  **Background** 및 **Fill**은 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)로 정의되지 않으며 [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 및 [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape)와 같은 다른 파생 클래스로 정의됩니다. 그러나 전경 및 백그라운드 속성에 사용하는 브러시의 의미는 속성을 구현하는 서브클래스와 관계없이 적중 횟수 테스트 및 입력 이벤트의 경우와 동일합니다.
 
 - 요소가 컨트롤인 경우 해당 [**IsEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성 값이 **true**여야 합니다.
 - 요소의 레이아웃에는 실제 차원이 있어야 합니다. [  **ActualHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualheight) 또는 [**ActualWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth)가 0인 요소는 입력 이벤트를 발생시키지 않습니다.
@@ -311,7 +311,7 @@ Windows 런타임에 대한 사용자 지정 라우트된 이벤트를 선언할
 ## <a name="related-topics"></a>관련 항목
 
 * [XAML 개요](xaml-overview.md)
-* [빠른 시작: 터치식 입력 @ no__t-0
+* [빠른 시작: 터치식 입력](https://docs.microsoft.com/previous-versions/windows/apps/hh465387(v=win.10))
 * [키보드 상호 작용](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
 * [.NET 이벤트 및 대리자](https://go.microsoft.com/fwlink/p/?linkid=214364)
 * [Windows 런타임 구성 요소 만들기](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
