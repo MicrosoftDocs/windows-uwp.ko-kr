@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 시작하기, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: e900cdddaa86857554c11605d00f59fd45a7e5ee
-ms.sourcegitcommit: b186f70f0b1601b6b6a5db91d87d034f6b155e3b
+ms.openlocfilehash: ab582d0528d6af8c9a8ae97e43fda2714f8e2fe6
+ms.sourcegitcommit: 2442a5f5b0c4275204063162f0f379fa90ff13b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063777"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72292776"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 
@@ -113,7 +113,7 @@ std::wcout << titleAsHstring.c_str() << std::endl;
 
 피드의 제목 텍스트를 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) 개체로 가져옵니다(자세한 내용은 [C++/WinRT의 문자열 처리](strings.md) 참조). 그러면 C++ 표준 라이브러리 문자열과 함께 사용된 패턴을 반영하는 **hstring**이 **c_str** 함수를 통해 출력됩니다.
 
-이와 같이 C++/WinRT는 클래스와 유사한 최신 C++ 식(예: `syndicationItem.Title().Text()`)의 사용을 장려합니다. 이 기술은 기존 COM 프로그래밍과 확연히 다를 뿐만 아니라 보다 명확한 프로그래밍 스타일입니다. 직접 COM을 초기화할 필요가 없으며, COM 포인터로 작업합니다.
+이와 같이 C++/WinRT는 클래스와 유사한 최신 C++ 식(예: `syndicationItem.Title().Text()`)의 사용을 장려합니다. 이 기술은 기존 COM 프로그래밍과 확연히 다를 뿐만 아니라 보다 명확한 프로그래밍 스타일입니다. COM을 직접 초기화하거나 COM 포인터를 사용할 필요가 없습니다.
 
 HRESULT 반환 코드를 처리할 필요도 없습니다. C++/WinRT는 자연스러운 최신 프로그래밍 스타일을 위해 [**winrt::hresult-error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 등의 오류 HRESULT를 예외로 변환합니다. 오류 처리와 코드 예제에 대한 자세한 내용은 [C++/WinRT를 통한 오류 처리](error-handling.md)를 참조하세요.
 

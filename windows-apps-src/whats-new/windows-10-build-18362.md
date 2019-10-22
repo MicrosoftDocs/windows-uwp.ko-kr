@@ -6,12 +6,12 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 935d7f787d0cc23965c0fd51747b7687adb80a3f
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 4e92afd112ce7600bcfa650e0bb3bbeffabd7bd0
+ms.sourcegitcommit: f120968069702a7210756b508dabc4a1a8c20d53
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66468317"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72438222"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-18362"></a>개발자용 Windows 10 빌드 18362의 새로운 기능
 
@@ -25,12 +25,12 @@ Visual Studio 2019와 Windows 10 빌드 18362(SDK 버전 1903이라고 함)를 �
 :------ | :------
 AnimatedVisualPlayer | [AnimatedVisualPlayer](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.animatedvisualplayer) API는 앱에서 애니메이트된 시각적 개체의 재생을 호스트하고 제어합니다. 이 API는 [Lottie](https://docs.microsoft.com/windows/communitytoolkit/animations/lottie) 시각적 개체와 같이 Adobe AfterEffects 애니메이션을 애플리케이션에서 고유하게 렌더링할 수 있는 콘텐츠를 제어 및 표시하는 데 사용합니다.
 CompactDensity | 앱에서 [압축 모드](../design/style/spacing.md)를 사용하도록 설정하면 풍부한 정보를 제공하는 조밀한 컨트롤 그룹이 구현될 수 있습니다. 이를 통해 많은 양의 콘텐츠를 검색할 때 페이지에서 시각적 컨텐츠가 극대화되거나 사용자가 포인터 입력을 사용할 때 탐색 및 상호 작용이 용이해집니다.
-항목 반복기 | [ItemsRepeater](../design/controls-and-patterns/items-repeater.md) 컨트롤은 사용자에게 컬렉션을 표시하기 위한 사용자 지정 환경을 만들 수 있습니다. ItemsRepeater는 포괄적인 최종 사용자 환경 또는 기본 UI를 제공하지 않습니다. 그보다는 고유한 컬렉션 기반 환경 및 사용자 지정 컨트롤을 만드는 데 사용할 수 있는 문서 블록에 해당합니다.
+항목 반복기 | [ItemsRepeater](../design/controls-and-patterns/items-repeater.md) 컨트롤은 사용자에게 컬렉션을 표시하는 사용자 지정 환경을 만들 수 있습니다. ItemsRepeater는 포괄적인 최종 사용자 환경 또는 기본 UI를 제공하지 않습니다. 그보다는 고유한 컬렉션 기반 환경 및 사용자 지정 컨트롤을 만드는 데 사용할 수 있는 문서 블록에 해당합니다.
 교육 팁 | [교육 팁](../design/controls-and-patterns/dialogs-and-flyouts/teaching-tip.md)은 상황별 정보를 제공하는 풍부한 콘텐츠의 반영구적 플라이아웃입니다. 이 컨트롤은 새롭거나 중요한 정보를 사용자에게 알리고 교육하는 데 사용할 수 있습니다.
 UI 명령 | [UWP 앱의 명령](../design/controls-and-patterns/commanding.md)에서는 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 및 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 클래스를 ICommand 인터페이스와 함께 사용하여 사용하는 디바이스 및 입력 형식에 관계없이 다양한 컨트롤 형식에서 명령을 공유하고 관리할 수 있습니다.
 Windows UI Library | Windows UI 라이브러리 - [WinUI 2.1](https://docs.microsoft.com/uwp/toolkits/winui/release-notes/winui-2.1)의 최신 공신 버전은 Windows 앱을 위한 유용한 새 XAML 컨트롤을 제공합니다. WinUI 라이브러리 API는 이전 버전의 Windows 10에서 실행되므로 최신 OS를 사용하지 않는 사용자를 지원하기 위해 버전 확인 또는 조건부 XAML을 포함할 필요가 없습니다.
 데스크톱 앱의 시각적 계층 | 이제 [데스크톱 애플리케이션에서 UWP 시각적 계층 API를 사용](../composition/visual-layer-in-desktop-apps.md)할 수 있습니다. 이러한 API는 계층은 고성능, 그래픽 유지 모드 API, 효과 및 애니메이션을 제공하며 Windows 디바이스에서 UI의 기반이 됩니다.
-Z-깊이 및 그림자 | [Z-깊이 및 그림자](../design/layout/depth-shadow.md)를 사용하여 UWP 앱에서 고도를 만들 수 있습니다. 이 새 기능을 사용하면 앱의 UI에서 사용자가 주안점을 두어야 하는 중요한 항목을 보다 쉽게 검색하고 보다 잘 전달할 수 있습니다.
+Z-깊이 및 그림자 | [Z-깊이 및 그림자](../design/layout/depth-shadow.md)를 사용하여 UWP 앱에서 고도를 만들 수 있습니다. 이러한 새 기능을 사용하면 앱의 UI를 더 쉽게 검색할 수 있으며, 사용자가 집중해야 하는 중요한 사항을 더 효율적으로 전달할 수 있습니다.
 
 ## <a name="develop-windows-apps"></a>Windows 앱 개발
 
@@ -105,6 +105,6 @@ Microsoft 개발자는 One Dev Question 동영상 시리즈에서 오랫동안 W
 
 * [Larry Ostman, Windows 개발 및 역사](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPUkYGpJU0RzvY6PBSEA4K)
 
-* [Aaron Gustafson, 프로그레시브 웹앱](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
+* [Aaron Gustafson, 점진적 웹앱](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
 
 * [Chris Heilmann, 웹 힌트 도구](https://www.youtube.com/playlist?list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)

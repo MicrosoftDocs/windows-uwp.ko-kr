@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 사용자 지정, 템플릿 기반, 컨트롤
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c0b2d8fb17b90bc55834f6bf2200b22af9352ef6
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 6acbd62a8fa75eefb39598dd5bbb6ec1270388c4
+ms.sourcegitcommit: cc9f5a16386be78c12821a975e43497a0693abba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270078"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72578168"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>C++/WinRT를 사용한 XAML 사용자 지정(템플릿 기반) 컨트롤
 
@@ -22,6 +22,9 @@ UWP(유니버설 Windows 플랫폼)의 가장 강력한 기능 중 하나는 XAM
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>비어 있는 앱(BgLabelControlApp) 만들기
 먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **비어 있는 앱(C++/WinRT)** 프로젝트를 만들어서 이름을 *BgLabelControlApp*으로 지정합니다. 이 항목의 뒤쪽 섹션에서는 프로젝트(다음까지 빌드하지 않음)를 빌드하게 됩니다.
+
+> [!NOTE]
+> &mdash;프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법을 포함&mdash;하는 C++/WinRT용 Visual Studio 개발 설정에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
 
 사용자 지정(템플릿 기반) 컨트롤을 나타내는 새 클래스를 작성합니다. 동일한 컴파일 단위 내에서 클래스를 작성하고 사용합니다. 하지만 XAML 태그에서 이 클래스를 인스턴스화할 수 있어야 하므로 결국 런타임 클래스가 될 것입니다. 그 밖에도 런타임 클래스를 작성하고 사용하는 데 모두 C++/WinRT를 사용합니다.
 
@@ -116,7 +119,7 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d
 
 해당 생성자에서 **BgLabelControl**은 스스로 기본 스타일 키를 설정합니다. 그러나 기본 스타일이란 ‘무엇인가요’?  사용자 지정(템플릿 기반) 컨트롤의 경우 컨트롤의 소비자가 스타일 및/또는 템플릿을 설정하지 않는 경우 자체적으로 렌더링하는 데 사용할 수 있는 기본 컨트롤 템플릿을 포함하는 기본 스타일이 있어야 합니다. 이 섹션에서는 기본 스타일을 포함하는 프로젝트에 태그 파일을 추가합니다.
 
-프로젝트 노드에서 새 폴더를 만들고 이름을 “Themes”로 지정합니다. `Themes` 아래에서 형식 **Visual C++**  > **XAML** > **XAML 보기**의 새 항목을 추가하고 이름을 “Generic.xaml”로 지정합니다. XAML 프레임워크가 사용자 지정 컨트롤의 기본 스타일을 찾으려면 폴더 및 파일 이름이 이와 같아야 합니다. `Generic.xaml`의 기본 콘텐츠를 삭제하고 아래 태그에 붙여넣습니다.
+프로젝트 노드 아래에서 새 폴더(필터가 아니라 폴더)를 만들고 이름을 "Themes"로 지정합니다. `Themes` 아래에서 형식 **Visual C++**  > **XAML** > **XAML 보기**의 새 항목을 추가하고 이름을 “Generic.xaml”로 지정합니다. XAML 프레임워크가 사용자 지정 컨트롤의 기본 스타일을 찾으려면 폴더 및 파일 이름이 이와 같아야 합니다. `Generic.xaml`의 기본 콘텐츠를 삭제하고 아래 태그에 붙여넣습니다.
 
 ```xaml
 <!-- \Themes\Generic.xaml -->
