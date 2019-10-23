@@ -8,12 +8,12 @@ keywords: windows win32, 데스크톱 개발
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: c69c744684d05c3ad64d98fbda30a3ccfdc91080
-ms.sourcegitcommit: f167775291cbc566b72b0859ae6b426d848c5c89
+ms.openlocfilehash: e940e744f72710a5960f888dda51d7f195841a60
+ms.sourcegitcommit: a4710e9e02e365f039a270435daa941dfec8d783
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266420"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749518"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Windows PC용 데스크톱 앱 빌드
 
@@ -44,12 +44,12 @@ ms.locfileid: "66266420"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="/media/illustrations/teams-fast-track.svg?branch=master" alt="Modernize illustration" data-linktype="external" class="x-hidden-focus">
+                            <img src="/media/illustrations/teams-fast-track.svg" alt="Modernize illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>데스크톱 앱 현대화</h3>
-                        <p></p>최신 Windows 기능으로 기존 WPF, Windows Forms 및 Win32 앱을 향상시킵니다.</p>
+                        <p>최신 Windows 기능으로 기존 WPF, Windows Forms 및 Win32 앱을 향상시킵니다.</p>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@ ms.locfileid: "66266420"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="/media/illustrations/sql-database-develop.svg?branch=master" alt="Design illustration" data-linktype="external" class="x-hidden-focus">
+                            <img src="/media/illustrations/sql-database-develop.svg" alt="Design illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
@@ -84,7 +84,7 @@ ms.locfileid: "66266420"
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img data-hoverimage="/media/common/i_tools.svg?branch=master" src="/media/common/i_tools.svg?branch=master" alt="Tools icon" />
+                                    <img data-hoverimage="/media/common/i_tools.svg" src="/media/common/i_tools.svg" alt="Tools icon" />
                                 </div>
                             </div>
                             <div class="cardText">
@@ -102,7 +102,7 @@ ms.locfileid: "66266420"
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img data-hoverimage="/media/common/i_code-samples.svg?branch=master" src="/media/common/i_code-samples.svg?branch=master" alt="Samples icon" />
+                                    <img data-hoverimage="/media/common/i_code-samples.svg" src="/media/common/i_code-samples.svg" alt="Samples icon" />
                                 </div>
                             </div>
                             <div class="cardText">
@@ -120,7 +120,7 @@ ms.locfileid: "66266420"
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img data-hoverimage="/media/common/i_api-reference.svg?branch=master" src="/media/common/i_api-reference.svg?branch=master" alt="API index icon" />
+                                    <img data-hoverimage="/media/common/i_api-reference.svg" src="/media/common/i_api-reference.svg" alt="API index icon" />
                                 </div>
                             </div>
                             <div class="cardText">
@@ -142,7 +142,7 @@ ms.locfileid: "66266420"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="/dotnet/images/hub/net-docs-desktop-1.svg?branch=master" alt="UWP illustration" data-linktype="external" class="x-hidden-focus">
+                            <img src="/dotnet/images/hub/net-docs-desktop-1.svg" alt="UWP illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
@@ -155,13 +155,13 @@ ms.locfileid: "66266420"
       </a>
     </li>
     <li>
-      <a href="/windows/desktop/index">
+      <a href="/windows/desktop/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="/media/hubs/windows/win_developer-desktop.svg?branch=master" alt="Win32 illustration" data-linktype="external" class="x-hidden-focus">
+                            <img src="/media/hubs/windows/win_developer-desktop.svg" alt="Win32 illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
@@ -174,13 +174,13 @@ ms.locfileid: "66266420"
       </a>
     </li>
     <li>
-      <a href="/dotnet/framework/wpf/index">
+      <a href="/dotnet/framework/wpf/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="/dotnet/images/hub/net-docs-desktop-2.svg?branch=master" alt="WPF illustration" data-linktype="external" class="x-hidden-focus">
+                            <img src="/dotnet/images/hub/net-docs-desktop-2.svg" alt="WPF illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
@@ -193,13 +193,13 @@ ms.locfileid: "66266420"
       </a>
     </li>
     <li>
-      <a href="/dotnet/framework/winforms/index">
+      <a href="/dotnet/framework/winforms/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="/dotnet/images/hub/net-docs-desktop-3.svg?branch=master" alt="Windows Forms illustration" data-linktype="external" class="x-hidden-focus">
+                            <img src="/dotnet/images/hub/net-docs-desktop-3.svg" alt="Windows Forms illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
@@ -212,13 +212,13 @@ ms.locfileid: "66266420"
       </a>
     </li>
     <li>
-      <a href="/dotnet">
+      <a href="/dotnet/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="/media/illustrations/system-center-virtual-machine.svg?branch=master" alt=".NET illustration" data-linktype="external" class="x-hidden-focus">
+                            <img src="/media/illustrations/system-center-virtual-machine.svg" alt=".NET illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
@@ -237,7 +237,7 @@ ms.locfileid: "66266420"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="/media/illustrations/dynamics-training.svg?branch=master" alt="Features illustration" data-linktype="external" class="x-hidden-focus">
+                            <img src="/media/illustrations/dynamics-training.svg" alt="Features illustration" data-linktype="external" class="x-hidden-focus">
                         </div>
                     </div>
                     <div class="cardText">
@@ -258,7 +258,7 @@ ms.locfileid: "66266420"
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img data-hoverimage="/media/common/i_code-performance.svg?branch=master" src="/media/common/i_code-performance.svg?branch=master" alt="Performance icon" />
+                                    <img data-hoverimage="/media/common/i_code-performance.svg" src="/media/common/i_code-performance.svg" alt="Performance icon" />
                                 </div>
                             </div>
                             <div class="cardText">
@@ -276,7 +276,7 @@ ms.locfileid: "66266420"
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img data-hoverimage="/media/common/i_code-quality.svg?branch=master" src="/media/common/i_code-quality.svg?branch=master" alt="App compatibility icon" />
+                                    <img data-hoverimage="/media/common/i_code-quality.svg" src="/media/common/i_code-quality.svg" alt="App compatibility icon" />
                                 </div>
                             </div>
                             <div class="cardText">
@@ -294,7 +294,7 @@ ms.locfileid: "66266420"
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img data-hoverimage="/media/common/i_form.svg?branch=master" src="/media/common/i_form.svg?branch=master" alt="Enterprise icon" />
+                                    <img data-hoverimage="/media/common/i_form.svg" src="/media/common/i_form.svg" alt="Enterprise icon" />
                                 </div>
                             </div>
                             <div class="cardText">
@@ -317,7 +317,7 @@ ms.locfileid: "66266420"
                         <h3>관련 문서</h3>
                         <p></p>
                         <p><a href="/windows/msix/desktop/desktop-to-uwp-root">MSIX 패키징 및 배포</a></p>
-                        <p><a href="https://docs.microsoft.com/dotnet">.NET</a></p>
+                        <p><a href="https://docs.microsoft.com/dotnet/">.NET</a></p>
                         <p><a href="https://docs.microsoft.com/visualstudio/ide/">Visual Studio</a></p>
                         <p><a href="https://docs.microsoft.com/azure/">Azure</a></p>
                         <p><a href="https://docs.microsoft.com/xamarin">Xamarin</a></p>
@@ -391,11 +391,11 @@ ms.locfileid: "66266420"
                         <p><a href="/windows/msix/desktop/desktop-to-uwp-root">MSIX packaging and deployment</a></p>
                         <p><a href="https://docs.microsoft.com/windows/uwp">Universal Windows Platform (UWP)</a></p>
                         <p><a href="https://docs.microsoft.com/windows/desktop/apiindex/windows-api-list">Windows API (Win32)</a></p>
-                        <p><a href="https://docs.microsoft.com/dotnet">.NET</a></p>
-                        <p><a href="https://docs.microsoft.com/dotnet/framework/wpf">WPF</a></p>
-                        <p><a href="https://docs.microsoft.com/dotnet/framework/winforms">Windows Forms</a></p>
+                        <p><a href="https://docs.microsoft.com/dotnet/">.NET</a></p>
+                        <p><a href="https://docs.microsoft.com/dotnet/framework/wpf/">WPF</a></p>
+                        <p><a href="https://docs.microsoft.com/dotnet/framework/winforms/">Windows Forms</a></p>
                         <p><a href="https://docs.microsoft.com/windows/ai/">Windows ML</a></p>
-                        <p><a href="https://docs.microsoft.com/xamarin">Xamarin</a></p>
+                        <p><a href="https://docs.microsoft.com/xamarin/">Xamarin</a></p>
                         </div>
                     </div>
                 </div>
