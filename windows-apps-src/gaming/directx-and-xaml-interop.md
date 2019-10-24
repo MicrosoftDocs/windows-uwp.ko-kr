@@ -1,33 +1,30 @@
 ---
-title: DirectX 및 XAML interop
+title: DirectX 및 XAML 상호 운용성
 description: UWP(유니버설 Windows 플랫폼) 게임에서 XAML(Extensible Application Markup Language)과 Microsoft DirectX를 함께 사용할 수 있습니다.
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, xaml 상호 운용성
 ms.localizationpriority: medium
-ms.openlocfilehash: ad03a86ba18f11d8d63c2c98649e7f159f3d4f52
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 174cb7f2608c1da89ebacc21e5032d03f7701f15
+ms.sourcegitcommit: 0179e2ccb59a14abc1676da0662e2def54af24ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321295"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796226"
 ---
-# <a name="directx-and-xaml-interop"></a>DirectX 및 XAML interop
-
-
+# <a name="directx-and-xaml-interop"></a>DirectX 및 XAML 상호 운용성
 
 UWP(유니버설 Windows 플랫폼) 게임 또는 앱에서 XAML(Extensible Application Markup Language)과 Microsoft DirectX를 함께 사용할 수 있습니다. XAML과 DirectX를 함께 사용하면 DirectX로 렌더링된 콘텐츠와 상호 운용되는 유연한 사용자 인터페이스 프레임워크를 빌드할 수 있으며 이 방법은 그래픽을 많이 사용하는 앱에 특히 유용합니다. 이 항목에서는 DirectX를 사용하는 UWP 앱의 구조를 설명하고, DirectX와 함께 작동하도록 UWP 앱을 빌드할 때 사용할 중요 유형을 식별합니다.
 
 앱이 주로 2D 렌더링에 중점을 두는 경우 [Win2D](https://github.com/microsoft/win2d) Windows 런타임 라이브러리를 사용하려고 할 수 있습니다. 이 라이브러리는 Microsoft에서 유지 관리하며, 핵심 Direct2D 기술을 기반으로 합니다. 이 라이브러리는 2D 그래픽을 구현하는 사용 패턴을 크게 간소화하며 이 문서에 설명된 기법 중 일부에 대한 유용한 추상화를 포함하고 있습니다. 자세한 내용은 프로젝트 페이지를 참조하세요. 이 문서에서는 Win2D를 사용*하지* 않도록 선택한 앱 개발자를 위한 지침을 다룹니다.
 
-> **참고**  DirectX Api 정의 되어 있지 않은 Windows 런타임 형식으로 시각적 개체를 일반적으로 사용 되므로 C++ 구성 요소 확장 (C++/CX) DirectX를 사용 하 여 상호 운용 되는 XAML UWP 구성 요소를 개발할 수 있습니다. 또한 DirectX 호출을 개별 Windows 런타임 메타데이터 파일에 래핑할 경우 DirectX를 사용하는 C# 및 XAML로 UWP 앱을 만들 수 있습니다.
-
- 
+> [!NOTE]
+> Directx api는 Windows 런타임 형식으로 정의 되지 않지만 일반적으로 [ C++/winrt](/windows/uwp/cpp-and-winrt-apis/index) 를 사용 하 여 directx와 상호 운용 되는 XAML UWP 구성 요소를 개발할 수 있습니다. 또한 DirectX 호출을 개별 Windows 런타임 메타데이터 파일에 래핑할 경우 DirectX를 사용하는 C# 및 XAML로 UWP 앱을 만들 수 있습니다.
 
 ## <a name="xaml-and-directx"></a>XAML 및 DirectX
 
-DirectX는 2D 및 3D 그래픽에 대 한 두 가지 강력한 라이브러리를 제공합니다. Direct2D 및 Microsoft Direct3D 합니다. XAML이 기본적인 2D 기능 및 효과, 모델링 및 게임 등의 여러 앱을 제공하지만 보다 복잡한 그래픽 지원이 필요합니다. 따라서 Direct2D 및 Direct3D를 사용하여 그래픽 전체 또는 일부를 렌더링하고 XAML을 사용하여 그 외 모든 작업을 수행할 수 있습니다.
+DirectX는 각각 2D와 3D 그래픽에 대한 강력한 라이브러리인 Direct2D 및 Microsoft Direct3D를 제공합니다. XAML이 기본적인 2D 기능 및 효과, 모델링 및 게임 등의 여러 앱을 제공하지만 보다 복잡한 그래픽 지원이 필요합니다. 따라서 Direct2D 및 Direct3D를 사용하여 그래픽 전체 또는 일부를 렌더링하고 XAML을 사용하여 그 외 모든 작업을 수행할 수 있습니다.
 
 사용자 지정 XAML 및 DirectX interop을 구현하는 경우 다음의 두 개념에 대해 알고 있어야 합니다.
 
@@ -45,7 +42,6 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 -   정기적인 짧은 대기 시간 간격으로 업데이트가 수행되어야 하는 상황에서, 또는 업데이트된 그래픽을 실시간으로 나타내는 데 DirectX를 사용하는 경우 XAML 프레임워크 새로 고침 타이머와 동기화하지 않고 그래픽을 새로 고칠 수 있도록 [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 클래스를 사용하세요. 이 유형을 사용하면 그래픽 디바이스의 스왑 체인([IDXGISwapChain1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1))에 직접 액세스할 수 있고 렌더링 대상의 최상위 XAML 레이어에 액세스할 수 있습니다. 이 유형은 XAML 기반 사용자 인터페이스가 필요한 게임 및 전체 화면 DirectX 앱에서 잘 작동합니다. 이 방법을 사용하려면 Microsoft DXGI(DirectX Graphics Infrastructure), Direct2D 및 Direct3D 기술을 포함하여 DirectX에 대해 잘 알고 있어야 합니다. 자세한 내용은 [Direct3D 11의 프로그래밍 지침](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews)을 참조하세요.
 
 ## <a name="surfaceimagesource"></a>SurfaceImageSource
-
 
 [SurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource)는 그릴 DirectX 공유 표면을 제공하고 비트를 앱 콘텐츠로 작성합니다.
 
@@ -369,9 +365,8 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 성능을 보장하기 위해, [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 유형에는 특정 제한이 있습니다.
 
 -   앱별 [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 인스턴스는 4개 이하입니다.
--   DirectX 스왑 체인의 높이 너비를 설정 해야 합니다 (에서 [DXGI\_스왑\_체인\_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1)) 스왑 체인 요소의 현재 차원에 있습니다. 콘텐츠 표시는 크기가 조정 하지 않으면 (사용 하 여 **DXGI\_크기 조정\_STRETCH**) 맞지 않습니다.
--   DirectX 스왑 체인의 크기 조정 모드를 설정 해야 합니다 (에서 [DXGI\_스왑\_체인\_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1))를 **DXGI\_배율\_STRETCH**합니다.
--   DirectX 스왑 체인의 알파 모드를 설정할 수 없습니다 (에서 [DXGI\_스왑\_체인\_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1))를 **DXGI\_알파\_모드\_ 미리 곱한**합니다.
+-   DirectX 스왑 체인의 높이와 너비 ( [DXGI \_SWAP \_CHAIN \_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1))를 스왑 체인 요소의 현재 차원으로 설정 해야 합니다. 그렇지 않으면 표시 콘텐츠가 크기 조정 됩니다 ( **DXGI \_SCALING \_STRETCH**사용).
+-   DirectX 스왑 체인의 크기 조정 모드 ( [dxgi \_SWAP \_CHAIN \_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1))를 **dxgi \_SCALING \_STRETCH**으로 설정 해야 합니다.
 -   [IDXGIFactory2::CreateSwapChainForComposition](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition)을 호출하여 DirectX 스왑 체인을 만들어야 합니다.
 
 앱의 요구 사항에 따라 [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)을 업데이트합니다. 이때 XAML 프레임워크의 업데이트는 대상이 아닙니다. **SwapChainPanel**의 업데이트를 XAML 프레임워크의 해당 업데이트와 동기화해야 하면 [Windows::UI::Xaml::Media::CompositionTarget::Rendering](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.compositiontarget.rendering) 이벤트를 등록합니다. 그렇지 않을 경우 **SwapChainPanel** 패널을 업데이트하는 스레드가 아닌 스레드에서 XAML 요소를 업데이트하려면 스레드 교차 문제를 고려해야 합니다.
@@ -465,12 +460,4 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 * [VirtualSurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource)
 * [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)
 * [ISwapChainPanelNative](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-iswapchainpanelnative)
-* [Direct3D 용 프로그래밍 가이드 11](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews)
-
- 
-
- 
-
-
-
-
+* [Direct3D 11 프로그래밍 가이드](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews)
