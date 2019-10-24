@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b70a3f9f9fad2d81716c22ab2f383e72ea363341
-ms.sourcegitcommit: cbd900f350569a3901086a44b2d5007bb6fb7bed
+ms.openlocfilehash: 0351f3566d708b7a588fa77f9f15564f382de44f
+ms.sourcegitcommit: 807dadf5eceb576aba3ad898a6e9bf12129e94a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276299"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72680740"
 ---
 # <a name="xaml-syntax-guide"></a>XAML 구문 가이드
 
@@ -34,8 +34,8 @@ XAML 파일에는 항상 루트 역할을 하는 요소가 정확히 하나가 �
 
 XAML 구문면에서 개체를 XAML에서 선언하는 방법은 다음 3가지입니다.
 
--   **개체 요소 구문을 사용 하 여 직접:** 이는 여는 태그와 닫는 태그를 사용 하 여 개체를 XML 형식 요소로 인스턴스화합니다. 이 구문을 사용하여 루트 개체를 선언하거나 속성 값을 설정하는 중첩 개체를 만들 수 있습니다.
--   **간접적으로 특성 구문을 사용 합니다.** 개체를 만드는 방법에 대 한 지침을 포함 하는 인라인 문자열 값을 사용 합니다. XAML 파서는 이 문자열을 사용하여 속성 값을 새로 만든 참조 값으로 설정합니다. 이 방법은 특정 공용 개체와 속성에 대해서만 지원됩니다.
+-   **개체 요소 구문을 사용하여 직접적으로:** 여는 태그와 닫는 태그를 사용하여 개체를 XML 형식 요소로 인스턴스화합니다. 이 구문을 사용하여 루트 개체를 선언하거나 속성 값을 설정하는 중첩 개체를 만들 수 있습니다.
+-   **특성 구문을 사용하여 간접적으로:** 개체를 만드는 방법에 대한 지침이 있는 인라인 문자열 값을 사용합니다. XAML 파서는 이 문자열을 사용하여 속성 값을 새로 만든 참조 값으로 설정합니다. 이 방법은 특정 공용 개체와 속성에 대해서만 지원됩니다.
 -   태그 확장 사용
 
 XAML 용어 모음에서 개체 만들기에 필요한 모든 구문을 항상 선택할 수 있는 것은 아닙니다. 일부 개체는 개체 요소 구문을 사용해야만 만들 수 있습니다. 초기에 특성에서 설정해야 만들 수 있는 개체도 있습니다. 사실, XAML 용어 모음에서 개체 요소 또는 특성 구문으로 만들 수 있는 개체는 비교적 적습니다. 두 구문 형식이 모두 가능하지만 스타일 문제로 구문 중 하나가 더 많이 사용될 것입니다.
@@ -50,7 +50,7 @@ XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용�
 </Canvas>
 ```
 
-개체에 다른 개체가 포함 되어 있지 않은 경우에는 여는/닫는 쌍을 사용 하는 대신 자체 닫는 태그 하나를 사용 하 여 개체 요소를 선언할 수 있습니다. `<Canvas />`
+If the object does not contain other objects, you can declare the object element by using one self-closing tag instead of an opening/closing pair: <ph id="ph1">`&lt;Canvas /&gt;`</ph>
 
 ### <a name="containers"></a>컨테이너
 
@@ -87,7 +87,7 @@ XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용�
 </UserControl ...>
 ```
 
-**참고**  some 구조는 개체 요소로 선언할 수 없습니다. 초기화 텍스트가 지원되지 않으며 리소스로 사용할 수 없습니다. XAML에서 속성을 이러한 값으로 설정하려면 특성 구문을 사용해야 합니다. 이러한 형식은 다음과 같습니다. [**Duration**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Duration), [**RepeatBehavior**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepeatBehavior), [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**Rect**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect) 및 [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size)입니다.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept><ph id="ph1">  </ph>Some structures can't be declared as object elements. 초기화 텍스트가 지원되지 않으며 리소스로 사용할 수 없습니다. XAML에서 속성을 이러한 값으로 설정하려면 특성 구문을 사용해야 합니다. 이러한 형식은 [**Duration**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Duration), [**RepeatBehavior**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepeatBehavior), [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**Rect**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect) 및 [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size)입니다.
 
 ## <a name="setting-properties"></a>속성 설정
 
@@ -101,11 +101,11 @@ XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용�
 개체 선언과 마찬가지로, 이 목록이 각 방법으로 모든 속성을 설정할 수 있다는 것을 의미하지는 않습니다. 일부 속성은 이러한 방법 중 하나만 지원합니다.
 둘 이상의 형식을 지원하는 속성도 있습니다. 예를 들어 속성 요소 구문이나 특성 구문을 사용할 수 있는 속성이 있습니다. 가능한 방법은 속성과 속성이 사용하는 개체 형식에 따라 달라집니다. Windows 런타임 API 참조의 경우 **구문** 섹션에서 활용 가능한 XAML 사용을 확인할 수 있습니다. 적용되는 대체 사용이 있는 경우가 있지만 더 세부적입니다. XAML에서의 해당 속성 사용에 대한 모범 사례나 실제 시나리오를 표시하려고 노력하고 있으므로, 이런 세부적인 사용은 표시되지 않을 때가 있습니다. XAML 구문에 대한 지침은 XAML에서 설정할 수 있는 속성에 대한 참조 페이지의 **XAML 사용** 섹션에 제공됩니다.
 
-XAML에서는 어떠한 방법으로도 설정할 수 없고 코드를 사용해서만 설정할 수 있는 개체의 속성도 있습니다. 일반적으로 이러한 속성은 XAML이 아니라 코드 숨김에서 작업하는 것이 더 좋습니다.
+Some properties on objects cannot be set in XAML by any means, and can only be set using code. 일반적으로 이러한 속성은 XAML이 아니라 코드 숨김에서 작업하는 것이 더 좋습니다.
 
 읽기 전용 속성은 XAML에서 설정할 수 없습니다. 코드에서라도 소유 형식이 생성자 오버로드, 도우미 메서드, 계산된 속성 지원 등 이러한 속성을 설정하는 다른 방법을 지원해야 합니다. 계산된 속성은 다른 설정 가능한 속성의 값과 기본 제공 처리가 있는 이벤트를 사용합니다. 이러한 기능은 종속성 속성 시스템에서 사용할 수 있습니다. 종속성 속성이 계산된 속성 지원에 유용한 방식에 대한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
 
-XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느낌을 주지만 실제로는 그렇지 않습니다. 이 항목의 뒷부분에 나오는 "[컬렉션 구문](#collection-syntax)"을 참조 하십시오.
+XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느낌을 주지만 실제로는 그렇지 않습니다. See "<bpt id="p1">[</bpt>Collection Syntax<ept id="p1">](#collection-syntax)</ept>" later in this topic.
 
 ### <a name="setting-a-property-by-using-attribute-syntax"></a>특성 구문을 사용하여 속성 설정
 
@@ -121,21 +121,21 @@ XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느�
 
 개체의 많은 속성은 속성 요소 구문을 사용하여 설정될 수 있습니다. 속성 요소는 다음과 같이 표시됩니다. `<`*object*`.`*property*`>`.
 
-속성 요소 구문을 사용하기 위해 설정할 속성에 대한 XAML 속성 요소를 만듭니다. 표준 XML에서 이 요소는 이름에 점이 있는 요소로 간주됩니다. 그러나 XAML에서 요소 이름의 점은 요소를 속성 요소로 식별합니다. 이때 *property*는 지원하는 개체 모델 구현에서 *object*의 멤버로 예상됩니다. 속성 요소 구문을 사용하려면 속성 요소 태그를 "채우기" 위해 개체 요소를 지정할 수 있어야 합니다. 속성 요소에는 항상 일부 콘텐츠(단일 요소, 여러 요소 또는 내부 텍스트)가 있습니다. 자체적으로 닫히는 속성 요소를 사용하는 것은 의미가 없습니다.
+속성 요소 구문을 사용하기 위해 설정할 속성에 대한 XAML 속성 요소를 만듭니다. 표준 XML에서 이 요소는 이름에 점이 있는 요소로 간주됩니다. However, in XAML, the dot in the element name identifies the element as a property element, with <bpt id="p1">*</bpt>property<ept id="p1">*</ept> expected to be a member of <bpt id="p2">*</bpt>object<ept id="p2">*</ept> in a backing object model implementation. 속성 요소 구문을 사용하려면 속성 요소 태그를 "채우기" 위해 개체 요소를 지정할 수 있어야 합니다. 속성 요소에는 항상 일부 콘텐츠(단일 요소, 여러 요소 또는 내부 텍스트)가 있습니다. 자체적으로 닫히는 속성 요소를 사용하는 것은 의미가 없습니다.
 
 다음 문법에서 *property*는 설정할 속성의 이름이고 *propertyValueAsObjectElement*는 속성의 값 형식 요구 사항을 충족해야 하는 단일 개체 요소입니다.
 
-`<`*object*`>`
+<ph id="ph1">`&lt;`</ph><bpt id="p1">*</bpt>object<ept id="p1">*</ept><ph id="ph2">`&gt;`</ph>
 
-`<`*개체*@no__t*속성*`>`
+<ph id="ph1">`&lt;`</ph><bpt id="p1">*</bpt>object<ept id="p1">*</ept><ph id="ph2">`.`</ph><bpt id="p2">*</bpt>property<ept id="p2">*</ept><ph id="ph3">`&gt;`</ph>
 
-*propertyValueAsObjectElement*
+<bpt id="p1">*</bpt>propertyValueAsObjectElement<ept id="p1">*</ept>
 
-`</`*개체*@no__t*속성*`>`
+<ph id="ph1">`&lt;/`</ph><bpt id="p1">*</bpt>object<ept id="p1">*</ept><ph id="ph2">`.`</ph><bpt id="p2">*</bpt>property<ept id="p2">*</ept><ph id="ph3">`&gt;`</ph>
 
-`</`*object*`>`
+<ph id="ph1">`&lt;/`</ph><bpt id="p1">*</bpt>object<ept id="p1">*</ept><ph id="ph2">`&gt;`</ph>
 
-다음 예제에서는 속성 요소 구문을 사용하여 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill)을 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 개체 요소를 통해 설정합니다. **System.windows.media.solidcolorbrush>** 내에서 [**색**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 은 특성으로 설정 됩니다. 이 XAML의 구문 분석 된 결과는 특성 구문을 사용 하 여 **Fill** 을 설정 하는 이전 XAML 예제와 동일 합니다.
+다음 예제에서는 속성 요소 구문을 사용하여 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill)을 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 개체 요소를 통해 설정합니다. **SolidColorBrush** 내에서 [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color)는 특성으로 설정됩니다. 이 XAML의 구문 분석된 결과는 특성 구문을 사용하여 **Fill**을 설정한 이전 XAML 예제와 동일합니다.
 
 ```xml
 <Rectangle
@@ -151,7 +151,7 @@ XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느�
 
 ### <a name="xaml-vocabularies-and-object-oriented-programming"></a>XAML 용어 모음 및 개체 지향 프로그래밍
 
-Windows 런타임 XAML 형식의 XAML 멤버로 표시되는 속성과 이벤트는 기본 형식에서 상속되는 경우가 많습니다. 다음 예제를 살펴보세요. `<Button Background="Blue" .../>`. [  **Background**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background) 속성은 [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 클래스에서 직접 선언된 속성이 아닙니다. **Background**는 기본 [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 클래스에서 상속됩니다. 실제로 **단추** 에 대 한 참조 항목을 살펴보면 멤버 목록에 연속 된 기본 클래스 체인 각각의 상속 된 멤버가 하나 이상 포함 되어 있는 것을 볼 수 있습니다. [**Buttonbase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase), [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control), [**FrameworkElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement), [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject). **속성** 목록에 있는 모든 읽기-쓰기 속성과 컬렉션 속성은 XAML 용어 모음 측면에서 상속됩니다. 이벤트(예: 다양한 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 이벤트)도 상속됩니다.
+Windows 런타임 XAML 형식의 XAML 멤버로 표시되는 속성과 이벤트는 기본 형식에서 상속되는 경우가 많습니다. 다음 예제를 살펴보세요. `<Button Background="Blue" .../>`. [  **Background**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background) 속성은 [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 클래스에서 직접 선언된 속성이 아닙니다. **Background**는 기본 [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 클래스에서 상속됩니다. 실제로, **Button**에 대한 참조 항목을 살펴보면 [**ButtonBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase), [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control), [**FrameworkElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement), [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) 등 연속하는 기본 클래스로 구성된 각 체인에서 상속된 멤버가 멤버 목록에 하나 이상 있습니다. **속성** 목록에 있는 모든 읽기-쓰기 속성과 컬렉션 속성은 XAML 용어 모음 측면에서 상속됩니다. 이벤트(예: 다양한 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 이벤트)도 상속됩니다.
 
 Windows 런타임 참조의 XAML 지침을 사용하는 경우 구문이나 예제 코드에 표시된 요소 이름은 원래 속성을 정의한 형식과 관련된 경우가 많은데, 이는 참조 항목이 기본 클래스에서 이 형식을 상속할 수 있는 모든 형식에서 공유되기 때문입니다. XML 편집기에서 Visual Studio의 IntelliSense for XAML을 사용하는 경우 XML 편집기, IntelliSense 및 드롭다운은 효율적으로 상속을 통합하고, 클래스 인스턴스에 대한 개체 요소로 시작한 후 설정에 사용할 수 있는 정확한 특성 목록을 제공합니다.
 
@@ -173,7 +173,7 @@ XAML 콘텐츠 속성으로 선언된 속성이 **Object** 형식이거나 **Str
 <TextBlock>Hello!</TextBlock>
 ```
 
-클래스에 대해 XAML 콘텐츠 속성이 있는 경우 "특성" 섹션에서 클래스에 대한 참조 항목을 참조하세요. [  **ContentPropertyAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.ContentPropertyAttribute)의 값을 찾습니다. 이 특성은 명명된 "Name" 필드를 사용합니다. "Name" 값은 XAML 콘텐츠 속성인 해당 클래스의 속성 이름입니다. 예를 들어 [**테두리**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) 참조 페이지에 다음이 표시 됩니다. ContentProperty ("Name = Child").
+클래스에 대해 XAML 콘텐츠 속성이 있는 경우 "특성" 섹션에서 클래스에 대한 참조 항목을 참조하세요. [  **ContentPropertyAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.ContentPropertyAttribute)의 값을 찾습니다. 이 특성은 명명된 "Name" 필드를 사용합니다. "Name" 값은 XAML 콘텐츠 속성인 해당 클래스의 속성 이름입니다. 예를 들어 [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) 참조 페이지에는 다음 항목이 표시됩니다. ContentProperty("Name=Child").
 
 한 가지 중요한 XAML 구문 규칙은 요소에 설정한 다른 속성 요소와 XAML 콘텐츠 속성을 함께 사용할 수 없다는 것입니다. XAML 콘텐츠 속성을 전체 속성 요소 앞이나 뒤에 설정해야 합니다. 예를 들어 다음은 잘못된 XAML입니다.
 
@@ -191,7 +191,7 @@ XAML 콘텐츠 속성으로 선언된 속성이 **Object** 형식이거나 **Str
 
 지금까지 보여 준 구문은 모두 속성을 단일 개체로 설정합니다. 그러나 많은 UI 시나리오에서는 지정된 부모 요소에 여러 자식 요소가 있을 수 있어야 합니다. 예를 들어 입력 양식의 UI에 몇 가지 입력란 요소, 레이블 및 "제출" 단추가 필요합니다. 하지만 프로그래밍 개체 모델을 사용하여 이러한 여러 요소에 액세스할 경우 이러한 요소는 각 항목이 서로 다른 속성의 값이 되는 것이 아니라 대개 단일 컬렉션 속성의 항목이 됩니다. XAML은 컬렉션 형식을 사용하는 속성을 암시적으로 처리하고 컬렉션 형식의 자식 요소를 특수 처리하여 일반적인 지원 컬렉션 모델을 지원할 뿐만 아니라 여러 자식 요소를 지원합니다.
 
-많은 컬렉션 속성은 클래스에 대한 XAML 콘텐츠 속성으로도 식별됩니다. 암시적 컬렉션 처리 및 XAML 콘텐츠 구문의 조합은 패널, 뷰, 항목 컨트롤 등 컨트롤 합치기에 사용되는 형식에서 자주 나타납니다. 예를 들어 다음 예제에서는 [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) 내에서 두 개의 피어 UI 요소를 합치기 위한 가장 간단한 XAML을 보여 줍니다.
+많은 컬렉션 속성은 클래스에 대한 XAML 콘텐츠 속성으로도 식별됩니다. 암시적 컬렉션 처리 및 XAML 콘텐츠 구문의 조합은 패널, 뷰, 항목 컨트롤 등 컨트롤 합치기에 사용되는 형식에서 자주 나타납니다. For example, the following example shows the simplest possible XAML for compositing two peer UI elements within a <bpt id="p1">[</bpt><bpt id="p2">**</bpt>StackPanel<ept id="p2">**</ept><ept id="p1">](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel)</ept>.
 
 ```xml
 <StackPanel>
@@ -234,15 +234,15 @@ XAML 파서에서 읽어야 하는 방법과 유사하게 XAML을 선형 순서�
 
 두 구문을 사용하여 개체를 선언하고 해당 개체에 대해 속성을 설정할 수 있습니다. 첫 번째 예가 태그의 단일 요소이지만 실제로는 XAML 처리기가 이 태그를 구문 분석하는 방법과 관련하여 몇 단계가 존재합니다.
 
-먼저, 개체 요소가 있으면 새 *objectName* 개체가 인스턴스화되어야 함을 나타냅니다. 이러한 인스턴스가 있어야만 인스턴스 속성 *propertyName*이 해당 인스턴스에 대해 설정될 수 있습니다.
+먼저, 개체 요소가 있으면 새 *objectName* 개체가 인스턴스화되어야 함을 나타냅니다. Only after such an instance exists can the instance property <bpt id="p1">*</bpt>propertyName<ept id="p1">*</ept> be set on it.
 
 또 다른 XAML 규칙은 요소의 특성을 임의 순서로 설정할 수 있어야 한다는 것입니다. 예를 들어 `<Rectangle Height="50" Width="100" />`과 `<Rectangle Width="100"  Height="50" />`은 차이가 없습니다. 사용하는 순서는 스타일의 문제일 뿐입니다.
 
-**참고**  xaml 디자이너는 XML 편집기 이외의 디자인 화면을 사용 하는 경우 정렬 규칙을 주로 승격 하지만 나중에이 xaml을 자유롭게 편집 하 여 특성의 순서를 변경 하거나 새 특성을 도입할 수 있습니다.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept><ph id="ph1">  </ph>XAML designers often promote ordering conventions if you use design surfaces other than the XML editor, but you can freely edit that XAML later, to reorder the attributes or introduce new ones.
 
-## <a name="attached-properties"></a>연결 된 속성
+## <a name="attached-properties"></a>연결된 속성
 
-XAML은 *연결된 속성*으로 알려진 구문 요소를 추가하여 XML을 확장합니다. 속성 요소 구문과 유사한 연결된 속성 구문에는 점이 포함되며 이러한 점은 XAML 구문 분석에 특별한 의미를 가지고 있습니다. 특히 점은 연결된 속성의 소유자 공급자 및 속성 이름을 구분합니다.
+XAML은 *연결된 속성*으로 알려진 구문 요소를 추가하여 XML을 확장합니다. 속성 요소 구문과 유사한 연결된 속성 구문에는 점이 포함되며 이러한 점은 XAML 구문 분석에 특별한 의미를 가지고 있습니다. Specifically, the dot separates the provider of the attached property, and the property name.
 
 XAML에서 *AttachedPropertyProvider*.*PropertyName* 구문을 사용하여 연결된 속성을 설정합니다. 다음은 XAML에서 연결된 속성 [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left)를 설정할 수 있는 방법에 대한 예입니다.
 
@@ -256,18 +256,18 @@ XAML에서 *AttachedPropertyProvider*.*PropertyName* 구문을 사용하여 연�
 
 Windows 런타임 XAML에서는 다음 시나리오를 지원하는 연결된 속성이 표시됩니다.
 
--   자식 요소는 부모 컨테이너 패널의 레이아웃에서 동작 하는 방식을 알릴 수 있습니다. [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid), [**VariableSizedWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VariableSizedWrapGrid).
--   컨트롤 사용은 컨트롤 템플릿에서 제공 되는 중요 한 컨트롤 파트의 동작에 영향을 줄 수 있습니다. [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), [**VirtualizingStackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VirtualizingStackPanel).
--   서비스와이 서비스를 사용 하는 클래스가 상속을 공유 하지 않는 관련 클래스에서 사용할 수 있는 서비스를 사용 합니다. [**입력 체계**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography), [**r**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager), [**automationproperties**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties), [**tooltipservice.tooltip**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTipService).
--   애니메이션 대상 지정: [**스토리 보드**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard).
+-   자식 요소가 부모 컨테이너 패널에 레이아웃에서의 동작 방법을 알릴 수 있음: [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid), [**VariableSizedWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VariableSizedWrapGrid)
+-   컨트롤 사용 시 컨트롤 템플릿에서 가져온 중요한 컨트롤 부분의 동작에 영향을 줄 수 있음: [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), [**VirtualizingStackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VirtualizingStackPanel)
+-   관련된 클래스에서 사용할 수 있는 서비스를 사용하며, 여기서 서비스 및 이 서비스를 사용하는 클래스가 상속을 공유하지 않음: [**Typography**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography), [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager), [**AutomationProperties**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties), [**ToolTipService**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTipService).
+-   애니메이션 대상: [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)
 
 자세한 내용은 [연결된 속성 개요](attached-properties-overview.md)를 참조하세요.
 
 ## <a name="literal--values"></a>리터럴 "{" 값
 
-여는 중괄호 기호 \{은 태그 확장 시퀀스의 여는 것 이므로 이스케이프 시퀀스를 사용 하 여 "\{"로 시작 하는 리터럴 문자열 값을 지정 합니다. 이스케이프 시퀀스는 "\{ @ no__t-1"입니다. 예를 들어 한 여는 중괄호 인 문자열 값을 지정 하려면 특성 값을 "\{ @ no__t-1 @ no__t-2"로 지정 합니다. 대체 따옴표 (예: **""** 로 구분 된 특성 값 내에 **'** )를 사용 하 여 "\{" 값을 문자열로 제공할 수도 있습니다.
+Because the opening brace symbol <ph id="ph1">\{</ph> is the opening of the markup extension sequence, you use an escape sequence to specify a literal string value that starts with "<ph id="ph2">\{</ph>". The escape sequence is "<ph id="ph1">\{</ph><ph id="ph2">\}</ph>". For example, to specify a string value that is a single opening brace, specify the attribute value as "<ph id="ph1">\{</ph><ph id="ph2">\}</ph><ph id="ph3">\{</ph>". You can also use the alternative quotation marks (for example, a <bpt id="p1">**</bpt>'<ept id="p1">**</ept> within an attribute value delimited by <bpt id="p2">**</bpt>""<ept id="p2">**</ept>) to provide a "<ph id="ph1">\{</ph>" value as a string.
 
-**참고**   "\\}"는 따옴표로 묶인 특성 내에 있는 경우에도 작동 합니다.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept><ph id="ph1">  </ph>"<ph id="ph2">\\</ph>}" also works if it's inside a quoted attribute.
  
 ## <a name="enumeration-values"></a>열거형 값
 
@@ -276,7 +276,7 @@ Windows 런타임 API의 많은 속성은 열거형을 값으로 사용합니다
 -   정규화된 형식은 작동하지 않으므로 사용하지 마세요. 예를 들어 다음은 잘못된 XAML입니다. `<Button Visibility="Visibility.Visible"/>`.
 -   상수의 값을 사용하지 마세요. 다시 말해서 열거형이 정의된 방식에 의해 명시적으로 또는 암시적으로 영향을 받는 열거형의 정수 값을 사용하지 마세요. 작동하는 것처럼 보일지도 모르지만, 일시적인 구현 정보에 의존하게 되므로 XAML 또는 코드에서 사용하면 좋지 않습니다. 예를 들어 다음과 같이 사용하지 마세요.`<Button Visibility="1"/>`.
 
-**참고**@no__t-XAML을 사용 하 고 열거를 사용 하는 api에 대 한 참조 항목은 **구문의** **속성 값** 섹션에서 열거형 형식에 대 한 링크를 클릭 합니다. 그러면 해당 열거형의 명명된 상수를 찾을 수 있는 열거형 페이지로 연결됩니다.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept><ph id="ph1">  </ph>In reference topics for APIs that use XAML and use enumerations, click the link to the enumeration type in the <bpt id="p2">**</bpt>Property value<ept id="p2">**</ept> section of <bpt id="p3">**</bpt>Syntax<ept id="p3">**</ept>. 그러면 해당 열거형의 명명된 상수를 찾을 수 있는 열거형 페이지로 연결됩니다.
 
 열거형은 깃발 모양이 될 수 있습니다. 즉, **FlagsAttribute**를 사용하여 특성이 지정됩니다. 플래그 수준의 열거형에 대한 값의 조합을 XAML 특성 값으로 지정해야 할 경우 각 열거형 상수 이름을 쉼표(,)로 구분하고 공백 문자 없이 사용할 수 있습니다. Windows 런타임 XAML 어휘에서는 플래그 수준의 특성이 일반적이지 않지만, [**ManipulationModes**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationModes)는 XAML에서 플래그 수준의 열거형 값 설정이 지원되는 예입니다.
 
@@ -286,9 +286,9 @@ Windows 런타임 API의 많은 속성은 열거형을 값으로 사용합니다
 
 ## <a name="xaml-placeholder-conventions-in-windows-runtime-reference"></a>Windows 런타임 참조의 XAML 자리 표시자 규칙
 
-XAML을 사용할 수 있는 Windows 런타임 API에 대한 참조 항목의 **구문** 섹션을 살펴본 경우 구문에 여러 자리 표시자가 포함된 것을 본 적이 있을 것입니다. Xaml 구문은 C#, Microsoft Visual Basic 또는/Cx ( C++ C++시각적 구성 요소 확장) 구문과 다르므로 xaml 구문은 사용 구문입니다. 이 구문은 자체 XAML 파일에서의 최종 사용과 비슷하지만 사용할 수 있는 값에 대해서는 지나치게 지시적이지 않습니다. 따라서 일반적으로 리터럴과 자리 표시자를 혼합하는 문법 형식을 설명하고 **XAML 값** 섹션에 있는 일부 자리 표시자를 정의합니다.
+XAML을 사용할 수 있는 Windows 런타임 API에 대한 참조 항목의 **구문** 섹션을 살펴본 경우 구문에 여러 자리 표시자가 포함된 것을 본 적이 있을 것입니다. XAML syntax is different than the C#, Microsoft Visual Basic or Visual C++ component extensions (C++/CX) syntax because the XAML syntax is a usage syntax. 이 구문은 자체 XAML 파일에서의 최종 사용과 비슷하지만 사용할 수 있는 값에 대해서는 지나치게 지시적이지 않습니다. 따라서 일반적으로 리터럴과 자리 표시자를 혼합하는 문법 형식을 설명하고 **XAML 값** 섹션에 있는 일부 자리 표시자를 정의합니다.
 
-속성에 대한 XAML 구문에 형식 이름/요소 이름이 표시된 경우 표시된 이름은 원래 속성을 정의하는 형식에 대한 이름입니다. 그러나 Windows 런타임 XAML은 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) 기반 클래스의 클래스 상속 모델을 지원합니다. 따라서 문자 그대로 정의 클래스가 아니며 대신 속성/특성을 처음에 정의한 클래스에서 파생되는 클래스에서 종종 특성을 사용할 수 있습니다. 예를 들어 전체 상속을 사용하여 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 파생 클래스에서 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility)를 특성으로 설정할 수 있습니다. 예를 들어 `<Button Visibility="Visible" />`을 참조하십시오. 따라서 XAML 사용 구문에 표시되는 요소 이름을 너무 문자 그대로 받아들이지 마세요. 이 구문은 해당 클래스를 나타내는 요소 및 파생 클래스를 나타내는 요소에 대해 가능할 수 있습니다. 정의 요소로 표시된 형식이 실제 사용에 있을 가능성이 거의 없거나 불가능한 경우 해당 형식 이름은 구문에서 고의로 소문자로 표시합니다. 예를 들어 **UIElement.Visibility**의 구문은 다음과 같이 표시됩니다.
+속성에 대한 XAML 구문에 형식 이름/요소 이름이 표시된 경우 표시된 이름은 원래 속성을 정의하는 형식에 대한 이름입니다. 그러나 Windows 런타임 XAML은 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) 기반 클래스의 클래스 상속 모델을 지원합니다. 따라서 문자 그대로 정의 클래스가 아니며 대신 속성/특성을 처음에 정의한 클래스에서 파생되는 클래스에서 종종 특성을 사용할 수 있습니다. 예를 들어 전체 상속을 사용하여 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 파생 클래스에서 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility)를 특성으로 설정할 수 있습니다. 예를 들면 `<Button Visibility="Visible" />`와 같습니다. 따라서 XAML 사용 구문에 표시되는 요소 이름을 너무 문자 그대로 받아들이지 마세요. 이 구문은 해당 클래스를 나타내는 요소 및 파생 클래스를 나타내는 요소에 대해 가능할 수 있습니다. 정의 요소로 표시된 형식이 실제 사용에 있을 가능성이 거의 없거나 불가능한 경우 해당 형식 이름은 구문에서 고의로 소문자로 표시합니다. 예를 들어 **UIElement.Visibility**의 구문은 다음과 같이 표시됩니다.
 
 ``` syntax
 <uiElement Visibility="Visible"/>
@@ -301,10 +301,10 @@ XAML을 사용할 수 있는 Windows 런타임 API에 대한 참조 항목의 **
 XAML 사용 섹션은 또한 다양한 범용 자리 표시자를 사용합니다. 이러한 자리 표시자는 나타내는 것을 추측하거나 결국 알 수 있기 때문에 **XAML 값**에서 매번 다시 정의되지 않습니다. 독자가 **XAML 값**에서 이러한 자리 표시자를 반복해서 보는 것을 지루해할 것으로 여기고 정의를 표시하지 않았습니다. 참조를 위해 다음은 일부 이러한 자리 표시자와 일반적으로 의미하는 바를 나타내는 목록입니다.
 
 -   *object*: 이론적으로는 개체 값이지만, 사실상 문자열 또는 개체 선택 등의 특정 개체 형식으로 제한됩니다. 자세한 내용은 참조 페이지의 "설명"에서 확인할 수 있습니다.
--   *개체* *속성*: 조합 된 *개체* *속성* 은 표시 되는 구문이 여러 속성의 특성 값으로 사용할 수 있는 형식에 대 한 구문 인 경우에 사용 됩니다. 예를 들어 [**브러시**](/uwp/api/Windows.UI.Xaml.Media.Brush) 에 대해 표시 되는 **Xaml 특성 사용** 에는 <*개체* *속성*= "*predefinedColorName*"/>가 포함 됩니다.
--   *eventhandler*: 이는 이벤트 특성에 대해 표시 된 모든 XAML 구문에 대 한 특성 값으로 나타납니다. 여기에서 제공하는 것은 이벤트 처리기 함수의 함수 이름입니다. 이 함수는 XAML 페이지의 코드 숨김에서 정의되어야 합니다. 프로그래밍 수준에서 이 함수는 처리 중인 이벤트의 대리자 서명과 일치해야 합니다. 그렇지 않으면 앱 코드가 컴파일되지 않습니다. 그러나 이는 프로그래밍과 관련된 고려 사항이며, XAML과 관련된 고려 사항이 아니므로 XAML 구문에서 대리자 형식에 대한 암시를 주기 위해 노력하지 않습니다. 이벤트에 대해 구현해야 할 대리자에 대해 알고 싶으면 해당 이벤트에 대한 참조 항목의 **이벤트 정보** 섹션에서 **대리자**라는 레이블의 표 행을 확인할 수 있습니다.
--   *enumMemberName*: 모든 열거형에 대한 특성 구문에 표시됩니다. 열거형 값을 사용하는 속성에 대한 유사한 자리 표시자기 있지만 일반적으로 열거형의 이름을 암시하는 자리 표시자의 앞에 표시됩니다. 예를 들어 [**FrameworkElement.FlowDirection**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.flowdirection)에 대해 표시된 구문은 <*frameworkElement* **FlowDirection**="* flowDirectionMemberName*"/>입니다. 이러한 속성 참조 페이지 중 하나를 보고 있는 경우 **속성 값** 섹션에서 **형식:** 텍스트 옆에 나타나는 열거형 형식의 링크를 클릭하세요. 해당 열거형을 사용하는 속성의 특성 값을 보려면 **멤버** 목록의 **멤버** 열에 나열된 문자열을 사용할 수 있습니다.
--   *double*, *int*, *string*, *bool*: 이러한 형식은 XAML 언어에 알려진 기본 형식입니다. C# 또는 Visual Basic을 사용하여 프로그래밍하는 경우 이러한 형식은 Microsoft .NET의 [**Double**](https://docs.microsoft.com/dotnet/api/system.double), [**Int32**](https://docs.microsoft.com/dotnet/api/system.int32), [**String**](https://docs.microsoft.com/dotnet/api/system.string) 및 [**Boolean**](https://docs.microsoft.com/dotnet/api/system.boolean) 등의 형식에 투영됩니다. .NET 코드 숨김에서 XAML로 정의된 값으로 작업할 경우 이러한 .NET 형식의 멤버를 사용할 수 있습니다. C++/CX를 사용하여 프로그래밍할 경우 C++ 기본 형식을 사용하지만 [**Platform**](https://docs.microsoft.com/cpp/cppcx/platform-namespace-c-cx) 네임스페이스에 의해 정의된 동일한 형식을 고려할 수 있습니다(예: [**Platform::String**](https://docs.microsoft.com/cpp/cppcx/platform-string-class)). 경우에 따라 특정 속성에 대해 추가 값 제한 사항이 있을 수 있습니다. 그러나 이러한 제한 사항은 코드 사용 및 XAML 사용에 모두 적용되므로 XAML 섹션이 아닌 **속성 값** 섹션 또는 '설명' 섹션에 이러한 내용이 표시됩니다.
+-   <bpt id="p1">*</bpt>object<ept id="p1">*</ept> <bpt id="p2">*</bpt>property<ept id="p2">*</ept>: <bpt id="p3">*</bpt>object<ept id="p3">*</ept> <bpt id="p4">*</bpt>property<ept id="p4">*</ept> in combination is used for cases where the syntax being shown is the syntax for a type that can be used as an attribute value for many properties. For example, the <bpt id="p1">**</bpt>Xaml Attribute Usage<ept id="p1">**</ept> shown for <bpt id="p2">[</bpt><bpt id="p3">**</bpt>Brush<ept id="p3">**</ept><ept id="p2">](/uwp/api/Windows.UI.Xaml.Media.Brush)</ept> includes: &lt;<bpt id="p4">*</bpt>object<ept id="p4">*</ept> <bpt id="p5">*</bpt>property<ept id="p5">*</ept>="<bpt id="p6">*</bpt>predefinedColorName<ept id="p6">*</ept>"/&gt;
+-   *eventhandler*: 이벤트 특성에 대해 표시된 모든 XAML 구문의 특성 값으로 표시됩니다. 여기에서 제공하는 것은 이벤트 처리기 함수의 함수 이름입니다. 이 함수는 XAML 페이지의 코드 숨김에서 정의되어야 합니다. 프로그래밍 수준에서 이 함수는 처리 중인 이벤트의 대리자 서명과 일치해야 합니다. 그렇지 않으면 앱 코드가 컴파일되지 않습니다. 그러나 이는 프로그래밍과 관련된 고려 사항이며, XAML과 관련된 고려 사항이 아니므로 XAML 구문에서 대리자 형식에 대한 암시를 주기 위해 노력하지 않습니다. 이벤트에 대해 구현해야 할 대리자에 대해 알고 싶으면 해당 이벤트에 대한 참조 항목의 **이벤트 정보** 섹션에서 **대리자**라는 레이블의 표 행을 확인할 수 있습니다.
+-   *enumMemberName*: 모든 열거형에 대한 특성 구문에 표시됩니다. 열거형 값을 사용하는 속성에 대한 유사한 자리 표시자기 있지만 일반적으로 열거형의 이름을 암시하는 자리 표시자의 앞에 표시됩니다. 예를 들어 [**FrameworkElement.FlowDirection**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.flowdirection)에 대해 표시된 구문은 <*frameworkElement***FlowDirection**="* flowDirectionMemberName*"/>입니다. 이러한 속성 참조 페이지 중 하나를 보고 있는 경우 **속성 값** 섹션에서 **형식:** 텍스트 옆에 나타나는 열거형 형식의 링크를 클릭하세요. 해당 열거형을 사용하는 속성의 특성 값을 보려면 **멤버** 목록의 **멤버** 열에 나열된 문자열을 사용할 수 있습니다.
+-   *double*, *int*, *string*, *bool*: XAML 언어에 알려진 기본 형식입니다. C# 또는 Visual Basic을 사용하여 프로그래밍하는 경우 이러한 형식은 Microsoft .NET의 [**Double**](https://docs.microsoft.com/dotnet/api/system.double), [**Int32**](https://docs.microsoft.com/dotnet/api/system.int32), [**String**](https://docs.microsoft.com/dotnet/api/system.string) 및 [**Boolean**](https://docs.microsoft.com/dotnet/api/system.boolean) 등의 형식에 투영됩니다. .NET 코드 숨김에서 XAML로 정의된 값으로 작업할 경우 이러한 .NET 형식의 멤버를 사용할 수 있습니다. C++/CX를 사용하여 프로그래밍할 경우 C++ 기본 형식을 사용하지만 [**Platform**](https://docs.microsoft.com/cpp/cppcx/platform-namespace-c-cx) 네임스페이스에 의해 정의된 동일한 형식을 고려할 수 있습니다(예: [**Platform::String**](https://docs.microsoft.com/cpp/cppcx/platform-string-class)). 경우에 따라 특정 속성에 대해 추가 값 제한 사항이 있을 수 있습니다. 그러나 이러한 제한 사항은 코드 사용 및 XAML 사용에 모두 적용되므로 XAML 섹션이 아닌 **속성 값** 섹션 또는 '설명' 섹션에 이러한 내용이 표시됩니다.
 
 ## <a name="tips-and-tricks-notes-on-style"></a>스타일에 대한 유용한 정보와 팁, 참고 사항
 
@@ -314,7 +314,7 @@ XAML 사용 섹션은 또한 다양한 범용 자리 표시자를 사용합니�
 ## <a name="related-topics"></a>관련 항목
 
 * [XAML 개요](xaml-overview.md)
-* [XAML 네임 스페이스 및 네임 스페이스 매핑](xaml-namespaces-and-namespace-mapping.md)
+* <bpt id="p1">[</bpt>XAML namespaces and namespace mapping<ept id="p1">](xaml-namespaces-and-namespace-mapping.md)</ept>
 * [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
  
 
