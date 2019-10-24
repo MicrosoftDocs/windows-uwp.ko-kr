@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: f12a83a2ad31972f344d95aa9dcfe1914eeb2b3b
-ms.sourcegitcommit: 82d202478ab4d3011c5ddd2e852958c34336830d
-ms.translationtype: HT
+ms.openlocfilehash: 167b388130ea02cc0613dc9638e93f0cde38eb46
+ms.sourcegitcommit: 860e8303da3e36624f603ce3273d68911c696e5d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/22/2019
-ms.locfileid: "72715881"
+ms.locfileid: "72777276"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -59,6 +59,7 @@ Windows 앱의 [패키지 매니페스트에서](https://docs.microsoft.com/uwp/
 | **백그라운드 미디어 재생** | **backgroundMediaPlayback** 접근 권한 값은 [**MediaPlayer**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer) 및 [**AudioGraph**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph) 클래스 같은 미디어 관련 API의 동작을 변경하여 앱이 백그라운드에 있는 동안 미디어 재생을 사용하도록 설정합니다. 모든 활성 오디오 스트림은 더 이상 음소거되지 않고 앱이 백그라운드로 전환할 때 계속 들을 수 있습니다. 또한 재생 중 자동으로 앱 수명이 확장됩니다.
 | **원격 시스템** | **remoteSystem** 접근 권한 값을 통해 앱이 사용자의 Microsoft 계정과 연결된 디바이스 목록에 액세스할 수 있습니다. 디바이스 목록에 대한 액세스는 디바이스 간에 유지되는 모든 작업을 수행하는 데 필요합니다. 다음의 모든 멤버에 액세스하려면 이 접근 권한 값이 필요합니다.<ul><li>[RemoteSystems](https://docs.microsoft.com/uwp/api/windows.system.remotesystems) 네임 스페이스</li><li>[RemoteLauncher](https://docs.microsoft.com/uwp/api/Windows.System.RemoteLauncher) 클래스</li><li>[AppServiceConnection](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appserviceconnection.openremoteasync) 메서드</li></ul> |
 | **공간 인식** | **spatialPerception** 접근 권한 값은 공간 사용자 근처의 응용 프로그램에서 지정된 지역에서 표면에 대한 혼합 현실 앱 정보를 제공하는 공간 매핑 데이터에 대한 프로그램 방식의 액세스를 제공합니다.  spatialPerception 접근 권한 값을 선언합니다.사용자의 앱이 명시적으로 이러한 표면 메시를 사용할 때만 해당 접근 권한 값은 혼합 현실 앱에는 필요하지 않으므로 the capability is not required for mixed reality apps to perform holographic rendering based on the user’s head pose. |
+| **전역 미디어 컨트롤** | **GlobalMediaControl** 기능을 사용 하면 앱에서 [**SystemMediaTransportControls**](https://docs.microsoft.com/uwp/api/Windows.Media.SystemMediaTransportControls) 와 통합 된 시스템 전체의 재생 세션에 액세스 하 여 재생 정보를 제공 하 고 원격 제어를 허용할 수 있습니다. 이 기능은 [**Windows의 컨트롤**](https://docs.microsoft.com/uwp/api/windows.media.control) 네임 스페이스에서 일부 api를 사용 하는 데 필요 합니다. 이 기능은 [uap7: 기능](/uwp/schemas/appxpackage/uapmanifestschema/element-uap7-capability) 요소에 정의 되어 있습니다.  |
 
 ## <a name="device-capabilities"></a>장치 접근 권한 값
 
@@ -84,7 +85,7 @@ Windows 앱의 [패키지 매니페스트에서](https://docs.microsoft.com/uwp/
 | **직렬 통신** | **직렬 통신** 장치 접근 권한 값은 Windows 앱이 직렬 포트나 추상 직렬 포트를 지원하는 장치와 통신할 수 있는 Windows.Devices.SerialCommunication 네임스페이스에서 API에 대한 액세스를 제공합니다. [  **Windows.Devices.SerialCommnication**](https://docs.microsoft.com/uwp/api/windows.devices.serialcommunication) 네임스페이스의 API를 사용하기 위해 필요한 접근 권한 값입니다. |
 | **아이 트래커** | **gazeInput** 접근 권한 값을 통해 앱에서 호환 아이 트래커 장치가 연결되어 있을 때 응용 프로그램 범위 내에서 사용자가 보는 위치를 검색할 수 있습니다. 이 기능은 일부 Api를 사용 하는 데 필요 [**합니다.** ](https://docs.microsoft.com/en-us/uwp/api/windows.devices.input.preview) |
 | **GPIO, I2C, SPI 및 PWM)** | **Lowlevel** 장치 기능은 GPIO, I2C, SPI 및 pwm) 장치에 대 한 액세스를 제공 합니다. 이 기능은 다음과 같은 네임 스페이스에서 [**api를 사용**](https://docs.microsoft.com/uwp/api/windows.devices.spi)하는 데[**필요 합니다.** ](https://docs.microsoft.com/uwp/api/windows.devices.pwm) [**windows.** ](https://docs.microsoft.com/uwp/api/windows.devices.gpio).... [ **..** ](https://docs.microsoft.com/uwp/api/windows.devices.i2c)<br /><br />```<Capabilities><DeviceCapability Name="lowLevel"/></Capabilities>``` |
-| **전역 미디어 컨트롤** | **GlobalMediaControl** 기능을 사용 하면 앱에서 [**SystemMediaTransportControls**](https://docs.microsoft.com/uwp/api/Windows.Media.SystemMediaTransportControls) 와 통합 된 시스템 전체의 재생 세션에 액세스 하 여 재생 정보를 제공 하 고 원격 제어를 허용할 수 있습니다. 이 기능은 [**Windows의 컨트롤**](https://docs.microsoft.com/uwp/api/windows.media.control) 네임 스페이스에서 일부 api를 사용 하는 데 필요 합니다. |
+
 
 <span id="special-and-restricted-capabilities" />
 
