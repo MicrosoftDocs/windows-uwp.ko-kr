@@ -18,7 +18,7 @@ ms.locfileid: "72695766"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>WNS 트래픽을 지원 하기 위한 엔터프라이즈 방화벽 및 프록시 구성
 
-## <a name="background"></a>백그라운드
+## <a name="background"></a>배경
 많은 기업에서 방화벽을 사용 하 여 원치 않는 네트워크 트래픽을 차단 합니다. 불행 하 게도 Windows Notification Service 통신과 같은 중요 한 작업을 차단할 수 있습니다. 즉, WNS를 통해 전송 되는 모든 알림은 특정 네트워크 구성에서 삭제 됩니다. 이를 방지 하기 위해 네트워크 관리자는 승인 목록에 승인 된 WNS Fqdn 또는 Vip 목록을 추가 하 여 WNS 트래픽이 방화벽을 통과 하도록 할 수 있습니다. 다음은 다양 한 프록시 형식에 대 한 지원 뿐만 아니라 추가 방법에 대 한 자세한 내용입니다.
 
 ## <a name="proxy-support"></a>프록시 지원
@@ -68,7 +68,7 @@ ms.locfileid: "72695766"
 ### <a name="terms-and-notations"></a>용어 및 표기법
 위의 XML 조각에 사용 된 표기법 및 요소에 대 한 설명은 다음과 같습니다.
 
-| 용어 | 설명 |
+| 조건 | 설명 |
 |---|---|
 | **점-10 진수 표기법 (예: 64.4.28.0/26)** | 점-10 진수 표기법은 IP 주소의 범위를 설명 하는 방법입니다. 예를 들어 64.4.28.0/26은 64.4.28.0의 처음 26 비트가 상수이 고, 마지막 6 비트는 가변적입니다.  이 경우 IPv4 범위는 64.4.28.0-64.4.28.63입니다. |
 | **ClientDNS** | 이는 WNS에서 알림을 수신 하는 클라이언트 장치 (Windows Pc, 데스크톱)의 FQDN (정규화 된 도메인 이름) 필터입니다. 이는 WNS 클라이언트가 WNS 기능을 사용 하기 위해 방화벽을 통해 허용 되어야 합니다.  IP/VIP 범위 대신 Fqdn으로 목록을 허용 하는 것이 좋습니다 .이는 변경 되지 않기 때문입니다. |
@@ -81,7 +81,7 @@ ms.locfileid: "72695766"
 레거시 알림 서비스인 MPNS를 사용 하는 경우 허용 목록에 추가 해야 하는 IP 주소 범위를 다운로드 센터: [mpns (Microsoft 푸시 알림 서비스) 공용 IP 범위](https://www.microsoft.com/download/details.aspx?id=44535)에서 사용할 수 있습니다.
 
 
-## <a name="related-topics"></a>관련 항목
+## <a name="related-topics"></a>관련된 항목
 
 * [빠른 시작: 푸시 알림 보내기](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
 * [알림 채널을 요청, 생성 및 저장 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
