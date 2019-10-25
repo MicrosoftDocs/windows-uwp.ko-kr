@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: e5a1993ea4808cabf9f82640f03f0187d431f3d2
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: e8f4fd041eae30269e8b876c108151e4aae45d91
+ms.sourcegitcommit: e189166dea855ce330bd0634cc158b51cb4fbd69
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393505"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811649"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>MediaFrameReader와 OpenCV(오픈 소스 컴퓨터 비전 라이브러리) 사용
 
 이 문서에서는 여러 소스에서 미디어 프레임을 동시에 읽을 수 있는 [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) 클래스와 함께 다양한 이미지 처리 알고리즘을 제공하는 네이티브 코드 라이브러리인 OpenCV(오픈 소스 컴퓨터 비전 라이브러리)를 사용하는 방법을 설명합니다. 이 문서의 예제 코드는 컬러 센서에서 프레임을 가져와서 OpenCV 라이브러리를 이용해 각 프레임을 흐리게 처리한 다음, 처리된 이미지를 XAML **이미지** 컨트롤로 표시하는 간단한 앱을 만드는 과정을 안내합니다. 
 
 >[!NOTE]
->OpenCV.Win.Core 및 OpenCV.Win.ImgProc는 정기적으로 업데이트되지 않지만 이 페이지의 설명대로 OpenCVHelper를 만드는 데 계속 권장됩니다.
+>OpenCV. 핵심 및 OpenCV는 정기적으로 업데이트 되지 않으며 저장소 규정 준수 검사를 통과 하지 않으므로 이러한 패키지는 실험 전용입니다.
 
 이 문서는 다음 두 문서의 콘텐츠를 기반으로 합니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "70393505"
 
 
 ## <a name="handle-the-framearrived-event"></a>FrameArrived 이벤트 처리
-프레임 읽기 프로그램에서 새 프레임을 사용할 수 있을 때마다 **FrameArrived** 이벤트가 발생합니다. **[TryAcquireLatestFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** 을 호출하여, 프레임이 있을 경우 가져옵니다. **[MediaFrameReference](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)** 에서 **SoftwareBitmap** 을 가져옵니다. 이 예제에 사용된 **CVHelper** 클래스의 이미지는 프리멀티플라이된 알파가 있는 BRGA8 픽셀 형식을 사용해야 합니다. 이벤트로 전달된 프레임의 형식이 다른 경우 **SoftwareBitmap**을 올바른 형식으로 변환합니다. 그런 다음, 흐림 작업의 대상으로 사용할 **SoftwareBitmap**을 생성합니다. 소스 이미지 속성이 생성자에 대한 인수로 사용되어, 해당하는 형식으로 비트맵을 만듭니다. 도우미 클래스 **Blur** 메서드를 호출하여 프레임을 처리합니다. 마지막으로, 초기화에 사용된 XAML **Image** 컨트롤로 이미지를 표시하는 **FrameRenderer** 도우미 클래스의 메서드 **PresentSoftwareBitmap**으로 흐림 작업의 출력 이미지를 전달합니다.
+프레임 읽기 프로그램에서 새 프레임을 사용할 수 있을 때마다 **FrameArrived** 이벤트가 발생합니다. **[TryAcquireLatestFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** 을 호출하여, 프레임이 있을 경우 가져옵니다. **[MediaFrameReference](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)** 에서 **SoftwareBitmap**을 가져옵니다. 이 예제에 사용된 **CVHelper** 클래스의 이미지는 프리멀티플라이된 알파가 있는 BRGA8 픽셀 형식을 사용해야 합니다. 이벤트로 전달된 프레임의 형식이 다른 경우 **SoftwareBitmap**을 올바른 형식으로 변환합니다. 그런 다음, 흐림 작업의 대상으로 사용할 **SoftwareBitmap**을 생성합니다. 소스 이미지 속성이 생성자에 대한 인수로 사용되어, 해당하는 형식으로 비트맵을 만듭니다. 도우미 클래스 **Blur** 메서드를 호출하여 프레임을 처리합니다. 마지막으로, 초기화에 사용된 XAML **Image** 컨트롤로 이미지를 표시하는 **FrameRenderer** 도우미 클래스의 메서드 **PresentSoftwareBitmap**으로 흐림 작업의 출력 이미지를 전달합니다.
 
 [!code-cs[OpenCVFrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameArrived)]
 

@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: ed8d6572fb280b2cfecf1cf035d68a739c5bc92d
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 349326ba458999b2b1e299e8260d52d608d5af1f
+ms.sourcegitcommit: e189166dea855ce330bd0634cc158b51cb4fbd69
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393516"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811641"
 ---
 # <a name="process-bitmaps-with-opencv"></a>OpenCV로 비트맵 처리
 
@@ -35,17 +35,17 @@ ms.locfileid: "70393516"
 2. **Visual C++** 범주 아래에서 **Windows 런타임 구성 요소(유니버설 Windows)** 를 선택합니다. 이 예에서는 프로젝트 이름을 "OpenCVBridge"로 지정하고 **확인**을 클릭합니다. 
 3. **새로운 Windows 유니버설 프로젝트** 대화 상자에서 앱의 최소 OS 버전과 대상을 선택하고 **확인**을 클릭합니다.
 4. 솔루션 탐색기에서 자동 생성된 파일 Class1.cpp를 마우스 오른쪽 단추로 클릭하고, 확인 대화 상자가 나타나면 **제거**를 선택하고 **삭제**를 선택합니다. 그런 다음 Class1.h 헤더 파일을 삭제합니다.
-5. OpenCVBridge 프로젝트 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **추가-> 클래스 ...** 를 선택 합니다. **클래스 추가** 대화 상자에서 **클래스 이름** 필드에 "OpenCVHelper"를 입력 한 다음 **확인**을 클릭 합니다. 이후 단계에서 생성된 클래스 파일에 코드가 추가됩니다.
+5. OpenCVBridge 프로젝트 아이콘을 마우스 오른쪽 단추로 클릭하고 **추가->클래스...** 를 선택합니다. **클래스 추가** 대화 상자에서 **클래스 이름** 필드에 "OpenCVHelper"를 입력한 후 **확인**을 클릭합니다. 이후 단계에서 생성된 클래스 파일에 코드가 추가됩니다.
 
-### <a name="2-add-the-opencv-nuget-packages-to-your-component-project"></a>2. 구성 요소 프로젝트에 OpenCV NuGet 패키지 추가
+### <a name="2-add-the-opencv-nuget-packages-to-your-component-project"></a>2. OpenCV NuGet 패키지를 구성 요소 프로젝트에 추가
 
 1. 솔루션 탐색기에서 OpenCVBridge 프로젝트 아이콘을 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리...** 를 선택합니다.
 2. NuGet 패키지 관리자 대화 상자가 열리면 **찾아보기** 탭을 선택하고 검색 상자에 "OpenCV.Win"을 입력합니다.
 3. "OpenCV.Win.Core"를 선택하고 **설치**를 클릭합니다. **미리 보기** 대화 상자에서 **확인**을 클릭합니다.
 4. 같은 방법으로 "OpenCV.Win.ImgProc" 패키지를 설치합니다.
 
-> [!NOTE]
-> OpenCV.Win.Core 및 OpenCV.Win.ImgProc는 정기적으로 업데이트되지 않지만 이 페이지의 설명대로 OpenCVHelper를 만드는 데 계속 권장됩니다.
+>[!NOTE]
+>OpenCV. 핵심 및 OpenCV는 정기적으로 업데이트 되지 않으며 저장소 규정 준수 검사를 통과 하지 않으므로 이러한 패키지는 실험 전용입니다.
 
 ### <a name="3-implement-the-opencvhelper-class"></a>3. OpenCVHelper 클래스 구현
 
@@ -82,7 +82,7 @@ include 지시문 뒤에 **using** 지시문을 추가합니다.
 
 
 ## <a name="a-simple-softwarebitmap-opencv-example-using-the-helper-component"></a>도우미 구성 요소를 사용하는 단순한 SoftwareBitmap OpenCV 예제
-이제 OpenCVBridge 구성 요소가 만들어졌으므로, OpenCV **blur** 메서드를 사용해 **SoftwareBitmap**을 수정하는 단순한 C# 앱을 만들 수 있습니다. UWP 앱에서 Windows 런타임 구성 요소에 액세스 하려면 먼저 구성 요소에 대 한 참조를 추가 해야 합니다. 솔루션 탐색기에서 UWP 앱 프로젝트 아래의 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**...를 선택 합니다. 참조 관리자 대화 상자에서 **프로젝트-> 솔루션**을 선택 합니다. OpenCVBridge 프로젝트 옆의 상자를 선택하고 **확인**을 클릭합니다.
+이제 OpenCVBridge 구성 요소가 만들어졌으므로, OpenCV **blur** 메서드를 사용해 **SoftwareBitmap**을 수정하는 단순한 C# 앱을 만들 수 있습니다. UWP 앱에서 Windows 런타임 구성 요소에 액세스 하려면 먼저 구성 요소에 대 한 참조를 추가 해야 합니다. 솔루션 탐색기에서 UWP 앱 프로젝트 아래의 **참조** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가...** 를 선택합니다. 참조 관리자 대화 상자에서 **프로젝트->솔루션**을 선택합니다. OpenCVBridge 프로젝트 옆의 상자를 선택하고 **확인**을 클릭합니다.
 
 사용자는 아래의 예제 코드를 통해 이미지 파일을 선택한 후 **[BitmapDecoder](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapencoder)** 를 사용해 이미지의 **SoftwareBitmap** 표현을 만들 수 있습니다. **SoftwareBitmap** 작업 방법에 대한 자세한 내용은 [비트맵 이미지 만들기, 편집 및 저장](https://docs.microsoft.com/windows/uwp/audio-video-camera/imaging)을 참조하세요.
 
