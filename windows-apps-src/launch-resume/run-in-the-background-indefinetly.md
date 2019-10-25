@@ -2,16 +2,16 @@
 title: 백그라운드에서 무기한 실행
 description: extendedExecutionUnconstrained 기능을 사용하여 백그라운드 작업 또는 확장된 실행 세션을 백그라운드에서 무기한 실행하세요.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: 백그라운드 작업을 실행, 리소스, 제한, 백그라운드 작업 확장
+keywords: 백그라운드 작업, 확장 된 실행, 리소스, 제한, 백그라운드 작업
 ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: faac1d8d47ddcff4e5ec32d35f2e46bab7a3f4aa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dee95e02e43f3a541bd332f5150765ca76bb0955
+ms.sourcegitcommit: 234dce5fb67e435ae14eb0052d94ab01611ac5e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630248"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72822448"
 ---
 # <a name="run-in-the-background-indefinitely"></a>백그라운드에서 무기한 실행
 
@@ -31,30 +31,30 @@ _Package.appxmanifest_
 ```xml
 <Package ...>
 ...
-  <Capabilities>  
-    <rescap:Capability Name="extendedExecutionUnconstrained"/>  
-  </Capabilities>  
+  <Capabilities>
+    <rescap:Capability Name="extendedExecutionUnconstrained"/>
+  </Capabilities>
 </Package>
 ```
 
 `extendedExecutionUnconstrained` 기능을 사용하면 [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) 및 [ExtendedExecutionForegroundReason](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason)은 [ExtendedExecutionSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) 및 [ExtendedExecutionReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason) 대신 사용됩니다. 세션을 만들고, 구성원을 설정하고, 확장을 비동기적으로 요청하기 위한 동일한 패턴이 여전히 적용됩니다. 
 
 ```cs
-var newSession = new ExtendedExecutionForegroundSession();  
-newSession.Reason = ExtendedExecutionForegroundReason.Unconstrained;  
-newSession.Description = "Long Running Processing";  
-newSession.Revoked += SessionRevoked;  
-ExtendedExecutionResult result = await newSession.RequestExtensionAsync();  
-switch (result)  
-{  
-    case ExtendedExecutionResult.Allowed:  
-        DoLongRunningWork();  
-        break;  
+var newSession = new ExtendedExecutionForegroundSession();
+newSession.Reason = ExtendedExecutionForegroundReason.Unconstrained;
+newSession.Description = "Long Running Processing";
+newSession.Revoked += SessionRevoked;
+ExtendedExecutionResult result = await newSession.RequestExtensionAsync();
+switch (result)
+{
+    case ExtendedExecutionResult.Allowed:
+        DoLongRunningWork();
+        break;
 
-    default:  
-    case ExtendedExecutionResult.Denied:  
-        DoShortRunningWork();  
-        break;  
+    default:
+    case ExtendedExecutionResult.Denied:
+        DoShortRunningWork();
+        break;
 }
 ```
 
@@ -69,13 +69,13 @@ switch (result)  
 _Package.appxmanifest_
 ```xml
 <Package ...>
-   <Capabilities>  
-       <rescap:Capability Name="extendedBackgroundTaskTime"/>  
-   </Capabilities>  
+  <Capabilities>
+    <rescap:Capability Name="extendedBackgroundTaskTime"/>
+  </Capabilities>
 </Package>
 ```
 
-이 기능은 실행 시간 제한과 유휴 작업 감시를 제거합니다. 트리거 또는 앱 서비스 호출에 의해 백그라운드 작업이 시작되고 **Run** 메서드에서 제공하는 [BackgroundTaskInstance](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)에 지연이 있으면 무기한 실행될 수 있습니다. 앱이 **Windows에서 관리됨**으로 설정된 경우 여전히 앱에 적용된 에너지 할당량을 가질 수 있으며, 배터리 절약 모드가 활성화되어 있을 때 해당 백그라운드 작업은 활성화되지 않습니다. 이 OS 설정을 사용 하 여 변경할 수 있습니다. 자세한 내용은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)에서 확인할 수 있습니다.
+이 기능은 실행 시간 제한과 유휴 작업 감시를 제거합니다. 트리거 또는 앱 서비스 호출에 의해 백그라운드 작업이 시작되고 **Run** 메서드에서 제공하는 [BackgroundTaskInstance](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)에 지연이 있으면 무기한 실행될 수 있습니다. 앱이 **Windows에서 관리됨**으로 설정된 경우 여전히 앱에 적용된 에너지 할당량을 가질 수 있으며, 배터리 절약 모드가 활성화되어 있을 때 해당 백그라운드 작업은 활성화되지 않습니다. OS 설정으로 변경할 수 있습니다. 자세한 내용은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)에서 확인할 수 있습니다.
 
 유니버설 Windows 플랫폼은 백그라운드 작업 실행을 모니터링하여 배터리 수명을 늘리고 원활한 포그라운드 앱 환경을 보장합니다. 그러나 개인 앱 및 엔터프라이즈 기간 업무 앱은 확장된 실행과 **extendedBackgroundTaskTime** 기능을 사용하여 장치의 리소스 가용성에 관계없이 필요한 만큼 실행되는 앱을 만들 수 있습니다.
 
@@ -83,4 +83,4 @@ _Package.appxmanifest_
 
 ## <a name="see-also"></a>참고 항목
 
-[백그라운드 작업 리소스 제한을 제거합니다](https://docs.microsoft.com/windows/application-management/enterprise-background-activity-controls)
+[백그라운드 작업 리소스 제한 제거](https://docs.microsoft.com/windows/application-management/enterprise-background-activity-controls)
