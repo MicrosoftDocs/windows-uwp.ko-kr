@@ -168,7 +168,7 @@ ref new PointerEventHandler(this, &BlankPage::textBlock1_PointerEntered);
 
 코드에서 이벤트 처리기를 추가한 경우에도 코드에서 이벤트 처리기를 제거 하는 것은 일반적으로 필요 하지 않습니다. 페이지 및 컨트롤과 같은 대부분의 Windows 런타임 개체에 대 한 개체 수명 동작은 개체를 주 [**창과**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) 시각적 트리에서 분리 하는 경우 개체를 삭제 하 고 대리자 참조는 제거 합니다. .NET은 가비지 수집을 통해이를 수행 C++하 고,/cx와 Windows 런타임는 기본적으로 약한 참조를 사용 합니다.
 
-이벤트 처리기를 명시적으로 제거 하려는 드문 경우도 있습니다. 해당 지역은 다음과 같습니다.
+이벤트 처리기를 명시적으로 제거 하려는 드문 경우도 있습니다. 내용은 다음과 같습니다.
 
 - 정적 이벤트에 대해 추가한 처리기로, 기존 방식으로 가비지 수집을 가져올 수 없습니다. Windows 런타임 API의 정적 이벤트 예는 [**CompositionTarget**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.CompositionTarget) 및 [**클립보드**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.Clipboard) 클래스의 이벤트입니다.
 - 처리기 제거 타이밍을 즉시 적용할 테스트 코드 또는 런타임에 이벤트에 대 한 이전/새 이벤트 처리기를 교환할 코드를 테스트 합니다.
