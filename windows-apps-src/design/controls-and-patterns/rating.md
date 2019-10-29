@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 348d563322baf03aabc0e30fd9b39ee11673f271
-ms.sourcegitcommit: 61194375c0889b73ee2b978c444c4b90a576b3e4
+ms.openlocfilehash: bb6cc29260f5891cda74879618b59bb3762b7f18
+ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039114"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690415"
 ---
 # <a name="rating-control"></a>평점 컨트롤
 
@@ -86,7 +86,7 @@ UI 설계와 성능의 이유로 매우 큰 가상화된 콘텐츠 목록에 사
 
 ## <a name="additional-functionality"></a>추가 기능
 
-평점 컨트롤에는 사용할 수 있는 추가 기능이 많습니다. 이러한 기능 사용에 대한 자세한 내용은 MSDN 참조 설명서에 나와 있습니다.
+평점 컨트롤에는 사용할 수 있는 추가 기능이 많습니다. 이러한 기능 사용에 대한 자세한 내용은 참조 설명서에 나와 있습니다.
 다음은 일부 추가 기능의 목록입니다.
 -   뛰어난 긴 목록 성능
 -   공간이 협소한 UI 시나리오를 위한 세밀한 크기 조정

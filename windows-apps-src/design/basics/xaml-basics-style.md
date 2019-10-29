@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 804f1994e187d3b09ed4dcb2186105cf615f5de0
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: f2c63c90170a633ae718db618c502efa41fb3f7d
+ms.sourcegitcommit: 807dadf5eceb576aba3ad898a6e9bf12129e94a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820498"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72680760"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 
@@ -36,10 +36,7 @@ UWP(유니버설 Windows 플랫폼)에서는 여러 가지 방법으로 앱 모�
 
 자습서의 첫 번째 부분에서는 일부 사진 편집 컨트롤을 장식해 보겠습니다. 
 
-<figure>
-    <img src="../basics/images/xaml-basics/slider-start.png" />
-    <figure>*기본 스타일 기능의 간단한 슬라이더*</figure>
-</figure>
+![기본 스타일 기능의 간단한 슬라이더.](../basics/images/xaml-basics/slider-start.png)
 
 이 슬라이더는 뛰어납니다. 슬라이더가 해야 할 모든 작업을 수행하지만, 멋진 모습은 아닙니다. 문제를 해결해 보겠습니다. 
 
@@ -748,8 +745,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
             Grid.Row="2" Background="Transparent" Foreground="Transparent"
             Value="{x:Bind item.Exposure, Mode=TwoWay}"
             Minimum="-2"
-            Maximum="2"
-            Template="{StaticResource FancySliderControlTemplate}"/>    
+            Maximum="2" />    
     ```
     
     **이후**

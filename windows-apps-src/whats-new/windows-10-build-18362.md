@@ -1,17 +1,17 @@
 ---
-title: 개발자를 위한 Windows 10의 새로운 기능
+title: Windows 10 빌드 18362의 새로운 기능
 description: Windows 10 빌드 18362 및 새로운 개발자 도구는 유니버설 Windows 플랫폼이 지원되는 도구, 기능 및 환경을 제공합니다.
 keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능, 신규, Windows 10, 최신, 개발자, 18362, 5월
 ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 4e92afd112ce7600bcfa650e0bb3bbeffabd7bd0
-ms.sourcegitcommit: f120968069702a7210756b508dabc4a1a8c20d53
+ms.openlocfilehash: f95193b1bbf50165619fb6c7b7222ed36853d2e2
+ms.sourcegitcommit: a7740ebb14c98cd5afadd52db5cf714522821b49
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72438222"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72893043"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-18362"></a>개발자용 Windows 10 빌드 18362의 새로운 기능
 

@@ -1,17 +1,17 @@
 ---
-title: 개발자, 도구 및 기능을 위한 Windows 10의 새로운 기능
+title: Windows 10 빌드 15063의 새로운 기능
 description: Windows 10 빌드 15063 및 새로운 개발자 도구는 유니버설 Windows 플랫폼이 지원되는 도구, 기능 및 환경을 제공합니다.
 keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능, 신규, Windows 10, 1703, 3월, 최신, 15063
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: ea855480-874d-431f-94bf-13d81eacc010
 ms.localizationpriority: medium
-ms.openlocfilehash: 5faa3beb0837553f50d73f7af454ee6bd0502aa3
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 4395ed9113b85d53ce464bd085b168c806fc281c
+ms.sourcegitcommit: a7740ebb14c98cd5afadd52db5cf714522821b49
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682458"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72893047"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-15063"></a>개발자용 Windows 10 빌드 15063의 새로운 기능
 

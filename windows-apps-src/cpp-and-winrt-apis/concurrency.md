@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: 1dd6ac2760189578932fc22db89c7091f2e527ab
-ms.sourcegitcommit: 8179902299df0f124dd770a09a5a332397970043
+ms.openlocfilehash: 06fadae3e33da3289726f45e7222617d51843015
+ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428633"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816683"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT를 통한 동시성 및 비동기 작업
 
@@ -27,7 +27,7 @@ ms.locfileid: "68428633"
 - [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation_tresult_),
 - [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_).
 
-각 비동기 작업 유형은 **winrt::Windows::Foundation** C++/WinRT 네임스페이스의 해당 유형에 프로젝션됩니다. C++/WinRT에는 내부 await 어댑터 구조체도 포함되어 있습니다. 직접 사용하지는 않지만, 이 구조체 덕분에 `co_await` 문을 작성하여 비동기 작업 유형 중 하나를 반환하는 함수의 결과를 협조적으로 기다릴 수 있습니다. 또한 이러한 유형을 반환하는 고유한 코루틴을 작성할 수 있습니다.
+각 비동기 작업 유형은 **winrt::Windows::Foundation** C++/WinRT 네임스페이스의 해당 유형에 프로젝션됩니다. C++/WinRT에는 내부 await 어댑터 구조체도 포함되어 있습니다. 직접 사용하지는 않지만, 해당 구조체 덕분에 `co_await` 문을 작성하여 이러한 비동기 작업 유형 중 하나를 반환하는 함수의 결과를 협조적으로 기다릴 수 있습니다. 또한 이러한 유형을 반환하는 고유한 코루틴을 작성할 수 있습니다.
 
 비동기 Windows 함수의 예로 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_) 형식의 비동기 작업 개체를 반환하는 [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)가 있습니다. C++/WinRT를 사용하여 이러한 API를 호출하는 몇 가지 방법을 차단 방법과 비차단 방법 순으로 살펴보겠습니다.
 
@@ -112,7 +112,7 @@ int main()
 
 대리자를 사용하여 비동기 작업의 완료 및/또는 진행률 이벤트를 처리할 수도 있습니다. 자세한 내용과 코드 예제는 [비동기 작업을 위한 대리자 형식](handle-events.md#delegate-types-for-asynchronous-actions-and-operations)을 참조하세요.
 
-## <a name="asychronously-return-a-windows-runtime-type"></a>Windows 런타임 형식의 비동기 반환
+## <a name="asynchronously-return-a-windows-runtime-type"></a>Windows 런타임 형식을 비동기식으로 반환
 
 다음 예제에서는 특정 URI에 대해 **RetrieveFeedAsync** 호출을 래핑하여 [**SyndicationFeed**](/uwp/api/windows.web.syndication.syndicationfeed)를 비동기 방식으로 반환하는 **RetrieveBlogFeedAsync** 함수를 제공합니다.
 
@@ -153,7 +153,7 @@ int main()
 
 위의 예제에서 **RetrieveBlogFeedAsync**는 진행률과 반환 값이 둘 다 있는 **IAsyncOperationWithProgress**를 반환합니다. **RetrieveBlogFeedAsync**가 작업을 수행하고 피드를 검색하는 동안 다른 작업을 수행할 수 있습니다. 해당 비동기 작업 개체에서 **get**을 호출하여 차단하고 완료될 때까지 기다린 다음, 작업 결과를 가져옵니다.
 
-Windows 런타임 형식을 비동기 방식으로 반환하는 경우 [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation_tresult_) 또는 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)를 반환해야 합니다. 자사 또는 타사 런타임 클래스는 Windows 런타임 함수로 전달하거나 전달받을 수 있는 형식(예: `int` 또는 **winrt::hstring**)을 한정합니다. Windows 런타임이 아닌 형식에 이러한 비동기 작업 유형 중 하나를 사용하려고 하면 컴파일러에서 “WinRT 형식이어야 합니다.” 오류를 생성하여 도와줍니다. 
+Windows 런타임 형식을 비동기 방식으로 반환하는 경우 [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation_tresult_) 또는 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)를 반환해야 합니다. 자사 또는 타사 런타임 클래스는 Windows 런타임 함수로 전달하거나 전달받을 수 있는 형식(예: `int` 또는 **winrt::hstring**)을 한정합니다. Windows 런타임이 아닌 형식에 이러한 비동기 작업 유형 중 하나를 사용하려고 하면 컴파일러에서 "*WinRT 형식이어야 합니다.* " 오류를 생성하여 도와줍니다.
 
 코루틴에 `co_await` 문이 없는 경우, 코루틴이 되려면 `co_return` 또는 `co_yield` 문이 하나 이상 있어야 합니다. 코루틴이 비동기성을 도입하지 않아 컨텍스트를 차단하거나 전환하지 않고 값을 반환할 수 있는 경우도 있습니다. 다음은 값을 캐시하여 두 번째 이상 호출 시 해당 작업을 수행하는 예제입니다.
 
@@ -170,7 +170,7 @@ IAsyncOperation<winrt::hstring> ReadAsync()
 }
 ``` 
 
-## <a name="asychronously-return-a-non-windows-runtime-type"></a>Windows 런타임이 아닌 형식의 비동기 반환
+## <a name="asynchronously-return-a-non-windows-runtime-type"></a>Windows 런타임이 아닌 형식을 비동기식으로 반환
 
 Windows 런타임 형식이 ‘아닌’ 형식을 비동기 방식으로 반환하는 경우 PPL(병렬 패턴 라이브러리) [**concurrency::task**](/cpp/parallel/concrt/reference/task-class)를 반환해야 합니다.  **std::future**보다 성능이 뛰어나고 향후 호환성도 우수한 **concurrency::task**를 사용하는 것이 좋습니다.
 

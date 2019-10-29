@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: 9484b61aae91ae426efb1963cd37ebf276ef7c6c
-ms.sourcegitcommit: f8634aad3a3675c2f0eac62f56df3def4285a7b0
+ms.openlocfilehash: 4a671a319be49e07d3a8fcdacb569c4ae76e299b
+ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71720440"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816669"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>C++/WinRT를 통한 고급 동시성 및 비동기
 
@@ -359,7 +359,7 @@ winrt::fire_and_forget RunAsync(DispatcherQueue queue)
 
 따라서 C++/WinRT를 코루틴과 결합하는 경우, 특히 오래된 Petzold 스타일의 데스크톱 애플리케이션 개발을 수행할 때 다양한 기능을 손쉽게 이용할 수 있습니다.
 
-## <a name="canceling-an-asychronous-operation-and-cancellation-callbacks"></a>비동기 작업 취소 및 취소 콜백
+## <a name="canceling-an-asynchronous-operation-and-cancellation-callbacks"></a>비동기 작업 취소 및 취소 콜백
 
 비동기 프로그래밍을 위한 Windows 런타임 기능을 사용하면 진행 중인 비동기 작업을 취소할 수 있습니다. 다음은 [**StorageFolder::GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync)를 호출하여 잠재적으로 큰 파일 컬렉션을 검색하고 결과 비동기 작업 개체를 데이터 멤버에 저장하는 예제입니다. 사용자가 작업을 취소할 수 있습니다.
 

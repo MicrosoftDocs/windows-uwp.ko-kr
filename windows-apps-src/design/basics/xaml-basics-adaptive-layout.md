@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 67d5861e65a85a07cdda486ddb9c9634c388e819
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 71c04725fed4ab9d5d2158f2f892af038aefc8fd
+ms.sourcegitcommit: 807dadf5eceb576aba3ad898a6e9bf12129e94a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820461"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72680757"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 
@@ -46,11 +46,15 @@ ms.locfileid: "67820461"
     **GitHub에 익숙하지 않은 경우:**
     
     a. **ZIP 다운로드**를 클릭하고 파일을 로컬에 저장합니다. 그러면 필요한 프로젝트 파일이 모두 포함된 .zip 파일이 다운로드됩니다.
-    b. 파일의 압축을 풉니다. 파일 탐색기를 사용하여 앞에서 다운로드한 .zip 파일로 이동한 다음, 해당 파일을 마우스 오른쪽 단추로 클릭하고 **모두 압축 풀기...** 를 선택합니다. c. 샘플의 로컬 복사본을 찾아서 `Windows-appsample-photo-lab-master\xaml-basics-starting-points\adaptive-layout` 디렉토리로 이동합니다.    
+
+    b. 파일의 압축을 풉니다. 파일 탐색기를 사용하여 앞에서 다운로드한 .zip 파일로 이동한 다음, 해당 파일을 마우스 오른쪽 단추로 클릭하고 **모두 압축 풀기...** 를 선택합니다. 
+
+    c. 샘플의 로컬 복사본을 찾아서 `Windows-appsample-photo-lab-master\xaml-basics-starting-points\adaptive-layout` 디렉토리로 이동합니다.    
 
     **GitHub에 익숙한 경우:**
 
     a. 리포지토리의 마스터 분기를 로컬에 복제합니다.
+
     b. `Windows-appsample-photo-lab\xaml-basics-starting-points\adaptive-layout` 디렉터리로 이동합니다.
 
 3. `Photolab.sln`을 클릭하여 프로젝트를 엽니다.
