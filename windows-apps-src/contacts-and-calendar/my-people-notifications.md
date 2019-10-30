@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bd9071eaaea0dd88a3dad06de78eff82b29725ec
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 41f1c19f62482dc28bc067adb2e60b2c6fafa509
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820235"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061890"
 ---
 # <a name="my-people-notifications"></a>내 피플 알림
 
@@ -23,7 +23,7 @@ ms.locfileid: "67820235"
 + Windows 10 및 Microsoft Visual Studio 2019. 설치 세부 정보는 [Visual Studio를 사용하여 설정](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up)을 참조하세요.
 + C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. C#을 시작하려면 ["Hello, world" 앱 만들기](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)를 참조하세요.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 이제 일반적인 알림 메시지 대신 내 피플 기능을 통해 알림을 전송하여 사용자에게 보다 개인적인 경험을 제공할 수 있습니다. 이 새로운 종류의 알림 메시지는 내 피플 기능과 함께 사용자의 작업 표시줄에 고정된 연락처에서 전송됩니다. 알림이 수신되면 피플 알림이 시작됨을 알리기 위해 보낸 사람의 연락처 사진이 작업 표시줄에 애니메이션으로 표시되고 소리가 재생됩니다. 페이로드에 지정된 애니메이션 또는 이미지가 5초간 표시됩니다(또는 페이로드가 5초 미만 동안 유지되는 애니메이션인 경우 5초가 경과할 때까지 반복).
 
@@ -42,24 +42,24 @@ ms.locfileid: "67820235"
 내 피플 알림은 [알림 메시지](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md) 프레임워크를 사용하지만 알림 페이로드에 추가 바인딩 노드가 필요합니다. 이 두 번째 바인딩에 다음 매개 변수가 포함되어야 합니다.
 
 ```xml
-experienceType=”shoulderTap”
+experienceType="shoulderTap"
 ```
 
 이것은 알림 메시지를 내 피플 알림으로 처리해야 함을 나타냅니다.
 
 바인딩 내부의 이미지 노드에 다음 매개 변수가 포함되어야 합니다.
 
-+ **src**
++ **소스**
     + 자산의 URI입니다. HTTP/HTTPS 웹 URI, msappx URI 또는 로컬 파일의 경로일 수 있습니다.
 + **spritesheet-src**
     + 자산의 URI입니다. HTTP/HTTPS 웹 URI, msappx URI 또는 로컬 파일의 경로일 수 있습니다. 스프라이트시트 애니메이션에만 필요합니다.
-+ **spritesheet-height**
++ **spritesheet-높이**
     + 프레임 높이(픽셀)입니다. 스프라이트시트 애니메이션에만 필요합니다.
 + **spritesheet-fps**
     + 초당 프레임(FPS)입니다. 스프라이트시트 애니메이션에만 필요합니다. 1-120 범위의 값만 지원됩니다.
 + **spritesheet-startingFrame**
     + 애니메이션을 시작하는 프레임 수입니다. 스프라이트시트 애니메이션에만 사용되며 값을 입력하지 않으면 기본값 0이 사용됩니다.
-+ **alt**
++ **#b0**
     + 화면 읽기 프로그램 내레이터에 사용되는 텍스트 문자열입니다.
 
 > [!NOTE]
@@ -68,11 +68,11 @@ experienceType=”shoulderTap”
 또한 최상위 알림 메시지 노드에는 보내는 연락처를 지정하는 **hint-people** 매개 변수가 포함되어야 합니다. 이 매개 변수에 가능한 값은 다음과 같습니다.
 
 + **전자 메일 주소** 
-    + 예를 들어 ` mailto:johndoe@mydomain.com `
+    + 예: ` mailto:johndoe@mydomain.com `
 + **전화 번호** 
-    + 예를 들어 tel:888-888-8888
+    + 예: tel:888-888-8888
 + **원격 ID** 
-    + 예를 들어 remoteid:1234
+    + 예: remoteid:1234
 
 > [!NOTE]
 > 앱에서 PC에 저장된 연락처를 원격으로 저장된 연락처와 연결하기 위해 [ContactStore Api](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) 및 [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) 속성을 사용하는 경우 RemoteId 속성의 값이 반드시 안정적이고 고유해야 합니다. 즉, 원격 ID는 단일 사용자 계정을 일관적으로 식별해야 하며, 다른 앱 소유의 연락처를 포함하여 PC에 있는 다른 연락처의 원격 ID와 충돌하지 않도록 보장하는 고유의 태그를 포함해야 합니다.
@@ -134,7 +134,7 @@ XmlDocument xmlContent = new XmlDocument();
 xmlContent.LoadXml(xmlText);
 ```
 
-이 코드를 사용하여 알림을 만들고 보낼 수 있습니다.
+그런 다음 이 코드를 사용하여 알림을 만들고 보낼 수 있습니다.
 
 ```CSharp
 ToastNotification notification = new ToastNotification(xmlContent);
@@ -150,8 +150,8 @@ ToastNotificationManager.CreateToastNotifier().Show(notification);
 
 내 피플 알림이 알림 메시지로 대체되면 두 번째 내 피플 관련 바인딩은 무시되고 첫 번째 바인딩만 알림 메시지 표시에 사용됩니다. 이는 첫 번째 알림 바인딩에서 대체 페이로드를 제공하는 것이 중요한 이유입니다.
 
-## <a name="see-also"></a>참조
-+ [내 사용자 알림 사용 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
-+ [내 사용자를 추가 지원](my-people-support.md)
-+ [적응 알림](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
-+ [ToastNotification 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification)
+## <a name="see-also"></a>참고 항목
++ [내 사용자 알림 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
++ [내 사용자 지원 추가](my-people-support.md)
++ [적응 알림 메시지](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
++ [To Notification 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification)

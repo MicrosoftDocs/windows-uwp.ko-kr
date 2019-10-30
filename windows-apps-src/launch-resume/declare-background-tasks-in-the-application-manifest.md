@@ -6,27 +6,27 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 471c2851f72027c364fdd0c9c295c8c9babe17c5
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: cf114ed3d2ffce95f9e9aba6ceb222029d23819c
+ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366178"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73052023"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>응용 프로그램 매니페스트에서 백그라운드 작업 선언
 
 
 
 
-**중요 한 Api**
+**중요 API**
 
 -   [**BackgroundTasks 스키마**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
--   [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+-   [**Windows ApplicationModel. 배경**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다.
 
 > [!Important]
->  이 문서는 Out-of-process 백그라운드 작업과 관련이 있습니다. In-process 백그라운드 작업은 매니페스트에서 선언되지 않습니다.
+>  이 문서는 Out-of-process 백그라운드 작업과 관련이 있습니다. In-process 백그라운드 작업은 매니페스트에 선언되지 않습니다.
 
 Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 합니다. 그렇지 않으면 앱에서 등록할 수 없습니다(예외가 발생함). 또한 인증을 통과하려면 응용 프로그램 매니페스트에서 Out-of-process 백그라운드 작업을 선언해야 합니다.
 
@@ -90,7 +90,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 2.  Task Type 특성 목록을 변경하여 이 백그라운드 작업과 함께 사용된 작업 등록 유형을 나타냅니다. 백그라운드 작업을 여러 트리거 유형과 함께 등록할 경우 유형별로 다른 Task 요소 및 Type 특성을 추가합니다.
 
-    **참고**  있는지 각 트리거 유형에 나열 하려면 사용 중인 또는 백그라운드 작업 선언 되지 않은 트리거 형식을 사용 하 여 등록 되지 것입니다 (합니다 [ **등록** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) 메서드는 실패 및 예외를 throw) 합니다.
+    사용 중인 각 트리거 유형을 나열 해야 합니다. 그렇지 않으면 백그라운드 작업이 선언 되지 않은 트리거 유형에 등록 되지 않습니다 ( [**register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) 메서드가 실패 하 고 예외를 throw 함) **.  **
 
     이 조각 예에서는 시스템 이벤트 트리거 및 푸시 알림 사용을 나타냅니다.
 
@@ -107,7 +107,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 앱에서 등록한 각 추가 백그라운드 작업 클래스에 대해 2단계를 반복합니다.
 
-다음 예제는 [백그라운드 작업 샘플]( https://go.microsoft.com/fwlink/p/?linkid=227509)의 전체 Application 요소입니다. 총 3개의 트리거 유형이 있는 백그라운드 작업 클래스 2개를 사용하는 방법을 보여 줍니다. 응용 프로그램 매니페스트에서 백그라운드 작업을 선언하려면 이 예제의 Extensions 섹션을 복사하고 필요에 따라 수정합니다.
+다음 예제는 [백그라운드 작업 샘플]( https://go.microsoft.com/fwlink/p/?linkid=227509)의 전체 Application 요소입니다. 총 3개의 트리거 유형이 있는 백그라운드 작업 클래스 2개를 사용하는 방법을 보여 줍니다. 응용 프로그램 매니페스트에서 백그라운드 작업을 선언하려면 이 예의 Extensions 섹션을 복사하고 필요에 따라 수정합니다.
 
 ```xml
 <Applications>
@@ -159,7 +159,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 ### <a name="run-in-the-same-process-as-your-foreground-application"></a>포그라운드 응용 프로그램과 동일한 프로세스에서 실행
 
-다음은 포그라운드 응용 프로그램과 같은 프로세스에서 실행되는 백그라운드 작업을 선언하는 예제 XML입니다.
+다음은 포그라운드 응용 프로그램과 같은 프로세스에서 실행되는 백그라운드 작업을 선언하는 XML 예입니다.
 
 ```xml
 <Extensions>
@@ -209,7 +209,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 ### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>SupportsMultipleInstances 특성을 사용하여 트리거가 실행될 때마다 새 프로세스에서 실행
 
-이 예에서는 새 트리거가 실행될 때마다 자체 리소스 제한(메모리 및 CPU)을 가져오는 새 프로세스에서 실행되는 백그라운드 작업을 선언합니다. `SupportsMultipleInstances`를 사용하면 이 동작이 활성화됩니다. 이 특성을 사용 하려면 대상으로 해야 합니다 SDK 버전 '10.0.15063' (Windows 10 크리에이터 업데이트) 이상.
+이 예에서는 새 트리거가 실행될 때마다 자체 리소스 제한(메모리 및 CPU)을 가져오는 새 프로세스에서 실행되는 백그라운드 작업을 선언합니다. `SupportsMultipleInstances`를 사용하면 이 동작이 활성화됩니다. 이 특성을 사용 하려면 SDK 버전 ' 10.0.15063 ' (Windows 10 크리에이터 업데이트) 이상을 대상으로 해야 합니다.
 
 ```xml
 <Package
@@ -220,7 +220,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
             ...
             <Extensions>
                 <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.TimerTriggerTask">
-                    <BackgroundTasks uap4:SupportsMultipleInstances=“True”>
+                    <BackgroundTasks uap4:SupportsMultipleInstances="True">
                         <Task Type="timer" />
                     </BackgroundTasks>
                 </Extension>

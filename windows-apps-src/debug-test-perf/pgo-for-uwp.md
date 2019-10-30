@@ -1,15 +1,15 @@
 ---
 title: UWP(유니버설 Windows 플랫폼) 앱에서 PGO(프로필 기반 최적화) 실행
-description: 유니버설 Windows 플랫폼 (UWP) 앱을 최적화 PGO (프로필 기반)를 적용 하는 단계별 가이드입니다.
+description: 유니버설 Windows 플랫폼 (UWP) 앱에 PGO (프로필 기반 최적화)를 적용 하는 단계별 가이드입니다.
 ms.date: 02/08/2017
 ms.localizationpriority: medium
 ms.topic: article
-ms.openlocfilehash: 8c19ea1701c6b5e82e66a54223620dace57de4b6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c784812d2e070aba0857cb84e5729b1426717b8d
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632918"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73062373"
 ---
 # <a name="running-profile-guided-optimization-on-universal-windows-platform-apps"></a>유니버설 Windows 플랫폼 앱에서 프로필 기반 최적화 실행 
  
@@ -17,7 +17,7 @@ ms.locfileid: "57632918"
 
 다음은 Visual Studio 2015 업데이트 3을 사용하여 기본 DirectX 11 앱(UWP) 템플릿에 PGO를 적용하는 기본 연습입니다.
  
-이 가이드 전체에서 스크린샷 다음 새 프로젝트를 기반으로 합니다. ![새 프로젝트 대화 상자](images/pgo-001.png)
+이 가이드의 스크린샷에는 새 프로젝트 ![새 프로젝트 대화 상자가 있습니다](images/pgo-001.png)
 
 DirectX 11 앱 템플릿에 PGO를 적용하려면
 
@@ -25,7 +25,7 @@ DirectX 11 앱 템플릿에 PGO를 적용하려면
  
  ![App1 창](images/pgo-002.png)
  
-2. **전체 프로그램 최적화**에 대해 /GL 플래그로 빌드 중인 프로젝트 속성(**속성** > **C/C++** > **최적화**)에서 확인합니다(구성에서 이미 설정되어 있을 수 있음).
+2. **전체 프로그램 최적화**에 대해 /GL 플래그로 빌드 중인 프로젝트 속성(**속성** > **C/C++**  > **최적화**)에서 확인합니다(구성에서 이미 설정되어 있을 수 있음).
 
  ![전체 프로그램 최적화](images/pgo-003.png)
 
@@ -64,15 +64,15 @@ DirectX 11 앱 템플릿에 PGO를 적용하려면
   .pgc 파일을 .pgd가 위치한 빌드 위치로 출력하고 파일 이름을 `<PGDName>!<RunIdentifier>.pgc`로 지정하는 것이 좋습니다. 이 예제에서는 다음을 의미합니다.
  
   ```
-  pgosweep.exe App1.exe “C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1!1.pgc”
+  pgosweep.exe App1.exe "C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1!1.pgc"
   ```
  
-  더 이상 수집 수도 있습니다 `App1!CoreScenario.pgc`, `App1!UseCase5.pgc`등입니다. .Pgc 파일은.pgd와 함께 빌드 출력 위치에이 방식으로 명명 하는 경우는 자동으로 병합 됩니다 9 단계에서 연결 하는 경우.
+  추가 수집은 `App1!CoreScenario.pgc`, `App1!UseCase5.pgc` 등일 수 있습니다. .pgc 파일의 이름을 이런 방식으로 지정하고 빌드 출력 위치가 .pgd와 같은 경우 9단계에서 연결할 때 자동으로 병합됩니다.
  
-8. 선택 사항: 기본적으로 7 단계에서 지정 하 고는.pgd 옆에 배치 된 대로 모든.pgc 파일 병합 됩니다 링크와 동일 하 게 가중치가 적용 된 경우 큰 수도 있습니다 하지만 가중치는 어떻게 특정 실행을 제어 합니다. 이렇게 하려면 `pgort140.dll` 복사본을 처음 검색한 폴더에 있는 **pgomgr.exe** 도구를 사용합니다. 예를 들어 `CoreScenario` 실행을 다른 실행의 우선 순위 3배로 병합하려면 다음 명령을 사용합니다.
+8. 선택 사항: 기본적으로 7단계의 설명처럼 이름을 지정하고 .pgd와 함께 배치된 모든 .pgc 파일은 연결 시 병합되고 동일한 가중치가 부여되지만 특정 실행의 가중치 수준 제어를 높일 수도 있습니다. 이렇게 하려면 `pgort140.dll` 복사본을 처음 검색한 폴더에 있는 **pgomgr.exe** 도구를 사용합니다. 예를 들어 `CoreScenario` 실행을 다른 실행의 우선 순위 3배로 병합하려면 다음 명령을 사용합니다.
  
  ```
- pgomgr.exe -merge:3 “C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1!CoreScenario.pgc” “C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1.pgd”
+ pgomgr.exe -merge:3 "C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1!CoreScenario.pgc" "C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1.pgd"
  ```
  
 9. 하나 이상의 .pgc 파일을 생성하고 .pgd와 함께 배치하거나 수동으로 병합(8단계)한 후 링커를 사용하여 최종 최적화 빌드를 만들 수 있습니다. 링커 속성(**속성** > **링커** > **최적화**)으로 이동하여 **링크 타임 코드 생성**을 **프로필 기반 최적화 - 최적화(LTCG:PGOptimize)** 로 설정하고 **프로필 기반 데이터베이스**가 사용하려는 .pgd를 가리키는지 확인합니다. 이 설정을 변경하지 않은 경우 순서대로 실행합니다.

@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e00aa383bcce17b7cd6b67514647c2f6137cc32
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f86ab8b3e55b7680c5ba3e47c37d1cda8c42cebb
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601948"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73062000"
 ---
 # <a name="spring-animations"></a>스프링 애니메이션
 
@@ -26,8 +26,8 @@ ms.locfileid: "57601948"
 
 끈적한 장난감에서부터 스프링이 달린 블록을 이용한 물리학 수업에 이르기까지, 스프링은 우리가 모두가 경험한 적 있는 흔한 동작 경험입니다. 스프링이 진동하는 동작은 흔히 보는 사람들에게 장난스럽고 경쾌한 정서적 반응을 유도합니다. 따라서 기존의 큐빅 베지어보다 더 "튀어 나올" 듯한 생생한 동작 경험을 최종 사용자에게 제공하고자 하는 사람들이 응용 프로그램 UI로 스프링의 동작을 선택하곤 합니다. 이러한 경우 스프링 동작은 더 생동감 있는 동작 경험을 창출할 뿐만 아니라, 애니메이션을 적용한 기존 및 신규 컨텐츠에 주의를 집중시키는 데 도움이 될 수 있습니다. 응용 프로그램 브랜딩이나 동작 언어에 따라 진동이 매우 두드러지고 눈에 띄는 경우가 있고, 매우 미묘한 경우도 있습니다.
 
-![스프링 애니메이션을 사용 하 여 동작](images/animation/offset-spring.gif)
-![입방 형 3 차원 애니메이션을 사용 하 여 동작](images/animation/offset-cubic-bezier.gif)
+스프링 애니메이션을 사용 하 여 동작 ![입방 형 3 차원 애니메이션을 사용 하는![동작](images/animation/offset-spring.gif)
+](images/animation/offset-cubic-bezier.gif)
 
 ## <a name="using-springs-in-your-ui"></a>UI에 스프링 사용
 
@@ -92,12 +92,12 @@ private void Button_Clicked(object sender, RoutedEventArgs e)
  {
  _expanded = true;
  _propSet.InsertBoolean("expanded", true);
- _springAnimation.InitialValueExpression[“FinalValue”] = “this.StartingValue + 250”;
+ _springAnimation.InitialValueExpression["FinalValue"] = "this.StartingValue + 250";
  } else
  {
  _expanded = false;
  _propSet.InsertBoolean("expanded", false);
-_springAnimation.InitialValueExpression[“FinalValue”] = “this.StartingValue - 250”;
+_springAnimation.InitialValueExpression["FinalValue"] = "this.StartingValue - 250";
  }
  _naviPane.StartAnimation("Offset.X", _springAnimation);
 }
