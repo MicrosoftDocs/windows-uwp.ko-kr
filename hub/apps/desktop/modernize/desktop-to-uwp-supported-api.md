@@ -9,52 +9,49 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 3deb89a8eba60e5c4f67b18091d78d24d9179aa3
-ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
+ms.openlocfilehash: 481b326c3f4b3608d0d3f5f7a8cec943f1d6c437
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979337"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142531"
 ---
 # <a name="uwp-apis-available-to-desktop-apps"></a>데스크톱 앱에서 사용할 수 있는 UWP Api
 
 데스크톱 앱은 UWP 앱으로 완전히 전환 되지 않은 경우에도 광범위 한 UWP (유니버설 Windows 플랫폼) Api를 사용할 수 있습니다. 이 문서에서는 데스크톱 앱에서 사용할 수 있는 클래스를 나열 합니다.
 
-> [!NOTE]
-> 많은 UWP Api에는 데스크톱 앱에서 [패키지 id](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 를 사용 해야 합니다. 데스크톱 앱이 [Msix 패키지](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)에 패키지 된 경우 패키지 id를 사용할 수 있습니다. 이 문서에서는 이러한 앱을 패키지 된 *앱*이라고 합니다.
-
-대부분의 UWP Api는 패키지 된 앱에서 잘 작동 합니다. 그러나 일부 기능 영역은 아직 완전히 테스트되지 않았거나 현재 의도한 대로 작동하지 않습니다.
+많은 UWP Api에는 데스크톱 앱에서 [패키지 id](modernize-packaged-apps.md) 를 사용 해야 합니다. 대부분의 UWP Api는 패키지 id가 있는 앱을 잘 작동 합니다. 그러나 일부 기능 영역은 아직 완전히 테스트되지 않았거나 현재 의도한 대로 작동하지 않습니다.
 
 | 기능 영역 | 세부 정보 |
 |--------------|---------|
-| 약속, 연락처 및 메일 | 일부 API는 현재 패키지 앱에서 지원되지 않습니다. |
-| 인증 및 사용자 ID | 일부 API는 현재 패키지 앱에서 지원되지 않습니다. |
-| 백그라운드 작업 | 패키지 앱에서 백그라운드 작업을 등록할 수는 있지만 완전한 UWP 앱만 백그라운드 작업<i>으로</i> 실행할 수 있습니다. 자세한 내용은 [GitHub의 백그라운드 작업 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample)을 참조하세요. |
-| Bluetooth | 일부 API는 현재 패키지 앱에서 지원되지 않습니다. |
-| 채팅 및 전화 통화 | 패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다. |
+| 약속, 연락처 및 메일 | 일부 Api는 현재 지원 되지 않습니다. |
+| 인증 및 사용자 ID | 일부 Api는 현재 지원 되지 않습니다. |
+| 백그라운드 작업 | 데스크톱 앱은 백그라운드 작업을 등록할 수 있지만 완전히 UWP 앱만 백그라운드 작업 <i>으로</i> 실행할 수 있습니다. 자세한 내용은 [GitHub의 백그라운드 작업 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample)을 참조하세요. |
+| Bluetooth | 일부 Api는 현재 지원 되지 않습니다. |
+| 채팅 및 전화 통화 | 데스크톱 앱은 UWP로 완전히 이식할 때까지 모바일에서 실행할 수 없습니다. |
 | 계약 활성화 | 계약에 따라 전체 UWP 앱만 활성화할 수 있습니다. |
-| 암호화 | 일부 API는 현재 패키지 앱에서 지원되지 않습니다. |
-| 지리적 위치 | 일부 API는 현재 패키지 앱에서 지원되지 않습니다. |
-| 파일 및 폴더 선택기 | 패키지로 만든 앱은 파일 시스템에 대한 모든 권한을 가지며 UWP 선택기가 필요하지 않습니다. |
-| 미디어 | 일부 API는 현재 패키지 앱에서 지원되지 않습니다. |
-| 서비스 지점 | 일부 API는 현재 패키지 앱에서 지원되지 않습니다. |
-| 스마트 카드 | 일부 API는 현재 패키지 앱에서 지원되지 않습니다. |
-| PlayReady | 일부 API는 현재 패키지 앱에서 지원되지 않습니다. |
-| VPN | 일부 API는 현재 패키지 앱에서 지원되지 않습니다. |
-| 전자지갑 | 패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다. |
+| Cryptography | 일부 Api는 현재 지원 되지 않습니다. |
+| 지리적 위치 | 일부 Api는 현재 지원 되지 않습니다. |
+| 파일 및 폴더 선택기 | Id가 인 앱은 전체 파일 시스템에 액세스할 수 있으며 UWP 선택이 필요 하지 않습니다. |
+| 미디어 | 일부 Api는 현재 지원 되지 않습니다. |
+| 서비스 지점 | 일부 Api는 현재 지원 되지 않습니다. |
+| 스마트 카드 | 일부 Api는 현재 지원 되지 않습니다. |
+| PlayReady | 일부 Api는 현재 지원 되지 않습니다. |
+| VPN | 일부 Api는 현재 지원 되지 않습니다. |
+| 전자지갑 | 데스크톱 앱은 UWP로 완전히 이식할 때까지 모바일에서 실행할 수 없습니다. |
 | XAML UI | Windows 10, 버전 1809 및 이전 릴리스에서는 데스크톱 앱에서 UWP XAML 콘텐츠 호스팅을 지원 하지 않습니다. Windows 10 버전 1903부터 [Xaml 아일랜드](xaml-islands.md) 를 사용 하 여 UWP xaml 콘텐츠를 호스트할 수 있습니다.  |
 
 이러한 영역의 API가 올바르게 작동하는 것처럼 보이는 경우도 있습니다. 그러나 지원되는 API로 명시적으로 나열되지 않은 경우 의도하지 않은 부작용이나 동작이 발생할 수 있으므로 사용하면 안 됩니다. 향후 릴리스에서 이러한 API가 지원될 수도 있습니다. 그동안 앱에서 적절한 Win32 또는 .NET API를 대신 사용해야 합니다.
 
 ## <a name="list-of-apis"></a>API 목록
 
-다음은 데스크톱 앱에서 지원 되는 UWP Api의 전체 목록입니다. 패키지 된 앱 [에서 지원 되는 api](#new) 또는 [패키지 된 앱과 데스크톱 응용 프로그램 모두에서 지원 되는 api](#both)를 볼 수 있습니다.
+다음은 데스크톱 앱에서 지원 되는 UWP Api의 전체 목록입니다. [모든 데스크톱 앱에서 지원 되](#both) [는 패키지 id 또는 api를 사용 하는 앱 에서만 지원 되는 api](#new) 를 볼 수 있습니다.
 
 UWP Api를 사용 하는 방법에 대 한 예제는 GitHub의 [데스크톱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 및 [유니버설 Windows 플랫폼 (uwp) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples) 을 참조 하세요. Windows용 앱 빌드 블로그 게시물 [데스크톱 응용 프로그램에서 Windows 10 API 호출](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/)을 참조하세요.
 
 <a id="new" />
 
-### <a name="apis-supported-only-in-packaged-apps"></a>패키지 된 앱 에서만 지원 되는 Api
+### <a name="apis-supported-only-in-apps-with-package-identity"></a>패키지 id를 사용 하는 앱 에서만 Api 지원
 
 * [DataTransfer. DataProviderHandler](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.dataproviderhandler)
 * [DataTransfer. DataRequest](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataRequest)
@@ -137,7 +134,7 @@ UWP Api를 사용 하는 방법에 대 한 예제는 GitHub의 [데스크톱 브
 * [AsyncActionProgressHandler<TProgress>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionProgressHandler<TProgress>)
 * [AsyncActionWithProgressCompletedHandler<TProgress>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress>)
 * [AsyncOperationCompletedHandler<TResult>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncOperationCompletedHandler<TResult>)
-* [VectorChangedEventHandler.<T>](https://docs.microsoft.com/uwp/api/windows.foundation.collections.vectorchangedeventhandler)
+* [VectorChangedEventHandler<T>입니다.](https://docs.microsoft.com/uwp/api/windows.foundation.collections.vectorchangedeventhandler)
 * [DeferralCompletedHandler](https://docs.microsoft.com/uwp/api/windows.foundation.deferralcompletedhandler)
 * [FileLoggingSession.](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.FileLoggingSession)
 * [LogFileGeneratedEventArgs.](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs)
@@ -147,7 +144,7 @@ UWP Api를 사용 하는 방법에 대 한 예제는 GitHub의 [데스크톱 브
 * [LoggingFields.](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingFields)
 * [LoggingOptions.](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingOptions)
 * [LoggingSession.](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingSession)
-* [Windows. EventHandler<T>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.EventHandler<T>)
+* [Windows<T> EventHandler](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.EventHandler<T>)
 * [Windows 기반 버퍼](https://docs.microsoft.com/uwp/api/Windows.Foundation.MemoryBuffer)
 * [Windows.](https://docs.microsoft.com/uwp/api/Windows.Globalization.ApplicationLanguages)
 * [JapanesePhoneme](https://docs.microsoft.com/uwp/api/Windows.Globalization.JapanesePhoneme)
@@ -380,9 +377,9 @@ UWP Api를 사용 하는 방법에 대 한 예제는 GitHub의 [데스크톱 브
 
 <a id="both" />
 
-### <a name="apis-supported-in-both-packaged-apps-and-desktop-applications"></a>패키지로 만든 앱과 데스크톱 응용 프로그램 둘 다에서 지원되는 API
+### <a name="apis-supported-in-all-desktop-applications"></a>모든 데스크톱 응용 프로그램에서 지원 되는 Api
 
-[DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) 를 포함 하는 api는 패키지 된 앱과 패키지 되지 않은 desktop 응용 프로그램 모두에서 지원 됩니다. 데스크톱 응용 프로그램에서 호출 하려는 API가 지원 되는지 여부를 확인 하려면 [WinRT 네임 스페이스에 대 한 참조 설명서](https://docs.microsoft.com/uwp/api/)에 관심이 있는 클래스 또는 멤버에 대 한 참조 문서를 확인 하세요. 그런 다음 참조 문서의 **특성** 섹션에 [DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) 특성이 포함 되어 있는지 확인 합니다.
+[DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) 를 포함 하는 api는 패키지 id 및 패키지 id가 없는 모든 데스크톱 앱에서 지원 됩니다. 데스크톱 응용 프로그램에서 호출 하려는 API가 지원 되는지 여부를 확인 하려면 [WinRT 네임 스페이스에 대 한 참조 설명서](https://docs.microsoft.com/uwp/api/)에 관심이 있는 클래스 또는 멤버에 대 한 참조 문서를 확인 하세요. 그런 다음 참조 문서의 **특성** 섹션에 [DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) 특성이 포함 되어 있는지 확인 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

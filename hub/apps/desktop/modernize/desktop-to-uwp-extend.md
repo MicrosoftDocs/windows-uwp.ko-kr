@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 7359d28d968a2948e9f4049e2acc3c655edcfcb3
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 0a404f2d9f58fc283cf47f47860362c0f5bc8164
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339205"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142548"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>최신 UWP 구성 요소를 사용 하 여 데스크톱 앱 확장
 
@@ -21,7 +21,7 @@ ms.locfileid: "71339205"
 대부분의 경우 데스크톱 응용 프로그램에서 직접 Windows 런타임 Api를 호출할 수 있으므로이 가이드를 검토 하기 전에 [Windows 10 개선](desktop-to-uwp-enhance.md)사항을 참조 하세요.
 
 > [!NOTE]
-> 이 문서에서 설명 하는 기능을 위해서는 데스크톱 응용 프로그램용 Windows 앱 패키지를 만들어야 합니다. 아직 수행 하지 않은 경우 [데스크톱 응용 프로그램 패키지](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)를 참조 하세요.
+> 이 문서에서 설명 하는 기능을 사용 하려면 [MSIX 패키지에서 데스크톱 앱](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) 을 패키지 하거나 [스파스 패키지를 사용 하 여 앱 id를 부여](grant-identity-to-nonpackaged-apps.md)하 여 데스크톱 앱에 [패키지 id](modernize-packaged-apps.md)가 있어야 합니다.
 
 준비가 되었으면 시작하겠습니다.
 
@@ -100,15 +100,15 @@ UWP 프로젝트와 런타임 구성 요소를 사용하여 할 수 있는 몇 �
 
 XAML 기반 UI를 표시하려면 다음 작업을 수행합니다.
 
-:one: [솔루션 설정](#solution-setup)
+:1: [솔루션 설정](#solution-setup)
 
-:two: [XAML UI 만들기](#xaml-UI)
+:2: [XAML UI 만들기](#xaml-UI)
 
-:three: [UWP 프로젝트에 프로토콜 확장 추가](#add-a-protocol-extension)
+:3: [UWP 프로젝트에 프로토콜 확장 추가](#add-a-protocol-extension)
 
-:four: [데스크톱 앱에서 UWP 앱 시작](#start)
+:4: [데스크톱 앱에서 UWP 앱 시작](#start)
 
-:five: [UWP 프로젝트에서 원하는 페이지를 표시 합니다.](#parse)
+:5: [UWP 프로젝트에서 원하는 페이지 표시](#parse)
 
 <a id="solution-setup" />
 
@@ -220,7 +220,7 @@ protected override void OnActivated(Windows.ApplicationModel.Activation.IActivat
 }
 ```
 
-XAML 페이지의 코드에서 ``OnNavigatedTo`` 메서드를 재정의 하 여 페이지에 전달 된 매개 변수를 사용 합니다. 이 경우에 이 페이지에 전달된 위도 및 경도를 사용하여 지도에서 위치를 표시합니다.
+XAML 페이지의 코드에서 페이지에 전달 된 매개 변수를 사용 하도록 ``OnNavigatedTo`` 메서드를 재정의 합니다. 이 경우에 이 페이지에 전달된 위도 및 경도를 사용하여 지도에서 위치를 표시합니다.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -253,7 +253,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 예를 들어, 사용자는 Microsoft Edge, 사진 앱에서 사진을 공유 하도록 응용 프로그램을 선택할 수 있습니다. 해당 기능이 있는 WPF 샘플 응용 프로그램은 다음과 같습니다.
 
-![공유 대상](images/desktop-to-uwp/share-target.png)을 선택합니다.
+![공유 대상](images/desktop-to-uwp/share-target.png).
 
 [여기](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/ShareTarget) 에서 전체 샘플을 참조 하세요.
 
@@ -261,15 +261,15 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 응용 프로그램을 공유 대상으로 만들려면 이런 작업을 수행합니다.
 
-:one: [공유 대상 확장 추가](#share-extension)
+:1: [공유 대상 확장 추가](#share-extension)
 
-:two: [OnShareTargetActivated 이벤트 처리기 재정의](#override)
+: 2: [OnShareTargetActivated 이벤트 처리기 재정의](#override)
 
-:three: [UWP 프로젝트에 데스크톱 확장 추가](#desktop-extensions)
+: 3: [UWP 프로젝트에 데스크톱 확장 추가](#desktop-extensions)
 
-:four: [완전 신뢰 프로세스 확장 추가](#full-trust)
+: 4: [완전 신뢰 프로세스 확장 추가](#full-trust)
 
-:five: [데스크톱 응용 프로그램을 수정 하 여 공유 파일 가져오기](#modify-desktop)
+: 5: [데스크톱 응용 프로그램을 수정 하 여 공유 파일 가져오기](#modify-desktop)
 
 <a id="share-extension" />
 
@@ -295,9 +295,9 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 </Extensions>  
 ```
 
-UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다. 이 태그는 UWP 앱에 대 한 실행 파일의 이름이 `ShareTarget.exe` 이라고 가정 합니다.
+UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다. 이 태그는 UWP 앱에 대 한 실행 파일의 이름이 `ShareTarget.exe`것으로 가정 합니다.
 
-또 앱이 공유할 수 있는 파일 형식을 지정해야 합니다. 이 예제에서는 [WPF 사진 기능 데모](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램을 비트맵 이미지에 대 한 공유 대상으로 지정 하 여 지원 되는 파일 형식에 대 한 `Bitmap`을 지정 합니다.
+또 앱이 공유할 수 있는 파일 형식을 지정해야 합니다. 이 예제에서는 [WPF 사진 작업 데모](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램을 비트맵 이미지에 대 한 공유 대상으로 지정 하 여 지원 되는 파일 형식에 대 한 `Bitmap`를 지정 합니다.
 
 <a id="override" />
 
@@ -408,11 +408,11 @@ private void Watcher_Created(object sender, FileSystemEventArgs e)
 
 백그라운드 서비스를 만들려면 다음 작업을 수행합니다.
 
-:one: [백그라운드 작업 구현](#implement-task)
+:1: [백그라운드 작업 구현](#implement-task)
 
-:two: [백그라운드 작업 구성](#configure-background-task)
+:2: [백그라운드 작업 구성](#configure-background-task)
 
-:three: [백그라운드 작업 등록](#register-background-task)
+:3: [백그라운드 작업 등록](#register-background-task)
 
 <a id="implement-task" />
 
