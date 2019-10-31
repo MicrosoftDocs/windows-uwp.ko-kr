@@ -48,6 +48,8 @@
               href: apps/desktop/modernize/desktop-to-uwp-extend.md
             - name: 패키지된 앱 배포
               href: apps/desktop/modernize/desktop-to-uwp-distribute.md
+        - name: 패키지되지 않은 데스크톱 앱에 ID 부여
+          href: apps/desktop/modernize/grant-identity-to-nonpackaged-apps.md
         - name: '자습서: WPF 앱 현대화'
           items:
             - name: 개요

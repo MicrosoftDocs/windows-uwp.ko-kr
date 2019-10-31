@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: b8ad9726397671bcb2b641d6769f014721a27a72
-ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
+ms.openlocfilehash: 7403c0a3fd9f822ee24411aa88d8fd91994748dd
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71317095"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142522"
 ---
 # <a name="modernize-your-desktop-apps"></a>데스크톱 앱 현대화
 
@@ -54,11 +54,14 @@ Windows 10, 버전 1903부터 창 핸들(HWND)에 연결된 WPF, Windows Forms �
 
 자세한 내용은 [시각적 계층을 사용하여 데스크톱 앱 현대화](visual-layer-in-desktop-apps.md)를 참조하세요.
 
-## <a name="additional-features-available-to-packaged-apps"></a>패키지된 앱에서 사용할 수 있는 추가 기능
+## <a name="additional-features-available-to-apps-with-package-identity"></a>패키지 ID가 있는 앱에 사용할 수 있는 추가 기능
 
-일부 최신 Windows 10 환경은 [MSIX 패키지](/windows/msix/desktop/desktop-to-uwp-root)에 패키지된 데스크톱 앱에서만 사용할 수 있습니다. MSIX 패키지에 데스크톱 앱을 패키지하는 경우, 패키지된 앱에서 패키지 ID, 패키지 확장 및 UWP 구성 요소가 필요한 UWP API를 사용할 수 있습니다.
+일부 최신 Windows 10 환경은 [패키지 ID](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)가 있는 데스크톱 앱에서만 사용할 수 있습니다. 이러한 기능에는 특정 UWP API, 패키지 확장 및 UWP 구성 요소가 포함됩니다. 자세한 내용은 [패키지 ID가 필요한 기능](modernize-packaged-apps.md)을 참조하세요.
 
-자세한 내용은 [패키지 ID가 필요한 기능](modernize-packaged-apps.md)을 참조하세요.
+데스크톱 앱에 ID를 부여하는 방법에는 여러 가지가 있습니다.
+
+* [MSIX 패키지](/windows/msix/desktop/desktop-to-uwp-root)에 패키지합니다. MSIX는 모든 Windows 앱, WPF, Windows Forms 및 Win32 앱에 유니버설 패키징 환경을 제공하는 최신 앱 패키지 형식입니다. 강력한 설치 및 업데이트 환경, 유연한 기능 시스템을 갖춘 관리형 보안 모듈, Microsoft Store, 엔터프라이즈 관리 및 여러 사용자 지정 모델에 대한 지원 기능을 제공합니다. 자세한 내용은 MSIX 설명서의 [데스크톱 애플리케이션 패키지](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)를 참조하세요.
+* 데스크톱 앱을 배포하기 위해 MSIX 패키지를 채택할 수 없는 경우 Windows 10 Insider Preview 빌드 10.0.19000.0부터 패키지 매니페스트만 포함된 *스파스 MSIX 패키지*를 만들어 패키지 ID를 부여할 수 있습니다. 자세한 내용은 [패키지되지 않은 데스크톱 앱에 ID 부여](grant-identity-to-nonpackaged-apps.md)를 참조하세요.
 
 <a id="desktop-uwp-controls"/>
 
