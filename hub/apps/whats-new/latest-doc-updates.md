@@ -6,42 +6,39 @@ ms.date: 10/13/2019
 ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
-ms.openlocfilehash: e90d1239b48c91583dbe47f1e345a4acd7fa629c
-ms.sourcegitcommit: 8923daa8b930f4d01c772c14a1f159332c4a5ba5
+ms.openlocfilehash: 19028ca868c05ac0a1de39b3187a30f95567d915
+ms.sourcegitcommit: c7e10793cbef55ace959ac8fc6ddd08e683602bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72303919"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329499"
 ---
 # <a name="latest-updates-to-the-windows-developer-docs"></a>Windows 개발자 문서에 대 한 최신 업데이트
 
 
-Windows 개발자 문서는 새롭고 향상 된 정보와 콘텐츠로 정기적으로 업데이트 됩니다. 다음 문서에는 지난 주에 2019 년 10 월 11 일에 중요 업데이트가 표시 되어 있습니다.
+Windows 개발자 문서는 새롭고 향상 된 정보와 콘텐츠로 정기적으로 업데이트 됩니다. 다음 문서에서는 지난 달에 2019 년 10 월 31 일에 발생 하는 중요 업데이트를 살펴보았습니다.
 
 
-## <a name="uwp-conceptual"></a>UWP 개념
+## <a name="winrt-conceptual"></a>WinRT 개념
 
 <ul>
-<li><a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/author-apis">C++/WinRT를 통한 API 작성</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/faq">/Winrt에 대 한 C++자주 묻는 질문</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index">C++/WinRT</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/app-resources/uri-schemes">URI 체계</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/composition/inertia-modifiers">관성 한정자를 사용 하 여 맞춤 위치 만들기</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/composition/spring-animations">스프링 애니메이션</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/concurrency">C++/WinRT를 통한 동시성 및 비동기 작업</a></li>
 <li><a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/news">C++/WinRT의 새로운 기능</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/data-access/index">데이터 액세스</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/data-access/sqlite-databases">UWP 앱에서 SQLite 데이터베이스 사용</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/design/input/access-keys">액세스 키 디자인 지침</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/design/input/keyboard-events">키보드 이벤트</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/design/layout/layout-panels">UWP (유니버설 Windows 플랫폼) 앱의 레이아웃 패널</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/design/layout/transforms">변환 개요</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/devices-sensors/generate-3mf">3MF 패키지 생성</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/enterprise/index">Enterprise</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/maps-and-location/display-poi">지도에 POI(관심 지점) 표시</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/networking/httpclient">HttpClient</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/porting/android-ios-uwp-map">Android 및 iOS 개발자용 Windows 앱 개념 매핑</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/publish/store-policies">Microsoft Store 정책</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview">XAML 개요</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/app-analysis">앱 분석</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/pgo-for-uwp">유니버설 Windows 플랫폼 (UWP) 앱에서 PGO (프로필 기반 최적화) 실행</a></li>
 </ul>
 
 
+
+## <a name="winrt-api-reference"></a>WinRT API 참조
+
+<ul>
+<li><a href="https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12fence">ID3D12Fence (d3d12)</a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12fence1">ID3D12Fence1 (d3d12)</a></li>
+</ul>
 
 ## <a name="win32-conceptual"></a>Win32 개념
 
@@ -89,19 +86,10 @@ Windows 개발자 문서는 새롭고 향상 된 정보와 콘텐츠로 정기�
 ## <a name="win32-api-reference"></a>Win32 API 참조
 
 <ul>
-<li><a href="https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12fence">ID3D12Fence (d3d12)</a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12fence1">ID3D12Fence1 (d3d12)</a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/index_bkp">Windows API에 대 한 프로그래밍 참조</a></li>
-</ul>
-
-## <a name="winrt-api-reference"></a>WinRT API 참조
-
-<ul>
 <li><a href="https://docs.microsoft.com/uwp/api/windows.devices.lights.lamparraykind">LampArrayKind.</a></li>
 <li><a href="https://docs.microsoft.com/uwp/api/windows.devices.lights.lamppurposes">LampPurposes.</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.devices.usb.usbdeviceclass">Windows. Usb.</a></li>
 <li><a href="https://docs.microsoft.com/uwp/api/windows.foundation.numerics.matrix3x2">System.numerics.matrix3x2.</a></li>
-<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.directx.direct3d11.idirect3ddevice">Direct3D11. IDirect3DDevice</a></li>
 <li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.directx.directxpixelformat">DirectXPixelFormat.</a></li>
-<li><a href="https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegetpropertystatus">Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyStatus</a></li>
-
+<li><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.textreadingorder">TextReadingOrder.</a></li>
 </ul>

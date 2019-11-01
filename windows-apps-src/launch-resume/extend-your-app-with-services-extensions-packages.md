@@ -5,12 +5,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 확장하기, 구성 요소화, 앱 서비스, 패키지, 확장
 ms.localizationpriority: medium
-ms.openlocfilehash: a72b175e672b44d0dace0b4bf04956792edfadd0
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: d9a98ef8e0ec53668277face05d83c08f6421cb7
+ms.sourcegitcommit: c7e10793cbef55ace959ac8fc6ddd08e683602bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282515"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329515"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>서비스, 확장 및 패키지로 앱 확장
 
@@ -37,7 +37,7 @@ Microsoft Store에서 다운로드하고 앱에서 실행할 수 있는 코드�
 
 **In-proc 코드 플러그 인**  
 
-앱과 함께 In-process로 실행되는 코드입니다. C++만 지원됩니다. 콘텐츠도 포함할 수 있습니다. 코드가 In-process로 실행되기 때문에 신뢰 수준이 높습니다. 타사에 이러한 종류의 확장성을 노출 하지 않도록 선택할 수 있습니다.
+앱과 함께 In-process로 실행되는 코드입니다. 콘텐츠도 포함할 수 있습니다. 코드가 In-process로 실행되기 때문에 신뢰 수준이 높습니다. 타사에 이러한 종류의 확장성을 노출 하지 않도록 선택할 수 있습니다.
 
 **UX 자산 (문자열/이미지)**  
 
@@ -98,7 +98,7 @@ Windows 앱 서비스는 UWP 앱이 다른 유니버설 Windows 앱에 서비스
 
 스트리밍 설치는 앱이 사용자에게 배달되는 방식을 최적화하는 방법입니다. 전체 앱이 다운로드되기를 기다렸다가 사용하는 대신 필요한 부분이 다운로드되면 바로 앱을 실행할 수 있습니다. 기본 활성화 및 실행에 필요한 섹션과 앱의 나머지 부분을 위한 추가 콘텐츠로 앱을 나누는 것은 개발자에게 달려 있습니다. 자세한 내용과 구현 사항은 [UWP App Streaming Install(UWP 앱 스트리밍 설치)](/windows/msix/package/streaming-install)을 참조하세요.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [앱 서비스 만들기 및 사용](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
 [자산 패키지 소개](/windows/msix/package/asset-packages)  
