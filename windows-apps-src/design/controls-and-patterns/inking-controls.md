@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b34f88d198ec80c67e5aac7b57001e42fe5c516
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: b665145eac8599bae69aaf4b1951d267bf79f7a7
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66825024"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73062107"
 ---
 # <a name="inking-controls"></a>잉크 입력 컨트롤
 
@@ -80,7 +80,7 @@ InkCanvas 및 InkToolbar는 **Windows Ink 작업 영역**의 **스케치북**과
 앱에 InkCanvas를 추가하려면 다음과 같은 한 줄의 태그만 있으면 됩니다.
 
 ```xaml
-<InkCanvas x:Name=“myInkCanvas”/>
+<InkCanvas x:Name="myInkCanvas"/>
 ```
 
 > [!NOTE]
@@ -89,7 +89,7 @@ InkCanvas 및 InkToolbar는 **Windows Ink 작업 영역**의 **스케치북**과
 InkToolbar 컨트롤은 InkCanvas와 함께 사용해야 합니다. InkToolbar(모든 기본 제공 도구 포함)를 앱에 통합하려면 다음과 같은 한 줄의 태그가 추가로 필요합니다.
 
  ```xaml
-<InkToolbar TargetInkCanvas=“{x:Bind myInkCanvas}”/>
+<InkToolbar TargetInkCanvas="{x:Bind myInkCanvas}"/>
  ```
 
 이 경우 다음과 같은 InkToolbar가 표시됩니다.

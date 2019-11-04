@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: bcdeafc3f30f5b385c6feeddee78cf31635177a0
-ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
+ms.openlocfilehash: ca9e91233206f0e97d17fdbdd7b0fd09a2897cd8
+ms.sourcegitcommit: 3710117f24adb8555aa94b372db814e5d30ae45a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142541"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73427084"
 ---
 # <a name="call-uwp-apis-in-desktop-apps"></a>데스크톱 앱에서 UWP Api 호출
 
@@ -43,13 +43,13 @@ UWP (유니버설 Windows 플랫폼) Api를 사용 하 여 Windows 10 사용자�
 
 2. Visual Studio에서 프로젝트를 열고 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **NuGet 패키지 관리**를 선택 합니다.
 
-3. **NuGet 패키지 관리자** 창에서 **시험판 포함** 이 선택 되어 있는지 확인 합니다. 그런 다음 **찾아보기** 탭을 선택 하 고 `Microsoft.Windows.SDK.Contracts`를 검색 합니다.
+3. **NuGet 패키지 관리자** 창에서 **찾아보기** 탭을 선택 하 고 `Microsoft.Windows.SDK.Contracts`를 검색 합니다.
 
 4. `Microsoft.Windows.SDK.Contracts` 패키지를 찾은 후에는 **NuGet 패키지 관리자** 창의 오른쪽 창에서 대상으로 지정할 Windows 10 버전에 따라 설치할 패키지의 **버전** 을 선택 합니다.
 
-    * **10.0.18362-미리 보기**: Windows 10 버전 1903에 대해 선택 합니다.
-    * **10.0.17763-미리 보기**: Windows 10 버전 1809에 대해 선택 합니다.
-    * **10.0.17134-미리 보기**: Windows 10 버전 1803에 대해 선택 합니다.
+    * **10.0.18362**: Windows 10 버전 1903에 대해 선택 합니다.
+    * **10.0.17763**: Windows 10 버전 1809에 대해 선택 합니다.
+    * **10.0.17134**: Windows 10 버전 1803에 대해 선택 합니다.
 
 5. **설치**를 클릭합니다.
 

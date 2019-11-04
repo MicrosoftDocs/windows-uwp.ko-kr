@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 662f23c5ab201a44669b2e4e4a454aa73ebd3b43
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 31b4a02f3307909f325b71cdc0540d44054adf4c
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340200"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061977"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary 및 XAML 리소스 참조
 
@@ -77,7 +77,7 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 </Page>
 ```
 
-모든 리소스에는 키가 있어야 합니다. 일반적으로 이 키는 `x:Key=”myString”`으로 정의된 문자열입니다. 그러나 다름과 같은 몇 가지 다른 방법으로 키를 지정할 수 있습니다.
+모든 리소스에는 키가 있어야 합니다. 일반적으로 이 키는 `x:Key="myString"`으로 정의된 문자열입니다. 그러나 다름과 같은 몇 가지 다른 방법으로 키를 지정할 수 있습니다.
 
 -   [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) 및 [ControlTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate)에는 **TargetType**이 필요하며, [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute)가 지정되지 않은 경우 **TargetType**을 키로 사용합니다. 이 경우 키는 문자열이 아니라 실제 형식 개체입니다. (아래 예제 참조)
 -   [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute)가 지정되지 않은 경우 **TargetType**이 있는 [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) 리소스는 **TargetType**을 키로 사용합니다. 이 경우 키는 문자열이 아니라 실제 형식 개체입니다.
