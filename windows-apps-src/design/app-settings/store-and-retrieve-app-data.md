@@ -8,18 +8,18 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3958d69dc3142702eb2d2a41d6dba5ebeb9fa8ce
-ms.sourcegitcommit: 2fa2d2236870eaabc95941a95fd4e358d3668c0c
+ms.openlocfilehash: 0eb7ef49d0ce1876635dc36e84f43432c13e1791
+ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70076375"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690362"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>설정 및 기타 앱 데이터 저장 및 검색
 
 *앱 데이터* 는 특정 앱에서 만들고 관리 하는 변경 가능한 데이터입니다. 런타임 상태, 앱 설정, 사용자 기본 설정, 참조 콘텐츠 (예: 사전 앱의 사전 정의) 및 기타 설정을 포함 합니다. 앱 데이터는 사용자가 앱을 사용할 때 만들고 관리하는 데이터인 *사용자 데이터*와 다릅니다. 사용자 데이터에는 문서 또는 미디어 파일, 메일 또는 통신 기록, 사용자가 만든 콘텐츠를 보유하는 데이터베이스 레코드 등이 포함됩니다. 사용자 데이터는 둘 이상의 앱에 유용하거나 의미가 있을 수 있습니다. 사용자가 앱 자체와 별개로 문서와 같은 엔터티로 전송하거나 조작하려는 데이터인 경우가 많습니다.
 
-**앱 데이터에 대 한 중요 참고 사항:** 앱 데이터의 수명은 앱의 수명으로 제한됩니다. 앱이 제거되면 결과적으로 앱 데이터가 모두 손실됩니다. 사용자에게 중요하거나 대체할 수 없는 사용자 데이터나 항목을 저장하는 데 앱 데이터를 사용하지 마세요. 이러한 종류의 정보는 사용자 라이브러리 및 Microsoft OneDrive를 사용하여 저장하는 것이 좋습니다. 앱 데이터는 앱 관련 사용자 기본 설정, 설정 및 즐겨찾기를 저장하는 데 적합합니다.
+**앱 데이터에 대한 중요 정보:**  - 앱 데이터의 수명은 앱의 수명으로 제한됩니다. 앱이 제거되면 결과적으로 앱 데이터가 모두 손실됩니다. 사용자에게 중요하거나 대체할 수 없는 사용자 데이터나 항목을 저장하는 데 앱 데이터를 사용하지 마세요. 이러한 종류의 정보는 사용자 라이브러리 및 Microsoft OneDrive를 사용하여 저장하는 것이 좋습니다. 앱 데이터는 앱 관련 사용자 기본 설정, 설정 및 즐겨찾기를 저장하는 데 적합합니다.
 
 ## <a name="types-of-app-data"></a>앱 데이터의 유형
 
@@ -32,11 +32,12 @@ ms.locfileid: "70076375"
 앱 설정에 사용할 수 있는 데이터 형식은 다음과 같습니다.
 
 - **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
-- **Boolean**
+- **부울**
 - **Char16**, **String**
-- [**DateTime**](https://docs.microsoft.com/uwp/api/Windows.Foundation.DateTime), [ **TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan)
+- [**DateTime**](/uwp/api/Windows.Foundation.DateTime), [ **TimeSpan**](/uwp/api/Windows.Foundation.TimeSpan)
+    - /.Net의 C# [**경우: system.xml**](/dotnet/api/system.datetimeoffset?view=dotnet-uwp-10.0), system.object를 사용 [**합니다**](/dotnet/api/system.timespan?view=dotnet-uwp-10.0) .
 - **GUID**, [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size), [**Rect**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect)
-- [**ApplicationDataCompositeValue**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue): 원자 단위로 serialize 및 deserialize 되어야 하는 관련 앱 설정 집합입니다. 상호 의존적인 설정의 원자성 업데이트를 쉽게 처리하려면 복합 설정을 사용합니다. 시스템은 동시 액세스 및 로밍 중에 복합 설정의 무결성을 보장합니다. 복합 설정은 소량의 데이터에 최적화되어 있으며 대규모 데이터 집합에 사용할 경우에는 성능이 저하됩니다.
+- [**ApplicationDataCompositeValue**](/uwp/api/Windows.Storage.ApplicationDataCompositeValue): 원자성으로 직렬화 및 deserialize 되어야 하는 관련 앱 설정 집합입니다. 상호 의존적인 설정의 원자성 업데이트를 쉽게 처리하려면 복합 설정을 사용합니다. 시스템은 동시 액세스 및 로밍 중에 복합 설정의 무결성을 보장합니다. 복합 설정은 소량의 데이터에 최적화되어 있으며 대규모 데이터 집합에 사용할 경우에는 성능이 저하됩니다.
 
 ### <a name="files"></a>파일
 
