@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 새로운 기능
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 525110a09c56f48f9f9ce3d2521c98e2297a8372
-ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
+ms.openlocfilehash: 24abdb26cf884367d9a9521d30b09b443d2e4e00
+ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816713"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72998622"
 ---
 # <a name="whats-new-in-cwinrt"></a>C++/WinRT의 새로운 기능
 
@@ -269,9 +269,9 @@ struct MainPage : PageT<MainPage>
 
 [**winrt::event**](/uwp/cpp-ref-for-winrt/event) 구현은 이제 **remove** 메서드가 잘못된 토큰 값(배열에 없는 값)으로 호출되는 경우를 적절하게 처리합니다.
 
-#### <a name="coroutine-locals-are-now-destroyed-before-the-coroutine-returns"></a>코루틴 로컬은 이제 코루틴이 반환하기 전에 소멸됩니다.
+#### <a name="coroutine-local-variables-are-now-destroyed-before-the-coroutine-returns"></a>이제 코루틴이 반환되기 전에 코루틴 로컬 변수가 제거됨
 
-코루틴 형식을 구현하는 기존 방법에서는 코루틴이 반환/완료된 ‘이후’(마지막 일시 중단 이전이 아님) 코루틴 내 로컬이 소멸되도록 허용합니다.  이 문제를 피하고 다른 이점을 만들기 위해 대기자 다시 시작은 이제 마지막 일시 중단까지 지연됩니다.
+코루틴 형식을 구현하는 일반적인 방법에서는 코루틴이 *반환/완료되면*(마지막 일시 중단 이전이 아님) 코루틴 내의 로컬 변수가 제거되도록 허용할 수 있습니다. 이 문제를 피하고 다른 이점을 만들기 위해 대기자 다시 시작은 이제 마지막 일시 중단까지 지연됩니다.
 
 ## <a name="news-and-changes-in-windows-sdk-version-100177630-windows-10-version-1809"></a>Windows SDK 버전 10.0.17763.0(Windows 10 버전 1809)의 새로운 기능 및 변경 내용
 
@@ -296,7 +296,7 @@ struct MainPage : PageT<MainPage>
 - **주요 변경 내용**. [**winrt::handle_type 생성자**](/uwp/cpp-ref-for-winrt/handle-type#handle_typehandle_type-constructor)가 명시적으로 설정되어 강화되었습니다(이제 이 생성자로 잘못된 코드를 작성하기가 더 어려움). 원시 핸들 값을 할당해야 하는 경우 [**handle_type::attach 함수**](/uwp/cpp-ref-for-winrt/handle-type#handle_typeattach-function)를 대신 호출합니다.
 - **주요 변경 내용**. **WINRT_CanUnloadNow** 및 **WINRT_GetActivationFactory**의 서명이 변경되었습니다. 이 함수는 선언하면 안 됩니다. 대신 C++/WinRT Windows 네임스페이스 헤더 파일을 포함하는 경우 자동으로 포함되는 `winrt/base.h`를 포함하여 이 함수의 선언을 포함합니다.
 - [**winrt::clock 구조체**](/uwp/cpp-ref-for-winrt/clock)의 경우 **from_FILETIME/to_FILETIME**은 더 이상 사용되지 않고, 대신 **from_file_time/to_file_time**이 사용됩니다.
-- **IBuffer** 매개 변수가 필요한 API가 간소화되었습니다. 대부분의 API는 컬렉션 또는 배열을 선호하지만 C++에서 더 쉽게 사용할 필요가 있었던 많은 API는 **IBuffer**를 사용합니다. 이 업데이트는 C++ 표준 라이브러리 컨테이너에서 사용하는 동일한 데이터 명명 규칙을 사용하여 **IBuffer** 구현 뒤에 있는 데이터에 대한 직접 액세스를 제공합니다. 또한 일반적으로 대문자로 시작하는 메타데이터 이름과 충돌하지 않도록 합니다.
+- **IBuffer** 매개 변수가 필요한 API가 간소화되었습니다. 대부분의 API는 컬렉션 또는 배열을 선호합니다. 하지만 **IBuffer**를 사용하는 API를 더 쉽게 호출할 수 있어야 한다고 생각했습니다. 이 업데이트에서는 **IBuffer** 구현 뒤의 데이터에 직접 액세스할 수 있습니다. C++ 표준 라이브러리 컨테이너에서 사용하는 것과 동일한 데이터 명명 규칙을 사용합니다. 또한 이 규칙은 일반적으로 대문자로 시작하는 메타데이터 이름과 충돌하지 않도록 방지합니다.
 - 코드 생성이 향상되었습니다. 코드 크기를 줄이고, 인라인을 개선하고, 팩터리 캐싱을 최적화하기 위한 다양한 개선 사항이 있습니다.
 - 불필요한 재귀가 제거되었습니다. 명령줄이 특정 `.winmd`가 아닌 폴더를 참조하는 경우 `cppwinrt.exe` 도구는 더 이상 `.winmd` 파일을 재귀적으로 검색하지 않습니다. 또한 `cppwinrt.exe` 도구는 이제 복제본을 더 적절하게 처리하므로 사용자 오류 및 형식이 잘못된 `.winmd` 파일에 더 탄력적으로 대처할 수 있습니다.
 - 스마트 포인터가 강화되었습니다. 이전에는 새 값을 이동 할당할 때 이벤트 취소자가 호출되지 않았습니다. 이를 통해 스마트 포인터가 루트가 [**winrt::com_ptr struct template**](/uwp/cpp-ref-for-winrt/com-ptr)인 자체 할당을 안정적으로 처리하지 않는 문제를 파악할 수 있었습니다. **winrt::com_ptr**이 수정되었으며, 이벤트 취소자는 이동 의미 체계를 제대로 처리하여 할당 시 취소되도록 수정되었습니다.
