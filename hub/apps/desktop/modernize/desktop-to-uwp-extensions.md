@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: f51fc081c5cc18132a386197feb2ae76a22d2088
-ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
+ms.openlocfilehash: 65724a7524f68535f4ac917c5527ae8de8f2c6fb
+ms.sourcegitcommit: 545d5d864d89650a00a496ac4e52def9a13b14cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142494"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560685"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>데스크톱 앱을 Windows 10 및 UWP와 통합
 
@@ -502,7 +502,7 @@ ms.locfileid: "73142494"
 |MultiSelectModel |아래 참조 |
 |FileType |관련 파일 확장명입니다. |
 
-**MultSelectModel**
+**MultiSelectModel**
 
 패키지 데스크톱 앱에는 일반 데스크톱 앱과 동일한 세 가지 옵션이 있습니다.
 

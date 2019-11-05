@@ -7,12 +7,12 @@ ms.date: 05/01/2018
 ms.topic: article
 keywords: Windows 10, uwp, win32, 데스크톱, 알림, 데스크톱 브리지, 알림을 보내는 옵션, com 서버, com 활성자, com, 가짜 com, com 없음, com 없이, 알림 보내기
 ms.localizationpriority: medium
-ms.openlocfilehash: 030f8b1380dc28a41e65989ccbda688523fad965
-ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
+ms.openlocfilehash: 31501d2dc3ac255897e374ca81b05558be7bc2fc
+ms.sourcegitcommit: 545d5d864d89650a00a496ac4e52def9a13b14cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71100823"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560654"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>데스크톱 앱에서 알림 메시지
 
@@ -28,7 +28,7 @@ ms.locfileid: "71100823"
 
 아래 표에서 데스크톱 앱 내에서 알림을 지원하는 옵션과 그 옵션에 지원되는 기능을 보여 줍니다. 표를 사용하여 자신의 시나리오에서 가장 좋은 옵션을 선택할 수 있습니다.<br/><br/>
 
-| 옵션 | 시각적 개체 | 동작 | 입력 | 프로세스 내 활성화 |
+| 옵션 | 화면 효과 | 조치 | 입력 | 프로세스 내 활성화 |
 | -- | -- | -- | -- | -- |
 | [COM 활성기](#preferred-option---com-activator) | ✔️ | ✔️ | ✔️ | ✔️ |
 | [COM/스텁 CLSID 없음](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
@@ -38,7 +38,7 @@ ms.locfileid: "71100823"
 
 데스크톱 브리지 및 클래식 Win32 모두에서 작동하고 모든 알림 기능을 지원하는 기본 옵션입니다. "COM 활성자"를 두려워 하지 마십시오. COM 서버를 작성해 본 적이 없더라도 이를 매우 단순하게 만드는 [C#](send-local-toast-desktop.md) 및 [C++ 앱](send-local-toast-desktop-cpp-wrl.md)용 라이브러리가 있습니다.<br/><br/>
 
-| 시각적 개체 | 동작 | 입력 | 프로세스 내 활성화 |
+| 화면 효과 | 조치 | 입력 | 프로세스 내 활성화 |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ✔️ | ✔️ |
 
@@ -61,7 +61,7 @@ COM 활성자 옵션을 사용하면 앱에서 다음 알림 템플릿 및 활�
 
 COM 활성자를 구현할 수 없는 경우 대체 옵션입니다. 그러나 입력 지원(알림 시 텍스트 상자) 및 프로세스 내 활성화 등의 몇 가지 기능이 저하됩니다.<br/><br/>
 
-| 시각적 개체 | 동작 | 입력 | 프로세스 내 활성화 |
+| 화면 효과 | 조치 | 입력 | 프로세스 내 활성화 |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ❌ | ❌ |
 
@@ -81,6 +81,6 @@ COM 활성자를 구현할 수 없는 경우 대체 옵션입니다. 그러나 �
 
 ## <a name="resources"></a>리소스
 
-* [Destkop C# 앱에서 로컬 알림 메시지 보내기](send-local-toast-desktop.md)
-* [Destkop C++ WRL apps에서 로컬 알림 메시지 보내기](send-local-toast-desktop-cpp-wrl.md)
+* [데스크톱 C# 앱에서 로컬 알림 메시지 보내기](send-local-toast-desktop.md)
+* [데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기](send-local-toast-desktop-cpp-wrl.md)
 * [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)
