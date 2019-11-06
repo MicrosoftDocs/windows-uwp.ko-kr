@@ -5,12 +5,12 @@ keywords: 사용자 활동, 사용자 활동, 타임라인, cortana 사용자의
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ed268dd4ba07604db468ee24e5ea348acf806b39
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 7ddceda3457ef5251cb2b1e384dbb880725103fa
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321807"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282313"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>장치 간 사용자 활동 계속 수행
 
@@ -32,14 +32,14 @@ ms.locfileid: "67321807"
 
 [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity)는 Windows에서의 사용자 사용 단위입니다. UserActivity는 활동이 속한 앱을 활성화하는 데 사용되는 URI, 시각적 개체 및 활동을 설명하는 메타데이터의 세 부분으로 구성됩니다.
 
-1. [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri#Windows_ApplicationModel_UserActivities_UserActivity_ActivationUri)를 사용하여 특정 컨텍스트로 응용 프로그램을 다시 시작합니다. 일반적으로 이 링크는 스키마에 대한 프로토콜 처리기 양식(예: “my-app://page2?action=edit”) 또는 AppUriHandler 양식(예: http://constoso.com/page2?action=edit) 을 사용합니다.
+1. [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri#Windows_ApplicationModel_UserActivities_UserActivity_ActivationUri)를 사용하여 특정 컨텍스트로 응용 프로그램을 다시 시작합니다. 일반적으로이 링크는 스키마에 대 한 프로토콜 처리기의 형식 (예: "my app:/page2? action = edit") 또는 AppUriHandler (예: http://constoso.com/page2?action=edit) )를 사용 합니다.
 2. [VisualElements](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.visualelements)는 사용자가 제목, 설명 또는 적응형 카드 요소로 활동을 시각적으로 식별할 수 있는 클래스를 노출합니다.
 3. 마지막으로 [Content](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content)에는 특정 컨텍스트에서 활동을 그룹화하고 검색하는 데 사용할 수 있는 활동 메타데이터를 저장할 수 있습니다. 여기서는 종종 [https://schema.org](https://schema.org) 데이터 양식을 사용합니다.
 
 앱에 **UserActivity**를 추가하려면 다음과 같이 합니다.
 
 1. 앱에서 사용자 컨텍스트(예: 페이지 탐색, 새 게임 레벨 등)가 변경될 때 **UserActivity** 개체를 생성합니다.
-2. 채울 **UserActivity** 필수 필드의 최소 집합을 사용 하 여 개체: [ActivityId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activityid#Windows_ApplicationModel_UserActivities_UserActivity_ActivityId)하십시오 [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri), 및 [UserActivity.VisualElements.DisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.displaytext#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_DisplayText)합니다.
+2. 최소 필수 필드 집합을 사용 하 여 **UserActivity** 개체를 채웁니다. [ActivityId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activityid#Windows_ApplicationModel_UserActivities_UserActivity_ActivityId), [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri) 및 [UserActivity.VisualElements.DisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.displaytext#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_DisplayText).
 3. **UserActivity**가 다시 활성화할 수 있도록 앱에 사용자 지정 스키마 처리기를 추가합니다.
 
 단 몇 줄의 코드만으로 **UserActivity**를 앱에 통합할 수 있습니다. 예를 들어 MainPage 클래스 내의 MainPage.xaml.cs에서 이 코드를 가정해 보세요(참고: `using Windows.ApplicationModel.UserActivities;` 가정).
@@ -99,7 +99,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-이 코드는 앱이 프로토콜을 통해 활성화되었는지 여부를 검색합니다. 앱이 프로토콜을 통해 활성화된 경우 활성화되는 작업을 다시 시작하기 위해 앱이 수행해야 하는 작업을 확인합니다. 간단한 앱 되 고,이 앱을 다시 시작 하는 유일한 활동은 배치 있습니다 보조 페이지의 앱이 시작 되 면 합니다.
+이 코드는 앱이 프로토콜을 통해 활성화되었는지 여부를 검색합니다. 앱이 프로토콜을 통해 활성화된 경우 활성화되는 작업을 다시 시작하기 위해 앱이 수행해야 하는 작업을 확인합니다. 앱이 다시 시작 되는 유일한 작업은 간단한 앱 이며, 앱이 시작 될 때 보조 페이지에 표시 됩니다.
 
 ## <a name="use-adaptive-cards-to-improve-the-timeline-experience"></a>적응형 카드를 사용하여 타임라인 환경 개선
 
@@ -155,7 +155,7 @@ Microsoft 계정을 사용하여 응용 프로그램 또는 서비스를 인증�
 ## <a name="summary"></a>요약
 
 [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities) API를 사용하여 앱을 타임라인 및 Cortana에 표시할 수 있습니다.
-* 에 대 한 자세한 정보는 [ **UserActivity** API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
+* [ **UserActivity** API에 대 한 자세한 정보](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 * [샘플 코드](https://github.com/Microsoft/project-rome)를 확인합니다.
 * [더 정교한 적응형 카드](https://adaptivecards.io/)를 참조하세요.
 * [Microsoft Graph](https://developer.microsoft.com/graph)를 통해 iOS, Android 또는 웹 서비스에서 **UserActivity**를 게시합니다.
@@ -167,9 +167,9 @@ Microsoft 계정을 사용하여 응용 프로그램 또는 서비스를 인증�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [사용자 활동 (프로젝트 로마 docs)](https://docs.microsoft.com/windows/project-rome/user-activities/)
-* [Adaptive card](https://docs.microsoft.com/adaptive-cards/)
-* [Adaptive card 시각화 도우미, 샘플](https://adaptivecards.io/)
+* [사용자 활동 (Project 로마 문서)](https://docs.microsoft.com/windows/project-rome/user-activities/)
+* [적응 카드](https://docs.microsoft.com/adaptive-cards/)
+* [적응 카드 시각화, 샘플](https://adaptivecards.io/)
 * [URI 활성화 처리](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-* [Microsoft Graph, 작업 피드 및 Adaptive Card를 사용 하 여 모든 플랫폼에서 고객 참여](https://channel9.msdn.com/Events/Connect/2017/B111)
+* [Microsoft Graph, 활동 피드 및 적응 카드를 사용 하 여 모든 플랫폼에서 고객 참여](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph)
