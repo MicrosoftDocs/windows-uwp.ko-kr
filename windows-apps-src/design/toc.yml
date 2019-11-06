@@ -114,6 +114,8 @@
           items:
             - name: 항목 컨테이너 및 템플릿
               href: controls-and-patterns/item-containers-templates.md
+            - name: 데이터 템플릿 선택
+              href: controls-and-patterns/data-template-selector.md
             - name: 목록 보기의 항목 템플릿
               href: controls-and-patterns/item-templates-listview.md
             - name: 그리드 보기의 항목 템플릿
