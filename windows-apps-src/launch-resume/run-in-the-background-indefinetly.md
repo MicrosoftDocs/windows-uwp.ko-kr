@@ -6,12 +6,12 @@ keywords: 백그라운드 작업, 확장 된 실행, 리소스, 제한, 백그�
 ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: dee95e02e43f3a541bd332f5150765ca76bb0955
-ms.sourcegitcommit: 234dce5fb67e435ae14eb0052d94ab01611ac5e4
+ms.openlocfilehash: 55025d0348abdf311ebf020c70ccf9029bf7ec5a
+ms.sourcegitcommit: ebd35887b00d94f1e76f7d26fa0d138ec4abe567
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72822448"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73888662"
 ---
 # <a name="run-in-the-background-indefinitely"></a>백그라운드에서 무기한 실행
 
@@ -27,17 +27,22 @@ Microsoft Store에 제출하지 않는 앱을 개발하는 경우, 장치의 에
 
 `extendedExecutionUnconstrained` 기능이 앱의 매니페스트에 제한 기능으로 추가됩니다. 제한 기능에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.
 
+> **참고:** *Xmlns: rescap* XML 네임 스페이스 선언을 추가 하 고 *rescap* 접두사를 사용 하 여 기능을 선언 합니다.
+
 _Package.appxmanifest_
 ```xml
-<Package ...>
-...
+<Package
+    ...
+    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+    IgnorableNamespaces="uap mp rescap">
+  ...
   <Capabilities>
     <rescap:Capability Name="extendedExecutionUnconstrained"/>
   </Capabilities>
 </Package>
 ```
 
-`extendedExecutionUnconstrained` 기능을 사용하면 [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) 및 [ExtendedExecutionForegroundReason](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason)은 [ExtendedExecutionSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) 및 [ExtendedExecutionReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason) 대신 사용됩니다. 세션을 만들고, 구성원을 설정하고, 확장을 비동기적으로 요청하기 위한 동일한 패턴이 여전히 적용됩니다. 
+`extendedExecutionUnconstrained` 기능을 사용하면 [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) 및 [ExtendedExecutionForegroundReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason)은 [ExtendedExecutionSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) 및 [ExtendedExecutionReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason) 대신 사용됩니다. 세션을 만들고, 구성원을 설정하고, 확장을 비동기적으로 요청하기 위한 동일한 패턴이 여전히 적용됩니다. 
 
 ```cs
 var newSession = new ExtendedExecutionForegroundSession();
@@ -66,9 +71,15 @@ switch (result)
 
 유니버설 Windows 플랫폼에서 백그라운드 작업은 사용자 인터페이스 없이 백그라운드에서 실행되는 프로세스입니다. 백그라운드 작업은 일반적으로 취소되기 전에 최대 25초 동안 실행될 수 있습니다. 장기 실행 작업 중 일부에는 백그라운드 작업이 유휴 상태이거나 메모리를 사용하고 있지 않은지 확인하는 검사가 있습니다. Windows 크리에이터스 업데이트(버전 1703)에서 [extendedBackgroundTaskTime](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) 제한된 접근 권한 값은 이러한 제한을 제거하기 위해 도입되었습니다. **extendedBackgroundTaskTime** 기능이 앱의 매니페스트 파일에 제한 기능으로 추가됩니다.
 
+> **참고:** *Xmlns: rescap* XML 네임 스페이스 선언을 추가 하 고 *rescap* 접두사를 사용 하 여 기능을 선언 합니다.
+
 _Package.appxmanifest_
 ```xml
-<Package ...>
+<Package
+    ... 
+    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+    IgnorableNamespaces="uap mp rescap">
+...
   <Capabilities>
     <rescap:Capability Name="extendedBackgroundTaskTime"/>
   </Capabilities>

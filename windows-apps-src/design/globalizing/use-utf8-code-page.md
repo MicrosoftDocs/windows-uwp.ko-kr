@@ -1,23 +1,26 @@
 ---
-Description: 웹 앱과 기타 * nix 기반 플랫폼 (Unix, Linux 및 변형) 간의 최적 호환성을 위해 UTF-8 문자 인코딩을 사용 하 고, 지역화 버그를 최소화 하 고, 테스트 오버 헤드를 줄입니다.
+Description: 웹 앱과 기타 \*nix 기반 플랫폼 (Unix, Linux 및 변형) 간의 최적 호환성을 위해 UTF-8 문자 인코딩을 사용 하 고 지역화 버그를 최소화 하 고 테스트 오버 헤드를 줄입니다.
 title: Windows UTF-8 코드 페이지 사용
 template: detail.hbs
 ms.date: 06/12/2019
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: be3aade0289911f878d960fb62bde49b8ef840a8
-ms.sourcegitcommit: 3a06cf3f8bd00e5e6eac3b38ee7e3c7cf4bc5197
+ms.openlocfilehash: 4b4050dfea1589fbe79db08061bcc56e392173f1
+ms.sourcegitcommit: 13ce25364201223e21e2e5e89f99bc7aa4d93f56
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888742"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73847595"
 ---
 # <a name="use-the-utf-8-code-page"></a>UTF-8 코드 페이지 사용
 
-웹 앱과 기타 * nix 기반 플랫폼 (Unix, Linux 및 변형) 간의 최적 호환성을 위해 [utf-8](http://www.utf-8.com/) 문자 인코딩을 사용 하 고, 지역화 버그를 최소화 하 고, 테스트 오버 헤드를 줄입니다.
+웹 앱과 기타 \*nix 기반 플랫폼 (Unix, Linux 및 변형) 간의 최적 호환성을 위해 [utf-8](http://www.utf-8.com/) 문자 인코딩을 사용 하 고 지역화 버그를 최소화 하 고 테스트 오버 헤드를 줄입니다.
 
-U t f-8은 국제화를 위한 유니버설 코드 페이지 이며 1-6 바이트 가변 너비 인코딩을 사용 하 여 모든 유니코드 코드 점수를 지원 합니다. 웹에서 pervasively 사용 되며 * nix 기반 플랫폼의 기본값입니다.
+U t f-8은 국제화를 위한 유니버설 코드 페이지 이며 전체 유니코드 문자 집합을 인코딩할 수 있습니다. 웹에서 pervasively 사용 되며 * nix 기반 플랫폼의 기본값입니다.
+
+> [!NOTE]
+> 인코딩된 문자는 1 바이트에서 4 바이트 사이를 사용 합니다. UTF-8 인코딩은 최대 6 바이트의 긴 바이트 시퀀스를 지원 하지만 유니코드 6.0의 가장 큰 코드 포인트 (U + 10FFFF)는 4 바이트만 사용 합니다.
 
 ## <a name="-a-vs--w-apis"></a>-A와-W Api 비교
   
@@ -80,7 +83,8 @@ Windows에서 기본적으로 u t f-16으로 작동할 때 (`WCHAR`) UTF-8 데�
 [MultiByteToWideChar](https://docs.microsoft.com/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) 및 [WideCharToMultiByte](https://docs.microsoft.com/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) 를 사용 하면 u t f-8과 u t f-16`WCHAR`(및 기타 코드 페이지) 사이를 변환할 수 있습니다. 이 기능은 레거시 Win32 API `WCHAR`만 이해할 수 있는 경우에 특히 유용 합니다. 이러한 함수를 사용 하면 UTF-8 입력을 `WCHAR`로 변환 하 여-W API에 전달 하 고 필요한 경우 결과를 다시 변환할 수 있습니다.
 `CP_UTF8`로 설정 된 `CodePage`와 함께 이러한 함수를 사용 하는 경우 `0` 또는 `MB_ERR_INVALID_CHARS``dwFlags` 사용 합니다. 그렇지 않으면 `ERROR_INVALID_FLAGS` 발생 합니다.
 
-참고: `CP_ACP`은 Windows 버전 1903 (2019 업데이트) 이상에서 실행 되는 경우에만 `CP_UTF8`와 동일 하며 위에 설명 된 ActiveCodePage 속성은 u t f-8로 설정 되어 있습니다. 그렇지 않으면 레거시 시스템 코드 페이지를 따릅니다. `CP_UTF8`를 명시적으로 사용 하는 것이 좋습니다.
+> [!NOTE]
+> `CP_ACP` Windows 버전 1903 (2019 업데이트) 이상에서 실행 되는 경우에만 `CP_UTF8`와 동일 하며 위에 설명 된 ActiveCodePage 속성은 u t f-8로 설정 되어 있습니다. 그렇지 않으면 레거시 시스템 코드 페이지를 따릅니다. `CP_UTF8`를 명시적으로 사용 하는 것이 좋습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
