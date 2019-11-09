@@ -6,12 +6,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
-ms.openlocfilehash: b0d2ad6f0370867159054d77c7e68201d4799037
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 93c78845a218620a8a46fc4439733734099b9853
+ms.sourcegitcommit: 13ce25364201223e21e2e5e89f99bc7aa4d93f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062883"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73847610"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
 
@@ -123,7 +123,7 @@ ms.locfileid: "73062883"
     XAML 코드 창을 보면 여기에도 단추가 추가된 것을 볼 수 있습니다.
 
  ```XAML
-<Button x:name="button" Content="Button" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
+<Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
  ```
 
 4.  단추의 텍스트를 변경합니다.
@@ -131,7 +131,7 @@ ms.locfileid: "73062883"
     XAML 코드 보기에서 클릭하고 콘텐츠를 "Button"에서 "Hello, world!"로 변경합니다.
 
 ```XAML
-<Button x:name="button" Content="Hello, world!" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
+<Button x:Name="button" Content="Hello, world!" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
 ```
 
 디자인 캔버스에 표시된 단추가 새 텍스트를 표시하기 위해 어떻게 업데이트되는지 확인합니다.
