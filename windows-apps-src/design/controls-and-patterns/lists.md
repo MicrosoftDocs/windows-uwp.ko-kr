@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e1167a57da6a3f54cabcc946cfbf7a592f301d2c
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.openlocfilehash: d309ce7e18a8dc62a24bc0e7f51f0015042a5f84
+ms.sourcegitcommit: 3bb982f35c057e30c742ab9f1eea119bae627a5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163728"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74086860"
 ---
 # <a name="collections-and-lists"></a>컬렉션 및 목록
 
@@ -38,11 +38,11 @@ ms.locfileid: "72163728"
 
 > **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [FlipView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [TreeView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview), [ItemsRepeater 클래스](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
 
-> <div id="main">
-> <strong>Windows 10 Fall Creators Update - 동작 변경</strong>
-> </div>
-> 이제 기본적으로 선택을 수행하는 대신 터치, 터치패드, 패시브 펜 등의 활성 펜이 UWP 앱의 목록을 스크롤/이동합니다.
-> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer 클래스</a>의 API 참조 항목을 참조하세요.
+> <div id="main">  
+> <strong>Windows 10 Fall Creators Update - 동작 변경</strong>  
+> </div>  
+> 이제 기본적으로 선택을 수행하는 대신 터치, 터치패드, 패시브 펜 등의 활성 펜이 UWP 앱의 목록을 스크롤/이동합니다.  
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Scroll Viewer 클래스</a>에 대한 API 참조 항목을 참조하세요.  
 
 ## <a name="examples"></a>예
 
