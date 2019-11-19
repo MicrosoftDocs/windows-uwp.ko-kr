@@ -4,14 +4,14 @@ description: DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 코
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
 ms.date: 10/24/2017
 ms.topic: article
-keywords: Windows 10, uwp, 게임, directx
+keywords: Windows 10, UWP, 게임, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 940de8c00dc2639785ae82e87d63f4994b1b6b2e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: af5d73e0a786e33aff6274cd63ee5ae6ac77c133
+ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367744"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74153699"
 ---
 #  <a name="define-the-uwp-app-framework"></a>UWP 앱 프레임워크 정의
 
@@ -22,11 +22,11 @@ ms.locfileid: "66367744"
 뷰 공급자 개체는 __IFrameworkView__ 인터페이스를 구현하는데, 이 인터페이스는 이 게임 샘플을 생성하기 위해 구성해야 하는 일련의 메서드로 이루어져 있습니다.
 
 앱 단일 항목이 호출하는 이러한 5가지 메서드를 반드시 구현해야 합니다.
-* [__Initialize__](#initialize-the-view-provider)
+* [__초기__](#initialize-the-view-provider)
 * [__SetWindow__](#configure-the-window-and-display-behaviors)
 * [__부하__](#load-method-of-the-view-provider)
-* [__Run__](#run-method-of-the-view-provider)
-* [__Uninitialize__](#uninitialize-method-of-the-view-provider)
+* [__실행할지__](#run-method-of-the-view-provider)
+* [__묵시적__](#uninitialize-method-of-the-view-provider)
 
 __Initialize__ 메서드는 응용 프로그램 시작 시 호출됩니다. __Initialize__에 이어 __SetWindow__ 메서드가 호출됩니다. 그런 다음 __Load__ 메서드가 호출됩니다. 게임이 실행 중일 때 __Run__ 메시지가 호출됩니다. 게임이 종료되면 __Uninitialize__ 메서드가 호출됩니다. 자세한 내용은 [__IFrameworkView__ API 참조](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview)를 참조하세요. 
 
@@ -186,12 +186,12 @@ void App::Load(
 
 ### <a name="gamemain-constructor"></a>GameMain 생성자
 
-* 게임 렌더러를 생성 및 초기화합니다. 자세한 내용은 참조 하세요. [렌더링 프레임 워크 i: 렌더링에 대 한 소개](tutorial--assembling-the-rendering-pipeline.md)합니다.
+* 게임 렌더러를 생성 및 초기화합니다. 자세한 내용은 [렌더링 프레임워크 I: 렌더링 소개](tutorial--assembling-the-rendering-pipeline.md)를 참조하세요.
 * Simple3Dgame 개체를 생성 및 초기화합니다. 자세한 내용은 [주 게임 개체 정의](tutorial--defining-the-main-game-loop.md)를 참조하세요.    
 * 게임 UI 컨트롤 개체를 생성하고 게임 정보 오버레이를 표시하여 리소스 파일이 로드됨에 따라 진행률 표시줄을 보여줍니다. 자세한 내용은 [사용자 인터페이스 추가](tutorial--adding-a-user-interface.md)를 참조하세요.
-* 컨트롤러(터치, 마우스 또는 XBox 무선 컨트롤러)에서 입력을 읽을 수 있도록 컨트롤러를 생성합니다. 자세한 내용은 [컨트롤 추가](tutorial--adding-controls.md)를 참조하세요.
-* 컨트롤러를 초기화한 후에는 화면의 왼쪽 아래와 오른쪽 아래에 각각 이동 및 카메라 터치 컨트롤을 위해 2개의 사각형 영역을 정의합니다. 플레이어는 **SetMoveRect** 호출로 정의된 왼쪽 아래 사각형을 카메라를 전후좌우로 이동하기 위한 가상 컨트롤 패드로 사용합니다. **SetFireRect** 메서드로 정의된 오른쪽 아래 사각형은 탄약을 발사하는 가상 단추로 사용됩니다.
-* __create_task__ 및 __create_task::then__을 사용하여 리소스 로드를 2개의 개별 단계로 분리합니다. Direct3D 11 디바이스에 대한 액세스는 스레드로 제한이 되기 때문에 개체 생성을 위한 Direct3D 11 디바이스 액세스가 자유 스레드 방식으로 수행되는 동안 디바이스 컨텍스트가 생성됩니다. 따라서 원래 스레드에서 실행되는 완성 작업(*FinalizeCreateGameDeviceResources*)과는 별도의 스레드에서 **CreateGameDeviceResourcesAsync** 작업을 실행할 수 있습니다. **LoadLevelAsync** 및 **FinalizeLoadLevel**을 사용하는 로드 수준 리소스에는 비슷한 패턴을 사용합니다.
+* 컨트롤러 (터치, 마우스 또는 Xbox 무선 컨트롤러)에서 입력을 읽을 수 있도록 컨트롤러를 만듭니다. 자세한 내용은 [컨트롤 추가](tutorial--adding-controls.md)를 참조하세요.
+* 컨트롤러를 초기화한 후에는 화면의 왼쪽 아래와 오른쪽 아래에 각각 이동 및 카메라 터치 컨트롤을 위해 2개의 사각형 영역을 정의합니다. 플레이어는 **SetMoveRect** 호출로 정의된 왼쪽 아래 사각형을 카메라를 전후좌우로 이동하기 위한 가상 컨트롤 패드로 사용합니다. **SetFireRect** 메서드에서 정의된 오른쪽 아래 사각형은 탄약을 발사하는 가상 단추로 사용됩니다.
+* __create_task__ 및 __create_task::then__을 사용하여 리소스 로드를 2개의 개별 단계로 분리합니다. Direct3D 11 디바이스에 대한 액세스는 스레드로 제한이 되기 때문에 개체 생성을 위한 Direct3D 11 디바이스 액세스가 자유 스레드 방식으로 수행되는 동안 디바이스 컨텍스트가 생성됩니다. 따라서 원래 스레드에서 실행되는 완성 작업(*FinalizeCreateGameDeviceResources*)과는 별도의 스레드에서 **CreateGameDeviceResourcesAsync** 작업을 실행할 수 있습니다. **LoadLevelAsync** 및 **FinalizeLoadLevel**을 사용하는 로드 수준 리소스에서는 비슷한 패턴을 사용합니다.
 
 ```cpp
 GameMain::GameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) :
@@ -298,19 +298,19 @@ GameMain::GameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) 
 
 ## <a name="run-method-of-the-view-provider"></a>뷰 공급자의 Run 메서드
 
-이전 세 가지 메서드: __초기화할__, __SetWindow__, 및 __부하__ 스테이지를 설정 합니다. 이제 게임에서 **Run** 메서드를 실행하므로 즐기시면 됩니다! 게임 상태의 전환에 사용되는 이벤트는 디스패치 및 처리됩니다. 그래픽이 게임 루프 주기로 업데이트 됩니다.
+이전의 3가지 메서드 __Initialize__, __SetWindow__, __Load__는 스테이지를 설정했습니다. 이제 게임에서 **Run** 메서드를 실행하므로 즐기시면 됩니다! 게임 상태의 전환에 사용되는 이벤트는 디스패치 및 처리됩니다. 그래픽이 게임 루프 주기로 업데이트 됩니다.
 
 ### <a name="apprun"></a>App::Run
 
 플레이어가 게임 창을 닫으면 종료되는 __while__ 루프를 시작합니다.
 
 이 샘플 코드는 게임 엔진 상태 시스템에서 다음 두 상태 중 하나로 전환됩니다.
-    * __비활성화__: 게임 창이 비활성화(포커스를 잃음)되거나 사이드 창이 됩니다. 이 경우 게임이 이벤트 처리를 일시 중단하고 창이 포커스를 얻거나 비사이드될 때까지 기다립니다.
-    * __TooSmall__: 게임에서 자신의 상태를 업데이트 하 고 표시할 그래픽을 렌더링 합니다.
+    * __Deactivated__: 게임 창이 비활성화(포커스를 잃음)되거나 사이드 창이 됩니다. 이 경우 게임이 이벤트 처리를 일시 중단하고 창이 포커스를 얻거나 비사이드될 때까지 기다립니다.
+    * __TooSmall__: 게임이 고유한 상태를 업데이트하고 표시할 그래픽을 렌더링합니다.
 
 게임에 포커스가 있으면 메시지가 도착할 때 메시지 큐의 모든 이벤트를 처리해야 하므로 **ProcessAllIfPresent** 옵션을 사용하여 [**CoreWindowDispatch.ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents)를 호출해야 합니다. 다른 옵션을 사용하면 메시지 이벤트 처리가 지연되어 게임이 응답하지 않는 것처럼 보이거나 터치 동작이 느리고 "고정"되지 않는 것처럼 느끼게 됩니다.
 
-게임이 표시되지 않거나, 일시 중단되거나, 사이드 상태가 된 경우에는 도착하지 않는 메시지를 계속 디스패치하느라 리소스가 소비되는 일이 없어야 합니다. 이 경우에는 게임에서 **ProcessOneAndAllPending**을 사용하여 이벤트를 받을 때까지 차단하고, 해당 이벤트와 첫 번째 이벤트 처리 중 프로세스 큐에 도착하는 다른 이벤트를 처리합니다. [**ProcessEvents** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) 큐 처리 된 후 다음 즉시 반환 합니다.
+게임이 표시되지 않거나, 일시 중단되거나, 사이드 상태가 된 경우에는 도착하지 않는 메시지를 계속 디스패치하느라 리소스가 소비되는 일이 없어야 합니다. 이 경우에는 게임에서 **ProcessOneAndAllPending**을 사용하여 이벤트를 받을 때까지 차단하고, 해당 이벤트와 첫 번째 이벤트 처리 중 프로세스 큐에 도착하는 다른 이벤트를 처리합니다. [**그런 다음**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) 큐가 처리 된 후에 즉시 반환 됩니다.
 
 ```cpp
 void App::Run()
@@ -382,11 +382,11 @@ void GameMain::Run()
 
 ## <a name="uninitialize-method-of-the-view-provider"></a>뷰 공급자의 Uninitialize 메서드
 
-사용자가 결국 게임 세션을 종료하면 정리가 필요합니다. 여기서 **Uninitialize**가 필요하게 됩니다.
+사용자가 결국 게임 세션을 종료하면 정리가 필요합니다. 이 때 **Uninitialize**가 필요하게 됩니다.
 
-Windows 10 앱 창을 닫으면 응용 프로그램의 프로세스를 종료 하지 않습니다 하지만 대신 메모리에 단일 앱 항목의 상태를 쓰는지 합니다. 시스템에서 이 메모리를 확보해야 할 때 리소스를 특별 정리하는 등 특별한 조치가 필요한 경우에는 이 메서드에 해당 정리를 위한 코드를 포함시킵니다.
+Windows 10에서 앱 창을 닫으면 앱 프로세스가 종료 되지 않고 대신 메모리에 앱 singleton의 상태를 기록 합니다. 시스템에서 이 메모리를 확보해야 할 때 리소스를 특별 정리하는 등 특별한 조치가 필요한 경우에는 이 메서드에 해당 정리를 위한 코드를 포함시킵니다.
 
-### <a name="app-uninitialize"></a>앱: Uninitialize
+### <a name="app-uninitialize"></a>App:: Uninitialize
 
 ```cpp
 void App::Uninitialize()

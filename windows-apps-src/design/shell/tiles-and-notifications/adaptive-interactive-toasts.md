@@ -8,12 +8,12 @@ ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, uwp, 알림 메시지, 대화형 알림, 적응형 알림, 알림 콘텐츠, 알림 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bef6874b7855a321c4e5a9153faa96d432d2dea
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5b424da3b9413c7528cb6f6a6a888e9fe2cc7cb7
+ms.sourcegitcommit: a4a595c485a1e4549b02b0e20ca9f56b093c5814
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320926"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74125242"
 ---
 # <a name="toast-content"></a>알림 콘텐츠
 
@@ -22,10 +22,10 @@ ms.locfileid: "67320926"
 > **중요 API**: [UWP 커뮤니티 도구 키트 알림 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 > [!NOTE]
-> Windows 8.1 및 Windows Phone 8.1에서 레거시 템플릿, 참조를 [레거시 알림 템플릿 카탈로그](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10))합니다.
+> Windows 8.1 및 Windows Phone 8.1에서 레거시 템플릿을 보려면 [레거시 알림 템플릿 카탈로그](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10))를 참조 하세요.
 
 
-## <a name="getting-started"></a>시작
+## <a name="getting-started"></a>시작하기
 
 **알림 라이브러리를 설치 합니다.** XML 대신 C#을 사용하여 알림을 생성하려면 [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)("notifications uwp" 검색)라는 NuGet 패키지를 설치합니다. 이 문서에서 제공하는 C# 샘플은 NuGet 패키지 버전 1.0.0을 사용합니다.
 
@@ -42,10 +42,10 @@ ms.locfileid: "67320926"
 알림 메시지는 알림 식별에 사용할 수 있는 Tag/Group과 같은 몇 가지 데이터 속성과 *알림 콘텐츠*의 조합입니다.
 
 알림 콘텐츠의 주요 구성 요소는 다음과 같습니다.
-* **launch**: 이 인수를 클릭할 때 사용자 알림 메시지 알림에 표시 된 올바른 내용에 딥 링크에 있습니다 앱으로 다시 전달 됩니다 것을 정의 합니다. 자세한 내용은 [Send local toast(로컬 알림 보내기)](send-local-toast.md)를 참조하세요.
-* **visual**: 알림의 시각적 부분에서는 텍스트 및 이미지 포함 제네릭 바인딩을 포함 합니다.
-* **작업**: 입력 하 고 작업을 포함 하는 알림의 대화형 부분입니다.
-* **audio**: 컨트롤 알림을 사용자에 게 표시 되 면 오디오 재생 합니다.
+* **실행**: 사용자가 알림을 클릭할 때 앱에 다시 전달될 인수를 정의하여 알림이 표시 중인 올바른 콘텐츠로 딥 링크할 수 있게 합니다. 자세한 내용은 [Send local toast(로컬 알림 보내기)](send-local-toast.md)를 참조하세요.
+* **시각적 개체**: 알림의 시각적 부분으로 텍스트와 이미지가 들어 있는 일반 바인딩을 포함합니다.
+* **작업**: 알림의 대화형 부분으로 입력과 작업을 포함합니다.
+* **오디오**: 알림이 사용자에게 표시될 때 재생되는 오디오를 제어합니다.
 
 알림 콘텐츠를 원시 XML에 정의되지만 [NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용하여 알림 콘텐츠 생성을 위한 C# 또는 C++ 개체 모델을 구할 수 있습니다. 알림 콘텐츠 내의 모든 것이 이 문서에 설명되어 있습니다.
 
@@ -173,7 +173,7 @@ new ToastBindingGeneric()
 
 ## <a name="hero-image"></a>영웅 이미지
 
-**1 주년 업데이트의 새로운 기능에서**: 알림 메시지 표시 되는 주요 대표 이미지를 표시할 수 있습니다 [ **ToastGenericHeroImage** ](toast-schema.md#toastgenericheroimage) 눈에 띄게 표시 알림 배너를 내 고 관리 센터 내에서. 이미지 치수는 100% 배율에서 364x180픽셀입니다.
+**1주년 업데이트의 새로운 기능**: 알림은 알림 센터 내에 있는 동안 알림 배너 내에 눈에 띄게 표시되는 추천 [**ToastGenericHeroImage**](toast-schema.md#toastgenericheroimage)인 영웅 이미지를 표시할 수 있습니다. 이미지 치수는 100% 배율에서 364x180픽셀입니다.
 
 <img alt="Toast with hero image" src="images/toast-heroimage.jpg" width="364"/>
 
@@ -245,7 +245,7 @@ Http 및 https 원격 웹 이미지의 경우 각 개별 이미지의 파일 크
 
 ## <a name="attribution-text"></a>특성 텍스트
 
-**1 주년 업데이트의 새로운 기능에서**: 콘텐츠의 원본을 참조 해야 할 경우 attribution 텍스트를 사용할 수 있습니다. 이 텍스트는 앱의 ID나 알림의 타임스탬프와 함께 알림의 아래쪽에 항상 표시됩니다.
+**1주년 업데이트의 새로운 기능**: 콘텐츠의 소스를 참조해야 하는 경우 특성 텍스트를 사용할 수 있습니다. 이 텍스트는 앱의 ID나 알림의 타임스탬프와 함께 알림의 아래쪽에 항상 표시됩니다.
 
 특성 텍스트를 지원하지 않는 더 오래된 버전의 Windows에서는 텍스트가 다른 텍스트 요소로 표시됩니다. 단, 최대 3개의 텍스트 요소가 아직 없어야 합니다.
 
@@ -273,7 +273,7 @@ new ToastBindingGeneric()
 
 ## <a name="custom-timestamp"></a>사용자 지정 타임스탬프
 
-**크리에이터 업데이트의 새로운**: 이제 메시지/정보/콘텐츠 생성 되었을 때 정확 하 게 나타내는 고유한 타임 스탬프를 사용 하 여 시스템 제공 타임 스탬프를 재정의할 수 있습니다. 이 타임스탬프는 알림 센터 내에 표시됩니다.
+**크리에이터 업데이트의 새로운 기능**: 이제 시스템에서 제공하는 타임스탬프를 메시지/정보/콘텐츠 생성 시기를 정확하게 나타내는 타임스탬프로 재정의할 수 있습니다. 이 타임스탬프는 알림 센터 내에 표시됩니다.
 
 <img alt="Toast with custom timestamp" src="images/toast-customtimestamp.jpg" width="396"/>
 
@@ -296,7 +296,7 @@ ToastContent toastContent = new ToastContent()
 
 ## <a name="progress-bar"></a>진행률 표시줄
 
-**크리에이터 업데이트의 새로운**: 사용자에 게 다운로드 등과 같은 작업의 진행 상태를 유지 하 여 알림 메시지에 진행률 표시줄을 제공할 수 있습니다.
+**작성자 업데이트의 새로운**기능: 알림 메시지에 진행률 표시줄을 제공 하 여 다운로드와 같은 작업의 진행 상황을 사용자에 게 알릴 수 있습니다.
 
 <img alt="Toast with progress bar" src="images/toast-progressbar.png" width="364"/>
 
@@ -305,7 +305,7 @@ ToastContent toastContent = new ToastContent()
 
 ## <a name="headers"></a>헤더
 
-**크리에이터 업데이트의 새로운**: 알림 관리 센터에서 헤더에서 그룹화 할 수 있습니다. 예를 들어, 헤더에 따라 그룹 채팅 메시지를 그룹화하거나 헤더에 따라 일반적인 테마의 알림을 그룹화할 수 있습니다.
+**크리에이터 업데이트의 새로운 기능**: 알림 센터의 헤더에서 알림을 그룹화할 수 있습니다. 예를 들어, 헤더에 따라 그룹 채팅 메시지를 그룹화하거나 헤더에 따라 일반적인 테마의 알림을 그룹화할 수 있습니다.
 
 <img alt="Toasts with header" src="images/toast-headers-action-center.png" width="396"/>
 
@@ -314,7 +314,7 @@ ToastContent toastContent = new ToastContent()
 
 ## <a name="adaptive-content"></a>적응형 콘텐츠
 
-**1 주년 업데이트의 새로운 기능에서**: 위에 지정 된 콘텐츠를 외에도 알림을 확장 될 때 표시 되는 추가 적응 콘텐츠를 표시할 수도 있습니다.
+**1주년 업데이트의 새로운 기능**: 위에 지정된 콘텐츠 외에도 알림 확장 시 표시되는 추가 적응형 콘텐츠를 표시할 수도 있습니다.
 
 Adaptive를 사용하여 이 추가 콘텐츠를 지정합니다. 이에 대한 자세한 내용은 [Adaptive Tiles documentation(적응형 타일 설명서)](create-adaptive-tiles.md)을 참조하세요.
 
@@ -406,7 +406,7 @@ new ToastBindingGeneric()
 -   특정 페이지/컨텍스트로 이동하는 데 사용될 수 있는 인수를 사용하여 앱을 포그라운드에서 활성화합니다.
 -   빠른 회신이나 비슷한 시나리오를 위해 앱의 백그라운드 작업을 활성화합니다.
 -   프로토콜 실행을 통해 다른 앱을 활성화합니다.
--   알림 해제 또는 다시 알림과 같은 시스템 작업을 수행합니다.
+-   Snoozing 또는 알림 해제와 같은 시스템 작업을 수행 합니다.
 
 > [!NOTE]
 > 나중에 다룰 컨텍스트 메뉴 항목을 포함하여 단추는 5개까지만 가능합니다.
@@ -488,7 +488,7 @@ new ToastButton("Dismiss", "dismiss")
 
 ### <a name="buttons-with-pending-update-activation"></a>보류 중인 업데이트 활성화를 적용한 단추
 
-**Fall Creators Update**: 백그라운드 활성화 단추를 활성화 한 후 사용할 수 있습니다의 동작 **PendingUpdate** 토스트 알림을에 다단계 상호 작용을 만들려고 합니다. 사용자가 버튼을 클릭하면 백그라운드 작업이 활성화되고 알림은 백그라운드 작업이 이 알림을 새로운 알림으로 바꿀 때까지 화면에 머물러 있는 "보류 중인 업데이트" 상태가 됩니다.
+**Fall Creators Update의 새로운 기능**: 백그라운드 인증 단추에서 **PendingUpdate**의 활성화 동작 후 사용하여 알림 메시지에서 다단계 상호 작용을 만들 수 있습니다. 사용자가 버튼을 클릭하면 백그라운드 작업이 활성화되고 알림은 백그라운드 작업이 이 알림을 새로운 알림으로 바꿀 때까지 화면에 머물러 있는 "보류 중인 업데이트" 상태가 됩니다.
 
 이것을 구현하는 방법을 알아보려면 [보류 중인 업데이트 알림](toast-pending-update.md)을 참조하세요.
 
@@ -497,12 +497,12 @@ new ToastButton("Dismiss", "dismiss")
 
 ### <a name="context-menu-actions"></a>컨텍스트 메뉴 작업
 
-**1 주년 업데이트의 새로운 기능에서**: 관리 센터 내에서 사용자 알림 마우스 오른쪽 단추로 클릭할 때 표시 되는 기존 상황에 맞는 메뉴에 추가 상황에 맞는 메뉴 작업을 추가할 수 있습니다. 이 메뉴는 알림 센터에서 마우스 오른쪽 단추를 클릭할 때에만 나타납니다. 알림 팝업 배너를 마우스 오른쪽 단추로 클릭할 때에는 표시되지 않습니다.
+**1주년 업데이트의 새로운 기능**: 사용자가 알림 센터에서 알림을 마우스 오른쪽 단추로 클릭할 때 나타나는 기존 컨텍스트 메뉴에 추가 컨텍스트 메뉴 작업을 추가할 수 있습니다. 이 메뉴는 알림 센터에서 마우스 오른쪽 단추를 클릭할 때에만 나타납니다. 알림 팝업 배너를 마우스 오른쪽 단추로 클릭할 때에는 표시되지 않습니다.
 
 > [!NOTE]
 > 이전 디바이스에서는 이러한 추가 컨텍스트 메뉴 작업이 알림에서 간단히 일반 단추로 표시됩니다.
 
-추가하는 추가 컨텍스트 메뉴 작업(예: '위치 변경')은 기본 시스템 항목 2개 위에 나타납니다.
+추가 하는 상황에 맞는 메뉴 작업 (예: "위치 변경")은 두 개의 기본 시스템 항목 위에 표시 됩니다.
 
 <img alt="Toast with context menu" src="images/toast-contextmenu.png" width="444"/>
 
@@ -551,7 +551,7 @@ ToastContent content = new ToastContent()
 
 ### <a name="quick-reply-text-box"></a>빠른 회신 텍스트 상자
 
-메시지 시나리오 경우와 같이 빠른 회신 텍스트 상자를 활성화하려면 입력 주위에 단추가 표시되도록 텍스트 입력 및 단추를 추가하고 텍스트 입력의 ID를 참조합니다.
+빠른 회신 텍스트 상자를 사용 하도록 설정 하려면 (예: 메시징 앱에서) 텍스트 입력과 단추를 추가 하 고 텍스트 입력 필드의 ID를 참조 하 여 입력 필드 옆에 단추가 표시 되도록 합니다. 단추의 아이콘은 안쪽 여백이 없고, 흰색 픽셀이 투명으로 설정 되 고, 100% 배율로 설정 된 32x32 픽셀 이미지 여야 합니다.
 
 <img alt="notification with text input and actions" src="images/adaptivetoasts-xmlsample05.jpg" width="364"/>
 
@@ -796,7 +796,7 @@ ToastContent content = new ToastContent()
 
 -   **ToastButtonSnooze** 또는 **ToastButtonDismiss** 지정
 -   필요에 따라 사용자 지정 콘텐츠 문자열 지정
-    -   문자열을 제공 하지 않으면, "다시 알림" 및 "해제"에 대 한 지역화 된 문자열 자동으로 사용 합니다.
+    -   문자열을 제공 하지 않는 경우 "다시 알림" 및 "해제"에 대해 지역화 된 문자열을 자동으로 사용 합니다.
 -   필요에 따라 **SelectionBoxId**를 지정합니다.
     -   사용자가 다시 알림 간격을 선택하게 하지 않고 OS 전체에서 일관성 있는 시스템 정의 시간 간격에 한 번만 알림을 다시 발생하게 하려면 &lt;input&gt;을 구성하지 마세요.
     -   다시 알림 간격 선택 항목을 제공하려면:
@@ -847,9 +847,9 @@ ToastContent content = new ToastContent()
 > [!IMPORTANT]
 > 미리 알림 또는 알람을 사용할 때 알림 메시지에 대한 하나 이상의 단추를 제공해야 합니다. 그렇지 않으면 이 알림은 일반 알림으로 처리됩니다.
 
-* **미리 알림**: 사용자가 닫을 또는 작업을 수행 될 때까지 알림이 화면에 유지 됩니다. 또한 Windows Mobile에서는 알림이 미리 확장되어 표시됩니다. 미리 알림 소리가 재생됩니다.
-* **경보**: 미리 알림 동작 외에도 경보 또한 기본 경보 소리를 사용 하 여 오디오를 반복 합니다.
-* **IncomingCall**: Windows 모바일 디바이스에서 수신 전화 알림은 전체 화면으로 표시됩니다. 그렇지 않으면 벨소리 오디오를 사용하고 단추가 다른 스타일로 지정된다는 점을 제외하고는 알람으로 동일한 동작을 수행합니다.
+* **미리 알림**: 알림이 사용자가 알림을 해제하거나 작업을 수행할 때까지 화면에 표시됩니다. 또한 Windows Mobile에서는 알림이 미리 확장되어 표시됩니다. 미리 알림 소리가 재생됩니다.
+* **알람**: 미리 알림 동작 외에도 기본 알람 소리로 알림이 추가로 오디오를 반복합니다.
+* **IncomingCall**: Windows Mobile 장치의 전체 화면에 수신 전화 알림이 표시됩니다. 그렇지 않으면 벨소리 오디오를 사용하고 단추가 다른 스타일로 지정된다는 점을 제외하고는 알람으로 동일한 동작을 수행합니다.
 
 ```csharp
 ToastContent content = new ToastContent()
@@ -879,6 +879,6 @@ ToastContent content = new ToastContent()
  
 ## <a name="related-topics"></a>관련 항목
 
-* [로컬 알림 및 핸들 활성화 보내기](send-local-toast.md)
-* [GitHub (UWP 커뮤니티 도구 키트의 일부)에 대 한 알림 라이브러리](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
-* [언어, 배율 및 고대비 대 한 타일 및 알림 알림 지원](tile-toast-language-scale-contrast.md)
+* [로컬 알림 보내기 및 활성화 처리](send-local-toast.md)
+* [GitHub의 알림 라이브러리 (UWP 커뮤니티 도구 키트의 일부)](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [언어, 규모 및 고대비에 대 한 타일 및 알림 알림 지원](tile-toast-language-scale-contrast.md)
