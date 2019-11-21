@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: ba99abd906bd84a91fae5da1505ac8845dd5b99c
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 5086353adbc07e265f02e12f998ae655cd512d48
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282474"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258974"
 ---
 # <a name="microsoft-store-policies"></a>Microsoft Store 정책
 
@@ -36,7 +36,7 @@ Microsoft Store<sup>1</sup>용 제품 개발에 관심을 가져주셔서 감사
 
 귀하의 제품은 수억 명의 고객 환경에서 매우 중요합니다. 귀하가 생산한 제품을 전 세계에 제공하는 것을 적극적으로 도와드리겠습니다.
 
-당사의 정책에 대한 피드백이 있으면 [포럼](http://go.microsoft.com/fwlink/p/?LinkId=224196)에 설명을 입력하여 알려주시기 바랍니다. Microsoft는 모든 의견을 존중합니다.
+당사의 정책에 대한 피드백이 있으면 [포럼](https://social.msdn.microsoft.com/Forums/windowsapps/home?forum=windowsstore)에 설명을 입력하여 알려주시기 바랍니다. Microsoft는 모든 의견을 존중합니다.
 
 
 ## <a name="table-of-contents"></a>목차
@@ -114,7 +114,7 @@ Microsoft Store<sup>1</sup>용 제품 개발에 관심을 가져주셔서 감사
 
 **10.2.3**
 
-제품은 [사용자 동의 없이 설치된 악성 소프트웨어](http://go.microsoft.com/fwlink/?LinkId=821298)에 대한 Microsoft 기준에 정의된 맬웨어를 포함하거나 사용하지 않아야 합니다.
+제품은 [사용자 동의 없이 설치된 악성 소프트웨어](https://docs.microsoft.com/windows/security/threat-protection/intelligence/criteria)에 대한 Microsoft 기준에 정의된 맬웨어를 포함하거나 사용하지 않아야 합니다.
 
 **10.2.4**
 
@@ -291,11 +291,11 @@ WNS 또는 MPNS를 통해 제공되는 알림은 제품 콘텐츠로 간주되�
 
 **10.10.2**
 
-홍보용 광고 캠페인을 구매하거나 만들어 파트너 센터의 광고 캠페인 기능을 통해 제품을 홍보하는 경우 연관된 방문 페이지를 포함하여 Microsoft에 제공하는 모든 광고 자료는 Microsoft의 [크리에이티브 사양 정책](http://go.microsoft.com/fwlink/p/?LinkId=532593) 및 [크리에이티브 수용 정책](http://go.microsoft.com/fwlink/p/?LinkId=532595)을 준수해야 합니다.
+홍보용 광고 캠페인을 구매하거나 만들어 파트너 센터의 광고 캠페인 기능을 통해 제품을 홍보하는 경우 연관된 방문 페이지를 포함하여 Microsoft에 제공하는 모든 광고 자료는 Microsoft의 [크리에이티브 사양 정책](https://about.ads.microsoft.com/solutions/ad-products/display-advertising/creative-specs) 및 [크리에이티브 수용 정책](https://about.ads.microsoft.com/solutions/ad-products/display-advertising/creative-acceptance-policies)을 준수해야 합니다.
 
 **10.10.3**
 
-제품에 표시되는 모든 광고 콘텐츠는 Microsoft의 [크리에이티브 수용 정책](http://go.microsoft.com/fwlink/p/?LinkId=532595)을 준수해야 합니다.
+제품에 표시되는 모든 광고 콘텐츠는 Microsoft의 [크리에이티브 수용 정책](https://about.ads.microsoft.com/solutions/ad-products/display-advertising/creative-acceptance-policies)을 준수해야 합니다.
 
 제품에서 광고를 표시하는 경우 표시되는 모든 콘텐츠는 다음 요구 사항을 포함하여 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)의 광고 요구 사항을 따라야 합니다.
 
@@ -309,7 +309,7 @@ WNS 또는 MPNS를 통해 제공되는 알림은 제품 콘텐츠로 간주되�
 
 **10.10.6**
 
-제품이 13세 이하의 어린이([아동에 관한 온라인 개인 정보 보호법](http://go.microsoft.com/fwlink/p/?LinkID=623015)의 정의를 따름)를 대상으로 하는 경우, Microsoft의 파트너 센터에 이 사실을 알려야 하며 제품에 표시되는 모든 광고 콘텐츠가 13세 이하의 어린이에게 적합해야 합니다.
+제품이 13세 이하의 어린이([아동에 관한 온라인 개인 정보 보호법](https://www.ftc.gov/tips-advice/business-center/privacy-and-security/children%27s-privacy)의 정의를 따름)를 대상으로 하는 경우, Microsoft의 파트너 센터에 이 사실을 알려야 하며 제품에 표시되는 모든 광고 콘텐츠가 13세 이하의 어린이에게 적합해야 합니다.
 
 ### <a name="1011-mobile-voice-plans"></a>10.11 음성 통화 요금제
 
@@ -330,11 +330,11 @@ Edge 확장은 다음과 같은 추가 요구 사항을 따릅니다.
 
 **10.13.1**
 
-Xbox One을 대상으로 하며 다른 디바이스나 플랫폼에서 실행되는 게임의 원격 게임 플레이/컨트롤 기능을 주로 제공하는 제품을 포함한 게임 제품은 [Xbox Live Creators](https://go.microsoft.com/fwlink/?linkid=844722) 또는 [ID@Xbox](http://go.microsoft.com/fwlink/?LinkId=821742) 프로그램을 통해 Xbox Live 서비스를 사용해야 합니다.
+Xbox One을 대상으로 하며 다른 디바이스나 플랫폼에서 실행되는 게임의 원격 게임 플레이/컨트롤 기능을 주로 제공하는 제품을 포함한 게임 제품은 [Xbox Live Creators](https://go.microsoft.com/fwlink/?linkid=844722) 또는 [ID@Xbox](https://www.xbox.com/Developers/id) 프로그램을 통해 Xbox Live 서비스를 사용해야 합니다.
 
 **10.13.2**
 
-Xbox One 디바이스에서 플레이어 간 통신이나 동기화 네트워크 플레이가 가능한 게임 제품은 Xbox Live를 이용해야 하며 [ID@Xbox](http://go.microsoft.com/fwlink/?LinkId=821742) 프로그램을 통해 승인을 받아야 합니다.
+Xbox One 디바이스에서 플레이어 간 통신이나 동기화 네트워크 플레이가 가능한 게임 제품은 Xbox Live를 이용해야 하며 [ID@Xbox](https://www.xbox.com/Developers/id) 프로그램을 통해 승인을 받아야 합니다.
 
 **10.13.3**
 
@@ -356,7 +356,7 @@ Xbox Live를 사용하는 게임 제품은 다음을 준수해야 합니다.
 
 Xbox Live를 사용하고 다중 접속 게임 플레이, 사용자 생성 콘텐츠 또는 사용자 통신을 제공하는 게임 제품의 경우 다음을 준수해야 합니다.
 - 사용자가 Xbox Live에 로그인할 때까지 게임 플레이를 허용하지 않아야 합니다.
-- [자녀 보호 및 서비스 제어 기능](https://go.microsoft.com/fwlink/?linkid=860295)을 적용해야 합니다.
+- [자녀 보호 및 서비스 제어 기능](https://docs.microsoft.com/gaming/xbox-live/get-started/setup-ide/creators/unity-win10/check-user-privileges-in-unity)을 적용해야 합니다.
 
 **10.13.7**
 
@@ -385,7 +385,7 @@ Xbox Live 사용자 데이터에는 다음 개인 정보 처리 방침 요구 �
 - 서비스와 사용자 데이터는 게임에서 적절하게 사용해야 합니다. 이 데이터에는 사용량 현황 데이터, 계정 ID 및 기타 개인 신원 데이터, 통계, 점수, 등급, 순위, 타 사용자 연결, 기타 사용자의 소셜 활동과 관련된 데이터가 포함되며 이에 제한되지 않습니다.
 - Xbox Live 소셜 그래프 데이터(예: 친구 목록)는 저장하지 않습니다. 단, Xbox Live 계정을 게임과 연결한 사용자의 계정 식별자는 예외입니다.
 - 게임을 Microsoft 서비스에서 제거하거나 사용자가 게임과 Xbox Live 계정의 연결을 해제하면 모든 계정 ID도 삭제하십시오. 익명, 집계, 파생 데이터를 포함하여 모든 서비스 또는 사용자 데이터를 광고 네트워크나 데이터 브로커, 기타 광고 또는 수익 창출 관련 서비스와 공유하지 마십시오.
-- Microsoft가 최종 사용자에게서 자신의 개인 데이터를 삭제하라는 요청을 받으면 최종 사용자의 ID 목록을 제공하여 해당 요청을 귀하에게 전달합니다. 모든 삭제 요청을 받았는지 확인하기 위해 최소 매 30일마다 목록을 확인해야 하며 최종 사용자의 삭제 요청을 충족하기 위한 목적으로만 목록에 제공된 정보를 사용해야 합니다. 이 프로세스에 대한 자세한 정보는 [삭제한 계정 목록 도구](https://aka.ms/xbox-deleted)에서 찾을 수 있습니다.
+- Microsoft가 최종 사용자에게서 자신의 개인 데이터를 삭제하라는 요청을 받으면 최종 사용자의 ID 목록을 제공하여 해당 요청을 귀하에게 전달합니다. 모든 삭제 요청을 받았는지 확인하기 위해 최소 매 30일마다 목록을 확인해야 하며 최종 사용자의 삭제 요청을 충족하기 위한 목적으로만 목록에 제공된 정보를 사용해야 합니다. 이 프로세스에 대한 자세한 정보는 [삭제한 계정 목록 도구](https://forums.xboxlive.com/users/login.html)에서 찾을 수 있습니다.
 
 ### <a name="1014-account-type"></a>10.14 계정 유형
 
