@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 97ad2485abab0bd4733699bc4ffcf29e17a22844
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 318c58b393a33916df7bab51a4ef2690494d14fb
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369443"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259604"
 ---
 # <a name="track-recently-used-files-and-folders"></a>최근에 사용한 파일 및 폴더 추적
 
@@ -25,7 +25,7 @@ ms.locfileid: "66369443"
 앱의 MRU는 정적 [**StorageApplicationPermissions.MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist) 속성에서 가져오는 [**StorageItemMostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList) 클래스로 표현됩니다. MRU 항목은 [**IStorageItem**](https://docs.microsoft.com/uwp/api/Windows.Storage.IStorageItem) 개체로 저장되므로 파일을 나타내는 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체와 폴더를 나타내는 [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) 개체를 모두 MRU에 추가할 수 있습니다.
 
 > [!NOTE]
-> 전체 샘플을 보려면 [파일 선택기 샘플](https://go.microsoft.com/fwlink/p/?linkid=619994) 및 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)을 참조하세요.
+> 전체 샘플을 보려면 [파일 선택기 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FilePicker) 및 [파일 액세스 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

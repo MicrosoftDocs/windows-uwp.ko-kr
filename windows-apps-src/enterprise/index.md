@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eec1de013efce7b23cd89e81f659a5cc530638c4
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 152a1bf2a751c2d2c78818b85868bfea3be911ac
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339960"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259649"
 ---
 # <a name="enterprise"></a>엔터프라이즈
 
@@ -146,7 +146,7 @@ LOB(기간 업무) 앱은 다양한 다른 시스템에 데이터를 저장하�
 | 항목 | 설명 |
 |-------|-------------|
 | [UWP 앱 가이드](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) | 이 기초 가이드에서는 디바이스 패밀리 정의 및 대상 디바이스 패밀리를 결정하는 방법, 다양한 디바이스 폼 팩터에 맞게 UI를 조정할 수 있는 새 UI 컨트롤 및 패널, 앱에서 사용할 수 있는 API 화면을 이해하고 제어하는 방법을 포함하여 Windows 10 UWP 플랫폼에 대해 알아봅니다. |
-| [적응형 XAML UI 코드 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619992) | 이 코드 예제에서는 디바이스 유형에 관계없이 앱에 사용할 수 있는 모든 레이아웃 옵션 및 컨트롤을 보여 주며, 패널과 상호 작용하여 원하는 레이아웃을 얻는 방법을 보여 줍니다. 각 컨트롤이 다양한 폼 팩터에 어떻게 응답하는지를 보여 주는 것은 물론, 앱 자체도 이에 응답하여 적응형 UI를 얻기 위한 다양한 방법을 보여 줍니다. |
+| [적응형 XAML UI 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) | 이 코드 예제에서는 디바이스 유형에 관계없이 앱에 사용할 수 있는 모든 레이아웃 옵션 및 컨트롤을 보여 주며, 패널과 상호 작용하여 원하는 레이아웃을 얻는 방법을 보여 줍니다. 각 컨트롤이 다양한 폼 팩터에 어떻게 응답하는지를 보여 주는 것은 물론, 앱 자체도 이에 응답하여 적응형 UI를 얻기 위한 다양한 방법을 보여 줍니다. |
 | [Xamarin 항목](/xamarin/) | 전화를 대상으로 하는 Xamarin |
 
 ## <a name="deployment"></a>배포

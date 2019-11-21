@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b1f6e0e04cdf81512918e0cd3e33ec0f93e2245
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5b0d226a9492a2218edf20e68b8216ea513ca12a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321006"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260534"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
@@ -115,7 +115,7 @@ UWP 앱은 운영 체제에서 제공되는 네이티브 API인 Windows 런타�
 
 Microsoft의 디자인 시스템을 Fluent라고 합니다. Fluent Design System은 혁신적인 UWP 기능이 결집된 구현체로서 모든 유형의 Windows 기반 디바이스에서 높은 성능을 발휘할 수 있는 앱을 개발하기 위한 모범 사례가 여기에 통합되어 있습니다. Fluent 환경은 태블릿부터 노트북, PC, TV 및 가상 현실 디바이스에 이르기까지 모든 디바이스에 적응하여 자연스러운 경험을 제공합니다. Fluent Design에 대한 내용은 [UWP 앱을 위한 Fluent Design System](https://docs.microsoft.com/windows/uwp/design/fluent-design-system)을 참조하세요.
 
-좋은 [디자인](https://go.microsoft.com/fwlink/?LinkId=258848)이란 모양과 기능 외에도 사용자가 앱과 상호 작용하는 방식을 고려한 것입니다. 사용자 환경은 앱 사용의 즐거움을 결정하는 데 중요한 역할을 하므로 이 단계를 간과해서는 안 됩니다. [디자인 기본 사항](https://developer.microsoft.com/en-us/windows/apps/design)에서는 유니버설 Windows 앱 디자인을 소개합니다. 사용자를 즐겁게 해주는 UWP 앱을 디자인하는 방법은 [디자이너용 UWP(유니버설 Windows 플랫폼) 앱 소개](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro)를 참조하세요. 코딩을 시작하기 전에 [디바이스 입문](../design/devices/index.md)을 참조하면 대상으로 지정하려는 다양한 폼 팩터에서 앱을 사용하는 조작 환경을 생각하는 데 도움이 됩니다.
+좋은 [디자인](http://design.windows.com/)이란 모양과 기능 외에도 사용자가 앱과 상호 작용하는 방식을 고려한 것입니다. 사용자 환경은 앱 사용의 즐거움을 결정하는 데 중요한 역할을 하므로 이 단계를 간과해서는 안 됩니다. [디자인 기본 사항](https://developer.microsoft.com/en-us/windows/apps/design)에서는 유니버설 Windows 앱 디자인을 소개합니다. 사용자를 즐겁게 해주는 UWP 앱을 디자인하는 방법은 [디자이너용 UWP(유니버설 Windows 플랫폼) 앱 소개](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro)를 참조하세요. 코딩을 시작하기 전에 [디바이스 입문](../design/devices/index.md)을 참조하면 대상으로 지정하려는 다양한 폼 팩터에서 앱을 사용하는 조작 환경을 생각하는 데 도움이 됩니다.
 
 다양한 디바이스에서의 조작 외에도 여러 디바이스의 이점을 수용하도록 [앱을 계획](https://docs.microsoft.com/windows/uwp/get-started/plan-your-app)해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
@@ -125,7 +125,7 @@ Microsoft의 디자인 시스템을 Fluent라고 합니다. Fluent Design System
 
 ### <a name="add-services"></a>서비스 추가
 
-- 디바이스 간에 동기화하려면 [클라우드 서비스](https://go.microsoft.com/fwlink/?LinkId=526377)를 사용합니다.
+- 디바이스 간에 동기화하려면 [클라우드 서비스](https://azure.microsoft.com/documentation/services/cloud-services)를 사용합니다.
 - 앱 환경에서 지원하기 위해 [웹 서비스에 연결](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))하는 방법을 알아보세요.
 - [푸시 알림](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) 및 [앱에서 바로 구매](https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-product-purchases)를 계획에 포함합니다. 이러한 기능은 장치 간에 작동해야 합니다.
 

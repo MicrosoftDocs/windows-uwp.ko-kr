@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ce81088495716e43a32dab94d1d47d399dd6a309
-ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
+ms.openlocfilehash: 31f527cff7588ccf6da2594566cfa3cf13a214f1
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71061914"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258677"
 ---
 # <a name="sound"></a>소리
 
@@ -69,7 +69,7 @@ ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off
 ### <a name="sound-for-tv-and-xbox"></a>TV 및 Xbox의 소리
 
 소리는 10피트 환경의 주요 부분이며, **ElementSoundPlayer**의 상태는 기본적으로 **자동**이므로 Xbox에서 앱을 실행하는 경우에만 소리가 재생됩니다.
-Xbox 및 TV용 디자인 방식에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://go.microsoft.com/fwlink/?LinkId=760736)을 참조하세요.
+Xbox 및 TV용 디자인 방식에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN)을 참조하세요.
 
 ## <a name="sound-volume-override"></a>소리 볼륨 재정의
 

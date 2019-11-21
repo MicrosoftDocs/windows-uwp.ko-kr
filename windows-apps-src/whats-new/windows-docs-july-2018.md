@@ -5,18 +5,18 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 07/11/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4030796e942c76ccf32e04dbf951cac68718a6a5
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3c92de1901c9cc67a30f495e34289bac5d7d2b94
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320394"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258792"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>2018년 7월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 지속적으로 업데이트되고 있습니다. 7월에 제공된 기능 개요, 개발자 지침, 비디오 및 샘플은 다음과 같습니다.
 
-Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
@@ -34,7 +34,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ### <a name="notepad"></a>Windows 메모장
 
-Windows 10 Insider Preview 빌드 17713에서 사용할 수 있는 [메모장이 많은 새로운 기능으로 업데이트되었습니다](https://aka.ms/ant-man). 이제 확대/축소, 줄 바꿈 찾기/바꾸기, Unix/Linux(LF) 및 Mac(CR) 줄 끝 지원은 [Windows 참가자](https://insider.windows.com/)에서 사용할 수 있습니다. 
+Windows 10 Insider Preview 빌드 17713에서 사용할 수 있는 [메모장이 많은 새로운 기능으로 업데이트되었습니다](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/). 이제 확대/축소, 줄 바꿈 찾기/바꾸기, Unix/Linux(LF) 및 Mac(CR) 줄 끝 지원은 [Windows 참가자](https://insider.windows.com/)에서 사용할 수 있습니다. 
 
 ## <a name="developer-guidance"></a>개발자 지침
 
@@ -70,11 +70,11 @@ Adobe XD 및 Adobe Illustrator 도구 키트는 새로운 기능으로 업데이
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>개발자를 위한 시작: Windows 10에서 양식 만들기 및 사용자 지정
 
-이제 Windows 개발자를 위한 [시작 문서](../get-started/index.md)에서 기본 앱 개발 작업용 실습 환경을 제공합니다. 이 비디오에서는 이러한 항목 중 하나를 안내하고, 앱에서 양식 UI를 만드는 방법에 대한 기본 사항을 설명합니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be)하여 작동하는 코드를 살펴본 다음, [해당 항목을 직접 확인해 보세요.](https://aka.ms/CreateForms)
+이제 Windows 개발자를 위한 [시작 문서](../get-started/index.md)에서 기본 앱 개발 작업용 실습 환경을 제공합니다. 이 비디오에서는 이러한 항목 중 하나를 안내하고, 앱에서 양식 UI를 만드는 방법에 대한 기본 사항을 설명합니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be)하여 작동하는 코드를 살펴본 다음, [해당 항목을 직접 확인해 보세요.](https://docs.microsoft.com/windows/uwp/get-started/construct-form-learning-track)
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Project Personality Chat을 사용하여 봇 향상
 
-Project Personality Chat을 사용하면 사용자 지정 가능한 가상 사용자를 채팅 봇에 추가할 수 있습니다. Microsoft Bot Framework SDK와 통합하면 고객과 상호 작용하는 더 향상된 대화형 방법에 맞게 작은 대화 기능을 추가할 수 있습니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be)하여 구현하는 방법을 알아본 다음, 실습 환경용 [대화형 데모를 사용해 보세요](https://aka.ms/PersonalityChat).
+Project Personality Chat을 사용하면 사용자 지정 가능한 가상 사용자를 채팅 봇에 추가할 수 있습니다. Microsoft Bot Framework SDK와 통합하면 고객과 상호 작용하는 더 향상된 대화형 방법에 맞게 작은 대화 기능을 추가할 수 있습니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be)하여 구현하는 방법을 알아본 다음, 실습 환경용 [대화형 데모를 사용해 보세요](https://www.microsoft.com/research/project/personality-chat/).
 
 ### <a name="one-dev-question"></a>One Dev Question
 

@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7942839b43739ca5fb15106abbfa1877ead81dc2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: ff6031878b9189ca3794e2a9c68c85b76e5d21a7
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362766"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257439"
 ---
 # <a name="flip-view"></a>보기 대칭 이동
 
@@ -204,7 +204,7 @@ stackPanel1.Children.Add(flipView1);
 
 ![상황 표시기 예제](images/controls_contextindicator.jpg)
 
-FlipView에 상황 표시기를 추가하는 방법을 보여 주는 예제 코드는 [XAML FlipView 샘플](https://go.microsoft.com/fwlink/p/?LinkID=311760)을 참조하세요.
+FlipView에 상황 표시기를 추가하는 방법을 보여 주는 예제 코드는 [XAML FlipView 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-FlipView-control-0ae45312)을 참조하세요.
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
@@ -227,7 +227,7 @@ FlipView에 상황 표시기를 추가하는 방법을 보여 주는 예제 코�
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-articles"></a>관련 문서
 

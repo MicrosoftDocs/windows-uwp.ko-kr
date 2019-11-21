@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, 지도, 위치, 지도 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: b35fcca29089e366817889757254531ff243159f
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6a27eeeb9aa7349e532dcd76e5b7a7176ac20c08
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371702"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259342"
 ---
 # <a name="maps-and-location-overview"></a>지도 및 위치 개요
 
@@ -21,9 +21,9 @@ ms.locfileid: "66371702"
 이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 집합으로 Windows 지도 앱을 시작하는 방법을 보여 줍니다.
 
 > [!TIP]
-> 앱에서 지도와 위치를 사용하는 방법에 대해 자세히 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
--   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
--   [UWP 지리적 위치 샘플](https://go.microsoft.com/fwlink/p/?linkid=533278)
+> 앱에서 지도와 위치를 사용하는 방법에 대해 자세히 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://github.com/Microsoft/Windows-universal-samples)에서 다음 샘플을 다운로드하세요.
+-   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
+-   [UWP 지리적 위치 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Geolocation)
 
  
 
@@ -51,7 +51,7 @@ ms.locfileid: "66371702"
 | [지도에 POI(관심 지점) 표시](display-poi.md) | 고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(관심 지점)를 추가하는 방법을 알아봅니다. |
 | [경로 및 길 찾기 표시](routes-and-directions.md) | 경로 및 길 찾기를 요청하고 앱에 표시합니다. |
 | [지오코딩 및 역방향 지오코딩 수행](geocoding.md) | [  **Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) 네임스페이스에 있는 [**MapLocationFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapLocationFinder) 클래스의 메서드를 호출하여 주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩). |
-| [오프라인 사용을 위해 맵 패키지 찾기 및 다운로드](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| 과거에는 사용자를 Settings 앱으로 안내하여 오프라인 Maps를 다운로드해야 했습니다. 이제는 [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) 네임스페이스의 클래스를 사용하여 지정된 영역([Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox) 등에 따라)에서 다운로드한 패키지를 찾을 수 있습니다. <br> 또한 맵 패키지의 다운로드 상태를 확인하고 수신 대기할 수 있을 뿐만 아니라 사용자가 앱을 종료하지 않고도 다운로드를 시작할 수도 있습니다. <br> 참조 콘텐츠와 [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977) 모두에서 이 작업을 수행하는 방법에 대한 예제를 찾을 수 있습니다.
+| [오프라인 사용을 위해 맵 패키지 찾기 및 다운로드](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| 과거에는 사용자를 Settings 앱으로 안내하여 오프라인 Maps를 다운로드해야 했습니다. 이제는 [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) 네임스페이스의 클래스를 사용하여 지정된 영역([Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox) 등에 따라)에서 다운로드한 패키지를 찾을 수 있습니다. <br> 또한 맵 패키지의 다운로드 상태를 확인하고 수신 대기할 수 있을 뿐만 아니라 사용자가 앱을 종료하지 않고도 다운로드를 시작할 수도 있습니다. <br> 참조 콘텐츠와 [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) 모두에서 이 작업을 수행하는 방법에 대한 예제를 찾을 수 있습니다.
 
 ## <a name="get-the-users-location"></a>사용자 위치 가져오기
 
@@ -74,12 +74,12 @@ ms.locfileid: "66371702"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [UWP 지리적 위치 샘플](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [UWP 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
+* [UWP 지리적 위치 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Geolocation)
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [현재 위치 가져오기](get-location.md)
 * [위치 인식 앱에 대한 디자인 지침](guidelines-and-checklist-for-detecting-location.md)
 * [지도에 대한 디자인 지침](controls-map.md)
 * [개인 정보 인식 앱에 대한 디자인 지침](https://docs.microsoft.com/windows/uwp/security/index)
 * [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [UWP 교통 앱 샘플](https://github.com/Microsoft/Windows-appsample-trafficapp)

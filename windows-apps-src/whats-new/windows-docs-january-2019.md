@@ -5,18 +5,18 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 01/17/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: beb80c28866b8f8207f203b70cb504dcd034098d
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: ac5f7e058a616117e73defde2c48bf4c66f68d2e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63800606"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259746"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-january-2019"></a>2019년 1월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 1월에 제공된 기능 개요, 개발자 지침 및 비디오는 다음과 같습니다.
 
-Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
@@ -70,7 +70,7 @@ Windows 10 버전 1809은 [MSIX 수정 패키지](https://docs.microsoft.com/win
 
 ### <a name="progressive-web-apps"></a>점진적 웹앱
 
-점진적 웹앱은 다른 브라우저 및 다양한 Windows 10 디바이스에서 네이티브 앱처럼 작동하는 웹 사이트입니다. [비디오를 시청하여](https://youtu.be/ugAewC3308Y) 방법을 알아보고 [관련 문서를 확인하여](https://aka.ms/Windows-PWA) 시작하세요.
+점진적 웹앱은 다른 브라우저 및 다양한 Windows 10 디바이스에서 네이티브 앱처럼 작동하는 웹 사이트입니다. [비디오를 시청하여](https://youtu.be/ugAewC3308Y) 방법을 알아보고 [관련 문서를 확인하여](https://developer.microsoft.com/windows/pwa) 시작하세요.
 
 ### <a name="vs-code-series"></a>VS Code 시리즈
 

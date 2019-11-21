@@ -6,12 +6,12 @@ ms.date: 06/05/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dd1fce4e8a5c18af93df32b12ce8b20c8bc69f9
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 57927ff77f060a1ea1bd7720d8831f31c5355264
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340560"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259203"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -39,7 +39,7 @@ ms.locfileid: "71340560"
 
 -   비동기 메서드에서 사용할 수 있는 HTTP 요청 진행 정보
 
-[  **Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpRequestMessage) 클래스는 [**Windows.Web.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)에서 전송된 HTTP 요청 메시지를 나타냅니다. [  **Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) 클래스는 HTTP 요청에서 받은 HTTP 응답 메시지를 나타냅니다. HTTP 메시지는 IETF에 의해 [RFC 2616](https://go.microsoft.com/fwlink/p/?linkid=241642)에서 정의됩니다.
+[  **Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpRequestMessage) 클래스는 [**Windows.Web.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)에서 전송된 HTTP 요청 메시지를 나타냅니다. [  **Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) 클래스는 HTTP 요청에서 받은 HTTP 응답 메시지를 나타냅니다. HTTP 메시지는 IETF에 의해 [RFC 2616](https://tools.ietf.org/html/rfc2616)에서 정의됩니다.
 
 [  **Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스는 HTTP 콘텐츠를 쿠키가 포함된 HTTP 엔터티 본문 및 헤더로 나타냅니다. HTTP 콘텐츠를 HTTP 요청 또는 HTTP 응답에 연결할 수 있습니다. **Windows.Web.Http** 네임스페이스는 HTTP 컨텐츠를 나타내는 여러 클래스를 제공합니다.
 

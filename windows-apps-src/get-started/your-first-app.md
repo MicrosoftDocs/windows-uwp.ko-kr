@@ -6,12 +6,12 @@ ms.date: 01/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, c#, c + +, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: c6f66d90e96b0dfe941e4311ebf79cd3b9b5f4ae
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f386de7ebf9aae2f49a2709d8c1c8ce2595cbf1d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318747"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260531"
 ---
 # <a name="create-your-first-app"></a>첫 번째 앱 만들기
 
@@ -27,9 +27,9 @@ ms.locfileid: "67318747"
 
 기본적인 내용을 배우거나 기억을 되살리려면 다음 내용을 읽어보세요.
 
-* [완전 초보자용 C# 기본 사항](https://go.microsoft.com/fwlink/?linkid=850801)
-* [완전 초보자용 VB 기본 사항](https://go.microsoft.com/fwlink/?linkid=850802)
-* [Windows 10 개발자 가이드](https://go.microsoft.com/fwlink/?linkid=850804)
+* [완전 초보자용 C# 기본 사항](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners?l=Lvld4EQIC_2706218949)
+* [완전 초보자용 VB 기본 사항](https://docs.microsoft.com/learn/?l=jqMOvLKbC_9206218965)
+* [Windows 10 개발자 가이드](https://docs.microsoft.com/learn/)
 
 "Hello, World!"보다 약간 더 재미있는 무언가를 시도할 준비가 되었다면, 다음 자습서를 시도해 보세요.
 

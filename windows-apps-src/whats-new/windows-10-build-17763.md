@@ -6,18 +6,18 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c7387a7a66d2492bf6f228c662a48b19a19afe3d
-ms.sourcegitcommit: a7740ebb14c98cd5afadd52db5cf714522821b49
+ms.openlocfilehash: 1c2e6ee84b143ea13aa3e804f288e4dd9e0becec
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72893008"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258857"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>개발자용 Windows 10 빌드 17763의 새로운 기능
 
-Visual Studio 2019 및 업데이트된 SDK와 함께 Windows 10 빌드 17763(2018년 10월 업데이트 또는 버전 1809라고도 함)은 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2019 및 업데이트된 SDK와 함께 Windows 10 빌드 17763(2018년 10월 업데이트 또는 버전 1809라고도 함)은 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
-이는 Windows 개발자가 관심을 갖는 이 릴리스의 새로운 기능, 향상된 기능 및 지침의 모음입니다. Windows SDK에 추가된 새로운 네임스페이스의 전체 목록은 [Windows 10 빌드 17763 API 변경 내용](windows-10-build-17763-api-diff.md)을 참조하세요. Windows 10의 중요한 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
+이는 Windows 개발자가 관심을 갖는 이 릴리스의 새로운 기능, 향상된 기능 및 지침의 모음입니다. Windows SDK에 추가된 새로운 네임스페이스의 전체 목록은 [Windows 10 빌드 17763 API 변경 내용](windows-10-build-17763-api-diff.md)을 참조하세요. Windows 10의 중요한 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://developer.microsoft.com/windows/windows-10-for-developers)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
 
 ## <a name="design--ui"></a>디자인 및 UI
 
@@ -34,21 +34,21 @@ Fluent 디자인의 움직임 | Fluent 디자인 시스템에서 움직임을 �
 텍스트 크기 조정 | 새 [텍스트 크기 조정 지침](../design/input/text-scaling.md)에서는 사용자가 OS와 개별 애플리케이션 모두에서 상대 글꼴 크기를 변경할 수 있는 기능을 제공하는 새 텍스트 크기 조정 동작을 수용하도록 애플리케이션을 업데이트하는 방법을 설명합니다. 일반적으로 화면 영역 내의 모든 항목을 확대하고 자체의 유용성 문제를 제기하는 돋보기 앱을 사용하거나, 디스플레이 해상도를 변경하거나, 디스플레이 및 일반 시청 거리에 따라 모든 항목의 크기를 조정하는 DPI 배율을 사용하는 대신, 사용자가 설정에 빠르게 액세스하여 텍스트 크기만 100%(기본 크기)에서 최대 225%까지 조정할 수 있습니다.
 도구 키트 | [Adobe XD 및 Adobe Illustrator 도구 키트](../design/downloads/index.md)는 새로운 기능으로 업데이트되었습니다. 이러한 디자인 도구 키트는 UWP 앱 디자인을 위한 레이아웃 템플릿을 제공합니다.
 UI 명령 | [UWP 명령 인프라](../design/basics/commanding-basics.md)에 대한 업데이트에는 명령 개체(행동, 레이블, 아이콘, 키보드 액셀러레이터 키, 액세스 키 및 설명)와 일반적인 표준 명령 세트(잘라내기, 복사, 붙여넣기, 종료 등)의 더 효율적인 캡슐화가 포함되어 있으므로 이러한 속성을 수동으로 설정할 필요가 없습니다. </br> 새 [XamlUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.xamluicommand) 클래스는 호출 시 작업을 수행하는 대화형 UI 요소의 명령 동작을 정의하는 기본 클래스를 제공합니다. 이 클래스는 미리 정의된 속성을 사용하여 표준 플랫폼 명령 세트를 공개하는 [StandardUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.standarduicommand)의 부모 클래스입니다. 
-Windows UI Library | [Windows UI Library](https://aka.ms/winui-docs)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다. </br> Windows UI 라이브러리의 새로운 기능에 대한 자세한 내용은 [NuGet 패키지에 포함된 API 네임스페이스 목록](https://docs.microsoft.com/uwp/api/overview/winui/)을 참조하세요.
+Windows UI Library | [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다. </br> Windows UI 라이브러리의 새로운 기능에 대한 자세한 내용은 [NuGet 패키지에 포함된 API 네임스페이스 목록](https://docs.microsoft.com/uwp/api/overview/winui/)을 참조하세요.
 
 ## <a name="develop-windows-apps"></a>Windows 앱 개발
 
 기능 | 설명
  :------ | :------
 바코드 스캐너 | [바코드 스캐너](https://docs.microsoft.com/windows/uwp/devices-sensors/pos-barcodescanner) 설명서가 다시 구성되었으며 더 자세한 정보와 코드 조각으로 향상되었습니다. 또한 바코드 스캐너에서 데이터를 가져오고 사용하는 방법을 설명하는 새 [바코드 데이터 획득 및 이해](https://docs.microsoft.com/windows/uwp/devices-sensors/pos-barcodescanner-scan-data) 항목이 추가되었습니다.
-C++/WinRT | [C++/WinRT](https://aka.ms/cppwinrt)에는 이 릴리스에 대한 많은 새로운 기능, 변경 내용 및 수정 프로그램이 포함되었습니다. 사용자 고유의 [컬렉션 속성 및 컬렉션 형식](/windows/uwp/cpp-and-winrt-apis/collections)을 구현할 때 새 함수 및 기본 클래스가 지원되며, 이제 C++/WinRT 런타임 클래스에서 [{Binding}](/windows/uwp/xaml-platform/binding-markup-extension) XAML 태그 확장을 사용할 수 있습니다(코드 예제는 [데이터 바인딩 개요](/windows/uwp/data-binding/data-binding-quickstart) 참조). 이 릴리스에서 새로 추가되거나 변경된 모든 내용에 대한 자세한 설명은 [C++/WinRT의 새로운 기능](../cpp-and-winrt-apis/news.md)을 참조하세요.</br></br>다른 새 C++/WinRT 콘텐츠로 [XAML 사용자 지정 컨트롤](/windows/uwp/cpp-and-winrt-apis/xaml-cust-ctrl), [작성자 COM 구성 요소](/windows/uwp/cpp-and-winrt-apis/author-coclasses), [값 범주](/windows/uwp/cpp-and-winrt-apis/cpp-value-categories), [강력한 참조 및 약한 참조](../cpp-and-winrt-apis/weak-references.md)가 포함되었습니다.
+C++/WinRT | [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)에는 이 릴리스에 대한 많은 새로운 기능, 변경 내용 및 수정 프로그램이 포함되었습니다. 사용자 고유의 [컬렉션 속성 및 컬렉션 형식](/windows/uwp/cpp-and-winrt-apis/collections)을 구현할 때 새 함수 및 기본 클래스가 지원되며, 이제 C++/WinRT 런타임 클래스에서 [{Binding}](/windows/uwp/xaml-platform/binding-markup-extension) XAML 태그 확장을 사용할 수 있습니다(코드 예제는 [데이터 바인딩 개요](/windows/uwp/data-binding/data-binding-quickstart) 참조). 이 릴리스에서 새로 추가되거나 변경된 모든 내용에 대한 자세한 설명은 [C++/WinRT의 새로운 기능](../cpp-and-winrt-apis/news.md)을 참조하세요.</br></br>다른 새 C++/WinRT 콘텐츠로 [XAML 사용자 지정 컨트롤](/windows/uwp/cpp-and-winrt-apis/xaml-cust-ctrl), [작성자 COM 구성 요소](/windows/uwp/cpp-and-winrt-apis/author-coclasses), [값 범주](/windows/uwp/cpp-and-winrt-apis/cpp-value-categories), [강력한 참조 및 약한 참조](../cpp-and-winrt-apis/weak-references.md)가 포함되었습니다.
 C++/WinRT 코드 예제 | 기존 C++/CX 코드 예제와 함께 설명서의 항목에 250개의 C++/WinRT 코드 목록이 추가되었습니다.
 영향을 주는 지침 | UWP 설명서에 대한 [영향을 주는 지침](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md)이 업데이트되었습니다. 이 새 지침은 Microsoft 문서에 대한 외부 기여와 관련된 작업 흐름과 기대치를 명확히 합니다.
 DXGI(DirectX 그래픽 인프라) | 누락된 DXGI API에 대한 새 설명서가 추가되었으며, Windows 10에서 발표할 때 모범 사례에 대한 문서가 제공되었습니다. </br> * [최상의 성능을 위해 DXGI 대칭 이동 모델 사용](https://docs.microsoft.com/windows/desktop/direct3ddxgi/for-best-performance--use-dxgi-flip-model): 최신 버전의 Windows에서 프레젠테이션 스택의 성능과 효율성을 극대화하는 방법에 대한 지침을 제공합니다. </br> * [IDXGIOutput6::CheckHardwareCompositionSupport 메서드](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/nf-dxgi1_6-idxgioutput6-checkhardwarecompositionsupport): 애플리케이션에 하드웨어 확대가 지원됨을 알립니다. </br> * [DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS 열거형](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/ne-dxgi1_6-dxgi_hardware_composition_support_flags): 지원되는 하드웨어 구성 수준을 설명합니다.
 시작 | [시작](../get-started/index.md) 콘텐츠가 새 항목으로 활성화되어 Windows 10을 처음 사용하는 개발자가 다음과 같은 일반적인 작업을 수행하는 방법에 대한 정보와 지침을 제공합니다. </br> * [양식 작성](../get-started/construct-form-learning-track.md) </br> * [목록에 고객 표시](../get-started/display-customers-in-list-learning-track.md) </br> * [설정 저장 및 로드](../get-started/settings-learning-track.md) </br> * [파일 작업](../get-started/fileio-learning-track.md)
 맵 스타일시트 편집기 | 새 [맵 스타일시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft?rtc=1#activetab=pivot:overviewtab) 애플리케이션을 사용하여 애플리케이션에 추가하는 맵의 모양을 대화형으로 사용자 지정합니다.
 Microsoft Learn | 새 [Microsoft Learn 사이트](https://www.microsoft.com/learning/default.aspx)는 Microsoft 개발자에게 새 실습 학습 및 교육 기회를 제공합니다. Microsoft Learn은 현재 Microsoft 365, Microsoft Azure, Office 365 및 Windows Server에 대한 학습 및 인증을 제공합니다.
-Windows 메모장 | [메모장이 업데이트](https://aka.ms/ant-man)되어 확대/축소, 줄 바꿈 찾기/바꾸기, Unix/Linux(LF) 및 Mac(CR) 줄 끝 지원이 추가되었습니다.
+Windows 메모장 | [메모장이 업데이트](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/)되어 확대/축소, 줄 바꿈 찾기/바꾸기, Unix/Linux(LF) 및 Mac(CR) 줄 끝 지원이 추가되었습니다.
 프로젝트 로마 | [프로젝트 로마](https://docs.microsoft.com/windows/project-rome/)는 이제 지원되는 플랫폼과 SDK에서 일관된 프로그래밍 환경을 제공합니다. </br>  새 [Microsoft Graph 알림](https://developer.microsoft.com/graph/docs/concepts/notifications-concept-overview)에서 프로젝트 로마를 사용하여 앱을 위한 사용자 중심의 플랫폼 간 알림 플랫폼을 제공합니다.
 화면 캡처 | 새 [URI 체계](../launch-resume/launch-screen-snipping.md)를 사용하면 앱에서 프로그래밍 방식으로 새 캡처를 열거나 주석에 대한 특정 이미지를 사용하여 캡처 및 스케치 앱을 시작할 수 있습니다.
 데스크톱 애플리케이션의 UWP 컨트롤 | 이제 Windows 10을 사용 하면 WPF, Windows Forms 및 C++ Win32 데스크톱 애플리케이션에서 UWP 컨트롤을 사용할 수 있습니다. 즉, Windows Ink 및 Fluent 디자인 시스템을 지원하는 컨트롤과 같은 UWP 컨트롤을 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 통해 기존 데스크톱 애플리케이션의 모양, 느낌 및 기능을 향상시킬 수 있습니다. 이 기능을 *XAML 제도*라고 합니다. </br> 사용하는 애플리케이션 플랫폼에 따라 애플리케이션에서 XAML 제도를 사용할 수 있는 몇 가지 방법을 제공합니다. WPF 및 Windows Forms 애플리케이션은 디자이너 중심 개발 환경을 제공하는 [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)의 컨트롤 세트를 사용할 수 있습니다. C++ Win32 애플리케이션은 [Windows.UI.Xaml.Hosting](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting) 네임스페이스의 *UWP XAML 호스팅 API*를 사용해야 합니다. 자세한 내용은 [데스크톱 애플리케이션의 UWP 컨트롤](../xaml-platform/xaml-host-controls.md)을 참조하세요. </br> **참고:** XAML 제도를 사용하도록 설정하는 API 및 컨트롤은 현재 개발자 미리 보기로 사용할 수 있습니다. 사용자 고유의 프로토타입 코드에서 사용해 보도록 추천하지만, 프로덕션 코드에는 지금 사용하지 않는 것이 좋습니다.
@@ -97,11 +97,11 @@ C++/WinRT는 Windows 런타임 API를 작성하고 사용하는 새로운 방법
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>개발자를 위한 시작: Windows 10에서 양식 만들기 및 사용자 지정
 
-이제 Windows 개발자를 위한 [시작 문서](../get-started/index.md)에서 기본 앱 개발 작업용 실습 환경을 제공합니다. 이 비디오에서는 이러한 항목 중 하나를 안내하고, 앱에서 양식 UI를 만드는 방법에 대한 기본 사항을 설명합니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be)하여 작동하는 코드를 살펴본 다음, [해당 항목을 직접 확인해 보세요.](https://aka.ms/CreateForms)
+이제 Windows 개발자를 위한 [시작 문서](../get-started/index.md)에서 기본 앱 개발 작업용 실습 환경을 제공합니다. 이 비디오에서는 이러한 항목 중 하나를 안내하고, 앱에서 양식 UI를 만드는 방법에 대한 기본 사항을 설명합니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be)하여 작동하는 코드를 살펴본 다음, [해당 항목을 직접 확인해 보세요.](https://docs.microsoft.com/windows/uwp/get-started/construct-form-learning-track)
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Project Personality Chat을 사용하여 봇 향상
 
-Project Personality Chat을 사용하면 사용자 지정 가능한 가상 사용자를 채팅 봇에 추가할 수 있습니다. Microsoft Bot Framework SDK와 통합하면 고객과 상호 작용하는 더 향상된 대화형 방법에 맞게 작은 대화 기능을 추가할 수 있습니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be)하여 구현하는 방법을 알아본 다음, 실습 환경용 [대화형 데모를 사용해 보세요](https://aka.ms/PersonalityChat).
+Project Personality Chat을 사용하면 사용자 지정 가능한 가상 사용자를 채팅 봇에 추가할 수 있습니다. Microsoft Bot Framework SDK와 통합하면 고객과 상호 작용하는 더 향상된 대화형 방법에 맞게 작은 대화 기능을 추가할 수 있습니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be)하여 구현하는 방법을 알아본 다음, 실습 환경용 [대화형 데모를 사용해 보세요](https://www.microsoft.com/research/project/personality-chat/).
 
 ### <a name="multi-instance-uwp-apps"></a>다중 인스턴스 UWP 앱
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 97407ec48eaac3415980b9313092b21e9532250a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 834bea47a566789926648098086c05c0a47b6065
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321116"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260561"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>복잡한 UWP(유니버설 Windows 플랫폼) 앱 빌드
 
@@ -65,7 +65,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 
 개념에 만족할 경우 다음 단계인 앱의 청사진 만들기를 시작할 준비가 되었습니다. IA(정보 아키텍처)는 콘텐츠에 필요한 구조적 무결성을 제공합니다. IA는 앱의 탐색 모델 및 궁극적으로 앱의 정체성을 정의하는 데 도움이 됩니다. 콘텐츠 구성 방법과 사용자가 해당 콘텐츠를 검색하는 방법을 계획하면 사용자가 어떻게 앱을 경험할지 더 정확하게 파악할 수 있습니다.
 
-좋은 IA는 사용자 시나리오를 가능하게 할 뿐만 아니라 시작할 주요 화면을 구상하는 데 도움이 됩니다. 예를 들어 [Audible](https://go.microsoft.com/fwlink/p/?LinkID=268089) 앱은 사용자 라이브러리, 저장소, 뉴스 및 통계에 대한 액세스를 제공하는 허브로 바로 시작됩니다. 집중된 환경이므로 사용자가 오디오북을 빠르게 가져오고 즐길 수 있습니다. 앱의 심층 수준에서는 보다 구체적인 작업에 중점을 둡니다.
+좋은 IA는 사용자 시나리오를 가능하게 할 뿐만 아니라 시작할 주요 화면을 구상하는 데 도움이 됩니다. 예를 들어 [Audible](https://www.windowsphone.com/store/app/audible-for-windows-phone/bdc813dd-c20b-41f8-8646-de72fa0b365d) 앱은 사용자 라이브러리, 저장소, 뉴스 및 통계에 대한 액세스를 제공하는 허브로 바로 시작됩니다. 집중된 환경이므로 사용자가 오디오북을 빠르게 가져오고 즐길 수 있습니다. 앱의 심층 수준에서는 보다 구체적인 작업에 중점을 둡니다.
 
 관련된 지침은 [탐색 디자인 기본 사항](../design/basics/navigation-basics.md)을 참조하세요.
 
@@ -126,7 +126,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 
 -   **공유**  사용자가 다른 앱을 통해 다른 사람들과 앱의 콘텐츠를 공유하고 다른 사람 및 앱으로부터 공유 가능한 콘텐츠를 받을 수 있도록 합니다.
 -   **원격 재생**  사용자가 앱에서 홈 네트워크의 다른 디바이스로 스트리밍되는 오디오, 동영상 또는 이미지를 즐길 수 있도록 합니다.
--   **파일 선택기 및 파일 선택기 확장**  로컬 파일 시스템, 연결된 저장 디바이스, 홈 그룹 또는 기타 앱에서 해당 앱으로 파일을 로드하고 저장할 수 있도록 합니다. 다른 앱에서 사용자 앱의 콘텐츠를 로드할 수 있도록 파일 선택기 확장을 제공할 수도 있습니다.
+-   **파일 선택기 및 파일 선택기 확장**  로컬 파일 시스템, 연결된 스토리지 디바이스, 홈 그룹 또는 기타 앱에서 해당 앱으로 파일을 로드하고 스토리지할 수 있도록 합니다. 다른 앱에서 사용자 앱의 콘텐츠를 로드할 수 있도록 파일 선택기 확장을 제공할 수도 있습니다.
 
 자세한 내용은 [앱 계약 및 확장](https://docs.microsoft.com/previous-versions/windows/apps/hh464906(v=win.10))을 참조하세요.
 <!-- Win 8 page. Should have replacement. -->

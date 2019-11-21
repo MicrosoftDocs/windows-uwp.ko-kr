@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 30ffec0f2a5e771e649eda6240d9e7ef90f50890
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 7c95d915c8906e2052243fee509e260fc8864454
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318790"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258367"
 ---
 # <a name="get-set-up"></a>설정
 
@@ -28,7 +28,7 @@ Microsoft Visual Studio 2019는 앱을 디자인, 코딩, 테스트 및 디버�
 
 Microsoft Visual Studio Community 2019가 없는 경우 무료 Microsoft Visual Studio Community 2019를 설치할 수 있습니다. 이 다운로드에는 앱 테스트를 위한 디바이스 시뮬레이터가 포함되어 있습니다.
 
--   [Windows 10 개발자 도구 다운로드](https://go.microsoft.com/fwlink/p/?LinkID=534189)
+-   [Windows 10 개발자 도구 다운로드](https://developer.microsoft.com/windows/downloads)
 
 Visual Studio를 설치할 때 다음과 같이 유니버설 Windows 앱 개발 도구 옵션을 선택해야 합니다.
 
@@ -67,7 +67,7 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 
 ## <a name="want-more-tools-and-downloads"></a>더 많은 도구와 다운로드가 필요한 경우
 
-도구 및 다운로드의 전체 목록을 보려면 [다운로드](https://go.microsoft.com/fwlink/p/?linkid=285935)를 참조하세요.
+도구 및 다운로드의 전체 목록을 보려면 [다운로드](https://developer.microsoft.com/windows/downloads)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

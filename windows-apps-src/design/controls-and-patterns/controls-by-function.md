@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6de5e9d8899a7f270d30438a0563b879ccdab898
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 57639fc370ed7e10a427af4808e2a8a6de91b554
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363136"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257701"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
 Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨트롤 라이브러리를 제공합니다. 이러한 컨트롤에는 시각적으로 표시되는 컨트롤도 있고, 이미지와 미디어 같이 다른 컨트롤이나 콘텐츠의 컨테이너 역할을 하는 컨트롤도 있습니다. 
 
-[XAML UI 기본 사항 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619992)을 다운로드해도 작동 중인 다양한 Windows UI 컨트롤을 볼 수 있습니다.
+[XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)을 다운로드해도 작동 중인 다양한 Windows UI 컨트롤을 볼 수 있습니다.
 
 <table>
 <th align="left">XAML Controls Gallery<th>
@@ -54,21 +54,21 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 디자인 및 방법: [앱 바 및 명령 모음 컨트롤 가이드](app-bars.md) 
 
-샘플 코드: [XAML 명령 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+샘플 코드: [XAML 명령 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
 ### <a name="app-bar-separator"></a>앱 바 구분 기호
 명령 모음의 명령 그룹을 시각적으로 구분합니다.
 
 참고자료: [AppBarSeparator](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator) 
 
-샘플 코드: [XAML 명령 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+샘플 코드: [XAML 명령 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
 ### <a name="app-bar-toggle-button"></a>앱 바 토글 단추
 명령 모음에서 명령을 표시하거나 숨기는 단추입니다.
 
 참고자료: [AppBarToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton) 
 
-샘플 코드: [XAML 명령 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+샘플 코드: [XAML 명령 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
 ### <a name="command-bar"></a>명령 모음
 앱 바 단추 요소의 크기 조정을 처리하는 특수한 앱 바입니다.
@@ -86,7 +86,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 디자인 및 방법: [앱 바 및 명령 모음 컨트롤 가이드](app-bars.md)
 
-샘플 코드: [XAML 명령 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+샘플 코드: [XAML 명령 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
 ## <a name="buttons"></a>단추
 
@@ -166,7 +166,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 디자인 및 방법: [목록](lists.md) 
 
-샘플 코드: [ListView 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619900)
+샘플 코드: [ListView 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
 
 ### <a name="items-control"></a>항목 컨트롤
 데이터 템플릿을 통해 지정된 UI에 항목 컬렉션을 제공하는 컨트롤입니다. 
@@ -191,7 +191,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 디자인 및 방법: [목록](lists.md) 
 
-샘플 코드: [ListView 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619900)
+샘플 코드: [ListView 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
 
 ## <a name="date-and-time-controls"></a>날짜 및 시간 컨트롤
 
@@ -288,7 +288,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 디자인 및 방법: [메뉴 및 상황에 맞는 메뉴](menus.md) 
 
-샘플 코드: [XAML 상황에 맞는 메뉴 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620021)
+샘플 코드: [XAML 상황에 맞는 메뉴 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlContextMenu)
 
 ### <a name="popup-menu"></a>팝업 메뉴
 지정한 명령을 표시하는 사용자 지정 메뉴입니다.
@@ -324,7 +324,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 디자인 및 방법: [Image 및 ImageBrush](images-imagebrushes.md) 
 
-샘플 코드: [XAML 이미지 샘플](https://go.microsoft.com/fwlink/p/?linkid=226867)
+샘플 코드: [XAML 이미지 샘플](https://code.msdn.microsoft.com/windowsapps/0f5d56ae-5e57-48e1-9cd9-993115b027b9)
 
 ## <a name="graphics-and-ink"></a>그래픽 및 잉크
 
@@ -353,7 +353,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 방법: [셰이프 그리기](../../graphics/drawing-shapes.md) 
 
-샘플 코드: [XAML 벡터 기반 그리기 샘플](https://go.microsoft.com/fwlink/p/?linkid=226866)
+샘플 코드: [XAML 벡터 기반 그리기 샘플](https://code.msdn.microsoft.com/windowsapps/Drawing-bfc39296)
 
 ## <a name="layout-controls"></a>레이아웃 컨트롤
 
@@ -453,7 +453,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 디자인 및 방법: [스크롤 및 이동 컨트롤 가이드](scroll-controls.md) 
 
-샘플 코드: [XAML 스크롤, 이동 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=238577)
+샘플 코드: [XAML 스크롤, 이동 및 확대/축소 샘플](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
 
 ### <a name="stack-panel"></a>스택 패널
 가로 또는 세로 방향으로 지정된 단일 행에 자식 요소를 배열하는 레이아웃 패널입니다.
@@ -542,7 +542,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [미디어 요소 컨트롤 가이드](media-playback.md) 
 
-샘플 코드: [미디어 전송 컨트롤 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620023)
+샘플 코드: [미디어 전송 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCustomMediaTransportControls)
 
 ### <a name="video"></a>비디오
 미디어 요소 참조
@@ -591,7 +591,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: 웹 보기에 대한 지침 
 
-샘플 코드: [XAML WebView 컨트롤 샘플](https://go.microsoft.com/fwlink/p/?linkid=238582)
+샘플 코드: [XAML WebView 컨트롤 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-WebView-control-sample-58ad63f7)
 
 ### <a name="semantic-zoom"></a>시맨틱 줌
 
@@ -612,7 +612,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [시맨틱 줌 컨트롤 가이드](semantic-zoom.md)
 
-샘플 코드: [XAML GridView 그룹화 및 SemanticZoom 샘플](https://go.microsoft.com/fwlink/p/?linkid=226564)
+샘플 코드: [XAML GridView 그룹화 및 SemanticZoom 샘플](https://code.msdn.microsoft.com/windowsapps/groupedgridview-77c59e8e)
 
 ## <a name="progress-controls"></a>진행률 컨트롤
 
@@ -663,7 +663,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [자동 제안 상자 컨트롤 가이드](auto-suggest-box.md)
 
-샘플 코드: [AutoSuggestBox 마이그레이션 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619996)
+샘플 코드: [AutoSuggestBox 마이그레이션 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlAutoSuggestBox)
 
 ### <a name="multi-line-text-box"></a>여러 줄 입력란
 텍스트 상자를 참조하세요.
@@ -682,7 +682,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [암호 상자 컨트롤 가이드](password-box.md) 
 
-샘플 코드: [XAML 텍스트 표시 샘플](https://go.microsoft.com/fwlink/p/?linkid=238579), [XAML 텍스트 편집 샘플](https://go.microsoft.com/fwlink/p/?linkid=251417)
+샘플 코드: [XAML 텍스트 표시 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a), [XAML 텍스트 편집 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
 
 ### <a name="rich-edit-box"></a>서식 있는 편집 상자
 사용자가 서식 있는 텍스트, 하이퍼링크, 이미지 등의 콘텐츠가 포함된 서식 있는 텍스트 문서를 편집할 수 있는 컨트롤입니다.
@@ -695,7 +695,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [서식 있는 편집 상자 컨트롤 가이드](rich-edit-box.md)
 
-샘플 코드: [XAML 텍스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=238578)
+샘플 코드: [XAML 텍스트 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
 
 ### <a name="search-box"></a>검색 상자
 자동 제안 상자를 참조하세요.
@@ -719,7 +719,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [텍스트 블록 컨트롤 가이드](text-block.md), [서식 있는 텍스트 블록 컨트롤 가이드](rich-text-block.md)
 
-샘플 코드: [XAML 텍스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=238578)
+샘플 코드: [XAML 텍스트 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
 
 ### <a name="text-box"></a>입력란
 한 줄 또는 여러 줄 일반 텍스트 필드입니다.
@@ -735,7 +735,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [텍스트 상자 컨트롤 가이드](text-box.md) 
 
-샘플 코드: [XAML 텍스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=238578)
+샘플 코드: [XAML 텍스트 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
 
 ## <a name="selection-controls"></a>선택 컨트롤
 

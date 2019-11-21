@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: 6ff7b37eee4f2b9228a635a117e164d7d9859629
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 0dbe5e2f1cc32a3d1b52572f71fba7547af99f17
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63803619"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258571"
 ---
 # <a name="create-write-and-read-a-file"></a>파일 만들기, 쓰기 및 읽기
 
@@ -29,7 +29,7 @@ ms.locfileid: "63803619"
 [  **StorageFile**](/uwp/api/windows.storage.storagefile) 개체를 사용하여 파일을 읽고 씁니다.
 
 > [!NOTE]
-> 전체 샘플에 대해서는 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)을 참조하세요.
+> 전체 샘플에 대해서는 [파일 액세스 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

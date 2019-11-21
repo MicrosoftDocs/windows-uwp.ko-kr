@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: db2e444b9f13ba41127b362483774c92d45f1f77
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c4b1a0dab6bf1eb3301ba9fb97abd95fd896c53e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66372751"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259170"
 ---
 # <a name="which-networking-technology"></a>네트워킹 기술 선택
 
@@ -91,7 +91,7 @@ Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 
 
 ### <a name="dns-service-discovery"></a>DNS 서비스 검색
 
-[  **Windows.Networking.ServiceDiscovery.Dnssd**](https://docs.microsoft.com/uwp/api/Windows.Networking.ServiceDiscovery.Dnssd) API는 IETF [RFC 2782](https://go.microsoft.com/fwlink/?LinkId=524158)에 설명된 DNS-SD 프로토콜을 사용하여 네트워크의 다른 장치에 네트워크 서비스를 보급하도록 지원합니다.
+[  **Windows.Networking.ServiceDiscovery.Dnssd**](https://docs.microsoft.com/uwp/api/Windows.Networking.ServiceDiscovery.Dnssd) API는 IETF [RFC 2782](https://www.rfc-archive.org/getrfc.php?rfc=2782)에 설명된 DNS-SD 프로토콜을 사용하여 네트워크의 다른 장치에 네트워크 서비스를 보급하도록 지원합니다.
 
 ### <a name="communicating-over-bluetooth"></a>Bluetooth를 통한 통신
 

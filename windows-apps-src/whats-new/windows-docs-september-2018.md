@@ -5,18 +5,18 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0876b2d9b65143cde2387a42e221460cc617cf0b
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 85e41a26343c9e4c6eb239cbfdd74dc946d5b657
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63800494"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258809"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>2018년 9월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 9월에 제공된 기능 개요, 개발자 지침 및 비디오는 다음과 같습니다.
 
-Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
@@ -32,7 +32,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 ### <a name="windows-ui-library"></a>Windows UI Library
 
-[Windows UI Library](https://aka.ms/winui-docs)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다.
+[Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다.
 
 Windows UI 라이브러리에 대한 자세한 내용은 [NuGet 패키지에 포함된 API 네임스페이스 목록](https://docs.microsoft.com/uwp/api/overview/winui/)을 참조하세요.
 

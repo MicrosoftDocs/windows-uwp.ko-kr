@@ -6,12 +6,12 @@ ms.date: 06/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8278e02de4d0f9a0efa301051a57bf59bce8d520
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 49e126ea0212499361fea58b58237ee13fb76ca2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363297"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259175"
 ---
 # <a name="sockets"></a>소켓
 소켓은 많은 네트워킹 프로토콜이 구현되는 하위 수준 데이터 전송 기술입니다. UWP는 연결이 오래되었거나 설정된 연결이 필요하지 않은지 여부에 관계없이 클라이언트-서버 또는 피어 투 피어 애플리케이션에 대한 TCP 및 UDP 소켓 클래스를 제공합니다.
@@ -521,7 +521,7 @@ void StreamSocketListener_ConnectionReceived(Windows::Networking::Sockets::Strea
 }
 ```
 
-**StreamSocket**의 관점에서는 완료 처리기는 연속 본문이 실행되기 전에 실행을 완료하며 소켓은 폐기할 수 있습니다. 따라서 해당 연속 내에서 사용하고자 하는 경우 소켓이 폐기되지 않도록 하려면 람다 캡처를 통해 소켓을 직접, 또는 계속 연속 내부에서 `args->Socket`에 액세스하여 간접적으로 참조하여 사용하거나, 연속 작업을 강제로 인라인으로 적용해야 합니다. [StreamSocket 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620609)에서 실행 중인 첫 번째 기술(람다 캡처) 볼 수 있습니다. 위 [기본 TCP 소켓 클라이언트 및 서버 빌드](#build-a-basic-tcp-socket-client-and-server) 섹션의 C++/CX 코드는 두 번째 기술을 사용하여&mdash;요청을 응답으로 다시 보내며 가장 안쪽의 연속 중 하나에서 `args->Socket`에 액세스합니다.
+**StreamSocket**의 관점에서는 완료 처리기는 연속 본문이 실행되기 전에 실행을 완료하며 소켓은 폐기할 수 있습니다. 따라서 해당 연속 내에서 사용하고자 하는 경우 소켓이 폐기되지 않도록 하려면 람다 캡처를 통해 소켓을 직접, 또는 계속 연속 내부에서 `args->Socket`에 액세스하여 간접적으로 참조하여 사용하거나, 연속 작업을 강제로 인라인으로 적용해야 합니다. [StreamSocket 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/StreamSocket)에서 실행 중인 첫 번째 기술(람다 캡처) 볼 수 있습니다. 위 [기본 TCP 소켓 클라이언트 및 서버 빌드](#build-a-basic-tcp-socket-client-and-server) 섹션의 C++/CX 코드는 두 번째 기술을 사용하여&mdash;요청을 응답으로 다시 보내며 가장 안쪽의 연속 중 하나에서 `args->Socket`에 액세스합니다.
 
 세 번째 방법은 응답을 다시 보내지 않는 경우 적절합니다. `task_continuation_context::use_synchronous_execution()` 옵션을 사용하여 PPL이 연속 본문 인라인을 실행하도록 할 수 있습니다. 작업을 수행하는 방법을 보여주는 코드 예는 다음과 같습니다.
 
@@ -1384,4 +1384,4 @@ Concurrency::create_task(Windows::Security::Cryptography::Certificates::Certific
 * [Windows 소켓 2(Winsock)](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)
 
 ## <a name="samples"></a>샘플
-* [StreamSocket 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620609)
+* [StreamSocket 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/StreamSocket)

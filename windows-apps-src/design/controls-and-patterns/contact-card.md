@@ -9,12 +9,12 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c227629ace1f3fdbb2af8582401f9273cf11c2e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 36c8c6248b356bbb17da72b53b0480a27999b875
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63799645"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257691"
 ---
 # <a name="contact-card"></a>연락처 카드
 
@@ -181,5 +181,5 @@ private void onUserClickShowContactCard()
 
 ## <a name="related-articles"></a>관련 문서
 - [연락처 및 일정](/windows/uwp/contacts-and-calendar/)
-- [연락처 카드 샘플](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+- [연락처 카드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCards)
 - [인물 사진 컨트롤](/windows/uwp/controls-and-patterns/person-picture/)

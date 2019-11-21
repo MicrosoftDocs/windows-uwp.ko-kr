@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a9bb432ce7c856a6c54305f657f06a23dab14f1
-ms.sourcegitcommit: 805420bb7ec6850ec3576b21193a3681054c9754
+ms.openlocfilehash: fd267f96ca6931252ab3130d363447ae79820108
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71976330"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255107"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -37,7 +37,7 @@ Visual Studio 지원의 경우 Visual Studio 2019 또는 Visual Studio 2017(최�
 
 Visual Studio 및 Windows SDK의 최신 버전을 사용하여 개발하는 것이 좋지만 10.0.17763.0(Windows 10 버전 1809) 이전에 Windows SDK와 함께 제공된 C++/WinRT 버전을 사용하는 경우, 위에서 언급한 Windows 네임스페이스 헤더를 사용하려면 10.0.17134.0(Windows 10 버전 1803)의 프로젝트에서 최소한의 Windows SDK 대상 버전이 필요합니다.
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/)에서 [C++/WinRT Visual Studio 확장(VSIX)](https://aka.ms/cppwinrt/vsix)의 최신 버전을 다운로드하여 설치하려고 합니다.
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/)에서 [C++/WinRT Visual Studio 확장(VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264)의 최신 버전을 다운로드하여 설치하려고 합니다.
 
 - VSIX 확장에서 제공하는 Visual Studio의 C++/WinRT 프로젝트 및 항목 템플릿을 사용하여 C++/WinRT 개발을 시작할 수 있습니다.
 - 또한 함께 제공되는 C++/WinRT 프로젝션된 형식의 Visual Studio 기본 디버그 시각화(natvis)를 통해 C# 디버깅과 유사한 환경이 구현됩니다. Natvis는 디버그 빌드에서 자동으로 실행됩니다. WINRT_NATVIS 기호를 정의하여 빌드를 릴리스할 수도 있습니다.
@@ -96,7 +96,7 @@ IDL 파일에서 구성 요소의 런타임 클래스와 기본 인터페이스,
 빌드된 Windows 런타임 구성 요소 이진 파일 및 이진 파일의 `.winmd`와 함께 이 두 항목을 사용하는 UWP 앱을 번들로 제공합니다.
 
 ## <a name="earlier-versions-of-the-vsix-extension"></a>이전 버전의 VSIX 확장
-[VSIX 확장](https://aka.ms/cppwinrt/vsix)의 최신 버전을 설치하거나 이 버전으로 업데이트하는 것이 좋습니다. 기본적으로 이 확장은 자동으로 업데이트되도록 구성됩니다. 1\.0.190128.4보다 이전 버전의 VSIX 확장을 사용하여 만든 프로젝트가 있을 때 이 작업을 수행하는 경우, 이 섹션에서는 해당 프로젝트가 새 버전에서 작동하도록 업그레이드하는 방법에 대한 중요한 정보를 제공합니다. 업데이트하지 않는 경우에도 이 섹션의 정보가 유용하다는 것을 알게 됩니다.
+[VSIX 확장](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264)의 최신 버전을 설치하거나 이 버전으로 업데이트하는 것이 좋습니다. 기본적으로 이 확장은 자동으로 업데이트되도록 구성됩니다. 1\.0.190128.4보다 이전 버전의 VSIX 확장을 사용하여 만든 프로젝트가 있을 때 이 작업을 수행하는 경우, 이 섹션에서는 해당 프로젝트가 새 버전에서 작동하도록 업그레이드하는 방법에 대한 중요한 정보를 제공합니다. 업데이트하지 않는 경우에도 이 섹션의 정보가 유용하다는 것을 알게 됩니다.
 
 지원되는 Windows SDK 및 Visual Studio 버전과 Visual Studio 구성의 측면에서 위의 [C++/WinRT, XAML, VSIX 확장 및 NuGet 패키지에 대한 Visual Studio 지원](#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 섹션에 있는 정보는 이전 버전의 VSIX 확장에 적용됩니다. 아래 정보는 이전 버전을 사용하여 만들거나 이전 버전에서 작동하도록 업그레이드된 프로젝트의 동작 및 구성에 관한 중요한 차이점을 설명합니다.
 
@@ -147,7 +147,7 @@ C++/WinRT 프로그래밍에서 일부 C++ 표준 라이브러리 데이터 형�
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
-* [C++/WinRT Visual Studio 확장(VSIX)](https://aka.ms/cppwinrt/vsix)
+* [C++/WinRT Visual Studio 확장(VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264)
 * [C++/WinRT 시작](get-started.md)
 * [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)
 * [C++/WinRT의 문자열 처리](strings.md)

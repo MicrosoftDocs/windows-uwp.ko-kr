@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: effb28fa453ec884152dbc404245f00f4893ef5a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 36835a198d03a8ad5f5e811a74e120c9bbd25c08
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369420"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258585"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Microsoft OneDrive 파일의 가용성 확인
 
@@ -53,7 +53,7 @@ ms.locfileid: "66369420"
 
 1.  액세스하려는 라이브러리에 적절한 접근 권한 값을 선언합니다.
 2.  [  **Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage) 네임스페이스를 포함합니다. 이 네임스페이스에는 파일, 폴더 및 응용 프로그램 설정을 관리하기 위한 형식이 포함되어 있습니다. 또한 필요한 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 형식이 포함되어 있습니다.
-3.  원하는 파일의 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체를 가져옵니다. 라이브러리를 열거하고 있는 경우 이 단계는 일반적으로 [**StorageFolder.CreateFileQuery**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.createfilequery) 메서드를 호출한 다음 결과 [**StorageFileQueryResult**](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.StorageFileQueryResult) 개체의 [**GetFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync) 메서드를 호출하여 수행됩니다. **GetFilesAsync** 메서드는 **StorageFile** 개체의 [IReadOnlyList](https://go.microsoft.com/fwlink/p/?LinkId=324970) 컬렉션을 반환합니다.
+3.  원하는 파일의 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체를 가져옵니다. 라이브러리를 열거하고 있는 경우 이 단계는 일반적으로 [**StorageFolder.CreateFileQuery**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.createfilequery) 메서드를 호출한 다음 결과 [**StorageFileQueryResult**](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.StorageFileQueryResult) 개체의 [**GetFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync) 메서드를 호출하여 수행됩니다. **GetFilesAsync** 메서드는 **StorageFile** 개체의 [IReadOnlyList](https://msdn.microsoft.com/library/hh192385.aspx) 컬렉션을 반환합니다.
 4.  원하는 파일을 나타내는 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체에 액세스할 수 있는 경우 [**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable) 속성의 값에는 파일의 사용 가능 여부가 반영됩니다.
 
 다음 제네릭 메서드는 모든 폴더를 열거하고 해당 폴더에 대한 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체의 컬렉션을 반환하는 방법을 보여 줍니다. 그런 다음 호출한 메서드는 각 파일에 대한 [**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable) 속성을 참조하는 반환된 컬렉션에서 반복됩니다.

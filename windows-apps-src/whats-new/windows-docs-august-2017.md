@@ -5,24 +5,24 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 52b929f2b6f95c2be2feb68a6221a606ca3715e5
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: b4cc5f10ba23c942851f34ef64afd887d265dba1
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821138"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259776"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>2017년 8월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 다음과 같은 기능 개요, 개발자 지침 및 동영상이 Windows 개발자를 위한 새 정보와 업데이트된 정보를 포함하여 최근에 추가되었습니다.
 
-Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/your-first-app.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/your-first-app.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-새로운 Visual Studio 2019용 [Windows Template Studio](https://aka.ms/wtsinstall) 확장을 사용하여 원하는 페이지, 프레임워크 및 기능으로 신속하게 UWP 앱을 빌드할 수 있습니다. 이 마법사 기반 환경은 시간을 절약하고 앱에 기능을 추가하는 데 발생하는 문제를 줄일 수 있는 입증된 패턴과 모범 사례를 구현합니다.
+새로운 Visual Studio 2019용 [Windows Template Studio](https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WindowsTemplateStudio) 확장을 사용하여 원하는 페이지, 프레임워크 및 기능으로 신속하게 UWP 앱을 빌드할 수 있습니다. 이 마법사 기반 환경은 시간을 절약하고 앱에 기능을 추가하는 데 발생하는 문제를 줄일 수 있는 입증된 패턴과 모범 사례를 구현합니다.
 
 ![Windows Template Studio](images/template-studio.png)
 
@@ -81,4 +81,4 @@ Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 �
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Windows Template Studio에 대한 자세한 개요는 [이 동영상](https://channel9.msdn.com/Blogs/One-Dev-Minute/Getting-Started-with-Windows-Template-Studio)에서 볼 수 있습니다. 준비가 되었다면 [확장을 설치](https://aka.ms/wtsinstall)하거나 [소스 코드 및 설명서를 확인](https://aka.ms/wtsinstall)하세요.
+Windows Template Studio에 대한 자세한 개요는 [이 동영상](https://channel9.msdn.com/Blogs/One-Dev-Minute/Getting-Started-with-Windows-Template-Studio)에서 볼 수 있습니다. 준비가 되었다면 [확장을 설치](https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WindowsTemplateStudio)하거나 [소스 코드 및 설명서를 확인](https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WindowsTemplateStudio)하세요.

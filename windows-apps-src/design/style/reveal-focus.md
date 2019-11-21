@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 2cb91b37b1d2a6924a80bbe666129343ad778d8e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: f416db0266c4ab2ec959c926c0bf0b676b66dd95
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66370472"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258702"
 ---
 # <a name="reveal-focus"></a>포커스 표시
 
@@ -163,7 +163,7 @@ FocusPrimaryBrush 속성은 **FocusVisualKind**가 **Reveal**로 설정되어 �
 
 ## <a name="use-your-own-focus-visuals"></a>고유한 포커스 화면 효과 사용
 
-포커스 표시를 사용자 지정하는 또 다른 방법은 시각적 상태로 고유한 화면 효과를 그려 시스템 제공 포커스 화면 효과를 옵트아웃하는 것입니다. 자세한 내용은 [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)을 참조하세요.
+포커스 표시를 사용자 지정하는 또 다른 방법은 시각적 상태로 고유한 화면 효과를 그려 시스템 제공 포커스 화면 효과를 옵트아웃하는 것입니다. 자세한 내용은 [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)을 참조하세요.
 
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>포커스 표시 및 흐름 디자인 시스템
@@ -175,7 +175,7 @@ FocusPrimaryBrush 속성은 **FocusVisualKind**가 **Reveal**로 설정되어 �
 - [강조 표시](https://docs.microsoft.com/windows/uwp/design/style/reveal)
 - [Xbox 및 TV용 디자인](/windows/uwp/design/devices/designing-for-tv)
 - [게임 패드 및 리모컨 조작](https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions)
-- [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 - [컴퍼지션 효과](https://docs.microsoft.com/windows/uwp/graphics/composition-effects)
 - [시스템의 과학: 흐름 디자인 및 깊이](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [시스템의 과학: 흐름 디자인 및 조명](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

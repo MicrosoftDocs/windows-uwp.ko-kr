@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
-ms.openlocfilehash: 478c4a16902329e1dd9267e0339dca0e0dcf3539
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 1a2b22df2610191636d258dc48838e0bc5be6ee4
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321974"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259787"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Windows as a service용 응용 프로그램 개발
 
@@ -50,7 +50,7 @@ Windows 10 개발 과정에서 Microsoft는 전보다 훨씬 빠르게 고객�
 
 Windows as a service 모델에서 Microsoft는 기본 OS의 호환성을 유지할 것을 약속합니다. 즉, Microsoft는 앱 에코시스템에 부정적인 영향을 주는 주요 변경 내용이 없도록 노력할 것입니다. 이 시나리오에서는 Windows 빌드 릴리스가 있을 때 대부분의 앱(커널 종속성이 없는 앱)이 계속 작동합니다.
 
-이러한 변경 때문에 ISV 파트너는 해당 앱 릴리스와 지원을 특정 Windows 빌드에서 분리하는 것이 좋습니다. 응용 프로그램 수명 주기 접근 방식이 공동 고객에게 더 도움이 됩니다. 즉, 한 번 릴리스된 응용 프로그램 버전은 중간에 몇 개의 Windows 빌드가 릴리스되는지에 관계없이 특정 기간 동안 지원됩니다. ISV는 수명 주기에서 지원되는 한 특정 버전의 앱을 지원할 것을 약속합니다. Microsoft는 Windows에 대해 유사한 수명 주기 접근 방식을 따릅니다([여기](https://go.microsoft.com/fwlink/?LinkID=780549) 참조).
+이러한 변경 때문에 ISV 파트너는 해당 앱 릴리스와 지원을 특정 Windows 빌드에서 분리하는 것이 좋습니다. 응용 프로그램 수명 주기 접근 방식이 공동 고객에게 더 도움이 됩니다. 즉, 한 번 릴리스된 응용 프로그램 버전은 중간에 몇 개의 Windows 빌드가 릴리스되는지에 관계없이 특정 기간 동안 지원됩니다. ISV는 수명 주기에서 지원되는 한 특정 버전의 앱을 지원할 것을 약속합니다. Microsoft는 Windows에 대해 유사한 수명 주기 접근 방식을 따릅니다([여기](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy?C2=14019) 참조).
 
 이 접근 방식은 Windows 릴리스와 일치하는 앱 일정을 유지 관리해야 하는 부담을 줄여줍니다. ISV 파트너가 원하는 주기로 기능 또는 업데이트를 자유롭게 릴리스할 수 있습니다. 파트너는 Windows 릴리스와 독립적으로 최신 앱 업데이트를 사용하여 고객 기반을 업데이트된 상태로 유지할 수 있습니다. 또한 Windows 빌드가 릴리스될 때마다 고객이 명시적인 지원 설명을 찾지 않아도 됩니다. 다양한 버전의 OS에서 앱이 어떻게 지원될 수 있는지를 설명하는 지원 설명의 예는 다음과 같습니다.
 
@@ -90,7 +90,7 @@ Windows 10에서는 OS 버전이 증가했습니다. 즉, 내부 버전 번호�
 -   앱을 특정 API 기능에 종속된 경우 올바른 API 버전을 대상으로 지정합니다.
 -   APISet 또는 다른 공용 API를 통해 변경 내용을 검색하고 해당 버전을 일부 기능이나 수정에 대한 프록시로 사용하지 않습니다. 주요 변경 내용이 있는데 적절한 확인이 표시되지 않는 경우 버그가 있는 것입니다.
 -   앱이 레지스트리, 파일 버전, 오프셋, 커널 모드, 드라이버 또는 기타 수단 등의 특이한 방법으로 버전이 확인하지 않도록 합니다. 앱이 버전을 확인해야 하는 경우 주 버전, 부 버전 및 빌드 번호를 반환하는 GetVersion API를 사용합니다.
--   [GetVersion](https://go.microsoft.com/fwlink/?LinkID=780555) API를 사용하는 경우 이 API의 동작이 Windows 8.1 이후 변경되었다는 것에 유의하세요.
+-   [GetVersion](https://docs.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversion?redirectedfrom=MSDN) API를 사용하는 경우 이 API의 동작이 Windows 8.1 이후 변경되었다는 것에 유의하세요.
 
 맬웨어 방지 앱, 방화벽 앱 등의 앱을 소유한 경우 일반적인 피드백 채널 및 Windows 참가자 프로그램을 통해 작업해야 합니다.
 
@@ -100,9 +100,9 @@ Windows 10에서는 OS 버전이 증가했습니다. 즉, 내부 버전 번호�
 
 ### <a name="develop-universal-windows-platform-uwp-and-centennial-apps"></a>UWP(유니버설 Windows 플랫폼) 및 Centennial 앱 개발
 
-모든 Win32 앱 ISV는 앞으로 [UWP(유니버설 Windows 플랫폼)](https://go.microsoft.com/fwlink/?LinkID=780560) 및 특히 [Centennial](https://go.microsoft.com/fwlink/?LinkID=780562) 앱을 개발하는 것이 좋습니다. 기존의 Win32 설치 관리자를 사용하지 않고 이러한 앱 패키지를 개발할 경우 유용한 이점이 있습니다. UWP 앱은 [Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=780563)에서도 지원되므로 사용자를 일관된 버전으로 쉽게 자동 업데이트하여 지원 비용을 절감할 수 있습니다.
+모든 Win32 앱 ISV는 앞으로 [UWP(유니버설 Windows 플랫폼)](https://blogs.windows.com/windowsdeveloper/2016/02/25/an-update-on-the-developer-opportunity-and-windows-10/) 및 특히 [Centennial](https://channel9.msdn.com/Events/Build/2015/2-692) 앱을 개발하는 것이 좋습니다. 기존의 Win32 설치 관리자를 사용하지 않고 이러한 앱 패키지를 개발할 경우 유용한 이점이 있습니다. UWP 앱은 [Microsoft Store](https://blogs.windows.com/windowsdeveloper/2016/02/04/windows-store-trends-february-2016/)에서도 지원되므로 사용자를 일관된 버전으로 쉽게 자동 업데이트하여 지원 비용을 절감할 수 있습니다.
 
-Win32 앱 형식이 Centennial 모델에서 작동하지 않는 경우 올바른 설치 관리자를 사용하고 완벽하게 테스트하는 것이 좋습니다. 설치 관리자는 사용자 또는 고객의 첫 번째 앱 경험이므로 제대로 작동하도록 해야 합니다. 제대로 작동하지 않거나 모든 시나리오에 대해 완벽하게 테스트되지 않은 경우가 많습니다. [Windows 앱 인증 키트](https://go.microsoft.com/fwlink/?LinkID=780565)는 사용자보다 먼저 Win32 앱의 설치 및 제거를 테스트하고 문서화되지 않은 API 및 다른 기본 성능 관련 모범 사례 문제를 식별하는 데 도움이 됩니다.
+Win32 앱 형식이 Centennial 모델에서 작동하지 않는 경우 올바른 설치 관리자를 사용하고 완벽하게 테스트하는 것이 좋습니다. 설치 관리자는 사용자 또는 고객의 첫 번째 앱 경험이므로 제대로 작동하도록 해야 합니다. 제대로 작동하지 않거나 모든 시나리오에 대해 완벽하게 테스트되지 않은 경우가 많습니다. [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit)는 사용자보다 먼저 Win32 앱의 설치 및 제거를 테스트하고 문서화되지 않은 API 및 다른 기본 성능 관련 모범 사례 문제를 식별하는 데 도움이 됩니다.
 
 **모범 사례:**
 -   32비트 및 64비트 버전의 Windows에서 모두 작동하는 설치 관리자를 사용합니다.
@@ -117,7 +117,7 @@ Windows OS Insider Preview 빌드는 최종 빌드를 일반 사용자에게 릴
 앱이 스토어에 있는 경우 스토어를 통해 앱의 Insider Preview 빌드를 배포할 수 있습니다. 즉, Windows 참가자가 앱을 설치할 수 있습니다. 사용자가 앱을 설치할 수 있으며, 일반 사용자에게 앱을 릴리스하기 전에 앱에 대한 예비 피드백을 받을 수 있습니다. 다음 섹션에서는 Windows Insider Preview 빌드에 대해 앱을 테스트하는 단계를 간략하게 설명합니다.
 
 ### <a name="step-1-become-a-windows-insider-and-participate-in-flighting"></a>1단계: Windows 참가자 등록 및 Insider Preview 빌드에 참여
-[Windows 참가자](https://go.microsoft.com/fwlink/p/?LinkId=521639)는 플랫폼의 기능과 특징을 개선하는 데 도움이 되는 피드백을 통해 Windows 미래를 구체화할 수 있습니다. 활기찬 커뮤니티로, 여기서 다른 매니아에 연결하고, 포럼에 가입하고, 조언을 주고받고, 예정된 참가자 전용 이벤트에 대해 알아볼 수 있습니다.
+[Windows 참가자](https://insider.windows.com/)는 플랫폼의 기능과 특징을 개선하는 데 도움이 되는 피드백을 통해 Windows 미래를 구체화할 수 있습니다. 활기찬 커뮤니티로, 여기서 다른 매니아에 연결하고, 포럼에 가입하고, 조언을 주고받고, 예정된 참가자 전용 이벤트에 대해 알아볼 수 있습니다.
 
 Windows 10, Windows 10 Mobile, 최신 Windows SDK 및 에뮬레이터의 Preview 빌드에 액세스할 수 있으므로 멋진 앱을 개발하고 유니버설 Windows 플랫폼 및 Microsoft Store에서 새로운 기능을 탐색하는 데 필요한 모든 도구를 자유롭게 사용할 수 있습니다.
 
@@ -157,7 +157,7 @@ Insider Preview 빌드로 업데이트한 후 테스트 및 피드백 수집을 
 Insider Preview 빌드에서 앱의 수행 방식을 알려주세요. 테스트 중에 앱에서 문제를 발견하면 파트너 포털(액세스 권한이 있는 경우)이나 Microsoft 담당자를 통해 버그를 로깅하세요. 사용자 전체를 위한 고품질 환경을 빌드할 수 있도록 이 정보를 제공하는 것이 좋습니다.
 
 ### <a name="step-4-register-on-ready-for-windows"></a>4단계: Ready for Windows에서 등록
-[Windows 준비](https://go.microsoft.com/fwlink/?LinkID=780580) 웹 사이트는 Windows 10을 지원하는 소프트웨어 디렉터리입니다. 배포에 Windows 10을 고려 중인 전 세계 회사 및 조직의 IT 관리자를 위한 것입니다. IT 관리자는 엔터프라이즈에 배포된 소프트웨어가 Windows 10에서 지원되는지 여부를 사이트에서 확인할 수 있습니다.
+[Windows 준비](https://docs.microsoft.com/configmgr/desktop-analytics/ready-for-windows) 웹 사이트는 Windows 10을 지원하는 소프트웨어 디렉터리입니다. 배포에 Windows 10을 고려 중인 전 세계 회사 및 조직의 IT 관리자를 위한 것입니다. IT 관리자는 엔터프라이즈에 배포된 소프트웨어가 Windows 10에서 지원되는지 여부를 사이트에서 확인할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 [업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](https://docs.microsoft.com/windows/manage/introduction-to-windows-10-servicing)

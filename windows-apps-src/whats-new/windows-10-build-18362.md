@@ -6,18 +6,18 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: f95193b1bbf50165619fb6c7b7222ed36853d2e2
-ms.sourcegitcommit: a7740ebb14c98cd5afadd52db5cf714522821b49
+ms.openlocfilehash: 4671b3048850197cc33e6878b814b2c26792e36c
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72893043"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258844"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-18362"></a>개발자용 Windows 10 빌드 18362의 새로운 기능
 
-Visual Studio 2019와 Windows 10 빌드 18362(SDK 버전 1903이라고 함)를 함께 사용하면 Windows 앱을 주목할 만하게 만들 수 있는 도구, 기능 및 환경이 제공됩니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2019와 Windows 10 빌드 18362(SDK 버전 1903이라고 함)를 함께 사용하면 Windows 앱을 주목할 만하게 만들 수 있는 도구, 기능 및 환경이 제공됩니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
-다음은 이 릴리스에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. Windows SDK에 추가된 새 네임스페이스의 전체 목록은 [Windows 10 빌드 18362 API 변경 내용](windows-10-build-18362-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요.
+다음은 이 릴리스에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. Windows SDK에 추가된 새 네임스페이스의 전체 목록은 [Windows 10 빌드 18362 API 변경 내용](windows-10-build-18362-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://developer.microsoft.com/windows/windows-10-for-developers)을 참조하세요.
 
 ## <a name="design--ui"></a>디자인 및 UI
 
@@ -56,7 +56,7 @@ Xbox용 점진적 웹앱 | [Xbox One용 점진적 웹앱](https://docs.microsoft
 Visual Studio 2019 | 모든 개발자, 앱 또는 플랫폼을 위한 최신 도구 및 서비스를 포함하는 Visual Studio 2019가 릴리스되었습니다. [Visual Studio 2019의 새로운 기능](https://docs.microsoft.com/visualstudio/ide/whats-new-visual-studio-2019?view=vs-2019)에서 최신 기능을 알아보고 시작하세요.
 Win32 WebView | [질문과 대답](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webview#frequently-asked-questions-faqs)에서는 데스크톱 애플리케이션에서 Microsoft Edge WebView를 사용할 때 일반적으로 발생하는 질문과 대답 뿐 아니라 샘플 및 추가 리소스에 대한 링크를 제공합니다.
 Windows 명령줄 | [새 콘솔 기능](https://devblogs.microsoft.com/commandline/new-experimental-console-features/)에는 스크롤, 커서 모양 및 커서 색에 대한 설정을 포함하는 실험적 터미널 탭이 있습니다. [개발자용 Windows 명령줄 도구 블로그](https://devblogs.microsoft.com/commandline/)에서 자세한 내용을 확인하세요.
-Windows 커뮤니티 도구 키트 | Windows 커뮤니티 도구 키트 v5.1은 애니메이션, 원격 디바이스, 이미지 자르기 및 내게 필요한 옵션에 대한 흥미로운 업데이트를 제공합니다. </br> • 새 [Lottie Windows 라이브러리](https://docs.microsoft.com/windows/communitytoolkit/animations/lottie)는 Windows.UI.Composition API를 활용하여 Windows 10(1809)에서 고품질 애니메이션 지원을 제공하고 Windows 앱에서 재생하기 위해 [Bodymovin](https://aescripts.com/bodymovin/) JSON 파일 또는 최적화된 코드 생성 클래스를 사용할 수 있도록 지원합니다. Microsoft Store에 제공되는 새로운 [Lottie Viewer 앱](https://aka.ms/lottieviewer)을 사용하여 애니메이션을 테스트해보고 Windows 앱용으로 최적화된 코드를 생성해 보세요. </br> • 새 [원격 디바이스 선택](https://docs.microsoft.com/windows/communitytoolkit/controls/remotedevicepicker) 기능을 사용하여 디바이스를 선택하거나(근접 방식 또는 클라우드를 통해 액세스), 해당 디바이스에서 앱을 시작하거나, 원격 디바이스에서 앱 서비스와 통신할 수 있습니다. </br> • 새 [ImageCropper 컨트롤](https://docs.microsoft.com/windows/communitytoolkit/controls/imagecropper)은 프로필 사진을 선택하거나 사진 편집 도구를 사용하기 위해 자르기 기능을 통합합니다. </br> • 또한 컨트롤의 접근성이 개선되고, WPF 및 WinForms에 대한 [Microsoft.Toolkit.Win32](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32) 6.0 미리 보기 패키지 업데이트가 제공되고, [릴리스 정보](https://github.com/windows-toolkit/WindowsCommunityToolkit/releases/tag/v5.1.0)에서 읽을 수 있는 추가 기능도 제공되었습니다.
+Windows 커뮤니티 도구 키트 | Windows 커뮤니티 도구 키트 v5.1은 애니메이션, 원격 디바이스, 이미지 자르기 및 내게 필요한 옵션에 대한 흥미로운 업데이트를 제공합니다. </br> • 새 [Lottie Windows 라이브러리](https://docs.microsoft.com/windows/communitytoolkit/animations/lottie)는 Windows.UI.Composition API를 활용하여 Windows 10(1809)에서 고품질 애니메이션 지원을 제공하고 Windows 앱에서 재생하기 위해 [Bodymovin](https://aescripts.com/bodymovin/) JSON 파일 또는 최적화된 코드 생성 클래스를 사용할 수 있도록 지원합니다. Microsoft Store에 제공되는 새로운 [Lottie Viewer 앱](https://www.microsoft.com/p/lottie-viewer/9p7x9k692tmw)을 사용하여 애니메이션을 테스트해보고 Windows 앱용으로 최적화된 코드를 생성해 보세요. </br> • 새 [원격 디바이스 선택](https://docs.microsoft.com/windows/communitytoolkit/controls/remotedevicepicker) 기능을 사용하여 디바이스를 선택하거나(근접 방식 또는 클라우드를 통해 액세스), 해당 디바이스에서 앱을 시작하거나, 원격 디바이스에서 앱 서비스와 통신할 수 있습니다. </br> • 새 [ImageCropper 컨트롤](https://docs.microsoft.com/windows/communitytoolkit/controls/imagecropper)은 프로필 사진을 선택하거나 사진 편집 도구를 사용하기 위해 자르기 기능을 통합합니다. </br> • 또한 컨트롤의 접근성이 개선되고, WPF 및 WinForms에 대한 [Microsoft.Toolkit.Win32](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32) 6.0 미리 보기 패키지 업데이트가 제공되고, [릴리스 정보](https://github.com/windows-toolkit/WindowsCommunityToolkit/releases/tag/v5.1.0)에서 읽을 수 있는 추가 기능도 제공되었습니다.
 Windows Machine Learning | Windows AI 문서를 새롭게 디자인하여 WinML(Windows Machine Learning), Windows Vision Skills 및 DirectML(Direct Machine Learning)의 세 영역으로 구분했습니다. 새 [방문 페이지](https://docs.microsoft.com/windows/ai/)를 확인해 보세요. </br> • [*MLGen* 환경](https://docs.microsoft.com/windows/ai/mlgen)이 Visual Studio에서 변경될 예정입니다. Windows 10, 버전 1903 이상에서 *mlgen*은 더 이상 Windows 10 SDK에 포함되지 않습니다. VS 2017을 사용하는 경우 대신, Visual Studio 확장, [Windows Machine Learning 코드 생성기 VS 2017](https://marketplace.visualstudio.com/items?itemName=WinML.mlgen)을 다운로드하여 설치해야 합니다. Visual Studio 2019를 사용하는 경우 [Windows Machine Learning 코드 생성기](https://marketplace.visualstudio.com/items?itemName=WinML.mlgenv2) 확장을 설치해야 합니다. </br> •  가중치 압축에 대한 새로운 지원을 공개합니다. 개발자는 이제 [WinMLTools 변환기](https://docs.microsoft.com/windows/ai/convert-model-winmltools)를 통해 사용할 수 있는 가중치 압축이라는 기술을 사용하여 ML 모델의 디스크 공간을 줄일 수 있습니다.
 WinRT 통합 참조 | WinRT API 구조 정의에 대한 구체적인 심층 정보를 제공하기 위해 [WinRT 형식 시스템](https://docs.microsoft.com/uwp/winrt-cref/winrt-type-system) 및 [WinMD 파일](https://docs.microsoft.com/uwp/winrt-cref/winmd-files)의 전체 설명을 추가했습니다.
 WSL(Linux용 Windows 하위 시스템) | [WSL의 최신 업데이트](https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-windows-10-version-1903/)에는 파일 탐색기를 사용하여 Windows에서 Linux 파일에 액세스하는 기능과 wsl.exe 및 wslconfig.exe를 위한 일부 새 명령이 들어 있습니다.
@@ -87,7 +87,7 @@ Microsoft Learn에서는 Microsoft 개발자에게 새 실습 학습 및 교육 
 
 ### <a name="progressive-web-apps"></a>점진적 웹앱
 
-점진적 웹앱은 다른 브라우저 및 다양한 Windows 10 디바이스에서 네이티브 앱처럼 작동하는 웹 사이트입니다. [비디오를 시청하여](https://youtu.be/ugAewC3308Y) 방법을 알아보고 [관련 문서를 확인하여](https://aka.ms/Windows-PWA) 시작하세요.
+점진적 웹앱은 다른 브라우저 및 다양한 Windows 10 디바이스에서 네이티브 앱처럼 작동하는 웹 사이트입니다. [비디오를 시청하여](https://youtu.be/ugAewC3308Y) 방법을 알아보고 [관련 문서를 확인하여](https://developer.microsoft.com/windows/pwa) 시작하세요.
 
 ### <a name="vs-code-series"></a>VS Code 시리즈
 

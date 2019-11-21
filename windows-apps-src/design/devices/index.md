@@ -8,12 +8,12 @@ keywords: 디바이스, 입력, 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6333345a79d92394539d337f1f2390118cff1153
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 0808b5173f697fcca8d5e117f857d3861c327ae3
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065337"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258118"
 ---
 #  <a name="ui-considerations-for-uwp-devices"></a>UWP 디바이스에 대한 UI 고려 사항
 
@@ -131,7 +131,7 @@ UI 고려 사항
 
 모든 컴퓨팅 장치에서 가장 널리 사용되는 휴대폰은 제한된 화면 공간 및 기본 입력만으로 많은 작업을 수행할 수 있습니다. 휴대폰의 크기는 다양하며 큰 휴대폰을 패블릿이라고 합니다. 패블릿의 앱 환경은 휴대폰과 유사하지만 패블릿의 화면 공간 확대로 콘텐츠 사용에서 몇 가지 주요 사항이 변경되었습니다.
 
-Windows 10 Mobile 디바이스와 호환 가능한 새로운 환경인 휴대폰용 Continuum을 사용하여 사용자는 휴대폰을 모니터에 연결할 수 있을 뿐만 아니라 마우스와 키보드까지 사용하여 휴대폰을 노트북처럼 사용할 수 있습니다. (자세한 내용은 [휴대폰용 Continuum 문서](https://go.microsoft.com/fwlink/p/?LinkID=699431)를 참조하세요.)
+Windows 10 Mobile 디바이스와 호환 가능한 새로운 환경인 휴대폰용 Continuum을 사용하여 사용자는 휴대폰을 모니터에 연결할 수 있을 뿐만 아니라 마우스와 키보드까지 사용하여 휴대폰을 노트북처럼 사용할 수 있습니다. (자세한 내용은 [휴대폰용 Continuum 문서](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN)를 참조하세요.)
 
 화면 크기
 -   휴대폰의 경우 4~5인치
@@ -169,7 +169,7 @@ UI 고려 사항
 ## <a name="surface-hub-devices"></a>Surface Hub 디바이스
 
 
-Microsoft Surface Hub는 큰 화면을 갖춘 팀 공동 작업 디바이스로서 여러 사용자가 동시에 사용할 수 있도록 디자인되었습니다.
+Microsoft Surface Hub는 큰 화면을 갖춘 팀 협업 디바이스로서 여러 사용자가 동시에 사용할 수 있도록 디자인되었습니다.
 
 화면 크기
 -   55인치 및 84인치

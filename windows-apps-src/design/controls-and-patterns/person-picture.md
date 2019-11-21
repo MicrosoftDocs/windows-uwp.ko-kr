@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1897eded4d18a00a3c11cf1926adb1ebec6ae69a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c276b232e76afb98d778ef65c7e0e363285c4794
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63791720"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258205"
 ---
 # <a name="person-picture-control"></a>인물 사진 컨트롤
 
@@ -190,4 +190,4 @@ PreferSmallImage 속성을 true로 설정하여 선택되는 이미지를 변경
 ## <a name="related-articles"></a>관련 문서
 
 * [연락처 및 일정](../../contacts-and-calendar/index.md)
-* [연락처 카드 샘플](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+* [연락처 카드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCards)

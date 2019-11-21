@@ -6,16 +6,16 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
 ms.localizationpriority: medium
-ms.openlocfilehash: 28eb1dfecf9f6648bd43606c541daf7b57960771
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 986fa1b14fcb3b1ada150a232fb0d42f7eafa133
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320439"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258911"
 ---
 # <a name="whats-new-in-windows10-for-developers-build-10240"></a>개발자용 Windows 10 빌드 10240의 새로운 기능
 
-Windows 10 빌드 10240 및 업데이트된 SDK는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)한 후 [새 유니버설 Windows 앱을 만들](../get-started/create-uwp-apps.md)거나 [Windows에서 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
+Windows 10 빌드 10240 및 업데이트된 SDK는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)한 후 [새 유니버설 Windows 앱을 만들](../get-started/create-uwp-apps.md)거나 [Windows에서 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
 
 Windows 10 빌드 10240(Windows 10 버전 1507이라고도 함)의 새로운 기능을 기능별로 살펴보면 다음과 같습니다.
 

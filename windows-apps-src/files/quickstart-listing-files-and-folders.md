@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: b561e08227664f723802ffc0ee3f0e16bc34a5cc
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 33b03ae1538001a2a9e77d3d72afd7bb67e9f3dc
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63810724"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258577"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>파일 및 폴더 열거 및 쿼리
 
@@ -25,7 +25,7 @@ ms.locfileid: "63810724"
 유니버설 Windows 플랫폼 앱의 데이터를 저장하는 방법에 대한 내용은 [ApplicationData](/uwp/api/windows.storage.applicationdata) 클래스를 참조하세요.
 
 > [!NOTE]
-> 전체 샘플은 [폴더 열거 샘플](https://go.microsoft.com/fwlink/p/?linkid=619993)을 참조하세요.
+> 전체 샘플은 [폴더 열거 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FolderEnumeration)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

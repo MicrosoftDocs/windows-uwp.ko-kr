@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows 10, uwp, 네트워킹, websocket, messagewebsocket, streamwebsocket
 ms.localizationpriority: medium
-ms.openlocfilehash: 8af1f478bc466719eef3c5e19d055ac6073a0b11
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: eb083b0d8ed0aedfc6e14be9bed9647daa2bb950
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63777842"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260166"
 ---
 # <a name="websockets"></a>WebSocket
 WebSocket은 HTTP(S)를 사용하고 UTF-8 및 이진 메시지를 모두 지원하는 웹을 통해 클라이언트와 서버 간의 빠르고 안전한 양방향 통신을 위한 메커니즘을 제공합니다.
@@ -838,4 +838,4 @@ protected:
 * [소켓](sockets.md)
 
 ## <a name="samples"></a>샘플
-* [WebSocket 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620623)
+* [WebSocket 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebSocket)

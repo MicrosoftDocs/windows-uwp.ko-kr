@@ -5,18 +5,18 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9922aa1ad2442153dcc2c13d05520c05c3b56d31
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 723cae783ba16fe5be9bb2076f96d4a5f823d733
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63780228"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258834"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>2018년 8월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 8월에 제공된 기능 개요, 개발자 지침 및 비디오는 다음과 같습니다.
 
-Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
@@ -24,7 +24,7 @@ Windows 10에 [도구 및 SDK를 설치](https://go.microsoft.com/fwlink/?LinkId
 
 다음 기능이 Windows Insider Preview 빌드에 추가되었으며, [Windows Insider](https://insider.windows.com/) 프로그램을 통해 사용할 수 있습니다.
 
-* [Windows UI Library](https://aka.ms/winui-docs)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다.
+* [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다.
 
 * [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button), [SplitButton](../design/controls-and-patterns/buttons.md#create-a-split-button) 및 [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button)은 앱의 사용자 인터페이스를 향상시키는 특수 기능을 갖춘 단추 컨트롤을 제공합니다.
 

@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 82e05880dc8b0a983f4f8005b40939e5ffe0cbe4
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 67c729455c6eb2d8f5e8b07db5e1be7ac13f59b8
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340399"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258173"
 ---
 # <a name="text-box"></a>입력란
 
@@ -215,7 +215,7 @@ rootGrid.Children.Add(textBox);
 모두 선택 | TextBox에 텍스트가 있는 경우
 실행 취소 | 텍스트가 변경된 경우
 
-상황에 맞는 메뉴에 표시되는 명령을 수정하려면 [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening) 이벤트를 처리합니다. 이러한 경우의 예제는 [ContextMenu 샘플](https://go.microsoft.com/fwlink/p/?linkid=234891)의 시나리오 2를 참조하세요. 디자인 정보는 상황에 맞는 메뉴에 대한 지침을 참조하세요.
+상황에 맞는 메뉴에 표시되는 명령을 수정하려면 [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening) 이벤트를 처리합니다. 이러한 경우의 예제는 [ContextMenu 샘플](https://code.msdn.microsoft.com/windowsapps/Context-menu-sample-40840351)의 시나리오 2를 참조하세요. 디자인 정보는 상황에 맞는 메뉴에 대한 지침을 참조하세요.
 
 ### <a name="select-copy-and-paste"></a>선택, 복사 및 붙여넣기
 
